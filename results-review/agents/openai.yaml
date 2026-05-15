@@ -1,0 +1,4 @@
+interface:
+  display_name: "Results Review"
+  short_description: "Review results section for cadence, completeness, credibility, and robustness organization."
+  default_prompt: "Use $results-review to review this results section for narrative and technical quality."

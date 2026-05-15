@@ -1,0 +1,4 @@
+interface:
+  display_name: "Intro Review"
+  short_description: "Review introduction structure, hook, gap, and contribution preview with rewrite suggestions."
+  default_prompt: "Use $intro-review to review this introduction and suggest structural improvements."

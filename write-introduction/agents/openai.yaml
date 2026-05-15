@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Introduction"
+  short_description: "Generate tailored introduction templates by gap type and contribution dimension."
+  default_prompt: "Use $write-introduction to generate a tailored introduction template for gap type [X] and contribution dimension [Y]."
