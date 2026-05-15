@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pollock QC"
+  short_description: "Run Pollock 2025 QC checks on story architecture, sections, or prose."
+  default_prompt: "Use $pollock-qc to run a Pollock 2025 quality check on this manuscript section."

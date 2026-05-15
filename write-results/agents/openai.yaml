@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Results"
+  short_description: "Generate results templates by model type: OLS, Logit, survival, DiD, count models."
+  default_prompt: "Use $write-results to generate a results writing template for this model type."

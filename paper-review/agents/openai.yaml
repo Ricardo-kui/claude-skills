@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper Review"
+  short_description: "Whole-paper review for story coherence, central knot, and cross-section alignment."
+  default_prompt: "Use $paper-review to review this manuscript for whole-paper story coherence and alignment."

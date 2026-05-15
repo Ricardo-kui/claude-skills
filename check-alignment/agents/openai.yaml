@@ -1,0 +1,4 @@
+interface:
+  display_name: "Check Alignment"
+  short_description: "Check cross-section alignment across Introduction, Theory, Methods, Results, Discussion."
+  default_prompt: "Use $check-alignment to verify narrative alignment across all manuscript sections."

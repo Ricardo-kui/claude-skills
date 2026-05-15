@@ -1,0 +1,4 @@
+interface:
+  display_name: "Diagnose Introduction"
+  short_description: "Diagnose gap type, Makadok dimension, and hook strategy for academic introductions."
+  default_prompt: "Use $diagnose-introduction to diagnose the gap type, contribution dimension, and recommended hook strategy for this paper."
