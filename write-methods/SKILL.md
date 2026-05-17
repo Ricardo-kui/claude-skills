@@ -6,7 +6,7 @@ description: |
   触发词：「写methods」「methods模板」「方法部分怎么写」「帮我写methodology」「method skeleton」「写方法」「方法论」「model specification」「估计方法」「样本选择」「变量定义」。
   当用户提及变量操作化、识别策略、稳健性检验、模型设定、样本漏斗、内生性处理时也应触发。
   基于 28 篇 MVP30 范文语料库和 Pollock 2025 Ch07。
-version: 2.3.0
+version: 2.4.0
 ---
 
 # Role
@@ -348,6 +348,13 @@ Because [outcome] is a binary adoption decision observed across multiple [entiti
 After propensity-score matching (described in M2), we estimate the treatment effect using [random-effects Tobit / fractional logit / GEE] because [outcome] is [censored / fractional / non-normal] and matching does not fully eliminate [unobserved heterogeneity]. We include [random effects] to account for [unit-level unobservables] and [time fixed effects] to absorb [common shocks]. Standard errors are clustered at [level].
 ```
 
+**组合设计注释（Tobit/Poisson/Logit + IV）**：
+当模型同时涉及非线性 DV 和工具变量时（如 Zhou 2017 ASQ），建议按以下顺序拼接：
+1. 先报告 estimator-DV 匹配逻辑（Tobit 处理 censored / Poisson 处理 count）；
+2. 再报告 IV 必要性与工具变量合理性；
+3. 最后说明 second-stage 的解释策略（marginal effects / turning points / count effects）。
+first-stage 统计量可置于 M7 正文、表格脚注或 R1 诊断段，取决于识别策略在论文中的核心程度。若 first-stage 仅作为诊断而非展示重点（如 ASQ 常见做法），建议在 M7 中仅简要提及"first-stage F 超过 Stock-Yogo 阈值"，将具体数值放入表格脚注。
+
 **实验变体**：
 ```text
 Participants were randomly assigned to one of [N] conditions and then completed [task/measures]. We used [model/test] to analyze [outcome] because [outcome form/design logic].
@@ -385,7 +392,7 @@ The sample, method, and analyses for Study [x] were preregistered at [repository
 
 **IV 排他性约束/过度识别检验变体**：
 ```text
-A threat to our IV strategy is that [instrument] may affect [outcome] through channels other than [endogenous predictor]. We address this concern in three ways. First, we argue theoretically that [instrument] influences [outcome] only through [predictor] because [theoretical mechanism / institutional feature]. Second, we include [control for alternative channel] in the second stage to absorb [potential violation path]. Third, we report the [Sargan / Hansen J] overidentification test ([value], p = [value]), which [does not reject / rejects] the null that all instruments are valid, [strengthening / weakening] confidence in the exclusion restriction.
+A threat to our IV strategy is that [instrument] may affect [outcome] through channels other than [endogenous predictor]. We address this concern in three ways. First, we argue theoretically that [instrument] influences [outcome] only through [predictor] because [theoretical mechanism / institutional feature]. Second, we include [control for alternative channel] in the second stage to absorb [potential violation path]. Third, [IF overidentified: we report the Sargan / Hansen J overidentification test ([value], p = [value]), which does not reject the null that all instruments are valid, strengthening confidence in the exclusion restriction. IF just-identified: because the model is just-identified (one instrument for one endogenous variable), overidentification tests are infeasible. We therefore rely on theoretical arguments for the exclusion restriction and conduct placebo tests / sensitivity analyses to assess robustness.]
 ```
 
 **同伴效应/网络效应 falsification 变体**：
