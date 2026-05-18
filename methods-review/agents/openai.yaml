@@ -1,0 +1,4 @@
+interface:
+  display_name: "Methods Review"
+  short_description: "Review methods section for sample funnel, variable ordering, model justification, and control logic."
+  default_prompt: "Use $methods-review to review this methods section for validity and clarity."

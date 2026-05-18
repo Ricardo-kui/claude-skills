@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Methods"
+  short_description: "Generate methods templates by design: DiD, panel OLS, nonlinear, survival, SEM."
+  default_prompt: "Use $write-methods to generate a methods writing template for this research design."

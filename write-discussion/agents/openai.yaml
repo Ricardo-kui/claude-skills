@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Discussion"
+  short_description: "Generate discussion templates by contribution type: integration, boundary, counter-intuitive, policy, process."
+  default_prompt: "Use $write-discussion to generate a tailored discussion template for this contribution type."

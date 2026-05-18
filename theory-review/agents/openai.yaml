@@ -1,0 +1,4 @@
+interface:
+  display_name: "Theory Review"
+  short_description: "Review theory section for construct clarity, why-chain quality, and hypothesis alignment."
+  default_prompt: "Use $theory-review to review this theory section for mechanism quality and hypothesis logic."

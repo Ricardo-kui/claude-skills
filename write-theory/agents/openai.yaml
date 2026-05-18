@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Theory"
+  short_description: "Generate theory and hypotheses templates: construct differentiation, mechanism, hypothesis tree, process."
+  default_prompt: "Use $write-theory to generate a theory and hypotheses writing template for this study type."

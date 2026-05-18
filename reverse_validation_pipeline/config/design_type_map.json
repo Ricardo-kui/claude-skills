@@ -1,0 +1,107 @@
+{
+  "distillation_to_skill": {
+    "ols/fe": ["面板数据/OLS", "OLS/FE"],
+    "ols": ["面板数据/OLS", "OLS/FE"],
+    "fe": ["面板数据/OLS", "OLS/FE"],
+    "fixed effects": ["面板数据/OLS", "OLS/FE"],
+    "did/staggered": ["自然实验/DiD", "DiD"],
+    "did": ["自然实验/DiD", "DiD"],
+    "difference-in-differences": ["自然实验/DiD", "DiD"],
+    "iv/2sls": ["IV/2SLS"],
+    "iv": ["IV/2SLS"],
+    "2sls": ["IV/2SLS"],
+    "instrumental variable": ["IV/2SLS"],
+    "tobit + iv": ["非线性模型", "IV/2SLS"],
+    "poisson + iv": ["非线性模型", "IV/2SLS", "计数模型"],
+    "aft/weibull/survival": ["生存分析"],
+    "aft": ["生存分析"],
+    "survival": ["生存分析"],
+    "cox": ["生存分析"],
+    "weibull": ["生存分析"],
+    "logit/probit": ["非线性模型", "Logit/Probit/Ordered Probit"],
+    "logit": ["非线性模型", "Logit/Probit/Ordered Probit"],
+    "probit": ["非线性模型", "Logit/Probit/Ordered Probit"],
+    "ordered probit": ["非线性模型", "Logit/Probit/Ordered Probit"],
+    "lpm + 2sls": ["IV/2SLS"],
+    "lpm": ["IV/2SLS"],
+    "network/peer effects": ["同伴效应/网络效应"],
+    "network": ["同伴效应/网络效应"],
+    "peer effects": ["同伴效应/网络效应"],
+    "psm + did": ["匹配DiD/广义DiD", "匹配DiD"],
+    "psm": ["匹配DiD/广义DiD", "匹配DiD"],
+    "matching": ["匹配DiD/广义DiD", "匹配DiD"],
+    "propensity score": ["匹配DiD/广义DiD", "匹配DiD"],
+    "experiment": ["实验"],
+    "randomized experiment": ["实验"],
+    "field experiment": ["实验"],
+    "sem": ["SEM", "同时方程"],
+    "structural equation": ["SEM", "同时方程"],
+    "text measure": ["文本构念测量"],
+    "text construct": ["文本构念测量"],
+    "textual": ["文本构念测量"],
+    "stacked logit": ["堆叠扩散Logit"],
+    "stacked": ["堆叠扩散Logit"],
+    "diffusion logit": ["堆叠扩散Logit"],
+    "multi-study": ["多研究"],
+    "count": ["计数模型"],
+    "poisson": ["计数模型", "非线性模型"],
+    "tobit": ["非线性模型"],
+    "gmm": ["动态面板/GMM"],
+    "dynamic panel": ["动态面板/GMM"],
+    "system gmm": ["动态面板/GMM"]
+  },
+  "special_marker_to_variant": {
+    "u_shaped": {
+      "methods": [],
+      "results": ["U-shaped / 倒U型专用", "转折点 / 最优水平经济显著性专用"]
+    },
+    "three_way_interaction": {
+      "methods": [],
+      "results": ["三向交互专用"]
+    },
+    "recurrent_event": {
+      "methods": ["复发事件 AFT 变体"],
+      "results": []
+    },
+    "cem_matching": {
+      "methods": ["粗化精确匹配（CEM）/ 匹配解决内生性变体"],
+      "results": []
+    },
+    "event_study_car": {
+      "methods": ["事件研究变体"],
+      "results": ["GLM / 事件研究 CAR 专用"]
+    },
+    "mcmc_mediation": {
+      "methods": [],
+      "results": ["MCMC / 模拟中介专用"]
+    },
+    "sample_split": {
+      "methods": ["子样本分割变体"],
+      "results": []
+    },
+    "spatial_placebo": {
+      "methods": [],
+      "results": ["空间安慰剂检验专用"]
+    },
+    "regime_falsification": {
+      "methods": ["制度/政策体制安慰剂检验变体"],
+      "results": []
+    },
+    "lpm_2sls": {
+      "methods": ["线性概率模型（LPM）+ 2SLS 变体"],
+      "results": []
+    }
+  },
+  "slot_composition_rules": {
+    "M7": {
+      "combo_designs": ["tobit + iv", "poisson + iv", "lpm + 2sls"],
+      "note": "组合设计注释（Tobit/Poisson/Logit + IV）"
+    },
+    "M8": {
+      "just_identified_iv": {
+        "variant": "IV 排他性约束/过度识别检验变体",
+        "conditional_marker": "IF just-identified"
+      }
+    }
+  }
+}

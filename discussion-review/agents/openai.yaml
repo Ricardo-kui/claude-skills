@@ -1,0 +1,4 @@
+interface:
+  display_name: "Discussion Review"
+  short_description: "Review discussion section for contribution alignment, elevated plane, and promise delivery."
+  default_prompt: "Use $discussion-review to review this discussion section against the introduction promises."
