@@ -30,6 +30,16 @@ version: 2.5.0
 
 **如果省略模型类型**，进入交互式询问后输出对应骨架。
 
+## 快速开始（3 步上手）
+
+**第 1 步**：输入 `/write-results OLS/FE --hypotheses="H1: X -> Y (+); H2: X*Z -> Y" --has-interactions`
+
+**第 2 步**：复制生成的 R1–R7 骨架到 Word/LaTeX
+
+**第 3 步**：逐段替换 `[方括号占位符]` 为你的实际结果
+
+> 如果你只有 **主效应无交互**，去掉 `--has-interactions`；如果有 **中介效应**，追加 `--has-mediator`；如果 **所有假设均显著**，R6（非显著/混合发现）可跳过。
+
 ## 前置检查
 
 - [ ] 用户已明确模型类型
@@ -86,7 +96,6 @@ Table [x] presents descriptive statistics and correlations for the variables use
 ```
 
 > **非 OLS 模型注**：对于 GLM、生存分析、计数模型等非 OLS 估计量，多重共线性诊断（VIF）较少在 R1 中报告；如有需要，可替换为 "we verified that [diagnostic] is not a concern"。
-```
 
 **多研究变体**：
 ```text
@@ -616,4 +625,4 @@ Taken together, the results indicate that [digital transformation enhances firm 
 - **Pollock Ch07 表达库**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/methods_results/mvp30/fine_grained/_four_paper_expression_corpus_pollock_ch07.md`
 
 ---
-*基于 28 篇 MVP30 范文语料库、Pollock 2025 Ch07 和深度叙事分析框架构建。版本 2.2.0 — 填空式模板。*
+*基于 28 篇 MVP30 范文语料库、Pollock 2025 Ch07 和深度叙事分析框架构建。版本 2.5.0 — 填空式模板。*
