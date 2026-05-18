@@ -1,4 +1,0 @@
-interface:
-  display_name: "Check Introduction"
-  short_description: "QC check for written introductions: hook, gap, problematization, journal fit."
-  default_prompt: "Use $check-introduction to QC check this introduction for narrative effectiveness and journal alignment."

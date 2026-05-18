@@ -19,6 +19,10 @@
 !distill-methods-exemplar/**
 !distill-results-exemplar/
 !distill-results-exemplar/**
+!distill-introduction-exemplar/
+!distill-introduction-exemplar/**
+!distill-theory-exemplar/
+!distill-theory-exemplar/**
 !intro-review/
 !intro-review/**
 !methods-review/
