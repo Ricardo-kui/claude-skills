@@ -72,6 +72,14 @@ However, [what happens when condition does not hold / what has been overlooked] 
 | 强烈 | "rests on an untested assumption" | 直接挑战基础假设 |
 | 惊讶 | "surprisingly understudied given its importance" | 显然重要但被忽视 |
 
+## 验证状态
+- **跨论文复现**: ✓ VERIFIED（universal pattern; 12+ distinct gap-building expressions in MVP30 across all major journals）
+- **来源论文**: 所有 MVP30 Introduction 均包含 literature-to-gap 过渡；模板 A 变体见于 Does it Pay to Recall (JM), State Ownership (ASQ), (Un)Tangled (ASQ); 模板 D 变体见于 Activism risk (SMJ)
+- **生成力**: GENERATIVE——所有学术 Introduction 的必备结构
+- **排他性**: LOW——通用型 transition
+- **期刊限制**: 无限制
+- **收录状态**: ✓ STANDARD
+
 ## 相关语料
 
 - 配合 `tensions/01-despite-progress-unaddressed.md` 使用：这是最常见的 literature-to-gap 句型

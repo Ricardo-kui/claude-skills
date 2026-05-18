@@ -6,7 +6,7 @@ description: |
   触发词：「写methods」「methods模板」「方法部分怎么写」「帮我写methodology」「method skeleton」「写方法」「方法论」「model specification」「估计方法」「样本选择」「变量定义」。
   当用户提及变量操作化、识别策略、稳健性检验、模型设定、样本漏斗、内生性处理时也应触发。
   基于 28 篇 MVP30 范文语料库和 Pollock 2025 Ch07。
-version: 2.4.0
+version: 2.5.0
 ---
 
 # Role
@@ -213,6 +213,16 @@ Our focal independent variable, [predictor name], is measured as [operation] bas
 The treatment indicator equals one for [unit-years/participants] exposed to [event/condition] and zero otherwise. [Treatment] equals 1 for [unit-years] after [policy/event] becomes effective in [jurisdiction/group], and 0 otherwise.
 ```
 
+**处理分配稳定性补充**（DiD 可选）：
+```text
+During our sample period, [percentage] of [units] changed their [treatment-relevant characteristic, e.g., headquarters location]. We use [historical/fixed] [characteristic] information to maintain consistent treatment assignment.
+```
+
+**竞争机制预测变量变体**（机制测试中分解核心构念时）：
+```text
+To test how [actors] resolve [uncertainty], we decompose [core construct] into [N] subgroups based on [criterion]: [variable 1], [variable 2], [variable 3], and [variable 4]. We restrict the mechanism test subsample to [criteria] to ensure sufficient variation across the subgroups. These variables correspond to [RQ/Prediction x] because they distinguish [mechanism A] versus [mechanism B].
+```
+
 **实验操纵变体**：
 ```text
 To manipulate [construct], participants were shown/told [condition-specific cue], while [other information] was held constant.
@@ -248,6 +258,11 @@ Equation [x] predicts [primary outcome] as a function of [focal predictor], [mec
 To capture [boundary/mechanism], we measure [moderator/mediator] as [operation]. We interact [predictor] with [moderator] to test whether [relationship] is stronger/weaker under [condition]. To test the proposed mechanism, we measured [mediator] and included [alternative mechanisms] as rival explanations.
 ```
 
+**子样本分割变体**（用样本分割而非交互项检验调节时）：
+```text
+To capture the boundary condition of [moderator], we measure [moderator] using [classification]. We split the sample by [moderator] into [category A] and [category B] to test whether [relationship] differs across [categories], rather than including an interaction term, because [reason: small sample within categories / theoretical focus on distinct regimes].
+```
+
 **行为者类型分解变体**：
 ```text
 To test the proposed mechanism, we decompose [predictor] by [actor type/horizon]. [Type A] and [Type B] capture actors expected to have [theory-relevant orientation], whereas [Type C] captures a comparison group. We map [classification data] onto [focal source] and construct separate measures for [type A], [type B], and [type C].
@@ -256,6 +271,13 @@ To test the proposed mechanism, we decompose [predictor] by [actor type/horizon]
 **边界条件验证变体**：
 ```text
 We define [boundary condition] as contexts where [spillovers/externalities/stakeholder responses] are likely to be economically meaningful. We validate this classification using [external source A] for [dimension A] and [external source B] for [dimension B].
+```
+
+**间接调节（ mediated moderation ）变体**：
+```text
+To test the indirect moderation model, we specify a system of equations. Equation (2) captures the moderating effect of [moderator 1] on the [predictor-outcome] relationship: [outcome] = β₁₀ + β₁₁[predictor] + β₁₂[moderator 1] + β₁₃[predictor × moderator 1] + ε₁. Equation (3) captures the moderating effect of [moderator 2]: [outcome] = β₂₀ + β₂₁[predictor] + β₂₂[moderator 2] + β₂₃[predictor × moderator 2] + ε₂. Equation (4) models the relationship between [moderator 1] and [mediator]: [mediator] = β₃₀ + β₃₁[moderator 1] + ε₃. Equation (5) represents the full system with both moderators: [outcome] = β₄₀ + β₄₁[predictor] + β₄₂[moderator 1] + β₄₃[predictor × moderator 1] + β₄₄[mediator] + β₄₅[predictor × mediator] + ε₄.
+
+We test for full indirect moderation through [mediator] according to whether: (1) [moderator 1] functions as a moderator when [mediator] is not considered (β₁₃ ≠ 0); (2) [moderator 1] influences [mediator] (β₃₁ ≠ 0); (3) [mediator] moderates the effect of [predictor] on [outcome] (β₄₅ ≠ 0); and (4) the coefficient on the original interaction term in the full system (β₄₃) indicates the pattern of mediation—β₄₃ = 0 indicates full indirect moderation (the direct moderating effect of [moderator 1] becomes nonsignificant in the presence of [mediator]), whereas β₄₃ ≠ 0 and |β₄₃| < |β₁₃| indicates partial indirect moderation.
 ```
 
 ---
@@ -313,9 +335,19 @@ Because [outcome] is [binary/ordinal/count/censored/time-to-event], we estimate 
 We estimate a difference-in-differences model in which [outcome] is regressed on [treatment], [moderator/interactions], controls, and fixed effects. Identification comes from comparing changes in [treated units] before and after [event] to contemporaneous changes among [control units]. We cluster standard errors at [unit/jurisdiction] to account for serial correlation and within-[cluster] dependence.
 ```
 
+**DiD 方程编号与 SE 聚类引用补充**：
+```text
+We cluster standard errors at the [level] to address [dependence structure] ([citation, e.g., Bertrand et al. 2004; Jager et al. 2021]). Where relevant, we present numbered equations: Equation (1) reports the baseline DiD specification, and Equation (2) reports the event-study leads-and-lags specification.
+```
+
 **生存分析变体**：
 ```text
 Because the shape of [event timing] is not known ex ante, we compare [candidate distributions] and select [distribution] based on [fit criterion]. We use an accelerated failure time metric so coefficients can be interpreted in terms of [longer/shorter] time to [event].
+```
+
+**复发事件 AFT 变体**（当同一主体经历多次事件时）：
+```text
+Because [units] experience multiple [events] over the observation period, we estimate recurrent-event accelerated failure time (AFT) models with a [distribution] distribution for the underlying failure rate. Recurrent-event AFT models are appropriate because they examine how [predictors] influence the time to [event] while accounting for repeated occurrences within the same [unit]. We report robust standard errors to account for within-[unit] dependence across multiple events. The specification includes [fixed effects] to absorb unobserved heterogeneity.
 ```
 
 **同时方程变体**：
@@ -326,6 +358,16 @@ Joint estimation addresses simultaneity and accounts for correlated errors acros
 **IV/2SLS 变体**：
 ```text
 Although [baseline estimator] can exploit [within/between] variation, it may still be biased if [predictor] is endogenous due to [omitted variable / reverse causality / measurement error]. We therefore use two-stage least squares (2SLS) with [instrument] as an instrument for [endogenous predictor]. [Instrument] satisfies the relevance condition because [first-stage F-statistic / theoretical reason for correlation with endogenous predictor]. It satisfies the exclusion restriction because [theoretical argument for why instrument affects outcome only through predictor]. In the first stage, [endogenous predictor] is regressed on [instrument], [exogenous controls], and [fixed effects]. The first-stage F-statistic is [value], exceeding the Stock-Yogo threshold, indicating that [instrument] is not weak. In the second stage, [outcome] is regressed on the predicted [endogenous predictor] and the same controls. Standard errors are [robust / clustered] to account for [error structure].
+```
+
+**线性概率模型（LPM）+ 2SLS 变体**（二元 DV 且需固定效应时）：
+```text
+Because the dependent variable is binary, one might consider Logit or Probit. However, when using 2SLS with fixed effects, the linear probability model (LPM) is often preferred because coefficients are directly interpretable as probability changes and computational tractability is preserved. We therefore estimate LPM with 2SLS for the main analyses and report Probit/Logit IV only as robustness. The specification includes [fixed effects] to absorb [unobserved heterogeneity]. Standard errors are clustered at the [level] to account for [dependence structure].
+```
+
+**事件研究 GLM 变体**（CAR 为 DV 时）：
+```text
+Because [CAR/abnormal response] is continuous but subject to nonconstant error variance, we estimate generalized linear models (GLM) rather than ordinary least squares. GLMs are robust to nonconstant error variance and relaxed distributional assumptions. Expected returns are estimated over [estimation window] using [factor model]; abnormal returns are observed returns minus expected returns. We aggregate abnormal returns over [event window] to allow for [information leakage/dissemination].
 ```
 
 **动态面板/GMM 变体**：
@@ -355,6 +397,11 @@ After propensity-score matching (described in M2), we estimate the treatment eff
 3. 最后说明 second-stage 的解释策略（marginal effects / turning points / count effects）。
 first-stage 统计量可置于 M7 正文、表格脚注或 R1 诊断段，取决于识别策略在论文中的核心程度。若 first-stage 仅作为诊断而非展示重点（如 ASQ 常见做法），建议在 M7 中仅简要提及"first-stage F 超过 Stock-Yogo 阈值"，将具体数值放入表格脚注。
 
+**混合效应（within-between 分解）变体**：
+```text
+To disentangle the within-[unit] and between-[unit] effects of [predictor], we estimate mixed-effects models that decompose [predictor] into two components: [predictor]_{within}, which captures deviations from each [unit]'s mean over time, and [predictor]_{between}, which captures each [unit]'s time-invariant average. The within-effect answers whether [predictor] changes within the same [unit] are associated with [outcome] changes. The between-effect answers whether [units] with higher average [predictor] exhibit systematically different [outcome]. We include [random effects] to account for [unit]-level unobserved heterogeneity and [fixed effects] to absorb [time/common shocks].
+```
+
 **实验变体**：
 ```text
 Participants were randomly assigned to one of [N] conditions and then completed [task/measures]. We used [model/test] to analyze [outcome] because [outcome form/design logic].
@@ -373,6 +420,11 @@ To address concerns about [threat], we [design feature/test]. This check assesse
 **自然实验/DiD 变体**：
 ```text
 Our identification strategy relies on [source of variation]. [Shock/event/policy] creates variation in [treatment] that is plausibly exogenous to [outcome] because [reason]. The key identifying assumption is that [treated and control units] would have followed similar trends absent [treatment]. We assess this assumption in the Results section using [event-study/leads-lags] specifications. We first estimate a parsimonious specification because [controls] may be affected by [treatment].
+```
+
+**DiD 置换检验预览补充**（可选，置于自然实验/DiD 变体后）：
+```text
+We also conduct permutation tests by randomly assigning [treatment status/timing] across [N] iterations to assess whether [unobserved characteristics] could drive our results.
 ```
 
 **内生性/控制函数变体**：
@@ -403,6 +455,25 @@ Because [network-based construct] may capture common shocks or sorting rather th
 **匹配DiD 平行趋势与重叠支撑变体**：
 ```text
 The key identifying assumption is that [treated] and [matched control] units would have followed parallel trends absent [treatment]. We assess this assumption using [event-study / leads-and-lags] specifications in which we include [lead/lag indicators] relative to [event]. The pre-treatment coefficients are [individually / jointly] insignificant ([test statistic] = [value], p = [value]), suggesting no detectable pre-treatment divergence. We also verify overlap by plotting [propensity-score distributions / covariate balance] before and after matching; the [common support region] covers [percentage]% of the sample, and no observations lie outside the [calipersize] caliper.
+```
+
+**粗化精确匹配（CEM）/ 匹配解决内生性变体**（非 DiD，仅用匹配加权解决内生性）：
+```text
+To address concerns about endogeneity — specifically, that [predictor] may be influenced by [past outcome / ongoing confound] — we exploit an exogenous shock: [treatment definition, e.g., a change in the firm's CEO]. We use coarsened exact matching (CEM)-weighted [estimator], matching [treated units] to [control units] on pretreatment variables: [matching variables]. This yields [N] matched strata containing [N treated] and [N control] observations. The CEM-weighted results confirm that [focal effect] remains [status] even when [predictor] changes are exogenously driven.
+
+To validate the exogeneity of [treatment], we demonstrate that [pretreatment outcomes] do not predict the likelihood of [treatment] ([logit/Probit] regression) and do not predict [predictor] levels (panel fixed-effects models). These checks reduce concerns that the [predictor-outcome] relationship is driven by reverse causality or omitted variables related to [confound].
+```
+
+**制度/政策体制安慰剂检验变体**：
+```text
+Because [outcome] may reflect [alternative mechanism] rather than [focal mechanism], we exploit a [regime change] as a falsification test. During the [mandatory regime], [behavior] should not exhibit [focal pattern] because [institutional reason]. We re-estimate our models using [mandatory regime subsample] and find [null effect], consistent with the assumption that [focal mechanism] requires [voluntary regime condition].
+```
+
+**部分重叠同伴群体 + 形式化识别证明变体**（网络效应核心识别故事）：
+```text
+Our identification strategy relies on two features of partially overlapping peer groups. First, because [percentage] of firms operate in multiple industries, peer groups vary at the individual firm level. This breaks the linear dependence between the endogenous peer variable and exogenous peer characteristics that plagues perfectly overlapping groups. Formally, in a perfectly overlapping group, PeerDisclosure is a linear combination of peer characteristics, making identification impossible. With partial overlap, the peer group matrix has full rank because each firm faces a unique combination of peers.
+
+Second, we instrument [endogenous peer variable] with [second-degree peer characteristics], which are plausibly uncorrelated with unobservable shocks affecting the focal firm's [outcome] because second-degree peers are not in the focal firm's peer group. The exclusion restriction is supported by three arguments: (1) [theoretical argument], (2) [mandatory-regime falsification], and (3) [Hansen J-test / statistical argument].
 ```
 
 ---

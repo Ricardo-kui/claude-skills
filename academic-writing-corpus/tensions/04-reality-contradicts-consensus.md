@@ -66,6 +66,14 @@ However, [phenomenon X] persists [despite / in the face of / even when] [conditi
 | "This [pattern] is difficult to reconcile with [theory]" | 强调调和困难 |
 | "[Theory] would predict [X], yet we observe [Y]" | 强调预测失败 |
 
+## 验证状态
+- **跨论文复现**: ✓ VERIFIED（3+ papers across ASQ, SMJ）
+- **来源论文**: Two Sides of the Same Coin (Pontikes 2012, ASQ) × 1; State Ownership and Firm Innovation (Zhou et al. 2017, ASQ) × 1; The nature of partnering experience (Paruchuri et al. 2020, SMJ) 提及 "reconciles contradictions" × 1
+- **生成力**: ADAPTABLE——需要具体的情境证据（市场数据、制度事实）支撑，生成门槛高于 `01-despite-progress`
+- **排他性**: HIGH——几乎只在 Incommensurability Gap 类型中出现
+- **期刊限制**: ASQ, OS, SMJ 最适合；需要 reviewer 认可"现实反例"的系统性
+- **收录状态**: ✓ STANDARD
+
 ## 相关语料
 
 - 配合 `hooks/06-paradigm-challenge.md` 使用：范式挑战型 hook 直接建立这种 tension

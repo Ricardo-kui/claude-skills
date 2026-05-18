@@ -60,6 +60,14 @@ The [metaphor from hook] captures a [phenomenon / process] that [theorists / res
 
 过渡句通常只有 **1-2 句话**。它的工作是"转轴"，不是"展开"。展开是下一段（literature turn）的工作。
 
+## 验证状态
+- **跨论文复现**: ✓ VERIFIED（ universal pattern; 27+ transition phrase occurrences in MVP30 across ASQ, SMJ, AMJ, OS, JMR）
+- **来源论文**: 所有 MVP30 论文均包含某种形式的 hook-to-literature 过渡；模板 A 变体见于 Waiting to Inhale (ASQ), Activism risk (SMJ), Does Power Protect... (AMJ)
+- **生成力**: GENERATIVE——所有学术 Introduction 都必须包含此过渡，可适配任何领域
+- **排他性**: LOW——通用型 transition，不绑定特定 Gap 类型
+- **期刊限制**: 无限制
+- **收录状态**: ✓ STANDARD
+
 ## 相关语料
 
 - 配合 `hooks/*` 各类 hook 使用：每个 hook 都需要一个 hook-to-literature 过渡

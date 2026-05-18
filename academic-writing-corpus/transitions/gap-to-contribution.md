@@ -73,6 +73,14 @@ Pollock 推荐的贡献段应该回答（显性或隐性）：
 | **Consensus creation** | "We reconcile [Theory A] and [Theory B] by..." | 整合对立理论 |
 | **Incompleteness filling** | "We identify [mechanism] as a previously omitted..." | 补充现有理论 |
 
+## 验证状态
+- **跨论文复现**: ✓ VERIFIED（universal pattern; all MVP30 papers contain a gap-to-contribution transition）
+- **来源论文**: State Ownership and Firm Innovation (ASQ), Does it Pay to Recall your Product Early (JM), A Rising Tide Lifts All Boats (SMJ), Two Sides of the Same Coin (ASQ) — 所有论文均包含从 gap 声明到贡献预告的过渡
+- **生成力**: GENERATIVE——所有学术 Introduction 的必备结构
+- **排他性**: LOW——通用型 transition
+- **期刊限制**: 无限制
+- **收录状态**: ✓ STANDARD
+
 ## 相关语料
 
 - 配合 `hooks/*` 各类 hook 使用：贡献必须回应 hook 中建立的 stakes

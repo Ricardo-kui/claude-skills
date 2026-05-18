@@ -76,7 +76,8 @@ class BaseChecker:
 
     CAUSAL_WORDS_WEAK = {"associated with", "related to", "linked to", "correlated with"}
     CAUSAL_WORDS_MEDIUM = {"effect of", "impact of", "influence of", "effect on"}
-    CAUSAL_WORDS_STRONG = {"causes", "caused", "leads to", "led to", "increases", "decreases"}
+    CAUSAL_WORDS_STRONG = {"causes", "caused", "leads to", "led to"}
+    CAUSAL_WORDS_DIRECTIONAL = {"increases", "decreases", "reduces", "raises", "lowers"}
 
     def __init__(self, data: Dict[str, Any]):
         self.data = data
@@ -132,13 +133,20 @@ class BaseChecker:
     def check_slot_coverage(self) -> None:
         gate = self.data.get("phase_1_5_quality_gate", {})
         coverage = gate.get("slot_coverage", {})
-        rate_str = coverage.get("coverage_rate", "0%").replace("%", "")
+        if isinstance(coverage, str):
+            rate_str = coverage.replace("%", "")
+            missing = []
+        elif isinstance(coverage, dict):
+            rate_str = coverage.get("coverage_rate", "0%").replace("%", "")
+            missing = coverage.get("missing_slots", [])
+        else:
+            rate_str = "0"
+            missing = []
         try:
             rate = float(rate_str)
         except ValueError:
             rate = 0.0
 
-        missing = coverage.get("missing_slots", [])
         detail = f"Coverage: {rate}%; Missing: {missing}"
 
         if rate >= 85:
@@ -259,12 +267,12 @@ class MethodsChecker(BaseChecker):
             self.check_causal_language(
                 "OLS/FE",
                 allowed_words=self.CAUSAL_WORDS_WEAK,
-                forbidden_words=self.CAUSAL_WORDS_MEDIUM | self.CAUSAL_WORDS_STRONG,
+                forbidden_words=self.CAUSAL_WORDS_MEDIUM | self.CAUSAL_WORDS_STRONG | self.CAUSAL_WORDS_DIRECTIONAL,
             )
         elif "did" in design or "difference" in design:
             self.check_causal_language(
                 "DiD",
-                allowed_words=self.CAUSAL_WORDS_WEAK | self.CAUSAL_WORDS_MEDIUM,
+                allowed_words=self.CAUSAL_WORDS_WEAK | self.CAUSAL_WORDS_MEDIUM | self.CAUSAL_WORDS_DIRECTIONAL,
                 forbidden_words=self.CAUSAL_WORDS_STRONG,
             )
         elif "iv" in design or "2sls" in design:
@@ -273,14 +281,14 @@ class MethodsChecker(BaseChecker):
             if any(e in estimator for e in ["tobit", "poisson", "weibull", "aft", "logit", "probit"]):
                 self.check_causal_language(
                     "IV + Nonlinear",
-                    allowed_words=self.CAUSAL_WORDS_WEAK | {"increases", "decreases"},
-                    forbidden_words={"causes", "caused", "leads to"},
+                    allowed_words=self.CAUSAL_WORDS_WEAK | self.CAUSAL_WORDS_DIRECTIONAL,
+                    forbidden_words=self.CAUSAL_WORDS_STRONG,
                 )
             else:
                 self.check_causal_language(
                     "IV/2SLS",
-                    allowed_words=self.CAUSAL_WORDS_WEAK | self.CAUSAL_WORDS_MEDIUM | {"increases", "decreases"},
-                    forbidden_words={"causes", "caused"},
+                    allowed_words=self.CAUSAL_WORDS_WEAK | self.CAUSAL_WORDS_MEDIUM | self.CAUSAL_WORDS_DIRECTIONAL,
+                    forbidden_words=self.CAUSAL_WORDS_STRONG,
                 )
         elif "experiment" in design:
             self.check_causal_language(
@@ -411,6 +419,75 @@ class ResultsChecker(BaseChecker):
     def check_type(self) -> str:
         return "results"
 
+    def check_slot_coverage(self) -> None:
+        """Dynamic slot coverage: required slots depend on paper features."""
+        gate = self.data.get("phase_1_5_quality_gate", {})
+        coverage = gate.get("slot_coverage", {})
+        present_slots = set(coverage.get("present_slots", []))
+        missing_slots = set(coverage.get("missing_slots", []))
+        p0 = self.data.get("phase_0", {})
+        slot_map = self.data.get("phase_1_slot_map", {})
+
+        # Core required slots for all Results sections
+        required = {"R1", "R2", "R3", "R7"}
+
+        # R4: required only if paper has interaction effects
+        hypothesis_struct = p0.get("hypothesis_structure", "").lower()
+        has_interaction = "interaction" in hypothesis_struct or "交互" in hypothesis_struct
+        r4 = slot_map.get("R4", {})
+        if has_interaction or r4.get("located", False):
+            required.add("R4")
+
+        # R5: required only if paper has nonlinear/U-shaped effects
+        has_nonlinear = any(
+            k in hypothesis_struct
+            for k in ["u-shaped", "nonlinear", "quadratic", "cubic", "inverted u", "倒u型"]
+        )
+        r5 = slot_map.get("R5", {})
+        if has_nonlinear or r5.get("located", False):
+            required.add("R5")
+
+        # R6: required only if paper has nonsignificant findings to report
+        num_nonsig = p0.get("number_of_nonsignificant_findings", 0)
+        r6 = slot_map.get("R6", {})
+        if num_nonsig > 0 or r6.get("located", False):
+            required.add("R6")
+
+        # R8: required only if paper has exploratory/post-hoc analyses
+        r8 = slot_map.get("R8", {})
+        if r8.get("located", False):
+            required.add("R8")
+
+        # R9: transition paragraph is always optional
+        # (many top-tier empirical papers omit it without penalty)
+
+        present_required = present_slots & required
+        rate = (len(present_required) / len(required) * 100) if required else 100.0
+        missing_required = sorted(required - present_slots)
+
+        detail = (
+            f"Adjusted coverage: {rate:.0f}% (required slots: {sorted(required)}); "
+            f"Present: {sorted(present_slots)}; Missing required: {missing_required}"
+        )
+
+        if rate >= 85:
+            sev = Severity.PASS
+        elif rate >= 60:
+            sev = Severity.FLAG
+        else:
+            sev = Severity.REJECT
+
+        self._add(
+            CheckItem(
+                check_id="SLOT_001",
+                category="coverage",
+                description="Slot coverage rate (adjusted for paper features)",
+                severity=sev,
+                detail=detail,
+                fix_priority=1 if sev == Severity.REJECT else (2 if sev == Severity.FLAG else 0),
+            )
+        )
+
     def run(self) -> QualityReport:
         self.check_schema_compliance()
         self.check_slot_coverage()
@@ -424,44 +501,44 @@ class ResultsChecker(BaseChecker):
         if "aft" in estimator or "survival" in estimator or "weibull" in estimator or "cox" in estimator:
             self.check_causal_language(
                 "Survival/AFT",
-                allowed_words=self.CAUSAL_WORDS_WEAK | {"increases", "decreases", "prolongs", "accelerates", "positive", "negative", "positive/negative"},
-                forbidden_words={"causes", "caused", "leads to"},
+                allowed_words=self.CAUSAL_WORDS_WEAK | self.CAUSAL_WORDS_DIRECTIONAL | {"prolongs", "accelerates", "positive", "negative", "positive/negative"},
+                forbidden_words=self.CAUSAL_WORDS_STRONG,
             )
         elif "ols" in estimator or "fe" in estimator:
             self.check_causal_language(
                 "OLS/FE",
                 allowed_words=self.CAUSAL_WORDS_WEAK | {"effect of"},
-                forbidden_words={"causes", "caused", "leads to", "led to"},
+                forbidden_words=self.CAUSAL_WORDS_STRONG | self.CAUSAL_WORDS_DIRECTIONAL | {"leads to", "led to"},
             )
         elif "did" in estimator or "difference" in estimator:
             self.check_causal_language(
                 "DiD",
-                allowed_words=self.CAUSAL_WORDS_WEAK | self.CAUSAL_WORDS_MEDIUM,
+                allowed_words=self.CAUSAL_WORDS_WEAK | self.CAUSAL_WORDS_MEDIUM | self.CAUSAL_WORDS_DIRECTIONAL,
                 forbidden_words=self.CAUSAL_WORDS_STRONG,
             )
         elif "iv" in estimator or "2sls" in estimator:
             if any(e in estimator for e in ["tobit", "poisson", "weibull", "aft", "logit", "probit"]):
                 self.check_causal_language(
                     "IV + Nonlinear",
-                    allowed_words=self.CAUSAL_WORDS_WEAK | {"increases", "decreases"},
-                    forbidden_words={"causes", "caused", "leads to"},
+                    allowed_words=self.CAUSAL_WORDS_WEAK | self.CAUSAL_WORDS_DIRECTIONAL,
+                    forbidden_words=self.CAUSAL_WORDS_STRONG,
                 )
             else:
                 self.check_causal_language(
                     "IV/2SLS",
-                    allowed_words=self.CAUSAL_WORDS_WEAK | self.CAUSAL_WORDS_MEDIUM | {"increases", "decreases"},
-                    forbidden_words={"causes", "caused"},
+                    allowed_words=self.CAUSAL_WORDS_WEAK | self.CAUSAL_WORDS_MEDIUM | self.CAUSAL_WORDS_DIRECTIONAL,
+                    forbidden_words=self.CAUSAL_WORDS_STRONG,
                 )
         elif "logit" in estimator or "probit" in estimator:
             self.check_causal_language(
                 "Logit/Probit",
                 allowed_words=self.CAUSAL_WORDS_WEAK,
-                forbidden_words=self.CAUSAL_WORDS_STRONG,
+                forbidden_words=self.CAUSAL_WORDS_STRONG | self.CAUSAL_WORDS_DIRECTIONAL,
             )
         elif "experiment" in estimator or "anova" in estimator:
             self.check_causal_language(
                 "Experiment",
-                allowed_words=self.CAUSAL_WORDS_WEAK | self.CAUSAL_WORDS_MEDIUM | self.CAUSAL_WORDS_STRONG,
+                allowed_words=self.CAUSAL_WORDS_WEAK | self.CAUSAL_WORDS_MEDIUM | self.CAUSAL_WORDS_STRONG | self.CAUSAL_WORDS_DIRECTIONAL,
                 forbidden_words=set(),
             )
         else:
@@ -496,6 +573,8 @@ class ResultsChecker(BaseChecker):
         # Robustness organization (both threat-based and test-type-based are valid)
         gate = self.data.get("phase_1_5_quality_gate", {})
         suff = gate.get("source_sufficiency", {})
+        if isinstance(suff, str):
+            suff = {}
         robust_threat = suff.get("robustness_organized_by_threat", False)
         # Check if explicitly marked as organized by test type
         org = ""

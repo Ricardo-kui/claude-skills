@@ -67,6 +67,14 @@ However, [specific gap] has received [surprisingly little / scant / insufficient
 | "theoretically underspecified" | 直指理论薄弱 | 理论驱动型期刊（ASQ, OS） |
 | "remains poorly understood" | 强调知识状态 | 现象驱动型论文 |
 
+## 验证状态
+- **跨论文复现**: ✓ VERIFIED（4+ distinct papers across ASQ, SMJ, AMJ, OS）
+- **来源论文**: Pollock et al. 2015 (ASQ) × 1; 独立变体见于 Activism risk (SMJ), Employee Free Speech (AMJ), Positioning in Digital Markets (OS), Those Closest Wield the Sharpest Knife (ASQ), How shareholder litigation risk (SMJ)
+- **生成力**: GENERATIVE——该句型是所有管理学 Introduction 中最常见的渐进缺口表达，可适配任何已有文献基础的领域
+- **排他性**: LOW——通用型 tension，适用于所有 Gap 类型，但最常见于 Incompleteness
+- **期刊限制**: 无限制——所有期刊均接受
+- **收录状态**: ✓ STANDARD
+
 ## 相关语料
 
 - 配合 `hooks/05-literature-consensus-blindspot.md` 使用：先建立共识，再揭示盲点
