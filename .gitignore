@@ -7,10 +7,6 @@
 # Track user's custom skill directories
 !academic-writing-corpus/
 !academic-writing-corpus/**
-!check-alignment/
-!check-alignment/**
-!check-introduction/
-!check-introduction/**
 !diagnose-introduction/
 !diagnose-introduction/**
 !discussion-review/
