@@ -131,8 +131,10 @@ def _check_slot_coverage(
                 rating = "中等"
                 breakdown = f"Original uses CEM but no CEM variant selected for {slot_id}"
 
-        # Check for sample split
-        elif "split the sample" in original_skeleton.lower() or "subsample" in original_skeleton.lower():
+        # Check for sample split (strict regex to avoid false positives; skip M1/M8)
+        import re
+        has_sample_split = bool(re.search(r'\bsplit the sample\b|\bsubsample\b|\bsub-sample\b', original_skeleton, re.IGNORECASE))
+        if has_sample_split and slot_id not in ("M1", "M8"):
             if not any("子样本" in v.name for v in sel.selected_variants):
                 rating = "轻微"
                 breakdown = f"Original uses sample splits but no subsample variant selected for {slot_id}"

@@ -130,6 +130,9 @@ def _infer_design_type(methods_p0: Dict, results_p0: Dict) -> tuple:
     elif "logit" in estimator or "probit" in estimator:
         design_type = "logit/probit"
         design_family = "非线性模型"
+    elif "hierarchical" in estimator or "hlr" in estimator or "multilevel" in estimator:
+        design_type = "hierarchical_linear"
+        design_family = "面板数据/OLS"
     elif "ols" in estimator:
         design_type = "ols/fe"
         design_family = "面板数据/OLS"

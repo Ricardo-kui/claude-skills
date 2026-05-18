@@ -145,8 +145,10 @@ Table [x] reports the matched difference-in-differences estimates. Before presen
 **通用填空段落（每假设一段，内置四拍）**：
 
 ```text
-Hypothesis [x] predicted that [predictor] would be [positive/negative] associated with [outcome]. As shown in Model [y] of Table [z], the coefficient for [predictor] is [positive/negative] and statistically significant ([coefficient], [p-value]). This indicates that [substantive interpretation]. Thus, Hypothesis [x] is supported.
+Hypothesis [x] predicted that [predictor] would be [positive/negative] associated with [outcome]. As shown in Model [y] of Table [z], the coefficient for [predictor] is [positive/negative] and statistically significant ([coefficient], [p-value]). Substantively, a [one-SD / one-unit / IQR] increase in [predictor] is associated with a [Y-unit / percentage-point / probability-shift] [increase/decrease] in [outcome], representing approximately [X%] change relative to [baseline / mean / median]. Thus, Hypothesis [x] is supported.
 ```
+
+> **四拍完整性检查**：方向 → 显著性+系数 → 幅度+基准 → 支持判断。Beat-3（幅度）必须使用具体数值基准（one-SD / one-unit / IQR / 概率变化 / 百分比），禁止仅写 "This indicates that..." 等模糊表述。
 
 **含经济显著性（R5 嵌入）的扩展版**：
 ```text
@@ -231,6 +233,16 @@ Hypothesis [x] predicted that [predictor] would [increase/decrease] stock market
 **中介专用（R3 扩展）**：
 ```text
 Hypothesis [x] predicted that [mediator] mediates the relationship between [predictor] and [outcome]. Following [Baron and Kenny/Hayes], we conduct a mediation analysis. In Model [a], [predictor] is significantly related to [mediator] (β = [value], p < [threshold]), satisfying Condition 1. In Model [b], [mediator] is significantly related to [outcome] (β = [value], p < [threshold]), satisfying Condition 2. When both [predictor] and [mediator] are included in Model [c], the coefficient for [predictor] decreases from [value] (p < [threshold]) to [value] (p = [value]), while [mediator] remains significant (β = [value], p < [threshold]). The [Sobel test/bootstrap] confirms significant mediation ([statistic] = [value], p < [threshold]). These findings support Hypothesis [x].
+```
+
+**HLM / 多层模型专用**（当数据为嵌套结构时，区分 Level-1 与 Level-2 系数）：
+```text
+Hypothesis [x] predicted that [predictor] would be [positive/negative] related to [outcome]. Model [y] of Table [z] reports the HLM estimate. The Level-1 (within-[unit]) coefficient for [predictor] is [positive/negative] and statistically significant (γ = [value], p [relation] [threshold]), indicating that [substantive within-unit interpretation]. The Level-2 (between-[unit]) coefficient is [positive/negative] and [significant / not significant] (γ = [value], p [relation] [threshold]), suggesting that [between-unit interpretation]. The cross-level interaction between [level-2 predictor] and [level-1 predictor] is [positive/negative] and statistically significant (γ = [value], p [relation] [threshold]); a one-SD increase in [level-2 predictor] strengthens the [level-1 predictor]-[outcome] relationship by [Y-unit]. Thus, Hypothesis [x] is supported.
+```
+
+**文本构念结果四拍专用**（当预测变量或结果来自文本分析时）：
+```text
+Hypothesis [x] predicted that [predictor] would be [positive/negative] associated with [outcome]. Model [y] of Table [z] shows that the coefficient for [predictor] is [positive/negative] and statistically significant ([coefficient], [p-value]). Substantively, a one-standard-deviation increase in the text-based [predictor] score is associated with a [Y-unit / percentage-point] [increase/decrease] in [outcome], representing approximately [X%] change relative to the sample mean. This effect size is meaningful because [theoretical benchmark: e.g., comparable to the effect of a one-SD change in the archival measure of the same construct]. Thus, Hypothesis [x] is supported.
 ```
 
 ---
@@ -340,6 +352,11 @@ Results do not support Hypothesis [x]. To examine this possibility, we separate 
 **非显著间接调节变体**（mediated moderation 中部分路径不显著时）：
 ```text
 We test whether the interaction between [mediator] and [predictor] mediates the moderating effect of [moderator 1] on the [predictor-outcome] relationship. In the full system (Equation 5), the coefficient on the original [predictor × moderator 1] interaction (β₄₃) is [not statistically significant / reduced in magnitude compared with Equation 2], whereas the [predictor × mediator] interaction (β₄₅) is [significant/direction]. This pattern indicates that [mediator] [fully/partially] accounts for the moderating role of [moderator 1] in the [outcome type] specification. However, we do not find a statistically significant indirect moderation effect in the [alternative outcome type] specification, suggesting that the mediated moderation mechanism may be [context-dependent / limited to specific decision domains]. We interpret this pattern cautiously and defer broader theoretical implications to the Discussion.
+```
+
+**主效应不显著但交互显著变体**（Mannor 2016 模式；禁止跳过主效应）：
+```text
+Hypothesis [x] predicted that [predictor] would be [direction] related to [outcome]. The coefficient for [predictor] is [direction] but does not reach conventional significance levels ([coefficient], [p-value]), providing no direct support for the main effect. However, the interaction between [predictor] and [moderator] (Hypothesis [z]) is [direction] and statistically significant (β = [value], p [relation] [threshold]). Because the interaction is significant, the main effect of [predictor] should not be interpreted independently ([Aiken & West / Dawson & Richter]); instead, its effect is conditional on [moderator]. We therefore interpret the results through the lens of the significant interaction and defer discussion of the null main effect to the Discussion.
 ```
 
 ---
@@ -600,6 +617,19 @@ Taken together, the results indicate that [digital transformation enhances firm 
 - 必须提醒用户：替换所有 `[方括号占位符]` 为实际内容；不虚构 p 值、系数、支持状态或稳健性发现。
 - 不要跳过不显著的假设——必须报告并解释。
 - 经济显著性必须与统计显著性一起报告（已在 R3 扩展版中内置）。
+- **因果语言强度必须与 design strength 匹配**。以下是按设计家族的强制词汇表：
+
+| 设计家族 | 允许动词 | 禁止动词 | 使用条件 |
+|---------|---------|---------|---------|
+| 面板数据/OLS/FE/HLM | associated with, related to, linked to, corresponds to | increases, decreases, leads to, causes, drives, produces | 无条件禁止强因果词 |
+| DiD / 自然实验 | effect of ... on ..., associated with | causes, leads to, drives | 仅在平行趋势/事件研究支持后可用 "effect of... on..."；否则退回 "associated with" |
+| IV/2SLS | effect of ... on ..., increases, decreases | causes, leads to, produces | 仅在 M8 识别假设 preview 后可用；second-stage 汇报可用 "effect" 但避免 "causes" |
+| 非线性模型 (Logit/Probit/Tobit/计数) | associated with, increases the likelihood of, changes the probability of | increases, decreases, causes, leads to | 系数本身不可直接解释；必须通过边际效应/概率变化转述 |
+| 生存分析 | associated with, lengthens/shortens time to, changes the hazard of | causes, leads to, produces | hazard ratio / AFT 系数需通过生存概率或时间变化转述 |
+| SEM / 同时方程 | associated with, predicts, influences | causes, leads to, produces | 结构方程系数表示预测关系，非因果；仅在过度识别且模型拟合良好时可谨慎使用 "effect" |
+| 实验 | caused, led to, produced, increased, decreased | — | 随机化支持后可直接使用强因果词 |
+
+- **四拍完整性强制要求**：每个显著假设的 R3 段落必须包含 Beat-3（幅度解释），使用具体数值基准（one-SD / one-unit / IQR / 概率变化 / 百分比），禁止仅写 "This indicates that [substantive interpretation]." 等模糊表述。
 - 交互效应必须提供简单斜率或边际效应图（R4 模板已内置）。
 - 稳健性检验必须按威胁组织，不能简单罗列（R7 已按 6 类威胁分设段落）。
 - 事后分析必须与稳健性检验分开，并明确标记为探索性。

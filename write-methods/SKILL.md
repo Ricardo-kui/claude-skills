@@ -243,6 +243,11 @@ Our focal independent variable, [network-based construct], is defined using [net
 We construct [focal exposure] from [raw trace] by [aggregation rule]. The measure equals [formula: count / proportion / intensity] of [event/type] per [unit-time]. To account for [scale differences / coverage variation], we normalize by [denominator]. We require [minimum threshold] to ensure that [spurious zeros / noise] do not drive the results.
 ```
 
+**文本构念预测变量变体**（当预测变量来自文本分析，如 earnings calls、10-K、媒体、访谈时）：
+```text
+Our focal independent variable, [predictor name], is derived from [text source, e.g., earnings call transcripts / 10-K filings / media coverage] using [method: LIWC dictionary / custom dictionary / machine-learning classifier]. We chose this source because [theoretical reason for text reflecting construct]. The dictionary includes [N] words/phrases capturing [theoretical dimension], validated by [human coding / prior literature / expert review]. To ensure convergent validity, we correlate the text-based measure with [alternative measure, e.g., survey / archival proxy]; the correlation is [value] (p [relation] [threshold]), supporting construct validity. We standardize the text score to mean zero and standard deviation one to facilitate coefficient interpretation. Because text-based measures may capture noise unrelated to [construct], we control for [general text characteristics: length / sentiment / formality] in all specifications.
+```
+
 **同时方程变体**：
 ```text
 Equation [x] predicts [primary outcome] as a function of [focal predictor], [mechanisms], [moderators], interactions, and controls. Equations [y–z] model [mediator A] and [mediator B], allowing us to test whether [focal predictor] affects the mechanisms implied by the theory. Equation [w] predicts [downstream outcome] using [focal outcome], [focal predictor], their interaction, and value-relevant controls. We include an additional equation for [potentially endogenous choice] to account for the possibility that [anticipated need/reverse path] influences [focal predictor].
@@ -402,6 +407,11 @@ first-stage 统计量可置于 M7 正文、表格脚注或 R1 诊断段，取决
 To disentangle the within-[unit] and between-[unit] effects of [predictor], we estimate mixed-effects models that decompose [predictor] into two components: [predictor]_{within}, which captures deviations from each [unit]'s mean over time, and [predictor]_{between}, which captures each [unit]'s time-invariant average. The within-effect answers whether [predictor] changes within the same [unit] are associated with [outcome] changes. The between-effect answers whether [units] with higher average [predictor] exhibit systematically different [outcome]. We include [random effects] to account for [unit]-level unobserved heterogeneity and [fixed effects] to absorb [time/common shocks].
 ```
 
+**HLM/多层模型变体**（当数据为嵌套结构，如员工-团队-公司，或重复测量-个体时）：
+```text
+Because observations are nested within [level-2 unit, e.g., firms / teams / individuals], we estimate a hierarchical linear model (HLM) with random intercepts at the [level-2] level. The intraclass correlation (ICC) is [value], indicating that [percentage]% of the variance in [outcome] resides between [level-2 units], justifying the use of multilevel modeling. We include [predictor] at [level-1 / level-2 / both levels] and test cross-level interactions (e.g., [level-2 predictor] × [level-1 predictor]). Random slopes for [predictor] are included when the likelihood-ratio test favors their inclusion (χ² = [value], p [relation] [threshold]). We center [level-1 predictor] at the [group mean / grand mean] to facilitate interpretation of [main effects / cross-level interactions]. Standard errors are robust to [heteroskedasticity / clustering] at the [level] level.
+```
+
 **实验变体**：
 ```text
 Participants were randomly assigned to one of [N] conditions and then completed [task/measures]. We used [model/test] to analyze [outcome] because [outcome form/design logic].
@@ -474,6 +484,11 @@ Because [outcome] may reflect [alternative mechanism] rather than [focal mechani
 Our identification strategy relies on two features of partially overlapping peer groups. First, because [percentage] of firms operate in multiple industries, peer groups vary at the individual firm level. This breaks the linear dependence between the endogenous peer variable and exogenous peer characteristics that plagues perfectly overlapping groups. Formally, in a perfectly overlapping group, PeerDisclosure is a linear combination of peer characteristics, making identification impossible. With partial overlap, the peer group matrix has full rank because each firm faces a unique combination of peers.
 
 Second, we instrument [endogenous peer variable] with [second-degree peer characteristics], which are plausibly uncorrelated with unobservable shocks affecting the focal firm's [outcome] because second-degree peers are not in the focal firm's peer group. The exclusion restriction is supported by three arguments: (1) [theoretical argument], (2) [mandatory-regime falsification], and (3) [Hansen J-test / statistical argument].
+```
+
+**SEM 模型识别变体**（当使用结构方程模型或联立方程时）：
+```text
+Because we estimate a system of [N] equations simultaneously, we verify model identification before interpreting coefficients. The model has [degrees of freedom] degrees of freedom (positive, indicating over-identification). Each structural equation satisfies the order condition (number of excluded exogenous variables ≥ number of included endogenous variables minus one) and the rank condition (the matrix of excluded exogenous variables has full column rank). For the measurement model, we report confirmatory factor analysis (CFA) fit indices: CFI = [value] (≥ 0.90), RMSEA = [value] (≤ 0.08), and SRMR = [value] (≤ 0.08), indicating acceptable fit. We also report the χ² test ([value], df = [df], p = [value]) as an absolute fit measure, noting that χ² is sensitive to sample size. All factor loadings are significant (p < [threshold]) and exceed [value], supporting convergent validity. The average variance extracted (AVE) for each construct is [value], exceeding the squared correlation between constructs, supporting discriminant validity.
 ```
 
 ---
@@ -625,7 +640,18 @@ The Results section first reports [the main hypothesis tests in Table 2] and the
 - 变量名必须与 Results 表格完全一致。
 - 每个控制变量必须有明确的控制逻辑（已在段落骨架中内置 "because [rival explanation]" 槽位）。
 - 样本漏斗必须包含每一步的数字和理由（已在 M2 骨架中内置）。
-- 因果语言强度必须与 design strength 匹配：面板数据用 "associated with"；自然实验在识别支持后用 "effect of... on..."；实验可用 "caused"。
+- 因果语言强度必须与 design strength 匹配。以下是按设计家族的强制词汇表：
+
+| 设计家族 | 允许动词 | 禁止动词 | 使用条件 |
+|---------|---------|---------|---------|
+| 面板数据/OLS/FE/HLM | associated with, related to, linked to, corresponds to | increases, decreases, leads to, causes, drives, produces | 无条件禁止强因果词 |
+| DiD / 自然实验 | effect of ... on ..., associated with | causes, leads to, drives | 仅在平行趋势/事件研究支持后可用 "effect of... on..."；否则退回 "associated with" |
+| IV/2SLS | effect of ... on ..., increases, decreases | causes, leads to, produces | 仅在 M8 识别假设 preview 后可用；second-stage 汇报可用 "effect" 但避免 "causes" |
+| 非线性模型 (Logit/Probit/Tobit/计数) | associated with, increases the likelihood of, changes the probability of | increases, decreases, causes, leads to | 系数本身不可直接解释；必须通过边际效应/概率变化转述 |
+| 生存分析 | associated with, lengthens/shortens time to, changes the hazard of | causes, leads to, produces | hazard ratio / AFT 系数需通过生存概率或时间变化转述 |
+| SEM / 同时方程 | associated with, predicts, influences | causes, leads to, produces | 结构方程系数表示预测关系，非因果；仅在过度识别且模型拟合良好时可谨慎使用 "effect" |
+| 实验 | caused, led to, produced, increased, decreased | — | 随机化支持后可直接使用强因果词 |
+
 - 不要报告支持状态在 Methods 中。
 - 不要把模型选择埋在方程里而没有文字解释。
 
