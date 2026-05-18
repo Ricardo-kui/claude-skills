@@ -1,0 +1,50 @@
+# Ignore everything by default in skills root
+*
+
+# Track .gitignore itself
+!.gitignore
+
+# Track user's custom skill directories
+!academic-writing-corpus/
+!academic-writing-corpus/**
+!check-alignment/
+!check-alignment/**
+!check-introduction/
+!check-introduction/**
+!diagnose-introduction/
+!diagnose-introduction/**
+!discussion-review/
+!discussion-review/**
+!distill-methods-exemplar/
+!distill-methods-exemplar/**
+!distill-results-exemplar/
+!distill-results-exemplar/**
+!intro-review/
+!intro-review/**
+!methods-review/
+!methods-review/**
+!paper-review/
+!paper-review/**
+!pollock-qc/
+!pollock-qc/**
+!results-review/
+!results-review/**
+!reverse_validation_pipeline/
+!reverse_validation_pipeline/**
+!theory-review/
+!theory-review/**
+!write-discussion/
+!write-discussion/**
+!write-introduction/
+!write-introduction/**
+!write-methods/
+!write-methods/**
+!write-results/
+!write-results/**
+!write-theory/
+!write-theory/**
+
+# Track user's loose files
+!empirical-writeup.md
+!methods_results_quality_check.py
+!paper-writing-stack.md
