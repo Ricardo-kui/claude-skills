@@ -314,6 +314,18 @@ phase_4_corpus_reference:
 
 **关键原则**：Phase 4 的所有产出都是**参考性注释**，存入 Vault 的 `skill_update_recommendations/` 或 `fine_grained/` 目录，供人工审阅后决定是否纳入 skill。Distill skill 不自动修改 `write-methods` 的骨架库。
 
+### 手动写入路径：→ academic-writing-corpus
+
+验证通过的变体骨架可手动写入 `write-methods/academic-writing-corpus/[设计类型].md` 的「累积变体」区块。
+
+写入前确认：
+- [ ] 该变体已通过三重验证（跨论文复现 / 生成力 / 范式排他性）
+- [ ] 目标设计类型文件已存在（参见 `academic-writing-corpus/INDEX.md`）
+- [ ] 写入格式：`### 变体 N: [来源论文] (YYYY-MM-DD)` + 验证状态 + 槽位 + 骨架 + 差异说明
+- [ ] 更新文件头 `variants_count` 和 `updated` 字段
+
+**不建立 Phase 4.5 自动管道**——写入由人工判断触发，保持 distill skill 架构精简。
+
 ---
 
 ## Phase 5 — 质量验证与 QC 输出
