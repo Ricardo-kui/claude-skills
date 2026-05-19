@@ -12,6 +12,7 @@ source_papers:
   - desjardine2023 (OS, 2023): "CalPERS quote on systemic risk — institutional investor voice"
   - singh2023 (JMR, 2023): "Toyota internal documents — policy scandal quote"
   - lashley_pollock2020 (ASQ, 2020): "medical cannabis patient narrative — immersive stakeholder voice"
+  - wowak2025 (MS, 2025): "JFK 'right answer' quote → political polarization paradox"
 created: 2026-05-19
 source: Extracted from MVP30 narrative_analysis + darby2026 distill
 ---
@@ -126,6 +127,23 @@ source: Extracted from MVP30 narrative_analysis + darby2026 distill
 - **引语不能太长**: 最多 2-3 句话。过长的引语会淹没作者的叙事控制
 - **不要选装饰性引语**: 引语必须**本身包含**研究问题的核心矛盾，而不能只是"关于这个话题有人说了一句话"
 - **避免情感操纵**: 特别是涉及消费者伤害的案例，不要用煽情语言，让引语本身和后续后果清单建立客观紧迫性
+
+---
+
+### 变体 E：政治悖论型（wowak2025 型）
+
+**模板**:
+> "In a speech at [venue] in [year], [public_figure] proclaimed, '[quote_about_unity_or_ideal].' It is rare to encounter such [ideal_trait] in today's [charged_environment]. In fact, [phenomenon] in [country] is at an all-time high ([citation]), with [N]% strongly preferring [pole_1], [N]% strongly preferring [pole_2], and [N]% claiming the middle ground ([citation]). Regardless of where a person falls on the [spectrum], [trait] tend to influence their stance on issues including [issue_1] ([citation]), [issue_2] ([citation]), and [issue_3] ([citation]), among others. Although [phenomenon] have long been a cornerstone of [society], [phenomenon_in_specific_domain] has largely been orchestrated outside of the public view."
+
+**来源**: wowak2025 (MS), P1
+
+**关键特征**:
+- **名言→现状对比**: 历史名言的理想化立场反衬今日现实的极化
+- **分层极化数据**: 25/36/35% 三分法展示光谱，而非二元对立
+- **"outside of the public view"**: 暗示研究将揭开"幕后"现象
+- **禁忌**: 不适用于无政治/意识形态维度的研究；名言必须与研究主题存在实质性呼应
+
+**适用**: 政治意识形态、文化价值观、社会分裂、高管个人特质对组织决策影响的研究
 
 ---
 

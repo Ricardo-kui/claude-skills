@@ -12,8 +12,10 @@ source_papers:
   - mannor2016 (SMJ, 2016): Construct definition + new label creation
   - lehman2014 (MS, 2014): Dual code/type contrast framework
   - vadakkepatt2022 (JM, 2022): Moderator systematization theory lens
+  - darby2025 (JSCM, 2025): Agency theory — principal-agent + impression management
+  - darby2026 (JOM, 2026): Agency theory — information asymmetry
 created: 2026-05-19
-updated: 2026-05-19
+updated: 2026-05-20
 source: Extracted from MVP30 narrative_analysis files + haunschild2015 distillation
 ---
 
@@ -29,6 +31,7 @@ Theory Lens（P4-P5）的功能：在 Gap/Tension 建立之后，向读者提供
 |------|------|---------|
 | [05-maxim-contrast.md](05-maxim-contrast.md) | 格言对比：用对立口号具象化 trade-off / competing goals | 资源竞争、二元张力、安全-效率类研究 |
 | [06-context-bridging.md](06-context-bridging.md) | Introduction 内双情境映射：提前展示跨情境理论普遍性 | 多情境/多行业/质性+量化混合方法研究 |
+| [01-agency-theory-standard.md](01-agency-theory-standard.md) | Agency Theory 标准引入：principal-agent + 信息不对称/印象管理 | 公司治理、供应链管理、代理问题研究 |
 
 ---
 
@@ -60,6 +63,7 @@ Theory Lens（P4-P5）的功能：在 Gap/Tension 建立之后，向读者提供
 
 | 编号 | Theory Lens 名称 | 核心特征 |
 |------|-----------------|---------|
+| 01 | agency-theory-standard | 标准 principal-agent 引入 + 信息不对称/印象管理 |
 | 05 | maxim-contrast | 用对立格言/口号具象化资源竞争张力 |
 | 06 | context-bridging | Introduction 内提前映射双情境，展示理论普遍性 |
 

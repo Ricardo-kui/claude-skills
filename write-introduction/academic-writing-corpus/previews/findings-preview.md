@@ -127,6 +127,44 @@ P5-P6 的下半段功能：向读者预告实证结果。这是 Introduction 中
 
 ---
 
+### 变体 L：双 DV 竞争方向 + Post Hoc 型（wowak2025 型）
+
+**模板**:
+> "We collect data on [data_description] across [N] [units] that had [N] [events] from [year_start] through [year_end]. We find that [finding_DV1]. Specifically, [magnitude_DV1]. In contrast, we find that [finding_DV2_opposite_direction]. Specifically, [magnitude_DV2]. Given that [stakes_restatement], [implications]. Two important post hoc analyses examine why we find what we do, as well as what may be done about it. First, [post_hoc_1_summary_with_result]. Second, [post_hoc_2_summary_with_result]."
+
+**来源**: wowak2025 (MS), P5
+
+**原文锚定**:
+> "We collect data on political donations from thousands of TMT members across 88 firms that had 4,072 serious medical product recalls from 2002 through 2015. We find that firms with more liberal TMTs experience fewer serious product recalls than those with more conservative TMTs. Specifically, firms with TMTs one standard deviation more liberal than the mean experience approximately 1.10 fewer serious recalls per year. In contrast, we find that firms with more liberal TMTs are slower to recall products with serious quality issues than firms with more conservative TMTs. Specifically, firms with TMTs one standard deviation more liberal than the mean take approximately 22 days longer to initiate serious recalls. ... Two important post hoc analyses examine why we find what we do, as well as what may be done about it. First, we examine our proposed mechanism... We find that firms with more liberal TMTs experience fewer product quality-related adverse events and that this lower level... partially mediates the relationship... Second, ... political diversity on the TMT leads to fewer and faster recalls, capturing the best of both political ideologies."
+
+**关键特征**:
+- **"In contrast"**: 双 DV 的相反方向发现增加了叙事的反直觉性
+- **Post Hoc 在 Introduction 中预告**: 极其少见——建立了"不仅发现，还解释了为什么+该怎么办"的完整研究印象
+- **具体数字贯穿**: 1.10 fewer recalls / 22 days longer — 每个发现都有具体 magnitude
+- **禁忌**: 仅在 Post Hoc 分析是研究的核心增值时才在 Introduction 中预告；不要预告所有稳健性检验
+
+**适用**: 竞争假设设计、双 DV 设计、Post Hoc 分析是核心贡献的研究
+
+### 变体 M：发现+调节完整预览型（darby2025 型）
+
+**模板**:
+> "The hypotheses are tested in the [industry] sector, wherein [phenomenon_stakes]. Analyses of data on [N] [events] initiated by [N] [units] from [year_start] to [year_end] reveal that [main_finding]. Turning to the moderators, [moderation_finding_1] and [moderation_finding_2]."
+
+**来源**: darby2025 (JSCM), P5
+
+**原文锚定**:
+> "The hypotheses are tested in the medical products sector, wherein defective products have significant ramifications for society. Analyses of data on 5,427 medical product recalls initiated by 138 firms from 2002 to 2020 reveal that greater stock ownership by activist investors who have not targeted the focal firm—but have targeted other firms—is associated with faster recalls by the focal firm, providing evidence of a spillover effect. Turning to the moderators, the spillover effect is stronger for design-related defects relative to manufacturing-related defects and for high-severity defects that can harm consumers as opposed to low-severity defects."
+
+**关键特征**:
+- **极简数据描述**: 一句话完成数据、样本、时间跨度
+- **主效应+概念标签**: 不仅报告关联方向，还标注为 "providing evidence of a spillover effect"
+- **"Turning to the moderators"**: 自然过渡到调节效应，不突兀
+- **禁忌**: 不要在 Preview 中列举所有假设的统计结果——用自然语言叙事，不用 "β = X, p < Y"
+
+**适用**: 主效应+调节设计、需要在 Introduction 中快速建立贡献感的研究
+
+---
+
 ## 组装规则
 
 ### 必须配对

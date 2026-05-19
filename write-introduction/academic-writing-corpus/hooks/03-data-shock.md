@@ -10,6 +10,7 @@ exclusivity: MEDIUM
 source_papers:
   - eilert2017 (JM, 2017): "390 recalls in 2014, NHTSA data"
   - darby2024 (MSOM, 2024): "CEO stock ownership and recall timing"
+  - darby2025 (JSCM, 2025): "Vioxx: 88,000 heart attacks, 38,000 deaths — crisis data Hook"
   - shi2021 (JMR, 2021): "organizational herding in advertising disclosures"
   - vadakkepatt2022 (JM, 2022): "130% lobbying growth, 22,000% ROI, $325M→$338B contracts"
 created: 2026-05-18
@@ -91,6 +92,27 @@ source: Manually curated from MVP30 narrative_analysis files
 - "Thus... However... Therefore..." 建立双向成本逻辑链
 - 用具体案例+美元金额（Toyota, $17.35 million）支撑论证
 - 成本-收益张力建立后自然引出研究问题
+
+---
+
+### 变体 E：危机数据型（darby2025 型）
+
+**模板**:
+> "Navigating failure is a critical part of managing today's [domain] ([citations]). [Phenomenon] are one painful failure with undesirable implications for [stakeholders] ([citation]). Although [regulatory_body] has guidelines for when [action] is warranted, [actors] have considerable discretion over when they initiate [actions]. Unfortunately, [negative_outcome] are all too common ([citation]), and the implications grow as [temporal_measure] increases ([citation]). For example, [product] was linked to as many as [N] [harm_1] and [N] [harm_2] between when [firm] became aware of its dangers in [year_start] and its recall in [year_end] ([citation]). This leaves [audiences] wondering: [RQ]?"
+
+**来源**: darby2025 (JSCM), P1
+
+**原文锚定**:
+> "Navigating failure is a critical part of managing today's supply chains. Recalls are one painful failure with undesirable implications for supply chains and society. Although the FDA has guidelines for when a recall is warranted, firms have considerable discretion over when they initiate recalls. Unfortunately, slow recalls are all too common, and the implications for the recalling firm, its supply chain, and society grow as the time-to-recall increases. For example, the anti-inflammatory drug Vioxx was linked to as many as 88,000 heart attacks and 38,000 deaths between when Merck became aware of its dangers in 2000 and its recall of the drug in 2004. This leaves scholars, regulators, and consumers wondering: what can encourage more timely recalls?"
+
+**关键特征**:
+- **具体伤亡数字**: 用精确数字（88,000 heart attacks / 38,000 deaths）建立危机紧迫感
+- **时间跨度张力**: "2000年知晓→2004年召回" 的4年延迟暴露监管-执行缺口
+- **从一般到具体**: 失败普遍→召回具体→监管框架→企业裁量→Vioxx案例→RQ，层层收窄
+- **三方受众**: "scholars, regulators, and consumers" — 同时锚定学术、政策、消费者关切
+- **禁忌**: 不在无真实伤亡数据的领域使用；不虚构数字；不将害人数量作为 sensationalism
+
+**适用**: 产品召回、药品安全、食品安全、环境灾难等"延迟=伤亡"的研究领域
 
 ---
 

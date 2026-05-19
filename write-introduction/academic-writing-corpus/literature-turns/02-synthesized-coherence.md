@@ -91,6 +91,24 @@ P2-P3 的功能：连接多个文献流，展示它们共享一个盲区——�
 
 ---
 
+### 变体 D：双文献流交叉沉默型（wowak2025 型）
+
+**模板**:
+> "More recently, however, [actors] have become increasingly transparent and vocal about their [trait] ([citation]). Given [actors]' willingness to speak out about [issues] that have little direct impact on their organizations, it is important to examine if their [trait] influence key decisions that impact [stakeholders]. Along these lines, research has found that [construct]—defined as '[definition]' ([citation])—is a meaningful predictor of various organizational outcomes, such as [outcome_1] ([citation]), [outcome_2] ([citation]), and [outcome_3] ([citation]). Although [stream_1] and [stream_2] are important topics that dominate public discourse, questions about how [construct] influence [novel_outcome] with [stakeholder] implications has eluded academic attention. Although existing research is silent on [specific_relationship], the recent [environmental_change] highlights the value of exploring this relationship using a rigorous econometric approach."
+
+**来源**: wowak2025 (MS), P2
+
+**关键特征**:
+- **趋势升级→双文献流**: 从"高管愈发公开表达政治立场"的趋势出发，先确认文献流1(政治意识形态→组织结果)充分发展，再暗示文献流2(召回前因)同样丰富，但在**交叉点**集体沉默
+- **双标志性 Gap 语言**: "has eluded academic attention" + "existing research is silent on" — 两个递进的沉默声明
+- **"rigorous econometric approach"**: Gap 声明后立即预告方法论承诺，建立可信度
+- **禁忌**: 两个文献流都必须有实质引用支撑，不能稻草人化其中任何一个
+- **与 Incompleteness 的兼容性**: 此变体特别适用于 Incompleteness（而非仅 Inadequacy）——两个文献流各自正确且充分，只是从未交叉
+
+**适用**: 跨学科/跨文献流研究，特别是两个成熟领域在交汇处沉默的情境
+
+---
+
 ## 组装规则
 
 ### 必须配对

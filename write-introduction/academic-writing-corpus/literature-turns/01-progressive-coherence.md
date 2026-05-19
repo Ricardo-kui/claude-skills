@@ -103,6 +103,27 @@ P2-P3 的功能：承认文献已有实质进展，但精确指出被遗漏的�
 
 ---
 
+### 变体 E：Table 1 文献矩阵型（darby2025 型）
+
+**模板**:
+> "A growing body of [domain] research offers insights into [phenomenon]. For example, [level_1_findings]. Recently, scholars have moved beyond [level_1] to examine [level_2], finding that [level_2_findings] ([citations]). This shift in focus is due, in part, to [external_change] ([citation]). Indeed, [reinforcement]."
+
+同时嵌入 Table 1: 按 [DV 行] × [IV 类别列] 组织的文献矩阵，每格包含作者+年份+发现方向。
+
+**来源**: darby2025 (JSCM), P2 + Table 1
+
+**关键特征**:
+- 叙事段落仅 3-4 句建立递进式文献线索
+- Table 1 替代了原本需要 3-4 段的冗长文献叙述
+- 矩阵按 IV 类别分列（召回特征 / 供应链因素 / 公司治理因素），按 DV 分行（召回次数 / 召回时滞）
+- 每格仅 1-2 行：作者+年份+发现方向（+/-/ns）
+
+**适用**: 文献 >=15 篇、需要在 Introduction 中展示文献广度的研究。文献 <10 篇时段落叙事足矣，无需矩阵。
+**禁忌**: Table 1 不是完整文献综述的替代品——它是对文献模式的视觉摘要。正文仍需 2-3 句叙事建立逻辑线索。
+
+---
+
+
 ## 组装规则
 
 ### 必须配对
