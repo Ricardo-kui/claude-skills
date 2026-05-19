@@ -24,16 +24,30 @@ version: 3.1.0
 | **Inadequacy** | 中 | 现有视角抓住了现象，但误置了构念/层次/边界 | "你们看到了现象，但理解偏了" |
 | **Incommensurability** | 高 | 不同理论/证据推出不兼容解释，需要新框架 | "你们说得都对，但互相矛盾" |
 
-## 2. Hook 选择器
+## 2. Hook 选择器（按 Pollock 2025 四类型分类）
 
-| Gap 强度 | 推荐 Hook | 句法特征 | 范文 |
-|---------|----------|---------|------|
-| 低 | `03-data-shock` | 具体数字 → scale → "yet little is known" | eilert2017 (JM) |
-| 低 | `10-practical-puzzle` | 从业者面临的具体困境 | — |
-| 中 | `05-literature-consensus-blindspot` | "While important... considers... broadly" | gamache2020 (SMJ) |
-| 中 | `04-puzzle-paradox` | 反直觉现象 → 制造悬念 | paruchuri2020 (SMJ) |
-| 中 | `01-cross-disciplinary-analogy` | 领域A的概念 → 领域B的类似问题 | pollock2015 (ASQ) |
-| 高 | `06-paradigm-challenge` | "According to conventional view... In reality, however..." | zhou2017, hahl2017, gamache2023 |
+| Gap 强度 | 推荐 Hook | Pollock 类型 | 句法特征 | 范文 |
+|---------|----------|-------------|---------|------|
+| 低 | `03-data-shock` | Trend | 具体数字 → scale → "yet little is known" | eilert2017 (JM) |
+| 低 | `08-consequence-cascade` | Trend | 负面事件递进式后果清单 | mayo2021 (POM) |
+| 低 | `10-practical-puzzle` | Anecdote | 从业者面临的具体困境 | — |
+| 低 | `09-psychological-construct-hook` | Anecdote | 压力共识→案例落地→因果链→学术空白 | mannor2016 (SMJ) |
+| 低 | `13-rhetorical-question` | Rhetorical question | 日常选择三联→读者自我确认→概念转译 | gomulya2019 (SMJ) |
+| 中 | `05-literature-consensus-blindspot` | Trend | "While important... considers... broadly" | gamache2020 (SMJ) |
+| 中 | `01-cross-disciplinary-analogy` | Trend | 领域A的概念 → 领域B的类似问题 | pollock2015 (ASQ) |
+| 中 | `12-contrary-to-belief` | Trend | "Contrary to popular belief..." | eilert2017 (JM) |
+| 中 | `04-puzzle-paradox` | Anecdote | 反直觉现象 → 制造悬念 | paruchuri2020 (SMJ) |
+| 中 | `07-cost-benefit-tension` | Anecdote | 决策两难：行动成本 vs 延迟成本 | eilert2017 (JM) |
+| 中 | `11-institutional-anecdote` | Anecdote | 客观制度叙事→"unremarkable"理论常态化 | lehman2014 (MS) |
+| 中 | `10-immersive-narrative` | Anecdote | 五幕结构叙事（时间精确、人物有名） | desai2012 (AMJ) |
+| 高 | `06-paradigm-challenge` | Trend | "According to conventional view... In reality, however..." | zhou2017, hahl2017, gamache2023 |
+| 高 | `02-epigraph-quote-pivot` | Quote | 权威引语/新闻个案/内部文件 | darby2026 (JOM) |
+
+**贡献维度微调**（保留原有）：
+- Constructs → 偏好 `04-puzzle-paradox`（让读者"意识到混淆"）
+- Mechanism → 偏好 `05-literature-consensus-blindspot`（展示"现有解释不足"）
+- Boundary → 偏好 `04-puzzle-paradox`（呈现"何时有效/失效"）
+- Phenomenon → 偏好 `03-data-shock`（用数据建立新现象域）
 
 **贡献维度微调**：
 - Constructs → 偏好 `04-puzzle-paradox`（让读者"意识到混淆"）
@@ -51,11 +65,20 @@ version: 3.1.0
 
 ## 4. Tension 选择器
 
-| Gap | Tension | 核心句式 |
-|-----|---------|---------|
-| Incompleteness | `01-despite-progress-unaddressed` | "Although research has... little attention has been paid to..." |
-| Inadequacy | `02-implicit-assumption-wrong` | "The implicit assumption that... may be incorrect because..." |
-| Incommensurability | `04-reality-contradicts-consensus` | "Whereas prior studies show X, empirical evidence is mixed... To resolve, we theorize..." |
+| Gap | Tension | 核心句式 | 验证状态 |
+|-----|---------|---------|---------|
+| Incompleteness | `01-despite-progress-unaddressed` | "Although research has... little attention has been paid to..." | VERIFIED |
+| Incompleteness | `12-forward-vs-backward-looking` | "Research has examined post-hoc consequences, yet what predicts timing..." | EXPERIMENTAL |
+| Incompleteness | `08-cost-vs-benefit` | "Firms face a dilemma: [action] is costly, yet delaying is costlier..." | VERIFIED |
+| Inadequacy | `02-implicit-assumption-wrong` | "The implicit assumption that... may be incorrect because..." | VERIFIED |
+| Inadequacy | `03-structural-blindspot` | "This focus on [X] has systematically overlooked [Y]..." | VERIFIED |
+| Inadequacy | `05-construct-confusion` | "Different labels have been used for the same phenomenon..." | STANDARD |
+| Inadequacy | `11-overlooked-alternative` | "The dominant approach has focused on [X], overlooking [Y]..." | EXPERIMENTAL |
+| Inadequacy | `09-resource-acquisition-vs-utilization` | "Although [strategy] benefits acquisition, it constrains utilization..." | EXPERIMENTAL |
+| Incommensurability | `04-reality-contradicts-consensus` | "Whereas prior studies show X, empirical evidence is mixed... To resolve, we theorize..." | VERIFIED |
+| Incommensurability | `06-theoretical-imbalance` | "Two theoretical perspectives offer incompatible predictions..." | STANDARD |
+| Incommensurability | `07-same-policy-opposite-effects` | "The same practice increases [outcome] for Group A but decreases it for Group B..." | EXPERIMENTAL |
+| Incommensurability | `10-constraint-vs-freedom` | "Technology expands freedom, yet market structure imposes constraints..." | EXPERIMENTAL |
 
 **Tension 措辞强度**：
 - 温和： "has received relatively little attention"
@@ -70,7 +93,9 @@ version: 3.1.0
 | 含市场/财务结果 | `02-quantified-economic-loss` |
 | 含股价/资本市场 | `05-firm-value-stock-market` |
 | 含声誉/丑闻/合法性 | `07-reputation-legitimacy-crisis` |
-| 其他 | 通用内部模板（理论重要性 + 实践后果） |
+| 含产品安全/公共卫生/消费者伤害 | `04-public-health-safety` |
+| 核心贡献为跨学科/外部因素引入 | `03-disciplinary-gap-stakes` |
+| 其他 | `01-general-theory-practice`（理论重要性 + 实践后果） |
 
 **插入位置**：紧凑型在 Gap 段末尾（1-2句）；标准型独立 P4（2-3句）；扩展型独立 P4 + 数据支撑。
 
@@ -91,13 +116,20 @@ version: 3.1.0
 | `06-paradigm-challenge` | `04-reality-contradicts-consensus` |
 | `05-literature-consensus-blindspot` | `02-implicit-assumption-wrong` 或 `03-structural-blindspot` |
 | `03-data-shock` | `01-despite-progress-unaddressed` |
+| `04-puzzle-paradox` | `02-implicit-assumption-wrong` |
+| `12-contrary-to-belief` | `02-implicit-assumption-wrong` |
+| `07-cost-benefit-tension` | `08-cost-vs-benefit`（首选）或 `01-despite-progress-unaddressed` |
+| `01-cross-disciplinary-analogy` | `11-overlooked-alternative`（当引入被忽视视角时） |
+| `09-resource-acquisition-vs-utilization` | `05-literature-consensus-blindspot` |
 
 **不能同用**：
 
 | 冲突 | 原因 |
 |------|------|
 | `03-data-shock` + `02-quantified-economic-loss` | 功能冗余，数字疲劳 |
+| `03-data-shock` + `08-consequence-cascade` | 两者都依赖数字，造成数字疲劳 |
 | `06-paradigm-challenge` + `01-despite-progress-unaddressed` | 能量不匹配（高+低） |
+| `02-epigraph-quote-pivot` + `13-rhetorical-question` | 外部声音 vs 读者声音，叙事机制冲突 |
 | Incommensurability + `01-despite-progress-unaddressed` | 逻辑矛盾（颠覆 ≠ 渐进） |
 
 ## 8. Makadok 贡献维度声明句式
@@ -115,14 +147,14 @@ version: 3.1.0
 
 ## 9. 期刊风格速查
 
-| 期刊 | Hook 偏好 | 贡献风格 | 禁忌 |
-|------|----------|---------|------|
-| **ASQ** | 经典理论陈述，非轶事/数据 | 理论整合，facet 分解，反讽对仗 | 不要数据开场，不要无充分文献支持就声称矛盾 |
-| **SMJ** | 反例+数据，挑战元分析结论 | 多层次贡献，理论精细化 | 反例必须有具体数字和案例 |
-| **AMJ** | 共识+盲点，或反例论证 | 机制链清晰，三维度贡献 | 不要缺 Why Chain |
-| **OS** | 实践张力→理论 puzzle | 系统性/结构性论证 | 贡献需有 broader implications |
-| **ASR** | 经典理论颠覆 | 理论深度优先，实验设计概述在后 | 经典理论对话是必备 |
-| **JM/JMR** | 数据冲击，Table 1 文献缺口 | 管理相关性+理论机制 | 营销后果必须有实证支撑 |
+| 期刊 | Hook 偏好 (Pollock 类型) | 贡献风格 | 禁忌 |
+|------|------------------------|---------|------|
+| **ASQ** | Quote (经典理论引语) / Trend (理论颠覆) | 理论整合，facet 分解，反讽对仗 | 不要数据开场，不要无充分文献支持就声称矛盾 |
+| **SMJ** | Trend (反例+数据) / Anecdote (叙事案例) | 多层次贡献，理论精细化 | 反例必须有具体数字和案例 |
+| **AMJ** | Anecdote (沉浸式叙事) / Rhetorical question (读者共鸣) | 机制链清晰，三维度贡献 | 不要缺 Why Chain |
+| **OS** | Anecdote (实践张力→理论 puzzle) | 系统性/结构性论证 | 贡献需有 broader implications |
+| **ASR** | Quote (经典文本) / Trend (理论颠覆) | 理论深度优先，实验设计概述在后 | 经典理论对话是必备 |
+| **JM/JMR** | Trend (数据冲击) / Anecdote (成本困境) | 管理相关性+理论机制 | 营销后果必须有实证支撑 |
 
 ## 10. Gap×Contribution 范文锚定
 
@@ -130,9 +162,11 @@ version: 3.1.0
 
 | Gap | Contribution | 范文 | 期刊 |
 |-----|-------------|------|------|
-| Incompleteness | Mechanism | Wu 2025 | OrgSci |
-| Incompleteness | Boundary | Eilert 2017 | JM |
-| Inadequacy | Constructs | Han 2024, Pollock 2015 | AMP, ASQ |
+| Incompleteness | Mechanism | Wu 2025, **Darby 2026**, **Mayo 2021**, **Vadakkepatt 2022** | OrgSci, **JOM**, **POM**, **JM** |
+| Incompleteness | Constructs | **Mannor 2016**, **Desai 2012** | **SMJ**, **AMJ** |
+| Incompleteness | Boundary | Eilert 2017, **Vadakkepatt 2022** | **JM** |
+| Incompleteness | Phenomenon | **Lehman 2014** | **MS** |
+| Inadequacy | Constructs | Han 2024, Pollock 2015, **Pfarrer 2010** | AMP, ASQ, **AMJ** |
 | Inadequacy | Mechanism | Keeves 2017, Paruchuri 2020 | AMJ, SMJ |
 | Inadequacy | Boundary | Han 2020 | AMP |
 | Inadequacy | Phenomenon | DesJardine 2023 | AMJ |
@@ -201,12 +235,14 @@ version: 3.1.0
 
 | 类别 | 文件数 | 覆盖范围 |
 |------|--------|---------|
-| Hooks | 6 | paradigm-challenge, data-shock, literature-consensus-blindspot, puzzle-paradox, cross-disciplinary-analogy, practical-puzzle |
-| Tensions | 4 | despite-progress-unaddressed, implicit-assumption-wrong, structural-blindspot, reality-contradicts-consensus |
-| Stakes | 2 | quantified-economic-loss, reputation-legitimacy-crisis |
-| Literature Turns | 1 | 三种 Conversation 策略的过渡模板 |
-| Previews | 1 | 机制/发现预览模板 |
-| Transitions | 1 | gap-to-contribution（缺 hook-to-literature, literature-to-gap） |
+| Hooks | 15 | paradigm-challenge, data-shock, literature-consensus-blindspot, puzzle-paradox, cross-disciplinary-analogy, practical-puzzle, epigraph-quote-pivot, consequence-cascade, psychological-construct-hook, immersive-narrative, institutional-anecdote, cost-benefit-tension, contrary-to-belief, rhetorical-question, **paired-disasters** |
+| Tensions | 13 | despite-progress-unaddressed, implicit-assumption-wrong, structural-blindspot, reality-contradicts-consensus, construct-confusion, theoretical-imbalance, same-policy-opposite-effects, cost-vs-benefit, resource-acquisition-vs-utilization, constraint-vs-freedom, overlooked-alternative, forward-vs-backward-looking, **sequential-phenomenon-gap** |
+| Stakes | 6 | `01-general-theory-practice`, `02-quantified-economic-loss`, `03-disciplinary-gap-stakes`, `04-public-health-safety`, `05-firm-value-stock-market`, `07-reputation-legitimacy-crisis` |
+| Literature Turns | 3 | Progressive Coherence, Synthesized Coherence, Non-Coherence（每种含2-4个句法变体） |
+| Previews | 4 | mechanism-preview, findings-preview, robustness-preview, dv-methodology-defense |
+| Contributions | 1 | Makadok 8维度 + 文献对话型 / 过程模型型 / 三段闭环型 / 列表展开型 / 发现预览+贡献混合型 / 暗面叙事框架 / 调节变量系统分类 |
+| Transitions | 12 | `01-hook-to-literature`, actor-funnel, unified-moderator-framework, field-migration, extend-key-study, data-barrier-justification, construct-migration, case-to-field-generalization, micro-macro-complement, `10-literature-to-gap`, `11-roadmap`, gap-to-contribution |
+| Theory Lens | 2 | maxim-contrast, context-bridging |
 
 使用某个模板前，建议打开对应文件确认其适用范围。随着蒸馏产出积累，此表应周期性更新。
 
@@ -266,5 +302,5 @@ version: 3.1.0
 - **直接输出可适配的段落骨架**。把用户的研究内容填入模板。用户需要做的是替换括号里的领域术语、调整语气、核对引文——而不是拿着"组装方案"再去别处找模板。
 - **主动做反模式检查**。输出骨架时，对照 §7 的配对约束和反模式清单，主动指出潜在问题。
 - **默认不读外部文件**。本文件包含完成推荐所需的全部决策知识。仅当用户要求看某模块的完整句法变体（如"paradigm-challenge 还有哪些写法？"）时，才读取对应的语料库文件。
-- **语料库文件路径**：直接使用 canonical 命名，位于 `academic-writing-corpus/` 下对应子目录（hooks/、tensions/、stakes/、transitions/）。
+- **语料库文件路径**：直接使用 canonical 命名，位于 `academic-writing-corpus/` 下对应子目录（hooks/、tensions/、stakes/、transitions/）。所有 hooks 的完整 Pollock 分类索引见 `academic-writing-corpus/hooks/_index.md`。
 - **如用户提及目标期刊**：按 §9 的风格速查给出针对性建议。

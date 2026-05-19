@@ -54,6 +54,21 @@ P2 的功能：将 Hook 建立的注意力转化为学术对话。这不是文�
 - 用引语或转折词建立缺口
 - 不暗示已有文献有错误
 
+### 变体 D：跨学科引入型（mayo2021 型）
+
+**模板**:
+> "In fact, research outside of [target field] indicates that [actors] may manage risks related to [negative events] via at least two mechanisms: [mechanism 1] ([citations]) or [mechanism 2] ([citations]), and that the chosen risk management mechanism may depend on [key variable]. The contexts of these empirical studies are predominantly in [field A] ([citations]) and [field B] ([citations]); see Table [number]. These studies indicate that [condition 1], [actors] may [behavior 1] ([citations]), leading to [consequence A] ([citations]). [Condition 2], [actors] may [behavior 2] ([citations]), to avoid [consequence B]."
+
+来源: mayo2021 (POM), P2
+
+**关键特征**:
+- "research outside of [target field] indicates" → 明确跨学科引入
+- "via at least two mechanisms" → 预告二元机制
+- "see Table [number]" → 用表格呈现文献回顾（POM/MSOM 风格）
+- 条件分句清晰区分不同情境下的行为差异
+
+**适用**: 将 finance/accounting/psychology 发现引入 OM 或战略管理的研究
+
 ---
 
 ## 策略 2：Synthesized Coherence（综合式）
@@ -78,6 +93,22 @@ P2 的功能：将 Hook 建立的注意力转化为学术对话。这不是文�
 - 展示多个文献流之间的未连接状态
 - 用具体引用证明混淆确实存在
 - 暗示需要一个新的整合框架
+
+### 变体 C：构念混淆后果型（pfarrer2010 型）
+
+**模板**:
+> The [phenomenon] of [actors] has attracted considerable interest in [field] (e.g., [citations]). In particular, scholars have focused a great deal of attention on [specific subclass], because [theoretical rationale]. These [constructs] are posited to [theoretical claim] and have been subject to a number of studies intended to [research purpose] (e.g., [citations]). Much of this research, however, has focused on establishing the _general_ effects of [broad construct] on [outcome] and has given little consideration to whether the _specific_ effects of different [subtypes] may vary. Further, this research has often given different labels to the same types of [phenomenon] or has used the same observable proxies to operationalize conceptually distinct constructs (see [citations] for recent critiques highlighting these issues). As a result, labels and definitions have proliferated, making it difficult to determine if different studies consider the same or different phenomena, leading to a fragmented body of work and limiting the development of theory.
+
+**来源**: pfarrer2010 (AMJ), P1-P2
+
+**关键特征**:
+- 从 broad phenomenon → specific subclass → 理论承诺 → **转折到构念混淆**
+- "In particular... because..." → 不是简单罗列文献，而是给出收窄的理论理由
+- "Much of this research, however, has focused on..." → 用斜体 general 与 specific 对比
+- "(see [citations] for recent critiques highlighting these issues)" → 引用已有内部批评
+- "fragmented body of work" → 将操作化问题上升到理论后果
+
+**适用**: 构念精细化论文的完整 literature turn（从共识到混淆到缺口）
 
 ---
 
