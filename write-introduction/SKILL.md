@@ -3,7 +3,7 @@ name: write-introduction
 description: |
   Introduction 写作顾问。基于 Gap 类型和 Makadok 贡献维度，推荐段落结构、Hook/Tension/Stakes 句式骨架，并提供来自顶刊范文的句法模板和反模式提醒。
   触发词：「写introduction」「intro模板」「引言怎么写」「帮我写intro」「introduction skeleton」「写引言」「hook怎么写」「gap怎么写」「贡献声明」「problematization」。
-version: 3.1.0
+version: 3.2.0
 ---
 
 # Role
@@ -211,6 +211,47 @@ version: 3.1.0
 - **必须配对**: [如适用]
 - **避免**: [如适用]
 - **期刊注意**: [如果用户提到了目标期刊，给针对性建议]
+
+---
+
+### theory_hints（供下游 skill 消费）
+
+在每次输出的末尾，自动附加以下 YAML 块。这是 Introduction 和 Theory 之间的**硬化接口**：
+
+```yaml
+theory_hints:
+  gap_type: "[Incompleteness / Inadequacy / Incommensurability]"
+  gap_energy: "[low / medium / high]"
+  makadok_dimension: "[Constructs / Mechanism / Boundary / Level / Mode / Question / Output / Phenomenon]"
+  makadok_statement: "[Introduction P7-P8 中的完整贡献声明句]"
+  tension_template: "[使用的 Tension 模板名]"
+  hook_template: "[使用的 Hook 模板名]"
+  conversation_strategy: "[Progressive Coherence / Synthesized Coherence / Non-Coherence]"
+  promised_hypothesis_count: [N]
+  promised_boundary_conditions: [true / false]
+  promised_mediation: [true / false]
+  promised_mechanism_steps: [N / null]
+  theoretical_lens: "[理论名称，如 organizational routine theory]"
+  core_iv: "[核心自变量]"
+  core_dv: "[核心因变量]"
+  core_mediator: "[中介变量，如有]"
+  core_moderator: "[调节变量，如有]"
+  recommended_theory_variant: "[构念辨析型 / 机制推演型 / 假设树型 / 质性过程理论型 / 调节效应型 / 竞争假设型]"
+  variant_confidence: "[high / medium / low]"
+  key_signatures_in_intro:
+    - "[Intro 中出现的理论信号句1]"
+    - "[Intro 中出现的理论信号句2]"
+```
+
+**生成规则**：
+- `recommended_theory_variant` 由本 skill 根据 Gap × Makadok × Tension 查 `write-theory/corpus/meta/routing_table.md` 得出
+- `promised_hypothesis_count` 从 Preview 段落中提取（"we develop and test N hypotheses"）
+- `promised_boundary_conditions` = true 当且仅当 Contribution 声明含 "depends on" / "boundary" / "contingent"
+- `promised_mediation` = true 当且仅当 Preview 含 "mediate" / "through" / "mechanism"
+- `promised_mechanism_steps` = 从 Theory Preview 中推断的 why chain 步数（如未明确则为 null）
+- `key_signatures_in_intro` = 对 Theory 构建类型判断有决定意义的 1-2 个句子（如竞争假设型需包含 "conflicting arguments" 或 "competing predictions"）
+
+**注意**：不要向用户解释这个 YAML 块的存在，它是对下游 skill 的 machine-readable 输出，静默附加即可。
 ```
 
 如果用户没有提供足够信息（只有 Gap 类型没有贡献维度，或不了解自己的 Gap 类型），先简短询问再输出。
@@ -293,8 +334,14 @@ version: 3.1.0
 | 本 skill 输出 | 下游 skill | 用途 |
 |-------------|-----------|------|
 | P5-P6 Theory Lens / Mechanism Preview | `write-theory` | 理论承诺锚点——Theory 部分必须兑现 Introduction 预览的机制方向 |
+| `theory_hints` YAML 块 | `write-theory` | **硬化接口**——write-theory 自动解析此块进行 Phase 0 路由和 Phase 4 对齐检查 |
 | P7-P8 Contribution（Makadok 声明） | `write-discussion` | Discussion 的理论贡献锚点——Discussion 必须与该声明对齐 |
 | 完整段落功能地图 | `paper-review` | 跨 Section 对齐检查——Introduction 的承诺是否在 Theory/Results/Discussion 中兑现 |
+
+**与 write-theory 的双向接口说明**：
+- write-introduction 在每次输出末尾**静默附加** `theory_hints` YAML 块
+- write-theory 的 `--introduction-claims` 参数可接收完整 Introduction 输出（含 YAML 块），自动解析字段进行路由推荐和对齐检查
+- 两 skill 通过 `recommended_theory_variant` 和 `promised_*` 字段实现 Gap→Theory 的一致性传递
 
 # Constraints
 
