@@ -8,8 +8,10 @@ generativity: ADAPTABLE
 exclusivity: LOW
 source_papers:
   - mayo2021 (POM, 2021): Consequence cascade hook for product recalls
+  - wu2025 (SMJ, 2025): "定义+后果清单型" — activism risk definition → 4 consequences → "Accordingly" literature transition
 created: 2026-05-19
-source: Extracted from mayo2021 distill-introduction-exemplar
+updated: 2026-05-21
+source: Extracted from mayo2021 + wu2025 distill-introduction-exemplar
 ---
 
 # 08-consequence-cascade — 后果清单型 Hook
@@ -47,6 +49,29 @@ source: Extracted from mayo2021 distill-introduction-exemplar
 > "[Phenomenon] poses significant risks to [primary stakeholder]. Beyond [direct consequence], [phenomenon] can damage [consequence 1] ([citations]), [consequence 2] ([citations]), and [consequence 3] ([citations]), with costs reaching [quantification]. Despite potential benefits such as [positive aspect] ([citations]), [actors] may seek to avoid [phenomenon] or shift blame for it. We examine [specific focus]."
 
 **适用**: 当期刊 Introduction 字数限制较紧时（如 JM/JMR 偏好更紧凑的 Hook）
+
+---
+
+### 变体 C：定义优先+后果清单型（wu2025 型）
+
+**模板**:
+> "[Phenomenon] imposes [type of pressure] on [actor] to [action]. Examples of such [phenomenon] include [example 1], [example 2], and other [tactics/forms]. Scholarship on [topic] indicates that [actors] perceive [phenomenon] as [framing] that can [consequence 1], [consequence 2], [consequence 3], and ultimately [ultimate consequence]. Accordingly, a substantial body of research has examined [dominant research focus]."
+
+**来源**: wu2025 (SMJ), P1
+
+**原文锚定**:
+> "Stakeholder activism imposes external governance pressures on firms to consider stakeholder interests. Examples of such activism include protests, boycotts, and other social-movement tactics. Scholarship on stakeholder activism indicates that firms perceive stakeholder activism as a nonmarket risk that can prevent firms from obtaining critical resources, provoke elite employee turnover, disrupt corporate political activities, and ultimately damage firm performance. Accordingly, a substantial body of research has examined whether such pressures influence firms' corporate social performance."
+
+**关键特征**:
+- **定义先行**: 先定义现象及其核心机制（"[X] imposes [Y] on [Z] to [action]"），建立分析框架
+- **例证列表**: 用简短并列（"protests, boycotts, and other..."）快速建立范围
+- **四重后果递进**: 从资源获取→人才流失→政治活动受阻→最终绩效损害（由轻到重）
+- **"Accordingly" 自然过渡**: 后果清单自然导出文献回顾的方向，不加"however/yet/but"张力词
+- 与 mayo2021 变体 A 的区别：mayo2021 从情感冲击（"dreaded word"）起步，wu2025 从分析框架（定义+机制）起步
+
+**适用**: 社会运动、制度压力、监管行动等外部治理现象；Incompleteness 开场（后果清单建立重要性但不用反例挑战文献）
+
+**禁忌**: 不要在需要高能量张力时使用——这是低能量 Incompleteness Hook，不适合 Incommensurability
 
 ---
 

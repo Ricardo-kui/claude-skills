@@ -43,17 +43,23 @@ version: 3.2.0
 | 高 | `06-paradigm-challenge` | Trend | "According to conventional view... In reality, however..." | zhou2017, hahl2017, gamache2023 |
 | 高 | `02-epigraph-quote-pivot` | Quote | 权威引语/新闻个案/内部文件 | darby2026 (JOM) |
 
-**贡献维度微调**（保留原有）：
+**贡献维度微调**：
 - Constructs → 偏好 `04-puzzle-paradox`（让读者"意识到混淆"）
-- Mechanism → 偏好 `05-literature-consensus-blindspot`（展示"现有解释不足"）
+- Mechanism → 偏好 `05-literature-consensus-blindspot`（展示"现有解释不足"）⚠️ 注册表显示此模板 gap_distribution.Incompleteness=0，仅推荐给 Inadequacy
 - Boundary → 偏好 `04-puzzle-paradox`（呈现"何时有效/失效"）
 - Phenomenon → 偏好 `03-data-shock`（用数据建立新现象域）
 
-**贡献维度微调**：
-- Constructs → 偏好 `04-puzzle-paradox`（让读者"意识到混淆"）
-- Mechanism → 偏好 `05-literature-consensus-blindspot`（展示"现有解释不足"）
-- Boundary → 偏好 `04-puzzle-paradox`（呈现"何时有效/失效"）
-- Phenomenon → 偏好 `03-data-shock`（用数据建立新现象域）
+**注册表证据强度**（来自 `_evidence_registry.yaml`，覆盖静态 VERIFIED/EXPERIMENTAL 标签）：
+
+| Hook | 注册表状态 | paper_count | Gap 纯度 |
+|------|----------|-------------|---------|
+| `06-paradigm-challenge` | ROBUST | 6 | 67% Incommensurability, 33% Inadequacy — 不要推荐给 Incompleteness |
+| `05-literature-consensus-blindspot` | ROBUST | 7 | 86% Inadequacy, 14% Incompleteness（park2013 为 Incompleteness+Non-Coherence 例外） |
+| `04-puzzle-paradox` | ROBUST | 7 | 57% Inadequacy, 43% Incommensurability |
+| `03-data-shock` | ROBUST | 7 | 100% Incompleteness — 不要推荐给 Inadequacy/Incommensurability |
+| `02-epigraph-quote-pivot` | ROBUST | 8 | 50% Incompleteness, 50% Inadequacy |
+| `10-immersive-narrative` | VERIFIED | 3 | 67% Incompleteness |
+| Other hooks | EMERGING | 1-2 | 见注册表 — 推荐时标注"来自单篇范文" |
 
 ## 3. Conversation 策略
 
@@ -65,20 +71,25 @@ version: 3.2.0
 
 ## 4. Tension 选择器
 
-| Gap | Tension | 核心句式 | 验证状态 |
-|-----|---------|---------|---------|
-| Incompleteness | `01-despite-progress-unaddressed` | "Although research has... little attention has been paid to..." | VERIFIED |
-| Incompleteness | `12-forward-vs-backward-looking` | "Research has examined post-hoc consequences, yet what predicts timing..." | EXPERIMENTAL |
-| Incompleteness | `08-cost-vs-benefit` | "Firms face a dilemma: [action] is costly, yet delaying is costlier..." | VERIFIED |
-| Inadequacy | `02-implicit-assumption-wrong` | "The implicit assumption that... may be incorrect because..." | VERIFIED |
-| Inadequacy | `03-structural-blindspot` | "This focus on [X] has systematically overlooked [Y]..." | VERIFIED |
-| Inadequacy | `05-construct-confusion` | "Different labels have been used for the same phenomenon..." | STANDARD |
-| Inadequacy | `11-overlooked-alternative` | "The dominant approach has focused on [X], overlooking [Y]..." | EXPERIMENTAL |
-| Inadequacy | `09-resource-acquisition-vs-utilization` | "Although [strategy] benefits acquisition, it constrains utilization..." | EXPERIMENTAL |
-| Incommensurability | `04-reality-contradicts-consensus` | "Whereas prior studies show X, empirical evidence is mixed... To resolve, we theorize..." | VERIFIED |
-| Incommensurability | `06-theoretical-imbalance` | "Two theoretical perspectives offer incompatible predictions..." | STANDARD |
-| Incommensurability | `07-same-policy-opposite-effects` | "The same practice increases [outcome] for Group A but decreases it for Group B..." | EXPERIMENTAL |
-| Incommensurability | `10-constraint-vs-freedom` | "Technology expands freedom, yet market structure imposes constraints..." | EXPERIMENTAL |
+| Gap | Tension | 核心句式 | 注册表状态 | 排他性 |
+|-----|---------|---------|----------|--------|
+| Incompleteness | `01-despite-progress-unaddressed` | "Although research has... little attention has been paid to..." | ROBUST (18p) | **仅 Incompleteness** — Inadequacy/Incommensurability 中为 0 |
+| Incompleteness | `12-forward-vs-backward-looking` | "Research has examined post-hoc consequences, yet what predicts timing..." | EMERGING (1p) | Incompleteness 专用 |
+| Incompleteness | `08-cost-vs-benefit` | "Firms face a dilemma: [action] is costly, yet delaying is costlier..." | EMERGING (1p) | Incompleteness 专用 |
+| Inadequacy | `02-implicit-assumption-wrong` | "The implicit assumption that... may be incorrect because..." | ROBUST (12p) | **仅 Inadequacy** — Incompleteness/Incommensurability 中为 0 |
+| Inadequacy | `03-structural-blindspot` | "This focus on [X] has systematically overlooked [Y]..." | ROBUST (8p) | **仅 Inadequacy** |
+| Inadequacy | `05-construct-confusion` | "Different labels have been used for the same phenomenon..." | ROBUST (6p) | **仅 Inadequacy** — Incommensurability 中为 0。Constructs 贡献首选，但**不能用于 Incommensurability** |
+| Inadequacy | `11-overlooked-alternative` | "The dominant approach has focused on [X], overlooking [Y]..." | EMERGING (1p) | Inadequacy 专用 |
+| Inadequacy | `09-resource-acquisition-vs-utilization` | "Although [strategy] benefits acquisition, it constrains utilization..." | EMERGING (1p) | Inadequacy 专用。概念上完美匹配"资源获取 vs 资源利用"场景，证据待积累 |
+| Incommensurability | `04-reality-contradicts-consensus` | "Whereas prior studies show X, empirical evidence is mixed... To resolve, we theorize..." | ROBUST (7p) | **仅 Incommensurability** — Incompleteness/Inadequacy 中接近 0 |
+| Incommensurability | `06-theoretical-imbalance` | "Two theoretical perspectives offer incompatible predictions..." | ROBUST (5p) | Incommensurability 为主 (40%)，Inadequacy 次之 (60%) |
+| Incommensurability | `07-same-policy-opposite-effects` | "The same practice increases [outcome] for Group A but decreases it for Group B..." | EMERGING (2p) | Incommensurability 专用 |
+| Incommensurability | `10-constraint-vs-freedom` | "Technology expands freedom, yet market structure imposes constraints..." | EMERGING (1p) | Incommensurability 专用 |
+
+**Gap 排他性过滤规则**（注册表驱动，覆盖旧的静态 VERIFIED/EXPERIMENTAL 标签）：
+- 若模板的 `gap_distribution.[user_gap_type] == 0` → **禁止推荐**，即使静态表列出
+- `01-despite-progress-unaddressed` 在 Incommensurability 场景 → 逻辑矛盾，已内置互斥规则
+- `05-construct-confusion` 在 Incommensurability 场景 → 不适用（Incommensurability 不是"构念搞混了"而是"理论互相矛盾"）
 
 **Tension 措辞强度**：
 - 温和： "has received relatively little attention"
@@ -111,16 +122,19 @@ version: 3.2.0
 
 **必须配对**（单独使用会导致叙事断裂）：
 
-| Hook | 必须配对的 Tension |
-|------|-------------------|
-| `06-paradigm-challenge` | `04-reality-contradicts-consensus` |
-| `05-literature-consensus-blindspot` | `02-implicit-assumption-wrong` 或 `03-structural-blindspot` |
-| `03-data-shock` | `01-despite-progress-unaddressed` |
-| `04-puzzle-paradox` | `02-implicit-assumption-wrong` |
-| `12-contrary-to-belief` | `02-implicit-assumption-wrong` |
-| `07-cost-benefit-tension` | `08-cost-vs-benefit`（首选）或 `01-despite-progress-unaddressed` |
-| `01-cross-disciplinary-analogy` | `11-overlooked-alternative`（当引入被忽视视角时） |
-| `09-resource-acquisition-vs-utilization` | `05-literature-consensus-blindspot` |
+| Hook | 必须配对的 Tension | 适用 Gap |
+|------|-------------------|---------|
+| `06-paradigm-challenge` | `04-reality-contradicts-consensus` | Incommensurability |
+| `04-puzzle-paradox` | `02-implicit-assumption-wrong` | Inadequacy |
+| `04-puzzle-paradox` | `04-reality-contradicts-consensus` | **Incommensurability**（Constructs 贡献时，puzzle → 对立理论整合） |
+| `05-literature-consensus-blindspot` | `02-implicit-assumption-wrong` 或 `03-structural-blindspot` | Inadequacy |
+| `03-data-shock` | `01-despite-progress-unaddressed` | Incompleteness |
+| `12-contrary-to-belief` | `02-implicit-assumption-wrong` | Inadequacy |
+| `07-cost-benefit-tension` | `08-cost-vs-benefit`（首选）或 `01-despite-progress-unaddressed` | Incompleteness / Inadequacy |
+| `01-cross-disciplinary-analogy` | `11-overlooked-alternative`（当引入被忽视视角时） | Inadequacy |
+| `09-resource-acquisition-vs-utilization` | `05-literature-consensus-blindspot` | Inadequacy |
+
+**注意**: `04-puzzle-paradox` 在两个 Gap 类型中有不同的配对规则。Inadequacy 场景（"你们把构念搞混了"）→ 配 `02-implicit-assumption-wrong`；Incommensurability 场景（"两个理论都对但互相矛盾，需要新构念整合"）→ 配 `04-reality-contradicts-consensus`。判断依据：用户的 Gap 描述是"文献理解偏了"还是"文献互相矛盾"。
 
 **不能同用**：
 
@@ -177,6 +191,23 @@ version: 3.2.0
 
 其他组合使用最近接范文作为参照。不展开所有 24 种组合。
 
+# 前置：加载证据注册表
+
+在输出骨架前，读取 `academic-writing-corpus/_evidence_registry.yaml`。使用其中的 `paper_count`、`gap_distribution`、`status` 和 `validation_history` 来：
+
+1. **标注推荐置信度**：
+   - `status = ROBUST`（≥5 papers，≥2 journals）→ "此模板经 5+ 篇顶刊论文验证"
+   - `status = VERIFIED`（≥3 papers）→ "此模板经 3+ 篇论文验证"
+   - `status = EMERGING`（1-2 papers）→ "此模板来自单篇范文，建议谨慎使用"
+
+2. **激活失败提醒**：如果某模板的 `common_failures` 非空，在推荐时主动提醒用户。例如：`"此 Tension 在 6 篇使用论文中 3 篇 Stakes 缺失——请在 Gap 段后立即补充 'So what?'"`
+
+3. **降权有问题的模板**：如果某模板 `validation_history.reject >= 3`，降为 `EMERGING` 并附带警告：`"此模板在 N 次实际写作验证中 X 次失效——常见问题：[common_revise_reasons]"`
+
+4. **Gap 排他性验证**：如果某模板的 `gap_distribution` 在用户所选 Gap 类型中为 0，**不要推荐**该模板。例如：`04-reality-contradicts-consensus` 在 Incompleteness 中为 0 → 不应推荐给 Incompleteness 用户。
+
+**注册表不存在时的回退**：如果 `_evidence_registry.yaml` 不存在，回退到本文件内嵌的决策表（即当前的静态推荐逻辑），不中断输出。
+
 # 工作方式
 
 收到用户的 Gap 类型、贡献维度和研究描述后，直接输出一个**可适配的 Introduction 骨架**。不要输出"组装方案"，不要输出 JSON metadata，不要提"回传验证"。
@@ -211,6 +242,16 @@ version: 3.2.0
 - **必须配对**: [如适用]
 - **避免**: [如适用]
 - **期刊注意**: [如果用户提到了目标期刊，给针对性建议]
+
+### 证据标注
+[基于 `_evidence_registry.yaml` 的证据强度标注]
+
+- **Hook `[canonical_id]`**: [ROBUST/VERIFIED/EMERGING] — [paper_count] 篇论文验证，分布于 [gap_distribution]
+  - [如有 common_failures]: ⚠️ 已知风险: [common_failures]
+  - [如有 validation_history.reject ≥ 1]: ⚠️ 验证历史: [validated]/[total_runs] 通过，[reject] 次失效
+- **Tension `[canonical_id]`**: [同上]
+- **Stakes `[canonical_id]`**: [同上]
+- **Literature Turn `[canonical_id]`**: [同上]
 
 ---
 
@@ -272,12 +313,22 @@ theory_hints:
 
 # 语料库透明度
 
-当前 `academic-writing-corpus/` 下的句法模板均为单篇范文提炼（1 paper per file），未达到跨论文验证。每个模板文件头部记录了来源论文和提炼日期：
+当前 `academic-writing-corpus/` 下的句法模板的**证据基础**由 `_evidence_registry.yaml` 统一管理。每个模板的 paper_count、gap_distribution、验证状态由注册表驱动，不再在模板文件 frontmatter 中手动维护。
+
+**证据强度分布**（来自注册表，自动判定）：
+
+| 证据等级 | 判定标准 | 数量 |
+|---------|---------|------|
+| **ROBUST** | ≥5 papers, ≥2 journals | 见注册表 |
+| **VERIFIED** | ≥3 papers | 见注册表 |
+| **EMERGING** | 1-2 papers | 见注册表 |
+
+**模板文件清单**（定性内容由 corpus 文件维护，定量证据见注册表）：
 
 | 类别 | 文件数 | 覆盖范围 |
 |------|--------|---------|
-| Hooks | 15 | paradigm-challenge, data-shock, literature-consensus-blindspot, puzzle-paradox, cross-disciplinary-analogy, practical-puzzle, epigraph-quote-pivot, consequence-cascade, psychological-construct-hook, immersive-narrative, institutional-anecdote, cost-benefit-tension, contrary-to-belief, rhetorical-question, **paired-disasters** |
-| Tensions | 13 | despite-progress-unaddressed, implicit-assumption-wrong, structural-blindspot, reality-contradicts-consensus, construct-confusion, theoretical-imbalance, same-policy-opposite-effects, cost-vs-benefit, resource-acquisition-vs-utilization, constraint-vs-freedom, overlooked-alternative, forward-vs-backward-looking, **sequential-phenomenon-gap** |
+| Hooks | 15 | paradigm-challenge, data-shock, literature-consensus-blindspot, puzzle-paradox, cross-disciplinary-analogy, practical-puzzle, epigraph-quote-pivot, consequence-cascade, psychological-construct-hook, immersive-narrative, institutional-anecdote, cost-benefit-tension, contrary-to-belief, rhetorical-question, paired-disasters |
+| Tensions | 13 | despite-progress-unaddressed, implicit-assumption-wrong, structural-blindspot, reality-contradicts-consensus, construct-confusion, theoretical-imbalance, same-policy-opposite-effects, cost-vs-benefit, resource-acquisition-vs-utilization, constraint-vs-freedom, overlooked-alternative, forward-vs-backward-looking, sequential-phenomenon-gap |
 | Stakes | 6 | `01-general-theory-practice`, `02-quantified-economic-loss`, `03-disciplinary-gap-stakes`, `04-public-health-safety`, `05-firm-value-stock-market`, `07-reputation-legitimacy-crisis` |
 | Literature Turns | 3 | Progressive Coherence, Synthesized Coherence, Non-Coherence（每种含2-4个句法变体） |
 | Previews | 4 | mechanism-preview, findings-preview, robustness-preview, dv-methodology-defense |
@@ -285,7 +336,7 @@ theory_hints:
 | Transitions | 12 | `01-hook-to-literature`, actor-funnel, unified-moderator-framework, field-migration, extend-key-study, data-barrier-justification, construct-migration, case-to-field-generalization, micro-macro-complement, `10-literature-to-gap`, `11-roadmap`, gap-to-contribution |
 | Theory Lens | 2 | maxim-contrast, context-bridging |
 
-使用某个模板前，建议打开对应文件确认其适用范围。随着蒸馏产出积累，此表应周期性更新。
+**注册表更新周期**：每次 `distill-introduction-exemplar --batch` 完成后自动更新 `_evidence_registry.yaml`。模板文件的定性内容（句法模板、反模式提醒、期刊适配）仍需人工审阅后手动更新。
 
 # 示例
 
@@ -331,12 +382,14 @@ theory_hints:
 
 本 skill 输出的内容被以下 skill 直接引用。在输出对应段落时，确保可以被下游消费：
 
-| 本 skill 输出 | 下游 skill | 用途 |
-|-------------|-----------|------|
-| P5-P6 Theory Lens / Mechanism Preview | `write-theory` | 理论承诺锚点——Theory 部分必须兑现 Introduction 预览的机制方向 |
-| `theory_hints` YAML 块 | `write-theory` | **硬化接口**——write-theory 自动解析此块进行 Phase 0 路由和 Phase 4 对齐检查 |
-| P7-P8 Contribution（Makadok 声明） | `write-discussion` | Discussion 的理论贡献锚点——Discussion 必须与该声明对齐 |
-| 完整段落功能地图 | `paper-review` | 跨 Section 对齐检查——Introduction 的承诺是否在 Theory/Results/Discussion 中兑现 |
+| 方向 | Skill | 接口 | 用途 |
+|------|-------|------|------|
+| **上游输入** | `distill-introduction-exemplar` | `_evidence_registry.yaml` | 提供模板的 paper_count、gap_distribution、验证状态——驱动本 skill 的推荐置信度和证据标注 |
+| 下游输出 | `write-theory` | P5-P6 Theory Lens / Mechanism Preview | 理论承诺锚点——Theory 部分必须兑现 Introduction 预览的机制方向 |
+| 下游输出 | `write-theory` | `theory_hints` YAML 块 | **硬化接口**——write-theory 自动解析此块进行 Phase 0 路由和 Phase 4 对齐检查 |
+| 下游输出 | `write-discussion` | P7-P8 Contribution（Makadok 声明） | Discussion 的理论贡献锚点——Discussion 必须与该声明对齐 |
+| 下游输出 | `paper-review` | 完整段落功能地图 | 跨 Section 对齐检查——Introduction 的承诺是否在 Theory/Results/Discussion 中兑现 |
+| 下游输出 | `distill-introduction-exemplar` (--validate) | 段落功能地图 + 用户成品 | Phase 6 即时 QC：四维评分 + 优先修正清单，直接返回用户 |
 
 **与 write-theory 的双向接口说明**：
 - write-introduction 在每次输出末尾**静默附加** `theory_hints` YAML 块

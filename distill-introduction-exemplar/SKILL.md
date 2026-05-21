@@ -17,6 +17,24 @@ version: 2.0.0
 - **组合驱动**：不同 Gap 类型 × Contribution 维度的组合决定了模块的必要性和排列方式。蒸馏必须锚定组合分类。
 - **问题驱动**：提炼结果必须能回答 Dorobantu et al. (2024) 提出的研究设计典型问题（The Puzzle / The Audience / The RQ 等）。
 
+## 蒸馏深度层级
+
+不是所有论文都需要完整蒸馏。根据论文的新颖程度和 corpus 覆盖状态，选择适当的深度：
+
+| 层级 | 执行 Phase | 触发条件 | 预估耗时 | 产出 |
+|------|----------|---------|---------|------|
+| **L1: 索引级注册** | Phase 0 | 论文已有 Pollock 对齐标注（如 MVP30 索引中的 Gap 类型、Hook 描述、Conversation 策略）且无新型骨架 | 5 分钟 | Phase 0 combo profile + 注册表 paper 列表更新 |
+| **L2: 骨架提取** | Phase 0→1→2→2.4 | 论文包含现有 corpus 未覆盖的句式模式，或需要确认索引推断的 Hook→canonical_id 映射 | 20-30 分钟 | Fine-Grained Profile（精简版）+ 新骨架 + 注册表确认 |
+| **L3: 完整蒸馏** | Phase 0→1→1.5→2→2.4→3→4→4.5→5 | 论文引入了新型 Gap×Contribution 组合、新型模块排列、或具有教学价值的叙事结构 | 30-60 分钟 | 完整 Fine-Grained Profile + corpus_enrichment 块 + 注册表自动更新 |
+
+**L1→L2→L3 的升级判断**：
+- 如果在 Phase 0 中发现论文的 Gap 类型标志性语言与现有 corpus 变体**不匹配**（如使用了现有模板未覆盖的措辞模式）→ 升级到 L2
+- 如果在 L2 骨架提取中发现**全新的模块功能组合**（如 Stakes 前置 + Theory Lens 嵌入 Tension）→ 升级到 L3
+- 如果论文的 `narrative_structure` 为"螺旋深入"或"范式颠覆"（非标准线性收缩）→ 建议 L3
+
+**L1 快速通道**：
+MVP30 索引已对 28 篇论文完成 Pollock 对齐标注。这些论文可以直接通过 L1 注册到 `_evidence_registry.yaml`——提取其 Gap 类型和 Hook 描述，映射到 canonical_id，更新注册表的 paper_count。只有当 L1 映射不确定或论文包含明显的新型句式时，才升级到 L2。
+
 ## 调用方式
 
 ### 模式一：范文蒸馏（默认）
@@ -127,18 +145,25 @@ phase_0_combo_profile:
 | **Preview** | 本文策略/方法/发现预告 | 研究设计简述；假设预告；结果暗示 | 标记 preview 范围（仅方法 vs 方法+发现）、是否过度承诺 |
 | **Contribution** | 贡献声明 (Makadok 维度) | 明确声明 "We contribute by..." / "This study is important because..." | 标记 Makadok 维度可见性、是否可被 Discussion 兑现 |
 
-### 跨 Section 对齐检查（grill-with-docs 模式）
+### 跨 Section 对齐检查（需要全文输入）
+
+> **执行门控**：以下检查需要论文的 Theory、Methods、Results 文本。如果输入仅包含 Introduction（如单独的 `_narrative.md` 文件或粘贴的 Introduction 文本），**全部跳过**并标注 `skipped_insufficient_input: true`。仅当输入包含完整论文或明确提供了后续 Section 文本时执行。
 
 在粗粒度解构阶段，**交叉验证 Introduction 与后续 Section 的一致性**：
 
-| 对齐检查项 | 检查位置 | 问题 |
-|-----------|----------|------|
-| Theory Lens ↔ Theory Section | Introduction 的理论承诺 vs Theory 的实际理论来源 | 是否一致？是否 Introduction 承诺了制度理论但 Theory 用了 RBV？ |
-| Contribution ↔ Theory Hypotheses | Makadok 声明 vs 实际假设 | Contribution 声称 Mechanism 贡献但 Theory 只有主效应无中介？ |
-| Contribution ↔ Methods Identification | 识别策略承诺 vs 实际估计器 | Contribution 暗示因果识别但 Methods 只有 OLS/FE？ |
-| Preview ↔ Results | 结果预告 vs 实际假设检验 | Preview 暗示发现方向与 Results 系数方向相反？ |
+| 对齐检查项 | 检查位置 | 问题 | 输入要求 |
+|-----------|----------|------|---------|
+| Theory Lens ↔ Theory Section | Introduction 的理论承诺 vs Theory 的实际理论来源 | 是否一致？是否 Introduction 承诺了制度理论但 Theory 用了 RBV？ | 需要 Theory 章节 |
+| Contribution ↔ Theory Hypotheses | Makadok 声明 vs 实际假设 | Contribution 声称 Mechanism 贡献但 Theory 只有主效应无中介？ | 需要 Theory + Hypotheses |
+| Contribution ↔ Methods Identification | 识别策略承诺 vs 实际估计器 | Contribution 暗示因果识别但 Methods 只有 OLS/FE？ | 需要 Methods 章节 |
+| Preview ↔ Results | 结果预告 vs 实际假设检验 | Preview 暗示发现方向与 Results 系数方向相反？ | 需要 Results 章节 |
 
-发现矛盾时，在 `contradictions_or_gaps` 中记录，并在 Phase 2 Rhetorical Logic 中标记为 "Contribution Contract 风险"。
+**执行规则**：
+1. 检查输入类型——若为单个 `_narrative.md` 文件或纯 Introduction 文本 → 设置 `cross_section_alignment_skipped: true`，跳过全部四项检查
+2. 若输入包含完整论文 PDF 或各 Section 文本 → 逐项检查，发现矛盾时在 `contradictions_or_gaps` 中记录
+3. 若部分 Section 可用（如仅有 Theory 但无 Results）→ 仅检查可用项，其余标记为 `skipped_input_unavailable`
+
+在 Phase 2 Rhetorical Logic 中标记为 "Contribution Contract 风险"（仅当检查实际执行时）。
 
 ### 特殊排列记录
 
@@ -571,6 +596,109 @@ phase_4_corpus_reference:
 
 **关键原则**：Phase 4 的所有产出作为**参考性注释**，存入 Vault 的 `fine_grained/` 目录。经用户审阅确认后，可手动写入 `academic-writing-corpus/` 对应子目录的 canonical 模板文件。
 
+### corpus_enrichment 硬化输出块
+
+在 Phase 4 输出末尾，**必须附加**以下结构化 YAML 块。这是 distill 与 write-introduction 之间的**硬化接口**——write-introduction 可直接解析此块更新其证据注册表和决策知识：
+
+```yaml
+corpus_enrichment:
+  batch_id: "batch_YYYY-MM-DD"
+  papers_processed: N
+  last_updated: "YYYY-MM-DD"
+
+  evidence_updates:
+    - target: "academic-writing-corpus/tensions/01-despite-progress-unaddressed.md"
+      canonical_id: "01-despite-progress-unaddressed"
+      module: "tensions"
+      action: "append_papers"
+      new_papers: ["author_year (journal)"]
+      updated_paper_count: N
+      new_status: "ROBUST / VERIFIED / EMERGING"
+
+    - target: "academic-writing-corpus/hooks/03-data-shock.md"
+      canonical_id: "03-data-shock"
+      module: "hooks"
+      action: "update_status"
+      previous_status: "VERIFIED"
+      new_status: "ROBUST"
+      reason: "paper_count 从 3 升至 6，跨 ≥3 journals"
+
+    - target: "academic-writing-corpus/tensions/XX-new-template.md"
+      canonical_id: "XX-new-template"
+      module: "tensions"
+      action: "create_new"
+      gap_type: "Incompleteness"
+      skeleton: "Although [field] research has..."
+      source_papers: ["author_year"]
+      transferability: "high"
+      note: "供写作者参考，可作为新增 canonical 模板的候选"
+
+  gap_distribution_updates:
+    - canonical_id: "01-despite-progress-unaddressed"
+      gap_distribution: {"Incompleteness": 8, "Inadequacy": 0, "Incommensurability": 0}
+      exclusivity_confirmed: true
+
+  anti_pattern_updates:
+    - target_module: "stakes"
+      gap_type: "Incompleteness"
+      pattern: "Incompleteness × Mechanism 中 3/5 论文 Stakes 用 generic 'theoretically important'"
+      evidence: ["paper_a", "paper_b", "paper_c"]
+      recommended_action: "在 write-introduction Stakes 选择器中为 Incompleteness 增加具体化提醒"
+
+  validation_feedback:
+    - canonical_id: "01-despite-progress-unaddressed"
+      phase_6_validations: 0
+      note: "尚无 Phase 6 验证数据"
+
+  batch_metadata:
+    combos_covered: ["Incompleteness×Mechanism", "Inadequacy×Boundary"]
+    novel_skeletons_found: N
+    rejected_skeletons: N
+    rejected_reasons: ["仅出现1次", "不可生成模块", "通用废话", "Gap 类型错配"]
+```
+
+**corpus_enrichment 字段说明**：
+
+| 字段 | 用途 | 消费方 |
+|------|------|--------|
+| `evidence_updates` | 对现有 corpus 文件的证据更新（新增论文、状态升级、新建模板） | write-introduction 加载时合并到 `_evidence_registry.yaml` |
+| `gap_distribution_updates` | 更新某模板在各 Gap 类型中的分布，验证排他性 | write-introduction 决策表（Gap→模板映射） |
+| `anti_pattern_updates` | 批量蒸馏发现的常见失败模式 | write-introduction 反模式清单 |
+| `validation_feedback` | Phase 6 验证结果（积累至 10+ 次后人工汇总） | `_evidence_registry.yaml` validation_history |
+| `batch_metadata` | 批量处理元数据 | 注册表 meta 字段 |
+
+**与 Vault 注释的关系**：`corpus_enrichment` 块是**机器消费**的结构化输出；Phase 4 原有的 `vault_enrichment` 和 `patterns_to_note` 等 YAML 是**人工消费**的参考注释。两者并行产出，不互相替代。
+
+### Phase 4.5 — 证据注册表更新逻辑
+
+Phase 4 完成后，根据 `corpus_enrichment` 块更新 `academic-writing-corpus/_evidence_registry.yaml`：
+
+**状态自动判定规则**：
+
+| 条件 | 新状态 |
+|------|--------|
+| `paper_count >= 5` 且跨 `>= 2` journals | **ROBUST** |
+| `paper_count >= 3` | **VERIFIED** |
+| `paper_count <= 2` | **EMERGING** |
+
+**更新步骤**：
+
+1. 将 Phase 4 输出的 `corpus_enrichment` YAML 块保存为临时文件（如 `/tmp/corpus_enrichment.yaml`）
+2. 运行本 skill 目录下的自动化工具：
+   ```bash
+   python _update_registry.py /tmp/corpus_enrichment.yaml
+   ```
+3. 工具自动完成：
+   - 读取 `_evidence_registry.yaml`
+   - 对每个 `evidence_updates` 条目：追加 papers、重算 paper_count、按阈值判定 status
+   - 应用 `gap_distribution_updates` 和 `anti_pattern_updates`
+   - 更新 `meta.last_updated` 和 `meta.batches_processed`
+   - 写回注册表
+
+**工具位置**: `~/.claude/skills/distill-introduction-exemplar/_update_registry.py`
+
+**注意**：Phase 4.5 **不修改** corpus 模板文件本身（句法模板、关键特征、反模式提醒等定性内容仍需人工审阅后手动更新）。它只更新证据注册表中的**定量证据**（paper_count、gap_distribution、status）。
+
 ---
 
 ## Phase 5 — 质量验证与 QC 输出
@@ -816,22 +944,29 @@ promise_fulfillment:
 - **若修正 3-4 项**：建议修正后再次运行 `--validate`
 - **若需更换核心模块**（如 P1 Hook 类型或 Gap 类型）：建议重新运行 `/write-introduction` 生成新组装方案
 
-## 元数据更新建议
+## 验证结果存档（为周期性汇总积累数据）
 
-如果用户根据本报告修正了 Introduction，建议将修正后的版本和本报告一并存入 Vault：`fine_grained/validation_runs/[date]_validation_report.md`，作为后续迭代的参考。
+如果用户根据本报告修正了 Introduction，建议将修正后的版本和本报告一并存入 Vault：`fine_grained/validation_runs/[date]_validation_report.md`。
+
+当积累 10+ 次验证报告后，人工检查 `common_revise_reasons` 模式——哪些骨架反复被标记为 REJECT、哪些修正建议反复出现。这些模式可手动写入注册表的 `common_failures` 字段，以及 `write-introduction/SKILL.md` 的反模式清单。
+
+**不要在不足 10 次验证时就试图从 validation_history 中推导结论**——样本量太小，无法区分"模板不好"和"用户用错了"。
 ```
 
 ---
 
-### 与 write-introduction 的反馈接口
+### Phase 6 的两层定位
 
-本 skill 的成品验证输出可为 `write-introduction` 的语料库质量认知提供反馈：
+Phase 6 不是单一功能，而是服务于两个不同时间尺度的需求：
 
-- 如果某骨架在验证中被多次标记为 `REJECT`（不同用户、不同领域），应在后续使用中谨慎推荐
-- 如果某骨架在验证中被多次标记为 `VALIDATED`，说明其生成力表现稳健
-- 验证报告中的 "优先修正清单" 可沉淀为 `write-introduction/SKILL.md` 反模式清单的补充案例
+| 层级 | 触发 | 产出 | 数据流向 | 目的 |
+|------|------|------|---------|------|
+| **即时 QC** | 每次 `--validate` | 四维评分 + 优先修正清单 | 直接给用户 | 写作辅助——帮你发现哪些地方偏离了组装方案、哪里承诺未兑现 |
+| **周期性汇总** | 每 10+ 次验证后人工检查 | `common_revise_reasons` 模式识别 | 手动更新注册表 common_failures 和反模式清单 | 语料库维护——发现哪些模板在真实使用中反复出问题 |
 
-**注意**：这种反馈是**人工驱动的周期性汇总**（如每季度汇总验证报告），不是每次验证后自动更新。
+**即时 QC 是现在就能用的东西。** 周期性汇总需要跨论文、跨用户的累积数据——这不是一个人三五篇论文能提供的。当前 `validation_history` 全为 0 是正常的，不是 bug。
+
+### 即时 QC 层（每次 --validate 执行）
 
 ---
 
@@ -862,7 +997,7 @@ promise_fulfillment:
 
 ## 与外部 Skill 的接口
 
-- **`write-introduction`** — Phase 4 的沉淀建议经用户审阅后，可手动写入 `academic-writing-corpus/` 对应子目录；Phase 6 成品验证接收 write-introduction 的段落功能地图作为参考基准
+- **`write-introduction`** — 两层接口：(1) Phase 4 `corpus_enrichment` YAML 块 → Phase 4.5 → `_evidence_registry.yaml`（自动更新定量证据）；(2) Phase 4 `vault_enrichment` → Vault（人工审阅后更新 corpus 定性内容）。Phase 6 即时 QC 接收 write-introduction 的段落功能地图作为参考基准，输出四维评分和修正建议；验证结果存档至 Vault，积累 10+ 次后人工汇总 common_revise_reasons 模式。
 - **`diagnose-introduction`** — Phase 0 的组合分类可作为 diagnose 的验证基准
 - **`intro-review`** — Phase 1.5 的模块覆盖检查可作为 intro-review 的预检清单；Phase 6 的验证报告可作为 intro-review 的预诊断输入
 - **`paper-review`** — Rhetorical Logic Map 可用于跨 section 对齐检查（Introduction 承诺 vs Discussion 兑现）
@@ -870,8 +1005,9 @@ promise_fulfillment:
 
 ## 外部资产位置
 
-- **现有语料库索引**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/introduction/mvp30/_mvp30_introduction_index.md`
-- **write-introduction 语料库**: `C:\Users\admin\.claude\skills\write-introduction\academic-writing-corpus/`（hooks/, tensions/, stakes/, literature-turns/, previews/, transitions/）
+- **现有语料库索引**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/introduction/mvp30/_mvp30_introduction_index.md`（待创建）
+- **write-introduction 语料库**: `C:\Users\40500\.claude\skills\write-introduction\academic-writing-corpus/`（hooks/, tensions/, stakes/, literature-turns/, previews/, transitions/）
+- **共享证据注册表**: `C:\Users\40500\.claude\skills\write-introduction\academic-writing-corpus/_evidence_registry.yaml`（distill 写入，write-introduction 消费）
 - **蒸馏产出存放**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/introduction/mvp30/fine_grained/batch_*/[paper]_distilled_introduction.md`
 - **成品验证报告存放**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/introduction/mvp30/fine_grained/validation_runs/[date]_validation_report.md`
 

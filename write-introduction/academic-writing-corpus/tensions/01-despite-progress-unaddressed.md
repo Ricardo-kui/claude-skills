@@ -13,8 +13,11 @@ source_papers:
   - malshe2015 (JM, 2015): "Yet little research investigates [gap]. This is surprising for [N] reasons."
   - vadakkepatt2022 (JM, 2022): "Cross-disciplinary gap: field A theory alludes → field B no research → no theory explains mechanism"
   - lehman2014 (MS, 2014): "Curiously silent: norms do not spread linearly → theorists silent on conflicts"
+  - mannor2016 (SMJ, 2016): "Method-barrier gap: data difficulty explains absence → new methods now enable testing"
+  - darby2025 (JSCM, 2025): "Spillover framing: logical next step → informant quote as behavioral evidence"
 created: 2026-05-18
-source: Extracted from MVP30 narrative_analysis files
+updated: 2026-05-21
+source: Extracted from MVP30 narrative_analysis files + mannor2016 + darby2025 distill
 ---
 
 # 01-despite-progress-unaddressed — 已有进展但遗漏 Tension
@@ -165,6 +168,58 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 - 你有具体证据表明这个问题真实存在
 
 **禁忌**: 不要在没有充分文献回顾的情况下使用 "curiously silent"
+
+---
+
+### 变体 G：方法障碍型缺口（mannor2016 型）
+
+**模板**:
+> "This is somewhat puzzling given the robust literature on [topic], although the difficulty in obtaining data on [sensitive attribute] has likely contributed to the absence of research on the topic. Most studies of [actors] rely upon [proxy type] for underlying [attribute type], and numerous investigations have shown that [proxies] can affect [outcomes] (for a review, see [citation]). But the central premise of [theory] holds that [core claim] ([citation]), and research in this domain has begun to shift away from [old approach] and toward a focus on [new approach] (e.g., [citations])."
+
+**来源**: mannor2016 (SMJ), P2 前半
+
+**原文锚定**:
+> "This is somewhat puzzling given the robust literature on executive job demands, although the difficulty in obtaining data on sensitive psychological attributes of top executives has likely contributed to the absence of research on the topic. Most studies of top executives rely upon demographic indicators as proxies for underlying psychological attributes, and numerous investigations have shown that certain demographic characteristics can affect strategic outcomes (for a review, see Finkelstein, Hambrick, and Cannella, 2009). But the central premise of upper echelons theory holds that executives' experiences, values, and personalities greatly influence their interpretations of strategic situations (Hambrick, 2007), and research in this domain has begun to shift away from a strict focus on demographics and toward a focus on executives' psychological attributes (e.g., Gamache et al., 2015; Wowak et al., 2016)."
+
+**关键特征**:
+- "This is somewhat puzzling" → 温和指出缺口，不指责文献
+- "although the difficulty in obtaining data on... has likely contributed" → **核心技巧：解释为什么重要问题长期被忽视**（不是文献愚蠢，是数据获取困难）
+- "But the central premise of [theory] holds that..." → 用核心理论承诺为转向辩护
+- "research has begun to shift away from... and toward..." → 将自己的研究置于文献趋势的正确一侧
+- "for a review, see [citation]" → 引用权威综述支撑方法的局限性
+
+**适用条件**:
+- 研究需要测量难以获取的敏感构念（心理属性、私人信息、未公开数据等）
+- 已有文献使用代理变量（proxies），但代理变量的局限性是已知的
+- 新数据或新方法使直接测量成为可能
+
+**禁忌**: 不要在没有新的数据/方法突破时抱怨数据难以获取——必须有"为什么现在是可能的"的论据
+
+---
+
+### 变体 H：Spillover Framing 型（darby2025 型）
+
+**模板**:
+> "This study takes a logical next step by examining [new factor]. [New factor], defined as '[definition]' ([citation]), [role/importance description]. Growing evidence suggests [new factor]'s influence may extend beyond [traditional target] to affect [new outcome domain]. This phenomenon—known as a spillover effect—occurs when [spillover definition] ([citations]). As [informant] shared, '[quote providing behavioral evidence of the spillover].' Accordingly, [actors] take notice when [trigger], taking actions to avoid [negative outcome], such as [action_1], [action_2], and [action_3]."
+
+**来源**: darby2025 (JSCM), P3
+
+**原文锚定**:
+> "This study takes a logical next step by examining activist investors. Activist investors, defined as 'shareholders who acquire large stakes in publicly traded companies and pressure management for changes intended to increase shareholder value' (Goranova and Ryan, 2014: 1232), have received significant attention in finance and management research. Growing evidence suggests activist investors' influence may extend beyond financial performance to affect a firm's operational outcomes. This phenomenon—known as a spillover effect—occurs when an actor or event influences outcomes beyond the intended or traditional target (Ahuja and Novelli, 2017). As a former Ford executive shared, 'When an activist shows up, it definitely puts you on edge... you start looking at everything differently—including your products.' Accordingly, activist investors take notice when product quality issues arise, taking actions to avoid negative spillover effects, such as pushing for earlier product recalls, demanding stricter quality controls, and increasing oversight of safety protocols."
+
+**关键特征**:
+- "takes a logical next step" → 积极缺口语言（非批评式），适合 Incompleteness
+- 在首次出现时立即定义新因素 + 引用权威来源
+- "Growing evidence suggests... may extend beyond" → 为 spillover 效应铺垫
+- 在给出学术定义（spillover effect）后，用 **informant quote** 提供行为证据
+- 结尾用三个并列行动（"such as... , ... , and ..."）具体化 spillover 的后果
+
+**适用条件**:
+- 将一个已在其他领域研究的行为者/因素引入新结果域
+- spillover 效应有学术文献定义 + 行为证据（informant quote 或 case）
+- Incompleteness：不是批评文献，而是"自然地向前推进一步"
+
+**禁忌**: 不要仅依赖单条 informant quote 建立 spillover 存在性——补充学术引用（2+ citations）支撑 spillover 效应已被其他研究记录
 
 ---
 
