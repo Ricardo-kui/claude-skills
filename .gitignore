@@ -31,6 +31,8 @@
 !results-review/**
 !reverse_validation_pipeline/
 !reverse_validation_pipeline/**
+!s01-recall-data-infrastructure/
+!s01-recall-data-infrastructure/**
 !theory-review/
 !theory-review/**
 !write-discussion/
