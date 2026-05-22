@@ -53,3 +53,141 @@ updated: 2026-05-20
 **骨架**:
 > [Our instruments conform to diagnostic tests]. The partial F-statistic exceeds the relevance threshold (partial F-stat = [value]; p < [threshold]), and the [identification_test] does not contain zero [[lower], [upper]]. Diagnostic tests for exogeneity suggest our instruments are unrelated to the structural error terms (Sargan χ² = [value]; p = [threshold]). [For Lewbel: The Pagan-Hall diagnostic fails to reject the null (p > [threshold]), and Breusch-Pagan rejects homoskedasticity (p < [threshold]), upholding both Lewbel assumptions.]
 **与原骨架差异**: IV 诊断统计量（partial F, Sargan, Pagan-Hall, Breusch-Pagan）嵌入 R3 正文，而非 relegating 到脚注或 Methods 中。这是因果识别研究的最佳实践——让读者在阅读结果时同时看到识别策略的有效性。
+
+## 句式素材
+
+<!-- 由 distill-results-exemplar Phase 4 自动沉淀的 sentence-level 骨架。填入占位符后可嵌入段落。 -->
+
+### R2 — 模型序列 / 表格导航
+
+**句式 1: `r2_sentence_iv_first_stage_significance`**
+
+> The first-stage results in [Table X] show that our instrument is a significant predictor of [IV] (coefficient = [value], p < [threshold]), and the F-test rejects the null hypothesis of weak instruments (F = [value], p < [threshold]).
+
+**句式 2: `r2_sentence_iv_endogeneity_test`**
+
+> A Wu-Hausman test rejects the null hypothesis of no endogeneity (statistic = [value], p < [threshold]), suggesting that [estimator] is appropriate.
+
+**句式 3: `r2_sentence_iv_overidentification`**
+
+> A Sargan-Hansen test does not reject the null hypothesis that the instruments are exogenous (statistic = [value], n.s.), supporting their validity.
+
+**句式 4: `r2_sentence_progressive_model_sequence`**
+
+> Column [1] of [Table X] shows the results when we run a [estimator] with [IV] and [control variables]. We then add [additional variables] by entering [variable group]. As we report in Column [2] of [Table X], [exogenous peer characteristics] are significant, including [examples]. However, the endogenous [effect] estimate does not change much (β = [value], p < [threshold]).
+
+
+### R3 — 主假设检验
+
+**句式 1: `r3_sentence_coefficient_significance_iv`**
+
+> Consistent with [Hypothesis X], the coefficient for the predicted value of [IV] is [negative/positive] and statistically significant (β = [value], p < [threshold]).
+
+**句式 2: `r3_sentence_control_variable_direction`**
+
+> [Control_i] displays a significant and [negative/positive] relationship with [DV] (β = [value], p < [threshold]); [interpretation clause].
+
+**句式 3: `r3_sentence_2sls_coefficient_significance`**
+
+> The [estimator] results in Column [Y] of [Table X] show that the coefficient for [IV] is [positive/negative] and statistically significant (β = [value], p < [threshold]), indicating that [interpretation in probability terms].
+
+**句式 4: `r3_sentence_first_stage_diagnostics`**
+
+> The first-stage regression ([Table X], Column [Y]) shows that [number] of [number] instruments have significant effects on the endogenous variable. The R-square of the first-stage regression is [value]; the joint significance test for the instrumental variables is significant (F([df1], [df2]) = [value], p < [threshold]), indicating that we do not have a problem of weak instruments.
+
+**句式 5: `r3_sentence_hansen_j`**
+
+> The Hansen J-statistic for the [estimator] specification (Column [Y] in [Table X]) is [value] (p > [threshold]), indicating that the model is not overidentified.
+
+
+### R4 — 交互效应 / 条件效应
+
+**句式 1: `r4_sentence_interaction_significance`**
+
+> [Moderator] moderates the effect of [IV] on [DV] (β = [value], p < [threshold]); consistent with [Hypothesis X], [interpretation of direction].
+
+**句式 2: `r4_sentence_indirect_moderation`**
+
+> We find empirical evidence of a [full/partial] indirect moderation effect (β = [value], p < [threshold]); the interaction between [mediator] and [IV] mediates the moderating effect of [moderator].
+
+**句式 3: `r4_sentence_subgroup_coefficient_comparison`**
+
+> The effect of the [subgroup A] is highest (β = [value], p < [threshold]), followed by [subgroup B] (β = [value], p < [threshold]), [subgroup C] (β = [value], p < [threshold]), and [subgroup D] (β = [value], n.s.).
+
+**句式 4: `r4_sentence_wald_test_difference`**
+
+> The Wald test for the difference between the [subgroup A] and [subgroup B] coefficients is statistically significant (F-statistic = [value], p < [threshold]).
+
+**句式 5: `r4_sentence_control_function`**
+
+> We implement a control function approach in which we regress [endogenous variable] on [instruments] and other variables in the first stage and add the error terms from the first stage to [Equation X] as endogeneity correction terms. The endogeneity-corrected estimates (Column [Y] of [Table X]) remain robust, indicating that [conclusion].
+
+
+### R5 — 经济 / 实质显著性
+
+**句式 1: `r5_sentence_unit_translation`**
+
+> Approximately $[value] more in [IV] is associated with one fewer [DV], assuming a typical average [DV] of [unit].
+
+**句式 2: `r5_sentence_back_of_envelope`**
+
+> If we assume an average, conservative cost of $[value] per [unit] of [DV], one fewer [DV] implies nearly $[value] in savings.
+
+**句式 3: `r5_sentence_probability_change_magnitude`**
+
+> If [IV] increases by [value]%, a [unit]'s [DV] increases by [value]%–[value]%.
+
+
+### R6 — 非显著 / 混合 / 意外发现
+
+**句式 1: `r6_sentence_null_effect_credibility`**
+
+> We find no [effect] (β = [value], p > [threshold]), as detailed in Column [Y] of [Table X] (i.e., a null effect lends credibility to our argument that [interpretation]).
+
+
+### R7 — 稳健性 / 效度 / 敏感性
+
+**句式 1: `r7_sentence_threat_positioning`**
+
+> One concern is that our findings depend on [specific threat].
+
+**句式 2: `r7_sentence_test_action`**
+
+> To address this concern, we re-estimate our models using [method].
+
+**句式 3: `r7_sentence_result_unchanged`**
+
+> The results are substantively unchanged (β = [value], p < [threshold]), reducing concerns that [threat] drives the findings.
+
+**句式 4: `r7_sentence_simultaneous_equation`**
+
+> We incorporate the potential correlation of the model errors for [entity A] and [entity B], while also correcting for endogeneity using [estimator].
+
+**句式 5: `r7_sentence_nonlinear_endogeneity`**
+
+> We account for the discrete, ordered nature of [DV] using [nonlinear model], accompanied by a linear model for the endogenous variable [IV].
+
+**句式 6: `r7_sentence_robustness_confirmation`**
+
+> We [still/find] [robust/significant] [effect] ([coefficient], p < [threshold], Column [Y], [Table X]).
+
+**句式 7: `r7_sentence_heterogeneity_attenuation`**
+
+> The interaction between [IV] and [moderator] is [positive/negative] and significant (β = [value], p < [threshold]), indicating that [effect] attenuates as [moderator] increases.
+
+**句式 8: `r7_sentence_multiple_sd_heterogeneity`**
+
+> To see the existence of [effect] at high levels of [moderator], we calculate the [effect] when [moderator] is at mean, one standard deviation above mean, [one and a half] standard deviations above the mean, and two standard deviations above the mean. The effect sizes are [value] (p < [threshold]), [value] (p < [threshold]), [value] (p < [threshold]), and [value] (p < [threshold]), respectively, providing evidence for heterogeneity in [effect] across [moderator] levels.
+
+
+### R8 — 补充 / 事后 / 机制
+
+**句式 1: `r8_sentence_followup_question`**
+
+> We next investigate how [mechanism] varies, depending on [dimension 1] and [dimension 2].
+
+**句式 2: `r8_sentence_relative_importance`**
+
+> In summary, we find evidence that, on average, [units] [mimic/follow] [peer type A] more so than [peer type B].
+
+
