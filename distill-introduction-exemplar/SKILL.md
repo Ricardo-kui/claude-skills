@@ -1,9 +1,10 @@
 ---
 name: distill-introduction-exemplar
 description: |
-  Introduction 范文蒸馏 meta-skill。输入单篇或批量论文的 Introduction 文本，输出结构化提炼报告：功能模块拆解、叙事结构模式、修辞策略 DNA、模块级表达骨架、Gap×Contribution 组合验证。
-  核心原则：Introduction 内容高度非标准化，但功能框架标准化。提炼 HOW they stage the narrative, not WHAT they say。不复制具体措辞，只提取可跨论文复现的功能组织方式和修辞策略。
-  触发词：「蒸馏 introduction」「intro 范文分析」「拆解 introduction」「提取 intro 模板」「处理新论文 intro」「introduction 骨架提炼」。
+  当用户想从已发表论文的 Introduction 部分学习叙事结构、提取功能模块组织方式和修辞策略时触发。也用于对比多篇论文的 Introduction 结构异同、将论文的 Introduction 写作范式注册到语料库。
+  与 write-introduction 的区别：本 skill 从范文提取模式（读/分析），write-introduction 根据模式生成段落（写/生成）。
+  与 intro-review 的区别：本 skill 分析已发表论文的 Introduction，intro-review 审查用户自己写的草稿。
+  触发词：分析 introduction 写法、intro 结构拆解、提取 intro 模板、学习这篇的 introduction、intro 写作模式、intro 范文、intro 对比、intro 语料库。
 version: 2.0.0
 ---
 

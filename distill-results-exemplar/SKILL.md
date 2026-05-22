@@ -1,9 +1,10 @@
 ---
 name: distill-results-exemplar
 description: |
-  Results 范文蒸馏 meta-skill。输入单篇或批量论文的 Results 文本，输出结构化提炼报告：段落骨架、表达 DNA、假设-结果节奏、可迁移范式、不可迁移边界、以及 write-results 更新建议。
-  核心原则：提炼 HOW they stage evidence, not WHAT they found。不复制具体系数，只提取证据组织的节奏和说服逻辑。
-  触发词：「蒸馏 results」「results 范文分析」「拆解 results」「提取 results 模板」「处理新论文 results」「results 骨架提炼」。
+  当用户想从已发表论文的 Results 部分学习证据组织节奏、提取假设-结果对应模式和说服逻辑时触发。也用于对比多篇论文的 Results 结构异同、将论文的 Results 写作范式注册到语料库。
+  与 write-results 的区别：本 skill 从范文提取模式（读/分析），write-results 根据模式生成段落（写/生成）。
+  与 results-review 的区别：本 skill 分析已发表论文的 Results，results-review 审查用户自己写的草稿。
+  触发词：分析 results 写法、results 结构拆解、提取 results 模板、学习这篇的 results、results 写作模式、results 范文、results 对比、results 语料库。
 version: 1.0.0
 ---
 

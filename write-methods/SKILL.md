@@ -1,30 +1,29 @@
 ---
 name: write-methods
 description: |
-  顶刊 Methods 填空段落骨架生成器。输入模型类型后输出带 [placeholder] 的可直接粘贴段落。
-  覆盖面板数据/OLS、自然实验/DiD、非线性模型、生存分析、SEM、实验、多研究、稀有结果、实证对象构建、事件历史+事件研究、同时方程、IV/2SLS、动态面板/GMM、匹配DiD/广义DiD、同伴效应/网络效应、文本构念测量、PSM匹配面板、堆叠扩散Logit、多行为者设计、推断二元结果共二十种设计类型。
-  触发词：「写methods」「methods模板」「方法部分怎么写」「帮我写methodology」「method skeleton」「写方法」「方法论」「model specification」「估计方法」「样本选择」「变量定义」。
-  当用户提及变量操作化、识别策略、稳健性检验、模型设定、样本漏斗、内生性处理时也应触发。
-  基于 32 篇 MVP30 范文语料库和 Pollock 2025 Ch07。
-version: 2.6.0
+  当用户需要撰写或修改论文 Methods 部分时触发。根据设计类型（面板数据-OLS、DiD、生存分析、IV/2SLS 等）输出带占位符的可直接粘贴段落骨架，覆盖 M1-M10 全部槽位。
+  与 distill-methods-exemplar 的区别：本 skill 生成段落（写/生成），distill-methods-exemplar 从范文提取模式（读/分析）。
+  触发词：写 methods、methods 模板、方法部分怎么写、methodology 写法、method skeleton、写方法、方法论、variable definition、model specification、样本选择、变量操作化、识别策略、稳健性检验、模型设定、样本漏斗、内生性处理、估计方法。
+version: 3.0.0
 ---
 
 # Role
 
-你是顶刊论文 Methods 的**填空模板生成器**。基于 32 篇 MVP30 范文和 Pollock 2025 Ch07，输出可直接复制到 Word/LaTeX 中、填入用户具体信息即可成段的 Methods 骨架。
+你是顶刊论文 Methods 的**填空模板生成器**。基于外置语料库 `academic-writing-corpus/` 中的骨架变体，输出可直接复制到 Word/LaTeX 中、填入用户具体信息即可成段的 Methods 骨架。
 
 核心原则：Methods 要 **describe, explain, justify**。每个填空段落已经内置了这三重功能，用户只需替换方括号中的占位符。
 
 ## 调用方式
 
 ```
-/write-methods <模型类型> [--hypotheses="..."] [--journal=AMJ] [--design-variant=标准]
+/write-methods <模型类型> [--hypotheses="..."] [--journal=AMJ] [--design-variant=标准] [--micro-template-tier=core]
 ```
 
 **参数说明**：
 - `<模型类型>`（必填）: `面板数据/OLS` | `自然实验/DiD` | `非线性模型` | `生存分析` | `SEM` | `实验` | `多研究` | `稀有结果` | `实证对象构建` | `事件历史+事件研究` | `同时方程` | `IV/2SLS` | `动态面板/GMM` | `匹配DiD/广义DiD` | `同伴效应/网络效应` | `文本构念测量` | `PSM匹配面板` | `堆叠扩散Logit` | `多行为者设计` | `推断二元结果`
 - `[--hypotheses]`（可选但建议）: Theory 部分的假设列表，用于变量对齐检查
 - `[--journal]`（可选）: 目标期刊，默认 `AMJ`
+- `[--micro-template-tier]`（可选）: 微模板加载分级，`core`（默认，高频通用）| `extended`（含中频特定）| `full`（全部加载）
 
 **如果省略模型类型**，进入交互式询问，确定设计类型后输出对应骨架。
 
@@ -78,481 +77,180 @@ version: 2.6.0
 
 ---
 
-## 填空段落骨架
+## 外置语料库与按需加载
 
-### M1. 研究情境 / 实证背景
+本 skill 的所有填空骨架存储于外置语料库分片文件中，**不再硬编码于本文件内**。执行时按需读取对应设计类型的语料库文件，按 M1–M10 槽位组装输出。
 
-**通用填空段落**： ⭐ PREMIUM（28/28 篇范文使用，跨所有模型类型复现）
+### 语料库位置
 
-```text
-[Empirical setting] provides an appropriate context for examining [theoretical relationship] for three reasons. First, [setting property] makes [mechanism] observable. Second, [scope condition] reduces [confound]. Third, [data feature] allows us to observe [unit/process] over [period]. The unit of analysis is [unit], which aligns with our theorizing about [mechanism].
+```
+~/.claude/skills/write-methods/academic-writing-corpus/
+├── INDEX.md                      # 语料库索引与质量状态
+├── _evidence_registry.yaml       # 证据注册表（paper_count、status、common_failures）
+├── 面板数据-OLS.md
+├── 自然实验-DiD.md
+├── 生存分析.md
+├── IV-2SLS.md
+├── 匹配DiD-广义DiD.md
+├── ... (共 21 个设计类型分片)
+└── 两阶段模型.md
 ```
 
-**自然实验/DiD 变体**（替换首句）： ✓ STANDARD（5-8 篇 DiD/自然实验范文复现）
-```text
-We examine [phenomenon] using [policy/event/institutional change] that altered [exposure/risk/incentive] across [units] and time. [Empirical setting] is well suited because [process] is well documented and [context controls] reduce [confounding concern].
-```
+### 可用设计类型（与调用参数对应）
 
-**实验变体**： ✓ STANDARD（5-6 篇实验范文复现）
-```text
-We test [theoretical claim] using a [laboratory/field/online] experiment. This design is strongest for assessing [internal validity], although it requires caution in generalizing to [boundary condition].
-```
+| 调用参数 | 语料库分片文件 |
+|----------|---------------|
+| `面板数据/OLS` | `面板数据-OLS.md` |
+| `自然实验/DiD` | `自然实验-DiD.md` |
+| `非线性模型` | `非线性模型.md` |
+| `生存分析` | `生存分析.md` |
+| `SEM` | `SEM.md` |
+| `实验` | `实验.md` |
+| `多研究` | `多研究.md` |
+| `稀有结果` | `稀有结果.md` |
+| `实证对象构建` | `实证对象构建.md` |
+| `事件历史+事件研究` | `事件历史+事件研究.md` |
+| `同时方程` | `同时方程.md` |
+| `IV/2SLS` | `IV-2SLS.md` |
+| `动态面板/GMM` | `动态面板-GMM.md` |
+| `匹配DiD/广义DiD` | `匹配DiD-广义DiD.md` |
+| `同伴效应/网络效应` | `同伴效应-网络效应.md` |
+| `文本构念测量` | `文本构念测量.md` |
+| `PSM匹配面板` | `PSM匹配面板.md` |
+| `堆叠扩散Logit` | `堆叠扩散Logit.md` |
+| `多行为者设计` | `多行为者设计.md` |
+| `推断二元结果` | `推断二元结果.md` |
+| `两阶段模型` | `两阶段模型.md` |
 
-**多研究变体**： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：省略
-```text
-Across [N] studies, we use complementary designs to test [theory] and address [validity concerns]. Study 1 examines [field/archival evidence], Study 2 tests [replication/design upgrade], and Studies [x–y] examine [mechanism/intervention/behavior].
-```
+### 读取与组装协议
 
-**同时方程/SEM 变体**（替换整个 M1）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用填空段落 + M7 同时方程变体
-```text
-Our conceptual framework links [driver], [mechanisms], [outcome], and [downstream outcome]. We therefore specify a system of [N] equations to capture [direct path], [mediating paths], [downstream path], and [reverse/auxiliary path]. [Empirical setting] provides the data needed to estimate these relationships jointly.
-```
+1. **定位分片文件**：根据用户指定的 `<模型类型>`，映射到上表中的 `.md` 文件。
+2. **读取 frontmatter**：提取 `design_type`、`status`、`variants_count`、`source_papers`。
+3. **按 M1–M10 槽位遍历**：
+   - 每个分片文件按 `## M1.`、`## M2.` … `## M10.` 组织。
+   - 槽位内包含 `### 主骨架（通用）` 和零至多个 `### 变体 N: [变体名]`。
+4. **变体选择策略**：
+   - `⭐ PREMIUM`：跨所有设计类型复现，必须输出。
+   - `✓ STANDARD`：该设计类型的标准写法，默认输出。
+   - `🔬 EXPERIMENTAL`：仅 1–2 篇范文出现，**默认不输出**。仅在用户明确要求扩展或该变体与论文设计强相关时才提供。
+   - 带有 `⚠️ 保守替代` 的变体：仅在主骨架不适用时输出，并提示保守替代方案。
+5. **累积变体区**：每个分片文件末尾的 `## 累积变体` 区块由 `distill-methods-exemplar` Phase 4 产出，供参考，**不自动纳入默认输出**。
+6. **即时加载**：每次 `/write-methods` 调用时，实时读取对应分片文件内容，确保语料库更新立即可用。
 
----
+### 输出格式
 
-### M2. 数据来源与样本漏斗
+对每个存在的槽位，按以下结构输出：
 
-**通用填空段落**：
+```markdown
+### M[slot]. [槽位名称]
 
-```text
-We began with [starting population] from [source] over [period]. We matched these observations to [additional sources] to obtain [variables]. We excluded [cases] because [comparability/measurement/identification reason]. The final sample consists of [N] [units] observed over [period], with [unit] as the unit of analysis.
-```
-
-**稀有结果变体**（在通用段落前插入）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 M2 段落 + 脚注说明抽样策略
-```text
-Because [outcome] is rare, a simple random sample would yield too few [cases] for meaningful analysis; we therefore used [sampling strategy]. The screening criterion increased the likelihood of observing [rare phenomenon], but it did not determine [final outcome measure]. Because [sampling design] affects [representation/effect sizes], we interpret signs and significance but avoid overinterpreting magnitude.
-```
-
-**实证对象构建变体**（替换或前置）： 🔬 EXPERIMENTAL（2-3 篇范文）⚠️ 保守替代：通用 M2 段落
-```text
-No authoritative database exists for [empirical object], so we constructed the dataset from [trace/source]. We used [trace/source] because it records [actor claim/action/evaluation] over time. From [raw records], we identified [entities], [events/labels/claims], and [time points]. We then transformed [raw trace] into [analytic variable] by [coding/aggregation rule]. To make the construction auditable, we define each step from [raw input] to [final measure].
-```
-
-**自然实验/DiD 变体**： ✓ STANDARD（5-8 篇 DiD 范文复现）
-```text
-Our primary sample consists of [units] observed from [period], drawn from [source] because it tracks [construct-relevant activity]. The observation window begins in [year] because [source/construct availability] and ends in [year] to capture [post-treatment horizon]. Treatment is observed for [treated units] after [event], while [control units] provide the counterfactual comparison. Because testing [moderation/mechanism] requires [additional source], the sample for H[x] is restricted to [available period/units].
-```
-
-**多研究变体**（逐研究）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 M2 段落 + M9 多研究过渡段
-```text
-Study [x] used [sample source]. Participants/observations were included if [criterion], yielding [analytic sample]. For supplemental analyses, we also use [source] to measure [assumption/mechanism/alternative outcome].
-```
-
-**PSM匹配面板变体**（在通用段落中加入匹配步骤）： 🔬 EXPERIMENTAL（2-3 篇范文）⚠️ 保守替代：通用 M2 + M8 匹配检验
-```text
-To reduce selection bias, we first estimate propensity scores using [logit/probit] with [covariates] as predictors of [treatment/status]. We match [treated units] to [control units] using [method: one-to-one nearest-neighbor / kernel / caliper] matching with [calipersize] caliper on [distance metric]. After matching, the standardized bias for all covariates is below [threshold], and the [t-test / KS-test] indicates no significant difference in [covariates] between groups. The matched sample consists of [N] [unit-years / dyads / firms].
-```
-
-**层级回退匹配变体**（如 Pfarrer et al. AMJ，1:3 SIC 匹配 + 层级回退）： 🔬 EXPERIMENTAL（2 篇范文：Pfarrer et al., Mayo et al.）⚠️ 保守替代：通用 M2 + PSM 变体
-```text
-To construct the sample, we first identified [N] [treatment group] firms that [criterion]. We then matched each [treatment group] firm with [ratio: e.g., three] firms from the same [primary matching criterion: e.g., four-digit SIC code] that were similar in [matching variables: e.g., assets, revenues, and ROA]. Where appropriate matches were not found at the [primary level], we looked at [secondary level] and [tertiary level] for similar firms. Through this process we identified [N] matching firms at the [primary level], [N] at the [secondary level], and [N] at the [tertiary level]. A t-test comparing differences in [variable] revealed no significant differences between the [treatment] and [control] companies; however, in keeping with the predictions of prior [construct] research, there were significant differences in [variables]. [Attrition description]. These characteristics suggested our sample provided a [conservative/liberal] test of our hypotheses since they result in some restriction of range to primarily [sample characteristic].
-```
-
-**多行为者设计变体**（替换通用段落）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 M2 段落 + 说明多数据源匹配
-```text
-Our data link [actor A], [actor B], and [actor C] through [matching key / dyadic structure]. We began with [starting universe of actor A] from [source A] over [period] and matched these to [actor B observations] from [source B] using [matching rule]. We then linked [actor C characteristics] from [source C]. The final analytic sample consists of [N] [dyads / triads / observations] in which [inclusion condition]. Because [actor B] characteristics are measured at [level], we aggregate [construct] to the [analysis level] using [aggregation rule].
-```
-
-**多源嵌套调查变体**（如 Mannor et al. SMJ，多方法数据 + 聚类标准误）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 M2 + M7 多层模型/聚类标准误
-```text
-We used a multisource, multimethod data collection approach to test our ideas. This involved gathering data from [N] sources: [source 1: e.g., in-person interviews], [source 2: e.g., online surveys to subordinates], [source 3: e.g., hard-copy surveys to friends/family], and [source 4: e.g., archival company data]. Testing our theory required gaining access to [phenomenon], and our methodology was designed with this goal in mind. We established [N] criteria to govern recruitment: [criterion 1], [criterion 2], and [criterion 3]. We tested our hypotheses using [estimator: e.g., hierarchical linear regression]. To account for the nonindependence in our data (i.e., [nesting structure]), we specified [SE type: e.g., Huber/White/sandwich standard errors] using the [software option]. [Observations] were clustered by [clustering variable].
-```
-
-**事件历史变体**（在通用段落中加入过程说明）： 🔬 EXPERIMENTAL（2-3 篇范文：Zhou 2017, Pontikes 2012 等）⚠️ 保守替代：通用 M2 + M3 生存分析变体
-```text
-[Authority/actor] opens [process] when [trigger]. The process ends when [event occurs] or [case closes/continues]. [Time outcome] is the elapsed time between [start date] and [event date]. Cases without [event] by [end of observation] are treated as [right-censored] because [logic].
-```
-
----
-
-### M3. 因变量
-
-**通用填空段落**：
+**[变体标签]**: [变体说明]
 
 ```text
-Our dependent variable is [outcome construct], measured as [operational definition] using [source]. This measure captures [construct] because [construct-validity logic]. Higher values indicate [interpretation direction]. Because [outcome] is [continuous/binary/ordinal/count/censored/time-to-event], we use [model] and interpret [coefficients/marginal effects/hazards/probabilities].
+[骨架文本，含 [placeholder]]
 ```
 
-**稀有结果/序数变体**（替换末句）： 🔬 EXPERIMENTAL（2-3 篇范文）⚠️ 保守替代：通用 M3 段落
-```text
-Given the skewed distribution of [construct], we treat it as ordered categories that distinguish [low/mid/high states]. Because [outcome] is ordinal, coefficients indicate direction but substantive interpretation requires [marginal effects/predicted probabilities].
+[如适用，附保守替代提示或设计变体说明]
 ```
 
-**事件研究变体**： ✓ STANDARD（3-4 篇事件研究范文复现）
-```text
-We measure [market/stakeholder reaction] as [CAR/abnormal response] around [event], using [benchmark model] to estimate expected returns. Expected returns are estimated over [estimation window] using [factor model]; abnormal returns are observed returns minus expected returns. We aggregate abnormal returns over [event window] to allow for [information leakage/dissemination].
+### 微模板组装层（Sentence-Level Assembly）
+
+段落骨架解决"段落的结构功能"问题；**句法微模板**解决"段落内部的表达多样性"问题。
+
+#### 微模板库位置
+
+```
+academic-writing-corpus/micro-templates/
+├── INDEX.md                      # 微模板分类索引
+├── opening-anchors.md            # 段首锚定短语
+├── because-clauses.md            # because 从句架构
+├── causal-hedging.md             # 因果动词梯度
+├── transitions.md                # 过渡衔接短语
+├── funnel-rhythm.md              # 样本漏斗节奏
+├── identification-foreshadowing.md # 识别策略预告
+├── variable-operationalization.md  # 变量操作化句式
+└── robustness-foreshadowing.md   # 稳健性检验预告
 ```
 
-**指数/净指数变体**： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 M3 段落
-```text
-Because the theory concerns both [positive actions] and mitigation of [negative actions], we construct [net outcome] from [strengths] and [concerns]. For each [category-year], we divide the number of [items] by the maximum possible number in each [category-year] to account for changes in measurement coverage. The net index subtracts [negative index] from [positive index] and sums across [categories].
+#### 骨架-微模板映射表
+
+显式绑定关系定义在 `_slot_micro_template_bindings.yaml` 中。该文件声明：
+- 每个 M-slot 有哪些**句法位置**（opening_anchor, because_clause, transition 等）
+- 每个位置应加载哪些**微模板条目**（具体到文件、章节、模板标签）
+- 每个条目的**加载分级**（core / extended / full）
+
+```
+academic-writing-corpus/
+├── _slot_micro_template_bindings.yaml   # 映射表
+├── _evidence_registry.yaml              # 证据注册表
+└── micro-templates/                     # 微模板库
 ```
 
-**行为编码变体（实验）**： 🔬 EXPERIMENTAL（3-4 篇实验范文）⚠️ 保守替代：通用 M3 段落 + 说明编码者间信度
-```text
-We capture [outcome] behaviorally by [task/coding procedure], reducing reliance on self-reported intentions. Blind coders rated [behavior] on [scale]. We averaged ratings because interrater reliability was [acceptable statistic].
+#### 组装协议
+
+1. **骨架优先**：先按 M1–M10 输出段落骨架（结构功能）。
+2. **读取映射表**：根据当前 slot，从 `_slot_micro_template_bindings.yaml` 中查询该 slot 的 `syntax_positions`。
+3. **分级加载微模板**：
+   - **core**（默认）：只加载高频、跨设计类型通用、低风险的微模板。单次调用最多读取 4 个微模板文件，每个位置最多 2 个选项。
+   - **extended**（`--micro-template-tier=extended`）：加载中频或设计类型特定的微模板。每个位置最多 3 个选项。
+   - **full**（`--micro-template-tier=full`）：加载全部微模板。每个位置最多 5 个选项。
+4. **微模板替换**：在骨架的关键句法位置，用映射表推荐的微模板替换默认措辞，提供选项供用户选择：
+   - **段首锚定**：每个段落的第一句
+   - **because 从句**：控制变量/样本排除/构念效度的理由
+   - **因果动词**：根据设计类型从强制词汇表中选择
+   - **过渡衔接**：多句段落内部的逻辑推进
+   - **样本漏斗节奏**：M2 数字叙事
+   - **识别策略预告**：M8 诊断检验预告
+5. **选项标注**：每个微模板选项标注 `[core]` / `[extended]` / `[design-specific]` 等标签，帮助用户选择。
+6. **默认策略**：若用户未指定微模板偏好或分级，使用 **core 分级**（最大公约数，最安全）。
+7. **design_type_filter 交叉过滤**：
+   - 映射表中部分微模板条目带有 `design_type_filter`（如 `["自然实验-DiD"]`、`["实验"]`），表示该句式**仅在对应设计类型下可用**。
+   - 加载顺序为**先分级、后过滤**：
+     1. 按用户指定的 `--micro-template-tier` 确定允许加载的 tier（core → core+extended+full 中满足 tier 条件的条目）。
+     2. 在允许的条目中，进一步检查 `design_type_filter`：若条目带有此字段，只有当用户指定的 `<模型类型>` 与之匹配时才加载；若无此字段，表示跨设计类型通用，始终加载。
+   - 典型模式：
+     - **core 层级**：通常不带 `design_type_filter`，适用于所有设计类型（如 M6 的通用控制声明）。
+     - **extended/full 层级**：常带有 `design_type_filter`，仅在特定设计类型下追加（如 M1 的 DiD 政策冲击式、M4 的处理变量声明）。
+   - 选项标注：带 `design_type_filter` 的条目在输出中自动标注 `[design-specific]` 或 `[<设计类型> 专用]`，帮助用户识别其适用范围。
+
+#### 上下文加载优化
+
+为控制单次调用的文件读取量：
+- **默认**（core）：只读取当前 slot 必需的 1–2 个微模板文件（如 M6 只需 `opening-anchors.md` + `because-clauses.md` + `transitions.md`）。
+- **扩展**（extended）：增加 1–2 个设计类型特定的微模板文件。
+- **完整**（full）：读取全部 8 个微模板文件（仅在用户明确要求时使用）。
+
+#### 示例：M6 控制变量的微模板组装
+
+```
+骨架（来自 面板数据-OLS.md M6 主骨架）：
+  We include controls for [threat family 1] because [alternative explanation 1].
+  At the [level] level, we control for [variables] to account for [rival process].
+  We also include [fixed effects] to absorb [time-invariant/common/contextual shocks].
+
+段首锚定选项（来自 opening-anchors.md）：
+  A. [通用] "We include controls for [threat family] because [alternative explanation]."
+  B. [高 because 密度] "We included a broad set of control variables that influence
+     [DV] directly and those that help address alternative explanations ([citation])."
+
+because 从句选项（来自 because-clauses.md）：
+  A. [竞争性解释型] "...because [rival theory] predicts that [alternative mechanism]
+     drives [outcome]."
+  B. [遗漏变量型] "...because [omitted variable] may confound the [IV-DV] relationship
+     by [mechanism]."
+
+过渡衔接选项（来自 transitions.md）：
+  A. [层级递进] "We first included [level_1]_level factors... We also controlled for
+     [level_2]_level characteristics... Lastly, we included..."
 ```
 
-**文本构念测量变体**（M3 或 M4 均可使用，三段式效度链）： 🔬 EXPERIMENTAL（3-4 篇范文：Zhao 2022, Gamache 2020 等）⚠️ 保守替代：通用 M3 + 增加效度检验句
-```text
-Our dependent variable, [text-derived construct], is measured from [text source: earnings calls / press releases / 10-K / media / survey open-ends] using [method: dictionary / LDA / supervised ML / word embeddings]. We first [preprocessing: remove stop words / stem / lemmatize / exclude boilerplate]. We then [measurement step: count semantic similarity / topic proportion / trained classifier probability / cosine distance to anchor]. The measure captures [construct] because [theoretical link between text feature and underlying construct]. To validate the measure, we correlate it with [external benchmark: human-coded sample / established scale / related archival measure]; the correlation is [value] (p [relation] [threshold]). We also inspect [example excerpts] to confirm face validity. Higher values indicate [interpretation direction].
-```
-
-**LIWC 心理语言学构念测量变体**（如 Mannor et al. SMJ，Pfarrer et al. AMJ）： 🔬 EXPERIMENTAL（2-3 篇范文）⚠️ 保守替代：通用 M3 段落 + 增加字典说明
-```text
-We used a [method: e.g., psycholinguistic] approach aimed at measuring [construct] based on the language [participants/actors] used during [data collection context]. [Software] contains established dictionaries of words that have been validated by [citation] to reflect underlying [psychological phenomenon]. For example, [prior study] used [software] to measure [prior construct]. We followed a similar approach in constructing our measures for [construct components]. [Component 1] was captured by assessing [language feature: e.g., use of positive emotion language and words associated with achievement]. The [dictionary] included [N] words (such as [examples]) whose average coefficient alpha was [value]. [Component 2] was measured by assessing [language feature: e.g., use of negative affective language and words associated with inhibition]. This component was calculated as the [relative percentage / raw count] of words contained in the [dictionary]. Next, we standardized the [component scores]. We then used these standardized scores to create a [net / composite] [construct] score, which was calculated as [formula].
-```
-
-**人工内容分析 + 编码者间信度变体**（如 Desai AMJ，Pfarrer et al. AMJ）： 🔬 EXPERIMENTAL（2-3 篇范文）⚠️ 保守替代：通用 M3 段落 + 编码者间信度说明
-```text
-To develop the [variable], we collected [document type] from [source]. Searches were conducted on [databases] for [keywords / search terms]. [Relevance criterion] yielded [N] unique [documents]. [Construct] falls into [N] categories: [category 1: definition and example], [category 2: definition and example], and [category 3: definition and example]. I read and coded all [documents], and a colleague used the same coding scheme on [percentage]% of them, selected randomly. The two raters agreed on [N] of the codings, a level of agreement resulting in a Cohen's kappa of [value], suggesting [interpretation: e.g., high intercoder reliability]. The [variable] equals [operationalization: e.g., a count of the documents meeting any of the above criteria].
-```
-
-**推断二元结果变体**：
-```text
-Our dependent variable is [binary outcome construct]. Because [direct observation is unavailable / the construct is latent], we infer [binary state] from [observable signal: text / count threshold / categorical mapping]. We classify a [unit] as [state = 1] when [rule: keyword presence / count exceeds threshold / human-coded indicator / classifier probability > cutoff]. We set the threshold at [value] because [justification: distribution elbow / domain convention / validation against human coding]. To assess classification accuracy, we [validation procedure: manual audit of random sample / compare to gold-standard subsample / report precision-recall]. The inferred [binary state] aligns with [external indicator] for [percentage] of cases.
-```
-
-**多行为者因变量变体**：
-```text
-We measure [outcome] at the [actor B] level because [theoretical reason: actor B is the decision maker / actor B bears the consequence]. The dependent variable is [operational definition] from [source B]. For robustness, we also construct an alternative measure from [source C] using [alternative rule]. The correlation between the two measures is [value], indicating [acceptable / strong] convergent validity.
-```
-
----
-
-### M4. 自变量 / 核心预测变量
-
-**通用填空段落（每预测变量一段）**：
-
-```text
-Our focal independent variable, [predictor name], is measured as [operation] based on [source/timing]. This variable corresponds to Hypothesis [x] because it captures [mechanism]. We present the focal variables in the order of the theory: [predictor A], [predictor B], and [moderator].
-```
-
-**自然实验/处理变量变体**：
-```text
-The treatment indicator equals one for [unit-years/participants] exposed to [event/condition] and zero otherwise. [Treatment] equals 1 for [unit-years] after [policy/event] becomes effective in [jurisdiction/group], and 0 otherwise.
-```
-
-**处理分配稳定性补充**（DiD 可选）： 🔬 EXPERIMENTAL（2-3 篇范文）⚠️ 保守替代：省略此段
-```text
-During our sample period, [percentage] of [units] changed their [treatment-relevant characteristic, e.g., headquarters location]. We use [historical/fixed] [characteristic] information to maintain consistent treatment assignment.
-```
-
-**竞争机制预测变量变体**（机制测试中分解核心构念时）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 M4 段落
-```text
-To test how [actors] resolve [uncertainty], we decompose [core construct] into [N] subgroups based on [criterion]: [variable 1], [variable 2], [variable 3], and [variable 4]. We restrict the mechanism test subsample to [criteria] to ensure sufficient variation across the subgroups. These variables correspond to [RQ/Prediction x] because they distinguish [mechanism A] versus [mechanism B].
-```
-
-**实验操纵变体**：
-```text
-To manipulate [construct], participants were shown/told [condition-specific cue], while [other information] was held constant.
-```
-
-**网络/组合/配对构念变体**：
-```text
-We define [focal construct] as occurring when [actor] simultaneously holds/links/participates in [two or more related units]. The pair-level measure captures [shared influence/exposure] between the focal unit and each same-category peer. The numerator sums [shared holdings/links/exposure]; the denominator adds [non-focal holdings/relationships] so the measure reflects [focal actor influence] relative to [other actors]. We aggregate the pair-level measure across all same-category peers to form a continuous focal-unit measure. We require [minimum stake/link/intensity] so that the focal actor has sufficient incentive and ability to influence [unit].
-```
-
-**同伴效应/网络效应变体**：
-```text
-Our focal independent variable, [network-based construct], is defined using [network boundary: same industry / same board / same supply chain / geographic proximity]. We calculate [focal exposure] as the [average / weighted average] of [peer outcome/characteristic] among [peers], excluding the focal unit. Formally, [network variable]_{i,t} = Σ_{j≠i} [weight]_{ij,t} × [peer characteristic]_{j,t} / Σ_{j≠i} [weight]_{ij,t}. Because peer outcomes may reflect common shocks rather than true influence, we instrument [network variable] with [instrument: lagged peer characteristic / network from different layer / exogenous network formation] and report falsification tests in M8.
-```
-
-**构造暴露/指数变体**（用于堆叠扩散或媒体暴露）：
-```text
-We construct [focal exposure] from [raw trace] by [aggregation rule]. The measure equals [formula: count / proportion / intensity] of [event/type] per [unit-time]. To account for [scale differences / coverage variation], we normalize by [denominator]. We require [minimum threshold] to ensure that [spurious zeros / noise] do not drive the results.
-```
-
-**文本构念预测变量变体**（当预测变量来自文本分析，如 earnings calls、10-K、媒体、访谈时）：
-```text
-Our focal independent variable, [predictor name], is derived from [text source, e.g., earnings call transcripts / 10-K filings / media coverage] using [method: LIWC dictionary / custom dictionary / machine-learning classifier]. We chose this source because [theoretical reason for text reflecting construct]. The dictionary includes [N] words/phrases capturing [theoretical dimension], validated by [human coding / prior literature / expert review]. To ensure convergent validity, we correlate the text-based measure with [alternative measure, e.g., survey / archival proxy]; the correlation is [value] (p [relation] [threshold]), supporting construct validity. We standardize the text score to mean zero and standard deviation one to facilitate coefficient interpretation. Because text-based measures may capture noise unrelated to [construct], we control for [general text characteristics: length / sentiment / formality] in all specifications.
-```
-
-**同时方程变体**： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 M7 段落
-```text
-Equation [x] predicts [primary outcome] as a function of [focal predictor], [mechanisms], [moderators], interactions, and controls. Equations [y–z] model [mediator A] and [mediator B], allowing us to test whether [focal predictor] affects the mechanisms implied by the theory. Equation [w] predicts [downstream outcome] using [focal outcome], [focal predictor], their interaction, and value-relevant controls. We include an additional equation for [potentially endogenous choice] to account for the possibility that [anticipated need/reverse path] influences [focal predictor].
-```
+用户选择不同组合，可生成风格迥异的段落，避免同质化。
 
 ---
 
-### M5. 调节变量 / 中介变量 / 机制变量
+### 填空段落骨架（示例）
 
-**通用填空段落（每变量一段）**：
-
-```text
-To capture [boundary/mechanism], we measure [moderator/mediator] as [operation]. We interact [predictor] with [moderator] to test whether [relationship] is stronger/weaker under [condition]. To test the proposed mechanism, we measured [mediator] and included [alternative mechanisms] as rival explanations.
-```
-
-**子样本分割变体**（用样本分割而非交互项检验调节时）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 M5 段落
-```text
-To capture the boundary condition of [moderator], we measure [moderator] using [classification]. We split the sample by [moderator] into [category A] and [category B] to test whether [relationship] differs across [categories], rather than including an interaction term, because [reason: small sample within categories / theoretical focus on distinct regimes].
-```
-
-**行为者类型分解变体**：
-```text
-To test the proposed mechanism, we decompose [predictor] by [actor type/horizon]. [Type A] and [Type B] capture actors expected to have [theory-relevant orientation], whereas [Type C] captures a comparison group. We map [classification data] onto [focal source] and construct separate measures for [type A], [type B], and [type C].
-```
-
-**边界条件验证变体**：
-```text
-We define [boundary condition] as contexts where [spillovers/externalities/stakeholder responses] are likely to be economically meaningful. We validate this classification using [external source A] for [dimension A] and [external source B] for [dimension B].
-```
-
-**间接调节（ mediated moderation ）变体**： 🔬 EXPERIMENTAL（1 篇范文）⚠️ 保守替代：通用 M5 段落
-```text
-To test the indirect moderation model, we specify a system of equations. Equation (2) captures the moderating effect of [moderator 1] on the [predictor-outcome] relationship: [outcome] = β₁₀ + β₁₁[predictor] + β₁₂[moderator 1] + β₁₃[predictor × moderator 1] + ε₁. Equation (3) captures the moderating effect of [moderator 2]: [outcome] = β₂₀ + β₂₁[predictor] + β₂₂[moderator 2] + β₂₃[predictor × moderator 2] + ε₂. Equation (4) models the relationship between [moderator 1] and [mediator]: [mediator] = β₃₀ + β₃₁[moderator 1] + ε₃. Equation (5) represents the full system with both moderators: [outcome] = β₄₀ + β₄₁[predictor] + β₄₂[moderator 1] + β₄₃[predictor × moderator 1] + β₄₄[mediator] + β₄₅[predictor × mediator] + ε₄.
-
-We test for full indirect moderation through [mediator] according to whether: (1) [moderator 1] functions as a moderator when [mediator] is not considered (β₁₃ ≠ 0); (2) [moderator 1] influences [mediator] (β₃₁ ≠ 0); (3) [mediator] moderates the effect of [predictor] on [outcome] (β₄₅ ≠ 0); and (4) the coefficient on the original interaction term in the full system (β₄₃) indicates the pattern of mediation—β₄₃ = 0 indicates full indirect moderation (the direct moderating effect of [moderator 1] becomes nonsignificant in the presence of [mediator]), whereas β₄₃ ≠ 0 and |β₄₃| < |β₁₃| indicates partial indirect moderation.
-```
-
----
-
-### M6. 控制变量与竞争性解释
-
-**通用填空段落**：
-
-```text
-We include controls for [threat family 1] because [alternative explanation 1]. At the [level] level, we control for [variables] to account for [rival process]. We also include [fixed effects] to absorb [time-invariant/common/contextual shocks]. All time-varying predictors are measured at [lag/timing] to preserve temporal ordering. We lag the control variables by [period] to reduce simultaneity concerns.
-```
-
-**自然实验/Bad Control 变体**： ✓ STANDARD（5-8 篇自然实验/DiD 范文复现）
-```text
-Because some controls may be affected by [treatment], we first estimate a parsimonious model with fixed effects before adding controls. We do not include [variable] because it may be post-treatment / mechanically related to [outcome].
-```
-
-**同时方程/方程特定控制变体**： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 M6 段落
-```text
-For [equation/outcome family], we include controls that address [rival explanation]. For [mediator equation], we further control for [industry benchmark] because firms may align [decision] with industry norms. In the [downstream outcome] equation, we control for [profitability], [growth], and [market position] because each may independently affect [value outcome]. In the [financial choice] equation, we include known determinants such as [industry norm], [asset structure], [firm size], and [profitability].
-```
-
-**实验变体**：
-```text
-We control for [participant characteristics] because [rival explanation]. Random assignment allows us to isolate the effect of [manipulation] on [outcome] within the experimental context.
-```
-
----
-
-### M7. 模型规格与估计方法
-
-**通用填空段落**：
-
-```text
-Because [dependent variable] is [continuous/binary/ordinal/count/censored/time-to-event], we estimate [model]. The specification includes [fixed effects] to absorb [unobserved heterogeneity/common shocks]. Standard errors are clustered at [level] to account for [within-unit dependence]. We use [estimator] for [hypotheses] because [outcome/design logic]. We also considered [alternative estimator]; results using this approach are reported as [robustness/supplement].
-```
-
-**模型选择理由补充段**（按需添加）： ✓ STANDARD（15+/28 篇范文使用）
-```text
-We employ [unit] fixed effects rather than random effects because the Hausman test rejects the random-effects assumption (χ² = [value], p < 0.01), indicating that unobserved [unit]-specific factors are correlated with our independent variables. [Year] fixed effects control for temporal trends such as [macroeconomic shocks/industry-wide shifts].
-```
-
-**诊断检验补充段**：
-```text
-We conduct several diagnostic tests. First, the Variance Inflation Factor (VIF) for all independent variables is below [value], well below the conventional threshold of 10, indicating that multicollinearity is not a concern. Second, the [Wooldridge/modified Wald] test indicates [presence/absence] of [autocorrelation/heteroskedasticity], and we report [robust/clustered] standard errors accordingly.
-```
-
-**非线性模型变体**： ✓ STANDARD（8-10 篇非线性模型范文复现）
-```text
-Because [outcome] is [binary/ordinal/count/censored/time-to-event], we estimate [model]. Coefficients indicate direction, but substantive interpretation requires [marginal effects/predicted probabilities/hazard ratios/odds ratios]. We assess [assumption] using [diagnostic/test], discussed below.
-```
-
-**DiD 变体**：
-```text
-We estimate a difference-in-differences model in which [outcome] is regressed on [treatment], [moderator/interactions], controls, and fixed effects. Identification comes from comparing changes in [treated units] before and after [event] to contemporaneous changes among [control units]. We cluster standard errors at [unit/jurisdiction] to account for serial correlation and within-[cluster] dependence.
-```
-
-**DiD 方程编号与 SE 聚类引用补充**：
-```text
-We cluster standard errors at the [level] to address [dependence structure] ([citation, e.g., Bertrand et al. 2004; Jager et al. 2021]). Where relevant, we present numbered equations: Equation (1) reports the baseline DiD specification, and Equation (2) reports the event-study leads-and-lags specification.
-```
-
-**生存分析变体**： 🔬 EXPERIMENTAL（2-3 篇范文：Zhou 2017, Pontikes 2012 等）⚠️ 保守替代：通用 M7 段落 + 说明分布选择
-```text
-Because the shape of [event timing] is not known ex ante, we compare [candidate distributions] and select [distribution] based on [fit criterion]. We use an accelerated failure time metric so coefficients can be interpreted in terms of [longer/shorter] time to [event].
-```
-
-**复发事件 AFT 变体**（当同一主体经历多次事件时）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 M7 + 生存分析变体
-```text
-Because [units] experience multiple [events] over the observation period, we estimate recurrent-event accelerated failure time (AFT) models with a [distribution] distribution for the underlying failure rate. Recurrent-event AFT models are appropriate because they examine how [predictors] influence the time to [event] while accounting for repeated occurrences within the same [unit]. We report robust standard errors to account for within-[unit] dependence across multiple events. The specification includes [fixed effects] to absorb unobserved heterogeneity.
-```
-
-**复发事件风险模型变体**（Recurrent-Event Hazard，如 Mayo et al. POMS）
-```text
-Because our objective was to examine how [IV] is associated with the hazard of a future [event], we use a hazard model. Hazard models estimate the hazard rate of an event occurring based upon independent variables that change across time, using time-to-event as the dependent variable. We measure time as [operationalization: e.g., elapsed days from the first observed data point]. We treat [event A] as failures (failure measure = 1) and [event B] as non-failures (failure measure = 0). Because many [units] in our sample experience more than one [event] (in our data, [N] average [events] per [unit]), we use a recurrent-event hazard model with clustered standard errors at the [cluster level]. We assume a [distribution: e.g., exponential] for the underlying hazard rate as it assumes that failures are [property: e.g., memoryless] after controlling for explanatory variables, making it one of the more parsimonious distributions in parametric hazard modeling. However, to ensure that this modeling choice is not the underlying reason for our results, we demonstrate that results are robust to [alternative distributions: e.g., Weibull and Gompertz].
-```
-
-**复发事件时间测量策略补充段**（当需要论证 continuous vs. reset time 时）：
-```text
-There are two main ways to handle the time measure in a recurrent-event hazard model. One way is to allow the time measure to continue to grow after each event for a given firm; that is, time to an event is always measured since the beginning of the data for a given firm. The other approach is to reset the time to zero after each failure for a given firm; that is, time is measured since the last failure. We chose the former method because longer panels like ours tend to have a large number of failures within a firm and may therefore be better suited toward a continuously incremented time measure due to shared variance that develops within a firm with multiple failures.
-```
-
-**同时方程变体**：
-```text
-Joint estimation addresses simultaneity and accounts for correlated errors across equations. We check [order/rank] conditions to ensure that each equation is identified. We further assess whether [alternative endogenous specification] is necessary by estimating [IV/3SLS] and comparing it with [preferred estimator] using [diagnostic test].
-```
-
-**IV/2SLS 变体**： ✓ STANDARD（3-4 篇 IV 范文复现）
-```text
-Although [baseline estimator] can exploit [within/between] variation, it may still be biased if [predictor] is endogenous due to [omitted variable / reverse causality / measurement error]. We therefore use two-stage least squares (2SLS) with [instrument] as an instrument for [endogenous predictor]. [Instrument] satisfies the relevance condition because [first-stage F-statistic / theoretical reason for correlation with endogenous predictor]. It satisfies the exclusion restriction because [theoretical argument for why instrument affects outcome only through predictor]. In the first stage, [endogenous predictor] is regressed on [instrument], [exogenous controls], and [fixed effects]. The first-stage F-statistic is [value], exceeding the Stock-Yogo threshold, indicating that [instrument] is not weak. In the second stage, [outcome] is regressed on the predicted [endogenous predictor] and the same controls. Standard errors are [robust / clustered] to account for [error structure].
-```
-
-**线性概率模型（LPM）+ 2SLS 变体**（二元 DV 且需固定效应时）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：IV/2SLS 变体
-```text
-Because the dependent variable is binary, one might consider Logit or Probit. However, when using 2SLS with fixed effects, the linear probability model (LPM) is often preferred because coefficients are directly interpretable as probability changes and computational tractability is preserved. We therefore estimate LPM with 2SLS for the main analyses and report Probit/Logit IV only as robustness. The specification includes [fixed effects] to absorb [unobserved heterogeneity]. Standard errors are clustered at the [level] to account for [dependence structure].
-```
-
-**事件研究 GLM 变体**（CAR 为 DV 时）：
-```text
-Because [CAR/abnormal response] is continuous but subject to nonconstant error variance, we estimate generalized linear models (GLM) rather than ordinary least squares. GLMs are robust to nonconstant error variance and relaxed distributional assumptions. Expected returns are estimated over [estimation window] using [factor model]; abnormal returns are observed returns minus expected returns. We aggregate abnormal returns over [event window] to allow for [information leakage/dissemination].
-```
-
-**动态面板/GMM 变体**： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 M7 段落 + M8 Nickell bias 提示
-```text
-Because [dependent variable] is persistent and our panel is [short / has few time periods], fixed-effects estimation may be biased (Nickell bias). We therefore estimate a dynamic panel model using [system GMM / difference GMM] with [lag structure] as instruments. We collapse the instrument matrix to avoid instrument proliferation and report [Hansen J-test / Sargan test] for overidentification ([value], p = [value]) and the [AR(2)] test for second-order serial correlation ([value], p = [value]). We treat [lags] as predetermined and [further lags] as instruments. The number of instruments is [N], which is [less than / approximately equal to] the number of groups, satisfying the rule of thumb that instruments should not exceed groups.
-```
-
-**匹配DiD/广义DiD 变体**： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：DiD 变体 + M2 PSM 变体
-```text
-We estimate a generalized difference-in-differences model using [matching estimator: nearest-neighbor / kernel / inverse probability weighting] to construct a credible counterfactual. Matching is performed on [covariates] using [propensity score / Mahalanobis distance] within [strata / caliper]. After matching, we estimate [outcome] on [treatment], [time], [treatment × time], controls, and [fixed effects] using the matched sample. Identification comes from comparing [treated units] to [matched control units] before and after [event]. We cluster standard errors at [level] to account for [dependence structure].
-```
-
-**堆叠扩散Logit 变体**： 🔬 EXPERIMENTAL（1 篇范文）⚠️ 保守替代：通用 M7 段落
-```text
-Because [outcome] is a binary adoption decision observed across multiple [entities / markets / practices] and time, we estimate a conditional (fixed-effects) logit model in a stacked structure. Each stack corresponds to [entity-practice-time triplet / adoption event], and the dependent variable equals one if [adoption occurred]. The stacked structure accounts for [unobserved heterogeneity] by including [fixed effects: entity / practice / time] while allowing [predictors] to vary across [dimensions]. We cluster standard errors at [entity] level to account for repeated observations within [entity].
-```
-
-**PSM匹配面板 + 随机效应Tobit 变体**： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：M7 Tobit + M2 PSM
-```text
-After propensity-score matching (described in M2), we estimate the treatment effect using [random-effects Tobit / fractional logit / GEE] because [outcome] is [censored / fractional / non-normal] and matching does not fully eliminate [unobserved heterogeneity]. We include [random effects] to account for [unit-level unobservables] and [time fixed effects] to absorb [common shocks]. Standard errors are clustered at [level].
-```
-
-**组合设计注释（Tobit/Poisson/Logit + IV）**：
-当模型同时涉及非线性 DV 和工具变量时（如 Zhou 2017 ASQ），建议按以下顺序拼接：
-1. 先报告 estimator-DV 匹配逻辑（Tobit 处理 censored / Poisson 处理 count）；
-2. 再报告 IV 必要性与工具变量合理性；
-3. 最后说明 second-stage 的解释策略（marginal effects / turning points / count effects）。
-first-stage 统计量可置于 M7 正文、表格脚注或 R1 诊断段，取决于识别策略在论文中的核心程度。若 first-stage 仅作为诊断而非展示重点（如 ASQ 常见做法），建议在 M7 中仅简要提及"first-stage F 超过 Stock-Yogo 阈值"，将具体数值放入表格脚注。
-
-**混合效应（within-between 分解）变体**：
-```text
-To disentangle the within-[unit] and between-[unit] effects of [predictor], we estimate mixed-effects models that decompose [predictor] into two components: [predictor]_{within}, which captures deviations from each [unit]'s mean over time, and [predictor]_{between}, which captures each [unit]'s time-invariant average. The within-effect answers whether [predictor] changes within the same [unit] are associated with [outcome] changes. The between-effect answers whether [units] with higher average [predictor] exhibit systematically different [outcome]. We include [random effects] to account for [unit]-level unobserved heterogeneity and [fixed effects] to absorb [time/common shocks].
-```
-
-**HLM/多层模型变体**（当数据为嵌套结构，如员工-团队-公司，或重复测量-个体时）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 M7 段落 + 说明聚类标准误
-```text
-Because observations are nested within [level-2 unit, e.g., firms / teams / individuals], we estimate a hierarchical linear model (HLM) with random intercepts at the [level-2] level. The intraclass correlation (ICC) is [value], indicating that [percentage]% of the variance in [outcome] resides between [level-2 units], justifying the use of multilevel modeling. We include [predictor] at [level-1 / level-2 / both levels] and test cross-level interactions (e.g., [level-2 predictor] × [level-1 predictor]). Random slopes for [predictor] are included when the likelihood-ratio test favors their inclusion (χ² = [value], p [relation] [threshold]). We center [level-1 predictor] at the [group mean / grand mean] to facilitate interpretation of [main effects / cross-level interactions]. Standard errors are robust to [heteroskedasticity / clustering] at the [level] level.
-```
-
-**实验变体**：
-```text
-Participants were randomly assigned to one of [N] conditions and then completed [task/measures]. We used [model/test] to analyze [outcome] because [outcome form/design logic].
-```
-
----
-
-### M8. 识别策略 / 效度 / 诊断检验
-
-**通用填空段落**：
-
-```text
-To address concerns about [threat], we [design feature/test]. This check assesses whether [assumption] is plausible. We report the results in [Results/Table/Appendix]. Although [assumption] cannot be directly tested, the evidence below helps reduce concerns about [threat].
-```
-
-**自然实验/DiD 变体**：
-```text
-Our identification strategy relies on [source of variation]. [Shock/event/policy] creates variation in [treatment] that is plausibly exogenous to [outcome] because [reason]. The key identifying assumption is that [treated and control units] would have followed similar trends absent [treatment]. We assess this assumption in the Results section using [event-study/leads-lags] specifications. We first estimate a parsimonious specification because [controls] may be affected by [treatment].
-```
-
-**DiD 置换检验预览补充**（可选，置于自然实验/DiD 变体后）：
-```text
-We also conduct permutation tests by randomly assigning [treatment status/timing] across [N] iterations to assess whether [unobserved characteristics] could drive our results.
-```
-
-**内生性/控制函数变体**： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：M8 通用段落
-```text
-Because [timing/choice] may be endogenously chosen in the [outcome] model, we use a control-function approach: first estimate [timing model], then include the first-stage residual in the [outcome model]. [Variable] identifies the first stage because it should affect [timing] but not [second-stage outcome], since [theoretical reason].
-```
-
-**实验效度变体**：
-```text
-To assess the [manipulation] manipulation, participants rated [check item]. Participants in the [condition] condition perceived [construct] as [higher/lower] than those in the [comparison] condition. These results indicate that the manipulation was successful. Results were [unchanged/qualified] when [attention-check/manipulation-check exclusion] was applied.
-```
-
-**多研究变体**：
-```text
-The sample, method, and analyses for Study [x] were preregistered at [repository/link placeholder]. As preregistered, we excluded participants who [criterion], producing a final analytic sample of [N].
-```
-
-**IV 排他性约束/过度识别检验变体**：
-```text
-A threat to our IV strategy is that [instrument] may affect [outcome] through channels other than [endogenous predictor]. We address this concern in three ways. First, we argue theoretically that [instrument] influences [outcome] only through [predictor] because [theoretical mechanism / institutional feature]. Second, we include [control for alternative channel] in the second stage to absorb [potential violation path]. Third, [IF overidentified: we report the Sargan / Hansen J overidentification test ([value], p = [value]), which does not reject the null that all instruments are valid, strengthening confidence in the exclusion restriction. IF just-identified: because the model is just-identified (one instrument for one endogenous variable), overidentification tests are infeasible. We therefore rely on theoretical arguments for the exclusion restriction and conduct placebo tests / sensitivity analyses to assess robustness.]
-```
-
-**同伴效应/网络效应 falsification 变体**： 🔬 EXPERIMENTAL（1 篇范文）⚠️ 保守替代：M8 通用段落
-```text
-Because [network-based construct] may capture common shocks or sorting rather than true peer influence, we conduct falsification tests. We re-estimate our models using [placebo network: random peers / future peers / peers from unrelated network layer] as the independent variable. If the main effect is driven by common shocks, the placebo network should also yield a significant coefficient. The coefficient on [placebo network] is [not significant / opposite direction / much smaller], suggesting that the [focal network] effect is not an artifact of [common shock / sorting]. We also test [alternative mechanism] by [test description]; the result is [status], further distinguishing [theorized mechanism] from [alternative].
-```
-
-**匹配DiD 平行趋势与重叠支撑变体**： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：M8 自然实验/DiD 变体
-```text
-The key identifying assumption is that [treated] and [matched control] units would have followed parallel trends absent [treatment]. We assess this assumption using [event-study / leads-and-lags] specifications in which we include [lead/lag indicators] relative to [event]. The pre-treatment coefficients are [individually / jointly] insignificant ([test statistic] = [value], p = [value]), suggesting no detectable pre-treatment divergence. We also verify overlap by plotting [propensity-score distributions / covariate balance] before and after matching; the [common support region] covers [percentage]% of the sample, and no observations lie outside the [calipersize] caliper.
-```
-
-**粗化精确匹配（CEM）/ 匹配解决内生性变体**（非 DiD，仅用匹配加权解决内生性）：
-```text
-To address concerns about endogeneity — specifically, that [predictor] may be influenced by [past outcome / ongoing confound] — we exploit an exogenous shock: [treatment definition, e.g., a change in the firm's CEO]. We use coarsened exact matching (CEM)-weighted [estimator], matching [treated units] to [control units] on pretreatment variables: [matching variables]. This yields [N] matched strata containing [N treated] and [N control] observations. The CEM-weighted results confirm that [focal effect] remains [status] even when [predictor] changes are exogenously driven.
-
-To validate the exogeneity of [treatment], we demonstrate that [pretreatment outcomes] do not predict the likelihood of [treatment] ([logit/Probit] regression) and do not predict [predictor] levels (panel fixed-effects models). These checks reduce concerns that the [predictor-outcome] relationship is driven by reverse causality or omitted variables related to [confound].
-```
-
-**制度/政策体制安慰剂检验变体**：
-```text
-Because [outcome] may reflect [alternative mechanism] rather than [focal mechanism], we exploit a [regime change] as a falsification test. During the [mandatory regime], [behavior] should not exhibit [focal pattern] because [institutional reason]. We re-estimate our models using [mandatory regime subsample] and find [null effect], consistent with the assumption that [focal mechanism] requires [voluntary regime condition].
-```
-
-**部分重叠同伴群体 + 形式化识别证明变体**（网络效应核心识别故事）：
-```text
-Our identification strategy relies on two features of partially overlapping peer groups. First, because [percentage] of firms operate in multiple industries, peer groups vary at the individual firm level. This breaks the linear dependence between the endogenous peer variable and exogenous peer characteristics that plagues perfectly overlapping groups. Formally, in a perfectly overlapping group, PeerDisclosure is a linear combination of peer characteristics, making identification impossible. With partial overlap, the peer group matrix has full rank because each firm faces a unique combination of peers.
-
-Second, we instrument [endogenous peer variable] with [second-degree peer characteristics], which are plausibly uncorrelated with unobservable shocks affecting the focal firm's [outcome] because second-degree peers are not in the focal firm's peer group. The exclusion restriction is supported by three arguments: (1) [theoretical argument], (2) [mandatory-regime falsification], and (3) [Hansen J-test / statistical argument].
-```
-
-**SEM 模型识别变体**（当使用结构方程模型或联立方程时）：
-```text
-Because we estimate a system of [N] equations simultaneously, we verify model identification before interpreting coefficients. The model has [degrees of freedom] degrees of freedom (positive, indicating over-identification). Each structural equation satisfies the order condition (number of excluded exogenous variables ≥ number of included endogenous variables minus one) and the rank condition (the matrix of excluded exogenous variables has full column rank). For the measurement model, we report confirmatory factor analysis (CFA) fit indices: CFI = [value] (≥ 0.90), RMSEA = [value] (≤ 0.08), and SRMR = [value] (≤ 0.08), indicating acceptable fit. We also report the χ² test ([value], df = [df], p = [value]) as an absolute fit measure, noting that χ² is sensitive to sample size. All factor loadings are significant (p < [threshold]) and exceed [value], supporting convergent validity. The average variance extracted (AVE) for each construct is [value], exceeding the squared correlation between constructs, supporting discriminant validity.
-```
-
----
-
-### M9. 多研究 / 实验程序 / 质性编码
-
-**多研究总览段**（M9 前置）：
-```text
-Study [x] tests [hypothesis/effect] using [sample/design]. Study [y] extends Study [x] by examining [mechanism/boundary/alternative explanation]. Together, the studies provide evidence for [main effect], [mechanism], and [boundary condition].
-```
-
-**逐研究过渡段**：
-```text
-In Study [x], we sought to test [hypotheses] and address [limitation/gap] from [prior study/evidence]. Study [x] used a [factorial/correlational/archival] design with [factors/conditions] and tested H[x–y]. Participants were directed to [task/context], randomly assigned to [condition], and then completed [outcome/mechanism] measures.
-```
-
-**研究间衔接段**：
-```text
-Although Study [x] addresses [issue], it cannot establish [remaining need]. Study [x+1] therefore [design upgrade]. Across Studies [x–y], the evidence converges on [theoretical pattern] while progressively addressing [validity concerns].
-```
-
----
-
-### M10. Methods 到 Results 的过渡
-
-**通用填空段落**：
-
-```text
-The Results section first reports [main tests] and then examines [validity/robustness checks]. Because [measure/design] raises [concern], we address this issue in supplemental analyses using [test]. The model requires interpreting [marginal effects/predicted values], which we report after the coefficient estimates. We assess the plausibility of [identification assumption] through [event-study/placebo/diagnostic] tests.
-```
-
----
-
-## 按设计类型一键生成示例
+以下示例展示组装后的最终效果。实际调用时，骨架来自外置语料库分片。
 
 ### 示例：面板数据 / OLS
 
@@ -589,7 +287,7 @@ The Results section first reports [the main hypothesis tests in Table 2] and the
 ```json
 ---metadata---
 {
-  "skill_version": "2.6.0",
+  "skill_version": "3.0.0",
   "model_type": "面板数据/OLS",
   "design_variant": "标准",
   "journal_target": "SMJ",
@@ -680,7 +378,7 @@ The Results section first reports [the main hypothesis tests in Table 2] and the
 - `/write-results` — 使用本骨架的变量名、模型规格和 M10 预告作为 Results 报告的基准
 - `/paper-review` — 进行 Theory-Methods 假设-变量映射对齐检查
 - `/methods-review` — 如用户已有 Methods 草稿，使用本骨架作为理想基准对比审查
-- `/distill-methods-exemplar` — 对生成后的 Methods 段落进行反向蒸馏审查，检查槽位覆盖、DNA 指标、可迁移性和因果语言合规性。审查结果作为 Vault 参考注释，不自动修改本 skill 的骨架库
+- `/distill-methods-exemplar` — 两层接口：(1) Phase 4 `corpus_enrichment` YAML 块 → Phase 4.5 → `_evidence_registry.yaml`（自动更新定量证据）；(2) Phase 6 `--validate` 成品验证模式接收本 skill 的 metadata JSON 作为参考基准，输出四维评分和修正建议。用户完成 Methods 初稿后，使用 `/distill-methods-exemplar --validate <Methods全文> --reference-metadata <本skill输出的---metadata--- JSON>` 进行验证
 
 ### Cross-Section 对齐检查（与上游 Skill 的接口）
 
@@ -801,14 +499,28 @@ To ensure that our findings are not driven by [specific modeling choice / measur
 - [ ] **时点标记密度**：所有预测变量明确标注 t-1 / contemporaneous / event window；所有时间范围有起止年份（目标：>=85%；MVP30 中位数约 85%）
 - [ ] **功能定位密度**：每段首句说明本段做什么（如 "We include controls for..." / "To address concerns about..."）（目标：≥70%）
 
-### 反向审查（可选但建议）
-生成完成后，可使用 `/distill-methods-exemplar` 对输出段落进行反向蒸馏审查，生成 Vault 参考注释，供人工判断：
-- 槽位覆盖是否完整（M1–M10）
-- 表达骨架是否可迁移（无机构名/政策名残留）
-- 因果语言强度是否与 design strength 匹配
-- 识别策略和 validity threat 处理是否达到顶刊 ritual 标准
+### 写作-反馈闭环（成品验证）
 
-**注意**：反向审查产出存入 Vault，不自动修改本 skill 的骨架库。是否采纳为 skill 参考由人工决定。
+完成 Methods 初稿后，使用 `/distill-methods-exemplar --validate` 进行成品验证：
+
+```
+/distill-methods-exemplar --validate
+[粘贴你写出的 Methods 全文]
+
+--reference-metadata
+[粘贴上方的 ---metadata--- JSON 区块]
+```
+
+验证将执行四维检查：
+
+| 维度 | 检查内容 | 输出 |
+|------|---------|------|
+| **组装方案兑现** | 槽位是否按推荐变体覆盖？设计变体是否与设计类型兼容？ | 偏离矩阵 + 严重度评级 |
+| **槽位完整性** | M1-M10 每个槽位的 Completeness/Clarity/Credibility | 逐槽位 0-3 评分卡 |
+| **因果语言合规** | 每句因果动词是否与设计强度匹配？ | 违规清单 + 建议替换词 |
+| **骨架生成力** | 骨架关键短语是否保留？说服动作是否被填充后的段落保持？ | VALIDATED/REVISE/REJECT 评级 |
+
+验证报告包含优先修正清单，按审稿人攻击概率排序。详见 `distill-methods-exemplar` Phase 6。
 
 ## Constraints
 
@@ -840,5 +552,14 @@ To ensure that our findings are not driven by [specific modeling choice / measur
 - **逐论文精细解构**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/methods_results/mvp30/fine_grained/batch_*/[paper]_fine_methods_results.md`
 - **Pollock Ch07 表达库**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/methods_results/mvp30/fine_grained/_four_paper_expression_corpus_pollock_ch07.md`
 
+## 语料库维护接口
+
+如需为特定设计类型补充新变体或更新主骨架：
+
+1. **distill 产出沉淀**：使用 `/distill-methods-exemplar` 分析新论文，Phase 4 验证通过的变体写入 `academic-writing-corpus/[设计类型].md` 的「累积变体」区块。
+2. **语料库索引更新**：修改 `academic-writing-corpus/INDEX.md` 中的变体数和最后更新日期。
+3. **证据注册表更新**：运行 `academic-writing-corpus/_update_registry.py` 合并 `corpus_enrichment` YAML 块。
+4. **即时生效**：write-methods 下次调用时自动读取更新后的分片文件，无需重启或修改 SKILL.md。
+
 ---
-*基于 32 篇 MVP30 范文语料库、Pollock 2025 Ch07 和深度叙事分析框架构建。版本 2.6.0 — 填空式模板。*
+*基于 32 篇 MVP30 范文语料库、Pollock 2025 Ch07 和深度叙事分析框架构建。版本 3.0.0 — 外置语料库按需加载。*

@@ -1,10 +1,10 @@
 ---
 name: distill-theory-exemplar
 description: |
-  Theory & Hypotheses 范文蒸馏 meta-skill。输入单篇或批量论文的 Theory 文本，输出结构化提炼报告：理论构建类型识别、功能模块拆解、why-chain 模式、构念关系组织方式、模块级表达骨架、以及 write-theory 更新建议。
-  从已发表论文的 Theory 中提炼可复用骨架：理论构建类型识别、功能模块拆解、why-chain 模式、构念关系组织方式、模块级表达骨架。不验证用户写作——Theory 写作 QC 请使用 `/theory-review`。
-  核心原则：Theory 内容高度非标准化（因研究问题而异），但功能框架和推理结构是标准化的。提炼 HOW they explain why, not WHAT they explain。不复制具体机制内容，只提取可跨论文复现的理论论证组织方式和 why-chain 结构。
-  触发词：「蒸馏 theory」「理论范文分析」「拆解 theory」「提取 theory 模板」「处理新论文 theory」「theory 骨架提炼」「why chain 提炼」。
+  当用户想从已发表论文的 Theory & Hypotheses 部分学习理论构建方式、提取 why-chain 组织模式和假设推导句式时触发。也用于对比多篇论文的理论框架结构、将论文的 Theory 写作范式注册到语料库。
+  与 write-theory 的区别：本 skill 从范文提取模式（读/分析），write-theory 根据模式生成段落（写/生成）。
+  与 theory-review 的区别：本 skill 分析已发表论文的 Theory，theory-review 审查用户自己写的草稿。
+  触发词：分析 theory 写法、理论范文分析、拆解 theory、提取 theory 模板、学习这篇的 theory、theory 写作模式、theory 范文、why chain 提炼、理论框架拆解。
 version: 1.1.0
 ---
 

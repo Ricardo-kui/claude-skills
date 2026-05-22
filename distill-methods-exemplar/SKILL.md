@@ -1,15 +1,16 @@
 ---
 name: distill-methods-exemplar
 description: |
-  Methods 范文蒸馏 meta-skill。输入单篇或批量论文的 Methods 文本，输出结构化提炼报告：段落骨架、表达 DNA、可迁移范式、不可迁移边界、以及 write-methods 更新建议。
-  核心原则：提炼 HOW they argue, not WHAT they said。不复制句子，只提取可跨论文复现的论证组织方式。
-  触发词：「蒸馏 methods」「methods 范文分析」「拆解 methods」「提取 methods 模板」「处理新论文 methods」「methods 骨架提炼」。
-version: 1.0.0
+  当用户想从已发表论文的 Methods 部分学习写作模式、提取可复用的段落骨架和句式模板时触发。也用于对比多篇论文的 Methods 结构异同、将论文的 Methods 写作范式注册到语料库。
+  与 write-methods 的区别：本 skill 从范文提取模式（读/分析），write-methods 根据模式生成段落（写/生成）。
+  与 methods-review 的区别：本 skill 分析已发表论文的 Methods，methods-review 审查用户自己写的草稿。
+  触发词：分析 methods 写法、methods 结构拆解、提取 methods 模板、学习这篇的 methods、methods 写作模式、methods 范文、methods 对比、methods 语料库。
+version: 2.1.0
 ---
 
 # Role
 
-你是 Methods 范文的**结构化蒸馏器**。基于 nuwa-skill 的流水线逻辑和 Pollock 2025 Ch07，将单篇或批量论文的 Methods 转化为可复用、可验证、可入库的写作资产。
+你是 Methods 范文的**结构化蒸馏器**。基于 Pollock 2025 Ch07，将单篇或批量论文的 Methods 转化为可复用、可验证、可入库的写作资产。
 
 核心原则：
 - **How > What**：提炼段落如何组织证据、如何处理 validity threat、如何完成说服，而非复制具体措辞。
@@ -211,6 +212,146 @@ phase_2_distillation:
 
 ---
 
+### 2.6 句法微模板提取（Sentence-Level Micro-Templates）
+
+在段落级骨架（Phase 2.2）之下，进一步提取**句子级/句法微模板**。这是解决"段落结构正确但表达同质化"问题的关键层。
+
+**提取原则**：
+- **How within How**：不是"这个段落做什么"，而是"这个段落内的关键句如何完成说服"。
+- **可替换性**：同一骨架的同一槽位，应能填入多套微模板，生成风格迥异的段落。
+- **功能绑定**：微模板必须与骨架的说服动作绑定，不能脱离骨架功能独立使用。
+
+**提取流程**：
+
+1. **定位关键句法位置**：在 Phase 2.2 的骨架中，标记以下关键句法位置：
+   - 段首锚定（Opening Anchor）
+   - because 从句（Because Clause）
+   - 因果动词（Causal Verb）
+   - 过渡衔接（Transition）
+   - 数字叙事节奏（Numerical Rhythm）
+
+2. **提取微模板**：将原文中这些位置的句法抽象为可填充单元。
+
+3. **分类归档**：按功能分类存入 `academic-writing-corpus/micro-templates/` 的对应文件。
+
+**六大微模板类别**：
+
+| 类别 | 功能 | 存储位置 | 对应槽位 |
+|------|------|---------|---------|
+| **段首锚定短语** | 告诉读者"本段做什么" | `micro-templates/opening-anchors.md` | M1–M10 |
+| **because 从句架构** | 论证控制变量/样本排除/构念效度的理由 | `micro-templates/because-clauses.md` | M2, M3, M4, M6 |
+| **因果动词梯度** | 根据设计强度选择因果声称力度 | `micro-templates/causal-hedging.md` | M3, M4, M7, M8 |
+| **过渡衔接短语** | 段落内部的逻辑推进标记 | `micro-templates/transitions.md` | M1–M10 |
+| **样本漏斗节奏** | 数字叙事的句法序列 | `micro-templates/funnel-rhythm.md` | M2 |
+| **识别策略预告** | 在 Methods 中预告 Results 的诊断检验 | `micro-templates/identification-foreshadowing.md` | M8 |
+| **变量操作化句式** | 构念→测量→来源→方向 | `micro-templates/variable-operationalization.md` | M3, M4, M5 |
+| **稳健性检验预告** | 预告 Results 的稳健性检验 | `micro-templates/robustness-foreshadowing.md` | M8, M10 |
+
+**微模板格式**：
+
+```yaml
+phase_2_6_micro_templates:
+  M6_controls:
+    opening_anchor:
+      template: "We included a broad set of control variables that influence [DV] directly and those that help address alternative explanations ([methodology_citation])."
+      frequency: "中 (4/28)"
+      transferability: "通用"
+      risk_level: "安全"
+    because_clauses:
+      - template: "...because [larger and older firms] may have more resources for both [IV] and [DV]."
+        subtype: "竞争性解释型"
+        frequency: "高"
+      - template: "...because [omitted variable] may confound the [IV-DV] relationship by [mechanism]."
+        subtype: "遗漏变量型"
+        frequency: "中"
+    transitions:
+      - template: "We first included [level_1]_level factors..."
+        function: "层级递进"
+      - template: "We also controlled for [level_2]_level characteristics..."
+        function: "层级递进"
+      - template: "Lastly, we included firm and year fixed effects..."
+        function: "层级收尾"
+```
+
+**与 write-methods 的接口**：
+
+`write-methods` 输出段落骨架时，在 `[placeholder]` 层级之下，为关键句法位置提供 2–3 个微模板选项供用户选择。例如：
+
+```text
+M6. 控制变量与竞争性解释
+
+[段首锚定选项]：
+  A. "We include controls for [threat family] because [alternative explanation]."（通用）
+  B. "We included a broad set of control variables that influence [DV] directly and those that help address alternative explanations ([citation])."（because 密度高）
+
+[because 从句选项]：
+  A. 竞争性解释型: "...because [rival theory] predicts..."
+  B. 遗漏变量型: "...because [omitted variable] may confound..."
+
+骨架主体: [We began with... → After excluding... → The final sample...]
+```
+
+**诚实边界**：
+- 不提取不可迁移的论文特定短语（机构名、政策名、数据库名）。
+- 不虚构微模板的来源频次。
+- 高风险微模板（强因果动词）必须标注设计类型限制。
+
+---
+
+### 2.4 骨架批评家（Skeleton Critic）—— 生成力验证
+
+每个 Phase 2.2 提炼出的骨架必须经过**生成力验证**，才能进入 Phase 3 和后续语料库沉淀。
+
+**验证流程**：
+
+1. **占位符填充测试（Generativity Test）**
+   - 将骨架中的 `[占位符]` 填入该论文的具体内容（变量名、样本量、估计器名）
+   - 生成一个"模拟段落"
+   - 对比模拟段落与原文段落：是否保留了相同的**说服动作**？
+   - 如果填入后生成的段落与原文功能等价 → 通过；如果丢失了关键说服动作 → REVISE
+
+2. **事实污染检查（Fact-Boundary Test）**
+   - 骨架中是否嵌入了该论文特有的机构名、政策名、数据库名？
+   - 是否使用了仅适用于该行业的术语？
+   - 如果有 → REVISE，泛化为 `[empirical setting]` / `[policy]` / `[source]`
+
+3. **设计类型匹配检查（Type-Fidelity Test）**
+   - 骨架的标志性语言是否与判定的设计类型匹配？
+   - 例如：OLS/FE 骨架中出现 "parallel trends" → REJECT（语言错配）
+   - 例如：非 IV 骨架中出现 "exclusion restriction" → REJECT
+   - 因果语言强度是否与设计家族的允许词汇表一致？
+
+**批评家裁决格式**：
+
+```yaml
+phase_2_4_skeleton_critic:
+  skeleton_id: "M7_survival_aft_distribution_selection"
+  verdict: "VALIDATED / REVISE / REJECT"
+  verdict_reason: "..."
+  generativity_test:
+    mock_paragraph_generated: true/false
+    persuasive_action_preserved: true/false
+    notes: "..."
+  fact_boundary_test:
+    paper_specific_contamination: ["数据库A", "机构B"]
+    contamination_cleared: true/false
+  type_fidelity_test:
+    design_type_match: true/false
+    causal_language_compliant: true/false
+    mismatch_details: "..."
+```
+
+**裁决标准**：
+
+| 裁决 | 条件 | 后续动作 |
+|------|------|----------|
+| **VALIDATED** | 三项测试全部通过 | 骨架进入 Phase 3 和 Phase 4 |
+| **REVISE** | 生成力或事实边界测试未通过，但可通过改写修复 | 标记为 "needs_revision"，在 Phase 4 中尝试改写后重新验证 |
+| **REJECT** | 设计类型错配，或过度抽象失去生成力 | 丢弃，不进入语料库。记录拒绝原因供 Phase 4 汇总 |
+
+**注意**：批评家裁决记录存入 Phase 4 的 `validated_skeletons` 或 `rejected_skeletons`，供跨论文聚合使用。
+
+
 ## Phase 3 — Academic Methods DNA 量化与结构化报告
 
 量化该论文 Methods 的"表达 DNA"，生成 fine-grained profile。
@@ -273,7 +414,7 @@ phase_2_distillation:
 
 如果是 `--batch` 模式，在多篇论文提炼完成后执行此阶段。
 
-### 三重验证标准（nuwa-skill 迁移版）
+### 三重验证标准
 
 | 标准 | 问题 | 淘汰门槛 |
 |------|------|----------|
@@ -312,19 +453,134 @@ phase_4_corpus_reference:
     rejected_reasons: ["仅出现1次", "不可生成段落", "通用废话"]
 ```
 
-**关键原则**：Phase 4 的所有产出都是**参考性注释**，存入 Vault 的 `skill_update_recommendations/` 或 `fine_grained/` 目录，供人工审阅后决定是否纳入 skill。Distill skill 不自动修改 `write-methods` 的骨架库。
+**关键原则**：Phase 4 的产出分为两层：
+- **机器消费层**（硬化接口）：包含骨架文本的 `corpus_enrichment` YAML 块由 `_update_registry.py` **自动**处理，同时更新注册表和追加变体到语料库分片文件。
+- **人工消费层**：仅含参考注释的 `vault_enrichment` 存入 Vault 的 `skill_update_recommendations/` 或 `fine_grained/` 目录，供人工审阅后决定是否纳入 skill。
 
-### 手动写入路径：→ academic-writing-corpus
+Distill skill **自动修改** `write-methods` 的语料库分片文件（通过 `_update_registry.py`），但**不自动修改** SKILL.md 本身的协议层文本。
 
-验证通过的变体骨架可手动写入 `write-methods/academic-writing-corpus/[设计类型].md` 的「累积变体」区块。
+### 自动沉淀路径：→ academic-writing-corpus（由 _update_registry.py 执行）
 
-写入前确认：
-- [ ] 该变体已通过三重验证（跨论文复现 / 生成力 / 范式排他性）
-- [ ] 目标设计类型文件已存在（参见 `academic-writing-corpus/INDEX.md`）
-- [ ] 写入格式：`### 变体 N: [来源论文] (YYYY-MM-DD)` + 验证状态 + 槽位 + 骨架 + 差异说明
-- [ ] 更新文件头 `variants_count` 和 `updated` 字段
+验证通过的变体骨架通过 `corpus_enrichment` YAML 的 `append_skeleton` action **自动**追加到 `write-methods/academic-writing-corpus/[设计类型].md` 的「累积变体」区块。
 
-**不建立 Phase 4.5 自动管道**——写入由人工判断触发，保持 distill skill 架构精简。
+**无需手动编辑**。`_update_registry.py` 会自动完成：
+- [x] 读取目标分片文件
+- [x] 在「累积变体」区块追加新变体（含骨架、来源论文、验证状态）
+- [x] 更新文件头 `variants_count` 和 `updated` 字段
+- [x] 同时更新 `_evidence_registry.yaml` 的定量证据
+
+**`evidence_updates` 中触发骨架追加的条件**：
+- `action: "append_skeleton"`（推荐，显式标记骨架更新）
+- `action: "create_new"` 且包含 `skeleton` 字段（新建设计类型时自动创建骨架）
+
+**手动审阅仍需要的场景**（不通过脚本自动处理）：
+- 将累积变体**提升为主骨架**或标记为 `✓ STANDARD`
+- 修改主骨架的定性内容（句法模板、设计变体、反模式提醒等）
+- 删除或修改已写入的累积变体
+
+---
+
+### Phase 4.5 — 证据注册表更新逻辑与 corpus_enrichment 硬化输出
+
+Phase 4 的产出分为两层：
+- **人工消费层**： 和 （Vault 参考注释，供人工审阅后决定是否纳入 skill）
+- **机器消费层**： 结构化 YAML 块（自动更新  的定量证据）
+
+#### corpus_enrichment 硬化输出块
+
+在 Phase 4 输出末尾，**必须附加**以下结构化 YAML 块。这是 distill 与 write-methods 之间的**硬化接口**——write-methods 可通过注册表直接感知每个设计类型的证据积累状态。
+
+```yaml
+corpus_enrichment:
+  batch_id: "batch_YYYY-MM-DD"
+  papers_processed: N
+  last_updated: "YYYY-MM-DD"
+
+  evidence_updates:
+    - target: "academic-writing-corpus/生存分析.md"
+      design_type: "生存分析"
+      slot: "M7"
+      action: "append_papers"
+      new_papers: ["author_year (journal)"]
+      updated_paper_count: N
+      new_status: "ROBUST / VERIFIED / EMERGING"
+
+    - target: "academic-writing-corpus/面板数据-OLS.md"
+      design_type: "面板数据-OLS"
+      slot: "M6"
+      action: "update_status"
+      previous_status: "VERIFIED"
+      new_status: "ROBUST"
+      reason: "paper_count 从 4 升至 6，跨 >=2 sources"
+
+    - target: "academic-writing-corpus/XX-new-design.md"
+      design_type: "新设计类型"
+      slot: "M7"
+      action: "create_new"
+      skeleton: "Because [DV] is [type], we estimate..."
+      source_papers: ["author_year"]
+      transferability: "high"
+      note: "供写作者参考，可作为新增设计类型 corpus 文件的候选"
+
+  anti_pattern_updates:
+    - target_design_type: "面板数据-OLS"
+      target_slot: "M6"
+      pattern: "控制变量无 because 逻辑——3/8 OLS/FE 论文控制变量仅列举名称"
+      evidence: ["paper_a", "paper_b", "paper_c"]
+      recommended_action: "在 write-methods M6 模板中强化 '每个控制变量必须有 because' 的提醒"
+
+  validation_feedback:
+    - design_type: "生存分析"
+      phase_6_validations: 0
+      note: "尚无 Phase 6 验证数据"
+
+  batch_metadata:
+    design_types_covered: ["面板数据-OLS", "生存分析", "IV-2SLS"]
+    novel_skeletons_found: N
+    rejected_skeletons: N
+    rejected_reasons: ["仅出现1次", "设计类型错配", "因果语言越级", "过度抽象"]
+```
+
+**字段说明**：
+
+| 字段 | 用途 | 消费方 |
+|------|------|--------|
+|  | 对现有 corpus 文件的证据更新（新增论文、状态升级、新建设计类型文件） | write-methods 加载时合并到  |
+|  | 批量蒸馏发现的常见失败模式 | write-methods 反模式清单 |
+|  | Phase 6 验证结果积累 |  validation_history |
+|  | 批量处理元数据 | 注册表 meta 字段 |
+
+#### 状态自动判定规则
+
+| 条件 | 新状态 |
+|------|--------|
+|  且跨  独立数据源/期刊 | **ROBUST** |
+|  | **VERIFIED** |
+|  | **EMERGING** |
+
+#### 注册表更新方式
+
+1. 将 Phase 4 输出的  YAML 块保存为临时文件
+2. 运行本 skill 目录下的自动化工具：
+   ```bash
+   python _update_registry.py /tmp/corpus_enrichment.yaml
+   ```
+3. 工具自动完成：
+   - 读取 
+   - 对每个  条目：追加 papers、重算 paper_count、按阈值判定 status
+   - 应用 
+   - 更新  和 
+   - 写回注册表
+
+**工具位置**: 
+
+**注意**：Phase 4.5 的 `_update_registry.py` 执行两项自动更新：
+1. **注册表更新**：`_evidence_registry.yaml` 中的定量证据（paper_count、status、common_failures）。
+2. **语料库骨架追加**：包含 `skeleton` 字段的 `evidence_updates` 条目会自动追加到目标分片文件的「累积变体」区块。
+
+主骨架的定性内容（句法模板、设计变体、反模式提醒等）仍需人工审阅后手动更新；累积变体的追加已自动化。
+
+**与 Vault 注释的关系**： 块是**机器消费**的结构化输出；Phase 4 原有的  和  等 YAML 是**人工消费**的参考注释。两者并行产出，不互相替代。
 
 ---
 
@@ -350,6 +606,195 @@ phase_4_corpus_reference:
 4. **Methods DNA Metrics**（可对比的量化指标）
 5. **Corpus Reference Notes**（供人工审阅的语料库沉淀注释，不自动修改 skill）
 6. **QC Result**（通过/需修正/拒绝入库）
+
+---
+
+## Phase 6 — 成品验证模式（Product Validation Mode）
+
+本阶段是 **write-methods → 用户写作 → distill 成品验证** 闭环的核心。用户在 write-methods 输出段落骨架并完成写作后，将写出的 Methods 回传给本 skill 进行验证。
+
+### 调用方式
+
+```
+/distill-methods-exemplar --validate <用户写出的Methods全文> --reference-metadata <write-methods输出的metadata JSON> [--output-format=markdown/json]
+```
+
+**参数说明**：
+- `--validate`（必填）: 标记进入成品验证模式（区别于默认的范文蒸馏模式）
+- `<用户写出的Methods全文>`（必填）: 用户根据 write-methods 段落骨架写出的 Methods
+- `--reference-metadata`（必填）: write-methods 输出末尾的 `---metadata---` JSON 区块
+- `--output-format`（可选）: 默认 `markdown`，可选 `json` 供脚本消费
+
+**如果没有提供 `--reference-metadata`**：进入简化验证模式，仅执行通用 Methods QC（不检查与组装方案的对齐）。
+
+### 验证框架：四维检查
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  维度1: 组装方案兑现 (Assembly Fidelity)                      │
+│  维度2: 槽位完整性 (Slot Completeness)                        │
+│  维度3: 因果语言合规 (Causal Language Compliance)              │
+│  维度4: 骨架生成力 (Skeleton Generativity)                    │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+#### 维度1 — 组装方案兑现检查（Assembly Fidelity）
+
+将用户写出的 Methods 与 write-methods 的 metadata slot_map 逐槽位对比，检查：
+
+| 检查项 | 问题 | 通过标准 | 失败信号 |
+|--------|------|---------|---------|
+| **槽位覆盖** | 用户是否覆盖了推荐槽位？ | >=80% 的推荐槽位有对应段落 | 多个强制槽位完全缺失 |
+| **设计变体偏离** | 用户是否使用了推荐以外的设计变体？ | 新增变体与设计类型兼容 | 如 OLS 中混入 DiD 平行趋势语言 |
+| **控制变量 because 覆盖** | M6 中每个控制变量是否有 because 逻辑？ | >=60% 控制变量有 because（顶刊优秀线） | <30% 控制变量仅有名称列举 |
+| **样本漏斗完整性** | M2 的起始 N→排除→最终 N 是否完整？ | 每步有数字和理由 | 跳步或缺失数字 |
+
+**偏离度矩阵输出格式**：
+
+```markdown
+### 组装方案偏离矩阵
+
+| 槽位 | 推荐状态 | 实际内容 | 偏离类型 | 严重度 | 建议 |
+|------|---------|---------|---------|--------|------|
+| M1 | 推荐保留 | 缺失 | 槽位缺失 | 低（AMJ 30%可省略） | 如 Introduction 已覆盖 setting，可省略 |
+| M7 | DiD 变体 | 使用了 OLS 语言 | 设计变体替换 | 高 | 加入平行趋势检验段落和事件研究设定 |
+| M6 | 至少5个带because的control | 仅列举变量名 | because 缺失 | 高 | 每个控制变量补充 because [竞争性解释] |
+```
+
+---
+
+#### 维度2 — 槽位完整性检查（Slot Completeness）
+
+基于 Phase 1.5 的强制槽位表，逐槽位检查 completeness、clarity、credibility：
+
+| 检查项 | 对应槽位 | 验证问题 | 失败后果 |
+|--------|---------|---------|---------|
+| **Setting 合法性** | M1 | Setting 是否论证了"为什么这个情境适合检验理论"？ | 审稿人质疑 external validity |
+| **样本可审计性** | M2 | 起始 N → 每步排除（理由+数字）→ 最终 N？ | 审稿人无法复现样本选择 |
+| **构念-操作化对齐** | M3/M4 | 变量操作化是否与 Theory 构念一致？ | 构念效度被质疑 |
+| **控制逻辑完整性** | M6 | 每个控制变量对应一个竞争性解释？ | omitted variable concern |
+| **估计器选择理由** | M7 | 为什么选此 estimator 而不是替代方案？ | 审稿人要求更换估计器 |
+| **识别策略充分性** | M8 | 关键识别假设是否有检验方法预告？ | 因果推断不被信任 |
+| **结果预告准确性** | M10 | Results 预告是否与假设一一对应？ | Introduction→Results 断裂 |
+
+**槽位评分卡**：
+
+```yaml
+slot_completeness:
+  M1: {score: N, max: 3, note: "..."}
+  M2: {score: N, max: 3, note: "..."}
+  M3: {score: N, max: 3, note: "..."}
+  M4: {score: N, max: 3, note: "..."}
+  M5: {score: N, max: 3, note: "..."}
+  M6: {score: N, max: 3, note: "..."}
+  M7: {score: N, max: 3, note: "..."}
+  M8: {score: N, max: 3, note: "..."}
+  M10: {score: N, max: 3, note: "..."}
+  overall_completeness_rate: "X%"
+```
+
+---
+
+#### 维度3 — 因果语言合规检查（Causal Language Compliance）
+
+基于 write-methods 的因果语言强制词汇表，逐句检查 Methods 中的因果动词是否与设计强度匹配：
+
+| 设计家族 | 允许动词 | 禁止动词 | 违规后果 |
+|---------|---------|---------|---------|
+| 面板数据/OLS/FE | associated with, related to, linked to | increases, decreases, leads to, causes, drives | 审稿人质疑 causal overclaim |
+| DiD/自然实验 | effect of...on...（仅平行趋势支持后）, associated with | causes, leads to（无条件禁止） | 平行趋势检验未通过时用"effect"被审稿人攻击 |
+| IV/2SLS | effect of...on..., increases, decreases | causes, leads to, produces | second-stage 可"effect"但避免"causes" |
+| 非线性模型 | associated with, increases the likelihood of, changes the probability of | increases, decreases, causes | 系数不可直接解释 |
+| 生存分析 | associated with, lengthens/shortens time to, changes the hazard of | causes, leads to | hazard ratio 需转述 |
+| 实验 | caused, led to, produced, increased, decreased | — | 随机化支持后可直接使用 |
+
+**违规记录格式**：
+
+```markdown
+### 因果语言违规清单
+
+| 位置 | 违规表述 | 设计类型 | 违规类型 | 严重度 | 建议替换 |
+|------|---------|---------|---------|--------|---------|
+| M7 第3句 | "DT increases innovation" | OLS/FE | 强因果词 | 高 | "DT is associated with higher innovation" |
+| M8 第2句 | "This effect of..." | DiD（平行趋势未在Methods预告） | 越级 | 中 | 将"effect"改为"relationship"或将平行趋势预告前置 |
+```
+
+---
+
+#### 维度4 — 骨架生成力验证（Skeleton Generativity）
+
+验证 write-methods 推荐的骨架在用户实际写作中是否保留了说服动作：
+
+1. **骨架匹配**：将用户写出的段落与推荐槽位的骨架对比，标记关键功能短语是否保留
+
+2. **说服动作保留检查**：原始骨架的说服动作是什么？（合法性论证 / 可审计性 / 抗辩性 / ...）用户填充后的段落是否完成了相同的说服动作？
+
+3. **过度填充检查**：用户是否在骨架中塞入了过多领域细节导致骨架变形？是否存在"骨架膨胀"（一个槽位的功能被稀释到多个段落）？
+
+4. **设计类型 fidelity 检查**：用户填充后的标志性语言是否与原始推荐的设计类型匹配？
+
+**生成力验证报告格式**：
+
+```markdown
+### 骨架生成力验证
+
+| 槽位 | 推荐变体 | 骨架关键短语保留 | 说服动作保留 | 过度填充风险 | 生成力评级 |
+|------|---------|----------------|-------------|-------------|-----------|
+| M2 | DiD变体 | "Our primary sample consists of..." ✓ | 可审计性 ✓ | 低 | VALIDATED |
+| M6 | 通用 | "because [rival explanation]" ⚠️ 仅2/5变量保留 | 抗辩性减弱 | 中 | REVISE |
+| M7 | 生存分析 | "We use an accelerated failure time metric..." ✗ 未出现 | 可信性 ✗ | 高 | REJECT |
+```
+
+---
+
+### 综合验证报告输出
+
+```markdown
+# Methods 成品验证报告
+
+## 基本信息
+- **验证模式**: Product Validation（基于 write-methods metadata）
+- **参考设计类型**: DiD/自然实验
+- **实际段落数**: 8（推荐 8-10，偏差 0）
+- **总字数**: 650
+
+## 四维评分卡
+
+| 维度 | 得分 | 满分 | 评级 | 关键发现 |
+|------|------|------|------|---------|
+| 组装方案兑现 | 75% | 100% | △ | M7 使用了 OLS 语言而非 DiD 变体 |
+| 槽位完整性 | 85% | 100% | ✓ | M6 控制变量 because 密度仅 40%（目标 60%） |
+| 因果语言合规 | 90% | 100% | ✓ | 1 处 OLS 语言越级 |
+| 骨架生成力 | 6 VALIDATED / 1 REVISE / 1 REJECT | — | △ | M7 骨架失效 |
+| **综合评级** | — | — | **CONDITIONALLY ACCEPT** | 需修正后重新验证 |
+
+## 优先修正清单（按审稿人攻击概率排序）
+
+1. **[高] M7 设计变体错配**: 推荐 DiD 变体但使用了通用 OLS 语言
+   - 当前：未包含平行趋势检验预告、未指定处理/对照分组
+   - 建议：替换为 DiD 变体骨架，加入 "Identification comes from comparing changes in [treated units]..."
+   - 若不修正：审稿人质疑因果识别策略
+
+2. **[高] M6 because 密度不足**: 仅 2/5 控制变量有 because 逻辑
+   - 建议：为每个控制变量补充 because [竞争性解释]
+   - 若不修正：审稿人质疑 "why these controls?"
+
+3. **[中] M7 因果语言**: 1 处 "leads to" 违规
+   - 建议：替换为 "is associated with"
+```
+
+---
+
+### Phase 6 的两层定位
+
+| 层级 | 触发 | 产出 | 数据流向 | 目的 |
+|------|------|------|---------|------|
+| **即时 QC** | 每次 `--validate` | 四维评分 + 优先修正清单 | 直接给用户 | 写作辅助——发现槽位缺失、因果语言违规、because 不足 |
+| **周期性汇总** | 每 10+ 次验证后人工检查 | `common_revise_reasons` 模式识别 | 手动更新注册表 common_failures | 语料库维护——发现哪些槽位模板在真实使用中反复出问题 |
+
+**即时 QC 是现在就能用的东西。** 周期性汇总需要跨论文、跨用户的累积数据。
 
 ---
 
@@ -379,10 +824,10 @@ phase_4_corpus_reference:
 
 ## 与下游 Skill 的接口
 
-- **`write-methods`** — Phase 4 的更新建议直接修改此 skill 的骨架库
+- **`write-methods`** — 两层接口：(1) Phase 4 `corpus_enrichment` YAML 块 → Phase 4.5 → `_evidence_registry.yaml`（自动更新定量证据）；(2) Phase 4 `vault_enrichment` → Vault（人工审阅后更新 corpus 定性内容）。Phase 6 即时 QC 接收 write-methods 的 metadata JSON 作为参考基准，输出四维评分和修正建议
 - **`methods-review`** — Phase 1.5 的槽位覆盖检查可作为 methods-review 的预检清单
 - **`paper-review`** — Validity Logic Map 可用于跨 section 对齐检查
-- **Vault** — Fine-Grained Profile 存入 Vault 的 `fine_grained/batch_*/[paper]_distilled_methods.md`
+- **Vault** — Fine-Grained Profile 存入 Vault 的 `fine_grained/batch_*/[paper]_distilled_methods.md`；Phase 6 验证报告存入 `fine_grained/validation_runs/`
 
 ## 外部资产位置
 
@@ -397,7 +842,7 @@ phase_4_corpus_reference:
 
 ```json
 {
-  "$schema": "distill-methods-exemplar-batch/v1",
+  "$schema": "distill-methods-exemplar-batch/v2",
   "paper_id": "string",
   "phase_0_design_profile": {
     "data_architecture": "string",
@@ -454,6 +899,14 @@ phase_4_corpus_reference:
       "validity_logic": { "internal": "string", "construct": "string", "external": "string" }
     }
   },
+  "phase_2_4_skeleton_critic": {
+    "skeleton_id": "string",
+    "verdict": "VALIDATED / REVISE / REJECT",
+    "verdict_reason": "string",
+    "generativity_test": { "mock_paragraph_generated": "boolean", "persuasive_action_preserved": "boolean", "notes": "string" },
+    "fact_boundary_test": { "paper_specific_contamination": ["string"], "contamination_cleared": "boolean" },
+    "type_fidelity_test": { "design_type_match": "boolean", "causal_language_compliant": "boolean", "mismatch_details": "string" }
+  },
   "phase_3": {
     "avg_sentences_per_paragraph": "number",
     "function_positioning_rate": "number",
@@ -487,6 +940,37 @@ phase_4_corpus_reference:
       "rejected_reasons": ["string"]
     }
   },
+  "phase_4_5_corpus_enrichment": {
+    "batch_id": "string",
+    "papers_processed": "number",
+    "last_updated": "string",
+    "evidence_updates": [
+      {
+        "target": "string",
+        "design_type": "string",
+        "slot": "string",
+        "action": "append_papers / update_status / create_new",
+        "new_papers": ["string"],
+        "updated_paper_count": "number",
+        "new_status": "ROBUST / VERIFIED / EMERGING"
+      }
+    ],
+    "anti_pattern_updates": [
+      {
+        "target_design_type": "string",
+        "target_slot": "string",
+        "pattern": "string",
+        "evidence": ["string"],
+        "recommended_action": "string"
+      }
+    ],
+    "batch_metadata": {
+      "design_types_covered": ["string"],
+      "novel_skeletons_found": "number",
+      "rejected_skeletons": "number",
+      "rejected_reasons": ["string"]
+    }
+  },
   "phase_5_qc": {
     "completeness": "boolean",
     "clarity": "boolean",
@@ -496,9 +980,41 @@ phase_4_corpus_reference:
     "fact_boundary": "boolean",
     "causal_language_audit": "boolean",
     "overall_status": "PASS / FLAG / REJECT"
+  },
+  "phase_6_validation": {
+    "validation_mode": "product_validation",
+    "reference_metadata": { "description": "write-methods 输出的 ---metadata--- JSON 区块" },
+    "assembly_fidelity": {
+      "slot_coverage_rate": "number",
+      "deviations": [
+        { "slot": "string", "recommended": "string", "actual": "string", "deviation_type": "string", "severity": "string" }
+      ]
+    },
+    "slot_completeness": {
+      "overall_completeness_rate": "string",
+      "per_slot_scores": { "M1": "number", "M2": "number", "M3": "number", "M4": "number", "M5": "number", "M6": "number", "M7": "number", "M8": "number", "M10": "number" }
+    },
+    "causal_language_compliance": {
+      "violations": [
+        { "location": "string", "violation_text": "string", "design_type": "string", "severity": "string", "suggested_fix": "string" }
+      ],
+      "overall_compliance_rate": "string"
+    },
+    "skeleton_generativity": {
+      "validated_count": "number",
+      "revise_count": "number",
+      "reject_count": "number",
+      "per_skeleton_assessment": [
+        { "slot": "string", "variant": "string", "key_phrases_preserved": "boolean", "persuasive_action_preserved": "boolean", "verdict": "VALIDATED / REVISE / REJECT", "note": "string" }
+      ]
+    },
+    "overall_rating": "ACCEPT / CONDITIONALLY_ACCEPT / NEEDS_REVISION / REJECT",
+    "priority_fixes": [
+      { "priority": "high / medium / low", "issue": "string", "current_state": "string", "recommendation": "string", "consequence_if_ignored": "string" }
+    ]
   }
 }
 ```
 
 ---
-*基于 nuwa-skill 流水线框架、Pollock 2025 Ch07、MVP30 范文语料库构建。版本 1.0.0 — Methods 蒸馏 Meta-Skill。*
+*基于 Pollock 2025 Ch07、MVP30 范文语料库构建。版本 2.0.0 — Methods 蒸馏 Meta-Skill。*

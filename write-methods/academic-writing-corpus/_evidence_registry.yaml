@@ -1,17 +1,17 @@
 meta:
-  last_updated: '2026-05-21'
+  last_updated: '2026-05-22'
   total_design_types: 21
-  batches_processed: 1
+  batches_processed: 2
   source: corpus INDEX.md + product_recall_cross_validation
 evidence:
   by_design_type:
     面板数据-OLS:
       paper_count: 4
       papers:
-      - darby2026 (JOM)
-      - darby2025 (JSCM)
-      - eilert2017 (JM)
       - darby2023 (MSOM)
+      - darby2025 (JSCM)
+      - darby2026 (JOM)
+      - eilert2017 (JM)
       status: VERIFIED
       slots_covered:
       - M1
@@ -72,6 +72,7 @@ evidence:
       common_failures:
       - 未报告分布选择依据（BIC/AIC 比较）
       - 右删失处理仅一句话未详细论证
+      - 生存分析M8仅报告分布选择而忽略内生性处理
       validation_history:
         total_runs: 0
         validated: 0
