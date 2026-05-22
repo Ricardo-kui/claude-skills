@@ -1,220 +1,883 @@
 ---
 name: write-results
-description: 提供 Results 部分的四拍节奏、交互效应报告和稳健性组织模板。覆盖 OLS/面板数据、Logit/Probit/Ordered Probit、生存分析、DiD/自然实验、计数模型五种结果类型。基于 Pollock 2025 Ch07 和 MVP30 范文语料库。
-version: 1.1.0
+description: |
+  顶刊 Results 填空段落骨架生成器。输入模型类型后输出带 [placeholder] 的可直接粘贴段落。
+  覆盖 OLS/FE、Logit/Probit/Ordered Probit、生存分析、DiD、计数模型（含AME+区域显著性）、实验、多研究、IV/2SLS、匹配DiD、堆叠扩散Logit、同伴效应/网络效应、推断二元结果、跨受众构念对比、三向交互、构造暴露分解共十六种结果类型。
+  触发词：「写results」「results模板」「结果部分怎么写」「帮我写results」「result skeleton」「写结果」「假设检验」「交互效应」「稳健性检验」「经济显著性」「平行趋势」「marginal effect」。
+  当用户提及系数解释、表格导航、模型序列、robustness check、安慰剂检验、机制检验时也应触发。
+  基于 28 篇 MVP30 范文语料库和 Pollock 2025 Ch07。
+version: 2.5.0
 ---
 
 # Role
 
-你是顶刊论文 Results 写作顾问，基于 8 篇 MVP 范文和 Pollock 2025 Ch07 结果写作框架工作。
+你是顶刊论文 Results 的**填空模板生成器**。基于 28 篇 MVP30 范文和 Pollock 2025 Ch07，输出可直接复制到 Word/LaTeX 中、填入用户具体信息即可成段的 Results 骨架。
 
-核心原则：Results 是 **falling action**——帮助解开 knot，不是独立存在的数字报告。
+核心原则：Results 是 **falling action**——兑现 Methods 的承诺，用证据回答 Theory 的假设。每个填空段落已经内置了 "方向→显著性→幅度→支持判断" 的节奏，用户只需替换方括号中的占位符。
 
 ## 调用方式
 
 ```
-/write-results <模型类型> [--hypotheses="..."] [--journal=AMJ]
+/write-results <模型类型> [--hypotheses="..."] [--journal=AMJ] [--has-interactions] [--has-mediator]
 ```
 
 **参数说明**：
-- `<模型类型>`（必填）: `OLS/FE` | `Logit/Probit/Ordered Probit` | `生存分析` | `DiD` | `计数模型`
-- `[--hypotheses]`（可选但建议）: Theory 部分的假设列表，用于假设-结果对齐
+- `<模型类型>`（必填）: `OLS/FE` | `Logit/Probit/Ordered Probit` | `生存分析` | `DiD` | `计数模型` | `实验` | `多研究` | `IV/2SLS` | `匹配DiD` | `堆叠扩散Logit` | `同伴效应/网络效应` | `推断二元结果`
+- `[--hypotheses]`（可选但建议）: 假设列表，用于假设-结果对齐
 - `[--journal]`（可选）: 目标期刊，默认 `AMJ`
+- `[--has-interactions]`（可选）: 标记是否需要报告交互效应
+- `[--has-mediator]`（可选）: 标记是否需要报告中介效应
 
-**如果省略模型类型**，进入交互式询问：
-- 你的因变量是什么类型（连续/二元/有序/计数/持续时间）？
-- 你是否需要报告交互效应？
-- 你的稳健性检验主要围绕哪些威胁？
+**如果省略模型类型**，进入交互式询问后输出对应骨架。
 
 ## 前置检查
 
 - [ ] 用户已明确模型类型
-- [ ] 用户已提供假设列表（或知道需要报告哪些假设）
-- [ ] 用户已了解 Results 的核心原则（falling action，帮助解开 knot）
+- [ ] 用户已提供假设列表
+- [ ] 用户已了解：输出的是带 `[placeholder]` 的段落，需替换为实际内容
 
-## 输入接口（接收上游 Skill 输出）
+## 输入接口
 
-本 Skill 可直接消费 `/write-theory` 和 `/write-methods` 的输出。自动解析字段：
-- `假设列表` → 用于构建假设-结果对齐表
-- `模型规格` → 用于确定结果报告格式
-- `变量名` → 用于确保 Results 与 Methods 一致
+可直接消费 `/write-theory` 和 `/write-methods` 的输出：
+- `假设列表` → 构建假设-结果对齐表
+- `模型规格` → 确定结果报告格式
+- `变量名` → 确保 Results 与 Methods 一致
 
-## Workflow
+## 骨架验证状态图例
 
-### Step 1: 判断参数
+每个填空段落前标注的图标对应 `_evidence_registry.yaml` 中的验证状态。Skill 生成骨架时**优先调用高状态模板**，状态不足时逐级降级。
 
-| 模型类型 | 关键报告要素 | 代表范文 |
-|---------|-------------|---------|
-| **OLS/FE** | 系数 + R² 变化 + 标准误 | Han 2020, Zhou 2017 |
-| **Logit/Probit/Ordered Probit** | 边际效应 + 预测概率 + Pseudo R² | Paruchuri 2020 |
-| **生存分析** | 形状参数 + 时间解释 + 风险比 | Keeves 2017 |
-| **DiD** | 平行趋势 + 动态效应 + 处理效应 | Wu 2025, Eilert 2017 |
-| **计数模型** | IRR + 过度离散检验 + 零膨胀 | — |
+| 图标 | 名称 | Registry Status | 含义 | 使用建议 |
+|------|------|-----------------|------|----------|
+| ⭐ PREMIUM | 核心骨架 | **ROBUST** | 跨 ≥2 子领域、≥5 篇论文复现 | **默认首选**。生成时如无特殊理由，直接输出此模板 |
+| ✓ STANDARD | 标准骨架 | **ROBUST** 或 **VERIFIED** | 多篇范文复现（≥3 篇），领域适配性已验证 | **可靠备选**。当 PREMIUM 不适用（如设计变体）时选用 |
+| 🔬 EXPERIMENTAL | 实验性骨架 | **EMERGING** 或 **VERIFIED**（少量） | ≤2 篇论文或新型设计变体 | **谨慎使用**。仅在理论需求匹配时推荐，且必须标注 ⚠️ 保守替代 |
+| （无标记） | 通用默认 | 无 registry 记录 | SKILL.md 内置的默认句式 | 当 registry 无匹配骨架时使用 |
 
-### Step 2: 输出对应变体模板
+**降级规则**：
+1. 优先检查 `_evidence_registry.yaml` 中对应 `estimator_family × slot` 的 skeleton_variants
+2. 选择 `status: ROBUST` 的骨架 → 标注为 ⭐ PREMIUM 或 ✓ STANDARD
+3. 无 ROBUST 时，选择 `status: VERIFIED` → 标注为 ✓ STANDARD
+4. 无 VERIFIED 时，选择 `status: EMERGING` → 标注为 🔬 EXPERIMENTAL，并提示用户审阅
+5. 无 registry 记录时，回退到 SKILL.md 中的通用默认模板
 
-根据模型类型输出：
-1. **段落功能地图**
-2. **四拍节奏模板**
-3. **模型特定报告句式**
-4. **交互效应报告**（如适用）
-5. **稳健性组织**
+**状态与图标的精确映射**：
+- `ROBUST` + 跨 ≥3 子领域 → ⭐ PREMIUM
+- `ROBUST`（仅 2 个子领域）→ ✓ STANDARD
+- `VERIFIED` → ✓ STANDARD
+- `EMERGING` → 🔬 EXPERIMENTAL
 
-## Output Format
+---
+
+## 骨架选择优先级规则
+
+当用户调用 `/write-results <模型类型>` 时，按以下决策树选择每个 R 槽位的骨架：
 
 ```
-## Results 结构建议（[模型类型]）
+用户输入: estimator_family (如 OLS_FE) + slot (如 R3)
+    │
+    ├─→ 查询 _evidence_registry.yaml
+    │    ├─→ estimator_family 是否存在?
+    │    │    └─→ 否 → 使用 SKILL.md 通用默认模板 + 警告 "该估计器暂无 registry 记录"
+    │    │
+    │    └─→ slot 是否存在 forced_slots?
+    │         └─→ 否 → 跳过该槽位（如 R6 无非显著假设）
+    │
+    ├─→ 该 slot 下 skeleton_variants 是否存在?
+    │    └─→ 否 → 使用 SKILL.md 通用默认模板
+    │
+    ├─→ 筛选 status == ROBUST 的 skeletons
+    │    ├─→ 存在 → 优先推荐（⭐ PREMIUM / ✓ STANDARD）
+    │    │         若多个 ROBUST，选择 paper_count 最高者
+    │    └─→ 不存在 → 继续降级
+    │
+    ├─→ 筛选 status == VERIFIED 的 skeletons
+    │    ├─→ 存在 → 推荐（✓ STANDARD）
+    │    │         若多个 VERIFIED，选择 paper_count 最高者
+    │    └─→ 不存在 → 继续降级
+    │
+    └─→ 筛选 status == EMERGING 的 skeletons
+         ├─→ 存在 → 推荐（🔬 EXPERIMENTAL）+ 附带保守替代建议
+         └─→ 不存在 → 使用 SKILL.md 通用默认模板
+```
 
-### 段落功能地图
-| 段落 | 功能 | 推荐词数 |
+**特殊规则**：
+- **非显著假设（R6）**：若用户未提供非显著假设，强制跳过 R6，不因模板存在而填充
+- **交互效应（R4）**：仅在 `--has-interactions` 时激活。R4 的 ROBUST 骨架数量通常少于 R3，允许使用 VERIFIED 作为默认
+- **稳健性（R7）**：必须按 threat 组织。若 registry 中只有 table-based 骨架（status 可能较低），优先使用 SKILL.md 通用 threat-based 模板而非低 status 的 table-based 变体
+- **多研究**：逐研究重复 R1–R8，每个研究独立查询 registry
+
+---
+
+## 叙事槽位目录（R1–R9）
+
+| 槽位 | 名称 | 输出形式 |
 |------|------|----------|
-| ... | ... | ... |
+| R1 | 描述性统计 / 诊断导向 | 1 段填空 |
+| R2 | 模型序列 / 表格导航 | 1 段填空 |
+| R3 | 主假设检验（四拍节奏） | 每假设 1 段填空 |
+| R4 | 交互效应 / 条件效应 | 每交互假设 1–2 段填空 |
+| R5 | 经济 / 实质显著性 | 嵌入 R3 或独立 1 段 |
+| R6 | 非显著 / 混合 / 意外发现（若无非显著假设则跳过） | **Inline 报告可接受（顶刊常态），独立段落非必需** |
+| R7 | 稳健性 / 效度 / 敏感性检验 | 每威胁 1 段填空 |
+| R8 | 补充 / 事后 / 机制分析 | 每补充分析 1 段填空；约 2/3 论文包含 |
+| R9 | Results 到 Discussion 的过渡（可选） | 1 段填空；**顶刊中极度罕见（<10%），可省略** |
 
-### 四拍节奏模板
-| 步骤 | 功能 | 模板 |
-|------|------|------|
-| 1 | 重述假设 | ... |
-| 2 | 指向模型 | ... |
-| 3 | 报告系数 | ... |
-| 4 | 判断支持 | ... |
+## 标准顺序与特殊分支
 
-### 模型特定报告句式
-[根据模型类型输出]
+**默认顺序**：R1 → R2 → R3(主效应) → R4(交互) → R5(经济显著性) → R6(非显著) → R7(稳健性) → R8(补充) → R9(过渡)
 
-### 交互效应报告
-**系数报告**:
-[模板]
+**特殊分支顺序调整**：
+- **DiD/自然实验**：R2 先展示平行趋势/事件研究效度 → R3 主处理效应 → R4 动态效应/异质性 → R7 安慰剂/置换
+- **多研究**：逐研究重复 R1–R8，然后跨研究综合
+- **序数/非线性**：R3 报告系数后紧跟边际效应解释
+- **实验**：排除报告 → 操纵检验 → 假设检验 → 机制/稳健性
+- **IV/2SLS**：R2 先报告第一阶段（ relevance / F-statistic ）→ R3 第二阶段假设检验 → R7 排他性约束 / 弱工具变量检验
+- **匹配DiD**：R2 报告匹配后样本平衡 → R3 主处理效应 → R7 重叠支撑 / 匹配敏感性
+- **堆叠扩散Logit**：R3 报告条件Logit系数（含风险集解释）→ R4 异质性扩散 → R7 堆叠结构稳健性
+- **同伴效应/网络效应**：R3 主效应 → R4 网络边界异质性 → R7 falsification / 安慰剂网络
+- **推断二元结果**：R3 报告推断状态分布 → R7 阈值敏感性 / 分类准确性
+- **计数模型（AME+区域显著性）**：R3 报告IRR后紧跟平均边际效应与显著性区域图
 
-**简单斜率**:
-[模板]
+---
 
-### 稳健性组织
-**结构**:
-```
-5.1 Endogeneity Concerns
-5.2 Alternative Model Specifications
-5.3 Alternative Measures
-5.4 Sample Sensitivity
-```
+## 填空段落骨架
 
-**关键句式**:
-[模板]
+### R1. 描述性统计 / 诊断导向
 
-### QC 检查点
-- [ ] 所有假设都被报告了？
-- [ ] 非线性模型是否报告了边际效应？
-- [ ] 经济显著性是否被解释？
-```
+**通用填空段落**： ✓ STANDARD（15+/28 篇范文使用）
 
-## 完整示例
-
-### 输入
-```
-/write-results OLS/FE
---hypotheses="H1: DT → Routine updating (+); H2: Routine updating → Innovation (+); H3: Mediation"
---journal=SMJ
+```text
+Table [x] presents descriptive statistics and correlations for the variables used in our analyses. The correlations are generally consistent with our expectations and do not indicate [concern]. [Diagnostic] values were below [threshold], reducing concern about [routine issue]. The descriptive statistics also show [contextual pattern] that helps interpret the results below.
 ```
 
-### 输出
-```
-## Results 结构建议（OLS/FE）
-
-### 段落功能地图
-| 段落 | 功能 | 推荐词数 |
-|------|------|----------|
-| 4.1 描述性统计 | 样本特征、变量均值/标准差、相关系数矩阵 | 150-200 |
-| 4.2 主效应 | H1 + H2 报告（四拍节奏） | 200-300 |
-| 4.3 中介效应 | H3 报告（Sobel / Bootstrap） | 150-200 |
-| 4.4 交互效应（如适用） | 调节效应报告 | 150-200 |
-| 4.5 稳健性检验 | 威胁组织型稳健性 | 250-350 |
-
-### 四拍节奏模板
-**H1 示例**：
-
-**第1拍 — 重述假设**:
-"Hypothesis 1 predicted that digital transformation is positively related to organizational routine updating."
-
-**第2拍 — 指向模型**:
-"Model 2 of Table 2 presents the results."
-
-**第3拍 — 报告系数**:
-"The coefficient for digital transformation is positive and statistically significant (β = 0.32, p < 0.01, 95% CI [0.18, 0.46]). In terms of economic significance, a one-standard-deviation increase in digital transformation intensity is associated with a [X]% increase in organizational routine updating, holding other variables constant."
-
-**第4拍 — 判断支持**:
-"These results provide strong support for Hypothesis 1."
-
-**H2 示例**：
-"Hypothesis 2 predicted that organizational routine updating is positively related to firm innovation performance. Model 3 of Table 2 shows that the coefficient for organizational routine updating is positive and significant (β = 0.28, p < 0.01). This suggests that [economic significance interpretation]. Thus, Hypothesis 2 is supported."
-
-**H3（中介）示例**：
-"Hypothesis 3 predicted that organizational routine updating mediates the relationship between digital transformation and firm innovation performance. Following Baron and Kenny (1986) and Hayes (2018), we conduct a mediation analysis. In Model 4, when both digital transformation and organizational routine updating are included, the coefficient for digital transformation decreases from 0.35 (p < 0.01) to 0.18 (p < 0.05), while organizational routine updating remains significant (β = 0.28, p < 0.01). The Sobel test confirms significant mediation (z = 3.42, p < 0.01), and the bootstrap 95% confidence interval [0.05, 0.15] excludes zero. These findings support Hypothesis 3."
-
-### 模型特定报告句式
-**OLS/FE 标准句式**：
-- "The coefficient for [IV] is [positive/negative] and statistically significant (β = [value], p [relation] [threshold])."
-- "A one-standard-deviation increase in [IV] is associated with a [value]-standard-deviation change in [DV]."
-- "The R² increases from [value] to [value] when [IV] is added, indicating that [IV] explains an additional [value]% of the variance in [DV]."
-
-**固定效应报告**：
-- "Firm fixed effects absorb [value]% of the variance in [DV], suggesting that time-invariant firm characteristics are important determinants of [DV]."
-- "The F-test for the joint significance of year fixed effects is [value] (p [relation]), indicating that macroeconomic trends significantly affect [DV]."
-
-### 交互效应报告
-**假设存在交互效应**（如 digital transformation × absorptive capacity）：
-
-**系数报告**：
-"Model 5 of Table 2 adds the interaction between digital transformation and absorptive capacity. The interaction coefficient is positive and significant (β = 0.15, p < 0.05), indicating that the effect of digital transformation on innovation performance is stronger when absorptive capacity is high."
-
-**主效应解释警告**：
-"Because the interaction term is significant, the main effects of digital transformation and absorptive capacity cannot be interpreted independently. The main effect of digital transformation (β = 0.10, p = 0.12) represents the effect when absorptive capacity is at its mean, which is not substantively meaningful."
-
-**简单斜率**：
-"We plot the marginal effect of digital transformation on innovation performance at low (mean – 1 SD) and high (mean + 1 SD) levels of absorptive capacity. At low absorptive capacity, the slope is flat and insignificant (β = 0.08, p = 0.31). At high absorptive capacity, the slope is steep and significant (β = 0.42, p < 0.01)."
-
-### 稳健性组织
-**结构**（按威胁组织，非简单罗列）：
-
-**5.1 Endogeneity Concerns**
-"A potential threat to our causal claims is reverse causality—firms with higher innovation performance may invest more in digital transformation. To address this concern, we employ a two-stage least squares (2SLS) approach using [instrument] as an instrument for digital transformation..."
-
-**5.2 Alternative Model Specifications**
-"To ensure that our results are not sensitive to model choice, we re-estimate our models using [alternative model, e.g., Tobit / Poisson / negative binomial]..."
-
-**5.3 Alternative Measures**
-"We test the robustness of our findings to alternative operationalizations. For digital transformation, we use [alternative measure] instead of IT investment intensity..."
-
-**5.4 Sample Sensitivity**
-"Our results may be sensitive to sample composition. We exclude [specific subsample, e.g., high-tech firms / financial crisis years] and re-estimate our models..."
-
-**关键句式**：
-- "To address the concern that [threat], we [method]. The results [remain consistent / change in the following ways]..."
-- "While [limitation], our findings are robust to [alternative approach], suggesting that [conclusion]."
-
-### QC 检查点
-- [ ] 所有假设（H1, H2, H3）都在 Results 中被报告了？
-- [ ] 每段假设结果都遵循四拍节奏？
-- [ ] 经济显著性是否被解释（而非仅报告统计显著性）？
-- [ ] 交互效应是否提供了简单斜率/边际效应图？
-- [ ] 稳健性检验是否按 threat 组织（而非简单罗列）？
-- [ ] 非显著结果是否被解释了（而非忽略）？
+> **非 OLS 模型注**：对于 GLM、生存分析、计数模型等非 OLS 估计量，多重共线性诊断（VIF）较少在 R1 中报告；如有需要，可替换为 "we verified that [diagnostic] is not a concern"。
 ```
 
-## 下游接口（供其他 Skill 消费）
+**多研究变体**： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 R2 段落
+```text
+Table [x] presents descriptive statistics and correlations for Study [n]. [Diagnostic] values indicate that [multicollinearity/diagnostic issue] is [not a concern / addressed by additional checks].
+```
 
-本 Skill 的输出可被以下 Skill 直接引用：
+---
+
+### R2. 模型序列 / 表格导航
+
+**通用填空段落**：
+
+```text
+Table [x] reports [model family] predicting [dependent variable]. Model [1] includes [baseline controls/fixed effects]. Model [2] adds [focal predictor]. Model [3] adds [interaction/moderator]. We use Model [x] as the preferred specification because [reason]. Hypothesis [a] is tested in Model [y], and Hypothesis [b] is tested in Model [z]. The pattern of coefficients is stable across models, suggesting that [interpretation].
+```
+
+**DiD 变体**： ✓ STANDARD（5-8 篇 DiD 范文复现）
+```text
+Table [x] reports DiD estimates for [outcome]. Model [a] includes [baseline fixed effects], and Model [b] adds [controls]. Across these specifications, [treatment] is [direction/status]. We evaluate the hypotheses in the order presented in the theory section.
+```
+
+**多研究变体**：
+```text
+Table [x] reports the results of [estimator/model family] for Study [n]. Model [1] includes controls only; Models [2–n] add [focal predictors/interactions] corresponding to Hypotheses [x–y].
+```
+
+**双重估计量表格导航变体**（当 Results 包含两种不同估计量时，如 AFT + GLM）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 R2 段落 + 分别说明两个表格
+```text
+Table [x] reports [estimator A, e.g., recurrent-event AFT] models predicting [DV A] for Hypotheses [a–b]. Model [1] includes [baseline controls/fixed effects]. Model [2] adds [focal predictor]. Models [3–4] split the sample by [moderator] to test Hypothesis [b]. Table [y] reports [estimator B, e.g., GLM] results predicting [DV B] for Hypotheses [c–d] across [event windows / subsamples]. We evaluate the hypotheses in the order presented in the theory section.
+```
+
+**同时方程变体**：
+```text
+Table [x] reports the results of the [system estimator/model family]. The [fit statistics/tests] indicate that the equations provide an adequate basis for hypothesis testing.
+```
+
+**IV/2SLS 变体**： ✓ STANDARD（3-4 篇 IV 范文复现）
+```text
+Table [x] reports the first- and second-stage results of our 2SLS estimation. Panel A presents the first stage, in which [endogenous predictor] is regressed on [instrument] and controls. The coefficient on [instrument] is [positive/negative] and statistically significant (β = [value], p [relation] [threshold]), and the first-stage F-statistic is [value], exceeding the Stock-Yogo critical value for [bias threshold]% maximal IV relative bias. This confirms that [instrument] is a strong predictor of [endogenous predictor]. Panel B reports the second-stage estimates, which we use to test Hypotheses [x–y].
+```
+
+**IV/2SLS 脚注精简变体**（当 first-stage 仅作为诊断、不单独展示时，如 ASQ 常见做法）：
+```text
+Table [x] reports the second-stage estimates of our 2SLS estimation. We report first-stage F-statistics in the table footnotes. The coefficient on [instrument] is [positive/negative] and statistically significant (β = [value], p [relation] [threshold]), and the first-stage F-statistic is [value], exceeding the Stock-Yogo critical value for [bias threshold]% maximal IV relative bias. This confirms that [instrument] is a strong predictor of [endogenous predictor]. We use the second-stage estimates to test Hypotheses [x–y].
+```
+
+**匹配DiD 变体**： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 R2 段落 + 说明匹配后样本
+```text
+Table [x] reports the matched difference-in-differences estimates. Before presenting treatment effects, we note that the matched sample achieves balance on [covariates]: the absolute standardized difference is below [threshold] for all variables, and the [t-test / KS-test] indicates no significant difference between treated and control groups. Model [a] reports the baseline matched DiD estimate; Model [b] adds [controls / interactions].
+```
+
+---
+
+### R3. 主假设检验（四拍节奏）
+
+**通用填空段落（每假设一段，内置四拍）**： ⭐ PREMIUM（28/28 篇范文使用）
+
+```text
+Hypothesis [x] predicted that [predictor] would be [positive/negative] associated with [outcome]. As shown in Model [y] of Table [z], the coefficient for [predictor] is [positive/negative] and statistically significant ([coefficient], [p-value]). Substantively, a [one-SD / one-unit / IQR] increase in [predictor] is associated with a [Y-unit / percentage-point / probability-shift] [increase/decrease] in [outcome], representing approximately [X%] change relative to [baseline / mean / median]. Thus, Hypothesis [x] is supported.
+```
+
+> **四拍完整性检查**：方向 → 显著性+系数 → 幅度+基准 → 支持判断。Beat-3（幅度）必须使用具体数值基准（one-SD / one-unit / IQR / 概率变化 / 百分比），禁止仅写 "This indicates that..." 等模糊表述。
+
+**含经济显著性（R5 嵌入）的扩展版**： ✓ STANDARD（12+/28 篇含交互效应范文复现）
+```text
+Hypothesis [x] predicted that [predictor] would be [positive/negative] associated with [outcome]. As shown in Model [y] of Table [z], the coefficient for [predictor] is [positive/negative] and statistically significant ([coefficient], [p-value]). Substantively, a [one-standard-deviation/one-unit] increase in [predictor] is associated with a [Y-unit] [increase/decrease] in [outcome], representing approximately [percentage / standard deviation / probability] change relative to [baseline]. Thus, Hypothesis [x] is supported.
+```
+
+**OLS/FE 专用**： ✓ STANDARD（15+/28 篇面板数据范文复现）
+```text
+Hypothesis [x] predicted that [predictor] would be [positive/negative] related to [outcome]. Model [y] of Table [z] shows that the coefficient for [predictor] is [positive/negative] and statistically significant (β = [value], p < [threshold], 95% CI [[lower], [upper]]). The R² increases from [value] to [value] when [predictor] is added, indicating that [predictor] explains an additional [value]% of the variance in [outcome]. Thus, Hypothesis [x] is supported.
+```
+
+**Logit/Probit/Ordered Probit 专用**： ✓ STANDARD（8-10 篇非线性模型范文复现）
+```text
+Hypothesis [x] predicted that [predictor] would [increase/decrease] [outcome]. Because [model] is nonlinear, we interpret Hypothesis [x] using [marginal effects/predicted probabilities] rather than coefficient size alone. The marginal effect of [predictor] is [direction] and statistically significant ([value], p < [threshold]), indicating that [substantive probability change]. Thus, Hypothesis [x] is supported.
+```
+
+**有序 Probit 专用**： 🔬 EXPERIMENTAL（2-3 篇范文）⚠️ 保守替代：Logit/Probit 专用 + 增加序数解释句
+```text
+Hypothesis [x] predicted that [predictor] would [increase/decrease] the likelihood of [outcome category]. Because [outcome] is ordinal, coefficients indicate direction but not the category-specific magnitude of the effect. We therefore calculate marginal effects for [category A] and [category B]. The marginal effects show that [predictor] is associated with [higher/lower probability] of [category]. The effect is strongest for [category], which is consistent with [theoretical expectation]. Thus, Hypothesis [x] is supported.
+```
+
+**生存分析专用**： 🔬 EXPERIMENTAL（2-3 篇范文：Zhou 2017, Pontikes 2012 等）⚠️ 保守替代：通用 R3 段落 + 说明 shape parameter
+```text
+Hypothesis [x] predicted that [predictor] would [lengthen/shorten] time to [event]. Column [y] of Table [z] reports the [duration/AFT] model for [time outcome]. The shape parameter is [value] (p < [threshold]), suggesting that the hazard of [event] [increases/decreases/remains stable] over time. The coefficient for [predictor] is [direction/status], implying that [substantive change] changes [time outcome] by [percent/days]. Thus, Hypothesis [x] is [supported/partially supported/not supported].
+```
+
+**DiD 专用**：
+```text
+Hypothesis [x] predicted that [treatment] would [increase/decrease] [outcome]. Model [y] of Table [z] provides the baseline DiD estimate; Model [w] adds [controls/fixed effects]. Across these specifications, [treatment] is [direction/status]. The estimate implies that [treatment] is associated with a [substantive change] in [outcome], relative to [baseline]. Thus, Hypothesis [x] is supported.
+```
+
+**计数模型专用**： 🔬 EXPERIMENTAL（2-3 篇范文）⚠️ 保守替代：通用 R3 段落 + IRR 解释
+```text
+Hypothesis [x] predicted that [predictor] would [increase/decrease] [count outcome]. The incident rate ratio for [predictor] is [value] (p < [threshold]), indicating that [interpretation]. Thus, Hypothesis [x] is supported.
+```
+
+**计数模型 AME + 区域显著性变体**（Han 2024 模式，紧跟 IRR 后）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 R3 + 增加 AME 解释句
+```text
+Because coefficients in count models are difficult to interpret directly, we calculate average marginal effects (AMEs) and identify the region of significance. Figure [x] plots the marginal effect of [predictor] on [outcome] across the range of [conditioning variable / predictor itself]. The marginal effect is [positive/negative] and statistically significant when [condition, e.g., conditioning variable > threshold], but it [attenuates / reverses / becomes insignificant] when [opposite condition]. The turning point occurs at approximately [value], which corresponds to [theoretical interpretation, e.g., the median level of firm resources]. This pattern indicates that [theoretical mechanism] operates primarily within [boundary region].
+```
+
+**U-shaped / 倒U型专用**（Zhou 2017 模式，内置四拍 + 转折点计算）： 🔬 EXPERIMENTAL（1-2 篇范文：Zhou 2017 等）⚠️ 保守替代：通用 R3 段落 + 增加 squared term 解释
+```text
+Hypothesis [x] predicted that [predictor] would have an inverted U-shaped relationship with [outcome]. [Predictor] positively affects [outcome] (Model [X]), yet the squared term has a negative effect (Model [Y]; coefficient = [value], p [relation] [threshold]). Therefore, [predictor] has an inverted U-shaped relationship with [outcome], with a turning point at [percentage/value]. That is, a [moderate/medium] level of [predictor] is most beneficial for [outcome], in support of Hypothesis [x].
+```
+
+**U-shaped + 交互调节变体**（当 U-shaped 被三向交互调节时）： 🔬 EXPERIMENTAL（1 篇范文）⚠️ 保守替代：U-shaped 专用 + 增加交互解释
+```text
+Hypothesis [x] predicted that [predictor] would have an inverted U-shaped relationship with [outcome] that is moderated by [factor C]. The three-way interaction [predictor × squared term × factor C] is [status] (β = [value], p [relation] [threshold]). To interpret this effect, we calculate turning points at [low / mean / high] levels of [factor C]. When [factor C] is low, the turning point occurs at [value], whereas when [factor C] is high, it shifts to [value]. This indicates that [boundary condition] alters the optimal level of [predictor].
+```
+
+**IV/2SLS 第二阶段专用**：
+```text
+Hypothesis [x] predicted that [predictor] would be [positive/negative] associated with [outcome]. The 2SLS estimate in Panel B, Model [y] of Table [z] shows that the coefficient for [predictor] is [positive/negative] and statistically significant (β = [value], p [relation] [threshold]). The magnitude is [larger/smaller/similar] to the OLS estimate (β = [value]), which is consistent with [upward / downward] bias from [omitted variable / measurement error]. Thus, Hypothesis [x] is [supported / partially supported].
+```
+
+**推断二元结果专用**：
+```text
+Hypothesis [x] predicted that [predictor] would [increase/decrease] the likelihood of [binary outcome]. Because [binary outcome] is inferred rather than directly observed, we report results using both the [main inference rule] and the [alternative threshold]. Under the main classification, [percentage]% of [units] are classified as [state = 1]. Model [y] of Table [z] shows that [predictor] is [positive/negative] and statistically significant (β = [value], p [relation] [threshold]), indicating that [substantive interpretation]. The pattern is [consistent / qualitatively similar] when we use the alternative threshold. Thus, Hypothesis [x] is supported.
+```
+
+**跨受众构念对比专用**（Gamache 2020 模式，多结果上层梯队）：
+```text
+Hypothesis [x] predicted that [predictor] would be [positive/negative] associated with [outcome A] but [positive/negative / null] associated with [outcome B]. Model [a] of Table [z] shows that the coefficient for [predictor] on [outcome A] is [direction] and [significant / not significant] (β = [value], p = [value]). In contrast, Model [b] shows that the coefficient on [outcome B] is [direction] and [significant / not significant] (β = [value], p = [value]). The divergence between [outcome A] and [outcome B] is consistent with [theoretical mechanism: audience-specific interpretation / stakeholder-specific incentives], because [theoretical reasoning]. Thus, Hypothesis [x] is [supported / partially supported].
+```
+
+**实验专用**：
+```text
+Hypothesis [x] predicted that [condition] would [increase/decrease] [outcome]. Participants in the [condition] condition scored [higher/lower] on [outcome] (M = [value], SD = [value]) than those in the [comparison] condition (M = [value], SD = [value]), t([df]) = [value], p [relation] [threshold]. Thus, Hypothesis [x] is supported.
+```
+
+**Prediction / Proposition / Research Question 风格专用**（无 H 编号时）：
+```text
+We predicted that [theoretical relationship]. As shown in Model [y] of Table [z], the coefficient for [predictor] is [positive/negative] and statistically significant ([coefficient], [p-value]). This indicates that [substantive interpretation]. Thus, the prediction is supported.
+```
+
+**GLM / 事件研究 CAR 专用**（当 DV 为累计异常收益时）：
+```text
+Hypothesis [x] predicted that [predictor] would [increase/decrease] stock market penalties. Columns [a–c] of Table [z] report GLM estimates for [CAR window] across [subsamples]. The coefficient on [predictor] is [negative/positive] and statistically significant ([coefficient], [p-value]) for [window], indicating that [one-SD] increase in [predictor] is associated with a [percentage] stock market penalty. The effect is [not significant] for [longer window], suggesting that [effect dissipates over time]. Thus, Hypothesis [x] is supported.
+```
+
+**中介专用（R3 扩展）**：
+```text
+Hypothesis [x] predicted that [mediator] mediates the relationship between [predictor] and [outcome]. Following [Baron and Kenny/Hayes], we conduct a mediation analysis. In Model [a], [predictor] is significantly related to [mediator] (β = [value], p < [threshold]), satisfying Condition 1. In Model [b], [mediator] is significantly related to [outcome] (β = [value], p < [threshold]), satisfying Condition 2. When both [predictor] and [mediator] are included in Model [c], the coefficient for [predictor] decreases from [value] (p < [threshold]) to [value] (p = [value]), while [mediator] remains significant (β = [value], p < [threshold]). The [Sobel test/bootstrap] confirms significant mediation ([statistic] = [value], p < [threshold]). These findings support Hypothesis [x].
+```
+
+**HLM / 多层模型专用**（当数据为嵌套结构时，区分 Level-1 与 Level-2 系数）：
+```text
+Hypothesis [x] predicted that [predictor] would be [positive/negative] related to [outcome]. Model [y] of Table [z] reports the HLM estimate. The Level-1 (within-[unit]) coefficient for [predictor] is [positive/negative] and statistically significant (γ = [value], p [relation] [threshold]), indicating that [substantive within-unit interpretation]. The Level-2 (between-[unit]) coefficient is [positive/negative] and [significant / not significant] (γ = [value], p [relation] [threshold]), suggesting that [between-unit interpretation]. The cross-level interaction between [level-2 predictor] and [level-1 predictor] is [positive/negative] and statistically significant (γ = [value], p [relation] [threshold]); a one-SD increase in [level-2 predictor] strengthens the [level-1 predictor]-[outcome] relationship by [Y-unit]. Thus, Hypothesis [x] is supported.
+```
+
+**文本构念结果四拍专用**（当预测变量或结果来自文本分析时）：
+```text
+Hypothesis [x] predicted that [predictor] would be [positive/negative] associated with [outcome]. Model [y] of Table [z] shows that the coefficient for [predictor] is [positive/negative] and statistically significant ([coefficient], [p-value]). Substantively, a one-standard-deviation increase in the text-based [predictor] score is associated with a [Y-unit / percentage-point] [increase/decrease] in [outcome], representing approximately [X%] change relative to the sample mean. This effect size is meaningful because [theoretical benchmark: e.g., comparable to the effect of a one-SD change in the archival measure of the same construct]. Thus, Hypothesis [x] is supported.
+```
+
+---
+
+### R4. 交互效应 / 条件效应
+
+**通用填空段落**：
+
+```text
+Hypothesis [x] predicted that [moderator] would moderate the relationship between [predictor] and [outcome]. Model [y] adds the interaction between [predictor] and [moderator]. The interaction term is [positive/negative] and [significant/not significant] ([coefficient], [p-value]). To interpret this effect, Figure [x] plots the predicted values of [Y] at high and low levels of [moderator]. The relationship between [predictor] and [outcome] is [stronger/weaker/significant/null] when [moderator] is [high] than when it is [low]. Thus, Hypothesis [x] is [supported/partially supported/not supported].
+```
+
+**非线性交互专用**：
+```text
+Because the model is nonlinear, we interpret the [predictor × moderator] interaction using [average marginal effects/simple slopes]. At low levels of [moderator] (mean – 1 SD), [predictor] changes [outcome] by [placeholder]; at high levels (mean + 1 SD), it changes [outcome] by [placeholder]. This pattern indicates that [moderator] [weakens/strengthens] the effect. Figure [x] illustrates this pattern and shows that [theoretical interpretation].
+```
+
+**主效应解释警告（当交互显著时，强烈建议紧跟）**：
+```text
+Because the interaction term is significant, the main effects of [predictor] and [moderator] cannot be interpreted independently. The main effect of [predictor] (β = [value], p = [value]) represents the effect when [moderator] is at its mean, which is not substantively meaningful.
+```
+
+> **注意**：在部分顶刊（如 SMJ）中，若交互项是理论焦点且主效应本身已不显著，该警告可省略。但包含此警告通常能增强可信度。
+
+**三向交互专用**（Paruchuri 2020 扩展版，含简单斜率分解）：
+```text
+Hypothesis [x] predicted that [factor C] would condition the [predictor × moderator] interaction. The [predictor × moderator × factor C] three-way interaction is [direction/status] (β = [value], p [relation] [threshold]). To interpret this effect, we decompose the [predictor × moderator] interaction at [low / mean / high] levels of [factor C]. When [factor C] is low (mean – 1 SD), the [predictor × moderator] interaction is [status] (β = [value], p = [value]), and the simple slope of [predictor] on [outcome] at high [moderator] is [status] (β = [value], p = [value]). When [factor C] is high (mean + 1 SD), the [predictor × moderator] interaction is [status] (β = [value], p = [value]), and the simple slope of [predictor] at high [moderator] is [status] (β = [value], p = [value]). Figure [x] plots these conditional effects and shows that [theoretical interpretation: the contingency itself is contingent on factor C]. Thus, Hypothesis [x] is [supported/partially supported/not supported].
+```
+
+**构造暴露分解专用**（Shipilov 2020 模式，堆叠扩散或多层暴露）：
+```text
+Hypothesis [x] predicted that [predictor] would [increase/decrease] [outcome], and that this effect would be stronger when [exposure intensity / network proximity] is high. We decompose [predictor] into [component A] and [component B] to distinguish [mechanism A] from [mechanism B]. Model [a] shows that [component A] is [status] (β = [value], p = [value]), whereas [component B] is [status] (β = [value], p = [value]). This decomposition indicates that [theoretical interpretation of asymmetry]. Thus, Hypothesis [x] is [supported / partially supported].
+```
+
+**DiD 调节专用**：
+```text
+Model [x] tests whether [moderator] conditions the effect of [treatment] on [outcome]. The interaction is [direction/status]. As Figure [y] shows, the treatment effect is [stronger/weaker] when [moderator] is high and [weaker/null] when [moderator] is low, consistent with [mechanism].
+```
+
+**子样本交互变体**（用分组检验而非交互项时，R4 报告）：
+```text
+Hypothesis [x] predicted that [moderator] would moderate the relationship between [predictor] and [outcome]. Because [theoretical reason for distinct regimes / distribution characteristics], we split the sample by [moderator] into [high-severity / high-group] and [low-severity / low-group] subsamples and estimated separate models for each group. For the [high group], the coefficient on [predictor] is [direction] and [significant/not significant] ([coefficient], [p-value]). For the [low group], the coefficient is [direction] and [significant/not significant] ([coefficient], [p-value]). The pattern indicates that [predictor] [influences/does not influence] [outcome] in the [high group] but [not in the low group / to a lesser extent in the low group], supporting Hypothesis [x]. We note that because we use separate subsamples rather than a pooled interaction term, we do not conduct a formal test of coefficient equality; the pattern should be interpreted descriptively.
+```
+
+**IV/2SLS 交互效应变体**（second-stage 含交互项时）：
+```text
+Hypothesis [x] predicted that [moderator] would moderate the effect of [endogenous predictor] on [outcome]. Model [y] adds the interaction between the predicted [endogenous predictor] (from the first stage) and [moderator] to the second-stage equation. The [predictor × moderator] interaction term is [direction] and [significant/not significant] ([coefficient], [p-value]). This indicates that the marginal effect of [predictor] on [outcome] [increases/decreases] by [magnitude] for each unit increase in [moderator], evaluated at the predicted values of [endogenous predictor]. Because the model is linear, the interaction coefficient can be interpreted directly; standard errors are [robust/clustered] to account for the two-stage estimation.
+```
+
+---
+
+### R5. 经济 / 实质显著性
+
+**通用填空段落（可嵌入 R3 或独立成段）**：
+
+```text
+To assess substantive magnitude, we calculated [marginal effects/predicted probabilities/effect sizes]. A [one-standard-deviation/one-unit] increase in [predictor] is associated with [change] in [outcome]. This represents approximately [percentage / standard deviation / probability] change relative to [baseline]. The magnitude is meaningful because [theoretical/practical benchmark].
+```
+
+**当效应较小时的诚实表述**：
+```text
+Although statistically significant, the effect is substantively modest; we interpret it cautiously.
+```
+
+**市场价值/经济影响专用**：
+```text
+To assess the economic impact of [predictor], we examine predicted changes in [downstream outcome] across meaningful levels of [conditioning variable]. The pattern indicates that [predictor] is associated with [positive value consequence] for [condition/group A] but [negative value consequence] for [condition/group B]. This translation matters because [market-value outcome] is difficult to interpret from coefficients alone.
+```
+
+**分位数经济显著性专用**（配合分位数表展示幅度）：
+```text
+To assess substantive magnitude, we examine [outcome] across quartiles of [predictor]. Table [x] presents the range of [outcome] for [subsamples]. Moving from the first quartile ([Q1 value]) to the second quartile ([Q2 value]) — an approximately [time/amount] change — is associated with a [percentage] [increase/decrease] in [outcome]. The magnitude is meaningful because [industry benchmark or theoretical reason].
+```
+
+**转折点 / 最优水平经济显著性专用**（配合 U-shaped R3）：
+```text
+To assess the substantive magnitude of the U-shaped relationship, we examine the turning point and its position in the empirical distribution. The turning point occurs at [value/percentage] of [predictor], which corresponds to [the 65th percentile / one SD above mean / median] of the observed distribution. This level is economically meaningful because [benchmark: e.g., it exceeds the average state ownership ratio among partially privatized firms]. A shift from [low baseline] to the optimal level is associated with a [Y-unit] increase in [outcome], representing approximately [percentage] improvement relative to the sample mean.
+```
+
+---
+
+### R6. 非显著 / 混合 / 意外发现
+
+> **区分原则**：非显著的**假设检验**必须在 Results 中报告（inline 或独立段均可）。非显著的**假设验证、判别效度或安慰剂检验**可放在 Supplemental Analyses（R8），因其本质是支撑理论假设而非正式假设检验。
+
+**通用填空段落（每非显著/混合假设一段）**：
+
+```text
+Hypothesis [x] predicted that [predictor] would be [direction] related to [outcome]. Contrary to our prediction, the coefficient for [predictor] is [not statistically significant/opposite direction] ([coefficient], [p-value]). We therefore interpret this finding as [no evidence/mixed evidence/partial support] and avoid drawing stronger conclusions from it. We return to this unexpected result in the Discussion.
+```
+
+**方向一致但未达显著**：
+```text
+The coefficient on [predictor] is [direction] but does not reach conventional significance levels ([coefficient], [p-value]), providing no support for Hypothesis [x]. The direction is consistent with our prediction, but the estimate is too imprecise to draw firm conclusions.
+```
+
+**部分支持**：
+```text
+We find partial support for Hypothesis [x]: [supported part], but [unsupported part]. The pattern suggests that [relationship] may be more contingent than predicted.
+```
+
+**混合结果分解**：
+```text
+Results do not support Hypothesis [x]. To examine this possibility, we separate [aggregate construct] into [components] and estimate [additional comparison]. The additional analysis suggests [refined interpretation]. We defer broader interpretation of this pattern to the Discussion.
+```
+
+**非显著间接调节变体**（mediated moderation 中部分路径不显著时）： 🔬 EXPERIMENTAL（1 篇范文）⚠️ 保守替代：省略或 inline 报告
+```text
+We test whether the interaction between [mediator] and [predictor] mediates the moderating effect of [moderator 1] on the [predictor-outcome] relationship. In the full system (Equation 5), the coefficient on the original [predictor × moderator 1] interaction (β₄₃) is [not statistically significant / reduced in magnitude compared with Equation 2], whereas the [predictor × mediator] interaction (β₄₅) is [significant/direction]. This pattern indicates that [mediator] [fully/partially] accounts for the moderating role of [moderator 1] in the [outcome type] specification. However, we do not find a statistically significant indirect moderation effect in the [alternative outcome type] specification, suggesting that the mediated moderation mechanism may be [context-dependent / limited to specific decision domains]. We interpret this pattern cautiously and defer broader theoretical implications to the Discussion.
+```
+
+**主效应不显著但交互显著变体**（Mannor 2016 模式；禁止跳过主效应）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：R3 通用段落 + 增加交互警告句
+```text
+Hypothesis [x] predicted that [predictor] would be [direction] related to [outcome]. The coefficient for [predictor] is [direction] but does not reach conventional significance levels ([coefficient], [p-value]), providing no direct support for the main effect. However, the interaction between [predictor] and [moderator] (Hypothesis [z]) is [direction] and statistically significant (β = [value], p [relation] [threshold]). Because the interaction is significant, the main effect of [predictor] should not be interpreted independently ([Aiken & West / Dawson & Richter]); instead, its effect is conditional on [moderator]. We therefore interpret the results through the lens of the significant interaction and defer discussion of the null main effect to the Discussion.
+```
+
+---
+
+### R7. 稳健性 / 效度 / 敏感性检验
+
+**通用填空段落（按威胁组织，每威胁一段）**：
+
+**测量威胁**： ✓ STANDARD（20+/28 篇范文使用）
+```text
+One concern is that our findings depend on the specific operationalization of [construct]. To address this concern, we re-estimate our models using [alternative measure] instead of [main measure]. The results are substantively unchanged, reducing concerns that [measurement choice] drives the findings.
+```
+
+**模型威胁**：
+```text
+To ensure that our results are not sensitive to model choice, we re-estimate our models using [alternative model, e.g., Tobit / Poisson / negative binomial / Cox]. The pattern of coefficients is [consistent/qualified], suggesting that [model choice] is unlikely to account for the main pattern.
+```
+
+**样本威胁**：
+```text
+Our results may be sensitive to sample composition. We exclude [specific subsample, e.g., high-tech firms / financial crisis years / outliers] and re-estimate our models. The results [remain consistent/are qualified], suggesting that [sample restriction] does not drive the findings.
+```
+
+**时点威胁**： ✓ STANDARD（10+/28 篇范文使用）
+```text
+To address timing concerns, we use [alternative lag structure / different event window / extended pre-period]. The results are [consistent/qualified], reducing concern that [timing choice] explains the main pattern.
+```
+
+**内生性威胁**：
+```text
+A potential threat to our causal claims is [reverse causality / omitted variables / simultaneity]. To address this concern, we employ [2SLS / matching / control function / natural experiment] using [method]. The [timing/predictor] effect remains [status], suggesting that the relationship is not driven solely by [endogeneity threat].
+```
+
+**机制/边界威胁**： ✓ STANDARD（8-10 篇范文使用）
+```text
+We conducted supplemental analyses to examine whether [alternative mechanism / scope condition] explains the results. When [alternative mechanisms] were included, [focal predictor] continued to explain the effect, whereas [rival mechanisms] did not. This strengthens confidence that [main inference] reflects [theorized process].
+```
+
+**DiD 平行趋势专用**：
+```text
+To assess parallel trends, we estimate an event-study model with leads and lags around [event]. The pre-treatment coefficients are [not distinguishable from zero / stable], suggesting no detectable pre-treatment divergence. The post-treatment coefficients [emerge / increase / persist] after [event], which is consistent with [causal / timing claim]. The lack of pre-treatment movement reduces concern that [outcome trend] anticipated or caused [treatment].
+```
+
+**DiD 置换检验专用**： 🔬 EXPERIMENTAL（2-3 篇范文）⚠️ 保守替代：省略
+```text
+We conduct permutation tests by randomly assigning [treatment/timing] and re-estimating the model. The placebo estimates center around [null pattern], whereas the observed estimate is [relative location]. This reduces concern that the main result is an artifact of the panel structure or treatment timing.
+```
+
+**实验排除标准专用**： ✓ STANDARD（5-6 篇实验范文复现）
+```text
+Results were [unchanged/qualified] when [alternative exclusion/coding rule] was applied, suggesting that the findings are not driven by [exclusion choice].
+```
+
+**IV 有效性专用**：
+```text
+To assess whether [instrument] satisfies the exclusion restriction, we conduct [overidentification test / placebo test / sensitivity analysis]. The [Sargan / Hansen J] test yields [value] (p = [value]), [failing to reject / rejecting] the null that all instruments are exogenous. We also estimate the model using [alternative instrument / limited information maximum likelihood] and find that the [predictor] effect remains [status], reducing concern that [instrument validity] drives the results.
+```
+
+**匹配DiD 重叠支撑专用**： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：R7 内生性威胁 + 增加重叠支撑说明
+```text
+To ensure that our findings are not sensitive to matching specification, we re-estimate the model using [alternative matching method: kernel / radius / one-to-many] and [alternative caliper]. The treatment effect remains [status] across all specifications. We also test whether results differ inside and outside the common support region; restricting the sample to [propensity score range] yields [similar / slightly larger] estimates, suggesting that [lack of overlap] is not driving the null or significant result.
+```
+
+**空间安慰剂检验专用**（DiD / 自然实验）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：R7 内生性威胁 + 增加安慰剂说明
+```text
+A potential threat is that [treatment] is correlated with unobserved [regional trends]. To address this concern, we conduct a placebo test using [treatment in neighboring units]. Because neighboring units likely share similar [regional characteristics], if unobserved regional trends drive the results, we would expect [neighboring treatment] to also yield a significant effect. The coefficient on [neighboring treatment] is [not significant / indistinguishable from zero], whereas the focal effect remains [status], reducing concern that [regional trends] explain the main pattern.
+```
+
+**事件研究稳健性专用**（替代事件日期）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：R7 时点威胁 + 增加替代日期说明
+```text
+To address concerns about event date exogeneity, we replicated the event study using [alternative event date, e.g., defect awareness date / subsequent trading day] as the event. The CARs are [not significant / consistent], reducing concern that [timing choice] explains the main pattern.
+```
+
+**市场地位/主导企业固定效应专用**： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：R7 样本威胁
+```text
+Our results may be sensitive to [market position / dominant firm dynamics]. To address this concern, we add [leader / dominant firm] x year fixed effects to absorb time-varying shocks specific to [market leaders]. The [focal effect] remains [status], suggesting that [market position] does not drive the findings.
+```
+
+**同伴效应/网络效应 falsification 专用**： 🔬 EXPERIMENTAL（1 篇范文）⚠️ 保守替代：R7 内生性威胁
+```text
+To distinguish true peer influence from common shocks or sorting, we re-estimate the model using [placebo network: random assignment / future peers / unrelated network layer]. The coefficient on [placebo network] is [not significant / much smaller / opposite direction] (β = [value], p = [value]), whereas the coefficient on [focal network] remains [status]. This pattern suggests that the [focal network] effect is not an artifact of [common shock / sorting]. We also conduct a [spillover / leave-one-out] test and find [result], further supporting [theorized mechanism].
+```
+
+**推断二元结果阈值敏感性专用**： 🔬 EXPERIMENTAL（1 篇范文）⚠️ 保守替代：R7 测量威胁 + 增加阈值说明
+```text
+Because [binary outcome] is inferred using a threshold on [continuous signal / classifier probability], we test whether the results are sensitive to [threshold choice]. We reclassify [outcome] using [threshold – 1 SD / median / domain-specific cutoff] and re-estimate the models. The [predictor] effect remains [status] across all thresholds, indicating that [inference rule] does not mechanically produce the result. We also report [precision / recall / F1] at each threshold in [Appendix Table X].
+```
+
+---
+
+### R8. 补充 / 事后 / 机制分析
+
+**通用填空段落**：
+
+```text
+We conducted supplemental analyses to examine [mechanism/boundary/alternative explanation]. This analysis helps assess whether [interpretation] rather than [alternative] explains the results. The results are [consistent with the proposed mechanism / provide a boundary condition / offer an exploratory extension]. These findings should be interpreted as [confirmatory/exploratory] evidence for [claim].
+```
+
+**机制检验专用**： ✓ STANDARD（8-10 篇含机制检验范文复现）
+```text
+We tested [mediation/moderated mediation] using [method] with [bootstrap samples]. The interaction predicted [mediator], and [mediator] predicted [outcome]. The indirect effect through [mediator] was [status] for [condition] but [status] for [comparison], and the difference between indirect effects was [status]. Because [alternative mechanisms] could also explain the pattern, we included [rival mediators] in the model. The focal mechanism [remained/did not remain] while the alternative mechanisms [did/did not] account for the effect.
+```
+
+**替代机制排除专用**（多机制竞争检验）： 🔬 EXPERIMENTAL（2-3 篇范文）⚠️ 保守替代：通用 R8 段落 + 增加竞争机制说明
+```text
+To examine whether [focal mechanism] rather than [alternative mechanism A] or [alternative mechanism B] explains the [predictor → outcome] relationship, we estimate [model] including [focal mediator], [alternative mediator A], and [alternative mediator B] simultaneously. Column [a] shows that [focal mediator] is [status] while [alternative A] is [status]. Column [b] adds [alternative B]; the coefficient on [focal mediator] [remains stable / attenuates], whereas [alternative B] is [status]. This pattern suggests that [focal mechanism] is the primary channel through which [predictor] affects [outcome], although we cannot rule out [remaining alternative] entirely.
+```
+
+**假设验证 / Corroborating Evidence 专用**： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 R8 段落
+```text
+We conducted supplemental analyses to verify [theoretical assumption]. Using [alternative data source / proxy], we examine whether [assumption] holds in our context. The results [support / do not support] the assumption that [theoretical claim]. Because [proxy] is an imperfect measure of [construct], these findings should be interpreted as [supportive / suggestive] rather than definitive evidence.
+```
+
+**MCMC / 模拟中介专用**（当使用贝叶斯模拟检验中介时）： 🔬 EXPERIMENTAL（1 篇范文）⚠️ 保守替代：通用 R8 段落 + 增加模拟说明
+```text
+We used MCMC simulation with [N, e.g., 20,000] draws to test whether [mediator] mediates the relationship between [predictor] and [outcome]. The results indicate [partial / full / no] mediation for [condition] but [status] for [comparison]. A moderated mediation analysis confirms that the indirect effect is significantly moderated by [moderator]. These findings should be interpreted as [exploratory / suggestive] evidence for the mediating role of [mediator].
+```
+
+**辅助方程闭合专用（同时方程）**：
+```text
+Finally, Table [x], Column [y] reports the results for [auxiliary equation], which we included in Methods to address [reverse-path concern]. The pattern is consistent with the idea that [reverse path] is accounted for, while remaining secondary to the main hypothesis tests.
+```
+
+---
+
+### R9. Results 到 Discussion 的过渡
+
+**通用填空段落**：
+
+```text
+Taken together, the results indicate that [core empirical pattern]. The supplemental analyses reduce concerns that [alternative explanations] account for this pattern. These findings set up the discussion of [theoretical contribution/boundary condition/mechanism], which we turn to next. We defer broader theoretical implications to the Discussion section.
+```
+
+**多研究专用**： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 R9 段落
+```text
+Across Studies [x–y], the evidence converges on [theoretical pattern] while progressively addressing [validity concerns]. Taken together, these results provide [support/partial support] for [core claim].
+```
+
+---
+
+## 按设计类型一键生成示例
+
+### 示例：OLS/FE + 交互效应
+
+**输入**：`/write-results OLS/FE --hypotheses="H1: DT -> Routine updating (+); H2: Routine updating -> Innovation (+); H3: DT × AC -> Innovation" --has-interactions`
+
+**输出骨架**（直接复制替换方括号）：
+
+```text
+Table [1] presents descriptive statistics and correlations for the variables used in our analyses. The correlations are generally consistent with our expectations and do not indicate [multicollinearity concerns]. VIF values were below [2.5], reducing concern about [collinearity among predictors].
+
+Table [2] reports fixed-effects panel regression models predicting [firm innovation performance]. Model [1] includes [firm and year fixed effects and controls]. Model [2] adds [digital transformation intensity]. Model [3] adds [organizational routine updating]. Model [4] adds the interaction between [digital transformation] and [absorptive capacity]. We use Model [4] as the preferred specification because it tests the full theoretical model.
+
+Hypothesis [1] predicted that [digital transformation] would be [positive] associated with [organizational routine updating]. As shown in Model [2] of Table [2], the coefficient for [digital transformation] is [positive] and statistically significant (β = [0.32], p < [0.01]). Substantively, a [one-standard-deviation] increase in [digital transformation intensity] is associated with a [X%] increase in [organizational routine updating]. Thus, Hypothesis [1] is supported.
+
+Hypothesis [2] predicted that [organizational routine updating] would be [positive] associated with [firm innovation performance]. Model [3] of Table [2] shows that the coefficient for [organizational routine updating] is [positive] and statistically significant (β = [0.28], p < [0.01]). Thus, Hypothesis [2] is supported.
+
+Hypothesis [3] predicted that [absorptive capacity] would moderate the relationship between [digital transformation] and [firm innovation performance]. Model [4] adds the interaction between [digital transformation] and [absorptive capacity]. The interaction term is [positive] and statistically significant (β = [0.15], p < [0.05]). Because the interaction term is significant, the main effects of [digital transformation] and [absorptive capacity] cannot be interpreted independently. To interpret this effect, Figure [1] plots the marginal effect of [digital transformation] on [innovation performance] at low (mean – 1 SD) and high (mean + 1 SD) levels of [absorptive capacity]. At low [absorptive capacity], the slope is flat and insignificant (β = [0.08], p = [0.31]). At high [absorptive capacity], the slope is steep and significant (β = [0.42], p < [0.01]). Thus, Hypothesis [3] is supported.
+
+To address the concern that [our results are driven by reverse causality], we re-estimate our models using [two-stage least squares] with [instrument] as an instrument for [digital transformation]. The [digital transformation] effect remains [positive and significant], suggesting that [reverse causality] is unlikely to account for the main pattern.
+
+To ensure that our results are not sensitive to model choice, we re-estimate our models using [random effects] and [Tobit]. The pattern of coefficients is [consistent], suggesting that [model choice] does not drive the findings.
+
+Taken together, the results indicate that [digital transformation enhances firm innovation performance through organizational routine updating, and this effect is stronger when absorptive capacity is high]. The supplemental analyses reduce concerns that [reverse causality or model choice] account for this pattern. These findings set up the discussion of [the theoretical mechanisms linking digital transformation to innovation], which we turn to next. We defer broader theoretical implications to the Discussion section.
+```
+
+---
+
+### ---metadata--- 区块（供下游 Skill 消费）
+
+每次生成 Results 骨架后，必须在输出末尾附加可解析的 JSON 元数据块，封装假设-结果对齐状态和 Results 的"证据 DNA"，供 `/write-discussion`、`/paper-review`、`/distill-results-exemplar` 直接消费。
+
+```json
+---metadata---
+{
+  "skill_version": "2.5.0",
+  "model_type": "OLS/FE",
+  "has_interactions": true,
+  "has_mediator": false,
+  "journal_target": "AMJ",
+  "slot_map": {
+    "R1": { "present": true, "table_referenced": "Table 1", "focus": "descriptive stats + VIF" },
+    "R2": { "present": true, "table_referenced": "Table 2", "model_sequence": "M1(baseline)→M2(IV)→M3(mediator)→M4(full)" },
+    "R3": { "present": true, "hypotheses_tested": ["H1", "H2", "H3"], "four_beat_compliance": "pending" },
+    "R4": { "present": true, "interaction_type": "two-way", "interpretation_strategy": "marginal effects plot" },
+    "R5": { "present": true, "embedded_in_R3": true },
+    "R6": { "present": false, "reason": "all hypotheses significant in main tests" },
+    "R7": { "present": true, "threats_addressed": ["reverse causality", "model choice"] },
+    "R8": { "present": false },
+    "R9": { "present": true }
+  },
+  "hypothesis_fulfillment_map": [
+    { "hypothesis": "H1", "prediction": "positive", "model": "Model 2, Table 2", "result_status": "pending", "causal_language_required": "associated with" },
+    { "hypothesis": "H2", "prediction": "positive", "model": "Model 3, Table 2", "result_status": "pending", "causal_language_required": "associated with" },
+    { "hypothesis": "H3", "prediction": "positive interaction", "model": "Model 4, Table 2", "result_status": "pending", "causal_language_required": "associated with", "interpretation_required": "marginal effects + figure" }
+  ],
+  "design_strength": "面板数据/OLS",
+  "causal_language_permitted": ["associated with", "related to", "linked to"],
+  "causal_language_prohibited": ["causes", "leads to", "drives", "produces"],
+  "economic_significance_required": true,
+  "non_significant_handling_required": false,
+  "downstream_interfaces": ["/write-discussion", "/paper-review", "/distill-results-exemplar"],
+  "registry_consumption": {
+    "registry_path": "write-results/academic-writing-corpus/_evidence_registry.yaml",
+    "schema_version": "1.0.0",
+    "skeletons_used": [
+      { "slot": "R1", "skeleton_id": "r1_ols_standard", "status": "ROBUST", "paper_count": 15 },
+      { "slot": "R2", "skeleton_id": null, "status": "default", "paper_count": 0 },
+      { "slot": "R3", "skeleton_id": "r3_ols_four_beat_standard", "status": "ROBUST", "paper_count": 15 },
+      { "slot": "R4", "skeleton_id": null, "status": "default", "paper_count": 0 },
+      { "slot": "R7", "skeleton_id": "r7_ols_threat_based", "status": "ROBUST", "paper_count": 10 }
+    ],
+    "deviation_from_registry": false,
+    "notes": "若某 slot 使用了 EMERGING 骨架或通用默认模板，需在此标注原因"
+  },
+  "cross_section_alignment": {
+    "methods_model_match": { "status": "pending", "notes": "需确认 Results 表格与 Methods M7 的模型规格一致" },
+    "theory_hypothesis_match": { "status": "pending", "notes": "需填入实际系数后更新 fulfillment_map" }
+  },
+  "feedback_interface": {
+    "validation_skill": "/distill-results-exemplar",
+    "validation_mode": "--validate",
+    "required_inputs": ["用户写出的 Results 全文", "本 metadata JSON"],
+    "validation_focus": ["四拍完整性", "假设-结果对齐", "因果语言合规", "非显著假设报告", "经济显著性"],
+    "trigger_timing": "用户完成 Results 初稿后"
+  }
+}
+```
+
+**字段说明**：
+- `slot_map`: R1-R9 每个槽位的生成状态和关键属性
+- `hypothesis_fulfillment_map`: 假设-结果兑现映射，是 Theory ↔ Results 对齐的核心资产。`result_status` 在生成时为 pending，用户填入实际系数后更新为 supported/not_supported/partially_supported
+- `design_strength` / `causal_language_permitted` / `causal_language_prohibited`: 从 Methods metadata 继承，确保 Results 因果语言与 design strength 匹配
+- `economic_significance_required`: 是否要求每个显著假设报告经济显著性（通常为 true）
+- `cross_section_alignment`: 与上游 skill 的对齐状态
+- `feedback_interface`: 写作-反馈闭环接口
+
+---
+
+## 下一步：回传验证（写作-反馈闭环）
+
+完成 Results 初稿后，请使用以下命令进行成品验证：
+
+```
+/distill-results-exemplar --validate
+[粘贴你写出的 Results 全文]
+
+--reference-metadata
+[粘贴上方的 ---metadata--- JSON 区块]
+```
+
+验证将检查：四拍完整性、假设-结果对齐、因果语言合规、非显著假设报告、经济显著性、与 Methods 的模型序列对齐。
+
+---
+
+## 上游接口：Registry 骨架调用
+
+本 skill 生成骨架时，优先消费 `write-results/academic-writing-corpus/_evidence_registry.yaml` 中的定量证据。
+
+### Registry 消费规则
+
+1. **查询路径**：`estimators.<estimator_family>.slots.<slot>.skeleton_variants`
+2. **选择优先级**：`ROBUST` → `VERIFIED` → `EMERGING` → SKILL.md 通用默认
+3. **子领域适配**：若用户指定目标期刊（如 `--journal=MSOM`），优先选择 `subfield_distribution` 中 `om` 分值较高的骨架
+4. **降级提示**：当使用 `EMERGING` 骨架时，必须在输出中标注 🔬 EXPERIMENTAL 并附带 ⚠️ 保守替代建议
+5. **无记录回退**：当 registry 中该 estimator × slot 无任何 skeleton 时，使用 SKILL.md 中的通用默认模板，不报错
+
+### Registry 状态与模板标注的映射
+
+| Registry Status | 模板前缀 | 含义 |
+|----------------|---------|------|
+| `ROBUST`（≥5 篇，跨 ≥2 子领域） | ⭐ PREMIUM / ✓ STANDARD | 默认首选 |
+| `VERIFIED`（≥3 篇） | ✓ STANDARD | 可靠备选 |
+| `EMERGING`（≤2 篇） | 🔬 EXPERIMENTAL | 谨慎使用 |
+| 无记录 | （无标记） | 通用默认 |
+
+### Registry 消费示例
+
+当用户调用 `/write-results OLS_FE` 时：
+- **R1**：查询 `estimators.OLS_FE.slots.R1.skeleton_variants`
+  - 发现 `r1_ols_standard`（status: ROBUST, paper_count: 15）→ 推荐 ✓ STANDARD
+- **R3**：查询 `estimators.OLS_FE.slots.R3.skeleton_variants`
+  - 发现 `r3_ols_four_beat_standard`（status: ROBUST, paper_count: 15）→ 推荐 ⭐ PREMIUM
+  - 发现 `r3_ols_nonsignificant`（status: VERIFIED, paper_count: 4）→ 若用户有非显著假设，作为 R6 备选
+- **R7**：查询 `estimators.OLS_FE.slots.R7.skeleton_variants`
+  - 发现 `r7_ols_threat_based`（status: ROBUST, paper_count: 10）→ 推荐 ✓ STANDARD
+  - 发现 `r7_ols_narrative_variant`（status: VERIFIED, paper_count: 3）→ 备选
+
+### Registry 同步机制
+
+`_evidence_registry.yaml` 由 `distill-results-exemplar/_update_registry.py` 自动更新。当新的蒸馏批次验证通过骨架后：
+1. `_update_registry.py` 自动递增 `paper_count` 并重算 `status`
+2. 本 skill 下次生成时自动消费更新后的状态
+3. 定性内容（骨架句法、反模式提醒）仍由人工审阅后写入 `.md` 文件，不由脚本自动修改
+
+---
+
+## 下游接口
+
 - `/write-discussion` — 使用 Results 的主要发现作为 Discussion 理论解释的出发点
-- `/paper-review` — 使用假设-结果对齐表进行跨 Section 验证（Theory-Methods-Results-Discussion 一致性）
-- `/results-review` — 如果用户已有 Results 草稿，使用本模板作为理想基准进行对比审查
+- `/paper-review` — 进行 Theory-Methods-Results-Discussion 跨 Section 一致性验证
+- `/results-review` — 如用户已有 Results 草稿，使用本骨架作为理想基准对比审查
+- `/distill-results-exemplar` — 对生成后的 Results 段落进行反向蒸馏审查，检查槽位覆盖、四拍节奏、DNA 指标、可迁移性和因果语言合规性。审查结果作为 Vault 参考注释，不自动修改本 skill 的骨架库
+  - **新增**：反向蒸馏时，`distill-results-exemplar` 将本 skill 实际使用的骨架与 `_evidence_registry.yaml` 对比，若发现用户偏离了 ROBUST 骨架（如使用了未经验证的变体），在验证报告中标记为 "偏离已验证模板"
+
+### 假设-结果承诺兑现框架（Hypothesis-Result Fulfillment Map）
+
+本 Skill 的核心任务是**兑现 Theory 的假设承诺**。生成 Results 骨架前，必须构建假设-结果承诺兑现映射表，确保每个 Theory 假设都有对应的 Results 段落：
+
+| 假设 | Theory 预测 | Methods 模型 | Results 槽位 | 兑现状态 | 备注 |
+|------|-----------|-------------|------------|---------|------|
+| H1 | [IV] (+) → [DV] | Model 2, Table 2 | R3 | pending | 主效应 |
+| H2 | [Mediator] (+) → [DV] | Model 3, Table 2 | R3 | pending | 中介路径 |
+| H3 | [IV] × [Mod] (+) → [DV] | Model 4, Table 2 | R3 + R4 | pending | 调节效应 |
+| 非显著假设 | [IV] (-/ns) → [DV2] | Model 5, Table 3 | R3/R6 | pending | 不得跳过 |
+
+**兑现状态定义**：
+- `pending` = Results 尚未生成或尚未填入实际系数
+- `supported` = 系数方向与预测一致且统计显著
+- `not_supported` = 系数不显著或与预测方向相反
+- `partially_supported` = 部分条件支持（如调节效应在某些子样本显著）
+- `exploratory` = 事后分析，不对应原始假设
+
+**假设-结果对齐检查点**：
+1. **覆盖完整性**：Theory 中提出的每个假设都必须在 Results 中有对应段落（R3 或 R6）
+2. **模型定位**：每个假设必须明确对应到具体的 Table 和 Model，避免"在结果中 somewhere"的模糊定位
+3. **因果语言匹配**：Results 中使用的因果/关联语言必须与 Methods 中声明的 design strength 一致（见 Constraints 中的设计家族词汇表）
+4. **经济显著性**：每个显著假设的 R3 段落必须包含 Beat-3（幅度解释），使用具体数值基准
+5. **非显著假设处理**：非显著假设不得跳过，必须使用 "Contrary to our prediction" / "providing no support" / "direction is consistent but not significant" 等规范句式
+
+**假设-结果偏离记录格式**：
+
+```markdown
+### 假设-结果偏离记录
+
+| 偏离ID | 假设 | Theory 预测 | Results 实际 | 偏离类型 | 严重程度 | 修正建议 |
+|--------|------|-----------|------------|---------|---------|---------|
+| R1 | H2 | Mediation via routine updating | 中介效应不显著 | 机制失效 | 高 | 在 Discussion 中解释为何机制不显著；检查 M5 中介变量测量是否准确 |
+| R2 | H3 | 正向调节 | 交互项显著但方向为负 | 方向反转 | 高 | 在 Discussion 中解释反直觉发现；检查 Theory 中的机制逻辑是否需要修正 |
+```
+
+---
+
+## 常见反模式
+
+以下错误在 Results 中高频出现，生成段落前主动排查：
+
+- **跳过不显著假设**：只报告显著结果，省略 null/mixed findings，造成发表偏误
+- **系数即解释**：只报 "β = 0.15, p < 0.05"，不翻译为实质含义；或在线性模型外直接比较系数大小
+- **交互显著后仍独立解释主效应**：未提醒用户 "when interaction is significant, main effects cannot be interpreted independently"（强烈建议，但部分顶刊若主效应本身不显著可省略）
+- **稳健性机械罗列**：按 "Table 3 用 Tobit, Table 4 换样本" 组织，而非按威胁（内生性/测量/模型/样本）组织
+- **经济显著性缺失**：只报统计显著性，不报 one-SD change 对应的幅度或基准对比
+- **因果语言越级**：面板数据/OLS 结果用 "caused" "led to"，超出 design strength 许可
+- **事后分析未标记为探索性**：把 post hoc 机制检验包装成 confirmatory
+- **表格导航缺失**：直接跳入主效应，未解释 Model 1→2→3 的增量逻辑
+- **设计排他性混淆**：为非 DiD 设计使用平行趋势语言；为非 IV 设计要求第一阶段/排他性约束检验；为非匹配设计要求重叠支撑检验
+- **稳健性包装成因果识别**：把安慰剂检验、模型替换等 robustness check 称为 "causal identification"，超出其回应的 threat 类型
+- **batch 同质化**：不同估计器（Logit/Probit/生存分析）使用 OLS 的 ritual 和句式，未按估计器特性调整解释策略（如 Logit 直接比较系数大小）
+
+## 诚实边界
+
+本 skill 基于 28 篇 MVP30 范文语料库（2012–2025）提炼，存在以下局限：
+
+1. **不能替代统计诊断**：提供段落骨架和 ritual 规范，但不能判断您的数据是否满足模型假设（平行趋势、过度识别、common support、VIF 等）。这些必须基于实际数据。
+2. **不能消除期刊差异**：SMJ/AMJ/ASQ/JM/OS/JOM/ASR 对 Results 的 ritual 偏好不同（如 ASQ 更重视 construct validity 叙事，SMJ 更重视 identification）。本 skill 以"最大公约数"为主，投稿前需对照目标期刊最新范文调整。
+3. **不能生成真实统计量**：所有 [placeholder] 中的系数、p 值、置信区间、边际效应必须由用户根据实际估计结果填入。本 skill 不虚构任何数字。
+4. **语料库领域偏差**：范文主要来自战略管理、营销、组织行为。金融、会计、运筹等领域的 ritual 可能不同。
+5. **不能覆盖最新方法论**：语料库截止于 2025 年，更新的估计量、识别策略或报告规范可能未覆盖。
+6. **设计排他性不可违反**：不得为非 DiD 设计使用平行趋势语言；不得为非 IV 设计要求第一阶段/排他性约束检验；不得为非匹配设计要求重叠支撑检验。
+7. **不得隐藏非显著假设**：非显著的**假设检验**必须在 Results 中报告（inline 或独立段均可），不得因不显著而跳过。非显著的**假设验证、判别效度或安慰剂检验**可放在 Supplemental Analyses（R8）。
+8. **不得把稳健性检验包装成因果识别**：robustness check（安慰剂、模型替换、样本限制）只能回应对应的 validity threat，不能将其称为 "causal identification" 除非该检验实际解决了识别问题（如 IV 的排他性、DiD 的平行趋势）。
+9. **不得在非线性模型中直接比较系数大小**：Logit/Probit/计数模型/生存分析必须报告边际效应、预测概率、风险比或事件时间变化，不能直接比较 raw coefficient 的大小。
+10. **交互显著后主效应不可独立解释**：当交互项显著时，**强烈建议**在同一段落或紧随其后的段落中明确警告 "main effects cannot be interpreted independently"，并报告 conditional effects。若主效应本身已不显著或期刊惯例侧重条件效应图，可酌情省略。
+
+## 生成后自检清单
+
+生成 Results 段落后，逐条核对：
+
+### Completeness
+- [ ] R1：描述性统计 + 相关性 + 诊断（VIF/multicollinearity）导向
+- [ ] R2：表格导航解释 Model 1→2→3 的增量逻辑，每假设对应哪一列
+- [ ] R3：每假设都有"方向 → 显著性 → 幅度 → 支持判断"四拍
+- [ ] R4：交互项系数 + 简单斜率/AME + 图示引用；若显著则**强烈建议**警告主效应不可独立解释（若主效应已不显著可酌情省略）
+- [ ] R5：经济显著性（one-SD change / 概率变化 / 基准对比）已报告
+- [ ] R6：所有非显著/混合/意外发现都被报告（Inline 报告可接受，独立段落非必需），未跳过
+- [ ] R7：稳健性按威胁组织（测量/模型/样本/时点/内生性/机制），非机械列表
+- [ ] R8：补充/事后分析与稳健性分开，明确标记为探索性
+- [ ] R9（可选）：Results-to-Discussion 过渡，总结核心模式并预告 Discussion
+
+### Clarity
+- [ ] 变量名与 Methods 完全一致
+- [ ] 因果语言强度与 design strength 匹配
+- [ ] 所有 [placeholder] 已被替换，无残留方括号
+- [ ] 表格引用指向用户实际表格编号
+
+### Credibility
+- [ ] 非显著假设被报告而非跳过
+- [ ] 经济显著性与统计显著性同时出现
+- [ ] 稳健性检验和补充分析有明确区分
+- [ ] 交互效应有图示或简单斜率支持
+
+### DNA Metrics（与顶刊范本的 rhetorical 距离）
+- [ ] **四拍完整性**：显著假设严格遵循 "方向 → 显著性 → 幅度 → 支持判断"；非显著假设自然缩减为 "方向 → 不显著 → 无支持"（2-3拍）。整体目标按 adjusted target = 100% - (nonsig_ratio * 50%) 动态调整
+- [ ] **Hedging 强度**：OLS/FE 主导用 "associated with"；DiD 在识别支持后用 "effect of... on..."；IV 可用 "increases"；无 "causes"/"leads to" 越级
+- [ ] **因果语言强度**：因果词强度与 design strength 匹配。面板数据无 "caused"；自然实验在平行趋势支持前用 "associated with"，支持后用 "effect of... on..."
+- [ ] **稳健性 Transition 句式**：每个稳健性检验以 threat 定位开头（"One concern is..." / "To address..."），而非以表格编号开头（"Table 3 uses Tobit"）
+- [ ] **非显著处理句式**：不显著假设使用 "Contrary to our prediction" / "providing no support" / "direction is consistent but not significant"，不得省略或仅写 "not significant"
+- [ ] **交互引入方式**：交互项显著后，必须提供 "Figure X plots..." 或 "To interpret..." 或 simple slopes 分解，且**强烈建议**警告主效应不可独立解释（若主效应已不显著可酌情省略）
+- [ ] **经济显著性基准**：使用 one-SD change / one-unit change / 概率变化 / 市场价值翻译，且与统计显著性同时出现（目标：100%）
+- [ ] **表格导航密度**：每段主效应首句定位 Table 和 Model（"As shown in Model [y] of Table [z]"）（目标：100%）
+- [ ] **假设重述位置**：每假设在段落首句或表格开头重述预测，再报告结果（目标：100%）
+
+### 反向审查（可选但建议）
+生成完成后，可使用 `/distill-results-exemplar` 对输出段落进行反向蒸馏审查，生成 Vault 参考注释，供人工判断：
+- 槽位覆盖是否完整（R1–R9）
+- 四拍节奏是否规范（方向→显著性→幅度→支持）
+- 表达骨架是否可迁移（无具体系数/样本量残留）
+- 因果语言强度是否与估计器类型匹配
+- 稳健性检验是否按 threat 组织而非机械罗列
+- 非显著假设是否被报告而非跳过
+
+**注意**：反向审查产出存入 Vault，不自动修改本 skill 的骨架库。是否采纳为 skill 参考由人工决定。
 
 ## Constraints
 
-- 必须提醒用户：Results 是 falling action，要帮助解开 knot。
+- 必须提醒用户：替换所有 `[方括号占位符]` 为实际内容；不虚构 p 值、系数、支持状态或稳健性发现。
 - 不要跳过不显著的假设——必须报告并解释。
-- 经济显著性必须与统计显著性一起报告。
-- 交互效应必须提供简单斜率或边际效应图。
-- 稳健性检验必须按 threat 组织，不能简单罗列。
+- 经济显著性必须与统计显著性一起报告（已在 R3 扩展版中内置）。
+- **因果语言强度必须与 design strength 匹配**。以下是按设计家族的强制词汇表：
+
+| 设计家族 | 允许动词 | 禁止动词 | 使用条件 |
+|---------|---------|---------|---------|
+| 面板数据/OLS/FE/HLM | associated with, related to, linked to, corresponds to | increases, decreases, leads to, causes, drives, produces | 无条件禁止强因果词 |
+| DiD / 自然实验 | effect of ... on ..., associated with | causes, leads to, drives | 仅在平行趋势/事件研究支持后可用 "effect of... on..."；否则退回 "associated with" |
+| IV/2SLS | effect of ... on ..., increases, decreases | causes, leads to, produces | 仅在 M8 识别假设 preview 后可用；second-stage 汇报可用 "effect" 但避免 "causes" |
+| 非线性模型 (Logit/Probit/Tobit/计数) | associated with, increases the likelihood of, changes the probability of | increases, decreases, causes, leads to | 系数本身不可直接解释；必须通过边际效应/概率变化转述 |
+| 生存分析 | associated with, lengthens/shortens time to, changes the hazard of | causes, leads to, produces | hazard ratio / AFT 系数需通过生存概率或时间变化转述 |
+| SEM / 同时方程 | associated with, predicts, influences | causes, leads to, produces | 结构方程系数表示预测关系，非因果；仅在过度识别且模型拟合良好时可谨慎使用 "effect" |
+| 实验 | caused, led to, produced, increased, decreased | — | 随机化支持后可直接使用强因果词 |
+
+- **四拍完整性强制要求**：每个显著假设的 R3 段落必须包含 Beat-3（幅度解释），使用具体数值基准（one-SD / one-unit / IQR / 概率变化 / 百分比），禁止仅写 "This indicates that [substantive interpretation]." 等模糊表述。
+- 交互效应必须提供简单斜率或边际效应图（R4 模板已内置）。
+- 稳健性检验必须按威胁组织，不能简单罗列（R7 已按 6 类威胁分设段落）。
+- 事后分析必须与稳健性检验分开，并明确标记为探索性。
 - 如果用户有具体的假设和模型，必须将其嵌入模板。
+- 每个表格/模型引用应指向用户的实际表格。
 
-## 资产位置
+## 外部资产位置
 
-无外部 references，所有模板和句式内联于本文件。
+如需查询特定范文的具体措辞或设计变体：
+
+- **叙事分析索引**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/methods_results/mvp30/_mvp30_methods_results_index.md`
+- **28篇覆盖矩阵**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/methods_results/mvp30/deep_distillation/_methods_results_28_paper_coverage_matrix.md`
+- **逐论文精细解构**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/methods_results/mvp30/fine_grained/batch_*/[paper]_fine_methods_results.md`
+- **Pollock Ch07 表达库**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/methods_results/mvp30/fine_grained/_four_paper_expression_corpus_pollock_ch07.md`
+
+---
+*基于 28 篇 MVP30 范文语料库、Pollock 2025 Ch07 和深度叙事分析框架构建。版本 2.2.0 — 填空式模板。*

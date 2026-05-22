@@ -1,0 +1,33 @@
+corpus_enrichment:
+  batch_id: "batch_2026-05-22_test"
+  papers_processed: 1
+  last_updated: "2026-05-22"
+
+  evidence_updates:
+    - target: "academic-writing-corpus/生存分析.md"
+      design_type: "生存分析"
+      slot: "M8"
+      action: "append_skeleton"
+      new_papers: ["darby2023 (MSOM)"]
+      skeleton: |
+        To address concerns about [endogeneity threat 1: e.g., unobserved time-varying confounds], we [robustness design 1: e.g., conduct a coarsened exact matching analysis] that leverages [exogenous variation source: e.g., CEO turnover] to [mechanism]. To address [endogeneity threat 2: e.g., reverse causality], we [robustness design 2: e.g., examine whether the predictor is influenced by prior outcomes] and demonstrate that [null finding]. We also provide [number] robustness checks for modeling concerns, including [alternative estimator 1] and [alternative estimator 2], to ensure that our modeling approach does not substantively influence our conclusions. We report the results in [Results location: e.g., Section 5.3 and Table X].
+      skeleton_meta:
+        variant_name: "生存分析 M8 稳健性检验预告（多威胁分层）"
+        source_papers:
+          - "darby2023 (MSOM)"
+        validation_status: "VALIDATED"
+        transferability: "high"
+        note: "适用于在M8中需要同时处理多种内生性威胁的生存分析论文。关键结构：(1) 按威胁类型分层（遗漏变量/反向因果/模型设定）；(2) 每种威胁对应具体检验设计；(3) 明确结果报告位置。Darby2023在M8预告了CEM、反向因果检验、CPH和GLM四层稳健性。"
+
+  anti_pattern_updates:
+    - target_design_type: "生存分析"
+      target_slot: "M8"
+      pattern: "生存分析M8仅报告分布选择而忽略内生性处理"
+      evidence: ["darby2023 (MSOM)"]
+      recommended_action: "在生存分析的M8中，除分布选择和模型诊断外，应明确预告针对反向因果和遗漏变量的稳健性检验"
+
+  batch_metadata:
+    design_types_covered: ["生存分析"]
+    novel_skeletons_found: 1
+    rejected_skeletons: 0
+    rejected_reasons: []

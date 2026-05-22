@@ -1,0 +1,306 @@
+meta:
+  last_updated: '2026-05-22'
+  total_design_types: 21
+  batches_processed: 2
+  source: corpus INDEX.md + product_recall_cross_validation
+evidence:
+  by_design_type:
+    面板数据-OLS:
+      paper_count: 4
+      papers:
+      - darby2023 (MSOM)
+      - darby2025 (JSCM)
+      - darby2026 (JOM)
+      - eilert2017 (JM)
+      status: VERIFIED
+      slots_covered:
+      - M1
+      - M2
+      - M3
+      - M4
+      - M5
+      - M6
+      - M7
+      - M10
+      common_failures:
+      - 控制变量无 because 逻辑——仅列举变量名
+      - 样本漏斗缺数字——跳步或缺失排除数量
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    自然实验-DiD:
+      paper_count: 0
+      papers: []
+      status: EMERGING
+      slots_covered: []
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    非线性模型:
+      paper_count: 0
+      papers: []
+      status: EMERGING
+      slots_covered: []
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    生存分析:
+      paper_count: 4
+      papers:
+      - darby2026 (JOM)
+      - darby2025 (JSCM)
+      - eilert2017 (JM)
+      - darby2023 (MSOM)
+      status: VERIFIED
+      slots_covered:
+      - M2
+      - M3
+      - M7
+      - M8
+      - M10
+      common_failures:
+      - 未报告分布选择依据（BIC/AIC 比较）
+      - 右删失处理仅一句话未详细论证
+      - 生存分析M8仅报告分布选择而忽略内生性处理
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    SEM:
+      paper_count: 0
+      papers: []
+      status: EMERGING
+      slots_covered: []
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    实验:
+      paper_count: 0
+      papers: []
+      status: EMERGING
+      slots_covered: []
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    多研究:
+      paper_count: 0
+      papers: []
+      status: EMERGING
+      slots_covered: []
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    稀有结果:
+      paper_count: 0
+      papers: []
+      status: EMERGING
+      slots_covered: []
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    实证对象构建:
+      paper_count: 0
+      papers: []
+      status: EMERGING
+      slots_covered: []
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    事件历史+事件研究:
+      paper_count: 3
+      papers:
+      - zhou2017 (ASQ)
+      - pontikes2012 (ASQ)
+      - shi2021 (JMR)
+      status: VERIFIED
+      slots_covered:
+      - M2
+      - M3
+      - M7
+      - M8
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    同时方程:
+      paper_count: 0
+      papers: []
+      status: EMERGING
+      slots_covered: []
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    IV-2SLS:
+      paper_count: 1
+      papers:
+      - wowak2025 (MS)
+      status: EMERGING
+      slots_covered:
+      - M4
+      - M7
+      - M8
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    动态面板-GMM:
+      paper_count: 0
+      papers: []
+      status: EMERGING
+      slots_covered: []
+      common_failures:
+      - 短面板推荐 FE 而不提示 Nickell bias
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    匹配DiD-广义DiD:
+      paper_count: 0
+      papers: []
+      status: EMERGING
+      slots_covered: []
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    同伴效应-网络效应:
+      paper_count: 0
+      papers: []
+      status: EMERGING
+      slots_covered: []
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    文本构念测量:
+      paper_count: 0
+      papers: []
+      status: EMERGING
+      slots_covered: []
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    PSM匹配面板:
+      paper_count: 2
+      papers:
+      - pfarrer2010 (AMJ)
+      - mayo2021 (POMS)
+      status: EMERGING
+      slots_covered:
+      - M2
+      - M7
+      - M8
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    堆叠扩散Logit:
+      paper_count: 0
+      papers: []
+      status: EMERGING
+      slots_covered: []
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    多行为者设计:
+      paper_count: 0
+      papers: []
+      status: EMERGING
+      slots_covered: []
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    推断二元结果:
+      paper_count: 0
+      papers: []
+      status: EMERGING
+      slots_covered: []
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    两阶段模型:
+      paper_count: 2
+      papers:
+      - darby2023 (MSOM)
+      - zhou2017 (ASQ)
+      status: EMERGING
+      slots_covered:
+      - M7
+      - M8
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Distill Results Exemplar"
+  short_description: "Distill Results sections from top-tier papers into reusable paragraph skeletons, rhythm maps, and skill update recommendations."
+  default_prompt: "Use $distill-results-exemplar to distill the Results section of a paper into structured writing assets."

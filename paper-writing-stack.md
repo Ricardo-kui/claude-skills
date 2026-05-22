@@ -27,6 +27,10 @@ Section-level review skills (use after writing):
 - `results-review` — Results QC (4-beat rhythm, robustness)
 - `discussion-review` — Discussion QC (4 defects, positive standards, Findings/Contributions)
 
+Exemplar distillation skills (use when processing new papers to generate Vault evidence assets):
+- `distill-methods-exemplar` — Distill Methods sections into structured skeletons, expression DNA, and Vault reference notes. Outputs are human-reviewed before any skill adoption (Phase 0–5 pipeline)
+- `distill-results-exemplar` — Distill Results sections into structured skeletons, rhythm maps, and Vault reference notes. Outputs are human-reviewed before any skill adoption (Phase 0–5 pipeline)
+
 ## Inputs
 
 Collect the minimum workable set from these buckets:
