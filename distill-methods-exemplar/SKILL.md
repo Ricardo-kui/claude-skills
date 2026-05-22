@@ -82,6 +82,29 @@ phase_0_design_profile:
 | M9 | 多研究 / 实验程序 | 如适用，标记研究间衔接结构 |
 | M10 | Methods→Results 过渡（可选） | 定位 transition 段落，标记 Results 预告结构。顶刊实证论文中约 70% 缺失，若缺失不严重惩罚覆盖率 |
 
+#### 跨槽位段落识别
+
+实际范文中，部分段落同时覆盖多个槽位功能。标注时增加以下标签：
+
+| 标签 | 示例 | 处理方式 |
+|------|------|----------|
+| `M1+M2 merged` | POMS Mayo2023 的 3.1 "Research Design and Data Sources" 同时论证 setting 合法性 + 报告数据来源 | 同时计入 M1 和 M2 的 present_slots，但标注 merged |
+| `M3+M4 merged` | 某一段同时定义 DV 和核心预测变量 | 同时计入 M3 和 M4，记录 paragraph_range 为同一区间 |
+| `M6+Table merged` | POMS 用表格呈现 controls，正文仅一句话总起 | M6 located=true，但标注 "table_bears_function" |
+| `M7+M8 merged` | DiD/IV 设计中识别策略与模型规格在同一节 | 同时计入 M7 和 M8，标注 merged |
+
+#### 非段落元素识别
+
+Methods 中部分核心说服功能由**非段落文本**完成，不可遗漏：
+
+| 元素类型 | 功能 | 典型位置 | 处理方式 |
+|----------|------|----------|----------|
+| `Table: variables` | 变量定义表（如 JM 2015 Malshe Table 1） | M3–M6 之间 | 记录表头列名逻辑，标记对应槽位 |
+| `Table: model comparison` | 模型选择比较表（如 JM 2017 Eilert BIC 表） | M7 内部或之后 | 记录比较维度（distribution × BIC/AIC） |
+| `Equation sequence` | 方程组（如 JMR 2023 Singh 2SLS 方程组） | M7 | 记录方程数量和呈现顺序 |
+| `Figure: model-free` | 无模型证据图（如 JMR 2023 Singh 分组均值图） | M1/M7/M8 之前 | 标记为 Model-Free Evidence 前置 |
+| `Subsection heading` | 子标题化 IV 论证（如 JMR 的 #### Instrument Relevance） | M4/M7 | 将子标题视为独立功能区块，分别标注槽位 |
+
 ### 输出格式
 
 ```yaml
@@ -90,11 +113,40 @@ phase_1_slot_map:
     located: true/false
     paragraph_range: "[第X段–第Y段]"
     setting_claims: ["理由1", "理由2", "理由3"]
+    cross_slot_note: "M1+M2 merged"  # 可选
   M2:
     located: true/false
     funnel_steps: ["起始", "排除1", "排除2", "最终"]
     has_numbers: true/false
+    cross_slot_note: "M1+M2 merged"  # 可选
   # ... 其余槽位
+
+phase_1_non_paragraph_elements:
+  tables:
+    - table_id: "Table 1"
+      location: "between M3 and M4"
+      function_slots: ["M3", "M4", "M6"]
+      header_columns: ["Variable", "Purpose", "Equation", "Data Set", "Literature"]
+    - table_id: "Table 4"
+      location: "within M7"
+      function_slots: ["M7"]
+      header_columns: ["Distribution", "Log-Likelihood", "BIC"]
+  equations:
+    - equation_count: 5
+      location: "M7"
+      function_slots: ["M7"]
+      sequence_note: "main outcome → mediator A → mediator B → downstream outcome → endogenous choice"
+  figures:
+    - figure_id: "Figure 6"
+      location: "before M7"
+      function_slots: ["M8"]
+      type: "model-free evidence"
+      content_note: "group mean comparison by lobbying intensity"
+  subsections:
+    - heading: "Instrument Relevance"
+      location: "within M4"
+      function_slots: ["M4"]
+      parent_section: "Instrumental Variable Model"
 ```
 
 ---
@@ -133,12 +185,15 @@ phase_1_5_quality_gate:
     present_slots: ["M1", "M2", ...]
     missing_slots: ["M8"]
     coverage_rate: "80%"
+    cross_slot_mergers_detected: ["M1+M2", "M6+Table"]
+    non_paragraph_elements_count: 3
   special_design_markers:
     detected: ["IV", "匹配"]
     properly_addressed: ["M7 第一阶段"]
     inadequately_addressed: ["M8 排他性约束仅一句话"]
   source_sufficiency:
     sample_funnel_auditable: true/false
+    # 注：若 M2 为 M1+M2 merged 或多源匹配型，sample_funnel_auditable 应为 true，但审计链可能简化
     diagnostic_tests_named: true/false
     robustness_location_specified: true/false
   contradictions_or_gaps: ["M7 声称用 FE 但未报告 Hausman", "M8 说检验在 Results 但 Results 未出现"]
