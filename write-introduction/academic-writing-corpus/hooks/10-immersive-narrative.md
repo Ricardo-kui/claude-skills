@@ -9,6 +9,7 @@ exclusivity: LOW
 source_papers:
   - desai2012 (AMJ, 2012): Immersive narrative hook with five-act structure
   - lashley_pollock2020 (ASQ, 2020): Extreme-situation immersive narrative
+  - singh_grewal2023 (JMR, 2023): Policy anecdote + table evidence hook (Variant C)
 created: 2026-05-19
 source: Extracted from desai2012 distill-introduction-exemplar
 ---
@@ -48,16 +49,52 @@ source: Extracted from desai2012 distill-introduction-exemplar
 ## 变体 B：极端情境沉浸型（lashley_pollock2020 型）
 
 **模板**:
-> "Consider the following situation: [Actor] must [extreme challenge]. [Constraint 1]. [Constraint 2]. [Constraint 3]. How would you respond?"
+> "Imagine [action] when [extreme constraint 1], [constraint 2], [constraint 3], [constraint 4], [constraint 5], and [constraint 6]. These are the sorts of things that can happen ([citations]) when [theoretical framing]."
 
 **来源**: lashley_pollock2020 (ASQ), P1
 
-**关键特征**:
-- 用第二人称直接邀请读者参与
-- 极端情境制造认知冲击
-- 多个约束条件叠加增强紧张感
+**原文锚定**:
+> "Imagine starting a business when the federal government has declared your product or service illegal, banks will not let you open a checking account, you cannot deduct your business expenses or pay your taxes through conventional means, you are forced to pay your employees in cash, your friends and neighbors look at you with suspicion, and many of your customers do not want to admit they use your product or service. These are the sorts of things that can happen (Hudson and Okhuysen, 2009; Kovaleski, 2014; Voss, 2015) when an entire industry category is predicated on a product or activity that is subject to 'core' stigma (Hudson, 2008)."
 
-**适用**: ASQ 偏好理论驱动的沉浸式 Hook
+**关键特征**:
+- **"Imagine..."** → 第二人称直接邀请读者代入，比 "Consider" 更有沉浸感
+- **六个约束条件的累积排比**: 从制度（非法）、金融（无银行账户）、运营（现金支付）、社会（邻里猜疑）到市场（顾客隐瞒）——层层递进
+- **平行语法结构增强节奏**: "banks will not... you cannot... you are forced... your friends... and many of your customers..."
+- **"These are the sorts of things that can happen... when..."** → 从具体场景平滑过渡到理论概念（core stigma），完成从现象到学术的收束
+- 所有约束都有文献引用支撑，避免轶事感
+
+**适用**: 研究涉及极端制度约束、社会污名或边缘化群体的 ASQ/AMJ 论文
+
+---
+
+## 变体 C：Policy Anecdote + Table 型（singh_grewal2023 型）
+
+**模板**:
+> "A [year] [institutional body] report, examining [specific event/crisis], alleged [suspect mechanism] by [industry actors] ([citation]). It cited an internal [firm] document ([date]), in which [senior executive] highlighted several 'wins,' such as [specific favorable outcome 1], [outcome 2], and [outcome 3] (e.g., [quantified benefit]). In the [industry] industry, similar news reports detail how [mechanism actors] work to limit [regulator] sanctions on [affected parties] ([citation]). In one case, [political actors] even asked the [regulator head] to disclose [sensitive contacts] and testify as to whether [alleged improper action] ([citation]). [Table reference: other examples of mechanism across industries.]"
+
+**来源**: singh_grewal2023 (JMR), P1
+
+**原文锚定**:
+> "A 2010 U.S. Congressional report, examining the slow response of Toyota to hundreds of vehicle accidents due to sudden acceleration in 2009–2010, alleged lobbying influences by automotive firms (Kirchhoff and Peterman 2010). It cited an internal Toyota document (dated July 6, 2009), in which the chief operating officer highlighted several 'wins,' such as delaying final safety rules by National Highway Traffic Safety Administration (NHTSA), persuading NHTSA officials to impose smaller sanctions, and realizing monetary savings (e.g., negotiating the equipment recall on its Camry model saved Toyota $100 million). In the U.S. consumer products industry, similar news reports detail how lobbying firms (e.g., Bracewell LLP) work to limit Consumer Product Safety Commission (CPSC) sanctions on defective product producers (Levin 2019). In one case, legislators even asked the CPSC chairperson to disclose her contacts with business groups and testify as to whether she directed employees to delay corrective actions (U.S. Congress 2019). Table 1 contains other examples of lobbying activities across industries."
+
+**关键特征**:
+- **制度文件锚定**: 用 Congressional report / regulatory filing / court document 等官方文件建立可信度——不是 "some say" 而是 "Congress alleged"
+- **内部文件引用**: 引述公司内部文件（dated memo, email, presentation）增加调查感和真实性
+- **具体 "wins" 列表**: 列举可量化的具体好处（delayed rules, smaller sanctions, $100M savings）——三个例子是有效的修辞数量
+- **跨行业扩展**: 用 "similar news reports detail how..." 将单一案例扩展到更广泛的现象
+- **Table 1 作为 Hook 的一部分**: 跨行业表格增强现象的一般性和研究的合法性——Table 成为 Hook 的功能组件而非独立元素
+- **能量等级**: 中-高——制度权威 + 具体证据 + 量化数字
+
+**与变体 A (五幕叙事) 的区别**:
+- 变体 A 是故事驱动（时间、人物、事件序列）
+- 变体 C 是证据驱动（报告、文件、表格、跨行业类比）
+- 变体 C 更适合政策/制度主题的 JMR/JM 风格
+
+**与变体 B (极端情境沉浸) 的区别**:
+- 变体 B 用 "Imagine..." 建立代入感
+- 变体 C 用制度文件建立权威感和真实性
+
+**适用**: 涉及政策、监管、企业政治行为的 JMR/JM/SMJ 论文
 
 ---
 

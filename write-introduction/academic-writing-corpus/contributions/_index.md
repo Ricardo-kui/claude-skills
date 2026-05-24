@@ -13,7 +13,9 @@ source_papers:
   - malshe2015 (JM, 2015): Enumerated contribution list
   - paruchuri2020 (SMJ, 2020): Finding-preview + contribution hybrid
   - darby2026 (JOM, 2026): Three-part closure (theory + practice + policy)
+  - darby2023 (MSOM, 2023): Makadok multi-dimension with policy stakes
   - vadakkepatt2022 (JM, 2022): Dark-side narrative (beneficial actions harm stakeholders) + moderator systematization
+  - desai2012 (AMJ, 2012): Two-contribution minimal + deferred ("Related contributions are discussed following the study's results")
 created: 2026-05-19
 source: Extracted from MVP30 narrative_analysis files + SKILL.md Makadok table
 ---
@@ -49,6 +51,29 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 - 空洞的"important" → 用三层具体化替代
 - 过度承诺 → 使用谦逊措辞（"foundation", "extends"）而非绝对化措辞
 - 缺少后果层 → 审稿人会问"so what?"
+
+---
+
+## 变体 H：Makadok 多维度 + 政策 stakes 型（darby2023 型）
+
+**模板**:
+> "Our study provides theoretical contributions for scholars and practical implications for [audience 1] and [audience 2]. For researchers, we contribute to [stream 1] by demonstrating how [X] influences [Y]. In doing so, we demonstrate how [theoretical implication] and thereby [theoretical network enrichment]. We also contribute to [stream 2] by highlighting [key role]. For practice and public policy, our findings point to a need for [practical recommendation]."
+
+**原文锚定**:
+> "Our study provides theoretical contributions for scholars and practical implications for firms and regulators. For researchers, we contribute to the corporate governance literature by demonstrating how CEO stock ownership influences recall timing. In doing so, we demonstrate how governance mechanisms can shape operational outcomes and thereby extend the governance literature beyond traditional financial metrics. We also contribute to the operations management literature by highlighting the role of executive incentives in product safety. For practice and public policy, our findings point to a need for regulators to consider the incentive structures of firm executives when designing recall policies."
+
+**来源**: darby2023 (MSOM), P8
+
+**关键特征**:
+- **双文献流贡献**: 明确命名两个对话的文献流（stream 1 + stream 2）
+- **"In doing so, we demonstrate how... and thereby..."** → 第一层贡献的理论溢出效应
+- **"We also contribute to..."** → 第二层贡献，用 "also" 自然过渡
+- **"For practice and public policy"** → 将实践和政策合并为一段，简洁有力
+- **"point to a need for"** → 政策建议的谦逊但明确表达
+
+**适用**: 跨学科研究（如治理+运营管理）、有明确政策含义的研究
+
+**与变体 E（三段闭环型）的区别**: 变体 E 是"理论→实践→政策"三段式，变体 H 是"理论（双文献流）→实践/政策"两段式，更紧凑
 
 ---
 
@@ -270,6 +295,31 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 - 不要为了创造对立而强行二分——两个代码必须有真实的理论或经验差异
 - 不要只命名不定义——每个代码必须有明确的来源、功能和激活条件
 - 不要让默认代码和激活代码的区分模糊不清——这是整个框架的分析基础
+
+---
+
+### 变体 I：延迟贡献声明型（desai2012 型）
+
+**模板**:
+> "This study yields several contributions to [primary field] and to [broader field] more broadly. First, the study forwards theory regarding [contribution 1: specific theoretical advance]. This is an important contribution, given [justification: why this matters in light of existing research] ([citations]). The study also adds to theoretical knowledge regarding [contribution 2]. Related contributions are discussed following the study's results."
+
+**来源**: desai2012 (AMJ), P7
+
+**原文锚定**:
+> "This study yields several contributions to institutional theory and to organization theory more broadly. First, the study forwards theory regarding whether firms influence other firms and their overall field following crises and predicts which firms are likely to engage in this field-level process. This is an important contribution, given the role of crises in research on field-level institutional change (Greenwood et al., 2002; Hoffman, 1999; Hoffman & Ocasio, 2001). The study also adds to theoretical knowledge regarding what field-level actions are available to firms following disruptions. Related contributions are discussed following the study's results."
+
+**关键特征**:
+- **极简两贡献**: 只声明2个核心贡献，避免贡献散弹
+- **"This is an important contribution, given..."** → 每个贡献附带简短的理由（为什么这个贡献重要？引用支撑）
+- **"Related contributions are discussed following the study's results"** → 将部分贡献延迟到Discussion中详细展开——AMJ允许的做法
+- 不需要"First-Second-Third"格式，用"First... also..."即可
+- 贡献直接对应Introduction开头设立的Gap（回响式收束）
+
+**适用**: AMJ/ASQ等允许Discussion中详细展开贡献的期刊；贡献聚焦（1-2个核心+若干衍生）的研究
+
+**禁忌**:
+- 不要在Discussion中未兑现延迟的贡献承诺——"Related contributions are discussed following the study's results"是契约
+- 不要在Introduction贡献段过度简略以致审稿人认为"贡献不足"
 
 ---
 

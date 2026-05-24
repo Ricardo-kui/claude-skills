@@ -1,0 +1,88 @@
+corpus_enrichment:
+  batch_id: "batch_2025-05-22"
+  estimator_family: "Logit_Probit_Ordered_Probit"
+  source_paper: "Malik_Wang_Martin_Gomez-Mejia_2025_JOM"
+  source_subfield: "strategy"
+
+  slot_updates:
+    # --- 骨架级（paragraph level）---
+    - slot: "R3"
+      action: "create_new"
+      skeleton_id: "r3_probit_four_beat_ame_embedded"
+      skeleton_level: "paragraph"
+      skeleton: "[Hypothesis restatement]. [Table navigation]. [Coefficient report with significance]. [AME justification]. [Magnitude interpretation via probability change]. [Support judgment]."
+
+    - slot: "R4"
+      action: "create_new"
+      skeleton_id: "r4_probit_interaction_region_significance"
+      skeleton_level: "paragraph"
+      skeleton: "[Model navigation adding interaction]. [Interaction coefficient report]. [Figure navigation]. [Marginal effect significance region description]. [Support judgment with caveat if partial]."
+
+    - slot: "R6"
+      action: "create_new"
+      skeleton_id: "r6_nonsignificant_region_significance_partial"
+      skeleton_level: "paragraph"
+      skeleton: "[Model navigation]. [Coefficient report with nonsignificance]. [Figure-based region significance]. [Partial support judgment]."
+
+    - slot: "R7"
+      action: "create_new"
+      skeleton_id: "r7_threat_based_iv_heckman"
+      skeleton_level: "paragraph"
+      skeleton: "[Threat positioning]. [Method description with instrument rationale]. [First-stage / test results]. [Second-stage / consistency statement]. [Conclusion reducing threat concern]."
+
+    # --- 句式级（sentence level）---
+    - slot: "R3"
+      action: "create_new"
+      skeleton_id: "r3_sentence_ame_justification_probit"
+      skeleton_level: "sentence"
+      skeleton: "Due to the difficulty in directly interpreting regression coefficients and significance levels in probability models, and as hypotheses should not be tested solely by examining p-values, the average marginal effect is visualized in [Figure X]."
+
+    - slot: "R3"
+      action: "create_new"
+      skeleton_id: "r3_sentence_probability_magnitude_probit"
+      skeleton_level: "sentence"
+      skeleton: "A one-standard-deviation increase in [IV] from the mean value ([from] to [to]) [increased/decreased] the probability of [DV] from [base]% to [new]%."
+
+    - slot: "R3"
+      action: "create_new"
+      skeleton_id: "r3_sentence_coefficient_significance_probit"
+      skeleton_level: "sentence"
+      skeleton: "Model [Y] reports that the coefficient for [IV] is [positive/negative] and significant (b = [value], p = [threshold])."
+
+    - slot: "R4"
+      action: "create_new"
+      skeleton_id: "r4_sentence_interaction_coefficient"
+      skeleton_level: "sentence"
+      skeleton: "Model [Y] adds the interaction term between [moderator] and [IV], yielding a [positive/negative] coefficient for [DV] (b = [value], p = [threshold])."
+
+    - slot: "R4"
+      action: "create_new"
+      skeleton_id: "r4_sentence_region_significance_partial"
+      skeleton_level: "sentence"
+      skeleton: "Although this interaction term is not statistically significant at the conventional p = [threshold] threshold, [Figure X] indicates that the marginal effect of [IV] is significant for [moderator] levels below [value]. Thus, Hypothesis [x] is partially supported."
+
+    - slot: "R7"
+      action: "create_new"
+      skeleton_id: "r7_sentence_threat_endogeneity"
+      skeleton_level: "sentence"
+      skeleton: "Unobservable [unit]-level factors could affect [IV] and [DV]. Some of these factors may introduce the possibility of reverse causality, omitted variable bias, or both, leading to potential endogeneity in our study."
+
+    - slot: "R7"
+      action: "create_new"
+      skeleton_id: "r7_sentence_iv_validity"
+      skeleton_level: "sentence"
+      skeleton: "The [test name] results suggest that our instruments are exogenous ([statistic], p = [threshold]). Furthermore, the second-stage regression models produced results consistent with those of Models [Y] and [Z]."
+
+  novel_patterns:
+    - slot: "R3"
+      observation: "AME justification 句作为非线性模型四拍的固定过渡拍"
+      note: "目前 corpus 中尚无此固定过渡句式，建议审阅后入库"
+    - slot: "R4"
+      observation: "区域显著性图作为交互不显著时的弹性支持依据"
+      note: "存在审稿争议风险，建议作为可选变体而非默认骨架"
+
+  batch_metadata:
+    total_papers_processed: 1
+    estimator_family: "Logit_Probit_Ordered_Probit"
+    novel_skeletons_found: 2
+    rejected_skeletons: 0

@@ -1,0 +1,47 @@
+---
+corpus_enrichment:
+  batch_id: "batch_2026-05-22_desai2011"
+  estimator_family: "计数模型"
+  source_paper: "Desai_2011_AMJ"
+  source_subfield: "ob_hr"
+
+  slot_updates:
+    - slot: "R3"
+      action: "create_new"
+      skeleton_id: "r3_count_cross_model_consistency"
+      skeleton: "Results are similar across models. The main effect of [predictor] is consistently significant and [direction]. As [predictor] increases, [units] are generally [less/more] likely to [outcome]. However, the interaction between [predictor] and [moderator] is consistently [direction] and significant, suggesting that [moderator] moderates the direct effect of [predictor]. When [field_condition], [units] become [more/less] likely to [outcome]. This finding supports Hypothesis [x]."
+
+    - slot: "R3"
+      action: "create_new"
+      skeleton_id: "r3_count_nonsignificant_brief"
+      skeleton: "The [effect_type] between [predictor] and [moderator] is not significant, failing to provide support for Hypothesis [x]."
+
+    - slot: "R2"
+      action: "create_new"
+      skeleton_id: "r2_table_split_by_domain"
+      skeleton: "Table [x] presents models examining [hypothesis_domain_A]. Table [y] presents models examining [hypothesis_domain_B]. Model 1 in Table [x] includes only controls. Model 2 adds [predictors]. [Model 3/4 add interactions]. Model 5 includes all terms."
+
+    - slot: "R7"
+      action: "create_new"
+      skeleton_id: "r7_theory_derived_posthoc"
+      skeleton: "The theoretical logic motivating Hypothesis [x] suggests that [mechanism]. As a result, [behavioral_implication]. [Previous_citation]. Thus, we conducted an analysis to determine whether [testable_derivation]. [Table_x] presents [estimator] models estimating [derived_DV]. The [direction] and significant [effect_type] suggests that [theoretical_conclusion]. This finding is directly consistent with the [theory] explanation."
+
+    - slot: "R1"
+      action: "create_new"
+      skeleton_id: "r1_diagnostic_narrative_with_lr_test"
+      skeleton: "Table [x] presents descriptive statistics and correlations. The high correlation between [variable_a] and [variable_b] ([r] = [value]) was expected, given that [theoretical_reason]. However, this correlation could make the variables' effects difficult to distinguish. It was theoretically important to retain both variables, since [conceptual_distinction_citation]. To address the possibility of multicollinearity, we conducted preliminary analyses (not reported) excluding [control_variable]; results were similar. Likelihood-ratio tests, reported in Tables [y] and [z] below, were also used to compare fit across models, as multicollinearity does not affect these tests."
+
+  novel_patterns:
+    - slot: "R7"
+      observation: "OB/institutional theory 论文中，post-hoc 机制检验和后果检验常被包装在 Robustness Checks 标题下，使用 'theoretical logic suggests... thus we conducted' 节奏而非标准 threat-based 结构"
+      note: "建议为 write-results 增加 R7/R8 混合组织变体，或增加诚实边界：事后检验必须标记为 exploratory"
+
+    - slot: "R5"
+      observation: "2011 AMJ 计数模型论文完全缺失经济显著性（无 IRR、AME、predicted count change），仅报告方向+显著性"
+      note: "反映早期标准与现代 count model 报告规范的差异。不推介入库，但作为语料库历史参照。"
+
+  batch_metadata:
+    total_papers_processed: 1
+    estimator_family: "计数模型"
+    novel_skeletons_found: 5
+    rejected_skeletons: 0

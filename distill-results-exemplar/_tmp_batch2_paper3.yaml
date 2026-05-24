@@ -1,0 +1,96 @@
+corpus_enrichment:
+  batch_id: batch_2026-05-22_paper3
+  estimator_family: IV_2SLS
+  source_paper: Malik_2025_JOM_Mixed_Gambles_in_Product_Recalls
+  source_subfield: strategy
+  slot_updates:
+  - slot: R1
+    action: create_new
+    skeleton_id: r1_heckman_vif_diagnostic
+    skeleton: Table 1 presents descriptive statistics and correlations for all variables, excluding industry and year dummies.
+      The mean values for [outcome1] and [outcome2] were [value] and [value], respectively. The correlation between [key_predictor_A]
+      and [key_predictor_B] was [value], consistent with prior studies (e.g., [citation]). Additionally, a variance inflation
+      factor analysis was conducted and produced values within the acceptable limit of [threshold], suggesting that multicollinearity
+      was not a significant issue.
+  - slot: R2
+    action: create_new
+    skeleton_id: r2_heckman_first_stage_navigation
+    skeleton: Since not all firms in our sample [experienced the event] in a given year, we used Heckman selection models
+      to control for selection bias by estimating a firm’s likelihood of [event] using a selection instrument, which should
+      be related to selection (i.e., [selection likelihood]) but not outcomes (i.e., [dependent variable]; [citation]). We
+      used [policy_shock] as our selection instrument ([citation]). Table 2 presents the first-stage results, where the [instrument]
+      exhibits a robust positive coefficient (b = [value], p < [threshold]), confirming that [instrument] is highly relevant
+      for predicting [event]. Therefore, the instrument is both conceptually valid and statistically significant for isolating
+      the selection effect.
+  - slot: R3
+    action: create_new
+    skeleton_id: r3_probit_marginal_effect_four_beat
+    skeleton: Model [X] (Table [Y]) reports the second-stage results of the Heckman selection probit model. The analysis shows
+      a [positive/negative] and significant coefficient for [predictor] (b = [value], p = [threshold]). Due to the difficulty
+      in directly interpreting regression coefficients and significance levels in probability models ([citation]), and as
+      hypotheses should not be tested solely by examining p-values ([citation]), the average marginal effect is visualized
+      in Figure [Z]. The confidence intervals (CIs) of the marginal effects do not cross zero, thus supporting Hypothesis
+      [H]. A one-standard-deviation increase in [predictor] from the mean value ([from] to [to]) [increased/decreased] the
+      probability of [outcome] from [base]% to [new]%.
+  - slot: R4
+    action: create_new
+    skeleton_id: r4_interaction_marginal_effect_region_plot
+    skeleton: Model [X] (Table [Y]) adds the interaction term between [moderator] and [predictor], yielding a [positive/negative]
+      coefficient for [outcome] (b = [value], p [relation] [threshold]). Although this interaction term is not statistically
+      significant at the conventional p = 0.05 threshold, Figure [Z] indicates that the marginal effect of [predictor] is
+      significant for [moderator] levels below [value]. Thus, Hypothesis [H] is partially supported.
+  - slot: R5
+    action: create_new
+    skeleton_id: r5_probabilistic_magnitude_one_sd
+    skeleton: A one-standard-deviation increase in [predictor] from the mean value ([from] to [to]) [increased/decreased]
+      the probability of [outcome] from [base]% to [new]%.
+  - slot: R6
+    action: create_new
+    skeleton_id: r6_partial_support_null_boundary
+    skeleton: Although the interaction term is not statistically significant at the conventional p = 0.05 threshold, Figure
+      [Z] indicates that the marginal effect of [predictor] is significant for [moderator] levels below [value]. Thus, Hypothesis
+      [H] is partially supported.
+  - slot: R7
+    action: create_new
+    skeleton_id: r7_iv_threat_based_robustness
+    skeleton: '[Threat sentence]. A common approach to this problem is using two-stage least squares modeling ([citation]).
+      Regarding [predictor_A], we used two instruments: [Instrument_1] and [Instrument_2]. [Instrument_1] ([citation]) exploits
+      the heterogeneous effect of a nationwide regulatory change or exogenous shock ([citation]; [citation]). Known also as
+      a shift-share instrument, it acts as a difference-in-difference analysis, with the shock affecting the independent variable
+      ([citation]). [Rationale for instrument validity]. Regarding [Instrument_2], our rationale is that it primarily determines
+      [predictor] ([citation]). However, any effect on [outcome], if present, operates solely through [predictor]. With respect
+      to [predictor_B], we used another two instruments: [Instrument_3] and [Instrument_4]. Both variables can largely influence
+      [predictor_B]; however, their effects on [outcome], if present, are likely to operate exclusively through [predictor_B].
+      As reported in [Appendix Table], we used the Sargan-Hansen test to examine the validity of these instruments ([citation]).
+      The test results suggest that our instruments are exogenous (Hansen’s J chi2([df]) = [value], p = [threshold]). Furthermore,
+      the second-stage regression models produced results consistent with those of the main models.'
+  - slot: R8
+    action: create_new
+    skeleton_id: r8_post_hoc_tactic_differences
+    skeleton: We also assessed whether the two [tactics] indeed differ in meaningful ways as we discussed previously. Our
+      results suggest that [group_A] are significantly [more/less] likely to [outcome1] (Models [X]–[Y]), but do not exhibit
+      a notable preference for [outcome2] (Models [X]–[Y]). [Theoretical interpretation]. [Group_B] are [more/less] likely
+      to [outcome1] but [more/less] likely to [outcome2]. [Theoretical interpretation]. Overall, these additional analyses
+      suggest that, while [tactic1] and [tactic2] are both relevant, [tactic1] is likely to be primary and more active than
+      [tactic2].
+  novel_patterns:
+  - slot: R2
+    observation: Heckman selection model中，第一阶段结果单独成表（Table 2），并在Results正文中详细报告第一阶段系数和显著性，而非仅在Appendix呈现。
+    note: 这为write-results中Heckman/选择模型提供了第一阶段前置导航的新范式。
+  - slot: R3
+    observation: Probit模型结果报告采用四拍变体：方向→系数显著性→边际效应可视化（Figure）→概率幅度解释→支持判断。特别强调了'不应仅凭p值检验假设'的元科学声明。
+    note: 这是MVP30语料库中首次出现的Probit结果四拍+元科学声明的混合节奏，建议作为Logit/Probit骨架的推荐变体。
+  - slot: R4
+    observation: 交互效应报告采用'系数不显著但边际效应图显示区域显著'的策略，并据此给出'partially supported'的判断。
+    note: 这为处理边界显著交互提供了新的R4骨架变体，但需在skill中增加警告：仅当图形显示清晰阈值边界时才可使用。
+  - slot: R7
+    observation: IV稳健性检验为两种核心自变量分别配备两组工具变量（共4个IV），并使用Sargan-Hansen overidentification test统一检验，而非逐变量报告。
+    note: 这是一种高度结构化的IV稳健性组织方式，适用于多核心自变量的IV设计。
+  - slot: R8
+    observation: 事后分析比较两种因变量（战略时机 vs 战略沉默）在控制变量上的差异反应，并赋予理论解释，将其包装为'differences in IM tactics'而非纯粹的robustness。
+    note: 这是一种将post hoc检验转化为理论贡献的修辞策略，可作为R8的新范式。
+  batch_metadata:
+    total_papers_processed: 1
+    estimator_family: Heckman_Probit_IV
+    novel_skeletons_found: 8
+    rejected_skeletons: 0

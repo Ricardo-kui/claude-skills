@@ -1,0 +1,68 @@
+corpus_enrichment:
+  batch_id: batch_2026-05-22_paper1
+  estimator_family: 生存分析
+  source_paper: Mayo_Ball_Mills_2022_POMS
+  source_subfield: om
+  slot_updates:
+  - slot: R1
+    action: append_skeleton_or_increment
+    skeleton_id: r1_hazard_descriptive_vif
+    skeleton: '[R1] 先报告描述性统计与相关性矩阵，随后检查方差膨胀因子（VIF），确认无严重多重共线性，再引入主模型结果。 该骨架适用于 hazard / 计数 / 非线性模型中需要在进入系数表前完成数据质量声明的场景。'
+  - slot: R2
+    action: append_skeleton_or_increment
+    skeleton_id: r2_main_hazard_exp_interpret
+    skeleton: '[R2] 主效应结果：先展示仅含控制变量的基线模型，再展示加入核心自变量后的完整模型。 对 hazard 模型系数采用 exp(β)−1 的方式转化为百分比解释（如“hazard 提高 77%”），并同时报告 β
+      与 p 值。 需明确说明参照组（如 middle tertile），并给出方向性结论以支持 H1。'
+  - slot: R3
+    action: append_skeleton_or_increment
+    skeleton_id: r3_interaction_forced_ceo
+    skeleton: '[R3] 调节效应（机制检验）结果：引入交互项后，先复制主效应模型作为对照列，再报告含交互项的模型。 对交互项系数进行符号与显著性解读，判断调节方向是否支持假设中的机制解释（如“前任 CEO 被强制解职时，早期 tenure
+      的 recall hazard 更高”）。 若交互项出现非假设预期方向，需额外说明。'
+  - slot: R4
+    action: append_skeleton_or_increment
+    skeleton_id: r4_subgroup_wald_test
+    skeleton: '[R4] 子群分析结果：按调节变量（如 discretion 高低）拆分样本分别回归， 通过 Wald chi-square 检验比较子群间核心系数差异， 并指出某一子群中主效应消失（系数不显著），从而支持机制解释（如“low
+      discretion recalls 与 CEO tenure 无关”）。'
+  - slot: R5
+    action: append_skeleton_or_increment
+    skeleton_id: r5_figure_coefficient_plot
+    skeleton: '[R5] 图形化呈现：将回归系数以柱状图形式可视化，分别对应 H1/H2/H3 的实证模式， 使读者直观对比 early/late tenure 在不同条件下的 hazard 差异。 适用于 hazard / Logit
+      / 计数模型中系数方向对比强烈的场景。'
+  - slot: R6
+    action: append_skeleton_or_increment
+    skeleton_id: r6_robust_model_selection
+    skeleton: '[R6] 模型选择稳健性：针对主模型设定（如时间累积 vs. 重置、分布假设）， 报告替代模型（reset-time hazard、logistic regression）的结果， 确认核心自变量系数方向与显著性保持一致，从而增强对识别策略的信心。'
+  - slot: R7
+    action: append_skeleton_or_increment
+    skeleton_id: r7_robust_measure_sensitivity
+    skeleton: '[R7] 测量敏感性稳健性：对核心自变量的分类方式（tertiles / quartiles / linear-log）进行替换， 报告不同设定下系数方向与显著性的一致性， 并以图形展示多种设定下的 hazard
+      趋势，排除结果受测量方式驱动的可能。'
+  - slot: R8
+    action: create_new
+    skeleton_id: r8_cem_matching_ate
+    skeleton: '[R8] 样本选择稳健性（CEM 匹配）：采用 Coarsened Exact Matching (CEM) 对处理组（early/late tenure）进行一对一匹配， 报告平均处理效应（ATE）及其显著性，验证在控制可观测选择偏差后核心结论仍然成立。
+      适用于观察性研究中对样本自选择担忧较强的场景。'
+  - slot: R9
+    action: append_skeleton_or_increment
+    skeleton_id: r9_reverse_causality_alternative
+    skeleton: '[R9] 反向因果与替代解释： (a) 反向因果检验——以过去 recall 率预测未来 forced CEO turnover，若系数不显著则排除反向因果； (b) 替代理论解释——引入 operational
+      performance 交互项（如 COGS 变化、运营改善文本、CEO 运营背景）， 若 tenure 主效应仍显著且交互项不显著，则排除替代解释。'
+  novel_patterns:
+  - slot: R4
+    observation: 子群分析中不仅报告分样本系数，还使用 Wald chi-square 检验直接比较系数差异，并进一步指出低 discretion 组中主效应完全消失（β≈0, p>0.10），从而将机制验证从‘差异显著’推进到‘效应由某子群完全解释’。
+    note: 这是一种比常规交互项更强的机制验证策略，值得在 om / ob_hr 领域推广。
+  - slot: R8
+    observation: 在生存分析/hazard模型中引入CEM匹配作为稳健性检验，而非PSM。作者明确对比了CEM与PSM的区别（King & Nielsen 2019），并基于四个理论驱动的协变量进行粗化匹配，报告ATE而非 hazard
+      ratio。
+    note: 为 hazard / 事件历史类论文提供了样本选择稳健性的可迁移范式，尤其是当处理变量为 tenure 分段时。
+  - slot: R9
+    observation: 针对‘产品质量随 tenure 提升’这一替代解释，作者设计了三种 operational performance 测量（COGS变化、10-K文本运营改善词频、CEO运营背景），并以交互项形式逐一检验。所有交互项均不显著，从而保留原解释。
+    note: 这是处理‘潜在混淆机制’的系统性方法，适用于任何以 tenure / experience 为核心自变量的研究。
+  - slot: R2-R5
+    observation: 全文结果部分采用‘假设驱动’的叙事结构：每个假设对应一个表格（Table 6/7/8），并在表格之间插入系数图（Figure 1a/b/c），形成‘表格+图形’的交替节奏，而非一次性堆砌所有回归结果。
+    note: 这种节奏适合假设数量较少（3个）且每个假设有明确机制的故事线，可作为 3-hypothesis 论文的参考模板。
+  batch_metadata:
+    total_papers_processed: 1
+    estimator_family: 复发事件生存分析 / Recurrent-Event Hazard (Exponential)
+    novel_skeletons_found: 4
+    rejected_skeletons: 0

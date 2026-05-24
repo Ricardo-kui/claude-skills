@@ -11,6 +11,7 @@ source_papers:
   - eilert2017 (JM, 2017): "Variation in recall timing raises important questions"
   - wu2025 (SMJ, 2025): "From activism risk to corporate self-regulation"
   - han2020 (AMJ, 2020): "From misconduct event to contextual evaluation"
+  - desai2012 (AMJ, 2012): "Narrative callback: 'as the example above suggests'"
 created: 2026-05-19
 source: Migrated from global corpus + MVP30 validation
 ---
@@ -89,6 +90,27 @@ source: Migrated from global corpus + MVP30 validation
 
 ---
 
+### 变体 F：修辞问→学术枢转型（paruchuri_pollock_kumar2020 型）
+
+**模板**:
+> "These questions lie at the heart of research on [academic domain], which considers how [phenomenon definition] ([citations])—in other words, [metaphorical restatement tying back to hook]."
+
+**来源**: paruchuri_pollock_kumar2020 (SMJ), P1
+
+**原文锚定**:
+> "These questions lie at the heart of research on reputation spillovers, which considers how a focal firm's actions can affect the reputations of other firms in the same category (e.g., Barnett & King, 2008; Zavyalova, Pfarrer, Reger, & Shapiro, 2012)—in other words, how the drama created by one firm affects others associated with it."
+
+**关键特征**:
+- **"These questions lie at the heart of research on..."** → Rhetorical Question Hook专用枢轴
+- **"—in other words, [metaphor]"** → 破折号引入口语化重述，降低学术术语进入门槛
+- 一句完成三件事: 学术定位 + 现象定义 + 隐喻回响
+
+**适用**: Rhetorical Question Hook；Epigraph+Rhetorical Question组合Hook
+
+**禁忌**: 不要在无Rhetorical Questions的Introduction中使用"These questions"
+
+---
+
 ### 变体 D：隐喻→概念化型
 
 **模板**:
@@ -99,6 +121,28 @@ source: Migrated from global corpus + MVP30 validation
 - "under the rubric of" → 优雅的学术过渡
 
 **适用**: 使用隐喻、类比或形象化语言的 Hook
+
+---
+
+### 变体 E：叙事回响型（desai2012 型）
+
+**模板**:
+> "[Literature_turn_starter], as the [example/story] above suggests, [scale-up from specific to general]. [Phenomenon] can [broaden] throughout [field] as [mechanism] diffuses broadly following [trigger], potentially affecting [targets] far from the initial events ([citations])."
+
+**来源**: desai2012 (AMJ), P3 首句
+
+**原文锚定**:
+> "Much is known regarding how individual organizations respond to accidents, scandals, and other disruptions that arise directly through their own operations (Carroll, Rudolph, & Hatakenaka, 2002; Cyert & March, 1963; Elsbach & Kramer, 1996; Suchman, 1995). However, as the example above suggests, these disruptions can also impair legitimacy throughout an organizational field, or an institutionally recognized set of interacting organizations and stakeholders, as scrutiny diffuses broadly following crises, potentially affecting organizations far from the initial events (Barnett & King, 2008; Jonsson, Greve, & Fujiwara-Greve, 2009; Yu, Sengul, & Lester, 2008)."
+
+**关键特征**:
+- **"as the example above suggests"** → 从Hook的具体故事回响到学术对话——用Hook案例作为学术论点的实证锚点
+- **三合一过渡**: 一句完成 (a) Hook回响 + (b) 文献共识建立 + (c) 从个体到系统层面的scale-up
+- **定义嵌入**: "an organizational field, or an institutionally recognized set of interacting organizations and stakeholders" → 在过渡句中顺势定义关键术语
+- **从个体→领域**: 在同一个过渡句中完成层次跳跃
+
+**适用**: Immersive Narrative / Case-based Hook后的过渡。特别适合故事驱动的AMJ Introduction
+
+**禁忌**: 不要在无具体Hook的论文中使用"as the example above suggests"——必须有可回响的叙事
 
 ---
 

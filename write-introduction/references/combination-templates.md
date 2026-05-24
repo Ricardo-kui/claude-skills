@@ -212,3 +212,39 @@ Same paragraph map as Combination 8, but P4 emphasizes how boundary conditions r
 **Problematization templates**:
 1. "Although extant theory and research has yielded considerable insight on [topic], it has focused almost entirely on [dominant level]. Scholars have devoted little theoretical or empirical attention to understanding how [micro behavior] may influence [macro outcome]."
 2. "The final component of our theory explains how [micro-level mechanism] can trigger [macro-level outcome] by [mechanism]."
+
+---
+
+## Combination 11: Inadequacy + (Mechanism + Boundary + Output)
+
+> **Exemplar**: **Shen, Zhou, Wang, Zhang** (JOM, practical puzzle + 三三制调节); **Kundro & Rothbard** (AMJ, debate unresolved + 三向交互); **Eilert 2017** (JM, policy paradox + ability-motivation dual path)
+> **Narrative tension**: Perspective blind spot (实践信念 vs 研究发现矛盾)
+
+**核心特征**：这是 Inadequacy 的高配组合——不仅修正现有文献的机制理解，还要识别边界条件并给出方向性输出预测。Theory 部分通常为 **E 调节效应型**（含 E3/E4/E5 扩展协议）。
+
+**Paragraph function map**:
+| Paragraph | Function | Words | Required |
+|-----------|----------|-------|----------|
+| P1 | Hook — `03-data-shock` / `04-puzzle-paradox` / `10-practical-puzzle` (hook) | 50-80 | ✅ |
+| P2 | Literature Turn — Synthesized Coherence（连接多个文献流，展示共同盲区） | 60-100 | ✅ |
+| P3 | Tension — `15-practical-puzzle` 或 `14-debate-unresolved` | 70-110 | ✅ |
+| P4 | Stakes + Theory Lens（紧凑型可合并；AMJ/ASQ 需显式理论 Stakes） | 60-100 | ✅ |
+| P5 | Preview — 机制 + 边界条件 + 实证策略预告 | 70-110 | ✅ |
+| P6-P7 | Contribution — Mechanism + Boundary + Output 三维声明 | 70-110 each | ✅ |
+
+**Problematization templates**:
+
+*变体 A — Practical Puzzle 型（Shen et al. / Eilert 2017 型）*:
+> "The question merits [theoretical/managerial] attention because in [context], it is widely believed among practitioners that [conventional wisdom] ([citations]). However, recent research has explored their downsides, suggesting that [downside 1], [downside 2], and [downside 3] ([citations]). Such contradiction leads to a practical puzzle: [puzzle question]? This puzzle suggests [N] [theoretical/practical] problems for [field]: (1) [question 1]? (2) [question 2]? and (3) [question 3]?"
+
+*变体 B — Debate Unresolved 型（Kundro & Rothbard 型）*:
+> "On the one hand, [theory A / view A] suggests that [prediction A] ([citations]). [Reasoning A]. On the other hand, [theory B / view B] suggests that [prediction B] ([citations]). [Reasoning B]. These competing perspectives have not been reconciled, leaving [specific gap]."
+
+*变体 C — Policy Paradox 型（Eilert 2017 型）*:
+> "[Phenomenon] affects [stakeholder outcome] and expose [actors] to [risk list]. Consequently, [intervention] are often [action] to limit damage. [Actions] are costly; [cost list]. Thus, [actor] has reasons to avoid quick response. However, delaying [action] may lead to [higher costs] through [cost mechanisms]. Therefore, although [events] are adverse, quick response may attenuate damage."
+
+**Risk reminders**:
+1. **必须解释为什么这是理论问题**：`15-practical-puzzle` 的 downside 必须基于**研究发现**（有文献支撑），不能是作者臆测；AMJ/ASQ 审稿人会追问 "so what for theory?"
+2. **问题列表必须对应论文结构**：(1) 对应主效应假设（Mechanism），(2) 对应边界条件假设（Boundary），(3) 对应缓解策略/干预假设（Output）
+3. **能量匹配**：`14-debate-unresolved` 能量中等，Hook 不应使用 `06-paradigm-challenge`（能量过高）；`15-practical-puzzle` 可配 `03-data-shock` 或 `04-puzzle-paradox`
+4. **Theory 路由**：此组合 Introduction 输出后，write-theory 应路由到 **E 调节效应型**，并根据调节器复杂度选择 E1/E2/E3/E4/E5 子协议

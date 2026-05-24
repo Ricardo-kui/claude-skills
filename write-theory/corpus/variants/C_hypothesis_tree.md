@@ -65,4 +65,5 @@ equally, because [moderator logic]."
 - [ ] 每个附加的交互项是否几何级增加了理论复杂度？是否值得？
 - [ ] 三向交互是否有清晰的叙事故事（而非 "exploratory"）？
 - [ ] 是否避免了 "fishing for significant interactions" 的印象？
-- [ ] T6 Closure 是否存在？
+- [ ] T6 Closure 是否存在？**强制！** 假设树型/调节效应型 4+ 假设后若无 Closure，理论碎片化——审稿人常见攻击点。实证证据: singh_grewal2023 (JMR) — 4 假设后直接进入 Data 部分，无整合框架收束; desai2012 (AMJ) — 4 假设(全部调节)后直接进入 Methods，无整合框架收束。
+- [ ] T6 Closure 是否显式连接了所有假设分支？（非 "we proposed several hypotheses" 的笼统总结）

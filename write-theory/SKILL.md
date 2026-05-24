@@ -84,7 +84,10 @@ theory_hints:
 ├── 核心贡献是识别 boundary condition / contingency → [E] 调节效应型
 │   ├── X, Y, Z 在同一层级 → [E1] 同层调节
 │   ├── Z 在更高/更低层级 → [E2] 跨层调节
-│   └── Moderator 为分类变量 → [E1.1] 分组调节
+│   ├── Moderator 为分类变量 → [E1.1] 分组调节
+│   ├── 三向交互 (X×W1×W2) → [E3] 三向调节
+│   ├── 有中介的调节 (Moderated Mediation) → [E4] 中介调节混合
+│   └── 多调节器按层次/维度系统分类 → [E5] 多层调节器分类
 └── 核心贡献是裁决两种对立理论的竞争预测 → [F] 竞争假设型
 ```
 
@@ -117,8 +120,9 @@ theory_hints:
 ├── 纯主效应 (X→Y) → 基础关系模板
 ├── 主效应 + 中介 (X→M→Y) → 机制推演模板 + 中介假设模板
 ├── 主效应 + 调节 (X×Z→Y) → 调节效应模板
-├── 调节 + 中介 (Moderated mediation) → 机制推演 + 调节混合
-└── 三向交互 (X×Z×W→Y) → 假设树模板
+├── 三向交互 (X×Z×W→Y) → E3 三向交互模板（参见 `corpus/variants/E_moderation.md` E3）
+├── 有中介的调节 (Moderated mediation) → E4 模板（参见 `corpus/variants/E_moderation.md` E4）
+└── 多层调节器分类 → E5 模板（参见 `corpus/variants/E_moderation.md` E5）
 ```
 
 ---
@@ -197,6 +201,18 @@ T6 不是"重复总结"，而是完成三个理论任务：框架锁定、逻辑
 
 **T6 缺失时的应急策略**：参见 `corpus/sentences/closure.md` —— "局部收束信号"
 
+**T6 按期刊差异化指导**（基于 batch_2026-05-24 跨 5 篇 Theory 蒸馏的聚合发现）:
+
+| 期刊 | T6 期望 | 发现 | 策略 |
+|------|---------|------|------|
+| **SMJ** | 中等 | 4/5 Theory 蒸馏缺失 T6 | SMJ 理论嵌入 "Theory and Hypotheses" 联合章节时，最后一个假设的收敛句可作为事实上的 T6 |
+| **JM** | 低 | JM 偏好 "Literature Review and Conceptual Background" 结构——理论构建替代了独立 Closure | 不需要独立 T6 段落；在通往 Methods 的过渡句中建立收敛 |
+| **AMJ / ASQ** | 高 | AMJ/ASQ 期望明确的框架总结（通常包括概念模型图） | 始终包含 T6；缺失会触发审稿人关于 "理论贡献模糊" 的评论 |
+| **OS** | 中等-高 | OS 期望理论阐述后接明确收敛 | 包含 T6；对于纯理论贡献尤其重要 |
+| **JOM / POMS** | 低-中等 | OM 期刊优先考虑实证严谨性而非理论完备性 | T6 可选；可被 Discussion 开篇取代 |
+
+**经验法则**: 期刊越偏向理论（AMJ/ASQ/OS），T6 越重要。期刊越偏向实证（JM/JOM/POMS），T6 越可能被省略而不受罚。
+
 ---
 
 ### Phase 4: 跨 Section 对齐检查（Introduction ↔ Theory）
@@ -236,7 +252,7 @@ T6 不是"重复总结"，而是完成三个理论任务：框架锁定、逻辑
 | B 机制推演型 | `corpus/variants/B_mechanism_elaboration.md` | `corpus/subprotocols/B2_dual_track.md` |
 | C 假设树型 | `corpus/variants/C_hypothesis_tree.md` | — |
 | D 质性过程理论型 | `corpus/variants/D_process_theory.md` | — |
-| E 调节效应型 | `corpus/variants/E_moderation.md` | `corpus/subprotocols/E1_categorical_moderation.md` |
+| E 调节效应型 | `corpus/variants/E_moderation.md` | `corpus/subprotocols/E1_categorical_moderation.md`；E3/E4/E5 扩展协议见同文件 |
 | F 竞争假设型 | `corpus/variants/F_competing_hypotheses.md` | — |
 
 #### 通用句式语料索引
@@ -319,10 +335,13 @@ T6 不是"重复总结"，而是完成三个理论任务：框架锁定、逻辑
 9. **段落内术语必须统一。**
 10. **调节效应的假设必须指定交互模式类型（enhancing/buffering/antagonistic/existence/competing），且必须排除反向交互。**
 11. **跨层调节必须在 P1 就声明 focal unit of analysis 和 nesting structure。**
-12. **图不能替代文字理论。**
-13. **T6 Closure 为 quasi-mandatory。** 所有构建类型都应包含 T6 段落（或在 Discussion 开篇补回）。
-14. **竞争假设必须使用非传统收敛信号。** 不可使用 "Therefore" 收束，应使用 "Given these competing arguments..." 等信号。
-15. **不要重复语料层内容。** 本文件是协议层；所有具体模板引用 `corpus/` 目录。
+12. **三向交互必须先解构现有文献对核心构念的"单一性"假设**，再论证第二层调节器如何改变第一层调节的方向/强度。
+13. **有中介的调节必须明确调节发生在中介路径的哪个环节**（X→M？M→Y？both？），且必须先建立 X→M→Y 的基础中介链。
+14. **多层调节器分类必须遵循层级一致性规则**：环境层调节器基于市场制度逻辑，组织层调节器基于企业内部资源禀赋逻辑；同一层次内调节器不应相互矛盾。
+15. **图不能替代文字理论。**
+16. **T6 Closure 为 quasi-mandatory。** 所有构建类型都应包含 T6 段落（或在 Discussion 开篇补回）。
+17. **竞争假设必须使用非传统收敛信号。** 不可使用 "Therefore" 收束，应使用 "Given these competing arguments..." 等信号。
+18. **不要重复语料层内容。** 本文件是协议层；所有具体模板引用 `corpus/` 目录。
 
 ---
 

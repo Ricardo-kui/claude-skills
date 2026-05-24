@@ -40,6 +40,7 @@ version: 3.2.0
 | 中 | `07-cost-benefit-tension` | Anecdote | 决策两难：行动成本 vs 延迟成本 | eilert2017 (JM) |
 | 中 | `11-institutional-anecdote` | Anecdote | 客观制度叙事→"unremarkable"理论常态化 | lehman2014 (MS) |
 | 中 | `10-immersive-narrative` | Anecdote | 五幕结构叙事（时间精确、人物有名） | desai2012 (AMJ) |
+| 中 | `17-debate-reframing` | Debate | "A long-standing debate... Rather than settling... our interest lies in how these manifest in practice" | park_lange_jeon (SMJ) |
 | 高 | `06-paradigm-challenge` | Trend | "According to conventional view... In reality, however..." | zhou2017, hahl2017, gamache2023 |
 | 高 | `02-epigraph-quote-pivot` | Quote | 权威引语/新闻个案/内部文件 | darby2026 (JOM) |
 | 高 | `14-paired-disasters` | Anecdote | 两个时间跨度大的相似灾难，建立"历史重演"谜题 | haunschild2015 (OS) |
@@ -77,6 +78,7 @@ version: 3.2.0
 |-----|---------|---------|----------|--------|
 | Incompleteness | `01-despite-progress-unaddressed` | "Although research has... little attention has been paid to..." | ROBUST (18p) | **仅 Incompleteness** — Inadequacy/Incommensurability 中为 0 |
 | Incompleteness | `12-forward-vs-backward-looking` | "Research has examined post-hoc consequences, yet what predicts timing..." | EMERGING (1p) | Incompleteness 专用 |
+| Incompleteness | `16-threefold-gap` | "Yet little research investigates X. This is surprising for [N] reasons. First... Second... Third..." | EMERGING (1p) | Incompleteness 专用。跨学科导入场景首选。Reason 1=实践普遍性 / Reason 2=邻近文献证据 / Reason 3=理论后果 |
 | Incompleteness | `08-cost-vs-benefit` | "Firms face a dilemma: [action] is costly, yet delaying is costlier..." | EMERGING (1p) | Incompleteness 专用 |
 | Incompleteness | `13-sequential-phenomenon-gap` | "We have good theory about A and good theory about B, but know little about A→B→A sequential cycling..." | EMERGING (1p) | Incompleteness 专用。Phenomenon 贡献首选——为循环现象奠基 |
 | Inadequacy | `02-implicit-assumption-wrong` | "The implicit assumption that... may be incorrect because..." | ROBUST (12p) | **仅 Inadequacy** — Incompleteness/Incommensurability 中为 0 |
@@ -84,6 +86,8 @@ version: 3.2.0
 | Inadequacy | `05-construct-confusion` | "Different labels have been used for the same phenomenon..." | ROBUST (6p) | **仅 Inadequacy** — Incommensurability 中为 0。Constructs 贡献首选，但**不能用于 Incommensurability** |
 | Inadequacy | `11-overlooked-alternative` | "The dominant approach has focused on [X], overlooking [Y]..." | EMERGING (1p) | Inadequacy 专用 |
 | Inadequacy | `09-resource-acquisition-vs-utilization` | "Although [strategy] benefits acquisition, it constrains utilization..." | EMERGING (1p) | Inadequacy 专用。概念上完美匹配"资源获取 vs 资源利用"场景，证据待积累 |
+| Inadequacy | `14-debate-unresolved` | "On the one hand... On the other hand..." 文献存在对立发现但缺乏整合框架 | EMERGING (2p) | Inadequacy 专用。Mechanism/Boundary/Output 贡献常见配对 |
+| Inadequacy | `15-practical-puzzle` | "widely believed among practitioners... However... Such contradiction leads to a practical puzzle" | EMERGING (2p) | Inadequacy 专用。JOM/POMS 极高适配，AMJ/ASQ 需补充理论 Stakes |
 | Incommensurability | `04-reality-contradicts-consensus` | "Whereas prior studies show X, empirical evidence is mixed... To resolve, we theorize..." | ROBUST (7p) | **仅 Incommensurability** — Incompleteness/Inadequacy 中接近 0 |
 | Incommensurability | `06-theoretical-imbalance` | "Two theoretical perspectives offer incompatible predictions..." | ROBUST (5p) | Incommensurability 为主 (40%)，Inadequacy 次之 (60%) |
 | Incommensurability | `07-same-policy-opposite-effects` | "The same practice increases [outcome] for Group A but decreases it for Group B..." | EMERGING (2p) | Incommensurability 专用 |
@@ -186,8 +190,10 @@ version: 3.2.0
 | Incompleteness | Phenomenon | **Lehman 2014** | **MS** |
 | Inadequacy | Constructs | Han 2024, Pollock 2015, **Pfarrer 2010** | AMP, ASQ, **AMJ** |
 | Inadequacy | Mechanism | Keeves 2017, Paruchuri 2020 | AMJ, SMJ |
+| Inadequacy | Mechanism + Boundary + Output | **Eilert 2017** (JM), **Kundro & Rothbard** (AMJ) | **JM**, **AMJ** |
 | Inadequacy | Boundary | Han 2020 | AMP |
 | Inadequacy | Phenomenon | DesJardine 2023 | AMJ |
+| Inadequacy | Mechanism + Boundary (OM) | **Shen, Zhou, Wang, Zhang** (JOM) | **JOM** |
 | Incommensurability | Constructs | Pontikes 2012 | ASQ |
 | Incommensurability | Mechanism | Zhou 2017 | ASQ |
 | Incommensurability | Boundary | Park 2025 | OS |
@@ -496,8 +502,8 @@ theory_hints:
 
 | 类别 | 文件数 | 覆盖范围 |
 |------|--------|---------|
-| Hooks | 15 | paradigm-challenge, data-shock, literature-consensus-blindspot, puzzle-paradox, cross-disciplinary-analogy, practical-puzzle, epigraph-quote-pivot, consequence-cascade, psychological-construct-hook, immersive-narrative, institutional-anecdote, cost-benefit-tension, contrary-to-belief, rhetorical-question, paired-disasters |
-| Tensions | 13 | despite-progress-unaddressed, implicit-assumption-wrong, structural-blindspot, reality-contradicts-consensus, construct-confusion, theoretical-imbalance, same-policy-opposite-effects, cost-vs-benefit, resource-acquisition-vs-utilization, constraint-vs-freedom, overlooked-alternative, forward-vs-backward-looking, sequential-phenomenon-gap |
+| Hooks | 16 | paradigm-challenge, data-shock, literature-consensus-blindspot, puzzle-paradox, cross-disciplinary-analogy, practical-puzzle, epigraph-quote-pivot, consequence-cascade, psychological-construct-hook, immersive-narrative, institutional-anecdote, cost-benefit-tension, contrary-to-belief, rhetorical-question, paired-disasters, debate-reframing |
+| Tensions | 16 | despite-progress-unaddressed, implicit-assumption-wrong, structural-blindspot, reality-contradicts-consensus, construct-confusion, theoretical-imbalance, same-policy-opposite-effects, cost-vs-benefit, resource-acquisition-vs-utilization, constraint-vs-freedom, overlooked-alternative, forward-vs-backward-looking, sequential-phenomenon-gap, debate-unresolved, practical-puzzle, threefold-gap |
 | Stakes | 6 | `01-general-theory-practice`, `02-quantified-economic-loss`, `03-disciplinary-gap-stakes`, `04-public-health-safety`, `05-firm-value-stock-market`, `07-reputation-legitimacy-crisis` |
 | Literature Turns | 3 | Progressive Coherence, Synthesized Coherence, Non-Coherence（每种含2-4个句法变体） |
 | Previews | 4 | mechanism-preview, findings-preview, robustness-preview, dv-methodology-defense |

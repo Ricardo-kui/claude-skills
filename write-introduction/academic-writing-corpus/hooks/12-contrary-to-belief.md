@@ -74,6 +74,29 @@ source: Extracted from MVP30 narrative_analysis files
 
 ---
 
+### 变体 C：共识挑战 + 沉浸式叙事型（darby2023 型）
+
+**模板**:
+> "Contrary to popular belief, [actor A]—not [actor B]—decide [critical action]. Although some [events] occur immediately, many are delayed. As described in [source], [actors] became aware of [problem] nearly [time lag] before initiating [action], subjecting [population] to [risk]. [Quantified human cost] are believed to have occurred prior to [action]."
+
+**来源**: darby2023 (MSOM), P1
+
+**原文锚定**:
+> "Contrary to popular belief, firm executives—not regulators—decide whether and when to recall potentially defective products. Although some recalls occur immediately, many are delayed. As described in the U.S. Department of Justice's (DOJ) investigation of GM, firm executives became aware of potentially defective ignition switches nearly 10 years before initiating a recall, subjecting consumers to considerable risk. At least 124 deaths are believed to have occurred prior to the recall."
+
+**关键特征**:
+- 第一句沿用经典 "Contrary to popular belief" 打破默认假设
+- 第二句引入时间维度（"Although some... many are delayed"），为后续叙事铺垫
+- 第三句转入具体案例（DOJ investigation of GM），用精确时间（"nearly 10 years"）建立震撼感
+- 第四句量化人类代价（"At least 124 deaths"），将制度安排转化为道德/实践紧迫性
+- 从"制度事实"到"时间延迟"到"具体案例"到"量化代价"，四句话完成从认知冲击到情感冲击的升级
+
+**适用**: 治理/监管研究中有明确时间延迟和可量化人类代价的情境（如产品召回、安全违规、医疗事故）
+
+**与变体 A 的区别**: 变体 A 是精简版（3句话，聚焦制度事实），变体 C 是扩展版（4句话，加入叙事时间线和量化代价），适用于 stakes 需要更强情感锚定的研究
+
+---
+
 ## 组装规则
 
 ### 必须配对

@@ -67,3 +67,14 @@ that has dominated prior research. Thus:"
 - [ ] 是否避免了 "X affects M, M affects Y, therefore mediation" 的机械拼接？
 - [ ] 收束论证是否明确说明了"比直接效应范式多知道了什么"？
 - [ ] T6 Closure 是否存在？
+
+---
+
+### Context-as-T1 Pattern (Mayo et al. POMS)
+
+When the empirical setting requires significant institutional legitimacy (e.g., lightly regulated industry, rare events), a T1 Construct Definition paragraph can be replaced by an institutional context paragraph that establishes:
+- Event rarity in the target industry vs. comparable industries
+- Regulatory environment characteristics
+- Why these characteristics make the chosen theory appropriate
+
+This is NOT a substitute for construct scope conditions—it is a bridge from empirical setting to theory.

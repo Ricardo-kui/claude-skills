@@ -13,6 +13,7 @@ source_papers:
   - keeves2017 (ASQ, 2017): Mechanism chain preview
   - ceo_regulatory_focus_ijrm (IJRM, 2021): Findings preview with effect size
   - darby2024 (MSOM, 2024): Two-layer causal chain preview
+  - darby2023 (MSOM, 2023): Split dual-preview for dual-gap papers
   - darby2026 (JOM, 2026): Robustness-heavy preview
   - pfarrer2010 (AMJ, 2010): DV methodology defense preview
 created: 2026-05-18
@@ -29,7 +30,7 @@ P5-P6 的功能：在理论框架建立之后，向读者预告"我们做了什�
 | 文件 | 内容 | 适用场景 |
 |------|------|---------|
 | [mechanism-preview.md](mechanism-preview.md) | 变体 A-C：理论整合型、分层机制型、挑战性预测型 | 需要预告核心理论逻辑的研究 |
-| [findings-preview.md](findings-preview.md) | 变体 D-G：经济显著性型、反例驱动型、两层因果链型、调节效应预览型 | 需要预告实证结果的研究 |
+| [findings-preview.md](findings-preview.md) | 变体 D-G, N：经济显著性型、反例驱动型、两层因果链型、调节效应预览型、分体式双预览型 | 需要预告实证结果的研究 |
 | [robustness-preview.md](robustness-preview.md) | 变体 H：稳健性密集预览型 + 紧凑版 | 方法复杂、检验繁多的实证论文 |
 | [extreme-case-justification.md](extreme-case-justification.md) | 变体 J：极端案例+混合方法辩护型 | 使用极端案例和多方法设计的研究 |
 | [dv-methodology-defense.md](dv-methodology-defense.md) | 变体 I：DV 方法论辩护型（正负不对称性） | DV 有天然双情境的研究 |

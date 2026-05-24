@@ -1,0 +1,346 @@
+# ============================================================
+# Distill Results Exemplar — Phase 0-5 Output
+# Paper: Pfarrer, Pollock, & Rindova (2010), AMJ
+# Topic: Firm Reputation vs Celebrity → Earnings Surprises & CAR
+# ============================================================
+
+paper_id: "Pfarrer_Pollock_Rindova_2010_AMJ"
+
+phase_0_results_profile:
+  estimator_family: "Logit_Probit_Ordered_Probit"
+  hypothesis_structure: "主效应 + 分组均值比较（非回归交互）"
+  robustness_organization: "按 threat 组织（GEE + Heckman）"
+  nonsignificant_reporting: "全部报告（inline，无独立R6）"
+  economic_significance_placement: "嵌入R4（CAR百分比即幅度）"
+  figure_types: []
+  number_of_tables: 5
+  number_of_hypotheses_tested: 6
+  number_of_nonsignificant_findings: 3
+
+phase_1_slot_map:
+  R1:
+    located: true
+    paragraph_range: "第1段"
+    diagnostics_reported: ["VIF", "correlation matrix", "estimation approach declaration", "odds-ratio convention"]
+  R2:
+    located: true
+    paragraph_range: "第2段"
+    table_navigation: "Table 2 (positive surprise) / Table 3 (negative surprise), Column 1=controls, Column 2=full model"
+    model_sequence_logic: "Matched-pair hypotheses (H1a/H1b, H2a/H2b) across separate tables"
+  R3:
+    located: true
+    paragraph_range: "第2-3段"
+    hypotheses_covered: ["H1a", "H1b", "H2a", "H2b"]
+    four_beat_completeness: "4/4 显著假设完整；非显著缩减为3拍（方向+不显著+不支持）"
+    nonsignificant_hypotheses: ["H1b", "H2b"]
+  R4:
+    located: true
+    paragraph_range: "第4-6段"
+    interaction_terms: []
+    simple_slopes_reported: false
+    note: "非回归交互，而是分组均值比较（high reputation / celebrity / none）"
+  R5:
+    located: false
+    note: "幅度解释嵌入R4的CAR百分比中，无独立段落"
+  R6:
+    located: false
+    note: "非显著结果 inline 处理于R3和R4中，无独立R6段落"
+  R7:
+    located: true
+    paragraph_range: "第7段（Robustness Checks）"
+    threats_addressed: ["lack of controls for CAR magnitude", "endogeneity"]
+    organization: "按 threat 组织"
+  R8:
+    located: false
+  R9:
+    located: false
+
+actual_sequence: ["R1", "R2", "R3", "R4", "R7"]
+deviation_from_standard: "R5 缺失（幅度嵌入R4）; R6 缺失（inline处理）; R8 缺失; R9 缺失"
+
+phase_1_5_quality_gate:
+  slot_coverage:
+    required_slots: ["R1", "R2", "R3", "R5", "R7"]
+    present_slots: ["R1", "R2", "R3", "R4", "R7"]
+    missing_slots: ["R5"]
+    coverage_rate: "80%"
+  special_design_markers:
+    detected: ["随机效应Logit", "事件研究CAR", "分组t检验", "Heckman校正"]
+    properly_addressed: ["R1 声明odds ratio惯例", "R3 非显著inline报告", "R4 分组比较替代交互", "R7 Heckman两阶段"]
+    inadequately_addressed: ["R5 无独立经济显著性段落", "R6 无独立非显著处理段落"]
+  source_sufficiency:
+    all_hypotheses_reported: true
+    robustness_organized_by_threat: true
+    economic_significance_present: false
+    nonsignificant_not_skipped: true
+  contradictions_or_gaps:
+    - "R5 缺失：CAR百分比虽呈现但未做独立幅度解释（如'相当于X%市值'）"
+    - "R4c 预测 high reputation < celebrity，但两者差异不显著，仅 inline 报告为不支持"
+  information_poverty_dimensions:
+    - "未报告置信区间"
+    - "未报告CAR回归的控制变量详细系数"
+    - "未报告简单斜率标准误（因非回归交互设计）"
+
+phase_2_distillation:
+  R3_rhythm:
+    beat_sequence: ["方向", "显著性+odds ratio", "幅度（likelihood翻译）", "支持判断"]
+    variants: ["四拍（显著）", "三拍（非显著：方向+不显著+不支持）"]
+    nonlinear_adaptation: "Logit专用：拍2报告odds ratio而非β；拍3将odds ratio翻译为'were less/more likely'"
+    nonsignificant_adaptation: "非显著假设：方向→不显著（系数+ p值）→不支持，省略幅度解释"
+  R4_rhythm:
+    beat_sequence: ["非参数验证", "分组均值呈现", "成对差异+t检验", "支持判断"]
+    note: "事件研究专用节奏：Patell Z验证→Table呈现→paired t-test→支持/不支持"
+  R7_rhythm:
+    threat_positioning: "One concern is that our findings depend on [specific threat]."
+    test_action: "To address this concern, we re-estimate our models using [method]."
+    result_pattern: "The results are substantively unchanged / [key coefficient] remains significant."
+    conclusion: "reducing concerns that [threat] drives the findings."
+  expression_skeletons:
+    - slot: "R1"
+      estimator: "Logit_Probit_Ordered_Probit"
+      skeleton_level: "paragraph"
+      skeleton: "[Table X] presents descriptive statistics and a correlation matrix for the variables used in testing our hypotheses. The means and standard deviations reflect values for raw rather than transformed measures. All variance inflation factors were below [threshold], with an average of [value]. Thus, multicollinearity is not a concern. [Estimation approach declared: e.g., random-effects logistic regression, with rationale for between-firm focus]. We report odds ratios to allow easier interpretation of the magnitude of effects."
+      transferability: "高 — 适用于所有非线性面板模型"
+      paradigm_exclusivity: "Logit/Probit/Ordered Probit 专用（odds ratio惯例）"
+      rhythm_tags: ["table_presentation", "diagnostic_reassurance", "estimation_declaration", "reporting_convention"]
+    - slot: "R2"
+      estimator: "Logit_Probit_Ordered_Probit"
+      skeleton_level: "paragraph"
+      skeleton: "[Table X] and [Table Y] present the results of [estimator] predicting the likelihood of [DV_positive] and [DV_negative], respectively. Column 1 presents the effects of the control variables, and column 2 presents the full model including [IV_1] and [IV_2]. We report odds ratios to allow easier interpretation. An odds ratio greater than one indicates the likelihood that an event will occur increases with a one-unit increase in the independent variable. An odds ratio less than one indicates the likelihood decreases."
+      transferability: "高 — 适用于二元结果假设成对检验"
+      paradigm_exclusivity: "Logit/Probit 专用"
+      rhythm_tags: ["table_navigation", "odds_ratio_convention", "incremental_model"]
+    - slot: "R3"
+      estimator: "Logit_Probit_Ordered_Probit"
+      skeleton_level: "sentence"
+      skeleton: "Hypothesis [x] predicted that [IV] would be [positive/negative] associated with [DV]. [Table X] shows that [IV] had an odds ratio of [value] (p [threshold]), which means [IV] firms were [less/more] likely to [DV] than [reference group]. Thus, Hypothesis [x] was [supported / not supported]."
+      transferability: "高"
+      paradigm_exclusivity: "Logit/Probit 专用（odds ratio + likelihood翻译）"
+      rhythm_tags: ["direction", "significance+odds_ratio", "likelihood_translation", "support"]
+    - slot: "R3"
+      estimator: "Logit_Probit_Ordered_Probit"
+      skeleton_level: "sentence"
+      skeleton: "However, [Table X] shows that [IV] did not have a significant effect on the likelihood of [DV]. Thus, Hypothesis [x] was not supported."
+      transferability: "高"
+      paradigm_exclusivity: "通用"
+      rhythm_tags: ["nonsignificance", "no_support"]
+    - slot: "R4"
+      estimator: "Logit_Probit_Ordered_Probit"
+      skeleton_level: "paragraph"
+      skeleton: "Initial nonparametric tests ([test names]) indicated that [market/audience] viewed [positive outcome] favorably (p [threshold]) and perceived [negative outcome] as bad news (p [threshold]). This pattern is consistent with previous studies. [Table Y] presents the size of each subsample category, the mean [outcome] associated with [condition A], [condition B], and [reference], the pairwise differences between the mean [outcome]s, and the significance of these differences based on paired t-tests of unequal variances."
+      transferability: "中 — 事件研究/分组比较专用"
+      paradigm_exclusivity: "事件研究CAR比较专用，非通用回归交互"
+      rhythm_tags: ["nonparametric_validation", "subgroup_means", "pairwise_differences", "t_test"]
+    - slot: "R4"
+      estimator: "Logit_Probit_Ordered_Probit"
+      skeleton_level: "sentence"
+      skeleton: "The [outcome]s for the [condition A] ([value] [unit]) and [condition B] ([value] [unit]) categories were significantly [larger/smaller] than the [outcome] for the [reference] category ([value] [unit]), and the [outcome] for [condition B] was significantly [larger/smaller] than the [outcome] for [condition A] (p [threshold])."
+      transferability: "中"
+      paradigm_exclusivity: "分组均值比较专用"
+      rhythm_tags: ["magnitude", "significance", "relative_comparison"]
+    - slot: "R4"
+      estimator: "Logit_Probit_Ordered_Probit"
+      skeleton_level: "sentence"
+      skeleton: "The nonparametric tests indicated that the [outcome]s for [condition A] and [condition B] were not significantly different from their predicted values, but the [outcome]s for the [reference] category were significantly different. The t-tests showed that the mean [outcome]s for [condition A] and [condition B] were significantly different from the [reference] category's mean [outcome] and that the [outcome]s for [condition A] and [condition B] were not significantly different from one another. Thus, Hypotheses [x] and [y] were supported, and Hypothesis [z] was not."
+      transferability: "中"
+      paradigm_exclusivity: "混合支持场景专用"
+      rhythm_tags: ["mixed_support", "nonparametric_cross_check", "pairwise_comparison"]
+    - slot: "R7"
+      estimator: "Logit_Probit_Ordered_Probit"
+      skeleton_level: "paragraph"
+      skeleton: "Because our tests did not allow us to control for other factors that can affect the size of [outcome], we ran [alternative estimator] regressions that predicted the magnitude of [outcome] while controlling for a variety of other factors. It is important to note that these regressions do not directly test Hypotheses [x–y], which address the performance of [group A] and [group B] relative to each other and relative to [reference]. Instead, the regressions examined if [IV_1] and [IV_2] had direct relationships with the magnitude of [outcome]. We found that [IV_1] (b = [value], p [threshold]) and [IV_2] (b = [value], p [threshold]) had positive, significant relationships with [outcome], and their inclusion significantly improved the fit of the model."
+      transferability: "中 — 适用于主检验为简单比较、需补充控制变量回归的场景"
+      paradigm_exclusivity: "非专属，但常见于事件研究第二阶段"
+      rhythm_tags: ["limitation_acknowledgment", "supplemental_regression", "caveat", "fit_improvement"]
+    - slot: "R7"
+      estimator: "Logit_Probit_Ordered_Probit"
+      skeleton_level: "sentence"
+      skeleton: "We also investigated whether endogeneity due to unobserved variables might have influenced our results. Using [author_year]'s criteria to select the appropriate estimation approach, we employed a Heckman correction model. We included predictor variables in the first-stage models that were significantly associated with [DV], but not with [outcome]. The first-stage models were highly significant in predicting [DV], but the selection correction instrument was not significant when entered into the second-stage models. Thus, endogeneity did not appear to be a significant problem in our study."
+      transferability: "高 — Heckman两阶段标准报告句式"
+      paradigm_exclusivity: "Heckman专用"
+      rhythm_tags: ["endogeneity_concern", "selection_criteria", "first_stage_significance", "instrument_insignificance", "endogeneity_rejection"]
+  validity_logic:
+    statistical_conclusion_validity: "报告odds ratio和p值；非参数检验（Patell Z, generalized sign）作为CAR比较的 sanity check；但未报告置信区间"
+    internal_validity: "Heckman校正处理内生性；GEE回归补充控制变量；但CAR比较本身无控制变量，这是作者明确承认的局限"
+    construct_validity: " celebrity 的多成分测量（visibility + affect）在Discussion中验证；visibility-only和affect-only的替代检验在Discussion中报告"
+
+phase_3:
+  avg_sentences_per_paragraph: 4.5
+  table_model_positioning_rate: 1.0
+  hypothesis_restatement_position: "段首"
+  four_beat_completeness_rate: 0.75
+  hedging_intensity:
+    "suggests": 0
+    "indicates": 2
+    "provides evidence": 0
+    "demonstrates": 0
+    "are consistent with": 1
+  causal_language_strength:
+    "associated with": 0
+    "consistent with": 1
+    "increases": 0
+    "causes": 0
+    "were less/more likely": 4
+  robustness_transition_patterns:
+    - "Because our tests did not allow us to control for..."
+    - "We also investigated whether..."
+  nonsignificant_handling_patterns:
+    - "However, [Table X] shows [IV] did not have a significant effect... Thus, Hypothesis [x] was not supported."
+    - "The [outcome]s for [condition A] and [condition B] were not significantly different from one another. Thus, Hypothesis [z] was not."
+  interaction_figure_introduction: "N/A — 无交互图，使用表格呈现分组均值"
+  economic_significance_benchmark: "CAR百分比（2.30%, 3.32%, 1.74%）作为天然幅度基准，但未做进一步 contextualization"
+
+phase_4_corpus_reference:
+  vault_enrichment:
+    new_skeletons_for_reference:
+      - slot: "R1"
+        estimator: "Logit_Probit_Ordered_Probit"
+        skeleton: "[Table X] presents descriptive statistics and a correlation matrix... All variance inflation factors were below [threshold]... We report odds ratios to allow easier interpretation..."
+        source_papers: ["Pfarrer_Pollock_Rindova_2010_AMJ"]
+        vault_path: "fine_grained/batch_3/skeletons/"
+        note: "R1 四合一密集开场：描述统计+诊断+估计器声明+报告惯例。适用于篇幅紧张的AMJ/ASQ风格。"
+      - slot: "R4"
+        estimator: "Logit_Probit_Ordered_Probit"
+        skeleton: "[非参数验证]→[分组均值表]→[成对差异+t检验]→[支持判断]。事件研究CAR比较的非回归交互替代方案。"
+        source_papers: ["Pfarrer_Pollock_Rindova_2010_AMJ"]
+        vault_path: "fine_grained/batch_3/skeletons/"
+        note: "当理论预测离散类别间的序位差异（high/medium/low）而非连续交互时，分组均值比较+paired t-test是有效替代。"
+    patterns_to_note:
+      - slot: "R3"
+        estimator: "Logit_Probit_Ordered_Probit"
+        observation: "非显著假设 inline 处理，不 defer 到 Discussion，也不在独立R6段落中处理"
+        note: "适用于非显著假设数量少（1-3个）且分散在不同表格中的情况。若非显著假设较多（>3），建议集中R6处理。"
+      - slot: "R7"
+        estimator: "Logit_Probit_Ordered_Probit"
+        observation: "Heckman校正报告采用'first-stage显著+selection instrument不显著=内生性不是问题'的标准叙事"
+        note: "此叙事在strategy/OB领域广泛接受，但finance领域可能要求更严格的exclusion restriction论证。"
+    new_anti_patterns:
+      - pattern: "CAR比较缺乏控制变量，但作者未在R2/R3中明确警告读者"
+        evidence: "仅在R7 robustness中补充GEE回归，主检验为无条件均值比较"
+      - pattern: "经济显著性缺失独立段落（R5）"
+        evidence: "CAR百分比虽呈现，但未翻译为'相当于X%市值'或'相对于行业均值'等contextualized幅度"
+    new_honesty_boundaries:
+      - boundary: "事件研究CAR分组比较不得声称因果效应，除非已满足事件研究的识别假设（无同时事件、无信息泄露等）"
+        source: "本文在Methods中报告了3天窗口和autodate处理，但未在Results中重申这些识别假设"
+  batch_metadata:
+    total_papers_processed: 1
+    estimator_distribution: {"Logit_Probit_Ordered_Probit": 1}
+    novel_skeletons_found: 3
+    rejected_skeletons: 0
+    rejected_reasons: []
+
+phase_5_qc:
+  completeness: true
+  clarity: true
+  placeholder_purity: true
+  level_separation: true
+  credibility: true
+  replicability: true
+  no_verbatim_copy: true
+  fact_boundary: true
+  causal_language_audit: true
+  nonsignificant_audit: true
+  robustness_audit: true
+  overall_status: "PASS"
+
+# ============================================================
+# Corpus Enrichment — Machine-Consumable YAML Block
+# ============================================================
+
+corpus_enrichment:
+  batch_id: "batch_2026-05-22_paper5"
+  estimator_family: "Logit_Probit_Ordered_Probit"
+  source_paper: "Pfarrer_Pollock_Rindova_2010_AMJ"
+  source_subfield: "strategy"
+
+  slot_updates:
+    # --- 骨架级（paragraph level）---
+    - slot: "R1"
+      action: "append_skeleton_or_increment"
+      skeleton_id: "r1_descriptive_vif_relogit"
+      skeleton_level: "paragraph"
+      skeleton: "[Descriptive statistics + correlation matrix presented first, with explicit note that VIFs are below threshold and multicollinearity is not a concern]. Then, [estimation approach declared upfront: random-effects logistic regression for binary outcome panels, with rationale for between-firm focus and convergence advantages]. [Odds-ratio reporting convention stated explicitly to aid interpretation]."
+
+    - slot: "R2"
+      action: "append_skeleton_or_increment"
+      skeleton_id: "r2_binary_outcome_hypothesis_pair_table"
+      skeleton_level: "paragraph"
+      skeleton: "[Hypotheses tested in matched pairs (H1a/H1b, H2a/H2b) across two separate tables for positive vs negative surprise dummies]. [Column 1 = controls only; Column 2 = full model with focal dummies]. [Each hypothesis evaluated by referencing odds ratio and significance, with explicit directional language: 'were less/more likely']. [Mixed support acknowledged in-line: one hypothesis in pair supported, the other not, without deferring to Discussion]."
+
+    - slot: "R3"
+      action: "append_skeleton_or_increment"
+      skeleton_id: "r3_logit_four_beat"
+      skeleton_level: "paragraph"
+      skeleton: "Hypothesis [x] predicted... Model [y] shows that the coefficient for [predictor] is [positive/negative] and statistically significant (β = [value], p < [threshold]). Because logit coefficients are not directly interpretable, we calculate the average marginal effect (AME). The AME indicates that a [one-unit/one-SD] increase in [predictor] is associated with a [percentage_point] [increase/decrease] in the probability of [outcome]. Thus, Hypothesis [x] is supported."
+
+    - slot: "R3"
+      action: "create_new"
+      skeleton_id: "r3_eventstudy_nonparametric_validation"
+      skeleton_level: "paragraph"
+      skeleton: "[Before presenting CAR comparisons, a brief nonparametric validation sentence confirms that the market indeed views positive surprises favorably and negative surprises as bad news (Patell Z and generalized sign tests)]. [This establishes that the event-study metric is behaving as expected before subgroup t-tests are interpreted]."
+
+    - slot: "R4"
+      action: "append_skeleton_or_increment"
+      skeleton_id: "r4_subgroup_mean_comparison_ttest"
+      skeleton_level: "paragraph"
+      skeleton: "[Results organized by subgroup category (high reputation / celebrity / none) with mean CARs, pairwise differences, and significance from paired t-tests of unequal variances]. [Directional predictions tested by comparing each treatment group to baseline and to each other]. [Support language is precise: 'significantly larger than,' 'significantly different from,' 'not significantly different from']. [Mixed support again handled in-line: H4c not supported because the two treatment groups do not differ significantly from each other]."
+
+    - slot: "R5"
+      action: "create_new"
+      skeleton_id: "r5_robustness_gee_heckman_endogeneity"
+      skeleton_level: "paragraph"
+      skeleton: "[Robustness section opens by stating the limitation of the primary test (lack of controls for CAR size) and introduces GEE regression as a supplemental check]. [Explicit caveat that the regression does not directly test the relative hypotheses but examines direct relationships with magnitude]. [Endogeneity addressed via Heckman correction, with first-stage significance reported and selection instrument insignificance interpreted as evidence that endogeneity is not a significant problem]. [All robustness results summarized narratively rather than in full tables, with key coefficients and significance levels noted]."
+
+    # --- 句式级（sentence level）---
+    - slot: "R3"
+      action: "create_new"
+      skeleton_id: "r3_sentence_logit_odds_likelihood"
+      skeleton_level: "sentence"
+      skeleton: "[Table X] shows that [IV] had an odds ratio of [value] (p [threshold]), which means [IV] firms were [less/more] likely to [DV] than [reference group]."
+
+    - slot: "R3"
+      action: "create_new"
+      skeleton_id: "r3_sentence_nonsignificant_inline"
+      skeleton_level: "sentence"
+      skeleton: "However, [Table X] shows that [IV] did not have a significant effect on the likelihood of [DV]. Thus, Hypothesis [x] was not supported."
+
+    - slot: "R4"
+      action: "create_new"
+      skeleton_id: "r4_sentence_subgroup_comparison_significance"
+      skeleton_level: "sentence"
+      skeleton: "The [outcome]s for the [condition A] ([value] [unit]) and [condition B] ([value] [unit]) categories were significantly [larger/smaller] than the [outcome] for the [reference] category ([value] [unit]), and the [outcome] for [condition B] was significantly [larger/smaller] than the [outcome] for [condition A] (p [threshold])."
+
+    - slot: "R4"
+      action: "create_new"
+      skeleton_id: "r4_sentence_mixed_support_inline"
+      skeleton_level: "sentence"
+      skeleton: "The nonparametric tests indicated that the [outcome]s for [condition A] and [condition B] were not significantly different from their predicted values, but the [outcome]s for the [reference] category were significantly different. The t-tests showed that the mean [outcome]s for [condition A] and [condition B] were significantly different from the [reference] category's mean [outcome] and that the [outcome]s for [condition A] and [condition B] were not significantly different from one another. Thus, Hypotheses [x] and [y] were supported, and Hypothesis [z] was not."
+
+    - slot: "R7"
+      action: "create_new"
+      skeleton_id: "r7_sentence_heckman_two_stage"
+      skeleton_level: "sentence"
+      skeleton: "Using [author_year]'s criteria to select the appropriate estimation approach, we employed a Heckman correction model. We included predictor variables in the first-stage models that were significantly associated with [DV], but not with [outcome]. The first-stage models were highly significant in predicting [DV], but the selection correction instrument was not significant when entered into the second-stage models. Thus, endogeneity did not appear to be a significant problem in our study."
+
+    - slot: "R7"
+      action: "create_new"
+      skeleton_id: "r7_sentence_supplemental_regression_caveat"
+      skeleton_level: "sentence"
+      skeleton: "It is important to note that these regressions do not directly test Hypotheses [x–y], which address the performance of [group A] and [group B] relative to each other and relative to [reference]. Instead, the regressions examined if [IV_1] and [IV_2] had direct relationships with the magnitude of [outcome]."
+
+  novel_patterns:
+    - slot: "R3"
+      observation: "非参数验证（Patell Z + generalized sign）嵌入在Logit结果和CAR分组比较之间，作为事件研究指标的行为 sanity check"
+      note: "目前 corpus 中尚无此变体，建议审阅后入库。适用于事件研究论文中主检验为分组比较而非回归的场景。"
+    - slot: "R4"
+      observation: "分组均值比较（high reputation vs celebrity vs none）+ paired t-tests 作为非回归交互的调节效应检验方式"
+      note: "当理论预测离散类别间的序位差异而非连续交互时，此方式可避免交互项解释困难。"
+    - slot: "R3"
+      observation: "二元结果假设成对检验（H1a/H1b, H2a/H2b）跨两个独立表格，inline处理混合支持"
+      note: "适用于正负向结果对称预测的场景，如positive/negative surprise、success/failure等。"
+
+  batch_metadata:
+    total_papers_processed: 1
+    estimator_family: "Logit_Probit_Ordered_Probit"
+    novel_skeletons_found: 3
+    rejected_skeletons: 0

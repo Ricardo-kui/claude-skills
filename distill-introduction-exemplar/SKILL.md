@@ -3,8 +3,19 @@ name: distill-introduction-exemplar
 description: |
   Introduction 范文蒸馏 meta-skill。输入单篇或批量论文的 Introduction 文本，输出结构化提炼报告：功能模块拆解、叙事结构模式、修辞策略 DNA、模块级表达骨架、Gap×Contribution 组合验证。
   核心原则：Introduction 内容高度非标准化，但功能框架标准化。提炼 HOW they stage the narrative, not WHAT they say。不复制具体措辞，只提取可跨论文复现的功能组织方式和修辞策略。
-  触发词：「蒸馏 introduction」「intro 范文分析」「拆解 introduction」「提取 intro 模板」「处理新论文 intro」「introduction 骨架提炼」。
-version: 2.0.0
+  触发词：「蒸馏 introduction」「intro 范文分析」「拆解 introduction」「提取 intro 模板」「处理新论文 intro」「introduction 骨架提炼」「继续蒸馏」「蒸馏下一篇」「introduction 蒸馏」。
+version: 2.2.0
+---
+
+# ⚠️ 上下文韧性协议（CRITICAL — 先读此节）
+
+**如果因上下文压缩导致完整 skill 指令不可用**（你无法看到 Phase 0-3 的详细协议），**必须**在执行蒸馏前 Read 此文件：
+```
+C:\Users\40500\.claude\skills\distill-introduction-exemplar\protocols\quick_reference.md
+```
+该文件包含压缩版 Phase 0-3 格式要求、证据链模板、输出文件命名规则、反模式清单。
+**禁止凭记忆手写**——缺少证据链或格式不一致的蒸馏报告需要返工。
+
 ---
 
 # Role
@@ -72,118 +83,6 @@ MVP30 索引已对 28 篇论文完成 Pollock 对齐标注。这些论文可以�
 
 ---
 
-## 批量模式上下文管理（Incremental Batch Strategy）
-
-> **问题**：30 篇论文 × 每篇 7 个模块的骨架 → 上下文窗口无法同时持有。Phase 4 跨论文聚合不能依赖内存中的数据。
-> **方案**：每篇论文蒸馏完成后，将其**轻量摘要**持久化到 `academic-writing-corpus/_batch_state.yaml`。Phase 4 只读取这个摘要文件做聚合，不依赖上下文中的原始蒸馏数据。
-
-### 批量工作流
-
-```
-Session N: 处理论文 1-5（或用户指定的任意数量）
-  For each paper:
-    Phase 0→1→2→2.4 → 产出 Fine-Grained Profile（完整，存 Vault）
-                    → 产出轻量摘要（写入 _batch_state.yaml，仅 15 行/篇）
-  Phase 4 不运行（等待所有论文处理完毕）
-
-Session N+1: 处理论文 6-10
-  读取 _batch_state.yaml → 了解已完成论文的 combo 分布
-  同上流程，追加轻量摘要
-
-... 所有论文处理完毕后 ...
-
-Final Session: Phase 4 聚合
-  读取 _batch_state.yaml（不读任何原始蒸馏数据）
-  → 执行跨论文模式验证
-  → 执行 Phase 4.5/4.6 入库
-```
-
-### 轻量摘要格式（_batch_state.yaml）
-
-每篇论文仅需 ~15 行 YAML，只包含 Phase 4 聚合需要的字段：
-
-```yaml
-batch_id: "batch_YYYY-MM-DD"
-status: "in_progress"
-total_papers_target: [用户指定的总数，如未知则 null]
-papers_processed: N
-last_updated: "YYYY-MM-DD"
-
-papers:
-  - paper_id: "darby2024"
-    status: "distilled"  # distilled / pending / skipped
-    combo: "Incompleteness × Mechanism"
-    gap_type: "Incompleteness"
-    contribution_dimension: "Mechanism"
-    hook_canonical_id: "03-data-shock"
-    tension_canonical_id: "01-despite-progress-unaddressed"
-    conversation_strategy: "Progressive Coherence"
-    hook_energy: "低"
-    narrative_structure: "线性收缩"
-    module_sequence: "standard"  # standard / theory_lens_first / stakes_embedded
-    tension_depth: 3
-    stakes_specificity: "高"
-    has_explicit_puzzle: true
-    has_stakes_paragraph: true
-    paragraph_count: 6
-    module_ratios: {hook: 15, literature_turn: 25, tension: 20, stakes: 10, theory_lens: 12, preview: 10, contribution: 8}
-    tone: "cautious"
-    distinctive_features: ["quantified stakes with government data", "three-reason论证法"]
-    avoids: ["overclaiming causality"]
-    weakest_aspect: "Stakes could be more specific — uses 'theoretically important' without quantification"
-    vault_profile_path: "D:/OneDrive/.../darby2024_distilled_introduction.md"
-
-combos_accumulator:
-  "Incompleteness × Mechanism":
-    paper_ids: ["darby2024", "eilert2017", "mayo2021"]
-    hook_ids: ["03-data-shock", "07-cost-benefit-tension", "08-consequence-cascade"]
-    tension_ids: ["01-despite-progress-unaddressed", "01-despite-progress-unaddressed", "08-cost-vs-benefit"]
-    module_sequences: ["standard", "standard", "stakes_embedded"]
-    tones: ["cautious", "assertive", "cautious"]
-    module_ratios_accumulator: [{hook: 15, ...}, {hook: 18, ...}, ...]
-    distinctive_features_accumulator: [["quantified stakes", ...], [...], ...]
-    avoids_accumulator: [["overclaiming causality"], [...], ...]
-```
-
-### 操作规则
-
-**开始批量处理时**：
-1. 检查 `academic-writing-corpus/_batch_state.yaml` 是否存在
-   - 存在且 `status = in_progress` → 询问用户：继续未完成的批量任务还是开始新批次？
-   - 不存在或 `status = completed` → 创建新 `_batch_state.yaml`，`batch_id` 使用当前日期
-2. 如果用户用 `--combo-filter` 缩小范围，在 `_batch_state.yaml` 中记录过滤条件
-
-**每篇论文蒸馏完成后（Phase 2.4 之后）**：
-1. 从 Phase 0-2.4 的输出中提取轻量摘要字段
-2. 追加到 `_batch_state.yaml` 的 `papers` 列表
-3. 更新 `combos_accumulator` 中对应 combo 的累积字段
-4. `papers_processed += 1`，`last_updated` 更新为当前日期
-5. 用 Edit 或 Write 工具写回 `_batch_state.yaml`
-
-**所有论文处理完毕后（Phase 4 执行时）**：
-1. 读取 `_batch_state.yaml`（这是 Phase 4 聚合的**唯一数据源**——不从上下文中读取原始蒸馏数据）
-2. 从 `combos_accumulator` 中提取每个 combo 的聚合数据
-3. 执行 Phase 4 原有的跨论文模式验证逻辑
-4. 完成后将 `status` 更新为 `completed`
-
-**跨 Session 恢复**：
-- 每次启动 distill 时检查 `_batch_state.yaml`
-- 如果 `status = in_progress` 且 `papers_processed < total_papers_target`，告知用户进度并询问是否继续
-- 用户可以从任意论文开始继续处理（通过 `--combo-filter` 或直接指定论文）
-
-### 上下文窗口安全边界
-
-| 操作 | 同时持有的论文数 | 每篇上下文中数据 |
-|------|----------------|----------------|
-| 单篇蒸馏（Phase 0→2.4） | 1 篇 | 完整 Introduction 文本 + 完整骨架 |
-| 检查点写入 | 1 篇 | 仅 ~15 行 YAML 摘要 |
-| Phase 4 聚合 | 0 篇原始数据 | 仅读取 `_batch_state.yaml`（30 篇 × 15 行 = 450 行 YAML，远低于上下文限制） |
-| Phase 4.5/4.6 入库 | 0 篇原始数据 | 基于 Phase 4 聚合输出 + corpus_enrichment |
-
-**安全原则**：Phase 4 聚合**永远不**同时持有原始蒸馏数据。如果 `_batch_state.yaml` 不存在或不完整，先运行单篇蒸馏补全，再运行 Phase 4。
-
----
-
 ## Phase 0 — Gap × Contribution 组合分类与叙事类型识别
 
 在读取正文前，先判断这篇 Introduction 的**组合类型**和**叙事野心**，决定后续模块检查清单和蒸馏焦点。
@@ -238,51 +137,6 @@ phase_0_combo_profile:
   has_explicit_puzzle_statement: true/false
   has_stakes_paragraph: true/false
 ```
-
----
-
-### Phase 0.5 — 加载语料库基线（Corpus Baseline Loading）
-
-> **目的**：在蒸馏 Paper 之前，先了解 corpus 中**已有**什么模板、多少变体。这样在 Phase 2.2 提炼骨架时，才能准确判断哪些是"新发现"、哪些是"已有覆盖"。
-
-#### 步骤
-
-**1. 读证据注册表**：读取 `academic-writing-corpus/_evidence_registry.yaml`，获取：
-- 所有模板的 canonical_id 清单（按 module 分组：hooks/tensions/stakes/literature_turns/previews/contributions/theory_lens）
-- 每个模板的 `paper_count`、`status`、`gap_distribution`
-- 每个模板的 `common_failures`（供 Phase 1.5 和 Phase 2.4 交叉验证）
-
-**2. 根据 Phase 0 组合类型，读索引文件**：
-
-| Phase 0 判定 | 必须读的索引 | 可选读的索引 |
-|-------------|------------|------------|
-| 任意组合 | `hooks/_index.md` | — |
-| Gap = Inadequacy 或 Incommensurability | `literature-turns/literature-turn-templates.md` | — |
-| Contribution = Constructs | `contributions/_index.md` | — |
-| Preview 需方法防御 | `previews/_index.md` | — |
-| Theory Lens 需框架选择 | `theory-lens/_index.md` | — |
-
-**3. 建立"语料库基线"**：读完上述文件后，在内部建立以下认知：
-
-```
-[语料库基线]
-已有 Hook 模板 (N个): [canonical_id 列表及其变体数量]
-已有 Tension 模板 (N个): [canonical_id 列表]
-已有 Stakes 模板 (N个): [canonical_id 列表]
-本组合 (Gap×Contribution) 的已有范文: [从注册表 gap_distribution 提取]
-已有 common_failures: [汇总]
-```
-
-**4. 基线驱动的深度选择**：根据语料库基线的覆盖状态，调整蒸馏深度：
-
-| 基线发现 | 深度调整 |
-|---------|---------|
-| 该 Gap×Contribution 组合已有 ≥5 篇论文 | 默认 L2 起步——优先识别新变体而非重复已知模式 |
-| 该组合仅有 1-2 篇论文 | 默认 L3——论文对 corpus 扩展价值高 |
-| 论文的 Hook 类型在 corpus 中无对应 canonical_id | 自动升级到 L3——可能需要 create_new_file |
-| 论文的 Tension 措辞在已有变体中无相似匹配 | Tension 模块升级到 L3 精度 |
-
-**注意**：如果 `_evidence_registry.yaml` 或索引文件不存在，回退到 SKILL.md 内嵌的决策表（即 Phase 0 和 Phase 2.2 的静态知识），不中断蒸馏。
 
 ---
 
@@ -479,48 +333,7 @@ phase_1_5_quality_gate:
   - Incommensurability 版本: "A consensus is building that [dominant view] ([citations]). Yet [counter-evidence], suggesting that [alternative view] may be [more accurate / incomplete]."
 [问题对应]: Dorobantu Q — "What is missing in prior research? What are its limitations?"
 [对应语料库]: academic-writing-corpus/tensions/01-despite-progress-unaddressed.md
-[入库动作]: none / append_variant / create_new_file
-[变体类型名]: "[如入库动作为 append_variant，给新变体起一个描述性名称，如'制度冲突型（lehman2014型）']"
-[原文锚定句]: "[如入库动作非 none，提取原文中能代表该变体的 1-2 个关键句，供 Phase 4.6 写入 corpus 文件]"
-[来源段落]: "[如入库动作非 none：作者_年份 (期刊), P[段落号]——从 Phase 1 module_map 的 paragraph_range 提取]"
-[关键特征列表]: "[如入库动作非 none：列出 2-4 个使该变体与已有变体不同的特征。每个特征一个短句，聚焦说服机制和标志性语言，如'用 regulatory shock 而非 efficiency logic 建立共识'、'以问题收束双段而非在同一段内完成转折']"
-[适用情境]: "[如入库动作非 none：什么研究情境下选这个变体而非其他变体？如'适用于有具体监管事件/政策冲击的研究场景'、'Incommensurability × Constructs 组合；ASQ 标志性双段 Hook 结构']"
-[使用禁忌]: "[如入库动作非 none：使用该变体时的注意事项，如'不要在没有充分文献回顾的情况下使用'、'反例必须有具体数据/案例支撑']"
 ```
-
-### 语料库感知比对（Corpus-Aware Comparison）
-
-> **核心原则**：在标记 `[入库动作]` 之前，必须读取目标 corpus 文件，将新骨架与已有变体逐一比对。不读文件就标记"新变体" = 可能重复入库。
-
-**比对流程**：
-
-1. **定位目标文件**：根据 `[对应语料库]` 字段确定目标 corpus 文件路径
-   - 如果该路径的文件**不存在** → 这是一个全新模板，`[入库动作]` = `create_new_file`，跳过后续步骤
-   - 如果文件**存在** → 进入步骤 2
-
-2. **读取已有变体**：读取目标 corpus 文件，提取所有已有变体的句法模板（`**模板**:` 后的文本）
-
-3. **逐变体相似度比对**：将新提炼的骨架（`[骨架]` 字段）与每个已有变体的句法模板进行功能相似度比较。比对标准（按优先级）：
-
-   | 比对维度 | 权重 | 判断方法 |
-   |---------|------|---------|
-   | **说服动作** | 最高 | 两个变体完成的是否为同一说服动作？（如都在做"共识建立→反例颠覆"） |
-   | **句法结构** | 高 | 核心句式是否同构？（如都是 "According to X... In reality, however..."） |
-   | **槽位类型** | 中 | 占位符的类型和数量是否接近？（如都有 [consensus] + [anomaly] + [resolution hint]） |
-   | **措辞层面** | 低 | 具体用词是否雷同？（措辞相似不重要——功能相似才重要） |
-
-4. **判定入库动作**：
-
-   | 比对结果 | `[入库动作]` | 说明 |
-   |---------|-------------|------|
-   | 与某个已有变体功能相似度 ≥ 70% | `none` | 该骨架已被 corpus 覆盖——记录匹配到的变体编号（如"匹配已有变体 C"） |
-   | 与所有已有变体功能相似度 < 70% | `append_variant` | 这是已有 canonical_id 的新变体——填写 `[变体类型名]` 和 `[原文锚定句]` |
-   | 目标文件不存在（新 canonical_id） | `create_new_file` | 这是 corpus 中没有的全新模板——还需填写 `[变体类型名]` |
-
-5. **记录比对证据**：在 Phase 2.2 输出中附一句比对摘要（不输出给用户，供 Phase 4.6 使用）：
-   ```
-   [比对摘要]: 与已有变体 C（效率逻辑→现实反驳型）说服动作重叠但句法结构不同（本变体用 regulatory shock 而非 efficiency logic 建立共识）→ append_variant
-   ```
 
 **必须记录的信息**：
 - 骨架句法（用方括号标记占位符）
@@ -529,16 +342,6 @@ phase_1_5_quality_gate:
 - Gap 变体（同类骨架在不同 Gap 类型中的改写模式）
 - **问题对应**：该骨架回答 Dorobantu et al. (2024) 研究设计问题链中的哪个问题
 - **对应语料库**：如该骨架与 `academic-writing-corpus/` 中的 canonical 模板对应，标注路径
-- **入库动作**：
-  - `none` = 该骨架已被已有变体覆盖，无需入库（默认值）
-  - `append_variant` = 该骨架是已有 canonical_id 的新变体，Phase 4.6 将追加到对应 .md 文件
-  - `create_new_file` = 该骨架属于 corpus 中不存在的全新 canonical_id，Phase 4.6 将创建新 .md 文件
-- **变体类型名**（仅 `append_variant`/`create_new_file` 时填写）：给新变体起一个描述性名称，格式为 "[变体中文描述]（[来源论文]型）"，如 "监管冲击型（darby2024型）"
-- **原文锚定句**（仅 `append_variant`/`create_new_file` 时填写）：提取原文中能代表该变体的 1-2 个关键句，保留原文措辞，供 Phase 4.6 写入 corpus 文件的 `**原文锚定**` 字段
-- **来源段落**（仅 `append_variant`/`create_new_file` 时填写）：从 Phase 1 `module_map.[module].paragraph_range` 提取。格式：`作者_年份 (期刊), P[段落号]`。供 Phase 4.6 写入 `**来源**` 字段
-- **关键特征列表**（仅 `append_variant`/`create_new_file` 时填写）：2-4 个短句，每个聚焦一个使该变体**与已有变体不同**的特征。聚焦说服机制和标志性语言——不重复模板本身的描述。供 Phase 4.6 写入 `**关键特征**` 字段
-- **适用情境**（仅 `append_variant`/`create_new_file` 时填写）：1-2 句说明什么研究情境下选这个变体而非其他变体。包括 Gap×Contribution 组合偏好、期刊适配、数据/方法前提。供 Phase 4.6 写入 `**适用**` 字段
-- **使用禁忌**（仅 `append_variant`/`create_new_file` 时填写）：1-2 句说明使用该变体时的注意事项。如 Phase 2.4 批评家发现了已知风险，优先记录。如无已知禁忌，填写 "暂无"。供 Phase 4.6 写入 `**禁忌**` 字段
 
 ### 2.3 Rhetorical Logic 提炼
 
@@ -561,15 +364,6 @@ phase_2_distillation:
         paradigm_exclusivity: "Incompleteness 专用"
         gap_variants: ["Inadequacy 版本", "Incommensurability 版本"]
         dorobantu_question: "Why is this puzzle important?"
-        corpus_path: "academic-writing-corpus/hooks/06-paradigm-challenge.md"
-        enrichment_action: "none / append_variant / create_new_file"
-        variant_name: "[如 append_variant: '监管冲击型（darby2024型）']"
-        original_anchor: "[如 append_variant: '原文关键句...']"
-        source_location: "[如 append_variant: 'darby2024 (MSOM), P2']"
-        key_features: ["[特征1]", "[特征2]", "[特征3]"]
-        applicability: "[如 append_variant: '适用于有具体监管事件/政策冲击的研究场景']"
-        taboos: "[如 append_variant: '反例必须有具体数据/案例支撑']"
-        comparison_summary: "[如 append_variant: '与已有变体 C 说服动作重叠但句法结构不同 → append_variant']"
     rhetorical_logic:
       audience_alignment: "..."
       puzzle_gap_rq_layering: "..."
@@ -626,47 +420,6 @@ phase_2_4_skeleton_critic:
 | **REJECT** | Gap 类型错配，或过度抽象失去生成力 | 丢弃，不进入语料库 |
 
 **注意**：批评家裁决记录存入 `vault_enrichment` 的 `rejected_skeletons` 或 `validated_skeletons`，供 Phase 4 跨论文聚合使用。
-
-### 批量检查点：写入轻量摘要（仅 --batch 模式）
-
-> **目的**：将当前论文的核心蒸馏数据以轻量格式写入 `_batch_state.yaml`，使 Phase 4 聚合时无需重新加载完整上下文。
-
-**触发条件**：当前运行标记为 `--batch` 模式。
-
-**执行时机**：Phase 2.4 完成后、Phase 3 开始前（此时骨架已验证，数据最可靠）。
-
-**写入内容**：从 Phase 0-2.4 输出中提取以下字段，追加到 `academic-writing-corpus/_batch_state.yaml`：
-
-```yaml
-- paper_id: "[从 Phase 0 paper_id 提取]"
-  status: "distilled"
-  combo: "[gap_type] × [contribution_dimension]"
-  gap_type: "[Phase 0]"
-  contribution_dimension: "[Phase 0]"
-  hook_canonical_id: "[Phase 2.2 对应语料库字段中提取的 canonical_id]"
-  tension_canonical_id: "[同上]"
-  conversation_strategy: "[Phase 0]"
-  hook_energy: "[Phase 0: 低/中/高]"
-  narrative_structure: "[Phase 0]"
-  module_sequence: "[Phase 1 actual_module_sequence 简化：standard / theory_lens_first / stakes_embedded]"
-  tension_depth: "[Phase 3 DNA 指标，如已计算；否则 Phase 1.5 stakes_stress_test 推断]"
-  stakes_specificity: "[Phase 3 DNA 指标，如已计算；否则 Phase 1.5 stakes_stress_test 推断]"
-  has_explicit_puzzle: "[Phase 0]"
-  has_stakes_paragraph: "[Phase 1.5]"
-  paragraph_count: "[Phase 1 实际段落数]"
-  module_ratios: {hook: N, literature_turn: N, tension: N, stakes: N, theory_lens: N, preview: N, contribution: N}
-  tone: "[Phase 3 Narrative Style Profile Tone 的主语气]"
-  distinctive_features: ["[Phase 3 Distinctive Feature 1]", "[Phase 3 Distinctive Feature 2]"]
-  avoids: ["[Phase 3 Avoid 1]", "[Phase 3 Avoid 2]"]
-  weakest_aspect: "[Phase 3 Quality Markers weakest_aspect]"
-  vault_profile_path: "[Fine-Grained Profile 的 Vault 存储路径]"
-```
-
-同时更新 `combos_accumulator.[combo]` 的累积字段（追加 paper_id、hook_id、tension_id、module_sequence、tone、module_ratios、distinctive_features、avoids）。
-
-**写入方式**：Read `_batch_state.yaml` → 定位 `papers` 列表末尾 → Edit 追加新条目 → 更新 `combos_accumulator` → 更新 `papers_processed` 和 `last_updated`。
-
-**非批量模式**：如果当前运行**未**标记 `--batch`，跳过此步骤，直接进入 Phase 3。
 
 ---
 
@@ -775,7 +528,7 @@ phase_2_4_skeleton_critic:
 [仅适用于该论文的特定现象、行业背景、文献引用，不可迁移]
 
 ## Corpus Reference Notes
-[供人工审阅的语料库沉淀注释，不自动修改 write-introduction skill]
+[本节列出蒸馏发现的所有 write-introduction 可更新项。**Phase 4.6 将自动执行这些更新——不等待用户确认。**]
 ```
 
 ---
@@ -783,25 +536,6 @@ phase_2_4_skeleton_critic:
 ## Phase 4 — 跨论文模式验证与语料库沉淀建议
 
 如果是 `--batch` 模式，在多篇论文提炼完成后执行此阶段。
-
-### 数据来源（批量模式）
-
-> **Phase 4 聚合不从上下文读取原始蒸馏数据。** 唯一数据源是 `academic-writing-corpus/_batch_state.yaml`。
-
-**执行前检查**：
-1. Read `_batch_state.yaml`，确认 `papers_processed ≥ 2`（至少有 2 篇论文才有聚合意义）
-2. 如果文件不存在或 `papers_processed < 2` → 告知用户"批量数据不足，请先蒸馏至少 2 篇论文"，跳过 Phase 4
-3. 如果文件存在且数据充足 → 从 `combos_accumulator` 和 `papers` 列表提取聚合数据
-
-**聚合数据提取**：
-- `combo_distribution` → 从 `combos_accumulator` 的 key 集合和各 combo 的 `paper_ids` 长度计算
-- `module_sequence_patterns` → 从各 combo 的 `module_sequences` 列表统计
-- `hook_patterns` / `tension_patterns` → 从各 combo 的 `hook_ids` / `tension_ids` 统计
-- `tension_depth` / `stakes_specificity` → 从 `papers` 列表中各论文的对应字段统计
-- `novel_findings` → 基于 Phase 2.2 的入库动作（已在 `_batch_state.yaml` 中不可直接获取——需辅以 Phase 2.4 的 VALIDATED skeletons 数据。如果上下文中有当前 Session 处理的论文的 Phase 2 数据，可合并使用；如果没有，仅基于 `_batch_state.yaml` 的 combo 级别模式做聚合，不做 skeleton 级别的 novel_findings）
-- `style_profile_enrichment.per_combo_styles` → 从 `combos_accumulator` 的 `tones`、`distinctive_features_accumulator`、`avoids_accumulator`、`module_ratios_accumulator` 聚合计算
-
-**非批量模式**：如果当前运行**未**标记 `--batch`（单篇蒸馏），Phase 4 基于当前论文的 Phase 2-3 数据直接产出 corpus 沉淀建议，不读 `_batch_state.yaml`。
 
 ### 三重验证标准
 
@@ -883,10 +617,6 @@ corpus_enrichment:
   papers_processed: N
   last_updated: "YYYY-MM-DD"
 
-  paper_gaps:
-    author_year: "Incompleteness"
-    author_year2: "Inadequacy"
-
   evidence_updates:
     - target: "academic-writing-corpus/tensions/01-despite-progress-unaddressed.md"
       canonical_id: "01-despite-progress-unaddressed"
@@ -942,102 +672,13 @@ corpus_enrichment:
 
 | 字段 | 用途 | 消费方 |
 |------|------|--------|
-| `paper_gaps` | 本批次新蒸馏论文的 Gap 类型映射（`paper_id: GapType`） | `_update_registry.py` → 追加到注册表 `paper_index`，驱动 gap_distribution 自动计算 |
 | `evidence_updates` | 对现有 corpus 文件的证据更新（新增论文、状态升级、新建模板） | write-introduction 加载时合并到 `_evidence_registry.yaml` |
 | `gap_distribution_updates` | 更新某模板在各 Gap 类型中的分布，验证排他性 | write-introduction 决策表（Gap→模板映射） |
 | `anti_pattern_updates` | 批量蒸馏发现的常见失败模式 | write-introduction 反模式清单 |
-| `validation_feedback` | Phase 6 验证结果 | `_evidence_registry.yaml` validation_history |
+| `validation_feedback` | Phase 6 验证结果（积累至 10+ 次后人工汇总） | `_evidence_registry.yaml` validation_history |
 | `batch_metadata` | 批量处理元数据 | 注册表 meta 字段 |
 
-**`paper_gaps` 填写规则**：
-- 从 Phase 0 `phase_0_combo_profile.gap_type` 提取每篇论文的 Gap 类型
-- key = 论文短 ID（如 `darby2024`），value = `Incompleteness` / `Inadequacy` / `Incommensurability`
-- 仅填写**本批次新蒸馏**的论文，已在注册表 `paper_index` 中的论文不需要重复
-
 **与 Vault 注释的关系**：`corpus_enrichment` 块是**机器消费**的结构化输出；Phase 4 原有的 `vault_enrichment` 和 `patterns_to_note` 等 YAML 是**人工消费**的参考注释。两者并行产出，不互相替代。
-
-### style_profile_enrichment 硬化输出块
-
-在 Phase 4 输出末尾，**必须附加**以下结构化 YAML 块。这是 distill 与 write-introduction 之间关于**风格数据**的硬化接口——write-introduction 在渲染阶段读取 corpus 文件的 `## 风格画像` 章节时，此块提供跨模板、跨组合的聚合风格数据：
-
-```yaml
-style_profile_enrichment:
-  batch_id: "batch_YYYY-MM-DD"
-  papers_processed: N
-  last_updated: "YYYY-MM-DD"
-
-  per_template_styles:
-    - canonical_id: "06-paradigm-challenge"
-      module: "hooks"
-      new_style_contributions:
-        tone_additions:
-          - tone: "assertive"
-            evidence: "[原文证据句]"
-            source: "[作者_年份]"
-            condition: "适用于 ASQ/ASR 理论颠覆场景"
-        distinctive_feature_additions:
-          - feature: "[叙事标记描述]"
-            example: "[原文例句]"
-            source: "[作者_年份]"
-        avoid_additions:
-          - avoid: "[回避写法]"
-            function: "[修辞功能]"
-            source: "[作者_年份]"
-        quality_marker_updates:
-          strongest_aspect: "[如新论文的 strongest_aspect 更具体，则替换]"
-          weakest_aspect: "[如新论文发现新的已知风险，则追加]"
-        module_ratio:
-          hook: N%
-          literature_turn: N%
-          tension: N%
-          stakes: N%
-          theory_lens: N%
-          preview: N%
-          contribution: N%
-          source: "[作者_年份]"
-
-  per_combo_styles:
-    - combo: "Incommensurability × Mechanism"
-      papers_analyzed: N
-      dominant_tone: "[该组合最常出现的主语气]"
-      tone_distribution: {"assertive": N, "cautious": N, "vivid": N}
-      common_distinctive_features:
-        - feature: "[跨模板共同出现的叙事标记]"
-          prevalence: "[N/N papers]"
-      common_avoids:
-        - avoid: "[跨模板共同回避的写法]"
-          prevalence: "[N/N papers]"
-      aggregated_weaknesses:
-        - weakness: "[跨论文反复出现的薄弱点]"
-          prevalence: "[N/N papers]"
-      module_ratio_average:
-        hook: N%
-        literature_turn: N%
-        tension: N%
-        stakes: N%
-        theory_lens: N%
-        preview: N%
-        contribution: N%
-
-  anti_pattern_style_updates:
-    - pattern: "[风格相关的失败模式，如 'Incompleteness 论文 Tone 偏 cautious 时审稿人倾向质疑增量贡献']"
-      evidence: ["[作者_年份]", "[作者_年份]"]
-      recommended_action: "[给 write-introduction 的建议]"
-```
-
-**style_profile_enrichment 字段说明**：
-
-| 字段 | 用途 | 消费方 |
-|------|------|--------|
-| `per_template_styles` | 每个模板新增的风格贡献——由 Phase 4.6 操作 C 写入 corpus 文件 `## 风格画像` | write-introduction 渲染阶段读 corpus 文件时获取 |
-| `per_combo_styles` | Gap×Contribution 组合级别的聚合风格模式——跨模板的共同特征 | write-introduction 决策阶段：根据用户 combo 推荐语气/节奏/回避策略 |
-| `anti_pattern_style_updates` | 风格相关的失败模式——供反模式清单更新 | write-introduction 反模式检查 |
-| `module_ratio_average` | 该组合的平均模块比重——供 write-introduction 推荐段落数时参考 | write-introduction §6 段落结构推荐 |
-
-**与 corpus_enrichment 的关系**：
-- `corpus_enrichment` → 定量证据（paper_count、status、gap_distribution）→ 进注册表
-- `style_profile_enrichment` → 风格数据（tone、rhythm、features、avoids）→ 进 corpus 文件 `## 风格画像` + 供跨模板风格推荐
-- 两者在 Phase 4 末尾同时产出，互不替代
 
 ### Phase 4.5 — 证据注册表更新逻辑
 
@@ -1067,362 +708,52 @@ Phase 4 完成后，根据 `corpus_enrichment` 块更新 `academic-writing-corpu
 
 **工具位置**: `~/.claude/skills/distill-introduction-exemplar/_update_registry.py`
 
-**注意**：Phase 4.5 只更新证据注册表的**定量证据**。定性内容（句法模板、关键特征、反模式提醒）由 Phase 4.6 写入 corpus .md 文件。
+**注意**：Phase 4.5 只更新证据注册表中的**定量证据**（paper_count、gap_distribution、status）。**定性内容**（新增模板变体、反模式、句法骨架）由 Phase 4.6 自动写入 corpus 模板文件——不等待人工审阅。
 
 ---
 
-### Phase 4.6 — 语料库文件入库（定性内容自动写入）
-
-> **此 Phase 替代旧的人工审阅后再手动更新的流程。** 将 Phase 2.4 验证通过的**新句法变体**和**新模板**直接写入对应的 corpus .md 文件。
-
-#### 执行门控
-
-只有满足以下**全部条件**的骨架才触发文件写入：
-
-| 条件 | 来源 | 说明 |
-|------|------|------|
-| Phase 2.4 裁决 = VALIDATED | Phase 2.4 skeleton_critic | 三项测试全部通过 |
-| Phase 2.2 标记为需入库 | Phase 2.2 `[入库动作]` 字段 | 值为 `append_variant` 或 `create_new_file` |
-| 非重复 | 读取目标文件后人工判断 | 新变体与已有变体的模板句法相似度 < 70% |
-
-**跳过条件**：
-- `[入库动作]` = `none` → 该骨架已被已有变体覆盖，跳过
-- Phase 2.4 裁决 = REVISE → 标记为待修正，不写入（但记录在 Phase 4.6 摘要的"待修正"栏）
-- Phase 2.4 裁决 = REJECT → 不写入
-
-#### 操作 A：追加变体到已有模板文件（`append_variant`）
-
-**步骤**：
-
-1. **读取目标文件**：Phase 2.2 `[对应语料库]` 字段指定的路径
-2. **确定变体编号**：找到文件中最后一个 `### 变体 [字母]`，使用下一个字母（A→B→...→Z）
-3. **组装变体块**：从 Phase 2.2 骨架字段提取数据，按以下格式组装。每个 corpus .md 字段右侧标注了数据来源——**直接从 Phase 2.2 复制，不重新阅读原文**：
-
-```
-### 变体 [字母]：[变体类型名]（[来源论文]型）
-                                          ↑ 来源: Phase 2.2 [变体类型名]
-
-**模板**:
-> "[句法模板]"
-   ↑ 来源: Phase 2.2 [骨架]
-
-**来源**: [作者_年份] ([期刊]), P[段落号]
-                                        ↑ 来源: Phase 2.2 [来源段落]
-
-**原文锚定**:
-> "[原文关键句，保留原文措辞]"
-   ↑ 来源: Phase 2.2 [原文锚定句]
-
-**关键特征**:
-- [特征1：为什么与已有变体不同]
-- [特征2：独特的说服机制]
-- [特征3：标志性语言特征]
-   ↑ 来源: Phase 2.2 [关键特征列表]（逐条展开）
-
-**适用**: [什么研究情境下选这个变体而非其他变体]
-   ↑ 来源: Phase 2.2 [适用情境]
-
-**禁忌**: [如有使用禁忌]
-   ↑ 来源: Phase 2.2 [使用禁忌]
-```
-
-**字段映射总表**（Phase 2.2 → corpus .md）：
-
-| corpus .md 字段 | Phase 2.2 来源字段 | 直接复制？ |
-|----------------|-------------------|----------|
-| `### 变体 X：[名称]` | `[变体类型名]` | 是 |
-| `**模板**` | `[骨架]` | 是 |
-| `**来源**` | `[来源段落]` | 是 |
-| `**原文锚定**` | `[原文锚定句]` | 是 |
-| `**关键特征**` | `[关键特征列表]` | 逐条展开为 bullet points |
-| `**适用**` | `[适用情境]` | 是 |
-| `**禁忌**` | `[使用禁忌]` | 是 |
-
-4. **定位插入点**：找到文件中 `## 组装规则` 标题（如无则用 `## 期刊适配`，如无则追加到文件末尾）。在它**之前**插入新变体块。
-5. **用 Edit 工具写入**
-6. **更新文件 frontmatter**：新变体写入后，读取文件顶部 `---...---` 之间的 frontmatter，做以下三项更新：
-
-   **6a. 追加 source_papers**：将新论文以以下格式追加到 `source_papers` 列表末尾：
-   ```yaml
-   source_papers:
-     - author_year (journal, year): "brief description of what this paper contributes to the template"
-   ```
-   如果该论文已在 `source_papers` 中存在，跳过。`brief description` 从 Phase 2.2 的 `[变体类型名]` 和 `[关键特征列表]` 提取。
-
-   **6b. 重算 cross_paper**：根据 `source_papers` 列表重新计算：
-   - 从每条 `source_papers` 条目提取期刊名（括号中的缩写，如 `ASQ`、`SMJ`）
-   - 计数：`paper_count = len(source_papers)`，`journal_count = len(unique journals)`
-   - 判定规则（与 `_evidence_registry.yaml` 状态规则一致）：
-     - `paper_count ≥ 5` 且 `journal_count ≥ 2` → `cross_paper: ROBUST`
-     - `paper_count ≥ 3` → `cross_paper: VERIFIED`
-     - `paper_count ≤ 2` → `cross_paper: EMERGING`
-
-   **6c. 更新日期**：如果 frontmatter 中有 `updated:` 字段 → 更新为当前日期。如果没有 → 在 `source:` 行之前新增 `updated: [当前日期]`。
-
-   **更新方式**：使用 Edit 工具，`old_string` = 当前 frontmatter 块（从第一个 `---` 到第二个 `---`），`new_string` = 更新后的 frontmatter 块。**注意**：只改 `source_papers`、`cross_paper`、`updated` 三个字段，不修改其他 frontmatter 字段（`type`、`canonical_id`、`status`、`gap_type`、`generativity`、`exclusivity`、`created`、`source` 等保持不变）。
-
-7. **验证**：读回文件 frontmatter 和新变体段落，确认 frontmatter 更新正确、变体编号正确、格式正确
-
-#### 操作 B：创建新模板文件（`create_new_file`）
-
-当蒸馏发现 corpus 中不存在的新 canonical_id 时：
-
-**步骤**：
-
-1. **确定文件路径**：`academic-writing-corpus/[module]/[canonical_id].md`
-2. **确认不重复**：Phase 4.5 已在注册表中创建条目，确认该 canonical_id 在注册表中 `status = EMERGING` 且 `paper_count = 1`
-3. **创建文件**，使用以下完整骨架：
-
-```markdown
----
-type: canonical_[module单数]
-canonical_id: "[canonical_id]"
-status: EMERGING
-gap_type: [Gap类型]
-cross_paper: EMERGING
-generativity: [来自 Phase 2.4]
-exclusivity: [来自 Phase 2.2 范式排他性]
-source_papers:
-  - [作者_年份] ([期刊], [年份]): "[论文核心主题]"
-created: [当前日期]
-source: Distilled by distill-introduction-exemplar Phase 4.6
----
-
-# [canonical_id] — [模板中文名]
-
-## 功能描述
-
-[Phase 2.1 persuasive_action + 简洁的功能说明]
-
-## 适用场景
-
-- Gap 类型 = **[Gap类型]**
-- [具体适用条件1]
-- [具体适用条件2]
-
-## 验证状态
-
-### 跨论文复现
-- **EMERGING** (1 paper): [作者_年份] ([期刊])
-
-### 生成力
-- [来自 Phase 2.4 generativity_test]
-
-### 排他性
-- [来自 Phase 2.2 范式排他性]
-
----
-
-## 句法模板
-
-### 变体 A：[变体类型名]（[来源]型）
-
-**模板**:
-> "[句法模板]"
-
-**来源**: [作者_年份] ([期刊]), P[段落号]
-
-**原文锚定**:
-> "[原文关键句]"
-
-**关键特征**:
-- [特征1]
-- [特征2]
-
----
-
-## 组装规则
-
-### 必须配对
-- [如 Phase 2.3 rhetorical_logic 中有配对信息则填写，否则写"暂无跨论文配对数据"]
-
-### 互斥
-- [如 Phase 1.5 或 Phase 4 聚合分析中有互斥信息则填写]
-
-### 反模式提醒
-- [Phase 2.4 批评家发现的常见问题]
-
----
-
-## 期刊适配
-
-| 期刊 | 适配度 | 注意事项 |
-|------|--------|---------|
-| [期刊名] | [⭐/⭐⭐/⭐⭐⭐] [评级] | [具体注意事项] |
-
----
-
-## 槽位填充正误对比
-
-### `[关键槽位名]` — [槽位描述]
-
-❌ "[错误填充示例]" → [为什么错]
-
-✅ "[正确填充示例]" → [为什么对]
-
-**填充检查**: [检查方法]
-```
-
-4. **写入文件**（Write 工具）
-5. **同步注册表**：Phase 4.5 已创建注册表条目，Phase 4.6 创建 .md 文件后两者配对完整
-
-#### 操作 C：写入/更新风格画像（`append_variant` 和 `create_new_file` 均执行）
-
-> **目的**：让 Phase 3 的 Narrative Style Profile 数据进入 corpus 文件，供 write-introduction 消费。每个 corpus 文件末尾维护一个 `## 风格画像` 章节，随每次入库累积更新。
-
-**步骤**：
-
-1. **检查是否已有风格画像章节**：在目标 corpus 文件中搜索 `## 风格画像` 标题
-2. **提取 Phase 3 风格数据**：从当前论文的 Fine-Grained Profile 中提取以下字段：
-   - `narrative_style_profile.tone` + `tone_evidence`
-   - `narrative_style_profile.paragraph_rhythm`
-   - `narrative_style_profile.distinctive_features`
-   - `narrative_style_profile.avoids`
-   - `narrative_style_profile.quality_markers`
-3. **合并写入**：
-
-   - **如果文件已有 `## 风格画像` 章节**：读取已有内容，将新论文的 Distinctive Features 和 Avoids 中不重复的条目追加到对应列表末尾。新条目以 `[作者_年份]` 标注来源。Quality Markers 如果新论文的 strongest_aspect 比已有的更具体，替换。Tone 如果新论文的主语气与已有不同，追加为次语气（标注来源论文和适用条件）。
-
-   - **如果文件尚无 `## 风格画像` 章节**：在文件末尾（`## 槽位填充正误对比` 之后，或文件最后一个 `---` 之后）创建该章节，严格按以下格式：
-
-```markdown
----
-
-## 风格画像
-
-> 以下风格特征是从使用本模板的多篇顶刊论文中聚合提取的。不是每篇论文都必须遵守，但偏离时应有明确理由。
-> 最后更新: [当前日期] | 聚合论文数: [N]
-
-### 语气光谱
-- **主语气**: [来自 Phase 3 Tone]
-- **证据**: "[来自 Phase 3 tone_evidence]"
-
-### 段落节奏
-- **典型节奏**: [来自 Phase 3 Paragraph Rhythm]
-
-### 标志性叙事标记
-- [[作者_年份]]: [来自 Phase 3 Distinctive Feature 1] — "[原文例句]"
-- [[作者_年份]]: [来自 Phase 3 Distinctive Feature 2] — "[原文例句]"
-
-### 刻意回避
-- [[作者_年份]]: [来自 Phase 3 Avoids 1] — 功能: [功能解释]
-- [[作者_年份]]: [来自 Phase 3 Avoids 2] — 功能: [功能解释]
-
-### 质量标记
-- **最值得模仿**: [来自 Phase 3 strongest_aspect]
-- **已知风险**: [来自 Phase 3 weakest_aspect]
-
-### 模块比重参考
-- Hook [N%] / Literature Turn [N%] / Tension [N%] / Stakes [N%] / Theory Lens [N%] / Preview [N%] / Contribution [N%]
-- *来源: [作者_年份]*
-```
-
-4. **更新聚合论文数**：已有章节的 `聚合论文数` +1
-5. **用 Edit 工具写入**（在文件末尾追加，或在已有 `## 风格画像` 章节内更新）
-
-**合并规则**：
-- `[作者_年份]` 标签用于区分不同来源论文的风格贡献——同一模板被多篇论文使用时会自然累积
-- 不覆盖已有内容，只追加——保留历史风格数据的完整性
-- 如果新论文的 Distinctive Feature 与已有条目功能相同（如都在说"使用 paired contrasts"），追加为同一 feature 下的新 evidence 句，不创建重复条目
-
-#### 操作 D：写入/更新组合风格画像（`append_variant` 和 `create_new_file` 均执行）
-
-> **目的**：让 `style_profile_enrichment.per_combo_styles` 的跨模板聚合数据进入一个可被 write-introduction 查询的文件。
-
-**目标文件**：`academic-writing-corpus/_combo_style_profiles.yaml`
-
-**步骤**：
-
-1. **检查目标文件是否存在**：Read `academic-writing-corpus/_combo_style_profiles.yaml`
-   - 如果不存在 → 创建空 scaffold（见下方格式）
-   - 如果存在 → 读取已有内容
-
-2. **定位 combo key**：从 Phase 0 `phase_0_combo_profile` 提取当前论文的 `gap_type` 和 `contribution_dimension`，组合为 key：`"Incompleteness × Mechanism"`。在 YAML 的 `combos` 下查找该 key。
-
-3. **合并写入**：
-   - **如果该 combo key 不存在**：从 `style_profile_enrichment.per_combo_styles` 中提取对应 combo 的数据，创建新条目
-   - **如果该 combo key 已存在**：更新 `papers_analyzed += 1`，将新论文的 tone 合并到 `tone_distribution`，新 distinctive_features/avoids/weaknesses 追加到对应列表（`[作者_年份]` 标注来源），重新计算 `module_ratio_average`（新旧比重加权平均）
-
-4. **用 Edit 工具写入**
-
-**文件格式**：
-
-```yaml
-# _combo_style_profiles.yaml
-# Aggregated style profiles by Gap×Contribution combo.
-# Auto-generated by distill-introduction-exemplar Phase 4.6 操作 D.
-# Consumed by write-introduction for combo-level style recommendations.
-
-combos:
-  "Incommensurability × Mechanism":
-    papers_analyzed: 1
-    last_updated: "YYYY-MM-DD"
-    dominant_tone: "assertive"
-    tone_distribution:
-      assertive: 1
-      cautious: 0
-      vivid: 0
-    common_distinctive_features:
-      - feature: "[叙事标记描述]"
-        prevalence: "1/1"
-        example: "[原文例句]"
-    common_avoids:
-      - avoid: "[回避写法]"
-        prevalence: "1/1"
-        function: "[修辞功能]"
-    aggregated_weaknesses:
-      - weakness: "[薄弱点]"
-        prevalence: "1/1"
-    module_ratio_average:
-      hook: N
-      literature_turn: N
-      tension: N
-      stakes: N
-      theory_lens: N
-      preview: N
-      contribution: N
-```
-
-**合并规则**：
-- `papers_analyzed` 每次 +1
-- `dominant_tone`：当新论文的语气分布改变主导语气时更新
-- `tone_distribution`：每种语气计数累加
-- `common_distinctive_features`：功能相同的合并（更新 prevalence），功能不同的追加
-- `module_ratio_average`：加权平均 `(old_avg × old_N + new_val) / (old_N + 1)`
-- 每条 distinctive_feature/avoid/weakness 标注首次来源 `[作者_年份]`
-
-#### 安全规则
-
-- **绝不覆盖已有变体**：追加前确认变体类型名不与已有变体重名
-- **保留原文措辞**：句法模板和原文锚定保留 Phase 2.2 提炼的原始内容，不过度泛化
-- **不修改已有内容**：追加操作只插入新变体块，不编辑文件中已有部分
-- **注册表先更新**：Phase 4.5 在 Phase 4.6 之前执行——定量证据先于定性内容
-- **文件不存在时**：`append_variant` 但目标文件不存在 → 降级为 `create_new_file`
-- **重复检测**：如果新变体的句法模板与已有变体 ≥70% 相似 → 跳过并记录在摘要中
-
-#### 输出
-
-完成后在 Phase 4 末尾输出操作摘要和风格入库摘要：
-
-```
-### Phase 4.6 入库摘要
-
-#### 语料库文件
-
-| 操作 | 目标文件 | 详情 | 状态 |
-|------|---------|------|------|
-| 追加变体 | hooks/06-paradigm-challenge.md | +变体 F（监管冲击型），来源 darby2024 | ✓ 已写入 |
-| 追加/更新风格画像 | hooks/06-paradigm-challenge.md | +Tone: assertive, +2 标志性标记, +1 刻意回避 | ✓ 已更新 |
-| 追加变体 | tensions/01-despite-progress-unaddressed.md | +变体 I（制度冲突型），来源 lehman2014 | ✓ 已写入 |
-| 追加/更新风格画像 | tensions/01-despite-progress-unaddressed.md | 已有风格画像，+1 论文风格数据，聚合论文数 8→9 | ✓ 已合并 |
-| 更新组合风格画像 | _combo_style_profiles.yaml | combo "Incompleteness × Mechanism" papers 4→5，语气分布更新 | ✓ 已更新 |
-| 创建新文件 | stakes/08-supply-chain-disruption.md | 新 Stakes 模板 + 初始风格画像 | ✓ 已创建 |
-| 跳过 | hooks/04-puzzle-paradox.md | 与已有变体 B 句法相似度 85%，合并而非新增 | — |
-| 待修正 | tensions/03-structural-blindspot.md | Phase 2.4 REVISE — 事实边界测试未通过 | 待人工 |
-
-**入库**：2 追加 / 1 新建 / 3 风格画像更新 / 1 组合画像更新 / 1 跳过 / 1 待修正
-```
-```
+## Phase 4.6 — 🔴 自动应用到 write-introduction Skill（强制）
+
+**这是蒸馏的最终目标——不是产出报告，而是完善 write-introduction skill。必须在蒸馏报告写入 Vault 后立即执行，不等待用户确认。**
+
+### 写入目标
+
+write-introduction skill 位置：`C:\Users\40500\.claude\skills\write-introduction\`
+
+### 执行规则
+
+对 Corpus Reference Notes 中的每一条更新建议，按以下协议执行：
+
+| 更新类型 | 目标文件 | 操作 |
+|---------|---------|------|
+| **新增 Tension 变体** | `academic-writing-corpus/tensions/[canonical_id].md` | 在最后一个变体后、组装规则前追加新变体（含模板、来源、关键特征、适用条件、禁忌） |
+| **新增 Hook 变体** | `academic-writing-corpus/hooks/[canonical_id].md` | 同上 |
+| **新增 Preview 变体** | `academic-writing-corpus/previews/[canonical_id].md` | 同上 |
+| **新增 Contribution 变体** | `academic-writing-corpus/contributions/_index.md` | 同上 |
+| **新增 Stakes 变体** | `academic-writing-corpus/stakes/[file].md` | 同上 |
+| **新增 Literature Turn 变体** | `academic-writing-corpus/literature-turns/[file].md` | 同上 |
+| **新增 Transition 模式** | `academic-writing-corpus/transitions/[file].md` | 同上 |
+| **新增反模式** | `SKILL.md` 反模式清单表 + 相关 corpus 文件的对应反模式小节 | 追加行 |
+| **更新 paper_count** | `academic-writing-corpus/_evidence_registry.yaml` | 递增 paper_count，追加论文到 papers 列表 |
+| **更新 gap_distribution** | 同上 | 递增对应 Gap 类型的计数 |
+| **更新 _index.md** | corpus 子目录的 `_index.md` | 如有新文件或新变体分类，更新索引条目 |
+| **新增 Corpus Reference Note** | `SKILL.md` §10（Gap×Contribution 锚定）或 `references/combination-templates.md` | 仅当论文引入了新型 Gap×Contribution 组合时 |
+
+### 写入约束
+
+- **必须保留现有内容**：新增变体追加在已有变体之后，不覆盖已有变体
+- **变体编号**：使用下一个未使用的字母（如已有 A-K，新变体用 L）
+- **必须包含完整字段**：模板、来源（Author_Year_Journal）、原文锚定、关键特征、适用条件、禁忌
+- **不虚构复现性**：如果仅 1 篇论文支撑新变体，在来源中标注 `paper_count: 1 (EMERGING)`
+- **证据注册表同步更新**：每次写入 corpus 模板后，同步更新 `_evidence_registry.yaml` 的对应条目
+- **反模式必须有实证证据**：新增反模式必须附带至少 1 篇论文的具体表现（如 "shipilov_greve_rowley2019 中 H1b/H2b 被反转印证了此反模式"）
+
+### 写入后验证
+
+完成所有写入后，检查：
+1. `_evidence_registry.yaml` 中的 paper_count 与实际 papers 列表长度一致
+2. 新变体的模板包含有效的 `[占位符]`（非原文连续 8+ 词短语）
+3. 新变体在 corpus 文件的 `_index.md` 中有对应索引条目
 
 ---
 
@@ -1449,7 +780,7 @@ combos:
 3. **Rhetorical Logic Map**（Audience/Puzzle-Gap-RQ/Contribution Contract 处理模式）
 4. **Introduction DNA Metrics**（可对比的量化指标）
 5. **Dorobantu 问题链覆盖度表**
-6. **Corpus Reference Notes**（供人工审阅的语料库沉淀注释，不自动修改 skill）
+6. **Corpus Reference Notes**（Phase 4.6 自动写入 write-introduction）
 7. **QC Result**（通过/需修正/拒绝入库）
 8. **Narrative Risk Ledger**（模仿风险提示，见下）
 
@@ -1669,94 +1000,29 @@ promise_fulfillment:
 - **若修正 3-4 项**：建议修正后再次运行 `--validate`
 - **若需更换核心模块**（如 P1 Hook 类型或 Gap 类型）：建议重新运行 `/write-introduction` 生成新组装方案
 
-## 验证反馈自动回写（增量累积，无需等待 10+ 次）
+## 验证结果存档（为周期性汇总积累数据）
 
-> **此节替代旧的"人工汇总"流程。** 每次 `--validate` 运行后，验证结果**立即**回写到 `_evidence_registry.yaml`。不再需要等待 10+ 次验证后人工检查——每次验证都在累积数据，模式随数据增长自动浮现。
+如果用户根据本报告修正了 Introduction，建议将修正后的版本和本报告一并存入 Vault：`fine_grained/validation_runs/[date]_validation_report.md`。
 
-### 自动回写步骤
+当积累 10+ 次验证报告后，人工检查 `common_revise_reasons` 模式——哪些骨架反复被标记为 REJECT、哪些修正建议反复出现。这些模式可手动写入注册表的 `common_failures` 字段，以及 `write-introduction/SKILL.md` 的反模式清单。
 
-1. **提取验证数据**：从 Phase 6 四维评分卡的骨架生成力验证（维度4）中提取每个模板的 verdict：
-   - VALIDATED → 模板在此次使用中生效
-   - REVISE → 模板部分生效，有修正建议
-   - REJECT → 模板在此次使用中失效
-
-2. **更新注册表**：使用 Read 工具读取 `academic-writing-corpus/_evidence_registry.yaml`，定位到每个被评估模板的 `validation_history` 块，使用 Edit 工具做以下增量更新：
-   - `total_runs: N` → `total_runs: N+1`
-   - `validated: N` → `validated: N+1`（VALIDATED）/ `revise: N` → `revise: N+1`（REVISE）/ `reject: N` → `reject: N+1`（REJECT）
-   - 如果 verdict = REVISE 或 REJECT：在 `common_revise_reasons` 列表中追加新的修正建议字符串
-   - **操作方式**：对每个模板，使用 Edit 工具做精确的 `old_string` → `new_string` 替换，只改数字和追加列表项，不动其他内容
-
-3. **模式自动检测**：更新注册表后，检查每个模板的 `common_revise_reasons`：
-   - 相同或高度相似的修正建议出现 **≥2 次** → 自动提升为 `common_failures`
-   - 相似度判断：两个修正建议的核心动作相同（如都在建议"补充具体 Stakes"）
-
-4. **写入注册表**：将更新后的 `_evidence_registry.yaml` 写回文件
-
-### validation_feedback 硬化输出块
-
-在 Phase 6 验证报告末尾，**必须附加**以下结构化 YAML 块。此块可直接被 `_update_registry.py` 消费：
-
-```yaml
-validation_feedback:
-  validate_date: "YYYY-MM-DD"
-  combo: "[Gap×Contribution 组合]"
-  target_journal: "[如有]"
-
-  per_template_results:
-    - canonical_id: "06-paradigm-challenge"
-      module: "hooks"
-      verdict: "VALIDATED / REVISE / REJECT"
-      reason: "[简短说明，如：用户改写为 'some studies found'，能量从高降为中]"
-      revise_suggestion: "[如 REVISE：建议改用变体 E pontikes2012 双段式，先建立不可辩驳的共识再揭示反常]"
-
-    - canonical_id: "04-reality-contradicts-consensus"
-      module: "tensions"
-      verdict: "REVISE"
-      reason: "用户未包含反例支撑，Tension 退化为渐进式缺口"
-      revise_suggestion: "补充 2-3 个跨 context 的反例证据"
-
-    - canonical_id: "01-general-theory-practice"
-      module: "stakes"
-      verdict: "VALIDATED"
-      reason: "Stakes 具体化成功——用户使用了量化经济损失"
-
-  overall_validation:
-    total_templates_assessed: N
-    validated_count: N
-    revise_count: N
-    reject_count: N
-    skeleton_generativity_rate: "[validated/total]"
+**不要在不足 10 次验证时就试图从 validation_history 中推导结论**——样本量太小，无法区分"模板不好"和"用户用错了"。
 ```
 
-**validation_feedback 字段说明**：
+---
 
-| 字段 | 用途 | 消费方 |
-|------|------|--------|
-| `per_template_results[].verdict` | 单次验证中每个模板的生效/失效判定 | 写入 `_evidence_registry.yaml` validation_history |
-| `per_template_results[].revise_suggestion` | 具体修正建议文本 | 写入 `validation_history.common_revise_reasons`，≥2 次相似 → 提升为 `common_failures` |
-| `overall_validation.skeleton_generativity_rate` | 本次验证的整体骨架生效比例 | 跟踪 write-introduction 模板质量趋势 |
+### Phase 6 的两层定位
 
-### 增量累积 vs 旧的人工汇总
-
-| | 旧设计 | 新设计 |
-|---|--------|--------|
-| **触发门槛** | 10+ 次验证后人工检查 | 每次验证自动回写 |
-| **数据更新** | 人工读取 Vault 报告 → 手动编辑 YAML | LLM 在 Phase 6 末尾直接读写 `_evidence_registry.yaml` |
-| **模式检测** | 人工识别 patterns | 自动检测：≥2 次相同 revise_reason → 提升为 common_failure |
-| **适用性** | 需要多用户/大规模数据积累 | 单人单次验证即有反馈——随使用次数增加逐渐精确 |
-| **数据安全** | 无风险（不写注册表） | 追加式更新——不删除已有数据，仅累积 |
-
-### Phase 6 的两层定位（更新）
-
-Phase 6 不是单一功能，而是服务于两个时间尺度的需求：
+Phase 6 不是单一功能，而是服务于两个不同时间尺度的需求：
 
 | 层级 | 触发 | 产出 | 数据流向 | 目的 |
 |------|------|------|---------|------|
-| **即时 QC** | 每次 `--validate` | 四维评分 + 优先修正清单 | 直接给用户 | 写作辅助——发现偏离、承诺未兑现 |
-| **增量累积反馈** | 每次 `--validate`（自动） | validation_history 更新 + 模式检测 | `_evidence_registry.yaml` → write-introduction 渲染阶段消费 | 语料库维护——模板的 common_failures 随使用自动增长；≥2 次同因失效即标记 |
+| **即时 QC** | 每次 `--validate` | 四维评分 + 优先修正清单 | 直接给用户 | 写作辅助——帮你发现哪些地方偏离了组装方案、哪里承诺未兑现 |
+| **周期性汇总** | 每 10+ 次验证后人工检查 | `common_revise_reasons` 模式识别 | 手动更新注册表 common_failures 和反模式清单 | 语料库维护——发现哪些模板在真实使用中反复出问题 |
 
-**即时 QC 告诉用户"这次哪里写得不对"。增量累积反馈告诉系统"这个模板在真实使用中反复出什么问题"。** 两者在同一次 `--validate` 中完成，不需要额外步骤。当前 `validation_history` 全为 0 只是因为循环从未运行过——此修复使其在每次验证后自动更新。
-```
+**即时 QC 是现在就能用的东西。** 周期性汇总需要跨论文、跨用户的累积数据——这不是一个人三五篇论文能提供的。当前 `validation_history` 全为 0 是正常的，不是 bug。
+
+### 即时 QC 层（每次 --validate 执行）
 
 ---
 
@@ -1787,7 +1053,7 @@ Phase 6 不是单一功能，而是服务于两个时间尺度的需求：
 
 ## 与外部 Skill 的接口
 
-- **`write-introduction`** — 两层接口：(1) Phase 4 `corpus_enrichment` YAML 块 → Phase 4.5 → `_evidence_registry.yaml`（自动更新定量证据）；(2) Phase 4 `vault_enrichment` → Vault（人工审阅后更新 corpus 定性内容）。Phase 6 即时 QC 接收 write-introduction 的段落功能地图作为参考基准，输出四维评分和修正建议；验证结果存档至 Vault，积累 10+ 次后人工汇总 common_revise_reasons 模式。
+- **`write-introduction`** — 两层接口：(1) Phase 4 `corpus_enrichment` YAML 块 → Phase 4.5 → `_evidence_registry.yaml`（自动更新定量证据）；(2) Phase 4.6 自动将定性内容（新变体、反模式、句法骨架）写入 corpus 模板文件。Phase 6 即时 QC 接收 write-introduction 的段落功能地图作为参考基准
 - **`diagnose-introduction`** — Phase 0 的组合分类可作为 diagnose 的验证基准
 - **`intro-review`** — Phase 1.5 的模块覆盖检查可作为 intro-review 的预检清单；Phase 6 的验证报告可作为 intro-review 的预诊断输入
 - **`paper-review`** — Rhetorical Logic Map 可用于跨 section 对齐检查（Introduction 承诺 vs Discussion 兑现）

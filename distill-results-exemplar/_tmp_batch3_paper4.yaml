@@ -1,0 +1,454 @@
+# Fine-Grained Profile: Shi_Grewal_Sridhar_2021_JMR
+
+## Paper Identity
+- 估计器分类: IV_2SLS (Linear Probability Model + 2SLS with partially overlapping peer groups)
+- 期刊/领域: Journal of Marketing Research (marketing / strategy)
+- Results 字数: ~4,800 words (Results section only, excluding tables)
+- 与 write-results 模板对齐度: 高
+
+## Slot Coverage (R1–R9)
+| Slot | Located | Notes |
+|------|---------|-------|
+| R1 | true | Descriptive statistics (Table 2, Table 3) and variable definitions (Table 1) are placed in Methods/Institutional Setting, not Results. Correlation matrix included. |
+| R2 | true | Progressive model sequence (Column 1→2→3→4 in Table 4) with clear incremental logic. |
+| R3 | true | Main herding effect (H1) reported across 4 columns; subgroup mechanisms (H2) in Table 8. |
+| R4 | true | Subgroup interaction-like decomposition (high-influence vs. similar vs. low-influence vs. dissimilar peers) treated as conditional effects. |
+| R5 | true | Economic significance embedded in Abstract and Discussion; Results reports "10% increase in peer disclosure → 4.8%–8.9% increase in firm disclosure probability." |
+| R6 | true | Falsification test (null effect) and some non-significant subgroup coefficients (PeerDissimilar, PeerHigh in 2SLS) explicitly reported. |
+| R7 | true | Extensive robustness organized by threat (Table 6 + Table 7). |
+| R8 | true | Additional analysis: business scope vs. financial standing similarity (Table 9). Marked as supplemental/mechanism exploration. |
+| R9 | false | No explicit Results→Discussion transition paragraph; Discussion begins immediately after Additional Analysis. |
+
+- coverage_rate: "89% (8/9 slots; R9 missing)"
+
+## Rhythm Map
+
+### R3 四拍节奏
+**H1 (Main herding effect):**
+1. 方向: Peer disclosure predicted to increase focal firm disclosure probability.
+2. 显著性: Column 3 of Table 4 shows coefficient positive and statistically significant (β = [value], p < [threshold]).
+3. 幅度: A [value]% increase in peer disclosure is associated with a [value]%–[value]% increase in disclosure probability.
+4. 支持判断: Thus, the herding effect is supported.
+
+**H2 (Uncertainty resolution mechanism — similar peers vs. benchmark leaders):**
+1. 方向: Firms predicted to rely more on similar peers than benchmark leaders.
+2. 显著ity: Column 1 of Table 8 shows similar-peer coefficient highest (β = [value], p < [threshold]), followed by low-influence (β = [value], p < [threshold]), high-influence (β = [value], p < [threshold]), dissimilar peers n.s.
+3. 幅度: Wald test confirms difference between similar and low-influence peers (F = [value], p < [threshold]).
+4. 支持判断: Firms resolve uncertainty from similar peers rather than benchmark leaders.
+
+**变体:**
+- 四拍完整，但幅度解释有时嵌入拍2（系数报告句中直接带概率变化）。
+- 非线性模型（LPM）四拍调整：系数直接解释为概率变化，未使用边际效应语言。
+
+### R7 稳健性节奏
+**标准威胁-检验-结论四拍：**
+1. 威胁定位: "One concern is that [threat]."
+2. 检验动作: "To address this concern, we [method]."
+3. 结果: "The herding effect remains robust ([coefficient], p < [threshold])."
+4. 结论: "reducing concerns that [threat] drives the findings."
+
+**具体威胁组织（Table 6 + Table 7）：**
+- Analyst scrutiny / expectation
+- Advertising spending amount & changes
+- Endogenous industry entry
+- Habitual reporting behavior (firm FE + first-time reporter)
+- Market position confounds (leader × year FE)
+- Alternative model specification (Probit IV)
+- Un-Winsorized variables
+- Dropping SG&A variables
+
+## Distilled Skeletons
+
+### R3 — 主效应（IV/2SLS 版）
+**paragraph 级：**
+```text
+[功能标签]: R3 主假设检验四拍（IV/2SLS 版）
+[骨架级别]: paragraph
+[骨架]: [Hypothesis restatement]. [Table navigation with progressive model sequence]. [Coefficient report with significance and instrument diagnostics]. [Magnitude interpretation in probability terms]. [Support judgment]. [Instrument validity sentence].
+[可迁移性]: 中 — IV/2SLS 专用，需配合第一阶段输出
+[范式排他性]: IV/2SLS 专用，必须包含 F-statistic / overidentification test
+[节奏标记]: [方向][显著性+系数+诊断][幅度][支持判断][工具变量有效性]
+```
+
+**sentence 级：**
+```text
+[功能标签]: 2SLS 系数显著性报告句
+[骨架级别]: sentence
+[句式]: The [estimator] results in Column [Y] of [Table X] show that the coefficient for [IV] is [positive/negative] and statistically significant (β = [value], p < [threshold]), indicating that [interpretation in probability terms].
+[适用槽位]: R3
+[适用估计器]: IV_2SLS
+[节奏标记]: [显著性+系数+概率解释]
+```
+
+```text
+[功能标签]: 工具变量诊断句
+[骨架级别]: sentence
+[句式]: The first-stage regression ([Table X], Column [Y]) shows that [number] of [number] instruments have significant effects on the endogenous variable. The R-square of the first-stage regression is [value]; the joint significance test for the instrumental variables is significant (F([df1], [df2]) = [value], p < [threshold]), indicating that we do not have a problem of weak instruments.
+[适用槽位]: R3 (embedded after main coefficient report)
+[适用估计器]: IV_2SLS
+[节奏标记]: [工具变量相关性]
+```
+
+```text
+[功能标签]: 过度识别检验句
+[骨架级别]: sentence
+[句式]: The Hansen J-statistic for the [estimator] specification (Column [Y] in [Table X]) is [value] (p > [threshold]), indicating that the model is not overidentified.
+[适用槽位]: R3
+[适用估计器]: IV_2SLS
+[节奏标记]: [排他性检验]
+```
+
+### R3 — 主效应（LPM 渐进序列版）
+**sentence 级：**
+```text
+[功能标签]: 渐进模型序列导航句
+[骨架级别]: sentence
+[句式]: Column [1] of [Table X] shows the results when we run a [estimator] with [IV] and [control variables]. We then add [additional variables] by entering [variable group]. As we report in Column [2] of [Table X], [exogenous peer characteristics] are significant, including [examples]. However, the endogenous [effect] estimate does not change much (β = [value], p < [threshold]).
+[适用槽位]: R2/R3
+[适用估计器]: OLS_FE, LPM
+[节奏标记]: [模型导航][增量逻辑][系数稳定性]
+```
+
+### R4 — 条件效应/子群分解（同伴效应 IV 版）
+**paragraph 级：**
+```text
+[功能标签]: R4 子群条件效应分解（同伴效应 IV 版）
+[骨架级别]: paragraph
+[骨架]: [Mechanism hypothesis restatement]. [Subgroup construction logic]. [Table navigation]. [Coefficient comparison across subgroups]. [Wald test for coefficient differences]. [Support judgment for mechanism]. [Endogeneity correction note].
+[可迁移性]: 中 — 同伴效应/网络效应设计专用
+[范式排他性]: 同伴效应/网络效应专用，需配合 falsification/placebo network
+[节奏标记]: [机制假设][子群构建][系数对比][差异检验][支持判断][内生性修正]
+```
+
+**sentence 级：**
+```text
+[功能标签]: 子群系数对比句
+[骨架级别]: sentence
+[句式]: The effect of the [subgroup A] is highest (β = [value], p < [threshold]), followed by [subgroup B] (β = [value], p < [threshold]), [subgroup C] (β = [value], p < [threshold]), and [subgroup D] (β = [value], n.s.).
+[适用槽位]: R4
+[适用估计器]: IV_2SLS, OLS_FE
+[节奏标记]: [条件效应排序]
+```
+
+```text
+[功能标签]: 系数差异 Wald 检验句
+[骨架级别]: sentence
+[句式]: The Wald test for the difference between the [subgroup A] and [subgroup B] coefficients is statistically significant (F-statistic = [value], p < [threshold]).
+[适用槽位]: R4
+[适用估计器]: 通用
+[节奏标记]: [差异显著性]
+```
+
+```text
+[功能标签]: 控制函数内生性修正句
+[骨架级别]: sentence
+[句式]: We implement a control function approach in which we regress [endogenous variable] on [instruments] and other variables in the first stage and add the error terms from the first stage to [Equation X] as endogeneity correction terms. The endogeneity-corrected estimates (Column [Y] of [Table X]) remain robust, indicating that [conclusion].
+[适用槽位]: R4/R7
+[适用估计器]: IV_2SLS
+[节奏标记]: [内生性修正][稳健性确认]
+```
+
+### R5 — 经济显著性（概率变化版）
+**sentence 级：**
+```text
+[功能标签]: 概率变化幅度解释句
+[骨架级别]: sentence
+[句式]: If [IV] increases by [value]%, a [unit]'s [DV] increases by [value]%–[value]%.
+[适用槽位]: R5
+[适用估计器]: LPM, Logit_Probit
+[节奏标记]: [幅度]
+```
+
+### R6 — 非显著/混合发现
+**sentence 级：**
+```text
+[功能标签]: 非显著结果报告句
+[骨架级别]: sentence
+[句式]: We find no [effect] (β = [value], p > [threshold]), as detailed in Column [Y] of [Table X] (i.e., a null effect lends credibility to our argument that [interpretation]).
+[适用槽位]: R6
+[适用估计器]: 通用
+[节奏标记]: [非显著][解释价值]
+```
+
+### R7 — 稳健性检验（按 threat 组织）
+**paragraph 级：**
+```text
+[功能标签]: R7 稳健性检验（threat-based 组织）
+[骨架级别]: paragraph
+[骨架]: [Threat statement]. [Test description]. [Result summary with coefficient stability]. [Conclusion reducing threat concern]. [Cross-reference to robustness table].
+[可迁移性]: 高 — 出现在 20/28 篇范文中
+[范式排他性]: 通用，但 IV/2SLS 需额外强调 instrument robustness
+[节奏标记]: [威胁][检验][系数稳定][结论]
+```
+
+**sentence 级：**
+```text
+[功能标签]: 稳健性威胁定位句
+[骨架级别]: sentence
+[句式]: [One/Another] concern is that our findings [depend on/are driven by/reflect] [specific threat].
+[适用槽位]: R7
+[适用估计器]: 通用
+[节奏标记]: [威胁定位]
+```
+
+```text
+[功能标签]: 稳健性结果确认句
+[骨架级别]: sentence
+[句式]: We [still/find] [robust/significant] [effect] ([coefficient], p < [threshold], Column [Y], [Table X]).
+[适用槽位]: R7
+[适用估计器]: 通用
+[节奏标记]: [稳健性确认]
+```
+
+```text
+[功能标签]: 异质性稳健性句（交互衰减）
+[骨架级别]: sentence
+[句式]: The interaction between [IV] and [moderator] is [positive/negative] and significant (β = [value], p < [threshold]), indicating that [effect] attenuates as [moderator] increases.
+[适用槽位]: R7 (robustness heterogeneity)
+[适用估计器]: OLS_FE, IV_2SLS
+[节奏标记]: [交互显著][衰减解释]
+```
+
+```text
+[功能标签]: 条件效应存在性检验句
+[骨架级别]: sentence
+[句式]: To see the existence of [effect] at high levels of [moderator], we calculate the [effect] when [moderator] is at mean, one standard deviation above mean, [one and a half] standard deviations above the mean, and two standard deviations above the mean. The effect sizes are [value] (p < [threshold]), [value] (p < [threshold]), [value] (p < [threshold]), and [value] (p < [threshold]), respectively, providing evidence for heterogeneity in [effect] across [moderator] levels.
+[适用槽位]: R7 (robustness heterogeneity)
+[适用估计器]: OLS_FE, IV_2SLS
+[节奏标记]: [条件效应计算][异质性证据]
+```
+
+### R8 — 补充/事后分析
+**paragraph 级：**
+```text
+[功能标签]: R8 补充分析（机制探索）
+[骨架级别]: paragraph
+[骨架]: [Follow-up question]. [Measurement approach]. [Subgroup construction]. [Table navigation]. [Coefficient comparison]. [Wald test]. [Conclusion on mechanism relative importance].
+[可迁移性]: 中 — 机制探索通用，但 Jaccard/Euclidean 距离测量特定
+[范式排他性]: 同伴相似性分解专用
+[节奏标记]: [问题][测量][子群][系数][检验][结论]
+```
+
+**sentence 级：**
+```text
+[功能标签]: 补充分析问题引入句
+[骨架级别]: sentence
+[句式]: We next investigate how [mechanism] varies, depending on [dimension 1] and [dimension 2].
+[适用槽位]: R8
+[适用估计器]: 通用
+[节奏标记]: [探索问题]
+```
+
+```text
+[功能标签]: 相对重要性结论句
+[骨架级别]: sentence
+[句式]: In summary, we find evidence that, on average, [units] [mimic/follow] [peer type A] more so than [peer type B].
+[适用槽位]: R8
+[适用估计器]: 通用
+[节奏标记]: [相对重要性]
+```
+
+## Results DNA
+
+| 指标 | 值 | 备注 |
+|------|-----|------|
+| 段落平均句数 | 5.2 | Results 段落偏长，信息密度高 |
+| 每段先定位 table/model | 90% | 几乎每段首句提及 Table/Column |
+| Hypothesis restatement 位置 | 段首或表格导航后 | H1 在模型序列前重述；H2 在子群分析前重述 |
+| 四拍完整性 | 100% (2/2 显著假设) | 两个显著假设均完整四拍；非显著结果缩减为2-3拍 |
+| Hedging 强度分布 | "indicate" (主导), "show", "suggest" | 无 "demonstrates"，符合 IV 识别策略的谨慎语气 |
+| Causal language 强度 | "effect of" / "increases" / "causal" | 因果语言强度较高，因有 IV 识别策略支撑 |
+| 稳健性 transition 句式 | "One concern is..." / "To test..." / "We conduct..." | 威胁定位明确 |
+| 非显著处理句式 | "no herding effect" / "do not have significant impacts" / "n.s." | 直接报告，不回避 |
+| 交互效应引入方式 | 子群变量直接引入，无传统交互项 | 通过 PeerHigh/PeerSimilar/PeerLow/PeerDissimilar 实现 |
+| 经济显著性基准 | one-unit (peer disclosure fraction) → percentage point change | LPM 系数直接解释为概率变化 |
+
+## Validity Logic Map
+
+| 可信性问题 | 处理方式 |
+|------------|----------|
+| 统计结论效度 | 同时报告统计显著性和经济显著性（概率变化）；报告 95% 置信区间（通过标准误）；报告 R² 和 pseudo R² |
+| 内部效度 | 稳健性按 threat 组织（Table 6 + Table 7），每个检验对应明确 threat；falsification test（随机分配 peer group）排除虚假效应；控制函数法和 2SLS 子群回归分别验证 |
+| 构造效度 | 通过 partially overlapping peer groups 构造解决识别问题；industry entry 与 disclosure decision 不相关 (χ² test) 排除 reference group endogeneity |
+
+## Novel Patterns（与现有 28 篇语料库对比后的新发现）
+
+- **新骨架**: `r3_2sls_instrument_diagnostics_embedded` — 2SLS 结果段落中嵌入第一阶段 F-statistic 和 Hansen J-statistic，而非独立段落。现有语料库中 IV 论文多将第一阶段独立成段或放附录，本文嵌入主效应段落后仍保持清晰。
+- **新节奏变体**: `r4_subgroup_wald_sequence` — 子群系数对比后直接接 Wald 检验，形成"系数排序→差异检验→机制结论"的三拍节奏，而非传统的简单斜率分解。
+- **新稳健性组织方式**: `r7_threat_table_matrix` — Table 6 以"Alternative Explanation | Tests and Results"矩阵形式组织稳健性，而非传统的回归表格。这是 JMR/营销领域常见的叙事型稳健性表格，与纯回归型稳健性表格（Table 7）形成互补。
+- **新句式**: `r7_heterogeneity_at_multiple_sd` — 在稳健性中计算 mean, +1SD, +1.5SD, +2SD 四个点的条件效应并分别报告显著性，用于证明异质性存在但主效应在大部分范围内仍显著。
+
+## Non-Transferable Facts
+
+- 具体系数: β = .483 (main herding effect, Column 3 Table 4); β = .193 (similar peers, Column 1 Table 8)
+- 具体样本量: N = 48,509 (firm-year observations); 6,298 firms
+- 具体表格编号: Table 4 (main), Table 5 (first-stage), Table 6 (alternative explanations), Table 7 (robustness), Table 8 (subgroup mechanisms), Table 9 (business scope vs. financial standing)
+- 具体统计量: Hansen J = 4.54 (p > .10); F(4, 44,027) = 29.23 (p < .01)
+- 特有理论术语: "partially overlapping peer groups", "second-degree peers", "information cascading", "FRR44"
+- 特有测量: Jaccard similarity coefficient (business scope), Euclidean distance of sales-to-asset ratio / ROA / debt-to-asset ratio (financial standing)
+
+## Skill Update Recommendations
+
+1. **新增 IV/2SLS 专用骨架**: 在 `write-results` 的 IV/2SLS 模板中增加 `r3_2sls_instrument_diagnostics_embedded` 骨架，说明第一阶段统计量可以嵌入主效应段落而非独立成段（适用于 JMR/营销领域风格）。
+2. **新增同伴效应/网络效应 R4 模板**: 现有语料库中同伴效应论文较少，建议新增 `r4_subgroup_wald_sequence` 骨架，用于"高影响/相似/低影响/不相似"子群分解。
+3. **新增稳健性矩阵表格模板**: `r7_threat_table_matrix` 可作为叙事型稳健性报告的替代格式，适用于需要向非技术读者（如政策制定者）解释稳健性的场景。
+4. **新增异质性条件效应计算句式**: `r7_heterogeneity_at_multiple_sd` 句式可纳入 R7 模板，用于处理"主效应在大部分范围内显著但存在衰减"的稳健性表述。
+5. **反模式提醒**: 本文在 R9（Results→Discussion 过渡）缺失，建议在 `write-results` 模板中增加提醒：IV/2SLS 论文若 Results 后直接接 Discussion，需在 Discussion 首段回顾核心识别策略和主要发现，以弥补过渡缺失。
+
+---
+
+## QC Result
+
+- [x] Completeness: 所有强制槽位（IV/2SLS: R2, R3, R7）已被覆盖
+- [x] Clarity: 每个骨架都有明确的 [占位符] 和插入位置
+- [x] Placeholder Purity: sentence-level 骨架中不存在论文特有名词，已全部替换为 [IV] [DV] [Table X] 等
+- [x] Level Separation: paragraph-level 与 sentence-level 已分离；paragraph-level 只描述组织逻辑，sentence-level 填入占位符后可生成完整句子
+- [x] Credibility: 未将单篇论文的特殊统计发现泛化为通用规则
+- [x] Replicability: 骨架填入具体信息后，能生成类似顶刊风格的 Results 段落
+- [x] No Verbatim Copy: 输出中未出现可直接追溯到原文的连续 8+ 词短语
+- [x] Fact Boundary: 所有不可迁移统计事实（系数、N、p 值）已被明确标记在 Non-Transferable Facts 中
+- [x] Causal Language Audit: 提取的骨架中因果语言强度与 IV/2SLS 估计器类型匹配（"effect of" / "increases" 有识别策略支撑）
+- [x] Nonsignificant Audit: 原文有非显著假设（falsification test, some subgroup coefficients），蒸馏报告记录了其句式处理
+- [x] Robustness Audit: 稳健性检验按 threat 组织（Table 6 + Table 7），非机械列表
+
+**Overall Status: PASS**
+
+---
+
+corpus_enrichment:
+  batch_id: "batch_2026-05-22"
+  estimator_family: "IV_2SLS"
+  source_paper: "Shi_Grewal_Sridhar_2021_JMR"
+  source_subfield: "marketing"
+
+  slot_updates:
+    # --- 骨架级（paragraph level）---
+    - slot: "R3"
+      action: "create_new"
+      skeleton_id: "r3_2sls_instrument_diagnostics_embedded"
+      skeleton_level: "paragraph"
+      skeleton: "[Hypothesis restatement]. [Table navigation with progressive model sequence]. [Coefficient report with significance and instrument diagnostics]. [Magnitude interpretation in probability terms]. [Support judgment]. [Instrument validity sentence]."
+
+    - slot: "R4"
+      action: "create_new"
+      skeleton_id: "r4_subgroup_wald_sequence"
+      skeleton_level: "paragraph"
+      skeleton: "[Mechanism hypothesis restatement]. [Subgroup construction logic]. [Table navigation]. [Coefficient comparison across subgroups]. [Wald test for coefficient differences]. [Support judgment for mechanism]. [Endogeneity correction note]."
+
+    - slot: "R7"
+      action: "create_new"
+      skeleton_id: "r7_threat_table_matrix"
+      skeleton_level: "paragraph"
+      skeleton: "[Threat statement]. [Test description]. [Result summary with coefficient stability]. [Conclusion reducing threat concern]. [Cross-reference to robustness table]."
+
+    # --- 句式级（sentence level）---
+    - slot: "R3"
+      action: "create_new"
+      skeleton_id: "r3_sentence_2sls_coefficient_significance"
+      skeleton_level: "sentence"
+      skeleton: "The [estimator] results in Column [Y] of [Table X] show that the coefficient for [IV] is [positive/negative] and statistically significant (β = [value], p < [threshold]), indicating that [interpretation in probability terms]."
+
+    - slot: "R3"
+      action: "create_new"
+      skeleton_id: "r3_sentence_first_stage_diagnostics"
+      skeleton_level: "sentence"
+      skeleton: "The first-stage regression ([Table X], Column [Y]) shows that [number] of [number] instruments have significant effects on the endogenous variable. The R-square of the first-stage regression is [value]; the joint significance test for the instrumental variables is significant (F([df1], [df2]) = [value], p < [threshold]), indicating that we do not have a problem of weak instruments."
+
+    - slot: "R3"
+      action: "create_new"
+      skeleton_id: "r3_sentence_hansen_j"
+      skeleton_level: "sentence"
+      skeleton: "The Hansen J-statistic for the [estimator] specification (Column [Y] in [Table X]) is [value] (p > [threshold]), indicating that the model is not overidentified."
+
+    - slot: "R2"
+      action: "create_new"
+      skeleton_id: "r2_sentence_progressive_model_sequence"
+      skeleton_level: "sentence"
+      skeleton: "Column [1] of [Table X] shows the results when we run a [estimator] with [IV] and [control variables]. We then add [additional variables] by entering [variable group]. As we report in Column [2] of [Table X], [exogenous peer characteristics] are significant, including [examples]. However, the endogenous [effect] estimate does not change much (β = [value], p < [threshold])."
+
+    - slot: "R4"
+      action: "create_new"
+      skeleton_id: "r4_sentence_subgroup_coefficient_comparison"
+      skeleton_level: "sentence"
+      skeleton: "The effect of the [subgroup A] is highest (β = [value], p < [threshold]), followed by [subgroup B] (β = [value], p < [threshold]), [subgroup C] (β = [value], p < [threshold]), and [subgroup D] (β = [value], n.s.)."
+
+    - slot: "R4"
+      action: "create_new"
+      skeleton_id: "r4_sentence_wald_test_difference"
+      skeleton_level: "sentence"
+      skeleton: "The Wald test for the difference between the [subgroup A] and [subgroup B] coefficients is statistically significant (F-statistic = [value], p < [threshold])."
+
+    - slot: "R4"
+      action: "create_new"
+      skeleton_id: "r4_sentence_control_function"
+      skeleton_level: "sentence"
+      skeleton: "We implement a control function approach in which we regress [endogenous variable] on [instruments] and other variables in the first stage and add the error terms from the first stage to [Equation X] as endogeneity correction terms. The endogeneity-corrected estimates (Column [Y] of [Table X]) remain robust, indicating that [conclusion]."
+
+    - slot: "R5"
+      action: "create_new"
+      skeleton_id: "r5_sentence_probability_change_magnitude"
+      skeleton_level: "sentence"
+      skeleton: "If [IV] increases by [value]%, a [unit]'s [DV] increases by [value]%–[value]%."
+
+    - slot: "R6"
+      action: "create_new"
+      skeleton_id: "r6_sentence_null_effect_credibility"
+      skeleton_level: "sentence"
+      skeleton: "We find no [effect] (β = [value], p > [threshold]), as detailed in Column [Y] of [Table X] (i.e., a null effect lends credibility to our argument that [interpretation])."
+
+    - slot: "R7"
+      action: "create_new"
+      skeleton_id: "r7_sentence_threat_positioning"
+      skeleton_level: "sentence"
+      skeleton: "[One/Another] concern is that our findings [depend on/are driven by/reflect] [specific threat]."
+
+    - slot: "R7"
+      action: "create_new"
+      skeleton_id: "r7_sentence_robustness_confirmation"
+      skeleton_level: "sentence"
+      skeleton: "We [still/find] [robust/significant] [effect] ([coefficient], p < [threshold], Column [Y], [Table X])."
+
+    - slot: "R7"
+      action: "create_new"
+      skeleton_id: "r7_sentence_heterogeneity_attenuation"
+      skeleton_level: "sentence"
+      skeleton: "The interaction between [IV] and [moderator] is [positive/negative] and significant (β = [value], p < [threshold]), indicating that [effect] attenuates as [moderator] increases."
+
+    - slot: "R7"
+      action: "create_new"
+      skeleton_id: "r7_sentence_multiple_sd_heterogeneity"
+      skeleton_level: "sentence"
+      skeleton: "To see the existence of [effect] at high levels of [moderator], we calculate the [effect] when [moderator] is at mean, one standard deviation above mean, [one and a half] standard deviations above the mean, and two standard deviations above the mean. The effect sizes are [value] (p < [threshold]), [value] (p < [threshold]), [value] (p < [threshold]), and [value] (p < [threshold]), respectively, providing evidence for heterogeneity in [effect] across [moderator] levels."
+
+    - slot: "R8"
+      action: "create_new"
+      skeleton_id: "r8_sentence_followup_question"
+      skeleton_level: "sentence"
+      skeleton: "We next investigate how [mechanism] varies, depending on [dimension 1] and [dimension 2]."
+
+    - slot: "R8"
+      action: "create_new"
+      skeleton_id: "r8_sentence_relative_importance"
+      skeleton_level: "sentence"
+      skeleton: "In summary, we find evidence that, on average, [units] [mimic/follow] [peer type A] more so than [peer type B]."
+
+  novel_patterns:
+    - slot: "R3"
+      observation: "2SLS instrument diagnostics (first-stage F-statistic and Hansen J) embedded within the main effect paragraph rather than in a separate first-stage paragraph or appendix."
+      note: "Currently corpus lacks this IV-specific compact rhythm. JMR/marketing style prefers integrated reporting. Recommend review for corpus inclusion."
+    - slot: "R4"
+      observation: "Subgroup coefficient comparison followed immediately by Wald test, forming a 'coefficient ranking → difference test → mechanism conclusion' three-beat rhythm instead of traditional simple slope decomposition."
+      note: "Peer-effect/network-effect specific. Recommend review for corpus inclusion under peer-effect templates."
+    - slot: "R7"
+      observation: "Narrative threat-table matrix (Table 6: Alternative Explanation | Tests and Results) complements traditional regression robustness table (Table 7)."
+      note: "Useful for policy-oriented or managerial-audience papers. Recommend as optional variant in robustness templates."
+    - slot: "R7"
+      observation: "Heterogeneity robustness reports conditional effects at mean, +1SD, +1.5SD, and +2SD to demonstrate effect persistence across most of the range."
+      note: "New sentence-level template for attenuation-within-range robustness. Recommend inclusion."
+
+  batch_metadata:
+    total_papers_processed: 1
+    estimator_family: "IV_2SLS"
+    novel_skeletons_found: 4
+    rejected_skeletons: 0
+    rejected_reasons: []
