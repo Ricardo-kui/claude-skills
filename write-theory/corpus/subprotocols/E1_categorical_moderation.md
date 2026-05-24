@@ -48,12 +48,6 @@
   - 对称结构："For manufacturing defects... In contrast, for design defects..."
   - 机制差异：manufacturing defects 责任明确 → 溢出效应强；design defects 责任模糊 → 溢出效应弱
 
-- **employee_free_speech (OS)** — 意识形态分组（liberals vs conservatives）
-  - 独特之处：基线假设即交互假设（H1a + H1b），无传统主效应
-  - 对称双路径：liberals 通过 value congruence 机制感到更安全；conservatives 通过 psychological reactance 机制感到更不安全
-  - 理论统摄：ideological differences (Jost et al.) 作为 overarching framework
-  - 额外调节器：targeted group（Overton Window 理论）、speech severity、company affiliation、organizational values
-
 ---
 
 ## QC 检查点

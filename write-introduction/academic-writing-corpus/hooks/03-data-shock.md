@@ -4,7 +4,7 @@ canonical_id: "03-data-shock"
 status: ✓ STANDARD
 gap_strength: 低
 gap_type: Incompleteness
-cross_paper: VERIFIED
+cross_paper: ROBUST
 generativity: ADAPTABLE
 exclusivity: MEDIUM
 source_papers:
@@ -13,6 +13,8 @@ source_papers:
   - darby2025 (JSCM, 2025): "Vioxx: 88,000 heart attacks, 38,000 deaths — crisis data Hook"
   - shi2021 (JMR, 2021): "organizational herding in advertising disclosures"
   - vadakkepatt2022 (JM, 2022): "130% lobbying growth, 22,000% ROI, $325M→$338B contracts"
+  - kim2022 (MS, 2022): "50M vehicle recalls in 2016 → firms may not test enough before launch"
+updated: 2026-05-24
 created: 2026-05-18
 source: Manually curated from MVP30 narrative_analysis files
 ---
@@ -113,6 +115,28 @@ source: Manually curated from MVP30 narrative_analysis files
 - **禁忌**: 不在无真实伤亡数据的领域使用；不虚构数字；不将害人数量作为 sensationalism
 
 **适用**: 产品召回、药品安全、食品安全、环境灾难等"延迟=伤亡"的研究领域
+
+---
+
+### 变体 F：行业统计 + 现象归因型（kim2022 型）
+
+**模板**:
+> "The [activity] is an essential part of firms' business activities and serves as a cornerstone for [goal]. Guided by [strategy], [products] offer [benefits] as the outcome of [process]. During [process], firms typically dedicate [effort] toward [risk-reduction activity]. Yet once [outcome], we often observe [negative phenomenon]. In [industry], for example, [striking statistic with specific number and comparison baseline]. [Authority] announces [frequency of negative phenomenon]. This prevalence of [phenomenon] suggests that firms may not always assign sufficient [effort] toward [risk-reduction] prior to [outcome]."
+
+**来源**: kim2022 (MS), P1
+
+**原文锚定**:
+> "The introduction of new products is an essential part of firms' business activities and serves as a cornerstone for long-term growth and survival. Guided by a firm's innovation strategy, new products offer novel features or attribute improvements as the outcome of research and development (R&D) initiatives. During the R&D process, firms typically dedicate some basic time and effort to conducting a set of quality assurance tests aimed at establishing the proper functionality and safety of their innovations. Yet once launched into the marketplace, we often observe the recall of new products. In the automobile industry, for example, more than 50 million vehicles were recalled in the United States in 2016, nearly three times as many as were sold that year. The U.S. Consumer Product Safety Commission (CPSC) announces at least one product recall every day on average. This prevalence of product recalls suggests that firms may not always assign sufficient time and effort toward quality assurance prior to releasing their innovations."
+
+**关键特征**:
+- 与变体 A-E 不同——本变体的核心是从统计直接跳到行为归因（"suggests that firms may not always..."），建立 "企业主动选择不足" 的叙事线索
+- 统计数字带比较基准（"three times as many as were sold"），制造认知冲击
+- 用监管机构频率数据强化 "这不是偶发事件"
+- 以 "This prevalence suggests that..." 收束——统计→归因→为下一段的案例/Puzzle 过渡预留空间
+
+**适用**: 适用于有可获取行业统计数据的商业现象研究；特别适合 MS、JOM、POM 等运营/管理科学期刊；Hook 能量在 "中偏低"——需要后接具体案例（如 kim2022 P2 的 Samsung Note 7）来提升能量
+
+**禁忌**: "统计数字必须有权威来源（政府报告、行业协会），不可用媒体估算；归因句 'suggests that firms may not...' 是悬置假设——不要在此处给出确定性结论"
 
 ---
 

@@ -43,72 +43,6 @@ version: 2.5.0
 - `模型规格` → 确定结果报告格式
 - `变量名` → 确保 Results 与 Methods 一致
 
-## 骨架验证状态图例
-
-每个填空段落前标注的图标对应 `_evidence_registry.yaml` 中的验证状态。Skill 生成骨架时**优先调用高状态模板**，状态不足时逐级降级。
-
-| 图标 | 名称 | Registry Status | 含义 | 使用建议 |
-|------|------|-----------------|------|----------|
-| ⭐ PREMIUM | 核心骨架 | **ROBUST** | 跨 ≥2 子领域、≥5 篇论文复现 | **默认首选**。生成时如无特殊理由，直接输出此模板 |
-| ✓ STANDARD | 标准骨架 | **ROBUST** 或 **VERIFIED** | 多篇范文复现（≥3 篇），领域适配性已验证 | **可靠备选**。当 PREMIUM 不适用（如设计变体）时选用 |
-| 🔬 EXPERIMENTAL | 实验性骨架 | **EMERGING** 或 **VERIFIED**（少量） | ≤2 篇论文或新型设计变体 | **谨慎使用**。仅在理论需求匹配时推荐，且必须标注 ⚠️ 保守替代 |
-| （无标记） | 通用默认 | 无 registry 记录 | SKILL.md 内置的默认句式 | 当 registry 无匹配骨架时使用 |
-
-**降级规则**：
-1. 优先检查 `_evidence_registry.yaml` 中对应 `estimator_family × slot` 的 skeleton_variants
-2. 选择 `status: ROBUST` 的骨架 → 标注为 ⭐ PREMIUM 或 ✓ STANDARD
-3. 无 ROBUST 时，选择 `status: VERIFIED` → 标注为 ✓ STANDARD
-4. 无 VERIFIED 时，选择 `status: EMERGING` → 标注为 🔬 EXPERIMENTAL，并提示用户审阅
-5. 无 registry 记录时，回退到 SKILL.md 中的通用默认模板
-
-**状态与图标的精确映射**：
-- `ROBUST` + 跨 ≥3 子领域 → ⭐ PREMIUM
-- `ROBUST`（仅 2 个子领域）→ ✓ STANDARD
-- `VERIFIED` → ✓ STANDARD
-- `EMERGING` → 🔬 EXPERIMENTAL
-
----
-
-## 骨架选择优先级规则
-
-当用户调用 `/write-results <模型类型>` 时，按以下决策树选择每个 R 槽位的骨架：
-
-```
-用户输入: estimator_family (如 OLS_FE) + slot (如 R3)
-    │
-    ├─→ 查询 _evidence_registry.yaml
-    │    ├─→ estimator_family 是否存在?
-    │    │    └─→ 否 → 使用 SKILL.md 通用默认模板 + 警告 "该估计器暂无 registry 记录"
-    │    │
-    │    └─→ slot 是否存在 forced_slots?
-    │         └─→ 否 → 跳过该槽位（如 R6 无非显著假设）
-    │
-    ├─→ 该 slot 下 skeleton_variants 是否存在?
-    │    └─→ 否 → 使用 SKILL.md 通用默认模板
-    │
-    ├─→ 筛选 status == ROBUST 的 skeletons
-    │    ├─→ 存在 → 优先推荐（⭐ PREMIUM / ✓ STANDARD）
-    │    │         若多个 ROBUST，选择 paper_count 最高者
-    │    └─→ 不存在 → 继续降级
-    │
-    ├─→ 筛选 status == VERIFIED 的 skeletons
-    │    ├─→ 存在 → 推荐（✓ STANDARD）
-    │    │         若多个 VERIFIED，选择 paper_count 最高者
-    │    └─→ 不存在 → 继续降级
-    │
-    └─→ 筛选 status == EMERGING 的 skeletons
-         ├─→ 存在 → 推荐（🔬 EXPERIMENTAL）+ 附带保守替代建议
-         └─→ 不存在 → 使用 SKILL.md 通用默认模板
-```
-
-**特殊规则**：
-- **非显著假设（R6）**：若用户未提供非显著假设，强制跳过 R6，不因模板存在而填充
-- **交互效应（R4）**：仅在 `--has-interactions` 时激活。R4 的 ROBUST 骨架数量通常少于 R3，允许使用 VERIFIED 作为默认
-- **稳健性（R7）**：必须按 threat 组织。若 registry 中只有 table-based 骨架（status 可能较低），优先使用 SKILL.md 通用 threat-based 模板而非低 status 的 table-based 变体
-- **多研究**：逐研究重复 R1–R8，每个研究独立查询 registry
-
----
-
 ## 叙事槽位目录（R1–R9）
 
 | 槽位 | 名称 | 输出形式 |
@@ -625,19 +559,6 @@ Taken together, the results indicate that [digital transformation enhances firm 
   "economic_significance_required": true,
   "non_significant_handling_required": false,
   "downstream_interfaces": ["/write-discussion", "/paper-review", "/distill-results-exemplar"],
-  "registry_consumption": {
-    "registry_path": "write-results/academic-writing-corpus/_evidence_registry.yaml",
-    "schema_version": "1.0.0",
-    "skeletons_used": [
-      { "slot": "R1", "skeleton_id": "r1_ols_standard", "status": "ROBUST", "paper_count": 15 },
-      { "slot": "R2", "skeleton_id": null, "status": "default", "paper_count": 0 },
-      { "slot": "R3", "skeleton_id": "r3_ols_four_beat_standard", "status": "ROBUST", "paper_count": 15 },
-      { "slot": "R4", "skeleton_id": null, "status": "default", "paper_count": 0 },
-      { "slot": "R7", "skeleton_id": "r7_ols_threat_based", "status": "ROBUST", "paper_count": 10 }
-    ],
-    "deviation_from_registry": false,
-    "notes": "若某 slot 使用了 EMERGING 骨架或通用默认模板，需在此标注原因"
-  },
   "cross_section_alignment": {
     "methods_model_match": { "status": "pending", "notes": "需确认 Results 表格与 Methods M7 的模型规格一致" },
     "theory_hypothesis_match": { "status": "pending", "notes": "需填入实际系数后更新 fulfillment_map" }
@@ -678,55 +599,12 @@ Taken together, the results indicate that [digital transformation enhances firm 
 
 ---
 
-## 上游接口：Registry 骨架调用
-
-本 skill 生成骨架时，优先消费 `write-results/academic-writing-corpus/_evidence_registry.yaml` 中的定量证据。
-
-### Registry 消费规则
-
-1. **查询路径**：`estimators.<estimator_family>.slots.<slot>.skeleton_variants`
-2. **选择优先级**：`ROBUST` → `VERIFIED` → `EMERGING` → SKILL.md 通用默认
-3. **子领域适配**：若用户指定目标期刊（如 `--journal=MSOM`），优先选择 `subfield_distribution` 中 `om` 分值较高的骨架
-4. **降级提示**：当使用 `EMERGING` 骨架时，必须在输出中标注 🔬 EXPERIMENTAL 并附带 ⚠️ 保守替代建议
-5. **无记录回退**：当 registry 中该 estimator × slot 无任何 skeleton 时，使用 SKILL.md 中的通用默认模板，不报错
-
-### Registry 状态与模板标注的映射
-
-| Registry Status | 模板前缀 | 含义 |
-|----------------|---------|------|
-| `ROBUST`（≥5 篇，跨 ≥2 子领域） | ⭐ PREMIUM / ✓ STANDARD | 默认首选 |
-| `VERIFIED`（≥3 篇） | ✓ STANDARD | 可靠备选 |
-| `EMERGING`（≤2 篇） | 🔬 EXPERIMENTAL | 谨慎使用 |
-| 无记录 | （无标记） | 通用默认 |
-
-### Registry 消费示例
-
-当用户调用 `/write-results OLS_FE` 时：
-- **R1**：查询 `estimators.OLS_FE.slots.R1.skeleton_variants`
-  - 发现 `r1_ols_standard`（status: ROBUST, paper_count: 15）→ 推荐 ✓ STANDARD
-- **R3**：查询 `estimators.OLS_FE.slots.R3.skeleton_variants`
-  - 发现 `r3_ols_four_beat_standard`（status: ROBUST, paper_count: 15）→ 推荐 ⭐ PREMIUM
-  - 发现 `r3_ols_nonsignificant`（status: VERIFIED, paper_count: 4）→ 若用户有非显著假设，作为 R6 备选
-- **R7**：查询 `estimators.OLS_FE.slots.R7.skeleton_variants`
-  - 发现 `r7_ols_threat_based`（status: ROBUST, paper_count: 10）→ 推荐 ✓ STANDARD
-  - 发现 `r7_ols_narrative_variant`（status: VERIFIED, paper_count: 3）→ 备选
-
-### Registry 同步机制
-
-`_evidence_registry.yaml` 由 `distill-results-exemplar/_update_registry.py` 自动更新。当新的蒸馏批次验证通过骨架后：
-1. `_update_registry.py` 自动递增 `paper_count` 并重算 `status`
-2. 本 skill 下次生成时自动消费更新后的状态
-3. 定性内容（骨架句法、反模式提醒）仍由人工审阅后写入 `.md` 文件，不由脚本自动修改
-
----
-
 ## 下游接口
 
 - `/write-discussion` — 使用 Results 的主要发现作为 Discussion 理论解释的出发点
 - `/paper-review` — 进行 Theory-Methods-Results-Discussion 跨 Section 一致性验证
 - `/results-review` — 如用户已有 Results 草稿，使用本骨架作为理想基准对比审查
 - `/distill-results-exemplar` — 对生成后的 Results 段落进行反向蒸馏审查，检查槽位覆盖、四拍节奏、DNA 指标、可迁移性和因果语言合规性。审查结果作为 Vault 参考注释，不自动修改本 skill 的骨架库
-  - **新增**：反向蒸馏时，`distill-results-exemplar` 将本 skill 实际使用的骨架与 `_evidence_registry.yaml` 对比，若发现用户偏离了 ROBUST 骨架（如使用了未经验证的变体），在验证报告中标记为 "偏离已验证模板"
 
 ### 假设-结果承诺兑现框架（Hypothesis-Result Fulfillment Map）
 

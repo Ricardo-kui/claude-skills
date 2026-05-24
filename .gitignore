@@ -50,3 +50,8 @@
 !empirical-writeup.md
 !methods_results_quality_check.py
 !paper-writing-stack.md
+
+# Exclude Python cache and backup files
+__pycache__/
+*.pyc
+*.backup_*

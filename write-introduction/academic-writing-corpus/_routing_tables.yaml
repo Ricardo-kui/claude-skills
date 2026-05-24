@@ -1,0 +1,451 @@
+# _routing_tables.yaml
+# Extracted from SKILL.md §1-§10 (v3.2.0).
+# Consumed by write-introduction during the "选择阶段" of the two-step read protocol.
+# This file replaces the inlined decision tables in SKILL.md — it is read on-demand,
+# not loaded into the skill's base context window.
+
+# §1 — Gap types
+gap_types:
+  Incompleteness:
+    energy: low
+    core_logic: "已有进展，但遗漏了某个维度/机制/时点"
+    attitude: "你们做得好，但漏了一块"
+    conversation_strategy: "Progressive Coherence"
+    paragraph_structure: "紧凑型: Hook+Lit → Gap+Stakes → Theory → Preview+Findings → Contribution"
+    paragraph_count: 5
+    exemplar: "eilert2017 (JM)"
+  Inadequacy:
+    energy: medium
+    core_logic: "现有视角抓住了现象，但误置了构念/层次/边界"
+    attitude: "你们看到了现象，但理解偏了"
+    conversation_strategy: "Synthesized Coherence"
+    paragraph_structure: "标准型: Hook → Lit → Gap → Stakes/Theory → Preview → Contribution"
+    paragraph_count: "6-7"
+    exemplar: "gamache2020 (SMJ)"
+  Incommensurability:
+    energy: high
+    core_logic: "不同理论/证据推出不兼容解释，需要新框架"
+    attitude: "你们说得都对，但互相矛盾"
+    conversation_strategy: "Non-Coherence"
+    paragraph_structure: "扩展型: Hook → Lit → Gap → Stakes → Theory → Preview → Findings → Contribution"
+    paragraph_count: "8-9"
+    exemplar: "zhou2017 (ASQ)"
+
+# §2 — Hook selector (Pollock 2025 taxonomy)
+# NOTE: canonical_id "10" is shared by two hooks (immersive-narrative + practical-puzzle).
+# This is a legacy numbering artifact — the YAML keys are the full canonical_id strings
+# ("10-immersive-narrative" vs "10-practical-puzzle"), so routing is unambiguous.
+# If renumbering in the future, rename the corpus files and update all references here.
+hooks:
+  by_gap_strength:
+    low:
+      - canonical_id: "03-data-shock"
+        pollock_type: "Trend"
+        syntactic_signature: "具体数字 → scale → 'yet little is known'"
+        exemplar: "eilert2017 (JM)"
+      - canonical_id: "08-consequence-cascade"
+        pollock_type: "Trend"
+        syntactic_signature: "负面事件递进式后果清单"
+        exemplar: "mayo2021 (POM)"
+      - canonical_id: "10-practical-puzzle"
+        pollock_type: "Anecdote"
+        syntactic_signature: "从业者面临的具体困境"
+        exemplar: null
+      - canonical_id: "09-psychological-construct-hook"
+        pollock_type: "Anecdote"
+        syntactic_signature: "压力共识→案例落地→因果链→学术空白"
+        exemplar: "mannor2016 (SMJ)"
+      - canonical_id: "13-rhetorical-question"
+        pollock_type: "Rhetorical question"
+        syntactic_signature: "日常选择三联→读者自我确认→概念转译"
+        exemplar: "gomulya2019 (SMJ)"
+    medium:
+      - canonical_id: "05-literature-consensus-blindspot"
+        pollock_type: "Trend"
+        syntactic_signature: "\"While important... considers... broadly\""
+        exemplar: "gamache2020 (SMJ)"
+      - canonical_id: "01-cross-disciplinary-analogy"
+        pollock_type: "Trend"
+        syntactic_signature: "领域A的概念 → 领域B的类似问题"
+        exemplar: "pollock2015 (ASQ)"
+      - canonical_id: "12-contrary-to-belief"
+        pollock_type: "Trend"
+        syntactic_signature: "\"Contrary to popular belief...\""
+        exemplar: "eilert2017 (JM)"
+      - canonical_id: "04-puzzle-paradox"
+        pollock_type: "Anecdote"
+        syntactic_signature: "反直觉现象 → 制造悬念"
+        exemplar: "paruchuri2020 (SMJ)"
+      - canonical_id: "07-cost-benefit-tension"
+        pollock_type: "Anecdote"
+        syntactic_signature: "决策两难：行动成本 vs 延迟成本"
+        exemplar: "eilert2017 (JM)"
+      - canonical_id: "11-institutional-anecdote"
+        pollock_type: "Anecdote"
+        syntactic_signature: "客观制度叙事→\"unremarkable\"理论常态化"
+        exemplar: "lehman2014 (MS)"
+      - canonical_id: "10-immersive-narrative"
+        pollock_type: "Anecdote"
+        syntactic_signature: "五幕结构叙事（时间精确、人物有名）"
+        exemplar: "desai2012 (AMJ)"
+    high:
+      - canonical_id: "06-paradigm-challenge"
+        pollock_type: "Trend"
+        syntactic_signature: "\"According to conventional view... In reality, however...\""
+        exemplar: "zhou2017, hahl2017, gamache2023"
+      - canonical_id: "02-epigraph-quote-pivot"
+        pollock_type: "Quote"
+        syntactic_signature: "权威引语/新闻个案/内部文件"
+        exemplar: "darby2026 (JOM)"
+      - canonical_id: "14-paired-disasters"
+        pollock_type: "Anecdote"
+        syntactic_signature: "两个时间跨度大的相似灾难，建立\"历史重演\"谜题"
+        exemplar: "haunschild2015 (OS)"
+
+  # Contribution-dimension micro-adjustments
+  contribution_micro:
+    Constructs:
+      preferred: ["04-puzzle-paradox"]
+      note: "让读者\"意识到混淆\""
+    Mechanism:
+      preferred: ["05-literature-consensus-blindspot"]
+      note: "展示\"现有解释不足\"。注册表显示此模板 gap_distribution.Incompleteness=0，仅推荐给 Inadequacy"
+    Boundary:
+      preferred: ["04-puzzle-paradox"]
+      note: "呈现\"何时有效/失效\""
+    Phenomenon:
+      preferred: ["03-data-shock", "14-paired-disasters"]
+      note: "用数据建立新现象域，或用极端案例叙事建立现象存在性"
+
+  # Registry evidence strength — static snapshot for fast lookup during selection.
+  # ⚠️  Runtime authority is _evidence_registry.yaml. This section is a cached copy;
+  #     if registry paper_count/status/gap_distribution differ from this snapshot,
+  #     the registry wins. Update this section after each distill-introduction-exemplar --batch.
+  registry_evidence:
+    "06-paradigm-challenge":
+      status: "ROBUST"
+      paper_count: 6
+      gap_purity: "67% Incommensurability, 33% Inadequacy — 不要推荐给 Incompleteness"
+    "05-literature-consensus-blindspot":
+      status: "ROBUST"
+      paper_count: 7
+      gap_purity: "86% Inadequacy, 14% Incompleteness（park2013 为 Incompleteness+Non-Coherence 例外）"
+    "04-puzzle-paradox":
+      status: "ROBUST"
+      paper_count: 7
+      gap_purity: "57% Inadequacy, 43% Incommensurability"
+    "03-data-shock":
+      status: "ROBUST"
+      paper_count: 7
+      gap_purity: "100% Incompleteness — 不要推荐给 Inadequacy/Incommensurability"
+    "02-epigraph-quote-pivot":
+      status: "ROBUST"
+      paper_count: 8
+      gap_purity: "50% Incompleteness, 50% Inadequacy"
+    "10-immersive-narrative":
+      status: "VERIFIED"
+      paper_count: 3
+      gap_purity: "67% Incompleteness"
+    "14-paired-disasters":
+      status: "EMERGING"
+      paper_count: 2
+      gap_purity: "Incompleteness + Phenomenon — 推荐时标注\"来自单篇范文（haunschild2015 OS）\""
+    other:
+      status: "EMERGING"
+      paper_count: "1-2"
+      gap_purity: "见注册表 — 推荐时标注\"来自单篇范文\""
+
+# §3 — Conversation strategies
+conversation_strategies:
+  Incompleteness:
+    strategy: "Progressive Coherence"
+    core_logic: "承认已有进展，逐步聚焦到缺口"
+  Inadequacy:
+    strategy: "Synthesized Coherence"
+    core_logic: "连接多个文献流，展示共同盲区"
+  Incommensurability:
+    strategy: "Non-Coherence"
+    core_logic: "呈现两个理论的不兼容预测"
+
+# §4 — Tension selector
+tensions:
+  Incompleteness:
+    - canonical_id: "01-despite-progress-unaddressed"
+      core_syntax: "\"Although research has... little attention has been paid to...\""
+      registry_status: "ROBUST (18p)"
+      exclusivity: "仅 Incompleteness — Inadequacy/Incommensurability 中为 0"
+    - canonical_id: "12-forward-vs-backward-looking"
+      core_syntax: "\"Research has examined post-hoc consequences, yet what predicts timing...\""
+      registry_status: "EMERGING (1p)"
+      exclusivity: "Incompleteness 专用"
+    - canonical_id: "08-cost-vs-benefit"
+      core_syntax: "\"Firms face a dilemma: [action] is costly, yet delaying is costlier...\""
+      registry_status: "EMERGING (1p)"
+      exclusivity: "Incompleteness 专用"
+    - canonical_id: "13-sequential-phenomenon-gap"
+      core_syntax: "\"We have good theory about A and good theory about B, but know little about A→B→A sequential cycling...\""
+      registry_status: "EMERGING (1p)"
+      exclusivity: "Incompleteness 专用。Phenomenon 贡献首选——为循环现象奠基"
+  Inadequacy:
+    - canonical_id: "02-implicit-assumption-wrong"
+      core_syntax: "\"The implicit assumption that... may be incorrect because...\""
+      registry_status: "ROBUST (12p)"
+      exclusivity: "仅 Inadequacy — Incompleteness/Incommensurability 中为 0"
+    - canonical_id: "03-structural-blindspot"
+      core_syntax: "\"This focus on [X] has systematically overlooked [Y]...\""
+      registry_status: "ROBUST (8p)"
+      exclusivity: "仅 Inadequacy"
+    - canonical_id: "05-construct-confusion"
+      core_syntax: "\"Different labels have been used for the same phenomenon...\""
+      registry_status: "ROBUST (6p)"
+      exclusivity: "仅 Inadequacy — Incommensurability 中为 0。Constructs 贡献首选，但不能用于 Incommensurability"
+    - canonical_id: "11-overlooked-alternative"
+      core_syntax: "\"The dominant approach has focused on [X], overlooking [Y]...\""
+      registry_status: "EMERGING (1p)"
+      exclusivity: "Inadequacy 专用"
+    - canonical_id: "09-resource-acquisition-vs-utilization"
+      core_syntax: "\"Although [strategy] benefits acquisition, it constrains utilization...\""
+      registry_status: "EMERGING (1p)"
+      exclusivity: "Inadequacy 专用。概念上完美匹配\"资源获取 vs 资源利用\"场景，证据待积累"
+  Incommensurability:
+    - canonical_id: "04-reality-contradicts-consensus"
+      core_syntax: "\"Whereas prior studies show X, empirical evidence is mixed... To resolve, we theorize...\""
+      registry_status: "ROBUST (7p)"
+      exclusivity: "仅 Incommensurability — Incompleteness/Inadequacy 中接近 0"
+    - canonical_id: "06-theoretical-imbalance"
+      core_syntax: "\"Two theoretical perspectives offer incompatible predictions...\""
+      registry_status: "ROBUST (5p)"
+      exclusivity: "Incommensurability 为主 (40%)，Inadequacy 次之 (60%)"
+    - canonical_id: "07-same-policy-opposite-effects"
+      core_syntax: "\"The same practice increases [outcome] for Group A but decreases it for Group B...\""
+      registry_status: "EMERGING (2p)"
+      exclusivity: "Incommensurability 专用"
+    - canonical_id: "10-constraint-vs-freedom"
+      core_syntax: "\"Technology expands freedom, yet market structure imposes constraints...\""
+      registry_status: "EMERGING (1p)"
+      exclusivity: "Incommensurability 专用"
+
+# Gap exclusivity filter rules (registry-driven)
+gap_exclusivity_rules:
+  - rule: "若模板的 gap_distribution.[user_gap_type] == 0 → 禁止推荐，即使本表列出"
+  - rule: "01-despite-progress-unaddressed 在 Incommensurability 场景 → 逻辑矛盾，已内置互斥"
+  - rule: "05-construct-confusion 在 Incommensurability 场景 → 不适用（Incommensurability 不是\"构念搞混了\"而是\"理论互相矛盾\"）"
+
+# Tension wording intensity
+tension_wording_intensity:
+  mild: "has received relatively little attention"
+  medium: "remains poorly understood"
+  strong: "is theoretically underspecified / rests on an untested assumption"
+  surprising: "surprisingly understudied given its importance"
+
+# §5 — Stakes selector
+stakes:
+  selection:
+    - feature: "含市场/财务结果"
+      stakes: "02-quantified-economic-loss"
+    - feature: "含股价/资本市场"
+      stakes: "05-firm-value-stock-market"
+    - feature: "含声誉/丑闻/合法性"
+      stakes: "07-reputation-legitimacy-crisis"
+    - feature: "含产品安全/公共卫生/消费者伤害"
+      stakes: "04-public-health-safety"
+    - feature: "核心贡献为跨学科/外部因素引入"
+      stakes: "03-disciplinary-gap-stakes"
+    - feature: "其他"
+      stakes: "01-general-theory-practice"
+      note: "理论重要性 + 实践后果"
+  insertion:
+    compact: "在 Gap 段末尾（1-2句）"
+    standard: "独立 P4（2-3句）"
+    extended: "独立 P4 + 数据支撑"
+
+# §6 — Paragraph structures
+paragraph_structures:
+  Incompleteness:
+    structure: "紧凑型: Hook+Lit → Gap+Stakes → Theory → Preview+Findings → Contribution"
+    paragraphs: 5
+    exemplar: "eilert2017 (JM)"
+  Inadequacy:
+    structure: "标准型: Hook → Lit → Gap → Stakes/Theory → Preview → Contribution"
+    paragraphs: "6-7"
+    exemplar: "gamache2020 (SMJ)"
+  Incommensurability:
+    structure: "扩展型: Hook → Lit → Gap → Stakes → Theory → Preview → Findings → Contribution"
+    paragraphs: "8-9"
+    exemplar: "zhou2017 (ASQ)"
+
+# §7 — Module pairing constraints
+pairing_constraints:
+  mandatory:
+    - hook: "06-paradigm-challenge"
+      tension: "04-reality-contradicts-consensus"
+      applies_to: "Incommensurability"
+    - hook: "04-puzzle-paradox"
+      tension: "02-implicit-assumption-wrong"
+      applies_to: "Inadequacy"
+    - hook: "04-puzzle-paradox"
+      tension: "04-reality-contradicts-consensus"
+      applies_to: "Incommensurability"
+      note: "Constructs 贡献时，puzzle → 对立理论整合"
+    - hook: "05-literature-consensus-blindspot"
+      tension: "02-implicit-assumption-wrong 或 03-structural-blindspot"
+      applies_to: "Inadequacy"
+    - hook: "03-data-shock"
+      tension: "01-despite-progress-unaddressed"
+      applies_to: "Incompleteness"
+    - hook: "12-contrary-to-belief"
+      tension: "02-implicit-assumption-wrong"
+      applies_to: "Inadequacy"
+    - hook: "07-cost-benefit-tension"
+      tension: "08-cost-vs-benefit（首选）或 01-despite-progress-unaddressed"
+      applies_to: "Incompleteness / Inadequacy"
+    - hook: "01-cross-disciplinary-analogy"
+      tension: "11-overlooked-alternative"
+      applies_to: "Inadequacy"
+      note: "当引入被忽视视角时"
+    - hook: "09-resource-acquisition-vs-utilization"
+      tension: "05-literature-consensus-blindspot"
+      applies_to: "Inadequacy"
+    - hook: "14-paired-disasters"
+      tension: "13-sequential-phenomenon-gap"
+      applies_to: "Incompleteness"
+      note: "双灾难叙事建立的\"修正-复发\"谜题需要 sequential cycling 缺口来解释"
+
+  puzzle_paradox_note: "04-puzzle-paradox 有两个配对规则。Inadequacy 场景（\"你们把构念搞混了\"）→ 配 02-implicit-assumption-wrong；Incommensurability 场景（\"两个理论都对但互相矛盾，需要新构念整合\"）→ 配 04-reality-contradicts-consensus。判断依据：用户的 Gap 描述是\"文献理解偏了\"还是\"文献互相矛盾\"。"
+
+  conflicts:
+    - pair: "03-data-shock + 02-quantified-economic-loss"
+      reason: "功能冗余，数字疲劳"
+    - pair: "03-data-shock + 08-consequence-cascade"
+      reason: "两者都依赖数字，造成数字疲劳"
+    - pair: "06-paradigm-challenge + 01-despite-progress-unaddressed"
+      reason: "能量不匹配（高+低）"
+    - pair: "02-epigraph-quote-pivot + 13-rhetorical-question"
+      reason: "外部声音 vs 读者声音，叙事机制冲突"
+    - pair: "Incommensurability + 01-despite-progress-unaddressed"
+      reason: "逻辑矛盾（颠覆 ≠ 渐进）"
+
+# §8 — Makadok contribution dimension statements
+makadok_statements:
+  Constructs: "We clarify [construct] by distinguishing [A] from [B], resolving confusion in the literature."
+  Mechanism: "We explain why [X] affects [Y] by identifying [mechanism] that translates [cause] into [outcome]."
+  Boundary: "We show that [relationship] depends on [moderator], reconciling conflicting findings."
+  Phenomenon: "We document a novel phenomenon: [phenomenon], and demonstrate its importance for [outcome]."
+  Level: "We bridge [level A] and [level B] by showing how [micro] aggregates to [macro]."
+  Mode: "We reveal how [process] unfolds over time, showing that [pattern] rather than [alternative]."
+  Question: "We ask a new question: [question]? And answer it by [approach]."
+  Output: "We provide a [tool/typology/framework] that enables [actors] to [action]."
+
+# §9 — Journal style quick reference
+journal_styles:
+  ASQ:
+    hook_preference: "Quote (经典理论引语) / Trend (理论颠覆)"
+    contribution_style: "理论整合，facet 分解，反讽对仗"
+    taboos:
+      - "不要数据开场"
+      - "不要无充分文献支持就声称矛盾"
+  SMJ:
+    hook_preference: "Trend (反例+数据) / Anecdote (叙事案例)"
+    contribution_style: "多层次贡献，理论精细化"
+    taboos:
+      - "反例必须有具体数字和案例"
+  AMJ:
+    hook_preference: "Anecdote (沉浸式叙事) / Rhetorical question (读者共鸣)"
+    contribution_style: "机制链清晰，三维度贡献"
+    taboos:
+      - "不要缺 Why Chain"
+  OS:
+    hook_preference: "Anecdote (实践张力→理论 puzzle)"
+    contribution_style: "系统性/结构性论证"
+    taboos:
+      - "贡献需有 broader implications"
+  ASR:
+    hook_preference: "Quote (经典文本) / Trend (理论颠覆)"
+    contribution_style: "理论深度优先，实验设计概述在后"
+    taboos:
+      - "经典理论对话是必备"
+  JM_JMR:
+    hook_preference: "Trend (数据冲击) / Anecdote (成本困境)"
+    contribution_style: "管理相关性+理论机制"
+    taboos:
+      - "营销后果必须有实证支撑"
+
+# §10 — Gap×Contribution exemplar anchoring
+exemplar_anchoring:
+  "Incompleteness × Mechanism": { exemplar: "Wu 2025, Darby 2026, Mayo 2021, Vadakkepatt 2022", journal: "OrgSci, JOM, POM, JM" }
+  "Incompleteness × Constructs": { exemplar: "Mannor 2016, Desai 2012", journal: "SMJ, AMJ" }
+  "Incompleteness × Boundary": { exemplar: "Eilert 2017, Vadakkepatt 2022", journal: "JM" }
+  "Incompleteness × Phenomenon": { exemplar: "Lehman 2014", journal: "MS" }
+  "Inadequacy × Constructs": { exemplar: "Han 2024, Pollock 2015, Pfarrer 2010", journal: "AMP, ASQ, AMJ" }
+  "Inadequacy × Mechanism": { exemplar: "Keeves 2017, Paruchuri 2020", journal: "AMJ, SMJ" }
+  "Inadequacy × Boundary": { exemplar: "Han 2020", journal: "AMP" }
+  "Inadequacy × Phenomenon": { exemplar: "DesJardine 2023", journal: "AMJ" }
+  "Incommensurability × Constructs": { exemplar: "Pontikes 2012", journal: "ASQ" }
+  "Incommensurability × Mechanism": { exemplar: "Zhou 2017", journal: "ASQ" }
+  "Incommensurability × Boundary": { exemplar: "Park 2025", journal: "OS" }
+  "Incommensurability × Level": { exemplar: "Keeves 2017", journal: "AMJ" }
+
+# Template health check thresholds
+# Only CAUTION is actionable — HEALTHY and INSUFFICIENT_DATA are handled silently.
+# DEGRADED with auto-replacement was removed (v3.3.0): the cold-start problem (validation data
+# accumulates slowly) and signal ambiguity (reject_rate conflates template quality with user skill)
+# made the cascade unworkable in practice.
+health_check:
+  insufficient_data:
+    condition: "total_runs < 2"
+    action: "静默跳过，不做任何健康相关操作"
+  healthy:
+    condition: "total_runs >= 2 AND reject_rate < 0.50"
+    action: "静默跳过，不显示健康信息（模板表现正常，无需提醒）"
+  caution:
+    condition: "total_runs >= 2 AND reject_rate >= 0.50"
+    action: "在提醒中输出 ⚠️ 警告，列出 common_revise_reasons。建议用户在使用后运行 --validate 检查"
+  reject_rate_formula: "reject / total_runs"
+  design_note: "reject_rate 仅作参考——高 reject 可能反映模板被新手频繁使用而非模板本身有问题。警告的语言应强调'建议验证'而非'模板有问题'。"
+
+# Evidence confidence labels (from registry status)
+evidence_confidence:
+  ROBUST: "≥5 papers, ≥2 journals — 此模板经 5+ 篇顶刊论文验证"
+  VERIFIED: "≥3 papers — 此模板经 3+ 篇论文验证"
+  EMERGING: "1-2 papers — 此模板来自单篇范文，建议谨慎使用"
+
+# Transitions — sentence-level glue between modules.
+# Read during rendering phase as supplementary templates.
+# "Universal" means potentially useful across all Gap types, but still read selectively:
+# only load a transition file when the corresponding paragraph pair is actually being
+# written. (E.g., skip 11-roadmap for compact 5¶ Introductions; skip gap-to-contribution
+# when Contribution is compressed into Theory Lens.)
+# Situational transitions are triggered by contribution dimension or research context.
+transitions:
+  universal:
+    - canonical_id: "01-hook-to-literature"
+      position: "P1(Hook) → P2(Literature Turn)"
+      trigger: "当 Introduction 有独立的 Literature Turn 段时读取"
+    - canonical_id: "10-literature-to-gap"
+      position: "P2(Literature Turn) → P3(Gap)"
+      trigger: "当 Literature Turn 和 Gap 为独立段落时读取"
+    - canonical_id: "gap-to-contribution"
+      position: "P6(Preview) → P7-P8(Contribution)"
+      trigger: "当 Contribution 为独立段时读取（期刊为 ASQ/AMJ/ASR 时；JOM/MS/POM 可跳过）"
+    - canonical_id: "11-roadmap"
+      position: "Introduction 结尾"
+      trigger: "当期刊偏好 roadmap 段落时读取（AMJ/ASQ 常见；JM/JMR 通常省略）"
+  situational:
+    - canonical_id: "02-actor-funnel"
+      triggers: "研究聚焦特定 actor 群体（如 CEO、board、activist investors）"
+    - canonical_id: "03-unified-moderator-framework"
+      triggers: "Boundary 贡献——引入统一调节变量框架"
+    - canonical_id: "04-field-migration"
+      triggers: "跨学科研究——将领域A的概念/方法移植到领域B"
+    - canonical_id: "05-extend-key-study"
+      triggers: "研究直接延伸/挑战一篇关键文献的发现"
+    - canonical_id: "06-data-barrier-justification"
+      triggers: "Incompleteness Gap——缺口因数据获取困难而长期存在"
+    - canonical_id: "07-construct-migration"
+      triggers: "Constructs 贡献——从其他领域引入/重定义构念"
+    - canonical_id: "08-case-to-field-generalization"
+      triggers: "Phenomenon 贡献——从极端案例推广到一般领域"
+    - canonical_id: "09-micro-macro-complement"
+      triggers: "Level 贡献——微观视角补充宏观理论"
+    - canonical_id: "12-setting-justification"
+      triggers: "实证情境需要特别论证（如选择特定行业/国家/时期的理由）"

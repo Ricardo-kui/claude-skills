@@ -7,9 +7,9 @@ cross_paper: VERIFIED
 generativity: GENERATIVE
 exclusivity: HIGH
 source_papers:
-  - paruchuri2020 (SMJ, 2020): "A major, but generally untested assumption... is that..." (变体 A + 变体 D)
-  - gamache2020 (SMJ, 2020): "While important... considers... broadly" (conflation assumption, 变体 B)
-  - han2020 (AMJ, 2020): "Most research on [topic] has treated [construct] as decontextualized" (变体 C)
+  - paruchuri2020 (SMJ, 2020): "A major, but generally untested assumption... is that..."
+  - gamache2020 (SMJ, 2020): "While important... considers... broadly" (conflation assumption)
+  - han2020 (AMJ, 2020): "Most research on [topic] has treated [construct] as decontextualized"
 created: 2026-05-18
 source: Extracted from MVP30 narrative_analysis files
 ---
@@ -90,58 +90,6 @@ Inadequacy 问题化的核心 Tension：不是"文献遗漏了东西"，而是"�
 - "treated [construct] as decontextualized" → 识别出一个理论假设：情境不重要
 - "sometimes even inverting the relationships" → 暗示忽略情境会导致方向性误判
 - 直接挑战一个方法论层面的隐性假设
-
----
-
-### 变体 D：效价反转例外型（paruchuri2020 型，第三层缺口）
-
-**模板**:
-> "Further, most research on [phenomenon] has focused on situations where [standard valence pattern]—that is, where [action valence] leads to [same spillover valence]. We are aware of only [N] stud[ies/y] where the valence of the [outcome] is different than the valence of the [action]—that is, where [counterexample description]. [Exception study] showed that [finding from exception], suggesting that [broader implication]. However, it is unclear [what remains unknown about the alternative valence pattern]."
-
-**来源**: paruchuri2020 (SMJ), P4（该论文三层假设解构的第三层）
-
-**原文锚定**:
-> "Further, most research on reputation spillovers has focused on situations where a focal firm's negative action has negative spillover effects. We are aware of only one study where the valence of the spillover is different than the valence of the action—that is, where a negative action has a positive spillover effect on others."
-
-**关键特征**:
-- "We are aware of only [N] stud[ies/y]" → 以学术诚实建立可信度（不夸张 "no research exists"）
-- 例外研究作为 "理论可能性证明"（proof of concept）——证明效价反转在逻辑上可能
-- "only one study" → 精确的数字同时暗示研究前沿的开放性
-- "However, it is unclear" → 将例外转化为新的研究前沿
-- 与变体 A 的前两个假设形成 "假设表面化级联"（Assumption Surface Cascade）——从结构假设 → 时间假设 → 方向性假设，逐层深化
-
-**适用条件**:
-- 研究的核心反直觉贡献涉及效价/方向性反转（负→正 或 正→负）
-- 有一个（或极少数）可引用的例外研究证明理论可能性
-- 论文的 Tension 已通过变体 A 或其他变体建立了前序批评（变体 D 适合作为收束层）
-
-**禁忌**:
-- 不能在没有例外研究的情况下声称 "no research has examined"——变体 D 的力量来自学术诚实
-- 例外研究不能是作者自己的 working paper 或会议论文——必须是已发表的同行评审研究
-- 不能在例外研究基础上暗示 "all prior research is wrong"——例外证明可能性，不否定主流发现
-
-**paper_count**: 1 (EMERGING)
-
----
-
-### 三层假设挑战级联（Three-Assumption Cascade — 变体 A + D 组合模式）
-
-**这不是独立变体，而是变体A(双重解构)和变体D(效价反转例外)的组合使用模式。**
-
-当论文需要挑战多个层面的文献假设时，可以按以下顺序组织三层级联:
-
-1. **结构层假设** (变体A前半): 挑战关于"谁受影响"的假设 (如"same broad category = sufficient for spillover")——最基础、最不反直觉
-2. **时间层假设** (变体A后半): 挑战关于"影响多久"的假设 (如"spillover effects are enduring")——增加紧迫感
-3. **方向层假设** (变体D): 挑战关于"影响方向"的假设 (如"negative→negative"→"negative→positive")——最反直觉，最具理论增值
-
-**关键特征**:
-- 每层独立论证但累进加深读者对文献基础的不信任
-- 从"不精确"(结构层)→"不完整"(时间层)→"可能方向性错误"(方向层)的升级路径
-- 第三层使用"only one study"措辞而非"no research"——维护学术诚实
-
-**语料锚定**: paruchuri_pollock_kumar2020 (SMJ) — P2-P4完整三层级联
-
-**禁忌**: 三层必须有清晰的层次递进逻辑。如果三层均为同质批评(都在说"还没人研究过X")→合并为一层。
 
 ---
 

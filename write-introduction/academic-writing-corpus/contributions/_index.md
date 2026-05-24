@@ -3,7 +3,7 @@ type: canonical_reference
 canonical_id: "contribution-statements"
 status: ✓ STANDARD
 gap_type: all
-cross_paper: VERIFIED
+cross_paper: ROBUST
 generativity: ADAPTABLE
 exclusivity: LOW
 source_papers:
@@ -13,9 +13,9 @@ source_papers:
   - malshe2015 (JM, 2015): Enumerated contribution list
   - paruchuri2020 (SMJ, 2020): Finding-preview + contribution hybrid
   - darby2026 (JOM, 2026): Three-part closure (theory + practice + policy)
-  - darby2023 (MSOM, 2023): Makadok multi-dimension with policy stakes
   - vadakkepatt2022 (JM, 2022): Dark-side narrative (beneficial actions harm stakeholders) + moderator systematization
-  - desai2012 (AMJ, 2012): Two-contribution minimal + deferred ("Related contributions are discussed following the study's results")
+  - kim2022 (MS, 2022): "Named forces ceremony — four driving forces with formal labels and triggering conditions"
+updated: 2026-05-24
 created: 2026-05-19
 source: Extracted from MVP30 narrative_analysis files + SKILL.md Makadok table
 ---
@@ -51,29 +51,6 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 - 空洞的"important" → 用三层具体化替代
 - 过度承诺 → 使用谦逊措辞（"foundation", "extends"）而非绝对化措辞
 - 缺少后果层 → 审稿人会问"so what?"
-
----
-
-## 变体 H：Makadok 多维度 + 政策 stakes 型（darby2023 型）
-
-**模板**:
-> "Our study provides theoretical contributions for scholars and practical implications for [audience 1] and [audience 2]. For researchers, we contribute to [stream 1] by demonstrating how [X] influences [Y]. In doing so, we demonstrate how [theoretical implication] and thereby [theoretical network enrichment]. We also contribute to [stream 2] by highlighting [key role]. For practice and public policy, our findings point to a need for [practical recommendation]."
-
-**原文锚定**:
-> "Our study provides theoretical contributions for scholars and practical implications for firms and regulators. For researchers, we contribute to the corporate governance literature by demonstrating how CEO stock ownership influences recall timing. In doing so, we demonstrate how governance mechanisms can shape operational outcomes and thereby extend the governance literature beyond traditional financial metrics. We also contribute to the operations management literature by highlighting the role of executive incentives in product safety. For practice and public policy, our findings point to a need for regulators to consider the incentive structures of firm executives when designing recall policies."
-
-**来源**: darby2023 (MSOM), P8
-
-**关键特征**:
-- **双文献流贡献**: 明确命名两个对话的文献流（stream 1 + stream 2）
-- **"In doing so, we demonstrate how... and thereby..."** → 第一层贡献的理论溢出效应
-- **"We also contribute to..."** → 第二层贡献，用 "also" 自然过渡
-- **"For practice and public policy"** → 将实践和政策合并为一段，简洁有力
-- **"point to a need for"** → 政策建议的谦逊但明确表达
-
-**适用**: 跨学科研究（如治理+运营管理）、有明确政策含义的研究
-
-**与变体 E（三段闭环型）的区别**: 变体 E 是"理论→实践→政策"三段式，变体 H 是"理论（双文献流）→实践/政策"两段式，更紧凑
 
 ---
 
@@ -298,28 +275,25 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 
 ---
 
-### 变体 I：延迟贡献声明型（desai2012 型）
+### 变体 H：命名机制 + 力量分类法（kim2022 型）
 
 **模板**:
-> "This study yields several contributions to [primary field] and to [broader field] more broadly. First, the study forwards theory regarding [contribution 1: specific theoretical advance]. This is an important contribution, given [justification: why this matters in light of existing research] ([citations]). The study also adds to theoretical knowledge regarding [contribution 2]. Related contributions are discussed following the study's results."
+> "The analysis reveals [N] primary forces that drive [actors'] [core decision]. The first, termed *[Force 1]*, plays a role when [condition A]. This force drives the firm to [strategy 1]. However, when [condition B], a *[Force 2]* effect kicks in, prompting the firm to [strategy 2]. Interacting with these two countervailing forces is [contextual factor]. If [condition C], an *[Force 3]* stimulates [behavior C]. However, when [condition D], a *[Force 4]* is also present and reflects [motivation D]."
 
-**来源**: desai2012 (AMJ), P7
+**来源**: kim2022 (MS), P8
 
 **原文锚定**:
-> "This study yields several contributions to institutional theory and to organization theory more broadly. First, the study forwards theory regarding whether firms influence other firms and their overall field following crises and predicts which firms are likely to engage in this field-level process. This is an important contribution, given the role of crises in research on field-level institutional change (Greenwood et al., 2002; Hoffman, 1999; Hoffman & Ocasio, 2001). The study also adds to theoretical knowledge regarding what field-level actions are available to firms following disruptions. Related contributions are discussed following the study's results."
+> "The analysis reveals four primary forces that drive firms' testing and launch-timing decisions. The first, termed *recall avoidance*, plays a role when the probability of new product failure is high, or the costs associated with a recall are large. This force drives the firm to 'play it safe' and delay the launch to ensure its innovation is fail-proof. However, when the potential consequences of a recall are limited and consumer benefits from the innovation are large, a *market pre-emption* effect kicks in, prompting the firm to 'take on the risk' of skipping rigorous testing..."
 
 **关键特征**:
-- **极简两贡献**: 只声明2个核心贡献，避免贡献散弹
-- **"This is an important contribution, given..."** → 每个贡献附带简短的理由（为什么这个贡献重要？引用支撑）
-- **"Related contributions are discussed following the study's results"** → 将部分贡献延迟到Discussion中详细展开——AMJ允许的做法
-- 不需要"First-Second-Third"格式，用"First... also..."即可
-- 贡献直接对应Introduction开头设立的Gap（回响式收束）
+- **命名仪式**: "termed *X*" 宣告作者正在创造新的理论语言——每个力量名称成为论文的知识产权
+- **先触发条件再驱动方向**: 'plays a role when [condition]' → 'This force drives the firm to [action]'——每个力量是可检验的命题奠基石
+- **力与力的互动**: 用 "Interacting with these... / However, when..." 连接——不是静态列表，而是动态系统
+- **功能描述性命名**: 名称遵循功能描述逻辑（recall avoidance = 回避召回）而非花哨隐喻——非专业读者也能从名称推断功能
 
-**适用**: AMJ/ASQ等允许Discussion中详细展开贡献的期刊；贡献聚焦（1-2个核心+若干衍生）的研究
+**适用**: 适用于分析模型论文、理论论文——有多个可清晰分离的理论机制；特别适合 MS、ASQ、AMR、SMJ 等接受理论贡献呈现为 "机制命名" 的期刊
 
-**禁忌**:
-- 不要在Discussion中未兑现延迟的贡献承诺——"Related contributions are discussed following the study's results"是契约
-- 不要在Introduction贡献段过度简略以致审稿人认为"贡献不足"
+**禁忌**: "力量数量应为 3-5 个（过少显得 trivial，过多让读者记忆负担过重）；名称必须是机制功能描述而非隐喻（'recall avoidance' 优于 'the ostrich effect'）；每个力量必须在后文的分析中有对应的 formal treatment——如果某力只在 Introduction 中出现一次，审稿人会质疑其必要性"
 
 ---
 

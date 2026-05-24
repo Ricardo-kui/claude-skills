@@ -9,7 +9,8 @@ exclusivity: LOW
 source_papers:
   - desai2012 (AMJ, 2012): Immersive narrative hook with five-act structure
   - lashley_pollock2020 (ASQ, 2020): Extreme-situation immersive narrative
-  - singh_grewal2023 (JMR, 2023): Policy anecdote + table evidence hook (Variant C)
+  - kim2022 (MS, 2022): "Samsung Note 7 case — from success to catastrophic recall with three-dimensional quantified consequences"
+updated: 2026-05-24
 created: 2026-05-19
 source: Extracted from desai2012 distill-introduction-exemplar
 ---
@@ -49,52 +50,38 @@ source: Extracted from desai2012 distill-introduction-exemplar
 ## 变体 B：极端情境沉浸型（lashley_pollock2020 型）
 
 **模板**:
-> "Imagine [action] when [extreme constraint 1], [constraint 2], [constraint 3], [constraint 4], [constraint 5], and [constraint 6]. These are the sorts of things that can happen ([citations]) when [theoretical framing]."
+> "Consider the following situation: [Actor] must [extreme challenge]. [Constraint 1]. [Constraint 2]. [Constraint 3]. How would you respond?"
 
 **来源**: lashley_pollock2020 (ASQ), P1
 
-**原文锚定**:
-> "Imagine starting a business when the federal government has declared your product or service illegal, banks will not let you open a checking account, you cannot deduct your business expenses or pay your taxes through conventional means, you are forced to pay your employees in cash, your friends and neighbors look at you with suspicion, and many of your customers do not want to admit they use your product or service. These are the sorts of things that can happen (Hudson and Okhuysen, 2009; Kovaleski, 2014; Voss, 2015) when an entire industry category is predicated on a product or activity that is subject to 'core' stigma (Hudson, 2008)."
-
 **关键特征**:
-- **"Imagine..."** → 第二人称直接邀请读者代入，比 "Consider" 更有沉浸感
-- **六个约束条件的累积排比**: 从制度（非法）、金融（无银行账户）、运营（现金支付）、社会（邻里猜疑）到市场（顾客隐瞒）——层层递进
-- **平行语法结构增强节奏**: "banks will not... you cannot... you are forced... your friends... and many of your customers..."
-- **"These are the sorts of things that can happen... when..."** → 从具体场景平滑过渡到理论概念（core stigma），完成从现象到学术的收束
-- 所有约束都有文献引用支撑，避免轶事感
+- 用第二人称直接邀请读者参与
+- 极端情境制造认知冲击
+- 多个约束条件叠加增强紧张感
 
-**适用**: 研究涉及极端制度约束、社会污名或边缘化群体的 ASQ/AMJ 论文
+**适用**: ASQ 偏好理论驱动的沉浸式 Hook
 
 ---
 
-## 变体 C：Policy Anecdote + Table 型（singh_grewal2023 型）
+### 变体 C：灾难性案例 + 量化后果型（kim2022 型）
 
 **模板**:
-> "A [year] [institutional body] report, examining [specific event/crisis], alleged [suspect mechanism] by [industry actors] ([citation]). It cited an internal [firm] document ([date]), in which [senior executive] highlighted several 'wins,' such as [specific favorable outcome 1], [outcome 2], and [outcome 3] (e.g., [quantified benefit]). In the [industry] industry, similar news reports detail how [mechanism actors] work to limit [regulator] sanctions on [affected parties] ([citation]). In one case, [political actors] even asked the [regulator head] to disclose [sensitive contacts] and testify as to whether [alleged improper action] ([citation]). [Table reference: other examples of mechanism across industries.]"
+> "Consider the following particular example. In [date], [Company] unveiled [product], a [flagship category] packed with innovative features such as [feature 1], [feature 2], and [feature 3]. By [strategic action], [Company] was eager to [goal 1] and [goal 2]. At the time of release, the new [product] was deemed a success. Initial demand was high, [evidence of success]. To [Company]'s dismay, however, shortly after the debut, [negative event]. [Company] quickly responded and [remedial action]. Nonetheless, the crisis carried on as [remedy failure]. Eventually, [Company] issued a full recall, [scale of recall]. The consequences of [event] were catastrophic. [Company] estimated the direct cost at [dollar amount]; in a survey, [X%] responded that they would [negative future behavior]; and the company's stock price dropped by [Y%], effectively removing [dollar amount] off its book value."
 
-**来源**: singh_grewal2023 (JMR), P1
+**来源**: kim2022 (MS), P2
 
 **原文锚定**:
-> "A 2010 U.S. Congressional report, examining the slow response of Toyota to hundreds of vehicle accidents due to sudden acceleration in 2009–2010, alleged lobbying influences by automotive firms (Kirchhoff and Peterman 2010). It cited an internal Toyota document (dated July 6, 2009), in which the chief operating officer highlighted several 'wins,' such as delaying final safety rules by National Highway Traffic Safety Administration (NHTSA), persuading NHTSA officials to impose smaller sanctions, and realizing monetary savings (e.g., negotiating the equipment recall on its Camry model saved Toyota $100 million). In the U.S. consumer products industry, similar news reports detail how lobbying firms (e.g., Bracewell LLP) work to limit Consumer Product Safety Commission (CPSC) sanctions on defective product producers (Levin 2019). In one case, legislators even asked the CPSC chairperson to disclose her contacts with business groups and testify as to whether she directed employees to delay corrective actions (U.S. Congress 2019). Table 1 contains other examples of lobbying activities across industries."
+> "In August 2016, Samsung Electronics unveiled the Galaxy Note 7, a flagship smartphone packed with innovative features such as an iris scanner, high dynamic range (HDR) support, and extended battery life. By setting an aggressive launch date, Samsung was eager to capture demand from early enthusiasts and outmaneuver its primary rival Apple... The consequences of the Galaxy Note 7 debacle were catastrophic. Samsung estimated the direct cost of the recall at $5.3 billion; in a survey of its customers, 34% responded that they would be reluctant to purchase another phone from the brand; and the company's stock price dropped by more than 8%, effectively removing $19 billion off its book value."
 
 **关键特征**:
-- **制度文件锚定**: 用 Congressional report / regulatory filing / court document 等官方文件建立可信度——不是 "some say" 而是 "Congress alleged"
-- **内部文件引用**: 引述公司内部文件（dated memo, email, presentation）增加调查感和真实性
-- **具体 "wins" 列表**: 列举可量化的具体好处（delayed rules, smaller sanctions, $100M savings）——三个例子是有效的修辞数量
-- **跨行业扩展**: 用 "similar news reports detail how..." 将单一案例扩展到更广泛的现象
-- **Table 1 作为 Hook 的一部分**: 跨行业表格增强现象的一般性和研究的合法性——Table 成为 Hook 的功能组件而非独立元素
-- **能量等级**: 中-高——制度权威 + 具体证据 + 量化数字
+- 与变体 A（五幕叙事）不同——本变体聚焦案例的**理论预演功能**：案例的每个量化后果（直接成本/消费者态度/市值）直接映射到模型的成本参数
+- 叙事含戏剧性转折（"was deemed a success... To Samsung's dismay, however..."）——制造叙事张力
+- 后果三连击：直接成本 + 消费者态度 + 市值——覆盖 pecuniary + reputational + financial 三个维度
+- 案例长度远超过变体 A（~8句 vs ~5句），适合需要充分建立现象重要性的建模论文
 
-**与变体 A (五幕叙事) 的区别**:
-- 变体 A 是故事驱动（时间、人物、事件序列）
-- 变体 C 是证据驱动（报告、文件、表格、跨行业类比）
-- 变体 C 更适合政策/制度主题的 JMR/JM 风格
+**适用**: 适用于博弈论/分析模型论文——案例需要在引入时埋下理论参数的伏笔；特别适合 MS、MSOM、POM 等管理科学期刊；案例后果维度应直接映射到模型的核心参数
 
-**与变体 B (极端情境沉浸) 的区别**:
-- 变体 B 用 "Imagine..." 建立代入感
-- 变体 C 用制度文件建立权威感和真实性
-
-**适用**: 涉及政策、监管、企业政治行为的 JMR/JM/SMJ 论文
+**禁忌**: "案例必须真实且数据可核实；不要选择正在进行或法律纠纷中的案例（事实不稳定）；案例不宜超过 8 句——超过则叙事能量稀释；如果案例与理论参数的对应关系不明显，不要使用此变体（改用变体 A 或 B）"
 
 ---
 

@@ -3,11 +3,13 @@ type: canonical_reference
 canonical_id: "08-cost-vs-benefit"
 status: ✓ STANDARD
 gap_type: Incompleteness / Inadequacy
-cross_paper: VERIFIED
+cross_paper: EMERGING
 generativity: ADAPTABLE
 exclusivity: MEDIUM
 source_papers:
   - eilert2017 (JM, 2017): "Recall costs vs delay costs — Toyota $17.35m → GM $900m escalation"
+  - kim2022 (MS, 2022): "On the one hand / On the other hand dilemma articulation — testing vs rushing to market"
+updated: 2026-05-24
 created: 2026-05-19
 source: Extracted from MVP30 narrative_analysis + eilert2017 distill
 ---
@@ -76,6 +78,28 @@ source: Extracted from MVP30 narrative_analysis + eilert2017 distill
 | JOM | ⭐⭐⭐⭐⭐ | 运营/供应链研究的经典张力 |
 | SMJ | ⭐⭐⭐⭐☆ | 适合战略决策、治理研究 |
 | OS | ⭐⭐⭐⭐☆ | 适合实践张力→理论 puzzle 的转译 |
+
+---
+
+### 变体 C：双边困境展开型（kim2022 型）
+
+**模板**:
+> "On the one hand, a firm can choose to [Prudent Action]. Such [action] allows the firm to [positive consequence 1], thereby [positive consequence 2]. These [actions], however, typically require [cost/delay], resulting in [negative tradeoff]. On the other hand, a firm may be tempted to [Risky Action], [doing only minimal alternative]. By [taking risky action], the firm can [benefit 1] and [benefit 2]. These advantages, however, come at the risk of [negative outcome]. A [negative outcome], when it occurs, could be detrimental both to [Stakeholder A] and to [Stakeholder B]. [Specific damage chains: at a minimum... in worst-case]. The firm not only incurs [direct cost type], but may also incur [other losses]: [list of 3-4 specific costs]."
+
+**来源**: kim2022 (MS), P4
+
+**原文锚定**:
+> "On the one hand, a firm can choose to conduct thorough quality assurance testing of various circumstances and conditions encountered in everyday product use. Such testing allows the firm to detect and correct potential sources of product failure, thereby avoiding the possibility of having to issue a recall. These tests, however, typically require a dedicated period of time to complete, resulting in a delay of the product launch. On the other hand, a firm may be tempted to forgo extensive quality assurance testing and rush to market, running only minimal, short-term laboratory tests that are insufficient to detect all possible shortcomings."
+
+**关键特征**:
+- 与变体 A 不同——本变体不依赖量化成本数字，而是通过组织行动的后果链条建立张力
+- 每边遵循相同结构：Action → Positive consequence → BUT cost/risk → 具体 damage chain
+- damage chain 从 mild 到 severe 递进（"at a minimum... in worst-case scenarios..."），建立 escalation 感
+- 不以 "few studies have examined" 结尾——以极端后果（"go out of business"）收束，为 Stakes 和 RQ 做情感铺垫
+
+**适用**: 适用于分析模型论文的 Introduction——需要先建立决策情境的丰富纹理再引入形式模型；适用于运营管理、营销战略、管理科学等接受 "决策困境" 作为 Introduction 核心组织逻辑的领域
+
+**禁忌**: "两边必须大致均衡——如果一边的成本/收益明显压倒另一边，决策困境变得虚假；'on the one hand / on the other hand' 是强标记语言——如果期刊要求更 subtle 的写作风格（如 ASQ），应改用 'Firms face a tradeoff between...' 等效表述"
 
 ---
 

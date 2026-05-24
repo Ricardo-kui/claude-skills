@@ -105,11 +105,6 @@ Inadequacy 问题化的一种高价值变体：已有文献不仅"理解偏了"�
 - **与 Constructs 贡献维度配对**: 构念混淆 Tension 的存在是为了justify构念精细化（区分A与B）或构念辨析（澄清定义边界）
 - **必须引用已有批评**: 不能自己第一个指出混淆，必须引用文献流内部的自我批评（"see [Author A] [year], [Author B] [year] for recent critiques"）
 
-### 特殊模式：无 Hook 冷启动
-- 在领域已有深厚理论积累时（如本文引用 Barney, Dierickx & Cool 等奠基文献），可直接以文献综述开场，无需传统 Hook
-- 条件：(1) 目标读者是领域专家；(2) 领域重要性已是共识；(3) 期刊接受纯学术开场（AMJ, ASQ）
-- 风险：若领域不够成熟或读者不够专业，冷启动会降低兴趣建立效率
-
 ### 互斥
 - **不能与 `01-despite-progress-unaddressed` (Tension) 同用**: 前者是 Incompleteness（遗漏），本品是 Inadequacy（混淆）
 - **不能与 `04-reality-contradicts-consensus` (Tension) 同用**: 后者是 Incommensurability（理论对立），本品是构念层面的操作化混乱

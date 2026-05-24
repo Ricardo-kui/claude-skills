@@ -1,10 +1,9 @@
 ---
 name: distill-results-exemplar
 description: |
-  当用户想从已发表论文的 Results 部分学习证据组织节奏、提取假设-结果对应模式和说服逻辑时触发。也用于对比多篇论文的 Results 结构异同、将论文的 Results 写作范式注册到语料库。
-  与 write-results 的区别：本 skill 从范文提取模式（读/分析），write-results 根据模式生成段落（写/生成）。
-  与 results-review 的区别：本 skill 分析已发表论文的 Results，results-review 审查用户自己写的草稿。
-  触发词：分析 results 写法、results 结构拆解、提取 results 模板、学习这篇的 results、results 写作模式、results 范文、results 对比、results 语料库。
+  Results 范文蒸馏 meta-skill。输入单篇或批量论文的 Results 文本，输出结构化提炼报告：段落骨架、表达 DNA、假设-结果节奏、可迁移范式、不可迁移边界、以及 write-results 更新建议。
+  核心原则：提炼 HOW they stage evidence, not WHAT they found。不复制具体系数，只提取证据组织的节奏和说服逻辑。
+  触发词：「蒸馏 results」「results 范文分析」「拆解 results」「提取 results 模板」「处理新论文 results」「results 骨架提炼」。
 version: 1.0.0
 ---
 
@@ -199,64 +198,18 @@ Results 不是静态描述，而是**节奏化的证据展演**。提炼每个�
 
 ### 2.2 表达骨架提炼（Expression Skeleton）
 
-**核心原则：只保留动词、连接词和固定学术表达；所有论文特有名词必须替换为标准占位符。**
-
-#### 标准占位符表（强制使用）
-
-| 占位符 | 含义 | 示例 |
-|--------|------|------|
-| `[DV]` / `[outcome]` | 因变量 | `[recall likelihood]`, `[disclosure probability]` |
-| `[IV]` / `[predictor]` | 核心自变量 | `[lobbying expenditure]`, `[CEO tenure]` |
-| `[moderator]` | 调节变量 | `[media coverage]`, `[defect severity]` |
-| `[mediator]` | 中介变量 | `[perceived quality]` |
-| `[control_i]` | 第 i 个控制变量 | `[firm size]`, `[industry dummies]` |
-| `[estimator]` | 估计器名称 | `[OLS]`, `[random-effects logit]`, `[2SLS]` |
-| `[Table X]` / `[Model Y]` | 表格/模型引用 | `[Table 2]`, `[Model 3]` |
-| `[value]` / `[threshold]` | 系数或 p 值占位 | `[β = 0.57]`, `[p < 0.001]` |
-| `[unit]` | 分析单元 | `[firm]`, `[CEO-year]` |
-| `[time_period]` | 时间范围 | `[2008–2016]` |
-
-**禁止保留的论文特有内容**：具体变量名（如 `Lobbying`, `Early Tenure`）、具体表格编号（如 `Table 6`）、具体系数、样本量、期刊特有的理论术语。
-
-#### 两级提炼格式
-
-**骨架级（Skeleton Level）—— 段落功能模板**
-描述整个段落如何组织，是跨论文复用的**段落建筑蓝图**。
-
+**骨架格式**：
 ```text
-[功能标签]: R3 主假设检验四拍（OLS/FE 版）
-[骨架级别]: paragraph
-[骨架]: [Hypothesis restatement]. [Table navigation]. [Coefficient report with significance]. [Magnitude interpretation]. [Support judgment].
+[功能标签]: 主假设检验四拍（OLS/FE 版）
+[骨架]: Hypothesis [x] predicted that [predictor] would be [positive/negative] related to [outcome]. Model [y] of Table [z] shows that the coefficient for [predictor] is [positive/negative] and statistically significant (β = [value], p < [threshold], 95% CI [[lower], [upper]]). The R² increases from [value] to [value] when [predictor] is added, indicating that [predictor] explains an additional [value]% of the variance in [outcome]. Thus, Hypothesis [x] is supported.
 [可迁移性]: 高 — 出现在 15/28 篇范文中
 [范式排他性]: OLS/FE 专用，Logit 版本需替换为边际效应
+[设计变体]: 
+  - DiD: 替换 "Model [y]" 为 "Model [y] provides the baseline DiD estimate"
+  - IV: 拆分为第一阶段→第二阶段两段
+  - 实验: 替换为 t-test 格式
 [节奏标记]: [方向][显著性+系数][幅度解释][支持判断]
 ```
-
-**句式级（Sentence Level）—— 填空素材**
-从原文中提取的可直接嵌入段落的**完整句子模板**，含标准占位符。
-
-```text
-[功能标签]: 系数显著性报告句（OLS/FE）
-[骨架级别]: sentence
-[句式]: Model [Y] of [Table X] shows that the coefficient for [IV] is [positive/negative] and statistically significant (β = [value], p < [threshold], 95% CI [[lower], [upper]]).
-[适用槽位]: R3
-[适用估计器]: OLS_FE, IV_2SLS(第二阶段)
-[节奏标记]: [显著性+系数]
-```
-
-```text
-[功能标签]: 边际效应概率解释句（Probit/Logit）
-[骨架级别]: sentence
-[句式]: A one-standard-deviation increase in [IV] from the mean value ([from] to [to]) [increased/decreased] the probability of [DV] from [base]% to [new]%.
-[适用槽位]: R3, R5
-[适用估计器]: Logit_Probit_Ordered_Probit
-[节奏标记]: [幅度]
-```
-
-**提炼任务**：
-- 对每个槽位，优先提炼 `sentence` 级素材（直接可用），再提炼 `paragraph` 级骨架（理解组织逻辑）。
-- `sentence` 级素材必须是可以填入占位符后直接生成完整句子的，不能是片段或摘要。
-- `paragraph` 级骨架只描述段落组织逻辑，不包含具体句子。
 
 ### 2.3 Validity Logic 提炼
 
@@ -404,112 +357,19 @@ phase_4_corpus_reference:
     rejected_reasons: ["仅出现1次", "不可生成段落", "选择性报告反模式"]
 ```
 
-**关键原则**：Phase 4 产出分两类：
-- **`vault_enrichment`**（人工消费）：存入 Vault 的 `skill_update_recommendations/` 或 `fine_grained/` 目录，供人工审阅后决定是否修改 corpus `.md` 文件中的**定性内容**（骨架句法、反模式提醒、关键特征描述）。
-- **`corpus_enrichment`**（机器消费）：结构化的 YAML 块，由 Phase 4.5 的 `_update_registry.py` 自动消费，更新 `_evidence_registry.yaml` 中的**定量证据**（paper_count、status、subfield_distribution）。
+**关键原则**：Phase 4 的所有产出都是**参考性注释**，存入 Vault 的 `skill_update_recommendations/` 或 `fine_grained/` 目录，供人工审阅后决定是否纳入 skill。Distill skill 不自动修改 `write-results` 的骨架库。
 
-Distill skill **不自动修改** `write-results/academic-writing-corpus/[结果类型].md` 的定性内容——这仍由人工判断触发。
+### 手动写入路径：→ academic-writing-corpus
 
-### Phase 4.5 — 证据注册表自动更新
-
-Phase 4 完成后，根据 `corpus_enrichment` 块自动更新 `write-results/academic-writing-corpus/_evidence_registry.yaml`：
-
-**更新步骤**：
-
-1. 将 Phase 4 输出的 `corpus_enrichment` YAML 块保存为临时文件（如 `/tmp/corpus_enrichment.yaml`）
-2. 运行本 skill 目录下的自动化工具：
-   ```bash
-   python _update_registry.py /tmp/corpus_enrichment.yaml
-   ```
-3. 工具自动完成：
-   - 读取 `_evidence_registry.yaml`
-   - 对每个 `slot_updates` 条目：创建或更新 skeleton、重算 paper_count、按阈值判定 status
-   - 应用 `novel_patterns` 到 `cross_slot_patterns`
-   - 更新 `meta.last_updated`、`meta.batches_processed`、`meta.total_papers_indexed`
-   - 追加 `batch_history`
-   - 重新计算**所有** skeleton 的 status（批量处理时可能触发跨 skeleton 的状态变化）
-
-**工具位置**: `~/.claude/skills/distill-results-exemplar/_update_registry.py`
-
-**注意**：Phase 4.5 **只更新 registry 的定量字段**，不修改 corpus `.md` 文件中的定性内容（骨架句法、反模式提醒等）。定性内容的更新仍由人工审阅后手动执行。
-
-### `corpus_enrichment` 硬化接口格式
-
-Phase 4 输出末尾必须附加以下结构化 YAML 块。这是 distill 与 write-results 之间的**机器消费接口**。
-
-**关键更新**：`slot_updates` 区分 `skeleton_level`（段落功能模板）和 `sentence_level`（可填空句式素材）。 registry 计数以 `skeleton_id` 为单位，但 sentence-level 素材单独存入语料库 `.md` 文件的「句式素材」区块。
-
-```yaml
-corpus_enrichment:
-  batch_id: "batch_YYYY-MM-DD"
-  estimator_family: "OLS_FE"  # Results 的核心分类维度
-  source_paper: "Darby_2023_MSOM"
-  source_subfield: "om"       # strategy / ob_hr / om / marketing / finance / accounting
-
-  slot_updates:
-    # --- 骨架级（paragraph level）---
-    - slot: "R3"
-      action: "append_skeleton_or_increment"
-      skeleton_id: "r3_ols_four_beat_standard"
-      skeleton_level: "paragraph"
-      skeleton: "[Hypothesis restatement]. [Table navigation]. [Coefficient report with significance]. [Magnitude interpretation]. [Support judgment]."
-
-    - slot: "R7"
-      action: "increment_count"
-      skeleton_id: "r7_ols_threat_based"
-
-    - slot: "R3"
-      action: "create_new"
-      skeleton_id: "r3_did_baseline_estimate"
-      skeleton_level: "paragraph"
-      skeleton: "[Baseline estimate report]. [Parallel trend validation]. [Main effect direction+significance]. [Magnitude]. [Support judgment]."
-
-    # --- 句式级（sentence level）---
-    - slot: "R3"
-      action: "create_new"
-      skeleton_id: "r3_sentence_coefficient_significance_ols"
-      skeleton_level: "sentence"
-      skeleton: "Model [Y] of [Table X] shows that the coefficient for [IV] is [positive/negative] and statistically significant (β = [value], p < [threshold], 95% CI [[lower], [upper]])."
-
-    - slot: "R5"
-      action: "create_new"
-      skeleton_id: "r5_sentence_marginal_probability_probit"
-      skeleton_level: "sentence"
-      skeleton: "A one-standard-deviation increase in [IV] from the mean value ([from] to [to]) [increased/decreased] the probability of [DV] from [base]% to [new]%."
-
-  novel_patterns:
-    - slot: "R4"
-      observation: "AME+区域显著性图在计数模型中的三段式引入"
-      note: "目前 corpus 中尚无此变体，建议审阅后入库"
-
-  batch_metadata:
-    total_papers_processed: 1
-    estimator_family: "OLS_FE"
-    novel_skeletons_found: 0
-    rejected_skeletons: 0
-```
-
-**`slot_updates` action 说明**：
-
-| action | 行为 | skeleton_id 不存在时 |
-|--------|------|---------------------|
-| `create_new` | 创建新 skeleton，`skeleton_level` 必填，`paper_count=1` | 正常创建 |
-| `append_skeleton_or_increment` | 存在则计数+1，不存在则创建 | 降级为创建 |
-| `increment_count` | 仅对已有 skeleton 计数+1 | **报错跳过** |
-
-**`skeleton_level` 规则**：
-- `paragraph`：描述整个段落的组织逻辑，用于理解 Results 的叙事架构。不可直接填入变量名生成段落。
-- `sentence`：包含标准占位符（`[IV]`, `[DV]`, `[Table X]` 等）的完整句子模板，填入具体信息后即可嵌入段落。
-
-### 手动写入路径：→ academic-writing-corpus（定性内容）
-
-验证通过的变体骨架的**定性内容**（句法模板、反模式提醒、关键特征）仍需人工写入 `write-results/academic-writing-corpus/[结果类型].md` 的「累积变体」区块。
+验证通过的变体骨架可手动写入 `write-results/academic-writing-corpus/[结果类型].md` 的「累积变体」区块。
 
 写入前确认：
 - [ ] 该变体已通过三重验证（跨论文复现 / 生成力 / 范式排他性）
 - [ ] 目标结果类型文件已存在（参见 `academic-writing-corpus/INDEX.md`）
 - [ ] 写入格式：`### 变体 N: [来源论文] (YYYY-MM-DD)` + 验证状态 + 槽位 + 骨架 + 差异说明
 - [ ] 更新文件头 `variants_count` 和 `updated` 字段
+
+**不建立 Phase 4.5 自动管道**——写入由人工判断触发，保持 distill skill 架构精简。
 
 ---
 
@@ -521,8 +381,6 @@ corpus_enrichment:
 
 - [ ] **Completeness**: 所有强制槽位（根据估计器类型）已被覆盖
 - [ ] **Clarity**: 每个骨架都有明确的 [占位符] 和插入位置
-- [ ] **Placeholder Purity**: sentence-level 骨架中不存在论文特有名词（如 `Lobbying` `Tenure`），已全部替换为 `[IV]` `[DV]` `[moderator]` 等标准占位符
-- [ ] **Level Separation**: paragraph-level 与 sentence-level 未被混为一谈；paragraph-level 只描述组织逻辑，sentence-level 填入占位符后可生成完整句子
 - [ ] **Credibility**: 未将单篇论文的特殊统计发现泛化为通用规则
 - [ ] **Replicability**: 骨架填入具体信息后，能生成类似顶刊风格的 Results 段落
 - [ ] **No Verbatim Copy**: 输出中未出现可直接追溯到原文的连续 8+ 词短语
@@ -561,8 +419,6 @@ corpus_enrichment:
 | 反模式 | 表现 | 处理方式 |
 |--------|------|----------|
 | **原文依赖型骨架** | 骨架中包含论文特有的变量名、表格编号、具体系数 | 泛化为 [predictor] / [Table X] / [coefficient] |
-| **特有名词残留** | sentence-level 骨架中仍保留 `Lobbying` `CEO tenure` `recall` 等论文专属概念，未替换为 `[IV]` `[DV]` | 强制替换为标准占位符；若无法抽象则降级为 paragraph-level |
-| **骨架句式混为一谈** | 输出的是 paragraph-level 摘要（描述段落讲了什么），而非 sentence-level 填空模板（可直接填入变量生成句子） | 拆分：paragraph-level 只描述组织逻辑；sentence-level 必须含标准占位符且填入后可生成完整句 |
 | **系数即解释** | 原文只报 "β=0.15, p<0.05" 不翻译实质含义 | 记录为反模式，不将其作为"标准骨架"提取 |
 | **因果越级语言** | 将 OLS 结果中的 "caused" "led to" 原样保留 | 在骨架中降级或标注 design-specific 允许范围 |
 | **交互后主效应独立解释** | 交互显著后仍独立解释主效应 | 记录为反模式，在 skill 中增加警告骨架 |
@@ -575,11 +431,11 @@ corpus_enrichment:
 
 ## 与下游 Skill 的接口
 
-- **`write-results`** — 两层接口：(1) Phase 4 `corpus_enrichment` YAML 块 → Phase 4.5 → `_evidence_registry.yaml`（自动更新定量证据：paper_count、status、subfield_distribution）；(2) Phase 4 `vault_enrichment` → Vault（人工审阅后更新 corpus `.md` 文件的定性内容：骨架句法、反模式提醒）。write-results 调用时优先推荐 `status: ROBUST` 的骨架，根据 `subfield_distribution` 提示领域适配性。
-- **`results-review`** — Phase 1.5 的槽位覆盖检查和 Rhythm Map 可作为 results-review 的审查基准；`_evidence_registry.yaml` 中的 `forced_slots` 和 `high_risk_missing` 可作为 results-review 的预检清单
+- **`write-results`** — Phase 4 的更新建议直接修改此 skill 的骨架库和 R1–R9 模板
+- **`results-review`** — Phase 1.5 的槽位覆盖检查和 Rhythm Map 可作为 results-review 的审查基准
 - **`paper-review`** — Results DNA 中的 causal language 强度可用于跨 section 对齐检查
 - **`write-discussion`** — R9 过渡段落的提炼可用于优化 Discussion 的入口段落
-- **Vault** — Fine-Grained Profile 存入 Vault 的 `fine_grained/batch_*/[paper]_distilled_results.md`；`corpus_enrichment` 块暂存至 `/tmp/corpus_enrichment.yaml` 后由 `_update_registry.py` 消费
+- **Vault** — Fine-Grained Profile 存入 Vault 的 `fine_grained/batch_*/[paper]_distilled_results.md`
 
 ## 外部资产位置
 

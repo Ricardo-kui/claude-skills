@@ -1,8 +1,8 @@
 meta:
   last_updated: '2026-05-24'
   total_mvp30_papers_indexed: 37
-  batches_processed: 8
-  source: mvp30_index + 12_distill_files + batch_2026-05-24 + singh_grewal2023_distill + malik2025_distill + paruchuri2019_distill
+  batches_processed: 6
+  source: mvp30_index + 9_distill_files + path_B_confirmation
 evidence:
   hooks:
     01-cross-disciplinary-analogy:
@@ -33,7 +33,7 @@ evidence:
       - lashley_pollock2020 (ASQ)
       - paruchuri2020 (SMJ)
       - shi2021 (JMR)
-      - singh_grewal2023 (JMR)
+      - singh2023 (JMR)
       - wowak2025 (MS)
       gap_distribution:
         Incompleteness: 4
@@ -52,16 +52,18 @@ evidence:
         reject: 0
         common_revise_reasons: []
     03-data-shock:
-      paper_count: 6
+      paper_count: 8
       papers:
       - darby2024 (MSOM)
       - darby2025 (JSCM)
       - eilert2017 (JM)
+      - kim2022 (MS)
       - shi2021 (JMR)
       - vadakkepatt2022 (JM)
+      - wu2025 (SMJ)
       - zhao_ding2022 (OS)
       gap_distribution:
-        Incompleteness: 6
+        Incompleteness: 8
         Inadequacy: 0
         Incommensurability: 0
       status: ROBUST
@@ -85,7 +87,7 @@ evidence:
       - kundro2023 (AMJ)
       - park2025 (SMJ)
       - pontikes2012 (ASQ)
-      - singh_grewal2023 (JMR)
+      - singh2023 (JMR)
       gap_distribution:
         Incompleteness: 0
         Inadequacy: 4
@@ -109,7 +111,7 @@ evidence:
       - park2013 (ASQ)
       - pfarrer2010 (AMJ)
       - shipilov2020 (SMJ)
-      - singh_grewal2023 (JMR)
+      - singh2023 (JMR)
       gap_distribution:
         Incompleteness: 1
         Inadequacy: 6
@@ -207,10 +209,10 @@ evidence:
       papers:
       - darby2024 (MSOM)
       - desai2012 (AMJ)
+      - kim2022 (MS)
       - lashley_pollock2020 (ASQ)
-      - singh_grewal2023 (JMR)
       gap_distribution:
-        Incompleteness: 3
+        Incompleteness: 2
         Inadequacy: 1
         Incommensurability: 0
       status: VERIFIED
@@ -230,8 +232,8 @@ evidence:
       papers:
       - ceo_regulatory_focus_ijrm (IJRM)
       gap_distribution:
-        Incompleteness: 1
-        Inadequacy: 0
+        Incompleteness: 0
+        Inadequacy: 1
         Incommensurability: 0
       status: EMERGING
       generativity: ADAPTABLE
@@ -320,44 +322,22 @@ evidence:
         revise: 0
         reject: 0
         common_revise_reasons: []
-    17-debate-reframing:
-      paper_count: 1
-      papers:
-      - park_lange_jeon (SMJ)
-      gap_distribution:
-        Incompleteness: 1
-        Inadequacy: 0
-        Incommensurability: 0
-      status: EMERGING
-      generativity: ADAPTABLE
-      exclusivity: HIGH
-      common_failures:
-      - '辩论必须是真实学术辩论，不能是作者构造的 pseudo-debate'
-      - 'pivot 后不能暗示论文主要证明了辩论的一方——这会破坏 Hook 的承诺'
-      validation_history:
-        total_runs: 0
-        validated: 0
-        revise: 0
-        reject: 0
-        common_revise_reasons: []
   tensions:
     01-despite-progress-unaddressed:
-      paper_count: 20
+      paper_count: 18
       papers:
-      - ceo_regulatory_focus_ijrm (IJRM)
       - darby2024 (MSOM)
       - darby2025 (JSCM)
       - darby2026 (JOM)
       - desai2012 (AMJ)
+      - desjardine2023 (OS)
       - eilert2017 (JM)
       - lehman2014 (MS)
       - malshe2015 (JM)
       - mannor2016 (SMJ)
       - mayo2021 (POM)
       - park2013 (ASQ)
-      - park_lange_jeon (SMJ)
       - pollock2015 (ASQ)
-      - shipilov_greve_rowley2019 (SMJ)
       - shi2021 (JMR)
       - toh2023 (SMJ)
       - vadakkepatt2022 (JM)
@@ -381,8 +361,9 @@ evidence:
         reject: 0
         common_revise_reasons: []
     02-implicit-assumption-wrong:
-      paper_count: 11
+      paper_count: 12
       papers:
+      - ceo_regulatory_focus_ijrm (IJRM)
       - employee_free_speech (OS)
       - gamache2020 (SMJ)
       - han2020 (AMJ)
@@ -393,10 +374,10 @@ evidence:
       - pfarrer2010 (AMJ)
       - shen2022 (JOM)
       - shipilov2020 (SMJ)
-      - singh_grewal2023 (JMR)
+      - singh2023 (JMR)
       gap_distribution:
         Incompleteness: 0
-        Inadequacy: 11
+        Inadequacy: 12
         Incommensurability: 0
       status: ROBUST
       generativity: GENERATIVE
@@ -418,7 +399,7 @@ evidence:
       - pfarrer2010 (AMJ)
       - shen2022 (JOM)
       - shipilov2020 (SMJ)
-      - singh_grewal2023 (JMR)
+      - singh2023 (JMR)
       gap_distribution:
         Incompleteness: 0
         Inadequacy: 8
@@ -523,24 +504,12 @@ evidence:
         reject: 0
         common_revise_reasons: []
     08-cost-vs-benefit:
-      paper_count: 1
+      paper_count: 2
       papers:
       - eilert2017 (JM)
+      - kim2022 (MS)
       gap_distribution:
-        Incompleteness: 1
-        Inadequacy: 0
-        Incommensurability: 0
-      status: EMERGING
-      generativity: ADAPTABLE
-      exclusivity: MEDIUM
-      common_failures: []
-      validation_history:
-        total_runs: 0
-        validated: 0
-        revise: 0
-        reject: 0
-        common_revise_reasons: []
-    09-resource-acquisition-vs-utilization:
+        Incompleteness: 2-vs-utilization:
       paper_count: 1
       papers:
       - shen2022 (JOM)
@@ -578,17 +547,16 @@ evidence:
         reject: 0
         common_revise_reasons: []
     11-overlooked-alternative:
-      paper_count: 2
+      paper_count: 1
       papers:
-      - desjardine2023 (OS)
       - zhao_ding2022 (OS)
       gap_distribution:
         Incompleteness: 1
-        Inadequacy: 1
+        Inadequacy: 0
         Incommensurability: 0
-      status: VERIFIED
-      generativity: GENERATIVE
-      exclusivity: HIGH
+      status: EMERGING
+      generativity: ADAPTABLE
+      exclusivity: MEDIUM
       common_failures: []
       validation_history:
         total_runs: 0
@@ -632,91 +600,6 @@ evidence:
         revise: 0
         reject: 0
         common_revise_reasons: []
-    14-debate-unresolved:
-      paper_count: 2
-      papers:
-      - kundro_rothbard (AMJ)
-      - wowak2025 (MS)
-      gap_distribution:
-        Incompleteness: 0
-        Inadequacy: 2
-        Incommensurability: 0
-      status: EMERGING
-      generativity: GENERATIVE
-      exclusivity: MEDIUM
-      common_failures:
-      - '对称呈现要求："On the one hand" 和 "On the other hand" 篇幅必须大致对等，否则审稿人质疑选择性呈现'
-      - '需明确排除 "mere empirical inconsistency"：必须升级为理论层面的对立，而非只是数据矛盾'
-      validation_history:
-        total_runs: 0
-        validated: 0
-        revise: 0
-        reject: 0
-        common_revise_reasons: []
-    15-practical-puzzle:
-      paper_count: 2
-      papers:
-      - eilert2017 (JM)
-      - shen2022 (JOM)
-      gap_distribution:
-        Incompleteness: 0
-        Inadequacy: 2
-        Incommensurability: 0
-      status: EMERGING
-      generativity: GENERATIVE
-      exclusivity: MEDIUM
-      common_failures:
-      - 'downside 必须是研究发现而非作者臆测：每个 downside 都需文献支撑'
-      - '问题列表必须对应论文结构，否则读者会感到承诺未兑现'
-      - 'AMJ/ASQ 可能认为过于实务化——需补充理论 Stakes（so what for theory?）'
-      validation_history:
-        total_runs: 0
-        validated: 0
-        revise: 0
-        reject: 0
-        common_revise_reasons: []
-    16-threefold-gap:
-      paper_count: 1
-      papers:
-      - malshe2015 (JM)
-      gap_distribution:
-        Incompleteness: 1
-        Inadequacy: 0
-        Incommensurability: 0
-      status: EMERGING
-      generativity: ADAPTABLE
-      exclusivity: HIGH
-      common_failures:
-      - '三个原因必须来自不同论证维度（practical → literature → theory），不能是同一域的三个例子'
-      - 'Reason 1 必须有统计锚定（百分比/金额/规模），不能是模糊声明'
-      - '强行凑三个原因（实际只有1-2个独立维度）会损害论证而非增强'
-      validation_history:
-        total_runs: 0
-        validated: 0
-        revise: 0
-        reject: 0
-        common_revise_reasons: []
-    17-puzzle-contrast:
-      paper_count: 1
-      papers:
-      - singh_grewal2023 (JMR)
-      gap_distribution:
-        Incompleteness: 1
-        Inadequacy: 0
-        Incommensurability: 0
-      status: EMERGING
-      generativity: GENERATIVE
-      exclusivity: MEDIUM
-      common_failures:
-      - '"anecdotal evidence" 必须有具体可引用的制度来源——不能只是 "some say..."'
-      - 'Puzzle 建立后必须立即量化 "so what"——不能只有 puzzle 没有 stake'
-      - 'Theory 部分必须兑现 Introduction 的 puzzle 暗示'
-      validation_history:
-        total_runs: 0
-        validated: 0
-        revise: 0
-        reject: 0
-        common_revise_reasons: []
   stakes:
     01-general-theory-practice:
       paper_count: 9
@@ -752,8 +635,8 @@ evidence:
       - eilert2017 (JM)
       - malshe2015 (JM)
       gap_distribution:
-        Incompleteness: 4
-        Inadequacy: 0
+        Incompleteness: 3
+        Inadequacy: 1
         Incommensurability: 0
       status: VERIFIED
       generativity: ADAPTABLE
@@ -769,7 +652,7 @@ evidence:
       paper_count: 3
       papers:
       - darby2026 (JOM)
-      - singh_grewal2023 (JMR)
+      - singh2023 (JMR)
       - desjardine2023 (OS)
       gap_distribution:
         Incompleteness: 2
@@ -834,7 +717,7 @@ evidence:
       - han2024 (SMJ)
       - lashley_pollock2020 (ASQ)
       - paruchuri2020 (SMJ)
-      - singh_grewal2023 (JMR)
+      - singh2023 (JMR)
       gap_distribution:
         Incompleteness: 1
         Inadequacy: 6
@@ -843,26 +726,6 @@ evidence:
       generativity: ADAPTABLE
       exclusivity: HIGH
       common_failures: []
-      validation_history:
-        total_runs: 0
-        validated: 0
-        revise: 0
-        reject: 0
-        common_revise_reasons: []
-    06-two-reason-enumerated:
-      paper_count: 1
-      papers:
-      - malik_wang_martin_gomezmejia2025 (JM)
-      gap_distribution:
-        Incompleteness: 1
-        Inadequacy: 0
-        Incommensurability: 0
-      status: EMERGING
-      generativity: GENERATIVE
-      exclusivity: LOW
-      common_failures:
-      - 'Reason 1 和 Reason 2 不能来自同一论证域——必须从不同维度论证 gap 重要性'
-      - 'Reason 2 不能退化为 Theory 部分的机制预览——必须保持 stakes 语言'
       validation_history:
         total_runs: 0
         validated: 0
@@ -895,8 +758,8 @@ evidence:
       - wowak2025 (MS)
       - wu2025 (SMJ)
       gap_distribution:
-        Incompleteness: 16
-        Inadequacy: 5
+        Incompleteness: 15
+        Inadequacy: 6
         Incommensurability: 0
       status: ROBUST
       generativity: GENERATIVE
@@ -918,7 +781,7 @@ evidence:
       - pfarrer2010 (AMJ)
       - pollock2015 (ASQ)
       - shipilov2020 (SMJ)
-      - singh_grewal2023 (JMR)
+      - singh2023 (JMR)
       - zhao_ding2022 (OS)
       gap_distribution:
         Incompleteness: 2
@@ -979,7 +842,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     findings-preview:
-      paper_count: 44
+      paper_count: 43
       papers:
       - ceo_regulatory_focus_ijrm (IJRM)
       - darby2023 (MSOM)
@@ -1017,8 +880,7 @@ evidence:
       - shen2022 (JOM)
       - shi2021 (JMR)
       - shipilov2020 (SMJ)
-      - shipilov_greve_rowley2019 (SMJ)
-      - singh_grewal2023 (JMR)
+      - singh2023 (JMR)
       - toh2023 (SMJ)
       - vadakkepatt2022 (JM)
       - wowak2025 (MS)
@@ -1036,8 +898,8 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 20
-        Inadequacy: 14
+        Incompleteness: 18
+        Inadequacy: 15
         Incommensurability: 6
     robustness-preview:
       paper_count: 1
@@ -1082,7 +944,7 @@ evidence:
         common_revise_reasons: []
   contributions:
     contribution-statements:
-      paper_count: 43
+      paper_count: 44
       papers:
       - ceo_regulatory_focus_ijrm (IJRM)
       - darby2023 (MSOM)
@@ -1104,6 +966,7 @@ evidence:
       - haunschild2015 (OS)
       - keeves2017 (AMJ)
       - keeves2017 (ASQ)
+      - kim2022 (MS)
       - kundro2023 (AMJ)
       - lashley_pollock2020 (ASQ)
       - lehman2014 (MS)
@@ -1120,7 +983,7 @@ evidence:
       - shen2022 (JOM)
       - shi2021 (JMR)
       - shipilov2020 (SMJ)
-      - singh_grewal2023 (JMR)
+      - singh2023 (JMR)
       - toh2023 (SMJ)
       - vadakkepatt2022 (JM)
       - wowak2025 (MS)
@@ -1138,8 +1001,8 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 19
-        Inadequacy: 14
+        Incompleteness: 18
+        Inadequacy: 15
         Incommensurability: 6
     three-layer-contribution:
       paper_count: 1
@@ -1159,6 +1022,25 @@ evidence:
         Incompleteness: 1
         Inadequacy: 0
         Incommensurability: 0
+  research_questions:
+    01-three-questions-counterintuitive:
+      paper_count: 1
+      papers:
+      - kim2022 (MS)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 0
+        Incommensurability: 0
+      status: EMERGING
+      generativity: ADAPTABLE
+      exclusivity: LOW
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
   theory_lens:
     theory-lens-templates:
       paper_count: 43
@@ -1199,7 +1081,7 @@ evidence:
       - shen2022 (JOM)
       - shi2021 (JMR)
       - shipilov2020 (SMJ)
-      - singh_grewal2023 (JMR)
+      - singh2023 (JMR)
       - toh2023 (SMJ)
       - vadakkepatt2022 (JM)
       - wowak2025 (MS)
@@ -1217,6 +1099,6 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 19
-        Inadequacy: 14
+        Incompleteness: 18
+        Inadequacy: 15
         Incommensurability: 6

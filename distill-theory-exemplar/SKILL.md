@@ -4,19 +4,8 @@ description: |
   Theory & Hypotheses 范文蒸馏 meta-skill。输入单篇或批量论文的 Theory 文本，输出结构化提炼报告：理论构建类型识别、功能模块拆解、why-chain 模式、构念关系组织方式、模块级表达骨架、以及 write-theory 更新建议。
   从已发表论文的 Theory 中提炼可复用骨架：理论构建类型识别、功能模块拆解、why-chain 模式、构念关系组织方式、模块级表达骨架。不验证用户写作——Theory 写作 QC 请使用 `/theory-review`。
   核心原则：Theory 内容高度非标准化（因研究问题而异），但功能框架和推理结构是标准化的。提炼 HOW they explain why, not WHAT they explain。不复制具体机制内容，只提取可跨论文复现的理论论证组织方式和 why-chain 结构。
-  触发词：「蒸馏 theory」「理论范文分析」「拆解 theory」「提取 theory 模板」「处理新论文 theory」「theory 骨架提炼」「why chain 提炼」「继续蒸馏」「蒸馏下一篇」「theory 蒸馏」。
-version: 1.3.0
----
-
-# ⚠️ 上下文韧性协议（CRITICAL — 先读此节）
-
-**如果因上下文压缩导致完整 skill 指令不可用**（你无法看到 Phase 0-3 的详细协议），**必须**在执行蒸馏前 Read 此文件：
-```
-C:\Users\40500\.claude\skills\distill-theory-exemplar\protocols\quick_reference.md
-```
-该文件包含压缩版 Phase 0-3 格式要求、证据链模板、构建类型强制模块表、Why-Chain 压力测试、输出文件命名规则、反模式清单。
-**禁止凭记忆手写**——缺少证据链或格式不一致的蒸馏报告需要返工。
-
+  触发词：「蒸馏 theory」「理论范文分析」「拆解 theory」「提取 theory 模板」「处理新论文 theory」「theory 骨架提炼」「why chain 提炼」。
+version: 1.1.0
 ---
 
 # Role
@@ -911,7 +900,7 @@ phase_2_5_connector_distillation:
 [仅适用于该论文的特定构念、理论视角、机制内容，不可迁移]
 
 ## Corpus Reference Notes
-[本节列出蒸馏发现的所有 write-theory 可更新项。**Phase 4.6 将自动执行这些更新——不等待用户确认。**]
+[供人工审阅的语料库沉淀注释，不自动修改 write-theory skill]
 ```
 
 ---
@@ -968,7 +957,7 @@ phase_4_corpus_reference:
         skeleton: "..."
         source_papers: ["作者_年份", "作者_年份"]
         vault_path: "fine_grained/batch_N/theory_skeletons/"
-        note: "供写作者参考——Phase 4.6 自动写入对应模块库"
+        note: "供写作者参考，不自动写入 skill"
     patterns_to_note:
       - module: "T1"
         build_type: "构念辨析型"
@@ -1008,38 +997,16 @@ phase_4_corpus_reference:
 - 构建类型模糊的论文 → 标记为 "pending_type_clarification"
 - 骨架批评家裁决为"需修正/不纳入" → 不回写
 
-### 回写操作（自动）
+### 回写操作（手动）
 
-蒸馏完成后，**必须自动将发现写入 write-theory skill**——不等待用户确认或手动操作。
+满足条件后，用户在蒸馏报告的「回写建议」区块中执行：
 
-写入内容分三类：
+1. 对照报告中的新骨架和 Vault 中已有的模块库条目，判断是否重复
+2. 确认模块命名、构建类型标注、范式排他性
+3. 手动将新条目写入 `write-theory` 对应模块库文件
+4. 更新 `write-theory` 的模块索引
 
-1. **新增句法骨架/模式** → 追加到 `corpus/sentences/[module].md` 或 `corpus/variants/[variant].md`
-2. **新增反模式** → 追加到 `corpus/_index.md` 反模式速查表 + 相关语料文件的反模式小节
-3. **更新证据** → 在相关语料文件中标注新论文为语料锚定
-
-**不自动写入的内容**（诚实边界保留）：
-- 仅 1 篇论文中出现的模式：保留在蒸馏报告中，标注为 "EMERGING"，不进入 write-theory 推荐映射
-- 构建类型模糊的论文：标记为 "pending_type_clarification"，不参与同类型统计
-
-### 写入协议
-
-| 更新类型 | 目标文件 | 操作 |
-|---------|---------|------|
-| **新增 T3 机制架构** | `corpus/sentences/mechanism_chain.md` | 在最后一个架构后追加（含模板、语料锚定、关键特征、与其他架构的区分表、反模式） |
-| **新增 T1 构念定义变体** | `corpus/sentences/construct_definition.md` | 在最后一个变体后追加（含模板、语料锚定、关键特征、与相邻变体的区分表、反模式） |
-| **新增 T4 假设形式** | `corpus/sentences/hypothesis_forms.md` | 同上 |
-| **新增 T5 调节机制** | `corpus/sentences/moderation.md` | 同上 |
-| **新增 T6 Closure 规则** | `corpus/sentences/closure.md` | 追加规则（如阈值规则、强制条件） |
-| **新增反模式** | `corpus/_index.md` 反模式速查表 | 追加行，附实证证据（论文名+具体表现） |
-| **强化已有反模式** | 对应语料文件的反模式小节 | 补充实证证据引用 |
-| **更新语料锚定** | 对应语料文件 | 在语料锚定列表中追加新论文引用 |
-
-### 写入后验证
-
-1. 新变体的模板包含有效 `[占位符]`（非原文连续 8+ 词短语）
-2. 新条目在 `corpus/_index.md` 的快速决策表或反模式速查表中有对应索引
-3. 与已有变体的区分表完整（如有功能重叠）
+**不自动执行写入**。当前语料库规模不足以支撑有意义的自动化聚类（`write-theory/academic-writing-corpus/` 尚在建设中），手动判断比脚本更可靠。
 
 ### 构建类型分桶
 
@@ -1062,8 +1029,8 @@ phase_4_corpus_reference:
 - **不将单篇模式写入推荐列表**：仅 1 篇论文中出现的模式留在 Vault 参考注释中，标注为"待审阅"，不进入 `write-theory` 的推荐映射
 - **不覆盖已有模块**：遇到同名或同功能模块时，生成 `_alt` 变体条目，由用户决定合并或保留
 - **不虚构跨论文复现**：来源论文数基于 Vault 中实际 narrative 文件数，如有偏（如某领域论文过多）应如实注明
-- **构建类型标注在写入时附带置信度**：Phase 0 推断的构建类型若置信度为"中/低"，在写入语料文件时标注 `type_confidence: medium/low`
-- **必须清理机制内容后再写入**：骨架中嵌入特定论文机制名称的，必须在写入前泛化为 `[placeholder]`
+- **必须人工确认构建类型标注**：Phase 0 分类推断可能错误，用户必须逐条检查
+- **不回流机制内容**：骨架中嵌入特定论文机制名称的，必须清理后再写入
 - **跨桶回写必须标记**：`跨类型` 骨架在模块索引中标注 `[跨类型]`，提醒该骨架的普适性尚未在所有构建类型中验证
 
 ---
@@ -1092,7 +1059,7 @@ phase_4_corpus_reference:
 3. **Theory Logic Map**（Why-chain / Construct-clarity / Theory-citation 处理模式）
 4. **Theory DNA Metrics**（可对比的量化指标）
 5. **Dorobantu 问题链覆盖度表**
-6. **Corpus Reference Notes**（Phase 4.6 自动写入 write-theory）
+6. **Corpus Reference Notes**（供人工审阅的语料库沉淀注释，不自动修改 skill）
 7. **QC Result**（通过/需修正/拒绝入库）
 8. **模仿风险提示**（原文叙事薄弱点清单，防止用户在模仿时踩坑）
 

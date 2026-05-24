@@ -2,7 +2,7 @@
 type: canonical_reference
 canonical_id: "07-same-policy-opposite-effects"
 status: 🔬 EXPERIMENTAL
-gap_type: Inadequacy
+gap_type: Incommensurability
 cross_paper: SINGLE-INSTANCE
 generativity: ADAPTABLE
 exclusivity: HIGH
@@ -34,13 +34,12 @@ source: Extracted from MVP30 narrative_analysis files
 **模板**:
 > "How does the same [organizational practice] affect [outcome] when [stakeholders] systematically differ in [ideological/identity dimension]? [Group A], who [characteristic A], tend to [value A over B]. Thus, the practice should increase their [outcome]. In contrast, [Group B], who [characteristic B], tend to [value B over A]. Thus, the practice should decrease their [outcome]. This cross-cutting tension makes [outcome] simultaneously facilitated and undermined by the same [practice]."
 
-**来源**: employee_free_speech2024 (OS), adapted; employee_free_speech (OS) — "organizations face a classic moral dilemma in crafting social media policies that pits protecting employees from prejudiced speech against preserving employees' free expression"
+**来源**: employee_free_speech2024 (OS), adapted
 
 **关键特征**:
-- 以研究问句或实践困境开场，直接声明差异化效应
+- 以研究问句开场，直接声明差异化效应
 - 两组论证完全对称，各占相近篇幅
-- "classic moral dilemma" / "cross-cutting tension" → 建立不可化约的悖论
-- 适用于价值观冲突场景（control vs autonomy, safeguards vs free expression）
+- "cross-cutting tension" → 建立不可化约的悖论
 
 ---
 
