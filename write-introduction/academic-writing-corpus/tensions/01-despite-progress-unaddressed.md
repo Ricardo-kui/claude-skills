@@ -15,8 +15,12 @@ source_papers:
   - lehman2014 (MS, 2014): "Curiously silent: norms do not spread linearly → theorists silent on conflicts"
   - mannor2016 (SMJ, 2016): "Method-barrier gap: data difficulty explains absence → new methods now enable testing"
   - darby2025 (JSCM, 2025): "Spillover framing: logical next step → informant quote as behavioral evidence"
+  - pollock2015 (ASQ, 2015): "Despite progress distinguishing constructs → relationship coevolution unaddressed"
+  - park_lange_jeon (SMJ): "Fusion paragraph: Tension+Theory Lens+Preview in one paragraph. Exogenous change. 'Despite prevalence... underexplored concept'"
+  - desai2012 (AMJ, 2012): "双层Tension: Incompleteness外层(no guidance on field-level defense) + Inadequacy内层(theory shifted from stability to change)"
+  - gamache_etal2020 (SMJ, 2020): "三层递进Incompleteness: general→specific gap→why层面根本问题。Stakes嵌入Tension('This omission is critical, as...')"
 created: 2026-05-18
-updated: 2026-05-21
+updated: 2026-05-27
 source: Extracted from MVP30 narrative_analysis files + mannor2016 + darby2025 distill
 ---
 
@@ -223,6 +227,170 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 ---
 
+### 变体 I：构念区分进展后关系缺口型（pollock2015 型）
+
+**模板**:
+> Despite the progress made in distinguishing [construct A] and [construct B] by focusing on the different ways they affect common outcomes, the question of how they influence each other has gone largely unaddressed.
+
+**来源**: pollock2015 (ASQ), P2
+
+**原文锚定**:
+> "Despite the progress made in distinguishing status and reputation by focusing on the different ways they affect common outcomes, the question of how they influence each other has gone largely unaddressed."
+
+**关键特征**:
+- **"Despite the progress made in distinguishing..."** → 明确承认已有进展（Progressive Coherence）
+- **"by focusing on the different ways they affect common outcomes"** → 精确定义已有进展的边界
+- **"the question of how they influence each other"** → 指出关系层面的缺口
+- **"has gone largely unaddressed"** → 经典 Incompleteness 措辞
+- 与标准 "few studies" 相比，能量更高：不是"没人做"，而是"做了一部分但漏了核心关系"
+
+**适用条件**:
+- 两个相似构念已被文献部分区分（已有定义、测量、效果差异的研究）
+- 但它们之间的动态关系/相互影响机制尚未被系统研究
+- 特别适合共同演化、双向因果、交互效应等关系型缺口
+
+**禁忌**: 不要在构念本身尚未被区分时使用——必须先有 "progress made in distinguishing" 的文献基础
+
+---
+
+### 变体 J："未反映在结果中"型（darby2023 型）
+
+**模板**:
+> "A single [event] can have very different implications for [stakeholder 1] and [stakeholder 2] depending on [dimension], but such implications are not reflected in outcomes such as [established outcome 1] or [established outcome 2]."
+
+**来源**: darby2023 (MSOM), P2
+
+**原文锚定**:
+> "A single recall can have very different implications for the recalling firm and its investors depending on when the recall is initiated, but such implications are not reflected in outcomes such as firm value or stock returns."
+
+**关键特征**:
+- **"A single [event] can have very different implications"** → 强调同一事件内部的异质性（而非不同事件之间的差异）
+- **"depending on [dimension]"** → 精确指出被忽略的调节维度（这里是时间/时机）
+- **"but such implications are not reflected in outcomes such as..."** → 核心张力：已有结果变量无法捕捉这个维度
+- 与标准 "few studies" 相比，能量更高：不是"没人做"，而是"做了但用错了结果变量"
+- 特别适合 **时机/过程/动态** 维度的研究，因为已有文献通常使用静态结果变量
+
+**适用条件**:
+- 已有文献研究了某事件/行为对某结果的影响
+- 但忽略了该事件/行为的一个关键维度（如时机、顺序、强度）
+- 这个维度的忽略导致已有结果变量无法捕捉完整的理论含义
+
+**禁忌**: 不要在没有明确证据表明"不同维度确实导致不同含义"时使用——必须有理论或实证基础支撑维度的重要性
+
+---
+
+### 变体 K：融合型紧凑段落型（park_lange_jeon 型）
+
+**模板**:
+> "Although researchers indeed have examined [outcome] according to [dimensions] ([citations]), because those [outcomes] are already shaped in different ways by extant [mechanisms] ([citations]), it is not easy to infer inherent [actor preferences]. To explore how [actors] might act when presented with fewer constraints, we turn to exogenous changes in [population] that relax constraints on [behavior]. [Brief review of similar prior approach by another author, establishing methodological lineage]. Building on this approach, we investigate how a different exogenous change—[specific treatment]—affects [outcome]. Despite the prevalence and consequences of [treatment construct], [treatment construct] is an underexplored concept in the [target] literature. Yet, as we will argue, when [treatment occurs], it may not only influence [proximal outcome] but also affect [distal outcome], as the relative significance and salience of [other groups] increases."
+
+**来源**: park_lange_jeon (SMJ), P2-P3
+
+**原文锚定**:
+> "Although researchers indeed have examined corporate practices according to shareholder or stakeholder orientation, because those practices are already shaped in different ways in different firms by extant governance mechanisms, it is not easy to infer inherent managerial preferences. To explore how managers might act when presented with fewer constraints, we turn to exogenous changes in a population of firms that relax constraints... Building on this approach, we investigate how a different exogenous change—reduction in shareholder litigation risk—affects managerial decision-making... Despite the prevalence and consequences of shareholder litigation, shareholder litigation risk is an underexplored concept in the management literature. Yet, as we will argue, when litigation pressure from shareholders is alleviated, it may not only influence decisions directly related to shareholders but also affect managers' attitudes toward other stakeholder groups, as the relative significance and salience of other groups increases."
+
+**关键特征**:
+- **单段融合 6 个功能模块**: Literature Turn + Tension + Theory Lens + 假设预告 + 调节器预告 + 方法预告 — 极紧凑（~380 词一段完成）
+- **"it is not easy to infer inherent [actor preferences]"** → 方法限制解释：不是文献遗漏了，而是已有方法无法回答这个问题
+- **"Building on [prior author's] approach, we investigate how a different exogenous change..."** → 明确的方法论谱系——差异化自己的研究与最接近的前人研究
+- **"Despite the prevalence and consequences... [X] is an underexplored concept"** → 双词组合同时建立 gap 和 stakes（"despite prevalence" = stakes, "underexplored" = gap）
+- **"it may not only influence [proximal] but also affect [distal], as the relative significance and salience of [other groups] increases"** → 理论机制预告嵌入 tension 段落
+- 适用于 4-5 段极简 Introduction 结构——当段落数预算极低时需要融合
+
+**适用条件**:
+- 使用外生冲击（quasi-experiment/DiD）作为 empirical context
+- Introduction 段落数预算 ≤5（极简结构）
+- 有明确的前人方法论谱系（"building on X's approach"）
+- 目标期刊接受紧凑、发现驱动的 Introduction（SMJ/JM 首选）
+
+**禁忌**: 不要在 Introduction 段落数预算 ≥7 时使用——融合会导致信息过载。如果 Stakes 需要独立论证（AMJ/ASQ 要求）→ 拆分 Tension 和 Stakes 为独立段落
+
+---
+
+### 变体 L：自引 Nonfinding + 方法论诊断型（shipilov_greve_rowley2019 型）
+
+**模板**:
+> "Despite the role of [phenomenon] in [domain] and the plausibility of reactions to such [stimulus] in the form of [DV], studies have not yet demonstrated significant effects of [IV] on [DV]. For example, [prior study by same authors] examined [context] and used [IV measures] as control variables, but did not find significant effects of the relationship between [IV] and [specific DV subset], [which were actively diffusing / which were the focus] within that study's observation window. This 'nonfinding' could be because [Explanation 1: narrow scope — broader set of DV than previously examined]. Another explanation could be that [Explanation 2: identification challenge — endogeneity/reverse causality]. Such patterns of [endogeneity] can mask the relationships in the data."
+
+**来源**: shipilov_greve_rowley2019 (SMJ), P5 (Section 1)
+
+**原文锚定**:
+> "Despite the role of media in examining how the principal-agent problem is solved in firms and the plausibility of reactions to such coverage in the form of governance practice adoptions, studies have not yet demonstrated significant effects of media coverage on board reforms. For example, Shipilov, Greve, and Rowley (2010) examined multiwave diffusion of governance practices in Canada and used both positive and negative media coverage as control variables, but did not find significant effects of the relationship between media coverage and adoption of board and director evaluation practices, two specific board reform practices which were actively diffusing within that study's observation window. This 'nonfinding' could be because there is a broader set of governance practices than just increasing the number of independent directors or board process evaluations, so research may have examined an overly narrow range of responses. Another explanation could be that when studying firm governance responses to the coverage of governance and shareholder issues, one needs to be very careful with identification. Firms with better shareholder value maximization or better governance might get better media coverage and the other way around. Such patterns of reverse causality can mask the relationships in the data."
+
+**关键特征**:
+- **"studies have not yet demonstrated"** → 经典 Incompleteness 措辞，但比 "few studies" 更强——暗示有人尝试过但未成功
+- **自引先前研究的 null finding** → 核心技巧：用作者自己此前研究的非显著结果作为 gap 证据。这比 generic "literature hasn't looked" 更具说服力，因为它展示了研究纲领的连续性
+- **"'nonfinding'" 加引号** → 将 null result 概念化为一个可被诊断的现象
+- **双重方法论诊断**: (1) 范围过窄（只研究了 DV 的子集）(2) 识别问题（反向因果 masking effect）→ 将 gap 归因于方法限制而非文献愚蠢
+- **"Such patterns of reverse causality can mask the relationships in the data"** → 解释为什么缺失不是理论上的不可能性，而是方法论上的挑战——暗示本文通过更好的方法设计能够检测到
+
+**适用条件**:
+- 作者此前在同一领域有已发表研究，且该研究发现相关关系的 null result
+- 或：领域内有广为人知的 null finding 可作为 gap 证据
+- 本文的方法设计能够克服导致先前 nonfinding 的方法论问题（如更广的 DV 范围、更好的识别策略）
+- 特别适合使用 quasi-experiment/DiD 解决识别问题的论文
+
+**禁忌**:
+- 不要在没有自己此前研究作为铺垫时使用 "nonfinding" 措辞——如果是别人的 null result，需更谨慎措辞
+- 不要只给出一种方法论解释就跳到 RQ——至少提供 1-2 个可能的解释，展示对 gap 的深入理解
+- 不要暗示 "prior research was wrong"——这是方法论改进，不是理论批评（保持 Incompleteness 边界）
+
+---
+
+### 变体 M：Inadequacy加深Incompleteness型（desai2012 型）
+
+**模板**:
+> "Although [theory] recognizes that [phenomenon A] can lead to [outcome B] ([citations]), examples exist of [contexts] that fail to [expected outcome] following [trigger] ([citations]). These [anecdotal/examples] highlight the lack of a formal theoretical framework for understanding [specific gap]. Indeed, although [theory] originally aimed to explain [original purpose] ([citations]), much attention has turned to developing theories regarding [shifted focus] ([citations]). Perhaps presciently, [author] implied the need for greater research into '[quoted insight]' ([citation]: [page])."
+
+**来源**: desai2012 (AMJ), P4
+
+**原文锚定**:
+> "Although institutional theory recognizes that fieldwide disruptions can lead to significant change (Greenwood, Suddaby, & Hinings, 2002; Hoffman, 1999; Meyer, 1982; Suchman, 1995), examples exist of industries that fail to reorient, transform, or substantially improve following crises (Baumard & Starbuck, 2005; Perrow, 1984; Shrivastava, 1988). These anecdotal examples highlight the lack of a formal theoretical framework for understanding what actions organizations may pursue to preserve the status quo following disruptions in their field. Indeed, although new institutional theory originally aimed to explain forces that preserve the status quo (DiMaggio & Powell, 1983; Meyer & Rowan, 1977), much attention has turned to developing theories regarding institutional change (Arndt & Bigelow, 2000; Fiss & Zajac, 2006; George et al., 2006; Greenwood et al., 2002; Hoffman, 1999; Suddaby & Greenwood, 2005). Perhaps presciently, Arndt and Bigelow implied the need for greater research into 'organizational agency in the preventive use of the very institutional forces that create isomorphism' (2000: 513)."
+
+**关键特征**:
+- **双层Gap结构**: 外层=Incompleteness (lack of formal framework)，内层=Inadequacy (theory shifted focus from stability to change)
+- **"Indeed, although [theory] originally aimed to explain... much attention has turned to..."** → 解释为什么缺口如此持久——不是文献忽略了，是领域注意力转移了
+- **"Perhaps presciently, [author] implied..."** → 引用已发表学者的前瞻性呼吁为缺口背书——非作者自己在喊缺口，而是领域内的权威早有预见
+- **反例先行**: 先用anecdotal examples展示缺口的存在性，再解释缺口的理论根源
+- **从结构层面解释缺口**: 不说是哪个具体文献有问题，而说是整个领域的注意力发生了结构性转移
+
+**适用条件**:
+- 缺口的持久性需要解释（非"刚被发现"的新缺口，而是"一直被忽视"的老缺口）
+- 领域的理论重心确实发生过可论证的转移（需要文献证据支撑，非主观判断）
+- 有权威学者曾经呼吁过相关研究方向（作为"prescient call"的证据）
+
+**禁忌**:
+- 不要在领域的理论重心转移无法被文献证据支撑时使用——审稿人会问"change的文献难道不是也在讨论stability吗？"
+- "Perhaps presciently"的引用必须是领域内公认的权威——非权威的call没有说服力
+- 不要混合过度批评——Inadequacy内层是解释性而非攻击性（"attention has turned to"而非"has wrongly turned to"）
+
+---
+
+### 变体 N：三层递进Incompleteness型（gamache_etal2020 型）
+
+**模板**:
+> "While important, much of the work on [topic] is [general/broad] and considers [X] in a [limited] sense. Research has yet to seriously consider [how/why] [specific question]. This omission is critical, as [phenomenon-level consequence]. Indeed, due to [uncertainty/tenuous relationship], no consensus [outcome] has emerged, and debate persists regarding [key question]. It also means that we know relatively little about [deeper why question]."
+
+**来源**: gamache_etal2020 (SMJ), P2
+
+**原文锚定**:
+> "While important, much of the work on the role of the CEO in stakeholder strategy is general and considers the decision of whether to engage with stakeholders in a very broad sense. Research has yet to seriously consider how and why CEOs might pursue more specific stakeholder strategies reflecting unique priorities and goals. This omission is critical, as the pursuit and scope of stakeholder strategies can vary greatly, ranging from being narrowly focused on one or a few stakeholders to being more widely focused on a diverse set of stakeholders (Agle, Mitchell, & Sonnenfeld, 1999; Freeman, 1984). Indeed, due to the tenuous and uncertain relationship between stakeholder strategy and firm performance (e.g., Garcia-Castro & Francoeur, 2016; Hafenbrädl & Waeger, 2017), no consensus stakeholder strategy has emerged, and debate persists regarding how firms should best engage with stakeholders (Khurana, 2007; Stout, 2012). It also means that we know relatively little about why CEOs pursue and implement different stakeholder strategies."
+
+**关键特征**:
+- **三层递进**: 第1层=承认已有工作但批评其太general (mild Inadequacy undertone) → 第2层=指出specific gap ("how and why CEOs might pursue more specific...") → 第3层=升级为why层面的根本问题 ("we know relatively little about why")
+- **Stakes嵌入Tension**: "This omission is critical, as..." 后接现象级后果(no consensus, debate persists)和理论后果(we know relatively little)
+- 与标准 "few studies" 相比，能量更高——不是"没人做"，而是"做了一部分但不够specific，导致why层面仍然未知"
+- 适合字数受限的SMJ/OS论文（可接受Stakes嵌入Tension），不适用于AMJ/ASQ（期望独立Stakes段）
+
+**适用条件**:
+- Gap确实是一个**递进结构**：现有文献→太general→specific缺口→why层面的根本问题
+- 论文的核心贡献是回答"why"而非仅仅"what"
+- 目标期刊接受Stakes嵌入Tension（SMJ、OS、JM、JMR适用；AMJ/ASQ建议拆分）
+
+**禁忌**: 不要在只有一层gap时使用三层递进——如果gap只是一个"few studies have examined"，用标准变体A即可
+
+---
+
 ## 组装规则
 
 ### 反模式提醒
@@ -238,7 +406,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 | 期刊 | 适配度 | 注意事项 |
 |------|--------|---------|
 | JM/JMR | ⭐⭐⭐ 极高 | 变体 D（多重原因论证型）最适配 JM 风格 |
-| SMJ | ⭐⭐⭐ 高 | 变体 B（权威引语型）适配 SMJ "冷静专业"风格 |
+| SMJ | ⭐⭐⭐ 高 | 变体 B（权威引语型）适配 SMJ "冷静专业"风格；变体 K（融合型紧凑段落）适配 quasi-experiment SMJ 论文 |
 | AMJ | ⭐⭐⭐ 高 | 需要解释为什么这个遗漏有理论重要性 |
 | OS | ⭐⭐ 中 | 偏好系统/结构性缺口论证 |
 | ASQ | ⭐ 低 | ASQ 偏好更强的理论缺口（Inadequacy/Incommensurability） |

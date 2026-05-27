@@ -34,7 +34,7 @@
 | **范式挑战 Hook** | `06-paradigm-challenge` | "According to conventional view... In reality, however..." | ROBUST (≥6 papers) | zhou2017 (ASQ), hahl2017 (ASR), gamache2023 (SMJ) |
 | **跨学科类比 Hook** | `01-cross-disciplinary-analogy` | 领域A概念 → 领域B类似问题 | VERIFIED (≥2 papers) | pollock2015 (ASQ), malshe2015 (JM) |
 | **后果清单 Hook** | `08-consequence-cascade` | 负面事件递进式后果清单 | VERIFIED | mayo2021 (POM) |
-| **"Contrary to Belief" Hook** | `12-contrary-to-belief` | 打破普遍认知的制度事实 | VERIFIED | eilert2017 (JM) |
+| **"Contrary to Belief" Hook** | `12-contrary-to-belief` | 打破普遍认知的制度事实 | VERIFIED | eilert2017 (JM), darby2023 (MSOM) |
 
 *Trend 是最丰富的 Pollock 类型（6 个 hooks），覆盖从低能量数据开场到高能量范式挑战的全谱系。*
 
@@ -141,3 +141,33 @@
 | 14 | paired-disasters | Anecdote |
 
 *注：编号 10 被 immersive-narrative 和 practical-puzzle 共享。这两个 hook 分别由不同 distill 文件提取，保留原编号以维持向后兼容。*
+
+---
+
+## 新增 Hook（待编号）
+
+| Hook | 核心特征 | 验证状态 | 代表范文 |
+|------|---------|---------|---------|
+| **Cold-Start Cost Cascade Hook** | `cold-start-cost-cascade` | 从 dreaded word 到直接/间接成本递进 | VERIFIED | mayo_poms (POM) |
+
+- cold-start-cost-cascade.md — Cost cascade hook from dreaded word to direct/indirect costs
+
+---
+
+## 新增 Hook（编号 21）
+
+| Hook | canonical_id | 核心特征 | 验证状态 | 代表范文 |
+|------|-------------|---------|---------|---------|
+| **双行业趋势对比 Hook** | `21-dual-industry-trend` | 数字化/宏观趋势 → 两个行业的对比案例建立现象普遍性 | EMERGING (1 paper) | zhao-ding_gaba (ORSC) |
+
+- `21-dual-industry-trend` — Trend/Phenomenon Hook: macro-trend → dual-industry contrasting examples → "Across [contexts], firms not only [A] but also choose among [B], deciding [trade-off] across multiple dimensions." 适用于需要建立"跨行业普遍现象"可信度的研究。Pollock 类型: Trend。能量: 中。最佳适配 Gap: Incompleteness × Constructs + Phenomenon。
+
+---
+
+## 新增 Hook（编号 22）
+
+| Hook | canonical_id | 核心特征 | 验证状态 | 代表范文 |
+|------|-------------|---------|---------|---------|
+| **同时异果对比 Hook** | `22-paired-simultaneous-incidents` | 同一天、同规模、不同媒体反应的对比案例→ Puzzle question | EMERGING (1 paper) | han_pollock_paruchuri (SMJ) |
+
+- `22-paired-simultaneous-incidents` — Anecdote/Puzzle Hook: "On [date], [Firm A]'s [N] million users were exposed... The same day, [Firm B] had exposed [N] million users... Although similar in magnitude, [Firm B]'s breach was only covered by specialist media. Why were two incidents of similar magnitude that occurred at the same time publicized to different extents?" 适用于 misconduct/scandal/event studies。Pollock 类型: Anecdote。能量: 中。最佳适配 Gap: Incompleteness × Constructs + Boundary。

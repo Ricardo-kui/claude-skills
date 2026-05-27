@@ -12,6 +12,9 @@
 | `08-cost-vs-benefit.md` | 成本收益权衡中的文献空白 |
 | `12-forward-vs-backward-looking.md` | 前瞻 vs 后视视角的文献空白 |
 | `cross-domain-migration.md` | 将外部领域文献迁移到目标领域的张力 |
+| `18-rhetorical-question-pivot.md` | 修辞问句作为 Tension pivot — "does [solution] necessarily [solve problem]?" (EMERGING: toh_pyun SMJ) |
+| `19-three-layer-literature-turn.md` | 三层递进 Literature Turn — What we know → What's overlooked → What might explain (EMERGING: han_pollock_paruchuri SMJ) |
+| `20-concept-framework-first.md` | Conceptual Framework-First Introduction 结构 — 无独立 Lit Turn/Tension/Stakes (EMERGING: zhao-ding_gaba ORSC) |
 
 ## Inadequacy
 
