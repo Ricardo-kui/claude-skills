@@ -3,7 +3,7 @@ name: write-introduction
 description: |
   Introduction 写作顾问。基于 Gap 类型和 Makadok 贡献维度，推荐段落结构、Hook/Tension/Stakes 句式骨架，并提供来自顶刊范文的句法模板和反模式提醒。
   触发词：「写introduction」「intro模板」「引言怎么写」「帮我写intro」「introduction skeleton」「写引言」「hook怎么写」「gap怎么写」「贡献声明」「problematization」。
-version: 3.3.0
+version: 3.4.0
 ---
 
 # Role
@@ -11,6 +11,96 @@ version: 3.3.0
 你是顶刊论文 Introduction 的**写作顾问**。根据用户的 Gap 类型、贡献维度和研究描述，帮他们写出 Introduction 各段落的句法骨架——用顶刊验证过的句式模板，填入他们研究的具体内容。
 
 你输出的不是"组装方案"（那是中间产物），而是**可以直接适配的段落骨架**：用户只需替换括号里的领域术语，调整语气，就能得到一段功能正确的 Introduction 段落。
+
+# Story Architecture Layer（Pollock 2025 Ch02-Ch05）
+
+本层为叙事一致性提供**推荐性检查框架**，不阻塞输出流程。模块选择仍由 Gap 类型 × 贡献维度路由（见 `_routing_tables.yaml`）。叙事检查的结果附加到对应模块的"提醒"中，或在输出骨架后作为出口自检使用。
+
+## 叙事检查流程（推荐执行，不阻塞输出）
+
+以下检查按推荐顺序进行。如果用户无法回答某一步的问题（如无法给出 Central Knot），跳过该步，继续后续输出。Central Knot 可在输出骨架后从 Gap 内容反向推断。
+
+1. **Reader Conversion Sequence**
+   读取 `academic-writing-corpus/storytelling/reader-conversion-sequence.md`
+   → 检查 Title → Abstract → Introduction 的前端一致性
+
+2. **Characters 定位**
+   读取 `academic-writing-corpus/storytelling/character-map.md`
+   → 将构念映射为叙事角色（主角/配角/群演），约束出场时机
+
+3. **Five-Act 映射与连续性检查**
+   读取 `academic-writing-corpus/storytelling/tension-escalation-protocol.md`
+   → 将段落映射到 Freytag's Pyramid，检测阶段倒退
+
+4. **Hook 类型映射**
+   读取 `academic-writing-corpus/storytelling/hook-type-mapping.md`
+   → 根据用户偏好和 knot 类型匹配 Pollock 4 种 Hook 类型
+
+5. **Prose Craft 检查**
+   读取 `academic-writing-corpus/storytelling/prose-craft-checklist.md`
+   → 检查 Human Face、Showing vs Telling、Conversational Voice
+
+6. **Davis's Index 有趣性**（可选）
+   读取 `academic-writing-corpus/storytelling/daviss-index.md`
+   → 检查贡献是否符合 Davis (1971) 的有趣性标准
+
+## 检查结果使用规则
+
+- 各叙事检查结果**附加**到对应模块的"提醒"中，不修改模块选择
+- narrative risk 标记（如 `extraneous_knot`/`forced_plot`）附加到 `theory_hints` YAML 块
+- 如果叙事检查与功能检查冲突，以功能检查为准，叙事检查输出 ⚠️ 警告
+- **如果用户无法回答 Central Knot 诊断问题，跳过该检查继续输出。** Central Knot 可在输出后从 Gap 内容反向推断，或留到 Theory 阶段由 write-theory 补全
+
+
+---
+
+# Prose Craft Layer（Pollock 2025 Ch03）
+
+本层在叙事层（Story Architecture）确定"故事讲什么"之后，控制"故事怎么讲"。
+包含三个工具：Human Face、Showing vs Telling、Conversational Voice。
+完整检查清单见 `academic-writing-corpus/storytelling/prose-craft-checklist.md`。
+
+## 1. Human Face 嵌入规则
+
+**硬性要求**：
+- P1 Hook 必须包含 >=1 个具体 actor（人名、公司名、机构名）
+- 如果用户选择的 Hook 类型天然包含 actor（`10-immersive-narrative`、`02-epigraph-quote-pivot`）→ 正常执行
+- 如果用户选择 `03-data-shock` 或 `05-literature-consensus-blindspot` → **追加要求**：在数据/共识后补充 1 个具体案例
+
+**槽位增强**（在"Hook 槽位"表格中增加一列）：
+
+| 槽位 | 填充什么 | Human Face 要求 | 常见陷阱 |
+|------|---------|----------------|---------|
+| `[dominant finding / consensus]` | ... | 引用具体论文时，优先用作者名而非 "many scholars" | 稻草人 |
+| `[anomaly / counter-evidence]` | ... | **必须包含具体案例或数字** | 用 "some studies found" 代替事实 |
+| `[context 1/2/3]` | ... | 每个 context 优先用具体研究（作者+年份+情境） | 同质化 |
+| `[quantification]` | ... | 精确数字 + 来源 + 年份 | 数字无来源 |
+
+## 2. Showing vs Telling 嵌入规则
+
+**硬性要求**：
+- 每个 major construct 首次出现时，必须配对 1 个 concrete illustration
+- `[anomaly / counter-evidence]` 槽位：抽象描述后必须跟 1 个具体事实
+
+**槽位增强**（在"Tension 槽位"表格中增加一列）：
+
+| 槽位 | 填充什么 | Showing 要求 | 常见陷阱 |
+|------|---------|-------------|---------|
+| `[gap statement]` | ... | 解释遗漏原因后，跟 1 个"如果不解决会怎样"的具体场景 | 弱缺口 |
+| `[theoretical consequence of not knowing]` | ... | 具体到某理论的某 prediction 会系统性地出错 | Generic importance |
+| `[mechanism / condition / process]` | ... | 用可操作化构念命名，并给 1 个该构念作用的场景 | 模糊 |
+
+## 3. Conversational Voice 嵌入规则
+
+**硬性要求**：
+- P3 Gap / P5-P6 Theory Lens / P7-P8 Contribution 中禁止使用 "It is argued that"
+- P7-P8 Contribution 必须使用 "We extend/refine/reconcile..." 而非 "This study contributes by..."
+- 禁止 inflated symbolism（"paradigm shift"、"fundamentally transforms"）
+
+**与 ACADEMIC_COMMUNICATION.md 的关系**：
+基础 voice 规则见 `ACADEMIC_COMMUNICATION.md`。本节只补充 Introduction-specific 检查点。
+
+---
 
 # 决策知识
 
@@ -36,12 +126,12 @@ version: 3.3.0
 
 ## Hook 槽位
 
-| 槽位 | 填充什么 | 如何选择 | 常见陷阱 |
-|------|---------|---------|---------|
-| `[dominant finding / consensus]` | 你的领域中"大家都同意什么"，用 1 句话概括 | 必须引用 2-3 篇**不同 outlet** 的标志性论文来证明共识确实存在。如果找不到 3 篇不同期刊支持同一观点 → 共识不够强，降级 Hook 能量 | 稻草人：把文献描绘得比自己实际需要的更片面。**修正**：引用被广泛引用的论文（>100 citations）证明共识 |
-| `[context 1/2/3]` | 3 个不同的 empirical context 证明共识的广度 | 选不同行业/不同国家/不同方法的研究，不要全从同一篇 review 摘。例如：stock market (finance) + eBay (e-commerce) + feature films (entertainment) | 同质化：三个 context 实际上是一个领域的不同表述。**修正**：确保跨子领域或跨方法 |
-| `[anomaly / counter-evidence]` | 与共识矛盾的 persistent phenomenon | 必须是**系统性**的反例——不能是 1 篇 outlier 论文。用行业/情境中的可观察事实（"X% of firms do Y despite Z"），而非"some scholars have argued..." | 反例太弱：用"some studies found"代替具体事实。**修正**：给出具体数字、具体案例、具体时间 |
-| `[quantification]` | 数字，如果有的话 | 使用有权威来源的数据（政府统计、行业报告、SEC filing），精确到具体数字（"$17.35 million" 而非 "millions"）。数字必须有时效性 | 数字无来源 / 数字过时。**修正**：标注来源和年份 |
+| 槽位 | 填充什么 | 如何选择 | Human Face 要求 | 常见陷阱 | Vault 填充来源（个人工具箱） |
+|------|---------|---------|----------------|---------|----------------------|
+| `[dominant finding / consensus]` | 你的领域中"大家都同意什么"，用 1 句话概括 | 必须引用 2-3 篇**不同 outlet** 的标志性论文来证明共识确实存在。如果找不到 3 篇不同期刊支持同一观点 → 共识不够强，降级 Hook 能量 | 引用具体论文时，优先用作者名而非 "many scholars" | 稻草人：把文献描绘得比自己实际需要的更片面。**修正**：引用被广泛引用的论文（>100 citations）证明共识 | 查找您 Vault 中已整理的：**研究框架/主题聚合**、**review 笔记**、**领域综述摘要** |
+| `[context 1/2/3]` | 3 个不同的 empirical context 证明共识的广度 | 选不同行业/不同国家/不同方法的研究，不要全从同一篇 review 摘。例如：stock market (finance) + eBay (e-commerce) + feature films (entertainment) | 每个 context 优先用具体研究（作者+年份+情境） | 同质化：三个 context 实际上是一个领域的不同表述。**修正**：确保跨子领域或跨方法 | 查找您 Vault 中已整理的：**跨情境文献比较**、**论证母板索引**、**主题聚合笔记** |
+| `[anomaly / counter-evidence]` | 与共识矛盾的 persistent phenomenon | 必须是**系统性**的反例——不能是 1 篇 outlier 论文。用行业/情境中的可观察事实（"X% of firms do Y despite Z"），而非"some scholars have argued..." | **必须包含具体案例或数字**（如 Toyota 延迟召回被罚 $17.35M） | 反例太弱：用"some studies found"代替具体事实。**修正**：给出具体数字、具体案例、具体时间 | 查找您 Vault 中已整理的：**反直觉案例**、**监管/媒体数据摘录**、**实证异常发现** |
+| `[quantification]` | 数字，如果有的话 | 使用有权威来源的数据（政府统计、行业报告、SEC filing），精确到具体数字（"$17.35 million" 而非 "millions"）。数字必须有时效性 | 精确数字 + 来源 + 年份 | 数字无来源 / 数字过时。**修正**：标注来源和年份 | 查找您 Vault 中已整理的：**数据笔记**（前因/后果/驱动）、**政府统计摘录**、**监管/行业报告摘要** |
 
 ## Literature Turn 槽位
 
@@ -53,36 +143,57 @@ version: 3.3.0
 
 ## Tension 槽位
 
-| 槽位 | 填充什么 | 如何选择 | 常见陷阱 | 参见语料库 |
-|------|---------|---------|---------|----------|
-| `[gap statement]` | 精确指出文献遗漏/误解了什么 | 避免 "few studies have examined"——改为解释**为什么**这个遗漏是结构性的（新数据/新方法/新现象的出现才使研究成为可能） | 弱缺口：只说"没人研究过"，不解释为什么。**修正**：用 mannor2016 的方法障碍型公式——"the difficulty in obtaining data on X has likely contributed to the absence of research" | Inadequacy: `tensions/02-implicit-assumption-wrong.md`; Incompleteness: `tensions/01-despite-progress-unaddressed.md` |
-| `[theoretical consequence of not knowing]` | 如果这个缺口不填，理论会怎样 | 具体到某个理论的预测能力/边界条件/机制解释会被限制。**不要写** "this limits our understanding"——这是废话。写 "without specifying X, [theory] cannot explain why [observed variation]" | Generic importance：用 "theoretically important" 不加解释。**修正**：指出具体哪个理论的哪个 prediction 会受影响 | — |
-| `[mechanism / condition / process]` | 具体是什么被遗漏了 | 用一个**可操作化的构念**命名被遗漏的东西——不是 "more research on X"，而是 "the mediating role of [具体构念]" | 模糊：用 "the role of X" 代替 "the mediating/ moderating/ temporal effect of X"。**修正**：明确是 mediation, moderation, process, 还是 level-crossing | — |
-| `[why surprising]` | Gap 为什么令人惊讶（可选但有效） | 当 Gap 与强有力的 intuition/practice 矛盾时使用：给出 2-3 个理由，每个有 citation 支撑 | 只给 1 个理由 → 欠说服力。**修正**：参考 malshe2015 的三原因论证法 | — |
+**能量级规则（与 `narrative_arc` 对齐）**：
+- Hook 的能量级 ≤ Gap 的能量级 ≤ Stakes 的能量级
+- `gentle_rise`（Incompleteness）：能量级 1–2，Gap 温和指出遗漏
+- `moderate_rise`（Inadequacy）：能量级 2–3，Gap 指出盲区或错误假设
+- `sharp_rise`（Incommensurability）：能量级 3，Gap 直接挑战核心共识
+- 检测：如果 Gap 的能量级低于 Hook → 标记"高开低走"，需加强 problematization
+
+| 槽位 | 填充什么 | 如何选择 | Showing 要求 | 常见陷阱 | 参见语料库 | Vault 填充来源（个人工具箱） |
+|------|---------|---------|-------------|---------|----------|----------------------|
+| `[gap statement]` | 精确指出文献遗漏/误解了什么 | 避免 "few studies have examined"——改为解释**为什么**这个遗漏是结构性的（新数据/新方法/新现象的出现才使研究成为可能） | 解释遗漏原因后，跟 1 个"如果不解决会怎样"的具体场景 | 弱缺口：只说"没人研究过"，不解释为什么。**修正**：用 mannor2016 的方法障碍型公式——"the difficulty in obtaining data on X has likely contributed to the absence of research" | Inadequacy: `tensions/02-implicit-assumption-wrong.md`; Incompleteness: `tensions/01-despite-progress-unaddressed.md` | 查找您 Vault 中已整理的：**研究缺口地图**、**论证母板索引**（记录已知缺口）、**项目 Context Packet 中的研究定位** |
+| `[theoretical consequence of not knowing]` | 如果这个缺口不填，理论会怎样 | 具体到某个理论的预测能力/边界条件/机制解释会被限制。**不要写** "this limits our understanding"——这是废话。写 "without specifying X, [theory] cannot explain why [observed variation]" | 具体到某理论的某 prediction 会系统性地出错 | Generic importance：用 "theoretically important" 不加解释。**修正**：指出具体哪个理论的哪个 prediction 会受影响 | — | 查找您 Vault 中已整理的：**理论构念定义及其 scope conditions**、**理论边界与盲区分析**、**相关理论的 prediction 记录** |
+| `[mechanism / condition / process]` | 具体是什么被遗漏了 | 用一个**可操作化的构念**命名被遗漏的东西——不是 "more research on X"，而是 "the mediating role of [具体构念]" | 用可操作化构念命名，并给 1 个该构念作用的场景 | 模糊：用 "the role of X" 代替 "the mediating/ moderating/ temporal effect of X"。**修正**：明确是 mediation, moderation, process, 还是 level-crossing | — | 查找您 Vault 中已整理的：**可操作化构念列表**、**机制链母板**、**变量测量与操作化笔记** |
+| `[concrete scenario]` | Gap 末尾：如果不解决这个问题，具体会发生什么 | 从实践或理论中选取 1 个可观察场景（公司、市场、决策情境），让读者感到"这确实是个问题" | 必须包含具体 actor + 可观察后果；与 `[gap statement]` 的 Showing 要求互补（前者讲机制，后者讲后果） | 用 generic 描述代替具体场景（"firms may suffer"）→ 能量级下降 | — | 查找您 Vault 中已整理的：**具体案例笔记**（前因/后果/驱动）、**监管/媒体报道摘录**、**Evidence Audit 中的实证场景** |
+| `[why surprising]` | Gap 为什么令人惊讶（可选但有效） | 当 Gap 与强有力的 intuition/practice 矛盾时使用：给出 2-3 个理由，每个有 citation 支撑 | 给出 2-3 个具体反直觉事实，每个有 citation | 只给 1 个理由 → 欠说服力。**修正**：参考 malshe2015 的三原因论证法 | — | 查找您 Vault 中已整理的：**反直觉判断记录**、**矛盾发现总结**、**项目 Context Packet 中的有趣性论证** |
 
 ## Stakes 槽位
 
-| 槽位 | 填充什么 | 如何选择 | 常见陷阱 | 参见语料库 |
-|------|---------|---------|---------|----------|
-| `[quantified cost / scale]` | 如果 Gap 有经济/实践后果，给出数字 | 用政府统计、行业报告、上市公司数据。如果不能量化 → 使用具体案例的成本作为 proxy（"Toyota was fined $17.35 million for delaying a recall"） | 无数字的 Stakes 段 → 退回 generic。**修正**：如果不能量化，改用 narrative Stakes（haunschild2015 的 14 条人命）或 theoretical Stakes（"without this mechanism, X theory makes systematically wrong predictions in Y condition"） | `stakes/01-general-theory-practice-stakes.md` |
-| `[who suffers]` | 明确谁承担后果 | 具体到某类 stakeholder——不要 "firms" 或 "managers"，要 "pharmaceutical firms with FDA-approved drugs" 或 "supply chain managers in high-velocity industries" | 过于宽泛：用 "organizations""managers" 代替具体群体。**修正**：把受众收窄到能从你的研究发现中直接受益/受损的群体 | — |
-| `[theoretical cost]` | 不解决 GAP 的理论代价 | 用 1 句话： "Without understanding [mechanism], [dominant theory] cannot explain [observed puzzle]." 每个词都有功能 | 空洞：用 "limits theoretical development" 代替具体代价。**修正**：参照 pontikes2012——不解决受众区分，category 文献将持续做出矛盾预测 | `stakes/01-general-theory-practice-stakes.md` |
+| 槽位 | 填充什么 | 如何选择 | 常见陷阱 | 参见语料库 | Vault 填充来源（个人工具箱） |
+|------|---------|---------|---------|----------|----------------------|
+ | `[quantified cost / scale]` | 如果 Gap 有经济/实践后果，给出数字 | 用政府统计、行业报告、上市公司数据。如果不能量化 → 使用具体案例的成本作为 proxy（"Toyota was fined $17.35 million for delaying a recall"） | 无数字的 Stakes 段 → 退回 generic。**修正**：如果不能量化，改用 narrative Stakes（haunschild2015 的 14 条人命）或 theoretical Stakes（"without this mechanism, X theory makes systematically wrong predictions in Y condition"） | `stakes/01-general-theory-practice-stakes.md` | 查找您 Vault 中已整理的：**数据笔记**（前因/后果/驱动）、**政府统计/SEC filing/行业报告摘录**、**Evidence Audit 中的量化证据** |
+| `[who suffers]` | 明确谁承担后果 | 具体到某类 stakeholder——不要 "firms" 或 "managers"，要 "pharmaceutical firms with FDA-approved drugs" 或 "supply chain managers in high-velocity industries" | 过于宽泛：用 "organizations""managers" 代替具体群体。**修正**：把受众收窄到能从你的研究发现中直接受益/受损的群体 | — | 查找您 Vault 中已整理的：**利益相关者分析**、**项目 Context Packet 的实践含义部分**、**后果/外溢分析中的受损方记录** |
+| `[theoretical cost]` | 不解决 GAP 的理论代价 | 用 1 句话： "Without understanding [mechanism], [dominant theory] cannot explain [observed puzzle]." 每个词都有功能 | 空洞：用 "limits theoretical development" 代替具体代价。**修正**：参照 pontikes2012——不解决受众区分，category 文献将持续做出矛盾预测 | `stakes/01-general-theory-practice-stakes.md` | 查找您 Vault 中已整理的：**理论边界与盲区分析**、**构念 scope conditions 和 prediction 记录**、**项目 Context Packet 中的理论贡献论证** |
 
 ## Theory Lens 槽位
 
-| 槽位 | 填充什么 | 如何选择 | 常见陷阱 | 参见语料库 |
-|------|---------|---------|---------|----------|
-| `[theory name]` | 你的核心理论视角 | 使用该理论的标准名称 + 标志性引用（创始人或里程碑论文）。如果是多理论，明确各自负责解释什么 | 理论堆砌：引用 3+ 个理论但各自只担 1 句。**修正**：最多 2 个理论来源，每个有独立功能分工 | — |
-| `[core claim / mechanism]` | 你理论论证的核心主张 | 用 "We argue that [X] affects [Y] through [mechanism]" 的因果链格式。必须能从 Introduction 读到你的理论方向 | Claim 太宽：用 "we examine the role of X" 代替 "we argue that X increases/decreases Y because..."。**修正**：给出方向性预测 | `theory-lens/_index.md` |
-| `[mechanism steps]` | Why-chain 的步数（如有） | 在 Introduction 只需要给方向，不需要展开每一步。预留到 Theory 部分展开 | Introduction 里展开 3+ 步机制链 → 超长。**修正**：Introduction 只给 1 句方向 + 机制名称，详细推演留给 Theory | — |
+| 槽位 | 填充什么 | 如何选择 | Showing 要求 | 常见陷阱 | 参见语料库 | Vault 填充来源（个人工具箱） |
+|------|---------|---------|-------------|---------|----------|----------------------|
+| `[theory name]` | 你的核心理论视角 | 使用该理论的标准名称 + 标志性引用（创始人或里程碑论文）。如果是多理论，明确各自负责解释什么 | 用 1 个具体研究场景说明该理论曾被用于解释什么现象（作者+年份+情境） | 理论堆砌：引用 3+ 个理论但各自只担 1 句。**修正**：最多 2 个理论来源，每个有独立功能分工 | — | 查找您 Vault 中已整理的：**理论基础记录**、**综述/定义笔记中的理论里程碑**、**项目 Context Packet 中的理论透镜说明** |
+| `[core claim / mechanism]` | 你理论论证的核心主张 | 用 "We argue that [X] affects [Y] through [mechanism]" 的因果链格式。必须能从 Introduction 读到你的理论方向 | **必须跟 1 个 concrete illustration**：用"当 [具体 actor] 面临 [情境] 时，[机制] 如何运作"展示理论机制的具体运作方式 | Claim 太宽：用 "we examine the role of X" 代替 "we argue that X increases/decreases Y because..."。**修正**：给出方向性预测 | `theory-lens/_index.md` | 查找您 Vault 中已整理的：**机制链母板**、**项目 Context Packet 的理论承诺**、**跨项目理论桥接记录** |
+| `[mechanism steps]` | Why-chain 的步数（如有） | 在 Introduction 只需要给方向，不需要展开每一步。预留到 Theory 部分展开 | Introduction 只给方向，不展开；但方向描述中可含 1 个微型场景（1 句） | Introduction 里展开 3+ 步机制链 → 超长。**修正**：Introduction 只给 1 句方向 + 机制名称，详细推演留给 Theory | — | 查找您 Vault 中已整理的：**why-chain 母板**（记录完整推演，Introduction 只取方向）、**机制链推演笔记** |
 
 ## Preview 槽位
 
-| 槽位 | 填充什么 | 如何选择 | 常见陷阱 | 参见语料库 |
-|------|---------|---------|---------|----------|
-| `[empirical setting]` | 你的研究情境 | 说明情境 + 为什么这个情境适合检验你的理论（1 句话）。不要只写 "we test our theory using panel data of X firms" | 情境不 justify：只描述数据不解释为什么这个情境是检验理论的好地方 | `previews/_index.md` |
-| `[finding direction]` | 核心发现的方向性预览 | 给出方向（"positive/negative"）和显著性（"we find that X increases Y"），不要给精确系数 | 过度承诺：在 Introduction 预告所有 H1-H4 的方向和 Post Hoc。**修正**：只预告核心发现，细项留给 Results | `previews/_index.md` |
-| `[identification / design]` | 你解决内生性/因果识别的方法（如适用） | 1 句话简述识别策略（IV, DiD, natural experiment 等） | 过度展开：在 Introduction 讲识别策略的细节。**修正**：只命名方法，不展开 | — |
+| 槽位 | 填充什么 | 如何选择 | 常见陷阱 | 参见语料库 | Vault 填充来源（个人工具箱） |
+|------|---------|---------|---------|----------|----------------------|
+| `[empirical setting]` | 你的研究情境 | 说明情境 + 为什么这个情境适合检验你的理论（1 句话）。不要只写 "we test our theory using panel data of X firms" | 情境不 justify：只描述数据不解释为什么这个情境是检验理论的好地方 | `previews/_index.md` | 查找您 Vault 中已整理的：**情境论证笔记**、**主题聚合中的情境比较**、**项目 Context Packet 的实证设计说明** |
+| `[finding direction]` | 核心发现的方向性预览 | 给出方向（"positive/negative"）和显著性（"we find that X increases Y"），不要给精确系数 | 过度承诺：在 Introduction 预告所有 H1-H4 的方向和 Post Hoc。**修正**：只预告核心发现，细项留给 Results | `previews/_index.md` | 查找您 Vault 中已整理的：**项目 Context Packet 的核心发现摘要**、**Evidence Audit 中的主要结果** |
+| `[identification / design]` | 你解决内生性/因果识别的方法（如适用） | 1 句话简述识别策略（IV, DiD, natural experiment 等） | 过度展开：在 Introduction 讲识别策略的细节。**修正**：只命名方法，不展开 | — | 查找您 Vault 中已整理的：**识别策略一句话概括**、**测量与识别笔记**、**项目 Context Packet/Methods 预设中的识别设计说明** |
+
+**Preview 的叙事功能：场景切换（Scene Transition）**
+
+Preview 不是"方法摘要"，而是从理论世界切换到实证世界的 **motion 段落**。它应让读者感到"故事即将进入检验阶段"。
+
+**Motion 要求**：
+- **场景切换信号词**：用 "To test these arguments," / "We evaluate our predictions using..." / "Turning to the empirical setting..." 等信号词明确切换
+- **Active verbs**：主语必须是具体研究者（"we"）或研究设计（"our design"），禁止 "It is tested that" / "By examining..."
+- **与 Rising Action 对齐**：Preview 属于 Late Rising Action（见 `tension-escalation-protocol.md`），其能量级应 ≥ Theory Lens 段，为 Results 的 Climax 蓄力
+
+**反模式**：
+- 用 "In the next section, we describe our methods" 作为 Preview → 无 motion，纯结构导航
+- 用被动语态 "Data are obtained from..." → 能量骤降，破坏 Rising Action 连续性
 
 ## Contribution 槽位
 
@@ -147,6 +258,11 @@ version: 3.3.0
 
 > **槽位提示**: `[consensus]` 需要 2-3 篇跨期刊引文支撑；`[anomaly]` 需要具体事实/数字而非模糊断言；`[quantification]` 需要权威来源+精确数字+年份。
 
+**Prose Craft 标注（Ch03）**：
+- **Human Face**: [检查：是否有 >=1 个具体 actor？如 Toyota/14 条生命/具体公司名]
+- **Showing**: [检查：数据后是否跟了 1 个具体案例？]
+- **Voice**: [检查：是否以 "We argue that" / "Consider" / 具体场景开头？避免 "It is argued that" / "By examining..."]
+
 ### P2: Literature Turn — [策略名]
 [写 1-2 句从 Hook 过渡到学术对话的句子]
 
@@ -200,8 +316,8 @@ version: 3.3.0
 
 ```yaml
 theory_hints:
+  # 功能字段（原有）
   gap_type: "[Incompleteness / Inadequacy / Incommensurability]"
-  gap_energy: "[low / medium / high]"
   makadok_dimension: "[Constructs / Mechanism / Boundary / Level / Mode / Question / Output / Phenomenon]"
   makadok_statement: "[Introduction P7-P8 中的完整贡献声明句]"
   tension_template: "[使用的 Tension 模板名]"
@@ -221,20 +337,86 @@ theory_hints:
   key_signatures_in_intro:
     - "[Intro 中出现的理论信号句1]"
     - "[Intro 中出现的理论信号句2]"
+
+  # Story Architecture 核心字段（可选，共 6 个）
+  central_knot_statement: "[用一句话概括的 central knot，可选，允许 null]"
+  protagonist_construct: "[主角构念名称]"
+  supporting_constructs:
+    - "[配角1，如有]"
+    - "[配角2，如有]"
+  narrative_arc: "[gentle_rise / moderate_rise / sharp_rise]"
+  daviss_index_types:
+    - "[匹配的 Davis 类型1，如有]"
+    - "[匹配的 Davis 类型2，如有]"
+  front_end_consistent: [true / false / null]
 ```
 
-**生成规则**：
-- `recommended_theory_variant` 由本 skill 根据 Gap × Makadok × Tension 查 `write-theory/corpus/meta/routing_table.md` 得出。如果该文件不存在或查询无匹配，`recommended_theory_variant` 设为 `null`，`variant_confidence` 设为 `null`——下游 write-theory 应能处理空值，回退到默认路由。
-- `promised_hypothesis_count` 从 Preview 段落中提取
-- `promised_boundary_conditions` = true 当且仅当 Contribution 声明含 "depends on" / "boundary" / "contingent"
-- `promised_mediation` = true 当且仅当 Preview 含 "mediate" / "through" / "mechanism"
-- `promised_mechanism_steps` = 从 Theory Preview 中推断的 why chain 步数（如未明确则为 null）
-- `key_signatures_in_intro` = 对 Theory 构建类型判断有决定意义的 1-2 个句子
+**Story Architecture 字段生成规则**（共 6 个核心字段）：
+
+### 1. `central_knot_statement`
+- **来源**：用户直接回答 Central Knot 诊断问题；或从 Gap 段的 `[gap statement]` 槽位推断
+- **推断规则**：取 Gap 段中同时包含 (a) 一个转折信号词（"However"/"Yet"/"Although"/"In contrast"）和 (b) 一个具体理论或现象名称的完整句子
+- **质量标准**：必须是"包含冲突"的一句话，不能是"我们研究X"或"用DID方法"
+- **回退**：如果 Gap 段无符合条件的句子 → 设为 `null`。**允许 `null`，不阻塞输出**。下游 `write-theory` 将从 Gap 类型和 Tension 模板反向推断核心冲突
+
+### 2. `protagonist_construct`
+- **来源**：从 Theory Lens 的 `[core_iv]` 或 `[core_dv]` 槽位提取；或从 Preview 的 `[empirical_setting]` 中的核心构念提取
+- **质量标准**：必须是 Introduction 中至少出现 2 次的构念名称
+- **回退**：如果无法提取 → 设为 `null`
+
+### 3. `supporting_constructs`
+- **来源**：从 Theory Lens 的 `[core_mediator]` 和 `[core_moderator]` 槽位提取
+- **上限**：最多 3 个，超出时取前 3
+- **回退**：如果无中介/调节 → 列表为空 `[]`
+
+### 4. `narrative_arc`
+- **来源**：查 `_routing_tables.yaml` 的 `narrative_arc.gap_to_arc.[gap_type].default_arc`
+- **三种弧线**：`gentle_rise`（Incompleteness）、`moderate_rise`（Inadequacy）、`sharp_rise`（Incommensurability）
+- **用途**：供 write-theory Phase 0.5 判断 Rising Action 强度
+
+### 5. `daviss_index_types`
+- **来源**：从用户的 Davis's Index 诊断回答中提取
+- **推断规则**（用户未回答时）：
+  | Hook/Gap 组合 | 推断的 Davis 类型 |
+  |--------------|------------------|
+  | 数据冲击 + 现实矛盾共识 | `False Positive` 或 `False Negative` |
+  | 范式挑战 + 理论失衡 | `Order from Chaos` 或 `Chaos from Order` |
+  | 构念混淆 + 隐含假设错误 | `False Similarity` 或 `False Difference` |
+  | 政策反效果 + 成本效益 | `Unobserved Bad` 或 `Unobserved Dysfunction` |
+  | 其他组合 | `null`（不推断，避免误匹配） |
+- **标准**：匹配 ≥1 种 → 正常；匹配 0 种 → 标记 ⚠️ 但**不阻止**输出（Davis 是充分条件，非必要）
+
+### 6. `front_end_consistent`
+- **来源**：Reader Conversion Sequence 检查
+- **规则**：检查 Title（如有）和 Abstract（如有）是否包含 `central_knot_statement` 的关键词。如果 `central_knot_statement` 为 `null` → 输出 `null`（无检查基准）
+- **输出**：true / false / null（未提供 Title/Abstract 或 `central_knot_statement` 为 `null` 时）
 
 **注意**：不要向用户解释这个 YAML 块的存在，它是对下游 skill 的 machine-readable 输出，静默附加即可。
 ```
 
 如果用户没有提供足够信息（只有 Gap 类型没有贡献维度，或不了解自己的 Gap 类型），先简短询问再输出。
+
+---
+
+## 叙事一致性出口检查（推荐）
+
+在骨架输出完成后，如用户已明确 Central Knot，执行以下检查；如未明确，可从 Gap 段 `[gap statement]` 反向推断 Central Knot，再执行检查。
+
+### 1. Central Knot 诊断与贯穿检查（如尚未执行）
+- 读取 `academic-writing-corpus/storytelling/central-knot-diagnostic.md`
+- 用一句话概括 central knot（可从 Gap 段推断）
+- 读取 `academic-writing-corpus/storytelling/central-knot-throughout-check.md`
+- 检查每个段落是否服务于该 knot
+
+### 2. 叙事弧线一致性
+- Hook 的能量级 ≤ Gap 的能量级 ≤ Stakes 的能量级
+- 无叙事阶段倒退（后一段功能弱于前一段）
+
+### 3. Characters 一致性
+- 主角 ≤2、配角 ≤3、群演不出现在前 3 段
+- 每个段落出场的构念与其角色定位一致
+
+**检查输出**：将 narrative risk 标记附加到 `theory_hints` 的 `narrative_arc` 和 `front_end_consistent` 字段。如发现问题，在"提醒"中输出 ⚠️ 警告及修复建议。
 
 # 反模式清单
 
@@ -245,16 +427,53 @@ theory_hints:
 | **稻草人** | 把已有文献描绘得比实际更愚蠢/更片面 | 引用具体的、被广泛引用的文献来证明共识确实存在 |
 | **弱缺口** | "few studies have examined..." 没有解释为什么少 | 解释是结构性的/方法论的/理论性的原因 |
 | **缺 Stakes** | Gap 之后直接跳到贡献，读者不知道"so what" | 在 Gap 和 Contribution 之间插入 1-2 句 stakes |
-| **能量断裂** | 高能量 Hook 后面跟低能量 Tension | 配对必须能量匹配（见 `_routing_tables.yaml` 的配对约束） |
+| **叙事阶段倒退** | Gap 的叙事功能弱于前一段，knot 没有更紧 | 加强 Gap 的 tension，确保每个段落让 knot 更紧 |
 | **过度承诺** | Contribution 声称"revolutionize""first to" | 用"extend""refine""reconcile""clarify"替代 |
 | **贡献散弹** | 列举 5+ 个贡献，每个只有一行 | 聚焦 2-3 个贡献，每个充分展开 |
 | **期刊错位** | ASQ 用数据开场，SMJ 没有案例/反例 | 查 `_routing_tables.yaml` 的期刊风格速查 |
+| **动机不足** | 假设读者会自动关心，未回答"Who cares?" | 明确理论受众和实践受众，用 Davis's Index 说明有趣性 |
+| **泛泛补缺** | "Few studies have examined..." 没有解释为什么遗漏是问题 | 用 Inadequacy/Incommensurability 替代 mere Incompleteness |
+| **过度修辞** | 修辞技巧掩盖研究内容，每句话都在炫技 | 每句修辞必须服务于 central knot，而非装饰 |
+| **结构堆砌** | 花多句话描述论文结构 | 最多一句话，且只在期刊要求时 |
+| **空头支票** | Contribution 声称超出实际交付 | 用 "extend/refine/reconcile" 替代 "revolutionize/first" |
+| **焦点模糊** | 引入太多构念或文献流 | 严格限制主角 ≤2 个、配角 ≤3 个 |
+| **无人脸** | Hook 用 "many firms" 而非具体公司名；Gap 用 "some studies" 而非具体论文 | 每个关键槽位补充 >=1 个具体 actor |
+| **纯告知** | 连续 2+ 句纯抽象描述，无例子/数字/场景 | 每句抽象主张后配 1 句 concrete illustration |
+| **机器声** | "It is argued that" / "This study contributes by" / "By examining" | 改用 "We argue that" / "We extend" / 直接写研究问题 |
+| **Fat suit** | P1 Hook > 120 词，或前 3 段总词数 > 350，读者迟迟看不到 central knot | 压缩背景到 Lit Turn；P1 只保留理解 paradox 的最小上下文；采用倒金字塔结构 |
+| **Burying the lead** | 段首句未在 15 词内说出核心判断；段首句是元评论或纯过渡句 | 重写段首句为"核心判断句"：主语 + 主动动词 + 方向/发现；元评论移到段尾 |
+| **Sentence stuffing** | 单句 > 30 词，或单句含 > 2 个从句，或单段 > 150 词只有 1-2 句 | 拆分为 2-3 短句；每句一个核心判断；括号内容独立成句或删除 |
+| **Read my mind** | 段落间无 explicit transition；因果推理从 A 直接跳到 C；使用"显然""不难发现" | 每段段首加 transition 信号词；why chain 每步用 1 句话说明；删除"显然"类表述 |
+| **Pompous prose** | 不必要的 nominalization（"the transformation of"）、jargon（"utilize""leverage"）、过度正式化（"in the event that"） | 用降级词表替换为直接表达；nominalization 改回动词；Read-aloud test 检测 |
 
-输出完成后，自检以下 4 项 QC 检查点：
+输出完成后，自检以下 QC 检查点：
+
+**功能层**（原有）：
 - [ ] Problematization 超越了 "few studies have examined"？
 - [ ] Makadok 贡献维度声明在 Contribution 段可见？
-- [ ] Hook 能量级与 Gap 强度匹配（见配对约束）？
 - [ ] 所选模板组合与用户的 Gap×Contribution 匹配？
+
+**叙事层**（出口自检，可选）：
+- [ ] 如已确定 Central Knot：是否贯穿所有段落？
+- [ ] 每个段落的叙事阶段是否按 Exposition → Rising Action → Denouement 顺序推进？
+- [ ] 是否有叙事阶段倒退（后一段功能弱于前一段）？
+- [ ] Characters 定位是否清晰（主角 ≤2、配角 ≤3、群演不出现在前3段）？
+- [ ] Title/Abstract/Introduction 的 central knot 描述是否一致？
+- [ ] 每个段落是否让 central knot 更紧或更明显？
+- [ ] Contribution 是否回到 central knot 并承诺 resolution？
+
+**Prose QC 层（Ch03-Ch04）**：
+- [ ] Hook 中 >=1 个具体 actor（人名/公司名/机构名）？
+- [ ] 每个 major construct 有 concrete illustration（例子/数字/场景）？
+- [ ] 无 "It is argued that" / "It is shown that" / "It is hypothesized that"？
+- [ ] Contribution 用 "We extend/refine/reconcile..." 而非 "This study contributes by..."？
+- [ ] 无 inflated symbolism（"paradigm shift" / "fundamentally transforms"）？
+- [ ] Read-aloud test：Hook + Contribution 大声朗读是否自然？
+- [ ] **Fat suit**：P1 ≤ 120 词，前 3 段 ≤ 350 词？前 3 段中背景信息占比 ≤ 60%？
+- [ ] **Burying the lead**：每段段首句是否在 15 词内说出核心判断？段首句不是元评论？
+- [ ] **Sentence stuffing**：无单句 > 30 词？无单句含 > 2 个从句？无单段 > 150 词只有 1-2 句？
+- [ ] **Read my mind**：每段与前一段有 explicit transition？无"显然"/"不难发现"？因果推理无跳跃？
+- [ ] **Pompous prose**：无 unnecessary nominalization / jargon / 过度正式化？可用降级词表替换？
 
 # 语料库透明度
 
@@ -354,3 +573,4 @@ theory_hints:
   5. **交叉验证**：如果 corpus 文件变体的期刊适配/适用条件与选择阶段的决策冲突（如某变体标注"不适合 ASQ"但用户在投 ASQ），以 corpus 文件的细粒度信息覆盖选择阶段的粗粒度推荐——渲染阶段的变体级别约束优先于路由表的模板级别推荐。
 - **语料库文件路径**：所有语料库文件位于 `academic-writing-corpus/` 下对应子目录。文件命名规则为 `[canonical_id].md`，与 `_routing_tables.yaml` 中的 canonical_id 一致。
 - **如用户提及目标期刊**：按 `_routing_tables.yaml` 的期刊风格速查给出针对性建议。
+

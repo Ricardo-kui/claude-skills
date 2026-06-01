@@ -1,0 +1,71 @@
+# write-introduction Feedback Schema v1.0.0
+# ================================
+# 每次使用 write-introduction skill 后，将用户反馈记录为独立 YAML 文件。
+# 文件命名: YYYY-MM-DD_<feedback_id>.yaml
+#
+# 聚合方式:
+#   python _feedback_collector.py --aggregate
+#
+# 查看统计:
+#   python _feedback_collector.py --report
+
+feedback_entry:
+  # 元数据
+  feedback_id: "uuid or short-hash"
+  timestamp: "ISO-8601"
+  source: "claude-session / manual / batch-review"
+
+  # 用户研究上下文
+  user_context:
+    gap_type: "Incompleteness | Inadequacy | Incommensurability"
+    makadok_dimension: "Constructs | Mechanism | Boundary | Phenomenon | Level | Mode | Question | Output"
+    target_journal: "ASQ | AMJ | SMJ | OS | MS | JM | JOM | POM | ..."
+    research_topic: "一句话概括研究主题"
+
+  # 本次调用实际使用的模板（从 write-introduction 输出中复制 theory_hints 或手动记录）
+  templates_used:
+    - module: "hook | tension | stakes | literature_turn | theory_lens | preview | contribution | transition"
+      canonical_id: "如 06-paradigm-challenge"
+      variant_used: "A | B | C | ..."  # 可选，如果用户明确选了某个变体
+
+  # 总体评价
+  overall_verdict: "validated | revise | reject"
+  # validated: 用户直接使用，修改不超过 20%
+  # revise: 用户做了实质性修改（>20%）但保留了模板骨架
+  # reject: 用户完全弃用该模板，改用其他结构
+
+  # 模块级评价（如果总体不是 validated，建议逐项评价）
+  module_ratings:
+    - canonical_id: "06-paradigm-challenge"
+      rating: "validated | revise | reject"
+      comment: "具体评价"
+
+  # 修订/拒绝原因（如 verdict = revise 或 reject）
+  revise_reasons:
+    - reason_category: "见下方标准分类"
+      description: "具体描述"
+      affected_modules: ["hook", "tension"]
+
+  # 用户实际修改摘要（如果 verdict != validated）
+  post_use_modifications: "用户最终稿与模板骨架的主要差异"
+
+  # 额外观察（可选）
+  observations:
+    - "任何不属于以上分类但有价值的观察"
+
+# ---
+# 标准 reason_category 分类
+# =========================
+# energy_mismatch      : Hook 能量与 Gap 强度不匹配
+# weak_gap             : Tension 段仍停留在 'few studies have examined'
+# overpromise          : Preview/Contribution 承诺过多或过少
+# journal_mismatch     : 模板风格与目标期刊偏好冲突
+# slot_misfill         : 槽位填充指导不够具体，用户不知如何填
+# variant_mismatch     : 所选变体与研究情境不匹配
+# missing_transition   : 段落间过渡生硬，缺少衔接
+# theory_disconnect    : Theory Lens 与 Gap 之间逻辑断裂
+# module_redundancy    : 两个模块功能重叠（如 data-shock + quantified-economic-loss）
+# insufficient_context : 模板假设了用户没有提供的研究特征
+# combo_incompatibility: 模板配对约束未被遵守导致冲突
+# prose_quality        : 输出段落读起来不像学术写作（AI 腔、翻译腔）
+# other                : 其他

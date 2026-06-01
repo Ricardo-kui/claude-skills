@@ -4,7 +4,7 @@ description: |
   Introduction 范文蒸馏 meta-skill。输入单篇或批量论文的 Introduction 文本，输出结构化提炼报告：功能模块拆解、叙事结构模式、修辞策略 DNA、模块级表达骨架、Gap×Contribution 组合验证。
   核心原则：Introduction 内容高度非标准化，但功能框架标准化。提炼 HOW they stage the narrative, not WHAT they say。不复制具体措辞，只提取可跨论文复现的功能组织方式和修辞策略。
   触发词：「蒸馏 introduction」「intro 范文分析」「拆解 introduction」「提取 intro 模板」「处理新论文 intro」「introduction 骨架提炼」。
-version: 2.0.0
+version: 2.1.0
 ---
 
 # Role
@@ -197,6 +197,8 @@ combos_accumulator:
 | Conversation 策略 | Progressive Coherence / Synthesized Coherence / Non-Coherence |
 | Hook 能量级 | 低 (Cold-start) / 中 (Contrast/Debate) / 高 (Consensus challenge) |
 | 叙事结构 | 线性收缩 (Puzzle→Gap→RQ) / 螺旋深入 (Hook→Tension→Resolution→New Tension) / 范式颠覆 (Consensus→Anomaly→New Frame) |
+| 叙事弧线 (narrative_arc) | gentle_rise / moderate_rise / sharp_rise — 与 Gap 类型映射：Incompleteness→gentle_rise, Inadequacy→moderate_rise, Incommensurability→sharp_rise |
+| Davis 有趣性类型 | False Positive / False Negative / Order from Chaos / Chaos from Order / False Similarity / False Difference / Unobserved Bad / Unobserved Dysfunction |
 
 ### 决策树澄清模式（借鉴 grill-me）
 
@@ -233,11 +235,52 @@ phase_0_combo_profile:
   conversation_strategy: "Progressive / Synthesized / Non-Coherence"
   hook_energy_level: "低 / 中 / 高"
   narrative_structure: "线性收缩 / 螺旋深入 / 范式颠覆"
+  narrative_arc: "gentle_rise / moderate_rise / sharp_rise"
   introduction_length: "[字数]"
   paragraph_count: "[N]"
   has_explicit_puzzle_statement: true/false
   has_stakes_paragraph: true/false
+
+# Story Architecture 核心字段（Pollock 2025 Ch02-Ch05，供下游 write-introduction theory_hints 消费）
+phase_0_story_architecture:
+  central_knot_statement: "[用一句话概括的 central knot。从 Gap 段包含转折信号词（However/Yet/Although/In contrast）且含具体理论/现象名称的句子推断；如无法推断则填 null]"
+  protagonist_construct: "[主角构念名称。从 Theory Lens 或 Preview 中提取，必须是 Introduction 中出现 ≥2 次的构念；无法提取则填 null]"
+  supporting_constructs:
+    - "[配角1，如 mediator/moderator，上限3个]"
+    - "[配角2]"
+  daviss_index_types:
+    - "[匹配的 Davis 类型1，如无法推断则留空列表]"
+    - "[匹配的 Davis 类型2]"
+  front_end_consistent: null  # Phase 3 如有 Title/Abstract 输入再判定 true/false
 ```
+
+#### Story Architecture 字段推断规则
+
+**central_knot_statement**：
+- 来源：Gap 段中同时包含 (a) 转折信号词和 (b) 具体理论/现象名称的完整句子
+- 质量标准：必须是"包含冲突"的一句话，不能是"我们研究X"或"用DID方法"
+- 回退：无符合条件的句子 → `null`（允许 null，不阻塞输出）
+
+**protagonist_construct**：
+- 来源：Theory Lens 的核心 IV/DV；或 Preview 中的核心构念
+- 质量标准：Introduction 全文出现 ≥2 次
+- 回退：无法提取 → `null`
+
+**supporting_constructs**：
+- 来源：Theory Lens 中提及的 mediator/moderator/control 变量
+- 上限：最多 3 个
+
+**daviss_index_types**（推断规则，用户未直接回答时）：
+| Hook/Gap 组合 | 推断的 Davis 类型 |
+|--------------|------------------|
+| 数据冲击 + 现实矛盾共识 | False Positive / False Negative |
+| 范式挑战 + 理论失衡 | Order from Chaos / Chaos from Order |
+| 构念混淆 + 隐含假设错误 | False Similarity / False Difference |
+| 政策反效果 + 成本效益 | Unobserved Bad / Unobserved Dysfunction |
+| 其他组合 | 不推断，留空列表 |
+
+**front_end_consistent**：
+- 需要 Title/Abstract 输入时才检查。若仅有 Introduction 文本 → 保持 `null`
 
 ---
 
@@ -410,6 +453,54 @@ deviation_from_standard: "theory_lens 在 tension 之前 (Non-Coherence 策略);
 | Level | Any | Hook, Literature Turn, Tension, Theory Lens, Contribution | Tension 缺跨层次张力、Theory Lens 缺层次桥接理论 |
 | Mode | Any | Hook, Literature Turn, Tension, Theory Lens, Contribution | Tension 缺 variance/process 张力、Theory Lens 缺新 lens 合法性 |
 
+### Prose Craft 检查（Pollock 2025 Ch03）
+
+对每个模块执行三层 prose 质量检查，提取可模仿的 prose 策略：
+
+#### 1. Human Face 检查
+
+| 检查点 | 通过标准 | 失败信号 | 蒸馏记录 |
+|--------|---------|---------|---------|
+| Hook 有具体 actor | P1 出现 ≥1 个人名/公司名/机构名 | "many firms" / "some scholars" | 记录具体 actor 名称和出现位置 |
+| 共识引用有脸 | `[dominant finding]` 槽位引用具体论文（作者名）而非 "many scholars" | 用 "prior research has shown" 无具体引用 | 记录引用策略 |
+| 反例有脸 | `[anomaly]` 槽位包含具体案例或数字 | "some studies found" | 记录案例/数字来源 |
+| 每个 context 有脸 | `[context 1/2/3]` 各含具体研究（作者+年份+情境） | 三个 context 来自同一篇 review | 记录 context 来源多样性 |
+
+#### 2. Showing vs Telling 检查
+
+| 检查点 | 通过标准 | 失败信号 | 蒸馏记录 |
+|--------|---------|---------|---------|
+| Major construct 首次出现配 illustration | 每个核心构念首次出现时跟 1 个例子/数字/场景 | 连续 2+ 句纯抽象描述 | 记录 illustration 类型和位置 |
+| Gap statement 配场景 | `[gap statement]` 解释遗漏原因后跟 1 个"如果不解决会怎样"的场景 | 只有 "few studies have examined" | 记录场景具体内容 |
+| Theory consequence 具体化 | `[theoretical consequence]` 具体到某理论的某 prediction | "theoretically important" 无解释 | 记录具体化策略 |
+| Mechanism 可操作化 | `[mechanism]` 用可操作化构念命名 | "the role of X" 模糊表达 | 记录构念命名方式 |
+
+#### 3. Conversational Voice 检查
+
+| 检查点 | 通过标准 | 失败信号 | 蒸馏记录 |
+|--------|---------|---------|---------|
+| Gap/Theory Lens/Contribution 无被动 | P3 Gap / P5-P6 Theory Lens / P7-P8 Contribution 中无 "It is argued that" | 出现无主语被动语态 | 记录被动语态位置和改写建议 |
+| Contribution 用第一人称主动 | P7-P8 使用 "We extend/refine/reconcile..." | "This study contributes by..." | 记录贡献声明句式 |
+| 无 inflated symbolism | 无 "paradigm shift" / "fundamentally transforms" | 出现过度包装词汇 | 记录降级改写方式 |
+
+### Module Skip 检测
+
+根据 write-introduction 的模块跳过规则，判断论文是否跳过/压缩了模块，以及是否合理：
+
+| 模块 | 检测问题 | 合理跳过条件（全部满足） | 检测结果 |
+|------|---------|------------------------|---------|
+| Stakes（实践层） | 是否独立存在？ | Hook 已承担实践重要性（人命/安全/精确量化损失/制度危机） | 跳过/存在/嵌入 |
+| Stakes（理论层） | 是否嵌入 Gap 末尾？ | Gap 末尾有 1-2 句理论 Stakes | 嵌入/独立/缺失 |
+| Contribution | 是否独立段落？ | Theory Lens 本身即贡献声明（构念区分型）或期刊风格偏好紧凑（JOM/MS/POM） | 压缩/独立/缺失 |
+| Theory Lens | 是否独立？ | Gap 末尾已含理论名称+方向性预测 | 嵌入/独立/缺失 |
+| Literature Turn | 是否独立？ | Hook 已充分展示跨文献流共识/对话，且 Introduction ≤5 段 | 嵌入/独立/缺失 |
+| Preview | 是否独立？ | Theory Lens 或 Contribution 中已暗示实证 setting+发现方向 | 嵌入/独立/缺失 |
+
+**跳过风险评级**：
+- **安全压缩**：模块功能嵌入相邻段落，且满足上表"必须满足"条件
+- **风险跳过**：模块功能完全缺失，且不满足跳过条件 → 记录为 "risky_skip"
+- **默认策略**：未明确满足跳过条件时，标记为 "should_have_been_included"
+
 ### 叙事质量摘要输出
 
 ```yaml
@@ -419,6 +510,9 @@ phase_1_5_quality_gate:
     present_modules: ["hook", "literature_turn", ...]
     missing_modules: ["stakes"]
     coverage_rate: "85%"
+    module_skip_detected:
+      stakes: {status: "embedded / skipped / present", justification: "...", risk: "safe / risky"}
+      contribution: {status: "compressed / present", justification: "...", risk: "safe / risky"}
   combo_alignment:
     detected_combo: "Incompleteness × Mechanism"
     properly_addressed: ["tension 使用 'remains unclear' 标志性语言", "theory_lens 引入中介机制"]
@@ -434,6 +528,21 @@ phase_1_5_quality_gate:
     specific_consequence_stated: true/false
     target_audience_named: true/false
     one_sentence_test: true/false
+  prose_craft:
+    human_face:
+      hook_has_actor: true/false
+      actor_name: "[具体名称]"
+      consensus_has_authors: true/false
+      anomaly_has_case: true/false
+    showing_vs_telling:
+      construct_illustration_paired: true/false
+      gap_has_consequence_scene: true/false
+      theory_consequence_specific: true/false
+      mechanism_operationalized: true/false
+    conversational_voice:
+      no_passive_in_key_modules: true/false
+      contribution_active_voice: true/false
+      no_inflated_symbolism: true/false
   cross_section_alignment:
     theory_lens_consistent: true/false
     contribution_hypothesis_aligned: true/false
@@ -486,6 +595,21 @@ phase_1_5_quality_gate:
 [关键特征列表]: "[如入库动作非 none：列出 2-4 个使该变体与已有变体不同的特征。每个特征一个短句，聚焦说服机制和标志性语言，如'用 regulatory shock 而非 efficiency logic 建立共识'、'以问题收束双段而非在同一段内完成转折']"
 [适用情境]: "[如入库动作非 none：什么研究情境下选这个变体而非其他变体？如'适用于有具体监管事件/政策冲击的研究场景'、'Incommensurability × Constructs 组合；ASQ 标志性双段 Hook 结构']"
 [使用禁忌]: "[如入库动作非 none：使用该变体时的注意事项，如'不要在没有充分文献回顾的情况下使用'、'反例必须有具体数据/案例支撑']"
+
+# Prose Craft 标注（Ch03）—— 新增于 v2.1.0
+[prose_craft]:
+  human_face:
+    actor_present: true/false
+    actor_name: "[具体 actor，如 Toyota/14条生命/具体公司名]"
+    actor_location: "[在骨架中的槽位位置]"
+  showing_vs_telling:
+    concrete_illustration_paired: true/false
+    illustration_type: "[案例/数字/场景/具体研究]"
+    illustration_location: "[在骨架中的槽位位置]"
+  conversational_voice:
+    active_voice: true/false
+    subject_verb_pattern: "[We argue that... / Consider... / 具体场景开头]"
+    avoids_passive: true/false
 ```
 
 ### 语料库感知比对（Corpus-Aware Comparison）
@@ -684,6 +808,8 @@ phase_2_4_skeleton_critic:
 
 ### Introduction DNA 指标
 
+#### 基础 DNA 指标（v2.0 已有）
+
 | 指标 | 计算方式 | 用途 |
 |------|----------|------|
 | 模块密度 | 总字数 / 识别到的模块数 | 判断 Introduction 的信息密度（顶刊中位数约 120-150 词/模块） |
@@ -697,6 +823,31 @@ phase_2_4_skeleton_critic:
 | JTBD 6-Block 覆盖 | Simsek & Li (2022) 的 6 个 block 是否都有对应内容 | 0-6 分 |
 | Contribution-Discussion 可兑现度 | Contribution 的每个声明是否能在 Theory/Methods/Results 中找到支撑线索 | 高/中/低 |
 
+#### Story Architecture DNA 指标（Pollock Ch02-Ch05，v2.1.0 新增）
+
+| 指标 | 计算方式 | 用途 |
+|------|----------|------|
+| Central Knot 清晰度 | 是否能从 Gap 段推断出包含冲突的一句话 | 高/中/低/null。低 = "无明确核心冲突" |
+| 主角集中度 | 主角构念提及次数 / 总构念提及次数 | >=60% 为集中，<40% 为分散 |
+| Characters 出场秩序 | 主角/配角/群演是否按正确顺序出场 | 群演出现在前 3 段 = 风险 |
+| 叙事弧线一致性 | Hook 能量级 ≤ Gap 能量级 ≤ Stakes 能量级 | 检测"高开低走"或阶段倒退 |
+| Davis 有趣性匹配度 | 推断的 Davis 类型数量 | >=1 为正常，0 标记 ⚠️（非阻塞） |
+| 前端一致性 | Title/Abstract 是否包含 central_knot 关键词 | true/false/null |
+| Fat Suit 指数 | P1 词数 / 前 3 段词数 | P1 > 120 词或前 3 段 > 350 词 = ⚠️ |
+| Burying the Lead 指数 | 各段段首句在 15 词内说出核心判断的比例 | >=80% 为优秀，<50% 为风险 |
+| Sentence Stuffing 指数 | 单句 >30 词或含 >2 从句的句子比例 | >20% 为风险 |
+
+#### Prose Craft DNA 指标（Pollock Ch03，v2.1.0 新增）
+
+| 指标 | 计算方式 | 用途 |
+|------|----------|------|
+| Human Face 覆盖率 | 有具体 actor 的模块数 / 总模块数 | >=50% 为优秀（Hook 必须 >=1） |
+| Showing 比率 | 有 concrete illustration 的抽象主张数 / 总抽象主张数 | >=70% 为优秀 |
+| Passive Voice 密度 | "It is argued that" / "It is shown that" / "It is hypothesized that" 出现次数 | 0 为优秀，>=1 为需修正 |
+| Inflated Symbolism 标记 | "paradigm shift" / "fundamentally transforms" / "revolutionize" 出现次数 | 0 为优秀，>=1 为需降级 |
+| Read-aloud 自然度 | Hook + Contribution 大声朗读是否自然 | 主观评级：自然/生硬/机器声 |
+| 模块跳过合理性 | 跳过模块数 + 跳过理由充分性 | 安全压缩 / 风险跳过 |
+
 ### Narrative Style Profile（叙事风格 DNA）
 
 借鉴 model_papers_style.json 的多维度风格解剖框架，为每篇论文生成**可模仿的风格画像**。这是 Introduction 蒸馏的核心增值产出——不仅提炼结构，更提炼**语气、节奏和句法创新**。
@@ -709,6 +860,18 @@ phase_2_4_skeleton_critic:
 | **Distinctive Features** | 该论文**特有**的叙事标记是什么？（如 paired contrasts / rhetorical questions / signpost triads / self-critique embedding） | 列表，每项附原文例句 |
 | **Avoids** | 该论文**刻意回避**的写法是什么？（如 avoids overclaiming causality / avoids bullet-point prose） | 列表，说明回避的修辞功能 |
 | **Quality Markers** | 为什么这个叙事结构有效？最强/最弱的叙事技巧是什么？ | what_makes_effective / strongest_aspect / weakest_aspect |
+| **Prose Craft Profile**（v2.1.0 新增） | Human Face / Showing vs Telling / Conversational Voice 的具体策略 | 见下方 Prose Craft 子维度 |
+
+#### Prose Craft Profile 子维度（v2.1.0 新增）
+
+| 子维度 | 提炼问题 | 输出格式 |
+|--------|----------|----------|
+| **Human Face 策略** | 论文如何在关键槽位嵌入具体 actor？Hook 用公司名还是人名？Consensus 引用用作者名还是 "many scholars"？ | actor 类型分布 + 代表性例句 |
+| **Showing 策略** | 论文如何在抽象主张后配 concrete illustration？用案例、数字、场景还是具体研究？ | illustration 类型分布 + 代表性例句 |
+| **Voice 策略** | 论文在 Gap/Theory Lens/Contribution 中如何避免被动语态？使用哪些主动句式？ | 主动句式模板 + 被动语态位置（如有） |
+| **Fat Suit 控制** | 论文如何控制背景长度？P1 是否倒金字塔？前 3 段背景占比？ | P1 词数 + 前 3 段背景占比 |
+| **Burying the Lead 控制** | 各段段首句结构：是否在 15 词内说出核心判断？段首句功能（核心判断/元评论/过渡） | 段首句功能统计 |
+| **Sentence Stuffing 控制** | 长句拆分策略：复杂从句如何处理？括号内容是否独立成句？ | 平均句长 + 最长句分析 |
 
 **记录原则**：只记录该论文**明显区别于**同类 Gap×Contribution 组合其他范文的特征。通用特征（如"有 Hook"）不记入 Distinctive Features。
 
@@ -753,6 +916,38 @@ phase_2_4_skeleton_critic:
 - 新骨架: ...
 - 新模块排列: ...
 - 新修辞策略: ...
+
+## Story Architecture Profile（Pollock Ch02-Ch05，v2.1.0 新增）
+
+**Central Knot**: "[一句话核心冲突，来自 Phase 0]"
+**Characters**:
+- 主角: [protagonist_construct]（出现 [N] 次）
+- 配角: [supporting_construct1], [supporting_construct2]
+- 群演出场控制: [前3段无群演 = ✓ / 有风险]
+**Narrative Arc**: [gentle_rise / moderate_rise / sharp_rise]（与 Gap 类型匹配度: ✓/△/✗）
+**Davis's Index**: [类型1, 类型2]（匹配度: [高/中/低]）
+**Front-end Consistency**: [true/false/null]（Title/Abstract 与 central knot 关键词重叠度）
+
+## Prose Craft Profile（Pollock Ch03，v2.1.0 新增）
+
+**Human Face 策略**:
+- Hook actor: [具体名称] → 功能: [建立兴趣/建立可信度/引发共情]
+- Consensus 引用策略: [作者名引用 / "many scholars" / 混合]
+- 其他 actor 分布: [模块名]: [actor 类型]
+
+**Showing vs Telling 策略**:
+- 主要 illustration 类型: [案例/数字/场景/具体研究]
+- 典型配对模式: "[抽象主张] + [具体 illustration]"
+- 薄弱点: [哪些抽象主张未配 illustration]
+
+**Conversational Voice 策略**:
+- 主动句式模板: "[We argue that...]" / "[Consider...]"
+- 被动语态位置（如有）: [模块名]: "[原句]"
+- Inflated symbolism: [有/无] → 具体词汇: ["paradigm shift" 等]
+
+**Fat Suit 控制**: P1 [N] 词 / 前3段 [N] 词 / 背景占比 [N%]
+**Burying the Lead**: [N]% 段首句在15词内说出核心判断
+**Sentence Stuffing**: 平均句长 [N] 词 / 最长句 [N] 词
 
 ## Narrative Style Profile
 [来自 Phase 3 的多维度风格解剖]
@@ -1375,6 +1570,7 @@ source: Distilled by distill-introduction-exemplar Phase 4.6
 
 ### QC Checklist
 
+#### 功能层 QC（原有）
 - [ ] **Completeness**: 所有强制模块（根据 Gap×Contribution 组合）已被覆盖
 - [ ] **Clarity**: 每个骨架都有明确的 [占位符] 和适用 Gap 类型标注
 - [ ] **Credibility**: 未将单篇论文的特殊现象泛化为通用规则
@@ -1384,6 +1580,26 @@ source: Distilled by distill-introduction-exemplar Phase 4.6
 - [ ] **Gap-Type Fidelity**: 骨架的标志性语言与 Gap 类型匹配（Incompleteness!="conflated"）
 - [ ] **Dorobantu Coverage**: 核心问题链（Puzzle/Audience/RQ/Constructs）都有对应模块
 - [ ] **Combo Honesty**: 未将 Incommensurability 的骨架错误归类为 Incompleteness
+
+#### 叙事层 QC（Pollock Ch02-Ch05，v2.1.0 新增）
+- [ ] **Central Knot 贯穿性**: 如已推断 central_knot，检查每个段落是否服务于该 knot
+- [ ] **叙事阶段顺序**: 段落功能按 Exposition → Rising Action → Denouement 推进，无阶段倒退
+- [ ] **Characters 秩序**: 主角 ≤2、配角 ≤3、群演不出现在前 3 段
+- [ ] **前端一致性**: Title/Abstract/Introduction 的 central knot 描述一致（如有 Title/Abstract）
+- [ ] **Narrative Arc 能量守恒**: Hook 能量级 ≤ Gap 能量级 ≤ Stakes 能量级
+
+#### Prose QC 层（Pollock Ch03，v2.1.0 新增）
+- [ ] **Human Face**: Hook 中 >=1 个具体 actor（人名/公司名/机构名）？
+- [ ] **Showing**: 每个 major construct 有 concrete illustration（例子/数字/场景）？
+- [ ] **Conversational Voice**: 无 "It is argued that" / "It is shown that" / "It is hypothesized that"？
+- [ ] **Contribution Voice**: Contribution 用 "We extend/refine/reconcile..." 而非 "This study contributes by..."？
+- [ ] **无 Inflated Symbolism**: 无 "paradigm shift" / "fundamentally transforms"？
+- [ ] **Read-aloud 测试**: Hook + Contribution 大声朗读是否自然？
+- [ ] **Fat Suit 控制**: P1 ≤ 120 词，前 3 段 ≤ 350 词？前 3 段背景占比 ≤ 60%？
+- [ ] **Burying the Lead**: 每段段首句在 15 词内说出核心判断？段首句不是元评论？
+- [ ] **Sentence Stuffing**: 无单句 > 30 词？无单句含 > 2 个从句？无单段 > 150 词只有 1-2 句？
+- [ ] **Read my Mind**: 每段与前一段有 explicit transition？无"显然"/"不难发现"？因果推理无跳跃？
+- [ ] **Pompous Prose**: 无 unnecessary nominalization / jargon / 过度正式化？可用降级词表替换？
 
 ### 最终输出物清单
 
@@ -1411,6 +1627,13 @@ source: Distilled by distill-introduction-exemplar Phase 4.6
 | R2 | Phase 2 (Tension 提炼) | Gap 语言模糊 | 同时使用 "remains unclear" + "overlooks" | 模仿后 Gap 类型定位不清 | 明确选择一种 Gap 类型，不要混合标志性语言 |
 | R3 | Phase 2.4 (骨架批评) | 骨架过度抽象 | Tension 骨架提炼为 "We study X" | 失去组织叙事的启示 | 保留关键功能短语 |
 | R4 | Phase 1.5 (对齐检查) | Contribution→Theory 断裂 | Contribution 承诺 Mechanism 但 Theory 无中介假设 | 模仿后 Introduction 承诺无法兑现 | 确保 Theory 部分的假设与 Intro 贡献声明严格对齐 |
+| R5 | Phase 3 (Prose QC) | Fat Suit | P1 > 120 词或前 3 段 > 350 词 | 读者迟迟看不到 central knot | 压缩背景到 Lit Turn；P1 只保留理解 paradox 的最小上下文；采用倒金字塔 |
+| R6 | Phase 3 (Prose QC) | Burying the Lead | 段首句未在 15 词内说出核心判断；段首句是元评论 | 读者只读段首句时无法判断论证方向 | 重写段首句为"核心判断句"：主语+主动动词+方向/发现；元评论移到段尾 |
+| R7 | Phase 3 (Prose QC) | Sentence Stuffing | 单句 > 30 词或含 > 2 从句；单段 > 150 词只有 1-2 句 | 阅读负担过重，核心判断被淹没 | 拆分为 2-3 短句；每句一个核心判断；括号内容独立成句或删除 |
+| R8 | Phase 3 (Prose QC) | Read my Mind | 段落间无 explicit transition；因果推理从 A 直接跳到 C；使用"显然""不难发现" | 读者无法跟随推理链条 | 每段段首加 transition 信号词；why chain 每步用 1 句话说明；删除"显然"类表述 |
+| R9 | Phase 3 (Prose QC) | Pompous Prose | 不必要的 nominalization（"the transformation of"）、jargon（"utilize""leverage"）、过度正式化 | 显得做作、不自然 | 用降级词表替换为直接表达；nominalization 改回动词；Read-aloud test 检测 |
+| R10 | Phase 3 (Prose QC) | 无人脸 | Hook 用 "many firms" 而非具体公司名；Gap 用 "some studies" 而非具体论文 | 缺乏可信度和代入感 | 每个关键槽位补充 >=1 个具体 actor |
+| R11 | Phase 3 (Prose QC) | 机器声 | "It is argued that" / "This study contributes by" / "By examining..." | 像模板自动生成而非研究者写作 | 改用 "We argue that" / "We extend" / 直接写研究问题 |
 ```
 
 **记录原则**：
@@ -1439,16 +1662,17 @@ source: Distilled by distill-introduction-exemplar Phase 4.6
 
 **如果没有提供 `--reference-metadata`**：进入简化验证模式，仅执行通用 Introduction QC（不检查与组装方案的对齐）。
 
-### 验证框架：四维检查
+### 验证框架：五维检查（v2.1.0 更新）
 
-成品验证从四个维度评估用户写出的 Introduction：
+成品验证从五个维度评估用户写出的 Introduction，与 write-introduction v3.4.0 的三层自检（功能层 / 叙事层 / Prose QC 层）对齐：
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  维度1: 组装方案兑现 (Assembly Fidelity)                      │
-│  维度2: 承诺兑现 (Promise Fulfillment)                        │
-│  维度3: 叙事流连续性 (Narrative Flow)                         │
-│  维度4: 骨架生成力 (Skeleton Generativity)                    │
+│  维度1: 组装方案兑现 (Assembly Fidelity) — 功能层            │
+│  维度2: 承诺兑现 (Promise Fulfillment) — 功能层              │
+│  维度3: 叙事流连续性 (Narrative Flow) — 叙事层               │
+│  维度4: 骨架生成力 (Skeleton Generativity) — 功能层          │
+│  维度5: Prose Craft QC — Prose 层（v2.1.0 新增）             │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -1565,6 +1789,41 @@ promise_fulfillment:
 
 ---
 
+#### 维度5 — Prose Craft QC（v2.1.0 新增）
+
+验证用户写出的 Introduction 是否符合 write-introduction v3.4.0 的 Prose Craft 标准（Pollock Ch03）：
+
+| 检查项 | 模块 | 通过标准 | 失败信号 | 严重度 |
+|--------|------|---------|---------|--------|
+| **Human Face** | P1 Hook | >=1 个具体 actor（人名/公司名/机构名） | "many firms" / "some scholars" | 高 |
+| **Consensus 有脸** | P1 Hook / P2 Lit Turn | 引用具体论文时用作者名 | "many scholars have argued" | 中 |
+| **反例有脸** | P3 Tension | 具体案例或数字，非 "some studies found" | 模糊反例 | 高 |
+| **Major construct 首次出现配 illustration** | P3-P6 | 每个核心构念首次出现后跟 1 个例子/数字/场景 | 连续 2+ 句纯抽象 | 中 |
+| **Gap statement 配场景** | P3 Tension | 解释遗漏原因后跟 1 个"如果不解决会怎样"的场景 | 只有 "few studies have examined" | 高 |
+| **无被动语态** | P3 Gap / P5-P6 Theory Lens / P7-P8 Contribution | 无 "It is argued that" / "It is shown that" | 出现无主语被动 | 高 |
+| **Contribution 主动语态** | P7-P8 Contribution | "We extend/refine/reconcile..." | "This study contributes by..." | 中 |
+| **无 inflated symbolism** | 全文 | 无 "paradigm shift" / "fundamentally transforms" | 过度包装词汇 | 中 |
+| **Fat Suit 控制** | P1-P3 | P1 ≤ 120 词；前 3 段 ≤ 350 词；背景占比 ≤ 60% | P1 > 120 词 | 中 |
+| **Burying the Lead** | 全文每段 | 段首句 15 词内说出核心判断；段首句不是元评论 | 段首句为元评论/纯过渡 | 高 |
+| **Sentence Stuffing** | 全文 | 单句 ≤ 30 词；单句从属连词 ≤ 2 个；单段 >150 词需 ≥3 句 | 单句 > 30 词或 >2 从句 | 中 |
+| **Read my Mind** | 全文 | 每段与前一段有 explicit transition；无"显然"/"不难发现"；因果无跳跃 | A 直接跳到 C 无 B | 高 |
+| **Pompous Prose** | 全文 | 无 unnecessary nominalization；无 "utilize""leverage"；不过度正式化 | "the transformation of" / "in the event that" | 低 |
+
+**Prose Craft 偏离矩阵输出格式**：
+
+```markdown
+### Prose Craft 偏离矩阵
+
+| 检查项 | 推荐标准 | 实际表现 | 偏离类型 | 严重度 | 建议 |
+|--------|---------|---------|---------|--------|------|
+| Human Face | P1 >=1 actor | "Many firms fail to..." 无具体公司 | 无人脸 | 高 | 补充 1 个具体公司名或案例 |
+| 无被动语态 | P3/P5/P7 无 "It is argued" | P5: "It is argued that CEO overconfidence..." | 机器声 | 高 | 改为 "We argue that CEO overconfidence..." |
+| Fat Suit | P1 ≤ 120 词 | P1 = 145 词 | 膨胀 | 中 | 压缩背景，将行业统计移到 Lit Turn |
+| Burying the Lead | 段首句 15 词内核心判断 | P3 段首句: "In the context of digital transformation..." (12词无核心判断) | 埋藏 | 高 | 重写为 "Digital transformation's innovation effects depend on organizational routine updating." |
+```
+
+---
+
 ### 综合验证报告输出
 
 成品验证的最终输出是一份综合报告，供用户决定是否修正、如何修正。
@@ -1578,7 +1837,7 @@ promise_fulfillment:
 - **实际段落数**: 7（推荐 8，偏差 -1）
 - **总字数**: 520（推荐 550，偏差 -30）
 
-## 四维评分卡
+## 五维评分卡（v2.1.0 更新）
 
 | 维度 | 得分 | 满分 | 评级 | 关键发现 |
 |------|------|------|------|---------|
@@ -1586,6 +1845,7 @@ promise_fulfillment:
 | 承诺兑现 | 85% | 100% | ✓ | Stakes 偏 generic，Contribution-Preview 轻微错位 |
 | 叙事流连续性 | 5/6 | 6 | ✓ | Tension→Stakes 过渡较弱 |
 | 骨架生成力 | 2 VALIDATED / 1 REVISE / 1 REJECT | — | △ | P5 骨架失效，需重新选择机制预览模块 |
+| Prose Craft QC | 8/13 | 13 | △ | P5 被动语态；P1 无人脸；P3 段首句埋藏核心判断 |
 | **综合评级** | — | — | **CONDITIONALLY ACCEPT** | 需修正后重新验证 |
 
 ## 优先修正清单（按审稿人攻击概率排序）
@@ -1618,7 +1878,7 @@ promise_fulfillment:
 
 ### 自动回写步骤
 
-1. **提取验证数据**：从 Phase 6 四维评分卡的骨架生成力验证（维度4）中提取每个模板的 verdict：
+1. **提取验证数据**：从 Phase 6 五维评分卡的骨架生成力验证（维度4）和 Prose Craft QC（维度5）中提取每个模板的 verdict：
    - VALIDATED → 模板在此次使用中生效
    - REVISE → 模板部分生效，有修正建议
    - REJECT → 模板在此次使用中失效
@@ -1663,12 +1923,30 @@ validation_feedback:
       verdict: "VALIDATED"
       reason: "Stakes 具体化成功——用户使用了量化经济损失"
 
+  prose_craft_results:
+    total_checks: 13
+    passed: N
+    failed: N
+    high_severity_failures:
+      - check: "Human Face"
+        location: "P1 Hook"
+        issue: "无具体 actor"
+        suggestion: "补充 1 个具体公司名或案例"
+      - check: "无被动语态"
+        location: "P5 Theory Lens"
+        issue: "It is argued that"
+        suggestion: "改为 We argue that"
+    fat_suit_index: {p1_words: N, first_three_paragraphs_words: N, background_ratio: "N%"}
+    burying_the_lead_score: "[N]% 段首句合格"
+    sentence_stuffing_count: N
+
   overall_validation:
     total_templates_assessed: N
     validated_count: N
     revise_count: N
     reject_count: N
     skeleton_generativity_rate: "[validated/total]"
+    prose_craft_pass_rate: "[passed/total_checks]"
 ```
 
 **validation_feedback 字段说明**：
@@ -1695,7 +1973,7 @@ Phase 6 不是单一功能，而是服务于两个时间尺度的需求：
 
 | 层级 | 触发 | 产出 | 数据流向 | 目的 |
 |------|------|------|---------|------|
-| **即时 QC** | 每次 `--validate` | 四维评分 + 优先修正清单 | 直接给用户 | 写作辅助——发现偏离、承诺未兑现 |
+| **即时 QC** | 每次 `--validate` | 五维评分 + 优先修正清单 | 直接给用户 | 写作辅助——发现偏离、承诺未兑现 |
 | **增量累积反馈** | 每次 `--validate`（自动） | validation_history 更新 + 模式检测 | `_evidence_registry.yaml` → write-introduction 渲染阶段消费 | 语料库维护——模板的 common_failures 随使用自动增长；≥2 次同因失效即标记 |
 
 **即时 QC 告诉用户"这次哪里写得不对"。增量累积反馈告诉系统"这个模板在真实使用中反复出什么问题"。** 两者在同一次 `--validate` 中完成，不需要额外步骤。当前 `validation_history` 全为 0 只是因为循环从未运行过——此修复使其在每次验证后自动更新。
@@ -1730,7 +2008,7 @@ Phase 6 不是单一功能，而是服务于两个时间尺度的需求：
 
 ## 与外部 Skill 的接口
 
-- **`write-introduction`** — 两层接口：(1) Phase 4 `corpus_enrichment` YAML 块 → Phase 4.5 → `_evidence_registry.yaml`（自动更新定量证据）；(2) Phase 4 `vault_enrichment` → Vault（人工审阅后更新 corpus 定性内容）。Phase 6 即时 QC 接收 write-introduction 的段落功能地图作为参考基准，输出四维评分和修正建议；验证结果存档至 Vault，积累 10+ 次后人工汇总 common_revise_reasons 模式。
+- **`write-introduction`** — 两层接口：(1) Phase 4 `corpus_enrichment` YAML 块 → Phase 4.5 → `_evidence_registry.yaml`（自动更新定量证据）；(2) Phase 4 `vault_enrichment` → Vault（人工审阅后更新 corpus 定性内容）。Phase 6 即时 QC 接收 write-introduction 的段落功能地图作为参考基准，输出五维评分（含 Prose Craft QC）和修正建议；验证结果存档至 Vault，积累 10+ 次后人工汇总 common_revise_reasons 模式。
 - **`diagnose-introduction`** — Phase 0 的组合分类可作为 diagnose 的验证基准
 - **`intro-review`** — Phase 1.5 的模块覆盖检查可作为 intro-review 的预检清单；Phase 6 的验证报告可作为 intro-review 的预诊断输入
 - **`paper-review`** — Rhetorical Logic Map 可用于跨 section 对齐检查（Introduction 承诺 vs Discussion 兑现）
@@ -1750,7 +2028,7 @@ Phase 6 不是单一功能，而是服务于两个时间尺度的需求：
 
 ```json
 {
-  "$schema": "distill-introduction-exemplar-batch/v2",
+  "$schema": "distill-introduction-exemplar-batch/v2.1",
   "paper_id": "string",
   "phase_0_combo_profile": {
     "gap_type": "string",
@@ -1758,10 +2036,18 @@ Phase 6 不是单一功能，而是服务于两个时间尺度的需求：
     "conversation_strategy": "string",
     "hook_energy_level": "string",
     "narrative_structure": "string",
+    "narrative_arc": "string",
     "introduction_length": "number",
     "paragraph_count": "number",
     "has_explicit_puzzle_statement": "boolean",
     "has_stakes_paragraph": "boolean"
+  },
+  "phase_0_story_architecture": {
+    "central_knot_statement": "string",
+    "protagonist_construct": "string",
+    "supporting_constructs": ["string"],
+    "daviss_index_types": ["string"],
+    "front_end_consistent": "boolean"
   },
   "phase_1_module_map": {
     "hook": { "located": "boolean", "paragraph_range": "string", "hook_type": "string", "hook_energy_level": "string", "serves_puzzle": "boolean" },
@@ -1773,9 +2059,15 @@ Phase 6 不是单一功能，而是服务于两个时间尺度的需求：
     "contribution": { "located": "boolean", "paragraph_range": "string", "makadok_dimensions_visible": ["string"], "discussable": "boolean" }
   },
   "phase_1_5_quality_gate": {
-    "module_coverage": { "required_modules": ["string"], "present_modules": ["string"], "missing_modules": ["string"], "coverage_rate": "string" },
+    "module_coverage": { "required_modules": ["string"], "present_modules": ["string"], "missing_modules": ["string"], "coverage_rate": "string", "module_skip_detected": "object" },
     "combo_alignment": { "detected_combo": "string", "properly_addressed": ["string"], "inadequately_addressed": ["string"] },
     "narrative_sufficiency": { "puzzle_stated_explicitly": "boolean", "common_ground_established": "boolean", "departure_point_clear": "boolean", "audience_implied": "boolean", "transition_chain_continuous": "boolean" },
+    "stakes_stress_test": { "generic_gap_language": "boolean", "specific_consequence_stated": "boolean", "target_audience_named": "boolean", "one_sentence_test": "boolean" },
+    "prose_craft": {
+      "human_face": { "hook_has_actor": "boolean", "actor_name": "string", "consensus_has_authors": "boolean", "anomaly_has_case": "boolean" },
+      "showing_vs_telling": { "construct_illustration_paired": "boolean", "gap_has_consequence_scene": "boolean", "theory_consequence_specific": "boolean", "mechanism_operationalized": "boolean" },
+      "conversational_voice": { "no_passive_in_key_modules": "boolean", "contribution_active_voice": "boolean", "no_inflated_symbolism": "boolean" }
+    },
     "contradictions_or_gaps": ["string"],
     "information_poverty_dimensions": ["string"]
   },
@@ -1796,7 +2088,25 @@ Phase 6 不是单一功能，而是服务于两个时间尺度的需求：
     "theory_lens_responsiveness": "string",
     "makadok_visibility": "number",
     "jtbd_coverage": "number",
-    "contribution_discussability": "string"
+    "contribution_discussability": "string",
+    "story_architecture": {
+      "central_knot_clarity": "string",
+      "protagonist_concentration": "number",
+      "characters_order": "string",
+      "narrative_arc_consistency": "string",
+      "daviss_index_match": "number",
+      "front_end_consistent": "boolean",
+      "fat_suit_index": { "p1_words": "number", "first_three_paragraphs_words": "number", "background_ratio": "string" },
+      "burying_the_lead_score": "string",
+      "sentence_stuffing_index": "string"
+    },
+    "prose_craft": {
+      "human_face_coverage": "string",
+      "showing_ratio": "string",
+      "passive_voice_density": "number",
+      "inflated_symbolism_count": "number",
+      "read_aloud_naturalness": "string"
+    }
   },
   "phase_4_corpus_reference": {
     "vault_enrichment": {
@@ -1828,7 +2138,15 @@ Phase 6 不是单一功能，而是服务于两个时间尺度的需求：
     "module_ratio": { "hook": "number", "literature_turn": "number", "tension": "number", "stakes": "number", "theory_lens": "number", "preview": "number", "contribution": "number" },
     "distinctive_features": [{ "feature": "string", "example": "string" }],
     "avoids": [{ "avoid": "string", "function": "string" }],
-    "quality_markers": { "what_makes_effective": "string", "strongest_aspect": "string", "weakest_aspect": "string" }
+    "quality_markers": { "what_makes_effective": "string", "strongest_aspect": "string", "weakest_aspect": "string" },
+    "prose_craft_profile": {
+      "human_face_strategy": "string",
+      "showing_strategy": "string",
+      "voice_strategy": "string",
+      "fat_suit_control": "string",
+      "burying_the_lead_control": "string",
+      "sentence_stuffing_control": "string"
+    }
   },
   "narrative_risk_ledger": [
     { "risk_id": "string", "discovery_phase": "string", "risk_type": "string", "original_manifestation": "string", "mimicry_consequence": "string", "recommended_handling": "string" }
@@ -1879,6 +2197,17 @@ Phase 6 不是单一功能，而是服务于两个时间尺度的需求：
       "per_skeleton_assessment": [
         { "paragraph": "string", "module": "string", "key_phrases_preserved": "boolean", "persuasive_action_preserved": "boolean", "overfilling_risk": "low / medium / high", "verdict": "VALIDATED / REVISE / REJECT", "note": "string" }
       ]
+    },
+    "prose_craft_qc": {
+      "total_checks": "number",
+      "passed": "number",
+      "failed": "number",
+      "high_severity_failures": [
+        { "check": "string", "location": "string", "issue": "string", "suggestion": "string" }
+      ],
+      "fat_suit_index": { "p1_words": "number", "first_three_paragraphs_words": "number", "background_ratio": "string" },
+      "burying_the_lead_score": "string",
+      "sentence_stuffing_count": "number"
     },
     "overall_rating": "ACCEPT / CONDITIONALLY_ACCEPT / NEEDS_REVISION / REJECT",
     "priority_fixes": [

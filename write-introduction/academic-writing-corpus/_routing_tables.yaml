@@ -449,3 +449,62 @@ transitions:
       triggers: "Level 贡献——微观视角补充宏观理论"
     - canonical_id: "12-setting-justification"
       triggers: "实证情境需要特别论证（如选择特定行业/国家/时期的理由）"
+
+# §11 — Narrative Arc (Pollock 2025 Ch02)
+narrative_arc:
+  # 将 Gap 类型映射到叙事弧线形态（基于 Pollock Ch02）
+  # 注意：不使用数字能量级，只标识弧线形态和典型高潮位置
+  gap_to_arc:
+    Incompleteness:
+      default_arc: "gentle_rise"
+      typical_climax_paragraph: "P5"
+      description: "温和上升：exposition 长，rising action 平缓，适合渐进式贡献"
+    Inadequacy:
+      default_arc: "moderate_rise"
+      typical_climax_paragraph: "P6"
+      description: "中等上升：有明确 paradox，rising action 明显，适合修正式贡献"
+    Incommensurability:
+      default_arc: "sharp_rise"
+      typical_climax_paragraph: "P7"
+      description: "急剧上升：strong hook，sharp gap，high stakes，适合颠覆式贡献"
+
+  # 模块的叙事功能标注（用于 SKILL.md 的 Five-Act 映射）
+  module_to_act:
+    hook: "exposition"
+    literature_turn: "early_rising_action"
+    gap: "rising_action"
+    stakes: "rising_action"
+    theory_lens: "rising_action"
+    preview: "late_rising_action"
+    contribution: "denouement_preview"
+
+  # Hook 的 Pollock 4-type 映射
+  hook_pollock_mapping:
+    quote:
+      description: "用具体引语或轶事抓住读者，建立人文面孔"
+      skill_hooks:
+        - "02-epigraph-quote-pivot"
+        - "10-immersive-narrative"
+        - "11-institutional-anecdote"
+      best_for: "empirical_puzzle, normative_challenge"
+    trend:
+      description: "用数据或文献趋势展示重要模式"
+      skill_hooks:
+        - "03-data-shock"
+        - "05-literature-consensus-blindspot"
+        - "08-consequence-cascade"
+      best_for: "theoretical_tension, empirical_puzzle"
+    anecdote:
+      description: "用叙事案例引入主角和悖论"
+      skill_hooks:
+        - "04-puzzle-paradox"
+        - "10-immersive-narrative"
+        - "14-paired-disasters"
+        - "16-evolving-social-issue"
+      best_for: "empirical_puzzle, paradox"
+    rhetorical_question:
+      description: "用问题激发读者思考"
+      skill_hooks:
+        - "13-rhetorical-question"
+        - "17-classic-debate-constraint"
+      best_for: "theoretical_tension, normative_challenge"

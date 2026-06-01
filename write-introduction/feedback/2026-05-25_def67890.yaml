@@ -1,0 +1,27 @@
+feedback_entry:
+  feedback_id: "def67890"
+  timestamp: "2026-05-25T14:15:00+08:00"
+  source: "claude-session"
+
+  user_context:
+    gap_type: "Incompleteness"
+    makadok_dimension: "Boundary"
+    target_journal: "SMJ"
+    research_topic: "产品召回的供应链纵向溢出效应"
+
+  templates_used:
+    - module: "hook"
+      canonical_id: "03-data-shock"
+    - module: "tension"
+      canonical_id: "01-despite-progress-unaddressed"
+    - module: "stakes"
+      canonical_id: "02-quantified-economic-loss"
+    - module: "preview"
+      canonical_id: "findings-preview"
+
+  overall_verdict: "validated"
+
+  post_use_modifications: "用户仅替换了 [placeholder] 中的领域术语，保留了骨架结构"
+
+  observations:
+    - "data-shock + quantified-economic-loss 配对在实践中未产生数字疲劳，因为 Hook 用召回次数，Stakes 用供应商股价损失"

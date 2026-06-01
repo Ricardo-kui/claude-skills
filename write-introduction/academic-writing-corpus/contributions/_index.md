@@ -297,6 +297,30 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 
 ---
 
+## 变体 J：Challenge Implicit Assumption 型（zhao-ding_gaba 型）
+
+**模板**:
+> "Our paper makes [N] contributions. First, we contribute to the emerging research on [field] ([citations]) by theorizing and testing antecedents of [phenomenon]. In doing so, our study challenges an implicit premise that [commonly held assumption]. Although prior work often assumes that [assumption] ([citations]), we show that [key finding that contradicts assumption]."
+
+**原文锚定**:
+> "Our paper makes two contributions. First, we contribute to the emerging research on positioning strategies in digital markets (Brynjolfsson et al. 2003, Miller and Wang 2024, Benner 2025) by theorizing and testing antecedents of heterogeneous positions. In doing so, our study challenges an implicit premise that lower entry barriers mechanically translate into greater product variety. Although prior work often assumes that entrants in digital markets expand product variety by targeting heterogeneous customer preferences (Boudreau 2012, Waldfogel 2017), we show that novelty in positioning varies systematically with external market feedback."
+
+**来源**: zhao-ding_gaba (ORSC), P7
+
+**关键特征**:
+- **"challenges an implicit premise that..."** → 将贡献定位为纠正领域内未被言明的假设（而非填补空白）
+- **"Although prior work often assumes that... we show that..."** → 假设-反证结构，比 "few studies have examined" 更有力
+- 贡献声明的攻击性适中——挑战的是 "implicit premise" 而非 "prior research is wrong"
+- 适合 Constructs + Phenomenon 组合——当论文引入新概念框架后，旧框架的隐含假设自然暴露
+
+**适用**: Incompleteness (主导) + mild Inadequacy 混合型 Gap；Constructs 或 Phenomenon 贡献维度
+
+**禁忌**:
+- 不要用于纯 Incompleteness Gap——"challenges an implicit premise" 暗示了 Inadequacy 元素
+- "implicit premise" 必须确实存在于文献中且可被引用支撑——不能 strawman
+
+---
+
 ## 组装规则
 
 ### 必须配对

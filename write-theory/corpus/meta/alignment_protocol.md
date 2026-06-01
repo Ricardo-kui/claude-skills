@@ -43,6 +43,58 @@
 | 核心构念 | P5-P6 Preview 中提到的构念 | T1 中定义的构念 | 名称、scope、层次必须一致 |
 | 关系方向 | P5 "[X] enhances [Y] through [M]" | T3 机制推演 + T4 假设方向 | 方向相反即严重错误 |
 
+### 维度 5：Narrative Continuity（Pollock Ch02）
+
+| 检查项 | Introduction 信号 | Theory 状态 | 结论 |
+|--------|-------------------|-------------|------|
+| Knot 继承 | `central_knot_statement` | P1 是否提及/暗示 knot | ✅/⚠️/❌ |
+| 角色一致性 | `protagonist_construct` | 主角是否与 Theory 的核心 DV 一致 | ✅/⚠️/❌ |
+| 叙事阶段连续性 | `narrative_arc` | Introduction 的 Denouement Preview 是否在 Theory 中被承接为 Rising Action | ✅/⚠️/❌ |
+| Rising Action 完整 | `narrative_arc` | Theory 是否有 Knot Deepening + Tying 阶段 | ✅/⚠️/❌ |
+| Plot 自然浮现 | — | 假设推导是否从构念互动中自然浮现 | ✅/⚠️/❌ |
+| Extraneous Storyline | — | 是否有与 knot 无关的理论段落 | ✅/⚠️/❌ |
+| Davis 有趣性 | `daviss_index_types` | Theory 的机制是否支撑 Introduction 承诺的有趣性 | ✅/⚠️/❌ |
+
+**Narrative Continuity 详细检查**：
+
+1. **Knot 继承检查**：
+   - Introduction 的 `central_knot_statement` 是否在 Theory P1 中被明确承接？
+   - 如果 Introduction 说"好公司为什么做坏事"，Theory P1 是否以"To resolve this paradox..."开头？
+   - 如果 P1 未提及 knot → ⚠️ "Theory 开头未承接 Introduction 的 knot"
+
+2. **角色一致性检查**：
+   - Introduction 的 `protagonist_construct` 是否与 Theory 的核心 DV 一致？
+   - Introduction 的 `supporting_constructs` 是否在 Theory 中以配角身份出现？
+   - 如果 Theory 引入了 Introduction 未提及的新主角 → ⚠️ "新主角未在 Introduction 中预告"
+
+3. **叙事阶段连续性检查**：
+   - Introduction 的最后一个段落（Contribution）的叙事阶段是 Denouement Preview
+   - Theory 的第一个段落（P1）的叙事阶段应是 Knot Inheritance（承接）
+   - 检查：Theory P1 是否明确提及或暗示了 Introduction 的 central knot？
+   - 如果 P1 未提及 knot → ⚠️ "Theory 开头未承接 Introduction 的 knot"
+   - Theory 的叙事阶段应遵循：Knot Inheritance → Knot Deepening → Knot Tying → Knot Fully Tied
+   - 如果某段落的叙事功能弱于前一段（如 Knot Deepening 后回到 Knot Inheritance）→ ⚠️ "叙事阶段倒退"
+
+4. **Rising Action 完整性检查**：
+   - Theory 是否有 Knot Deepening（P2-P4：构念定义、文献对话）？
+   - Theory 是否有 Knot Tying（P5-PN：假设推导）？
+   - Theory 是否有 Knot Fully Tied（T6 Closure）？
+   - 如果缺少任一阶段 → ⚠️ "Rising Action 不完整"
+
+5. **Plot Emergence 检查**：
+   - 每个假设推导是否从构念定义中自然浮现？
+   - 如果为了得到假设而重新定义构念 → ⚠️ "Plot 先于 Story"
+   - 修复：回到构念定义，确保构念先于假设存在
+
+6. **Extraneous Storyline 检查**：
+   - 每个 Theory 段落是否服务于 central knot？
+   - 如果某段落与 knot 无直接联系 → ⚠️ "Extraneous storyline"
+   - 修复：删除、降级为控制变量、或移至附录/未来研究
+
+7. **Davis 有趣性支撑检查**：
+   - Introduction 承诺的 Davis 类型（如 False Similarity）是否在 Theory 中得到支撑？
+   - 如果 Theory 的机制无法支撑该有趣性类型 → ⚠️ "Theory 无法兑现 Introduction 承诺的有趣性"
+
 ---
 
 ## 对齐检查输出格式

@@ -5,7 +5,7 @@ description: |
   从已发表论文的 Theory 中提炼可复用骨架：理论构建类型识别、功能模块拆解、why-chain 模式、构念关系组织方式、模块级表达骨架。不验证用户写作——Theory 写作 QC 请使用 `/theory-review`。
   核心原则：Theory 内容高度非标准化（因研究问题而异），但功能框架和推理结构是标准化的。提炼 HOW they explain why, not WHAT they explain。不复制具体机制内容，只提取可跨论文复现的理论论证组织方式和 why-chain 结构。
   触发词：「蒸馏 theory」「理论范文分析」「拆解 theory」「提取 theory 模板」「处理新论文 theory」「theory 骨架提炼」「why chain 提炼」。
-version: 1.1.0
+version: 1.2.0
 ---
 
 # Role
@@ -165,6 +165,127 @@ phase_0_theory_profile:
 
 ---
 
+## Phase 0.5 — Rising Action 定位与 Central Knot 继承检查（Pollock Ch02，v1.2.0 新增）
+
+Theory & Hypotheses 在整篇论文的 Five-Act 结构中属于 **Rising Action** 的后半段。蒸馏时必须检查 Theory 是否继承了 Introduction 建立的 Central Knot，并验证叙事连续性。
+
+### 输入接口
+
+如果输入包含 Introduction 文本或上游 `write-introduction` 输出的 `theory_hints` YAML 块，解析以下字段：
+- `central_knot_statement`：如果存在且非 `null` → 作为 Theory 的叙事锚点
+- `narrative_arc`：决定 Theory 的 rising action 强度
+- `protagonist_construct` / `supporting_constructs`：作为角色定位初始值
+
+### Central Knot 推断规则（当上游未提供时）
+
+从 Theory 文本自身推断核心冲突：
+- Incommensurability → "对立理论或证据之间的矛盾冲突"
+- Inadequacy → "现有解释存在盲区或基于错误假设"
+- Incompleteness → "遗漏了关键维度、机制或时点"
+- 具体推断：从 T3 Mechanism Chain 的转折信号词或 T2 Theoretical Lens 的框架对立中提取
+
+### Phase 0.5 诊断流程
+
+按顺序检查以下叙事对齐项：
+
+1. **Knot 继承检查**
+   - Theory P1（T1/T2）是否明确或暗示地承接了 Introduction 的 central knot？
+   - 标志："To resolve the paradox that [knot]..." / "To explain why [knot]..."
+   - 如无 explicit 承接，检查是否 implicit 通过 Gap 文献的延续来承接
+
+2. **Rising Action 强度检查**
+   - 对比 Introduction 的 `narrative_arc` 与 Theory 的 rising action 强度
+   - Theory 的 rising action 应 ≥ Introduction 的 closing energy，为 Results climax 蓄力
+   - 检测：T1-T2 能量级是否低于 Introduction P7-P8 → 标记"叙事阶段倒退"
+
+3. **Characters 一致性检查**
+   - Theory 中的主角/配角是否与 Introduction 承诺的一致？
+   - Introduction 承诺了 mediator M，但 Theory T1 未定义 M → 标记"角色缺失"
+   - Introduction 的 protagonist 在 Theory 中出场次数 < 3 → 标记"主角淡出"
+
+4. **Plot Emergence 检查**
+   - 情节是否从构念互动中自然浮现，而非强加？
+   - 检测：T3 的 why chain 是否从 T2 的理论框架自然推导而来？
+   - T3 引入了新理论视角但未在 T2 铺垫 → 标记"extraneous storyline"
+
+### 输出格式
+
+```yaml
+phase_0_5_rising_action:
+  central_knot_inherited: true/false
+  knot_inheritance_statement: "[Theory 中承接 knot 的具体句子]"
+  knot_inheritance_location: "T1/T2/P[段号]"
+  narrative_arc_continuity: "一致 / 增强 / 倒退"
+  protagonist_consistent: true/false
+  protagonist_presence_in_theory: "[N] 次提及"
+  supporting_construct_consistent: true/false
+  missing_promised_construct: "[如有，列出 Introduction 承诺但 Theory 未定义的构念]"
+  plot_emergence_natural: true/false
+  extraneous_storyline_risk: "[描述，如无则 null]"
+```
+
+---
+
+## Phase 0.75 — Prose Craft 定位（Pollock Ch03，v1.2.0 新增）
+
+Theory section 的 Rising Action 不仅需要功能推进，还需要 prose 层面的可读性。以下三个工具与 Phase 1-5 并行执行。
+
+### 1. Human Face in Theory
+
+| 检查点 | 通过标准 | 蒸馏记录 |
+|--------|---------|---------|
+| P1 Knot Inheritance | 用 1 句具体场景说明"这个问题在现实世界中长什么样" | 记录具体场景句 |
+| P2-P4 新构念首次出现 | 每个新构念首次出现时配 1 个具体例子 | 记录构念名+例子内容 |
+| P5-PN Why-chain 关键步骤 | 每个 why-chain 关键步骤可配 1 个微型场景（1-2句） | 记录微型场景句 |
+
+### 2. Showing vs Telling in Theory
+
+| 检查点 | 通过标准 | 蒸馏记录 |
+|--------|---------|---------|
+| Stroke 段落（70%） | 每个抽象因果步骤后，跟 1 句 concrete illustration | 记录 illustration 类型和频率 |
+| Glide 段落（30%） | 用比喻/类比解释抽象概念 | 记录比喻/类比句 |
+| 连续无 showing | 不允许连续 2 个 stroke 句子无 showing | 标记断裂位置 |
+
+### 3. Conversational Voice in Theory
+
+| 检查点 | 通过标准 | 蒸馏记录 |
+|--------|---------|---------|
+| P1 承接 | "To resolve the paradox that [knot], we argue that..." | 记录承接句式 |
+| 假设推导 | "We argue that..." / "We hypothesize that..." | 记录主动语态频率 |
+| T6 收束 | "In sum, we have argued that..." | 记录收束句式 |
+| 禁止被动 | 无 "It is argued that..." / "It is hypothesized that..." | 标记被动语态位置 |
+
+### Prose Craft 输出格式
+
+```yaml
+phase_0_75_prose_craft:
+  human_face:
+    p1_scene_present: true/false
+    p1_scene_text: "[具体场景句]"
+    construct_illustrations:
+      - construct: "[构念名]"
+        illustration: "[例子内容]"
+        location: "T[模块] P[段号]"
+    why_chain_scenes:
+      - step: "[机制步骤]"
+        scene: "[微型场景]"
+        location: "P[段号]"
+  showing_vs_telling:
+    stroke_paragraphs: N
+    glide_paragraphs: N
+    stroke_glide_ratio: "N:N"
+    illustration_types: ["案例", "数字", "场景", "具体研究"]
+    showing_gaps: ["[断裂位置描述]"]
+  conversational_voice:
+    active_voice_count: N
+    passive_voice_count: N
+    passive_voice_locations: ["P[段号]: [原句]"]
+    hypothesis_transition_phrases: ["Therefore, we hypothesize:", "Thus:"]
+    closure_phrase: "[T6 收束句]"
+```
+
+---
+
 ## Phase 1 — Theory 功能模块映射与粗粒度解构
 
 读取 Theory 全文，按**功能模块**（T1–T6）进行粗粒度标注。标注时只定位模块功能边界，不做深入分析。
@@ -239,9 +360,70 @@ phase_1_module_map:
     paragraph_range: "[第X段–第Y段]"
     summarizes_framework: true/false
     previews_empirical_strategy: true/false
+    # v1.2.0 新增：write-theory v3.1.0 T6 强制要求提取
+    knot_fully_tied: true/false  # 是否明确或暗示 "knot fully tied"
+    framework_locking: true/false  # 是否将分散假设整合为统一理论叙事
+    logic_explicit: true/false  # 是否用 1-2 句话说明 central knot 已被 fully tied
+    denouement_preview: true/false  # 是否预告 Results 将如何 unravel the knot
+    voice_check:  # T6 Voice 检查
+      uses_first_person_accountable: true/false  # "In sum, we have argued that..."
+      no_passive_voice: true/false
+      read_aloud_natural: true/false
+    institutional_shock_extra:  # 制度冲击类研究的额外检查（如适用）
+      previews_identification_strategy: true/false  # 是否预告 Results 将通过什么识别策略 unravel the knot
+      implies_theory_identification_link: true/false  # 是否暗示识别策略的理论基础已在 Theory 建立
+      survival_temporal_preview: true/false  # 如果使用生存分析：是否预告时间动态将是 Results 核心叙事
+    narrative_energy: "[高/中/低]"  # T6 结尾能量级应 ≥ Theory 最后假设推导段能量级
 actual_module_sequence: ["T1", "T2", "T3", "T4", "T5", "T6"]
 deviation_from_standard: "T2 在 T1 之前; T5 嵌入 T3 第2步"
 ```
+
+---
+
+## Phase 1.25 — 制度冲击类研究 Theory Lens 特殊适配提取（v1.2.0 新增）
+
+如果论文使用自然实验、制度冲击或准实验设计（IV, DiD, RDD, 生存分析），Theory 部分需要额外完成识别策略的理论论证。蒸馏时需提取以下内容：
+
+### 1. 制度冲击 Theory Lens 模板提取
+
+检查 T2/T3 是否包含以下三层论证：
+
+| 层级 | 论证内容 | 标志句 | 蒸馏记录 |
+|------|---------|--------|---------|
+| **第一层（外生性）** | 制度冲击为什么外生？对谁外生？ | "[policy] creates exogenous variation in [treatment] that is plausibly unrelated to [unobserved confounders]" | 记录外生性论证句 |
+| **第二层（机制）** | 制度变化如何通过理论机制影响行为？ | "[policy] alters [actor]'s incentives to [action] by [mechanism]" | 记录机制句 |
+| **第三层（识别基础）** | 为什么这个情境适合识别因果关系？ | "allowing us to isolate the causal effect of [treatment] on [outcome] from [alternative explanations]" | 记录识别基础句 |
+
+### 2. 识别策略的理论论证提取
+
+| 识别策略 | 必须在 Theory 中论证的内容 | 标志句模式 | 缺失风险 |
+|----------|------------------------|-----------|---------|
+| **IV** | 排除限制的理论基础；工具变量通过什么理论渠道影响处理变量 | "[Instrument] affects [treatment] through [channel] but does not directly influence [outcome] except via [treatment], because..." | Theory 与 Methods 脱节 |
+| **DiD** | 平行趋势的理论基础；处理效应异质性的理论预判 | "Absent the [policy], treated and control firms would have followed parallel trends because [theoretical reason]" | Methods 中跑 DiD 但 Theory 无平行趋势论证 |
+| **RDD** | 断点可比性的理论基础；断点两侧制度差异的理论含义 | "Firms just above and below the [threshold] are observationally similar in [key dimensions] because [theoretical reason]" | 断点选择缺乏理论依据 |
+| **生存分析 (Cox)** | 时间维度的理论意义；风险率vs二元结果的理论丰富性；比例风险假设的理论合理性 | "[treatment] alters the *rate* at which [actor] approaches the [decision threshold] because [theoretical reason]" | 时间仅作为控制变量而非理论维度 |
+
+### 3. 输出格式
+
+```yaml
+phase_1_25_institutional_shock:
+  design_type: "IV / DiD / RDD / 生存分析 / 无"
+  theory_lens_three_layers:
+    exogeneity: {present: true/false, text: "[论证句]", location: "P[段号]"}
+    mechanism: {present: true/false, text: "[论证句]", location: "P[段号]"}
+    identification_foundation: {present: true/false, text: "[论证句]", location: "P[段号]"}
+  identification_argument_in_theory:
+    iv_exclusion_restriction: {present: true/false, text: "[论证句]", location: "P[段号]"}
+    iv_first_stage_channel: {present: true/false, text: "[论证句]", location: "P[段号]"}
+    did_parallel_trends: {present: true/false, text: "[论证句]", location: "P[段号]"}
+    did_heterogeneity_theory: {present: true/false, text: "[论证句]", location: "P[段号]"}
+    rdd_comparability: {present: true/false, text: "[论证句]", location: "P[段号]"}
+    survival_temporal_dimension: {present: true/false, text: "[论证句]", location: "P[段号]"}
+    survival_hazard_richness: {present: true/false, text: "[论证句]", location: "P[段号]"}
+  theory_methods_gap: "[如果 Theory 未论证而 Methods 详细描述了识别策略，记录此处]"
+```
+
+**注意**：如果论文**不**使用制度冲击/自然实验设计，此 Phase 输出 `design_type: "无"`，其余字段省略。
 
 ---
 
@@ -378,6 +560,15 @@ phase_1_5_quality_gate:
     reverse_causality_considered: true/false
     alternative_explanation_excluded: true/false
     each_step_has_theory_basis: true/false
+  t6_closure_quality:  # v1.2.0 新增
+    t6_present: true/false
+    knot_fully_tied: true/false
+    framework_locking: true/false
+    logic_explicit: true/false
+    denouement_preview: true/false
+    voice_check_passed: true/false
+    narrative_energy_maintained: true/false  # T6 结尾能量级 ≥ 最后假设推导段
+    institutional_shock_extra_passed: true/false/null  # null 表示非制度冲击类研究
   construct_terminology:
     ambiguous_terms_found: ["capability"]
     term_conflicts: ["performance 在 T3 指财务绩效，在 T5 指创新绩效"]
@@ -414,7 +605,10 @@ phase_1_5_quality_gate:
 
 Theory 写作的核心单元不是模块，而是**段落内部的论证节奏**。借鉴 Results 的"四拍节奏"蒸馏逻辑（方向→显著性→幅度→支持判断），Theory 同样存在可量化的段落级论证节奏，但节奏形态因模块功能和构建类型而异。
 
-#### 核心节奏：T3/T4 Hypothesis Development 段落四拍
+#### 核心节奏：T3/T4 Hypothesis Development 段落四段式论证链（与 write-theory Phase 2.5 对齐）
+
+write-theory v3.1.0 将每个假设推导段落定义为**四段式论证链（4-Part Logic Chain）**：
+**Topic Sentence → Theoretical Reasoning → Literature Support → Hypothesis Transition**
 
 这是 Theory 蒸馏中**最重要的节奏目标**——每个假设推导段落应呈现统一的四拍论证节奏：
 
@@ -443,6 +637,25 @@ Theory 写作的核心单元不是模块，而是**段落内部的论证节奏**
   → 示例："Therefore, we hypothesize: Hypothesis 1: [X] is positively related to [M]."
   → 失败信号：Therefore 方向与机制推理方向矛盾 / 假设缺少方向或边界条件
 ```
+
+#### 四段式论证链各要素 QC 提取（v1.2.0 新增，与 write-theory Phase 2.5 对齐）
+
+对每个假设推导段落，提取以下 QC 指标：
+
+| 要素 | 提取问题 | 失败信号 | 记录格式 |
+|------|---------|---------|---------|
+| **Topic Sentence 精准度** | 是否同时包含话题+核心观点+限定范围？是否使用 active verb + concrete subject？段首句是否在 15 词内说出核心判断？ | 段首句只陈述事实/只定义变量/无主语被动语态（"It is argued that"） | `{topic_sentence_quality: "高/中/低", word_count_to_core_claim: N, has_active_verb: true/false, has_concrete_subject: true/false}` |
+| **Theoretical Reasoning 完整性** | 从 X 到 Y 的每一步因果推理是否明确写出？每步间是否有 explicit transition？ | 逻辑跳跃（省略关键步骤）；缺少 transition（从 A 直接跳到 C）；用 "obviously" 代替论证 | `{mechanism_steps_count: N, logical_jumps: ["从 X 到 M 缺少中间步骤"], transitions: ["Consequently", "Thus", "In turn"]}` |
+| **Literature Support 嵌入度** | 每个引用是否总结了 argument（非罗列名字）？是否链接到 concrete finding？ | Citation 堆砌但未与机制步骤一一对应；citation 替代机制推演 | `{citations_count: N, argument_summarized_count: N, concrete_finding_linked_count: N, citation_vs_mechanism_alignment: "高/中/低"}` |
+| **Hypothesis Transition 收敛质量** | 收束句是否总结了推理链而非简单重复 "we hypothesize"？ | 无理论收束直接 "we hypothesize"；Therefore 方向与机制矛盾 | `{has_theoretical_closure: true/false, transition_phrase: "Therefore/Thus/Accordingly", hypothesis_direction_matches_mechanism: true/false}` |
+| **Concrete Illustration（可选）** | 每个因果步骤后是否有 1 句 concrete illustration？ | 连续 2 个推理步骤无 illustration | `{illustration_count: N, illustration_types: ["案例", "场景", "比喻"], showing_gaps: ["步骤2无 illustration"]}` |
+| **识别策略嵌入**（制度冲击类） | Theory 中是否嵌入了对识别假设的理论论证？ | Methods 描述了识别策略但 Theory 完全未提及 | `{identification_strategy_in_theory: true/false, iv_exclusion_restriction: "...", did_parallel_trends: "...", location: "P[段号]"}` |
+
+**逻辑跳跃诊断**：逐句标记因果连接词（Consequently/Thus/Thereby/As a result/This leads to...）。缺少中间步骤 → 记录具体跳跃位置。
+
+**Topic Sentence 反模式示例提取**：
+- ❌ 被动语态例句："It is argued that CEO overconfidence affects firm risk." → 记录并标记为违反 Conversational Voice
+- ✅ 主动语态例句："We argue that CEO overconfidence increases firm risk-taking because overconfident leaders systematically underestimate downside uncertainty." → 记录为优质模板
 
 #### 段落论证节奏的构建类型变体
 
@@ -819,6 +1032,12 @@ phase_2_5_connector_distillation:
 | **拍间过渡完整性** | 有显式连接词的拍间过渡数 / 总拍间过渡数（每假设段落 3 个拍间过渡点） | ≥80% 为优秀，<50% 为"论证断裂" |
 | **模块过渡完整性** | 有显式连接词的模块过渡数 / 5 | 5/5 为优秀，<3/5 为"模块碎片化" |
 | **连接词-构建类型一致性** | 标志性连接词组合匹配度 | 高/中/低。低匹配 = 连接词使用模式与构建类型预期偏离 |
+| **T6 Closure 完整性**（v1.2.0 新增） | T6 是否完成三个理论任务（框架锁定/逻辑显性化/Denouement 预告） | 3/3 为优秀，2/3 为合格，<2/3 为薄弱 |
+| **T6 Voice 质量**（v1.2.0 新增） | T6 是否使用 accountable first-person（"we have argued"），无被动语态 | 通过/失败 |
+| **T6 叙事接力**（v1.2.0 新增） | T6 结尾能量级是否 ≥ 最后假设推导段 | 通过/倒退 |
+| **Human Face 覆盖率**（v1.2.0 新增） | 有具体 actor/场景/案例的模块数 / 总模块数 | Hook/新构念/why-chain 关键步骤 ≥1 个 illustration 为优秀 |
+| **主动语态比例**（v1.2.0 新增） | "We argue/hypothesize/predict" 次数 / 总主张句次数 | >=80% 为优秀；<50% 为机器声风险 |
+| **识别策略理论嵌入**（v1.2.0 新增，制度冲击类） | Theory 中嵌入识别假设论证的模块数 / 需要的模块数 | 3/3 为优秀（IV/DiD/RDD/生存各需特定论证） |
 
 ### Narrative Style Profile（叙事风格 DNA）
 
@@ -832,6 +1051,16 @@ phase_2_5_connector_distillation:
 | **Distinctive Features** | 该论文**特有**的理论叙事标记是什么？（如 paired concept contrasts / stepwise mechanism labels / explicit caveat embedding / rhetorical question architecture） | 列表，每项附原文例句 |
 | **Avoids** | 该论文**刻意回避**的写法是什么？（如 avoids black-box econometrics / avoids overclaiming causality / avoids bullet-point prose） | 列表，说明回避的修辞功能 |
 | **Quality Markers** | 为什么这个理论论证结构有效？最强/最弱的叙事技巧是什么？ | what_makes_effective / strongest_aspect / weakest_aspect |
+| **Prose Craft Profile**（v1.2.0 新增） | Human Face / Showing vs Telling / Conversational Voice 的具体策略 | 见下方 Prose Craft 子维度 |
+
+#### Prose Craft Profile 子维度（v1.2.0 新增）
+
+| 子维度 | 提炼问题 | 输出格式 |
+|--------|----------|----------|
+| **Human Face 策略** | 论文如何在 T1 构念定义/T3 机制推演中嵌入具体场景？用公司名、人名还是行业实例？ | actor 类型分布 + 代表性例句 |
+| **Showing 策略** | 论文如何在抽象因果步骤后配 concrete illustration？用案例、数字、场景还是具体研究？ | illustration 类型分布 + 代表性例句 |
+| **Voice 策略** | 论文在假设推导中如何避免被动语态？使用哪些主动句式？T6 收束句式是什么？ | 主动句式模板 + 被动语态位置（如有） |
+| **Stroke/Glide 控制** | 机制推演段落中动作（stroke）与评论（glide）的比例？是否有 forced march 或 ponderous pace？ | stroke/glide 比例 + 风险段落标记 |
 
 **记录原则**：只记录该论文**明显区别于**同类构建类型其他范文的特征。通用特征（如"有 why chain"）不记入 Distinctive Features。
 
@@ -847,6 +1076,43 @@ phase_2_5_connector_distillation:
 - 段落数: [N]
 - 假设数: [N]
 - 与 write-theory 模板对齐度: [高/中/低]
+
+## Rising Action 定位（Pollock Ch02，v1.2.0 新增）
+
+**Central Knot 继承**: [true/false] — "[knot_inheritance_statement]"
+**叙事弧线连续性**: [一致/增强/倒退] — 与 Introduction narrative_arc 的对比
+**角色一致性**:
+- 主角: [protagonist_construct]（Theory 中出现 [N] 次）
+- 配角: [supporting_construct1], [supporting_construct2]
+- 缺失角色: [如有，列出 Introduction 承诺但 Theory 未定义的构念]
+**Plot Emergence**: [自然/有风险] — [extraneous_storyline_risk 或 null]
+
+## Prose Craft Profile（Pollock Ch03，v1.2.0 新增）
+
+**Human Face 策略**:
+- P1 场景: "[具体场景句]"
+- 构念 illustration: [构念名] → "[例子内容]"
+- Why-chain 微型场景: [步骤] → "[场景句]"
+
+**Showing vs Telling 策略**:
+- Stroke/Glide 比例: [N:N]
+- Illustration 类型分布: [案例/数字/场景/具体研究]
+- Showing 断裂点: [如有]
+
+**Conversational Voice 策略**:
+- 主动语态频率: [N] 次
+- 被动语态位置: [P[段号]: "[原句]"]
+- T6 收束句式: "[closure_phrase]"
+
+## 制度冲击特殊适配（v1.2.0 新增，如适用）
+
+**设计类型**: [IV / DiD / RDD / 生存分析 / 无]
+**三层论证覆盖**:
+- 外生性: [✓/✗] — "[论证句]"
+- 机制: [✓/✗] — "[论证句]"
+- 识别基础: [✓/✗] — "[论证句]"
+**识别策略理论嵌入**: [IV排除限制/DiD平行趋势/RDD可比性/生存时间维度] — [✓/✗]
+**Theory-Methods 识别链接**: [无缝/脱节]
 
 ## Module Coverage (T1–T6)
 [Phase 1.5 输出]
@@ -896,6 +1162,12 @@ phase_2_5_connector_distillation:
 - strongest_aspect: [最值得模仿的1-2个技巧]
 - weakest_aspect: [已知风险/审稿人可能攻击的理论薄弱点]
 
+**Prose Craft 子维度**（v1.2.0 新增）:
+- **Human Face 策略**: [actor 类型分布 + 代表性例句]
+- **Showing 策略**: [illustration 类型分布 + 代表性例句]
+- **Voice 策略**: [主动句式模板 + 被动语态位置]
+- **Stroke/Glide 控制**: [比例 + 风险段落标记]
+
 ## Non-Transferable Facts
 [仅适用于该论文的特定构念、理论视角、机制内容，不可迁移]
 
@@ -944,6 +1216,28 @@ phase_4_batch_analysis:
   rejected_patterns:
     - "'Based on prior research, we hypothesize...' 无 why chain (3 篇)"
     - "T3 只有 citation list 无机制推演 (2 篇)"
+```
+
+### 跨 Section 对齐检查（Phase 4 正式化，v1.2.0 新增）
+
+与 write-theory Phase 4 对齐，执行 Introduction ↔ Theory 的强制对齐检查：
+
+```markdown
+### 跨 Section 对齐检查
+
+| 维度 | 检查项 | Introduction 信号 | Theory 状态 | 结论 |
+|------|--------|-------------------|-------------|------|
+| Gap→Type | 能量匹配 | [Gap类型] + [Tension] | [构建类型] | ✅/⚠️/❌ |
+| Makadok→Module | 贡献兑现 | [Makadok维度] | [模块覆盖] | ✅/⚠️/❌ |
+| Preview→H | 假设数 | "[N] hypotheses" | [实际N个] | ✅/⚠️/❌ |
+| Lens→Lens | 理论一致性 | "[theory]" | "[theory]" | ✅/❌ |
+| Knot→T1/T2 | Knot 继承 | [central_knot_statement] | [knot_inheritance_statement] | ✅/⚠️/❌ |
+| Characters→T1 | 角色一致性 | [protagonist] + [supporting] | [Theory 中出场次数] | ✅/⚠️/❌ |
+| T6→Results | Denouement 预告 | [T6 预告内容] | [Results 发现方向] | ✅/⚠️/❌ |
+
+**必须修复的不一致**（如为单篇蒸馏，记录为模仿风险提示）：
+- [ ] [具体不一致项1]
+- [ ] [具体不一致项2]
 ```
 
 ### 语料库沉淀建议格式
@@ -1041,6 +1335,7 @@ phase_4_corpus_reference:
 
 ### QC Checklist
 
+#### 功能层 QC（原有）
 - [ ] **Completeness**: 所有强制模块（根据构建类型）已被覆盖
 - [ ] **Clarity**: 每个骨架都有明确的 [占位符] 和适用构建类型标注
 - [ ] **Credibility**: 未将单篇论文的特殊机制泛化为通用规则
@@ -1051,6 +1346,30 @@ phase_4_corpus_reference:
 - [ ] **Dorobantu Coverage**: 核心问题链（WHAT/HOW/WHY/Theory Lens）都有对应模块
 - [ ] **Why-Chain Audit**: T3 骨架中包含明确的机制步骤，无"常识跳跃"
 - [ ] **Hypothesis Form Audit**: T4 骨架中假设方向、条件、IV/DV 明确
+
+#### T6 Closure QC（v1.2.0 新增，write-theory v3.1.0 强制要求）
+- [ ] **T6 存在性**: 所有构建类型都包含 T6 段落（或 Discussion 开篇补回）
+- [ ] **Knot Fully Tied**: T6 明确或暗示 "knot fully tied"（"we have argued that..."）
+- [ ] **Framework Locking**: T6 将分散假设整合为统一理论叙事
+- [ ] **Denouement 预告**: T6 预告 Results 将如何 unravel the knot
+- [ ] **T6 Voice**: "In sum, we have argued that..."（第一人称主动语态，无被动）
+- [ ] **叙事接力**: T6 结尾能量级 ≥ Theory 最后假设推导段能量级
+
+#### Prose Craft QC（v1.2.0 新增）
+- [ ] **Human Face in Theory**: P1 有具体场景说明 knot 在现实世界的样子？
+- [ ] **Construct Illustration**: 每个新构念首次出现配 1 个 concrete illustration？
+- [ ] **Why-chain Scenes**: 关键步骤可配微型场景（1-2句）？
+- [ ] **Stroke/Glide 比例**: 机制推演段落 70% stroke / 30% glide？
+- [ ] **Conversational Voice**: P1 用 "To resolve the paradox..."; 假设推导用 "We argue that..."; T6 用 "In sum, we have argued that..."
+- [ ] **无被动语态**: 无 "It is argued that..." / "It is hypothesized that..." / "The literature suggests that..."
+- [ ] **无 Inflated Symbolism**: 无 "paradigm shift" / "fundamentally transforms"
+
+#### 识别策略 QC（v1.2.0 新增，制度冲击类研究）
+- [ ] **IV 研究**: Theory 是否论证了排除限制的理论基础？是否说明了工具变量通过什么理论渠道影响处理变量？
+- [ ] **DiD 研究**: Theory 是否论证了平行趋势的理论基础？是否预判了处理效应异质性来源？
+- [ ] **RDD 研究**: Theory 是否论证了断点可比性？是否说明了断点两侧制度差异的理论含义？
+- [ ] **生存分析**: Theory 是否解释了时间维度的理论意义？是否论证了比例风险假设的理论合理性？
+- [ ] **Theory-Methods 识别链接**: 如果 Methods 描述了识别策略但 Theory 完全未提及 → ⚠️ 标记
 
 ### 最终输出物清单
 
@@ -1078,6 +1397,14 @@ phase_4_corpus_reference:
 | Phase 2 (T1 提炼) | 构念定义模糊 | "organizational capability" 未界定类型 | 模仿后审稿人问 "what kind of capability?" | 增加 scope condition 或具体化构念 |
 | Phase 2.4 (骨架批评) | 机制内容污染 | 骨架中包含 "performative tension" 等具体机制 | 模仿后变成复制特定论文的机制 | 泛化为 [theoretical mechanism]，只模仿组织方式 |
 | Phase 1.5 (对齐检查) | T4→Methods 断裂 | T4 提出三向交互但 Methods 未报告交互项 | 模仿后假设与操作化脱节 | 确保 Methods 中的变量操作化与 Theory 假设严格对齐 |
+| Phase 1.5 (T6 检查) | T6 Closure 缺失 | 论文无 T6 段落，直接结束于最后假设 | 模仿后理论框架碎片化，Discussion 无处锚定 | 必须添加 T6：总结框架+预告实证+收束 knot |
+| Phase 1.5 (T6 检查) | T6 能量骤降 | T6 用 "In conclusion, we tested..." 纯方法总结 | 破坏 Rising Action 连续性，读者失去兴趣 | T6 用 "In sum, we have argued that..." 保持理论能量 |
+| Phase 0.75 (Prose QC) | 无人脸 Theory | T1 定义只有抽象描述，无 "A promotion-focused CEO, for example..." | 模仿后读者难以将抽象构念与经验世界连接 | 每个新构念首次出现配 1 个具体例子 |
+| Phase 0.75 (Prose QC) | 机器声 Theory | 假设推导用 "It is hypothesized that..." | 模仿后像模板生成而非研究者判断 | 改用 "We hypothesize that..." |
+| Phase 1.25 (制度冲击) | 识别策略与理论脱节 | Methods 详细描述 IV/DiD/RDD 但 Theory 完全未论证 | 模仿后审稿人质疑"为什么这个识别策略在理论上是合理的？" | Theory 中必须嵌入识别假设的理论论证 |
+| Phase 2.5 (四段式 QC) | Topic Sentence 埋藏核心判断 | 段首句用 "Drawing on institutional theory..." 无方向性预测 | 读者读完整段才知道论点 | 段首句必须在 15 词内说出核心判断：主语+主动动词+方向 |
+| Phase 2.5 (四段式 QC) | 无收敛信号 | 假设前无 Therefore/Thus/Accordingly | 假设像从天而降，非从机制推导 | 每个假设前必须有因果连接词收敛 |
+| Phase 2.5 (四段式 QC) | Citation 替代机制 | T3 只有 "Smith (2010) argues... Jones (2012) found..." | 模仿后变成文献综述而非理论推演 | 每个引用必须总结 argument 并链接到机制步骤 |
 ```
 
 **记录原则**：
@@ -1127,10 +1454,10 @@ Theory & Hypotheses 写作质量检查请使用 `/theory-review`——它覆盖�
 
 ## 与下游 Skill 的接口
 
-- **`write-theory`** — Phase 4 的更新建议可直接沉淀到 write-theory 的模块库和骨架库；Phase 2.5 连接词统计可反向更新 write-theory 的连接词分类库和段落收束模板
-- **`theory-review`** — Phase 1.5 的模块覆盖检查和 Theory Logic Map 可作为 theory-review 的审查基准
-- **`paper-review`** — Theory Logic Map 可用于跨 section 对齐检查（Theory 承诺 vs Results 兑现）
-- **`write-introduction`** — T2 Theoretical Lens 和 T6 Closure 的提炼可用于优化 Introduction 的 P5 Preview 和 P7 Contribution
+- **`write-theory`** — Phase 4 的更新建议可直接沉淀到 write-theory 的模块库和骨架库；Phase 2.5 连接词统计可反向更新 write-theory 的连接词分类库和段落收束模板。Phase 0.5 Rising Action 数据和 Phase 0.75 Prose Craft 数据可为 write-theory 的叙事对齐检查和 Prose Craft 定位提供输入
+- **`theory-review`** — Phase 1.5 的模块覆盖检查和 Theory Logic Map 可作为 theory-review 的审查基准；Phase 1.25 的制度冲击适配检查可为理论审查提供识别策略论证依据
+- **`paper-review`** — Theory Logic Map 可用于跨 section 对齐检查（Theory 承诺 vs Results 兑现）；Phase 4 的跨 Section 对齐表可直接用于 paper-review 的全稿对齐检查
+- **`write-introduction`** — T2 Theoretical Lens 和 T6 Closure 的提炼可用于优化 Introduction 的 P5 Preview 和 P7 Contribution；Phase 0.5 的 knot 继承检查可为 Introduction→Theory 叙事接力提供验证
 - **Vault** — Fine-Grained Profile 存入 Vault 的 `fine_grained/batch_*/[paper]_distilled_theory.md`
 
 ## 外部资产位置
@@ -1145,4 +1472,4 @@ Theory & Hypotheses 写作质量检查请使用 `/theory-review`——它覆盖�
 如需机器消费格式，参考 Vault 中已蒸馏的 `fine_grained/` 目录下的实际报告文件——其结构和字段集比抽象 schema 更准确地反映真实输出。
 
 ---
-*基于 nuwa-skill 流水线框架、Pollock 2025 Ch06、Dorobantu et al. (2024)、Shepherd & Wiklund (2020) 叙事规则、MVP30 范文语料库构建。版本 1.0.0 — Theory 蒸馏 Meta-Skill。*
+*基于 nuwa-skill 流水线框架、Pollock 2025 Ch02-Ch06、Dorobantu et al. (2024)、Shepherd & Wiklund (2020) 叙事规则、MVP30 范文语料库构建。版本 1.2.0 — Theory 蒸馏 Meta-Skill（同步 write-theory v3.1.0）。*
