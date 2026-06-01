@@ -1,0 +1,31 @@
+{
+  "vault_root": "D:/Onedrive/Obsidian Vault",
+  "default_notes_dir": "literature",
+  "notes_dir_candidates": [
+    "literature",
+    "literature_notes",
+    "papers",
+    "reading"
+  ],
+  "zotero_db": "C:/Users/admin/Zotero/zotero.sqlite",
+  "zotero_storage": "C:/Users/admin/Zotero/storage",
+  "default_tags": [
+    "literature-note",
+    "paper"
+  ],
+  "note_language": "zh-en",
+  "default_reading_mode": "researcher",
+  "default_reading_stage": "purposeful",
+  "backup_on_overwrite": true,
+  "note_logging": {
+    "enabled": true,
+    "memory_log": "memory/notes_log.md"
+  },
+  "pdf_extraction": {
+    "min_content_length": 200,
+    "primary_engine": "opendataloader-pdf",
+    "hybrid_engine": "opendataloader-pdf --hybrid docling-fast --hybrid-mode full",
+    "fallback_engine": "markitdown",
+    "respect_non_ascii_windows_fallback": true
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Literature Notes for Obsidian"
+  short_description: "Read papers into reusable Obsidian notes in researcher or writer mode."
+  default_prompt: "Use $literature-notes-obsidian to read this paper into an Obsidian literature note, or deconstruct how it is written."
