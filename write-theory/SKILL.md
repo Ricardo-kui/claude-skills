@@ -6,7 +6,7 @@ description: |
   协议层：诊断、路由、QC、跨 Section 对齐。
   语料层：corpus/ 目录下各变体语料文件（段落骨架、句式模板、假设格式、QC检查点）。
   触发词：「写theory」「写理论」「theory template」「理论部分」「hypothesis写作」「调节效应假设」「跨层调节」「构念界定」「机制推演」「why chain」。
-version: 3.1.0
+version: 3.1.1
 ---
 
 # Role
@@ -109,6 +109,26 @@ Theory & Hypotheses 在整篇论文的 Five-Act 结构中属于 **Rising Action*
 - 具体推断：从 Tension 模板的 `[gap statement]` 句法签名中提取核心冲突，或从用户提供的 Gap 描述中识别转折信号词（"However"/"Yet"/"Although"/"In contrast"）后的核心主张
 
 推断出的 Central Knot 仅用于 Phase 0.5 的叙事对齐检查，不阻塞后续阶段。
+
+---
+
+**制度冲击检测**（自动判断，无需用户输入）：
+
+在 Phase 0.5 诊断之前，自动检测是否需要激活 Phase 1.5（制度冲击类研究的 Theory Lens 特殊适配）：
+
+```
+检查以下信号（任一满足即激活 Phase 1.5）：
+├── 上游 `theory_hints` 中的 `identification` 字段包含 IV / DiD / RDD / natural experiment / quasi-experiment
+├── 上游 `theory_hints` 中的 `empirical_setting` 描述涉及政策变化、法律冲击、制度差异、州级差异
+├── 用户输入的研究描述中出现：staggered adoption / policy shock / regulatory change / law change / institutional reform / eligibility threshold
+└── 以上均不满足 → 跳过 Phase 1.5，按标准 Theory Lens 流程执行
+```
+
+**检测输出**：
+- 如果激活 Phase 1.5 → 在输出结构中插入 Phase 1.5 块，并标记"制度冲击适配已激活"
+- 如果跳过 → 不输出 Phase 1.5 相关内容，保持流程简洁
+
+---
 
 **Phase 0.5 诊断流程**（默认执行）：
 

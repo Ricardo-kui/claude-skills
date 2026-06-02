@@ -3,7 +3,7 @@ name: write-introduction
 description: |
   Introduction 写作顾问。基于 Gap 类型和 Makadok 贡献维度，推荐段落结构、Hook/Tension/Stakes 句式骨架，并提供来自顶刊范文的句法模板和反模式提醒。
   触发词：「写introduction」「intro模板」「引言怎么写」「帮我写intro」「introduction skeleton」「写引言」「hook怎么写」「gap怎么写」「贡献声明」「problematization」。
-version: 3.4.0
+version: 3.4.1
 ---
 
 # Role
@@ -66,15 +66,6 @@ version: 3.4.0
 - P1 Hook 必须包含 >=1 个具体 actor（人名、公司名、机构名）
 - 如果用户选择的 Hook 类型天然包含 actor（`10-immersive-narrative`、`02-epigraph-quote-pivot`）→ 正常执行
 - 如果用户选择 `03-data-shock` 或 `05-literature-consensus-blindspot` → **追加要求**：在数据/共识后补充 1 个具体案例
-
-**槽位增强**（在"Hook 槽位"表格中增加一列）：
-
-| 槽位 | 填充什么 | Human Face 要求 | 常见陷阱 |
-|------|---------|----------------|---------|
-| `[dominant finding / consensus]` | ... | 引用具体论文时，优先用作者名而非 "many scholars" | 稻草人 |
-| `[anomaly / counter-evidence]` | ... | **必须包含具体案例或数字** | 用 "some studies found" 代替事实 |
-| `[context 1/2/3]` | ... | 每个 context 优先用具体研究（作者+年份+情境） | 同质化 |
-| `[quantification]` | ... | 精确数字 + 来源 + 年份 | 数字无来源 |
 
 ## 2. Showing vs Telling 嵌入规则
 
@@ -162,7 +153,7 @@ version: 3.4.0
 
 | 槽位 | 填充什么 | 如何选择 | 常见陷阱 | 参见语料库 | Vault 填充来源（个人工具箱） |
 |------|---------|---------|---------|----------|----------------------|
- | `[quantified cost / scale]` | 如果 Gap 有经济/实践后果，给出数字 | 用政府统计、行业报告、上市公司数据。如果不能量化 → 使用具体案例的成本作为 proxy（"Toyota was fined $17.35 million for delaying a recall"） | 无数字的 Stakes 段 → 退回 generic。**修正**：如果不能量化，改用 narrative Stakes（haunschild2015 的 14 条人命）或 theoretical Stakes（"without this mechanism, X theory makes systematically wrong predictions in Y condition"） | `stakes/01-general-theory-practice-stakes.md` | 查找您 Vault 中已整理的：**数据笔记**（前因/后果/驱动）、**政府统计/SEC filing/行业报告摘录**、**Evidence Audit 中的量化证据** |
+| `[quantified cost / scale]` | 如果 Gap 有经济/实践后果，给出数字 | 用政府统计、行业报告、上市公司数据。如果不能量化 → 使用具体案例的成本作为 proxy（"Toyota was fined $17.35 million for delaying a recall"） | 无数字的 Stakes 段 → 退回 generic。**修正**：如果不能量化，改用 narrative Stakes（haunschild2015 的 14 条人命）或 theoretical Stakes（"without this mechanism, X theory makes systematically wrong predictions in Y condition"） | `stakes/01-general-theory-practice-stakes.md` | 查找您 Vault 中已整理的：**数据笔记**（前因/后果/驱动）、**政府统计/SEC filing/行业报告摘录**、**Evidence Audit 中的量化证据** |
 | `[who suffers]` | 明确谁承担后果 | 具体到某类 stakeholder——不要 "firms" 或 "managers"，要 "pharmaceutical firms with FDA-approved drugs" 或 "supply chain managers in high-velocity industries" | 过于宽泛：用 "organizations""managers" 代替具体群体。**修正**：把受众收窄到能从你的研究发现中直接受益/受损的群体 | — | 查找您 Vault 中已整理的：**利益相关者分析**、**项目 Context Packet 的实践含义部分**、**后果/外溢分析中的受损方记录** |
 | `[theoretical cost]` | 不解决 GAP 的理论代价 | 用 1 句话： "Without understanding [mechanism], [dominant theory] cannot explain [observed puzzle]." 每个词都有功能 | 空洞：用 "limits theoretical development" 代替具体代价。**修正**：参照 pontikes2012——不解决受众区分，category 文献将持续做出矛盾预测 | `stakes/01-general-theory-practice-stakes.md` | 查找您 Vault 中已整理的：**理论边界与盲区分析**、**构念 scope conditions 和 prediction 记录**、**项目 Context Packet 中的理论贡献论证** |
 
