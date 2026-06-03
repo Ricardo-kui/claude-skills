@@ -8,7 +8,7 @@
 
 | 文件 | 核心特征 |
 |------|---------|
-| `01-despite-progress-unaddressed.md` | 已有进展，但遗漏了关键变量/机制 |
+| `01-despite-progress-unaddressed.md` | 已有进展，但遗漏了关键变量/机制（含变体P：双重证据缺口型 habel2016 — 学术文献缺失+practitioner引语双重支撑） |
 | `08-cost-vs-benefit.md` | 成本收益权衡中的文献空白 |
 | `12-forward-vs-backward-looking.md` | 前瞻 vs 后视视角的文献空白 |
 | `cross-domain-migration.md` | 将外部领域文献迁移到目标领域的张力 |
