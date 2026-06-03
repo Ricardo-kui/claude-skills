@@ -52,4 +52,4 @@ updated: 2026-06-03
 > **高频可选 (2-3/5)**: AFT 交互效应五拍、叙事型稳健性检验、Event Study→CAR 第二阶段
 > **单篇高价值 (1/5)**: Shape parameter 前置、分组检验+小样本诚实、Table 9 矩阵、Quartile penalty、MCMC mediation、竞争假设报告、model-free 预览、IV 诊断嵌入
 >
-> **总变体数**: 16 (分布于 4 个结果类型文件)
+> **总变体数**: 17 (分布于 5 个结果类型文件)
