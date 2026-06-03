@@ -2,9 +2,9 @@
 corpus: write-results
 description: Results 填空骨架变体库，按结果类型组织。由 distill-results-exemplar 手动写入验证通过的变体。
 organization: by_result_type
-result_types_count: 15
+result_types_count: 16
 created: 2026-05-18
-updated: 2026-05-20
+updated: 2026-06-03
 ---
 
 # Results Academic Writing Corpus
