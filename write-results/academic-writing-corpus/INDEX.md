@@ -4,7 +4,7 @@ description: Results 填空骨架变体库，按结果类型组织。由 distill
 organization: by_result_type
 result_types_count: 16
 created: 2026-05-18
-updated: 2026-06-03
+updated: 2026-06-16
 ---
 
 # Results Academic Writing Corpus
