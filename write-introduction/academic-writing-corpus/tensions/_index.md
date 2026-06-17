@@ -19,7 +19,7 @@
 
 | 文件 | 核心特征 |
 |------|---------|
-| `02-implicit-assumption-wrong.md` | 隐性假设错误 |
+| `02-implicit-assumption-wrong.md` | 隐性假设错误（含变体D：挑战机械因果链前提型 zhao_ding2022 OS） |
 | `03-structural-blindspot.md` | 结构性盲点 |
 | `05-construct-confusion.md` | 构念混淆 |
 | `11-overlooked-alternative.md` | 被忽视的替代解释 |
