@@ -377,7 +377,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     02-implicit-assumption-wrong:
-      paper_count: 12
+      paper_count: 13
       papers:
       - ceo_regulatory_focus_ijrm (IJRM)
       - employee_free_speech (OS)
