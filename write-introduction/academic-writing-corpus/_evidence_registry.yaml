@@ -527,11 +527,10 @@ evidence:
         reject: 0
         common_revise_reasons: []
     10-constraint-vs-freedom:
-      paper_count: 1
-      papers:
-      - zhao_ding2022 (OS)
+      paper_count: 0
+      papers: []
       gap_distribution:
-        Incompleteness: 1
+        Incompleteness: 0
         Inadequacy: 0
         Incommensurability: 0
       status: EMERGING
