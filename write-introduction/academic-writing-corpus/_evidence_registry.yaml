@@ -548,8 +548,8 @@ evidence:
       papers:
       - zhao_ding2022 (OS)
       gap_distribution:
-        Incompleteness: 1
-        Inadequacy: 0
+        Incompleteness: 0
+        Inadequacy: 1
         Incommensurability: 0
       status: EMERGING
       generativity: ADAPTABLE
