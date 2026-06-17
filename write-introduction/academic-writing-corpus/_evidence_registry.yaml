@@ -1,8 +1,9 @@
 meta:
-  last_updated: '2026-05-24'
+  last_updated: '2026-06-17'
   total_mvp30_papers_indexed: 37
   batches_processed: 6
   source: mvp30_index + 9_distill_files + path_B_confirmation
+  notes: '2026-06-17 reclassified zhao_ding2022 (OS): Incompleteness/data-shock -> Inadequacy/dual-industry-trend-hook/implicit-assumption-wrong-variantD. Removed paper from 03-data-shock (8->7), 01-despite-progress-unaddressed (18->17), 10-constraint-vs-freedom (1->0); retagged 11-overlooked-alternative gap Incompleteness->Inadequacy; added to new 21-dual-industry-trend hook + 02-implicit-assumption-wrong (12->13). Driven by P35 challenges-an-implicit-premise language; P23 is trend+dual-industry cases, not data-shock.'
 evidence:
   hooks:
     01-cross-disciplinary-analogy:
