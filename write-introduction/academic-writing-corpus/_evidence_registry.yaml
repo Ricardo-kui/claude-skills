@@ -323,7 +323,7 @@ evidence:
         common_revise_reasons: []
   tensions:
     01-despite-progress-unaddressed:
-      paper_count: 18
+      paper_count: 17
       papers:
       - darby2024 (MSOM)
       - darby2025 (JSCM)
