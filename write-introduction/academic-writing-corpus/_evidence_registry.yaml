@@ -52,7 +52,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     03-data-shock:
-      paper_count: 8
+      paper_count: 7
       papers:
       - darby2024 (MSOM)
       - darby2025 (JSCM)
@@ -61,9 +61,8 @@ evidence:
       - shi2021 (JMR)
       - vadakkepatt2022 (JM)
       - wu2025 (SMJ)
-      - zhao_ding2022 (OS)
       gap_distribution:
-        Incompleteness: 8
+        Incompleteness: 7
         Inadequacy: 0
         Incommensurability: 0
       status: ROBUST
