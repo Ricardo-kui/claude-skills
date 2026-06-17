@@ -342,9 +342,8 @@ evidence:
       - vadakkepatt2022 (JM)
       - wowak2025 (MS)
       - wu2025 (SMJ)
-      - zhao_ding2022 (OS)
       gap_distribution:
-        Incompleteness: 18
+        Incompleteness: 17
         Inadequacy: 0
         Incommensurability: 0
       status: ROBUST
