@@ -391,9 +391,10 @@ evidence:
       - shen2022 (JOM)
       - shipilov2020 (SMJ)
       - singh2023 (JMR)
+      - zhao_ding2022 (OS)
       gap_distribution:
         Incompleteness: 0
-        Inadequacy: 12
+        Inadequacy: 13
         Incommensurability: 0
       status: ROBUST
       generativity: GENERATIVE
