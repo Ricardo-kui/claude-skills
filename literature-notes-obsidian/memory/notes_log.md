@@ -50,3 +50,29 @@ When creating a new note, check this file first for likely duplicates and relate
 - note: Gamache et al. (2015) — Motivated to Acquire [CORE].md
 - path: D:/Onedrive/Obsidian Vault/literature/Gamache et al. (2015) — Motivated to Acquire [CORE].md
 - created: 2026-06-01
+
+## kalaignanam2017
+
+- citekey: kalaignanam2017
+- title: The Differential Impact of New Product Development "Make/Buy" Choices on Immediate and Future Product Quality: Insights from the Automobile Industry
+- authors: Kartik Kalaignanam; Tarun Kushwaha; Tracey A. Swartz
+- year: 2017
+- journal: Journal of Marketing
+- tags: NPD, make-buy, outsourcing, product-quality, automotive, transaction-cost-economics, organizational-learning, boundary-conditions, Heckman-two-stage, moderating-effects, product-recall, supply-chain, recall-antecedent
+- projects: ceo-paranoia-recall, ceo-regulatory-focus-recall, anti-slapp-recall
+- note: Kalaignanam et al. (2017) — Differential Impact of NPD MakeBuy Choices.md
+- path: D:/Onedrive/Obsidian Vault/literature/Kalaignanam et al. (2017) — Differential Impact of NPD MakeBuy Choices.md
+- created: 2026-06-02
+- updated: 2026-06-02
+
+## ParuchuriAndrusSullivan2026CEORFInterpretiveFrame
+
+- citekey: ParuchuriAndrusSullivan2026CEORFInterpretiveFrame
+- title: CEO Regulatory Focus as an Interpretive Frame: An Empirical Examination of Investor Perceptions in the Context of Earnings Deviations
+- authors: Srikanth Paruchuri; Joel L. Andrus; David W. Sullivan
+- year: 2026
+- journal: Academy of Management Journal
+- tags: CORE, regulatory-focus, upper-echelons, investor-reactions, earnings-deviations, interpretive-frame, language-as-signal, multimethod, experiment, archival, text-analysis, LIWC
+- note: Paruchuri et al. (2026) — CEO Regulatory Focus as an Interpretive Frame [CORE].md
+- path: D:/Onedrive/Obsidian Vault/literature/Paruchuri et al. (2026) — CEO Regulatory Focus as an Interpretive Frame [CORE].md
+- created: 2026-06-01

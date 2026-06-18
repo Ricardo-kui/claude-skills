@@ -2,8 +2,9 @@
 name: write-introduction
 description: |
   Introduction 写作顾问。基于 Gap 类型和 Makadok 贡献维度，推荐段落结构、Hook/Tension/Stakes 句式骨架，并提供来自顶刊范文的句法模板和反模式提醒。
-  触发词：「写introduction」「intro模板」「引言怎么写」「帮我写intro」「introduction skeleton」「写引言」「hook怎么写」「gap怎么写」「贡献声明」「problematization」。
-version: 3.4.1
+  新增理论透镜驱动预览变体（Pontikes 2012 双受众模式）。
+  触发词：「写introduction」「intro模板」「引言怎么写」「帮我写intro」「introduction skeleton」「写引言」「hook怎么写」「gap怎么写」「贡献声明」「problematization」「双受众预览」「理论透镜预览」。
+version: 3.4.2
 ---
 
 # Role
@@ -480,7 +481,7 @@ theory_hints:
 | Tensions | 13 | despite-progress-unaddressed, implicit-assumption-wrong, structural-blindspot, reality-contradicts-consensus, construct-confusion, theoretical-imbalance, same-policy-opposite-effects, cost-vs-benefit, resource-acquisition-vs-utilization, constraint-vs-freedom, overlooked-alternative, forward-vs-backward-looking, sequential-phenomenon-gap |
 | Stakes | 6 | general-theory-practice, quantified-economic-loss, disciplinary-gap-stakes, public-health-safety, firm-value-stock-market, reputation-legitimacy-crisis |
 | Literature Turns | 3 | Progressive Coherence, Synthesized Coherence, Non-Coherence |
-| Previews | 4 | mechanism-preview, findings-preview, robustness-preview, dv-methodology-defense |
+| Previews | 5 | mechanism-preview, findings-preview, robustness-preview, dv-methodology-defense, theory-lens-driven-preview |
 | Contributions | 1 | Makadok 8维度 + 7种贡献句法变体 |
 | Transitions | 13 | hook-to-literature, actor-funnel, unified-moderator-framework, field-migration, extend-key-study, data-barrier-justification, construct-migration, case-to-field-generalization, micro-macro-complement, literature-to-gap, roadmap, setting-justification, gap-to-contribution |
 | Theory Lens | 2 | maxim-contrast, context-bridging |

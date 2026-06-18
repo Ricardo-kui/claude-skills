@@ -10,7 +10,9 @@ exclusivity: MEDIUM
 source_papers:
   - ceo_regulatory_focus_ijrm (IJRM, 2021): "In recent years, there have been considerable practitioner interests in..."
   - desjardine2023 (OS, 2023): "Although [phenomenon] may seem advantageous... it has created a new challenge"
+  - kalaignanam2017 (JM, 2017): "NPD outsourcing trend + Toyota/Boeing cases → mixed evidence about quality impact"
 created: 2026-05-18
+updated: 2026-06-02
 source: Extracted from MVP30 narrative_analysis files
 ---
 
@@ -75,6 +77,27 @@ source: Extracted from MVP30 narrative_analysis files
 - "Although... may seem advantageous, it has created a new challenge" → 表面好处→深层困境
 - 指出已有工具（diversification, divestment）无法解决
 - "the question arises:" → 从业者困境自然引出研究问题
+
+---
+
+### 变体 C：行业趋势+多案例型（kalaignanam2017 型）
+
+**模板**:
+> "[Phenomenon] has gathered momentum in multiple industries, such as [industry 1], [industry 2], and [industry 3]. Although [routine practice] has existed for a long time, [new phenomenon] is a relatively new phenomenon. A recurring theme in the business press is that [negative outcome] observed in the marketplace are a result of firms' increased penchant for [practice]. Following [Firm A]'s high-profile [event] in [year], concerns emerged that [practice] may be responsible for [problem]. [Authority] notes, '[quote about shift from in-house to outsourced].' Similarly, [Firm B]'s [problem] have also been attributed to the fact that [outsourcing statistic]. Despite such concerns, firms continue to [practice] in a variety of industries."
+
+**来源**: kalaignanam2017 (JM), P1
+
+**原文锚定**:
+> "New product development (NPD) outsourcing has gathered momentum in multiple industries, such as automotive, pharmaceuticals, and consumer electronics... A recurring theme in the business press is that product quality problems observed in the marketplace are a result of firms' increased penchant for outsourcing. Following the Toyota's high-profile recall in 2009, concerns emerged that NPD outsourcing may be responsible for Toyota's quality woes. Connor (2010) notes, 'Toyota used to buy parts from a small group of Japanese suppliers that were longtime partners. But, like almost all automakers, Toyota more recently has outsourced much of its NPD.' Similarly, Boeing 787's lithium ion battery problems have also been attributed to the fact that Boeing outsources the NPD of more than 30% of its components from third-party vendors. Despite such concerns, firms continue to outsource NPD in a variety of industries."
+
+**关键特征**:
+- 行业列举建立普遍性（3 个行业）
+- 两个具体企业案例（Firm A + Firm B）建立真实感和 Stakes
+- 引用新闻/商业媒体引语增加可信度
+- "Despite such concerns" 建立 paradox——问题已知但趋势继续
+- **与变体 A/B 的区别**: 不依赖从业者引用或工具失效，而是用行业趋势+企业案例建立实践张力
+
+**适用**: 产业/运营/供应链类研究；有知名企业案例可引用的主题；产品安全/质量/召回类研究
 
 ---
 

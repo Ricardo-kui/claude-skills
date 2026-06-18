@@ -2,9 +2,9 @@
 corpus: write-methods-micro-templates
 description: 句法微模板库（Sentence-Level Micro-Templates）。从顶刊 Methods 段落中提取的可复用句法单元，供 write-methods 在组装骨架时替换默认措辞，丰富表达多样性。
 organization: by_functional_unit
-categories_count: 13
+categories_count: 14
 created: 2026-05-22
-updated: 2026-05-22
+updated: 2026-06-03
 ---
 
 # 句法微模板库（Micro-Templates）
@@ -41,6 +41,7 @@ updated: 2026-05-22
 | [多源数据匹配](multi-source-matching.md) | 多个独立数据源交叉合并的叙述 | M2 |
 | [手工编码与效度检验](manual-coding-validation.md) | 从原始文本/痕迹提取构念并进行编码效度验证 | M3, M4 |
 | [子样本分组与平行方程](subsample-grouping.md) | 样本分组估计、多方程并行呈现的结构说明 | M4, M5, M7 |
+| [CMB 预防论证](common-method-bias-prevention.md) | 问卷数据 CMB 预防的设计+统计论证 | M8 |
 
 ## 使用协议
 

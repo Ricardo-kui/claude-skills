@@ -10,6 +10,7 @@ source_papers:
   - paruchuri2020 (SMJ, 2020): "A major, but generally untested assumption... is that..."
   - gamache2020 (SMJ, 2020): "While important... considers... broadly" (conflation assumption)
   - han2020 (AMJ, 2020): "Most research on [topic] has treated [construct] as decontextualized"
+  - zhao_ding2022 (OS, 2023): "challenges an implicit premise that lower entry barriers mechanically translate into greater product variety" (mechanical-causal-chain assumption; variant D)
 created: 2026-05-18
 source: Extracted from MVP30 narrative_analysis files
 ---
@@ -90,6 +91,40 @@ Inadequacy 问题化的核心 Tension：不是"文献遗漏了东西"，而是"�
 - "treated [construct] as decontextualized" → 识别出一个理论假设：情境不重要
 - "sometimes even inverting the relationships" → 暗示忽略情境会导致方向性误判
 - 直接挑战一个方法论层面的隐性假设
+
+---
+
+### 变体 D：挑战机械因果链前提型（zhao_ding2022 型）
+
+**模板**:
+> "[Contribution / framing 句]. [We / Our study] challenges an implicit premise that [driver X] mechanically translate(s) into [outcome Y]. Although prior [work / research] often assumes that [actors] achieve [outcome Y] by [assumed mechanism], we show that [outcome Y] varies systematically with [our explanatory variable]. [Contrast finding 1], whereas [contrast finding 2]."
+
+**来源**: zhao_ding2022 (OS, 2023), P35（标志性语言）；Tension 的逻辑铺垫在 P25-P27（demand uncertainty → firm-specific knowledge insufficient）
+
+**原文锚定**:
+> "First, we contribute to the emerging research on positioning strategies in digital markets by theorizing and testing antecedents of heterogeneous positions. In doing so, our study challenges an implicit premise that lower entry barriers mechanically translate into greater product variety. Although prior work often assumes that entrants in digital markets expand product variety by targeting heterogeneous customer preferences, we show that novelty in positioning varies systematically with external market feedback."
+
+**关键特征**:
+- 标志性句式 **"challenges an implicit premise that [X] mechanically translate into [Y]"**——挑战的是一条"机械因果链"假设（低壁垒 → 机械地 → 多样性），而非构念混淆、去情境化或未检验假设
+- **Gap 声明放在 Contribution 段（P35）而非独立 Tension 段**；Tension 的逻辑铺垫（demand uncertainty、firm-specific knowledge 不足以 mapping demand landscape）提前在 P27 完成。这是紧凑型 Introduction 的常见编排
+- **"Although prior work often assumes... we show that... varies systematically with..."** 的让步-反证结构：先陈述被挑战的假设，再用"varies systematically with [我们的变量]"给出替代机制
+- 紧跟对比发现（High dissatisfaction → differentiated positions；high heterogeneity → imitative positioning）兑现"varies systematically"的承诺
+
+**与变体 A/B/C 的区分**:
+- 变体 A（paruchuri）：连续解构两个"未检验假设"（untested assumption）
+- 变体 B（gamache）：指出构念被"笼统对待"，需细分（considers broadly → distinguish A/B）
+- 变体 C（han）：指出构念被"去情境化"对待（decontextualized）
+- **变体 D（zhao/gaba）：挑战一条"机械因果链"**（X mechanically → Y）——被挑战的不是构念的测量或边界，而是一条被默认的因果映射
+
+**适用情境**:
+- 研究挑战的是"X 机械地导致 Y"的隐含因果假设（而非构念混淆或测量问题）
+- 适合紧凑型 Introduction（Gap 声明嵌入 Contribution 段）
+- 目标期刊接受挑战性贡献：OS, SMJ, AMJ
+
+**使用禁忌**:
+- 若 Gap 是构念混淆（A 和 B 被混为一谈），改用变体 B（gamache 型）
+- 若 Gap 是理论不平衡或两个理论推出矛盾预测，改用 `06-theoretical-imbalance` 或 `04-reality-contradicts-consensus`
+- 不能只喊"challenges an implicit premise"而不给替代机制——必须紧跟"varies systematically with [变量]"或对比发现，否则沦为空泛声明
 
 ---
 

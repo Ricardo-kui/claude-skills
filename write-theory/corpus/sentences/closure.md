@@ -80,6 +80,26 @@ through [mediator mechanism]."
 [moderator logic]."
 ```
 
+## 识别策略论证嵌入（即使非 IV/DiD/RDD 设计）
+
+**适用**: Theory 假设因果时，无论实证设计是否使用工具变量、自然实验或断点回归，都应在 T6 Closure 或 Theory 末尾嵌入识别策略的理论论证。
+
+**模板**:
+> "Given the endogeneity concerns inherent in [actor]-[organization] matching, we employ [method] to control for [threat type]. Specifically, [method details] allow us to [identification claim]. We also conduct [robustness check type] to address [remaining threat]."
+
+**语料锚定**:
+- wang2024 (SMJ) — **反面教材**: 使用面板数据 + GEE，但 Theory 中完全未讨论识别策略（未讨论 CEO 自选择、未论证 GEE 选择的理论依据、未讨论固定效应如何控制时间不变混淆因素）。审稿人可能质疑："如果高 PA 的 CEO 本身就被 CSR 导向的公司任命，你的 GEE 估计能解决这个问题吗？"
+
+**关键规则**:
+- **内生性来源必须被命名**: CEO-firm matching、自选择、反向因果、遗漏变量——至少明确提及一个
+- **控制方法必须有理论依据**: 不仅是 "we use FE"，而是 "firm fixed effects control for time-invariant unobserved heterogeneity such as corporate culture"
+- **即使非因果设计也要讨论**: 如果论文明确是 "correlational study"，也需在 T6 中声明识别限制
+
+**反模式**:
+- Theory 中完全忽略识别策略 → 审稿人质疑因果推断的可信度
+- Methods 中突然出现识别策略讨论但 Theory 中未铺垫 → 读者感到突兀
+- 只写 "we control for endogeneity" 但不具体说明如何控制 → 空话
+
 ---
 
 ## 段落收束→假设过渡（按论证类型）
@@ -152,6 +172,14 @@ work]. We test these predictions using [brief empirical strategy reference]."
 | 2×2 矩阵 4 假设无 T6 | 最后一个假设 (H2b) 说完后直接进入 Methods | "这些假设之间是什么关系？" |
 | 发散树 3 假设无 T6 | H3 末尾只有一个 "Thus" 过渡到 Methods | "整体理论框架的贡献是什么？" |
 | 竞争假设 2 假设无 T6 | H2 末尾直接被 Methods 标题打断 | 风险较低——2 假设的对立关系本身即收束 |
+| 双理论+多调节 6 假设无 T6 | H2b 说完后直接 Methods | "TCE 和 Org Learning 的假设如何整合？" |
+
+**反面教材：kalaignanam2017 (JM)**:
+- **论文**: Kalaignanam, Kushwaha & Swartz (2017), Journal of Marketing
+- **结构**: 2 个 baseline 假设 + 4 个调节假设 = 6 假设，无 T6 Closure
+- **缺失后果**: 双理论镜头（TCE + Organizational Learning）和 4 个 moderator 的整合逻辑未显性化
+- **风险**: 审稿人可能质疑"这些假设构成了一个统一的理论框架，还是两个独立理论的并列？"
+- **补救可能**: 如果 Discussion 开篇能有效整合（如 "Our findings reconcile the trade-off between..."），可部分弥补。但 JM 通常允许较紧凑的 Theory 结构，风险低于 ASQ/OS。
 
 **反模式**:
 - 用 "In the next section, we describe our methods" 替代 T6 → 这不是收束，是逃避

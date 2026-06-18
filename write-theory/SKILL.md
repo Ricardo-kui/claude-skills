@@ -2,11 +2,11 @@
 name: write-theory
 description: |
   诊断-路由-生成式 Theory & Hypotheses 写作引擎。
-  覆盖 6 种理论构建变体（构念辨析型、机制推演型、假设树型、质性过程理论型、调节效应型、竞争假设型）。
+  覆盖 7 种理论构建变体（构念辨析型、机制推演型、假设树型、质性过程理论型、调节效应型、竞争假设型、辩证对立型）。
   协议层：诊断、路由、QC、跨 Section 对齐。
   语料层：corpus/ 目录下各变体语料文件（段落骨架、句式模板、假设格式、QC检查点）。
-  触发词：「写theory」「写理论」「theory template」「理论部分」「hypothesis写作」「调节效应假设」「跨层调节」「构念界定」「机制推演」「why chain」。
-version: 3.1.1
+  触发词：「写theory」「写理论」「theory template」「理论部分」「hypothesis写作」「调节效应假设」「跨层调节」「构念界定」「机制推演」「why chain」「双受众」「对立机制」。
+version: 3.2.0
 ---
 
 # Role
@@ -24,7 +24,7 @@ version: 3.1.1
 ```
 
 **参数说明**：
-- `[研究类型]`（可选）: `构念辨析型` | `机制推演型` | `假设树型` | `质性过程理论型` | `调节效应型` | `竞争假设型`
+- `[研究类型]`（可选）: `构念辨析型` | `机制推演型` | `假设树型` | `质性过程理论型` | `调节效应型` | `竞争假设型` | `辩证对立型`
 - `[--interaction-type]`（调节效应型专用）: `within`（同层）| `cross`（跨层）
 - `[--introduction-claims]`（强烈建议）: Introduction 中的理论承诺，用于对齐检查
 - `[--journal]`（可选）: 目标期刊，默认 `AMJ`
@@ -86,7 +86,10 @@ theory_hints:
 │   ├── X, Y, Z 在同一层级 → [E1] 同层调节
 │   ├── Z 在更高/更低层级 → [E2] 跨层调节
 │   └── Moderator 为分类变量 → [E1.1] 分组调节
-└── 核心贡献是裁决两种对立理论的竞争预测 → [F] 竞争假设型
+├── 核心贡献是裁决两种对立理论的竞争预测 → [F] 竞争假设型
+└── 核心贡献是同一构念/现象对不同受众产生相反效果 → [G] 辩证对立型
+    └── 两类受众是同一层面的不同角色 → [G1] 水平辩证
+    └── 两类受众是不同层面的决策者 → [G2] 跨层辩证
 ```
 
 **如果检测到上游 Introduction 输出**：先查 `corpus/meta/routing_table.md` 给出默认推荐，再进入确认。
@@ -455,6 +458,7 @@ T6 不是"重复总结"，而是完成三个理论任务，让读者感到 **"kn
 | D 质性过程理论型 | `corpus/variants/D_process_theory.md` | — |
 | E 调节效应型 | `corpus/variants/E_moderation.md` | `corpus/subprotocols/E1_categorical_moderation.md` |
 | F 竞争假设型 | `corpus/variants/F_competing_hypotheses.md` | — |
+| G 辩证对立型 | `corpus/variants/G_dialectical_opposition.md` | `corpus/subprotocols/G1_horizontal_dialectical.md` |
 
 #### 通用句式语料索引
 
@@ -543,6 +547,8 @@ Theory section 的 Rising Action 四阶段结构、叙事节奏检查点和 Stro
 13. **T6 Closure 为 quasi-mandatory。** 所有构建类型都应包含 T6 段落（或在 Discussion 开篇补回）。
 14. **竞争假设必须使用非传统收敛信号。** 不可使用 "Therefore" 收束，应使用 "Given these competing arguments..." 等信号。
 15. **不要重复语料层内容。** 本文件是协议层；所有具体模板引用 `corpus/` 目录。
+16. **辩证对立型必须满足对称性要求。** T3 和 T4 的机制步骤数应接近对称（差不超过 1 步）；T4 首句必须用 dialectical turn 标记（"Despite research showing..." / "This may be because..."）；T6 reconciliation 必须为 theory-based（不能仅说 "they coexist"）；两类受众的定义必须有理论基础区分（不是随意切分的 demographic 分组）。
+17. **辩证对立型的"反转"必须是真正的方向反转，不是强度变化。** 同一 predict 对 audience A 显著负、对 audience B 显著正，才是 dialectical opposition。如果只是"对 A 更强、对 B 更弱"但不是方向反转，应路由到 [E] 调节效应型。
 
 ---
 

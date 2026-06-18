@@ -81,6 +81,129 @@ H[M]: [X_B] → [Y] (-)"
 
 ---
 
+## 辩证对立双路径机制（Dialectical Opposing Indirect Effects, habel2016 型）
+
+**适用**: 同一 IV 通过两条方向相反的中介路径影响同一 DV——正面路径（benefit/gain）和负面路径（cost/loss）同时运作，哪条路径占优取决于调节变量。核心理论贡献是揭示"看似统一的关系实则是两条对立路径的净效应"。
+
+**与已有双轨变体的区分**:
+| | 辩证对立双路径 (habel2016) | 双轨并行 (malik2025) | 对称反向双轨 (zhao-ding_gaba) | 竞争机制链 |
+|---|---|---|---|---|
+| IV | 同一 IV | 两个不同 constructs | 同一 construct 的两个维度 | 同一 IV |
+| 中介 | 两个方向相反的 M | 两个独立 M | 两个 DV | 两种竞争理论 |
+| DV | 同一 DV | 同一 DV | 两个 DV | 同一 DV |
+| 调节 | 嵌入双路径推演 | 无 | 无 | 无 |
+| 理论框架 | 单一理论统摄双路径 | 两个理论分别驱动 | 同一 construct 分维度 | 两种理论竞争 |
+
+**模板**:
+```
+[Theory] suggests that [IV] potentially affects [DV] through two opposing mechanisms. 
+On one hand, [IV] increases [DV] through [positive path: IV → M1 (benefit) → DV]—
+specifically, [step 1a: how IV increases perceived benefit], which in turn [step 1b: 
+how benefit improves DV]. On the other hand, [IV] decreases [DV] through [negative 
+path: IV → M2 (cost) → DV]—specifically, [step 2a: how IV increases perceived cost], 
+which in turn [step 2b: how cost deteriorates DV].
+
+[Optional: Focus group / qualitative evidence as empirical grounding]
+All [qualitative study] participants acknowledged [evidence for positive path]. For 
+example, [Respondent A] noted, "[quote supporting benefit]." However, participants 
+also brought up and critically discussed [evidence for negative path]. [Respondent B] 
+asserted, "[quote supporting cost]."
+
+[Moderation embedded in dual-path reasoning]
+We argue that which path prevails depends on [moderator]. When [moderator = high], 
+[positive path logic: why benefit path strengthens]. When [moderator = low], [negative 
+path logic: why cost path strengthens].
+
+[Convergence to hypotheses]
+In line with this reasoning, we derive [N] formal hypotheses:
+H1: [Moderated overall effect of IV on DV]
+H2a: [Positive indirect effect through M1, moderated by W]
+H2b: [Negative indirect effect through M2, moderated by W]
+```
+
+**语料锚定**:
+- habel2016 (JM) — CSR engagement → perceived benefit (warm glow) / perceived price markup → price fairness; attribution moderates which path prevails
+
+**关键特征**:
+- **"two opposing mechanisms" / "opposing indirect effects"** — 核心标记词，明确告知读者这不是单一机制
+- **双路径共享同一理论框架** — benefit 和 cost 都来自 distributive justice 的 benefit-cost comparison，不是两个不同理论
+- **调节嵌入双路径推演** — attribution 不是假设后补丁，而是在 T3 机制推演中自然出现："which path prevails depends on..."
+- **Focus group 引述作为 empirical grounding** — 在正式假设前插入定性证据，增强双路径的可信度
+- **H2a/H2b 成对假设** — 两个间接效应假设对称呈现，共享同一 moderator 但方向相反
+
+**Focus group 引述句式**:
+```
+All [N] focus groups participants acknowledged [evidence for path A]. For example, 
+[Respondent ID] noted, "[direct quote]." However, participants also brought up and 
+critically discussed [evidence for path B]. [Respondent ID] asserted, "[direct quote]."
+```
+
+**可迁移性**: **极高** — 适用于任何"正面效应被负面副作用削弱"的研究场景：
+- CSR/ESG → mixed effects (benefit vs cost/greenwashing)
+- 制度压力 → compliance vs decoupling
+- 技术采纳 → empowerment vs threat
+- 多元化 → creativity vs conflict
+- 并购 → synergies vs integration costs
+
+**适用期刊**: JM, JMR, JCR (消费者行为); SMJ (制度/CSR); MSOM (运营trade-off)
+
+**反模式**:
+- 两条路径来自不同理论框架 → 审稿人质疑 "为什么不统一？"——必须有 overarching theory 统摄
+- 调节变量无独立理论依据段落 → 必须在 T3 中有 attribution theory / signaling theory 等支撑
+- Focus group 引述替代理论推演 → 定性证据是支撑而非替代——每条路径仍需独立的理论论证
+- 只呈现显著路径的结果 → 必须同时报告正负两条间接效应，即使某条不显著
+
+---
+
+## Focus Group / 定性证据嵌入机制推演（habel2016 型）
+
+**适用**: 在正式假设推导前，用 focus group / 访谈引述为双路径机制提供 empirical grounding。特别适合消费者行为、营销学、组织行为研究中"直觉路径需要现实证据支撑"的场景。
+
+**模板（正路径支撑）**:
+```
+All [N] focus group participants acknowledged [evidence for positive path]. In the eyes 
+of the focus group participants, these benefits range from [benefit range description]. 
+For example, [Respondent ID] noted, "[direct quote supporting benefit]." [Respondent 
+ID] elaborated, "[elaboration quote]."
+```
+
+**模板（负路径支撑）**:
+```
+In all [N] focus groups, participants brought up and critically discussed the question 
+of [cost dimension]. Participants agreed that [cost inference description]. For example, 
+[Respondent ID] asserted, "[direct quote supporting cost]." Similarly, [Respondent ID] 
+noted, "[elaboration quote]."
+```
+
+**模板（路径竞争转折）**:
+```
+As outlined previously, [IV] potentially increases both the benefits and the costs 
+[actors] associate with [outcome], leading to opposing indirect effects of [IV] on [DV]. 
+We argue that the strengths of these effects depend on [moderator]. In other words, 
+under certain circumstances the positive effect... might prevail, while under other 
+circumstances the negative effect... might prevail.
+```
+
+**语料锚定**:
+- habel2016 (JM) — T3 "Perceived benefits" 和 "Perceived costs" 段落中嵌入 6 段 focus group 引述（Respondent B, Q, G, F, A, K）
+
+**关键特征**:
+- **Respondent ID 匿名化** — "Respondent B" / "Respondent Q" 而非真名，保护隐私
+- **正负路径各有独立引述段** — 不是在同一段中混杂，而是分 "Perceived benefits" 和 "Perceived costs" 子节
+- **"brought up and critically discussed"** — 表示负路径不是研究者引导的，而是参与者自发提出的
+- **引述后立即回到理论** — "How do these benefit perceptions translate into [DV]? As we have discussed, [theory] suggests..." — 定性证据不替代理论推演
+
+**使用条件**:
+- 必须先完成 focus group / 访谈，且引述是真实的（不可编造）
+- 引述数量适中（每条路径 2-3 个），不过多占用 Theory 篇幅
+- 方法论细节移至 Web Appendix，Theory 中只保留关键引述
+
+**反模式**:
+- Focus group 引述篇幅过长（>500 词）→ 压缩为 2-3 个最有力引述
+- 引述后无理论回归 → 必须用 "How do these perceptions translate into [DV]?" 等句式回到理论推演
+- 只有正路径有引述、负路径无引述 → 对称性要求双路径都有 empirical grounding
+- 用引述替代理论论证 → 引述是支撑，不是替代；每条路径仍需独立的理论论证
+
 ## 对称分组双路径调节机制（Group-Based Dual Track for Moderation）
 
 **适用**：同一自变量（X）对两个不同群体（Group A / Group B）产生相反效应的交互假设推导。不同于"竞争机制链"（两种理论竞争），这里是**同一理论框架下两个对称子群体的独立机制推演**。
@@ -155,6 +278,53 @@ who tend to focus on [价值] may be more motivated to [行为3] ([文献])."
 
 **语料锚定**：
 - Wowak 2025 (MS) — liberal vs conservative CEO recall behavior
+
+---
+
+## 辩证对立型机制推演（Dialectical Contrast Mechanism，kalaignanam2017 型）
+
+**适用**: 研究的核心是比较两种对立选项（A vs B，如 make vs buy, internal vs external, organic vs acquired）的优劣，而非单一 IV→DV 的因果链。理论贡献在于识别每种选项在何种条件下更优。
+
+**与竞争机制链的区别**: 竞争机制链是两种理论对同一关系的竞争预测（哪种理论正确？）；辩证对立型是对立选项各自的优劣对比（两种选项各在什么条件下更优？）。
+
+**骨架（Option A 优势段）**:
+```
+Previous research has noted two critical advantages of [Option A]: [advantage 1] and [advantage 2] ([citation]). In the case of [context], [Option A] enables firms to [mechanism detail]. [Related theory] contends that [Option A] is a superior mechanism because [theoretical justification] ([citation]). The reason is that [elaboration]. This benefit is crucial in the case of [context] because of [condition].
+```
+
+**骨架（Option B 优势+局限段）**:
+```
+In contrast, [Option B] offers the benefit of [alternative mechanism] ([citations]). However, [limitation of B]. The implication is that [consequence for B].
+```
+
+**收敛到 Baseline 假设**:
+```
+The preceding arguments highlight the trade-offs associated with [decision]. At the time of [process], [Option B] has a distinct advantage over [Option A] because [reason B]. Therefore, [Option B] should offer higher [DV1] compared with [Option A]. In contrast, [Option A] is superior to [Option B] for [DV2] because [reason A]. [Additional justification]. These [advantage category] benefits of [Option A] translate to higher [DV2] and overcome the [disadvantage] the firm experiences at [time point]. Drawing on these arguments, we advance the following baseline hypotheses:
+
+H1: [Option B] has a more positive impact on [DV1] than [Option A].
+H2: [Option A] has a more positive impact on [DV2] than [Option B].
+```
+
+**语料锚定**:
+- kalaignanam2017 (JM) — H1/H2 推导: NPD buy 的"early start"+pay-for-performance → immediate quality 优势；NPD make 的 control+adaptation+learning → future quality 优势
+
+**关键特征**:
+- "two critical advantages" — 预告双机制
+- "In the case of... enables firms to..." — 情境化机制
+- "The reason is that..." — 追加一层解释
+- "This benefit is crucial... because of..." — 建立边界条件意识
+- "In contrast" — 对称转向另一选项
+- "However" — 暴露另一选项的局限
+- "The implication is that..." — 推导 consequence
+- "trade-offs" — 统一主题词
+- "overcome the [disadvantage]" — 建立时间动态（短期劣势 vs 长期优势）
+
+**反模式**:
+- 只呈现一方优势 → 审稿人质疑选择性论证
+- 优劣对比后无"trade-off"主题收束 → 沦为罗列而非理论整合
+- 缺少时间/条件维度 → 无法解释"为什么两种选项共存"
+
+**适用期刊**: JM, JMR, JOM, MSOM（偏好实践 trade-off 类研究）；AMJ/SMJ 需更强的理论承诺
 
 ---
 
@@ -245,6 +415,45 @@ Therefore, because of [cumulative summary of 3 reasons], we believe that [hypoth
 
 ---
 
+## 对称三步机制链（CEO 心理特质 → 企业战略 通用骨架）
+
+**适用**: CEO 心理/情感特质（PA/NA、anxiety、hubris 等）对企业战略行为（CSR、recall、innovation 等）的影响机制。两条路径完全对称、方向相反。
+
+**PA 方向（正向/扩展路径）**:
+> "Drawing on the [theory], we expect that [IV_positive] will be positively related to [DV]. First, [IV_positive] broadens a [actor]'s scope of [mechanism domain 1: cognition], enabling [actor] to [cognitive consequence] ([citations]). Second, high-[IV_positive] individuals tend to [social mechanism], which [social consequence] ([citations]). Third, the [theory] proposes that [IV_positive] enlarges individuals' [mechanism domain 3: temporal], enabling [actor] to [temporal consequence] ([citations])."
+
+**NA 方向（镜像/收缩路径）**:
+> "Conversely, we expect that [IV_negative] will be negatively related to [DV]. First, [IV_negative] narrows a [actor]'s scope of [mechanism domain 1], preventing [actor] from [cognitive consequence] ([citations]). Second, high-[IV_negative] individuals tend to [opposite social mechanism], which [opposite social consequence] ([citations]). Third, the [theory] proposes that [IV_negative] shortens individuals' [mechanism domain 3], leading [actor] to [opposite temporal consequence] ([citations])."
+
+**语料锚定**:
+- wang2024 (SMJ) — PA/NA → CSR via broaden-and-build theory。PA: broaden attention → social inclusion → extended time horizon。NA: narrow attention → social exclusion → shortened time horizon。
+
+**关键特征**:
+- **三步完全对称**: 认知层（broaden/narrow attention）→ 社会层（inclusion/exclusion）→ 时间层（extended/shortened horizon）
+- **每步 1-2 个 citation**: 机制链不是空泛推测，每步都有文献支撑
+- **镜像对立**: NA 不是 PA 的"缺失"，而是独立但方向相反的过程——体现 broaden-and-build 理论的对称性
+- **理论名称贯穿始终**: 每段开头重述 "Drawing on the [theory]" / "According to the [theory]"，确保读者记住理论锚点
+
+**可迁移性**: **极高** — 适用于所有 CEO 心理特质 → 企业战略类论文。三步可替换为其他理论层：
+- 认知层（attention, information processing）
+- 社会层（social relationships, stakeholder perception）
+- 时间层（time horizon, future orientation, temporal discounting）
+
+**骨架模板（填空式）**:
+```
+Drawing on the [theory], we expect that [IV] will be [positively/negatively] related to [DV].
+First, [IV] [mechanism verb] a [actor]'s scope of [mechanism domain]...
+Second, high-[IV] individuals tend to [social mechanism]...
+Third, the [theory] proposes that [IV] enlarges individuals' [temporal mechanism]...
+```
+
+**反模式**:
+- 三步中只有两步有文献支撑 → 审稿人会质疑 "第三步是不是你自己编的？"
+- NA 路径被写成 PA 的"反面"而非独立过程 → 必须用 "Conversely" 而非 "Similarly" 开头
+- 三步之间缺少连接词 → 每步之间用 "First... Second... Third..." 明确标记节奏
+
+---
+
 ## 用文献支撑机制（非罗列）
 
 **模板**：
@@ -273,6 +482,46 @@ When explaining how [IV] affects [DV] differently across phases/conditions, use 
 "Theoretical support for [behavior in phase 2] is found in [theory B]. [Theory B] proposes that [core premise] and that [implication]. Consequently, when [condition], [actor] may [behavior]."
 
 **Key rule:** The two theories must be conceptually independent (not overlapping mechanisms). If they overlap, use a single overarching theory instead.
+
+---
+
+## 双理论分别解释不同 DV 变体（kalaignanam2017 型）
+
+**适用**: 同一自变量（或两个对立选项）对两个不同结果维度（如 immediate vs future, short-term vs long-term, quantity vs quality）产生差异化影响，每个结果维度由一个独立理论解释。
+
+**与标准 Dual-Theory 的区别**: 标准变体是两个理论解释同一现象的不同阶段/条件；本变体是两个理论分别解释两个不同的 DV。
+
+**Theory A 框架（解释 DV1）**:
+```
+There are two streams of research pertinent to understanding [outcome domain]. [Theory A], a dominant theoretical lens, focuses on [unit of analysis] and argues that [core premise] ([citation]). Whereas an extensive body of literature has focused on [topic A] ([reviews]), studies [topic B] are less common ([exception]). As noted previously, the key challenge in [topic B] is [specific difficulty]. [Stakes statement: why this is surprising given importance].
+
+Using insights from [Theory A] and [Theory B], we develop a conceptual framework that delineates [scope]. [Figure reference]. The model depicts [overview of relationships for DV1]. The choice of examining these moderating variables is guided by the observation that [core trade-off]. These moderating variables bring into sharp focus the conditions that strengthen or exacerbate the benefits and challenges accompanying [choices].
+```
+
+**Theory B 框架（解释 DV2）**:
+```
+The second relevant stream of research for understanding [outcome domain] is [Theory B]. A key insight from this stream of literature is that [Option A] is inherently a superior mode for [process] ([citations]) compared with [Option B]. [Outcome] improvement often takes the form of a [metaphor]. Our conceptualization of [process] mirrors [theoretical tradition]. Here, [process] is represented as [definition] ([citations]). Typically, [process] in organizations is characterized by [feature] and is punctuated by [disruption]. In this tradition, [process] occurs when there is [indicator]. In the context of [domain], improvement in [outcome] is an indicant of [process] ([citation]).
+```
+
+**语料锚定**:
+- kalaignanam2017 (JM) — TCE (Williamson 1985) 解释 immediate product quality（交易成本→短期控制/激励）；Organizational Learning (Levin 2000; Cyert & March 1963) 解释 future product quality（学习曲线→长期适应/编码）
+
+**关键特征**:
+- **明确宣告双理论架构**: "There are two streams of research..." / "The second relevant stream..."
+- **理论分工清晰**: 每个理论对应一个 outcome 维度，无重叠
+- **过渡自然**: "Using insights from [Theory A] and [Theory B], we develop..." 在 Theory A 末尾预告 Theory B 的参与
+- **对称对比结构**: Theory A 段落解释 Option A vs B 在 DV1 上的优劣；Theory B 段落解释 Option A vs B 在 DV2 上的优劣
+
+**假设推导节奏**:
+1. **Baseline 假设（H1/H2）**: 分别从两个理论推导主效应方向
+2. **Moderator 假设（H1a/H1b/H2a/H2b）**: 每个 moderator 小节对应一个 baseline 假设，论证逻辑完全平行
+
+**反模式**:
+- 两个理论解释同一 outcome → 应合并为一个理论或改为标准 Dual-Theory 架构
+- 理论分工不清晰 → 审稿人会问"为什么 TCE 不能解释 future quality？"
+- 缺少"trade-off"主题串联 → 两个理论沦为并列的文献综述，失去统一叙事
+
+**适用期刊**: JM, JMR, SMJ（偏好双理论整合）；ASQ 慎用（偏好单一深入理论）
 
 ---
 
@@ -457,6 +706,60 @@ H1. [IV] is [direction] related to [DV]."
 - 每个原因都嵌入具体企业案例（Dahu Aquaculture, General Motors, Dayang Group）
 - 三个机制对应连续运营改进的三个要素（motivation, waste reduction, learning）
 - "Therefore, we propose the following hypothesis:" 作为收敛信号
+
+---
+
+## Trade-off → Shock → Dominance 逻辑链（hoffmann2024 型）
+
+**功能**: 适用于政策冲击/法律变化类研究——treatment 的作用机制是移除了对既存激励的约束，而非直接引入新激励。
+
+**核心逻辑**: Agent 面临私人激励 A 和制度约束 B 之间的权衡 → 外生冲击削弱了 B → A 在权衡中占主导 → 行为变化
+
+**句法模板**:
+```
+[Agents] face a trade-off between (1) [private incentive — e.g., avoiding immediate costs] 
+and (2) [disciplinary threat — e.g., being sued by shareholders]. 
+We expect that the external shock of [shock name]—which diminishes [disciplinary threat]—
+leads [private incentive] to gain prominence in the aforementioned trade-off 
+and come to dominate [agents'] decision making.
+
+This expectation is grounded in [primary theory] literature documenting [core mechanism] 
+([citation]) and [domain] literature on how [mechanism] can [behavioral outcome] ([citation]).
+```
+
+**关键特征**:
+- **Trade-off 框架**: 将行为决策框定为两种对立力量的权衡，而非单向因果链
+- **外生冲击的角色**: Treatment 不是直接推动行为，而是移除了一个制衡力量——让既存的私人激励不再被约束
+- **"gain prominence and come to dominate"**: 动态语言描述权衡重心的转移过程
+- **双文献锚定**: 核心理论文献（如 agency theory）解释权衡本身，领域文献（如 myopic management）解释特定情境下的行为表现
+
+**Concession-Rebuttal 先导模式**:
+在 Trade-off 链之前，常用 Concession-Rebuttal 建立"为什么私人激励更强"：
+```
+Under some conditions, [action] could be beneficial ([citations on long-term benefits]).
+However, [action] has numerous negative implications ([citations on short-term costs]).
+As these negative consequences reflect badly on [agents'] perceived skills,
+they prefer not to be associated with them ([citation]).
+While one could argue that [potential benefit] could prevent [undesirable action],
+based on [decision theory], "losses loom larger than gains" ([citation]).
+Hence, we expect that [cost] will not outweigh [benefit] in [agent's] mind.
+```
+
+**与标准机制推演的区分**:
+| | Trade-off → Dominance | 标准 X→M→Y |
+|---|---|---|
+| Treatment 性质 | 制度冲击（移除约束） | 直接干预（引入新变量） |
+| 机制逻辑 | 权衡失衡 | 因果传导 |
+| Theory 定位 | 解释为什么私人激励在约束移除后占主导 | 解释 X 通过 M 影响 Y 的过程 |
+| 代理问题 | 核心（管理者 vs 股东利益冲突） | 可有可无 |
+
+**适用**: 政策冲击/法律变化/制度变革研究，其中 treatment 移除或削弱了一个既存的治理/监督机制。特别适合 agency theory 驱动的 Incompleteness × Mechanism 组合。
+
+**语料锚定**: hoffmann_cheong_phan_zurbruegg2024 (JM) — UD laws → reduced litigation risk → managerial opportunism → fewer recalls
+
+**禁忌**: 
+- 不能用于 treatment 直接引入新激励的场景（如补贴、税收优惠）——此时用标准 X→M→Y
+- Trade-off 的两个力量必须有明确的文献支撑，不能是纯推测
 
 **调节器推导"三三制"骨架**:
 ```
@@ -1169,5 +1472,98 @@ and disappear once the [trigger] ceases to be salient.
 **反模式**:
 - Cognitive availability被用作"万能解释"但未与具体研究情境连接 → 必须补充情境特定的机制桥接(如media coverage→salience)
 - "continually reinforced" citation不到位 → 必须引用领域内经典(Pollock et al. 2015; Washington & Zajac 2005)
+
+---
+
+## 双重印记对立通道 + 效果持续性差异 + 底物匹配调节（Dual Opposing Channels with Differential Persistence and Substrate-Matched Moderators，qiao2026 型）
+
+**适用**: 同一起源条件（如创始伙伴关系、历史制度/军方关联、创始投资人声誉）**同时**留下两条方向相反的中介通道——一条内嵌于组织结构（capability，促进结果），一条存于外部受众认知（identity，阻碍结果）。核心理论贡献**不是**"哪条通道占优"，而是 (1) 两条通道的**效果持续性（persistence）不同**——内嵌型持续更久、受众认知型更易变；(2) 起源印记者的**后续变迁非对称地**重塑两条通道——每个调节变量只作用于一条通道的**机制底物**。
+
+**与辩证对立双路径 (habel2016) 的关键区分**:
+
+| | 双重印记对立通道 (qiao2026) | 辩证对立双路径 (habel2016) |
+|---|---|---|
+| 核心理论问题 | 两条通道**衰减速率**谁更慢？印记者后续变迁如何**非对称**重塑？ | 当前条件下**哪条通道占优**？ |
+| 中介嵌入位置 | 一条在组织内部（结构/惯例/默会知识），一条在外部（受众认知/集体记忆） | 两条都在同一心理/决策层（benefit vs cost perception） |
+| 调节变量 | **通道特异性**——每个调节只作用于一条通道的底物 | 共享一个调节，决定两路径相对强度 |
+| 时间/持续性 | 核心理论维度（meta-hypothesis 比较两通道衰减） | 不涉及 |
+| 理论增量 | "嵌入位置决定持续性" + "印记者动态重塑" | "对立路径的净效应随条件翻转" |
+
+**模板**:
+```
+[Origin condition produces dual imprints]
+We propose that [origin condition] (e.g., founding [partner] relationships established during 
+[sensitive period]) generate enduring effects through two distinct imprints: [internal imprint] 
+embedded within [organizational structures / routines / tacit knowledge] and [external imprint] 
+manifested in [stakeholder perceptions / collective memory].
+
+[Channel 1 — internal, facilitates]
+The [internal imprint] is manifested as [partner-derived procedures / protocols / routines] 
+that [enhance performance]. Because [the partner] was [an early adopter / monopoly holder] of 
+[scarce expertise], these [procedures] create [structural inertia / tacit knowledge] that 
+persists after [direct involvement] ceases ([citations]). Therefore:
+H1a: [origin condition] is positively related to [internal imprint].
+H1b: [internal imprint] is positively related to [outcome].
+
+[Channel 2 — external, impedes]
+We then suggest that [origin condition] can also imprint the [organization] with an [external 
+identity] through lasting [associations] that become embedded in [stakeholder categorizations 
+/ collective memory / media narratives] ([citations]). [External audiences] may encounter 
+[observable markers, e.g., names] as [identification triggers] regardless of current reality. 
+Therefore:
+H2a: [origin condition] is positively related to [external imprint].
+H2b: [external imprint] is negatively related to [outcome].
+
+[Differential-persistence meta-hypothesis — the signature move]
+We suggest that [internal imprint] exhibits more persistent effects than [external imprint] 
+due to fundamental differences in their embedding mechanisms. [Internal imprint] reside in 
+[organizational processes maintained through daily enactment], producing consistent effects 
+that decay mainly through [sustained disuse]. In contrast, [external imprint] reside in 
+[stakeholder memories requiring continued audience attention]; audience-held interpretations 
+shift with [media narratives / political events / expectation violations] even when 
+organizational attributes remain constant ([citations]). Therefore:
+H3: The [internal imprint] exhibits more enduring effects on [outcome] than the [external imprint].
+
+[Substrate-matched moderators — each moderator targets one channel's substrate]
+We further examine how [post-founding transformations of the origin partner] reshape these 
+effects. [Moderator 1: a transition that democratizes scarce expertise] diminishes the 
+competitive advantage of [internal imprint] by [transforming previously exclusive expertise 
+into broadly accessible standards] ([citations]). Therefore:
+H4: [Moderator 1] negatively moderates the relationship between [origin condition] and [outcome] 
+(via the internal channel).
+[Moderator 2: an event that amplifies threat perceptions] exacerbates the negative effects of 
+[external imprint] by [heightening stakeholder threat perceptions associated with the 
+association] ([citations]). Therefore:
+H5: [Moderator 2] negatively moderates the relationship between [origin condition] and [outcome] 
+(via the external channel).
+```
+
+**实证检验提示（differential persistence 的可检验化）**:
+- H3 不能直接读两个系数（一正一负）。技巧：对**负向通道**做 reverse-code 使两条 time×channel interaction 同向，再用 **Wald test** 检验两交互系数是否统计可区分（见 `write-results/SEM-moderated-mediation.md` "Reverse-Code + Wald Test"）。
+- 内嵌通道（capability）随时间**增强**（age×capability > 0）；外部通道（identity）随时间**衰减**（主效应负，age×identity > 0 意味负效应被侵蚀）。
+
+**关键特征**:
+1. **持续性作为独立理论维度** — H3 是关于"哪条通道衰减更慢"的 meta-hypothesis，区别于 habel2016 "哪条占优"。这是本文的核心理论增量。
+2. **嵌入位置决定持续性** — 结构/默会知识（内部，靠日常 enacting 维持，靠 sustained disuse 衰减）vs 受众认知（外部，靠持续注意力维持，靠叙事/事件 shift）。必须给出 **storage location + change mechanism** 双重论证。
+3. **底物匹配调节（substrate-matched moderators）** — 每个调节变量精确作用于一条通道的机制底物：能力通道底物是"稀缺专长"（被民用标准化 democratize），身份通道底物是"威胁认知"（被政变 amplify）。调节与通道一一对应，非共享调节。
+4. **印记者非对称重塑** — 同一创始印记者的两类后续变迁（能力 democratization / 身份 stigmatization）分别削弱/放大两条通道，体现"印记不是一次性的，印记者持续重塑其表达"。
+5. **T6 收束常用历史格言作 foil**（见 `write-introduction/.../theory-lens/05-maxim-contrast.md` 变体 B）。
+
+**可迁移性**: 极高 — 适用于任何"同一起源留下对立双印记"的研究：
+- 创始政府/军方关联（capability+ vs security identity−）
+- 创始投资人/名人背书（资源+ vs 类别化/锚定−）
+- 历史并购/合资（吸收能力+ vs 敌意/类别标签−）
+- 创始宗教/意识形态/族裔关联（社群资源+ vs 排他身份−）
+
+**适用期刊**: SMJ（组织异质性、历史与战略）、AMJ、OS、AMR（理论建构）。
+
+**反模式**:
+- 把 H3 写成"哪条通道占优"而非"哪条衰减更慢" → 持续性维度才是本文理论增量，占优只是 net effect
+- 调节变量同时作用于两条通道而非底物匹配 → 丢失"印记者非对称重塑"的精巧，退化为普通调节
+- 持续性论证只用一句话（"内部更稳定"） → 必须给出 storage location + change mechanism 双重论证
+- 比较两个一正一负 interaction 系数时不做 reverse-code → Wald test 不可直接解读
+- 印记者后续变迁与创始印记脱节 → moderator 必须明确作用于"起源印记者本身"的当下状态（如军方当局 vs 民用化），而非无关事件
+
+**语料锚定**: qiao_hiatt_sine2026 (SMJ) — 创始军方伙伴 → 内部 capability imprint（操作流程/安全协议，+ 国际化）+ 外部 identity imprint（军方名称/联想，− 国际化）；H3 capability 比 identity 更持久；H4 民用化空管 democratize 能力底物；H5 军事政变 amplify 身份威胁。配合 `write-methods/生存分析.md` 变体 6、`write-methods/IV-2SLS.md` 变体 4、`write-results/IV-2SLS.md` 变体 4 使用。
 
 ---

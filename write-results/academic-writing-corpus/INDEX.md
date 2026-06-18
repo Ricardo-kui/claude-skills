@@ -53,3 +53,7 @@ updated: 2026-06-16
 > **单篇高价值 (1/5)**: Shape parameter 前置、分组检验+小样本诚实、Table 9 矩阵、Quartile penalty、MCMC mediation、竞争假设报告、model-free 预览、IV 诊断嵌入
 >
 > **总变体数**: 17 (分布于 5 个结果类型文件)
+>
+> ✅ **2026-06-16 更新**: 蒸馏 Qiao, Hiatt & Sine (2026, SMJ) "dual imprinting" 新增结果报告骨架：
+>   - IV-2SLS 变体4：**非线性估计器（生存/有限 DV）下的内生性检验——control-function 残差作 DWH 等价检验 + Stock-Yogo F + 有限样本偏误诚实提示**（解决"非线性主模型如何检验内生性"的普遍盲区）
+>   - SEM-moderated-mediation 追加：**Reverse-code + Wald Test** 比较两条方向相反通道的持续性差异（H3 型 differential-persistence meta-hypothesis 的可检验化）

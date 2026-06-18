@@ -34,7 +34,7 @@
 | **范式挑战 Hook** | `06-paradigm-challenge` | "According to conventional view... In reality, however..." | ROBUST (≥6 papers) | zhou2017 (ASQ), hahl2017 (ASR), gamache2023 (SMJ) |
 | **跨学科类比 Hook** | `01-cross-disciplinary-analogy` | 领域A概念 → 领域B类似问题 | VERIFIED (≥2 papers) | pollock2015 (ASQ), malshe2015 (JM) |
 | **后果清单 Hook** | `08-consequence-cascade` | 负面事件递进式后果清单 | VERIFIED | mayo2021 (POM) |
-| **"Contrary to Belief" Hook** | `12-contrary-to-belief` | 打破普遍认知的制度事实 | VERIFIED | eilert2017 (JM), darby2023 (MSOM) |
+| **"Contrary to Belief" Hook** | `12-contrary-to-belief` | 打破普遍认知的制度事实（含变体C：直觉反转保留共识型 habel2016 — "despite its intuitive appeal, this logic may be misleading"） | VERIFIED | eilert2017 (JM), darby2023 (MSOM), habel2016 (JM) |
 
 *Trend 是最丰富的 Pollock 类型（6 个 hooks），覆盖从低能量数据开场到高能量范式挑战的全谱系。*
 
@@ -48,7 +48,7 @@
 | **制度轶事 Hook** | `11-institutional-anecdote` | 客观制度叙事 → "unremarkable"理论常态化 | VERIFIED | lehman2014 (MS) |
 | **心理构念直觉 Hook** | `09-psychological-construct-hook` | 压力共识 → 案例落地 → 因果链 → 学术空白 | VERIFIED | mannor2016 (SMJ) |
 | **成本收益张力 Hook** | `07-cost-benefit-tension` | 决策两难：行动成本 vs 延迟成本 | VERIFIED | eilert2017 (JM) |
-| **实践困境 Hook** | `10-practical-puzzle` | 从业者面临的具体困境 | — | — |
+| **实践困境 Hook** | `10-practical-puzzle` | 从业者面临的具体困境 | VERIFIED (≥3 papers) | ceo_regulatory_focus_ijrm (IJRM), desjardine2023 (OS), kalaignanam2017 (JM) |
 | **谜题/悖论 Hook** | `04-puzzle-paradox` | 反直觉现象，制造认知失调 | VERIFIED (≥4 papers) | paruchuri2020 (SMJ), pontikes2012 (ASQ) |
 | **成对灾难 Hook** | `14-paired-disasters` | 两次时间跨度大的相似灾难，建立"历史重演"谜题 | VERIFIED | haunschild2015 (OS) |
 
@@ -160,7 +160,7 @@
 |------|-------------|---------|---------|---------|
 | **双行业趋势对比 Hook** | `21-dual-industry-trend` | 数字化/宏观趋势 → 两个行业的对比案例建立现象普遍性 | EMERGING (1 paper) | zhao-ding_gaba (ORSC) |
 
-- `21-dual-industry-trend` — Trend/Phenomenon Hook: macro-trend → dual-industry contrasting examples → "Across [contexts], firms not only [A] but also choose among [B], deciding [trade-off] across multiple dimensions." 适用于需要建立"跨行业普遍现象"可信度的研究。Pollock 类型: Trend。能量: 中。最佳适配 Gap: Incompleteness × Constructs + Phenomenon。
+- `21-dual-industry-trend` — Trend/Phenomenon Hook: macro-trend → dual-industry contrasting examples → "Across [contexts], firms not only [A] but also choose among [B], deciding [trade-off] across multiple dimensions." 适用于需要建立"跨行业普遍现象"可信度的研究。Pollock 类型: Trend。能量: 中。最佳适配 Gap: Inadequacy（首选，依据 P35 "challenges an implicit premise... mechanically translate into" 语言）/ Incompleteness（适配）× Constructs + Phenomenon。canonical 文件已于 2026-06-17 创建。
 
 ---
 

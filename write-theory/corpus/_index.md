@@ -9,7 +9,9 @@
 | 你的研究类型 | 先读这个 | 再读这些 |
 |-------------|---------|---------|
 | 核心贡献是区分两个易混淆构念 | [`variants/A_construct_differentiation.md`](variants/A_construct_differentiation.md) | [`sentences/construct_definition.md`](sentences/construct_definition.md) |
+| 核心贡献是论证为何选择 focal DV（而非构念区分本身） | [`variants/A_construct_differentiation.md`](variants/A_construct_differentiation.md)（DV选择论证子变体） | [`sentences/construct_definition.md`](sentences/construct_definition.md) |
 | 核心贡献是解释 X 如何影响 Y 的因果机制 | [`variants/B_mechanism_elaboration.md`](variants/B_mechanism_elaboration.md) | [`sentences/mechanism_chain.md`](sentences/mechanism_chain.md), [`sentences/hypothesis_forms.md`](sentences/hypothesis_forms.md) |
+| 同一 IV 通过两条对立中介路径（benefit vs cost）影响同一 DV | [`variants/B_mechanism_elaboration.md`](variants/B_mechanism_elaboration.md) + [`sentences/mechanism_chain.md`](sentences/mechanism_chain.md)（辩证对立双路径） | [`subprotocols/B2_dual_track.md`](subprotocols/B2_dual_track.md) |
 | 同一构念的两个维度产生相反/互补预测 | [`subprotocols/B2_dual_track.md`](subprotocols/B2_dual_track.md) | [`sentences/mechanism_chain.md`](sentences/mechanism_chain.md)（双轨并行部分） |
 | 核心贡献是多层次/多条件的假设体系 | [`variants/C_hypothesis_tree.md`](variants/C_hypothesis_tree.md) | [`sentences/moderation.md`](sentences/moderation.md) |
 | 核心贡献是揭示动态过程和时间演化 | [`variants/D_process_theory.md`](variants/D_process_theory.md) | — |
@@ -48,7 +50,7 @@
 | 文件 | 功能 | 覆盖骨架 |
 |------|------|---------|
 | [`construct_definition.md`](sentences/construct_definition.md) | 构念界定 | 定义策略、scope conditions、lineage、adjacent construct 区分、辩论并置型构念界定 |
-| [`mechanism_chain.md`](sentences/mechanism_chain.md) | 机制推演 | why chain 连接词、单步/两步/双轨/竞争/多理论/OM三三制/双刃剑/双中介并行/双DV并行/多层收窄型/替代机制排除/Ability-Motivation 框架/Iron Triangle三边机制/双视角对比框架整合/三层嵌套理论演进/Rhetorical-Question Pivot/联合必要性门控逻辑 |
+| [`mechanism_chain.md`](sentences/mechanism_chain.md) | 机制推演 | why chain 连接词、单步/两步/双轨/竞争/多理论/OM三三制/双刃剑/双中介并行/双DV并行/多层收窄型/替代机制排除/Ability-Motivation 框架/Iron Triangle三边机制/双视角对比框架整合/三层嵌套理论演进/Rhetorical-Question Pivot/联合必要性门控逻辑/**辩证对立双路径(habel2016)/Focus Group定性嵌入(habel2016)** |
 | [`moderation.md`](sentences/moderation.md) | 调节机制 | 机制修改论证、假设模板、修辞问句开场、Ability-Motivation 双路径调节、共享调节器反向调节、多调节器同向设计、双边论证调节推演、注意力基础观调节论证、不对称调节 |
 | [`hypothesis_forms.md`](sentences/hypothesis_forms.md) | 假设形式 | 各类假设的标准句法（主效应、中介、调节、三向交互、有中介的调节、配对假设a/b格式、条件假设Given格式） |
 | [`closure.md`](sentences/closure.md) | 收束/过渡 | T6 Closure 骨架、局部收束信号、段落收束→假设过渡（按论证类型）、轨道级局部收束、**H1 收敛信号强制提醒** |

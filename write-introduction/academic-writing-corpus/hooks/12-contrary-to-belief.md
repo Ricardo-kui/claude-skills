@@ -10,7 +10,9 @@ exclusivity: MEDIUM
 pollock_type: Trend
 source_papers:
   - eilert2017 (JM, 2017): "Contrary to popular belief, firm executives — not regulators — decide whether and when to recall"
+  - habel2016 (JM, 2016): "Intuitive appeal reversal: 'despite its intuitive appeal, this logic may be misleading' — preserves partial consensus"
 created: 2026-05-19
+updated: 2026-06-03
 source: Extracted from MVP30 narrative_analysis files
 ---
 
@@ -60,6 +62,39 @@ source: Extracted from MVP30 narrative_analysis files
 - 第三句将事实转化为学术缺口
 
 **适用**: 治理、监管、制度理论、隐性权力结构研究
+
+---
+
+### 变体 C：直觉反转保留共识型（habel2016 型）
+
+**模板**:
+> "[Established positive relationship A→B] is well established ([citations]). However, we argue that despite its intuitive appeal, this logic may be misleading because [contrary mechanism/condition]—specifically, if [inference/consequence], [outcome] may not [improve/hold] and may even [deteriorate/reverse]."
+
+**来源**: habel2016 (JM), P1-P2
+
+**原文锚定**:
+> "Prior research might lead one to assume a positive association of CSR engagement and perceived price fairness... because the 'warm glow' created by helping others adds to customers' benefits... However, we argue that despite its intuitive appeal, this logic may be misleading because customers do not judge price fairness solely on the basis of the benefits they obtain."
+
+**关键特征**:
+- **"despite its intuitive appeal, this logic may be misleading"** — 比 "contrary to popular belief" 更温和。不声称常识完全错误，而是指出其盲区
+- **"not solely on" / "not only"** — 保留部分共识（benefit path 仍成立），只是不完整
+- **反转后立即给出替代机制** — "because [cost mechanism]"，不停留在否定
+- **适用于 Incompleteness × Mechanism** — 不挑战已有文献的结论，而是揭示被忽视的负向路径
+
+**与变体 A/B 的区分**:
+| | 变体 A (contrary to belief) | 变体 B (hidden arrangement) | 变体 C (intuitive appeal) |
+|---|---|---|---|
+| 反转强度 | 强——常识完全错误 | 中——机制隐藏 | 温和——常识不完整 |
+| 共识处理 | 全盘否定 | 揭示替代 | 保留+补充 |
+| 适用 Gap | Inadequacy | Inadequacy | Incompleteness |
+| 语气 | 断言 | 揭示 | 谨慎论证 |
+
+**适用**: Incompleteness × Mechanism；既有文献已建立正向关系但忽视负向/混合机制；CSR/ESG mixed effects、制度压力 compliance vs decoupling、技术采纳 empowerment vs threat
+
+**禁忌**:
+- 不要在没有充分文献支持直觉逻辑的情况下使用——"intuitive appeal" 必须有 citation 支撑
+- 不要用于全盘否定已有文献——那是变体 A 的工作
+- 反转后必须立即给出替代机制，不停留在 "this is misleading"
 
 ---
 

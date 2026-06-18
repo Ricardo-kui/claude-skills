@@ -3,9 +3,10 @@ design_type: "IV-2SLS"
 status: 📋 TEMPLATE
 source_papers:
   - "wowak2025_tmt_political_ideology_ms"
-variants_count: 3
+  - "qiao_hiatt_sine2026 (SMJ, 2026): natural-disaster instrument + 3-reason exclusion restriction (external-event-as-IV template)"
+variants_count: 4
 created: 2026-05-18
-updated: 2026-05-20
+updated: 2026-06-16
 ---
 
 # IV-2SLS — Methods 骨架
@@ -53,3 +54,12 @@ updated: 2026-05-20
 **骨架**:
 > [IV] is calculated as the [aggregation_method] [annual] [construct] across members of a firm's [group] ([citations]). To compute this measure, we carefully followed the procedure documented in [domain] research ([citations]). We first used [source] to identify the [group_members] in each organization ([citations]). Next, we identified each [member]'s [construct] by accessing [data_source] from [database]. Using the [data], we then calculated [N] indicators that have been shown to collectively reflect [construct] ([citations]): (1) [indicator_1]; (2) [indicator_2]; (3) [indicator_3]; and (4) [indicator_4]. Each indicator ranges from [min] to [max]; [max] represents [pure_form], [min] represents [opposite_form]. Following research precedence, we [aggregation] the indicators ([citations]), as they demonstrate high reliability and internal consistency (α=[value]). In line with this literature, we assign a score of [neutral_value] to individuals with no [data], indicating that they are [neutral_label] ([citations]). That said, in robustness checks we remove [missing_data_group] from our sample and demonstrate that assigning a value of [neutral_value] to them does not meaningfully influence our results.
 **与原骨架差异**: 政治意识形态的**标准操作化流程**——从 Chin et al. (2013) 确立的四个政治捐赠指标到均值聚合。关键要素：(1) 四指标全覆盖（捐赠数量比/金额比/候选人比/年份比）；(2) 高内部一致性引用 (α=0.95)；(3) 非捐赠者处理策略 (赋中性值0.5 + 排除稳健性检验)；(4) 每句都有方法论引用链。该骨架可迁移至任何使用 FEC/Open Secrets 政治捐赠数据的研究（CSR、公司创业、高管薪酬等）。
+
+### 变体 4: 外部自然事件作工具变量 + 三因排除限制论证 (1篇高价值)
+**来源论文**: Qiao, Hiatt & Sine 2026 (SMJ)
+**验证状态**: 通过 (单篇高价值，"外部自然事件→非正式关系"工具变量论证的稀缺范式)
+**写入日期**: 2026-06-16
+**槽位**: M8
+**骨架**:
+> An important consideration is that [actors] might self-select whether they [form the focal tie / take the treatment], creating an endogeneity issue. Furthermore, comparing the reduced-form [DV] model with the [mediator-included] model, Shaver ([2005]) suggested the reduced form may be mis-specified due to an omitted [mediator/endogenous regressor], and recommended an instrumental variable analysis. We focused on [an exogenous external / natural event — e.g., natural disasters in the actor's home market] as an instrumental variable. First, [the event] is exogenous, reflecting "nature's fury" ([citations]), and is not affected by [the outcome]. Second, [the event] might expose limitations of formal institutions (e.g., written rules and regulations) for acquiring strategic resources from the state, requiring [actors] to seek informal means—such as [forming the focal tie] ([citations]). Third, the existing [outcome] literature suggests that [actors] typically base [the outcome] on [alternative determinants: e.g., distance, host-market institutions, demand, own capabilities]; [the event], hence, may predict [the treatment] but have a limited effect on [the outcome] directly ([citation]). So, the instrument may satisfy exclusion-restriction conditions. We obtained data on [the event] from [source] and used it as an instrument.
+**与原骨架差异**: 与变体 1–3（Lewbel 内部生成 IV）的根本区别——本变体用**外部自然/准自然事件**作 IV，且排除限制通过**三层论证**建立：(1) 事件外生性（"nature's fury"，不受结果影响）；(2) 事件→处理的渠道（制度缝隙逻辑：正式制度失效→寻求非正式关系）；(3) 事件→结果的直接渠道**缺失**（由结果文献的已知决定因素反推）。第（2）层是核心理论增量——IV 通过"挤压正式资源获取"间接推动处理。诚实边界：第（3）层"无直接渠道"是排除限制的关键假设，本质不可检验，必须用结果领域文献的既有发现支撑，不可断言。适用于 IV 通过"制度/资源缝隙"推动企业形成非正式关系（政治关联、军方关联、银企关系）的研究。配合 control-function 报告见 `write-results/IV-2SLS.md` 变体 4。

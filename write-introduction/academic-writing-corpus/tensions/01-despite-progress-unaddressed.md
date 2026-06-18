@@ -19,8 +19,9 @@ source_papers:
   - park_lange_jeon (SMJ): "Fusion paragraph: Tension+Theory Lens+Preview in one paragraph. Exogenous change. 'Despite prevalence... underexplored concept'"
   - desai2012 (AMJ, 2012): "双层Tension: Incompleteness外层(no guidance on field-level defense) + Inadequacy内层(theory shifted from stability to change)"
   - gamache_etal2020 (SMJ, 2020): "三层递进Incompleteness: general→specific gap→why层面根本问题。Stakes嵌入Tension('This omission is critical, as...')"
+  - habel2016 (JM, 2016): "双重证据缺口: 学术文献缺失+practitioner直接引语支撑; 三层递进收窄(not subject→cannot explain→remains unclear)"
 created: 2026-05-18
-updated: 2026-05-27
+updated: 2026-06-03
 source: Extracted from MVP30 narrative_analysis files + mannor2016 + darby2025 distill
 ---
 
@@ -366,6 +367,63 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 ---
 
+### 变体 O：双过程视角转折型（wang2024 型）
+
+**模板**:
+> "Prior research has revealed that [DV] is influenced by [actors'] [dominant attribute type], such as [example 1] ([citation]), [example 2] ([citation]), and [example 3] ([citation]). While insightful, this line of research has primarily focused on a [dominant process] through which [actors] make [DV] decisions. Yet, [decision-making context] 'is not always a [dominant process description]' ([citation]) but is also subject to the influence of [alternative process] ([citation]). According to [theory framework], [dominant process] and [alternative process] operate in parallel and are comparably influential ([citations]). [Authority] argued that '[quote linking alternative process to judgment]' ([citation]). Compared with [dominant process], [alternative process] is relatively [characteristics] ([citations]). Although [alternative process] has a significant impact on [outcome] ([citation]), 'the impact of [alternative process] on [organizational outcome] has been largely neglected' ([citation])."
+
+**来源**: wang2024 (SMJ), P2-P3
+
+**原文锚定**:
+> "Prior research has revealed that CSR is influenced by CEOs' cognitive attributes, such as CEO hubris (Tang et al., 2021), CEO narcissism (Petrenko et al., 2016), and CEO greed (Zhu & Chen, 2015). While insightful, this line of research has primarily focused on a deliberative process through which CEOs make CSR decisions. Yet, CSR 'is not always a deliberative process' (Mikels et al., 2010: 1173) but is also subject to the influence of emotional processes (Slovic et al., 2005). According to dual process theories of information processing, deliberative and emotional processes operate in parallel and are comparably influential (Epstein, 1994; Mikels et al., 2010; Slovic et al., 2005). Zajonc (1980: 154) argued that 'affect is not only the result of cognitive processes but also an influence on them.' Compared with deliberative processes, emotional processes are relatively spontaneous, automatic, and less cognitively effortful (Côté, 2005; Harmon-Jones et al., 2013; Schwarz & Clore, 2007). Although affect has a significant impact on judgment and decision making (Forgas, 1995; Isen, 2001), 'the impact of affect on organizational outcomes has been largely neglected' (Barsade & Gibson, 2007: 91)."
+
+**关键特征**:
+- **三例证共识建立**: 2 句话内用三个具体 CEO 特征各配一个引用建立文献基础（hubris / narcissism / greed）
+- **权威引语作为 pivot**: 带页码的直接引语（Zajonc 1980: 154）作为从认知到情感的转折支点
+- **Dual-process 理论框架背书**: Mikels et al. 2010, Slovic et al. 2005, Epstein 1994 共同支撑平行过程论点
+- **心理学→组织学的跨层映射**: 先承认情感影响个体判断（Forgas 1995; Isen 2001），再指出对组织结果的忽略（Barsade & Gibson 2007）
+- **温和但有力的缺口措辞**: "has been largely neglected" — 不指责文献错误，只指出遗漏
+
+**适用条件**:
+- 将心理学 dual-process 框架引入组织/战略研究
+- 已有文献过度依赖某一信息处理机制（如认知/理性）而忽略平行机制（如情感/直觉）
+- CEO 特征、决策者心理类研究
+- Gap 类型为 Incompleteness：不是已有文献错了，而是视角不完整
+
+**禁忌**:
+- 不要在 dual-process 的两个过程未在心理学中确立平行地位时使用——必须有理论文献支撑两者"operate in parallel and are comparably influential"
+- 不要只有 "emotional processes matter" 而无具体理论框架——需明确引用 dual-process theory（如 Epstein 1994; Mikels et al. 2010）
+
+---
+
+### 变体 P：双重证据缺口型（habel2016 型）
+
+**模板**:
+> "To our best knowledge, [specific mechanism/linkage] has not been the subject of previous [field] research. Consequently, prior [field] research cannot fully explain [linkage], and it thus remains unclear [specific RQ]. [Anecdotal/practitioner evidence] confirms that [real-world manifestation of the gap], with [source] stating that '[direct quote illustrating the gap].'" Alternatively: "[Media/practitioner source] states that '[quote]' ([citation]). Similarly, [academic-practitioner source] indicates that [supporting observation] ([citation])."
+
+**来源**: habel2016 (JM), P3-P4
+
+**原文锚定**:
+> "To our best knowledge, the notion that CSR engagement may induce customers to infer a cost burden has not been the subject of previous marketing research. Consequently, prior marketing research cannot fully explain the CSR–price fairness linkage, and it thus remains unclear how firms' CSR activities influence the perception of price fairness." [...] "Anecdotal evidence confirms that customers may consider CSR price markups by viewing firms 'to pass on responsibility and cost for sustainability initiatives down the supply chain whilst taking the credit' (CorporateWatch 2006, p. 16). Similarly, Chandler and Werther (2014, p. 166) indicate that firms might 'pass [CSR] cost increases on to their customers in the form of higher prices.'"
+
+**关键特征**:
+- **三层递进收窄**: "has not been the subject of" → "cannot fully explain" → "remains unclear" —— 从研究缺失→解释不足→问题未解
+- **双重证据支撑**: 学术文献缺失 + practitioner/anecdotal 证据补充。实践证据在 Tension 而非 Hook 中——先建学术 gap，再用现实证据加强
+- **直接引语策略**: 用 CorporateWatch、Forbes 等非学术来源的直接引语为 gap 提供"现实世界确实存在此问题"的锚点
+- **"To our best knowledge"**: 比 "few studies have examined" 更精确——不是研究少，是**没有**研究触及这个机制
+
+**适用条件**:
+- 学术文献缺乏但实践/媒体已有直觉观察的研究场景
+- 消费者行为、营销学、公共政策领域尤其适用
+- 有可引用的 practitioner/media 文献支撑
+
+**禁忌**:
+- 实践证据必须是可引用的具体来源（CorporateWatch, Forbes, 行业报告），不能用 "anecdotally, customers feel..." 无源引用
+- 不要用此变体掩盖文献综述不足——学术 gap 段仍需展示对已有文献的掌握
+- 不要将 anecdotal 证据放在 Hook 中（应放在 Tension）——Hook 负责建立兴趣，Tension 负责建立 gap
+
+---
+
 ### 变体 N：三层递进Incompleteness型（gamache_etal2020 型）
 
 **模板**:
@@ -388,6 +446,29 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 - 目标期刊接受Stakes嵌入Tension（SMJ、OS、JM、JMR适用；AMJ/ASQ建议拆分）
 
 **禁忌**: 不要在只有一层gap时使用三层递进——如果gap只是一个"few studies have examined"，用标准变体A即可
+
+---
+
+### 变体 Q：外部批评授权型（hoffmann2024 型）
+
+**模板**:
+> [Citation] critique that prior work lacks theory and evidence on [specific dimension] beyond [established domain]. Specifically, it has not examined the role of [novel driver] as a [mechanism type] in regards to [outcome] decisions. Finally, with the majority of previous work coming from the field of [dominant discipline], the existing literature does not provide insights about how variables under the influence of [alternative function/perspective], such as [specific variable], can act as [boundary conditions / mechanisms] of [phenomenon of interest].
+
+**来源**: hoffmann_cheong_phan_zurbruegg2024 (JM), P7 (Contribution paragraph)
+
+**原文锚定**:
+> "In doing so, we respond to Bendig et al.'s (2018) critique that prior work lacks theory and evidence on precursors of recalls beyond operational issues. Specifically, it has not examined the role of legal changes reducing shareholder litigation risk as a driver of managerial opportunism in regards to recall decisions. Finally, with the majority of previous work coming from the field of operations management, the existing literature does not provide insights about how variables under the influence of the marketing function, such as a firm's customer focus, can act as boundary conditions of potential managerial opportunism."
+
+**关键特征**:
+- **以其他学者的具体批评为证据基础**: 非作者自己判断"这里缺了东西"，而是引用已发表学者（Bendig et al. 2018）的明确批评作为缺口的外部验证——"we respond to [citation]'s critique"
+- **明确区分两层次缺口**: broad omission（operational issues only → non-operational factors）→ specific omission（legal changes as driver of opportunism）→ discipline perspective gap（OM dominated → marketing variables as boundary conditions）
+- **缺口陈述嵌入 Contribution 段落**: 不是先单独陈述缺口再独立写贡献，而是将缺口作为贡献声明的直接铺垫——"We add by examining [X]. In doing so, we respond to [Y]'s critique."
+- **"the existing literature does not provide insights about"** → 比 "few studies have examined" 更精确——不仅缺研究，还缺特定视角/功能的洞察
+- **学科视角的分层**: 不仅指出总体缺口，还明确哪个学科主导、哪个学科的视角缺失
+
+**适用**: 适用于有明确文献批评可引用的 Incompleteness 场景。当领域内已有学者明确提出"缺乏某类研究"时，用此变体将缺口从作者主张升级为领域共识。
+
+**禁忌**: 必须准确引用和尊重原始批评——不能为了强化缺口而曲解引文原意。确保被引用的 critique 确实来自有分量的学者（通常是该领域的综述/评论文章）。
 
 ---
 

@@ -3,13 +3,15 @@ type: canonical_theory_lens
 canonical_id: "theory-lens-05-maxim-contrast"
 status: VERIFIED
 gap_type: Incompleteness / Inadequacy
-cross_paper: VERIFIED (1 paper, distinctive)
+cross_paper: VERIFIED (2 papers, 2 distinct sub-types)
 generativity: ADAPTABLE
 exclusivity: HIGH
 source_papers:
-  - haunschild2015 (OS, 2015): "we will not launch until proved safe to do so" vs "we will launch unless it is proved unsafe to do so"
+  - haunschild2015 (OS, 2015): symmetric paired maxim for safety-vs-efficiency trade-off
+  - qiao_hiatt_sine2026 (SMJ, 2026): single historical aphorism (MacArthur) as foil, overturned by persistence findings
 created: 2026-05-19
-source: Distilled from Haunschild, Polidoro & Chandler (2015), Organization Science
+updated: 2026-06-16
+source: Distilled from Haunschild, Polidoro & Chandler (2015), Organization Science; extended with Qiao, Hiatt & Sine (2026), SMJ
 ---
 
 # Theory Lens: Maxim Contrast / 格言对比
@@ -123,3 +125,37 @@ source: Distilled from Haunschild, Polidoro & Chandler (2015), Organization Scie
 | AMJ | ⭐⭐⭐ 高 | 适用于心理构念的具象化（如 approach motivation: "seek gain" vs avoidance motivation: "avoid loss"） |
 | SMJ | ⭐⭐ 中 | SMJ 偏好抽象理论语言，maxim 可能被视作"过于通俗" |
 | JM/JMR | ⭐⭐ 中 | 需将 maxim 转化为消费者/营销决策语言 |
+
+---
+
+### 变体 B：单句历史/文化格言作 foil，用发现推翻（qiao2026 型）
+
+> "Contrary to [widely known quote / cultural aphorism] that '[aphorism]' ([attribution]), we demonstrate that [the empirical pattern the aphorism would predict] does not hold: [finding overturning the quote], though [boundary / variation that qualifies the overturn]."
+
+**来源**: qiao_hiatt_sine2026 (SMJ), Introduction
+
+**原文锚定**:
+> "Contrary to General Douglas MacArthur's famous quote that 'Old soldiers never die; they just fade away,' we demonstrate that both military imprints (capability and identity) persist rather than diminish quickly over time, though the durability of effects varies and their relative influence differs with the present-day situations of the imprinting military partner."
+
+**关键特征**:
+1. **单句 foil（非对称双格言）** — 只引用一句广为人知的名言/谚语/俗语，用研究发现直接推翻，区别于变体 A 的对称双 maxim。
+2. **固定句式 "Contrary to [quote], we demonstrate that..."** — 名言 → 推翻 → 限定，三段递进。
+3. **"though..." 收尾的限定** — 推翻不是绝对的：用 "though the durability varies" 保留理论精度，防止审稿人攻击过度宣称。这一句往往是论文理论增量的浓缩（这里是"两条印记持续性不同"）。
+4. **名言须与衰减/惯性/持续主题相关** — 名言本身预设了"X 会衰退/消失/淡出"，论文发现"X 持续"，制造反预期。
+
+**与变体 A 的区分**:
+
+| | 变体 B 单句 foil (qiao2026) | 变体 A 对称双 maxim (haunschild2015) |
+|---|---|---|
+| 结构 | 单句名言 → 发现推翻 | 对称双格言对比 trade-off |
+| 名言来源 | 历史/文化格言、名人语录 | 组织日常决策口号（研究者提炼） |
+| 功能 | 锚定 persistence/反预期假设、tie the knot | 具象化对立目标、建立 trade-off |
+| 收尾 | "though..." 限定 | "are related and will shift over time" |
+| 适用 | imprinting、路径依赖、历史遗产、组织惯性、声誉持续性 | 安全-效率、探索-利用等 trade-off |
+
+**适用**: imprinting、路径依赖、历史遗产、组织惯性、声誉/污名持续性——任何"大众/常识预期 X 会衰退或消失，但研究发现 X 持续甚至增强"的反预期研究。
+
+**反模式**:
+- 名言与论文核心张力无关（仅"听起来好"）→ foil 必须直指论文要推翻的那个"会衰退"的预期
+- 推翻后无 "though..." 限定 → 沦为过度宣称；限定句应承载论文真正的理论精度（边界/异质性）
+- 名言出处不可靠或非广为人知 → foil 的说服力来自读者对名言的熟悉度，冷门引文失去效果

@@ -2,11 +2,11 @@
 name: write-results
 description: |
   顶刊 Results 填空段落骨架生成器。输入模型类型后输出带 [placeholder] 的可直接粘贴段落。
-  覆盖 OLS/FE、Logit/Probit/Ordered Probit、生存分析、DiD、计数模型（含AME+区域显著性）、实验、多研究、IV/2SLS、匹配DiD、堆叠扩散Logit、同伴效应/网络效应、推断二元结果、跨受众构念对比、三向交互、构造暴露分解共十六种结果类型。
-  触发词：「写results」「results模板」「结果部分怎么写」「帮我写results」「result skeleton」「写结果」「假设检验」「交互效应」「稳健性检验」「经济显著性」「平行趋势」「marginal effect」。
-  当用户提及系数解释、表格导航、模型序列、robustness check、安慰剂检验、机制检验时也应触发。
+  覆盖 OLS/FE、Logit/Probit/Ordered Probit、生存分析、DiD、计数模型（含AME+区域显著性）、实验、多研究、IV/2SLS、匹配DiD、堆叠扩散Logit、同伴效应/网络效应、推断二元结果、跨受众构念对比、三向交互、构造暴露分解、双受众平行对比、非显著深化/反方向共十八种结果类型。
+  触发词：「写results」「results模板」「结果部分怎么写」「帮我写results」「result skeleton」「写结果」「假设检验」「交互效应」「稳健性检验」「经济显著性」「平行趋势」「marginal effect」「双受众」「对立结果」「替代解释」。
+  当用户提及系数解释、表格导航、模型序列、robustness check、安慰剂检验、机制检验、非显著深化、方向相反时也应触发。
   基于 28 篇 MVP30 范文语料库和 Pollock 2025 Ch07。
-version: 2.5.0
+version: 2.6.0
 ---
 
 # Role
@@ -165,6 +165,21 @@ Hypothesis [x] predicted that [predictor] would be [positive/negative] related t
 Hypothesis [x] predicted that [predictor] would [increase/decrease] [outcome]. Because [model] is nonlinear, we interpret Hypothesis [x] using [marginal effects/predicted probabilities] rather than coefficient size alone. The marginal effect of [predictor] is [direction] and statistically significant ([value], p < [threshold]), indicating that [substantive probability change]. Thus, Hypothesis [x] is supported.
 ```
 
+**Logit 经济显著性三层解释变体**（hoffmann2024 型）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：Logit/Probit 专用
+```text
+Hypothesis [x] predicted that [treatment] would [increase/decrease] the likelihood of [outcome]. Because we estimate a conditional logit model, we interpret results using three complementary approaches to convey economic significance.
+
+First, the odds ratio for [treatment] is [value] (p < [threshold]), indicating that [treatment] is associated with a [X]% [increase/decrease] in the odds of [outcome] relative to [baseline condition]. Second, to translate this into more interpretable units, we compute the relative change in predicted probability: moving from [baseline] to [treatment condition], the predicted probability of [outcome] [increases/decreases] by approximately [X]% relative to the baseline probability of [base rate]%. Third, we anchor this effect in the absolute base rate: this relative change corresponds to an absolute change of [X] percentage points in the probability of [outcome] — a meaningful shift given that [base rate contextualization: e.g., the unconditional probability of a recall in any given year is only Y%].
+
+This three-layer interpretation — odds ratio → relative probability change → absolute base-rate change — allows readers to assess both statistical and practical significance without overinterpreting logit coefficients, which lack a natural metric.
+```
+
+**Logit 经济显著性三层解释 QC**:
+- Layer 1 (odds ratio): 必须报告 p 值或置信区间，不能只报告点估计
+- Layer 2 (relative change): 必须从 odds ratio 转换为预测概率变化（非手动计算，需用 margins/marginsplot 或等效命令）
+- Layer 3 (absolute base rate): 必须引用具体的基准概率（如样本中无条件召回概率），"meaningful" 判断必须有基准
+- 三层必须同时出现，不能只报告 odds ratio 就跳到 "thus supported"
+
 **有序 Probit 专用**： 🔬 EXPERIMENTAL（2-3 篇范文）⚠️ 保守替代：Logit/Probit 专用 + 增加序数解释句
 ```text
 Hypothesis [x] predicted that [predictor] would [increase/decrease] the likelihood of [outcome category]. Because [outcome] is ordinal, coefficients indicate direction but not the category-specific magnitude of the effect. We therefore calculate marginal effects for [category A] and [category B]. The marginal effects show that [predictor] is associated with [higher/lower probability] of [category]. The effect is strongest for [category], which is consistent with [theoretical expectation]. Thus, Hypothesis [x] is supported.
@@ -214,6 +229,16 @@ Hypothesis [x] predicted that [predictor] would [increase/decrease] the likeliho
 ```text
 Hypothesis [x] predicted that [predictor] would be [positive/negative] associated with [outcome A] but [positive/negative / null] associated with [outcome B]. Model [a] of Table [z] shows that the coefficient for [predictor] on [outcome A] is [direction] and [significant / not significant] (β = [value], p = [value]). In contrast, Model [b] shows that the coefficient on [outcome B] is [direction] and [significant / not significant] (β = [value], p = [value]). The divergence between [outcome A] and [outcome B] is consistent with [theoretical mechanism: audience-specific interpretation / stakeholder-specific incentives], because [theoretical reasoning]. Thus, Hypothesis [x] is [supported / partially supported].
 ```
+
+**双受众平行对比专用**（Pontikes 2012 模式，同一 X 对两类受众产生方向相反的效果）： ✓ STANDARD（Pontikes 2012 ASQ 等高被引范文复现）
+
+```text
+Models [a-b] test hypothesis [H_A], which predicted that [predictor] would be [negatively] associated with [DV_A]. Results show strong support for this prediction. [Measure] has a [negative] effect on [DV_A] ([coefficient], p < [threshold]). [Robustness checks: e.g., This pattern holds across alternative specifications / measures / subsamples]. In substantive terms, a one-standard-deviation [increase/decrease] in [predictor] corresponds to [magnitude statement: e.g., a decrease of X rank points / an X% change]. These results indicate that [one-sentence summary of finding for audience A].
+
+Models [c-d] test hypothesis [H_B], which proposed the opposite relationship for [audience B]'s evaluation of [DV_B]. Results likewise show strong support. [Measure] has a [positive] effect on [DV_B] ([coefficient], p < [threshold]). [Robustness: This pattern also holds across alternative specifications]. In substantive terms, [magnitude statement: e.g., an organization one SD above the mean is X times more likely to receive funding]. The same [construct] that makes [entities] [less appealing to audience A] makes them [more appealing to audience B]. These opposing effects are illustrated in [Figure x].
+```
+
+> **双受众平行对比 QC 检查点**: (1) 双Y的系数方向必须真的相反（不只是一方显著一方不显著）；(2) 收束句 "The same [X] that makes...makes..." 必须在 R3 段落内出现，不由 Discussion 承担；(3) Figure 必须在 R3 段落内引用；(4) 两个受众段落的节奏应接近对称（都含 magnitude + robustness）。
 
 **实验专用**：
 ```text
@@ -282,6 +307,24 @@ Hypothesis [x] predicted that [predictor] would [increase/decrease] [outcome], a
 Model [x] tests whether [moderator] conditions the effect of [treatment] on [outcome]. The interaction is [direction/status]. As Figure [y] shows, the treatment effect is [stronger/weaker] when [moderator] is high and [weaker/null] when [moderator] is low, consistent with [mechanism].
 ```
 
+**联合调节变量 "Switch-Off" 分析变体**（hoffmann2024 型）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：DiD 调节专用 + 分别报告两个交互项
+```text
+Our theory predicts that [moderator 1] (an [intrinsic] constraint) and [moderator 2] (an [extrinsic] constraint) each independently weaken the negative effect of [treatment] on [outcome]. To provide a more complete picture of how these constraints jointly shape [outcome] decisions, we examine what happens when both constraints are simultaneously present versus absent.
+
+We define four joint-constraint scenarios based on [moderator 1] and [moderator 2] being at their [low/high] levels ([operational cutoff: e.g., above/below median]). Figure [x] plots the predicted probability of [outcome] under [treatment = 0] versus [treatment = 1] for each scenario.
+
+When [treatment] is absent, the predicted probability of [outcome] is [relatively stable / low / high] across all four scenarios, ranging from [X%] to [Y%]. When [treatment] is adopted, predicted probabilities diverge sharply across scenarios. In the [worst-case] scenario — where both constraints are absent ([moderator 1] = low, [moderator 2] = low) — [treatment] is associated with a [large] [decrease/increase] in [outcome] probability, from [baseline%] to [post-treatment%]. In the [best-case] scenario — where both constraints are present ([moderator 1] = high, [moderator 2] = high) — the difference between [treatment] and [no treatment] [narrows substantially / becomes statistically indistinguishable from zero].
+
+This "switch-off" analysis — documenting that the main effect is strongest when both constraints are absent and weakest (or absent) when both are present — provides a holistic view of how [intrinsic] and [extrinsic] governance mechanisms jointly shape [agent] decision making.
+```
+
+**联合调节 "Switch-Off" QC**:
+- 必须在两种约束分别测试通过（各自单独显著）之后，再做联合分析
+- 四种场景的定义必须透明（median split / quartile / specific threshold），不能隐含分类逻辑
+- "worst-case" 和 "best-case" 必须有理论依据——对应理论预测中约束最弱和最强的组合
+- 必须同时展示 treatment=0 和 treatment=1 两种状态，不能只报告 difference
+- 联合分析不是独立的假设检验——它是补充证据，服务于边界条件的完整叙事
+
 **子样本交互变体**（用分组检验而非交互项时，R4 报告）：
 ```text
 Hypothesis [x] predicted that [moderator] would moderate the relationship between [predictor] and [outcome]. Because [theoretical reason for distinct regimes / distribution characteristics], we split the sample by [moderator] into [high-severity / high-group] and [low-severity / low-group] subsamples and estimated separate models for each group. For the [high group], the coefficient on [predictor] is [direction] and [significant/not significant] ([coefficient], [p-value]). For the [low group], the coefficient is [direction] and [significant/not significant] ([coefficient], [p-value]). The pattern indicates that [predictor] [influences/does not influence] [outcome] in the [high group] but [not in the low group / to a lesser extent in the low group], supporting Hypothesis [x]. We note that because we use separate subsamples rather than a pooled interaction term, we do not conduct a formal test of coefficient equality; the pattern should be interpreted descriptively.
@@ -317,10 +360,29 @@ To assess the economic impact of [predictor], we examine predicted changes in [d
 To assess substantive magnitude, we examine [outcome] across quartiles of [predictor]. Table [x] presents the range of [outcome] for [subsamples]. Moving from the first quartile ([Q1 value]) to the second quartile ([Q2 value]) — an approximately [time/amount] change — is associated with a [percentage] [increase/decrease] in [outcome]. The magnitude is meaningful because [industry benchmark or theoretical reason].
 ```
 
+**调节变量经济显著性：25th→75th 百分位预测概率变体**（hoffmann2024 型）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 R5 段落
+```text
+To assess the economic significance of the moderating effect, we calculate predicted probabilities of [outcome] at different combinations of [moderator] and [treatment]. Holding other variables at their means, moving from the 25th to the 75th percentile of [moderator] changes the predicted probability of [outcome] by [X] percentage points when [treatment condition] holds — an economically meaningful shift given that the unconditional probability in our sample is only [Y]%. In contrast, when [treatment condition] does not hold, the same change in [moderator] is associated with a [smaller / negligible] shift of only [Z] percentage points. This asymmetry confirms that [moderator] primarily operates through the [treatment → outcome] channel, as our theory predicts.
+```
+
+**调节经济显著性 QC**:
+- 必须报告 25th 和 75th 百分位的具体值，不能只写 "low" 和 "high"
+- 必须同时报告 treatment=0 和 treatment=1 两种状态下的预测概率变化（展示不对称性）
+- 必须引用无条件基准概率作为"meaningful"的参照
+- 禁止只报告 "the interaction is significant (p < .05)" 就结束——交互项的经济显著性必须量化
+
 **转折点 / 最优水平经济显著性专用**（配合 U-shaped R3）：
 ```text
 To assess the substantive magnitude of the U-shaped relationship, we examine the turning point and its position in the empirical distribution. The turning point occurs at [value/percentage] of [predictor], which corresponds to [the 65th percentile / one SD above mean / median] of the observed distribution. This level is economically meaningful because [benchmark: e.g., it exceeds the average state ownership ratio among partially privatized firms]. A shift from [low baseline] to the optimal level is associated with a [Y-unit] increase in [outcome], representing approximately [percentage] improvement relative to the sample mean.
 ```
+
+**多构念联合经济显著性专用**（Pontikes 2012 模式，报告两个 predictor 联合变动的净效应）： ✓ STANDARD
+
+```text
+It is important to note that the combined effect of [predictor A] and [predictor B] is [direction] through most of the range of these data. An [entity] one standard deviation above the mean on both [predictor A] and [predictor B] [suffers/benefits from] a [change] of [magnitude] in [DV] compared with an [entity] one standard deviation below the mean on each measure. The combined effect of [construct], considering both [component X: e.g., label-level ambiguity] and [component Y: e.g., organization-level spanning], is [summary: e.g., negative / positive / null].
+```
+
+> **多构念联合 QC**: 仅当两个 predictor 理论上来自同一构念的两个维度时使用（如 label-level × org-level）；不要对任意不相关的 predictor 计算联合效应。
 
 ---
 
@@ -359,6 +421,28 @@ We test whether the interaction between [mediator] and [predictor] mediates the 
 Hypothesis [x] predicted that [predictor] would be [direction] related to [outcome]. The coefficient for [predictor] is [direction] but does not reach conventional significance levels ([coefficient], [p-value]), providing no direct support for the main effect. However, the interaction between [predictor] and [moderator] (Hypothesis [z]) is [direction] and statistically significant (β = [value], p [relation] [threshold]). Because the interaction is significant, the main effect of [predictor] should not be interpreted independently ([Aiken & West / Dawson & Richter]); instead, its effect is conditional on [moderator]. We therefore interpret the results through the lens of the significant interaction and defer discussion of the null main effect to the Discussion.
 ```
 
+**非显著深化变体**（非显著结果构成后续显著发现的 baseline，而非孤立报告）： ✓ STANDARD（Pontikes 2012 模式）
+
+```text
+[Hypothesis / prediction] proposed that [expected relationship]. The coefficient for [predictor] is [direction] but does not reach conventional significance levels ([coefficient], [p-value]). This null result is noteworthy because it establishes a baseline: [construct A] does not appear to [expected effect] for this audience. Yet this same [construct]—when tested against [audience B] below—shows the opposite pattern, suggesting that the null result is not a measurement failure but a theoretically meaningful audience difference.
+```
+
+> **非显著深化 QC**: 
+> - 仅当该非显著结果为后续的显著对立发现提供对比基线时使用
+> - 非显著 + 显著对立 = 理论上有意义的双受众差异，而非“我们测不出来”
+> - 如果只是孤立非显著（没有后续理论对比），使用通用填空段落，不要过度解释
+
+**方向相反诚实解释变体**（结果方向与假设相反，但有理论依据可解释）： ✓ STANDARD（Pontikes 2012 模式）
+
+```text
+Contrary to Hypothesis [x], which predicted [expected direction], the coefficient for [predictor] is [opposite direction] and [statistically significant / not significant] ([coefficient], [p-value]). Rather than treating this as a simple null finding, we note that [theoretical explanation grounded in prior literature or alternative mechanism]. This pattern is consistent with [alternative theoretical account], though we did not hypothesize it ex ante. Given the post-hoc nature of this interpretation, we treat it as suggestive and return to it in the Discussion.
+```
+
+> **方向相反 QC**: 
+> - 必须有理论解释（不是 "unexpected future research" 空话）
+> - 必须诚实标注 post-hoc 性质
+> - 仅当方向相反的结果有 ≥2 个理论锚点（citation 或机制逻辑）时才使用此变体；否则使用通用填空段落
+
 ---
 
 ### R7. 稳健性 / 效度 / 敏感性检验
@@ -395,10 +479,53 @@ A potential threat to our causal claims is [reverse causality / omitted variable
 We conducted supplemental analyses to examine whether [alternative mechanism / scope condition] explains the results. When [alternative mechanisms] were included, [focal predictor] continued to explain the effect, whereas [rival mechanisms] did not. This strengthens confidence that [main inference] reflects [theorized process].
 ```
 
+**替代解释三步反驳变体**（Pontikes 2012 模式：提出替代解释 → 设计实证检验 → 证伪排除）： ✓ STANDARD
+
+```text
+[Alternative explanation / rival mechanism] could account for our findings if [condition for rival to hold]. To test this possibility, we [specific empirical test: e.g., restrict sample to subsample where rival should be strongest / add control for rival mechanism / test whether effect persists under rival's predicted condition]. If [alternative explanation] were driving the results, we would expect [pattern that rival predicts]. Instead, we find [opposite / null pattern]. The [focal effect] [persists / remains directionally consistent] even in [the subsample most favorable to the rival], suggesting that [alternative explanation] does not account for the main pattern.
+
+A second alternative is that [second rival]. If this were the case, [empirical implication]. We test this by [test]. Results show [null/support for focal], reducing concern that [second rival] explains the findings.
+
+Taken together, these falsification tests provide evidence against the most plausible alternative explanations for our results.
+```
+
+> **替代解释三步反驳 QC**:
+> - 每个替代解释必须有可证伪的经验蕴含（如果 rival 为真，数据应显示 X）
+> - 不能只用 "future research should examine" 替代实证反驳
+> - 反驳逻辑必须对称：如果 rival 成立 → 应看到 pattern Y → 我们没看到 Y → rival 不被支持
+> - 建议 2-3 个 rival，按 plausibility 排序，但不超过 4 个
+
+**受众类型 falsification 专用**（Pontikes 2012 模式，排除一类受众中的子类型混淆）： ✓ STANDARD
+
+```text
+One might argue that the results for [audience B] are driven not by [theorized mechanism] but by [confounded subtype within audience B: e.g., corporate VCs pursuing strategic goals rather than financial returns]. To rule out this alternative, we [empirical strategy: e.g., partition audience B into subtypes and re-estimate]. If [confounded subtype] were driving the effect, the coefficient for [focal predictor] should be concentrated in [subtype X] and absent in [subtype Y]. Instead, we find [consistency across subtypes / opposite pattern]. The coefficient for [focal predictor] is [result for subtype A] and [result for subtype B], both [direction/significance]. This pattern indicates that [theorized mechanism]—not [confounded subtype]—drives the main [audience B] result.
+```
+
+> **受众 falsification QC**: 仅当理论中区分了多类受众且某一类受众内部存在可观察的异质性时使用
+
 **DiD 平行趋势专用**：
 ```text
 To assess parallel trends, we estimate an event-study model with leads and lags around [event]. The pre-treatment coefficients are [not distinguishable from zero / stable], suggesting no detectable pre-treatment divergence. The post-treatment coefficients [emerge / increase / persist] after [event], which is consistent with [causal / timing claim]. The lack of pre-treatment movement reduces concern that [outcome trend] anticipated or caused [treatment].
 ```
+
+**替代解释两步排除变体**（hoffmann2024 型 — CONTROL 步 + INTERACT 步）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：替代解释三步反驳变体
+```text
+A plausible alternative explanation for our main effect is that [alternative mechanism] — rather than [theorized mechanism] — drives the reduction in [outcome] following [treatment]. [Alternative mechanism] logic would predict that [treatment] changes [outcome] because [rival causal chain: e.g., firms improve governance in response to law, which independently reduces incidents that would trigger recalls], not because [theorized mechanism: e.g., managers facing lower litigation risk become less vigilant].
+
+We rule out this alternative through a two-step empirical strategy. 
+
+First, we CONTROL for [alternative mechanism proxy] directly. Model [x] of Table [y] adds [control variable(s)] measuring [alternative mechanism]. If [alternative mechanism] were driving the main effect, including these controls should attenuate or eliminate the [treatment] coefficient. Instead, [treatment] remains [direction] and statistically significant ([coefficient], [p-value]), and its magnitude is [qualitatively similar / only modestly reduced] compared to the baseline specification. This indicates that [alternative mechanism] does not account for the main effect.
+
+Second, we INTERACT [treatment] with [alternative mechanism proxy]. If [alternative mechanism] logic holds, the effect of [treatment] should be [stronger/weaker] when [alternative mechanism] is [more/less] operative. Model [z] tests this by adding [treatment × alternative mechanism proxy]. The interaction is [not statistically significant / direction opposite to alternative mechanism prediction] ([coefficient], [p-value]), inconsistent with the [alternative mechanism] account.
+
+Combined, these two tests — direct control and interaction — provide converging evidence against [alternative mechanism] as an alternative explanation for our findings.
+```
+
+**替代解释两步排除 QC**:
+- CONTROL 步必须使用与 main specification 相同的模型规格（仅增加替代机制变量）
+- INTERACT 步的交互项方向必须有明确的理论预测（如果 rival 为真，交互应为正/负）
+- 两步必须都通过才算排除——仅 CONTROL 步通过（系数不变）但 INTERACT 步显著 → rival 部分成立
+- 替代机制变量不能与核心自变量高度相关（r > .7），否则 CONTROL 步的 "系数不变" 是多重共线性造成的假象
 
 **DiD 置换检验专用**： 🔬 EXPERIMENTAL（2-3 篇范文）⚠️ 保守替代：省略
 ```text

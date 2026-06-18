@@ -97,3 +97,66 @@ distinguishing this cross-level direct effect from the cross-level interaction e
 - [ ] 是否排除了反向交互（时序/层级/理论方向）？
 - [ ] 对于跨层模型：unit of analysis, nesting, 和 level-specific theory 是否在假设前声明？
 - [ ] T6 Closure 是否存在？
+
+---
+
+## E3. 嵌入型边界条件（Embedded Boundary Conditions，kalaignanam2017 型）
+
+**适用**: moderator 数量较多（≥3 个）且每个 moderator 有独立理论依据，独立 T5 段落会导致重复和碎片化。将边界条件完全嵌入 T3 机制推演中，通过"条件化机制修改"实现边界论证。
+
+**与独立 T5 的区别**:
+
+| 维度 | 独立 T5 | 嵌入型边界条件 |
+|------|---------|---------------|
+| 结构 | 独立段落，通常在 baseline 假设之后 | 无独立段落，嵌入在 T3 的各小节中 |
+| 假设数 | 适合 1-2 个 moderator | 适合 3-6 个 moderator |
+| 篇幅 | 每个 moderator 占 1 个独立段落 | 每个 moderator 占 1 个小节（含定义+机制+假设） |
+| 理论深度 | 每个 moderator 有深度机制推演 | 每个 moderator 机制较浅但结构平行 |
+| 适用期刊 | AMJ, ASQ, OS | JM, JMR, JOM |
+
+**段落功能地图（每个 moderator 小节）**:
+
+| 步骤 | 段落功能 | 推荐词数 | 必须度 |
+|------|---------|----------|--------|
+| Step 1 | 小节标题：明确 topic | 1 行 | ✅ |
+| Step 2 | Moderator 定义 | 30-50 | ✅ |
+| Step 3 | 基线机制回顾 + 条件化修改 | 60-100 | ✅ |
+| Step 4 | 文献/元分析支撑 | 30-50 | ⚠️ |
+| Step 5 | 对立条件对称论证 | 40-60 | ✅ |
+| Step 6 | 调节假设陈述 | 30-50 | ✅ |
+
+**关键句式**:
+
+**小节开场**:
+```
+"An attribute that creates a dilemma for firms when [decision] is [moderator]. [Moderator] refers to [definition] ([citation]). Although [moderator] increases [cost] for [Option B] and favors [Option A], firms may not have the expertise to [implement]. Therefore, [reasoning A]. [Citation support]. [Reasoning B]. [Meta-analytic evidence] supports this view and suggests that [finding] ([citation]). The rationale is that [theoretical mechanism]. In contrast, when [moderator condition is low], the [advantage] is likely to be suppressed. Given these arguments, we expect [prediction]."
+```
+
+**收敛到假设**:
+```
+"H[N]. The [direction] effect of [IV] on [DV] is [stronger/weaker] when [moderator] is [high/low]."
+```
+
+**语料锚定**:
+- kalaignanam2017 (JM) — 4 个 moderator（technological complexity, NPD capability×2, PLAF），每个 moderator 一个小节，结构完全平行
+
+**关键特征**:
+- "An attribute that creates a dilemma..." — 统一的小节开场句式
+- "refers to" — 构念定义
+- "Although... firms may not have... Therefore..." — 让步→推论结构
+- "Meta-analytic evidence supports this view" — 用元分析增强说服力
+- "In contrast, when... is suppressed" — 低条件对称论证
+- "Given these arguments, we expect" — 收敛到假设
+
+**平行结构要求**:
+- 所有 moderator 小节使用相同的段落结构（定义→机制→假设）
+- 所有 moderator 小节长度相近（避免某小节过短暗示论证不足）
+- 假设编号连续（H1a, H1b, H2a, H2b...）
+
+**反模式**:
+- 平行结构断裂（某 moderator 缺少定义或对称论证）→ 审稿人质疑选择性论证
+- moderator 之间缺少理论联系 → 看似独立论文拼接
+- 嵌入型边界条件用于 1-2 个 moderator → 独立 T5 更合适
+- 嵌入型边界条件用于纯理论期刊（ASQ/OS）→ 审稿人可能要求更深入的单 moderator 论证
+
+**适用期刊**: JM, JMR, JOM, MSOM（偏好紧凑结构）；AMJ/SMJ 需评估 moderator 数量和深度需求

@@ -15,7 +15,8 @@ source_papers:
   - darby2026 (JOM, 2026): Three-part closure (theory + practice + policy)
   - vadakkepatt2022 (JM, 2022): Dark-side narrative (beneficial actions harm stakeholders) + moderator systematization
   - kim2022 (MS, 2022): "Named forces ceremony — four driving forces with formal labels and triggering conditions"
-updated: 2026-05-24
+  - kalaignanam2017 (JM, 2017): Contribution-fronted structure — three contributions detailed before preview/methods
+updated: 2026-06-02
 created: 2026-05-19
 source: Extracted from MVP30 narrative_analysis files + SKILL.md Makadok table
 ---
@@ -318,6 +319,45 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 **禁忌**:
 - 不要用于纯 Incompleteness Gap——"challenges an implicit premise" 暗示了 Inadequacy 元素
 - "implicit premise" 必须确实存在于文献中且可被引用支撑——不能 strawman
+
+---
+
+## 变体 K：贡献前置型（Contribution-Fronted，kalaignanam2017 型）
+
+**模板**:
+> "Our study makes [N] contributions to [field] theory and practice. First, our study is one of the first to test [specific relationship]. [Brief literature context + specific gap]. Second, our study tests [specific distinction] and contributes to prior research in important ways. [Prior research limitation]. Our study responds to this call. We distinguish between [dimension A] and [dimension B] in an effort to provide a more complete picture of [consequences]. Third, our study contributes to conversations in prior research about [trade-offs inherent in choices]. [Prior research on trade-off]. Our study contributes to this stream by showing [specific finding direction]."
+
+**原文锚定**:
+> "Our study makes three contributions to marketing theory and practice. First, our study is one of the first to test the impact of NPD make/buy decisions on product quality. A small but emerging body of literature in marketing has investigated issues related to firm–supplier relationships... However, to the best of our knowledge, no study has examined the product quality effects of both NPD modes... Second, our study tests the impact of NPD make/buy choices on immediate and future product quality... Moorman and Day (2016) note that the emphasis in prior research has been on understanding factors that enhance the effectiveness of NPD buy decisions, and they call for more research on this topic. Our study responds to this call... Third, our study contributes to conversations in prior research about the trade-offs inherent in the NPD make/buy choices..."
+
+**来源**: kalaignanam2017 (JM), P3-P5
+
+**关键特征**:
+- **贡献前置**：在 Preview/Methods 之前详细展开三段贡献声明
+- **每个贡献引用具体文献**：不是泛泛声明，而是回应对话
+- **第二/三贡献中包含"结果预告"**：提前暗示发现方向（differential quality effects）
+- **"responds to this call"**：将贡献与文献呼吁精确对应
+
+**适用场景**:
+- 实证发现复杂、需要提前预告的研究
+- 多维度贡献（≥3 个）需要逐项展开的研究
+- 营销/运营类期刊（JM, JOM, MSOM）偏好管理相关性前置
+
+**风险与禁忌**:
+- **风险**：Contribution 前置要求每个贡献都有充分文献支撑，否则审稿人会质疑"为什么现在就说贡献"
+- **禁忌**：不要用于纯理论论文——理论论文应在 Theory 部分展示贡献，而非 Introduction 中提前承诺
+- **禁忌**：不要预告无法兑现的发现——结果预告必须与 Results 完全一致
+
+**与标准结构的对比**:
+
+| 维度 | 标准结构 | 贡献前置型 |
+|------|---------|-----------|
+| 顺序 | Hook → Lit Turn → Tension → Stakes → Theory Lens → Preview → Contribution | Hook → Tension → Contribution → Preview |
+| Contribution 位置 | 倒数第 1-2 段 | 第 3-5 段 |
+| Stakes 处理 | 独立段落 | 嵌入 Contribution |
+| Theory Lens 处理 | 独立段落 | 嵌入 Tension/Contribution |
+| 适用期刊 | AMJ, ASQ, OS | JM, JOM, SMJ |
+| 风险等级 | 低 | 中（需要充分文献支撑）|
 
 ---
 

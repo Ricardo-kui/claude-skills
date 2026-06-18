@@ -22,9 +22,13 @@ source_type: "{pdf|doi|url|title|abstract|note-upgrade|comparison}"
 reading_stage: "{triage|purposeful|constructive}"
 status: "{to-read|reading|done}"
 created: "{YYYY-MM-DD}"
+updated: "{YYYY-MM-DD}"
 tags:
   - "literature-note"
   - "paper"
+projects:
+  - "{project-slug-1}"
+  - "{project-slug-2}"
 ---
 
 # {Paper Title}

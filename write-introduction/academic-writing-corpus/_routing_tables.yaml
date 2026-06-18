@@ -88,6 +88,10 @@ hooks:
         pollock_type: "Anecdote"
         syntactic_signature: "五幕结构叙事（时间精确、人物有名）"
         exemplar: "desai2012 (AMJ)"
+      - canonical_id: "21-dual-industry-trend"
+        pollock_type: "Trend"
+        syntactic_signature: "宏观变革(数字化) → 双行业平行分化案例 → 收束到研究框架"
+        exemplar: "zhao_ding2022 (OS)"
     high:
       - canonical_id: "06-paradigm-challenge"
         pollock_type: "Trend"
@@ -150,6 +154,10 @@ hooks:
       status: "EMERGING"
       paper_count: 2
       gap_purity: "Incompleteness + Phenomenon — 推荐时标注\"来自单篇范文（haunschild2015 OS）\""
+    "21-dual-industry-trend":
+      status: "EMERGING"
+      paper_count: 1
+      gap_purity: "Inadequacy（zhao_ding2022 OS 单篇范文）— 推荐时标注\"来自单篇范文\""
     other:
       status: "EMERGING"
       paper_count: "1-2"
@@ -310,6 +318,10 @@ pairing_constraints:
       tension: "13-sequential-phenomenon-gap"
       applies_to: "Incompleteness"
       note: "双灾难叙事建立的\"修正-复发\"谜题需要 sequential cycling 缺口来解释"
+    - hook: "21-dual-industry-trend"
+      tension: "02-implicit-assumption-wrong"
+      applies_to: "Inadequacy"
+      note: "双行业案例建立的定位异质性现象，需挑战\"低壁垒机械地转化为多样性\"的隐含前提（变体 D）才能转化为学术问题"
 
   puzzle_paradox_note: "04-puzzle-paradox 有两个配对规则。Inadequacy 场景（\"你们把构念搞混了\"）→ 配 02-implicit-assumption-wrong；Incommensurability 场景（\"两个理论都对但互相矛盾，需要新构念整合\"）→ 配 04-reality-contradicts-consensus。判断依据：用户的 Gap 描述是\"文献理解偏了\"还是\"文献互相矛盾\"。"
 

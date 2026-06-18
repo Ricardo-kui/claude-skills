@@ -463,6 +463,7 @@ def build_frontmatter(
             f"reading_stage: {quote(reading_stage)}",
             f"status: {quote(status)}",
             f"created: {quote(str(date.today()))}",
+            f"updated: {quote(str(date.today()))}",
         ]
     )
 
@@ -470,6 +471,8 @@ def build_frontmatter(
         lines.extend(["tags:", yaml_list(tags, indent=2)])
     else:
         lines.append("tags: []")
+
+    lines.extend(["projects:", "  - \"{project-slug-1}\"", "  - \"{project-slug-2}\""])
 
     lines.append("---")
     return "\n".join(lines)
@@ -489,120 +492,77 @@ def build_researcher_body(
 ) -> str:
     zotero_item_link = markdown_link("Open Zotero Item", zotero_select_uri)
     zotero_pdf_link = markdown_link("Open Zotero PDF", zotero_pdf_uri)
-    return f"""# {title}
+    return f”””# {title}
 
-## Quick View
+## 概述
 
-用一个短段落先交代这篇文章最重要的判断：它到底在说什么，值不值得深读，它最有价值的地方在哪里，以及证据强度大致如何。
+{一段话交代：本文研究什么问题，基于什么核心视角，得到什么主要发现。不用复述摘要，而是用你自己的判断概述论文的”骨骼”。}
 
-## 1. Research Purpose and Research Gap
+---
 
-写成 2-4 段，而不是拆成零碎 bullet。必须明确回答：
+## 1. 引言
 
-第一段：
-这篇文章研究的现象、问题或谜题是什么，为什么这件事值得关心。
+{用自然段落叙述，不要逐段翻译。核心是回答三个问题：}
 
-第二段：
-这篇文章参与的是哪场文献讨论。作者把自己放进了哪些 literatures、对话或争论里。
+### (1) Who cares? 为什么这个问题值得关心？
 
-第三段：
-已有文献没有回答什么。这里不要只写“文献很少研究”，而要写清楚究竟遗漏了什么机制、边界条件、比较关系、测量、或因果判断。
+{这个现象或问题为什么对理论界或实践界重要？作者如何建立问题的重要性——是通过现象冲击、理论悖论、还是实践困境？}
 
-第四段：
-为什么这些未回答的问题重要，以及作者如何利用已有文献把研究问题和独特贡献推出来。
+### (2) What do we know, what don't we know, and so what?
 
-## 2. Theory, Argument, and Hypothesis Logic
+{已有文献做了什么？核心共识或主要流派是什么？作者指出文献的盲区、不足或矛盾在哪里？为什么这个缺口重要（so what）——是缺了关键机制、缺了边界条件、还是理论视角单一？}
 
-写成 2-4 段。
+### (3) What will we learn? 本文要告诉我们什么？
 
-如果是实证论文：
-解释核心构念、理论视角、机制链条、以及假设如何被一步一步“挣出来”。
+{作者采用什么新的理论视角或方法？核心研究问题是什么？预期贡献是什么？}
 
-如果是假设不明显、甚至没有正式假设的理论论文：
-解释作者的概念工作、逻辑推进、论证结构和主张之间的连接。
+---
 
-无论哪种情况，都要说明：
-- 理论逻辑最强的地方在哪里
-- 哪一步有跳跃或偷换
-- 作者如何从文献综述转入自己的解释
+## 2. 理论与假设
 
-如果论文在正式假设前先整合多条理论传统，可加一个小节 `理论前提与框架整合`，说明作者如何让这些理论互补，而不是并排堆放。
+### 基于的理论视角
 
-如果论文按理论块组织假设，可在本节下使用分组小标题。每个假设或核心主张尽量区分：
-- `HOW`：假设本身，即变量、方向、效应类型
-- `WHY`：支撑该关系的机制。若机制可枚举，可用短 bullet 写出多个渠道，最后点出共同依托的上位理论
+{本文基于什么理论？如果是具体理论（如资源基础观、制度理论、代理理论、调节定向理论等），简要介绍该理论的核心观点。如果是多个理论的组合，说明它们如何被整合。}
 
-最后补一段整体理论评估：
-- 多组假设是否共享一个连贯的上位逻辑，还是有“拼接感”
-- 哪个假设组最有说服力，哪个最薄弱，为什么
+{按假设分组展开，不要区分”概述”和”具体假设”两个子标题。每条假设先给出声明，然后用自然段落详细叙述其推导逻辑。这是论文最核心的部分，允许充分展开——关键是把作者如何从理论前提一步步推到该假设的逻辑讲清楚。涉及多个子机制时，分别说明。可以引用关键的理论依据和中间推理步骤。}
 
-## 3. Variables, Measures, and Empirical Strategy
+---
 
-如果论文是实证研究，写成 2-4 段：
+## 3. 研究方法
 
-第一段：
-交代 setting、sample、data source，以及研究设计大致是什么。
+{简要说明：样本/数据来源、核心变量如何测量、分析方法。不用面面俱到，突出与假设检验直接相关的关键设计即可。}
 
-第二段：
-解释核心变量是如何被操作化的。区分理论构念和实际 measure，判断 proxy 是否贴切。
+---
 
-第三段：
-解释文章依赖的识别或比较逻辑是什么。写清楚 variation 从哪里来，关键识别假设是什么，最主要的威胁是什么。
+## 4. 主要发现
 
-第四段：
-概括主要结果与作者如何解释这些结果，并判断这种解释是否超出了设计所能支持的强度。
+{用自然段落概括核心发现：哪些假设得到支持？哪些没有？最值得关注的结果模式是什么？}
 
-如果论文是理论或概念性论文，没有实证部分，则明确写一句：
-`本文为理论/概念性文章，无正式变量测量和因果识别设计；应重点评估其概念界定、论证链条与理论贡献。`
+---
 
-## 4. Contribution, Limits, and My Judgment
+## 5. 核心贡献与局限
 
-写成 2-3 段：
+{本文的核心贡献是什么（理论、实证或方法层面）？最突出的局限或未来方向是什么？}
 
-第一段：
-这篇文章的理论贡献、经验贡献或方法贡献到底是什么。
+---
 
-第二段：
-这篇文章的局限、边界条件、以及最容易被攻击的地方是什么。
+## 6. 与本人研究的关联
 
-第三段：
-我自己的总体判断：这篇文章好在哪里，如果没有它会少什么，它对我将来的 research 有什么帮助。
+{这篇论文对我的研究有什么启发？可借鉴的理论逻辑、方法设计、或写作技巧？}
 
-## 5. Writing Deconstruction
+---
 
-### 5.1 Introduction Craft
+## 跨文献连接
 
-用一个短段落说明它的前端是怎么写的：
-hook 怎么开，文献讨论怎么转，gap 句子如何落地，paper move 如何显出来。
+{列出与 Vault 中已有文献的关联：
+- 直接引用或对话的文献：[[note_id]]
+- 相似机制或方法：[[note_id]]
+- 可对比或补充的发现：[[note_id]]
+- 专题/项目关联：[[项目作战室]]}
 
-然后写一句：
-`Transferable rule for $write-social-science-introduction: ...`
+---
 
-### 5.2 Theory and Hypotheses Craft
-
-用一个短段落说明它如何引入构念、铺机制、把文献支持变成 why 逻辑、以及如何把假设写得“像是被挣出来的”。
-
-然后写一句：
-`Transferable rule for $write-theory-and-hypotheses: ...`
-
-### 5.3 Methods and Results Craft
-
-用一个短段落说明它如何写 sample、measure、identification、results、interaction、robustness，尤其是如何避免念表和过度因果语言。
-
-然后写一句：
-`Transferable rule for $write-methods-and-results: ...`
-
-## 6. Writing Transfer Candidate
-
-只有在这篇文章真的写得特别好而且模式可泛化时才填写。简短写明：
-
-- target skill
-- source passage or paragraph
-- why it works
-- generalized rule
-- confidence
-
-## 7. Metadata Notes
+## Metadata Notes
 - Citation key: {citekey}
 - Resolved citation key: {citation_key}
 - Citation key source: {citation_key_source}
@@ -614,7 +574,7 @@ hook 怎么开，文献讨论怎么转，gap 句子如何落地，paper move 如
 - Zotero PDF link: {zotero_pdf_link}
 - Reading date:
 - Related notes:
-"""
+“””
 
 
 def build_writer_body(

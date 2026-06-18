@@ -59,3 +59,37 @@ source: Extracted from mannor2016 distill-introduction-exemplar
 - **不要只有直觉没有案例**: 抽象心理状态需要具体案例来落地
 - **不要指责文献愚蠢**: 用 "remain largely speculative" 而非 "surprisingly neglected"
 - **不要忽略因果链**: 必须引用心理学文献说明"这个状态为什么会影响行为"
+
+---
+
+## CEO 特征类论文 Hook 策略更新（基于 wang2024 蒸馏）
+
+### 首选 Hook 类型排序
+
+| 优先级 | Hook 类型 | 理由 | 风险 |
+|--------|-----------|------|------|
+| **第一** | 09-psychological-construct-hook（本文） | 建立压力共识→具体案例→因果链→学术空白，最符合 CEO 心理特质研究的叙事逻辑 | 案例选择不当会削弱说服力 |
+| **第二** | 05-literature-consensus-blindspot | 直接切入文献共识盲区，能量更高 | 需要已有文献确实充分发展 |
+| **第三** | 02-epigraph-quote-pivot | 用权威引语建立张力 | 需要找到精准的 pivot quote |
+| ❌ **避免** | Cold-start definition | CEO 特征类论文用定义开场能量过低，读者兴趣建立不足 | 审稿人可能在前 100 词就失去兴趣 |
+
+### Stakes 嵌入策略
+
+**高风险模式（wang2024 原稿缺陷）**:
+> "To advance research in this area, we propose..."
+→ 无法回答 So what?，属于弱 Stakes。
+
+**推荐模式——独立 Stakes 段（AMJ/ASQ 首选）**:
+- **理论 Stakes**: 解释 dual-process 框架在组织层面的应用空白如何限制理论发展
+- **实践 Stakes**: 解释 CSR 决策中忽略情感因素的管理含义（如 CEO 选拔、董事会监督）
+
+**可接受模式——嵌入 Tension（SMJ/OS 可接受）**:
+> "This omission is critical, as [phenomenon-level consequence]."（参见 gamache_etal2020 变体 N）
+
+### Burying the Lead 检查点
+
+CEO 特征类论文段首句必须在 **15 词内**说出核心判断：
+
+❌ "Corporate social responsibility (CSR) refers to corporate actions that positively affect society and go beyond the firm's direct business interests."（P1 段首句，仅定义，无判断）
+
+✅ "CEOs' cognitive attributes have dominated CSR research, yet their emotional makeup may matter just as much."（核心判断前置）

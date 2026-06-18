@@ -147,6 +147,29 @@ source: Extracted from MVP30 narrative_analysis + darby2026 distill
 
 ---
 
+### 变体 F：双重案例锚定型（hoffmann2024 型）
+
+**模板**:
+> "[Provocative quote about institutional mechanism]" — [Source] ([year]). [Phenomenon] is costly for firms, reducing [outcome 1] through [channel 1], [channel 2], and [channel 3] ([citations]). Although, in theory, [actors] should [normative behavior], in practice, they often face [countervailing pressures] ([citation]), which could motivate [undesirable behavior] ([citation]). [Specific high-profile case] is a case in point ([citation]). However, [negative consequence of undesirable behavior] ([citation]), exposing [actors] to [legal/institutional risk] ([citation]). The opening quote suggests that [risk mechanism] could be an effective deterrent to prevent [undesirable behavior]. Indeed, [second high-profile case] illustrates that [risk] is real for [actors] ([citation]). In this article, we ask: what happens when [external shock] diminishes [risk]? Will this change affect [outcome]?
+
+**来源**: hoffmann_cheong_phan_zurbruegg2024 (JM), P1
+
+**原文锚定**:
+> "Suing the directors is a better deterrent than suing the corporation. Directors are going to care more about being held personally liable … than … the company losing a bit more money in shareholder settlements on top of the money it already lost from the bad event itself." — Levine (2021) ... General Motors knowing for ten years about faulty ignition switches before issuing a recall is a case in point (Valdes-Dapena 2014). ... the recent Boeing 737 MAX case—in which current and former directors were sued by shareholders who claimed that the board failed to properly oversee safety matters concerning this airplane—illustrates that such lawsuits are a real risk for managers (Tangel 2021). In this article, we ask what happens when an external shock diminishes managers' exposure to shareholder litigation risk for failing their fiduciary duties.
+
+**关键特征**:
+- **引语→配对案例的叙事链条**: 引语建立制度机制逻辑 → 案例1展示问题成因（GM: 管理者逃避召回）→ 案例2展示威胁可信性（Boeing: 董事被起诉）→ 收束到研究问题
+- **双案例承担不同论证功能**: GM 证明管理者确实会逃避召回，Boeing 证明股东诉讼确实会发生。两个案例不是同类堆叠，而是服务于不同论证环节
+- **"The opening quote suggests that... Indeed, [case] illustrates that..."** → 引语和案例之间的回指关系，建立叙事的连贯性
+- **"we ask: what happens when [shock] diminishes [threat]?"** → 从具体案例上升到研究问题，完成 Hook→Puzzle 的过渡
+- **不单独设立现象重要性段落**: 案例本身（GM 十年知情不报、Boeing 董事被诉、Peloton 儿童死亡）承担了 Hook + Stakes 的双重功能
+
+**适用**: 适用于有高知名度配对案例支撑的制度冲击/法律变化研究；Incompleteness × Mechanism 组合中需要建立"机制缺失→现实后果"链时优先选用。特别适合 JM/SMJ/JOM 等接受案例驱动开场的期刊。
+
+**禁忌**: 两个案例必须服务不同论证功能（如一个展示问题成因、一个展示威胁机制），不能只是两个同类案例的堆叠。案例必须足够知名以引起读者共鸣——不知名的案例会削弱 Hook 的冲击力。
+
+---
+
 ## 期刊适配
 
 | 期刊 | 适配度 | 注意事项 |

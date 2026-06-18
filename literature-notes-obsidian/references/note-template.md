@@ -35,125 +35,106 @@ source_type: "pdf"
 reading_stage: "purposeful"
 status: "reading"
 created: "YYYY-MM-DD"
+updated: "YYYY-MM-DD"
 tags:
   - "literature-note"
   - "paper"
+projects:
+  - "{project-slug-1}"
+  - "{project-slug-2}"
 ---
 
 # {{title}}
 
-## Quick View
+## 概述
 
-用一个短段落回答四件事：这篇文章到底在说什么，值不值得深读，证据强度如何，它对我有什么直接用处。
+{一段话交代：本文研究什么问题，基于什么核心视角，得到什么主要发现。不用复述摘要，而是用你自己的判断概述论文的"骨骼"。}
 
-## 1. Research Purpose and Research Gap
+---
 
-写成 2-4 段。
+## 1. 引言
 
-第一段：现象、问题或谜题是什么，为什么值得关心。
+{用自然段落叙述，不要逐段翻译。核心是回答三个问题：}
 
-第二段：文章进入的是哪场 literatures / 对话 / 争论。
+### (1) Who cares? 为什么这个问题值得关心？
 
-第三段：已有文献究竟遗漏了什么。不要只写“研究较少”，而要写清楚遗漏的是机制、边界条件、比较关系、测量、还是因果判断。
+{这个现象或问题为什么对理论界或实践界重要？作者如何建立问题的重要性——是通过现象冲击、理论悖论、还是实践困境？}
 
-第四段：为什么这些遗漏重要，以及作者如何借助已有文献把研究问题和独特贡献推出来。
+### (2) What do we know, what don't we know, and so what?
 
-## 2. Theory, Argument, and Hypothesis Logic
+{已有文献做了什么？核心共识或主要流派是什么？作者指出文献的盲区、不足或矛盾在哪里？为什么这个缺口重要（so what）——是缺了关键机制、缺了边界条件、还是理论视角单一？}
 
-写成 2-4 段。解释核心构念、理论视角、机制链条、以及假设如何被一步一步“挣出来”。
+### (3) What will we learn? 本文要告诉我们什么？
 
-如果论文在正式假设前先整合多条理论传统，可加一个小节 `理论前提与框架整合`，说明作者如何让这些理论互补，而不是平行堆放。
+{作者采用什么新的理论视角或方法？核心研究问题是什么？预期贡献是什么？}
 
-如果论文按理论块组织假设，可在本节下使用分组小标题。每个假设或核心主张都尽量区分：
+---
 
-- `HOW`：假设本身，即变量、方向、效应类型
-- `WHY`：支撑这个关系的机制。若机制可枚举，可以用短 bullet 说明多个渠道，最后点出其共同依托的上位理论
+## 2. 理论与假设
 
-最后补一段整体评估：
+### 基于的理论视角
 
-- 理论逻辑最强的地方在哪里
-- 哪一步有跳跃或偷换
-- 多组假设是否共享一个连贯的上位逻辑，还是有“拼接感”
-- 作者如何从文献综述切入自己的解释
+{本文基于什么理论？如果是具体理论（如资源基础观、制度理论、代理理论、调节定向理论等），简要介绍该理论的核心观点。如果是多个理论的组合，说明它们如何被整合。}
 
-## 3. Variables, Measures, and Empirical Strategy
+{按假设分组展开，不要区分"概述"和"具体假设"两个子标题。每条假设先给出声明，然后用自然段落详细叙述其推导逻辑。这是论文最核心的部分，允许充分展开——关键是把作者如何从理论前提一步步推到该假设的逻辑讲清楚。涉及多个子机制时，分别说明。可以引用关键的理论依据和中间推理步骤。}
 
-如果论文是实证研究，写成 2-4 段：
+---
 
-第一段：setting、sample、data source、research design。
+## 3. 研究方法
 
-第二段：核心变量如何操作化，理论构念与实际 proxy 是否贴切。
+{简要说明：样本/数据来源、核心变量如何测量、分析方法。不用面面俱到，突出与假设检验直接相关的关键设计即可。}
 
-第三段：文章依赖的识别或比较逻辑是什么。variation 从哪里来，关键识别假设是什么，最主要的威胁是什么。
+---
 
-第四段：主要结果是什么，作者如何解释这些结果，这种解释是否超出设计所能支持的强度。
+## 4. 主要发现
 
-如果论文是理论或概念性文章，没有实证部分，则明确写一句：
-`本文为理论/概念性文章，无正式变量测量和因果识别设计；应重点评估其概念界定、论证链条与理论贡献。`
+{用自然段落概括核心发现：哪些假设得到支持？哪些没有？最值得关注的结果模式是什么？}
 
-## 4. Contribution, Limits, and My Judgment
+---
 
-写成 2-3 段：
+## 5. 核心贡献与局限
 
-第一段：理论贡献、经验贡献或方法贡献到底是什么。
+{本文的核心贡献是什么（理论、实证或方法层面）？最突出的局限或未来方向是什么？}
 
-第二段：局限、边界条件、最容易被攻击的地方。
+---
 
-第三段：我自己的总体判断。这篇文章好在哪里，如果没有它会少什么，它对我将来的 research 有什么帮助。
+## 6. 与本人研究的关联
 
-## 5. Writing Deconstruction
+{这篇论文对我的研究有什么启发？可借鉴的理论逻辑、方法设计、或写作技巧？}
 
-### 5.1 Introduction Craft
+---
 
-用一个短段落说明它的前端是怎么写的：hook 怎么开，文献讨论怎么转，gap 句子如何落地，paper move 如何显出来。
+## 跨文献连接
 
-然后写一句：
-`Transferable rule for $write-social-science-introduction: ...`
+{列出与 Vault 中已有文献的关联：
+- 直接引用或对话的文献：[[note_id]]
+- 相似机制或方法：[[note_id]]
+- 可对比或补充的发现：[[note_id]]
+- 专题/项目关联：[[项目作战室]]}
 
-### 5.2 Theory and Hypotheses Craft
+---
 
-用一个短段落说明它如何引入构念、铺机制、把文献支持变成 why 逻辑，以及如何让假设显得是“被挣出来的”。
-
-然后写一句：
-`Transferable rule for $write-theory-and-hypotheses: ...`
-
-### 5.3 Methods and Results Craft
-
-用一个短段落说明它如何写 sample、measure、identification、results、interaction、robustness，尤其是如何避免念表和过度因果语言。
-
-然后写一句：
-`Transferable rule for $write-methods-and-results: ...`
-
-## 6. Writing Transfer Candidate
-
-只有在模式真的可泛化时才填写。简短写明：
-
-- target skill
-- source passage or paragraph
-- why it works
-- generalized rule
-- confidence
-
-## 7. Metadata Notes
-- Citation key:
-- Citation key source:
-- Pandoc cite token:
-- Source file or link:
-- Zotero item key:
-- Zotero attachment key:
-- Zotero item link: `[Open Zotero Item](zotero://select/library/items/...)`
-- Zotero PDF link: `[Open Zotero PDF](zotero://open-pdf/library/items/...)`
-- Reading date:
+## Metadata Notes
+- Citation key: {CiteKey}
+- Resolved citation key: {CitationKey}
+- Citation key source: {CitationKeySource}
+- Pandoc cite token: [@{CitationKey}]
+- Source file or link: {Source}
+- Zotero item key: {ZOTERO_ITEM_KEY}
+- Zotero attachment key: {ZOTERO_ATTACHMENT_KEY}
+- Zotero item link: [Open Zotero Item](zotero://select/library/items/{ZOTERO_ITEM_KEY})
+- Zotero PDF link: [Open Zotero PDF](zotero://open-pdf/library/items/{ZOTERO_ATTACHMENT_KEY})
+- Reading date: {YYYY-MM-DD}
 - Related notes:
 ```
 
 ## Writing Rules
 
-- Make `Quick View` a short paragraph, not a checklist.
-- Keep `Research Purpose and Research Gap` paragraph-heavy. This is the note's center of gravity.
-- Use `Theory, Argument, and Hypothesis Logic` to reconstruct the mechanism chain, not to paraphrase the theory section.
+- Make `概述` a short paragraph, not a checklist.
+- Keep `1. 引言` paragraph-heavy. This is the note's center of gravity.
+- Use `2. 理论与假设` to reconstruct the mechanism chain, not to paraphrase the theory section.
 - Distinguish theory labels from actual explanation.
 - Distinguish constructs from proxies and associations from causal leverage.
-- If the note is abstract-based, say so explicitly in `Quick View` and `Metadata Notes`.
+- If the note is abstract-based, say so explicitly in `概述` and `Metadata Notes`.
 - If the paper is weak, say exactly where it is weak.
 - If the paper is useful, say exactly what is reusable.

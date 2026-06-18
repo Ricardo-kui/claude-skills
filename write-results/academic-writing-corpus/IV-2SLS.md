@@ -3,9 +3,10 @@ result_type: "IV-2SLS"
 status: 📋 TEMPLATE
 source_papers:
   - "wowak2025_tmt_political_ideology_ms"
-variants_count: 3
+  - "qiao_hiatt_sine2026 (SMJ, 2026): control-function residual as nonlinear DWH test + finite-sample-bias caveat"
+variants_count: 4
 created: 2026-05-18
-updated: 2026-05-20
+updated: 2026-06-16
 ---
 
 # IV-2SLS — Results 骨架
@@ -53,3 +54,12 @@ updated: 2026-05-20
 **骨架**:
 > [Our instruments conform to diagnostic tests]. The partial F-statistic exceeds the relevance threshold (partial F-stat = [value]; p < [threshold]), and the [identification_test] does not contain zero [[lower], [upper]]. Diagnostic tests for exogeneity suggest our instruments are unrelated to the structural error terms (Sargan χ² = [value]; p = [threshold]). [For Lewbel: The Pagan-Hall diagnostic fails to reject the null (p > [threshold]), and Breusch-Pagan rejects homoskedasticity (p < [threshold]), upholding both Lewbel assumptions.]
 **与原骨架差异**: IV 诊断统计量（partial F, Sargan, Pagan-Hall, Breusch-Pagan）嵌入 R3 正文，而非 relegating 到脚注或 Methods 中。这是因果识别研究的最佳实践——让读者在阅读结果时同时看到识别策略的有效性。
+
+### 变体 4: 非线性估计器下的 IV — 控制函数残差作 DWH 检验 + 有限样本偏误诚实提示 (1篇高价值)
+**来源论文**: Qiao, Hiatt & Sine 2026 (SMJ)
+**验证状态**: 通过 (单篇高价值，生存/有限因变量模型下内生性检验的标准做法 + 罕见的诚实提示)
+**写入日期**: 2026-06-16
+**槽位**: R2/R3
+**骨架**:
+> [Table, Column] shows that the instrument, [instrument], is [direction] related to [the endogenous regressor] (β = [value], p < [threshold]), and the first-stage F-statistic of [value] exceeds the cutoff for 10% maximal bias ([cutoff]) according to Stock and Yogo ([2005]). Because standard Durbin–Wu–Hausman tests rely on linear-model assumptions and are not valid for [nonlinear survival / limited-DV] models, we adopted a control-function approach in which the first-stage residual is included in the [second-stage hazard / outcome] equation; whether this residual is statistically distinguishable from zero constitutes the nonlinear analogue of a Durbin–Wu–Hausman test for endogeneity ([Terza et al., 2008]; [Wooldridge, 2010, 2015]). The residual term is significant (β = [value], p = [threshold]), indicating that [the un-instrumented specification] is subject to the endogeneity concerns Shaver ([2005]) raised. [Next column] then shows that the instrumented [treatment] is [direction] related to [outcome] (β = [value], p < [threshold]). This method, however, is sensitive to finite-sample bias, often inflating the coefficient on the instrumented variable, and should be interpreted with caution ([citation]).
+**与原骨架差异**: 解决一个被普遍回避的问题——**非线性估计器（生存/Probit/Tobit）下如何检验内生性**。标准 DWH 假设线性，不能直接用于生存模型；本变体用 **control-function**：把第一阶段残差放入第二阶段风险方程，残差显著即内生性存在的非线性等价检验（Terza et al. 2008; Wooldridge）。关键诚实提示（**不可省略**）：control-function 对有限样本敏感，常**放大**工具变量系数，故 IV 系数应解读为方向性证据而非点估计。适用于任何非线性主模型 + IV 设计（生存分析、Probit、Tobit）。配合 `write-methods/IV-2SLS.md` 变体 4（外部自然事件 IV）使用。

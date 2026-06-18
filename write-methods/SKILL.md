@@ -3,10 +3,11 @@ name: write-methods
 description: |
   顶刊 Methods 填空段落骨架生成器。输入模型类型后输出带 [placeholder] 的可直接粘贴段落。
   覆盖面板数据/OLS、自然实验/DiD、非线性模型、生存分析、SEM、实验、多研究、稀有结果、实证对象构建、事件历史+事件研究、同时方程、IV/2SLS、动态面板/GMM、匹配DiD/广义DiD、同伴效应/网络效应、文本构念测量、PSM匹配面板、堆叠扩散Logit、多行为者设计、推断二元结果共二十种设计类型。
-  触发词：「写methods」「methods模板」「方法部分怎么写」「帮我写methodology」「method skeleton」「写方法」「方法论」「model specification」「估计方法」「样本选择」「变量定义」。
-  当用户提及变量操作化、识别策略、稳健性检验、模型设定、样本漏斗、内生性处理时也应触发。
-  基于 32 篇 MVP30 范文语料库和 Pollock 2025 Ch07。
-version: 2.6.0
+  新增测量防御三段式变体（M3）、自主构念测量理论锚定变体（M5）。
+  触发词：「写methods」「methods模板」「方法部分怎么写」「帮我写methodology」「method skeleton」「写方法」「方法论」「model specification」「估计方法」「样本选择」「变量定义」「测量辩护」「构念创新」「自创变量」。
+  当用户提及变量操作化、识别策略、稳健性检验、模型设定、样本漏斗、内生性处理、测量局限辩护、新构念操作化时也应触发。
+  基于 32 篇 MVP30 范文语料库、Pontikes (2012, ASQ) 蒸馏和 Pollock 2025 Ch07。
+version: 2.7.0
 ---
 
 # Role
@@ -93,6 +94,11 @@ version: 2.6.0
 We examine [phenomenon] using [policy/event/institutional change] that altered [exposure/risk/incentive] across [units] and time. [Empirical setting] is well suited because [process] is well documented and [context controls] reduce [confounding concern].
 ```
 
+**Staggered DiD + 二元结果 变体**（hoffmann2024 型，替换首句）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：自然实验/DiD 变体 + M7 非线性模型变体
+```text
+We examine [phenomenon] in the context of staggered adoption of [policy/law] across [jurisdictions] over [period]. Because [law] adoption is staggered across [N] [jurisdictions/states] between [start year] and [end year] — affording us both temporal and cross-sectional identifying variation — we use a difference-in-differences design in which [outcome] is regressed on [treatment indicator], [controls], and [fixed effects]. Since [outcome] is binary, we estimate [conditional logit / linear probability model] to assess whether [law] adoption affects the likelihood of [outcome]. The identifying assumption is that [law] adoption in any given [jurisdiction] is orthogonal to changes in [outcome] in the same [jurisdiction], conditional on [controls] and [fixed effects].
+```
+
 **实验变体**： ✓ STANDARD（5-6 篇实验范文复现）
 ```text
 We test [theoretical claim] using a [laboratory/field/online] experiment. This design is strongest for assessing [internal validity], although it requires caution in generalizing to [boundary condition].
@@ -131,6 +137,13 @@ No authoritative database exists for [empirical object], so we constructed the d
 **自然实验/DiD 变体**： ✓ STANDARD（5-8 篇 DiD 范文复现）
 ```text
 Our primary sample consists of [units] observed from [period], drawn from [source] because it tracks [construct-relevant activity]. The observation window begins in [year] because [source/construct availability] and ends in [year] to capture [post-treatment horizon]. Treatment is observed for [treated units] after [event], while [control units] provide the counterfactual comparison. Because testing [moderation/mechanism] requires [additional source], the sample for H[x] is restricted to [available period/units].
+```
+
+**Staggered DiD 样本周期双重辩护变体**（hoffmann2024 型）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：自然实验/DiD 变体
+```text
+Our primary sample consists of [units] observed from [start year] to [end year]. We choose [start year] for two reasons: first, [data availability / quality reason]; second, this year coincides with [institutional event / regime change] that marks [theoretical relevance]. We end in [end year] to capture a meaningful post-treatment window following the last [law/policy] adoption in [last adoption year], while avoiding contamination from [confounding event: e.g., COVID-19 pandemic].
+
+We exclude [excluded observations] from our sample because they involve [exclusion rationale: e.g., known product defects that already caused injuries/deaths]. This exclusion is theoretically motivated: [theory-based justification — e.g., when harm has already materialized, managers face reputational and legal pressures that override the discretion mechanisms our theory examines]. The final sample consists of [N] [unit-years] across [K] [units].
 ```
 
 **多研究变体**（逐研究）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 M2 段落 + M9 多研究过渡段
@@ -217,6 +230,22 @@ Our dependent variable is [binary outcome construct]. Because [direct observatio
 ```text
 We measure [outcome] at the [actor B] level because [theoretical reason: actor B is the decision maker / actor B bears the consequence]. The dependent variable is [operational definition] from [source B]. For robustness, we also construct an alternative measure from [source C] using [alternative rule]. The correlation between the two measures is [value], indicating [acceptable / strong] convergent validity.
 ```
+
+**测量防御三段式变体**（Pontikes 2012 模式：承认局限 → 论证最优可用 → 保守检验逻辑）： ✓ STANDARD
+
+```text
+We acknowledge that our measure of [construct] has limitations. [Specific limitation 1: e.g., the measure relies on observable classification claims rather than direct perceptual data]. [Specific limitation 2 if applicable: e.g., the measure captures only one dimension of a multi-dimensional construct]. These limitations stem from [inherent data constraint: e.g., the lack of fine-grained perceptual surveys for the full population over the study period].
+
+Despite these limitations, this measure is the best available operationalization for three reasons. First, [reason 1: construct coverage — the measure captures the core theoretical mechanism because...]. Second, [reason 2: empirical precedent — similar approaches have been used in...]. Third, [reason 3: scope — the measure is available for the full population, avoiding selection issues that would arise from survey-based alternatives].
+
+Importantly, the limitations of this measure bias against finding the hypothesized results. [Conservative test logic: e.g., measurement error in the independent variable attenuates coefficients toward zero / if anything, our measure undercounts the phenomenon, making significant findings harder to obtain]. Finding [significant results / the predicted pattern] despite this conservative bias strengthens confidence in the underlying relationship.
+```
+
+> **测量防御 QC**:
+> - 三段结构必须完整：承认局限 → 论证最优可用 → 保守检验逻辑
+> - 局限必须诚实（不能只说 "future research should improve"），且必须解释为什么在此局限下测量仍有效
+> - 保守检验逻辑必须有方向性：为什么局限让显著结果更难（而非更容易）获得？
+> - 如果局限可能让结果更容易显著，不能使用此变体——应改用通用 M3 + 诚实标注局限
 
 ---
 
@@ -305,6 +334,25 @@ To test the indirect moderation model, we specify a system of equations. Equatio
 We test for full indirect moderation through [mediator] according to whether: (1) [moderator 1] functions as a moderator when [mediator] is not considered (β₁₃ ≠ 0); (2) [moderator 1] influences [mediator] (β₃₁ ≠ 0); (3) [mediator] moderates the effect of [predictor] on [outcome] (β₄₅ ≠ 0); and (4) the coefficient on the original interaction term in the full system (β₄₃) indicates the pattern of mediation—β₄₃ = 0 indicates full indirect moderation (the direct moderating effect of [moderator 1] becomes nonsignificant in the presence of [mediator]), whereas β₄₃ ≠ 0 and |β₄₃| < |β₁₃| indicates partial indirect moderation.
 ```
 
+**自主构念测量理论锚定变体**（Pontikes 2012 模式：无现成 validated scale，从理论定义直接操作化）： ✓ STANDARD
+
+```text
+No pre-validated scale exists for [construct], so we develop a measure directly from its theoretical definition. [Construct] is defined as [theoretical definition with citation]. This definition implies [observable feature 1] and [observable feature 2]. We operationalize these features as follows.
+
+[Measure name] captures [theoretical dimension 1] by [operational rule: e.g., whether a market label has a clear, agreed-upon definition]. We determine this by [empirical procedure: e.g., coding whether industry publications provide consistent category definitions]. [Alternative measure name] captures [theoretical dimension 2] by [operational rule: e.g., the number of market labels an organization simultaneously claims]. Both measures are continuous, with higher values indicating greater [construct].
+
+To assess whether these measures capture distinct dimensions of [construct] rather than a single underlying factor, we examine their correlation. The correlation between [measure A] and [measure B] is [value], indicating that [they are empirically distinguishable / they share common variance but are not redundant]. This is consistent with the theoretical distinction between [dimension 1] (a property of the [unit A: e.g., category]) and [dimension 2] (a property of the [unit B: e.g., organization]).
+
+Although these measures are novel, their construction follows directly from the theoretical definition of [construct] and is anchored in [prior theoretical work / qualitative observation / institutional features of the empirical context]. We validate the measures through [face validity check: e.g., inspection of extreme cases / correlation with known correlates / expert review]. In supplemental analyses, we also test [alternative operationalization] and find [consistency / qualification].
+```
+
+> **自主构念测量 QC**:
+> - 理论定义必须在操作化之前明确给出（citation-anchored）
+> - 每个测量维度必须有对应的可观测特征和操作化规则
+> - 多维度测量必须报告维度间相关性，论证它们是 distinguishable 而非 redundant
+> - 必须有一个 validation check（face validity / convergent / discriminant / known-group），不能只有理论论证
+> - 如果存在相近的现有测量，说明为什么不使用它（覆盖面不足 / 样本不适用 / 理论维度不匹配）
+
 ---
 
 ### M6. 控制变量与竞争性解释
@@ -364,6 +412,28 @@ We estimate a difference-in-differences model in which [outcome] is regressed on
 ```text
 We cluster standard errors at the [level] to address [dependence structure] ([citation, e.g., Bertrand et al. 2004; Jager et al. 2021]). Where relevant, we present numbered equations: Equation (1) reports the baseline DiD specification, and Equation (2) reports the event-study leads-and-lags specification.
 ```
+
+**Staggered DiD + 条件 Logit 变体**（hoffmann2024 型，二元结果 + 交错处理时点）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：DiD 变体 + 非线性模型变体
+```text
+Because our dependent variable [outcome] is binary and [treatment] adoption is staggered across [jurisdictions] over time, we estimate a conditional (fixed-effects) logit model. The conditional logit specification accounts for [unit]-invariant unobserved heterogeneity through [unit] fixed effects, while the staggered adoption structure provides identifying variation through two channels: (1) within-[unit] before-after comparisons (units switching from non-adoption to adoption) and (2) cross-[unit] comparisons at each point in time (adopting vs. not-yet-adopting units). The estimated equation is:
+
+[Outcome]_{it} = α_i + β[Treat]_{it} + γ[X]_{it} + δ_t + ε_{it}
+
+where [Treat]_{it} equals one after [jurisdiction] i adopts [law/policy] in year t, and zero otherwise; α_i are [unit] fixed effects; [X]_{it} is a vector of time-varying controls; and δ_t are year fixed effects. Because [outcome] is binary, we use conditional logit rather than linear probability model as our primary specification. Standard errors are clustered at the [jurisdiction/unit] level to account for serial correlation and within-[cluster] dependence ([Bertrand et al. 2004]). We report odds ratios for economic interpretation, supplemented by predicted probabilities at key values of [treatment] and [moderators] to aid substantive interpretation.
+
+Four features of this estimation strategy merit discussion. First, we cannot include [unit] fixed effects in a standard linear probability model estimated via OLS with a large number of [units] and a rare binary outcome — this would create an incidental parameters problem. Conditional logit addresses this through the fixed-effects estimator. Second, a consequence of this specification choice is that [time-invariant predictors: e.g., industry dummies, state-level characteristics] cannot be included because they are absorbed by the [unit] fixed effects. Where such variables are theoretically relevant (e.g., for moderation analyses), we interact them with [treatment] rather than including them as main effects. Third, we lag all time-varying predictors by [one period/year] to preserve temporal ordering and reduce simultaneity concerns. Fourth, we conduct a comprehensive set of sensitivity analyses — including [alternative estimators: LPM with FE, random-effects logit], [alternative samples: balanced panel, excluding early/late adopters], and [placebo tests: pseudo-adoption dates, pre-treatment leads] — to assess the robustness of our findings.
+```
+
+**Staggered DiD + 条件 Logit 的 6 个关键范式**（hoffmann2024 蒸馏）：
+
+| # | 范式 | 功能 | 方法防御 |
+|---|------|------|---------|
+| 1 | **样本周期双重辩护** | 建立样本窗口的理论+制度合理性 | start year: 数据可用性 + 制度事件双重理由；end year: 最后 adoption + N 年 post-treatment + 排除 confound |
+| 2 | **样本排除理论化** | 将样本限制与理论机制对齐 | 排除"伤害已发生的召回"→ 理论关心的是管理者有裁量权的召回决策 |
+| 3 | **条件 Logit 选择辩护** | 解释为什么不能用 OLS FE | 二元 DV + 大量固定效应 → incidental parameters problem → 条件 Logit 的 FE estimator 解决 |
+| 4 | **时不变变量处理** | 解释为什么某些变量不能出现 | "absorbed by FE" → 交互项而非主效应 → 但限于调节分析 |
+| 5 | **固定效应局限诚实说明** | 承认方法局限而非隐藏 | "cannot include firm FE because of incidental parameters problem; firm controls proxy for some of this variation" |
+| 6 | **滞后与敏感性预注册** | 在 Methods 中预承诺稳健性分析范围 | 滞后所有 time-varying predictors + 列出全部 sensitivity checks（非在 Results 中 cherry-pick）
 
 **生存分析变体**： 🔬 EXPERIMENTAL（2-3 篇范文：Zhou 2017, Pontikes 2012 等）⚠️ 保守替代：通用 M7 段落 + 说明分布选择
 ```text
@@ -461,6 +531,17 @@ To address concerns about [threat], we [design feature/test]. This check assesse
 ```text
 Our identification strategy relies on [source of variation]. [Shock/event/policy] creates variation in [treatment] that is plausibly exogenous to [outcome] because [reason]. The key identifying assumption is that [treated and control units] would have followed similar trends absent [treatment]. We assess this assumption in the Results section using [event-study/leads-lags] specifications. We first estimate a parsimonious specification because [controls] may be affected by [treatment].
 ```
+
+**固定效应局限诚实说明变体**（hoffmann2024 型 — 条件 Logit 不能加入 firm FE 时的诚实辩护）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：省略或脚注提及
+```text
+An important methodological note concerns our use of [industry/state] rather than [firm] fixed effects. Ideally, we would include [firm] fixed effects to absorb all time-invariant firm-level heterogeneity. However, in a conditional logit framework with a binary dependent variable, [firm] fixed effects create an incidental parameters problem: the number of fixed effects grows with sample size, producing inconsistent estimates. We therefore include [industry/state] fixed effects, which absorb unobserved heterogeneity at the [industry/state] level, and we control for observable time-varying [firm] characteristics — including [examples: e.g., firm size, leverage, R&D intensity, profitability] — that may correlate with both [treatment] and [outcome]. While this approach does not eliminate all firm-level confounding, the staggered adoption design and the inclusion of [number] time-varying firm controls provide meaningful mitigation. We also report robustness checks using a linear probability model with [firm] fixed effects, which yields [qualitatively similar / directionally consistent] results, increasing confidence that our findings are not artifacts of unobserved firm heterogeneity.
+```
+
+**固定效应局限诚实说明 QC**:
+- 必须诚实说明为什么不能使用 firm FE（不能假装不存在这个问题）
+- 必须命名具体的 time-varying firm controls 来辩护替代方案（不能只写 "we control for firm characteristics"）
+- 必须报告替代估计量结果（如 LPM + firm FE）作为 robustness
+- 不能声称 "we fully address endogeneity" — 使用 "meaningful mitigation" / "increase confidence" 等诚实措辞
 
 **DiD 置换检验预览补充**（可选，置于自然实验/DiD 变体后）：
 ```text
