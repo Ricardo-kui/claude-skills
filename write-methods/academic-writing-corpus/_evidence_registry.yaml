@@ -1,8 +1,8 @@
 meta:
-  last_updated: '2026-05-22'
-  total_design_types: 21
-  batches_processed: 2
-  source: corpus INDEX.md + product_recall_cross_validation
+  last_updated: '2026-07-07'
+  total_design_types: 22
+  batches_processed: 5
+  source: corpus INDEX.md + product_recall_cross_validation + cutolo2024_jm_text_count + falchetti2022_smj_experiment + lashley_pollock2020_asq_qualitative_process
 evidence:
   by_design_type:
     面板数据-OLS:
@@ -44,11 +44,19 @@ evidence:
         reject: 0
         common_revise_reasons: []
     非线性模型:
-      paper_count: 0
-      papers: []
+      paper_count: 1
+      papers:
+      - cutolo2024 (JM)
       status: EMERGING
-      slots_covered: []
-      common_failures: []
+      slots_covered:
+      - M4
+      - M5
+      - M7
+      - M10
+      - M14
+      common_failures:
+      - 未说明为何拒绝 Poisson / 未报告过度分散检验
+      - 未预告系数将翻译为 predicted counts / IRRs
       validation_history:
         total_runs: 0
         validated: 0
@@ -92,11 +100,20 @@ evidence:
         reject: 0
         common_revise_reasons: []
     实验:
-      paper_count: 0
-      papers: []
+      paper_count: 1
+      papers:
+      - falchetti2022 (SMJ)
       status: EMERGING
-      slots_covered: []
-      common_failures: []
+      slots_covered:
+      - M2
+      - M3
+      - M4
+      - M6
+      - M7
+      common_failures:
+      - 未说明被试间随机分配
+      - 操纵描述停留在抽象标签，未给出条件实际差异
+      - 缺少 attention check / catch question 说明
       validation_history:
         total_runs: 0
         validated: 0
@@ -104,11 +121,52 @@ evidence:
         reject: 0
         common_revise_reasons: []
     多研究:
-      paper_count: 0
-      papers: []
+      paper_count: 1
+      papers:
+      - falchetti2022 (SMJ)
       status: EMERGING
-      slots_covered: []
-      common_failures: []
+      slots_covered:
+      - M1
+      - M2
+      - M3
+      - M4
+      - M6
+      - M7
+      - M8
+      common_failures:
+      - 缺少研究梯度图，直接罗列 Study 1/2/3
+      - 未说明哪些维度保持不变、哪些变化
+      - 操纵检验 pilot 未报告或放在附录
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    定性过程研究:
+      paper_count: 1
+      cross_validation_papers:
+      - park2013 (ASQ)
+      - keeves2017 (ASQ)
+      papers:
+      - lashley_pollock2020 (ASQ)
+      status: EMERGING
+      slots_covered:
+      - Q1
+      - Q2
+      - Q3
+      - Q6
+      - Q7
+      - Q8
+      common_failures:
+      - 未说明为何采用归纳/质性/过程方法
+      - 未为每个数据源分配独特角色
+      - 编码过程跳跃，缺少 open → axial → aggregate 的过渡
+      - 可信性机制缺失或仅列举不说明解决什么威胁
+      validation_notes:
+      - Q3 部分验证：Park 2013 / Keeves 2017 在混合方法中为访谈分配了问卷校准/预试角色
+      - Q7/Q8 部分验证：Park 2013 / Keeves 2017 提供内容编码、CFA、信度、编码一致率等测量效度机制
+      - Q1/Q2/Q4/Q5/Q6 以及所有 F 骨架仍保持单来源
       validation_history:
         total_runs: 0
         validated: 0
@@ -224,11 +282,22 @@ evidence:
         reject: 0
         common_revise_reasons: []
     文本构念测量:
-      paper_count: 0
-      papers: []
+      paper_count: 1
+      papers:
+      - cutolo2024 (JM)
       status: EMERGING
-      slots_covered: []
-      common_failures: []
+      slots_covered:
+      - M2
+      - M3
+      - M4
+      - M6
+      - M7
+      - M10
+      - M14
+      common_failures:
+      - 文本测量缺少人工验证或替代测量交叉检验
+      - 复合文本指标未做 component disaggregation
+      - category-relative 构念未说明比较基准
       validation_history:
         total_runs: 0
         validated: 0

@@ -2,7 +2,7 @@
 name: write-results
 description: |
   顶刊 Results 填空段落骨架生成器。输入模型类型后输出带 [placeholder] 的可直接粘贴段落。
-  覆盖 OLS/FE、Logit/Probit/Ordered Probit、生存分析、DiD、计数模型（含AME+区域显著性）、实验、多研究、IV/2SLS、匹配DiD、堆叠扩散Logit、同伴效应/网络效应、推断二元结果、跨受众构念对比、三向交互、构造暴露分解、双受众平行对比、非显著深化/反方向共十八种结果类型。
+  覆盖 OLS/FE、Logit/Probit/Ordered Probit、生存分析、DiD、计数模型（含AME+区域显著性）、实验、多研究、IV/2SLS、匹配DiD、堆叠扩散Logit、同伴效应/网络效应、推断二元结果、跨受众构念对比、三向交互、构造暴露分解、双受众平行对比、非显著深化/反方向、定性过程研究/定性发现共十九种结果类型。
   触发词：「写results」「results模板」「结果部分怎么写」「帮我写results」「result skeleton」「写结果」「假设检验」「交互效应」「稳健性检验」「经济显著性」「平行趋势」「marginal effect」「双受众」「对立结果」「替代解释」。
   当用户提及系数解释、表格导航、模型序列、robustness check、安慰剂检验、机制检验、非显著深化、方向相反时也应触发。
   基于 28 篇 MVP30 范文语料库和 Pollock 2025 Ch07。
@@ -22,7 +22,7 @@ version: 2.6.0
 ```
 
 **参数说明**：
-- `<模型类型>`（必填）: `OLS/FE` | `Logit/Probit/Ordered Probit` | `生存分析` | `DiD` | `计数模型` | `实验` | `多研究` | `IV/2SLS` | `匹配DiD` | `堆叠扩散Logit` | `同伴效应/网络效应` | `推断二元结果`
+- `<模型类型>`（必填）: `OLS/FE` | `Logit/Probit/Ordered Probit` | `生存分析` | `DiD` | `计数模型` | `实验` | `多研究` | `IV/2SLS` | `匹配DiD` | `堆叠扩散Logit` | `同伴效应/网络效应` | `推断二元结果` | `定性过程研究/定性发现`
 - `[--hypotheses]`（可选但建议）: 假设列表，用于假设-结果对齐
 - `[--journal]`（可选）: 目标期刊，默认 `AMJ`
 - `[--has-interactions]`（可选）: 标记是否需要报告交互效应
@@ -72,6 +72,7 @@ version: 2.6.0
 - **同伴效应/网络效应**：R3 主效应 → R4 网络边界异质性 → R7 falsification / 安慰剂网络
 - **推断二元结果**：R3 报告推断状态分布 → R7 阈值敏感性 / 分类准确性
 - **计数模型（AME+区域显著性）**：R3 报告IRR后紧跟平均边际效应与显著性区域图
+- **定性过程研究/定性发现**：不遵循 R1–R9 顺序；输出 F1（过程模型总览）→ F2（阶段触发）→ F3（前台—后台对照）→ F4（侧台协商）→ F5（补充机制/边界）→ F6（受众区分的有限成功评估）。完整填空骨架参见 `write-results/academic-writing-corpus/定性过程研究.md`。该设计类型目前为 EMERGING / 单来源，Q1–Q8 Methods 骨架参见 `write-methods/academic-writing-corpus/定性过程研究.md`。
 
 ---
 

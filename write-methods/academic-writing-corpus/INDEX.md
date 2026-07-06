@@ -2,9 +2,9 @@
 corpus: write-methods
 description: Methods 填空骨架变体库，按设计类型组织。由 distill-methods-exemplar 手动写入验证通过的变体。
 organization: by_design_type
-design_types_count: 21
+design_types_count: 22
 created: 2026-05-18
-updated: 2026-05-20
+updated: 2026-07-07
 ---
 
 # Methods Academic Writing Corpus
@@ -21,11 +21,12 @@ updated: 2026-05-20
 |------|---------|--------|---------|
 | [面板数据-OLS](面板数据-OLS.md) | 面板数据-OLS | 5 | 2026-05-20 |
 | [自然实验-DiD](自然实验-DiD.md) | 自然实验-DiD | 0 | 2026-05-18 |
-| [非线性模型](非线性模型.md) | 非线性模型 | 0 | 2026-05-18 |
+| [非线性模型](非线性模型.md) | 非线性模型 | 1 | 2026-07-06 |
 | [生存分析](生存分析.md) | 生存分析 | 6 | 2026-06-16 |
 | [SEM](SEM.md) | SEM | 0 | 2026-05-18 |
-| [实验](实验.md) | 实验 | 0 | 2026-05-18 |
-| [多研究](多研究.md) | 多研究 | 0 | 2026-05-18 |
+| [实验](实验.md) | 实验 | 1 | 2026-07-06 |
+| [多研究](多研究.md) | 多研究 | 2 | 2026-07-06 |
+| [定性过程研究](定性过程研究.md) | 定性过程研究 | 5 | 2026-07-07 |
 | [稀有结果](稀有结果.md) | 稀有结果 | 0 | 2026-05-18 |
 | [实证对象构建](实证对象构建.md) | 实证对象构建 | 0 | 2026-05-18 |
 | [事件历史+事件研究](事件历史+事件研究.md) | 事件历史+事件研究 | 4 | 2026-05-20 |
@@ -34,7 +35,7 @@ updated: 2026-05-20
 | [动态面板-GMM](动态面板-GMM.md) | 动态面板-GMM | 0 | 2026-05-18 |
 | [匹配DiD-广义DiD](匹配DiD-广义DiD.md) | 匹配DiD-广义DiD | 0 | 2026-05-18 |
 | [同伴效应-网络效应](同伴效应-网络效应.md) | 同伴效应-网络效应 | 0 | 2026-05-18 |
-| [文本构念测量](文本构念测量.md) | 文本构念测量 | 0 | 2026-05-18 |
+| [文本构念测量](文本构念测量.md) | 文本构念测量 | 7 | 2026-07-06 |
 | [PSM匹配面板](PSM匹配面板.md) | PSM匹配面板 | 3 | 2026-06-16 |
 | [堆叠扩散Logit](堆叠扩散Logit.md) | 堆叠扩散Logit | 0 | 2026-05-18 |
 | [多行为者设计](多行为者设计.md) | 多行为者设计 | 0 | 2026-05-18 |
@@ -58,9 +59,29 @@ updated: 2026-05-20
 > **双篇高价值 (2/5)**: 事件研究法、CEM匹配、CPH稳健性对比
 > **单篇高价值 (1/5)**: 分布选择BIC比较、右删失处理、IV三层because论证链、mixed-effects机制分解、替代变量机制矩阵、CAR非参数检验双报告、信息泄露检验、Lewbel三步法、IV诊断链完整报告、政治意识形态操作化
 >
-> **已填充变体**: 24个 (分布于 6个设计类型文件)
-> **核心骨架已确认**: 面板数据-OLS=变体1(4/5)、生存分析=变体1(4/5)、IV-2SLS=变体1,2(1/5)
-> **新设计类型解锁**: IV-2SLS (Wowak2025) — 填充3变体
+> ✅ **2026-07-06 更新**: 蒸馏 Cutolo & Ferriani 2024 (JM) "How Narratives Can Help Atypical Actors Increase Market Appeal" 新增 4 个高价值变体（均单篇、待第二篇交叉验证声明已标注）：
+>   - 文本构念测量 变体5：**复合文本指标构建**（多子维度 → 分别测量 → 平均合成）
+>   - 文本构念测量 变体6：**类别相对文本常规性操作化**（LDA topic → category-average regression slope）
+>   - 文本构念测量 变体7：**文本测量人工验证**（随机样本检查）
+>   - 非线性模型 变体1：**计数模型选择**（负二项回归 + 过度分散诊断）
+>   - 配套 write-results：count-model moderation translation、text-measure robustness bundle、composite text component disaggregation
+>
+> ✅ **2026-07-06 更新（续）**: 蒸馏 Falchetti, Cattani & Ferriani (SMJ) "Start with 'Why,' but only if you have to" 新增 3 个高价值变体（均单篇、待第二篇交叉验证声明已标注）：
+>   - 多研究 变体1：**多研究实验项目总览**（研究梯度图：audience × stimulus × DV 变异矩阵）
+>   - 多研究 变体2：**操纵检验 Pilot Study 段落**（嵌入主 Methods 的操纵验证）
+>   - 实验 变体1：**单实验 Methods 标准段落**（被试→材料→操纵→测量）
+>   - 配套 write-results：experimental ANOVA four-beat、Hayes PROCESS mediation reporting、cross-study synthesis
+>
+> ✅ **2026-07-07 更新**: 蒸馏 Lashley & Pollock 2020 (ASQ) "Waiting to Inhale" 新增 5 个高价值变体（均单篇、待第二篇交叉验证声明已标注），解锁新设计类型「定性过程研究」：
+>   - 定性过程研究 变体1：**现象与方法正当化**（limited understanding → inductive qualitative approach）
+>   - 定性过程研究 变体2：**极端情境选择理由**（extreme situation + theoretical tensions visible + background stability）
+>   - 定性过程研究 变体3：**多源数据角色分配**（observations / interviews / archives 各捕获什么）
+>   - 定性过程研究 变体4：**过程阶段划分与编码进阶**（chronology → bracketing → open coding → axial coding → aggregate dimensions）
+>   - 定性过程研究 变体5：**可信性机制组合**（triangulation + prolonged engagement + peer debriefing + secondary coding）
+>   - 配套 write-results：process-model overview、front-stage/backstage contrast、side-stage negotiation、audience-specific success assessment
+>
+> **已填充变体**: 36个 (分布于 11个设计类型文件)
+> **新设计类型解锁**: 实验、多研究实验、定性过程研究
 >
 > ✅ **2026-06-16 更新**: 蒸馏 Qiao, Hiatt & Sine (2026, SMJ) "dual imprinting" 新增 3 个高价值变体（均单篇、不可跨论文复现声明已标注）：
 >   - 生存分析 变体6：**因 Cox 比例风险失败（Schoenfeld）→ piecewise exponential + 理论时段分割**（估计器由诊断驱动 + 分段由理论驱动）

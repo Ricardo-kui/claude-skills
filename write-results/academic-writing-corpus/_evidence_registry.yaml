@@ -5,10 +5,10 @@
 meta:
   schema_version: 1.0.0
   registry_type: estimator-slot-skeleton
-  last_updated: '2026-05-22'
-  last_batch_id: batch_2026-05-22_paper5
-  batches_processed: 12
-  total_papers_indexed: 12
+  last_updated: '2026-07-07'
+  last_batch_id: batch_13_lashley_pollock2020
+  batches_processed: 14
+  total_papers_indexed: 15
   subfields:
   - strategy
   - ob_hr
@@ -1650,7 +1650,28 @@ estimators:
       R4:
         skeleton_variants: []
       R5:
-        skeleton_variants: []
+        skeleton_variants:
+        - id: r5_count_moderation_translation
+          skeleton: Because the interaction term is in log-count units, we translate
+            it into predicted [outcome] differences. At the minimum observed value
+            of [moderator], [high baseline group] is predicted to [experience] approximately
+            [N] fewer [outcomes] than [low baseline group]. At the maximum observed
+            value of [moderator], this gap narrows to [N] fewer [outcomes], representing
+            a [percent] reduction in the penalty.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Cutolo_Ferriani_2024_JM
+          transferability: high
+          paradigm_exclusivity: 计数模型专用，交互项解释
+          rhythm_tags:
+          - predicted_counts
+          - min_max_contrast
+          - penalty_reduction
+          notes: 负二项交互项不能解释为 count difference，必须用 predicted counts
+          corpus_path: academic-writing-corpus/计数模型.md
       R7:
         skeleton_variants:
         - id: r7_theory_derived_posthoc
@@ -1668,6 +1689,53 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
+          corpus_path: academic-writing-corpus/计数模型.md
+        - id: r7_text_measure_robustness_bundle
+          skeleton: We assess whether the findings depend on specific choices in measuring
+            [text construct]. First, to address the concern that the results are sensitive
+            to [dictionary/tool choice], we re-estimate the models using [alternative
+            dictionary/tool]; the focal interactions remain [direction/status]. Second,
+            to address [topic granularity/aggregation rule], we re-estimate using [alternative
+            topic count/aggregation method]; the results are [consistent/qualified].
+            Third, to address [component validity], we examine [components] separately
+            and find that [pattern]. Together, these checks reduce concern that the
+            findings are artifacts of the particular text-measurement pipeline.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Cutolo_Ferriani_2024_JM
+          transferability: high
+          paradigm_exclusivity: 文本构念测量 + 计数模型交叉
+          rhythm_tags:
+          - threat_based
+          - measurement_robustness
+          - text_construct
+          notes: 文本测量稳健性必须按测量威胁组织，而非按表格罗列
+          corpus_path: academic-writing-corpus/计数模型.md
+        - id: r7_composite_text_disaggregation
+          skeleton: Because [text construct] is a composite of [component 1], [component
+            2], and [component 3], we examine whether the interaction with [baseline
+            predictor] holds for each component separately. Replacing the composite
+            with [component 1] leaves the interaction [direction/status], and the
+            [component 2] interaction is also [direction/status]. However, the [component
+            3] interaction is [not consistent/opposite/null]. This pattern suggests
+            that the moderating effect operates through [facet captured by components
+            1 and 2] rather than [facet captured by component 3].
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Cutolo_Ferriani_2024_JM
+          transferability: high
+          paradigm_exclusivity: 复合文本构念专用
+          rhythm_tags:
+          - component_disaggregation
+          - construct_boundary
+          - facet_comparison
+          notes: 复合文本指标必须分解以显示哪个 facet 驱动效应
           corpus_path: academic-writing-corpus/计数模型.md
       R2:
         description: ''
@@ -2939,8 +3007,60 @@ estimators:
       R2:
         skeleton_variants: []
       R3:
-        skeleton_variants: []
+        skeleton_variants:
+        - id: r3_experiment_anova_four_beat
+          skeleton: Hypothesis [x] predicted that [condition A] would elicit higher
+            [DV] than [condition B] among [audience]. We first checked for outliers
+            using [rule] and [removed/retained] [number]. A one-way ANOVA revealed
+            a significant effect of [IV] on [DV], F([df1], [df2]) = [value], p [relation]
+            [threshold], η² = [value]. Participants in [condition A] reported higher
+            [DV] (M = [value], SD = [value], 95% CI [[lower], [upper]]) than those
+            in [condition B] (M = [value], SD = [value], 95% CI [[lower], [upper]]).
+            These results support Hypothesis [x].
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Falchetti_Cattani_Ferriani_2022_SMJ
+          transferability: high
+          paradigm_exclusivity: 实验/ANOVA 专用
+          rhythm_tags:
+          - outlier_check
+          - f_statistic
+          - eta_squared
+          - means_ci
+          - hypothesis_support
+          notes: 实验 ANOVA 必须报告 η² 和条件均值/CI
+          corpus_path: academic-writing-corpus/实验.md
+        - id: r3_experiment_mediation_hayes
+          skeleton: To examine whether [mediator] explains the effect of [IV] on [DV],
+            we first tested whether [IV] influenced [mediator]. A one-way ANOVA showed
+            that [condition A] led to [higher/lower] [mediator] (M = [value], SD =
+            [value]) than [condition B] (M = [value], SD = [value]), F([df1], [df2])
+            = [value], p [relation] [threshold]. We also tested [alternative mediator
+            1] and [alternative mediator 2] and found no significant effect of [IV].
+            We then estimated the indirect effect using Hayes's PROCESS model [4] with
+            [number] bootstrap iterations. The indirect effect was b = [value], SE =
+            [value], 95% CI [[lower], [upper]].
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Falchetti_Cattani_Ferriani_2022_SMJ
+          transferability: high
+          paradigm_exclusivity: 实验中介专用
+          rhythm_tags:
+          - mediator_anova
+          - alternative_mediators
+          - process_indirect_effect
+          - bootstrap_ci
+          notes: Hayes PROCESS + bootstrap CI 是实验中介报告标准
+          corpus_path: academic-writing-corpus/实验.md
       R7:
+        skeleton_variants: []
+      R2:
         skeleton_variants: []
     cross_slot_patterns: []
     anti_patterns: []
@@ -2965,7 +3085,33 @@ estimators:
       R3:
         skeleton_variants: []
       R7:
-        skeleton_variants: []
+        skeleton_variants:
+        - id: r7_multistudy_cross_study_synthesis
+          skeleton: >
+            Across [number] studies, the findings converge on a consistent
+            pattern: [summary of supported hypotheses]. This convergence is notable
+            because the studies varied [dimensions: ideas, presentation modes, dependent
+            variables, audiences]. Study [1] showed [result with audience A and DV1].
+            Study [2] replicated the effect with [audience B and DV1]. Study [3] extended
+            it to [DV2] and provided evidence for [mechanism]. Study [4] confirmed the
+            pattern with [audience C and DV3]. Together, these results suggest that
+            [theoretical claim] is robust across [boundary conditions], although [remaining
+            limitation/boundary] warrants future research.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Falchetti_Cattani_Ferriani_2022_SMJ
+          transferability: high
+          paradigm_exclusivity: 多研究论文专用
+          rhythm_tags:
+          - convergence
+          - variation_explicit
+          - per_study_summary
+          - bounded_claim
+          notes: 多研究 Results 必须显式说明什么变了、什么一致、边界在哪里
+          corpus_path: academic-writing-corpus/多研究.md
     cross_slot_patterns: []
     anti_patterns: []
     honesty_boundaries: []
@@ -3094,6 +3240,133 @@ estimators:
     cross_slot_patterns: []
     anti_patterns: []
     honesty_boundaries: []
+  定性过程研究:
+    display_name: Qualitative Process Study / Grounded Theory
+    forced_slots:
+    - F1
+    - F2
+    - F3
+    - F4
+    high_risk_missing:
+      F1: 缺过程模型总览，直接跳入阶段细节
+      F3: 只报告前台行动，忽视后台生存张力
+      F4: 前台后台行动分节叙述，缺乏对照
+      F6: 过度宣称去 stigma 成功，未按受众区分
+    cross_validation_notes:
+    - 当前仅有一篇纯定性过程研究来源（Lashley & Pollock 2020）
+    - Park 2013 与 Keeves 2017 的 Results 均为量化分析，无法验证 F1-F6
+    - F1-F6 保持 EMERGING / 单来源，直到新增第二篇纯定性过程研究
+    slots:
+      F1:
+        skeleton_variants:
+        - id: f1_process_model_overview
+          skeleton: Our findings suggest that [process] unfolds through [number] partially overlapping phases. We use [analytical
+            lens] to understand how [collective actors] and [individual actors] pursue [competing goals] across different relational
+            spaces.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Lashley_Pollock_2020_ASQ
+          transferability: high
+          paradigm_exclusivity: 定性过程研究专用
+          rhythm_tags:
+          - process_model
+          - phase_preview
+          - relational_space_lens
+          corpus_path: academic-writing-corpus/定性过程研究.md
+      F2:
+        skeleton_variants:
+        - id: f2_phase_opening
+          skeleton: The [phase name] phase began around [time/event]. [Actors], motivated by [goal], responded by [action]. This
+            established [new agenda/prototype], which was visible on the front stage through [practices].
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Lashley_Pollock_2020_ASQ
+          transferability: high
+          paradigm_exclusivity: 定性过程研究专用
+          rhythm_tags:
+          - phase_trigger
+          - front_stage_action
+          corpus_path: academic-writing-corpus/定性过程研究.md
+      F3:
+        skeleton_variants:
+        - id: f3_front_stage_backstage_contrast
+          skeleton: On the front stage, the collective [action] to signal [value/identity]. While the collective publicly [front-stage
+            action], individual organizations often [backstage action] to access [resource]. This created a tension between [collective
+            goal] and [organizational survival need].
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Lashley_Pollock_2020_ASQ
+          transferability: high
+          paradigm_exclusivity: 定性过程研究专用
+          rhythm_tags:
+          - front_stage
+          - backstage
+          - tension
+          corpus_path: academic-writing-corpus/定性过程研究.md
+      F4:
+        skeleton_variants:
+        - id: f4_side_stage_negotiation
+          skeleton: These debates were side-stage because [why partially visible]. Public confrontations over [issue] revealed
+            [fissures among actors], but they also allowed the collective to clarify [norm/expectation].
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Lashley_Pollock_2020_ASQ
+          transferability: high
+          paradigm_exclusivity: 定性过程研究专用
+          rhythm_tags:
+          - side_stage
+          - negotiation
+          - norm_clarification
+          corpus_path: academic-writing-corpus/定性过程研究.md
+      F5:
+        skeleton_variants: []
+      F6:
+        skeleton_variants:
+        - id: f6_audience_specific_success
+          skeleton: We assessed progress with [audience A], [audience B], and [audience C]. With [audience A], we see evidence
+            of reduced [stigma/evaluation] in [indicator]. With [audience B], [indicator] suggests [partial/limited change].
+            [Audience C] remains [unchanged/resistant]. Thus [outcome] is audience-specific and incomplete.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Lashley_Pollock_2020_ASQ
+          transferability: high
+          paradigm_exclusivity: 定性过程研究专用
+          rhythm_tags:
+          - audience_specific
+          - bounded_claim
+          - success_assessment
+          corpus_path: academic-writing-corpus/定性过程研究.md
+    cross_slot_patterns: []
+    anti_patterns:
+    - id: ap_qualitative_overclaim
+      pattern: 将局部、受众区分的进展泛化为"去 stigma 已经成功"
+      severity: high
+      affected_slots:
+      - F6
+      source_count: 0
+    honesty_boundaries:
+    - id: hb_qualitative_no_causal_language
+      boundary: 定性过程研究不得使用因果推断语言（causes/leads to/effect of）
+      allowed_language: suggests / is consistent with / indicates / reflects
+      affected_estimators:
+      - 定性过程研究
+      note: 可使用机制解释，但必须标记为理论构建而非因果识别
+      violation_count: 0
 batch_history:
 - batch_id: batch_2026-05-22_desai2011
   timestamp: '2026-05-22 18:53:33'
@@ -3180,3 +3453,10 @@ batch_history:
   source_subfield: strategy
   slot_updates_count: 12
   novel_patterns_count: 3
+- batch_id: batch_13_lashley_pollock2020
+  timestamp: '2026-07-07'
+  estimator_family: 定性过程研究
+  source_paper: Lashley_Pollock_2020_ASQ
+  source_subfield: strategy
+  slot_updates_count: 4
+  novel_patterns_count: 4
