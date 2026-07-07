@@ -6,7 +6,7 @@ description: |
   触发词：「写results」「results模板」「结果部分怎么写」「帮我写results」「result skeleton」「写结果」「假设检验」「交互效应」「稳健性检验」「经济显著性」「平行趋势」「marginal effect」「双受众」「对立结果」「替代解释」。
   当用户提及系数解释、表格导航、模型序列、robustness check、安慰剂检验、机制检验、非显著深化、方向相反时也应触发。
   基于 28 篇 MVP30 范文语料库和 Pollock 2025 Ch07。
-version: 2.6.0
+version: 2.7.0
 ---
 
 # Role
@@ -89,6 +89,11 @@ Table [x] presents descriptive statistics and correlations for the variables use
 > **非 OLS 模型注**：对于 GLM、生存分析、计数模型等非 OLS 估计量，多重共线性诊断（VIF）较少在 R1 中报告；如有需要，可替换为 "we verified that [diagnostic] is not a concern"。
 ```
 
+**Model-Free Evidence 结果报告变体**（复杂识别设计前，描述性分组对比）： ✓ STANDARD
+```text
+We begin with model-free evidence for the relationship between [predictor] and [outcome]. We split the sample into [high/low] groups based on [criterion] and compare [standardized outcome] across groups. The mean standardized [outcome] is [value] for the [high] group and [value] for the [low] group; a [t-test/Wilcoxon rank-sum test] indicates that the difference is statistically [significant/not significant] ([statistic] = [value], p [relation] [threshold]). This raw pattern is consistent with [theory], but it does not address [identification threat]; the formal estimates below speak to that concern.
+```
+
 **多研究变体**： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 R2 段落
 ```text
 Table [x] presents descriptive statistics and correlations for Study [n]. [Diagnostic] values indicate that [multicollinearity/diagnostic issue] is [not a concern / addressed by additional checks].
@@ -132,6 +137,11 @@ Table [x] reports the first- and second-stage results of our 2SLS estimation. Pa
 **IV/2SLS 脚注精简变体**（当 first-stage 仅作为诊断、不单独展示时，如 ASQ 常见做法）：
 ```text
 Table [x] reports the second-stage estimates of our 2SLS estimation. We report first-stage F-statistics in the table footnotes. The coefficient on [instrument] is [positive/negative] and statistically significant (β = [value], p [relation] [threshold]), and the first-stage F-statistic is [value], exceeding the Stock-Yogo critical value for [bias threshold]% maximal IV relative bias. This confirms that [instrument] is a strong predictor of [endogenous predictor]. We use the second-stage estimates to test Hypotheses [x–y].
+```
+
+**IV/2SLS 多结果表格导航变体**（同 IV，多个 second-stage 结果）： ✓ STANDARD
+```text
+Table [x] reports the 2SLS results for [outcome A] (Panel A) and [outcome B] (Panel B). Each panel separates the first stage and the second stage. The first-stage estimates, in which [endogenous predictor] is regressed on [instrument] and controls, are reported in the left columns of each panel; the coefficient on [instrument] is [positive/negative] and statistically significant in both panels (β = [value], p [relation] [threshold] for [outcome A]; β = [value], p [relation] [threshold] for [outcome B]), and the first-stage F-statistics exceed the Stock-Yogo threshold. The right columns of each panel report the second-stage estimates, which we use to test Hypotheses [x–y] for [outcome A] and Hypotheses [z–w] for [outcome B].
 ```
 
 **匹配DiD 变体**： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 R2 段落 + 说明匹配后样本
@@ -385,6 +395,17 @@ It is important to note that the combined effect of [predictor A] and [predictor
 
 > **多构念联合 QC**: 仅当两个 predictor 理论上来自同一构念的两个维度时使用（如 label-level × org-level）；不要对任意不相关的 predictor 计算联合效应。
 
+**计数结果 cost-per-event 经济显著性专用**（把系数/幅度翻译为"每改变一个事件需要多少投入"）： ✓ STANDARD
+```text
+To translate the coefficient into a more interpretable cost metric, we divide the estimated effect by the unit cost of [predictor]. The results imply that an additional [monetary unit] of [predictor] is associated with approximately [1/N] fewer [outcome events]. Equivalently, approximately [monetary amount] more in [predictor] is associated with one fewer [outcome event]. Given that the average [outcome event] involves [scale: e.g., units affected / duration / scope] and an estimated per-event cost of [cost], this magnitude is economically meaningful.
+```
+
+> **cost-per-event QC**:
+> - 必须明确 "one unit of outcome" 对应的实际含义
+> - 投入与产出单位必须匹配（如美元投入 → 事件数变化）
+> - 必须提供一个保守或文献锚定的 per-event cost 作为基准
+> - 仅适用于计数或近似计数的结果（recalls, patents, lawsuits, product launches, failures）
+
 ---
 
 ### R6. 非显著 / 混合 / 意外发现
@@ -495,6 +516,13 @@ Taken together, these falsification tests provide evidence against the most plau
 > - 不能只用 "future research should examine" 替代实证反驳
 > - 反驳逻辑必须对称：如果 rival 成立 → 应看到 pattern Y → 我们没看到 Y → rival 不被支持
 > - 建议 2-3 个 rival，按 plausibility 排序，但不超过 4 个
+
+**稳健性的 alternative-strategy 组织变体**（当多种识别/估计策略相互验证时）： ✓ STANDARD
+```text
+To assess whether our findings are robust to alternative empirical strategies, we conduct four supplemental analyses. First, to address [temporal carryover / dynamic effects], we re-estimate the model using [lagged predictor / stock measure / Koyck model]; the coefficient on [focal predictor] remains [direction/status]. Second, to address [system dependence / correlated error structure], we estimate [simultaneous equation system / 3SLS / GMM] that allows [outcome processes] to be jointly determined; the results are [status]. Third, to exploit [exogenous variation / external shock] outside our main design, we compare [affected units] with [unaffected units] before and after [event] using [DiD/event-study] and find [status]. Fourth, to ensure that the [count/ordinal/censored] nature of [outcome] does not drive the results, we re-estimate using [Poisson / negative binomial / ordered probit / Tobit] and find that [status].
+```
+
+> **组织方式选择**：若稳健性检验回应的是同一识别策略下的不同**威胁**（测量/样本/时点/内生性），用 threat-based 段落；若稳健性检验对应的是不同**识别或估计策略**（长短期、联立方程、外生事件、非线性），用 alternative-strategy 段落。两者可混合，但每段只采用一种逻辑。
 
 **受众类型 falsification 专用**（Pontikes 2012 模式，排除一类受众中的子类型混淆）： ✓ STANDARD
 
@@ -809,12 +837,13 @@ Taken together, the results indicate that [digital transformation enhances firm 
 
 ### Completeness
 - [ ] R1：描述性统计 + 相关性 + 诊断（VIF/multicollinearity）导向
+- [ ] R1.5（如适用）：复杂识别设计前是否报告 model-free evidence
 - [ ] R2：表格导航解释 Model 1→2→3 的增量逻辑，每假设对应哪一列
 - [ ] R3：每假设都有"方向 → 显著性 → 幅度 → 支持判断"四拍
 - [ ] R4：交互项系数 + 简单斜率/AME + 图示引用；若显著则**强烈建议**警告主效应不可独立解释（若主效应已不显著可酌情省略）
-- [ ] R5：经济显著性（one-SD change / 概率变化 / 基准对比）已报告
+- [ ] R5：经济显著性（one-SD change / 概率变化 / 基准对比 / cost-per-event）已报告
 - [ ] R6：所有非显著/混合/意外发现都被报告（Inline 报告可接受，独立段落非必需），未跳过
-- [ ] R7：稳健性按威胁组织（测量/模型/样本/时点/内生性/机制），非机械列表
+- [ ] R7：稳健性按威胁组织（测量/模型/样本/时点/内生性/机制），或按 alternative strategy 组织（长短期/联立方程/外生事件/非线性），非机械列表
 - [ ] R8：补充/事后分析与稳健性分开，明确标记为探索性
 - [ ] R9（可选）：Results-to-Discussion 过渡，总结核心模式并预告 Discussion
 

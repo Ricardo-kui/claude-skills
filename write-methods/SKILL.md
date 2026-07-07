@@ -7,7 +7,7 @@ description: |
   触发词：「写methods」「methods模板」「方法部分怎么写」「帮我写methodology」「method skeleton」「写方法」「方法论」「model specification」「估计方法」「样本选择」「变量定义」「测量辩护」「构念创新」「自创变量」。
   当用户提及变量操作化、识别策略、稳健性检验、模型设定、样本漏斗、内生性处理、测量局限辩护、新构念操作化时也应触发。
   基于 32 篇 MVP30 范文语料库、Pontikes (2012, ASQ) 蒸馏和 Pollock 2025 Ch07。
-version: 2.7.0
+version: 2.8.0
 ---
 
 # Role
@@ -58,7 +58,8 @@ version: 2.7.0
 
 ## 标准顺序与特殊分支
 
-**默认顺序**：M1 → M2 → M3 → M4 → M5 → M6 → M7 → M8 → M10
+**默认顺序**：M1 → M2 → M2.5* → M3 → M4 → M5 → M6 → M7 → M8 → M10
+\* *M2.5 为可选 credibility-building 段落：复杂识别设计（IV/DiD/匹配/自然实验）可在变量细节前插入 model-free evidence。*
 
 **特殊分支顺序调整**：
 - **稀有结果**：M2 先说明抽样策略，再进入变量
@@ -170,6 +171,28 @@ Our data link [actor A], [actor B], and [actor C] through [matching key / dyadic
 **多源嵌套调查变体**（如 Mannor et al. SMJ，多方法数据 + 聚类标准误）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 M2 + M7 多层模型/聚类标准误
 ```text
 We used a multisource, multimethod data collection approach to test our ideas. This involved gathering data from [N] sources: [source 1: e.g., in-person interviews], [source 2: e.g., online surveys to subordinates], [source 3: e.g., hard-copy surveys to friends/family], and [source 4: e.g., archival company data]. Testing our theory required gaining access to [phenomenon], and our methodology was designed with this goal in mind. We established [N] criteria to govern recruitment: [criterion 1], [criterion 2], and [criterion 3]. We tested our hypotheses using [estimator: e.g., hierarchical linear regression]. To account for the nonindependence in our data (i.e., [nesting structure]), we specified [SE type: e.g., Huber/White/sandwich standard errors] using the [software option]. [Observations] were clustered by [clustering variable].
+```
+
+---
+
+### M2.5. Model-Free Evidence（可选 credibility-building 段落）
+
+**通用填空段落**： ✓ STANDARD（IV/DiD/匹配/自然实验/复杂档案研究中常见）
+
+```text
+Before estimating the formal model, we present model-free evidence for the relationship between [predictor] and [outcome]. We split the sample into [high/low] groups based on [criterion: e.g., median / mean of predictor], yielding [N_high] and [N_low] observations. Because [confound] could mechanically produce a difference, we standardize [outcome] by [denominator] before comparing groups. The mean standardized [outcome] is [value] for the [high] group and [value] for the [low] group; a [t-test/Wilcoxon rank-sum test] indicates that the difference is statistically [significant/not significant] ([statistic] = [value], p [relation] [threshold]). This pattern is consistent with [theory], but it does not address [identification threat]; the formal estimates below speak to that concern.
+```
+
+> **使用条件**：Model-free evidence 仅作为**描述性可信度铺垫**，不能替代识别策略。若设计本身不涉及复杂识别（纯 OLS/FE 面板），此段落通常多余。
+
+**IV/2SLS 变体**（替换首句和末句）：
+```text
+Before estimating the instrumental-variable model, we present model-free evidence to show that the raw data exhibit the pattern implied by our theory. We split the sample into [high/low] groups based on [predictor] and compare [standardized outcome] across groups. The descriptive pattern is consistent with [negative/positive association], but it does not establish causality; the IV estimates below address the endogeneity of [predictor].
+```
+
+**自然实验/DiD 变体**（替换末句）：
+```text
+Before estimating the difference-in-differences model, we plot [outcome] over time for [treated] and [control] groups. The raw trajectories appear [parallel] prior to [event], and [diverge/converge] afterward, consistent with [theory]. Formal event-study estimates in the Results section assess whether this visual pattern is statistically reliable.
 ```
 
 **事件历史变体**（在通用段落中加入过程说明）： 🔬 EXPERIMENTAL（2-3 篇范文：Zhou 2017, Pontikes 2012 等）⚠️ 保守替代：通用 M2 + M3 生存分析变体
@@ -466,6 +489,21 @@ Joint estimation addresses simultaneity and accounts for correlated errors acros
 Although [baseline estimator] can exploit [within/between] variation, it may still be biased if [predictor] is endogenous due to [omitted variable / reverse causality / measurement error]. We therefore use two-stage least squares (2SLS) with [instrument] as an instrument for [endogenous predictor]. [Instrument] satisfies the relevance condition because [first-stage F-statistic / theoretical reason for correlation with endogenous predictor]. It satisfies the exclusion restriction because [theoretical argument for why instrument affects outcome only through predictor]. In the first stage, [endogenous predictor] is regressed on [instrument], [exogenous controls], and [fixed effects]. The first-stage F-statistic is [value], exceeding the Stock-Yogo threshold, indicating that [instrument] is not weak. In the second stage, [outcome] is regressed on the predicted [endogenous predictor] and the same controls. Standard errors are [robust / clustered] to account for [error structure].
 ```
 
+**策略性内生性变体**（当核心解释变量是行动者主动选择时）： ✓ STANDARD（IV/控制函数/自然实验范文通用）
+```text
+Although [baseline estimator] can exploit [within/between] variation, it may still yield biased estimates because [predictor] reflects a strategic choice. [Actors] may adjust [predictor] in anticipation of [future outcome / regulatory risk / competitive pressure], and unobserved factors underlying this strategic orientation are likely correlated with both [predictor] and [outcome]. Fixed effects remove time-invariant heterogeneity, but they do not address time-varying omitted variables that drive both the choice of [predictor] and the realization of [outcome]. We therefore use [2SLS / control function / natural experiment] to isolate variation in [predictor] that is plausibly unrelated to these unobserved strategic considerations.
+```
+
+**IV/2SLS 多结果对称变体**（同 IV，多个相关 second-stage 结果）： ✓ STANDARD（双结果/利益相关者反应研究常见）
+```text
+We use a single first-stage equation to isolate exogenous variation in [endogenous predictor], but we estimate separate second-stage equations for [outcome A] and [outcome B] because the two outcomes are generated by [different actors / different decision processes]. The first-stage specification is identical across equations: [endogenous predictor] is regressed on [instrument], [common controls], and [fixed effects]. The second-stage equations differ only in the outcome and in the covariates most relevant to each decision process. For [outcome A], we include [covariate set A] to capture [process A determinants]; for [outcome B], we include [covariate set B] to capture [process B determinants]. This structure allows us to test whether the same identifying variation produces [parallel / divergent] effects across outcome streams.
+```
+
+**计数 DV 的 linear IV 选择说明**（count outcome + 2SLS 时）：
+```text
+Because [outcome] is a count with a skewed distribution, one might consider Poisson or negative binomial IV. However, when the research question focuses on the [average marginal effect / mean change in count] and the instrument is strong, a linear 2SLS specification provides a consistent estimate of the local average treatment effect and yields coefficients that are directly interpretable. We therefore report linear 2SLS as the primary specification and use [Poisson IV / negative-binomial IV / ordered probit] as a robustness check to ensure that the distributional form does not drive the results.
+```
+
 **线性概率模型（LPM）+ 2SLS 变体**（二元 DV 且需固定效应时）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：IV/2SLS 变体
 ```text
 Because the dependent variable is binary, one might consider Logit or Probit. However, when using 2SLS with fixed effects, the linear probability model (LPM) is often preferred because coefficients are directly interpretable as probability changes and computational tractability is preserved. We therefore estimate LPM with 2SLS for the main analyses and report Probit/Logit IV only as robustness. The specification includes [fixed effects] to absorb [unobserved heterogeneity]. Standard errors are clustered at the [level] to account for [dependence structure].
@@ -553,6 +591,17 @@ We also conduct permutation tests by randomly assigning [treatment status/timing
 ```text
 Because [timing/choice] may be endogenously chosen in the [outcome] model, we use a control-function approach: first estimate [timing model], then include the first-stage residual in the [outcome model]. [Variable] identifies the first stage because it should affect [timing] but not [second-stage outcome], since [theoretical reason].
 ```
+
+**测量局限辩护：披露阈值/左删失变体**（当数据存在报告阈值或下限堆积时）： ✓ STANDARD
+```text
+[Source] reports [measure] only when [threshold/rule], so values below [threshold] appear as zero or are not observed. This rule could introduce measurement error if [firms/actors] cluster just below the threshold or if the threshold varies systematically with [confound]. We examine the distribution of observed [measure] values and find no evidence of bunching around [threshold]; [percentage]% of positive observations exceed [multiple of threshold], and the mean and median positive values ([mean], [median]) are well above the reporting floor. We therefore expect any attenuation from threshold-based measurement error to be limited, and if anything it would bias our estimates toward zero, making significant results harder to obtain.
+```
+
+> **披露阈值 QC**:
+> - 必须说明具体 threshold/rule
+> - 必须检查并报告是否存在 bunching（不能仅假设无堆积）
+> - 必须解释为什么该测量误差不至于推翻推断（最好是保守偏误逻辑）
+> - 若存在明显堆积，不应使用此变体，应考虑 Tobit / Heckman / 其他删失模型
 
 **实验效度变体**：
 ```text
@@ -810,10 +859,17 @@ All top-journal papers now treat robustness as a systematic expectation rather t
 - [ ] **Outliers and influential observations**: With and without top/bottom 1% or Cook's distance thresholds
 - [ ] **Clustering and SE sensitivity**: Alternative clustering levels, wild bootstrap, or spatial HAC
 
-**骨架段落**（可插入 M8 或 Results 预告段）：
+**骨架段落（threat-based 组织）**：
 ```text
 To ensure that our findings are not driven by [specific modeling choice / measure definition / sample composition], we conduct a series of robustness checks. First, we re-estimate our models using [alternative estimator / distribution] and find that [key results] remain [status]. Second, we test alternative operationalizations of [construct] using [alternative measure / cutoff] and obtain [consistent / qualitatively similar] results. Third, we address potential selection concerns by [matching / weighting / subsample analysis] and confirm that [focal effect] is robust. Fourth, to mitigate reverse causality concerns, we [lag structure / control function / lead-lag test] and find [result]. Finally, we rule out [alternative explanation] by [test design]; the [null / nonsignificant] result supports our preferred interpretation.
 ```
+
+**骨架段落（alternative-strategy 组织）**： ✓ STANDARD（当稳健性涉及多种识别/估计策略时）
+```text
+To assess whether our findings are robust to alternative empirical strategies, we conduct four supplemental analyses. First, to address [temporal carryover / dynamic effects], we re-estimate the model using [lagged predictor / stock measure / Koyck model] and find that [key results remain status]. Second, to address [system dependence / correlated error structure], we estimate [simultaneous equation system / 3SLS / GMM] that allows [outcome processes] to be jointly determined, and the results are [status]. Third, to exploit [exogenous variation / external shock] outside our main design, we compare [affected units] with [unaffected units] before and after [event] using [DiD/event-study] and find [status]. Fourth, to ensure that the [count/ordinal/censored] nature of [outcome] does not drive the results, we re-estimate using [Poisson / negative binomial / ordered probit / Tobit] and find that [status].
+```
+
+> **组织方式选择**：若稳健性检验对应的是同一组识别假设下的不同**威胁**（测量/样本/时点/内生性），用 threat-based 组织；若稳健性检验对应的是不同**识别或估计策略**（长短期、联立方程、外生事件、非线性），用 alternative-strategy 组织。两者可在同一 Results 中混合使用，但每段只采用一种组织逻辑。
 
 ---
 
@@ -854,6 +910,7 @@ To ensure that our findings are not driven by [specific modeling choice / measur
 ### Completeness
 - [ ] M1：研究情境有至少 3 个理由，且与理论机制直接挂钩
 - [ ] M2：样本漏斗包含起始总体 → 每步排除（理由+数字）→ 最终 N
+- [ ] M2.5（如适用）：复杂识别设计前是否插入 model-free evidence 作为可信度铺垫
 - [ ] M3：因变量有构念定义 + 操作化 + 测量来源 + 方向解释
 - [ ] M4：每假设一段，含 Hypothesis 编号对齐，变量按理论顺序排列
 - [ ] M5：调节/中介/机制变量有操作化和交互项说明
