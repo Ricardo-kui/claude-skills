@@ -19,6 +19,7 @@
 | `04-public-health-safety.md` | `04-public-health-safety` | 公共健康/安全后果 | VERIFIED | — |
 | `05-firm-value-stock-market.md` | `05-firm-value-stock-market` | 股价/企业价值后果 | VERIFIED | — |
 | `07-reputation-legitimacy-crisis.md` | `07-reputation-legitimacy-crisis` | 声誉/合法性危机 | VERIFIED | — |
+| `09-myopic-management-long-term-loss.md` | `09-myopic-management-long-term-loss` | 短视管理侵蚀长期价值 | EMERGING (1p) | chung_low_rust_2022_jams (JAMS) |
 
 ## 学科缺口
 
