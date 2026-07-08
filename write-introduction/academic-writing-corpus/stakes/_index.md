@@ -41,6 +41,7 @@
 |--------|-------------|------|
 | `01-general-theory-practice` | 任意 Tension | 最通用的 Stakes，适配所有 Gap 类型 |
 | `02-quantified-economic-loss` | `01-despite-progress-unaddressed` | 量化损失建立 Incompleteness 的紧迫性 |
+| `09-myopic-management-long-term-loss` | `20-opposite-predictions-positive-trait` 或 `08-cost-vs-benefit` | 短视管理 stakes 需要成本-收益或文献矛盾张力支撑 |
 | `04-public-health-safety` | `04-reality-contradicts-consensus` 或 `03-structural-blindspot` | 安全后果需要高能量 Gap |
 | `08-goal-conflict` | `01-despite-progress-unaddressed` | 遗漏导致决策困境——Incompleteness + goal conflict |
 | `08-goal-conflict` | `12-contrary-to-belief` (Hook) | 反直觉发现→目标冲突后果 |
