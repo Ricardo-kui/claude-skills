@@ -58,7 +58,10 @@ hooks:
       - canonical_id: "13-rhetorical-question"
         pollock_type: "Rhetorical question"
         syntactic_signature: "日常选择三联→读者自我确认→概念转译"
-        exemplar: "gomulya2019 (SMJ)"
+      - canonical_id: "16-evolving-social-issue"
+        pollock_type: "Trend"
+        syntactic_signature: "社会议题广泛关注→收窄到具体DV→负面后果→文献定位为外部/结构解释"
+        exemplar: "weng_yang (JMS)"
     medium:
       - canonical_id: "05-literature-consensus-blindspot"
         pollock_type: "Trend"
@@ -92,6 +95,10 @@ hooks:
         pollock_type: "Trend"
         syntactic_signature: "宏观变革(数字化) → 双行业平行分化案例 → 收束到研究框架"
         exemplar: "zhao_ding2022 (OS)"
+      - canonical_id: "23-popular-debate"
+        pollock_type: "Anecdote"
+        syntactic_signature: "TED talk vs 畅销书对立观点 → 'This debate illustrates...' pivot → 学术 gap"
+        exemplar: "falchetti2022 (SMJ)"
     high:
       - canonical_id: "06-paradigm-challenge"
         pollock_type: "Trend"
@@ -113,55 +120,13 @@ hooks:
       note: "让读者\"意识到混淆\""
     Mechanism:
       preferred: ["05-literature-consensus-blindspot"]
-      note: "展示\"现有解释不足\"。注册表显示此模板 gap_distribution.Incompleteness=0，仅推荐给 Inadequacy"
+      note: "展示\"现有解释不足\""
     Boundary:
-      preferred: ["04-puzzle-paradox"]
-      note: "呈现\"何时有效/失效\""
+      preferred: ["04-puzzle-paradox", "23-popular-debate"]
+      note: "呈现\"何时有效/失效\"; popular debate 自然导向 contingency resolution"
     Phenomenon:
       preferred: ["03-data-shock", "14-paired-disasters"]
       note: "用数据建立新现象域，或用极端案例叙事建立现象存在性"
-
-  # Registry evidence strength — static snapshot for fast lookup during selection.
-  # ⚠️  Runtime authority is _evidence_registry.yaml. This section is a cached copy;
-  #     if registry paper_count/status/gap_distribution differ from this snapshot,
-  #     the registry wins. Update this section after each distill-introduction-exemplar --batch.
-  registry_evidence:
-    "06-paradigm-challenge":
-      status: "ROBUST"
-      paper_count: 6
-      gap_purity: "67% Incommensurability, 33% Inadequacy — 不要推荐给 Incompleteness"
-    "05-literature-consensus-blindspot":
-      status: "ROBUST"
-      paper_count: 7
-      gap_purity: "86% Inadequacy, 14% Incompleteness（park2013 为 Incompleteness+Non-Coherence 例外）"
-    "04-puzzle-paradox":
-      status: "ROBUST"
-      paper_count: 7
-      gap_purity: "57% Inadequacy, 43% Incommensurability"
-    "03-data-shock":
-      status: "ROBUST"
-      paper_count: 7
-      gap_purity: "100% Incompleteness — 不要推荐给 Inadequacy/Incommensurability"
-    "02-epigraph-quote-pivot":
-      status: "ROBUST"
-      paper_count: 8
-      gap_purity: "50% Incompleteness, 50% Inadequacy"
-    "10-immersive-narrative":
-      status: "VERIFIED"
-      paper_count: 3
-      gap_purity: "67% Incompleteness"
-    "14-paired-disasters":
-      status: "EMERGING"
-      paper_count: 2
-      gap_purity: "Incompleteness + Phenomenon — 推荐时标注\"来自单篇范文（haunschild2015 OS）\""
-    "21-dual-industry-trend":
-      status: "EMERGING"
-      paper_count: 1
-      gap_purity: "Inadequacy（zhao_ding2022 OS 单篇范文）— 推荐时标注\"来自单篇范文\""
-    other:
-      status: "EMERGING"
-      paper_count: "1-2"
-      gap_purity: "见注册表 — 推荐时标注\"来自单篇范文\""
 
 # §3 — Conversation strategies
 conversation_strategies:
@@ -180,7 +145,7 @@ tensions:
   Incompleteness:
     - canonical_id: "01-despite-progress-unaddressed"
       core_syntax: "\"Although research has... little attention has been paid to...\""
-      registry_status: "ROBUST (18p)"
+      registry_status: "ROBUST (23p)"
       exclusivity: "仅 Incompleteness — Inadequacy/Incommensurability 中为 0"
     - canonical_id: "12-forward-vs-backward-looking"
       core_syntax: "\"Research has examined post-hoc consequences, yet what predicts timing...\""
@@ -230,14 +195,49 @@ tensions:
       exclusivity: "Incommensurability 专用"
     - canonical_id: "10-constraint-vs-freedom"
       core_syntax: "\"Technology expands freedom, yet market structure imposes constraints...\""
-      registry_status: "EMERGING (1p)"
+      registry_status: "EMERGING (0p — 模板占位，待范文入库)"
       exclusivity: "Incommensurability 专用"
 
-# Gap exclusivity filter rules (registry-driven)
-gap_exclusivity_rules:
-  - rule: "若模板的 gap_distribution.[user_gap_type] == 0 → 禁止推荐，即使本表列出"
-  - rule: "01-despite-progress-unaddressed 在 Incommensurability 场景 → 逻辑矛盾，已内置互斥"
-  - rule: "05-construct-confusion 在 Incommensurability 场景 → 不适用（Incommensurability 不是\"构念搞混了\"而是\"理论互相矛盾\"）"
+# Incommensurability resolution strategies
+# Incommensurability Introductions need to HINT at the resolution, not just identify the paradox.
+# These three strategies map to preferred Introduction architectures and Theory Lens patterns.
+incommensurability_resolution:
+  facet_decomposition:
+    description: "Two competing logics are reframed as different facets of the same phenomenon"
+    intro_structure: "Hook (paradox) → Lit (two theories) → Gap (mixed evidence) → Theory Lens (facet naming) → Preview → Contribution"
+    theory_lens_pattern: "We theorize that [logic A] and [logic B] pertain to different facets of [phenomenon]: [facet A] and [facet B], so they are intertwined in explaining [outcome]."
+    exemplar: "zhou2017 (ASQ): institutional logic → resource allocation, efficiency logic → resource utilization"
+    requires: "Clear conceptual distinction between facets; each facet must map to one side of the paradox"
+    variant_in_corpus: "04-reality-contradicts-consensus 变体 A"
+  audience_heterogeneity:
+    description: "The paradox resolves when you consider that different audiences evaluate differently"
+    intro_structure: "Hook (consensus→anomaly) → Lit (market-takers known, market-makers unknown) → Gap → Theory Lens (audience typology) → Preview → Contribution"
+    theory_lens_pattern: "There are at least two roles for audiences: [audience A], who [evaluation logic A], and [audience B], who [evaluation logic B]. Previous literature has only investigated [audience A]."
+    exemplar: "pontikes2012 (ASQ): market-takers (consumers) devalue ambiguity, market-makers (VCs) prefer it"
+    requires: "Two audiences with genuinely different evaluation criteria; empirical access to both audiences"
+    variant_in_corpus: "04-reality-contradicts-consensus 变体 E"
+  contingency_revelation:
+    description: "The paradox exists because prior work ignored a key boundary condition"
+    intro_structure: "Hook (paradox) → Lit → Gap (contradictory findings) → Stakes → Theory Lens (moderator) → Preview → Contribution"
+    theory_lens_pattern: "We propose that [relationship] depends on [moderator], which determines whether [mechanism A] or [mechanism B] dominates."
+    exemplar: "gamache2023 (SMJ): female CEO risk aversion → depends on board composition and acquisition context"
+    requires: "Genuine moderator with theoretical basis; empirical variation in moderator"
+    variant_in_corpus: "04-reality-contradicts-consensus 变体 B"
+
+  # Auto-match resolution strategy from Gap×Contribution combo
+  combo_to_resolution:
+    "Incommensurability × Constructs":
+      strategy: "audience_heterogeneity"
+      rationale: "Constructs 贡献的 Incommensurability 通常通过区分不同受众/评估者的视角来实现——新构念不是组织的属性而是受众的角色"
+      exemplar: "pontikes2012 (ASQ): market-taker vs market-maker"
+    "Incommensurability × Mechanism":
+      strategy: "facet_decomposition"
+      rationale: "Mechanism 贡献的 Incommensurability 通常通过将对立逻辑重构为同一现象的不同面向（facet）来实现"
+      exemplar: "zhou2017 (ASQ): institutional logic→resource allocation, efficiency logic→resource utilization"
+    "Incommensurability × Boundary":
+      strategy: "contingency_revelation"
+      rationale: "Boundary 贡献的 Incommensurability 通常通过识别被忽略的边界条件——矛盾在什么条件下向哪方倾斜"
+      exemplar: "gamache2023 (SMJ): female CEO risk aversion depends on board composition"
 
 # Tension wording intensity
 tension_wording_intensity:
@@ -322,6 +322,13 @@ pairing_constraints:
       tension: "02-implicit-assumption-wrong"
       applies_to: "Inadequacy"
       note: "双行业案例建立的定位异质性现象，需挑战\"低壁垒机械地转化为多样性\"的隐含前提（变体 D）才能转化为学术问题"
+    - hook: "23-popular-debate"
+      tension: "01-despite-progress-unaddressed"
+      applies_to: "Incompleteness / Inadequacy"
+    - hook: "16-evolving-social-issue"
+      tension: "02-implicit-assumption-wrong 或 11-overlooked-alternative"
+      applies_to: "Inadequacy"
+      note: "流行争论揭示的不是谁对谁错，而是双方都忽略的 contingency factor——最适合 Boundary 或 Constructs 贡献"
 
   puzzle_paradox_note: "04-puzzle-paradox 有两个配对规则。Inadequacy 场景（\"你们把构念搞混了\"）→ 配 02-implicit-assumption-wrong；Incommensurability 场景（\"两个理论都对但互相矛盾，需要新构念整合\"）→ 配 04-reality-contradicts-consensus。判断依据：用户的 Gap 描述是\"文献理解偏了\"还是\"文献互相矛盾\"。"
 
@@ -391,7 +398,7 @@ exemplar_anchoring:
   "Inadequacy × Constructs": { exemplar: "Han 2024, Pollock 2015, Pfarrer 2010", journal: "AMP, ASQ, AMJ" }
   "Inadequacy × Mechanism": { exemplar: "Keeves 2017, Paruchuri 2020", journal: "AMJ, SMJ" }
   "Inadequacy × Boundary": { exemplar: "Han 2020", journal: "AMP" }
-  "Inadequacy × Phenomenon": { exemplar: "DesJardine 2023", journal: "AMJ" }
+  "Inadequacy × Phenomenon": { exemplar: "DesJardine 2023, Weng & Yang (JMS)", journal: "AMJ, JMS" }
   "Incommensurability × Constructs": { exemplar: "Pontikes 2012", journal: "ASQ" }
   "Incommensurability × Mechanism": { exemplar: "Zhou 2017", journal: "ASQ" }
   "Incommensurability × Boundary": { exemplar: "Park 2025", journal: "OS" }
@@ -461,62 +468,3 @@ transitions:
       triggers: "Level 贡献——微观视角补充宏观理论"
     - canonical_id: "12-setting-justification"
       triggers: "实证情境需要特别论证（如选择特定行业/国家/时期的理由）"
-
-# §11 — Narrative Arc (Pollock 2025 Ch02)
-narrative_arc:
-  # 将 Gap 类型映射到叙事弧线形态（基于 Pollock Ch02）
-  # 注意：不使用数字能量级，只标识弧线形态和典型高潮位置
-  gap_to_arc:
-    Incompleteness:
-      default_arc: "gentle_rise"
-      typical_climax_paragraph: "P5"
-      description: "温和上升：exposition 长，rising action 平缓，适合渐进式贡献"
-    Inadequacy:
-      default_arc: "moderate_rise"
-      typical_climax_paragraph: "P6"
-      description: "中等上升：有明确 paradox，rising action 明显，适合修正式贡献"
-    Incommensurability:
-      default_arc: "sharp_rise"
-      typical_climax_paragraph: "P7"
-      description: "急剧上升：strong hook，sharp gap，high stakes，适合颠覆式贡献"
-
-  # 模块的叙事功能标注（用于 SKILL.md 的 Five-Act 映射）
-  module_to_act:
-    hook: "exposition"
-    literature_turn: "early_rising_action"
-    gap: "rising_action"
-    stakes: "rising_action"
-    theory_lens: "rising_action"
-    preview: "late_rising_action"
-    contribution: "denouement_preview"
-
-  # Hook 的 Pollock 4-type 映射
-  hook_pollock_mapping:
-    quote:
-      description: "用具体引语或轶事抓住读者，建立人文面孔"
-      skill_hooks:
-        - "02-epigraph-quote-pivot"
-        - "10-immersive-narrative"
-        - "11-institutional-anecdote"
-      best_for: "empirical_puzzle, normative_challenge"
-    trend:
-      description: "用数据或文献趋势展示重要模式"
-      skill_hooks:
-        - "03-data-shock"
-        - "05-literature-consensus-blindspot"
-        - "08-consequence-cascade"
-      best_for: "theoretical_tension, empirical_puzzle"
-    anecdote:
-      description: "用叙事案例引入主角和悖论"
-      skill_hooks:
-        - "04-puzzle-paradox"
-        - "10-immersive-narrative"
-        - "14-paired-disasters"
-        - "16-evolving-social-issue"
-      best_for: "empirical_puzzle, paradox"
-    rhetorical_question:
-      description: "用问题激发读者思考"
-      skill_hooks:
-        - "13-rhetorical-question"
-        - "17-classic-debate-constraint"
-      best_for: "theoretical_tension, normative_challenge"

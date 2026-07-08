@@ -1567,3 +1567,68 @@ H5: [Moderator 2] negatively moderates the relationship between [origin conditio
 **语料锚定**: qiao_hiatt_sine2026 (SMJ) — 创始军方伙伴 → 内部 capability imprint（操作流程/安全协议，+ 国际化）+ 外部 identity imprint（军方名称/联想，− 国际化）；H3 capability 比 identity 更持久；H4 民用化空管 democratize 能力底物；H5 军事政变 amplify 身份威胁。配合 `write-methods/生存分析.md` 变体 6、`write-methods/IV-2SLS.md` 变体 4、`write-results/IV-2SLS.md` 变体 4 使用。
 
 ---
+
+## 双原因+三方行为者对比型主效应推导（weng_yang 型）
+
+**功能**: 当 IV 是一个连续谱（非二元处理）且存在理论上可推导的反方向行为者和中间行为者时，H1 段落按**五拍论证**展开，每个理由和反方都有完整的 why chain。
+
+**五拍论证节奏**:
+```
+[拍1-方向]: 双原因宣告
+"We suggest that [IV] reflects [actors]' [values] through the lens that they use 
+to interpret [DV situation]. Specifically, the degree to which [IV] is more 
+[pole A] or [pole B] influences [DV] for two reasons."
+
+[拍2a-机制(Reason 1)]: 第一个原因 → 市场/结构失败 → 后果升级
+"First, [pole A actors] are more aware of [issue]. While [counter-argument], 
+[pole A actors] would note that [mechanism: why the status quo is problematic]. 
+For example, [specific market/structural failure]. This inferior [condition] 
+results in [negative outcome]. Additionally, [second failure].
+From the perspective of [pole A actors], these situations warrant their attention 
+and action. If one does not act, then [escalated negative consequence]. Indeed, 
+[negative consequence citation]. [Pole A actors] see these consequences as an 
+imperative issue and are likely to conceive of alternatives."
+
+[拍2b-机制(Reason 2)]: 第二个原因 → 抵抗 → 长期收益
+"Second, [pole A actors] are more open to ideas for [change type]. Due to their 
+[characteristic], these [actors] are more receptive to [specific ideas] ([citations]). 
+[External actors] may have advocated for change, but individuals may not respond 
+immediately. [Pole A actors], however, believe that it is crucial to make changes 
+quickly ([citations]). While implementing such actions may cause short-term [cost], 
+doing so can [long-term benefit]. On this basis, a [pole A actor] is inclined to 
+consider alternatives that are more [value-laden direction]."
+
+[拍2c-反方对比]: 对立行为者论证（对称反向）
+"In contrast, a [pole B actor] may behave differently. On the one hand, the 
+[pole B actor] attends less closely to issues of [issue] as he or she thinks 
+that [counter-mechanism: the system works]. From this perspective, any additional 
+intervention could impair rather than improve [system]'s functioning. On the 
+other hand, [pole B actors] are less open to change since they psychologically 
+adhere to [existing order]. Thus, a [pole B actor] is likely to oppose the change."
+
+[拍2d-中间基准]: 中间行为者（零效应基准）
+"Apart from [pole A] and [pole B], there are [actors] whose orientations are 
+[middle position]. These [actors] do not particularly [position]. Such [actors] 
+do not see [mechanism A] as highly [judgment], nor do they have a clear 
+preference either advocating for or opposing [ideas]. [Middle actors] are, 
+therefore, unlikely to [directional action]."
+
+[拍4-权威收束]: 理论原文引用 → 假设
+"As [theory authority] maintain, '[closing quote]' (p. XXX). We thus propose: [Hypothesis]."
+```
+
+**语料锚定**:
+- Weng & Yang (JMS) — CEO political liberalism → CEO-employee pay disparity; "for two reasons"; liberal/conservative/moderate tripartite comparison; Hambrick & Mason (1984) quote as closing authority
+
+**关键特征**:
+- **双原因并行**（非串行中介链）: 每个原因是独立的充分条件——符合"X 通过多个独立渠道影响 Y"的场景
+- **三方行为者完整覆盖**: 不仅论证 X=high vs X=low，还论证 X=middle（零效应基准）——为连续型 IV 的非线性效应预留理论空间
+- **反方对比使用 "On the one hand... On the other hand..."**: 结构化的双边论证，每个方向有独立的理论依据
+- **权威引语收束**: 用理论创始人的原文引用作为假设前的最后一步——增强假设的理论合法性和必然感
+- **"for two reasons" 信号**: 段落开篇明确预告论证结构——读者知道将有两个原因，预期管理精准
+
+**适用**: 假设树型 H1（非机制推演型——无双中介构念）；IV 是连续谱且极点行为者可从理论推导；当理论预期中间值行为者与两端都不同时
+
+**禁忌**: 双原因不是双中介——不要声称 "X→reason1→Y" 和 "X→reason2→Y" 是中介路径（除非你确实要检验 mediation）；三方对比的长度要成比例（不能 liberal 3 段、conservative 1 句、moderate 1 行）；权威引语不能替代你自己的理论推演——它是收束信号而非论证主体
+
+---

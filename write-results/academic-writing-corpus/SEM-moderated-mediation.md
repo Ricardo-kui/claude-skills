@@ -6,8 +6,11 @@ design_type: SEM / Path Model / Moderated Mediation
 estimator: Mplus / SEM
 source_papers:
   - habel2016 (JM, 2016): "CSR → benefit/cost markup → price fairness, moderated by attribution; Preacher & Hayes (2008) indirect effects"
+  - "bamberger_homburg_wielgos_2021_wage_inequality_jm (Journal of Marketing): inconsistent mediation → suppressor variable, opposing direct/indirect effects"
+  - "vadakkepatt_arora_martin_paharia_2022_lobbying_jm (Journal of Marketing): simultaneous-equation SEM reporting with IV diagnostics + Granger causality"
+variants_count: 3
 created: 2026-06-03
-updated: 2026-06-03
+updated: 2026-07-07
 source: Distilled from Habel et al. (2016, JM) by distill-methods-exemplar
 ---
 
@@ -188,3 +191,81 @@ distinguishable temporal dynamics.
 ### 语料锚定
 
 - qiao_hiatt_sine2026 (SMJ) — H3：内嵌 capability imprint 比外部 identity imprint 更持久。age×capability (+0.060) vs age×identity (+0.080)，reverse-code 后 Wald χ²=60.08, p<.001。配合 `write-theory/.../mechanism_chain.md` "双重印记对立通道" 模板使用。
+
+---
+
+## 不一致中介 → 抑制变量报告 (Bamberger 2021 JM 型)
+
+### 功能描述
+
+当 direct effect 与 indirect effect 方向相反，且控制 mediator 后 direct effect 反而增强时，将统计现象升华为"不一致中介—抑制变量"的理论叙事。
+
+### 报告骨架
+
+```
+[IV] has a [positive/negative] direct effect on [DV] (β = [value], p < [threshold]).
+By contrast, [IV] has an aggregated [negative/positive] indirect effect on [DV]
+through [mediator(s)] (β = [value], p < [threshold], 95% CI: [[lower], [upper]]).
+These opposing indirect and direct effects reflect an inconsistent mediation
+([citation]), suggesting that [benefit] is mitigated by [cost].
+
+More precisely, by including [mediator] in the model, the direct effect of [IV]
+on [DV] becomes [stronger]. Previous research—unaware of the suppressive effect
+of [mediator]—may have underestimated the direct effect of [IV] and therefore
+may have reached ambiguous conclusions.
+```
+
+### 关键技术点
+
+| 步骤 | 操作 | 理由 |
+|------|------|------|
+| 1. 报告 direct effect | 显著+方向 | 建立 baseline |
+| 2. 报告 aggregated indirect | 显著+反方向+CI | 建立 inconsistency |
+| 3. 命名"inconsistent mediation" | 引用 MacKinnon et al. (2000) | 统计背书 |
+| 4. 升华为 suppressor | "unaware of the suppressive effect... may have underestimated" | 贡献锚定 |
+
+### 反模式
+- 在 indirect 不显著时声称 inconsistent mediation → 两个效应必须都显著
+- 不报告 CI → indirect effect 的 CI 是判断 suppression 是否成立的关键
+- 声称 suppression 但不引用 MacKinnon et al. (2000) → 需要方法论引用
+
+---
+
+## 联立方程 SEM 结果报告 + IV 诊断前置 (Vadakkepatt et al. 2022 JM 型)
+
+### 功能描述
+当论文使用联立方程 SEM 且含内生性处理时，Results 需要在主假设检验前报告 IV 诊断（Hansen's J + Kleibergen-Paap），并用多列表格呈现多个方程的估计结果。
+
+### 报告骨架
+
+```
+Before discussing our results, we note that the results of Hansen's J test 
+reveal that the instruments are valid (p > [threshold]). The Kleibergen-Paap 
+test also shows that our instruments are relevant (p < [threshold]), increasing 
+our confidence in the use of these variables as instruments. Likewise, we 
+examine the instrument effects on [endogenous_var] (Table [X], Column [A]). 
+[Instrument_1] has a [direction], [significant/nonsignificant] effect on 
+[endogenous_var] (α = [value]; p [relation] [threshold]), and [Instrument_2] 
+has a [direction], significant effect (α = [value]; p < [threshold]).
+
+[Table X] reports the results. Column [A] shows [first_stage_equation]. 
+Column [B] reports [DV1_equation]. The coefficient for [IV] is 
+[positive/negative] and significant (α = [value], p < [threshold]), 
+supporting Hypothesis [N]. Column [C] reports [DV2_equation]. The coefficient 
+for [IV] is [opposite_sign] and significant (α = [value], p < [threshold]), 
+supporting Hypothesis [N+1].
+```
+
+### 关键技术点
+
+| 步骤 | 操作 | 理由 |
+|------|------|------|
+| 1. 前置 IV 诊断 | Hansen's J (p>.10) + Kleibergen-Paap (p<.01) | 让读者在假设检验前确认 instrument validity |
+| 2. 报告第一阶段 | Column A: IV→endogenous_var | 透明化 instrument relevance |
+| 3. 多列表格 | 6列 (A-F) 覆盖 3个方程 × 2套系统 | 紧凑但完整——避免多个独立表格 |
+| 4. 逐列叙述 | 按 Column A→B→C 顺序，每列对应一个方程 | 读者导航零负担 |
+
+### 反模式
+- IV 诊断放在脚注或附录 → 当 IV 是主识别策略时，必须在正文报告
+- 每个方程独立建表 → 多列表格更高效且便于跨方程对比
+- 不报告 first-stage 系数 → 读者无法判断 instrument relevance 的方向和幅度

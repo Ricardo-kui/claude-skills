@@ -5,7 +5,7 @@ description: |
   从已发表论文的 Theory 中提炼可复用骨架：理论构建类型识别、功能模块拆解、why-chain 模式、构念关系组织方式、模块级表达骨架。不验证用户写作——Theory 写作 QC 请使用 `/theory-review`。
   核心原则：Theory 内容高度非标准化（因研究问题而异），但功能框架和推理结构是标准化的。提炼 HOW they explain why, not WHAT they explain。不复制具体机制内容，只提取可跨论文复现的理论论证组织方式和 why-chain 结构。
   触发词：「蒸馏 theory」「理论范文分析」「拆解 theory」「提取 theory 模板」「处理新论文 theory」「theory 骨架提炼」「why chain 提炼」。
-version: 1.2.0
+version: 1.4.0
 ---
 
 # Role
@@ -14,9 +14,12 @@ version: 1.2.0
 
 核心原则：
 - **How > What**：提炼 Theory 如何构建 why chain、如何组织构念关系、如何完成从理论到假设的推导，而非复制具体机制内容或构念定义。
+- **学习 → 沉淀**：本 skill 是**你的学习提取器**。输出不是直接教你如何写，而是帮你识别顶刊论文的论证组织方式，最终由你把验证过的模式沉淀到 `write-theory` 的 `corpus/` 语料库中，供自己写作时调用。
 - **功能模块化**：Theory 没有固定段落编号，但有标准化的功能模块（Construct Definition / Theoretical Lens / Mechanism Chain / Hypothesis Derivation / Boundary Condition / Closure）。提炼的是模块的组合逻辑和推理顺序。
 - **构建类型驱动**：不同理论构建方式（构念辨析型 / 机制推演型 / 假设树型 / 质性过程理论型）决定了模块的必要性和推理结构。蒸馏必须锚定构建类型。
 - **问题驱动**：提炼结果必须能回答 Dorobantu et al. (2024) 提出的理论设计典型问题（WHAT are constructs / HOW relate / WHY expect / WHAT theoretical lens 等）。
+
+> **注意**：本 skill 不直接教学写作技巧。它通过结构化分析顶刊范文，产出可供你学习、对比、入库的论证模式。如果你想验证自己的 Theory 草稿，请使用 `/theory-review`。
 
 ## 调用方式
 
@@ -37,7 +40,19 @@ version: 1.2.0
 
 ## Phase 0 — 理论构建类型分类与推理结构识别
 
-在读取正文前，先判断这篇 Theory 的**构建类型**和**推理野心**，决定后续模块检查清单和蒸馏焦点。
+### Theory 部分的判定标准
+
+本 skill 所分析的 **Theory & Hypotheses 部分**是指论文中**紧接 Introduction 之后、Methods / Study / Empirical Strategy 之前**的第二个主要部分。
+
+**判定规则**：
+1. **位置标准**：在标准 IMRAD/AMJ/SMJ 结构中，Theory 是文章的第二部分，位于 Introduction 与 Methods 之间。
+2. **标题信号**：常见标题包括 "Theory and Hypotheses"、"Theoretical Framework"、"Theory Development"、"Hypotheses"、"Conceptual Framework" 等。
+3. **内容标准**：该部分必须包含从理论到假设的推导（即使标题不是 "Theory"，只要功能上是承接 Introduction 的 Gap 并导出假设，即归入 Theory）。
+4. **边界处理**：
+   - 若某段位于 Introduction 末尾但已开始出现假设推导 → 仍归入 Theory 分析范围，并在报告中标注 "边界重叠"
+   - 若 Methods 开头出现理论性讨论（如识别策略的理论论证）→ 仍应被 Theory 部分覆盖或标记为 "Theory-Methods 交叉"
+
+**蒸馏前提**：输入文本应已剥离 Introduction 和 Methods，或明确标注 Theory 部分的起止位置。如果输入是全篇论文，先按上述位置标准切分出 Theory 部分，再执行后续分析。
 
 ### 分类维度
 
@@ -360,7 +375,7 @@ phase_1_module_map:
     paragraph_range: "[第X段–第Y段]"
     summarizes_framework: true/false
     previews_empirical_strategy: true/false
-    # v1.2.0 新增：write-theory v3.1.0 T6 强制要求提取
+    # v1.3.0 修订：write-theory v3.3.0 已取消独立 T6 强制要求。此处改为提取论文实际使用的收束策略（局部收束 / 嵌入框架总结 / 独立 Closure 段 / Discussion 开篇整合）。
     knot_fully_tied: true/false  # 是否明确或暗示 "knot fully tied"
     framework_locking: true/false  # 是否将分散假设整合为统一理论叙事
     logic_explicit: true/false  # 是否用 1-2 句话说明 central knot 已被 fully tied
@@ -588,6 +603,12 @@ phase_1_5_quality_gate:
 
 对 Phase 1 定位到的每个功能模块，执行五重提炼：模块功能 → 论证节奏 → 表达骨架 → Theory Logic → 连接词模式。2.4 骨架批评家对所有提炼出的骨架执行生成力验证。
 
+> **核心聚焦：假设推导段落（Hypothesis Derivation）是 Theory 部分的心脏。**
+> 
+> T1 和 T2 是为假设推导服务的舞台搭建，T3/T4 是假设推导的本体，T5 是假设推导的边界精确化，T6（局部收束）是假设推导的自然终点。本 skill 的绝大多数提炼资源应投向 **T3/T4 假设推导段落**：如何构建严密的 why chain、如何安排论点与论据、如何用词和连接词推进段内逻辑、如何让假设从机制中自然收敛。
+> 
+> 因此，Phase 2.1.5–2.1.8（论证节奏、微观动作、安排模式、证据编码）不是并列的附加模块，而是**假设推导过程的四个分析维度**。
+
 ### 2.1 模块功能提炼（Persuasive Action）
 
 回答：这个模块完成了什么**理论说服动作**？
@@ -605,51 +626,50 @@ phase_1_5_quality_gate:
 
 Theory 写作的核心单元不是模块，而是**段落内部的论证节奏**。借鉴 Results 的"四拍节奏"蒸馏逻辑（方向→显著性→幅度→支持判断），Theory 同样存在可量化的段落级论证节奏，但节奏形态因模块功能和构建类型而异。
 
-#### 核心节奏：T3/T4 Hypothesis Development 段落四段式论证链（与 write-theory Phase 2.5 对齐）
+#### 核心节奏：T3/T4 Hypothesis Development 段落交织式论证链（与 write-theory v3.3.0 对齐）
 
-write-theory v3.1.0 将每个假设推导段落定义为**四段式论证链（4-Part Logic Chain）**：
-**Topic Sentence → Theoretical Reasoning → Literature Support → Hypothesis Transition**
+write-theory v3.3.0 将每个假设推导段落定义为**交织式论证链（Interwoven Logic Chain）**：
+**Topic Sentence → Theoretical Reasoning + Literature Support（交织） → Hypothesis Transition**
 
-这是 Theory 蒸馏中**最重要的节奏目标**——每个假设推导段落应呈现统一的四拍论证节奏：
+文献引用与理论推理**交织**而非先后排列——这是管理学顶刊的默认写法。蒸馏中**最重要的节奏目标**是每个假设推导段落完成功能等价的论证：方向锚定、机制推演（文献锚定）、假设收敛。
 
 ```text
 [拍1-方向]: Topic Sentence — 本段要证明什么
   → 功能：锚定段落论点，限定范围
-  → 标志词：无固定标志词，但必须包含核心观点+限定范围
-  → 示例："Drawing on [theory], we argue that the effect of [X] on [Y] operates through [M]—a [definition of M]."
+  → 示例："Drawing on [theory], we argue that the effect of [X] on [Y] operates through [M]."
   → 失败信号：段首句只陈述事实不表达论点 / 只定义变量不预告要证明的关系
 
-[拍2-机制]: Theoretical Reasoning — 为什么 X 影响 Y
-  → 功能：逐步展示因果链，每一步都有理论依据
-  → 标志词："Specifically..." / "The logic is as follows..." / "[X] creates..."
-  → 示例："Specifically, when [X] increases, [mechanism step 1]. This occurs because [theoretical justification]. Consequently, [mechanism step 2], which in turn affects [Y] through [final link]."
-  → 失败信号：X→Y 直接跳跃无中间步骤 / 用 "obviously" 代替论证 / 只有 citation list 无机制
+[拍2-机制+证据交织]: Reasoning & Literature Interwoven — 为什么 X 影响 Y
+  → 功能：逐步展示因果链，每步由文献或理论依据锚定
+  → 节奏模式：
+     "Prior research has established that [X→state1] ([citation]). However, it remains 
+     unclear how [state1] leads to [Y]. We argue that [state1] creates [state2] 
+     because [theoretical justification]. Consequently, [state2] affects [Y] 
+     through [final link]."
+  → 失败信号：X→Y 直接跳跃无中间步骤 / 用 "obviously" 代替论证 / 只有 citation list 无机制 / 文献支撑与机制步骤脱节
 
-[拍3-证据]: Literature Support — 前人研究如何支撑
-  → 功能：用文献证据支撑机制链的每一步
-  → 标志词："Consistent with this logic..." / "Research shows..." / "[Author] (year) found that..."
-  → 示例："Consistent with this logic, [Author] (year) found that [evidence for step 1]. Similarly, [Author] (year) demonstrated that [evidence for step 2]."
-  → 失败信号：citation 堆砌但未与机制步骤一一对应 / citation 替代机制推演而非支撑机制
-
-[拍4-收敛]: Hypothesis Transition — 从机制到可检验预测
+[拍3-收敛]: Hypothesis Transition — 从机制到可检验预测
   → 功能：将机制推演固化为形式化假设
   → 标志词："Therefore, we hypothesize:" / "Thus:" / "Accordingly, we predict:"
   → 示例："Therefore, we hypothesize: Hypothesis 1: [X] is positively related to [M]."
   → 失败信号：Therefore 方向与机制推理方向矛盾 / 假设缺少方向或边界条件
 ```
 
-#### 四段式论证链各要素 QC 提取（v1.2.0 新增，与 write-theory Phase 2.5 对齐）
+**备选节奏：分离式（少数情况）**——当某一步的文献支持特别密集、需要单独展开时，可暂时将 [机制] 和 [文献] 分离。但整个段落的默认节奏是交织的。蒸馏时标记论文使用的是交织式还是分离式。
+
+#### 交织式论证链各要素 QC 提取（与 write-theory v3.3.0 对齐）
 
 对每个假设推导段落，提取以下 QC 指标：
 
 | 要素 | 提取问题 | 失败信号 | 记录格式 |
 |------|---------|---------|---------|
 | **Topic Sentence 精准度** | 是否同时包含话题+核心观点+限定范围？是否使用 active verb + concrete subject？段首句是否在 15 词内说出核心判断？ | 段首句只陈述事实/只定义变量/无主语被动语态（"It is argued that"） | `{topic_sentence_quality: "高/中/低", word_count_to_core_claim: N, has_active_verb: true/false, has_concrete_subject: true/false}` |
+| **Reasoning-Literature 交织度** | 文献引用是否嵌入在机制链步骤中？每个引用是否总结了 argument 并链接到 concrete finding？ | 独立的文献罗列段落；citation 与 mechanism 步骤脱节；citation 替代机制推演 | `{interwoven: true/false, citations_count: N, argument_summarized_count: N, concrete_finding_linked_count: N, citation_vs_mechanism_alignment: "高/中/低"}` |
 | **Theoretical Reasoning 完整性** | 从 X 到 Y 的每一步因果推理是否明确写出？每步间是否有 explicit transition？ | 逻辑跳跃（省略关键步骤）；缺少 transition（从 A 直接跳到 C）；用 "obviously" 代替论证 | `{mechanism_steps_count: N, logical_jumps: ["从 X 到 M 缺少中间步骤"], transitions: ["Consequently", "Thus", "In turn"]}` |
-| **Literature Support 嵌入度** | 每个引用是否总结了 argument（非罗列名字）？是否链接到 concrete finding？ | Citation 堆砌但未与机制步骤一一对应；citation 替代机制推演 | `{citations_count: N, argument_summarized_count: N, concrete_finding_linked_count: N, citation_vs_mechanism_alignment: "高/中/低"}` |
 | **Hypothesis Transition 收敛质量** | 收束句是否总结了推理链而非简单重复 "we hypothesize"？ | 无理论收束直接 "we hypothesize"；Therefore 方向与机制矛盾 | `{has_theoretical_closure: true/false, transition_phrase: "Therefore/Thus/Accordingly", hypothesis_direction_matches_mechanism: true/false}` |
 | **Concrete Illustration（可选）** | 每个因果步骤后是否有 1 句 concrete illustration？ | 连续 2 个推理步骤无 illustration | `{illustration_count: N, illustration_types: ["案例", "场景", "比喻"], showing_gaps: ["步骤2无 illustration"]}` |
 | **识别策略嵌入**（制度冲击类） | Theory 中是否嵌入了对识别假设的理论论证？ | Methods 描述了识别策略但 Theory 完全未提及 | `{identification_strategy_in_theory: true/false, iv_exclusion_restriction: "...", did_parallel_trends: "...", location: "P[段号]"}` |
+| **节奏变体标记** | 论文使用的是交织式还是分离式？是否功能等价？ | 分离式但文献与机制无明确链接 | `{rhythm_variant: "interwoven / separated / hybrid", functional_equivalent: true/false}` |
 
 **逻辑跳跃诊断**：逐句标记因果连接词（Consequently/Thus/Thereby/As a result/This leads to...）。缺少中间步骤 → 记录具体跳跃位置。
 
@@ -659,15 +679,30 @@ write-theory v3.1.0 将每个假设推导段落定义为**四段式论证链（4
 
 #### 段落论证节奏的构建类型变体
 
-四拍节奏的形态因构建类型而异：
+交织式节奏的形态因构建类型而异：
 
-| 构建类型 | 拍2（机制）形态 | 拍3（证据）形态 | 拍4（收敛）形态 | 节奏特征 |
-|----------|----------------|----------------|----------------|---------|
-| **机制推演型** | 多步因果链 (X→M→Y) | citation 支撑每步 | "Therefore, H1: X→M; H2: M→Y" | 两拍式拍4（一个机制收敛为两个假设） |
-| **构念辨析型** | 差异化维度对比 (A vs B on dim1, dim2, dim3) | citation 支撑每个差异维度 | "Thus, A and B are distinct constructs that..." | 拍2 为平行对比结构，拍4 可能收敛为命题而非假设 |
-| **假设树型** | 主效应机制 → 条件化分叉 | citation 支撑主效应 + citation 支撑调节方向 | "Therefore, H1: X→Y; H2: X→Y moderated by W" | 拍2 有分叉结构（baseline mechanism + moderation logic） |
-| **质性过程理论型** | 阶段序列 (Phase 1→2→3) + 阶段过渡条件 | citation 支撑每阶段特征 | "Proposition 1: In Phase 1, [process] occurs" | 拍2 按时间/阶段展开，拍4 收敛为命题（Proposition） |
-| **调节效应型** | X→Y 主机制 + W 如何改变该机制 | citation 支撑调节方向（增强/缓冲/翻转） | "H1: X→Y positive; H2: X×W→Y [direction]" | 拍2 包含交互逻辑，拍4 成对出现（主效应+交互） |
+| 构建类型 | 机制+证据交织形态 | 收敛形态 | 节奏特征 |
+|----------|-------------------|----------|---------|
+| **机制推演型** | 多步因果链，每步嵌入 citation | "Therefore, H1: X→M; H2: M→Y" | 一个机制链收敛为一个或多个假设 |
+| **构念辨析型** | 差异化维度对比，每个差异维度嵌入 citation | "Thus, A and B are distinct constructs that..." | 交织形态为对比+证据，收敛可能为命题而非假设 |
+| **假设树型** | 主效应机制 → 条件化分叉，分叉处嵌入 citation | "Therefore, H1: X→Y; H2: X→Y moderated by W" | 基线机制与调节逻辑交织 |
+| **质性过程理论型** | 阶段序列 (Phase 1→2→3) + 过渡条件，每阶段嵌入 citation | "Proposition 1: In Phase 1, [process] occurs" | 按时间/阶段展开 |
+| **调节效应型** | X→Y 主机制 + W 如何改变该机制，嵌入调节方向 citation | "H1: X→Y positive; H2: X×W→Y [direction]" | 主效应与交互逻辑交织 |
+
+#### 节奏变体记录
+
+蒸馏时必须区分：
+- **INTERWOVEN（默认）**：文献引用嵌入 why-chain 的每一步
+- **SEPARATED（少数）**：机制段落先完整推演，再用单独段落密集支撑文献
+- **HYBRID（混合）**：局部交织+局部分离
+
+记录格式：
+```yaml
+rhythm_pattern:
+  primary: "interwoven / separated / hybrid"
+  evidence: "[具体段落位置与句式]"
+  functional_equivalent: true/false  # 是否完成功能等价的论证
+```
 
 #### 其他模块的论证节奏
 
@@ -702,13 +737,13 @@ T1（Construct Definition）和 T2（Theoretical Lens）有各自的节奏模式
 
 对每个段落，评估其论证节奏的完整性：
 
-| 模块 | 预期拍数 | 评分方式 | 纳入 Phase 3 DNA |
-|------|---------|---------|-----------------|
+| 模块 | 预期节奏单元 | 评分方式 | 纳入 Phase 3 DNA |
+|------|-------------|---------|-----------------|
 | T1 Construct Definition | 3-4 拍 | 每拍 0-1 分（存在且功能明确=1） | `t1_rhythm_completeness` |
 | T2 Theoretical Lens | 3 拍 | 每拍 0-1 分 | `t2_rhythm_completeness` |
-| T3/T4 Hypothesis Development | 4 拍/假设段落 | 每拍 0-1 分，多段落取均值 | `t3t4_rhythm_completeness` |
+| T3/T4 Hypothesis Development | 交织式 3 单元（方向→机制/证据交织→收敛）/假设段落 | 每单元 0-1 分，多段落取均值；同时标记 rhythm variant | `t3t4_rhythm_completeness` |
 | T5 Boundary Condition | 3 拍（条件引入→理论依据→预测修正） | 每拍 0-1 分 | `t5_rhythm_completeness` |
-| T6 Closure | 2 拍（框架总结→实证预告） | 每拍 0-1 分 | `t6_rhythm_completeness` |
+| T6 / Closure 策略 | 局部收束（必须）+ 可选框架总结 | 局部收束：有/无；框架总结：嵌入/Discussion/缺失 | `closure_strategy_completeness` |
 
 **节奏完整性评分输出**：
 
@@ -725,26 +760,24 @@ phase_2_1_5_rhythm_distillation:
   T3T4_hypotheses:
     H1_paragraph:
       paragraph_id: "P4"
-      rhythm_type: "四拍机制推演"
+      rhythm_type: "交织式机制推演"
       beat_1_direction: {score: 1, max: 1, evidence: "Topic sentence 明确预测 X→M 关系"}
-      beat_2_mechanism: {score: 1, max: 1, evidence: "两步因果链完整 (X→state→M)"}
-      beat_3_evidence: {score: 1, max: 1, evidence: "2 citations 分别支撑两步机制"}
-      beat_4_convergence: {score: 1, max: 1, evidence: "Therefore, H1: X positively related to M"}
-      completeness: "4/4"
-      rhythm_quality: "✓ — 完整四拍"
+      beat_2_mechanism_literature_interwoven: {score: 1, max: 1, evidence: "两步因果链完整，citation 嵌入每一步 (X→state→M)"}
+      beat_3_convergence: {score: 1, max: 1, evidence: "Therefore, H1: X positively related to M"}
+      completeness: "3/3"
+      rhythm_quality: "✓ — 完整交织节奏"
     H2_paragraph:
       paragraph_id: "P5"
-      rhythm_type: "四拍机制推演"
+      rhythm_type: "交织式机制推演"
       beat_1_direction: {score: 0, max: 1, evidence: "段首句只定义 M，未预告要证明 M→Y"}
-      beat_2_mechanism: {score: 1, max: 1, evidence: "M→Y 机制链完整"}
-      beat_3_evidence: {score: 1, max: 1, evidence: "citation 支撑 M→Y 机制"}
-      beat_4_convergence: {score: 1, max: 1, evidence: "Therefore, H2: M positively related to Y"}
-      completeness: "3/4"
+      beat_2_mechanism_literature_interwoven: {score: 1, max: 1, evidence: "M→Y 机制链完整，citation 嵌入机制"}
+      beat_3_convergence: {score: 1, max: 1, evidence: "Therefore, H2: M positively related to Y"}
+      completeness: "2/3"
       rhythm_quality: "△ — 缺少方向拍（段首未锚定论点）"
-    overall_t3t4_rhythm: "87.5% (7/8)"
+    overall_t3t4_rhythm: "83.3% (5/6)"
   rhythm_pattern_notes:
-    - "H1/H2 使用连续推导节奏：H1 的拍4 收敛到 M，H2 的拍2 从 M 继续推演"
-    - "拍3 文献支撑在两步机制中均匀分布（每步 1-2 个 citation），非堆砌"
+    - "H1/H2 使用连续推导节奏：H1 的收敛句引出 M，H2 的机制+证据交织从 M 继续推演"
+    - "citation 在两步机制中均匀分布（每步 1-2 个 citation），非堆砌"
     - "T1 缺少 scope condition 拍，在构念辨析型中这是致命伤，在机制推演型中风险较低"
 ```
 
@@ -756,6 +789,234 @@ phase_2_1_5_rhythm_distillation:
 | **RHYTHM_GAP** | 缺失 1 拍 | 记录缺失的具体拍和功能后果，纳入模仿风险提示 |
 | **RHYTHM_BROKEN** | 缺失 ≥2 拍或拍顺序混乱 | 标记为不可模仿的反模式，提取其"修复后"骨架（补全缺失拍） |
 | **RHYTHM_VARIANT** | 拍数或拍序与标准不同但功能等价 | 记录为节奏变体，丰富 Phase 4 的节奏模式库 |
+
+### 2.1.6 假设论证微观动作提取框架（Micro-Moves for Hypothesis Argumentation）
+
+交织式节奏回答了段落的**形态**，但没有回答作者在段落中具体执行了哪些**说服动作**。本节提供一个**分析透镜**，帮你在阅读顶刊范文时识别：作者是用哪几个动作完成从起点到假设的推导的。这些标注结果最终可用于对比多篇论文、归纳该构建类型的典型论证路径，并沉淀为 `write-theory` 的写作模式。
+
+#### 标准微观动作序列（用于分析范文）
+
+```text
+[Anchor]        → 论文固定的论证起点： prior finding / theoretical premise / accepted scope condition
+     ↓
+[Gap/Puzzle]    → 论文指出的现有解释缺口、边界或反直觉之处
+     ↓
+[Mechanism Move]→ 论文提出的新因果步骤或条件化逻辑
+     ↓
+[Warrant]       → 论文用理论或文献说明该机制步骤为何成立
+     ↓
+[Prediction]    → 论文收敛到可检验假设的方式
+```
+
+**每个动作的识别信号**（蒸馏时从原文提取）：
+
+| 动作 | 典型句法 | 在范文中的功能 | 标注为缺失的风险 |
+|------|---------|--------------|----------------|
+| **Anchor** | "Prior research has established that..." / "A long-standing assumption in the literature is..." | 让读者接受论证起点 | 起点是作者自己的断言而非学界共识 |
+| **Gap/Puzzle** | "However, it remains unclear whether..." / "What remains less understood is..." | 制造认知张力 | 无 gap，直接 "we argue" |
+| **Mechanism Move** | "We argue that [X] leads to [state] because..." | 提出新的因果机制 | X→Y 直接跳跃，无中间状态 |
+| **Warrant** | "This is consistent with [theory], which posits that..." / "[Author] (year) found that..." | 为机制步骤提供合法性 | Warrant 只是 citation list，未与机制步骤链接 |
+| **Prediction** | "Therefore, we hypothesize:..." | 把机制固化为假设 | 假设方向与机制推理矛盾 |
+
+#### 蒸馏任务：微观动作标注
+
+对每个假设推导段落，标注：
+
+```yaml
+phase_2_1_6_micro_moves:
+  H1_paragraph:
+    paragraph_id: "P4"
+    moves_detected:
+      - move: "Anchor"
+        evidence: "Prior research has established that X increases state A (Smith, 2010)."
+        source: "empirical_finding"
+      - move: "Gap"
+        evidence: "Yet how state A translates into Y remains unclear."
+      - move: "Mechanism Move + Warrant"
+        evidence: "We argue that state A creates state B because [theory] posits... (Jones, 2012)."
+      - move: "Prediction"
+        evidence: "Therefore, we hypothesize: H1: X is positively related to Y."
+    missing_moves: []
+    move_quality: "完整序列"
+```
+
+#### 双边论证提取（Bilateral Argumentation）
+
+`write-theory` Constraint 20 规定：调节/边界条件段落应同时论证 "when M=high → effect" 和 "when M=low → effect"。蒸馏时记录范文是否遵守该规则，以及它是如何用具体句法完成双边论证的——这些句法可沉淀为 `write-theory` 的调节论证模板。
+
+蒸馏时必须提取：
+
+```yaml
+bilateral_argumentation:
+  moderator: "W"
+  high_condition:
+    present: true/false
+    mechanism: "When W is high, X→Y is strengthened because..."
+    evidence: "[citation supporting high-condition mechanism]"
+  low_condition:
+    present: true/false
+    mechanism: "When W is low, X→Y is weakened because..."
+    evidence: "[citation supporting low-condition mechanism]"
+  symmetry: "完整 / 仅单边 / 缺失"
+  note_for_corpus: "如完整，提取其 high/low 论证句法作为 write-theory 模板候选"
+```
+
+#### 替代解释排除（Ruling Out Alternatives）
+
+提取范文如何处理 competing explanations——这是判断一篇 Theory 是否"self-aware"、是否提前回应审稿人质疑的关键。记录其排除策略和典型句法，可作为 `write-theory` 中竞争假设/反直觉预测型论文的写作参照。
+
+| 排除策略 | 典型表达 | 蒸馏标记 |
+|---------|---------|---------|
+| **理论不一致** | "This alternative account would predict the opposite effect..." | `theoretical_inconsistency` |
+| **范围条件** | "Such an explanation applies to [context], but our setting involves..." | `scope_condition` |
+| **经验证据反例** | "Recent evidence, however, shows that..." | `empirical_counter` |
+| **机制不可通约** | "While plausible, this mechanism does not explain why..." | `mechanism_incommensurable` |
+
+记录格式：
+```yaml
+alternative_explanations:
+  competing_accounts: ["account1", "account2"]
+  ruling_out_strategy: ["theoretical_inconsistency", "scope_condition"]
+  location: "P[段号]"
+  completeness: "完整 / 部分 / 缺失"
+```
+
+### 2.1.7 论点-论据安排模式提取（Argument-Evidence Arrangement Patterns）
+
+节奏和微观动作回答"段落内部发生什么"，安排模式回答"范文的论点和论据被组织成什么样的完整论证"。本节提供一套**分类框架**，帮你在对比多篇论文时识别：同一构建类型是否偏好某种安排方式？不同期刊/主题是否存在安排差异？这些模式可沉淀为 `write-theory` 的段落组织建议。
+
+#### 五种标准安排模式（分类用）
+
+| 模式 | 结构 | 适用场景 | 构建类型倾向 |
+|------|------|---------|-------------|
+| **Warrant-Embedded** | Claim → Reasoning + Evidence 交织 → Hypothesis | 默认；大多数机制推演型 | 机制推演型、假设树型 |
+| **Warrant-First** | Claim → 密集理论依据 → 机制推演 → Hypothesis | 理论依据特别密集，需要单独展开 | 构念辨析型、理论密集型 |
+| **Evidence-Contrast** | 反方证据 → 转折 → 自己的机制 → Hypothesis | 论文要挑战既有观点 | 反直觉预测型、辩证对立型 |
+| **Cumulative** | H1 收敛 → H2 从 H1 的收敛点继续推演 | 假设间有逻辑依赖 | 中介链、两步机制 |
+| **Parallel** | 共享同一理论框架的多个假设分别推导 | 假设间相互独立但同属一个理论 | 构念辨析型、多主效应 |
+
+#### 蒸馏任务：安排模式识别
+
+```yaml
+phase_2_1_7_arrangement_pattern:
+  primary_pattern: "Warrant-Embedded"
+  secondary_pattern: "Cumulative"
+  evidence: "H1 段末收敛到 M；H2 段首直接 'Building on this mechanism, we next argue M→Y'"
+  paragraph_flow:
+    - paragraph_id: "P4"
+      function: "Anchor + Mechanism Move"
+      arrangement: "Warrant-Embedded"
+    - paragraph_id: "P5"
+      function: "Cumulative extension from P4"
+      arrangement: "Cumulative"
+```
+
+#### Concrete Illustration 提取
+
+`write-theory` Phase 2.5 把"不允许连续 2 个推理步骤无 illustration"作为写作规则。本节用于**提取范文如何执行这一规则**：它在哪些步骤放 illustration？用的是什么类型？哪些步骤省略了？这些提取结果可作为 `write-theory` Prose Craft 子协议的素材。
+
+```yaml
+concrete_illustration_pattern:
+  illustration_density: "每个推理步骤后 1 句 / 每 2 步 1 句 / 稀疏"
+  illustration_types:
+    - type: "公司案例"
+      example: "When Apple faced [situation], [mechanism] produced [outcome]."
+    - type: "数字场景"
+      example: "A 1-standard-deviation increase in X corresponds to..."
+    - type: "比喻"
+      example: "This is akin to..."
+  missing_illustration_steps: ["步骤2", "步骤3"]
+  note_for_corpus: "如某类 illustration 在同类论文中高频出现，可沉淀为 write-theory 推荐"
+```
+
+#### 复杂假设的段落安排
+
+对假设树型、中介+调节混合、多调节型论文，提取其**段落级组织逻辑**。重点不是判断对错，而是记录：范文如何把多个假设编织进一个连贯叙事？假设之间靠什么连接词/逻辑关系衔接？这些信息可直接用于优化 `write-theory` 的复杂假设路由。
+
+```yaml
+complex_hypothesis_organization:
+  pattern: "common_trunk → dual_branch"  # 或 baseline_first → moderation_second / mediation_chain
+  common_trunk_paragraphs: ["P4"]
+  branch_paragraphs:
+    - branch_id: "H1"
+      paragraph: "P5"
+      relationship_to_trunk: "direct effect from common mechanism"
+    - branch_id: "H2"
+      paragraph: "P6"
+      relationship_to_trunk: "moderation of trunk mechanism"
+  relationship_between_hypotheses: "sequential / parallel / nested"
+  clarity_risk: "如分支间关系不自明，需框架总结"
+```
+
+### 2.1.8 证据类型与功能编码（Evidence Typology & Function Coding）
+
+`distill-theory-exemplar` 已经检查 citation 是否总结 argument 并链接 concrete finding，但还没有系统分析**范文把什么当证据、证据执行什么功能、如何与论点交织**。本节提供一个编码框架，帮你在阅读时识别：顶刊作者是用 empirical finding 支撑机制？用 theoretical argument 做 warrant？还是用 negative evidence 排除替代解释？编码结果可沉淀为 `write-theory` 的证据使用指南。
+
+#### 证据类型学（用于编码范文中的证据）
+
+| 证据类型 | 定义 | 典型来源 | 在 Theory 中的摆放位置 |
+|---------|------|---------|---------------------|
+| **Empirical Finding Evidence** | 前人研究的 concrete result | 实证论文 | 支撑机制步骤的 why chain |
+| **Theoretical Argument Evidence** | 理论家的核心主张或理论逻辑 | 理论论文 | 为 mechanism move 提供合法性 |
+| **Boundary Condition Evidence** | 说明某机制只在某范围内成立 | 边界条件研究 | 引出或支撑 T5 |
+| **Negative Evidence** | 前人未发现或机制不成立的证据 | 零结果、反例研究 | 排除替代解释、强化 gap |
+| **Analogical Evidence** | 比喻、类比、案例 | 案例研究、行业报告 | 在抽象机制后提供 concrete illustration |
+
+#### 证据功能标注
+
+每个 citation 必须标注其功能：
+
+| 功能 | 作用 | 典型连接词 |
+|------|------|----------|
+| `support` | 直接支持当前机制步骤 | "Consistent with this logic..." |
+| `qualify` | 限定机制的适用范围 | "However, this effect is limited to..." |
+| `contrast` | 与当前机制形成对比，引出转折 | "In contrast, ..." / "Whereas ..." |
+| `pave` | 为后续推理铺路 | "This raises the question of whether..." |
+| `rebut` | 排除替代解释 | "This alternative account cannot explain..." |
+
+#### 文献引用三要素模板
+
+`write-theory` 要求每个引用总结 argument 并链接 concrete finding。提炼可复用的三要素句式：
+
+```text
+[Author] (year) found that [concrete finding] — [argument summary].
+This suggests that [mechanism step], because [theoretical reason].
+```
+
+蒸馏时提取每个 citation 是否满足三要素：
+
+```yaml
+evidence_three_element_check:
+  citation: "Smith (2010)"
+  concrete_finding: "firms delaying recalls experienced 23% greater stock-price declines"
+  argument_summary: "market punishes uncertainty more than bad news"
+  link_to_current_mechanism: "consistent with our argument that X increases perceived uncertainty"
+  three_elements_complete: true/false
+```
+
+#### 蒸馏任务：证据地图
+
+为每个假设推导段落生成证据地图：
+
+```yaml
+phase_2_1_8_evidence_map:
+  H1_paragraph:
+    paragraph_id: "P4"
+    evidence_items:
+      - citation: "Smith (2010)"
+        type: "empirical_finding"
+        function: "support"
+        mechanism_step: "X → state A"
+        three_elements_complete: true
+      - citation: "Jones (2012)"
+        type: "theoretical_argument"
+        function: "pave"
+        mechanism_step: "state A → state B"
+        three_elements_complete: true
+    evidence_type_distribution: {"empirical_finding": 2, "theoretical_argument": 1}
+    evidence_function_distribution: {"support": 2, "pave": 1}
+    evidence_placement: "embedded_in_mechanism"  # 或 "separate_literature_block" / "front_loaded"
+```
 
 ### 2.2 表达骨架提炼（Expression Skeleton）
 
@@ -884,7 +1145,7 @@ phase_2_4_skeleton_check:
 | **条件** | When, If...then..., Only if, Provided that, Contingent on, Depending on | 当…时、若…则…、仅在 | T5（边界条件）, 假设树型 T3 | `conditional_N` |
 | **让步** | Although, While, Despite, Even though, Nevertheless, Nonetheless | 尽管、虽然、即便如此 | T5（边界承认后转回主论证） | `concessive_N` |
 | **例证** | Specifically, In particular, For example, For instance, To illustrate | 具体而言、例如 | T3（机制具体化）, T1（构念维度展开） | `specificity_N` |
-| **总结** | Taken together, In sum, Overall, Collectively, In summary | 综上、整体而言 | T6（收束）, 假设段落的最后一句 | `summary_N` |
+| **总结** | Taken together, In sum, Overall, Collectively, In summary | 综上、整体而言 | 嵌入最后假设段末尾的框架总结 / 假设段落的最后一句 | `summary_N` |
 | **强调** | Notably, Importantly, Critically, It is worth noting that, Key to this argument | 值得注意的是、关键在于 | T2（理论核心洞察）, T4（假设关键方向） | `emphasis_N` |
 
 #### 段落内连接词节奏（Beat Connector Pattern）
@@ -892,21 +1153,19 @@ phase_2_4_skeleton_check:
 连接词在论证节奏的**拍间过渡**中承担特定功能。蒸馏时记录每拍的拍间连接词类型：
 
 ```text
-四拍论证链的拍间连接词模式：
-[拍1-方向] → [拍2-机制]:
-  典型连接词: "Specifically, ..." / "The logic is as follows: ..." / "We argue that..."
-  蒸馏标记: beat1→2_connector = "specificity" / "none (direct)"
+交织式论证链的拍间连接词模式：
+[拍1-方向] → [拍2-机制+证据交织]:
+  典型连接词: "Specifically, ..." / "We argue that..." / "Prior research shows..."
+  蒸馏标记: beat1→2_connector = "specificity" / "evidence_pivot" / "none (direct)"
 
-[拍2-机制] → [拍3-证据]:
-  典型连接词: "Consistent with this logic, ..." / "Research supports this mechanism: ..." / "For example, ..."
-  蒸馏标记: beat2→3_connector = "specificity" / "additive"
-
-[拍3-证据] → [拍4-收敛]:
+[拍2-机制+证据交织] → [拍3-收敛]:
   典型连接词: "Therefore, ..." / "Thus, ..." / "Accordingly, ..." / "Taken together, these arguments suggest..."
-  蒸馏标记: beat3→4_connector = "causal" / "summary"
+  蒸馏标记: beat2→3_connector = "causal" / "summary"
 ```
 
-**拍间连接词缺失为高风险**：如果 beat3→4 没有因果连接词（直接 "H1: X is positively related to Y"），标记为 "无收敛信号"——假设像是从天而降，而非从机制推导。
+**拍间连接词缺失为高风险**：如果机制到假设的过渡没有因果连接词（直接 "H1: X is positively related to Y"），标记为 "无收敛信号"——假设像是从天而降，而非从机制推导。
+
+**交织式典型信号**：当段落中出现 "Prior research shows X. However, what if Y? We argue that Z because..." 时，记录为文献与推理交织的标准模式。
 
 #### 模块间过渡连接词模式
 
@@ -919,7 +1178,8 @@ phase_2_4_skeleton_check:
 | T3→T4 (每假设) | "Therefore, we hypothesize:" / "Accordingly:" / "Thus:" | 从机制链收敛到假设 | 假设无推导信号 |
 | T4(H_n)→T4(H_{n+1}) | "Having established H1, we next consider..." / "Beyond this direct effect, we further argue..." / "However, this relationship may not hold uniformly..." | 假设间逻辑递进 | 假设间无递进逻辑 |
 | T4→T5 | "However, the [baseline effect] is likely contingent on..." / "Thus far we have assumed [condition]; yet..." | 从主效应过渡到边界条件 | T5 像是事后补丁 |
-| T5→T6 | "Taken together, our theoretical framework suggests..." / "In sum, we have argued that..." | 从分散假设收束为整体框架 | 全文理论碎片化 |
+| T5→T6 / Closure | "Taken together, our theoretical framework suggests..." / "In sum, we have argued that..."（仅当存在独立或嵌入的框架总结时出现） | 从分散假设收束为整体框架 | 如假设间逻辑关系不自明且无框架总结，可能导致追问 |
+| T5→METHODS | （无连接词，最后假设直接结束） | 管理学标准做法 | 无——这是正常结尾 |
 
 #### 构建类型连接词特征
 
@@ -1021,7 +1281,7 @@ phase_2_5_connector_distillation:
 | Boundary 嵌入深度 | Boundary condition 是在假设之后补丁，还是嵌入机制链中 | 嵌入机制链 > 假设后补丁 |
 | Theory-to-Hypothesis 对齐 | T3 的机制关键词与 T4 假设关键词的重叠度 | 高/中/低。低对齐 = "机制与假设脱节" |
 | Two-literature 清晰度 | T2 的理论文献是否与 Introduction 的 Gap 文献明显分离 | 高/中/低 |
-| **T3/T4 论证节奏完整性** | 假设推导段落的四拍完整比例（方向→机制→证据→收敛） | >=3.5/4 为优秀，2.5-3.4/4 为合格，<2.5/4 为薄弱 |
+| **T3/T4 论证节奏完整性** | 假设推导段落的交织式论证完整比例（方向→机制/证据交织→收敛） | >=0.9 为优秀，0.7-0.89 为合格，<0.7 为薄弱。同时标记节奏变体：interwoven / separated / hybrid |
 | **T1 定义节奏完整性** | 构念定义段落的三拍完整比例（命名→维度→范围） | >=2.5/3 为优秀，1.5-2.4/3 为合格 |
 | **T2 理论视角节奏完整性** | 理论引入段落的三拍完整比例（来源→适用性→框架映射） | >=2.5/3 为优秀 |
 | **节奏变异度** | 段落节奏与标准节奏的偏离类型和幅度 | FULL_RHYTHM / RHYTHM_GAP / RHYTHM_BROKEN / RHYTHM_VARIANT |
@@ -1029,15 +1289,28 @@ phase_2_5_connector_distillation:
 | **连接词密度** | 连接词总数 / Theory 总词数 × 100 | 顶刊中位数约 3-4 词/100词；<2 为"论证隐式化"，>5 为"连接词过载" |
 | **因果连接词占比** | 因果类连接词数 / 总连接词数 | 机制推演型预期 ≥30%；过高（>50%）可能为因果词堆砌 |
 | **条件连接词占比** | 条件类连接词数 / 总连接词数 | 假设树型/调节效应型预期 ≥15%；机制推演型预期 <10%；过高泄露隐性假设树结构 |
-| **拍间过渡完整性** | 有显式连接词的拍间过渡数 / 总拍间过渡数（每假设段落 3 个拍间过渡点） | ≥80% 为优秀，<50% 为"论证断裂" |
+| **拍间过渡完整性** | 有显式连接词的拍间过渡数 / 总拍间过渡数（每假设段落 2 个拍间过渡点：方向→机制/证据，机制/证据→收敛） | ≥80% 为优秀，<50% 为"论证断裂" |
 | **模块过渡完整性** | 有显式连接词的模块过渡数 / 5 | 5/5 为优秀，<3/5 为"模块碎片化" |
 | **连接词-构建类型一致性** | 标志性连接词组合匹配度 | 高/中/低。低匹配 = 连接词使用模式与构建类型预期偏离 |
-| **T6 Closure 完整性**（v1.2.0 新增） | T6 是否完成三个理论任务（框架锁定/逻辑显性化/Denouement 预告） | 3/3 为优秀，2/3 为合格，<2/3 为薄弱 |
-| **T6 Voice 质量**（v1.2.0 新增） | T6 是否使用 accountable first-person（"we have argued"），无被动语态 | 通过/失败 |
-| **T6 叙事接力**（v1.2.0 新增） | T6 结尾能量级是否 ≥ 最后假设推导段 | 通过/倒退 |
+| **T6 / Closure 策略**（v1.2.0 新增，同步 write-theory v3.3.0） | 最后假设后是否有独立 Closure 段？或采用局部收束/嵌入框架总结/Discussion 开篇整合？ | 独立 Closure 段 = 非管理学标准；局部收束 = 标准；嵌入框架总结/Discussion 整合 = 可选策略 |
+| **T6 Voice 质量**（如存在框架总结） | 框架总结是否使用 accountable first-person（"we have argued"），无被动语态 | 通过/失败/null |
+| **T6 叙事接力**（v1.2.0 新增） | 如存在框架总结，结尾能量级是否 ≥ 最后假设推导段 | 通过/倒退/null |
 | **Human Face 覆盖率**（v1.2.0 新增） | 有具体 actor/场景/案例的模块数 / 总模块数 | Hook/新构念/why-chain 关键步骤 ≥1 个 illustration 为优秀 |
 | **主动语态比例**（v1.2.0 新增） | "We argue/hypothesize/predict" 次数 / 总主张句次数 | >=80% 为优秀；<50% 为机器声风险 |
 | **识别策略理论嵌入**（v1.2.0 新增，制度冲击类） | Theory 中嵌入识别假设论证的模块数 / 需要的模块数 | 3/3 为优秀（IV/DiD/RDD/生存各需特定论证） |
+| **微观动作完整性**（v1.4.0 新增） | 每个假设段落中 Anchor → Gap → Mechanism Move → Warrant → Prediction 的完整比例 | 5/5 为优秀，缺失任意动作即标记为薄弱 |
+| **双边论证覆盖率**（v1.4.0 新增） | 调节/边界条件假设中同时论证 high/low 条件的比例 | 1.0 为优秀，<0.5 为严重缺失（对应 write-theory C20） |
+| **替代解释排除率**（v1.4.0 新增） | 已识别的 competing explanations 中被主动排除的比例 | 1.0 为优秀；0 为高风险 |
+| **论点-论据安排模式**（v1.4.0 新增） | 论文主要使用的安排模式（Warrant-Embedded / Warrant-First / Evidence-Contrast / Cumulative / Parallel） | 标记模式 + 是否功能等价 |
+| **Concrete Illustration 密度**（v1.4.0 强化） | 每个 why-chain 步骤后是否有 illustration；连续两步无 illustration 的段落数 | 零缺失为优秀；≥1 处缺失为需关注 |
+| **证据类型分布**（v1.4.0 新增） | Empirical / Theoretical / Boundary / Negative / Analogical 的比例 | 支持机制推演的 empirical/theoretical 应 ≥70% |
+| **证据功能分布**（v1.4.0 新增） | support / qualify / contrast / pave / rebut 的比例 | support 为主但其他功能也需存在 |
+| **文献引用三要素完整率**（v1.4.0 新增） | 同时满足 concrete finding + argument summary + link to mechanism 的引用比例 | ≥80% 为优秀 |
+| **交互模式明确度**（v1.4.0 新增，对应 write-theory C10） | 调节假设是否明确 enhancing/buffering/antagonistic/existence/competing | 明确为优秀；缺失为失败 |
+| **竞争假设收敛信号**（v1.4.0 新增，对应 write-theory C14） | 竞争假设是否使用非 "Therefore" 收敛信号 | 符合为优秀；违规为失败 |
+| **辩证对立对称性**（v1.4.0 新增，对应 write-theory C16-C17） | 两个对立机制的步骤数是否对称；方向是否真正反转 | 对称+方向反转为优秀 |
+| **Moderator 选择框架**（v1.4.0 新增，对应 write-theory C18） | ≥2 moderators 时是否有元框架解释选择理由 | 有为优秀；无为失败 |
+| **连续 IV 三点论证**（v1.4.0 新增，对应 write-theory C19） | 连续 IV 是否论证 high / middle / low 三点的行为差异 | 完整为优秀；缺失为失败 |
 
 ### Narrative Style Profile（叙事风格 DNA）
 
@@ -1124,11 +1397,96 @@ phase_2_5_connector_distillation:
 ### T2 — Theoretical Lens ([理论])
 ...
 
+## Argumentation Micro-Moves Map（v1.4.0 新增）
+
+[来自 Phase 2.1.6]
+
+### H1 / P4
+- **Anchor**: [起点句]
+- **Gap/Puzzle**: [缺口句]
+- **Mechanism Move**: [机制步骤]
+- **Warrant**: [文献/理论支撑]
+- **Prediction**: [假设收敛]
+- **缺失动作**: [如有]
+
+### H2 / P5
+...
+
+### 双边论证
+- **Moderator**: [W]
+- **High condition**: [论证句]
+- **Low condition**: [论证句]
+- **对称性**: [完整/仅单边/缺失]
+
+### 替代解释排除
+- **已识别竞争解释**: [list]
+- **排除策略**: [theoretical_inconsistency / scope_condition / empirical_counter / mechanism_incommensurable]
+- **位置**: [P段号]
+
+## Argument-Evidence Arrangement Pattern（v1.4.0 新增）
+
+[来自 Phase 2.1.7]
+
+- **主要模式**: [Warrant-Embedded / Warrant-First / Evidence-Contrast / Cumulative / Parallel]
+- **辅助模式**: [如有]
+- **证据**: [具体段落位置与句式]
+- **功能等价性**: [true/false]
+
+### Concrete Illustration 分布
+- **密度**: [每个步骤后 1 句 / 每 2 步 1 句 / 稀疏]
+- **类型分布**: [案例 / 数字 / 场景 / 比喻]
+- **缺失位置**: [步骤2, 步骤3]
+
+### 复杂假设段落组织
+- **Pattern**: [common_trunk → dual_branch / baseline_first → moderation_second / mediation_chain]
+- **H1 位置**: [P4]
+- **H2 位置**: [P5]
+- **假设间关系**: [sequential / parallel / nested]
+
+## Evidence Map（v1.4.0 新增）
+
+[来自 Phase 2.1.8]
+
+### 证据类型分布
+- Empirical finding: [N] ([%])
+- Theoretical argument: [N] ([%])
+- Boundary condition: [N] ([%])
+- Negative evidence: [N] ([%])
+- Analogical evidence: [N] ([%])
+
+### 证据功能分布
+- support: [N]
+- qualify: [N]
+- contrast: [N]
+- pave: [N]
+- rebut: [N]
+
+### 文献引用三要素完整率
+- 完整: [N/%]
+- 缺失 concrete finding: [N/%]
+- 缺失 argument summary: [N/%]
+- 缺失 link to mechanism: [N/%]
+
+### 代表性三要素例句
+- "[Author] (year) found that [concrete finding] — [argument summary]. This suggests that [mechanism step], because [theoretical reason]."
+
 ## Theory DNA
-[来自 Phase 3 的量化指标]
+[来自 Phase 3 的量化指标，已包含微观动作、双边论证、证据类型/功能、约束对齐等新指标]
 
 ## Theory Logic Map
 [来自 Phase 2.3]
+
+## write-theory Constraint Alignment（v1.4.0 新增）
+
+| 约束 | 检查项 | 状态 | 说明 |
+|------|--------|------|------|
+| C10 交互模式 | 调节假设是否明确 enhancing/buffering/antagonistic/existence/competing | ✓/✗/N/A | |
+| C14 竞争假设收敛 | 竞争假设是否使用非 "Therefore" 信号 | ✓/✗/N/A | |
+| C16 辩证对立对称 | 对立机制步骤数是否对称 | ✓/✗/N/A | |
+| C17 真正方向反转 | 是否方向反转而非仅强度变化 | ✓/✗/N/A | |
+| C18 Moderator 选择框架 | ≥2 moderators 是否有元框架 | ✓/✗/N/A | |
+| C19 连续 IV 三点 | high/middle/low 行为差异是否论证 | ✓/✗/N/A | |
+| C20 双边论证 | 调节/边界条件是否同时论证 high/low | ✓/✗/N/A | |
 
 ## Dorobantu 问题链覆盖度
 | 问题 | 对应模块 | 覆盖度 |
@@ -1171,8 +1529,135 @@ phase_2_5_connector_distillation:
 ## Non-Transferable Facts
 [仅适用于该论文的特定构念、理论视角、机制内容，不可迁移]
 
+## Corpus Recommendations（v1.4.0 新增）
+
+基于本篇论文的提取结果，按 Corpus Taxonomy 分类给出沉淀建议。
+
+```yaml
+corpus_recommendations:
+  ready_for_corpus:
+    - pattern_id: "[唯一标识，如 parallel_three_mechanisms]"
+      pattern_name: "[人类可读名称]"
+      source_paper: "[作者_年份_期刊]"
+      corpus_path: "corpus/subprotocols/arrangement_patterns.md"
+      section: "[建议写入的章节]"
+      build_type: "[适用构建类型]"
+      confidence: "high / medium / low"
+      cross_paper_evidence: "[已验证的范文数 / 需要再积累的范文数]"
+      rationale: "[为什么这个模式值得沉淀]"
+      entry_preview: |
+        ### [Pattern Name]
+        [可直接写入 corpus 的 markdown 条目预览]
+  needs_validation:
+    - pattern_id: "[唯一标识]"
+      pattern_name: "[名称]"
+      source_paper: "[作者_年份_期刊]"
+      corpus_path: "[目标路径]"
+      note: "[为什么还需要验证 / 需要找什么类型的论文验证]"
+  anti_patterns:
+    - pattern_id: "[唯一标识]"
+      pattern_name: "[名称]"
+      source_paper: "[作者_年份_期刊]"
+      reason: "[为什么不建议沉淀到 write-theory]"
+      alternative: "[如果要实现类似功能，建议用什么替代]"
+```
+
+**记录原则**：
+- 单篇论文出现的新颖模式 → 优先放入 `needs_validation`
+- 与 write-theory 当前 Constraints 冲突的做法 → 放入 `anti_patterns`
+- 过于论文特异的机制内容 → 不进入任何 corpus，只在 Non-Transferable Facts 记录
+
 ## Corpus Reference Notes
 [供人工审阅的语料库沉淀注释，不自动修改 write-theory skill]
+```
+
+---
+
+## Corpus Taxonomy for write-theory（v1.4.0 新增）
+
+本 skill 的终极目的不是产出报告，而是把验证过的模式沉淀到 `write-theory` 的语料库中。为避免沉淀时混乱，所有提取产物必须按以下 taxonomy 分类存放。
+
+### 分类原则
+
+1. **按功能粒度分层**：
+   - `variants/`：整篇 Theory 的宏观结构（按构建类型）
+   - `subprotocols/`：中观论证策略/模式（跨构建类型可复用）
+   - `sentences/`：微观句式模板（填充式表达单元）
+
+2. **按构建类型分桶**：
+   - 同一模式若只在某构建类型中出现 → 写入该构建类型的 variant
+   - 同一模式跨多个构建类型出现 → 写入 `subprotocols/` 并标注 `[跨类型]`
+
+3. **按证据强度准入**：
+   - 单篇论文出现 → 只入 Vault 参考注释
+   - 2 篇同类型论文出现 → `subprotocols/` 作为可选变体
+   - ≥3 篇跨期刊论文出现 → 可进入 `variants/` 或 `SKILL.md` 默认规则
+
+### Taxonomy 映射表
+
+| 提取产物 | 沉淀位置 | 文件名/路径 | 准入门槛 |
+|---------|---------|------------|---------|
+| 构建类型整体结构（T1–T6 模块序列、比例、节奏） | `corpus/variants/` | `A_construct_differentiation.md`<br>`B_mechanism_elaboration.md`<br>`C_hypothesis_tree.md`<br>`D_process_theory.md`<br>`E_moderation.md`<br>`F_competing_hypotheses.md`<br>`G_dialectical_opposition.md` | ≥2 篇该构建类型论文一致 |
+| 假设论证微观动作（Anchor/Gap/Mechanism/Warrant/Prediction） | `corpus/subprotocols/` | `argumentation_patterns.md` | ≥2 篇论文出现同类动作序列 |
+| **假设推导段落级模板（完整 Anchor→Mechanism→Warrant→Prediction）** | `corpus/subprotocols/` | `hypothesis_derivation_patterns.md` | ≥2 篇论文出现同类段落结构 |
+| 论点-论据安排模式（Warrant-Embedded / Evidence-Contrast / Cumulative / Parallel） | `corpus/subprotocols/` | `arrangement_patterns.md` | ≥2 篇论文使用同模式 |
+| 复杂假设段落组织（common trunk / dual branch / baseline→moderation） | `corpus/subprotocols/` | `hypothesis_organization_patterns.md` | ≥2 篇复杂假设论文一致 |
+| 证据类型、证据功能、文献三要素句式 | `corpus/subprotocols/` | `evidence_patterns.md` | ≥2 篇论文出现同类证据策略 |
+| 双边论证 high/low 句法 | `corpus/subprotocols/` | `bilateral_argumentation_templates.md` | ≥2 篇调节效应型论文一致 |
+| Moderator 选择元框架 | `corpus/subprotocols/` | `moderator_selection_frameworks.md` | ≥2 篇多 moderator 论文一致 |
+| Closure 策略（局部收束 / 嵌入框架总结 / Discussion 回补） | `corpus/subprotocols/` | `closure_strategies.md` | ≥3 篇管理学顶刊论文一致 |
+| 识别策略理论嵌入（IV/DiD/RDD/生存分析） | `corpus/subprotocols/` | `identification_strategy_in_theory.md` | ≥2 篇制度冲击类论文一致 |
+| 构念定义句式 | `corpus/sentences/` | `construct_definition.md` | ≥3 篇论文使用同类句式 |
+| 理论视角引入句式 | `corpus/sentences/` | `theoretical_lens.md` | ≥3 篇论文使用同类句式 |
+| 机制推演句式 | `corpus/sentences/` | `mechanism_chain.md` | ≥3 篇论文使用同类句式 |
+| 调节假设句式 | `corpus/sentences/` | `moderation.md` | ≥3 篇论文使用同类句式 |
+| 假设形式句式 | `corpus/sentences/` | `hypothesis_forms.md` | ≥3 篇论文使用同类句式 |
+| 收束/过渡连接词句式 | `corpus/sentences/` | `closure.md`<br>`connectors.md` | ≥3 篇论文使用同类连接词 |
+
+### 单篇蒸馏时的快速分类决策
+
+对每个提取出的骨架/模式，按以下问题链决定去向：
+
+```text
+Q1: 该模式是否只适用于特定构建类型？
+    ├── 是 → 进入 corpus/variants/[build_type].md
+    └── 否 → Q2
+
+Q2: 该模式是否涉及具体措辞/句法结构？
+    ├── 是 → 进入 corpus/sentences/[function].md
+    └── 否 → Q3
+
+Q3: 该模式是否跨构建类型可复用？
+    ├── 是 → 进入 corpus/subprotocols/[pattern_type].md
+    └── 否/不确定 → 只入 Vault 参考注释
+```
+
+### Corpus Entry 标准格式
+
+每个写入 corpus 的条目必须包含以下字段：
+
+```markdown
+<!-- 
+pattern_id: [唯一标识]
+build_type: [适用构建类型 / 跨类型]
+source_papers: ["作者_年份_期刊", "作者_年份_期刊"]
+confidence: [high / medium / low]
+-->
+
+### [Pattern Name]
+
+**适用场景**: [一句话说明在什么情况下使用]
+**排列模式**: [Warrant-Embedded / Parallel / 等]
+**范文来源**: [论文引用]
+
+**骨架**:
+```
+[可填充的句法结构]
+```
+
+**为什么有效**: [该模式的说服逻辑]
+**注意事项**: [使用该模式时的风险和边界]
+**反模式**: [什么情况下不该用]
 ```
 
 ---
@@ -1195,9 +1680,14 @@ phase_2_5_connector_distillation:
 phase_4_batch_analysis:
   build_type_distribution: {"机制推演型": 8, "构念辨析型": 4, "假设树型": 3, "质性过程理论型": 2}
   module_sequence_patterns:
-    standard_sequence: "T1→T2→T3→T4→T5→T6 (10/17)"
-    theory_first: "T2→T1→T3→T4→T5→T6 (4/17, 均为构念辨析型)"
+    standard_sequence: "T1→T2→T3→T4→T5→最后假设自然收敛进入 METHODS (10/17)"
+    with_independent_t6: "T1→T2→T3→T4→T5→独立 T6 段落→METHODS (1/17, 非管理学标准)"
+    theory_first: "T2→T1→T3→T4→T5→最后假设 (4/17, 均为构念辨析型)"
     boundary_embedded: "T5 嵌入 T3 (3/17)"
+  closure_strategies:
+    local_convergence_only: "12/17 — 管理学标准做法"
+    embedded_framework_summary: "3/17 — 嵌入最后假设段末尾的 2-3 句框架总结"
+    discussion_opening_compensation: "2/17 — Theory 无框架总结，Discussion 开篇整合"
   why_chain_patterns:
     dominant_by_type:
       机制推演型: "两步因果链 (6/8)"
@@ -1216,6 +1706,85 @@ phase_4_batch_analysis:
   rejected_patterns:
     - "'Based on prior research, we hypothesize...' 无 why chain (3 篇)"
     - "T3 只有 citation list 无机制推演 (2 篇)"
+  micro_move_patterns:
+    full_sequence_rate: "12/17"
+    most_common_missing_move: "Gap/Puzzle (4/17)"
+    dominant_anchor_source: "empirical_finding (10/17)"
+  bilateral_argumentation:
+    complete: "8/10 — 调节型论文同时论证 high/low"
+    incomplete: "2/10 — 只论证增强方向"
+  arrangement_patterns:
+    Warrant-Embedded: "10/17"
+    Cumulative: "4/17"
+    Evidence-Contrast: "2/17"
+    Parallel: "1/17"
+  evidence_typology:
+    empirical_finding_avg: "55%"
+    theoretical_argument_avg: "30%"
+    boundary_condition_avg: "10%"
+    negative_evidence_avg: "3%"
+    analogical_evidence_avg: "2%"
+  evidence_function_distribution:
+    support: "70%"
+    qualify: "15%"
+    contrast: "10%"
+    pave: "4%"
+    rebut: "1%"
+  three_element_citation_rate_avg: "78%"
+  write_theory_constraint_alignment:
+    C10_interaction_pattern_clear: "9/10"
+    C20_bilateral_argumentation: "8/10"
+    C18_moderator_selection_framework: "5/7"
+  corpus_health_analysis:
+    coverage_by_build_type:
+      机制推演型:
+        existing_skeletons: 8
+        recommended_new: 2
+        gaps: ["反直觉 Anchor 模式", "间接调节论证模板"]
+      假设树型:
+        existing_skeletons: 3
+        recommended_new: 4
+        gaps: ["多 moderator 元框架", "基线机制→条件分叉过渡"]
+      构念辨析型:
+        existing_skeletons: 5
+        recommended_new: 0
+        gaps: []
+      调节效应型:
+        existing_skeletons: 4
+        recommended_new: 3
+        gaps: ["完整双边论证模板", "common trunk + parallel branches 组织"]
+    coverage_by_subprotocol:
+      argumentation_patterns: {existing: 5, recommended_new: 3, gaps: ["理论驱动型 Anchor", "反直觉 Gap 构造"]}
+      arrangement_patterns: {existing: 4, recommended_new: 2, gaps: ["Parallel 复杂假设组织", "Cumulative 间接调节组织"]}
+      evidence_patterns: {existing: 3, recommended_new: 3, gaps: ["案例作为 Warrant", "制度逻辑作为证据"]}
+      bilateral_argumentation_templates: {existing: 1, recommended_new: 3, gaps: ["high/low 完整双边", "条件连接词组合"]}
+      moderator_selection_frameworks: {existing: 1, recommended_new: 2, gaps: ["environmental/organizational 二元框架", "2×2 resource source 框架"]}
+    priority_queue:
+      - rank: 1
+        pattern: "多 moderator 选择元框架"
+        corpus_path: "corpus/subprotocols/moderator_selection_frameworks.md"
+        urgency: "高"
+        reason: "假设树型/调节效应型论文普遍需要，但 corpus 中模板不足"
+        suggested_source_papers: ["Shen_etal_2022_JOM"]
+      - rank: 2
+        pattern: "间接调节/Mediated Moderation 论证"
+        corpus_path: "corpus/subprotocols/argumentation_patterns.md"
+        urgency: "高"
+        reason: "复杂假设论文需要，但当前缺少独立理论论证模板"
+        suggested_source_papers: ["Singh_Grewal_2023_JMR"]
+      - rank: 3
+        pattern: "完整双边论证句法"
+        corpus_path: "corpus/subprotocols/bilateral_argumentation_templates.md"
+        urgency: "中"
+        reason: "C20 要求，多篇调节型论文有优质模板可沉淀"
+        suggested_source_papers: ["Shen_etal_2022_JOM"]
+    over_represented:
+      - pattern: "两步中介机制"
+        count: 12
+        note: "已足够丰富，新蒸馏可不再优先收录"
+      - pattern: "独立 T6 Closure 段落"
+        count: 1
+        note: "非管理学标准，应持续标记为反模式"
 ```
 
 ### 跨 Section 对齐检查（Phase 4 正式化，v1.2.0 新增）
@@ -1233,7 +1802,7 @@ phase_4_batch_analysis:
 | Lens→Lens | 理论一致性 | "[theory]" | "[theory]" | ✅/❌ |
 | Knot→T1/T2 | Knot 继承 | [central_knot_statement] | [knot_inheritance_statement] | ✅/⚠️/❌ |
 | Characters→T1 | 角色一致性 | [protagonist] + [supporting] | [Theory 中出场次数] | ✅/⚠️/❌ |
-| T6→Results | Denouement 预告 | [T6 预告内容] | [Results 发现方向] | ✅/⚠️/❌ |
+| T6→Results | 框架总结与 Results 一致 | [框架总结内容 / 无] | [Results 发现方向] | ✅/⚠️/❌ |
 
 **必须修复的不一致**（如为单篇蒸馏，记录为模仿风险提示）：
 - [ ] [具体不一致项1]
@@ -1284,23 +1853,91 @@ phase_4_corpus_reference:
 1. **骨架通过生成力验证**（Phase 2.4 裁决为"通过"）
 2. **跨论文复现 ≥ 2 篇**（或批量模式下同一构建类型内 ≥ 2 篇）
 3. **构建类型明确**（非 "ambiguous between X and Y"）
-4. **模块功能归属明确**（T1–T6 之一，非 "unclassified"）
+4. **模块功能归属明确**（T1–T6 或 T6-Variant 之一，非 "unclassified"）
+5. **与当前 write-theory v3.3.0 不冲突**——回写前必须对照 write-theory 当前版本的约束（如 T6 Closure 非强制、文献引用以交织式为默认等）
 
 **不触发回写提醒的情况**：
 - 仅 1 篇论文中出现的模式 → 留存为 Vault 参考注释，积累到 ≥3 篇后再提醒
 - 构建类型模糊的论文 → 标记为 "pending_type_clarification"
 - 骨架批评家裁决为"需修正/不纳入" → 不回写
+- **与 write-theory 当前版本核心约束冲突** → 标记为 "pending_protocol_revision"，先更新 write-theory 或降级为"可选变体"，不回写为默认规则
 
-### 回写操作（手动）
+### 回写分类：默认规则 vs 可选变体
 
-满足条件后，用户在蒸馏报告的「回写建议」区块中执行：
+| 类型 | 判断标准 | 回写位置 |
+|------|---------|---------|
+| **默认规则** | ≥3 篇跨期刊论文一致，且与 write-theory 当前约束兼容 | 更新 `SKILL.md` Constraints / Phase 默认结构 |
+| **可选变体** | 2-3 篇论文一致但存在期刊/类型特异性，或与当前约束不完全兼容 | 写入 `corpus/variants/` 或 `corpus/subprotocols/` 作为变体 |
+| **待审阅** | 仅 1 篇出现，或样本有偏 | 只入 Vault 注释，不入 skill |
+| **不采纳** | 与已验证的顶刊惯例明显冲突（如独立 T6 段落） | 不写入，仅记录为反模式 |
 
-1. 对照报告中的新骨架和 Vault 中已有的模块库条目，判断是否重复
-2. 确认模块命名、构建类型标注、范式排他性
-3. 手动将新条目写入 `write-theory` 对应模块库文件
-4. 更新 `write-theory` 的模块索引
+**回写前冲突检查清单**：
+- [ ] T6 相关骨架：是否与 write-theory "不要求独立 Closure 段" 兼容？
+- [ ] 文献引用节奏：是否支持"交织式"而非"分离式四段式"？
+- [ ] 模块标签：是否允许无 "Theory and Hypotheses" 标题的主题标题进入？
+- [ ] Institutional Background：是否作为可选前置模块而非 Theory 的一部分？
+- [ ] Closure 信号：是否区分"假设段局部收束"与"全文独立 Closure 段"？
 
-**不自动执行写入**。当前语料库规模不足以支撑有意义的自动化聚类（`write-theory/academic-writing-corpus/` 尚在建设中），手动判断比脚本更可靠。
+### 回写操作（手动 + 结构化预览）
+
+满足条件后，蒸馏报告会在 `corpus_recommendations` 区块中为每个可沉淀模式生成一个**可直接 append 到 write-theory corpus 的 markdown 条目预览**。用户执行：
+
+1. 对照报告中的 `pattern_id` 和 Vault 中已有条目，判断是否重复
+2. 确认 `corpus_path`、`build_type`、`confidence` 标注正确
+3. 复制 `entry_preview` 到对应 corpus 文件末尾
+4. 更新 `write-theory` 的模块索引（如适用）
+
+**生成的条目必须包含**：
+- `pattern_id`（唯一标识）
+- `build_type`（适用构建类型）
+- `source_papers`（来源论文）
+- `适用场景`（一句话说明）
+- `骨架`（可填充的句法结构）
+- `为什么有效`（说服逻辑）
+- `注意事项`（边界和风险）
+- `反模式`（不该用的情况）
+
+**不自动执行写入**。模型只生成预览，最终写入由用户审核后完成。
+
+**示例条目预览格式**（以 Shen_etal_2022_JOM 的 Parallel Moderation 为例）：
+
+```markdown
+<!-- 
+pattern_id: parallel_moderation_from_three_mechanism_trunk
+build_type: 机制推演型 + 调节效应型
+source_papers: ["Shen_Zhou_Wang_Zhang_2022_JOM"]
+confidence: medium
+-->
+
+### Parallel Moderation from a Three-Mechanism Trunk
+
+**适用场景**: 主效应有多个并行的机制路径，需要用多个 moderators 分别检验每条路径的边界条件。
+**排列模式**: Common Trunk → Parallel Branches
+**范文来源**: Shen, Zhou, Wang, and Zhang (2022), *Journal of Operations Management*
+
+**骨架**:
+```
+[Mechanism Trunk]
+We argue that [IV] [direction] [DV] through three mechanisms: 
+(1) [mechanism 1], (2) [mechanism 2], and (3) [mechanism 3].
+
+[Branch for Moderator W1]
+These effects, however, are contingent on [W1]. When [W1] is high, 
+[mechanism 1]: ...; [mechanism 2]: ...; [mechanism 3]: ...
+Therefore, H[X]: ...
+
+[Branch for Moderator W2]
+Similarly, [W2] alters the relationship because ...
+[mechanism 1]: ...; [mechanism 2]: ...; [mechanism 3]: ...
+Therefore, H[X+1]: ...
+```
+
+**为什么有效**: 读者先在 H1 理解完整的机制 trunk，之后每个 moderator 只需说明它如何改变 trunk 的每个分支，避免重复建立新机制。
+**注意事项**: 
+- 每个 branch 必须回到 trunk 的机制分别论证，不能只笼统说 "W moderates the relationship"
+- 建议用元框架（如 environmental/organizational 或 supply/demand）组织多个 moderators
+**反模式**: 如果 moderators 之间没有 conceptual 联系，不要强行 parallel，应改为假设树型逐个引入。
+```
 
 ### 构建类型分桶
 
@@ -1315,8 +1952,9 @@ phase_4_corpus_reference:
 | 调节效应型 | `bucket_moderation` | "when W is high/low" 条件预测 | T4 交互假设骨架 |
 
 **跨桶规则**：
-- 同一骨架被多个构建类型的论文使用（如 T6 Closure 的 "Taken together" 骨架），标记为 `跨类型`，可跨桶回写
+- 同一骨架被多个构建类型的论文使用（如局部收束信号 "Therefore, we hypothesize:"），标记为 `跨类型`，可跨桶回写
 - 范式排他性骨架（如构念辨析型的 "differentiation dimensions"）**绝不**跨桶回写
+- **注意**：write-theory v3.3.0 已取消"T6 Closure 作为独立模块"的强制要求。回写时，"Taken together, our theory posits..." 类骨架只能作为"嵌入最后假设段末尾的可选 2-3 句框架总结"标记，不能作为独立 T6 段落推荐。
 
 ### 诚实边界（回写专用）
 
@@ -1347,13 +1985,28 @@ phase_4_corpus_reference:
 - [ ] **Why-Chain Audit**: T3 骨架中包含明确的机制步骤，无"常识跳跃"
 - [ ] **Hypothesis Form Audit**: T4 骨架中假设方向、条件、IV/DV 明确
 
-#### T6 Closure QC（v1.2.0 新增，write-theory v3.1.0 强制要求）
-- [ ] **T6 存在性**: 所有构建类型都包含 T6 段落（或 Discussion 开篇补回）
-- [ ] **Knot Fully Tied**: T6 明确或暗示 "knot fully tied"（"we have argued that..."）
-- [ ] **Framework Locking**: T6 将分散假设整合为统一理论叙事
-- [ ] **Denouement 预告**: T6 预告 Results 将如何 unravel the knot
-- [ ] **T6 Voice**: "In sum, we have argued that..."（第一人称主动语态，无被动）
-- [ ] **叙事接力**: T6 结尾能量级 ≥ Theory 最后假设推导段能量级
+#### T6 Closure QC（v1.2.0 新增，同步 write-theory v3.3.0）
+
+> **注意**：write-theory v3.3.0 明确——管理学顶刊（JMS, AMJ, SMJ, ASQ, OS 等）**不要求独立的 T6 Closure 段落**。最后假设推导段的局部收束信号（"Therefore, we hypothesize:" / "Thus," / "Accordingly,"）已承担收敛功能。因此本 skill 的 T6 QC 从"是否存在独立 T6"改为"是否存在合适的收束策略"。
+
+- [ ] **局部收束信号**：每个假设前是否有 Therefore/Thus/Accordingly 等收敛信号？
+- [ ] **独立 T6 段落**：是否存在独立的 "Taken together..." 段落？→ 如存在，标记为"非管理学标准但可选"；如不存在，标记为"管理学标准做法"
+- [ ] **框架整合位置**：如假设间逻辑关系不够自明，框架总结出现在哪里？（A）最后假设段末尾嵌入 2-3 句 /（B）Discussion 开篇 /（C）缺失，可能导致追问
+- [ ] **T6 Voice**：如存在独立或嵌入的框架总结，是否使用 accountable first-person（"we have argued"），无被动语态？
+- [ ] **T6 叙事接力**：如存在独立或嵌入的框架总结，结尾能量级是否 ≥ 最后假设推导段？
+- [ ] **Discussion 回补**：如 Theory 无框架总结，Results/Discussion 是否有 "one expected—one unexpected" 等整合信号？
+
+**记录格式**：
+```yaml
+t6_closure_qc:
+  independent_t6_present: true/false
+  standard_in_management: false  # 管理学默认：false 为正常
+  local_convergence_signals: ["Therefore", "Thus", "Accordingly"]
+  framework_integration_strategy: "embedded / discussion_opening / missing"
+  voice_check_passed: true/false/null
+  narrative_energy_maintained: true/false/null
+  discussion_compensation: true/false/null
+```
 
 #### Prose Craft QC（v1.2.0 新增）
 - [ ] **Human Face in Theory**: P1 有具体场景说明 knot 在现实世界的样子？
@@ -1371,6 +2024,45 @@ phase_4_corpus_reference:
 - [ ] **生存分析**: Theory 是否解释了时间维度的理论意义？是否论证了比例风险假设的理论合理性？
 - [ ] **Theory-Methods 识别链接**: 如果 Methods 描述了识别策略但 Theory 完全未提及 → ⚠️ 标记
 
+#### 论证、安排与证据 QC（v1.4.0 新增，对应 write-theory v3.3.0 核心诉求）
+
+以下检查项用于**评估范文在假设论证、论点论据安排、证据摆放三个维度上是否符合 write-theory 的协议**，并提取其偏离方式。目的是帮你在沉淀语料库时判断：哪些范做法可直接复用，哪些需要标注为"例外"或"反模式"。
+
+- [ ] **微观动作完整性**: 每个假设推导段落是否包含 Anchor → Gap/Puzzle → Mechanism Move → Warrant → Prediction 的完整序列？缺失哪个动作？
+- [ ] **双边论证完整性**: 调节/边界条件段落是否同时论证 high-condition 和 low-condition 的机制？（write-theory C20）
+- [ ] **替代解释排除**: 论文是否识别并主动排除主要 competing explanations？使用什么策略？
+- [ ] **安排模式识别**: 论文主要使用 Warrant-Embedded / Warrant-First / Evidence-Contrast / Cumulative / Parallel 中的哪一种？是否功能等价？
+- [ ] **Concrete Illustration 规则**: 是否存在连续 2 个推理步骤无 illustration 的情况？
+- [ ] **证据类型健康度**: Empirical finding + theoretical argument 是否占证据总数的 ≥70%？是否存在 evidence type 与论点功能错配？
+- [ ] **证据功能多样性**: 是否只有 support 型引用？qualify / contrast / pave / rebut 功能是否缺失？
+- [ ] **文献引用三要素**: 每个引用是否同时满足 concrete finding + argument summary + link to current mechanism？
+- [ ] **交互模式明确度**: 调节假设是否明确 enhancing / buffering / antagonistic / existence / competing？（write-theory C10）
+- [ ] **竞争假设收敛信号**: 竞争假设是否避免使用 "Therefore" 等传统因果收敛信号？（write-theory C14）
+- [ ] **辩证对立对称性**: 两个对立机制的步骤数是否对称？方向是否真正反转（而非仅强度变化）？（write-theory C16-C17）
+- [ ] **Moderator 选择框架**: 当存在 ≥2 moderators 时，是否有元框架解释为什么选择这些 moderator？（write-theory C18）
+- [ ] **连续 IV 三点论证**: 连续 IV 是否论证 high / middle / low 三点的行为差异？（write-theory C19）
+
+**记录格式**：
+```yaml
+argumentation_qc:
+  micro_move_completeness: "5/5"  # 或缺失动作列表
+  bilateral_argumentation: {high: true, low: true, symmetry: "完整"}
+  alternative_explanations: {identified: ["account1"], ruled_out: ["account1"], strategy: "scope_condition"}
+  arrangement_pattern: "Warrant-Embedded + Cumulative"
+  illustration_gap_count: 0
+  evidence_type_health: {empirical: 0.5, theoretical: 0.3, boundary: 0.1, negative: 0.1, analogical: 0.0}
+  evidence_function_diversity: {support: 5, qualify: 1, contrast: 1, pave: 1, rebut: 0}
+  three_element_citation_rate: "85%"
+  write_theory_constraint_alignment:
+    C10_interaction_pattern: "明确 enhancing"
+    C14_competing_hypothesis_signal: "通过"
+    C16_dialectical_symmetry: "N/A"
+    C17_true_direction_reversal: "N/A"
+    C18_moderator_selection_framework: "通过"
+    C19_continuous_IV_three_point: "N/A"
+    C20_bilateral_argumentation: "通过"
+```
+
 ### 最终输出物清单
 
 1. **Fine-Grained Profile**（单篇）或 **Batch Aggregation Report**（批量）
@@ -1384,7 +2076,7 @@ phase_4_corpus_reference:
 
 ### 模仿风险提示
 
-蒸馏过程发现的原文理论叙事薄弱点不是要被"修复"（论文已发表），而是作为**模仿风险提示**记录，防止用户在模仿时踩坑。
+蒸馏过程发现的原文理论叙事薄弱点不是要被"修复"（论文已发表），而是作为**模式采纳风险评估**记录。目的是帮你在把范文做法沉淀到 `write-theory` 语料库时判断：哪些做法是安全的默认规则？哪些应降级为"例外"或"反模式"？当你自己写作时，这些提示也能帮你避开已被验证的陷阱。
 
 **格式**：
 
@@ -1397,14 +2089,27 @@ phase_4_corpus_reference:
 | Phase 2 (T1 提炼) | 构念定义模糊 | "organizational capability" 未界定类型 | 模仿后审稿人问 "what kind of capability?" | 增加 scope condition 或具体化构念 |
 | Phase 2.4 (骨架批评) | 机制内容污染 | 骨架中包含 "performative tension" 等具体机制 | 模仿后变成复制特定论文的机制 | 泛化为 [theoretical mechanism]，只模仿组织方式 |
 | Phase 1.5 (对齐检查) | T4→Methods 断裂 | T4 提出三向交互但 Methods 未报告交互项 | 模仿后假设与操作化脱节 | 确保 Methods 中的变量操作化与 Theory 假设严格对齐 |
-| Phase 1.5 (T6 检查) | T6 Closure 缺失 | 论文无 T6 段落，直接结束于最后假设 | 模仿后理论框架碎片化，Discussion 无处锚定 | 必须添加 T6：总结框架+预告实证+收束 knot |
-| Phase 1.5 (T6 检查) | T6 能量骤降 | T6 用 "In conclusion, we tested..." 纯方法总结 | 破坏 Rising Action 连续性，读者失去兴趣 | T6 用 "In sum, we have argued that..." 保持理论能量 |
+| Phase 1.5 (T6 检查) | 独立 T6 Closure 段落 | 论文有独立的 "Taken together..." 段落 | 非管理学标准，可能被审稿人视为冗余 | 如需框架总结，嵌入最后假设段末尾 2-3 句，或放到 Discussion 开篇 |
+| Phase 1.5 (T6 检查) | 无局部收敛信号 | 假设前无 Therefore/Thus/Accordingly | 假设像从天而降，非从机制推导 | 每个假设前必须有因果连接词收敛 |
+| Phase 1.5 (T6 检查) | 框架总结能量骤降 | 框架总结用 "In conclusion, we tested..." 纯方法总结 | 破坏 Rising Action 连续性，读者失去兴趣 | 如需框架总结，用 "In sum, we have argued that..." 保持理论能量 |
 | Phase 0.75 (Prose QC) | 无人脸 Theory | T1 定义只有抽象描述，无 "A promotion-focused CEO, for example..." | 模仿后读者难以将抽象构念与经验世界连接 | 每个新构念首次出现配 1 个具体例子 |
 | Phase 0.75 (Prose QC) | 机器声 Theory | 假设推导用 "It is hypothesized that..." | 模仿后像模板生成而非研究者判断 | 改用 "We hypothesize that..." |
 | Phase 1.25 (制度冲击) | 识别策略与理论脱节 | Methods 详细描述 IV/DiD/RDD 但 Theory 完全未论证 | 模仿后审稿人质疑"为什么这个识别策略在理论上是合理的？" | Theory 中必须嵌入识别假设的理论论证 |
-| Phase 2.5 (四段式 QC) | Topic Sentence 埋藏核心判断 | 段首句用 "Drawing on institutional theory..." 无方向性预测 | 读者读完整段才知道论点 | 段首句必须在 15 词内说出核心判断：主语+主动动词+方向 |
-| Phase 2.5 (四段式 QC) | 无收敛信号 | 假设前无 Therefore/Thus/Accordingly | 假设像从天而降，非从机制推导 | 每个假设前必须有因果连接词收敛 |
-| Phase 2.5 (四段式 QC) | Citation 替代机制 | T3 只有 "Smith (2010) argues... Jones (2012) found..." | 模仿后变成文献综述而非理论推演 | 每个引用必须总结 argument 并链接到机制步骤 |
+| Phase 2.5 (段落 QC) | Topic Sentence 埋藏核心判断 | 段首句用 "Drawing on institutional theory..." 无方向性预测 | 读者读完整段才知道论点 | 段首句必须在 15 词内说出核心判断：主语+主动动词+方向 |
+| Phase 2.5 (段落 QC) | 无收敛信号 | 假设前无 Therefore/Thus/Accordingly | 假设像从天而降，非从机制推导 | 每个假设前必须有因果连接词收敛 |
+| Phase 2.5 (段落 QC) | Citation 替代机制 | T3 只有 "Smith (2010) argues... Jones (2012) found..." | 模仿后变成文献综述而非理论推演 | 每个引用必须总结 argument 并链接到机制步骤 |
+| Phase 2.6 (微观动作) | 论证动作缺失 | 假设段落直接从 "We argue" 开始，无 Anchor 或 Gap | 读者不知道为什么需要这个新假设 | 补充 Anchor（学界共识）和 Gap（现有解释不足） |
+| Phase 2.6 (微观动作) | Warrant 薄弱 | Mechanism Move 后只有一句 "consistent with [theory]"，无具体文献 | 机制步骤像作者臆断 | 每个 mechanism move 后嵌入 1-2 个总结 argument 的 citation |
+| Phase 2.6 (双边论证) | 只论证调节增强方向 | 段落只说 "when W is high, X→Y is stronger"，未解释 low-W 条件 | 审稿人质疑机制完整性 | 同时论证 high-W 和 low-W 条件下的理论逻辑 |
+| Phase 2.6 (替代解释) | 未排除竞争解释 | 论文提出新机制但 ignore 明显 alternative account | 审稿人会提出 "what about..." | 主动识别 1-2 个主要 competing explanations 并用理论/范围条件排除 |
+| Phase 2.7 (安排模式) | 连续两步无 illustration | 机制链连续两个步骤都只有抽象推理，无案例/数字/场景 | 读者难以把抽象机制与经验世界连接 | 每两个推理步骤间至少插入 1 句 concrete illustration |
+| Phase 2.7 (复杂假设) | 假设间关系不明 | H1 和 H2 段落无逻辑连接词，像两个独立 mini-papers | 论文理论框架显得碎片化 | 用 "Building on H1..." / "Beyond this direct effect..." 等明确假设间关系 |
+| Phase 2.8 (证据类型) | 证据类型单一 | 全部 citation 都是 empirical finding，无 theoretical argument | 论证缺乏理论根基 | 每个机制步骤同时嵌入 empirical finding 和 theoretical warrant |
+| Phase 2.8 (证据功能) | 只有 support 型引用 | 所有 citation 都用来"支持"，无 qualify / contrast / rebut | 论证显得 one-sided，缺乏 nuance | 在关键步骤加入限定、对比或排除替代解释的引用 |
+| Phase 2.8 (文献引用三要素) | Citation 无 concrete finding | "Smith (2010) argues that..." 只有抽象主张，无具体发现 | 引用无法支撑具体机制步骤 | 改写为 "Smith (2010) found that [具体发现] — [argument summary]" |
+| Phase 2.8 / C10 | 交互模式不明确 | 调节假设只说 "W moderates X→Y"，未说明 enhancing/buffering/antagonistic | 读者无法判断理论预期 | 在机制和假设中明确交互模式类型 |
+| Phase 2.8 / C18 | Moderator 选择无框架 | "We also examine the moderating role of Z" 无理由逐个引入 | 审稿人质疑为什么选这些 moderator | 用元框架（如 awareness vs capacity）解释 moderator 选择 |
+| Phase 2.8 / C19 | 连续 IV 只论证一端 | "High X increases Y" 但未讨论 low/middle X 的行为 | 理论预测不完整 | 对称论证 high / middle / low 三点的行为差异 |
 ```
 
 **记录原则**：
@@ -1431,7 +2136,8 @@ Theory & Hypotheses 写作质量检查请使用 `/theory-review`——它覆盖�
 - **强制覆盖所有模块**：如果某 Theory 确实缺失某模块，记录为 missing，不捏造。
 - **混淆构建类型**：如果原文的理论构建方式模糊，明确标记为 "ambiguous between 机制推演型 and 假设树型"，不强行分类。
 - **泛化机制内容**：不将"某篇论文中 X→M→Y 的具体机制"提炼为"机制推演型通常使用三步链"。只提炼**组织方式**，不提炼**机制内容**。
-- **强制标准节奏**：不将四拍论证链强加于所有论文。RHYTHM_VARIANT 是合法的节奏形态，需要关注的是功能等价的论证完成度，而非拍数的机械合规。
+- **不将独立 T6 Closure 作为默认推荐**：write-theory v3.3.0 已明确管理学顶刊不要求独立 Closure 段落。蒸馏时记录独立 T6 存在性，但不再标记 "T6 缺失" 为默认风险。
+- **不将四段式分离结构作为唯一节奏目标**：write-theory v3.3.0 以交织式为默认。蒸馏时区分 interwoven / separated / hybrid，关注功能等价性而非机械拍数。
 - **虚构连接词-类型绑定**：不声称"机制推演型必须使用 Therefore"。连接词模式是统计倾向而非语法规则。标记连接词-类型一致性为"低"时，必须附具体证据（如"条件连接词占比 25%，远超机制推演型中位数 8%"），而非仅凭印象判断。
 - **交叉矩阵硬化**：构建类型×假设结构矩阵中的 M/C/O 标注是基于当前语料库的归纳，不是理论上的不可能性证明。遇到矩阵外的组合时，标记为 "unclassified combination" 并记录，不强行排除。
 - **证据链不捏造**：如标志性语言确实模糊（同一段落同时包含两种类型的标志性语言），如实记录模糊信号，不在证据链中虚构 "clearly indicates"。
@@ -1454,11 +2160,11 @@ Theory & Hypotheses 写作质量检查请使用 `/theory-review`——它覆盖�
 
 ## 与下游 Skill 的接口
 
-- **`write-theory`** — Phase 4 的更新建议可直接沉淀到 write-theory 的模块库和骨架库；Phase 2.5 连接词统计可反向更新 write-theory 的连接词分类库和段落收束模板。Phase 0.5 Rising Action 数据和 Phase 0.75 Prose Craft 数据可为 write-theory 的叙事对齐检查和 Prose Craft 定位提供输入
-- **`theory-review`** — Phase 1.5 的模块覆盖检查和 Theory Logic Map 可作为 theory-review 的审查基准；Phase 1.25 的制度冲击适配检查可为理论审查提供识别策略论证依据
-- **`paper-review`** — Theory Logic Map 可用于跨 section 对齐检查（Theory 承诺 vs Results 兑现）；Phase 4 的跨 Section 对齐表可直接用于 paper-review 的全稿对齐检查
-- **`write-introduction`** — T2 Theoretical Lens 和 T6 Closure 的提炼可用于优化 Introduction 的 P5 Preview 和 P7 Contribution；Phase 0.5 的 knot 继承检查可为 Introduction→Theory 叙事接力提供验证
-- **Vault** — Fine-Grained Profile 存入 Vault 的 `fine_grained/batch_*/[paper]_distilled_theory.md`
+- **`write-theory`** — Phase 4 的更新建议可直接沉淀到 write-theory 的模块库和骨架库；Phase 2.5 连接词统计可反向更新 write-theory 的连接词分类库和段落收束模板。Phase 2.6–2.8 的微观动作、安排模式、证据类型/功能可直接沉淀为 `corpus/subprotocols/argumentation_patterns.md`，供 write-theory Phase 2.5 调用。Phase 0.5 Rising Action 数据和 Phase 0.75 Prose Craft 数据可为 write-theory 的叙事对齐检查和 Prose Craft 定位提供输入
+- **`theory-review`** — Phase 1.5 的模块覆盖检查和 Theory Logic Map 可作为 theory-review 的审查基准；Phase 1.25 的制度冲击适配检查可为理论审查提供识别策略论证依据；Phase 2.6–2.8 的微观动作、双边论证、证据三要素检查可为 theory-review 提供段落级论证审查清单
+- **`paper-review`** — Theory Logic Map 可用于跨 section 对齐检查（Theory 承诺 vs Results 兑现）；Phase 4 的跨 Section 对齐表可直接用于 paper-review 的全稿对齐检查；write-theory Constraint Alignment 表可用于 Theory ↔ write-theory 协议一致性审查
+- **`write-introduction`** — T2 Theoretical Lens 和 Closure 策略（局部收束 / 嵌入框架总结）的提炼可用于优化 Introduction 的 P5 Preview 和 P7 Contribution；Phase 0.5 的 knot 继承检查可为 Introduction→Theory 叙事接力提供验证；Phase 2.6 的 Anchor/Gap/Prediction 序列可为 Introduction 的 Gap→Preview 结构提供节奏参照
+- **Vault** — Fine-Grained Profile 存入 Vault 的 `fine_grained/batch_*/[paper]_distilled_theory.md`；新发现的论证模式存入 `skill_update_recommendations/argumentation_patterns/`
 
 ## 外部资产位置
 
@@ -1472,4 +2178,4 @@ Theory & Hypotheses 写作质量检查请使用 `/theory-review`——它覆盖�
 如需机器消费格式，参考 Vault 中已蒸馏的 `fine_grained/` 目录下的实际报告文件——其结构和字段集比抽象 schema 更准确地反映真实输出。
 
 ---
-*基于 nuwa-skill 流水线框架、Pollock 2025 Ch02-Ch06、Dorobantu et al. (2024)、Shepherd & Wiklund (2020) 叙事规则、MVP30 范文语料库构建。版本 1.2.0 — Theory 蒸馏 Meta-Skill（同步 write-theory v3.1.0）。*
+*基于 nuwa-skill 流水线框架、Pollock 2025 Ch02-Ch06、Dorobantu et al. (2024)、Shepherd & Wiklund (2020) 叙事规则、MVP30 范文语料库构建。版本 1.4.0 — Theory 蒸馏 Meta-Skill（同步 write-theory v3.3.0）。*

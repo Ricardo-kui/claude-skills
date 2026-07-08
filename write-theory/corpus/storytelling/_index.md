@@ -16,7 +16,7 @@ dependencies: []
 
 | 文件 | 功能 | Pollock 章节 | 引用位置 |
 |------|------|-------------|---------|
-| `rising-action-protocol.md` | Theory Rising Action 四阶段协议（Inheritance→Deepening→Tying→Fully Tied） | Ch02 | Phase 0.5 |
+| `rising-action-protocol.md` | Theory Rising Action 三阶段协议（Inheritance→Deepening→Tying，最后假设自然收敛进入 METHODS） | Ch02 | Phase 0.5 |
 | `plot-emergence-check.md` | 情节浮现 vs 强加检查（5 个问题清单） | Ch02 | Phase 0.5 |
 | `knot-continuity-check.md` | 跨 Section Knot 连续性（Intro↔Theory↔Methods↔Results↔Discussion） | Ch02 | Phase 0.5 |
 | `post-generation-validator.md` | Theory 后生成叙事验证器 | Ch02-Ch06 | Phase 3 QC |

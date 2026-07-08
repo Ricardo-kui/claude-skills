@@ -51,6 +51,85 @@ a different level of analysis]."
 
 ---
 
+## 双边论证fit/misfit型（weng_yang 型）
+
+**功能**: 将交互效应概念化为 "fit"（alignment amplifies）和 "misfit"（misalignment dampens），为统计交互项创造有名字的理论概念。
+
+**模板**:
+```
+"The extent to which [moderator characteristic] could alter the effect of [IV], 
+as a [pole-A moderator] would attend more closely to [values linked to IV]. 
+That is, a [pole-A moderator] is likely to increase a [pole-A actor]'s 
+[mechanism: e.g., awareness] of recognizing the importance of [value] within 
+a [context]. For example, a [pole-A moderator] may formally discuss [issue], 
+which can create opportunities for a [pole-A actor] to [action]. 
+Under this condition, a [pole-A actor] will be more [aware/capable]. 
+In our context, this means that the '[novel concept label, e.g., ideological fit]' 
+between a [pole-A actor] and a [pole-A moderator] may expand the [actor]'s [mechanism].
+
+Conversely, a [pole-A actor] may be less likely to [outcome action] when the 
+[moderator] is [pole-B]. [Pole-B actors] believe that [counter-belief]. 
+Thus, a [pole-B moderator] will be unlikely to recognize [issue]. 
+Under this condition, a [pole-A actor]'s [mechanism] would be contained. 
+In other words, the '[novel concept label, e.g., ideological misfit]' between 
+a [actor] and a [moderator] can operate to compromise the [pole-A actor]'s 
+[capacity] to [outcome action]."
+```
+
+**语料锚定**：
+- Weng & Yang (JMS) — "ideological fit" / "ideological misfit" between CEO and board
+
+**关键特征**:
+- 创造命名概念标签（"ideological fit"/"ideological misfit"）——让交互效应从统计术语变为理论构念
+- 双边论证：不是只说"M strengthens the effect"，而是完整论证 "when M=high → strengthens" AND "when M=low → weakens"
+- 具象场景（"formally discuss" / "informally ask"）让抽象的调节机制可想象
+- "In our context, this means that..." 将一般理论映射到具体研究情境
+
+**禁忌**: 概念标签必须从理论中自然生长（不能是生造的营销术语）；fit/misfit 论证必须对称（不能只详细论证 fit 而 misfit 一笔带过）
+
+---
+
+## 能力放大+双边约束型（weng_yang 型）
+
+**功能**: 当 moderator 是个体/组织的 "capacity/power" 时，论证 moderator 如何放大 IV 两端（pole-A AND pole-B）的效应，同时展示低 moderator 如何约束两端。
+
+**模板**:
+```
+"We postulate that [moderator] may alter the effect of [IV] on [DV] as greater 
+[moderator value] increases a [actor]'s [capacity] to [action]. In a typical 
+[context], some influential actors can form coalitions to counteract a [actor]'s 
+proposal. If certain [stakeholders] do not fully agree with a [actor]'s idea, 
+the [actor] with sufficient [moderator] will not be deterred from implementing 
+these plans as the holding of substantial [moderator] allows the [actor] to 
+pursue the direction he or she personally likes ([citations]). Hence, a 
+[pole-A actor] with much [moderator] will have a greater capacity to [action A]. 
+Similarly, a [pole-B actor] with considerable [moderator] can also use his or 
+her influence to [opposite action].
+
+Alternatively, with limited [moderator], a [actor], whether [pole-A] or 
+[pole-B], may be less able to manage the issue of [DV] based on his or her view. 
+For example, a [pole-A actor] with less [moderator] must accommodate the opinions 
+expressed by various internal and external stakeholders. These entities could 
+draw on credible external sources to question the [actor]'s proposal, or even 
+force the [actor] to leave ([citation]). Under this circumstance, a [pole-A actor] 
+with limited [moderator] will be less able to follow his or her preferences. 
+Ultimately, with limited [moderator], both [pole-A] and [pole-B] [actors]' 
+capacity to [action] will be constrained."
+```
+
+**语料锚定**：
+- Weng & Yang (JMS) — CEO power as capacity amplifier
+
+**关键特征**:
+- 对称放大论证：power amplifies BOTH directions (pole-A's narrowing AND pole-B's widening)
+- 完整约束面：不仅说"power enables"（高 moderator 效应），也说"powerlessness constrains"（低 moderator 效应）——全范围覆盖
+- 具象反例场景（coalition formation, shareholder pushback, forced CEO departure）让抽象的 "power" 可操作化
+- "Similarly" 标记对称论证——确保读者理解 moderator 不偏袒任何一端
+
+**禁忌**: 对称论证必须有理论依据（不能因为"好看"而强行对称）；如果 moderator 理论上只放大 IV 一端（非对称），不要使用此模板
+
+---
+
 ## 调节直接效应区分
 
 ```

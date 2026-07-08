@@ -2,9 +2,9 @@
 corpus: write-results
 description: Results 填空骨架变体库，按结果类型组织。由 distill-results-exemplar 手动写入验证通过的变体。
 organization: by_result_type
-result_types_count: 17
+result_types_count: 18
 created: 2026-05-18
-updated: 2026-07-07
+updated: 2026-07-08
 ---
 
 # Results Academic Writing Corpus
@@ -19,13 +19,13 @@ updated: 2026-07-07
 
 | 文件 | 结果类型 | 变体数 | 最后更新 |
 |------|---------|--------|---------|
-| [OLS-FE](OLS-FE.md) | OLS-FE | 5 | 2026-05-20 |
-| [Logit-Probit-Ordered-Probit](Logit-Probit-Ordered-Probit.md) | Logit-Probit-Ordered-Probit | 0 | 2026-05-18 |
-| [生存分析](生存分析.md) | 生存分析 | 5 | 2026-05-20 |
+| [OLS-FE](OLS-FE.md) | OLS-FE | 21 | 2026-07-08 |
+| [Logit-Probit-Ordered-Probit](Logit-Probit-Ordered-Probit.md) | Logit-Probit-Ordered-Probit | 8 | 2026-07-07 |
+| [生存分析](生存分析.md) | 生存分析 | 14 | 2026-07-07 |
 | [DiD](DiD.md) | DiD | 0 | 2026-05-18 |
-| [计数模型](计数模型.md) | 计数模型 | 6 | 2026-07-06 |
-| [实验](实验.md) | 实验 | 2 | 2026-07-06 |
-| [多研究](多研究.md) | 多研究 | 1 | 2026-07-06 |
+| [计数模型](计数模型.md) | 计数模型 | 11 | 2026-07-07 |
+| [实验](实验.md) | 实验 | 3 | 2026-07-07 |
+| [多研究](多研究.md) | 多研究 | 4 | 2026-07-07 |
 | [定性过程研究](定性过程研究.md) | 定性过程研究 | 4 | 2026-07-07 |
 | [IV-2SLS](IV-2SLS.md) | IV-2SLS | 4 | 2026-06-16 |
 | [匹配DiD](匹配DiD.md) | 匹配DiD | 0 | 2026-05-18 |
@@ -33,9 +33,10 @@ updated: 2026-07-07
 | [同伴效应-网络效应](同伴效应-网络效应.md) | 同伴效应-网络效应 | 0 | 2026-05-18 |
 | [推断二元结果](推断二元结果.md) | 推断二元结果 | 0 | 2026-05-18 |
 | [跨受众构念对比](跨受众构念对比.md) | 跨受众构念对比 | 0 | 2026-05-18 |
-| [三向交互](三向交互.md) | 三向交互 | 0 | 2026-05-18 |
+| [三向交互](三向交互.md) | 三向交互 | 1 | 2026-07-07 |
 | [构造暴露分解](构造暴露分解.md) | 构造暴露分解 | 0 | 2026-05-18 |
-| [SEM-moderated-mediation](SEM-moderated-mediation.md) | SEM/调节中介 | 1 | 2026-06-03 |
+| [SEM-moderated-mediation](SEM-moderated-mediation.md) | SEM/调节中介 | 3 | 2026-07-07 |
+| [事件研究法](事件研究法.md) | 事件研究法 | 1 | 2026-07-07 |
 
 ## 写入规则
 
@@ -64,7 +65,7 @@ updated: 2026-07-07
 >   - 定性过程研究 变体3：**Side-Stage Negotiation** — 部分可见冲突 → 规范澄清
 >   - 定性过程研究 变体4：**Audience-Specific Success Assessment** — 按受众分别评估有限进展
 >
-> **总变体数**: 31 (分布于 9 个结果类型文件)
+> **总变体数**: 42 (分布于 10 个结果类型文件)
 > **新结果类型解锁**: 实验、多研究、定性过程研究
 >
 > ✅ **2026-07-06 更新**: 蒸馏 Cutolo & Ferriani 2024 (JM) "How Narratives Can Help Atypical Actors Increase Market Appeal" 新增计数模型结果报告骨架：
@@ -75,3 +76,55 @@ updated: 2026-07-07
 > ✅ **2026-06-16 更新**: 蒸馏 Qiao, Hiatt & Sine (2026, SMJ) "dual imprinting" 新增结果报告骨架：
 >   - IV-2SLS 变体4：**非线性估计器（生存/有限 DV）下的内生性检验——control-function 残差作 DWH 等价检验 + Stock-Yogo F + 有限样本偏误诚实提示**（解决"非线性主模型如何检验内生性"的普遍盲区）
 >   - SEM-moderated-mediation 追加：**Reverse-code + Wald Test** 比较两条方向相反通道的持续性差异（H3 型 differential-persistence meta-hypothesis 的可检验化）
+>
+> ✅ **2026-07-07 更新**: 蒸馏 Mayo, Ball & Mills (2022, POM) "CEO Tenure and Recall Risk Management" 新增 5 个高价值变体（均单篇、待第二篇交叉验证声明已标注）：
+>   - 生存分析 变体6：**风险模型三拍 + exp(β)−1 百分比解释**（Early/Late vs Middle ref 对称对立报告）
+>   - 生存分析 变体7：**风险模型交互效应 — 简洁交互项实质含义翻译**（不需图示+AME）
+>   - 生存分析 变体8：**分样本 H3 + Wald χ² 跨模型比较 + null-in-one-subgroup 确证叙事**（6拍节奏，"statistically independent"措辞）
+>   - 生存分析 变体9：**CEM 双向处理 ATE 行格式**（正向+负向 ATE 并行报告）
+>   - 生存分析 变体10：**替代机制交互检验 + 诚实收尾**（"though the alternative explanation cannot be completely ruled out"）
+>
+> ✅ **2026-07-07 更新（续）**: 蒸馏 Haunschild, Polidoro & Chandler (2015, ORSC) 新增 3 个高价值变体（均单篇、待第二篇交叉验证声明已标注）：
+>   - 计数模型 变体7：**主效应四拍 + e^β−1 百分比解释**（双DV平行报告）
+>   - 计数模型 变体8：**非线性模型中的无显式交互项调节效应**（图形 + 子样本边际效应 t 检验）
+>   - 计数模型 变体9：**跨测量复制的单句稳健性声明**（嵌入R3的非独立段落）
+>
+> ✅ **2026-07-07 更新（续2）**: 蒸馏 Mannor, Wowak, Bartkus & Gomez-Mejia (2016, SMJ) 新增 3 个高价值变体（均单篇、待第二篇交叉验证声明已标注）：
+>   - OLS-FE 变体8：**主效应不显著但调节显著 — 条件化再定位**（方向正确→交互显著→条件分解）
+>   - OLS-FE 变体9：**调节效应边际效应的单侧显著报告**（dy/dx + 不显著侧 "not statistically different from zero"）
+>   - OLS-FE 变体10：**ΔR² + 条件边际效应嵌入经济显著性**（增量方差+条件百分比联合论证）
+>
+> ✅ **2026-07-07 更新（续3）**: 蒸馏 Pfarrer, Pollock & Rindova (2010, AMJ) 新增 3 个高价值变体：
+>   - Logit-Probit-Ordered-Probit 变体1-3：首次填充该结果类型（R1 高密度开场、R3 OR翻译、R4 CAR分组）
+>
+> ✅ **2026-07-07 更新（续4）**: 蒸馏 Desai (2011, AMJ) 新增 2 个变体：
+>   - 计数模型 变体10-11：负主效应正交互条件反转、跨模型共线性说明
+>
+> ✅ **2026-07-07 更新（续5）**: 蒸馏 Bamberger, Homburg & Wielgos (2021, JM) 新增 3 个变体：
+>   - 多研究 变体2：跨研究镜像首句
+>   - SEM-moderated-mediation 变体2：不一致中介→抑制变量
+>   - OLS-FE 变体11：边际显著 90% CI
+>
+> > ✅ **2026-07-07 更新（续6）**: 蒸馏 Li, Chiu, Kong, Cropanzano & Ho (2026, JOM) "A Sensemaking Model of Investor Reactions to CEO Achievement Expression" 新增 5 个高价值变体（均单篇、待第二篇交叉验证声明已标注）：
+>   - 实验 变体3：**被调节的序列中介五拍报告 — PROCESS first-stage moderation**
+>   - OLS-FE 变体13：**交互效应百分比经济显著性 — 联合变化的幅度解释**
+>   - OLS-FE 变体14：**低基础率调节变量的边际效应直方图 — 替代传统 ±1SD 线图**
+>   - OLS-FE 变体15：**五威胁标签化稳健性序列 — RIR+Oster+CEM组合**
+>   - 多研究 变体3：**三研究递进结果叙事 — 实验复制+现场面板三DV并行**
+>   - 新建「事件研究法」结果类型：变体1 — 非显著主窗→替代窗探索
+>   - 新结果类型解锁：事件研究法
+
+> ✅ **2026-07-07 更新（续7）**: 蒸馏 Ahmadi, Khanagha, Berchicci & Jansen (2017, JMS) "Are Managers Motivated to Explore in the Face of a New Technological Change?" 新增 3 个高价值变体（均单篇、待第二篇交叉验证声明已标注）：
+>   - OLS-FE 变体16：**7模型层次回归表导航** — 主效应→双向→三向递进
+>   - 三向交互 变体1：**三向交互条件分解** — 条件两向交互+简单斜率差异t-test+分面图（首次填充该结果类型）
+>   - 多研究 变体4：**跨研究差异嵌入Results讨论** — 差异承认+理论解释+替代解释
+
+> ✅ **2026-07-08 更新**: 蒸馏 Cui, Yang & Vertinsky (SMJ) "Attacking your partners: Strategic alliances and competition between partners in product markets" 新增 5 个高价值变体（均单篇、待第二篇交叉验证声明已标注）：
+>   - OLS-FE 变体17：**倒 U 型主效应 Lind-Mehlum 三步 + 转折点 CI + Cohen's d**
+>   - OLS-FE 变体18：**曲线调节效应（二阶交互项符号 + flatten/steepen 图形解释）**
+>   - OLS-FE 变体19：**多项式主效应 + 多个曲线调节的层次回归表导航**
+>   - OLS-FE 变体20：**多项式/交互模型诊断（mean-centering + VIF + condition number + non-centered replication）**
+>   - OLS-FE 变体21：**Post-hoc 枚举清单 + 附录引用**
+>   - 新增反模式：稳健性检验仅在 4.1 Post-hoc 枚举带过；曲线关系未做 Lind-Mehlum 验证；曲线调节未解释二阶交互项符号
+>
+> **总变体数**: 74 (分布于 12 个结果类型文件)

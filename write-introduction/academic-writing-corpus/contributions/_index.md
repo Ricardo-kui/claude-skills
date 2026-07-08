@@ -16,7 +16,10 @@ source_papers:
   - vadakkepatt2022 (JM, 2022): Dark-side narrative (beneficial actions harm stakeholders) + moderator systematization
   - kim2022 (MS, 2022): "Named forces ceremony — four driving forces with formal labels and triggering conditions"
   - kalaignanam2017 (JM, 2017): Contribution-fronted structure — three contributions detailed before preview/methods
-updated: 2026-06-02
+  - ahmadi2017 (JMS, 2017): Compressed threefold with internal gap-recap — each contribution self-contains 'gap→fill→significance' cycle
+  - qiao2026 (SMJ, 2026): "Fundamental question return — 'answering one fundamental question—why firms persistently differ (Rumelt, 1994)—through demonstrating that...'"
+  - weng_yang (JMS): "Contrast-framed twofold — each contribution opens with 'In contrast with prior studies...', anchored in different literature streams, ends with broader implication"
+updated: 2026-07-07
 created: 2026-05-19
 source: Extracted from MVP30 narrative_analysis files + SKILL.md Makadok table
 ---
@@ -361,6 +364,73 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 
 ---
 
+### 变体 L：压缩版 Threefold 型（ahmadi2017 型）
+
+**模板**:
+> "Our principal contributions are [number]fold. First, drawing on [theory] ([citation]), we develop a [perspective type] on [outcome]. Research on [topic] is scarce ([citations]), and only a few earlier studies in this area have considered factors such as [factor A] ([citation]) or [factor B] ([citation]) without considering [our novel factor]. In line with research that considers [novel factor] to be a driver of [outcome] ([citation]), we propose that [core theoretical claim]. By uncovering the overlooked [mechanism drivers], we address the calls to go beyond [dominant perspective], and attend to [novel perspective] in connection with [domain] ([citation]). Second, although earlier research has looked at how [IV] may affect [outcome] ([citation]), there are still relatively few insights into how [moderator] may shape these effects ([citation]). By using the notion of [moderating mechanism], we argue that [moderation prediction]. Moreover, we postulate that [further contingency]. Third, a growing body of research has considered [moderator_2] as a key factor in understanding [outcome] ([citations]). [Moderator_2] imposes [consequences] regarding [specific outcome dimensions] ([citations]). Drawing on the idea that [moderator_2 theory link], our study explains [specific contribution]."
+
+**来源**: ahmadi2017 (JMS), P1
+
+**原文锚定**:
+> "Our principal contributions are threefold. First, drawing on regulatory focus theory (RFT) (Higgins, 1997), we develop a psychological perspective on managers' exploration orientation. Research on individual-level antecedents of exploration is scarce (Lavie et al., 2010; Laureiro-Mart et al., 2015), and only a few earlier studies in this area have considered factors such as cognitive capabilities (Laureiro-Mart et al., 2015) or access to knowledge flows (Mom et al., 2007, 2015) without considering motivational factors. In line with research that considers regulatory focus to be a driver of managers' preferences and decision-making (e.g., McMullen et al., 2009), we propose that the regulatory focus of managers... has an important bearing on their exploratory orientation. By uncovering the overlooked motivational drivers of exploration orientation, we address the calls to go beyond cognition, and attend to other psychological factors in connection with strategic decision-making (see Hodgkinson and Healey, 2011). Second, although earlier research has looked at how regulatory focus may affect strategic actions (e.g., McMullen et al., 2009), there are still relatively few insights into how organizational conditions may shape these effects (Lanaj et al., 2012). By using the notion of regulatory fit, we argue that the match between motivational drivers of individuals and motivational cues provided in the organizational context has important implications for managers' preferences for exploration... Third, a growing body of research has considered complexity as a key factor in understanding how managers behave and respond in different decision-making situations (Larsen et al., 2013; Sargut and McGrath, 2011). Complexity imposes a high degree of uncertainty and unpredictability regarding the outcomes of managerial decision-making... Drawing on the idea that complexity may activate self-regulatory systems (Bandura and Jourden, 1991), our study explains how dealing with complexity has important implications not only for managerial preferences but also for managers' receptiveness to motivational cues from the organizational context."
+
+**关键特征**:
+- **每个贡献内含完整论证循环**: 理论来源 → 文献缺口重申 → 本文如何填补 → 为什么重要（"we address the calls to..."）——每个贡献 3-5 句即可独立成为迷你段落
+- **"'we address the calls to...' 绑定领域呼吁**: 将贡献与具体权威呼吁（Hodgkinson and Healey, 2011）绑定，贡献合法性由领域权威背书
+- **三贡献对应三层理论结构**: 贡献1 = Mechanism（RFT 主效应）→ 贡献2 = Boundary（regulatory fit 调节）→ 贡献3 = Boundary（complexity 三向交互）——与 Theory/Hypotheses 章节严格对齐
+- **压缩版**: 贡献声明嵌入 Introduction 单段中，无独立 Contribution 段落——每个贡献的论证深度受限于单段预算
+
+**适用**: 适用于 Introduction 极短（1-2段）、有独立 Theory 章节的 JMS/JOM 风格论文。Mechanism + Boundary 组合首选——三段贡献分别对应主效应、第一调节、第二调节
+
+**禁忌**: 不要用于 AMJ/ASQ 投稿——这些期刊期望每个贡献充分展开至少半页。不要用于贡献维度 ≥4 的论文——"threefold" 之后读者会注意第四个是什么。不要预告无法兑现的理论承诺——每个贡献声明必须在 Theory/Hypotheses/Discussion 中找到对应段落
+
+---
+
+### 变体 M：回归根本问题型（qiao2026 型）
+
+**模板**:
+> "This paper advances [theory] and [field] research in [number] ways. First, we extend [theory] by identifying [novel distinction] that operate through fundamentally different mechanisms. [X] are embedded within [domain A] while [Y] reside in [domain B] beyond organizational control ([citations]). These [dual mechanisms] exhibit [differential property], with [X producing more A effect] while [Y producing more B effect]. Second, we show that [imprinters/actors] continue shaping [outcomes] through [dynamic mechanism], contrary to assumptions that [influence] diminishes after [boundary condition] ([citations]). Third, our study contributes to [field] research by answering one fundamental question—[classic field-defining question] ([classic citation])—through demonstrating that [answer to the classic question using your mechanism]. This framework heeds calls for [broader agenda] ([citations])."
+
+**来源**: qiao2026 (SMJ), P5
+
+**原文锚定**:
+> "Third, our study contributes to strategy research by answering one fundamental question—why firms persistently differ (Rumelt et al., 1994)—through demonstrating that lasting organizational heterogeneity reflects both internal capability differences and external identity variations that emerge from historical partner relationships. This framework heeds calls for comprehensive theories better integrating history into strategy research (Argyres et al., 2020; Qiao, 2025)."
+
+**关键特征**:
+- **"'answering one fundamental question—[classic question] ([classic citation])'"**: 不只是在领域内做增量贡献——将贡献锚定到领域的根本问题，格局瞬间提升
+- **"'through demonstrating that...'"**: 根本问题的答案 = 论文的核心发现——不是空喊回归根本问题，而是具体展示本文如何回答
+- **"'This framework heeds calls for...'"**: 末尾绑定领域呼吁——将贡献置于领域前进方向而非已完成的静态贡献
+- **贡献 1=具体理论创新，贡献 2=理论机制扩展，贡献 3=格局提升**: 前两个建立 credibility，第三个建立 significance——三层递进的贡献结构
+
+**适用**: 适用于任何理论贡献的论文——特别是当领域有一个被广泛引用的 classic question 时（如 Rumelt 1994 "why firms differ", March 1991 "exploration vs exploitation", Stinchcombe 1965 "liability of newness", Coase 1937 "why firms exist"）。SMJ/AMJ/ASQ 均可使用——格局提升策略跨期刊通用
+
+**禁忌**: classic question 必须是领域内被广泛认可的根本问题——不能是 obscure 的引用或自创的 question。"through demonstrating that..." 的答案必须与论文的核心发现严格一致——不能 Introduction 说回答了 Rumelt 问题但 Discussion 没有回扣。如果领域没有公认的根本问题，不要强行创造——用标准三贡献结尾即可。三个贡献中只有最后一个做格局提升——前两个必须是可检验的具体理论贡献
+
+---
+
+### 变体 N：对比框定双重贡献型（weng_yang 型）
+
+**模板**:
+> "Our contributions to the literature are twofold. First, we contribute to the research on [Literature A] by highlighting [novel construct] as a [type of contribution]. In contrast with prior studies suggesting [dominant external explanation] ([citations]), we contend that [our mechanism explanation]. In doing so, we seek to demonstrate that [broader implication]. Second, our study also enriches the research on [Literature B]. Existing research suggests that [existing findings in Literature B] ([citations]). Here we postulate that [our novel extension]. [DV] has been a highly contentious social issue ([citation]). By highlighting the pivotal role of [IV], we hope to broaden the discussion scope of this issue."
+
+**来源**: weng_yang (JMS), P4
+
+**原文锚定**:
+> "First, we contribute to the research on within-firm pay inequality by highlighting CEO political ideology as a novel determinant. In contrast with prior studies suggesting external factors such as institutional requirements (DiMaggio and Powell, 1983; Meyer and Rowan, 1977), we contend that CEOs' political ideologies may affect how they perceive the external environment and make important decisions accordingly."
+
+**关键特征**:
+- 每个贡献声明都用 "In contrast with prior studies..." 开启对比——不只是说"我们贡献了什么"，而是说"我们的贡献与现有文献有何不同"。这与变体A（单句维度定位）的"We clarify..." 不同——本变体更强调与现有文献的对比定位
+- 第一贡献（Phenomenon）锚定 Literature A；第二贡献（Boundary）锚定 Literature B——两个贡献锚定在不同的文献流，增加了贡献的广度感知（而非两个贡献都在同一文献流内）
+- 每个贡献段落的结句都上升到 broader implication（"demonstrate that executives' personal values matter" / "broaden the discussion scope"），避免贡献声明沉底在具体发现层面
+- 使用 "twofold" 而非 "threefold" 或 "several"——数字明确，读者预期管理精准
+- 第二贡献结尾回扣 social issue——将学术贡献与社会关切连接，提升 relevance 感知
+
+**适用**: 适用于有两个清晰文献流可以贡献的研究；两个贡献最好分属不同Makadok维度（如Phenomenon+Boundary或Mechanism+Phenomenon）；期刊接受 "twofold/first/second" 结构（JMS, JM, SMJ, AMJ）；当研究同时对话两个文献流且每个流有独立的贡献点时
+
+**禁忌**: "两个贡献必须有实质区分——如果第二贡献只是第一贡献的 'also' 则不应拆分为 twofold；避免每个贡献超过3-4句话（会稀释贡献焦点）；'broaden the discussion scope' 是弱结尾——可替换为更具体的理论后果；第二贡献锚定的 Literature B 必须在 Introduction 前文有铺垫（不能突然出现一个全新的文献流）"
+
+---
+
 ## 组装规则
 
 ### 必须配对
@@ -389,3 +459,35 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 ❌ "We contribute to theory by examining the role of political ties in innovation." → 没有 Makadok 维度——"examining the role" 可以是 Mechanism/Boundary/Phenomenon 任意一个
 
 ✅ "We explain why political connections affect firm innovation by identifying resource allocation efficiency — rather than resource acquisition volume — as the mediating mechanism." → 明确 Mechanism 贡献，"explain why... by identifying [mechanism]"
+
+---
+
+## 风格画像
+
+> 以下风格特征是从使用本模板的多篇顶刊论文中聚合提取的。不是每篇论文都必须遵守，但偏离时应有明确理由。
+> 最后更新: 2026-07-07 | 聚合论文数: 10
+
+### 语气光谱
+- **主语气**: assertive — 证据: "We contribute to the literature by..." (han2020), "Our principal contributions are threefold" (ahmadi2017), "This study makes several contributions" (paruchuri2020)
+- **次语气**: cautious — 证据: "if we find that... our model will provide the foundation for..." (haunschild2015)
+
+### 段落节奏
+- **典型节奏**: contribution declaration → dimension 1 (gap recap + fill + significance) → dimension 2 → dimension 3
+- **ahmadi2017 压缩节奏**: 三贡献在单段中无间歇展开——每个贡献 3-5 句完成 "理论来源→缺口重申→填补→意义" 全循环
+
+### 标志性叙事标记
+- [ahmadi2017]: "Our principal contributions are threefold" + 每个贡献内含 "gap→fill→significance" 完整论证循环 —— 压缩版三贡献，适合 JMS 单段 Introduction
+- [gamache2020]: "We address these limitations by suggesting..." — 将贡献与缺口精确对应
+- [haunschild2015]: 三层递进（现象→知识→后果）"— "provide the foundation for... extends our knowledge of... indicates the consequential nature"
+
+### 刻意回避
+- [ahmadi2017]: avoids independent Contribution paragraph — 贡献声明嵌入 Introduction 单段中，适合 JMS/JOM 压缩风格
+- [ahmadi2017]: avoids standalone significance statements — 每个贡献的 "so what" 通过 "we address the calls to..." 间接表达
+
+### 质量标记
+- **最值得模仿**: 变体 D（列表展开型 malshe2015）的 "First... Second... Third..." 结构 —— 读者可预测、审稿人可逐项检查兑现
+- **已知风险**: 变体 L (ahmadi2017) 的压缩版三贡献在 AMJ/ASQ 投稿中可能被视为贡献论证不充分 —— 每个贡献 3-5 句无法展示充分的文献对话
+
+### 模块比重参考
+- Contribution 通常占 Introduction 的 20-30%；压缩版 (ahmadi2017) 占 ~35%（因其他模块压缩）
+- *来源: malshe2015 (JM), ahmadi2017 (JMS), haunschild2015 (OS)*

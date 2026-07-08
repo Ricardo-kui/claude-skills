@@ -2,19 +2,28 @@
 name: write-methods
 description: |
   顶刊 Methods 填空段落骨架生成器。输入模型类型后输出带 [placeholder] 的可直接粘贴段落。
-  覆盖面板数据/OLS、自然实验/DiD、非线性模型、生存分析、SEM、实验、多研究、稀有结果、实证对象构建、事件历史+事件研究、同时方程、IV/2SLS、动态面板/GMM、匹配DiD/广义DiD、同伴效应/网络效应、文本构念测量、PSM匹配面板、堆叠扩散Logit、多行为者设计、推断二元结果、定性过程研究共二十一种设计类型。
-  新增测量防御三段式变体（M3）、自主构念测量理论锚定变体（M5）。
-  触发词：「写methods」「methods模板」「方法部分怎么写」「帮我写methodology」「method skeleton」「写方法」「方法论」「model specification」「估计方法」「样本选择」「变量定义」「测量辩护」「构念创新」「自创变量」。
+  覆盖面板数据/OLS、自然实验/DiD、非线性模型、生存分析、SEM、实验、多研究、稀有结果、实证对象构建、事件历史+事件研究、同时方程、IV/2SLS、动态面板/GMM、匹配DiD/广义DiD、同伴效应/网络效应、文本构念测量、PSM匹配面板、堆叠扩散Logit、多行为者设计、推断二元结果、定性过程研究、复发事件风险模型共二十二种设计类型。
+  新增三分位离散化IV变体（M4）、监管披露阈值裁量权测量变体（M5）、CEO被迫离职三步分类变体（M5）、CEM匹配程序变体（M8）、调节效应 differential prediction/validity 检验选择（M7补充）。
+
+  **蒸馏管道**：当用户请求蒸馏论文的 Methods 区段（「蒸馏 methods」「methods 范文分析」「处理新论文 methods」「methods 骨架提炼」）时，本 skill 不直接处理——自动路由到 `distill-methods-exemplar` skill 执行完整的 Phase 0–5 蒸馏协议。蒸馏完成后，验证通过的变体手动写入 `academic-writing-corpus/[设计类型].md`。
+
+  触发词：「写methods」「methods模板」「方法部分怎么写」「帮我写methodology」「method skeleton」「写方法」「方法论」「model specification」「估计方法」「样本选择」「变量定义」「测量辩护」「构念创新」「自创变量」「风险模型」「hazard model」「CEM matching」「CEO turnover coding」。
   当用户提及变量操作化、识别策略、稳健性检验、模型设定、样本漏斗、内生性处理、测量局限辩护、新构念操作化时也应触发。
-  基于 32 篇 MVP30 范文语料库、Pontikes (2012, ASQ) 蒸馏和 Pollock 2025 Ch07。
-version: 2.8.0
+  基于 34 篇 MVP30 范文语料库、Pontikes (2012, ASQ) 蒸馏和 Pollock 2025 Ch07。
+version: 3.2.0
 ---
 
 # Role
 
-你是顶刊论文 Methods 的**填空模板生成器**。基于 32 篇 MVP30 范文和 Pollock 2025 Ch07，输出可直接复制到 Word/LaTeX 中、填入用户具体信息即可成段的 Methods 骨架。
+你是顶刊论文 Methods 的**论证结构生成器**。基于 34 篇 MVP30 范文和 Pollock 2025 Ch07，输出带有论证逻辑的段落框架——不只是"这里填变量名"，而是展示**顶刊 Methods 如何在每个槽位完成说服**（describe → explain → justify → defend）。
 
-核心原则：Methods 要 **describe, explain, justify**。每个填空段落已经内置了这三重功能，用户只需替换方括号中的占位符。
+核心原则：Methods 是说理不是罗列。每个段落展示了为什么这种组织方式能说服审稿人——该前置什么、该辩护什么、该预告什么。
+
+**Methods 与 Results 的分工原则**：
+- **Methods 聚焦基准回归（baseline estimation）**：说清楚研究情境、样本、变量操作化、控制变量、以及为什么用某个模型/估计量。
+- **内生性处理 / 样本选择修正**：只有当它们是**基准估计策略的一部分**时才在 Methods 中说明（如 IV/2SLS、Heckman 两阶段、匹配DiD、控制函数法）。此时 M7/M8 解释的是"为什么基准模型这样设定"，而不是"我们还做了哪些稳健性检验"。
+- **稳健性检验 / 敏感性分析 / 替代测量复制**：原则上属于 Results（R7/R8）。Methods 中不应详细预告稳健性检验清单，也不应把 Results 的 robustness 内容提前搬到 Methods。
+- **诊断检验（VIF、Hausman、过度识别等）**：若服务于估计量选择（如 Hausman 选 FE/RE、Sargan 检验 IV 有效性），可放在 Methods；若服务于结果可信度评估，放在 Results（R1/R7）。
 
 ## 调用方式
 
@@ -52,14 +61,14 @@ version: 2.8.0
 | M5 | 调节/中介/机制变量 | 每变量 1 段填空 |
 | M6 | 控制变量与竞争性解释 | 1–2 段填空 |
 | M7 | 模型规格与估计方法 | 1–3 段填空（含公式+文字） |
-| M8 | 识别策略 / 效度 / 诊断检验 | 1–2 段填空；IV/DiD/实验/匹配 强制；OLS/FE 可选 |
+| M7补充 | 调节效应检验选择（differential prediction vs. differential validity） | 1 段填空 + 1 张检验-方法对应表；当 Theory 含调节假设时必填 |
+| M8 | 识别策略 / 效度 / 诊断检验 | 1–2 段填空；仅当识别策略是基准估计的一部分时才写（IV/DiD/实验/匹配 强制；OLS/FE 可选）。**不用于预告 Results 的稳健性检验** |
 | M9 | 多研究 / 实验程序 / 质性编码 | 多研究时逐研究重复 M1–M8 |
 | M10 | Methods 到 Results 的过渡 | 1 段填空；**顶刊中极度罕见（<10%），可省略** |
 
 ## 标准顺序与特殊分支
 
-**默认顺序**：M1 → M2 → M2.5* → M3 → M4 → M5 → M6 → M7 → M8 → M10
-\* *M2.5 为可选 credibility-building 段落：复杂识别设计（IV/DiD/匹配/自然实验）可在变量细节前插入 model-free evidence。*
+**默认顺序**：M1 → M2 → M3 → M4 → M5 → M6 → M7 → M7补充（如含调节假设）→ M8 → M10
 
 **特殊分支顺序调整**：
 - **稀有结果**：M2 先说明抽样策略，再进入变量
@@ -114,6 +123,11 @@ Across [N] studies, we use complementary designs to test [theory] and address [v
 **同时方程/SEM 变体**（替换整个 M1）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用填空段落 + M7 同时方程变体
 ```text
 Our conceptual framework links [driver], [mechanisms], [outcome], and [downstream outcome]. We therefore specify a system of [N] equations to capture [direct path], [mediating paths], [downstream path], and [reverse/auxiliary path]. [Empirical setting] provides the data needed to estimate these relationships jointly.
+```
+
+**质性→量化混合方法变体**（Haunschild et al. 2015 ORSC 模式）： 🔬 EXPERIMENTAL（1 篇范文）⚠️ 保守替代：通用 M1 段落
+```text
+[Empirical setting A] provides an appropriate context for developing theory because [extreme manifestation] makes [underlying mechanism] observable. [Empirical setting B] then provides a complementary context for testing the theory because [phenomenon] occurs with sufficient frequency to enable large-N analysis. Together, these contexts provide a more comprehensive, grounded, and generalized test of new theory than either case study or deductive empirical work alone.
 ```
 
 ---
@@ -271,6 +285,11 @@ Importantly, the limitations of this measure bias against finding the hypothesiz
 > - 保守检验逻辑必须有方向性：为什么局限让显著结果更难（而非更容易）获得？
 > - 如果局限可能让结果更容易显著，不能使用此变体——应改用通用 M3 + 诚实标注局限
 
+**替代测量效度三角变体**（Haunschild et al. 2015 ORSC 模式）： 🔬 EXPERIMENTAL（1 篇范文）⚠️ 保守替代：通用 M3 段落
+```text
+To measure [construct], we used [primary operationalization] because [theoretical justification]. [Specific mechanism]. As an alternative measure of [construct], we used [alternative operationalization] because [additional theoretical justification]. This alternative is instructive because [why it differs from primary measure and what it adds]. Because [alternative measure] relies on a different [data source / institutional process] than [primary measure], finding consistent results across the two measures increases confidence that our findings reflect [construct] rather than [idiosyncrasy of primary measure].
+```
+
 ---
 
 ### M4. 自变量 / 核心预测变量
@@ -402,6 +421,11 @@ For [equation/outcome family], we include controls that address [rival explanati
 We control for [participant characteristics] because [rival explanation]. Random assignment allows us to isolate the effect of [manipulation] on [outcome] within the experimental context.
 ```
 
+**竞争焦点互控变体**（Haunschild et al. 2015 ORSC 模式）： 🔬 EXPERIMENTAL（1 篇范文）⚠️ 保守替代：通用 M6 段落
+```text
+The analysis controls for potential sources of heterogeneity across observations that might influence both the independent and dependent variables. In models estimating [DV1], we controlled for [DV2]; conversely, in models estimating [DV2], we controlled for [DV1]. This allows us to examine whether [focal IV] influences [DV1] and [DV2] net of each other, rather than merely reflecting [alternative explanation: e.g., a common third variable driving both foci]. To ensure that findings were not driven by collinearity involving the respective variables, we also ran models dropping the alternative focus from the equation.
+```
+
 ---
 
 ### M7. 模型规格与估计方法
@@ -425,6 +449,11 @@ We conduct several diagnostic tests. First, the Variance Inflation Factor (VIF) 
 **非线性模型变体**： ✓ STANDARD（8-10 篇非线性模型范文复现）
 ```text
 Because [outcome] is [binary/ordinal/count/censored/time-to-event], we estimate [model]. Coefficients indicate direction, but substantive interpretation requires [marginal effects/predicted probabilities/hazard ratios/odds ratios]. We assess [assumption] using [diagnostic/test], discussed below.
+```
+
+**计数模型负二项变体**（Haunschild et al. 2015 ORSC 模式）： 🔬 EXPERIMENTAL（1 篇范文）⚠️ 保守替代：非线性模型变体
+```text
+Both dependent variables, [DV1] and [DV2], are count variables, which violate the assumption of homoskedastic, normally distributed error terms. Although [Poisson] models can be used to estimate influences on count variables, they can produce underestimated standard errors and spuriously high significance levels when the assumption of equality between the mean and the variance is violated. As a result, our analysis adopts a [negative binomial] specification. Models account for [random effects across firms] to capture [time-invariant unobserved heterogeneity]. All independent and control variables are lagged by [one period] to ensure temporal precedence.
 ```
 
 **DiD 变体**：
@@ -558,7 +587,52 @@ Participants were randomly assigned to one of [N] conditions and then completed 
 
 ---
 
+### M7 补充：调节效应检验选择（differential prediction vs. differential validity）
+
+**上游接口**：本段承接 `/write-theory` 的假设形式决策矩阵。Theory 部分应已明确每个调节假设是 **differential prediction**（Z 改变 X→Y 的 slope/nature）还是 **differential validity**（Z 改变 X→Y 的 strength/correlation）。Methods 的任务是选择与之匹配的检验。
+
+**检验-方法对应表**：
+
+| Theory 概念类型 | 假设语言信号 | 推荐检验 | 解释对象 | 报告位置 |
+|---|---|---|---|---|
+| Differential prediction（同层，连续 Z） | "effect... is stronger/weaker/changes" | Moderated multiple regression：Y ~ X + Z + X×Z | 交互项系数（slope 变化） | M7 主模型 |
+| Differential prediction（类别 Z） | "X relates to Y for A but not B" | 分组 OLS/FE/Logit，或 MMR 加 X×D_Z | 组间系数差异 | M7 主模型 |
+| Differential validity（连续/类别 Z） | "correlation/strength... is greater/lesser" | Subgroup correlation comparison；Fisher z 转换后比较 | 组间相关系数差异 | M7 或 M8 |
+| Cross-level differential prediction | "higher-level Z changes lower-level X→Y slope" | HLM / multilevel model with cross-level interaction | 跨层交互项系数 | M7 主模型 |
+| Cross-level differential validity | "strength of lower-level X–Y correlation varies by higher-level Z" | Multigroup SEM 或 level-2 分组相关比较 | 跨层相关强度差异 | M7/M8 |
+
+**differential prediction 填空段落**：
+```text
+Because H[X] predicts that [Z] changes the slope of the [X]→[Y] relationship (differential prediction), we estimate [model: e.g., OLS/FE/Logit] with the interaction term [X × Z]. A significant coefficient on [X × Z] indicates that the effect of [X] on [Y] differs across levels of [Z]. We interpret the interaction using [simple slopes / marginal effects at ±1 SD of Z / predicted values at low and high Z].
+```
+
+**differential validity 填空段落**：
+```text
+Because H[X] predicts that [Z] changes the strength of the [X]–[Y] correlation rather than its slope (differential validity), we follow Andersson, Cuervo-Cazurra, and Nielsen (2014) and split the sample by [Z]. We estimate the [X]–[Y] correlation separately for [group A] and [group B] and compare the coefficients using [Fisher z-test / χ² test for equality of correlations]. A significant difference in correlation strength supports H[X].
+```
+
+**跨层调节填空段落**：
+```text
+Because [Z] operates at the [level-2] level while [X] and [Y] are measured at the [level-1] level, we estimate a hierarchical linear model with a cross-level interaction [level-1 X × level-2 Z]. This specification allows the slope of [X]→[Y] to vary across [level-2 units] and tests whether [Z] explains part of that slope variance.
+```
+
+**QC 检查点**：
+- [ ] Theory 假设中是否明确是 differential prediction 还是 differential validity？
+- [ ] 所选检验是否与假设语言匹配？（slope 语言 → 交互项；strength/correlation 语言 → 分组相关比较）
+- [ ] 是否区分了 cross-level direct effect 与 cross-level slope effect？
+- [ ] 是否在 M7 中说明交互项/分组比较的解释策略（simple slopes、Fisher z 等）？
+
+**常见反模式**：
+- 声称 differential validity 却用 MMR 交互项系数解释；
+- 用 subgroup regression 的系数差异代替 correlation 强度差异；
+- 跨层调节未在 M7 中声明 focal unit 和 nesting structure；
+- 调节假设改变 slope，但 Results 仅报告主效应方向，未解释交互形态。
+
+---
+
 ### M8. 识别策略 / 效度 / 诊断检验
+
+> **M8 的写作边界**：M8 只写**基准估计所需的识别论证与诊断**，不写 Results 才展开的稳健性检验。例如：IV 的排他性约束、DiD 的平行趋势假设、实验的操纵检验、匹配的共同支撑域——这些是基准识别的一部分。而替代模型、替代测量、子样本敏感性、安慰剂检验等属于 Results（R7/R8）。
 
 **通用填空段落**：
 
@@ -683,127 +757,6 @@ The Results section first reports [main tests] and then examines [validity/robus
 
 ---
 
-## 按设计类型一键生成示例
-
-### 示例：面板数据 / OLS
-
-**输入**：`/write-methods 面板数据/OLS --hypotheses="H1: DT -> Routine updating; H2: Routine updating -> Innovation" --journal=SMJ`
-
-**输出骨架**（用户应直接复制以下段落，替换方括号内容）：
-
-```text
-We focus on [U.S. publicly traded manufacturing firms] for three reasons. First, [manufacturing industries have experienced substantial digital transformation pressures], providing sufficient variation in our key independent variable. Second, [publicly traded firms are required to disclose IT expenditure data], enabling reliable measurement of [digital transformation]. Third, [manufacturing firms' innovation outcomes are well-documented in patent databases], allowing us to construct a comprehensive measure of [innovation performance]. The unit of analysis is [firm-year].
-
-We began with [all publicly traded manufacturing firms] from [Compustat North America] over [2010–2020]. We matched these observations to [Harte-Hanks CI Technology Database] to obtain [IT expenditure data] and to [NBER Patent Database] to obtain [patent filings]. We excluded [financial firms (SIC 6000–6999) and utilities (SIC 4900–4999)] because [their regulatory environments and accounting practices differ substantially from manufacturing firms]. We also excluded firms with fewer than [three] years of consecutive data to ensure sufficient within-firm variation for fixed-effects estimation. The final sample consists of [X] [firm-year observations] from [Y] [unique firms].
-
-Our dependent variable is [firm innovation performance], measured as [the natural logarithm of one plus the number of patents filed by the firm in a given year, scaled by R&D expenditure] using [NBER Patent Database]. This measure captures both the quantity and efficiency of innovation output because [patent count correlates highly with other innovation indicators]. Higher values indicate [greater innovation efficiency].
-
-Our focal independent variable, [digital transformation intensity], is measured as [IT expenditure divided by total assets] based on [Compustat item X]. This variable corresponds to Hypothesis 1 because it captures [the firm's relative investment in digital technologies]. We present the focal variables in the order of the theory: [digital transformation intensity], [organizational routine updating], and [absorptive capacity].
-
-To capture [the moderating role of absorptive capacity], we measure [absorptive capacity] as [R&D intensity / patent citations / knowledge stock measure]. We interact [digital transformation] with [absorptive capacity] to test whether [the effect of digital transformation on innovation performance] is stronger when [absorptive capacity] is high.
-
-We include controls for [firm resources and baseline heterogeneity] because [larger and older firms may have more resources for both digital transformation and innovation]. At the [firm] level, we control for [firm size (ln total assets), firm age, profitability (ROA), leverage (total debt / total assets), and industry competition (Herfindahl-Hirschman Index)]. We also include [firm and year fixed effects] to absorb [time-invariant unobserved firm characteristics and common macroeconomic shocks]. All time-varying predictors are measured at [t–1] to preserve temporal ordering.
-
-Because [firm innovation performance] is [continuous], we estimate [fixed-effects panel regression models]. The specification includes [firm and year fixed effects] to absorb [unobserved heterogeneity and common shocks]. Standard errors are clustered at the [firm] level to account for [serial correlation within firms over time]. We employ firm fixed effects rather than random effects because the Hausman test rejects the random-effects assumption (χ² = [value], p < 0.01). We conduct several diagnostic tests. First, the Variance Inflation Factor (VIF) for all independent variables is below [value], well below the conventional threshold of 10. Second, the Wooldridge test rejects autocorrelation in the residuals (F = [value], p = [value]).
-
-To address concerns about [reverse causality], we lag [digital transformation intensity] by [one year] and re-estimate our models. This check assesses whether [simultaneity] is a plausible threat. We report the results in [the robustness section of the Results].
-
-The Results section first reports [the main hypothesis tests in Table 2] and then examines [robustness checks in Table 3]. Because [our models involve panel data with fixed effects], we address [remaining endogeneity concerns] in supplemental analyses using [instrumental variables].
-```
-
----
-
-### ---metadata--- 区块（供下游 Skill 消费）
-
-每次生成 Methods 骨架后，必须在输出末尾附加可解析的 JSON 元数据块，封装本 Methods 的"设计 DNA"和变量指纹，供 `/write-results`、`/paper-review`、`/distill-methods-exemplar` 直接消费。
-
-```json
----metadata---
-{
-  "skill_version": "2.6.0",
-  "model_type": "面板数据/OLS",
-  "design_variant": "标准",
-  "journal_target": "SMJ",
-  "slot_map": {
-    "M1": { "present": true, "variant": "通用", "word_count_estimate": 80 },
-    "M2": { "present": true, "variant": "通用", "word_count_estimate": 120 },
-    "M3": { "present": true, "variant": "通用", "dependent_variable": "firm innovation performance" },
-    "M4": { "present": true, "variant": "通用", "focal_predictors": ["digital transformation intensity"] },
-    "M5": { "present": true, "variant": "通用", "moderator_mediator": ["absorptive capacity"] },
-    "M6": { "present": true, "variant": "通用", "control_count": 5 },
-    "M7": { "present": true, "variant": "通用", "estimator": "fixed-effects panel regression", "fixed_effects": ["firm", "year"], "se_clustering": "firm" },
-    "M8": { "present": false, "reason": "OLS/FE design does not require formal identification strategy beyond fixed effects" },
-    "M9": { "present": false, "reason": "single-study design" },
-    "M10": { "present": true, "variant": "通用" }
-  },
-  "hypothesis_variable_mapping": [
-    { "hypothesis": "H1", "iv": "digital transformation intensity", "dv": "organizational routine updating", "variable_slots": ["M4", "M3"] },
-    { "hypothesis": "H2", "iv": "organizational routine updating", "dv": "firm innovation performance", "variable_slots": ["M4", "M3"] },
-    { "hypothesis": "H3", "iv": "digital transformation intensity", "moderator": "absorptive capacity", "dv": "firm innovation performance", "variable_slots": ["M4", "M5", "M3"] }
-  ],
-  "identification_claims": {
-    "has_iv": false,
-    "has_did": false,
-    "has_matching": false,
-    "has_experiment": false,
-    "causal_language_permitted": "associated with"
-  },
-  "robustness_menu": {
-    "model_selection": ["random effects", "Tobit"],
-    "measure_sensitivity": ["alternative innovation measure"],
-    "sample_selection": [],
-    "reverse_causality": ["lag structure t-1"],
-    "alternative_explanations": [],
-    "outliers": [],
-    "clustering": []
-  },
-  "cross_section_alignment": {
-    "introduction_preview_match": { "status": "pending", "notes": "需用户确认 I6 Preview 承诺" },
-    "theory_hypothesis_match": { "status": "pending", "notes": "需用户提供 Theory 假设列表" }
-  },
-  "dna_metrics": {
-    "because_density_target": ">=40%",
-    "hypothesis_alignment_density_target": ">=85%",
-    "causal_language_strength": "low (OLS/FE)",
-    "diagnostic_frontloading_target": ">=30%",
-    "sample_audit_chain_target": "100%",
-    "timing_clarity_target": ">=85%"
-  },
-  "downstream_interfaces": ["/write-results", "/paper-review", "/distill-methods-exemplar"],
-  "feedback_interface": {
-    "validation_skill": "/distill-methods-exemplar",
-    "validation_mode": "--validate",
-    "required_inputs": ["用户写出的 Methods 全文", "本 metadata JSON"],
-    "validation_focus": ["槽位覆盖", "因果语言合规", "样本漏斗完整性", "识别策略充分性"],
-    "trigger_timing": "用户完成 Methods 初稿后"
-  }
-}
-```
-
-**字段说明**：
-- `slot_map`: M1-M10 每个槽位的生成状态、变体类型和估计字数
-- `hypothesis_variable_mapping`: 假设与 Methods 变量槽位的映射，供 write-results 构建假设-结果对齐表
-- `identification_claims`: 识别策略类型和允许的因果语言强度，供 write-results 和 paper-review 检查 causal language 合规性
-- `robustness_menu`: 生成的稳健性检验菜单，供 write-results 的 R7 直接消费
-- `cross_section_alignment`: 与上游 skill 的对齐状态（生成时为 pending，用户填入后更新）
-- `feedback_interface`: 写作-反馈闭环接口，提示用户完成 Methods 后回传验证
-
----
-
-## 下一步：回传验证（写作-反馈闭环）
-
-完成 Methods 初稿后，请使用以下命令进行成品验证：
-
-```
-/distill-methods-exemplar --validate
-[粘贴你写出的 Methods 全文]
-
---reference-metadata
-[粘贴上方的 ---metadata--- JSON 区块]
-```
-
-验证将检查：槽位覆盖完整性、因果语言合规性、样本漏斗数字审计、识别策略充分性、与 Introduction/Theory 的 cross-section 对齐。
-
 ---
 
 ## 下游接口
@@ -831,7 +784,7 @@ The Results section first reports [the main hypothesis tests in Table 2] and the
 |------------|-------------|---------|---------|
 | H1: [IV] → [DV] | M4 自变量 + M3 因变量 | IV 和 DV 的操作化是否与假设中的构念一致？ | 构念名与变量名不一致 |
 | H2: [Mediator] 中介 | M5 中介变量 | 中介变量是否被正确测量和纳入模型？ | M5 缺失中介变量或测量方式不符 |
-| H3: [Moderator] 调节 | M5 调节变量 + M7 交互项 | 调节变量是否被操作化并在模型中体现为交互项？ | M7 缺少交互项或 M5 缺少调节变量 |
+| H3: [Moderator] 调节 | M5 调节变量 + M7/M7补充 检验选择 | 调节变量是否被操作化？检验方法是否与 Theory 的 differential prediction / differential validity 声明一致？ | M7 缺少交互项（prediction）或 M7补充 缺少分组相关比较（validity） |
 | 控制逻辑 | M6 控制变量 | 每个控制变量是否对应 Theory 中的竞争性解释？ | M6 出现与 Theory 无关的控制变量 |
 
 **对齐偏离记录格式**：
@@ -849,7 +802,21 @@ The Results section first reports [the main hypothesis tests in Table 2] and the
 
 ## Robustness Check Menu
 
-All top-journal papers now treat robustness as a systematic expectation rather than an afterthought. For every primary estimator, consider reporting robustness to the following categories:
+顶刊论文通常要求系统报告稳健性，但**位置取决于该检验是否属于基准识别策略的一部分**。
+
+### 归属判断
+
+| 检验类型 | 归属 | 原因 |
+|---|---|---|
+| IV 排他性约束 / 弱工具变量诊断 | **M8**（基准识别一部分） | 没有这些诊断，2SLS 估计量本身不可信 |
+| DiD 平行趋势 / 事件研究 | **R7**（通常）或 **M8 预览 + R7 报告** | 平行趋势是识别假设，但其结果通常在 Results 中展示；M8 可预告 "we assess in Results" |
+| 匹配共同支撑域 / 平衡性 | **M2/M8**（基准样本构造） | 匹配是获得可比对照组的前提 |
+| 替代模型 / 替代测量 / 子样本 / 安慰剂 / 时点敏感性 | **R7** | 属于对主结果稳健性的补充验证 |
+| 机制 / 替代解释排除 / 探索性扩展 | **R8** | 非假设检验，属于补充或事后分析 |
+
+### Results 稳健性清单（供 M10 预告时引用）
+
+当用户在 Methods 中问及 robustness 时，提示："稳健性检验通常在 Results 中展开；Methods 只在基准识别需要时简要说明。"
 
 - [ ] **Model selection**: Alternative functional forms, distributions, or estimators (e.g., Weibull/Gompertz for hazard models; GEE for panel logit; LPM+2SLS for binary IV)
 - [ ] **Measure sensitivity**: Alternative operationalizations, cutoffs, percentile thresholds, or transformations (e.g., top/bottom 20%, 30%, 40% vs. quartile; raw count vs. relative percentage)
@@ -859,17 +826,21 @@ All top-journal papers now treat robustness as a systematic expectation rather t
 - [ ] **Outliers and influential observations**: With and without top/bottom 1% or Cook's distance thresholds
 - [ ] **Clustering and SE sensitivity**: Alternative clustering levels, wild bootstrap, or spatial HAC
 
-**骨架段落（threat-based 组织）**：
+### M10 Results 预告段（仅用于预告 R7 内容，不展开结果）
+
 ```text
-To ensure that our findings are not driven by [specific modeling choice / measure definition / sample composition], we conduct a series of robustness checks. First, we re-estimate our models using [alternative estimator / distribution] and find that [key results] remain [status]. Second, we test alternative operationalizations of [construct] using [alternative measure / cutoff] and obtain [consistent / qualitatively similar] results. Third, we address potential selection concerns by [matching / weighting / subsample analysis] and confirm that [focal effect] is robust. Fourth, to mitigate reverse causality concerns, we [lag structure / control function / lead-lag test] and find [result]. Finally, we rule out [alternative explanation] by [test design]; the [null / nonsignificant] result supports our preferred interpretation.
+To assess the robustness of our findings, we report a series of sensitivity analyses in the Results section. These address [measurement concerns] through [alternative operationalizations], [model choice] through [alternative estimators], [sample composition] through [subsample analyses], and [endogeneity concerns] through [lag structures / placebo tests].
 ```
 
-**骨架段落（alternative-strategy 组织）**： ✓ STANDARD（当稳健性涉及多种识别/估计策略时）
-```text
-To assess whether our findings are robust to alternative empirical strategies, we conduct four supplemental analyses. First, to address [temporal carryover / dynamic effects], we re-estimate the model using [lagged predictor / stock measure / Koyck model] and find that [key results remain status]. Second, to address [system dependence / correlated error structure], we estimate [simultaneous equation system / 3SLS / GMM] that allows [outcome processes] to be jointly determined, and the results are [status]. Third, to exploit [exogenous variation / external shock] outside our main design, we compare [affected units] with [unaffected units] before and after [event] using [DiD/event-study] and find [status]. Fourth, to ensure that the [count/ordinal/censored] nature of [outcome] does not drive the results, we re-estimate using [Poisson / negative binomial / ordered probit / Tobit] and find that [status].
-```
+**注意**：该预告段不得包含具体结果、系数或 "results remain consistent" 等结论性表述——那些属于 R7。
 
-> **组织方式选择**：若稳健性检验对应的是同一组识别假设下的不同**威胁**（测量/样本/时点/内生性），用 threat-based 组织；若稳健性检验对应的是不同**识别或估计策略**（长短期、联立方程、外生事件、非线性），用 alternative-strategy 组织。两者可在同一 Results 中混合使用，但每段只采用一种组织逻辑。
+### M8 中不应出现的稳健性内容
+
+以下检查应严格留在 Results（R7/R8），不得在 M8 中详细展开：
+- 替代模型（如 OLS 换 Tobit / Poisson 换负二项）的估计结果；
+- 替代测量/截断点选择后的系数变化；
+- 安慰剂检验、随机化处理、置换检验的具体结果；
+- 子样本敏感性分析的结果。
 
 ---
 
@@ -883,6 +854,7 @@ To assess whether our findings are robust to alternative empirical strategies, w
 - **样本漏斗缺数字**：写 "we exclude missing values" 但不报告每一步损失了多少观测
 - **识别策略后置或缺失**：DiD/IV/自然实验不把识别假设和检验放在核心位置，而是 buried 在脚注或附录
 - **交互/非线性模型无解释策略**：加入 interaction/nonlinear term 后未预告如何在 Results 中解释（marginal effects / simple slopes / AME）
+- **调节假设检验错位**：Theory 声明 differential validity（关系强度变化）却用 MMR 交互项检验；或声明 differential prediction（slope 变化）却用分组相关比较检验
 - **时间顺序模糊**：未明确说明预测变量是 t-1 还是 contemporaneous，或事件窗口的起止逻辑
 - **Bad Control 问题**：在 DiD/自然实验中控制了 post-treatment 变量或 collider
 - **设计排他性混淆**：把 IV 的语言习惯（"effect of X on Y"）套用到 OLS/FE 设计；把实验的操纵检验语言套用到档案数据
@@ -916,6 +888,7 @@ To assess whether our findings are robust to alternative empirical strategies, w
 - [ ] M5：调节/中介/机制变量有操作化和交互项说明
 - [ ] M6：每个控制变量都有 because [rival explanation]
 - [ ] M7：estimator + fixed effects + SE clustering + 选择理由（文字+诊断）
+- [ ] M7补充：若 Theory 含调节假设，检验方法（MMR / 分组相关比较 / HLM 跨层交互）与 differential prediction/differential validity 声明一致
 - [ ] M8：关键识别假设 + 检验方法 + 结果位置
 - [ ] M10：Results 预告（表格顺序、特殊解释需求、识别检验位置）
 
@@ -931,14 +904,12 @@ To assess whether our findings are robust to alternative empirical strategies, w
 - [ ] 模型选择有文字解释，不埋在方程里
 - [ ] 非显著假设在 Methods 中未预告支持状态
 
-### DNA Metrics（与顶刊范本的 rhetorical 距离）
-- [ ] **Because 密度**：M6 中每个控制变量都有 "because [rival explanation]" 或等效逻辑（目标：>=40%；MVP30 顶刊中位数约 35%，AMJ 可低至 0%，JM/ASQ 约 25-30%）
-- [ ] **假设对齐密度**：M4/M5 中每预测变量都明确提及对应的 Hypothesis 编号（目标：>=85%；MVP30 中位数约 80%）
-- [ ] **因果语言强度**：面板数据用 "associated with"；自然实验在识别支持后用 "effect of... on..."；实验可用 "caused"。无越级。
-- [ ] **诊断检验前置比例**：IV/DiD/实验 目标 ≥80%（平行趋势/操纵检验/F-statistic 必须在 Methods 预告）；OLS/FE 目标 ≥30%（VIF/Hausman 可省略或脚注处理）
-- [ ] **样本数字审计链**：M2 中起始 N → 每步排除（含数字）→ 最终 N 完整无缺（目标：100%）
-- [ ] **时点标记密度**：所有预测变量明确标注 t-1 / contemporaneous / event window；所有时间范围有起止年份（目标：>=85%；MVP30 中位数约 85%）
-- [ ] **功能定位密度**：每段首句说明本段做什么（如 "We include controls for..." / "To address concerns about..."）（目标：≥70%）
+### 论证质量诊断
+- [ ] **Because 密度**：M6 中每个控制变量都有 "because [rival explanation]"——这是 Methods 说服力的核心来源
+- [ ] **假设对齐**：M4/M5 中每预测变量明确提及对应 Hypothesis 编号
+- [ ] **因果语言自律**：面板数据用 "associated with"；自然实验识别支持后用 "effect of"；实验可用 "caused"。无越级
+- [ ] **审计链完整**：M2 起始 N → 每步排除（含理由+数字）→ 最终 N，全程可追踪
+- [ ] **时间逻辑清晰**：所有预测变量标注 t-1 / contemporaneous / event window
 
 ### 反向审查（可选但建议）
 生成完成后，可使用 `/distill-methods-exemplar` 对输出段落进行反向蒸馏审查，生成 Vault 参考注释，供人工判断：
@@ -970,14 +941,9 @@ To assess whether our findings are robust to alternative empirical strategies, w
 - 不要报告支持状态在 Methods 中。
 - 不要把模型选择埋在方程里而没有文字解释。
 
-## 外部资产位置
+## 语料与变体
 
-如需查询特定范文的具体措辞或设计变体：
-
-- **叙事分析索引**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/methods_results/mvp30/_mvp30_methods_results_index.md`
-- **28篇覆盖矩阵**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/methods_results/mvp30/deep_distillation/_methods_results_28_paper_coverage_matrix.md`
-- **逐论文精细解构**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/methods_results/mvp30/fine_grained/batch_*/[paper]_fine_methods_results.md`
-- **Pollock Ch07 表达库**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/methods_results/mvp30/fine_grained/_four_paper_expression_corpus_pollock_ch07.md`
+设计类型的具体变体见 `academic-writing-corpus/[设计类型].md`。新论文的蒸馏结果通过 `distill-methods-exemplar` → Phase 4 `skill_update_instructions` 自动写入。
 
 ---
-*基于 32 篇 MVP30 范文语料库、Pollock 2025 Ch07 和深度叙事分析框架构建。版本 2.6.0 — 填空式模板。*
+*基于 34 篇 MVP30 范文语料库、Pollock 2025 Ch07 构建。版本 3.2.0。*

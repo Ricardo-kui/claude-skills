@@ -13,6 +13,9 @@ source_papers:
   - shipilov2020 (SMJ, 2020): "media pressure literature consensus → direct vs indirect"
   - singh2023 (JMR, 2023): "product recall literature consensus → missing political/regulatory dimension"
   - lashley_pollock2020 (ASQ, 2020): "stigma literature consensus → missing audience heterogeneity"
+  - ahmadi2017 (JMS, 2017): "truism-establishment narrowing — managers' role in exploration known, psychological drivers unknown"
+  - qiao2026 (SMJ, 2026): "cross-four-field consensus + theory definition — imprinting theory's breadth across entrepreneurship, strategy, OT, IB"
+updated: 2026-07-07
 created: 2026-05-18
 source: Manually curated from MVP30 narrative_analysis files
 ---
@@ -92,6 +95,50 @@ source: Manually curated from MVP30 narrative_analysis files
 
 ---
 
+### 变体 D：定义性共识收窄型（ahmadi2017 型）
+
+**模板**:
+> "It is almost a truism that [organizations/actors] need to [desirable behavior], [brief rationale from literature]. Although [competing demands] are [both] important for [outcome], they are not always equally important ([citations]). For instance, scholars have suggested that, in [context], the need for [specific adaptation] necessitates an increased focus on [one pole] ([citations]). However, organizations may vary in their ability to [address challenge] ([citations]), and studies have identified various reasons for this. Importantly, this body of research has argued that a key role is played by [specific actors] ([citations])."
+
+**来源**: ahmadi2017 (JMS), P1
+
+**原文锚定**:
+> "It is almost a truism that organizations need to move beyond exploitative activities by attempting to achieve breakthroughs by means of exploratory behaviour. Although both exploration and exploitation are important for an organization's survival, they are not always equally important (Puranam et al., 2006). For instance, scholars have suggested that, in a rapidly changing environment, the need for internal variety and effective adaptation necessitates an increased focus on exploration (Gupta et al., 2006; McGrath, 2001). However, organizations may vary in their ability to cope with the inherent challenges of pursuing exploration alongside exploitation (Levinthal and March, 1993; March, 1991; Tushman and O'Reilly, 1996), and studies have identified various reasons for this. Importantly, this body of research has argued that a key role is played by managers (Gibson and Birkinshaw, 2004; Jansen et al., 2008; O'Reilly and Tushman, 2011)."
+
+**关键特征**:
+- **"'It is almost a truism that' 开场**：用公认常识建立 reader-writer alliance，避免争议性开场——读者在同意"这是常识"的同时被自然引入论文领域
+- **三层漏斗收窄**：broad phenomenon（exploration/exploitation）→ actor level（managers）→ attribute level（psychological drivers）——每层都有密集引用支撑，展示对话合法性
+- **不依赖数据、案例或引语**：纯粹依靠文献建立的学术共识推进叙事，适合无具体 empirical shock 或 case 的研究
+- **Hook 功能与 Literature Turn 融合**：无独立 Hook 段落——共识建立的同时即铺垫 literature conversation，适合 Introduction 极短（≤2段）的 JMS/JOM 风格
+
+**适用**: 适用于与已有文献高度共识、Introduction 篇幅受限（≤500词）的场景；特别适合有独立 Theory 章节的 JMS/JOM 风格论文。Incompleteness × Mechanism 组合首选（先建立"X 重要"共识，再指出"驱动 X 的机制未知"）
+
+**禁忌**: 不要在没有充分文献基础的新兴领域使用——"truism" 需要已有大量研究支撑。Hook 能量低（冷启动），不适合 Incommensurability 或需要 paradigm challenge 的研究。投稿 AMJ/ASQ 时避免使用——AMJ/ASQ 期望 Hook 有具体 actor 或反直觉现象
+
+---
+
+### 变体 E：跨四领域共识+理论定义型（qiao2026 型）
+
+**模板**:
+> "[Theory name] has emerged as an important lens for understanding the enduring impact of [historical context] on contemporary organizations ([citations]), a phenomenon of growing interest in [field 1] ([citations]), [field 2] ([citations]), [field 3] ([citations]), and [field 4] ([citations]). It contends that during a sensitive period, typically [founding/emergence], organizations need to [core theoretical imperative] by [specific actions] to align with [environmental requirements] for [survival/legitimacy] ([foundational citation]). This process yields [theoretical outcome] that persist and shape [organizational outcomes] enduringly ([citations])."
+
+**来源**: qiao2026 (SMJ), P1
+
+**原文锚定**:
+> "Imprinting theory has emerged as an important lens for understanding the enduring impact of historical context on contemporary organizations (Kipping & Üsdiken, 2014; Marquis & Qiao, 2025), a phenomenon of growing interest in entrepreneurship (Suddaby et al., 2023), strategy (Argyres et al., 2020; Cattani, 2005), organization theory (Godfrey et al., 2016), and international business (Qiao & Xia, 2026; Zhang, 2022). It contends that during a sensitive period, typically founding, organizations need to secure legitimacy and resources by establishing structures, routines, and other components to align with environmental requirements and/or stakeholder preferences for survival (Stinchcombe, 1965). This process yields imprints that persist and shape organizational outcomes enduringly (Marquis & Tilcsik, 2013; Simsek et al., 2015)."
+
+**关键特征**:
+- **跨四领域引用建立理论广度**: 每个子领域 1-2 引用（entrepreneurship, strategy, OT, IB）——不堆砌引用而是精确制导，每个领域一篇标志性论文
+- **"'It contends that...' 后接理论核心定义**: 不是综述已有发现，而是直接陈述理论的 core claim——审稿人通过此句检验作者对理论的理解
+- **Hook 末尾即 Literature Turn 完成**: "'This process yields imprints that persist...'" 收束共识后 P2 直接 "'Despite the significant advances...'"——无独立 Literature Turn 段
+- **SMJ 签名风格**: 不依赖案例/数据，用理论的跨领域影响力本身作为 Hook 能量源——适合理论驱动型论文
+
+**适用**: 当论文的理论视角已在多个管理学子领域获得认可时；SMJ/AMJ 风格首选——展示理论的影响力广度而非具体 empirical puzzle。Incompleteness × Mechanism 组合首选（先建理论共识再指遗漏机制）
+
+**禁忌**: 不要在没有跨领域证据时强行使用——每个领域至少 1 个引用且来自不同期刊。"four fields" 是修辞选择——如果只有 2 个领域，不要强行凑 4 个。理论定义必须精确——"It contends that..." 后的句子是审稿人检查理论理解的第一个位置。Hook 无人脸（无具体公司/案例）——AMJ/ASQ 投稿建议补充 1 个具体案例
+
+---
+
 ## 组装规则
 
 ### 必须配对
@@ -117,3 +164,36 @@ source: Manually curated from MVP30 narrative_analysis files
 | JOM | ⭐⭐⭐ 高 | 运营管理/新兴市场研究；可搭配实证情境 |
 | JM/JMR | ⭐⭐ 中 | 营销领域；需搭配具体的市场后果 stakes |
 | ASQ | ⭐⭐ 中 | ASQ 偏好更强烈的 Incommensurability，盲点 Hook 可能偏温和 |
+
+---
+
+## 风格画像
+
+> 以下风格特征是从使用本模板的多篇顶刊论文中聚合提取的。不是每篇论文都必须遵守，但偏离时应有明确理由。
+> 最后更新: 2026-07-07 | 聚合论文数: 6
+
+### 语气光谱
+- **主语气**: cautious — 证据: "While important... is general and considers... in a very broad sense" (gamache2020), "It is almost a truism that..." (ahmadi2017)
+- **次语气**: assertive — 证据: "This omission is critical, as..." (gamache2020)
+
+### 段落节奏
+- **典型节奏**: consensus establishment → narrowing to blindspot → gap declaration → importance justification (why this blindspot matters)
+- **ahmadi2017 特殊节奏**: truism-establishment → three-layer funnel (broad phenomenon → actor → attribute) → gap embedded in last funnel layer
+
+### 标志性叙事标记
+- [gamache2020]: "While important... is general and considers... in a very broad sense" — 经典"尊重但批评"句式
+- [ahmadi2017]: "It is almost a truism that..." — 定义性共识开场，三层漏斗（phenomenon→actor→attribute），不依赖案例/数据的纯文献驱动 Hook
+- [lashley_pollock2020]: "A growing body of research highlights that... However, scholars have devoted little attention to..." — 先建文献基础再指盲点
+
+### 刻意回避
+- [gamache2020]: avoids "few studies have examined" — 用 "research has yet to seriously consider" 替代更弱的缺口措辞
+- [ahmadi2017]: avoids specific actors/cases — 纯文献驱动，无具体公司名、人名或数据，适合无 empirical shock 的研究
+- [ahmadi2017]: avoids independent Hook paragraph — Hook 与 Literature Turn 融合在单段中，适合 JMS/JOM 压缩风格
+
+### 质量标记
+- **最值得模仿**: "While important... is general" (gamache2020) 句式——既承认文献贡献又精确指出盲点，比 "few studies" 高出两个能量级
+- **已知风险**: 盲点 Hook 能量为"中"，不适合 Incommensurability 和 paradigm-challenge 型研究。ahmadi2017 无人脸（无具体公司/人名），AMJ/ASQ 投稿不建议使用此变体
+
+### 模块比重参考
+- Hook 与 Literature Turn 融合: Hook 部分约占 Introduction 的 15-20%
+- *来源: gamache2020 (SMJ), ahmadi2017 (JMS)*

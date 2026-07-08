@@ -171,3 +171,13 @@
 | **同时异果对比 Hook** | `22-paired-simultaneous-incidents` | 同一天、同规模、不同媒体反应的对比案例→ Puzzle question | EMERGING (1 paper) | han_pollock_paruchuri (SMJ) |
 
 - `22-paired-simultaneous-incidents` — Anecdote/Puzzle Hook: "On [date], [Firm A]'s [N] million users were exposed... The same day, [Firm B] had exposed [N] million users... Although similar in magnitude, [Firm B]'s breach was only covered by specialist media. Why were two incidents of similar magnitude that occurred at the same time publicized to different extents?" 适用于 misconduct/scandal/event studies。Pollock 类型: Anecdote。能量: 中。最佳适配 Gap: Incompleteness × Constructs + Boundary。
+
+---
+
+## 新增 Hook（编号 23）
+
+| Hook | canonical_id | 核心特征 | 验证状态 | 代表范文 |
+|------|-------------|---------|---------|---------|
+| **流行观点对立 Hook** | `23-popular-debate` | TED talk vs 畅销书对立观点 → "This debate illustrates..." pivot → 学术 gap | EMERGING (1 paper) | falchetti2022 (SMJ) |
+
+- `23-popular-debate` — Anecdote Hook: "In an exceptionally popular [TED talk], [Author A] argues... [Author B], on the other hand, in [their best-selling book], points out... This debate illustrates one of the central challenges..." 两个大众文化中的对立观点并置→争论的 resolution 不在 A vs B 本身，而在被双方忽略的 contingency factor。Pollock 类型: Anecdote。能量: 中。最佳适配 Gap: Incompleteness × Boundary + Constructs。禁忌: ASQ 投稿避免使用（偏好理论深度而非 practitioner relevance）。

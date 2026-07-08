@@ -1,18 +1,19 @@
 meta:
-  last_updated: '2026-06-17'
-  total_mvp30_papers_indexed: 37
-  batches_processed: 6
-  source: mvp30_index + 9_distill_files + path_B_confirmation
-  notes: '2026-06-17 reclassified zhao_ding2022 (OS): Incompleteness/data-shock -> Inadequacy/dual-industry-trend-hook/implicit-assumption-wrong-variantD. Removed paper from 03-data-shock (8->7), 01-despite-progress-unaddressed (18->17), 10-constraint-vs-freedom (1->0); retagged 11-overlooked-alternative gap Incompleteness->Inadequacy; added to new 21-dual-industry-trend hook + 02-implicit-assumption-wrong (12->13). Driven by P35 challenges-an-implicit-premise language; P23 is trend+dual-industry cases, not data-shock.'
+  last_updated: '2026-07-08'
+  total_mvp30_papers_indexed: 44
+  batches_processed: 8
+  source: mvp30_index + 9_distill_files + path_B_confirmation + cui_yang_vertinsky_smj_distill
+  notes: '2026-07-08 added cui_yang_vertinsky (SMJ) distill: new hook 24-empirical-puzzle-after-consensus, updated 16-threefold-gap and 02-explicit-dual-question-narrowing.'
 evidence:
   hooks:
     01-cross-disciplinary-analogy:
-      paper_count: 2
+      paper_count: 3
       papers:
       - malshe2015 (JM)
       - pollock2015 (ASQ)
+      - jiang2026 (JIBS)
       gap_distribution:
-        Incompleteness: 2
+        Incompleteness: 3
         Inadequacy: 0
         Incommensurability: 0
       status: EMERGING
@@ -103,7 +104,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     05-literature-consensus-blindspot:
-      paper_count: 7
+      paper_count: 9
       papers:
       - gamache2020 (SMJ)
       - han2020 (AMJ)
@@ -112,8 +113,10 @@ evidence:
       - pfarrer2010 (AMJ)
       - shipilov2020 (SMJ)
       - singh2023 (JMR)
+      - ahmadi2017 (JMS)
+      - qiao2026 (SMJ)
       gap_distribution:
-        Incompleteness: 1
+        Incompleteness: 3
         Inadequacy: 6
         Incommensurability: 0
       status: ROBUST
@@ -340,9 +343,209 @@ evidence:
         revise: 0
         reject: 0
         common_revise_reasons: []
+    23-popular-debate:
+      paper_count: 1
+      papers:
+      - falchetti2022 (SMJ)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 0
+        Incommensurability: 0
+      status: EMERGING
+      generativity: GENERATIVE
+      exclusivity: HIGH
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    15-extreme-situation:
+      paper_count: 1
+      papers:
+      - lashley_pollock2020 (ASQ)
+      gap_distribution:
+        Incompleteness: 0
+        Inadequacy: 1
+        Incommensurability: 0
+      status: EMERGING
+      generativity: GENERATIVE
+      exclusivity: HIGH
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    16-evolving-social-issue:
+      paper_count: 2
+      papers:
+      - employee_free_speech2024 (OS)
+      - weng_yang (JMS)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 1
+        Incommensurability: 0
+      status: EMERGING
+      generativity: GENERATIVE
+      exclusivity: HIGH
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    17-classic-debate-constraint:
+      paper_count: 1
+      papers:
+      - shareholder_litigation (SMJ)
+      gap_distribution:
+        Incompleteness: 0
+        Inadequacy: 0
+        Incommensurability: 1
+      status: EMERGING
+      generativity: GENERATIVE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    17-debate-reframing:
+      paper_count: 1
+      papers:
+      - park_lange_jeon (SMJ)
+      gap_distribution:
+        Incompleteness: 0
+        Inadequacy: 0
+        Incommensurability: 1
+      status: EMERGING
+      generativity: ADAPTABLE
+      exclusivity: HIGH
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    18-theory-contradiction-empirical-paradox:
+      paper_count: 1
+      papers:
+      - zhou2017 (ASQ)
+      gap_distribution:
+        Incompleteness: 0
+        Inadequacy: 0
+        Incommensurability: 1
+      status: EMERGING
+      generativity: GENERATIVE
+      exclusivity: HIGH
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    19-forward-looking-shift:
+      paper_count: 1
+      papers:
+      - zhao_ding2022 (OS)
+      gap_distribution:
+        Incompleteness: 0
+        Inadequacy: 1
+        Incommensurability: 0
+      status: EMERGING
+      generativity: GENERATIVE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    20-counterintuitive-finding:
+      paper_count: 1
+      papers:
+      - paruchuri_pollock_kumar2020 (SMJ)
+      gap_distribution:
+        Incompleteness: 0
+        Inadequacy: 1
+        Incommensurability: 0
+      status: EMERGING
+      generativity: GENERATIVE
+      exclusivity: HIGH
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    cold-start-cost-cascade:
+      paper_count: 1
+      papers:
+      - mayo2021 (POM)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 0
+        Incommensurability: 0
+      status: EMERGING
+      generativity: ADAPTABLE
+      exclusivity: LOW
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    21-practical-puzzle:
+      paper_count: 2
+      papers:
+      - ceo_regulatory_focus_ijrm (IJRM)
+      - desjardine2023 (OS)
+      gap_distribution:
+        Incompleteness: 2
+        Inadequacy: 0
+        Incommensurability: 0
+      status: EMERGING
+      generativity: ADAPTABLE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    24-empirical-puzzle-after-consensus:
+      paper_count: 1
+      papers:
+      - cui_yang_vertinsky (SMJ)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 0
+        Incommensurability: 0
+      status: EMERGING
+      generativity: GENERATIVE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
   tensions:
     01-despite-progress-unaddressed:
-      paper_count: 17
+      paper_count: 23
       papers:
       - darby2024 (MSOM)
       - darby2025 (JSCM)
@@ -361,8 +564,14 @@ evidence:
       - vadakkepatt2022 (JM)
       - wowak2025 (MS)
       - wu2025 (SMJ)
+      - ahmadi2017 (JMS)
+      - jiang2026 (JIBS)
+      - qiao2026 (SMJ)
+      - cancellieri2023 (SMJ)
+      - hoffmann2024 (JM)
+      - wang2023 (SMJ)
       gap_distribution:
-        Incompleteness: 17
+        Incompleteness: 23
         Inadequacy: 0
         Incommensurability: 0
       status: ROBUST
@@ -617,9 +826,121 @@ evidence:
         revise: 0
         reject: 0
         common_revise_reasons: []
+    09-resource-acquisition-vs-utilization:
+      paper_count: 1
+      papers:
+      - shen2022 (JOM)
+      gap_distribution:
+        Incompleteness: 0
+        Inadequacy: 1
+        Incommensurability: 0
+      status: EMERGING
+      generativity: ADAPTABLE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    14-debate-unresolved:
+      paper_count: 3
+      papers:
+      - kundro_rothbard (AMJ)
+      - eilert2017 (JM)
+      - wowak2025 (MS)
+      gap_distribution:
+        Incompleteness: 0
+        Inadequacy: 3
+        Incommensurability: 0
+      status: VERIFIED
+      generativity: GENERATIVE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    15-practical-puzzle:
+      paper_count: 2
+      papers:
+      - shen_zhou_wang_zhang (JOM)
+      - eilert2017 (JM)
+      gap_distribution:
+        Incompleteness: 0
+        Inadequacy: 2
+        Incommensurability: 0
+      status: EMERGING
+      generativity: GENERATIVE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    16-threefold-gap:
+      paper_count: 2
+      papers:
+      - malshe2015 (JM)
+      - cui_yang_vertinsky (SMJ)
+      gap_distribution:
+        Incompleteness: 2
+        Inadequacy: 0
+        Incommensurability: 0
+      status: EMERGING
+      generativity: ADAPTABLE
+      exclusivity: HIGH
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    17-puzzle-contrast:
+      paper_count: 1
+      papers:
+      - singh_grewal2023 (JMR)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 1
+        Incommensurability: 0
+      status: EMERGING
+      generativity: GENERATIVE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    cross-domain-migration:
+      paper_count: 1
+      papers:
+      - gamache2020 (SMJ)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 0
+        Incommensurability: 0
+      status: EMERGING
+      generativity: GENERATIVE
+      exclusivity: HIGH
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
   stakes:
     01-general-theory-practice:
-      paper_count: 9
+      paper_count: 10
       papers:
       - hahl2017 (ASR)
       - han2020 (AMJ)
@@ -630,8 +951,9 @@ evidence:
       - pollock2015 (ASQ)
       - pontikes2012 (ASQ)
       - zhou2017 (ASQ)
+      - jiang2026 (JIBS)
       gap_distribution:
-        Incompleteness: 2
+        Incompleteness: 3
         Inadequacy: 2
         Incommensurability: 5
       status: ROBUST
@@ -961,7 +1283,7 @@ evidence:
         common_revise_reasons: []
   contributions:
     contribution-statements:
-      paper_count: 44
+      paper_count: 46
       papers:
       - ceo_regulatory_focus_ijrm (IJRM)
       - darby2023 (MSOM)
@@ -1007,6 +1329,8 @@ evidence:
       - wu2025 (SMJ)
       - zhao_ding2022 (OS)
       - zhou2017 (ASQ)
+      - ahmadi2017 (JMS)
+      - qiao2026 (SMJ)
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: LOW
@@ -1018,7 +1342,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 18
+        Incompleteness: 20
         Inadequacy: 15
         Incommensurability: 6
     three-layer-contribution:
@@ -1050,6 +1374,25 @@ evidence:
         Incommensurability: 0
       status: EMERGING
       generativity: ADAPTABLE
+      exclusivity: LOW
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    02-explicit-dual-question-narrowing:
+      paper_count: 2
+      papers:
+      - weng_yang (JMS)
+      - cui_yang_vertinsky (SMJ)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 1
+        Incommensurability: 0
+      status: EMERGING
+      generativity: GENERATIVE
       exclusivity: LOW
       common_failures: []
       validation_history:

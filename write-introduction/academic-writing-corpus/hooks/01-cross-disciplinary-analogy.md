@@ -10,6 +10,8 @@ exclusivity: MEDIUM
 source_papers:
   - pollock2015 (ASQ, 2015): "Coevolutionary processes—defined as...—are ubiquitous in nature. Biologists... astronomers... social scientists..."
   - malshe2015 (JM, 2015): "The issues of [topic] have been central to [discipline] for half a century... Recently, [discipline B] scholars have begun..."
+  - jiang2026 (JIBS, 2026): "Level-reversal pivot — economics/sociology macrolevel consensus → firm-level practices shape societal outcomes"
+updated: 2026-07-07
 created: 2026-05-18
 source: Extracted from MVP30 narrative_analysis files
 ---
@@ -91,6 +93,28 @@ source: Extracted from MVP30 narrative_analysis files
 - **不要选读者不熟悉的类比领域**: 生物学、天文学是安全的（普遍知晓）；不要选小众学科
 - **不要过度延伸类比**: 2-3 个例子足够；不要为每个论点都找类比
 - **类比必须精确**: 不是"有点像"而是"是同一种规律的表现"
+
+---
+
+### 变体 C：层次逆转型（jiang2026 型）
+
+**模板**:
+> "There has been a long-standing interest among [discipline A] and [discipline B] researchers in identifying [macrolevel drivers] of [outcome], such as [driver 1] ([citation]), [driver 2] ([citation]), [driver 3] ([citation]), and [driver 4] ([citation]). Beyond [macrolevel drivers], [your discipline] scholars suggest that [microlevel actors] can shape [macrolevel outcome] through [specific practices] ([citations]). However, empirical work exploring the [macrolevel outcome] impact of [microlevel practices] remains scarce ([citation])."
+
+**来源**: jiang2026 (JIBS), P1
+
+**原文锚定**:
+> "There has been a long-standing interest among economic and sociology researchers in identifying macrolevel or societal drivers of income inequality, such as globalization (Goldberg & Pavcnik, 2007), technological advances (Autor et al., 2008), labor union strength (Western & Rosenfeld, 2011), and tax policies (Piketty, 2014; Stiglitz, 2012). Beyond societal drivers, management scholars suggest that firms can shape societal-level income inequality through firm practices such as executive compensation, employment arrangements, and pay-setting norms (Bapuji et al., 2018; Cobb, 2016). However, empirical work exploring the societal impact of firm-level pay practices remains scarce (Bapuji et al., 2020)."
+
+**关键特征**:
+- **"'long-standing interest among [discipline A] and [discipline B]'"**: 先承认其他学科的成熟研究，四点枚举建立跨学科学术合法性，每项1引用干净利落
+- **"'Beyond [macrolevel]... [your discipline] scholars suggest'"**: 层次逆转 pivot——从宏观驱动到微观实践的反向因果，非概念类比而是分析层次的逆转
+- **"'remains scarce'"**: Incompleteness 措辞但比 "underdeveloped" 更有紧迫感——暗示领域已有理论准备但缺实证
+- **适合 firm→society, team→organization 等跨层次研究**: IB、CSR、sustainability、political economy 领域首选
+
+**适用**: 适用于跨层次研究（firm→society, team→organization, individual→team）；特别适合 IB、CSR、sustainability 等关注组织外部性的领域。Incompleteness × Level / Phenomenon 组合首选
+
+**禁忌**: 不要在没有跨学科文献基础时强行使用——需要至少2个学科+4个引用支撑共识。"remains scarce" 比 "few studies" 强但不如 "overlooked"——不适合 Inadequacy。层次逆转必须锚定具体机制，不能只是 "X also matters at Y level"
 
 ---
 

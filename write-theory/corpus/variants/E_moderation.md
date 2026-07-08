@@ -6,7 +6,7 @@
 
 ---
 
-## 段落功能地图（E1 同层调节 — 7 步协议 + T6）
+## 段落功能地图（E1 同层调节 — 7 步协议）
 
 | 步骤 | 段落功能 | 推荐词数 | 必须度 |
 |------|---------|----------|--------|
@@ -16,8 +16,9 @@
 | Step 4 | Z 的直接效应（如适用）+ 与 moderation 机制的区分 | 50-80 | ⚠️ |
 | Step 5 | 机制修改推演：Z 如何 strengthen/weaken X→Y | 70-120 | ✅ |
 | Step 6 | 排除反向交互：为什么是 Z moderates X→Y | 40-60 | ✅ |
-| Step 7 | 调节假设陈述 | 30-60 | ✅ |
-| Step 8 | T6 Closure：框架锁定 + 假设逻辑显性化 | 80-120 | **准强制** |
+| Step 7 | 调节假设陈述——自然收敛，不附加独立 Closure 段 | 30-60 | ✅ |
+
+> **注意**: 管理学顶刊标准是假设推导完毕即进入 METHODS。Step 7 的 "Therefore, we hypothesize:" 即为收敛信号——不需要额外的全局 Closure 段落。
 
 ---
 
@@ -44,7 +45,7 @@
 
 ---
 
-## E2. 跨层调节 (Cross-Level Moderation) — 9 步协议 + T6
+## E2. 跨层调节 (Cross-Level Moderation) — 9 步协议
 
 **前置声明模板**：
 ```
@@ -74,8 +75,9 @@ distinguishing this cross-level direct effect from the cross-level interaction e
 | Step 6 | Cross-level 直接效应（如适用） | 50-80 | ⚠️ |
 | Step 7 | Cross-level 交互机制推演 | 70-120 | ✅ |
 | Step 8 | 排除反向交互（嵌套逻辑） | 40-60 | ✅ |
-| Step 9 | 跨层调节假设 | 30-60 | ✅ |
-| Step 10 | T6 Closure：框架锁定 + 假设逻辑显性化 | 80-120 | **准强制** |
+| Step 9 | 跨层调节假设——自然收敛，不附加独立 Closure 段 | 30-60 | ✅ |
+
+> **注意**: 管理学顶刊标准是假设推导完毕即进入 METHODS。Step 9 的假设陈述即为收敛信号。
 
 **跨层假设模板**：
 ```
@@ -96,7 +98,7 @@ distinguishing this cross-level direct effect from the cross-level interaction e
 - [ ] 假设语言是否与实证检验匹配（differential prediction vs differential validity）？
 - [ ] 是否排除了反向交互（时序/层级/理论方向）？
 - [ ] 对于跨层模型：unit of analysis, nesting, 和 level-specific theory 是否在假设前声明？
-- [ ] T6 Closure 是否存在？
+- [ ] 最后调节假设是否自然收束（非突然中断）？
 
 ---
 
@@ -160,3 +162,124 @@ distinguishing this cross-level direct effect from the cross-level interaction e
 - 嵌入型边界条件用于纯理论期刊（ASQ/OS）→ 审稿人可能要求更深入的单 moderator 论证
 
 **适用期刊**: JM, JMR, JOM, MSOM（偏好紧凑结构）；AMJ/SMJ 需评估 moderator 数量和深度需求
+
+---
+
+## E4. 竞争基线 → 调节裁决（Competing Baseline → Moderation Resolution，Desai 2012 型）
+
+**适用**: 同一理论框架预测了两个（或多个）相反/竞争的响应，研究贡献是用 moderator 决定"何时哪个响应成立"。
+
+**与标准 E1 的区别**:
+
+| 维度 | 标准 E1（Baseline → Moderation） | E4（Competing Baseline → Moderation Resolution） |
+|------|--------------------------------|-----------------------------------------------|
+| baseline 假设 | 必须有 H1: X→Y 主效应 | 可能无纯主效应，全部为调节假设 |
+| 理论任务 | 解释 Z 如何 modify X→Y | 解释 Z 如何在两个竞争响应之间裁决 |
+| T2 结构 | 引入一个理论视角 | 引入一个理论视角，并建立其内部的竞争基线 |
+| 典型句式 | "However, this effect is contingent on..." | "It is important to determine the conditions under which..." |
+
+**段落功能地图**:
+
+| 步骤 | 段落功能 | 推荐词数 | 必须度 |
+|------|---------|----------|--------|
+| Step 1 | T2 引入理论并建立竞争基线（Response A vs. Response B） | 80-120 | ✅ |
+| Step 2 | 提出缺口：现有理论未说明何时 A 何时 B | 40-60 | ✅ |
+| Step 3 | 提出 moderator 作为裁决机制 | 60-100 | ✅ |
+| Step 4 | Response A 的调节假设推导（H1/H2...） | 70-120 | ✅ |
+| Step 5 | Response B 的调节假设推导（H3/H4...） | 70-120 | ✅ |
+| Step 6 | 自然收敛，不附加独立 Closure 段 | 30-50 | ✅ |
+
+**关键句式**:
+
+**建立竞争基线**:
+```
+"[Theory] can be adapted to suggest at least two responses. First, [response A] because [theoretical reason]. 
+On the other hand, [response B] because [theoretical reason]."
+```
+
+**提出缺口**:
+```
+"Therefore, it is important to determine the conditions under which [A] rather than [B] is more likely."
+```
+
+**调节裁决**:
+```
+"We argue that [moderator] determines which response prevails. When [moderator condition 1], [response A] is more likely because [mechanism]. 
+In contrast, when [moderator condition 2], [response B] is more likely because [mechanism]."
+```
+
+**语料锚定**:
+- Desai (2012, AMJ) — defend vs. avoid 两个竞争响应，field-level / firm-level scrutiny 作为 moderator 裁决
+
+**反模式**:
+- 两个竞争响应只有一个有理论依据 → 变成伪竞争
+- moderator 只能解释一个响应，另一个响应只是"默认"→ 调节裁决不对称
+- 用于非竞争关系的情境（只有一个合理响应）→ 显得牵强
+
+**调用语料**:
+- `corpus/subprotocols/argumentation_patterns.md`（Preemptive Competing Account Management → 子变体 B）
+- `corpus/subprotocols/bilateral_argumentation_templates.md`（high/low 双边论证）
+
+---
+
+## E5. 曲线关系 + 多调节变量的联合论证（Cui et al. 型）
+
+**适用**: 理论预期 X→Y 是曲线关系（如 inverted U-shape），且多个 moderators 同时调节该曲线的形状（flatten/steepen/shift）。
+
+**与标准 E1 的区别**:
+
+| 维度 | 标准 E1（线性 Baseline → Moderation） | E5（曲线 Baseline + Multi-Moderation） |
+|------|--------------------------------|--------------------------------------|
+| baseline 假设 | H1: X→Y 线性主效应 | H1: X→Y 曲线关系（inverted U-shape / U-shape） |
+| 机制论证 | 单段 why chain | 两段 why chain（递增段 + 递减段），每段多个理由 |
+| 调节机制 | Z 改变 X→Y 的斜率 | Z 改变曲线两侧的形状（flatten/steepen） |
+| 假设数量 | 1 主效应 + 1-3 调节 | 1 曲线主效应 + 3 个调节（常见配置） |
+| 双边论证 | high/low 两边 | 曲线的 low-to-medium 和 medium-to-high 两边 |
+
+**段落功能地图**:
+
+| 步骤 | 段落功能 | 推荐词数 | 必须度 |
+|------|---------|----------|--------|
+| Step 1 | T1/T2：定义核心构念 + 引入理论视角 | 80-150 | ✅ |
+| Step 2 | H1 曲线主效应推导：递增段（2 个理由） | 100-150 | ✅ |
+| Step 3 | H1 曲线主效应推导：转折 + 递减段（2 个理由） | 100-150 | ✅ |
+| Step 4 | H1 假设陈述 | 30-50 | ✅ |
+| Step 5 | 引入 moderators：解释为什么选择这些调节变量 | 60-100 | ✅ |
+| Step 6-N | 每个 moderator 的调节推导（每边 2 个理由） | 各 100-150 | ✅ |
+| Step N+1 | 自然收敛，不附加独立 Closure 段 | 30-50 | ✅ |
+
+**关键句式**:
+
+**曲线主效应开场**:
+```
+"We maintain that increases in [IV] facilitate [mechanism], increasing [DV]. However, there is a cost/benefit trade-off involved in [action]. As [IV] increases, [escalating cost/risk] may reach a threshold at which the expected cost becomes higher than the expected benefit, resulting in a [curve shape] relationship between [IV] and [DV]."
+```
+
+**阶段论证**:
+```
+"Specifically, there are two reasons. First, [reason 1]. Second, [reason 2]."
+```
+
+**转折句**:
+```
+"However, as [IV] continues to increase, [turning point condition]."
+```
+
+**调节假设段落开场**:
+```
+"We argue that [moderator] [direction] moderates the [curve shape] relationship between [IV] and [DV] by (a) [low-to-medium mechanism] and (b) [medium-to-high mechanism]."
+```
+
+**语料锚定**:
+- Cui, Yang, and Vertinsky (*Strategic Management Journal*) — relative exploration → competitive aggressiveness（inverted U-shape），三个 embeddedness moderators
+
+**反模式**:
+- 曲线主效应只有一个阶段有强机制，另一个阶段只是"反向"→ 论证薄弱
+- 多个 moderator 之间没有理论联系 → 像独立论文拼接
+- 调节变量只影响曲线一侧，另一侧只是顺带提及 → 双边论证不完整
+
+**调用语料**:
+- `corpus/subprotocols/hypothesis_derivation_patterns.md`（Curvilinear Relationship — Two-Phase Argumentation）
+- `corpus/subprotocols/hypothesis_derivation_patterns.md`（Width-Type Parallel Mechanism）
+- `corpus/subprotocols/bilateral_argumentation_templates.md`（high/low 双边论证，应用于曲线两侧）
+- `corpus/subprotocols/moderator_selection_frameworks.md`（多 moderator 选择元框架）

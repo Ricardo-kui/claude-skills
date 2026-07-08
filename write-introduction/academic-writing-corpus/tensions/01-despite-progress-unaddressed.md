@@ -20,8 +20,13 @@ source_papers:
   - desai2012 (AMJ, 2012): "双层Tension: Incompleteness外层(no guidance on field-level defense) + Inadequacy内层(theory shifted from stability to change)"
   - gamache_etal2020 (SMJ, 2020): "三层递进Incompleteness: general→specific gap→why层面根本问题。Stakes嵌入Tension('This omission is critical, as...')"
   - habel2016 (JM, 2016): "双重证据缺口: 学术文献缺失+practitioner直接引语支撑; 三层递进收窄(not subject→cannot explain→remains unclear)"
+  - ahmadi2017 (JMS, 2017): "半压缩递进+呼吁闭环: 'underdeveloped' → 'only limited research' → 'emphasizes the need to investigate'"
+  - jiang2026 (JIBS, 2026): "Mixed findings pivot + shift focus: 'are mixed... we shift the focus from X to Y and examine how Z moderates'"
+  - qiao2026 (SMJ, 2026): "双缺口并列枚举: 'two critical gaps remain' — First=Incompleteness (external imprints), Second=Inadequacy (dynamic imprinter)"
+  - cancellieri2023 (SMJ, 2023): "Paradox articulation + rhetorical question pivot: 'How to best mediate...? How to accommodate...?'"
+  - hoffmann2024 (JM, 2024): "Policy unintended consequences: 'well-intended → unintended negative consequences' — quasi-natural experiment"
+updated: 2026-07-07
 created: 2026-05-18
-updated: 2026-06-03
 source: Extracted from MVP30 narrative_analysis files + mannor2016 + darby2025 distill
 ---
 
@@ -472,6 +477,116 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 ---
 
+### 变体 R：半压缩递进+呼吁闭环型（ahmadi2017 型）
+
+**模板**:
+> "Yet, our understanding of [how/why] [novel factor] may impact [outcome of established literature] is underdeveloped, and fundamental pieces are missing ([citation]). In fact, despite the critical role played by [actors] in [established domain] ([citations]), there is only limited research on what [mechanisms/drivers] may make them more [behavior of interest] ([citation]). Hence, recent research emphasizes the need to investigate [specific research direction] ([citation])."
+
+**来源**: ahmadi2017 (JMS), P1
+
+**原文锚定**:
+> "Yet, our understanding of how psychological attributes may impact managers' orientation toward exploration is underdeveloped, and fundamental pieces are missing (Gupta et al., 2006). In fact, despite the critical role played by managers in making decisions about exploration, there is only limited research on what mechanisms may make them more inclined to exploration (Sitkin et al., 2011). Hence, recent research emphasizes the need to investigate the antecedents of individual-level exploration in organizations (Mom et al., 2015)."
+
+**关键特征**:
+- **三段递进缺口声明**: "underdeveloped" → "only limited research" → "emphasizes the need to investigate" —— 从笼统到具体的收窄链条，每步都有独立引用
+- **"'In fact, despite...' 作为缺口强化 pivot**：先承认已有文献建立了 actors' role，再指出心理驱动机制未知 —— 缺口不在"谁重要"而在"为什么重要"
+- **呼吁外包型结尾**: "recent research emphasizes the need to investigate..." —— 将 gap 合法性推给领域权威呼吁（Mom et al., 2015），缺口非作者自说自话
+- **无独立 Tension 段落**：Tension 与 Literature Turn 共段 —— 紧凑风格的代价是叙事能量偏低，每个缺口声明仅 1 句话
+
+**适用**: 适用于 Introduction 字数预算极紧的 JMS/JOM/OS 风格论文；当独立的 Theory 章节将承担主要理论论证时。Incompleteness × Mechanism 组合特别适配（先建"现象重要"共识，再指"驱动机制未知"）
+
+**禁忌**: 不要用于 AMJ/ASQ 投稿 —— AMJ/ASQ 期望 Tension 至少 1 个独立段落。"emphasizes the need to investigate" 是呼吁型结尾而非论证型，能量偏低 —— 如果审稿人不熟悉 JMS 压缩风格，可能视为 gap 论证不充分。"fundamental pieces are missing" 承诺了高于实际交付的严重性——如果后续 Theory 未展示"fundamental"层面的突破，审稿人会质疑
+
+---
+
+### 变体 S：混合发现 pivot + 焦点转移型（jiang2026 型）
+
+**模板**:
+> "Moreover, empirical research findings on the relationship between [existing predictor] and [DV] are mixed. Some studies suggest [direction A] ([citations]), whereas others find [direction B] ([citations]) or even [direction C] ([citation]), suggesting the potential presence of contextual contingencies. Building on this stream of research, we shift the focus from [existing predictor] to [new predictor] and examine how [moderator] moderates the effect of [new predictor] on [DV], as [moderator theory basis] ([citation]). In doing so, we extend [your field] research that emphasizes the role of [broader theoretical frame] ([citations])."
+
+**来源**: jiang2026 (JIBS), P3
+
+**原文锚定**:
+> "Moreover, empirical research findings on the relationship between societal income inequality and citizen well-being are mixed. Some studies suggest that higher societal-level income inequality reduces well-being (Wilkinson & Pickett, 2010), whereas others find no relationship (Evans et al., 2019) or even a positive association (Kelley & Evans, 2017), suggesting the potential presence of contextual contingencies. Building on this stream of research, we shift the focus from societal income inequality to the CEO-to-employee pay ratio and examine how government welfare spending, i.e., the welfare state, moderates the effect of this average pay ratio on well-being, as welfare policies promote social justice (Radcliff, 2013). In doing so, we extend international business (IB) research that emphasizes the role of institutional variation in shaping both economic conditions and social equity (Judge et al., 2014)."
+
+**关键特征**:
+- **"'are mixed... Some studies suggest X, whereas others find Y or even Z'"**: 三方发现枚举（正/负/null）构成自然的三原因论证——比 malshe2015 的 "This is surprising for three reasons" 更简洁，证据等级更高
+- **"'suggesting the potential presence of contextual contingencies'"**: 从混合发现直接论证 moderator 的必要性，不绕弯——混合发现 = moderator 存在的最强 warrant
+- **"'Building on this stream... we shift the focus from X to Y and examine how Z moderates'"**: 三合一 pivot——承认前人+焦点转移+moderator 引入，一句话完成三个功能
+- **末尾贡献预告**: "'In doing so, we extend [field] research that emphasizes...'"——Tension 末尾即贡献预告，减少段落间过渡成本
+
+**适用**: 适用于已有实证结果混合（正/负/null）的研究领域；Boundary 贡献首选——混合发现是 moderator 存在的最强证据。Incompleteness × Boundary 组合特别适配；也可用于 Inadequacy × Boundary（如果混合发现被归因于理论假设错误）
+
+**禁忌**: 混合发现必须三方向都引用具体论文——不能只有一个方向的引用而另两个方向是 vague claim。"we shift the focus" 暗示已有的 predictor 不够——必须解释为什么不夠（而非已有的错了，保持 Incompleteness 边界）。末尾贡献预告不要展开——1句方向即可，详细贡献留给 Contribution 段
+
+---
+
+### 变体 T：双缺口并列枚举型（qiao2026 型）
+
+**模板**:
+> "Despite the significant advances in [field] research, [number] critical gaps remain, limiting our understanding of [phenomenon domain]. First, existing studies have focused mainly on [dominant element A], such as [example 1], [example 2], and [example 3] ([citations]). Yet, [neglected element B], such as [manifestation of B] as perceived by [audience] ([citations]), [have received less attention / remain underexplored]. Importantly, [element A] and [element B] might [compete for influence / exhibit varying durability / interact] in their influence on [outcome]. Second, previous research has typically assumed [static assumption about mechanism] ([citations]). In contrast, we posit that [dynamic/ongoing mechanism] can continuously shape [outcome], even after [boundary condition]."
+
+**来源**: qiao2026 (SMJ), P2
+
+**原文锚定**:
+> "Despite the significant advances in organizational imprinting research, two critical gaps remain, limiting our understanding of historically oriented organizational phenomena. First, existing studies have focused mainly on internal organizational imprints, such as structures, routines, and cultures (Marquis & Qiao, 2025). Yet, external imprints, such as the organizational identity as perceived by audiences outside of the organization (Korschun, 2015; Kovács & Horwitz, 2021), have received less attention. Importantly, internal and external imprints might compete for influence and exhibit varying levels of durability in their influence on organizational outcomes (i.e., effect persistence). Second, previous research has typically assumed imprinting effects reflect characteristics, preferences, and actions of imprinters—entities responsible for creating the imprint (Simsek et al., 2015)—solely in that very sensitive period in the past. In contrast, we posit that post-founding transformations of these imprinters can continuously shape the imprinting effect, even after their direct organizational involvement has ceased."
+
+**关键特征**:
+- **"'[N] critical gaps remain, limiting our understanding of [domain]'"**: 显式缺口计数+后果预告——将 gap 从模糊声明升级为可检查的列表，审稿人可逐项验证
+- **"'First... Second...'" 并列编号而非嵌套**: 两个缺口分别锚定不同 Gap 类型——Gap1=Incompleteness（"received less attention"），Gap2=Inadequacy（"has assumed... In contrast, we posit"）
+- **"'Importantly, [A] and [B] might compete for influence'"**: 缺口间关系声明——两个缺口不是孤立的，而是构成竞争性理论张力，增加 narrative stakes
+- **Gap2 使用 "'In contrast, we posit that...'"**: Inadequacy 标志性 pivot——非 "few studies"，而是挑战隐含的静态假设
+
+**适用**: 适用于有 2-3 个清晰缺口且缺口类型不同的论文；当论文同时做 Incompleteness（补充遗漏维度）和 Inadequacy（修正隐含假设）时特别适配。SMJ/AMJ 首选——SMJ 偏好显式结构编号
+
+**禁忌**: 缺口数量必须与后文假设/贡献一一对应——"two gaps" 承诺了两个理论贡献方向，Discussion 必须逐项兑现。不要只列举缺口而不解释缺口间的关系——"Importantly, A and B might compete" 是必要的连接句。Gap1 和 Gap2 的 Gap 类型不要相同——如果两个都是 Incompleteness，合并为一个缺口。Gap2 若使用 Inadequacy 语言（"has assumed... In contrast"），必须有具体文献引用支撑假设的存在
+
+---
+
+### 变体 U：Paradox 阐述 + Rhetorical Question pivot 型（cancellieri2023 型）
+
+**模板**:
+> "Yet the actual understanding of [how / why] [specific mechanism] occurs in [domain] is still limited. This is a significant shortcoming in light of [evidence suggesting phenomenon is more complex than theory assumes] ([citations]). For instance, recent findings indicate that [empirical challenge to simple view] ([citations]). [Citation]'s findings similarly suggest that [constraint imposed by the phenomenon] ([citation]). These conflicting demands between [goal A] and [goal B] reflect two competing approaches to [phenomenon]: [approach A] and [approach B] ([citations]). When [actors] follow [approach A], they enjoy [benefits] but forgo [opportunities]. When they follow [approach B], however, [different outcome]. This poses a challenge for [actors] dealing with [phenomenon]: [Rhetorical Question 1]? [Rhetorical Question 2]?"
+
+**来源**: cancellieri2023 (SMJ), P1-P2
+
+**原文锚定**:
+> "Yet the actual understanding of how this interpretation of the past occurs in contemporary strategy making is still limited. This is a significant shortcoming in light of consistent managerial evidence suggesting that traditions may be less malleable than typically assumed, as revered traditions may trap firms into their historical rituals, values, and symbols (De Massis et al., 2016; Sasaki et al., 2019). For instance, recent findings indicate that long-lived firms may be reluctant to abandon their traditions... Sasaki et al.'s (2019) findings similarly suggest that commitment to tradition may impose 'constraints on the latitude that [...] managers have when trying to change and innovate.' These conflicting demands between preserving a sense of continuity and supporting change reflect two competing approaches to using tradition: conservative past and risky novelty. When they follow a conservative strategy... organizations enjoy the benefits of a clear identity... but forgo opportunities to attract customers who instead value and appreciate innovation. When they follow a risk-taking strategy, however, organizations fail more frequently... This poses a challenge for strategists dealing with cherished traditions: How to best mediate between past origins and future developments? How to accommodate renewal without stifling tradition?"
+
+**关键特征**:
+- **"'This is a significant shortcoming in light of...'"**: 不只是"没人研究"，而是用具体 managerial evidence 证明 gap 的严重性——gap 有实证后果
+- **"'These conflicting demands between A and B reflect two competing approaches...'"**: 从 gap 升级为 paradox——两个 desirable goals（continuity vs change）不可兼得
+- **"'When they follow A... they enjoy X but forgo Y. When they follow B...'"**: 对称结构阐述 paradox 的具体表现——每边都有 gain 和 pain，不被简化为一边好一边坏
+- **结尾双修辞问句**: "'How to best mediate...? How to accommodate...?'"——不是 rhetorical flourish 而是从 gap 到 RQ 的 pivot：两个问句定义了论文要解决的核心矛盾
+
+**适用**: 适用于研究涉及两个 desirable but conflicting goals 的论文（tradition vs innovation, exploration vs exploitation, efficiency vs flexibility）。SMJ/ASQ 风格——paradox 阐述 + rhetorical question pivot 是 ASQ 的标志性 Tension 策略
+
+**禁忌**: 如果两个 goals 不是真正冲突的（可以同时实现）→ paradox 是假的，审稿人会攻击。对称结构（"When they follow A... When they follow B..."）必须对双方公平——不能把一方的 benefits 写得很详细而另一方只有 costs。修辞问句必须是论文能回答的——不要在 Introduction 问了但实际上 Discussion 没有回答
+
+---
+
+### 变体 V：政策意外后果型（hoffmann2024 型）
+
+**模板**:
+> "Although [policy/law] is well-intended and aims to [intended benefit] ([citations]), the reduced [deterrent/discipline mechanism] could also have unintended negative consequences. Indeed, recent research argues that [policy] might [positive consequence] ([citations]). Other research, however, argues that [mechanism leading to negative consequence] ([citations]). Thus, although [policy] is well-intended and has been linked to some positive consequences, the reduced [governance mechanism] could also have unintended negative consequences for [outcome]. In this article, we develop a conceptual framework examining the possible presence of such unintended consequences in the context of [specific decision domain]."
+
+**来源**: hoffmann2024 (JM), P6-P7 (Introduction)
+
+**原文锚定**:
+> "Indeed, recent research argues that shareholder litigation risk might prevent some managers from taking bold initiatives, and it finds that UD law adoption is associated with an increase in corporate innovation (Lin, Liu, and Manso 2021). Other research, however, argues that it is exactly these bold initiatives that managers feel more comfortable taking after UD law adoption that can distract their attention and drain company resources away from safety-improving activities, leading to a deteriorated safety climate within firms (Lin et al. 2021). Thus, although UD laws are well-intended and have been linked to some positive consequences, the reduced threat of shareholder litigation as a governance mechanism disciplining a firm's managers could also have unintended negative consequences for a firm."
+
+**关键特征**:
+- **"'Although [policy] is well-intended... the reduced [mechanism] could also have unintended negative consequences'"**: 政策意外后果框架——不攻击政策本身，而是识别其 unintended downside——保持 policy-neutral 立场
+- **双重引文论证**: "Indeed, recent research argues that [policy] might [positive]... Other research, however, argues that [negative mechanism]..."——用已有文献的正反发现建立"后果不确定"的张力
+- **"'Thus, although [policy] is well-intended and has been linked to some positive consequences...'"**: 回环收束——First + However + Thus 三段式，先承认正面再揭示负面
+- **末尾 research question 预告**: "'we develop a conceptual framework examining...'"——Tension 末尾即 RQ 预告
+
+**适用**: 适用于使用 quasi-natural experiment（法律变更、监管冲击、政策 adoption）的研究。Incompleteness × Mechanism 组合特别适配（已有研究关注政策正面效果，遗漏了意外负面后果）
+
+**禁忌**: 不要暗示政策本身是坏的——"well-intended" 和 "has been linked to some positive consequences" 是必要的平衡句。意外后果必须有已有文献的初步证据支撑——不能纯理论推测。只适用于 exogenous shock 研究设计——非 quasi-natural experiment 论文不建议使用
+
+---
+
 ## 组装规则
 
 ### 反模式提醒
@@ -503,3 +618,35 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 ✅ "Although we have good theory about organizations learning (Argote, 2013) and good theory about organizations forgetting (Martin de Holan & Nelson, 2004), we know little about why they might exhibit both tendencies in succession — and how such cycles might be repeated. This is a sequential phenomenon that learning theory has not dealt with in a systematic way." → 先承认两个理论各自都好，再精确指出它们从未被**连接**——缺口不在任何一个理论内部，而在它们的交叉处。
 
 **Incompleteness 的正确写法**: 不是"你漏了"，而是"你们各自都对，但从未对话"。先承认文献的贡献，再说"但是这两个重要的东西之间有个空白地带"。
+
+---
+
+## 风格画像
+
+> 以下风格特征是从使用本模板的多篇顶刊论文中聚合提取的。不是每篇论文都必须遵守，但偏离时应有明确理由。
+> 最后更新: 2026-07-07 | 聚合论文数: 14
+
+### 语气光谱
+- **主语气**: cautious — 证据: "remains poorly understood" (wu2025), "has gone largely unaddressed" (pollock2015), "underdeveloped, and fundamental pieces are missing" (ahmadi2017)
+- **次语气**: assertive (when using "curiously silent" or "this omission is critical") — 证据: "remain curiously silent on this matter" (lehman2014), "This omission is critical, as..." (gamache_etal2020)
+
+### 段落节奏
+- **典型节奏**: 承认已有进展（1-2句）→ 精确指出缺口位置（1-2句）→ 解释为什么这个缺口重要（1-2句）
+- **ahmadi2017 压缩节奏**: 三段递进（笼统→具体→呼吁）在一个段落内完成 —— 每步 1 句，无展开
+
+### 标志性叙事标记
+- [eilert2017]: "predominantly focused on X and Y. However, little attention has been paid to Z" — 经典三段式
+- [ahmadi2017]: "'underdeveloped' → 'only limited research' → 'emphasizes the need to investigate'" — 呼吁外包型结尾，将 gap 合法性推给领域权威
+- [gamache_etal2020]: "三层递进 Incompleteness: general→specific gap→why 层面根本问题" — Stakes 嵌入 Tension ("This omission is critical, as...")
+
+### 刻意回避
+- [ahmadi2017]: avoids independent Tension paragraph — Tension 与 Literature Turn 共段，适合 JMS 压缩风格
+- [ahmadi2017]: avoids strong gap language ("fundamentally wrong", "overlooked") — 始终保持 Incompleteness 边界（"underdeveloped" 而非 "misunderstood"）
+
+### 质量标记
+- **最值得模仿**: 变体 D（多重原因论证型 malshe2015）— "This is surprising for [N] reasons" 将缺口从观察到论证升级
+- **已知风险**: 变体 R (ahmadi2017) 的呼吁外包型结尾能量偏低 —— "emphasizes the need to investigate" 是引用别人说"应该研究"，而非作者论证"为什么现在必须研究"。AMJ/ASQ 投稿不建议使用
+
+### 模块比重参考
+- Tension 通常占 Introduction 的 15-25%；压缩版（ahmadi2017）仅占~8%
+- *来源: eilert2017 (JM), gamache_etal2020 (SMJ), ahmadi2017 (JMS)*

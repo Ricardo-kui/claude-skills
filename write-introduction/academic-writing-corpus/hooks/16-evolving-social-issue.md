@@ -1,16 +1,18 @@
 ---
 type: canonical_hook
 canonical_id: "16-evolving-social-issue"
-status: 🔬 EXPERIMENTAL
+status: VERIFIED
 gap_strength: 低/中
 gap_type: Incompleteness / Inadequacy
-cross_paper: SINGLE-INSTANCE
+cross_paper: VERIFIED
 generativity: GENERATIVE
 exclusivity: HIGH
 source_papers:
   - employee_free_speech2024 (OS, 2024): "social media censorship and ideological asymmetry in organizations"
+  - weng_yang (JMS): "income inequality → CEO-employee pay disparity; social issue cold-start with phenomenon definition"
 created: 2026-05-20
-source: Migrated from top-level academic-writing-corpus/hooks/09-evolving-social-issue.md (original batch 1 extraction)
+updated: 2026-07-07
+source: Migrated from top-level academic-writing-corpus/hooks/09-evolving-social-issue.md (original batch 1 extraction) + weng_yang distill
 ---
 
 # 16-evolving-social-issue — 演变中的社会议题 Hook
@@ -76,6 +78,29 @@ Traditionally, [Group A] supported [position X] and [Group B] supported [positio
 - 以组织困境收尾（而非单纯的社会学观察）
 
 **适用**: 传统的支持/反对阵营正在重组的议题（如ESG、DEI、平台治理）
+
+---
+
+### 变体 C：社会议题冷启动+现象定义型（weng_yang 型）
+
+**模板**:
+> "The issue of [broad social phenomenon] has received growing attention from researchers ([citations]). One particularly salient indicator is [specific DV construct], defined as [definition]. [DV construct] refers to [alternative definition]. This discrepancy may [negative consequence 1] ([citations]) as [mechanism: actors at firms with X can demonstrate Y]. Prior research suggests that [dominant external explanation 1] ([citations]). Meanwhile, [dominant external explanation 2] can also affect the extent of such [phenomenon] ([citation])."
+
+**来源**: weng_yang (JMS), P1
+
+**原文锚定**:
+> "The issue of income inequality has received growing attention from researchers (Amis et al., 2021; Bapuji et al., 2020; Patel et al., 2021; Suddaby et al., 2018). One particularly salient indicator is CEO-employee pay disparity, defined as the extent to which a CEO is paid more than a typical firm employee."
+
+**关键特征**:
+- 从 broad social phenomenon 开场，非具体公司/事件——冷启动但安全，不依赖特定时效性新闻
+- 定义DV后立即展示负面后果（employee morale, turnover），建立 stakes-in-hook
+- Hook 末尾已将文献定位为特定解释方向（如"外部因素解释"），为后续 inadequacy turn（"忽略了内部/行动者因素"）铺垫
+- 现象定义用两个句式重复（defined as / refers to），为跨学科读者建立清晰概念
+- 与变体A（事件切入）和变体B（立场反转）不同：本变体无具体事件锚定，从学术文献关注度切入
+
+**适用**: 适用于DV是一个社会议题的具体指标的研究；Gap类型为Inadequacy（文献偏重外部/结构解释，忽略内部/行动者解释）；不依赖时效性新闻——适合议题已成熟但研究视角需要转向的场景
+
+**禁忌**: "Cold-start 能量偏低——如目标期刊为 ASQ/ASR 需考虑升级 Hook 能量（搭配具体数据点或 paradox）；P1 末尾应明确暗示文献定位（如'外部vs内部'），否则后续的 inadequacy turn 会显得突兀"
 
 ---
 

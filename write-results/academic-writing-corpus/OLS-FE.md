@@ -6,9 +6,14 @@ source_papers:
   - "eilert2017_recall_timing_automobile_jm"
   - "darby2023_ceo_stock_ownership_recall_timing_msom"
   - "zhao_ding_gaba_2023_positioning_digital_markets_orsc"
-variants_count: 7
+  - "mannor_wowak_bartkus_gomez-mejia_2016_heavy_lies_crown_smj (Strategic Management Journal): null main + significant interaction, one-side conditional slopes, ΔR² economic significance"
+  - "bamberger_homburg_wielgos_2021_wage_inequality_jm (Journal of Marketing): marginal significance 90% CI dual-interval reporting"
+  - "li_chiu_kong_cropanzano_ho_2026_jom (Journal of Management): interaction percentage economic significance, low-base-rate moderator histogram, five-threat labeled robustness with RIR+Oster+CEM"
+  - "ahmadi_khanagha_berchicci_jansen_2017_jms (Journal of Management Studies): 7-model hierarchical regression table navigation, three-way interaction conditional decomposition, asymmetric findings narrative"
+  - "cui_yang_vertinsky_smj_attacking_partners (Strategic Management Journal): inverted U-shape + curve moderation, Lind-Mehlum three-step test, turning-point CI, flatten/steepen graph language"
+variants_count: 21
 created: 2026-05-18
-updated: 2026-06-17
+updated: 2026-07-08
 ---
 
 # OLS-FE — Results 骨架
@@ -89,3 +94,162 @@ updated: 2026-06-17
 **骨架**:
 > [Our theory / Another relevant aspect] also involves [theoretical dimension not captured by main DV]. To examine this, we introduce an alternative dependent variable, [alt-DV], which captures [theoretical dimension] — [operational definition]. Because [each construct has a vector over the keyword dictionary], we first compute [pairwise distance metric, e.g., Jensen-Shannon] for all [constructs]; we then [rescale / aggregate] and calculate the [weighted distance] between [component A] and [component B]. [IV_1] has a [pos/neg] and significant effect on [alt-DV] (p < [thr]), whereas [IV_2] is insignificant. This suggests that, when [IV_1 condition], [actors] tend to [behavior]—consistent with a [theoretical-label] positioning. This provides additional evidence that [IV_1] is associated with [mechanism] not only through [primary channel] but also through [secondary channel].
 **与原骨架差异**: 现有 R7 变体（变体1 Table 9、变体2 narrative）都把稳健性定位为**威胁缓解**（rule out confound / alternative estimator）。本变体扩展 R7 的理论功能：用替代 DV **corroborate 机制**而非缓解威胁——引入一个捕捉主 DV 未覆盖维度的替代结果变量（如"peripheral 与 core 的语义距离"），若与主 DV 同向则支持机制。关键区分：明确标 "to further understand / provides additional evidence that... not only through [primary] but also through [secondary]"，把它定位为机制验证而非稳健性。当理论含多个可分离的预测通道时尤其有用。
+
+### 变体 8: 主效应不显著但调节显著 — 条件化再定位 (1篇高价值)
+**来源论文**: Mannor, Wowak, Bartkus & Gomez-Mejia 2016 (Strategic Management Journal)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-07
+**槽位**: R3+R4
+**骨架**:
+> Hypothesis [N] predicted a [positive/negative] relationship between [IV] and [DV]. In Model [X], the coefficient for [IV] was in the predicted direction but not statistically significant (β = [value], n.s.). Hypothesis [N] was thus not supported as a main effect. However, the interaction between [IV] and [moderator] in Model [Y] was [positive/negative] and significant (β = [value], p < [threshold]), lending support to Hypothesis [N+1]. Marginal effects at [±1 SD] of [moderator] revealed a significant effect of [IV] on [DV] under [low/high moderator] conditions (dy/dx = [value], p < [threshold]) but not under [opposite] conditions (dy/dx = [value], n.s.). This pattern suggests that [IV] does influence [DV], but primarily under [boundary condition].
+**与原骨架差异**: 当主效应假设被拒绝、但交互效应支撑条件关系时，本骨架将"失败"重新框定为理论条件化——方向正确但不显著→交互显著→条件分解→"does influence, but primarily under"。关键技巧：(1) 先诚实承认 H1 不被支持；(2) 迅速过渡到"However..."；(3) 报告边际效应的条件显著性；(4) 最后一句"does influence... but primarily under" 将叙事从失败转向边界发现。诚实边界：事后将不显著主效应重新框定为边界条件需要理论支持——如果交互没有事前假设，不能这样做。
+
+### 变体 9: 调节效应边际效应的单侧显著报告 (1篇高价值)
+**来源论文**: Mannor, Wowak, Bartkus & Gomez-Mejia 2016 (Strategic Management Journal)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-07
+**槽位**: R4
+**骨架**:
+> To further explore the nature of this interaction, we examined the conditional marginal effects of [IV] on [DV] at [low] and [high] levels of [moderator] (typically [±1 SD] from the mean). When [moderator] was [low/high], [IV] had a [positive/negative] and significant effect on [DV] (dy/dx = [value], p < [threshold]). In contrast, when [moderator] was [opposite level], the effect was not statistically different from zero (dy/dx = [value], n.s.). [Figure X] illustrates this pattern.
+**与原骨架差异**: 标准交互报告通常报告两端的简单斜率，但当一侧显著、一侧不显著时，需要明确区分而非对称报告。本骨架使用"dy/dx"而非"simple slope"措辞（在 Stata 的 margins 框架下更自然），且明确将不显著侧标注为"not statistically different from zero"而非暗示有方向。
+
+### 变体 10: ΔR² + 条件边际效应嵌入经济显著性 (1篇高价值)
+**来源论文**: Mannor, Wowak, Bartkus & Gomez-Mejia 2016 (Strategic Management Journal)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-07
+**槽位**: R5
+**骨架**:
+> We assessed the economic significance of [IV]'s effect by examining the incremental variance explained (ΔR²) when [IV] and its interaction with [moderator] were added to the baseline model. The addition of [IV] and [moderator × IV] increased R² by [Δvalue] ([F_stat], p < [threshold]), indicating that the conditional relationship accounts for meaningful variation in [DV] beyond the control variables. Under [condition_A] ([moderator] at [level_A]), a [1-SD/unit] increase in [IV] is associated with a [N]% change in [DV] relative to its mean, representing a substantively important shift. Under [condition_B] ([moderator] at [level_B]), the marginal effect is negligible ([value], n.s.).
+**与原骨架差异**: 将 ΔR² 和条件边际效应百分比联合使用来论证经济显著性：(1) ΔR² 论证"模型改进显著"；(2) 条件分解论证"在特定条件下效应有实质意义"；(3) 不显著侧的 negligible 声明呼应变体9的单侧显著性。
+
+### 变体 11: 边际显著 90% CI 双区间透明报告 (1篇高价值)
+**来源论文**: Bamberger, Homburg & Wielgos 2021 (Journal of Marketing)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-07
+**槽位**: R3/R8
+**骨架**:
+> The total effect of [IV] on [DV] is [directional] but reaches only marginal statistical significance (Est. = [value], p < .10, 95% CI: [[lower], [upper]] crosses 0, 90% CI: [[lower], [upper]] does not cross 0). This suggests that [theoretical claim] receives weak but directionally consistent support.
+**与原骨架差异**: 与"p < .10"的简单声明相比——(1) 同时报告 95% 和 90% 两个 CI；(2) 明确指出哪个 CI crosses 0、哪个不跨；(3) "weak but directionally consistent support" 是标准措辞。诚实边界：p < .10 只能在有理论预测方向且与理论一致时使用；不能用于探索性分析。
+
+### 变体 12: R7 补充分析作为跨样本稳健性复制 (1篇高价值)
+**来源论文**: Mannor, Wowak, Bartkus & Gomez-Mejia 2016 (Strategic Management Journal)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-07
+**槽位**: R7
+**骨架**:
+> We conducted a supplementary analysis using an alternative sample to examine whether our findings generalize beyond [primary_sample]. Specifically, we replicated our core models using [alternative_sample: e.g., a sample of public firms from the same industry / external survey data / a different time period]. The results ([Appendix Table]) indicate that [key findings: e.g., the main effect of IV on DV remains significant (β = [value], p < [threshold]); the interaction between IV and moderator remains significant (β = [value], p < [threshold])]. These supplementary findings increase confidence that our results are not idiosyncratic to [primary_sample] and generalize to [broader context].
+**与原骨架差异**: 跨样本复制比替代测量复制更高级——不是同一数据的另一种测量方式，而是完全不同的数据源/样本。关键：(1) 明确标注为"supplementary"而非核心发现；(2) 声明目的（generalizability > robustness）；(3) 与主分析并行的 replica 结构（逐假设报告方向+显著性）。适用于主要分析受限于特定样本（如访谈/实验样本）的研究。
+
+### 变体 13: R5 交互效应百分比经济显著性 — 联合变化的幅度解释 (1篇高价值)
+**来源论文**: Li, Chiu, Kong, Cropanzano & Ho 2026 (Journal of Management)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-07
+**槽位**: R5
+**骨架**:
+> A [N]% increase in [IV] and [moderator] was associated with a [N]% increase in [DV] around the [event]. / A [N]% increase in [IV] and [moderator] was associated with a decrease of [N] [units] in [DV].
+**与原骨架差异**: 现有变体3（Darby Quartile Penalty Table）、变体10（Mannor ΔR²+条件边际效应）的经济显著性均针对主效应或调节效应的条件分解。本骨架针对的是**交互效应本身的联合经济含义**——当 IV 和 moderator 同时变化时的幅度翻译。Li et al. 的独特策略：(1) 将交互效应的经济显著性从"simple slope at ±1SD"翻译为"1% joint increase → Y% change"；(2) 对于不同的 DV 使用不同的翻译单位——百分比（ATV: "% increase"）和绝对单位（sentiment: "decrease of N units"）；(3) 嵌入在 R3 假设检验段落后立即给出，而非独立段落。适用于连续×连续的交互效应（特别是 LIWC 文本变量，其自然单位就是百分比）。
+**诚实边界**: 联合变化的解释（"1% increase in X and M → Y% change in DV"）假设 IV 和 moderator 同时同方向变化，这在现实中可能不成立——应补充说明"when both increase by 1%"而非暗示它们总是共变。
+
+### 变体 14: R4 低基础率调节变量的边际效应直方图 — 替代传统 ±1SD 线图 (1篇高价值)
+**来源论文**: Li, Chiu, Kong, Cropanzano & Ho 2026 (Journal of Management)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-07
+**槽位**: R4
+**骨架**:
+> We further plotted the marginal effects using histograms. Given that [moderator] has a low base rate ([N]%), for easier interpretation, we display different levels of [moderator] based on the actual counts of [moderator_unit] ([count_1], [count_2], [count_3], and [count_4] [units]). Figure [N] shows that [IV] was more [positive/negative] related to [DV] when [moderator] was higher. / For [DV_2], we graphed the interaction based on cases without [moderator_unit] and those containing such [units], since most observations with [moderator] in this sample used one [moderator_unit]. Figure [N] illustrates that [IV] [effect_description] under higher [moderator].
+**与原骨架差异**: 传统交互效应图使用 ±1SD 线图，但低基础率变量（如 CEO 死亡词使用率 3.61%）的 ±1SD 可能落入负值区域或无实际对应的观测值。Li et al. 的解决方案：(1) 使用**边际效应直方图**替代传统线图——X轴为 moderator 的实际离散值（0, 1, 3, 5 词），Y轴为 IV 的边际效应；(2) 在极端低基础率时（如仅 0 vs ≥1），退化为二分类比较图——"cases without death words vs cases with death words"；(3) 图中附置信区间条。关键策略：不假装低基础率变量是连续的，而是**按实际取值离散化展示**。适用于任何稀有文本特征、罕见事件计数、或高度偏态的调节变量。
+**诚实边界**: 边际效应直方图（或离散比较图）必须标注每个 bin 的观测数量——低基础率变量的某些 bin 可能仅包含极少数观测，此时边际效应估计不稳定。若某 bin N < 30，应在图中或注释中标记。
+
+### 变体 15: R7 五威胁标签化稳健性序列 — RIR+Oster+CEM组合 (1篇高价值)
+**来源论文**: Li, Chiu, Kong, Cropanzano & Ho 2026 (Journal of Management)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-07
+**槽位**: R7
+**骨架**:
+> We conducted a series of supplementary analyses to determine the robustness of our findings. First, to rule out the possibility of [threat_1: omitted variable bias], we performed the [test_1: RIR test] and [test_2: Oster's delta test]. The results from these tests indicate that our empirical findings are robust against [threat_1] ([appendix_location]). Second, we checked whether [alternative_explanation: e.g., death communication type] interacted with [IV] and [moderator]; however, we found no meaningful moderating effect on [DV] (see [appendix_location]; also refer to our [prior_studies] for the [related_type] results related to this analysis). Third, it is likely that [specific_subsample: e.g., pharmaceutical firms] may [bias_direction: use more death-related language]; we tested our models by excluding [subsample] and found consistent results ([appendix_location]). Fourth, since recent studies have measured [construct] using [alternative_measure] ([citation_1]; [citation_2]), we substituted [original_measure] with [alternative_measure]. The results show no direct effect or interaction with [IV] across the models. Additionally, the findings remain consistent when [alternative_measure] is included as a control. Finally, given the low base rate ([N]%) of [condition], we employed coarsened exact matching (CEM) to create a matched sample to reduce potential bias in the analysis. For the matching criteria, we included [matching_variables: e.g., quarter, analyst recommendation, firm size, call length, CEO gender] ([citation_1]; [citation_2]; [citation_3]). The percentage of [condition] increased to [N]% in the matched sample, aligning closely with the main test results based on the full sample ([appendix_location]). A summary of our results is available online in [appendix_summary].
+**与原骨架差异**: 现有变体2（叙事型逐威胁组织）提供了标准四威胁模板（omitted variables + reverse causality + measurement error + alternative estimator）。Li et al. 升级为**五威胁+两稀有检验组合**：(1) RIR + Oster's delta 联合处理遗漏变量——这是 recent 顶刊（特别是金融/会计领域）的 gold standard，替代传统的"add more controls"；(2) 死亡类型分析——将 moderator 分解为 literal vs pseudo 子类型并检验是否调节主交互，创建"null interaction on interaction"的 meta-robustness；(3) 制药企业排除——针对特定行业的混淆检验（pharma firms 可能更频繁使用死亡相关语言）；(4) 替代测量替换——独立董事死亡替代 CEO 死亡词（construct-level replication）；(5) CEM 匹配处理低基础率选择偏误——匹配后的 moderator 比率从 3.61% 升至 11.33%。最后以 "A summary of our results is available online in Appendix [N]" 收尾。
+**诚实边界**: RIR + Oster 组合需要在 Methods 或 Appendix 中解释两个检验的选择参数（如 RIR 的 replacement threshold、Oster 的 δ 和 Rmax）。仅说 "results are robust to omitted variable bias" 而不报告参数 → 审稿人会要求补充。
+
+### 变体 16: R2 7模型层次回归表导航 — 主效应→双向→三向递进 (1篇高价值)
+**来源论文**: Ahmadi, Khanagha, Berchicci & Jansen 2017 (Journal of Management Studies)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-07
+**槽位**: R2
+**骨架**:
+> [Table N] presents the descriptive statistics and correlations and [Table N+1] presents the results of the regression analyses. The power of the full model is above [N] per cent. Model 1 includes the main effects, the traits, and manipulations, to test hypotheses [H_labels]. We find that [control_finding_of_note: e.g., complexity has a direct and positive effect on DV, and this suggests that, when faced with complex decision-making tasks, managers tend to embrace exploratory activities]. Turning to our main independent variables, we find that [H_summary: e.g., the regulatory focus trait is associated with the DV]. [IV_1] is found to be [direction] associated with [DV] (B = [value], SE = [value], p < [threshold]), while [IV_2] is [direction] associated with it (B = [value], SE = [value], p < [threshold]). These findings are consistent with hypotheses [H_labels].
+>
+> To test hypothesis [H_interaction] relating to [moderator mechanism: e.g., regulatory fit], we followed [citation] and included the interaction of [moderator] and [IV_trait] in Models [N] to [N+n]. We find that the interaction between [condition_A] and [trait_A] is [significant/not statistically significant]. Thus, our hypothesis [H_label] is [supported/rejected]. However, the interaction between [condition_B] and [trait_B] is found to be [significant] (B = [value], SE = [value], p < [threshold]). The simple slope test confirms the difference between slopes (t = [value], p = [value]). To ease the interpretation, we plotted the interaction effect. Figure [N] shows that [condition_B] can intensify the [direction] effect of [trait_B] on [DV]. Model [N+final] includes both interaction terms.
+>
+> Model [N+final+1] shows the results of the three-way interaction between [moderator_1], [moderator_2], and [IV]. The coefficient is statistically significant (B = [value], SE = [value], p < [threshold]), which is consistent with hypothesis [H_3way]. Further, we tested the conditional effect of two-way interactions at the two values of [moderator_1]. The result confirmed that the two-way interaction is indeed significant (B = [value], p < [threshold]) under the high [moderator_1] condition, but non-significant (B = [value], p > [threshold]) under the low [moderator_1] condition. Moreover, we tested the difference between simple slopes. The difference is significant (t = [value], p < [threshold]) between the slope of the [condition_A]-high [moderator_1] condition and the slope of the [condition_B]-high [moderator_1] condition. However, a similar test on the difference between the slope of the [condition_A]-low [moderator_1] condition and the slope of the [condition_B]-low [moderator_1] condition proved to be non-significant (t = [value], p > [threshold]).
+**与原骨架差异**: 本骨架是**实验层次回归的完整表导航模板**，适用于拥有多个特质IV、多个操纵调节变量、两向和三向交互的实验设计。Ahmadi et al. 使用7模型递进结构：(1) M1主效应（trait IV + manipulated variables）；(2) M2-M4两向交互（逐个添加交互项，Higgins et al. 2003范式）；(3) M5-M7三向交互（逐个添加三向项）。关键策略：(a) 将控制变量的显著发现也纳入叙事——"complexity has a direct and positive effect... this suggests that..."——即使不是假设的一部分，也为后续交互提供了情境锚定；(b) 逐个假设报告而非一次性报告所有模型——每段对应一个假设/一组假设，M1→H1a+b, M2-M4→H2a+b, M5-M7→H3a+b；(c) 三向交互的条件分解——在主效应中测试"在哪个调节水平上两向交互显著"，再用t-test比较跨条件的简单斜率差异。适用于任何含多个trait IV + 多个manipulated moderator的2×2实验设计。
+**诚实边界**: 7模型表可能过于密集——必须在表注中明确每个模型包含哪些变量。若某些交互项的加入导致其他系数符号反转或显著性变化（如promotion focus从Model 1显著到Model 2不显著），必须在正文中讨论而非沉默。
+
+### 变体 17: R3 主假设检验 — 倒 U 型关系（Lind-Mehlum 三步 + 转折点 CI + Cohen's d）(1篇高价值)
+**来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
+**验证状态**: 通过（单篇入库，待第二篇交叉验证）
+**写入日期**: 2026-07-08
+**槽位**: R3
+**骨架**:
+> Hypothesis [x] predicted that [predictor] would have an inverted U-shaped relationship with [outcome]. In Model [y] of Table [z], we tested this hypothesis by introducing both the linear and quadratic terms of [predictor]. The result shows that [outcome] first increases significantly with [predictor] (b = [linear], p = [p-value]), then decreases significantly as [predictor] continues to increase (b = [quadratic], p = [p-value]). This result indicates a curvilinear relationship (inverted U-shape) between [predictor] and [outcome], with a [effect-size] effect size (Cohen's d = [value]).
+>
+> We examined the marginal effects of this relationship following the three steps suggested by Lind and Mehlum (2010). First, we examined whether the second-order term is significant and of the expected sign; this is confirmed by the result. Second, we tested whether the slope is indeed sufficiently steep at both ends of the data range of [predictor]. Using the "margins" command in [software], we confirmed that when [predictor] = [low_value], the slope dy/dx = [value] (p = [p-value]), and when [predictor] = [high_value], the slope dy/dx = [value] (p = [p-value]). Third, we tested whether the turning point is located within the data range of [predictor]. We confirmed this using the "nlcom" command in [software] by showing that the inverted U-shape turns when [predictor] = [turning_point] and that the 95% confidence interval for the turning point [[lower], [upper]] is within the value range of [predictor]. We provide additional support by plotting this relationship in Figure [X]. These findings suggest that Hypothesis [x] is supported.
+**与原骨架差异**: OLS-FE.md 现有 16 个变体全部针对线性关系或线性交互，曲线关系报告完全空白。本骨架提供顶刊倒 U 型关系的标准协议：线性/二次系数 → 形状判断+效应量 → Lind-Mehlum 三步（二阶项符号、两端斜率、转折点在数据范围内）→ 转折点 95% CI → 图形 → 支持判断。**范式排他性**: 多项式 OLS/FE 专用；Logit/Probit 需替换为 predicted probability / odds ratio 解释。
+**诚实边界**: 曲线关系的 Cohen's d 计算应说明基准（如基于二次项或简单斜率差异），不可直接套用线性交互的 d 公式；须在 Methods 或附录说明效应量计算方式。
+
+### 变体 18: R4 曲线调节效应 — 倒 U 型被调节（二阶交互项符号 + Cohen's d + flatten/steepen 图形解释）(1篇高价值)
+**来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
+**验证状态**: 通过（单篇入库，待第二篇交叉验证）
+**写入日期**: 2026-07-08
+**槽位**: R4
+**骨架**:
+> In Model [N], the interaction terms between [moderator] and both the linear and quadratic terms of [predictor] are introduced in order to test Hypothesis [N]: whether [moderator] [positively/negatively] moderates the inverted U-shaped relationship between [predictor] and [outcome]. This moderation effect is supported if the second-order interaction term is significantly [positive/negative] ([citation]). As confirmed by our results, the second-order interaction term is indeed [positive/negative] (b = [value], p = [p-value]), with a [small/medium/large] effect size (Cohen's d = [value]). Figure [N] illustrates this moderation effect, showing that the inverted U-shape is [flattened/steepened] when the value of [moderator] is higher, supporting Hypothesis [N].
+>
+> Model [N+1] is the full model, including all control, independent, and interaction variables; all results from Models [X] hold.
+**与原骨架差异**: 现有 OLS-FE R4 变体（变体 9、10、13、14）均针对线性交互的边际效应或百分比解释，未覆盖二次项×调节变量的曲线调节。关键语言：**二阶交互项符号预期**（positive/negative）决定 flatten/steepen；**flattened/steepened** 描述整个曲线形状变化；**M6 全模型一句收尾**确认各独立模型结果在全模型中稳定。**范式排他性**: 二次项 × 连续调节变量专用；若调节变量为二分/类别需调整图示语言。
+**诚实边界**: 曲线调节的 Cohen's d 计算应基于二阶交互项或简单斜率差异，不可直接套用线性交互的 d 公式；须在 Methods 或附录说明效应量计算方式。
+
+### 变体 19: R2 模型序列 — 多项式主效应 + 多个曲线调节 (1篇高价值)
+**来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
+**验证状态**: 通过（单篇入库，待第二篇交叉验证）
+**写入日期**: 2026-07-08
+**槽位**: R2
+**骨架**:
+> We ran [estimator] models following a hierarchical approach: Model 1 includes only the control variables, while Models 2 through [N-1] add the independent and interaction variables. Model [N] is the full model, including all independent and interaction variables. [Variance inflation factor (VIF) scores were calculated for all models; none of the maximum VIFs exceed [value], which is substantially lower than the rule-of-thumb cut-off of 10 ([citation]).] [We then used [procedure] in [software] to conduct [diagnostic test], which showed [result].] We also ran the [estimator] models using non-centered data; the results are consistent. Since centered estimations can make interpretation of the results less straightforward ([citation]), we report estimations using the original variable values in Table [z].
+**与原骨架差异**: 与现有变体 16（Ahmadi et al. 7 模型 trait × manipulation × complexity 实验设计）不同，本结构是面板数据中的 M1 控制 → M2 多项式主效应 → M3-M5 分别加入不同曲线调节 → M6 全模型。关键：层次结构为理论服务，让读者既能看清每个假设的干净证据，又能验证结果在全模型中稳定。
+
+### 变体 20: R1 描述性统计与诊断 — 多项式/交互模型 (1篇高价值)
+**来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
+**验证状态**: 通过（单篇入库，待第二篇交叉验证）
+**写入日期**: 2026-07-08
+**槽位**: R1
+**骨架**:
+> Table [x] reports descriptive statistics and correlations for all variables, including the quadratic and interaction terms. We mean-centered the variables before creating quadratic and interaction terms in order to reduce non-essential ill-conditioning between independent variables and their higher-order terms ([citation]). The dependent and independent variables show considerable variance, and the correlation coefficients are consistent with our expectations.
+>
+> We ran [estimator] models following a hierarchical approach: Model 1 includes only the control variables, while Models 2 through [N-1] add the independent and interaction variables. Model [N] is the full model, including all independent and interaction variables. Variance inflation factor (VIF) scores were calculated for all models; none of the maximum VIFs exceed [value], which is substantially lower than the rule-of-thumb cut-off of 10 ([citation]). We then used [procedure] in [software] to conduct the [citation] multicollinearity diagnostic test, which showed that the condition number for our complete model is [value], well below the threshold of [threshold]. We also ran the [estimator] models using non-centered data; the results are consistent. Since centered estimations can make interpretation of the results less straightforward ([citation]), we report estimations using the original variable values in Table [z].
+**与原骨架差异**: write-results SKILL.md 的 R1 通用段落未覆盖多项式/交互模型特有的 mean-centering、condition number 和非中心复制三重诊断。本文提供了完整且简洁的整合范例：诊断不是为了例行公事，而是为了说明"高阶项和交互项没有造成多重共线性问题"，并解释为何最终报告非中心化系数（便于解释）。
+
+### 变体 21: R8 补充/事后分析 — 枚举清单 + 附录引用 (1篇高价值)
+**来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
+**验证状态**: 可选变体（中价值）
+**写入日期**: 2026-07-08
+**槽位**: R8
+**骨架**:
+> We conducted [N] additional analyses, either as robustness checks or to gain additional insights into the primary relationships. These analyses investigated (a) [analysis_1]; (b) [analysis_2]; (c) [analysis_3]; (d) [analysis_4]; (e) [analysis_5]; and (f) [analysis_6]. Details of these analyses are available in [Appendix].
+**与原骨架差异**: 现有 R8 变体 5 是 MCMC 中介的详细展开式。本文展示当稳健性/探索性分析条目较多时，正文可用枚举清单指向附录的简洁策略。关键：用 "either as robustness checks or to gain additional insights" 同时标注两类目标，但缺少逐条 threat 说明——若稳健性分析是核心识别策略的一部分，建议改用变体 1（Table 9 矩阵）或变体 2（叙事型逐 threat 组织）。
+**诚实边界**: 将稳健性检验仅作为枚举清单可能削弱内部效度叙事；若可能，应在正文或附录中为每项分析标注其回应的具体威胁或探索性问题。
+
+## 反模式
+
+| 反模式 | 表现 | 应做 |
+|--------|------|------|
+| **稳健性检验仅在 4.1 Post-hoc 枚举带过** | 正文未按 threat 组织稳健性叙事，仅列出分析名称 | 少量稳健性用变体 2 叙事型；大量稳健性用变体 1 Table 9 矩阵 |
+| **曲线关系仅报线性+二次系数** | 倒 U 型关系未做 Lind-Mehlum 三步验证和转折点 CI | 使用变体 17 的完整协议 |
+| **曲线调节只说交互显著** | 未解释二阶交互项符号、未用 flatten/steepen 描述曲线形状 | 使用变体 18 的图形语言 |
+| **多项式/交互模型未报告 mean-centering 和 condition number** | 高阶项和交互项可能造成多重共线性但未诊断 | 使用变体 20 的三重诊断 |
+
+## 诚实边界
+
+- **曲线关系效应量**：Cohen's d 的计算基准需在 Methods 或 Appendix 说明，不可直接套用线性公式。
+- **转折点 CI**：转折点置信区间必须落在数据范围内，否则倒 U 型证据不足。
+- **非中心复制**：mean-centering 后报告非中心化系数是可选策略，但需解释为何更便于解释；若中心与非中心结果不一致，需讨论。
+- **Post-hoc 标签**：将 "robustness checks" 与 "additional insights" 并列时，应逐条标注哪些是确证性稳健性、哪些是探索性分析，避免审稿人质疑。

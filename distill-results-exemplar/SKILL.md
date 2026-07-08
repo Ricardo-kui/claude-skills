@@ -3,13 +3,25 @@ name: distill-results-exemplar
 description: |
   Results 范文蒸馏 meta-skill。输入单篇或批量论文的 Results 文本，输出结构化提炼报告：段落骨架、表达 DNA、假设-结果节奏、可迁移范式、不可迁移边界、以及 write-results 更新建议。
   核心原则：提炼 HOW they stage evidence, not WHAT they found。不复制具体系数，只提取证据组织的节奏和说服逻辑。
+
+  三层目标：
+  1. **学习顶刊证据展演手法** — 理解 Results 如何组织假设检验、处理非显著、管理读者预期
+  2. **完善 write-results skill** — Results DNA 和跨论文节奏对比反哺主骨架和路由逻辑
+  3. **丰富 academic-writing-corpus** — 验证通过的变体写入 write-results 内部 corpus，corpus 是学习成果的沉淀
+
+  下游：`write-results` (v3.0.0+) 检测到蒸馏请求时自动路由到本 skill。
   触发词：「蒸馏 results」「results 范文分析」「拆解 results」「提取 results 模板」「处理新论文 results」「results 骨架提炼」。
-version: 1.0.0
+version: 1.1.0
 ---
 
 # Role
 
 你是 Results 范文的**结构化蒸馏器**。基于 nuwa-skill 的流水线逻辑和 Pollock 2025 Ch07，将单篇或批量论文的 Results 转化为可复用、可验证、可入库的写作资产。
+
+**你的工作是三层递进**：
+1. **学习顶刊证据展演手法**（Phase 0–2）：估计器分类 → 槽位映射 → 段落节奏 + 表达骨架——回答"这篇论文的 Results 是怎么让读者相信假设被支持/拒绝的？"
+2. **量化和跨论文对比**（Phase 3–4）：Results DNA 指标 + 与已有 corpus 交叉验证——回答"这个节奏模式是独特的还是已经在 corpus 里了？"
+3. **沉淀到 corpus**（Phase 4–5）：仅将验证通过且真正新增的变体写入 `write-results/academic-writing-corpus/[结果类型].md`——corpus 是学习成果，不是目标本身
 
 核心原则：
 - **How > What**：提炼 Results 如何组织假设检验、如何处理非显著结果、如何管理读者预期，而非复制具体系数和 p 值。
@@ -58,9 +70,8 @@ phase_0_results_profile:
   nonsignificant_reporting: "全部报告 / 选择性 / 附录 / 混合"
   economic_significance_placement: "嵌入R3 / 独立R5 / 缺失"
   figure_types: ["交互图", "平行趋势", ...]
-  number_of_tables: "[N]"
-  number_of_hypotheses_tested: "[N]"
-  number_of_nonsignificant_findings: "[N]"
+  hypotheses_tested: ["H1", "H2", ...]
+  nonsignificant_findings: ["H4"]  # 仅列编号，不计数
 ```
 
 ---
@@ -96,14 +107,16 @@ phase_0_results_profile:
 ```yaml
 phase_1_slot_map:
   R1:
-    located: true/false
+    quality: "✅ 强 / ⚠️ 可改进 / ❌ 缺失"
     paragraph_range: "[第X段–第Y段]"
     diagnostics_reported: ["VIF", "correlation matrix"]
+    learn_worth: "值得学/不值得学/反模式 — 1句话原因"
   R3:
-    located: true/false
+    quality: "✅ 强 / ⚠️ 可改进 / ❌ 缺失"
     hypotheses_covered: ["H1", "H2", "H3"]
     four_beat_completeness: "3/3 假设完整四拍"
     nonsignificant_hypotheses: ["H4"]
+    learn_worth: "值得学/不值得学/反模式 — 1句话原因"
   # ... 其余槽位
 actual_sequence: ["R1", "R2", "R3", "R4", "R5", "R7", "R9"]
 deviation_from_standard: "R6 缺失（无不显著假设）; R8 缺失"
@@ -144,7 +157,7 @@ phase_1_5_quality_gate:
     required_slots: ["R1", "R2", "R3", ...]
     present_slots: ["R1", "R2", "R3", ...]
     missing_slots: ["R5"]
-    coverage_rate: "85%"
+    coverage_verdict: "完整 / 轻微缺口 / 严重缺失"
   special_design_markers:
     detected: ["三向交互", "AME+区域显著性"]
     properly_addressed: ["R4 分解了简单斜率"]
@@ -156,6 +169,11 @@ phase_1_5_quality_gate:
     nonsignificant_not_skipped: true/false
   contradictions_or_gaps: ["R3 声称支持 H2 但系数方向相反", "R7 报告了安慰剂检验但在 Methods 中未预告"]
   information_poverty_dimensions: ["未报告置信区间", "未说明 simple slope 的标准误"]
+  skill_implication:
+    - slot: "R3"
+      implication: "四拍完整但缺少 CI → write-results 生存分析 R3 主骨架应增加 CI 报告要求"
+    - slot: "R7"
+      implication: "稳健性按表格罗列而非按威胁 → 建议在 R7 主骨架中强制 threat-based 组织"
 ```
 
 ---
@@ -209,7 +227,17 @@ Results 不是静态描述，而是**节奏化的证据展演**。提炼每个�
   - IV: 拆分为第一阶段→第二阶段两段
   - 实验: 替换为 t-test 格式
 [节奏标记]: [方向][显著性+系数][幅度解释][支持判断]
+[skill_gap]: ADD / EXTEND / REPLACE / SKIP
+[目标文件]: "OLS-FE.md / 生存分析.md / ..."
+[目标槽位]: "R3 / R4 / R7 / ..."
 ```
+
+**skill_gap 标准**：
+- `ADD`：当前 write-results corpus **无**此类骨架 → 新增到目标文件
+- `EXTEND`：当前 **有**但本论文提供了额外维度（如新的交互报告节奏）→ 追加为变体
+- `REPLACE`：当前旧变体质量不如本论文（如缺少 CI）→ 标记替换
+- `SKIP`：与当前 corpus 高度重叠 → 不写入，仅在学习要点中记录
+- 每个骨架必须标注 `目标文件`（如 `OLS-FE.md`）和 `目标槽位`（如 R3）
 
 ### 2.3 Validity Logic 提炼
 
@@ -227,20 +255,22 @@ Results 不是静态描述，而是**节奏化的证据展演**。提炼每个�
 
 量化该论文 Results 的"表达 DNA"，生成 fine-grained profile。
 
-### Results DNA 指标
+### 论证手法诊断
 
-| 指标 | 计算方式 | 用途 |
-|------|----------|------|
-| 段落平均句数 | Results 总句数 / 段数 | 判断该期刊的结果密度 |
-| 每段是否先定位 table/model | 段首句是否提及 "Table X / Model Y" | 判断导航性 |
-| Hypothesis restatement 位置 | 假设重述在段首、表格开头还是段中 | 判断 reader orientation。表格开头重述在表格密集的结果中完全有效 |
-| 四拍完整性 | 主效应段落中方向→显著性→幅度→支持的完整比例 | 判断节奏规范性。非显著假设自然缩减为2-3拍（方向+不显著+无支持），计算时按 adjusted target = 1.0 - (nonsig_ratio * 0.5) 调整 |
-| Hedging 强度分布 | "suggests" / "indicates" / "provides evidence" / "demonstrates" 的频次 | 判断确定性语气 |
-| Causal language 强度 | "associated with" / "consistent with" / "increases" / "causes" 的分布 | 判断因果语言是否越级 |
-| 稳健性 transition 句式 | "To address..." / "One concern is..." / "We also examine..." 的变体 | 丰富 write-results R7 模板 |
-| 非显著处理句式 | "Contrary to our prediction" / "providing no support" / "direction is consistent" | 丰富 R6 模板 |
-| 交互效应引入方式 | "Figure X plots..." / "To interpret..." / "The interaction is significant" 的位置 | 判断 R4 导航模式 |
-| 经济显著性基准 | 使用 one-SD / one-unit / 概率变化 / 市场价值的比例 | 丰富 R5 模板 |
+不量化机械指标（句数、定位率），而是诊断这篇 Results 在证据展演上的强弱之处。
+
+| 维度 | 诊断问题 | 输出 |
+|------|---------|------|
+| **四拍节奏** | 主效应段落是否有方向→显著性→幅度→支持判断的完整节奏？非显著结果如何处理？ | 完整/缺拍 + 非显著处理方式 |
+| **因果语言自律** | "associated with" vs "effect of" 的分布是否匹配估计器设计？ | 越级/一致/过于保守 |
+| **稳健性组织** | 按威胁组织还是按表格机械罗列？ | threat-based / table-based / mixed |
+| **非显著叙事** | 不显著结果是被诚实报告、跳过、还是转化为边界发现？ | 陈述处理方式 |
+| **新颖度** | 这篇 Results 的证据展演节奏与 write-results 当前模板有多少不同？ | 高度新颖 / 部分新颖 / 与模板一致 |
+
+每个诊断维度输出时附带 skill 对比：
+```
+[定性判断] → 与 write-results 当前模板的关系 → [skill 改进方向]
+```
 
 ### 结构化报告输出（fine_grained profile）
 
@@ -249,168 +279,123 @@ Results 不是静态描述，而是**节奏化的证据展演**。提炼每个�
 
 ## Paper Identity
 - 估计器分类: [来自 Phase 0]
-- 期刊/领域: [journal]
-- Results 字数: [N]
-- 与 write-results 模板对齐度: [高/中/低]
+- 期刊: [journal]
+- 新颖度: 这篇 Results 的证据展演节奏与现有模板的差异程度
 
-## Slot Coverage (R1–R9)
-[Phase 1.5 输出]
+## Slot Coverage (R1–R9) — 含 quality + learn_worth
+[Phase 1 输出]
 
-## Rhythm Map
-### R3 四拍节奏
-[每假设的节奏完整性]
+## 值得学的骨架（skill_gap != SKIP）
+[来自 Phase 2.2 — 仅列出真正新增的]
 
-### R7 稳健性节奏
-[按 threat 的节奏模式]
-
-## Distilled Skeletons
-### R3 — 主效应（OLS/FE 版）
-[来自 Phase 2.2]
-
-### R4 — 交互效应
-...
-
-## Results DNA
-[来自 Phase 3 的量化指标]
+## 论证手法诊断
+[Phase 3 诊断维度]
 
 ## Validity Logic Map
 [来自 Phase 2.3]
-
-## Novel Patterns（与现有 28 篇语料库对比后的新发现）
-- 新骨架: ...
-- 新节奏变体: ...
-- 新稳健性组织方式: ...
-
-## Non-Transferable Facts
-[仅适用于该论文的特定统计量、样本特征、表格编号]
-
-## Skill Update Recommendations
-[针对 write-results 的具体更新建议]
 ```
 
 ---
 
-## Phase 4 — 跨论文模式验证与语料库沉淀建议
+## Phase 4 — 技能更新指令生成（Skill Update Instructions）
 
-如果是 `--batch` 模式，在多篇论文提炼完成后执行此阶段。
+本阶段直接生成**可执行的技能更新指令**，回答三个问题：
+1. **改哪个文件** → 精确到 `write-results/academic-writing-corpus/[结果类型].md`
+2. **怎么改** → ADD / EXTEND / REPLACE / SKIP，含具体骨架和插入位置
+3. **为什么** → 与当前 corpus 的差异 + 对 write-results skill 的提升
 
-### 三重验证标准
-
-| 标准 | 问题 | 淘汰门槛 |
-|------|------|----------|
-| **跨论文复现** | 这个 Results 写法是否在多个顶刊范文中出现？ | 只出现 1 次的骨架降级为 "optional variant" |
-| **生成力** | 它能不能指导一篇新论文写出 Results 段落？ | 无法填入占位符生成段落的骨架丢弃 |
-| **范式排他性** | 它是不是某类估计器/设计特别需要？ | 所有估计器都通用的流水账骨架丢弃 |
-
-### 批量聚合分析
+### skill_update_instructions 格式
 
 ```yaml
-phase_4_batch_analysis:
-  estimator_distribution: {"OLS/FE": 5, "DiD": 3, "Logit": 2}
-  rhythm_patterns:
-    dominant_r3_rhythm: "方向→显著性+系数→幅度→支持 (8/10)"
-    r3_variant_with_r2_embedded: "方向→显著性+系数+R²变化→幅度→支持 (2/10)"
-  robustness_organization:
-    threat_based: 7
-    table_based: 2
-    mixed: 1
-  hedging_intensity_by_estimator:
-    OLS/FE: "associated with (主导)"
-    DiD: "effect of... on... (识别支持后)"
-    IV: "increases (因果强度最高)"
-  novel_findings:
-    - "AME+区域显著性图在计数模型中的三段式引入"
-    - "三向交互的简单斜率分解新句式"
-  rejected_patterns:
-    - "只报显著结果，跳过 H4 (选择性报告)"
-    - "稳健性按 Table 3/4/5 罗列，无 threat 定位"
+phase_4_skill_update_instructions:
+  - action: "ADD"
+    target_file: "生存分析.md"
+    target_slot: "R3"
+    insert_after: "变体 5（事件研究 CAR 第二阶段）"  # 语义定位
+    skeleton: "..."
+    reason: "当前 生存分析 R3 变体1-5 全部是 AFT 的 exponentiated beta 解释。本论文展示了指数风险模型的 exp(β)−1 百分比三拍节奏，填补了参数风险模型 R3 的空白。"
+    source_paper: "Mayo_Ball_Mills_2022_POM"
+
+  new_anti_patterns_for_skill:
+    - target_file: "OLS-FE.md"
+      slot: "R7"
+      pattern: "稳健性按表格机械罗列而不按威胁组织"
+
+  new_honesty_boundaries_for_skill:
+    - target_file: "计数模型.md"
+      boundary: "分样本 H3 的 null-in-one-subgroup 只有在分样本基于理论驱动时才可解释为确证性证据"
+
+  skill_main_skeleton_update: []
 ```
 
-### 语料库沉淀建议格式
+### 写入后操作
 
-```yaml
-phase_4_corpus_reference:
-  vault_enrichment:
-    new_skeletons_for_reference:
-      - slot: "R3"
-        estimator: "计数模型"
-        skeleton: "..."
-        source_papers: ["作者_年份", "作者_年份"]
-        vault_path: "fine_grained/batch_N/skeletons/"
-        note: "供写作者参考，不自动写入 skill"
-    patterns_to_note:
-      - slot: "R4"
-        estimator: "三向交互"
-        observation: "2/2 篇三向交互论文都报告了 conditional slope SE"
-        note: "可作为 Vault 注释，供人工判断是否纳入 skill 参考"
-    new_anti_patterns:
-      - pattern: "交互显著后未警告主效应不可独立解释"
-        evidence: "3 篇论文中 1 篇遗漏，导致审稿人质疑"
-    new_honesty_boundary:
-      - boundary: "不得为非 DiD 设计使用平行趋势语言"
-        source: "语料库中无 DiD 设计的论文从不提及 parallel trends"
-  batch_metadata:
-    total_papers_processed: 10
-    estimator_distribution: {"OLS/FE": 5, "DiD": 3, "Logit": 2}
-    novel_skeletons_found: 3
-    rejected_skeletons: 4
-    rejected_reasons: ["仅出现1次", "不可生成段落", "选择性报告反模式"]
-```
-
-**关键原则**：Phase 4 的所有产出都是**参考性注释**，存入 Vault 的 `skill_update_recommendations/` 或 `fine_grained/` 目录，供人工审阅后决定是否纳入 skill。Distill skill 不自动修改 `write-results` 的骨架库。
-
-### 手动写入路径：→ academic-writing-corpus
-
-验证通过的变体骨架可手动写入 `write-results/academic-writing-corpus/[结果类型].md` 的「累积变体」区块。
-
-写入前确认：
-- [ ] 该变体已通过三重验证（跨论文复现 / 生成力 / 范式排他性）
-- [ ] 目标结果类型文件已存在（参见 `academic-writing-corpus/INDEX.md`）
-- [ ] 写入格式：`### 变体 N: [来源论文] (YYYY-MM-DD)` + 验证状态 + 槽位 + 骨架 + 差异说明
-- [ ] 更新文件头 `variants_count` 和 `updated` 字段
-
-**不建立 Phase 4.5 自动管道**——写入由人工判断触发，保持 distill skill 架构精简。
+蒸馏完成后，对 `action != SKIP` 的指令执行写入：更新目标文件、索引、计数。
 
 ---
 
-## Phase 5 — 质量验证与 QC 输出
-
-生成最终的蒸馏质量报告。
+## Phase 5 — 质量验证、QC 输出、技能版本影响
 
 ### QC Checklist
 
-- [ ] **Completeness**: 所有强制槽位（根据估计器类型）已被覆盖
+- [ ] **Completeness**: 所有强制槽位已被覆盖
 - [ ] **Clarity**: 每个骨架都有明确的 [占位符] 和插入位置
 - [ ] **Credibility**: 未将单篇论文的特殊统计发现泛化为通用规则
 - [ ] **Replicability**: 骨架填入具体信息后，能生成类似顶刊风格的 Results 段落
-- [ ] **No Verbatim Copy**: 输出中未出现可直接追溯到原文的连续 8+ 词短语
-- [ ] **Fact Boundary**: 所有不可迁移统计事实（系数、N、p 值）已被明确标记
+- [ ] **Substance not Verbatim**: 具体事实已泛化为 [placeholder]；节奏标记和过渡句式可保留原貌
+- [ ] **Fact Boundary**: 所有不可迁移统计事实已被明确标记
 - [ ] **Causal Language Audit**: 提取的骨架中因果语言强度与估计器类型匹配
 - [ ] **Nonsignificant Audit**: 如果原文有非显著假设，蒸馏报告是否记录了其句式处理
 - [ ] **Robustness Audit**: 稳健性检验是否按 threat 组织，而非机械列表
+- [ ] **Skill Update Audit**: Phase 4 的每个 ADD/EXTEND/REPLACE 指令都有明确的目标文件和插入位置
+
+### skill_version_impact（新增）
+
+```yaml
+phase_5_skill_version_impact:
+  write_results:
+    current_version: "3.0.0"
+    suggested_version: "3.1.0"
+    bump_reason: "ADD 5 个变体 / EXTEND 2 个变体 / 新增 1 个 R7 主骨架要求"
+    changed_files:
+      - "生存分析.md: +2 变体"
+      - "OLS-FE.md: +1 变体"
+    main_skeleton_updates:
+      - "生存分析 R3: 增加 exp(β)−1 百分比翻译拍"
+      - "OLS-FE R7: 强制 threat-based 组织"
+  distill_results:
+    current_version: "1.1.0"
+    suggested_version: "1.1.0"
+```
 
 ### 最终输出物清单
 
-1. **Fine-Grained Profile**（单篇）或 **Batch Aggregation Report**（批量）
-2. **Expression Skeleton Corpus**（新增骨架列表，含节奏标记）
-3. **Rhythm Map**（假设检验节奏、稳健性节奏、过渡节奏）
-4. **Results DNA Metrics**（可对比的量化指标）
-5. **Validity Logic Map**（该估计器类型的证据可信性处理模式）
-6. **Corpus Reference Notes**（供人工审阅的语料库沉淀注释，不自动修改 skill）
-7. **QC Result**（通过/需修正/拒绝入库）
+1. **Phase 4 Skill Update Instructions**（可执行的技能更新指令——核心产出）
+2. **Expression Skeletons**（仅含 skill_gap != SKIP 的骨架）
+3. **Rhythm Map**（假设检验节奏、稳健性节奏）
+4. **Results DNA with Skill Comparison**（DNA 指标 + skill 对比解读）
+5. **Skill Version Impact**（版本号建议 + 变更文件清单）
+6. **学习要点**（3-5 条：这篇论文最值得学的 Results 叙事手法 + 为什么有效）
+7. **可改进之处**（这篇顶刊论文 Results 仍然可以做得更好的地方——反哺 skill 的警告列表）
+8. **QC Result**（通过/需修正/拒绝入库）
 
 ---
 
-## 诚实边界
+## 红线
 
-本 skill 必须 not：
-- **复制原文**：不提取连续 8+ 词的原文短语进入骨架。骨架必须是句法抽象。
-- **虚构统计量**：不编造系数、p 值、样本量、R² 来填充骨架。
-- **泛化统计发现**：不把"某篇论文中 X 对 Y 显著"提炼为"在 OLS 中 X 通常显著"。
-- **因果语言越级**：将 OLS/FE 论文的 "associated with" 升级为 "effect of" 骨架。
-- **忽略非显著结果**：如果原文选择性报告，记录为反模式，不将其正常化。
-- **混淆稳健性与探索性**：把 post hoc 机制检验包装成 robustness check 骨架。
-- **强制覆盖所有槽位**：如果某 Results 确实缺失某槽位，记录为 missing。
+- 骨架用 [placeholder] 泛化具体内容（变量名、系数值、表格编号）；但节奏标记短语（"Thus, Hypothesis [N] was supported" "As Figure [X] shows"）和稳健性过渡句式（"To address this concern"）可原样保留——这些正是要学的证据展演节奏
+- causal language 强度匹配估计器设计（OLS→"associated with", DiD→"effect of"）
+- 骨架中不编造统计量；原文薄弱处如实记录
+- post hoc 机制检验≠稳健性检验，必须明确标注
+- 选择性报告非显著结果 → 记录为反模式，不将其正常化
+
+## 与下游 Skill 的接口
+
+- **`write-results`** — Phase 4 `skill_update_instructions` 直接指定写入文件和插入位置
+- **`results-review`** — Phase 1.5 槽位覆盖 + Rhythm Map 可复用
+
+---
+*基于 Pollock 2025 Ch07、MVP30 范文语料库构建。版本 1.1.1。*
 
 ---
 
@@ -425,155 +410,7 @@ phase_4_corpus_reference:
 | **稳健性机械罗列** | 按 Table 3/4/5 罗列而非按 threat 组织 | 记录为反模式，提取 threat-based 替代骨架 |
 | **忽略非显著** | 原文跳过不显著假设 | 在 R6 部分标记为"缺失"，并记录为非支持处理反例 |
 | **事后分析未标记** | post hoc 检验包装成 confirmatory | 记录为反模式，在 R8 中增加探索性标记骨架 |
-| **批量同质化** | 批量处理时忽视估计器差异 | Phase 0 分类必须先行，不同估计器分桶处理 |
 
----
-
-## 与下游 Skill 的接口
-
-- **`write-results`** — Phase 4 的更新建议直接修改此 skill 的骨架库和 R1–R9 模板
-- **`results-review`** — Phase 1.5 的槽位覆盖检查和 Rhythm Map 可作为 results-review 的审查基准
-- **`paper-review`** — Results DNA 中的 causal language 强度可用于跨 section 对齐检查
-- **`write-discussion`** — R9 过渡段落的提炼可用于优化 Discussion 的入口段落
-- **Vault** — Fine-Grained Profile 存入 Vault 的 `fine_grained/batch_*/[paper]_distilled_results.md`
-
-## 外部资产位置
-
-- **现有语料库索引**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/methods_results/mvp30/_mvp30_methods_results_index.md`
-- **现有 28 篇覆盖矩阵**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/methods_results/mvp30/deep_distillation/_methods_results_28_paper_coverage_matrix.md`
-- **蒸馏产出存放**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/methods_results/mvp30/fine_grained/batch_*/[paper]_distilled_results.md`
-- **更新建议存放**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/methods_results/mvp30/skill_update_recommendations/`
-
-## JSON Output Schema
-
-当使用 `--output-format=json` 时，输出严格符合以下 schema，确保脚本可消费。
-
-```json
-{
-  "$schema": "distill-results-exemplar-batch/v1",
-  "paper_id": "string",
-  "phase_0_results_profile": {
-    "estimator_family": "string",
-    "hypothesis_structure": "string",
-    "robustness_organization": "string",
-    "nonsignificant_reporting": "string",
-    "economic_significance_placement": "string",
-    "figure_types": ["string"],
-    "number_of_tables": "number",
-    "number_of_hypotheses_tested": "number",
-    "number_of_nonsignificant_findings": "number"
-  },
-  "phase_1_slot_map": {
-    "R1": { "located": "boolean", "paragraph_range": "string", "diagnostics_reported": ["string"] },
-    "R2": { "located": "boolean", "table_navigation": "string", "model_sequence_logic": "string" },
-    "R3": { "located": "boolean", "hypotheses_covered": ["string"], "four_beat_completeness": "string", "nonsignificant_hypotheses": ["string"] },
-    "R4": { "located": "boolean", "interaction_terms": ["string"], "simple_slopes_reported": "boolean" },
-    "R5": { "located": "boolean", "magnitude_benchmark": "string" },
-    "R6": { "located": "boolean", "nonsignificant_count": "number" },
-    "R7": { "located": "boolean", "threats_addressed": ["string"], "organization": "string" },
-    "R8": { "located": "boolean", "exploratory_label_present": "boolean" },
-    "R9": { "located": "boolean", "transition_summary": "string" }
-  },
-  "phase_1_5_quality_gate": {
-    "slot_coverage": {
-      "required_slots": ["string"],
-      "present_slots": ["string"],
-      "missing_slots": ["string"],
-      "coverage_rate": "string"
-    },
-    "special_design_markers": {
-      "detected": ["string"],
-      "properly_addressed": ["string"],
-      "inadequately_addressed": ["string"]
-    },
-    "source_sufficiency": {
-      "all_hypotheses_reported": "boolean",
-      "robustness_organized_by_threat": "boolean",
-      "economic_significance_present": "boolean",
-      "nonsignificant_not_skipped": "boolean"
-    },
-    "contradictions_or_gaps": ["string"],
-    "information_poverty_dimensions": ["string"]
-  },
-  "phase_2_distillation": {
-    "R3_rhythm": {
-      "beat_sequence": ["方向", "显著性", "幅度", "支持判断"],
-      "variants": ["string"],
-      "nonlinear_adaptation": "string",
-      "nonsignificant_adaptation": "string"
-    },
-    "R7_rhythm": {
-      "threat_positioning": "string",
-      "test_action": "string",
-      "result_pattern": "string",
-      "conclusion": "string"
-    },
-    "expression_skeletons": [
-      {
-        "slot": "string",
-        "estimator": "string",
-        "skeleton": "string",
-        "transferability": "string",
-        "paradigm_exclusivity": "string",
-        "design_variants": ["string"],
-        "rhythm_tags": ["string"]
-      }
-    ],
-    "validity_logic": {
-      "statistical_conclusion_validity": "string",
-      "internal_validity": "string",
-      "construct_validity": "string"
-    }
-  },
-  "phase_3": {
-    "avg_sentences_per_paragraph": "number",
-    "table_model_positioning_rate": "number",
-    "hypothesis_restatement_position": "string",
-    "four_beat_completeness_rate": "number",
-    "hedging_intensity": "object",
-    "causal_language_strength": "object",
-    "robustness_transition_patterns": ["string"],
-    "nonsignificant_handling_patterns": ["string"],
-    "interaction_figure_introduction": "string",
-    "economic_significance_benchmark": "string"
-  },
-  "phase_4_corpus_reference": {
-    "vault_enrichment": {
-      "new_skeletons_for_reference": [
-        { "slot": "string", "estimator": "string", "skeleton": "string", "source_papers": ["string"], "vault_path": "string", "note": "string" }
-      ],
-      "patterns_to_note": [
-        { "slot": "string", "estimator": "string", "observation": "string", "note": "string" }
-      ],
-      "new_anti_patterns": [
-        { "pattern": "string", "evidence": "string" }
-      ],
-      "new_honesty_boundaries": [
-        { "boundary": "string", "source": "string" }
-      ]
-    },
-    "batch_metadata": {
-      "total_papers_processed": "number",
-      "estimator_distribution": "object",
-      "novel_skeletons_found": "number",
-      "rejected_skeletons": "number",
-      "rejected_reasons": ["string"]
-    }
-  },
-  "phase_5_qc": {
-    "completeness": "boolean",
-    "clarity": "boolean",
-    "credibility": "boolean",
-    "replicability": "boolean",
-    "no_verbatim_copy": "boolean",
-    "fact_boundary": "boolean",
-    "causal_language_audit": "boolean",
-    "nonsignificant_audit": "boolean",
-    "robustness_audit": "boolean",
-    "overall_status": "PASS / FLAG / REJECT"
-  }
-}
-```
 
 ---
 *基于 nuwa-skill 流水线框架、Pollock 2025 Ch07、MVP30 范文语料库构建。版本 1.0.0 — Results 蒸馏 Meta-Skill。*

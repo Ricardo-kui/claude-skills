@@ -14,10 +14,12 @@
 | P2 | 构念 B 界定（定义 + 核心要素 + scope conditions） | 80-150 | ✅ |
 | P3 | 表面相似性说明（为什么这两个构念容易被混淆） | 60-100 | ✅ |
 | P4-P7 | 系统差异辨析（First... Second... Third... Fourth...） | 各 60-100 | ✅ |
-| P8 | 文献对话收束（Taken together, this research establishes...） | 50-80 | ✅ |
+| P8 | 构念辨析合成（Taken together, this research establishes that A and B are distinct along dimensions X/Y/Z...）——非文献综述段，而是差异化成果的合成 | 50-80 | ✅ |
 | P9-P11 | 基于差异的理论机制推演 | 各 70-120 | ✅ |
 | P12-P14 | 假设陈述 | 各 30-60 | ✅ |
-| P15 | T6 Closure：框架锁定 + 假设逻辑显性化 | 80-120 | **准强制** |
+| P15 | [不推荐] 独立 Closure 段落——管理学标准是最后一个假设后即进入 METHODS | — | ✗ 非标准 |
+
+> **注意**: 管理学顶刊不要求独立的 Closure 段落。最后假设的自然收敛即为 Theory 的终点。
 
 ---
 
@@ -69,7 +71,7 @@ more precise predictions about their distinct effects on [outcome]."
 - [ ] 是否避免了"一个构念是另一个的子集"的隐含假设？
 - [ ] 差异是否直接导致了不同的理论预测（而非纯粹的语义区分）？
 - [ ] 辨析是否对应了可检验的假设差异？
-- [ ] T6 Closure 是否存在？
+- [ ] 最后假设是否自然收束（非突然中断）？
 
 ---
 

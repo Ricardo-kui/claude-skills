@@ -28,8 +28,10 @@
 | P3 | T3: Mechanism for Audience A（hazard/devaluation side） | 120-180 | ✅ |
 | P4 | T4: Dialectical Turn — Mechanism for Audience B（opportunity side） | 120-180 | ✅ |
 | P5 | [可选] T5: Boundary Condition / Moderation | 60-100 | ⚠️ |
-| P6 | T6: Temporal/Process Reconciliation | 80-120 | **准强制** |
-| P7 | T7: Empirical Context Transition | 60-100 | ✅ |
+| P6 | Reconciliation 收束（"We argue that both perspectives can be true because..."）——不附加独立 Closure 段 | 80-120 | ✅ |
+| P7 | [可选] Empirical Context Transition | 60-100 | ⚠️ |
+
+> **注意**: 管理学顶刊不要求独立的 Closure 段落。辩证对立的 reconciliation 即为 Theory 的终点。
 
 ---
 
@@ -167,7 +169,9 @@ than [entities] with [opposite state].
 
 ---
 
-## T6: Temporal/Process Reconciliation（准强制）
+## Reconciliation 收束句（嵌入最后假设推导段末尾）
+
+辩证对立型的 reconciliation 嵌入最后一个假设推导段的末尾（2-3 句），而非独立段落。功能是将对立预测整合为统一的理论叙事。
 
 ```
 The above hypotheses propose that [state] makes [entities] [adjective A] to 
@@ -176,16 +180,15 @@ This may seem [ironic/paradoxical], given that [audience B] aim to [goal that
 requires audience A's eventual acceptance]. But it is important to remember that 
 [temporal/contextual distinction: e.g., audience B invests in early-stage entities, 
 audience A patronizes later-stage survivors]. As a result, reactions from these 
-two audiences may form a complementary [two-stage / sequential] process. 
-[Audience B] first [action: sort through and choose promising], [audience A] then 
-[action: choose from survivors].
+two audiences may form a complementary [two-stage / sequential] process.
 ```
 
 **关键原则**:
-- T6 不是 hand-waving ("both perspectives are valid")
+- Reconciliation 不是 hand-waving ("both perspectives are valid")
 - 必须是 theory-based reconciliation（temporal sequence / contextual separation）
 - 如果两类受众同时在评估同一实体，不能只用 "different perspectives" 替代 reconciliation
 - 如果无法 theory-based reconcile，诚实说明这是 tension to be explored
+- **管理学标准**：此 reconciliation 嵌入最后假设段末尾即可，不需要独立 Closure 段落
 
 ---
 
@@ -256,6 +259,6 @@ with an ambiguous label] (label-level)."
 - [ ] T4 首句是否有明确的 dialectical turn 标记（"Despite research showing..." / "This may be because..."）？
 - [ ] 两类受众的理论区分是否有文献基础（不是随意的 demographic 分组）？
 - [ ] "反转"是否真的方向反转（不是强度变化）？如果只是强弱差异，应路由到 [E] 调节效应型
-- [ ] T6 reconciliation 是否为 theory-based（不只是 "both perspectives are valid"）？
+- [ ] Reconciliation 收束是否为 theory-based（不只是 "both perspectives are valid"）？
 - [ ] T7 是否清晰说明了为什么该行业同时存在两类受众？
 - [ ] H1 和 H2 是否对称（每侧都有 label-level 和 org-level，或都有 parallel 假设对）？

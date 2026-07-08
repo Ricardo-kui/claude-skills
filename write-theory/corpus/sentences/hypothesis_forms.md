@@ -1,5 +1,60 @@
 # 假设陈述句语料库
 
+## 假设形式决策矩阵（Form–Measurement Match）
+
+**核心原则**：假设形式必须同时匹配（1）构念的测量尺度、（2）理论关系的形状、（3）所宣称的理论概念类型（如 differential prediction vs. differential validity）。三者不一致是审稿人判定“假设措辞与理论错位”的常见原因（Pollock 2025, Ch06; Andersson et al. 2014, JIBS）。具体统计检验由 `write-methods` 选择。
+
+### 1. 测量尺度 → 基础形式速查表
+
+| IV 测量尺度 | DV 测量尺度 | 关系形状 | 推荐形式 | 模板句 | 禁用/弱形式 |
+|---|---|---|---|---|---|
+| 二分类 / 类别 | 连续 / 二分 | 线性 | **If-then** | "[Group A] will have [higher/lower] [Y] than [Group B]." | "X is associated with Y"（无方向） |
+| 连续 | 连续 | 线性 | **Continuous** | "The [greater/lesser] the [X], the [greater/lesser] the [Y]." | 用 If-then 表达连续变化 |
+| 连续 | 连续 | 曲线（U 型 / 倒 U 型） | **Curvilinear** | "[X] has a [positive-then-negative / negative-then-positive] relationship with [Y], peaking at [moderate X]." | 拆成两个线性假设 |
+| 连续 | 连续 | 边际递减 | **Diminishing** | "[X] is positively related to [Y], but at a decreasing rate." | 仅用 linear 形式 |
+| 连续/类别 | 连续/二分 | 跨组差异 | **Difference** | "[X] will have a [greater/lesser] effect on [Y] for [A] than for [B]." | 用主效应形式掩盖跨组比较 |
+| 多 IV | 同一 DV | 相对影响 | **Relative comparison** | "[X1] will have a [greater/lesser] effect on [Y] than [X2]." | 分别陈述 H1、H2 但不比较 |
+
+### 2. 调节效应形式决策表
+
+| IV 尺度 | Moderator 尺度 | 理论含义 | 形式 | 假设中应突出的概念 | 假设模板 |
+|---|---|---|---|---|---|
+| 连续 | 连续 | 同向放大 | Enhancing | slope/nature 改变 | "The [positive/negative] effect of [X] on [Y] is **stronger** when [Z] is high." |
+| 连续 | 连续 | 反向削弱 | Buffering | slope/nature 改变 | "The [positive/negative] effect of [X] on [Y] is **weaker** when [Z] is high." |
+| 连续 | 连续 | X 与 Z 同向但交互反向 | Antagonistic | slope/nature 改变 | "Although [X] and [Z] each [positively/negatively] affect [Y], their interaction is [negative/positive]." |
+| 连续 | 二分类/类别 | 关系仅在一组存在 | Existence | 跨组 slope 差异 | "[X] is [positively/negatively] related to [Y] for [A], but unrelated for [B]." |
+| 连续 | 二分类/类别 | 关系方向翻转 | Competing | 跨组 slope/nature 翻转 | "[X] is positively related to [Y] for [A], but negatively for [B]." |
+| 连续 | 连续/类别 | 改变关系强度（r 而非 slope） | Differential validity | strength/correlation 改变 | "The [strength/correlation] of the [X]–[Y] relationship is [greater/lesser] when [Z] is high." |
+
+**关键区分**（Andersson et al. 2014）——这是**理论层面**的区分，具体统计检验由 `write-methods` 根据设计选择：
+- **Differential prediction**：Z 改变 X→Y 的 *nature/slope*；假设中应出现 "effect... is stronger/weaker/changes" 等 slope 语言。
+- **Differential validity**：Z 改变 X→Y 的 *strength/correlation*；假设中应出现 "correlation/strength" 语言，不能用 slope 语言描述。
+
+> **边界提示**：`write-theory` 只要求作者在假设中明确自己提出的是 differential prediction 还是 differential validity；`write-methods` 负责选择对应的统计检验（如 MMR、分组回归、subgroup correlation comparison 等）。
+
+### 3. 关系形状与措辞匹配
+
+| 理论形状 | 推荐动词/短语 | 示例 |
+|---|---|---|
+| 线性正向 | "is positively related to" / "increases" | H1. CEO narcissism increases strategic risk-taking. |
+| 线性负向 | "is negatively related to" / "reduces" | H2. Board independence reduces earnings management. |
+| 倒 U 型 | "has an inverted-U-shaped relationship with" / "peaks at moderate" | H3. Competitive intensity has an inverted-U-shaped effect on innovation. |
+| U 型 | "has a U-shaped relationship with" / "lowest at moderate" | H4. Slack has a U-shaped relationship with R&D investment. |
+| 边际递减 | "is positively related to... but at a decreasing rate" | H5. Firm size increases diversification, but at a decreasing rate. |
+| 阈值/阶梯 | "becomes positive once [X] exceeds [threshold]" | H6. Green investment improves performance only when institutional pressure exceeds a threshold. |
+| 条件/必要 | "Given [condition], [prediction]" | H7. Given high market turbulence, decentralization improves adaptation. |
+
+### 4. 假设形式 QC 检查清单
+
+- [ ] IV/DV 的测量尺度是否与假设形式一致？（连续变量不用 if-then；分类变量不用 continuous 形式）
+- [ ] 理论关系形状是否在假设中明确？（线性/曲线/条件/阈值）
+- [ ] 调节假设是否区分了 differential prediction 与 differential validity，且措辞与概念类型一致？
+- [ ] 是否存在 "X is associated with Y" 等无方向、无形式的模糊措辞？
+- [ ] 假设编号（H1a/H1b 或 H1/H2）是否反映了理论结构而非随意分组？
+- [ ] 每个假设是否都能从文中 why-chain 直接推导，而非仅在图/表中存在？
+
+---
+
 ## 基础关系
 
 | 形式 | 模板 | 变量要求 |

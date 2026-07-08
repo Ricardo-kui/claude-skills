@@ -51,38 +51,38 @@ else:
 
 ## 验证 2：叙事阶段完整性（四阶段检查）
 
-**问题**：Theory 是否完整经历了 Knot Inheritance → Deepening → Tying → Fully Tied？
+**问题**：Theory 是否完整经历了 Knot Inheritance → Deepening → Tying（最后假设自然收敛进入 METHODS）？
 
 **阶段判定**（每段必须满足至少 1 条标准）：
 
 | 阶段 | 段落位置 | 判定标准（满足任一） |
 |------|---------|---------------------|
 | **Knot Inheritance** | P1 | 包含 knot 承接信号词 + 主角构念定义 |
-| **Knot Deepening** | P2-P4 | 包含构念定义段落 + 文献对话段落 + 理论透镜引入 |
-| **Knot Tying** | P5-P(N-1) | 包含假设推导段落（why chain + hypothesis statement） |
-| **Knot Fully Tied** | P(N) = T6 Closure | 包含总结信号词（"In sum"/"Together"/"In conclusion"）+ 所有假设的回顾 |
+| **Knot Deepening** | P2-P3 | 包含理论透镜引入 + 机制预览（非独立文献综述段） |
+| **Knot Tying** | P4-P(N) | 包含假设推导段落（why chain + hypothesis statement），最后假设自然收敛进入 METHODS |
 
-**四阶段完整性检查**：
+> **管理学惯例**: 不要求独立的 "Knot Fully Tied" 段落（非 Pollock 教科书的 T6 Closure）。理论部分的自然终点是最后一个假设。不要求独立的"文献对话"段落——文献回顾应嵌入构念定义和 why-chain 推导中。
+
+**三阶段完整性检查**：
 - [ ] P1 被判定为 Knot Inheritance
 - [ ] 存在至少 1 段被判定为 Knot Deepening
-- [ ] 存在至少 1 段被判定为 Knot Tying
-- [ ] 最后一段被判定为 Knot Fully Tied
-- [ ] 阶段顺序：Inheritance → Deepening → Tying → Fully Tied（无倒退）
+- [ ] 存在至少 1 段被判定为 Knot Tying（每个假设有 why chain）
+- [ ] 阶段顺序：Inheritance → Deepening → Tying（无倒退，自然进入 METHODS）
 
 **阶段倒退检测**：
 ```
-stages = ["Inheritance", "Deepening", "Tying", "Fully Tied"]
+stages = ["Inheritance", "Deepening", "Tying"]  # 管理学三阶段，无独立的 Fully Tied
 for i in range(1, len(stages)):
     if stages[i] < stages[i-1]:
         mark "阶段倒退"
 ```
 
 **输出**：
-- ✅ **PASS**：四阶段完整且顺序正确
+- ✅ **PASS**：三阶段完整且顺序正确，最后假设后自然进入 METHODS
 - ⚠️ **WARNING**：缺少某个阶段或阶段顺序不完整
-  - 缺少 Deepening → 补充构念定义或文献对话段落
-  - 缺少 Tying → 补充假设推导段落
-  - 缺少 Fully Tied → 添加 T6 Closure 段落
+  - 缺少 Deepening → 补充理论透镜引入或机制预览（非文献综述段落）
+  - 缺少 Tying → 补充假设推导段落（含 why chain）
+  - 注意：不要求独立的 Closure 段落——管理学 Theory 以最后假设为终点
 - ❌ **FAIL**：阶段倒退（如 Deepening 后回到 Inheritance）
   - **修复指令**：调整段落顺序，确保阶段单调推进
 
@@ -170,7 +170,7 @@ for i, paragraph in enumerate(theory.paragraphs):
 - ✅ **PASS**：所有段落服务于 knot
 - ⚠️ **WARNING**：N 个段落可能为 Extraneous
   - **修复指令**：
-    - 如果段落是文献综述但与 knot 无直接联系 → 压缩或删除
+    - 如果段落是文献综述但与 knot 无直接联系（不衔接到 why-chain）→ 压缩或删除
     - 如果段落讨论理论背景但与假设推导无关 → 移至附录或脚注
     - 如果段落是控制变量讨论 → 移至 Methods
 - ❌ **FAIL**：≥2 个段落完全与 knot 无关
@@ -311,7 +311,7 @@ validation_input:
 |-----------|------------------|------------|---------|
 | Knot 连续性 | ✅ 已诊断 | ✅ 已继承 | ✅ 连续 |
 | 角色连续性 | ✅ 已定位 | ✅ 一致 | ✅ 连续 |
-| 叙事阶段连续性 | ✅ Exposition→Denouement Preview | ✅ Inheritance→Fully Tied | ✅ 连续 |
+| 叙事阶段连续性 | ✅ Exposition→Denouement Preview | ✅ Inheritance→Deepening→Tying | ✅ 连续 |
 | Plot 自然浮现 | — | ✅ 无强加 | ✅ 自然 |
 | Extraneous 检测 | — | ✅ 无无关 | ✅ 紧凑 |
 
@@ -346,7 +346,7 @@ validation_input:
 
 ### 6c: Conversational Voice 检查
 - [ ] 无 "It is argued that" / "It is hypothesized that" / "The literature suggests that"？
-- [ ] T6 Closure 以 "We" 开头？
+- [ ] 假设推导以 "We argue/hypothesize" 开头（非 "It is hypothesized that"）？
 - [ ] 无 inflated symbolism？
 - 检测：正则匹配禁用词表
 

@@ -3,7 +3,7 @@ type: canonical_tension
 canonical_id: "02-implicit-assumption-wrong"
 status: ✓ STANDARD
 gap_type: Inadequacy
-cross_paper: VERIFIED
+cross_paper: ROBUST
 generativity: GENERATIVE
 exclusivity: HIGH
 source_papers:
@@ -11,8 +11,10 @@ source_papers:
   - gamache2020 (SMJ, 2020): "While important... considers... broadly" (conflation assumption)
   - han2020 (AMJ, 2020): "Most research on [topic] has treated [construct] as decontextualized"
   - zhao_ding2022 (OS, 2023): "challenges an implicit premise that lower entry barriers mechanically translate into greater product variety" (mechanical-causal-chain assumption; variant D)
+  - weng_yang (JMS): "self-labeled 'theoretical inadequacy' with embedded theory lens — 'While insightful, prior studies have fallen short... This is an important theoretical inadequacy since...'"
 created: 2026-05-18
-source: Extracted from MVP30 narrative_analysis files
+updated: 2026-07-07
+source: Extracted from MVP30 narrative_analysis files + weng_yang distill
 ---
 
 # 02-implicit-assumption-wrong — 隐性假设错误 Tension
@@ -125,6 +127,35 @@ Inadequacy 问题化的核心 Tension：不是"文献遗漏了东西"，而是"�
 - 若 Gap 是构念混淆（A 和 B 被混为一谈），改用变体 B（gamache 型）
 - 若 Gap 是理论不平衡或两个理论推出矛盾预测，改用 `06-theoretical-imbalance` 或 `04-reality-contradicts-consensus`
 - 不能只喊"challenges an implicit premise"而不给替代机制——必须紧跟"varies systematically with [变量]"或对比发现，否则沦为空泛声明
+
+---
+
+### 变体 E：自标Inadequacy+理论嵌入型（weng_yang 型）
+
+**模板**:
+> "While insightful, prior studies have fallen short of thoroughly examining [specific overlooked factor]. This is an important theoretical inadequacy since [reason: why overlooking this factor matters — tie to theory]. [Theory name] asserts that [core theoretical claim with quote] ([citation]). As [key concept] affect how [actors] absorb and interpret information, outline alternatives, and implement eventual decisions, [outcomes] are likely to be altered. Prior research suggests that [related but non-central factors] have strong bearings on [outcomes] ([citations]). In this study, we suggest that [our central claim: the overlooked factor is likely to play a crucial role]."
+
+**来源**: weng_yang (JMS), P2
+
+**原文锚定**:
+> "While insightful, prior studies have fallen short of thoroughly examining the role of CEOs in establishing within-firm pay disparity. This is an important theoretical inadequacy since executives' personal views profoundly affect their decisions and behaviours (Liu et al., 2018; Wowak et al., 2017)."
+
+**关键特征**:
+- 自标 "theoretical inadequacy"——罕见地直接使用 inadequacy 标签，而非依赖隐含语言（如 "overlooks" / "untested assumption"）
+- Tension 段落内嵌微型 Theory Lens（upper echelons），形成 "gap→why matters→alternative lens" 的微型三段论——不需要等到下一段才引入理论
+- 使用理论原文引用（Hambrick & Mason, p. 193）作为权威支撑，而非仅依赖实证引用
+- 结尾句以 positive claim 收束（"In this study, we suggest that..."），而非传统的以 gap 陈述收束——从批评直接过渡到提案
+
+**与变体 A/B/C/D 的区分**:
+- 变体 A（paruchuri）：连续解构两个"未检验假设"（untested assumption）
+- 变体 B（gamache）：指出构念被"笼统对待"（considers broadly → distinguish A/B）
+- 变体 C（han）：指出构念被"去情境化"（decontextualized）
+- 变体 D（zhao/gaba）：挑战"机械因果链"（X mechanically → Y）
+- **变体 E（weng/yang）：自标 inadequacy + 同段理论嵌入 + positive claim 收束**——被挑战的不是一个具体假设，而是文献整体的"忽略内部因素"倾向；理论在同一段内被引入作为替代视角
+
+**适用**: 适用于 Inadequacy × Phenomenon 组合；当被忽略的因素是一个"人/行动者"特征（而非结构/制度因素），且可以用一个成熟理论来论证为什么这个因素重要；期刊接受 "theoretical inadequacy" 标签（JMS, JM, SMJ, AMJ）
+
+**禁忌**: "避免将 'theoretical inadequacy' 用于仅仅是遗漏了变量（那是 Incompleteness）；必须有真正的理论视角缺失；Theory Lens 嵌入 Tension 时不应过度展开（保留详细推演给 Theory section）；positive claim 收束时不要过度承诺（用 'we suggest' 而非 'we prove'）"
 
 ---
 

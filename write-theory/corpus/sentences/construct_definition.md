@@ -60,6 +60,40 @@ On the other end of the spectrum are [构念B], who, on average, emphasize
 
 ---
 
+## 变体 E：三层框架展开+表格对比型（weng_yang 型）
+
+**功能**: 当 IV 是一个可从多个理论透镜（cognitive/social/behavioral）理解的构念时，先展示完整框架再聚焦到其中一个透镜，用表格对比构念两端的差异。
+
+**模板**:
+```
+"In a recent review, [authors] ([citation]) suggest that [IV] has [N] interrelated 
+aspects: [aspect 1], [aspect 2], and [aspect 3]. First, the [aspect 1] lens 
+focuses on [definition + citation]. Second, the [aspect 2] lens focuses on 
+[definition + citation]. Finally, the [aspect 3] lens suggests [definition + citation].
+
+Our study applies the [chosen aspect] lens of [IV] to postulate that [Group A] 
+differ from [Group B] in [N] ways (see Table [N] for a summary). First, 
+[dimension 1: comparison between A and B]. Second, [dimension 2: comparison]. 
+Finally, [dimension 3: comparison].
+
+[Table [N] summarizes these differences across the three dimensions]."
+```
+
+**语料锚定**：
+- Weng & Yang (JMS) — CEO political ideology 通过 Swigart et al. (2020) 三层框架定义，Table I 对比 liberal vs conservative CEOs
+
+**关键特征**:
+- 先展示完整框架（N aspects），再聚焦——让读者知道作者了解全貌但做了有意识的选择
+- Table 嵌入 Theory——将构念对比正式化、可视化（JMS 风格接受；ASQ/SMJ 需谨慎）
+- 三个维度为后续 H1 的两个原因（awareness + openness）提供概念基础
+- "Our study applies the [chosen aspect] lens" 作为聚焦信号——从广泛框架到具体应用的过渡
+
+**适用**: 当 IV 有多重理论透镜且需要选择一个作为分析焦点时；期刊接受 Theory 中的正式表格（JMS, AMJ）
+
+**禁忌**: 表格维度必须与后续假设机制一一对应（不能表格说了三维度但 H1 只用了一个）；不要用表格替代文字论证——表格是总结，文字是论证
+
+---
+
 ## 变体 E：维度独立性论证 (Dimensional Independence Argument)
 
 **适用**: IV 具有多个维度（如 valence, source），且这些维度常被直觉性地误认为同一连续体的两端。需要在 T1 阶段论证它们是概念上独立的维度。

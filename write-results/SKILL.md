@@ -3,17 +3,21 @@ name: write-results
 description: |
   顶刊 Results 填空段落骨架生成器。输入模型类型后输出带 [placeholder] 的可直接粘贴段落。
   覆盖 OLS/FE、Logit/Probit/Ordered Probit、生存分析、DiD、计数模型（含AME+区域显著性）、实验、多研究、IV/2SLS、匹配DiD、堆叠扩散Logit、同伴效应/网络效应、推断二元结果、跨受众构念对比、三向交互、构造暴露分解、双受众平行对比、非显著深化/反方向、定性过程研究/定性发现共十九种结果类型。
-  触发词：「写results」「results模板」「结果部分怎么写」「帮我写results」「result skeleton」「写结果」「假设检验」「交互效应」「稳健性检验」「经济显著性」「平行趋势」「marginal effect」「双受众」「对立结果」「替代解释」。
+  新增风险模型 exp(β)−1 百分比解释变体（R3）、分样本 Wald χ² 跨模型比较变体（R3）、CEM 双向 ATE 稳健性变体（R7）、反向因果 logistic 检验变体（R7）、替代机制交互检验变体（R7）、differential validity 交互结果解释变体（R4）。
+
+  **蒸馏管道**：当用户请求蒸馏论文的 Results 区段（「蒸馏 results」「results 范文分析」「处理新论文 results」「results 骨架提炼」）时，本 skill 不直接处理——自动路由到 `distill-results-exemplar` skill 执行完整的 Phase 0–5 蒸馏协议。蒸馏完成后，验证通过的变体手动写入 `academic-writing-corpus/[结果类型].md`。
+
+  触发词：「写results」「results模板」「结果部分怎么写」「帮我写results」「result skeleton」「写结果」「假设检验」「交互效应」「稳健性检验」「经济显著性」「平行趋势」「marginal effect」「双受众」「对立结果」「替代解释」「hazard model」「风险模型」「survival analysis」「CEM」「split sample」。
   当用户提及系数解释、表格导航、模型序列、robustness check、安慰剂检验、机制检验、非显著深化、方向相反时也应触发。
-  基于 28 篇 MVP30 范文语料库和 Pollock 2025 Ch07。
-version: 2.7.0
+  基于 34 篇 MVP30 范文语料库和 Pollock 2025 Ch07。
+version: 3.1.0
 ---
 
 # Role
 
-你是顶刊论文 Results 的**填空模板生成器**。基于 28 篇 MVP30 范文和 Pollock 2025 Ch07，输出可直接复制到 Word/LaTeX 中、填入用户具体信息即可成段的 Results 骨架。
+你是顶刊论文 Results 的**证据展演结构生成器**。基于 34 篇 MVP30 范文和 Pollock 2025 Ch07，输出带有论证节奏的段落框架——不只是"这里填系数"，而是展示**顶刊 Results 如何用"方向→显著性→幅度→支持判断"的节奏让审稿人相信假设被支持或被拒绝**。
 
-核心原则：Results 是 **falling action**——兑现 Methods 的承诺，用证据回答 Theory 的假设。每个填空段落已经内置了 "方向→显著性→幅度→支持判断" 的节奏，用户只需替换方括号中的占位符。
+核心原则：Results 是说理不是报数。每个段落展示了为什么这种节奏能有效引导读者——假设重述在什么位置、幅度怎么翻译、非显著怎么体面处理、稳健性怎么按威胁组织。
 
 ## 调用方式
 
@@ -65,6 +69,7 @@ version: 2.7.0
 - **DiD/自然实验**：R2 先展示平行趋势/事件研究效度 → R3 主处理效应 → R4 动态效应/异质性 → R7 安慰剂/置换
 - **多研究**：逐研究重复 R1–R8，然后跨研究综合
 - **序数/非线性**：R3 报告系数后紧跟边际效应解释
+- **多项式/曲线关系（inverted U-shape）**：R1 先报告 mean-centering + VIF + condition number → R2 层次模型导航（M1 控制 → M2 主效应线性+二次 → M3-M5 曲线调节 → M6 全模型） → R3 主效应 Lind-Mehlum 三步 + 转折点 CI → R4 曲线调节（二阶交互项符号 + Cohen's d + 图形）
 - **实验**：排除报告 → 操纵检验 → 假设检验 → 机制/稳健性
 - **IV/2SLS**：R2 先报告第一阶段（ relevance / F-statistic ）→ R3 第二阶段假设检验 → R7 排他性约束 / 弱工具变量检验
 - **匹配DiD**：R2 报告匹配后样本平衡 → R3 主处理效应 → R7 重叠支撑 / 匹配敏感性
@@ -211,6 +216,11 @@ Hypothesis [x] predicted that [treatment] would [increase/decrease] [outcome]. M
 Hypothesis [x] predicted that [predictor] would [increase/decrease] [count outcome]. The incident rate ratio for [predictor] is [value] (p < [threshold]), indicating that [interpretation]. Thus, Hypothesis [x] is supported.
 ```
 
+**计数模型完整四拍变体**（Haunschild et al. 2015 ORSC 模式，含 e^β − 1 百分比变化）： 🔬 EXPERIMENTAL（1 篇范文）⚠️ 保守替代：计数模型专用
+```text
+Hypothesis [x] predicted that [predictor] would be [positive/negative] associated with [count outcome]. Consistent with this prediction, the coefficient on [predictor] has a significantly [positive/negative] effect on [outcome] (Model [y] of Table [z]: β = [value], p < [threshold]). These estimates reveal that the occurrence of [event] contributes to a [N]% [increase/decrease] in the rate of [outcome] (the impact implied by a [negative binomial] regression coefficient β is e^β − 1), controlling for [key controls]. Thus, Hypothesis [x] is supported.
+```
+
 **计数模型 AME + 区域显著性变体**（Han 2024 模式，紧跟 IRR 后）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 R3 + 增加 AME 解释句
 ```text
 Because coefficients in count models are difficult to interpret directly, we calculate average marginal effects (AMEs) and identify the region of significance. Figure [x] plots the marginal effect of [predictor] on [outcome] across the range of [conditioning variable / predictor itself]. The marginal effect is [positive/negative] and statistically significant when [condition, e.g., conditioning variable > threshold], but it [attenuates / reverses / becomes insignificant] when [opposite condition]. The turning point occurs at approximately [value], which corresponds to [theoretical interpretation, e.g., the median level of firm resources]. This pattern indicates that [theoretical mechanism] operates primarily within [boundary region].
@@ -285,6 +295,8 @@ Hypothesis [x] predicted that [predictor] would be [positive/negative] associate
 
 ### R4. 交互效应 / 条件效应
 
+> **上游接口**：在解释交互效应前，先确认 `/write-theory` 和 `/write-methods` M7补充 已明确该假设是 **differential prediction**（slope/nature 改变）还是 **differential validity**（strength/correlation 改变）。默认 R4 模板适用于 differential prediction；若 Theory 声明为 differential validity，使用下方的专用变体。
+
 **通用填空段落**：
 
 ```text
@@ -299,6 +311,11 @@ Because the model is nonlinear, we interpret the [predictor × moderator] intera
 **主效应解释警告（当交互显著时，强烈建议紧跟）**：
 ```text
 Because the interaction term is significant, the main effects of [predictor] and [moderator] cannot be interpreted independently. The main effect of [predictor] (β = [value], p = [value]) represents the effect when [moderator] is at its mean, which is not substantively meaningful.
+```
+
+**非线性模型中无显式交互项的调节效应变体**（Haunschild et al. 2015 ORSC 模式，图形+子样本 t 检验）： 🔬 EXPERIMENTAL（1 篇范文）⚠️ 保守替代：通用 R4 段落
+```text
+Hypothesis [x] predicted that the [positive/negative] impact of [predictor] on [outcome] [diminishes/intensifies] over [moderator]. The traditional approach to testing such a contingency effect through interaction terms is inappropriate in the context of our analysis because we adopt a [nonlinear specification] and because the incidence of [treatment] may vary systematically across different levels of [moderator] ([Citation]). As such, we tested this hypothesis through graphical analysis and a formal econometric test of differences in marginal effects of [predictor] across subsamples containing different levels of [moderator]. Using the full models in Table [x], we predicted [outcome] and then plotted the predicted values against [predictor] with a least-square fitted line separately for [low moderator group] and [high moderator group]. As Figures [a] and [b] show, the slope of the fitted line is [less positive / less negative] for [high group] than for [low group], indicating that the marginal impact of [predictor] on [outcome] [diminishes/intensifies] as [moderator] increases. To examine whether the marginal effect of [predictor] is indeed significantly different across levels of [moderator], we split the sample by levels of [moderator] while holding other variables constant at their means. We then conducted t-tests to compare differences in the marginal effect of [predictor] across the subsamples. Results reveal that the influence of [predictor] is [less positive / less negative] for [high group] than for [low group] (t = [value], p < [threshold]). Thus, Hypothesis [x] is supported.
 ```
 
 > **注意**：在部分顶刊（如 SMJ）中，若交互项是理论焦点且主效应本身已不显著，该警告可省略。但包含此警告通常能增强可信度。
@@ -340,6 +357,16 @@ This "switch-off" analysis — documenting that the main effect is strongest whe
 ```text
 Hypothesis [x] predicted that [moderator] would moderate the relationship between [predictor] and [outcome]. Because [theoretical reason for distinct regimes / distribution characteristics], we split the sample by [moderator] into [high-severity / high-group] and [low-severity / low-group] subsamples and estimated separate models for each group. For the [high group], the coefficient on [predictor] is [direction] and [significant/not significant] ([coefficient], [p-value]). For the [low group], the coefficient is [direction] and [significant/not significant] ([coefficient], [p-value]). The pattern indicates that [predictor] [influences/does not influence] [outcome] in the [high group] but [not in the low group / to a lesser extent in the low group], supporting Hypothesis [x]. We note that because we use separate subsamples rather than a pooled interaction term, we do not conduct a formal test of coefficient equality; the pattern should be interpreted descriptively.
 ```
+
+**differential validity 结果解释变体**（当 Theory / M7补充 声明 moderator 改变的是 X–Y 相关强度而非 slope 时）：
+```text
+Hypothesis [x] predicted that [moderator] would change the strength of the [predictor]–[outcome] relationship rather than its slope (differential validity). Following Andersson, Cuervo-Cazurra, and Nielsen (2014), we split the sample by [moderator] into [high group] and [low group] and estimate the [predictor]–[outcome] correlation separately for each group. The correlation is [value] (p [relation] [threshold]) for [high group] and [value] (p [relation] [threshold]) for [low group]. The difference between these correlations is [significant/not significant] according to the [Fisher z-test / χ² test for equality of correlations] ([statistic] = [value], p [relation] [threshold]). Thus, Hypothesis [x] is [supported / not supported].
+```
+
+**differential validity QC**: 
+- 必须报告两组各自的相关系数及其显著性，不能只报告差异检验；
+- 若使用分组回归系数而非相关系数，需在 Methods 中说明理由，否则不能声称检验的是 "strength"；
+- 分组标准必须透明（median split / quartile / 理论阈值），并在 Methods 中预告。
 
 **IV/2SLS 交互效应变体**（second-stage 含交互项时）：
 ```text
@@ -653,9 +680,9 @@ Across Studies [x–y], the evidence converges on [theoretical pattern] while pr
 
 ---
 
-## 按设计类型一键生成示例
+## 按设计类型路由
 
-### 示例：OLS/FE + 交互效应
+具体变体见 `academic-writing-corpus/[结果类型].md`。以下为示例骨架（OLS/FE + 交互效应）：
 
 **输入**：`/write-results OLS/FE --hypotheses="H1: DT -> Routine updating (+); H2: Routine updating -> Innovation (+); H3: DT × AC -> Innovation" --has-interactions`
 
@@ -681,14 +708,12 @@ Taken together, the results indicate that [digital transformation enhances firm 
 
 ---
 
-### ---metadata--- 区块（供下游 Skill 消费）
-
-每次生成 Results 骨架后，必须在输出末尾附加可解析的 JSON 元数据块，封装假设-结果对齐状态和 Results 的"证据 DNA"，供 `/write-discussion`、`/paper-review`、`/distill-results-exemplar` 直接消费。
+### ---metadata---（已废弃——不再生成 JSON 元数据），封装假设-结果对齐状态和 Results 的"证据 DNA"，供 `/write-discussion`、`/paper-review`、`/distill-results-exemplar` 直接消费。
 
 ```json
 ---metadata---
 {
-  "skill_version": "2.5.0",
+  "skill_version": "3.1.0",
   "model_type": "OLS/FE",
   "has_interactions": true,
   "has_mediator": false,
@@ -859,16 +884,12 @@ Taken together, the results indicate that [digital transformation enhances firm 
 - [ ] 稳健性检验和补充分析有明确区分
 - [ ] 交互效应有图示或简单斜率支持
 
-### DNA Metrics（与顶刊范本的 rhetorical 距离）
-- [ ] **四拍完整性**：显著假设严格遵循 "方向 → 显著性 → 幅度 → 支持判断"；非显著假设自然缩减为 "方向 → 不显著 → 无支持"（2-3拍）。整体目标按 adjusted target = 100% - (nonsig_ratio * 50%) 动态调整
-- [ ] **Hedging 强度**：OLS/FE 主导用 "associated with"；DiD 在识别支持后用 "effect of... on..."；IV 可用 "increases"；无 "causes"/"leads to" 越级
-- [ ] **因果语言强度**：因果词强度与 design strength 匹配。面板数据无 "caused"；自然实验在平行趋势支持前用 "associated with"，支持后用 "effect of... on..."
-- [ ] **稳健性 Transition 句式**：每个稳健性检验以 threat 定位开头（"One concern is..." / "To address..."），而非以表格编号开头（"Table 3 uses Tobit"）
-- [ ] **非显著处理句式**：不显著假设使用 "Contrary to our prediction" / "providing no support" / "direction is consistent but not significant"，不得省略或仅写 "not significant"
-- [ ] **交互引入方式**：交互项显著后，必须提供 "Figure X plots..." 或 "To interpret..." 或 simple slopes 分解，且**强烈建议**警告主效应不可独立解释（若主效应已不显著可酌情省略）
-- [ ] **经济显著性基准**：使用 one-SD change / one-unit change / 概率变化 / 市场价值翻译，且与统计显著性同时出现（目标：100%）
-- [ ] **表格导航密度**：每段主效应首句定位 Table 和 Model（"As shown in Model [y] of Table [z]"）（目标：100%）
-- [ ] **假设重述位置**：每假设在段落首句或表格开头重述预测，再报告结果（目标：100%）
+### 论证质量诊断
+- [ ] **四拍完整性**：显著假设 方向→显著性→幅度→支持；非显著诚实缩减为2-3拍
+- [ ] **稳健性按威胁组织**：每个 threat 一段（"One concern is..."），非按表格罗列
+- [ ] **经济显著性嵌入**：1 SD → N unit change / N% / N-day，不只报 β 和 p
+- [ ] **非显著诚实**：所有假设可追溯到明确声明，无跳过
+- [ ] **因果语言自律**：OLS→"associated with", DiD→"effect of", 实验→"caused"
 
 ### 反向审查（可选但建议）
 生成完成后，可使用 `/distill-results-exemplar` 对输出段落进行反向蒸馏审查，生成 Vault 参考注释，供人工判断：
@@ -905,14 +926,9 @@ Taken together, the results indicate that [digital transformation enhances firm 
 - 如果用户有具体的假设和模型，必须将其嵌入模板。
 - 每个表格/模型引用应指向用户的实际表格。
 
-## 外部资产位置
+## 语料与变体
 
-如需查询特定范文的具体措辞或设计变体：
-
-- **叙事分析索引**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/methods_results/mvp30/_mvp30_methods_results_index.md`
-- **28篇覆盖矩阵**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/methods_results/mvp30/deep_distillation/_methods_results_28_paper_coverage_matrix.md`
-- **逐论文精细解构**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/methods_results/mvp30/fine_grained/batch_*/[paper]_fine_methods_results.md`
-- **Pollock Ch07 表达库**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/methods_results/mvp30/fine_grained/_four_paper_expression_corpus_pollock_ch07.md`
+具体变体见 `academic-writing-corpus/[结果类型].md`。新蒸馏结果通过 `distill-results-exemplar` → Phase 4 自动写入。
 
 ---
-*基于 28 篇 MVP30 范文语料库、Pollock 2025 Ch07 和深度叙事分析框架构建。版本 2.2.0 — 填空式模板。*
+*基于 34 篇 MVP30 范文语料库、Pollock 2025 Ch07 构建。版本 3.1.0。*

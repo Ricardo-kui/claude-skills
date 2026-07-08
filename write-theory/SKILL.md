@@ -6,7 +6,7 @@ description: |
   协议层：诊断、路由、QC、跨 Section 对齐。
   语料层：corpus/ 目录下各变体语料文件（段落骨架、句式模板、假设格式、QC检查点）。
   触发词：「写theory」「写理论」「theory template」「理论部分」「hypothesis写作」「调节效应假设」「跨层调节」「构念界定」「机制推演」「why chain」「双受众」「对立机制」。
-version: 3.2.0
+version: 3.4.0
 ---
 
 # Role
@@ -175,7 +175,6 @@ Theory section 的 Rising Action 不仅需要功能推进，还需要 prose 层�
 #### Conversational Voice in Theory
 - **P1**：用 "To resolve the paradox that [knot], we argue that..." 承接
 - **假设推导**：用 "We argue that..." / "We hypothesize that..." 引出每个假设
-- **T6 Closure**：用 "In sum, we have argued that..." 总结
 - **禁止**："It is argued that..." / "It is hypothesized that..." / "The literature suggests that..."（无主语被动）
 
 ---
@@ -207,15 +206,58 @@ Pollock Ch03 用 "stroke and glide"（划桨与滑行）比喻动作与评论的
 | 文献铺垫段落 | 40% stroke / 60% glide | Glide 段落用具体研究场景解释，非纯引用罗列 | 全 glide → "ponderous pace" |
 | 构念定义段落 | 50% stroke / 50% glide | 定义后立即给 1 个例子 | 纯定义无方向 → 读者失去兴趣 |
 
+#### 章节标签惯例
+
+管理学顶刊的 Theory 章节**不一定**有显式的 "Theory and Hypotheses" 标签（验证自 14 篇 MVP30 论文）：
+
+| 标签做法 | 比例 | 典型期刊 |
+|---------|------|---------|
+| 无 "Theory" 标签，直接用主题标题进入（如 "Ingratiation and Resentment"、"State Ownership and Product Innovation"） | ~45% | ASQ, AMJ 主流 |
+| "Theory and Hypotheses" 或 "Theoretical Background" | ~35% | SMJ, JM, JMS |
+| "Literature Review and Conceptual Background" | ~15% | JM 特有 |
+| "Institutional Background" + "Conceptual Background"（或 "Theory"） | ~5% | JMR |
+
+**选择指南**：
+- **ASQ/AMJ 目标** → 推荐使用主题标题，不强制 "Theory" 标签
+- **SMJ/JM/JMS 目标** → "Theory and Hypotheses" 是安全默认
+- **JM 且假设嵌入在文献回顾中** → 可用 "Literature Review and Conceptual Background"
+- **情境特殊、需前置背景** → 见 Phase 1.25 Institutional Background
+
 输出：**推荐的段落序列**。
 
-→ 每段叙事功能标注（新增）：
+→ 每段叙事功能标注：
 ```
 P1: 承接 knot（knot inheritance）
 P2-P3: 加深 knot（knot deepening）
-P4-P7: 机制 tying（knot tying through mechanism）
-P8: knot fully tied（closure）
+P4-P(N): 机制 tying（knot tying through mechanism）
+最后一个假设 → 自然收敛进入 METHODS（无独立 Closure 段）
 ```
+
+---
+
+### Phase 1.25: Institutional Background（可选前置模块）
+
+**适用场景**: 研究情境特殊、读者可能不熟悉制度/行业背景时——如果读者不理解情境，就无法理解后续的理论论证。
+
+**判断标准**（满足任一即考虑添加）：
+- 实证情境涉及特定法律制度（如召回法规、游说披露法、反SLAPP法）
+- 实证情境涉及特定行业惯例（如风险投资 syndicate、FDA 审批流程）
+- 实证情境的 institutional detail 是理论机制的必要前提
+
+**位置**：Introduction 之后、Theory 之前。可作为独立章节（"Institutional Background"）或嵌入 Theory 第一节。
+
+**范文**：
+- Singh & Grewal 2023 (JMR): "Institutional Background" 章节详述汽车召回制度和游说披露法，然后进入 "Conceptual Background"（即 Theory）
+- Shi, Grewal & Sridhar 2021 (JM): "Literature Review" 中包含 SEC FRR44 披露制度的说明
+
+**关键特征**：
+- 描述性而非论证性——说明制度/情境"是什么"，不在此处推演假设
+- 信息密度高——不展开理论对话，只提供读者理解后续论证所需的事实基础
+- 篇幅控制——通常不超过 Theory 总篇幅的 20%
+
+**不需要此模块的情况**：
+- 研究情境是通用商业现象（如 CEO 薪酬、董事会构成、并购）
+- 情境信息可以 1-2 句嵌入 Theory 开篇即交代清楚
 
 ---
 
@@ -286,20 +328,59 @@ pressure over time, and the hazard of recall increases non-linearly with defect 
 
 ### Phase 2.5: Hypothesis Development 段落级逻辑协议
 
-**每个假设推导段落是一个微型论证单元**，通常遵循以下结构，但可根据故事需要灵活调整。
+**每个假设推导段落是一个微型论证单元**。
 
-#### 推荐结构：四段式论证链（4-Part Logic Chain）
+> **核心目标**：本阶段是 Theory 写作的**心脏环节**。不管构建类型是机制推演、调节效应、假设树还是竞争假设，最终都要落实到假设推导段落。本阶段的任务是：为每一个假设生成一个逻辑严密、论证充分、段内布局合理的推导段落。
+
+#### 语料调用（本阶段必读）
+
+按假设推导段落的需要，依次读取以下语料文件。不要跳过：
+
+1. **核心骨架**：`corpus/subprotocols/hypothesis_derivation_patterns.md`
+   → 选择适合的微观动作序列（Anchor→Mechanism→Warrant→Prediction 或 Puzzle Turn 或 Multi-Mechanism Trunk 等）
+
+2. **段落安排**：`corpus/subprotocols/arrangement_patterns.md`
+   → 确定本段是 Warrant-Embedded、Parallel、Cumulative 还是 Evidence-Contrast
+
+3. **证据摆放**：`corpus/subprotocols/evidence_patterns.md`
+   → 为每个 Mechanism Move 选择 Warrant 类型（文献/案例/理论/反事实）和引用句式
+
+4. **微观动作补充**：`corpus/subprotocols/argumentation_patterns.md`
+   → 当需要特殊动作（如反直觉 Anchor、间接调节论证）时调用
+
+5. **调节假设句法**（如适用）：`corpus/subprotocols/bilateral_argumentation_templates.md`
+   → 为调节假设生成 high/low 双边论证
+
+6. **假设形式输出**：`corpus/sentences/hypothesis_forms.md`
+   → 把推导收敛为正式假设的标准句法
+
+#### 标准结构：交织式论证链（Interwoven Logic Chain）
+
+文献引用与理论推理**交织**而非先后排列——这是管理学顶刊的默认写法（验证自 14 篇 MVP30 论文）。
 
 ```
-[1. Topic Sentence]  →  [2. Theoretical Reasoning]  →  [3. Literature Support]  →  [4. Hypothesis Transition]
-        ↓                         ↓                              ↓                            ↓
-  本段的单一理论主张        多步因果链：                前人的 argument/finding       收束推理，引出假设
-  (1-2句)                  X→M1→M2→Y (3-5句)          如何支持每一步 (2-4句)         (1-2句)
+[1. Topic Sentence]  →  [2. Theoretical Reasoning + Literature Support]  →  [3. Hypothesis Transition]
+        ↓                         ↓                                              ↓
+  本段的单一理论主张        多步因果链，每步由文献锚定：                      收束推理，引出假设
+  (1-2句)                  "Prior research shows X. However, Y                  (1-2句)
+                           remains unclear. We argue that Z
+                           because [mechanism] ([citations])."
 ```
 
-**灵活调整说明**：如果你的故事更适合将文献对话与理论推理交织（如 ASQ 常见的"对话式论证"），可以调整[2]和[3]的顺序或将其合并，但必须确保：
-- (a) 每个假设前有 why chain（2-3 步因果推理）
-- (b) 每个引用都总结了 argument 而非罗列名字
+**具体展开**：
+```
+[Topic Sentence]  → 本段的理论主张（1-2句）
+     ↓
+[Reasoning Step 1] → 前人发现 + 前人 argument 总结 → "This suggests that..."
+     ↓
+[Reasoning Step 2] → 前人发现 + "However, [gap/puzzle]" → "We argue that..."
+     ↓
+[Reasoning Step 3] → 机制逻辑（可再加文献锚定）→ "Consequently..."
+     ↓
+[Convergence] → "Taken together, these arguments suggest... Therefore, H:"
+```
+
+**备选结构：分离式（少数情况使用）**——当某一步的文献支持特别密集、需要单独展开时，可将 [Reasoning] 和 [Literature Support] 暂时分离。但整个段落的默认节奏是交织的。
 
 **各要素 QC**：
 
@@ -378,44 +459,28 @@ pressure over time, and the hazard of recall increases non-linearly with defect 
 - [ ] **Lineage**: 该构念从哪些先前构念演化而来？
 - [ ] **Adjacent constructs**: 与相似构念的区别是什么？
 
-#### 审计 3: Hypothesis Clarity（6 字段）
+#### 审计 3: Hypothesis Clarity（6 字段 + form-measurement 匹配）
 
-- [ ] Constructs named
-- [ ] IV/DV roles clear
-- [ ] Direction specified
-- [ ] Relationship form specified
-- [ ] Mediator/moderator specified
-- [ ] Matches theorized AND tested relationship
+- [ ] **Constructs named**
+- [ ] **IV/DV roles clear**
+- [ ] **Direction specified**
+- [ ] **Relationship form specified**：线性/曲线/条件/阈值/差异比较等，且与构念测量尺度匹配
+- [ ] **Mediator/moderator specified**
+- [ ] **Matches theorized AND tested relationship**：假设措辞、理论关系形状、概念类型（differential prediction vs. differential validity）三者一致；统计检验方法由 `write-methods` 选择
 
-#### T6 Closure 强制提醒
+**Form–Measurement 匹配指南**见 `corpus/sentences/hypothesis_forms.md` 的「假设形式决策矩阵」。常见错误：
+- 连续 IV + 连续 DV 却写成 If-then；
+- 曲线关系拆成两个线性假设；
+- 声称 differential validity（关系强度变化）却用 differential prediction（slope 变化）的语言描述；
+- 使用 "X is associated with Y" 等无方向、无形式措辞。
 
-**⚠️ 重要**: Batch_1 蒸馏发现，6/6篇产品召回领域论文缺失 T6 Closure。这是该领域的系统性缺陷。
+#### 假设收敛与过渡
 
-T6 不是"重复总结"，而是完成三个理论任务，让读者感到 **"knot fully tied"**（Pollock 2025 Ch02），为 Results/Discussion 的 climax 做准备：
-1. **框架锁定**：将分散假设整合为统一理论叙事，明确假设间逻辑关系
-2. **逻辑显性化**：用 1-2 句话说明 central knot 已被 fully tied——"we have argued that [knot核心] is driven by [机制]"
-3. **Denouement 预告**：预告 Results 将如何 unravel the knot，让读者感到"必须看结果才能知道答案"
+管理学顶刊论文的 Theory 部分通常以最后一个假设推导段的**局部收束信号**自然结束——假设就是推导的终点，推导完毕即转入 METHODS。**不需要独立的 T6 Closure 段落**。这与 Pollock (2025) 教科书建议存在差异，但反映了管理学领域实际发表惯例。
 
-**T6 段落骨架（80-120词）**：参见 `corpus/sentences/closure.md`
+每个假设推导段落的局部收束（"Therefore, we hypothesize:" / "Hence:" / "Accordingly:"）已承担了收敛功能。如果过度使用全局收束（"Taken together, we have argued that..."），管理学审稿人可能视为冗余。
 
-**T6 缺失时的应急策略**：参见 `corpus/sentences/closure.md` —— "局部收束信号"
-
-**T6 Closure Voice Check**：
-- [ ] T6 用 "In sum, we have argued that..."（accountable first-person）
-- [ ] T6 无被动语态
-- [ ] T6 大声朗读测试：是否像研究者在总结自己的判断？
-
-**T6 Denouement 预告检查**（与 Rising Action Phase 4 对齐）：
-- [ ] T6 是否明确或暗示 "knot fully tied"？（如 "we have tied the knot of..." 或 "we now turn to our empirical analysis to unravel it"）
-- [ ] T6 是否预告 Results/Discussion 的 resolution 形态？（如 "we test whether [机制] holds in [情境]"）
-- [ ] T6 与 Discussion 开篇是否形成叙事接力？（Discussion 首段应回到 central knot，而非重复 Methods）
-
-**T6 制度冲击类研究的额外检查**：
-- [ ] T6 是否预告了 Results 将通过什么识别策略（IV/DiD/RDD/生存分析）来 unravel the knot？
-- [ ] T6 是否暗示了识别策略的理论基础已在 Theory 部分建立？（如 "we exploit the staggered adoption of [policy] as a natural experiment to test..."）
-- [ ] 如果使用生存分析：T6 是否预告了时间动态将是 Results 的核心叙事？（如 "we examine not merely whether [event] occurs, but how [treatment] alters the rate at which firms approach the recall threshold"）
-
-**叙事接力要求**：T6 结尾的能量级应 ≥ Theory 最后假设推导段的能量级，且为 Discussion 的 "knot fully unraveled" 预留空间。若 T6 能量骤降 → 标记"叙事阶段倒退"。
+**例外**：少数 ASQ/ASR 的理论密集型论文（特别是构念辨析型或质性过程理论型）可能在假设后有一个简短的整合段落（2-3 句），但这不是标准做法。不应将其作为强制模块推荐。
 
 ---
 
@@ -511,11 +576,11 @@ T6 不是"重复总结"，而是完成三个理论任务，让读者感到 **"kn
 
 ### 叙事弧线指南（Pollock 2025 Ch02）
 
-Theory section 的 Rising Action 四阶段结构、叙事节奏检查点和 Stroke/Glide 比例指南见 `corpus/storytelling/rising-action-protocol.md`。
+Theory section 的 Rising Action 结构（Knot Inheritance→Deepening→Tying→自然收敛）、叙事节奏检查点和 Stroke/Glide 比例指南见 `corpus/storytelling/rising-action-protocol.md`。
 
 **渲染时的附加要求**：
 - 在每个段落标题后标注其 narrative function（如 `P1: 构念定义 | Knot Inheritance`）
-- 在"提醒"中附加叙事检查点（P1 是否承接 knot？是否有阶段倒退？T6 是否 fully tied？）
+- 在"提醒"中附加叙事检查点（P1 是否承接 knot？是否有阶段倒退？最后假设是否自然收敛？）
 
 ### 期刊适配建议
 [基于 --journal 参数的适配建议]
@@ -524,7 +589,7 @@ Theory section 的 Rising Action 四阶段结构、叙事节奏检查点和 Stro
 - [ ] 每个假设前都有 why chain？
 - [ ] 构念界定包含 scope conditions + lineage + adjacent construct 区分？
 - [ ] 假设形式匹配变量类型和理论关系？
-- [ ] T6 Closure 是否存在？
+- [ ] 最后一个假设/命题是否自然收束（非突然中断进入 METHODS）？
 - [ ] [类型专属 QC 检查点...]
 ```
 
@@ -533,22 +598,25 @@ Theory section 的 Rising Action 四阶段结构、叙事节奏检查点和 Stro
 ## Constraints
 
 1. **Theory 必须解释 why，不是文献列表。** 每个假设前必须有至少 2-3 步的因果/过程推理链。
-2. **假设推导段落推荐使用四段式结构**：Topic Sentence → Theoretical Reasoning → Literature Support → Hypothesis Transition。允许根据故事需要调整顺序（如将文献对话与推理交织），但每个假设前必须有 why chain，每个引用必须总结 argument 而非罗列名字。
+2. **假设推导段落使用交织式论证结构**：Topic Sentence → Theoretical Reasoning（文献引用嵌入推理中，非独立步骤）→ Hypothesis Transition。文献引用与理论推理交织而非先后排列——"Prior research shows X. However, Y remains unclear. We argue that Z because [mechanism]." 每个假设前必须有 why chain，每个引用必须总结 argument 而非罗列名字。当某一步文献支持特别密集时，可暂时分离展开，但默认节奏是交织的。
 3. **禁止逻辑跳跃。** 从 X 到 Y 的每个因果步骤必须在文中明确写出。
-4. **假设必须明确 IV、DV、方向、形状、条件。** 不允许 "X is associated with Y" 等模糊措辞。
+4. **假设必须明确 IV、DV、方向、形状、条件，且形式与测量尺度匹配。** 不允许 "X is associated with Y" 等模糊措辞。连续变量不使用 if-then，曲线关系必须显式使用 curvilinear/U-shaped/inverted-U/diminishing 等措辞。详见 `corpus/sentences/hypothesis_forms.md` 的「假设形式决策矩阵」。
 5. **如果用户有具体构念名称，必须嵌入模板替换占位符。**
 6. **新构念必须完成 definition + scope conditions + lineage + differentiation from adjacent constructs 四步。**
 7. **主角（核心构念）不应超过 3 个。**
 8. **Literature Support 必须是 argument 总结，不是 citation 罗列。**
 9. **段落内术语必须统一。**
-10. **调节效应的假设必须指定交互模式类型（enhancing/buffering/antagonistic/existence/competing），且必须排除反向交互。**
+10. **调节效应的假设必须指定交互模式类型（enhancing/buffering/antagonistic/existence/competing），且必须排除反向交互。** 此外，必须明确该调节改变的是关系的 nature/slope（differential prediction）还是 strength/correlation（differential validity），并确保假设措辞与概念类型一致。具体统计检验由 `write-methods` 根据设计选择。
 11. **跨层调节必须在 P1 就声明 focal unit of analysis 和 nesting structure。**
 12. **图不能替代文字理论。**
-13. **T6 Closure 为 quasi-mandatory。** 所有构建类型都应包含 T6 段落（或在 Discussion 开篇补回）。
+13. **不需要独立的 T6 Closure 段落。** 管理学顶刊（JMS, AMJ, SMJ, ASQ, OS 等）的标准做法是最后一个假设推导完毕即进入 METHODS。每个假设段落的局部收束（"Therefore, we hypothesize:"）已承担收敛功能。独立的 "In sum, we have argued that..." 全局收束段落在管理学中非标准，不应强制推荐。少数理论密集型 ASQ/ASR 论文可能有 2-3 句整合，但这属于例外。
 14. **竞争假设必须使用非传统收敛信号。** 不可使用 "Therefore" 收束，应使用 "Given these competing arguments..." 等信号。
 15. **不要重复语料层内容。** 本文件是协议层；所有具体模板引用 `corpus/` 目录。
-16. **辩证对立型必须满足对称性要求。** T3 和 T4 的机制步骤数应接近对称（差不超过 1 步）；T4 首句必须用 dialectical turn 标记（"Despite research showing..." / "This may be because..."）；T6 reconciliation 必须为 theory-based（不能仅说 "they coexist"）；两类受众的定义必须有理论基础区分（不是随意切分的 demographic 分组）。
+16. **辩证对立型必须满足对称性要求。** T3 和 T4 的机制步骤数应接近对称（差不超过 1 步）；T4 首句必须用 dialectical turn 标记（"Despite research showing..." / "This may be because..."）；reconciliation 收束必须为 theory-based（不能仅说 "they coexist"）；两类受众的定义必须有理论基础区分（不是随意切分的 demographic 分组）。
 17. **辩证对立型的"反转"必须是真正的方向反转，不是强度变化。** 同一 predict 对 audience A 显著负、对 audience B 显著正，才是 dialectical opposition。如果只是"对 A 更强、对 B 更弱"但不是方向反转，应路由到 [E] 调节效应型。
+18. **≥2 个 moderators 时，必须有 moderator 选择的理论理由。** 用元框架（将 moderators 映射到 H1 的机制维度，如 awareness vs capacity）或统一分类框架（如 intrinsic vs extrinsic constraint）解释为什么选这些而非其他。禁止无理由逐个引入（"We also examine the moderating role of..."）。
+19. **IV 是连续谱时，需论证两端+中间的行为差异。** 如果理论预期 IV 两端有相反效应，必须对称论证两端（非只论证一端）。如果存在理论上的中间/中性行为者，应包括其作为概念基准（零效应预期）。
+20. **调节论证应是双边完整的。** 每个 moderator 段落应同时论证 "when M=high → effect" AND "when M=low → effect"——非只说增强方向。低 moderator 条件下的约束/削弱逻辑同等重要。
 
 ---
 

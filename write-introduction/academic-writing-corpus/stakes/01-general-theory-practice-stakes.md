@@ -12,6 +12,8 @@ source_papers:
   - han2020 (AMJ, 2020): "context shapes misconduct scandalization"
   - pollock2015 (ASQ, 2015): "status and categorical purity in market categorization"
   - pontikes2012 (ASQ, 2012): "category-spanning and audience perceptions"
+  - jiang2026 (JIBS, 2026): "IB reverse causality frame — firms not only respond to but also help shape institutional environments"
+updated: 2026-07-07
 created: 2026-05-19
 source: Extracted from MVP30 narrative_analysis files
 ---
@@ -133,6 +135,28 @@ source: Extracted from MVP30 narrative_analysis files
 - "systematic bias/error persists" → 暗示如果不解决，错误会持续
 
 **适用**: 过程理论、动态演化、新兴现象型研究
+
+---
+
+### 变体 F：IB 双向因果框架型（jiang2026 型）
+
+**模板**:
+> "An examination of these relationships may offer new insights into how [microlevel actors] contribute to both the economic and the social outcomes of a society. Indeed, there is growing recognition in [your field] research that [actors] not only respond to ([citations]) but also help shape the [institutional environments] in which they operate, including outcomes such as [outcome 1] and [outcome 2] ([citations]). Given the pervasiveness of [actor type] worldwide, understanding how [their practices] influence different societies is an important [field] question."
+
+**来源**: jiang2026 (JIBS), P4
+
+**原文锚定**:
+> "An examination of these relationships may offer new insights into how firms contribute to both the economic and the social outcomes of a society. Indeed, there is growing recognition in IB research that firms not only respond to (Kozlenkova et al., 2021; Krammer et al., 2022) but also help shape the institutional environments in which they operate, including outcomes such as economic development and opportunity inequality (Van der Straaten et al., 2023). Given the pervasiveness of multinational corporations worldwide, understanding how firms' pay structures influence different societies is an important IB question."
+
+**关键特征**:
+- **"'not only respond to but also help shape'"**: 双向因果框架——将 firm→society 的反向影响定位为领域的新兴方向，非 marginal contribution
+- **"'including outcomes such as X and Y'"**: 具体化 actors 塑造的社会结果，避免 "grand challenges" 的 vagueness
+- **"'Given the pervasiveness of [actors] worldwide'"**: 规模论证——全球存在本身即是 Stakes 的一部分
+- **"'an important [field] question'"**: 谦逊收束，不 inflated symbolism
+
+**适用**: IB、CSR、sustainability、political economy 等关注组织外部性的领域；特别适合论证 firm→society、business→institutions 反向因果的研究。Incompleteness × Level / Phenomenon 贡献组合首选
+
+**禁忌**: "not only respond to but also help shape" 必须有领域内具体引文支撑——不能空口说 "growing recognition"。如果领域内仅1-2篇论文提出此观点，降级为 "emerging recognition"。不要用于纯 firm-level 研究（无跨层次贡献）
 
 ---
 

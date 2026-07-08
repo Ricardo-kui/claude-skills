@@ -1,15 +1,17 @@
 ---
 type: canonical_reference
 canonical_id: "16-threefold-gap"
-status: EXPERIMENTAL
+status: EMERGING
 gap_type: Incompleteness
-cross_paper: SINGLE-INSTANCE
+cross_paper: EMERGING
 generativity: ADAPTABLE
 exclusivity: HIGH
 source_papers:
   - malshe_agarwal2015 (JM, 2015): "Yet little research investigates the effects of debt on marketing. This is surprising for three reasons."
+  - cui_yang_vertinsky (SMJ): "three important issues remain unaddressed: product-market competition, portfolio composition, network embeddedness"
 created: 2026-05-24
-source: Extracted from MVP30 batch_2026-05-24
+updated: 2026-07-08
+source: Extracted from MVP30 batch_2026-05-24 + distilled by Phase 4.6
 ---
 
 # 16-threefold-gap — 结构化三方论证缺口
@@ -46,6 +48,28 @@ source: Extracted from MVP30 batch_2026-05-24
 - 原因排序为 impact ascending（最小→最大理论后果）
 - "surprising"（而非 "unfortunate"/"concerning"）是关键词——强调反常而非哀叹
 - 三个原因结束后自然过渡到 RQ 或 Theory Lens——无需独立 Stakes 段落
+
+---
+
+### 变体 B：三问题逐一枚举型（cui_vertinsky 型）
+
+**模板**:
+> "A thorough study of [focal relationship] is of great theoretical importance, contributing to [broader theoretical model] ([citation]). Prior studies on [sub-literature] have provided important insights into [core tension] ([citations]). For example, researchers maintain that [mechanism 1] ([citations]) and have identified important factors that influence [process], such as [factor A] ([citations]), [factor B] ([citation]), and [factor C] ([citation]). However, [N] important issues in this sphere of research remain unaddressed. First, while researchers have examined [X], prior studies focused on [within-scope outcome]; the effect of [X] on [product-market outcome] remains poorly understood. Second, prior studies provide insights into [Y] by focusing on [dominant type] while overlooking [other types] ([citation]). It is assumed that [dominant-type assumption], but [counterpoint about heterogeneity]. [Theoretical consequence]. Few studies have yet examined how [portfolio composition] affects [outcome]. Third, many prior studies have examined [Z] by focusing on characteristics of [actors per se], such as [characteristic A] ([citation]) and [characteristic B] ([citation]), while largely overlooking the impact of [network/context dimension] ([citation]). [Exception citations]. Yet the focus of these studies remains centered either on [outcome 1] or on [outcome 2]; the impact of [network/context dimension] on [focal interplay] has rarely been studied."
+
+**来源**: cui_yang_vertinsky (SMJ), P2-P4
+
+**原文锚定**:
+> "A thorough study of this 'collaboration–competition' relationship between partners is of great theoretical importance... Prior studies on alliance learning have provided some important insights into the tension between collaboration and competition... However, three important issues in this sphere of research remain unaddressed. First, while researchers have examined aggressive learning between allies... prior studies focused on the hazards of misappropriation within alliances; the effect of alliances on competition between partners in the realm of product markets remains poorly understood. Second, prior studies provide insights into competitive learning between partners by focusing on research-based alliances while overlooking other types of collaboration... Third, many prior studies have examined the tension between cooperation and competition by focusing on characteristics of the allying firms per se... while largely overlooking the impact of the broad inter-firm alliance networks..."
+
+**关键特征**:
+- "three important issues remain unaddressed" 作为显式缺口计数，比 "little research" 更有结构感
+- 三个问题分别对应不同分析单元：市场边界（within-alliance → product market）、联盟组合类型（research-based → portfolio composition）、分析层次（firm characteristics → network embeddedness）
+- 每个问题内部使用 "while... remains poorly understood" / "by focusing on... while overlooking" / "largely overlooking... has rarely been studied" 等 Incompleteness 标志性语言
+- 三个问题共同收敛到论文的 RQ 和理论透镜（alliance learning + network perspectives）
+
+**适用**: 当缺口可从三个相互独立但理论相关的维度展开，且三个维度分别对应论文的不同假设群/贡献时
+
+**禁忌**: 三个问题必须是独立的理论缺口，不能是同一缺口的三种表述；每个问题都需要具体文献引用支撑
 
 ---
 

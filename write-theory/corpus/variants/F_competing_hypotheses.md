@@ -16,7 +16,9 @@
 | P3-P4 | 竞争机制推演（路径A vs 路径B，严格对称） | 各 70-120 | ✅ |
 | P5 | 竞争假设形式化（H1a / H1b） | 各 30-60 | ✅ |
 | P6-P7 | [可选] 第二因变量的竞争推演 + H2a/H2b | 各 70-120 | ⚠️ |
-| P8 | T6 Closure：框架锁定 + 竞争假设逻辑显性化 | 80-120 | **准强制** |
+| P8 | [不推荐] 独立 Closure 段落——管理学标准是最后一个假设后即进入 METHODS | — | ✗ 非标准 |
+
+> **注意**: 管理学顶刊不要求独立的 Closure 段落。竞争假设的对立收敛即为 Theory 的终点。
 
 ---
 
@@ -67,4 +69,4 @@ how [X] may influence [Y]:"
 - [ ] 竞争收敛信号是否使用 "Given these competing arguments" 而非 "Therefore"？
 - [ ] Discussion 是否包含 "理论裁判" 解释（为什么路径A成立而路径B不成立）？
 - [ ] 是否排除了 "一个假设明显更强" 的不对称风险？
-- [ ] T6 Closure 是否存在？
+- [ ] 竞争假设是否通过 "Given these competing arguments..." 自然收束？

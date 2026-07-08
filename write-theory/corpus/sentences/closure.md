@@ -1,8 +1,10 @@
 # 收束/过渡句语料库
 
-## T6 Closure 骨架（准强制）
+## 全局收束骨架（⚠️ 管理学非标准——不推荐使用）
 
-**功能**：将分散假设整合为统一理论叙事，明确假设间逻辑关系，可选预告实证策略。
+> **管理学惯例**: JMS, AMJ, SMJ, ASQ, OS 等期刊的 Theory 部分以最后假设为终点，**不要求独立的 Closure 段落**。以下骨架仅供极少数理论密集型 ASQ/ASR 论文参考——且应压缩为 2-3 句嵌入最后假设段末尾，非独立段落。
+
+**功能**（如确实需要）：将分散假设整合为统一理论叙事，明确假设间逻辑关系。
 
 **模板**：
 ```
@@ -15,11 +17,11 @@ research. We test these predictions using [简要实证策略]."
 ```
 
 **语料锚定**：
-- 产品召回领域 6/6 篇缺失 T6，为 batch_1 发现的系统性缺陷
+- 产品召回领域 6/6 篇无独立 Closure 段，确认为管理学标准做法
 
 ---
 
-## 局部收束信号（T6 缺失时的应急策略）
+## 局部收束信号（管理学标准做法）
 
 **主效应假设群末尾**：
 ```
@@ -58,13 +60,11 @@ through [unifying mechanism]."
 - "In summary" 仅收束当前轨道，非全文收束
 - 后接 "Therefore:" 直接收敛到该轨道的假设
 - 每条轨道末尾可独立使用此模式
-- 全文级 T6 仍建议添加，但在多轨道设计中轨道级局部收束提供段落级认知闭合
-
-**与全文 T6 的关系**:
-- 轨道级局部收束 ≠ 全文 T6
-- 最佳实践: 每条轨道局部收束 + 全文 T6 全局收束
-- 次优但可接受: 每条轨道局部收束，全文 T6 在 Discussion 开篇回补
-- 高风险: 无轨道级收束且无全文 T6 (singh_grewal2023 模式)
+**与全文收束的关系**:
+- 轨道级局部收束 ≠ 全文收束
+- 管理学标准: 每条轨道局部收束后直接进入下一条轨道或 METHODS（如 malik_wang_martin_gomezmejia2025 JM, singh_grewal2023 JMR）
+- 可选: 如假设间逻辑关系不够自明，可在最后假设段末尾嵌入 2-3 句框架总结
+- 非标准: 独立的全文 T6 段落
 
 ---
 
@@ -82,7 +82,7 @@ through [mediator mechanism]."
 
 ## 识别策略论证嵌入（即使非 IV/DiD/RDD 设计）
 
-**适用**: Theory 假设因果时，无论实证设计是否使用工具变量、自然实验或断点回归，都应在 T6 Closure 或 Theory 末尾嵌入识别策略的理论论证。
+**适用**: Theory 假设因果时，识别策略的理论论证应嵌入最后假设推导段或自然过渡句中，非独立 Closure 段落。
 
 **模板**:
 > "Given the endogeneity concerns inherent in [actor]-[organization] matching, we employ [method] to control for [threat type]. Specifically, [method details] allow us to [identification claim]. We also conduct [robustness check type] to address [remaining threat]."
@@ -93,7 +93,7 @@ through [mediator mechanism]."
 **关键规则**:
 - **内生性来源必须被命名**: CEO-firm matching、自选择、反向因果、遗漏变量——至少明确提及一个
 - **控制方法必须有理论依据**: 不仅是 "we use FE"，而是 "firm fixed effects control for time-invariant unobserved heterogeneity such as corporate culture"
-- **即使非因果设计也要讨论**: 如果论文明确是 "correlational study"，也需在 T6 中声明识别限制
+- **即使非因果设计也要讨论**: 如果论文明确是 "correlational study"，也需在最后假设推导段末尾声明识别限制
 
 **反模式**:
 - Theory 中完全忽略识别策略 → 审稿人质疑因果推断的可信度
@@ -142,15 +142,15 @@ H1: [IV] is [direction] related to [DV]."
 
 ---
 
-## T6 强制阈值规则 (T6 Mandatory Threshold Rule)
+## 假设数-收敛策略参考 (Hypothesis Count vs Convergence Strategy)
 
-**核心规则**: T6 Closure 的必要性随假设数量递增。
+> **管理学惯例**: 不要求独立 Closure 段。以下为局部收束策略参考，而非 T6 强制规则。
 
-| 假设数 | T6 必要性 | 替代策略 | 风险（若缺失） |
+| 假设数 | 收敛策略 | 替代策略 |
 |--------|----------|---------|---------------|
-| **1-2** | 推荐但非强制 | 最后一个假设的收敛句 + Discussion 开篇补回 | 低——读者可以跟踪 2 个假设间的逻辑关系 |
-| **3-4** | **严格强制** | 无替代——必须有独立 T6 段落收束 | 高——审稿人可能批评 "理论碎片化" / "贡献不清晰" |
-| **≥5** | **严格强制 + 理论模型图** | 无替代——T6 + Figure 都必需 | 极高——审稿人几乎必定要求添加框架图 |
+| **1-2** | 局部收束即可（最后假设的 "Therefore" 收敛） | 低——读者可跟踪 2 个假设间的逻辑 |
+| **3-4** | 局部收束 + 可选框架图 | 中——确保每个假设的推导顺序清晰，假设间过渡明确 |
+| **≥5** | 局部收束 + 推荐理论模型图 | 中——框架图帮助读者跟踪多假设关系，但不要求独立 Closure 段 |
 
 **模板（≥3 假设通用）**:
 ```
@@ -164,50 +164,50 @@ which [focused exclusively on / treated uniformly / assumed linearly] [limit of 
 work]. We test these predictions using [brief empirical strategy reference]."
 ```
 
-**语料锚定**: shipilov_greve_rowley2019 (SMJ) — 4 假设但 **T6 缺失**，Discussion 开篇补回：'we presented two additional findings—one expected and one unexpected.' 这是 T6 缺失后用 Discussion 追补的典型案例。
+**语料锚定**: shipilov_greve_rowley2019 (SMJ) — 4 假设无独立 Closure 段，Discussion 开篇以 'one expected—one unexpected' 框架整合发现。管理学惯例允许在 Discussion 而非 Theory 末尾完成框架整合。
 
-**常见 T6 缺失场景与后果**:
+**常见假设收束模式**（管理学标准——最后假设后直接进入 METHODS）:
 | 缺失场景 | 典型表现 | 审稿人反应 |
 |---------|---------|-----------|
-| 2×2 矩阵 4 假设无 T6 | 最后一个假设 (H2b) 说完后直接进入 Methods | "这些假设之间是什么关系？" |
-| 发散树 3 假设无 T6 | H3 末尾只有一个 "Thus" 过渡到 Methods | "整体理论框架的贡献是什么？" |
-| 竞争假设 2 假设无 T6 | H2 末尾直接被 Methods 标题打断 | 风险较低——2 假设的对立关系本身即收束 |
-| 双理论+多调节 6 假设无 T6 | H2b 说完后直接 Methods | "TCE 和 Org Learning 的假设如何整合？" |
+| 2×2 矩阵 4 假设 | 最后一个假设 (H2b) 后直接进入 Methods | 管理学标准——每个假设的局部收束即可 |
+| 发散树 3 假设 | H3 末尾 "Thus" 过渡到 Methods | 管理学标准——假设间的递进关系即理论框架 |
+| 竞争假设 2 假设 | H2 后直接 Methods | 低风险——2 假设的对立关系本身即收束 |
+| 双理论+多调节 6 假设 | 最后一个假设后直接 Methods | 管理学标准——理论模型图可作为整合工具替代 Closure 段 |
 
-**反面教材：kalaignanam2017 (JM)**:
+**实例：kalaignanam2017 (JM)**:
 - **论文**: Kalaignanam, Kushwaha & Swartz (2017), Journal of Marketing
-- **结构**: 2 个 baseline 假设 + 4 个调节假设 = 6 假设，无 T6 Closure
-- **缺失后果**: 双理论镜头（TCE + Organizational Learning）和 4 个 moderator 的整合逻辑未显性化
-- **风险**: 审稿人可能质疑"这些假设构成了一个统一的理论框架，还是两个独立理论的并列？"
+- **结构**: 2 个 baseline 假设 + 4 个调节假设 = 6 假设，最后假设后直接进入 Data 部分
+- **结果**: 论文正常发表——管理学审稿人接受"局部收束+框架图"的整合方式，未要求独立 Closure 段
 - **补救可能**: 如果 Discussion 开篇能有效整合（如 "Our findings reconcile the trade-off between..."），可部分弥补。但 JM 通常允许较紧凑的 Theory 结构，风险低于 ASQ/OS。
 
-**反模式**:
-- 用 "In the next section, we describe our methods" 替代 T6 → 这不是收束，是逃避
-- T6 只有一句话 "In sum, we have four hypotheses" → 没有理论整合，只是一个数字
-- T6 重复每个假设的内容 → 不是整合，是摘要。应说假设间的逻辑关系，不说假设各自的预测
-
-**例外**: SMJ 对 T6 容错度略高于 AMJ/ASQ/OS——但如果假设数≥3且论文的其他方面（如 contribution clarity）也偏弱，缺失 T6 会放大审稿人的负面印象。范例：shipilov_greve_rowley2019 (SMJ) 缺失 T6 但仍发表，因为 Discussion 的 "one expected—one unexpected" 框架有效收束了贡献。但这属于侥幸——不要以此为模板。
+**如果确实需要嵌入框架总结（少数情况），避免以下写法**:
+- 用 "In the next section, we describe our methods" 替代框架总结 → 没有整合
+- 只有一句话 "In sum, we have four hypotheses" → 没有理论整合，只是一个数字
+- 重复每个假设的内容 → 是摘要而非整合。应说假设间的逻辑关系，不说假设各自的预测
+- shipilov_greve_rowley2019 (SMJ) 在 Discussion 开篇完成框架整合，这是管理学惯例允许的做法——不是"侥幸"，是标准操作。
 
 ---
 
-## T6 按架构类型的强制规则
+## 按架构类型的整合建议（非强制）
 
-**核心**: T6 的必要性不仅取决于假设数，还取决于推理架构。矩阵型和 Y-shaped 架构的 T6 阈值更低。
+> **管理学惯例**: 不要求独立 Closure 段。以下为按推理架构的**可选整合策略**——当假设间逻辑关系不够自明时，可在最后假设段末尾嵌入 2-3 句框架总结，而非添加独立段落。
 
-| 推理架构 | T6 强制阈值 | 理由 | 缺失后果 |
-|---------|-----------|------|---------|
-| **线性因果链** | 假设 ≥3 → T6=M | 链式逻辑自包含，T6 可延迟到 Discussion | 中等风险 |
-| **发散树** | 假设 ≥3 → T6=M | 分叉关系需显式总结 | 中等风险 |
-| **2×2 矩阵** | 假设 ≥4 → **T6 强制** | 对角线对称性和整体矩阵逻辑必须显式总结——读者无法自行拼凑 4 个 cell 的关系 | 高: 审稿人必定问 "how do these 4 hypotheses relate?" |
-| **Y-shaped** | 假设 ≥4 → **T6 强制** | 非对称设计 (单侧 contingencies) 必须被显式总结——否则读者会问 "why no contingencies on H1 side?" | 高: 非对称性被视为 bug 而非 feature |
-| **双轨并行** | 假设 ≥4 → T6=M | 两条轨道的对称/反向关系需总结 | 中等风险 |
+**核心**: 不同推理架构的假设间逻辑自明程度不同。矩阵型和 Y-shaped 架构的假设关系对读者最不透明，嵌入简短框架总结的收益最高。
+
+| 推理架构 | 嵌入框架总结的收益 | 理由 | 无总结的风险 |
+|---------|-------------------|------|---------|
+| **线性因果链** | 低 | 链式逻辑自包含，假设间递进关系即理论框架 | 低——读者可跟踪因果链 |
+| **发散树** | 中 | 分叉关系可通过过渡句暗示 | 低——分叉点在最后一个共同假设处已交代 |
+| **2×2 矩阵** | **高** | 对角线对称性和整体矩阵逻辑读者无法自行拼凑 | 中——审稿人可能问 "how do these 4 hypotheses relate?" 但非致命（han_pollock_paruchuri SMJ 仍发表） |
+| **Y-shaped** | **高** | 非对称设计的 rationale 需被显式说明 | 中——审稿人可能问 "why no contingencies on H1 side?" 但非致命（toh_pyun SMJ 仍发表） |
+| **双轨并行** | 中 | 两条轨道的对称/反向关系可通过轨道级局部收束交代 | 低——malik_wang_martin_gomezmejia2025 JM 用 mini-closure 替代 |
 
 **语料锚定**:
-- han_pollock_paruchuri (SMJ): 2×2 矩阵 4 假设, T6 缺失 → 矩阵对称性未总结
-- toh_pyun (SMJ): Y-shaped 5 假设, T6 缺失 → 非对称设计未解释
-- malik_wang_martin_gomezmejia2025 (JM): 双轨 4 假设, T6 缺失 → 用 mini-closure 替代
+- han_pollock_paruchuri (SMJ): 2×2 矩阵 4 假设, 无框架总结 → 仍发表
+- toh_pyun (SMJ): Y-shaped 5 假设, 无框架总结 → 仍发表
+- malik_wang_martin_gomezmejia2025 (JM): 双轨 4 假设, 用轨道级局部收束替代 → 仍发表
 
-**2×2 矩阵 T6 模板**:
+**2×2 矩阵嵌入总结模板**（嵌入最后假设段末尾，2-3 句，非独立段落）:
 ```
 "Taken together, our 2×2 framework reveals a [diagonal symmetry / cross-pattern]: 
 [IV dimension 1]'s effect is [strengthened/weakened] by [moderator A] but 
@@ -216,7 +216,7 @@ pattern. This diagonal symmetry underscores that [core theoretical insight about
 the two IVs respond differently to the two moderators]."
 ```
 
-**Y-shaped T6 模板**:
+**Y-shaped 嵌入总结模板**（嵌入最后假设段末尾，2-3 句，非独立段落）:
 ```
 "Taken together, our Y-shaped framework suggests that while [IV] unambiguously 
 [benefits/harms] [Group A] by [mechanism], its effect on [Group B] is contingent on 
@@ -227,6 +227,7 @@ architecture highlights that [core insight about why Group A is unaffected by th
 contingencies that matter for Group B]."
 ```
 
-**反模式**:
-- 2×2 矩阵 4 假设无 T6: "最后一个假设 (H4) 说完后直接进入 Methods" → 审稿人: "这些假设之间是什么关系？" (证据: han_pollock_paruchuri SMJ)
-- Y-shaped 5 假设无 T6: "H5 说完后直接 Methods" → 审稿人: "为什么 contingencies 只在 H2 侧？H1 侧不受影响？" (证据: toh_pyun SMJ)
+**注意——这些不是"反模式"，而是管理学标准做法**:
+- 2×2 矩阵 4 假设后直接进入 Methods（han_pollock_paruchuri SMJ）→ **正常发表**。假设的局部收束承担了收敛功能。
+- Y-shaped 5 假设后直接进入 Methods（toh_pyun SMJ）→ **正常发表**。非对称设计的 rationale 在假设推导中已说明。
+- 如果审稿人确实追问假设间关系，可在 Discussion 开篇回应——这比在 Theory 末尾附加独立 Closure 段更符合管理学惯例。

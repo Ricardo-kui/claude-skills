@@ -42,15 +42,17 @@ dependencies: []
 
 ### Phase 2: Knot Deepening（加深）
 
-**功能**：通过构念界定、文献对话让 knot 更复杂、更紧迫
+**功能**：通过构念界定、理论透镜引入让 knot 从抽象 gap 具体化为可操作的理论问题
 
-**位置**：P2-P4（构念定义、文献对话、理论透镜引入）
+**位置**：P1-P3（构念定义 → 理论透镜引入 → 机制预览）
+
+> **管理学惯例**：Theory 部分的文献回顾嵌入在构念定义和 why-chain 推导中——"Prior research has established X. However, what if Y? We argue that Z."——不以独立的"文献对话"或"文献综述"段落出现（验证自 12 篇 MVP30 论文）。部分 JM 论文将 Theory 章节命名为 "Literature Review and Conceptual Background"，整章即文献回顾+假设，这是章节命名惯例而非段落结构要求。
 
 **必须包含的元素**：
 - [ ] 主角构念的清晰定义（definition + scope conditions + lineage）
 - [ ] 配角构念的定义（如果需要）
-- [ ] 文献对话：展示已有理解的局限性
 - [ ] 理论透镜引入：说明用什么理论视角来解决 knot
+- [ ] 现有解释的简要定位（1-2句嵌入，非独立文献综述段）
 
 **每段检查**：
 - 本段是否增加了 knot 的理论复杂度？
@@ -59,7 +61,7 @@ dependencies: []
 
 **常见失败模式**：
 - 构念定义过于冗长，没有服务于 knot → extraneous storyline
-- 文献对话变成 citation 罗列 → 没有推进 knot
+- 独立的文献综述段落不衔接到 why-chain → 审稿人视为冗余
 - 理论透镜引入与 knot 无关 → 读者困惑"为什么要用这个理论？"
 
 ---
@@ -88,26 +90,18 @@ dependencies: []
 
 ---
 
-### Phase 4: Knot Fully Tied（绑完）
+### Phase 4: 自然收敛（管理学惯例）
 
-**功能**：通过 T6 Closure 锁定框架，让读者感到"knot 已经完全 tied，接下来看结果"
+**功能**：最后假设的 "Therefore" 推导即为 Theory 的终点，自然进入 METHODS
 
-**位置**：最后一段（T6 Closure）
+**位置**：最后假设推导段的末尾
 
-**必须包含的元素**：
-- [ ] 总结所有假设的理论逻辑
-- [ ] 明确 central knot 已被 fully tied
-- [ ] 预告 Results section 将如何 unravel the knot
-- [ ] 让读者感到"我必须看 results 才能知道答案"
-
-**标准结尾句式**：
-- "In sum, we have argued that [knot 核心] is driven by [机制], moderated by [条件]. Together, these arguments suggest that [核心结论]."
-- "By integrating [理论 A] and [理论 B], we have tied the knot of [central knot]. We now turn to our empirical analysis to unravel it."
+> **管理学惯例**: 不要求独立的 Closure 段落。每个假设段落的局部收束（"Therefore, we hypothesize:"）已承担收敛功能。最后假设推导完毕即进入 METHODS——这是 JMS, AMJ, SMJ, ASQ, OS 等期刊的标准做法。
 
 **常见失败模式**：
-- T6 只是重复假设 → reader 不感到"knot 已 tied"
-- T6 引入新论点 → reader 困惑"为什么现在才说？"
-- T6 的功能弱于前面的假设推导 → "叙事阶段倒退"
+- 最后假设推导突然中断，无 "Therefore/Thus/Hence" 局部收敛信号
+- 最后假设的功能弱于前面假设 → "叙事阶段倒退"（后面的假设应增加复杂度）
+- 强行附加独立的 "In sum..." 总结段 → 非管理学标准，审稿人可能视为冗余
 
 ---
 
@@ -118,31 +112,29 @@ dependencies: []
 ```
 叙事功能
    ^
-Knot Fully Tied    |                                    [T6 Closure]
-                   |                              [最后假设推导]
 Knot Tying         |                        [H2推导]
                    |                  [H1推导]
-Knot Deepening     |            [理论透镜引入]
-                   |      [文献对话]
+Knot Deepening     |            [机制预览]
+                   |      [理论透镜引入]
                    | [构念定义]
 Knot Inheritance   | [承接 Introduction 的 knot]
-                   +----+----+----+----+----+----+----+----
-                     P1   P2   P3   P4   P5   P6   P7   P8
+                   +----+----+----+----+----+----+----
+                     P1   P2   P3   P4   P5   P6   P7
 ```
+
+> **管理学惯例**: Theory 不重做文献综述。构念定义→理论透镜→机制预览→假设推导→自然进入 METHODS。无独立 Closure 段落。
 
 **关键原则**：不用数字评分，用功能判断——每个段落是否让 knot 更紧或更明显？
 
-### 范文功能推进：Mishina et al. (2010)
+### 范文功能推进示例（管理学期刊标准结构）
 
 | 段落 | 功能 | knot 推进检查 |
 |------|------|-------------|
-| P1 | 定义 illegal actions + 引入 TMT 假设 | ✅ 承接 knot：好公司做坏事 |
-| P2-P3 | 定义 aspirations/expectations + 文献对话 | ✅ 加深 knot |
-| P4 | 引入 prominence | ✅ 配角出场，服务于 knot |
-| P5-P6 | H1-H2 推导（绩效→违法） | ✅ 开始 tying |
-| P7-P8 | H3-H4 推导（prominence 调节） | ✅ 继续 tying |
-| P9 | 补充分析 + robustness | ✅ 加深 tension |
-| P10 | T6 Closure | ✅ knot fully tied |
+| P1 | 核心构念界定 + 理论视角引入 | ✅ 承接 knot，从抽象 gap 到可操作的构念 |
+| P2 | 机制预览（"We argue that X affects Y because..."） | ✅ 加深 knot：建立因果预期 |
+| P3-P4 | H1 推导（主效应 why chain） | ✅ 开始 tying |
+| P5-P6 | H2 推导（调节/中介） | ✅ 继续 tying |
+| P7 | H3 推导（进一步调节）→ 自然收敛进入 METHODS | ✅ knot 已在假设中充分 tied |
 
 ---
 
