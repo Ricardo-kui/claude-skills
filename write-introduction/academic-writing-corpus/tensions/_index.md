@@ -25,6 +25,7 @@
 | `11-overlooked-alternative.md` | 被忽视的替代解释 |
 | `14-debate-unresolved.md` | 文献存在对立发现但缺乏整合框架（On the one hand... On the other hand...） |
 | `15-practical-puzzle.md` | 实践传统智慧 vs 新发现 downside → 实践谜题（practical puzzle） |
+| `20-opposite-predictions-positive-trait.md` | 同一正向特质的两个文献流做出相反预测（EMERGING: chung_low_rust_2022_jams JAMS） |
 
 ## Incommensurability
 
