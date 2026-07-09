@@ -194,3 +194,100 @@ status: needs_validation
 - 机制转移不能是简单类比，必须有理论依据
 - 建议在转移后立即说明为什么目标领域的特殊性使得该机制适用
 **反模式**: 如果相邻领域与目标领域在关键维度上不同，强行扩展会显得牵强。
+
+---
+
+<!--
+pattern_id: dual_theory_two_stage_iv
+build_type: 机制推演型
+source_papers: ["Mayo_2022_POM"]
+confidence: high
+status: ready_for_corpus
+-->
+
+## Pattern: Dual-Theory Two-Stage Mechanism
+
+**适用场景**: 同一 IV 在不同阶段/区间产生不同方向或不同机制效应，单一理论无法覆盖。
+**微观动作序列**: Anchor（理论总体适用）→ Stage 1 Theory + Mechanism + Prediction → Stage 2 Theory + Mechanism + Prediction
+**范文来源**: Mayo, Ball & Mills (2022), *Production and Operations Management*（CEO tenure: attribution theory for early tenure; signaling theory for late tenure）
+
+**骨架**:
+```
+[Anchor] We leverage [Theory A] to explain the relationship between [IV] and [DV] in [stage 1]. [Theory A] explains [mechanism A] ([citation]).
+[Stage 1 Prediction] H1: [direction] relationship in [stage 1].
+
+[Stage 1 Boundary] This effect is stronger when [moderator 1] because [reason] ([citation]).
+H2: [boundary prediction for stage 1].
+
+[Stage 2 Theory] Theoretical support for [stage 2] is found in [Theory B]. [Theory B] suggests [mechanism B] ([citation]).
+[Stage 2 Prediction] H3: [boundary prediction for stage 2].
+```
+
+**为什么有效**: 避免“一个理论硬套全程”的牵强；两个阶段各有独立的理论基础和边界条件。
+**注意事项**:
+- 两个理论必须有清晰的分工边界
+- 每个阶段的 moderator 必须理论上与对应机制匹配
+- 需处理“中间阶段”行为（若 IV 为连续变量）
+**反模式**: 两个理论实际上预测同一机制，或阶段划分缺乏理论依据。
+
+---
+
+<!--
+pattern_id: industry_context_as_scope_condition
+build_type: 机制推演型
+source_papers: ["Mayo_2022_POM"]
+confidence: medium
+status: ready_for_corpus
+-->
+
+## Pattern: Industry Context as Scope Condition
+
+**适用场景**: 研究某一行业，需要论证该行业的特殊制度/频率/监管环境使机制更显著。
+**微观动作序列**: Anchor（目标行业特征）→ Contrast（与其他行业比较）→ Regulatory Comparison → Mechanism Link
+**范文来源**: Mayo, Ball & Mills (2022), *Production and Operations Management*（consumer products vs auto/medical device/pharma/food recalls）
+
+**骨架**:
+```
+[Context A] is [attribute], occurring only [frequency] in our study ([citation]). This is in contrast with [Context B]: [frequency 1]; [Context C]: [frequency 2].
+
+The regulatory strategy of [Regulator A] is [attribute] compared to [Regulator B/C]. For example, [specific regulation difference].
+
+The [attribute] of [Context A], combined with [second attribute], creates an environment in which [actors] are tempted to [behavior].
+```
+
+**为什么有效**: 将机制嵌入具体制度环境，增强外部效度主张。
+**注意事项**:
+- 比较数据需准确且有来源
+- 比较行业需在理论上相关
+**反模式**: 堆砌行业数据但无明确机制链接。
+
+---
+
+<!--
+pattern_id: dual_mechanism_same_direction
+build_type: 机制推演型
+source_papers: ["Ball_2018_JOM"]
+confidence: medium
+status: ready_for_corpus
+-->
+
+## Pattern: Dual Mechanism Convergence
+
+**适用场景**: IV 可能通过两个概念独立的中介路径影响 DV，但两条路径均预测同一方向。
+**微观动作序列**: Anchor（IV 影响 DV）→ Mechanism A → Mechanism B → Convergence → Prediction
+**范文来源**: Ball, Shah & Donohue (2018), *Journal of Operations Management*（defect detectability → lower recall likelihood via perceived harm OR perceived cost）
+
+**骨架**:
+```
+[Mechanism A] [IV] may influence [DV] through [mediator A] because [reason] ([citation]).
+[Mechanism B] It is also possible that [IV] influences [DV] through [mediator B] because [reason] ([citation]).
+[Convergence] Whether [mediator A] or [mediator B], we expect [direction] relationship.
+[Prediction] Accordingly, we hypothesize: H[X]: [prediction].
+```
+
+**为什么有效**: 在主效应阶段承认机制多元性，为后续中介分析留空间。
+**注意事项**:
+- 两个机制必须均指向同一方向
+- 后续 Methods 应计划检验中介
+**反模式**: 两个机制方向矛盾却强行合并为一个假设。
+

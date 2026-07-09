@@ -211,6 +211,62 @@ how these audiences respond to [focal phenomenon].
 
 ---
 
+## Zhou 2017 型：双重逻辑 + 输入-效率分解 + 倒 U 形整合
+
+**新增于**: write-theory 3.2.0 (Zhou, Gao & Zhao 2017 ASQ 蒸馏)
+
+**适用**: 同一构念在文献中存在两种对立预测（制度优势 vs 代理劣势），且两种逻辑作用于不同 facet（投入量 vs 转换效率），最终产生最优中间值。
+
+### 双重理论透镜并置（T2）
+
+```
+[Theory A] focuses on the interaction between [environmental feature] and organizations and emphasizes how firms are shaped by [external forces], including [formal] and [informal] elements. In [context], [environmental feature] creates constraints that hinder [outcome], and one way to address them is to [form relationship]. As [government-backed actors], [focal actors] enjoy privileges that enable them to [access resource].
+
+The conventional economic view is that [IV] is incompatible with [outcome]. According to [Theory B], as long as [condition], [problem] arises because [agent] may take advantage of [position]. To reduce [problem], [actors] in [alternative setting] devise [mechanism 1] and [mechanism 2].
+```
+
+### 资源获取机制（H1a）
+
+```
+We propose that [IV] should enable firms to gain more resources to invest in [mediator]. [Outcome] often requires substantial resources, but access to [resource type] in [context] is heavily controlled by the government. [IV] helps a firm to [access], [borrow], and [obtain subsidies], enabling it to spend more on [mediator]. Moreover, [IV] offers access to [policy support], and [focal actors] are under strong regulatory pressures to fulfill [government requirements].
+H[X]: [IV] has a positive effect on [mediator].
+```
+
+### 资源利用效率机制（H1b）
+
+```
+[Actors] in [alternative setting] may not always succeed, but [focal actors] likely suffer more from [problem]. First, [problem dimension 1: undefined principal]. [Theoretical justification]. Without [mechanism], [government actors] maximize self-interest, reducing [efficiency].
+
+Second, [problem dimension 2: political appointments]. [Theoretical justification]. As a result, [managers] lack [capabilities/motivations], reducing the efficiency of converting [input] into [outcome].
+H[X]: [IV] negatively moderates the effect of [mediator] on [outcome].
+```
+
+### 倒 U 形整合（H1c）
+
+```
+Whereas [Lens A] emphasizes the [advantage] brought by [IV], [Lens B] highlights the [disadvantage]. Because both views offer valid arguments, we need to consider both. A firm may be [category 1], [category 2], or [category 3], and the varying degree of [IV] can make [Lens A] or [Lens B] more or less salient.
+
+When [IV] increases from zero to [moderate level], [Lens A effect] becomes more salient yet [Lens B problem] is relatively minor. As a result, the impact of [moderate IV] should be positive.
+
+As [IV] moves from [moderate] to [high], however, [additional advantage] increases incrementally, but [control shift]. Accordingly, [Lens B problem] becomes evident.
+H[X]: [IV] has an inverted U-shaped impact on [outcome], such that [moderate level] generates the most [outcome].
+```
+
+### 边界条件作为补救机制（H2-H4）
+
+```
+[Institutional development] weakens the [IV] → [mediator] effect because market substitutes for state resources and regulatory pressure is alleviated.
+[Competition] weakens the negative [IV] × [mediator] → [outcome] effect because exit threat and performance benchmarks reduce political interference.
+[Start-up status] weakens the negative [IV] × [mediator] → [outcome] effect because clear objectives, close scrutiny, and fewer legacy burdens reduce dual agency problems.
+```
+
+**关键原则**:
+- 两种逻辑必须指向不同 facet（投入 vs 效率）
+- 必须解释拐点为何在中间
+- 边界条件不是简单调节，而是"解决效率诅咒的补救条件"
+
+---
+
 ## 假设陈述格式
 
 | 类型 | 模板 | 示例 (Pontikes 2012) |

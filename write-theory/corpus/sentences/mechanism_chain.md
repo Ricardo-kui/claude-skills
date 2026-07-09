@@ -15,6 +15,44 @@
 
 ---
 
+## 制度真空 → 政府关联 → 资源获取机制（Zhou 2017 型）
+
+**适用**: 制度真空情境下，政府所有权/关联通过融资、补贴、政策支持三条资源通道带来投入优势。
+
+**模板**:
+```
+[Outcome] often requires substantial resources, but access to [resource type] in [context] is heavily controlled by the government. [IV] helps a firm to [access], [borrow], and [obtain subsidies], enabling it to spend more on [mediator]. Moreover, [IV] offers access to [policy support], and [focal actors] are under strong regulatory pressures to fulfill [government requirements].
+```
+
+**语料锚定**: Zhou, Gao & Zhao (2017, *ASQ*) — state ownership → R&D input via subsidized credit, state-owned banks, government R&D funding.
+
+**关键特征**:
+- 三条资源通道（融资、补贴、政策支持）并行
+- 强调制度真空使政府成为关键资源守门人
+- 监管压力作为额外驱动力
+
+---
+
+## 双重代理问题导致资源转换低效机制（Zhou 2017 型）
+
+**适用**: 国有/政府关联企业存在双重代理问题：所有者缺位 + 政治家任命管理者，导致资源转换效率低。
+
+**模板**:
+```
+[Actors] in [alternative setting] may not always succeed, but [focal actors] likely suffer more from [problem]. First, [problem dimension 1: undefined principal]. [Theoretical justification]. Without [mechanism], [government actors] maximize self-interest, reducing [efficiency].
+
+Second, [problem dimension 2: political appointments]. [Theoretical justification]. As a result, [managers] lack [capabilities/motivations], reducing the efficiency of converting [input] into [outcome].
+```
+
+**语料锚定**: Zhou, Gao & Zhao (2017, *ASQ*) — undefined principal + political appointments reduce R&D-to-innovation efficiency.
+
+**关键特征**:
+- 两个代理问题维度必须独立
+- 每个维度都指向"资源转换效率"而非"资源获取"
+- 与 H1a 的投入机制形成 facet 分工
+
+---
+
 ## 单步机制链（基础）
 
 **模板**：
@@ -1630,5 +1668,70 @@ therefore, unlikely to [directional action]."
 **适用**: 假设树型 H1（非机制推演型——无双中介构念）；IV 是连续谱且极点行为者可从理论推导；当理论预期中间值行为者与两端都不同时
 
 **禁忌**: 双原因不是双中介——不要声称 "X→reason1→Y" 和 "X→reason2→Y" 是中介路径（除非你确实要检验 mediation）；三方对比的长度要成比例（不能 liberal 3 段、conservative 1 句、moderate 1 行）；权威引语不能替代你自己的理论推演——它是收束信号而非论证主体
+
+---
+
+## 成本-收益计算机制链（Cost-Benefit Calculus Mechanism，Chung/Low/Rust 2022 型）
+
+**功能**: 当研究的理论机制可以归结为"行为者面对 [short-term benefit] 与 [long-term cost] 的权衡，而 [IV] 通过改变对收益/成本的感知来影响行动概率"时使用。提供完整的 why chain：建立权衡 → 论证感知高收益 → 论证感知低成本 → 收敛到主效应。
+
+**完整骨架**:
+```
+[建立权衡] [Actors] have to weigh the benefits of [action] to boost [short-term_outcome] 
+against the long-term costs of [action] ([citations]). Thus, [actor]'s view of [future_state] 
+will impact the perceived costs and benefits of engaging in [action].
+
+[感知高收益] [Actors] high in [IV] see any drop in [metric] due to [negative_event], and 
+the ensuing [consequence_1] and [consequence_2], as unwarranted and not reflective of 
+[future_state]. As such, to a high-[IV] [actor], the costs of [negative_event] are perceived 
+to be relatively high, and [action] becomes more attractive.
+
+[感知低成本] Although the long-term value loss that comes with [action] should generally 
+deter [actor] from considering such [action_type], a high-[IV] [actor] is likely to perceive 
+this long-term cost to be lower. [Actors] high in [IV] are inclined to think that the potential 
+future losses due to current [action] can be made up for with higher firm performance under 
+their leadership from other parts of the firm, thereby obviating and reducing any economic 
+losses stemming from their [action_type] ([citations]).
+
+[收敛假设] Overall, we expect the perceived higher benefits and lower long-term costs from 
+[action] to drive [actor] to "borrow" from future [outcome] to cover any current potential 
+[shortfall]. Therefore, we hypothesize: H1: [IV] is [positive/negative] related to [DV].
+```
+
+**上下级激励差异扩展**（用于解释 why lower-level actor opposes the action）:
+```
+In contrast to [higher_actor], [lower_actor] faces [lower_benefit] and [higher_cost] from 
+[action]. [Lower_actor]'s compensation is tied more closely to [functional_metric] than to 
+[financial_market_metric], and [action] directly undermines [functional_metric] ([citations]). 
+Furthermore, [lower_actor]'s performance evaluation depends more on [functional_target] than 
+on [profitability_target], so [action] would adversely affect their career outcomes ([citations]).
+```
+
+**语料锚定**:
+- Chung, Low & Rust (2022, JAMS) — CEO confidence → myopic marketing management; CMO vs CEO cost-benefit calculus
+
+**关键特征**:
+- **权衡先行**: 在谈感知收益/成本之前，必须先建立行为者面临明确的 short-term vs long-term trade-off
+- **双向不对称**: 高 [IV] 同时提高收益感知 + 降低成本感知，两者共同驱动行为
+- **未来信念为核心**: 机制的关键是 "[actor] believes future performance can make up for current cuts"
+- **上下级对比可选**: 当研究涉及多个行为者时，用同一行动对两人的成本-收益含义不同来解释冲突/劝说动态
+
+**与标准两步机制链的区别**:
+| 维度 | 标准两步链 | 成本-收益计算链 |
+|------|-----------|----------------|
+| 核心逻辑 | X → 中介状态 → Y | X → 收益/成本感知 → 行动决策 |
+| 结构 | 2-3 个因果步骤 | 权衡框架 + 高收益 + 低成本 + 收敛 |
+| 适用 IV | 能力、动机、情境压力 | 信心、过度自信、激励结构、时间压力 |
+| 关键连接词 | "Consequently," "This in turn" | "weigh the benefits against," "perceived to be" |
+
+**反模式**:
+- 未建立权衡框架直接谈 "perceived benefits" → 收益缺乏参照系
+- 用 "他们觉得划算" 等 folk 解释 → 必须有具体心理机制（乐观偏差、自我效能、控制幻觉）
+- 忽视 long-term cost 的具体内容 → 必须说明侵蚀的是哪种资产（品牌、创新、客户关系）
+- 上下级对比只讲道德/责任感 → 必须回到 compensation / career / performance evaluation 等可理论化激励
+
+**调用语料**:
+- `corpus/sentences/cost_benefit_calculus.md`（完整 sentence-level voice 语料库）
+- `corpus/subprotocols/intra_tmt_persuasion.md`（下级劝说上级）
 
 ---

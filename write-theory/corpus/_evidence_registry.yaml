@@ -1,0 +1,1729 @@
+# Theory Evidence Registry
+# Schema: theory-fragment-registry v1.0.0
+# Purpose: track which source papers have been distilled into which write-theory corpus files,
+#          what theoretical fragments were extracted, and their validation status.
+
+meta:
+  schema_version: "1.0.0"
+  registry_type: theory-fragment-registry
+  last_updated: "2026-07-09"
+  total_papers_indexed: 44
+  batches_processed: 1
+  note: "Reverse-engineered from existing corpus anchors. Batch 2026-07-09: distilled 4 recall papers (Darby 2023 MSOM, Mayo 2022 POM, Ball 2018 JOM, Darby 2026 JOM) into subprotocols and registry."
+
+status_rules:
+  EMERGING:
+    paper_count_max: 2
+    description: Single or two-paper pattern; transferable but not yet cross-validated
+  VERIFIED:
+    paper_count_min: 3
+    description: Pattern replicated across 3+ papers within corpus
+  ROBUST:
+    paper_count_min: 5
+    cross_subfields_min: 2
+    description: Pattern replicated across 5+ papers and 2+ subfields; can be default recommendation
+
+source_papers:
+  andersson_cuervo_cazurra_nielsen_2014_jibs_editorial:
+    display_name: "Andersson, Cuervo-Cazurra & Nielsen (2014, JIBS Editorial)"
+    journal: "Journal of International Business Studies"
+    year: 2014
+    subfield: "strategy"
+    theory_build_type: "Boundary"
+    fragments:
+      - fragment_id: tfr_001
+        type: cross_level_moderation_preamble
+        title: "跨层调节前置声明"
+        home_files:
+          - "variants/E_moderation.md"
+          - "sentences/moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Provides the canonical nesting-structure declaration for cross-level moderation."
+
+  chung_low_rust_2022_jams:
+    display_name: "Chung, Low & Rust (2022, JAMS)"
+    journal: "Journal of the Academy of Marketing Science"
+    year: 2022
+    subfield: "marketing"
+    theory_build_type: "Boundary / Mechanism"
+    fragments:
+      - fragment_id: tfr_002
+        type: sequential_nested_moderation
+        title: "序列嵌套调节（Sequential Nested Moderation）"
+        home_files:
+          - "variants/E_moderation.md"
+          - "subprotocols/intra_tmt_persuasion.md"
+          - "subprotocols/board_governance_boundary_condition.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "CEO confidence × CMO confidence × CMO power / board independence. Three-way persuasion logic."
+      - fragment_id: tfr_003
+        type: cost_benefit_calculus_mechanism
+        title: "成本-收益计算机制链"
+        home_files:
+          - "sentences/cost_benefit_calculus.md"
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Perceived higher short-term benefits + lower long-term costs drive myopic action."
+      - fragment_id: tfr_004
+        type: board_governance_amplifying_boundary
+        title: "董事会治理作为放大型边界条件"
+        home_files:
+          - "subprotocols/board_governance_boundary_condition.md"
+          - "sentences/moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Independent boards intensify myopic behavior through short-term performance pressure."
+      - fragment_id: tfr_005
+        type: intra_tmt_persuasion
+        title: "下级高管劝说上级（Intra-TMT Persuasion）"
+        home_files:
+          - "subprotocols/intra_tmt_persuasion.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "CMO confidence buffers CEO confidence effect via confidence heuristic."
+
+  cui_yang_vertinsky_smj:
+    display_name: "Cui, Yang & Vertinsky (SMJ)"
+    journal: "Strategic Management Journal"
+    year: 2026
+    subfield: "strategy"
+    theory_build_type: "Boundary"
+    fragments:
+      - fragment_id: tfr_006
+        type: curvilinear_multi_moderation
+        title: "曲线关系 + 多调节变量联合论证"
+        home_files:
+          - "variants/E_moderation.md"
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Inverted-U baseline + three embeddedness moderators flattening/steepening curve sides."
+
+  darby_2024_msom:
+    display_name: "Darby (2024, MSOM)"
+    journal: "Manufacturing & Service Operations Management"
+    year: 2024
+    subfield: "om"
+    theory_build_type: "Mechanism / Boundary"
+    fragments:
+      - fragment_id: tfr_007
+        type: single_step_mechanism_chain
+        title: "单步机制链"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+      - fragment_id: tfr_008
+        type: construct_definition_classic
+        title: "经典综述式构念界定"
+        home_files:
+          - "sentences/construct_definition.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+      - fragment_id: tfr_009
+        type: categorical_moderation_group_contrast
+        title: "分组调节对称对比"
+        home_files:
+          - "sentences/moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+
+  darby_2025_jscm:
+    display_name: "Darby (2025, JSCM)"
+    journal: "Journal of Supply Chain Management"
+    year: 2025
+    subfield: "om"
+    theory_build_type: "Boundary"
+    fragments:
+      - fragment_id: tfr_010
+        type: categorical_moderation_group_contrast
+        title: "分组调节对称对比"
+        home_files:
+          - "sentences/moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+
+  darby_2023_msom:
+    display_name: "Darby (2023, MSOM)"
+    journal: "Manufacturing & Service Operations Management"
+    year: 2023
+    subfield: "om"
+    theory_build_type: "Mechanism / Boundary"
+    fragments:
+      - fragment_id: tfr_011
+        type: parallel_multi_source_mechanism
+        title: "并行多源机制链"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "CEO stock ownership → recall timing via multiple parallel mechanisms."
+      - fragment_id: tfr_087
+        type: multi_source_parallel_mechanism_three_reasons
+        title: "三源并行单步机制"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Three independent reasons why CEO stock ownership delays recalls (firm-financial / CEO power / personal financial)."
+      - fragment_id: tfr_088
+        type: categorical_severity_moderation_embedded
+        title: "分类严重度调节——高 vs 低"
+        home_files:
+          - "subprotocols/bilateral_argumentation_templates.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "High-severity vs low-severity recalls alter the stock-ownership → timing relationship."
+
+  desai_2012_amj:
+    display_name: "Desai (2012, AMJ)"
+    journal: "Academy of Management Journal"
+    year: 2012
+    subfield: "ob_hr"
+    theory_build_type: "Boundary"
+    fragments:
+      - fragment_id: tfr_012
+        type: competing_baseline_moderation_resolution
+        title: "竞争基线 → 调节裁决"
+        home_files:
+          - "variants/E_moderation.md"
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Defend vs avoid responses; field-level vs firm-level scrutiny as moderator."
+      - fragment_id: tfr_013
+        type: construct_definition_with_theoretical_alignment
+        title: "防御性制度工作对齐 Oliver (1991)"
+        home_files:
+          - "sentences/construct_definition.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+
+  eilert_2017_jm:
+    display_name: "Eilert (2017, JM)"
+    journal: "Journal of Marketing"
+    year: 2017
+    subfield: "marketing"
+    theory_build_type: "Boundary"
+    fragments:
+      - fragment_id: tfr_014
+        type: buffering_moderation
+        title: "缓冲型调节机制修改"
+        home_files:
+          - "sentences/moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+      - fragment_id: tfr_015
+        type: enhancing_moderation
+        title: "增强型调节机制修改"
+        home_files:
+          - "sentences/moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+
+  employee_free_speech_os:
+    display_name: "Employee Free Speech (OS)"
+    journal: "Organization Science"
+    year: 2026
+    subfield: "ob_hr"
+    theory_build_type: "Boundary"
+    fragments:
+      - fragment_id: tfr_016
+        type: symmetric_group_dual_path
+        title: "对称分组双路径"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Censorship increases psychological safety for liberals but decreases for conservatives."
+
+  falchetti_2022_smj:
+    display_name: "Falchetti (2022, SMJ)"
+    journal: "Strategic Management Journal"
+    year: 2022
+    subfield: "strategy"
+    theory_build_type: "Constructs"
+    fragments:
+      - fragment_id: tfr_017
+        type: construct_differentiation
+        title: "构念辨析型（A 变体）"
+        home_files:
+          - "variants/A_construct_differentiation.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+
+  gamache_etal_2020_smj:
+    display_name: "Gamache, McNamara, Mannor & Johnson (2020, SMJ)"
+    journal: "Strategic Management Journal"
+    year: 2020
+    subfield: "strategy"
+    theory_build_type: "Mechanism"
+    fragments:
+      - fragment_id: tfr_018
+        type: width_type_three_reason_parallel
+        title: "宽度型三理由并行机制"
+        home_files:
+          - "sentences/mechanism_chain.md"
+          - "variants/B_mechanism_elaboration.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Prevention focus → governance initiatives; promotion focus → social initiatives."
+
+  habel_etal_2016_jm:
+    display_name: "Habel et al. (2016, JM)"
+    journal: "Journal of Marketing"
+    year: 2016
+    subfield: "marketing"
+    theory_build_type: "Mechanism / Boundary"
+    fragments:
+      - fragment_id: tfr_019
+        type: dv_selection_argumentation
+        title: "DV 选择论证型构念辨析"
+        home_files:
+          - "variants/A_construct_differentiation.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+        note: "Price fairness vs price-value ratio vs WTP vs sacrifice via price information processing model."
+      - fragment_id: tfr_020
+        type: dialectical_opposing_indirect_effects
+        title: "辩证对立双路径机制"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "CSR engagement → perceived benefit vs perceived price markup; attribution moderates."
+
+  han_2024_amp:
+    display_name: "Han (2024, AMP)"
+    journal: "Academy of Management Perspectives"
+    year: 2024
+    subfield: "strategy"
+    theory_build_type: "Constructs / Boundary"
+    fragments:
+      - fragment_id: tfr_021
+        type: construct_differentiation
+        title: "构念辨析型（A 变体）"
+        home_files:
+          - "variants/A_construct_differentiation.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+      - fragment_id: tfr_022
+        type: differential_main_effect_hypothesis
+        title: "差异主效应假设"
+        home_files:
+          - "sentences/hypothesis_forms.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+
+  han_pollock_paruchuri_smj:
+    display_name: "Han, Pollock & Paruchuri (SMJ)"
+    journal: "Strategic Management Journal"
+    year: 2026
+    subfield: "strategy"
+    theory_build_type: "Boundary"
+    fragments:
+      - fragment_id: tfr_023
+        type: construct_definition_three_dimensional
+        title: "三维框架构念界定"
+        home_files:
+          - "sentences/construct_definition.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+        note: "Rational/emotional/moral dimensions of reputation/celebrity."
+      - fragment_id: tfr_024
+        type: paired_hypothesis_cross_conditions
+        title: "配对假设交叉条件"
+        home_files:
+          - "sentences/hypothesis_forms.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+
+  hoffmann_cheong_phan_zurbruegg_2024_jm:
+    display_name: "Hoffmann, Cheong, Phan & Zurbruegg (2024, JM)"
+    journal: "Journal of Marketing"
+    year: 2024
+    subfield: "marketing"
+    theory_build_type: "Mechanism / Boundary"
+    fragments:
+      - fragment_id: tfr_025
+        type: tradeoff_shock_dominance
+        title: "Trade-off → Shock → Dominance 逻辑链"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "UD laws reduce litigation risk → managerial opportunism → fewer recalls."
+      - fragment_id: tfr_026
+        type: unified_framework_moderator_selection
+        title: "统一框架型调节变量选择"
+        home_files:
+          - "sentences/moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Husted (2007) business ethics taxonomy → corporate culture (intrinsic) + institutional monitoring (extrinsic)."
+      - fragment_id: tfr_027
+        type: bilateral_moderation_derivation_om
+        title: "OM 三三制调节器推导"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+
+  jiang_2026_jibs:
+    display_name: "Jiang (2026, JIBS)"
+    journal: "Journal of International Business Studies"
+    year: 2026
+    subfield: "strategy"
+    theory_build_type: "Constructs"
+    fragments:
+      - fragment_id: tfr_028
+        type: construct_differentiation
+        title: "构念辨析型（A 变体）"
+        home_files:
+          - "variants/A_construct_differentiation.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+
+  kalaignanam_2017_jm:
+    display_name: "Kalaignanam (2017, JM)"
+    journal: "Journal of Marketing"
+    year: 2017
+    subfield: "marketing"
+    theory_build_type: "Boundary"
+    fragments:
+      - fragment_id: tfr_029
+        type: embedded_boundary_conditions
+        title: "嵌入型边界条件（E3）"
+        home_files:
+          - "variants/E_moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "4 moderators, each as a parallel subsection."
+      - fragment_id: tfr_030
+        type: dialectical_contrast_option_ab
+        title: "辩证对立型机制推演（Option A vs B）"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "NPD make vs buy: early start/control/adaptation trade-offs."
+
+  keeves_2017_amj:
+    display_name: "Keeves, Westphal & McDonald (2017, AMJ)"
+    journal: "Academy of Management Journal"
+    year: 2017
+    subfield: "strategy"
+    theory_build_type: "Mechanism"
+    fragments:
+      - fragment_id: tfr_031
+        type: two_step_mechanism_chain
+        title: "两步机制链标准范式"
+        home_files:
+          - "sentences/mechanism_chain.md"
+          - "variants/B_mechanism_elaboration.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+      - fragment_id: tfr_095
+        type: counterintuitive_anchor_three_parallel_threats
+        title: "反直觉锚点 + 三并行心理威胁机制"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Although prior research focuses on beneficial outcomes, IV threatens psychological state via three ideals."
+      - fragment_id: tfr_096
+        type: parallel_dual_source_same_mediator
+        title: "并行动因来源（自我 + 他人）汇聚同一中介"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Self-ingratiation and others' ingratiation toward target both predict resentment."
+      - fragment_id: tfr_097
+        type: social_identity_boundary_condition
+        title: "群体身份作为边界条件"
+        home_files:
+          - "subprotocols/bilateral_argumentation_templates.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "White male managers × minority/female CEOs via self-categorization and intergroup bias."
+      - fragment_id: tfr_098
+        type: emotion_action_tendency_consequence
+        title: "情绪行动倾向 → 人际伤害行为后果"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Resentment → social undermining via emotion action tendency and matching rule."
+
+  kundro_rothbard_amj:
+    display_name: "Kundro & Rothbard (AMJ)"
+    journal: "Academy of Management Journal"
+    year: 2026
+    subfield: "ob_hr"
+    theory_build_type: "Mechanism"
+    fragments:
+      - fragment_id: tfr_032
+        type: alternative_mechanism_exclusion
+        title: "替代机制排除论证"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Warmth, competence, dominance alternatives."
+      - fragment_id: tfr_033
+        type: multi_theory_integration
+        title: "多理论整合骨架"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Power role + Gender role + Expectancy violation theory."
+
+  lashley_pollock_2020_asq:
+    display_name: "Lashley & Pollock (2020, ASQ)"
+    journal: "Administrative Science Quarterly"
+    year: 2020
+    subfield: "strategy"
+    theory_build_type: "Mode / Process"
+    fragments:
+      - fragment_id: tfr_034
+        type: qualitative_process_theory
+        title: "质性过程理论型（D 变体）"
+        home_files:
+          - "variants/D_process_theory.md"
+        makadok_dimension: "Mode"
+        status: "EMERGING"
+      - fragment_id: tfr_099
+        type: core_stigma_reduction_process
+        title: "核心污名降低三阶段过程模型"
+        home_files:
+          - "variants/D_process_theory.md"
+        makadok_dimension: "Mode"
+        status: "EMERGING"
+        note: "Moral agenda → moral prototyping → morality infusion; triggers shift from exogenous to endogenous."
+      - fragment_id: tfr_100
+        type: relational_space_separation
+        title: "关系空间分离管理集体与个体冲突"
+        home_files:
+          - "variants/D_process_theory.md"
+        makadok_dimension: "Mode"
+        status: "EMERGING"
+        note: "Front stage / backstage / side stage allow collective image work and individual survival to coexist."
+      - fragment_id: tfr_101
+        type: stigmatized_category_emergence
+        title: "污名化类别涌现：符号先于物质的反向顺序"
+        home_files:
+          - "variants/D_process_theory.md"
+        makadok_dimension: "Mode"
+        status: "EMERGING"
+        note: "Narrative/symbolic boundary work precedes material changes because core artifact remains stigmatized."
+      - fragment_id: tfr_102
+        type: human_face_field_quote
+        title: "田野引用作为 human face 与机制证据"
+        home_files:
+          - "variants/D_process_theory.md"
+        makadok_dimension: "Mode"
+        status: "EMERGING"
+        note: "Informant quotes and media excerpts embedded after theoretical claims in process narrative."
+
+  malshe_agarwal_2015_jm:
+    display_name: "Malshe & Agarwal (2015, JM)"
+    journal: "Journal of Marketing"
+    year: 2015
+    subfield: "marketing"
+    theory_build_type: "Mechanism"
+    fragments:
+      - fragment_id: tfr_035
+        type: dual_mediator_parallel
+        title: "双中介并行机制链"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Leverage → advertising/R&D → customer satisfaction."
+      - fragment_id: tfr_103
+        type: finance_to_marketing_crossover_t2
+        title: "跨界嫁接型 T2：财务/治理变量 → 职能结果"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Perfect-market irrelevance → imperfect-market costs → crossover to functional domain."
+      - fragment_id: tfr_104
+        type: four_reason_mechanism_chain
+        title: "四理由并行列举机制"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Advertising/R&D decline for discretionary, intangible, firm-specific, underinvestment reasons."
+      - fragment_id: tfr_105
+        type: triple_boundary_conditions
+        title: "三重并列边界条件"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+          - "subprotocols/hypothesis_organization_patterns.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Service intensity, competitive intensity, and sales growth as parallel moderators."
+      - fragment_id: tfr_106
+        type: intangible_asset_real_options_distal_moderation
+        title: "无形资产增长期权 + 财务约束远端调节"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Customer satisfaction creates growth options; leverage reduces financial flexibility and option value."
+
+  malik_wang_martin_gomez_mejia_2025_jm:
+    display_name: "Malik, Wang, Martin & Gomez-Mejia (2025, JM)"
+    journal: "Journal of Marketing"
+    year: 2025
+    subfield: "marketing"
+    theory_build_type: "Mechanism / Boundary"
+    fragments:
+      - fragment_id: tfr_036
+        type: dual_track_wealth_framing
+        title: "双轨并行机制（current vs prospective wealth）"
+        home_files:
+          - "sentences/mechanism_chain.md"
+          - "subprotocols/B2_dual_track.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+      - fragment_id: tfr_037
+        type: paired_hypotheses_same_iv_dual_dv
+        title: "配对假设 a/b 格式"
+        home_files:
+          - "sentences/hypothesis_forms.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+      - fragment_id: tfr_038
+        type: track_level_local_closure
+        title: "轨道级局部收束"
+        home_files:
+          - "sentences/closure.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+      - fragment_id: tfr_039
+        type: numerical_instantiation_mechanism
+        title: "数字实例化机制句"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+
+  mannor_wowak_bartkus_gomez_mejia_2016_smj:
+    display_name: "Mannor, Wowak, Bartkus & Gomez-Mejia (2016, SMJ)"
+    journal: "Strategic Management Journal"
+    year: 2016
+    subfield: "strategy"
+    theory_build_type: "Mechanism"
+    fragments:
+      - fragment_id: tfr_040
+        type: dual_outcome_mechanism
+        title: "双 DV 并行机制链"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Job anxiety → social buffering (H1) + strategic risk taking (H2)."
+
+  mishina_etal_2010_smj:
+    display_name: "Mishina et al. (2010, SMJ)"
+    journal: "Strategic Management Journal"
+    year: 2010
+    subfield: "strategy"
+    theory_build_type: "Mechanism / Storytelling"
+    fragments:
+      - fragment_id: tfr_041
+        type: plot_emergence_check
+        title: "Plot Emergence 检查"
+        home_files:
+          - "storytelling/plot-emergence-check.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+      - fragment_id: tfr_042
+        type: knot_continuity_check
+        title: "跨 Section 连续性检查"
+        home_files:
+          - "storytelling/knot-continuity-check.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+
+  park_lange_jeon_smj:
+    display_name: "Park, Lange & Jeon (SMJ)"
+    journal: "Strategic Management Journal"
+    year: 2026
+    subfield: "strategy"
+    theory_build_type: "Mechanism / Construct"
+    fragments:
+      - fragment_id: tfr_043
+        type: construct_definition_shareholder_stakeholder
+        title: "股东至上 vs 利益相关者构念界定"
+        home_files:
+          - "sentences/construct_definition.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+      - fragment_id: tfr_044
+        type: theory_driven_anchor_puzzle_turn
+        title: "理论驱动锚点 + Puzzle Turn"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+      - fragment_id: tfr_045
+        type: weak_closure_signal
+        title: "H1 弱收敛信号"
+        home_files:
+          - "sentences/closure.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "H1 appears directly after mechanism paragraph without explicit Therefore."
+
+  paruchuri_2020_smj:
+    display_name: "Paruchuri (2020, SMJ)"
+    journal: "Strategic Management Journal"
+    year: 2020
+    subfield: "strategy"
+    theory_build_type: "Boundary / Construct"
+    fragments:
+      - fragment_id: tfr_046
+        type: hypothesis_tree
+        title: "假设树型（C 变体）"
+        home_files:
+          - "variants/C_hypothesis_tree.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+
+  paruchuri_pollock_kumar_2019_smj:
+    display_name: "Paruchuri, Pollock & Kumar (2019/2020, SMJ)"
+    journal: "Strategic Management Journal"
+    year: 2020
+    subfield: "strategy"
+    theory_build_type: "Boundary"
+    fragments:
+      - fragment_id: tfr_047
+        type: conditional_given_hypothesis
+        title: "条件假设 Given 格式"
+        home_files:
+          - "sentences/hypothesis_forms.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Salience × associability joint-necessity logic."
+      - fragment_id: tfr_048
+        type: salience_decay_boundary
+        title: "显著性衰减边界条件"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+      - fragment_id: tfr_049
+        type: capability_integrity_failure_typology
+        title: "能力 vs 诚信失败类型学"
+        home_files:
+          - "sentences/construct_definition.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+
+  pollock_2015_asq:
+    display_name: "Pollock, Lee, Jin & Lashley (2015, ASQ)"
+    journal: "Administrative Science Quarterly"
+    year: 2015
+    subfield: "strategy"
+    theory_build_type: "Constructs"
+    fragments:
+      - fragment_id: tfr_050
+        type: construct_differentiation
+        title: "构念辨析型（A 变体）"
+        home_files:
+          - "variants/A_construct_differentiation.md"
+          - "sentences/construct_definition.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+      - fragment_id: tfr_107
+        type: four_dimension_construct_differentiation
+        title: "两构念四维系统区分"
+        home_files:
+          - "variants/A_construct_differentiation.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+        note: "Reputation vs status along hierarchy/quality, coupling, intersubjective agreement, strategic consequences."
+      - fragment_id: tfr_108
+        type: baseline_expectation_non_hypothesis
+        title: "基线互惠关系作为非假设前提"
+        home_files:
+          - "variants/C_hypothesis_tree.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Obvious reciprocal coevolution stated as baseline assumption rather than formal hypothesis."
+      - fragment_id: tfr_109
+        type: age_flip_lifecycle_asymmetry
+        title: "生命周期不对称 / 年龄翻转机制"
+        home_files:
+          - "variants/C_hypothesis_tree.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Reputation→status stronger when young; status→reputation stronger when old."
+      - fragment_id: tfr_110
+        type: path_dependence_decay
+        title: "路径依赖的时间衰减"
+        home_files:
+          - "variants/C_hypothesis_tree.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Status stickiness weakens with age; reputation reinforcement stays stable."
+      - fragment_id: tfr_111
+        type: blockbuster_event_signal_value_boundary
+        title: "大事件期望违背型水平调节"
+        home_files:
+          - "variants/C_hypothesis_tree.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Signal value of blockbuster events stronger for low-prior reputation/status actors."
+
+  pontikes_2012_asq:
+    display_name: "Pontikes (2012, ASQ)"
+    journal: "Administrative Science Quarterly"
+    year: 2012
+    subfield: "strategy"
+    theory_build_type: "Constructs / Mode"
+    fragments:
+      - fragment_id: tfr_051
+        type: construct_differentiation
+        title: "构念辨析型（A 变体）"
+        home_files:
+          - "variants/A_construct_differentiation.md"
+          - "variants/G_dialectical_opposition.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+      - fragment_id: tfr_112
+        type: audience_role_dichotomy_mirrored_hypotheses
+        title: "受众角色二分 + 镜像假设"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+          - "variants/G_dialectical_opposition.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+        note: "Ambiguous classification hurts consumer appeal but helps VC appeal via audience roles."
+      - fragment_id: tfr_113
+        type: construct_level_distinction_label_vs_organization
+        title: "构念多层界定：标签层面 vs. 组织层面"
+        home_files:
+          - "sentences/construct_definition.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+        note: "Label-level ambiguity and organization-level ambiguity operate through distinct mechanisms."
+      - fragment_id: tfr_114
+        type: sign_flipping_boundary_condition
+        title: "机制开关型边界条件（方向反转）"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+          - "subprotocols/bilateral_argumentation_templates.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Audience role switches the sign of the ambiguity-evaluation relationship."
+
+  qiao_hiatt_sine_2026_smj:
+    display_name: "Qiao, Hiatt & Sine (2026, SMJ)"
+    journal: "Strategic Management Journal"
+    year: 2026
+    subfield: "strategy"
+    theory_build_type: "Mechanism / Boundary"
+    fragments:
+      - fragment_id: tfr_053
+        type: dual_imprinting_differential_persistence
+        title: "双重印记差异持续性机制"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Military founder partner → capability imprint + identity imprint; capability more persistent than identity."
+
+  shen_zhou_wang_zhang_2022_jom:
+    display_name: "Shen, Zhou, Wang & Zhang (2022, JOM)"
+    journal: "Journal of Operations Management"
+    year: 2022
+    subfield: "om"
+    theory_build_type: "Mechanism / Boundary"
+    fragments:
+      - fragment_id: tfr_054
+        type: anchor_mechanism_warrant_prediction
+        title: "Anchor → Mechanism → Warrant → Prediction"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+          - "subprotocols/arrangement_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+      - fragment_id: tfr_055
+        type: multi_mechanism_trunk
+        title: "多机制 Trunk"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+      - fragment_id: tfr_056
+        type: bilateral_moderation_derivation
+        title: "双边论证调节推导"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+      - fragment_id: tfr_057
+        type: om_three_three_mechanism
+        title: "OM 三三制机制推演"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+      - fragment_id: tfr_058
+        type: double_edged_sword_framework
+        title: "双刃剑理论框架"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+      - fragment_id: tfr_059
+        type: extension_logic_argumentation
+        title: "Extension Logic 扩展论证"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+      - fragment_id: tfr_060
+        type: preemptive_competing_account
+        title: "T2 竞争解释管理"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+
+  shi_grewal_2021_jmr:
+    display_name: "Shi, Grewal & Sridhar (2021, JMR)"
+    journal: "Journal of Marketing Research"
+    year: 2021
+    subfield: "marketing"
+    theory_build_type: "Mechanism"
+    fragments:
+      - fragment_id: tfr_061
+        type: anchor_mechanism_warrant_prediction
+        title: "Anchor → Mechanism → Warrant → Prediction"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+      - fragment_id: tfr_115
+        type: three_condition_information_herding
+        title: "三条件框架论证信息驱动型同伴效应"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Motivation / opportunity / ability conditions for information-based herding."
+      - fragment_id: tfr_116
+        type: benchmark_leader_vs_similar_peer
+        title: "基准领导者 vs. 相似同伴的信息源比较"
+        home_files:
+          - "subprotocols/bilateral_argumentation_templates.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Similar peers dominate benchmark leaders due to relevance and investor expectations."
+      - fragment_id: tfr_117
+        type: institutional_shock_as_hook
+        title: "制度冲击作为理论 hook"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "FRR44 policy shock + aggregate disclosure trend as phenomenon-puzzle bridge."
+
+  shipilov_greve_rowley_2019_smj:
+    display_name: "Shipilov, Greve & Rowley (2019, SMJ)"
+    journal: "Strategic Management Journal"
+    year: 2019
+    subfield: "strategy"
+    theory_build_type: "Mechanism / Construct"
+    fragments:
+      - fragment_id: tfr_062
+        type: construct_definition_positive_negative_coverage
+        title: "正负媒体报道构念界定"
+        home_files:
+          - "sentences/construct_definition.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+      - fragment_id: tfr_063
+        type: source_tone_2x2_matrix
+        title: "来源×语调 2×2 矩阵机制"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+      - fragment_id: tfr_064
+        type: no_global_closure_discussion_reframe
+        title: "无全局 Closure，Discussion 开篇重构"
+        home_files:
+          - "sentences/closure.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+
+  singh_grewal_2023_jmr:
+    display_name: "Singh & Grewal (2023, JMR)"
+    journal: "Journal of Marketing Research"
+    year: 2023
+    subfield: "marketing"
+    theory_build_type: "Mechanism / Boundary"
+    fragments:
+      - fragment_id: tfr_065
+        type: anchor_mechanism_warrant_prediction
+        title: "Anchor → Mechanism → Warrant → Prediction"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+          - "subprotocols/arrangement_patterns.md"
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+      - fragment_id: tfr_066
+        type: theory_driven_anchor_puzzle_turn
+        title: "理论驱动锚点 + Puzzle Turn"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+      - fragment_id: tfr_067
+        type: iron_triangle_mechanism
+        title: "铁三角机制"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+      - fragment_id: tfr_068
+        type: indirect_moderation_derivation
+        title: "间接调节 / 有中介的调节推导"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Status: needs_validation."
+      - fragment_id: tfr_069
+        type: track_level_local_closure
+        title: "轨道级局部收束"
+        home_files:
+          - "sentences/closure.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+
+  toh_pyun_smj:
+    display_name: "Toh & Pyun (SMJ)"
+    journal: "Strategic Management Journal"
+    year: 2026
+    subfield: "strategy"
+    theory_build_type: "Boundary / Construct"
+    fragments:
+      - fragment_id: tfr_070
+        type: three_layer_framework_expansion
+        title: "三层框架展开+表格对比型构念界定"
+        home_files:
+          - "sentences/construct_definition.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+      - fragment_id: tfr_071
+        type: multi_actor_standardization_dynamics
+        title: "多行为者标准化动态机制"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+
+  wang_2024_smj:
+    display_name: "Wang (2024, SMJ)"
+    journal: "Strategic Management Journal"
+    year: 2024
+    subfield: "strategy"
+    theory_build_type: "Mechanism / Boundary"
+    fragments:
+      - fragment_id: tfr_072
+        type: symmetric_three_step_pa_na
+        title: "对称三步机制链（CEO 心理特质 → 企业战略）"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "PA/NA → CSR via broaden-and-build theory: cognitive/social/temporal layers."
+      - fragment_id: tfr_073
+        type: theory_internal_moderator_growth
+        title: "理论内部嵌入型调节变量"
+        home_files:
+          - "sentences/moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+      - fragment_id: tfr_074
+        type: identification_strategy_embedded
+        title: "识别策略论证嵌入 Theory"
+        home_files:
+          - "sentences/closure.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Also includes a negative example: panel data + GEE without Theory-level identification discussion."
+
+  weng_yang_jms:
+    display_name: "Weng & Yang (JMS)"
+    journal: "Journal of Management Studies"
+    year: 2026
+    subfield: "strategy"
+    theory_build_type: "Boundary"
+    fragments:
+      - fragment_id: tfr_075
+        type: hypothesis_tree
+        title: "假设树型（C 变体）"
+        home_files:
+          - "variants/C_hypothesis_tree.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+      - fragment_id: tfr_076
+        type: bilateral_fit_misfit_moderation
+        title: "双边论证 fit/misfit 型"
+        home_files:
+          - "sentences/moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Ideological fit/misfit between CEO and board."
+      - fragment_id: tfr_077
+        type: capacity_amplifier_dual_constraint
+        title: "能力放大+双边约束型"
+        home_files:
+          - "sentences/moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "CEO power as capacity amplifier across ideological poles."
+      - fragment_id: tfr_078
+        type: dual_reason_three_actor_contrast
+        title: "双原因+三方行为者对比型 H1"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+
+  wowak_2025_ms:
+    display_name: "Wowak et al. (2025, MS)"
+    journal: "Management Science"
+    year: 2025
+    subfield: "strategy"
+    theory_build_type: "Constructs / Mechanism"
+    fragments:
+      - fragment_id: tfr_079
+        type: symmetric_dual_construct_definition
+        title: "双维度/双构念对称界定"
+        home_files:
+          - "sentences/construct_definition.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+      - fragment_id: tfr_080
+        type: competing_mechanism_chain
+        title: "竞争机制链"
+        home_files:
+          - "sentences/mechanism_chain.md"
+          - "variants/F_competing_hypotheses.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+
+  wu_2025_orgsci:
+    display_name: "Wu (2025, OrgSci)"
+    journal: "Organization Science"
+    year: 2025
+    subfield: "strategy"
+    theory_build_type: "Mechanism"
+    fragments:
+      - fragment_id: tfr_081
+        type: two_step_mechanism_chain
+        title: "两步机制链"
+        home_files:
+          - "sentences/mechanism_chain.md"
+          - "variants/B_mechanism_elaboration.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Digital transformation → routine updating → innovation."
+
+  zhao_ding_gaba_orsc:
+    display_name: "Zhao, Ding & Gaba (ORSC)"
+    journal: "Organization Science"
+    year: 2023
+    subfield: "strategy"
+    theory_build_type: "Mechanism / Boundary"
+    fragments:
+      - fragment_id: tfr_082
+        type: three_layer_construct_definition
+        title: "三层框架构念界定"
+        home_files:
+          - "sentences/construct_definition.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+      - fragment_id: tfr_083
+        type: symmetric_opposing_dual_track
+        title: "对称反向双轨机制"
+        home_files:
+          - "sentences/mechanism_chain.md"
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Digital market positions as core/peripheral function combinations; dissatisfaction vs heterogeneity feedback."
+      - fragment_id: tfr_084
+        type: mechanism_elaboration_five_organizations
+        title: "机制推演型五种组织方式"
+        home_files:
+          - "variants/B_mechanism_elaboration.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+
+  zhou_2017_asq:
+    display_name: "Zhou, Gao & Zhao (2017, ASQ)"
+    journal: "Administrative Science Quarterly"
+    year: 2017
+    subfield: "strategy"
+    theory_build_type: "Boundary / Mechanism"
+    fragments:
+      - fragment_id: tfr_085
+        type: hypothesis_tree
+        title: "假设树型（C 变体）"
+        home_files:
+          - "variants/C_hypothesis_tree.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+      - fragment_id: tfr_086
+        type: mechanism_elaboration
+        title: "机制推演型（B 变体）"
+        home_files:
+          - "variants/B_mechanism_elaboration.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+      - fragment_id: tfr_118
+        type: dual_logic_input_efficiency_inverted_u
+        title: "双重逻辑 + 输入-效率分解 + 倒 U 形整合"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+          - "variants/G_dialectical_opposition.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Institutional logic (input) vs efficiency logic (input→output conversion) produce inverted U."
+      - fragment_id: tfr_119
+        type: institutional_voids_resource_access
+        title: "制度真空 → 政府关联 → 资源获取"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "State ownership provides financing, subsidies, and policy support in institutional voids."
+      - fragment_id: tfr_120
+        type: dual_agency_problem_efficiency
+        title: "双重代理问题导致资源转换低效"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Undefined principal + political appointments reduce R&D-to-innovation efficiency."
+      - fragment_id: tfr_121
+        type: competition_as_external_governance_remedy
+        title: "竞争作为外部治理补救机制"
+        home_files:
+          - "subprotocols/bilateral_argumentation_templates.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Competition, start-up status, and institutional development weaken negative moderation."
+
+  mayo_ball_mills_2022_pom:
+    display_name: "Mayo, Ball & Mills (2022, POM)"
+    journal: "Production and Operations Management"
+    year: 2022
+    subfield: "om"
+    theory_build_type: "Mechanism / Boundary"
+    fragments:
+      - fragment_id: tfr_089
+        type: dual_theory_two_stage_iv
+        title: "双理论两阶段机制"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Attribution theory for early CEO tenure; signaling theory for late tenure."
+      - fragment_id: tfr_090
+        type: industry_context_as_scope_condition
+        title: "行业情境作为 scope condition"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Consumer products recall frequency/regulation contrasted with auto/medical/pharma/food."
+
+  ball_shah_donohue_2018_jom:
+    display_name: "Ball, Shah & Donohue (2018, JOM)"
+    journal: "Journal of Operations Management"
+    year: 2018
+    subfield: "om"
+    theory_build_type: "Mechanism"
+    fragments:
+      - fragment_id: tfr_091
+        type: dual_mechanism_same_direction
+        title: "双机制汇聚"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Defect detectability → lower recall likelihood via perceived harm or perceived cost."
+
+  darby_wowak_ketchen_connelly_2026_jom:
+    display_name: "Darby, Wowak, Ketchen & Connelly (2026, JOM)"
+    journal: "Journal of Operations Management"
+    year: 2026
+    subfield: "om"
+    theory_build_type: "Mechanism / Boundary"
+    fragments:
+      - fragment_id: tfr_092
+        type: two_levers_theory_progression
+        title: "双杠杆理论推进"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Agency theory: executive compensation lever already studied; monitoring/control lever examined here."
+      - fragment_id: tfr_093
+        type: information_asymmetry_meta_framework_two_moderators
+        title: "信息不对称元框架（双调节变量）"
+        home_files:
+          - "subprotocols/moderator_selection_frameworks.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "R&D intensity (firm-level) and device class (product-level) both heighten information asymmetry."
+      - fragment_id: tfr_094
+        type: categorical_device_class_bilateral
+        title: "分类风险调节——低风险 vs 高风险器械"
+        home_files:
+          - "subprotocols/bilateral_argumentation_templates.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "FDA device class I/II vs III as information asymmetry boundary condition."
+
+# Cross-paper pattern aggregation (derived above)
+patterns:
+  anchor_mechanism_warrant_prediction:
+    description: "Anchor → Mechanism Move(s) → Warrant → Prediction"
+    legacy_implicit: true
+    status: "VERIFIED"
+    source_count: 3
+    source_papers:
+      - "singh_grewal_2023_jmr"
+      - "shen_zhou_wang_zhang_2022_jom"
+      - "shi_grewal_2021_jmr"
+    home_file: "subprotocols/hypothesis_derivation_patterns.md"
+  multi_mechanism_trunk:
+    description: "Three parallel mechanisms converging on one main effect"
+    status: "VERIFIED"
+    source_count: 3
+    source_papers:
+      - "shen_zhou_wang_zhang_2022_jom"
+      - "gamache_etal_2020_smj"
+      - "darby_2023_msom"
+    home_file: "subprotocols/hypothesis_derivation_patterns.md"
+  multi_source_parallel_mechanism_three_reasons:
+    description: "Three conceptually independent single-step mechanisms for the same IV-DV relationship"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "darby_2023_msom"
+    home_file: "subprotocols/hypothesis_derivation_patterns.md"
+  bilateral_moderation_derivation:
+    description: "High/low condition symmetric mechanism derivation"
+    status: "VERIFIED"
+    source_count: 3
+    source_papers:
+      - "shen_zhou_wang_zhang_2022_jom"
+      - "weng_yang_jms"
+      - "hoffmann_cheong_phan_zurbruegg_2024_jm"
+    home_file: "subprotocols/hypothesis_derivation_patterns.md"
+  construct_differentiation:
+    description: "Distinction between two easily-confused constructs"
+    legacy_implicit: true
+    status: "VERIFIED"
+    source_count: 5
+    source_papers:
+      - "pollock_2015_asq"
+      - "han_2024_amp"
+      - "pontikes_2012_asq"
+      - "jiang_2026_jibs"
+      - "falchetti_2022_smj"
+    home_file: "variants/A_construct_differentiation.md"
+  hypothesis_tree:
+    description: "Conditional multi-hypothesis system with logical progression"
+    legacy_implicit: true
+    status: "VERIFIED"
+    source_count: 4
+    source_papers:
+      - "zhou_2017_asq"
+      - "paruchuri_2020_smj"
+      - "han_2024_amp"
+      - "weng_yang_jms"
+    home_file: "variants/C_hypothesis_tree.md"
+  two_step_mechanism_chain:
+    description: "Standard two-step why chain (X→M→Y)"
+    legacy_implicit: true
+    status: "VERIFIED"
+    source_count: 3
+    source_papers:
+      - "keeves_2017_amj"
+      - "wu_2025_orgsci"
+      - "mannor_wowak_bartkus_gomez_mejia_2016_smj"
+    home_file: "sentences/mechanism_chain.md"
+  paired_hypotheses:
+    description: "a/b paired hypotheses for same IV across two DVs"
+    legacy_implicit: true
+    status: "VERIFIED"
+    source_count: 2
+    source_papers:
+      - "malik_wang_martin_gomez_mejia_2025_jm"
+      - "paruchuri_pollock_kumar_2019_smj"
+    home_file: "sentences/hypothesis_forms.md"
+  track_level_local_closure:
+    description: "Track-level In summary → Therefore: H[N]a/H[N]b"
+    legacy_implicit: true
+    status: "VERIFIED"
+    source_count: 2
+    source_papers:
+      - "singh_grewal_2023_jmr"
+      - "malik_wang_martin_gomez_mejia_2025_jm"
+    home_file: "sentences/closure.md"
+  no_global_closure:
+    description: "No independent global Closure paragraph; Discussion reframes findings"
+    legacy_implicit: true
+    status: "ROBUST"
+    source_count: 7
+    source_papers:
+      - "shipilov_greve_rowley_2019_smj"
+      - "product_recall_six_papers"
+    home_file: "sentences/closure.md"
+  dual_theory_two_stage_iv:
+    description: "Same IV produces different mechanisms in two stages; each stage uses a distinct theory"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "mayo_ball_mills_2022_pom"
+    home_file: "subprotocols/argumentation_patterns.md"
+  two_levers_theory_progression:
+    description: "Core theory has multiple levers; paper extends from an already-studied lever to an understudied lever"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "darby_wowak_ketchen_connelly_2026_jom"
+    home_file: "subprotocols/hypothesis_derivation_patterns.md"
+  information_asymmetry_meta_framework_two_moderators:
+    description: "Multiple moderators at different levels unified by a single core concept (information asymmetry)"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "darby_wowak_ketchen_connelly_2026_jom"
+    home_file: "subprotocols/moderator_selection_frameworks.md"
+  categorical_severity_moderation_embedded:
+    description: "Categorical severity moderator with symmetric high vs low mechanism derivation"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "darby_2023_msom"
+    home_file: "subprotocols/bilateral_argumentation_templates.md"
+  categorical_device_class_bilateral:
+    description: "Categorical product-risk moderation using regulator classification and information asymmetry contrast"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "darby_wowak_ketchen_connelly_2026_jom"
+    home_file: "subprotocols/bilateral_argumentation_templates.md"
+  dual_mechanism_same_direction:
+    description: "IV affects DV through two independent mediators that both predict the same direction"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "ball_shah_donohue_2018_jom"
+    home_file: "subprotocols/argumentation_patterns.md"
+  industry_context_as_scope_condition:
+    description: "Industry characteristics justify why the mechanism is salient in the chosen context"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "mayo_ball_mills_2022_pom"
+    home_file: "subprotocols/argumentation_patterns.md"
+
+  anchor_then_mechanism_then_prediction:
+    description: "Anchor Then Mechanism Then Prediction"
+    status: "EMERGING"
+    source_count: 2
+    source_papers:
+      - "singh_grewal_2023_jmr"
+      - "shen_zhou_wang_zhang_2022_jom"
+    home_file: "subprotocols/hypothesis_derivation_patterns.md"
+  baseline_dual_path_then_contingency_branches:
+    description: "Baseline Dual Path Then Contingency Branches"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "singh_grewal_2023_jmr"
+    home_file: "subprotocols/hypothesis_organization_patterns.md"
+  bilateral_high_low_three_mechanisms:
+    description: "Bilateral High Low Three Mechanisms"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "shen_zhou_wang_zhang_2022_jom"
+    home_file: "subprotocols/bilateral_argumentation_templates.md"
+  bilateral_with_boundary_condition:
+    description: "Bilateral With Boundary Condition"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "shen_zhou_wang_zhang_2022_jom"
+    home_file: "subprotocols/bilateral_argumentation_templates.md"
+  board_governance_boundary_condition:
+    description: "Board Governance Boundary Condition"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "chung_low_rust_2022_jams"
+    home_file: "subprotocols/board_governance_boundary_condition.md"
+  case_as_warrant_for_mechanism:
+    description: "Case As Warrant For Mechanism"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "shen_zhou_wang_zhang_2022_jom"
+    home_file: "subprotocols/evidence_patterns.md"
+  common_trunk_parallel_branches:
+    description: "Common Trunk Parallel Branches"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "shen_zhou_wang_zhang_2022_jom"
+    home_file: "subprotocols/hypothesis_organization_patterns.md"
+  cumulative_indirect_moderation:
+    description: "Cumulative Indirect Moderation"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "singh_grewal_2023_jmr"
+    home_file: "subprotocols/arrangement_patterns.md"
+  cumulative_moderation_build_up:
+    description: "Cumulative Moderation Build Up"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "singh_grewal_2023_jmr"
+    home_file: "subprotocols/hypothesis_derivation_patterns.md"
+  curvilinear_relationship_two_phase_argumentation:
+    description: "Curvilinear Relationship Two Phase Argumentation"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "cui_yang_vertinsky_smj"
+    home_file: "subprotocols/hypothesis_derivation_patterns.md"
+  environmental_organizational_resource_availability:
+    description: "Environmental Organizational Resource Availability"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "shen_zhou_wang_zhang_2022_jom"
+    home_file: "subprotocols/moderator_selection_frameworks.md"
+  evidence_contrast_then_warrant_embedded:
+    description: "Evidence Contrast Then Warrant Embedded"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "singh_grewal_2023_jmr"
+    home_file: "subprotocols/arrangement_patterns.md"
+  evidence_function_contrast_pivot:
+    description: "Evidence Function Contrast Pivot"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "singh_grewal_2023_jmr"
+    home_file: "subprotocols/evidence_patterns.md"
+  extension_logic_analogous_domain:
+    description: "Extension Logic Analogous Domain"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "desai_2012_amj"
+    home_file: "subprotocols/argumentation_patterns.md"
+  indirect_moderation_derivation:
+    description: "Indirect Moderation Derivation"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "singh_grewal_2023_jmr"
+    home_file: "subprotocols/hypothesis_derivation_patterns.md"
+  indirect_moderation_mediates_moderation:
+    description: "Indirect Moderation Mediates Moderation"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "singh_grewal_2023_jmr"
+    home_file: "subprotocols/argumentation_patterns.md"
+  information_attention_framework:
+    description: "Information Attention Framework"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "singh_grewal_2023_jmr"
+    home_file: "subprotocols/moderator_selection_frameworks.md"
+  intra_tmt_persuasion:
+    description: "Intra Tmt Persuasion"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "chung_low_rust_2022_jams"
+    home_file: "subprotocols/intra_tmt_persuasion.md"
+  parallel_branches_from_common_trunk:
+    description: "Parallel Branches From Common Trunk"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "shen_zhou_wang_zhang_2022_jom"
+    home_file: "subprotocols/arrangement_patterns.md"
+  preemptive_competing_account_management:
+    description: "Preemptive Competing Account Management"
+    status: "EMERGING"
+    source_count: 2
+    source_papers:
+      - "gamache_etal_2020_smj"
+      - "desai_2012_amj"
+    home_file: "subprotocols/argumentation_patterns.md"
+  sequential_nested_moderation:
+    description: "Sequential Nested Moderation"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "chung_low_rust_2022_jams"
+    home_file: "subprotocols/hypothesis_derivation_patterns.md"
+  symmetric_opposing_dual_track:
+    description: "Symmetric Opposing Dual Track"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "zhao_ding_gaba_orsc"
+    home_file: "subprotocols/hypothesis_derivation_patterns.md"
+  theory_as_warrant_conceptual_argument:
+    description: "Theory As Warrant Conceptual Argument"
+    status: "EMERGING"
+    source_count: 2
+    source_papers:
+      - "singh_grewal_2023_jmr"
+      - "shen_zhou_wang_zhang_2022_jom"
+    home_file: "subprotocols/evidence_patterns.md"
+  theory_driven_anchor_efficiency_no_relationship:
+    description: "Theory Driven Anchor Efficiency No Relationship"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "singh_grewal_2023_jmr"
+    home_file: "subprotocols/argumentation_patterns.md"
+  theory_driven_anchor_with_puzzle_turn:
+    description: "Theory Driven Anchor With Puzzle Turn"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "singh_grewal_2023_jmr"
+    home_file: "subprotocols/hypothesis_derivation_patterns.md"
+  three_element_citation_mechanism_anchor:
+    description: "Three Element Citation Mechanism Anchor"
+    status: "EMERGING"
+    source_count: 2
+    source_papers:
+      - "singh_grewal_2023_jmr"
+      - "shen_zhou_wang_zhang_2022_jom"
+    home_file: "subprotocols/evidence_patterns.md"
+  three_mechanism_trunk_with_concrete_illustrations:
+    description: "Three Mechanism Trunk With Concrete Illustrations"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "shen_zhou_wang_zhang_2022_jom"
+    home_file: "subprotocols/argumentation_patterns.md"
+  two_by_two_symmetric_matrix:
+    description: "Two By Two Symmetric Matrix"
+    status: "EMERGING"
+    source_count: 2
+    source_papers:
+      - "gamache_etal_2020_smj"
+      - "zhao_ding_gaba_orsc"
+    home_file: "subprotocols/hypothesis_organization_patterns.md"
+  width_type_parallel_mechanism:
+    description: "Width Type Parallel Mechanism"
+    status: "EMERGING"
+    source_count: 2
+    source_papers:
+      - "gamache_etal_2020_smj"
+      - "cui_yang_vertinsky_smj"
+    home_file: "subprotocols/hypothesis_derivation_patterns.md"
+
+# Status summary by Makadok dimension
+summary_by_dimension:
+  Constructs:
+    total_fragments: 14
+    source_papers: 10
+    verified_patterns: 1
+  Mechanism:
+    total_fragments: 49
+    source_papers: 22
+    verified_patterns: 5
+  Boundary:
+    total_fragments: 29
+    source_papers: 19
+    verified_patterns: 3
+  Level:
+    total_fragments: 0
+    source_papers: 0
+  Mode:
+    total_fragments: 2
+    source_papers: 2
+  Question:
+    total_fragments: 0
+    source_papers: 0
+  Output:
+    total_fragments: 0
+    source_papers: 0
+
+# Honesty boundaries extracted from corpus
+honesty_boundaries:
+  - id: hb_theory_no_causal_language_without_identification
+    boundary: "OLS/FE 论文 Theory 段也不得使用 'effect of' / 'causes' / 'leads to' 除非识别策略已在 Theory 中铺垫"
+    allowed_language: "associated with / positively related to / consistent with"
+    affected_files:
+      - "sentences/closure.md"
+      - "sentences/mechanism_chain.md"
+    source: "write-results _evidence_registry.yaml / global_honesty_boundaries"
+  - id: hb_no_folk_wisdom_as_mechanism
+    boundary: "机制链中禁止用谚语/常识替代理论文献支撑"
+    example_violation: "shipilov_greve_rowley_2019 H1b/H2b based on 'complacency' folk proverb was empirically reversed"
+    affected_files:
+      - "sentences/mechanism_chain.md"
+  - id: hb_no_ad_hoc_moderator
+    boundary: "moderator 必须有理论来源，不能是 'we also examine...' 式事后添加"
+    affected_files:
+      - "sentences/moderation.md"
+      - "variants/E_moderation.md"
+
+# Next batch targets (to move EMERGING → VERIFIED / ROBUST)
+next_batch_targets:
+  - pattern: "three_way_interaction_theory"
+    papers_needed: 2
+    current_sources:
+      - "chung_low_rust_2022_jams"
+      - "weng_yang_jms"
+    note: "Add one more upper-echelons three-way or process moderation paper to reach VERIFIED."
+  - pattern: "qualitative_process_theory"
+    papers_needed: 2
+    current_sources:
+      - "lashley_pollock_2020_asq"
+      - "pontikes_2012_asq"
+    note: "Add second pure qualitative process study to validate D variant."
+  - pattern: "competing_hypotheses"
+    papers_needed: 2
+    current_sources:
+      - "wowak_2025_ms"
+    note: "Add F variant exemplars from AMJ/ASQ/OS."

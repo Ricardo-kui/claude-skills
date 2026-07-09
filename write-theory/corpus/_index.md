@@ -59,6 +59,8 @@
 | [`hypothesis_organization_patterns.md`](subprotocols/hypothesis_organization_patterns.md) | 跨类型 | 复杂假设体系的段落级组织（common trunk / dual branch / baseline→moderation / 2×2 对称矩阵） |
 | [`bilateral_argumentation_templates.md`](subprotocols/bilateral_argumentation_templates.md) | E 调节效应型 | 调节假设的 high/low 双边论证句法 |
 | [`moderator_selection_frameworks.md`](subprotocols/moderator_selection_frameworks.md) | E 调节效应型 / C 假设树型 | 多 moderator 选择元框架 |
+| [`intra_tmt_persuasion.md`](subprotocols/intra_tmt_persuasion.md) | E 调节效应型 / C 假设树型 | 下级高管如何通过信心启发式劝说上级决策者（含权力放大→三向交互） |
+| [`board_governance_boundary_condition.md`](subprotocols/board_governance_boundary_condition.md) | E 调节效应型 | 董事会治理作为**放大型**边界条件（perverse pressure logic） |
 
 ---
 
@@ -67,8 +69,9 @@
 | 文件 | 功能 | 覆盖骨架 |
 |------|------|---------|
 | [`construct_definition.md`](sentences/construct_definition.md) | 构念界定 | 定义策略、scope conditions、lineage、adjacent construct 区分、辩论并置型构念界定 |
-| [`mechanism_chain.md`](sentences/mechanism_chain.md) | 机制推演 | why chain 连接词、单步/两步/双轨/竞争/多理论/OM三三制/双刃剑/双中介并行/双DV并行/多层收窄型/替代机制排除/Ability-Motivation 框架/Iron Triangle三边机制/双视角对比框架整合/三层嵌套理论演进/Rhetorical-Question Pivot/联合必要性门控逻辑/**辩证对立双路径(habel2016)/Focus Group定性嵌入(habel2016)** |
-| [`moderation.md`](sentences/moderation.md) | 调节机制 | 机制修改论证、假设模板、修辞问句开场、Ability-Motivation 双路径调节、共享调节器反向调节、多调节器同向设计、双边论证调节推演、注意力基础观调节论证、不对称调节 |
+| [`mechanism_chain.md`](sentences/mechanism_chain.md) | 机制推演 | why chain 连接词、单步/两步/双轨/竞争/多理论/OM三三制/双刃剑/双中介并行/双DV并行/多层收窄型/替代机制排除/Ability-Motivation 框架/Iron Triangle三边机制/双视角对比框架整合/三层嵌套理论演进/Rhetorical-Question Pivot/联合必要性门控逻辑/**辩证对立双路径(habel2016)/Focus Group定性嵌入(habel2016)/成本-收益计算机制链(chung2022)** |
+| [`cost_benefit_calculus.md`](sentences/cost_benefit_calculus.md) | 成本-收益机制 voice | 感知高收益 + 感知低成本 + 综合收敛 + 上下级激励差异对比 |
+| [`moderation.md`](sentences/moderation.md) | 调节机制 | 机制修改论证、假设模板、修辞问句开场、Ability-Motivation 双路径调节、共享调节器反向调节、多调节器同向设计、双边论证调节推演、注意力基础观调节论证、不对称调节、**董事会放大型边界条件(chung2022)** |
 | [`hypothesis_forms.md`](sentences/hypothesis_forms.md) | 假设形式 | 各类假设的标准句法（主效应、中介、调节、三向交互、有中介的调节、配对假设a/b格式、条件假设Given格式） |
 | [`closure.md`](sentences/closure.md) | 收束/过渡 | **注意：管理学不要求独立 Closure 段。** 局部收束信号（"Therefore, we hypothesize:"）、段落收束→假设过渡（按论证类型）、**H1 收敛信号强制提醒** |
 

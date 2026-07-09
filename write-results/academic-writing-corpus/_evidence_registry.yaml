@@ -5,10 +5,10 @@
 meta:
   schema_version: 1.0.0
   registry_type: estimator-slot-skeleton
-  last_updated: '2026-07-07'
-  last_batch_id: batch_13_lashley_pollock2020
-  batches_processed: 14
-  total_papers_indexed: 15
+  last_updated: '2026-07-08'
+  last_batch_id: batch_14_chung_low_rust_2022_jams
+  batches_processed: 15
+  total_papers_indexed: 16
   subfields:
   - strategy
   - ob_hr
@@ -147,6 +147,44 @@ estimators:
           - incremental_model_building
           - table_navigation
           corpus_path: academic-writing-corpus/OLS-FE.md
+        - id: r2_ols_model_free_quartile_opening
+          skeleton: We first present model-free evidence regarding the relationship between [IV] and [DV]. In the [web appendix],
+            we show scatter plots of [DV] against [IV] for [subgroup description]. In Fig. [X], we divide the sample into [four
+            quartiles] based on [IV] and calculate the mean and median [DV] for each quartile. Consistent with Hypothesis [N],
+            there is a monotonic [increase/decrease] in [DV] from the first quartile, where [IV] is lowest, to the fourth quartile,
+            where [IV] is highest. The mean (median) [DV] is significantly different across the quartiles.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Chung_Low_Rust_2022_JAMS
+          transferability: medium
+          paradigm_exclusivity: OLS/FE 连续 IV 主效应预览
+          rhythm_tags:
+          - model_free_evidence
+          - quartile_means
+          - descriptive_preview
+          corpus_path: academic-writing-corpus/OLS-FE.md
+        - id: r2_ols_heckman_two_stage_table_navigation
+          skeleton: Table [X] shows the results of the first-stage selection equation. Our exclusion restriction, [instrument],
+            significantly and [positively/negatively] predicts [selection_DV] (β = [value], p < [threshold]), consistent with
+            [theory]. Table [Y] reports the second-stage Heckman selection results. Column 1 tests Hypothesis [H1]. Column 2
+            adds the two-way moderating relationships. Column 3 introduces the three-way interactions. Column 4 shows that the
+            results are robust to the inclusion of [firm fixed effects].
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Chung_Low_Rust_2022_JAMS
+          transferability: medium
+          paradigm_exclusivity: Heckman 选择模型 + 多假设表格导航
+          rhythm_tags:
+          - heckman_first_stage
+          - column_navigation
+          - selection_correction
+          corpus_path: academic-writing-corpus/OLS-FE.md
       R3:
         description: 主假设检验（四拍节奏）
         skeleton_variants:
@@ -211,9 +249,47 @@ estimators:
           - no_support
           notes: 非显著结果的三拍变体（缺幅度解释）
           corpus_path: academic-writing-corpus/OLS-FE.md
+        - id: r3_ols_interquartile_magnitude
+          skeleton: The coefficient for [IV] is [positive/negative] and statistically significant (β = [value], p < [threshold]).
+            An interquartile move in [IV] from the 25th percentile to the 75th percentile is associated with a [N] [unit / percentage
+            point] [increase/decrease] in [DV]. In untabulated tests, we also find support using [alternative sample], with similar
+            economic significance.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Chung_Low_Rust_2022_JAMS
+          transferability: medium
+          paradigm_exclusivity: OLS/FE 经济显著性，偏态 IV 适用
+          rhythm_tags:
+          - interquartile_magnitude
+          - economic_significance
+          - alternative_sample
+          corpus_path: academic-writing-corpus/OLS-FE.md
       R4:
         description: 交互效应 / 条件效应
-        skeleton_variants: []
+        skeleton_variants:
+        - id: r4_ols_three_way_marginal_effects_table
+          skeleton: Model [N] of Table [X] shows the full specification including the triple interaction among [IV], [moderator_1],
+            and [moderator_2]. The coefficient on the triple interaction term is [positive/negative] and significant (β = [value],
+            p < [threshold]), consistent with Hypothesis [H_3way]. The marginal effects are reported in Panel [B/C] of Table [Y].
+            They show the coefficient on [IV] (δ1) at [one SD below/above] the mean of [moderator_1] and [moderator_2]. As [moderator_1]
+            increases, the [positive/negative] effect of [IV] on [DV] becomes [stronger/weaker]; this [amplification/attenuation]
+            is [greater/smaller] when [moderator_2] is higher.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Chung_Low_Rust_2022_JAMS
+          transferability: medium
+          paradigm_exclusivity: 连续调节变量三向交互
+          rhythm_tags:
+          - three_way_interaction
+          - marginal_effects_table
+          - continuous_moderator
+          corpus_path: academic-writing-corpus/OLS-FE.md
       R5:
         description: 经济 / 实质显著性
         skeleton_variants:
@@ -278,6 +354,46 @@ estimators:
           - method
           - robustness_confirmation
           notes: 叙事型稳健性，弱化 threat 定位但仍明确
+          corpus_path: academic-writing-corpus/OLS-FE.md
+        - id: r7_ols_alternative_dv_falsification
+          skeleton: An alternative way to establish causality is to provide a falsification test where we examine [alternative_DV],
+            an outcome that is outside the decision-making domain of [focal_actor]. We use the [estimator] specification in [Table
+            X], Column [N], except that we replace [DV] with [alternative_DV]. As expected, the [interactions/effects] involving
+            [actor-specific variables] are insignificant, because [alternative_DV] is not within the decision-making domain of
+            [focal_actor].
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Chung_Low_Rust_2022_JAMS
+          transferability: medium
+          paradigm_exclusivity: 领域外 DV 证伪
+          rhythm_tags:
+          - falsification
+          - alternative_outcome
+          - domain_boundary
+          corpus_path: academic-writing-corpus/OLS-FE.md
+        - id: r7_ols_endogeneity_threat_table
+          skeleton: Endogeneity is mainly caused by issues relating to omitted variables and simultaneity. We include [control_strategy]
+            to rule out omitted variables and use [temporal_strategy] to ensure causal priority. We also use the [DWH test] with
+            strong instruments and [cannot reject/reject] the null hypothesis that [IV] is exogenous. This conclusion is validated
+            with the [instrument-free Gaussian copula estimation method]. We tabulate complementary tests in Table [X] to rule out
+            [threat_1], [threat_2], [threat_3], and [threat_4]. The supporting evidence confirms that there is little reason to
+            believe that endogeneity issues are solely driving the results.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Chung_Low_Rust_2022_JAMS
+          transferability: medium
+          paradigm_exclusivity: OLS/FE 内生性稳健性表叙事
+          rhythm_tags:
+          - endogeneity
+          - dwh_test
+          - gaussian_copula
+          - threat_table
           corpus_path: academic-writing-corpus/OLS-FE.md
       R8:
         description: 补充 / 事后 / 机制分析
@@ -3215,7 +3331,27 @@ estimators:
       R4: 缺简单斜率分解 / 未报告 conditional slope 标准误
     slots:
       R4:
-        skeleton_variants: []
+        skeleton_variants:
+        - id: r4_three_way_continuous_moderator_marginal_effects
+          skeleton: Model [N] of Table [X] shows the full specification including the triple interaction among [IV], [moderator_1],
+            and [moderator_2]. The coefficient on the triple interaction term is [positive/negative] and significant (β = [value],
+            p < [threshold]), consistent with Hypothesis [H_3way]. The marginal effects are reported in Panel [B/C] of Table [Y],
+            showing the coefficient on [IV] (δ1) at [one SD below/above] the mean of [moderator_1] and [moderator_2]. As [moderator_1]
+            increases, the [positive/negative] effect of [IV] on [DV] becomes [stronger/weaker]; this [amplification/attenuation]
+            is [greater/smaller] when [moderator_2] is higher.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Chung_Low_Rust_2022_JAMS
+          transferability: medium
+          paradigm_exclusivity: 连续调节变量三向交互专用
+          rhythm_tags:
+          - three_way_interaction
+          - marginal_effects_table
+          - continuous_moderator
+          corpus_path: academic-writing-corpus/三向交互.md
       R7:
         skeleton_variants: []
     cross_slot_patterns: []
@@ -3460,3 +3596,10 @@ batch_history:
   source_subfield: strategy
   slot_updates_count: 4
   novel_patterns_count: 4
+- batch_id: batch_14_chung_low_rust_2022_jams
+  timestamp: '2026-07-08'
+  estimator_family: OLS_FE / 三向交互
+  source_paper: Chung_Low_Rust_2022_JAMS
+  source_subfield: marketing
+  slot_updates_count: 6
+  novel_patterns_count: 6

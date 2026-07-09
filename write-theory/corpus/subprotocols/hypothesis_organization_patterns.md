@@ -4,6 +4,44 @@
 
 ---
 
+<!--
+pattern_id: triple_boundary_conditions
+build_type: 假设树型 / 调节效应型
+source_papers: ["Malshe_Agarwal_2015_JM"]
+confidence: medium
+status: ready_for_corpus
+-->
+
+## Pattern: Triple Parallel Boundary Conditions
+
+**适用场景**: 主效应明确后，需要系统检验三类来自不同理论角度的情境异质性；调节变量之间没有统一元框架，但各自有独立理论依据。
+**微观动作序列**: Preview（预告 k 个 moderators 及预期方向）→ Subsection 1（理论 + 假设）→ Subsection 2 → Subsection 3
+**范文来源**: Malshe & Agarwal (2015), *Journal of Marketing*（service intensity, competitive intensity, sales growth）
+
+**骨架**:
+```
+[Preview] In this section, we propose [number] potential moderators that can influence the [IV-DV] link: [moderator 1], [moderator 2], and [moderator 3]. We expect a more negative effect of [IV] on [DV] for [condition 1], [condition 2], and [condition 3].
+
+[Moderator 1]. [Theory/literature] proposes that [trade-off] is sharper in [condition 1] because [reason] ([citation]). [Additional support]. Therefore:
+H[X]a: The negative effect of [IV] on [DV] is more negative for [condition 1] than for [baseline].
+
+[Moderator 2]. In [condition 2], [marginal benefit logic] implies that [IV] will lead managers to cut the activity with lower marginal benefits ([citation]). Thus:
+H[X]b: The negative impact of [IV] on [DV] is more pronounced for [condition 2].
+
+[Moderator 3]. Firms with [condition 3] face [cash flow logic], so [IV] exacerbates the pressure ([citation]). Accordingly:
+H[X]c: [IV] affects [DV] more negatively for [condition 3].
+```
+
+**为什么有效**: 结构平行，便于读者比较；每个 moderator 都有独立理论依据，避免"fishing"印象。
+**注意事项**:
+- 三个 moderators 应来自不同理论角度，避免概念重叠
+- 每个 subsection 篇幅应大致对称
+- 若无统一元框架，需在 preview 中说明它们共同检验"主效应的异质性"
+
+**反模式**: 三个 moderator 实为同一机制的不同操作化；preview 后各小节结构差异过大。
+
+---
+
 <!-- 
 pattern_id: common_trunk_parallel_branches
 build_type: 机制推演型 + 调节效应型

@@ -46,6 +46,30 @@ version: 3.2.0
 
 ## 输入接口
 
+本 Skill 消费上游 `write-theory` 和 `write-introduction` 的输出。
+
+### 方式一：paper-state.yaml 自动消费（推荐）
+
+**发现机制**：启动时按以下优先级查找 `paper-state.yaml`：
+1. `--paper-state=<path>` 命令行参数
+2. 当前工作目录下的 `paper-state.yaml`
+3. 项目根目录下的 `paper-state.yaml`
+
+**自动加载**：检测到文件后，读取 `theory.constructs` 和 `theory.hypotheses`，自动生成假设-变量映射表，跳过手动输入：
+
+```
+[paper-state.yaml] 检测到 project/paper-state.yaml
+  → theory.status = drafted
+  → constructs: IV=[iv_construct], DV=[dv_construct]
+  → hypotheses: H1 ([IV] → [DV], [predicted_direction]), H2 (...)
+  → 自动构建假设-变量映射
+  → 用户只需确认变量操作化方式
+```
+
+若 paper-state.yaml 中 `theory.hypotheses` 为空或不存在 → 回退到方式二。
+
+### 方式二：write-theory 输出文本消费（回退）
+
 可直接消费 `/write-theory` 的输出：
 - `假设列表` → 用于构建假设-变量映射表
 - `核心构念` → 用于变量操作化模板
@@ -765,6 +789,44 @@ The Results section first reports [main tests] and then examines [validity/robus
 - `/paper-review` — 进行 Theory-Methods 假设-变量映射对齐检查
 - `/methods-review` — 如用户已有 Methods 草稿，使用本骨架作为理想基准对比审查
 - `/distill-methods-exemplar` — 对生成后的 Methods 段落进行反向蒸馏审查，检查槽位覆盖、DNA 指标、可迁移性和因果语言合规性。审查结果作为 Vault 参考注释，不自动修改本 skill 的骨架库
+- `/write-results` — 通过 paper-state.yaml 自动消费 `methods.design_type`、`methods.estimator_family`、`methods.variables`、`methods.hypothesis_variable_map`，自动选择结果类型和构建假设-结果对齐表
+
+### paper-state.yaml 输出片段
+
+Methods 骨架输出末尾自动附加以下片段。用户复制到项目 `paper-state.yaml` 的 `methods:` 节下，供 write-results Phase 0 自动消费：
+
+```yaml
+# --- paper-state.yaml 片段 (copy to your paper-state.yaml) ---
+methods:
+  status: drafted
+  output_path: "[本次输出文件路径]"
+  depends_on: ["theory"]
+  updated: "[YYYY-MM-DD]"
+
+  design_type: "[面板数据/OLS / 自然实验/DiD / 生存分析 / IV/2SLS / ...]"
+  estimator_family: "[OLS / FE / Logit / Cox / DiD / IV/2SLS / ...]"
+
+  sample:
+    source: "[数据来源描述]"
+    n_observations: [N]
+    n_firms: [N]
+    time_window: "[YYYY-YYYY]"
+    inclusion_criteria: ["[criterion 1]", "[criterion 2]"]
+
+  variables:
+    dv: "[因变量名]"
+    iv: "[核心自变量名]"
+    mediator: "[中介变量名，如无则为 null]"
+    moderator: "[调节变量名，如无则为 null]"
+    controls: ["[控制变量1]", "[控制变量2]", ...]
+    fixed_effects: ["[firm]", "[year]"]
+
+  hypothesis_variable_map:
+    H1: {predictor: "[var name]", outcome: "[var name]", model: "[model label]"}
+    # H2: {predictor: "...", outcome: "...", model: "..."}
+
+  results_preview: "[M10 预告段的核心内容摘要]"
+```
 
 ### Cross-Section 对齐检查（与上游 Skill 的接口）
 
@@ -940,6 +1002,7 @@ To assess the robustness of our findings, we report a series of sensitivity anal
 
 - 不要报告支持状态在 Methods 中。
 - 不要把模型选择埋在方程里而没有文字解释。
+- **输出末尾追加 paper-state.yaml 片段**：在 Methods 骨架输出末尾，自动附加 `### paper-state.yaml 片段` 块。该片段包含 `methods.design_type`、`methods.estimator_family`、`methods.sample`、`methods.variables`、`methods.hypothesis_variable_map`、`methods.results_preview`，供下游 write-results Phase 0 自动消费。用户复制到项目 `paper-state.yaml` 的 `methods:` 节下。
 
 ## 语料与变体
 

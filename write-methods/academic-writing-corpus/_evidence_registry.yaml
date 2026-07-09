@@ -1,21 +1,44 @@
 meta:
-  last_updated: '2026-07-07'
+  last_updated: '2026-07-08'
   total_design_types: 22
-  batches_processed: 5
-  source: corpus INDEX.md + product_recall_cross_validation + cutolo2024_jm_text_count + falchetti2022_smj_experiment + lashley_pollock2020_asq_qualitative_process
+  batches_processed: 6
+  source: corpus INDEX.md + product_recall_cross_validation + cutolo2024_jm_text_count + falchetti2022_smj_experiment + lashley_pollock2020_asq_qualitative_process + chung_low_rust_2022_jams_executive_confidence_myopia
 evidence:
+  by_source_paper:
+    chung_low_rust_2022_jams:
+      journal: Journal of the Academy of Marketing Science
+      title: "Executive confidence and myopic marketing management"
+      status: EMERGING (1p)
+      design_types:
+        - 面板数据-OLS
+        - 两阶段模型
+        - IV-2SLS
+      micro_templates:
+        - executive-confidence-operationalization
+        - interquartile-economic-significance
+        - heckman-peer-prevalence-exclusion
+        - alternative-dv-falsification
+      slots_covered:
+        - M2.5
+        - M4
+        - M7
+        - M8
+        - M10
+      note: "待第二篇 exemplar 提升为 ROBUST；DWH + Gaussian copula 内生性叙事需与传统 IV 研究进一步交叉验证"
   by_design_type:
     面板数据-OLS:
-      paper_count: 4
+      paper_count: 5
       papers:
       - darby2023 (MSOM)
       - darby2025 (JSCM)
       - darby2026 (JOM)
       - eilert2017 (JM)
+      - chung_low_rust_2022_jams (JAMS)
       status: VERIFIED
       slots_covered:
       - M1
       - M2
+      - M2.5
       - M3
       - M4
       - M5
@@ -229,9 +252,10 @@ evidence:
         reject: 0
         common_revise_reasons: []
     IV-2SLS:
-      paper_count: 1
+      paper_count: 2
       papers:
       - wowak2025 (MS)
+      - chung_low_rust_2022_jams (JAMS)
       status: EMERGING
       slots_covered:
       - M4
@@ -358,10 +382,11 @@ evidence:
         reject: 0
         common_revise_reasons: []
     两阶段模型:
-      paper_count: 2
+      paper_count: 3
       papers:
       - darby2023 (MSOM)
       - zhou2017 (ASQ)
+      - chung_low_rust_2022_jams (JAMS)
       status: EMERGING
       slots_covered:
       - M7

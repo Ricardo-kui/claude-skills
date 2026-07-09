@@ -18,6 +18,58 @@ version: 4.1.0
 1. 你的研究是对已有文献的**补充**（Incompleteness）、**修正**（Inadequacy）还是**颠覆**（Incommensurability）？
 2. 已有文献的主要问题是什么——漏了东西、理解偏了、还是自相矛盾？
 
+### Phase 1.5: Vault 基线检索（可选——仅在 paper-state.yaml 有 vault 配置时执行）
+
+在路由前，从用户的知识库中拉取当前主题的文献证据。**本步骤为可选：无 vault 配置时静默跳过，不影响正常写作流程。**
+
+**执行条件**：paper-state.yaml 中 `paper.vault` 节存在且至少有一个非 null 字段。
+
+**检索流程**（三级回退，不阻塞）：
+
+```
+paper-state.yaml 中 paper.vault 是否有配置?
+│
+├── vault.section_evidence_map 非空 → 读取该文件
+│   → 过滤到 "Introduction" / "I" 行（按 Section 列或命题 ID 前缀匹配）
+│   → 提取每行: 命题ID, citation key, Vault note path, 证据用途
+│   → 如有 vault.war_room，补读 Gap 状态和 canonical handle buckets
+│   → 生成 "Vault Knowledge Brief (Introduction)"
+│
+├── vault 路径存在但文件读不到 → 用 Obsidian MCP search_notes
+│   以 paper.title 和 introduction.theory_hints.core_constructs 为关键词
+│   搜索 Vault（限制 10 条）→ 提取 citation key 和 note path
+│
+└── 无 vault 配置或全部为 null → 静默跳过
+```
+
+**Vault Knowledge Brief 输出格式**（所有内容来自 Vault，不编造）：
+
+```markdown
+## Vault 知识简报（Introduction）
+
+### 章节-证据映射（来自 paper-state.yaml vault.section_evidence_map）
+| 命题ID | Citation Key | 证据用途 |
+|--------|-------------|---------|
+| [I1] | [@citekey] | [用途——来自 Vault 文件原文] |
+| ... | ... | ... |
+
+### Gap 锚定（来自项目作战室，如有）
+- [从 war_room 的 Gap 状态节提取]
+
+### 推荐引文
+- Literature Turn 核心引用: [从证据映射中提取的 citation keys]
+- Gap 句引用: [从证据映射中提取]
+- Rival explanations: [从证据映射或 war_room 的 rival/boundary anchors 提取]
+
+### 证据完整度
+- Vault 命中: N 条引言级证据
+- [如命中数 < 3，提示 "证据映射中 Introduction 条目较少，建议补充"]
+```
+
+**使用方式**：Brief 中的 citation keys 作为 Phase 3 渲染的建议输入——Hook 的 `[consensus/dominant finding]` 和 Literature Turn 的 `[citations]` 槽位优先使用 Brief 推荐的引文（这些引文与用户在 Vault 中的项目设计一致）。Brief 不覆盖用户主动提供的引文，只标注"Vault 建议 vs 用户选择"的不一致处。
+
+**通用性保证**：本步骤不假定 Vault 的目录结构、命名约定或文件格式。所有路径和文件名来自 paper-state.yaml 的 vault 字段——该文件由用户按项目配置，技能本身不含任何项目特定硬编码。
+
 ## Phase 2: 路由
 
 读取 `academic-writing-corpus/_routing_tables.yaml`，根据 Gap 类型确定：
@@ -85,22 +137,37 @@ version: 4.1.0
 
 ---
 
-### theory_hints（供下游 skill 消费，静默附加）
+### paper-state.yaml 片段（供下游 write-theory / write-methods / write-results 自动消费）
+
+**下游消费协议**：`write-theory` Phase 0 检测到 `paper-state.yaml` 后自动读取本片段，跳过交互式类型诊断。`write-methods` Phase 1 自动读取假设-变量映射。`write-results` Phase 0 自动读取估计器类型和假设列表。
+
+**使用方式**：复制本块到项目 `paper-state.yaml` 的 `introduction:` 节下。如用 `--paper-state=<path>` 参数启动 write-theory，技能自动消费。
 
 ```yaml
-theory_hints:
-  gap_type: "[Incompleteness / Inadequacy / Incommensurability]"
-  makadok_dimension: "[Constructs / Mechanism / Boundary / ...]"
-  conversation_strategy: "[Progressive / Synthesized / Non-Coherence]"
-  theoretical_lens: "[理论名称]"
-  core_iv: "[核心自变量]"
-  core_dv: "[核心因变量]"
-  core_mediator: "[中介变量，如有]"
-  core_moderator: "[调节变量，如有]"
-  recommended_theory_variant: "[构念辨析型 / 机制推演型 / ...]"
-  promised_hypothesis_count: [N]
-  promised_boundary_conditions: [true / false]
-  promised_mediation: [true / false]
+# --- paper-state.yaml 片段 (copy to your paper-state.yaml) ---
+introduction:
+  status: drafted
+  output_path: "[本次输出文件路径]"
+  updated: "[YYYY-MM-DD]"
+
+  theory_hints:
+    gap_type: "[Incompleteness / Inadequacy / Incommensurability]"
+    makadok_dimension: "[Constructs / Mechanism / Boundary / Phenomenon / Level / Mode / Question / Output]"
+    tension_template: "[canonical_id from _routing_tables.yaml]"
+    recommended_theory_variant: "[构念辨析型 (A) / 机制推演型 (B) / 假设树型 (C) / 质性过程理论型 (D) / 调节效应型 (E) / 竞争假设型 (F) / 辩证对立型 (G)]"
+    promised_hypothesis_count: [N]
+    promised_boundary_conditions: [true / false]
+    promised_mechanism_steps: [N]
+    central_knot_statement: "[一句话核心冲突，含转折词+具体理论/现象名称，如无法推断则为 null]"
+    narrative_arc: "[gentle_rise (Incompleteness) / moderate_rise (Inadequacy) / sharp_rise (Incommensurability)]"
+    core_constructs: ["[核心自变量]", "[核心因变量]", "[中介/调节变量，如有]"]
+    conversation_strategy: "[Progressive / Synthesized / Non-Coherence]"
+
+  contribution_contract:
+    - claim: "[Introduction 中第一个贡献声明原文]"
+      makadok_dimension: "[Constructs / Mechanism / Boundary / ...]"
+    - claim: "[第二个贡献声明原文，如有]"
+      makadok_dimension: "[Constructs / Mechanism / Boundary / ...]"
 ```
 
 **快速模式**：如用户只请求特定模块（如"给我一个 Hook 句式"），跳过完整骨架，仅输出该模块的句法骨架 + 槽位提示 + 1 个反模式提醒。
@@ -237,3 +304,4 @@ pontikes2012 通过示例：market-taker 和 market-maker **不是组织的属�
 - **注册表不存在时回退**到 `_routing_tables.yaml` 的静态推荐，不中断输出。
 - **如用户提及目标期刊**：按期刊适配表给出针对性建议。期刊差异优先于通用规则。
 - **Prose Craft 为推荐非硬性要求**: Human Face、Showing vs Telling、Conversational Voice 是 Pollock 的最佳实践建议，按期刊风格灵活适用——ASQ/AMJ 严格，JMS/JOM 宽松。
+- **输出末尾追加 paper-state.yaml 片段**：在 Introduction 骨架输出末尾，自动附加 `### paper-state.yaml 片段` 块。该片段供下游技能（write-theory Phase 0、write-methods Phase 1、write-results Phase 0）自动消费。用户复制到项目 `paper-state.yaml` 的 `introduction:` 节下。如用户未提及 paper-state.yaml 协议，该片段的 YAML 注释头应包含使用说明。
