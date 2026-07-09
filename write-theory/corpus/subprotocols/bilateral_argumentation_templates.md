@@ -77,3 +77,69 @@ Therefore, H[X]: ...
 - 避免把 moderator 简单等同于 "good/bad" 环境
 
 **反模式**: high/low 论证只是数值大小的变化，没有实质性的理论差异。
+
+---
+
+<!--
+pattern_id: categorical_severity_moderation_embedded
+build_type: 机制推演型 / 调节效应型
+source_papers: ["Darby_2023_MSOM"]
+confidence: high
+status: ready_for_corpus
+-->
+
+## Pattern: Categorical Severity Moderation — High vs Low
+
+**适用场景**: moderator 为分类变量（如 high-severity vs low-severity recalls），且需论证两边机制差异。
+**范文来源**: Darby, Ketchen, Ball & Mukherjee (2023), *Manufacturing & Service Operations Management*
+
+**骨架**:
+```
+We now examine whether the effect of [IV] on [DV] differs for [category A] and [category B]. This aligns with [citation], which treated [A] and [B] not on a continuum, but as different categories.
+
+[Category A — High] [Category A] involves [concrete risk], leading to [costs]. From [theory] perspective, [psychological mechanism] suggests the effect will be stronger because [reason].
+[Concrete scenario] For example, [case illustration].
+
+[Category B — Low] In contrast, [Category B] is less of a threat because [reason]. [Concrete scenario]. Thus, [lower impact].
+
+[Prediction] We thus posit: H[X]: The [direction] effect of [IV] on [DV] is stronger for [Category A] than for [Category B].
+```
+
+**为什么有效**: 分类调节必须同时呈现两边的具体情境与理论逻辑，避免只论证增强方向。
+**注意事项**:
+- 两边案例需对称（各 1-2 个）
+- 理论依据需解释“为什么分类变量改变机制强度”而非仅说“不同类别影响不同”
+**反模式**: 只说 “when severity is high, the effect is stronger” 而不解释 low-severity 情况。
+
+---
+
+<!--
+pattern_id: categorical_device_class_bilateral
+build_type: 调节效应型
+source_papers: ["Darby_2026_JOM"]
+confidence: high
+status: ready_for_corpus
+-->
+
+## Pattern: Categorical Risk Moderation — Low vs High Risk Devices
+
+**适用场景**: moderator 为产品风险分类（如 FDA Class I/II vs Class III），需论证两边信息不对称差异。
+**范文来源**: Darby, Wowak, Ketchen & Connelly (2026), *Journal of Operations Management*
+
+**骨架**:
+```
+[Regulator] classifies [products] into [categories] depending on [criterion] ([citation]). [Category A] poses [risk level], whereas [Category B] poses [risk level].
+
+[Category A — Low/Moderate] When defects arise in [Category A], the ramifications are straightforward to understand. For example, [low-risk scenario]. The low [core concept] makes it easier for [actor] to fulfill the monitoring function.
+
+[Category B — High] However, when defects arise in [Category B], it becomes increasingly challenging to evaluate. Consider, for example, [high-risk scenario]. [Agent] possess [specific knowledge] difficult for outsiders to understand.
+
+[Prediction] We thus expect that [moderator] will weaken the [direction] association between [IV] and [DV].
+```
+
+**为什么有效**: 分类调节必须同时呈现两边的具体风险与信息不对称差异。
+**注意事项**:
+- 案例需覆盖两类
+- 需强调分类标准（如 risk vs complexity）
+**反模式**: 只说高风险的特殊性，不解释低风险为何信息对称。
+
