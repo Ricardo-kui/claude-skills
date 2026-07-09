@@ -283,3 +283,67 @@ In contrast, when [moderator condition 2], [response B] is more likely because [
 - `corpus/subprotocols/hypothesis_derivation_patterns.md`（Width-Type Parallel Mechanism）
 - `corpus/subprotocols/bilateral_argumentation_templates.md`（high/low 双边论证，应用于曲线两侧）
 - `corpus/subprotocols/moderator_selection_frameworks.md`（多 moderator 选择元框架）
+
+---
+
+## E6. 序列嵌套调节（Sequential Nested Moderation，Chung/Low/Rust 2022 型）
+
+**适用**: 研究包含**两层边界条件**：第一层调节变量（W1）直接影响 X→Y 关系；第二层调节变量（W2）调节 W1 的调节效应，形成三向交互（X × W1 × W2）。常见于 upper echelons 研究中 lower-level actor 的劝说效应被其相对权力放大/削弱，或 board-level 压力被 CMO 信心缓冲。
+
+**与 E1/E3 的区别**:
+
+| 维度 | E1 同层调节 | E3 嵌入型边界条件 | E6 序列嵌套调节 |
+|------|------------|------------------|----------------|
+| 调节结构 | X × W | X × W1, X × W2, ...（多个独立 two-way） | X × W1 × W2（两层嵌套） |
+| 理论任务 | 解释 W 如何 modify X→Y | 解释多个 W 各自的边界作用 | 解释 W1 的调节作用本身如何被 W2 条件化 |
+| 假设顺序 | H1: X→Y; H2: X×W | H1a/H1b/H2a/H2b... | H1: X→Y; H2: X×W1; H3: X×W1×W2 |
+| 典型语料 | `sentences/moderation.md` | `subprotocols/E1_categorical_moderation.md` | `subprotocols/intra_tmt_persuasion.md` + `board_governance_boundary_condition.md` |
+
+**段落功能地图**:
+
+| 步骤 | 段落功能 | 推荐词数 | 必须度 |
+|------|---------|----------|--------|
+| Step 1 | T1/T2：建立 X→Y 基线机制 + H1 | 80-120 | ✅ |
+| Step 2 | T3：引入 W1，解释 W1 如何 modify X→Y + H2（two-way） | 80-120 | ✅ |
+| Step 3 | T4：引入 W2，解释 W2 如何 modify W1 的调节作用 + H3（three-way） | 80-120 | ✅ |
+| Step 4 | [可选] T5：引入第二个 three-way（如 board-level pressure + lower actor confidence） | 80-120 | ⚠️ |
+| Step 5 | 自然收敛，不附加独立 Closure 段 | 30-50 | ✅ |
+
+**关键句式**:
+
+**第一层调节引入**:
+```
+"We expect [W1] to [buffer/amplify] the [positive/negative] effect of [IV] on [DV]. 
+When [W1] is high, [mechanism that modifies baseline]."
+```
+
+**第二层嵌套调节引入**:
+```
+"Whether [W1] can effectively [buffer/amplify] the [IV]→[DV] relationship is likely 
+to depend on [W2]. When [W2] is high, the [buffering/amplifying] effect of [W1] 
+becomes [stronger/weaker] because [mechanism]."
+```
+
+**三向交互假设**:
+```
+"H[N]. The [buffering/amplifying] effect of [W1] on the relationship between [IV] 
+and [DV] is [stronger/weaker] when [W2] is high than when [W2] is low."
+```
+
+**语料锚定**:
+- Chung, Low & Rust (2022, JAMS) — CEO confidence × CMO confidence (W1) × CMO power (W2); CEO confidence × board independence (W1) × CMO confidence (W2)
+
+**反模式**:
+- 未建立 H2 two-way 直接进入 H3 three-way → 读者无法理解嵌套结构
+- W2 只是另一个独立 moderator，不调节 W1 的调节作用 → 变成 E3 嵌入型，不是 E6
+- 三向交互没有具体的机制解释（如 "power makes confidence more persuasive"）→ 变成统计补丁
+
+**调用语料**:
+- `corpus/subprotocols/intra_tmt_persuasion.md`（下级劝说上级 + 权力放大）
+- `corpus/subprotocols/board_governance_boundary_condition.md`（董事会放大型边界条件）
+- `corpus/sentences/moderation.md`（机制修改论证）
+- `corpus/sentences/cost_benefit_calculus.md`（成本-收益计算机制 voice）
+- `corpus/subprotocols/hypothesis_derivation_patterns.md`（Sequential Nested Moderation 模式）
+- `write-methods/面板数据-OLS.md` 变体21（M7 三向交互模型设定：mean-centering + 完整 lower-order terms）
+- `write-results/三向交互.md` 变体2（连续调节变量三向交互 — 边际效应表）
+- `write-introduction/transitions/14-nested-moderation-preview`（Introduction 末尾预览嵌套调节结构）

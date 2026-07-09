@@ -28,6 +28,70 @@
 
 ---
 
+## Pollock 2015 型：生命周期调节 / 假设树型
+
+**新增于**: write-theory 3.2.0 (Pollock et al. 2015 ASQ 蒸馏)
+
+**适用**: 两种相关无形资产（如 reputation / status）在生命周期不同阶段相互塑造强度不同；或同一关系在 actor 年轻/成熟时方向性反转。
+
+### 基线互惠作为非假设前提
+
+当两个构念明显互惠但文献已有共识时，可作为基线假设而非正式假设：
+```
+Prior research has shown that [A] and [B] are positively correlated: high [A] can increase access to elite circles, while high [B] provides information and resources that enhance [A] ([citations]).
+Because both [A] and [B] provide benefits that aid in developing the other, we expect them to have a positive relationship as they coevolve.
+As this expectation is unsurprising, we do not present a formal hypothesis, but it forms our baseline assumption.
+```
+
+### 生命周期不对称（H1a/H1b）
+
+```
+When firms are young, they lack standing in the status hierarchy, and their initial status largely reflects founder status ([citations]).
+To build [B], young firms must affiliate with high-[B] actors, which requires demonstrating energy and delivering promising deals ([citations]).
+By doing so, they build [A]; these affiliations provide endorsement benefits and access to better deals, further enhancing [A].
+Thus [A] must precede [B], and [A] should have a stronger effect on [B] than [B] has on [A] when firms are young:
+H1a: When firms are young, [A] has a greater effect on [B] than [B] has on [A].
+
+As firms age, [B] increases as a function of [A], giving them access to [B]-based benefits that sustain success and reinforce [A] ([citations]).
+Once a new [B] equilibrium is established, [B] stabilizes and becomes less susceptible to changes in [A] ([citations]).
+Therefore, in later life stages [B] should have a greater effect on [A]:
+H1b: When firms are older, [B] has a greater effect on [A] than [A] has on [B].
+```
+
+### 路径依赖的时间衰减（H2）
+
+```
+Initial conditions strongly influence [B] when firms are young and their [B] position is still being negotiated ([citations]).
+[B] orders tend toward equilibrium and stabilize over time, so prior [B] should have a strong effect on current [B] in early years but a weaker effect as firms age ([citations]).
+In contrast, [A] must be continually reinforced and therefore remains susceptible to changes in prior [A]; its path dependence should not weaken with age ([citations]).
+H2: The effect of prior [B] on current [B] weakens as firms age, but the effect of prior [A] on current [A] is unaffected by age.
+```
+
+### 大事件可见性效应（H3a/H3b）
+
+```
+Highly visible positive events can alter organizational trajectories ([citations]).
+Such events increase an actor's cognitive centrality, which enhances structural centrality ([B]) and subsequent performance ([A]) ([citations]).
+Because general visibility is central to [A] but not to [B], and because [A] must be continually reinforced, blockbuster events should keep enhancing [A] as firms age.
+For young firms, however, the visibility from such events brings them to the attention of high-[B] actors and thus boosts [B].
+Once a firm's [B] position is established, additional visibility is less likely to change [B] and may even distract.
+
+H3a: When firms are young, blockbuster events positively affect both [A] and [B].
+H3b: When firms are older, blockbuster events positively affect [A] but not [B].
+```
+
+### 先验期望违背型水平调节（H4）
+
+```
+Signals provide value only if they convey new information ([citations]).
+Information that disconfirms prior beliefs is more salient than information that confirms expectations ([citations]).
+Thus the lower observers' prior expectations of a blockbuster event, the bigger the surprise and the larger the effect on [A] and [B] ([citations]).
+High-[A]/high-[B] actors are already expected to participate in blockbuster events, so the incremental benefit is smaller; low-[A]/low-[B] actors gain more because the event violates expectations.
+H4: The positive effect of blockbuster events on current [A] and [B] is stronger when prior [A] and [B] are low than when they are high.
+```
+
+---
+
 ## 关键句式模板
 
 **对称预测（双重交互）**：

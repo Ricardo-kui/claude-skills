@@ -11,7 +11,8 @@ source_papers:
   - "li_chiu_kong_cropanzano_ho_2026_jom (Journal of Management): interaction percentage economic significance, low-base-rate moderator histogram, five-threat labeled robustness with RIR+Oster+CEM"
   - "ahmadi_khanagha_berchicci_jansen_2017_jms (Journal of Management Studies): 7-model hierarchical regression table navigation, three-way interaction conditional decomposition, asymmetric findings narrative"
   - "cui_yang_vertinsky_smj_attacking_partners (Strategic Management Journal): inverted U-shape + curve moderation, Lind-Mehlum three-step test, turning-point CI, flatten/steepen graph language"
-variants_count: 21
+  - "chung_low_rust_2022_jams (Journal of the Academy of Marketing Science): model-free quartile opening, interquartile economic significance, Heckman two-stage table navigation, alternative-DV falsification, threat-by-threat endogeneity table"
+variants_count: 26
 created: 2026-05-18
 updated: 2026-07-08
 ---
@@ -237,6 +238,63 @@ updated: 2026-07-08
 > We conducted [N] additional analyses, either as robustness checks or to gain additional insights into the primary relationships. These analyses investigated (a) [analysis_1]; (b) [analysis_2]; (c) [analysis_3]; (d) [analysis_4]; (e) [analysis_5]; and (f) [analysis_6]. Details of these analyses are available in [Appendix].
 **与原骨架差异**: 现有 R8 变体 5 是 MCMC 中介的详细展开式。本文展示当稳健性/探索性分析条目较多时，正文可用枚举清单指向附录的简洁策略。关键：用 "either as robustness checks or to gain additional insights" 同时标注两类目标，但缺少逐条 threat 说明——若稳健性分析是核心识别策略的一部分，建议改用变体 1（Table 9 矩阵）或变体 2（叙事型逐 threat 组织）。
 **诚实边界**: 将稳健性检验仅作为枚举清单可能削弱内部效度叙事；若可能，应在正文或附录中为每项分析标注其回应的具体威胁或探索性问题。
+
+### 变体 22: R2 无模型证据开场 — 四分位均值/中位数单调性 (1篇高价值)
+**来源论文**: Chung, Low & Rust 2022 (Journal of the Academy of Marketing Science)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-08
+**槽位**: R2
+**骨架**:
+> We first present model-free evidence regarding the relationship between [IV] and [DV]. In the [web appendix / online supplement], we show the scatter plots of [DV] against [IV] for [subgroup description: e.g., the three industries with the most observations]. In Fig. [X], we divide our sample into [four quartiles / five quintiles] based on the level of [IV] and calculate the mean and median [DV] for observations in each [group]. Consistent with Hypothesis [N], there is a monotonic [increase / decrease] in [DV] from the first [group], where [IV] is lowest, to the [fourth / fifth] [group], where [IV] is highest. The mean (median) [DV] is significantly different across the [groups].
+**与原骨架差异**: 在报告回归模型之前先用无模型证据建立模式的可信度，是 upper-echelons / 行为决策类论文的常用开场。关键四拍：(1) 声明"model-free evidence"；(2) 附录散点图 + 正文分组表/图；(3) 按 IV 分位数报告 DV 的均值/中位数单调趋势；(4) 跨组显著性检验。这为后续模型结果提供了视觉和描述性锚点，降低读者对复杂识别策略的认知门槛。
+**诚实边界**: 无模型证据不能替代模型检验，也不能用于因果推断；必须在后续段落中明确过渡到控制混淆变量后的模型结果。
+**跨 skill 对齐**: `write-methods/面板数据-OLS.md` 变体20（M2.5 model-free evidence 预览）；`write-introduction/hooks/24-positive-trait-dark-side` 建立的读者预期在此得到实证承接。
+
+### 变体 23: R5 四分位距经济显著性 — 从 P25 到 P75 的幅度翻译 (1篇高价值)
+**来源论文**: Chung, Low & Rust 2022 (Journal of the Academy of Marketing Science)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-08
+**槽位**: R3/R5
+**骨架**:
+> The coefficient for [IV] is [positive / negative] and statistically significant (β = [value], p < [threshold]). An interquartile move in [IV] from the 25th percentile to the 75th percentile is associated with a [N] [unit / percentage point] [increase / decrease] in [DV]. In untabulated tests, we also find support using [alternative sample / broader sample], with similar economic significance.
+**与原骨架差异**: 现有经济显著性变体多用 "one-SD change → X%"，而本变体使用 **P25–P75 四分位距移动**作为幅度基准。这适用于 IV 分布偏斜、理论意义更对应"从中等偏低到中等偏高"情境的研究。关键：报告具体单位（如 0.29 percentage points）并在括号中说明是 percentage point 还是 percent，避免审稿人误解。
+**诚实边界**: P25–P75 的解释隐含了 IV 在其分布中段的比较；若 IV 呈高度偏态或存在大量零值，应报告实际对应值（如 P25 = [value], P75 = [value]）而非仅说"interquartile"。
+**跨 skill 对齐**: `write-methods/micro-templates/interquartile-economic-significance.md`（M7/M8/M10 预告）；Results 在此兑现 Methods 中预告的经济显著性解释口径。
+
+### 变体 24: R2 Heckman 两阶段表格导航 — 第一阶段 Table 3 → 第二阶段 Columns 1-4 (1篇高价值)
+**来源论文**: Chung, Low & Rust 2022 (Journal of the Academy of Marketing Science)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-08
+**槽位**: R2
+**骨架**:
+> Table [X] shows the results of the first-stage selection equation. Our exclusion restriction, [instrument], significantly and [positively / negatively] predicts [selection_DV] (β = [value], p < [threshold]), consistent with [theory / prior work: citation]. This confirms that [instrument] satisfies the relevance condition for identifying [selection_outcome]. Table [Y] reports the second-stage Heckman selection results. Column 1 tests Hypothesis [H1]: [IV] significantly and [positively / negatively] predicts [DV] (β = [value], p < [threshold]). Column 2 adds the two-way moderating relationships, providing support for Hypotheses [H2] and [H4]. Column 3 introduces the three-way interactions, supporting Hypotheses [H3] and [H5]. Column 4 shows that the results are robust to the inclusion of [firm fixed effects / alternative fixed-effect structure] instead of [industry fixed effects / original fixed-effect structure].
+**与原骨架差异**: 现有 Heckman 导航（IV-2SLS.md 变体 r2_heckman_first_stage_navigation）侧重第一阶段排他性限制与相关性声明。本变体聚焦 **Results 正文中的两阶段表格递进导航**：先确认第一阶段排除限制显著（满足相关性），再逐列说明第二阶段四个模型分别检验哪些假设，使读者能清楚对应 Table 4 的列结构。适用于假设数量多、模型列数多、且使用 Heckman 选择模型的研究。
+**诚实边界**: 若第一阶段工具变量不显著，不能进入第二阶段解释；必须报告逆米尔斯比（rho / lambda）的显著性，以判断选择偏误是否确实存在。
+**跨 skill 对齐**: `write-methods/两阶段模型.md` 变体3（Heckman 同行 prevalence 排他性限制）；`write-methods/micro-templates/heckman-peer-prevalence-exclusion.md`（跨 segments 加权论证）。
+
+### 变体 25: R7 替代 DV 证伪段落 — 领域外结果的预期不显著 (1篇高价值)
+**来源论文**: Chung, Low & Rust 2022 (Journal of the Academy of Marketing Science)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-08
+**槽位**: R7
+**骨架**:
+> An alternative way to establish causality is to provide a falsification test where we examine [alternative_DV], an outcome that is [not within / outside] the decision-making domain of [focal_actor]. We use the [estimator] specification in [Table X], Column [N], except that we replace [DV] with [alternative_DV] ([operational_definition_citation]). We find that [predicted_finding: e.g., the main effect or interaction of interest behaves as expected], which is consistent with [Hypothesis / mechanism]. As expected, the [interactions / effects] involving [actor-specific variables] are insignificant, because [alternative_DV] is not within the decision-making domain of [focal_actor]. Interestingly, [unexpected_but_theoretically_interpretable finding] suggests [interpretation clause].
+**与原骨架差异**: 现有 R7 变体多关注稳健性（替换估计量、样本、测量），本变体扩展 R7 的 **falsification / 机制边界功能**：用理论预期之外不应出现效应的 DV 来确认主效应的因果解释。关键结构：(1) 明确说明替代 DV 不在某行为者的决策领域内；(2) 报告应显著的效应确实显著；(3) 报告不应显著的效应确实不显著；(4) 对意外发现给出理论化解释而非忽略。这比单纯"结果稳健"更能支持因果识别。
+**诚实边界**: 替代 DV 必须与主 DV 有理论上的领域边界；不能事后挑选一个"不显著"的结果作为证伪。应在 Methods 或稳健性部分预先说明为何该 DV 是合适的 falsification 目标。
+**跨 skill 对齐**: `write-methods/micro-templates/alternative-dv-falsification.md`（M8/M10 预告替代 DV 设计与替代/转换解释）。
+
+### 变体 26: R7 内生性稳健性表叙事 — threat-by-threat Table 7 汇总 (1篇高价值)
+**来源论文**: Chung, Low & Rust 2022 (Journal of the Academy of Marketing Science)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-08
+**槽位**: R7
+**骨架**:
+> Endogeneity is mainly caused by issues relating to omitted variables and simultaneity ([citation]). In our empirical model setup, we include [control_strategy: e.g., as many control variables as possible] to rule out omitted variables and use [temporal_strategy: e.g., lagged measures of IV] to ensure causal priority. We have also used the [DWH test / Hausman test] with strong instruments and [cannot reject / reject] the null hypothesis that [IV] is exogenous. This conclusion is also validated with the [instrument-free Gaussian copula estimation method / alternative instrument-free method].
+>
+> To complement these general endogeneity tests, we next look at specific sources of endogeneity and design tests to rule them out. We tabulate these tests in Table [X] and relegate the details to the [web appendix] for reasons of space. Our results are not due to [threat_1: reverse causality] because [test_1_result]. Nor are they driven by [threat_2: selection on observables / unobservables] because [test_2_result]. To rule out [threat_3: omitted executive / firm characteristics], we [test_3_method]; the results are generally similar. [threat_4: risk tolerance / alternative trait] is also unlikely to be driving the results, as we find robust results when [test_4_method]. The supporting evidence from all these complementary tests confirms the results of the [DWH / copula] test that there is little reason to believe that endogeneity issues are solely driving the results we observe.
+**与原骨架差异**: 现有 R7 变体 1（Table 9 矩阵）和变体 2（叙事型逐 threat）分别适用于大量和小量稳健性检验。本变体是 **"一般性内生性检验 + threat-by-threat 表" 的复合结构**：先以 DWH / Gaussian copula 提供一般性证据，再用 Table 7 式矩阵逐项处理具体威胁（reverse causality, selection, omitted variables, alternative traits）。关键：最后一句用"little reason to believe that endogeneity issues are solely driving the results" 的谨慎措辞，避免过度因果断言。
+**诚实边界**: 若 DWH 或 copula 结果不一致，必须诚实报告并讨论可能原因；不能仅因为"多数稳健性通过"就宣称完全排除内生性。"solely driving" 是审慎措辞，不应升级为"完全排除"。
+**跨 skill 对齐**: `write-methods/IV-2SLS.md` 变体5（DWH 检验 + Gaussian copula 内生性叙事）；`write-methods/micro-templates/identification-exogeneity.md`（通用外生性论证）。
 
 ## 反模式
 

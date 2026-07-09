@@ -4,6 +4,116 @@
 
 ---
 
+<!--
+pattern_id: social_identity_boundary_condition
+build_type: 调节效应型 / 机制推演型
+source_papers: ["Keeves_2017_AMJ"]
+confidence: high
+status: ready_for_corpus
+-->
+
+## Pattern: Group Identity as Boundary Condition
+
+**适用场景**: moderator 涉及社会类别（race/gender/status），需要用社会心理学理论解释为什么边界条件改变机制强度。
+**微观动作序列**: Theory anchor（self-categorization / intergroup bias）→ Mechanism（out-group target 被视为 less deserving）→ Other-path amplification → Prediction
+**范文来源**: Keeves, Westphal & McDonald (2017), *Academy of Management Journal*（white male managers observing ingratiation toward minority/female CEOs）
+
+**骨架**:
+```
+[Theory] Social psychological research on self-categorization indicates that people classify each other into social categories automatically ([citation]). Because categories that include the self tend to be held in positive regard, social categorization fosters [bias], a systematic tendency to evaluate [in-group] more positively than [out-group] ([citations]).
+
+[Mechanism] One manifestation of [bias] is [specific stereotype]. Thus [bias] may cause [actor] to perceive a given level of [behavioral component] that affirms [target]'s status as relatively undeserved when [target] is [out-group characteristic]. Accordingly, [IV] toward [target with out-group characteristic] is especially likely to elicit [mediator].
+
+[Other-path] There is also reason to believe that [bias] should increase [actor]'s [mediator] toward [target with out-group characteristic] for the [behavioral components] [target] receives from others. [Theoretical justification].
+[Prediction] Thus we hypothesize:
+H[X]: The relationship between [IV] and [mediator] will be more positive when [actor] is [in-group] and [target] is [out-group].
+```
+
+**为什么有效**: 将社会心理学理论嵌入机制推演，使调节变量不是事后添加；同时覆盖 self-path 和 other-path。
+**注意事项**:
+- 必须解释为什么 out-group 目标会改变机制强度
+- 需明确 in-group / out-group 的理论定义，而非简单 demographic 分组
+- 建议同时论证 self-path 和 other-path（如适用）
+
+**反模式**: 只说"歧视会增强效应"而不解释具体心理机制；用 demographic 分组替代理论定义。
+
+---
+
+<!--
+pattern_id: benchmark_leader_vs_similar_peer
+build_type: 机制推演型 / 边界条件型
+source_papers: ["Shi_Grewal_Sridhar_2021_JMR"]
+confidence: medium
+status: ready_for_corpus
+-->
+
+## Pattern: Benchmark Leaders vs. Similar Peers as Information Sources
+
+**适用场景**: 同一 peer 行为可由不同类型 peer 引发，需预测哪类信息源占主导。
+**微观动作序列**: Ability condition anchor（agents learn from peers）→ Benchmark leaders path（knowledge advantage）→ Similar peers path（relevance + investor expectations）→ Prediction
+**范文来源**: Shi, Grewal & Sridhar (2021), *Journal of Marketing Research*（advertising spending disclosure herding: similar peers dominate）
+
+**骨架**:
+```
+[Ability condition anchor] Rational agents update beliefs using information from peers. We identify two plausible sources: [benchmark leaders] and [similar peers].
+
+[Benchmark leaders path] Leaders occupy superior positions in [market], so their [behaviors] signal valuable knowledge about [outcome] ([citation]). In addition, [peers leading in another market] are probably perceived as knowledgeable with regard to how [stakeholders] would respond to disclosed information.
+
+[Similar peers path] For an agent, the level of similarity in terms of [key dimensions] varies across peers. [Example contrasting two peers with different similarity levels]. Agents may find it beneficial to learn from similar peers because similar peers occupy comparable positions on some important [market dimensions]. Specifically, an agent may perceive that the private information of similar peers is more relevant for its decisions than such information from disparate firms.
+
+Furthermore, similar peers' [behaviors] are relevant in [market B] because comparison with similar firms can drive [stakeholder] expectations. When more similar firms [disclose], [stakeholders] are more likely to expect the focal agent to [disclose]; if the agent does not [disclose], [stakeholders] tend to revise [valuation] downward ([citation]). Recognizing [stakeholders]' reasoning processes, the agent should be more likely to follow the [behaviors] of similar peers to avoid a severe discount on its [valuation].
+
+[Prediction] We predict [similar peers / benchmark leaders] will have a stronger influence because [theoretical rationale].
+```
+
+**为什么有效**: 将 peer type 从单纯控制变量提升为理论驱动的信息源比较。
+**注意事项**:
+- 必须同时论证两类 peer 的合理机制
+- 预测需有明确的理论方向
+- 必须解释为什么 chosen source 在本文情境下占主导
+
+**反模式**: 只说"similar peers matter more"而不解释为什么 leaders 也可能重要。
+
+---
+
+<!--
+pattern_id: competition_as_external_governance_remedy
+build_type: 调节效应型 / 代理理论型
+source_papers: ["Zhou_2017_ASQ"]
+confidence: high
+status: ready_for_corpus
+-->
+
+## Pattern: Boundary Condition as Remedy for Agency Inefficiency
+
+**适用场景**: IV 通过双重代理问题降低资源转换效率；边界条件（竞争、新创身份、制度发展）通过外部治理/生存压力/目标清晰化削弱代理问题，从而缓解 IV 的负面调节。
+**微观动作序列**: Baseline negative moderation（IV × input → output）→ Boundary variable → Mechanism（boundary reduces political interference / improves accountability）→ Prediction
+**范文来源**: Zhou, Gao & Zhao (2017), *ASQ*（institutional development, industrial competition, start-up status weaken negative moderation of state ownership on R&D→innovation）
+
+**骨架（竞争作为外部治理）**:
+```
+[Theory] [Theory] posits that aligning [actors] reduces [problem]. Among external controls, [contingency] is the most salient because it forces inefficient firms to exit. [Competition] creates clear performance benchmarks and increases manager termination risk; politicians must stop self-dealing or [focal actors] will fail.
+
+[Mechanism] When [contingency] is high, [IV]'s negative effect on [input → output efficiency] is reduced because [mechanism 1: exit threat] and [mechanism 2: performance benchmarks].
+H[X]: The moderating effect of [IV] on [mediator → outcome] is less negative when [contingency] is higher.
+```
+
+**骨架（新创企业身份）**:
+```
+[Actor type] are more innovative because they identify opportunities and respond promptly. When [government] sets up [actor type], they aim to [objective] and scrutinize them closely, reducing politician self-dealing. [Actor type] also bear fewer [legacy burdens] and can build flexible, performance-based structures.
+H[X]: The moderating effect of [IV] on [mediator → outcome] is less negative for [actor type] than for [established actors].
+```
+
+**为什么有效**: 将边界条件定位为"补救机制"而非简单调节，使 H2-H4 与 H1b 形成理论对话。
+**注意事项**:
+- 边界条件必须与代理问题的具体机制对应
+- 多个 boundary 条件需要说明它们分别作用于哪条机制
+- 避免 boundary 条件成为数据驱动的稳健性检验
+
+**反模式**: 边界条件只是"又一个调节变量"，没有说明如何"修复"代理问题。
+
+---
+
 <!-- 
 pattern_id: bilateral_high_low_three_mechanisms
 build_type: 调节效应型 / 机制推演型

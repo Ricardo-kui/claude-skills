@@ -6,7 +6,7 @@ description: |
   协议层：诊断、路由、QC、跨 Section 对齐。
   语料层：corpus/ 目录下各变体语料文件（段落骨架、句式模板、假设格式、QC检查点）。
   触发词：「写theory」「写理论」「theory template」「理论部分」「hypothesis写作」「调节效应假设」「跨层调节」「构念界定」「机制推演」「why chain」「双受众」「对立机制」。
-version: 3.4.0
+version: 3.5.0
 ---
 
 # Role
@@ -48,7 +48,33 @@ version: 3.4.0
 
 本 Skill 可直接消费 `/write-introduction` 和 `/diagnose-introduction` 的输出。
 
-**Machine-readable 格式**（write-introduction 输出末尾自动附加）：
+### 方式一：paper-state.yaml 自动消费（推荐）
+
+**发现机制**：Phase 0 启动时按以下优先级查找 `paper-state.yaml`：
+1. `--paper-state=<path>` 命令行参数
+2. 当前工作目录下的 `paper-state.yaml`
+3. 项目根目录下的 `paper-state.yaml`
+
+**自动加载**：检测到文件后，读取 `introduction.theory_hints` 和 `introduction.contribution_contract`，跳过 Phase 0 交互式诊断，直接进入确认模式：
+
+```
+[paper-state.yaml] 检测到 project/paper-state.yaml
+  → introduction.status = drafted
+  → gap_type: Inadequacy
+  → makadok_dimension: Mechanism
+  → recommended_theory_variant: 机制推演型 (B)
+  → promised_hypothesis_count: 2
+  → central_knot_statement: "While prior work assumes..."
+  → 默认推荐: 机制推演型 (B)
+  → 用户只需确认或调整（1 次交互代替 3-5 次）
+```
+
+若 `theory_hints` 中关键字段（gap_type, makadok_dimension, recommended_theory_variant）有一项为 `null` → 仅针对缺失字段交互询问，不进入完整诊断。
+
+### 方式二：write-introduction 输出文本消费（回退）
+
+当 paper-state.yaml 不存在时，从 write-introduction 输出末尾的 `theory_hints:` YAML 块手动解析：
+
 ```yaml
 theory_hints:
   gap_type: "Incompleteness / Inadequacy / Incommensurability"
@@ -60,19 +86,108 @@ theory_hints:
   promised_mechanism_steps: 2
 ```
 
-**解析规则**：
+### 解析规则（两种方式通用）
+
 - `Makadok 贡献维度` → 判断研究类型（见 `corpus/meta/routing_table.md`）
 - `Gap 类型` → Incommensurability 常对应构念辨析型或竞争假设型
-- `Introduction claims` → 用于 Phase 3 对齐检查
+- `Introduction claims` / `contribution_contract` → 用于 Phase 3 对齐检查
 - `central_knot_statement` → 允许 `null`。若为 `null`，按 Phase 0.5 推断规则从 Gap 类型和 Tension 模板反向推断
+- `narrative_arc` → 决定 Phase 0.5 Rising Action 强度
 
-如果解析失败（缺少 gap_type 等关键字段），进入交互模式询问。
+两种方式均失败（缺少 gap_type 等关键字段）时，进入完整交互模式询问。
 
 ---
 
 ## Workflow
 
 ### Phase 0: 理论构建类型诊断
+
+#### Phase 0.0: paper-state.yaml 自动检测（新增）
+
+在进入交互式诊断前，先检查 paper-state.yaml：
+
+```
+检测 paper-state.yaml 是否存在？
+│
+├── YES → 读取 introduction.theory_hints
+│   ├── gap_type + makadok_dimension + recommended_theory_variant 均有值
+│   │   → 跳过诊断树，直接确认推荐（输出推荐变体 + 依据，让用户确认或调整）
+│   └── 关键字段有 null → 仅对缺失字段交互询问，保留已有字段
+│
+└── NO → 检查 write-introduction 输出文本中是否有 theory_hints YAML 块
+    ├── 找到 → 手动解析，同上
+    └── 未找到 → 进入完整交互式诊断（下树）
+```
+
+**确认模式输出格式**（当 paper-state.yaml 命中时）：
+```
+## Phase 0: 理论构建类型（自动诊断）
+
+来自 paper-state.yaml:
+- Gap 类型: [gap_type]
+- Makadok 维度: [makadok_dimension]
+- Introduction 推荐: [recommended_theory_variant]
+- 承诺假设数: [promised_hypothesis_count]
+- Central Knot: "[central_knot_statement]"
+
+→ 默认路由: **[recommended_theory_variant]**
+→ 理由: [gap_type] × [makadok_dimension] → [路由理由——由 routing_table.md 查询]
+
+是否确认此路由？或需调整为其他变体？
+```
+
+#### Phase 0.0b: Vault 基线检索（可选——仅在 paper-state.yaml 有 vault 配置时执行）
+
+在确认理论路由后，从用户知识库拉取当前主题的理论证据。**本步骤为可选：无 vault 配置时静默跳过。**
+
+**执行条件**：paper-state.yaml 中 `paper.vault` 节存在且至少有一个非 null 字段。
+
+**检索流程**（三级回退，不阻塞）：
+
+```
+paper-state.yaml 中 paper.vault 是否有配置?
+│
+├── vault.section_evidence_map 非空 → 读取该文件
+│   → 过滤到 "Theory" / "T" 行（按 Section 列或命题 ID 前缀匹配）
+│   → 提取每行: 命题ID, citation key, Vault note path, 证据用途
+│   → 如有 vault.war_room，补读 canonical handle buckets 和 rival mechanism layers
+│   → 生成 "Vault Knowledge Brief (Theory)"
+│
+├── vault 路径存在但文件读不到 → 用 Obsidian MCP search_notes
+│   以 paper.title 和 introduction.theory_hints.core_constructs 为关键词
+│   搜索 Vault（限制 10 条）→ 提取 citation key 和 note path
+│
+└── 无 vault 配置或全部为 null → 静默跳过
+```
+
+**Theory Vault Knowledge Brief 输出格式**（所有内容来自 Vault）：
+
+```markdown
+## Vault 知识简报（Theory）
+
+### 机制证据卡片（来自章节-证据映射 Theory rows）
+| 命题ID | Citation Key | 证据用途 | Vault Note |
+|--------|-------------|---------|-----------|
+| [T1] | [@citekey] | [理论定义/机制核心/假设支撑] | [[note_path]] |
+| ... | ... | ... | ... |
+
+### Rival Mechanisms 需区分（来自项目作战室，如有）
+- vs. [rival_mechanism_1]: [区分策略——从 war_room rival anchors 提取]
+- vs. [rival_mechanism_2]: [区分策略]
+
+### 概念锚点（来自章节-证据映射或概念库搜索）
+- [[概念 - ...]]: [一句话概括与本文理论的关联]
+
+### 证据完整度
+- Vault 命中: N 条理论级证据
+- [如命中数 < 3，提示 "证据映射中 Theory 条目较少，建议从 canonical notes 补读或扩展章节-证据映射"]
+```
+
+**使用方式**：Brief 中的 citation keys 作为 Phase 2-4 理论构建和假设推导的文献弹药——每条 hypotheses 的机制链应优先引用 Brief 中标注为"机制核心"或"假设支撑"的文献。Brief 不覆盖用户在 Introduction 中已确立的理论框架选择。
+
+**通用性保证**：本步骤不假定 Vault 结构或文献内容。所有路径来自 paper-state.yaml 的 vault 字段，技能本身不含项目特定硬编码。
+
+#### Phase 0.1: 交互式诊断（仅在 paper-state.yaml 不可用时执行）
 
 ```
 你的理论构建方式是什么？
@@ -163,9 +278,9 @@ Theory section 的 Rising Action 不仅需要功能推进，还需要 prose 层�
 - **P1 Knot Inheritance**：承接 knot 时，用 1 句具体场景说明"这个问题在现实世界中长什么样"
   - 句式："To resolve the tension that [knot], consider what happens when [Company] tried to [action]..."
 - **P2-P4 Knot Deepening**：每个新构念首次出现时，配 1 个具体例子
-  - 例："We define regulatory focus as the tendency to pursue gains versus avoid losses (Higgins, 1997). A promotion-focused CEO, for example, might prioritize market expansion over safety compliance..."
+  - 例："We define [construct] as [definition] (Author, Year). A [concrete instantiation], for example, might [observable behavior]..."
 - **P5-PN Knot Tying**：假设推导中，每个 why-chain 关键步骤可配 1 个微型场景（1-2句）
-  - 例："Because promotion-focused CEOs prioritize speed over caution, they may delay recall announcements until regulatory pressure becomes unavoidable. Consider how [Company X] handled its 2015 ignition-switch crisis..."
+  - 例："Because [actors with trait X] prioritize [goal A] over [goal B], they may [observable behavior] when [condition]. Consider how [Company] [specific action]..."
 
 #### Showing vs Telling in Theory
 - **Stroke 段落（70%）**：每个抽象因果步骤后，跟 1 句 concrete illustration
@@ -306,8 +421,7 @@ of [treatment] on [outcome] from [alternative explanations].
 ```
 We theorize that [treatment] does not merely increase the probability of [event] but
 alters the *rate* at which [actor] approaches the [decision threshold]. This temporal
-dimension matters because [theoretical reason, e.g., CEOs face escalating regulatory
-pressure over time, and the hazard of recall increases non-linearly with defect exposure].
+dimension matters because [theoretical reason, e.g., decision-makers face escalating institutional pressure over time, and the hazard of [event] increases non-linearly with exposure to [trigger condition]].
 ```
 
 ---
@@ -399,7 +513,7 @@ pressure over time, and the hazard of recall increases non-linearly with defect 
 
 **[3b. 文献引用的 Human Face 要求]**：
 - 每个引用必须总结其 **argument**（非罗列），并链接到 **concrete finding**
-- 例："Pfarrer et al. (2010) showed that firms delaying recalls experienced 23% greater stock-price declines than firms recalling immediately—a finding consistent with our argument that..."
+- 例："[Author] et al. ([year]) showed that firms [taking action X] experienced [Y]% greater [outcome] than firms [taking action Z]—a finding consistent with our argument that..."
 
 **逻辑跳跃诊断**：逐句标记因果连接词（Consequently/Thus/Thereby/As a result/This leads to...）。缺少中间步骤 → 存在跳跃。
 
@@ -617,6 +731,7 @@ Theory section 的 Rising Action 结构（Knot Inheritance→Deepening→Tying�
 18. **≥2 个 moderators 时，必须有 moderator 选择的理论理由。** 用元框架（将 moderators 映射到 H1 的机制维度，如 awareness vs capacity）或统一分类框架（如 intrinsic vs extrinsic constraint）解释为什么选这些而非其他。禁止无理由逐个引入（"We also examine the moderating role of..."）。
 19. **IV 是连续谱时，需论证两端+中间的行为差异。** 如果理论预期 IV 两端有相反效应，必须对称论证两端（非只论证一端）。如果存在理论上的中间/中性行为者，应包括其作为概念基准（零效应预期）。
 20. **调节论证应是双边完整的。** 每个 moderator 段落应同时论证 "when M=high → effect" AND "when M=low → effect"——非只说增强方向。低 moderator 条件下的约束/削弱逻辑同等重要。
+21. **输出末尾追加 paper-state.yaml 片段**：在 Theory 骨架输出末尾，自动附加 `### paper-state.yaml 片段` 块。该片段包含 `theory.constructs`、`theory.hypotheses`、`theory.mechanism_chains`，供下游 write-methods Phase 1 和 write-results Phase 0 自动消费。用户复制到项目 `paper-state.yaml` 的 `theory:` 节下。
 
 ---
 
@@ -626,6 +741,43 @@ Theory section 的 Rising Action 结构（Knot Inheritance→Deepening→Tying�
 - `/paper-review` — 使用假设列表进行跨 Section 对齐检查
 - `/theory-review` — 如果用户已有 Theory 草稿，使用本模板作为理想基准进行对比审查
 - `/distill-theory-exemplar` — 将新论文的 Theory 部分蒸馏后回写 `corpus/` 语料库
+- `/write-methods` — 通过 paper-state.yaml 自动消费 `theory.constructs` 和 `theory.hypotheses`，构建假设-变量映射表
+- `/write-results` — 通过 paper-state.yaml 自动消费 `theory.hypotheses`，建立 Hypothesis-Result Fulfillment Map
+
+### paper-state.yaml 输出片段
+
+Theory 骨架输出末尾自动附加以下片段。用户复制到项目 `paper-state.yaml` 的 `theory:` 节下，供 write-methods Phase 1 和 write-results Phase 0 自动消费：
+
+```yaml
+# --- paper-state.yaml 片段 (copy to your paper-state.yaml) ---
+theory:
+  status: drafted
+  output_path: "[本次输出文件路径]"
+  depends_on: ["introduction"]
+  updated: "[YYYY-MM-DD]"
+
+  theory_variant: "[A 构念辨析型 / B 机制推演型 / C 假设树型 / D 质性过程理论型 / E 调节效应型 / F 竞争假设型 / G 辩证对立型]"
+
+  constructs:
+    independent: "[核心自变量名称]"
+    dependent: "[核心因变量名称]"
+    mediator: "[中介变量，如无则为 null]"
+    moderator: "[调节变量，如无则为 null]"
+    controls: ["[控制变量1]", "[控制变量2]", ...]
+
+  hypotheses:
+    - id: "H1"
+      statement: "[H1 完整陈述句]"
+      type: "main"              # main | mediation | moderation | competition
+      iv: "[H1 自变量]"
+      dv: "[H1 因变量]"
+      predicted_direction: "[positive / negative / curvilinear]"
+    # - id: "H2" ...
+
+  mechanism_chains:
+    - "[H1 机制链: 起点触发条件 → 第二步推理 → ... → 终点可检验预测]"
+    # - "[H2 机制链]..."
+```
 
 ---
 

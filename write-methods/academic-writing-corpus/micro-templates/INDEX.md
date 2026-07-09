@@ -2,9 +2,9 @@
 corpus: write-methods-micro-templates
 description: 句法微模板库（Sentence-Level Micro-Templates）。从顶刊 Methods 段落中提取的可复用句法单元，供 write-methods 在组装骨架时替换默认措辞，丰富表达多样性。
 organization: by_functional_unit
-categories_count: 14
+categories_count: 18
 created: 2026-05-22
-updated: 2026-06-03
+updated: 2026-07-08
 ---
 
 # 句法微模板库（Micro-Templates）
@@ -42,6 +42,10 @@ updated: 2026-06-03
 | [手工编码与效度检验](manual-coding-validation.md) | 从原始文本/痕迹提取构念并进行编码效度验证 | M3, M4 |
 | [子样本分组与平行方程](subsample-grouping.md) | 样本分组估计、多方程并行呈现的结构说明 | M4, M5, M7 |
 | [CMB 预防论证](common-method-bias-prevention.md) | 问卷数据 CMB 预防的设计+统计论证 | M8 |
+| [高管信心操作化](executive-confidence-operationalization.md) | 期权 moneyness 操作化：exercisable options 的 average value/strike price + 滞后处理 | M4 |
+| [四分位距经济显著性](interquartile-economic-significance.md) | 用自变量 IQR（25th–75th）移动解释回归系数的经济显著性 | M7, M8, M10, Results |
+| [Heckman 同行 Prevalence 排他性限制](heckman-peer-prevalence-exclusion.md) | Heckman 选择模型中同行 prevalence 作为排除限制的理论论证与跨 segments 加权 | M7, M8 |
+| [替代 DV Falsification](alternative-dv-falsification.md) | 用行为者领域外的替代因变量进行 falsification 检验并讨论替代/转换 | M8, M10 |
 
 ## 使用协议
 

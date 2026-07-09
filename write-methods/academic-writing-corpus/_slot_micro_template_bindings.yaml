@@ -5,7 +5,7 @@
 # 定义每个 M-slot 的关键句法位置应加载哪些微模板条目。
 # write-methods 调用时，根据此映射表从 micro-templates/ 目录中选择性加载微模板。
 #
-# Version: 1.0.1 | Created: 2026-05-22 | Updated: 2026-05-22
+# Version: 1.0.2 | Created: 2026-05-22 | Updated: 2026-07-08
 #
 # CORE 条目池冻结声明（2026-05-22）
 # ————————————————————————————————————————————
@@ -21,9 +21,9 @@
 
 _meta:
   name: slot-micro-template-bindings
-  version: "1.0.1"
+  version: "1.0.2"
   created: "2026-05-22"
-  updated: "2026-05-22"
+  updated: "2026-07-08"
   core_baseline:
     count: 32
     frozen_at: "2026-05-22"
@@ -207,6 +207,13 @@ M4:
             - label: "假设对齐"
               template: "This variable corresponds to Hypothesis [x] because it captures [mechanism]."
               tier: core
+        - file: "executive-confidence-operationalization.md"
+          section: "标准操作化句式"
+          entries:
+            - label: "期权 moneyness 操作化"
+              template: "[Actor] confidence is measured as the average moneyness of the exercisable options held by the [actor] in [year t]."
+              tier: extended
+              design_type_filter: ["面板数据-OLS", "两阶段模型", "IV-2SLS"]
     because_clause:
       required: false
       default_tier: core
@@ -329,6 +336,16 @@ M7:
             - label: "估计器选择"
               template: "Because [DV] is [continuous/binary/ordinal/count/censored/time-to-event], we use [model]."
               tier: core
+    economic_significance:
+      required: false
+      default_tier: extended
+      bindings:
+        - file: "interquartile-economic-significance.md"
+          section: "标准句式"
+          entries:
+            - label: "IQR 经济显著性"
+              template: "An interquartile move in [IV] from the 25th percentile to the 75th percentile is associated with a [value] [unit] increase in [DV]."
+              tier: extended
     causal_verb:
       required: false
       default_tier: core
@@ -374,6 +391,19 @@ M8:
             - label: "BadControl规避"
               template: "We first estimate a parsimonious specification because [controls] may be affected by [treatment]."
               tier: extended
+        - file: "heckman-peer-prevalence-exclusion.md"
+          section: "排他性限制论证"
+          entries:
+            - label: "Heckman 同行 prevalence 排除限制"
+              template: "A valid exclusion restriction must influence selection into the sample but have no direct effect on the outcome. [Peer Prevalence] satisfies this condition for three reasons."
+              tier: extended
+              design_type_filter: ["两阶段模型"]
+        - file: "alternative-dv-falsification.md"
+          section: "标准句式"
+          entries:
+            - label: "替代 DV falsification"
+              template: "An alternative way to establish causality is to provide a falsification test in which we examine how [alternative DV]—an outcome that is outside the decision-making domain of [actor]—is affected by [focal predictor]."
+              tier: extended
     because_clause:
       required: false
       default_tier: core
@@ -384,6 +414,13 @@ M8:
             - label: "外生性论证"
               template: "[Shock/event] creates variation in [treatment] that is plausibly exogenous to [outcome] because [reason]."
               tier: core
+        - file: "identification-exogeneity.md"
+          section: "通用外生性论证"
+          entries:
+            - label: "DWH + Gaussian copula 内生性叙事"
+              template: "Therefore, to further address endogeneity concerns, we conduct the Durbin-Wu-Hausman (DWH) test and use the instrument-free Gaussian copula joint estimation method."
+              tier: extended
+              design_type_filter: ["面板数据-OLS", "IV-2SLS"]
     causal_verb:
       required: false
       default_tier: core

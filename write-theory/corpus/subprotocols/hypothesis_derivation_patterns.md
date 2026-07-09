@@ -7,6 +7,285 @@
 ---
 
 <!--
+pattern_id: audience_role_dichotomy_mirrored_hypotheses
+build_type: 构念辨析型 / 二元机制推演型
+source_papers: ["Pontikes_2012_ASQ"]
+confidence: high
+status: ready_for_corpus
+-->
+
+## Pattern: Audience-Role Dichotomy + Mirrored Hypotheses
+
+**适用场景**: 同一核心构念对至少两类受众/情境产生理论上相反的效果；不是强度差异，而是真正的方向反转。
+**微观动作序列**: Consensus（文献认为 [state] 有害）→ Audience distinction（market-takers vs market-makers）→ Mechanism A（对 audience A 有害）→ H1a/H1b → Dialectical turn → Mechanism B（对 audience B 有益）→ H2a/H2b → Reconciliation
+**范文来源**: Pontikes (2012), *Administrative Science Quarterly*（ambiguous classification hurts consumers but helps VCs）
+
+**骨架**:
+```
+[Consensus challenge] Although prior research finds [X] detrimental ([citations]), [X] persists. I suggest this depends on the evaluating audience.
+
+[Role distinction] There are two roles: [role A], who [function A], and [role B], who [function B].
+
+[Mechanism A] For [role A], [X] makes organizations unclear. [Path 1: search failure / exclusion from consideration set]. [Path 2: inappropriate criteria / expectations not met].
+H1a: [X_dim1] is negatively related to [outcome A].
+H1b: [X_dim2] is negatively related to [outcome A].
+
+[Mechanism B] For [role B], [X] signals flexibility. [Path 1: new classification opportunity / potential to redefine market structures]. [Path 2: multivocality / interpretable from multiple perspectives]. [Path 3: flexibility / adaptability to shape label definitions].
+H2a: [X_dim1] is positively related to [outcome B].
+H2b: [X_dim2] is positively related to [outcome B].
+
+[Integration] The same [X] has opposing consequences depending on the audience role.
+```
+
+**为什么有效**: 用受众制度角色解释表面矛盾，将异常转化为理论机会；镜像假设强化核心论点。
+**注意事项**:
+- 两种角色需有清晰功能差异，不能只是 demographic 分组
+- 每个角色至少两条机制路径
+- T4 首句必须使用 dialectical turn 标记："Despite research showing..., it persists."
+- 两类受众机制步骤数应大致对称
+
+**反模式**: 用"A 不喜欢所以 B 喜欢"作为唯一机制；方向反转未充分解释。
+
+---
+
+<!--
+pattern_id: sign_flipping_boundary_condition
+build_type: 边界条件型 / 构念辨析型
+source_papers: ["Pontikes_2012_ASQ"]
+confidence: medium
+status: ready_for_corpus
+-->
+
+## Pattern: Sign-Flipping Boundary Condition
+
+**适用场景**: 同一 IV 对 DV 的方向因受众/情境/角色而异；需要用机制解释方向反转，而非仅做交互项。
+**微观动作序列**: Boundary claim → Condition A mechanism（negative）→ Condition B mechanism（positive）→ Integration
+**范文来源**: Pontikes (2012), *ASQ*（audience role switches the sign of ambiguity-evaluation relationship）
+
+**骨架**:
+```
+[Boundary claim] The [IV]-[DV] relationship depends on [condition].
+
+[Condition A] For [A], [IV] signals [interpretation A] → [negative DV].
+[Path 1] ...
+[Path 2] ...
+
+[Condition B] For [B], [IV] signals [interpretation B] → [positive DV].
+[Path 1] ...
+[Path 2] ...
+
+[Integration] These reactions are not contradictory because [A] and [B] occupy different positions in [system].
+```
+
+**为什么有效**: 用机制解释方向反转，而非仅报告交互项；integration 说明两类条件为何能同时成立。
+**注意事项**:
+- 必须解释不同条件为何产生不同解读
+- 建议给出制度/功能互补理由
+- 两类条件必须有理论基础，不能是事后分组
+
+**反模式**: Theory 中仅说"调节"而不解释机制；integration 只是"不同视角"。
+
+---
+
+<!--
+pattern_id: audience_role_dichotomy_mirrored_hypotheses
+build_type: 构念辨析型 / 二元机制推演型
+source_papers: ["Pontikes_2012_ASQ"]
+confidence: high
+status: ready_for_corpus
+-->
+
+## Pattern: Audience-Role Dichotomy + Mirrored Hypotheses
+
+**适用场景**: 同一核心构念对至少两类受众/情境产生理论上相反的效果；不是强度差异，而是真正的方向反转。
+**微观动作序列**: Consensus（文献认为 [state] 有害）→ Audience distinction（market-takers vs market-makers）→ Mechanism A（对 audience A 有害）→ H1a/H1b → Dialectical turn → Mechanism B（对 audience B 有益）→ H2a/H2b → Reconciliation
+**范文来源**: Pontikes (2012), *Administrative Science Quarterly*（ambiguous classification hurts consumers but helps VCs）
+
+**骨架**:
+```
+[Consensus challenge] Although prior research finds [X] detrimental ([citations]), [X] persists. I suggest this depends on the evaluating audience.
+
+[Role distinction] There are two roles: [role A], who [function A], and [role B], who [function B].
+
+[Mechanism A] For [role A], [X] makes organizations unclear. [Path 1: search failure / exclusion from consideration set]. [Path 2: inappropriate criteria / expectations not met].
+H1a: [X_dim1] is negatively related to [outcome A].
+H1b: [X_dim2] is negatively related to [outcome A].
+
+[Mechanism B] For [role B], [X] signals flexibility. [Path 1: new classification opportunity / potential to redefine market structures]. [Path 2: multivocality / interpretable from multiple perspectives]. [Path 3: flexibility / adaptability to shape label definitions].
+H2a: [X_dim1] is positively related to [outcome B].
+H2b: [X_dim2] is positively related to [outcome B].
+
+[Integration] The same [X] has opposing consequences depending on the audience role.
+```
+
+**为什么有效**: 用受众制度角色解释表面矛盾，将异常转化为理论机会；镜像假设强化核心论点。
+**注意事项**:
+- 两种角色需有清晰功能差异，不能只是 demographic 分组
+- 每个角色至少两条机制路径
+- T4 首句必须使用 dialectical turn 标记："Despite research showing..., it persists."
+- 两类受众机制步骤数应大致对称
+
+**反模式**: 用"A 不喜欢所以 B 喜欢"作为唯一机制；方向反转未充分解释。
+
+---
+
+<!--
+pattern_id: sign_flipping_boundary_condition
+build_type: 边界条件型 / 构念辨析型
+source_papers: ["Pontikes_2012_ASQ"]
+confidence: medium
+status: ready_for_corpus
+-->
+
+## Pattern: Sign-Flipping Boundary Condition
+
+**适用场景**: 同一 IV 对 DV 的方向因受众/情境/角色而异；需要用机制解释方向反转，而非仅做交互项。
+**微观动作序列**: Boundary claim → Condition A mechanism（negative）→ Condition B mechanism（positive）→ Integration
+**范文来源**: Pontikes (2012), *ASQ*（audience role switches the sign of ambiguity-evaluation relationship）
+
+**骨架**:
+```
+[Boundary claim] The [IV]-[DV] relationship depends on [condition].
+
+[Condition A] For [A], [IV] signals [interpretation A] → [negative DV].
+[Path 1] ...
+[Path 2] ...
+
+[Condition B] For [B], [IV] signals [interpretation B] → [positive DV].
+[Path 1] ...
+[Path 2] ...
+
+[Integration] These reactions are not contradictory because [A] and [B] occupy different positions in [system].
+```
+
+**为什么有效**: 用机制解释方向反转，而非仅报告交互项；integration 说明两类条件为何能同时成立。
+**注意事项**:
+- 必须解释不同条件为何产生不同解读
+- 建议给出制度/功能互补理由
+- 两类条件必须有理论基础，不能是事后分组
+
+**反模式**: Theory 中仅说"调节"而不解释机制；integration 只是"不同视角"。
+
+---
+
+<!--
+pattern_id: three_condition_information_herding
+build_type: 机制推演型 / 条件框架型
+source_papers: ["Shi_Grewal_Sridhar_2021_JMR"]
+confidence: high
+status: ready_for_corpus
+-->
+
+## Pattern: Three-Condition Framework for Information-Based Herding
+
+**适用场景**: 研究组织在不确定性决策中向同伴学习/模仿的现象；需要将经典信息级联理论转化为可检验的组织情境机制。
+**微观动作序列**: Theoretical lens（information cascade / Bayesian updating）→ Framework preview（motivation/opportunity/ability）→ Condition 1（motivation: uncertainty in two markets）→ Condition 2（opportunity: peer behavior credibility）→ Condition 3（ability: belief updating + information sources）→ Prediction
+**范文来源**: Shi, Grewal & Sridhar (2021), *Journal of Marketing Research*（advertising spending disclosure herding）
+
+**骨架**:
+```
+[Lens] [Phenomenon] occurs when an agent's utility of adopting a practice increases with the proportion of others who adopt it ([reviews]). When others' adoption does not add direct economic payoff but reduces uncertainty in the decision outcome, it represents [information-based herding] ([canonical theory]).
+
+[Setting fit] In the context of [decision domain], it is unlikely that peers' [behavior] directly increases the focal agent's utility. Instead, we focus on whether the agent benefits from peers' [behavior] by lowering its own [decision uncertainty]. Thus, we focus on [information-based herding] in [context].
+
+[Framework] [Theory A] and [Theory B] laid a theoretical foundation, suggesting that agents reduce decision uncertainty by incorporating information from other agents' decisions in a Bayesian updating manner. This stream provides three conditions under which [information-based herding] is likely: (1) motivation, (2) opportunity, and (3) ability.
+
+[Condition 1: Motivation] Payoffs from [decision] are uncertain because [market A reason 1, 2, 3] and [market B reason 1, 2].
+[Condition 2: Opportunity] Peers' [behaviors] are credible because [institutional enforcement / litigation costs] ([citation]).
+[Condition 3: Ability] Agents update beliefs based on peers' [behaviors] because [learning evidence] ([citation]). We identify two plausible information sources: [benchmark leaders] and [similar peers].
+
+[Prediction] Therefore, [IV: peer behavior] should positively affect [DV: focal behavior].
+```
+
+**为什么有效**: 三条件框架将抽象的信息级联理论转化为可检验的组织情境机制；三个条件逻辑独立且共同必要。
+**注意事项**:
+- 三个条件必须逻辑独立且共同必要
+- 每个条件需有具体的市场/制度/行为证据支撑
+- 避免将三条件写成三个独立假设而无 convergence
+- ability condition 可自然延伸到信息源比较
+
+**反模式**: 三条件实为同一机制的不同标签；condition 之间缺乏 convergence。
+
+---
+
+<!--
+pattern_id: institutional_shock_as_hook
+build_type: 机制推演型
+source_papers: ["Shi_Grewal_Sridhar_2021_JMR"]
+confidence: medium
+status: ready_for_corpus
+-->
+
+## Pattern: Institutional Shock as Theory Hook
+
+**适用场景**: 政策/规则变化创造自然实验，观察组织行为模式变化；需要用制度冲击和 aggregate trend 建立现象张力。
+**微观动作序列**: Phenomenon（政策改变规则）→ Trend（aggregate behavior 变化）→ Puzzle（机制解释 vs 共同因素）→ Theory bridge
+**范文来源**: Shi, Grewal & Sridhar (2021), *JMR*（FRR44 改变广告支出披露规则）
+
+**骨架**:
+```
+[Phenomenon] [Policy/regulation] changed [rule] in [year], transforming [behavior] from [status A] to [status B].
+[Trend] As shown in [Figure], [aggregate behavior] changed from [X%] to [Y%].
+[Puzzle] Is this relationship caused by [mechanism] or by [common factors]? What information sources do agents rely on?
+[Theory bridge] We use [theory] to explain [mechanism].
+```
+
+**为什么有效**: 制度冲击提供外生变化，使机制论证与识别策略自然衔接；趋势图提供可视化张力。
+**注意事项**:
+- 趋势图需清晰展示变化
+- 必须明确比较机制解释与共同因素解释
+- 制度冲击需连接到核心机制，而非仅作为背景
+
+**反模式**: 将制度冲击仅作为背景，未连接到核心机制；未排除共同因素解释。
+
+---
+
+<!--
+pattern_id: dual_logic_input_efficiency_inverted_u
+build_type: 辩证对立 / 双重逻辑整合型
+source_papers: ["Zhou_2017_ASQ"]
+confidence: high
+status: ready_for_corpus
+-->
+
+## Pattern: Dual-Logic Integration — Input vs. Efficiency + Inverted U
+
+**适用场景**: 同一构念在文献中存在两种对立预测；两种逻辑作用于不同 facet（投入量 vs 转换效率），最终产生最优中间值。
+**微观动作序列**: Lens A（制度逻辑：IV 增加投入）→ H1a → Lens B（效率逻辑：IV 降低投入→产出效率）→ H1b → Integration（倒 U 形合成）→ H1c
+**范文来源**: Zhou, Gao & Zhao (2017), *Administrative Science Quarterly*（state ownership → R&D input vs R&D efficiency → innovation）
+
+**骨架**:
+```
+[Lens A] [Theory A] focuses on the interaction between [environmental feature] and organizations and emphasizes how firms are shaped by [external forces]. In [context], [environmental feature] creates constraints that hinder [outcome], and one way to address them is to [form relationship]. As [government-backed actors], [focal actors] enjoy privileges that enable them to [access resource].
+
+We propose that [IV] should enable firms to gain more resources to invest in [mediator]. [Outcome] often requires substantial resources, but access to [resource type] in [context] is heavily controlled by the government. [IV] helps a firm to [access], [borrow], and [obtain subsidies], enabling it to spend more on [mediator].
+H[X]a: [IV] has a positive effect on [mediator].
+
+[Lens B] The conventional economic view is that [IV] is incompatible with [outcome]. According to [Theory B], as long as [condition], [problem] arises because [agent] may take advantage of [position].
+
+[Actors] in [alternative setting] may not always succeed, but [focal actors] likely suffer more from [problem]. First, [problem dimension 1: undefined principal]. [Theoretical justification]. Second, [problem dimension 2: political appointments]. [Theoretical justification]. As a result, [managers] lack [capabilities/motivations], reducing the efficiency of converting [input] into [outcome].
+H[X]b: [IV] negatively moderates the effect of [mediator] on [outcome].
+
+[Integration] Whereas [Lens A] emphasizes the [advantage] brought by [IV], [Lens B] highlights the [disadvantage]. Because both views offer valid arguments, we need to consider both. A firm may be [category 1], [category 2], or [category 3], and the varying degree of [IV] can make [Lens A] or [Lens B] more or less salient.
+
+When [IV] increases from zero to [moderate level], [Lens A effect] becomes more salient yet [Lens B problem] is relatively minor. As a result, the impact of [moderate IV] should be positive.
+
+As [IV] moves from [moderate] to [high], however, [additional advantage] increases incrementally, but [control shift]. Accordingly, [Lens B problem] becomes evident.
+H[X]c: [IV] has an inverted U-shaped impact on [outcome], such that [moderate level] generates the most [outcome].
+```
+
+**为什么有效**: 将两种对立逻辑分解到不同 facet，再用所有权水平整合为倒 U 形预测；避免零和博弈式理论裁决。
+**注意事项**:
+- 两种逻辑必须指向不同 facet
+- 必须解释拐点为何在中间
+- 建议配套边界条件解释何时某一逻辑被削弱
+- 倒 U 形假设措辞必须明确
+
+**反模式**: 两种逻辑指向同一 facet 导致矛盾；拐点缺乏理论依据；边界条件只是事后补丁。
+
+---
+
+<!--
 pattern_id: anchor_then_mechanism_then_prediction
 build_type: 跨类型
 source_papers: ["Singh_Grewal_2023_JMR", "Shen_Zhou_Wang_Zhang_2022_JOM"]
@@ -255,6 +534,225 @@ status: needs_validation
 
 ---
 
+<!--
+pattern_id: counterintuitive_anchor_three_parallel_threats
+build_type: 机制推演型 / 反直觉预测型
+source_papers: ["Keeves_2017_AMJ"]
+confidence: high
+status: ready_for_corpus
+-->
+
+## Pattern: Counterintuitive Anchor + Three Parallel Psychological Threats
+
+**适用场景**: 研究挑战文献共识，指出某一常见行为对某个目标对象有隐性负面后果；同一 DV 可由多个独立的心理路径共同引发。
+**微观动作序列**: Evidence-Contrast（主流观点认为 IV 有益）→ Mechanism premise（IV 威胁心理状态）→ Three parallel threats（每条路径独立展开）→ Convergence（威胁汇聚到同一 mediator）→ Prediction
+**范文来源**: Keeves, Westphal & McDonald (2017), *Academy of Management Journal*（ingratiation 通常构建 social capital，但本文指出其引发 resentment）
+
+**骨架**:
+```
+[Contrast] Although prior research has focused almost entirely on the beneficial outcomes of [IV] for [actor who performs it], [IV] can also have different and even opposing consequences for [target].
+[Mechanism premise] We suggest that [IV] threatens [psychological state] by violating [ideal 1], [ideal 2], and [ideal 3].
+
+[Threat 1] The first reason that [IV] threatens [psychological state] is that it violates [ideal 1]. [Theoretical justification + citation]. Thus [IV] threatens [psychological state] by violating [ideal 1].
+[Threat 2] Second, [IV] threatens [psychological state] because it is an act of [attribute 2] that compromises [psychological need]. [Theoretical justification + citation].
+[Threat 3] Third, [IV] violates [ideal 3]. [Theoretical justification + citation].
+
+[Convergence] The tendency for [IV] to threaten [psychological state] may prompt [mediator]. [Cognitive bias] exacerbates this effect by causing [actor] to externalize blame to [target]. [Theoretical justification + citation].
+[Prediction] Therefore, we hypothesize: H[X]: [IV] is positively related to [mediator].
+```
+
+**为什么有效**: 多条独立心理路径汇聚到同一后果，增强反直觉主张的可信度；读者即使不接受某一条路径，也可通过其他路径接受假设。
+**注意事项**:
+- 三条威胁路径必须概念独立，不能是同一机制的不同标签
+- 每条路径后需有理论或文献支撑
+- 必须解释为什么这些威胁会 externalize 到目标而非内化
+- 适用于心理机制/OB/upper echelons 研究
+
+**反模式**: 三条路径实为同一机制的不同表述；只罗列威胁而无汇聚到同一 mediator 的逻辑。
+
+---
+
+<!--
+pattern_id: parallel_dual_source_same_mediator
+build_type: 机制推演型
+source_papers: ["Keeves_2017_AMJ"]
+confidence: medium
+status: ready_for_corpus
+-->
+
+## Pattern: Parallel Dual-Source Antecedents (Self + Others) Converging on One Mediator
+
+**适用场景**: 同一 mediator 可由 focal actor 自身行为和他人行为共同引发；需要分别推导两条并行动因路径。
+**微观动作序列**: Self-path anchor → Self-path mechanism → H[X]a → Other-path anchor → Other-path mechanism → H[X]b
+**范文来源**: Keeves, Westphal & McDonald (2017), *AMJ*（H1a: self-ingratiation → resentment; H1b: others' ingratiation toward target → resentment）
+
+**骨架**:
+```
+[Self-path anchor] A salient object of blame for one's [behavior] is the recipient; most people respond positively to [behavioral components], so the focal actor can easily attribute his or her [behavior] to the preferences of the communication partner.
+[Self-path mechanism] This leads to [mediator] because [theoretical reason] ([citation]).
+[Prediction a] H[X]a: [IV_self] is positively associated with [mediator].
+
+[Other-path anchor] [Actor] may also feel [mediator] toward [target] for the [behavioral components] that [target] receives from [other actors]. When [actors] observe others engaging in [IV], they assume such behavior is rewarded by [target].
+[Other-path mechanism] [Theoretical justification]. Moreover, such [mediator] is amplified by [psychological bias 1] and [psychological bias 2].
+[Prediction b] H[X]b: [IV_other] is positively associated with [mediator].
+```
+
+**为什么有效**: 从两个来源同时论证 mediator 的成因，增强理论的全面性；a/b 配对暗示两条路径共享同一心理机制。
+**注意事项**:
+- 两条路径必须指向同一 mediator 的不同来源
+- 他人路径需解释观察者如何推断奖励机制
+- 两条路径篇幅应大致对称
+
+**反模式**: 两条路径实为同一来源的不同表述；他人路径只是“同理可证”。
+
+---
+
+<!--
+pattern_id: emotion_action_tendency_consequence
+build_type: 机制推演型
+source_papers: ["Keeves_2017_AMJ"]
+confidence: medium
+status: ready_for_corpus
+-->
+
+## Pattern: Emotion Action Tendency → Interpersonal Harm
+
+**适用场景**: 研究需要从情绪 mediator 延伸到具体的人际伤害行为后果；需要把抽象情绪与具体行为连接起来。
+**微观动作序列**: Anchor（情绪有负面后果）→ Theory（情绪行动倾向）→ Mechanism（情绪的认知/情感特征 → 行动倾向）→ Behavioral channel（具体行为形式）→ Matching rule（伤害形式与怨恨来源匹配）→ Illustration（案例/引语）→ Prediction
+**范文来源**: Keeves, Westphal & McDonald (2017), *AMJ*（resentment → social undermining via negative commentary to journalists）
+
+**骨架**:
+```
+[Anchor] [Mediator] can also have negative repercussions for [target] outside the firm; feelings of [mediator] toward [target] could prompt [actor] to engage in [DV].
+[Theory] [Emotion theory] indicates that discrete emotions have distinctive action tendencies ([citation]).
+[Mechanism] [Mediator] has a distinctive profile of negative thoughts, feelings, and action tendencies. [Theoretical justification + citations].
+[Behavioral channel] [DV] by [actor] may take the form of [concrete behavior] in communicating with [third party]. [Theoretical justification].
+[Matching rule] The tendency to [DV] someone perceived to have benefitted unfairly follows a "matching rule": the form of harm is similar in kind to the source of ill will.
+[Illustration] [Concrete illustration from interviews or cases].
+[Prediction] Thus our final hypothesis posits that [mediator] will be positively associated with [DV]. This prediction is formally equivalent to hypothesizing that [mediator] mediates effects of [IV] on [DV]:
+H[X]: [Mediator] is positively associated with [DV].
+```
+
+**为什么有效**: 将抽象情绪与具体行为通过 action tendency 和 matching rule 连接，避免"情绪直接影响行为"的黑箱；案例/引语增强 human face。
+**注意事项**:
+- 必须引用情绪理论说明 action tendency
+- 必须有 concrete illustration（案例/引语）增强可信度
+- 必须说明伤害渠道为何与情绪来源"匹配"
+
+**反模式**: 只说"resentment leads to harm"而不解释行动倾向、伤害渠道和匹配规则。
+
+---
+
+<!--
+pattern_id: finance_to_marketing_crossover_t2
+build_type: 机制推演型 / 跨界嫁接型
+source_papers: ["Malshe_Agarwal_2015_JM"]
+confidence: high
+status: ready_for_corpus
+-->
+
+## Pattern: Cross-Disciplinary Theoretical Lens (Finance → Functional Outcome)
+
+**适用场景**: 将金融/治理/制度变量引入营销、创新、CSR 等职能结果研究；需要先建立原领域理论，再论证跨界传导。
+**微观动作序列**: Classic theorem anchor（完美市场无关性）→ Imperfect-market reality（成本/收益清单）→ Crossover claim（成本如何传导到职能领域）→ Mechanism preview
+**范文来源**: Malshe & Agarwal (2015), *Journal of Marketing*（financial leverage → customer satisfaction）
+
+**骨架**:
+```
+[Classic theorem] In perfect markets, [financial/governance decision] should not affect [functional outcome] ([classic finance citation]).
+[Imperfect reality] However, in imperfect markets, [decision] creates both benefits and costs that shape [managerial behavior] ([finance citations]).
+
+[Cost enumeration] One major cost is [cost 1]: higher [financial leverage] increases [risk A] and reduces [slack B] ([citation]). A second cost is [cost 2]: the pressure to meet [fixed obligations] makes managers [myopic behavior] ([citation]). A third cost is [cost 3]: stakeholders who fear breach of implicit contracts reduce their engagement with the firm ([citation]).
+
+[Crossover claim] We argue that these pressures are transmitted to [functional domain]. Specifically, [functional managers] respond by [short-term action], which hurts [marketing outcome].
+```
+
+**为什么有效**: 明确本文在理论框架中的位置，避免"另起炉灶"；让读者看到 contribution 是理论的自然延伸。
+**注意事项**:
+- 两个领域必须有真实的逻辑连接，不能硬凑
+- 成本/收益清单必须来自原领域经典文献
+- 必须说明为什么职能结果值得金融变量关注
+
+**反模式**: 两个领域实际来自不同理论框架；或只是用金融变量作为控制变量，没有机制推演。
+
+---
+
+<!--
+pattern_id: four_reason_mechanism_chain
+build_type: 机制推演型
+source_papers: ["Malshe_Agarwal_2015_JM"]
+confidence: high
+status: ready_for_corpus
+-->
+
+## Pattern: Four-Reason Parallel Mechanism Derivation
+
+**适用场景**: 解释为什么资源约束会导致某类长期投资/投入被削减；需要多个独立且互补的理由增强机制可信度。
+**微观动作序列**: Pressure statement → "[Action] is likely to decline for four reasons" → Reason 1/2/3/4（每个独立展开）→ Convergence to hypothesis
+**范文来源**: Malshe & Agarwal (2015), *JM*（why leverage reduces advertising/R&D）
+
+**骨架**:
+```
+[Pressure] Firms with higher [financial leverage] face [pressure 1] to service debt and [pressure 2] to conserve cash ([citation]). We argue that [functional managers] respond to this pressure by [action 1] rather than [long-term action 1].
+
+[Four reasons] [Action 1] is likely to decline for four reasons.
+First, [action 1] is discretionary and is commonly cut to meet short-term cash needs ([citation]).
+Second, [action 1] builds [intangible asset], whose returns are uncertain in the near term ([citation]).
+Third, [intangible asset] is firm-specific and loses value in financial distress ([citation]).
+Fourth, high leverage creates an [underinvestment problem] because future benefits may accrue to debt holders rather than shareholders ([citation]).
+
+[Outcome link] [Outcome] depends on [antecedent 1], [antecedent 2], and [antecedent 3] ([citation]). [Action 1] positively affects [antecedent 1] and [antecedent 2] by [mechanism] ([citations]). [Action 2] positively affects [antecedent 2] by [mechanism] ([citation]). Therefore, lower [action 1] and [action 2] reduce [outcome].
+
+[Prediction] Following this discussion, we propose that higher [IV] is likely to reduce [mediator 1] and [mediator 2], and this in turn will lower [DV].
+H[X]: The impact of [IV] on [DV] is mediated by (a) [mediator 1] and (b) [mediator 2].
+```
+
+**为什么有效**: 多理由并行提供论证密度；即使读者只接受部分理由，也能接受最终假设。
+**注意事项**:
+- 四个理由必须概念独立，避免 overlap
+- 每个理由后需有 citation 或案例支撑
+- 理由与最终假设之间的收敛信号必须清晰
+
+**反模式**: 四个理由实为同一机制的不同标签；或收敛句只提最后一个理由。
+
+---
+
+<!--
+pattern_id: intangible_asset_real_options_distal_moderation
+build_type: 机制推演型 / 调节效应型
+source_papers: ["Malshe_Agarwal_2015_JM"]
+confidence: high
+status: ready_for_corpus
+-->
+
+## Pattern: Intangible Asset Real Options + Financial Constraint Distal Moderation
+
+**适用场景**: 无形资产（品牌资产、顾客满意度、专利/技术）通过增长期权创造价值，而该价值受融资约束/财务灵活性调节。
+**微观动作序列**: Intangible asset creates growth options → Real options framing → Moderator reduces financial flexibility → Option value shrinks → Prediction
+**范文来源**: Malshe & Agarwal (2015), *JM*（customer satisfaction → firm value, weakened by leverage）
+
+**骨架**:
+```
+[DV value base] A large body of research has shown that [M] leads to [DV] ([citations]). [M] produces value in two ways: [immediate cash flow channel] and [growth option channel] ([citations]).
+
+[Real options framing] Marketing scholars argue that [intangible asset] provides firms with growth options ([citations]). We treat these options as [real options] ([citations]). The value of these options depends on the firm's [capability], which partly depends on [moderator] ([citation]).
+
+[Moderator mechanism] When firms increase [moderator], [mechanism 1: reduced ability to raise future debt] and [mechanism 2: higher cost of capital] reduce financial flexibility. Higher [moderator] also increases the required return threshold for growth projects, shrinking the set of viable options ([citation]).
+
+[Prediction] Therefore:
+H[X]: The impact of [M] on [DV] is [weaker/more negative] for firms with [high/low] [moderator].
+```
+
+**为什么有效**: 将无形资产价值置于 real options 框架下，使远端调节变量（leverage）有明确的理论机制。
+**注意事项**:
+- 必须说明为什么无形资产包含增长期权
+- 必须解释 moderator 如何具体影响 option value
+- 区分 immediate cash flow channel 和 growth option channel
+
+**反模式**: 只说"leverage matters"而不解释它如何改变 option value；或将 real options 术语作为装饰。
+
+---
+
 ## 段内逻辑布局原则
 
 ### 1. 连接词的功能分类
@@ -420,3 +918,134 @@ When [IV] is [high/low], [DV] [decreases/increases] as [IV] increases, for two r
 - 每个阶段的 2-3 个理由必须概念独立
 - 建议在预测句中明确 curve shape（inverted U-shape / U-shape）
 **反模式**: 如果只有一个阶段的机制强，另一个阶段只是"反向论证"或"常识推断"，会显得薄弱；如果两个阶段的理由没有统一框架，会像是两个独立假设硬凑。
+
+---
+
+<!--
+pattern_id: sequential_nested_moderation
+build_type: 调节效应型 / 假设树型
+source_papers: ["Chung_Low_Rust_2022_JAMS"]
+confidence: medium
+status: emerging (1p)
+-->
+
+## Pattern: Sequential Nested Moderation（序列嵌套调节）
+
+**适用场景**: 研究包含**两层边界条件**：第一层 moderator（W1）直接影响 X→Y 关系；第二层 moderator（W2）调节 W1 的调节效应，形成三向交互（X × W1 × W2）。典型于 upper echelons 研究：下级行为者的劝说/缓冲效应被其相对权力放大，或董事会治理压力被下级行为者信心缓冲。
+
+**微观动作序列**:
+1. **Anchor**：建立 X→Y 基线机制（H1）
+2. **Mechanism Move 1**：引入 W1，论证 W1 如何 modify X→Y（H2: X × W1）
+3. **Warrant 1**：文献/理论支撑 W1 的调节机制
+4. **Mechanism Move 2**：引入 W2，论证 W2 如何 modify W1 的调节作用（H3: X × W1 × W2）
+5. **Warrant 2**：文献/理论支撑第二层嵌套机制
+6. **Prediction**：导出 two-way 和三向交互假设
+
+**骨架**:
+```
+[Anchor] As discussed, [IV] [increases/decreases] [DV] because [baseline mechanism]. 
+Therefore, we hypothesize: H1: [IV] is [direction] related to [DV].
+
+[Mechanism Move 1] We expect [W1] to [buffer/amplify] the [positive/negative] effect 
+of [IV] on [DV]. When [W1] is high, [mechanism that modifies baseline].
+[Warrant 1] This is because [theoretical reason] ([citation]).
+[Prediction 2] Therefore, we hypothesize: H2: The [positive/negative] effect of [IV] 
+on [DV] is [weaker/stronger] when [W1] is high.
+
+[Mechanism Move 2] Whether [W1] can effectively [buffer/amplify] the [IV]→[DV] 
+relationship is likely to depend on [W2]. When [W2] is high, the 
+[buffering/amplifying] effect of [W1] becomes [stronger/weaker] because [nested 
+mechanism].
+[Warrant 2] This is consistent with [theory], which posits that [argument] ([citation]).
+[Prediction 3] Therefore, we hypothesize: H3: The [buffering/amplifying] effect of 
+[W1] on the relationship between [IV] and [DV] is [stronger/weaker] when [W2] is high.
+```
+
+**范文来源**: Chung, Low, and Rust (2022), *Journal of the Academy of Marketing Science*（CEO confidence × CMO confidence × CMO power; CEO confidence × board independence × CMO confidence）
+
+**为什么有效**: 通过"先建立 two-way，再在其上叠加 three-way"的递进结构，让读者理解三向交互不是统计补丁，而是有理论层次的边界条件。每一层都有独立的机制解释，避免了一次性抛出复杂交互的认知超载。
+
+**注意事项**:
+- 必须先建立 H2 two-way 再进入 H3 three-way，不能跳跃
+- W2 必须调节 W1 的调节作用，而不仅仅是另一个独立 moderator
+- 两层调节都需要具体机制，不能用 "the effect is stronger when..." 敷衍
+- 若研究包含多个 three-way，每个都应遵循相同的序列结构
+
+**反模式**:
+- 未建立 H2 直接进入 H3 → 读者不知道三向交互建立在什么基础之上
+- W2 只是另一个 two-way moderator → 变成 E3 嵌入型边界条件，不是 E6
+- 三向交互缺乏具体机制 → 审稿人会质疑是否为数据驱动
+- 两层调节使用相同理论但无递进 → 显得重复而非嵌套
+
+**调用语料**:
+- `corpus/variants/E_moderation.md`（E6 序列嵌套调节变体）
+- `corpus/subprotocols/intra_tmt_persuasion.md`（下级劝说上级 + 权力放大）
+- `corpus/subprotocols/board_governance_boundary_condition.md`（董事会放大型边界条件）
+- `corpus/sentences/cost_benefit_calculus.md`（成本-收益计算机制 voice）
+
+---
+
+<!--
+pattern_id: multi_source_parallel_mechanism_three_reasons
+build_type: 机制推演型
+source_papers: ["Darby_2023_MSOM"]
+confidence: high
+status: ready_for_corpus
+-->
+
+## Pattern: Three Parallel Single-Step Mechanisms
+
+**适用场景**: 单一 IV 通过多个并行的、概念独立的微观路径影响同一 DV，且每条路径都有独立文献支撑。
+**微观动作序列**: Anchor（IV 对 DV 的影响已被初步接受）→ Mechanism Move 1/2/3（每个路径独立展开，配 citation + illustration）→ Prediction
+**范文来源**: Darby, Ketchen, Ball & Mukherjee (2023), *Manufacturing & Service Operations Management*（CEO stock ownership → slower recalls via firm-financial interests / CEO power / personal financial interests）
+
+**骨架**:
+```
+[Anchor] [Prior research / theory] suggests that [IV] may influence [DV], but the specific mechanisms remain underexplored.
+
+[Mechanism Move 1] First, [IV] may influence [DV] because [theoretical reason 1]. [Concrete illustration].
+[Mechanism Move 2] Second, [IV] may influence [DV] because [theoretical reason 2]. [Concrete illustration].
+[Mechanism Move 3] Third, [IV] may influence [DV] because [theoretical reason 3]. [Concrete illustration].
+
+[Prediction] Overall, whether [mechanism 1], [mechanism 2], or [mechanism 3], we posit:
+H[X]: [IV] is [direction] related to [DV].
+```
+
+**为什么有效**: 多条机制并行呈现，避免单一路径被审稿人质疑；读者可选择最符合其直觉的路径接受假设。
+**注意事项**:
+- 三条机制必须概念独立，避免 overlap
+- 每个机制后需有 concrete illustration 或 citation
+- 若机制间存在因果依赖，应改为 Cumulative 而非 Parallel
+**反模式**: 三条机制实为同一路径的不同标签，或仅第一条有理论支撑，其余为“同理可证”。
+
+---
+
+<!--
+pattern_id: two_levers_theory_progression
+build_type: 机制推演型
+source_papers: ["Darby_2026_JOM"]
+confidence: high
+status: ready_for_corpus
+-->
+
+## Pattern: Two-Levers Theory Progression
+
+**适用场景**: 核心理论（如 agency theory）提出多个机制/杠杆，已有文献覆盖其中一个，本文覆盖另一个。
+**微观动作序列**: Anchor（理论提出两个杠杆）→ Literature Review（lever 1 已被研究）→ Gap（lever 2 未被研究）→ Mechanism Move（lever 2 如何运作）→ Prediction
+**范文来源**: Darby, Wowak, Ketchen & Connelly (2026), *Journal of Operations Management*（agency theory: executive compensation vs monitoring/control；本文研究 monitoring by large institutional investors）
+
+**骨架**:
+```
+[Anchor] [Theory] suggests that [actors] have [N] key levers to mitigate [problem]: (i) [lever 1] and (ii) [lever 2] ([citation]).
+[Literature Review] Extant research has already examined [lever 1] in [context] ([citations]).
+[Gap] So we take a logical next step by examining [lever 2].
+[Mechanism Move] When engaging in [lever 2], [actors] pay careful attention to whether [agents] make choices aligned with [goals] ([citation]).
+[Prediction] Therefore, we hypothesize: H[X]: [prediction].
+```
+
+**为什么有效**: 明确本文在理论框架中的位置，避免“另起炉灶”；让读者看到 contribution 是理论的自然延伸。
+**注意事项**:
+- 两个杠杆必须确实来自同一理论
+- 需说明为什么 lever 2 之前被忽视但在本文情境中重要
+**反模式**: 两个杠杆实际来自不同理论，或 lever 2 只是 lever 1 的重新包装。
+

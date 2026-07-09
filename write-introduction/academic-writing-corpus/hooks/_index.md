@@ -35,8 +35,9 @@
 | **跨学科类比 Hook** | `01-cross-disciplinary-analogy` | 领域A概念 → 领域B类似问题 | VERIFIED (≥2 papers) | pollock2015 (ASQ), malshe2015 (JM) |
 | **后果清单 Hook** | `08-consequence-cascade` | 负面事件递进式后果清单 | VERIFIED | mayo2021 (POM) |
 | **"Contrary to Belief" Hook** | `12-contrary-to-belief` | 打破普遍认知的制度事实（含变体C：直觉反转保留共识型 habel2016 — "despite its intuitive appeal, this logic may be misleading"） | VERIFIED | eilert2017 (JM), darby2023 (MSOM), habel2016 (JM) |
+| **正向特质阴暗面 Hook** | `24-positive-trait-dark-side` | 正向 CEO 特质 → 反直觉负面组织后果 | EMERGING (1p) | chung_low_rust_2022_jams (JAMS) |
 
-*Trend 是最丰富的 Pollock 类型（6 个 hooks），覆盖从低能量数据开场到高能量范式挑战的全谱系。*
+*Trend 是最丰富的 Pollock 类型（6 个 hooks + 1 emerging），覆盖从低能量数据开场到高能量范式挑战的全谱系。*
 
 ---
 
@@ -71,7 +72,7 @@
 | Gap 强度 | 推荐 Hooks（按 Pollock 类型分组） |
 |---------|--------------------------------|
 | **低** | Trend: `03-data-shock`, `08-consequence-cascade` <br> Anecdote: `10-practical-puzzle`, `09-psychological-construct-hook` <br> Rhetorical: `13-rhetorical-question` |
-| **中** | Trend: `05-literature-consensus-blindspot`, `01-cross-disciplinary-analogy`, `12-contrary-to-belief` <br> Anecdote: `04-puzzle-paradox`, `10-immersive-narrative`, `11-institutional-anecdote`, `07-cost-benefit-tension` |
+| **中** | Trend: `05-literature-consensus-blindspot`, `01-cross-disciplinary-analogy`, `12-contrary-to-belief`, `24-positive-trait-dark-side` <br> Anecdote: `04-puzzle-paradox`, `10-immersive-narrative`, `11-institutional-anecdote`, `07-cost-benefit-tension` |
 | **高** | Trend: `06-paradigm-challenge` <br> Quote: `02-epigraph-quote-pivot` <br> Anecdote: `14-paired-disasters` |
 
 ---
@@ -115,6 +116,7 @@
 | `03-data-shock` | `01-despite-progress-unaddressed` | 数据建立 stakes，递进缺口转化为学术问题 |
 | `04-puzzle-paradox` | `02-implicit-assumption-wrong` | puzzle 需要假设错误的解释 |
 | `12-contrary-to-belief` | `02-implicit-assumption-wrong` | 反差直接证明隐性假设错误 |
+| `24-positive-trait-dark-side` | `20-opposite-predictions-positive-trait` 或 `02-implicit-assumption-wrong` | 正向特质阴暗面需要解释文献为何忽略其负面边界 |
 | `07-cost-benefit-tension` | `01-despite-progress-unaddressed` 或 `08-cost-vs-benefit` | 决策困境需要文献如何/未如何处理的解释 |
 | `14-paired-disasters` | `13-sequential-phenomenon-gap` | 极端案例建立的修正-复发谜题需要 sequential cycling 缺口来解释 |
 
@@ -139,6 +141,7 @@
 | 12 | contrary-to-belief | Trend |
 | 13 | rhetorical-question | Rhetorical question |
 | 14 | paired-disasters | Anecdote |
+| 24 | positive-trait-dark-side | Trend / Anecdote |
 
 *注：编号 10 被 immersive-narrative 和 practical-puzzle 共享。这两个 hook 分别由不同 distill 文件提取，保留原编号以维持向后兼容。*
 
@@ -146,11 +149,21 @@
 
 ## 新增 Hook（待编号）
 
-| Hook | 核心特征 | 验证状态 | 代表范文 |
-|------|---------|---------|---------|
+| Hook | canonical_id | 核心特征 | 验证状态 | 代表范文 |
+|------|-------------|---------|---------|---------|
 | **Cold-Start Cost Cascade Hook** | `cold-start-cost-cascade` | 从 dreaded word 到直接/间接成本递进 | VERIFIED | mayo_poms (POM) |
 
-- cold-start-cost-cascade.md — Cost cascade hook from dreaded word to direct/indirect costs
+- `cold-start-cost-cascade.md` — Cost cascade hook from dreaded word to direct/indirect costs
+
+---
+
+## 新增 Hook（编号 24）
+
+| Hook | canonical_id | 核心特征 | 验证状态 | 代表范文 |
+|------|-------------|---------|---------|---------|
+| **正向特质阴暗面 Hook** | `24-positive-trait-dark-side` | 正向 CEO 特质 → 反直觉负面组织后果（边界反转，保留特质已有价值） | EMERGING (1p) | chung_low_rust_2022_jams (JAMS) |
+
+- `24-positive-trait-dark-side` — Trend/Anecdote Hook: "[Positive trait] is widely regarded as desirable... Yet this literature has largely overlooked the possibility that [positive trait] may also have a darker side when [actors] confront [specific situational pressure]." 适用于 upper echelons/领导力/创业研究中正向特质的阴暗面。Pollock 类型: Trend / Anecdote。能量: 中。最佳适配 Gap: Inadequacy（首选）/ Incommensurability。禁忌: 不要与 `06-paradigm-challenge` 同用（前者是边界反转，后者是范式颠覆）。
 
 ---
 

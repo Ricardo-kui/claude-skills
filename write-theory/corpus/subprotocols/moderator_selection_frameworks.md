@@ -81,3 +81,44 @@ Attention-related moderator: [W2, e.g., media coverage]
 - 建议进一步说明为什么 information 和 attention 是两个独立且互补的维度
 
 **反模式**: 如果 moderators 不能 clean 地归入 information/attention，不要用此框架。
+
+---
+
+<!--
+pattern_id: information_asymmetry_meta_framework_two_moderators
+build_type: 假设树型 / 调节效应型
+source_papers: ["Darby_2026_JOM"]
+confidence: high
+status: ready_for_corpus
+-->
+
+## Framework: Information Asymmetry Meta-Framework for Multi-Level Moderators
+
+**适用场景**: 当研究包含两个及以上 moderator，分别位于不同分析层次或不同路径，需要统一理论框架解释为什么选择这些 moderator。
+**范文来源**: Darby, Wowak, Ketchen & Connelly (2026), *Journal of Operations Management*（R&D intensity at firm-level + device class at product-level，均通过 information asymmetry 削弱 large institutional investors 的 monitoring effect）
+
+**框架结构**:
+```
+[Core concept] is central to [theory] because it underlies the [problem] that arise in [relationship] ([citation]). As [core concept] increases, [intermediate mechanism] increases, which [consequence].
+
+We examine this possibility using [N] moderating variables: [moderator 1] and [moderator 2]. Both reflect [core concept], but they operate through different pathways and at different levels ([citation]).
+
+[Moderator 1] is a [level 1] characteristic capturing [attribute]. Information asymmetry arises from [pathway 1].
+[Moderator 2] is a [level 2] characteristic capturing [attribute]. Information asymmetry arises from [pathway 2].
+```
+
+**为什么有效**:
+- 统一框架使多个 moderator 不是“事后添加”，而是理论推导的自然延伸
+- 明确不同层次/路径的差异，避免 moderator 显得 arbitrary
+
+**适用条件**:
+- 主效应涉及 principal-agent monitoring 或信息处理
+- 多个 moderator 确实通过同一核心概念影响机制
+
+**注意事项**:
+- 框架必须在引入第一个 moderator 之前就明确说明
+- 每个 moderator 段落开头应回扣其在框架中的位置
+- 必须解释为什么 [core concept] 在不同层次/路径上产生相似效果
+
+**反模式**: 如果 moderators 之间没有 conceptual 联系，强行用元框架包装。
+

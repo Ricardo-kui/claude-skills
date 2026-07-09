@@ -151,6 +151,31 @@ this means [contextual specification]..."
 
 ---
 
+## 变体 K：构念多层界定（标签层面 vs. 组织层面，Pontikes 2012 型）
+
+**适用**: 区分现象的"属性本身模糊"与"实体组合模糊"两个层次；两个层次可独立操作化并通过不同机制影响结果。
+
+**模板**:
+```
+[Level 1] [X] arises when a single [attribute] is itself ambiguous. [Definition + example].
+[Level 2] [X] also arises when an [entity] combines multiple [attributes]. [Definition + example].
+[Implication] These levels operate through distinct mechanisms.
+
+H[X]a: [attribute-level X] is [direction] related to [outcome].
+H[X]b: [entity-level X] is [direction] related to [outcome].
+```
+
+**语料锚定**: Pontikes (2012, *ASQ*) — label-level ambiguity vs organization-level ambiguity; both create confusion but operate through different mechanisms.
+
+**关键特征**:
+- 先分别定义两个层次，再说明它们通过不同机制运作
+- 每个层次对应一个独立假设
+- 必须说明区分的理论必要性（为什么不能合并为一个构念）
+
+**反模式**: 两个层次假设成为同义反复；层次区分没有独立测量。
+
+---
+
 ## Scope conditions 附加句
 
 **模板**：

@@ -42,6 +42,32 @@ version: 3.1.0
 
 ## 输入接口
 
+本 Skill 消费上游 `write-methods` 和 `write-theory` 的输出。
+
+### 方式一：paper-state.yaml 自动消费（推荐）
+
+**发现机制**：启动时按以下优先级查找 `paper-state.yaml`：
+1. `--paper-state=<path>` 命令行参数
+2. 当前工作目录下的 `paper-state.yaml`
+3. 项目根目录下的 `paper-state.yaml`
+
+**自动加载**：检测到文件后，同时读取 `methods.*` 和 `theory.hypotheses`，自动完成三项初始化：
+
+```
+[paper-state.yaml] 检测到 project/paper-state.yaml
+  → methods.estimator_family = Cox (生存分析)
+  → methods.variables: dv=[dv_variable_name], iv=[iv_variable_name]
+  → methods.hypothesis_variable_map: H1→Cox Model 1, H2→Cox Model 2
+  → theory.hypotheses: H1 (negative), H2 (positive)
+  → 自动选择结果类型: 生存分析
+  → 自动构建 Hypothesis-Result Fulfillment Map
+  → 用户只需确认假设-结果对齐
+```
+
+若关键字段（`methods.estimator_family`, `theory.hypotheses`）缺失 → 仅对缺失部分交互询问。
+
+### 方式二：输出文本消费（回退）
+
 可直接消费 `/write-theory` 和 `/write-methods` 的输出：
 - `假设列表` → 构建假设-结果对齐表
 - `模型规格` → 确定结果报告格式
@@ -185,7 +211,7 @@ Hypothesis [x] predicted that [predictor] would [increase/decrease] [outcome]. B
 ```text
 Hypothesis [x] predicted that [treatment] would [increase/decrease] the likelihood of [outcome]. Because we estimate a conditional logit model, we interpret results using three complementary approaches to convey economic significance.
 
-First, the odds ratio for [treatment] is [value] (p < [threshold]), indicating that [treatment] is associated with a [X]% [increase/decrease] in the odds of [outcome] relative to [baseline condition]. Second, to translate this into more interpretable units, we compute the relative change in predicted probability: moving from [baseline] to [treatment condition], the predicted probability of [outcome] [increases/decreases] by approximately [X]% relative to the baseline probability of [base rate]%. Third, we anchor this effect in the absolute base rate: this relative change corresponds to an absolute change of [X] percentage points in the probability of [outcome] — a meaningful shift given that [base rate contextualization: e.g., the unconditional probability of a recall in any given year is only Y%].
+First, the odds ratio for [treatment] is [value] (p < [threshold]), indicating that [treatment] is associated with a [X]% [increase/decrease] in the odds of [outcome] relative to [baseline condition]. Second, to translate this into more interpretable units, we compute the relative change in predicted probability: moving from [baseline] to [treatment condition], the predicted probability of [outcome] [increases/decreases] by approximately [X]% relative to the baseline probability of [base rate]%. Third, we anchor this effect in the absolute base rate: this relative change corresponds to an absolute change of [X] percentage points in the probability of [outcome] — a meaningful shift given that [base rate contextualization: e.g., the unconditional probability of [rare outcome] in any given year is only Y%].
 
 This three-layer interpretation — odds ratio → relative probability change → absolute base-rate change — allows readers to assess both statistical and practical significance without overinterpreting logit coefficients, which lack a natural metric.
 ```
@@ -566,7 +592,7 @@ To assess parallel trends, we estimate an event-study model with leads and lags 
 
 **替代解释两步排除变体**（hoffmann2024 型 — CONTROL 步 + INTERACT 步）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：替代解释三步反驳变体
 ```text
-A plausible alternative explanation for our main effect is that [alternative mechanism] — rather than [theorized mechanism] — drives the reduction in [outcome] following [treatment]. [Alternative mechanism] logic would predict that [treatment] changes [outcome] because [rival causal chain: e.g., firms improve governance in response to law, which independently reduces incidents that would trigger recalls], not because [theorized mechanism: e.g., managers facing lower litigation risk become less vigilant].
+A plausible alternative explanation for our main effect is that [alternative mechanism] — rather than [theorized mechanism] — drives the reduction in [outcome] following [treatment]. [Alternative mechanism] logic would predict that [treatment] changes [outcome] because [rival causal chain: e.g., firms improve governance in response to law, which independently reduces incidents that would trigger [outcome]], not because [theorized mechanism: e.g., managers facing lower litigation risk become less vigilant].
 
 We rule out this alternative through a two-step empirical strategy. 
 
@@ -902,6 +928,40 @@ Taken together, the results indicate that [digital transformation enhances firm 
 
 **注意**：反向审查产出存入 Vault，不自动修改本 skill 的骨架库。是否采纳为 skill 参考由人工决定。
 
+## 下游接口
+
+- `/write-discussion` — 使用假设-结果对齐表和主要发现作为 Discussion 核心发现的锚点（Discussion 技能成熟后激活 paper-state 自动消费）
+- `/paper-review` — 进行 Methods-Results 假设-结果对齐检查
+- `/results-review` — 如用户已有 Results 草稿，使用本骨架作为理想基准对比审查
+- `/distill-results-exemplar` — 对生成后的 Results 段落进行反向蒸馏审查
+
+### paper-state.yaml 输出片段
+
+Results 骨架输出末尾自动附加以下片段。用户复制到项目 `paper-state.yaml` 的 `results:` 节下，供下游技能消费：
+
+```yaml
+# --- paper-state.yaml 片段 (copy to your paper-state.yaml) ---
+results:
+  status: drafted
+  output_path: "[本次输出文件路径]"
+  depends_on: ["methods"]
+  updated: "[YYYY-MM-DD]"
+
+  estimator_family: "[OLS / FE / Logit / Cox / DiD / IV/2SLS / ...]"
+
+  hypothesis_results:
+    H1: {direction: "[positive / negative / null]", significant: [true / false], supported: [true / false]}
+    # H2: {direction: "...", significant: ..., supported: ...}
+
+  key_findings:
+    - "[核心发现1：一句话总结，含方向和幅度]"
+    # - "[核心发现2]..."
+
+  unexpected_findings:
+    # 无意外发现时为空列表
+    # - "[反直觉/意外发现：一句话描述]"
+```
+
 ## Constraints
 
 - 必须提醒用户：替换所有 `[方括号占位符]` 为实际内容；不虚构 p 值、系数、支持状态或稳健性发现。
@@ -925,6 +985,7 @@ Taken together, the results indicate that [digital transformation enhances firm 
 - 事后分析必须与稳健性检验分开，并明确标记为探索性。
 - 如果用户有具体的假设和模型，必须将其嵌入模板。
 - 每个表格/模型引用应指向用户的实际表格。
+- **输出末尾追加 paper-state.yaml 片段**：在 Results 骨架输出末尾，自动附加 `### paper-state.yaml 片段` 块。该片段包含 `results.estimator_family`、`results.hypothesis_results`、`results.key_findings`、`results.unexpected_findings`，供下游 write-discussion 消费（Discussion 技能成熟后激活）。用户复制到项目 `paper-state.yaml` 的 `results:` 节下。
 
 ## 语料与变体
 

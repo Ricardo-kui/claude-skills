@@ -263,3 +263,69 @@ will shift the main effect of [treatment] on [outcome].
 - 两个调节变量必须分属不同类型——如果两个都是 intrinsic 约束，框架分类失效
 - 不能在引入框架后只讨论一个调节变量——框架承诺了两个类型，必须兑现
 - "A key distinction... is thus that the former relies on... while the latter is based on..." 型收束句必须出现
+
+---
+
+## 董事会放大型边界条件（Board Monitoring as Amplifying Boundary Condition，Chung/Low/Rust 2022 型）
+
+**功能**: 当研究中的公司治理机制（尤其是董事会/独立董事/机构监督）不是抑制而是**放大**管理层机会主义/短视行为时使用。核心逻辑：董事会的监督压力通过股东短期绩效要求传导到高管，反而加剧其短视倾向。
+
+**承认基线后反转**:
+```
+The board of directors is the ultimate decision-maker within the firm and is expected 
+to monitor management on behalf of shareholders ([citations]). Agency theory posits 
+that independent directors, by virtue of their fiduciary role, can reduce managerial 
+discretion and protect shareholder interests ([citations]). However, this monitoring 
+role can have the perverse effect of intensifying [short-termist_behavior] under certain 
+conditions.
+```
+
+**压力传导机制**:
+```
+Shareholders often focus on near-term performance when evaluating management ([citations]), 
+leading independent boards to dismiss CEOs or cut their compensation when earnings 
+expectations are missed ([citations]). When board monitoring is strong, the threat of 
+[sanction] is always present, creating acute pressure on [higher_actor] to meet short-term 
+performance targets. Rather than curbing [opportunistic_behavior], intense monitoring can 
+thus pressure managers to engage in [myopic_action] to avoid [negative_outcome].
+```
+
+**与 CEO 特质的交互**:
+```
+We expect this perverse pressure to be especially pronounced for [higher_actors] high in 
+[trait_X]. Such [higher_actors] believe in their superior ability to manage the firm and 
+therefore view negative assessments by an independent board as unjustified ([citations]). 
+To avoid these assessments, they have stronger incentives to "borrow" from future performance 
+through [myopic_action] in order to report current-period results that satisfy the board. 
+Thus, [governance_mechanism] should amplify the [positive/negative] relationship between 
+[trait_X] and [DV].
+```
+
+**次级劝说者缓冲（可选，用于三向交互）**:
+```
+[Lower_actor], however, may be able to counteract this perverse pressure by persuading the 
+board of the long-term value of [investment_at_risk]. When [lower_actor] is highly confident, 
+they can effectively signal that [myopic_action] would damage [long-term_asset], drawing the 
+board's scrutiny to [functional_domain] ([citations]). This may lead the board to resist cutting 
+[investment_at_risk], thereby weakening the amplification effect of [governance_mechanism].
+```
+
+**语料锚定**:
+- Chung, Low & Rust (2022, JAMS) — board independence exacerbates confident CEO's myopic marketing management; CMO confidence tempers board effect
+
+**关键特征**:
+- **先承认 agency theory 基线**: 不能一开始就宣称董事会有害，必须先说明其法定监督功能
+- **"perverse effect" / "perverse pressure"**: 反转的核心修辞词
+- **制裁威胁始终在场**: "the threat of [sanction] is always around the corner"
+- **高 [trait] CEO 更敏感**: 因为他们将负面评估视为不公正，从而更积极回避
+- **scope qualifier 结尾**: 不否定董事会的所有治理功能，只限定于 [short-term_metric] 驱动的 [myopic_action]
+
+**反模式**:
+- 直接宣称 "independent boards cause myopia" 而不先承认其监督角色 → 与 agency theory 对立
+- 把董事会压力描述为唯一原因，忽略 [trait_X] 的交互作用
+- 用 "董事会也短视" 作为 folk explanation → 必须用股东压力/薪酬契约/解雇威胁机制化
+- 三向交互中 lower actor 直接阻止董事会 → 必须有理论说明 lower actor 能影响董事会决策
+
+**调用语料**:
+- `corpus/subprotocols/board_governance_boundary_condition.md`（完整 subprotocol）
+- `corpus/subprotocols/intra_tmt_persuasion.md`（次级劝说者逻辑）

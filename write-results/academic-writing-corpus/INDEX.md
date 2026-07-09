@@ -127,4 +127,12 @@ updated: 2026-07-08
 >   - OLS-FE 变体21：**Post-hoc 枚举清单 + 附录引用**
 >   - 新增反模式：稳健性检验仅在 4.1 Post-hoc 枚举带过；曲线关系未做 Lind-Mehlum 验证；曲线调节未解释二阶交互项符号
 >
-> **总变体数**: 74 (分布于 12 个结果类型文件)
+> ✅ **2026-07-08 更新（续）**: 蒸馏 Chung, Low & Rust (2022, JAMS) "Executive confidence and myopic marketing management" 新增 6 个高价值变体（均单篇、待第二篇交叉验证声明已标注）：
+>   - **OLS-FE** 变体22：**无模型证据开场 — 四分位均值/中位数单调性**
+>   - **OLS-FE** 变体23：**四分位距经济显著性 — 从 P25 到 P75 的幅度翻译**
+>   - **OLS-FE** 变体24：**Heckman 两阶段表格导航 — 第一阶段 Table 3 → 第二阶段 Columns 1-4**
+>   - **OLS-FE** 变体25：**替代 DV 证伪段落 — 领域外结果的预期不显著**
+>   - **OLS-FE** 变体26：**内生性稳健性表叙事 — threat-by-threat Table 7 汇总（DWH + Gaussian copula）**
+>   - **三向交互** 变体2：**连续调节变量三向交互 — 边际效应表（Table 5 Panels B/C 风格）**
+>
+> **总变体数**: 80 (分布于 18 个结果类型文件)

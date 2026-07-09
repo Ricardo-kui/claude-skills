@@ -75,6 +75,42 @@ more precise predictions about their distinct effects on [outcome]."
 
 ---
 
+## Pollock 2015 型：两构念四维系统区分
+
+**新增于**: write-theory 3.2.0 (Pollock et al. 2015 ASQ 蒸馏)
+
+**适用**: 研究需要系统区分两个相关但不同的构念（如 reputation / status），并基于差异建立共演/比较框架。
+
+**段落功能地图**:
+
+| 段落 | 功能 | 推荐词数 | 必须度 |
+|------|------|----------|--------|
+| P1 | 构念 A 定义 + 核心要素 | 80-120 | ✅ |
+| P2 | 构念 B 定义 + 核心要素 | 80-120 | ✅ |
+| P3-P6 | 系统差异辨析（First... Second... Third... Fourth...） | 各 60-100 | ✅ |
+| P7 | 差异合成 + 研究问题承接 | 50-80 | ✅ |
+
+**四维区分模板**:
+```
+[Construct A] is best understood as [definition emphasizing perceived quality and shared recognition] ([citation]).
+[Construct B] is broadly understood as [definition emphasizing position in a social hierarchy from deference] ([citation]).
+
+Although these definitions are conceptually similar, they differ in [N] fundamental ways.
+First, [B] reflects [hierarchy/connection-based perceptions], whereas [A] derives from [merit/performance estimations] ([citations]).
+Second, [B] is [loosely coupled with quality / can persist despite poor performance], while [A] is [continually reinforced by consistent behavior] ([citations]).
+Third, [A] permits multiple stakeholder-specific evaluations, but [B] requires intersubjective agreement ([citations]).
+Fourth, [A] and [B] differentially influence [strategic decisions and stakeholder choices] ([citations]).
+
+These differences set up our inquiry into how [A] and [B] coevolve.
+```
+
+**关键原则**:
+- 每个差异必须有文献支撑，最好有例子
+- 差异必须直接导致不同的理论预测（而非纯语义区分）
+- 辨析是后续共演/比较机制的理论基础
+
+---
+
 ## DV 选择论证型子变体（habel2016 型）
 
 > **适用**: 将构念辨析作为手段（论证 DV 选择合理性），而非将区分本身作为贡献
