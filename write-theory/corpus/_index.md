@@ -8,8 +8,9 @@
 
 | 你的研究类型 | 先读这个 | 再读这些 |
 |-------------|---------|---------|
-| 核心贡献是区分两个易混淆构念 | [`variants/A_construct_differentiation.md`](variants/A_construct_differentiation.md) | [`sentences/construct_definition.md`](sentences/construct_definition.md) |
-| 核心贡献是论证为何选择 focal DV（而非构念区分本身） | [`variants/A_construct_differentiation.md`](variants/A_construct_differentiation.md)（DV选择论证子变体） | [`sentences/construct_definition.md`](sentences/construct_definition.md) |
+| 核心贡献是区分两个易混淆构念 | [`variants/A_construct_differentiation.md`](variants/A_construct_differentiation.md) | [`subprotocols/construct_differentiation_patterns.md`](subprotocols/construct_differentiation_patterns.md), [`sentences/construct_definition.md`](sentences/construct_definition.md) |
+| 核心贡献是论证为何选择 focal DV（而非构念区分本身） | [`variants/A_construct_differentiation.md`](variants/A_construct_differentiation.md)（DV选择论证子变体） | [`subprotocols/construct_differentiation_patterns.md`](subprotocols/construct_differentiation_patterns.md), [`sentences/construct_definition.md`](sentences/construct_definition.md) |
+| 研究对象与相关现象机制不同但需借用文献 | [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md)（Simultaneously Recognize X but Leverage Y） | [`subprotocols/construct_differentiation_patterns.md`](subprotocols/construct_differentiation_patterns.md) |
 | 核心贡献是解释 X 如何影响 Y 的因果机制 | [`variants/B_mechanism_elaboration.md`](variants/B_mechanism_elaboration.md) | [`sentences/mechanism_chain.md`](sentences/mechanism_chain.md), [`sentences/hypothesis_forms.md`](sentences/hypothesis_forms.md), [`subprotocols/hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md) |
 | 同一 IV 通过两条对立中介路径（benefit vs cost）影响同一 DV | [`variants/B_mechanism_elaboration.md`](variants/B_mechanism_elaboration.md) + [`sentences/mechanism_chain.md`](sentences/mechanism_chain.md)（辩证对立双路径） | [`subprotocols/B2_dual_track.md`](subprotocols/B2_dual_track.md) |
 | 理论预期 X→Y 是曲线关系（如 inverted U-shape / U-shape） | [`subprotocols/hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md)（Curvilinear Two-Phase Argumentation） | [`subprotocols/hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md)（Width-Type Parallel） |
@@ -50,6 +51,7 @@
 
 | 文件 | 父变体 | 适用场景 |
 |------|--------|---------|
+| [`construct_differentiation_patterns.md`](subprotocols/construct_differentiation_patterns.md) | A 构念辨析型 | 构念辨析的表格化定义、差异-借用过渡（Simultaneously Recognize X but Leverage Y） |
 | [`B2_dual_track.md`](subprotocols/B2_dual_track.md) | B 机制推演型 | 同一构念两个维度产生相反预测（损失规避 vs 长期聚焦） |
 | [`E1_categorical_moderation.md`](subprotocols/E1_categorical_moderation.md) | E 调节效应型 | Moderator 为分类变量（分组调节） |
 | [`argumentation_patterns.md`](subprotocols/argumentation_patterns.md) | 跨类型 | 假设推导段落的微观动作组合（Anchor/Gap/Mechanism/Warrant/Prediction），含 T2 竞争解释管理（Preemptive Competing Account Management）、Extension Logic、间接调节论证 |

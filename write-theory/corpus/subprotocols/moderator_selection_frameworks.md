@@ -122,3 +122,53 @@ We examine this possibility using [N] moderating variables: [moderator 1] and [m
 
 **反模式**: 如果 moderators 之间没有 conceptual 联系，强行用元框架包装。
 
+---
+
+<!--
+pattern_id: three_level_moderator_framework
+build_type: 机制推演型 + 调节边界
+source_papers: ["Grewal_Vana_Stephen_2025_JM"]
+confidence: medium
+status: ready_for_corpus
+-->
+
+## Framework: Incident-Brand-Consumer Three-Level Moderator Framework
+
+**适用场景**: 当论文有 5+ 个 moderators 时，用 incident/brand/consumer 三层元框架组织 moderator，提升理论清晰度，避免 moderator 堆砌感。
+**范文来源**: Grewal, Vana, and Stephen (2025), *Journal of Marketing*（brand safety: incident type / brand fit / consumer beliefs / brand classifications / consumer attributions & connections）
+
+**框架结构**:
+```
+[Core mechanism]. This [effect], however, might be moderated by various factors, related to [level 1: e.g., the incident], [level 2: e.g., brand classifications], and [level 3: e.g., consumer-level perceptions and individual differences]. To understand these complex influences, we consider several theoretically and managerially supported moderators and boundary conditions that likely interact with [IV] to influence [mediator/DV].
+
+[Level 1: Incident-related]
+- [moderator 1: e.g., incident type/severity]
+- [moderator 2: e.g., content-brand fit]
+
+[Level 2: Brand-related]
+- [moderator 3: e.g., product vs service]
+- [moderator 4: e.g., utilitarian vs hedonic]
+
+[Level 3: Consumer-related]
+- [moderator 5: e.g., personal relevance/beliefs]
+- [moderator 6: e.g., brand liking/commitment/connection]
+```
+
+**为什么有效**:
+- 将多个 moderator 归入少数几个理论层级，避免碎片化
+- 每个层级有明确的分析主体（incident / brand / consumer），便于读者理解
+- 层级划分既有理论依据又兼顾管理实践
+
+**适用条件**:
+- 主效应涉及多方互动（如事件-品牌-消费者三角）
+- moderators 可以 clean 地按 incident/brand/consumer 分类
+
+**注意事项**:
+- 框架必须在引入第一个 moderator 之前就明确说明
+- 每个层级内的 moderator 需概念相关
+- 每个 moderator 段落开头应回扣其在框架中的位置
+- 层级名称可根据具体研究调整（如 firm/environment/individual 或 message/source/audience）
+
+**反模式**: 若 moderator 之间没有清晰的层级归属，不要强行套用；可改用理论逻辑逐个引入。
+
+

@@ -291,3 +291,34 @@ status: ready_for_corpus
 - 后续 Methods 应计划检验中介
 **反模式**: 两个机制方向矛盾却强行合并为一个假设。
 
+---
+
+<!--
+pattern_id: simultaneously_recognize_leverage
+build_type: 跨类型
+source_papers: ["Grewal_Vana_Stephen_2025_JM"]
+confidence: medium
+status: ready_for_corpus
+-->
+
+## Pattern: Simultaneously Recognize X but Leverage Y
+
+**适用场景**: 研究对象与现有文献中的相关现象有相似性但机制不同，需要借用相关文献同时避免混淆。
+**微观动作序列**: Recognition of difference → Leveraging similarity → Concrete illustration → Prediction transfer
+**范文来源**: Grewal, Vana, and Stephen (2025), *Journal of Marketing*（brand safety vs contagion/spillover/proximity effects）
+
+**骨架**:
+```
+We simultaneously (1) recognize that the mechanisms by which [related phenomenon] [affect actors] in [context] differ from the mechanism we propose for [construct], but we also (2) leverage insights from prior research in [domain A], [domain B], and [domain C] to derive some initial, potential explanations of why [construct] is likely to evoke [effect]. For example, [concrete illustration from domain A]. We apply this notion to [target context] to predict that [specific prediction].
+```
+
+**为什么有效**: 主动承认边界避免审稿人质疑 "这不是 A 研究吗？"，同时清晰说明借用理由；比简单 "Drawing on..." 更能处理文献流交织。
+
+**注意事项**:
+- 必须真正解释机制差异，不能流于形式；差异陈述要具体
+- "leverage" 的文献必须与研究对象有足够相似性，否则显得牵强
+- 建议在差异陈述后立即给出具体预测，避免停留在文献综述
+
+**反模式**: 若相关文献与研究对象机制完全不同，不要强行 leverage；若只承认差异而不说明借用价值，会削弱理论贡献。
+
+

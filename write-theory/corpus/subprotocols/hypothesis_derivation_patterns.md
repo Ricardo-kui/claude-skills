@@ -1049,3 +1049,41 @@ status: ready_for_corpus
 - 需说明为什么 lever 2 之前被忽视但在本文情境中重要
 **反模式**: 两个杠杆实际来自不同理论，或 lever 2 只是 lever 1 的重新包装。
 
+---
+
+<!--
+pattern_id: embedded_prose_hypotheses
+build_type: 跨类型
+source_papers: ["Grewal_Vana_Stephen_2025_JM"]
+confidence: medium
+status: ready_for_corpus
+-->
+
+## Pattern: Embedded Prose Predictions in Conceptual Framework
+
+**适用场景**: 目标期刊偏好 Conceptual Framework 而非独立 Hypotheses 部分；预测数量较多且关系复杂，以散文形式嵌入可保持叙事连贯。
+**微观动作序列**: Mechanism Move → Warrant → Embedded Prediction（"we posit/propose/anticipate/predict"）→ Optional Moderator Extension
+**范文来源**: Grewal, Vana, and Stephen (2025), *Journal of Marketing*（brand safety: no numbered hypotheses, predictions embedded throughout Conceptual Framework）
+
+**骨架**:
+```
+[Mechanism Move] Building on studies that describe [theoretical process] ([citation]), we propose that [IV] serves as information about [mediator antecedent].
+[Warrant] Specifically, when [IV condition], [actor] [cognitive/affective response], because [theoretical justification]. Consequently, [mediator state] [direction], which [final mechanism link].
+[Embedded Prediction] In detail, because [theoretical reason], we [posit/propose/anticipate/predict] that when [IV condition], [mediator] [direction], which [direction] [DV].
+[Optional Moderator Extension] This [effect] also might be moderated by [moderator], such that [conditional prediction].
+```
+
+**为什么有效**:
+- 保持 Conceptual Framework 叙事连贯性，避免独立假设列表打断理论推演
+- 适合 JM/JMR/JCR 等消费者行为期刊的文体偏好
+- 每个预测都紧跟其机制依据，降低 "假设从天而降" 感
+
+**注意事项**:
+- 每个预测需有明确的方向和条件
+- 建议在 Methods 或 Overview of Studies 中明确列出待检验预测，避免读者遗漏
+- 散文式预测仍需使用 "we posit/propose/anticipate/predict" 等收敛信号
+- 若预测数量过多，建议配合图示（Figure 1）展示整体框架
+
+**反模式**: 若目标期刊要求显式编号假设（如 AMJ/SMJ/ASQ），不要使用此模式；若散文式预测没有明确方向和条件，会变成模糊断言。
+
+
