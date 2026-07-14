@@ -33,6 +33,7 @@ Theory Lens（P4-P5）的功能：在 Gap/Tension 建立之后，向读者提供
 | [06-context-bridging.md](06-context-bridging.md) | Introduction 内双情境映射：提前展示跨情境理论普遍性 | 多情境/多行业/质性+量化混合方法研究 |
 | [01-agency-theory-standard.md](01-agency-theory-standard.md) | Agency Theory 标准引入：principal-agent + 信息不对称/印象管理 | 公司治理、供应链管理、代理问题研究 |
 | [02-dual-theory-layered.md](02-dual-theory-layered.md) | 双理论分层锚定：主理论解释主效应 + 次要框架系统化边界条件 (EMERGING: hoffmann2024 JM) | Mechanism + Boundary 组合；代理冲突/激励问题驱动的主效应 |
+| [07-socio-cognitive-frame.md](07-socio-cognitive-frame.md) | 社会认知解释框架：用 interpretive frames / lenses 解释受众如何选择性解读组织信号 | Incompleteness × Mechanism；投资者/媒体/利益相关者信号解读研究 |
 
 ---
 
@@ -68,6 +69,7 @@ Theory Lens（P4-P5）的功能：在 Gap/Tension 建立之后，向读者提供
 | 02 | dual-theory-layered | 双理论分层：主理论(主效应)+次要框架(边界条件)；intrinsic vs extrinsic 约束区分 |
 | 05 | maxim-contrast | 用对立格言/口号具象化资源竞争张力 |
 | 06 | context-bridging | Introduction 内提前映射双情境，展示理论普遍性 |
+| 07 | socio-cognitive-frame | 社会认知解释框架：interpretive frames / lenses 解释受众选择性解读组织信号 |
 
 ---
 

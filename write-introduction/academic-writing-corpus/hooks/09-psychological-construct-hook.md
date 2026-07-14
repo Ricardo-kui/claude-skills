@@ -3,13 +3,15 @@ type: canonical_reference
 canonical_id: "09-psychological-construct-hook"
 status: ✓ STANDARD
 gap_type: Incompleteness
-cross_paper: VERIFIED
+cross_paper: EMERGING
 generativity: ADAPTABLE
 exclusivity: LOW
 source_papers:
   - mannor2016 (SMJ, 2016): Psychological construct introduction via consensus and case
+  - paruchuri_andrus_sullivan2026 (AMJ, 2026): Construct definition + literature snapshot opening for CEO regulatory focus
 created: 2026-05-19
-source: Extracted from mannor2016 distill-introduction-exemplar
+updated: 2026-07-14
+source: Extracted from mannor2016 + paruchuri_andrus_sullivan2026 distillations
 ---
 
 # 09-psychological-construct-hook — 从共识到新概念直觉型 Hook
@@ -46,6 +48,28 @@ source: Extracted from mannor2016 distill-introduction-exemplar
 > "[Actors] face substantial pressures in their roles, including [pressure 1], [pressure 2], and [pressure 3] ([citations]). Given these demands, it is unsurprising that many experience [psychological state] (e.g., [case or survey data]). While [psychological state] is known to influence [outcome] ([citations]), its implications for [actors] in [domain] remain largely unexplored."
 
 **适用**: 当期刊 Introduction 字数限制较紧时
+
+---
+
+### 变体 C：构念定义 + 文献速览型（paruchuri2026型）
+
+**模板**:
+> "[Construct] reflect [definition] ([citations]). In [domain], [construct] of [actors] have been shown to influence [outcome domain 1], including [specific examples with citations]. In addition to influencing [level 1 outcomes], [construct] can also [secondary effect] ([citations])."
+
+**来源**: paruchuri_andrus_sullivan2026 (AMJ), P1
+
+**原文锚定**:
+> "Regulatory foci reflect primary motivational characteristics that drive cognitive and behavioral processes and dictate how individuals pursue goals to reach their ideal state (Brockner & Higgins, 2001; Higgins, 1998). These copresent and independent motivational approaches, reflected in promotion and prevention focus, capture both the direction and intensity of efforts underlying a person's strategic priorities... In leadership settings, the regulatory foci of CEOs... have been shown to influence firm strategic approaches and decisions... In addition to influencing firm-level outcomes, the regulatory foci of leaders can induce the adoption of similar regulatory foci in proximal followers..."
+
+**关键特征**:
+- 以构念定义开场而非案例/数据/引语，依赖目标读者对心理学术语的学术耐心
+- 定义后立即嵌入文献速览，将 Hook 与 Literature Turn 功能融合
+- 用 "In addition to... can also..." 建立文献进展的层次感
+- P2 用 "While... nonetheless... neglected" 完成从文献综述到 Tension 的转折
+
+**适用**: 心理/行为构念已成熟、目标读者为管理学学者、期刊接受定义式冷启动（如 AMJ 对 CEO 心理特质研究）。
+
+**禁忌**: 不适用于读者不熟悉的冷门构念；P2 必须立即出现明确 gap 以避免能量过低。若 P2 不能立即建立张力，仍优先使用变体 A 的压力共识+案例结构。
 
 ---
 

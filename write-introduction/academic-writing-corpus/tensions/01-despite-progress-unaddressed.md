@@ -3,7 +3,7 @@ type: canonical_tension
 canonical_id: "01-despite-progress-unaddressed"
 status: ✓ STANDARD
 gap_type: Incompleteness
-cross_paper: VERIFIED
+cross_paper: ROBUST
 generativity: GENERATIVE
 exclusivity: HIGH
 source_papers:
@@ -27,9 +27,10 @@ source_papers:
   - hoffmann2024 (JM, 2024): "Policy unintended consequences: 'well-intended → unintended negative consequences' — quasi-natural experiment"
   - grewal2025 (JM, 2025): "Overgeneralization critique: 'generalized view fails to account for variety' — incident/brand/consumer heterogeneity"
   - cui_yang_vertinsky_smj (SMJ): "三重维度并列缺口: outcome scope × portfolio type × network context"
-updated: 2026-07-10
+  - paruchuri_andrus_sullivan2026 (AMJ, 2026): "受众边界延伸型: internal hierarchy → external audience"
+updated: 2026-07-14
 created: 2026-05-18
-source: Extracted from MVP30 narrative_analysis files + mannor2016 + darby2025 distill + grewal2025
+source: Extracted from MVP30 narrative_analysis files + mannor2016 + darby2025 distill + grewal2025 + paruchuri_andrus_sullivan2026
 ---
 
 # 01-despite-progress-unaddressed — 已有进展但遗漏 Tension
@@ -633,6 +634,28 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 **适用**: Incompleteness × (Mechanism + Boundary) 组合；论文同时扩展 outcome、IV composition、context 三个维度；适合构建 comprehensive model 类贡献。
 
 **禁忌**: 三个缺口必须互不重叠；每个缺口要有具体标志性语言，不能都是 "few studies"。
+
+---
+
+### 变体 Y：受众边界延伸型（paruchuri2026型）
+
+**模板**:
+> "While prior [construct] research has made noteworthy advancements, the implications of [construct] have been largely explored through the perspective of [dominant lens/level]. Nonetheless, research has largely neglected to examine how [construct manifestation] can affect the perceptions and attributions made by [external audience] (for an exception, see [citation]); this dearth of research is surprising, because [audience characteristic]. To further elaborate, most research on [construct] examines processes pertaining to [internal domain], where [mechanism specific to internal domain]. [External audience], however, [would not be expected to be influenced by same mechanisms]. Because prior research provides little guidance for understanding how [construct] influences [external audience], we currently do not know whether and how [external audience] are influenced by [perceived construct]."
+
+**来源**: paruchuri_andrus_sullivan2026 (AMJ), P2–P3
+
+**原文锚定**:
+> "While prior regulatory focus research has made noteworthy advancements, the implications of CEO regulatory foci have been largely explored through the perspective of leveraging control and exerting power within internal organizational hierarchies. Nonetheless, research has largely neglected to examine how CEO regulatory-focused language can affect the perceptions and attributions made by external stakeholders (for an exception, see Rhee & Fiss, 2014); this dearth of research is surprising, because investors pay close attention to CEO psychological attributes... To further elaborate, most research on the influences of CEO regulatory foci examines processes pertaining to internal organizational structure... Because prior research provides little guidance for understanding how the CEO's perceived motivational traits influence audiences external to firm hierarchies, we currently do not know whether and how external investors are influenced by their perceptions of the CEO's regulatory-focused language."
+
+**关键特征**:
+1. 明确区分已有研究的分析边界（internal hierarchy）与遗漏边界（external audience）
+2. 使用精确例外引用 ("for an exception, see...") 展示文献掌握精度
+3. 解释为什么外部受众不能简单套用内部机制（不在组织层级中、无权力关系）
+4. "we currently do not know whether and how" 双问号式 gap 表述
+
+**适用情境**: 已有理论/构念在内部/原领域充分发展，需要扩展到外部受众或新分析层次。
+
+**禁忌**: 必须证明外部受众确实会接触并解读该构念信号；不能简单假设"外部也应该研究"。
 
 ---
 

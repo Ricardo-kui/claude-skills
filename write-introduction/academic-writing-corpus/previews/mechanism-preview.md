@@ -13,9 +13,10 @@ source_papers:
   - mannor2016 (SMJ, 2016): Dual-theory integration preview
   - grewal2025 (JM, 2025): "Mechanism-boundary-findings-contribution fused paragraph — compact JM style"
   - cui_yang_vertinsky_smj (SMJ): "Curvilinear cost-benefit mechanism + three moderator direction preview"
+  - paruchuri_andrus_sullivan2026 (AMJ, 2026): "Symmetric dual moderation + multimethod preview"
+updated: 2026-07-14
 created: 2026-05-18
-updated: 2026-07-10
-source: Extracted from MVP30 narrative_analysis files + grewal2025
+source: Extracted from MVP30 narrative_analysis files + grewal2025 + paruchuri_andrus_sullivan2026
 ---
 
 # Mechanism Preview — 机制预览句法
@@ -152,6 +153,28 @@ P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者
 **适用**: 有倒U型或非线性主效应，并伴随多个边界条件的研究；SMJ/AMJ。
 
 **禁忌**: 必须确保调节方向与后文假设一致；上升段和下降段机制都要有理论依据；不要在未建立 Theory Lens 的情况下直接跳到 mechanism preview。
+
+---
+
+### 变体 G：对称双调节 + 多方法预览型（paruchuri2026型）
+
+**模板**:
+> "We test this thesis in the context of [empirical setting]. Prior research has shown that [baseline relationship] ([citations]). Building on and extending this literature, we develop arguments to hypothesize that [audience] rely on [construct] to develop [interpretive frames], which [mechanism] about [attributions]. We posit that [frame 1] [strengthens/weakens] the [baseline relationship], and [frame 2] [oppositely modifies] the relationship. [Because of novelty], we empirically test this framework using a [multimethod approach] employing [method 1] and [method 2]. The [approach] enables our research to test [theoretical claim] via two paths: first, [method 1 purpose]; then, [method 2 purpose]. Overall, we find [directional support]."
+
+**来源**: paruchuri_andrus_sullivan2026 (AMJ), P5–P6
+
+**原文锚定**:
+> "We test this thesis in the context of earnings deviations, which are the differences between reported earnings and analysts' forecasts. Prior research has shown that earnings deviations cause investors to react either positively or negatively due to valenced expectancy violations... Building on and extending this literature, we develop arguments to hypothesize that investors rely on CEO regulatory-focused language to develop interpretive frames, which refract information about earnings deviations and enable investors to draw attributions about CEOs' influence on reported performance and CEOs' future engagement with firm goals. We posit that employment of these interpretive frames by investors alters the positive relationship between earnings deviations and investor reactions, such that the extent of perceived CEO promotion focus strengthens the relationship and the extent of perceived CEO prevention focus dampens the relationship. Because of the novelty of our theoretical view, we empirically test this framework using a multimethod approach employing both archival data and randomized vignette experiments... first, we test our theorized model via the archival data... then, we examine the posited underlying mechanisms... via a series of preregistered randomized vignette experiments. Overall, we find robust support for our theorizing..."
+
+**关键特征**:
+1. Preview 中同时预告两个方向相反的调节效应（promotion strengthens / prevention dampens）
+2. 用 earnings deviations 的效价结构（positive/negative）锚定对称机制
+3. 多方法设计被框定为"因为理论新颖性"而非方法炫技
+4. 明确区分两种方法的理论功能：archival = 是否存在效应；experiments = 机制
+
+**适用**: 理论预测包含对称/反向调节机制、使用多方法（archival + experiment）验证的研究。
+
+**禁忌**: 对称预测必须有理论依据；多方法各部分必须在后文有对应结果；不要仅说 "we find support" 而不预告方向。
 
 ---
 
