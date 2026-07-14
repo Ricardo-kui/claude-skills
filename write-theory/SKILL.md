@@ -274,6 +274,8 @@ Theory section 的 Rising Action 不仅需要功能推进，还需要 prose 层�
 以下三个工具与 Phase 1-5 并行执行。
 完整检查清单见 `../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md`。
 
+**新增**：段落级 architecture 检查（PEEL/PEAL、paragraph length、topic sentence placement）参见 `../write-introduction/references/prose-craft-basics.md`；句子级 transition 信号词参见 `../write-introduction/academic-writing-corpus/micro-templates/transition-signals.md`。
+
 #### Human Face in Theory
 - **P1 Knot Inheritance**：承接 knot 时，用 1 句具体场景说明"这个问题在现实世界中长什么样"
   - 句式："To resolve the tension that [knot], consider what happens when [Company] tried to [action]..."
@@ -501,6 +503,7 @@ dimension matters because [theoretical reason, e.g., decision-makers face escala
 | 要素 | 必须做到 | 最常见失败模式 |
 |------|---------|--------------|
 | **Topic Sentence** | 同时包含话题+核心观点+限定范围；**必须使用 active verb + concrete subject**（如 "We argue that..." 而非 "It is argued that..."）；**段首句在 15 词内说出核心判断**；不宽泛不局限 | 太宽泛/太局限；**无主语被动语态**（"It is argued that"）；**Burying the lead**（核心判断不在段首句） |
+| **Paragraph Architecture** | 每段满足 PEEL/PEAL：Point（topic sentence）+ Evidence（文献/数据）+ Explanation（机制分析）+ Link（与下段衔接）；段落长度 150–350 词 | 段落过短（缺少 evidence/explanation）；段落过长（包含多个论点）；缺少 explanation 导致 "So what?" |
 | **Theoretical Reasoning** | 从 X 到 Y 的每一步因果推理都明确写出；**每步间有 explicit transition**（Consequently/Thus/This leads to...） | **逻辑跳跃**：省略关键推理步骤；**Read my mind**：缺少 transition，从 A 直接跳到 C |
 | **Literature Support** | 总结前人研究的 argument/finding + 说明链接 | **引用罗列**：只有名字没有 argument |
 | **Hypothesis Transition** | 收束句总结推理链，自然引出假设 | 无理论收束直接 "we hypothesize" |

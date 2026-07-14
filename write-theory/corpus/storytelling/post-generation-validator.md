@@ -350,6 +350,23 @@ validation_input:
 - [ ] 无 inflated symbolism？
 - 检测：正则匹配禁用词表
 
+### 6d: Paragraph Architecture 检查（PEEL + Length）
+- [ ] 每个 Theory 段落都有明确的 Point（topic sentence）？
+- [ ] Point 后跟随 Evidence（文献/数据/案例）而非连续抽象推理？
+- [ ] Evidence 后有 Explanation，说明其对 central knot 的贡献？
+- [ ] 段末或段首有 Link，明确与前后段的关系？
+- [ ] 段落长度在 150–350 词之间？
+- **检测**:
+  - 提取每段首句，检查是否包含核心判断信号词（"argue" / "show" / "hypothesize" / "challenge" / "extend" / "propose"）
+  - 统计每段词数：< 100 词 → ⚠️ "段落过短，可能缺少 evidence/explanation"
+    - > 350 词 → ⚠️ "段落过长，可能包含多个论点，建议拆分"
+  - 检查段中是否同时存在 evidence（引用/数据/案例）和 explanation（因果推理/机制说明）
+- **修复指令**:
+  - 缺少 Point → 重写段首句为核心判断句
+  - 缺少 Evidence → 补充具体文献、数据或案例
+  - 缺少 Explanation → 添加 "This matters because..." / "Consequently..." 类解释
+  - 段落过长 → 按论点拆分，每段只讲一个 point
+
 ---
 
 ## 验证 7：Ch04 病理层（Pollock Ch04）
@@ -357,10 +374,12 @@ validation_input:
 ### 7a: Burying the lead 检查
 - [ ] 各假设推导段段首句在 15 词内说出核心判断？
 - [ ] 段首句不是元评论（"本节讨论..." / "接下来..."）？
+- [ ] **新增**：topic sentence 出现在第 3 句或更后时，必须有明确理由（如第 1 句为必要 transition/background）？
 - **检测**：提取各假设推导段段首句，统计词数；检查是否含元评论关键词（"discuss" / "examine" / "接下来" / "本节" / "本文"）；检查是否含核心判断信号词（"argue" / "show" / "hypothesize" / "challenge" / "extend"）
 - 如果段首句 > 15 词且无核心判断信号 → ⚠️ "Theory 段首句可能埋没导语"
 - 如果段首句含元评论关键词 → ⚠️ "段首句为元评论，需重写为核心判断句"
-- **修复指令**：重写段首句为"主语 + 主动动词 + 方向/预测"；元评论移至段尾
+- **新增**：如果 topic sentence 出现在第 3 句或更后，且第 1 句不是 transition/background → ⚠️ "Topic sentence 过度延迟，建议前置"
+- **修复指令**：重写段首句为"主语 + 主动动词 + 方向/预测"；元评论移至段尾；如必须 transition-first，确保第 1 句 ≤15 词且第 2 句立即给出核心判断
 
 ### 7b: Sentence stuffing 检查
 - [ ] 无单句 > 30 词？

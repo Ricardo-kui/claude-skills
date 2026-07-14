@@ -8,6 +8,61 @@ version: 1.0.0
 
 # Prose Craft Checklist（Pollock 2025 Ch03）
 
+## 0. Paragraph Architecture（段落架构）
+
+> 本层补充通用学术写作指南中的 paragraph-level 原则（PEEL/PEAL、paragraph length、topic sentence placement），作为 Ch03/Ch04 句法级检查的上一级检查。
+
+### 0.1 PEEL / PEAL 段落结构
+
+每个学术段落应至少包含：
+
+| 成分 | 功能 | Introduction/Theory 中的典型对应 |
+|------|------|--------------------------------|
+| **P — Point（论点句）** | 段落的 controlling idea | Hook 的 puzzle、Tension 的 gap、Theory 的 why-chain claim |
+| **E — Evidence（证据）** | 支撑论点的文献/数据/案例 | Literature Turn 的引用、Theory 的文献支撑、Hook 的具体 actor |
+| **E — Explanation（解释）** | 说明证据为何支持论点，回答 "So what?" | Stakes 的理论/实践后果、Theory 的机制推演 |
+| **L — Link（链接）** | 与下一段或研究问题的衔接 | Transitions、Contribution 的回扣、假设推导的过渡 |
+
+**检查清单**:
+- [ ] 每个段落有明确的 Point（topic sentence），且通常出现在段首或第 2 句
+- [ ] Point 之后有 Evidence（引用、数据、案例），而非连续抽象推理
+- [ ] Evidence 之后有 Explanation，说明其对论文主线的贡献
+- [ ] 段末或段首有 Link，明确本段与前后段的逻辑关系
+
+**例外**: Contribution 段和 T6 Closure 段可压缩为 P + E + L，Explanation 可嵌入 Point。
+
+---
+
+### 0.2 Paragraph Length
+
+**健康区间**: 200–300 词（Hull LibGuides 一般建议）
+
+**检查标准**:
+- [ ] 无 < 100 词的段落（可能 evidence/explanation 不足）
+- [ ] 无 > 350 词的段落（可能包含多个论点，需检查是否拆分）
+- [ ] 单段 >150 词且只有 1–2 句 → 必须拆分（Sentence Stuffing 检查）
+
+**期刊差异**:
+- AMJ/ASQ: 偏好 200–300 词的充实段落
+- SMJ/JM: 可接受 150–250 词的紧凑段落
+- JMS/JOM: 有时使用 100–150 词的短段落，但需确保每段仍有 Point + Evidence
+
+---
+
+### 0.3 Topic Sentence Placement
+
+**默认规则**: Topic sentence 放在段首，15 词内说出核心判断。
+
+**允许延迟的两种情况**:
+1. **Transition-first**: 段首 1 句专门承接前段，第 2 句给出核心判断
+   - 示例: "Building on this tension, we argue that..."
+2. **Background-first**: 段首 1 句提供最小必要背景，第 2 句给出核心判断
+   - 示例: "In leadership settings, CEOs communicate frequently with investors. These communications..."
+
+**禁止**: 段首 3 句以上仍未出现 topic sentence（严重 Burying the Lead）。
+
+---
+
 ## 1. Human Face（人文面孔）
 
 ### 定义
@@ -171,12 +226,14 @@ version: 1.0.0
 - 段首句未在 15 词内说出核心判断、发现或 claim
 - 段首句是元评论（"本节讨论..." / "接下来我们..."）或纯过渡句，无实质信息
 - 读者只读段首句时，无法判断该段支持/反对/修正什么观点
+- **新增**：topic sentence 出现在第 3 句或更后（允许第 2 句出现，但第 1 句必须是明确 transition/background）
 
 **修复策略**：
 - 重写段首句为"核心判断句"：主语 + 主动动词 + 方向/发现
 - 模板："We argue that [X] [verbs] [Y] because [机制]." / "[Actor] faces a tension: [具体矛盾]."
 - 元评论和过渡信息移到段尾或删除
 - 检查：将段首句单独提取，是否仍是一个完整且有力的学术判断？
+- **新增**：如确实需要 transition-first 结构，确保第 1 句 ≤15 词且第 2 句立即给出核心判断
 
 **嵌入点**：write-introduction 所有段落；write-theory 的 Topic Sentence（四段式论证链）和 T6 Closure
 

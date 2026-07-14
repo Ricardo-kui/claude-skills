@@ -303,5 +303,5 @@ pontikes2012 通过示例：market-taker 和 market-maker **不是组织的属�
 - **两步读取**: 选择阶段读 `_routing_tables.yaml` + `_evidence_registry.yaml`；渲染阶段读对应 corpus 文件。
 - **注册表不存在时回退**到 `_routing_tables.yaml` 的静态推荐，不中断输出。
 - **如用户提及目标期刊**：按期刊适配表给出针对性建议。期刊差异优先于通用规则。
-- **Prose Craft 为推荐非硬性要求**: Human Face、Showing vs Telling、Conversational Voice 是 Pollock 的最佳实践建议，按期刊风格灵活适用——ASQ/AMJ 严格，JMS/JOM 宽松。
+- **Prose Craft 为推荐非硬性要求**: Human Face、Showing vs Telling、Conversational Voice 是 Pollock 的最佳实践建议，按期刊风格灵活适用——ASQ/AMJ 严格，JMS/JOM 宽松。段落级 architecture（PEEL/PEAL、paragraph length、topic sentence placement）参见 `references/prose-craft-basics.md` 和 `academic-writing-corpus/storytelling/prose-craft-checklist.md`；句子级 transition 信号词参见 `academic-writing-corpus/micro-templates/transition-signals.md`。
 - **输出末尾追加 paper-state.yaml 片段**：在 Introduction 骨架输出末尾，自动附加 `### paper-state.yaml 片段` 块。该片段供下游技能（write-theory Phase 0、write-methods Phase 1、write-results Phase 0）自动消费。用户复制到项目 `paper-state.yaml` 的 `introduction:` 节下。如用户未提及 paper-state.yaml 协议，该片段的 YAML 注释头应包含使用说明。
