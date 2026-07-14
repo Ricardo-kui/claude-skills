@@ -11,9 +11,11 @@ source_papers:
   - keeves2017 (ASQ, 2017): Mechanism chain preview
   - gamache2023 (SMJ, 2023): Counter-intuitive prediction preview
   - mannor2016 (SMJ, 2016): Dual-theory integration preview
+  - grewal2025 (JM, 2025): "Mechanism-boundary-findings-contribution fused paragraph — compact JM style"
+  - cui_yang_vertinsky_smj (SMJ): "Curvilinear cost-benefit mechanism + three moderator direction preview"
 created: 2026-05-18
-updated: 2026-05-19
-source: Extracted from MVP30 narrative_analysis files
+updated: 2026-07-10
+source: Extracted from MVP30 narrative_analysis files + grewal2025
 ---
 
 # Mechanism Preview — 机制预览句法
@@ -92,6 +94,27 @@ P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者
 
 ---
 
+## 变体 E：机制-边界-发现-贡献四合一融合段（grewal2025 型）
+
+**模板**:
+> Using [methods], we explore a key [theoretical element] that appears especially relevant to [outcome] in [settings]: [core mechanism]. To help [audience] design [application], we also specify when [phenomenon] are more or less likely to affect [outcome], based on [moderator categories]. By investigating [phenomenon] from multiple perspectives (e.g., [example 1] and [example 2]), we can better establish when and why [phenomenon] becomes a pressing issue. In addition, we build on and expand insights gathered from diverse literature pertaining to [theoretical sources]. Leveraging these insights, we propose a novel process by which [IV] affects [DV], through [mechanism]. Our empirical findings reveal how [IV] influence [outcomes], as well as [additional consequences], while also accounting for [boundary conditions]. We use a [methodological approach], in line with evidence that [method justification] ([citation]). Finally, for [practice audience], we detail [managerial implications].
+
+**来源**: Grewal, Vana, and Stephen (2025), *Journal of Marketing*, P4
+
+**原文锚定**:
+> "Using controlled experimental scenarios and data from real-world brand safety incidents, we explore a key mechanism that appears especially relevant to brand outcomes in risky settings: diminished perceptions of a brand's trustworthiness. To help managers design advertising strategies that minimize brand safety risks, we also specify when brand safety incidents are more or less likely to affect consumers' responses, based on incident type, brand features, and consumer beliefs. By investigating brand safety incidents from multiple perspectives, including both consumers' firsthand responses to brand safety incidents and their secondhand responses to incidents described in the news or on social media, we can better establish when and why brand safety becomes a pressing issue. In addition, we build on and expand insights gathered from diverse literature pertaining to adjacency, proximity, contagion, and spillover effects. Leveraging these insights, we propose a novel process by which brand safety incidents affect brand outcomes, through erosion of brand trust. Our empirical findings reveal how brand safety incidents influence consumers' attitudes and behaviors, as well as advertisers' outcomes, while also accounting for incident, brand, and consumer boundary conditions. We use a multimethod approach, in line with evidence that such approaches can strengthen causal claims about psychological processes (Chatterjee and Malshe 2021). Finally, for advertisers, platforms, and publishers, we detail evidence-based suggestions for reducing brand safety incidents and mitigating their consequences."
+
+**关键特征**:
+- 一个段落同时完成 Theory Lens, Preview, Contribution 三个功能
+- 用 "we explore... we also specify... we can better establish... we build on... we propose... Our empirical findings reveal..." 排比推进
+- 从机制到边界到方法到实践，逻辑层层外扩
+- 适合字数受限但贡献多维的论文
+
+**适用**: 目标期刊偏好紧凑 Introduction（JM/JMR/IJRM）；研究贡献涉及 Mechanism + Boundary + Phenomenon + Output 多维
+**禁忌**: 不要在 ASQ/AMJ 等偏好独立贡献段的期刊使用；每个模块必须能被后续 Section 兑现
+
+---
+
 ## 附加技巧：概念跨层次迁移
 
 当研究借用已有概念但将其应用到新的分析层次时（如从组织层面到领域层面，从个体层面到团队层面），使用此句式明确标注迁移并给出新层次的定义。
@@ -105,6 +128,30 @@ P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者
 - 明确引用原始概念提出者（尊重知识产权）
 - 用破折号给出**新层次的操作化定义**
 - 将跨层次迁移锚定于更大的理论传统
+
+---
+
+## 变体 F：倒U型成本收益转折 + 多调节方向预告（cui_yang_vertinsky_smj 型）
+
+**模板**:
+> We maintain that increases in [IV] facilitate [mechanism 1] and [mechanism 2], increasing [DV]. However, there is a cost/benefit trade-off involved in [action]. As [IV] increases, [escalating cost 1] and [escalating cost 2] may reach a threshold at which the expected cost becomes higher than the expected benefit of [action]. We accordingly propose that [IV] demonstrates an [inverted U-shaped] relationship with [DV].
+> We further argue that [boundary mechanism] is bounded by [context]. [Factor 1], [factor 2], and [factor 3] create important boundary conditions that moderate the effect of [IV] on [DV] in different directions.
+
+**来源**: Cui, Yang & Vertinsky (SMJ), P8-P9
+
+**原文锚定**:
+> "We maintain that increases in the proportion of exploratory alliances within the collaborative portfolio between a firm and its partner facilitate identification of the partner's vulnerabilities and appropriation of its capacities, increasing the firm's incentive to launch competitive action against its partner. However, there is a cost/benefit trade-off involved in launching competitive attacks. As the proportion of exploratory alliances increases, the escalating damage to long-term benefits and the risk of 'tit-for-tat' retaliatory attacks from the partner may reach a threshold at which the expected cost becomes higher than the expected benefit of launching further competitive attacks. We accordingly propose that relative exploration demonstrates an inverted U-shaped relationship with a firm's product-market competition with its partner."
+> "We further argue that the cost/benefit trade-off of launching competitive attacks is bounded by firms' network environments. Firms' relational embeddedness... positional embeddedness... and structural embeddedness... create important boundary conditions that moderate the effect of relative exploration on their competition in different directions."
+
+**关键特征**:
+- 用 "facilitate... increasing..." 说明上升段机制，用 "However, cost/benefit trade-off" 引入转折。
+- "reach a threshold" 是倒U型预测的关键过渡短语。
+- 第二段用 "further argue" 平滑过渡到边界条件，并明确三个 moderator 及其方向差异（flatten/steepen/flatten）。
+- 最后一句同时预告方法和数据来源，完成 Preview 功能。
+
+**适用**: 有倒U型或非线性主效应，并伴随多个边界条件的研究；SMJ/AMJ。
+
+**禁忌**: 必须确保调节方向与后文假设一致；上升段和下降段机制都要有理论依据；不要在未建立 Theory Lens 的情况下直接跳到 mechanism preview。
 
 ---
 

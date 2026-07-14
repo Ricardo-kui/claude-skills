@@ -66,7 +66,7 @@ Literature Turn（P2-P3）的核心功能是将 Hook 建立的注意力转化为
 | **解决方案** | 填补空白 | 连接盲区 | 超越对立 |
 | **典型 Hook** | data-shock, practical-puzzle | consensus-blindspot, forward-looking-shift | paradigm-challenge, classic-debate-constraint |
 | **典型 Tension** | despite-progress-unaddressed | implicit-assumption-wrong, structural-blindspot | reality-contradicts-consensus, theoretical-imbalance |
-| **变体数量** | 5 (A–E) | 5 (A–E) | 5 (A–E) |
+| **变体数量** | 6 (A–F) | 5 (A–E) | 5 (A–E) |
 | **反模式风险** | 弱缺口（没有解释为什么遗漏重要） | 虚假合成（两个"传统"实为同一流派变体） | 稻草人（一方被描绘得极其愚蠢） |
 
 ---
@@ -134,6 +134,7 @@ literature-turns/
 
 ## 更新日志
 
+- **2026-07-10**: 新增 `01-progressive-coherence` 变体 F（共识建立 + 实践复杂性型，grewal2025 型）；变体数量更新为 6 (A–F)
 - **2026-05-20**: 创建索引文件；扩充 03-non-coherence 至 5 变体 + 关键技巧；扩充 02-synthesized-coherence 至 5 变体 + 升级动作表 + 对比表
 - **2026-05-19**: 从 literature-turn-templates.md 拆分出 3 个独立文件，各自扩至 3-4 变体
 - **2026-05-18**: 创建 literature-turn-templates.md（初始版本，含三种策略的合并模板）

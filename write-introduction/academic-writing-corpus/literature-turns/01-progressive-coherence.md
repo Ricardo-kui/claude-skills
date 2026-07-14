@@ -11,7 +11,10 @@ source_papers:
   - wu2025 (SMJ, 2025): "Authority quote pivot → remains poorly understood"
   - gamache2020 (SMJ, 2020): "Natural progression from general to specific"
   - mayo2021 (POM, 2021): "Cross-disciplinary literature review with Table"
+  - grewal2025 (JM, 2025): "Consensus building + practice complexity in digital advertising ecosystems"
+  - cui_yang_vertinsky_smj (SMJ): "Consensus + stakes + three unaddressed issues preview"
 created: 2026-05-19
+updated: 2026-07-10
 source: Extracted from literature-turn-templates.md + MVP30 validation
 ---
 
@@ -120,6 +123,50 @@ P2-P3 的功能：承认文献已有实质进展，但精确指出被遗漏的�
 
 **适用**: 文献 >=15 篇、需要在 Introduction 中展示文献广度的研究。文献 <10 篇时段落叙事足矣，无需矩阵。
 **禁忌**: Table 1 不是完整文献综述的替代品——它是对文献模式的视觉摘要。正文仍需 2-3 句叙事建立逻辑线索。
+
+---
+
+### 变体 F：共识建立 + 实践复杂性型（grewal2025 型）
+
+**模板**:
+> Increased [construct] risks in turn require increased efforts to [desired outcome] in [domain] ([authority citations]). In such contexts, managing [construct] often entails [key consideration] that stem from [perception basis]. Across [environments], [concrete examples]. But [key uncontrollable factor], because [reason]. [Actors] devote substantial [resources] to [action], but such efforts have not proven widely successful. Not only is [construct] difficult in practice, with strategically important consequences, but it also involves substantial complexity, because [nuance].
+
+**来源**: Grewal, Vana, and Stephen (2025), *Journal of Marketing*, P2
+
+**原文锚定**:
+> "Increased brand safety risks in turn require increased efforts to keep the overall brand reputation safe in digital advertising ecosystems (IAB 2018; Johnson, Voorhees, and Khodakarami 2023). In such contexts, managing brand safety often entails adjacency considerations that stem from the perceived safety or suitability of content that a brand appears near, next, or adjacent to in a given media channel. Across digital environments, user-generated posts appear above or below brands' advertisements in Facebook and Instagram feeds; pre- and mid-roll advertisements run during videos on YouTube... But the content that the brand appears adjacent to largely is beyond the brand's control, because it gets determined by opaque algorithms. In the struggle to ensure brands do not appear alongside inappropriate—that is, unsafe—content, companies devote substantial time, effort, and advertising dollars to try to secure safe ad space... Not only is managing brand safety difficult in practice, with strategically important consequences, but it also involves substantial complexity, because the definition of 'safe' adjacent content varies across brands, products, and audiences."
+
+**关键特征**:
+- 用 "Increased X risks require increased efforts" 将现象升级为研究问题
+- 列举具体环境/平台让抽象概念落地
+- "unfortunately" / "but such efforts have not proven widely successful" 建立实践困境
+- "not only... but also..." 连接实践重要性和理论复杂性
+
+**适用**: 数字平台、算法、UGC 等新兴环境对传统管理实践的挑战
+**禁忌**: 复杂性铺垫必须与后续 gap 直接相关
+
+---
+
+
+### 变体 G：共识 + Stakes 嵌入 + 三重缺口预告（cui_yang_vertinsky_smj 型）
+
+**模板**:
+> A thorough study of [puzzle] is of great theoretical importance, contributing to [broad theoretical goal] ([citation]). Prior studies on [stream] have provided important insights into [tension] ([citations]). For example, researchers maintain that [mechanism 1] and have identified important factors that influence [outcome], such as [factor A], [factor B], and [factor C] ([citations]). However, [N] important issues in this sphere of research remain unaddressed.
+
+**来源**: Cui, Yang & Vertinsky (SMJ), P2
+
+**原文锚定**:
+> "A thorough study of this 'collaboration–competition' relationship between partners is of great theoretical importance, contributing to the development of a more comprehensive model of inter-firm behavior rendered by strategic alliances (Kogut, 1989). Prior studies on alliance learning have provided some important insights into the tension between collaboration and competition... researchers maintain that competition within alliances stems from the misalignment of interests between allies... and have identified important factors that influence allies' competitive learning within alliances, such as asymmetric learning capabilities, the ratio between private and common interests, and knowledge similarities between allies... However, three important issues in this sphere of research remain unaddressed."
+
+**关键特征**:
+- 用 "A thorough study of... is of great theoretical importance" 同时完成 Stakes 声明和 Literature Turn 过渡。
+- 先列举已有研究的具体贡献（factors A/B/C），再转向缺口，形成 progressive coherence。
+- 结尾用数字预告（three important issues）降低读者认知负荷，并与后文 Tension 段落一一对应。
+- 整个 P2 将 Literature Turn、Stakes、Tension 预告三种功能压缩在一段内，适合 Introduction 紧凑的 SMJ 风格。
+
+**适用**: Incompleteness × (Mechanism + Boundary)；已有文献较丰富、缺口可明确列举为 2-4 点的研究；SMJ/AMJ。
+
+**禁忌**: 不要只列文献不总结 argument；每个 factor 必须具体；Stakes 不能只有 "theoretically important" 而无 broad theoretical goal 支撑。
 
 ---
 

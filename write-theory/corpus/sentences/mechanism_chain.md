@@ -1735,3 +1735,52 @@ on [profitability_target], so [action] would adversely affect their career outco
 - `corpus/subprotocols/intra_tmt_persuasion.md`（下级劝说上级）
 
 ---
+
+## 倒U型两步机制链：awareness + capacity → mutual dependence + retaliation
+
+**适用**: 解释某一自变量与结果之间的倒U型关系。核心逻辑：低 IV 时正向机制占主导（awareness + capacity），高 IV 时负向机制占主导（mutual dependence + retaliation），中间某点达到峰值。
+
+**模板**:
+```
+Different compositions of [IV] have different implications for [DV]. When [IV] is low, [state A] dominates, so that [short-term orientation]. This orientation allows both parties to tolerate [self-serving behavior], or even to take them for granted. Their interactions then focus on [immediate goal], so that each firm is motivated to use what it learns from its partner to increase private benefits. In this type of orientation, increases in [IV] provide opportunities and incentives to [DV]. Specifically, there are two reasons.
+
+First, increases in [IV] enhance [mediator 1: awareness]. [IV] involves more intensive interactions, which enable the firm to gain a deeper and more comprehensive understanding of its partner's [resources/operations/motives]. This knowledge helps the firm more precisely identify [strengths and weaknesses], information that can be used to launch [calibrated actions] and provides strong incentives for [DV].
+
+Second, [IV] enhances [mediator 2: capacity] because it requires sharing of proprietary know-how. [IV] involves articulating and transferring complex knowledge between allies, which requires intensive hands-on coaching to facilitate joint problem solving. Such coaching often draws on latent knowledge bases, showing the connections between divisional areas of knowledge and organizations. This fine-grained knowledge transfer enhances the absorption of [tacit know-how] and facilitates the appropriation of fundamental knowledge that spills over during close interactions. Firms' incentives to apply such technological know-how in designing [substitute products] is high, since doing so can cause destructive damages to incumbent products and reward the attackers with enhanced private benefits.
+
+However, as [IV] increases, overlap in the firms' long-term stakes also rises, enlarging their mutual dependence in developing [critical innovations]. The risk of retaliation from an attacked partner also increases, as the partner now holds more critical information about the firm. The firms' interdependence, on the one hand, and the risk of retaliation, on the other, may escalate to a point at which the expected costs exceed the benefits of [action], suffocating the firms' incentives to further [DV].
+```
+
+**语料锚定**:
+- Cui, Yang & Vertinsky (SMJ) — relative exploration → competitive aggressiveness
+
+**关键特征**:
+- 先建立 "transaction-oriented" 情境，再引入两个正向机制（awareness + capacity）。
+- 用 "However, as [IV] increases..." 引入转折，从正向机制过渡到负向机制（mutual dependence + retaliation）。
+- "expected costs exceed the benefits" 是倒U型预测的核心过渡句。
+- 每个机制步骤都有文献支撑（alliance learning / social network / resource dependence）。
+
+**与标准两步链的区分**:
+| 维度 | 标准两步链 | 倒U型两步链 |
+|---|---|---|
+| 核心逻辑 | X → M → Y 单向增强 | X → 正向机制 → 转折 → 负向机制 |
+| 假设形式 | X→M, M→Y | X→Y 曲线（含二次项） |
+| 关键连接词 | "Consequently," "In turn" | "However," "reach a threshold," "suffocating" |
+| 适用 IV | 能力、动机 | 组合/比例变量，存在成本收益权衡 |
+
+**反模式**:
+- 上升段和下降段机制只有一个有理论依据。
+- 只有 "more is not always better" 空泛断言，无具体成本机制。
+- 下降段机制不是真正的机制（如 "because too much is bad"），而是重述现象。
+
+**配套假设形式化**:
+```
+In sum, firms are likely to develop [state A] when [IV] is low, and increases in [IV] enhance [DV]. However, as [IV] increases, [state B] emerges, so that [cost mechanism]. When [IV] is high, [state C]. [Cost 1] and [cost 2] may reach a level at which [cost > benefit], and at this level the motivation to [DV] starts to decline, resulting in an inverted U-shaped relationship between [IV] and [DV]; [DV] peaks at the medium level of [IV].
+
+H1: There is a curvilinear relationship (taking an inverted U-shape) between [IV] and [DV].
+```
+
+**调用语料**:
+- `corpus/subprotocols/bilateral_argumentation_templates.md` — 倒U型调节 high/low 双侧论证
+- `corpus/sentences/moderation.md` — flatten/steepen 图形化描述
+- `corpus/sentences/closure.md` — 倒U型调节局部收束

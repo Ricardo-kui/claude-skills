@@ -6,10 +6,10 @@
 meta:
   schema_version: "1.0.0"
   registry_type: theory-fragment-registry
-  last_updated: "2026-07-09"
+  last_updated: "2026-07-10"
   total_papers_indexed: 44
-  batches_processed: 1
-  note: "Reverse-engineered from existing corpus anchors. Batch 2026-07-09: distilled 4 recall papers (Darby 2023 MSOM, Mayo 2022 POM, Ball 2018 JOM, Darby 2026 JOM) into subprotocols and registry."
+  batches_processed: 2
+  note: "Reverse-engineered from existing corpus anchors. Batch 2026-07-09: distilled 4 recall papers (Darby 2023 MSOM, Mayo 2022 POM, Ball 2018 JOM, Darby 2026 JOM) into subprotocols and registry. Batch 2026-07-10: expanded Cui, Yang & Vertinsky (SMJ) with inverted-U mechanism, bilateral argumentation, flatten/steepen language, and local closure templates."
 
 status_rules:
   EMERGING:
@@ -90,7 +90,7 @@ source_papers:
     journal: "Strategic Management Journal"
     year: 2026
     subfield: "strategy"
-    theory_build_type: "Boundary"
+    theory_build_type: "Boundary / Mechanism"
     fragments:
       - fragment_id: tfr_006
         type: curvilinear_multi_moderation
@@ -101,6 +101,38 @@ source_papers:
         makadok_dimension: "Boundary"
         status: "EMERGING"
         note: "Inverted-U baseline + three embeddedness moderators flattening/steepening curve sides."
+      - fragment_id: tfr_006a
+        type: inverted_u_bilateral_moderation
+        title: "倒U型调节 high/low 双侧论证"
+        home_files:
+          - "subprotocols/bilateral_argumentation_templates.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Each moderator argued separately for low-to-medium and medium-to-high IV ranges."
+      - fragment_id: tfr_006b
+        type: curvilinear_awareness_capacity_mechanism
+        title: "倒U型两步机制链：awareness + capacity → mutual dependence + retaliation"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Ascending side via awareness/capacity; descending side via mutual dependence/retaliation."
+      - fragment_id: tfr_006c
+        type: flatten_steepen_graphical_language
+        title: "flatten/steepen 图形化调节描述"
+        home_files:
+          - "sentences/moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Visual curvature language (slope/peak) for quadratic interaction interpretation."
+      - fragment_id: tfr_006d
+        type: inverted_u_local_closure
+        title: "倒U型调节假设局部收束"
+        home_files:
+          - "sentences/closure.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Taken together ... at both sides of the inverted U-shape ... slope/peak."
 
   darby_2024_msom:
     display_name: "Darby (2024, MSOM)"

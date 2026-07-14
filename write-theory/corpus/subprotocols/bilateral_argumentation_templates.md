@@ -253,3 +253,59 @@ status: ready_for_corpus
 - 需强调分类标准（如 risk vs complexity）
 **反模式**: 只说高风险的特殊性，不解释低风险为何信息对称。
 
+---
+
+<!-- 
+pattern_id: inverted_u_bilateral_moderation
+build_type: 调节效应型 / 机制推演型
+source_papers: ["Cui_Yang_Vertinsky_SMJ"]
+confidence: high
+status: ready_for_corpus
+-->
+
+## Pattern: Inverted-U Moderation — High/Low Bilateral Argumentation
+
+**适用场景**: moderator 改变倒U型关系的曲率（flatten 或 steepen），需要分别论证曲线上升段（low to medium IV）和下降段（medium to high IV）的机制如何被 moderator 改变。
+
+**微观动作序列**: Baseline inverted-U mechanism → moderator impact on ascending side → moderator impact on descending side → curvature prediction
+
+**范文来源**: Cui, Yang, and Vertinsky (SMJ) — relative exploration × relational/positional/structural embeddedness
+
+**骨架（负向调节 / flatten）**:
+```
+We argue that [moderator] attenuates the inverted U-shaped relationship between [IV] and [DV] by (a) lowering [actor]'s incentive to [opportunistic action] when the partnership is more [state A], and (b) increasing the cost of [aggressive action] when the partnership is more [state B].
+
+Specifically, at low to medium levels of [IV] (i.e., more [state A]), the effect of [IV] on [DV] is smaller when [moderator] is higher, for two reasons. First, [mechanism 1 reducing incentive]. Second, [mechanism 2 reducing incentive].
+
+At medium to high levels of [IV] (i.e., more [state B]), too, the effect of [IV] on [DV] is reduced by [moderator], as [moderator] increases the cost of [action] in this type of partnership. First, [mechanism 1 increasing cost]. Second, [mechanism 2 increasing cost].
+
+To summarize, [actor]'s incentive to [DV] is reduced at low to medium levels of [IV], while the cost of [DV] is enlarged at medium to high levels of [IV], when [moderator] is higher. The effect of [IV] on [DV] is thus attenuated at both sides of the inverted U-shape. The overall slope of the relationship is likely to be flattened, with the peak of the slope becoming lower.
+
+H[X]: [Moderator] negatively moderates the relationship between [IV] and [DV], such that the inverted U-shape is flattened when [moderator] is higher.
+```
+
+**骨架（正向调节 / steepen）**:
+```
+[Actor]'s [positional attribute] affects [resource access], which represents [power source] ([citation]). [Relative positional construct] therefore reflects [imbalance]. We argue that [relative advantage] intensifies the inverted U-shaped relationship between [IV] and [DV]: it further enhances [actor]'s incentive to [action] when the partnership is more [state A], and also reduces the costs of [aggressive action] when the partnership is more [state B].
+
+At low to medium levels of [IV], [relative advantage] enhances [DV], for two reasons. First, [information advantage]. Second, [adaptation advantage].
+
+At medium to high levels of [IV], [relative advantage] reduces the cost of [DV], for two reasons. First, [dependence asymmetry]. Second, [retaliation risk asymmetry].
+
+To summarize, [incentive] is enhanced at low to medium levels of [IV], while [cost] is reduced at medium to high levels of [IV]. At both sides of the inverted U-shape, the effect of [IV] on [DV] is enlarged. The slope is likely to be steeper, and the peak higher.
+
+H[X]: [Relative advantage] positively moderates the relationship between [IV] and [DV], such that the inverted U-shape is steepened when [relative advantage] is higher.
+```
+
+**为什么有效**:
+- 倒U型关系的调节不能只说 "W moderates X→Y"，必须说明 moderator 如何改变曲线的**两侧**。
+- "low to medium" / "medium to high" 的分段论证让二次交互有清晰的理论对应。
+- flatten/steepen 的图形化语言降低读者认知负荷。
+
+**注意事项**:
+- 两侧论证必须对称（各两个子机制），不能一侧充分、一侧薄弱。
+- 必须解释为什么 moderator 在上升段影响 incentive，在下降段影响 cost。
+- 预测方向（flatten vs steepen）必须与二次交互项系数符号一致。
+
+**反模式**: 只说 "when W is high, the effect is stronger" 而不分别论证 low/medium 和 medium/high 两段；将倒U型调节简化为线性调节。
+

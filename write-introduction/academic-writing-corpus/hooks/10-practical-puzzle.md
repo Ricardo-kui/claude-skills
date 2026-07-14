@@ -11,8 +11,9 @@ source_papers:
   - ceo_regulatory_focus_ijrm (IJRM, 2021): "In recent years, there have been considerable practitioner interests in..."
   - desjardine2023 (OS, 2023): "Although [phenomenon] may seem advantageous... it has created a new challenge"
   - kalaignanam2017 (JM, 2017): "NPD outsourcing trend + Toyota/Boeing cases → mixed evidence about quality impact"
+  - grewal2025 (JM, 2025): "brand safety definition + cruise lines case → digital advertising ecosystem challenges"
 created: 2026-05-18
-updated: 2026-06-02
+updated: 2026-07-10
 source: Extracted from MVP30 narrative_analysis files
 ---
 
@@ -98,6 +99,26 @@ source: Extracted from MVP30 narrative_analysis files
 - **与变体 A/B 的区别**: 不依赖从业者引用或工具失效，而是用行业趋势+企业案例建立实践张力
 
 **适用**: 产业/运营/供应链类研究；有知名企业案例可引用的主题；产品安全/质量/召回类研究
+
+---
+
+### 变体 D：现象定义 + 行业案例型（grewal2025 型）
+
+**模板**:
+> In [broad domain], [actors] do not want to [experience undesirable association], such that it could potentially [harm outcome]. For example, [specific industry/company] would prefer that [their action] not [appear next to / be associated with] [undesirable content] ([citation]). [Actors'] attempts to limit such issues then determine their strategic [construct] initiatives.
+
+**来源**: Grewal, Vana, and Stephen (2025), *Journal of Marketing*, P1
+
+**原文锚定**:
+> "In broad media environments, brands do not want to be associated with content that is inappropriate, offensive, controversial, or just even inconvenient in nature, such that it could potentially harm their reputation or performance. For example, cruise lines would prefer that their advertisements not appear next to articles about contagious airborne illnesses (Hsu 2020)."
+
+**关键特征**:
+- 用具体行业案例而非抽象"firms"建立 human face
+- "such that it could potentially harm" 将现象与核心 outcome 连接
+- 将现象转化为可研究构念
+
+**适用**: 新管理现象或重新定义现有构念；JM/JMR/IJRM 风格
+**禁忌**: 案例必须与核心构念直接相关
 
 ---
 

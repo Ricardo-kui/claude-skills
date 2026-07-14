@@ -329,3 +329,33 @@ board's scrutiny to [functional_domain] ([citations]). This may lead the board t
 **调用语料**:
 - `corpus/subprotocols/board_governance_boundary_condition.md`（完整 subprotocol）
 - `corpus/subprotocols/intra_tmt_persuasion.md`（次级劝说者逻辑）
+
+---
+
+## 倒U型曲率调节图形化描述（flatten / steepen）
+
+**功能**: 为二次交互项（IV² × Moderator）提供直观的图形化收敛语言，将统计系数符号转化为可理解的曲率变化。
+
+**模板（flatten — 负向二次交互）**:
+```
+"The slope in the relationship between [IV] and [DV] is therefore likely to be less steep when [moderator] is higher, and the peak of the slope is likely to be lower."
+"The overall slope of the relationship between [IV] and [DV] is likely to be flattened, with the peak of the slope becoming lower."
+```
+
+**模板（steepen — 正向二次交互）**:
+```
+"The slope in the relationship between [IV] and [DV] is therefore likely to be steeper, and the peak of the slope is higher."
+"At both sides of the inverted U-shape, the effect of [IV] on [DV] is enlarged by [moderator]. The slope is likely to be steeper, and the peak higher."
+```
+
+**语料锚定**:
+- Cui, Yang & Vertinsky (SMJ) — relational/structural embeddedness flattens the inverted U; positional embeddedness steepens it.
+
+**关键特征**:
+- 用 "slope" / "peak" 等可视化词汇替代抽象的 "interaction effect"。
+- flatten = 曲线两端被压低，峰值降低；steepen = 曲线两端被抬高，峰值升高。
+- 通常与 "at both sides of the inverted U-shape" 连用，强调双侧效应。
+
+**反模式**:
+- 只说 "W moderates the curvilinear relationship" 而不说明 flatten/steepen 方向。
+- 混淆 flatten（压低峰值）与 shift（平移曲线）。

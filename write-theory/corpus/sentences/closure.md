@@ -231,3 +231,31 @@ contingencies that matter for Group B]."
 - 2×2 矩阵 4 假设后直接进入 Methods（han_pollock_paruchuri SMJ）→ **正常发表**。假设的局部收束承担了收敛功能。
 - Y-shaped 5 假设后直接进入 Methods（toh_pyun SMJ）→ **正常发表**。非对称设计的 rationale 在假设推导中已说明。
 - 如果审稿人确实追问假设间关系，可在 Discussion 开篇回应——这比在 Theory 末尾附加独立 Closure 段更符合管理学惯例。
+
+---
+
+## 倒U型调节假设的局部收束
+
+**功能**: 在 moderator 段落末尾用 "Taken together" 收束两侧机制，明确 flatten/steepen 预测。
+
+**模板（flatten）**:
+```
+"Taken together, as [moderator] between [actor] and [partner] increases, [actor]'s incentive to [DV] is reduced at low to medium levels of [IV], while [actor]'s [cost of DV] is increased at medium to high levels of [IV]. Thus, at both sides of the inverted U-shape, the effect of [IV] on [DV] is reduced as [moderator] increases. The slope in the relationship between [IV] and [DV] is likely to be less steep when [moderator] is higher, and the peak lower."
+```
+
+**模板（steepen）**:
+```
+"Taken together, [incentive] is enhanced at low to medium levels of [IV], while [cost] is reduced at medium to high levels of [IV]. Thus, at both sides of the inverted U-shape, the effect of [IV] on [DV] is enlarged by [moderator]. The slope is likely to be steeper, and the peak higher."
+```
+
+**语料锚定**:
+- Cui, Yang & Vertinsky (SMJ) — H2/H3/H4 每个 moderator 段末尾的 Taken together 收束。
+
+**关键特征**:
+- 重复 "at both sides of the inverted U-shape" 强化双侧论证。
+- 从 mechanism 到 curvature prediction 的过渡自然。
+- 直接后接假设形式化。
+
+**反模式**:
+- 用 "In sum, we have four hypotheses" 替代机制整合。
+- 收束句只重复假设内容，不总结假设间逻辑关系。

@@ -25,9 +25,11 @@ source_papers:
   - qiao2026 (SMJ, 2026): "双缺口并列枚举: 'two critical gaps remain' — First=Incompleteness (external imprints), Second=Inadequacy (dynamic imprinter)"
   - cancellieri2023 (SMJ, 2023): "Paradox articulation + rhetorical question pivot: 'How to best mediate...? How to accommodate...?'"
   - hoffmann2024 (JM, 2024): "Policy unintended consequences: 'well-intended → unintended negative consequences' — quasi-natural experiment"
-updated: 2026-07-07
+  - grewal2025 (JM, 2025): "Overgeneralization critique: 'generalized view fails to account for variety' — incident/brand/consumer heterogeneity"
+  - cui_yang_vertinsky_smj (SMJ): "三重维度并列缺口: outcome scope × portfolio type × network context"
+updated: 2026-07-10
 created: 2026-05-18
-source: Extracted from MVP30 narrative_analysis files + mannor2016 + darby2025 distill
+source: Extracted from MVP30 narrative_analysis files + mannor2016 + darby2025 distill + grewal2025
 ---
 
 # 01-despite-progress-unaddressed — 已有进展但遗漏 Tension
@@ -587,6 +589,53 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 ---
 
+### 变体 W：过度概括批评型（grewal2025 型）
+
+**模板**:
+> Some limited [construct] research has identified the effects of [phenomenon] on [outcomes] ([citations]), though [counter-study] suggest [null/mixed effects]. Notably though, prior research takes a generalized view of [broad contrast]. Such an approach fails to account for how various [phenomenon instances], in different [contexts], involving diverse [actor 1] and [actor 2], might influence [relevant outcomes]. With this research, we seek to both [first contribution] and address these research gaps.
+
+**来源**: Grewal, Vana, and Stephen (2025), *Journal of Marketing*, P3
+
+**原文锚定**:
+> "Some research has identified the effects of negative advertising contexts on consumers' brand-related responses (e.g., Divya and Vassar 2021; Moorman, Norris, and D'Alessandro 2019), though Bellman et al. (2018) suggest limited effects of negative ad context. Notably though, prior research takes a generalized view of the overall negative versus positive environments surrounding brand advertisements. Such an approach fails to account for how various brand safety incidents, in different digital environments, involving diverse brands and consumers, might influence relevant brand outcomes."
+
+**关键特征**:
+- 不批评"没人研究"，而是批评"研究过于 general"
+- 用 "various... in different... involving diverse..." 三维枚举具体遗漏
+- "With this research, we seek to both... and address these research gaps" 双目标预告
+- 用已有 null finding（Bellman et al. 2018）作为转折锚点，避免 generic gap language
+
+**适用**: 研究对象内部异质性高（不同类型、不同情境、不同主体），已有研究用单一框架处理
+**禁忌**: 不要在没有明确证据表明异质性确实存在时使用；枚举维度必须与后续假设一一对应
+
+---
+
+### 变体 X：三重维度并列缺口型（cui_yang_vertinsky_smj 型）
+
+**模板**:
+> First, while researchers have examined [sub-topic 1], prior studies focused on [narrow scope 1]; the effect of [broader phenomenon 1] on [outcome 1] remains poorly understood.
+> Second, prior studies provide insights into [sub-topic 2] by focusing on [specific type] while overlooking [other types]. It is assumed that [assumption], but [counter-fact]. Few studies have yet examined how [composition/structure] affects [outcome 2].
+> Third, many prior studies have examined [tension] by focusing on [firm-level factors] while largely overlooking [network/context factors]. Only a few studies have analyzed [narrow network angle]. Yet the focus of these studies remains centered either on [outcome A] or on [outcome B]; the impact of [core mechanism] on [target outcome] has rarely been studied.
+
+**来源**: Cui, Yang & Vertinsky (SMJ), P3-P5
+
+**原文锚定**:
+> "First, while researchers have examined aggressive learning between allies... prior studies focused on the hazards of misappropriation within alliances; the effect of alliances on competition between partners in the realm of product markets remains poorly understood."
+> "Second, prior studies provide insights into competitive learning between partners by focusing on research-based alliances while overlooking other types of collaboration..."
+> "Third, many prior studies have examined the tension between cooperation and competition by focusing on characteristics of the allying firms per se... while largely overlooking the impact of the broad inter-firm alliance networks..."
+
+**关键特征**:
+- 三个缺口分别对应不同分析维度：结果边界（within → product markets）、处理变量边界（research-based → portfolio composition）、情境边界（firm-level → network embeddedness）。
+- 每个缺口内部先肯定已有研究，再指出遗漏，符合 Progressive Coherence。
+- 第三缺口先引用少数例外研究，再指出其焦点仍不在 target outcome，形成二次收窄。
+- 全程使用 Incompleteness 标志性语言（"remains poorly understood" / "overlooking" / "rarely been studied"），不出现 Inadequacy 语言。
+
+**适用**: Incompleteness × (Mechanism + Boundary) 组合；论文同时扩展 outcome、IV composition、context 三个维度；适合构建 comprehensive model 类贡献。
+
+**禁忌**: 三个缺口必须互不重叠；每个缺口要有具体标志性语言，不能都是 "few studies"。
+
+---
+
 ## 组装规则
 
 ### 反模式提醒
@@ -624,7 +673,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 ## 风格画像
 
 > 以下风格特征是从使用本模板的多篇顶刊论文中聚合提取的。不是每篇论文都必须遵守，但偏离时应有明确理由。
-> 最后更新: 2026-07-07 | 聚合论文数: 14
+> 最后更新: 2026-07-10 | 聚合论文数: 15
 
 ### 语气光谱
 - **主语气**: cautious — 证据: "remains poorly understood" (wu2025), "has gone largely unaddressed" (pollock2015), "underdeveloped, and fundamental pieces are missing" (ahmadi2017)
@@ -633,11 +682,13 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 ### 段落节奏
 - **典型节奏**: 承认已有进展（1-2句）→ 精确指出缺口位置（1-2句）→ 解释为什么这个缺口重要（1-2句）
 - **ahmadi2017 压缩节奏**: 三段递进（笼统→具体→呼吁）在一个段落内完成 —— 每步 1 句，无展开
+- **cui_yang_vertinsky_smj 三重维度节奏**: 三个 First/Second/Third 缺口各 1 段，分别锚定 outcome scope、portfolio composition、network context
 
 ### 标志性叙事标记
 - [eilert2017]: "predominantly focused on X and Y. However, little attention has been paid to Z" — 经典三段式
 - [ahmadi2017]: "'underdeveloped' → 'only limited research' → 'emphasizes the need to investigate'" — 呼吁外包型结尾，将 gap 合法性推给领域权威
 - [gamache_etal2020]: "三层递进 Incompleteness: general→specific gap→why 层面根本问题" — Stakes 嵌入 Tension ("This omission is critical, as...")
+- [cui_yang_vertinsky_smj]: "First... remains poorly understood / Second... while overlooking... / Third... while largely overlooking" — 三重维度并列缺口，每个维度用不同 Incompleteness 标志性语言
 
 ### 刻意回避
 - [ahmadi2017]: avoids independent Tension paragraph — Tension 与 Literature Turn 共段，适合 JMS 压缩风格

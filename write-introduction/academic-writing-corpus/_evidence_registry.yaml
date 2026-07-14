@@ -1,9 +1,9 @@
 meta:
-  last_updated: '2026-07-08'
+  last_updated: '2026-07-10'
   total_mvp30_papers_indexed: 44
-  batches_processed: 8
+  batches_processed: 9
   source: mvp30_index + 9_distill_files + path_B_confirmation + cui_yang_vertinsky_smj_distill
-  notes: '2026-07-08 added cui_yang_vertinsky (SMJ) distill: new hook 24-empirical-puzzle-after-consensus, updated 16-threefold-gap and 02-explicit-dual-question-narrowing.'
+  notes: '2026-07-08 added cui_yang_vertinsky (SMJ) distill: new hook 24-empirical-puzzle-after-consensus, updated 16-threefold-gap and 02-explicit-dual-question-narrowing. 2026-07-10 expanded cui_yang_vertinsky (SMJ) Introduction distill: added variant X to tensions/01-despite-progress-unaddressed, variant G to literature-turns/01-progressive-coherence, variant F to previews/mechanism-preview.'
 evidence:
   hooks:
     01-cross-disciplinary-analogy:
@@ -545,7 +545,7 @@ evidence:
         common_revise_reasons: []
   tensions:
     01-despite-progress-unaddressed:
-      paper_count: 23
+      paper_count: 24
       papers:
       - darby2024 (MSOM)
       - darby2025 (JSCM)
@@ -570,8 +570,9 @@ evidence:
       - cancellieri2023 (SMJ)
       - hoffmann2024 (JM)
       - wang2023 (SMJ)
+      - cui_yang_vertinsky_smj (SMJ)
       gap_distribution:
-        Incompleteness: 23
+        Incompleteness: 24
         Inadequacy: 0
         Incommensurability: 0
       status: ROBUST
@@ -1073,7 +1074,7 @@ evidence:
         common_revise_reasons: []
   literature_turns:
     01-progressive-coherence:
-      paper_count: 21
+      paper_count: 22
       papers:
       - ceo_regulatory_focus_ijrm (IJRM)
       - darby2024 (MSOM)
@@ -1096,8 +1097,9 @@ evidence:
       - vadakkepatt2022 (JM)
       - wowak2025 (MS)
       - wu2025 (SMJ)
+      - cui_yang_vertinsky_smj (SMJ)
       gap_distribution:
-        Incompleteness: 15
+        Incompleteness: 16
         Inadequacy: 6
         Incommensurability: 0
       status: ROBUST
@@ -1164,12 +1166,13 @@ evidence:
         common_revise_reasons: []
   previews:
     mechanism-preview:
-      paper_count: 4
+      paper_count: 5
       papers:
       - zhou2017 (ASQ)
       - keeves2017 (ASQ)
       - gamache2023 (SMJ)
       - mannor2016 (SMJ)
+      - cui_yang_vertinsky_smj (SMJ)
       status: VERIFIED
       generativity: ADAPTABLE
       exclusivity: LOW
