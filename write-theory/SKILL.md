@@ -29,7 +29,7 @@ version: 3.5.0
 - `[--introduction-claims]`（强烈建议）: Introduction 中的理论承诺，用于对齐检查
 - `[--journal]`（可选）: 目标期刊，默认 `AMJ`
 
-**如果省略研究类型**，进入 Phase 0 交互式诊断。
+**如果省略研究类型**，进入 Phase 1.1 交互式诊断。
 
 ---
 
@@ -50,12 +50,12 @@ version: 3.5.0
 
 ### 方式一：paper-state.yaml 自动消费（推荐）
 
-**发现机制**：Phase 0 启动时按以下优先级查找 `paper-state.yaml`：
+**发现机制**：Phase 1 启动时按以下优先级查找 `paper-state.yaml`：
 1. `--paper-state=<path>` 命令行参数
 2. 当前工作目录下的 `paper-state.yaml`
 3. 项目根目录下的 `paper-state.yaml`
 
-**自动加载**：检测到文件后，读取 `introduction.theory_hints` 和 `introduction.contribution_contract`，跳过 Phase 0 交互式诊断，直接进入确认模式：
+**自动加载**：检测到文件后，读取 `introduction.theory_hints` 和 `introduction.contribution_contract`，跳过 Phase 1.1 交互式诊断，直接进入确认模式：
 
 ```
 [paper-state.yaml] 检测到 project/paper-state.yaml
@@ -90,9 +90,9 @@ theory_hints:
 
 - `Makadok 贡献维度` → 判断研究类型（见 `corpus/meta/routing_table.md`）
 - `Gap 类型` → Incommensurability 常对应构念辨析型或竞争假设型
-- `Introduction claims` / `contribution_contract` → 用于 Phase 3 对齐检查
-- `central_knot_statement` → 允许 `null`。若为 `null`，按 Phase 0.5 推断规则从 Gap 类型和 Tension 模板反向推断
-- `narrative_arc` → 决定 Phase 0.5 Rising Action 强度
+- `Introduction claims` / `contribution_contract` → 用于 Phase 4.3 对齐检查
+- `central_knot_statement` → 允许 `null`。若为 `null`，按 Phase 1.3 推断规则从 Gap 类型和 Tension 模板反向推断
+- `narrative_arc` → 决定 Phase 1.3 Rising Action 强度
 
 两种方式均失败（缺少 gap_type 等关键字段）时，进入完整交互模式询问。
 
@@ -100,9 +100,11 @@ theory_hints:
 
 ## Workflow
 
-### Phase 0: 理论构建类型诊断
+### Phase 1: 诊断与定位
 
-#### Phase 0.0: paper-state.yaml 自动检测（新增）
+先确定理论构建类型与假设结构，拉取 Vault 证据，定位叙事弧线（Rising Action）与 prose 风格——所有架构决策前的基础工作。
+
+**1.1 类型诊断**（paper-state.yaml 自动 → 文本解析 → 交互式回退，三级）
 
 在进入交互式诊断前，先检查 paper-state.yaml：
 
@@ -121,7 +123,7 @@ theory_hints:
 
 **确认模式输出格式**（当 paper-state.yaml 命中时）：
 ```
-## Phase 0: 理论构建类型（自动诊断）
+## Phase 1: 类型诊断（自动）
 
 来自 paper-state.yaml:
 - Gap 类型: [gap_type]
@@ -136,7 +138,28 @@ theory_hints:
 是否确认此路由？或需调整为其他变体？
 ```
 
-#### Phase 0.0b: Vault 基线检索（可选——仅在 paper-state.yaml 有 vault 配置时执行）
+
+```
+你的理论构建方式是什么？
+│
+├── 核心贡献是区分两个易混淆的构念 → [A] 构念辨析型
+├── 核心贡献是解释 X 如何影响 Y 的因果/过程机制 → [B] 机制推演型
+│   └── 同一构念的两个维度产生相反/互补预测 → [B2] 双轨并行
+├── 核心贡献是多层次/多条件的假设体系 → [C] 假设树型
+├── 核心贡献是揭示动态过程和时间演化 → [D] 质性过程理论型
+├── 核心贡献是识别 boundary condition / contingency → [E] 调节效应型
+│   ├── X, Y, Z 在同一层级 → [E1] 同层调节
+│   ├── Z 在更高/更低层级 → [E2] 跨层调节
+│   └── Moderator 为分类变量 → [E1.1] 分组调节
+├── 核心贡献是裁决两种对立理论的竞争预测 → [F] 竞争假设型
+└── 核心贡献是同一构念/现象对不同受众产生相反效果 → [G] 辩证对立型
+    └── 两类受众是同一层面的不同角色 → [G1] 水平辩证
+    └── 两类受众是不同层面的决策者 → [G2] 跨层辩证
+```
+
+**如果检测到上游 Introduction 输出**：先查 `corpus/meta/routing_table.md` 给出默认推荐，再进入确认。
+
+**1.2 Vault 基线检索**（可选——仅在 paper-state.yaml 有 vault 配置时执行）
 
 在确认理论路由后，从用户知识库拉取当前主题的理论证据。**本步骤为可选：无 vault 配置时静默跳过。**
 
@@ -187,38 +210,33 @@ paper-state.yaml 中 paper.vault 是否有配置?
 
 **通用性保证**：本步骤不假定 Vault 结构或文献内容。所有路径来自 paper-state.yaml 的 vault 字段，技能本身不含项目特定硬编码。
 
-#### Phase 0.1: 交互式诊断（仅在 paper-state.yaml 不可用时执行）
+**1.3 Rising Action 定位**（Pollock 2025 Ch02）
+
+
+**制度冲击检测**（自动判断，无需用户输入）：
+
+在 Phase 1.3 诊断之前，自动检测是否需要激活 Phase 2.3（制度冲击类研究的 Theory Lens 特殊适配）：
 
 ```
-你的理论构建方式是什么？
-│
-├── 核心贡献是区分两个易混淆的构念 → [A] 构念辨析型
-├── 核心贡献是解释 X 如何影响 Y 的因果/过程机制 → [B] 机制推演型
-│   └── 同一构念的两个维度产生相反/互补预测 → [B2] 双轨并行
-├── 核心贡献是多层次/多条件的假设体系 → [C] 假设树型
-├── 核心贡献是揭示动态过程和时间演化 → [D] 质性过程理论型
-├── 核心贡献是识别 boundary condition / contingency → [E] 调节效应型
-│   ├── X, Y, Z 在同一层级 → [E1] 同层调节
-│   ├── Z 在更高/更低层级 → [E2] 跨层调节
-│   └── Moderator 为分类变量 → [E1.1] 分组调节
-├── 核心贡献是裁决两种对立理论的竞争预测 → [F] 竞争假设型
-└── 核心贡献是同一构念/现象对不同受众产生相反效果 → [G] 辩证对立型
-    └── 两类受众是同一层面的不同角色 → [G1] 水平辩证
-    └── 两类受众是不同层面的决策者 → [G2] 跨层辩证
+检查以下信号（任一满足即激活 Phase 2.3）：
+├── 上游 `theory_hints` 中的 `identification` 字段包含 IV / DiD / RDD / natural experiment / quasi-experiment
+├── 上游 `theory_hints` 中的 `empirical_setting` 描述涉及政策变化、法律冲击、制度差异、州级差异
+├── 用户输入的研究描述中出现：staggered adoption / policy shock / regulatory change / law change / institutional reform / eligibility threshold
+└── 以上均不满足 → 跳过 Phase 2.3，按标准 Theory Lens 流程执行
 ```
 
-**如果检测到上游 Introduction 输出**：先查 `corpus/meta/routing_table.md` 给出默认推荐，再进入确认。
+**检测输出**：
+- 如果激活 Phase 2.3 → 在输出结构中插入 Phase 2.3 块，并标记"制度冲击适配已激活"
+- 如果跳过 → 不输出 Phase 2.3 相关内容，保持流程简洁
 
----
 
-### Phase 0.5: Rising Action 定位（Pollock 2025 Ch02）
 
 Theory & Hypotheses 在整篇论文的 Five-Act 结构中属于 **Rising Action** 的后半段。
 
 **前置检查**（从上游 `write-introduction` 的 `theory_hints` 解析）：
 - `central_knot_statement`：如果存在且非 `null` → 作为 Theory 的叙事锚点；如果为 `null` 或未提供 → 从 Gap 类型和 Tension 模板反向推断核心冲突（见下）
 - `narrative_arc`：如果存在 → 决定 Theory 的 rising action 强度；如果不存在 → 从 Gap 类型推断
-- `protagonist_construct` / `supporting_constructs`：如果存在 → 作为角色定位的初始值；如果不存在 → 在 Phase 1 架构决策中确定
+- `protagonist_construct` / `supporting_constructs`：如果存在 → 作为角色定位的初始值；如果不存在 → 在 Phase 2 架构决策中确定
 
 **Central Knot 推断规则（当 `central_knot_statement` 为 `null` 时）**：
 - Incommensurability → 推断为"对立理论或证据之间的矛盾冲突"
@@ -226,29 +244,8 @@ Theory & Hypotheses 在整篇论文的 Five-Act 结构中属于 **Rising Action*
 - Incompleteness → 推断为"遗漏了关键维度、机制或时点"
 - 具体推断：从 Tension 模板的 `[gap statement]` 句法签名中提取核心冲突，或从用户提供的 Gap 描述中识别转折信号词（"However"/"Yet"/"Although"/"In contrast"）后的核心主张
 
-推断出的 Central Knot 仅用于 Phase 0.5 的叙事对齐检查，不阻塞后续阶段。
+推断出的 Central Knot 仅用于 Phase 1.3 的叙事对齐检查，不阻塞后续阶段。
 
----
-
-**制度冲击检测**（自动判断，无需用户输入）：
-
-在 Phase 0.5 诊断之前，自动检测是否需要激活 Phase 1.5（制度冲击类研究的 Theory Lens 特殊适配）：
-
-```
-检查以下信号（任一满足即激活 Phase 1.5）：
-├── 上游 `theory_hints` 中的 `identification` 字段包含 IV / DiD / RDD / natural experiment / quasi-experiment
-├── 上游 `theory_hints` 中的 `empirical_setting` 描述涉及政策变化、法律冲击、制度差异、州级差异
-├── 用户输入的研究描述中出现：staggered adoption / policy shock / regulatory change / law change / institutional reform / eligibility threshold
-└── 以上均不满足 → 跳过 Phase 1.5，按标准 Theory Lens 流程执行
-```
-
-**检测输出**：
-- 如果激活 Phase 1.5 → 在输出结构中插入 Phase 1.5 块，并标记"制度冲击适配已激活"
-- 如果跳过 → 不输出 Phase 1.5 相关内容，保持流程简洁
-
----
-
-**Phase 0.5 诊断流程**（默认执行）：
 
 按顺序读取以下语料库文件：
 
@@ -264,11 +261,10 @@ Theory & Hypotheses 在整篇论文的 Five-Act 结构中属于 **Rising Action*
    读取 `corpus/storytelling/knot-continuity-check.md`
    → 验证 Theory 的每个段落都让 knot 更紧，无 extraneous storyline
 
-**诊断结果输出**：narrative risk 标记附加到 Phase 3 QC 清单。
+**诊断结果输出**：narrative risk 标记附加到 Phase 4 QC 清单。
 
----
 
-### Phase 0.75: Prose Craft 定位（Pollock 2025 Ch03）
+**1.4 Prose Craft 定位**（Pollock 2025 Ch03；以下三个工具与 Phase 2-5 并行执行）
 
 Theory section 的 Rising Action 不仅需要功能推进，还需要 prose 层面的可读性。
 以下三个工具与 Phase 1-5 并行执行。
@@ -294,10 +290,16 @@ Theory section 的 Rising Action 不仅需要功能推进，还需要 prose 层�
 - **假设推导**：用 "We argue that..." / "We hypothesize that..." 引出每个假设
 - **禁止**："It is argued that..." / "It is hypothesized that..." / "The literature suggests that..."（无主语被动）
 
+
+
+
 ---
 
+### Phase 2: 架构决策
 
-### Phase 1: 架构决策（7 因素）
+基于 7 因素确定 Theory section 宏观结构；按情境需要前置 Institutional Background；制度冲击类研究触发 Theory Lens 特殊适配。
+
+**2.1 架构决策（7 因素）**
 
 基于 Pollock 2025 Ch06 Table 6.1，确定 Theory section 的宏观结构：
 
@@ -338,7 +340,7 @@ Pollock Ch03 用 "stroke and glide"（划桨与滑行）比喻动作与评论的
 - **ASQ/AMJ 目标** → 推荐使用主题标题，不强制 "Theory" 标签
 - **SMJ/JM/JMS 目标** → "Theory and Hypotheses" 是安全默认
 - **JM 且假设嵌入在文献回顾中** → 可用 "Literature Review and Conceptual Background"
-- **情境特殊、需前置背景** → 见 Phase 1.25 Institutional Background
+- **情境特殊、需前置背景** → 见 Phase 2.2 Institutional Background
 
 输出：**推荐的段落序列**。
 
@@ -350,9 +352,8 @@ P4-P(N): 机制 tying（knot tying through mechanism）
 最后一个假设 → 自然收敛进入 METHODS（无独立 Closure 段）
 ```
 
----
 
-### Phase 1.25: Institutional Background（可选前置模块）
+**2.2 Institutional Background**（可选前置模块）
 
 **适用场景**: 研究情境特殊、读者可能不熟悉制度/行业背景时——如果读者不理解情境，就无法理解后续的理论论证。
 
@@ -376,9 +377,8 @@ P4-P(N): 机制 tying（knot tying through mechanism）
 - 研究情境是通用商业现象（如 CEO 薪酬、董事会构成、并购）
 - 情境信息可以 1-2 句嵌入 Theory 开篇即交代清楚
 
----
 
-### Phase 1.5: 制度冲击类研究的 Theory Lens 特殊适配
+**2.3 制度冲击类研究的 Theory Lens 特殊适配**（条件触发——由 1.3 制度冲击检测结果决定）
 
 如果你的研究使用自然实验、制度冲击或准实验设计（IV, DiD, RDD），Theory Lens 段需要额外完成以下论证任务：
 
@@ -426,9 +426,16 @@ alters the *rate* at which [actor] approaches the [decision threshold]. This tem
 dimension matters because [theoretical reason, e.g., decision-makers face escalating institutional pressure over time, and the hazard of [event] increases non-linearly with exposure to [trigger condition]].
 ```
 
+
+
+
 ---
 
-### Phase 2: 假设结构路由
+### Phase 3: 假设推导
+
+Theory 写作的心脏环节：路由假设结构，为每个假设生成逻辑严密、论证充分、段内布局合理的推导段落。
+
+**3.1 假设结构路由**
 
 ```
 假设体系包含哪些类型的假设？
@@ -440,9 +447,7 @@ dimension matters because [theoretical reason, e.g., decision-makers face escala
 └── 三向交互 (X×Z×W→Y) → 假设树模板
 ```
 
----
-
-### Phase 2.5: Hypothesis Development 段落级逻辑协议
+**3.2 Hypothesis Development 段落级逻辑协议**
 
 **每个假设推导段落是一个微型论证单元**。
 
@@ -550,9 +555,15 @@ dimension matters because [theoretical reason, e.g., decision-makers face escala
 - [ ] 收束句质量：是否总结了推理链而非简单重复 "we hypothesize"？
 - [ ] 段落独立性：单独阅读本段能否理解完整论证逻辑？
 
+
+
 ---
 
-### Phase 3: 通用 QC 层 + 跨 Section 对齐
+### Phase 4: QC 与对齐
+
+三层审计 + 假设收敛 + Introduction↔Theory 跨 Section 对齐。
+
+**4.1 通用 QC 审计**（Theory IS NOT / Construct Clarity / Hypothesis Clarity）
 
 #### 审计 1: Theory IS NOT（7 种伪理论陷阱 + 3 种 Ch04 病理）
 
@@ -591,6 +602,8 @@ dimension matters because [theoretical reason, e.g., decision-makers face escala
 - 声称 differential validity（关系强度变化）却用 differential prediction（slope 变化）的语言描述；
 - 使用 "X is associated with Y" 等无方向、无形式措辞。
 
+**4.2 假设收敛与过渡**
+
 #### 假设收敛与过渡
 
 管理学顶刊论文的 Theory 部分通常以最后一个假设推导段的**局部收束信号**自然结束——假设就是推导的终点，推导完毕即转入 METHODS。**不需要独立的 T6 Closure 段落**。这与 Pollock (2025) 教科书建议存在差异，但反映了管理学领域实际发表惯例。
@@ -599,9 +612,7 @@ dimension matters because [theoretical reason, e.g., decision-makers face escala
 
 **例外**：少数 ASQ/ASR 的理论密集型论文（特别是构念辨析型或质性过程理论型）可能在假设后有一个简短的整合段落（2-3 句），但这不是标准做法。不应将其作为强制模块推荐。
 
----
-
-### Phase 4: 跨 Section 对齐检查（Introduction ↔ Theory）
+**4.3 跨 Section 对齐检查**（Introduction ↔ Theory，强制输出）
 
 **强制输出**。无论用户是否提供 Introduction claims，都输出对齐检查框架。如有 claims，填充具体检查项。
 
@@ -624,11 +635,13 @@ dimension matters because [theoretical reason, e.g., decision-makers face escala
 - [ ] [具体不一致项2]
 ```
 
+
+
 ---
 
-### Phase 5: 按类型输出（引用语料库）
+### Phase 5: 输出（引用语料库）
 
-根据 Phase 0 诊断的类型，读取对应语料文件并生成输出。
+根据 Phase 1 诊断的类型，读取对应语料文件并生成输出。
 
 #### 语料文件索引
 
@@ -652,8 +665,8 @@ dimension matters because [theoretical reason, e.g., decision-makers face escala
 | 假设形式 | `corpus/sentences/hypothesis_forms.md` |
 | 收束/过渡 | `corpus/sentences/closure.md` |
 
----
 
+---
 ## Output Format
 
 ```
@@ -671,13 +684,13 @@ dimension matters because [theoretical reason, e.g., decision-makers face escala
 
 → 推荐段落序列: [P1 → P2 → ...]
 
-### Phase 3 通用 QC
+### Phase 4.1 通用 QC
 - [ ] Theory IS NOT: [通过/需修复的陷阱]
 - [ ] Construct Clarity: [通过/需补充的字段]
 - [ ] Hypothesis Clarity: [通过/需补充的字段]
 
 ### 跨 Section 对齐检查
-[Phase 4 输出块]
+[Phase 4.3 输出块]
 
 ### 段落功能地图
 [引用语料文件中的段落功能地图]
