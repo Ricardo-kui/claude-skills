@@ -10,7 +10,7 @@ exclusivity: MEDIUM
 source_papers:
   - zhao_ding2022 (OS, 2022): "supply-side → demand-side perspective shift in digital market positioning"
 created: 2026-05-20
-source: Migrated from top-level academic-writing-corpus/hooks/19-forward-looking-shift.md (original batch 1 extraction)
+source: Original batch 1 extraction (former top-level corpus; top-level corpus since deleted)
 ---
 
 # 19-forward-looking-shift — 前瞻性视角转移 Hook

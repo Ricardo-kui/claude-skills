@@ -507,25 +507,6 @@ evidence:
         revise: 0
         reject: 0
         common_revise_reasons: []
-    21-practical-puzzle:
-      paper_count: 2
-      papers:
-      - ceo_regulatory_focus_ijrm (IJRM)
-      - desjardine2023 (OS)
-      gap_distribution:
-        Incompleteness: 2
-        Inadequacy: 0
-        Incommensurability: 0
-      status: EMERGING
-      generativity: ADAPTABLE
-      exclusivity: MEDIUM
-      common_failures: []
-      validation_history:
-        total_runs: 0
-        validated: 0
-        revise: 0
-        reject: 0
-        common_revise_reasons: []
     25-empirical-puzzle-after-consensus:
       paper_count: 1
       papers:

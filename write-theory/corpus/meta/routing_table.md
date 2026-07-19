@@ -1,7 +1,7 @@
 ---
 type: meta_routing
 canonical_id: "theory-variant-routing"
-source: "Pollock 2025 Ch06 + SKILL.md Phase 0"
+source: "Pollock 2025 Ch06 + SKILL.md Phase 1.1"
 created: 2026-06-01
 version: 1.0.0
 ---
@@ -12,7 +12,7 @@ version: 1.0.0
 
 **调用方式**：`write-introduction` 在生成 `theory_hints` 时读取本文件，确定 `recommended_theory_variant` 和 `variant_confidence`。
 
-**回退策略**：如果查询无匹配，`recommended_theory_variant` 设为 `null`，`variant_confidence` 设为 `null`，由 write-theory 的 Phase 0 交互式诊断处理。
+**回退策略**：如果查询无匹配，`recommended_theory_variant` 设为 `null`，`variant_confidence` 设为 `null`，由 write-theory 的 Phase 1.1 交互式诊断处理。
 
 ---
 
@@ -102,7 +102,7 @@ version: 1.0.0
 | 冲突场景 | 优先级规则 | 示例 |
 |---------|-----------|------|
 | 一级路由推荐 B，但文本信号暗示 B2 | 二级优先 | 变体 = B2，置信度降一级 |
-| 一级路由推荐 E，但无 interaction_type | 默认 E1，置信度 = low | 在 Phase 0 诊断时确认 |
+| 一级路由推荐 E，但无 interaction_type | 默认 E1，置信度 = low | 在 Phase 1.1 诊断时确认 |
 | Gap 类型 = Incommensurability，但 Makadok = Boundary | 以 Gap 为主，Makadok 为辅 | 变体 = E，但要求呈现理论冲突背景 |
 | 多个文本信号指向不同子协议 | 以最先出现的信号为准 | 在提醒中标注备选方案 |
 
@@ -128,15 +128,15 @@ theory_hints:
 5. 输出：`recommended_theory_variant: "机制推演型"`，`variant_confidence: "high"`
 
 **如果缺少关键字段**：
-- `gap_type` 缺失 → 回退到 Phase 0 交互式诊断
+- `gap_type` 缺失 → 回退到 Phase 1.1 交互式诊断
 - `makadok_dimension` 缺失 → 默认 `Mechanism`，置信度降为 `low`
 - `tension_template` 缺失 → 忽略，不影响一级路由
 
 ---
 
-## 与 write-theory Phase 0 的接口
+## 与 write-theory Phase 1.1 的接口
 
-write-introduction 将 `recommended_theory_variant` 写入 `theory_hints`，write-theory 在 Phase 0 解析：
+write-introduction 将 `recommended_theory_variant` 写入 `theory_hints`，write-theory 在 Phase 1.1 解析：
 
 ```python
 # 伪代码（概念性）

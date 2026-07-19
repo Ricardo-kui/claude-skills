@@ -64,7 +64,7 @@ version: 1.1.0
 
 ### Step 2: 读取本地资产
 
-读取本 Skill 目录下的参考文件：
+读取本 Skill 目录下的参考文件（**路径基准**：`references/...` 等相对路径均以本 SKILL.md 所在目录 `write-discussion/` 为基准）：
 - `references/contribution-type-variants.md` — 五种贡献类型的段落地图变体
 - `references/golden-sentences.md` — 金牌对比句式、视角创新句式、实践启示具体化原则
 - `references/limitations-elevated-plane.md` — 局限性结构模板、未来研究方向、elevated plane 结尾

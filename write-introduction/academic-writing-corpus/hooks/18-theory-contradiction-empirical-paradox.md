@@ -10,7 +10,7 @@ exclusivity: HIGH
 source_papers:
   - zhou2017 (ASQ, 2017): "state ownership — dying dinosaurs vs dynamic dynamos"
 created: 2026-05-20
-source: Migrated from top-level academic-writing-corpus/hooks/16-theory-contradiction-empirical-paradox.md (original batch 1 extraction)
+source: Original batch 1 extraction (former top-level corpus, old id "16-theory-contradiction-empirical-paradox"; renumbered on migration, top-level corpus since deleted)
 ---
 
 # 18-theory-contradiction-empirical-paradox — 理论矛盾 + 经验悖论 Hook

@@ -73,6 +73,8 @@ paper-state.yaml 中 paper.vault 是否有配置?
 
 ## Phase 2: 路由
 
+> **路径基准**：本文件中 `academic-writing-corpus/...` 相对路径均以本 SKILL.md 所在目录（`write-introduction/`）为基准；语料文件内部的 `hooks/...`、`tensions/...` 等引用以 `academic-writing-corpus/` 为基准。
+
 读取 `academic-writing-corpus/_routing_tables.yaml`，根据 Gap 类型确定：
 - 段落结构（紧凑型/标准型/扩展型，4-9段）
 - Conversation 策略（Progressive / Synthesized / Non-Coherence）
@@ -90,9 +92,13 @@ paper-state.yaml 中 paper.vault 是否有配置?
 - Hook: `hooks/[canonical_id].md`
 - Tension: `tensions/[canonical_id].md`
 - Stakes: `stakes/[canonical_id].md`（除非满足跳过条件）
-- Literature Turn: `literature-turns/literature-turn-templates.md`（条件读取）
+- Literature Turn: `literature-turns/literature-turn-templates.md`（条件读取：满足「模块跳过指南」条件——≤5段 Intro 且 Hook 已充分展示跨文献流对话——时跳过）
+- Theory Lens: 先读 `theory-lens/_index.md` 的「按 Gap 类型选择 Theory Lens」定位，再读 `theory-lens/[canonical_id].md`（除非满足跳过条件）
+- Preview: 先读 `previews/_index.md` 文件清单定位，再读 `previews/[文件名].md`（除非满足跳过条件——极罕见，不建议完全跳过）
+- Research Question: `research-questions/[canonical_id].md`（仅当需要显式 RQ 时读取——如 JMS/JOM 目标期刊或反直觉发现需设问；见下方「Research Question」节）
 - Contribution: `contributions/_index.md`
 - Transitions: `transitions/[canonical_id].md`（按需读取段落间过渡模板）
+- Differentiation: `differentiation/01-prior-work-boundary-clarification.md`（仅当存在极易混淆的 prior work 时读取——多数论文不需要，见「模块跳过指南」）
 
 从变体列表中选出最匹配用户情境的 1 个变体。默认使用变体 A（最典型），在"提醒"中标注可选替代变体。如果 corpus 文件有 `## 风格画像` 章节，提取语气建议。
 
@@ -304,5 +310,5 @@ pontikes2012 通过示例：market-taker 和 market-maker **不是组织的属�
 - **两步读取**: 选择阶段读 `_routing_tables.yaml` + `_evidence_registry.yaml`；渲染阶段读对应 corpus 文件。
 - **注册表不存在时回退**到 `_routing_tables.yaml` 的静态推荐，不中断输出。
 - **如用户提及目标期刊**：按期刊适配表给出针对性建议。期刊差异优先于通用规则。
-- **Prose Craft 为推荐非硬性要求**: Human Face、Showing vs Telling、Conversational Voice 是 Pollock 的最佳实践建议，按期刊风格灵活适用——ASQ/AMJ 严格，JMS/JOM 宽松。段落级 architecture（PEEL/PEAL、paragraph length、topic sentence placement）参见 `references/prose-craft-basics.md` 和 `academic-writing-corpus/storytelling/prose-craft-checklist.md`；句子级 transition 信号词参见 `academic-writing-corpus/micro-templates/transition-signals.md`。
+- **Prose Craft 为推荐非硬性要求**: Human Face、Showing vs Telling、Conversational Voice 是 Pollock 的最佳实践建议，按期刊风格灵活适用——ASQ/AMJ 严格，JMS/JOM 宽松。段落级 architecture（PEEL/PEAL、paragraph length、topic sentence placement、coherence）参见 `academic-writing-corpus/storytelling/prose-craft-checklist.md` §0；句子级 transition 信号词参见 `academic-writing-corpus/micro-templates/transition-signals.md`。
 - **输出末尾追加 paper-state.yaml 片段**：在 Introduction 骨架输出末尾，自动附加 `### paper-state.yaml 片段` 块。该片段供下游技能（write-theory Phase 0、write-methods Phase 1、write-results Phase 0）自动消费。用户复制到项目 `paper-state.yaml` 的 `introduction:` 节下。如用户未提及 paper-state.yaml 协议，该片段的 YAML 注释头应包含使用说明。

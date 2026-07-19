@@ -10,7 +10,7 @@ exclusivity: HIGH
 source_papers:
   - paruchuri_pollock_kumar2020 (SMJ, 2020): "negative events → positive spillovers under specific conditions"
 created: 2026-05-20
-source: Migrated from top-level academic-writing-corpus/hooks/20-counterintuitive-finding.md (original batch 1 extraction)
+source: Original batch 1 extraction (former top-level corpus; top-level corpus since deleted)
 ---
 
 # 20-counterintuitive-finding — 反直觉发现挑战 Hook

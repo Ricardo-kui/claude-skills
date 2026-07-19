@@ -106,11 +106,13 @@ version: 3.2.0
 - **堆叠扩散Logit**：M7 增加堆叠结构与条件Logit设定
 - **多行为者设计**：M2 增加多数据源匹配；M3 区分主/辅行为者结果
 - **推断二元结果**：M3 增加从连续/文本信号推断二元状态的逻辑与阈值
-- **定性过程研究**：M1 替换为现象正当化+情境选择；M2 替换为多源数据角色说明；M9 替换为编码进阶与可信性机制；不输出 M4–M8（无假设检验模型）。完整填空骨架参见 `write-methods/econometric-models/定性过程研究.md`。该设计类型目前为 EMERGING / 单来源，F1–F6 Findings 骨架参见 `write-results/econometric-models/定性过程研究.md`。
+- **定性过程研究**：M1 替换为现象正当化+情境选择；M2 替换为多源数据角色说明；M9 替换为编码进阶与可信性机制；不输出 M4–M8（无假设检验模型）。完整填空骨架参见 `econometric-models/定性过程研究.md`。该设计类型目前为 EMERGING / 单来源，F1–F6 Findings 骨架参见 `../write-results/econometric-models/定性过程研究.md`。
 
 ---
 
 ## 槽位骨架加载
+
+> **路径基准**：本文件中 `references/...`、`econometric-models/...` 相对路径均以本 SKILL.md 所在目录（`write-methods/`）为基准；`../write-results/...` 指向同级技能目录。
 
 每个槽位的填空段落骨架（通用段落 + 设计类型变体 + 该槽位 QC 块）已外置到 `references/slot-<M编号>.md`（如 `slot-M7.md`），**按需加载**——不要一次全读。
 
@@ -132,6 +134,8 @@ version: 3.2.0
 | M10 Methods→Results 过渡 | `references/slot-M10.md` | 通常省略（顶刊 <10%） | 默认跳过 |
 
 > 设计类型的完整变体另见 `econometric-models/[设计类型].md`（如 `定性过程研究.md`）。新蒸馏变体经 `distill-methods-exemplar` → Phase 4 写入。
+
+**句法微模板（可选增强）**：`econometric-models/micro-templates/` 提供 18 类句法级微模板（段首锚定、because 从句、因果动词梯度、识别/稳健性预告、变量操作化句式等），在骨架 `[placeholder]` 之下为关键句法位置提供 2–3 个备选措辞，避免跨论文表达同质化。**加载规则**：仅在用户要求表达润色/句法多样化，或默认措辞与用户情境不匹配时，按 `econometric-models/micro-templates/INDEX.md` 的「分类索引」槽位映射表选读对应的 1–3 个文件——不要一次全读。高风险微模板（如强因果动词）只能在对应设计强度的骨架中使用。
 
 ---
 

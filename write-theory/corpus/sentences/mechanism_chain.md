@@ -1577,7 +1577,7 @@ H5: [Moderator 2] negatively moderates the relationship between [origin conditio
 ```
 
 **实证检验提示（differential persistence 的可检验化）**:
-- H3 不能直接读两个系数（一正一负）。技巧：对**负向通道**做 reverse-code 使两条 time×channel interaction 同向，再用 **Wald test** 检验两交互系数是否统计可区分（见 `write-results/SEM-moderated-mediation.md` "Reverse-Code + Wald Test"）。
+- H3 不能直接读两个系数（一正一负）。技巧：对**负向通道**做 reverse-code 使两条 time×channel interaction 同向，再用 **Wald test** 检验两交互系数是否统计可区分（见 `../write-results/econometric-models/SEM-moderated-mediation.md` "Reverse-Code + Wald Test"）。
 - 内嵌通道（capability）随时间**增强**（age×capability > 0）；外部通道（identity）随时间**衰减**（主效应负，age×identity > 0 意味负效应被侵蚀）。
 
 **关键特征**:
@@ -1585,7 +1585,7 @@ H5: [Moderator 2] negatively moderates the relationship between [origin conditio
 2. **嵌入位置决定持续性** — 结构/默会知识（内部，靠日常 enacting 维持，靠 sustained disuse 衰减）vs 受众认知（外部，靠持续注意力维持，靠叙事/事件 shift）。必须给出 **storage location + change mechanism** 双重论证。
 3. **底物匹配调节（substrate-matched moderators）** — 每个调节变量精确作用于一条通道的机制底物：能力通道底物是"稀缺专长"（被民用标准化 democratize），身份通道底物是"威胁认知"（被政变 amplify）。调节与通道一一对应，非共享调节。
 4. **印记者非对称重塑** — 同一创始印记者的两类后续变迁（能力 democratization / 身份 stigmatization）分别削弱/放大两条通道，体现"印记不是一次性的，印记者持续重塑其表达"。
-5. **T6 收束常用历史格言作 foil**（见 `write-introduction/.../theory-lens/05-maxim-contrast.md` 变体 B）。
+5. **T6 收束常用历史格言作 foil**（见 `../write-introduction/academic-writing-corpus/theory-lens/05-maxim-contrast.md` 变体 B）。
 
 **可迁移性**: 极高 — 适用于任何"同一起源留下对立双印记"的研究：
 - 创始政府/军方关联（capability+ vs security identity−）
@@ -1602,7 +1602,7 @@ H5: [Moderator 2] negatively moderates the relationship between [origin conditio
 - 比较两个一正一负 interaction 系数时不做 reverse-code → Wald test 不可直接解读
 - 印记者后续变迁与创始印记脱节 → moderator 必须明确作用于"起源印记者本身"的当下状态（如军方当局 vs 民用化），而非无关事件
 
-**语料锚定**: qiao_hiatt_sine2026 (SMJ) — 创始军方伙伴 → 内部 capability imprint（操作流程/安全协议，+ 国际化）+ 外部 identity imprint（军方名称/联想，− 国际化）；H3 capability 比 identity 更持久；H4 民用化空管 democratize 能力底物；H5 军事政变 amplify 身份威胁。配合 `write-methods/生存分析.md` 变体 6、`write-methods/IV-2SLS.md` 变体 4、`write-results/IV-2SLS.md` 变体 4 使用。
+**语料锚定**: qiao_hiatt_sine2026 (SMJ) — 创始军方伙伴 → 内部 capability imprint（操作流程/安全协议，+ 国际化）+ 外部 identity imprint（军方名称/联想，− 国际化）；H3 capability 比 identity 更持久；H4 民用化空管 democratize 能力底物；H5 军事政变 amplify 身份威胁。配合 `../write-methods/econometric-models/生存分析.md` 变体 6、`../write-methods/econometric-models/IV-2SLS.md` 变体 4、`../write-results/econometric-models/IV-2SLS.md` 变体 4 使用。
 
 ---
 

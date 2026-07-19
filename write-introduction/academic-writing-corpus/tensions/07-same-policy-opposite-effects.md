@@ -76,4 +76,3 @@ source: Extracted from MVP30 narrative_analysis files
 ## 相关语料
 
 - 配合 `hooks/04-puzzle-paradox.md` 使用：同一政策的相反效应是经典 puzzle
-- 配合 `mechanisms/dual-path-ability-motivation.md` 使用：两个群体通过不同路径抵达不同结果

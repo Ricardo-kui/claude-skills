@@ -1,6 +1,6 @@
 # Arrangement Patterns
 
-本文件收集 Theory 段落中论点和论据的组织方式。每个条目描述一个完整的安排模式，供 write-theory Phase 2.5 根据用户输入自动选择。
+本文件收集 Theory 段落中论点和论据的组织方式。每个条目描述一个完整的安排模式，供 write-theory Phase 3.2 根据用户输入自动选择。
 
 ---
 

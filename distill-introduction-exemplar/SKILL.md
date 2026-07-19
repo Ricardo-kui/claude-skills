@@ -74,6 +74,8 @@ MVP30 索引已对 28 篇论文完成 Pollock 对齐标注。这些论文可以�
 
 ## 批量模式上下文管理（Incremental Batch Strategy）
 
+> **路径基准**：本文件中 `academic-writing-corpus/...` 路径指**兄弟技能** `write-introduction` 的语料库，即 `../write-introduction/academic-writing-corpus/...`（与 `_update_registry.py` 的路径解析一致）；`protocols/...` 等相对路径以本 SKILL.md 所在目录为基准。
+
 > **问题**：30 篇论文 × 每篇 7 个模块的骨架 → 上下文窗口无法同时持有。Phase 4 跨论文聚合不能依赖内存中的数据。
 > **方案**：每篇论文蒸馏完成后，将其**轻量摘要**持久化到 `academic-writing-corpus/_batch_state.yaml`。Phase 4 只读取这个摘要文件做聚合，不依赖上下文中的原始蒸馏数据。
 
@@ -299,11 +301,11 @@ phase_0_story_architecture:
 
 | Phase 0 判定 | 必须读的索引 | 可选读的索引 |
 |-------------|------------|------------|
-| 任意组合 | `hooks/_index.md` | — |
-| Gap = Inadequacy 或 Incommensurability | `literature-turns/literature-turn-templates.md` | — |
-| Contribution = Constructs | `contributions/_index.md` | — |
-| Preview 需方法防御 | `previews/_index.md` | — |
-| Theory Lens 需框架选择 | `theory-lens/_index.md` | — |
+| 任意组合 | `academic-writing-corpus/hooks/_index.md` | — |
+| Gap = Inadequacy 或 Incommensurability | `academic-writing-corpus/literature-turns/literature-turn-templates.md` | — |
+| Contribution = Constructs | `academic-writing-corpus/contributions/_index.md` | — |
+| Preview 需方法防御 | `academic-writing-corpus/previews/_index.md` | — |
+| Theory Lens 需框架选择 | `academic-writing-corpus/theory-lens/_index.md` | — |
 
 **3. 建立"语料库基线"**：读完上述文件后，在内部建立以下认知：
 
@@ -1260,7 +1262,7 @@ Phase 4 完成后，根据 `corpus_enrichment` 块更新 `academic-writing-corpu
    - 更新 `meta.last_updated` 和 `meta.batches_processed`
    - 写回注册表
 
-**工具位置**: `~/.claude/skills/distill-introduction-exemplar/_update_registry.py`
+**工具位置**: `_update_registry.py`（与本 SKILL.md 同目录）
 
 **注意**：Phase 4.5 只更新证据注册表的**定量证据**。定性内容（句法模板、关键特征、反模式提醒）由 Phase 4.6 写入 corpus .md 文件。
 

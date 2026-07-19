@@ -15,6 +15,8 @@ updated: 2026-07-08
 1. **主骨架引用** — 指向 `references/slot-M*.md` 中对应设计类型的变体（按需加载规则见 `write-methods/SKILL.md` → 槽位骨架加载）
 2. **累积变体** — 由 `distill-methods-exemplar` Phase 4 自动写入的验证通过变体
 
+另：`micro-templates/` 子目录为 18 类句法级微模板（槽位映射与使用协议见其 `INDEX.md`），由 `write-methods` 在表达润色时按需选读。
+
 ## 设计类型索引
 
 | 文件 | 设计类型 | 变体数 | 最后更新 |

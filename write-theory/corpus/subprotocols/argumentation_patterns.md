@@ -1,6 +1,6 @@
 # Argumentation Patterns
 
-本文件收集 Theory 段落中可复用的论证微观动作组合。每个条目描述一个从 Anchor 到 Prediction 的完整或部分动作序列，供 write-theory Phase 2.5 调用。
+本文件收集 Theory 段落中可复用的论证微观动作组合。每个条目描述一个从 Anchor 到 Prediction 的完整或部分动作序列，供 write-theory Phase 3.2 调用。
 
 ---
 

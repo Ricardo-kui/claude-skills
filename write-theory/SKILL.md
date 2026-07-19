@@ -137,6 +137,7 @@ theory_hints:
 是否确认此路由？或需调整为其他变体？
 ```
 
+**交互式诊断树**（三级回退均未命中时）：
 
 ```
 你的理论构建方式是什么？
@@ -160,57 +161,9 @@ theory_hints:
 
 **1.2 Vault 基线检索**（可选——仅在 paper-state.yaml 有 vault 配置时执行）
 
-在确认理论路由后，从用户知识库拉取当前主题的理论证据。**本步骤为可选：无 vault 配置时静默跳过。**
-
-**执行条件**：paper-state.yaml 中 `paper.vault` 节存在且至少有一个非 null 字段。
-
-**检索流程**（三级回退，不阻塞）：
-
-```
-paper-state.yaml 中 paper.vault 是否有配置?
-│
-├── vault.section_evidence_map 非空 → 读取该文件
-│   → 过滤到 "Theory" / "T" 行（按 Section 列或命题 ID 前缀匹配）
-│   → 提取每行: 命题ID, citation key, Vault note path, 证据用途
-│   → 如有 vault.war_room，补读 canonical handle buckets 和 rival mechanism layers
-│   → 生成 "Vault Knowledge Brief (Theory)"
-│
-├── vault 路径存在但文件读不到 → 用 Obsidian MCP search_notes
-│   以 paper.title 和 introduction.theory_hints.core_constructs 为关键词
-│   搜索 Vault（限制 10 条）→ 提取 citation key 和 note path
-│
-└── 无 vault 配置或全部为 null → 静默跳过
-```
-
-**Theory Vault Knowledge Brief 输出格式**（所有内容来自 Vault）：
-
-```markdown
-## Vault 知识简报（Theory）
-
-### 机制证据卡片（来自章节-证据映射 Theory rows）
-| 命题ID | Citation Key | 证据用途 | Vault Note |
-|--------|-------------|---------|-----------|
-| [T1] | [@citekey] | [理论定义/机制核心/假设支撑] | [[note_path]] |
-| ... | ... | ... | ... |
-
-### Rival Mechanisms 需区分（来自项目作战室，如有）
-- vs. [rival_mechanism_1]: [区分策略——从 war_room rival anchors 提取]
-- vs. [rival_mechanism_2]: [区分策略]
-
-### 概念锚点（来自章节-证据映射或概念库搜索）
-- [[概念 - ...]]: [一句话概括与本文理论的关联]
-
-### 证据完整度
-- Vault 命中: N 条理论级证据
-- [如命中数 < 3，提示 "证据映射中 Theory 条目较少，建议从 canonical notes 补读或扩展章节-证据映射"]
-```
-
-**使用方式**：Brief 中的 citation keys 作为 Phase 2-4 理论构建和假设推导的文献弹药——每条 hypotheses 的机制链应优先引用 Brief 中标注为"机制核心"或"假设支撑"的文献。Brief 不覆盖用户在 Introduction 中已确立的理论框架选择。
-
-**通用性保证**：本步骤不假定 Vault 结构或文献内容。所有路径来自 paper-state.yaml 的 vault 字段，技能本身不含项目特定硬编码。
+从用户知识库拉取当前主题的理论证据，生成 Vault Knowledge Brief 作为 Phase 2-4 理论构建的文献弹药。**执行条件**：paper-state.yaml 中 `paper.vault` 节存在且至少有一个非 null 字段；无 vault 配置时静默跳过。三级回退检索流程、Brief 输出格式与通用性保证见 `corpus/meta/vault_evidence_retrieval.md`。
 
 **1.3 Rising Action 定位**（Pollock 2025 Ch02）
-
 
 **制度冲击检测**（自动判断，无需用户输入）：
 
@@ -228,8 +181,6 @@ paper-state.yaml 中 paper.vault 是否有配置?
 - 如果激活 Phase 2.3 → 在输出结构中插入 Phase 2.3 块，并标记"制度冲击适配已激活"
 - 如果跳过 → 不输出 Phase 2.3 相关内容，保持流程简洁
 
-
-
 Theory & Hypotheses 在整篇论文的 Five-Act 结构中属于 **Rising Action** 的后半段。
 
 **前置检查**（从上游 `write-introduction` 的 `theory_hints` 解析）：
@@ -244,7 +195,6 @@ Theory & Hypotheses 在整篇论文的 Five-Act 结构中属于 **Rising Action*
 - 具体推断：从 Tension 模板的 `[gap statement]` 句法签名中提取核心冲突，或从用户提供的 Gap 描述中识别转折信号词（"However"/"Yet"/"Although"/"In contrast"）后的核心主张
 
 推断出的 Central Knot 仅用于 Phase 1.3 的叙事对齐检查，不阻塞后续阶段。
-
 
 按顺序读取以下语料库文件：
 
@@ -262,14 +212,12 @@ Theory & Hypotheses 在整篇论文的 Five-Act 结构中属于 **Rising Action*
 
 **诊断结果输出**：narrative risk 标记附加到 Phase 4 QC 清单。
 
-
 **1.4 Prose Craft 定位**（Pollock 2025 Ch03；以下三个工具与 Phase 2-5 并行执行）
 
 Theory section 的 Rising Action 不仅需要功能推进，还需要 prose 层面的可读性。
-以下三个工具与 Phase 1-5 并行执行。
 完整检查清单见 `../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md`。
 
-**新增**：段落级 architecture 检查（PEEL/PEAL、paragraph length、topic sentence placement）参见 `../write-introduction/references/prose-craft-basics.md`；句子级 transition 信号词参见 `../write-introduction/academic-writing-corpus/micro-templates/transition-signals.md`。
+**新增**：段落级 architecture 检查（PEEL/PEAL、paragraph length、topic sentence placement、coherence）参见 `../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md` §0；句子级 transition 信号词参见 `../write-introduction/academic-writing-corpus/micro-templates/transition-signals.md`。
 
 #### Human Face in Theory
 - **P1 Knot Inheritance**：承接 knot 时，用 1 句具体场景说明"这个问题在现实世界中长什么样"
@@ -288,9 +236,6 @@ Theory section 的 Rising Action 不仅需要功能推进，还需要 prose 层�
 - **P1**：用 "To resolve the paradox that [knot], we argue that..." 承接
 - **假设推导**：用 "We argue that..." / "We hypothesize that..." 引出每个假设
 - **禁止**："It is argued that..." / "It is hypothesized that..." / "The literature suggests that..."（无主语被动）
-
-
-
 
 ---
 
@@ -351,7 +296,6 @@ P4-P(N): 机制 tying（knot tying through mechanism）
 最后一个假设 → 自然收敛进入 METHODS（无独立 Closure 段）
 ```
 
-
 **2.2 Institutional Background**（可选前置模块）
 
 **适用场景**: 研究情境特殊、读者可能不熟悉制度/行业背景时——如果读者不理解情境，就无法理解后续的理论论证。
@@ -376,57 +320,9 @@ P4-P(N): 机制 tying（knot tying through mechanism）
 - 研究情境是通用商业现象（如 CEO 薪酬、董事会构成、并购）
 - 情境信息可以 1-2 句嵌入 Theory 开篇即交代清楚
 
-
 **2.3 制度冲击类研究的 Theory Lens 特殊适配**（条件触发——由 1.3 制度冲击检测结果决定）
 
-如果你的研究使用自然实验、制度冲击或准实验设计（IV, DiD, RDD），Theory Lens 段需要额外完成以下论证任务：
-
-#### 1. 制度冲击的 Theory Lens 模板
-
-```
-We argue that [policy/shock] alters [actor]'s incentives to [action] by [mechanism].
-This setting is particularly informative because [policy] creates exogenous variation in [treatment]
-that is plausibly unrelated to [unobserved confounders], allowing us to isolate the causal effect
-of [treatment] on [outcome] from [alternative explanations].
-```
-
-**三层论证要求**：
-- **第一层（外生性）**：说明制度冲击为什么是外生的——对谁来说是外生的？为什么受影响企业的特征不太可能导致制度变化？
-- **第二层（机制）**：制度变化如何通过理论机制影响行为？（与标准 Theory Lens 的 why chain 相同）
-- **第三层（识别基础）**：为什么这个情境在理论上适合识别因果关系？（见下）
-
-#### 2. 识别策略的理论论证（必须在 Theory 部分完成，不能只在 Methods 中呈现）
-
-**IV 研究的 Theory 要求**：
-- 为什么工具变量与结果无直接联系（排除限制）在理论上是成立的？
-- 工具变量通过什么理论渠道影响处理变量？（第一阶段不仅是统计要求，更是理论要求）
-- 用 1-2 句话在 Theory Lens 段预告："[Instrument] affects [treatment] through [theoretical channel] but does not directly influence [outcome] except via [treatment], because..."
-
-**DiD 研究的 Theory 要求**：
-- 为什么处理组和控制组在没有处理时会有平行趋势？（共同趋势假设的理论基础）
-- 处理效应的异质性来源在理论上是什么？（Sun-Abraham / Callaway-Sant'Anna 问题的理论预判）
-- 用 1-2 句话在 Theory Lens 段预告："Absent the [policy], treated and control firms would have followed parallel trends because [theoretical reason, e.g., they operate in the same product market with similar demand shocks]."
-
-**RDD 研究的 Theory 要求**：
-- 为什么断点附近的企业在制度实施前是可比较的？（局部随机化的理论基础）
-- 断点两侧的制度差异在理论上是什么？（如 regulatory threshold, eligibility cutoff）
-
-#### 3. 时间动态机制的 Theory 论证（生存分析 / Cox 模型）
-
-如果你的研究使用 Cox 比例风险模型或时间动态分析，Theory 部分需要解释：
-- 为什么时间是一个理论上有意义的维度（而非仅仅控制变量）？
-- 为什么风险率（hazard rate）的理论比"是否发生"的二元理论更丰富？
-- 比例风险假设在理论上为什么合理？（即：协变量对风险率的影响不随时间变化，这一假设在理论上是否可信？）
-
-**生存分析 Theory Lens 句式模板**：
-```
-We theorize that [treatment] does not merely increase the probability of [event] but
-alters the *rate* at which [actor] approaches the [decision threshold]. This temporal
-dimension matters because [theoretical reason, e.g., decision-makers face escalating institutional pressure over time, and the hazard of [event] increases non-linearly with exposure to [trigger condition]].
-```
-
-
-
+使用自然实验/制度冲击/准实验设计（IV, DiD, RDD）时，Theory Lens 段须额外完成三层论证（外生性 / 机制 / 识别基础），且识别策略的理论论证必须在 Theory 部分完成（不能只在 Methods 呈现）。IV / DiD / RDD 各自的 Theory 要求、生存分析时间动态论证与句式模板见 `corpus/subprotocols/institutional_shock_lens.md`。
 
 ---
 
@@ -526,13 +422,7 @@ Theory 写作的心脏环节：路由假设结构，为每个假设生成逻辑�
 
 **[2c. 识别策略的理论论证]**（制度冲击 / 自然实验研究必须包含）：
 
-如果你的研究使用 IV / DiD / RDD，Theoretical Reasoning 部分必须在 why chain 中嵌入对识别假设的理论论证，而非仅在 Methods 中呈现统计假设。
-
-| 识别策略 | 必须在 Theory 中论证的内容 | Theory 嵌入位置 |
-|---|---|---|
-| **IV** | 为什么工具变量与结果无直接联系（排除限制）在理论上是成立的？工具变量通过什么理论渠道影响处理变量？ | 在 why chain 的 X→M 步骤后插入 1 句："[Instrument] influences [treatment] through [channel] but does not directly affect [outcome] because [theoretical reason, e.g., it operates at the state level while outcomes vary at the firm level]." |
-| **DiD** | 为什么处理组和控制组在没有处理时会有平行趋势？处理效应的异质性来源在理论上是什么？ | 在 why chain 开头插入 1 句："Absent [policy], treated and control [units] would have followed parallel trajectories because [theoretical reason, e.g., they face identical demand shocks prior to the regulatory change]." |
-| **RDD** | 为什么断点附近的企业在制度实施前是可比较的？断点两侧的制度差异在理论上是什么？ | 在情境描述后插入 1 句："Firms just above and below the [threshold] are observationally similar in [key dimensions] because [theoretical reason], yet they face sharply different [treatment] due to the [institutional rule]." |
+使用 IV / DiD / RDD 时，Theoretical Reasoning 的 why chain 中必须嵌入识别假设的理论论证——IV 的排除限制与第一阶段理论渠道、DiD 平行趋势的理论基础、RDD 断点局部可比较性。各策略在 why chain 中的嵌入位置与句式见 `corpus/subprotocols/institutional_shock_lens.md` 第 4 节。
 
 **检查**：如果 Methods 中描述了识别策略，但 Theory 段落中完全没有提及识别假设的理论基础 → ⚠️ 标记为"识别策略与理论脱节"。
 
@@ -554,8 +444,6 @@ Theory 写作的心脏环节：路由假设结构，为每个假设生成逻辑�
 - [ ] 收束句质量：是否总结了推理链而非简单重复 "we hypothesize"？
 - [ ] 段落独立性：单独阅读本段能否理解完整论证逻辑？
 
-
-
 ---
 
 ### Phase 4: QC 与对齐
@@ -563,6 +451,8 @@ Theory 写作的心脏环节：路由假设结构，为每个假设生成逻辑�
 三层审计 + 假设收敛 + Introduction↔Theory 跨 Section 对齐。
 
 **4.1 通用 QC 审计**（Theory IS NOT / Construct Clarity / Hypothesis Clarity）
+
+逐项判定细则与生成后验证流程见 `corpus/storytelling/post-generation-validator.md`（生成 Theory 草稿后执行）。
 
 #### 审计 1: Theory IS NOT（7 种伪理论陷阱 + 3 种 Ch04 病理）
 
@@ -603,8 +493,6 @@ Theory 写作的心脏环节：路由假设结构，为每个假设生成逻辑�
 
 **4.2 假设收敛与过渡**
 
-#### 假设收敛与过渡
-
 管理学顶刊论文的 Theory 部分通常以最后一个假设推导段的**局部收束信号**自然结束——假设就是推导的终点，推导完毕即转入 METHODS。**不需要独立的 T6 Closure 段落**。这与 Pollock (2025) 教科书建议存在差异，但反映了管理学领域实际发表惯例。
 
 每个假设推导段落的局部收束（"Therefore, we hypothesize:" / "Hence:" / "Accordingly:"）已承担了收敛功能。如果过度使用全局收束（"Taken together, we have argued that..."），管理学审稿人可能视为冗余。
@@ -617,24 +505,7 @@ Theory 写作的心脏环节：路由假设结构，为每个假设生成逻辑�
 
 检查协议完整定义见 `corpus/meta/alignment_protocol.md`。
 
-**输出格式**：
-
-```markdown
-### 跨 Section 对齐检查
-
-| 维度 | 检查项 | Introduction 信号 | Theory 状态 | 结论 |
-|------|--------|-------------------|-------------|------|
-| Gap→Type | 能量匹配 | [Gap类型] + [Tension] | [构建类型] | ✅/⚠️/❌ |
-| Makadok→Module | 贡献兑现 | [Makadok维度] | [模块覆盖] | ✅/⚠️/❌ |
-| Preview→H | 假设数 | "[N] hypotheses" | [实际N个] | ✅/⚠️/❌ |
-| Lens→Lens | 理论一致性 | "[theory]" | "[theory]" | ✅/❌ |
-
-**必须修复的不一致**：
-- [ ] [具体不一致项1]
-- [ ] [具体不一致项2]
-```
-
-
+**输出格式**：见 `corpus/meta/alignment_protocol.md` 的「输出格式」节（Gap→Type / Makadok→Module / Preview→H / Lens→Lens 四维检查表 + 必须修复的不一致清单）。
 
 ---
 
@@ -664,6 +535,7 @@ Theory 写作的心脏环节：路由假设结构，为每个假设生成逻辑�
 | 假设形式 | `corpus/sentences/hypothesis_forms.md` |
 | 收束/过渡 | `corpus/sentences/closure.md` |
 
+> 更完整的语料导航（按功能 / 验证状态 / 范文过滤）见 `corpus/_index.md`；各语料文件的来源论文与验证状态登记见 `corpus/_evidence_registry.yaml`。
 
 ---
 ## Output Format
@@ -683,7 +555,7 @@ Theory 写作的心脏环节：路由假设结构，为每个假设生成逻辑�
 
 → 推荐段落序列: [P1 → P2 → ...]
 
-### Phase 4.1 通用 QC
+### 通用 QC
 - [ ] Theory IS NOT: [通过/需修复的陷阱]
 - [ ] Construct Clarity: [通过/需补充的字段]
 - [ ] Hypothesis Clarity: [通过/需补充的字段]
@@ -727,7 +599,7 @@ Theory section 的 Rising Action 结构（Knot Inheritance→Deepening→Tying�
 ## Constraints
 
 1. **Theory 必须解释 why，不是文献列表。** 每个假设前必须有至少 2-3 步的因果/过程推理链。
-2. **假设推导段落使用交织式论证结构**：Topic Sentence → Theoretical Reasoning（文献引用嵌入推理中，非独立步骤）→ Hypothesis Transition。文献引用与理论推理交织而非先后排列——"Prior research shows X. However, Y remains unclear. We argue that Z because [mechanism]." 每个假设前必须有 why chain，每个引用必须总结 argument 而非罗列名字。当某一步文献支持特别密集时，可暂时分离展开，但默认节奏是交织的。
+2. **假设推导段落使用交织式论证结构**（Topic Sentence → Theoretical Reasoning → Hypothesis Transition；文献嵌入推理中而非罗列；标准结构见 Phase 3.2）。
 3. **禁止逻辑跳跃。** 从 X 到 Y 的每个因果步骤必须在文中明确写出。
 4. **假设必须明确 IV、DV、方向、形状、条件，且形式与测量尺度匹配。** 不允许 "X is associated with Y" 等模糊措辞。连续变量不使用 if-then，曲线关系必须显式使用 curvilinear/U-shaped/inverted-U/diminishing 等措辞。详见 `corpus/sentences/hypothesis_forms.md` 的「假设形式决策矩阵」。
 5. **如果用户有具体构念名称，必须嵌入模板替换占位符。**
@@ -738,7 +610,7 @@ Theory section 的 Rising Action 结构（Knot Inheritance→Deepening→Tying�
 10. **调节效应的假设必须指定交互模式类型（enhancing/buffering/antagonistic/existence/competing），且必须排除反向交互。** 此外，必须明确该调节改变的是关系的 nature/slope（differential prediction）还是 strength/correlation（differential validity），并确保假设措辞与概念类型一致。具体统计检验由 `write-methods` 根据设计选择。
 11. **跨层调节必须在 P1 就声明 focal unit of analysis 和 nesting structure。**
 12. **图不能替代文字理论。**
-13. **不需要独立的 T6 Closure 段落。** 管理学顶刊（JMS, AMJ, SMJ, ASQ, OS 等）的标准做法是最后一个假设推导完毕即进入 METHODS。每个假设段落的局部收束（"Therefore, we hypothesize:"）已承担收敛功能。独立的 "In sum, we have argued that..." 全局收束段落在管理学中非标准，不应强制推荐。少数理论密集型 ASQ/ASR 论文可能有 2-3 句整合，但这属于例外。
+13. **不需要独立的 T6 Closure 段落**（理由与例外见 Phase 4.2）：最后一个假设推导完毕即进入 METHODS，各假设段落的局部收束已承担收敛功能；全局收束段落在管理学顶刊非标准，不应强制推荐。
 14. **竞争假设必须使用非传统收敛信号。** 不可使用 "Therefore" 收束，应使用 "Given these competing arguments..." 等信号。
 15. **不要重复语料层内容。** 本文件是协议层；所有具体模板引用 `corpus/` 目录。
 16. **辩证对立型必须满足对称性要求。** T3 和 T4 的机制步骤数应接近对称（差不超过 1 步）；T4 首句必须用 dialectical turn 标记（"Despite research showing..." / "This may be because..."）；reconciliation 收束必须为 theory-based（不能仅说 "they coexist"）；两类受众的定义必须有理论基础区分（不是随意切分的 demographic 分组）。
@@ -761,47 +633,18 @@ Theory section 的 Rising Action 结构（Knot Inheritance→Deepening→Tying�
 
 ### paper-state.yaml 输出片段
 
-Theory 骨架输出末尾自动附加以下片段。用户复制到项目 `paper-state.yaml` 的 `theory:` 节下，供 write-methods Phase 1 和 write-results Phase 0 自动消费：
-
-```yaml
-# --- paper-state.yaml 片段 (copy to your paper-state.yaml) ---
-theory:
-  status: drafted
-  output_path: "[本次输出文件路径]"
-  depends_on: ["introduction"]
-  updated: "[YYYY-MM-DD]"
-
-  theory_variant: "[A 构念辨析型 / B 机制推演型 / C 假设树型 / D 质性过程理论型 / E 调节效应型 / F 竞争假设型 / G 辩证对立型]"
-
-  constructs:
-    independent: "[核心自变量名称]"
-    dependent: "[核心因变量名称]"
-    mediator: "[中介变量，如无则为 null]"
-    moderator: "[调节变量，如无则为 null]"
-    controls: ["[控制变量1]", "[控制变量2]", ...]
-
-  hypotheses:
-    - id: "H1"
-      statement: "[H1 完整陈述句]"
-      type: "main"              # main | mediation | moderation | competition
-      iv: "[H1 自变量]"
-      dv: "[H1 因变量]"
-      predicted_direction: "[positive / negative / curvilinear]"
-    # - id: "H2" ...
-
-  mechanism_chains:
-    - "[H1 机制链: 起点触发条件 → 第二步推理 → ... → 终点可检验预测]"
-    # - "[H2 机制链]..."
-```
+Theory 骨架输出末尾自动附加 `theory:` 节片段（status / theory_variant / constructs / hypotheses / mechanism_chains），用户复制到项目 `paper-state.yaml`，供 write-methods Phase 1 和 write-results Phase 0 自动消费。片段模板见 `corpus/meta/paper_state_fragment.md`。
 
 ---
 
 ## 资产位置
 
-- **本协议**: `~/.claude/skills/write-theory/SKILL.md`
-- **语料库**: `~/.claude/skills/write-theory/corpus/`
+> **路径基准**：本文件中所有相对路径（如 `corpus/...`）均以本 SKILL.md 所在目录（`write-theory/`）为基准；`../write-introduction/...` 指向同级技能目录。
+
+- **本协议**: 本文件（`write-theory/SKILL.md`）
+- **语料库**: `corpus/`（与本文件同目录）
 - **路由表**: `corpus/meta/routing_table.md`
 - **对齐协议**: `corpus/meta/alignment_protocol.md`
-- **元模板**: `D:\Onedrive\Obsidian Vault\00 工作台\叙述模板训练集\meta_templates\Theory_Hypotheses_Meta_Template.md`
-- **MVP30 范文解析**: `D:\Onedrive\Obsidian Vault\00 工作台\叙述模板训练集\_parsed_texts\mvp30\`
-- **叙事分析**: `D:\Onedrive\Obsidian Vault\00 工作台\叙述模板训练集\narrative_analysis\mvp30\`
+- **元模板（本机路径，不随 repo 同步）**: `D:\Onedrive\Obsidian Vault\00 工作台\叙述模板训练集\meta_templates\Theory_Hypotheses_Meta_Template.md`
+- **MVP30 范文解析（本机路径，不随 repo 同步）**: `D:\Onedrive\Obsidian Vault\00 工作台\叙述模板训练集\_parsed_texts\mvp30\`
+- **叙事分析（本机路径，不随 repo 同步）**: `D:\Onedrive\Obsidian Vault\00 工作台\叙述模板训练集\narrative_analysis\mvp30\`

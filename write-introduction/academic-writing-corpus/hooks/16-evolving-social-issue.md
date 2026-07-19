@@ -12,7 +12,7 @@ source_papers:
   - weng_yang (JMS): "income inequality → CEO-employee pay disparity; social issue cold-start with phenomenon definition"
 created: 2026-05-20
 updated: 2026-07-07
-source: Migrated from top-level academic-writing-corpus/hooks/09-evolving-social-issue.md (original batch 1 extraction) + weng_yang distill
+source: Original batch 1 extraction (former top-level corpus, old id "09-evolving-social-issue"; renumbered on migration, top-level corpus since deleted) + weng_yang distill
 ---
 
 # 16-evolving-social-issue — 演变中的社会议题 Hook

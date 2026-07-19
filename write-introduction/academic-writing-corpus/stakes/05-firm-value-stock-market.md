@@ -182,6 +182,4 @@ source: Extracted from MVP30 narrative_analysis files + global corpus migration
 
 ## 相关语料
 
-- 配合 `results-exposition/economic-significance.md` 使用：将统计结果转化为经济意义的标准流程
 - 配合 `hooks/03-data-shock.md` 使用：若 Hook 未用市场数据，Stakes 可用市场数据建立第二重震撼
-- 配合 `discussion-moves/reversal-silver-lining.md` 使用：即使事件负面，也可讨论其对长期估值的正面信号价值

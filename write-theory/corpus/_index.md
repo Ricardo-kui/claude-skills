@@ -44,6 +44,7 @@
 | [`D_process_theory.md`](variants/D_process_theory.md) | 质性过程理论型 | 阶段序列、过渡条件、时间标记 | Proposition 为主 |
 | [`E_moderation.md`](variants/E_moderation.md) | 调节效应型 | E1-E5 协议：同层调节 / 跨层调节 / 嵌入型边界条件 / 竞争基线→调节裁决 / 曲线关系+多调节 | 主效应 + 调节（含复杂交互） |
 | [`F_competing_hypotheses.md`](variants/F_competing_hypotheses.md) | 竞争假设型 | 对立预测呈现、非传统收敛信号、 net effect 论证 | 竞争假设对 |
+| [`G_dialectical_opposition.md`](variants/G_dialectical_opposition.md) | 辩证对立型 | 双受众对称机制、dialectical turn 标记、theory-based reconciliation | 对立预测（方向反转） |
 
 ---
 

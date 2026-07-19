@@ -344,6 +344,6 @@ and [DV] is [stronger/weaker] when [W2] is high than when [W2] is low."
 - `corpus/sentences/moderation.md`（机制修改论证）
 - `corpus/sentences/cost_benefit_calculus.md`（成本-收益计算机制 voice）
 - `corpus/subprotocols/hypothesis_derivation_patterns.md`（Sequential Nested Moderation 模式）
-- `write-methods/面板数据-OLS.md` 变体21（M7 三向交互模型设定：mean-centering + 完整 lower-order terms）
-- `write-results/三向交互.md` 变体2（连续调节变量三向交互 — 边际效应表）
-- `write-introduction/transitions/14-nested-moderation-preview`（Introduction 末尾预览嵌套调节结构）
+- `../write-methods/econometric-models/面板数据-OLS.md` 变体21（M7 三向交互模型设定：mean-centering + 完整 lower-order terms）
+- `../write-results/econometric-models/三向交互.md` 变体2（连续调节变量三向交互 — 边际效应表）
+- `../write-introduction/academic-writing-corpus/transitions/14-nested-moderation-preview.md`（Introduction 末尾预览嵌套调节结构）

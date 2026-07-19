@@ -106,5 +106,4 @@ source: Extracted from MVP30 narrative_analysis + eilert2017 distill
 ## 相关语料
 
 - 配合 `hooks/07-cost-benefit-tension.md` 使用：Hook 与 Tension 的一体两面
-- 配合 `mechanisms/dual-path-ability-motivation.md` 使用：成本对应动机约束，收益对应能力约束
 - 配合 `stakes/02-quantified-economic-loss.md` 使用：将抽象成本转化为精确经济损失

@@ -10,7 +10,7 @@ exclusivity: HIGH
 source_papers:
   - lashley_pollock2020 (ASQ, 2020): "medical cannabis entrepreneurs under federal illegality"
 created: 2026-05-20
-source: Migrated from top-level academic-writing-corpus/hooks/02-extreme-situation.md (original batch 1 extraction)
+source: Original batch 1 extraction (former top-level corpus, old id "02-extreme-situation"; renumbered on migration, top-level corpus since deleted)
 ---
 
 # 15-extreme-situation — 极端情境/"Imagine..." Hook

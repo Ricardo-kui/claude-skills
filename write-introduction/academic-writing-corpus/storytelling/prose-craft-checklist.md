@@ -63,6 +63,29 @@ version: 1.0.0
 
 ---
 
+### 0.4 Topic Sentence 的 5 种类型
+
+| 类型 | 功能 | 在 Introduction/Theory 中的典型应用 |
+|------|------|----------------------------------|
+| **Statement of fact** | 用事实/统计支撑段落主旨 | Hook 中的数据冲击、Stakes 中的量化后果 |
+| **Comparison / contrast** | 比较或对比多个事物/观点 | Tension 中的 "共识 vs 反例"、Theory 中的 rival mechanism 区分 |
+| **Definition / explanation** | 定义或解释术语/概念 | Theory Lens 中的 interpretive frame 定义、构念辨析型 Theory 的构念界定 |
+| **Cause and effect** | 解释因果/条件关系 | Mechanism Preview、Theory 的 why-chain 段落 |
+| **Argument / thesis statement** | 提出段落论点 | Contribution 段、Theory 的假设推导段 |
+
+---
+
+### 0.5 Coherence 技术（句间连贯）
+
+1. **重复关键词或短语**：在定义或识别重要概念时保持引用一致
+2. **创建平行结构**：连续句子使用相同语法结构，帮助读者看到观点联系
+3. **保持视角、时态、数的一致**：避免在 you/one、past/present、a man/they 之间跳跃
+4. **使用 transition 信号词**：明确句子间逻辑关系——具体词表见 `../micro-templates/transition-signals.md`；每段 1–2 个 explicit transition 足够，优先 subtle transition（关键词重复、代词回指、平行结构）
+
+**避免逻辑跳跃**：不要假设读者已经知道你在想什么（对应 **Read my Mind** 检查）；每个推理步骤用至少一句话说明。
+
+---
+
 ## 1. Human Face（人文面孔）
 
 ### 定义

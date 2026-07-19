@@ -99,11 +99,13 @@ version: 3.1.0
 - **同伴效应/网络效应**：R3 主效应 → R4 网络边界异质性 → R7 falsification / 安慰剂网络
 - **推断二元结果**：R3 报告推断状态分布 → R7 阈值敏感性 / 分类准确性
 - **计数模型（AME+区域显著性）**：R3 报告IRR后紧跟平均边际效应与显著性区域图
-- **定性过程研究/定性发现**：不遵循 R1–R9 顺序；输出 F1（过程模型总览）→ F2（阶段触发）→ F3（前台—后台对照）→ F4（侧台协商）→ F5（补充机制/边界）→ F6（受众区分的有限成功评估）。完整填空骨架参见 `write-results/econometric-models/定性过程研究.md`。该设计类型目前为 EMERGING / 单来源，Q1–Q8 Methods 骨架参见 `write-methods/econometric-models/定性过程研究.md`。
+- **定性过程研究/定性发现**：不遵循 R1–R9 顺序；输出 F1（过程模型总览）→ F2（阶段触发）→ F3（前台—后台对照）→ F4（侧台协商）→ F5（补充机制/边界）→ F6（受众区分的有限成功评估）。完整填空骨架参见 `econometric-models/定性过程研究.md`。该设计类型目前为 EMERGING / 单来源，Q1–Q8 Methods 骨架参见 `../write-methods/econometric-models/定性过程研究.md`。
 
 ---
 
 ## 槽位骨架加载
+
+> **路径基准**：本文件中 `references/...`、`econometric-models/...` 相对路径均以本 SKILL.md 所在目录（`write-results/`）为基准；`../write-methods/...` 指向同级技能目录。
 
 每个槽位的填空段落骨架（通用段落 + 设计类型变体 + 该槽位 QC 块）已外置到 `references/slot-<R编号>.md`（如 `slot-R3.md`），**按需加载**——不要一次全读。
 

@@ -141,9 +141,20 @@
 | 12 | contrary-to-belief | Trend |
 | 13 | rhetorical-question | Rhetorical question |
 | 14 | paired-disasters | Anecdote |
+| 15 | extreme-situation | Anecdote |
+| 16 | evolving-social-issue | Trend |
+| 17 | classic-debate-constraint | Anecdote |
+| 17 | debate-reframing | Anecdote |
+| 18 | theory-contradiction-empirical-paradox | Trend |
+| 19 | forward-looking-shift | Trend |
+| 20 | counterintuitive-finding | Trend |
+| 21 | dual-industry-trend | Trend |
+| 23 | popular-debate | Anecdote |
 | 24 | positive-trait-dark-side | Trend / Anecdote |
+| 25 | empirical-puzzle-after-consensus | Trend |
+| — | cold-start-cost-cascade | Trend |
 
-*注：编号 10 被 immersive-narrative 和 practical-puzzle 共享。这两个 hook 分别由不同 distill 文件提取，保留原编号以维持向后兼容。*
+*注：编号 10 被 immersive-narrative 和 practical-puzzle 共享，编号 17 被 classic-debate-constraint 和 debate-reframing 共享——均因不同 distill 来源保留原编号以维持向后兼容。编号 22（paired-simultaneous-incidents）从未建成语料文件，条目已移除。*
 
 ---
 
@@ -174,16 +185,6 @@
 | **双行业趋势对比 Hook** | `21-dual-industry-trend` | 数字化/宏观趋势 → 两个行业的对比案例建立现象普遍性 | EMERGING (1 paper) | zhao-ding_gaba (ORSC) |
 
 - `21-dual-industry-trend` — Trend/Phenomenon Hook: macro-trend → dual-industry contrasting examples → "Across [contexts], firms not only [A] but also choose among [B], deciding [trade-off] across multiple dimensions." 适用于需要建立"跨行业普遍现象"可信度的研究。Pollock 类型: Trend。能量: 中。最佳适配 Gap: Inadequacy（首选，依据 P35 "challenges an implicit premise... mechanically translate into" 语言）/ Incompleteness（适配）× Constructs + Phenomenon。canonical 文件已于 2026-06-17 创建。
-
----
-
-## 新增 Hook（编号 22）
-
-| Hook | canonical_id | 核心特征 | 验证状态 | 代表范文 |
-|------|-------------|---------|---------|---------|
-| **同时异果对比 Hook** | `22-paired-simultaneous-incidents` | 同一天、同规模、不同媒体反应的对比案例→ Puzzle question | EMERGING (1 paper) | han_pollock_paruchuri (SMJ) |
-
-- `22-paired-simultaneous-incidents` — Anecdote/Puzzle Hook: "On [date], [Firm A]'s [N] million users were exposed... The same day, [Firm B] had exposed [N] million users... Although similar in magnitude, [Firm B]'s breach was only covered by specialist media. Why were two incidents of similar magnitude that occurred at the same time publicized to different extents?" 适用于 misconduct/scandal/event studies。Pollock 类型: Anecdote。能量: 中。最佳适配 Gap: Incompleteness × Constructs + Boundary。
 
 ---
 

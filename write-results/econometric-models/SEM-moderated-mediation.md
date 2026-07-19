@@ -190,7 +190,7 @@ distinguishable temporal dynamics.
 
 ### 语料锚定
 
-- qiao_hiatt_sine2026 (SMJ) — H3：内嵌 capability imprint 比外部 identity imprint 更持久。age×capability (+0.060) vs age×identity (+0.080)，reverse-code 后 Wald χ²=60.08, p<.001。配合 `write-theory/.../mechanism_chain.md` "双重印记对立通道" 模板使用。
+- qiao_hiatt_sine2026 (SMJ) — H3：内嵌 capability imprint 比外部 identity imprint 更持久。age×capability (+0.060) vs age×identity (+0.080)，reverse-code 后 Wald χ²=60.08, p<.001。配合 `../write-theory/corpus/sentences/mechanism_chain.md` "双重印记对立通道" 模板使用。
 
 ---
 

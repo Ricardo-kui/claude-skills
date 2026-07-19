@@ -75,5 +75,4 @@ source: Extracted from MVP30 narrative_analysis files
 
 ## 相关语料
 
-- 配合 `hooks/17-phenomenon-market-evolution.md`（全局）使用：趋势型 Hook 建立"自由扩展"，tension 揭示"约束回拉"
 - 配合 `hooks/10-practical-puzzle.md` 使用："理想世界 vs 现实世界"双重句法

@@ -77,6 +77,9 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 
 **适用**: 贡献单一明确、篇幅受限的 Introduction
 
+**Boundary 子变体——时间/阶段型**（Mayo et al. 2022, POM）：当边界条件是时间或阶段性的（如 CEO 任期、产品生命周期、危机阶段）：
+> "We identify [temporal stage] as a critical boundary condition that determines whether the [X-Y relationship] follows [pattern A] or [pattern B]. Early in [stage], [mechanism A] dominates, leading to [outcome A]; conversely, later in [stage], [mechanism B] prevails, producing [outcome B]."
+
 ---
 
 ## 变体 B：文献对话型（han2020 型）
