@@ -25,7 +25,7 @@ from datetime import datetime
 CORPUS_DIR = (
     Path(__file__).parent.parent
     / "write-methods"
-    / "academic-writing-corpus"
+    / "econometric-models"
 )
 REGISTRY_PATH = CORPUS_DIR / "_evidence_registry.yaml"
 
@@ -214,7 +214,7 @@ def append_skeleton_to_corpus(update):
     Append a validated skeleton to the target corpus file's 累积变体 section.
 
     Expected update fields (in addition to registry fields):
-      - target: path relative to CORPUS_DIR, e.g. "academic-writing-corpus/生存分析.md"
+      - target: path relative to CORPUS_DIR, e.g. "econometric-models/生存分析.md"
       - design_type: e.g. "生存分析"
       - slot: e.g. "M7"
       - action: "append_skeleton"  (distinguishes from registry-only actions)
@@ -236,11 +236,14 @@ def append_skeleton_to_corpus(update):
         return False
 
     # Resolve file path
-    # target may be "academic-writing-corpus/生存分析.md" or just "生存分析.md"
-    if target.startswith('academic-writing-corpus/'):
-        target_name = target.replace('academic-writing-corpus/', '')
-    else:
-        target_name = target
+    # target may be "econometric-models/生存分析.md" or just "生存分析.md"
+    # (also tolerate the legacy "academic-writing-corpus/" prefix from older
+    # enrichment blocks written before the corpus was renamed)
+    target_name = target
+    for prefix in ('econometric-models/', 'academic-writing-corpus/'):
+        if target_name.startswith(prefix):
+            target_name = target_name[len(prefix):]
+            break
 
     target_path = CORPUS_DIR / target_name
     if not target_path.exists():
