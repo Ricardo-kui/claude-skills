@@ -533,7 +533,7 @@ dimension matters because [theoretical reason, e.g., decision-makers face escala
 **检查**：如果 Methods 中描述了识别策略，但 Theory 段落中完全没有提及识别假设的理论基础 → ⚠️ 标记为"识别策略与理论脱节"。
 
 **Topic Sentence CV 反模式示例**：
-- ❌ "It is argued that CEO overconfidence affects firm risk." → 无主语被动，违反 Conversational Voice（见 `prose-craft-checklist.md` 禁用词表）
+- ❌ "It is argued that CEO overconfidence affects firm risk." → 无主语被动，违反 Conversational Voice（见 `../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md` 禁用词表）
 - ✅ "We argue that CEO overconfidence increases firm risk-taking because overconfident leaders systematically underestimate downside uncertainty." → active verb + concrete subject + 方向性预测
 - 规则：Topic Sentence 是段落的第一印象，若用被动语态，读者会预期整段都是"报告腔"而非"论证声"。
 
@@ -640,7 +640,7 @@ dimension matters because [theoretical reason, e.g., decision-makers face escala
 | D 质性过程理论型 | `corpus/variants/D_process_theory.md` | — |
 | E 调节效应型 | `corpus/variants/E_moderation.md` | `corpus/subprotocols/E1_categorical_moderation.md` |
 | F 竞争假设型 | `corpus/variants/F_competing_hypotheses.md` | — |
-| G 辩证对立型 | `corpus/variants/G_dialectical_opposition.md` | `corpus/subprotocols/G1_horizontal_dialectical.md` |
+| G 辩证对立型 | `corpus/variants/G_dialectical_opposition.md` | — |
 
 #### 通用句式语料索引
 
