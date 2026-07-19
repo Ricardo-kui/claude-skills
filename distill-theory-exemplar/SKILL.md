@@ -913,7 +913,7 @@ phase_2_1_7_arrangement_pattern:
 
 #### Concrete Illustration 提取
 
-`write-theory` Phase 2.5 把"不允许连续 2 个推理步骤无 illustration"作为写作规则。本节用于**提取范文如何执行这一规则**：它在哪些步骤放 illustration？用的是什么类型？哪些步骤省略了？这些提取结果可作为 `write-theory` Prose Craft 子协议的素材。
+`write-theory` Phase 3（段落级 QC 检查表）把"不允许连续 2 个推理步骤无 illustration"作为写作规则。本节用于**提取范文如何执行这一规则**：它在哪些步骤放 illustration？用的是什么类型？哪些步骤省略了？这些提取结果可作为 `write-theory` Prose Craft 子协议的素材。
 
 ```yaml
 concrete_illustration_pattern:
@@ -1125,7 +1125,7 @@ phase_2_4_skeleton_check:
 
 ### 2.5 连接词使用模式提炼（Connector Pattern Distillation）
 
-连接词是 Theory 论证逻辑的**显式标记**——它们将隐含的因果、对比、递进关系暴露给读者。蒸馏连接词使用模式可以直接反哺 `write-theory` 的 Phase 5 连接词分类库（§5.6 连接词类型学, §5.7 段落收束过渡）。
+连接词是 Theory 论证逻辑的**显式标记**——它们将隐含的因果、对比、递进关系暴露给读者。蒸馏连接词使用模式可以直接反哺 `write-theory` 的连接词与收束语料（Phase 3 段落级 transition 诊断 + Phase 5 `corpus/sentences/closure.md` 收束/过渡句式）。
 
 #### 蒸馏目标
 
@@ -1789,7 +1789,7 @@ phase_4_batch_analysis:
 
 ### 跨 Section 对齐检查（Phase 4 正式化，v1.2.0 新增）
 
-与 write-theory Phase 4 对齐，执行 Introduction ↔ Theory 的强制对齐检查：
+与 write-theory Phase 4.3（跨 Section 对齐检查）对齐，执行 Introduction ↔ Theory 的强制对齐检查：
 
 ```markdown
 ### 跨 Section 对齐检查
@@ -2160,7 +2160,7 @@ Theory & Hypotheses 写作质量检查请使用 `/theory-review`——它覆盖�
 
 ## 与下游 Skill 的接口
 
-- **`write-theory`** — Phase 4 的更新建议可直接沉淀到 write-theory 的模块库和骨架库；Phase 2.5 连接词统计可反向更新 write-theory 的连接词分类库和段落收束模板。Phase 2.6–2.8 的微观动作、安排模式、证据类型/功能可直接沉淀为 `corpus/subprotocols/argumentation_patterns.md`，供 write-theory Phase 2.5 调用。Phase 0.5 Rising Action 数据和 Phase 0.75 Prose Craft 数据可为 write-theory 的叙事对齐检查和 Prose Craft 定位提供输入
+- **`write-theory`** — Phase 4 的更新建议可直接沉淀到 write-theory 的模块库和骨架库；Phase 2.5 连接词统计可反向更新 write-theory 的连接词分类库和段落收束模板。Phase 2.6–2.8 的微观动作、安排模式、证据类型/功能可直接沉淀为 `corpus/subprotocols/argumentation_patterns.md`，供 write-theory Phase 3（语料调用）调用。Phase 0.5 Rising Action 数据和 Phase 0.75 Prose Craft 数据可为 write-theory 的叙事对齐检查和 Prose Craft 定位提供输入
 - **`theory-review`** — Phase 1.5 的模块覆盖检查和 Theory Logic Map 可作为 theory-review 的审查基准；Phase 1.25 的制度冲击适配检查可为理论审查提供识别策略论证依据；Phase 2.6–2.8 的微观动作、双边论证、证据三要素检查可为 theory-review 提供段落级论证审查清单
 - **`paper-review`** — Theory Logic Map 可用于跨 section 对齐检查（Theory 承诺 vs Results 兑现）；Phase 4 的跨 Section 对齐表可直接用于 paper-review 的全稿对齐检查；write-theory Constraint Alignment 表可用于 Theory ↔ write-theory 协议一致性审查
 - **`write-introduction`** — T2 Theoretical Lens 和 Closure 策略（局部收束 / 嵌入框架总结）的提炼可用于优化 Introduction 的 P5 Preview 和 P7 Contribution；Phase 0.5 的 knot 继承检查可为 Introduction→Theory 叙事接力提供验证；Phase 2.6 的 Anchor/Gap/Prediction 序列可为 Introduction 的 Gap→Preview 结构提供节奏参照
