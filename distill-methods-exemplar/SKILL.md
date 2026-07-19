@@ -7,7 +7,7 @@ description: |
   三层目标：
   1. **学习顶刊写作叙述手法** — 理解 Methods 如何组织证据、处理 validity threat、完成说服
   2. **完善 write-methods skill** — DNA 量化和跨论文验证反哺主骨架和路由逻辑
-  3. **丰富 academic-writing-corpus** — 验证通过的变体写入 write-methods 内部 corpus，corpus 是学习成果的沉淀
+  3. **丰富 econometric-models** — 验证通过的变体写入 write-methods 内部 corpus，corpus 是学习成果的沉淀
 
   下游：`write-methods` (v3.0.0+) 检测到蒸馏请求时自动路由到本 skill。
   触发词：「蒸馏 methods」「methods 范文分析」「拆解 methods」「提取 methods 模板」「处理新论文 methods」「methods 骨架提炼」。
@@ -21,7 +21,7 @@ version: 1.1.0
 **你的工作是三层递进**：
 1. **学习顶刊叙述手法**（Phase 0–2）：设计分类 → 槽位映射 → 表达式骨架 + Validity Logic——回答"这篇论文的 Methods 是怎么说服审稿人的？"
 2. **量化和跨论文对比**（Phase 3–4）：Methods DNA 指标 + 与已有 corpus 交叉验证——回答"这个写法是独特的还是已经在 corpus 里了？"
-3. **沉淀到 corpus**（Phase 4–5）：仅将验证通过且真正新增的变体写入 `write-methods/academic-writing-corpus/[设计类型].md`——corpus 是学习成果，不是目标本身
+3. **沉淀到 corpus**（Phase 4–5）：仅将验证通过且真正新增的变体写入 `write-methods/econometric-models/[设计类型].md`——corpus 是学习成果，不是目标本身
 
 核心原则：
 - **How > What**：提炼段落如何组织证据、如何处理 validity threat、如何完成说服，而非复制具体措辞。
@@ -290,7 +290,7 @@ phase_2_distillation:
 ## Phase 4 — 技能更新指令生成（Skill Update Instructions）
 
 本阶段不再输出"供人工审阅"的参考注释，而是直接生成**可执行的技能更新指令**。输出回答三个问题：
-1. **改哪个文件** → 精确到 `write-methods/academic-writing-corpus/[设计类型].md`
+1. **改哪个文件** → 精确到 `write-methods/econometric-models/[设计类型].md`
 2. **怎么改** → ADD / EXTEND / REPLACE / SKIP，含具体骨架和插入位置
 3. **为什么** → 与当前 corpus 的差异 + 对 write-methods skill 的提升
 
@@ -299,7 +299,7 @@ phase_2_distillation:
 ```yaml
 phase_4_skill_update_instructions:
   - action: "ADD"           # ADD / EXTEND / REPLACE / SKIP
-    target_file: "生存分析.md"  # write-methods/academic-writing-corpus/ 下的文件名
+    target_file: "生存分析.md"  # write-methods/econometric-models/ 下的文件名
     target_slot: "M7"
     insert_after: "变体 6（piecewise exponential）"  # 语义定位——描述该插入在哪个已有变体之后，不硬编码数字
     skeleton: "..."

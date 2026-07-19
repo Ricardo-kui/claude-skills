@@ -4,7 +4,7 @@ corpus_enrichment:
   last_updated: "2026-05-22"
 
   evidence_updates:
-    - target: "academic-writing-corpus/生存分析.md"
+    - target: "econometric-models/生存分析.md"
       design_type: "生存分析"
       slot: "M8"
       action: "append_skeleton"

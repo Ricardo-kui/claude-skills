@@ -126,7 +126,7 @@ estimators:
           - diagnostic_reassurance
           - contextual_pattern
           notes: 15/28 篇 MVP30 范文使用
-          corpus_path: academic-writing-corpus/OLS-FE.md
+          corpus_path: econometric-models/OLS-FE.md
       R2:
         description: 模型序列 / 表格导航
         skeleton_variants:
@@ -146,7 +146,7 @@ estimators:
           rhythm_tags:
           - incremental_model_building
           - table_navigation
-          corpus_path: academic-writing-corpus/OLS-FE.md
+          corpus_path: econometric-models/OLS-FE.md
         - id: r2_ols_model_free_quartile_opening
           skeleton: We first present model-free evidence regarding the relationship between [IV] and [DV]. In the [web appendix],
             we show scatter plots of [DV] against [IV] for [subgroup description]. In Fig. [X], we divide the sample into [four
@@ -165,7 +165,7 @@ estimators:
           - model_free_evidence
           - quartile_means
           - descriptive_preview
-          corpus_path: academic-writing-corpus/OLS-FE.md
+          corpus_path: econometric-models/OLS-FE.md
         - id: r2_ols_heckman_two_stage_table_navigation
           skeleton: Table [X] shows the results of the first-stage selection equation. Our exclusion restriction, [instrument],
             significantly and [positively/negatively] predicts [selection_DV] (β = [value], p < [threshold]), consistent with
@@ -184,7 +184,7 @@ estimators:
           - heckman_first_stage
           - column_navigation
           - selection_correction
-          corpus_path: academic-writing-corpus/OLS-FE.md
+          corpus_path: econometric-models/OLS-FE.md
       R3:
         description: 主假设检验（四拍节奏）
         skeleton_variants:
@@ -210,7 +210,7 @@ estimators:
           - magnitude
           - support
           notes: 标准四拍，方向→显著性+系数→幅度→支持判断
-          corpus_path: academic-writing-corpus/OLS-FE.md
+          corpus_path: econometric-models/OLS-FE.md
         - id: r3_ols_four_beat_with_r2_embedded
           skeleton: Hypothesis [x] predicted... Model [y] shows... The R² increases from [value] to [value] when [predictor]
             is added, indicating that [predictor] explains an additional [value]% of the variance. Substantively... Thus,
@@ -229,7 +229,7 @@ estimators:
           - magnitude
           - support
           notes: 四拍变体：拍2嵌入 R² 变化解释
-          corpus_path: academic-writing-corpus/OLS-FE.md
+          corpus_path: econometric-models/OLS-FE.md
         - id: r3_ols_nonsignificant
           skeleton: Hypothesis [x] predicted that [predictor] would be [positive/negative] related to [outcome]. However,
             as shown in Model [y] of Table [z], the coefficient for [predictor] is [positive/negative] but not statistically
@@ -248,7 +248,7 @@ estimators:
           - nonsignificance
           - no_support
           notes: 非显著结果的三拍变体（缺幅度解释）
-          corpus_path: academic-writing-corpus/OLS-FE.md
+          corpus_path: econometric-models/OLS-FE.md
         - id: r3_ols_interquartile_magnitude
           skeleton: The coefficient for [IV] is [positive/negative] and statistically significant (β = [value], p < [threshold]).
             An interquartile move in [IV] from the 25th percentile to the 75th percentile is associated with a [N] [unit / percentage
@@ -266,7 +266,7 @@ estimators:
           - interquartile_magnitude
           - economic_significance
           - alternative_sample
-          corpus_path: academic-writing-corpus/OLS-FE.md
+          corpus_path: econometric-models/OLS-FE.md
       R4:
         description: 交互效应 / 条件效应
         skeleton_variants:
@@ -289,7 +289,7 @@ estimators:
           - three_way_interaction
           - marginal_effects_table
           - continuous_moderator
-          corpus_path: academic-writing-corpus/OLS-FE.md
+          corpus_path: econometric-models/OLS-FE.md
       R5:
         description: 经济 / 实质显著性
         skeleton_variants:
@@ -310,7 +310,7 @@ estimators:
           - magnitude
           - benchmark
           - contextualization
-          corpus_path: academic-writing-corpus/OLS-FE.md
+          corpus_path: econometric-models/OLS-FE.md
       R6:
         description: 非显著 / 混合 / 意外发现
         skeleton_variants: []
@@ -337,7 +337,7 @@ estimators:
           - unchanged_result
           - threat_reduction
           notes: 标准 threat-based 稳健性四拍
-          corpus_path: academic-writing-corpus/OLS-FE.md
+          corpus_path: econometric-models/OLS-FE.md
         - id: r7_ols_narrative_variant
           skeleton: We also examine whether [alternative explanation]. Specifically, we [method description]. Results reported
             in Table [x] show that [main finding] remains [robust/qualitatively similar].
@@ -354,7 +354,7 @@ estimators:
           - method
           - robustness_confirmation
           notes: 叙事型稳健性，弱化 threat 定位但仍明确
-          corpus_path: academic-writing-corpus/OLS-FE.md
+          corpus_path: econometric-models/OLS-FE.md
         - id: r7_ols_alternative_dv_falsification
           skeleton: An alternative way to establish causality is to provide a falsification test where we examine [alternative_DV],
             an outcome that is outside the decision-making domain of [focal_actor]. We use the [estimator] specification in [Table
@@ -373,7 +373,7 @@ estimators:
           - falsification
           - alternative_outcome
           - domain_boundary
-          corpus_path: academic-writing-corpus/OLS-FE.md
+          corpus_path: econometric-models/OLS-FE.md
         - id: r7_ols_endogeneity_threat_table
           skeleton: Endogeneity is mainly caused by issues relating to omitted variables and simultaneity. We include [control_strategy]
             to rule out omitted variables and use [temporal_strategy] to ensure causal priority. We also use the [DWH test] with
@@ -394,7 +394,7 @@ estimators:
           - dwh_test
           - gaussian_copula
           - threat_table
-          corpus_path: academic-writing-corpus/OLS-FE.md
+          corpus_path: econometric-models/OLS-FE.md
       R8:
         description: 补充 / 事后 / 机制分析
         skeleton_variants: []
@@ -453,7 +453,7 @@ estimators:
           rhythm_tags:
           - table_presentation
           notes: Logit 的 R1 通常不报告 VIF，或弱化诊断
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r1_descriptive_vif_relogit
           skeleton: '[Descriptive statistics + correlation matrix presented first, with explicit note that VIFs are below
             threshold and multicollinearity is not a concern]. Then, [estimation approach declared upfront: random-effects
@@ -473,7 +473,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
       R3:
         skeleton_variants:
         - id: r3_logit_four_beat
@@ -499,7 +499,7 @@ estimators:
           - probability_change
           - support
           notes: Logit 四拍变体：拍3拆分为系数+AME+概率变化三小拍
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r3_eventstudy_nonparametric_validation
           skeleton: '[Before presenting CAR comparisons, a brief nonparametric validation sentence confirms that the market
             indeed views positive surprises favorably and negative surprises as bad news (Patell Z and generalized sign tests)].
@@ -517,7 +517,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r3_probit_four_beat_ame_embedded
           skeleton: '[Hypothesis restatement]. [Table navigation]. [Coefficient report with significance]. [AME justification].
             [Magnitude interpretation via probability change]. [Support judgment].'
@@ -532,7 +532,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r3_sentence_ame_justification_probit
           skeleton: Due to the difficulty in directly interpreting regression coefficients and significance levels in probability
             models, and as hypotheses should not be tested solely by examining p-values, the average marginal effect is visualized
@@ -548,7 +548,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r3_sentence_probability_magnitude_probit
           skeleton: A one-standard-deviation increase in [IV] from the mean value ([from] to [to]) [increased/decreased] the
             probability of [DV] from [base]% to [new]%.
@@ -563,7 +563,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r3_sentence_coefficient_significance_probit
           skeleton: Model [Y] reports that the coefficient for [IV] is [positive/negative] and significant (b = [value], p
             = [threshold]).
@@ -578,7 +578,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r3_sentence_logit_odds_likelihood
           skeleton: '[Table X] shows that [IV] had an odds ratio of [value] (p [threshold]), which means [IV] firms were [less/more]
             likely to [DV] than [reference group].'
@@ -593,7 +593,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r3_sentence_nonsignificant_inline
           skeleton: However, [Table X] shows that [IV] did not have a significant effect on the likelihood of [DV]. Thus,
             Hypothesis [x] was not supported.
@@ -608,7 +608,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
       R5:
         skeleton_variants:
         - id: r5_robustness_gee_heckman_endogeneity
@@ -631,7 +631,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
       R7:
         skeleton_variants:
         - id: r7_threat_based_iv_heckman
@@ -648,7 +648,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r7_sentence_threat_endogeneity
           skeleton: Unobservable [unit]-level factors could affect [IV] and [DV]. Some of these factors may introduce the
             possibility of reverse causality, omitted variable bias, or both, leading to potential endogeneity in our study.
@@ -663,7 +663,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r7_sentence_iv_validity
           skeleton: The [test name] results suggest that our instruments are exogenous ([statistic], p = [threshold]). Furthermore,
             the second-stage regression models produced results consistent with those of Models [Y] and [Z].
@@ -678,7 +678,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r7_sentence_heckman_two_stage
           skeleton: Using [author_year]'s criteria to select the appropriate estimation approach, we employed a Heckman correction
             model. We included predictor variables in the first-stage models that were significantly associated with [DV],
@@ -696,7 +696,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r7_sentence_supplemental_regression_caveat
           skeleton: It is important to note that these regressions do not directly test Hypotheses [x–y], which address the
             performance of [group A] and [group B] relative to each other and relative to [reference]. Instead, the regressions
@@ -712,7 +712,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
       R2:
         description: ''
         skeleton_variants:
@@ -735,7 +735,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
       R4:
         description: ''
         skeleton_variants:
@@ -759,7 +759,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r4_probit_interaction_region_significance
           skeleton: '[Model navigation adding interaction]. [Interaction coefficient report]. [Figure navigation]. [Marginal
             effect significance region description]. [Support judgment with caveat if partial].'
@@ -774,7 +774,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r4_sentence_interaction_coefficient
           skeleton: Model [Y] adds the interaction term between [moderator] and [IV], yielding a [positive/negative] coefficient
             for [DV] (b = [value], p = [threshold]).
@@ -789,7 +789,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r4_sentence_region_significance_partial
           skeleton: Although this interaction term is not statistically significant at the conventional p = [threshold] threshold,
             [Figure X] indicates that the marginal effect of [IV] is significant for [moderator] levels below [value]. Thus,
@@ -805,7 +805,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r4_sentence_subgroup_comparison_significance
           skeleton: The [outcome]s for the [condition A] ([value] [unit]) and [condition B] ([value] [unit]) categories were
             significantly [larger/smaller] than the [outcome] for the [reference] category ([value] [unit]), and the [outcome]
@@ -821,7 +821,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r4_sentence_mixed_support_inline
           skeleton: The nonparametric tests indicated that the [outcome]s for [condition A] and [condition B] were not significantly
             different from their predicted values, but the [outcome]s for the [reference] category were significantly different.
@@ -840,7 +840,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
       R6:
         description: ''
         skeleton_variants:
@@ -858,7 +858,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/Logit-Probit-Ordered-Probit.md
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
     cross_slot_patterns:
     - id: csp_Logit_Probit_Ordered_Probit_R2_9f484872
       pattern: Binary-outcome hypotheses are tested using random-effects logit with matched-sample panel data, and results
@@ -966,7 +966,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r1_paragraph_descriptive_vif
           skeleton: '[Descriptive statistics table reference]. [Correlation matrix reference]. [VIF diagnostic report]. [Multicollinearity
             conclusion].'
@@ -981,7 +981,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r1_sentence_vif_check
           skeleton: To alleviate multicollinearity concerns, we measure the variance inflation factors (VIFs) and find no
             VIFs greater than [threshold], indicating a low likelihood that multicollinearity is leading to inefficient estimates
@@ -997,7 +997,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
       R2:
         skeleton_variants:
         - id: r2_main_hazard_exp_interpret
@@ -1013,7 +1013,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r2_paragraph_model_sequence_controls_first
           skeleton: '[Table navigation]. [Controls-only model observation]. [Key control variable directional notes]. [Full
             model introduction].'
@@ -1028,7 +1028,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r2_sentence_controls_direction
           skeleton: We first include all control variables and observe that [control_i] and [control_j] are positively associated
             with the hazard of [DV], while [control_k] and [control_l] are negatively associated with the hazard of [DV].
@@ -1043,7 +1043,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
       R3:
         skeleton_variants:
         - id: r3_survival_aft_four_beat
@@ -1067,7 +1067,7 @@ estimators:
           - time_interpretation
           - support
           notes: AFT 四拍：拍3必须解释 exponentiated beta 和生存时间含义
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r3_survival_shape_parameter_first
           skeleton: Before turning to the hypotheses, we note that the shape parameter [rho/p] is [value] and [significantly
             different from 1 / not significantly different from 1], suggesting that [the hazard is increasing/decreasing/constant]
@@ -1084,7 +1084,7 @@ estimators:
           - model_validation
           - hazard_shape
           notes: shape parameter 前置变体，目前仅 1 篇，待验证
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r3_interaction_forced_ceo
           skeleton: '[R3] 调节效应（机制检验）结果：引入交互项后，先复制主效应模型作为对照列，再报告含交互项的模型。 对交互项系数进行符号与显著性解读，判断调节方向是否支持假设中的机制解释（如“前任 CEO 被强制解职时，早期
             tenure 的 recall hazard 更高”）。 若交互项出现非假设预期方向，需额外说明。'
@@ -1098,7 +1098,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r3_paragraph_hazard_four_beat
           skeleton: '[Hypothesis restatement]. [Table navigation + model reference]. [Coefficient direction and significance].
             [Exponential transformation / magnitude interpretation]. [Support judgment].'
@@ -1113,7 +1113,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r3_sentence_coefficient_significance_hazard
           skeleton: Model [Y] of [Table X] shows that the coefficient for [IV] is [positive/negative] and statistically significant
             (β = [value], p < [threshold]) in comparison to [reference category].
@@ -1128,7 +1128,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r3_sentence_exponential_magnitude
           skeleton: In this model, a positive β coefficient indicates a higher hazard of [DV]. Specifically, the relationship
             between the hazard rate and the β coefficient is given by exp(β) – 1 as hazard model coefficients need to be interpreted
@@ -1145,7 +1145,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r3_sentence_support_judgment
           skeleton: This provides support for Hypothesis [N]. The hazard of [DV] is [high/low] [early/late] in [IV] and [decreases/increases]
             afterward.
@@ -1160,7 +1160,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
       R4:
         skeleton_variants:
         - id: r4_subgroup_wald_test
@@ -1176,7 +1176,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r4_paragraph_interaction_replication
           skeleton: '[Hypothesis introduction]. [Replication column reference for model comparison]. [Interaction term coefficient
             + significance]. [Directional interpretation of moderation]. [Additional observation on unexpected term].'
@@ -1191,7 +1191,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r4_sentence_interaction_significance
           skeleton: The coefficient for [moderator] * [IV] (β = [value], p < [threshold]) is [positive/negative] and significant,
             indicating that the [high/low] hazard of [DV] [early/late] in [IV] is [stronger/weaker] when [moderator condition],
@@ -1207,7 +1207,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r4_paragraph_subgroup_wald
           skeleton: '[Subgroup delineation]. [Replication column reference]. [Test objective statement]. [Low-mod subgroup
             null result]. [High-mod subgroup significant result]. [Wald chi-square test for coefficient difference]. [Mechanism
@@ -1223,7 +1223,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r4_sentence_subgroup_null
           skeleton: When [DV] is [low/high] [moderator], we find no significant relationship between [IV] and the hazard of
             [DV] (column [N], β = [value], p > [threshold]).
@@ -1238,7 +1238,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r4_sentence_subgroup_significant
           skeleton: However, when [DV] is [low/high] [moderator], we find a significant effect of [IV] (column [N], β = [value],
             p < [threshold]) on the hazard of [DV].
@@ -1253,7 +1253,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r4_sentence_wald_comparison
           skeleton: The coefficient for [IV] in column [N] of [Table X] is also statistically different from and greater in
             magnitude than the [IV] coefficient in column [M] of [Table X] (Wald chi-square test p < [threshold]).
@@ -1268,7 +1268,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r4_sentence_full_explanation_mechanism
           skeleton: In fact, column [N] of [Table X] indicates that [low/high] [moderator] [DV] are statistically independent
             of [IV], which implies that [high/low] [moderator] [DV] fully explain the [low/high] hazard of [DV] [early/late]
@@ -1284,7 +1284,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
       R7:
         skeleton_variants:
         - id: r7_robust_measure_sensitivity
@@ -1300,7 +1300,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r7_paragraph_threat_based_robustness
           skeleton: '[Threat positioning sentence]. [Test action: alternative model/method]. [Result: consistent support with
             coefficient reference]. [Conclusion: confidence building].'
@@ -1315,7 +1315,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r7_sentence_threat_positioning
           skeleton: One concern is that our findings depend on [specific threat].
           skeleton_level: sentence
@@ -1329,7 +1329,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r7_sentence_test_action
           skeleton: To address this concern, we re-estimate our models using [alternative method].
           skeleton_level: sentence
@@ -1343,7 +1343,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r7_sentence_consistent_support
           skeleton: Column [N] of [Table X] indicates consistent support in comparison to [Table Y] as the [IV] β = [value]
             (p < [threshold]) and the [IV] β = [value] (p < [threshold]).
@@ -1358,7 +1358,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r7_sentence_aggregate_confidence
           skeleton: In aggregate, the results of these alternative specifications help build confidence that our [estimator]
             modeling strategy is robust to alternative methodological choices.
@@ -1373,7 +1373,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r7_paragraph_measure_sensitivity
           skeleton: '[Central measure importance statement]. [Original categorization rationale]. [Alternative measure 1:
             linear/log]. [Alternative measure 2: different categorization]. [Cross-specification comparison with figure reference].
@@ -1389,7 +1389,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r7_sentence_measure_sensitivity_conclusion
           skeleton: These results shown in Figure [X] provide overall support for Hypothesis [N] and indicate that our finding
             that the hazard of [DV] is [high/low] [early/late] in [IV] and [decreases/increases] afterward is unlikely to
@@ -1405,7 +1405,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r7_paragraph_cem_matching
           skeleton: '[Sample selection bias concern]. [CEM method introduction with theoretical covariates]. [Matching procedure
             details]. [ATE results for treatment conditions]. [Conclusion: selection bias control confirmation].'
@@ -1420,7 +1420,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r7_sentence_cem_ate
           skeleton: In row [N] of [Table X], we observe a [positive/negative] and significant treatment effect of [IV] (Average
             Treatment Effect (ATE) = [value], p < [threshold]) on the likelihood of [DV].
@@ -1435,7 +1435,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r7_paragraph_reverse_causality
           skeleton: '[Reverse causality threat definition]. [Test design: IV→DV direction flip]. [Control model observations].
             [Key IV coefficient null result]. [Conclusion: reverse causality unlikely].'
@@ -1450,7 +1450,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r7_sentence_reverse_causality_conclusion
           skeleton: These results indicate that reverse causality is unlikely to be creating significant bias in our study.
           skeleton_level: sentence
@@ -1464,7 +1464,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r7_paragraph_alternative_exclusion
           skeleton: '[Alternative theory introduction]. [Multiple operational measures description]. [Interaction design rationale].
             [Results: main effects persist, interactions null]. [Reasonable confirmation statement with hedging].'
@@ -1479,7 +1479,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r7_sentence_alternative_exclusion
           skeleton: This provides reasonable confirmation that the observed effects are more likely explained by [primary
             theory] not by changes in [alternative mechanism], though the alternative explanation cannot be completely ruled
@@ -1495,7 +1495,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
       R5:
         description: ''
         skeleton_variants:
@@ -1512,7 +1512,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r5_paragraph_figure_coefficient_plot
           skeleton: '[Figure navigation]. [Panel-by-panel coefficient pattern description]. [Cross-condition comparison].'
           skeleton_level: paragraph
@@ -1526,7 +1526,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
         - id: r5_sentence_figure_panel_description
           skeleton: In Figure [X][panel], we observe a [high/low] hazard for [IV condition 1] and a [high/low] hazard for
             [IV condition 2].
@@ -1541,7 +1541,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
       R6:
         description: ''
         skeleton_variants:
@@ -1557,7 +1557,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
       R8:
         description: ''
         skeleton_variants:
@@ -1574,7 +1574,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
       R9:
         description: ''
         skeleton_variants:
@@ -1591,7 +1591,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/生存分析.md
+          corpus_path: econometric-models/生存分析.md
     cross_slot_patterns:
     - id: csp_生存分析_R4_becd5cad
       pattern: 子群分析中不仅报告分样本系数，还使用 Wald chi-square 检验直接比较系数差异，并进一步指出低 discretion 组中主效应完全消失（β≈0, p>0.10），从而将机制验证从‘差异显著’推进到‘效应由某子群完全解释’。
@@ -1654,7 +1654,7 @@ estimators:
           - pre_treatment_coefficients
           - design_validation
           notes: DiD 标准分支：R2 前置平行趋势
-          corpus_path: academic-writing-corpus/DiD.md
+          corpus_path: econometric-models/DiD.md
       R3:
         skeleton_variants:
         - id: r3_did_baseline_estimate
@@ -1674,7 +1674,7 @@ estimators:
           - baseline_estimate
           - treatment_effect
           - magnitude
-          corpus_path: academic-writing-corpus/DiD.md
+          corpus_path: econometric-models/DiD.md
       R4:
         skeleton_variants: []
       R7:
@@ -1696,7 +1696,7 @@ estimators:
           - placebo_test
           - permutation
           - threat_reduction
-          corpus_path: academic-writing-corpus/DiD.md
+          corpus_path: econometric-models/DiD.md
     cross_slot_patterns: []
     anti_patterns: []
     honesty_boundaries: []
@@ -1731,7 +1731,7 @@ estimators:
           - rate_interpretation
           - ame_bridge
           notes: IRR + AME 双轨解释
-          corpus_path: academic-writing-corpus/计数模型.md
+          corpus_path: econometric-models/计数模型.md
         - id: r3_count_cross_model_consistency
           skeleton: Results are similar across models. The main effect of [predictor] is consistently significant and [direction].
             As [predictor] increases, [units] are generally [less/more] likely to [outcome]. However, the interaction between
@@ -1748,7 +1748,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/计数模型.md
+          corpus_path: econometric-models/计数模型.md
         - id: r3_count_nonsignificant_brief
           skeleton: The [effect_type] between [predictor] and [moderator] is not significant, failing to provide support for
             Hypothesis [x].
@@ -1762,7 +1762,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/计数模型.md
+          corpus_path: econometric-models/计数模型.md
       R4:
         skeleton_variants: []
       R5:
@@ -1787,7 +1787,7 @@ estimators:
           - min_max_contrast
           - penalty_reduction
           notes: 负二项交互项不能解释为 count difference，必须用 predicted counts
-          corpus_path: academic-writing-corpus/计数模型.md
+          corpus_path: econometric-models/计数模型.md
       R7:
         skeleton_variants:
         - id: r7_theory_derived_posthoc
@@ -1805,7 +1805,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/计数模型.md
+          corpus_path: econometric-models/计数模型.md
         - id: r7_text_measure_robustness_bundle
           skeleton: We assess whether the findings depend on specific choices in measuring
             [text construct]. First, to address the concern that the results are sensitive
@@ -1829,7 +1829,7 @@ estimators:
           - measurement_robustness
           - text_construct
           notes: 文本测量稳健性必须按测量威胁组织，而非按表格罗列
-          corpus_path: academic-writing-corpus/计数模型.md
+          corpus_path: econometric-models/计数模型.md
         - id: r7_composite_text_disaggregation
           skeleton: Because [text construct] is a composite of [component 1], [component
             2], and [component 3], we examine whether the interaction with [baseline
@@ -1852,7 +1852,7 @@ estimators:
           - construct_boundary
           - facet_comparison
           notes: 复合文本指标必须分解以显示哪个 facet 驱动效应
-          corpus_path: academic-writing-corpus/计数模型.md
+          corpus_path: econometric-models/计数模型.md
       R2:
         description: ''
         skeleton_variants:
@@ -1870,7 +1870,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/计数模型.md
+          corpus_path: econometric-models/计数模型.md
       R1:
         description: ''
         skeleton_variants:
@@ -1892,7 +1892,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/计数模型.md
+          corpus_path: econometric-models/计数模型.md
     cross_slot_patterns:
     - id: csp_计数模型_R7_05be4c05
       pattern: OB/institutional theory 论文中，post-hoc 机制检验和后果检验常被包装在 Robustness Checks 标题下，使用 'theoretical logic suggests...
@@ -1943,7 +1943,7 @@ estimators:
           - relevance
           - partial_r2
           notes: 第一阶段嵌入 R2，而非独立段落
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r2_iv_first_stage_pre_reporting
           skeleton: '[R2-IV] 在报告第二阶段主效应之前，先以独立段落报告第一阶段结果：列出工具变量对内生变量的估计系数、F统计量以拒绝弱工具变量原假设，并报告Wu-Hausman内生性检验和Sargan-Hansen过度识别检验结果。该段落同时承担table
             navigation功能，明确说明Table X的Panel A/B分别对应voluntary/mandatory recalls的第一阶段与第二阶段。'
@@ -1957,7 +1957,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r2_heckman_first_stage_navigation
           skeleton: Since not all firms in our sample [experienced the event] in a given year, we used Heckman selection models
             to control for selection bias by estimating a firm’s likelihood of [event] using a selection instrument, which
@@ -1976,7 +1976,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r2_iv_first_stage_navigation
           skeleton: In the first stage, we regress [endogenous_variable] on [instrument_vector], along with all other control
             variables (i.e., [firm_characteristics], [peer_group_characteristics], and [fixed_effects]). The first-stage output
@@ -1994,7 +1994,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r2_sentence_iv_first_stage_significance
           skeleton: The first-stage results in [Table X] show that our instrument is a significant predictor of [IV] (coefficient
             = [value], p < [threshold]), and the F-test rejects the null hypothesis of weak instruments (F = [value], p <
@@ -2010,7 +2010,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r2_sentence_iv_endogeneity_test
           skeleton: A Wu-Hausman test rejects the null hypothesis of no endogeneity (statistic = [value], p < [threshold]),
             suggesting that [estimator] is appropriate.
@@ -2025,7 +2025,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r2_sentence_iv_overidentification
           skeleton: A Sargan-Hansen test does not reject the null hypothesis that the instruments are exogenous (statistic
             = [value], n.s.), supporting their validity.
@@ -2040,7 +2040,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r2_sentence_progressive_model_sequence
           skeleton: Column [1] of [Table X] shows the results when we run a [estimator] with [IV] and [control variables].
             We then add [additional variables] by entering [variable group]. As we report in Column [2] of [Table X], [exogenous
@@ -2057,7 +2057,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
       R3:
         skeleton_variants:
         - id: r3_iv_second_stage
@@ -2077,7 +2077,7 @@ estimators:
           rhythm_tags:
           - second_stage
           - causal_interpretation
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r3_iv_main_effect_dual_outcome
           skeleton: '[R3-IV] 主假设检验采用双结果并行报告结构：对voluntary和mandatory recalls分别报告第二阶段系数。每结果遵循四拍节奏——(1)方向：与H1一致，系数为负；(2)显著性：报告β值与p值（如β_lobbying
             = −2.473, p < .05）；(3)幅度：在Discussion中以经济显著性补充（如每增加04,367 lobbying减少一次voluntary recall）；(4)支持判断：Thus, Hypothesis
@@ -2092,7 +2092,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r3_probit_marginal_effect_four_beat
           skeleton: Model [X] (Table [Y]) reports the second-stage results of the Heckman selection probit model. The analysis
             shows a [positive/negative] and significant coefficient for [predictor] (b = [value], p = [threshold]). Due to
@@ -2111,7 +2111,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r3_iv_second_stage_four_beat
           skeleton: As we report in [Model X] of [Table Y], the [effect_name] is statistically significant (beta = [value],
             p < [threshold]). Because we have multiple instruments, we conducted overidentification tests too, and the [Test
@@ -2127,7 +2127,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r3_iv_main_effect_four_beat
           skeleton: '[Hypothesis restatement: predicted direction of IV on DV]. [Table navigation to second-stage results].
             [Coefficient report: predicted value of IV is negative/positive and significant]. [Control variable highlights:
@@ -2143,7 +2143,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r3_sentence_coefficient_significance_iv
           skeleton: Consistent with [Hypothesis X], the coefficient for the predicted value of [IV] is [negative/positive]
             and statistically significant (β = [value], p < [threshold]).
@@ -2158,7 +2158,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r3_sentence_control_variable_direction
           skeleton: '[Control_i] displays a significant and [negative/positive] relationship with [DV] (β = [value], p < [threshold]);
             [interpretation clause].'
@@ -2173,7 +2173,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r3_2sls_instrument_diagnostics_embedded
           skeleton: '[Hypothesis restatement]. [Table navigation with progressive model sequence]. [Coefficient report with
             significance and instrument diagnostics]. [Magnitude interpretation in probability terms]. [Support judgment].
@@ -2189,7 +2189,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r3_sentence_2sls_coefficient_significance
           skeleton: The [estimator] results in Column [Y] of [Table X] show that the coefficient for [IV] is [positive/negative]
             and statistically significant (β = [value], p < [threshold]), indicating that [interpretation in probability terms].
@@ -2204,7 +2204,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r3_sentence_first_stage_diagnostics
           skeleton: The first-stage regression ([Table X], Column [Y]) shows that [number] of [number] instruments have significant
             effects on the endogenous variable. The R-square of the first-stage regression is [value]; the joint significance
@@ -2221,7 +2221,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r3_sentence_hansen_j
           skeleton: The Hansen J-statistic for the [estimator] specification (Column [Y] in [Table X]) is [value] (p > [threshold]),
             indicating that the model is not overidentified.
@@ -2236,7 +2236,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
       R7:
         skeleton_variants:
         - id: r7_iv_exclusion_restriction
@@ -2254,7 +2254,7 @@ estimators:
           rhythm_tags:
           - exclusion_restriction
           - channel_test
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r7_iv_robustness_threat_based_four_block
           skeleton: '[R7-IV稳健性] 按四大威胁组织稳健性检验，每威胁对应独立子节：(1) Long-Term Effects——以Koyck stock变量检验carryover效应；(2) Simultaneous
             Equation System——以GMM同时估计firm与regulator方程，允许误差相关并修正异方差/自相关；(3) Exogenous Event——以外生冲击（如Flint水危机）作为自然实验，用DiD验证GM相对其他企业的lobbying与recall双重差异；(4)
@@ -2269,7 +2269,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r7_iv_threat_based_robustness
           skeleton: '[Threat sentence]. A common approach to this problem is using two-stage least squares modeling ([citation]).
             Regarding [predictor_A], we used two instruments: [Instrument_1] and [Instrument_2]. [Instrument_1] ([citation])
@@ -2293,7 +2293,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r7_falsification_placebo_network
           skeleton: As falsification, we test the assertion that [focal_unit] should not [outcome_verb] from [units] that
             are outside its [group_type]. To construct a 'false' [group_type], we randomly assign [units] to [groups]. We
@@ -2310,7 +2310,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r7_robustness_threat_catalog_table
           skeleton: 'We conducted additional analyses to exclude alternative explanations (summarized in [Table X]). [Threat
             1]: [Description of threat]. [Test and result sentence]. [Threat 2]: [Description of threat]. [Test and result
@@ -2325,7 +2325,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r7_robustness_analyst_scrutiny
           skeleton: '[External_actor] serve as the external governance mechanism for [stakeholders] through monitoring [focal_behavior].
             When more [peers] [behavior], [focal_units] that do not [behavior] face higher pressure from [external_actor]
@@ -2342,7 +2342,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r7_robustness_endogenous_reference_group
           skeleton: We construct a [unit]'s [group_type] based on [membership_criterion]. It is likely that a [unit]'s [membership_decision]
             is correlated to its [outcome_decision], which may bias the [effect_name] estimates. We first examine whether
@@ -2360,7 +2360,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r7_robustness_habitual_behavior
           skeleton: We conduct two robust tests to alleviate the concern that a [unit]'s habitual [behavior] causes the issues
             of autocorrelation and state dependence and thus biases the estimation of [effect_name]. First, we run a [estimation_method]
@@ -2381,7 +2381,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r7_threat_based_robustness_iv
           skeleton: '[Threat: long-term carryover effects]. [Test: stock variable / Koyck model]. [Result: substantively unchanged].
             [Threat: simultaneity of firm and regulator decisions]. [Test: simultaneous equation system / GMM]. [Result: consistent].
@@ -2398,7 +2398,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r7_sentence_threat_positioning
           skeleton: One concern is that our findings depend on [specific threat].
           skeleton_level: sentence
@@ -2412,7 +2412,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r7_sentence_test_action
           skeleton: To address this concern, we re-estimate our models using [method].
           skeleton_level: sentence
@@ -2426,7 +2426,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r7_sentence_result_unchanged
           skeleton: The results are substantively unchanged (β = [value], p < [threshold]), reducing concerns that [threat]
             drives the findings.
@@ -2441,7 +2441,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r7_sentence_simultaneous_equation
           skeleton: We incorporate the potential correlation of the model errors for [entity A] and [entity B], while also
             correcting for endogeneity using [estimator].
@@ -2456,7 +2456,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r7_sentence_nonlinear_endogeneity
           skeleton: We account for the discrete, ordered nature of [DV] using [nonlinear model], accompanied by a linear model
             for the endogenous variable [IV].
@@ -2471,7 +2471,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r7_threat_table_matrix
           skeleton: '[Threat statement]. [Test description]. [Result summary with coefficient stability]. [Conclusion reducing
             threat concern]. [Cross-reference to robustness table].'
@@ -2486,7 +2486,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r7_sentence_robustness_confirmation
           skeleton: We [still/find] [robust/significant] [effect] ([coefficient], p < [threshold], Column [Y], [Table X]).
           skeleton_level: sentence
@@ -2500,7 +2500,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r7_sentence_heterogeneity_attenuation
           skeleton: The interaction between [IV] and [moderator] is [positive/negative] and significant (β = [value], p <
             [threshold]), indicating that [effect] attenuates as [moderator] increases.
@@ -2515,7 +2515,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r7_sentence_multiple_sd_heterogeneity
           skeleton: To see the existence of [effect] at high levels of [moderator], we calculate the [effect] when [moderator]
             is at mean, one standard deviation above mean, [one and a half] standard deviations above the mean, and two standard
@@ -2533,7 +2533,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
       R4:
         description: ''
         skeleton_variants:
@@ -2551,7 +2551,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r4_interaction_marginal_effect_region_plot
           skeleton: Model [X] (Table [Y]) adds the interaction term between [moderator] and [predictor], yielding a [positive/negative]
             coefficient for [outcome] (b = [value], p [relation] [threshold]). Although this interaction term is not statistically
@@ -2567,7 +2567,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r4_peer_subgroup_decomposition
           skeleton: 'We estimate [Equation X] to determine how a [unit] resolves the uncertainty in [decision]—whether it
             infers information from the behavior of [benchmark_type_A] or [benchmark_type_B]. We rank-order [units] within
@@ -2587,7 +2587,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r4_iv_moderation_three_part
           skeleton: '[Moderator 1] moderates the effect of [IV] on [DV] (β = [value], p < [threshold]), consistent with [Hypothesis
             X]. [Moderator 2] also moderates the effect (β = [value], p < [threshold]), consistent with [Hypothesis Y]. [Indirect
@@ -2603,7 +2603,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r4_sentence_interaction_significance
           skeleton: '[Moderator] moderates the effect of [IV] on [DV] (β = [value], p < [threshold]); consistent with [Hypothesis
             X], [interpretation of direction].'
@@ -2618,7 +2618,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r4_sentence_indirect_moderation
           skeleton: We find empirical evidence of a [full/partial] indirect moderation effect (β = [value], p < [threshold]);
             the interaction between [mediator] and [IV] mediates the moderating effect of [moderator].
@@ -2633,7 +2633,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r4_subgroup_wald_sequence
           skeleton: '[Mechanism hypothesis restatement]. [Subgroup construction logic]. [Table navigation]. [Coefficient comparison
             across subgroups]. [Wald test for coefficient differences]. [Support judgment for mechanism]. [Endogeneity correction
@@ -2649,7 +2649,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r4_sentence_subgroup_coefficient_comparison
           skeleton: The effect of the [subgroup A] is highest (β = [value], p < [threshold]), followed by [subgroup B] (β
             = [value], p < [threshold]), [subgroup C] (β = [value], p < [threshold]), and [subgroup D] (β = [value], n.s.).
@@ -2664,7 +2664,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r4_sentence_wald_test_difference
           skeleton: The Wald test for the difference between the [subgroup A] and [subgroup B] coefficients is statistically
             significant (F-statistic = [value], p < [threshold]).
@@ -2679,7 +2679,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r4_sentence_control_function
           skeleton: We implement a control function approach in which we regress [endogenous variable] on [instruments] and
             other variables in the first stage and add the error terms from the first stage to [Equation X] as endogeneity
@@ -2696,7 +2696,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
       R5:
         description: ''
         skeleton_variants:
@@ -2713,7 +2713,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r5_probabilistic_magnitude_one_sd
           skeleton: A one-standard-deviation increase in [predictor] from the mean value ([from] to [to]) [increased/decreased]
             the probability of [outcome] from [base]% to [new]%.
@@ -2727,7 +2727,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r5_marginal_probability_interpretation_lpm
           skeleton: Our results indicate a robust [effect_name]; if [peer_behavior] increases by [X%], a [unit]'s [outcome_probability]
             increases by [Y%]-[Z%].
@@ -2741,7 +2741,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r5_economic_significance_embedded
           skeleton: '[Magnitude statement: unit change in IV translates to unit change in DV]. [Cost benchmark: monetary value
             per unit of IV]. [Outcome scale benchmark: typical unit of DV]. [Back-of-the-envelope calculation: total savings
@@ -2757,7 +2757,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r5_sentence_unit_translation
           skeleton: Approximately $[value] more in [IV] is associated with one fewer [DV], assuming a typical average [DV]
             of [unit].
@@ -2772,7 +2772,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r5_sentence_back_of_envelope
           skeleton: If we assume an average, conservative cost of $[value] per [unit] of [DV], one fewer [DV] implies nearly
             $[value] in savings.
@@ -2787,7 +2787,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r5_sentence_probability_change_magnitude
           skeleton: If [IV] increases by [value]%, a [unit]'s [DV] increases by [value]%–[value]%.
           skeleton_level: sentence
@@ -2801,7 +2801,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
       R6:
         description: ''
         skeleton_variants:
@@ -2819,7 +2819,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r6_partial_support_null_boundary
           skeleton: Although the interaction term is not statistically significant at the conventional p = 0.05 threshold,
             Figure [Z] indicates that the marginal effect of [predictor] is significant for [moderator] levels below [value].
@@ -2834,7 +2834,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r6_sentence_null_effect_credibility
           skeleton: We find no [effect] (β = [value], p > [threshold]), as detailed in Column [Y] of [Table X] (i.e., a null
             effect lends credibility to our argument that [interpretation]).
@@ -2849,7 +2849,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
       R8:
         description: ''
         skeleton_variants:
@@ -2866,7 +2866,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r8_post_hoc_tactic_differences
           skeleton: We also assessed whether the two [tactics] indeed differ in meaningful ways as we discussed previously.
             Our results suggest that [group_A] are significantly [more/less] likely to [outcome1] (Models [X]–[Y]), but do
@@ -2884,7 +2884,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r8_similarity_dimension_decomposition
           skeleton: '[Previous_result] shows that [units] are more likely to be influenced by [peer_type]. We next investigate
             how the [peer_type] influence varies, depending on those [peers]'' [dimension_A] and [dimension_B]. [Theoretical
@@ -2905,7 +2905,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r8_sentence_followup_question
           skeleton: We next investigate how [mechanism] varies, depending on [dimension 1] and [dimension 2].
           skeleton_level: sentence
@@ -2919,7 +2919,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r8_sentence_relative_importance
           skeleton: In summary, we find evidence that, on average, [units] [mimic/follow] [peer type A] more so than [peer
             type B].
@@ -2934,7 +2934,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
       R1:
         description: ''
         skeleton_variants:
@@ -2954,7 +2954,7 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
-          corpus_path: academic-writing-corpus/IV-2SLS.md
+          corpus_path: econometric-models/IV-2SLS.md
     cross_slot_patterns:
     - id: csp_IV_2SLS_R4_b8673d8b
       pattern: 首次在marketing顶刊中观察到indirect moderation（Van Kollenburg & Croon 2021）的完整实证报告范式：通过Equation 2→5的嵌套模型序列，区分Model A（partial
@@ -3148,7 +3148,7 @@ estimators:
           - means_ci
           - hypothesis_support
           notes: 实验 ANOVA 必须报告 η² 和条件均值/CI
-          corpus_path: academic-writing-corpus/实验.md
+          corpus_path: econometric-models/实验.md
         - id: r3_experiment_mediation_hayes
           skeleton: To examine whether [mediator] explains the effect of [IV] on [DV],
             we first tested whether [IV] influenced [mediator]. A one-way ANOVA showed
@@ -3173,7 +3173,7 @@ estimators:
           - process_indirect_effect
           - bootstrap_ci
           notes: Hayes PROCESS + bootstrap CI 是实验中介报告标准
-          corpus_path: academic-writing-corpus/实验.md
+          corpus_path: econometric-models/实验.md
       R7:
         skeleton_variants: []
       R2:
@@ -3227,7 +3227,7 @@ estimators:
           - per_study_summary
           - bounded_claim
           notes: 多研究 Results 必须显式说明什么变了、什么一致、边界在哪里
-          corpus_path: academic-writing-corpus/多研究.md
+          corpus_path: econometric-models/多研究.md
     cross_slot_patterns: []
     anti_patterns: []
     honesty_boundaries: []
@@ -3351,7 +3351,7 @@ estimators:
           - three_way_interaction
           - marginal_effects_table
           - continuous_moderator
-          corpus_path: academic-writing-corpus/三向交互.md
+          corpus_path: econometric-models/三向交互.md
       R7:
         skeleton_variants: []
     cross_slot_patterns: []
@@ -3411,7 +3411,7 @@ estimators:
           - process_model
           - phase_preview
           - relational_space_lens
-          corpus_path: academic-writing-corpus/定性过程研究.md
+          corpus_path: econometric-models/定性过程研究.md
       F2:
         skeleton_variants:
         - id: f2_phase_opening
@@ -3428,7 +3428,7 @@ estimators:
           rhythm_tags:
           - phase_trigger
           - front_stage_action
-          corpus_path: academic-writing-corpus/定性过程研究.md
+          corpus_path: econometric-models/定性过程研究.md
       F3:
         skeleton_variants:
         - id: f3_front_stage_backstage_contrast
@@ -3447,7 +3447,7 @@ estimators:
           - front_stage
           - backstage
           - tension
-          corpus_path: academic-writing-corpus/定性过程研究.md
+          corpus_path: econometric-models/定性过程研究.md
       F4:
         skeleton_variants:
         - id: f4_side_stage_negotiation
@@ -3465,7 +3465,7 @@ estimators:
           - side_stage
           - negotiation
           - norm_clarification
-          corpus_path: academic-writing-corpus/定性过程研究.md
+          corpus_path: econometric-models/定性过程研究.md
       F5:
         skeleton_variants: []
       F6:
@@ -3486,7 +3486,7 @@ estimators:
           - audience_specific
           - bounded_claim
           - success_assessment
-          corpus_path: academic-writing-corpus/定性过程研究.md
+          corpus_path: econometric-models/定性过程研究.md
     cross_slot_patterns: []
     anti_patterns:
     - id: ap_qualitative_overclaim

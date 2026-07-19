@@ -5,7 +5,7 @@ description: |
   覆盖面板数据/OLS、自然实验/DiD、非线性模型、生存分析、SEM、实验、多研究、稀有结果、实证对象构建、事件历史+事件研究、同时方程、IV/2SLS、动态面板/GMM、匹配DiD/广义DiD、同伴效应/网络效应、文本构念测量、PSM匹配面板、堆叠扩散Logit、多行为者设计、推断二元结果、定性过程研究、复发事件风险模型共二十二种设计类型。
   新增三分位离散化IV变体（M4）、监管披露阈值裁量权测量变体（M5）、CEO被迫离职三步分类变体（M5）、CEM匹配程序变体（M8）、调节效应 differential prediction/validity 检验选择（M7补充）。
 
-  **蒸馏管道**：当用户请求蒸馏论文的 Methods 区段（「蒸馏 methods」「methods 范文分析」「处理新论文 methods」「methods 骨架提炼」）时，本 skill 不直接处理——自动路由到 `distill-methods-exemplar` skill 执行完整的 Phase 0–5 蒸馏协议。蒸馏完成后，验证通过的变体手动写入 `academic-writing-corpus/[设计类型].md`。
+  **蒸馏管道**：当用户请求蒸馏论文的 Methods 区段（「蒸馏 methods」「methods 范文分析」「处理新论文 methods」「methods 骨架提炼」）时，本 skill 不直接处理——自动路由到 `distill-methods-exemplar` skill 执行完整的 Phase 0–5 蒸馏协议。蒸馏完成后，验证通过的变体手动写入 `econometric-models/[设计类型].md`。
 
   触发词：「写methods」「methods模板」「方法部分怎么写」「帮我写methodology」「method skeleton」「写方法」「方法论」「model specification」「估计方法」「样本选择」「变量定义」「测量辩护」「构念创新」「自创变量」「风险模型」「hazard model」「CEM matching」「CEO turnover coding」。
   当用户提及变量操作化、识别策略、稳健性检验、模型设定、样本漏斗、内生性处理、测量局限辩护、新构念操作化时也应触发。
@@ -110,7 +110,7 @@ version: 3.2.0
 - **堆叠扩散Logit**：M7 增加堆叠结构与条件Logit设定
 - **多行为者设计**：M2 增加多数据源匹配；M3 区分主/辅行为者结果
 - **推断二元结果**：M3 增加从连续/文本信号推断二元状态的逻辑与阈值
-- **定性过程研究**：M1 替换为现象正当化+情境选择；M2 替换为多源数据角色说明；M9 替换为编码进阶与可信性机制；不输出 M4–M8（无假设检验模型）。完整填空骨架参见 `write-methods/academic-writing-corpus/定性过程研究.md`。该设计类型目前为 EMERGING / 单来源，F1–F6 Findings 骨架参见 `write-results/academic-writing-corpus/定性过程研究.md`。
+- **定性过程研究**：M1 替换为现象正当化+情境选择；M2 替换为多源数据角色说明；M9 替换为编码进阶与可信性机制；不输出 M4–M8（无假设检验模型）。完整填空骨架参见 `write-methods/econometric-models/定性过程研究.md`。该设计类型目前为 EMERGING / 单来源，F1–F6 Findings 骨架参见 `write-results/econometric-models/定性过程研究.md`。
 
 ---
 
@@ -135,7 +135,7 @@ version: 3.2.0
 | M9 多研究/实验程序 | `references/slot-M9.md` | 仅多研究设计 | 非多研究 |
 | M10 Methods→Results 过渡 | `references/slot-M10.md` | 通常省略（顶刊 <10%） | 默认跳过 |
 
-> 设计类型的完整变体另见 `academic-writing-corpus/[设计类型].md`（如 `定性过程研究.md`）。新蒸馏变体经 `distill-methods-exemplar` → Phase 4 写入。
+> 设计类型的完整变体另见 `econometric-models/[设计类型].md`（如 `定性过程研究.md`）。新蒸馏变体经 `distill-methods-exemplar` → Phase 4 写入。
 
 ---
 
@@ -362,7 +362,7 @@ To assess the robustness of our findings, we report a series of sensitivity anal
 
 ## 语料与变体
 
-设计类型的具体变体见 `academic-writing-corpus/[设计类型].md`。新论文的蒸馏结果通过 `distill-methods-exemplar` → Phase 4 `skill_update_instructions` 自动写入。
+设计类型的具体变体见 `econometric-models/[设计类型].md`。新论文的蒸馏结果通过 `distill-methods-exemplar` → Phase 4 `skill_update_instructions` 自动写入。
 
 ---
 *基于 34 篇 MVP30 范文语料库、Pollock 2025 Ch07 构建。版本 3.2.0。*

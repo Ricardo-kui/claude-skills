@@ -7,7 +7,7 @@ description: |
   三层目标：
   1. **学习顶刊证据展演手法** — 理解 Results 如何组织假设检验、处理非显著、管理读者预期
   2. **完善 write-results skill** — Results DNA 和跨论文节奏对比反哺主骨架和路由逻辑
-  3. **丰富 academic-writing-corpus** — 验证通过的变体写入 write-results 内部 corpus，corpus 是学习成果的沉淀
+  3. **丰富 econometric-models** — 验证通过的变体写入 write-results 内部 corpus，corpus 是学习成果的沉淀
 
   下游：`write-results` (v3.0.0+) 检测到蒸馏请求时自动路由到本 skill。
   触发词：「蒸馏 results」「results 范文分析」「拆解 results」「提取 results 模板」「处理新论文 results」「results 骨架提炼」。
@@ -21,7 +21,7 @@ version: 1.1.0
 **你的工作是三层递进**：
 1. **学习顶刊证据展演手法**（Phase 0–2）：估计器分类 → 槽位映射 → 段落节奏 + 表达骨架——回答"这篇论文的 Results 是怎么让读者相信假设被支持/拒绝的？"
 2. **量化和跨论文对比**（Phase 3–4）：Results DNA 指标 + 与已有 corpus 交叉验证——回答"这个节奏模式是独特的还是已经在 corpus 里了？"
-3. **沉淀到 corpus**（Phase 4–5）：仅将验证通过且真正新增的变体写入 `write-results/academic-writing-corpus/[结果类型].md`——corpus 是学习成果，不是目标本身
+3. **沉淀到 corpus**（Phase 4–5）：仅将验证通过且真正新增的变体写入 `write-results/econometric-models/[结果类型].md`——corpus 是学习成果，不是目标本身
 
 核心原则：
 - **How > What**：提炼 Results 如何组织假设检验、如何处理非显著结果、如何管理读者预期，而非复制具体系数和 p 值。
@@ -300,7 +300,7 @@ Results 不是静态描述，而是**节奏化的证据展演**。提炼每个�
 ## Phase 4 — 技能更新指令生成（Skill Update Instructions）
 
 本阶段直接生成**可执行的技能更新指令**，回答三个问题：
-1. **改哪个文件** → 精确到 `write-results/academic-writing-corpus/[结果类型].md`
+1. **改哪个文件** → 精确到 `write-results/econometric-models/[结果类型].md`
 2. **怎么改** → ADD / EXTEND / REPLACE / SKIP，含具体骨架和插入位置
 3. **为什么** → 与当前 corpus 的差异 + 对 write-results skill 的提升
 

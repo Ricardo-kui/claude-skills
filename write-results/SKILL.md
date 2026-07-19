@@ -5,7 +5,7 @@ description: |
   覆盖 OLS/FE、Logit/Probit/Ordered Probit、生存分析、DiD、计数模型（含AME+区域显著性）、实验、多研究、IV/2SLS、匹配DiD、堆叠扩散Logit、同伴效应/网络效应、推断二元结果、跨受众构念对比、三向交互、构造暴露分解、双受众平行对比、非显著深化/反方向、定性过程研究/定性发现共十九种结果类型。
   新增风险模型 exp(β)−1 百分比解释变体（R3）、分样本 Wald χ² 跨模型比较变体（R3）、CEM 双向 ATE 稳健性变体（R7）、反向因果 logistic 检验变体（R7）、替代机制交互检验变体（R7）、differential validity 交互结果解释变体（R4）。
 
-  **蒸馏管道**：当用户请求蒸馏论文的 Results 区段（「蒸馏 results」「results 范文分析」「处理新论文 results」「results 骨架提炼」）时，本 skill 不直接处理——自动路由到 `distill-results-exemplar` skill 执行完整的 Phase 0–5 蒸馏协议。蒸馏完成后，验证通过的变体手动写入 `academic-writing-corpus/[结果类型].md`。
+  **蒸馏管道**：当用户请求蒸馏论文的 Results 区段（「蒸馏 results」「results 范文分析」「处理新论文 results」「results 骨架提炼」）时，本 skill 不直接处理——自动路由到 `distill-results-exemplar` skill 执行完整的 Phase 0–5 蒸馏协议。蒸馏完成后，验证通过的变体手动写入 `econometric-models/[结果类型].md`。
 
   触发词：「写results」「results模板」「结果部分怎么写」「帮我写results」「result skeleton」「写结果」「假设检验」「交互效应」「稳健性检验」「经济显著性」「平行趋势」「marginal effect」「双受众」「对立结果」「替代解释」「hazard model」「风险模型」「survival analysis」「CEM」「split sample」。
   当用户提及系数解释、表格导航、模型序列、robustness check、安慰剂检验、机制检验、非显著深化、方向相反时也应触发。
@@ -103,7 +103,7 @@ version: 3.1.0
 - **同伴效应/网络效应**：R3 主效应 → R4 网络边界异质性 → R7 falsification / 安慰剂网络
 - **推断二元结果**：R3 报告推断状态分布 → R7 阈值敏感性 / 分类准确性
 - **计数模型（AME+区域显著性）**：R3 报告IRR后紧跟平均边际效应与显著性区域图
-- **定性过程研究/定性发现**：不遵循 R1–R9 顺序；输出 F1（过程模型总览）→ F2（阶段触发）→ F3（前台—后台对照）→ F4（侧台协商）→ F5（补充机制/边界）→ F6（受众区分的有限成功评估）。完整填空骨架参见 `write-results/academic-writing-corpus/定性过程研究.md`。该设计类型目前为 EMERGING / 单来源，Q1–Q8 Methods 骨架参见 `write-methods/academic-writing-corpus/定性过程研究.md`。
+- **定性过程研究/定性发现**：不遵循 R1–R9 顺序；输出 F1（过程模型总览）→ F2（阶段触发）→ F3（前台—后台对照）→ F4（侧台协商）→ F5（补充机制/边界）→ F6（受众区分的有限成功评估）。完整填空骨架参见 `write-results/econometric-models/定性过程研究.md`。该设计类型目前为 EMERGING / 单来源，Q1–Q8 Methods 骨架参见 `write-methods/econometric-models/定性过程研究.md`。
 
 ---
 
@@ -125,12 +125,12 @@ version: 3.1.0
 | R8 补充/事后/机制 | `references/slot-R8.md` | 约 2/3 论文包含 | — |
 | R9 Results→Discussion 过渡 | `references/slot-R9.md` | 通常省略（顶刊 <10%） | 默认跳过 |
 
-> 设计类型的完整变体另见 `academic-writing-corpus/[结果类型].md`（如 `定性过程研究.md`）。新蒸馏变体经 `distill-results-exemplar` → Phase 4 写入。
+> 设计类型的完整变体另见 `econometric-models/[结果类型].md`（如 `定性过程研究.md`）。新蒸馏变体经 `distill-results-exemplar` → Phase 4 写入。
 
 ---
 ## 按设计类型路由
 
-具体变体见 `academic-writing-corpus/[结果类型].md`。以下为示例骨架（OLS/FE + 交互效应）：
+具体变体见 `econometric-models/[结果类型].md`。以下为示例骨架（OLS/FE + 交互效应）：
 
 **输入**：`/write-results OLS/FE --hypotheses="H1: DT -> Routine updating (+); H2: Routine updating -> Innovation (+); H3: DT × AC -> Innovation" --has-interactions`
 
@@ -354,7 +354,7 @@ results:
 
 ## 语料与变体
 
-具体变体见 `academic-writing-corpus/[结果类型].md`。新蒸馏结果通过 `distill-results-exemplar` → Phase 4 自动写入。
+具体变体见 `econometric-models/[结果类型].md`。新蒸馏结果通过 `distill-results-exemplar` → Phase 4 自动写入。
 
 ---
 *基于 34 篇 MVP30 范文语料库、Pollock 2025 Ch07 构建。版本 3.1.0。*
