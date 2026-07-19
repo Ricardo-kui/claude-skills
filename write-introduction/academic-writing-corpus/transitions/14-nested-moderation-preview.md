@@ -85,7 +85,7 @@ source: Distilled from Chung, Low & Rust (2022, JAMS)
 ### 必须配对
 - **与 `13-multi-actor-upper-echelons-funnel` (Transition) 配对**: 当多层级与嵌套调节结合时
 - **与 `write-theory/corpus/variants/E_moderation.md` 配对**: E3/E6 子协议用于三向交互理论展开
-- **与 `write-results/academic-writing-corpus/三向交互.md` 配对**: 结果报告的三向交互变体
+- **与 `write-results/econometric-models/三向交互.md` 配对**: 结果报告的三向交互变体
 
 ### 互斥
 - **不要在没有三向交互的研究中使用**: 如果只是 two-way 调节，用普通的 moderation preview 即可

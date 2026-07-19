@@ -1,6 +1,6 @@
 ---
 type: canonical_hook
-canonical_id: "24-empirical-puzzle-after-consensus"
+canonical_id: "25-empirical-puzzle-after-consensus"
 status: EMERGING
 gap_strength: 中
 gap_type: Incompleteness
@@ -13,7 +13,7 @@ created: 2026-07-08
 source: Distilled by distill-introduction-exemplar Phase 4.6
 ---
 
-# 24-empirical-puzzle-after-consensus — 文献共识后的经验悖论 Hook
+# 25-empirical-puzzle-after-consensus — 文献共识后的经验悖论 Hook
 
 ## 功能描述
 
