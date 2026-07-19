@@ -1,6 +1,6 @@
 ---
 name: paper-review
-description: 顶刊量化论文全稿总控审查。输入论文文件路径或全文，执行故事架构审查、写作阶段诊断，识别最薄弱 Section，并自动路由到对应章节 skill。基于 Pollock (2025) 和 MVP30 范文语料库。
+description: 顶刊量化论文全稿总控审查。输入论文文件路径或全文，执行故事架构审查、写作阶段诊断，识别最薄弱 Section，并自动路由到对应章节 skill。诊断与路由枢纽——不做逐段重写（→ 各章节 review skills），不做 ✓/△/✗ 打分表（→ pollock-qc）。基于 Pollock (2025) 和 MVP30 范文语料库。
 version: 1.2.0
 ---
 
