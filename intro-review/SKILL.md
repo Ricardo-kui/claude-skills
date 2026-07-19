@@ -111,6 +111,8 @@ version: 1.2.0
 
 ### Deep Step 2: 六层 QC 检查
 
+**按需加载**：执行各层前读取对应 `references/` 文件——L1–L4/L6 的分层判定细则见 `references/qc-layers.md`；L5 的逐期刊判定标准（SMJ/ASQ/AMJ/OS/ASR/JM 系列）见 `references/journal-style-checks.md`。
+
 | 层 | 检查项 | 检查标准 |
 |---|-------|---------|
 | L1 | Hook × Gap 强度匹配 | Hook 强度是否与 Gap 强度匹配？ |
@@ -121,6 +123,8 @@ version: 1.2.0
 | L6 | 与最接近范文对比 | 叙事结构与代表范文的关键差异 |
 
 ### Deep Step 3: 通用禁忌检查
+
+**按需加载**：禁忌细则与改后回流检查（Post-Revision Reflow Checks）见 `references/common-pitfalls.md`。
 
 检查以下 Introduction 写作禁忌：
 - [ ] 是否出现 "few studies have examined"？
