@@ -13,7 +13,7 @@ updated: 2026-06-16
 
 ## 主骨架
 
-参见 `write-results/SKILL.md` → 填空段落骨架 → `IV-2SLS`。
+参见 `write-results/SKILL.md` → 槽位骨架加载 → 本类型适用的 `references/slot-R*.md`（各 slot 文件内含 `IV-2SLS` 专用变体）。
 
 ## 证据节奏摘要
 

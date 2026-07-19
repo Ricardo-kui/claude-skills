@@ -7,12 +7,12 @@ created: 2026-05-18
 updated: 2026-07-08
 ---
 
-# Methods Academic Writing Corpus
+# Methods Econometric Models Corpus
 
 ## 组织逻辑
 
 按模型设计类型组织。每个文件包含：
-1. **主骨架引用** — 指向 `write-methods/SKILL.md` 中的对应模板
+1. **主骨架引用** — 指向 `references/slot-M*.md` 中对应设计类型的变体（按需加载规则见 `write-methods/SKILL.md` → 槽位骨架加载）
 2. **累积变体** — 由 `distill-methods-exemplar` Phase 4 手动写入的验证通过变体
 
 ## 设计类型索引

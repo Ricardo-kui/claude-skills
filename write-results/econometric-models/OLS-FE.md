@@ -21,7 +21,7 @@ updated: 2026-07-08
 
 ## 主骨架
 
-参见 `write-results/SKILL.md` → 填空段落骨架 → `OLS-FE`。
+参见 `write-results/SKILL.md` → 槽位骨架加载 → 本类型适用的 `references/slot-R*.md`（各 slot 文件内含 `OLS-FE` 专用变体）。
 
 ## 累积变体
 

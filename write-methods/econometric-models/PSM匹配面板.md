@@ -14,7 +14,7 @@ updated: 2026-06-16
 
 ## 主骨架
 
-参见 `write-methods/SKILL.md` → 填空段落骨架 → `PSM匹配面板`。
+参见 `write-methods/SKILL.md` → 槽位骨架加载 → 本类型适用的 `references/slot-M*.md`（各 slot 文件内含 `PSM匹配面板` 专用变体）。
 
 ## 设计特征摘要
 

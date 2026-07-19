@@ -11,7 +11,7 @@ updated: 2026-05-18
 
 ## 主骨架
 
-参见 `write-methods/SKILL.md` → 填空段落骨架 → `匹配DiD-广义DiD`。
+参见 `write-methods/SKILL.md` → 槽位骨架加载 → 本类型适用的 `references/slot-M*.md`（各 slot 文件内含 `匹配DiD-广义DiD` 专用变体）。
 
 ## 设计特征摘要
 

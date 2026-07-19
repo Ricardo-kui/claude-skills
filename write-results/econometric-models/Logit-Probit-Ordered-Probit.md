@@ -13,7 +13,7 @@ updated: 2026-07-07
 
 ## 主骨架
 
-参见 `write-results/SKILL.md` → 填空段落骨架 → `Logit-Probit-Ordered-Probit`。
+参见 `write-results/SKILL.md` → 槽位骨架加载 → 本类型适用的 `references/slot-R*.md`（各 slot 文件内含 `Logit-Probit-Ordered-Probit` 专用变体）。
 
 ## 证据节奏摘要
 
