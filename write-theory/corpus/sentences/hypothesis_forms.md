@@ -311,4 +311,4 @@ H4: [IV B] × [Moderator B] → [DV] (+)  [positive moderation — opposite of H
 **关键特征**:
 - 4 个假设全部为调节 (无双主效应假设)
 - 对角线对称 (H1↔H4 positive, H2↔H3 negative)
-- 需在 T6 中显式总结对角线 pattern
+- 需在最后一个假设段落的局部收束句中显式总结对角线 pattern（不设独立 T6 收束段）
