@@ -1,4 +1,4 @@
 interface:
   display_name: "Write Methods"
-  short_description: "Generate methods templates by design: DiD, panel OLS, nonlinear, survival, SEM."
+  short_description: "Generate methods skeletons for 22 design types: panel OLS/FE, DiD, IV/2SLS, survival, SEM, GMM, matching, text-construct measurement, two-stage, and more."
   default_prompt: "Use $write-methods to generate a methods writing template for this research design."

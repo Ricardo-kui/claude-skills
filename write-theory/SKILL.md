@@ -3,8 +3,7 @@ name: write-theory
 description: |
   诊断-路由-生成式 Theory & Hypotheses 写作引擎。
   覆盖 7 种理论构建变体（构念辨析型、机制推演型、假设树型、质性过程理论型、调节效应型、竞争假设型、辩证对立型）。
-  协议层：诊断、路由、QC、跨 Section 对齐。
-  语料层：corpus/ 目录下各变体语料文件（段落骨架、句式模板、假设格式、QC检查点）。
+  蒸馏请求（「蒸馏 theory」「theory 范文分析」「处理新论文 theory」）不直接处理——自动路由到 `distill-theory-exemplar`；验证通过的模式回写 `corpus/`。
   触发词：「写theory」「写理论」「theory template」「理论部分」「hypothesis写作」「调节效应假设」「跨层调节」「构念界定」「机制推演」「why chain」「双受众」「对立机制」。
 version: 3.5.0
 ---

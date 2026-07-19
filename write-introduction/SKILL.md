@@ -3,6 +3,7 @@ name: write-introduction
 description: |
   Introduction 写作顾问。基于 Gap 类型和 Makadok 贡献维度，推荐段落结构、Hook/Tension/Stakes 句式骨架，并提供来自顶刊范文的句法模板和反模式提醒。
   触发词：「写introduction」「intro模板」「引言怎么写」「帮我写intro」「introduction skeleton」「写引言」「hook怎么写」「gap怎么写」「贡献声明」「problematization」。
+  蒸馏/拆解 introduction 范文（「蒸馏 intro」「intro 范文分析」）不属本 skill——自动路由到 `distill-introduction-exemplar`；审查已有草稿用 `intro-review`；写前深度诊断用 `diagnose-introduction`。
 version: 4.1.0
 ---
 

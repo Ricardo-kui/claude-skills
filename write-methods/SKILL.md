@@ -1,15 +1,11 @@
 ---
 name: write-methods
 description: |
-  顶刊 Methods 填空段落骨架生成器。输入模型类型后输出带 [placeholder] 的可直接粘贴段落。
-  覆盖面板数据/OLS、自然实验/DiD、非线性模型、生存分析、SEM、实验、多研究、稀有结果、实证对象构建、事件历史+事件研究、同时方程、IV/2SLS、动态面板/GMM、匹配DiD/广义DiD、同伴效应/网络效应、文本构念测量、PSM匹配面板、堆叠扩散Logit、多行为者设计、推断二元结果、定性过程研究、复发事件风险模型共二十二种设计类型。
-  新增三分位离散化IV变体（M4）、监管披露阈值裁量权测量变体（M5）、CEO被迫离职三步分类变体（M5）、CEM匹配程序变体（M8）、调节效应 differential prediction/validity 检验选择（M7补充）。
-
-  **蒸馏管道**：当用户请求蒸馏论文的 Methods 区段（「蒸馏 methods」「methods 范文分析」「处理新论文 methods」「methods 骨架提炼」）时，本 skill 不直接处理——自动路由到 `distill-methods-exemplar` skill 执行完整的 Phase 0–5 蒸馏协议。蒸馏完成后，验证通过的变体手动写入 `econometric-models/[设计类型].md`。
-
+  顶刊 Methods 填空段落骨架生成器。输入设计类型后输出带 [placeholder] 的可直接粘贴段落（M1–M10 槽位，骨架在 `references/slot-*.md` 按需加载）。
+  覆盖 22 种设计类型：面板数据-OLS、自然实验-DiD、非线性模型、生存分析（含复发事件风险模型变体）、SEM、实验、多研究、稀有结果、实证对象构建、事件历史+事件研究、同时方程、IV/2SLS、动态面板-GMM、匹配DiD-广义DiD、同伴效应-网络效应、文本构念测量、PSM匹配面板、堆叠扩散Logit、多行为者设计、推断二元结果、定性过程研究、两阶段模型。稳健性检验的正文写作属 write-results（R7/R8）。
+  蒸馏请求（「蒸馏 methods」「methods 范文分析」「处理新论文 methods」「methods 骨架提炼」）不直接处理——自动路由到 `distill-methods-exemplar` 执行 Phase 0–5 蒸馏协议；验证通过的变体由其 Phase 4 写入 `econometric-models/[设计类型].md`。
   触发词：「写methods」「methods模板」「方法部分怎么写」「帮我写methodology」「method skeleton」「写方法」「方法论」「model specification」「估计方法」「样本选择」「变量定义」「测量辩护」「构念创新」「自创变量」「风险模型」「hazard model」「CEM matching」「CEO turnover coding」。
-  当用户提及变量操作化、识别策略、稳健性检验、模型设定、样本漏斗、内生性处理、测量局限辩护、新构念操作化时也应触发。
-  基于 34 篇 MVP30 范文语料库、Pontikes (2012, ASQ) 蒸馏和 Pollock 2025 Ch07。
+  当用户提及变量操作化、识别策略、模型设定、样本漏斗、内生性处理、测量局限辩护、新构念操作化时也应触发。
 version: 3.2.0
 ---
 
@@ -32,7 +28,7 @@ version: 3.2.0
 ```
 
 **参数说明**：
-- `<模型类型>`（必填）: `面板数据/OLS` | `自然实验/DiD` | `非线性模型` | `生存分析` | `SEM` | `实验` | `多研究` | `稀有结果` | `实证对象构建` | `事件历史+事件研究` | `同时方程` | `IV/2SLS` | `动态面板/GMM` | `匹配DiD/广义DiD` | `同伴效应/网络效应` | `文本构念测量` | `PSM匹配面板` | `堆叠扩散Logit` | `多行为者设计` | `推断二元结果` | `定性过程研究`
+- `<模型类型>`（必填）: `面板数据-OLS` | `自然实验-DiD` | `非线性模型` | `生存分析` | `SEM` | `实验` | `多研究` | `稀有结果` | `实证对象构建` | `事件历史+事件研究` | `同时方程` | `IV/2SLS` | `动态面板-GMM` | `匹配DiD-广义DiD` | `同伴效应-网络效应` | `文本构念测量` | `PSM匹配面板` | `堆叠扩散Logit` | `多行为者设计` | `推断二元结果` | `定性过程研究` | `两阶段模型`
 - `[--hypotheses]`（可选但建议）: Theory 部分的假设列表，用于变量对齐检查
 - `[--journal]`（可选）: 目标期刊，默认 `AMJ`
 
@@ -282,7 +278,7 @@ To assess the robustness of our findings, we report a series of sensitivity anal
 
 ## 诚实边界
 
-本 skill 基于 32 篇 MVP30 范文语料库（2010–2025）提炼，存在以下局限：
+本 skill 的骨架与变体提炼自 MVP30 范文语料库（截至 2025 年，持续蒸馏扩充中；各变体的来源论文在 `econometric-models/INDEX.md` 按日期登记），存在以下局限：
 
 1. **不能替代统计诊断**：提供段落骨架和 ritual 规范，但不能判断您的数据是否满足模型假设（平行趋势、工具变量相关性、共同支撑域、VIF、序列相关等）。这些必须基于实际数据。
 2. **不能消除期刊差异**：SMJ/AMJ/ASQ/JM/OS/JOM/ASR 对 Methods 的 ritual 偏好不同。本 skill 以"最大公约数"为主，投稿前需对照目标期刊最新范文调整。

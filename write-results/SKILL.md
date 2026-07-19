@@ -1,15 +1,11 @@
 ---
 name: write-results
 description: |
-  顶刊 Results 填空段落骨架生成器。输入模型类型后输出带 [placeholder] 的可直接粘贴段落。
-  覆盖 OLS/FE、Logit/Probit/Ordered Probit、生存分析、DiD、计数模型（含AME+区域显著性）、实验、多研究、IV/2SLS、匹配DiD、堆叠扩散Logit、同伴效应/网络效应、推断二元结果、跨受众构念对比、三向交互、构造暴露分解、双受众平行对比、非显著深化/反方向、定性过程研究/定性发现共十九种结果类型。
-  新增风险模型 exp(β)−1 百分比解释变体（R3）、分样本 Wald χ² 跨模型比较变体（R3）、CEM 双向 ATE 稳健性变体（R7）、反向因果 logistic 检验变体（R7）、替代机制交互检验变体（R7）、differential validity 交互结果解释变体（R4）。
-
-  **蒸馏管道**：当用户请求蒸馏论文的 Results 区段（「蒸馏 results」「results 范文分析」「处理新论文 results」「results 骨架提炼」）时，本 skill 不直接处理——自动路由到 `distill-results-exemplar` skill 执行完整的 Phase 0–5 蒸馏协议。蒸馏完成后，验证通过的变体手动写入 `econometric-models/[结果类型].md`。
-
+  顶刊 Results 填空段落骨架生成器。输入结果类型后输出带 [placeholder] 的可直接粘贴段落（R1–R9 槽位，骨架在 `references/slot-*.md` 按需加载）。
+  覆盖 18 种结果类型：OLS-FE、Logit-Probit-Ordered-Probit、生存分析、DiD、计数模型（含AME+区域显著性）、实验、多研究、IV/2SLS、匹配DiD、堆叠扩散Logit、同伴效应-网络效应、推断二元结果、跨受众构念对比、三向交互、构造暴露分解、SEM-moderated-mediation、事件研究法、定性过程研究。双受众平行对比见 slot-R3 变体；非显著深化/反方向见 slot-R6。
+  蒸馏请求（「蒸馏 results」「results 范文分析」「处理新论文 results」「results 骨架提炼」）不直接处理——自动路由到 `distill-results-exemplar` 执行 Phase 0–5 蒸馏协议；验证通过的变体由其 Phase 4 写入 `econometric-models/[结果类型].md`。
   触发词：「写results」「results模板」「结果部分怎么写」「帮我写results」「result skeleton」「写结果」「假设检验」「交互效应」「稳健性检验」「经济显著性」「平行趋势」「marginal effect」「双受众」「对立结果」「替代解释」「hazard model」「风险模型」「survival analysis」「CEM」「split sample」。
   当用户提及系数解释、表格导航、模型序列、robustness check、安慰剂检验、机制检验、非显著深化、方向相反时也应触发。
-  基于 34 篇 MVP30 范文语料库和 Pollock 2025 Ch07。
 version: 3.1.0
 ---
 
@@ -116,6 +112,7 @@ version: 3.1.0
 | 槽位 | 文件 | 何时加载 | 何时跳过 |
 |---|---|---|---|
 | R1 描述性统计/诊断 | `references/slot-R1.md` | 总是 | 质性发现 |
+| R1.5 Model-Free Evidence | `references/slot-R1.md`（§Model-Free Evidence 变体） | IV/DiD/匹配/复杂识别设计 | 纯 OLS/FE、质性发现 |
 | R2 模型序列/表格导航 | `references/slot-R2.md` | 总是 | 质性发现 |
 | R3 主假设检验（四拍） | `references/slot-R3.md` | 每假设一段（最大文件） | 质性发现 |
 | R4 交互/条件效应 | `references/slot-R4.md` | 含交互假设时 | 无交互 |
@@ -241,7 +238,7 @@ Taken together, the results indicate that [digital transformation enhances firm 
 
 ## 诚实边界
 
-本 skill 基于 28 篇 MVP30 范文语料库（2012–2025）提炼，存在以下局限：
+本 skill 的骨架与变体提炼自 MVP30 范文语料库（截至 2025 年，持续蒸馏扩充中；各变体的来源论文在 `econometric-models/INDEX.md` 按日期登记），存在以下局限：
 
 1. **不能替代统计诊断**：提供段落骨架和 ritual 规范，但不能判断您的数据是否满足模型假设（平行趋势、过度识别、common support、VIF 等）。这些必须基于实际数据。
 2. **不能消除期刊差异**：SMJ/AMJ/ASQ/JM/OS/JOM/ASR 对 Results 的 ritual 偏好不同（如 ASQ 更重视 construct validity 叙事，SMJ 更重视 identification）。本 skill 以"最大公约数"为主，投稿前需对照目标期刊最新范文调整。

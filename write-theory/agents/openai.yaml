@@ -1,4 +1,4 @@
 interface:
   display_name: "Write Theory"
-  short_description: "Generate theory and hypotheses templates: construct differentiation, mechanism, hypothesis tree, process."
+  short_description: "Generate theory and hypotheses skeletons for 7 build modes: construct differentiation, mechanism elaboration, hypothesis tree, process theory, moderation, competing hypotheses, dialectical opposition."
   default_prompt: "Use $write-theory to generate a theory and hypotheses writing template for this study type."
