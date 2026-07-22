@@ -52,3 +52,7 @@ Our focal independent variable, [predictor name], is derived from [text source, 
 ```text
 Equation [x] predicts [primary outcome] as a function of [focal predictor], [mechanisms], [moderators], interactions, and controls. Equations [y–z] model [mediator A] and [mediator B], allowing us to test whether [focal predictor] affects the mechanisms implied by the theory. Equation [w] predicts [downstream outcome] using [focal outcome], [focal predictor], their interaction, and value-relevant controls. We include an additional equation for [potentially endogenous choice] to account for the possibility that [anticipated need/reverse path] influences [focal predictor].
 ```
+
+> **M4 段落级体裁 QC**（审计体裁）:
+> - **Hypothesis anchor 强制**：每段含 "corresponds to Hypothesis [x]" 或等效锚点；无锚点的预测变量段是 audit-genre 的 orphaned claim
+> - **理论顺序优先**：变量段排列按 Theory 假设顺序，不按字母序或表格列序；与既有"变量按理论顺序排列"检查互补（那是 Completeness，这是段间 sequence）

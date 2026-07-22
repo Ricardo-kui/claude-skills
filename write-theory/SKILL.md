@@ -443,6 +443,9 @@ Theory 写作的心脏环节：路由假设结构，为每个假设生成逻辑�
 - [ ] **Sentence stuffing**：单句 ≤ 30 词？单句从属连词 ≤ 2 个？
 - [ ] 收束句质量：是否总结了推理链而非简单重复 "we hypothesize"？
 - [ ] 段落独立性：单独阅读本段能否理解完整论证逻辑？
+- [ ] **作者名开头**：why-chain 段段首句主语是否为他人姓名（"Smith (2020) showed..."）？→ topic sentence 必须是自己的理论主张，引用移到证据位（见 prose-craft-checklist §0.6-1）
+- [ ] **段末 wrap**：段末句是否停在引用/证据上而无 "This suggests that..." 收束（abrupt stop）？→ 段末 1 句 wrap 回扣本段 claim；与"收束句质量"项互补——那项查收束是否简单重复 "we hypothesize"，本项查收束是否缺席（见 §0.6-5）
+- [ ] **Caveat-first**：段首是否以 "Although prior work..." 让步开头，推迟核心 claim？→ claim 前置，caveat 移后（见 §0.6-4）
 
 ---
 

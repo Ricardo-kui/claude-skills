@@ -3,7 +3,7 @@ type: corpus
 canonical_id: "prose-craft-checklist"
 source: "Pollock 2025 Ch03"
 created: 2026-06-01
-version: 1.0.0
+version: 1.5.0
 ---
 
 # Prose Craft Checklist（Pollock 2025 Ch03）
@@ -11,6 +11,21 @@ version: 1.0.0
 ## 0. Paragraph Architecture（段落架构）
 
 > 本层补充通用学术写作指南中的 paragraph-level 原则（PEEL/PEAL、paragraph length、topic sentence placement），作为 Ch03/Ch04 句法级检查的上一级检查。
+
+### 0.0 段落体裁分型（Genre Awareness）
+
+学术段落的"好结构"不是单一的。本节的段落规则按两种体裁分型适用：
+
+| 体裁 | 适用 Section | 段落约定 | 代表节奏 |
+|------|-------------|---------|---------|
+| **说服体裁（persuasion genre）** | Introduction / Theory / Discussion | claim-first：topic sentence 段首（§0.3）；PEEL/PEAL（§0.1）；Dunleavy 六问题全部适用（§0.6） | Point → Evidence → Explanation → Link |
+| **审计体裁（audit genre）** | Methods / Results | verdict-after-restatement：假设重述-first、table-first、methods-justification-first、procedure-first 均为合法段首；支持判断在假设重述之后即可（位置不限——可早可晚，见右栏两种子型） | (a) verdict-last：假设重述→证据→判决置尾；(b) verdict-early-then-interpreted：假设重述→判决前置→幅度/边际分析→解释性 wrap。样本漏斗 procedural-first（M2）；威胁-first（R7） |
+
+**核心规则**：§0.1 PEEL/PEAL、§0.3 topic sentence placement、§0.6 Dunleavy 反模式**仅适用于说服体裁**。对 Methods/Results 段落强制执行 claim-first 是 false analogy——顶刊语料中的最佳 Results 段落（Mannor 2016, Mayo 2022, Pontikes 2012, Malik 2025）均以假设重述或表格导航开篇、判决置段中或段尾，主动违反 claim-first。审计体裁段落只适用两条通用规则：§0.2（长度）和 §0.5（coherence），外加各 slot 文件内的体裁专属 QC（write-results R1–R9、write-methods M1–M10）。
+
+> 质性过程研究的 Findings（F1–F6）介于两种体裁之间：过程模型总览段偏说服体裁，阶段证据段偏审计体裁，按段落功能分别适用。**注意**：质性证据段的「wrap」不是假设判决（R3 Beat-4 不适用），而是可选的作者 gloss——以 informant quote 收尾合法，§0.6-5 不 flag。
+
+---
 
 ### 0.1 PEEL / PEAL 段落结构
 
@@ -26,10 +41,41 @@ version: 1.0.0
 **检查清单**:
 - [ ] 每个段落有明确的 Point（topic sentence），且通常出现在段首或第 2 句
 - [ ] Point 之后有 Evidence（引用、数据、案例），而非连续抽象推理
-- [ ] Evidence 之后有 Explanation，说明其对论文主线的贡献
+- [ ] Evidence 之后有 Explanation/**warrant**——点出连接证据与 claim 的机制或前提（非"支持论点"的循环重述）；构建方法见下方「Explanation/Warrant 构建指南」
 - [ ] 段末或段首有 Link，明确本段与前后段的逻辑关系
 
 **例外**: Contribution 段和 T6 Closure 段可压缩为 P + E + L，Explanation 可嵌入 Point。
+
+**与 Dunleavy TBTW 的关系**: PEEL/PEAL 与 Dunleavy 的 Topic–Body–Tokens–Wrap 是同一说服体裁原则的两种表述——Point ≈ Topic，Evidence ≈ Tokens，Explanation ≈ Body 中的 warrant，Link + 收尾判断 ≈ Wrap。本清单以 PEEL/PEAL 为主框架；TBTW 的增量贡献是显式要求 **Wrap 句**（段末把证据上升为 claim，见 §0.6 问题 5 "Abrupt stop"）。两者不冲突，不并列使用。
+
+#### Explanation/Warrant 构建指南（证据→claim 的桥接）
+
+PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不是**"再说一遍证据支持论点"（那是循环），而是**点出连接证据与 claim 的底层机制或前提**——把"证据是什么"翻译成"证据为什么算数"。弱段落的标志就是跳过 warrant，从 Evidence 直接掉到 "This supports our argument"。
+
+**四步桥接**（说服体裁 Introduction / Theory / Discussion）：
+1. **陈述证据** — 引文/数据/案例的表面内容
+2. **揭示隐含机制或前提** ⭐核心 — 证据为何相关？它隐含什么因果机制、什么未言明的假设？
+3. **推出对 claim 的含义** — 由该机制/前提落到段落 Point（"This implies..." / "This means that..."）
+4. **（可选）给边界** — 限定适用范围、承认反例、区分竞争解释
+
+**跨体裁示例**（均锚定真实范文）：
+
+| 段落类型 | ① Evidence（陈述） | ② Warrant（机制/前提）⭐ | ③ Implication（对 claim） |
+|---------|-------------------|----------------------|------------------------|
+| **Theory 机制段** | 杠杆企业削减广告与 R&D（Grullon et al. 2006） | 广告→感知/预期质量（Kirmani & Wright 1989）；感知质量是 satisfaction 的关键前因（Anderson & Fornell 2000） | ∴ 高杠杆→低广告→低感知质量→低 satisfaction（Malshe 2015 JM, H1 中介逻辑） |
+| **Introduction tension 段** | 精英消费低 brow 文化已被广泛记录（Grazian 2005; Halle 1996; Bryson 1996） | distinction-seeking 只解释"为何消费广谱"，不解释"为何非低 brow 不可"；而低 brow 被标榜为 authentic 而非高品味 | ∴ 现有解释不完整——为何 high-status 偏要在低 brow 里求 authenticity 仍无理论（Hahl et al. 2017 ASR gap） |
+| **Discussion 贡献段** | leverage×satisfaction 交互显著（b=−.031），floodlight 显示杠杆>95% 处 satisfaction 反转为减值 | 既有 satisfaction→value 链跨行业变异巨大且无解释（Anderson, Fornell & Mazvancheryl 2004） | ∴ firm-specific leverage 部分解释该变异，化解文献长期悬案（Malshe 2015 JM, H3 贡献） |
+
+> Theory 机制段的 why-chain 连接词谱系见 write-theory 的 `corpus/sentences/mechanism_chain.md`；本节给出跨体裁的通用构建原则（write-theory 的 warrant 资源是其 Theory 专版实现）。
+
+**审计体裁的 warrant 等价物**：Methods/Results 不走 PEEL warrant，其"结果→含义"桥接是**幅度/经济显著性解读**——系数→"one-SD leverage = .47 点 satisfaction = 约 $26M 净现金流"（Malshe 2015 JM）——把统计结果翻译成实质意义，由 slot-R3 Beat-3（幅度）与 slot-R5（经济显著性）管辖，不在本节。
+
+**反模式（warrant 缺陷自检）**：
+- **循环 warrant**：「该证据支持论点，因它与论点一致」——用 claim 重述冒充机制。检测：删掉 warrant 句，claim 是否仍悬空无据。
+- **缺失机制**：从 Evidence 直接跳到 Point，未命名"为什么"。检测：能否在 Evidence 与 Point 间插入一句 "This is because [机制]"——插不进即缺 warrant（对应 §0.5「Read my Mind / 逻辑跳跃」）。
+- **机制-证据脱钩**：所给机制不被本证据支持（证据讲 A，机制讲 B）。检测：该机制在"没有这条证据"时是否同样成立——若成立，机制与证据无关，warrant 失效。
+
+> 本指南是 §0.5「避免逻辑跳跃」的**建设面**：§0.5 说"每个推理步骤用≥1 句话"，本节说"那句话该写什么——机制或前提"。
 
 ---
 
@@ -47,6 +93,8 @@ version: 1.0.0
 - SMJ/JM: 可接受 150–250 词的紧凑段落
 - JMS/JOM: 有时使用 100–150 词的短段落，但需确保每段仍有 Point + Evidence
 
+**来源差异说明**: Dunleavy 建议研究性文本段落 100–200 词，Hull LibGuides 建议 200–300 词。二者语境不同——Dunleavy 针对书章/学位论文（长文节奏），Hull 针对期刊文章。**期刊论文以上方期刊差异表为准**；撰写书章/学位论文时可下调至 100–200 词区间。两条规则对两种体裁（§0.0）都适用。
+
 ---
 
 ### 0.3 Topic Sentence Placement
@@ -59,7 +107,7 @@ version: 1.0.0
 2. **Background-first**: 段首 1 句提供最小必要背景，第 2 句给出核心判断
    - 示例: "In leadership settings, CEOs communicate frequently with investors. These communications..."
 
-**禁止**: 段首 3 句以上仍未出现 topic sentence（严重 Burying the Lead）。
+**禁止（仅说服体裁）**: 段首 3 句以上仍未出现 topic sentence（严重 Burying the Lead）。**适用范围：Introduction / Theory / Discussion**。Methods/Results 段落的假设重述-first（"Hypothesis 1 predicted..."）、table-first（"Table 2 reports..."）、procedure-first（"We began with..."）开头不受此限——这些是审计体裁的合法段首（见 §0.0），其"topic sentence"等效物是段尾的支持判断。
 
 ---
 
@@ -80,9 +128,78 @@ version: 1.0.0
 1. **重复关键词或短语**：在定义或识别重要概念时保持引用一致
 2. **创建平行结构**：连续句子使用相同语法结构，帮助读者看到观点联系
 3. **保持视角、时态、数的一致**：避免在 you/one、past/present、a man/they 之间跳跃
-4. **使用 transition 信号词**：明确句子间逻辑关系——具体词表见 `../micro-templates/transition-signals.md`；每段 1–2 个 explicit transition 足够，优先 subtle transition（关键词重复、代词回指、平行结构）
+4. **使用 transition 信号词**：明确句子间逻辑关系——分类词表（递进/举例/比较/对比/因果/总结/时间，Indiana WTS）、学术偏好标注与按目的快速选择表见 `../micro-templates/transition-signals.md`；每段 1–2 个 explicit transition 足够，优先 subtle transition（关键词重复、代词回指、平行结构）
 
-**避免逻辑跳跃**：不要假设读者已经知道你在想什么（对应 **Read my Mind** 检查）；每个推理步骤用至少一句话说明。
+**避免逻辑跳跃**（L1 底线）：不要假设读者已经知道你在想什么（对应 **Read my Mind** 检查）；每个推理步骤用至少一句话说明。但句句相连 ≠ 论证成立——下方诊断把"逻辑紧实度"从这条 L1 底线升级为可操作的两层测试。
+
+#### 逻辑紧实度诊断（说服体裁 Introduction / Theory / Discussion 专用）
+
+把段落句子按序读，在**每相邻两句之间命名一个逻辑关系**，画出"关系标注链"。诊断的不是"能不能塞个连接词"（任何两句都能塞 and），而是**能否命名 fitting 的关系类型**，以及**链条是否兑现到 Point**。
+
+**关系 taxonomy（三档）**：
+
+| 档 | 关系 | 信号词 | 诊断意义 |
+|----|------|--------|---------|
+| **强**（承载推理） | 因果 / 机制 / 证据 / 兑现 | because, through this process, X found that, thus...taken together, this implies | 强关系（尤其机制/兑现）= warrant 的句际化身；出现即推理在推进 |
+| 中性（必要非推进） | 对比 / 让步 / 条件 | however, although, whereas, if / when | 转折或限定，正常会有，但不能替代强关系 |
+| **弱** | 列举 / 加合 | and, also, moreover, first / second / finally | 连续 ≥3 个 = 🚩清单段（局部相连、全局不推进） |
+
+**双层测试**：
+1. **局部（cohesion）**：每相邻两句能否命名一个 fitting 关系？——**显式连接词** OR **subtle transition**（关键词重复 / 代词回指 / 平行结构，见上方 4 技术）都算合法衔接；**两者皆无**处才算 🚩gap（逻辑跳跃，对应 Read my Mind）。*此条修复"强制显式连接词"与 §0.5 偏好 subtle transition 的矛盾。*
+2. **全局（cash-out）**：链条是否含强关系、且末端经 warrant 兑现到段首 Point（§0.1）？句句相连但**零强关系 / 末端不兑现** = 🚩清单非论证（raw"补连接词"测试漏掉的深层缺口）。
+
+**输出：关系标注链 + 三红旗**
+
+```
+[S1 Point] —机制→ [S2] —证据→ [S3] —兑现→ [S4 回扣 Point]   ← 健康
+[S1] —列举→ [S2] —列举→ [S3] —列举→ [S4]                    ← 🚩清单
+[S1] —机制→ [S2]  🚩gap  [S3] —兑现→ [S4]                    ← 🚩gap（S2→S3 无可命名关系）
+[S1 Point] —证据→ [S2] —证据→ [S3]                            ← 🚩缺 warrant（无强关系兑现，Point 悬空）
+```
+
+- **🚩gap**：某对无可命名关系（逻辑跳跃）
+- **🚩清单**：连续 ≥3 弱关系（局部相连、全局不推进）
+- **🚩缺 warrant**：链条无强关系 / 末端不兑现 Point（= §0.6-5 abrupt stop 的深层版）
+
+**实例对照**（同框架下分得开）：
+- ✅ **Malshe 2015（杠杆→广告/R&D 段）**：`[Point:高杠杆→低广告/R&D] —机制→ [可自由支配] —证据→(Cohen/Graham) —机制→ [无形资产·回报不可测] —兑现→ "Thus, taken together..."` —— 关系多样、含多强关系、末端兑现 Point。
+- 🚩 **清单段**：`[Point:杠杆影响企业] —列举→ [增风险] —列举→ [降灵活] —列举→ [美国普遍]` —— 4 连弱关系、零强关系、末端停事实、Point 悬空 → 🚩清单 + 🚩缺 warrant。
+
+> **与 §0.1 配对**：§0.1「warrant 构建指南」教**怎么搭**推理桥（建设面）；本节教**怎么诊断**桥在不在、紧不紧（诊断面）。两者都仅说服体裁。审计体裁（Methods/Results）紧实度由 slot QC（四拍 / 漏斗 / construct-first）管辖，不走本诊断。
+
+---
+
+### 0.6 Dunleavy 六段落问题（说服体裁专用）
+
+> 来源：Dunleavy（LSE Writing for Research / *Authoring a PhD*），规范性强于实证性——目前无语料库频率数据支撑各问题的发生率，也无段落结构与审稿人评价因果关系的证据。六个问题**全部仅适用于说服体裁**（§0.0）；Methods/Results 段落遵循 verdict-last 约定，问题 1–4 不适用，问题 5–6 的通用部分见标注。
+
+> **关于 backward-link opening（回指既有研究的开头）**：Dunleavy 原六问题含此项，本清单**有意不收录**——回指既有研究 / 奠基性工作的开头（"Classic treatments depict..." / "Much of what we know comes from the seminal work of Goffman..."）在经验引言的 gap-establishing 弧线与 Theory 的 seminal-work 致敬中是标准且好的写法。实证依据：Malshe & Agarwal (2015, JM)、Hahl et al. (2017, ASR)、Lashley & Pollock (2020, ASQ) 的引言 / Theory 首段均为 backward-link 式，顶刊照发。**不 flag。**
+
+1. **Author-name opening（作者名开头）**：段首句主语是他人姓名（"Smith (2020) argued that..."），段落沦为文献注脚而非自己的论证。
+   - 检测：段首句主语为人名 + 年份。
+   - 修复：作者名移到句中证据位（"We argue that X (cf. Smith, 2020)."），段首换成自己的 claim。
+   - **范围**：仅 Introduction / Theory / Discussion。Results 的 "Hypothesis 1 predicted..." 是假设重述，不是本问题；Methods 的 "Following Smith (2020), we measure..." 见 slot-M3 的 construct-first QC。
+   - **豁免**：单篇/理论家开头但段中**出现**作者自己的 claim（不必在段末）不算违规——理论段常链式（理论家开头→段中作者 claim→段末进一步引文，如 Pollock et al. 2015 ASQ 的 Gould 段）。仅当整段无作者自己 claim、纯文献注脚才算。
+
+2. **Throat-clearing（清嗓开头）**：段首 1–2 句是功能性热身（"Before turning to X, it is important to note..." / "It is worth mentioning..."），推迟正事。
+   - 与既有规则的关系：§5.2 已覆盖"元评论段首"（"本节讨论..."）；本类补充其余热身形式（背景铺垫式、客套式），两者检测方法相同、命名互补。
+   - 修复：删除或压缩为 ≤15 词的 §0.3 合法 transition/background 句。
+
+3. **Orphaned quote（孤儿引语）**：引语独立存在，前无 framing（"As X shows:"）、后无 interpretation（"This means..."），引语替作者说话。
+   - 修复：每个引语前加 1 句 claim、后加 1 句解读；epigraph 型 Hook 必须接 pivot 句。
+   - **范围**：persuasion genre 的 Hook / Theory 为主；量化 Results/Methods 几乎不用引语。**质性归纳研究的 Findings 大量使用 informant quote 作为数据展示**（非理论引语），framing 规则不同（setup 句 + quote + 作者解读为标准，quote 收尾亦合法）——见 §0.0 混合体裁条款。
+
+4. **Caveat-first（限定先行）**：段首以让步开头（"Although prior work..." / "While X is well established..."），核心 claim 推迟到段中，削弱说服力。
+   - 与 §0.3 的关系：caveat-first 不是合法的 transition-first/background-first——合法延迟句必须中性承接，caveat 句预先削弱了自己的 claim。
+   - 修复：claim 前置，caveat 移到 claim 之后（"We argue X. Although Y, ..."）。
+   - **范围**：仅当让步句把核心 claim 推迟到后续段落或埋过段中点才算违规；同段内 "To be sure X... However Y" 是合法辩证，不 flag。
+
+5. **Abrupt stop（戛然而止 / 无 wrap）**：段末句是证据、引用或数据，无 wrap 句把证据上升为 claim（缺 "This suggests that..." / "Taken together..."）。
+   - 检测：段末句含 citation/数字且无作者自己的判断句。
+   - 修复：段末加 1 句 wrap，回扣段落 Point（PEEL 的 L）。
+   - **范围**：说服体裁全适用。审计体裁的等效物是段尾支持判断（"Thus, Hypothesis 1 is supported"）——R3 四拍的 Beat-4 即 audit-genre 的 wrap，由 slot-R3 QC 覆盖，此处不重复。**例外（质性归纳 Findings 证据段）**：以 informant quote / field-data excerpt 收尾是体裁约定（data-as-evidence，让数据发声），非 abrupt stop；可选附 1 句作者 gloss，但不强制 wrap。此类段由 §0.0 混合体裁管辖，不由本条 flag。**另两类豁免（说服体裁）**：(1) **成框示意证据**——段中已陈述 claim、段末以 framed 引语/数据兑现（非孤立引语）合法（如 Pollock et al. 2015 ASQ 以 Washington & Zajac 引语收尾兑现 claim）；(2) **证据枚举链**——mixed-evidence / supporting-facts 枚举段以引文收尾、wrap 由邻段承接合法（如 Zhou et al. 2017 ASQ 的 mixed-evidence 段）。
+
+6. **Too long / Too short**：统一见 §0.2（含 Dunleavy 100–200 与 Hull 200–300 的来源差异说明）。长度规则对两种体裁都适用，不重复列检测标准。
 
 ---
 
@@ -338,6 +455,8 @@ version: 1.0.0
 
 ## 跨 Skill 引用规则
 
-- `write-introduction` 和 `write-theory` 都引用本文件
+- `write-introduction`（Constraints）和 `write-theory`（Phase 1.4 + Phase 3.2 QC）引用本文件全量 §0–§5——两者均为说服体裁
+- `write-discussion` 引用 §0.0/§0.1/§0.3/§0.6（说服体裁全量），经 `references/alignment-checks.md` 的 Paragraph Craft 节转引
+- `write-results` / `write-methods` 仅引用 §0.0（体裁分型）、§0.2（长度）、§0.5（coherence）；§0.1/§0.3/§0.6 的说服体裁规则**不适用**于其审计体裁段落；体裁专属段落 QC 在各 slot 文件内
 - `ACADEMIC_COMMUNICATION.md` 的 base voice 规则不重复，只交叉引用
 - `humanizer` skill 作为下游工具引用，不嵌入其 29 条 pattern

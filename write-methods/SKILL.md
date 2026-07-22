@@ -182,6 +182,15 @@ methods:
     # H2: {predictor: "...", outcome: "...", model: "..."}
 
   results_preview: "[M10 预告段的核心内容摘要]"
+
+  # 新增 v3.0.0 — 稳健性计划。由 write-results 决策诊断填充，或手动填写。
+  # 供 write-results 跳过诊断直接生成 R7 段落，供 write-discussion 评估稳健性覆盖完整性。
+  robustness_plan:  # 可选；不存在时 write-results 自动触发决策诊断
+    mandatory: ["[必须检验的维度]"]
+    recommended: ["[建议检验的维度]"]
+    optional: ["[可选检验的维度]"]
+    excluded:
+      "[维度名]": "[排除理由]"
 ```
 
 ### Cross-Section 对齐检查（与上游 Skill 的接口）
@@ -328,6 +337,7 @@ To assess the robustness of our findings, we report a series of sensitivity anal
 - [ ] **因果语言自律**：面板数据用 "associated with"；自然实验识别支持后用 "effect of"；实验可用 "caused"。无越级
 - [ ] **审计链完整**：M2 起始 N → 每步排除（含理由+数字）→ 最终 N，全程可追踪
 - [ ] **时间逻辑清晰**：所有预测变量标注 t-1 / contemporaneous / event window
+- [ ] **段落体裁适配**：Methods 段落遵循审计体裁约定——procedure-first（M2 样本漏斗）/ construct-first（M3–M5 变量）/ justification-first（M7 模型）为合法段首；通用段落规则见 `../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md` §0.0/§0.2/§0.5；§0.1/§0.3/§0.6 为说服体裁专用，不适用
 
 ### 反向审查（可选但建议）
 生成完成后，可使用 `/distill-methods-exemplar` 对输出段落进行反向蒸馏审查，生成 Vault 参考注释，供人工判断：

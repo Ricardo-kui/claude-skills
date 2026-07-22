@@ -147,3 +147,11 @@ updated: 2026-07-22
 >   - 注：OLS-FE 表行 21→27 顺手修正 pre-existing stale（实际变体到 26）；slot-R5/R6 为槽位骨架文件不在表中，总变体数 +3
 
 > **总变体数**: 85 (分布于 18 个结果类型文件)
+>
+> ✅ **2026-07-22 更新（slot-R7 六维框架扩展）**: 基于 Yuan et al. (2026, JOM) 对 1,706 篇文献的系统性审查，`references/slot-R7.md` 新增 7 个子变体段落骨架 + 1 个现有变体重命名：
+>   - **Preprocessing Variation (4)**: 缺失数据处理 / 离群值-错误观测处理 / 数据转换策略 / 粗心回答筛查（均 🔬 EXPERIMENTAL，保守替代为现有 threat 段落 + 说明）
+>   - **Covariate Variation (2)**: 含-不含控制变量对比 / 替代控制变量集（含 DAG 理论辩护）（均 🔬 EXPERIMENTAL）
+>   - **Fragility/Divergent Honest Reporting (1)**: 稳健性检验结果不一致时的诚实报告，含 happy-path 和 divergent-path 双模板（🔬 EXPERIMENTAL）
+>   - **样本威胁拆分**: 原"样本威胁" → "样本威胁 — 排除敏感性" + 新增"样本威胁 — 理论驱动子样本变异"
+>   - 配套更新: `_evidence_registry.yaml` 新增 3 反模式 + 2 诚实边界
+>   - 来源: Yuan, Den Hartog, Liu, De Hoogh, Sun, Zhao, Riisla & Belschak (2026) *Journal of Management* — 六维稳健性分析框架

@@ -65,6 +65,35 @@ global_anti_patterns:
   - all
   note: 若原文如此，记录为反模式；write-results 默认要求报告所有假设
   source_count: 0
+- id: ap_r7_selective_confirmatory_only
+  pattern: 稳健性检验只报告 confirmatory 结果，隐藏 divergent 结果
+  severity: high
+  affected_slots:
+  - R7
+  affected_estimators:
+  - all
+  note: 当某个稳健性维度存在多个检验且部分confirm、部分disconfirm时，必须在正文和汇总表中同时报告。Yuan et al. 2026 JOM Section D。
+  source_count: 0
+- id: ap_preprocessing_opaque
+  pattern: 预处理选择不透明，缺失数据处理/离群值阈值/变量转换策略不可追溯
+  severity: medium
+  affected_slots:
+  - R7
+  - M2
+  affected_estimators:
+  - all
+  note: 缺失数据处理方法、离群值阈值、变量转换策略必须在Methods或R7中明确报告，不能仅以"standard practices"概括。Yuan et al. 2026 JOM REC B3.4。
+  source_count: 0
+- id: ap_covariate_no_theoretical_defense
+  pattern: 协变量选择无理论辩护，增删控制变量仅基于统计显著性
+  severity: medium
+  affected_slots:
+  - R7
+  - M2
+  affected_estimators:
+  - OLS_FE
+  - Logit_Probit_Ordered_Probit
+  note: 控制变量的增删必须有理论依据（DAG/prior studies），不能仅基于"significant in one specification, dropped in another"。Yuan et al. 2026 JOM REC B3.3。
 global_honesty_boundaries:
 - id: hb_causal_language_ols
   boundary: OLS/FE 论文不得使用 'effect of' / 'causes' / 'leads to'
@@ -87,6 +116,20 @@ global_honesty_boundaries:
   affected_estimators:
   - Logit_Probit_Ordered_Probit
   note: R3 四拍中拍3必须是边际效应，不是 β
+  violation_count: 0
+- id: hb_r7_no_selective_reporting
+  boundary: 不得在稳健性检验中只报告一致的子集
+  required: 当某个稳健性维度存在多个检验且部分confirm、部分disconfirm时，必须在正文和汇总表中同时报告所有检验结果
+  affected_estimators:
+  - all
+  note: Divergent findings应框定为边界条件或测量敏感性，而非错误。Yuan et al. 2026 JOM Section D。
+  violation_count: 0
+- id: hb_preprocessing_transparency
+  boundary: 预处理选择必须明确报告，不得隐藏为"standard practices"
+  required: 缺失数据处理方法(listwise deletion/multiple imputation/FIML)、离群值阈值(1st/99th vs. 5th/95th percentile)、变量转换(log/sqrt/untransformed)必须在Methods或R7中明确报告
+  affected_estimators:
+  - all
+  note: Yuan et al. 2026 JOM REC B3.4 — 预处理变异是最被低估但最容易实施的稳健性检验。
   violation_count: 0
 estimators:
   OLS_FE:

@@ -10,6 +10,11 @@ Hypothesis [x] predicted that [predictor] would be [positive/negative] associate
 
 > **四拍完整性检查**：方向 → 显著性+系数 → 幅度+基准 → 支持判断。Beat-3（幅度）必须使用具体数值基准（one-SD / one-unit / IQR / 概率变化 / 百分比），禁止仅写 "This indicates that..." 等模糊表述。
 
+> **R3 段落级体裁 QC**（审计体裁；补充四拍检查）:
+> - **假设重述-first 是义务不是病**：段首必须是 "Hypothesis [x] predicted..." frame；禁止 table-first-without-frame（段首直接 "Model 2 shows that..."）——读者在 Beat-1 前需要假设锚点
+> - **Beat-skip**：缺 Beat-3（幅度）即既有强制要求。**判决位置不限**：可在假设重述之后早出（verdict-early-then-interpreted：判决前置→幅度/边际分析→解释性 wrap），也可置尾（verdict-last）——两种均为顶刊标准（Pontikes 2012 ASQ / Shen et al. 2022 JOM 用前者；Zhou et al. 2017 ASQ / Pollock et al. 2015 ASQ 用后者）。禁止的是判决早出后**又加同义判决**（见下条 Double wrap）
+> - **Double wrap**：禁止两句**同义判决**重复（"Thus, Hypothesis [x] is supported." 后又加 "This confirms our prediction."）。**但早判决 + 晚解释性 wrap 合法**——晚 wrap 若是幅度解读/比较/边界（如 Pontikes 2012 "The same ambiguity that makes orgs less appealing to consumers makes them more appealing to VCs"）而非第二句判决，不算 double wrap。Beat-4（判决）只出现一次，解释性 wrap 可叠加
+
 **含经济显著性（R5 嵌入）的扩展版**： ✓ STANDARD（12+/28 篇含交互效应范文复现）
 ```text
 Hypothesis [x] predicted that [predictor] would be [positive/negative] associated with [outcome]. As shown in Model [y] of Table [z], the coefficient for [predictor] is [positive/negative] and statistically significant ([coefficient], [p-value]). Substantively, a [one-standard-deviation/one-unit] increase in [predictor] is associated with a [Y-unit] [increase/decrease] in [outcome], representing approximately [percentage / standard deviation / probability] change relative to [baseline]. Thus, Hypothesis [x] is supported.

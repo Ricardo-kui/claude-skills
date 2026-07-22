@@ -47,3 +47,8 @@ Table [x] reports the 2SLS results for [outcome A] (Panel A) and [outcome B] (Pa
 ```text
 Table [x] reports the matched difference-in-differences estimates. Before presenting treatment effects, we note that the matched sample achieves balance on [covariates]: the absolute standardized difference is below [threshold] for all variables, and the [t-test / KS-test] indicates no significant difference between treated and control groups. Model [a] reports the baseline matched DiD estimate; Model [b] adds [controls / interactions].
 ```
+
+> **导航段段落级 QC**（审计体裁）:
+> - 导航段必须以 hypothesis→model 映射收尾（"Hypothesis [a] is tested in Model [y]"）——这是 audit-genre 的 Link beat；禁止停在 "Table [x] reports..."（audit-genre 的 abrupt stop）
+> - R2 只做导航不做判断：段内不得提前解读系数方向/显著性（那是 R3 的 Beat-1/2）
+> - 表格导航缺失（直接跳入 R3 主效应）是既有反模式，此处补充其段落级表现：R2 与 R3 合并成单段且超过 §0.2 长度上限时必须拆分

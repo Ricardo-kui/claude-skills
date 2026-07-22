@@ -55,5 +55,15 @@ Use this reference to verify that Discussion delivers on Introduction promises.
 **Other pitfalls**:
 - Do not use "Interestingly" to introduce findings (reserved for JM)
 - Do not push all limitations to future research (explain constraints on current interpretation)
+
+## Paragraph Craft QC（说服体裁）
+
+Discussion 是全文中说服体裁规则适用最充分的 section（Dunleavy 模型真正 fit 的位置）。完整规则见 `../../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md` §0.0/§0.1/§0.3/§0.6；本节列出 Discussion 语境的高优先级检查：
+
+- [ ] **Claim-first**：每段段首句为本段理论主张（"These findings suggest that..." / "Our theory explains why..."），非证据或他人观点
+- [ ] **Wrap 句存在**：每段段末有收束句把证据/解释上升为 claim，回扣研究问题或贡献声明；禁止段末停在引用或数据上（abrupt stop）
+- [ ] **无作者名开头**：段首主语非 "Smith (2020)"——文献服务于本段 claim，不主导段首
+- [ ] **无 caveat-first**：局限性内容集中在 P7；理论贡献段不以 "Although..." 让步开头
+- [ ] **长度分布**：遵循上方 Paragraph length distribution 表；超出 §0.2 期刊区间（200–300 词）需检查是否多论点
 - Do not only state contributions at Discussion end (contributions should run through Discussion)
 - Do not ignore theoretical implications of non-significant / unexpected findings

@@ -302,6 +302,9 @@ pontikes2012 通过示例：market-taker 和 market-maker **不是组织的属�
 | **两个贡献实质是一件事**: 第二贡献只是第一贡献的 "also" | 每个贡献锚定不同文献流（Literature A → Literature B）或不同 Makadok 维度 |
 | **显式RQ无理论层次**: 两个 RQ 并列且无关（如 RQ1=主效应, RQ2=不同的主效应） | RQ 应有递进：RQ1=主效应 → RQ2=边界条件/调节 |
 | **构念重命名** (Constructs 专属): 新构念只是旧构念的重新标签——A=高X, B=低X | 嗅探：两个构念能否在同一实体上**同时为高**？能否同时为低？若回答"否"→ tautology。修：重新定义构念使其独立（pontikes2012: market-taker vs market-maker 与组织属性无关，与受众视角有关）|
+| **作者名开头**: 段首句主语为 "Smith (2020)"，段落沦为文献注脚 | 段首换成自己的 claim，作者名移到句中证据位；见 prose-craft-checklist §0.6-1 |
+| **清嗓开头**: 段首为 "Before turning to..." / "It is worth noting..." 热身句 | 删除或压缩为 ≤15 词的合法 transition/background 句；见 §0.6-2 |
+| **孤儿引语**: epigraph/引语独立存在，后无 pivot 解读句 | 引语后必须接 "This quote captures..." 式 pivot；见 §0.6-3 |
 
 # Constraints
 

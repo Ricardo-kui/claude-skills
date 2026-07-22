@@ -54,3 +54,7 @@ Our data link [actor A], [actor B], and [actor C] through [matching key / dyadic
 ```text
 We used a multisource, multimethod data collection approach to test our ideas. This involved gathering data from [N] sources: [source 1: e.g., in-person interviews], [source 2: e.g., online surveys to subordinates], [source 3: e.g., hard-copy surveys to friends/family], and [source 4: e.g., archival company data]. Testing our theory required gaining access to [phenomenon], and our methodology was designed with this goal in mind. We established [N] criteria to govern recruitment: [criterion 1], [criterion 2], and [criterion 3]. We tested our hypotheses using [estimator: e.g., hierarchical linear regression]. To account for the nonindependence in our data (i.e., [nesting structure]), we specified [SE type: e.g., Huber/White/sandwich standard errors] using the [software option]. [Observations] were clustered by [clustering variable].
 ```
+
+> **M2 段落级体裁 QC**（审计体裁）:
+> - **Procedure-first 合法，source-pitch-first 不合法**：段首必须是 starting population / sampling action（"We began with..."）；禁止以数据源宣传开篇（"The X database is the leading source of..."）——数据源辩护放在 action 之后
+> - **漏斗闭环在同段或紧邻两段内完成**：起始 N → 每步排除（理由+数字）→ 最终 N 不得散落三段以上；跨段时首段末句必须预告（"The final sample consists of..." 的承接句）

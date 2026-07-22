@@ -14,10 +14,11 @@ One concern is that our findings depend on the specific operationalization of [c
 To ensure that our results are not sensitive to model choice, we re-estimate our models using [alternative model, e.g., Tobit / Poisson / negative binomial / Cox]. The pattern of coefficients is [consistent/qualified], suggesting that [model choice] is unlikely to account for the main pattern.
 ```
 
-**样本威胁**：
+**样本威胁 — 排除敏感性**： ✓ STANDARD（20+/28 篇范文使用）
 ```text
 Our results may be sensitive to sample composition. We exclude [specific subsample, e.g., high-tech firms / financial crisis years / outliers] and re-estimate our models. The results [remain consistent/are qualified], suggesting that [sample restriction] does not drive the findings.
 ```
+> 注：该变体对应 exclusion-based 样本稳健性。理论驱动的子样本异质性检验见下方"样本威胁 — 理论驱动子样本变异"（🔬 EXPERIMENTAL，源自 Yuan et al. 2026 JOM）。
 
 **时点威胁**： ✓ STANDARD（10+/28 篇范文使用）
 ```text
@@ -179,3 +180,90 @@ To further assess the robustness of our findings to analyst degrees-of-freedom i
 - 规格维度必须与识别威胁正交——specification curve **补充而非替代** threat-based 稳健性；若 reverse causality 是担忧，specification curve 单独不能回应
 - 必须**全部 [N_total_models] 规格**都报告；不可选择性省略不显著的规格
 - 图必须显示 CI，不能只画点估计——读者需同时判断符号稳定性与显著性稳定性
+
+---
+
+## 六维框架扩展：Preprocessing & Covariate Variation（Yuan et al. 2026 JOM）
+
+> 以下子变体源自 Yuan et al. (2026, *Journal of Management*) 对 1,706 篇管理学期刊文章的系统性审查。该论文发现预处理变异在不到 30% 的子研究中被报告，协变量变异虽有中等覆盖率（69.8%）但缺少标准化报告模板。所有新增变体均为 🔬 EXPERIMENTAL，在 distill-results-exemplar 从已发表论文中验证对应模式之前保持此标记。
+
+### Preprocessing Variation（预处理变异）
+
+论文 REC B3.4 建议对所有研究设计实施预处理稳健性检验——因为这些检验不需要额外数据收集。
+
+**预处理威胁 — 缺失数据处理**： 🔬 EXPERIMENTAL (Yuan et al. 2026 JOM; 尚未经范文蒸馏验证) ⚠️ 保守替代: 通用 R7 测量威胁段落 + 在 Methods 中增加缺失数据处理说明
+
+```text
+Our results may be sensitive to how we handle missing data. To assess this, we compare results across [two or more justifiable approaches: listwise deletion / multiple imputation / full information maximum likelihood (FIML) / mean substitution]. In the primary analysis, we used [primary approach] because [justification]. When we re-estimate the models using [alternative approach], the [focal coefficient] remains [direction] and statistically significant (β = [value], p [rel] [threshold]), and the magnitude is [qualitatively similar / modestly reduced]. This suggests that [missing data treatment] does not drive the findings. [If applicable: When using multiple imputation, we also varied the number of imputations from [M1] to [M2] and the imputation algorithm from [algorithm-A] to [algorithm-B]; results were unchanged.]
+```
+
+**预处理威胁 — 离群值/错误观测处理**： 🔬 EXPERIMENTAL (Yuan et al. 2026 JOM; 尚未经范文蒸馏验证) ⚠️ 保守替代: 通用 R7 样本威胁段落 + 增加离群值处理说明
+
+```text
+We examine whether our results are sensitive to the treatment of outliers and influential observations. In the primary analysis, we [primary approach: winsorized continuous variables at the 1st and 99th percentiles / excluded observations with |DFBETA| > threshold / used Cook's distance cutoff]. To assess robustness, we compare results when [alternative approach: winsorizing at the 5th and 95th percentiles / using multivariate outlier detection (Mahalanobis distance) / including versus excluding flagged observations]. The [focal coefficient] remains [direction] and significant at conventional levels across all specifications, indicating that [outlier treatment choice] does not affect the conclusions. [If applicable: We also tested whether results are sensitive to univariate versus multivariate outlier detection methods; the pattern is consistent.]
+```
+
+**预处理威胁 — 数据转换策略**： 🔬 EXPERIMENTAL (Yuan et al. 2026 JOM; 尚未经范文蒸馏验证) ⚠️ 保守替代: 通用 R7 模型威胁段落 + 在 Methods 中说明转换策略
+
+```text
+To ensure that our findings are not artifacts of data transformation choices, we compare results across alternative transformation approaches. In the primary analysis, [primary approach: e.g., we use the natural logarithm of R&D expenditure to address right skewness / we treat the count variable as continuous after log transformation]. As a robustness check, we [alternative approach: re-estimate using the untransformed variable / apply a square-root transformation / use an inverse hyperbolic sine transformation / treat the variable as discrete using a count model]. The coefficient on [focal predictor] remains [direction] and statistically significant (p [rel] [threshold]), suggesting that [transformation choice] does not drive the results. For [skewed count variable with frequent zeros], we further tested whether results differ when treating the variable as continuous versus discrete ([reference: e.g., Kneeland, Schilling, & Aharonson, 2020]); the pattern is [consistent / qualified].
+```
+
+**预处理威胁 — 粗心回答筛查**（主要适用于调查/实验设计）： 🔬 EXPERIMENTAL (Yuan et al. 2026 JOM; 尚未经范文蒸馏验证) ⚠️ 保守替代: 通用 R7 样本威胁段落 + 增加筛查说明
+
+```text
+We assessed whether our results are sensitive to the inclusion of potentially careless responses. In the primary analysis, we [primary approach: retained all respondents who passed attention checks / excluded respondents completing the survey in less than [threshold] minutes / used [specific screening method]]. To evaluate robustness, we [alternative approach: compared results with and without flagged respondents / applied alternative screening thresholds (e.g., [threshold-A] vs. [threshold-B] minutes) / used a different careless response index]. The [focal coefficient] is [status] whether or not flagged respondents are excluded, and the pattern of results is [consistent / qualified]. This reduces concern that [careless responding] accounts for the findings.
+```
+
+### Covariate Variation（协变量变异）
+
+论文 REC B3.3 指出协变量变异是**最普遍报告**的稳健性维度（69.8%），但当前缺少标准化段落模板。
+
+**协变量威胁 — 含/不含控制变量对比**： 🔬 EXPERIMENTAL (Yuan et al. 2026 JOM; 尚未经范文蒸馏验证) ⚠️ 保守替代: 通用 R7 模型威胁段落
+
+```text
+A concern is that our conclusions may depend on the specific set of control variables included in the models. To address this, we compare results across alternative covariate specifications. Model [X] (baseline) includes only [focal predictor(s)] without controls. Model [Y] adds [core theoretical controls: e.g., firm size, age, leverage]. Model [Z] (our preferred specification) further includes [extended control set]. The coefficient on [focal predictor] changes from [β_baseline] to [β_preferred]—a [magnitude] shift—and remains [direction] and statistically significant across all specifications. This pattern indicates that [focal relationship] is not spuriously driven by the inclusion or exclusion of specific covariates. [If applicable: We also used a data-driven approach (e.g., LASSO / double selection) to identify alternative covariate sets; the [focal coefficient] remains stable.] [If focal coefficient substantially changes magnitude: Although the coefficient magnitude attenuates when [specific control] is added, the direction and significance remain stable, suggesting that [control] accounts for some variance but does not eliminate the relationship.]
+```
+
+**协变量威胁 — 替代控制变量集（含 DAG/理论辩护）**： 🔬 EXPERIMENTAL (Yuan et al. 2026 JOM; 尚未经范文蒸馏验证) ⚠️ 保守替代: 通用 R7 模型威胁段落 + 增加控制变量敏感性说明
+
+```text
+Theoretical guidance on which covariates to include is sometimes ambiguous. To assess whether our results are sensitive to uncertainty in covariate selection, we compare our preferred specification against [two / three] alternative control-variable sets derived from [theoretical rationale / Directed Acyclic Graph (DAG) analysis / prior studies]. Set [A] includes [description]. Set [B] replaces [controls] with [alternative controls] because [theoretical justification]. Across these alternative sets, the coefficient on [focal predictor] ranges from [β_min] to [β_max], all [direction] and [status: e.g., statistically significant at p < .05 / consistent in direction but varying in significance]. The stability of [direction] across theoretically motivated covariate sets reduces concern that [covariate selection uncertainty] drives the findings. [If including mediators as controls is a risk: Importantly, we do not include [mediator variables] as controls because doing so would bias the estimate of [focal predictor] (per Bernerth et al., 2018; Hünermund, Louw, & Rönkkö, 2025).]
+```
+
+### Subsampling Variation 细化：Theory-Driven Subsampling（新增）
+
+原"样本威胁"段落已重命名为"样本威胁 — 排除敏感性"（见上方）。新增理论驱动子样本变体：
+
+**样本威胁 — 理论驱动子样本变异**（新增）： 🔬 EXPERIMENTAL (Yuan et al. 2026 JOM; 尚未经范文蒸馏验证) ⚠️ 保守替代: 通用 R7 样本威胁段落（排除敏感性变体）
+
+```text
+To examine whether our findings generalize across theoretically meaningful subgroups, we re-estimate our models within subsamples defined by [theoretically relevant moderator: e.g., firm size (above/below median) / industry (manufacturing vs. services) / time period (pre- vs. post-regulation) / demographic group]. If the [focal effect] were driven by a specific subset of the data, we would expect the coefficient to be concentrated in [subgroup A] and absent in [subgroup B]. Instead, we find that [focal predictor] is [direction] and [significant / not significant] in both [subgroup A] (β = [value], p = [value]) and [subgroup B] (β = [value], p = [value]). The [similarity / difference] in coefficients across subgroups [supports generalizability / reveals a boundary condition that warrants further theorizing]. [If applicable: We also employed random subsampling ([N] draws of [X%] of the sample) and find that the [focal coefficient] is [direction] in [Y%] of draws, with a mean coefficient of [value] (95% CI [[lo], [hi]]), consistent with the full-sample estimate.]
+```
+
+### Fragility / Divergent Findings Honest Reporting（新增）
+
+对应论文 Section D——当稳健性检验结果**不一致**时的诚实报告范式。
+
+**稳健性检验结果不一致时的诚实报告**： 🔬 EXPERIMENTAL (Yuan et al. 2026 JOM Section D; 尚未经范文蒸馏验证) ⚠️ 保守替代: 通用 R7 段落（unchanged 表述）+ 在 Discussion 中讨论不一致
+
+```text
+[When some robustness checks yield divergent results — DO NOT hide behind "results are unchanged":]
+
+We conducted a series of robustness analyses to assess the stability of our findings across [dimensions tested]. Most tests confirm the [direction and significance] of the [focal relationship]: [summarize 2-3 supporting checks briefly]. However, when we [specific test that diverged], the coefficient on [focal predictor] is [attenuated / not significant / directionally inconsistent] ([specific result]). We do not interpret this as disconfirmation but rather as evidence that the [focal relationship] is [sensitive to / moderated by / bounded by] [specific analytical choice]. Specifically, [substantive interpretation: e.g., the effect appears to hold under condition A but not condition B, suggesting a boundary condition]. We return to this fragility in the Discussion, where we consider its implications for [theory / measurement / generalizability].
+
+[When ALL major robustness checks are consistent — the standard happy path:]
+
+Across all robustness analyses, the [focal coefficient] remains [direction] and statistically significant, regardless of [measurement choice / model specification / sample composition / preprocessing decision / covariate set / estimator]. The consistency of the findings across [N] distinct analytical alternatives substantially reduces concern that the results are artifacts of specific analytical choices. Table [X] provides a structured summary of all robustness tests, their rationale, and their results.
+```
+
+> **Fragility Reporting QC**:
+> - Divergent findings MUST appear in both the main text AND any robustness summary table
+> - Every divergent result needs a substantive interpretation (boundary condition / measurement sensitivity / theoretical contingency), not just "results differed"
+> - If more than 50% of robustness checks diverge, the primary finding itself should be qualified (e.g., "the evidence is mixed" rather than "supported")
+> - Journal space constraints are NOT a valid reason to hide divergent findings — use online supplements if needed (Yuan et al. 2026 REC C3)
+
+> **R7 段落级体裁 QC**（审计体裁）:
+> - **Threat-first 开头**：每段以威胁声明开篇（"One concern is..." / "A potential threat is..."）；禁止 table-first-without-threat（段首 "Table 5 reports robustness checks..."）——威胁 frame 必须先于证据
+> - **单段单威胁**：一段内出现 ≥3 个异质检验（如替代测量 + 安慰剂 + 子样本挤在一段）→ 按威胁拆段；与 §0.2 长度上限联动
+> - **预期行为说明（非误报）**：本 threat-first 标准高于多数已发表论文的稳健性写作——Yuan et al. (2026) 指出大多数研究的稳健性报告不足（多为 "We performed three robustness checks. First... Second... Finally..." 式 laundry-list / procedure-first 开篇）。因此对既有范文（如 Malshe and Agarwal 2015, JM 的 R7 段）触发 flag 属预期行为，目的是把 laundry-list 写法推向 threat-framed，而非描述当前常态

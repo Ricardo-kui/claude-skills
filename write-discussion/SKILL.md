@@ -137,6 +137,8 @@ version: 1.1.0
 - [ ] 实践启示是否具体到 actors 和 decisions？
 - [ ] 结论是否展示 conversation 已改变？
 - [ ] 是否避免了 Pollock 四 flaws（Rehashing / Superficial / Meandering / Overreaching）？
+- [ ] 段落是否遵循说服体裁约定（claim-first、段末有 wrap 回扣论点）？见 `references/alignment-checks.md` §Paragraph Craft 与 `../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md` §0
+- [ ] 是否避免了 Dunleavy 段落问题（作者名开头 / 清嗓 / 孤儿引语 / caveat-first / 戛然而止）？
 ```
 
 ## 完整示例

@@ -6,7 +6,7 @@ description: |
   蒸馏请求（「蒸馏 results」「results 范文分析」「处理新论文 results」「results 骨架提炼」）不直接处理——自动路由到 `distill-results-exemplar` 执行 Phase 0–5 蒸馏协议；验证通过的变体由其 Phase 4 写入 `econometric-models/[结果类型].md`。
   触发词：「写results」「results模板」「结果部分怎么写」「帮我写results」「result skeleton」「写结果」「假设检验」「交互效应」「稳健性检验」「经济显著性」「平行趋势」「marginal effect」「双受众」「对立结果」「替代解释」「hazard model」「风险模型」「survival analysis」「CEM」「split sample」。
   当用户提及系数解释、表格导航、模型序列、robustness check、安慰剂检验、机制检验、非显著深化、方向相反时也应触发。
-version: 3.1.0
+version: 3.2.0
 ---
 
 # Role
@@ -100,6 +100,68 @@ version: 3.1.0
 - **推断二元结果**：R3 报告推断状态分布 → R7 阈值敏感性 / 分类准确性
 - **计数模型（AME+区域显著性）**：R3 报告IRR后紧跟平均边际效应与显著性区域图
 - **定性过程研究/定性发现**：不遵循 R1–R9 顺序；输出 F1（过程模型总览）→ F2（阶段触发）→ F3（前台—后台对照）→ F4（侧台协商）→ F5（补充机制/边界）→ F6（受众区分的有限成功评估）。完整填空骨架参见 `econometric-models/定性过程研究.md`。该设计类型目前为 EMERGING / 单来源，Q1–Q8 Methods 骨架参见 `../write-methods/econometric-models/定性过程研究.md`。
+
+---
+
+## 稳健性检验决策诊断
+
+> 基于 Yuan et al. (2026, *Journal of Management*) 六维稳健性分析框架和 Figure 2 决策流程图。
+
+在生成 R7 段落之前，按以下三步评估该研究需要哪些稳健性检验。这避免了"机械罗列所有稳健性检验"的反模式——只生成对该研究特定脆弱性有意义的检验。
+
+### Step 1: 六维扫描
+
+检查每个维度是否存在可检验的替代方案：
+
+| 维度（Yuan et al. 2026） | 检查问题 | 信号来源 |
+|--------------------------|---------|---------|
+| **测量变异** (Measurement) | 关键构念是否有替代操作化/代理变量/替代数据源？ | `paper-state.yaml` variables 字段含多个备选测量 / 用户标记 |
+| **协变量变异** (Covariate) | 控制变量选择是否存在理论不确定性？替代控制集是否合理？ | 控制变量数量 > 5 / 缺少 DAG / 用户标记 |
+| **预处理变异** (Preprocessing) | 是否做了缺失数据处理、离群值处理、变量转换？有替代策略吗？ | 样本量 > 1000 / 存在缺失值 / 含偏态变量 |
+| **子样本变异** (Subsampling) | 样本是否可被理论上有意义地拆分为子组（行业/时期/规模/人口）？ | 面板数据 / 多行业 / 多时期 / 用户标记 |
+| **统计规格变异** (Statistical specification) | 是否有多个理论上可辩护的估计器/参数设定/聚类层级？ | `estimator_family` 含备选 / 复杂数据结构 |
+| **方法变异** (Methodological) | 是否有多子研究/多方法（实验+调查+二手数据）？ | `paper-state.yaml` sub-studies 数量 ≥ 2 |
+
+### Step 2: 可辩护性 / 可行性 / 必要性筛选
+
+对 Step 1 中识别到的每个维度，按论文 REC A2–A4 评估：
+
+| 筛选标准 | 问题 | 不通过时的处理 |
+|---------|------|---------------|
+| **可辩护性** (Justifiability) | 替代方案是否有理论依据且统计上有效？非任意变化或劣质选择？ | 排除该维度，在 R7 开头或 Methods 中解释排除理由 |
+| **可行性** (Feasibility) | 替代方案是否可用现有数据实现？无需额外数据收集？ | 排除该维度，在 limitations 中说明"would be valuable but not feasible because [reason]" |
+| **必要性** (Necessity) | 该维度是否对应本研究的特定脆弱性（研究问题新颖性 / 方法和统计局限 / 结果特征）？ | 标记为 optional——可生成但不强制 |
+
+**脆弱性来源**（论文 REC A3）：
+- **研究问题特征**：新颖/反直觉发现、挑战已有结论、先前文献结论不一致、可能指导高成本实践干预
+- **方法和统计脆弱性**：小样本、测量工具心理计量属性未知或不佳、使用新统计方法
+- **结果特征**：效应量小、跨样本/时期/子组不一致、与 meta 分析或强理论预测矛盾
+
+### Step 3: 输出稳健性计划
+
+基于筛选结果，输出结构化稳健性计划：
+
+```yaml
+robustness_plan:
+  mandatory:       # 必须生成 R7 段落的维度——有明确威胁 + 有可行替代
+    - measurement_variation
+  recommended:     # 建议生成但可跳过
+    - covariate_variation
+    - statistical_specification_variation
+  optional:        # 标记为可选/探索性（低必要性但有可行替代）
+    - preprocessing_variation
+  excluded:        # 排除并附理由
+    - methodological_variation: "单一研究设计，无多方法"
+    - subsampling_variation: "样本量不足以支持理论上有意义的子组分析"
+```
+
+该计划（1）指导后续 R7 段落生成——只生成 `mandatory` 和 `recommended` 维度的段落；（2）写入 `paper-state.yaml` 供下游消费。
+
+### 诊断触发方式
+
+- **自动触发**：当 `paper-state.yaml` 中 `methods.robustness_plan` 字段不存在时
+- **手动跳过**：`/write-results OLS/FE --skip-robustness-diagnostic`（直接使用默认 R7 threat-based 段落）
+- **仅诊断**：`/write-results --robustness-diagnostic-only`（仅输出诊断结果，不生成段落骨架）
 
 ---
 
@@ -237,6 +299,9 @@ Taken together, the results indicate that [digital transformation enhances firm 
 - **设计排他性混淆**：为非 DiD 设计使用平行趋势语言；为非 IV 设计要求第一阶段/排他性约束检验；为非匹配设计要求重叠支撑检验
 - **稳健性包装成因果识别**：把安慰剂检验、模型替换等 robustness check 称为 "causal identification"，超出其回应的 threat 类型
 - **batch 同质化**：不同估计器（Logit/Probit/生存分析）使用 OLS 的 ritual 和句式，未按估计器特性调整解释策略（如 Logit 直接比较系数大小）
+- **稳健性检验只报告 confirmatory 结果**：当某些稳健性检验结果不一致时，只在脚注中轻描淡写或选择性只报告一致的子集。应在正文和汇总表中同时披露 divergent findings，并框定为边界条件/测量敏感性（Yuan et al. 2026 JOM, Section D）
+- **预处理选择不透明**：不在任何地方报告缺失数据处理方式、离群值阈值、变量转换策略，使得读者无法评估预处理选择对结论的影响（Yuan et al. 2026 JOM, REC B3.4）
+- **协变量选择无理论辩护**：控制变量的增删仅基于统计显著性而非理论依据，或未在正文/附录中为控制变量集的选择提供 DAG/理论论证（Yuan et al. 2026 JOM, REC B3.3）
 
 ## 诚实边界
 
@@ -252,6 +317,8 @@ Taken together, the results indicate that [digital transformation enhances firm 
 8. **不得把稳健性检验包装成因果识别**：robustness check（安慰剂、模型替换、样本限制）只能回应对应的 validity threat，不能将其称为 "causal identification" 除非该检验实际解决了识别问题（如 IV 的排他性、DiD 的平行趋势）。
 9. **不得在非线性模型中直接比较系数大小**：Logit/Probit/计数模型/生存分析必须报告边际效应、预测概率、风险比或事件时间变化，不能直接比较 raw coefficient 的大小。
 10. **交互显著后主效应不可独立解释**：当交互项显著时，**强烈建议**在同一段落或紧随其后的段落中明确警告 "main effects cannot be interpreted independently"，并报告 conditional effects。若主效应本身已不显著或期刊惯例侧重条件效应图，可酌情省略。
+11. **不得在稳健性检验中只报告一致的子集**：当某个稳健性维度下存在多个检验且部分 confirm、部分 disconfirm 时，必须在正文和汇总表中同时报告所有检验结果，不得选择性披露。Divergent findings 应框定为边界条件或测量敏感性，而非错误（Yuan et al. 2026 JOM, Section D）。
+12. **不得将预处理选择隐藏为"标准做法"**：缺失数据处理方法（listwise deletion / multiple imputation / FIML）、离群值阈值（1st/99th vs. 5th/95th percentile）、变量转换（log / sqrt / untransformed）必须在 Methods 或 R7 中明确报告，不能仅以 "we followed standard practices" 概括（Yuan et al. 2026 JOM, REC B3.4）。
 
 ## 生成后自检清单
 
@@ -280,6 +347,10 @@ Taken together, the results indicate that [digital transformation enhances firm 
 - [ ] 经济显著性与统计显著性同时出现
 - [ ] 稳健性检验和补充分析有明确区分
 - [ ] 交互效应有图示或简单斜率支持
+- [ ] **预处理变异**：至少报告一种预处理稳健性检验（缺失数据/离群值/转换），或说明为何不必要（Yuan et al. 2026）
+- [ ] **协变量变异**：若控制变量选择存在理论不确定性，已检验替代控制变量集的稳健性（Yuan et al. 2026）
+- [ ] **脆弱性披露**：若任何稳健性检验产生不一致结果，已在正文（而非仅脚注）中如实报告（Yuan et al. 2026）
+- [ ] **六维覆盖声明**：R7 开头或汇总表中已明确列出检验的稳健性维度，未检验维度已附排除理由（Yuan et al. 2026）
 
 ### 论证质量诊断
 - [ ] **四拍完整性**：显著假设 方向→显著性→幅度→支持；非显著诚实缩减为2-3拍
@@ -287,6 +358,7 @@ Taken together, the results indicate that [digital transformation enhances firm 
 - [ ] **经济显著性嵌入**：1 SD → N unit change / N% / N-day，不只报 β 和 p
 - [ ] **非显著诚实**：所有假设可追溯到明确声明，无跳过
 - [ ] **因果语言自律**：OLS→"associated with", DiD→"effect of", 实验→"caused"
+- [ ] **段落体裁适配**：Results 段落遵循审计体裁约定——假设重述-first / 表格导航-first 为合法段首，支持判断置段尾；通用段落规则（长度、coherence、体裁分型）见 `../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md` §0.0/§0.2/§0.5；§0.1 PEEL/§0.3 claim-first/§0.6 Dunleavy 反模式为说服体裁专用，不适用于本 section
 
 ### 反向审查（可选但建议）
 生成完成后，可使用 `/distill-results-exemplar` 对输出段落进行反向蒸馏审查，生成 Vault 参考注释，供人工判断：
@@ -324,6 +396,13 @@ results:
   unexpected_findings:
     # 无意外发现时为空列表
     # - "[反直觉/意外发现：一句话描述]"
+
+  robustness_plan:  # 新增 v3.2.0 — 由稳健性决策诊断生成（Yuan et al. 2026 JOM）
+    mandatory: ["[必须检验的维度]"]
+    recommended: ["[建议检验的维度]"]
+    optional: ["[可选检验的维度]"]
+    excluded:
+      "[维度名]": "[排除理由]"
 ```
 
 ## Constraints
@@ -356,4 +435,4 @@ results:
 具体变体见 `econometric-models/[结果类型].md`。新蒸馏结果通过 `distill-results-exemplar` → Phase 4 自动写入。
 
 ---
-*基于 34 篇 MVP30 范文语料库、Pollock 2025 Ch07 构建。版本 3.1.0。*
+*基于 34 篇 MVP30 范文语料库、Pollock 2025 Ch07、Yuan et al. (2026) JOM 六维稳健性框架构建。版本 3.2.0。*
