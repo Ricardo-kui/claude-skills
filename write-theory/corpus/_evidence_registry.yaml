@@ -6,10 +6,10 @@
 meta:
   schema_version: "1.0.0"
   registry_type: theory-fragment-registry
-  last_updated: "2026-07-10"
-  total_papers_indexed: 44
-  batches_processed: 2
-  note: "Reverse-engineered from existing corpus anchors. Batch 2026-07-09: distilled 4 recall papers (Darby 2023 MSOM, Mayo 2022 POM, Ball 2018 JOM, Darby 2026 JOM) into subprotocols and registry. Batch 2026-07-10: expanded Cui, Yang & Vertinsky (SMJ) with inverted-U mechanism, bilateral argumentation, flatten/steepen language, and local closure templates."
+  last_updated: "2026-07-22"
+  total_papers_indexed: 48
+  batches_processed: 6
+  note: "Reverse-engineered from existing corpus anchors. Batch 2026-07-09: distilled 4 recall papers (Darby 2023 MSOM, Mayo 2022 POM, Ball 2018 JOM, Darby 2026 JOM) into subprotocols and registry. Batch 2026-07-10: expanded Cui, Yang & Vertinsky (SMJ) with inverted-U mechanism, bilateral argumentation, flatten/steepen language, and local closure templates. Batch 2026-07-22: distilled Li, Bapuji, Talluri, Singh & Narayanan (2025 JSCM, Vertical Spillover of Product Recalls) — added dual_mechanism_convergent_moderation pattern to bilateral_argumentation_templates.md (moderator×mechanism matrix) and registered H1 dual-mechanism convergence under existing dual_mechanism_same_direction. Batch 2026-07-22b: distilled Cutolo & Ferriani (2024 JOM, narratives & atypicality) — added minimal_pair_contrast_vignette pattern to argumentation_patterns.md (Leah controlled-contrast showing device); registered parallel_buffering_moderators_single_mechanism; cutolo_ferriani also a 2nd source for write-introduction theory-lens/02-dual-theory-layered (processing fluency + Bloom & Lahey taxonomy). Batch 2026-07-22c: distilled Falchetti, Cattani & Ferriani (2022 SMJ, Start with Why) — added congruency_fit_fluency_mechanism to sentences/mechanism_chain.md (genuine gap; spans Falchetti + Cutolo); CORRECTED misclassification of falchetti_2022_smj (was construct_differentiation tfr_017, has no such content) → reclassified to congruency mechanism; construct_differentiation source_count 5→4. Falchetti intro hook (23-popular-debate) and Methods (多研究 变体1/2, 实验 变体1) already distilled in prior sessions."
 
 status_rules:
   EMERGING:
@@ -273,19 +273,20 @@ source_papers:
         note: "Censorship increases psychological safety for liberals but decreases for conservatives."
 
   falchetti_2022_smj:
-    display_name: "Falchetti (2022, SMJ)"
+    display_name: "Falchetti, Cattani & Ferriani (2022, SMJ)"
     journal: "Strategic Management Journal"
     year: 2022
     subfield: "strategy"
-    theory_build_type: "Constructs"
+    theory_build_type: "Mechanism / Boundary"
     fragments:
-      - fragment_id: tfr_017
-        type: construct_differentiation
-        title: "构念辨析型（A 变体）"
+      - fragment_id: tfr_126
+        type: congruency_fit_fluency_mechanism
+        title: "认知适配/契合 → 加工流畅性 → 正向评价（construal congruency）"
         home_files:
-          - "variants/A_construct_differentiation.md"
-        makadok_dimension: "Constructs"
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
         status: "EMERGING"
+        note: "Frame (why/how) × audience expertise (novice/expert): frame congruent with audience construal → fluency → positive evaluation. Produces mirror H1 (novices prefer why) / H2 (experts prefer how). NOTE: this paper was previously misclassified as construct_differentiation (tfr_017) — corrected 2026-07-22; the paper contains no construct-differentiation content."
 
   gamache_etal_2020_smj:
     display_name: "Gamache, McNamara, Mannor & Johnson (2020, SMJ)"
@@ -1336,6 +1337,56 @@ source_papers:
         status: "EMERGING"
         note: "FDA device class I/II vs III as information asymmetry boundary condition."
 
+  li_bapuji_talluri_singh_narayanan_2025_jscm:
+    display_name: "Li, Bapuji, Talluri, Singh & Narayanan (2025, JSCM)"
+    journal: "Journal of Supply Chain Management"
+    year: 2025
+    subfield: "om"
+    theory_build_type: "Mechanism / Boundary"
+    fragments:
+      - fragment_id: tfr_122
+        type: dual_mechanism_same_direction
+        title: "双机制汇聚主效应（pipes + prisms）"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "H1 vertical spillover via cash-flow effect (pipes) + impression effect (prisms) converging on supplier value loss."
+      - fragment_id: tfr_123
+        type: dual_mechanism_convergent_moderation
+        title: "双机制收敛调节 + moderator×mechanism 矩阵"
+        home_files:
+          - "subprotocols/bilateral_argumentation_templates.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Each moderator (common business ties / institutional ownership / analyst coverage) reasoned through both pipe and prism channels, converging on a signed hypothesis; presented as a moderator×mechanism matrix table."
+
+  cutolo_ferriani_2024_jom:
+    display_name: "Cutolo & Ferriani (2024, JOM)"
+    journal: "Journal of Management"
+    year: 2024
+    subfield: "ob_hr"
+    theory_build_type: "Mechanism / Boundary"
+    fragments:
+      - fragment_id: tfr_124
+        type: minimal_pair_contrast_vignette
+        title: "受控最小对对比 vignette（showing device）"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Leah 'painter and musician' vs 'artist' minimal pair isolating abstraction's effect on atypicality processing."
+      - fragment_id: tfr_125
+        type: parallel_buffering_moderators_single_mechanism
+        title: "三并行缓冲调节变量经单一机制（processing fluency）"
+        home_files:
+          - "subprotocols/moderator_selection_frameworks.md"
+          - "sentences/moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Three narrative features (abstraction/cohesion/conventionality) each buffer the atypicality penalty via one mechanism (processing fluency), organized by Bloom & Lahey content/form/use taxonomy. Note: text-measurement Methods already distilled in write-methods 文本构念测量.md variants 5/6/7."
+
 # Cross-paper pattern aggregation (derived above)
 patterns:
   anchor_mechanism_warrant_prediction:
@@ -1377,13 +1428,12 @@ patterns:
     description: "Distinction between two easily-confused constructs"
     legacy_implicit: true
     status: "VERIFIED"
-    source_count: 5
+    source_count: 4
     source_papers:
       - "pollock_2015_asq"
       - "han_2024_amp"
       - "pontikes_2012_asq"
       - "jiang_2026_jibs"
-      - "falchetti_2022_smj"
     home_file: "variants/A_construct_differentiation.md"
   hypothesis_tree:
     description: "Conditional multi-hypothesis system with logical progression"
@@ -1471,10 +1521,56 @@ patterns:
   dual_mechanism_same_direction:
     description: "IV affects DV through two independent mediators that both predict the same direction"
     status: "EMERGING"
-    source_count: 1
+    source_count: 2
     source_papers:
       - "ball_shah_donohue_2018_jom"
+      - "li_bapuji_talluri_singh_narayanan_2025_jscm"
     home_file: "subprotocols/argumentation_patterns.md"
+  dual_mechanism_convergent_moderation:
+    description: "Each moderator of a dual-mechanism main effect is reasoned through BOTH underlying mechanism channels and shown to converge on the same net direction, justifying a single signed moderation hypothesis; optionally presented as a moderator×mechanism matrix table"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "li_bapuji_talluri_singh_narayanan_2025_jscm"
+    home_file: "subprotocols/bilateral_argumentation_templates.md"
+  asymmetric_disposition_context_moderation:
+    description: "Multiple moderators all weaken (or all strengthen) a disposition→outcome main effect, but each moderator operates via a DIFFERENT asymmetric mechanism on the two disposition poles (e.g., liberal vs conservative; promotion vs prevention). Three observed sub-variants: dampen-and-maintain, floor+ceiling compression, equilibrium lock-in"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "abdurakhmonov_ingram_ridge_2026_jom"
+    home_file: "subprotocols/bilateral_argumentation_templates.md"
+    note: "Conceptually orthogonal companion to dual_mechanism_convergent_moderation (Li 2025): Li = moderator×mechanism matrix (symmetric convergence); this = moderator×disposition-pole matrix (varied asymmetry). Distinct from parallel_buffering_moderators_single_mechanism (multiple moderators, ONE shared mechanism)."
+  multi_construct_comparison_table_definition:
+    description: "New construct introduced via a multi-column comparison table against 3+ sibling constructs across functional facets (Core Idea × Mechanism × Pattern × Agency × Limitations), with explicit gap-filling positioning in the new construct's row; bookended by a distinguishing-features paragraph before and a synthesis paragraph after"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "lee_wang_2026_jom"
+    home_file: "sentences/construct_definition.md"
+    note: "Conceptually orthogonal to construct_definition Variant E (weng_yang: table for INTERNAL sub-type differentiation, 2 sub-types × 3 borrowed dimensions) and Variant I (han_pollock_paruchuri: 2-construct framework-anchored contrast, NO table). This variant = EXTERNAL new-construct legitimation, 1 new + 3+ siblings × 5+ author-designed functional columns. A second source paper would move toward VERIFIED."
+  minimal_pair_contrast_vignette:
+    description: "Controlled two-version contrast (minimal pair) that isolates a single theoretical variable to make an abstract mechanism visible"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "cutolo_ferriani_2024_jom"
+    home_file: "subprotocols/argumentation_patterns.md"
+  parallel_buffering_moderators_single_mechanism:
+    description: "Multiple parallel moderators all buffer the same main-effect penalty via a single mechanism, organized by an external N-component taxonomy"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "cutolo_ferriani_2024_jom"
+    home_file: "subprotocols/moderator_selection_frameworks.md"
+  congruency_fit_fluency_mechanism:
+    description: "A stimulus congruent with the perceiver's cognitive mode (construal level / schema) is processed more fluently and evaluated more positively; naturally produces mirror/opposite predictions across groups with opposite cognitive modes"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "falchetti_2022_smj"
+    home_file: "sentences/mechanism_chain.md"
+    note: "Cutolo_ferriani_2024_jom shares the same fluency mechanism (captured under parallel_buffering_moderators_single_mechanism); a second source for this mechanism would move it toward VERIFIED."
   industry_context_as_scope_condition:
     description: "Industry characteristics justify why the mechanism is salient in the chosen context"
     status: "EMERGING"
@@ -1700,12 +1796,12 @@ summary_by_dimension:
     source_papers: 10
     verified_patterns: 1
   Mechanism:
-    total_fragments: 49
-    source_papers: 22
+    total_fragments: 52
+    source_papers: 25
     verified_patterns: 5
   Boundary:
-    total_fragments: 29
-    source_papers: 19
+    total_fragments: 32
+    source_papers: 22
     verified_patterns: 3
   Level:
     total_fragments: 0

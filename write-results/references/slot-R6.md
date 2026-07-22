@@ -56,3 +56,36 @@ Contrary to Hypothesis [x], which predicted [expected direction], the coefficien
 > - 必须有理论解释（不是 "unexpected future research" 空话）
 > - 必须诚实标注 post-hoc 性质
 > - 仅当方向相反的结果有 ≥2 个理论锚点（citation 或机制逻辑）时才使用此变体；否则使用通用填空段落
+
+**Null-result 被抵消力解释变体（posthoc moderator 揭示 offsetting force）**（Li et al. 2026 POM 型）： 🔬 EXPERIMENTAL（1 篇范文）— 当 null 主效应可由一个 posthoc moderator 揭示的抵消力来解释时
+```text
+Hypothesis [x] predicted that [predictor] would be [direction] related to [outcome]. This hypothesis is not supported, as the coefficient for [predictor] is not significant ([coefficient], [p-value]). A possible explanation is that two opposing forces operate simultaneously: [force 1 — the theorized mechanism, e.g., distance increases monitoring challenges → +risk] and [force 2 — a context-specific offsetting mechanism, e.g., distant suppliers are in stronger-institution countries → −risk]. Under this account, the null result reflects the net of two opposing forces rather than the absence of an effect. To test this explanation, we examined whether [moderator that isolates force 2, e.g., supplier-country regulatory quality] moderates the [predictor]→[outcome] relationship. Consistent with the offsetting-force account, [moderator] [weakens/reverses] the relationship ([coefficient], [p-value]) — when [force 2 is strong], the [predictor]→[outcome] effect is [weaker/negative]; when [force 2 is weak], it is [stronger/positive]. Thus the null main effect masks a context-contingent relationship: [predictor] does affect [outcome], but its effect is offset by [force 2] in this setting.
+```
+**关键特征**:
+- **null 不是"无效应"而是"两抵消力的净"**: 把 null 重新框定为 opposing forces 的 net，而非 effect absence——升级为"context-contingent relationship"
+- **posthoc moderator 隔离抵消力**: 用一个针对 force 2 的 moderator 检验，揭示 null 背后的抵消机制
+- **诚实标注 posthoc**: 这是 posthoc 解释（H 先 null，再用 moderator 解释），须如实标注，不能伪装成 a priori 预测
+- **与 WEIRD gap 配对**: 非 WEIRD 语境中 WEIRD 预测 null 常因抵消力（li2026: distance 的 +risk 被 up-gradient sourcing 的 −risk 抵消 → 用 regulatory-quality moderator 揭示）
+
+**适用**: null 主效应但理论预期应有效应的研究；非 WEIRD 语境中 WEIRD 预测失效、可用语境特定抵消力解释的情况；任何 null 结果可用 offsetting moderator 救回的情境
+
+**禁忌**:
+- posthoc moderator 必须有理论依据（force 2 须先论证，不能数据挖掘后合理化）
+- 必须诚实标注 posthoc 性质——不能伪装成 a priori 预测
+- 抵消力论证须具体（哪个制度/结构因素产生 opposing force），不能泛泛"可能是其他因素"
+- 若找不到合理的抵消力，应接受 null（用 R6 通用段落），不要强行 rescue
+- 不要与 R6「方向相反诚实解释变体」混淆——本变体是 **null + moderator 揭示抵消**，彼变体是 **方向相反 + 理论解释**（无 null）
+
+
+**Post-treatment selection 诚实边界变体**（Kim & Lee 2026 SMJ 型，Slough 2023）： 🔬 EXPERIMENTAL（1 篇范文）— multi-stage pipeline 中后置 outcome 的 ATE undefined 承认
+```text
+An important caveat is that [downstream outcomes: e.g., retention / satisfaction / performance] are only defined for [units that passed an earlier stage: e.g., candidates who were hired / customers who converted] — a form of post-treatment selection that renders the unconditional average treatment effect on these outcomes undefined ([Slough 2023]). Since [treatment] itself predicts [passage through the earlier stage], as our earlier results establish, the [downstream] comparisons are necessarily made on a selected sample whose composition differs between [treatment] and [control] groups. We therefore interpret the [downstream null / downstream estimates] as conditional on selection rather than population-average effects, and defer broader causal claims to future research with designs that exogenously vary selection.
+```
+**关键特征**:
+- **multi-stage pipeline 的天然配对**: 凡报告"前置 + 后置"结果的研究（招聘漏斗、销售漏斗、创新采纳、晋升）都面临后置 outcome 仅对通过前期筛选者定义 -> unconditional ATE undefined
+- **诚实承认升级可信度**: 把后置 null（retention/satisfaction）从"失败"重新框定为"条件性估计"，反而提升方法学自觉；多数论文沉默
+- **Slough 2023 是 growing citation 节点**: AMJ/SMJ 近期审稿人会要求此类 pipeline 设计的 post-treatment caveat
+**适用**: 任何 multi-stage/funnel 设计中后置 outcome 条件于前期筛选的研究。配套见 OLS-FE.md 变体27（多阶段管道）。
+**禁忌**:
+- 不可把后置条件性 null 包装为"无效应"的因果结论——ATE undefined 不是 null
+- 须明确指出 treatment 本身预测前期 passage（否则 post-treatment 论证不成立）

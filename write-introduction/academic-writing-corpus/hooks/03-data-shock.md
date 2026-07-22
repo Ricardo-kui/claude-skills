@@ -187,3 +187,29 @@ source: Manually curated from MVP30 narrative_analysis files
 | SMJ | ⭐⭐ 中 | 需搭配明确的战略重要性论证 |
 | JOM | ⭐⭐ 中 | 适合运营/供应链研究 |
 | ASQ/ASR | ⭐ 低 | 理论型期刊不建议纯数据开场 |
+
+---
+
+### 变体 G：成对跨行业灾难实例化型（li2025 型）
+
+**模板**:
+> "[Class of negative events] ([citations]) threaten the long-term prosperity of [affected actors]. The negative impact of such [events] on [focal actor] can also spread to [third-party actor], even if they are not directly involved in the actions that precipitated the [event]. For example, [Crisis A] resulted in [third-party actor] experiencing a [X]% [outcome metric] ([citation]), and [Crisis B] caused a [Y]% [outcome metric] for [third-party actor] ([citation]). These impacts are '[phenomenon label],' defined as [one-sentence definition]."
+
+**来源**: li_bapuji_talluri_singh_narayanan2025 (JSCM), P1
+
+**原文锚定**:
+> "Managing the negative impacts of crisis events has become a strategic issue for many organizations, as negative events such as chemical accidents (Diestre and Rajagopalan 2014), customer information breaches (Modi et al. 2015), and product-harm crises (Cleeren et al. 2017) threaten the long-term prosperity of the stricken organizations. The negative impact of such crises on an organization can also spread to its suppliers, even if they are not directly involved in the actions that precipitated the crisis. For example, the Volkswagen emissions scandal resulted in its Tier-1 suppliers experiencing a 2.69% firm value loss (Jacobs and Singhal 2020), and the 2018 US government ban on Chinese telecommunications firm ZTE caused a 3.33% abnormal firm value loss for US suppliers (Jacobs et al. 2022). These impacts are 'vertical spillovers,' defined as the losses a supplier firm incurs when its buyer firm experiences a negative event."
+
+**关键特征**:
+- **成对而非单一实例**：用两个独立真实危机（不同行业、不同国家：汽车排放丑闻 + 电信禁令）而非单一案例，证明现象跨情境复现——比单例（变体 C 的 Toyota）可迁移性更强
+- **量化的是第三方危害而非焦点方损失**：每个百分比都是 *供应商*（第三方）的损失（2.69%、3.33%），即 *被定义现象本身的大小*——数据直接 instantiate 现象，而非仅建立 scale（区别于变体 D 的多统计锚点）
+- **从事件对到概念定义收束**："These impacts are '[label],' defined as..." —— 成对实例化后立即给现象命名并下定义，Hook 同时承担 phenomenon-inaugurating 功能
+- **灾难量化来自已发表 event-study**：两个 % 来自已发表研究（Jacobs & Singhal 2020; Jacobs et al. 2022）而非一手统计或媒体估算——规避"编造数字"风险，把 Hook 锚定在已验证的二手实证证据上
+
+**适用**: 第三方危害/溢出效应研究（供应商、合作伙伴、利益相关者间接受损）；有 ≥2 个已发表 event-study 量化了该第三方损失的情境；Incompleteness × Mechanism 组合，且现象尚未被命名时尤为有效。JSCM/JOM/MSOM 等供应链期刊适配度高。
+
+**禁忌**:
+- 两个危机必须真正独立（不同触发源、不同主体），否则退化为 `14-paired-disasters` 的"修正-复发"链——若无独立性应改用单例
+- 第三方损失 % 必须来自可引用的已发表研究，不可媒体估算或自算
+- 不要超过两个实例——"成对"的张力来自"二"；三个以上会退回变体 D 的 stat-stacking
+- 现象定义句（"defined as..."）不可省略，否则 Hook 只有冲击力而无概念锚定，读者不知道两个数字在证明什么

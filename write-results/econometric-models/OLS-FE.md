@@ -12,6 +12,7 @@ source_papers:
   - "ahmadi_khanagha_berchicci_jansen_2017_jms (Journal of Management Studies): 7-model hierarchical regression table navigation, three-way interaction conditional decomposition, asymmetric findings narrative"
   - "cui_yang_vertinsky_smj_attacking_partners (Strategic Management Journal): inverted U-shape + curve moderation, Lind-Mehlum three-step test, turning-point CI, flatten/steepen graph language"
   - "chung_low_rust_2022_jams (Journal of the Academy of Marketing Science): model-free quartile opening, interquartile economic significance, Heckman two-stage table navigation, alternative-DV falsification, threat-by-threat endogeneity table"
+  - "kim_lee_2026_putting_a_price_on_mission_smj (Strategic Management Journal): multi-stage same-IV pipeline attenuation profile, WTP coefficient-ratio economic significance, post-treatment selection caveat"
 variants_count: 26
 created: 2026-05-18
 updated: 2026-07-08
@@ -295,6 +296,22 @@ updated: 2026-07-08
 **与原骨架差异**: 现有 R7 变体 1（Table 9 矩阵）和变体 2（叙事型逐 threat）分别适用于大量和小量稳健性检验。本变体是 **"一般性内生性检验 + threat-by-threat 表" 的复合结构**：先以 DWH / Gaussian copula 提供一般性证据，再用 Table 7 式矩阵逐项处理具体威胁（reverse causality, selection, omitted variables, alternative traits）。关键：最后一句用"little reason to believe that endogeneity issues are solely driving the results" 的谨慎措辞，避免过度因果断言。
 **诚实边界**: 若 DWH 或 copula 结果不一致，必须诚实报告并讨论可能原因；不能仅因为"多数稳健性通过"就宣称完全排除内生性。"solely driving" 是审慎措辞，不应升级为"完全排除"。
 **跨 skill 对齐**: `../write-methods/econometric-models/IV-2SLS.md` 变体5（DWH 检验 + Gaussian copula 内生性叙事）；`../write-methods/econometric-models/micro-templates/identification-exogeneity.md`（通用外生性论证）。
+
+### 变体 27: 多阶段同 IV 管道衰减 profile — 同一 IV 跨序贯决策阶段的方向/显著性对比 (1篇高价值)
+**来源论文**: Kim & Lee 2026 (Strategic Management Journal)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-22
+**槽位**: R3+R9
+**骨架**:
+> [Stage 1 — Front-end] We begin by examining the association between [IV] and [stage-1 outcome]. Model [1] finds a [direction] association (p [relation] [threshold]); this remains stable in Model [2] with [controls]; Model [3] adds [fixed effects], estimating [within-unit] differences, and continues to find a [direction] association (p [relation] [threshold]) corresponding to [economic magnitude].
+>
+> [Stage 2 — Mid-pipeline] For the [stage-2] stage (unit = [stage-2 pair]), Model [4] estimates [direction] but imprecisely (p = [value]); Model [5] adds [characteristics]; Model [6] adds [fixed effects], producing a [stronger] association (p = [value]) [equivalent to magnitude]. Because the [within-unit] analysis is likely most informative, we interpret these as [suggestive evidence of ...].
+>
+> [Stage 3 — Back-end null] We use [Cox proportional hazards / estimator] for [stage-3 outcome]. Model [7] estimates [direction] and imprecise (p = [value]); Model [8] similar with [controls] (p = [value]); Model [9] with [full controls] turns the coefficient [opposite direction] but remains imprecise (p = [value]).
+>
+> [跨阶段对比句] In summary, we fail to find compelling evidence of an association between [IV] and [stage-3 outcome]. This lack of association contrasts with the advantages that [IV] appears to enjoy in the [stage-1] and [stage-2] stages, and is consistent with the possibility that [IV] advantages operate primarily through a [front-end / signaling mechanism] that attenuates once [actors gain direct experience]. A [signaling/attenuating mechanism] fits this pattern... We cannot definitively adjudicate, but the full-pipeline evidence suggests [mechanism that fits the front-significant/back-null pattern].
+**与原骨架差异**: 区别于 多研究.md 的 cross-study synthesis（多研究独立样本收敛）——本变体是 **single-study single-IV multi-stage**：同一 IV 跨序贯决策阶段的衰减 profile。核心叙事装置是**跨阶段对比句**（"This lack of association contrasts with the advantages... in the [earlier] stages"）——把"前置显著 + 后置 null"从孤立报告提升为机制发现（用 null 在管道中的位置裁决竞争机制：signaling 随经验衰减 vs enduring preference 持续）。配套 write-methods 见 多研究.md 变体6（管道设计）；配套 post-treatment caveat 见 slot-R6（Slough 2023）。
+**诚实边界**: post-treatment 样本递减让跨阶段估计量来自非随机子样本——后置 null 不可作"无效应"因果结论（见 slot-R6 Slough 变体）。机制裁决须诚实对冲（"cannot definitively adjudicate but full-pipeline evidence suggests"），不可过度断言。
 
 ## 反模式
 

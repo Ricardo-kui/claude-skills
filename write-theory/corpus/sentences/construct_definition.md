@@ -474,3 +474,68 @@ We argue that in this situation the [dynamics] are likely to be different.
 **可迁移性**: 高 — 跨构建类型通用。特别适用于AMJ/SMJ中使用已有概念框架解释新现象
 
 ---
+
+## 变体 L：New-Construct Legitimation via Multi-Construct Comparison Table（lee_wang 2026 型）
+
+**适用**: 论文引入一个真正的新构念，需要通过与 3+ 个相关但概念不同的"兄弟"构念在多个功能维度上系统对比，来为新构念在已有概念群中开辟合法空间。表格承担"竞争性构念景观测绘"的理论工作——不是装饰。
+
+**模板**:
+```
+[Concept introduction paragraph]
+Building on [related perspective(s)] ([citations]), we introduce the concept of
+[NEW CONSTRUCT] to describe how [defining process]. [NEW CONSTRUCT] thus highlights
+how [core theoretical insight — the reallocation / cross-domain logic].
+
+[Distinguishing features paragraph]
+This definition highlights [N] features that distinguish it from related mechanisms.
+First, [NEW CONSTRUCT] is [feature 1 label]: [description]. Second, it is
+[feature 2 label] in nature: [description]. Table [N] highlights the distinctive
+features of [NEW CONSTRUCT] in comparison to related constructs.
+
+[Multi-construct comparison table — 3+ siblings × 5+ functional columns]
+| Perspective | Core Idea | Mechanism | Pattern of Effects | Agency | Limitations |
+|---|---|---|---|---|---|
+| [Sibling 1] | ... | ... | ... | ... | [gap NEW fills] |
+| [Sibling 2] | ... | ... | ... | ... | [gap NEW fills] |
+| [Sibling 3] | ... | ... | ... | ... | [gap NEW fills] |
+| [NEW CONSTRUCT] | [fills gaps above] | ... | ... | ... | [explicitly addressed] |
+
+[Synthesis paragraph locking the new construct's position]
+In sum, [NEW CONSTRUCT] arises when [trigger condition]. Unlike [Sibling 1], which
+[focus A], or [Sibling 2], which [focus B], [NEW CONSTRUCT] highlights [unique angle
+that fills the gaps in the Limitations column]. In doing so, it shows how [broader
+theoretical implication].
+```
+
+**语料锚定**: Lee & Wang (2026, *JOM*) — "institutional crowding" 对比 Regulatory Overload / Bureaucratic Trade-Offs / Regulatory Drift & Ambiguity across 5 functional columns；2 个区分特征命名：*salience-driven* 与 *cross-domain*。
+
+**关键特征**:
+- **表格前必须有"两个区分特征"段落** — 为新构念命名其核心区分维度（如 salience-driven + cross-domain），让读者在看到表格前已有概念锚
+- **列是功能性的**（Core Idea × Mechanism × Pattern × Agency × Limitations），不是单纯的 Definition 对比 — 每列承担一种差异化工作
+- **至少 3 个兄弟构念** — 2 个不足以构成"景观测绘"
+- **新构念放最后一行** — 让读者在了解所有兄弟后再看到 NEW 如何填补 gap
+- **每个兄弟的 "Limitations" 格用于说明该兄弟无法解释什么** — 这正是 NEW 构念的卖点
+- **表格后必须有综合段**（"In sum..."）锁定新构念在文献中的独特位置，不能表格即结论
+
+**与变体 E（weng_yang 三层框架+表格对比型）的关键区分**:
+
+| | 变体 E (weng_yang) | 变体 L (lee_wang) |
+|---|---|---|
+| 表格对象 | 一个构念的两个子类型 | 1 个新构念 + 3+ 个兄弟构念 |
+| 列维度来源 | 已有框架的 3 维度 (Swigart 2020) | 作者自行设计的功能性列 |
+| 列数 | 3 | 5+ |
+| 表格功能 | 内部细分 (sub-type differentiation) | 外部合法化 (new-construct legitimation) |
+| 表格后综合 | 收敛到 H1 的两个原因 | 锁定新构念在文献中的独特位置 |
+
+**与变体 I（han_pollock_paruchuri Framework-Anchored 双构念区分）的区分**: 变体 I 通过上位三维度框架对比 2 个构念，**无表格**，对比是互补的（rational ↔ emotional）；变体 L **必须有表格**，对比是竞争性的（NEW 填充 3 个兄弟留下的 gap）
+
+**反模式**:
+- 兄弟构念过少（<3）→ 表格沦为二元对比，失去"测绘景观"功能
+- 列维度过于抽象（如只有 "Definition"）→ 无法展示新构念在多个功能维度上的差异化
+- 新构念自己的 "Limitations" 格为空 → 失去新构念的卖点（应诚实标注其自身边界）
+- 表格替代文字论证 → 表格是总结，前后必须有段落建立和锁定新构念的合法地位
+- 表格列与正文论证不一致 → 表格必须与散文论证一一对应
+
+**可迁移性**: 高 — 适用于任何"新构念需要通过与多个相关但不同的概念区分来获得合法性"的研究场景：新治理机制、新组织形式、新战略现象、新制度压力类型等。适用于接受 Theory 中正式表格的期刊（JOM / AMJ / SMJ）；ASQ/OS 偏好纯文字理论推演，慎用。
+
+---

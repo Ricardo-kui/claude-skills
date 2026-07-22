@@ -79,3 +79,38 @@ Hypothesis [x] predicted that [moderator] would change the strength of the [pred
 ```text
 Hypothesis [x] predicted that [moderator] would moderate the effect of [endogenous predictor] on [outcome]. Model [y] adds the interaction between the predicted [endogenous predictor] (from the first stage) and [moderator] to the second-stage equation. The [predictor × moderator] interaction term is [direction] and [significant/not significant] ([coefficient], [p-value]). This indicates that the marginal effect of [predictor] on [outcome] [increases/decreases] by [magnitude] for each unit increase in [moderator], evaluated at the predicted values of [endogenous predictor]. Because the model is linear, the interaction coefficient can be interpreted directly; standard errors are [robust/clustered] to account for the two-stage estimation.
 ```
+
+**交叉/翻转型调节变体（moderator 反转符号）+ 可选 dissociation**（Cutolo & Ferriani 2024 型）： 🔬 EXPERIMENTAL（1 篇范文）— 当 buffering moderator 不只衰减负效应而**完全翻转**它（penalty → premium），且/或对两组 actor 方向相反时
+```text
+To elucidate the practical implications, using estimations from the fully specified model (Model [x]), we compare the [outcome units, e.g., sales] for [focal / atypical group] at different levels of [moderator]. After controlling for [key controls], the results show that when [focal group] [is low on moderator], they [experience] [N_fewer] [outcome units] than [reference / typical group]. However, increasing [moderator] [eliminates / overturns] this [penalty]: at the [maximum] level of [moderator], [focal group] [achieve] [N_more] [outcome units] than [reference group]. Figure [x] plots predicted [outcome] against [moderator] for both groups and illustrates the [crossover / sign reversal].
+[Optional dissociation] Interestingly, the main effect of [moderator] is [opposite in direction] (β = [value], p [relation] [threshold]) — [moderator] [benefits the focal group but does not help / even harms the typical group]. This [dissociation] suggests that [the mechanism, e.g., processing-fluency benefit] operates for [focal group], for whom [the mechanism's precondition holds], but not for [typical group].
+```
+**关键特征**:
+- **不只"衰减"而"反转/翻转"**: 报告 moderator 把主效应从显著负（penalty）翻转为显著正（premium）——比通用 R4 的 "stronger/weaker" 更强的叙事，直接展示 moderator 的 substantive 威力
+- **双极端量化**: at minimum moderator = −[N_fewer]; at maximum = +[N_more]，把 crossover 的经济意义用 outcome units（如 sales 数）做实（配合 R5 经济显著性）
+- **dissociation 诚实披露**: 若 moderator 的 main effect 与 interaction 方向相反（对 focal group 有利但对 typical group 无益/有害），必须披露——这是机制有边界条件的信号（机制只在某组成立），不是缺陷
+- **图形辅助 crossover**: plotted predicted values at [low/high] moderator 让 sign reversal / 两线交叉可视化
+
+**适用**: buffering moderation 研究中 moderator 完全翻转主效应（penalty→premium）的情况；任何带 sign reversal / crossover 的交互；调节机制对两组 actor 作用方向不同的 differential effect
+
+**禁忌**:
+- 必须报告 min 和 max 两个极端的**具体值**（outcome units），不能只说 "the penalty was overturned"
+- dissociation **不可隐藏**——若 moderator 对 reference group 有害却只报告对 focal group 的好处，是选择性披露，审稿人会质疑
+- crossover 点（moderator 在何值时净效应 = 0）若可估计（如 margins, at）应报告，让读者知道"需要多高的 moderator 才能翻身"
+- 若主效应在 moderator 高位翻转为正，需在 Discussion 解释**为何翻转**（不能只报数字）——通常对应"moderator 不只抵消 penalty 还带来独立收益"
+
+**连续调节双重量化变体（±1SD 端点对比 + 百分位边际效应轨迹）**（Abdurakhmonov, Ingram & Ridge 2026 型）： ✓ STANDARD 候选 — 适用于连续 DV 的调节效应报告，把"幅度量化"和"形状可视化"配对呈现
+
+```text
+Hypothesis [x] posits that [moderator] weakens the effect of [predictor] on [outcome]. The interaction term is [negative/positive] and statistically significant in Model [y] (β = [value], p < [threshold]), indicating that when [moderator] is [high], the positive relationship between [predictor] and [outcome] diminishes. In practical terms, as displayed in [Figure Xa], when [moderator] is low, increasing [predictor] from one standard deviation below to above the mean leads to a [A]% increase in [outcome], but when [moderator] is high, the same increase yields only a [B]% increase [— or "has virtually no effect"]. [Figure Xb] further visualizes this moderation by showing that the marginal effect of [predictor] decreases steadily across percentiles of [moderator], falling from strongly positive at the 1st percentile to near zero [or slightly negative] at the 95th percentile. Thus, Hypothesis [x] is supported.
+```
+
+**关键特征**:
+- **双重量化**: (a) ±1SD 端点对比用 % DV 量化幅度（如 10.7% vs 1.1%），让读者看到 moderator 从低到高时效应衰减的绝对量级；(b) 百分位边际效应轨迹图（1st→95th）展示效应衰减的完整形状（线性下降 / 从显著正到近零或微负）
+- **端点对比与轨迹图互补**: 端点对比回答"衰减多少"，轨迹图回答"如何衰减"——两者配对比单一 ±1SD simple slopes 或单一交互图信息量更大
+- **轨迹的言语化**: 不只展示图，还用一句话描述曲线形状（"decreases steadily... falling from strongly positive at the 1st percentile to near zero or slightly negative at the 95th percentile"），让读者不看图也能抓住 moderation 的动态
+- **连续 DV 专用**: 与 R5 Hoffmann 25th→75th 变体（二元 DV 预测概率）互补——本变体用于连续结果（指数得分、金额、rating）
+
+**适用**: 任何连续 DV 的调节效应报告（OLS / FE / GEE / panel）；moderator 为连续变量且理论预测"效应随 moderator 升高而衰减至近零"的 weakening moderation
+
+**禁忌**: 端点对比必须报告具体 %（如 10.7% vs 1.1%），不能只说 "stronger when low, weaker when high"；轨迹描述必须标明百分位范围（1st→95th 或 5th→95th），不能只说 "decreases across percentiles"；若效应在高位翻转为相反符号（penalty→premium），应改用上方「交叉/翻转型调节变体」而非本变体；本变体不替代交互项显著性报告——必须先报告 β_interaction + p，再进入双重量化

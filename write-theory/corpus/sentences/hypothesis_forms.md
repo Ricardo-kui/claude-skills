@@ -137,9 +137,16 @@
 | **主效应** | "H[N]. [IV] is [positively/negatively] related to [DV]." |
 | **中介效应** | "H[N]. [Mediator] mediates the [positive/negative] relationship between [IV] and [DV]." |
 | **中介等价** | "H[N]. This prediction is formally equivalent to hypothesizing that [mediator] will mediate effects of [IV] on [DV]." |
+| **序列中介（统计形式）** | "H[N]. [IV] is [positively/negatively] related to [DV] through the sequential mediators [M1] and [M2]." |
+| **序列中介（叙事打包式）** | "H[N]. [Group A / high-X actors] exhibit [direction] [M1] and therefore [perceive/evaluate] [M2] as [direction], resulting in [direction] [DV]." |
+
+**序列中介两种措辞对比**：序列中介（X→M1→M2→Y）可用两种句式陈述——
+- **统计形式**（"through the sequential mediators M1 and M2"）：精确、AMJ/ASQ 风格，但要求读者已知 PROCESS Model 6；
+- **叙事打包式**（"exhibit M1 and therefore M2, resulting in DV"）：用 "and therefore / resulting in" 把两步因果链打包成一句可读假设，SMJ/JM/JCR 风格，Theory→Methods 过渡更丝滑（读者在 Theory 阶段无需懂 PROCESS 即可理解机制）。
 
 **语料锚定**：
 - Wu 2025 (OrgSci) — digital transformation → routine updating → innovation
+- Ilicic & Brennan 2026 (JM) — H2: "Conservatives (vs. liberals) exhibit a greater sense of agency and therefore perceive addictive products as less dangerous, resulting in more favorable consumer responses"（叙事打包式序列中介 X→agency→danger→responses）
 
 ---
 

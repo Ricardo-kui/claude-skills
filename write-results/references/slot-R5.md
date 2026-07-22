@@ -57,3 +57,38 @@ To translate the coefficient into a more interpretable cost metric, we divide th
 > - 投入与产出单位必须匹配（如美元投入 → 事件数变化）
 > - 必须提供一个保守或文献锚定的 per-event cost 作为基准
 > - 仅适用于计数或近似计数的结果（recalls, patents, lawsuits, product launches, failures）
+
+**事件研究小效应经济显著性辩护变体（相对比例 + 绝对金额双翻译）**（Li et al. 2025 JSCM 型）： ✓ STANDARD candidate — 专门防御 event study 中第三方/溢出效应"统计显著但绝对值小"的审稿质疑
+```text
+Regarding the effect size, the results indicate that [recipients / third parties] experienced [−X% CAR / small coefficient] during [window / condition]. This corresponds to approximately [Y]% of the effect size of [focal actor]'s direct impact (i.e., [−Z% CAR / coefficient] during [same window]). Although [−X%] may appear small, in [market-value / dollar] terms, it translates into economically meaningful [losses / gains]. Given that the average [market value / revenue / scale] for the [recipient] sample was [$M] in [year], this effect implies an additional [loss / gain] of roughly [$K] for [recipients]. Thus, the results support H[X].
+
+Prior studies have reported [abnormal returns / coefficients] of a similar magnitude. For [phenomenon], [Author Year] reported [−A%] for [focal actor] on [event day / window], and [Author Year] found [−B%] over [window]. Within [field] studies, [Author Year] found that [recipient] experienced [−C%] ... [additional benchmark]. [Optional: This pattern places our effect within the normal range of published event studies on [topic].]
+```
+**关键特征**:
+- **双翻译防御小效应**: (a) 相对比例——把第三方/溢出效应表达为焦点方直接效应的一个可观分数（如 43%），论证"虽小但相对直接效应并非微不足道"；(b) 绝对金额——把小 % 乘以样本平均市值换算成美元（如 $57.45M），论证"小 % = 大美元"
+- **直接回应"你的 CAR/系数太小"的审稿质疑**: event study 中第三方/溢出/间接效应天然远小于焦点方直接效应，本变体是把"小"转化为"实质显著"的标准辩护
+- **紧跟文献基准量级段**: 用一系列已发表 event-study 的可比量级（如 Javadinia −0.20%、Liu −0.69%、Jacobs VW 供应商 −2.69%/−0.35%/−0.17%）把本文效应置于正常区间，削弱"异常地小"的质疑
+
+**适用**: event study / 股票市场反应研究中，效应（尤其第三方/溢出/间接效应）统计显著但绝对值小的情况；任何需要把小系数翻译为实质显著的研究
+
+**禁忌**:
+- 相对比例的"基准效应"（focal actor direct effect）必须用**同一窗口、同一模型**估计，否则分数（如 43%）不可比
+- 绝对金额换算必须用样本的**平均**市值/规模并报告年份——不可用个别大公司市值夸大
+- 不要只做一种翻译——相对比例（说服"不小"）与绝对金额（说服"很值钱"）**双重**才构成完整辩护
+- 文献基准量级必须来自**已发表** event-study，不可用工作论文或媒体数字
+- 若相对比例极低（如 <10% of direct effect）或绝对金额不具经济意义，应诚实表述为 modest（见"当效应较小时"变体），而非强行辩护
+
+
+**WTP / coefficient-ratio 经济显著性专用变体**（Kim & Lee 2026 SMJ 型）： 🔬 EXPERIMENTAL（1 篇范文）— 把非货币属性翻译为"愿放弃的工资/价格百分比"+ 双 benchmark
+```text
+To quantify the trade-off between [non-pecuniary attribute] and compensation, we estimate the marginal willingness to pay (WTP) for [attribute] as the negative ratio of the coefficient on [attribute] to the coefficient on [log wage / price], following [Maestas et al. 2023 / Reshef & Knott 2025]. This ratio represents the implied percentage of [compensation / price] that [decision-maker] is willing to forgo to obtain [attribute]. Across [N] specifications ([LPM / conditional logit / mixed logit]), the implied WTP ranges from [low]% to [high]%, implying that [decision-makers] are willing to forgo approximately [low-high]% of [compensation] for [attribute]. Our implied WTP of [low-high]% is within the range reported in prior [experimental / survey] studies ([prior range with citations]); our estimate is on the [lower/upper] end, which may reflect [contextual explanation: e.g., higher stakes of full-time vs gig/hypothetical settings]. Nonetheless, our estimated WTP for [attribute] is [higher than / comparable to] benchmarks for other major [job / product attributes], including [benchmark_1 ([B1]%)] ([citation]) and [benchmark_2 ([B2]%)] ([citation]).
+```
+**关键特征**:
+- **系数比翻译**: WTP = -beta_[attribute] / beta_ln[price] 把二元/离散选择结果翻译为经济意义百分比（hedonic wage / equalizing differences, Rosen 1986）
+- **双 benchmark 防御**: (a) vs prior estimates 定位"lower end"（防御"太小"+归因于更高赌注）；(b) vs other job/product attributes 论证"higher than"（论证实质显著）——同时防御"太小"与论证"实质显著"
+- **三估计器收敛**: LPM/conditional logit/mixed logit 量级区间收敛本身是稳健性证据
+**适用**: 涉及 actor 在货币与非货币属性间权衡的研究（使命、远程办公、自治、ESG、低物理强度）；任何"愿放弃多少工资/价格换 attribute X"问题。配套 write-methods 见 非线性模型.md 变体10（WTP 三估计器估计设计）。
+**禁忌**:
+- 系数比依赖 beta_price 精确识别——price 测量误差会传染 WTP
+- 双 benchmark 的"prior estimates"与"other attributes"必须来自已发表研究，不可用工作论文
+- 若三估计器量级差异巨大，不可只报最 favor 的；须预告主估计选择依据

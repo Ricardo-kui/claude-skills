@@ -1,10 +1,36 @@
 meta:
-  last_updated: '2026-07-08'
+  last_updated: '2026-07-22'
   total_design_types: 22
-  batches_processed: 6
-  source: corpus INDEX.md + product_recall_cross_validation + cutolo2024_jm_text_count + falchetti2022_smj_experiment + lashley_pollock2020_asq_qualitative_process + chung_low_rust_2022_jams_executive_confidence_myopia
+  batches_processed: 8
+  source: corpus INDEX.md + product_recall_cross_validation + cutolo2024_jm_text_count + falchetti2022_smj_experiment + lashley_pollock2020_asq_qualitative_process + chung_low_rust_2022_jams_executive_confidence_myopia + ilicic_brennan_2026_jm_political_ideology_addictive_products + kim_lee_2026_putting_a_price_on_mission_smj
 evidence:
   by_source_paper:
+    kim_lee_2026_putting_a_price_on_mission_smj:
+      journal: Strategic Management Journal
+      title: "Putting a price on mission: Social responsibility orientation and startup employment"
+      status: EMERGING (1p)
+      design_types:
+        - 多研究
+        - 非线性模型
+        - 文本构念测量
+      slots_covered:
+        - M2
+        - M4
+        - M7
+        - M9
+      note: "empirical strategy / strategic human capital；多阶段决策管道(atraction/selection/attrition)+revealed-preference WTP+embedded/peripheral CSR手工编码；待第二篇交叉验证"
+    ilicic_brennan_2026_jm:
+      journal: Journal of Marketing
+      title: "Political Ideology Shapes Consumer Responses to Addictive Products"
+      status: EMERGING (1p)
+      design_types:
+        - 实验
+        - 多研究
+      slots_covered:
+        - M5
+        - M8
+        - M9
+      note: "consumer psychology 机制证明传统（measurement/moderation of process + rival accounts battery，Spencer Zanna Fong 2005）；待第二篇交叉验证"
     chung_low_rust_2022_jams:
       journal: Journal of the Academy of Marketing Science
       title: "Executive confidence and myopic marketing management"
@@ -123,9 +149,10 @@ evidence:
         reject: 0
         common_revise_reasons: []
     实验:
-      paper_count: 1
+      paper_count: 2
       papers:
       - falchetti2022 (SMJ)
+      - ilicic_brennan_2026 (JM)
       status: EMERGING
       slots_covered:
       - M2
@@ -144,9 +171,11 @@ evidence:
         reject: 0
         common_revise_reasons: []
     多研究:
-      paper_count: 1
+      paper_count: 3
       papers:
       - falchetti2022 (SMJ)
+      - ilicic_brennan_2026 (JM)
+      - kim_lee_2026 (SMJ)
       status: EMERGING
       slots_covered:
       - M1

@@ -24,6 +24,7 @@
 | `14-debate-unresolved.md` | 文献存在对立发现但缺乏整合框架（On the one hand... On the other hand...） |
 | `15-practical-puzzle.md` | 实践传统智慧 vs 新发现 downside → 实践谜题（practical puzzle） |
 | `20-opposite-predictions-positive-trait.md` | 同一正向特质的两个文献流做出相反预测（EMERGING: chung_low_rust_2022_jams JAMS） |
+| `18-context-generalizability.md` | WEIRD↔non-WEIRD 情境泛化性 gap：现有证据 context-bound，因果机制在非 WEIRD 语境可能反转/被抵消（EMERGING: li2026 POM） |
 
 ## Incommensurability
 

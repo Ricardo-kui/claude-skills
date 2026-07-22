@@ -8,9 +8,10 @@ source_papers:
   - habel2016 (JM, 2016): "CSR → benefit/cost markup → price fairness, moderated by attribution; Preacher & Hayes (2008) indirect effects"
   - "bamberger_homburg_wielgos_2021_wage_inequality_jm (Journal of Marketing): inconsistent mediation → suppressor variable, opposing direct/indirect effects"
   - "vadakkepatt_arora_martin_paharia_2022_lobbying_jm (Journal of Marketing): simultaneous-equation SEM reporting with IV diagnostics + Granger causality"
-variants_count: 3
+  - "ilicic_brennan_2026_jm (Journal of Marketing): ten-study multimethod investigation of political ideology and consumer responses to addictive products; sense of agency -> perceived product danger mechanism; personally directed threat appeal moderator"
+variants_count: 5
 created: 2026-06-03
-updated: 2026-07-07
+updated: 2026-07-22
 source: Distilled from Habel et al. (2016, JM) by distill-methods-exemplar
 ---
 
@@ -269,3 +270,46 @@ supporting Hypothesis [N+1].
 - IV 诊断放在脚注或附录 → 当 IV 是主识别策略时，必须在正文报告
 - 每个方程独立建表 → 多列表格更高效且便于跨方程对比
 - 不报告 first-stage 系数 → 读者无法判断 instrument relevance 的方向和幅度
+## 反转中介顺序以确认因果排序：Reverse-Order Mediation Test (ilicic_brennan 2026 型)
+
+### 功能描述
+
+当 Theory 提出序列中介 [IV] -> [M1] -> [M2] -> [DV]，审稿人必问"为什么是 M1->M2 而不是 M2->M1？"。Reverse-order test 的回答：反转两个中介的位置重测序列中介，若反向间接效应的 bootstrap CI 含零，则排除替代因果排序。这是 PROCESS Model 6 序列中介的标准因果方向验证手法（Fairchild & McDaniel 2017）。
+
+### 适用场景
+
+- 序列中介假设（X->M1->M2->Y）且 M1、M2 理论上可互换顺序
+- measurement-of-process 设计（测量而非操纵中介）——观察数据中中介顺序只能靠反向重测排除，不能靠操纵确立
+- 区别于上方 qiao2026 "Reverse-Code + Wald"：那是把两条**方向相反通道** reverse-code 后比较时间持续性（differential persistence）；本节是反转**同一序列中两个中介的位置**确认因果排序（causal-ordering confirmation）
+
+### 报告骨架
+
+```
+To verify the causal ordering of variables, we conducted a second serial mediation
+analysis reversing the order of the mediators ([Fairchild and McDaniel 2017]), testing
+whether [predictor] was associated with [M2_reversed], which in turn was associated with
+[M1_reversed], and subsequently with [outcome]. The results showed that the 95%
+bootstrapped CI for the indirect effect of [predictor] on [outcome] included zero
+(effect = [value], SE = [value], 95% CI = [[lower], [upper]]), indicating no significant
+serial mediation effect. These results are consistent with the proposed ordering of
+variables and do not indicate evidence of alternative directional associations.
+```
+
+### 关键技术点
+
+| 步骤 | 操作 | 理由 |
+|------|------|------|
+| 1. 报告正向序列间接效应 | bootstrap CI 不含零 | 建立主假设支持 |
+| 2. 反转中介顺序重测 | M2->M1 而非 M1->M2 | 构造竞争因果排序 |
+| 3. 报告反向间接效应 | CI 含零 | 排除替代排序 |
+| 4. 一句话收束 | "consistent with the proposed ordering" | 把因果方向从断言升级为证据 |
+
+### 反模式
+
+- **只报正向序列不报反向**：序列中介的因果排序是审稿人默认质疑，不主动排除显得回避
+- **混淆 reverse-order test 与 reverse-code**：reverse-order 反转中介位置（顺序问题）；reverse-code 改变变量符号（方向比较问题）——两者统计逻辑完全不同
+- **在操纵了中介的设计中仍报 reverse-order test**：若已用 moderation of process 操纵 M1 建立因果，reverse-order test 冗余——它是 measurement-of-process 设计的补救手段
+
+### 语料锚定
+
+- ilicic_brennan_2026_jm (Journal of Marketing) — Study 4：political ideology -> sense of agency (M1) -> perceived product danger (M2) -> gambling severity。正向间接效应 CI [.01, .02]；反转顺序后 CI [-.01, .01] 含零，确认 agency->danger 排序。配 measurement-of-process 设计（见 `../write-methods/econometric-models/实验.md` 变体6）。

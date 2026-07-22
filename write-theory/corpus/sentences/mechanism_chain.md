@@ -1784,3 +1784,55 @@ H1: There is a curvilinear relationship (taking an inverted U-shape) between [IV
 - `corpus/subprotocols/bilateral_argumentation_templates.md` — 倒U型调节 high/low 双侧论证
 - `corpus/sentences/moderation.md` — flatten/steepen 图形化描述
 - `corpus/sentences/closure.md` — 倒U型调节局部收束
+
+---
+
+## 机制：认知适配/契合 → 加工流畅性 → 正向评价（Cognitive Congruency/Fit → Processing Fluency → Positive Evaluation）
+
+<!--
+pattern_id: congruency_fit_fluency_mechanism
+build_type: 机制推演型（常带 audience/group 边界）
+source_papers: ["Falchetti_Cattani_Ferriani_2022_SMJ", "Cutolo_Ferriani_2024_JOM（共享同一 fluency 机制）"]
+confidence: high
+status: ready_for_corpus
+-->
+
+**适用场景**: 当现象是"**同一刺激/信息对不同人群产生不同（甚至相反）评价**"，且理论解释是"刺激与感知者的认知模式（construal level / schema / expertise-driven processing）越适配，加工越流畅，评价越正向"时。机制核心是**适配（fit）而非刺激本身**——因此同一刺激维度对不同认知模式的感知者方向可相反。常见于 framing/narrative/information-presentation × audience-heterogeneity 研究。
+
+**为什么单独成条**: 本机制在 corpus 中长期被分散借用（Cutolo 2024 的 processing fluency、Falchetti 2022 的 construal congruency）却无独立骨架。它天然产生 **mirror/opposite 预测**（两组感知者认知模式相反 → 同一刺激对两组方向相反），是 audience-heterogeneity 研究的标志性机制。
+
+**骨架**:
+```
+[Theory anchor] [Cognitive theory — CLT / processing fluency / schema theory] posits that individuals process information using a characteristic [cognitive mode / mental representation / construal level], and that a [stimulus / message / frame] congruent with this mode is processed more [fluently / easily] ([citations]). Because information congruent with individuals' mental representations is more comprehensible and is weighed more ([citations]), a congruent [stimulus] induces a subjective feeling of [ease / fluency], which is a potent cue for [positive evaluative judgments] ([citations]).
+
+[Mechanism move — group A] Applying this to [phenomenon], we argue that [perceiver group A] — who characteristically [use cognitive mode X, e.g., abstract/high-level construal due to limited domain expertise] — will process [stimulus variant X, e.g., an abstract why-frame] more fluently, and therefore [evaluate/appreciate] it more [positively].
+
+[Mechanism move — group B (mirror)] Conversely, [perceiver group B] — who [use cognitive mode Y, e.g., concrete/low-level construal due to domain expertise] — will process [stimulus variant Y] more fluently and [evaluate] it more [positively]. Thus the same [stimulus dimension] has [opposite] effects on [group A] and [group B], because congruency reverses across the two groups' cognitive modes.
+
+Therefore:
+H[N]: [group A] [evaluate] [stimulus variant X] more [positively] than [stimulus variant Y].
+H[N+1]: [group B] [evaluate] [stimulus variant Y] more [positively] than [stimulus variant X].
+```
+
+**原文锚定**:
+> Falchetti, Cattani & Ferriani 2022 (SMJ): "As information congruent with individuals' mental representations is more comprehensible (...), it is easier for novices to process a novel idea if it is presented using an abstract framing... this frame matches the high-level construal that novices tend to use... a key finding of CLT research is that individuals weigh more information congruent with their construal levels." → H1 (novices prefer why/abstract) + H2 (experts prefer how/concrete), mirror via construal congruency.
+> Cutolo & Ferriani 2024 (JOM): 同一 fluency 机制驱动 narrative abstraction/cohesion/conventionality 对 atypical producers 评价的缓冲作用。
+
+**关键特征**:
+- **机制核心是适配（congruency/fit），不是刺激本身**: 同一刺激对不同认知模式的感知者效果相反，因为"流畅性"取决于刺激-感知者匹配——这解释了为何 audience heterogeneity 研究常得到 mirror/opposite 结果
+- **"congruent → fluent → positive" 三步链**: 适配引发流畅性，流畅性引发正向评价。流畅性常作为机制本身（而非单独的中介假设），但若可测应报告（Falchetti 测 usefulness 作 fluency 的近端 proxy 并做 mediation）
+- **天然产生 mirror/opposite 假设**: 当两组感知者认知模式相反（novice 抽象 vs expert 具体），同一刺激维度对两组方向相反——写成 H[N]/H[N+1] 两个 mirror 假设（每个聚焦一组受众偏好的 frame），而非一个 competing interaction
+- **驱动理论**: CLT (Trope & Liberman)、processing fluency (Alter & Oppenheimer; Reber et al.)、schema-congruency / expertise cognition (Alba & Hutchinson; Fiske & Taylor)
+
+**配套假设形式**: 见 `hypothesis_forms.md` 的 **Competing** form（"[X] positively for [group A], but negatively for [group B]"）——本机制是 Competing 假设的最常见理论来源。也可拆成两个 audience-specific mirror 假设（H[N] for group A / H[N+1] for group B）。
+
+**禁忌**:
+- "congruency/fit" 必须指向**理论定义的认知模式**（construal level / schema / expertise-driven processing），不能是模糊的"匹配"——否则 mirror 预测缺乏基础
+- 两组感知者的认知模式差异**必须先论证**（如 expertise → schema → construal level 的 why-chain），不能直接假设"novices 抽象、experts 具体"而无推导
+- 流畅性若作为可测中介应报告（PROCESS mediation，proxy 如 perceived usefulness）；若不测，应在 Discussion 承认机制为推断而非直接检验（Falchetti: usefulness 中介对 novices 成立、对 experts 为 null——是诚实的部分支持，见 write-results R8 asymmetric mediation）
+- 不要把"适配"泛化为万能解释——需排除替代机制（如 familiarity、affect），Falchetti 测了 positive/negative affect 作为竞争中介并排除
+
+**调用语料**:
+- `corpus/sentences/hypothesis_forms.md` — Competing form（X 对两组方向相反）
+- `corpus/subprotocols/argumentation_patterns.md` — minimal-pair contrast vignette（Cutolo 隔离 abstraction 变量，使适配机制显形）
+- `corpus/subprotocols/moderator_selection_frameworks.md` — parallel_buffering_moderators_single_mechanism（Cutolo：多维刺激特征经同一 fluency 机制缓冲）

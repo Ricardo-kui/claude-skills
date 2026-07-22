@@ -5,10 +5,10 @@
 meta:
   schema_version: 1.0.0
   registry_type: estimator-slot-skeleton
-  last_updated: '2026-07-08'
-  last_batch_id: batch_14_chung_low_rust_2022_jams
-  batches_processed: 15
-  total_papers_indexed: 16
+  last_updated: '2026-07-22'
+  last_batch_id: batch_16_kim_lee_2026_smj
+  batches_processed: 17
+  total_papers_indexed: 18
   subfields:
   - strategy
   - ob_hr
@@ -290,6 +290,27 @@ estimators:
           - marginal_effects_table
           - continuous_moderator
           corpus_path: econometric-models/OLS-FE.md
+        - id: r4_continuous_moderator_dual_quantile_trajectory
+          skeleton: Hypothesis [x] posits that [moderator] weakens the effect of [predictor] on [outcome]. The interaction
+            term is [negative/positive] and significant (β = [value], p < [threshold]). In practical terms (Figure [Xa]),
+            when [moderator] is low, increasing [predictor] from −1 SD to +1 SD leads to a [A]% increase in [outcome],
+            but when [moderator] is high, the same increase yields only [B]% [or "virtually no effect"]. Figure [Xb] shows
+            the marginal effect of [predictor] decreases steadily across percentiles of [moderator], falling from strongly
+            positive at the 1st percentile to near zero [or slightly negative] at the 95th percentile.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Abdurakhmonov_Ingram_Ridge_2026_JOM
+          transferability: high
+          paradigm_exclusivity: 连续 DV 调节效应，OLS/FE/GEE/panel 均适用
+          rhythm_tags:
+          - interaction_significance
+          - endpoint_sd_contrast_pct
+          - percentile_marginal_effect_trajectory
+          - shape_verbalization
+          corpus_path: econometric-models/OLS-FE.md
       R5:
         description: 经济 / 实质显著性
         skeleton_variants:
@@ -395,9 +416,50 @@ estimators:
           - gaussian_copula
           - threat_table
           corpus_path: econometric-models/OLS-FE.md
+        - id: r7_ols_epistemic_map_specification_curve
+          skeleton: To further assess the robustness of our findings to analyst degrees-of-freedom, we develop an epistemic
+            map of the coefficient on [predictor] (King, Goldfarb, & Simcoe, 2021). We plot the coefficient and 95% CI across
+            all combinations of [specification dimensions], yielding [N_total_models] specifications. Figure [X] shows that all
+            [N_total_models] coefficients are [of predicted sign], and [N_significant] are significant at the [threshold] level.
+            The coefficients cluster tightly around the main estimate (β ≈ [value]).
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Lee_Wang_2026_JOM
+          transferability: high
+          paradigm_exclusivity: 跨聚类/样本/控制集的 specification-choice 稳健性可视化（distinct from threat-based）
+          rhythm_tags:
+          - specification_curve
+          - analyst_degrees_of_freedom
+          - visual_robustness
+          - sign_stability
+          corpus_path: econometric-models/OLS-FE.md
       R8:
         description: 补充 / 事后 / 机制分析
-        skeleton_variants: []
+        skeleton_variants:
+        - id: r8_ols_mediation_bk_bootstrap_pct_instrumented
+          skeleton: To examine whether [mediator] transmits the effect of [predictor] on [outcome], we adopt two complementary
+            approaches. First, following Baron & Kenny (1986), we estimate the a-path ([predictor]→[mediator]) and b-path
+            ([mediator]→[outcome]|[predictor]). The product a×b ≈ [value] is the indirect effect, accounting for ~[%] of the
+            total effect. Second, a non-parametric bootstrap with [N] replications yields an indirect effect of [value]
+            (95% CI [[lower],[upper]], excluding zero). Because the mediator may be endogenous, [Model 2] instruments
+            [mediator] with [instrument(s)].
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Lee_Wang_2026_JOM
+          transferability: high
+          paradigm_exclusivity: 观察面板 OLS/FE 中介——Baron-Kenny + bootstrap CI + indirect-as-%-of-total + 工具变量中介
+          rhythm_tags:
+          - causal_steps_baron_kenny
+          - bootstrap_ci
+          - indirect_as_pct_of_total
+          - instrumented_mediator
+          corpus_path: econometric-models/OLS-FE.md
       R9:
         description: Results→Discussion 过渡
         skeleton_variants: []

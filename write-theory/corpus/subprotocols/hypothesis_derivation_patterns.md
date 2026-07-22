@@ -1086,4 +1086,39 @@ status: ready_for_corpus
 
 **反模式**: 若目标期刊要求显式编号假设（如 AMJ/SMJ/ASQ），不要使用此模式；若散文式预测没有明确方向和条件，会变成模糊断言。
 
+---
 
+<!--
+pattern_id: counterintuitive_direction_reversal_via_mechanism_substitution
+build_type: 机制推演型 / 反直觉预测型（方向反转子类）
+source_papers: ["Ilicic_Brennan_2026_JM"]
+confidence: high
+status: ready_for_corpus
+-->
+
+## Pattern: Counterintuitive Direction-Reversal via Mechanism Substitution
+
+**适用场景**: 论文主效应的方向符号（X→Y 是正还是负）与 field 默认机制推导出的预期相反；作者不凭直觉反转，而是指出默认机制（M_old）错误，替换为新机制（M_new），再由 M_new 内生推导出反转方向。区别于 "Counterintuitive Anchor + Three Parallel Psychological Threats"（tfr_095 / Keeves 2017）：tfr_095 反转的是"同一 IV 对不同 target 有 opposing consequences"（揭露对另一对象的隐藏后果，3 条并行路径收敛到 1 mediator）；本模式反转的是"X→Y 本身的方向符号"，通过 M_new 替换 M_old 解释方向为何反转。
+
+**微观动作序列**: Default-prediction（field 默认机制 M_old 推导出方向 D_default）→ Reversal claim（"this research challenges these assumptions: 实际方向 D_reversed"）→ Mechanism substitution（M_old 错误 → 替换为 M_new）→ Endogenous derivation（M_new 自然推导出 D_reversed）→ Prediction（H1）
+
+**范文来源**: Ilicic & Brennan (2026), *Journal of Marketing*（conservatism 通常 risk-averse → 应更少消费成瘾品；但本文发现 conservatives 更 favorable，因为 sense of agency → 降低 perceived danger）
+
+**骨架**:
+```
+[Default-prediction] While previous research would suggest that [Group A], who are [trait from default theory M_old], should have [direction-default] responses to [outcome], and [Group B], who are [opposite trait], should have [opposite-default] responses...
+[Reversal claim] ...this research challenges these assumptions: [Group A] is linked to [REVERSED direction] responses to [outcome].
+[Mechanism substitution] We argue that this is because [Group A] is associated with [new mechanism M_new], which [direction] [mediator], [direction] [outcome]. [Theoretical justification for why M_new, not M_old, governs this domain + citation].
+[Endogenous derivation] Because [M_new mechanism], [Group A]'s [mediator state] leads to [direction] [outcome] — the opposite of what [M_old] would predict.
+[Prediction] Therefore, we hypothesize: H1: [Group A] is associated with [reversed-direction] [outcome].
+```
+
+**为什么有效**: 方向反转比"揭露隐藏副作用"更具签名冲击力——Hook 和 Theory Opener 上立刻抓住读者。但反转的合法性必须由"替换后的机制内生推导"提供：不是任性反转，而是 M_old 在本域不适用 → M_new 适用 → M_new 推出反转方向。审稿人接受反转的前提是接受机制替换。
+
+**注意事项**:
+- 反转的方向必须由替换后的 M_new 内生推导，不能是"先有反转再找机制"
+- 必须显式命名并否定 M_old（"previous research would suggest... based on M_old"），否则反转显得无的放矢
+- M_new 必须有独立理论依据（citation），不能仅为反转而构造
+- 适用于 risk/disposition × outcome、moral foundations、political ideology 等有强默认预期的领域
+
+**反模式**: 只声明方向反转而不替换机制（"we find the opposite, trust us"）；用 M_old 同时解释正反两方向（机制过载）；反转方向缺乏理论必然性（M_new 推不出 D_reversed）。

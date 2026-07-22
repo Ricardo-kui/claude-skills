@@ -321,4 +321,56 @@ We simultaneously (1) recognize that the mechanisms by which [related phenomenon
 
 **反模式**: 若相关文献与研究对象机制完全不同，不要强行 leverage；若只承认差异而不说明借用价值，会削弱理论贡献。
 
+---
+
+<!--
+pattern_id: minimal_pair_contrast_vignette
+build_type: 机制推演型 / 构念辨析型（prose-craft showing device）
+source_papers: ["Cutolo_Ferriani_2024_JOM"]
+confidence: high
+status: ready_for_corpus
+related: 与 "Three-Mechanism Trunk with Parallel Concrete Illustrations" 互补——后者给"例子"，本模式给"受控对比"
+-->
+
+## Pattern: Minimal-Pair Contrast Vignette (受控最小对对比)
+
+**适用场景**: 当机制的核心变量是一个**可沿连续维度变化的语言/表征特征**（abstraction、concreteness、active/passive voice、frame strength 等），需要让读者"看见"该变量如何改变机制输出时。借鉴语言学的 minimal-pair（最小对立体）方法：构造**仅在该理论变量上不同、其余完全相同**的两个句子/案例并置对比，从而把抽象机制**隔离并显形化**。
+
+**微观动作序列**: Introduce a stylized atypical actor → present minimal pair (low vs high on the theoretical variable) → analyze what each version evokes → conclude how the variable drives the mechanism
+
+**范文来源**: Cutolo & Ferriani (2024), *Journal of Management*（用 "Leah is a painter and a musician" vs "Leah is an artist" 隔离 abstraction 对 atypicality-processing 的作用）
+
+**骨架**:
+```
+To illustrate, consider a [typical case of the phenomenon]: an actor ([name]) who [description that makes the actor atypical]. Now consider the following two [sentences/claims] that differ in [theoretical variable]:
+
+> [Version LOW on theoretical variable]: [sentence/claim]
+> [Version HIGH on theoretical variable]: [sentence/claim]
+
+The [words/elements] in the LOW version evoke [a network of specific features / detailed expectations] associated with [basic-level category], [list the specific attributes triggered]. To convey the value of [atypical combination], a narrative using the LOW version must therefore [spell out the elaborate strategy needed] — this combination is unlikely to make sense due to [the difficulty the mechanism predicts].
+
+In contrast, the HIGH version [drops the specific features / moves to a superordinate level] and retains only [shared/general attributes] such as [general features]. Hence the HIGH version evokes [broader, more encompassing meanings] that help [decision-makers] draw on a more [inclusive/encompassing category], [resulting in the eased processing / mechanism output the theory predicts].
+```
+
+**原文锚定**:
+> "consider a 'typical' case of atypicality: an actor (let us call her Leah) trying to broaden her identity by taking on multiple and unrelated professional roles... Now consider the following two sentences with different levels of abstraction: *Leah is an extraordinary painter and a talented musician.* / *Leah is an extraordinary artist.* The nouns *painter* and *musician* evoke a network of attributes... [whereas] *artist* reflects a superordinate-level (i.e., more abstract) category... the more abstract word *artist* evokes general features and broader meanings such as creativity, self-expression, and perseverance..."
+
+**关键特征**:
+- **受控对比（minimal pair）而非单纯举例**：两个版本**只在该理论变量上不同、其余受控相同**——这是实验设计的 logic 移植到 prose，使读者能干净地把机制输出归因于该变量（而非其他混淆）
+- **并置呈现（side-by-side blockquote）**：两个版本用引用块紧邻排版，视觉上强制对比，降低读者认知负担
+- **逐版本拆解 evoked attributes**：不只说"A 抽象 B 具体"，而是**枚举每个版本触发的具体属性网络**（painter/musician → 艺术运动/乐器/工具；artist → 创造力/自我表达/毅力），让"机制如何运作"变得可感
+- **从 vignette 自然回到假设**：vignette 收束后用 "these arguments suggest..." 回到正式假设，illustration 不喧宾夺主
+
+**为什么有效**: 
+- 机制段最大的失败模式是"抽象论述抽象"——读者读完 why chain 仍不知道机制在现实中长什么样。minimal pair 用最小成本把机制**显形**
+- 与 "Three-Mechanism Trunk with Parallel Concrete Illustrations" 互补：后者为**多条并行机制各配一个例子**（举例型）；本模式为**单条机制的核心变量做受控对比**（隔离型）
+
+**注意事项**:
+- 两个版本**必须只在该理论变量上不同**——若同时变了多个特征，对比不"minimal"，读者无法归因
+- 拆解 evoked attributes 时要**具体到可枚举**（艺术运动、乐器、工具名），不能泛泛说"更具体/更抽象"
+- vignette 的 stylized actor（如 Leah）应是**中性的虚构例子**，不要用真实具名公司/人（避免事实争议），除非该真实案例本身是论文的现象焦点
+- 一个机制段最多用 **1 个** minimal pair——多个会打断 why chain 的推演节奏
+
+**反模式**: 把 minimal pair 写成"例子堆砌"（两个版本各举一堆不对应的具体公司），失去受控对比的隔离力；或用真实知名公司做对比引入事实争议；或在每条假设前都加 vignette 导致节奏破碎。
+
 

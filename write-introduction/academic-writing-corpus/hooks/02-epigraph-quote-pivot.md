@@ -13,6 +13,7 @@ source_papers:
   - singh2023 (JMR, 2023): "Toyota internal documents — policy scandal quote"
   - lashley_pollock2020 (ASQ, 2020): "medical cannabis patient narrative — immersive stakeholder voice"
   - wowak2025 (MS, 2025): "JFK 'right answer' quote → political polarization paradox"
+  - abdurakhmonov2026 (JOM, 2026): "Mercedes/Volvo public EV commitment vs trade-association lobbying — public-private discrepancy, no quote, indirect narration"
 created: 2026-05-19
 source: Extracted from MVP30 narrative_analysis + darby2026 distill
 ---
@@ -167,6 +168,28 @@ source: Extracted from MVP30 narrative_analysis + darby2026 distill
 **适用**: 适用于有高知名度配对案例支撑的制度冲击/法律变化研究；Incompleteness × Mechanism 组合中需要建立"机制缺失→现实后果"链时优先选用。特别适合 JM/SMJ/JOM 等接受案例驱动开场的期刊。
 
 **禁忌**: 两个案例必须服务不同论证功能（如一个展示问题成因、一个展示威胁机制），不能只是两个同类案例的堆叠。案例必须足够知名以引起读者共鸣——不知名的案例会削弱 Hook 的冲击力。
+
+---
+
+### 变体 G：公开承诺-私下行为虚伪揭示型（abdurakhmonov2026 型） 🔬 EMERGING（1 篇范文）
+
+**模板**:
+> On [date], [media source] reported that [named firms] had committed to [a publicly valued progressive / social commitment] ([citation]). However, behind the scenes, [a trade association / lobbying group / third-party body] representing these firms was working to [a private action that contradicts or weakens the public commitment] ([citation]). This discrepancy between [actors]' [public stance] and [private behavior] underscores a critical tension in [domain]: [actors] often engage in [covert / hidden practice] while outwardly signaling support for [stated values]. These actions are enabled by [an institutional or legal structure] that permits [the covert activity] to go [undisclosed / unchecked] ([citations]).
+
+**来源**: abdurakhmonov_ingram_ridge_2026 (JOM), P1
+
+**原文锚定**:
+> "On November 9, 2021, The New York Times reported that Mercedes-Benz and Volvo, among other automakers, had committed to ending the production of gasoline and diesel vehicles by 2040... However, behind the scenes, the Truck and Engine Manufacturers Association, a lobbying group representing these firms, was working to weaken legislation aimed at curbing emissions... This discrepancy between the firms' public commitments and private actions underscores a critical tension in corporate political activity (CPA)."
+
+**关键特征**:
+- **公开-私下虚伪对比（discrepancy 揭示）**: 不靠引语或内部文件曝光，而是并列两个可公开查证的事实——[公开承诺] vs [私下行动]——让虚伪从两者矛盾中自然浮现。区别于变体 A（揭示制度缺陷）与变体 C（曝光隐藏证据）：本变体的说服力来自两个 public-facing 事实之间的张力
+- **第三方中介机制**: 私下行动经贸易协会/游说团体等中介组织执行（[firms → trade association → lobbying]），增加一层结构中介，揭示集体性行业游说如何掩盖个体企业责任
+- **dated + named-firm 锚定，无引语**: 具体日期 + 具体公司名 + 具体新闻来源建立不可辩驳真实感；与变体 A–F 不同，**不使用 block quote**，全用间接叙述
+- **虚伪即构念**: Hook 揭示的公开-私下差异正是论文的核心理论构念（covert CPA / dark money disclosure），Hook 直接实例化理论张力而非仅提供背景兴趣
+
+**适用**: corporate political activity、CSR decoupling、ESG greenwashing、corporate hypocrisy 研究中，存在两个可公开引用的矛盾事实（一公开承诺、一私下行动）的场景；Incompleteness × Mechanism / Phenomenon；JOM / JM / OS / SMJ 适配
+
+**禁忌**: 两个事实（公开承诺 + 私下行动）必须都有可引用的公开来源，不能只有一方有 citation；私下行动必须是公开记录可查的（如游说立法记录），不能是未经证实的指控；第三方中介必须与被点名企业有明确代表关系；揭示的虚伪必须与论文核心构念直接对应，不能只是装饰性开场
 
 ---
 

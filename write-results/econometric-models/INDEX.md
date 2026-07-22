@@ -4,7 +4,7 @@ description: Results 填空骨架变体库，按结果类型组织。由 distill
 organization: by_result_type
 result_types_count: 18
 created: 2026-05-18
-updated: 2026-07-08
+updated: 2026-07-22
 ---
 
 # Results Econometric Models Corpus
@@ -19,13 +19,13 @@ updated: 2026-07-08
 
 | 文件 | 结果类型 | 变体数 | 最后更新 |
 |------|---------|--------|---------|
-| [OLS-FE](OLS-FE.md) | OLS-FE | 21 | 2026-07-08 |
+| [OLS-FE](OLS-FE.md) | OLS-FE | 27 | 2026-07-22 |
 | [Logit-Probit-Ordered-Probit](Logit-Probit-Ordered-Probit.md) | Logit-Probit-Ordered-Probit | 8 | 2026-07-07 |
 | [生存分析](生存分析.md) | 生存分析 | 14 | 2026-07-07 |
 | [DiD](DiD.md) | DiD | 0 | 2026-05-18 |
 | [计数模型](计数模型.md) | 计数模型 | 11 | 2026-07-07 |
 | [实验](实验.md) | 实验 | 3 | 2026-07-07 |
-| [多研究](多研究.md) | 多研究 | 4 | 2026-07-07 |
+| [多研究](多研究.md) | 多研究 | 5 | 2026-07-22 |
 | [定性过程研究](定性过程研究.md) | 定性过程研究 | 4 | 2026-07-07 |
 | [IV-2SLS](IV-2SLS.md) | IV-2SLS | 4 | 2026-06-16 |
 | [匹配DiD](匹配DiD.md) | 匹配DiD | 0 | 2026-05-18 |
@@ -35,7 +35,7 @@ updated: 2026-07-08
 | [跨受众构念对比](跨受众构念对比.md) | 跨受众构念对比 | 0 | 2026-05-18 |
 | [三向交互](三向交互.md) | 三向交互 | 1 | 2026-07-07 |
 | [构造暴露分解](构造暴露分解.md) | 构造暴露分解 | 0 | 2026-05-18 |
-| [SEM-moderated-mediation](SEM-moderated-mediation.md) | SEM/调节中介 | 3 | 2026-07-07 |
+| [SEM-moderated-mediation](SEM-moderated-mediation.md) | SEM/调节中介 | 5 | 2026-07-22 |
 | [事件研究法](事件研究法.md) | 事件研究法 | 1 | 2026-07-07 |
 
 ## 写入规则
@@ -135,4 +135,15 @@ updated: 2026-07-08
 >   - **OLS-FE** 变体26：**内生性稳健性表叙事 — threat-by-threat Table 7 汇总（DWH + Gaussian copula）**
 >   - **三向交互** 变体2：**连续调节变量三向交互 — 边际效应表（Table 5 Panels B/C 风格）**
 >
-> **总变体数**: 80 (分布于 18 个结果类型文件)
+> ✅ **2026-07-22 更新**: 蒸馏 Ilicic & Brennan (2026, JM) "Political Ideology Shapes Consumer Responses to Addictive Products" 新增 2 个高价值变体（均单篇、待第二篇交叉验证声明已标注）：
+>   - 多研究 变体5：**逐研究 Discussion 接力立项** — 每个 Study Discussion 末段固定三拍（贡献→具体限制→下一研究如何补救），consumer psychology 多研究标志性接力节奏（区别于变体2 的 Study 开场复制声明）
+>   - SEM-moderated-mediation 追加：**Reverse-Order Mediation Test** — 反转序列中介顺序重测，反向间接效应 CI 含零即确认因果排序（Fairchild & McDaniel 2017）；区别于 qiao2026 reverse-code+Wald（那是对立通道持续性比较）
+>   - 配套 write-methods：实验 变体6（measurement/moderation of process 双设计 + rival accounts battery）、多研究 变体5（Empirical Plan 因果阶段化预告段）
+
+> ✅ **2026-07-22 更新**: 蒸馏 Kim & Lee (2026, SMJ) "Putting a Price on Mission" 新增 3 个高价值变体（均单篇、待第二篇交叉验证声明已标注）：
+>   - OLS-FE 变体27：**多阶段同 IV 管道衰减 profile** — single-study single-IV multi-stage（attraction+/selection+/attrition null）+ 跨阶段对比句把"前置显著+后置 null"提升为机制发现（signaling 衰减裁决）；区别 多研究.md 的 cross-study synthesis
+>   - slot-R5 追加：**WTP coefficient-ratio 经济显著性** — 系数比翻译为工资百分比 + 双 benchmark（vs prior 定位 lower end + vs other attributes 论证 higher than）；corpus 零命中 WTP
+>   - slot-R6 追加：**Post-treatment selection 诚实边界**（Slough 2023）— multi-stage pipeline 后置 outcome 的 ATE undefined 承认；corpus 零命中 Slough
+>   - 注：OLS-FE 表行 21→27 顺手修正 pre-existing stale（实际变体到 26）；slot-R5/R6 为槽位骨架文件不在表中，总变体数 +3
+
+> **总变体数**: 85 (分布于 18 个结果类型文件)

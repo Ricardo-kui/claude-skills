@@ -73,3 +73,21 @@ Importantly, the limitations of this measure bias against finding the hypothesiz
 ```text
 To measure [construct], we used [primary operationalization] because [theoretical justification]. [Specific mechanism]. As an alternative measure of [construct], we used [alternative operationalization] because [additional theoretical justification]. This alternative is instructive because [why it differs from primary measure and what it adds]. Because [alternative measure] relies on a different [data source / institutional process] than [primary measure], finding consistent results across the two measures increases confidence that our findings reflect [construct] rather than [idiosyncrasy of primary measure].
 ```
+
+**非 WEIRD 语境 DV 调校变体**（Li et al. 2026 POM 型）： 🔬 EXPERIMENTAL（1 篇范文）— 当标准（WEIRD 语境）DV 的制度前提在非 WEIRD 语境不成立时，换用语境适配 DV 并用本地证据校准窗口/阈值
+```text
+Previous studies have measured [construct] using [standard measure, e.g., product recalls] ([citations]). This measure is appropriate in contexts where [institutional precondition for the standard measure to hold — e.g., strong quality regulation ensures firms recall when quality risks exist]. However, in [non-WEIRD / emerging-market context], where [the institutional precondition is absent or still developing], treating [standard measure] as a proxy for [construct] might [underestimate / misrepresent] the situation, as [firms may not recall even when quality risks exist]. Similar to [prior context-adapted study], we measured [construct] using [context-appropriate alternative, e.g., consumer complaints], which provides a truer picture of [construct] in our research context. To avoid [measurement bias, e.g., ratio-measurement bias from Certo et al. 2020], we [used the absolute count of ... and controlled for the exposure base, e.g., number of cars sold]. We also customized [prior WEIRD measure]'s [observation window / threshold] for [target context] by [calibrating against local descriptive evidence — e.g., consumer complaints in China peak at year t+1 (vs t+4 in the US) and the first 4 years capture ~80% of complaints (vs ~40% in the US)]; thus we used a [N]-year window ([t, t+N]) for a fair comparison across [units] introduced in early and later years. In robustness tests (Section [x]), we measured the DV using [shorter and longer windows / alternative measures]; the results remained consistent.
+```
+**关键特征**:
+- **标准 DV 在非 WEIRD 失效的制度论证**: 不直接照搬 WEIRD 的 DV——论证标准 DV 的制度前提在目标语境不成立（recall 需要"强制度→企业有风险就召回"的前提；弱制度下企业不召回 → recall 低估真实风险）
+- **语境特定校准用本地描述性证据**: 观测窗口/阈值用目标语境的描述性事实调校（中国投诉 t+1 达峰、前4年占80% vs 美国 t+4 达峰、占40%）——让窗口选择有 local empirical 依据，而非照搬 WEIRD 研究
+- **配套反偏差措施**: 用绝对计数 + 控制暴露量（cars sold）规避 ratio-measurement bias
+- **稳健性用替代窗口/测量**: 短/长窗口 + 替代操作化
+
+**适用**: 非 WEIRD / 新兴市场研究；任何标准 DV 的制度前提在目标语境不成立的情境（recall↔complaint、formal report↔informal grievance、filed lawsuit↔perceived harm、official statistics↔crowdsourced reports）。与 write-introduction `tensions/18-context-generalizability`（WEIRD gap）天然配对——gap 声称语境不同，methods 就必须相应调校测量
+
+**禁忌**:
+- 必须论证标准 DV 失效的**制度机制**（"recall 在中国少"是现象，须解释为何：弱制度→企业不主动召回），不能只陈述数字
+- 语境校准（窗口/阈值）须用**本地描述性证据**（如投诉时间分布），不能照搬 WEIRD 窗口
+- 若用替代 DV，须在 robustness 中报告与标准 DV 的关系或在可比子样本中的一致性
+- 不要把"换 DV"当成便利——须说明替代 DV 在该语境如何更贴近理论构念

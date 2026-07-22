@@ -1,9 +1,9 @@
 meta:
-  last_updated: '2026-07-14'
+  last_updated: '2026-07-22'
   total_mvp30_papers_indexed: 45
   batches_processed: 10
-  source: mvp30_index + 9_distill_files + path_B_confirmation + cui_yang_vertinsky_smj_distill + paruchuri_andrus_sullivan2026_amj_distill
-  notes: '2026-07-08 added cui_yang_vertinsky (SMJ) distill: new hook 24-empirical-puzzle-after-consensus, updated 16-threefold-gap and 02-explicit-dual-question-narrowing. 2026-07-10 expanded cui_yang_vertinsky (SMJ) Introduction distill: added variant X to tensions/01-despite-progress-unaddressed, variant G to literature-turns/01-progressive-coherence, variant F to previews/mechanism-preview. 2026-07-14 distilled paruchuri_andrus_sullivan2026 (AMJ): added variant Y to tensions/01-despite-progress-unaddressed, variant C to hooks/09-psychological-construct-hook, variant G to previews/mechanism-preview, and new theory-lens/07-socio-cognitive-frame.'
+  source: mvp30_index + 9_distill_files + path_B_confirmation + cui_yang_vertinsky_smj_distill + paruchuri_andrus_sullivan2026_amj_distill + li2025_jscm_distill + li2026_pom_distill
+  notes: '2026-07-08 added cui_yang_vertinsky (SMJ) distill: new hook 24-empirical-puzzle-after-consensus, updated 16-threefold-gap and 02-explicit-dual-question-narrowing. 2026-07-10 expanded cui_yang_vertinsky (SMJ) Introduction distill: added variant X to tensions/01-despite-progress-unaddressed, variant G to literature-turns/01-progressive-coherence, variant F to previews/mechanism-preview. 2026-07-14 distilled paruchuri_andrus_sullivan2026 (AMJ): added variant Y to tensions/01-despite-progress-unaddressed, variant C to hooks/09-psychological-construct-hook, variant G to previews/mechanism-preview, and new theory-lens/07-socio-cognitive-frame. 2026-07-22 distilled li_bapuji_talluri_singh_narayanan2025 (JSCM, Vertical Spillover of Product Recalls): added variant G (成对跨行业灾难实例化型) to hooks/03-data-shock; created new theory-lens/08-dual-metaphor-stream-reconciliation (单理论双隐喻调和双文献流, pipes/prisms reconciling categorization + supply chain propagation). 2026-07-22 distilled li_bapuji_talluri_singh_venkataraman2026 (POM, supply base geographical distance/dispersion): created new tensions/18-context-generalizability (WEIRD↔non-WEIRD gap); added li2026 as 7th source to tensions/05-construct-confusion (distance/dispersion conflation); paired methods slot-M3 context-customized-DV variant + results slot-R6 null-rescue variant.'
 evidence:
   hooks:
     01-cross-disciplinary-analogy:
@@ -27,7 +27,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     02-epigraph-quote-pivot:
-      paper_count: 8
+      paper_count: 9
       papers:
       - darby2026 (JOM)
       - desjardine2023 (OS)
@@ -37,8 +37,9 @@ evidence:
       - shi2021 (JMR)
       - singh2023 (JMR)
       - wowak2025 (MS)
+      - abdurakhmonov2026 (JOM)
       gap_distribution:
-        Incompleteness: 4
+        Incompleteness: 5
         Inadequacy: 4
         Incommensurability: 0
       status: ROBUST
@@ -54,7 +55,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     03-data-shock:
-      paper_count: 7
+      paper_count: 8
       papers:
       - darby2024 (MSOM)
       - darby2025 (JSCM)
@@ -63,8 +64,9 @@ evidence:
       - shi2021 (JMR)
       - vadakkepatt2022 (JM)
       - wu2025 (SMJ)
+      - li2025 (JSCM)
       gap_distribution:
-        Incompleteness: 7
+        Incompleteness: 8
         Inadequacy: 0
         Incommensurability: 0
       status: ROBUST
@@ -651,7 +653,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     05-construct-confusion:
-      paper_count: 6
+      paper_count: 7
       papers:
       - han2024 (AMP)
       - han2024 (SMJ)
@@ -659,9 +661,10 @@ evidence:
       - pfarrer2010 (AMJ)
       - pollock2015 (ASQ)
       - shen2022 (JOM)
+      - li2026 (POM)
       gap_distribution:
         Incompleteness: 1
-        Inadequacy: 5
+        Inadequacy: 6
         Incommensurability: 0
       status: ROBUST
       generativity: GENERATIVE
@@ -924,6 +927,24 @@ evidence:
       gap_distribution:
         Incompleteness: 1
         Inadequacy: 0
+        Incommensurability: 0
+      status: EMERGING
+      generativity: GENERATIVE
+      exclusivity: HIGH
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    18-context-generalizability:
+      paper_count: 1
+      papers:
+      - li2026 (POM)
+      gap_distribution:
+        Incompleteness: 0
+        Inadequacy: 1
         Incommensurability: 0
       status: EMERGING
       generativity: GENERATIVE
@@ -1473,6 +1494,24 @@ evidence:
       status: EMERGING
       generativity: GENERATIVE
       exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    08-dual-metaphor-stream-reconciliation:
+      paper_count: 1
+      papers:
+      - li_bapuji_talluri_singh_narayanan2025 (JSCM)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 0
+        Incommensurability: 0
+      status: EMERGING
+      generativity: GENERATIVE
+      exclusivity: HIGH
       common_failures: []
       validation_history:
         total_runs: 0

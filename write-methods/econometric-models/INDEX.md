@@ -4,7 +4,7 @@ description: Methods 填空骨架变体库，按设计类型组织。由 distill
 organization: by_design_type
 design_types_count: 22
 created: 2026-05-18
-updated: 2026-07-08
+updated: 2026-07-22
 ---
 
 # Methods Econometric Models Corpus
@@ -21,23 +21,23 @@ updated: 2026-07-08
 
 | 文件 | 设计类型 | 变体数 | 最后更新 |
 |------|---------|--------|---------|
-| [面板数据-OLS](面板数据-OLS.md) | 面板数据-OLS | 21 | 2026-07-08 |
+| [面板数据-OLS](面板数据-OLS.md) | 面板数据-OLS | 22 | 2026-07-22 |
 | [自然实验-DiD](自然实验-DiD.md) | 自然实验-DiD | 0 | 2026-05-18 |
-| [非线性模型](非线性模型.md) | 非线性模型 | 9 | 2026-07-07 |
+| [非线性模型](非线性模型.md) | 非线性模型 | 10 | 2026-07-22 |
 | [生存分析](生存分析.md) | 生存分析 | 15 | 2026-07-07 |
 | [SEM](SEM.md) | SEM | 4 | 2026-05-18 |
-| [实验](实验.md) | 实验 | 5 | 2026-07-07 |
-| [多研究](多研究.md) | 多研究 | 4 | 2026-07-07 |
+| [实验](实验.md) | 实验 | 6 | 2026-07-22 |
+| [多研究](多研究.md) | 多研究 | 6 | 2026-07-22 |
 | [定性过程研究](定性过程研究.md) | 定性过程研究 | 6 | 2026-07-07 |
 | [稀有结果](稀有结果.md) | 稀有结果 | 0 | 2026-05-18 |
 | [实证对象构建](实证对象构建.md) | 实证对象构建 | 2 | 2026-07-08 |
 | [事件历史+事件研究](事件历史+事件研究.md) | 事件历史+事件研究 | 7 | 2026-07-07 |
 | [同时方程](同时方程.md) | 同时方程 | 0 | 2026-05-18 |
-| [IV-2SLS](IV-2SLS.md) | IV-2SLS | 5 | 2026-07-08 |
+| [IV-2SLS](IV-2SLS.md) | IV-2SLS | 7 | 2026-07-22 |
 | [动态面板-GMM](动态面板-GMM.md) | 动态面板-GMM | 0 | 2026-05-18 |
 | [匹配DiD-广义DiD](匹配DiD-广义DiD.md) | 匹配DiD-广义DiD | 0 | 2026-05-18 |
 | [同伴效应-网络效应](同伴效应-网络效应.md) | 同伴效应-网络效应 | 3 | 2026-07-08 |
-| [文本构念测量](文本构念测量.md) | 文本构念测量 | 11 | 2026-07-08 |
+| [文本构念测量](文本构念测量.md) | 文本构念测量 | 12 | 2026-07-22 |
 | [PSM匹配面板](PSM匹配面板.md) | PSM匹配面板 | 3 | 2026-06-16 |
 | [堆叠扩散Logit](堆叠扩散Logit.md) | 堆叠扩散Logit | 0 | 2026-05-18 |
 | [多行为者设计](多行为者设计.md) | 多行为者设计 | 1 | 2026-07-08 |
@@ -159,5 +159,17 @@ updated: 2026-07-08
 >   - **IV-2SLS** 变体5：**DWH 检验 + Gaussian copula 内生性叙事**
 >   - 配套微模板：executive-confidence-operationalization、interquartile-economic-significance、heckman-peer-prevalence-exclusion、alternative-dv-falsification
 >
-> **已填充变体**: 98个 (分布于 14个设计类型文件)
+> ✅ **2026-07-22 更新**: 蒸馏 Ilicic & Brennan (2026, JM) "Political Ideology Shapes Consumer Responses to Addictive Products" 新增 2 个高价值变体（均单篇、待第二篇交叉验证声明已标注）——首次填充 consumer psychology 机制证明传统：
+>   - 实验 变体6：**测量过程+操纵过程双设计 + rival accounts battery** — Spencer, Zanna & Fong (2005) 双过程收敛机制设计；一次研究测量 9+ 竞争中介并逐一排除 + 随机化中介呈现顺序（区别于 slot-R8 的 1-2 个替代中介结果报告）
+>   - 多研究 变体5：**Empirical Plan 因果阶段化预告段** — foundation→effect→process→intervention 理论因果阶梯（区别于变体4 的方法论效度阶梯）；含 foundation pilot（现象建立型）+ "Having established... we next investigated whether..." 因果阶段转折句
+>   - 配套 write-results：多研究 变体5（逐研究 Discussion 接力立项）、SEM-moderated-mediation（reverse-order mediation test 确认序列中介因果排序）
+>   - 配套 write-theory：hypothesis_forms（序列中介叙事打包式）、hypothesis_derivation_patterns（counterintuitive direction-reversal via mechanism substitution）
+
+> ✅ **2026-07-22 更新**: 蒸馏 Kim & Lee (2026, SMJ) "Putting a Price on Mission" 新增 3 个高价值变体（均单篇、待第二篇交叉验证声明已标注）——empirical strategy / strategic human capital 风格（首篇多阶段决策管道 + WTP）：
+>   - 多研究 变体6：**同一 IV 跨决策阶段管道** — 各阶段不同分析单元 + 条件性样本递减（attraction/selection/attrition，Schneider ASA）；区别变体1-5 的 cross-study 独立样本梯度
+>   - 非线性模型 变体10：**revealed-preference WTP 三估计器系数比**（LPM/conditional logit/mixed logit，-beta_X/beta_price）；corpus 零命中 WTP/mixed logit；顺手修复 variants_count 重复键 typo
+>   - 文本构念测量 变体12：**手工二元编码 + 多源聚合 + embedded/peripheral 构念边界**（区别变体11 的边界案例披露，本变体理论上限定构念范围到 core identity）
+>   - 配套 write-results：OLS-FE 变体27（多阶段管道衰减 profile + 跨阶段对比句）、slot-R5（WTP 经济显著性双 benchmark）、slot-R6（Slough post-treatment selection 诚实边界）
+
+> **已填充变体**: 103个 (分布于 14个设计类型文件)
 > **新设计类型解锁**: 同伴效应-网络效应、多行为者设计

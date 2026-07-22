@@ -3,13 +3,15 @@ type: canonical_theory_lens
 canonical_id: "02-dual-theory-layered"
 status: EMERGING
 gap_type: Incompleteness
-cross_paper: EMERGING
+cross_paper: EMERGING (2 sources, 2 fields)
 generativity: ADAPTABLE
 exclusivity: HIGH
 source_papers:
   - hoffmann_cheong_phan_zurbruegg2024 (JM, 2024): "Agency theory for main effect mechanism + business ethics framework for boundary conditions"
+  - cutolo_ferriani2024 (JOM, 2024): "Processing fluency theory for main-effect mechanism + Bloom & Lahey (1978) linguistics taxonomy (content/form/use) for 3 narrative-feature moderators"
 created: 2026-06-05
-source: Distilled by distill-introduction-exemplar from Hoffmann et al. 2024 JM
+updated: 2026-07-22
+source: Distilled by distill-introduction-exemplar from Hoffmann et al. 2024 JM; enriched 2026-07-22 with Cutolo & Ferriani 2024 JOM (2nd source, cross-field)
 ---
 
 # 02-dual-theory-layered — 双理论分层锚定 Theory Lens
@@ -63,10 +65,37 @@ source: Distilled by distill-introduction-exemplar from Hoffmann et al. 2024 JM
 
 **适用**: Incompleteness × (Mechanism + Boundary) 组合。当主效应机制依赖代理冲突/激励问题（agency theory, tournament theory, incentive alignment frameworks），且边界条件需要一个组织治理/伦理/制度框架来系统化时。
 
-**禁忌**: 
+**禁忌**:
 - 次要框架必须是真正的 organizing framework，不能只是一个方便的分类标签
 - 两个理论之间必须是互补关系，不能是竞争关系
 - intrisic vs extrinsic 的区分必须有理论依据，不能是事后合理化
+
+---
+
+### 变体 B：机制理论 + 跨学科 N 维分类框架型（cutolo_ferriani2024 型）
+
+**模板**:
+> Drawing on [primary mechanism theory] ([citation]), we [argue/contend] that [connective construct] affects [outcome] by shaping [decision-makers]'s subjective experience of [mechanism state — e.g., processing fluency]. [Mechanism logic: higher fluency/stronger mechanism state → more positive evaluation].
+>
+> To [organize/systematize] the conditions under which this [mechanism] varies, we draw on [secondary framework from an adjacent discipline] ([citation]), which distinguishes [N] fundamental [components/dimensions] of [domain]: [component 1] ([label 1]), [component 2] ([label 2]), and [component 3] ([label 3]). For each [component], we derive one corresponding [mechanism-enabling feature / moderator]: [moderator 1] maps to [component 1]; [moderator 2] to [component 2]; [moderator 3] to [component 3].
+
+**原文锚定**:
+> "Marrying linguistics literature with processing fluency theory (Alter & Oppenheimer 2009; Reber et al. 2004; Schwarz 2004), we articulate and test three narrative features—abstraction, cohesion, and conventionality—that affect the subjective ease experienced while processing atypicality, thereby impacting evaluation. Each of these features reflects one of the three fundamental components of language (Bloom & Lahey, 1978): content, the meaning encoded in the language used; form [structure], the organization and relationship between linguistic elements; and use, the contextual embeddedness of the language used."
+
+**来源**: cutolo_ferriani2024 (JOM), Introduction P6-P7
+
+**关键特征**:
+- **与变体 A 的区别——跨学科配对**：次要框架来自**相邻学科**（语言学 Bloom & Lahey 的 content/form/use），与主理论（心理学 processing fluency）跨学科结合——主理论解释"为什么"（mechanism），次要框架提供"分哪几类"（moderator taxonomy）。变体 A 是同领域两理论（agency + business ethics）
+- **N 维分类框架 1:1 映射 N 个 moderator**：3 个语言组件 → 3 个 fluency-enabling 叙事特征（abstraction/cohesion/conventionality），每个 moderator 都有明确的框架归属，预先回答"为什么选这 N 个 moderator"的审稿质疑
+- **"Marrying X with Y" 是标志性引入句**：显式宣告跨学科整合，把两个来源理论的关系（互补：mechanism + taxonomy）写进句法
+
+**适用**: Incompleteness × (Mechanism + Boundary)；当主效应机制来自一个理论、而边界条件可由相邻学科的现成分类框架系统化时（心理学/经济学机制 + 语言学/社会学/组织学的 taxonomy）。JOM/JM/JMR/JMS 等接受跨学科框架的期刊适配度高。
+
+**禁忌**:
+- 跨学科框架的 N 个维度必须真实存在且可引用（Bloom & Lahey 1978 是既成框架），不能临时拼凑
+- N 个 moderator 必须与 N 个维度 **1:1 对应**——不能有的维度无 moderator，也不能一个 moderator 横跨多维度（否则"分类"失去意义）
+- 主理论与次要框架必须**互补**（一个管 mechanism，一个管 taxonomy），不能竞争或重叠
+- "Marrying" 之后必须立即说清两者的功能分工（哪个解释主效应、哪个组织边界），否则退化为理论堆砌
 
 ---
 
