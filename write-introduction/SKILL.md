@@ -15,6 +15,8 @@ version: 4.1.0
 
 ## Phase 1: 诊断
 
+> **论文类型前置判定（理论论文分支）**：若用户明确本文是**理论论文**（AMR / AMR 风格，无实证检验），**跳过下方实证 Gap 诊断与默认路由**，改读 [`references/theory-paper-amr-mode.md`](references/theory-paper-amr-mode.md)——按 Barney (2018) 三段定位框架（点名对话 → 然而 + 为什么是这一个 → 目的 + 答案）输出 ~1.5 页的 AMR 理论论文引言骨架。理论论文模式覆盖默认实证 Preview（不写 empirical setting / finding direction / methodology defense，改用论证预告），贡献用单核自明型（变体 O）。
+
 如果用户未明确 Gap 类型或贡献维度，用两个问题快速判断：
 1. 你的研究是对已有文献的**补充**（Incompleteness）、**修正**（Inadequacy）还是**颠覆**（Incommensurability）？
 2. 已有文献的主要问题是什么——漏了东西、理解偏了、还是自相矛盾？

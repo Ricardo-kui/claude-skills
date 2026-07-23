@@ -197,3 +197,45 @@ IV_B → DV_type_1: -    IV_B → DV_type_2: +
 - 反向效应必须是真的方向反转或系统性交叉，不只是强度变化
 - H4 如果与 H3 论证过度重叠，可能导致实证支持不足（见 Gamache et al. H4 p=.104 的教训）
 **反模式**: 如果 IV 两个维度不对称，或 DV 两个类型在理论上不并列，不要硬凑 2×2。
+
+---
+
+<!--
+pattern_id: sequential_two_stage_screening_asymmetric
+build_type: 机制推演型
+source_papers: ["Pupovac_Astvansh_Carrillat_Legoux_2026_POM"]
+confidence: low
+status: needs_validation
+-->
+
+## Pattern: Sequential Two-Stage Screening with Asymmetric Branches
+
+**适用场景**: 当理论中的理想信息/线索（ideal screen）因制度、成本或隐私原因不可得时，actors 采用阶段性替代筛查，且不同阶段的替代线索对同一 outcome 产生理论上相反或不对称的效应。
+**结构**: Common Trunk（recall/uncertainty→screening→reaction）→ Stage 1 Screen → Stage 2 Screen（conditional）→ Contextual Screens
+**范文来源**: Pupovac, Astvansh, Carrillat, and Legoux (2026), *Production and Operations Management*（supplier shareholders use voluntary customer disclosure as Stage 1 screen and revenue dependence as Stage 2 screen after manufacturer recalls）
+
+**骨架**:
+```
+The ideal screen for [actor] is [preferred cue], which reveals [state] ([citations]). 
+However, [institutional/regulatory/cost reason] makes this cue unavailable. 
+Therefore, [actor] adopts a [N]-stage screening process. 
+In Stage 1, [actor] checks [observable cue 1]. 
+If [condition for proceeding], in Stage 2, [actor] uses [observable cue 2]. 
+
+We propose that [cue 1] [direction 1] [outcome] because [mechanism 1]. 
+In contrast, [cue 2] [direction 2] [outcome] because [mechanism 2].
+```
+
+**连接词要求**:
+- 理想 screen→制度缺口: "However, [reason] makes this cue unavailable."
+- Stage 1→Stage 2: "If the answer is affirmative, [actor] proceeds to..."
+- 不对称效应: "In contrast, ..."
+
+**为什么有效**: 把制度可得性转化为主动理论机制，而不是背景噪音；两阶段结构既解释了为什么使用替代 screen，也解释了不同阶段为何产生相反效应。
+
+**注意事项**:
+- 必须论证理想 screen 为何不可得，且该不可得性是理论驱动的，而非数据限制
+- 两个阶段必须概念独立；第一阶段决定是否进入第二阶段
+- 相反效应必须有各自独立的机制，不能只是 "more vs less"
+
+**反模式**: 如果两个阶段实为同一 screen 的不同操作化，或第二阶段无条件可用，不要用此模式。

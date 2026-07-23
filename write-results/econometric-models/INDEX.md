@@ -2,7 +2,7 @@
 corpus: write-results
 description: Results 填空骨架变体库，按结果类型组织。由 distill-results-exemplar 手动写入验证通过的变体。
 organization: by_result_type
-result_types_count: 18
+result_types_count: 19
 created: 2026-05-18
 updated: 2026-07-22
 ---
@@ -19,7 +19,7 @@ updated: 2026-07-22
 
 | 文件 | 结果类型 | 变体数 | 最后更新 |
 |------|---------|--------|---------|
-| [OLS-FE](OLS-FE.md) | OLS-FE | 27 | 2026-07-22 |
+| [OLS-FE](OLS-FE.md) | OLS-FE | 28 | 2026-07-23 |
 | [Logit-Probit-Ordered-Probit](Logit-Probit-Ordered-Probit.md) | Logit-Probit-Ordered-Probit | 8 | 2026-07-07 |
 | [生存分析](生存分析.md) | 生存分析 | 14 | 2026-07-07 |
 | [DiD](DiD.md) | DiD | 0 | 2026-05-18 |
@@ -36,7 +36,8 @@ updated: 2026-07-22
 | [三向交互](三向交互.md) | 三向交互 | 1 | 2026-07-07 |
 | [构造暴露分解](构造暴露分解.md) | 构造暴露分解 | 0 | 2026-05-18 |
 | [SEM-moderated-mediation](SEM-moderated-mediation.md) | SEM/调节中介 | 5 | 2026-07-22 |
-| [事件研究法](事件研究法.md) | 事件研究法 | 1 | 2026-07-07 |
+| [事件研究法](事件研究法.md) | 事件研究法 | 5 | 2026-07-23 |
+| [VARX-PVAR](VARX-PVAR.md) | VARX-PVAR | 7 | 2026-07-15 |
 
 ## 写入规则
 
@@ -155,3 +156,8 @@ updated: 2026-07-22
 >   - **样本威胁拆分**: 原"样本威胁" → "样本威胁 — 排除敏感性" + 新增"样本威胁 — 理论驱动子样本变异"
 >   - 配套更新: `_evidence_registry.yaml` 新增 3 反模式 + 2 诚实边界
 >   - 来源: Yuan, Den Hartog, Liu, De Hoogh, Sun, Zhao, Riisla & Belschak (2026) *Journal of Management* — 六维稳健性分析框架
+>
+> ✅ **2026-07-23 更新（sync from local backup）**: 从 pre-sync 备份补回两批本地蒸馏成果：
+>   - **VARX-PVAR 结果类型接入**（Borah & Tellis 2016, JMR）：7 个 Results 变体（GIRF-based halo metric、graded support language、basis-points→dollars、FEVD relative importance、Venn diagram visualization、elasticity table、wear-in/wear-out dynamics）。配套 `../write-methods/econometric-models/VARX-PVAR.md`。
+>   - **Pupovac, Astvansh, Carrillat & Legoux (2026, POM) 蒸馏**：补回 5 个 Results 变体——事件研究法 变体 2/3/4/5、OLS-FE 变体 28（Control Function + Heckman 双阶段修正表导航）。
+>   - 注：OLS-FE 变体编号因远程 86f478d 已占用 27（Kim & Lee 2026 SMJ 管道衰减），本地原 27 续编为 28。

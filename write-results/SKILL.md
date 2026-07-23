@@ -2,7 +2,7 @@
 name: write-results
 description: |
   顶刊 Results 填空段落骨架生成器。输入结果类型后输出带 [placeholder] 的可直接粘贴段落（R1–R9 槽位，骨架在 `references/slot-*.md` 按需加载）。
-  覆盖 18 种结果类型：OLS-FE、Logit-Probit-Ordered-Probit、生存分析、DiD、计数模型（含AME+区域显著性）、实验、多研究、IV/2SLS、匹配DiD、堆叠扩散Logit、同伴效应-网络效应、推断二元结果、跨受众构念对比、三向交互、构造暴露分解、SEM-moderated-mediation、事件研究法、定性过程研究。双受众平行对比见 slot-R3 变体；非显著深化/反方向见 slot-R6。
+  覆盖 19 种结果类型：OLS-FE、Logit-Probit-Ordered-Probit、生存分析、DiD、计数模型（含AME+区域显著性）、实验、多研究、IV/2SLS、匹配DiD、堆叠扩散Logit、同伴效应-网络效应、推断二元结果、跨受众构念对比、三向交互、构造暴露分解、SEM-moderated-mediation、事件研究法、定性过程研究、VARX-PVAR。双受众平行对比见 slot-R3 变体；非显著深化/反方向见 slot-R6。
   蒸馏请求（「蒸馏 results」「results 范文分析」「处理新论文 results」「results 骨架提炼」）不直接处理——自动路由到 `distill-results-exemplar` 执行 Phase 0–5 蒸馏协议；验证通过的变体由其 Phase 4 写入 `econometric-models/[结果类型].md`。
   触发词：「写results」「results模板」「结果部分怎么写」「帮我写results」「result skeleton」「写结果」「假设检验」「交互效应」「稳健性检验」「经济显著性」「平行趋势」「marginal effect」「双受众」「对立结果」「替代解释」「hazard model」「风险模型」「survival analysis」「CEM」「split sample」。
   当用户提及系数解释、表格导航、模型序列、robustness check、安慰剂检验、机制检验、非显著深化、方向相反时也应触发。
@@ -22,7 +22,7 @@ version: 3.2.0
 ```
 
 **参数说明**：
-- `<模型类型>`（必填）: `OLS/FE` | `Logit/Probit/Ordered Probit` | `生存分析` | `DiD` | `计数模型` | `实验` | `多研究` | `IV/2SLS` | `匹配DiD` | `堆叠扩散Logit` | `同伴效应/网络效应` | `推断二元结果` | `定性过程研究/定性发现`
+- `<模型类型>`（必填）: `OLS/FE` | `Logit/Probit/Ordered Probit` | `生存分析` | `DiD` | `计数模型` | `实验` | `多研究` | `IV/2SLS` | `匹配DiD` | `堆叠扩散Logit` | `同伴效应/网络效应` | `推断二元结果` | `定性过程研究/定性发现` | `VARX-PVAR`
 - `[--hypotheses]`（可选但建议）: 假设列表，用于假设-结果对齐
 - `[--journal]`（可选）: 目标期刊，默认 `AMJ`
 - `[--has-interactions]`（可选）: 标记是否需要报告交互效应

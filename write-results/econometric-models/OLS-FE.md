@@ -13,7 +13,8 @@ source_papers:
   - "cui_yang_vertinsky_smj_attacking_partners (Strategic Management Journal): inverted U-shape + curve moderation, Lind-Mehlum three-step test, turning-point CI, flatten/steepen graph language"
   - "chung_low_rust_2022_jams (Journal of the Academy of Marketing Science): model-free quartile opening, interquartile economic significance, Heckman two-stage table navigation, alternative-DV falsification, threat-by-threat endogeneity table"
   - "kim_lee_2026_putting_a_price_on_mission_smj (Strategic Management Journal): multi-stage same-IV pipeline attenuation profile, WTP coefficient-ratio economic significance, post-treatment selection caveat"
-variants_count: 26
+  - "pupovac_astvansh_carrillat_legoux_2026_pom (Production and Operations Management): cross-sectional OLS/FE on event-study CAR; Control Function + Heckman two-stage correction navigation"
+variants_count: 28
 created: 2026-05-18
 updated: 2026-07-08
 ---
@@ -312,6 +313,16 @@ updated: 2026-07-08
 > [跨阶段对比句] In summary, we fail to find compelling evidence of an association between [IV] and [stage-3 outcome]. This lack of association contrasts with the advantages that [IV] appears to enjoy in the [stage-1] and [stage-2] stages, and is consistent with the possibility that [IV] advantages operate primarily through a [front-end / signaling mechanism] that attenuates once [actors gain direct experience]. A [signaling/attenuating mechanism] fits this pattern... We cannot definitively adjudicate, but the full-pipeline evidence suggests [mechanism that fits the front-significant/back-null pattern].
 **与原骨架差异**: 区别于 多研究.md 的 cross-study synthesis（多研究独立样本收敛）——本变体是 **single-study single-IV multi-stage**：同一 IV 跨序贯决策阶段的衰减 profile。核心叙事装置是**跨阶段对比句**（"This lack of association contrasts with the advantages... in the [earlier] stages"）——把"前置显著 + 后置 null"从孤立报告提升为机制发现（用 null 在管道中的位置裁决竞争机制：signaling 随经验衰减 vs enduring preference 持续）。配套 write-methods 见 多研究.md 变体6（管道设计）；配套 post-treatment caveat 见 slot-R6（Slough 2023）。
 **诚实边界**: post-treatment 样本递减让跨阶段估计量来自非随机子样本——后置 null 不可作"无效应"因果结论（见 slot-R6 Slough 变体）。机制裁决须诚实对冲（"cannot definitively adjudicate but full-pipeline evidence suggests"），不可过度断言。
+
+### 变体 28: R2 — 截面 OLS/FE 中二元内生变量 + 样本选择的双阶段修正表导航 (1篇高价值)
+**来源论文**: Pupovac, Astvansh, Carrillat & Legoux 2026 (Production and Operations Management)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-21
+**槽位**: R2
+**骨架**:
+> Table [x] reports the estimates from the regression that assumes [endogenous_predictor] is exogenous. Columns II and III present estimates from the [control_function / Heckman] method, which controls for [endogeneity_type]. Column II shows that [instrument] is [positively/negatively] associated with [endogenous_predictor] (β = [value], p < [threshold]), consistent with [theory] and suggesting that the [relevance/exclusion] condition is likely satisfied. Column III reports the second-stage coefficient on [endogenous_predictor], which we use to test Hypothesis [x].
+**与原骨架差异**: 现有 OLS-FE 变体 24 是 Heckman 两阶段表格导航（第一阶段 Table 3 → 第二阶段 Columns 1-4）。本论文同时使用 **Control Function（处理二元内生自变量）和 Heckman（处理样本选择）**，且两种方法的第一阶段结果都嵌入同一张表。本骨架提炼跨方法的通用 R2 导航：先报无修正列，再报第一阶段工具变量/排除限制相关性，最后报第二阶段核心系数。适用于截面 OLS/FE 中同时存在内生解释变量和选择偏误的研究。
+**诚实边界**: 若第一阶段工具变量或排除限制不显著，不能进入第二阶段解释；必须报告控制函数残差项或逆米尔斯比的显著性，以判断内生性/选择偏误是否真实存在。
 
 ## 反模式
 

@@ -35,6 +35,7 @@ Theory Lens（P4-P5）的功能：在 Gap/Tension 建立之后，向读者提供
 | [02-dual-theory-layered.md](02-dual-theory-layered.md) | 双理论分层锚定：主理论解释主效应 + 次要框架系统化边界条件 (EMERGING 2源2领域: hoffmann2024 JM 同域两理论; cutolo_ferriani2024 JOM 跨域机制理论+分类框架) | Mechanism + Boundary 组合；代理冲突/激励问题，或机制理论+相邻学科 taxonomy |
 | [07-socio-cognitive-frame.md](07-socio-cognitive-frame.md) | 社会认知解释框架：用 interpretive frames / lenses 解释受众如何选择性解读组织信号 | Incompleteness × Mechanism；投资者/媒体/利益相关者信号解读研究 |
 | [08-dual-metaphor-stream-reconciliation.md](08-dual-metaphor-stream-reconciliation.md) | 单理论双隐喻调和双文献流：一个理论内部的两个互补隐喻（如 pipes/prisms）分别拯救两条割裂文献流 | Incompleteness（带 synthesis 贡献）；supply chain/network/institutional 领域"两条流各解释一半"的研究 |
+| [04-screening-theory-two-stage.md](04-screening-theory-two-stage.md) | Screening Theory 两阶段筛选：理想筛选不可得时的替代性信息筛选程序 | Incompleteness × Mechanism；信息不对称/自愿披露/信号解读研究 |
 
 ---
 
@@ -68,6 +69,7 @@ Theory Lens（P4-P5）的功能：在 Gap/Tension 建立之后，向读者提供
 |------|-----------------|---------|
 | 01 | agency-theory-standard | 标准 principal-agent 引入 + 信息不对称/印象管理 |
 | 02 | dual-theory-layered | 双理论分层：主理论(主效应)+次要框架(边界条件)；intrinsic vs extrinsic 约束区分 |
+| 04 | screening-theory-two-stage | 理想筛选不可得时的两阶段 screening 程序 |
 | 05 | maxim-contrast | 用对立格言/口号具象化资源竞争张力 |
 | 06 | context-bridging | Introduction 内提前映射双情境，展示理论普遍性 |
 | 07 | socio-cognitive-frame | 社会认知解释框架：interpretive frames / lenses 解释受众选择性解读组织信号 |

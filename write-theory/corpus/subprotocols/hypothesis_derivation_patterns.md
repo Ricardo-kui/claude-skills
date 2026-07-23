@@ -1054,7 +1054,7 @@ status: ready_for_corpus
 <!--
 pattern_id: embedded_prose_hypotheses
 build_type: 跨类型
-source_papers: ["Grewal_Vana_Stephen_2025_JM"]
+source_papers: ["Grewal_Vana_Stephen_2025_JM", "Pupovac_Astvansh_Carrillat_Legoux_2026_POM"]
 confidence: medium
 status: ready_for_corpus
 -->
@@ -1063,7 +1063,7 @@ status: ready_for_corpus
 
 **适用场景**: 目标期刊偏好 Conceptual Framework 而非独立 Hypotheses 部分；预测数量较多且关系复杂，以散文形式嵌入可保持叙事连贯。
 **微观动作序列**: Mechanism Move → Warrant → Embedded Prediction（"we posit/propose/anticipate/predict"）→ Optional Moderator Extension
-**范文来源**: Grewal, Vana, and Stephen (2025), *Journal of Marketing*（brand safety: no numbered hypotheses, predictions embedded throughout Conceptual Framework）
+**范文来源**: Grewal, Vana, and Stephen (2025), *Journal of Marketing*（brand safety: no numbered hypotheses, predictions embedded throughout Conceptual Framework）; Pupovac, Astvansh, Carrillat, and Legoux (2026), *Production and Operations Management*（two-stage screening with asymmetric embedded predictions）
 
 **骨架**:
 ```
@@ -1071,6 +1071,19 @@ status: ready_for_corpus
 [Warrant] Specifically, when [IV condition], [actor] [cognitive/affective response], because [theoretical justification]. Consequently, [mediator state] [direction], which [final mechanism link].
 [Embedded Prediction] In detail, because [theoretical reason], we [posit/propose/anticipate/predict] that when [IV condition], [mediator] [direction], which [direction] [DV].
 [Optional Moderator Extension] This [effect] also might be moderated by [moderator], such that [conditional prediction].
+```
+
+**子变体：两阶段不对称嵌入式预测**
+
+**适用场景**: Conceptual Framework 中使用散文式预测，且预测涉及按顺序展开的两个 screen，其效应方向相反。
+
+**骨架**:
+```
+[Stage 1 Mechanism] [Cue 1] [direction 1] [outcome] because [mechanism].
+[Embedded Prediction 1] Therefore, we [propose/anticipate/predict] that [cue 1] [direction 1] [outcome].
+
+[Stage 2 Transition] In contrast, when [condition], [cue 2] reveals [state].
+[Embedded Prediction 2] Thus, we [propose/anticipate/predict] that [cue 2] [direction 2] [outcome].
 ```
 
 **为什么有效**:

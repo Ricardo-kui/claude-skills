@@ -12,9 +12,10 @@ source_papers:
   - "li_chiu_kong_cropanzano_ho_2026_jom (Journal of Management): RE triple defense (theory+Hausman+ICC), full-spectrum 19 controls each with because clause, RavenPack event controls, CEO Big 5 controls"
   - "cui_yang_vertinsky_smj_attacking_partners (Strategic Management Journal): dyad FE + dyad clustered SE, multi-source alliance database cross-validation, factor-score multidimensional DV, single-industry setting dual-phenomenon defense"
   - "chung_low_rust_2022_jams (Journal of the Academy of Marketing Science): executive confidence option moneyness operationalization, model-free evidence preview, three-way interaction setup with mean-centering"
-variants_count: 21
+  - "pupovac_astvansh_carrillat_legoux_2026_jom (Journal of Marketing): automotive supplier setting defense, mandatory/voluntary disclosure threshold operationalization"
+variants_count: 23
 created: 2026-05-18
-updated: 2026-07-08
+updated: 2026-07-21
 ---
 
 # 面板数据-OLS — Methods 骨架
@@ -252,12 +253,38 @@ updated: 2026-07-08
 **适用**: 焦点预测变量为时不变稳定特质（政治意识形态、人格、性别、出生地、教育背景、创始人身份）的 panel 研究；任何 firm FE 会"杀死"主效应的情境。
 **跨 skill 对齐**: `../write-results/econometric-models/OLS-FE.md`（稳健性中可用 LPM + firm FE 作方向性对照，但主模型用 GEE 保留时不变 IV）。
 
+### 变体 23: M1 行业统计 + 先例对齐的设置辩护 (1篇高价值)
+**来源论文**: Pupovac, Astvansh, Carrillat & Legoux 2026 (POM)
+**验证状态**: 通过（单篇高价值，待第二篇交叉验证）
+**写入日期**: 2026-07-21
+**槽位**: M1
+**骨架**:
+> Measuring [theoretical relationship] requires an empirical setting in which [actor_A] and [actor_B] are interdependent in [domain] ([citation]). [Industry] meets this requirement because [industry statistic], suggesting high interdependence.
+>
+> [Actor_B]'s [stakeholders] may expect [event] to be frequent events ([citation]). Consequently, a [small event] will elicit little or no reaction from [stakeholders]. Indeed, many [industry] studies sample "[large]" [events] (e.g., [citation_1]; [citation_2]). Consistent with these precedents, we sample [large events], defined as [threshold]. These [events] are large enough to attract [stakeholders]' attention and frequent enough to create [theoretical condition].
+**与原骨架差异**: 与 Desai 变体9 的"制度断点辩护"和 Cui 变体15 的"双重现象辩护"互补。本变体适用于**单行业事件研究**：(1) 用行业统计数字证明行为者间相互依赖；(2) 用"大事件"抽样标准平衡信号强度与样本量；(3) 明确对齐先例研究。关键：抽样阈值必须理论上合理（既能引发市场反应，又不过于罕见）。
+**诚实边界**: "大事件"标准可能导致选择偏差——大事件对应的公司/关系可能系统性地不同于小事件。需在M8报告放宽/收紧阈值的稳健性。
+
+### 变体 24: M4 法律强制披露阈值 → 自愿披露操作化 (1篇高价值)
+**来源论文**: Pupovac, Astvansh, Carrillat & Legoux 2026 (POM)
+**验证状态**: 通过（单篇高价值，待第二篇交叉验证）
+**写入日期**: 2026-07-21
+**槽位**: M4
+**骨架**:
+> [Country] law requires a publicly traded [actor] to disclose in [report] the [information type A] it received from each "[major]" [counterparty]—that is, a [counterparty] from whom the [actor] received at least [threshold]% of its total [revenue/metric] in the focal year. The law implies that [actor] has discretion in reporting [information type B] from "[minor]" [counterparties]—[counterparties] from whom it received [below threshold]% ([citation]). [Accounting standard body] states that the [actor] "need not disclose" [information type A] either ([source]). The inconsistency between the law and [accounting standard body] has perhaps prevented [regulator] from enforcing the law ([citation]).
+>
+> We leverage this voluntariness to construct [variable], coded 1 if [actor] disclosed [information] in [period t-1], and 0 otherwise. Assuming [event] in year [t], we set [variable] based on [actor]'s disclosure in year [t-1].
+**与原骨架差异**: 将**法律-会计准则张力**转化为构念操作化的核心论证。关键：(1) 强制披露阈值定义"major" vs "minor"；(2) 会计准则的"自愿"声明创造实证上的变异空间；(3) 用滞后一期披露避免同期内生性。适用于任何依赖强制/自愿披露边界的研究（客户披露、ESG披露、Segment报告等）。
+**诚实边界**: 必须验证 [regulator] 确实不强制执法；若样本中多数公司都披露，"自愿"变异的解释力会下降。滞后一期处理假设披露决策在 [event] 前已确定，否则需用CF/IV进一步处理内生性。
+
 ## 反模式
 
 | 反模式 | 表现 | 应做 |
 |--------|------|------|
 | **多数据库无漏斗** | 多数据库合并（Compustat + Execucomp + CRSP + ...）后仅报告最终 N，未说明各数据库交集前后的 N 损失 | 如无法构建完整逐层漏斗（因多源合并非逐步筛选），至少报告："Of the [N_initial] firm-quarters in [primary_source], [N_matched] could be matched to [secondary_source], yielding [N_intersection]." |
 | **多源合并后中间 N 缺失** | 合并多个数据库后仅报告最终 N，未报告 alliance/relationship 条目、样本匹配前后损失 | 报告关键中间匹配 N，如 "Of the [N_initial] [alliances] from [source A], [N_matched] could be matched to [source B], yielding [N_final] [dyad-years]." |
+| **事件-企业多源匹配无每步N审计** | 事件研究+横截面设计中，识别事件、识别行为者总体、按关系匹配后仅报告最终 dyad 数，未报告每步的 N 损失 | 在M2中显式报告：(1) 初始事件数，(2) 行为者总体数，(3) 匹配后 dyad 数，(4) 各回归子样本数；若无法获得精确起始N，说明原因并讨论选择偏误风险。 |
+| **控制变量全部外包至附录** | 控制变量列表和理由完全放在附录表/注中，主文 Methods 段缺少 because 逻辑 | 主文M6至少对每层控制变量提供总起句和代表性 because 论证，并将完整列表和详细理由放在附录。 |
 | **调节效应论文 Methods 未报告交互项构造** | 论文核心贡献是调节效应，但 Methods 未说明交互项、去心化或二次项 | 在 M5/M7 明确说明交互项形式、是否 mean-centered、是否包含二次项及其构造方式 |
 | **仅凭 Hausman 选择 RE** | 仅报告 "Hausman test not significant (p > .05), so we use RE"，无理论理由 | 参见变体13——RE 选择需理论理由（跨单元差异>单元内变化）+ Hausman + ICC 三重辩护 |
 | **控制变量无 because** | 罗列变量名和操作化但不解释"为什么控制这个变量" | 每个控制变量必须回答：(1) 为什么影响 DV，(2) 为什么可能与 IV 相关 |

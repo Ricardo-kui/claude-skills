@@ -52,6 +52,7 @@
 | **实践困境 Hook** | `10-practical-puzzle` | 从业者面临的具体困境 | VERIFIED (≥3 papers) | ceo_regulatory_focus_ijrm (IJRM), desjardine2023 (OS), kalaignanam2017 (JM) |
 | **谜题/悖论 Hook** | `04-puzzle-paradox` | 反直觉现象，制造认知失调 | VERIFIED (≥4 papers) | paruchuri2020 (SMJ), pontikes2012 (ASQ) |
 | **成对灾难 Hook** | `14-paired-disasters` | 两次时间跨度大的相似灾难，建立"历史重演"谜题 | VERIFIED | haunschild2015 (OS) |
+| **二元关系传染 Hook** | `26-dyadic-contagion` | 关系双面性 → 负面事件 → 跨组织溢出 | EMERGING (1p) | pupovac2026 (POM) |
 
 *Anecdote 类型有 7 个 hooks，覆盖从完整叙事到精简案例的多种长度。注意：`04-puzzle-paradox` 同时包含 Trend 元素（反直觉数据）和 Anecdote 元素（第二人称推理），但因其核心功能是叙事性 puzzle，归入 Anecdote。*
 
@@ -152,6 +153,7 @@
 | 23 | popular-debate | Anecdote |
 | 24 | positive-trait-dark-side | Trend / Anecdote |
 | 25 | empirical-puzzle-after-consensus | Trend |
+| 26 | dyadic-contagion | Anecdote |
 | — | cold-start-cost-cascade | Trend |
 
 *注：编号 10 被 immersive-narrative 和 practical-puzzle 共享，编号 17 被 classic-debate-constraint 和 debate-reframing 共享——均因不同 distill 来源保留原编号以维持向后兼容。编号 22（paired-simultaneous-incidents）从未建成语料文件，条目已移除。*
@@ -165,6 +167,16 @@
 | **Cold-Start Cost Cascade Hook** | `cold-start-cost-cascade` | 从 dreaded word 到直接/间接成本递进 | VERIFIED | mayo_poms (POM) |
 
 - `cold-start-cost-cascade.md` — Cost cascade hook from dreaded word to direct/indirect costs
+
+---
+
+## 新增 Hook（编号 26）
+
+| Hook | canonical_id | 核心特征 | 验证状态 | 代表范文 |
+|------|-------------|---------|---------|---------|
+| **二元关系传染 Hook** | `26-dyadic-contagion` | 关系双面性 → 负面事件 → 跨组织溢出（供应商-制造商 contagion） | EMERGING (1p) | pupovac2026 (POM) |
+
+- `26-dyadic-contagion.md` — Anecdote Hook: "[Dyadic relationship] are intertwined... One party may become more prosperous because of the other's success, but also suffer steep losses resulting from the other's failure." 适用于供应链、平台生态、战略联盟等双边依赖关系的负面溢出研究。Pollock 类型: Anecdote。能量: 中。最佳适配 Gap: Incompleteness × Mechanism/Boundary。禁忌: 不要与 `03-data-shock` 或 `06-paradigm-challenge` 同用。
 
 ---
 
