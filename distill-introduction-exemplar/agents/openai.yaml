@@ -1,4 +1,6 @@
 interface:
   display_name: "Distill Introduction Exemplar"
-  short_description: "Distill Introduction sections from top-tier papers into reusable paragraph skeletons, expression DNA, and skill update recommendations."
-  default_prompt: "Use $distill-introduction-exemplar to distill the Introduction section of a paper into structured writing assets."
+  short_description: "Distill introductions with story-fidelity governance"
+  default_prompt: "Use $distill-introduction-exemplar to distill this Introduction and classify reusable patterns by story fidelity."
+policy:
+  allow_implicit_invocation: true

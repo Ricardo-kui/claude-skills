@@ -6,7 +6,6 @@ description: |
   蒸馏请求（「蒸馏 methods」「methods 范文分析」「处理新论文 methods」「methods 骨架提炼」）不直接处理——自动路由到 `distill-methods-exemplar` 执行 Phase 0–5 蒸馏协议；验证通过的变体由其 Phase 4 写入 `econometric-models/[设计类型].md`。
   触发词：「写methods」「methods模板」「方法部分怎么写」「帮我写methodology」「method skeleton」「写方法」「方法论」「model specification」「估计方法」「样本选择」「变量定义」「测量辩护」「构念创新」「自创变量」「风险模型」「hazard model」「CEM matching」「CEO turnover coding」。
   当用户提及变量操作化、识别策略、模型设定、样本漏斗、内生性处理、测量局限辩护、新构念操作化时也应触发。
-version: 3.2.0
 ---
 
 # Role
@@ -40,6 +39,17 @@ version: 3.2.0
 - [ ] 用户已提供数据来源和时间范围
 - [ ] 用户已了解：输出的是带 `[placeholder]` 的段落，需替换为实际内容
 
+## Phase 0: 故事契约与可检验性门控
+
+完整 Methods 生成前读取 canonical `story`、`theory.hypotheses[*].storyline_id`，并按 `../paper-story-contract/references/stage-gates.md` 检查：
+
+- Methods 是 empirical arena 与 credibility infrastructure，不强制使用 literary devices 或 PEEL。
+- 每条 storyline 必须映射到构念、操作变量、模型/研究步骤，以及相应的识别或效度负担。
+- 如果某个 promised resolution 无法被当前数据和设计检验，停止完整骨架并输出“无法兑现的 storyline + 所需设计修复”。
+- `preparing` 阶段只输出设计需求清单；`blocking` 可输出带占位符的粗骨架；`refining` / `finishing` 要求 `story.status: confirmed`。
+
+局部变量定义、模型设定句或样本说明可使用 local-only bypass，但必须标明未经跨章节验证，且不更新 paper state。详细映射格式见 `references/story-alignment.md`。
+
 ## 输入接口
 
 本 Skill 消费上游 `write-theory` 和 `write-introduction` 的输出。
@@ -51,14 +61,16 @@ version: 3.2.0
 2. 当前工作目录下的 `paper-state.yaml`
 3. 项目根目录下的 `paper-state.yaml`
 
-**自动加载**：检测到文件后，读取 `theory.constructs` 和 `theory.hypotheses`，自动生成假设-变量映射表，跳过手动输入：
+**自动加载**：检测到文件后，先验证 canonical `story`，再读取 `theory.constructs` 和 `theory.hypotheses`，自动生成 storyline–hypothesis–variable mapping：
 
 ```
 [paper-state.yaml] 检测到 project/paper-state.yaml
   → theory.status = drafted
+  → story.central_knot = [central knot]
+  → storylines: S1, S2
   → constructs: IV=[iv_construct], DV=[dv_construct]
-  → hypotheses: H1 ([IV] → [DV], [predicted_direction]), H2 (...)
-  → 自动构建假设-变量映射
+  → hypotheses: H1/S1 ([IV] → [DV], [predicted_direction]), H2/S2 (...)
+  → 自动构建 storyline–假设–变量映射
   → 用户只需确认变量操作化方式
 ```
 
@@ -178,13 +190,25 @@ methods:
     fixed_effects: ["[firm]", "[year]"]
 
   hypothesis_variable_map:
-    H1: {predictor: "[var name]", outcome: "[var name]", model: "[model label]"}
+    H1: {storyline_id: "S1", predictor: "[var name]", outcome: "[var name]", model: "[model label]"}
     # H2: {predictor: "...", outcome: "...", model: "..."}
+
+  story_alignment:
+    central_knot: "[从 story.central_knot 引用，不改写]"
+    design_resolution_logic: "[为什么该设计能回答 theme question]"
+    storyline_model_map:
+      S1:
+        hypotheses: ["H1"]
+        constructs: ["[构念]"]
+        variables: ["[操作变量]"]
+        model_or_step: "[模型、实验比较或质性分析步骤]"
+        identification_burden: "[需要满足的识别或效度条件]"
+    unresolved_validity_threats: ["[尚未解决的 threat；无则为空列表]"]
 
   results_preview: "[M10 预告段的核心内容摘要]"
 
   # 新增 v3.0.0 — 稳健性计划。由 write-results 决策诊断填充，或手动填写。
-  # 供 write-results 跳过诊断直接生成 R7 段落，供 write-discussion 评估稳健性覆盖完整性。
+  # 供 write-results 跳过诊断直接生成 R7 段落。
   robustness_plan:  # 可选；不存在时 write-results 自动触发决策诊断
     mandatory: ["[必须检验的维度]"]
     recommended: ["[建议检验的维度]"]

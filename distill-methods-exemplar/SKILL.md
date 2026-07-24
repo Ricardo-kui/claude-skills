@@ -11,7 +11,6 @@ description: |
 
   下游：`write-methods` (v3.0.0+) 检测到蒸馏请求时自动路由到本 skill。
   触发词：「蒸馏 methods」「methods 范文分析」「拆解 methods」「提取 methods 模板」「处理新论文 methods」「methods 骨架提炼」。
-version: 1.1.0
 ---
 
 # Role
@@ -26,6 +25,10 @@ version: 1.1.0
 核心原则：
 - **How > What**：提炼段落如何组织证据、如何处理 validity threat、如何完成说服，而非复制具体措辞。
 - **范式排他性**：只提取某类方法设计**特别需要**的组织方式，而非所有文章都有的通用废话。
+
+## Phase 0.5 — Story-Fidelity Gate
+
+加载 `../paper-story-contract/references/distillation-gate.md` 并输出 `story_fidelity`。Methods 的 section role 是 `empirical_arena`：模式必须帮助测试 promised resolution 或提高可信度，不因其“像故事”而采用。单篇模式不能改变核心规则；ritual 只能记录为 `ritual_only`；与 story-to-design mapping 冲突的模式标记为 `reject`。
 - **可生成性**：每个提炼出的骨架必须能直接指导一篇新论文写出段落。
 
 ## 调用方式
@@ -289,7 +292,7 @@ phase_2_distillation:
 
 ## Phase 4 — 技能更新指令生成（Skill Update Instructions）
 
-本阶段不再输出"供人工审阅"的参考注释，而是直接生成**可执行的技能更新指令**。输出回答三个问题：
+本阶段生成**受治理的 adoption instructions**。输出回答三个问题：
 1. **改哪个文件** → 精确到 `write-methods/econometric-models/[设计类型].md`
 2. **怎么改** → ADD / EXTEND / REPLACE / SKIP，含具体骨架和插入位置
 3. **为什么** → 与当前 corpus 的差异 + 对 write-methods skill 的提升
@@ -299,6 +302,7 @@ phase_2_distillation:
 ```yaml
 phase_4_skill_update_instructions:
   - action: "ADD"           # ADD / EXTEND / REPLACE / SKIP
+    story_fidelity_classification: "section_variant"
     target_file: "生存分析.md"  # write-methods/econometric-models/ 下的文件名
     target_slot: "M7"
     insert_after: "变体 6（piecewise exponential）"  # 语义定位——描述该插入在哪个已有变体之后，不硬编码数字
@@ -342,14 +346,15 @@ phase_4_skill_update_instructions:
 
 ### 写入后操作
 
-蒸馏完成后，对 `action != SKIP` 的指令执行写入：
+只有 `story_fidelity_classification` 为 `section_variant` 或 `ritual_only`，且目标仅是 reference corpus 时，才对 `action != SKIP` 的指令执行写入：
 1. 打开 `target_file`
 2. 在 `insert_after_variant: N` 之后插入新变体
 3. 更新 `source_papers` 列表
 4. 更新 `variants_count` 和 `updated`
 5. 对 `new_anti_patterns_for_skill` → 写入目标文件的「反模式」段落
-6. 对 `skill_main_skeleton_update` → 修改主骨架段落
-7. 更新 `INDEX.md` 表行和「已填充变体」计数
+6. 更新 `INDEX.md` 表行和「已填充变体」计数
+
+`core_candidate`、单篇证据，或任何 `skill_main_skeleton_update` 只生成显式人工审核包；不得自动修改 SKILL.md、路由、强制槽位顺序、story schema 或 stage gate。
 
 ---
 
@@ -367,6 +372,7 @@ phase_4_skill_update_instructions:
 - [ ] **Fact Boundary**: 所有不可迁移事实已被明确标记
 - [ ] **Causal Language Audit**: 提取的骨架中因果语言强度与设计类型匹配
 - [ ] **Skill Update Audit**: Phase 4 的每个 `ADD/EXTEND/REPLACE` 指令都有明确的目标文件和插入位置
+- [ ] **Story Fidelity Audit**: 每个 adoption 指令都有 classification；单篇论文未改变核心规则
 
 ### skill_version_impact（新增）
 

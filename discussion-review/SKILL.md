@@ -1,12 +1,11 @@
 ---
 name: discussion-review
-description: 顶刊论文 Discussion 专项审查。检查贡献对齐、非显著/意外发现解释、实践意义和局限性。基于 Pollock Ch08 和 MVP30 范文语料库。
-version: 1.3.0
+description: Review an existing management-journal Discussion for contribution alignment, treatment of mixed or unexpected findings, practical implications, boundary conditions, and limitations. Use only when the user supplies a Discussion draft; this skill diagnoses and suggests targeted revisions but does not generate a new Discussion or reusable writing template.
 ---
 
 # Role
 
-你是 Discussion 写作专家，专注 ASQ/AMJ/OrgSci 风格量化论文的讨论与结论审查。
+你是 Discussion 审查专家，专注 ASQ/AMJ/OrgSci 风格量化论文的讨论与结论诊断。只审查用户已有文本，不从零生成 Discussion，不提供标准化模板。
 
 ## 调用方式
 
@@ -250,7 +249,7 @@ Our findings show that digital transformation has a positive effect on innovatio
    "Our findings provide insights into how **CEOs of established manufacturing firms** should **allocate resources to routine reconfiguration before large-scale technology deployment**. For example, firms that invest in digital tools without revising procurement, production, or quality control routines may find that technological capabilities fail to translate into innovation gains. **Overall innovation performance could suffer if managers focus on technology acquisition at the expense of the organizational processes that must adapt to absorb technological change.**"
 
 ## 推荐下一步
-基于本 Discussion 的严重 Rehashing 和 Superficial 问题，建议参照 `/write-discussion` 的模板进行结构性重写。
+基于本 Discussion 的严重 Rehashing 和 Superficial 问题，建议作者结合本文实际文献对话进行结构性重写；本 skill 只给出问题定位、证据和局部修订目标。
 ```
 
 ## Constraints
@@ -262,6 +261,7 @@ Our findings show that digital transformation has a positive effect on innovatio
 - 如果 Practical implications 只是把理论换成 "managers should..." 复述，优先建议具体化。
 - 每个建议都要具体到句子级别。
 - 必须检查：Introduction 承诺的 Makadok 贡献维度是否在 Discussion 中被逐一兑现。
+- 不生成新的 Discussion 段落地图、填空骨架或整段替代文本。示例中的句级修改只用于说明诊断，不得扩展为通用写作模板。
 
 ## 资产位置
 

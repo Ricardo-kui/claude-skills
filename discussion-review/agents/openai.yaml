@@ -1,4 +1,6 @@
 interface:
   display_name: "Discussion Review"
-  short_description: "Review discussion section for contribution alignment, elevated plane, and promise delivery."
-  default_prompt: "Use $discussion-review to review this discussion section against the introduction promises."
+  short_description: "Review an existing Discussion without generating one"
+  default_prompt: "Use $discussion-review to audit this existing Discussion against the paper's evidence and promised contributions."
+policy:
+  allow_implicit_invocation: true

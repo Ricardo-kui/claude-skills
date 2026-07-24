@@ -470,7 +470,7 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 ### 必须配对
 - 贡献声明必须与前文的 Gap 精确对应：Gap 说"漏了什么"，贡献说"我们补了什么"
 - 贡献声明必须与 SKILL.md 中的 Makadok 贡献维度声明句式一致
-- 贡献声明必须被 Discussion 兑现——`write-discussion` 会检查此对齐
+- 贡献声明应由作者在已有 Discussion 中兑现；`discussion-review` 可审查该对齐，但不生成 Discussion
 
 ### 反模式提醒
 - **不要过度承诺**: 用 "extend""refine""reconcile""clarify" 替代 "revolutionize""first to"

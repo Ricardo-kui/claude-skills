@@ -178,4 +178,4 @@ Introduction 最后一段（或最后一句）的功能：向读者预告论文�
 
 - 配合 `contributions/_index.md` 使用：Roadmap 必须与 Contribution 中的承诺对齐
 - 配合 `paper-review` skill 使用：检查 roadmap 承诺是否在正文中兑现
-- 配合 `write-discussion` skill 使用：Discussion 必须与 roadmap 中预告的理论/实践/政策含义对齐
+- 已有 Discussion 必须与 roadmap 中预告的理论、实践或政策含义对齐；可用 `discussion-review` 审查

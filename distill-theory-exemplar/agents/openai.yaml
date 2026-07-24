@@ -1,0 +1,6 @@
+interface:
+  display_name: "Distill Theory Exemplar"
+  short_description: "Distill theory arguments with story-fidelity governance"
+  default_prompt: "Use $distill-theory-exemplar to distill this Theory section and classify reusable patterns by story fidelity."
+policy:
+  allow_implicit_invocation: true

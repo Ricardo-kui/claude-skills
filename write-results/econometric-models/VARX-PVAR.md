@@ -148,7 +148,7 @@ VARX/PVAR Results 的叙事核心是**动态交叉效应的量化与可视化**�
 
 - **write-methods/VARX-PVAR.md**: Methods 应预告 GIRF percentage、basis-points→dollars、FEVD、Venn diagram 的设计和计算方法。
 - **write-theory/ halo-theory.md**: Theory 应明确定义"perverse halo"为 0–100% 的连续测度，而非二元"存在/不存在"。
-- **write-discussion/ managerial-implications.md**: Discussion 应使用 dynamics（wear-in 1 day, asymptote 6 days）和美元损失（$3.8M/mo）来制定管理建议。
+- **作者后续解释边界**：如手工撰写 Discussion，可使用 dynamics（wear-in 1 day, asymptote 6 days）和美元损失（$3.8M/mo）约束管理建议；本 skill 不生成该部分。
 
 ## 期刊适配
 

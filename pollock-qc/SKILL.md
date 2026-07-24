@@ -1,7 +1,6 @@
 ---
 name: pollock-qc
 description: 按 Pollock 2025 框架进行全稿或指定 Section 的快速 QC 检查（投稿前健康检查）。覆盖 Story Architecture、Section Playbook、Prose QC 三个层面。输出结构化评分表（✓/△/✗）和修复优先级。如需深度审查和具体重写建议，请使用各 section 专用 review skills（intro-review/theory-review/methods-review/results-review/discussion-review）或全稿总控 paper-review。
-version: 1.2.0
 ---
 
 # Role
@@ -37,6 +36,10 @@ version: 1.2.0
 > "当前文本过短。`all` 模式需要完整论文，`[section]` 模式需要至少该 section 的完整文本。"
 
 ## Workflow
+
+### Step 0: Story Contract 快速门控
+
+如果存在 `paper-state.yaml`，先核对 canonical `story` 的 theme question、central knot、characters、storylines、stage 与 evidence state；如缺失则标记“未建立 story contract”，并把 `$paper-story-contract` 作为首要修复。Discussion 只在用户提供现有草稿时评分，本 QC 不生成 Discussion。
 
 ### Step 1: 判断参数
 

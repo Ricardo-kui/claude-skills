@@ -4,7 +4,6 @@ description: |
   Introduction 写作顾问。基于 Gap 类型和 Makadok 贡献维度，推荐段落结构、Hook/Tension/Stakes 句式骨架，并提供来自顶刊范文的句法模板和反模式提醒。
   触发词：「写introduction」「intro模板」「引言怎么写」「帮我写intro」「introduction skeleton」「写引言」「hook怎么写」「gap怎么写」「贡献声明」「problematization」。
   蒸馏/拆解 introduction 范文（「蒸馏 intro」「intro 范文分析」）不属本 skill——自动路由到 `distill-introduction-exemplar`；审查已有草稿用 `intro-review`；写前深度诊断用 `diagnose-introduction`。
-version: 4.1.0
 ---
 
 # Role
@@ -12,6 +11,29 @@ version: 4.1.0
 你是顶刊论文 Introduction 的**写作顾问**。根据用户的 Gap 类型、贡献维度和研究描述，输出可直接适配的段落骨架——用户替换括号里的领域术语、调整语气即可得到功能正确的 Introduction。
 
 # Workflow
+
+## Phase 0: 故事契约与模式门控
+
+调用方式：
+
+```text
+$write-introduction <研究描述或文件> [--mode=introduction|front-end|align] [--paper-state=<path>]
+```
+
+- `introduction`（默认）：生成 Introduction 功能骨架。
+- `front-end`：同时生成标题候选、Abstract 骨架、Introduction promise 与三者对齐表；按需读取 `references/front-end-mode.md`。
+- `align`：只审查已有 Title–Abstract–Introduction 是否兑现同一个 promise，不生成新正文。
+
+完整骨架生成前，先调用或执行 `$paper-story-contract` 的门控，读取 canonical `story`。如果只有旧版 `introduction.theory_hints.central_knot_statement` 等字段，按 `../paper-story-contract/references/schema.md` 迁移并标记 `provisional`。
+
+完整 Introduction 或 front-end 输出额外要求：
+
+- `story.stakes.theoretical` 非空；
+- `story.reader_shift.from` 与 `story.reader_shift.to` 非空；
+- `preparing` 阶段只输出 Story Intake 和前端设计备选，不写润色正文；
+- `refining` / `finishing` 阶段要求 `story.status: confirmed`。
+
+若无法同时陈述 theme question 与 central knot，停止在 Story Intake。若用户只请求一个 Hook、Gap 句或贡献句，可使用 local-only bypass，但必须标记“未经整篇故事契约验证”，且不更新 paper state。
 
 ## Phase 1: 诊断
 
@@ -148,12 +170,36 @@ paper-state.yaml 中 paper.vault 是否有配置?
 
 ### paper-state.yaml 片段（供下游 write-theory / write-methods / write-results 自动消费）
 
-**下游消费协议**：`write-theory` Phase 0 检测到 `paper-state.yaml` 后自动读取本片段，跳过交互式类型诊断。`write-methods` Phase 1 自动读取假设-变量映射。`write-results` Phase 0 自动读取估计器类型和假设列表。
+**下游消费协议**：四个 write skills 先读取 canonical `story`，再读取各自的 section state。`write-theory` 使用 Introduction 的 Gap、贡献承诺与故事线；`write-methods` 和 `write-results` 在后续阶段消费 Theory/Methods 映射。
 
-**使用方式**：复制本块到项目 `paper-state.yaml` 的 `introduction:` 节下。如用 `--paper-state=<path>` 参数启动 write-theory，技能自动消费。
+**使用方式**：复制整个块到项目 `paper-state.yaml`。新输出只写 canonical `story`，不再写 `central_knot_statement`、`narrative_arc` 或 `core_constructs` 等重复别名。
 
 ```yaml
 # --- paper-state.yaml 片段 (copy to your paper-state.yaml) ---
+story:
+  schema_version: 1
+  status: "[provisional / confirmed]"
+  stage: "[preparing / blocking / refining / finishing]"
+  evidence_state: "[unstable / mixed / stable]"
+  theme_question: "[研究问题]"
+  central_knot: "[一句话核心冲突]"
+  stakes:
+    theoretical: "[为什么该遗漏、误解或矛盾在理论上重要]"
+    practical: "[可选]"
+  characters:
+    main:
+      - {name: "[核心构念]", role: "[focal_predictor / focal_outcome / core_process]", level: "[分析层级]"}
+    supporting:
+      - {name: "[中介、调节、情境或边界构念]", role: "[mediator / moderator / context / boundary]", level: "[分析层级]"}
+  storylines:
+    - id: "S1"
+      question: "[子问题]"
+      constructs: ["[已在 characters 中声明的构念]"]
+      promised_resolution: "[何种理论论证与证据将回答它]"
+  reader_shift:
+    from: "[读者原有理解]"
+    to: "[本文希望形成的新理解]"
+
 introduction:
   status: drafted
   output_path: "[本次输出文件路径]"
@@ -167,9 +213,6 @@ introduction:
     promised_hypothesis_count: [N]
     promised_boundary_conditions: [true / false]
     promised_mechanism_steps: [N]
-    central_knot_statement: "[一句话核心冲突，含转折词+具体理论/现象名称，如无法推断则为 null]"
-    narrative_arc: "[gentle_rise (Incompleteness) / moderate_rise (Inadequacy) / sharp_rise (Incommensurability)]"
-    core_constructs: ["[核心自变量]", "[核心因变量]", "[中介/调节变量，如有]"]
     conversation_strategy: "[Progressive / Synthesized / Non-Coherence]"
 
   contribution_contract:

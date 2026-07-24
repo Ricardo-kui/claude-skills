@@ -1,0 +1,6 @@
+interface:
+  display_name: "Paper Story Contract"
+  short_description: "Diagnose and maintain whole-paper story alignment"
+  default_prompt: "Use $paper-story-contract to create or audit the shared story contract for this paper."
+policy:
+  allow_implicit_invocation: true

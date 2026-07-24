@@ -456,7 +456,7 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 ## 跨 Skill 引用规则
 
 - `write-introduction`（Constraints）和 `write-theory`（Phase 1.4 + Phase 3.2 QC）引用本文件全量 §0–§5——两者均为说服体裁
-- `write-discussion` 引用 §0.0/§0.1/§0.3/§0.6（说服体裁全量），经 `references/alignment-checks.md` 的 Paragraph Craft 节转引
+- `discussion-review` 可引用 §0.0/§0.1/§0.3/§0.6 审查用户已有 Discussion，经 `references/alignment-checks.md` 的 Paragraph Craft 节转引
 - `write-results` / `write-methods` 仅引用 §0.0（体裁分型）、§0.2（长度）、§0.5（coherence）；§0.1/§0.3/§0.6 的说服体裁规则**不适用**于其审计体裁段落；体裁专属段落 QC 在各 slot 文件内
 - `ACADEMIC_COMMUNICATION.md` 的 base voice 规则不重复，只交叉引用
 - `humanizer` skill 作为下游工具引用，不嵌入其 29 条 pattern

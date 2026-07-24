@@ -1,7 +1,6 @@
 ---
 name: paper-review
 description: 顶刊量化论文全稿总控审查。输入论文文件路径或全文，执行故事架构审查、写作阶段诊断，识别最薄弱 Section，并自动路由到对应章节 skill。诊断与路由枢纽——不做逐段重写（→ 各章节 review skills），不做 ✓/△/✗ 打分表（→ pollock-qc）。基于 Pollock (2025) 和 MVP30 范文语料库。
-version: 1.2.0
 ---
 
 # Role
@@ -33,6 +32,15 @@ version: 1.2.0
 > "当前文本过短，无法执行全稿故事架构诊断。请提供至少 Introduction + Theory + Methods 的完整文本。"
 
 ## Workflow
+
+### Step 0: Canonical Story Contract 审计
+
+先读取 `paper-state.yaml` 的 `story` 并使用 `$paper-story-contract` 的 schema 与 stage gate：
+
+- 若 contract 存在，比较 manuscript evidence 与 `theme_question`、`central_knot`、characters、storylines 和 evidence state。
+- 若 contract 缺失，从全稿反向诊断一个 `provisional` contract，并明确标记推断；不把诊断结果静默写回。
+- 若 contract 与正文冲突，将“修复 story contract”列为最高优先级，再审查 section。
+- Discussion 缺失不构成写作链失败；只有用户提供了 Discussion 草稿时才执行相关审查。
 
 ### Step 1: Story Architecture 审查（Pollock Ch02 框架）
 
@@ -146,9 +154,10 @@ version: 1.2.0
 | 全稿深度 QC | `pollock-qc` | `/pollock-qc all <文件路径>` |
 
 **路由逻辑**：
-- 如果 Knot 不清晰 → 优先 `intro-review`（根因通常在 Introduction）
+- 如果 Knot 不清晰或 story contract 内部矛盾 → 优先 `paper-story-contract`
 - 如果跨 section 不一致 → 查看本 Skill 输出的"断裂识别"和"3 分钟快速测试"
 - 如果多个 section 都有问题但 Knot 清晰 → `pollock-qc all`
+- Discussion 路由只在已有草稿时使用 `discussion-review`，不路由到写作模板
 
 ## Output Format
 

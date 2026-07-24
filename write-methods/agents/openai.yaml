@@ -1,4 +1,6 @@
 interface:
   display_name: "Write Methods"
-  short_description: "Generate methods skeletons for 22 design types: panel OLS/FE, DiD, IV/2SLS, survival, SEM, GMM, matching, text-construct measurement, two-stage, and more."
-  default_prompt: "Use $write-methods to generate a methods writing template for this research design."
+  short_description: "Build testable Methods aligned to storylines"
+  default_prompt: "Use $write-methods to build a Methods skeleton that can test each promised storyline."
+policy:
+  allow_implicit_invocation: true

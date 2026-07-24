@@ -1,6 +1,6 @@
 # 跨 Section 对齐协议（Introduction ↔ Theory）
 
-本协议定义 Introduction 和 Theory 之间必须保持一致的关键接口点。
+本协议定义 Introduction 和 Theory 之间必须保持一致的关键接口点。canonical source 是 `paper-state.yaml` 的 `story`；旧版 Introduction 叙事字段只能按 `../../../paper-story-contract/references/schema.md` 迁移读取。
 
 **调用方式**：write-theory 在生成任何输出前，必须执行此对齐检查并作为输出的一部分呈现。
 
@@ -47,10 +47,10 @@
 
 | 检查项 | Introduction 信号 | Theory 状态 | 结论 |
 |--------|-------------------|-------------|------|
-| Knot 继承 | `central_knot_statement` | P1 是否提及/暗示 knot | ✅/⚠️/❌ |
-| 角色一致性 | `protagonist_construct` | 主角是否与 Theory 的核心 DV 一致 | ✅/⚠️/❌ |
-| 叙事阶段连续性 | `narrative_arc` | Introduction 的 Denouement Preview 是否在 Theory 中被承接为 Rising Action | ✅/⚠️/❌ |
-| Rising Action 完整 | `narrative_arc` | Theory 是否有 Knot Deepening + Tying 阶段 | ✅/⚠️/❌ |
+| Knot 继承 | `story.central_knot` | P1 是否提及/暗示 knot | ✅/⚠️/❌ |
+| 角色一致性 | `story.characters` | Theory 主角和支持性构念是否保持角色一致 | ✅/⚠️/❌ |
+| 叙事阶段连续性 | `story.stage` | Introduction 的 resolution preview 是否在 Theory 中被承接为 Rising Action | ✅/⚠️/❌ |
+| Storyline 归属 | `story.storylines[*].id` | 每个假设是否绑定 `storyline_id` | ✅/⚠️/❌ |
 | Plot 自然浮现 | — | 假设推导是否从构念互动中自然浮现 | ✅/⚠️/❌ |
 | Extraneous Storyline | — | 是否有与 knot 无关的理论段落 | ✅/⚠️/❌ |
 | Davis 有趣性 | `daviss_index_types` | Theory 的机制是否支撑 Introduction 承诺的有趣性 | ✅/⚠️/❌ |

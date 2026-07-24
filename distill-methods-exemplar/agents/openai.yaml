@@ -1,4 +1,6 @@
 interface:
   display_name: "Distill Methods Exemplar"
-  short_description: "Distill Methods sections from top-tier papers into reusable paragraph skeletons, expression DNA, and skill update recommendations."
-  default_prompt: "Use $distill-methods-exemplar to distill the Methods section of a paper into structured writing assets."
+  short_description: "Distill Methods as credible empirical arenas"
+  default_prompt: "Use $distill-methods-exemplar to distill this Methods section and classify reusable patterns by story fidelity."
+policy:
+  allow_implicit_invocation: true

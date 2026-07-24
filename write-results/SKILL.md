@@ -6,7 +6,6 @@ description: |
   蒸馏请求（「蒸馏 results」「results 范文分析」「处理新论文 results」「results 骨架提炼」）不直接处理——自动路由到 `distill-results-exemplar` 执行 Phase 0–5 蒸馏协议；验证通过的变体由其 Phase 4 写入 `econometric-models/[结果类型].md`。
   触发词：「写results」「results模板」「结果部分怎么写」「帮我写results」「result skeleton」「写结果」「假设检验」「交互效应」「稳健性检验」「经济显著性」「平行趋势」「marginal effect」「双受众」「对立结果」「替代解释」「hazard model」「风险模型」「survival analysis」「CEM」「split sample」。
   当用户提及系数解释、表格导航、模型序列、robustness check、安慰剂检验、机制检验、非显著深化、方向相反时也应触发。
-version: 3.2.0
 ---
 
 # Role
@@ -14,6 +13,19 @@ version: 3.2.0
 你是顶刊论文 Results 的**证据展演结构生成器**。基于 34 篇 MVP30 范文和 Pollock 2025 Ch07，输出带有论证节奏的段落框架——不只是"这里填系数"，而是展示**顶刊 Results 如何用"方向→显著性→幅度→支持判断"的节奏让审稿人相信假设被支持或被拒绝**。
 
 核心原则：Results 是说理不是报数。每个段落展示了为什么这种节奏能有效引导读者——假设重述在什么位置、幅度怎么翻译、非显著怎么体面处理、稳健性怎么按威胁组织。
+
+在整篇故事中，R3 的 headline answer 是 climax；R7/R8 检查该答案能否经受替代解释，并构成 falling action / unraveling。R1/R2 只服务于抵达答案，不能用惯例性细节掩埋高潮。
+
+## Phase 0: 故事契约与证据门控
+
+完整 Results 生成前读取 canonical `story`、`theory.hypotheses[*].storyline_id` 与 `methods.story_alignment`：
+
+- 每条 storyline 必须能映射到实际模型、表格或质性证据。
+- 为每条 storyline 给出 `supported | mixed | unsupported | unresolved`，不得把“不显著”改写成支持，也不得隐藏不一致的稳健性结果。
+- `preparing` 阶段不生成 Results；`blocking` 只允许证据槽位与表格映射；`refining` / `finishing` 要求 confirmed story 和实际证据。
+- 如果只有计划而无估计结果，输出 Results evidence intake，不生成系数、方向、显著性或 headline answer。
+
+单个系数解释或表格导航请求可使用 local-only bypass，但必须标明未经整篇故事验证，且不更新 paper state。story resolution 格式见 `references/story-resolution.md`。
 
 ## 调用方式
 
@@ -81,11 +93,11 @@ version: 3.2.0
 | R6 | 非显著 / 混合 / 意外发现（若无非显著假设则跳过） | **Inline 报告可接受（顶刊常态），独立段落非必需** |
 | R7 | 稳健性 / 效度 / 敏感性检验 | 每威胁 1 段填空 |
 | R8 | 补充 / 事后 / 机制分析 | 每补充分析 1 段填空；约 2/3 论文包含 |
-| R9 | Results 到 Discussion 的过渡（可选） | 1 段填空；**顶刊中极度罕见（<10%），可省略** |
+| R9 | Results 证据收束（可选） | 1 段填空；只概括已报告的答案与未解决问题，不预写 Discussion |
 
 ## 标准顺序与特殊分支
 
-**默认顺序**：R1 → R2 → R3(主效应) → R4(交互) → R5(经济显著性) → R6(非显著) → R7(稳健性) → R8(补充) → R9(过渡)
+**默认顺序**：R1 → R2 → R3(主效应/高潮) → R4(交互) → R5(经济显著性) → R6(非显著) → R7(稳健性/检验高潮) → R8(补充/余波) → R9(证据收束)
 
 **特殊分支顺序调整**：
 - **DiD/自然实验**：R2 先展示平行趋势/事件研究效度 → R3 主处理效应 → R4 动态效应/异质性 → R7 安慰剂/置换
@@ -184,7 +196,7 @@ robustness_plan:
 | R6 非显著/混合/意外 | `references/slot-R6.md` | 有非显著/混合假设时 | 全部显著 |
 | R7 稳健性/效度/敏感 | `references/slot-R7.md` | 按威胁组织，每威胁一段 | 质性发现 |
 | R8 补充/事后/机制 | `references/slot-R8.md` | 约 2/3 论文包含 | — |
-| R9 Results→Discussion 过渡 | `references/slot-R9.md` | 通常省略（顶刊 <10%） | 默认跳过 |
+| R9 Results 证据收束 | `references/slot-R9.md` | 需要总结复杂或混合证据时 | 默认跳过 |
 
 > 设计类型的完整变体另见 `econometric-models/[结果类型].md`（如 `定性过程研究.md`）。新蒸馏变体经 `distill-results-exemplar` → Phase 4 写入。
 
@@ -212,14 +224,14 @@ To address the concern that [our results are driven by reverse causality], we re
 
 To ensure that our results are not sensitive to model choice, we re-estimate our models using [random effects] and [Tobit]. The pattern of coefficients is [consistent], suggesting that [model choice] does not drive the findings.
 
-Taken together, the results indicate that [digital transformation enhances firm innovation performance through organizational routine updating, and this effect is stronger when absorptive capacity is high]. The supplemental analyses reduce concerns that [reverse causality or model choice] account for this pattern. These findings set up the discussion of [the theoretical mechanisms linking digital transformation to innovation], which we turn to next. We defer broader theoretical implications to the Discussion section.
+Taken together, the results indicate that [headline answer supported by the reported estimates]. The supplemental analyses [strengthen / qualify / fail to resolve] concerns about [specific threat]. The evidence leaves [remaining unresolved question] open.
 ```
 
 ---
 
 ### 输出元数据模板（output metadata）
 
-完整的 `---metadata---` JSON 模板（封装 `slot_map`、`hypothesis_fulfillment_map`、`cross_section_alignment`、`feedback_interface` 等「证据 DNA」，供 `/write-discussion`、`/paper-review`、`/distill-results-exemplar` 消费）已外置到 `references/output-metadata-template.md`。生成 Results 骨架末尾需附加该 metadata 区块时加载该文件。
+完整的 `---metadata---` JSON 模板（封装 `slot_map`、`hypothesis_fulfillment_map`、`cross_section_alignment`、`feedback_interface` 等「证据 DNA」，供 `/paper-review`、`/distill-results-exemplar` 消费）已外置到 `references/output-metadata-template.md`。生成 Results 骨架末尾需附加该 metadata 区块时加载该文件。
 
 ---
 
@@ -241,8 +253,7 @@ Taken together, the results indicate that [digital transformation enhances firm 
 
 ## 下游接口
 
-- `/write-discussion` — 使用 Results 的主要发现作为 Discussion 理论解释的出发点
-- `/paper-review` — 进行 Theory-Methods-Results-Discussion 跨 Section 一致性验证
+- `/paper-review` — 进行 Theory-Methods-Results 跨 Section 一致性验证，并可审查用户已有的 Discussion
 - `/results-review` — 如用户已有 Results 草稿，使用本骨架作为理想基准对比审查
 - `/distill-results-exemplar` — 对生成后的 Results 段落进行反向蒸馏审查，检查槽位覆盖、四拍节奏、DNA 指标、可迁移性和因果语言合规性。审查结果作为 Vault 参考注释，不自动修改本 skill 的骨架库
 
@@ -278,8 +289,8 @@ Taken together, the results indicate that [digital transformation enhances firm 
 
 | 偏离ID | 假设 | Theory 预测 | Results 实际 | 偏离类型 | 严重程度 | 修正建议 |
 |--------|------|-----------|------------|---------|---------|---------|
-| R1 | H2 | Mediation via routine updating | 中介效应不显著 | 机制失效 | 高 | 在 Discussion 中解释为何机制不显著；检查 M5 中介变量测量是否准确 |
-| R2 | H3 | 正向调节 | 交互项显著但方向为负 | 方向反转 | 高 | 在 Discussion 中解释反直觉发现；检查 Theory 中的机制逻辑是否需要修正 |
+| R1 | H2 | Mediation via routine updating | 中介效应不显著 | 机制失效 | 高 | 如实标记 unsupported；检查 M5 测量并更新 story resolution |
+| R2 | H3 | 正向调节 | 交互项显著但方向为负 | 方向反转 | 高 | 标记 mixed/unsupported；回查 Theory 机制和 Methods 设定 |
 ```
 
 ---
@@ -334,7 +345,7 @@ Taken together, the results indicate that [digital transformation enhances firm 
 - [ ] R6：所有非显著/混合/意外发现都被报告（Inline 报告可接受，独立段落非必需），未跳过
 - [ ] R7：稳健性按威胁组织（测量/模型/样本/时点/内生性/机制），或按 alternative strategy 组织（长短期/联立方程/外生事件/非线性），非机械列表
 - [ ] R8：补充/事后分析与稳健性分开，明确标记为探索性
-- [ ] R9（可选）：Results-to-Discussion 过渡，总结核心模式并预告 Discussion
+- [ ] R9（可选）：只做 Results 证据收束，说明 headline answer 与 unresolved questions
 
 ### Clarity
 - [ ] 变量名与 Methods 完全一致
@@ -389,6 +400,16 @@ results:
     H1: {direction: "[positive / negative / null]", significant: [true / false], supported: [true / false]}
     # H2: {direction: "...", significant: ..., supported: ...}
 
+  story_resolution:
+    headline_answer: "[对 theme question 的证据约束式回答]"
+    storylines:
+      S1:
+        status: "[supported / mixed / unsupported / unresolved]"
+        evidence: ["[table/model/estimate or qualitative evidence]"]
+        magnitude: "[效应量或明确说明无法估计]"
+    surprises: ["[意外、反方向或敏感性发现；无则为空列表]"]
+    unresolved_questions: ["[仍无法回答的问题；无则为空列表]"]
+
   key_findings:
     - "[核心发现1：一句话总结，含方向和幅度]"
     # - "[核心发现2]..."
@@ -428,7 +449,7 @@ results:
 - 事后分析必须与稳健性检验分开，并明确标记为探索性。
 - 如果用户有具体的假设和模型，必须将其嵌入模板。
 - 每个表格/模型引用应指向用户的实际表格。
-- **输出末尾追加 paper-state.yaml 片段**：在 Results 骨架输出末尾，自动附加 `### paper-state.yaml 片段` 块。该片段包含 `results.estimator_family`、`results.hypothesis_results`、`results.key_findings`、`results.unexpected_findings`，供下游 write-discussion 消费（Discussion 技能成熟后激活）。用户复制到项目 `paper-state.yaml` 的 `results:` 节下。
+- **输出末尾追加 paper-state.yaml 片段**：在 Results 骨架输出末尾，自动附加 `### paper-state.yaml 片段` 块。该片段包含 `results.estimator_family`、`results.hypothesis_results`、`results.story_resolution`、`results.key_findings`、`results.unexpected_findings`，供 paper-review 和 results-review 消费。
 
 ## 语料与变体
 

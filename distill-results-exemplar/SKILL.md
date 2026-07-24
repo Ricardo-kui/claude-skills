@@ -11,7 +11,6 @@ description: |
 
   下游：`write-results` (v3.0.0+) 检测到蒸馏请求时自动路由到本 skill。
   触发词：「蒸馏 results」「results 范文分析」「拆解 results」「提取 results 模板」「处理新论文 results」「results 骨架提炼」。
-version: 1.1.0
 ---
 
 # Role
@@ -26,6 +25,10 @@ version: 1.1.0
 核心原则：
 - **How > What**：提炼 Results 如何组织假设检验、如何处理非显著结果、如何管理读者预期，而非复制具体系数和 p 值。
 - **节奏 > 数字**：提炼"方向→显著性→幅度→支持判断"的四拍节奏，以及稳健性检验如何按 threat 组织。
+
+## Phase 0.5 — Story-Fidelity Gate
+
+加载 `../paper-story-contract/references/distillation-gate.md` 并输出 `story_fidelity`。Results 的 headline answer 应分类为 `climax`，稳健性、异质性和补充分析应说明它们如何 `unravel` 该答案并形成 `falling_action`。只报表格顺序而不改善答案揭示或可信度的模式标记为 `ritual_only`；隐藏 mixed/null evidence 或用模板替代判断的模式标记为 `reject`。
 - **范式排他性**：只提取某类估计器或设计**特别需要**的结果报告方式，而非所有文章都有的通用流水账。
 
 ## 调用方式
@@ -303,7 +306,7 @@ Results 不是静态描述，而是**节奏化的证据展演**。提炼每个�
 
 ## Phase 4 — 技能更新指令生成（Skill Update Instructions）
 
-本阶段直接生成**可执行的技能更新指令**，回答三个问题：
+本阶段生成**受治理的 adoption instructions**，回答三个问题：
 1. **改哪个文件** → 精确到 `write-results/econometric-models/[结果类型].md`
 2. **怎么改** → ADD / EXTEND / REPLACE / SKIP，含具体骨架和插入位置
 3. **为什么** → 与当前 corpus 的差异 + 对 write-results skill 的提升
@@ -313,6 +316,7 @@ Results 不是静态描述，而是**节奏化的证据展演**。提炼每个�
 ```yaml
 phase_4_skill_update_instructions:
   - action: "ADD"
+    story_fidelity_classification: "section_variant"
     target_file: "生存分析.md"
     target_slot: "R3"
     insert_after: "变体 5（事件研究 CAR 第二阶段）"  # 语义定位
@@ -334,7 +338,7 @@ phase_4_skill_update_instructions:
 
 ### 写入后操作
 
-蒸馏完成后，对 `action != SKIP` 的指令执行写入：更新目标文件、索引、计数。
+只有 classification 为 `section_variant` 或 `ritual_only`，且目标仅为 reference corpus 时，才对 `action != SKIP` 的指令执行写入并更新索引、计数。`core_candidate`、单篇证据及任何核心骨架、路由、强制槽位顺序、story schema 或 stage gate 变更只生成显式人工审核包，不自动执行。
 
 ---
 
@@ -352,6 +356,7 @@ phase_4_skill_update_instructions:
 - [ ] **Nonsignificant Audit**: 如果原文有非显著假设，蒸馏报告是否记录了其句式处理
 - [ ] **Robustness Audit**: 稳健性检验是否按 threat 组织，而非机械列表
 - [ ] **Skill Update Audit**: Phase 4 的每个 ADD/EXTEND/REPLACE 指令都有明确的目标文件和插入位置
+- [ ] **Story Fidelity Audit**: headline answer/climax 与 robustness/falling action 已判定，单篇论文未改变核心规则
 
 ### skill_version_impact（新增）
 

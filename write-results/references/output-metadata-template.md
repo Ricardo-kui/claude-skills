@@ -1,6 +1,6 @@
 <!-- write-results 输出元数据模板：原 SKILL.md 内嵌的 ---metadata--- JSON 区块，由 SKILL.md「输出元数据模板」段按需加载。内容未做语义修改。 -->
 
-### ---metadata---（已废弃——不再生成 JSON 元数据），封装假设-结果对齐状态和 Results 的"证据 DNA"，供 `/write-discussion`、`/paper-review`、`/distill-results-exemplar` 直接消费。
+### ---metadata---（已废弃——不再生成 JSON 元数据），封装假设-结果对齐状态和 Results 的"证据 DNA"，供 `/paper-review`、`/distill-results-exemplar` 直接消费。
 
 ```json
 ---metadata---
@@ -31,7 +31,7 @@
   "causal_language_prohibited": ["causes", "leads to", "drives", "produces"],
   "economic_significance_required": true,
   "non_significant_handling_required": false,
-  "downstream_interfaces": ["/write-discussion", "/paper-review", "/distill-results-exemplar"],
+  "downstream_interfaces": ["/paper-review", "/distill-results-exemplar"],
   "cross_section_alignment": {
     "methods_model_match": { "status": "pending", "notes": "需确认 Results 表格与 Methods M7 的模型规格一致" },
     "theory_hypothesis_match": { "status": "pending", "notes": "需填入实际系数后更新 fulfillment_map" }

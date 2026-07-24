@@ -23,12 +23,15 @@ theory:
 
   hypotheses:
     - id: "H1"
+      storyline_id: "S1"
       statement: "[H1 完整陈述句]"
       type: "main"              # main | mediation | moderation | competition
       iv: "[H1 自变量]"
       dv: "[H1 因变量]"
       predicted_direction: "[positive / negative / curvilinear]"
-    # - id: "H2" ...
+    # - id: "H2"
+    #   storyline_id: "S2"
+    #   ...
 
   mechanism_chains:
     - "[H1 机制链: 起点触发条件 → 第二步推理 → ... → 终点可检验预测]"

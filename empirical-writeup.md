@@ -14,8 +14,7 @@ Use this skill after the analysis is already run or substantially stabilized. It
 - `econ-visualization`: event studies, coefficient plots, descriptive figures
 - `write-methods`: methods section (sample funnel, variable ordering, model specification) — Pollock Ch07 structured
 - `write-results`: results section (4-beat rhythm, interaction reporting, robustness-by-threat) — Pollock Ch07 structured
-- `write-discussion`: downstream implications after the empirical middle is stable — Pollock Ch08 structured
-- `paper-review`: cross-section alignment check (Methods ↔ Results ↔ Discussion)
+- `paper-review`: cross-section alignment check (Story ↔ Methods ↔ Results; existing Discussion may be audited)
 
 ## Required Inputs
 
@@ -38,6 +37,8 @@ Use this skill after the analysis is already run or substantially stabilized. It
    - figures -> `econ-visualization`
    - methods prose -> `write-methods`
    - results prose -> `write-results`
+
+Discussion generation is outside this workflow. An existing draft may be sent to `discussion-review`.
 
 3. Enforce claim discipline:
    - association language for associative designs
