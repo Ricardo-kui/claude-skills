@@ -5,9 +5,9 @@ source_papers:
   - "wowak2025_tmt_political_ideology_ms"
   - "qiao_hiatt_sine2026 (SMJ, 2026): natural-disaster instrument + 3-reason exclusion restriction (external-event-as-IV template)"
   - "chung_low_rust_2022_jams (Journal of the Academy of Marketing Science): Durbin-Wu-Hausman test + Gaussian copula endogeneity narrative"
-variants_count: 5
+variants_count: 9
 created: 2026-05-18
-updated: 2026-07-08
+updated: 2026-07-25
 ---
 
 # IV-2SLS — Methods 骨架
@@ -99,3 +99,26 @@ updated: 2026-07-08
 **诚实边界**: push 因子的外生性论证必须基于"研究情境之外的外生冲击"（如域外武装冲突、全球商品价格、跨国政策变化），不能是 [unit] 内部决策可影响的变量；pull 因子的"预定性"必须有时间距离（通常 ≥ 20–30 年），并引用历史移民 / 网络文献支撑"历史 enclaves 决定后续 inflow 模式"；排除限制本质不可检验，必须诚实标注为 "assumption"——若 push 因子可能通过非 focal 渠道影响 DV（如全球冲突影响供应链进而影响污染），需在 Limitations 显式承认；应报告 first-stage F-stat 远超 Stock-Yogo 临界值，但不应过度依赖超大 F 值掩盖排除限制的可论证性。
 **适用**: 焦点 IV 为 [unit] 层面的 inflow / salience / intensity 构念（移民、贸易、资本流动、技术扩散、人才流动）的研究；任何可构造"外生全球冲击 × 历史[unit]特定暴露"交互的研究。典型应用：移民 / 贸易 / 资本流入对[unit]（州 / 国家 / 地区 / 行业）结果的影响。
 **跨 skill 对齐**: 与变体 4（Qiao 自然事件 IV）互补——变体 4 用单一外部事件作 IV，本变体用两组件交互；与变体 6（Abdurakhmonov biographical IV）互补——变体 6 的"距离"来自时间，本变体的"距离"来自时间 + 空间双维度。
+
+### 变体 8: M7 双估计器双层级两阶段 IV（同一 IV 对两个不同性质/层级 DV）
+**来源论文**: Wowak2025 MS
+**验证状态**: 通过（补足变体 1 的估计器选择维度；corpus 此前无"同 IV 双 DV 双估计器双层级"显式变体）
+**写入日期**: 2026-07-25
+**槽位**: M7
+**骨架**:
+> We examine the influence of [IV] on each of our dependent variables using similar forms of two-stage instrumental variable (IV) fixed effects regression. Specifically, we use a two-stage [count estimator—e.g., negative binomial] fixed effects model for [DV_1: count outcome] and a two-stage least squares fixed effects model for [DV_2: continuous / timing outcome] ([citations]). The level of analysis for the [DV_1] model is the [unit-time—e.g., firm-year], and the level of analysis for the [DV_2] model is the [event—e.g., individual recall].
+**与原骨架差异**: 变体 1 详述 Lewbel 工具变量的**生成**，本变体补充**估计器与层级的匹配逻辑**：同一 IV 同时作用于两个 DV，但因 DV 性质不同（计数 vs 连续/时长）而采用不同估计器（NB FE vs 2SLS FE），且分析层级按 DV 内涵匹配（unit-time vs event）。关键点：(1) 两模型共享同一 IV 操作化和同一 IV 诊断（生成的工具变量同时用于两模型）；(2) 估计器按 DV 性质选择——计数 DV 用负二项（避免对数变换的 down-side，见 Note 2），时长 DV 用 2SLS（已对数化的连续 DV）；(3) 两模型都含 firm + year FE。诚实边界：两 DV 在不同层级意味着样本量不同（如 firm-year N=992 vs recall N=4072），须在表注分别报告；负二项 FE 在面板中存在 incidental parameters 问题，应作为已知限制承认。
+**适用**: 同一 IV 影响一个计数 DV 和一个连续/时长 DV 的研究（召回数量 + 召回时延、专利数量 + 研发时长、投诉数量 + 处理时长）；产品安全 / 质量管理 / 创新研究中"频率 + 速度"双 DV 设计。
+**跨 skill 对齐**: 与变体 1（Lewbel 三步法）配套——变体 1 生成工具变量，本变体说明工具变量如何进入两个不同估计器。
+
+### 变体 9: M8 simultaneity 先证伪后 IV 的 "abundance of caution" 叙事
+**来源论文**: Wowak2025 MS
+**验证状态**: 通过（单篇高价值；corpus 此前无"先证伪最可能威胁再以防御性 IV 收尾"的 M8 修辞变体）
+**写入日期**: 2026-07-25
+**槽位**: M8
+**骨架**:
+> [Adopt firm + year FE to absorb time-invariant and common-shock unobserved heterogeneity.] It is also possible that our estimates could exhibit bias from simultaneity if [actors] [the strategic behavior that would create reverse causality—e.g., donate to curry favoritism]. Such simultaneity is unlikely in our setting for [N] key reasons. First, prior research shows that [the focal behavior represents an actual underlying disposition, not a strategic move] ([citations]). [Relatedly, it is important to note that the literature on the confounding behavior focuses on a different object—e.g., firm lobbying dollars, not personal donations from individuals] ([citation]). Second, studies have consistently shown that [the underlying construct is highly stable over time and not apt to fluctuate strategically] ([citations]). We observe this characteristic as well; [N]% of [actors] in our sample do not [exhibit the strategic / switching behavior] during our sampling period. However, out of an abundance of caution, and to further ameliorate concerns related to endogeneity bias that may be caused by this type of simultaneity, or other sources of endogeneity, we use IV estimation.
+**与原骨架差异**: 与变体 5（Chung DWH：FE → DWH 检验）和变体 1（直接引入 Lewbel IV）的根本修辞差异——本变体的 M8 结构是**先证伪最可能的内生性威胁（simultaneity），再以防御性 IV 收尾**。三步说服动作：(1) 命名具体 simultaneity 威胁（[actors] 为 [purpose] 而 [strategic behavior]）；(2) 双理由证伪——文献理由（该行为反映真实 disposition 而非策略）+ **概念区分**理由（focal 行为 ≠ 易混淆行为，如个人政治捐赠 ≠ 企业游说支出）+ **setting 特有行为证据**（[N]% 不切换政党 → 实证支撑稳定性）；(3) 才以 "out of an abundance of caution" 引入 IV。这个"先证伪后防御"顺序比"直接上 IV"更有说服力——展示研究者理解自己的 setting、不滥用 IV，且 IV 仅作为 residual threat 的保险。诚实边界："abundance of caution" **不能替代** IV 诊断（仍须报告变体 2 的完整诊断链）；行为证据（如 92% 不切换）必须是 setting 特有可观测事实，不能泛化；概念区分（个人捐赠 vs 游说）必须引用两类文献分别支撑。
+**适用**: IV 的主要内生性威胁是 simultaneity / reverse-causality 且可在理论上 + 行为数据上证伪的研究；个人捐赠、个人稳定特质、长期偏好、价值观的研究（政治意识形态、人格、风险偏好）。
+**禁忌**: 不要用 "abundance of caution" 掩盖 IV 诊断的缺失；行为证据百分比必须来自本文样本而非外推；证伪理由若引用文献则必须是与本文 setting 同类的文献。
+**跨 skill 对齐**: 与变体 1（Lewbel 三步法）、变体 2（诊断链）配套——本变体是 IV 论证的**前置叙事**，变体 1–2 是 IV 的**技术与诊断**。三者共同构成完整 M8 IV 段落。

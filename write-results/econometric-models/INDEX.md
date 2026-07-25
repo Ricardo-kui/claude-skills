@@ -19,7 +19,7 @@ updated: 2026-07-22
 
 | 文件 | 结果类型 | 变体数 | 最后更新 |
 |------|---------|--------|---------|
-| [OLS-FE](OLS-FE.md) | OLS-FE | 28 | 2026-07-23 |
+| [OLS-FE](OLS-FE.md) | OLS-FE | 34 | 2026-07-25 |
 | [Logit-Probit-Ordered-Probit](Logit-Probit-Ordered-Probit.md) | Logit-Probit-Ordered-Probit | 8 | 2026-07-07 |
 | [生存分析](生存分析.md) | 生存分析 | 14 | 2026-07-07 |
 | [DiD](DiD.md) | DiD | 0 | 2026-05-18 |
@@ -27,7 +27,7 @@ updated: 2026-07-22
 | [实验](实验.md) | 实验 | 3 | 2026-07-07 |
 | [多研究](多研究.md) | 多研究 | 5 | 2026-07-22 |
 | [定性过程研究](定性过程研究.md) | 定性过程研究 | 4 | 2026-07-07 |
-| [IV-2SLS](IV-2SLS.md) | IV-2SLS | 4 | 2026-06-16 |
+| [IV-2SLS](IV-2SLS.md) | IV-2SLS | 6 | 2026-07-25 |
 | [匹配DiD](匹配DiD.md) | 匹配DiD | 0 | 2026-05-18 |
 | [堆叠扩散Logit](堆叠扩散Logit.md) | 堆叠扩散Logit | 0 | 2026-05-18 |
 | [同伴效应-网络效应](同伴效应-网络效应.md) | 同伴效应-网络效应 | 0 | 2026-05-18 |
@@ -147,7 +147,17 @@ updated: 2026-07-22
 >   - slot-R6 追加：**Post-treatment selection 诚实边界**（Slough 2023）— multi-stage pipeline 后置 outcome 的 ATE undefined 承认；corpus 零命中 Slough
 >   - 注：OLS-FE 表行 21→27 顺手修正 pre-existing stale（实际变体到 26）；slot-R5/R6 为槽位骨架文件不在表中，总变体数 +3
 
-> **总变体数**: 85 (分布于 18 个结果类型文件)
+> **总变体数**: 91 (分布于 18 个结果类型文件)
+>
+> ✅ **2026-07-25 更新（du_tsolmon2024 ORSC 蒸馏）**: 基于 Du & Tsolmon (2024, *Organization Science*) "Post-M&A Retention of Top Managers: The Role of Structural Knowledge" 对 OLS-FE 新增 6 个变体：
+>   - OLS-FE 变体29：**选择偏误三步防御**（描述性模式→CEM→Heckman + associational 收尾）
+>   - OLS-FE 变体30：**预测性零结果作为机制证据**（CAR null 反转排除 selection 替代解释）
+>   - OLS-FE 变体31：**替代解释三连驳斥 + 异质性模式裁决收束**（"aligns more closely... than" 比较级）
+>   - OLS-FE 变体32：**外部基准阈值分割 + 边际效应图阈值发现**（连续调节三层验证）
+>   - OLS-FE 变体33：**下游绩效事后分析**（时间增长 + 多指标收敛 + 提示性收尾）
+>   - OLS-FE 变体34：**2×2 类型学交叉对角描述性比较**（回归前非参数类型对比）
+>   - 反模式新增 2 条：显著性语言不一致（p=0.052 称 significant vs p=0.071/0.075 称 marginal）；split-sample 系数对比无 Wald 检验
+>   - 注：Methods 配套新增（自创连续相似度指标 + 多数据库漏斗）见 `../write-methods/econometric-models/`
 >
 > ✅ **2026-07-22 更新（slot-R7 六维框架扩展）**: 基于 Yuan et al. (2026, JOM) 对 1,706 篇文献的系统性审查，`references/slot-R7.md` 新增 7 个子变体段落骨架 + 1 个现有变体重命名：
 >   - **Preprocessing Variation (4)**: 缺失数据处理 / 离群值-错误观测处理 / 数据转换策略 / 粗心回答筛查（均 🔬 EXPERIMENTAL，保守替代为现有 threat 段落 + 说明）

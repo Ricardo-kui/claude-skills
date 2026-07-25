@@ -70,3 +70,76 @@ how [X] may influence [Y]:"
 - [ ] Discussion 是否包含 "理论裁判" 解释（为什么路径A成立而路径B不成立）？
 - [ ] 是否排除了 "一个假设明显更强" 的不对称风险？
 - [ ] 竞争假设是否通过 "Given these competing arguments..." 自然收束？
+
+---
+
+## 进阶技巧（wowak2025）：自反性反机制 + 多 DV 递进竞争
+
+> 以下两个技巧使竞争假设超越"两个理论各执一词"的初级形态，提升理论密度。源自 Wowak et al. (2025, MS) 第二个 DV（time-to-recall）的更复杂推导。
+
+### 技巧 1：自反性反机制（Self-Counter-Mechanism via "Conversely"）
+
+**核心**: 竞争机制不必来自两个对立理论或两个对立群体；**同一价值取向/同一群体内部**可衍生自反性反机制——驱动某行为的同一倾向，也内含削弱（甚至反转）该行为的种子。这把竞争从"人际/理论间"升级到"价值内在张力"。
+
+**句式**:
+```
+[直觉预测 + 机制] One could argue that [X_high] would [behavior_A] because
+[reason 1: their value orientation]. [X_high] may also view [behavior_A] as
+[responsibility / moral duty] ([citation]).
+
+[自反性反机制] Conversely, if [X_high] [the very tendency that predicted behavior_A],
+it could foster [psychological state—e.g., overconfidence / risk perception / rigidity]
+that [result] ([citation]), resulting in [behavior_OPPOSITE]. This line of thinking
+is consistent with studies showing that [state] can result in [decision-making bias]
+([citation]), which, in our context, may result in [behavior_OPPOSITE].
+```
+
+**wowak2025 范例（time-to-recall）**:
+- **Liberal 直觉**: 自由派关心消费者/社会责任 → recall 更快
+- **Liberal 自反性反机制**: 自由派优先质量投入 → **过度自信**产品优于实际 → 更慢识别质量问题 → 把问题归因于 random failure 而非 design/manufacturing → recall 更慢
+- **Conservative 直觉**: 保守派关注股东财务 → responsive recall 财务最优 → recall 更快
+- **Conservative 自反性反机制**: 保守派风险厌恶/不确定性回避 → 害怕 **"false alarm"**（不必要召回的财务惩罚）→ recall 更慢；且 hierarchical, internally structured processes 拖慢决策流程
+
+**为什么有效**:
+- 比单纯"两理论对立"理论密度更高：揭示**同一价值的内在张力**（quality orientation 既是质量保障，也是过度自信的来源）
+- "overconfidence"/"false alarm" 等具体心理-行为机制让竞争不只是方向对立，而是**有机制内容的对立**
+- 两极（liberal/conservative）各有**概念不同的**自反性反机制 → 形成对称且丰富的 2×2 机制空间
+
+**禁忌**:
+- 自反性反机制必须有**独立文献支撑**（如 overconfidence 引 Schwartz 2019, Reis 2020）——不能只是常识断言
+- 两极的自反性反机制必须**概念不同**（liberal=overconfidence；conservative=false-alarm fear）——若两极用同一反机制则冗余
+- 反机制必须真正"翻转"方向（faster → slower），而非只是"减弱"——只是减弱应路由到 [E] 调节效应型
+
+### 技巧 2：多 DV 递进竞争（Progressive Multi-DV Competing Elaboration）
+
+**核心**: 当同一 IV 对**多个 DV** 产生竞争预测时，第二个（及后续）DV 的机制空间可**比第一个更丰富**——通过引入自反性反机制，从 2-mechanism（每极一个）升级到 4-mechanism 2×2（每极两个自反性机制），最终仍折叠为一对竞争假设。展示"丰富机制空间 → 简洁假设"的压缩能力。
+
+**递进结构（wowak2025）**:
+
+| DV | 机制空间 | 折叠为 |
+|----|---------|--------|
+| DV1 (recall count) | 2-mechanism: liberal-fewer（quality priority）vs conservative-fewer（financial value of quality） | H1a (−) / H1b (+) |
+| DV2 (time-to-recall) | 4-mechanism 2×2: liberal-faster（responsibility）vs liberal-slower（overconfidence）；conservative-faster（financial）vs conservative-slower（false-alarm fear） | H2a (−) / H2b (+) |
+
+**句式（DV2 的 2×2 折叠）**:
+```
+[极 A 直觉]   One could argue that [X_high] would [behavior_A] because [mechanism].
+[极 A 自反]   Conversely, [X_high]'s [same tendency] could foster [state] resulting
+              in [behavior_OPPOSITE].
+[极 B 直觉]   On the other hand, [X_low] may [behavior_A] because [mechanism].
+[极 B 自反]   Conversely, [X_low]'s [tendency] may result in [behavior_OPPOSITE]
+              because [mechanism].
+[折叠收敛]    Given the above competing arguments, we put forth the following
+              hypotheses for how [X] may influence [DV2]:
+              H[X]a: [X] is [negatively] related to [DV2].
+              H[X]b: [X] is [positively] related to [DV2].
+```
+
+**为什么有效**:
+- 多 DV 研究中，每增加一个 DV **不应机械重复**同样的 2-mechanism 结构；自反性反机制让后续 DV 的理论论证逐级加深，避免"复制粘贴式"假设
+- 2×2 → 一对竞争假设的折叠，展示了高理论密度与简洁假设形式的统一
+
+**禁忌**:
+- 第二个 DV 的机制必须**真正不同于**第一个 DV（time-to-recall 的 overconfidence 机制不适用于 recall count）——不能只换 DV 重复同样论证
+- 2×2 的四个机制都必须可独立引用支撑，不能为追求对称而凑数
+- 折叠后仍用 "Given the above competing arguments"（**非 Therefore**）收敛——竞争假设收敛信号不变（参见 write-theory C14）

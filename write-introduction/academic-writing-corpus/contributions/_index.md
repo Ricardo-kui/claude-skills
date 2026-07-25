@@ -19,7 +19,8 @@ source_papers:
   - ahmadi2017 (JMS, 2017): Compressed threefold with internal gap-recap — each contribution self-contains 'gap→fill→significance' cycle
   - qiao2026 (SMJ, 2026): "Fundamental question return — 'answering one fundamental question—why firms persistently differ (Rumelt, 1994)—through demonstrating that...'"
   - weng_yang (JMS): "Contrast-framed twofold — each contribution opens with 'In contrast with prior studies...', anchored in different literature streams, ends with broader implication"
-updated: 2026-07-07
+  - wowak2025 (MS, 2025): "Convergent dual-literature-scan + awareness-and-mitigation — two parallel 'known→unknown' scans converge on one gap from opposite directions; implications split into descriptive awareness + empirically-tested mitigation"
+updated: 2026-07-25
 created: 2026-05-19
 source: Extracted from MVP30 narrative_analysis files + SKILL.md Makadok table
 ---
@@ -431,6 +432,36 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 **适用**: 适用于有两个清晰文献流可以贡献的研究；两个贡献最好分属不同Makadok维度（如Phenomenon+Boundary或Mechanism+Phenomenon）；期刊接受 "twofold/first/second" 结构（JMS, JM, SMJ, AMJ）；当研究同时对话两个文献流且每个流有独立的贡献点时
 
 **禁忌**: "两个贡献必须有实质区分——如果第二贡献只是第一贡献的 'also' 则不应拆分为 twofold；避免每个贡献超过3-4句话（会稀释贡献焦点）；'broaden the discussion scope' 是弱结尾——可替换为更具体的理论后果；第二贡献锚定的 Literature B 必须在 Introduction 前文有铺垫（不能突然出现一个全新的文献流）"
+
+---
+
+### 变体 O：双向文献扫描收敛 + 觉察与缓解双价值型（wowak2025 型）
+
+**模板**:
+> "Our study offers important theoretical contributions and managerial implications. Although past research has examined the influence of [prior antecedent 1] ([citation]), [prior antecedent 2] ([citation]), and [prior antecedent 3] ([citation]) on [outcome family], the influence of [focal IV] on [field], in particular [specific outcome], remains unexplored. Similarly, research has found that [focal IV] influences many dimensions of [broader performance construct], including [dimension 1] ([citations]), [dimension 2] ([citation]), and [dimension 3] ([citation]), but its influence on [novel outcome] has not been examined until now. Given that [timeliness signal 1] ([citation]), [timeliness signal 2] ([citation]), and [timeliness signal 3] ([citation]), our study answers a particularly timely and relevant research question at the interface of [field A] and [field B] by [one-phrase study characterization].
+>
+> In terms of implications, our study provides both an awareness of, and a mitigation for, the heretofore-unknown influence of [focal IV] on [outcome]. Making [actors] aware that their [attribute] may be influencing both [outcome dimension 1] and [outcome dimension 2] can have considerable [stake type 1] and [stake type 2] consequences. Beyond awareness, another key implication of our study is demonstrating how [actors] may be able to mitigate the negative consequences of [IV] on [outcome] by [empirically-tested mitigation]."
+
+**来源**: wowak2025 (MS), P7–P8
+
+**原文锚定**:
+> "Although past research has examined the influence of CEO turnover (Mayo et al. 2022), female directors (Wowak et al. 2021), and CEO compensation (Wowak et al. 2015) on recall count and time-to-recall, the influence of TMT political ideology on operations management, in particular medical product recalls, remains unexplored. Similarly, research has found that the political ideology of firm leaders influences many dimensions of firm performance, including CSR initiatives (Chin et al. 2013, Gupta et al. 2017), executive dismissals (Park et al. 2020), and social activism (Gupta and Briscoe 2020), but its influence on product quality outcomes has not been examined until now. … our study answers a particularly timely and relevant research question at the interface of organizations and operations management by exploring the politics of product safety."
+> "In terms of implications, our study provides both an awareness of, and a mitigation for, the heretofore-unknown influence of TMT political ideology on serious product recalls in the medical products industry. … Beyond awareness, another key implication of our study is demonstrating how firms may be able to mitigate the negative consequences of political ideology on product safety by embracing politically diverse TMTs."
+
+**关键特征**:
+- **双向收敛扫描（convergent dual-scan）**: 用 "Although… Similarly…" 平行结构从两个文献流各自建立"已知→未知"——文献流A（[outcome]前因）列出已研究的三个先行因素，指向 [focal IV] 未被研究；文献流B（[focal IV]结果）列出已研究的三个结果维度，指向 [novel outcome] 未被研究。两个扫描从相反方向**收敛到同一缺口**，比单向扫描更有说服力（缺口的合法性由两个独立文献流共同背书）。这是 Literature Turn "双文献流交叉沉默"（02-synthesized-coherence 变体D）在 Contribution 层的回声
+- **"awareness of, and a mitigation for" 双价值**: 贡献价值明确分裂为描述性（awareness—揭示[IV]对[outcome]的未知影响）和处方性（mitigation—提供经实证检验的缓解方案）。区别于仅提供 awareness/implications 的论文——mitigation 把"发现"转化为"可操作的干预"
+- **缓解方案经实证检验**: mitigation（政治多样性 TMT）不是空泛建议或未来研究方向，而是 post hoc 实证检验过的干预——贡献声明可被 Results/Discussion 兑现，避免审稿人追问"so what can firms do"
+- **"at the interface of [field A] and [field B]" 跨学科定位**: 把贡献锚定在两个学科（organizations × operations management）的交汇处，提升学科边界价值，适合 MS/JOM/MSOM 等跨领域期刊
+- **三重 timeliness 收束**: "Given that [signal 1], [signal 2], and [signal 3]"——用三个外部趋势信号（政治化加剧、企业政治化、召回上升）论证研究的时效性与相关性
+
+**适用**: 跨两个成熟文献流的研究（两流各自充分发展但交叉点沉默）；Incompleteness × Phenomenon（+Mechanism）组合；论文有经实证检验的管理缓解方案（如可操作的干预变量）；MS / JOM / MSOM / JM 等接受 "awareness + mitigation" 实践价值前置的期刊
+
+**禁忌**:
+- 两个文献流的"已知"清单（各三个先行因素/结果维度）必须真实可引用，不能稻草人化任何一方——缺口的合法性依赖两流的对称呈现
+- mitigation 必须是本文实证检验过的干预，不能只是推测性建议或"future research should…"——否则"awareness + mitigation"结构无法兑现
+- "awareness + mitigation"双价值结构要求论文确实存在可操作的干预变量（如 TMT 构成、治理结构）；纯描述性/相关性研究不适用
+- 不要把两个扫描写成两个独立贡献（twofold）——本变体的力量在于**一个缺口被两个文献流共同确认**，而非两个缺口
 
 ---
 
