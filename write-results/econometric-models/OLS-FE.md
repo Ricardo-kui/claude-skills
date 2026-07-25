@@ -14,9 +14,10 @@ source_papers:
   - "chung_low_rust_2022_jams (Journal of the Academy of Marketing Science): model-free quartile opening, interquartile economic significance, Heckman two-stage table navigation, alternative-DV falsification, threat-by-threat endogeneity table"
   - "kim_lee_2026_putting_a_price_on_mission_smj (Strategic Management Journal): multi-stage same-IV pipeline attenuation profile, WTP coefficient-ratio economic significance, post-treatment selection caveat"
   - "pupovac_astvansh_carrillat_legoux_2026_pom (Production and Operations Management): cross-sectional OLS/FE on event-study CAR; Control Function + Heckman two-stage correction navigation"
-variants_count: 28
+  - "du_tsolmon_2024_post_ma_retention_structural_knowledge_orsc (Organization Science): selection three-step defense (descriptive→CEM→Heckman), null-finding-as-mechanism-evidence, heterogeneity-as-alternative-rebuttal, external-benchmark threshold discovery, downstream performance post hoc, 2x2 cross-diagonal typology comparison"
+variants_count: 34
 created: 2026-05-18
-updated: 2026-07-08
+updated: 2026-07-25
 ---
 
 # OLS-FE — Results 骨架
@@ -324,6 +325,66 @@ updated: 2026-07-08
 **与原骨架差异**: 现有 OLS-FE 变体 24 是 Heckman 两阶段表格导航（第一阶段 Table 3 → 第二阶段 Columns 1-4）。本论文同时使用 **Control Function（处理二元内生自变量）和 Heckman（处理样本选择）**，且两种方法的第一阶段结果都嵌入同一张表。本骨架提炼跨方法的通用 R2 导航：先报无修正列，再报第一阶段工具变量/排除限制相关性，最后报第二阶段核心系数。适用于截面 OLS/FE 中同时存在内生解释变量和选择偏误的研究。
 **诚实边界**: 若第一阶段工具变量或排除限制不显著，不能进入第二阶段解释；必须报告控制函数残差项或逆米尔斯比的显著性，以判断内生性/选择偏误是否真实存在。
 
+### 变体 29: R7 — 选择偏误三步防御：描述性模式 → CEM → Heckman + 关联非因果收尾 (1篇高价值)
+**来源论文**: Du & Tsolmon 2024 (Organization Science)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-25
+**槽位**: R7
+**骨架**:
+> (1) We recognize that [treatment/IV] decisions are not random. To explore the extent to which selection may be influencing our findings, we examine patterns of [IV] across different types of [units]. We find no strong evidence that [IV] is systematically driving [selection]: [percentages across categories]; the correlations between [IV] and [selection type] are near zero ([value]). (2) To more rigorously examine potential selection on observables, we employ a coarsened exact matching (CEM) strategy, matching on [covariates]. In the matched sample, [IV] remains [direction] associated with [outcome] (B = [value], p < [threshold]). (3) We also conduct a Heckman two-stage model for selection from unobservables, using [instrument] which predicts [selection] but is uncorrelated with [outcome] (correlation = [value], n.s.). (4) These analyses suggest our findings are not merely reflective of [selection mechanism]. We interpret our results as associational, consistent with the proposed theoretical mechanisms, but not as definitive causal evidence.
+**与原骨架差异**: 区别于变体 24（Heckman 表格导航）与变体 26（一般性内生性 threat-by-threat）。本变体是 **selection-specific 的递进式防御**——model-free 描述性诊断（IV 不驱动选靶）→ CEM（可观测）→ Heckman（不可观测），每一步处理更深一层的选择来源，且以"associational not causal"诚实收尾。
+**诚实边界**: 三步必须递进（不能只做 CEM 就收尾）；CEM 需报告匹配变量与平衡改善位置；Heckman 必须明确报告工具变量与结果不相关；收尾必须降权为 associational。
+
+### 变体 30: R6/R8 — 预测性零结果作为机制证据：排除替代解释的 null-finding 反转 (1篇高价值)
+**来源论文**: Du & Tsolmon 2024 (Organization Science)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-25
+**槽位**: R6（零结果）/ R8（补充分析）
+**骨架**:
+> Interestingly, we find no statistically significant [market/early outcome] at [event time] (see [CAR/short-window] analyses in [table]). This null finding suggests that the observed associations with [long-run outcome] likely reflect [proposed mechanism] dynamics rather than [alternative explanation such as selection at event time].
+**与原骨架差异**: 零结果不是失败，而是**排除替代解释的证据**——若 selection-at-event-time 成立，事件窗反应应显著；反应不显著 → 长期关联来自机制动态而非时点选择。区别于一般 R6 非显著处理（报方向→不显著→不解释幅度→不支持），本变体**主动反转利用**零结果。
+**诚实边界**: 使用条件严格——零结果须被理论预测、替代解释须预测非零结果、零结果须嵌入在更大的显著结果模式中（不能孤立地用 null 论证机制）。
+
+### 变体 31: R7 — 替代解释三连驳斥 + 异质性模式作为机制裁决收束 (1篇高价值)
+**来源论文**: Du & Tsolmon 2024 (Organization Science)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-25
+**槽位**: R7
+**骨架**:
+> We consider [N] alternative factors. First, [alternative 1] could drive both [selection] and [outcome]. Our [method 1, e.g., CEM matching on X/Y/Z] partially addresses this concern; the persistence of our findings in the matched sample suggests [alternative 1] alone may not explain our results. Second, [alternative 2]: our [method 2] helps control for [it]. Third, [alternative 3]: our [method 3] partially addresses this, and our finding that [IV] matters more for [high-moderator conditions] suggests our mechanism extends beyond simple selection on [alternative 3]. Although we cannot eliminate all alternative explanations given our observational design, our pattern of results—particularly heterogeneous effects by [moderator 1], [moderator 2], and [moderator 3]—aligns more closely with our [mechanism] than with these alternatives.
+**与原骨架差异**: 每个替代解释用 "our [method] partially addresses this" 部分回应（不夸大为完全排除），收束句用**异质性模式本身**裁决——H3-H5 的调节显著性被二次利用为替代解释驳斥工具。关键是比较级措辞（"aligns more closely... than"）而非绝对排除。
+**诚实边界**: 异质性裁决必须建立在已报告的调节显著性之上；"partially addresses" 的克制措辞不可省略；比较级收束（more closely than）不可替换为绝对断言（rules out）。
+
+### 变体 32: R4 — 外部基准阈值分割 + 边际效应图阈值发现：连续调节的三层验证 (1篇高价值)
+**来源论文**: Du & Tsolmon 2024 (Organization Science)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-25
+**槽位**: R4
+**骨架**:
+> (1) The estimated coefficient on the interaction term between [continuous moderator] and [IV] is [direction] and [marginally] significant (B = [value], p = [value]). (2) We split the sample by the threshold of [N units], which corresponds to the definition of [external benchmark label] by [authoritative body]. The estimated coefficient is larger and significant in the [high-moderator] subsample (B = [value], p = [value]) than in the [low-moderator] subsample. (3) The marginal effects plot shows that the threshold at which [moderator] starts to matter is around [value], which corresponds to [external label corroboration].
+**与原骨架差异**: 区别于变体 9（±1SD 条件边际效应）与变体 14（低基础率直方图）。本变体的核心是**阈值的外部锚定 + 数据发现的双向验证**——分割点来自权威基准（如 Census 定义）而非任意中位数，且边际效应图发现的阈值再用外部标签印证。
+**诚实边界**: 外部基准必须真实存在且可引用；边际效应图发现的阈值与外部基准不能完全等同（本文 54.6 miles vs 50 miles benchmark——需说明对应关系）；跨子样本系数对比宜配 Wald 检验（本文缺失，见反模式）。
+
+### 变体 33: R8 — 下游绩效事后分析：时间增长 + 多指标收敛 + 提示性收尾 (1篇高价值)
+**来源论文**: Du & Tsolmon 2024 (Organization Science)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-25
+**槽位**: R8
+**骨架**:
+> We examine whether [IV] is associated with improved [downstream outcome]. [Outcome] is measured as [Δ metric] from pre-[event] to [1-N year] post-[event] averages. Results show that [IV] is positively associated with [outcome] in [scope condition]. The positive relationship grows over time, with a one-SD increase in [IV] linked to a [X]% rise in [outcome] relative to the sample average by year [N]. These findings are robust to alternative measures ([BHAR / Tobin's Q]); additionally, [IV] is associated with lower likelihood of [negative marker]. We note that these analyses draw on a smaller subsample and treat these results as indicative rather than conclusive, offering suggestive but consistent evidence.
+**与原骨架差异**: 区别于变体 5（MCMC 中介）与变体 21（枚举清单）。本变体展示**下游结果 post hoc 的完整展演**——时间动态（效应随时间增长）+ 多指标收敛（ROA/BHAR/Q/goodwill）+ 明确降权（indicative not conclusive）。
+**诚实边界**: 下游绩效分析必须标注子样本缩小；"grows over time" 需有跨年数据支撑；提示性收尾（suggestive but consistent）不可省略，不可把 post hoc 绩效当 confirmatory 证据。
+
+### 变体 34: R3 — 2×2 类型学交叉对角描述性比较：回归前的非参数类型对比 (1篇高价值)
+**来源论文**: Du & Tsolmon 2024 (Organization Science)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-25
+**槽位**: R3
+**骨架**:
+> [Table] reports the share of [outcome] by [actor A type] and [actor B type] in [scope condition]. Mirroring our main results, [match cells] have the highest [outcome]. In the cross-diagonals, [X]% of [outcome] for [mismatch cell A] compared with [Y]% for [mismatch cell B] (the difference is significant at [level]). This pattern suggests that [theoretical interpretation: which mismatch direction is worse and why]. We examined this more formally in a regression model ([table]): the interaction term between [dissimilarity] and [type indicator] is [direction] and significant (B = [value], p = [value]).
+**与原骨架差异**: 区别于变体 22（四分位单调性 model-free 开场）。本变体处理**类型学设计的非对称交叉对角**——理论载荷在"哪个错位方向更糟"（如 LM acquirer×MM target 比 MM acquirer×LM target 更差），用非参数单元格均值为回归交互提供直觉锚定。
+**诚实边界**: 交叉对角差异的检验方法必须指明（t-test 类型——本文未指明，见反模式）；2×2 单元格均值只是描述性锚定，结论须由回归交互确认；理论解读须回应"为何这个错位方向更糟"。
+
 ## 反模式
 
 | 反模式 | 表现 | 应做 |
@@ -332,6 +393,8 @@ updated: 2026-07-08
 | **曲线关系仅报线性+二次系数** | 倒 U 型关系未做 Lind-Mehlum 三步验证和转折点 CI | 使用变体 17 的完整协议 |
 | **曲线调节只说交互显著** | 未解释二阶交互项符号、未用 flatten/steepen 描述曲线形状 | 使用变体 18 的图形语言 |
 | **多项式/交互模型未报告 mean-centering 和 condition number** | 高阶项和交互项可能造成多重共线性但未诊断 | 使用变体 20 的三重诊断 |
+| **显著性语言不一致** | 同一论文中 p=0.052 称 "significant" 而 p=0.071/0.075 称 "marginal" | p > 0.05 一律统一标 "marginally significant"（du_tsolmon2024 警示案例） |
+| **Split-sample 系数对比无 Wald 检验** | 仅用 "larger vs smaller" 描述性断言跨子样本系数差异（0.190 vs 0.069），未检验系数相等性 | 跨子样本系数对比须配 Wald χ² / seemingly unrelated estimation 检验（du_tsolmon2024 警示案例） |
 
 ## 诚实边界
 

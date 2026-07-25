@@ -13,9 +13,10 @@ source_papers:
   - "cui_yang_vertinsky_smj_attacking_partners (Strategic Management Journal): dyad FE + dyad clustered SE, multi-source alliance database cross-validation, factor-score multidimensional DV, single-industry setting dual-phenomenon defense"
   - "chung_low_rust_2022_jams (Journal of the Academy of Marketing Science): executive confidence option moneyness operationalization, model-free evidence preview, three-way interaction setup with mean-centering"
   - "pupovac_astvansh_carrillat_legoux_2026_pom (Production and Operations Management): automotive supplier setting defense, mandatory/voluntary disclosure threshold operationalization"
-variants_count: 23
+  - "du_tsolmon_2024_post_ma_retention_orsc (Organization Science): TMT retention rate DV 文献基准锚定（54.8% vs 前人 55%/59.4%）+ 三层异质数据库漏斗附录审计"
+variants_count: 25
 created: 2026-05-18
-updated: 2026-07-21
+updated: 2026-07-25
 ---
 
 # 面板数据-OLS — Methods 骨架
@@ -190,6 +191,7 @@ updated: 2026-07-21
 > We first collected data on [alliances/relationships] within [industry] from [year_start] to [year_end], using [N] data sources—[source A], [source B], and [source C]—which (a) have very similar standards for reporting information, including [key fields], and (b) each normally reports only a fraction of all [activity] ([citation]). Although databases that track [activity] in [industry] are normally reliable ([citation]), we found that [source A] covers more [historical data], while [source B] and [source C] include more [recent information]. We constructed a more comprehensive [database] by combining these [N] data sources. For due diligence, we followed [citation], searching for [announcements/status reports] from [source D], [source E], and [source F]. Most [announcements] were cross-validated by at least two additional sources. By relying on multiple sources, we minimized the possibility of double-counting [alliances] and of counting [alliances] that were announced but not realized.
 **与原骨架差异**: 在现有变体2（样本交集漏斗）基础上扩展为完整段落。关键要素：(1) 多数据库互补性说明；(2) 人工 due diligence（LexisNexis / 公司网站 / SEC filings）；(3) 交叉验证的两个明确目标：防重复计数、防 announced-but-not-realized。适用 alliance / network / contract 等多源合并场景。
 **诚实边界**: 仍需报告关键中间匹配 N（如初始 alliance 条目、合并后条目、匹配 Compustat/FDA 后最终 dyad-year），否则仍落入"多数据库无漏斗"反模式。
+**扩展（du_tsolmon2024 ORSC）**: 三层异质数据库漏斗 + 附录审计。本文示范了跨三层异质库（交易库→人员库→结构库）逐层交集的漏斗叙事：每层交集后报告 N（如 576K deals → 15,773 deals/43K managers → 2,941 deals/18,987 managers），主文只报层数与最终 N，**附录报告 match rate + 初始样本 vs 最终样本关键变量对比**（证明最终样本无系统偏差）。骨架补充："[After final merge], our estimation sample covers [N] [units]. Online Appendix [X] reports the match rates across all datasets used in constructing the estimation sample and the comparison of key variables between the initial sample ([N_initial]) and the final estimation sample ([N_final])." 适用：三层及以上异质数据库合并、需要兼顾主文简洁与可审计性的样本构建。
 
 ### 变体 17: M3 多维行为指标 → factor score → 平均值 (1篇高价值)
 **来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
@@ -276,6 +278,16 @@ updated: 2026-07-21
 > We leverage this voluntariness to construct [variable], coded 1 if [actor] disclosed [information] in [period t-1], and 0 otherwise. Assuming [event] in year [t], we set [variable] based on [actor]'s disclosure in year [t-1].
 **与原骨架差异**: 将**法律-会计准则张力**转化为构念操作化的核心论证。关键：(1) 强制披露阈值定义"major" vs "minor"；(2) 会计准则的"自愿"声明创造实证上的变异空间；(3) 用滞后一期披露避免同期内生性。适用于任何依赖强制/自愿披露边界的研究（客户披露、ESG披露、Segment报告等）。
 **诚实边界**: 必须验证 [regulator] 确实不强制执法；若样本中多数公司都披露，"自愿"变异的解释力会下降。滞后一期处理假设披露决策在 [event] 前已确定，否则需用CF/IV进一步处理内生性。
+
+### 变体 25: M3 DV 文献基准锚定 — 均值与前人文献对比 (1篇高价值)
+**来源论文**: Du & Tsolmon 2024 (Organization Science)
+**验证状态**: 通过（单篇入库，待第二篇交叉验证）
+**写入日期**: 2026-07-25
+**槽位**: M3
+**骨架**:
+> Our [first] dependent variable is [DV]. Following prior work, we measure [DV] as [operationalization] ([citation]). For example, if [concrete numerical example], the [unit] would have a [DV] of [value]. The mean [DV] in our sample is [X]%, which is comparable to the mean [DV] found in [N] prior empirical studies on [phenomenon]: [Y]% in [Author] ([year]), who examined [sample 1], and [Z]% in [Author] ([year]), who examined [sample 2].
+**与原骨架差异**: 面板数据-OLS 现有变体无 DV 外部效度锚定。本变体三要素：(1) **具体数值示例**（5→3=0.60）让操作化可想象；(2) 报告样本均值；(3) **与 2+ 篇前人文献的均值对比**建立 DV 跨样本可比性——把"我的测量"锚定到"领域基准"。一句话完成外部效度论证，比单独报告均值更有说服力。适用于新构建的比率/计数 DV（retention rate、turnover、disclosure rate、adoption rate 等）。
+**诚实边界**: 前人研究样本/时代/情境不同需说明（若本文是全球样本而前人是美国样本，需交代可比性边界）；均值可比不代表分布可比，若分布形状关键需补充。
 
 ## 反模式
 

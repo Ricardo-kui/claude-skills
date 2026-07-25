@@ -21,7 +21,7 @@ updated: 2026-07-22
 
 | 文件 | 设计类型 | 变体数 | 最后更新 |
 |------|---------|--------|---------|
-| [面板数据-OLS](面板数据-OLS.md) | 面板数据-OLS | 24 | 2026-07-23 |
+| [面板数据-OLS](面板数据-OLS.md) | 面板数据-OLS | 25 | 2026-07-25 |
 | [自然实验-DiD](自然实验-DiD.md) | 自然实验-DiD | 0 | 2026-05-18 |
 | [非线性模型](非线性模型.md) | 非线性模型 | 10 | 2026-07-22 |
 | [生存分析](生存分析.md) | 生存分析 | 15 | 2026-07-07 |
@@ -30,10 +30,10 @@ updated: 2026-07-22
 | [多研究](多研究.md) | 多研究 | 6 | 2026-07-22 |
 | [定性过程研究](定性过程研究.md) | 定性过程研究 | 6 | 2026-07-07 |
 | [稀有结果](稀有结果.md) | 稀有结果 | 0 | 2026-05-18 |
-| [实证对象构建](实证对象构建.md) | 实证对象构建 | 2 | 2026-07-08 |
+| [实证对象构建](实证对象构建.md) | 实证对象构建 | 3 | 2026-07-25 |
 | [事件历史+事件研究](事件历史+事件研究.md) | 事件历史+事件研究 | 10 | 2026-07-23 |
 | [同时方程](同时方程.md) | 同时方程 | 0 | 2026-05-18 |
-| [IV-2SLS](IV-2SLS.md) | IV-2SLS | 7 | 2026-07-22 |
+| [IV-2SLS](IV-2SLS.md) | IV-2SLS | 9 | 2026-07-25 |
 | [动态面板-GMM](动态面板-GMM.md) | 动态面板-GMM | 0 | 2026-05-18 |
 | [匹配DiD-广义DiD](匹配DiD-广义DiD.md) | 匹配DiD-广义DiD | 0 | 2026-05-18 |
 | [同伴效应-网络效应](同伴效应-网络效应.md) | 同伴效应-网络效应 | 3 | 2026-07-08 |
@@ -179,3 +179,10 @@ updated: 2026-07-22
 >   - **VARX-PVAR 设计类型接入**（Borah & Tellis 2016, JMR）：8 个 Methods 变体（行业情境 4-reason 辩护、品牌选择 + quasi-experiment、第三方 NLP 数据 + 人工匹配、算法准确率双重验证、VARX 框架 3-reason 辩护、Granger causality 外生性论证、VARX 方程规格、VARX 估计细节）。配套 `../write-results/econometric-models/VARX-PVAR.md`（7 个 Results 变体）。
 >   - **Pupovac, Astvansh, Carrillat & Legoux (2026, POM) "Product Recall Contagion in the Supply Chain" 蒸馏**：补回 7 个 Methods 变体——事件历史+事件研究 变体 8/9/10、两阶段模型 变体 4/5、面板数据-OLS 变体 23/24；含 2 个新反模式（事件-企业多源匹配无每步 N 审计、控制变量全部外包至附录）。
 >   - 注：面板数据-OLS 变体编号因远程 86f478d 已占用 22（GEE，Abdurakhmonov et al. 2026 JOM），本地原 22/23 续编为 23/24。
+>
+> ✅ **2026-07-25 更新（du_tsolmon2024 ORSC 蒸馏）**: 基于 Du & Tsolmon (2024, *Organization Science*) "Post-M&A Retention of Top Managers: The Role of Structural Knowledge"：
+>   - **实证对象构建** 变体3：**连续相似度指数构建**（base unit 计数比率公式 1−|A−B|/(A+B) + 0.1 平滑零值 + 0-1 归一化 + identical/moderate/extreme 三数值示例 + binary 替代版本）
+>   - **面板数据-OLS** 变体25：**DV 文献基准锚定**（retention rate 54.8% vs Hambrick & Cannella 55% / Krug & Hegarty 59.4%——均值与前人文献对比建立跨样本可比性）
+>   - **面板数据-OLS** 变体16 EXTEND：**三层异质数据库漏斗 + 附录审计**（交易库→人员库→结构库 576K→15,773→2,941 + 附录 match rate + 初始vs最终样本变量对比）
+>   - 可改进警示（反哺反模式）：0.1 平滑常数无 because/敏感性检验；相似度公式对称性未讨论
+>   - 配套 Results 新增 6 变体见 `../write-results/econometric-models/OLS-FE.md` 变体 29-34

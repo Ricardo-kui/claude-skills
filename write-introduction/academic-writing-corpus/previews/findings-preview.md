@@ -165,6 +165,29 @@ P5-P6 的下半段功能：向读者预告实证结果。这是 Introduction 中
 
 ---
 
+### 变体 N：跨层级调节枚举型（du_tsolmon2024 型）
+
+**模板**:
+> "We hypothesize that in [scope condition], [IV] is more likely to [effect on DV] because [mechanism]. We further examine how this relationship varies by (1) [moderator at level A], (2) [moderator at level B], and (3) [moderator at level C]."
+
+**来源**: du_tsolmon2024 (ORSC), P5
+
+**原文锚定**:
+> "We hypothesize that in related acquisitions, which typically require extensive postacquisition structural integration, target managers with similar structural knowledge to the acquirer are more likely to be retained because they can leverage this knowledge to enhance PAI effectiveness. We further examine how this relationship varies by (1) manager-level structural knowledge alignment, (2) geographic distance between firms, and (3) integration depth requirements."
+
+**关键特征**:
+- 主效应假设自带 scope condition（in related acquisitions）+ 机制（leverage this knowledge to enhance PAI effectiveness）——假设即含边界与 why
+- "'varies by (1)...(2)...(3)...' 三级枚举，且三个调节分属 manager / firm-pair / deal 三个分析层级——用枚举预告跨层级设计
+- 调节枚举即预告 Results 的 heterogeneity 结构——读者对后续 H3–H5 形成预期
+
+**适用**: 主效应+多调节设计；当调节变量跨越多个分析层级（个体/交易/企业）且想在 Introduction 预告层级结构时。Boundary 贡献维度必备
+
+**禁忌**:
+- 调节枚举不得超过 3 个（认知负荷）
+- 每个调节必须在 Theory 中有独立的机制论证段落，否则 Introduction 预告无法兑现
+
+---
+
 ## 组装规则
 
 ### 必须配对

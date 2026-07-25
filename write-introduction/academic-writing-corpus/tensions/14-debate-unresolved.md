@@ -90,6 +90,30 @@ source: Distilled from Kundro & Rothbard (AMJ), Eilert et al. (JM), Wowak et al.
 
 ---
 
+### 变体 D：竞争假设悖论型（du_tsolmon2024 型）
+
+**模板**:
+> "A fundamental tension exists in the literature: although [behavior X] is typically viewed as [negative consequence], so we may expect [rational actor response], studies still find [widespread X persists] ([citations]). This contradiction reflects competing assumptions about [construct]. Some scholars argue that [view A: X is efficient/redundant] ([citations]). Conversely, [theory camp B] emphasize[s] [view B: X is valuable], suggesting [B's implication] ([citations]). [Theoretical escalation: the resource/property at stake]."
+
+**来源**: du_tsolmon2024 (ORSC), P2
+
+**原文锚定**:
+> "A fundamental tension exists in the literature: although high postacquisition managerial turnover from target firms is typically viewed as detrimental to M&A performance, so we may expect firms to retain target managers, studies still find large-scale top management departures from target firms after M&A. This contradiction reflects competing assumptions about the value of target managers. Some scholars argue that in related acquisitions, overlapping knowledge makes target managers replaceable, allowing efficiency gains through reducing redundancy. Conversely, the resource-based view (RBV) and strategic human capital (SHC) literatures emphasize the critical knowledge and capabilities these managers possess, suggesting retention advantages for PAI."
+
+**关键特征**:
+- 以"理性预期被现实证伪"开场：'so we may expect..., [yet] studies still find'——预期与现实的落差制造认知失调（区别于变体A的"同一 IV 对不同群体差异化效应未检验"、变体B的"两个理论对同一关系相反预测"）
+- 悖论归因于"competing assumptions about [construct]"——不是数据矛盾，而是理论假设对立
+- 两阵营对称呈现（Some scholars argue... Conversely, [theory camp] emphasize）但各自只给一句机制——克制，不展开
+- 末尾用资源属性（non–scale-free resource incurs opportunity costs）升级 stakes——把悖论上升到"错了会怎样"的资源理论层面
+
+**适用**: Inadequacy × Mechanism 组合；当经验现象与"理性预期"系统背离，且文献中存在两个各执一词的理论阵营时。适合 ORSC/SMJ/AMJ 的行为战略与人力资本交叉研究
+
+**禁忌**:
+- 两个阵营必须真实存在且可引用——不能把一个观点的推论 strawman 成对立阵营
+- 'so we may expect' 的预期必须是读者会自然认同的常识逻辑，否则悖论感失效
+
+---
+
 ## 组装规则
 
 ### 必须配对

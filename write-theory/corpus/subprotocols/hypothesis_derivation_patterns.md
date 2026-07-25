@@ -1135,3 +1135,48 @@ status: ready_for_corpus
 - 适用于 risk/disposition × outcome、moral foundations、political ideology 等有强默认预期的领域
 
 **反模式**: 只声明方向反转而不替换机制（"we find the opposite, trust us"）；用 M_old 同时解释正反两方向（机制过载）；反转方向缺乏理论必然性（M_new 推不出 D_reversed）。
+
+<!--
+pattern_id: mismatch_subtype_refinement_hypothesis
+build_type: 机制推演型 / 假设树型
+source_papers: ["Du_Tsolmon_2024_ORSC"]
+confidence: low
+status: needs_validation
+-->
+
+## Pattern: Mismatch Subtype Refinement Hypothesis (主效应后的 mismatch 子类型递进)
+
+**适用场景**: 当主效应是 match/similarity → outcome（如 H1: structural similarity → retention），且 mismatch 内部存在可理论化的类型差异时（哪种 mismatch 类型的 actor 更有价值）。适用于 fit/match 类研究的精细化假设设计。
+**结构**: Main Effect (H1: match → outcome) → Subtype Consideration (type of construct under mismatch) → Mechanism-Based Type Advantage → H2 (mismatch → type A outcome)
+**范文来源**: Du and Tsolmon (2024), *Organization Science*（H2: mismatch 中 LM managers 比 MM managers 更易留存，因 PAI 需要协调能力）
+
+**骨架**:
+```
+[Subtype consideration] Next, we consider how the type of [construct] may shape 
+[outcome] when [match condition] is misaligned. In such [situations], the degree of 
+misalignment of [construct] may differ for [actor] with [type A] or [type B] [construct].
+
+[Mechanism-based type advantage] Because [outcome process] requires [capability X], 
+[type A actor] may be better equipped to [support process]. As a result, when 
+[structures are misaligned], [type A actor] may be relatively more valuable to 
+[decision maker] than [type B actor], whose experience emphasizes [B's focus] 
+rather than [A's focus].
+
+[Hypothesis] H[N]. [Mismatch condition] is positively associated with [outcome] 
+for [type A actor].
+```
+
+**连接词要求**:
+- 开启细化: "Next, we consider how the type of [construct] may shape [outcome] when [misaligned]."
+- 机制反推: "Because [process] requires [capability], [type A] may be better equipped..."
+- 对比强化: "whose experience emphasizes [B's focus] rather than [A's focus]."
+
+**为什么有效**: H2 不是 H1 的调节，而是 H1 在 mismatch 情境下的**子类型精细化**——假设体系有层次感；用机制需求反推类型优势（整合需要协调 → LM 擅长协调 → LM 在 mismatch 中有价值），比"可能更好"的推测更有理论力。
+
+**注意事项**:
+- 子类型优势必须有独立的机制论证（不能只是"可能更好"）——用[过程]需要什么能力反推哪类 actor 擅长该能力
+- type A vs type B 的区分必须基于真实的构念差异
+- mismatch 子类型假设不能与主效应矛盾（H1 说 match 好，H2 不能说 mismatch 更好，只能说"在 mismatch 中 type A 相对好"）
+- 主效应假设（H1）必须先建立，子类型假设（H2）才有递进的基础
+
+**反模式**: 子类型优势无机制论证（"type A may be more valuable" 无 because）；类型区分是操作化差异而非构念差异；H2 与 H1 方向冲突（暗示 mismatch 反而更好）。

@@ -239,3 +239,50 @@ In contrast, [cue 2] [direction 2] [outcome] because [mechanism 2].
 - 相反效应必须有各自独立的机制，不能只是 "more vs less"
 
 **反模式**: 如果两个阶段实为同一 screen 的不同操作化，或第二阶段无条件可用，不要用此模式。
+
+<!--
+pattern_id: typology_2x2_enumeration_main_effect
+build_type: 机制推演型
+source_papers: ["Du_Tsolmon_2024_ORSC"]
+confidence: low
+status: needs_validation
+-->
+
+## Pattern: 2×2 Combination Enumeration to Induce Main Effect
+
+**适用场景**: 当主效应是 match/fit/similarity → positive outcome，需要通过"逐组合论证 match 优于 mismatch"来推导主效应时。适用于 fit/alignment/similarity 类研究（M&A 整合、联盟匹配、高管-组织匹配、技术-结构匹配），特别是有 2×2 或可枚举组合的双主体关系研究。
+**结构**: Combination Enumeration（声明 N 种组合）→ Cell-by-Cell（机制+真实案例）→ Meta-Insight 归纳（match 优于 mismatch）→ H1
+**范文来源**: Du and Tsolmon (2024), *Organization Science*（acquirer/target × LM/MM 四组合论证 structural similarity → retention）
+
+**骨架**:
+```
+We conceptualize [N] types of [dimension] combinations between [actor A] and [actor B] 
+based on whether each is [high/low on dimension]. We differentiate between [cell 1], 
+[cell 2], [cell 3], and [cell 4]. Examining these combinations helps clarify how 
+[match/mismatch] affects [outcome].
+
+[Cell 1—match]: [mechanism]. [Real-world example].
+[Cell 2—match]: [mechanism]. [Real-world example].
+[Cell 3—mismatch]: [mechanism of friction]. [Real-world example].
+[Cell 4—mismatch]: [mechanism of friction]. [Real-world example].
+
+The analysis highlights that [meta-insight: when both are similar, actors are better 
+positioned to facilitate X; conversely, misalignments may increase turnover]. 
+Accordingly, we propose:
+H1. [Match/similarity] is positively associated with [outcome].
+```
+
+**连接词要求**:
+- 枚举开场: "We conceptualize [N] types of combinations..."
+- 逐 cell 过渡: 每个 cell 用独立小节标题（如 "[Type A] Acquirer–[Type B] Target"）
+- 归纳收敛: "The analysis highlights that... Accordingly, we propose:"
+
+**为什么有效**: 把抽象的 similarity/fit 转化为 4 个可想象的组合，每个组合有真实案例——读者能"看见"理论；对角线对称（match cells 论证 retention 价值，mismatch cells 论证 turnover 风险）形成完整的归纳逻辑。
+
+**注意事项**:
+- 4 个 cell 的论证必须对称（每个 cell 都有机制 + 真实案例），不能厚此薄彼
+- match/mismatch 的二分必须有理论依据（不能是为了凑 2×2 而强行二分）
+- 真实案例必须与 cell 的机制逻辑一致，不能只是贴标签
+- 配一张 Table 并列 4 个 cell 的 [integration focus / actor role / knowledge relevance / outcome implication]——可视化 typology 的论证结构
+
+**反模式**: 把 2×2 当成假设组织框架（产生 4 个假设）而非主效应推导装置——本模式的力量在于 4 条路径归纳出 1 个主效应，若每 cell 各出一个假设则退化为对称矩阵模式。

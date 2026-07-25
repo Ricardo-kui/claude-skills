@@ -148,3 +148,34 @@ status: needs_validation
 - pivot 后必须立即开始建立自己的机制
 
 **反模式**: 把 contrast citation 当成支持性证据使用。
+
+<!--
+pattern_id: practitioner_report_warrant
+build_type: 跨类型（证据类型扩展）
+source_papers: ["Du_Tsolmon_2024_ORSC"]
+confidence: low
+status: needs_validation
+-->
+
+## Pattern: Evidence Type — Practitioner Report as Warrant
+
+**适用场景**: 当学术文献对某机制的证据不足或过于抽象，需要用 practitioner 报告/案例建立实践相关性和外部效度时。适合 M&A、战略实施、组织变革、供应链等 practitioner 文献丰富的领域。
+**范文来源**: Du and Tsolmon (2024), *Organization Science*（McKinsey 200-deal 分析支撑 structural integration 重要性）
+
+**骨架**:
+```
+According to a [year] [consulting firm] analysis of [N] [phenomenon], [finding]. 
+The researchers note, '[quote establishing importance]' and caution that 
+'[quote establishing risk].' In these critical [phase], [actor] cannot risk 
+[negative outcome] as '[quote establishing mechanism].'
+```
+
+**为什么有效**: 咨询报告的大样本（如 200+ deals）为机制提供 practitioner 层面的外部效度；直接引语（'the hardest stage'/'not assured without well-executed integration'）比学术引用更具实践紧迫性；与学术证据并置形成双源 warrant；practitioner 的具象隐喻（'run water through those pipes'）为抽象构念提供直觉。
+
+**注意事项**:
+- practitioner 证据只能是 warrant（补充），不能替代学术机制论证
+- 引语必须与理论主张直接相关（不能只是"行业很重要"式的泛泛引用）
+- 咨询报告必须有大样本或系统性，不能用单一 anecdote
+- 最佳用法是与一个学术案例并置（如 McKinsey 报告 + Haspeslagh & Jemison 钢铁案例），形成 practitioner+academic 双源 warrant
+
+**反模式**: 用 practitioner 引语代替机制推演（"McKinsey says integration is hard. Therefore H1."）；或引用无样本规模的单一专家观点。
