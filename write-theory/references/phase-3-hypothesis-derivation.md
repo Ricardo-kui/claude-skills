@@ -129,5 +129,6 @@ Theory 写作的心脏环节：路由假设结构，为每个假设生成逻辑�
 - [ ] **机制必要性门控**：Q1 主流更简单机制推不出同一预测？Q2 本机制有可区分的额外预测？Q3 删掉本机制故事不照样成立？（见 §3）
 - [ ] **反例压力测试**：最弱前提所在步骤与反直觉步骤已回答"什么条件下这一步不成立"，处置（scope / 新假设 / 删除 / **承认但不回应**）已兑现？承认句与回应句从 `../corpus/sentences/acknowledgment_response.md` 取材（见 §4）
 - [ ] **Warrant 表达**：跨领域读者 / 推理原则有争议 / claim 会被抗拒——三场合的 warrant 是否已**明言**（场合③须先立 warrant 再摆 reason+claim）？显而易见的 warrant 是否未画蛇添足（居高临下信号）？[E] 类前提是否均有硬证据、未被 [S] 规定顶替（硬证据规则）？（见 `reasoning_soundness_protocol.md` §5）
+- [ ] **防御性技术说明文风**（声音防火墙，见 `reasoning_soundness_protocol.md` §7）：协议术语（[D]/[S]/[E]、门控、五测试）是否泄漏进正文？是否每段都有 "One might object.../Granted..." 式自辩形成防御节律？防守句是否多于推进句、claim 被 caveat 包围？→ 处置：防守转译为机制/证据叙述句或按隐去纪律删除；段落声音以 derivation patterns 与 `../corpus/sentences/` 范文句式为准，朗读测试——听起来应像"向同行讲理论故事"，不像"回答想象中的审稿人"
 
 ---

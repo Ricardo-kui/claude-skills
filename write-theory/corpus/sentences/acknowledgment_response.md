@@ -133,3 +133,4 @@ status: emerging
   - 承认后无回应且无理由（属于处置失当，除非走 §2.3 承认不回应路径）
   - 词典定义当论证（§2.4 禁令）
   - 承认句贬损异议者（ethos 损伤，§3.1 警告）
+  - **套路化承认**：每段一个 Granted/Admittedly 形成防御性节律——本语料有**频次预算**：仅用于 soundness protocol §4 锁定的最弱前提步骤与反直觉步骤，一篇 Theory section 通常 0–2 处；零使用是合法且常见的正确答案（形式完美的推导段不需要承认句）。防御性技术说明文风的完整防火墙见 `../subprotocols/reasoning_soundness_protocol.md` §7

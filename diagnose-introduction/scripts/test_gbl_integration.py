@@ -578,6 +578,18 @@ def main() -> int:
         and "intensify your solution" in stakes_index
         and "So-what 测试" in stakes_index,
     )
+    require(
+        "soundness protocol has the voice firewall against defensive prose",
+        "声音防火墙" in soundness
+        and "诊断层" in soundness
+        and "回答想象中的审稿人" in soundness,
+    )
+    require(
+        "generation and review sides both check defensive technical prose",
+        "防御性技术说明文风" in phase3
+        and "频次预算" in ack
+        and "声音防火墙" in theory_review,
+    )
 
 
     runtime_names = (
