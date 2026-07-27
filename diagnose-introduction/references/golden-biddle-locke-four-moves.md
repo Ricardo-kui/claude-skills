@@ -30,7 +30,34 @@ Use these exact taxonomy mappings:
 
 GBL found no one-to-one pairing between literature coherence and
 problematization. Do not infer `gap_type` from `conversation_strategy`, or vice
-versa.
+versa. For the nine-combination design space and construction techniques, see
+`intertextual-construction-playbook.md` (§2 matrix).
+
+## Outer Limits: Straw-Man Criteria (operationalizing Move 3)
+
+GBL's premise is that any literature has enough fluidity to be authentically
+shaped in several directions — but the shaping has outer limits (Kilduff 1993
+on March & Simon; Bazerman 1993 on Gould & Lewontin). A problematization
+crosses the limit into straw-man construction when it fails any of:
+
+1. **Representativeness**: the constructed field includes the works a
+   knowledgeable reader would expect. Omitting canonical counter-evidence that
+   would change a reviewer's assessment is over the limit.
+2. **Attributability**: every position attacked is citable to specific works —
+   never "the literature says" without names.
+3. **Acknowledgment**: the cited authors would recognize their own work in
+   your characterization. Multiple authentic readings are allowed; the reading
+   must be one the text supports.
+4. **Full-strength construction first**: for Inadequacy and Incommensurability,
+   the literature must be constructed at full strength (Move 2 done well)
+   before being subverted. Move 2 quality gates Move 3 legitimacy.
+5. **Anticipated-objection test**: if a reviewer from the problematized camp
+   would call the characterization a misreading, it is over the limit.
+
+Legitimate selectivity (March & Simon omitting inconsistent works to intensify
+their construction) passes tests 1–5 only when the omission does not change
+the reader's assessment of the claim being attacked; use it to sharpen a
+construction, never to manufacture one.
 
 ## Diagnostic Procedure
 
