@@ -139,6 +139,47 @@ def main() -> int:
         "intertextual-construction-playbook.md" in introduction,
     )
 
+    rr = read("revision-coach/references/gbl-r-and-r-dynamics.md")
+    coach = read("revision-coach/SKILL.md")
+    preview = read("paper-review/SKILL.md")
+
+    require(
+        "R&R reference covers the three gatekeeper dynamics",
+        all(
+            marker in rr
+            for marker in ("Field story 吸引", "Multivocality 收窄", "Storyline 重写")
+        ),
+    )
+    require(
+        "R&R reference encodes accept/resist decision rules",
+        all(
+            marker in rr
+            for marker in ("默认接受", "误读即清晰度信号", "抵抗的唯一正当理由", "修订丢失检查")
+        ),
+    )
+    require(
+        "R&R reference anchors verbatim response patterns by function",
+        all(
+            marker in rr
+            for marker in ("接受 + 具体化", "重定向", "相关性边界", "设计边界", "空间边界")
+        ),
+    )
+    require(
+        "R&R reference keeps author-decides discipline",
+        "决定权在作者" in rr and "是范文不是模板" in rr,
+    )
+    require(
+        "revision-coach wires the R&R reference for both modes",
+        "gbl-r-and-r-dynamics.md" in coach
+        and "storyline-level comments" in coach,
+    )
+    require(
+        "paper-review predicts reviewer reception via GBL Ch5",
+        "审稿人接受度预测" in preview
+        and "Multivocality 风险" in preview
+        and "gbl-r-and-r-dynamics.md" in preview,
+    )
+
     runtime_names = (
         "diagnose-introduction",
         "paper-story-contract",
