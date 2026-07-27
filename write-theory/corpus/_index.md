@@ -57,6 +57,7 @@
 | [`E1_categorical_moderation.md`](subprotocols/E1_categorical_moderation.md) | E 调节效应型 | Moderator 为分类变量（分组调节） |
 | [`argumentation_patterns.md`](subprotocols/argumentation_patterns.md) | 跨类型 | 假设推导段落的微观动作组合（Anchor/Gap/Mechanism/Warrant/Prediction），含 T2 竞争解释管理（Preemptive Competing Account Management）、Extension Logic、间接调节论证 |
 | [`hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md) | 跨类型 | 假设推导段落的心脏模板：Anchor→Mechanism→Warrant→Prediction 完整序列，含宽度型并行机制（2-3 理由）、对称反向双轨、曲线关系双阶段论证 |
+| [`reasoning_soundness_protocol.md`](subprotocols/reasoning_soundness_protocol.md) | 跨类型 | 论证可靠性（soundness）协议：前提三分法 [D]/[S]/[E] + 最弱环节防守 + 机制必要性门控（三问）+ 反例压力测试；hypothesis_derivation_patterns 的 soundness 镜像，Phase 3 成稿后与 Phase 4 审计 4 使用 |
 | [`arrangement_patterns.md`](subprotocols/arrangement_patterns.md) | 跨类型 | 论点-论据安排模式（Warrant-Embedded / Evidence-Contrast / Cumulative / Parallel） |
 | [`evidence_patterns.md`](subprotocols/evidence_patterns.md) | 跨类型 | 证据类型、证据功能、文献引用三要素句式 |
 | [`hypothesis_organization_patterns.md`](subprotocols/hypothesis_organization_patterns.md) | 跨类型 | 复杂假设体系的段落级组织（common trunk / dual branch / baseline→moderation / 2×2 对称矩阵） |

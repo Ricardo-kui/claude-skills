@@ -4,7 +4,7 @@
 
 ### Phase 4: QC 与对齐
 
-三层审计 + 假设收敛 + Introduction↔Theory 跨 Section 对齐。
+四层审计 + 假设收敛 + Introduction↔Theory 跨 Section 对齐。
 
 **4.1 通用 QC 审计**（Theory IS NOT / Construct Clarity / Hypothesis Clarity）
 
@@ -46,6 +46,17 @@
 - 曲线关系拆成两个线性假设；
 - 声称 differential validity（关系强度变化）却用 differential prediction（slope 变化）的语言描述；
 - 使用 "X is associated with Y" 等无方向、无形式措辞。
+
+#### 审计 4: Soundness（论证可靠性，复核 Phase 3 的 Soundness Card）
+
+协议全文见 `../corpus/subprotocols/reasoning_soundness_protocol.md`。逐项复核：
+
+- [ ] **前提类型标注**：每个推导段的 Anchor/Warrant 前提已完成 [D]/[S]/[E] 标注；无"标注不出类型"的伪装前提残留
+- [ ] **最弱前提防守兑现**：Soundness Card 上标记的最弱前提，其处置（单独防守句 / 降级 claim / 转显式假设）在正文中真实兑现
+- [ ] **必要性门控兑现**：门控三问未全过的机制已删除或已补可区分预测；无装饰性机制残留
+- [ ] **反例处置兑现**：压力测试答出的条件已写入 scope condition 或升级为 moderation 假设；无"藏起来不写"的条件
+
+**与审计 1 的分工**：审计 1 查推理**形式**（跳跃、堆砌、伪理论陷阱），审计 4 查论证**可靠性**（前提可信、机制必要、反例已防守）。形式完美的链条仍可能塌在审计 4。
 
 **4.2 假设收敛与过渡**
 

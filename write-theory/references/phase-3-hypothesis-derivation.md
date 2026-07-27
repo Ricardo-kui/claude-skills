@@ -46,6 +46,9 @@ Theory 写作的心脏环节：路由假设结构，为每个假设生成逻辑�
 6. **假设形式输出**：`../corpus/sentences/hypothesis_forms.md`
    → 把推导收敛为正式假设的标准句法
 
+7. **可靠性审计**（成稿后执行）：`../corpus/subprotocols/reasoning_soundness_protocol.md`
+   → 前提三分法标注 + 最弱环节防守 + 机制必要性门控 + 反例压力测试，输出 Soundness Card
+
 #### 标准结构：交织式论证链（Interwoven Logic Chain）
 
 文献引用与理论推理**交织**而非先后排列——这是管理学顶刊的默认写法（验证自 14 篇 MVP30 论文）。
@@ -122,5 +125,8 @@ Theory 写作的心脏环节：路由假设结构，为每个假设生成逻辑�
 - [ ] **作者名开头**：why-chain 段段首句主语是否为他人姓名（"Smith (2020) showed..."）？→ topic sentence 必须是自己的理论主张，引用移到证据位（见 prose-craft-checklist §0.6-1）
 - [ ] **段末 wrap**：段末句是否停在引用/证据上而无 "This suggests that..." 收束（abrupt stop）？→ 段末 1 句 wrap 回扣本段 claim；与"收束句质量"项互补——那项查收束是否简单重复 "we hypothesize"，本项查收束是否缺席（见 §0.6-5）
 - [ ] **Caveat-first**：段首是否以 "Although prior work..." 让步开头，推迟核心 claim？→ claim 前置，caveat 移后（见 §0.6-4）
+- [ ] **前提最弱点**：每个 Anchor/Warrant 前提已标注 [D]/[S]/[E] 类型？最弱前提是否有单独一句防守（或已降级 claim / 转显式假设）？（见 `reasoning_soundness_protocol.md` §1–2）
+- [ ] **机制必要性门控**：Q1 主流更简单机制推不出同一预测？Q2 本机制有可区分的额外预测？Q3 删掉本机制故事不照样成立？（见 §3）
+- [ ] **反例压力测试**：最弱前提所在步骤与反直觉步骤已回答"什么条件下这一步不成立"，处置（scope / 新假设 / 删除）已兑现？（见 §4）
 
 ---

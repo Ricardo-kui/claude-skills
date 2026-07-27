@@ -251,6 +251,72 @@ def main() -> int:
         and "双重张力交织" in tension,
     )
 
+    soundness = read(
+        "write-theory/corpus/subprotocols/reasoning_soundness_protocol.md"
+    )
+    phase3 = read("write-theory/references/phase-3-hypothesis-derivation.md")
+    phase4 = read("write-theory/references/phase-4-qc-alignment.md")
+    theory_index = read("write-theory/corpus/_index.md")
+    theory_review = read("theory-review/SKILL.md")
+
+    require(
+        "soundness protocol encodes premise typing and weakest-link marking",
+        all(
+            marker in soundness
+            for marker in (
+                "Definitional",
+                "Stipulation",
+                "Empirical",
+                "链条强度 = 最弱前提",
+                "[D]/[S]/[E]",
+            )
+        ),
+    )
+    require(
+        "soundness protocol encodes the necessity gate and stress test",
+        all(
+            marker in soundness
+            for marker in (
+                "替代充分性",
+                "可区分性",
+                "反事实塌陷",
+                "什么条件下这一步不成立",
+                "Soundness Card",
+            )
+        ),
+    )
+    require(
+        "soundness protocol mirrors the Outer Limits honesty discipline",
+        "Outer Limits" in soundness
+        and "golden-biddle-locke-four-moves.md" in soundness,
+    )
+    require(
+        "phase-3 wires the soundness protocol into derivation QC",
+        "reasoning_soundness_protocol.md" in phase3
+        and "前提最弱点" in phase3
+        and "机制必要性门控" in phase3
+        and "反例压力测试" in phase3,
+    )
+    require(
+        "phase-4 adds the Soundness audit as a fourth audit",
+        "审计 4: Soundness" in phase4
+        and "四层审计" in phase4
+        and "reasoning_soundness_protocol.md" in phase4,
+    )
+    require(
+        "write-theory corpus index registers the soundness protocol",
+        "reasoning_soundness_protocol.md" in theory_index
+        and "soundness" in theory_index,
+    )
+    require(
+        "theory-review audits soundness symmetrically with generation",
+        "Step 2.6: Soundness 审查" in theory_review
+        and "前提最弱点" in theory_review
+        and "机制必要性" in theory_review
+        and "反例未防守" in theory_review
+        and "reasoning_soundness_protocol.md" in theory_review,
+    )
+
 
     runtime_names = (
         "diagnose-introduction",
