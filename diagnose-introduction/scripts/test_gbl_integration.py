@@ -590,6 +590,23 @@ def main() -> int:
         and "频次预算" in ack
         and "声音防火墙" in theory_review,
     )
+    require(
+        "prose-craft adds the defensive-prose section with necessity calibration",
+        "Defensive prose" in prose
+        and "keep the substance, delete the posture" in prose
+        and "unnecessary disclaimer" in prose
+        and "EMERGING" in prose,
+    )
+    require(
+        "prose-craft encodes negative-to-positive conversion and hedge de-stacking",
+        "not X but Y" in prose
+        and "The analysis focuses on" in prose
+        and "could potentially influence" in prose,
+    )
+    require(
+        "soundness firewall and phase-3 route defensive wording to prose-craft 5.7",
+        "§5.7" in soundness and "§5.7" in phase3,
+    )
 
 
     runtime_names = (

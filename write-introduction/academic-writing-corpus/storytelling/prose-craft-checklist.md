@@ -476,6 +476,56 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 
 **嵌入点**：write-theory 推导段 mechanism 句（与 soundness 层 warrant 五测试之 "sufficiently limited" 联动——过不了该测试的 warrant 往往就是含绝对化词的 warrant）；write-introduction Contribution 句；phase-4 审计 1 Inflated symbolism 行联动。
 
+### 5.7 Defensive prose（防御性文风）
+
+**定义**：通过预判反对、预先自我设限、堆叠 hedge 来"保护"论证，结果是 prose 更长、更弱、失焦。与 §5.6 是对偶两极——§5.6 管确定性**过高**（绝对化），本节管确定性**过低**与**防御姿态**；目标相同：确定性校准。
+**来源**：Kiterlin/anti-defensive-writing（社区 Codex skill, MIT）原则直采 + 本库既有规则整合。验证状态：EMERGING（非学术语料，但与本库 §0.6-4 caveat-first、§3 禁用词表、soundness 防火墙 §7 交叉验证一致）。
+**与 soundness 防火墙 §7 的分工**：§7 管**协议层泄漏**（[D]/[S]/[E]、门控等诊断词汇进正文）；本节管**一般性防御措辞**（负向设限、hedge 堆叠、caveat 散射）。
+
+**核心规则**：直接推进 claim。"Write as an author explaining an argument to the reader, not as an author negotiating with an imagined critic."
+
+**保留纪律（防过度矫正，与 soundness 层协同）**：limitation **必要**当且仅当它影响——①claim 的有效性 ②证据的解释 ③适用范围 ④研究设计 ⑤读者正确使用结果的能力。必要的 limitation：**写一次、语气平静、放对位置**（Methods / Discussion / Limitations），不散射到 abstract / introduction / contribution 段 / topic sentence / 结论。原则一句话：**保留防守实质、删除防御姿态（keep the substance, delete the posture）**——soundness 层要求的最弱前提防守不受本节影响，受影响的只是它的措辞框架。
+
+**防御句功能六分类 → 处置**：
+
+| 功能分类 | 处置 |
+|---------|------|
+| unnecessary disclaimer（不必要的免责声明） | 删除 |
+| necessary scope condition（必要范围条件） | 正面改写，放合适位置 |
+| real methodological limitation（真实方法局限） | 保留一次，放 Methods/Discussion/Limitations |
+| useful conceptual contrast（有用的概念对比） | 保留——对比本身是论证的一部分 |
+| evidence-based qualification（基于证据的限定） | 保留并指明不确定性来源 |
+| redundant clarification（冗余澄清） | 删除 |
+
+**负向框架 → 正面 scope 转换库**：
+
+| 防御性（禁用） | 正面（替换） |
+|---------------|-------------|
+| "This paper does not claim..." | "This paper examines..." |
+| "We do not attempt to..." | "The analysis focuses on..." |
+| "This is not to say that..." | 直接陈述正面 claim |
+| "This should not be taken to mean..." | 直接陈述 claim + 证据范围 |
+| "The goal is not X but Y..." | "This paper identifies / shows Y..." |
+| "Rather than arguing X, this paper argues Y..." | 直接 argue Y（删除 X 陪衬） |
+| "It is worth noting that..." / "To be clear..." | 删除（§3 已禁中文对应"值得注意的是"） |
+| 冗余 "however / nevertheless / although" 过渡堆叠 | 每段至多保留一个真实转折 |
+
+**Hedge 堆叠 → 精确化**（与 §5.6 对偶的另一极）：
+- ❌ "This may suggest that X could potentially influence Y."
+- ✅ "The evidence indicates that X influences Y in these cases."
+- 不确定性为真时，**指明来源**而非堆叠 hedge：✅ "The available evidence supports this interpretation, although the design does not estimate population-level effects."
+
+**逐字示例对**（源项目示例， defensive → stronger）：
+1. "We do not claim that these cases are representative of all contexts." → "The cases show how the mechanism operates across three institutional settings."
+2. "This paper is not intended to provide a comprehensive theory of platform governance, but rather to examine one specific mechanism." → "This paper identifies a mechanism through which platform governance reshapes participation."
+3. "This does not mean that policy design alone determines implementation outcomes." → "Implementation outcomes depend on how policy design interacts with administrative capacity."
+4. "While the sample is limited and cannot capture every variation, it still offers useful insights." → "The sample captures the variation most relevant to the study's theoretical question."
+5. "We are not arguing that this model is superior in every situation." → "The model is most useful when the task requires interpretable comparisons across cases."
+
+**检测清单**（改稿时逐项扫）：不必要免责声明 / 反复声明"本文不主张什么" / hedge 堆叠 / 高影响位置的 caveat / 以 limitation 开头的段落 / 可用正面框架的负向框架 / 仅为预防假想误解而加的解释 / 自我削弱的贡献句 / 不必要的 "not X but Y" / 冗余转折词。
+
+**嵌入点**：write-introduction Contribution 段（自我削弱贡献句高发区）、write-theory 推导段（与防火墙 §7 联动）、write-results Discussion 衔接段、abstract 终检。
+
 ---
 
 ## 6. 清晰文风的 Williams 原则（Booth Ch15）
