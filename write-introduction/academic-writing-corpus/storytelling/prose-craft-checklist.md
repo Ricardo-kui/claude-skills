@@ -453,11 +453,94 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 
 **注意**：本病理与 Ch03 Conversational Voice（禁用 "It is argued that"）和 Inflated symbolism（禁用 "paradigm shift"）互补。Ch03 覆盖声音和修辞包装，Ch04 覆盖句法复杂度和词汇选择。
 
+### 5.6 Overclaiming（绝对化断言，Booth Ch6）
+
+**定义**：claim 的确定性超出论证所能支撑。与 Pompous prose（词汇浮夸）和 Inflated symbolism（贡献包装）互补——本病理是**确定性校准**失灵。Booth §6.3："nothing damages your ethos more than arrogant certainty."
+
+**绝对化词黑名单**（Booth §6.3.2：多数领域读者不信任 pat certainty）：
+`all` / `no one` / `every` / `always` / `never`（及中文对应"所有/任何/从不/总是"）
+- 检测：全文搜索这些词，逐处问"论证真的支撑全称断言吗？"
+- 例外：样本边界描述（"All firms in our sample..."）与定义句合法——黑名单针对的是**经验规律与机制断言**
+
+**Hedge 词库**（Watson & Crick 宣布 DNA 双螺旋时仍 hedge——Booth §6.3.2 逐字对照）：
+- 谨慎版： "We **wish to suggest** a structure..."（not "state"）/ "**In our opinion**, this structure is unsatisfactory..." / "We **believe** that..." / "**Some** of the van der Waals distances **appear** to be too small."
+- 攻击版（缺 hedge，更简洁但更 aggressive）："We **announce** here **the** structure..." / "Their structure **is** unsatisfactory" / "Their van der Waals distances **are** too small."
+
+**限定条件句式**（Booth §6.3.1）：
+- "..., **assuming today's conservation measures remain in place**."
+- "**Based on available economic data**, a global recession appears unlikely."
+- "**According to current climate models**, ..."
+- 纪律：只提读者可能想到的限定条件（科学家不声明仪器精度——所有测量都依赖它，提了反而外行）
+
+**平衡警告**：hedge 过度 = timid（"if you hedge too much, you will seem timid"）；各领域 hedge 密度不同，**观察本领域专家怎么 hedge 并照做**。管理实证惯例：假设句本身不 hedge（"We hypothesize that X is positively related to Y"），hedge 放在 mechanism 推理句、结果外推句与 Discussion 的 generalizability 声明。
+
+**嵌入点**：write-theory 推导段 mechanism 句（与 soundness 层 warrant 五测试之 "sufficiently limited" 联动——过不了该测试的 warrant 往往就是含绝对化词的 warrant）；write-introduction Contribution 句；phase-4 审计 1 Inflated symbolism 行联动。
+
+---
+
+## 6. 清晰文风的 Williams 原则（Booth Ch15）
+
+**来源**：Booth et al. 2024 Ch15（Williams 清晰风格理论的教材化）。与 §5.5 的分工：§5.5 是**词级**黑名单（逐词降级表）；本节是**句级**诊断——一句话为什么读起来 dense，以及怎么改。验证状态：句法原则通用（EMERGING，非管理学语料）。
+
+**使用时机**（Booth §15.2.1 + Quick Tip）：不用于起草——"don't try to apply these principles as you write new sentences... let them guide you when you revise"；先写后改；时间不够时从**最难解释的段落**入手（那里句子最难）；大声朗读，你磕绊处读者也磕绊（与 §3 Read-aloud Test 联动）。
+
+### 6.1 Character-Action 原则（前 6–7 词诊断）
+
+清晰句两原则：①主语命名故事的**具体角色**（short, specific, concrete）；②关键动作用**动词**表达。
+
+**诊断三步**（每分句，主从句都算）：
+1. 高亮每分句前 6–7 词（跳过 "At first" 类短引导语）：是否已到达 simple subject？
+2. 该主语是具体角色还是抽象名词？
+3. 动词是具体动作（strip / damage）还是模糊动词（result / made）？任一失败 → 改。
+
+**改写示范**（Booth §15.2 逐字三组）：
+- ❌ "The reason for Locke's frequent repetition lies in his distrust of the accuracy of the naming power of words."
+  ✅ "Locke frequently repeated himself because he did not trust the power of words to name things accurately."
+- ❌ "The stripping of rain forests in the service of short-term economic interests could result in damage to the earth's biosphere."
+  ✅ "If rain forests are stripped to serve short-term economic interests, the earth's biosphere may be damaged."
+- ❌ "The hospitalization of patients without appropriate treatment results in the unreliable measurement of outcomes."
+  ✅ "We cannot measure outcomes reliably when patients are hospitalized but not treated appropriately."
+
+### 6.2 Nominalization 修复三步
+
+名词化（-tion / -ment / -ence / -ity / -ness）的三重代价：①堆冠词介词（standardize→the standardization of）；②逼出模糊动词（made / result）；③把角色降格为修饰语（we→our，patients→of patient response）。
+
+**修复三步**（Booth §15.2.4）：
+1. 找角色：这句话讲谁的故事？找不到就发明一个（通常是 we，或核心构念作角色）
+2. 找动作：动作若藏在名词里，改回动词
+3. 重铸：用 "If X, then Y" / "X because Y" / "Although X, Y" / "When X, then Y" 重造分句
+
+**豁免**：并非所有抽象名词都改——§5.5 降级词表管逐词处理；本节只处理**作主语且挤占角色位**的名词化。回指前句动词的抽象名词（如 "Locke's distrust" 回指前句 "distrusted"）是合法的旧信息压缩（Booth §15.3 点评）。
+
+### 6.3 Old-before-New 信息流（第三原则，优先级最高）
+
+读者跟得上故事的条件：句首 6–7 词是**旧信息**（已提及的角色/概念），新而复杂的信息放句末。
+
+**诊断**：高亮每句前 6–7 词——读者能从中预测本句与上句的关系吗？不能 → 改。
+
+**优先级规则**：当"角色作主语"与"旧信息置前"冲突时，**永远选 old before new**（Booth §15.3 原文 "always choose the principle of old before new"）。这是本清单唯一的优先级仲裁条款。
+
+**Complexity Last（句末 5–6 词诊断）**：句末是自然强调位，应放：①首次出现的技术术语；②长而复杂的信息单元；③下文要展开的概念（段落首句的末尾词应在后文重复出现）。与 §0.5 coherence 联动：句末新信息 = 下一句句首旧信息，构成信息流链条。
+
+### 6.4 被动语态豁免（对 active-voice 纪律的细化）
+
+不机械回避被动——Booth §15.4："Followed mechanically, that advice will make your sentences *less* clear." 正确的问题不是"主动还是被动"，而是"句首是否是旧信息/主角"。
+
+**该用被动的场合**：
+- 被动能把旧信息提前、复杂信息置后时："these rain forests are now threatened with destruction by the increasing demand..." 优于 "the increasing demand ... now threatens these forests"（前者句首接上句旧角色）
+- 描述**任何人都能重复的过程**（Methods 测量程序："Eye movements were measured at tenth-of-second intervals."——被动暗含可重复性）
+
+**该用主动的场合**：
+- 只有作者能做的动作：修辞动作（suggest / conclude / argue / show）与记功动作（design / solve / prove）——"We conclude that..." 在科学写作中不仅常见而且恰当（Booth §15.4）
+- 这解释了论文的声音分布：Introduction/Discussion 用 we+主动，Methods 过程描述用被动——**不是不一致，是故事主角的合法切换**
+
+**与既有纪律的关系**：§3 禁 "It is argued that"、phase-4 审计 1 禁 "It is hypothesized that"——禁的是**无主语逃避作者责任**，不是被动本身。被动+明确主语（"These forests are threatened"）完全合法。
+
 ---
 
 ## 跨 Skill 引用规则
 
-- `write-introduction`（Constraints）和 `write-theory`（Phase 1.4 + Phase 3.2 QC）引用本文件全量 §0–§5——两者均为说服体裁
+- `write-introduction`（Constraints）和 `write-theory`（Phase 1.4 + Phase 3.2 QC）引用本文件全量 §0–§6——两者均为说服体裁
 - `discussion-review` 可引用 §0.0/§0.1/§0.3/§0.6 审查用户已有 Discussion，经 `references/alignment-checks.md` 的 Paragraph Craft 节转引
 - `write-results` / `write-methods` 仅引用 §0.0（体裁分型）、§0.2（长度）、§0.5（coherence）；§0.1/§0.3/§0.6 的说服体裁规则**不适用**于其审计体裁段落；体裁专属段落 QC 在各 slot 文件内
 - `ACADEMIC_COMMUNICATION.md` 的 base voice 规则不重复，只交叉引用

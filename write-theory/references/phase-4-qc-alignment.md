@@ -20,7 +20,7 @@
 | Diagrams as theory | 是否有模型图但每条路径无文字解释？→ 补 verbal theory |
 | Hypotheses as theory | 假设是否描述了 what 但没解释 why？→ 每个假设前必须有 why chain |
 | Passive voice dumping | 是否有 "It is argued that" / "It is hypothesized that"？→ 改为 "We argue that" / "We hypothesize that" |
-| Inflated symbolism | 是否有 "paradigm shift" / "fundamentally transforms"？→ 降级为具体贡献描述（"extend", "refine", "challenge"） |
+| Inflated symbolism | 是否有 "paradigm shift" / "fundamentally transforms"？→ 降级为具体贡献描述（"extend", "refine", "challenge"）；mechanism 推理句是否含绝对化词（all / always / never / every / no one）超出论证支撑？→ hedge 词库与限定条件句式见 `../../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md` §5.6 |
 | Burying the lead | 假设推导段段首句是否未在 15 词内说出核心判断？→ 重写段首句为"主语+主动动词+方向" |
 | Sentence stuffing | 单句 > 30 词或单段 > 200 词？→ 拆分长句，每句一个核心判断 |
 | Read my mind | why chain 是否从 A 直接跳到 C，缺少 B 的中间步骤或 transition？→ 补充每个因果步骤，添加 explicit transition |
@@ -40,6 +40,7 @@
 - [ ] **Relationship form specified**：线性/曲线/条件/阈值/差异比较等，且与构念测量尺度匹配
 - [ ] **Mediator/moderator specified**
 - [ ] **Matches theorized AND tested relationship**：假设措辞、理论关系形状、概念类型（differential prediction vs. differential validity）三者一致；统计检验方法由 `write-methods` 选择
+- [ ] **Contestability（反命题测试，Booth Ch6）**：写出假设的反命题并问"会有人愿意反驳它吗？"三种弱 claim 直接拦截：①纯主题宣告（反命题无意义）②易验证事实（反命题明显为假）③伪争议（反命题显然为真）。没人愿意反驳的 claim 不值得论证——要么升级为有张力的方向性预测，要么删除
 
 **Form–Measurement 匹配指南**见 `../corpus/sentences/hypothesis_forms.md` 的「假设形式决策矩阵」。常见错误：
 - 连续 IV + 连续 DV 却写成 If-then；

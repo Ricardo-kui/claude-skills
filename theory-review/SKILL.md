@@ -86,6 +86,7 @@ Step 2 查 why chain 的**形式**（完整/深度/断裂）；本步查论证�
 | Moderator/mediator 清楚 | 条件变量是否明确 | ✓/△/✗ |
 | Effect type 匹配理论 | 主效应/调节/中介/非线性与理论一致 | ✓/△/✗ |
 | 方向性语言 | 使用 "if-then" 或明确的预测词 | ✓/△/✗ |
+| **Contestability（反命题测试）** | 写出假设的反命题：会有人愿意反驳它吗？（Booth Ch6：没人愿意反驳的 claim 不值得论证）三种弱 claim 标 ✗：纯主题宣告（反命题无意义）/ 易验证事实（反命题明显假）/ 伪争议（反命题显然真） | ✓/△/✗ |
 
 ### Step 4: Character Ordering 检查
 

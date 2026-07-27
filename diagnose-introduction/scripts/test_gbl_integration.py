@@ -459,6 +459,51 @@ def main() -> int:
         and "warrant 五测试" in theory_index,
     )
 
+    require(
+        "prose-craft adds the absolute-word blacklist and hedge bank",
+        all(
+            marker in prose
+            for marker in ("Overclaiming", "no one", "wish to suggest", "In our opinion", "timid")
+        ),
+    )
+    require(
+        "prose-craft encodes limiting-condition patterns",
+        "assuming today's conservation measures" in prose
+        and "Based on available economic data" in prose,
+    )
+    require(
+        "phase-4 audits hypothesis contestability and links the blacklist",
+        "Contestability" in phase4
+        and "反命题" in phase4
+        and "prose-craft-checklist.md` §5.6" in phase4,
+    )
+    require(
+        "theory-review audits hypothesis contestability",
+        "Contestability" in theory_review and "反命题" in theory_review,
+    )
+    require(
+        "prose-craft encodes the character-action diagnosis",
+        "Character-Action" in prose
+        and "6–7 词" in prose
+        and "Locke frequently repeated himself" in prose,
+    )
+    require(
+        "prose-craft encodes nominalization repair and old-before-new priority",
+        "If X, then Y" in prose
+        and "Old-before-New" in prose
+        and "always choose the principle of old before new" in prose,
+    )
+    require(
+        "prose-craft encodes the passive-voice exemption nuance",
+        "被动语态豁免" in prose
+        and "Eye movements were measured" in prose
+        and "We conclude" in prose,
+    )
+    require(
+        "cross-skill references cover the new Williams section",
+        "§0–§6" in prose,
+    )
+
 
     runtime_names = (
         "diagnose-introduction",
