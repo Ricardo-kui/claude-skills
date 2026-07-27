@@ -192,6 +192,65 @@ def main() -> int:
         "工单" in coach,
     )
 
+    twin = read(
+        "write-introduction/academic-writing-corpus/hooks/22-twin-complication.md"
+    )
+    hooks_index = read(
+        "write-introduction/academic-writing-corpus/hooks/_index.md"
+    )
+    registry = read(
+        "write-introduction/academic-writing-corpus/_evidence_registry.yaml"
+    )
+
+    require(
+        "twin-complication hook encodes the twin-tension architecture",
+        all(
+            marker in twin
+            for marker in (
+                "田野张力",
+                "理论张力",
+                "story the theory",
+                "complicating the complications",
+                "turner1976",
+            )
+        ),
+    )
+    require(
+        "twin-complication hook enforces the twin-resolution contract",
+        "双重 Resolution 纪律" in twin
+        and "删除检验" in twin
+        and "双 resolution 合同" in twin,
+    )
+    require(
+        "twin-complication hook marks the field-vs-theory ordering difference",
+        "从田野张力派生" in twin and "关键顺序差异" in twin,
+    )
+    require(
+        "hooks index wires the twin-complication hook",
+        "22-twin-complication" in hooks_index
+        and "双重张力交织 Hook" in hooks_index
+        and "双 resolution 合同" in hooks_index,
+    )
+    require(
+        "hooks index records mutual exclusions for twin-complication",
+        "`22-twin-complication` + `06-paradigm-challenge`" in hooks_index
+        and "`22-twin-complication` + `03-data-shock`" in hooks_index,
+    )
+    require(
+        "evidence registry tracks the twin-complication hook",
+        "22-twin-complication:" in registry and "turner1976 (ASQ)" in registry,
+    )
+    require(
+        "playbook points Move 1x3 interweaving to the twin-complication hook",
+        "hooks/22-twin-complication.md" in playbook
+        and "双重张力" in playbook,
+    )
+    require(
+        "tension-escalation notes Haunschild as implicit twin-complication",
+        "22-twin-complication.md" in tension
+        and "双重张力交织" in tension,
+    )
+
 
     runtime_names = (
         "diagnose-introduction",

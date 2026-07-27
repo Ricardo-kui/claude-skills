@@ -142,6 +142,8 @@ P7-P8: Denouement Preview（强贡献声明）
 
 **阶段倒退检查**：Hook→Lit Turn 功能是否倒退？Hook 用 14 条生命建立 urgency，Lit Turn 转为文献回顾（功能似乎弱化）。但 Haunschild 的 Lit Turn 很短（1 段），且 immediately 指向文献盲区，所以功能仍在推进。
 
+**架构注记（2026-07-27）**：Haunschild 2015 的 Hook（14 条生命 field 张力）+ Gap（学习理论不能处理修正-复发）是**双重张力交织**（twin-complication）的隐式使用——田野张力与理论张力互为表里。该架构已显式化为 `../hooks/22-twin-complication.md`（GBL Ch3 Turner 1976 原型），含双 resolution 纪律与删除检验；现象驱动论文在设计 Hook 时应先检查是否满足该架构的合同条件。
+
 ### Eilert et al. (2017) — CSR（Incommensurability）
 
 | 段落 | 叙事阶段 | 功能 | knot 推进检查 |

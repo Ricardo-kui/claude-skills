@@ -52,9 +52,10 @@
 | **实践困境 Hook** | `10-practical-puzzle` | 从业者面临的具体困境 | VERIFIED (≥3 papers) | ceo_regulatory_focus_ijrm (IJRM), desjardine2023 (OS), kalaignanam2017 (JM) |
 | **谜题/悖论 Hook** | `04-puzzle-paradox` | 反直觉现象，制造认知失调 | VERIFIED (≥4 papers) | paruchuri2020 (SMJ), pontikes2012 (ASQ) |
 | **成对灾难 Hook** | `14-paired-disasters` | 两次时间跨度大的相似灾难，建立"历史重演"谜题 | VERIFIED | haunschild2015 (OS) |
+| **双重张力交织 Hook** | `22-twin-complication` | 田野张力 × 理论张力交织互构，双 resolution 合同（Turner 1976 原型，GBL Ch3） | EMERGING (2p) | turner1976 (ASQ), haunschild2015 (OS, 隐式) |
 | **二元关系传染 Hook** | `26-dyadic-contagion` | 关系双面性 → 负面事件 → 跨组织溢出 | EMERGING (1p) | pupovac2026 (POM) |
 
-*Anecdote 类型有 7 个 hooks，覆盖从完整叙事到精简案例的多种长度。注意：`04-puzzle-paradox` 同时包含 Trend 元素（反直觉数据）和 Anecdote 元素（第二人称推理），但因其核心功能是叙事性 puzzle，归入 Anecdote。*
+*Anecdote 类型有 9 个 hooks，覆盖从完整叙事到精简案例的多种长度。注意：`04-puzzle-paradox` 同时包含 Trend 元素（反直觉数据）和 Anecdote 元素（第二人称推理），但因其核心功能是叙事性 puzzle，归入 Anecdote。`22-twin-complication` 是跨类型架构（P1 可用轶事或趋势开场），因其田野张力以行动者叙事承载，归入 Anecdote。*
 
 ---
 
@@ -74,7 +75,7 @@
 |---------|--------------------------------|
 | **低** | Trend: `03-data-shock`, `08-consequence-cascade` <br> Anecdote: `10-practical-puzzle`, `09-psychological-construct-hook` <br> Rhetorical: `13-rhetorical-question` |
 | **中** | Trend: `05-literature-consensus-blindspot`, `01-cross-disciplinary-analogy`, `12-contrary-to-belief`, `24-positive-trait-dark-side` <br> Anecdote: `04-puzzle-paradox`, `10-immersive-narrative`, `11-institutional-anecdote`, `07-cost-benefit-tension` |
-| **高** | Trend: `06-paradigm-challenge` <br> Quote: `02-epigraph-quote-pivot` <br> Anecdote: `14-paired-disasters` |
+| **高** | Trend: `06-paradigm-challenge` <br> Quote: `02-epigraph-quote-pivot` <br> Anecdote: `14-paired-disasters`, `22-twin-complication` |
 
 ---
 
@@ -82,11 +83,11 @@
 
 | 期刊 | 偏好 Pollock 类型 | 推荐 Hooks |
 |------|------------------|-----------|
-| **ASQ** | Quote > Trend (理论) | `02-epigraph-quote-pivot`（经典理论引语）, `06-paradigm-challenge` |
+| **ASQ** | Quote > Trend (理论) | `02-epigraph-quote-pivot`（经典理论引语）, `06-paradigm-challenge`, `22-twin-complication` |
 | **ASR** | Quote > Trend (理论) | `02-epigraph-quote-pivot`（理论象征文本）, `06-paradigm-challenge` |
 | **SMJ** | Trend (数据) ≈ Anecdote | `03-data-shock`, `06-paradigm-challenge`, `04-puzzle-paradox`, `13-rhetorical-question` |
-| **AMJ** | Anecdote ≈ Rhetorical | `10-immersive-narrative`, `09-psychological-construct-hook`, `13-rhetorical-question` |
-| **OS** | Anecdote > Trend | `11-institutional-anecdote`, `07-cost-benefit-tension`, `04-puzzle-paradox` |
+| **AMJ** | Anecdote ≈ Rhetorical | `10-immersive-narrative`, `09-psychological-construct-hook`, `13-rhetorical-question`, `22-twin-complication` |
+| **OS** | Anecdote > Trend | `11-institutional-anecdote`, `07-cost-benefit-tension`, `04-puzzle-paradox`, `22-twin-complication` |
 | **JM/JMR** | Trend (数据) | `03-data-shock`, `08-consequence-cascade`, `12-contrary-to-belief` |
 | **JOM** | Trend ≈ Anecdote | `02-epigraph-quote-pivot`（监管/召回）, `07-cost-benefit-tension`, `08-consequence-cascade` |
 | **MS** | Anecdote | `11-institutional-anecdote` |
@@ -105,6 +106,8 @@
 | `03-data-shock` + `06-paradigm-challenge` | 低能量数据 vs 高能量颠覆，能量不匹配 |
 | `03-data-shock` + `08-consequence-cascade` | 两者都依赖数字，造成数字疲劳 |
 | `10-immersive-narrative` + `13-rhetorical-question` | 叙事沉浸 vs 主动推理，读者参与机制冲突 |
+| `22-twin-complication` + `06-paradigm-challenge` | 田野先行（文献不够用）vs 理论先行（文献错了），能量来源冲突 |
+| `22-twin-complication` + `03-data-shock` | 判断结构 vs 规模感，两种不同的 significance 建立方式，叠加稀释 |
 
 ---
 
@@ -120,6 +123,7 @@
 | `24-positive-trait-dark-side` | `20-opposite-predictions-positive-trait` 或 `02-implicit-assumption-wrong` | 正向特质阴暗面需要解释文献为何忽略其负面边界 |
 | `07-cost-benefit-tension` | `01-despite-progress-unaddressed` 或 `08-cost-vs-benefit` | 决策困境需要文献如何/未如何处理的解释 |
 | `14-paired-disasters` | `13-sequential-phenomenon-gap` | 极端案例建立的修正-复发谜题需要 sequential cycling 缺口来解释 |
+| `22-twin-complication` | `01-despite-progress-unaddressed` 或现象类 Tension | 田野张力需要"文献不能处理行动者真实两难"的理论张力配对，且签署双 resolution 合同（Discussion 必须回到两个张力） |
 
 ---
 
@@ -150,13 +154,14 @@
 | 19 | forward-looking-shift | Trend |
 | 20 | counterintuitive-finding | Trend |
 | 21 | dual-industry-trend | Trend |
+| 22 | twin-complication | Anecdote（跨类型架构） |
 | 23 | popular-debate | Anecdote |
 | 24 | positive-trait-dark-side | Trend / Anecdote |
 | 25 | empirical-puzzle-after-consensus | Trend |
 | 26 | dyadic-contagion | Anecdote |
 | — | cold-start-cost-cascade | Trend |
 
-*注：编号 10 被 immersive-narrative 和 practical-puzzle 共享，编号 17 被 classic-debate-constraint 和 debate-reframing 共享——均因不同 distill 来源保留原编号以维持向后兼容。编号 22（paired-simultaneous-incidents）从未建成语料文件，条目已移除。*
+*注：编号 10 被 immersive-narrative 和 practical-puzzle 共享，编号 17 被 classic-debate-constraint 和 debate-reframing 共享——均因不同 distill 来源保留原编号以维持向后兼容。编号 22 曾预留（paired-simultaneous-incidents，未建成），2026-07-27 改用于 twin-complication（GBL Ch3 Turner 1976 蒸馏）。*
 
 ---
 
@@ -167,6 +172,16 @@
 | **Cold-Start Cost Cascade Hook** | `cold-start-cost-cascade` | 从 dreaded word 到直接/间接成本递进 | VERIFIED | mayo_poms (POM) |
 
 - `cold-start-cost-cascade.md` — Cost cascade hook from dreaded word to direct/indirect costs
+
+---
+
+## 新增 Hook（编号 22）
+
+| Hook | canonical_id | 核心特征 | 验证状态 | 代表范文 |
+|------|-------------|---------|---------|---------|
+| **双重张力交织 Hook** | `22-twin-complication` | 田野张力 × 理论张力交织互构；理论张力从田野张力派生；双 resolution 合同 + 删除检验 | EMERGING (2p) | turner1976 (ASQ), haunschild2015 (OS, 隐式) |
+
+- `22-twin-complication.md` — Anecdote/架构型 Hook: P1 田野张力（行动者的判断结构）→ P2 story the theory（文献情境化，非问题化）→ P3 理论张力（从田野派生）→ P4（可选）complicating the complications。GBL Ch3 Turner (1976, ASQ) 原型的量化适配；Pollock "Pasteur's Quadrant" 的深度原版——不是"理论+实践都要有"，而是同一个 knot 在两个语域的表达。核心约束：双 resolution 合同（Discussion 必须回到两个张力）+ 删除检验（删掉田野段若理论张力不受影响 = 贴皮实践意义）。Pollock 类型: Anecdote（跨类型架构）。能量: 中–高。最佳适配 Gap: 现象驱动型 Incompleteness / Inadequacy × Mechanism / Boundary / Phenomenon。禁忌: 不与 `06-paradigm-challenge`（理论先行）或 `03-data-shock`（规模感）同用；实证设计只能回答一个张力时禁用。
 
 ---
 

@@ -148,5 +148,9 @@ GBL 的核心发现：三种 coherence 与三种 problematization 之间**无一
 - **叙事弧线层**：段落能量与阶段连续性按 `gap_type` 选择（
   `storytelling/tension-escalation-protocol.md`）；Literature Turn 内部构造按
   `conversation_strategy` 选择（本手册 §1–2）。两轴独立。
+- **Move 1×3 交织（双重张力）**：现象驱动论文中 field complication 与
+  theoretical complication 的交织架构（Turner 1976 范例的量化适配，含双
+  resolution 纪律与删除检验）见
+  `write-introduction/academic-writing-corpus/hooks/22-twin-complication.md`。
 - **不替代范文类比**：本手册提供构造机制，具体论文的叙事类比仍以 MVP30
   范文库为准。
