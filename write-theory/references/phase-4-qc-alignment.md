@@ -52,9 +52,10 @@
 协议全文见 `../corpus/subprotocols/reasoning_soundness_protocol.md`。逐项复核：
 
 - [ ] **前提类型标注**：每个推导段的 Anchor/Warrant 前提已完成 [D]/[S]/[E] 标注；无"标注不出类型"的伪装前提残留
-- [ ] **最弱前提防守兑现**：Soundness Card 上标记的最弱前提，其处置（单独防守句 / 降级 claim / 转显式假设）在正文中真实兑现
+- [ ] **最弱前提防守兑现**：Soundness Card 上标记的最弱前提，其处置（单独防守句 / 降级 claim / 转显式假设）在正文中真实兑现；[S] 类防守句已过 **warrant 五测试**（reasonable / sufficiently limited / superior to competing warrants / appropriate to this field / covers reason+claim）
 - [ ] **必要性门控兑现**：门控三问未全过的机制已删除或已补可区分预测；无装饰性机制残留
-- [ ] **反例处置兑现**：压力测试答出的条件已写入 scope condition 或升级为 moderation 假设；无"藏起来不写"的条件
+- [ ] **反例处置兑现**：压力测试答出的条件已写入 scope condition 或升级为 moderation 假设；无法修复的弱点已走"承认但不回应"路径（诚实承认+三姿态之一）；无"藏起来不写"的条件
+- [ ] **Warrant 明言/隐去纪律**：三场合（跨领域读者 / 有争议原则 / 读者抗拒的 claim）的 warrant 已明言且场合③先立 warrant 再摆 reason+claim；显而易见的 warrant 未明言（无居高临下信号）；**硬证据规则**——claim of fact 未仅靠 warrant+reason 支撑，[E] 前提未被 [S] 顶替
 
 **与审计 1 的分工**：审计 1 查推理**形式**（跳跃、堆砌、伪理论陷阱），审计 4 查论证**可靠性**（前提可信、机制必要、反例已防守）。形式完美的链条仍可能塌在审计 4。
 

@@ -57,7 +57,7 @@
 | [`E1_categorical_moderation.md`](subprotocols/E1_categorical_moderation.md) | E 调节效应型 | Moderator 为分类变量（分组调节） |
 | [`argumentation_patterns.md`](subprotocols/argumentation_patterns.md) | 跨类型 | 假设推导段落的微观动作组合（Anchor/Gap/Mechanism/Warrant/Prediction），含 T2 竞争解释管理（Preemptive Competing Account Management）、Extension Logic、间接调节论证 |
 | [`hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md) | 跨类型 | 假设推导段落的心脏模板：Anchor→Mechanism→Warrant→Prediction 完整序列，含宽度型并行机制（2-3 理由）、对称反向双轨、曲线关系双阶段论证 |
-| [`reasoning_soundness_protocol.md`](subprotocols/reasoning_soundness_protocol.md) | 跨类型 | 论证可靠性（soundness）协议：前提三分法 [D]/[S]/[E] + 最弱环节防守 + 机制必要性门控（三问）+ 反例压力测试；hypothesis_derivation_patterns 的 soundness 镜像，Phase 3 成稿后与 Phase 4 审计 4 使用 |
+| [`reasoning_soundness_protocol.md`](subprotocols/reasoning_soundness_protocol.md) | 跨类型 | 论证可靠性（soundness）协议：前提三分法 [D]/[S]/[E] + 最弱环节防守（含 Booth warrant 五测试）+ 机制必要性门控（三问）+ 反例压力测试（六类 warrant 攻击面 + 第四种处置"承认但不回应"）+ warrant 明言/隐去表达纪律（Booth Ch8）；hypothesis_derivation_patterns 的 soundness 镜像，Phase 3 成稿后与 Phase 4 审计 4 使用 |
 | [`arrangement_patterns.md`](subprotocols/arrangement_patterns.md) | 跨类型 | 论点-论据安排模式（Warrant-Embedded / Evidence-Contrast / Cumulative / Parallel） |
 | [`evidence_patterns.md`](subprotocols/evidence_patterns.md) | 跨类型 | 证据类型、证据功能、文献引用三要素句式 |
 | [`hypothesis_organization_patterns.md`](subprotocols/hypothesis_organization_patterns.md) | 跨类型 | 复杂假设体系的段落级组织（common trunk / dual branch / baseline→moderation / 2×2 对称矩阵） |
@@ -77,6 +77,7 @@
 | [`cost_benefit_calculus.md`](sentences/cost_benefit_calculus.md) | 成本-收益机制 voice | 感知高收益 + 感知低成本 + 综合收敛 + 上下级激励差异对比 |
 | [`moderation.md`](sentences/moderation.md) | 调节机制 | 机制修改论证、假设模板、修辞问句开场、Ability-Motivation 双路径调节、共享调节器反向调节、多调节器同向设计、双边论证调节推演、注意力基础观调节论证、不对称调节、**董事会放大型边界条件(chung2022)** |
 | [`hypothesis_forms.md`](sentences/hypothesis_forms.md) | 假设形式 | 各类假设的标准句法（主效应、中介、调节、三向交互、有中介的调节、配对假设a/b格式、条件假设Given格式） |
+| [`acknowledgment_response.md`](sentences/acknowledgment_response.md) | 异议处置 voice | 承认与回应句式（Booth Ch9）：四类异议（替代解释/反例/证据局限/定义分歧）× 承认/回应标记词权重表 + 回应强度三级 + 承认但不回应三姿态；与 reasoning_soundness_protocol §4 配套 |
 | [`closure.md`](sentences/closure.md) | 收束/过渡 | **注意：管理学不要求独立 Closure 段。** 局部收束信号（"Therefore, we hypothesize:"）、段落收束→假设过渡（按论证类型）、**H1 收敛信号强制提醒** |
 
 ---

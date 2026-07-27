@@ -372,6 +372,93 @@ def main() -> int:
         and "模块级" in transitions_index,
     )
 
+    ack = read("write-theory/corpus/sentences/acknowledgment_response.md")
+
+    require(
+        "soundness protocol integrates the Booth warrant five tests",
+        all(
+            marker in soundness
+            for marker in (
+                "sufficiently limited",
+                "competing warrants",
+                "appropriate to this field",
+                "cover the reason and claim",
+                "warrant 五测试",
+            )
+        ),
+    )
+    require(
+        "soundness protocol encodes the When-X-then-Y canonical form",
+        "When X, then Y" in soundness and "good instance" in soundness,
+    )
+    require(
+        "soundness protocol adds the six warrant types as attack surface",
+        all(
+            marker in soundness
+            for marker in (
+                "Based on Experience",
+                "Based on Authority",
+                "Systems of Knowledge",
+                "Cultural Warrants",
+                "Methodological Warrants",
+                "Articles of Faith",
+            )
+        ),
+    )
+    require(
+        "soundness protocol adds acknowledge-without-response disposition",
+        "承认但不回应" in soundness
+        and "acknowledge without response" in soundness
+        and "Goldilocks" in soundness,
+    )
+    require(
+        "soundness protocol encodes warrant stating discipline and hard-evidence rule",
+        "明言与隐去" in soundness
+        and "跨领域读者" in soundness
+        and "claim of fact" in soundness
+        and "硬证据规则" in soundness
+        and "What you don't say says who you are" in soundness,
+    )
+    require(
+        "acknowledgment-response corpus covers the four objection types",
+        all(
+            marker in ack
+            for marker in ("替代解释", "反例", "证据局限", "定义分歧")
+        )
+        and "Webster" in ack,
+    )
+    require(
+        "acknowledgment-response corpus encodes weight-ordered marker vocabularies",
+        all(
+            marker in ack
+            for marker in ("Granted", "To be sure", "does not bear on", "对事不对人")
+        )
+        or "direct it at the work rather than the person" in ack,
+    )
+    require(
+        "acknowledgment-response corpus keeps ethos and anti-pattern discipline",
+        "稻草人式承认" in ack and "词典定义" in ack,
+    )
+    require(
+        "phase-3 and phase-4 wire the warrant layer into QC",
+        "Warrant 表达" in phase3
+        and "承认但不回应" in phase3
+        and "warrant 五测试" in phase4
+        and "明言/隐去纪律" in phase4
+        and "硬证据规则" in phase4,
+    )
+    require(
+        "theory-review audits warrant expression symmetrically",
+        "Warrant 表达" in theory_review
+        and "warrant 五测试" in theory_review
+        and "居高临下" in theory_review,
+    )
+    require(
+        "write-theory corpus index registers the acknowledgment-response corpus",
+        "acknowledgment_response.md" in theory_index
+        and "warrant 五测试" in theory_index,
+    )
+
 
     runtime_names = (
         "diagnose-introduction",
