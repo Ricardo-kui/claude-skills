@@ -98,6 +98,7 @@ description: Review an existing management-journal Discussion for contribution a
 | Limitations | 测量局限 | 测量是否未能完全 capture 理论构念？ | ✓/△/✗ |
 | Limitations | 方法局限 | 因果推断、内生性、模型设定等问题是否被承认？ | ✓/△/✗ |
 | 结论升华 | — | 是否回到开头，展示 conversation 已改变？ | ✓/△/✗ |
+| 结论升华 | 反向三步（Booth Ch14） | ①主 claim 是否在结论开头重申且更充分（非逐字重复）？②是否给出 Introduction 之外的**新** significance（So what? 的新答案）？③后续研究呼吁是否具体（数据/设计/机制方向），而非 generic "more research is needed"？三步缺一即不完整（审计细则见 `../write-discussion/references/limitations-elevated-plane.md` 「Conclusion 反向三步」） | ✓/△/✗ |
 
 > **常见错误**：把 boundary conditions 和 limitations 混在一个段落里笼统地说 "Our study has some limitations"。应分开处理：boundary conditions 说明理论适用范围，limitations 说明研究设计缺陷。
 

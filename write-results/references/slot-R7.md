@@ -162,7 +162,7 @@ Additional analyses (summarized in Table [N]) tested the robustness of the resul
 - Results 列不可只写 "consistent"——必须点明**在哪个维度**一致（符号/显著性/量级），并对部分一致的检验诚实标注 "qualified"（如某调节只在长窗口一致）
 - 若某检验结果与主分析不一致，必须在表格和正文**同时披露**，不可只在正文脚注里提
 
-**Specification-Curve / Epistemic Map 变体（可视化规格稳健性）**（Lee & Wang 2026 型, following King, Goldfarb & Simcoe 2021）： ✓ STANDARD 候选 — 当稳健性维度是"分析者规格选择"（clustering level × sample restriction × control set）而非具体识别威胁时，用一张图展示系数跨全部规格组合的稳定性
+**Specification-Curve / Epistemic Map 变体（可视化规格稳健性）**（Lee & Wang 2026 型, following King, Goldfarb & Simcoe 2021）： ✓ STANDARD 候选 — 当稳健性维度是"分析者规格选择"（clustering level × sample restriction × control set）而非具体识别威胁时，用一张图展示系数跨全部规格组合的稳定性。图设计纪律（CI 显示、纵轴起点、伦理四规则）见 `visual-evidence.md` §5。
 
 ```text
 To further assess the robustness of our findings to analyst degrees-of-freedom in specification choice, we develop an epistemic map of the coefficient on [predictor] ([Citation: King, Goldfarb, & Simcoe, 2021]). Specifically, we plot the coefficient and its [95% confidence interval] across all combinations of [specification dimensions: e.g., four clustering levels × two sample restrictions × two control-set choices], yielding [N_total_models] specifications. [Figure X] shows that all [N_total_models] coefficients are [of the predicted sign / greater than zero], and [N_significant] of them are statistically significant at the [threshold] level. The coefficients cluster tightly around the main estimate (β ≈ [value]), indicating that the magnitude of the effect is not sensitive to how the analyst chooses among these reasonable specifications. These robustness checks collectively demonstrate that our findings are not driven by model specification or sample composition.

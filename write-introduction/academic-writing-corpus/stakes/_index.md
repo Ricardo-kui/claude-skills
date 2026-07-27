@@ -48,6 +48,16 @@
 
 ---
 
+## 成本/收益分配规则（Booth Ch14 §14.3）
+
+> "Readers are typically more motivated by a real cost than by a potential benefit. Our suggestion: **state costs or consequences when presenting your problem; state benefits to intensify your solution.**"
+
+- **问题陈述处选 cost 型 stakes**（`02-quantified-economic-loss` / `04-public-health-safety` / `05-firm-value-stock-market` / `07-reputation-legitimacy-crisis` / `09-myopic-management-long-term-loss`）——真实成本比潜在收益更能动员读者
+- **solution/contribution 处用 benefit 强化**——收益框架留给"我们能得到什么"，不浪费在"问题有多严重"上
+- **So-what 测试**（§14.3.3）：在陈述读者无知/误解状态的句子后自问 "So what?"——答不出后果，则 stakes 不够，回到上表换更强的 stakes 类型
+
+---
+
 ## 互斥规则
 
 | 冲突对 | 原因 |

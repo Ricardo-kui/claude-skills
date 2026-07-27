@@ -362,6 +362,8 @@ Taken together, the results indicate that [headline answer supported by the repo
 - [ ] **协变量变异**：若控制变量选择存在理论不确定性，已检验替代控制变量集的稳健性（Yuan et al. 2026）
 - [ ] **脆弱性披露**：若任何稳健性检验产生不一致结果，已在正文（而非仅脚注）中如实报告（Yuan et al. 2026）
 - [ ] **六维覆盖声明**：R7 开头或汇总表中已明确列出检验的稳健性维度，未检验维度已附排除理由（Yuan et al. 2026）
+- [ ] **证据五问**（Booth Ch7）：正文数字与表格/输出逐位一致 / 无 some/most/many/often 类模糊量词替代数字 / 全部假设含非显著已报告（cherry-picking 禁令）/ 数据源与采集链可查 / 每表图有解释句（细则见 `references/evidence-standards.md`）
+- [ ] **视觉证据**（Booth Ch13）：表图形式匹配表达效果 / 标题描述数据而非主题、不写含义解读 / 无截断纵轴等失真（伦理四规则，细则见 `references/visual-evidence.md`）
 
 ### 论证质量诊断
 - [ ] **四拍完整性**：显著假设 方向→显著性→幅度→支持；非显著诚实缩减为2-3拍
@@ -449,6 +451,7 @@ results:
 - 事后分析必须与稳健性检验分开，并明确标记为探索性。
 - 如果用户有具体的假设和模型，必须将其嵌入模板。
 - 每个表格/模型引用应指向用户的实际表格。
+- **表图设计纪律**：R2/R4/R7 涉及表格与图形设计时，遵循 `references/visual-evidence.md`（形式匹配效果 / 标题描述数据非主题 / 伦理四规则）；证据报告质量自检见 `references/evidence-standards.md`（五问审计）。
 - **输出末尾追加 paper-state.yaml 片段**：在 Results 骨架输出末尾，自动附加 `### paper-state.yaml 片段` 块。该片段包含 `results.estimator_family`、`results.hypothesis_results`、`results.story_resolution`、`results.key_findings`、`results.unexpected_findings`，供 paper-review 和 results-review 消费。
 
 ## 语料与变体

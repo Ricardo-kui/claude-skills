@@ -504,6 +504,81 @@ def main() -> int:
         "§0–§6" in prose,
     )
 
+    evidence_std = read("write-results/references/evidence-standards.md")
+    visual = read("write-results/references/visual-evidence.md")
+    results_skill = read("write-results/SKILL.md")
+    slot_r4 = read("write-results/references/slot-R4.md")
+    slot_r7 = read("write-results/references/slot-R7.md")
+    elevated = read("write-discussion/references/limitations-elevated-plane.md")
+    discussion_review = read("discussion-review/SKILL.md")
+    stakes_index = read(
+        "write-introduction/academic-writing-corpus/stakes/_index.md"
+    )
+
+    require(
+        "evidence-standards encodes the Booth five evidence questions",
+        all(
+            marker in evidence_std
+            for marker in (
+                "appropriately precise",
+                "Sufficient and representative",
+                "Authoritative",
+                "Clear and understandable",
+                "audience does",
+            )
+        ),
+    )
+    require(
+        "evidence-standards maps standards to quantitative reporting",
+        "cherry-picking" in evidence_std
+        and "诚实边界" in evidence_std
+        and "非显著" in evidence_std
+        and "EMERGING" in evidence_std,
+    )
+    require(
+        "write-results SKILL wires both new references",
+        "evidence-standards.md" in results_skill
+        and "visual-evidence.md" in results_skill,
+    )
+    require(
+        "visual-evidence encodes the table-vs-figure decision rule",
+        "achieves the effect you want" in visual
+        and "discrete numbers" in visual
+        and "continuous change over time" in visual,
+    )
+    require(
+        "visual-evidence encodes the title/legend discipline",
+        "Heads of households" in visual and "flush left" in visual,
+    )
+    require(
+        "visual-evidence encodes the four ethics rules",
+        "manipulate a scale" in visual
+        and "misleadingly simple" in visual
+        and "state it" in visual,
+    )
+    require(
+        "slot-R4 and slot-R7 wire the visual-evidence reference",
+        "visual-evidence.md" in slot_r4 and "visual-evidence.md" in slot_r7,
+    )
+    require(
+        "elevated-plane adds the Booth conclusion reverse three moves",
+        "reverse order" in elevated
+        and "more fully" in elevated
+        and "keep the conversation alive" in elevated,
+    )
+    require(
+        "discussion-review audits the reverse three moves symmetrically",
+        "反向三步" in discussion_review
+        and "新** significance" in discussion_review
+        and "limitations-elevated-plane.md" in discussion_review,
+    )
+    require(
+        "stakes index adds the cost-vs-benefit allocation rule",
+        "motivated by a real cost" in stakes_index
+        and "intensify your solution" in stakes_index
+        and "So-what 测试" in stakes_index,
+    )
+
 
     runtime_names = (
         "diagnose-introduction",

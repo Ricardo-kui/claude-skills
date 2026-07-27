@@ -2,6 +2,8 @@
 
 ### R4. 交互效应 / 条件效应
 
+> **图设计纪律**：交互效应图的纵轴起点、方向选择与"论点明言"规则（"If the table or figure supports a point, state it"）见 `visual-evidence.md` §1/§5——截断纵轴会夸大两线斜率差异，若非零点起标必须在 caption 或正文明示。
+
 > **上游接口**：在解释交互效应前，先确认 `/write-theory` 和 `/write-methods` M7补充 已明确该假设是 **differential prediction**（slope/nature 改变）还是 **differential validity**（strength/correlation 改变）。默认 R4 模板适用于 differential prediction；若 Theory 声明为 differential validity，使用下方的专用变体。
 
 **通用填空段落**：
