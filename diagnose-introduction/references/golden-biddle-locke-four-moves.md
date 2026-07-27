@@ -14,7 +14,7 @@ fields:
 |---|---|---|
 | 1. Articulate significance | `puzzle`, `story.stakes.theoretical`, `jtbd.gain_or_pain` | The study is contextualized in a consequential phenomenon or theoretical problem, not merely labeled important. |
 | 2. Situate the study in literature | `conversation_strategy`, `jtbd.target_audience`, audience common ground | The selected literature is organized as Synthesized, Progressive, or Non-Coherence and establishes a specific disciplinary conversation. |
-| 3. Problematize the literature | `gap_type`, `risk`, `jtbd.gain_or_pain` | The diagnosed limitation changes what the literature can explain and is supported without a straw-man construction. |
+| 3. Problematize the literature | `gap_type`, `risk`, `jtbd.gain_or_pain` | The diagnosed limitation changes what the literature can explain and is supported without a straw-man construction (operational criteria: see §Outer Limits below). |
 | 4. Foreshadow the response | `story.storylines[].promised_resolution`, `story.reader_shift`, Introduction preview and contribution contract | The proposed theory, question, design, or evidence directly occupies the research space created by Move 3. |
 
 Use these exact taxonomy mappings:
