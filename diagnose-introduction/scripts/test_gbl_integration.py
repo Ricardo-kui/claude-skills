@@ -179,6 +179,19 @@ def main() -> int:
         and "Multivocality 风险" in preview
         and "gbl-r-and-r-dynamics.md" in preview,
     )
+    require(
+        "paper-review routes decision letters to revision-coach",
+        "已收到决定信/审稿意见" in preview and "/revision-coach" in preview,
+    )
+    require(
+        "revision-coach anchors storyline decisions in the story contract",
+        "story contract 锚点" in coach and "/paper-story-contract" in coach,
+    )
+    require(
+        "revision-coach hands off roadmap rows as work orders",
+        "工单" in coach,
+    )
+
 
     runtime_names = (
         "diagnose-introduction",

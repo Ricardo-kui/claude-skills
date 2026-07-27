@@ -22,6 +22,12 @@ description: 顶刊量化论文全稿总控审查。输入论文文件路径或�
 
 **如果未提供内容**：进入交互模式请求论文文本。
 
+**如果输入是审稿意见/决定信而非稿件**：本 Skill 是投稿前预审，不处理 R&R——直接路由：
+```
+/revision-coach
+[粘贴审稿意见 + 决定信]
+```
+
 ## 前置检查
 
 - [ ] 用户已提供论文全文或主要 section
@@ -167,6 +173,7 @@ description: 顶刊量化论文全稿总控审查。输入论文文件路径或�
 | Discussion 最弱 | `discussion-review` | `/discussion-review <文件路径>` |
 | 跨 Section 不一致 | 本 Skill 已覆盖（Step 1b 对齐检查） | 见输出中的"断裂识别" |
 | 全稿深度 QC | `pollock-qc` | `/pollock-qc all <文件路径>` |
+| 已收到决定信/审稿意见（R&R 阶段） | `revision-coach` | `/revision-coach`（模式 A 解析规划 / 模式 B 回复体检） |
 
 **路由逻辑**：
 - 如果 Knot 不清晰或 story contract 内部矛盾 → 优先 `paper-story-contract`

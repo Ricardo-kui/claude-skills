@@ -43,8 +43,16 @@ description: Use when the user receives peer-reviewer comments or a decision let
 7. **生成路线图 + 回复骨架** — 见 `references/roadmap-and-response-template.md`;给出修改顺序建议与工作量估计(Light / Moderate / Substantial / Fundamental)。
 8. **交给作者确认** — 先把解析结果交作者核对,再产出最终路线图;有 NEEDS_CLARIFICATION 的条目必须先问清。
 
+## Storyline 级意见的 story contract 锚点(与 write 栈协同)
+
+审稿人要求收窄/重定位 storyline 时(见 `references/gbl-r-and-r-dynamics.md` §1.2–1.3),处置前先读项目 `paper-state.yaml` 的 canonical `story`(如不存在,经 `/paper-story-contract` 反向诊断一个 provisional contract):
+
+- **与 contract 冲突**(要求换掉 central knot / 主角 / 核心 storyline)→ R3 抵抗候选:向作者呈现冲突点、抵抗姿态(§3-B 句式)与风险,由作者拍板。
+- **不冲突**(在既有 story 内收窄聚焦)→ 接受,并在路线图中标注"修改完成后同步更新 story contract",防止 contract 与修订稿漂移。
+- 无 paper-state.yaml 的项目:跳过本锚点,按现有流程(不降级)。
+
 ## 与你已有栈的分工
-- **实际重写正文某节**:路线图产出后,逐节交给 `write-introduction` / `write-theory` / `write-methods` / `write-results` / `write-discussion`;语言润色与去 AI 味交 `humanizer` / `proofread`。
+- **实际重写正文某节**:路线图产出后,逐节交给 `write-introduction` / `write-theory` / `write-methods` / `write-results` / `write-discussion`;语言润色与去 AI 味交 `humanizer` / `proofread`。**路线图的每一行就是交给下游的工单**——"意见转述 + 责任节 + 兑现证据位置"三列原样传给对应 write-*/review skill,不重新转述(保留审稿人原意)。修改 storyline 的工单必须先过上面的 story contract 锚点。
 - **实证类要求**(重跑回归、换识别、加稳健性):交 `causal-analysis`(再路由到 `did-analysis` / `econometrics-agent` / `stata-regression`),或规格搜索交 `xianzhu-skill`。
 - **整体投稿前 QC**:交 `pollock-qc` / `paper-review`。
 - 本 skill 只产出"改什么、按什么顺序、回复怎么搭骨架、回复体检",不越界做上面这些事。
