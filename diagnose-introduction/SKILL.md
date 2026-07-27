@@ -1,7 +1,6 @@
 ---
 name: diagnose-introduction
-description: 根据用户的研究描述，诊断 Gap/Problematization 类型、Makadok 贡献维度和推荐 Hook 类型。通过 MVP30 范文类比（28篇），输出结构化的诊断报告，供下游 Skill 直接消费。
-version: 1.3.0
+description: 根据用户的研究描述，诊断 Gap/Problematization 类型、Makadok 贡献维度、Hook 策略与 Golden-Biddle & Locke Four-Move 理论化故事线对齐。通过 MVP30 范文类比（28篇），输出供下游 Skill 直接消费的结构化报告。
 ---
 
 # Role
@@ -42,6 +41,7 @@ version: 1.3.0
 - `references/gap-diagnostic-decision-tree.md` — Gap 类型三级决策树和架构特定线索
 - `references/makadok-dimensions.md` — 八维度贡献诊断表和自然语言匹配模式
 - `references/hook-recommendations.md` — 按 Gap 强度和期刊风格的 Hook 策略
+- `references/golden-biddle-locke-four-moves.md` — Four-Move 对齐、现有字段映射与采用边界
 
 ### Step 2: 范文匹配
 
@@ -176,6 +176,22 @@ version: 1.3.0
 - 检查研究描述中提出的贡献承诺，是否能在给定的理论、数据和方法下兑现
 - 标记是否存在”承诺过度”（overclaiming）风险
 
+### Step 7: Golden-Biddle & Locke Four-Move 对齐
+
+读取 `references/golden-biddle-locke-four-moves.md`，默认对所有管理学
+Introduction 执行轻量检查。不要新增 Gap 或 Conversation 分类：
+
+1. 用 Puzzle、Stakes 与 JTBD gain/pain 检查 **significance**。
+2. 用 Audience 与 `conversation_strategy` 检查 **literature situation**。
+3. 用 `gap_type`、理论后果与核心风险检查 **problematization**。
+4. 用拟议理论答案、`promised_resolution`、reader shift 与 contribution
+   promise 检查 **response foreshadowing**。
+
+每项仅输出 `pass | partial | missing`。若研究描述没有 paper-state，
+根据现有描述评估 Move 4；证据不足时标记 `partial` 或 `missing`，不得补写
+发现。定性/过程研究可进一步使用 theorized storyline 解释 field
+engagement 如何转化为学科贡献；量化研究只使用四步功能检查。
+
 ## Output Format
 
 ```
@@ -226,7 +242,19 @@ version: 1.3.0
 **Gain/Pain 具体性判断**：...
 **Claim fit 初步评估**：...
 
-### 7. 下一步
+### 7. GBL Four-Move 对齐
+
+| Move | 状态 | 依据或缺口 |
+|------|------|------------|
+| Significance | [pass / partial / missing] | ... |
+| Literature situation | [pass / partial / missing] | ... |
+| Problematization | [pass / partial / missing] | ... |
+| Response foreshadow | [pass / partial / missing] | ... |
+
+**总体状态**：[aligned / partial / incomplete]
+**优先修复**：[只列一个最重要修复]
+
+### 8. 下一步
 **直接调用写作 Skill**：
 ```
 /write-introduction [Gap类型] [贡献维度]
@@ -244,6 +272,7 @@ version: 1.3.0
 ### 机器可读字段
 
 ```yaml
+diagnostic_schema_version: 2        # 必填. 当前版本为 2
 gap_type: "Incompleteness"        # 必填. 取值: Incompleteness | Inadequacy | Incommensurability
 gap_strength: "低"                 # 必填. 取值: 低 | 中 | 高
 conversation_strategy: "Progressive Coherence"  # 必填. 取值: Progressive Coherence | Synthesized Coherence | Non-Coherence
@@ -265,7 +294,21 @@ jtbd:                             # JTBD 6-Block 交叉诊断
   gain_or_pain: "如果不考虑组织惯例更新机制，就无法解释为何有些企业数字化转型成功而有些失败"  # 具体 gain/pain 描述
   pain_specificity: "高"           # 必填. 取值: 高 | 中 | 低
   claim_fit: "是"                 # 必填. 取值: 是 | 否 | 部分
+gbl_four_moves:
+  significance: "pass"            # 必填. 取值: pass | partial | missing
+  literature_situation: "pass"    # 必填. 取值: pass | partial | missing
+  problematization: "pass"        # 必填. 取值: pass | partial | missing
+  response_foreshadow: "pass"     # 必填. 取值: pass | partial | missing
+  overall: "aligned"              # 必填. 取值: aligned | partial | incomplete
+  repair_priority: "说明组织惯例更新如何直接回答机制缺口"  # 必填. 只列一个修复
 ```
+
+兼容规则：
+
+- 缺少 `diagnostic_schema_version` 时按旧版输入读取；若没有
+  `gbl_four_moves`，由 `/write-introduction` 使用现有字段推导。
+- `diagnostic_schema_version: 2` 使用上述接口。
+- 遇到大于 `2` 的未知版本时停止自动消费并提示重新运行诊断，不猜测字段语义。
 
 ### 消费方式
 
@@ -278,78 +321,7 @@ jtbd:                             # JTBD 6-Block 交叉诊断
 
 ## 完整示例
 
-### 输入
-```
-/diagnose-introduction
-研究描述：我的研究探讨企业数字化转型如何影响创新绩效。现有文献主要从技术采纳视角研究数字化转型的直接效应，但忽略了组织内部惯例更新作为中介机制的作用。基于组织惯例理论，我们发现数字化转型通过促进组织惯例更新来提升创新绩效。
---journal=SMJ
-```
-
-### 输出
-```
-## Introduction 诊断报告
-
-### 1. 范文匹配
-| 匹配排名 | 范文 | 期刊 | 匹配理由 |
-|---------|------|------|---------|
-| 1 | **Wu 2025** | SMJ | 同期刊；自然实验/制度冲击背景；机制缺口（stakeholder activism → proactive self-regulation）；从直接效应到机制探索的叙事 |
-| 2 | **Malshe 2015** | JM | 跨学科桥接（finance → marketing）；三原因缺口论证结构 |
-
-### 2. Gap / Problematization 诊断
-- **诊断结果**: Incompleteness
-- **强度**: 低
-- **Conversation 策略**: Progressive Coherence
-- **标志性语言**: "the mechanism through which [X] affects [Y] remains unclear"
-- **核心风险**: Incompleteness 最容易被解读为增量研究。必须在 Problematization 中解释：为什么"组织惯例更新"的缺失是一个理论上重要的遗漏（omission），而不仅仅是"few studies have examined"。建议论证：如果不考虑这个机制，就无法解释为什么有些企业数字化转型成功而有些失败。
-
-### 3. Makadok 贡献维度诊断
-- **诊断结果**: Mechanism
-- **核心 lever**: Why
-- **Introduction 声明句式**: "We explain why digital transformation affects firm innovation performance by identifying organizational routine updating as the mediating mechanism..."
-
-### 4. Hook 推荐
-- **推荐策略**: Cold-start definition（从数字化转型的学术定义出发，温和建立领域）或 trend data（引用行业数字化渗透率数据建立现实重要性）
-- **期刊风格提示**: SMJ 偏好冷静、专业的开场。避免戏剧性 anecdote。Consensus challenge 需要具体反例支撑。
-
-### 5. JTBD 6-Block 交叉诊断（Simsek & Li, 2022）
-
-| Block | 诊断结果 | 具体性/对齐度 |
-|-------|---------|--------------|
-| 1. Target audience | 技术战略与组织理论学者（关注数字化转型的学术社群） | — |
-| 2. Progress/challenges | 现有文献已充分建立技术采纳→创新绩效的直接效应语境 | 已建立 |
-| 3. Gain/pain | 如果不考虑组织惯例更新机制，就无法解释为何有些企业数字化转型成功而有些失败 | **高** |
-| 4. Proposed solution | 组织惯例理论作为解释机制，与 gain/pain 直接对齐 | 对齐 |
-| 5. Credibility | 组织惯例理论已提前交代；实证情境（企业样本）暗示方法可信度 | 已交代 |
-| 6. Implications | 贡献回到 entrepreneurship/technology strategy 学者（非 broad claims） | 回到受众 |
-
-**Gain/Pain 具体性判断**：高。Gap 被表述为“无法解释差异化结果”的理论遗漏，而非 generic "few studies"。
-**Claim fit 初步评估**：是。提出的机制（组织惯例更新）与理论视角（组织惯例理论）和实证发现（中介效应显著）一致，承诺可兑现。
-
-### 6. 下一步
-```
-/write-introduction Incompleteness Mechanism
-研究描述：数字化转型对企业创新绩效的影响，现有文献关注技术采纳的直接效应，但忽略了组织惯例更新的中介机制。
-```
-```
-
-### 输出接口契约
-```yaml
-gap_type: "Incompleteness"
-gap_strength: "低"
-conversation_strategy: "Progressive Coherence"
-makadok_dimension: "Mechanism"
-core_lever: "Why"
-exemplar_paper: "Wu 2025"
-exemplar_journal: "SMJ"
-hook_strategy: "Cold-start definition"
-target_journal: "SMJ"
-risk: "最容易被解读为增量研究；必须解释遗漏的理论重要性"
-jtbd:
-  target_audience: "技术战略与组织理论学者"
-  gain_or_pain: "如果不考虑组织惯例更新机制，就无法解释为何有些企业数字化转型成功而有些失败"
-  pain_specificity: "高"
-  claim_fit: "是"
-```
+仅在需要端到端示例时读取 `references/complete-example.md`。常规诊断不要预加载。
 
 ## Constraints
 
@@ -358,6 +330,10 @@ jtbd:
 - 必须提醒用户每种 Gap 类型的**核心风险**。
 - 必须说明范例仅为参照，不是让用户直接模仿，而是学习其**叙事逻辑**。
 - 输出必须包含**机器可读的 YAML 字段区块**，确保下游 Skill 可自动解析。
+- Four-Move 检查默认执行，但不得新增平行 Gap/Conversation taxonomy 或
+  GBL 专属 paper-state 字段。
+- Four Moves 是功能动作，不是固定段落模板；不得要求一段对应一个 move。
+- 机器接口必须输出 `diagnostic_schema_version: 2`；未知更高版本不得静默消费。
 - 如果无法确定 Gap 类型（描述过于模糊），明确告知用户需要补充哪些信息。
 
 ## 资产位置
@@ -367,3 +343,5 @@ jtbd:
 - `references/gap-diagnostic-decision-tree.md` — Gap 类型三级决策树 + 架构特定诊断线索
 - `references/makadok-dimensions.md` — Makadok 八维度贡献诊断表 + 自然语言信号
 - `references/hook-recommendations.md` — 按 Gap 强度和期刊风格的 Hook 推荐
+- `references/golden-biddle-locke-four-moves.md` — Four-Move 理论化故事线对齐与边界
+- `references/complete-example.md` — 端到端诊断示例（仅在需要示例时读取）

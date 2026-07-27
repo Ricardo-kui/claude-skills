@@ -1,4 +1,6 @@
 interface:
   display_name: "Diagnose Introduction"
-  short_description: "Diagnose gap type, Makadok dimension, and hook strategy for academic introductions."
-  default_prompt: "Use $diagnose-introduction to diagnose the gap type, contribution dimension, and recommended hook strategy for this paper."
+  short_description: "Diagnose gaps and Four-Move storyline alignment"
+  default_prompt: "Use $diagnose-introduction to diagnose this paper's gap, contribution, hook, and Four-Move storyline alignment."
+policy:
+  allow_implicit_invocation: true

@@ -18,8 +18,8 @@ This compatibility skill must not:
 
 ## Handling
 
-- If the user provides an existing Discussion draft, route it to `$discussion-review`.
+- If the user provides an existing Discussion draft, route it to `/discussion-review`.
 - If the user requests a new Discussion, state that this Pollock stack supports Introduction, Theory, Methods, and Results writing only.
-- If a whole manuscript is supplied, `$paper-review` or `$pollock-qc` may still diagnose whether the existing Discussion delivers the paper's contribution.
+- If a whole manuscript is supplied, `/paper-review` or `/pollock-qc` may still diagnose whether the existing Discussion delivers the paper's contribution.
 
 Legacy assets remain on disk only for path compatibility and historical recovery. They are not active writing guidance.

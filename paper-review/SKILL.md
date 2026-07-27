@@ -35,7 +35,7 @@ description: 顶刊量化论文全稿总控审查。输入论文文件路径或�
 
 ### Step 0: Canonical Story Contract 审计
 
-先读取 `paper-state.yaml` 的 `story` 并使用 `$paper-story-contract` 的 schema 与 stage gate：
+先读取 `paper-state.yaml` 的 `story` 并使用 `/paper-story-contract` 的 schema 与 stage gate：
 
 - 若 contract 存在，比较 manuscript evidence 与 `theme_question`、`central_knot`、characters、storylines 和 evidence state。
 - 若 contract 缺失，从全稿反向诊断一个 `provisional` contract，并明确标记推断；不把诊断结果静默写回。

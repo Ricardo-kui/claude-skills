@@ -1,7 +1,7 @@
 ---
 name: write-introduction
 description: |
-  Introduction 写作顾问。基于 Gap 类型和 Makadok 贡献维度，推荐段落结构、Hook/Tension/Stakes 句式骨架，并提供来自顶刊范文的句法模板和反模式提醒。
+  Introduction 写作顾问。基于 Gap 类型和 Makadok 贡献维度，推荐段落结构、Hook/Tension/Stakes 句式骨架，执行 Golden-Biddle & Locke Four-Move 理论化故事线对齐，并提供来自顶刊范文的句法模板和反模式提醒。
   触发词：「写introduction」「intro模板」「引言怎么写」「帮我写intro」「introduction skeleton」「写引言」「hook怎么写」「gap怎么写」「贡献声明」「problematization」。
   蒸馏/拆解 introduction 范文（「蒸馏 intro」「intro 范文分析」）不属本 skill——自动路由到 `distill-introduction-exemplar`；审查已有草稿用 `intro-review`；写前深度诊断用 `diagnose-introduction`。
 ---
@@ -17,14 +17,14 @@ description: |
 调用方式：
 
 ```text
-$write-introduction <研究描述或文件> [--mode=introduction|front-end|align] [--paper-state=<path>]
+/write-introduction <研究描述或文件> [--mode=introduction|front-end|align] [--paper-state=<path>]
 ```
 
 - `introduction`（默认）：生成 Introduction 功能骨架。
 - `front-end`：同时生成标题候选、Abstract 骨架、Introduction promise 与三者对齐表；按需读取 `references/front-end-mode.md`。
 - `align`：只审查已有 Title–Abstract–Introduction 是否兑现同一个 promise，不生成新正文。
 
-完整骨架生成前，先调用或执行 `$paper-story-contract` 的门控，读取 canonical `story`。如果只有旧版 `introduction.theory_hints.central_knot_statement` 等字段，按 `../paper-story-contract/references/schema.md` 迁移并标记 `provisional`。
+完整骨架生成前，先调用或执行 `/paper-story-contract` 的门控，读取 canonical `story`。如果只有旧版 `introduction.theory_hints.central_knot_statement` 等字段，按 `../paper-story-contract/references/schema.md` 迁移并标记 `provisional`。
 
 完整 Introduction 或 front-end 输出额外要求：
 
@@ -42,6 +42,29 @@ $write-introduction <研究描述或文件> [--mode=introduction|front-end|align
 如果用户未明确 Gap 类型或贡献维度，用两个问题快速判断：
 1. 你的研究是对已有文献的**补充**（Incompleteness）、**修正**（Inadequacy）还是**颠覆**（Incommensurability）？
 2. 已有文献的主要问题是什么——漏了东西、理解偏了、还是自相矛盾？
+
+### Phase 1.1: GBL Four-Move 对齐
+
+完整 Introduction、`front-end` 或 `align` 输出均读取
+`../diagnose-introduction/references/golden-biddle-locke-four-moves.md`。
+若上游 `/diagnose-introduction` 提供了 `gbl_four_moves`，先消费该块；否则
+从 canonical `story`、Gap 诊断、Audience 与 contribution promise 推导。
+接受缺失 `diagnostic_schema_version` 的旧诊断输出；版本为 `2` 时读取
+`gbl_four_moves`；遇到大于 `2` 的未知版本时停止自动消费并提示重新诊断。
+
+默认执行轻量 Four-Move 检查：
+
+| Move | Introduction 功能 |
+|------|-------------------|
+| Significance | Hook + Stakes |
+| Literature situation | Literature Turn |
+| Problematization | Tension + theoretical consequence |
+| Response foreshadow | Theory Lens + RQ/Preview + Contribution |
+
+Four Moves 不构成新写作模式，也不写入 `paper-state.yaml`。缺失 move 时，在
+骨架中保留证据占位符并给出一个优先修复；不得用 GBL 检查绕过故事阶段或证据
+门控。定性/过程研究可进一步检查 field engagement 是否被转化为一条面向学科
+读者的 theorized storyline；量化研究不强制使用 field-story 语言。
 
 ### Phase 1.5: Vault 基线检索（可选——仅在 paper-state.yaml 有 vault 配置时执行）
 
@@ -165,6 +188,17 @@ paper-state.yaml 中 paper.vault 是否有配置?
 - Tension `[id]`: ROBUST/VERIFIED/EMERGING（N papers, N journals）
 - Stakes `[id]`: ROBUST/VERIFIED/EMERGING（N papers）[如 Stakes 未被跳过]
 - Literature Turn `[策略名]`: ROBUST/VERIFIED/EMERGING（N papers）
+
+### GBL Four-Move 对齐
+| Move | 状态 | 对应段落功能 | 修复 |
+|------|------|--------------|------|
+| Significance | [pass / partial / missing] | [Hook/Stakes] | [...] |
+| Literature situation | [pass / partial / missing] | [Literature Turn] | [...] |
+| Problematization | [pass / partial / missing] | [Tension] | [...] |
+| Response foreshadow | [pass / partial / missing] | [Theory Lens/RQ/Preview/Contribution] | [...] |
+
+**总体状态**：[aligned / partial / incomplete]
+**优先修复**：[只列一个最重要修复]
 
 ---
 
@@ -358,5 +392,9 @@ pontikes2012 通过示例：market-taker 和 market-maker **不是组织的属�
 - **两步读取**: 选择阶段读 `_routing_tables.yaml` + `_evidence_registry.yaml`；渲染阶段读对应 corpus 文件。
 - **注册表不存在时回退**到 `_routing_tables.yaml` 的静态推荐，不中断输出。
 - **如用户提及目标期刊**：按期刊适配表给出针对性建议。期刊差异优先于通用规则。
+- **默认执行 Four-Move 对齐**：复用现有 Gap、Conversation、storyline 与
+  contribution 字段；不得新增平行 taxonomy 或 GBL 专属 paper-state 字段。
+- **Four Moves 是功能而非段数**：不得机械要求一段一个 move；按期刊和
+  Introduction 长度合并功能。
 - **Prose Craft 为推荐非硬性要求**: Human Face、Showing vs Telling、Conversational Voice 是 Pollock 的最佳实践建议，按期刊风格灵活适用——ASQ/AMJ 严格，JMS/JOM 宽松。段落级 architecture（PEEL/PEAL、paragraph length、topic sentence placement、coherence）参见 `academic-writing-corpus/storytelling/prose-craft-checklist.md` §0；句子级 transition 信号词参见 `academic-writing-corpus/micro-templates/transition-signals.md`。
 - **输出末尾追加 paper-state.yaml 片段**：在 Introduction 骨架输出末尾，自动附加 `### paper-state.yaml 片段` 块。该片段供下游技能（write-theory Phase 0、write-methods Phase 1、write-results Phase 0）自动消费。用户复制到项目 `paper-state.yaml` 的 `introduction:` 节下。如用户未提及 paper-state.yaml 协议，该片段的 YAML 注释头应包含使用说明。

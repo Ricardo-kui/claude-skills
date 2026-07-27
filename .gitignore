@@ -53,6 +53,7 @@
 # Track user's loose files
 !empirical-writeup.md
 !methods_results_quality_check.py
+!paper-state-protocol.md
 !paper-writing-stack.md
 
 # Exclude Python cache and backup files

@@ -12,7 +12,7 @@ Maintain the paper's shared storytelling state. Diagnose the story before sectio
 ## Invocation
 
 ```text
-$paper-story-contract <paper-state path, manuscript path, or research description>
+/paper-story-contract <paper-state path, manuscript path, or research description>
   [--mode=create|audit]
   [--stage=auto|preparing|blocking|refining|finishing]
 ```

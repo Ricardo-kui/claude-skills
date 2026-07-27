@@ -36,11 +36,25 @@ First load `../academic-writing-corpus/storytelling/reader-conversion-sequence.m
 | Main characters | | | | |
 | Promised resolution | | | | |
 | Reader shift | | | | |
+
+## GBL Four-Move Alignment
+| Move | Front-end evidence | Status | Repair |
+|---|---|---|---|
+| Significance | [Title/Abstract/Introduction evidence] | [pass/partial/missing] | |
+| Literature situation | [Abstract/Introduction evidence] | [pass/partial/missing] | |
+| Problematization | [Abstract/Introduction evidence] | [pass/partial/missing] | |
+| Response foreshadow | [Abstract/Introduction promise or evidence placeholder] | [pass/partial/missing] | |
+
+Overall: [aligned / partial / incomplete]
+Repair priority: [one repair]
 ```
 
 ## Evidence Boundary
 
 - If `story.evidence_state: unstable`, use `[headline finding pending]`.
 - If evidence is mixed, state the mixed pattern without converting it into a clean success claim.
+- Unstable evidence does not automatically fail response foreshadowing. A
+  theory, question, design, or explicit result placeholder may occupy the
+  research space without inventing a finding.
 - Do not place a contribution in the Title that the Abstract or Introduction cannot defend.
 - `--mode=align` reports mismatches and repairs the promise; it does not generate a replacement manuscript.

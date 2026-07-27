@@ -39,7 +39,7 @@ description: 按 Pollock 2025 框架进行全稿或指定 Section 的快速 QC �
 
 ### Step 0: Story Contract 快速门控
 
-如果存在 `paper-state.yaml`，先核对 canonical `story` 的 theme question、central knot、characters、storylines、stage 与 evidence state；如缺失则标记“未建立 story contract”，并把 `$paper-story-contract` 作为首要修复。Discussion 只在用户提供现有草稿时评分，本 QC 不生成 Discussion。
+如果存在 `paper-state.yaml`，先核对 canonical `story` 的 theme question、central knot、characters、storylines、stage 与 evidence state；如缺失则标记“未建立 story contract”，并把 `/paper-story-contract` 作为首要修复。Discussion 只在用户提供现有草稿时评分，本 QC 不生成 Discussion。
 
 ### Step 1: 判断参数
 
