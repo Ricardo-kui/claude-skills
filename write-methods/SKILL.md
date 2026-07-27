@@ -149,6 +149,8 @@ description: |
 
 **句法微模板（可选增强）**：`econometric-models/micro-templates/` 提供 18 类句法级微模板（段首锚定、because 从句、因果动词梯度、识别/稳健性预告、变量操作化句式等），在骨架 `[placeholder]` 之下为关键句法位置提供 2–3 个备选措辞，避免跨论文表达同质化。**加载规则**：仅在用户要求表达润色/句法多样化，或默认措辞与用户情境不匹配时，按 `econometric-models/micro-templates/INDEX.md` 的「分类索引」槽位映射表选读对应的 1–3 个文件——不要一次全读。高风险微模板（如强因果动词）只能在对应设计强度的骨架中使用。
 
+**过程描述变化库（auxiliary）**：过程叙述的句子级变化（sequence words / infinitive of purpose / using+instrument / 统计程序动词变化）另见 `../write-introduction/academic-writing-corpus/phrasebank/methods-process.md`（Morley 收割，auxiliary 层）。加载规则同微模板：仅润色/防同质化时选读，且**不得**用它替代微模板覆盖的功能（方法选择理由、识别论证、因果梯度）。
+
 ---
 
 ## 下游接口

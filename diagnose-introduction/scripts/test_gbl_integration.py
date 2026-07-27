@@ -608,6 +608,52 @@ def main() -> int:
         "§5.7" in soundness and "§5.7" in phase3,
     )
 
+    pb_methods = read(
+        "write-introduction/academic-writing-corpus/phrasebank/methods-process.md"
+    )
+    pb_quant = read(
+        "write-introduction/academic-writing-corpus/phrasebank/quantities-trends.md"
+    )
+    methods_skill = read("write-methods/SKILL.md")
+    event_study = read("write-results/econometric-models/事件研究法.md")
+
+    require(
+        "phrasebank files carry the auxiliary-tier metadata",
+        "source_tier: auxiliary" in pb_methods
+        and "top_journal_validated: false" in pb_methods
+        and "source_tier: auxiliary" in pb_quant
+        and "top_journal_validated: false" in pb_quant,
+    )
+    require(
+        "phrasebank files encode the usage rules and specificity gate",
+        "Specificity gate" in pb_methods
+        and "Specificity gate" in pb_quant
+        and "退役规则" in pb_methods
+        and "退役规则" in pb_quant,
+    )
+    require(
+        "methods-process covers the process-grammar toolbox",
+        "Prior to" in pb_methods
+        and "infinitive of purpose" in pb_methods.lower()
+        and "using + instrument" in pb_methods,
+    )
+    require(
+        "quantities-trends covers quantities, approximators, and trends",
+        "Just over" in pb_quant
+        and "ranged from" in pb_quant
+        and "peaked" in pb_quant,
+    )
+    require(
+        "quantities-trends bans redundant approximator-precision mixing",
+        "不得与精确数字同句并存" in pb_quant,
+    )
+    require(
+        "three consumer skills wire the phrasebank as auxiliary layer",
+        "phrasebank/methods-process.md" in methods_skill
+        and "phrasebank/quantities-trends.md" in results_skill
+        and "quantities-trends.md" in event_study,
+    )
+
 
     runtime_names = (
         "diagnose-introduction",

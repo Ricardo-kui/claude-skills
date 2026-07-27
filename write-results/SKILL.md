@@ -452,6 +452,7 @@ results:
 - 如果用户有具体的假设和模型，必须将其嵌入模板。
 - 每个表格/模型引用应指向用户的实际表格。
 - **表图设计纪律**：R2/R4/R7 涉及表格与图形设计时，遵循 `references/visual-evidence.md`（形式匹配效果 / 标题描述数据非主题 / 伦理四规则）；证据报告质量自检见 `references/evidence-standards.md`（五问审计）。
+- **措辞变化库（auxiliary）**：R1 描述性统计、样本数值转述与 R7/事件研究图的趋势描述，若默认措辞反复使用需防同质化，选读 `../write-introduction/academic-writing-corpus/phrasebank/quantities-trends.md`（Morley 收割，auxiliary 层；每位置 ≤2–3 候选，必须具体化，四拍与效应量解读仍归 slot 骨架）。
 - **输出末尾追加 paper-state.yaml 片段**：在 Results 骨架输出末尾，自动附加 `### paper-state.yaml 片段` 块。该片段包含 `results.estimator_family`、`results.hypothesis_results`、`results.story_resolution`、`results.key_findings`、`results.unexpected_findings`，供 paper-review 和 results-review 消费。
 
 ## 语料与变体
