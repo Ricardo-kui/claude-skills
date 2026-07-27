@@ -317,6 +317,61 @@ def main() -> int:
         and "reasoning_soundness_protocol.md" in theory_review,
     )
 
+    keyline = read(
+        "write-introduction/academic-writing-corpus/micro-templates/"
+        "key-line-patterns.md"
+    )
+    prose = read(
+        "write-introduction/academic-writing-corpus/storytelling/"
+        "prose-craft-checklist.md"
+    )
+    transitions_index = read(
+        "write-introduction/academic-writing-corpus/transitions/_index.md"
+    )
+
+    require(
+        "key-line patterns encode the three-type unified vocabulary",
+        all(
+            marker in keyline
+            for marker in ("总起式", "连接式", "总结式", "诊断分流")
+        ),
+    )
+    require(
+        "key-line patterns dissect the dual-element connecting syntax",
+        all(
+            marker in keyline
+            for marker in ("承上", "启下", "转折式", "递进式", "因果式", "并列式")
+        )
+        and "Provan & Milward" in keyline
+        and "Yang & Pandey" in keyline,
+    )
+    require(
+        "key-line patterns provide wrap corpus and the bookend variant",
+        "前后夹击" in keyline
+        and "Pitts & Fernandes" in keyline
+        and "abrupt stop" in keyline,
+    )
+    require(
+        "key-line patterns separate clarity from soundness and mark provenance",
+        "reasoning_soundness_protocol.md" in keyline
+        and "EMERGING" in keyline
+        and "虚假路标" in keyline
+        and "唐僧式重复" in keyline,
+    )
+    require(
+        "prose-craft points topic-sentence and coherence sections to key-line",
+        prose.count("key-line-patterns.md") >= 2,
+    )
+    require(
+        "phase-3 wrap check points to the wrap corpus",
+        "key-line-patterns.md" in phase3,
+    )
+    require(
+        "transitions index states the module-vs-sentence division of labor",
+        "key-line-patterns.md" in transitions_index
+        and "模块级" in transitions_index,
+    )
+
 
     runtime_names = (
         "diagnose-introduction",

@@ -109,6 +109,8 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 
 **禁止（仅说服体裁）**: 段首 3 句以上仍未出现 topic sentence（严重 Burying the Lead）。**适用范围：Introduction / Theory / Discussion**。Methods/Results 段落的假设重述-first（"Hypothesis 1 predicted..."）、table-first（"Table 2 reports..."）、procedure-first（"We began with..."）开头不受此限——这些是审计体裁的合法段首（见 §0.0），其"topic sentence"等效物是段尾的支持判断。
 
+> **Key line 三分法词汇**：总起式 key line = 本节的 topic sentence；连接式 key line（承上+启下双要素句法）与总结式 key line（段末 wrap 正面语料）见 `../micro-templates/key-line-patterns.md`。"缺乏条理/没有 key line"类诊断按三分法分流修复。
+
 ---
 
 ### 0.4 Topic Sentence 的 5 种类型
@@ -128,7 +130,7 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 1. **重复关键词或短语**：在定义或识别重要概念时保持引用一致
 2. **创建平行结构**：连续句子使用相同语法结构，帮助读者看到观点联系
 3. **保持视角、时态、数的一致**：避免在 you/one、past/present、a man/they 之间跳跃
-4. **使用 transition 信号词**：明确句子间逻辑关系——分类词表（递进/举例/比较/对比/因果/总结/时间，Indiana WTS）、学术偏好标注与按目的快速选择表见 `../micro-templates/transition-signals.md`；每段 1–2 个 explicit transition 足够，优先 subtle transition（关键词重复、代词回指、平行结构）
+4. **使用 transition 信号词**：明确句子间逻辑关系——分类词表（递进/举例/比较/对比/因果/总结/时间，Indiana WTS）、学术偏好标注与按目的快速选择表见 `../micro-templates/transition-signals.md`；每段 1–2 个 explicit transition 足够，优先 subtle transition（关键词重复、代词回指、平行结构）。**段际衔接**（连接式 key line 的承上+启下双要素句法：转折/递进/因果/并列四型）见 `../micro-templates/key-line-patterns.md` §2
 
 **避免逻辑跳跃**（L1 底线）：不要假设读者已经知道你在想什么（对应 **Read my Mind** 检查）；每个推理步骤用至少一句话说明。但句句相连 ≠ 论证成立——下方诊断把"逻辑紧实度"从这条 L1 底线升级为可操作的两层测试。
 

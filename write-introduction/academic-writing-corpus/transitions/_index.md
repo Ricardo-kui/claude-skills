@@ -2,6 +2,8 @@
 
 本索引收录所有 Transition 变体，按功能分组。Transition 在 Introduction 中承担段落之间的逻辑衔接功能：从 Hook 到文献、从文献到 Gap、从 Gap 到 Theory/Methods 等。
 
+> **层级分工**：本目录是**模块级** transition（段落功能转换）。**句级**衔接两层：连接词选词见 `../micro-templates/transition-signals.md`；连接式 key line 的承上+启下双要素句法（转折/递进/因果/并列四型）与总结式 key line 语料见 `../micro-templates/key-line-patterns.md`。
+
 ---
 
 ## 从现象到文献
