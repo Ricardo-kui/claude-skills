@@ -83,6 +83,62 @@ def main() -> int:
         and "without inventing a finding" in front_end,
     )
 
+    playbook = read(
+        "diagnose-introduction/references/intertextual-construction-playbook.md"
+    )
+    lit_index = read(
+        "write-introduction/academic-writing-corpus/literature-turns/_index.md"
+    )
+    tension = read(
+        "write-introduction/academic-writing-corpus/storytelling/"
+        "tension-escalation-protocol.md"
+    )
+
+    require(
+        "playbook covers all three coherence construction mechanisms",
+        all(
+            marker in playbook
+            for marker in ("交点重写", "过滤式推进", "对垒阵营")
+        ),
+    )
+    require(
+        "playbook provides the nine-combination design space",
+        "3×3" in playbook
+        and "默认对角线" in playbook
+        and "合法非对角组合" in playbook
+        and "可疑组合" in playbook,
+    )
+    require(
+        "playbook keeps the independence rule",
+        "不得由 `gap_type` 推出 `conversation_strategy`" in playbook,
+    )
+    require(
+        "straw-man passing condition is operationalized",
+        "Outer Limits" in reference
+        and "Representativeness" in reference
+        and "Attributability" in reference
+        and "Full-strength construction first" in reference,
+    )
+    require(
+        "literature-turns index no longer asserts one-to-one pairing",
+        "不存在一一对应" in lit_index
+        and "默认对角线" in lit_index
+        and "intertextual-construction-playbook.md" in lit_index,
+    )
+    require(
+        "tension-escalation records the dual-axis discipline",
+        "conversation_strategy" in tension
+        and "intertextual-construction-playbook.md" in tension,
+    )
+    require(
+        "diagnose skill wires the playbook on demand",
+        "intertextual-construction-playbook.md" in diagnose,
+    )
+    require(
+        "writer routes off-diagonal combinations through the playbook",
+        "intertextual-construction-playbook.md" in introduction,
+    )
+
     runtime_names = (
         "diagnose-introduction",
         "paper-story-contract",

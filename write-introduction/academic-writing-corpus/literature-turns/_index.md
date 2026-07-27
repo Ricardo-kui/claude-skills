@@ -12,13 +12,13 @@ description: Literature Turn 三种策略的路由图、速查表和跨 skill �
 
 Literature Turn（P2-P3）的核心功能是将 Hook 建立的注意力转化为学术对话。这不是文献综述，而是"将 Hook 中的张力重新框定为学术问题"。这个过渡的质量决定读者是否感觉 Hook 是"营销噱头"还是"真正的学术贡献起点"。
 
-三种策略对应三种 Gap 类型，各有不同的文献诊断和修辞逻辑。
+三种策略与三种 Gap 类型**不存在一一对应**（Locke & Golden-Biddle 1997 的核心发现）。下表是验证最充分的**默认对角线**组合；非对角合法组合（如 Synthesized × Incompleteness 的 wowak2025 型）与可疑组合见 `diagnose-introduction/references/intertextual-construction-playbook.md` §2 的 3×3 矩阵。策略选择服从文献真实状态与构造目的，不由 Gap 类型反推。
 
 ---
 
 ## 策略速查
 
-| 策略 | 文件 | Gap 类型 | 能量 | 核心逻辑 | 文献诊断 |
+| 策略 | 文件 | 默认 Gap 配对 | 能量 | 核心逻辑 | 文献诊断 |
 |------|------|---------|------|---------|---------|
 | **Progressive Coherence** | `01-progressive-coherence.md` | Incompleteness | 低–中 | "已有进展，但遗漏了 C" | 单一传统充分发展，自然留下空白 |
 | **Synthesized Coherence** | `02-synthesized-coherence.md` | Inadequacy | 中 | "多个传统各自合理，但在交汇处集体盲区" | 多个传统各自正确，但互不知晓 |
@@ -27,6 +27,8 @@ Literature Turn（P2-P3）的核心功能是将 Hook 建立的注意力转化为
 ---
 
 ## 路由决策树
+
+> 以下三条是默认对角线路由。若用户的研究状态不符合（如"两个成熟领域各自正确但从未交叉"），先查 3×3 矩阵的非对角组合，不要强行归入对角线。
 
 ```
 用户的研究对已有文献的主要诊断是什么？

@@ -22,7 +22,7 @@ source: Extracted from MVP30 narrative_analysis files
 
 P2 的功能：将 Hook 建立的注意力转化为学术对话。这不是文献综述，而是"将 Hook 中的张力重新框定为学术问题"。这个 Transition 的质量决定读者是否感觉 Hook 是"营销噱头"还是"真正的学术贡献起点"。
 
-三种 Conversation 策略对应三种 Gap 类型，各有不同的过渡句式。
+三种 Conversation 策略各有**默认配对**的 Gap 类型（对角线组合），但并非一一对应；非对角合法组合与构造机制见 `diagnose-introduction/references/intertextual-construction-playbook.md`。
 
 ---
 

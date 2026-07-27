@@ -70,6 +70,8 @@ Exposition → Early Rising Action → Rising Action → Late Rising Action → 
 
 ## Gap 类型与叙事弧线
 
+> **双轴纪律**：叙事弧线按 `gap_type` 选择（本节）；Literature Turn 的内部构造按 `conversation_strategy` 选择（`literature-turns/_index.md` + `diagnose-introduction/references/intertextual-construction-playbook.md` 的 3×3 矩阵）。两轴独立——弧线强度不由 Literature Turn 策略推出，反之亦然。
+
 ### Incompleteness（温和上升）
 
 **弧线特征**：

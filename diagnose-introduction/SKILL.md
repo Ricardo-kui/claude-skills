@@ -42,6 +42,7 @@ description: 根据用户的研究描述，诊断 Gap/Problematization 类型、
 - `references/makadok-dimensions.md` — 八维度贡献诊断表和自然语言匹配模式
 - `references/hook-recommendations.md` — 按 Gap 强度和期刊风格的 Hook 策略
 - `references/golden-biddle-locke-four-moves.md` — Four-Move 对齐、现有字段映射与采用边界
+- `references/intertextual-construction-playbook.md` — Literature Turn 构造机制 + 3×3 组合矩阵（仅在需要构造/修复 Literature Turn 或判断非对角组合时读取，不预加载）
 
 ### Step 2: 范文匹配
 
@@ -95,6 +96,11 @@ description: 根据用户的研究描述，诊断 Gap/Problematization 类型、
 - 共识挑战+反例 → 挑战元分析或广泛共识
 - 经典理论颠覆 → 挑战 Weber/Bourdieu 等经典
 - 2×2 构念辨析 → 将宽泛构念分解为亚型
+
+`gap_type` 与 `conversation_strategy` 独立诊断，不得互相反推。若两者不在
+默认对角线上（如 Synthesized × Incompleteness），读取
+`references/intertextual-construction-playbook.md` §2 的 3×3 矩阵核对组合
+合法性；可疑组合（Noncoherence × Incompleteness 等）先提示重新诊断。
 
 ### Step 4: Makadok 贡献维度诊断
 
@@ -343,5 +349,6 @@ gbl_four_moves:
 - `references/gap-diagnostic-decision-tree.md` — Gap 类型三级决策树 + 架构特定诊断线索
 - `references/makadok-dimensions.md` — Makadok 八维度贡献诊断表 + 自然语言信号
 - `references/hook-recommendations.md` — 按 Gap 强度和期刊风格的 Hook 推荐
-- `references/golden-biddle-locke-four-moves.md` — Four-Move 理论化故事线对齐与边界
+- `references/golden-biddle-locke-four-moves.md` — Four-Move 理论化故事线对齐与边界（含 §Outer Limits 稻草人判据）
+- `references/intertextual-construction-playbook.md` — Literature Turn 构造机制 + 3×3 组合矩阵（生成层上游，按需读取）
 - `references/complete-example.md` — 端到端诊断示例（仅在需要示例时读取）

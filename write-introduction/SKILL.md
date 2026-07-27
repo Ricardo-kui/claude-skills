@@ -139,7 +139,7 @@ paper-state.yaml 中 paper.vault 是否有配置?
 - Hook: `hooks/[canonical_id].md`
 - Tension: `tensions/[canonical_id].md`
 - Stakes: `stakes/[canonical_id].md`（除非满足跳过条件）
-- Literature Turn: `literature-turns/literature-turn-templates.md`（条件读取：满足「模块跳过指南」条件——≤5段 Intro 且 Hook 已充分展示跨文献流对话——时跳过）
+- Literature Turn: `literature-turns/literature-turn-templates.md`（条件读取：满足「模块跳过指南」条件——≤5段 Intro 且 Hook 已充分展示跨文献流对话——时跳过）。策略选择服从文献状态与构造目的，不由 gap_type 反推；非对角组合（如 Synthesized × Incompleteness）的合法性与构造机制见 `../diagnose-introduction/references/intertextual-construction-playbook.md` §2
 - Theory Lens: 先读 `theory-lens/_index.md` 的「按 Gap 类型选择 Theory Lens」定位，再读 `theory-lens/[canonical_id].md`（除非满足跳过条件）
 - Preview: 先读 `previews/_index.md` 文件清单定位，再读 `previews/[文件名].md`（除非满足跳过条件——极罕见，不建议完全跳过）
 - Research Question: `research-questions/[canonical_id].md`（仅当需要显式 RQ 时读取——如 JMS/JOM 目标期刊或反直觉发现需设问；见下方「Research Question」节）
