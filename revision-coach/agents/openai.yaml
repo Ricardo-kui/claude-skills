@@ -1,0 +1,4 @@
+interface:
+  display_name: Revision Coach
+  short_description: Parse reviewer comments into a revision roadmap + response letter skeleton, or audit an existing rebuttal for coverage gaps.
+  default_prompt: Use $revision-coach to parse R&R reviewer comments into a Revision Roadmap and Response-to-Reviewers skeleton, or to audit an existing rebuttal draft for missing comments and risk flags.
