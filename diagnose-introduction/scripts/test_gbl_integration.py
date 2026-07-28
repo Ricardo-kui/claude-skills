@@ -846,6 +846,30 @@ def main() -> int:
             and not codex_source_call.search(introduction)
             and has_codex_calls,
         )
+    # --- write-theory evidence registry wiring (added 2026-07-28) ---
+    theory_registry = read("write-theory/corpus/_evidence_registry.yaml")
+    theory_index = read("write-theory/corpus/_index.md")
+    theory_exemplar_p4 = read(
+        "distill-theory-exemplar/references/phase-4-validation-writeback.md"
+    )
+    require(
+        "theory registry wired into selection-stage consumption",
+        "_evidence_registry.yaml" in theory_index
+        and "_evidence_registry.yaml" in theory_skill
+        and "EMERGING" in theory_index,
+    )
+    require(
+        "distill-theory-exemplar writes back to theory registry",
+        "_evidence_registry.yaml" in theory_exemplar_p4
+        and "tfr_" in theory_exemplar_p4,
+    )
+    require(
+        "theory registry covers post-2026-07-22 auxiliary distills",
+        "booth_williams_colomb_2016_craft" in theory_registry
+        and "greene_lidinsky_2017" in theory_registry
+        and "rogerian_four_step_deescalation" in theory_registry
+        and "fallacy_probes_management_translation" in theory_registry,
+    )
     # --- write-theory cross-reference link resolution (added 2026-07-28) ---
     # Catches paths dead under every resolution base (file-relative, skill-root,
     # package-root). Bare basenames without '/' are prose mentions and exempt.

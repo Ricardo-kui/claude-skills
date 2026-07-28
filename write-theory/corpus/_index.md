@@ -4,6 +4,19 @@
 
 ---
 
+## 证据注册表（模式验证状态，选择阶段查询）
+
+[`_evidence_registry.yaml`](_evidence_registry.yaml) 登记每个语料模式的来源论文与验证状态：
+
+- **ROBUST**（5+ 论文、2+ 子领域）：可作默认推荐
+- **VERIFIED**（3+ 论文）：可推荐，无需标注
+- **EMERGING**（1–2 来源）：可迁移但未跨论文验证——推荐时必须标注"单源/双源模式"，不得写成默认做法
+- `source_tier: auxiliary` 的来源（写作工艺书，如 Booth、G&L）只登记出处，不计入 VERIFIED/ROBUST 的论文计数
+
+**两步读取**（与 write-introduction 一致）：选择阶段读本索引 + `_evidence_registry.yaml`（过滤/标注模式状态）；渲染阶段才读对应 corpus 文件。`next_batch_targets` 节列出距 VERIFIED 还差几篇论文的模式——蒸馏新论文时优先命中这些目标。
+
+---
+
 ## 快速决策："我该看哪个文件？"
 
 | 你的研究类型 | 先读这个 | 再读这些 |

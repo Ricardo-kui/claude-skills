@@ -183,6 +183,17 @@ phase_4_corpus_reference:
 
 **关键原则**：Phase 4 的产出先存入 Vault。`section_variant` / `ritual_only` 只可进入 reference corpus；`core_candidate` 必须显式人工审核。不得自动修改 write-theory 的 SKILL.md、路由、强制模块顺序、canonical story schema 或 stage gate。
 
+### 证据注册表回写（`write-theory/corpus/_evidence_registry.yaml`）
+
+当一个模式实际写入 write-theory corpus（reference-level 变体或经审核的 core candidate）时，必须同步登记注册表——语料入库而未登记，等同于模式丢失（注册表曾是孤儿文件，2026-07-28 才接线）：
+
+1. **登记来源**：在 `source_papers` 下添加论文条目（`作者_年份_期刊` 键），含 display_name / journal / year / subfield / theory_build_type。写作工艺书（非实证论文）额外标注 `source_tier: "auxiliary"`。
+2. **登记 fragment**：每个入库模式一个 `tfr_NNN`（沿用全表最大编号递增），含 type / title / home_files / makadok_dimension / status。
+3. **定状态**：按 `status_rules`——1–2 来源 = EMERGING，3+ = VERIFIED，5+ 且跨 2 子领域 = ROBUST。auxiliary 来源单独永远停在 EMERGING，只登记出处。
+4. **更新 patterns 聚合**：若该模式已有 patterns 条目，追加 source_papers 并升级 status；没有则新建。
+5. **更新 meta**：`last_updated`、`total_papers_indexed`、`batches_processed`，并在 `note` 追加一行批次摘要（蒸馏了哪篇、加了什么模式、有无纠正误分类）。
+6. **检查 `next_batch_targets`**：若新论文命中某个目标模式，更新 current_sources/papers_needed；凑齐即在批次摘要中宣告状态升级。
+
 ---
 
 ## Phase 4.5 — 回写提醒
