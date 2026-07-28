@@ -785,6 +785,29 @@ def main() -> int:
         and "references/theory-paper-amr-mode.md" in introduction,
     )
 
+    # --- 2026-07-28 write-theory restoration invariants ---
+    theory_skill = read("write-theory/SKILL.md")
+    theory_output = read("write-theory/references/output-format.md")
+
+    require(
+        "write-theory restores the output-format template and wires it",
+        "架构决策" in theory_output
+        and "叙事弧线指南" in theory_output
+        and "references/output-format.md" in theory_skill,
+    )
+    require(
+        "write-theory restores the hard-constraints quick reference with corpus pointers",
+        "Hard constraints" in theory_skill
+        and "非传统收敛" in theory_skill
+        and "bilateral_argumentation_templates.md" in theory_skill
+        and "dialectical" in theory_skill,
+    )
+    require(
+        "write-theory restores the downstream interface map",
+        "Downstream interfaces" in theory_skill
+        and "distill-theory-exemplar" in theory_skill,
+    )
+
     runtime_names = (
         "diagnose-introduction",
         "paper-story-contract",
