@@ -256,6 +256,8 @@ introduction:
       makadok_dimension: "[Constructs / Mechanism / Boundary / ...]"
 ```
 
+> 理论论文（AMR 模式）分支：`contribution_contract` 只放**一条**核心贡献（单核自明，见 `references/theory-paper-amr-mode.md`），并加 `theory_paper: true` 标记，禁止罗列 2-3 条。
+
 **快速模式**：如用户只请求特定模块（如"给我一个 Hook 句式"），跳过完整骨架，仅输出该模块的句法骨架 + 槽位提示 + 1 个反模式提醒。
 
 # 槽位填充指南
@@ -370,7 +372,7 @@ pontikes2012 通过示例：market-taker 和 market-maker **不是组织的属�
 | **弱缺口**: "few studies have examined" 无解释 | 解释为什么遗漏是结构性的（新数据/新方法/新现象） |
 | **缺 Stakes**: Gap 后直接跳贡献 | Gap 和 Contribution 间插入 1-2 句 stakes |
 | **过度承诺**: "revolutionize""first to" | 用 "extend""refine""reconcile""clarify" |
-| **贡献散弹**: 5+个贡献各一行 | 聚焦 2-3 个，每个充分展开 |
+| **贡献散弹**: 5+个贡献各一行 | 聚焦 2-3 个，每个充分展开（**实证论文**默认；理论论文走 AMR 模式单核自明，见 `references/theory-paper-amr-mode.md`） |
 | **期刊错位**: ASQ 用数据开场 / SMJ 无案例 | 查期刊适配表 |
 | **缺少人脸**: Hook 用 "many firms" | 除非期刊偏好纯学术开场（JMS），补充 >=1 个具体 actor |
 | **机器声**: "It is argued that" / "By examining..." | 改用 "We argue that" / 直接写研究问题 |

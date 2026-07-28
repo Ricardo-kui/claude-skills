@@ -755,6 +755,36 @@ def main() -> int:
         and "评价性" in align_checks,
     )
 
+    # --- 2026-07-28 regression-audit invariants ---
+    amr_mode = read("write-introduction/references/theory-paper-amr-mode.md")
+
+    require(
+        "theory-review counts five soundness checks and includes the fallacy row",
+        "审查五项" in theory_review and "谬误探针" in theory_review,
+    )
+    require(
+        "research-gap Part IV closes the loop with a post-generation audit",
+        "Post-Generation Audit" in gap_diag and "pseudo-genre alert" in gap_diag,
+    )
+    require(
+        "acknowledgment corpus bridges Booth priorities to soundness dispositions",
+        "先排序，后处置" in ack,
+    )
+    require(
+        "soundness protocol disambiguates the acknowledge-without-response pointer",
+        "三姿态句式见该文件 §2.3" in soundness
+        and "独立于上述句子级 0–2 预算" in soundness,
+    )
+    require(
+        "AMR mode no longer references the deleted combination-templates file",
+        "combination-templates" not in amr_mode,
+    )
+    require(
+        "write-introduction scopes contribution listing to empirical papers",
+        "theory_paper: true" in introduction
+        and "references/theory-paper-amr-mode.md" in introduction,
+    )
+
     runtime_names = (
         "diagnose-introduction",
         "paper-story-contract",

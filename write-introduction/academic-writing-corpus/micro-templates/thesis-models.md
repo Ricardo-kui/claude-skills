@@ -32,7 +32,7 @@ Although many scholars have argued about [A and B], a careful examination sugges
 Although prior work often assumes that [assumption] ([citations]), we show that [C].
 ```
 
-**管理学适配**：与 `tensions/02-implicit-assumption-wrong`（they-say 侧）和 `contributions/_index.md` 变体 J（challenge implicit premise）配套——tension 负责建立"假设存在且可疑"，本模型负责在 thesis 句完成反转。Although 标记词的权重梯度见 `../../write-theory/corpus/sentences/acknowledgment_response.md` §3.1。
+**管理学适配**：与 `tensions/02-implicit-assumption-wrong`（they-say 侧）和 `contributions/_index.md` 变体 J（challenge implicit premise）配套——tension 负责建立"假设存在且可疑"，本模型负责在 thesis 句完成反转。注意变体 J 的适用标签是 **Incompleteness 主导 + mild Inadequacy 混合** gap（且禁忌纯 Incompleteness）：纯 Inadequacy 的纠错用本模型直接驱动，混合 gap 才配变体 J 的贡献句。Although 标记词的权重梯度见 `../../write-theory/corpus/sentences/acknowledgment_response.md` §3.1。
 
 **禁忌**：被纠正的解读必须真实存在且可引用（Outer Limits）；纠正幅度与证据强度匹配——横截面相关数据支撑不了 "X does not cause Y" 的全称纠正。
 

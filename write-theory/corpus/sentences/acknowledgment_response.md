@@ -26,6 +26,8 @@ status: emerging
 
 **承认但不回应**（诚实承认即可）：无法修复的弱点、无法回答的问题——回应姿态见 §3。
 
+**与 soundness §4 的衔接**：本节排序决定**是否 engage** 一个异议；engage 之后的落地方式（补 scope condition / 升级为 moderation 假设 / 删除该步骤 / 承认但不回应）由 `../subprotocols/reasoning_soundness_protocol.md` §4 的四种处置决定。先排序，后处置。
+
 **Goldilocks 纪律**：承认太多分散论证核心，承认太少显得 dismissive 或无知。只承认读者**真实可能想到**的异议。
 
 ---
@@ -137,7 +139,7 @@ status: emerging
 
 **范式例**（G&L 引 Radcliffe）：先让步 *"To be sure, 'deliberative democracy' is an ideal to which existing democratic systems only roughly approximate"*，再收回 *"Nevertheless, the concept provides a plausible standard for evaluating democracies."*——让步具体、收回有据。
 
-**与 §2 矩阵的分工**：§2 处置读者**可能想到**的异议（防御侧）；Rogerian 处置论文**主动挑战**的阵营（建设侧）——它同时是 thesis 修正模型（write-introduction `micro-templates/thesis-models.md` 模型 3）的段落级展开：共同地基 = 步骤 3，extend/refine/limit = 步骤 4。
+**与 §2 矩阵的分工**：§2 处置读者**可能想到**的异议（防御侧）；Rogerian 处置论文**主动挑战**的阵营（建设侧）——它同时是 thesis 修正模型（`../../write-introduction/academic-writing-corpus/micro-templates/thesis-models.md` 模型 3）的段落级展开：共同地基 = 步骤 3，extend/refine/limit = 步骤 4。
 
 **频次预算**：一篇 Theory section 最多 1 个 Rogerian 段落（用于最核心的对话对象）；其余异议走 §2 句子级矩阵。滥用会形成讨好型节律，触发 soundness protocol §7 防火墙。
 

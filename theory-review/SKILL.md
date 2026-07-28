@@ -65,7 +65,7 @@ version: 1.2.0
 
 ### Step 2.6: Soundness 审查（论证可靠性）
 
-Step 2 查 why chain 的**形式**（完整/深度/断裂）；本步查论证的**可靠性**——形式完美的链条可以塌在脆弱前提上。协议全文见 `write-theory/corpus/subprotocols/reasoning_soundness_protocol.md`（含 §8 谬误探针：false analogy / fallacy of division / either-or 的管理学转译扫描表），逐条假设审查三项：
+Step 2 查 why chain 的**形式**（完整/深度/断裂）；本步查论证的**可靠性**——形式完美的链条可以塌在脆弱前提上。协议全文见 `write-theory/corpus/subprotocols/reasoning_soundness_protocol.md`，逐条假设审查五项：
 
 | 审查项 | 检查标准 | 问题信号 | 评分 |
 |-------|---------|---------|------|
@@ -73,6 +73,7 @@ Step 2 查 why chain 的**形式**（完整/深度/断裂）；本步查论证�
 | **机制必要性** | 门控三问：Q1 主流更简单机制是否推不出同一预测？Q2 本机制是否有可区分的额外预测？Q3 删掉本机制故事是否照样成立？ | 更简单的主流机制已能推出同一预测（机制是装饰）；两机制预测完全等价且无可区分预测；删掉某机制后推导链照样完整 | ✓/△/✗ |
 | **反例未防守** | 每个 mechanism step 是否答得出"什么条件下这一步不成立"？答出的条件是否已写入 scope condition 或升级为 moderation？无法修复的弱点是否走了"承认但不回应"路径（诚实承认+补偿/未来研究/洞见三姿态之一）？ | 反直觉步骤无任何条件声明；条件在文中若隐若现（作者知道但没写）——审稿人会以 "theory is under-specified" 形式替你发现；可修复的异议被承认却不回应 | ✓/△/✗ |
 | **Warrant 表达** | 三场合 warrant 是否已明言（跨领域读者 / 推理原则有争议 / claim 会被抗拒——场合③应先立 warrant 再摆 reason+claim）？显而易见的 warrant 是否被隐去？claim of fact 是否有硬证据？ | 有争议机制未引背书未自证（场合②违规）；明言常识性 warrant（居高临下、暴露非专家）；事实性断言仅靠 warrant+reason 支撑（硬证据规则违反） | ✓/△/✗ |
+| **谬误探针**（soundness §8） | 跨域借机制/隐喻是否检验过组织情境适用性（false analogy）？前提与 claim 的分析层次是否一致、跨层桥接句是否存在（fallacy of division）？假设推导是否依赖"两派必有一错"的虚假二元（either-or）？ | 类比只在表面相似维度成立；行业/公司层结论直接套到个体层（或反之）；第三解释显然可能却被排除 | ✓/△/✗ |
 
 **与 Step 2 的输出关系**：Step 2 标记"哪段 why chain 最弱"（形式深度），本步标记"哪段推导**最易被击穿**"（可靠性）；两者可以指向不同段落——最深的链条往往前提最多、可攻击面最大。
 

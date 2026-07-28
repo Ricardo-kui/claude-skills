@@ -214,6 +214,14 @@ G&L Ch04/Ch09 警告：学术文献中的分歧"rarely ... simplistic pro/con pa
 - **"To what extent" 句式**：把 yes/no 问题改写为程度问题（"To what extent can [A] coexist with [B]?"），避免是非题过早关闭探究空间——天然适配边界条件研究（under what conditions），但输出时必须进一步转化为可检验命题（接 `hypothesis-generation`）。
 - **悬置判断**：生成阶段先承认对立观点的合理之处（suspending judgment），再寻找突破——与 Zuckerman 原则 8（save the null）同一纪律：强 gap 建设强对手，不建设稻草人。
 
+### 4. Post-Generation Audit（强制闭环）
+
+Part IV 生成的每个候选 gap **必须**回流审计，禁止直接输出给用户：
+
+1. 过 Part I genre diagnosis：候选是否形似 pseudo-genre？特别注意 `what-if-neither` 生成的候选极易被表述成 "A 派和 B 派都忽略了 X"——这是 "Literature has overlooked X" 伪 genre 的变体，必须用 Zuckerman 的 surprise 测试（"sophisticated user of the theory 会惊讶吗？"）过滤；通不过时，按 Part I 的处方把"共享盲区"改写为对既有理论的 real-world trouble。
+2. 过 Part II gap-strength audit：给出 Stable/Fragile/Unstable 评级与 Strong/Moderate/Weak/Pseudo-gap 判定。
+3. 输出时每个候选必须带 `pseudo-genre alert: YES/NO` 标记——无标记的候选视为审计未执行。
+
 ## Full Diagnosis Output Template
 
 ```

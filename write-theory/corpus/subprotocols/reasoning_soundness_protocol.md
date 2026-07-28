@@ -144,7 +144,7 @@ Phase 4 审计 4 复核所有卡片的处置列是否兑现。
 
 1. **协议词汇永不进正文**：[D]/[S]/[E]、"门控"、"五测试"、"Soundness Card"、"最弱前提"是工作语言；正文里它们必须已经被转译成叙述句——前提防守写成机制句或证据句（句式从 `../sentences/` 语料取材），不是写成"本前提基于经验概括"这类自我标注。
 2. **防守不得盖过主张**：每段的听觉中心必须是 claim 和机制推进；若一段内防守句多于推进句、claim 被 caveat 包围到找不到，说明防守过度——回到 §5 隐去纪律：领域专家读者默认隐去，明言只限三场合。审稿人要的是"论证有信心、边界有自觉"，不是"每步都先自我怀疑"。
-3. **元评论式自辩是反模式**：连续的 "One might object that..., however..." / "Admittedly..., nevertheless..." 堆叠形成的是防御性技术说明文风而非顶刊论证文风——承认-回应句式有频次预算（见 `../sentences/acknowledgment_response.md` §6），零预算常常是正确答案：形式完美的推导段不需要任何承认句。
+3. **元评论式自辩是反模式**：连续的 "One might object that..., however..." / "Admittedly..., nevertheless..." 堆叠形成的是防御性技术说明文风而非顶刊论证文风——承认-回应句式有频次预算（见 `../sentences/acknowledgment_response.md` §6），零预算常常是正确答案：形式完美的推导段不需要任何承认句。Rogerian 段落（该文件 §5，最多 1 个、用于最核心的对话对象）独立于上述句子级 0–2 预算。
 
 判断标准（读 aloud 测试）：把推导段朗读出来，如果听起来像**作者在回答想象中的审稿人**而不是**作者在向同行讲一个理论故事**，就是防火墙被击穿。
 
@@ -173,6 +173,6 @@ Phase 4 审计时的快速扫描清单。G&L 的 15 条 fallacy 中，大多数�
 
 - [`hypothesis_derivation_patterns.md`](hypothesis_derivation_patterns.md)：validity 层（形式有效的动作序列），本文件是其 soundness 镜像
 - [`../sentences/mechanism_chain.md`](../sentences/mechanism_chain.md)：替代机制排除的**句法**（事后书写），本文件 §3 是门控（事前取舍）
-- [`../sentences/acknowledgment_response.md`](../sentences/acknowledgment_response.md)：§4 处置 4（承认但不回应）与就地回应异议的**句式库**——四类异议 × 承认/回应标记词 × 位置安排
+- [`../sentences/acknowledgment_response.md`](../sentences/acknowledgment_response.md)：本协议 §4 处置 4（承认但不回应；三姿态句式见该文件 §2.3）与就地回应异议的**句式库**——四类异议 × 承认/回应标记词 × 位置安排
 - [`evidence_patterns.md`](evidence_patterns.md)：Warrant 的证据类型与引用句式；本文件 §1 决定该前提**该不该用、用什么类型防守**
 - `../../diagnose-introduction/references/golden-biddle-locke-four-moves.md` §Outer Limits：攻击文献的诚实纪律；本文件 §3–4 是建设自己的同一纪律

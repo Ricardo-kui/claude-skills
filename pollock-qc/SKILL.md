@@ -92,7 +92,7 @@ description: 按 Pollock 2025 框架进行全稿或指定 Section 的快速 QC �
 | Why chain | 每条假设前是否有机制链？ | ✓/△/✗ |
 | Hypothesis form | IV/DV/方向/条件是否明确？ | ✓/△/✗ |
 | Character ordering | 主角是否在配角前充分介绍？ | ✓/△/✗ |
-| Cited-evidence audit（G&L 2017 Ch04） | 支撑关键前提的**引用证据**是否过四准则——recent（经验规律类断言是否主要依赖近五年证据？经典 touchstone 例外）/ relevant（比较的是否同类事物）/ reliable（样本量与选择性是否可疑）/ accurate（关键统计与 finding 是否核对过原始出处 "go to your source's sources"，而非二手转引）？自有结果证据的五问审计在 write-results `references/evidence-standards.md`，本行只管引用侧 | ✓/△/✗ |
+| Cited-evidence audit（G&L 2017 Ch04） | 支撑关键前提的**引用证据**是否过四准则——recent（经验规律类断言是否主要依赖近五年证据？经典 touchstone 例外）/ relevant（比较的是否同类事物）/ reliable（样本量与选择性是否可疑）/ accurate（关键统计与 finding 是否核对过原始出处 "go to your source's sources"，而非二手转引）？自有结果证据的五问审计在 `../write-results/references/evidence-standards.md`，本行只管引用侧 | ✓/△/✗ |
 
 #### 如果 section = methods
 
