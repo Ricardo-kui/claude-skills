@@ -25,7 +25,7 @@ Full Theory generation requires a valid story contract. Theory is rising action:
 2. Choose construct order, mechanism depth, hypothesis structure, and narrative arc using `references/phase-2-architecture.md`.
 3. Derive each hypothesis through a complete why-chain using `references/phase-3-hypothesis-derivation.md`; load only the selected variant from `corpus/variants/` and the necessary sentence-pattern files.
 4. Audit construct consistency, alternative mechanisms, hypothesis testability, paragraph architecture, and cross-section promises using `references/phase-4-qc-alignment.md`.
-5. Produce the scaffold, storyline-linked hypothesis statements, paragraph function map, evidence gaps, QC results, and the `paper-state.yaml` theory fields needed by Methods and Results.
+5. Produce the scaffold, storyline-linked hypothesis statements, paragraph function map, evidence gaps, QC results, and the `paper-state.yaml` theory fields needed by Methods and Results. Structure the full reply per `references/output-format.md`.
 
 ## Selection rules
 
