@@ -35,6 +35,8 @@
 !pollock-qc/**
 !results-review/
 !results-review/**
+!research-gap-diagnosis/
+!research-gap-diagnosis/**
 !reverse_validation_pipeline/
 !reverse_validation_pipeline/**
 !s01-recall-data-infrastructure/
