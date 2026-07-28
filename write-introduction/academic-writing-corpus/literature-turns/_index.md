@@ -94,6 +94,10 @@ Literature Turn（P2-P3）的核心功能是将 Hook 建立的注意力转化为
 
 Hook 的类型直接约束可用的 Literature Turn 策略。参见 `hooks/_index.md` 的必须配对表。
 
+### 上游（文献综合 → Literature Turn）
+
+Literature Turn 的输入质量取决于上游文献综合：gap 尚未成形时，先用 `research-gap-diagnosis` Part IV 的 synthesis 操作链（比较→追问差异→反事实生成器）跑出候选缺口，再回到本路由选择策略。综合阶段的 gist 必须是**关系陈述**（多篇文献观点之间的关系，用 although/however 显化），不是单篇主旨的并列（G&L 2017 Ch08）。
+
 ### 下游（Literature Turn → Tension）
 
 Literature Turn 的收尾句（"However, what remains unclear is..." / "leaving [gap] underexplored" / "These incompatible predictions cannot be simultaneously true"）必须自然过渡到 Tension 段。关键规则：
@@ -135,6 +139,8 @@ literature-turns/
 ---
 
 ## 更新日志
+
+- **2026-07-28**: 新增上游接口（文献综合 → Literature Turn）：gap 未成形时先走 research-gap-diagnosis Part IV synthesis 链；gist 关系陈述纪律（G&L 2017 Ch08）
 
 - **2026-07-10**: 新增 `01-progressive-coherence` 变体 F（共识建立 + 实践复杂性型，grewal2025 型）；变体数量更新为 6 (A–F)
 - **2026-05-20**: 创建索引文件；扩充 03-non-coherence 至 5 变体 + 关键技巧；扩充 02-synthesized-coherence 至 5 变体 + 升级动作表 + 对比表

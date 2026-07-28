@@ -2,8 +2,8 @@
 corpus_id: acknowledgment_response
 function: objection handling voice
 type: sentence corpus
-source: Booth et al. 2024 The Craft of Research Ch9 (Acknowledgments and Responses)
-confidence: high (句式逐字源自 Booth；管理实证适配为本库添加)
+source: Booth et al. 2024 The Craft of Research Ch9 (Acknowledgments and Responses); §5 Rogerian 四步源自 Greene & Lidinsky 2017 Ch04
+confidence: high (句式逐字源自 Booth；Rogerian 序列源自 G&L；管理实证适配为本库添加)
 status: emerging
 -->
 
@@ -124,7 +124,26 @@ status: emerging
 
 ---
 
-## 5. 定量实证适配与分工
+## 5. Rogerian 四步对话结构（高威胁异议的降防御序列，G&L 2017 Ch04）
+
+§2 的矩阵管**句子级**承认-回应；当异议持有者是论文核心对话对象（被挑战的理论阵营、关键审稿人）时，单句承认不足以解除防御——用 Rogerian 序列组织**整个段落**。G&L："The objective of a Rogerian strategy is to reduce listeners' sense of threat so that they are open to alternatives."
+
+| 步骤 | 功能 | 句式 |
+|------|------|------|
+| 1. 理解 | 向读者传达"你的不同观点被理解了"——准确重述对方立场，满强度（Outer Limits 同一纪律） | "[Theory X] offers a coherent account of [phenomenon]: [steelmanned version]." |
+| 2. 承认成立条件 | 承认对方观点**在何种条件下**成立 | "To be sure, [view] holds when [conditions] ([citations])." |
+| 3. 共同地基 | 帮助读者看到双方共享的问题或前提 | "We share with this literature the premise that [common ground]." |
+| 4. 共创方案 | 在共同承认的问题上给出双方可接受的推进 | "Building on this shared premise, we propose [solution that preserves what was valid in step 2]." |
+
+**范式例**（G&L 引 Radcliffe）：先让步 *"To be sure, 'deliberative democracy' is an ideal to which existing democratic systems only roughly approximate"*，再收回 *"Nevertheless, the concept provides a plausible standard for evaluating democracies."*——让步具体、收回有据。
+
+**与 §2 矩阵的分工**：§2 处置读者**可能想到**的异议（防御侧）；Rogerian 处置论文**主动挑战**的阵营（建设侧）——它同时是 thesis 修正模型（write-introduction `micro-templates/thesis-models.md` 模型 3）的段落级展开：共同地基 = 步骤 3，extend/refine/limit = 步骤 4。
+
+**频次预算**：一篇 Theory section 最多 1 个 Rogerian 段落（用于最核心的对话对象）；其余异议走 §2 句子级矩阵。滥用会形成讨好型节律，触发 soundness protocol §7 防火墙。
+
+---
+
+## 6. 定量实证适配与分工
 
 - **与 `mechanism_chain.md`「替代机制排除骨架」的分工**：排除骨架用于**中介提出之后**的系统性排他（Results/Discussion 方向）；本文件用于**假设推导段内**的即时异议处置（Theory 内）与"承认但不回应"的诚实出口。
 - **与 GBL Outer Limits 的分工**：Outer Limits 约束你**构造文献稻草人**时满强度；本文件约束你**处置针对自己的异议**时同样满强度（§2.2 反例必须"生动且可信"，不许挑软柿子）。

@@ -77,7 +77,7 @@
 | [`cost_benefit_calculus.md`](sentences/cost_benefit_calculus.md) | 成本-收益机制 voice | 感知高收益 + 感知低成本 + 综合收敛 + 上下级激励差异对比 |
 | [`moderation.md`](sentences/moderation.md) | 调节机制 | 机制修改论证、假设模板、修辞问句开场、Ability-Motivation 双路径调节、共享调节器反向调节、多调节器同向设计、双边论证调节推演、注意力基础观调节论证、不对称调节、**董事会放大型边界条件(chung2022)** |
 | [`hypothesis_forms.md`](sentences/hypothesis_forms.md) | 假设形式 | 各类假设的标准句法（主效应、中介、调节、三向交互、有中介的调节、配对假设a/b格式、条件假设Given格式） |
-| [`acknowledgment_response.md`](sentences/acknowledgment_response.md) | 异议处置 voice | 承认与回应句式（Booth Ch9）：四类异议（替代解释/反例/证据局限/定义分歧）× 承认/回应标记词权重表 + 回应强度三级 + 承认但不回应三姿态；与 reasoning_soundness_protocol §4 配套 |
+| [`acknowledgment_response.md`](sentences/acknowledgment_response.md) | 异议处置 voice | 承认与回应句式（Booth Ch9）：四类异议（替代解释/反例/证据局限/定义分歧）× 承认/回应标记词权重表 + 回应强度三级 + 承认但不回应三姿态；§5 Rogerian 四步对话结构（G&L 2017，高威胁异议的段落级降防御序列）；与 reasoning_soundness_protocol §4 配套 |
 | [`closure.md`](sentences/closure.md) | 收束/过渡 | **注意：管理学不要求独立 Closure 段。** 局部收束信号（"Therefore, we hypothesize:"）、段落收束→假设过渡（按论证类型）、**H1 收敛信号强制提醒** |
 
 ---

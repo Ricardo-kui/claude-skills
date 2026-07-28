@@ -144,11 +144,28 @@ Phase 4 审计 4 复核所有卡片的处置列是否兑现。
 
 1. **协议词汇永不进正文**：[D]/[S]/[E]、"门控"、"五测试"、"Soundness Card"、"最弱前提"是工作语言；正文里它们必须已经被转译成叙述句——前提防守写成机制句或证据句（句式从 `../sentences/` 语料取材），不是写成"本前提基于经验概括"这类自我标注。
 2. **防守不得盖过主张**：每段的听觉中心必须是 claim 和机制推进；若一段内防守句多于推进句、claim 被 caveat 包围到找不到，说明防守过度——回到 §5 隐去纪律：领域专家读者默认隐去，明言只限三场合。审稿人要的是"论证有信心、边界有自觉"，不是"每步都先自我怀疑"。
-3. **元评论式自辩是反模式**：连续的 "One might object that..., however..." / "Admittedly..., nevertheless..." 堆叠形成的是防御性技术说明文风而非顶刊论证文风——承认-回应句式有频次预算（见 `../sentences/acknowledgment_response.md` §5），零预算常常是正确答案：形式完美的推导段不需要任何承认句。
+3. **元评论式自辩是反模式**：连续的 "One might object that..., however..." / "Admittedly..., nevertheless..." 堆叠形成的是防御性技术说明文风而非顶刊论证文风——承认-回应句式有频次预算（见 `../sentences/acknowledgment_response.md` §6），零预算常常是正确答案：形式完美的推导段不需要任何承认句。
 
 判断标准（读 aloud 测试）：把推导段朗读出来，如果听起来像**作者在回答想象中的审稿人**而不是**作者在向同行讲一个理论故事**，就是防火墙被击穿。
 
 **与 §5.7 的分工**：本节管协议层泄漏；一般性防御措辞（负向自我设限 "This paper does not claim..."、hedge 堆叠、caveat 散射到高影响位置）的识别与转换句式库见 `../../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md` §5.7——其"保留防守实质、删除防御姿态"原则与本节铁律 2 是同一校准。
+
+---
+
+## 8. 谬误探针（Fallacy Probes，G&L 2017 Ch09 管理学转译）
+
+Phase 4 审计时的快速扫描清单。G&L 的 15 条 fallacy 中，大多数已被本协议或相邻层覆盖——本表只列**管理学语境下有独立诊断价值**的条目，并标注各自的处理位置，避免重复建设。
+
+| 探针 | 管理学病征 | 探问 | 处理位置 |
+|------|-----------|------|---------|
+| **False analogy（错误类比）** | 从经济学/心理学/生物学借机制或隐喻，未检验组织情境适用性 | 类比的两侧在**机制相关维度**上真的相似吗？还是只有表面相似？ | 本协议 §4 Methodological Warrants 行（"Yes, we can analogize X to Y, but not if …"）——借用时必须在 Soundness Card 写出限定条件 |
+| **Fallacy of division（分割谬误）** | 行业/公司层结论直接推广到团队/个人（或反向的合成谬误）——多层研究高频病 | 该前提成立的层次与 claim 的层次是否一致？跨层桥接句在哪里？ | 本协议 §1–2：[S] 前提层次桥接 = 次弱标记，需单独防守；方法侧由 methods-review 的多层对齐检查承接 |
+| **Either-or（虚假二元）** | 把文献描绘成"完全 A vs 完全 B"两个极端，再推出"综合/调和"贡献，忽略第三立场 | 中间立场真的不存在吗？gap 是否是人造二元？ | **生成侧**（gap 设定）由 `../../../research-gap-diagnosis/SKILL.md` Part IV §2 探针处理；**理论侧**自查：若你的假设推导依赖"两派必有一错"，先确认第三解释不可能 |
+| **Straw man（稻草人）** | 把前人简化成"完全忽视 X"以衬托"本文首次考虑 X" | 被批评的立场是否有具体作者/文本锚点，且按满强度重述？ | 已由 GBL Outer Limits（`golden-biddle-locke-four-moves.md`）与本协议 §3 处理，不重复 |
+| **Sweeping generalization（过度概括）** | 单个显著结果被写成"改变了我们对 X 的理解" | claim 的范围词（all/always/proves）是否超出证据可支撑范围？ | 已由 Booth overclaiming blacklist（theory-review Step 3 相邻层）与 prose-craft-checklist §5.6 处理，不重复 |
+| **Confusing cause and effect（因果混淆）** | 相关当因果——理论段把实证共变写成机制断言 | 该 [E] 前提的原始研究是否支持因果读法？ | 本协议 §1 [E] 前提边界检查 + 硬证据规则（§5） |
+
+**使用规则**：本表是**扫描镜头**，不是第二套协议——命中后回到"处理位置"列指向的既有层执行处置，禁止在本表基础上生长平行流程。
 
 ---
 

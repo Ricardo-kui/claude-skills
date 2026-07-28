@@ -474,6 +474,8 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 
 **平衡警告**：hedge 过度 = timid（"if you hedge too much, you will seem timid"）；各领域 hedge 密度不同，**观察本领域专家怎么 hedge 并照做**。管理实证惯例：假设句本身不 hedge（"We hypothesize that X is positively related to Y"），hedge 放在 mechanism 推理句、结果外推句与 Discussion 的 generalizability 声明。
 
+**情绪化修辞禁令（G&L 2017 Ch09，pathos tone 纪律）**：确定性校准不仅管程度词，也管**情绪负载**——"in academic writing ... the frequent use of loaded language, exaggeration, and sarcasm is looked on with distrust." 全文搜索三类词：①loaded terms（"reckless" / "greedy" / "short-sighted" 评价性形容词）；②夸张（"catastrophic" / "revolutionary" 非字面使用）；③irony/sarcasm（反讽在顶刊 prose 中几乎 always 损伤 ethos）。合法的 pathos 只有一条通道：用具体例子间接唤起问题的重要性（stakes 段的 human face），不靠情绪词。
+
 **嵌入点**：write-theory 推导段 mechanism 句（与 soundness 层 warrant 五测试之 "sufficiently limited" 联动——过不了该测试的 warrant 往往就是含绝对化词的 warrant）；write-introduction Contribution 句；phase-4 审计 1 Inflated symbolism 行联动。
 
 ### 5.7 Defensive prose（防御性文风）

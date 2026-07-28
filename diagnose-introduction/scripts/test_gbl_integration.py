@@ -655,6 +655,106 @@ def main() -> int:
     )
 
 
+    # --- Greene & Lidinsky 2017 (From Inquiry to Academic Writing) wave ---
+    thesis_models = read(
+        "write-introduction/academic-writing-corpus/micro-templates/thesis-models.md"
+    )
+    gap_diag = read("research-gap-diagnosis/SKILL.md")
+    lit_turns_index = read(
+        "write-introduction/academic-writing-corpus/literature-turns/_index.md"
+    )
+    rebuttal = read("revision-coach/references/rebuttal-audit-protocol.md")
+    pollock_qc = read("pollock-qc/SKILL.md")
+    align_checks = read("write-discussion/references/alignment-checks.md")
+
+    require(
+        "thesis-models encodes all four G&L working-thesis models",
+        all(
+            marker in thesis_models
+            for marker in ("纠错型", "补缺型", "修正型", "假设检验型", "表象—实质")
+        ),
+    )
+    require(
+        "thesis-models encodes the Although-subordination power allocation",
+        "Although" in thesis_models
+        and "从属" in thesis_models
+        and "句法权力分配" in thesis_models,
+    )
+    require(
+        "thesis-models is marked auxiliary and wired into write-introduction",
+        "source_tier: auxiliary" in thesis_models
+        and "micro-templates/thesis-models.md" in introduction,
+    )
+    require(
+        "research-gap-diagnosis adds the Part IV synthesis chain",
+        all(
+            marker in gap_diag
+            for marker in (
+                "Part IV",
+                "Why-they-differ",
+                "What-if-neither",
+                "Neither X nor Y",
+            )
+        ),
+    )
+    require(
+        "research-gap-diagnosis adds the either-or pseudo-binary probe and generation mode",
+        "Either-Or 伪二元探针" in gap_diag and "generation mode" in gap_diag,
+    )
+    require(
+        "literature-turns index wires the upstream synthesis interface",
+        "synthesis 操作链" in lit_turns_index
+        and "关系陈述" in lit_turns_index,
+    )
+    require(
+        "acknowledgment-response corpus adds the Rogerian four-step sequence",
+        all(
+            marker in ack
+            for marker in ("Rogerian 四步", "共同地基", "共创方案", "deliberative democracy")
+        ),
+    )
+    require(
+        "acknowledgment-response frequency budget moved to the renumbered section",
+        "## 6. 定量实证适配与分工" in ack
+        and "acknowledgment_response.md` §6" in soundness,
+    )
+    require(
+        "revision-coach audits the Rogerian de-escalation sequence",
+        "Rogerian" in rebuttal and "降防御序列" in rebuttal,
+    )
+    require(
+        "soundness protocol adds the management-translated fallacy probes",
+        all(
+            marker in soundness
+            for marker in (
+                "谬误探针",
+                "False analogy",
+                "Fallacy of division",
+                "Either-or",
+                "扫描镜头",
+            )
+        ),
+    )
+    require(
+        "theory-review points to the fallacy probes",
+        "谬误探针" in theory_review,
+    )
+    require(
+        "pollock-qc adds the cited-evidence four-criteria audit",
+        "Cited-evidence audit" in pollock_qc
+        and "source's sources" in pollock_qc
+        and "evidence-standards.md" in pollock_qc,
+    )
+    require(
+        "prose-craft bans emotional rhetoric per the pathos tone discipline",
+        "情绪化修辞禁令" in prose and "sarcasm" in prose and "loaded" in prose,
+    )
+    require(
+        "write-discussion bans neutral comparisons",
+        "Neutral comparison ban" in align_checks
+        and "评价性" in align_checks,
+    )
+
     runtime_names = (
         "diagnose-introduction",
         "paper-story-contract",

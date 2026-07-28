@@ -55,6 +55,7 @@ Use this reference to verify that Discussion delivers on Introduction promises.
 **Other pitfalls**:
 - Do not use "Interestingly" to introduce findings (reserved for JM)
 - Do not push all limitations to future research (explain constraints on current interpretation)
+- **Neutral comparison ban（G&L 2017 Ch11）**: Discussion 中比较本文发现与前人时，禁止中立的 "X and Y have similarities and differences"——比较必须带**评价性/论证性立场**（"in making your comparison ... you have to take an evaluative or argumentative stance"），并解释相似/差异的**理论含义**（为什么一致/为什么不一致——接 research-gap-diagnosis Part IV 的 why-they-differ 追问）
 
 ## Paragraph Craft QC（说服体裁）
 

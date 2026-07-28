@@ -396,5 +396,5 @@ pontikes2012 通过示例：market-taker 和 market-maker **不是组织的属�
   contribution 字段；不得新增平行 taxonomy 或 GBL 专属 paper-state 字段。
 - **Four Moves 是功能而非段数**：不得机械要求一段一个 move；按期刊和
   Introduction 长度合并功能。
-- **Prose Craft 为推荐非硬性要求**: Human Face、Showing vs Telling、Conversational Voice 是 Pollock 的最佳实践建议，按期刊风格灵活适用——ASQ/AMJ 严格，JMS/JOM 宽松。段落级 architecture（PEEL/PEAL、paragraph length、topic sentence placement、coherence）参见 `academic-writing-corpus/storytelling/prose-craft-checklist.md` §0；句子级 transition 信号词参见 `academic-writing-corpus/micro-templates/transition-signals.md`。
+- **Prose Craft 为推荐非硬性要求**: Human Face、Showing vs Telling、Conversational Voice 是 Pollock 的最佳实践建议，按期刊风格灵活适用——ASQ/AMJ 严格，JMS/JOM 宽松。段落级 architecture（PEEL/PEAL、paragraph length、topic sentence placement、coherence）参见 `academic-writing-corpus/storytelling/prose-craft-checklist.md` §0；句子级 transition 信号词参见 `academic-writing-corpus/micro-templates/transition-signals.md`；中心论点与既有观点的关系定位（纠错/补缺/修正/假设检验四模型 + thesis 句法权力分配）参见 `academic-writing-corpus/micro-templates/thesis-models.md`。
 - **输出末尾追加 paper-state.yaml 片段**：在 Introduction 骨架输出末尾，自动附加 `### paper-state.yaml 片段` 块。该片段供下游技能（write-theory Phase 0、write-methods Phase 1、write-results Phase 0）自动消费。用户复制到项目 `paper-state.yaml` 的 `introduction:` 节下。如用户未提及 paper-state.yaml 协议，该片段的 YAML 注释头应包含使用说明。

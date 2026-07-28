@@ -45,6 +45,7 @@
 - **[R1-2] 无证据断言**:"补了稳健性检验"但未指 Table/Appendix → 建议指向具体位置,或标 PENDING 交 stata 执行。
 - **[R2-1] 语气过冲**:回复开头"Reviewer 2 misunderstands…" → 建议改为"We appreciate the concern…; however, …"。
 - **[R3-2] 误读论点**:审稿人问的是测量效度,回复答的是样本量 → 重新回应测量效度。
+- **[对抗性异议] 缺降防御序列**:回复与审稿人存在根本性理论分歧(审稿人明确倾向竞争性解释)时,检查是否走了 Rogerian 四步(理解→承认成立条件→共同地基→共创方案,G&L 2017 Ch04;序列全文见 `write-theory/corpus/sentences/acknowledgment_response.md` §5)。直接反驳("We disagree because…")而无前两步,会把可争取的审稿人推向对立;同时警惕反向失格——ad hominem(攻击审稿人而非其论点)与 shifting the issue(转移话题)都是 rebuttal 场景的典型 fallacy。
 
 ### 改进建议(advisory,不代写)
 - ……

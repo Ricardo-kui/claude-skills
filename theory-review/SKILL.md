@@ -65,7 +65,7 @@ version: 1.2.0
 
 ### Step 2.6: Soundness 审查（论证可靠性）
 
-Step 2 查 why chain 的**形式**（完整/深度/断裂）；本步查论证的**可靠性**——形式完美的链条可以塌在脆弱前提上。协议全文见 `write-theory/corpus/subprotocols/reasoning_soundness_protocol.md`，逐条假设审查三项：
+Step 2 查 why chain 的**形式**（完整/深度/断裂）；本步查论证的**可靠性**——形式完美的链条可以塌在脆弱前提上。协议全文见 `write-theory/corpus/subprotocols/reasoning_soundness_protocol.md`（含 §8 谬误探针：false analogy / fallacy of division / either-or 的管理学转译扫描表），逐条假设审查三项：
 
 | 审查项 | 检查标准 | 问题信号 | 评分 |
 |-------|---------|---------|------|
