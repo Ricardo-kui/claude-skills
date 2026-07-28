@@ -807,6 +807,12 @@ def main() -> int:
         "Downstream interfaces" in theory_skill
         and "distill-theory-exemplar" in theory_skill,
     )
+    require(
+        "write-theory inlines anti-pattern and journal-adaptation surfaces",
+        "反模式速查" in theory_skill
+        and "期刊适配" in theory_skill
+        and "Citation list" in theory_skill,
+    )
 
     runtime_names = (
         "diagnose-introduction",

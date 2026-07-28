@@ -62,8 +62,30 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 | 13 | 图不能替代文字理论；Literature Support 必须是 argument 总结而非 citation 罗列 | `corpus/sentences/mechanism_chain.md` |
 | 14 | 输出末尾自动附加 `### paper-state.yaml 片段` 块 | `corpus/meta/paper_state_fragment.md` |
 
-## Downstream interfaces（供其他 Skill 消费）
+## 反模式速查（加载语料前先生效；完整版见 `corpus/_index.md` 反模式速查）
 
+| 反模式 | 一句话判据 |
+|--------|-----------|
+| 常识谚语当机制 | 某推理步骤用谚语/folk wisdom 替代理论文献支撑 |
+| Citation list 冒充理论 | 段末堆叠引用、无机制推演；多理论"整合"实为名单 |
+| 双刃剑不对称 | 好处面篇幅远大于坏处面，或两条路径机制区分不清 |
+| 双 DV 同一机制 | 两个 DV 由同一机制链接、第二段用 "Similarly" 开头 |
+| 共享调节器同向 | 两个调节假设方向相同且只用一条路径论证 |
+| E3 未建第一层 | 三向交互未先建立第一层交互 |
+| 假设树碎片化 | 4+ 假设各自独立、无逻辑递进 |
+| 调解/中介链缺环 | E4 有中介的调节未先建立基础中介链 |
+
+## 期刊适配（影响 Phase 1 变体选择，非仅措辞）
+
+| 期刊 | Theory 偏好 |
+|------|------------|
+| AMJ / SMJ | Hypothesis-driven、机制链显式；变体 B/E/C 为主场 |
+| ASQ / OS | 接受 proposition 与过程理论；变体 D/G 友好，理论密度高于假设数量 |
+| MS / MSOM | 模型邻近；变体 F（竞争假设裁决）与命名机制友好 |
+| AMR | 纯理论：proposition 而非实证假设；构念辨析（A）与 scope 扩展为主 |
+| JM / JOM | 机制必须落到行动者可操作的杠杆；实践相关性前置 |
+
+## Downstream interfaces（供其他 Skill 消费）
 - `/write-methods`、`/write-results` — 经 paper-state.yaml 消费 `theory.constructs` / `theory.hypotheses` / `theory.mechanism_chains`（假设-变量映射、Hypothesis-Result Fulfillment Map）
 - `/write-discussion`（review 侧）— 以假设列表与机制链作为 Discussion 理论贡献的对齐锚点
 - `/paper-review`、`/theory-review` — 以本 skill 输出作为跨 Section 对齐与 Theory 草稿审查的基准
