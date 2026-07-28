@@ -297,7 +297,7 @@ In contrast, when [moderator condition 2], [response B] is more likely because [
 | 调节结构 | X × W | X × W1, X × W2, ...（多个独立 two-way） | X × W1 × W2（两层嵌套） |
 | 理论任务 | 解释 W 如何 modify X→Y | 解释多个 W 各自的边界作用 | 解释 W1 的调节作用本身如何被 W2 条件化 |
 | 假设顺序 | H1: X→Y; H2: X×W | H1a/H1b/H2a/H2b... | H1: X→Y; H2: X×W1; H3: X×W1×W2 |
-| 典型语料 | `sentences/moderation.md` | `subprotocols/E1_categorical_moderation.md` | `subprotocols/intra_tmt_persuasion.md` + `board_governance_boundary_condition.md` |
+| 典型语料 | [`../sentences/moderation.md`](../sentences/moderation.md) | [`../subprotocols/E1_categorical_moderation.md`](../subprotocols/E1_categorical_moderation.md) | [`../subprotocols/intra_tmt_persuasion.md`](../subprotocols/intra_tmt_persuasion.md) + [`../subprotocols/board_governance_boundary_condition.md`](../subprotocols/board_governance_boundary_condition.md) |
 
 **段落功能地图**:
 

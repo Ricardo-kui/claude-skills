@@ -66,7 +66,7 @@
 | **Q2 可区分性** | 你的机制能推出 M_old 推不出的**额外可检验预测**（不同方向/不同边界条件/不同中介） | 若两机制预测完全等价 → 补一个可区分预测（通常是一个 moderation），否则删除 |
 | **Q3 反事实塌陷** | 删掉你的机制后，故事**不**照样成立 | 若删掉后推导链仍完整 → 该机制从未承重，删除 |
 
-**与 `sentences/mechanism_chain.md`「替代机制排除骨架」的关系**：那是提出中介**之后**的排他性句法（写作层）；本门控是承诺机制**之前**的取舍纪律（设计层）。先过门控，再用排除骨架书写。
+**与 [`../sentences/mechanism_chain.md`](../sentences/mechanism_chain.md)「替代机制排除骨架」的关系**：那是提出中介**之后**的排他性句法（写作层）；本门控是承诺机制**之前**的取舍纪律（设计层）。先过门控，再用排除骨架书写。
 
 **与 Outer Limits 的关系**：`golden-biddle-locke-four-moves.md` §Outer Limits 约束你**攻击文献**时不得稻草人；本门控约束你**建设自己**时不得装饰。两者是同一诚实纪律的两个方向。
 
@@ -90,7 +90,7 @@
 **四种处置，按优先级**：
 
 1. **补 scope condition**：答得上来的条件 → 写进推导（"when [condition], this step holds because…"）。这是 moderation 假设的天然生成器——压力测试答出的条件往往就是下一个 moderator
-2. **生成新假设**：条件差异本身有理论趣味 → 升级为 E 调节效应型假设（调用 `variants/E_moderation.md`）
+2. **生成新假设**：条件差异本身有理论趣味 → 升级为 E 调节效应型假设（调用 [`../variants/E_moderation.md`](../variants/E_moderation.md)）
 3. **删除该步骤**：条件答不上来且步骤非必要 → 删除（链条越短，可攻击面越小）
 4. **承认但不回应**（acknowledge without response，Booth Ch9 §9.4.2）：弱点无法修复时**诚实承认**——忽略它是 dishonest（读者发现后质疑你的 competence，认为你刻意隐藏则质疑你的 honesty）。三种回应姿态：
    - 其余论证足以补偿（"the rest of your argument more than compensates for the weakness"）
@@ -148,7 +148,7 @@ Phase 4 审计 4 复核所有卡片的处置列是否兑现。
 
 判断标准（读 aloud 测试）：把推导段朗读出来，如果听起来像**作者在回答想象中的审稿人**而不是**作者在向同行讲一个理论故事**，就是防火墙被击穿。
 
-**与 §5.7 的分工**：本节管协议层泄漏；一般性防御措辞（负向自我设限 "This paper does not claim..."、hedge 堆叠、caveat 散射到高影响位置）的识别与转换句式库见 `../../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md` §5.7——其"保留防守实质、删除防御姿态"原则与本节铁律 2 是同一校准。
+**与 §5.7 的分工**：本节管协议层泄漏；一般性防御措辞（负向自我设限 "This paper does not claim..."、hedge 堆叠、caveat 散射到高影响位置）的识别与转换句式库见 [`../../../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md`](../../../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md) §5.7——其"保留防守实质、删除防御姿态"原则与本节铁律 2 是同一校准。
 
 ---
 
@@ -175,4 +175,4 @@ Phase 4 审计时的快速扫描清单。G&L 的 15 条 fallacy 中，大多数�
 - [`../sentences/mechanism_chain.md`](../sentences/mechanism_chain.md)：替代机制排除的**句法**（事后书写），本文件 §3 是门控（事前取舍）
 - [`../sentences/acknowledgment_response.md`](../sentences/acknowledgment_response.md)：本协议 §4 处置 4（承认但不回应；三姿态句式见该文件 §2.3）与就地回应异议的**句式库**——四类异议 × 承认/回应标记词 × 位置安排
 - [`evidence_patterns.md`](evidence_patterns.md)：Warrant 的证据类型与引用句式；本文件 §1 决定该前提**该不该用、用什么类型防守**
-- `../../diagnose-introduction/references/golden-biddle-locke-four-moves.md` §Outer Limits：攻击文献的诚实纪律；本文件 §3–4 是建设自己的同一纪律
+- [`../../../diagnose-introduction/references/golden-biddle-locke-four-moves.md`](../../../diagnose-introduction/references/golden-biddle-locke-four-moves.md) §Outer Limits：攻击文献的诚实纪律；本文件 §3–4 是建设自己的同一纪律

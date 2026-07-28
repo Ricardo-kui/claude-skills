@@ -846,6 +846,23 @@ def main() -> int:
             and not codex_source_call.search(introduction)
             and has_codex_calls,
         )
+    # --- write-theory cross-reference link resolution (added 2026-07-28) ---
+    # Catches paths dead under every resolution base (file-relative, skill-root,
+    # package-root). Bare basenames without '/' are prose mentions and exempt.
+    theory_root = PACKAGE_ROOT / "write-theory"
+    link_pat = re.compile(r"\]\(([^)]+\.(?:md|yaml))\)|`([^`\s]*/[^`]+\.(?:md|yaml))`")
+    dead_links = []
+    for md in sorted(theory_root.rglob("*.md")):
+        for m in link_pat.finditer(md.read_text(encoding="utf-8")):
+            target = m.group(1) or m.group(2)
+            if target.startswith(("http://", "https://")):
+                continue
+            bases = (md.parent, theory_root, PACKAGE_ROOT)
+            if not any((b / target).resolve().exists() for b in bases):
+                dead_links.append(f"{md.relative_to(PACKAGE_ROOT)} -> {target}")
+    for d in dead_links:
+        print(f"DEAD: {d}")
+    require("write-theory cross-references all resolve", not dead_links)
     print("PASS: all GBL Introduction integration tests")
     return 0
 
