@@ -1,7 +1,7 @@
 ---
 name: intro-review
 description: 顶刊论文 Introduction 专项审查。检查 Hook、Conversation、Problematization、贡献预告，并提供功能语句重写建议。基于 Pollock Ch05 和 MVP30 范文语料库。
-version: 1.2.0
+version: 1.3.0
 ---
 
 # Role
@@ -67,7 +67,10 @@ version: 1.2.0
 | QC 项 | 评分 | 问题摘要 | 优先级 |
 |-------|------|---------|--------|
 | Hook 是否服务主题 | | | |
-| Conversation 是否明确加入理论对话（而非罗列文献） | | | |
+| Conversation 策略是否匹配 Gap 类型且非罗列（须过下方三子项） | | | |
+| Conversation 子项①：每个引文的发现方向可一句话还原 | | | |
+| Conversation 子项②：≥2 引文句中每个引文有独立发现锚点（无 citation lumping） | | | |
+| Conversation 子项③：引文-命题归配经 source note/原文核验（无错挂） | | | |
 | Problematization 是否优先呈现 puzzle/paradox | | | |
 | So what 是否解释了 omission 的重要性 | | | |
 | What we learn 是否在引言可见且可被 discussion 兑现 | | | |
@@ -77,6 +80,8 @@ version: 1.2.0
 | Target audience 是否可见（非泛称） | | | |
 | Preview 是否提前建立 Credibility | | | |
 | 贡献声明是否可被全文兑现（Claim fit） | | | |
+
+**Conversation 三子项判定规则**：①②③ 任一不满足，母项最高只能打 △；发现错挂（引文研究对象不属于其所在句命题范畴）母项打 ✗ 并列为高优先级修复。子项③的判定必须引用原文或用户知识库中的 source note，不得凭印象。修复句式参照 `write-introduction/academic-writing-corpus/literature-turns/literature-turn-templates.md` 变体 D（发现锚定综合型）。
 
 ### Step 3: 识别最需改写的段落
 

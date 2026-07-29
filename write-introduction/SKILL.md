@@ -276,6 +276,7 @@ introduction:
 |------|--------|------|
 | `[field/literature stream]` | 文献流内部使用的术语，不要发明标签 | 标签发明：自创名称让读者无法定位 |
 | `[citations]` | 每个流2-4篇，含至少1篇review/meta，跨期刊 | 全是同一期刊或全是10年前的 |
+| `[per-citation finding]` | 每个引文锚定一个带方向的发现从句（increases / decreases / faster / slower）。方向还原测试：任取一个引文，能一句话说出其发现方向；引文-命题匹配测试：引文研究对象确属其所在句的命题范畴 | 范畴断言+句末堆引（citation lumping）；引文-命题错挂——把研究 X 的引文挂在关于 Y 的句子上 |
 
 ## Tension
 | 槽位 | 填什么 | 陷阱 |
@@ -386,6 +387,8 @@ pontikes2012 通过示例：market-taker 和 market-maker **不是组织的属�
 | **作者名开头**: 段首句主语为 "Smith (2020)"，段落沦为文献注脚 | 段首换成自己的 claim，作者名移到句中证据位；见 prose-craft-checklist §0.6-1 |
 | **清嗓开头**: 段首为 "Before turning to..." / "It is worth noting..." 热身句 | 删除或压缩为 ≤15 词的合法 transition/background 句；见 §0.6-2 |
 | **孤儿引语**: epigraph/引语独立存在，后无 pivot 解读句 | 引语后必须接 "This quote captures..." 式 pivot；见 §0.6-3 |
+| **引文堆叠无锚点** (citation lumping): ≥2 引文的句子中无任何引文带独立发现从句，综合退化为"范畴断言+句末堆引" | 拆为发现锚定从句（"finding with direction ([cite]), whereas contrasting finding ([cite])"），或删去无法说明发现的引文；合格线：任取一个引文可还原其发现方向；句式见 `literature-turns/literature-turn-templates.md` 变体D |
+| **方向压平** (direction flattening): 把方向相反的发现概括进 "X 和 Y 都影响 Z" 式无方向类别句 | 恢复 whereas/but 对比结构，让每个发现的 valence 可见；Constructs / Mechanism distinction 类贡献强制检查——方向对比往往是贡献的立论前提 |
 
 # Constraints
 

@@ -12,7 +12,10 @@ source_papers:
   - eilert2017 (JM, 2017): Progressive Coherence
   - wu2025 (SMJ, 2025): Progressive Coherence with quote pivot
   - keeves2017 (ASQ, 2017): Non-Coherence with asymmetry
+  - darby2026 (JOM, 2026): Synthesized 变体D——范畴句 + "For example" 发现锚定
+  - wowak2025 (MS, 2025): Synthesized 变体D——构念-引文配对列举
 created: 2026-05-18
+updated: 2026-07-28
 source: Extracted from MVP30 narrative_analysis files
 ---
 
@@ -112,6 +115,30 @@ P2 的功能：将 Hook 建立的注意力转化为学术对话。这不是文�
 
 ---
 
+### 变体 D：发现锚定综合型（darby2026 & wowak2025 型）
+
+**模板**:
+> "The [stream A] literature has shown that [category-level finding]. For example, [specific finding with direction] ([cite A1]), whereas [contrasting finding with direction] ([cite A2]). [Connective — Beyond X,] [construct B] [finding with direction] ([cite B1]). Although these streams offer valuable insights, they have developed largely in parallel, leaving [gap at the intersection] underexplored."
+>
+> 配对列举式（wowak2025 型）: "Past research has examined the influence of [construct A] ([cite A]), [construct B] ([cite B]), and [construct C] ([cite C]) on [shared outcome frame], yet [focal construct/outcome] remains unexplored."
+
+**来源**: darby2026 (JOM), §2.1; wowak2025 (MS), P7
+
+**原文锚定**:
+> "For example, incentivizing the CEO with stock options and stock ownership increases the likelihood of a full recall remedy (Liu et al. 2016), but it also increases the number of products warranting a recall (Wowak et al. 2015) and the time-to-recall (Darby et al. 2023). Beyond CEO compensation, the likelihood of a recall is lower in firms with long-tenured CEOs (Mayo et al. 2022), and firms have fewer recalls—particularly severe ones—if the CEO and other executives have OSCM experience (Paraskevas et al. 2023)." — darby2026 (JOM)
+
+> "Although past research has examined the influence of CEO turnover (Mayo et al. 2022), female directors (Wowak et al. 2021), and CEO compensation (Wowak et al. 2015) on recall count and time-to-recall, the influence of TMT political ideology on operations management, in particular medical product recalls, remains unexplored." — wowak2025 (MS)
+
+**关键特征**:
+- **范畴句只做路牌，发现从句承载引文**: 范畴级概括后必须用 "For example" 或配对列举，把每个引文锚定到一个**带方向**的具体发现（increases / decreases / faster / slower）
+- **方向对比显性化**: 方向相反的发现用 whereas/but 并列呈现——禁止压平为 "X 和 Y 都影响 Z" 式无方向类别句（见反模式"方向压平"）
+- **方向还原测试**: 任取一个引文，读者仅凭句中信息即可一句话说出该研究的发现方向；说不出 = 引文悬空，须补发现从句或删引文
+- **与逐篇综述的粒度边界**: 每流一个范畴句 + 每引文一个发现从句即止；不展开 "[Author] found that... Specifically, ..." 的逐篇段落（那是 Progressive 变体 B 的粒度）
+
+**适用**: Synthesized Coherence 的文献流内部呈现；区分型贡献（Constructs / Mechanism distinction）论文**强制使用**——方向对比是贡献的立论前提
+
+---
+
 ## 策略 3：Non-Coherence（冲突式）
 
 **适用**: Incommensurability
@@ -148,6 +175,8 @@ P2 的功能：将 Hook 建立的注意力转化为学术对话。这不是文�
 - **不要把 Literature Turn 写成完整文献综述**: P2 是过渡，不是文献回顾。2-3 句即可
 - **不要让 Hook 和 Literature Turn 脱节**: 必须在语义上连接（如 Hook 中的"反直觉现象"→ Lit Turn 中的"已有理论预测相反方向"）
 - **不要只引用自己导师的论文**: 展示文献广度
+- **不要把综合写成无发现锚点的范畴断言（citation lumping）**: ≥2 引文的句子若没有任何引文带独立发现从句，即为堆叠而非综合——综合的合格线是"任取一个引文，读者能还原该研究的发现方向"。修复：拆为发现锚定从句（变体 D），或删去无法说明发现的引文
+- **不要压平发现方向（direction flattening）**: 把方向相反的发现概括进 "X 和 Y 都影响 Z" 式无方向类别句，会删掉文献内部最关键的对比——对区分型贡献论文，这个对比往往正是贡献的立论前提。修复：恢复 whereas/but 对比结构，让每个发现的 valence 可见
 
 ---
 
@@ -168,3 +197,11 @@ P2 的功能：将 Hook 建立的注意力转化为学术对话。这不是文�
 ✅ "The CPA literature has documented that political ties facilitate resource inflows — subsidies, contracts, regulatory relief (Faccio, 2006; Claessens, Feijen, & Laeven, 2008). A separate stream on corporate investment has shown that how firms allocate resources among competing uses is often more consequential than how much they acquire (Shin & Stulz, 1998; Rajan, Servaes, & Zingales, 2000). These two streams have developed in parallel, yet their intersection — whether political ties distort allocation efficiency — remains unexamined." → 双方各引 2 篇代表性文献 + 明确指出它们从未交叉
 
 **填充检查**: 两个文献流的字数比例是否大致平衡（不偏袒一方）？双方是否都有 ≥2 篇代表性引文？
+
+### `[citations]` — 引文的句内锚定
+
+❌ "CEOs, boards, and top management teams shape the attention and incentives behind the decision (A 2017; B 2021; C 2023; D 2021)." → 四个引文堆在一句无方向的范畴断言末尾：读者无法还原任何一篇的发现；若 A/B 两篇实际研究的不是 CEO/董事会，还构成引文-命题错挂
+
+✅ "CEOs with greater stock ownership recall more slowly (C 2023), whereas boards with more female directors initiate severe recalls faster (D 2021)." → 每个引文锚定一个带方向的发现从句；方向对比由 whereas 显性呈现
+
+**填充检查**: ①方向还原——遮住其他引文，能否仅凭句中信息一句话说出某引文的发现方向？②引文-命题匹配——该引文的研究对象是否确实属于其所在句的命题范畴？两问皆"是"才合格；②答"否"时把引文移到它实际支持的命题句，或删除。
