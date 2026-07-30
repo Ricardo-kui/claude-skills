@@ -109,17 +109,67 @@ P2-P3 的功能：连接多个文献流，展示它们共享一个盲区——�
 
 ---
 
+### 变体 E：让步—权威定义锚定—推测与系统研究分层型（pollock2015 完整架构型）
+
+**模板**（三段式 literature dialogue）:
+
+段 1（混淆清单 + 让步合法性）:
+> "The interdependence of [construct A] and [construct B] is reflected in the literature. For example, [Scholar 1] used [the two terms] interchangeably in [canonical work]; [Scholar 2] combined them, referring to '[compound term]'; and some scholars have conceptualized [construct A] as a component of [construct B] (e.g., [citations]). Further, the two constructs have many similarities: both are [similarity 1]; both [similarity 2]; and both [similarity 3] ([citation])."
+
+段 2（权威定义锚定 + 进展承认）:
+> "Recent research has begun to parse out the differences between these two constructs (e.g., [citations]). [Canonical authority] summarized the key theoretical differences when [they] stated, '[verbatim definition distinguishing the constructs]' ([citation]: [page])."
+
+段 3（垂直轴缺口 + 推测/考虑/系统研究分层）:
+> "Despite the progress made in distinguishing [construct A] and [construct B] by focusing on the different ways they affect common outcomes, the question of how they influence each other has gone largely unaddressed. Researchers have speculated about [adjacent theoretical question] (e.g., [citations]) and have considered [a related but narrower empirical angle] ([citation]), but no research we are aware of has systematically considered [the precise coevolution/relationship this study examines]."
+
+**来源**: pollock2015 (ASQ), P2–P4
+
+**原文锚定**:
+> "The interdependence of reputation and status is reflected in the literature. For example, Podolny (1993) used 'reputation' and 'status' interchangeably in his status-based model of market competition; Shrum and Wuthnow (1988) combined them, referring to 'reputational status'; and some scholars (e.g., Rindova et al., 2005; Lange, Lee, and Dai, 2011) have conceptualized status as a component of reputation. Further, the two constructs have many similarities: both are path dependent and accrue value over time; both provide signals that influence public evaluations of firms; and both affect organizational outcomes..." [P2]
+>
+> "Recent research has begun to parse out the differences between these two constructs... Washington and Zajac (2005: 283) summarized the key theoretical differences between reputation and status when they stated, 'status is fundamentally a sociological concept that captures differences in social rank that generate privilege or discrimination (not performance-based awards), while reputation is fundamentally an economic concept that captures differences in perceived or actual quality or merit that generate earned, performance-based rewards.'" [P3]
+>
+> "Despite the progress made in distinguishing status and reputation by focusing on the different ways they affect common outcomes, the question of how they influence each other has gone largely unaddressed. Researchers have speculated about which construct drives the other (e.g., Podolny, 2005; Sorensen, 2007) and have considered how the reputation of a firm's initial partners influences its future status (Milanov and Shepherd, 2013), but no research we are aware of has systematically considered how status and reputation coevolve." [P4]
+
+**关键特征**:
+- **四步文献对话架构**（vs 变体 B 的单段压缩），这正是"与文献对话质量"的可迁移骨架:
+  1. **混淆清单 (conflation inventory)**: 枚举文献混淆的*多种结构模式*——互换使用 / 复合术语 / 嵌套包含——证明混淆是系统性的而非偶发的稻草人
+  2. **让步合法性 (concession-as-credibility)**: "the two constructs have many similarities" 先真诚承认混淆是*可理解的*（构念确有真实共性），再离开。这一步是高质量文献对话的标志：先为前人的混淆找到合法理由，让随后的区分显得公正而非攻击
+  3. **权威定义锚定 (definitional anchor)**: 用一段带页码的逐字引用从领域权威源*安装*本论文采用的经典区分——区分不是作者自创，而是领域已确立，作者以此为出发点推进
+  4. **推测/考虑/系统研究分层 (speculation-consideration-systematic tiering)**: 不用扁平的 "no research has examined"，而分三层——有人"推测过"哪个构念驱动另一个（无实证的理论猜测）、有人"考虑过"一个相邻但更窄的角度（单向、初始伙伴→未来地位）、但"no research we are aware of has systematically considered"共同演化——展示对文献*梯度*的精确掌握，使缺口定位无可辩驳
+- **"by focusing on the different ways they affect common outcomes"**: 精确刻画已有进展沿哪条轴展开（结果差异轴），从而让缺口落在*垂直的*另一条轴（相互影响轴）上——"进展 + 垂直缺口"结构，比 generic "few studies" 能量更高
+- **与变体 B 的关系**: 变体 B 是本架构的单段压缩蒸馏（混淆清单 + 让步 + 垂直缺口）；变体 E 补回变体 B 丢失的两个动作——权威定义锚定 + 推测/系统研究分层——适用于需要展示文献对话深度（ASQ/AMJ 构念辨析论文）或段落数预算允许多段 literature turn 的情境
+
+**适用条件**:
+- 两个相似构念已被部分区分（已有定义、测量、效果差异的文献基础）——必须先有 "progress made in distinguishing"
+- 论文的 Gap 是关系型 / 共同演化型 / 双向因果型（垂直于已有"结果差异"轴）
+- 目标期刊重视构念辨析与文献对话精度（ASQ/AMJ 首选）
+- 段落数预算允许 2–3 段 literature turn（极简 Introduction 应用变体 B 压缩版）
+
+**禁忌**:
+- 让步必须真诚——列出的相似性必须是构念真实共有的，不能为让步而虚构；否则随后的区分站不住
+- 权威定义锚定的引用必须是领域公认的*区分性*定义（如 Washington & Zajac 2005 对 status vs reputation），不能引用非权威或非区分性定义
+- 推测/考虑/系统研究三层必须*递进*——"推测" = 无实证支撑的理论猜测，"考虑" = 相邻但更窄的实证角度，"系统研究" = 本文填补的 void；若三层不分梯度会显得堆砌引用
+- 不要在构念尚未被区分时使用——"progress made in distinguishing" 的前提必须成立，否则缺口无支点
+
+---
+
 ## 组装规则
 
-### 必须配对
+### 默认配对（对角线，能量匹配）
 - **与 `05-literature-consensus-blindspot` (Hook) 配对**: 文献共识建立后，揭示共识中的盲区
 - **与 `04-puzzle-paradox` (Hook) 配对**: 反直觉现象后，展示多个文献流都无法解释
 - **与 `02-implicit-assumption-wrong` 或 `03-structural-blindspot` (Tension) 配对**: Synthesized Coherence 是这些 Tension 的标准 Conversation 策略
 
+### 非默认组合（非对角合法，不由 Gap 类型反推）
+> Coherence × Problematization 是 3×3 设计空间，对角线只是默认；完整矩阵见 `literature-turns/_index.md` 顶部 3×3 速查表与 `diagnose-introduction/references/intertextual-construction-playbook.md` §2。
+
+- **Synthesized × Incompleteness（合法非对角·双重沉默型）**: 两个成熟文献流各自正确且充分，只是从未交叉——交汇点必须 consequential，不只是"未被检视"（wowak2025；Locke 1996）。
+
 ### 反模式提醒
 - **不要把文献流描绘成完全错误的**: Inadequacy 的核心是"理解偏了"而非"全盘皆错"
 - **不要只引用一个文献流**: 至少两个文献流才能构成"综合"
-- **不要混淆 Inadequacy 和 Incompleteness**: Synthesized Coherence 不是"遗漏了"，而是"各自看到了一部分但没意识到盲区"
+- **不要把"综合"等同于"遗漏"的否定**: 对角线默认下 Synthesized 配 Inadequacy（交汇盲区），但 Synthesized × Incompleteness（两流从未交叉的双重沉默）同样合法——选择服从文献真实状态与构造目的，不由 Gap 类型反推。
 
 ---
 

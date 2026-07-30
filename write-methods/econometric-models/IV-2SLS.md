@@ -5,7 +5,8 @@ source_papers:
   - "wowak2025_tmt_political_ideology_ms"
   - "qiao_hiatt_sine2026 (SMJ, 2026): natural-disaster instrument + 3-reason exclusion restriction (external-event-as-IV template)"
   - "chung_low_rust_2022_jams (Journal of the Academy of Marketing Science): Durbin-Wu-Hausman test + Gaussian copula endogeneity narrative"
-variants_count: 9
+  - "zhou_gao_zhao_2017 (Administrative Science Quarterly): geography-based IV (distance to seaports for institutional development, Frankel-Romer)"
+variants_count: 10
 created: 2026-05-18
 updated: 2026-07-25
 ---
@@ -122,3 +123,13 @@ updated: 2026-07-25
 **适用**: IV 的主要内生性威胁是 simultaneity / reverse-causality 且可在理论上 + 行为数据上证伪的研究；个人捐赠、个人稳定特质、长期偏好、价值观的研究（政治意识形态、人格、风险偏好）。
 **禁忌**: 不要用 "abundance of caution" 掩盖 IV 诊断的缺失；行为证据百分比必须来自本文样本而非外推；证伪理由若引用文献则必须是与本文 setting 同类的文献。
 **跨 skill 对齐**: 与变体 1（Lewbel 三步法）、变体 2（诊断链）配套——本变体是 IV 论证的**前置叙事**，变体 1–2 是 IV 的**技术与诊断**。三者共同构成完整 M8 IV 段落。
+
+### 变体 10: M8 地理外生性工具变量（geography-based IV，Frankel-Romer 型）(2026-07-30)
+**来源论文**: Zhou, Gao & Zhao (2017, Administrative Science Quarterly)
+**验证状态**: 通过（单篇，待第二篇交叉验证）
+**槽位**: M8
+**骨架**:
+> "Because [the institutional/moderator variable] is endogenous to [regional economic development], we need to find an instrument that affects [the DV] indirectly through [the institutional variable]. Because [regions' geographic location] is exogenous and predetermined by nature ([Frankel and Romer, 1999]), we used [the distance of each province to major seaports] as the instrument for [the institutional variable] ([Wei and Wu, 2001]). We calculated the shortest physical distance from the capital city of each province to one of the [N] major [seaports/economic centers]—[city 1] and [city 2]—using the Great Circle formula with the latitudes and longitudes of cities. The instrumental variable estimate of [the institutional variable] was substituted into the models. The instrumental variable [exhibited a strong first-stage relationship] (first-stage *F* = [value], *p* < [.001])."
+**与原骨架差异**: **geography-based IV**（Frankel-Romer 地理外生性传统）——用纯地理距离（到大港口/经济中心的物理距离，Great Circle 公式）为"区域性、随经济内生"的制度/发展变量（市场化程度、制度发展、贸易开放度）外生化。区别变体 4（自然灾害事件 IV）、变体 6（传记性暴露）、变体 7（Bartik shift-share）：本变体的外生性来自**地理前定性**（地区位置由自然决定，不随当代经济行为变化），且为**持续型地理距离**而非事件。配套报告第一阶段 *F* 确认工具强度（不可只说"valid"）。诚实点：引用 Frankel-Romer 地理外生性论证 + 替代性 geography 文献（Wei-Wu）双重背书。
+**适用**: 制度发展、市场化指数、贸易开放度、基础设施可达性等"区域性、与经济发展互为因果"的变量作自变量/调节变量时；新兴市场跨地区研究（中国省际、印度/巴西邦际）。
+**禁忌**: 地理距离的外生性须论证（不可默认）——若该距离通过非制度渠道影响 DV（如距离→运输成本→贸易→创新），则排除限制受损，须讨论；第一阶段 *F* 必须报告，弱工具（F<10）不可用；地理距离时不变，无法识别 within-region 时间效应，须配 FE 设计说明。

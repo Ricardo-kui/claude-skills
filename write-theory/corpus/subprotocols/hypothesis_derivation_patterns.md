@@ -46,86 +46,14 @@ H2b: [X_dim2] is positively related to [outcome B].
 
 **反模式**: 用"A 不喜欢所以 B 喜欢"作为唯一机制；方向反转未充分解释。
 
----
-
-<!--
-pattern_id: sign_flipping_boundary_condition
-build_type: 边界条件型 / 构念辨析型
-source_papers: ["Pontikes_2012_ASQ"]
-confidence: medium
-status: ready_for_corpus
--->
-
-## Pattern: Sign-Flipping Boundary Condition
-
-**适用场景**: 同一 IV 对 DV 的方向因受众/情境/角色而异；需要用机制解释方向反转，而非仅做交互项。
-**微观动作序列**: Boundary claim → Condition A mechanism（negative）→ Condition B mechanism（positive）→ Integration
-**范文来源**: Pontikes (2012), *ASQ*（audience role switches the sign of ambiguity-evaluation relationship）
-
-**骨架**:
+**扩展：two-stage complementary process reconciliation（pontikes2012 型）**——当两类受众对同一构念的偏好**方向相反**，会产生表面 irony（"VC 偏好消费者厌恶的"——但 VC 终究要投能吸引消费者的公司）。pontikes2012 在假设陈述后用一段 **temporal staging** 化解 irony：两类受众的相反偏好不矛盾，因为他们作用于**不同发展阶段**——market-maker（VC）在**早期**筛选难以理解但具潜力的组织，market-taker（consumer）在**后期**从存活者中选择。骨架：
 ```
-[Boundary claim] The [IV]-[DV] relationship depends on [condition].
-
-[Condition A] For [A], [IV] signals [interpretation A] → [negative DV].
-[Path 1] ...
-[Path 2] ...
-
-[Condition B] For [B], [IV] signals [interpretation B] → [positive DV].
-[Path 1] ...
-[Path 2] ...
-
-[Integration] These reactions are not contradictory because [A] and [B] occupy different positions in [system].
+[Irony statement] The above hypotheses propose that [X] makes [actors] seem [unclear] to [audience A] but [flexible] to [audience B], leading to opposing evaluations. This may seem ironic, given that [audience B]'s ultimate goal depends on [appealing to audience A].
+[Temporal staging resolution] But [audience B] engages [actors] at [an earlier stage] than [audience A], so the two audiences' reactions may form a **complementary [N]-stage process**: [audience B] first [sorts/selects actors that are difficult to understand and chooses the most promising]; in the [second] stage, [audience A] [chooses from among the survivors].
 ```
-
-**为什么有效**: 用机制解释方向反转，而非仅报告交互项；integration 说明两类条件为何能同时成立。
-**注意事项**:
-- 必须解释不同条件为何产生不同解读
-- 建议给出制度/功能互补理由
-- 两类条件必须有理论基础，不能是事后分组
-
-**反模式**: Theory 中仅说"调节"而不解释机制；integration 只是"不同视角"。
-
----
-
-<!--
-pattern_id: audience_role_dichotomy_mirrored_hypotheses
-build_type: 构念辨析型 / 二元机制推演型
-source_papers: ["Pontikes_2012_ASQ"]
-confidence: high
-status: ready_for_corpus
--->
-
-## Pattern: Audience-Role Dichotomy + Mirrored Hypotheses
-
-**适用场景**: 同一核心构念对至少两类受众/情境产生理论上相反的效果；不是强度差异，而是真正的方向反转。
-**微观动作序列**: Consensus（文献认为 [state] 有害）→ Audience distinction（market-takers vs market-makers）→ Mechanism A（对 audience A 有害）→ H1a/H1b → Dialectical turn → Mechanism B（对 audience B 有益）→ H2a/H2b → Reconciliation
-**范文来源**: Pontikes (2012), *Administrative Science Quarterly*（ambiguous classification hurts consumers but helps VCs）
-
-**骨架**:
-```
-[Consensus challenge] Although prior research finds [X] detrimental ([citations]), [X] persists. I suggest this depends on the evaluating audience.
-
-[Role distinction] There are two roles: [role A], who [function A], and [role B], who [function B].
-
-[Mechanism A] For [role A], [X] makes organizations unclear. [Path 1: search failure / exclusion from consideration set]. [Path 2: inappropriate criteria / expectations not met].
-H1a: [X_dim1] is negatively related to [outcome A].
-H1b: [X_dim2] is negatively related to [outcome A].
-
-[Mechanism B] For [role B], [X] signals flexibility. [Path 1: new classification opportunity / potential to redefine market structures]. [Path 2: multivocality / interpretable from multiple perspectives]. [Path 3: flexibility / adaptability to shape label definitions].
-H2a: [X_dim1] is positively related to [outcome B].
-H2b: [X_dim2] is positively related to [outcome B].
-
-[Integration] The same [X] has opposing consequences depending on the audience role.
-```
-
-**为什么有效**: 用受众制度角色解释表面矛盾，将异常转化为理论机会；镜像假设强化核心论点。
-**注意事项**:
-- 两种角色需有清晰功能差异，不能只是 demographic 分组
-- 每个角色至少两条机制路径
-- T4 首句必须使用 dialectical turn 标记："Despite research showing..., it persists."
-- 两类受众机制步骤数应大致对称
-
-**反模式**: 用"A 不喜欢所以 B 喜欢"作为唯一机制；方向反转未充分解释。
+**为什么有效**：把"相反偏好"从逻辑矛盾重新框定为**时间上互补的分工**——两类受众都对，但在不同阶段、用不同标准起作用。这预防审稿人"VC 偏好消费者厌恶的东西，那 VC 怎么赚钱？"的致命追问，并为 Discussion 的"两阶段过程"贡献奠基。
+**适用**: 两类受众对同一构念偏好相反、且作用于 actor 不同生命阶段的研究（投资者 vs 客户、招聘方 vs 同事、评审 vs 受众、孵化器 vs 市场）。
+**禁忌**: temporal staging 必须有理论或经验依据（两类受众确实作用于不同阶段），不可为化解 irony 而虚构阶段；若两受众**同时**评估同一阶段的同一 actor，则 irony 无法用 staging 化解，须用其他 resolution（如 audience-specific weights）。
 
 ---
 
@@ -282,6 +210,17 @@ H[X]c: [IV] has an inverted U-shaped impact on [outcome], such that [moderate le
 - 倒 U 形假设措辞必须明确
 
 **反模式**: 两种逻辑指向同一 facet 导致矛盾；拐点缺乏理论依据；边界条件只是事后补丁。
+
+**扩展：moderator-as-remedy（H3/H4，zhou2017 型）**——当 dual-logic 中的"负面逻辑"（如 H1b 效率诅咒）识别出一个 dys-function，后续调节假设可把 moderator 理论化为**该 dys-function 的解药**。zhou2017 的 H3/H4 即此：H1b 指出 state ownership 引发 dual agency problem 导致 R&D→innovation 效率低；H3（工业竞争）与 H4（start-up 状态）则论证**外部治理控制**（竞争作为外部 monitor、start-up 的生存压力）能缓解该 agency problem，使 SOE 更有效率地转化 R&D。
+骨架：
+```
+[Problem recap] As argued in [H1b / the negative logic], [IV] creates [dys-function—e.g., dual agency problem] that reduces [efficiency].
+[Remedy mechanism] [Moderator] can attenuate this [dys-function] because [theoretical reason—e.g., competition is a salient external governance control that forces inefficient firms to exit; start-ups face liabilities of newness that discipline managers].
+[Specific channels] First, [moderator] reduces [channel 1—e.g., political interference]. Second, [moderator] increases [channel 2—e.g., managerial motivation/accountability].
+[Prediction] H[N]: The [negative] moderating effect of [IV] on the [M]→[Y] relationship is [less negative] when [moderator] is [high/present].
+```
+**为什么有效**：把 moderator 选择**锚定到已识别的理论问题**（不是任意 boundary condition），使调节假设成为理论论证的有机延伸而非"再补两个交互项"。moderator 不是"何时主效应更强"，而是"**什么条件下负面机制被抵消**"——对 agency/governance/institution 类研究特别有力（竞争、监管、上市、所有权结构作为治理机制）。
+**注意事项**：moderator-as-remedy 须明确指向 H1b 的**具体 dys-function 机制**（不可泛泛说"improves efficiency"）；须排除"moderator 直接影响 DV"的替代解释（论证 moderator 是通过缓解 dys-function 而非独立起作用）；多个 remedy moderator 应共享同一治理逻辑（竞争与 start-up 都属"外部纪律"），形成理论一致性。
 
 ---
 
@@ -1180,3 +1119,125 @@ for [type A actor].
 - 主效应假设（H1）必须先建立，子类型假设（H2）才有递进的基础
 
 **反模式**: 子类型优势无机制论证（"type A may be more valuable" 无 because）；类型区分是操作化差异而非构念差异；H2 与 H1 方向冲突（暗示 mismatch 反而更好）。
+
+---
+
+<!--
+pattern_id: developmental_reversal_reciprocal_asymmetry
+build_type: 机制推演型 / 共演互构型
+source_papers: ["Pollock_Lee_Jin_Lashley_2015_ASQ"]
+confidence: high
+status: ready_for_corpus
+-->
+
+## Pattern: Developmental Reversal of Reciprocal-Causation Asymmetry（pollock2015 H1a/H1b 型）
+
+**适用场景**: 两个构念相互因果（coevolution / simultaneous / reciprocal causation），研究问题不是任一构念的绝对效应，而是**两个构念相互影响的不对称方向**——且这个不对称方向**随一个发展性连续调节变量（如年龄、经验、阶段）而反转**。典型于 status↔reputation、legitimacy↔performance、learning↔performance 等共演/互构关系。
+
+**与相邻模式的区别**:
+- 不同于 **Sign-Flipping Boundary Condition**（Pontikes）：后者是同一 IV→DV 的符号因受众反转；本模式反转的是**两个构念间相互因果的相对大小**，不是单一关系 的符号
+- 不同于 **Counterintuitive Direction-Reversal via Mechanism Substitution**（Ilicic & Brennan）：后者通过替换机制反转 X→Y 符号；本模式不替换机制，而是用两个构念的**时变态特性差异**（malleability / stickiness / equilibrium tendency）内生解释不对称方向为何随发展反转
+- 不同于 **Symmetric Opposing Dual-Track**（Zhao-Ding & Gaba）：后者是两个离散条件产生镜像效应；本模式是一个**连续发展变量**在两端的非对称反转
+
+**微观动作序列**:
+1. **Coevolution baseline**（两个构念正向互构，"unsurprising" 故不立正式假设）
+2. **Asymmetry anchor**（引入两构念的时变态特性差异：A 更 malleable / B 更 sticky）
+3. **Early-stage mechanism**（发展早期：A 必须先于 B 建立 → A 对 B 的影响更大）
+4. **H1a**（早期不对称方向）
+5. **Late-stage mechanism**（发展后期：B 达到 equilibrium 稳定 → B 对 A 的影响更大）
+6. **H1b**（后期不对称方向反转）
+
+**范文来源**: Pollock, Lee, Jin, and Lashley (2015), *Administrative Science Quarterly*（status↔reputation coevolution; age reverses which construct drives the other）
+
+**骨架**:
+```
+[Coevolution baseline] Because both [construct A] and [construct B] provide benefits that
+aid in developing the other construct, we expect them to have a positive relationship as
+they coevolve. As this expectation is unsurprising, we do not present a formal hypothesis,
+but it does form our baseline assumption.
+
+[Asymmetry anchor] Though we expect [A] and [B] to positively influence each other, we do
+not expect the nature of this relationship to remain constant over time. [Theoretical
+property: e.g., A is more malleable and must be continually reinforced, whereas B, once
+established, is sticky and tends toward equilibrium].
+
+[Early-stage mechanism] During its early years, [actor] has little [B]; what [B] it has is
+largely inherited from [founder/source]. To enhance [B], [actor] must first build [A] via
+[action]. [Theoretical justification of why A must precede B]. Thus, while [A] and [B]
+enhance each other, [A] needs to be developed before [B] can be changed.
+[Early prediction] H1a: When [actors] are young, [A] will have a greater effect on [B] than
+[B] will have on [A].
+
+[Late-stage mechanism] But as [actor] ages and its [B] increases as a function of its [A],
+[actor] should be able to access the [B-benefits] that make it easier to continue being
+successful, thereby enhancing [A]. To the extent that a new [B-equilibrium] is established,
+over time [actor]'s [B] should stabilize and be less susceptible to changes in [A].
+[Late prediction] H1b: When [actors] are older, [B] will have a greater effect on [A] than
+[A] will have on [B].
+```
+
+**为什么有效**: 把"哪个构念驱动哪个"这一共演核心问题，与一个可观测的发展变量（年龄）绑定，使不对称方向**可检验且可反转**——比静态的"A 影响 B"更有理论精度。早期/后期机制各自由两构念的**时变态特性差异**内生推出（malleability → A 先行；equilibrium → B 后稳），无需替换机制即可解释反转。
+
+**配套——"unsurprising baseline, no formal hypothesis" 子动作**: 共演/互构论文通常有一个 trivially-true 的正向互构基线。用 "As this expectation is unsurprising, we do not present a formal hypothesis, but it does form our baseline assumption" **显式拒绝把它立成假设**，把理论精力与假设编号集中到非平凡的不对称方向上。这是 coevolution 论文的标准 baseline 处理，可单独迁移到任何 reciprocal-causation 设计。
+
+**注意事项**:
+- 必须先论证两构念的**时变态特性差异**（stickiness / malleability / reinforcement need / equilibrium tendency），这是反转的内生依据
+- 早期与后期机制必须**各自独立**（不能后期只是"反之亦然"），且都从同一组构念特性推出
+- 适用于 simultaneous-equation / reciprocal-causation / coevolution 设计；H1a/H1b 需配合**跨方程系数比较检验**（Wald χ²，参见 write-methods 同时方程 / write-results 跨模型系数比较）
+- 同架构可复用于第三变量的 DV-条件效应随发展翻转（pollock2015 H3a/H3b：blockbuster deals 影响 status 当年轻、影响 reputation 当年老——因 visibility 是 reputation 的核心但非 status 的核心，且 status 随年龄稳定）
+
+**反模式**: 反转缺乏内生依据（"年纪大了就反过来"无机制）；早期/后期机制不对称（一边详证一边默认）；把正向 baseline 也立成假设（浪费编号且稀释理论焦点）。
+
+---
+
+<!--
+pattern_id: differential_persistence_lagged_dv_moderation
+build_type: 调节效应型 / 动态面板共演型
+source_papers: ["Pollock_Lee_Jin_Lashley_2015_ASQ"]
+confidence: high
+status: ready_for_corpus
+-->
+
+## Pattern: Differential Persistence / Lagged-DV Moderation（pollock2015 H2 型）
+
+**适用场景**: 动态面板/自回归设计中，研究问题不是某 IV→DV 斜率被调节，而是**两个构念的路径依赖（path dependence，即滞后因变量系数 ρ）被一个发展变量差异化调节**——一个构念的 ρ 随发展减弱，另一个不变。理论依据是两构念的**持久性特性差异**（一个 sticky / toward equilibrium，一个须不断 reinforcement）。
+
+**与标准调节（E1）的区别**: 标准 E1 调节的是 IV→DV 斜率；本模式调节的是**滞后因变量（LDV）系数 ρ**——即构念对其自身过去值的依赖程度。这要求动态面板设定（lagged DV as regressor），并把一个理论特性（stickiness vs reinforcement）映射到一个计量参数（persistence）。
+
+**微观动作序列**:
+1. **Persistence-property anchor**（两构念的持久性特性差异：A sticky / toward equilibrium，B must be continually reinforced）
+2. **Moderator-on-ρ mechanism**（发展变量如何差异化改变两构念的 ρ：A 的 ρ 随发展减弱因 equilibrium 稳定；B 的 ρ 不变因始终需 reinforcement）
+3. **Differential prediction**（H2: age 弱化 A 的 ρ，但不影响 B 的 ρ）
+
+**范文来源**: Pollock, Lee, Jin, and Lashley (2015), *Administrative Science Quarterly*（H2: age weakens status persistence but not reputation persistence）
+
+**骨架**:
+```
+[Persistence-property anchor] Prior research suggests that [construct A] tends to be
+"stickier" than [construct B] ([citations]). Once established, [A] orders are relatively
+stable and self-reinforcing; [A] tends toward equilibrium over time ([citations]). In
+contrast, [B] must be constantly reinforced ([citations]) and therefore changes more easily.
+
+[Moderator-on-ρ mechanism] This suggests that though prior [A] and [B] are positively
+related to current [A] and [B], the strength of that relationship may change as [actors]
+age and their [A] becomes stabilized. As [actors] age, their [A] standing will achieve
+equilibrium and stabilize; while changes in [A] can still occur, [older actors] will more
+quickly reestablish a new equilibrium, so [A]-changes in the prior period will have a weaker
+effect on [A] in the current period when [actors] are older. In contrast, because [B] needs
+to be continually reinforced, it is always susceptible to changes in prior [B]; thus the
+effect of changes in prior [B] on current [B] will not weaken as the [actor] ages.
+
+[Differential prediction] H[N]: [A] in one period will have a weaker influence on [A] in
+the next period as [actors] age, but the relationship between an [actor]'s past [B] and its
+current [B] will be unaffected by its age.
+```
+
+**为什么有效**: 把一个抽象理论特性（stickiness / reinforcement asymmetry）**直接映射到一个可估计的计量参数**（LDV 系数 ρ 的差异化变化），使"status 比 reputation 更 sticky"这一长期被声称但难检验的理论命题获得**动态面板层面的可检验形式**。假设措辞本身就是"差异化调节"（一个 ρ 减弱，一个不变），比单一方向调节更精确。
+
+**注意事项**:
+- 必须先建立两构念的**持久性特性差异**（stickiness / equilibrium / reinforcement need），这是差异化预测的理论依据
+- 调节对象是**滞后因变量系数 ρ**，不是 IV→DV 斜率——需在 Methods 中用动态面板（Arellano–Bond / GMM）估计，在 Results 中报告 ρ 随 age 的交互（参见 write-methods 动态面板-GMM / write-results OLS-FE 路径依赖解释）
+- "differentiated moderation"（一减一不变）措辞必须精确——不能写成两个都减弱或两个都不变
+- **零结果**（B 的 ρ 不随 age 变化）需在 Results 中做统计功效分析（如 Monte Carlo power analysis）以排除 type II error（参见 write-results 零结果功效分析）
+
+**反模式**: 声称持久性差异但不映射到 ρ（停留在"status 更 sticky"的口号）；差异化预测缺乏理论依据（为何一个减弱一个不变）；零结果不报告功效分析即下结论。

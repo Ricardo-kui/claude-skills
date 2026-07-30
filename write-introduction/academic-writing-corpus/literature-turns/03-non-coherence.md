@@ -61,6 +61,15 @@ P2-P3 的功能：呈现两个或多个理论/文献流的不兼容性，它们�
 - 每个理论都有具体的预测内容（不能只说"观点不同"）
 - "Resolving this tension requires" → 自然引出研究方案
 
+**完整架构（zhou2017 双层 non-coherence + facet-decomposition 解析）**:
+zhou2017 的 non-coherence 实为**双层叠加**，是其文献对话的高质量所在：
+1. **理论层对立**——效率逻辑（agency theory：state ownership → 创新 decline）vs 制度逻辑（政府控制稀缺资源 → SOE 获资源 → foster innovation），两理论对同一 outcome 推出相反预测。
+2. **实证层不和**——"empirical evidence is **mixed**"：三类研究分别报告 negative（Jefferson/Xu/Guan；Ayyagari 47 国）/ positive（Li & Xia；Choi Lee Williams）/ null（Choi Park Hong 韩国）。用三方向（正/负/无）的具体研究枚举，把"理论对立"落到"实证也不和"的双重 discord。
+3. **现实反证（prediction-vs-reality）**——效率逻辑预测 SOEs 是"dying dinosaurs"，现实却是"dynamic dynamos"（中国 106 家 Fortune Global 500，2/3 为 SOE）。一句 vivid 对偶把理论预测与现实事实对立。
+4. **Facet-decomposition 解析（resolution）**——"To resolve the theoretical and empirical inconsistencies, we theorize that the [两逻辑] pertain to **different facets** of [现象]: [逻辑 A = resource allocation/input], [逻辑 B = resource utilization/efficiency]." 即两理论都"对"，但各管一个 sub-facet；整合两 facet 推出**倒 U**（minority state ownership 最优）。
+
+**可迁移核心**：当两理论给出不兼容预测且实证 mixed，不要选边站或宣布一方错——而是**分解到不同 facet**（allocation vs utilization；selection vs influence；motivation vs ability），让两理论各管一 facet，再整合（常产生非单调整体关系）。这是 Non-Coherence × Incommensurability 的"整合式 resolution"，区别于"替换式 resolution"（宣布一方错、用新理论替代）。配套 write-theory：dual-logic integration（H1a 输入 + H1b 效率 → H1c 倒 U）见 `hypothesis_derivation_patterns.md`。
+
 ---
 
 ### 变体 B：非对称关系型（keeves2017 型）
@@ -97,13 +106,15 @@ P2-P3 的功能：呈现两个或多个理论/文献流的不兼容性，它们�
 
 ## 组装规则
 
-### 必须配对
+### 默认配对（对角线，能量匹配）
 - **与 `06-paradigm-challenge` (Hook) 配对**: 高能量 Hook 匹配高能量 Conversation
 - **与 `04-reality-contradicts-consensus` (Tension) 配对**: Non-Coherence 是此 Tension 的标准 Conversation 策略
 
-### 互斥
-- **不能与 `01-despite-progress-unaddressed` (Tension) 同用**: 能量不匹配（高 vs 低）
-- **不能在 Incompleteness 中使用**: Non-Coherence 的"理论冲突"逻辑与 Incompleteness 的"遗漏"逻辑矛盾
+### 非默认组合（非对角合法/可疑，不由 Gap 类型反推）
+> Coherence × Problematization 是 3×3 设计空间，对角线只是默认；完整矩阵见 `literature-turns/_index.md` 顶部 3×3 速查表与 `diagnose-introduction/references/intertextual-construction-playbook.md` §2。
+
+- **Non-Coherence × Inadequacy（合法非对角·调停型）**: 两个阵营各自部分正确，本研究通过澄清边界条件裁决分歧（Hirsch & Lounsbury 1997；常配 write-theory 竞争假设型）。需有真正的裁决依据，不可和稀泥。
+- **Non-Coherence × Incompleteness（可疑组合·先重新诊断）**: 文献既在冲突，"还有更多可知道"会 undersell 张力——通常应重诊为 Non-Coherence × Inadequacy。唯一例外：冲突被承认，但某一具体机制确实未被检视。
 
 ### 反模式提醒
 - **不要制造稻草人**: 两个理论都必须有真实文献支撑
@@ -128,5 +139,5 @@ P2-P3 的功能：呈现两个或多个理论/文献流的不兼容性，它们�
 ## 相关语料
 
 - 配合 `hooks/06-paradigm-challenge.md` 使用：高能量 Hook 匹配高能量 Conversation
-- 配合 `tensions/04-reality-contradicts-consensus.md` 使用：必须配对
+- 配合 `tensions/04-reality-contradicts-consensus.md` 使用：默认配对（对角线；非对角合法组合见本文件"非默认组合"小节与 `_index.md` 3×3 速查表）
 - 配合 `contributions/_index.md` 中的 Makadok 维度使用：Incommensurability 通常涉及 Constructs 或 Mechanism 贡献

@@ -28,7 +28,8 @@ source_papers:
   - grewal2025 (JM, 2025): "Overgeneralization critique: 'generalized view fails to account for variety' — incident/brand/consumer heterogeneity"
   - cui_yang_vertinsky_smj (SMJ): "三重维度并列缺口: outcome scope × portfolio type × network context"
   - paruchuri_andrus_sullivan2026 (AMJ, 2026): "受众边界延伸型: internal hierarchy → external audience"
-updated: 2026-07-14
+  - desjardine_shi_cheng2023 (ASQ, 2023): "visible-vs-invisible domain gap + oversight drives manipulation underground (invisible hands)"
+updated: 2026-07-30
 created: 2026-05-18
 source: Extracted from MVP30 narrative_analysis files + mannor2016 + darby2025 distill + grewal2025 + paruchuri_andrus_sullivan2026
 ---
@@ -656,6 +657,60 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 **适用情境**: 已有理论/构念在内部/原领域充分发展，需要扩展到外部受众或新分析层次。
 
 **禁忌**: 必须证明外部受众确实会接触并解读该构念信号；不能简单假设"外部也应该研究"。
+
+---
+
+### 变体 Z：可见-不可见域缺口 + 监督驱动地下化（DesJardine2023 隐形之手型）
+
+**模板**:
+> "While scholars have paid close attention to these **readily apparent / visible** [phenomena/dynamics], **there exists a [strategic] world of [phenomenon] beneath the surface** that should also be theorized and empirically traced. Academic inquiry has helped [regulators/watchdogs] identify some of the [questionable] channels through which [certain parties] have tried to [orchestrate outcomes] in their favor ([citation]). **Yet**, given the [incentives] these parties have to [advance certain interests over others], **amplified oversight could have the unintended consequence of encouraging such parties to become more creative** in how they achieve their [objectives]. In particular, beyond [actors] relying solely on **overt means** to directly [advance interests], powerful [outsiders] motivated by their own [interests] may manage [the phenomenon] through **indirect, discreet pathways of influence**. These '**invisible hands**' suggest that there is more than meets the eye in the realm of [domain]."
+
+**来源**: DesJardine, Shi & Cheng (2023, ASQ), P2
+
+**原文锚定**:
+> "While scholars have paid close attention to these readily apparent competitive dynamics, there exists a strategic world of competition beneath the surface that should also be theorized and empirically traced. Academic inquiry has helped regulators and other watchdogs to identify some of the questionable channels through which certain parties have tried to orchestrate market competition in their favor. For example, firms tend to publicize negative news of their industry rivals on social media (Cao, Fang, and Lei, 2021). Yet, given the incentives some of these parties have to bolster the competitiveness of certain firms over others, amplified oversight could have the unintended consequence of encouraging such parties to become more creative in how they achieve their competition-based objectives. In particular, beyond parties relying solely on overt means to directly bolster the prospects of certain firms, powerful outsiders motivated by their own economic and/or social interests may manage competition through indirect, discreet pathways of influence. These 'invisible hands' suggest that there is more than meets the eye in the realm of competitive dynamics."
+
+**关键特征**:
+- **"While scholars have paid close attention to [visible X], there exists [Y beneath the surface]"** — 经典"表-里"域缺口：领域覆盖了"可见面"，遗漏了"隐而不见面"。区别于一般"没研究过 X"的 gap——这是一个**被刻意隐藏、难以直接观测**的域。
+- **"oversight → unintended consequence" 驱动逻辑（签名手法）** — 对可见行为的审视/监管**并不消除操纵，反而驱使其"转入地下"**（amplified oversight encourages more creative/concealed pathways）。这把缺口从"尚未发现"升级为"**领域自身的关注正在制造并扩大盲区**"——缺口不是静态遗漏，而是被当前研究范式持续再生产的。
+- **"overt means → indirect, discreet pathways" 对照** — 用"公开手段 vs 隐蔽路径"把"可见-不可见"具象化，为后续构念（invisible hand）铺路。
+- **构念命名（canonical inversion）** — "invisible hands" 借用并**反转** Adam Smith 的 market invisible hand（市场的看不见的手 → 操纵的看不见的手），给现象一个过目不忘的标签。反转经典概念命名是强构念建立手法。
+- **"more than meets the eye" 收束** — 暗示域的深度超出当前理论视野，为贡献预留空间。
+
+**适用条件**:
+- 研究对象是**被刻意隐藏/隐蔽进行的机制或行为**（暗中操纵、隐蔽渠道、非正式安排、幕后影响、灰色实践、unobserved influence）
+- 领域主流研究聚焦**可见/显性**行为，你要揭示**隐性/隐蔽**对应物
+- 能论证"对显性行为的审视反而驱动隐蔽化"（oversight/regulation/attention → creative concealment）
+- 现象可借反转经典概念命名（invisible hand、shadow、governance of the gaps、dark side、off-the-books）
+
+**禁忌**:
+- "oversight → unintended consequence" 必须有**机制依据**（监管成本、规避激励、可见性不对称），不可只是修辞装饰
+- 不可声称"没人研究过"——DesJardine2023 明确引用了一些**已识别**的 questionable channels（Cao et al. 2021 社交媒体抹黑）作为"可见面已被部分识别"的证据；缺口在于**更隐蔽的对应物**，而非全然未知
+- 构念命名（invisible hands）必须服务于理论推进，不可沦为空标签——需配套可检验操作化（本研究即 blockholding + coverage negativity）
+- "visible vs invisible" 的两分必须真实（现象确实难以直接观测）；若现象其实可观测，应归普通 Incompleteness 变体
+- 与变体 V（hoffmann 政策意外后果）区别：变体 V 是某部**法律/政策**backfiring 的 unintended consequences（quasi-natural experiment）；本变体是**领域对显性行为的关注**本身驱动操纵**隐蔽化**（隐性之手构念的 gap 动机）
+
+---
+
+### 变体 AA：权威警告 + 例外枚举 + 规模-忽视悖论（DesJardine2023 P8 型）
+
+**模板**:
+> "[Authority] ([year]: page) warned that 'scholars [have] ignored, or lightly attended to, the effects of [neglected force]' in driving [outcome]. The few exceptions have been limited to showing how [outcome] is biased by [factor 1] ([citation]) or [factor 2] ([citation]) or [factor 3] ([citation]). Although [the biggest stakeholder group] has become [the largest / most important X in the domain], [their role] has been mostly overlooked. Adopting a critical lens to examine the '[neglected force]' [Authority] warned about, our study shows that [outcome] can be subject to [the neglected force's] interests. Because [normative stakes—e.g., free and independent media are vital to society and democracy], we heed recent academic calls to answer the question, '[the field's normative question]' ([citation]: page)."
+
+**来源**: DesJardine, Shi & Cheng (2023, ASQ), P8
+
+**原文锚定**:
+> "Picard (2011: viii) warned that 'scholars [have] ignored, or lightly attended to, the effects of economic forces' in driving the media coverage firms receive. The few exceptions have been limited to showing how media outlets bias their coverage because of government control (Besley and Prat, 2006) or to gain advertising revenues (Reuter and Zitzewitz, 2006) or readers (Core, Guay, and Larcker, 2008). Although institutional investors have become the largest shareholders of most publicly traded media companies, investors' role in the media has been mostly overlooked. Adopting a critical lens to examine the 'economic forces' Picard (2011) warned about, our study shows that the coverage a firm receives can be subject to the economic interests of media companies' investors. Because free and independent media are vital to society and democracy, we heed recent academic calls to answer the question, 'How can we create a news ecosystem and culture that values and promotes truth?' (Lazer et al., 2018: 1096)..."
+
+**关键特征**:
+- **权威警告作缺口背书** — 引用领域权威（Picard 2011: viii）点明被忽视的维度（"economic forces"），把缺口从作者主张升级为领域已有呼吁
+- **例外枚举（有限的三类）** — 简短列举仅有的例外（govt control / ad revenue / readers），展示文献掌握、凸显缺口系统性
+- **规模-忽视悖论（签名手法）** — "the biggest stakeholder（institutional investors = **largest shareholders**）has been **mostly overlooked**"——域内**最大/最重要的主体**反而**最少被研究**。不是"边缘主体没研究"，而是"核心主体没研究"，悖论是缺口的强力 warrant
+- **critical lens 承接** — "Adopting a critical lens to examine the '[force]' [Authority] warned about" 把研究定位为对权威警告的回应
+- **normative stakes 收束** — 以领域规范性问题（"free and independent media are vital to society and democracy" + 领域呼吁引语）收尾，把学术缺口连接到公共重要性
+
+**适用**: 研究某**大主体/核心力量**对某结果的影响，而该主体尽管在域内占比最大却最少被研究（机构投资者、平台、政府、媒体、算法、监管者、数据供应商）。需权威警告 + 例外枚举 + 规模悖论三重背书来确立缺口，常见于 ASQ/SMJ 的"被忽视的经济力量"研究。
+**禁忌**: 权威警告必须真实可引（带页码）；"最大主体"必须可证（institutional investors own 85%）——规模-忽视悖论若主体其实不大则不成立；例外枚举须穷尽或显式限定（"the few exceptions"），若有更多例外须引用并区分。
 
 ---
 

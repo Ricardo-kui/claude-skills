@@ -166,10 +166,12 @@ P2 的功能：将 Hook 建立的注意力转化为学术对话。这不是文�
 
 ## 组装规则
 
-### 必须配对
+### 默认配对（对角线，能量匹配）
 - Progressive Coherence → Incompleteness Gap + `03-data-shock` 或 `10-practical-puzzle` Hook
 - Synthesized Coherence → Inadequacy Gap + `05-literature-consensus-blindspot` 或 `04-puzzle-paradox` Hook
 - Non-Coherence → Incommensurability Gap + `06-paradigm-challenge` Hook
+
+> 以上是**默认对角线**，非"必须"。Coherence × Problematization 是 3×3 设计空间，非对角合法组合（如 Synthesized × Incompleteness 的 wowak2025、Progressive × Incommensurability 的 gamache2023）与可疑组合的判据见 `literature-turns/_index.md` 顶部 3×3 速查表与 `diagnose-introduction/references/intertextual-construction-playbook.md` §2。两轴独立选择，禁止由 Gap 类型反推 Coherence。
 
 ### 反模式提醒
 - **不要把 Literature Turn 写成完整文献综述**: P2 是过渡，不是文献回顾。2-3 句即可

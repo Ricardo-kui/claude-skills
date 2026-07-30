@@ -16,6 +16,22 @@ Literature Turn（P2-P3）的核心功能是将 Hook 建立的注意力转化为
 
 ---
 
+## 3×3 组合速查 — Coherence × Problematization 设计空间
+
+> 九种组合在顶刊中均被观察到。**两轴独立选择，禁止由 Gap 类型反推 Coherence。** 图例：◆ 默认对角（能量匹配，验证最充分）｜○ 合法非对角（有据可查）｜⚠ 可疑（先重新诊断）。
+
+| Coherence ＼ Problematization | Incomplete | Inadequate | Incommensurate |
+|---|---|---|---|
+| **Progressive** | ◆ 累积延伸 | ○ 主流盲区（Elsbach & Kramer 2003） | ○ 共识颠覆（gamache2023；Hahl 2017） |
+| **Synthesized** | ○ 双重沉默（wowak2025；Locke 1996） | ◆ 交汇盲区 | ⚠ 两线作战（仅范式桥接级贡献） |
+| **Non-Coherence** | ⚠ undersell 张力（先重诊；例外：冲突已承认但某机制未检视） | ○ 调停（Hirsch & Lounsbury 1997） | ◆ 裁决替换 |
+
+**默认对角 storyline**：Progressive×Incomplete "领域已建成 A、B；C 尚未被检视"｜Synthesized×Inadequacy "各流各自抓住了现象的一部分，交汇处存在集体盲区"｜Non-Coherence×Incommensurability "两个阵营不能同时正确——除非重新理解"。
+
+完整构造机制（碎片整合/交点重写、序列化引文/过滤式推进、对垒阵营等）、例证与组合选择规则见 `diagnose-introduction/references/intertextual-construction-playbook.md` §1–2。
+
+---
+
 ## 策略速查
 
 | 策略 | 文件 | 默认 Gap 配对 | 能量 | 核心逻辑 | 文献诊断 |
@@ -68,7 +84,7 @@ Literature Turn（P2-P3）的核心功能是将 Hook 建立的注意力转化为
 | **解决方案** | 填补空白 | 连接盲区 | 超越对立 |
 | **典型 Hook** | data-shock, practical-puzzle | consensus-blindspot, forward-looking-shift | paradigm-challenge, classic-debate-constraint |
 | **典型 Tension** | despite-progress-unaddressed | implicit-assumption-wrong, structural-blindspot | reality-contradicts-consensus, theoretical-imbalance |
-| **变体数量** | 6 (A–F) | 5 (A–E) | 5 (A–E) |
+| **变体数量** | 8 (A–H) | 5 (A–E) | 5 (A–E) |
 | **反模式风险** | 弱缺口（没有解释为什么遗漏重要） | 虚假合成（两个"传统"实为同一流派变体） | 稻草人（一方被描绘得极其愚蠢） |
 
 ---
@@ -139,6 +155,10 @@ literature-turns/
 ---
 
 ## 更新日志
+
+- **2026-07-30（续）**: 重新蒸馏 Malshe & Agarwal (2015, JM) 引言文献对话——新增 `01-progressive-coherence` **变体 H：新兴交叉流 + 互补半区缺口型（malshe2015 型）**。补回此前蒸馏遗漏的 Move-2 literature turn（"Recently, marketers have begun to examine... Yet little research investigates [debt half]"）：源学科纵深建立 → 新兴交叉流承认（recently/begun）→ 互补半区 pivot（equity done / debt not）。区别于变体 A/B（成熟流）与变体 G（跨独立维度缺口）——本变体是单一维度内镜像极性的缺口，专供跨学科嫁接、交叉流尚新兴的研究。malshe2015 的 Move-1 hook（跨学科类比 `hooks/01` 变体 B）与 Move-3 gap（"surprising for three reasons" `tensions/01` 变体 D）此前后已入库；本次补齐 Move-2，使四动作完整。Progressive 变体数 7→8 (A–H)。
+
+- **2026-07-30**: 对齐 Golden-Biddle & Locke (2007) Ch.2 — 消除生成层与 playbook 层的措辞矛盾：(1) 本索引顶部新增 **3×3 组合速查表**（Coherence × Problematization 设计空间，◆默认/○合法非对角/⚠可疑），使 write 生成器不必跨 skill 跳转即可尊重九组合原则；(2) `01/02/03-*.md` 与 `literature-turn-templates.md` 的"必须配对/互斥/不能同用"统一改为"**默认配对（对角线，能量匹配）**"+"**非默认组合**"小节——删除与 playbook 冲突的绝对禁止条款（如 03 的"不能在 Incompleteness 中使用"、02 的"不要混淆 Inadequacy/Incompleteness"），改为指向 3×3 速查表与 playbook §2 的合法性判据。两轴独立、禁止反推的原则现在在路由层与生成层一致。
 
 - **2026-07-28**: 新增上游接口（文献综合 → Literature Turn）：gap 未成形时先走 research-gap-diagnosis Part IV synthesis 链；gist 关系陈述纪律（G&L 2017 Ch08）
 

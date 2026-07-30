@@ -15,9 +15,11 @@ source_papers:
   - "kim_lee_2026_putting_a_price_on_mission_smj (Strategic Management Journal): multi-stage same-IV pipeline attenuation profile, WTP coefficient-ratio economic significance, post-treatment selection caveat"
   - "pupovac_astvansh_carrillat_legoux_2026_pom (Production and Operations Management): cross-sectional OLS/FE on event-study CAR; Control Function + Heckman two-stage correction navigation"
   - "du_tsolmon_2024_post_ma_retention_structural_knowledge_orsc (Organization Science): selection three-step defense (descriptive→CEM→Heckman), null-finding-as-mechanism-evidence, heterogeneity-as-alternative-rebuttal, external-benchmark threshold discovery, downstream performance post hoc, 2x2 cross-diagonal typology comparison"
-variants_count: 34
+  - "pollock2015 (Administrative Science Quarterly, 2015): dynamic panel AB-GMM — ρ persistence % interpretation, split-sample Wald χ² coefficient comparison + partial support, Monte Carlo power for GMM null, post-hoc spline reconciliation of surprising negative, 3SLS alternative-estimator robustness with LDV-bias caveat"
+  - "malshe2015 (Journal of Marketing, 2015): SUR system — floodlight (Johnson-Neyman) sign-flipping interaction dual transition points, 3-condition cross-equation mediation + asymmetric support, counterintuitive reverse deferred to Discussion"
+variants_count: 42
 created: 2026-05-18
-updated: 2026-07-25
+updated: 2026-07-30
 ---
 
 # OLS-FE — Results 骨架
@@ -384,6 +386,92 @@ updated: 2026-07-25
 > [Table] reports the share of [outcome] by [actor A type] and [actor B type] in [scope condition]. Mirroring our main results, [match cells] have the highest [outcome]. In the cross-diagonals, [X]% of [outcome] for [mismatch cell A] compared with [Y]% for [mismatch cell B] (the difference is significant at [level]). This pattern suggests that [theoretical interpretation: which mismatch direction is worse and why]. We examined this more formally in a regression model ([table]): the interaction term between [dissimilarity] and [type indicator] is [direction] and significant (B = [value], p = [value]).
 **与原骨架差异**: 区别于变体 22（四分位单调性 model-free 开场）。本变体处理**类型学设计的非对称交叉对角**——理论载荷在"哪个错位方向更糟"（如 LM acquirer×MM target 比 MM acquirer×LM target 更差），用非参数单元格均值为回归交互提供直觉锚定。
 **诚实边界**: 交叉对角差异的检验方法必须指明（t-test 类型——本文未指明，见反模式）；2×2 单元格均值只是描述性锚定，结论须由回归交互确认；理论解读须回应"为何这个错位方向更糟"。
+
+### 变体 35: R3/R5 — 动态面板 ρ 持久性百分比解释 + 跨构念持久性对比 (1篇高价值)
+**来源论文**: Pollock, Lee, Jin & Lashley (2015, Administrative Science Quarterly)
+**验证状态**: 待第二篇交叉验证（动态面板-GMM / 共演设计）
+**写入日期**: 2026-07-30
+**槽位**: R3/R5
+**骨架**:
+> "The results in models [M1] and [M2] support our baseline expectation that [construct A] and [construct B] will coevolve. [A] and [B] are positively and significantly related to each other in all models. Using the results in models [M1] and [M2] to assess their respective effect sizes, a [X]-percent increase in [A] and [B] leads to [Y1]-percent and [Y2]-percent increases in [B] and [A], respectively, holding all else fixed. Thus the effect of [A] on [B] appears to be greater than that of [B] on [A]. A Wald χ²-test (p < [level]) confirmed that the effect of [A] on [B] is significantly larger than that of [B] on [A] in our models."
+>
+> "As discussed above, the lagged dependent variable's coefficient reflects the degree of persistence or path dependence of the evolutionary process. Thus the results in models [M3] and [M4] indicate that [P1] percent of [A] and [P2] percent of [B] in year t−1 persist in year t, holding other factors fixed, suggesting the evolutionary process of [A] exhibits a greater persistence (or path dependence) than that of [B]. The coefficient for the interaction between [moderator] and prior [A] suggests that the effect of prior [A] decreases by [P] percent each [time unit] as the [actor] ages."
+**与原骨架差异**: 两个相互因果构念的**效应大小对比** + 动态面板特有的 **ρ 持久性解释**。两个核心手法：(1) "5% 增加 → 3.2% vs 0.95%"的效应大小直接陈述，再用 Wald χ² 确认不对称方向显著；(2) 把滞后因变量系数 ρ 诠释为"% of [构念] in t−1 persists in year t"的持久性百分比，并跨构念对比（62.3% status vs 50.3% reputation → status 路径依赖更强），再把交互系数翻译为"每年减弱 P%"。后者是动态面板 Results 的标志性解释——把抽象 ρ 翻译成可理解的"路径依赖百分比 + 年衰减率"。适用于 dynamic panel / coevolution / 持久性构念。
+
+### 变体 36: R3/R6 — 分样本 Wald χ² 系数比较 + partial support 诚实叙事 (1篇高价值)
+**来源论文**: Pollock, Lee, Jin & Lashley (2015, Administrative Science Quarterly)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-30
+**槽位**: R3/R6
+**骨架**:
+> "[H_a] argued that [A] would have a greater effect on [B] than [B] would have on [A] when [actors] are [young], while [H_b] argued [the reverse] when [actors] are [older]. To test these hypotheses we ran a series of regressions splitting the sample into subsamples based on different [age] increments, presented in [Table]. We began with [actors] less than or equal to, and greater than, [base age] years, and increased the lower age break by [N] years in each regression. Our analysis shows that [A] has a positive and significant relationship with [B] in all models, but [B] does not have a significant relationship with [A] until [actors] are [threshold] years old. The bottom row of the table shows the results of tests comparing the coefficients. Although [A] has a larger coefficient in all models, the difference in coefficient size is statistically significant only for [actors] [threshold] or more years old. Thus [H_a] is [partially supported] and [H_b] is [not supported]."
+**与原骨架差异**: 当假设是"不对称方向随发展变化"且用**分样本阈值**检验（见 write-methods 动态面板-GMM 变体4）时，Results 核心是**跨阈值报告 χ²(1) 系数相等性检验 + 诚实判定 partial support**。关键手法：(1) 报告每个 age 阈值子样本的系数方向/显著性模式（如"reputation 所有模型显著，status 直到 9 岁才显著"）；(2) 报告每个阈值的 χ²(1)（"差异仅在 ≥11 岁显著"）；(3) 据此诚实判定"H1a 部分支持、H1b 不支持"而非强行全支持。区别于变体6（符号反转）：本变体检验的是**两个非嵌套方程系数的相对大小**随发展的变化，不是单一关系符号反转。
+
+### 变体 37: R6 — GMM 零结果交互的 Monte Carlo 功效分析 (1篇高价值)
+**来源论文**: Pollock, Lee, Jin & Lashley (2015, Administrative Science Quarterly)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-30
+**槽位**: R6
+**骨架**:
+> "We conducted a set of power analyses to ensure that the [non-significant interaction] between [moderator] and [prior construct] was not due to low statistical power. As our models use the [GMM estimation technique], we could not tap the well-established power-analysis procedure employed with ordinary least squares (OLS) regressions ([citation]). Instead, we conducted multiple Monte Carlo simulations to estimate the statistical power of our model ([citation]), using a significance level of [.05] and [1,000] iterations. According to the simulation results, our models' average power was [.91], suggesting they have sufficient power to detect even small effect sizes. Thus we can safely conclude that the non-significant finding from our model estimates does not come from a type II error but from a negligible interaction effect."
+**与原骨架差异**: 当一个**关键的非显著交互**（如 H2 differentiated moderation 中"不变"那半：age×prior reputation 不显著）是理论预测的一部分，零结果不能默认接受——须排除 Type II error。但 GMM 估计下标准 OLS 功效程序不适用，故用 **Monte Carlo 模拟**（1000 次迭代，报告平均功效 .91）证明模型能检测小效应。这是把"零结果"从弱点转化为"确证性证据"的关键手法。适用于任何非线性/非 OLS 估计（GMM、SEM、MLE）下的理论关键零结果。
+
+### 变体 38: R8 — post-hoc spline 重解释意外负效应（diminishing returns / 信息递减）(1篇高价值)
+**来源论文**: Pollock, Lee, Jin & Lashley (2015, Administrative Science Quarterly)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-30
+**槽位**: R8
+**骨架**:
+> "As an alternative approach [to the surprising negative finding], we created a spline capturing the [first], [second], and [third] [event/instance]. Each variable took on a value of zero until that [instance] number had been reached and then had the value [1], [2], or [3], respectively, every year thereafter. For [outcome], the terms for [one] and [two] [instances] were significant, and the term for the [second instance] was [significantly larger/smaller] than for the [first], which is consistent with our other findings. For the other outcome, only the [second instance] was significant."
+>
+> "Our post-hoc analysis indicated that what we might instead be observing is a [non-linear / diminishing-returns] relationship between [event] and [outcome]. It may be that once a [actor] has had more than [N] [instances], thereby verifying that the [first] was not a fluke, additional [instances] are less [surprising] ([citation]), provide little new information, and do not add to [theoretical construct]. Future research should continue to explore these non-linear effects."
+**与原骨架差异**: 当主分析出现**意外负效应**（如 blockbuster deals 对老 VC 的 status 反而显著为负），不强行解释为真负效应，而用 **post-hoc spline（首例/次例/三例分段）+ 平方项**重解释为 **diminishing returns / 信息递减**（首例最 surprising，后续边际信息递减 → 整体正向递减、高次数甚至转负）。关键：(1) spline 把"次数"分解为首/次/三例的边际效应；(2) 配合平方项确认曲线性（inflection point 在数据范围顶端 → 保守解读为 positive but diminishing）；(3) 用 expectancy-disconfirmation 理论（信息 novelty 随重复递减）解释。明确标注为 post-hoc 探索性分析（R8 非确证性 R7），并以"future research should explore"收尾。
+
+### 变体 39: R7 — 替代估计器稳健性（3SLS）+ LDV 偏误诚实警示反向佐证主估计器 (1篇高价值)
+**来源论文**: Pollock, Lee, Jin & Lashley (2015, Administrative Science Quarterly)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-07-30
+**槽位**: R7
+**骨架**:
+> "[Alternative estimator, e.g., 3SLS] extends [2SLS] to a system of equations by incorporating the estimation feature of seemingly unrelated regression models. One possible benefit of using [alternative estimator] instead of the [primary estimator, e.g., AB] estimator is a potential [efficiency gain]. This comes at a substantial cost, however, because [alternative estimator] cannot address the bias stemming from the [lagged dependent variables]. Given that [consistency generally takes priority over efficiency], the [primary] estimator is more appropriate for our analysis. Nonetheless, we re-ran our models using [alternative estimator] and included [firm dummies] to deal with [unobserved heterogeneity]. Given the paucity of available instruments, we assumed that [one-year lags] of all covariates except for the [simultaneously determined variables] are exogenous. The pattern of results was the same as reported here, but the coefficients of the [lagged dependent variables] were [quite inflated] when compared with our [primary] results, and the model R²s were [excessively high (approximately .97)]. Given that [alternative estimator] does not control for the bias caused by [lagged dependent variables], this was not surprising. Further analysis using [single-equation 2SLS] found the results were almost the same as those from [alternative estimator], indicating there was little efficiency gain from using [alternative estimator] and further supporting our use of the [primary] estimator."
+**与原骨架差异**: 当主估计器（AB-GMM）选择基于"**一致性优先于效率**"，稳健性用**更有效但有偏的替代估计器（3SLS）**重估，并**主动报告其缺陷症状**（LDV 系数膨胀、R²≈.97 异常高），把缺陷归因于替代估计器无法处理 LDV 偏误——**用替代估计器的失败反向佐证主估计器选择正确**。再用单方程 2SLS 确认 3SLS 无效率增益。这是比"结果不变"更高明的稳健性叙事：不是简单说"替代估计器结果一致"，而是诊断替代估计器为何会给出有偏结果。适用于动态面板/同时方程论文比较 GMM vs 3SLS/2SLS/FGLS。
+
+### 变体 40: R4/R5 — Floodlight（Johnson-Neyman）分析符号反转线性交互：双转折点 + 90% CI 带 (1篇高价值)
+**来源论文**: Malshe & Agarwal (2015, Journal of Marketing)
+**验证状态**: 通过（单篇入库，待第二篇交叉验证）
+**写入日期**: 2026-07-30
+**槽位**: R4/R5
+**骨架**:
+> "To explore this moderation in more detail, we followed [Spiller et al. (2013)] and performed a floodlight analysis using the method described by [Mohr, Lichtenstein, and Janiszewski (2012)]. Floodlight analysis involves plotting the [direct impact of the independent variable on the dependent variable] at numerous values of the [moderating variable]. Specifically, we began by fixing [moderator] at [0] and using increments of [.05] until [moderator] reached [1]. In all, we obtained [N] estimates of the [direct impact]. A plot of these estimates, along with the [90% confidence interval] band, is available in the [Web Appendix].
+>
+> We find that the impact of [IV] on [DV] [decreases linearly] at a rate of [−coefficient] for every unit increase in [moderator]. When [moderator] is at approximately [threshold_1], [IV] has [no impact] on [DV]. From this point onward, as [moderator] increases, [IV] has a [net negative] impact on [DV]. However, it remains [statistically nonsignificant] until [moderator] reaches approximately [threshold_2]. Beyond this point, [IV] has a [statistically significant negative] impact on [DV]. [Theoretical interpretation of the high-moderator region]."
+**与原骨架差异**: 区别于变体17/18（Lind-Mehlum 用于**曲线**主效应/调节）与变体32（外部基准阈值 + 边际效应图）——本变体用 **floodlight（Johnson-Neyman 全调节变量范围边际效应 + CI 带）** 处理**线性交互的符号反转**（effect 在调节变量范围内由正过零转负）。关键报告**双转折点**：(1) **零交叉点**（effect = 0，方向反转处，如 ~65% leverage）；(2) **显著性交叉点**（CI 排除零处，如 ~95% leverage）。两点通常不同——零交叉先于显著性交叉，中间存在"净效应已为负但尚未显著"的灰色带。这比 ±1SD spotlight 更完整地展示"在何种调节变量水平上 IV 对 DV 由增值变减值"，是"阈值现象"（value-enhancing below X, value-destroying above X）的标准报告法。适用于交互效应在调节变量全域内变号的研究。
+**诚实边界**: 两个转折点都须报告（仅报零交叉会高估反转的统计可靠性）；CI 带须明示置信水平（90% vs 95%）；转折点须落在数据支撑范围内（若 95% leverage 接近数据顶端，须提示外推风险）。
+
+### 变体 41: R3 — 同时方程系统中的三条件中介检验（跨方程系数乘积 + Sobel）+ 非对称支持叙事 (1篇高价值)
+**来源论文**: Malshe & Agarwal (2015, Journal of Marketing)
+**验证状态**: 通过（单篇入库，待第二篇交叉验证）
+**写入日期**: 2026-07-30
+**槽位**: R3
+**骨架**:
+> "[H_a] and [H_b] posit that [mediator 1] and [mediator 2] mediate the [negative] impact of [IV] on [DV], respectively. To establish the mediation effect through [mediator j], we must satisfy the following three conditions: (1) the coefficient on [mediator j] in [Equation 1, the DV equation] must be [positive] and significant, (2) the coefficient of [IV] in [Equation j, the mediator equation] must be [negative] and significant, and (3) the product of the coefficient of [IV] in [Equation j] and the coefficient of [mediator j] in [Equation 1] must be [negative] and significant. To test the significance of the product term, we used [Sobel's test statistic using the formula given by Zhao, Lynch, and Chen (2010)].
+>
+> [Mediator 1]: [Condition 1 met: b = ..., p ≤ ...]. [Condition 2 met: b = ..., p ≤ ...]. [Sobel on the product: b = ... = (IV→M)×(M→DV), t = ..., p ≤ ...], in support of [H_a].
+> [Mediator 2]: [Condition 1 met: b = ..., p ≤ ...]. [Condition 2 FAILED: IV has no significant effect on mediator 2, b = ..., p > .10]. As a result, Sobel suggests [mediator 2] does not mediate [...]. In summary, the results support [H_a], but not [H_b]."
+**与原骨架差异**: 把 Baron-Kenny 三条件中介检验适配到**同时方程系统**——条件1的 M→DV 系数与条件2的 IV→M 系数来自系统内**不同方程**，条件3的间接效应 = 跨方程系数乘积，用 Sobel（Zhao, Lynch & Chen 2010 公式）检验乘积显著性。核心叙事价值在**非对称支持**：两个平行中介（advertising、R&D）一个支持（H1a）、一个不支持（H1b），不支持的**根因精确定位**到条件2失败（IV=leverage 对 R&D 无显著效应，b≈0），而非条件1（R&D→CS 边际显著）。这种"逐条件诊断哪个中介失败、且失败在哪一环"的报告，比笼统"H supported / not supported"更具诊断力，且为 Discussion 的机制讨论提供精确入口。适用于多中介并行检验（advertising + R&D、price + quality、recruitment + training）。
+**诚实边界**: 条件2失败时须如实报告 IV→M 不显著（不可因 M→DV 显著就声称中介）；Sobel 检验假设间接效应正态分布，样本小时应补 bootstrap CI；"marginal significant"（p≤.10）的中介须标明。
+
+### 变体 42: R6 — 反直觉反向结果的诚实报告 + 延迟到 Discussion 的事后解释 (1篇高价值)
+**来源论文**: Malshe & Agarwal (2015, Journal of Marketing)
+**验证状态**: 通过（单篇入库，待第二篇交叉验证）
+**写入日期**: 2026-07-30
+**槽位**: R6
+**骨架**:
+> "Finally, according to [H_c], [DV] of the [hypothesized-higher-sensitivity group] should exhibit [higher/lower] sensitivity to [IV]. However, **in contrast to [H_c]**, we find that the interaction between [IV] and [moderator] is [opposite-sign] (b = ..., p ≤ ...), indicating that [IV] [reduces/increases] [DV] more [severely] for the [hypothesized-LOWER-sensitivity] group. We **elaborate on this counterintuitive result in the "Discussion" section** and provide guidance for further research. In summary, we find empirical support for [H_a] and [H_b] but **not for [H_c]**."
+>
+> [In Discussion:] "We hypothesized that [predicted direction]. However, empirically we find this to be true for [opposite group]. A potential explanation for this puzzling result is that [post-hoc mechanism]. [Data limitations] do not allow us to explore this possibility, but we hope that further research can resolve this issue."
+**与原骨架差异**: 区别于变体6（符号反转跨条件 + **当场**理论解释）与变体30（预测性零结果作机制证据）——本变体处理**单一调节变量上预测方向反转**，且采用**两段式诚实叙事**：(1) Results 段**当场承认反转**（"in contrast to H_c"）+ **明确推迟解释到 Discussion**（不在 Results 强行编造机制）；(2) Discussion 段给出**事后（post-hoc）机制猜想** + **数据局限声明**（"do not allow us to explore... further research can resolve"）。这种"诚实承认 + 延迟解释 + 标注 post-hoc 与局限"的三段式，比在 Results 当场硬解释更审稿人友好（避免过度解读），也比隐瞒反转更诚信。适用于调节假设方向与数据相反、且机制需推测的研究。
+**诚实边界**: 须在 Results 当场标明 "in contrast to H"（不可只在 Discussion 轻描淡写）；Discussion 的事后解释必须标注为推测（post-hoc / a potential explanation）而非确证；须承认数据局限并指向 future research；不可把反转重新包装为"部分支持"。
 
 ## 反模式
 

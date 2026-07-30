@@ -19,21 +19,21 @@ updated: 2026-07-22
 
 | 文件 | 结果类型 | 变体数 | 最后更新 |
 |------|---------|--------|---------|
-| [OLS-FE](OLS-FE.md) | OLS-FE | 34 | 2026-07-25 |
+| [OLS-FE](OLS-FE.md) | OLS-FE | 42 | 2026-07-30 |
 | [Logit-Probit-Ordered-Probit](Logit-Probit-Ordered-Probit.md) | Logit-Probit-Ordered-Probit | 8 | 2026-07-07 |
 | [生存分析](生存分析.md) | 生存分析 | 14 | 2026-07-07 |
 | [DiD](DiD.md) | DiD | 0 | 2026-05-18 |
 | [计数模型](计数模型.md) | 计数模型 | 11 | 2026-07-07 |
 | [实验](实验.md) | 实验 | 3 | 2026-07-07 |
-| [多研究](多研究.md) | 多研究 | 5 | 2026-07-22 |
+| [多研究](多研究.md) | 多研究 | 6 | 2026-07-30 |
 | [定性过程研究](定性过程研究.md) | 定性过程研究 | 4 | 2026-07-07 |
 | [IV-2SLS](IV-2SLS.md) | IV-2SLS | 6 | 2026-07-25 |
 | [匹配DiD](匹配DiD.md) | 匹配DiD | 0 | 2026-05-18 |
 | [堆叠扩散Logit](堆叠扩散Logit.md) | 堆叠扩散Logit | 0 | 2026-05-18 |
 | [同伴效应-网络效应](同伴效应-网络效应.md) | 同伴效应-网络效应 | 0 | 2026-05-18 |
 | [推断二元结果](推断二元结果.md) | 推断二元结果 | 0 | 2026-05-18 |
-| [跨受众构念对比](跨受众构念对比.md) | 跨受众构念对比 | 0 | 2026-05-18 |
-| [三向交互](三向交互.md) | 三向交互 | 1 | 2026-07-07 |
+| [跨受众构念对比](跨受众构念对比.md) | 跨受众构念对比 | 1 | 2026-07-30 |
+| [三向交互](三向交互.md) | 三向交互 | 3 | 2026-07-30 |
 | [构造暴露分解](构造暴露分解.md) | 构造暴露分解 | 0 | 2026-05-18 |
 | [SEM-moderated-mediation](SEM-moderated-mediation.md) | SEM/调节中介 | 5 | 2026-07-22 |
 | [事件研究法](事件研究法.md) | 事件研究法 | 5 | 2026-07-23 |
@@ -171,3 +171,30 @@ updated: 2026-07-22
 >   - **VARX-PVAR 结果类型接入**（Borah & Tellis 2016, JMR）：7 个 Results 变体（GIRF-based halo metric、graded support language、basis-points→dollars、FEVD relative importance、Venn diagram visualization、elasticity table、wear-in/wear-out dynamics）。配套 `../write-methods/econometric-models/VARX-PVAR.md`。
 >   - **Pupovac, Astvansh, Carrillat & Legoux (2026, POM) 蒸馏**：补回 5 个 Results 变体——事件研究法 变体 2/3/4/5、OLS-FE 变体 28（Control Function + Heckman 双阶段修正表导航）。
 >   - 注：OLS-FE 变体编号因远程 86f478d 已占用 27（Kim & Lee 2026 SMJ 管道衰减），本地原 27 续编为 28。
+>
+> ✅ **2026-07-30 更新（pollock2015 蒸馏）**: 基于 Pollock, Lee, Jin & Lashley (2015, *ASQ*) "(Un)Tangled"——动态同时方程面板 + AB difference GMM 的 Results。OLS-FE 新增 5 个高价值变体（均单篇、待第二篇交叉验证）：
+>   - OLS-FE 变体35：**动态面板 ρ 持久性百分比解释 + 跨构念持久性对比**（ρ → "% persists in t" + 62.3% vs 50.3% status/reputation 路径依赖对比 + 交互系数年衰减率翻译）
+>   - OLS-FE 变体36：**分样本 Wald χ² 系数比较 + partial support 诚实叙事**（跨多个 age 阈值报告 χ²(1) 系数相等性 + 据此判定 H1a 部分支持/H1b 不支持）
+>   - OLS-FE 变体37：**GMM 零结果交互的 Monte Carlo 功效分析**（OLS 功效程序不适用 → 1000 次迭代模拟，平均功效 .91，排除 Type II error——把理论关键的零结果转为确证证据）
+>   - OLS-FE 变体38：**post-hoc spline 重解释意外负效应**（首/次/三例分段 + 平方项 + 信息递减理论 → diminishing returns 重解释，标 post-hoc）
+>   - OLS-FE 变体39：**替代估计器 3SLS 稳健性 + LDV 偏误诚实警示**（主动报告 3SLS 的 LDV 系数膨胀/R²≈.97 缺陷症状，用替代估计器失败反向佐证 AB 选择）
+>   - 配套 write-methods：动态面板-GMM（4 变体，首次填充）+ 同时方程（2 变体，首次填充）见 `../write-methods/econometric-models/`
+>   - 配套 write-theory：developmental reversal of reciprocal-causation asymmetry (H1a/H1b) + differential persistence / lagged-DV moderation (H2)
+>
+> **总变体数**: 102 (分布于 18 个结果类型文件；累计 pollock +5 / malshe +3 / zhou +2 / pontikes +1)
+>
+> ✅ **2026-07-30 更新（malshe2015 蒸馏）**: 基于 Malshe & Agarwal (2015, *JM*) "From Finance to Marketing"——5-方程 SUR 系统的 Results。OLS-FE 新增 3 个高价值变体（均单篇、待第二篇交叉验证）：
+>   - OLS-FE 变体40：**Floodlight（Johnson-Neyman）符号反转线性交互**——全调节变量范围边际效应 + 90% CI 带，报告**双转折点**（零交叉点 ~65% leverage + 显著性交叉点 ~95% leverage，中间为"净负但未显著"灰色带）；区别变体17/18（Lind-Mehlum 曲线）与变体32（外部基准阈值）
+>   - OLS-FE 变体41：**同时方程系统三条件中介 + 非对称支持**（跨方程系数乘积 + Sobel/Zhao-Lynch-Chen；advertising 中介成立 H1a、R&D 不成立 H1b——失败根因精确定位到条件2 IV→M 不显著）
+>   - OLS-FE 变体42：**反直觉反向结果诚实报告 + 延迟到 Discussion**（H2c 预测低增长更敏感、实为高增长；Results 当场 "in contrast to H_c" + 推迟解释，Discussion 给 post-hoc 机制 + 数据局限）；区别变体6（当场解释）与变体30（预测性零结果）
+>   - 配套 write-methods：同时方程 +2（辅助反向因果方程、DWH SUR-vs-3SLS）+ 面板数据-OLS +1（跨库手工匹配）见 `../write-methods/econometric-models/`
+>
+> ✅ **2026-07-30 更新（zhou2017 蒸馏）**: 基于 Zhou, Gao & Zhao (2017, *ASQ*) "State Ownership and Firm Innovation in China"——双研究 Results。+2 变体（均单篇、待第二篇交叉验证）：
+>   - 多研究 变体6：**同一模型跨 facet-DV 双研究：核心收敛 + 边缘发散 + 发散由样本/情境差异解释**（H1b/H1c/H3 两 study 收敛；H1a/H2 在 Study 2 上市企业发散 → 解释为"上市企业靠市场融资→state ownership 资源分配作用失效"的 study-level 边界）；区别变体4（跨研究差异讨论）
+>   - 三向交互 变体3：**"线收敛"图解——调节变量作差距消除器（gap closer）**（SOE 与非 SOE 的 R&D 产出效率差在高竞争下收敛；state start-up 向非 SOE 靠拢）；"converge" 叙事信号区别变体1（条件分解 t-test）、变体2（边际效应表）
+>   - 配套 write-methods：IV-2SLS +1（地理 IV）、多研究 +1（facet-DV 复制）、非线性模型 +1（Tobit corner-solution）
+>   - 注：三向交互 INDEX 表行 1→3（顺手修正 pre-existing stale：实际已含 chung_low_rust 变体2）
+>
+> ✅ **2026-07-30 更新（pontikes2012 蒸馏）**: 基于 Pontikes (2012, *ASQ*) "Two Sides of the Same Coin"。+1 变体（单篇、待第二篇交叉验证），**首次填充「跨受众构念对比」结果类型**：
+>   - 跨受众构念对比 变体1：**同一构念跨两类受众的镜像相反效应**（label ambiguity → consumer −101.5*** on inverse rank vs VC +1.476*** on funding；两独立模型共享同一 IV，镜像符号即核心发现 + 同图双线可视化 + 各受众分别经济显著性翻译）；配套**受众内异质性反转**（corporate VC 作 market-taker，符号反转回负，排除受众异质性混淆）；诚实边界：两受众 DV 不同须论证均测"吸引力"、样本差异须年龄/规模匹配稳健性
+>   - 配套 write-methods：实证对象构建 变体5（fuzziness + leniency label-ambiguity 测量）；Intro：`tensions/04-reality-contradicts-consensus` 变体G；Theory：audience-role dichotomy 增 two-stage reconciliation

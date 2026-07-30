@@ -13,8 +13,9 @@ source_papers:
   - mayo2021 (POM, 2021): "Cross-disciplinary literature review with Table"
   - grewal2025 (JM, 2025): "Consensus building + practice complexity in digital advertising ecosystems"
   - cui_yang_vertinsky_smj (SMJ): "Consensus + stakes + three unaddressed issues preview"
+  - malshe2015 (JM, 2015): "Nascent marketing–finance stream + complementary-half pivot (equity examined, debt not)"
 created: 2026-05-19
-updated: 2026-07-10
+updated: 2026-07-30
 source: Extracted from literature-turn-templates.md + MVP30 validation
 ---
 
@@ -170,13 +171,54 @@ P2-P3 的功能：承认文献已有实质进展，但精确指出被遗漏的�
 
 ---
 
+### 变体 H：新兴交叉流 + 互补半区缺口型（malshe2015 型）
+
+**模板**:
+> "The issues of [source-field question] have been central to [source discipline] research for more than [time period] (for a review, see [classic review]). [Brief definition of the source-field construct]. Recently, [target-field] scholars have begun to examine the interaction between [target-field topic] and [source-field construct] by investigating [angle 1 already examined] ([citation 1]) and [angle 2 already examined] ([citation 2]). Yet little research investigates [the complementary half — the unexamined polarity of the same phenomenon]."
+
+**来源**: Malshe & Agarwal (2015, *Journal of Marketing*), P1–P2
+
+**原文锚定**:
+> "The issues of what influences a firm's choice of debt and equity and how this choice affects its nonfinancial strategic decisions have been central to corporate finance research for more than half a century (for a review, see Graham and Leary 2011). The relative proportions of debt and equity constitute a firm's capital structure, typified by its financial leverage... Recently, marketers have begun to examine the interaction between marketing strategy and leverage by investigating both the role of marketing while raising equity (Luo 2008) and how these equity funds influence marketing strategy (Kurt and Hulland 2013). Yet little research investigates the effects of debt on marketing."
+
+**关键特征**:
+- **三步文献对话**:
+  1. **源学科纵深建立** — "[source discipline] research for more than [half a century]" + 经典综述引用，先确立所借构念在源学科的深厚积累（兼作 Move 1 significance via disciplinary context）
+  2. **新兴交叉流承认** — "Recently, [target field] have begun to examine..." 用 "recently/begun" 标志交叉流为**新兴**（非成熟），并枚举已检视的具体角度（angle 1 / angle 2），展示对最邻近前人工作的精确掌握
+  3. **互补半区 pivot** — gap 不是新维度，而是**同一现象的未检视镜像半区**（equity side done, debt side not）。"Yet little research investigates [the complementary half]" 把缺口定位为前人刚起步时漏掉的另一半
+- **"recently/begun" 是关键信号词**: 区别于变体 A（gamache2020 "has long recognized" 成熟流）与变体 B（eilert2017 "substantial body" 成熟流）——本变体处理的是**交叉流尚未成熟**的情境，gap 的合法性来自"连刚起步的工作都只做了一半"
+- **互补半区 vs 新维度的判别**: 现象有两个天然极性（equity/debt、success/failure、upside/downside、entry/exit），前人只检视了一极，另一极是 gap。这与变体 G（cui 三重维度缺口，跨 outcome/IV/context 三个**独立维度**）不同——本变体的 gap 是**单一维度内的镜像极性**，不是新维度
+- **gap 的"why surprising"用源学科证据支撑**: 随后的 multi-reason gap（见 `tensions/01-despite-progress-unaddressed` 变体 D malshe2015）三条理由都引用**源学科**（finance）的成熟发现（debt 占 80% 融资；高杠杆企业削减无形资产/质量；债务限制增长期权）——用源学科证据为交叉缺口的重要性背书，是跨学科文献对话的可信度来源
+
+**适用条件**:
+- 跨学科嫁接研究：从源学科（finance/economics/psychology）引入构念到目标学科（marketing/strategy/OB）
+- 目标学科已有**新兴**（非成熟）的交叉流，且该流只检视了现象的一极
+- 现象有天然双极性（equity/debt、gain/loss、entry/exit、approach/avoid）
+- 目标期刊接受跨学科对话且重视源学科证据（JM/JMR 跨职能接口、JCR、SMJ 跨学科）
+
+**禁忌**:
+- 不要把源学科写成"已解决"该问题——源学科的积累是构念合法性的来源，但目标学科的交叉才是 gap 所在
+- "recently/begun" 必须名副其实——若交叉流已成熟（≥10 年、数十篇），用变体 A/B 而非本变体
+- 互补半区必须真的"未检视"——若已有零星研究触及另一极，须精确引用并说明本文与它们的不同
+- 源学科证据支撑 gap 时，每条理由的引文必须来自源学科的经典/综述，不可用目标学科的边缘文献充数
+
+**与贡献段的回响**: 本变体的 equity/debt 互补半区应在贡献段兑现为"among the first to study [debt half]" + "combine literature from both [source] and [target]"——gap 与贡献共享同一互补半区逻辑，形成 hook→turn→gap→contribution 的紧致回响（malshe2015 P5 即如此）。
+
+---
+
 
 ## 组装规则
 
-### 必须配对
+### 默认配对（对角线，能量匹配）
 - **与 `03-data-shock` (Hook) 配对**: 数据冲击建立 stakes，递进缺口将数据转化为学术问题
 - **与 `10-practical-puzzle` (Hook) 配对**: 实践困境建立相关性，递进缺口精确到学术文献
 - **与 `01-despite-progress-unaddressed` (Tension) 配对**: Progressive Coherence 是此 Tension 的标准 Conversation 策略
+
+### 非默认组合（非对角合法，不由 Gap 类型反推）
+> Coherence × Problematization 是 3×3 设计空间，对角线只是默认；完整矩阵见 `literature-turns/_index.md` 顶部 3×3 速查表与 `diagnose-introduction/references/intertextual-construction-playbook.md` §2。
+
+- **Progressive × Inadequacy（合法非对角·主流盲区型）**: 累积成熟的传统内部存在系统性视角遗漏（去情境化/单一情境/构念混淆）——须用该传统自身的标准证明遗漏（Elsbach & Kramer 2003）。
+- **Progressive × Incommensurability（合法非对角·共识颠覆型）**: 成熟共识在核心假设上错了——稻草人风险最高，需决定性反例与充分理论跑道（gamache2023；Hahl 2017）。
 
 ### 反模式提醒
 - **不要把 Literature Turn 写成完整文献综述**: P2 是过渡，不是文献回顾。2-3 句即可

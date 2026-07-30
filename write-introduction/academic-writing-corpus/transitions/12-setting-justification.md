@@ -8,6 +8,7 @@ generativity: GENERATIVE
 exclusivity: LOW
 source_papers:
   - wowak2025 (MS, 2025): "Medical products as high-risk, high-reward industry"
+  - pollock2015 (ASQ, 2015): "VC industry ideal setting for several reasons — each maps to a theoretical requirement"
 created: 2026-05-20
 source: Extracted from wowak2025 MS Introduction distillation
 ---
@@ -56,6 +57,37 @@ source: Extracted from wowak2025 MS Introduction distillation
 - **不要用数据规模替代理论论证**: "X industry is worth $Y billion" 不是好的 setting justification
 - **不要在 Methods 中才解释行业选择**: Introduction 中的 setting justification 是说服读者 "本文值得读" 的关键
 - **不要忽视行业的负面特征**: high-risk 和 high-reward 同样重要
+
+---
+
+### 变体 B：多理由理论要求映射型（pollock2015 型）
+
+**模板**:
+> "[Setting] is an ideal setting for examining [theoretical relationship/issues] for several reasons. First, [theoretical requirement 1 of the study] is present: [setting-specific property] ([citation]). Second, [theoretical requirement 2]: [setting-specific feature that makes the mechanism observable/trackable over time] ([citations]). Finally, [theoretical requirement 3 / structural alignment]: [setting's structural property that mirrors the theoretical phenomenon] ([citations])."
+
+**来源**: pollock2015 (ASQ), P5
+
+**原文锚定**:
+> "The VC industry is an ideal setting for examining these issues for several reasons. First, reputation has both symbolic and substantive benefits for the firms that VCs fund (Lee, Pollock, and Jin, 2011). Second, the extensive webs of interorganizational relations constructed through investment syndicates exert significant influence on VC firms' functioning and behavior (Hochberg, Ljungqvist, and Lu, 2007; Milanov and Shepherd, 2013) and make studying how the relationships evolve over time possible (Fund et al., 2008). Finally, the VC industry is bound together by an implicit coevolutionary network: start-ups depend on VCs for capital and other resources, VCs require access to promising start-ups that can provide investment returns that allow them to raise more and larger funds, and investors depend on VCs to identify and develop start-ups to help them grow their investment portfolios."
+
+**关键特征**:
+- **"ideal setting for examining [issues] for several reasons"**: 显式预告 + 枚举结构（与变体 A 的 "high-risk, high-reward" 双面性张力论证不同，本变体是 N 个理由的*平行可行性*枚举）
+- **每个理由映射一个理论要求**——行业选择不是因"重要"而是因"理论机制在此最清晰可检验":
+  - 理由 1 = 构念在该情境有意义（symbolic + substantive benefits 都存在）
+  - 理由 2 = 关系随时间可观测（syndicate networks 使 longitudinal study 成为可能）
+  - 理由 3 = 情境结构镜像理论现象（implicit coevolutionary network）
+- **理由 3 用嵌套三角关系具象化**: start-ups↔VCs↔investors 的三角互依*直接镜像* "coevolution" 概念——行业结构本身就是理论现象的化身（structural isomorphism）
+- **与变体 A 的区别**: 变体 A（wowak2025）是"行业双面性 → 理论预测分化"的*张力*论证；本变体是"行业特性 → 理论可检验性"的*可行性*论证
+
+**适用**:
+- 单一行业面板 / 网络研究，行业选择需论证理论相关性（而非数据便利）
+- 研究涉及可观测的关系网络或随时间演化的过程
+- 行业结构与理论构念存在结构同构（structural isomorphism）时尤其有力
+
+**禁忌**:
+- 不要用数据规模替代理论论证（"VC industry is worth $X" 不是理由）
+- 每个理由必须明确连接到本研究的一个*理论要求*，而非泛泛列举行业特点
+- 理由数（通常 ≤3）应来自不同维度（构念相关性 / 可观测性 / 结构同构），避免重复；>3 个理由读者会失去耐心
 
 ## 期刊适配
 

@@ -8,6 +8,7 @@ generativity: GENERATIVE
 exclusivity: LOW
 source_papers:
   - malik_wang_martin_gomezmejia2025 (JM, 2025): "This oversight is important for two primary reasons. First... Second..."
+  - pollock2015 (ASQ, 2015): "Understanding X is important because [theoretical]. [process]. For [young firms], [practical]. A deeper understanding can also [downstream]."
 created: 2026-05-24
 source: Extracted from Malik_etal_2025_JM distill-introduction-exemplar
 ---
@@ -73,6 +74,38 @@ source: Extracted from Malik_etal_2025_JM distill-introduction-exemplar
 - **Reason 2 是机制论证而非 stakes 论证**: 如果 Reason 2 读起来像是 Theory 部分的预览而非 "why this matters" → 需要重写为 stakes 语言
 - **"Two reasons" 预告后各 reason 极度不均**: 一个 reason 有 5 句另一个只有 1 句 → 暗示其中一个 reason 是凑数的
 - **N > 3 时读者失去耐心**: 两到三个原因是 sweet spot
+
+---
+
+### 变体 B：多层 ascending-cascade 型（pollock2015 型）
+
+**模板**（不编号的递进式多层 Stakes，4 层）:
+> "Understanding [the nature and nuances of the gap] is important because [theoretical layer: the constructs/mechanisms differ in a way that matters]. [Developmental/process layer: building/achieving X requires understanding how Y changes over time and how Z can influence its trajectory]. For [specific audience, e.g., young/resource-constrained actors], understanding this [relationship] can provide crucial guidance for [practical resource-allocation decision] ([citations]). A deeper understanding of [the gap] can also shed light on [downstream outcome domain: how it influences broader organizational/societal outcomes and success] (e.g., [citations])."
+
+**来源**: pollock2015 (ASQ), P4
+
+**原文锚定**:
+> "Understanding the nature and nuances of the relationship between reputation and status and how it evolves over time is important because reputation and status are built in different ways and create different kinds of value (Washington and Zajac, 2005; Barron and Rolfe, 2012). Building each intangible asset requires understanding how reputation and status change over time and how significant events can influence the trajectory of their development. For young firms, understanding this relationship can provide crucial guidance for investing their scarce resources and attention to effectively build their status and reputation (Rindova, Petkova, and Kotha, 2007; Fund et al., 2008). A deeper understanding of how status and reputation coevolve can also shed light on how these two intangible assets influence organizational outcomes and success (e.g., Dimov, Shepherd, and Sutcliffe, 2007; Ertug and Castellucci, 2013)."
+
+**关键特征**:
+- **不编号的递进 cascade**（vs 变体 A 的 "First... Second..." 显式编号）: 用 "because → [elaboration] → For [audience] → A deeper understanding can also" 的语篇连接词实现 4 层递进，节奏更流畅、适合 ASQ narrative 风格
+- **四层从抽象到具体、从理论到实践到下游**:
+  1. **理论层** — "built in different ways and create different kinds of value"（构念本质差异）
+  2. **过程/发展层** — "requires understanding how... change over time and how significant events can influence the trajectory"（动态过程）
+  3. **受众特定实践层** — "For young firms... crucial guidance for investing their scarce resources"（具体受众的资源配置决策）
+  4. **下游结果层** — "A deeper understanding... can also shed light on how... influence organizational outcomes and success"（对更广结果域的启示）
+- **"can also" 收束**: 末层用 "A deeper understanding... can also shed light on..." 拓展到下游结果域，把 gap 的重要性从"对本研究对象重要"升级到"对更广文献重要"——这是 stakes 的最高能量收束
+- **与变体 A 的关系**: 变体 A 是显式编号的双原因（适合 JM 结构化风格）；变体 B 是不编号的递进多层（适合 ASQ/AMJ narrative 风格），层数可 3–4，每层来自不同论证域
+
+**适用条件**:
+- Gap 的后果可从理论 + 过程 + 受众特定实践 + 下游结果多个层面论证
+- 目标期刊偏好 narrative 而非 enumerate 的 Stakes（ASQ/AMJ）
+- 研究对象本身有明确的"弱势/资源约束"受众（如 young firms, small ventures, emerging-market firms）——使第 3 层"受众特定实践"自然落地
+
+**禁忌**:
+- 四层不得来自同一论证域——理论层与下游层不能都讲"影响 outcomes"
+- 第 3 层受众特定实践必须具体到"资源配置/决策"层面，不能泛泛说"对 X 重要"
+- "can also shed light on" 的下游域必须与本研究 DV 有理论距离——若下游就是 DV 本身，则不是升级而是重复
 
 ---
 

@@ -21,22 +21,22 @@ updated: 2026-07-22
 
 | 文件 | 设计类型 | 变体数 | 最后更新 |
 |------|---------|--------|---------|
-| [面板数据-OLS](面板数据-OLS.md) | 面板数据-OLS | 25 | 2026-07-25 |
+| [面板数据-OLS](面板数据-OLS.md) | 面板数据-OLS | 26 | 2026-07-30 |
 | [自然实验-DiD](自然实验-DiD.md) | 自然实验-DiD | 0 | 2026-05-18 |
-| [非线性模型](非线性模型.md) | 非线性模型 | 10 | 2026-07-22 |
+| [非线性模型](非线性模型.md) | 非线性模型 | 11 | 2026-07-30 |
 | [生存分析](生存分析.md) | 生存分析 | 15 | 2026-07-07 |
 | [SEM](SEM.md) | SEM | 4 | 2026-05-18 |
 | [实验](实验.md) | 实验 | 6 | 2026-07-22 |
-| [多研究](多研究.md) | 多研究 | 6 | 2026-07-22 |
+| [多研究](多研究.md) | 多研究 | 7 | 2026-07-30 |
 | [定性过程研究](定性过程研究.md) | 定性过程研究 | 6 | 2026-07-07 |
 | [稀有结果](稀有结果.md) | 稀有结果 | 0 | 2026-05-18 |
-| [实证对象构建](实证对象构建.md) | 实证对象构建 | 3 | 2026-07-25 |
+| [实证对象构建](实证对象构建.md) | 实证对象构建 | 5 | 2026-07-30 |
 | [事件历史+事件研究](事件历史+事件研究.md) | 事件历史+事件研究 | 10 | 2026-07-23 |
-| [同时方程](同时方程.md) | 同时方程 | 0 | 2026-05-18 |
-| [IV-2SLS](IV-2SLS.md) | IV-2SLS | 9 | 2026-07-25 |
-| [动态面板-GMM](动态面板-GMM.md) | 动态面板-GMM | 0 | 2026-05-18 |
+| [同时方程](同时方程.md) | 同时方程 | 4 | 2026-07-30 |
+| [IV-2SLS](IV-2SLS.md) | IV-2SLS | 10 | 2026-07-30 |
+| [动态面板-GMM](动态面板-GMM.md) | 动态面板-GMM | 4 | 2026-07-30 |
 | [匹配DiD-广义DiD](匹配DiD-广义DiD.md) | 匹配DiD-广义DiD | 0 | 2026-05-18 |
-| [同伴效应-网络效应](同伴效应-网络效应.md) | 同伴效应-网络效应 | 3 | 2026-07-08 |
+| [同伴效应-网络效应](同伴效应-网络效应.md) | 同伴效应-网络效应 | 4 | 2026-07-30 |
 | [文本构念测量](文本构念测量.md) | 文本构念测量 | 12 | 2026-07-22 |
 | [PSM匹配面板](PSM匹配面板.md) | PSM匹配面板 | 3 | 2026-06-16 |
 | [堆叠扩散Logit](堆叠扩散Logit.md) | 堆叠扩散Logit | 0 | 2026-05-18 |
@@ -172,7 +172,7 @@ updated: 2026-07-22
 >   - 文本构念测量 变体12：**手工二元编码 + 多源聚合 + embedded/peripheral 构念边界**（区别变体11 的边界案例披露，本变体理论上限定构念范围到 core identity）
 >   - 配套 write-results：OLS-FE 变体27（多阶段管道衰减 profile + 跨阶段对比句）、slot-R5（WTP 经济显著性双 benchmark）、slot-R6（Slough post-treatment selection 诚实边界）
 
-> **已填充变体**: 103个 (分布于 14个设计类型文件)
+> **已填充变体**: 118个 (分布于 14个设计类型文件；本轮 pontikes2012 +1：实证对象构建 +1)
 > **新设计类型解锁**: 同伴效应-网络效应、多行为者设计
 >
 > ✅ **2026-07-23 更新（sync from local backup）**: 从 pre-sync 备份补回两批本地蒸馏成果：
@@ -186,3 +186,28 @@ updated: 2026-07-22
 >   - **面板数据-OLS** 变体16 EXTEND：**三层异质数据库漏斗 + 附录审计**（交易库→人员库→结构库 576K→15,773→2,941 + 附录 match rate + 初始vs最终样本变量对比）
 >   - 可改进警示（反哺反模式）：0.1 平滑常数无 because/敏感性检验；相似度公式对称性未讨论
 >   - 配套 Results 新增 6 变体见 `../write-results/econometric-models/OLS-FE.md` 变体 29-34
+
+> ✅ **2026-07-30 更新（pollock2015 蒸馏）**: 基于 Pollock, Lee, Jin & Lashley (2015, *ASQ*) "(Un)Tangled"——新创 VC 企业 status↔reputation 共演，动态同时方程面板 + AB difference GMM。**首次填充 2 个设计类型** + 扩展 2 个，共 +8 变体（均单篇、待第二篇交叉验证）：
+>   - **动态面板-GMM**（首次填充）变体1–4：**AB difference GMM 三源内生性统一处理**（LDV/同时性/异质性逐一列举→AB 作统一解）、**difference vs system GMM 选择**（young firms 远未稳态→放弃效率选一致性）、**工具变量滞后结构 per-sample 经验精调**（外生性类别定起始阶→Hansen J/diff-Sargan/AR(2) 三诊断逐变量精调，分样本各自精调）、**发展性调节无理论断点→多阈值分样本检验**（跨多个 age 阈值展示效应梯度）
+>   - **同时方程**（首次填充）变体1–2：**动态同时双方程规格**（path dependence + simultaneity + FE 三特征显式映射到方程）、**堆叠非嵌套 Wald χ² 检验**（Weesie 1999 stack + vce(cluster) 恢复跨方程协方差，解决非嵌套系数比较难题——H1a/H1b 不对称方向检验的关键创新）
+>   - **同伴效应-网络效应** 变体4：**Bonacich beta centrality 作 status 全局网络中心性测量**（区别 degree centrality 的局部结构；全数据库计算 + 移动窗口平滑 + 标准化跨构念比较）
+>   - **实证对象构建** 变体4：**multi-item formative objective index + 跨年 rescaling 100 分制**（reputation 客观指标测量；形成性指标 + 排除理论需另用变量 + 年内排序保持/年际市场方差消除 + 标准化跨构念比较）
+>   - 配套 write-results：见 OLS-FE.md（路径依赖 ρ 解释、分样本系数比较叙事、零结果 Monte Carlo 功效分析、partial support 叙事）
+>   - 配套 write-theory：developmental reversal of reciprocal-causation asymmetry (H1a/H1b) + differential persistence / lagged-DV moderation (H2) 见 hypothesis_derivation_patterns.md
+
+> ✅ **2026-07-30 更新（malshe2015 蒸馏）**: 基于 Malshe & Agarwal (2015, *JM*) "From Finance to Marketing"——5-方程 SUR/3SLS 系统（leverage↔advertising/R&D↔customer satisfaction↔firm value）。共 +3 变体（均单篇、待第二篇交叉验证）：
+>   - **同时方程** 变体3：**辅助反向因果方程**（system 内增设 policy-variable 作 DV、下游变量滞后项作预测变量的方程，吸收"下游需求→政策变量"reverse-causal channel；区别变体1 的当期同时性）
+>   - **同时方程** 变体4：**DWH 检验裁决"是否需要 IV"**（SUR 有效 vs 3SLS 一致；DWH 不显著→内生性不是问题→选 SUR）+ Hansen-Sargan 工具有效性——与"用 IV 处理内生性"常规叙事反向；与 `write-results/OLS-FE` 变体39（替代估计器失败佐证主估计器）互补
+>   - **面板数据-OLS** 变体26：**跨库手工匹配（无共同标识符）+ 多源漏斗**（ACSI↔Compustat 无公用 firm ID → manually matched + 五库合并 + 限定上市 + 排除金融行业漏斗）
+>   - 配套 write-results：OLS-FE 变体40-42（floodlight 符号反转交互双转折点、同时方程三条件中介+非对称支持、反直觉反向延迟到 Discussion）
+
+> ✅ **2026-07-30 更新（zhou2017 蒸馏）**: 基于 Zhou, Gao & Zhao (2017, *ASQ*) "State Ownership and Firm Innovation in China"——双研究（new product ratio Tobit + patent Poisson）、institutional vs efficiency logics 整合。共 +3 Methods 变体（均单篇、待第二篇交叉验证）：
+>   - **IV-2SLS** 变体10：**地理外生性工具变量（Frankel-Romer 型）**——用省会到大港口（香港/上海）的 Great Circle 物理距离作 institutional development 的 IV；区别自然灾害 IV（变体4）、Bartik（变体7）；配套第一阶段 F=144.12
+>   - **多研究** 变体7：**同一理论模型跨 facet-DV 双研究复制**——Study 1 new product ratio（commercial, Tobit）+ Study 2 patent（fundamental, Poisson）；区别 cross-study 独立样本梯度（变体1-6）
+>   - **非线性模型** 变体11：**Tobit corner-solution**——非负、零聚集 DV（R&D intensity、new product ratio）；区别负二项（count, 变体1）、面板 Logit（binary, 变体5）
+>   - 配套 Intro：`03-non-coherence` 变体A 增"双层 non-coherence（理论对立+实证 mixed 三方向）+ facet-decomposition resolution"；Theory：`hypothesis_derivation_patterns` dual-logic 增"moderator-as-remedy（H3/H4：竞争/start-up 作 agency 低效的解药）"；Results：多研究 变体6（双研究核心收敛+样本解释的发散）、三向交互 变体3（线收敛=差距消除器）
+
+> ✅ **2026-07-30 更新（pontikes2012 蒸馏）**: 基于 Pontikes (2012, *ASQ*) "Two Sides of the Same Coin"——software 行业 label ambiguity 跨受众评估。共 +1 Methods 变体（单篇、待第二篇交叉验证）：
+>   - **实证对象构建** 变体5：**label-ambiguity 从共属重叠构建（fuzziness + leniency）**——fuzz = 1 − contrast；leniency = fuzz × ln(不同其他标签数)，区分"重叠到同一标签（仍 constraining）"vs"重叠到多标签（不 constraining）"；fuzzy-set grade of membership（部分归属 μ∈[0,1]）+ 加权聚合到 actor 层。构念是**标签属性**从成员共属网络结构推导，区别 Jaccard/计数比率/形成性指数。
+>   - 配套 Intro：`tensions/04-reality-contradicts-consensus` 变体G（共识惩罚 vs 行为持续 + 修辞问 pivot）；Theory：audience-role dichotomy 增"two-stage complementary process reconciliation"（temporal staging 化解 VC/consumer 相反偏好的 irony）；Results：跨受众构念对比 变体1（首次填充——同一构念跨两类受众镜像相反效应 + 受众内 corporate-VC 反转）
+>   - 注：发现 `write-theory/.../hypothesis_derivation_patterns.md` 中 audience-role dichotomy 模式**重复两次**（pre-existing duplication）——本次 two-stage 扩展通过 replace_all 同步写入两份，保持一致；建议日后 dedup。
