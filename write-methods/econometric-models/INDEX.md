@@ -4,7 +4,7 @@ description: Methods 填空骨架变体库，按设计类型组织。由 distill
 organization: by_design_type
 design_types_count: 23
 created: 2026-05-18
-updated: 2026-07-22
+updated: 2026-08-01
 ---
 
 # Methods Econometric Models Corpus
@@ -24,7 +24,7 @@ updated: 2026-07-22
 | [面板数据-OLS](面板数据-OLS.md) | 面板数据-OLS | 26 | 2026-07-30 |
 | [自然实验-DiD](自然实验-DiD.md) | 自然实验-DiD | 0 | 2026-05-18 |
 | [非线性模型](非线性模型.md) | 非线性模型 | 11 | 2026-07-30 |
-| [生存分析](生存分析.md) | 生存分析 | 15 | 2026-07-07 |
+| [生存分析](生存分析.md) | 生存分析 | 22 | 2026-08-01 |
 | [SEM](SEM.md) | SEM | 4 | 2026-05-18 |
 | [实验](实验.md) | 实验 | 6 | 2026-07-22 |
 | [多研究](多研究.md) | 多研究 | 7 | 2026-07-30 |
@@ -211,3 +211,13 @@ updated: 2026-07-22
 >   - **实证对象构建** 变体5：**label-ambiguity 从共属重叠构建（fuzziness + leniency）**——fuzz = 1 − contrast；leniency = fuzz × ln(不同其他标签数)，区分"重叠到同一标签（仍 constraining）"vs"重叠到多标签（不 constraining）"；fuzzy-set grade of membership（部分归属 μ∈[0,1]）+ 加权聚合到 actor 层。构念是**标签属性**从成员共属网络结构推导，区别 Jaccard/计数比率/形成性指数。
 >   - 配套 Intro：`tensions/04-reality-contradicts-consensus` 变体G（共识惩罚 vs 行为持续 + 修辞问 pivot）；Theory：audience-role dichotomy 增"two-stage complementary process reconciliation"（temporal staging 化解 VC/consumer 相反偏好的 irony）；Results：跨受众构念对比 变体1（首次填充——同一构念跨两类受众镜像相反效应 + 受众内 corporate-VC 反转）
 >   - 注：发现 `write-theory/.../hypothesis_derivation_patterns.md` 中 audience-role dichotomy 模式**重复两次**（pre-existing duplication）——本次 two-stage 扩展通过 replace_all 同步写入两份，保持一致；建议日后 dedup。
+
+> ✅ **2026-08-01 更新（darby2025 蒸馏）**: 基于 Darby, Wowak, Ketchen & Connelly (2025, *JSCM*) "An Agency Theory Perspective on Activist Investors and Supply Chain Failures"——recurrent-event AFT (Weibull) + frailty + PSM + CPH/marginal risk set 稳健性的生存分析。该论文（darby2025_activist_investors）已在 source_papers 中，本次蒸馏补齐**已登记来源但尚未提取为变体的方法学写法**（7 个新变体，均单篇、待第二篇交叉验证）：
+>   - **生存分析** 变体16：**AFT 显式方程 + 双向固定效应嵌入**（M7）——变体1 是纯叙述引入，本变体补显式广义估计方程 Log(t_ijt)=β₀+βX+ΣFirm+ΣYear+u，使 FE 识别逻辑在数学层可见
+>   - **生存分析** 变体17：**构念构建三步法 + fuzzy matching 多数据库链接**（M4）——13D/13D/A→13f 跨库实体链接，fuzzy score<0.95 手工核对 + conservative exclusion；区别变体14（止于 intersection）和变体8/10（单源构念）
+>   - **生存分析** 变体18：**分样本调节设计（split-sample 替代交互项）**（M5）——分类调节变量（FDA Class I/II vs III）拆样本而非加交互项，理论理由=离散类别不可加性改变机制；与变体15（同模型交互）和变体8（同模型哑变量）形成对照族
+>   - **生存分析** 变体19：**Threat-based 稳健性四威胁框架（生存分析专属）**（M8）——omitted（progressive controls+frailty）/ reverse（panelized FE+lagged IV）/ measurement（PSM）/ alternative estimators（CPH+marginal risk set）四威胁分节；语料库首个按威胁组织的完整稳健性架构
+>   - **生存分析** 变体20：**Frailty 双层稳健性（recall-level + shared firm-level）**（M8）——Gamma frailty 两层独立报告，回应 event-level 与 firm-level 两种未观测异质性
+>   - **生存分析** 变体21：**Marginal Risk Set 模型（Wei, Lin & Weissfeld 1989）**（M8）——作为复发事件处理的稳健性替代（stratification by event order），区别变体4/7（主模型复发事件处理）
+>   - **生存分析** 变体22：**分析设计服务于理论构念——排除处理组以捕获"威胁而非实现"**（M7/M8）——语料库首个"样本定义=理论构念识别条件"的元层面骨架；适用于 spillover/contagion/anticipatory/deterrence 效应研究
+>   - 配套 write-results：生存分析 变体15-19（"every day counts"经济显著性辩护、dummy-coding 方向翻译、分样本显著vs不显著对照、threat-based 四威胁报告、PSM ATE 天数翻译）；配套 write-theory：新增 `sentences/leitmotif-section-opener.md`（段首主导动机串联句）

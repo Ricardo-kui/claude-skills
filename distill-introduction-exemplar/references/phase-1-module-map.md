@@ -6,6 +6,20 @@
 
 读取 Introduction 全文，按**功能模块**进行粗粒度标注。模块名称与 `write-introduction` 的 `../../write-introduction/academic-writing-corpus/` 目录结构对齐。标注时只定位模块功能边界，不做深入分析。
 
+### 前置步骤：Rhetorical 定位（读范文前的快速语境化）
+
+在进入功能模块映射前，先做一次轻量的 rhetorical 定位（源自 Greene & Lidinsky 2017 Ch02 *rhetorical reading* 的 situation/purpose/claims/audience 四问）。这不替代功能模块映射（那是逆向"怎么写"的骨架），而是先理解范文"为什么这么写"的语境——语境理解能提高后续模块标注的准确性。
+
+快速四问（每问一句话即可，不展开分析）：
+- **Situation**：这篇论文回应的学术/现象情境是什么？（哪个对话？哪个谜题？）
+- **Purpose**：作者的修辞目的——是改变共识、创建新共识、整合分歧、还是引入新构念？（这预判 Gap 类型与 Makadok 维度）
+- **Claims**：核心 claim 是什么类型——fact（经验规律）、value（理论判断/评价）、还是 policy（呼吁行动/方法）？
+- **Audience**：隐含读者是谁——该领域专家、跨领域读者、还是实践者？（这影响 hook 能量级与 jargon 密度的判断基准）
+
+> **与功能模块映射的分工**：rhetorical 定位是"理解作者意图"（why），功能模块映射是"逆向写作骨架"（how）。两者顺序执行：先四问理解语境，再映射功能模块。不要用 rhetorical 定位替代模块映射——distill 的产物是可复用骨架，不是文本理解。
+
+
+
 ### 模块映射表（与 write-introduction 对齐）
 
 | 模块 | 功能 | 识别标准 | 粗粒度标注任务 |

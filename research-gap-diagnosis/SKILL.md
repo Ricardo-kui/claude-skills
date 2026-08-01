@@ -293,15 +293,11 @@ Part IV 生成的每个候选 gap **必须**回流审计，禁止直接输出给
 
 ## Boundaries
 
-- This skill diagnoses and prescribes framing; it does not write introduction prose. After diagnosis, hand off to `write-social-science-introduction` or `dgm-research-positioning` for prose work.
+- This skill diagnoses and prescribes framing; it does not write introduction prose. After diagnosis, hand off to `write-introduction` for prose work.
 - Do not invent knowledge-claim statuses. If the literature context is insufficient, state what additional reading is needed.
 - Do not override the author's substantive judgment. If the author insists on a framing that this skill rates as weak, document the risk but do not refuse to proceed.
 - If the user's project is at the earliest ideation stage (no data, no literature review), focus on genre diagnosis and gap-strength heuristics rather than demanding full evidence.
 
 ## Reference Loading
 
-This skill embeds its core frameworks directly. No separate reference files are needed for standard use. For deep diagnosis on a specific outlet, load the relevant outlet overlay from `write-social-science-introduction`:
-
-- [management-journal-mode.md](../write-social-science-introduction/references/management-journal-mode.md)
-- [management-theory-tension-mode.md](../write-social-science-introduction/references/management-theory-tension-mode.md)
-- [management-empirical-contribution-mode.md](../write-social-science-introduction/references/management-empirical-contribution-mode.md)
+This skill embeds its core frameworks directly. No separate reference files are needed for standard use. For deep diagnosis on a specific outlet, apply the outlet-specific heuristics inline (management-journal conventions, theory-tension emphasis, or empirical-contribution emphasis) based on the diagnosed genre and lever, rather than loading overlay files.

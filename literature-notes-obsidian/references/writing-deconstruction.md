@@ -2,11 +2,12 @@
 
 Use this reference when the user wants to learn how a paper is written, not only what it says.
 
-The goal is to turn a strong paper into a writing lesson that can improve three existing skills:
+The goal is to turn a strong paper into a writing lesson that can improve four existing skills:
 
-- `write-social-science-introduction`
-- `write-theory-and-hypotheses`
-- `write-methods-and-results`
+- `write-introduction`
+- `write-theory`
+- `write-methods`
+- `write-results`
 
 Use `writer` mode in this skill as the lighter first pass. Use this file when the user wants a deeper transfer judgment about whether a paper's writing pattern should influence one of the three named skills.
 
@@ -21,7 +22,7 @@ Do not confuse analytical strength with writing strength. A paper may have stron
 
 ## Layer 1: Introduction Deconstruction
 
-Map the front end onto `write-social-science-introduction`.
+Map the front end onto `write-introduction`.
 
 Extract:
 
@@ -45,7 +46,7 @@ Record transferable assets as rules, not admiration:
 - bad: `This paragraph feels elegant.`
 - good: `The gap paragraph uses current implication -> inadequacy -> why omission matters in four sentences.`
 
-Treat `write-social-science-introduction` as conservative infrastructure. Do not update it lightly.
+Treat `write-introduction` as conservative infrastructure. Do not update it lightly.
 
 Use this decision rule before proposing any change to that skill:
 
@@ -58,7 +59,7 @@ If any of the four fail, keep the lesson in the literature note and do not patch
 
 ## Layer 2: Theory and Hypotheses Deconstruction
 
-Map the middle front end onto `write-theory-and-hypotheses`.
+Map the middle front end onto `write-theory`.
 
 Extract:
 
@@ -82,7 +83,7 @@ Record transferable assets as rules or micro-patterns:
 
 ## Layer 3: Methods and Results Deconstruction
 
-Map the empirical middle onto `write-methods-and-results`.
+Map the empirical middle onto `write-methods` and `write-results` (methods for design/variables/identification, results for hypothesis-test reporting and robustness).
 
 Extract:
 
@@ -116,7 +117,7 @@ Only promote a pattern into one of the three named skills when all four conditio
 
 If a pattern fails any of the four, keep it inside the literature note only.
 
-For `write-social-science-introduction`, add an extra gate:
+For `write-introduction`, add an extra gate:
 
 5. `introduction-type gate`: the source paragraph must exemplify a distinctive introduction type that the skill does not already cover.
 
@@ -145,4 +146,4 @@ When a pattern seems promotable, capture it inside the note using this mini-temp
 - Do not patch a target skill with topic-specific content unless the skill is topic-specific.
 - Do not let one famous paper override the target skill's broader structure.
 - Do not mistake sentence beauty for argument architecture.
-- Do not revise `write-social-science-introduction` because of a single attractive opening unless it clearly reveals a missing introduction archetype.
+- Do not revise `write-introduction` because of a single attractive opening unless it clearly reveals a missing introduction archetype.

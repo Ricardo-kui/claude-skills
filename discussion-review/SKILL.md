@@ -102,6 +102,8 @@ description: Review an existing management-journal Discussion for contribution a
 
 > **常见错误**：把 boundary conditions 和 limitations 混在一个段落里笼统地说 "Our study has some limitations"。应分开处理：boundary conditions 说明理论适用范围，limitations 说明研究设计缺陷。
 
+> **Three-horned dilemma 回扣（McGrath 1982 / Pollock Ch07↔Ch08 桥）**：所有设计都 "fatally flawed"——测量精度 / 可推广性 / 情境真实度三维度最多两强一弱。理想的 limitations 不是事后找借口，而是**回扣 Methods 已自我定位的设计弱点**（`write-methods` Credibility 段的 three-horned 自我定位）。审查时检查：Discussion 的 limitations 是否与 Methods 已承认的设计取舍一致？是否把该弱点转化为 bounded claims（限制理论适用范围）而非外包给未来研究？若 Methods 未做 three-horned 自我定位，Discussion 的 limitations 易显得零散、不成体系。
+
 ### Step 6: 实践意义检查
 
 | 检查项 | 检查标准 | 状态 |

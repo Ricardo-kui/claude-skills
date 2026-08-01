@@ -121,3 +121,31 @@ updated: 2026-05-22
 | `IV caused the outcome.` | 2SLS | 最强因果词 | `IV has an effect on the outcome.` |
 | `The coefficient increases Y.` | Logit | 线性解释 | `The coefficient increases the likelihood of Y.` |
 | `The hazard ratio causes...` | Cox | 比率→因果 | `The hazard ratio indicates...` |
+
+## 试探性因果表达（weak/tentative）— Discussion 与 Theory 专用
+
+> **来源**：Morley (2021) Ch.14 *Explaining Causality* 的 "Expressing a causal relationship tentatively" 子块。
+> **与上方强制词汇表的关系**：上方词汇表管**因果越级的上限**（OLS 禁用 caused）。本节管**下限表达**——当 Discussion 解释机制、Theory 推导假设时，需要表达"弱关联/试探性因果"的措辞。两节互补：上限防越级，下限防生硬。
+> **使用场景限定**：仅用于 **Discussion 机制解释**与 **Theory 假设推导**。**禁止用于 Results 主效应报告**（主效应按上方设计家族词汇表直接报告，不得弱化为 tentative）。
+
+### 试探性关联表达（有证据但未确认因果）
+
+- [X] appears to be linked to [Y].
+- There is some evidence that [X] may [affect/influence] [Y].
+- [X] may play a role in [Y].
+- A weak [association/link] may exist between [X] and [Y].
+- These findings are [consistent with / suggestive of] the possibility that [X] [influences] [Y].
+- It is conceivable that [X] contributes to [Y] through [mechanism].
+
+### 试探性机制归因（Discussion 解释为什么）
+
+- [X] may [operate through / work by] [mechanism].
+- One possible mechanism is that [X] [affects] [Y] via [pathway].
+- [X] appears to [influence] [Y], at least in part, by [mechanism].
+- The [relationship/association] between [X] and [Y] may be [attributed to / explained by] [mechanism].
+
+### 与 hedging-strength 的配合
+
+本节的 "appears to / may / some evidence" 对应 `write-introduction/academic-writing-corpus/phrasebank/hedging-strength.md` 的**极弱/弱档**。Discussion 解释机制时：先用本节选试探性因果动词 → 再用 hedging-strength 选匹配强度的认识论句式 → 最后用 `prose-craft-checklist.md` §5.6/§5.7 校验未越级也未过度堆叠。
+
+**禁忌**：试探性表达不得用于掩盖设计缺陷——若某替代解释威胁严重，应做稳健性检验而非用 "may be due to" 推给未来研究（见 `write-methods/SKILL.md` three-horned dilemma 自我定位）。

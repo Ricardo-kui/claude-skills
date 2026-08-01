@@ -35,7 +35,8 @@ description: Use when the user receives peer-reviewer comments or a decision let
 ## 标准工作流(模式 A)
 
 1. **收齐输入** — 审稿意见(必需)、稿件草稿与决定信(可选);做输入校验(意见缺失/过短/疑似贴错成正文都要先问)。详见 `references/comment-parsing.md`。
-2. **逐条解析** — 按分隔符切分(R1/R2/编号/项目符号/分段/话题转换),每条抽出:审稿人 ID、原文、一句话转述、语气。
+2. **识别编辑决定类型(Belcher Week X 七种)** — 若提供决定信,先用 `references/editorial-decision-types.md` 判定属于哪一种(unconditional accept / warm R&R minor / warm R&R major / desk reject / cool R&R / rejected-dismissed / rejected-no-reports)。决定类型决定 urgency 与姿态:warm R&R→最高 urgency 快速重投;major R&R warm→标准全流程倾向重投同刊;各类 reject→不走修订流程转期刊选择;cool R&R→呈现重投 vs 改投权衡。这是按"决定类型"的第二维度分流(与按输入形态的模式 A/B 分流互补)。
+3. **逐条解析** — 按分隔符切分(R1/R2/编号/项目符号/分段/话题转换),每条抽出:审稿人 ID、原文、一句话转述、语气。
 3. **归类** — Major(影响核心论证/方法/结论)/ Minor(质量完整性)/ Editorial(文字格式)/ Positive(优点,回复信里致谢)。识别 **storyline-level comments**(涉及 framing/contribution/focus/"what is the paper about" 的意见)——它们是 front/back 重写预告,工作量按 Substantial 起估;编辑点名的收窄要求("too many goals"/"contribution unclear")一律 P1(规则见 `references/gbl-r-and-r-dynamics.md` §1)。
 4. **拆解承诺** — 把每条意见拆成具体的可交付项(加分析 / 加澄清 / 加引用 / 改结构 / 其他),并注明"满足它的证据在哪"(新表格 / methods 段 / discussion 段 / 仅致谢等)。详见 `references/comment-parsing.md` 的"承诺拆解"。
 5. **分节映射** — 把每条映射到管理学论文的标准节:Title/Abstract、Introduction、Theory & Hypotheses、Sample & Methods、Results、Discussion、Conclusion、References、General。有稿件就用真实标题。
@@ -62,3 +63,4 @@ description: Use when the user receives peer-reviewer comments or a decision let
 - 路线图 + 回复信骨架 + 追踪表模板 + 工作量估计:`references/roadmap-and-response-template.md`
 - 回复体检(模式 B)协议:`references/rebuttal-audit-protocol.md`
 - 审稿人参与模式 + 接受/抵抗规则 + 真实回复句式(GBL Ch5):`references/gbl-r-and-r-dynamics.md`( storyline-level 意见识别、pushback 姿态预填、回复姿态审计时读取)
+- 编辑决定七分类 + 应对策略(Belcher Week X):`references/editorial-decision-types.md`(模式 A step 2 决定类型识别时读取——判定 warm/cool R&R / desk reject / rejected 后决定 urgency 与重投 vs 改投姿态)

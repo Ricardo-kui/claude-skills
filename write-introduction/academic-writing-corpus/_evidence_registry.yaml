@@ -1557,3 +1557,29 @@ evidence:
         revise: 0
         reject: 0
         common_revise_reasons: []
+
+# Phrasebank evidence (auxiliary 层，Morley 收割，不计入 total_mvp30_papers_indexed)
+# 退役规则：某功能一旦被顶刊蒸馏覆盖，对应条目从此处及 phrasebank/ 文件同时删除。
+phrasebank:
+  layer: auxiliary
+  source: "Morley, J. (2021). Academic Phrasebank (3rd ed.). University of Manchester."
+  note: "auxiliary 措辞层，非 MVP30 顶刊蒸馏；paper_count 不适用（不计数）"
+  files:
+    hedging-strength:
+      source_chapter: "Ch.07 Being Cautious"
+      status: EMERGING
+      risk_level: needs-context
+      note: "强度阶梯库；与 prose-craft-checklist §5.6/§5.7 闭环（选短语→校验强度）"
+    critique-phrases:
+      source_chapter: "Ch.08 Being Critical"
+      status: EMERGING
+      risk_level: needs-context
+      note: "单研究批判；与 tensions（对话级批判）分工；specificity gate 极严"
+    methods-process:
+      source_chapter: "Ch.03 Describing Methods"
+      status: EMERGING
+      risk_level: needs-context
+    quantities-trends:
+      source_chapter: "Ch.13 Quantities + Ch.12 Trends"
+      status: EMERGING
+      risk_level: needs-context

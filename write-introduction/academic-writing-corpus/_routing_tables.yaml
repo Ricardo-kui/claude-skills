@@ -492,3 +492,28 @@ transitions:
       triggers: "Level 贡献——微观视角补充宏观理论"
     - canonical_id: "12-setting-justification"
       triggers: "实证情境需要特别论证（如选择特定行业/国家/时期的理由）"
+
+# §13 — Phrasebank routing (auxiliary 措辞层，Phase 4 润色调用)
+# NOTE: phrasebank 是 Morley 收割的 auxiliary 层，非 MVP30 顶刊蒸馏，不计入 paper_count。
+# 退役规则：某功能一旦被顶刊蒸馏覆盖，对应条目删除。
+phrasebank:
+  layer: auxiliary
+  index: "phrasebank/_index.md"
+  discipline: "骨架优先；phrasebank 只提供措辞变体不替代结构；每句位 ≤2-3 候选；specificity gate 强制具体化"
+  files:
+    hedging-strength:
+      function: "hedging 5 档强度阶梯（may→might→could→likely→almost certain）+ Discussion 解释非显著场景"
+      triggers: "校准 gap 声明/stakes/假设推导/非显著解释的认识论强度——避免越级或过度弱化"
+      slots: ["Tension", "Stakes", "Preview（假设推导）", "Discussion（非显著/意外）"]
+    critique-phrases:
+      function: "单研究/单理论方法学批判 + 建设性批判"
+      triggers: "Literature Turn 的 problematize 句；Theory 处理竞争机制；Discussion 评估他人识别策略"
+      slots: ["Literature Turn", "Theory（竞争机制）", "Differentiation"]
+    methods-process:
+      function: "过程描述变化（sequence words / using+instrument / 统计程序动词）"
+      triggers: "Methods M2-M7 过程描述防同质化"
+      slots: ["M2", "M3", "M4", "M7"]
+    quantities-trends:
+      function: "数值与趋势描述（描述统计转述 / 事件研究趋势）"
+      triggers: "Results R1 描述统计 / R5 经济显著性 / R7 趋势描述"
+      slots: ["R1", "R5", "R7"]

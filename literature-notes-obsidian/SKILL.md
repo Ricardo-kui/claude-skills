@@ -1,6 +1,6 @@
 ---
 name: literature-notes-obsidian
-description: Read one academic paper or a small paper set into Obsidian-ready literature notes, with a management and social-science bias. Use when Codex needs to read a local PDF, DOI, URL, title, or abstract; upgrade an existing literature note; compare 2-5 papers; or write a reusable Obsidian note that captures research motivation, exact gap, theory or hypothesis logic, variable measurement, empirical strategy, contribution, threats, and reuse value. Also use when the user wants a paper read in `researcher` mode or `writer` mode, wants Zotero metadata resolved into the note, wants the note saved into an Obsidian vault with note logging, or wants writing deconstruction mapped onto `write-social-science-introduction`, `write-theory-and-hypotheses`, and `write-methods-and-results`.
+description: Read one academic paper or a small paper set into Obsidian-ready literature notes, with a management and social-science bias. Use when Codex needs to read a local PDF, DOI, URL, title, or abstract; upgrade an existing literature note; compare 2-5 papers; or write a reusable Obsidian note that captures research motivation, exact gap, theory or hypothesis logic, variable measurement, empirical strategy, contribution, threats, and reuse value. Also use when the user wants a paper read in `researcher` mode or `writer` mode, wants Zotero metadata resolved into the note, wants the note saved into an Obsidian vault with note logging, or wants writing deconstruction mapped onto `write-introduction`, `write-theory`, `write-methods`, and `write-results`.
 ---
 
 # Literature Notes for Obsidian
@@ -120,9 +120,10 @@ Use this mode to extract introduction strategy, literature-review moves, methods
 
 Trigger when the user explicitly wants the paper mapped onto:
 
-- `write-social-science-introduction`
-- `write-theory-and-hypotheses`
-- `write-methods-and-results`
+- `write-introduction`
+- `write-theory`
+- `write-methods`
+- `write-results`
 
 Load:
 

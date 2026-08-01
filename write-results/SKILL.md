@@ -452,7 +452,13 @@ results:
 - 如果用户有具体的假设和模型，必须将其嵌入模板。
 - 每个表格/模型引用应指向用户的实际表格。
 - **表图设计纪律**：R2/R4/R7 涉及表格与图形设计时，遵循 `references/visual-evidence.md`（形式匹配效果 / 标题描述数据非主题 / 伦理四规则）；证据报告质量自检见 `references/evidence-standards.md`（五问审计）。
-- **措辞变化库（auxiliary）**：R1 描述性统计、样本数值转述与 R7/事件研究图的趋势描述，若默认措辞反复使用需防同质化，选读 `../write-introduction/academic-writing-corpus/phrasebank/quantities-trends.md`（Morley 收割，auxiliary 层；每位置 ≤2–3 候选，必须具体化，四拍与效应量解读仍归 slot 骨架）。
+- **措辞变化库（auxiliary，默认润色阶段调用）**：骨架生成后默认查以下语料库为关键句位提供 2-3 个备选措辞（不再要求用户额外说"润色"）：
+  - **数值与趋势**：`../write-introduction/academic-writing-corpus/phrasebank/quantities-trends.md`——R1 描述统计转述、R7/事件研究趋势描述
+  - **hedging 强度**：`../write-introduction/academic-writing-corpus/phrasebank/hedging-strength.md`——Results 解释非显著/意外发现时校准认识论强度（用 may/could/possible 档，禁用无 hedge 确定句外推）
+  - **句法微模板**：`econometric-models/micro-templates/` 按结果类型选读（causal-hedging 因果语言 / interquartile-economic-significance 经济显著性 / subsample-grouping 分样本 / transitions 章节级路标）
+  - **试探性因果**：`econometric-models/micro-templates/causal-hedging.md`「试探性因果表达」节——Discussion 机制解释专用（Results 主效应禁用 tentative）
+  - **五病速查**：`../pollock-qc/references/prose-pathology.md`——扫一遍五病，标 △ 处给改写建议
+  - **润色纪律**：四拍与效应量解读仍归 slot 骨架；每位置 ≤2-3 候选；specificity gate 强制具体化；结果以 `### 措辞润色建议` 块附骨架末尾。
 - **输出末尾追加 paper-state.yaml 片段**：在 Results 骨架输出末尾，自动附加 `### paper-state.yaml 片段` 块。该片段包含 `results.estimator_family`、`results.hypothesis_results`、`results.story_resolution`、`results.key_findings`、`results.unexpected_findings`，供 paper-review 和 results-review 消费。
 
 ## 语料与变体

@@ -147,9 +147,16 @@ description: |
 
 > 设计类型的完整变体另见 `econometric-models/[设计类型].md`（如 `定性过程研究.md`）。新蒸馏变体经 `distill-methods-exemplar` → Phase 4 写入。
 
-**句法微模板（可选增强）**：`econometric-models/micro-templates/` 提供 18 类句法级微模板（段首锚定、because 从句、因果动词梯度、识别/稳健性预告、变量操作化句式等），在骨架 `[placeholder]` 之下为关键句法位置提供 2–3 个备选措辞，避免跨论文表达同质化。**加载规则**：仅在用户要求表达润色/句法多样化，或默认措辞与用户情境不匹配时，按 `econometric-models/micro-templates/INDEX.md` 的「分类索引」槽位映射表选读对应的 1–3 个文件——不要一次全读。高风险微模板（如强因果动词）只能在对应设计强度的骨架中使用。
+**句法微模板（默认润色阶段调用）**：骨架生成后，按 `econometric-models/micro-templates/INDEX.md` 的「分类索引」槽位映射表，选读对应本设计的 1–3 个微模板（如 causal-hedging / transitions / because-clauses / funnel-rhythm / variable-operationalization / identification-exogeneity），为关键句位提供 2–3 个备选措辞，避免跨论文表达同质化。**默认执行**（不再要求用户额外说"润色"）。高风险微模板（如强因果动词）只能在对应设计强度的骨架中使用。
 
-**过程描述变化库（auxiliary）**：过程叙述的句子级变化（sequence words / infinitive of purpose / using+instrument / 统计程序动词变化）另见 `../write-introduction/academic-writing-corpus/phrasebank/methods-process.md`（Morley 收割，auxiliary 层）。加载规则同微模板：仅润色/防同质化时选读，且**不得**用它替代微模板覆盖的功能（方法选择理由、识别论证、因果梯度）。
+**措辞变化库（auxiliary，默认调用）**：
+- 过程描述变化：`../write-introduction/academic-writing-corpus/phrasebank/methods-process.md`（Morley 收割，sequence words / using+instrument / 统计程序动词）
+- 数值与趋势：`../write-introduction/academic-writing-corpus/phrasebank/quantities-trends.md`（R1 描述统计转述）
+- **hedging 强度**：`../write-introduction/academic-writing-corpus/phrasebank/hedging-strength.md`——Methods 的识别论证/局限辩护用 hedging 校准认识论强度
+- **试探性因果**：`econometric-models/micro-templates/causal-hedging.md` 的「试探性因果表达」节——Discussion 机制解释专用（Methods 段若涉及机制推测可用）
+- **五病速查**：`../pollock-qc/references/prose-pathology.md`——扫一遍五病（fat suit/burying lead/sentence stuffing/read my mind/pompous prose），标 △ 处给改写建议
+
+**润色纪律**（auxiliary 层）：骨架优先，变化库只提供措辞变体不替代结构（方法选择理由、识别论证、因果梯度仍归 slot 骨架）；每句位 ≤2-3 候选；specificity gate 强制具体化；结果以 `### 措辞润色建议` 块附骨架末尾，不覆盖原文。
 
 ---
 
@@ -356,6 +363,21 @@ To assess the robustness of our findings, we report a series of sensitivity anal
 - [ ] 样本漏斗可审计（每步有数字和排除理由）
 - [ ] 模型选择有文字解释，不埋在方程里
 - [ ] 非显著假设在 Methods 中未预告支持状态
+
+#### Three-horned dilemma 自我定位（McGrath 1982 / Pollock Ch07）
+所有研究设计都 "fatally flawed"——沿**测量精度（measurement precision）/ 可推广性（generalizability）/ 情境真实度（contextual realism）**三维度排列，**最多只能在两个维度强、第三个弱**。
+- [ ] **识别本设计在三角上的强弱位置**：实验（高 precision / 低 realism）；档案数据（高 realism / 低 precision / 受 context 限制）；调查（高 generalizability / obtrusive）。
+- [ ] **承认弱点本身就是 credibility 来源**——"Demonstrating you are aware of your study's weaknesses enhances your credibility"。
+- [ ] **限制 claims 与设计 strength 一致**：截面相关设计不用 "cause"；单情境研究不 overclaim generalizability。
+- [ ] **桥接 Discussion limitations**：本设计在三角上的弱点分析直接成为 Discussion limitations 的论证基础（不是事后找借口，而是 Methods 已自我定位的延伸）。discussion-review 的 limitations 审查应回扣此处。
+
+#### 四类效度整体映射（Pollock Ch07）
+Pollock 不把四类效度当 checklist 逐条回答，而是嵌入 describe-explain-justify + 三 C。但作者应能系统回答"本设计对哪类 validity 最强/最弱"：
+- [ ] **Internal validity**（无替代解释的因果）——若做因果声明，是否排除威胁？截面相关应用 "associated with" 非 "cause"。
+- [ ] **External validity**（跨主体/情境/时间稳定）——是否充分描述 context 让读者判断相似性？是否 bound 理论与 claims？
+- [ ] **Construct validity**（操作化反映构念，三层面）——Theory 定义清楚 / Methods measures 反映构念 / Results 实证关系反映理论关系。
+- [ ] **Statistical conclusion validity**（统计检验准确）——sample 够大无偏 / measures 准确 / 分析方法适合数据不向 Type I/II 偏斜。
+- [ ] **元层判断**：本设计对哪类 validity 最弱？该弱点是否已在 three-horned dilemma 自我定位中承认、并在 Discussion limitations 中 bounded？
 
 ### 论证质量诊断
 - [ ] **Because 密度**：M6 中每个控制变量都有 "because [rival explanation]"——这是 Methods 说服力的核心来源

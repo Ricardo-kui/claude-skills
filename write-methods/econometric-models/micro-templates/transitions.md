@@ -96,6 +96,32 @@ related to [concern_3]...
 
 ---
 
+### 6. 章节级路标（Section-Level Signposting）— Morley 16 章收割
+
+> **来源**：Morley (2021) Ch.16 *Signalling Transition* 的 section-preview / reintroduce / move-to-next 三类。
+> **与 §1-5 的区别**：§1-5 是**段内/段间**的微观过渡（递进/枚举/转折/因果/程序）。本节是**跨 section 宏观路标**——section 开头预告本节将做什么、衔接上一节、或回指前文已定义的概念。在 write-methods/results/theory 的 section 开头与衔接处使用。
+> **限定**：只取 Morley 的 section-preview / reintroducing-a-topic / moving-between-sections 三类，**跳过** chapter/thesis preview（学位论文语境，FT50 论文不用）。每个位置最多用 1 个路标，避免路标堆砌。
+
+**预告本节内容（previewing a section）**— section 首段：
+- Having established [the theoretical predictions / the construct definitions], we now turn to [the empirical strategy / the methods used to test them].
+- To test these hypotheses, we first describe [the sample and data], then [the variable operationalizations], and finally [the estimation approach].
+- This section outlines [the research context / the analytical approach] and justifies [the design choices].
+
+**回指前文概念（reintroducing a topic）**— 跨 section 引用：
+- As discussed above / As noted in the [theory] section, [construct] [captures/reflects] [definition].
+- Recall that [Hypothesis X] predicted [relationship]; we test this by [method].
+- Building on the [mechanism] developed earlier, we [hypothesize/examine]...
+
+**节间移动（moving between sections）**— section 衔接：
+- We now [examine / turn to] [the results / the robustness checks].
+- Having [described the sample / defined the variables], we next [report / estimate]...
+- These [design choices / identification concerns] motivate the [analyses / robustness checks] that follow.
+
+**反模式（章节级）**：
+- 路标堆砌（一段内用 3 个 "Having... we now... turning to..."）——每个 section 开头最多 1 个预告路标。
+- 过度回指（"As mentioned in the Theory section, as we discussed, recall that..."）——一次回指即可。
+- 学位论文式章节预览（"In this chapter, we will first... then... finally... across seven sections"）——FT50 论文 section 短，不需要整章路线图。
+
 ## 反模式
 
 | 反模式 | 问题 | 修正 |

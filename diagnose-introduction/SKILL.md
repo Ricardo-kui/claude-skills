@@ -187,7 +187,7 @@ description: 根据用户的研究描述，诊断 Gap/Problematization 类型、
 读取 `references/golden-biddle-locke-four-moves.md`，默认对所有管理学
 Introduction 执行轻量检查。不要新增 Gap 或 Conversation 分类：
 
-1. 用 Puzzle、Stakes 与 JTBD gain/pain 检查 **significance**。
+1. 用 Puzzle、Stakes 与 JTBD gain/pain 检查 **significance**。**深化**：用 `references/significance-claim-types.md`（Belcher Week 6 十类）识别作者当前的 significance claim 类型——是 subject/audience/literature/practice/method/findings/disciplinary/theory/implications/recommendation-based 中的哪几类？顶刊需 multiple claims 协同且与目标期刊匹配（FT50 各刊偏好不同组合）；超过 4 个应合并。这与 Makadok 维度（贡献的理论类型）互补——一个 Mechanism 贡献可用 theory-based 或 implications-based 多种 claim 论证。
 2. 用 Audience 与 `conversation_strategy` 检查 **literature situation**。
 3. 用 `gap_type`、理论后果与核心风险检查 **problematization**。
 4. 用拟议理论答案、`promised_resolution`、reader shift 与 contribution
@@ -348,6 +348,7 @@ gbl_four_moves:
 - `references/corpus-patterns.md` — MVP30 的 28 篇 Introduction 范文库（按 Gap 类型 × Conversation 策略组织）
 - `references/gap-diagnostic-decision-tree.md` — Gap 类型三级决策树 + 架构特定诊断线索
 - `references/makadok-dimensions.md` — Makadok 八维度贡献诊断表 + 自然语言信号
+- `references/significance-claim-types.md` — Belcher (2019) Week 6 十类 significance claim 诊断（与 Makadok 互补：诊断"重要性的论证类型"而非"贡献的理论类型"）
 - `references/hook-recommendations.md` — 按 Gap 强度和期刊风格的 Hook 推荐
 - `references/golden-biddle-locke-four-moves.md` — Four-Move 理论化故事线对齐与边界（含 §Outer Limits 稻草人判据）
 - `references/intertextual-construction-playbook.md` — Literature Turn 构造机制 + 3×3 组合矩阵（生成层上游，按需读取）

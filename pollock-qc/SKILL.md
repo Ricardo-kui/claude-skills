@@ -1,6 +1,6 @@
 ---
 name: pollock-qc
-description: 按 Pollock 2025 框架进行全稿或指定 Section 的快速 QC 检查（投稿前健康检查）。覆盖 Story Architecture、Section Playbook、Prose QC 三个层面。输出结构化评分表（✓/△/✗）和修复优先级。如需深度审查和具体重写建议，请使用各 section 专用 review skills（intro-review/theory-review/methods-review/results-review/discussion-review）或全稿总控 paper-review。
+description: 按 Pollock 2025 框架进行全稿或指定 Section 的快速 QC 检查（投稿前健康检查）。覆盖 Story Architecture、Section Playbook、Prose QC（含 Ch04 五病、active writing、sound & cadence、25 条 dos/don'ts）三个层面。输出结构化评分表（✓/△/✗）和修复优先级。如需深度审查和具体重写建议，请使用各 section 专用 review skills（intro-review/theory-review/methods-review/results-review/discussion-review）或全稿总控 paper-review。
 ---
 
 # Role
@@ -126,18 +126,54 @@ description: 按 Pollock 2025 框架进行全稿或指定 Section 的快速 QC �
 
 #### 如果 section = prose
 
+Prose QC 分三组，对应 Pollock Ch03（故事工具）+ Ch04（五病/active/cadence）+ 通用工艺。
+
+**故事工具组**（Pollock Ch03）：
+
 | QC 项 | 检查标准 | 评分 |
 |-------|---------|------|
-| Human face | 是否有人类主体（actors）？ | ✓/△/✗ |
-| Action/commentary 比例 | 动作描写 vs 评论解说比例？ | ✓/△/✗ |
-| Show, don't just tell | 是否用证据展示而非断言？ | ✓/△/✗ |
-| Fat suit | 是否有冗余表述？ | ✓/△/✗ |
-| Terminology consistency | 术语是否全稿一致？ | ✓/△/✗ |
-| **Active voice** | 是否清楚知道"谁做了什么"？被动语态是否造成 agency 模糊？ | ✓/△/✗ |
-| **Paragraph transitions** | 段间是否有 signpost 说明下一段与上一段的关系？ | ✓/△/✗ |
-| **Parallel structure** | 列表项是否在语法和概念上保持平行？ | ✓/△/✗ |
-| **Descriptive examples** | 抽象论点是否有具体例子支撑（非干扰性）？ | ✓/△/✗ |
-| **Clarity rewrite** | 关键段落是否经过 clarity 迭代（读者是否能轻松跟随论证）？ | ✓/△/✗ |
+| Human face | 是否有人类主体（actors/经验/后果）？ | ✓/△/✗ |
+| Action/commentary 比例 | 动作描写 vs 评论解说比例（太快=forced march，太慢=ponderous）？ | ✓/△/✗ |
+| Show, don't just tell | 是否用证据/示例展示而非断言？ | ✓/△/✗ |
+| Descriptive examples | 抽象论点是否有具体例子支撑（非干扰性）？ | ✓/△/✗ |
+
+**五病组**（Pollock Ch04 — 诊断信号 + 完整修复细则见 `references/prose-pathology.md` 区块一）：
+
+| QC 项 | 检查标准 | 评分 |
+|-------|---------|------|
+| Fat suit | 是否有冗余词（"in order to"/堆积介词短语/否定冗余）？ | ✓/△/✗ |
+| Burying the lead | 主语/claim 是否被 predatory clauses 埋没（句首长从句延迟主旨）？ | ✓/△/✗ |
+| Sentence stuffing | 一句是否塞多个观点（多 and/further、超 40 词、长 aside）？ | ✓/△/✗ |
+| Read my mind | 是否省略读者所需信息（未定义 jargon/缩写、缺 connective tissue/测量理由/图表指引）？ | ✓/△/✗ |
+| Pompous prose | 是否用 jargon/抽象词/炫耀性词汇装学术（"to wit"/"inter alia"/外文引语）？ | ✓/△/✗ |
+
+**工艺组**（active writing / cadence / 惯例 — 完整细则见 `references/prose-pathology.md` 区块二/三/四）：
+
+| QC 项 | 检查标准 | 评分 |
+|-------|---------|------|
+| Active voice | agency 重要时是否用主动语态？被动语态是否落入四种合理场景之外（见 references）？ | ✓/△/✗ |
+| Sound & cadence | 句式四类型是否混用？句长/段长是否变化？列表是否由简到复？朗读是否卡顿？ | ✓/△/✗ |
+| Terminology consistency | 核心构念术语是否全稿一致（不换同义词）？ | ✓/△/✗ |
+| Parallel structure | 列表项/结果段是否平行结构 + signpost 过渡？ | ✓/△/✗ |
+| Paragraph transitions | 段间是否有 signpost 说明关系？ | ✓/△/✗ |
+| Clarity rewrite | 关键段落是否经过 clarity 迭代（读者能否轻松跟随）？ | ✓/△/✗ |
+
+> **Pollock Ch04 完整病理学（五病诊断卡 + active writing 四合理场景 + sound & cadence 四原则 + 25 条 dos/don'ts 分高/中/低优先级）→ 打分后对 △/✗ 项加载 `references/prose-pathology.md` 获取原文示例与修复动作。**
+
+### 逻辑谬误自检（审稿人视角，横切层）
+
+在 section 检查完成后，对 Introduction / Theory / Discussion 执行一次**逻辑谬误自检**（完整 6 类定义 + 自检问题 + 修正动作见 `references/logical-fallacy-selfcheck.md`）：
+
+| 谬误 | FT50 触发场景 | 评分 |
+|------|--------------|------|
+| Straw man（稻草人） | problematization 是否曲解 prior literature 立场？ | ✓/△/✗ |
+| Either/or（伪二元） | gap 是否预设互斥理论而实际可互补？ | ✓/△/✗ |
+| Post hoc（后此谬误） | 是否把相关当因果而未论证机制/识别？ | ✓/△/✗ |
+| False analogy（错误类比） | 跨情境外推是否论证了关键前提相似性？ | ✓/△/✗ |
+| Hasty generalization（仓促概括） | 声明强度是否匹配样本代表性？ | ✓/△/✗ |
+| Middle ground（中庸谬误） | 贡献是否"两边都对"型折中而缺独立机制？ | ✓/△/✗ |
+
+**路由**：触发的谬误归入"最需要修复的 3 个问题"——straw man/either-or → `/write-introduction`（重做 gap framing）；post hoc → `/write-theory`（补机制）+ `/methods-review`（校准因果语言）；false analogy/hasty generalization → `/discussion-review`（限制外推）；middle ground → `/write-theory`（补独立机制）。
 
 ## Output Format
 
@@ -220,4 +256,6 @@ description: 按 Pollock 2025 框架进行全稿或指定 Section 的快速 QC �
 
 ## 资产位置
 
-无外部 references，所有 QC 标准和评分体系内联于本文件。
+- **Prose 病理学**（Ch04 五病诊断卡 + active writing + sound & cadence + 25 条 dos/don'ts）→ `references/prose-pathology.md`
+- **逻辑谬误自检**（G&L Ch09 六类顶刊高频谬误：straw man / either-or / post hoc / false analogy / hasty generalization / middle ground）→ `references/logical-fallacy-selfcheck.md`
+- 其余 QC 标准（Story Architecture、Section Playbook）内联于本文件。

@@ -85,6 +85,20 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 | AMR | 纯理论：proposition 而非实证假设；构念辨析（A）与 scope 扩展为主 |
 | JM / JOM | 机制必须落到行动者可操作的杠杆；实践相关性前置 |
 
+## 措辞润色（QC 后、output 前默认执行）
+
+骨架与 QC 完成后，对关键句位做一轮措辞增强。**默认执行**。按 section 分区查（不全读）：
+
+| 句位 | 查的语料库 | 动作 |
+|------|-----------|------|
+| 构念定义 / why-chain / 假设句 / 让步反论 / 主导动机串联 | `corpus/sentences/` 全部（`construct_definition` / `mechanism_chain` / `moderation` / `hypothesis_forms` / `acknowledgment_response` / `leitmotif-section-opener` / `closure`） | 为机制链步骤、构念定义、假设句提供 2-3 个措辞变体 |
+| 假设推导的 hedging 强度 | `../write-introduction/academic-writing-corpus/phrasebank/hedging-strength.md` | Theory 假设推导用**弱档** hedge（方向性非确定性：is likely to / appears to），禁用无 hedge 确定句 |
+| 处理竞争机制/竞争理论的批判措辞 | `../write-introduction/academic-writing-corpus/phrasebank/critique-phrases.md`（先读同目录 `_index.md`） | 为 "prior theory fails to account for..." 类句提供变体（**必须配具体理论+局限**） |
+| 角色 ordering 决策 | `corpus/subprotocols/character_ordering.md` | 多 IV/多 DV 时校验主角配角出场顺序 |
+| 五病速查 | `../pollock-qc/references/prose-pathology.md` | 扫一遍五病，标 △ 处给改写建议 |
+
+**润色纪律**：骨架优先，语料库只提供措辞变体不替代论证结构；每句位 ≤2-3 候选；specificity gate 强制具体化；hedging 强度不得突破 causal-hedging 设计家族上限。结果以 `### 措辞润色建议` 块附骨架末尾，不覆盖原文。
+
 ## Downstream interfaces（供其他 Skill 消费）
 - `/write-methods`、`/write-results` — 经 paper-state.yaml 消费 `theory.constructs` / `theory.hypotheses` / `theory.mechanism_chains`（假设-变量映射、Hypothesis-Result Fulfillment Map）
 - `/write-discussion`（review 侧）— 以假设列表与机制链作为 Discussion 理论贡献的对齐锚点

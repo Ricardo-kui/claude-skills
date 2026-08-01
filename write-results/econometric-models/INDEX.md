@@ -4,7 +4,7 @@ description: Results 填空骨架变体库，按结果类型组织。由 distill
 organization: by_result_type
 result_types_count: 19
 created: 2026-05-18
-updated: 2026-07-22
+updated: 2026-08-01
 ---
 
 # Results Econometric Models Corpus
@@ -21,7 +21,7 @@ updated: 2026-07-22
 |------|---------|--------|---------|
 | [OLS-FE](OLS-FE.md) | OLS-FE | 42 | 2026-07-30 |
 | [Logit-Probit-Ordered-Probit](Logit-Probit-Ordered-Probit.md) | Logit-Probit-Ordered-Probit | 8 | 2026-07-07 |
-| [生存分析](生存分析.md) | 生存分析 | 14 | 2026-07-07 |
+| [生存分析](生存分析.md) | 生存分析 | 19 | 2026-08-01 |
 | [DiD](DiD.md) | DiD | 0 | 2026-05-18 |
 | [计数模型](计数模型.md) | 计数模型 | 11 | 2026-07-07 |
 | [实验](实验.md) | 实验 | 3 | 2026-07-07 |
@@ -198,3 +198,11 @@ updated: 2026-07-22
 > ✅ **2026-07-30 更新（pontikes2012 蒸馏）**: 基于 Pontikes (2012, *ASQ*) "Two Sides of the Same Coin"。+1 变体（单篇、待第二篇交叉验证），**首次填充「跨受众构念对比」结果类型**：
 >   - 跨受众构念对比 变体1：**同一构念跨两类受众的镜像相反效应**（label ambiguity → consumer −101.5*** on inverse rank vs VC +1.476*** on funding；两独立模型共享同一 IV，镜像符号即核心发现 + 同图双线可视化 + 各受众分别经济显著性翻译）；配套**受众内异质性反转**（corporate VC 作 market-taker，符号反转回负，排除受众异质性混淆）；诚实边界：两受众 DV 不同须论证均测"吸引力"、样本差异须年龄/规模匹配稳健性
 >   - 配套 write-methods：实证对象构建 变体5（fuzziness + leniency label-ambiguity 测量）；Intro：`tensions/04-reality-contradicts-consensus` 变体G；Theory：audience-role dichotomy 增 two-stage reconciliation
+
+> ✅ **2026-08-01 更新（darby2025 蒸馏）**: 基于 Darby, Wowak, Ketchen & Connelly (2025, *JSCM*)——recurrent-event AFT (Weibull) 生存分析 Results。该论文已在 source_papers 中，本次补齐**已登记来源但尚未提取为变体的结果报告写法**（5 个新变体，均单篇、待第二篇交叉验证）：
+>   - **生存分析** 变体15：**AFT 主效应四拍 + "every day counts" 经济显著性辩护节奏**（R3+R5）——标准四拍后插入辩护段："N days may seem modest, but [stakes]" + 诊断效应量被零值压低 + 预告 PSM 的 M 天上限；补变体1 缺失的辩护维度
+>   - **生存分析** 变体16：**Dummy-coding 方向翻译交互项**（R4）——0/1 哑变量调节的符号-语义映射（design=1/manufacturing=0 → 负系数=design 更强）；区别变体2（连续调节 AME@percentiles）和变体7（简洁交互）
+>   - **生存分析** 变体17：**分样本调节 — 显著 vs 不显著对照（无 Wald 检验版）**（R3+R4）——Darby2025 的 H3 split-sample 报告；构成分样本调节三代演进的中间形态（变体4 坦承功效→本变体直接对比→变体8 加 Wald 升级）；**标注 antipattern 风险**：同向仅显著性不同时须补 Wald
+>   - **生存分析** 变体18：**Threat-based 稳健性四威胁报告（生存分析专属）**（R7）——omitted/reverse/measurement/alternative-estimator 四威胁分节叙述式报告；与变体11（Darby2026 表格导航 19 检查）互补：≤8 个用叙述式，>10 个用表格
+>   - **生存分析** 变体19：**PSM 平均处理效应结果报告（one-to-one, ATE 天数翻译）**（R7+R5）——PSM one-to-one + 中位数 0 分割 + ATE→天数 + "Put differently" 重述；变体9（CEM 双向）的姊妹变体，构成匹配类稳健性双轨
+>   - 配套 write-methods：生存分析 +7 变体（16-22）；配套 write-theory：新增 `sentences/leitmotif-section-opener.md`
