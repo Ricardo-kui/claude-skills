@@ -6,6 +6,8 @@ description: |
   蒸馏请求（「蒸馏 methods」「methods 范文分析」「处理新论文 methods」「methods 骨架提炼」）不直接处理——自动路由到 `distill-methods-exemplar` 执行 Phase 0–5 蒸馏协议；验证通过的变体由其 Phase 4 写入 `econometric-models/[设计类型].md`。
   触发词：「写methods」「methods模板」「方法部分怎么写」「帮我写methodology」「method skeleton」「写方法」「方法论」「model specification」「估计方法」「样本选择」「变量定义」「测量辩护」「构念创新」「自创变量」「风险模型」「hazard model」「CEM matching」「CEO turnover coding」。
   当用户提及变量操作化、识别策略、模型设定、样本漏斗、内生性处理、测量局限辩护、新构念操作化时也应触发。
+  **与 write-results 的实验/多研究分工**：实验**设计**（操纵、随机化、样本分配、预实验）与多研究的**研究设计序列**属本 skill（Methods）；实验**结果**（主效应/交互显著性）与多研究的**结果对比/跨研究综合**属 `write-results`。用户只说"实验/多研究"未指定 section 时，先确认是写设计还是写结果。
+  **与 write-theory 的识别策略分工**：识别策略的**实现**（IV 第一阶段、DiD 估计量、RDD 带宽选择、标准误聚类）属本 skill；识别策略的**理论论证**（IV 排除限制理论依据、DiD 平行趋势理论基础）属 `write-theory`。
 ---
 
 # Role
@@ -145,7 +147,7 @@ description: |
 | M9 多研究/实验程序 | `references/slot-M9.md` | 仅多研究设计 | 非多研究 |
 | M10 Methods→Results 过渡 | `references/slot-M10.md` | 通常省略（顶刊 <10%） | 默认跳过 |
 
-> 设计类型的完整变体另见 `econometric-models/[设计类型].md`（如 `定性过程研究.md`）。新蒸馏变体经 `distill-methods-exemplar` → Phase 4 写入。
+> **设计类型变体加载（飞轮积累，勿漏读）**：确定 design type 后，**先查 `econometric-models/INDEX.md` 的「设计类型索引表」**（L22-46）确认该类型的变体数与最后更新日期；若变体数 >0，**必须加载 `econometric-models/[设计类型].md`** 读取已蒸馏变体（飞轮积累，如面板数据-OLS 已有 26 变体、生存分析 22 变体），与主 slot 骨架配合使用——只用 slot 主骨架而漏读已蒸馏变体 = 飞轮价值流失。变体数 = 0 的设计类型（如自然实验-DiD、稀有结果）仅用 slot 主骨架。新蒸馏变体经 `distill-methods-exemplar` → Phase 4 写入并同步更新 INDEX.md 变体数。
 
 **句法微模板（默认润色阶段调用）**：骨架生成后，按 `econometric-models/micro-templates/INDEX.md` 的「分类索引」槽位映射表，选读对应本设计的 1–3 个微模板（如 causal-hedging / transitions / because-clauses / funnel-rhythm / variable-operationalization / identification-exogeneity），为关键句位提供 2–3 个备选措辞，避免跨论文表达同质化。**默认执行**（不再要求用户额外说"润色"）。高风险微模板（如强因果动词）只能在对应设计强度的骨架中使用。
 

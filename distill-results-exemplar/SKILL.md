@@ -11,6 +11,8 @@ description: |
 
   下游：`write-results` (v3.0.0+) 检测到蒸馏请求时自动路由到本 skill。
   触发词：「蒸馏 results」「results 范文分析」「拆解 results」「提取 results 模板」「处理新论文 results」「results 骨架提炼」。
+  **消歧**：用户未指定 section（只说"分析这篇论文""蒸馏一下"）时，先询问蒸馏哪个 section（Introduction/Theory/Methods/Results），不默认本 skill。
+  **反向边界**：Results 写作用 `write-results`；审查已有 Results 草稿用 `results-review`；全稿 QC 用 `pollock-qc`。本 skill 只蒸馏范文，不生成写作、不做 QC。
 ---
 
 # Role

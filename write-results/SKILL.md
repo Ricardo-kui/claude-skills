@@ -6,6 +6,7 @@ description: |
   蒸馏请求（「蒸馏 results」「results 范文分析」「处理新论文 results」「results 骨架提炼」）不直接处理——自动路由到 `distill-results-exemplar` 执行 Phase 0–5 蒸馏协议；验证通过的变体由其 Phase 4 写入 `econometric-models/[结果类型].md`。
   触发词：「写results」「results模板」「结果部分怎么写」「帮我写results」「result skeleton」「写结果」「假设检验」「交互效应」「稳健性检验」「经济显著性」「平行趋势」「marginal effect」「双受众」「对立结果」「替代解释」「hazard model」「风险模型」「survival analysis」「CEM」「split sample」。
   当用户提及系数解释、表格导航、模型序列、robustness check、安慰剂检验、机制检验、非显著深化、方向相反时也应触发。
+  **与 write-methods 的实验/多研究分工**：实验**结果**（主效应/交互显著性、操纵检验结果）与多研究的**结果对比/跨研究综合**属本 skill（Results）；实验**设计**（操纵、随机化、样本分配）与多研究的**研究设计序列**属 `write-methods`。用户只说"实验/多研究"未指定 section 时，先确认是写结果还是写设计。
 ---
 
 # Role
@@ -198,7 +199,7 @@ robustness_plan:
 | R8 补充/事后/机制 | `references/slot-R8.md` | 约 2/3 论文包含 | — |
 | R9 Results 证据收束 | `references/slot-R9.md` | 需要总结复杂或混合证据时 | 默认跳过 |
 
-> 设计类型的完整变体另见 `econometric-models/[结果类型].md`（如 `定性过程研究.md`）。新蒸馏变体经 `distill-results-exemplar` → Phase 4 写入。
+> **结果类型变体加载（飞轮积累，勿漏读）**：确定结果类型后，**先查 `econometric-models/INDEX.md` 的「结果类型索引表」**确认该类型的变体数与最后更新日期；若变体数 >0，**必须加载 `econometric-models/[结果类型].md`** 读取已蒸馏变体（飞轮积累，如 OLS-FE 已有 42 变体、生存分析 19 变体、计数模型 11 变体），与主 slot 骨架配合使用——只用 slot 主骨架而漏读已蒸馏变体 = 飞轮价值流失。变体数 = 0 的结果类型（如 DiD）仅用 slot 主骨架。新蒸馏变体经 `distill-results-exemplar` → Phase 4 写入并同步更新 INDEX.md 变体数。
 
 ---
 ## 按设计类型路由

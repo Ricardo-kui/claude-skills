@@ -12,7 +12,20 @@
 - Central Knot: "[central_knot_statement]"
 
 → 默认路由: **[recommended_theory_variant]**
+→ variant 文件: `corpus/variants/[variant_filename]`  # 变体名→文件名映射见下表；下游 step 3 直接用此文件名加载
 → 理由: [gap_type] × [makadok_dimension] → [路由理由——由 routing_table.md 查询]
+
+**变体名 → variant 文件名映射**（step 3 加载用）：
+
+| 变体名 | variant 文件 |
+|--------|-------------|
+| A 构念辨析型 | `A_construct_differentiation.md` |
+| B 机制推演型 | `B_mechanism_elaboration.md` |
+| C 假设树型 | `C_hypothesis_tree.md` |
+| D 质性过程理论型 | `D_process_theory.md` |
+| E 调节效应型 | `E_moderation.md` |
+| F 竞争假设型 | `F_competing_hypotheses.md` |
+| G 辩证对立型 | `G_dialectical_opposition.md` |
 
 是否确认此路由？或需调整为其他变体？
 ```

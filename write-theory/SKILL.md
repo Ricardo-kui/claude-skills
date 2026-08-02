@@ -5,6 +5,8 @@ description: |
   覆盖 7 种理论构建变体（构念辨析型、机制推演型、假设树型、质性过程理论型、调节效应型、竞争假设型、辩证对立型）。
   蒸馏请求（「蒸馏 theory」「theory 范文分析」「处理新论文 theory」）不直接处理——自动路由到 `distill-theory-exemplar`；验证通过的模式回写 `corpus/`。
   触发词：「写theory」「写理论」「theory template」「理论部分」「hypothesis写作」「调节效应假设」「跨层调节」「构念界定」「机制推演」「why chain」「双受众」「对立机制」。
+  **反向边界**：审查/润色已有 Theory 草稿用 `theory-review`；全稿 QC 用 `pollock-qc`；蒸馏范文用 `distill-theory-exemplar`。
+  **与 write-methods 的识别策略分工**：识别策略的**理论论证**（IV 排除限制的理论依据、DiD 平行趋势的理论基础、RDD 断点局部可比较性）属本 skill（Theory 段嵌入）；识别策略的**实现**（IV 第一阶段、DiD 估计量、RDD 带宽选择）属 `write-methods`。
 ---
 
 # Write Theory and Hypotheses
@@ -21,9 +23,9 @@ Full Theory generation requires a valid story contract. Theory is rising action:
 
 ## Workflow
 
-1. Diagnose the build type using `references/phase-1-diagnosis.md` and `corpus/meta/routing_table.md`.
+1. Diagnose the build type using `references/phase-1-diagnosis.md` and `corpus/meta/routing_table.md`. 确认路由后查 `corpus/_index.md` 快速决策表（variant→文件名映射 + 该变体应配的 subprotocols/sentences）；推荐任何 pattern 前，查 `corpus/_evidence_registry.yaml` 的 EMERGING/VERIFIED/ROBUST 状态，EMERGING 须标注单/双源不得作默认。
 2. Choose construct order, mechanism depth, hypothesis structure, and narrative arc using `references/phase-2-architecture.md`.
-3. Derive each hypothesis through a complete why-chain using `references/phase-3-hypothesis-derivation.md`; load only the selected variant from `corpus/variants/` and the necessary sentence-pattern files.
+3. Derive each hypothesis through a complete why-chain using `references/phase-3-hypothesis-derivation.md`（含 8 项语料调用清单）; load only the selected variant from `corpus/variants/[variant_filename]`（filename 来自 phase-1 输出；或查 `corpus/_index.md` 变体表） and the necessary sentence-pattern files.
 4. Audit construct consistency, alternative mechanisms, hypothesis testability, paragraph architecture, and cross-section promises using `references/phase-4-qc-alignment.md`.
 5. Produce the scaffold, storyline-linked hypothesis statements, paragraph function map, evidence gaps, QC results, and the `paper-state.yaml` theory fields needed by Methods and Results. Structure the full reply per `references/output-format.md`.
 
@@ -106,5 +108,7 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 - `/distill-theory-exemplar` — 新论文 Theory 蒸馏后回写 `corpus/`
 
 ## Resource loading
+
+> **与 Workflow 的关系**：本节是加载**总则**（按需加载、不预载、查 registry 状态）；上方 Workflow step 1-5 是**执行顺序**。两者一致——按 Workflow 顺序执行，每步的文件选择服从本节总则。
 
 Read `references/intake-and-story-gate.md` when paper-state is present, missing, or legacy-shaped. Do not preload `corpus/`. Start with `corpus/meta/routing_table.md`, then load only the chosen variant, required construct or mechanism patterns, and the relevant storytelling/QC file. Before recommending a pattern as the default approach, check its EMERGING/VERIFIED/ROBUST status in `corpus/_evidence_registry.yaml`; EMERGING patterns must be flagged as single-/dual-source, not presented as defaults. Use sibling Introduction assets only for cross-section continuity checks.
