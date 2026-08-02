@@ -124,10 +124,18 @@ equally, because [moderator logic]."
 
 | 类型 | 模板 |
 |------|------|
-| 基础关系 | "H1. [IV] is [positively/negatively] associated with [DV]." |
+| 基础关系 | "H1. [IV] is [positively/negatively] related to [DV]."（连续 IV/DV）；分类或方向性预测参见 `sentences/hypothesis_forms.md` 决策矩阵——禁用无方向的 "is associated with"，见 SKILL.md 硬约束 #3 |
 | 调节效应 | "H2. The relationship between [IV] and [DV] is moderated by [Z], such that the [positive/negative] effect of [IV] on [DV] is [stronger/weaker] when [Z] is [high/present]." |
 | 三向交互 | "H3. The moderating effect of [Z] on the [IV]→[DV] relationship is further moderated by [W], such that [Z]'s [enhancing/buffering] effect becomes [stronger/weaker] when [W] is [high]." |
 | 条件效应（双假设） | "H2a: When [condition A], [effect A]. H2b: When [condition B], [effect B]." |
+
+---
+
+## 子协议索引
+
+- **C1 多 moderator 的统一选择框架**：参见 `corpus/subprotocols/moderator_selection_frameworks.md`（≥2 moderators 必须有理论驱动的选择理由，SKILL.md 硬约束 #11）
+- **C2 假设体系的段落级组织**：参见 `corpus/subprotocols/hypothesis_organization_patterns.md`（common trunk → parallel branches / baseline→contingency / 2×2 矩阵——避免"假设树碎片化"反模式）
+- **C3 序列嵌套调节（如 TMT 劝说链）**：参见 `corpus/subprotocols/intra_tmt_persuasion.md`（下级→上级信心启发式劝说，含权力放大→三向交互）
 
 ---
 

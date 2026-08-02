@@ -4,6 +4,16 @@
 
 > 使用原则：本文件不是收集“某种理论说什么”，而是收集“如何让一个假设从理论前提中自然生长出来”的论证组织方式。机制内容必须替换为用户自己的研究材料；骨架和连接策略可以直接复用。
 
+> **导航 TOC**（本文件 1200+ 行 / 30 节，按需跳转，不要线性通读）。按推导类型分组；括注为锚定范文。职责边界见 `argumentation_patterns.md` 文件头（本文件=段落级骨架；该文件=T2→T3 过渡/非常规动作）。
+
+| 组 | Pattern（行号） |
+|----|----------------|
+| **基础序列**（主效应段落骨架） | Anchor→Mechanism→Warrant→Prediction (L244) · Theory-Driven Anchor + Puzzle Turn（Singh&Grewal 2023）(L286) · Multi-Mechanism Trunk（Shen 2022）(L326) |
+| **主效应推导**（单 IV→DV 变体） | Audience-Role Dichotomy + Mirrored Hypotheses（Pontikes 2012）(L27) · Sign-Flipping Boundary Condition（Pontikes 2012）(L78) · Three-Condition Framework for Information-Based Herding（Shi&Grewal 2021）(L117) · Width-Type Parallel Mechanism（2-3 独立理由）(L753) · Symmetric Opposing Dual-Track Mechanism（Zhao-Ding&Gaba）(L800) · Counterintuitive Anchor + Three Parallel Psychological Threats（Keeves 2017）(L494) · Parallel Dual-Source Antecedents Converging on One Mediator（Keeves 2017）(L532) · Emotion Action Tendency→Interpersonal Harm（Keeves 2017）(L567) · Cross-Disciplinary Theoretical Lens（Malshe&Agarwal 2015）(L603) · Four-Reason Parallel Mechanism Derivation（Malshe&Agarwal 2015）(L637) · Three Parallel Single-Step Mechanisms（Darby 2023）(L945) · Two-Levers Theory Progression（Darby 2026）(L980) · Embedded Prose Predictions in Conceptual Framework (L1011) |
+| **调节推导**（moderation 段落） | Bilateral Moderation Derivation / high/low 双边论证（Shen 2022）(L374) · Indirect Moderation / Mediated Moderation Derivation（Singh&Grewal 2023）(L417) · Cumulative Moderation Build-Up（Singh&Grewal 2023）(L456) · Curvilinear Relationship — Two-Phase Argumentation（Cui 2026）(L838) · Sequential Nested Moderation（Chung/Low/Rust 2022）(L881) · Intangible Asset Real Options + Financial Constraint Distal Moderation（Malshe&Agarwal 2015）(L677) |
+| **辩证 / 反转 / 时序不对称** | Dual-Logic Integration — Input vs Efficiency + Inverted U（Zhou 2017）(L189) · Institutional Shock as Theory Hook（Shi&Grewal 2021）(L157) · Counterintuitive Direction-Reversal via Mechanism Substitution (L1061) · Mismatch Subtype Refinement Hypothesis（主效应后递进）(L1096) · Developmental Reversal of Reciprocal-Causation Asymmetry（pollock2015 H1a/H1b）(L1143) · Differential Persistence / Lagged-DV Moderation（pollock2015 H2）(L1211) |
+| **元规则**（非 pattern，段落布局与文件关系） | 段内逻辑布局原则（连接词/段落长度/Warrant 摆放）(L705) · 与相邻语料文件的关系（validity vs soundness 分工）(L733) |
+
 ---
 
 <!--

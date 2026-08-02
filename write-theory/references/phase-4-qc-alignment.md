@@ -6,9 +6,9 @@
 
 四层审计 + 假设收敛 + Introduction↔Theory 跨 Section 对齐。
 
-**4.1 通用 QC 审计**（Theory IS NOT / Construct Clarity / Hypothesis Clarity）
+**4.1 通用 QC 审计**（Theory IS NOT / Construct Clarity / Hypothesis Clarity / 跨假设机制复用）
 
-逐项判定细则与生成后验证流程见 `../corpus/storytelling/post-generation-validator.md`（生成 Theory 草稿后执行）。
+逐项判定细则与生成后验证流程见 `../corpus/storytelling/post-generation-validator.md`（生成 Theory 草稿后执行）。除验证 1-7（叙事/构念/假设/病理层）外，含**验证 8：跨假设机制复用一致性**——当论文用"主效应多机制 trunk + 调节假设回到 trunk"结构时，检查所有调节假设是否一致复用 trunk 机制全集、方向标记连贯、无装饰性机制（适用条件：≥2 调节假设 + trunk ≥2 机制；单假设论文跳过）。
 
 #### 审计 1: Theory IS NOT（7 种伪理论陷阱 + 3 种 Ch04 病理）
 
@@ -31,6 +31,7 @@
 - [ ] **Scope conditions**: 何时/何地/对谁适用？
 - [ ] **Lineage**: 该构念从哪些先前构念演化而来？
 - [ ] **Adjacent constructs**: 与相似构念的区别是什么？
+- [ ] **Justification**（新构念必须）：为什么需要引入这个新构念？它比沿用现有构念多解释了什么？（AMJ Management Research Canvas: "definition, differentiation, and justification"——新构念三步缺一不可；现有构念可豁免此项）
 
 #### 审计 3: Hypothesis Clarity（6 字段 + form-measurement 匹配）
 

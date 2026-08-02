@@ -17,7 +17,7 @@ Distill the architecture and reasoning of a published Theory section into reusab
 2. Load only the phase required:
    - module mapping, special institutional-shock lenses, and coverage: `references/phase-1-module-map.md`
    - persuasive actions, expression skeletons, and why-chains: `references/phase-2-extraction.md`
-   - DNA/profile reporting: `references/phase-3-dna-report.md`
+   - DNA/profile reporting and DNA→validator reflux (Phase 3.5): `references/phase-3-dna-report.md`
    - cross-paper validation and corpus writeback: `references/phase-4-validation-writeback.md`
    - final QC, honesty boundaries, and downstream interface: `references/phase-5-qc-and-boundaries.md`
 3. Load supporting protocols only as needed: `protocols/corpus_taxonomy.md`, `protocols/phase2_extraction_frameworks.md`, `protocols/profile_template.md`, `protocols/phase5_qc.md`, `protocols/connector_patterns.md`, `protocols/pollock_annotations.md`, and `protocols/writeback_reminders.md`.

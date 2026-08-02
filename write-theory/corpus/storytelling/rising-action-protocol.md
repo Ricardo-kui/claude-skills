@@ -18,6 +18,8 @@ dependencies: []
 
 ## Four Phases of Theory Rising Action
 
+> **术语归属说明**：Pollock Ch02 原书用 "tying the knot / unraveling the knot" 二分法描述张力建构与解开的整体过程，**未细分阶段**。下文 Phase 1-4（Knot Inheritance → Deepening → Tying → 自然收敛）的命名与划分是 **skill 的操作化综合**——把 Pollock 的 tying 概念按 Theory 章节的段落推进顺序具体化为可执行阶段，非原书术语。
+
 ### Phase 1: Knot Inheritance（承接）
 
 **功能**：从 Introduction 继承 central knot，让 reader 感到"这个问题还没解决"

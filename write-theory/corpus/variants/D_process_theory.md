@@ -107,6 +107,12 @@ Proposition [N]: In [context], [collective action] leads to [outcome], mediated 
 
 ---
 
+## 子协议索引
+
+> **无专属子协议**。D 变体（质性过程理论）的论证核心是阶段序列 + 过渡条件 + 必要/充分条件区分 + 时间标记，与定量变体（B/E/C）的机制链/调节推导范式不共享微观动作模板。命题推导（而非假设推导）不适用 `hypothesis_derivation_patterns` 的 Anchor→Mechanism→Warrant→Prediction 序列。如需过程论证的过渡句式，参见本文件"关键句式模板"节。
+
+---
+
 ## QC 检查点
 
 - [ ] 命题是否表达了清晰的理论关系（而非描述性观察）？

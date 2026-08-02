@@ -49,9 +49,12 @@ Theory 写作的心脏环节：路由假设结构，为每个假设生成逻辑�
 7. **可靠性审计**（成稿后执行）：`../corpus/subprotocols/reasoning_soundness_protocol.md`
    → 前提三分法标注 + 最弱环节防守 + 机制必要性门控 + 反例压力测试，输出 Soundness Card
 
+8. **段内论点-论据-总结布局**：`../corpus/subprotocols/paragraph_layout.md`
+   → 确定一个假设推导段内部的 Topic→Reasoning→Tokens→Wrap 四段位；按"三类论据决策矩阵"（文献/理论/案例）为每个推理步骤选论据；段内 12 项诊断清单（含段位病理 + coherence 技术）
+
 #### 标准结构：交织式论证链（Interwoven Logic Chain）
 
-文献引用与理论推理**交织**而非先后排列——这是管理学顶刊的默认写法（验证自 14 篇 MVP30 论文）。
+文献引用与理论推理**交织**而非先后排列——这是管理学顶刊的默认写法（验证自 14 篇 MVP30 论文）。完整的段内布局（Topic→Reasoning→Tokens→Wrap 四段位 + 三类论据决策 + 段内诊断）见 `../corpus/subprotocols/paragraph_layout.md`。
 
 ```
 [1. Topic Sentence]  →  [2. Theoretical Reasoning + Literature Support]  →  [3. Hypothesis Transition]
@@ -81,8 +84,8 @@ Theory 写作的心脏环节：路由假设结构，为每个假设生成逻辑�
 
 | 要素 | 必须做到 | 最常见失败模式 |
 |------|---------|--------------|
-| **Topic Sentence** | 同时包含话题+核心观点+限定范围；**必须使用 active verb + concrete subject**（如 "We argue that..." 而非 "It is argued that..."）；**段首句在 15 词内说出核心判断**；不宽泛不局限 | 太宽泛/太局限；**无主语被动语态**（"It is argued that"）；**Burying the lead**（核心判断不在段首句） |
-| **Paragraph Architecture** | 每段满足 PEEL/PEAL：Point（topic sentence）+ Evidence（文献/数据）+ Explanation（机制分析）+ Link（与下段衔接）；段落长度 150–350 词 | 段落过短（缺少 evidence/explanation）；段落过长（包含多个论点）；缺少 explanation 导致 "So what?" |
+| **Topic Sentence** | 同时包含话题+核心观点+限定范围；**必须使用 active verb + concrete subject**（如 "We argue that..." 而非 "It is argued that"，Pollock Ch03 conversational voice 原则）；**段首句在 ~15 词内说出核心判断**（skill 经验阈值，避免 burying the lead；Pollock Ch04 讨论该病理但未给具体词数）；不宽泛不局限 | 太宽泛/太局限；**无主语被动语态**（"It is argued that"）；**Burying the lead**（核心判断不在段首句） |
+| **Paragraph Architecture** | 每段满足 PEEL/PEAL：Point（topic sentence）+ Evidence（文献/数据）+ Explanation（机制分析）+ Link（与下段衔接）；段落长度 ~150–350 词（skill 经验阈值；Pollock Ch03 只给 section 级页数如 Theory 35%=12-14 页，未给段落词数） | 段落过短（缺少 evidence/explanation）；段落过长（包含多个论点）；缺少 explanation 导致 "So what?" |
 | **Theoretical Reasoning** | 从 X 到 Y 的每一步因果推理都明确写出；**每步间有 explicit transition**（Consequently/Thus/This leads to...） | **逻辑跳跃**：省略关键推理步骤；**Read my mind**：缺少 transition，从 A 直接跳到 C |
 | **Literature Support** | 总结前人研究的 argument/finding + 说明链接 | **引用罗列**：只有名字没有 argument |
 | **Hypothesis Transition** | 收束句总结推理链，自然引出假设 | 无理论收束直接 "we hypothesize" |

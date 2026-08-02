@@ -94,7 +94,7 @@ Finally, [dimension 3: comparison].
 
 ---
 
-## 变体 E：维度独立性论证 (Dimensional Independence Argument)
+## 变体 E2：维度独立性论证 (Dimensional Independence Argument)
 
 **适用**: IV 具有多个维度（如 valence, source），且这些维度常被直觉性地误认为同一连续体的两端。需要在 T1 阶段论证它们是概念上独立的维度。
 
@@ -120,7 +120,7 @@ more [Dimension B] will [behavioral consequence different from Dimension A]."
 - 引用权威心理学/语言学文献支撑维度独立性（如 Baumeister et al. 2001 的正负情绪独立论）
 
 **与变体 D（双维度对称界定）的区分**:
-| | 变体 D（双维度对称界定） | 变体 E（维度独立性论证） |
+| | 变体 D（双维度对称界定） | 变体 E2（维度独立性论证） |
 |---|---|---|
 | 功能 | 定义两个维度的内容 | 论证两个维度是独立的（不是同一连续体） |
 | 典型句式 | "On one end... On the other end..." | "X is different from the absence of Y" |

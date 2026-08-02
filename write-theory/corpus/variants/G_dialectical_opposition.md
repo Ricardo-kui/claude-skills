@@ -278,6 +278,16 @@ H[X]: [IV] has an inverted U-shaped impact on [outcome], such that [moderate lev
 
 ---
 
+## 子协议索引
+
+- **G1 受众角色二分 + 镜像假设**：参见 `corpus/subprotocols/hypothesis_derivation_patterns.md`（audience_role_dichotomy_mirrored_hypotheses——同一 IV 因受众角色不同产生方向反转预测，Pontikes 2012 锚定）
+- **G2 机制开关型边界条件（方向反转）**：参见 `corpus/subprotocols/bilateral_argumentation_templates.md`（sign_flipping_boundary_condition——受众角色切换 IV-DV 关系符号，是 G 辩证反转的高/低双边论证载体）
+- **G3 双重逻辑 + 输入-效率分解 + 倒 U 形整合**：参见 `corpus/subprotocols/hypothesis_derivation_patterns.md`（dual_logic_input_efficiency_inverted_u——Zhou 2017 型：制度逻辑（输入）vs 效率逻辑（转换）产生倒 U）
+
+> **与 E（调节效应型）的边界**：G 的"反转"必须是**方向反转**（sign flip，+变-），触发条件见本文件"触发条件"段；若只是**强度变化**（更强/更弱但方向不变）→ 路由到 E 变体。
+
+---
+
 ## 特殊句式 DNA
 
 ### Dialectical Turn 首句句法

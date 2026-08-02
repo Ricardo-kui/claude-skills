@@ -13,6 +13,7 @@ theory:
   updated: "[YYYY-MM-DD]"
 
   theory_variant: "[A 构念辨析型 / B 机制推演型 / C 假设树型 / D 质性过程理论型 / E 调节效应型 / F 竞争假设型 / G 辩证对立型]"
+  institutional_background_included: false   # true | false — 是否包含独立 Institutional Background 模块（phase-2-architecture §2.2 决策）
 
   constructs:
     independent: "[核心自变量名称]"

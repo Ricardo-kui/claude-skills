@@ -27,9 +27,25 @@
 | 类型 | 判断标准 | 回写位置 |
 |------|---------|---------|
 | **默认规则** | ≥3 篇跨期刊论文一致，且与 write-theory 当前约束兼容 | 更新 `SKILL.md` Constraints / Phase 默认结构 |
-| **可选变体** | 2-3 篇论文一致但存在期刊/类型特异性，或与当前约束不完全兼容 | 写入 `corpus/variants/` 或 `corpus/subprotocols/` 作为变体 |
+| **可选变体（架构级）** | 2-3 篇论文一致但存在期刊/类型特异性，或与当前约束不完全兼容 | 写入 `corpus/variants/` 或 `corpus/subprotocols/` 作为变体 |
+| **可选变体（句式级）** | 2-3 篇论文一致的句位级措辞（topic 句 / why-chain transition / 假设句 / Wrap 句写法，见 Phase 2.2b） | 写入 `corpus/sentences/[对应文件]`（见下表"句式级回写落点"） |
 | **待审阅** | 仅 1 篇出现，或样本有偏 | 只入 Vault 注释，不入 skill |
 | **不采纳** | 与已验证的顶刊惯例明显冲突（如独立 T6 段落） | 不写入，仅记录为反模式 |
+
+#### 句式级回写落点（sentences/ 文件路由）
+
+句位级句式变体（Phase 2.2b 提炼）按句位路由到 write-theory 的 `corpus/sentences/` 对应文件：
+
+| 句位（Phase 2.2b） | 回写文件 | 现有内容示例 |
+|-------------------|---------|-------------|
+| Topic 句（段首论点句写法） | `sentences/leitmotif-section-opener.md`（多假设共享构念的段首回扣）/ `sentences/construct_definition.md`（T1 构念定义段 topic） | "We argue that [IV] [direction] [DV] through [mechanism]" |
+| Why-chain transition 句（机制步骤间过渡） | `sentences/mechanism_chain.md`（连接词谱系 + 步骤过渡句式） | "Consequently, ... This in turn ..." |
+| 假设句（H 陈述形式） | `sentences/hypothesis_forms.md`（决策矩阵 + 模板句） | 见该文件 1-3 节决策表 |
+| Wrap 句（段末总结/收束） | `sentences/closure.md`（局部收束信号） | "Taken together, these arguments suggest ..." |
+| 让步-回应句（异议处置） | `sentences/acknowledgment_response.md` | "One might argue that ... However, ..." |
+| 调节机制句（high/low 条件论证） | `sentences/moderation.md` | "When [W] is high, ... ; when [W] is low, ..." |
+
+> **与架构级回写的分工**：架构级（variants/subprotocols）回写"段落/假设怎么组织"（如 common trunk → parallel branches）；句式级（sentences）回写"每一句怎么写"。同一篇论文的蒸馏产出可能同时含两类——架构骨架入 subprotocols，句式变体入 sentences，不要混放。
 
 **回写前冲突检查清单**：
 - [ ] T6 相关骨架：是否与 write-theory "不要求独立 Closure 段" 兼容？
@@ -99,6 +115,42 @@ Therefore, H[X+1]: ...
 **反模式**: 如果 moderators 之间没有 conceptual 联系，不要强行 parallel，应改为假设树型逐个引入。
 ```
 
+**句式级回写条目预览格式**（以 Phase 2.2b 提炼的 why-chain transition 句式为例，回写到 `write-theory/corpus/sentences/mechanism_chain.md`）：
+
+```markdown
+<!-- 
+pattern_id: why_chain_step_chaining_this_in_turn
+build_type: 跨类型（句式级）
+source_papers: ["Shen_etal_2022_JOM", "Keeves_etal_2017_AMJ"]
+confidence: medium（2 篇复现，待第 3 篇升 VERIFIED）
+sentence_position: why_chain_transition
+-->
+
+### Why-Chain 步骤链接句式："This, in turn, ..."
+
+**句位**: 假设推导段 Topic→Reasoning 内，多步机制链的步骤间过渡（区别于因果收敛的 "Therefore"）。
+
+**句式骨架**:
+```
+[Step 1] [IV] creates [state 1], which [effect].
+[Transition] This, in turn, [step 2: how state 1 produces state 2] because [reason].
+[Transition] Consequently, [final step to DV].
+```
+
+**变体**（同句位的 2-3 个措辞候选）:
+- "This, in turn, ..." — 标记链式递进（比 "Furthermore" 更精确，强调因果传递）
+- "Through this process, ..." — 标记机制过程性
+- "These dynamics suggest that ..." — 标记从机制动态到预测的桥接
+
+**为什么有效**: "This, in turn" 显式标记前一步的输出是后一步的输入，防止 read-my-mind 跳跃；比泛用 "Moreover" 更精确地传递因果链而非简单并列。
+
+**注意事项**: 仅用于真正的链式因果（step 1 → step 2 → step 3）；若是并列多机制（width-type），应用 "First... Second... Third..." 而非 "in turn"。
+
+**反模式**: 用 "This, in turn" 连接两个无因果传递的并列机制（伪装并列为链式）。
+```
+
+> **句式级条目 vs 架构级条目的格式差异**：句式级条目多了 `sentence_position` 字段（标明 Phase 2.2b 的句位）和"变体"小节（同句位的 2-3 个措辞候选，供 write-theory 措辞润色阶段选用）；骨架更短（单句级而非段落级）。生成力验证（Phase 2.4）同样适用——占位符填充后应能生成功能等价的句子。
+
 ### 构建类型分桶
 
 新发现的骨架必须在同一构建类型内比较和累积：
@@ -124,5 +176,6 @@ Therefore, H[X+1]: ...
 - **必须人工确认构建类型标注**：Phase 0 分类推断可能错误，用户必须逐条检查
 - **不回流机制内容**：骨架中嵌入特定论文机制名称的，必须清理后再写入
 - **跨桶回写必须标记**：`跨类型` 骨架在模块索引中标注 `[跨类型]`，提醒该骨架的普适性尚未在所有构建类型中验证
+- **句式级回写遵守 dedup_status**（Phase 2.2b 比对结果）：`existing_match` 仅追加 source_papers（凑 VERIFIED 篇数），**不重复回写句式条目**；`new_variant` 按门槛回写为新增；`near_dup` 标注与现有句式的差异点，由用户决定合并为变体还是单列。同源分流：Phase 2.2b 已判定某句式归架构级（variants/subprotocols）还是句式级（sentences）——归架构级的，句式级只回写措辞变体部分，不整句重复。
 
 ---

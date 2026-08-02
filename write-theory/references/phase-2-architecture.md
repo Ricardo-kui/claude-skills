@@ -22,11 +22,11 @@
 
 **叙事节奏详细说明（第7因素）**：
 
-Pollock Ch03 用 "stroke and glide"（划桨与滑行）比喻动作与评论的平衡：
+Pollock Ch03 用 "stroke and glide"（划桨与滑行）比喻动作与评论的平衡——原书只给定性判据："全 stroke 无 glide → forced march（急行军）"，"全 glide 无 stroke → ponderous pace（沉闷）"（Pollock 2025 Ch03），**未给具体百分比**。下表的百分比是 **skill 的操作化建议**（把 Pollock 定性原则具体化为可执行阈值，非原书数字）：
 - **Stroke（动作）**：推进理论的主动作——因果推理、假设推导、机制展开
 - **Glide（评论）**：帮助读者吸收的解释——文献总结、定义澄清、边界说明
 
-| 段落类型 | 推荐比例 | Showing vs Telling 要求 | 风险 |
+| 段落类型 | 推荐比例（skill 操作化） | Showing vs Telling 要求 | 风险（Pollock 原书定性判据） |
 |---------|---------|------------------------|------|
 | 机制推演段落 | 70% stroke / 30% glide | 每个 stroke 句子后需有 concrete illustration 或比喻 | 全 stroke → "forced march" |
 | 文献铺垫段落 | 40% stroke / 60% glide | Glide 段落用具体研究场景解释，非纯引用罗列 | 全 glide → "ponderous pace" |

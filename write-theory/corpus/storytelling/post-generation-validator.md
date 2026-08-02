@@ -248,7 +248,13 @@ Step 8: 运行验证 7（Ch04 病理层）
     └── ⚠️ WARNING → 继续输出，在"提醒"中标注病理问题
     └── ✅ PASS → 继续
 
-Step 9: 汇总输出
+Step 9: 运行验证 8（跨假设机制复用一致性）
+    └── 跳过条件：单假设/单机制论文（无 trunk+branches 结构）→ 直接进 Step 10
+    └── ❌ FAIL → 停止输出，给出假设树重构指令（碎片化）
+    └── ⚠️ WARNING → 继续输出，标注机制复用缺口
+    └── ✅ PASS → 继续
+
+Step 10: 汇总输出
     - 输出验证结果表
     - 如果有 ❌ → 输出"修复指令"并要求用户修复后重新生成
     - 如果无 ❌ 但有 ⚠️ → 输出骨架 + 警告 + 修复建议
@@ -276,6 +282,7 @@ Step 9: 汇总输出
 | 角色一致性 | ✅/⚠️/❌ | [角色对比] | [如有] |
 | Prose Craft 层 | ✅/⚠️ | [Human Face / Showing / Voice 检查结果] | [如有] |
 | Ch04 病理层 | ✅/⚠️ | [Burying the lead / Stuffing / Read my mind 检查结果] | [如有] |
+| 跨假设机制复用一致性 | ✅/⚠️/❌/— | [trunk 机制全集 + 各假设回到的子集；或 —（单假设论文跳过）] | [如有] |
 
 **结论**：[全部通过 / 有警告 / 需修复]
 ```
@@ -355,7 +362,7 @@ validation_input:
 - [ ] Point 后跟随 Evidence（文献/数据/案例）而非连续抽象推理？
 - [ ] Evidence 后有 Explanation，说明其对 central knot 的贡献？
 - [ ] 段末或段首有 Link，明确与前后段的关系？
-- [ ] 段落长度在 150–350 词之间？
+- [ ] 段落长度在 150–350 词之间？（skill 经验阈值；Pollock Ch03 只给 section 级页数，未给段落词数）
 - **检测**:
   - 提取每段首句，检查是否包含核心判断信号词（"argue" / "show" / "hypothesize" / "challenge" / "extend" / "propose"）
   - 统计每段词数：< 100 词 → ⚠️ "段落过短，可能缺少 evidence/explanation"
@@ -370,6 +377,8 @@ validation_input:
 ---
 
 ## 验证 7：Ch04 病理层（Pollock Ch04）
+
+> **数字阈值归属说明**：本节所用"15 词"/"30 词"/"200 词"等具体数字为 **skill 操作化阈值**（把 Pollock Ch04 对 burying-the-lead / sentence-stuffing 的定性讨论具体化为可检测数字），非原书数字。Pollock Ch04 讨论这些病理但未给具体词数。
 
 ### 7a: Burying the lead 检查
 - [ ] 各假设推导段段首句在 15 词内说出核心判断？
@@ -400,3 +409,56 @@ validation_input:
 - 如果全文含"显然"类表述 → ⚠️ "删除'显然'类表述，替换为具体推理"
 - 如果假设推导段中出现未在 P2-P4 定义的构念 → ⚠️ "新构念未定义即用于推理"
 - **修复指令**：在缺失 transition 的步骤间添加信号词；补充 why chain 中间步骤；删除所有暗示读者已知的表述；确保所有推理用构念先定义后使用
+
+---
+
+## 验证 8：跨假设机制复用一致性（Multi-Hypothesis Mechanism Reuse）
+
+> **来源**：本检查项针对一类高频架构——主效应建立多机制 trunk（如 H1 三机制），调节假设（H2-HN）各自回到 trunk 机制论证 moderator 如何改变它们。验证自 Shen et al. (2022, JOM)、Singh & Grewal (2023, JMR) 等 multi-mechanism + multi-moderator 论文。`arrangement_patterns.md` 的 Parallel Branches 要求"每个 branch 回到 trunk 的具体机制"，本检查是其可执行落地。
+
+**问题**：当论文用"主效应多机制 trunk + 调节假设回到 trunk"结构时，调节假设是否**一致地复用**同一组 trunk 机制，且 strengthen/weaken 方向标记在跨假设间连贯？碎片化的机制复用（各假设回不同的机制子集）会破坏 trunk 的论证统一性，让读者觉得"每个假设各说各话"。
+
+**适用条件**：仅当 Theory 含 ≥2 个调节假设 + 1 个多机制主效应（trunk ≥2 机制）时执行。单假设/单机制论文跳过。
+
+**检查项**：
+- [ ] **机制全集一致**：所有调节假设是否回到**同一组** trunk 机制（H1 定义了哪几个机制，H2-HN 就论证 moderator 对这几个机制的影响）？
+  - ⚠️ 若某假设只回到 trunk 机制的子集（如 H1 有机制 1/2/3，H2 只论证机制 1，H3 只论证机制 2/3）→ 标记"机制复用不一致"
+- [ ] **方向标记连贯**：同一 moderator 对同一机制的方向（strengthen / weaken / flip）在跨假设间是否自洽？
+  - ⚠️ 若 H2 说 moderator 弱化机制 X，H3 对同一机制 X 却也说弱化（但 H2/H3 的 net effect 相反）→ 标记"方向标记冲突，需显式说明为何同向机制产生反向 net effect"
+- [ ] **无遗漏机制**：是否有 trunk 机制在所有调节假设中**从未被回到**？（装饰性机制——H1 立了但后续无人用）
+  - ⚠️ → 该机制可能是必要性门控未过的残留，或需补一个调节假设回到它
+
+**检测算法**：
+```
+# 1. 从主效应假设段（H1）提取机制 trunk 全集
+trunk_mechanisms = extract_mechanisms(H1_paragraph)  # e.g. {complacency, lock-in, path-dependence}
+
+# 2. 对每个调节假设，提取它回到的机制子集
+for hyp in H2..HN:
+    returned = extract_mechanisms_referenced(hyp_paragraph) & trunk_mechanisms
+    missing_in_this_hyp = trunk_mechanisms - returned
+    if missing_in_this_hyp:
+        mark f"假设 {hyp.id} 未回到 trunk 机制: {missing_in_this_hyp}"
+
+# 3. 检查是否有 trunk 机制从未被任何调节假设回到
+never_returned = trunk_mechanisms - union(all returned sets)
+if never_returned:
+    mark f"装饰性机制（H1 立立但无调节假设回到）: {never_returned}"
+
+# 4. 方向标记连贯性（per mechanism × per moderator）
+for mechanism in trunk_mechanisms:
+    directions = {(hyp.id, hyp.direction_label) for hyp in H2..HN if mechanism in hyp.returned}
+    # 检查同 mechanism 在不同假设间的方向是否需显式说明
+```
+
+**输出**：
+- ✅ **PASS**：所有调节假设一致复用 trunk 机制全集，无方向冲突，无装饰性机制
+- ⚠️ **WARNING**：机制复用不一致或有装饰性机制
+  - **修复指令**：
+    - 子集复用 → 补全调节假设对缺失机制的论证，或在假设段开头说明"本假设聚焦机制 X，因 [理论理由] 不涉及机制 Y/Z"（显式豁免优于沉默遗漏）
+    - 装饰性机制 → 回到 Phase 3 必要性门控重新审视该机制是否应删除（参见 `reasoning_soundness_protocol.md` §3 Q3："删掉本机制故事不照样成立？"）；或补一个调节假设回到它
+    - 方向冲突 → 补一句显式说明为何同向机制作用产生反向 net effect（如 moderator A 强化的机制与 moderator B 强化的机制虽同向，但对 DV 的净效应方向相反，因 [理论理由]）
+- ❌ **FAIL**：≥2 个调节假设完全未回到 trunk（各论证独立机制）→ 假设树碎片化
+  - **修复指令**：重构调节假设段落，强制每个假设明确引用 trunk 机制；或重新审视 trunk 设计是否合理（可能 trunk 本身是强行拼凑，应改为假设树型 C 而非 trunk+branches）
+
+---

@@ -65,6 +65,13 @@ more precise predictions about their distinct effects on [outcome]."
 
 ---
 
+## 子协议索引
+
+- **A1 构念辨析的表格化定义 + 差异-借用过渡**：参见 `corpus/subprotocols/construct_differentiation_patterns.md`（含 "Simultaneously Recognize X but Leverage Y"——研究对象与相关现象机制不同但需借用文献时的过渡论证）
+- **新构念四步界定**（definition + scope conditions + lineage + adjacent differentiation，SKILL.md 硬约束 #4）：句式骨架参见 `corpus/sentences/construct_definition.md`
+
+---
+
 ## QC 检查点
 
 - [ ] 每个差异（First/Second/Third/Fourth）是否都有文献和例子支撑？

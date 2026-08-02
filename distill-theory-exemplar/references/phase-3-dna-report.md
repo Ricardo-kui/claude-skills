@@ -91,3 +91,77 @@
 > **Fine-Grained Profile 输出模板**已外置：见 `../protocols/profile_template.md`。Phase 3 结构化报告输出时加载并严格遵循。
 
 > **Corpus Taxonomy for write-theory**（v1.4.0）已外置：见 `../protocols/corpus_taxonomy.md`。Phase 4 沉淀建议映射到 write-theory corpus 结构时加载。
+
+---
+
+## Phase 3.5 — DNA → write-theory validator 回流（Validator Check Suggestions）
+
+> **目的**：Phase 3 的 DNA 指标长期"只进报告、无回流"。本节建立一个**诊断→建议**回流机制：当某 DNA 指标偏离顶刊阈值时，生成一条结构化的 validator 检查项建议，供用户决定是否采纳到 `write-theory/corpus/storytelling/post-generation-validator.md`。**这是建议（suggestion），不是自动改 validator**——采纳需用户显式确认（与 writeback_reminders 的 core_candidate 门槛一致）。
+
+### 回流候选指标（DNA 有明确阈值 + validator 现未覆盖）
+
+下列 7 项 DNA 指标已有顶刊阈值，且 `post-generation-validator.md` 验证 1-8 **尚未**将其作为独立检查项（部分有相邻检查但无数字阈值）：
+
+| DNA 指标 | 顶刊阈值 | validator 现状 | 偏离时的 validator 检查项建议 |
+|---------|---------|--------------|------------------------------|
+| **连接词密度** | 3-4 词/100 词 | 验证 7c 查 transition 信号词但不计密度 | "全文连接词密度 X/100 词（<2 = 论证隐式化 / >5 = 连接词过载），建议补充/删减 transition" |
+| **因果连接词占比** | 机制推演型 ≥30% | 无 | "因果类连接词占比 X%（机制推演型预期 ≥30%），过低 → why-chain 因果标记不足" |
+| **条件连接词占比** | 假设树/调节型 ≥15%；机制型 <10% | 无 | "条件类连接词占比 X%（[构建类型] 预期 [阈值]）；条件词泄露（机制型>10%）暗示隐性假设树结构" |
+| **模块过渡完整性** | 5/5 优秀；<3/5 碎片化 | 验证查段落但不查模块间过渡 | "T1→T2→T3→T4→T5 模块过渡 X/5（<3/5 = 模块碎片化），补 [缺失过渡点]" |
+| **连接词-构建类型一致性** | 高/中/低 | 无 | "标志性连接词组合与 [构建类型] 预期 [高/中/低] 匹配；低匹配 = 连接词使用与构建类型偏离" |
+| **Concrete Illustration 密度** | 连续两步无 illustration = 缺失 | 验证 6b 查 showing 手段但不查"连续步缺失" | "存在 N 处连续两步 why-chain 无 illustration，补 concrete example（对应 paragraph_layout Tokens 段位）" |
+| **主动语态比例** | ≥80% 优秀；<50% 机器声 | 验证 6c 查被动语态但无数字阈值 | "主动语态比例 X%（<50% = 机器声风险），将 [N 处] 'It is argued/hypothesized' 改为 'We argue/hypothesize'" |
+
+### 不回流的指标（validator 已覆盖或无操作阈值）
+
+- **拍间过渡完整性** → validator 验证 7c 已覆盖（transition 覆盖率 <50%）
+- **证据类型分布 / 文献引用三要素完整率** → paragraph_layout 的三类论据诊断已覆盖（虽 validator 未直接查比例，但 paragraph_layout 12 项诊断已触及）
+
+### 回流输出格式
+
+```yaml
+phase_3_5_validator_reflux:
+  paper: "Zhou_Gao_Zhao_2017_ASQ"
+  build_type: "B 机制推演 + G 辩证对立"
+  deviations_found: 2
+  validator_check_suggestions:
+    - target_validator: "post-generation-validator.md 验证 7c"
+      dna_metric: "因果连接词占比"
+      paper_value: "0.22"
+      threshold: "机制推演型 ≥0.30"
+      deviation: "below"
+      suggested_check: |
+        在验证 7c 增加一条密度检查：
+        - [ ] 因果连接词占比 ≥30%（机制推演型）？
+        低于阈值 → ⚠️ "why-chain 因果标记不足，补 Consequently/Thus/This leads to"
+      adoption_status: pending_user_review  # 不自动改 validator
+      cross_paper_evidence:  # 是否跨论文复现该偏离（≥2 篇才建议采纳）
+        papers_showing_same_deviation: 1
+        threshold_to_adopt: 2  # 凑齐 2 篇同方向偏离才建议正式采纳为 validator 检查项
+    - target_validator: "post-generation-validator.md 验证 6c"
+      dna_metric: "主动语态比例"
+      paper_value: "0.91"
+      threshold: "≥0.80 优秀"
+      deviation: "none"  # 本篇未偏离，仅记录印证
+      suggested_check: null  # 无偏离 → 不生成建议
+  reflux_decision_rule:
+    - "单篇偏离 → 记录为 candidate，Vault 注释，不生成正式建议"
+    - "≥2 篇同方向偏离（跨论文）→ 生成正式 validator_check_suggestion，标记 pending_user_review"
+    - "用户采纳 → 手动 append 到 post-generation-validator.md 对应验证项；不自动写入"
+```
+
+### 与现有机制的分工
+
+| 机制 | 触发 | 落点 | 自动化程度 |
+|------|------|------|-----------|
+| **Phase 4 语料沉淀**（writeback_reminders） | 句式/骨架跨论文复现 | corpus/variants, subprotocols, sentences | 人工审核后回写 |
+| **Phase 3.5 validator 回流**（本节） | DNA 指标偏离阈值 | post-generation-validator.md 检查项 | 人工采纳后回写 |
+
+**关键区别**：Phase 4 回流"写什么"（句式/骨架），Phase 3.5 回流"查什么"（validator 检查项）。两者互补：蒸馏发现的句式丰富 sentences，蒸馏发现的诊断规律丰富 validator。
+
+### 诚实边界（回流专用）
+
+- **不自动改 validator**：所有 validator_check_suggestion 标记 `pending_user_review`，需用户显式 append（validator 是 write-theory 的生成后守门，自动改有风险）
+- **单篇偏离不生成正式建议**：仅记 candidate，凑齐 ≥2 篇同方向偏离才升为 suggestion（防单篇偶发污染 validator）
+- **不与现有检查重复**：回流候选已排除 validator 验证 1-8 覆盖的指标（见"不回流的指标"表）
+- **阈值标注来源**：所有阈值来自 Phase 3 DNA 指标表（基于顶刊范文统计），标注为"顶刊阈值"而非"硬规则"

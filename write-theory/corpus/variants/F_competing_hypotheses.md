@@ -62,6 +62,14 @@ how [X] may influence [Y]:"
 
 ---
 
+## 子协议索引
+
+- **F1 主动管理读者/文献中的竞争预测**：参见 `corpus/subprotocols/argumentation_patterns.md`（**Preemptive Competing Account Management**——F 的核心微观动作：在读者提出反对前主动呈现并处理竞争解释）
+- **F2 竞争基线 → 调节裁决（与 E4 的边界）**：参见 `corpus/subprotocols/argumentation_patterns.md`（competing_baseline_moderation_resolution）。**区分判据**：单一理论内部两个响应的竞争 → E4（调节裁决）；两个独立理论的竞争预测 → F（本变体）
+- **F3 双机制汇聚 / 双理论两阶段**：参见 `corpus/subprotocols/argumentation_patterns.md`（dual_mechanism_same_direction / dual_theory_two_stage_iv）——当两条路径并非严格对立而是汇聚/分期时使用
+
+---
+
 ## QC 检查点
 
 - [ ] 路径A和路径B的论证是否**对称**（文献数量、论证长度、机制深度大致相等）？

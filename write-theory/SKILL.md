@@ -50,7 +50,7 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 | 1 | 每个假设前必须有 2–3 步因果/过程推理链；禁止逻辑跳跃 | `references/phase-3-hypothesis-derivation.md` + `corpus/subprotocols/hypothesis_derivation_patterns.md` |
 | 2 | 假设推导段用交织式论证结构（文献嵌入推理，非罗列） | `references/phase-3-hypothesis-derivation.md` §交织式论证链 |
 | 3 | 假设句必须明确 IV/DV/方向/形状/条件，形式与测量尺度匹配；禁 "is associated with" | `corpus/sentences/hypothesis_forms.md` 决策矩阵 |
-| 4 | 新构念必须完成 definition + scope conditions + lineage + adjacent differentiation 四步 | `corpus/sentences/construct_definition.md` |
+| 4 | 新构念必须完成 definition + scope conditions + lineage + adjacent differentiation + justification（必要性/独特价值）五步 | `corpus/sentences/construct_definition.md`；justification 见 AMJ Management Research Canvas（"definition, differentiation, and justification"） |
 | 5 | 主角（核心构念）不超过 3 个；段落内术语统一 | 审查侧：`theory-review` Step 1、`pollock-qc` prose 表 |
 | 6 | 调节假设必须指定交互模式类型并排除反向交互；区分 differential prediction 与 differential validity | `corpus/variants/E_moderation.md` + `corpus/sentences/moderation.md` |
 | 7 | 跨层调节必须在 P1 声明 focal unit of analysis 与 nesting structure | `corpus/variants/E_moderation.md` + `corpus/meta/routing_table.md` |
@@ -91,7 +91,7 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 
 | 句位 | 查的语料库 | 动作 |
 |------|-----------|------|
-| 构念定义 / why-chain / 假设句 / 让步反论 / 主导动机串联 | `corpus/sentences/` 全部（`construct_definition` / `mechanism_chain` / `moderation` / `hypothesis_forms` / `acknowledgment_response` / `leitmotif-section-opener` / `closure`） | 为机制链步骤、构念定义、假设句提供 2-3 个措辞变体 |
+| 构念定义 / why-chain / 假设句 / 让步反论 / 主导动机串联 | `corpus/sentences/` 全部（`construct_definition` / `mechanism_chain`（含 `cost_benefit_calculus` 这条 why-chain voice） / `moderation` / `hypothesis_forms` / `acknowledgment_response` / `leitmotif-section-opener` / `closure`） | 为机制链步骤、构念定义、假设句提供 2-3 个措辞变体 |
 | 假设推导的 hedging 强度 | `../write-introduction/academic-writing-corpus/phrasebank/hedging-strength.md` | Theory 假设推导用**弱档** hedge（方向性非确定性：is likely to / appears to），禁用无 hedge 确定句 |
 | 处理竞争机制/竞争理论的批判措辞 | `../write-introduction/academic-writing-corpus/phrasebank/critique-phrases.md`（先读同目录 `_index.md`） | 为 "prior theory fails to account for..." 类句提供变体（**必须配具体理论+局限**） |
 | 角色 ordering 决策 | `corpus/subprotocols/character_ordering.md` | 多 IV/多 DV 时校验主角配角出场顺序 |

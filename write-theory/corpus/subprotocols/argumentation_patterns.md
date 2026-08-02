@@ -1,6 +1,10 @@
 # Argumentation Patterns
 
-本文件收集 Theory 段落中可复用的论证微观动作组合。每个条目描述一个从 Anchor 到 Prediction 的完整或部分动作序列，供 write-theory Phase 3.2 调用。
+本文件收集 Theory 段落中**非常规论证动作**——主要是 T2→T3 过渡段、竞争解释管理、跨域借用、行业情境限定等"非标准段落骨架"动作。
+
+> **与 `hypothesis_derivation_patterns.md` 的分工**（两文件 self-description 曾不可区分，已澄清）：
+> - `hypothesis_derivation_patterns.md` = **段落级假设推导骨架**（Anchor→Mechanism→Warrant→Prediction 完整序列及其变体）——一个假设推导段怎么写
+> - 本文件（argumentation_patterns）= **过渡段/非常规动作**（竞争解释管理、Extension Logic、双理论分期、行业情境、双机制汇聚、最小对对比）——标准段落骨架之外的特殊论证动作
 
 ---
 
@@ -10,28 +14,10 @@ build_type: 机制推演型 / 反直觉预测型
 source_papers: ["Singh_Grewal_2023_JMR"]
 confidence: low
 status: needs_validation
+DEPRECATED: 重复 pattern。权威版在 hypothesis_derivation_patterns.md（Theory-Driven Anchor + Puzzle Turn，更详且为 VERIFIED pattern home_file）。本条保留为指针。
 -->
 
-## Pattern: Theory-Driven Anchor — "Efficiency Perspective Predicts No Relationship"
-
-**适用场景**: 当研究挑战一个被默认接受的强理论直觉时使用。不是用经验发现锚定，而是用一个理论视角的预测作为论证起点。
-**微观动作序列**: Anchor（理论前提）→ Gap/Puzzle（反直觉转折）→ Mechanism Move → Warrant → Prediction
-**范文来源**: Singh and Grewal (2023), *Journal of Marketing Research*
-
-**骨架**:
-```
-[Anchor] From an efficiency perspective, [IV] should not influence [DV] because [IV] does not alter [mechanism that determines DV].
-[Gap/Puzzle] However, a [theory]-based perspective and associated [model/literature] suggest that [IV] [direction] [DV].
-[Mechanism Move] We argue that [IV] influences [DV] through [mechanism].
-[Warrant] This is consistent with [theory/model], which posits that [theoretical argument] ([citations]).
-[Prediction] Therefore, we hypothesize: H1: [IV] is [direction] related to [DV].
-```
-
-**为什么有效**: 用一个读者默认接受的理论作为"稻草人"，然后反转，制造更强的认知张力。
-**注意事项**: 
-- 必须准确陈述效率视角的预测，不能 caricature
-- 反转必须有独立的理论框架支撑，不能只靠 "however"
-**反模式**: 如果效率视角本身在文献中并不占主导，不要用此 Anchor，否则会显得牵强。
+→ **Theory-Driven Anchor** 见 `hypothesis_derivation_patterns.md`（Pattern: Theory-Driven Anchor + Puzzle Turn）
 
 ---
 
@@ -41,36 +27,10 @@ build_type: 机制推演型 + 调节效应型
 source_papers: ["Shen_Zhou_Wang_Zhang_2022_JOM"]
 confidence: medium
 status: ready_for_corpus
+DEPRECATED: 重复 pattern。权威版在 hypothesis_derivation_patterns.md（Multi-Mechanism Trunk，更详且含 downstream moderator linkage，为 VERIFIED pattern home_file）。
 -->
 
-## Pattern: Three-Mechanism Trunk with Parallel Concrete Illustrations
-
-**适用场景**: 主效应有多个并行的中介/机制路径，且每个路径都需要让读者在经验世界中"看见"时。
-**微观动作序列**: Anchor（构念定义）→ Mechanism Move 1/2/3（每个配 illustration）→ Warrant → Prediction
-**范文来源**: Shen, Zhou, Wang, and Zhang (2022), *Journal of Operations Management*
-
-**骨架**:
-```
-[Anchor] We suggest that [IV] may [direction] [DV] for three reasons.
-
-[Mechanism Move 1] First, [IV] may induce [state 1], which [effect on DV].
-[Concrete Illustration] For example, [company/context]...
-
-[Mechanism Move 2] Second, [IV] may lead to [state 2], preventing firms from [action].
-[Concrete Illustration] For instance, [company/context]...
-
-[Mechanism Move 3] Third, [IV] may cause [state 3], decreasing firms' ability to [action].
-[Concrete Illustration] [company/context]...
-
-[Warrant] Taken together, these mechanisms suggest that [IV] undermines [DV].
-[Prediction] Therefore, we hypothesize: H1: [IV] is [direction] related to [DV].
-```
-
-**为什么有效**: 多个机制并行展开，每个都有案例锚定，既展示理论深度又保持可读性。
-**注意事项**: 
-- 三个机制必须概念独立，不能是同一机制的不同标签
-- 每个 illustration 必须对应其机制步骤，不能通用
-**反模式**: 如果只有一个机制，不要硬拆成三个，会露出拼凑痕迹。
+→ **Three-Mechanism / Multi-Mechanism Trunk** 见 `hypothesis_derivation_patterns.md`（Pattern: Multi-Mechanism Trunk）
 
 ---
 
@@ -80,27 +40,10 @@ build_type: 假设树型 / 机制推演型
 source_papers: ["Singh_Grewal_2023_JMR"]
 confidence: low
 status: needs_validation
+DEPRECATED: 重复 pattern。权威版在 hypothesis_derivation_patterns.md（Indirect Moderation / Mediated Moderation Derivation，更详）。
 -->
 
-## Pattern: Indirect Moderation — "The Interaction of X and W2 Mediates the Moderating Effect of W1"
-
-**适用场景**: 当理论预期一个 moderator 的调节作用本身被另一个变量中介时使用（mediated moderation）。
-**微观动作序列**: Anchor（两个独立调节已建立）→ Mechanism Move（W2 传播 W1 的信息）→ Warrant（方法论文献 + 理论逻辑）→ Prediction
-**范文来源**: Singh and Grewal (2023), *Journal of Marketing Research*
-
-**骨架**:
-```
-[Anchor] As discussed, [W1] moderates the [IV]→[DV] relationship, and [W2] also moderates this relationship.
-[Mechanism Move] We argue that [W2] mediates the moderating effect of [W1] on the [IV]→[DV] link because [W2] disseminates [information] about [W1], thereby shaping [actor]'s response.
-[Warrant] This is consistent with [theory], which suggests that [argument] ([citation]). Model B in [methodology paper] captures this indirect moderation structure.
-[Prediction] Therefore, we hypothesize: H[X]: The interaction of [W2] and [IV] mediates the moderating effect of [W1] on the relationship between [IV] and [DV].
-```
-
-**为什么有效**: 把复杂的统计模型（mediated moderation）转化为可理解的理论叙事。
-**注意事项**: 
-- 必须独立论证为什么 W2 会中介 W1 的调节作用，不能只引用方法论文献
-- 建议在 H4 前用图示（Model A vs Model B）辅助
-**反模式**: 如果 W2 只是另一个调节变量，不要硬说成间接调节。
+→ **Indirect Moderation / Mediated Moderation** 见 `hypothesis_derivation_patterns.md`（Pattern: Indirect Moderation / Mediated Moderation Derivation）
 
 ---
 
@@ -299,27 +242,10 @@ build_type: 跨类型
 source_papers: ["Grewal_Vana_Stephen_2025_JM"]
 confidence: medium
 status: ready_for_corpus
+DEPRECATED: 跨文件重复。权威 home 是 construct_differentiation_patterns.md（该 pattern 属构念辨析的过渡论证，且该文件 self-reference 它）。本条保留为指针。
 -->
 
-## Pattern: Simultaneously Recognize X but Leverage Y
-
-**适用场景**: 研究对象与现有文献中的相关现象有相似性但机制不同，需要借用相关文献同时避免混淆。
-**微观动作序列**: Recognition of difference → Leveraging similarity → Concrete illustration → Prediction transfer
-**范文来源**: Grewal, Vana, and Stephen (2025), *Journal of Marketing*（brand safety vs contagion/spillover/proximity effects）
-
-**骨架**:
-```
-We simultaneously (1) recognize that the mechanisms by which [related phenomenon] [affect actors] in [context] differ from the mechanism we propose for [construct], but we also (2) leverage insights from prior research in [domain A], [domain B], and [domain C] to derive some initial, potential explanations of why [construct] is likely to evoke [effect]. For example, [concrete illustration from domain A]. We apply this notion to [target context] to predict that [specific prediction].
-```
-
-**为什么有效**: 主动承认边界避免审稿人质疑 "这不是 A 研究吗？"，同时清晰说明借用理由；比简单 "Drawing on..." 更能处理文献流交织。
-
-**注意事项**:
-- 必须真正解释机制差异，不能流于形式；差异陈述要具体
-- "leverage" 的文献必须与研究对象有足够相似性，否则显得牵强
-- 建议在差异陈述后立即给出具体预测，避免停留在文献综述
-
-**反模式**: 若相关文献与研究对象机制完全不同，不要强行 leverage；若只承认差异而不说明借用价值，会削弱理论贡献。
+→ **Simultaneously Recognize X but Leverage Y** 见 `construct_differentiation_patterns.md`（Pattern: Simultaneously Recognize X but Leverage Y——该文件是此 pattern 的权威 home）
 
 ---
 
@@ -329,7 +255,7 @@ build_type: 机制推演型 / 构念辨析型（prose-craft showing device）
 source_papers: ["Cutolo_Ferriani_2024_JOM"]
 confidence: high
 status: ready_for_corpus
-related: 与 "Three-Mechanism Trunk with Parallel Concrete Illustrations" 互补——后者给"例子"，本模式给"受控对比"
+related: 与 "Multi-Mechanism Trunk"（见 hypothesis_derivation_patterns.md）互补——后者给"例子"，本模式给"受控对比"
 -->
 
 ## Pattern: Minimal-Pair Contrast Vignette (受控最小对对比)

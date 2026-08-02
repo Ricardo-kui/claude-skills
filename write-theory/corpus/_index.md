@@ -11,6 +11,7 @@
 - **ROBUST**（5+ 论文、2+ 子领域）：可作默认推荐
 - **VERIFIED**（3+ 论文）：可推荐，无需标注
 - **EMERGING**（1–2 来源）：可迁移但未跨论文验证——推荐时必须标注"单源/双源模式"，不得写成默认做法
+- **structural**（协议/综合/句式 voice）：非单一论文蒸馏的结构性语料（决策表、验证协议、教科书框架应用），登记在 registry 的 `unattributed_corpus` 节，**不参与** VERIFIED/ROBUST 论文计数——可直接使用，无需"单源"标注
 - `source_tier: auxiliary` 的来源（写作工艺书，如 Booth、G&L）只登记出处，不计入 VERIFIED/ROBUST 的论文计数
 
 **两步读取**（与 write-introduction 一致）：选择阶段读本索引 + `_evidence_registry.yaml`（过滤/标注模式状态）；渲染阶段才读对应 corpus 文件。`next_batch_targets` 节列出距 VERIFIED 还差几篇论文的模式——蒸馏新论文时优先命中这些目标。
@@ -36,13 +37,14 @@
 | 核心贡献是揭示动态过程和时间演化 | [`variants/D_process_theory.md`](variants/D_process_theory.md) | — |
 | 核心贡献是识别 boundary condition / contingency | [`variants/E_moderation.md`](variants/E_moderation.md) | [`sentences/moderation.md`](sentences/moderation.md), [`subprotocols/E1_categorical_moderation.md`](subprotocols/E1_categorical_moderation.md), [`subprotocols/bilateral_argumentation_templates.md`](subprotocols/bilateral_argumentation_templates.md), [`subprotocols/hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md), [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md)（Competing Baseline Resolution） |
 | 三向交互 (X x W1 x W2) | [`variants/E_moderation.md`](variants/E_moderation.md) | [`sentences/moderation.md`](sentences/moderation.md) |
-| 有中介的调节 (Moderated Mediation) | [`variants/E_moderation.md`](variants/E_moderation.md) | [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md)（间接调节论证）, [`subprotocols/hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md) |
+| 有中介的调节 (Moderated Mediation) | [`variants/E_moderation.md`](variants/E_moderation.md) | [`subprotocols/hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md)（Indirect Moderation / Mediated Moderation Derivation） |
 | 多调节器按层次/维度分类 | [`variants/E_moderation.md`](variants/E_moderation.md) | [`subprotocols/moderator_selection_frameworks.md`](subprotocols/moderator_selection_frameworks.md) |
 | 同一理论预测两个竞争响应，用 moderator 裁决 | [`variants/E_moderation.md`](variants/E_moderation.md) E4 节 | [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md)（Preemptive Competing Account Management） |
 | 曲线主效应 + 多个 moderators 同时调节曲线形状 | [`variants/E_moderation.md`](variants/E_moderation.md) E5 节 | [`subprotocols/hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md)（Curvilinear Two-Phase + Width-Type Parallel） |
 | 需要解释为什么选这些 moderators | [`subprotocols/moderator_selection_frameworks.md`](subprotocols/moderator_selection_frameworks.md) | — |
 | 需要组织多个并行调节假设 | [`subprotocols/hypothesis_organization_patterns.md`](subprotocols/hypothesis_organization_patterns.md) | [`subprotocols/arrangement_patterns.md`](subprotocols/arrangement_patterns.md) |
 | 需要论证假设段落内部如何摆证据 | [`subprotocols/evidence_patterns.md`](subprotocols/evidence_patterns.md) | [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md) |
+| 需要组织段落内部的论点-论据-总结布局（Topic→Reasoning→Tokens→Wrap + 文献/理论/案例三类论据决策） | [`subprotocols/paragraph_layout.md`](subprotocols/paragraph_layout.md) | [`subprotocols/evidence_patterns.md`](subprotocols/evidence_patterns.md), [`../sentences/mechanism_chain.md`](sentences/mechanism_chain.md)（段内逻辑布局原则） |
 | 核心贡献是裁决两种对立理论的竞争预测 | [`variants/F_competing_hypotheses.md`](variants/F_competing_hypotheses.md) | [`sentences/hypothesis_forms.md`](sentences/hypothesis_forms.md) |
 
 ---
@@ -68,7 +70,7 @@
 | [`construct_differentiation_patterns.md`](subprotocols/construct_differentiation_patterns.md) | A 构念辨析型 | 构念辨析的表格化定义、差异-借用过渡（Simultaneously Recognize X but Leverage Y） |
 | [`B2_dual_track.md`](subprotocols/B2_dual_track.md) | B 机制推演型 | 同一构念两个维度产生相反预测（损失规避 vs 长期聚焦） |
 | [`E1_categorical_moderation.md`](subprotocols/E1_categorical_moderation.md) | E 调节效应型 | Moderator 为分类变量（分组调节） |
-| [`argumentation_patterns.md`](subprotocols/argumentation_patterns.md) | 跨类型 | 假设推导段落的微观动作组合（Anchor/Gap/Mechanism/Warrant/Prediction），含 T2 竞争解释管理（Preemptive Competing Account Management）、Extension Logic、间接调节论证 |
+| [`argumentation_patterns.md`](subprotocols/argumentation_patterns.md) | 跨类型 | **T2→T3 过渡段/非常规论证动作**：竞争解释管理（Preemptive Competing Account Management）、Extension Logic、双理论两阶段机制、行业情境限定、双机制汇聚、最小对对比 vignette。段落级假设推导骨架（Anchor→Mechanism→Warrant→Prediction）已归 `hypothesis_derivation_patterns.md`，间接调节论证亦在该文件 |
 | [`hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md) | 跨类型 | 假设推导段落的心脏模板：Anchor→Mechanism→Warrant→Prediction 完整序列，含宽度型并行机制（2-3 理由）、对称反向双轨、曲线关系双阶段论证 |
 | [`reasoning_soundness_protocol.md`](subprotocols/reasoning_soundness_protocol.md) | 跨类型 | 论证可靠性（soundness）协议：前提三分法 [D]/[S]/[E] + 最弱环节防守（含 Booth warrant 五测试）+ 机制必要性门控（三问）+ 反例压力测试（六类 warrant 攻击面 + 第四种处置"承认但不回应"）+ warrant 明言/隐去表达纪律（Booth Ch8）；hypothesis_derivation_patterns 的 soundness 镜像，Phase 3 成稿后与 Phase 4 审计 4 使用 |
 | [`arrangement_patterns.md`](subprotocols/arrangement_patterns.md) | 跨类型 | 论点-论据安排模式（Warrant-Embedded / Evidence-Contrast / Cumulative / Parallel） |
@@ -78,6 +80,7 @@
 | [`moderator_selection_frameworks.md`](subprotocols/moderator_selection_frameworks.md) | E 调节效应型 / C 假设树型 | 多 moderator 选择元框架 |
 | [`intra_tmt_persuasion.md`](subprotocols/intra_tmt_persuasion.md) | E 调节效应型 / C 假设树型 | 下级高管如何通过信心启发式劝说上级决策者（含权力放大→三向交互） |
 | [`board_governance_boundary_condition.md`](subprotocols/board_governance_boundary_condition.md) | E 调节效应型 | 董事会治理作为**放大型**边界条件（perverse pressure logic） |
+| [`paragraph_layout.md`](subprotocols/paragraph_layout.md) | 跨类型（段内） | **段内**论点-论据-总结布局：Topic→Reasoning→Tokens→Wrap 四段位 + 文献/理论/案例三类论据决策矩阵 + 段内 12 项诊断清单（Dunleavy 段位病理 + IU coherence） |
 
 ---
 
@@ -92,6 +95,7 @@
 | [`hypothesis_forms.md`](sentences/hypothesis_forms.md) | 假设形式 | 各类假设的标准句法（主效应、中介、调节、三向交互、有中介的调节、配对假设a/b格式、条件假设Given格式） |
 | [`acknowledgment_response.md`](sentences/acknowledgment_response.md) | 异议处置 voice | 承认与回应句式（Booth Ch9）：四类异议（替代解释/反例/证据局限/定义分歧）× 承认/回应标记词权重表 + 回应强度三级 + 承认但不回应三姿态；§5 Rogerian 四步对话结构（G&L 2017，高威胁异议的段落级降防御序列）；与 reasoning_soundness_protocol §4 配套 |
 | [`closure.md`](sentences/closure.md) | 收束/过渡 | **注意：管理学不要求独立 Closure 段。** 局部收束信号（"Therefore, we hypothesize:"）、段落收束→假设过渡（按论证类型）、**H1 收敛信号强制提醒** |
+| [`leitmotif-section-opener.md`](sentences/leitmotif-section-opener.md) | 段首回扣句 | 多假设共享同一核心构念时的段首回扣句（leitmotif）；SKILL.md 措辞润色表"主导动机串联"句位查此文件 |
 
 ---
 

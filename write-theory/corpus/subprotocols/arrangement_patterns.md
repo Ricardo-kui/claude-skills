@@ -1,6 +1,8 @@
 # Arrangement Patterns
 
-本文件收集 Theory 段落中论点和论据的组织方式。每个条目描述一个完整的安排模式，供 write-theory Phase 3.2 根据用户输入自动选择。
+本文件收集 Theory **多个假设段落之间**的组织方式（段间结构：common trunk → parallel branches、evidence-contrast、cumulative）。每个条目描述一个完整的段间安排模式，供 write-theory Phase 3.2 根据用户输入自动选择。
+
+> **段内布局见 [`paragraph_layout.md`](paragraph_layout.md)**（一个假设推导段内部的 Topic→Reasoning→Tokens→Wrap 四段位 + 三类论据决策）。本文件 = 段间；该文件 = 段内。
 
 ---
 

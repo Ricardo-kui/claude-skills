@@ -108,9 +108,10 @@ Theory section 的 Rising Action 不仅需要功能推进，还需要 prose 层�
   - 例："Because [actors with trait X] prioritize [goal A] over [goal B], they may [observable behavior] when [condition]. Consider how [Company] [specific action]..."
 
 #### Showing vs Telling in Theory
-- **Stroke 段落（70%）**：每个抽象因果步骤后，跟 1 句 concrete illustration
-- **Glide 段落（30%）**：用比喻/类比解释抽象概念
+- **Stroke 段落（约 70%，skill 操作化阈值）**：每个抽象因果步骤后，跟 1 句 concrete illustration
+- **Glide 段落（约 30%，skill 操作化阈值）**：用比喻/类比解释抽象概念
 - **规则**：不允许连续 2 个 stroke 句子无 showing
+- 注：Pollock Ch03 原书只给定性判据（全 stroke → forced march；全 glide → ponderous pace），未给百分比；上述比例为 skill 操作化建议
 
 #### Conversational Voice in Theory
 - **P1**：用 "To resolve the paradox that [knot], we argue that..." 承接

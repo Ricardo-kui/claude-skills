@@ -1,5 +1,19 @@
 # 机制推演句语料库
 
+> **导航 TOC**（本文件 1800+ 行 / 43 节，按需跳转，不要线性通读）。按机制结构类型分组；括注为锚定范文。
+
+| 组 | 节（行号） |
+|----|-----------|
+| **基础与连接词** | Why chain 连接词谱系 (L17) · 单步机制链 (L70) · 两步机制链（标准）(L83) · 数字实例化机制句 (L383) · 用文献支撑机制（非罗列）(L509) |
+| **单 trunk 多机制** | 并行多源机制链 (L401) · 宽度型三理由并行机制 (L413) · 对称三步机制链 (L470) · OM "三三制"机制推演骨架 (L727) · 双中介并行机制链 (L904) · 双 DV 并行机制链 (L951) |
+| **双轨 / 对立 / 竞争** | 双轨并行机制链（Track A/B）(L99) · 辩证对立双路径机制（habel2016）(L136) · 对称分组双路径调节机制 (L259) · 竞争机制链（路径 A vs B）(L309) · 辩证对立型机制推演（kalaignanam2017）(L336) · 对称反向双轨机制链 (L1256) · 双原因+三方行为者对比型（weng_yang）(L1623) · 双重印记对立通道+持续性差异（qiao2026）(L1530) |
+| **矩阵 / Y形 / 嵌套架构** | 2×2 并行矩阵架构 (L1080) · 2×2 Cell-by-Cell 调节机制矩阵 (L1330) · Y-shaped 架构（Common Trunk→Dual Path→Contingency）(L1381) · 多层收窄型机制链（Macro→Meso→Micro）(L1011) · 三层嵌套理论演进 (L1217) · 双视角对比+框架整合 (L1189) |
+| **特定理论框架型** | 制度真空→政府关联→资源获取（Zhou 2017）(L32) · 双重代理问题导致资源转换低效（Zhou 2017）(L50) · Ability-Motivation 双路径框架（Eilert 2017）(L580) · Iron Triangle 三边机制论证 (L1151) · Trade-off→Shock→Dominance 逻辑链（hoffmann2024）(L764) · "双刃剑"理论框架骨架 (L851) · Dual-Theory Architecture Variant（Mayo POMS）(L526) · 双理论分别解释不同 DV 变体（kalaignanam2017）(L540) · 成本-收益计算机制链（Chung/Low/Rust 2022）(L1688) · 倒U型两步机制链：awareness+capacity→mutual dependence+retaliation (L1753) |
+| **认知 / 社会 / 流畅性** | 社会比较机制（paruchuri_pollock_kumar2020）(L1476) · 认知可用性时效机制（paruchuri_pollock_kumar2020）(L1500) · 认知适配/契合→加工流畅性→正向评价 (L1804) |
+| **排除 / 整合 / Pivot** | 替代机制排除骨架 (L636) · 多理论整合骨架 (L688) · Rhetorical-Question 理论 Pivot (L1425) · 联合必要性门控逻辑 (L1450) · Focus Group / 定性证据嵌入机制推演（habel2016）(L210) |
+
+---
+
 ## Why chain 连接词谱系
 
 ```

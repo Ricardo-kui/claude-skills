@@ -39,6 +39,19 @@
 ### 假设陈述
 [引用 `corpus/sentences/hypothesis_forms.md` 对应形式]
 
+**storyline 绑定（强制，SKILL.md Story gate 要求）**：每个假设必须标注 `storyline_id`（对齐 `story.storylines[*].id`，供 write-methods / write-results 消费）。无对应 storyline 的假设要么挂到最近的 storyline，要么标注为"待补 storyline 契约"——后者触发 paper-state 不写入。
+
+### 证据缺口
+列出本次 Theory 构建中无法当场验证、需用户后续补的文献依赖项。每条至少包含：主张 / 需要的证据类型 / 当前状态（placeholder / 待查 / 已有引用但未核验）。
+```
+- [ ] [主张：机制步骤 N 的 "X 导致 Y"] | 需：[实证/理论文献支撑] | 状态：[placeholder——需用户提供具体引用]
+- [ ] [主张：构念 A 与 B 的区分维度] | 需：[对比文献] | 状态：[待查]
+```
+所有标为 placeholder 的主张在正文中必须保留显式占位（如 `(CITATION NEEDED)`），不得以未验证引用冒充已证。
+
+### paper-state.yaml 片段
+按 `corpus/meta/paper_state_fragment.md` 的模板渲染，附在输出末尾供用户复制。字段须与 `paper-state-protocol` 权威 schema 对齐（含 `institutional_background_included`）；每个 hypothesis 带 `storyline_id`。
+
 ### 叙事弧线指南（Pollock 2025 Ch02）
 
 Theory section 的 Rising Action 结构（Knot Inheritance→Deepening→Tying→自然收敛）、叙事节奏检查点和 Stroke/Glide 比例指南见 `corpus/storytelling/rising-action-protocol.md`。
@@ -56,4 +69,13 @@ Theory section 的 Rising Action 结构（Knot Inheritance→Deepening→Tying�
 - [ ] 假设形式匹配变量类型和理论关系？
 - [ ] 最后一个假设/命题是否自然收束（非突然中断进入 METHODS）？
 - [ ] [类型专属 QC 检查点...]
+
+### 措辞润色建议
+骨架与 QC 完成后、输出前默认执行（见 SKILL.md `## 措辞润色`）。按句位分区查 `corpus/sentences/` 与 write-introduction 的 phrasebank，**不覆盖原文**，只为关键句位（构念定义 / why-chain 步骤 / 假设句 / 让步反论 / 段首回扣句）提供 ≤2-3 个措辞变体 + hedging 强度校准。输出形式：
+```
+| 句位 | 原句（节选） | 候选变体 | 说明 |
+|------|-------------|---------|------|
+| [P3 why-chain step 2] | "[原句]" | ①…②… | [hedging 强度 / specificity gate 提示] |
+```
+纪律：骨架优先，语料库只提供措辞变体不替代论证结构；hedging 不突破 causal-hedging 设计家族上限。
 ```

@@ -1016,7 +1016,6 @@ source_papers:
         home_files:
           - "subprotocols/hypothesis_derivation_patterns.md"
           - "subprotocols/arrangement_patterns.md"
-          - "subprotocols/argumentation_patterns.md"
         makadok_dimension: "Mechanism"
         status: "EMERGING"
       - fragment_id: tfr_066
@@ -1756,7 +1755,8 @@ patterns:
     source_count: 1
     source_papers:
       - "singh_grewal_2023_jmr"
-    home_file: "subprotocols/argumentation_patterns.md"
+    home_file: "subprotocols/hypothesis_derivation_patterns.md"
+    note: "Alias of indirect_moderation_derivation（同篇 Singh & Grewal 2023）；home_file 已从 argumentation_patterns.md（已去重的 legacy 副本）重定向到权威 home。"
   information_attention_framework:
     description: "Information Attention Framework"
     status: "EMERGING"
@@ -1814,7 +1814,8 @@ patterns:
     source_count: 1
     source_papers:
       - "singh_grewal_2023_jmr"
-    home_file: "subprotocols/argumentation_patterns.md"
+    home_file: "subprotocols/hypothesis_derivation_patterns.md"
+    note: "Alias of theory_driven_anchor_with_puzzle_turn（同篇 Singh & Grewal 2023）；home_file 已从 argumentation_patterns.md（已去重的 legacy 副本）重定向到权威 home。"
   theory_driven_anchor_with_puzzle_turn:
     description: "Theory Driven Anchor With Puzzle Turn"
     status: "EMERGING"
@@ -1836,7 +1837,8 @@ patterns:
     source_count: 1
     source_papers:
       - "shen_zhou_wang_zhang_2022_jom"
-    home_file: "subprotocols/argumentation_patterns.md"
+    home_file: "subprotocols/hypothesis_derivation_patterns.md"
+    note: "Alias of multi_mechanism_trunk（VERIFIED，同篇 Shen 2022）；home_file 已从 argumentation_patterns.md（已去重的 legacy 副本）重定向到权威 home。"
   two_by_two_symmetric_matrix:
     description: "Two By Two Symmetric Matrix"
     status: "EMERGING"
@@ -1969,3 +1971,56 @@ next_batch_targets:
       - "booth_williams_colomb_2016_craft"
       - "greene_lidinsky_2017"
     note: "All six Batch-2026-07-28 patterns rest on auxiliary writing-craft sources only. Watch for empirical paper distills that independently exhibit Rogerian structuring, explicit warrant management, or premise typing (e.g., AMR/ASQ theory pieces) to cross-validate toward VERIFIED."
+
+# Structural corpus files (not traceable to a single distilled paper).
+# These files exist on disk and are referenced by SKILL.md / variants / references,
+# but were authored as protocols, synthèse, or single-purpose voice files rather than
+# distilled from one source paper. Registered here so the _index.md selection-stage
+# "query registry for EMERGING/VERIFIED status" discipline can account for them.
+# status: structural means NOT a candidate for VERIFIED/ROBUST (no source_count accumulation).
+unattributed_corpus:
+  - file: "subprotocols/character_ordering.md"
+    status: structural
+    function: "多 IV/多 DV 主角配角出场顺序决策表（figure 放置规则）"
+    consumed_by: ["SKILL.md 措辞润色表", "references/phase-4-qc-alignment.md", "references/output-format.md"]
+    note: "决策表型语料，无单一范文来源。"
+  - file: "subprotocols/institutional_shock_lens.md"
+    status: structural
+    function: "制度冲击/自然实验（IV/DiD/RDD）的 Theory Lens 论证协议"
+    consumed_by: ["references/phase-1-diagnosis.md", "references/phase-2-architecture.md §2.3", "references/phase-3-hypothesis-derivation.md §2c"]
+    note: "识别策略的通用 Theory 适配，跨论文可迁移；非单一论文蒸馏。"
+  - file: "subprotocols/construct_differentiation_patterns.md"
+    status: structural
+    function: "构念辨析的表格化定义、差异-借用过渡（Simultaneously Recognize X but Leverage Y）"
+    consumed_by: ["corpus/_index.md", "variants/A_construct_differentiation.md（子协议索引 A1）"]
+    note: "含 Grewal_Vana_Stephen_2025_JM 单源语料，可随蒸馏升级为 EMERGING fragment。"
+  - file: "subprotocols/B2_dual_track.md"
+    status: structural
+    function: "同一构念两维度产生相反/互补预测的双轨并行协议（Malik 2025 锚定）"
+    consumed_by: ["corpus/_index.md", "routing_table.md 二级路由"]
+    note: "单源（Malik 2025）；与 hypothesis_derivation_patterns 的 symmetric_opposing_dual_track 概念重叠（审核 P1）。"
+  - file: "subprotocols/E1_categorical_moderation.md"
+    status: structural
+    function: "分类变量 moderator 的分组调节协议"
+    consumed_by: ["corpus/_index.md", "routing_table.md 二级路由"]
+    note: "单源（Darby 系列）；与 bilateral_argumentation_templates 的 categorical_severity_moderation 重叠。"
+  - file: "sentences/leitmotif-section-opener.md"
+    status: structural
+    function: "多假设共享同一核心构念时的段首回扣句（leitmotif）"
+    consumed_by: ["SKILL.md 措辞润色表（主导动机串联句位）", "corpus/_index.md 句式表"]
+    note: "句式 voice 语料，无单一范文来源。"
+  - file: "storytelling/post-generation-validator.md"
+    status: structural
+    function: "Theory 草稿生成后验证器（7 项检查 + 伪代码 + 三级判定）"
+    consumed_by: ["references/phase-4-qc-alignment.md §4.1（核心依赖）"]
+    note: "验证协议，非论文蒸馏；phase-4 的单点依赖。"
+  - file: "storytelling/rising-action-protocol.md"
+    status: structural
+    function: "Pollock Ch02 Rising Action 协议（Knot Inheritance→Deepening→Tying→收敛）"
+    consumed_by: ["references/phase-1-diagnosis.md §1.3", "references/output-format.md"]
+    note: "教科书框架（Pollock 2025 Ch02）的应用协议，非单一论文蒸馏。"
+  - file: "subprotocols/paragraph_layout.md"
+    status: structural
+    function: "段内论点-论据-总结句布局：Topic→Reasoning→Tokens→Wrap 四段位 + 文献/理论/案例三类论据决策矩阵 + 段内 12 项诊断清单"
+    consumed_by: ["references/phase-3-hypothesis-derivation.md §3.2 语料调用第8项", "corpus/_index.md 快速决策表+子协议表"]
+    note: "整合四源（Dunleavy LSE Topic-Body-Tokens-Wrap + Indiana University coherence + Belcher 2019 Wk2 Toulmin + Jonsen et al. 2018 first/second-order 桥接）的结构性协议，非单一论文蒸馏。"
