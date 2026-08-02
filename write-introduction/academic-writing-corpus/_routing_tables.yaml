@@ -166,7 +166,7 @@ tensions:
   Inadequacy:
     - canonical_id: "02-implicit-assumption-wrong"
       core_syntax: "\"The implicit assumption that... may be incorrect because...\""
-      registry_status: "ROBUST (12p)"
+      registry_status: "ROBUST (14p)"
       exclusivity: "仅 Inadequacy — Incompleteness/Incommensurability 中为 0"
     - canonical_id: "03-structural-blindspot"
       core_syntax: "\"This focus on [X] has systematically overlooked [Y]...\""

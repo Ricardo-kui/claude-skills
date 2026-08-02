@@ -1,10 +1,48 @@
 meta:
-  last_updated: '2026-07-22'
+  last_updated: '2026-08-02'
   total_design_types: 22
-  batches_processed: 8
-  source: corpus INDEX.md + product_recall_cross_validation + cutolo2024_jm_text_count + falchetti2022_smj_experiment + lashley_pollock2020_asq_qualitative_process + chung_low_rust_2022_jams_executive_confidence_myopia + ilicic_brennan_2026_jm_political_ideology_addictive_products + kim_lee_2026_putting_a_price_on_mission_smj
+  batches_processed: 11
+  source: corpus INDEX.md + product_recall_cross_validation + cutolo2024_jm_text_count + falchetti2022_smj_experiment + lashley_pollock2020_asq_qualitative_process + chung_low_rust_2022_jams_executive_confidence_myopia + ilicic_brennan_2026_jm_political_ideology_addictive_products + kim_lee_2026_putting_a_price_on_mission_smj + bamberger_homburg_wielgos_2021_jm_backfill + lee_wu_bednar_orsc_18968_distill + reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc_distill
 evidence:
   by_source_paper:
+    reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc:
+      journal: Organization Science
+      title: "The Elephant and Donkey in the Room: Time-Varying Effects of Political Dissimilarity on Social Interactions at Work During U.S. Elections"
+      status: EMERGING (1p)
+      design_types:
+        - 多研究
+        - 事件历史+事件研究
+      slots_covered:
+        - M2
+        - M7
+        - M8
+        - M9
+      note: "Three-study constructive replication; event-centered DGCM separates pretrend, election transition, and postevent trend. Study 2 randomizes political dissimilarity but not election timing; Study 3 has one preevent observation and therefore cannot estimate a pretrend."
+    lee_wu_bednar_orsc_18968:
+      journal: Organization Science
+      title: "When the Headlines Fade, the Story Goes On: Investigating How Local Newspaper Decline Affects Firm CSR Engagement"
+      status: EMERGING (1p)
+      design_types:
+        - 自然实验-DiD
+      slots_covered:
+        - M2
+        - M7
+        - M8
+      note: "County-level staggered newspaper declines mapped to headquartered firms; signed CSR strengths-minus-concerns motivates linear FE. TWFE+Bacon retained only as a legacy diagnostic, with modern staggered-DiD and HonestDiD requirements added as boundaries."
+    bamberger_homburg_wielgos_2021_wage_inequality_jm:
+      journal: Journal of Marketing
+      title: "Wage Inequality: Its Impact on Customer Satisfaction and Firm Performance"
+      status: EMERGING (1p)
+      design_types:
+        - 多研究
+        - SEM
+        - 面板数据-OLS
+      slots_covered:
+        - M2
+        - M7
+        - M8
+        - M9
+      note: "B2B key-informant SEM + B2C external panel FE; Study 2 forms a limitation→repair chain for measurement independence, contextual breadth, and time horizon."
     kim_lee_2026_putting_a_price_on_mission_smj:
       journal: Strategic Management Journal
       title: "Putting a price on mission: Social responsibility orientation and startup employment"
@@ -81,11 +119,18 @@ evidence:
         reject: 0
         common_revise_reasons: []
     自然实验-DiD:
-      paper_count: 0
-      papers: []
+      paper_count: 1
+      papers:
+      - lee_wu_bednar_orsc_18968 (Organization Science)
       status: EMERGING
-      slots_covered: []
-      common_failures: []
+      slots_covered:
+      - M2
+      - M7
+      - M8
+      common_failures:
+      - "把 Bacon 分解当作对异质处理效应偏误的修复，而不是诊断"
+      - "仅凭处理前系数不显著声称平行趋势成立"
+      - "跨层级暴露映射不报告处理事件为何从原始数据库减少"
       validation_history:
         total_runs: 0
         validated: 0
@@ -171,12 +216,14 @@ evidence:
         reject: 0
         common_revise_reasons: []
     多研究:
-      paper_count: 3
+      paper_count: 5
       papers:
       - falchetti2022 (SMJ)
       - ilicic_brennan_2026 (JM)
       - kim_lee_2026 (SMJ)
-      status: EMERGING
+      - bamberger_homburg_wielgos2021 (JM)
+      - reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science)
+      status: VERIFIED
       slots_covered:
       - M1
       - M2
@@ -185,10 +232,12 @@ evidence:
       - M6
       - M7
       - M8
+      - M9
       common_failures:
       - 缺少研究梯度图，直接罗列 Study 1/2/3
       - 未说明哪些维度保持不变、哪些变化
       - 操纵检验 pilot 未报告或放在附录
+      - 只说“互补方法”但未逐项说明前一研究的局限由后一研究如何修复
       validation_history:
         total_runs: 0
         validated: 0
@@ -250,18 +299,22 @@ evidence:
         reject: 0
         common_revise_reasons: []
     事件历史+事件研究:
-      paper_count: 3
+      paper_count: 4
       papers:
       - zhou2017 (ASQ)
       - pontikes2012 (ASQ)
       - shi2021 (JMR)
+      - reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science)
       status: VERIFIED
       slots_covered:
       - M2
       - M3
       - M7
       - M8
-      common_failures: []
+      common_failures:
+      - 将宏观事件 DGCM 与资本市场 CAR event study 混为同一估计量
+      - 只有一个事件前观测却声称检验了预趋势
+      - 将不显著 postevent slope 写成永久效应证据
       validation_history:
         total_runs: 0
         validated: 0

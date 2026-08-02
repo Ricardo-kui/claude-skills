@@ -1,8 +1,8 @@
 meta:
-  last_updated: '2026-07-25'
-  total_mvp30_papers_indexed: 46
-  batches_processed: 10
-  source: mvp30_index + 9_distill_files + path_B_confirmation + cui_yang_vertinsky_smj_distill + paruchuri_andrus_sullivan2026_amj_distill + li2025_jscm_distill + li2026_pom_distill + du_tsolmon2024_orsc_distill
+  last_updated: '2026-08-02'
+  total_mvp30_papers_indexed: 49
+  batches_processed: 13
+  source: mvp30_index + 9_distill_files + path_B_confirmation + cui_yang_vertinsky_smj_distill + paruchuri_andrus_sullivan2026_amj_distill + li2025_jscm_distill + li2026_pom_distill + du_tsolmon2024_orsc_distill + lee_wu_bednar_orsc_18968_distill + reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc_distill
   notes: '2026-07-08 added cui_yang_vertinsky (SMJ) distill: new hook 24-empirical-puzzle-after-consensus, updated 16-threefold-gap and 02-explicit-dual-question-narrowing. 2026-07-10 expanded cui_yang_vertinsky (SMJ) Introduction distill: added variant X to tensions/01-despite-progress-unaddressed, variant G to literature-turns/01-progressive-coherence, variant F to previews/mechanism-preview. 2026-07-14 distilled paruchuri_andrus_sullivan2026 (AMJ): added variant Y to tensions/01-despite-progress-unaddressed, variant C to hooks/09-psychological-construct-hook, variant G to previews/mechanism-preview, and new theory-lens/07-socio-cognitive-frame. 2026-07-22 distilled li_bapuji_talluri_singh_narayanan2025 (JSCM, Vertical Spillover of Product Recalls): added variant G (成对跨行业灾难实例化型) to hooks/03-data-shock; created new theory-lens/08-dual-metaphor-stream-reconciliation (单理论双隐喻调和双文献流, pipes/prisms reconciling categorization + supply chain propagation). 2026-07-22 distilled li_bapuji_talluri_singh_venkataraman2026 (POM, supply base geographical distance/dispersion): created new tensions/18-context-generalizability (WEIRD↔non-WEIRD gap); added li2026 as 7th source to tensions/05-construct-confusion (distance/dispersion conflation); paired methods slot-M3 context-customized-DV variant + results slot-R6 null-rescue variant. 2026-07-25 re-distilled wowak2025 (MS) Introduction (L2 gap-fill): verified 5 existing variants accurate (hooks/02 variant E epigraph-quote-pivot; tensions/14 variant B debate-unresolved from Theory; literature-turns/02 variant D synthesized-coherence; previews/findings-preview variant L dual-DV-competting-directions; transitions/12 variant A high-risk-high-reward setting-justification, sole source); filled sole gap by adding contributions/_index variant O (convergent dual-literature-scan + awareness-and-mitigation). Confirmed 2 known narrative risks: no explicit puzzle statement; Preview over-detailed (announces all post hoc results).'
 evidence:
   hooks:
@@ -592,7 +592,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     02-implicit-assumption-wrong:
-      paper_count: 13
+      paper_count: 14
       papers:
       - ceo_regulatory_focus_ijrm (IJRM)
       - employee_free_speech (OS)
@@ -607,9 +607,10 @@ evidence:
       - shipilov2020 (SMJ)
       - singh2023 (JMR)
       - zhao_ding2022 (OS)
+      - reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science)
       gap_distribution:
         Incompleteness: 0
-        Inadequacy: 13
+        Inadequacy: 14
         Incommensurability: 0
       status: ROBUST
       generativity: GENERATIVE
@@ -864,15 +865,16 @@ evidence:
         reject: 0
         common_revise_reasons: []
     14-debate-unresolved:
-      paper_count: 4
+      paper_count: 5
       papers:
       - kundro_rothbard (AMJ)
       - eilert2017 (JM)
       - wowak2025 (MS)
       - du_tsolmon2024 (ORSC)
+      - lee_wu_bednar_orsc_18968 (Organization Science)
       gap_distribution:
         Incompleteness: 0
-        Inadequacy: 4
+        Inadequacy: 5
         Incommensurability: 0
       status: VERIFIED
       generativity: GENERATIVE
@@ -1203,14 +1205,18 @@ evidence:
         common_revise_reasons: []
   previews:
     mechanism-preview:
-      paper_count: 6
+      paper_count: 10
       papers:
       - zhou2017 (ASQ)
       - keeves2017 (ASQ)
       - gamache2023 (SMJ)
       - mannor2016 (SMJ)
+      - grewal2025 (JM)
       - cui_yang_vertinsky_smj (SMJ)
       - paruchuri_andrus_sullivan2026 (AMJ)
+      - bamberger_homburg_wielgos2021 (JM)
+      - lee_wu_bednar_orsc_18968 (Organization Science)
+      - reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science)
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: LOW

@@ -7,11 +7,13 @@ cross_paper: VERIFIED
 generativity: GENERATIVE
 exclusivity: MEDIUM
 source_papers:
-  - kundro_rothbard (AMJ, 2020+): "debate on whether power protects women: one hand power frees, other hand gender role violations persist"
-  - eilert2017 (JM, 2017): "How does the relationship vary..." (rhetorical question tension)
-  - wowak2025 (MS, 2025): "liberal vs conservative CEO recall behavior — conflicting predictions"
+  - 'kundro_rothbard (AMJ, 2020+): debate on whether power protects women—one hand power frees, other hand gender role violations persist'
+  - 'eilert2017 (JM, 2017): How does the relationship vary... (rhetorical question tension)'
+  - 'wowak2025 (MS, 2025): liberal vs conservative CEO recall behavior—conflicting predictions'
+  - 'lee_wu_bednar_orsc_18968 (Organization Science): one local institution loses oversight and visibility simultaneously, creating opposing CSR incentives resolved by substitute intermediaries'
 created: 2026-05-24
-source: Distilled from Kundro & Rothbard (AMJ), Eilert et al. (JM), Wowak et al. (MS)
+updated: 2026-08-02
+source: Distilled from Kundro & Rothbard (AMJ), Eilert et al. (JM), Wowak et al. (MS), and Lee, Wu & Bednar (Organization Science)
 ---
 
 # 14-debate-unresolved — 文献辩论未决 Tension
@@ -111,6 +113,30 @@ source: Distilled from Kundro & Rothbard (AMJ), Eilert et al. (JM), Wowak et al.
 **禁忌**:
 - 两个阵营必须真实存在且可引用——不能把一个观点的推论 strawman 成对立阵营
 - 'so we may expect' 的预期必须是读者会自然认同的常识逻辑，否则悖论感失效
+
+---
+
+### 变体 E：单一制度双重功能同时衰退 → 对立激励 → 替代者条件化（Lee–Wu–Bednar 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "[Institution] historically performs two intertwined functions: [function A] and [function B]. Its decline weakens both simultaneously, but the two losses create opposing incentives for [actor]'s [response]. The erosion of [function A] reduces [pressure/incentive A], whereas the loss of [function B] increases [need/incentive B]. The net response is therefore theoretically ambiguous. We resolve this ambiguity by asking whether [substitute intermediaries] can replace either function: when substitutes remain active, [path A/B] should dominate; when they are absent, [opposing path] should dominate."
+
+**来源**: Lee, Wu, and Bednar, *Organization Science*, DOI 10.1287/orsc.2024.18968, Introduction.
+
+**关键特征**:
+- 张力来自**同一制度冲击同时拆除两个耦合功能**，而不是两篇文献各自给出一个互斥预测。
+- 每个功能损失必须导向一个可区分、方向相反的行为激励；不能只把“双重功能”写成并列背景。
+- 替代性中介不是普通控制变量，而是决定哪条路径占优的条件化装置。
+- 贡献落点是 contingent framework：把“平均效应是什么”改写为“在何种信息生态中哪条路径占优”。
+
+**适用**: 地方媒体、监管机构、行业协会、平台或社区组织衰退；同一制度同时承担监督与传播、约束与赋能、认证与可见性等双重功能。
+
+**禁忌**:
+- 两个功能若方向相同，不应强行套用本变体。
+- 替代者必须能承接至少一个被削弱的功能；仅与冲击相关不构成边界条件。
+- Introduction 只能承诺条件化解释，不能在未识别机制时声称替代者“证明”了具体路径。
 
 ---
 

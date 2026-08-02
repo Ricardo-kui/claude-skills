@@ -347,3 +347,52 @@ and [DV] is [stronger/weaker] when [W2] is high than when [W2] is low."
 - `../write-methods/econometric-models/面板数据-OLS.md` 变体21（M7 三向交互模型设定：mean-centering + 完整 lower-order terms）
 - `../write-results/econometric-models/三向交互.md` 变体2（连续调节变量三向交互 — 边际效应表）
 - `../write-introduction/academic-writing-corpus/transitions/14-nested-moderation-preview.md`（Introduction 末尾预览嵌套调节结构）
+
+---
+
+## E7. 宏观事件激活与持续性调节（Event-Activated Temporal Moderation，Reinwald et al. 2026 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**适用**: 核心差异/身份在常态中可被压抑，但宏观事件使其显著化；理论需要解释事件前、事件冲击与事件后的关系变化，并通过近端机制提出条件间接效应。
+
+**理论链条**:
+
+> 可压抑的差异/身份 → 宏观事件提高显著性 → 身份威胁/防御性加工 → 近端社会认知机制下降 → 互动结果恶化 → 选择性加工与联结网络使激活在短期内持续
+
+**段落功能地图**:
+
+| 步骤 | 段落功能 | 必须度 |
+|---|---|---|
+| 1 | 解释为什么该差异在常态下可能不影响行为：行动者能压抑、隐藏或不调用该身份 | ✅ |
+| 2 | 说明宏观事件为何提高身份显著性并触发威胁加工，而非仅把“事件”当时间虚拟变量 | ✅ |
+| 3 | 推导事件 × 差异对结果的交互预测 | ✅ |
+| 4 | 引入近端机制，说明威胁为何降低认知资源或亲社会动机 | ✅ |
+| 5 | 提出仅在事件激活条件下成立的条件间接效应 | ✅ |
+| 6 | 若声称持续性，给出选择性信息加工/自动联结的独立理论理由与有限观察窗 | ✅ |
+
+**模板**:
+
+```text
+Outside [macro-event period], individuals can suppress or compartmentalize [identity/difference], limiting its relevance to [work interaction]. During [event], however, repeated cues heighten the salience of [identity] and increase perceived identity threat. This defensive orientation consumes resources and reduces motivation for [proximal mediator], making [negative outcome] more likely. We therefore expect [difference] to have a stronger [direction] association with [outcome] during and after [event] than before it, with this conditional effect operating through [mediator]. Because threat-consistent cues receive selective attention and become linked in associative memory, the activation may persist beyond the event itself; the duration claim is limited to the observed postevent window.
+```
+
+**假设组织**:
+
+- H1：事件时点调节 X→Y；事件前关系较弱/为零，事件冲击后关系增强。
+- H2：事件时点调节 X→M→Y 的间接效应；报告各时点的 bootstrap CI，而非只报 index。
+- 可选持续性命题：事件后的 X→M 或 X→Y 差异在预设观察窗末端仍可检测；这不是“永久不衰减”假设。
+
+**与 E1/E6 的区别**:
+
+- 不同于 E1 的静态高/低 moderator，事件同时包含一个离散冲击与冲击后的时间轨迹。
+- 不同于 E6 的三向嵌套调节，核心是“构念是否被激活”的时间边界；政党/群体不对称若无稳定理论和重复证据，应作为探索性三向交互。
+
+**语料锚定**: Reinwald, Kanitz, Bamberger, Backmann, and Hoegl (2026), *Organization Science*, DOI 10.1287/orsc.2024.18538。
+
+**诚实边界**:
+
+- 主研究未直接测量上游身份威胁时，威胁只能作为理论机制/补充证据，不能声称主模型完成了整条中介识别。
+- 宏观事件时点通常不可随机化；事件前后差异可能包含同期冲击，需避免完整因果处理语言。
+- 事件后斜率不显著是“未检测到衰减”，不是等效性证据；应同时报告观察窗末端的条件差异及其区间。
+- 若直接交互不复制但条件间接效应复制，理论结论应收束在近端机制与时间条件，不能宣称行为直接效应稳健复制。

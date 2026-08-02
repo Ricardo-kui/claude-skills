@@ -17,9 +17,12 @@ source_papers:
   - pfarrer2010 (AMJ, 2010): DV methodology defense preview
   - pontikes2012 (ASQ, 2012): Theory-lens-driven dual-audience preview
   - grewal2025 (JM, 2025): "Mechanism-boundary-findings-contribution fused paragraph — compact JM style"
+  - bamberger_homburg_wielgos2021 (JM, 2021): "Dual-gap mechanism/decomposition preview with complementary study roles"
+  - lee_wu_bednar_orsc_18968 (Organization Science): "Interview-grounded contingency + staggered DiD + communication corroboration"
+  - reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science, 2026): "Event activation mechanism + constructive-replication repair ladder"
 created: 2026-05-18
-updated: 2026-07-10
-source: Extracted from MVP30 narrative_analysis files + grewal2025
+updated: 2026-08-02
+source: Extracted from MVP30 narrative_analysis files + grewal2025 + bamberger_homburg_wielgos2021
 ---
 
 # Previews 索引
@@ -30,7 +33,7 @@ P5-P6 的功能：在理论框架建立之后，向读者预告"我们做了什�
 
 | 文件 | 内容 | 适用场景 |
 |------|------|---------|
-| [mechanism-preview.md](mechanism-preview.md) | 变体 A-E：理论整合型、分层机制型、挑战性预测型、双理论整合型、**机制-边界-发现-贡献四合一融合段** | 需要预告核心理论逻辑的研究；E 适用于 JM/JMR 紧凑风格 |
+| [mechanism-preview.md](mechanism-preview.md) | 变体 A-J：理论整合、分层机制、挑战性预测、双理论整合、融合段、非线性、多方法、**双缺口→机制簇→净效应分解→研究分工**、**定性扎根→条件化机制→准实验→行为—传播双结果**、**宏观事件激活→近端机制→建设性复制修复梯度** | 需要预告核心理论逻辑的研究；E/H 适用于 JM/JMR 紧凑风格，I 适用于 interview-grounded quasi-experiment，J 适用于事件激活的多研究条件过程 |
 | [findings-preview.md](findings-preview.md) | 变体 D-G：经济显著性型、反例驱动型、两层因果链型、调节效应预览型 | 需要预告实证结果的研究 |
 | [robustness-preview.md](robustness-preview.md) | 变体 H：稳健性密集预览型 + 紧凑版 | 方法复杂、检验繁多的实证论文 |
 | [extreme-case-justification.md](extreme-case-justification.md) | 变体 J：极端案例+混合方法辩护型 | 使用极端案例和多方法设计的研究 |

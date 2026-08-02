@@ -10,7 +10,7 @@
 | **矩阵 / Y形 / 嵌套架构** | 2×2 并行矩阵架构 (L1080) · 2×2 Cell-by-Cell 调节机制矩阵 (L1330) · Y-shaped 架构（Common Trunk→Dual Path→Contingency）(L1381) · 多层收窄型机制链（Macro→Meso→Micro）(L1011) · 三层嵌套理论演进 (L1217) · 双视角对比+框架整合 (L1189) |
 | **特定理论框架型** | 制度真空→政府关联→资源获取（Zhou 2017）(L32) · 双重代理问题导致资源转换低效（Zhou 2017）(L50) · Ability-Motivation 双路径框架（Eilert 2017）(L580) · Iron Triangle 三边机制论证 (L1151) · Trade-off→Shock→Dominance 逻辑链（hoffmann2024）(L764) · "双刃剑"理论框架骨架 (L851) · Dual-Theory Architecture Variant（Mayo POMS）(L526) · 双理论分别解释不同 DV 变体（kalaignanam2017）(L540) · 成本-收益计算机制链（Chung/Low/Rust 2022）(L1688) · 倒U型两步机制链：awareness+capacity→mutual dependence+retaliation (L1753) |
 | **认知 / 社会 / 流畅性** | 社会比较机制（paruchuri_pollock_kumar2020）(L1476) · 认知可用性时效机制（paruchuri_pollock_kumar2020）(L1500) · 认知适配/契合→加工流畅性→正向评价 (L1804) |
-| **排除 / 整合 / Pivot** | 替代机制排除骨架 (L636) · 多理论整合骨架 (L688) · Rhetorical-Question 理论 Pivot (L1425) · 联合必要性门控逻辑 (L1450) · Focus Group / 定性证据嵌入机制推演（habel2016）(L210) |
+| **排除 / 整合 / Pivot** | 替代机制排除骨架 (L636) · 多理论整合骨架 (L688) · Rhetorical-Question 理论 Pivot (L1425) · 联合必要性门控逻辑 (L1450) · Focus Group / 定性证据嵌入机制推演（habel2016）(L210，含 Lee–Wu–Bednar 多角色访谈三角化子变体) |
 
 ---
 
@@ -255,6 +255,36 @@ circumstances the negative effect... might prevail.
 - 引述后无理论回归 → 必须用 "How do these perceptions translate into [DV]?" 等句式回到理论推演
 - 只有正路径有引述、负路径无引述 → 对称性要求双路径都有 empirical grounding
 - 用引述替代理论论证 → 引述是支撑，不是替代；每条路径仍需独立的理论论证
+
+### 子变体：多角色访谈三角化制度功能与战略解释（Lee–Wu–Bednar 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**适用**: 理论需要同时建立“制度实际承担什么功能”和“受影响组织如何解释并回应功能变化”。使用掌握不同知识的两类访谈对象，而不是把所有引述视为可互换。
+
+**角色分工骨架**:
+```
+[Institutional actors] described how [institution] performs [function A] and [function B]
+in practice, establishing the supply side of the informational/governance mechanism.
+[Organizational actors] explained how they interpret the loss of those functions and
+which alternative channels they can mobilize, establishing the strategic-response side.
+Taken together, these accounts refine the assumption that [shock] activates two
+countervailing paths and identify [substitute intermediary] as the condition determining
+which path is more likely to dominate.
+```
+
+**语料锚定**:
+- Lee, Wu & Bednar, *Organization Science*, DOI 10.1287/orsc.2024.18968 — 22 位地方记者用于界定监督/可见性及地方逻辑，20 位企业高管用于界定企业解释与替代渠道；访谈贯穿双功能、衰退后果与边界条件推导。
+
+**关键特征**:
+- **知识位置匹配**：制度提供者回答“功能如何运作”，策略行为者回答“损失如何被解释与应对”。
+- **引述后立即理论回收**：每组证据都返回功能、机制或边界条件，不把 Theory 写成 findings montage。
+- **缺失证据也要明说**：若访谈没有直接显示行为结果发生，只能说它支持前提或提高机制 plausibility，不能声称完成机制检验。
+
+**诚实边界**:
+- 访谈用于建立可置信前提、解释行为者意义建构和发现候选边界；因果效应仍须由识别设计承担。
+- 不得把不同角色的一致意见称为“独立验证”，除非采样、提问与分析真正独立。
+- 不要求所有路径都有直接引语；但缺少直接证据时必须把动词降级为 suggest / illustrate / lend plausibility。
 
 ## 对称分组双路径调节机制（Group-Based Dual Track for Moderation）
 

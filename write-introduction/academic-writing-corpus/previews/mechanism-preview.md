@@ -7,16 +7,19 @@ cross_paper: VERIFIED
 generativity: ADAPTABLE
 exclusivity: LOW
 source_papers:
-  - zhou2017 (ASQ, 2017): Mechanism preview with theory lens
-  - keeves2017 (ASQ, 2017): Mechanism chain preview
-  - gamache2023 (SMJ, 2023): Counter-intuitive prediction preview
-  - mannor2016 (SMJ, 2016): Dual-theory integration preview
-  - grewal2025 (JM, 2025): "Mechanism-boundary-findings-contribution fused paragraph — compact JM style"
-  - cui_yang_vertinsky_smj (SMJ): "Curvilinear cost-benefit mechanism + three moderator direction preview"
-  - paruchuri_andrus_sullivan2026 (AMJ, 2026): "Symmetric dual moderation + multimethod preview"
-updated: 2026-07-14
+  - 'zhou2017 (ASQ, 2017): Mechanism preview with theory lens'
+  - 'keeves2017 (ASQ, 2017): Mechanism chain preview'
+  - 'gamache2023 (SMJ, 2023): Counter-intuitive prediction preview'
+  - 'mannor2016 (SMJ, 2016): Dual-theory integration preview'
+  - 'grewal2025 (JM, 2025): Mechanism-boundary-findings-contribution fused paragraph—compact JM style'
+  - 'cui_yang_vertinsky_smj (SMJ): Curvilinear cost-benefit mechanism + three moderator direction preview'
+  - 'paruchuri_andrus_sullivan2026 (AMJ, 2026): Symmetric dual moderation + multimethod preview'
+  - 'bamberger_homburg_wielgos2021 (JM, 2021): Dual-gap mechanism/decomposition preview + study-role allocation'
+  - 'lee_wu_bednar_orsc_18968 (Organization Science): Interview-grounded contingency mechanism + staggered DiD + communication corroboration'
+  - 'reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science, 2026): Event activation mechanism + constructive-replication repair ladder'
+updated: 2026-08-02
 created: 2026-05-18
-source: Extracted from MVP30 narrative_analysis files + grewal2025 + paruchuri_andrus_sullivan2026
+source: Extracted from MVP30 narrative_analysis files + grewal2025 + paruchuri_andrus_sullivan2026 + bamberger_homburg_wielgos2021 + lee_wu_bednar_orsc_18968 + reinwald et al. 2026
 ---
 
 # Mechanism Preview — 机制预览句法
@@ -175,6 +178,77 @@ P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者
 **适用**: 理论预测包含对称/反向调节机制、使用多方法（archival + experiment）验证的研究。
 
 **禁忌**: 对称预测必须有理论依据；多方法各部分必须在后文有对应结果；不要仅说 "we find support" 而不预告方向。
+
+---
+
+### 变体 H：双缺口嵌套 → 机制簇 → 净效应分解 → 研究分工（Bamberger 2021 型）
+
+**验证状态**: EMERGING（单篇来源，待第二篇交叉验证）
+
+**模板**:
+> "We address two related limitations in prior research. First, existing work documents the relationship between [IV] and [downstream outcome] but leaves the intervening [stakeholder/behavioral] mechanisms underspecified. Drawing on [theory], we distinguish [mechanism 1], [mechanism 2], and [mechanism 3] as parallel routes through which [IV] is associated with [proximal outcome]. Second, prior findings on [performance outcome] remain ambiguous because direct and stakeholder-mediated paths have not been estimated jointly. We therefore separate the [short-term direct benefit] from the [indirect relational cost] and examine whether their relative importance changes over [time horizon]. Study [1] observes the internal mechanisms in [setting A], whereas Study [2] uses [external/longitudinal data] to replicate the focal pathway and extend it to [setting B / longer-term outcome]."
+
+**来源**: Bamberger, Homburg, and Wielgos (2021), *Journal of Marketing*, Introduction.
+
+**关键特征**:
+1. 两个缺口不是并列清单：第二个缺口由第一个缺口的“遗漏机制”升级为“为何既有绩效结论含混”。
+2. 机制预览先给共同理论主干，再给角色不同的并行机制，而非把三个中介写成同义词。
+3. 将总效应拆成方向可能相反的 direct / indirect paths，并预告时间视野可能改变净结论。
+4. 方法预览按“构念可观测性”分工：问卷/知情人观察内部机制，外部面板观察长期结果。
+
+**适用**: 同一自变量可能同时产生短期收益与关系性长期成本；研究用互补数据源识别内部机制与外部绩效轨迹；JM/JMR/JAMS 的紧凑 Introduction。
+
+**禁忌**:
+- 三个机制必须承担不同角色，不能只是换词复述同一路径。
+- 只有在模型实际联合估计 direct / indirect effects 时，才能承诺“净效应分解”。
+- Study [2] 必须真实修复测量、情境或时间边界中的至少一项；仅更换样本不能写成设计升级。
+- 面板 FE 只能支持关联性/预测性预览，不得使用 caused / led to。
+
+---
+
+### 变体 I：定性扎根 → 条件化机制 → 准实验检验 → 行为—传播双结果（Lee–Wu–Bednar 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "Because [shock] simultaneously weakens [function A] and [function B], its implications for [behavior] are ambiguous. Interviews with [actor group 1] and [actor group 2] refine the assumptions behind these countervailing paths and identify [substitute/intermediary] as the condition determining which path should dominate. We test this contingency using [quasi-experimental design] and complement the behavioral analysis with [communication/trace outcome] showing how actors not only adjust what they do but also how they make those actions visible."
+
+**来源**: Lee, Wu, and Bednar, *Organization Science*, DOI 10.1287/orsc.2024.18968, Introduction.
+
+**关键特征**:
+1. 定性材料承担“修正前提与发现边界条件”的理论功能，不被宣传为因果检验。
+2. 准实验检验条件化行为反应；补充结果检验行为之外的沟通适应，形成 action + communication 两层兑现。
+3. 方法按理论任务分工，而不是笼统声称 multimethod 更强。
+
+**适用**: 理论先验存在两条反向路径，需要访谈识别行为者如何解释冲击，再用档案准实验检验净效应及异质性。
+
+**禁忌**:
+- 访谈若只提供背景材料，不能写成“识别了机制”。
+- 补充沟通结果必须与核心可见性/合法性逻辑同源，不能只是多放一个 DV。
+- 错位实施 DiD 的预览不得暗示普通 TWFE 自动识别干净；现代估计与诊断要求留给 Methods。
+
+---
+
+### 变体 J：宏观事件激活 → 近端机制 → 建设性复制修复梯度（Reinwald et al. 2026 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "We argue that [macro event] heightens the salience of [otherwise suppressible difference], activating [identity/threat process]. This activation reduces [proximal social-cognitive mechanism], which in turn makes [negative/positive interaction outcome] more likely. We examine this time-varying process through a constructive-replication sequence: Study [1] establishes the event-centered pattern in repeated field observations; Study [2] manipulates [difference] and provides initial mechanism evidence around the naturally occurring event; Study [3] combines field realism, repeated postevent measurement, and alternative measures of the mechanism to test replication and persistence."
+
+**来源**: Reinwald et al. (2026), *Organization Science*, Introduction and Overview of Studies.
+
+**关键特征**:
+1. Preview 同时交付“何时起作用”（事件激活）和“为何起作用”（近端机制），不把 moderator 与 mediator 分开罗列。
+2. 三项研究按前一研究的识别缺口逐项升级：现场时间模式 → 操纵与机制初证 → 现场纵向实验、替代机制测量与持续性。
+3. 使用 constructive replication 作为研究分工语言；方法多样性服务于威胁修复，而非数量展示。
+
+**适用**: 时间变化的条件间接效应；宏观事件不可由研究者随机化，但个体差异/关系条件可以操纵；多研究承担互补识别任务。
+
+**禁忌**:
+- 自然发生的选举前后时点不是随机处理，不得把 Study 2 写成完整随机化的 2×2 实验。
+- 若直接交互效应跨研究不一致，Preview 应承诺“机制与时间模式检验”，不得承诺直接行为效应会在每项研究复制。
+- 替代机制测量只有在理论构念覆盖更完整时才算修复；简单换量表不构成设计升级。
 
 ---
 

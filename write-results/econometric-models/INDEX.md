@@ -4,7 +4,7 @@ description: Results 填空骨架变体库，按结果类型组织。由 distill
 organization: by_result_type
 result_types_count: 19
 created: 2026-05-18
-updated: 2026-08-01
+updated: 2026-08-02
 ---
 
 # Results Econometric Models Corpus
@@ -22,10 +22,10 @@ updated: 2026-08-01
 | [OLS-FE](OLS-FE.md) | OLS-FE | 42 | 2026-07-30 |
 | [Logit-Probit-Ordered-Probit](Logit-Probit-Ordered-Probit.md) | Logit-Probit-Ordered-Probit | 8 | 2026-07-07 |
 | [生存分析](生存分析.md) | 生存分析 | 19 | 2026-08-01 |
-| [DiD](DiD.md) | DiD | 0 | 2026-05-18 |
+| [DiD](DiD.md) | DiD | 2 | 2026-08-02 |
 | [计数模型](计数模型.md) | 计数模型 | 11 | 2026-07-07 |
 | [实验](实验.md) | 实验 | 3 | 2026-07-07 |
-| [多研究](多研究.md) | 多研究 | 6 | 2026-07-30 |
+| [多研究](多研究.md) | 多研究 | 8 | 2026-08-02 |
 | [定性过程研究](定性过程研究.md) | 定性过程研究 | 4 | 2026-07-07 |
 | [IV-2SLS](IV-2SLS.md) | IV-2SLS | 6 | 2026-07-25 |
 | [匹配DiD](匹配DiD.md) | 匹配DiD | 0 | 2026-05-18 |
@@ -35,7 +35,7 @@ updated: 2026-08-01
 | [跨受众构念对比](跨受众构念对比.md) | 跨受众构念对比 | 1 | 2026-07-30 |
 | [三向交互](三向交互.md) | 三向交互 | 3 | 2026-07-30 |
 | [构造暴露分解](构造暴露分解.md) | 构造暴露分解 | 0 | 2026-05-18 |
-| [SEM-moderated-mediation](SEM-moderated-mediation.md) | SEM/调节中介 | 5 | 2026-07-22 |
+| [SEM-moderated-mediation](SEM-moderated-mediation.md) | SEM/调节中介 | 6 | 2026-08-02 |
 | [事件研究法](事件研究法.md) | 事件研究法 | 5 | 2026-07-23 |
 | [VARX-PVAR](VARX-PVAR.md) | VARX-PVAR | 7 | 2026-07-15 |
 
@@ -47,6 +47,8 @@ updated: 2026-08-01
 4. 变体达到 3+ 时，考虑提升为 skill 主骨架
 
 ## 语料库质量状态
+
+> ✅ **2026-08-02 更新（Lee–Wu–Bednar, Organization Science）**: 首次填充 DiD 结果类型：新增“交互项→经济幅度→双端条件效应→逐端假设核对”和“理论前提探测式补充证据链”。同时加入两条诚实边界：显著交互项不自动等于符号反转假设完整成立；TWFE+Bacon 只作旧式诊断，不替代异质性稳健错位 DiD 与平行趋势敏感性分析。
 
 > ✅ **2026-05-20 更新**: 五篇产品召回论文 Results 蒸馏完成，首批 16 个变体写入。
 >

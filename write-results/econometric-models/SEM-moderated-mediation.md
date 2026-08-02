@@ -9,9 +9,10 @@ source_papers:
   - "bamberger_homburg_wielgos_2021_wage_inequality_jm (Journal of Marketing): inconsistent mediation → suppressor variable, opposing direct/indirect effects"
   - "vadakkepatt_arora_martin_paharia_2022_lobbying_jm (Journal of Marketing): simultaneous-equation SEM reporting with IV diagnostics + Granger causality"
   - "ilicic_brennan_2026_jm (Journal of Marketing): ten-study multimethod investigation of political ideology and consumer responses to addictive products; sense of agency -> perceived product danger mechanism; personally directed threat appeal moderator"
-variants_count: 5
+  - "reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc (Organization Science): event-contingent indirect effects remain interpretable despite inconsistent direct interaction, with pre/post bootstrap CIs"
+variants_count: 6
 created: 2026-06-03
-updated: 2026-07-22
+updated: 2026-08-02
 source: Distilled from Habel et al. (2016, JM) by distill-methods-exemplar
 ---
 
@@ -313,3 +314,33 @@ variables and do not indicate evidence of alternative directional associations.
 ### 语料锚定
 
 - ilicic_brennan_2026_jm (Journal of Marketing) — Study 4：political ideology -> sense of agency (M1) -> perceived product danger (M2) -> gambling severity。正向间接效应 CI [.01, .02]；反转顺序后 CI [-.01, .01] 含零，确认 agency->danger 排序。配 measurement-of-process 设计（见 `../write-methods/econometric-models/实验.md` 变体6）。
+
+## 事件条件间接效应：直接交互不一致时的分层报告（Reinwald et al. 2026 型）
+
+### 验证状态
+
+EMERGING（单篇来源；仅作 `section_variant`）。适用于回归/path model/多层模型中的 moderated mediation，不要求估计器一定是 SEM。
+
+### 报告骨架
+
+```text
+The [X × event] interaction on [mediator] was [coefficient and CI/p], indicating that [X] reduced [mediator] after the event but not before it. [Mediator] was associated with [outcome] in the predicted direction. The bootstrapped conditional indirect effect of [X] on [outcome] through [mediator] was [effect, 95% CI] after the event and [effect, 95% CI] before the event. Thus, the evidence supports an event-contingent indirect pathway. The direct [X × event] effect on [outcome] was [status]; accordingly, we do not claim that the direct behavioral interaction replicated across studies.
+```
+
+### 强制顺序
+
+1. 报告 `X × event → M`，再报告 `M → Y`。
+2. 分别给出事件前与事件后的 conditional indirect effect 及 bootstrap CI；不能只报差值 index。
+3. 单独报告 direct interaction 与 total effect 的状态。
+4. 若使用两个机制维度/两个行为 DV，逐一列出，不挑选显著组合。
+
+### 语料锚定
+
+- Study 2：事件后通过 social mindfulness 的间接效应对 lying 为 `.28 [.10, .50]`、对 forward-looking behavior 为 `-.15 [-.27, -.05]`；事件前区间均跨零。
+- Study 3：事件后 perspective-taking 路径分别为 `.09 [.03, .16]` 与 `-.05 [-.10, -.02]`，empathic-concern 路径分别为 `.09 [.03, .16]` 与 `-.08 [-.14, -.03]`；四个事件前区间均跨零。
+
+### 诚实边界
+
+- 显著间接效应在统计上不要求显著 total/direct effect；但它只支持条件性机制路径，不能把不显著 direct interaction 改写为“行为效应已复制”。
+- `M → Y` 若与结果同时测量，因果方向仍依赖理论与设计，bootstrap CI 不会自动解决中介内生性。
+- 若上游 threat 只在理论或补充研究中测量，主文的经验中介链应从实际观测到的 proximal mediator 开始。

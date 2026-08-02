@@ -6,9 +6,9 @@
 meta:
   schema_version: "1.0.0"
   registry_type: theory-fragment-registry
-  last_updated: "2026-07-28"
-  total_papers_indexed: 50
-  batches_processed: 7
+  last_updated: "2026-08-02"
+  total_papers_indexed: 53
+  batches_processed: 10
   auxiliary_sources_note: "Entries with source_tier: auxiliary are writing-craft books, not empirical papers. They register provenance and stay EMERGING until the pattern is cross-validated in empirical paper distills; they never count toward VERIFIED/ROBUST paper_count thresholds on their own."
   note: "Reverse-engineered from existing corpus anchors. Batch 2026-07-09: distilled 4 recall papers (Darby 2023 MSOM, Mayo 2022 POM, Ball 2018 JOM, Darby 2026 JOM) into subprotocols and registry. Batch 2026-07-10: expanded Cui, Yang & Vertinsky (SMJ) with inverted-U mechanism, bilateral argumentation, flatten/steepen language, and local closure templates. Batch 2026-07-22: distilled Li, Bapuji, Talluri, Singh & Narayanan (2025 JSCM, Vertical Spillover of Product Recalls) — added dual_mechanism_convergent_moderation pattern to bilateral_argumentation_templates.md (moderator×mechanism matrix) and registered H1 dual-mechanism convergence under existing dual_mechanism_same_direction. Batch 2026-07-22b: distilled Cutolo & Ferriani (2024 JOM, narratives & atypicality) — added minimal_pair_contrast_vignette pattern to argumentation_patterns.md (Leah controlled-contrast showing device); registered parallel_buffering_moderators_single_mechanism; cutolo_ferriani also a 2nd source for write-introduction theory-lens/02-dual-theory-layered (processing fluency + Bloom & Lahey taxonomy). Batch 2026-07-22c: distilled Falchetti, Cattani & Ferriani (2022 SMJ, Start with Why) — added congruency_fit_fluency_mechanism to sentences/mechanism_chain.md (genuine gap; spans Falchetti + Cutolo); CORRECTED misclassification of falchetti_2022_smj (was construct_differentiation tfr_017, has no such content) → reclassified to congruency mechanism; construct_differentiation source_count 5→4. Falchetti intro hook (23-popular-debate) and Methods (多研究 变体1/2, 实验 变体1) already distilled in prior sessions. Batch 2026-07-28: backfill + wiring batch — registered two auxiliary sources whose fragments entered corpus in the 2026-07-27/28 waves but were never registered: Booth/Williams/Colomb (The Craft of Research, premise soundness gate + warrant tests + acknowledgment-response matrix + voice firewall → reasoning_soundness_protocol.md, acknowledgment_response.md) and Greene & Lidinsky 2017 (Rogerian four-step → acknowledgment_response.md §5; fallacy probes → reasoning_soundness_protocol.md §8). Same batch wired the registry into consumption: corpus/_index.md selection-stage pointer, write-theory/SKILL.md resource-loading clause, distill-theory-exemplar Phase 4 registry-writeback protocol. Registry previously orphaned (no .md referenced it) since creation."
 
@@ -1450,6 +1450,51 @@ source_papers:
         makadok_dimension: "Mechanism"
         status: "EMERGING"
         note: "§8 (G&L Ch09): probe table with 处理位置 pointers to avoid parallel construction; theory-review Step 2.6 consumes; either-or pseudo-binary also wired into research-gap-diagnosis Part IV."
+  bamberger_homburg_wielgos_2021_jm:
+    display_name: "Bamberger, Homburg & Wielgos (2021, JM)"
+    journal: "Journal of Marketing"
+    year: 2021
+    subfield: "marketing"
+    theory_build_type: "Mechanism / Mode"
+    fragments:
+      - fragment_id: tfr_133
+        type: parallel_mediators_effect_decomposition_horizon
+        title: "共同主干→角色分离并行中介→直接/间接分解→时间视野检验"
+        home_files:
+          - "subprotocols/hypothesis_organization_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Wage inequality changes tournament/collaboration incentives; effort, opportunism, and customer-oriented culture form role-distinct parallel pathways to customer satisfaction; direct and mediated performance paths are separated across short/long horizons."
+  lee_wu_bednar_orsc_18968:
+    display_name: "Lee, Wu & Bednar (Organization Science; DOI 10.1287/orsc.2024.18968)"
+    journal: "Organization Science"
+    year: null
+    subfield: "strategy"
+    theory_build_type: "Mechanism / Boundary"
+    fragments:
+      - fragment_id: tfr_134
+        type: multi_actor_interview_grounding_dual_path
+        title: "多角色访谈三角化：制度功能供给侧 × 企业战略解释侧"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism / Boundary"
+        status: "EMERGING"
+        note: "Journalists establish oversight/visibility functions and local logic; executives establish interpretation and substitute-channel use. Interviews refine premises and boundaries but do not causally prove CSR responses."
+  reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc:
+    display_name: "Reinwald, Kanitz, Bamberger, Backmann & Hoegl (2026, Organization Science)"
+    journal: "Organization Science"
+    year: 2026
+    subfield: "ob_hr"
+    theory_build_type: "Boundary / Mechanism"
+    fragments:
+      - fragment_id: tfr_135
+        type: macro_event_activation_persistence_moderation
+        title: "可压抑身份→宏观事件激活→威胁加工→近端机制→互动结果→有限窗持续性"
+        home_files:
+          - "variants/E_moderation.md"
+        makadok_dimension: "Mechanism / Boundary"
+        status: "EMERGING"
+        note: "Single-paper section variant. Main studies consistently support the event-contingent mediator and conditional indirect effect, but not the direct interaction; identity threat is theorized upstream and not directly measured in the three main studies."
 
 # Cross-paper pattern aggregation (derived above)
 patterns:
@@ -1898,6 +1943,30 @@ patterns:
     source_papers:
       - "greene_lidinsky_2017"
     home_file: "subprotocols/reasoning_soundness_protocol.md"
+  parallel_mediators_effect_decomposition_horizon:
+    description: "Common theoretical trunk -> role-separated parallel mediators -> direct/indirect/total decomposition -> short/long horizon test"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "bamberger_homburg_wielgos_2021_jm"
+    home_file: "subprotocols/hypothesis_organization_patterns.md"
+    note: "Single-source pattern; do not promote to a default until independently replicated."
+  multi_actor_interview_grounding_dual_path:
+    description: "Different interview groups are assigned distinct epistemic jobs: institutional actors establish how functions operate; organizational actors establish how function loss is interpreted and managed."
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "lee_wu_bednar_orsc_18968"
+    home_file: "sentences/mechanism_chain.md"
+    note: "Section variant only. Interview evidence supports premise plausibility and boundary discovery; causal outcome claims require separate identification."
+  macro_event_activation_persistence_moderation:
+    description: "A normally suppressible identity or difference becomes behaviorally consequential when a macro event heightens salience; threat processing reduces a proximal social-cognitive mechanism, and selective processing may sustain activation within a bounded postevent window."
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc"
+    home_file: "variants/E_moderation.md"
+    note: "Section variant only. Treat event timing as a boundary condition, not automatically as randomized treatment; persistence means no detected decay within the observed window."
 
 # Status summary by Makadok dimension
 summary_by_dimension:
@@ -1906,12 +1975,12 @@ summary_by_dimension:
     source_papers: 10
     verified_patterns: 1
   Mechanism:
-    total_fragments: 55
-    source_papers: 27
+    total_fragments: 57
+    source_papers: 29
     verified_patterns: 5
   Boundary:
-    total_fragments: 32
-    source_papers: 22
+    total_fragments: 33
+    source_papers: 23
     verified_patterns: 3
   Level:
     total_fragments: 0

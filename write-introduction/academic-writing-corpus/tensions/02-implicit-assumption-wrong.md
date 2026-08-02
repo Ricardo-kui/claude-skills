@@ -7,14 +7,15 @@ cross_paper: ROBUST
 generativity: GENERATIVE
 exclusivity: HIGH
 source_papers:
-  - paruchuri2020 (SMJ, 2020): "A major, but generally untested assumption... is that..."
-  - gamache2020 (SMJ, 2020): "While important... considers... broadly" (conflation assumption)
-  - han2020 (AMJ, 2020): "Most research on [topic] has treated [construct] as decontextualized"
-  - zhao_ding2022 (OS, 2023): "challenges an implicit premise that lower entry barriers mechanically translate into greater product variety" (mechanical-causal-chain assumption; variant D)
-  - weng_yang (JMS): "self-labeled 'theoretical inadequacy' with embedded theory lens — 'While insightful, prior studies have fallen short... This is an important theoretical inadequacy since...'"
+  - 'paruchuri2020 (SMJ, 2020): "A major, but generally untested assumption... is that..."'
+  - 'gamache2020 (SMJ, 2020): "While important... considers... broadly" (conflation assumption)'
+  - 'han2020 (AMJ, 2020): "Most research on [topic] has treated [construct] as decontextualized"'
+  - 'zhao_ding2022 (OS, 2023): "challenges an implicit premise that lower entry barriers mechanically translate into greater product variety" (mechanical-causal-chain assumption; variant D)'
+  - "weng_yang (JMS): self-labeled 'theoretical inadequacy' with embedded theory lens — 'While insightful, prior studies have fallen short... This is an important theoretical inadequacy since...'"
+  - 'reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science, 2026): "mixed findings expose the implicit assumption that political-dissimilarity effects remain stable rather than being activated by macro events" (temporal-stability assumption; variant F)'
 created: 2026-05-18
-updated: 2026-07-07
-source: Extracted from MVP30 narrative_analysis files + weng_yang distill
+updated: 2026-08-02
+source: Extracted from MVP30 narrative_analysis files + weng_yang distill + reinwald et al. 2026 distill
 ---
 
 # 02-implicit-assumption-wrong — 隐性假设错误 Tension
@@ -156,6 +157,29 @@ Inadequacy 问题化的核心 Tension：不是"文献遗漏了东西"，而是"�
 **适用**: 适用于 Inadequacy × Phenomenon 组合；当被忽略的因素是一个"人/行动者"特征（而非结构/制度因素），且可以用一个成熟理论来论证为什么这个因素重要；期刊接受 "theoretical inadequacy" 标签（JMS, JM, SMJ, AMJ）
 
 **禁忌**: "避免将 'theoretical inadequacy' 用于仅仅是遗漏了变量（那是 Incompleteness）；必须有真正的理论视角缺失；Theory Lens 嵌入 Tension 时不应过度展开（保留详细推演给 Theory section）；positive claim 收束时不要过度承诺（用 'we suggest' 而非 'we prove'）"
+
+---
+
+### 变体 F：混合发现 → 暴露稳定效应假设 → 宏观事件激活型（Reinwald et al. 2026 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "Prior research offers inconsistent evidence about whether [difference/relationship X] affects [workplace outcome Y]. These findings are difficult to reconcile if the effect is assumed to remain stable over time. We suggest that this stability assumption is incomplete: [macro event Z] can bring an otherwise suppressible identity or distinction to the foreground, activating [threat/attention mechanism] and thereby changing when [X] shapes [Y]."
+
+**来源**: Reinwald, Kanitz, Bamberger, Backmann, and Hoegl (2026), *Organization Science*, Introduction.
+
+**关键特征**:
+1. 先把显著与不显著结果组织成真实的经验张力，而不是笼统声称“文献很少”。
+2. 被挑战的是“效应跨时间稳定”的共同建模假设；替代解释是事件驱动的构念激活，而非简单增加一个控制变量。
+3. 宏观事件必须与微观机制相连：事件提高身份显著性/威胁加工，近端机制再影响互动结果。
+
+**适用**: 同一关系在事件期与常态期出现混合证据；核心构念平时可被压抑、事件中被激活；贡献属于 Inadequacy × Boundary/Mechanism。
+
+**禁忌**:
+- 不得把任何结果异质性都归因于“时间变化”；必须指出理论上可识别的激活事件与机制。
+- 只有一个事件后截面不能支持“随时间变化”的完整叙事；至少需要事件前后比较或重复测量。
+- “事件后斜率不显著”只能写为观察窗内未检测到衰减，不能写成永久效应。
 
 ---
 

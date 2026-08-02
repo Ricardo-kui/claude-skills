@@ -5,10 +5,10 @@
 meta:
   schema_version: 1.0.0
   registry_type: estimator-slot-skeleton
-  last_updated: '2026-07-22'
-  last_batch_id: batch_16_kim_lee_2026_smj
-  batches_processed: 17
-  total_papers_indexed: 18
+  last_updated: '2026-08-02'
+  last_batch_id: batch_19_reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc
+  batches_processed: 20
+  total_papers_indexed: 21
   subfields:
   - strategy
   - ob_hr
@@ -1745,13 +1745,14 @@ estimators:
           skeleton: Before turning to the main results, Figure [x] shows the event-study estimates, which provide a test of
             the parallel trends assumption. The pre-treatment coefficients are small and statistically indistinguishable from
             zero, supporting the validity of our DiD design.
-          paper_count: 5
+          paper_count: 6
           status: ROBUST
           subfield_distribution:
-            strategy: 2
+            strategy: 3
             om: 2
             finance: 1
-          sources: []
+          sources:
+          - Lee_Wu_Bednar_ORSC_18968
           transferability: high
           paradigm_exclusivity: DiD 专用
           rhythm_tags:
@@ -1766,13 +1767,14 @@ estimators:
           skeleton: Model [y] provides the baseline DiD estimate. The coefficient on [treatment_dummy] is [positive/negative]
             and statistically significant (β = [value], p < [threshold], 95% CI [[lower], [upper]]), indicating that [treatment]
             [increases/decreases] [outcome] by approximately [value] [units/percent]. Thus, Hypothesis [x] is supported.
-          paper_count: 5
+          paper_count: 6
           status: ROBUST
           subfield_distribution:
-            strategy: 2
+            strategy: 3
             om: 2
             finance: 1
-          sources: []
+          sources:
+          - Lee_Wu_Bednar_ORSC_18968
           transferability: high
           paradigm_exclusivity: DiD 专用
           rhythm_tags:
@@ -1781,20 +1783,38 @@ estimators:
           - magnitude
           corpus_path: econometric-models/DiD.md
       R4:
-        skeleton_variants: []
+        skeleton_variants:
+        - id: r4_did_interaction_two_pole_hypothesis_audit
+          skeleton: "The [treatment] × [moderator] interaction is [direction] and significant. We translate its magnitude and plot the treatment effect at both theoretically relevant moderator values. The [high] condition matches the predicted [sign], whereas the [low] condition is [observed sign] rather than [predicted sign]. Thus, the contingency receives support, but the sign-switch hypothesis is only [partially/not] supported as stated."
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Lee_Wu_Bednar_ORSC_18968
+          transferability: high
+          paradigm_exclusivity: "DiD with moderation / heterogeneous treatment effects"
+          rhythm_tags:
+          - interaction_coefficient
+          - substantive_magnitude
+          - two_pole_plot
+          - partial_support
+          notes: "A significant interaction does not establish both predicted simple-effect signs."
+          corpus_path: econometric-models/DiD.md
       R7:
         skeleton_variants:
         - id: r7_did_placebo_permutation
           skeleton: To further assess the robustness of our DiD estimates, we conduct [placebo tests / permutation tests /
             randomization inference]. The results, reported in Table [x], show that [description]. These findings reduce concerns
             that [specific threat].
-          paper_count: 4
+          paper_count: 5
           status: VERIFIED
           subfield_distribution:
-            strategy: 2
+            strategy: 3
             om: 1
             finance: 1
-          sources: []
+          sources:
+          - Lee_Wu_Bednar_ORSC_18968
           transferability: high
           paradigm_exclusivity: DiD/自然实验 专用
           rhythm_tags:
@@ -1802,9 +1822,66 @@ estimators:
           - permutation
           - threat_reduction
           corpus_path: econometric-models/DiD.md
-    cross_slot_patterns: []
-    anti_patterns: []
-    honesty_boundaries: []
+      R8:
+        skeleton_variants:
+        - id: r8_did_theoretical_premise_probe_chain
+          skeleton: "We probe observable implications of the proposed mechanism by examining [communication outcome], [communication capacity as a condition], and whether [core behavior] is associated with attention from each proposed intermediary. Convergent patterns support selected premises; domain-specific nulls narrow the mechanism. These analyses are corroborative and do not identify the causal mechanism."
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Lee_Wu_Bednar_ORSC_18968
+          transferability: high
+          paradigm_exclusivity: "Quasi-experimental studies with observable mechanism implications"
+          rhythm_tags:
+          - behavior_communication_pair
+          - premise_probe
+          - domain_specific_null
+          - bounded_mechanism_claim
+          notes: "Organize corroborative analyses by theoretical premise, not by a list of extra outcomes."
+          corpus_path: econometric-models/DiD.md
+    cross_slot_patterns:
+    - id: csp_did_conditional_effect_full_audit
+      pattern: "R4 significant interaction → R5 magnitude → conditional-effect plot at both poles → R6 support judgment against every directional clause"
+      from_slot: R4
+      to_slot: R6
+      paper_count: 1
+      status: EMERGING
+      note: "Prevents interaction significance from masking failure of one predicted pole."
+    anti_patterns:
+    - id: ap_did_significant_interaction_full_support
+      pattern: "Calling a sign-switch hypothesis fully supported solely because the interaction coefficient is significant"
+      severity: high
+      affected_slots:
+      - R4
+      - R6
+      source_count: 1
+    - id: ap_did_bacon_as_bias_correction
+      pattern: "Presenting Goodman-Bacon decomposition as if it corrected heterogeneous cohort/time effects in TWFE"
+      severity: high
+      affected_slots:
+      - R7
+      source_count: 1
+    honesty_boundaries:
+    - id: hb_did_two_pole_prediction_audit
+      boundary: "If a hypothesis predicts opposite signs at high and low moderator values, each sign must be checked separately; a significant interaction alone supports only differential effects."
+      allowed_language: "partial support / supports the contingency but not the predicted low-condition sign"
+      affected_estimators:
+      - DiD
+      violation_count: 0
+    - id: hb_did_legacy_twfe_diagnostic_only
+      boundary: "Bacon decomposition diagnoses comparison weights but does not repair TWFE bias under heterogeneous treatment effects; use a heterogeneity-robust staggered-DiD estimator and sensitivity analysis."
+      allowed_language: "diagnostic evidence / decomposition of conventional TWFE"
+      affected_estimators:
+      - DiD
+      violation_count: 0
+    - id: hb_did_corroborative_not_mechanism_identification
+      boundary: "Associations between behavior, communication, and intermediary attention may corroborate premises but do not identify a causal mechanism without separate mediation identification."
+      allowed_language: "consistent with / corroborates selected premises / suggests"
+      affected_estimators:
+      - DiD
+      violation_count: 0
   计数模型:
     display_name: 计数模型 (Count Models / Negative Binomial)
     forced_slots:
@@ -3279,6 +3356,24 @@ estimators:
           - bootstrap_ci
           notes: Hayes PROCESS + bootstrap CI 是实验中介报告标准
           corpus_path: econometric-models/实验.md
+        - id: r3_event_conditional_indirect_direct_inconsistent
+          skeleton: >
+            Report [X × event → mediator], [mediator → outcome], and the bootstrapped conditional indirect effect separately before and after the event. Then report the direct interaction independently; if it is null or inconsistent across studies, conclude that the event-contingent mechanism replicated without claiming replication of the direct behavioral effect.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            ob_hr: 1
+          sources:
+          - Reinwald_Kanitz_Bamberger_Backmann_Hoegl_2026_ORSC
+          transferability: high
+          paradigm_exclusivity: 事件条件调节中介；实验/多层路径模型
+          rhythm_tags:
+          - mediator_interaction
+          - conditional_indirect_ci
+          - direct_effect_separation
+          - bounded_claim
+          notes: "Indirect effects may be estimable without a significant direct interaction, but they do not rescue the direct-effect hypothesis."
+          corpus_path: econometric-models/SEM-moderated-mediation.md
       R7:
         skeleton_variants: []
       R2:
@@ -3297,12 +3392,28 @@ estimators:
     - R6
     - R7
     - R8
+    - R9
     high_risk_missing:
       R8: 逐研究重复但缺少跨研究一致性对比
       R9: 未标记研究间设计升级逻辑
     slots:
       R1:
         skeleton_variants: []
+      R2:
+        skeleton_variants:
+        - id: r2_multistudy_replication_extension_repair_map
+          skeleton: >
+            Study [N] replicates the focal relationship from Study [N-1] and extends it by replacing [measurement/source],
+            moving from [context A] to [context B], and expanding [short-term scope] to [long-term scope].
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Bamberger_Homburg_Wielgos_2021_JM
+          transferability: high
+          paradigm_exclusivity: 多研究论文专用
+          corpus_path: econometric-models/多研究.md
       R3:
         skeleton_variants: []
       R7:
@@ -3333,9 +3444,67 @@ estimators:
           - bounded_claim
           notes: 多研究 Results 必须显式说明什么变了、什么一致、边界在哪里
           corpus_path: econometric-models/多研究.md
-    cross_slot_patterns: []
+      R9:
+        skeleton_variants:
+        - id: r9_multistudy_opposing_paths_horizon_adjudication
+          skeleton: >
+            Study [1] separates opposing direct and stakeholder-mediated components; Study [2] tests which component persists across
+            [short/long] outcome horizons, reports the total association separately, and preserves unresolved null/causal questions.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Bamberger_Homburg_Wielgos_2021_JM
+          transferability: medium
+          paradigm_exclusivity: 需要方向相反路径且含时间窗口扩展
+          rhythm_tags:
+          - decomposition
+          - horizon_comparison
+          - bounded_claim
+          corpus_path: econometric-models/多研究.md
+        - id: r9_multistudy_claim_level_evidence_ledger
+          skeleton: >
+            Summarize evidence by theoretical claim—direct interaction, mediator interaction, conditional indirect effect, duration, and subgroup asymmetry—rather than counting studies as supported or unsupported. Preserve nulls and attach a separate bounded conclusion to each claim.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            ob_hr: 1
+          sources:
+          - Reinwald_Kanitz_Bamberger_Backmann_Hoegl_2026_ORSC
+          transferability: high
+          paradigm_exclusivity: 多研究条件过程或证据层级不一致
+          rhythm_tags:
+          - claim_ledger
+          - mixed_direct_effect
+          - replicated_mechanism
+          - duration_boundary
+          corpus_path: econometric-models/多研究.md
+    cross_slot_patterns:
+    - id: opposing_paths_horizon_adjudication
+      status: EMERGING
+      source_count: 1
+      source_papers:
+      - Bamberger_Homburg_Wielgos_2021_JM
+      slots:
+      - R3
+      - R6
+      - R9
+      note: "Direct/indirect/total decomposition in Study 1 followed by short/long persistence comparison in Study 2."
+    - id: claim_level_evidence_ledger
+      status: EMERGING
+      source_count: 1
+      source_papers:
+      - Reinwald_Kanitz_Bamberger_Backmann_Hoegl_2026_ORSC
+      slots:
+      - R3
+      - R6
+      - R9
+      note: "Separates inconsistent direct interactions from replicated mediator interactions and conditional indirect effects; duration and subgroup findings receive independent verdicts."
     anti_patterns: []
-    honesty_boundaries: []
+    honesty_boundaries:
+    - "Do not call a direct behavioral interaction replicated when only the mediator interaction and conditional indirect effect recur."
+    - "A nonsignificant postevent slope means no attenuation was detected in the observed window, not that the effect is permanent."
   匹配DiD:
     display_name: 匹配 DiD (PSM + DiD / CEM + DiD)
     forced_slots:
@@ -3708,3 +3877,17 @@ batch_history:
   source_subfield: marketing
   slot_updates_count: 6
   novel_patterns_count: 6
+- batch_id: batch_18_lee_wu_bednar_orsc_18968
+  timestamp: '2026-08-02'
+  estimator_family: DiD
+  source_paper: Lee_Wu_Bednar_ORSC_18968
+  source_subfield: strategy
+  slot_updates_count: 5
+  novel_patterns_count: 2
+- batch_id: batch_19_reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc
+  timestamp: '2026-08-02'
+  estimator_family: 实验 / 多研究 / Moderated Mediation
+  source_paper: Reinwald_Kanitz_Bamberger_Backmann_Hoegl_2026_ORSC
+  source_subfield: ob_hr
+  slot_updates_count: 2
+  novel_patterns_count: 2

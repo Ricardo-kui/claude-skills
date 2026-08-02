@@ -89,6 +89,56 @@ H3: ...
 
 ---
 
+<!--
+pattern_id: parallel_mediators_effect_decomposition_horizon
+build_type: 机制推演型 + Mode
+source_papers: ["Bamberger_Homburg_Wielgos_2021_JM"]
+confidence: low
+status: needs_validation
+-->
+
+## Pattern: Common Trunk → Role-Separated Parallel Mediators → Effect Decomposition → Horizon Test
+
+**验证状态**: EMERGING（单篇来源，待第二篇交叉验证）
+
+**适用场景**: 同一结构性自变量通过多个可区分的组织行为/文化路径影响近端利益相关者结果，并且还可能存在方向相反的直接绩效路径；研究进一步比较短期与长期绩效。
+
+**结构**:
+```
+[Theoretical trunk]
+X changes [competitive/collaborative incentive structure].
+
+[Parallel mediator branches]
+X -> M1 [discretionary effort channel] -> Y
+X -> M2 [opportunism channel] -> Y
+X -> M3 [shared-culture channel] -> Y
+
+[Effect decomposition]
+X -> P (direct, possibly positive)
+X -> M1/M2/M3 -> Y -> P (indirect, possibly negative)
+
+[Horizon test]
+P_short: direct and indirect paths may coexist
+P_long: test whether the direct path persists while the relational path accumulates
+```
+
+**假设组织骨架**:
+> "Drawing on [theory], we first argue that [X] changes [common incentive/collaboration condition]. We then derive three role-distinct pathways: [M1] captures what actors voluntarily invest, [M2] captures what they appropriate or withhold, and [M3] captures the shared norms that coordinate customer-facing behavior. Each pathway culminates in [proximal stakeholder outcome]. We next separate the direct association between [X] and [performance] from the indirect association transmitted through [stakeholder outcome]. Finally, we test whether these components differ between [short] and [long] horizons."
+
+**为什么有效**:
+- 共同主干只解释一次，减少三个中介段落重复。
+- 用“投入—侵占—共享规范”等角色标签建立机制间排他性。
+- direct / indirect / total effect 的区分把看似冲突的绩效文献转化为可检验的构成问题。
+- 时间视野不是附加稳健性，而是裁决哪条路径更持久的理论测试。
+
+**诚实边界**:
+- 观察性 SEM/FE 只能支持 associated with / predicts；路径图本身不建立因果。
+- “长期无直接效应”若仅依据不显著系数，只能写为未发现持续直接关联；若要支持真正的零效应假设，需等效性检验、区间界限或模型比较。
+- 三个中介若概念或测量高度重叠，应合并或建立高阶构念，不能为了形成“机制簇”而硬拆。
+- 必须报告 direct、各 specific indirect、aggregated indirect 与 total effect；只报告其中有利于故事的部分会制造选择性叙事。
+
+---
+
 <!-- 
 pattern_id: baseline_dual_path_then_contingency_branches
 build_type: 假设树型

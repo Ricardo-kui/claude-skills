@@ -17,11 +17,11 @@
 
 | 文件 | 核心特征 |
 |------|---------|
-| `02-implicit-assumption-wrong.md` | 隐性假设错误（含变体D：挑战机械因果链前提型 zhao_ding2022 OS） |
+| `02-implicit-assumption-wrong.md` | 隐性假设错误（含变体D：挑战机械因果链前提；变体F：混合发现→稳定效应假设→宏观事件激活，EMERGING） |
 | `03-structural-blindspot.md` | 结构性盲点 |
 | `05-construct-confusion.md` | 构念混淆 |
 | `11-overlooked-alternative.md` | 被忽视的替代解释 |
-| `14-debate-unresolved.md` | 文献存在对立发现但缺乏整合框架（On the one hand... On the other hand...） |
+| `14-debate-unresolved.md` | 文献存在对立发现但缺乏整合框架；含“单一制度双重功能同时衰退→对立激励→替代者条件化”变体 E（EMERGING） |
 | `15-practical-puzzle.md` | 实践传统智慧 vs 新发现 downside → 实践谜题（practical puzzle） |
 | `20-opposite-predictions-positive-trait.md` | 同一正向特质的两个文献流做出相反预测（EMERGING: chung_low_rust_2022_jams JAMS） |
 | `18-context-generalizability.md` | WEIRD↔non-WEIRD 情境泛化性 gap：现有证据 context-bound，因果机制在非 WEIRD 语境可能反转/被抵消（EMERGING: li2026 POM） |
