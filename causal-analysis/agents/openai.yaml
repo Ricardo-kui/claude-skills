@@ -1,0 +1,5 @@
+interface:
+  display_name: Causal Analysis
+  short_description: Route causal designs across your econometrics stack.
+  default_prompt: Use $causal-analysis to plan and route causal inference work across
+    the installed econometrics tools.

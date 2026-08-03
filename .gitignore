@@ -54,6 +54,36 @@
 !write-theory/
 !write-theory/**
 
+# Stata / Python / statistical-method skills
+!stata/
+!stata/**
+!stata-regression/
+!stata-regression/**
+!stata-data-cleaning/
+!stata-data-cleaning/**
+!stata-c-plugins/
+!stata-c-plugins/**
+!did-analysis/
+!did-analysis/**
+!causal-analysis/
+!causal-analysis/**
+!econometrics-agent/
+!econometrics-agent/**
+!empirical-intake/
+!empirical-intake/**
+!empirical-pipeline-stata/
+!empirical-pipeline-stata/**
+!empirical-writeup/
+!empirical-writeup/**
+!exploratory-data-analysis/
+!exploratory-data-analysis/**
+!ml-analysis/
+!ml-analysis/**
+!hypothesis-generation/
+!hypothesis-generation/**
+!python-panel-data/
+!python-panel-data/**
+
 # Track user's loose files
 !empirical-writeup.md
 !methods_results_quality_check.py

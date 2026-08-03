@@ -1,0 +1,5 @@
+interface:
+  display_name: Empirical Writeup
+  short_description: Turn analysis output into journal-ready evidence.
+  default_prompt: Use $empirical-writeup when empirical outputs need methods, results,
+    tables, and figures.

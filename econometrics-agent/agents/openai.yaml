@@ -1,0 +1,6 @@
+interface:
+  display_name: "Econometrics Agent"
+  short_description: "Run the local econometrics-agent CLI"
+  default_prompt: "Use $econometrics-agent to run the installed local econometrics-agent CLI on my dataset and summarize the results."
+policy:
+  allow_implicit_invocation: true

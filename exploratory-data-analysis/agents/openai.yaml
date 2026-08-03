@@ -1,0 +1,5 @@
+interface:
+  display_name: Exploratory Data Analysis
+  short_description: Perform comprehensive exploratory data analysis on scientific...
+  default_prompt: Use $exploratory-data-analysis to perform comprehensive exploratory
+    data analysis on scientific data files across 200+ file formats.

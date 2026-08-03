@@ -1,0 +1,5 @@
+interface:
+  display_name: Hypothesis Generation
+  short_description: Structured hypothesis formulation from observations
+  default_prompt: Use $hypothesis-generation to structured hypothesis formulation
+    from observations.

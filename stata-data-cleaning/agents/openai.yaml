@@ -1,0 +1,5 @@
+interface:
+  display_name: Stata Data Cleaning
+  short_description: Clean and transform messy data in Stata with reproducible wor...
+  default_prompt: Use $stata-data-cleaning to clean and transform messy data in Stata
+    with reproducible workflows.
