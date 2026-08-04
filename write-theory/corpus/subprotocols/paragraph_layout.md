@@ -18,7 +18,7 @@ skill 操作化（适配 Theory 假设推导段）：
 
 | 段位 | 功能 | 句数 | 写作要求 | 失败模式（Dunleavy 6 病理） |
 |------|------|------|---------|---------------------------|
-| **Topic（论点句）** | 本段的核心理论主张——不是话题，是对话题的**判断** | 1 句 | active verb + concrete subject（"We argue that [IV] [direction] [DV] through [mechanism]"）；15 词内说出核心判断（skill 经验阈值，见 `phase-3`） | ① burying the lead（核心判断淹没在第2-3句）；② throat-clearing 开场（"本节讨论..."元评论）；③ **作者名开头**（"Smith (2020) showed..."——信号"本段是衍生性的"，读者降级/跳过） |
+| **Topic（论点句）** | 本段的核心理论主张——不是话题，是对话题的**判断** | 通常 1 句 | active verb + concrete subject（"We argue that [IV] [direction] [DV] through [mechanism]"）；在读者需要它时尽早给出核心判断 | ① burying the lead（核心判断被背景淹没）；② throat-clearing 开场（"本节讨论..."元评论）；③ **作者名开头**（"Smith (2020) showed..."——容易把作者自己的理论主张降格为文献摘要） |
 | **Reasoning（机制推理）** | 从 Topic 到 Prediction 的 why-chain，每步显式 | 2-3 步 | 每步间 explicit transition（Consequently / Thus / This leads to）；不允许 A 直接到 C 的逻辑跳跃（"read my mind"病理）；交织式论证（文献嵌入推理，非先推理后堆引用，见 `phase-3` §交织式论证链） | ④ 逻辑跳跃（缺中间步）；⑤ 引用罗列（只有名字无 argument） |
 | **Tokens（论据）** | 为 Reasoning 的关键步骤提供证据支撑 | 1-3 条 | 按"三类论据决策矩阵"（见下节）选择；每条论据必须**回扣**到它支撑的具体推理步骤，不能是泛泛装饰 | ⑥ 案例无理论回收句（"For example... X. Then H1."——案例摆完不回机制）；⑦ token 膨胀（案例/数据过多把段落撑到 300+ 词，见段内病理 ⑤过长） |
 | **Wrap（总结句）** | 收束推理链，自然引出假设 | 1 句 | 总结推理（"Taken together, these arguments suggest..."）而非简单重复 "we hypothesize"；段末停在引用上而无 Wrap 是 "abrupt stop" 病理（见 `phase-3` QC） | ⑧ 突兀结尾（token 后直接假设，无 Wrap）；⑨ Wrap 与 Topic 不匹配（读者困惑"这段到底论证了什么"） |
@@ -72,7 +72,7 @@ Jonsen et al. 强调：**tangible, plausible bridges** between first-order voice
 来源：Dunleavy 6 病理（段位表）+ Indiana University coherence 四技。
 
 ### 3.1 段位病理（Dunleavy）
-- [ ] **Topic 在第 1 句**：核心判断未淹没在第 2-3 句？（burying the lead）
+- [ ] **Topic 及时出现**：核心判断是否在读者需要它时出现，而不是被不承担必要功能的背景或文献罗列淹没？（burying the lead）
 - [ ] **Topic 非元评论**：段首句不是"本节讨论..."/"接下来..."？（throat-clearing）
 - [ ] **Topic 非作者名开头**：段首句主语不是他人姓名？（"Smith (2020)..." → 读者降级）
 - [ ] **Wrap 存在且匹配 Topic**：段末有总结句且回扣段首主张？（非突兀结尾 / Wrap 与 Topic 不匹配）

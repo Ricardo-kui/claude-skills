@@ -12,6 +12,7 @@
 | **主效应推导**（单 IV→DV 变体） | Audience-Role Dichotomy + Mirrored Hypotheses（Pontikes 2012）(L27) · Sign-Flipping Boundary Condition（Pontikes 2012）(L78) · Three-Condition Framework for Information-Based Herding（Shi&Grewal 2021）(L117) · Width-Type Parallel Mechanism（2-3 独立理由）(L753) · Symmetric Opposing Dual-Track Mechanism（Zhao-Ding&Gaba）(L800) · Counterintuitive Anchor + Three Parallel Psychological Threats（Keeves 2017）(L494) · Parallel Dual-Source Antecedents Converging on One Mediator（Keeves 2017）(L532) · Emotion Action Tendency→Interpersonal Harm（Keeves 2017）(L567) · Cross-Disciplinary Theoretical Lens（Malshe&Agarwal 2015）(L603) · Four-Reason Parallel Mechanism Derivation（Malshe&Agarwal 2015）(L637) · Three Parallel Single-Step Mechanisms（Darby 2023）(L945) · Two-Levers Theory Progression（Darby 2026）(L980) · Embedded Prose Predictions in Conceptual Framework (L1011) |
 | **调节推导**（moderation 段落） | Bilateral Moderation Derivation / high/low 双边论证（Shen 2022）(L374) · Indirect Moderation / Mediated Moderation Derivation（Singh&Grewal 2023）(L417) · Cumulative Moderation Build-Up（Singh&Grewal 2023）(L456) · Curvilinear Relationship — Two-Phase Argumentation（Cui 2026）(L838) · Sequential Nested Moderation（Chung/Low/Rust 2022）(L881) · Intangible Asset Real Options + Financial Constraint Distal Moderation（Malshe&Agarwal 2015）(L677) |
 | **辩证 / 反转 / 时序不对称** | Dual-Logic Integration — Input vs Efficiency + Inverted U（Zhou 2017）(L189) · Institutional Shock as Theory Hook（Shi&Grewal 2021）(L157) · Counterintuitive Direction-Reversal via Mechanism Substitution (L1061) · Mismatch Subtype Refinement Hypothesis（主效应后递进）(L1096) · Developmental Reversal of Reciprocal-Causation Asymmetry（pollock2015 H1a/H1b）(L1143) · Differential Persistence / Lagged-DV Moderation（pollock2015 H2）(L1211) |
+| **机制靶向干预** | Counterintuitive Direction-Reversal via Mechanism Substitution（Ilicic–Brennan 2026） · Mechanism-Targeted Intervention Escalation（Ilicic–Brennan 2026） |
 | **元规则**（非 pattern，段落布局与文件关系） | 段内逻辑布局原则（连接词/段落长度/Warrant 摆放）(L705) · 与相邻语料文件的关系（validity vs soundness 分工）(L733) |
 
 ---
@@ -486,7 +487,7 @@ status: needs_validation
 <!--
 pattern_id: counterintuitive_anchor_three_parallel_threats
 build_type: 机制推演型 / 反直觉预测型
-source_papers: ["Keeves_2017_AMJ"]
+source_papers: ["Keeves_2017_ASQ"]
 confidence: high
 status: ready_for_corpus
 -->
@@ -524,7 +525,7 @@ status: ready_for_corpus
 <!--
 pattern_id: parallel_dual_source_same_mediator
 build_type: 机制推演型
-source_papers: ["Keeves_2017_AMJ"]
+source_papers: ["Keeves_2017_ASQ"]
 confidence: medium
 status: ready_for_corpus
 -->
@@ -533,7 +534,7 @@ status: ready_for_corpus
 
 **适用场景**: 同一 mediator 可由 focal actor 自身行为和他人行为共同引发；需要分别推导两条并行动因路径。
 **微观动作序列**: Self-path anchor → Self-path mechanism → H[X]a → Other-path anchor → Other-path mechanism → H[X]b
-**范文来源**: Keeves, Westphal & McDonald (2017), *AMJ*（H1a: self-ingratiation → resentment; H1b: others' ingratiation toward target → resentment）
+**范文来源**: Keeves, Westphal & McDonald (2017), *ASQ*（H1a: self-ingratiation → resentment; H1b: others' ingratiation toward target → resentment）
 
 **骨架**:
 ```
@@ -559,7 +560,7 @@ status: ready_for_corpus
 <!--
 pattern_id: emotion_action_tendency_consequence
 build_type: 机制推演型
-source_papers: ["Keeves_2017_AMJ"]
+source_papers: ["Keeves_2017_ASQ"]
 confidence: medium
 status: ready_for_corpus
 -->
@@ -568,7 +569,7 @@ status: ready_for_corpus
 
 **适用场景**: 研究需要从情绪 mediator 延伸到具体的人际伤害行为后果；需要把抽象情绪与具体行为连接起来。
 **微观动作序列**: Anchor（情绪有负面后果）→ Theory（情绪行动倾向）→ Mechanism（情绪的认知/情感特征 → 行动倾向）→ Behavioral channel（具体行为形式）→ Matching rule（伤害形式与怨恨来源匹配）→ Illustration（案例/引语）→ Prediction
-**范文来源**: Keeves, Westphal & McDonald (2017), *AMJ*（resentment → social undermining via negative commentary to journalists）
+**范文来源**: Keeves, Westphal & McDonald (2017), *ASQ*（resentment → social undermining via negative commentary to journalists）
 
 **骨架**:
 ```
@@ -830,16 +831,16 @@ status: needs_validation
 <!--
 pattern_id: curvilinear_relationship_two_phase_argumentation
 build_type: 机制推演型 / 调节效应型
-source_papers: ["Cui_Yang_Vertinsky_SMJ"]
-confidence: medium
-status: needs_validation
+source_papers: ["Cui_Yang_Vertinsky_SMJ", "Bendig_Hensellek_Schulte_2024_ETP", "Anderson_Reeb_2004_ASQ"]
+confidence: high
+status: verified_three_paper
 -->
 
 ## Pattern: Curvilinear Relationship — Two-Phase Argumentation
 
 **适用场景**: 当理论预期 IV 和 DV 之间存在曲线关系（如 inverted U-shape / U-shape）时，需要分别论证曲线两个阶段的机制。
 **微观动作序列**: Anchor（曲线预测）→ Phase 1 递增/递减段（2 个理由）→ Transition（转折点机制）→ Phase 2 递减/递增段（2 个理由）→ Prediction
-**范文来源**: Cui, Yang, and Vertinsky, *Strategic Management Journal*
+**范文来源**: Cui, Yang, and Vertinsky, *Strategic Management Journal*；Bendig, Hensellek, and Schulte (2024), *Entrepreneurship Theory and Practice*；Anderson and Reeb (2004), *Administrative Science Quarterly*
 
 **骨架**:
 ```
@@ -861,12 +862,66 @@ When [IV] is [high/low], [DV] [decreases/increases] as [IV] increases, for two r
 ```
 
 **为什么有效**: 曲线关系需要分别解释为什么先增后减（或先减后增），每个阶段用独立理由支撑，避免"因此是曲线"的跳跃；同时展示理论对关系全区间的掌控。
+
+**三种经验证的 dominance schedule**:
+
+1. **正向 Y：收益先占优、约束后占优**。低至中 X 主要激活资源或协同收益；高 X 出现过载、竞争或协调成本，形成正向 Y 的倒 U。
+2. **负向 Y：成本先占优、学习后占优**。低至中 X 的搜索、协调与整合成本先提高失败/伤害；更高 X 形成惯例、能力和经验学习，继而降低负向 Y，同样形成倒 U。
+3. **相对权力型 X：治理收益先占优、侵占成本后占优**。当行动者 A 相对行动者 B 的代表性较低时，增加 A 可补充信息、承诺或监督；当 A 的相对权力过高时，B 的制衡能力下降，侵占、固化或能力损失开始占优。此时 X 是有理论含义的相对配置，不能只把比例的高低当作未经解释的强度。
+
+因此，**曲线形态不识别机制顺序**。写作时应先标记 Y 的规范方向，再说明哪个过程在何区间增长更快；不得因“倒 U”三个字自动套用“收益递减”故事。
 **注意事项**:
 - 必须明确转折点（turning point）的理论依据
 - 两个阶段的机制不能互相矛盾，必须有统一的成本-收益或激励-约束框架
-- 每个阶段的 2-3 个理由必须概念独立
+- 每个阶段使用足以建立该阶段必然性的概念独立理由；理由数量由论证负荷决定，不设固定配额
 - 建议在预测句中明确 curve shape（inverted U-shape / U-shape）
+- 对 negative/adverse Y，必须明确“曲线顶点是风险最高点”而非“最优中间值”
+- 对 ratio/configuration X，必须分别说明分子与分母的理论角色，并用成分变量、替代规格或区间检验排除同值异构问题
 **反模式**: 如果只有一个阶段的机制强，另一个阶段只是"反向论证"或"常识推断"，会显得薄弱；如果两个阶段的理由没有统一框架，会像是两个独立假设硬凑。
+
+---
+
+<!--
+pattern_id: opposing_joint_prerequisites_bottleneck_switch
+build_type: 辩证对立 / 机制推演型 / 曲线关系
+source_papers: ["Lee_Park_2024_SMJ"]
+confidence: medium
+status: emerging_single_paper
+-->
+
+## Pattern: Opposing Joint Prerequisites → Bottleneck Switch（共同必要条件反向变化—短板切换）
+
+**适用场景**: Y 不是两条路径的简单净和，而是只有在两个共同必要条件都达到足够水平时才会提高；随着累计 X 增加，一个条件改善、另一个条件恶化，因此限制 Y 的短板从 A 切换到 B。
+
+**微观动作序列**: Joint-necessity rule → A 随 X 改善 → B 随 X 恶化 → low/middle/high 三状态表 → binding constraint 切换 → 曲线预测。
+
+**骨架**:
+```text
+[Joint necessity] [Y] requires sufficient levels of both [A] and [B]; abundance in one cannot fully compensate for scarcity in the other.
+
+[A path] As [cumulative X] increases, [A] rises because [reasoning chain and warrant].
+[B path] In parallel, [B] declines because [distinct reasoning chain and warrant].
+
+[Low X] When X is low, A is the binding constraint even though B remains high, so Y is low.
+[Middle X] At moderate X, both prerequisites remain sufficiently available, so Y reaches its highest level.
+[High X] Beyond [turning condition], B becomes the binding constraint despite abundant A, so Y declines.
+
+[Prediction] H[N]: X has an inverted-U relationship with Y: Y rises until the binding constraint shifts from A to B and falls thereafter.
+```
+
+**为什么有效**:
+- 先声明组合规则，再分阶段；倒 U 不是从“两条相反机制”自动跳出。
+- 三状态表让读者看见每个区间中哪一条件稀缺，避免含糊的“收益先大于成本、后来反之”。
+- 允许机制保持 B0 理论过程；若未直接测量 A/B，Results 与 Discussion 不得声称中介已验证。
+
+**与 `curvilinear_relationship_two_phase_argumentation` 的关系**: 这是其 L2 可选架构，不替代通用两阶段骨架。通用骨架适用于净收益/净成本或 dominance schedule；本架构仅适用于 A、B 都是 Y 的共同必要条件且存在明确的 bottleneck switch。
+
+**范文来源**: Lee and Park (2024), *Strategic Management Journal*：累计失败扩大可学习信息，却逐步侵蚀学习动机；学习需要机会与动机同时充足。
+
+**禁忌**:
+- 不要把任意正负机制重命名为“共同必要条件”；必须说明为何一方不足时另一方不能补偿。
+- 中间区间不能仅靠“适中最好”的直觉；须说明两个条件为何在该区间同时足够。
+- 若 X、Y、层级或时间范围在两条路径间变化，冲突不属于 R3 的正式锁定。
 
 ---
 
@@ -1054,8 +1109,8 @@ status: ready_for_corpus
 pattern_id: counterintuitive_direction_reversal_via_mechanism_substitution
 build_type: 机制推演型 / 反直觉预测型（方向反转子类）
 source_papers: ["Ilicic_Brennan_2026_JM"]
-confidence: high
-status: ready_for_corpus
+confidence: medium
+status: needs_validation
 -->
 
 ## Pattern: Counterintuitive Direction-Reversal via Mechanism Substitution
@@ -1084,6 +1139,48 @@ status: ready_for_corpus
 - 适用于 risk/disposition × outcome、moral foundations、political ideology 等有强默认预期的领域
 
 **反模式**: 只声明方向反转而不替换机制（"we find the opposite, trust us"）；用 M_old 同时解释正反两方向（机制过载）；反转方向缺乏理论必然性（M_new 推不出 D_reversed）。
+
+---
+
+<!--
+pattern_id: mechanism_targeted_intervention_escalation
+build_type: 机制推演型 / 调节效应型 / 干预设计子类
+source_papers: ["Ilicic_Brennan_2026_JM"]
+confidence: medium
+status: needs_validation
+-->
+
+## Pattern: Mechanism-Targeted Intervention Escalation（机制靶向干预递进）
+
+**适用场景**: 论文已经建立 `X -> M1 -> M2 -> Y` 的有害路径，需要从“解释现象”推进到“如何削弱现象”。第一层干预改变驱动路径的近端机制 M1；第二层不是另一个任意 moderator，而是提高同一干预的自我关联、显著性或诊断力。Ilicic–Brennan 的结构是：威胁信息把注意从行动转向后果，削弱 agency；第二人称语言进一步增强自我指向，使这一机制干预更强。
+
+**微观动作序列**:
+1. **Restate harmful chain**：重申 X 如何经 M1、M2 导致 Y。
+2. **Locate intervention point**：解释为何干预应攻击 M1，而非仅要求 Y 改变。
+3. **Derive first contrast**：无干预 vs 一般干预，预测 M1、M2 与 Y 的联动变化。
+4. **Add relevance intensifier**：说明何种信息形式让同一干预更直接地作用于行动者。
+5. **Derive nested contrast**：个人指向/高关联干预相对于一般干预产生更强衰减。
+6. **Preserve bilateral logic**：说明效应主要改变哪一组，以及另一组为何相对稳定。
+
+**骨架**:
+```
+[Baseline chain] [Group A / high-X actors] ordinarily exhibit [high M1], which lowers [M2] and increases [harmful Y].
+[Intervention point] [Intervention W] redirects attention from [action/control] to [negative consequences], thereby weakening [M1].
+[First contrast] As [M1] falls, [M2] should rise and the Group A–Group B difference in [Y] should narrow.
+[Relevance intensifier] This disruption should be stronger when the message uses [self-relevant form], because [attention/self-reference warrant].
+[Nested contrast] Thus, [personally directed/high-relevance W] should attenuate the focal pathway more than [generic W], especially for [Group A]; [Group B] is expected to change less because [bilateral rationale].
+```
+
+**为什么有效**: 干预不是 Theory 末尾突然追加的实践建议，而是从核心机制反推而来：先定位哪条路径可被改变，再说明信息形式如何提高对该路径的命中率。这样，“what can be done”成为机制理论的边界检验，而不只是 managerial add-on。
+
+**统计映射边界**:
+- 若设计只有“无威胁 / 一般威胁 / 个人指向威胁”三个条件，它通常是一个三水平处理及预设 contrasts，不是 `X × W1 × W2` 三向交互。
+- H3a/H3b 若同时包含组间差异、组内变化和序列中介，应在 Methods/Results 预先拆成清晰的可检验命题，避免一个假设承担过多统计判断。
+- 干预对 M1 的因果作用需由随机化和操纵检验支持；测量到的 M1→M2→Y 路径仍需额外的时间或操纵证据。
+
+**反模式**: 直接操纵结果变量而声称“机制干预”；第二层只换文案但没有自我关联理论；用“一组显著、另一组不显著”代替正式的组间/contrast 差异检验；将三水平处理误称为三向交互。
+
+---
 
 <!--
 pattern_id: mismatch_subtype_refinement_hypothesis
@@ -1251,3 +1348,60 @@ current [B] will be unaffected by its age.
 - **零结果**（B 的 ρ 不随 age 变化）需在 Results 中做统计功效分析（如 Monte Carlo power analysis）以排除 type II error（参见 write-results 零结果功效分析）
 
 **反模式**: 声称持久性差异但不映射到 ρ（停留在"status 更 sticky"的口号）；差异化预测缺乏理论依据（为何一个减弱一个不变）；零结果不报告功效分析即下结论。
+
+---
+
+<!--
+pattern_id: belief_updating_attention_threshold_reversal
+build_type: 机制推演型 / 调节效应型（阈值反转子类）
+source_papers: ["Schumacher_Keck_Tang_2020_SMJ"]
+confidence: high
+status: needs_validation
+-->
+
+## Pattern: Belief Updating → Attention-Threshold Reversal（Schumacher–Keck–Tang 2020 型）
+
+**适用场景**: 行动者根据相对参考点的反馈选择风险/保守行动；稳定偏差改变其对未来状态的信念；当预期状态接近生存、合规或资源约束阈值时，行动目标会从“达到抱负”切换为“避免失败”。研究要解释的是：偏差既如何改变常规区间的反馈反应，又为何在临界区间导致条件关系反转。
+
+**微观动作序列**: Baseline target choice → Bias inserted into belief parameter → Feedback updating → Ordinary two-sided response → New threshold changes decision objective → Bias displaces threshold crossing → Conditional direction reversal → Prediction.
+
+**范文来源**: Schumacher, Keck, and Tang (2020), *Strategic Management Journal*（CEO 能力高估改变绩效反馈解释；接近生存水平时注意目标切换，过度自信使切换发生得更晚）。
+
+**骨架**:
+```text
+[Baseline target choice] [Actor] chooses between [risky] and [conservative] actions to maximize the chance of exceeding [aspiration/reference target].
+
+[Bias insertion] [Biased actor] overestimates [own ability/resource], so the same observed feedback produces a more favorable posterior belief about future performance than it does for [unbiased actor].
+
+[Ordinary regime: negative side] Below the aspiration target, this favorable bias reduces the perceived need to adopt the risky action; only sufficiently negative feedback makes risk attractive.
+[Prediction 1] Thus, [bias] attenuates the positive relationship between negative feedback and risk taking.
+
+[Ordinary regime: positive side] Above the aspiration target, the same favorable bias makes the conservative action attractive at a less positive feedback level.
+[Prediction 2] Thus, [bias] strengthens the negative relationship between positive feedback and risk taking.
+
+[Threshold introduction] When expected performance approaches [survival/constraint threshold], the decision objective changes from reaching aspirations to avoiding failure. Under this objective, conserving variance rather than increasing upside becomes attractive.
+
+[Threshold displacement] Because biased actors overestimate their distance from failure, they cross the attention-switch threshold later than unbiased actors.
+
+[Reversal] Under severe negative feedback, unbiased actors may already conserve to protect survival while biased actors still pursue the aspiration target through risk.
+[Prediction 3] Therefore, near [threshold], the conditional effect of [bias] differs from—and may reverse—the ordinary-regime pattern.
+```
+
+**为什么有效**:
+- 偏差进入一个明确的信念参数，而不是停留在性格标签。
+- 正、负反馈分别推导，避免用一句“feedback matters differently”掩盖两侧机制。
+- 反转来自**决策目标切换 + 阈值跨越顺序差异**，不要求同一机制同时解释正反方向。
+- 模型构件可逐一映射到实证变量：反馈方向、偏差信念、行为选择、外部阈值。
+
+**与邻近模式的区别**:
+- 区别于 `counterintuitive_direction_reversal_via_mechanism_substitution`：这里不否定并替换旧机制，而是在临界状态改变当前目标。
+- 区别于普通 buffering/enhancing：偏差改变的是何时进入另一决策区间，不只是斜率大小。
+- 区别于 competing hypotheses：三条预测由同一模型在不同状态区间统一推出。
+
+**注意事项**:
+- 必须独立论证“接近阈值会改变决策目标”；仅有统计 cutoff 不足以建立注意切换。
+- 阈值应有外部理论或制度依据，不能为了制造反转从样本中事后搜索。
+- 若阈值区间内的斜率本身不显著，应把结论限定为组间异质性，并直接检验系数差异。
+- 正式模型只证明在假设成立时的逻辑结果；不能据此宣称行动者真实使用该更新规则。
+
+**反模式**: 用危机 dummy 随意翻转交互方向；在没有目标切换机制时宣称 threshold reversal；只比较“一组显著、另一组不显著”而不做系数差异检验；把模型可导出性误写成机制已被直接观察。

@@ -9,7 +9,7 @@
 - Makadok 维度: [makadok_dimension]
 - Introduction 推荐: [recommended_theory_variant]
 - 承诺假设数: [promised_hypothesis_count]
-- Central Knot: "[central_knot_statement]"
+- Central Knot: "[story.central_knot]"
 
 → 默认路由: **[recommended_theory_variant]**
 → variant 文件: `corpus/variants/[variant_filename]`  # 变体名→文件名映射见下表；下游 step 3 直接用此文件名加载
@@ -76,18 +76,21 @@
 
 Theory & Hypotheses 在整篇论文的 Five-Act 结构中属于 **Rising Action** 的后半段。
 
-**前置检查**（从上游 `write-introduction` 的 `theory_hints` 解析）：
-- `central_knot_statement`：如果存在且非 `null` → 作为 Theory 的叙事锚点；如果为 `null` 或未提供 → 从 Gap 类型和 Tension 模板反向推断核心冲突（见下）
-- `narrative_arc`：如果存在 → 决定 Theory 的 rising action 强度；如果不存在 → 从 Gap 类型推断
-- `protagonist_construct` / `supporting_constructs`：如果存在 → 作为角色定位的初始值；如果不存在 → 在 Phase 2 架构决策中确定
+**前置检查**（优先从 canonical `story`，其次从 `theory_hints` 解析）：
+- `story.central_knot`：Theory 的叙事锚点。
+- `story.protagonist` / `story.characters`：角色定位初始值。
+- `story.storylines[*].id`：每个假设的强制绑定目标。
+- legacy `central_knot_statement` / `protagonist_construct` / `narrative_arc` 只按 `intake-and-story-gate.md` 迁移读取，不再输出旧字段。
 
-**Central Knot 推断规则（当 `central_knot_statement` 为 `null` 时）**：
+**Central Knot 推断规则（当 `story.central_knot` 缺失时，仅生成 provisional 诊断）**：
 - Incommensurability → 推断为"对立理论或证据之间的矛盾冲突"
 - Inadequacy → 推断为"现有解释存在盲区或基于错误假设"
 - Incompleteness → 推断为"遗漏了关键维度、机制或时点"
 - 具体推断：从 Tension 模板的 `[gap statement]` 句法签名中提取核心冲突，或从用户提供的 Gap 描述中识别转折信号词（"However"/"Yet"/"Although"/"In contrast"）后的核心主张
 
-推断出的 Central Knot 仅用于 Phase 1.3 的叙事对齐检查，不阻塞后续阶段。
+**Incommensurability 二级诊断（仅该 gap 激活）**：读取 `incommensurability-resolution-routes.md`，先提取 L0 stable reasoning kernel，并验证 X/Y/层级/时间/estimand 可比和方向冲突真实，再定位 R1（X 分类）、R2（Y 分类）、R3（对立机制）或 R4（情境调节）。输出 `primary_route`、可选 `secondary_route`、置信度、最接近替代路线、`unclassified_residual`、`adjudicating_prediction` 与 architecture necessity。R1–R4 优先于粗粒度 Gap×Makadok 默认路由，但不自动决定 A–G、H 数量或模型形式。
+
+推断出的 Central Knot 只能用于 local-only 诊断，标记为 provisional；在用户确认并形成 canonical story 前，不写入 paper-state。
 
 按顺序读取以下语料库文件：
 
@@ -108,23 +111,22 @@ Theory & Hypotheses 在整篇论文的 Five-Act 结构中属于 **Rising Action*
 **1.4 Prose Craft 定位**（Pollock 2025 Ch03；以下三个工具与 Phase 2-5 并行执行）
 
 Theory section 的 Rising Action 不仅需要功能推进，还需要 prose 层面的可读性。
-完整检查清单见 `../../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md`。
+按任务读取 `../../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md` 的相关节：段落架构用 §0，例证需求用 §2，声音用 §3，节奏用 §4，过度/不足声明用 §5.6–5.7。不要为一般 Theory 任务加载整份清单。
 
 **新增**：段落级 architecture 检查（PEEL/PEAL、paragraph length、topic sentence placement、coherence）参见 `../../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md` §0；句子级 transition 信号词参见 `../../write-introduction/academic-writing-corpus/micro-templates/transition-signals.md`。
 
-#### Human Face in Theory
-- **P1 Knot Inheritance**：承接 knot 时，用 1 句具体场景说明"这个问题在现实世界中长什么样"
+#### Human Face in Theory（按需使用）
+- **Knot Inheritance**：当 knot 抽象或跨域时，可用 1 句具体场景说明"这个问题在现实世界中长什么样"
   - 句式："To resolve the tension that [knot], consider what happens when [Company] tried to [action]..."
-- **P2-P4 Knot Deepening**：每个新构念首次出现时，配 1 个具体例子
+- **Knot Deepening**：新构念抽象、易混淆或无法由定义直接想象时，配正例/反例
   - 例："We define [construct] as [definition] (Author, Year). A [concrete instantiation], for example, might [observable behavior]..."
-- **P5-PN Knot Tying**：假设推导中，每个 why-chain 关键步骤可配 1 个微型场景（1-2句）
+- **Knot Tying**：why-chain 跨层、反直觉或负荷较高的步骤可配 1 个微型场景（1-2句）
   - 例："Because [actors with trait X] prioritize [goal A] over [goal B], they may [observable behavior] when [condition]. Consider how [Company] [specific action]..."
 
 #### Showing vs Telling in Theory
-- **Stroke 段落（约 70%，skill 操作化阈值）**：每个抽象因果步骤后，跟 1 句 concrete illustration
-- **Glide 段落（约 30%，skill 操作化阈值）**：用比喻/类比解释抽象概念
-- **规则**：不允许连续 2 个 stroke 句子无 showing
-- 注：Pollock Ch03 原书只给定性判据（全 stroke → forced march；全 glide → ponderous pace），未给百分比；上述比例为 skill 操作化建议
+- **Stroke**：负责推进推理；若连续推理造成读者无法模拟过程，再补解释、例子或反事实。
+- **Glide**：负责定义澄清、文献定位和边界说明，但不能变成引用停滞。
+- Pollock Ch03 只给定性判据；本 skill 不设置固定比例或“每 N 句必须举例”的硬门槛。
 
 #### Conversational Voice in Theory
 - **P1**：用 "To resolve the paradox that [knot], we argue that..." 承接

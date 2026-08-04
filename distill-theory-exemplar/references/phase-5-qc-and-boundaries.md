@@ -27,6 +27,7 @@ Theory & Hypotheses 写作质量检查请使用 `/theory-review`——它覆盖�
 - **虚构连接词-类型绑定**：不声称"机制推演型必须使用 Therefore"。连接词模式是统计倾向而非语法规则。标记连接词-类型一致性为"低"时，必须附具体证据（如"条件连接词占比 25%，远超机制推演型中位数 8%"），而非仅凭印象判断。
 - **交叉矩阵硬化**：构建类型×假设结构矩阵中的 M/C/O 标注是基于当前语料库的归纳，不是理论上的不可能性证明。遇到矩阵外的组合时，标记为 "unclassified combination" 并记录，不强行排除。
 - **证据链不捏造**：如标志性语言确实模糊（同一段落同时包含两种类型的标志性语言），如实记录模糊信号，不在证据链中虚构 "clearly indicates"。
+- **不把偏离现行规则自动判成论文缺陷**：先判断是原文薄弱点、合法变体、corpus gap 还是 write-theory 设计缺陷；设计缺陷必须进入 `design-feedback-loop.md`，不能偷偷改写为模仿风险。
 
 ---
 
@@ -46,7 +47,7 @@ Theory & Hypotheses 写作质量检查请使用 `/theory-review`——它覆盖�
 
 ## 与下游 Skill 的接口
 
-- **`write-theory`** — Phase 4 的更新建议可直接沉淀到 write-theory 的模块库和骨架库；Phase 2.5 连接词统计可为 write-theory 的 Phase 3 transition 诊断与 Phase 5 `../corpus/sentences/closure.md` 提供输入。Phase 2.1.6–2.1.8 的微观动作、安排模式、证据类型/功能可直接沉淀为 `../corpus/subprotocols/argumentation_patterns.md`，供 write-theory Phase 3（语料调用）调用。Phase 0.5 Rising Action 数据和 Phase 0.75 Prose Craft 数据可为 write-theory 的叙事对齐检查和 Prose Craft 定位提供输入
+- **`write-theory`** — Phase 4 的 reference-level 模式进入模块库/骨架库；核心规则反馈进入 `write-theory/corpus/_skill_design_feedback.yaml`，达到门槛后才做有边界修订。Phase 2.5 连接词统计可为 transition 诊断提供输入；微观动作、安排模式和证据功能可沉淀为 subprotocols。
 - **`theory-review`** — Phase 1.5 的模块覆盖检查和 Theory Logic Map 可作为 theory-review 的审查基准；Phase 1.25 的制度冲击适配检查可为理论审查提供识别策略论证依据；Phase 2.1.6–2.1.8 的微观动作、双边论证、证据三要素检查可为 theory-review 提供段落级论证审查清单
 - **`paper-review`** — Theory Logic Map 可用于跨 section 对齐检查（Theory 承诺 vs Results 兑现）；Phase 4 的跨 Section 对齐表可直接用于 paper-review 的全稿对齐检查；write-theory Constraint Alignment 表可用于 Theory ↔ write-theory 协议一致性审查
 - **`write-introduction`** — T2 Theoretical Lens 和 Closure 策略（局部收束 / 嵌入框架总结）的提炼可用于优化 Introduction 的 P5 Preview 和 P7 Contribution；Phase 0.5 的 knot 继承检查可为 Introduction→Theory 叙事接力提供验证；Phase 2.1.6 的 Anchor/Gap/Prediction 序列可为 Introduction 的 Gap→Preview 结构提供节奏参照

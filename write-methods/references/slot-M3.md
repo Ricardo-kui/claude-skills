@@ -96,3 +96,21 @@ Previous studies have measured [construct] using [standard measure, e.g., produc
 - 语境校准（窗口/阈值）须用**本地描述性证据**（如投诉时间分布），不能照搬 WEIRD 窗口
 - 若用替代 DV，须在 robustness 中报告与标准 DV 的关系或在可比子样本中的一致性
 - 不要把"换 DV"当成便利——须说明替代 DV 在该语境如何更贴近理论构念
+
+**产品伤害危机的监管指标 + 召回边界声明**（Kashmiri, Nicol & Arora 2017 JAMS 型）：🔬 EXPERIMENTAL（单篇来源）
+
+```text
+We operationalize [product-harm crisis] using [archival/regulatory source]'s indicator for whether [a major product-safety concern, controversy, regulatory action, or safety-standard violation] was recorded for firm [i] in year [t]. The binary measure captures the occurrence of a recorded safety controversy. It does not reveal the crisis's severity, the date on which the firm first became aware of the defect, whether or when a recall was initiated, or whether the firm's recall response was proactive. Accordingly, our empirical claim concerns the likelihood of a recorded product-harm crisis rather than recall timing, recall strategy, or harm severity.
+```
+
+**来源**: Kashmiri, Nicol, and Arora (2017), JAMS；以 KLD product-safety concern 构造 product-harm crisis 二元指标。
+
+**关键特征**:
+- 操作化句先说明数据库实际记录的事件，再列出四个不能识别的维度：severity、defect awareness、recall timing、response strategy。
+- Theory 可以把该指标解释为 product safety performance 的一个离散表现，但不能把它升级为完整安全绩效。
+- 数据缺失导致 firm-year 删除时，必须报告缺失企业数、观测数与是否存在系统性差异。
+
+**禁忌**:
+- `product-harm crisis = recall`：危机可能触发召回，但两者不是同一事件。
+- 用二元 concern 指标比较危机严重度。
+- 从危机发生回推 CEO 的召回主动性；Kashmiri et al. 仅在未来研究中提出这一推测，未进行经验检验。

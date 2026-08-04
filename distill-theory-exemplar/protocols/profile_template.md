@@ -125,14 +125,14 @@
 - pave: [N]
 - rebut: [N]
 
-### 文献引用三要素完整率
-- 完整: [N/%]
-- 缺失 concrete finding: [N/%]
-- 缺失 argument summary: [N/%]
-- 缺失 link to mechanism: [N/%]
+### 文献引用功能匹配
+- premise / warrant / boundary / contrast / rebut: [N/%]
+- 功能匹配: [N/%]
+- citation list 或功能不明: [N/%]
 
-### 代表性三要素例句
-- "[Author] (year) found that [concrete finding] — [argument summary]. This suggests that [mechanism step], because [theoretical reason]."
+### 代表性功能匹配例句
+- 实证来源："[Author] found [finding], supporting the premise that [premise]."
+- 理论来源："[Theory] argues [argument], providing the warrant for [reasoning move]."
 
 ## Theory DNA
 [来自 Phase 3 的量化指标，已包含微观动作、双边论证、证据类型/功能、约束对齐等新指标]
@@ -232,7 +232,7 @@ corpus_recommendations:
 - 过于论文特异的机制内容 → 不进入任何 corpus，只在 Non-Transferable Facts 记录
 
 ## Corpus Reference Notes
-[供人工审阅的语料库沉淀注释，不自动修改 write-theory skill]
+[reference 语料建议；核心规则缺陷另以 skill_design_feedback 持久化并服从修订门控]
 ```
 
 ---

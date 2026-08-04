@@ -6,9 +6,10 @@ source_papers:
   - "qiao_hiatt_sine2026 (SMJ, 2026): natural-disaster instrument + 3-reason exclusion restriction (external-event-as-IV template)"
   - "chung_low_rust_2022_jams (Journal of the Academy of Marketing Science): Durbin-Wu-Hausman test + Gaussian copula endogeneity narrative"
   - "zhou_gao_zhao_2017 (Administrative Science Quarterly): geography-based IV (distance to seaports for institutional development, Frankel-Romer)"
-variants_count: 10
+  - "moon_tuli_mukherjee_2023_jm (Journal of Marketing): peer-IV proximity gradient balancing relevance and exclusion validity"
+variants_count: 11
 created: 2026-05-18
-updated: 2026-07-25
+updated: 2026-08-03
 ---
 
 # IV-2SLS — Methods 骨架
@@ -133,3 +134,18 @@ updated: 2026-07-25
 **与原骨架差异**: **geography-based IV**（Frankel-Romer 地理外生性传统）——用纯地理距离（到大港口/经济中心的物理距离，Great Circle 公式）为"区域性、随经济内生"的制度/发展变量（市场化程度、制度发展、贸易开放度）外生化。区别变体 4（自然灾害事件 IV）、变体 6（传记性暴露）、变体 7（Bartik shift-share）：本变体的外生性来自**地理前定性**（地区位置由自然决定，不随当代经济行为变化），且为**持续型地理距离**而非事件。配套报告第一阶段 *F* 确认工具强度（不可只说"valid"）。诚实点：引用 Frankel-Romer 地理外生性论证 + 替代性 geography 文献（Wei-Wu）双重背书。
 **适用**: 制度发展、市场化指数、贸易开放度、基础设施可达性等"区域性、与经济发展互为因果"的变量作自变量/调节变量时；新兴市场跨地区研究（中国省际、印度/巴西邦际）。
 **禁忌**: 地理距离的外生性须论证（不可默认）——若该距离通过非制度渠道影响 DV（如距离→运输成本→贸易→创新），则排除限制受损，须讨论；第一阶段 *F* 必须报告，弱工具（F<10）不可用；地理距离时不变，无法识别 within-region 时间效应，须配 FE 设计说明。
+
+### 变体 11: M8 同行 IV 的距离梯度组合——显式管理 relevance–validity trade-off
+
+**来源论文**: Moon, Tuli & Mukherjee (2023, *Journal of Marketing*)
+**验证状态**: 单篇高价值 reference-level 变体，待跨论文验证
+**写入日期**: 2026-08-03
+**槽位**: M8
+**骨架**:
+> Peer-based instruments create a natural trade-off between relevance and exclusion validity: peers closer to the focal unit are likely to predict [endogenous choice] strongly, but may also share competitive or demand shocks that affect [outcome]. We therefore construct an instrument portfolio ordered by proximity. [Close peers] provide strong behavioral relevance; [broader sector peers] reduce direct product-market overlap; and [institutional peers outside the focal market] capture shared [reporting/governance] practice while limiting competitive channels. We define each instrument as the [weighted proportion/mean] among peers, exclude the focal unit, lag the instrument, and assess sensitivity by removing each peer family in turn.
+
+**与原骨架差异**: 现有变体主要为单一外部事件、内部生成 IV、Bartik IV 或多层级估计器。本变体的核心不是新的 IV 名称，而是把多个 peer instruments 组织成**距离梯度**：近邻提高 relevance，远邻/制度同伴改善 exclusion plausibility。作者先公开承认二者的结构性权衡，再用工具组合与逐类剔除敏感性分析管理该权衡。
+
+**诚实边界**: 工具变量数量增加不会自动修复共同的排除限制；每一类 peers 都必须单独识别潜在直接渠道。逐类剔除只能显示结论不依赖某一工具族，不能证明剩余工具外生。必须报告第一阶段强度，并在可能时提供过度识别或替代识别检验。
+
+**适用**: 行为扩散、披露、治理实践、同伴效应等可构造行业/部门/审计师/地理/网络多层同行池的研究。

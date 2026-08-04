@@ -124,7 +124,7 @@ equally, because [moderator logic]."
 
 | 类型 | 模板 |
 |------|------|
-| 基础关系 | "H1. [IV] is [positively/negatively] related to [DV]."（连续 IV/DV）；分类或方向性预测参见 `sentences/hypothesis_forms.md` 决策矩阵——禁用无方向的 "is associated with"，见 SKILL.md 硬约束 #3 |
+| 基础关系 | "H1. [IV] is [positively/negatively] related to [DV]."（连续 IV/DV）；分类或方向性预测参见 `../sentences/hypothesis_forms.md` 决策矩阵——禁用无方向的 "is associated with"，见 SKILL.md 硬约束 #3 |
 | 调节效应 | "H2. The relationship between [IV] and [DV] is moderated by [Z], such that the [positive/negative] effect of [IV] on [DV] is [stronger/weaker] when [Z] is [high/present]." |
 | 三向交互 | "H3. The moderating effect of [Z] on the [IV]→[DV] relationship is further moderated by [W], such that [Z]'s [enhancing/buffering] effect becomes [stronger/weaker] when [W] is [high]." |
 | 条件效应（双假设） | "H2a: When [condition A], [effect A]. H2b: When [condition B], [effect B]." |
@@ -149,3 +149,37 @@ equally, because [moderator logic]."
 - [ ] 如果 ≥2 个 moderators：是否有 moderator 选择的理论理由（元框架或分类逻辑）？
 - [ ] 如果 IV 是连续谱：是否讨论了 IV 两端的行为差异（非只论证一个方向）？
 - [ ] 如果有 T0 前置背景：T0 是否 ≤ Theory 总篇幅的 25%？
+
+---
+
+## Vidal & Mitchell 型：双极变化 × 行动方式的条件化假设树
+
+**来源论文**: Vidal & Mitchell (2015, *Organization Science*)
+
+**验证状态**: EMERGING（单篇入库；需第二篇跨论文验证）
+
+**适用**: 同一连续变化相对参照点的正、负两端都有独立的理论动机，且研究还预测行动的不同形式；适用于假设树而非单一 U 型/倒 U 型描述。
+
+**组织逻辑**:
+1. 先建立共同树干：`[相对参照点的变化]` 可能触发 `[行动]`，但其影响并不单向。
+2. 以负向偏离发展第一分支：`[负向偏离] → [纠偏/生存压力] → [行动]`，并说明为什么该压力匹配 `[行动形式 A]`。
+3. 以正向偏离发展第二分支：`[正向偏离] → [维持增长/释放注意力或资源的压力] → [行动]`，并说明为什么该压力匹配 `[行动形式 B]`。
+4. 最后再引入 `[状态水平]`：只有当状态水平使同一方向的变化更具诊断意义时，预测该分支被放大；不要将它作为无机制的统计交互项。
+
+**骨架**:
+```text
+Relative to [reference point], a [negative change] and a [positive change] can each make [action] more likely, but for different reasons. When [negative change] occurs, [mechanism A] creates pressure to [action], especially in the form of [mode A]. When [positive change] occurs, [mechanism B] makes proactive [action] attractive, especially in the form of [mode B].
+
+The association should be strongest when [state level] reinforces the diagnostic meaning of the corresponding change. Accordingly:
+H1a: [negative change] is [direction] associated with [overall action / mode A].
+H1b: [positive change] is [direction] associated with [overall action / mode B].
+H2a/H2b: These associations are [stronger/weaker] when [state level] is [condition], because [boundary mechanism].
+```
+
+**关键约束**:
+- 负/正两端必须各有独立 why-chain，不能只在第二分支套用“相反地”。
+- 行动子类型必须在理论中先被区分，再进入结果拆分；不能事后依据显著性挑选子样本。
+- 该模式只允许使用关联性语言，除非实证设计另有因果识别。
+- H2 的条件变量必须解释“为什么放大这一方向”，不能只陈述存在交互。
+
+**与既有变体的差异**: 生命周期不对称与先验期望违背变体围绕时间阶段或信号意外性；本变体围绕**相对参照点的两个变化方向**及其对应行动方式的匹配。

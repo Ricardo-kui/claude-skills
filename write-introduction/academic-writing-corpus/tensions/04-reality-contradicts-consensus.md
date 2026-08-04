@@ -12,7 +12,11 @@ source_papers:
   - hahl2017 (ASR, 2017): "elites consume lowbrow culture despite distinction theory predicting highbrow exclusivity"
   - gamache2023 (SMJ, 2023): "female CEOs make fewer acquisitions on average, yet some make massive acquisitions (Mayer 53 companies)"
   - pontikes2012 (ASQ, 2012): "ambiguous classification devalued by consumers (market-takers) yet preferred by VCs (market-makers)"
+  - vidal_mitchell2015 (OS, 2015): "performance-level studies mostly imply retrenchment, while performance-change studies report opposing directions; the paper resolves this through directional and action-mode decomposition"
+  - bendig_hensellek_schulte2024 (ETP, 2024): "external venturing's resource and learning gains coexist with execution costs and product-safety harms; the paper resolves the conflict through changing mechanism dominance"
+  - lee_park2024 (SMJ, 2024): "own failures can enable cognitive updating yet also trigger emotion and attribution processes that suppress learning; the paper fixes the same accumulated-experience relation and theorizes a dominance switch"
 created: 2026-05-18
+updated: 2026-08-04
 source: Manually curated from MVP30 narrative_analysis files
 ---
 
@@ -190,6 +194,84 @@ source: Manually curated from MVP30 narrative_analysis files
 **适用**: 当文献有**强共识**说某行为/特征受惩罚，但现实中该行为/特征**持续存在或扩散**——用作引入"被忽略的异质性"（受众类型、情境条件、时间阶段）的 warrant。分类与身份（ambiguous identity 持续）、公司治理（被诟病的实践持续）、战略（看似次优的选择普及）、制度（低效惯例顽固）。
 
 **禁忌**: 共识必须**真实且强**（不可为了制造矛盾而夸大共识强度；若证据其实 mixed，应用变体 A 而非本变体）；"行为持续"必须有可观察证据（行业现象、扩散数据），不可仅凭印象；修辞问必须**本文能回答**（resolution 须在后文兑现，pontikes2012 即用受众二分回答）；"被忽略的异质性"须是共识**真的没考虑**的维度，不可是稻草人。
+
+---
+
+### 变体 H：嵌套式结论冲突—方向分解型（Vidal & Mitchell 型）
+
+**模板**:
+> "Research on [relationship] has examined two related dimensions. Studies of [level dimension] mostly report [dominant finding], although several exceptions qualify that pattern. Studies of [change dimension] produce a less coherent record: some associate [direction of change] with [lower outcome], whereas others report [weakly higher/opposite outcome]. These findings cannot be reconciled by treating [change] as a single monotonic influence. We therefore distinguish [positive versus negative direction] and examine whether each is associated with different forms of [outcome]."
+
+**来源**: Vidal & Mitchell (Organization Science, 2015), Introduction P1
+
+**原文锚定（释义）**:
+> 作者先概括绩效水平研究的多数结论及例外，再呈现绩效变化研究中的相反方向，随后把冲突转化为“必须区分上升与下降、完全与部分行动”的理论任务。
+
+**关键特征**:
+- 不是简单罗列正、负、零结果，而是先按**水平研究/变化研究**分层，再展示每层内部的一致程度。
+- 用“多数结论 + 明示例外”建立可信 common ground，避免把前人研究写成稻草人。
+- Departure point 不停留在“结果混合”，而是提出造成混合结果的聚合方式，并给出可检验的方向分解。
+- 同一段同时完成 Literature Turn、Tension 和 Theory/Outcome 预告，适合紧凑型 OS 引言。
+
+**适用**: Incommensurability × (Mechanism + Mode)；同一关系存在相反经验结果，且这些结果可通过方向、阶段、行动形式或分析层次的理论分解来调和。
+
+**禁忌**: 必须如实覆盖主要结论和例外；不能只选取便于构造冲突的研究。若作者只能说“findings are mixed”却不能解释为何混合，则尚不足以使用本变体。
+
+---
+
+### 变体 I：正向结果空间 vs 高风险运营后果型（Bendig–Hensellek–Schulte 型，EMERGING）
+
+**模板**:
+> "Prior work has primarily assessed [activity] through [positive outcome family], where [benefit mechanism] implies favorable consequences. However, executing [activity] also consumes [resources] and creates [coordination/integration burden], which can impair [core process] and increase [adverse outcome]. Evidence of both patterns means the unresolved question is not whether [activity] is categorically beneficial or harmful, but how the two mechanisms combine as [activity intensity] changes."
+
+**来源**: Bendig, Hensellek, and Schulte (2024), *Entrepreneurship Theory and Practice*
+
+**关键特征**:
+- Tension 来自“评价空间偏向收益”与“运营暗面真实存在”的碰撞，而非要求所有前人研究使用同一个低阶 Y。
+- 产品安全等高风险结果不是靠严重性自动获得可比性；作者必须先定义共同的高阶后果族。
+- Gap 收束到“组合规则缺失”，随后用成本—学习主导权转换而非“还需更多研究”解决。
+- Stakes 与理论功能合一：负向结果既提升重要性，也迫使正向净收益叙事重新接受检验。
+
+**适用**: 战略活动具有成熟的收益文献，同时有足够证据表明其执行过程可能产生运营或利益相关者伤害；研究旨在判断净效应何时转换。
+
+**禁忌**: 不要把“新 Y 更严重”当成理论矛盾；不要在缺少 changing-dominance warrant 时用标题式“有益还是有害”制造伪悖论。
+
+---
+
+### 变体 J：平均优势 → 治理配置分解型（Anderson–Reeb 型，EMERGING）
+
+**模板**:
+> "Prior work shows that [organizational form] outperforms [benchmark] on average. But the same form contains both [value-creating process] and [appropriation/entrenchment risk]. An average premium therefore cannot identify when [organizational form] creates value. We argue that the relative configuration of [governance actor A] and [governance actor B] determines whether [benefit] is preserved or [harm] becomes dominant."
+
+**来源**: Anderson and Reeb (2004), *Administrative Science Quarterly*
+
+**关键特征**:
+- 张力不是“现实推翻共识”，而是平均正向结果无法揭示组织形式内部的配置差异。
+- 正向机制和负向机制共享“家族影响的价值后果/外部股东后果”这一高阶理论对象。
+- 研究从总体类别效应转向相对权力配置，并用倒 U 型或分段斜率表达主导机制转换。
+- 制衡机制既是理论答案，也是将治理风险与平均绩效优势接合起来的桥梁。
+
+**适用**: 某类组织或战略安排平均上优于基准组，但其价值创造机制与滥权/伤害机制会随内部治理配置改变相对强度。
+
+**禁忌**: 平均效应存在组间差异本身不构成 Incommensurability；必须给出配置如何改变机制暴露、能力或主导权的理论链条。比例型 X 还须解释分子与分母各自代表什么。
+
+---
+
+### 变体 K：同一关系的正负证据 → 共存过程缺口型（Lee–Park 型，EMERGING）
+
+**模板**:
+> "Research on [focal relation] supports two opposing conclusions. Some studies show [positive pattern], consistent with [enabling process]. Others show [negative or null pattern], consistent with [inhibiting process]. The contradiction cannot be resolved by assuming that only one process operates. The unresolved question is how both processes combine, and when one becomes sufficiently limiting to reverse the observed relationship."
+
+**来源**: Lee and Park (2024), *Strategic Management Journal*.
+
+**关键特征**:
+- 固定同一类主体、同一累计经验与同一学习结果，避免通过切换结果或时间窗制造伪冲突。
+- 把两边从“发现清单”提升为完整的过程解释，再以共存而非互斥重写问题。
+- Tension 自带 Theory 的判别任务：必须给出组合规则和转折条件，不能停在边界条件罗列。
+
+**适用**: R3 对立机制；相反发现确实对应同一理论对象，并能被一个随强度、时间或累计经验变化的 dominance schedule 裁决。
+
+**禁忌**: `findings are inconsistent` 只是入口，不是 gap；如果无法说明组合规则，使用本变体会把统计曲线误包装成理论整合。
 
 ---
 

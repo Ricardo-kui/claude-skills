@@ -15,7 +15,7 @@ source_papers:
   - darby2026 (JOM, 2026): Synthesized 变体D——范畴句 + "For example" 发现锚定
   - wowak2025 (MS, 2025): Synthesized 变体D——构念-引文配对列举
 created: 2026-05-18
-updated: 2026-07-28
+updated: 2026-08-03
 source: Extracted from MVP30 narrative_analysis files
 ---
 
@@ -23,7 +23,7 @@ source: Extracted from MVP30 narrative_analysis files
 
 ## 功能描述
 
-P2 的功能：将 Hook 建立的注意力转化为学术对话。这不是文献综述，而是"将 Hook 中的张力重新框定为学术问题"。这个 Transition 的质量决定读者是否感觉 Hook 是"营销噱头"还是"真正的学术贡献起点"。
+Literature Turn 的功能：将 Hook 建立的注意力转化为学术对话。这不是完整文献综述，而是"将 Hook 中的张力重新框定为学术问题"。它通常出现在开篇前三段，也可在紧凑型引言中与 Hook 或 Tension 合并，不固定等于 P2。
 
 三种 Conversation 策略各有**默认配对**的 Gap 类型（对角线组合），但并非一一对应；非对角合法组合与构造机制见 `diagnose-introduction/references/intertextual-construction-playbook.md`。
 
@@ -31,7 +31,7 @@ P2 的功能：将 Hook 建立的注意力转化为学术对话。这不是文�
 
 ## 策略 1：Progressive Coherence（递进式）
 
-**适用**: Incompleteness
+**常见但非专属组合**: Incompleteness。只要文献真实状态是累积推进，其他 Gap 类型也可使用。
 
 **核心逻辑**: "已有文献做了 A 和 B，但遗漏了 C——不是因为他们错了，而是因为该领域自然发展到此时才出现 C 的问题。"
 
@@ -76,7 +76,7 @@ P2 的功能：将 Hook 建立的注意力转化为学术对话。这不是文�
 
 ## 策略 2：Synthesized Coherence（综合式）
 
-**适用**: Inadequacy
+**常见但非专属组合**: Inadequacy。只要需要围绕共同机制或问题重新组织多个文献流，其他 Gap 类型也可使用。
 
 **核心逻辑**: "多个文献流各自抓到了现象的一部分，但都没有意识到它们共享一个盲点——构念的混淆、层次的误置、或边界的模糊。"
 
@@ -130,9 +130,9 @@ P2 的功能：将 Hook 建立的注意力转化为学术对话。这不是文�
 > "Although past research has examined the influence of CEO turnover (Mayo et al. 2022), female directors (Wowak et al. 2021), and CEO compensation (Wowak et al. 2015) on recall count and time-to-recall, the influence of TMT political ideology on operations management, in particular medical product recalls, remains unexplored." — wowak2025 (MS)
 
 **关键特征**:
-- **范畴句只做路牌，发现从句承载引文**: 范畴级概括后必须用 "For example" 或配对列举，把每个引文锚定到一个**带方向**的具体发现（increases / decreases / faster / slower）
+- **范畴句只做路牌，支持内容承载引文**：实证引文锚定方向/边界；理论引文锚定命题；review/meta 锚定共识或异质性；构念引文锚定定义/区分；情境引文锚定事实。
 - **方向对比显性化**: 方向相反的发现用 whereas/but 并列呈现——禁止压平为 "X 和 Y 都影响 Z" 式无方向类别句（见反模式"方向压平"）
-- **方向还原测试**: 任取一个引文，读者仅凭句中信息即可一句话说出该研究的发现方向；说不出 = 引文悬空，须补发现从句或删引文
+- **支持内容还原测试**：任取一个引文，读者能仅凭句中信息说出它支持什么。实证研究再做方向还原；非实证来源不得伪造方向性 finding。
 - **与逐篇综述的粒度边界**: 每流一个范畴句 + 每引文一个发现从句即止；不展开 "[Author] found that... Specifically, ..." 的逐篇段落（那是 Progressive 变体 B 的粒度）
 
 **适用**: Synthesized Coherence 的文献流内部呈现；区分型贡献（Constructs / Mechanism distinction）论文**强制使用**——方向对比是贡献的立论前提
@@ -141,7 +141,7 @@ P2 的功能：将 Hook 建立的注意力转化为学术对话。这不是文�
 
 ## 策略 3：Non-Coherence（冲突式）
 
-**适用**: Incommensurability
+**常见但非专属组合**: Incommensurability。只有真实文献存在可核查的冲突命题、预测或证据时使用。
 
 **核心逻辑**: "这两个理论分别预测了相反的结果，各自都有支持证据。它们不能同时正确——除非我们重新理解这个现象。"
 
@@ -174,10 +174,10 @@ P2 的功能：将 Hook 建立的注意力转化为学术对话。这不是文�
 > 以上是**默认对角线**，非"必须"。Coherence × Problematization 是 3×3 设计空间，非对角合法组合（如 Synthesized × Incompleteness 的 wowak2025、Progressive × Incommensurability 的 gamache2023）与可疑组合的判据见 `literature-turns/_index.md` 顶部 3×3 速查表与 `diagnose-introduction/references/intertextual-construction-playbook.md` §2。两轴独立选择，禁止由 Gap 类型反推 Coherence。
 
 ### 反模式提醒
-- **不要把 Literature Turn 写成完整文献综述**: P2 是过渡，不是文献回顾。2-3 句即可
+- **不要把 Literature Turn 写成完整文献综述**：它是对话定位而非逐篇回顾；篇幅服从文献流数量和期刊，不固定等于 P2 或机械限定 2-3 句。
 - **不要让 Hook 和 Literature Turn 脱节**: 必须在语义上连接（如 Hook 中的"反直觉现象"→ Lit Turn 中的"已有理论预测相反方向"）
 - **不要只引用自己导师的论文**: 展示文献广度
-- **不要把综合写成无发现锚点的范畴断言（citation lumping）**: ≥2 引文的句子若没有任何引文带独立发现从句，即为堆叠而非综合——综合的合格线是"任取一个引文，读者能还原该研究的发现方向"。修复：拆为发现锚定从句（变体 D），或删去无法说明发现的引文
+- **不要把综合写成无支持锚点的范畴断言（citation lumping）**：≥2 引文的句子必须说明它们共同或分别支持什么。真正支持同一共识时可合并，但需由 review/meta 或代表性证据验证；否则拆为角色匹配的支持从句。
 - **不要压平发现方向（direction flattening）**: 把方向相反的发现概括进 "X 和 Y 都影响 Z" 式无方向类别句，会删掉文献内部最关键的对比——对区分型贡献论文，这个对比往往正是贡献的立论前提。修复：恢复 whereas/but 对比结构，让每个发现的 valence 可见
 
 ---
@@ -206,4 +206,4 @@ P2 的功能：将 Hook 建立的注意力转化为学术对话。这不是文�
 
 ✅ "CEOs with greater stock ownership recall more slowly (C 2023), whereas boards with more female directors initiate severe recalls faster (D 2021)." → 每个引文锚定一个带方向的发现从句；方向对比由 whereas 显性呈现
 
-**填充检查**: ①方向还原——遮住其他引文，能否仅凭句中信息一句话说出某引文的发现方向？②引文-命题匹配——该引文的研究对象是否确实属于其所在句的命题范畴？两问皆"是"才合格；②答"否"时把引文移到它实际支持的命题句，或删除。
+**填充检查**：①角色识别——该来源是 empirical / theory / review-meta / construct / context 中哪一类？②支持内容还原——遮住其他引文，能否说出它支持什么？③实证方向还原——若为实证来源，能否还原方向或边界？④引文-命题匹配——研究对象与原文主张是否确属所在句？不匹配时移动或删除，禁止补写原文没有的方向。

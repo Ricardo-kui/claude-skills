@@ -10,7 +10,7 @@ Find `paper-state.yaml` in this order:
 
 Read canonical `story` first, followed by `introduction.theory_hints` and `introduction.contribution_contract`.
 
-If `story` is absent, use the sibling `paper-story-contract/references/schema.md` migration map. Legacy `central_knot_statement`, `core_constructs`, and `narrative_arc` are read-only migration inputs; emit a provisional canonical block and do not write those aliases again.
+If `story` is absent, use the sibling `../../paper-story-contract/references/schema.md` migration map. Legacy `central_knot_statement`, `core_constructs`, and `narrative_arc` are read-only migration inputs; emit a provisional canonical block and do not write those aliases again.
 
 ## Gate
 

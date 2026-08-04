@@ -1,9 +1,30 @@
 meta:
-  last_updated: '2026-08-02'
-  total_mvp30_papers_indexed: 49
-  batches_processed: 13
-  source: mvp30_index + 9_distill_files + path_B_confirmation + cui_yang_vertinsky_smj_distill + paruchuri_andrus_sullivan2026_amj_distill + li2025_jscm_distill + li2026_pom_distill + du_tsolmon2024_orsc_distill + lee_wu_bednar_orsc_18968_distill + reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc_distill
-  notes: '2026-07-08 added cui_yang_vertinsky (SMJ) distill: new hook 24-empirical-puzzle-after-consensus, updated 16-threefold-gap and 02-explicit-dual-question-narrowing. 2026-07-10 expanded cui_yang_vertinsky (SMJ) Introduction distill: added variant X to tensions/01-despite-progress-unaddressed, variant G to literature-turns/01-progressive-coherence, variant F to previews/mechanism-preview. 2026-07-14 distilled paruchuri_andrus_sullivan2026 (AMJ): added variant Y to tensions/01-despite-progress-unaddressed, variant C to hooks/09-psychological-construct-hook, variant G to previews/mechanism-preview, and new theory-lens/07-socio-cognitive-frame. 2026-07-22 distilled li_bapuji_talluri_singh_narayanan2025 (JSCM, Vertical Spillover of Product Recalls): added variant G (成对跨行业灾难实例化型) to hooks/03-data-shock; created new theory-lens/08-dual-metaphor-stream-reconciliation (单理论双隐喻调和双文献流, pipes/prisms reconciling categorization + supply chain propagation). 2026-07-22 distilled li_bapuji_talluri_singh_venkataraman2026 (POM, supply base geographical distance/dispersion): created new tensions/18-context-generalizability (WEIRD↔non-WEIRD gap); added li2026 as 7th source to tensions/05-construct-confusion (distance/dispersion conflation); paired methods slot-M3 context-customized-DV variant + results slot-R6 null-rescue variant. 2026-07-25 re-distilled wowak2025 (MS) Introduction (L2 gap-fill): verified 5 existing variants accurate (hooks/02 variant E epigraph-quote-pivot; tensions/14 variant B debate-unresolved from Theory; literature-turns/02 variant D synthesized-coherence; previews/findings-preview variant L dual-DV-competting-directions; transitions/12 variant A high-risk-high-reward setting-justification, sole source); filled sole gap by adding contributions/_index variant O (convergent dual-literature-scan + awareness-and-mitigation). Confirmed 2 known narrative risks: no explicit puzzle statement; Preview over-detailed (announces all post hoc results).'
+  last_updated: '2026-08-04'
+  total_mvp30_papers_indexed: 57
+  batches_processed: 22
+  latest_batch_note: '2026-08-04: distilled Lee and Park (2024, SMJ) as a strict R3-primary/R4-secondary Incommensurability exemplar. The Introduction symmetrically steelmans positive and negative failure-learning accounts, treats them as coexisting, and moves the unresolved question onto an accumulation-dependent dominance schedule. Added optional variants for symmetric two-stream dialogue, coexistence tension, and a joint-prerequisite turning-point preview; no core route or mandatory module changed.'
+  source: mvp30_index + 9_distill_files + path_B_confirmation + cui_yang_vertinsky_smj_distill + paruchuri_andrus_sullivan2026_amj_distill
+    + li2025_jscm_distill + li2026_pom_distill + du_tsolmon2024_orsc_distill + lee_wu_bednar_orsc_18968_distill + reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc_distill
+    + vidal_mitchell2015_orsc_distill + moon_tuli_mukherjee2023_jm_distill + schumacher_keck_tang2020_smj_distill + kashmiri_nicol_arora2017_jams_distill
+    + bendig_hensellek_schulte2024_etp_distill + anderson_reeb2004_asq_distill + lee_park2024_smj_distill
+  notes: '2026-07-08 added cui_yang_vertinsky (SMJ) distill: new hook 24-empirical-puzzle-after-consensus, updated 16-threefold-gap
+    and 02-explicit-dual-question-narrowing. 2026-07-10 expanded cui_yang_vertinsky (SMJ) Introduction distill: added variant
+    X to tensions/01-despite-progress-unaddressed, variant G to literature-turns/01-progressive-coherence, variant F to previews/mechanism-preview.
+    2026-07-14 distilled paruchuri_andrus_sullivan2026 (AMJ): added variant Y to tensions/01-despite-progress-unaddressed,
+    variant C to hooks/09-psychological-construct-hook, variant G to previews/mechanism-preview, and new theory-lens/07-socio-cognitive-frame.
+    2026-07-22 distilled li_bapuji_talluri_singh_narayanan2025 (JSCM, Vertical Spillover of Product Recalls): added variant
+    G (成对跨行业灾难实例化型) to hooks/03-data-shock; created new theory-lens/08-dual-metaphor-stream-reconciliation (单理论双隐喻调和双文献流,
+    pipes/prisms reconciling categorization + supply chain propagation). 2026-07-22 distilled li_bapuji_talluri_singh_venkataraman2026
+    (POM, supply base geographical distance/dispersion): created new tensions/18-context-generalizability (WEIRD↔non-WEIRD
+    gap); added li2026 as 7th source to tensions/05-construct-confusion (distance/dispersion conflation); paired methods slot-M3
+    context-customized-DV variant + results slot-R6 null-rescue variant. 2026-07-25 re-distilled wowak2025 (MS) Introduction
+    (L2 gap-fill): verified 5 existing variants accurate (hooks/02 variant E epigraph-quote-pivot; tensions/14 variant B debate-unresolved
+    from Theory; literature-turns/02 variant D synthesized-coherence; previews/findings-preview variant L dual-DV-competting-directions;
+    transitions/12 variant A high-risk-high-reward setting-justification, sole source); filled sole gap by adding contributions/_index
+    variant O (convergent dual-literature-scan + awareness-and-mitigation). Confirmed 2 known narrative risks: no explicit
+    puzzle statement; Preview over-detailed (announces all post hoc results). 2026-08-03 distilled schumacher_keck_tang2020
+    (SMJ): added Progressive-Coherence variant I for joining two mature streams through a necessary interpretive bottleneck,
+    and mechanism-preview variant K for formal-model-driven asymmetric feedback predictions plus threshold reversal.'
 evidence:
   hooks:
     01-cross-disciplinary-analogy:
@@ -55,7 +76,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     03-data-shock:
-      paper_count: 8
+      paper_count: 10
       papers:
       - darby2024 (MSOM)
       - darby2025 (JSCM)
@@ -64,9 +85,10 @@ evidence:
       - shi2021 (JMR)
       - vadakkepatt2022 (JM)
       - wu2025 (SMJ)
+      - ilicic_brennan2026 (JM)
       - li2025 (JSCM)
       gap_distribution:
-        Incompleteness: 8
+        Incompleteness: 9
         Inadequacy: 0
         Incommensurability: 0
       status: ROBUST
@@ -82,8 +104,9 @@ evidence:
         reject: 0
         common_revise_reasons: []
     04-puzzle-paradox:
-      paper_count: 7
+      paper_count: 8
       papers:
+      - anderson_reeb2004 (ASQ)
       - employee_free_speech (OS)
       - gamache2023 (SMJ)
       - han2024 (SMJ)
@@ -93,8 +116,8 @@ evidence:
       - singh2023 (JMR)
       gap_distribution:
         Incompleteness: 0
-        Inadequacy: 4
-        Incommensurability: 3
+        Inadequacy: 6
+        Incommensurability: 2
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: MEDIUM
@@ -106,7 +129,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     05-literature-consensus-blindspot:
-      paper_count: 9
+      paper_count: 10
       papers:
       - gamache2020 (SMJ)
       - han2020 (AMJ)
@@ -117,8 +140,9 @@ evidence:
       - singh2023 (JMR)
       - ahmadi2017 (JMS)
       - qiao2026 (SMJ)
+      - kashmiri_nicol_arora2017 (JAMS)
       gap_distribution:
-        Incompleteness: 3
+        Incompleteness: 4
         Inadequacy: 6
         Incommensurability: 0
       status: ROBUST
@@ -142,8 +166,8 @@ evidence:
       - zhou2017 (ASQ)
       gap_distribution:
         Incompleteness: 0
-        Inadequacy: 2
-        Incommensurability: 4
+        Inadequacy: 4
+        Incommensurability: 2
       status: ROBUST
       generativity: GENERATIVE
       exclusivity: HIGH
@@ -178,7 +202,7 @@ evidence:
       - mayo2021 (POM)
       - wu2025 (SMJ)
       gap_distribution:
-        Incompleteness: 2
+        Incompleteness: 3
         Inadequacy: 0
         Incommensurability: 0
       status: EMERGING
@@ -234,11 +258,12 @@ evidence:
         reject: 0
         common_revise_reasons: []
     10-practical-puzzle:
-      paper_count: 1
+      paper_count: 2
       papers:
       - ceo_regulatory_focus_ijrm (IJRM)
+      - moon_tuli_mukherjee2023 (JM)
       gap_distribution:
-        Incompleteness: 0
+        Incompleteness: 1
         Inadequacy: 1
         Incommensurability: 0
       status: EMERGING
@@ -546,9 +571,45 @@ evidence:
         revise: 0
         reject: 0
         common_revise_reasons: []
+    24-positive-trait-dark-side:
+      paper_count: 1
+      papers:
+      - chung_low_rust_2022_jams (JAMS)
+      gap_distribution:
+        Incompleteness: 0
+        Inadequacy: 1
+        Incommensurability: 0
+      status: EMERGING
+      generativity: GENERATIVE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    26-dyadic-contagion:
+      paper_count: 1
+      papers:
+      - pupovac2026 (POM)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 0
+        Incommensurability: 0
+      status: EMERGING
+      generativity: ADAPTABLE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
   tensions:
     01-despite-progress-unaddressed:
-      paper_count: 25
+      paper_count: 26
       papers:
       - darby2024 (MSOM)
       - darby2025 (JSCM)
@@ -575,8 +636,9 @@ evidence:
       - wang2023 (SMJ)
       - cui_yang_vertinsky_smj (SMJ)
       - paruchuri_andrus_sullivan2026 (AMJ)
+      - ilicic_brennan2026 (JM)
       gap_distribution:
-        Incompleteness: 25
+        Incompleteness: 26
         Inadequacy: 0
         Incommensurability: 0
       status: ROBUST
@@ -648,19 +710,23 @@ evidence:
         reject: 0
         common_revise_reasons: []
     04-reality-contradicts-consensus:
-      paper_count: 7
+      paper_count: 11
       papers:
+      - anderson_reeb2004 (ASQ)
+      - bendig_hensellek_schulte2024 (ETP)
       - gamache2023 (SMJ)
       - hahl2017 (ASR)
       - keeves2017 (ASQ)
       - kundro2023 (AMJ)
+      - lee_park2024 (SMJ)
       - park2025 (SMJ)
       - pontikes2012 (ASQ)
+      - vidal_mitchell2015 (OS)
       - zhou2017 (ASQ)
       gap_distribution:
         Incompleteness: 0
-        Inadequacy: 2
-        Incommensurability: 5
+        Inadequacy: 5
+        Incommensurability: 6
       status: ROBUST
       generativity: GENERATIVE
       exclusivity: HIGH
@@ -846,24 +912,6 @@ evidence:
         revise: 0
         reject: 0
         common_revise_reasons: []
-    09-resource-acquisition-vs-utilization:
-      paper_count: 1
-      papers:
-      - shen2022 (JOM)
-      gap_distribution:
-        Incompleteness: 0
-        Inadequacy: 1
-        Incommensurability: 0
-      status: EMERGING
-      generativity: ADAPTABLE
-      exclusivity: MEDIUM
-      common_failures: []
-      validation_history:
-        total_runs: 0
-        validated: 0
-        revise: 0
-        reject: 0
-        common_revise_reasons: []
     14-debate-unresolved:
       paper_count: 5
       papers:
@@ -978,24 +1026,41 @@ evidence:
         revise: 0
         reject: 0
         common_revise_reasons: []
+    20-opposite-predictions-positive-trait:
+      paper_count: 1
+      papers:
+      - chung_low_rust_2022_jams (JAMS)
+      gap_distribution:
+        Incompleteness: 0
+        Inadequacy: 1
+        Incommensurability: 0
+      status: EMERGING
+      generativity: GENERATIVE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
   stakes:
     01-general-theory-practice:
-      paper_count: 10
+      paper_count: 9
       papers:
       - hahl2017 (ASR)
       - han2020 (AMJ)
-      - keeves2017 (AMJ)
+      - jiang2026 (JIBS)
       - keeves2017 (ASQ)
       - kundro2023 (AMJ)
       - park2013 (ASQ)
       - pollock2015 (ASQ)
       - pontikes2012 (ASQ)
       - zhou2017 (ASQ)
-      - jiang2026 (JIBS)
       gap_distribution:
         Incompleteness: 3
-        Inadequacy: 2
-        Incommensurability: 5
+        Inadequacy: 4
+        Incommensurability: 2
       status: ROBUST
       generativity: GENERATIVE
       exclusivity: LOW
@@ -1048,11 +1113,12 @@ evidence:
         reject: 0
         common_revise_reasons: []
     04-public-health-safety:
-      paper_count: 1
+      paper_count: 2
       papers:
       - darby2023 (MSOM)
+      - ilicic_brennan2026 (JM)
       gap_distribution:
-        Incompleteness: 1
+        Incompleteness: 2
         Inadequacy: 0
         Incommensurability: 0
       status: EMERGING
@@ -1111,9 +1177,64 @@ evidence:
         revise: 0
         reject: 0
         common_revise_reasons: []
+    06-two-reason-enumerated:
+      paper_count: 2
+      papers:
+      - malik_wang_martin_gomezmejia2025 (JM)
+      - pollock2015 (ASQ)
+      gap_distribution:
+        Incompleteness: 2
+        Inadequacy: 0
+        Incommensurability: 0
+      status: EMERGING
+      generativity: GENERATIVE
+      exclusivity: LOW
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    08-goal-conflict:
+      paper_count: 1
+      papers:
+      - habel2016 (JM)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 0
+        Incommensurability: 0
+      status: EMERGING
+      generativity: GENERATIVE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    09-myopic-management-long-term-loss:
+      paper_count: 1
+      papers:
+      - chung_low_rust_2022_jams (JAMS)
+      gap_distribution:
+        Incompleteness: 0
+        Inadequacy: 1
+        Incommensurability: 0
+      status: EMERGING
+      generativity: ADAPTABLE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
   literature_turns:
     01-progressive-coherence:
-      paper_count: 22
+      paper_count: 24
       papers:
       - ceo_regulatory_focus_ijrm (IJRM)
       - darby2024 (MSOM)
@@ -1137,8 +1258,10 @@ evidence:
       - wowak2025 (MS)
       - wu2025 (SMJ)
       - cui_yang_vertinsky_smj (SMJ)
+      - schumacher_keck_tang2020 (SMJ)
+      - kashmiri_nicol_arora2017 (JAMS)
       gap_distribution:
-        Incompleteness: 16
+        Incompleteness: 18
         Inadequacy: 6
         Incommensurability: 0
       status: ROBUST
@@ -1178,21 +1301,25 @@ evidence:
         reject: 0
         common_revise_reasons: []
     03-non-coherence:
-      paper_count: 9
+      paper_count: 13
       papers:
+      - anderson_reeb2004 (ASQ)
+      - bendig_hensellek_schulte2024 (ETP)
       - gamache2023 (SMJ)
       - hahl2017 (ASR)
       - han2020 (AMJ)
       - keeves2017 (ASQ)
       - kundro2023 (AMJ)
+      - lee_park2024 (SMJ)
       - park2013 (ASQ)
       - park2025 (SMJ)
       - pontikes2012 (ASQ)
+      - vidal_mitchell2015 (OS)
       - zhou2017 (ASQ)
       gap_distribution:
         Incompleteness: 1
-        Inadequacy: 3
-        Incommensurability: 5
+        Inadequacy: 6
+        Incommensurability: 6
       status: ROBUST
       generativity: GENERATIVE
       exclusivity: HIGH
@@ -1205,18 +1332,22 @@ evidence:
         common_revise_reasons: []
   previews:
     mechanism-preview:
-      paper_count: 10
+      paper_count: 14
       papers:
-      - zhou2017 (ASQ)
-      - keeves2017 (ASQ)
-      - gamache2023 (SMJ)
-      - mannor2016 (SMJ)
-      - grewal2025 (JM)
-      - cui_yang_vertinsky_smj (SMJ)
-      - paruchuri_andrus_sullivan2026 (AMJ)
       - bamberger_homburg_wielgos2021 (JM)
+      - cui_yang_vertinsky_smj (SMJ)
+      - gamache2023 (SMJ)
+      - grewal2025 (JM)
+      - ilicic_brennan2026 (JM)
+      - kashmiri_nicol_arora2017 (JAMS)
+      - keeves2017 (ASQ)
+      - lee_park2024 (SMJ)
       - lee_wu_bednar_orsc_18968 (Organization Science)
+      - mannor2016 (SMJ)
+      - paruchuri_andrus_sullivan2026 (AMJ)
       - reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science)
+      - schumacher_keck_tang2020 (SMJ)
+      - zhou2017 (ASQ)
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: LOW
@@ -1227,8 +1358,12 @@ evidence:
         revise: 0
         reject: 0
         common_revise_reasons: []
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 2
+        Incommensurability: 2
     findings-preview:
-      paper_count: 43
+      paper_count: 42
       papers:
       - ceo_regulatory_focus_ijrm (IJRM)
       - darby2023 (MSOM)
@@ -1248,7 +1383,6 @@ evidence:
       - han2024 (AMP)
       - han2024 (SMJ)
       - haunschild2015 (OS)
-      - keeves2017 (AMJ)
       - keeves2017 (ASQ)
       - kundro2023 (AMJ)
       - lashley_pollock2020 (ASQ)
@@ -1284,9 +1418,9 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 18
-        Inadequacy: 15
-        Incommensurability: 6
+        Incompleteness: 20
+        Inadequacy: 20
+        Incommensurability: 2
     robustness-preview:
       paper_count: 1
       papers:
@@ -1332,6 +1466,7 @@ evidence:
     contribution-statements:
       paper_count: 46
       papers:
+      - ahmadi2017 (JMS)
       - ceo_regulatory_focus_ijrm (IJRM)
       - darby2023 (MSOM)
       - darby2024 (MSOM)
@@ -1350,7 +1485,7 @@ evidence:
       - han2024 (AMP)
       - han2024 (SMJ)
       - haunschild2015 (OS)
-      - keeves2017 (AMJ)
+      - kashmiri_nicol_arora2017 (JAMS)
       - keeves2017 (ASQ)
       - kim2022 (MS)
       - kundro2023 (AMJ)
@@ -1366,6 +1501,7 @@ evidence:
       - pfarrer2010 (AMJ)
       - pollock2015 (ASQ)
       - pontikes2012 (ASQ)
+      - qiao2026 (SMJ)
       - shen2022 (JOM)
       - shi2021 (JMR)
       - shipilov2020 (SMJ)
@@ -1376,8 +1512,6 @@ evidence:
       - wu2025 (SMJ)
       - zhao_ding2022 (OS)
       - zhou2017 (ASQ)
-      - ahmadi2017 (JMS)
-      - qiao2026 (SMJ)
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: LOW
@@ -1390,8 +1524,8 @@ evidence:
         common_revise_reasons: []
       gap_distribution:
         Incompleteness: 20
-        Inadequacy: 15
-        Incommensurability: 6
+        Inadequacy: 20
+        Incommensurability: 2
     three-layer-contribution:
       paper_count: 1
       papers:
@@ -1452,6 +1586,7 @@ evidence:
     theory-lens-templates:
       paper_count: 43
       papers:
+      - anderson_reeb2004 (ASQ)
       - ceo_regulatory_focus_ijrm (IJRM)
       - darby2023 (MSOM)
       - darby2024 (MSOM)
@@ -1470,7 +1605,6 @@ evidence:
       - han2024 (AMP)
       - han2024 (SMJ)
       - haunschild2015 (OS)
-      - keeves2017 (AMJ)
       - keeves2017 (ASQ)
       - kundro2023 (AMJ)
       - lashley_pollock2020 (ASQ)
@@ -1506,9 +1640,9 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 18
-        Inadequacy: 15
-        Incommensurability: 6
+        Incompleteness: 20
+        Inadequacy: 20
+        Incommensurability: 3
     07-socio-cognitive-frame:
       paper_count: 1
       papers:
@@ -1563,29 +1697,73 @@ evidence:
         revise: 0
         reject: 0
         common_revise_reasons: []
-
-# Phrasebank evidence (auxiliary 层，Morley 收割，不计入 total_mvp30_papers_indexed)
-# 退役规则：某功能一旦被顶刊蒸馏覆盖，对应条目从此处及 phrasebank/ 文件同时删除。
 phrasebank:
   layer: auxiliary
-  source: "Morley, J. (2021). Academic Phrasebank (3rd ed.). University of Manchester."
-  note: "auxiliary 措辞层，非 MVP30 顶刊蒸馏；paper_count 不适用（不计数）"
+  source: Morley, J. (2021). Academic Phrasebank (3rd ed.). University of Manchester.
+  note: auxiliary 措辞层，非 MVP30 顶刊蒸馏；paper_count 不适用（不计数）
   files:
     hedging-strength:
-      source_chapter: "Ch.07 Being Cautious"
+      source_chapter: Ch.07 Being Cautious
       status: EMERGING
       risk_level: needs-context
-      note: "强度阶梯库；与 prose-craft-checklist §5.6/§5.7 闭环（选短语→校验强度）"
+      note: 强度阶梯库；与 prose-craft-checklist §5.6/§5.7 闭环（选短语→校验强度）
     critique-phrases:
-      source_chapter: "Ch.08 Being Critical"
+      source_chapter: Ch.08 Being Critical
       status: EMERGING
       risk_level: needs-context
-      note: "单研究批判；与 tensions（对话级批判）分工；specificity gate 极严"
+      note: 单研究批判；与 tensions（对话级批判）分工；specificity gate 极严
     methods-process:
-      source_chapter: "Ch.03 Describing Methods"
+      source_chapter: Ch.03 Describing Methods
       status: EMERGING
       risk_level: needs-context
     quantities-trends:
-      source_chapter: "Ch.13 Quantities + Ch.12 Trends"
+      source_chapter: Ch.13 Quantities + Ch.12 Trends
       status: EMERGING
       risk_level: needs-context
+paper_index:
+  anderson_reeb2004: Incommensurability
+  ceo_regulatory_focus_ijrm: Inadequacy
+  darby2024: Incompleteness
+  eilert2017: Incompleteness
+  han2020: Inadequacy
+  han2024: Inadequacy
+  keeves2017: Inadequacy
+  kundro2023: Inadequacy
+  lashley_pollock2020: Inadequacy
+  lovelace2021: Inadequacy
+  park2013: Incompleteness
+  park2025: Inadequacy
+  paruchuri2020: Inadequacy
+  pollock2015: Incompleteness
+  pontikes2012: Incommensurability
+  shen2022: Inadequacy
+  shi2021: Incompleteness
+  shipilov2020: Inadequacy
+  singh2023: Inadequacy
+  toh2023: Incompleteness
+  wu2025: Incompleteness
+  zhao_ding2022: Incompleteness
+  zhou2017: Incommensurability
+  employee_free_speech: Inadequacy
+  malshe2015: Incompleteness
+  gamache2020: Inadequacy
+  gamache2023: Inadequacy
+  hahl2017: Inadequacy
+  desjardine2023: Incompleteness
+  darby2025: Incompleteness
+  darby2026: Incompleteness
+  desai2012: Incompleteness
+  lehman2014: Incompleteness
+  mannor2016: Incompleteness
+  mayo2021: Incompleteness
+  pfarrer2010: Inadequacy
+  vadakkepatt2022: Incompleteness
+  wowak2025: Incompleteness
+  gomulya2019: Inadequacy
+  employee_free_speech2024: Inadequacy
+  haunschild2015: Incompleteness
+  darby2023: Incompleteness
+  vidal_mitchell2015: Incommensurability
+  jiang2026: Incompleteness
+  bendig_hensellek_schulte2024: Incommensurability
+  lee_park2024: Incommensurability

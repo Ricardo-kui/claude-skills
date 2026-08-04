@@ -1,464 +1,212 @@
 ---
 type: validator
 canonical_id: "theory-post-generation-validator"
-source: "Pollock 2025 Ch02-Ch06"
+source: "Pollock 2025 Ch02-Ch06 + reasoning soundness protocol"
 created: 2026-06-01
-version: 1.0.0
+updated: 2026-08-03
+version: 2.0.0
 ---
 
-# Theory 后生成验证器
+# Theory 后生成验证器 v2
 
-## 触发条件
+## 目的与触发
 
-在 `write-theory` 输出完整的 Theory & Hypotheses 骨架后，**必须**运行本验证器。验证不通过时，输出 ⚠️ 警告并给出修复指令；严重失败（❌）时，拒绝输出并要求修复。
+完整 Theory & Hypotheses 骨架生成后必须执行。本验证器审查故事连续性、构念清晰度、机制解释力、条件化、假设可检验性与跨章节契约。它不按关键词、固定段落数、变量数量或修辞配额替代理论判断。
 
-**前置输入**：`write-introduction` 验证器的输出（`central_knot_statement`、`protagonist_construct`、`narrative_stage_sequence`、`knot_coverage`）。如果上游验证未通过，本验证器优先报告上游问题。
+状态：
 
----
+- **PASS**：关键条件满足。
+- **WARN**：可以输出，但须标出局限与修复建议。
+- **FAIL**：故事契约、核心推理或假设形式存在会使后续 Methods/Results 失真的问题；修复后再写入 paper-state。
+- **N/A**：该检查不适用，必须说明理由。
 
-## 验证 1：Knot 继承（二进制）
+## 规范输入
 
-**问题**：Theory P1 是否承接了 Introduction 的 central knot？
+优先读取：
 
-**判断标准**（必须满足至少 1 条）：
-- [ ] Theory P1 包含 `central_knot_statement` 的 ≥1 个关键词
-- [ ] Theory P1 包含明确的 knot 承接信号词："To resolve..."/"Building on..."/"To address..."/"为了解释..."/"为了解决..."
-- [ ] Theory P1 的 `protagonist_construct` 与 Introduction 的 `protagonist_construct` 一致
-
-**关键词匹配算法**：
-```
-keywords = extract_noun_phrases(introduction.central_knot_statement)
-P1_text = theory.paragraph_1
-
-match_count = sum(1 for kw in keywords if kw in P1_text)
-if match_count >= 1:
-    mark "关键词匹配"
-elif any(signal in P1_text for signal in ["To resolve", "Building on", "To address", "为了解释", "为了解决"]):
-    mark "信号词匹配"
-elif theory.protagonist_construct == introduction.protagonist_construct:
-    mark "主角一致"
-else:
-    mark "FAIL"
-```
-
-**输出**：
-- ✅ **PASS**：Theory P1 继承了 Introduction 的 knot
-  - **证据**：`P1 包含关键词 "[关键词]" / 信号词 "[信号词]" / 主角 "[主角]"`
-- ❌ **FAIL**：Theory P1 未继承 knot
-  - **修复指令**：在 P1 开头添加 `"To resolve the tension that [knot 简化版], we theorize that..."`
-
----
-
-## 验证 2：叙事阶段完整性（四阶段检查）
-
-**问题**：Theory 是否完整经历了 Knot Inheritance → Deepening → Tying（最后假设自然收敛进入 METHODS）？
-
-**阶段判定**（每段必须满足至少 1 条标准）：
-
-| 阶段 | 段落位置 | 判定标准（满足任一） |
-|------|---------|---------------------|
-| **Knot Inheritance** | P1 | 包含 knot 承接信号词 + 主角构念定义 |
-| **Knot Deepening** | P2-P3 | 包含理论透镜引入 + 机制预览（非独立文献综述段） |
-| **Knot Tying** | P4-P(N) | 包含假设推导段落（why chain + hypothesis statement），最后假设自然收敛进入 METHODS |
-
-> **管理学惯例**: 不要求独立的 "Knot Fully Tied" 段落（非 Pollock 教科书的 T6 Closure）。理论部分的自然终点是最后一个假设。不要求独立的"文献对话"段落——文献回顾应嵌入构念定义和 why-chain 推导中。
-
-**三阶段完整性检查**：
-- [ ] P1 被判定为 Knot Inheritance
-- [ ] 存在至少 1 段被判定为 Knot Deepening
-- [ ] 存在至少 1 段被判定为 Knot Tying（每个假设有 why chain）
-- [ ] 阶段顺序：Inheritance → Deepening → Tying（无倒退，自然进入 METHODS）
-
-**阶段倒退检测**：
-```
-stages = ["Inheritance", "Deepening", "Tying"]  # 管理学三阶段，无独立的 Fully Tied
-for i in range(1, len(stages)):
-    if stages[i] < stages[i-1]:
-        mark "阶段倒退"
+```yaml
+story:
+  central_knot: ...
+  protagonist: ...
+  contribution_claims: [...]
+  storylines:
+    - id: ...
+      question: ...
+      promised_mechanism: ...
+theory:
+  paragraphs:
+    - id: P1
+      dominant_function: knot_inheritance | construct_definition | mechanism | boundary | competing_logic | hypothesis_derivation
+      text: ...
+  constructs: [...]
+  hypotheses:
+    - id: H1
+      storyline_id: ...
+      statement: ...
+      derivation_paragraphs: [...]
+  mechanism_chains: [...]
 ```
 
-**输出**：
-- ✅ **PASS**：三阶段完整且顺序正确，最后假设后自然进入 METHODS
-- ⚠️ **WARNING**：缺少某个阶段或阶段顺序不完整
-  - 缺少 Deepening → 补充理论透镜引入或机制预览（非文献综述段落）
-  - 缺少 Tying → 补充假设推导段落（含 why chain）
-  - 注意：不要求独立的 Closure 段落——管理学 Theory 以最后假设为终点
-- ❌ **FAIL**：阶段倒退（如 Deepening 后回到 Inheritance）
-  - **修复指令**：调整段落顺序，确保阶段单调推进
+旧字段（如 `central_knot_statement`、`protagonist_construct`）只能经 `paper-story-contract` 的 migration map 临时迁移；验证输出和 paper-state 只写 canonical `story`。没有 canonical story 时，只允许 local-only 诊断，不更新 paper-state。
 
----
+## 验证 1：Story contract 与 storyline 绑定
 
-## 验证 3：Plot Emergence（逐假设检查）
+检查：
 
-**问题**：每个假设是否从构念定义中自然浮现，而非被强加？
+- Theory 开篇是否继承 `story.central_knot` 的实质问题，而非仅重复相同词语？
+- protagonist、核心关系与 contribution claims 是否一致？
+- 每个 H/Proposition 是否有有效 `storyline_id`？
+- 新增主角、结果或理论承诺是否已更新 story contract？
+- Theory 的段落功能是否总体呈现 knot inheritance → deepening → tying；不要求固定 P1/P2–P4 槽位。
 
-**Plot 先于 Story 的检测标准**（满足任一即标记 ⚠️）：
-- [ ] 假设推导段落中出现了**未在 P2-P4 构念定义段落中定义的构念**
-- [ ] 假设中的构念名称与 P2-P4 的定义中的构念名称不一致（如定义用 X，假设用 X'）
-- [ ] 假设推导段落包含"为了解释...""为了得到..."等目的论表述（暗示先确定假设方向再构造理论）
-- [ ] 同一个构念在 P2-P4 和 P5-PN 中的定义/scope 不一致
+判定：缺 story 或孤立假设为 FAIL；措辞不同但实质一致不扣分；只靠承接信号词不能 PASS。
 
-**检测算法**：
-```
-# 提取 P2-P4 中定义的所有构念
-defined_constructs = extract_defined_constructs(P2-P4)
+## 验证 2：构念角色、顺序与清晰度
 
-# 检查每个假设推导段落
-for paragraph in P5-P(N-1):
-    used_constructs = extract_constructs(paragraph)
-    undefined = used_constructs - defined_constructs
-    if len(undefined) > 0:
-        mark "未定义构念: {undefined}"
-    
-    if any(phrase in paragraph for phrase in ["为了解释", "为了得到", "为了验证"]):
-        mark "目的论表述"
-    
-    for construct in used_constructs:
-        if definition_in_P2_P4(construct) != usage_in_paragraph(construct):
-            mark "构念定义不一致: {construct}"
+对每个核心构念记录：
+
+| 构念 | 角色 | 层级 | Definition | Scope | Lineage | Adjacent differentiation | 新构念 justification |
+|------|------|------|------------|-------|---------|--------------------------|----------------------|
+
+规则：
+
+- 主角先于依赖它才能理解的机制/边界出场；实际顺序按理论任务动态决定。
+- 定义不得循环，也不得把 antecedent 或 consequence 写进定义。
+- 跨层关系必须说明 focal unit、nesting 与传递机制。
+- 新构念缺 definition、differentiation 或 justification 任一项为 FAIL；既有构念缺必要 scope 为 WARN/FAIL，取决于是否改变预测。
+
+## 验证 3：Hypothesis derivation trace
+
+为每个假设建立 trace：
+
+```text
+理论前提 → 行动者/过程状态变化 → 结果或条件预测 → 正式假设
 ```
 
-**输出**：
-- ✅ **PASS**：所有假设中的构念均在 P2-P4 中定义，无目的论表述，无定义不一致
-- ⚠️ **WARNING**：N 个假设存在 Plot 先于 Story 风险
-  - **修复指令**：
-    - 未定义构念 → 在 P2-P4 中补充定义，或将该构念降级为控制变量
-    - 目的论表述 → 改为因果推理句式（"Because X leads to Y..."）
-    - 定义不一致 → 统一构念定义
-- ❌ **FAIL**：≥2 个假设严重违背 Plot Emergence（构念未定义 + 目的论 + 定义不一致）
-  - **修复指令**：回到 P2-P4 重新梳理构念定义，确保所有假设构念都先定义后推导
+一个 reasoning move 是有内容、可质疑的推理转换，不是变量数、箭头数、连接词数或同义改写。检查：
 
----
+- 是否至少有足够的 moves 将前提连接到预测（常见最低为 2；简单但充分的链不因未满固定数字失败）？
+- 每个 move 的 warrant/证据承担什么功能？
+- 相邻 moves 是否遗漏必要的行动者、层级或时间转换？
+- 假设句是否确实由 trace 收敛，而非在最后改变方向、形状或条件？
 
-## 验证 4：Extraneous Storyline（逐段检查）
+只列 findings、模型变量或引用为 FAIL。连接词存在不等于推理成立。
 
-**问题**：每个段落是否服务于 central knot？
+## 验证 4：机制必要性与可区分性
 
-**逐段判断标准**（满足任一即算"服务于 knot"）：
-- [ ] 段落包含 `central_knot_statement` 的 ≥1 个关键词
-- [ ] 段落包含主角构念（`protagonist_construct`）
-- [ ] 段落包含配角构念（`supporting_constructs`）
-- [ ] 段落包含 why chain 推理（"Consequently"/"This leads to"/"Thus"）
-- [ ] 段落包含假设陈述（"We hypothesize"/"H1:"）
-- [ ] 段落包含 T6 总结信号词（"In sum"/"Together"）
+对声称贡献的每条机制执行三问：
 
-**Extraneous 判定**：如果段落不满足以上任何一条 → 标记为 Extraneous
+1. 领域内更简单或主流的机制能否推出同一核心预测？
+2. 本机制是否导出至少一个额外、可区分的预测（边界、时间、结果维度、非线性、行动者差异等）？
+3. 删除本机制后，故事和假设是否几乎不变？
 
-**检测算法**：
-```
-keywords = extract_noun_phrases(introduction.central_knot_statement)
-protagonist = introduction.protagonist_construct
-supporting = introduction.supporting_constructs
+判定：
 
-for i, paragraph in enumerate(theory.paragraphs):
-    serves_knot = False
-    
-    if any(kw in paragraph for kw in keywords):
-        serves_knot = True
-    elif protagonist in paragraph:
-        serves_knot = True
-    elif any(s in paragraph for s in supporting):
-        serves_knot = True
-    elif any(signal in paragraph for signal in ["Consequently", "This leads to", "Thus", "We hypothesize", "In sum", "Together"]):
-        serves_knot = True
-    
-    if not serves_knot:
-        mark f"P{i+1} 可能为 Extraneous"
-```
+- 三问均显示机制做了独特理论工作 → PASS。
+- 机制增强解释但尚无可区分预测 → WARN，并将“机制贡献”降级为解释性补充。
+- 删除后无影响或只是给路径改名 → FAIL；删掉装饰性机制或重建预测。
 
-**输出**：
-- ✅ **PASS**：所有段落服务于 knot
-- ⚠️ **WARNING**：N 个段落可能为 Extraneous
-  - **修复指令**：
-    - 如果段落是文献综述但与 knot 无直接联系（不衔接到 why-chain）→ 压缩或删除
-    - 如果段落讨论理论背景但与假设推导无关 → 移至附录或脚注
-    - 如果段落是控制变量讨论 → 移至 Methods
-- ❌ **FAIL**：≥2 个段落完全与 knot 无关
-  - **修复指令**：删除无关段落，或将其中构念降级为控制变量
+同时检查最弱前提与替代机制，具体按 `../subprotocols/reasoning_soundness_protocol.md` 输出 Soundness Card。
 
----
+## 验证 5：Conditionality 与 boundary gate
 
-## 验证 5：角色一致性（跨 Section 检查）
+在审查主效应及每个 moderator 前回答：
 
-**问题**：Theory 中的角色是否与 Introduction 一致？
+1. 核心机制是否有理论依据在声明 scope 内稳定运作？
+2. 是否有条件改变暴露、注意、能力、动机、解释或约束？
+3. 该条件是否改变预测的方向、强度、形状或有效性？
+4. 去掉条件后，仍能推出有内容的平均关系吗？
 
-**检查项**（二进制）：
-- [ ] Theory 的核心 DV/IV 与 Introduction 的 `protagonist_construct` 一致
-- [ ] Theory 中的调节/中介变量与 Introduction 的 `supporting_constructs` 一致（±1 个容忍）
-- [ ] Theory 未引入 Introduction 未提及的新"主角"（核心构念）
+决策：
 
-**新主角检测**：
-```
-theory_protagonists = extract_core_constructs(theory)
-intro_protagonist = introduction.protagonist_construct
+- 1=是、4=是：主效应可作 trunk；边界假设按需增加。
+- 2–3=是、4=否：条件关系必须是主预测；无条件主效应仅可作为有依据的基线。
+- 2 或 3 无依据：moderator 为装饰性变量，FAIL。
+- 识别出边界不等于必须新增假设；若不在贡献与设计范围内，可写 scope condition，并记录未检验边界。
 
-new_protagonists = theory_protagonists - {intro_protagonist}
-if len(new_protagonists) > 0:
-    mark "新主角未在 Introduction 中预告: {new_protagonists}"
-```
+## 验证 6：假设形式、可检验性与竞争逻辑
 
-**输出**：
-- ✅ **PASS**：角色一致
-- ⚠️ **WARNING**：新配角 ±1 个容忍范围内
-  - **修复指令**：确认新配角是否必要；如必要，在 Introduction Preview 中补充预告
-- ❌ **FAIL**：新主角未在 Introduction 中预告
-  - **修复指令**：
-    - 如果新主角是 knot 的核心 → 回到 Introduction 补充预告
-    - 如果新主角不是核心 → 降级为配角或控制变量
+每个 H/Proposition 检查：
 
----
+- IV/DV 或比较对象明确；方向、形状、条件、时间窗和分析层级按需明确。
+- 形式与构念类型和测量尺度匹配；不把 differential validity 写成 differential prediction。
+- 理论关系与拟检验关系一致；统计实现留给 write-methods。
+- 反命题具有可争辩性；纯主题、显然事实或伪争议不得作为假设。
+- 竞争假设公平呈现双方的强版本，并能由设计裁决。
 
-## 验证执行流程
+收敛语句按语境判断：单向推导可用 `Therefore/Accordingly`；竞争预测应用 `Given these competing arguments...` 等并列信号。不要仅用关键词扫描判定。
 
-```
-Step 1: 检查上游验证状态
-    └── introduction.validation_status == "fail" → ❌ 停止，报告上游问题
-    └── introduction.validation_status == "warning" → ⚠️ 继续，标注上游警告
-    └── introduction.validation_status == "pass" → ✅ 继续
+## 验证 7：段落功能与 prose 风险
 
-Step 2: 运行验证 1（Knot 继承）
-    └── ❌ FAIL → 停止输出，给出 P1 修复指令
-    └── ✅ PASS → 继续
+按 `dominant_function` 动态审查每段，而非假定固定 P2–P4：
 
-Step 3: 运行验证 2（叙事阶段完整性）
-    └── ❌ FAIL → 停止输出，给出阶段修复指令
-    └── ⚠️ WARNING → 继续输出，标注阶段问题
-    └── ✅ PASS → 继续
+- 每段是否有一个主导理论任务？
+- topic sentence 是否尽早给出本段主张，证据是否服务于该主张，段末是否完成推理或过渡？
+- 是否出现 references/data/variable lists/diagram/hypotheses as theory？
+- 是否有 burying the lead、sentence stuffing、read-my-mind、术语漂移或防御性技术说明文风？
+- concrete illustration 是否在跨层、反直觉或抽象处真正降低理解负担？
 
-Step 4: 运行验证 3（Plot Emergence）
-    └── ❌ FAIL → 停止输出，给出假设重构指令
-    └── ⚠️ WARNING → 继续输出，标注 Plot 风险
-    └── ✅ PASS → 继续
+词数、15/30 词阈值、stroke/glide 比例、例子数量均为诊断提示，不是自动 FAIL 条件。没有例子不自动失败；用案例替代理论或证据则失败。
 
-Step 5: 运行验证 4（Extraneous Storyline）
-    └── ❌ FAIL → 停止输出，给出段落删除/降级指令
-    └── ⚠️ WARNING → 继续输出，标注无关段落
-    └── ✅ PASS → 继续
+## 验证 8：跨假设机制映射
 
-Step 6: 运行验证 5（角色一致性）
-    └── ❌ FAIL → 停止输出，给出角色对齐指令
-    └── ⚠️ WARNING → 继续输出，标注角色差异
-    └── ✅ PASS → 继续
+适用于多个假设共享 trunk 的结构。先为 trunk 机制赋 ID，再记录：
 
-Step 7: 运行验证 6（Prose Craft 层）
-    └── ⚠️ WARNING → 继续输出，在"提醒"中标注 prose 问题
-    └── ✅ PASS → 继续
+| 假设 | 使用/改变的机制 ID | 作用点 | 方向 | 未触及机制的处理 | 可区分预测 |
+|------|-------------------|--------|------|------------------|------------|
 
-Step 8: 运行验证 7（Ch04 病理层）
-    └── ⚠️ WARNING → 继续输出，在"提醒"中标注病理问题
-    └── ✅ PASS → 继续
+规则：
 
-Step 9: 运行验证 8（跨假设机制复用一致性）
-    └── 跳过条件：单假设/单机制论文（无 trunk+branches 结构）→ 直接进 Step 10
-    └── ❌ FAIL → 停止输出，给出假设树重构指令（碎片化）
-    └── ⚠️ WARNING → 继续输出，标注机制复用缺口
-    └── ✅ PASS → 继续
+- 后续假设必须明确回到它实际使用或改变的 trunk 机制。
+- **不要求**每个 moderator 复用 trunk 的全部机制。选择性改变一条路径常常正是理论贡献。
+- 选择性复用时须解释为什么该条件作用于这条机制而非另一条；未触及路径只有在会影响净预测时才需显式处理。
+- 若文字声称“改变整个关系”却只论证一条路径，或净方向无法从路径组合推出，为 FAIL。
 
-Step 10: 汇总输出
-    - 输出验证结果表
-    - 如果有 ❌ → 输出"修复指令"并要求用户修复后重新生成
-    - 如果无 ❌ 但有 ⚠️ → 输出骨架 + 警告 + 修复建议
-    - 如果全部 ✅ → 输出骨架 + "Theory 叙事层验证通过"
-```
+## 验证 9：跨 Section 契约与 paper-state
 
----
+检查 Introduction → Theory → Methods/Results 的接口：
+
+- 每个 contribution claim 是否有 Theory 模块承担？
+- 每个 promised mechanism/boundary 是否被实现或显式修订？
+- construct 名称、角色、层级、关系形式是否稳定？
+- figure 中每条路径是否标 hypothesis ID？
+- `paper-state.yaml` 中每个 hypothesis 是否含 `storyline_id`、statement、construct roles、relationship form 与 mechanism mapping？
+
+未解决的契约冲突为 FAIL；仅措辞差异为 WARN/修订建议。
 
 ## 输出格式
 
 ```markdown
-### Theory 叙事层自动验证结果
+### Theory 后生成验证
 
-**上游输入**：
-- `central_knot_statement`: "[句子]"
-- `protagonist_construct`: "[构念]"
-- `supporting_constructs`: ["构念1", "构念2"]
+| # | 检查 | 状态 | 证据（段落/假设） | 诊断 | 最小修复 |
+|---|------|------|------------------|------|----------|
+| 1 | Story contract | PASS/WARN/FAIL | [...] | [...] | [...] |
+| 2 | Construct clarity | ... | ... | ... | ... |
+| 3 | Derivation trace | ... | ... | ... | ... |
+| 4 | Mechanism necessity | ... | ... | ... | ... |
+| 5 | Conditionality | ... | ... | ... | ... |
+| 6 | Hypothesis form | ... | ... | ... | ... |
+| 7 | Paragraph/prose | ... | ... | ... | ... |
+| 8 | Cross-H mechanism map | ... | ... | ... | ... |
+| 9 | Cross-section contract | ... | ... | ... | ... |
 
-| 验证项 | 结果 | 证据 | 修复指令 |
-|--------|------|------|---------|
-| Knot 继承 | ✅/⚠️/❌ | P1 包含 "[关键词/信号词]" | [如有] |
-| 叙事阶段完整性 | ✅/⚠️/❌ | [阶段序列] | [如有] |
-| Plot Emergence | ✅/⚠️/❌ | [假设检查详情] | [如有] |
-| Extraneous Storyline | ✅/⚠️/❌ | [无关段落列表] | [如有] |
-| 角色一致性 | ✅/⚠️/❌ | [角色对比] | [如有] |
-| Prose Craft 层 | ✅/⚠️ | [Human Face / Showing / Voice 检查结果] | [如有] |
-| Ch04 病理层 | ✅/⚠️ | [Burying the lead / Stuffing / Read my mind 检查结果] | [如有] |
-| 跨假设机制复用一致性 | ✅/⚠️/❌/— | [trunk 机制全集 + 各假设回到的子集；或 —（单假设论文跳过）] | [如有] |
-
-**结论**：[全部通过 / 有警告 / 需修复]
+**总状态**：[PASS / WARN / FAIL]
+**最高优先级修复**：[只列最能恢复理论有效性的一项]
+**paper-state**：[可写入 / 暂停写入及原因]
 ```
 
----
+## 修复优先级
 
-## 与 Introduction 验证器的接口
+1. story/lineage 和孤立假设；
+2. 推理断裂、装饰性机制、无依据主效应或 moderator；
+3. 假设形式与测量/层级不匹配；
+4. 跨假设、图和跨章节不一致；
+5. 段落节奏与措辞。
 
-本验证器消费 `write-introduction` 验证器的输出：
+不得用 prose 润色掩盖前四类问题。
 
-```yaml
-validation_input:
-  central_knot_statement: "[Introduction 验证后的 knot]"
-  protagonist_construct: "[Introduction 验证后的主角]"
-  supporting_constructs: ["[配角1]", "[配角2]"]
-  narrative_stage_sequence:
-    - P1: "Exposition"
-    - P2: "Early Rising Action"
-    - ...
-  validation_status: "[pass / warning / fail]"
-```
+## 更新日志
 
-如果 `validation_status == "fail"`，本验证器直接输出：
-> "上游 Introduction 验证未通过，请先修复 Introduction 的 narrative continuity 问题。"
-
----
-
-## 跨 Section 联合验证
-
-当 Introduction 和 Theory 都验证通过后，可以运行**跨 Section 联合验证**：
-
-| 联合检查项 | Introduction 状态 | Theory 状态 | 联合结论 |
-|-----------|------------------|------------|---------|
-| Knot 连续性 | ✅ 已诊断 | ✅ 已继承 | ✅ 连续 |
-| 角色连续性 | ✅ 已定位 | ✅ 一致 | ✅ 连续 |
-| 叙事阶段连续性 | ✅ Exposition→Denouement Preview | ✅ Inheritance→Deepening→Tying | ✅ 连续 |
-| Plot 自然浮现 | — | ✅ 无强加 | ✅ 自然 |
-| Extraneous 检测 | — | ✅ 无无关 | ✅ 紧凑 |
-
-**联合输出**：
-```markdown
-### 跨 Section 叙事连续性验证
-
-| 检查维度 | Introduction | Theory | 联合结论 |
-|---------|-------------|--------|---------|
-| Knot 连续性 | ✅ | ✅ | ✅ |
-| 角色连续性 | ✅ | ✅ | ✅ |
-| 叙事阶段 | ✅ | ✅ | ✅ |
-| Plot Emergence | — | ✅ | ✅ |
-| Extraneous | — | ✅ | ✅ |
-
-**整体评估**：✅ 叙事层验证全部通过。Introduction 和 Theory 在 narrative continuity 上一致。
-```
-
----
-
-## 验证 6：Prose Craft 层（Pollock Ch03）
-
-### 6a: Human Face 检查
-- [ ] P1 包含 >=1 个具体场景或 actor？
-- [ ] P2-P4 每个新构念有 >=1 个具体例子？
-- 检测：提取各段落中的专有名词；P1 专有名词 = 0 → ⚠️ "Theory P1 缺少 Human Face"
-
-### 6b: Showing vs Telling 检查
-- [ ] 无连续 2 句纯抽象推理？
-- [ ] 每个假设推导段落有 >=1 个 concrete illustration 或比喻？
-- 检测：扫描假设推导段落，标记纯抽象句子（无数字/无案例/无比喻）
-
-### 6c: Conversational Voice 检查
-- [ ] 无 "It is argued that" / "It is hypothesized that" / "The literature suggests that"？
-- [ ] 假设推导以 "We argue/hypothesize" 开头（非 "It is hypothesized that"）？
-- [ ] 无 inflated symbolism？
-- 检测：正则匹配禁用词表
-
-### 6d: Paragraph Architecture 检查（PEEL + Length）
-- [ ] 每个 Theory 段落都有明确的 Point（topic sentence）？
-- [ ] Point 后跟随 Evidence（文献/数据/案例）而非连续抽象推理？
-- [ ] Evidence 后有 Explanation，说明其对 central knot 的贡献？
-- [ ] 段末或段首有 Link，明确与前后段的关系？
-- [ ] 段落长度在 150–350 词之间？（skill 经验阈值；Pollock Ch03 只给 section 级页数，未给段落词数）
-- **检测**:
-  - 提取每段首句，检查是否包含核心判断信号词（"argue" / "show" / "hypothesize" / "challenge" / "extend" / "propose"）
-  - 统计每段词数：< 100 词 → ⚠️ "段落过短，可能缺少 evidence/explanation"
-    - > 350 词 → ⚠️ "段落过长，可能包含多个论点，建议拆分"
-  - 检查段中是否同时存在 evidence（引用/数据/案例）和 explanation（因果推理/机制说明）
-- **修复指令**:
-  - 缺少 Point → 重写段首句为核心判断句
-  - 缺少 Evidence → 补充具体文献、数据或案例
-  - 缺少 Explanation → 添加 "This matters because..." / "Consequently..." 类解释
-  - 段落过长 → 按论点拆分，每段只讲一个 point
-
----
-
-## 验证 7：Ch04 病理层（Pollock Ch04）
-
-> **数字阈值归属说明**：本节所用"15 词"/"30 词"/"200 词"等具体数字为 **skill 操作化阈值**（把 Pollock Ch04 对 burying-the-lead / sentence-stuffing 的定性讨论具体化为可检测数字），非原书数字。Pollock Ch04 讨论这些病理但未给具体词数。
-
-### 7a: Burying the lead 检查
-- [ ] 各假设推导段段首句在 15 词内说出核心判断？
-- [ ] 段首句不是元评论（"本节讨论..." / "接下来..."）？
-- [ ] **新增**：topic sentence 出现在第 3 句或更后时，必须有明确理由（如第 1 句为必要 transition/background）？
-- **检测**：提取各假设推导段段首句，统计词数；检查是否含元评论关键词（"discuss" / "examine" / "接下来" / "本节" / "本文"）；检查是否含核心判断信号词（"argue" / "show" / "hypothesize" / "challenge" / "extend"）
-- 如果段首句 > 15 词且无核心判断信号 → ⚠️ "Theory 段首句可能埋没导语"
-- 如果段首句含元评论关键词 → ⚠️ "段首句为元评论，需重写为核心判断句"
-- **新增**：如果 topic sentence 出现在第 3 句或更后，且第 1 句不是 transition/background → ⚠️ "Topic sentence 过度延迟，建议前置"
-- **修复指令**：重写段首句为"主语 + 主动动词 + 方向/预测"；元评论移至段尾；如必须 transition-first，确保第 1 句 ≤15 词且第 2 句立即给出核心判断
-
-### 7b: Sentence stuffing 检查
-- [ ] 无单句 > 30 词？
-- [ ] 无单句含 > 2 个从属连词？
-- [ ] 无单段 > 200 词且只有 1-2 句？
-- **检测**：按标点分割句子，统计每句词数；统计每句从属连词数量（which/that/because/although/while/whereas）；统计每段句子数
-- 如果存在单句 > 30 词 → ⚠️ "存在 Sentence stuffing: [句子前 10 词]..."
-- 如果存在单句 > 2 个从属连词 → ⚠️ "句子从句过多，建议拆分"
-- 如果存在单段 > 200 词且 ≤2 句 → ⚠️ "段落句子过长，需拆分"
-- **修复指令**：拆分为 2-3 短句；将非限制性定语从句独立成句；删除不必要的括号插入语
-
-### 7c: Read my mind 检查
-- [ ] why chain 中每个因果步骤间有 explicit transition？
-- [ ] 无"显然" / "不难发现" / "as is well known"？
-- [ ] 构念首次出现后用于推理前已有定义？
-- **检测**：扫描假设推导段中相邻推理步骤间的 transition 信号词（"Consequently" / "Thus" / "Therefore" / "This leads to" / "As a result" / "Thereby"）；全文扫描"显然"类表述；检查构念定义顺序
-- 如果 why chain 中 transition 覆盖率 < 50% → ⚠️ "因果推理缺少过渡，存在 Read my mind 风险"
-- 如果全文含"显然"类表述 → ⚠️ "删除'显然'类表述，替换为具体推理"
-- 如果假设推导段中出现未在 P2-P4 定义的构念 → ⚠️ "新构念未定义即用于推理"
-- **修复指令**：在缺失 transition 的步骤间添加信号词；补充 why chain 中间步骤；删除所有暗示读者已知的表述；确保所有推理用构念先定义后使用
-
----
-
-## 验证 8：跨假设机制复用一致性（Multi-Hypothesis Mechanism Reuse）
-
-> **来源**：本检查项针对一类高频架构——主效应建立多机制 trunk（如 H1 三机制），调节假设（H2-HN）各自回到 trunk 机制论证 moderator 如何改变它们。验证自 Shen et al. (2022, JOM)、Singh & Grewal (2023, JMR) 等 multi-mechanism + multi-moderator 论文。`arrangement_patterns.md` 的 Parallel Branches 要求"每个 branch 回到 trunk 的具体机制"，本检查是其可执行落地。
-
-**问题**：当论文用"主效应多机制 trunk + 调节假设回到 trunk"结构时，调节假设是否**一致地复用**同一组 trunk 机制，且 strengthen/weaken 方向标记在跨假设间连贯？碎片化的机制复用（各假设回不同的机制子集）会破坏 trunk 的论证统一性，让读者觉得"每个假设各说各话"。
-
-**适用条件**：仅当 Theory 含 ≥2 个调节假设 + 1 个多机制主效应（trunk ≥2 机制）时执行。单假设/单机制论文跳过。
-
-**检查项**：
-- [ ] **机制全集一致**：所有调节假设是否回到**同一组** trunk 机制（H1 定义了哪几个机制，H2-HN 就论证 moderator 对这几个机制的影响）？
-  - ⚠️ 若某假设只回到 trunk 机制的子集（如 H1 有机制 1/2/3，H2 只论证机制 1，H3 只论证机制 2/3）→ 标记"机制复用不一致"
-- [ ] **方向标记连贯**：同一 moderator 对同一机制的方向（strengthen / weaken / flip）在跨假设间是否自洽？
-  - ⚠️ 若 H2 说 moderator 弱化机制 X，H3 对同一机制 X 却也说弱化（但 H2/H3 的 net effect 相反）→ 标记"方向标记冲突，需显式说明为何同向机制产生反向 net effect"
-- [ ] **无遗漏机制**：是否有 trunk 机制在所有调节假设中**从未被回到**？（装饰性机制——H1 立了但后续无人用）
-  - ⚠️ → 该机制可能是必要性门控未过的残留，或需补一个调节假设回到它
-
-**检测算法**：
-```
-# 1. 从主效应假设段（H1）提取机制 trunk 全集
-trunk_mechanisms = extract_mechanisms(H1_paragraph)  # e.g. {complacency, lock-in, path-dependence}
-
-# 2. 对每个调节假设，提取它回到的机制子集
-for hyp in H2..HN:
-    returned = extract_mechanisms_referenced(hyp_paragraph) & trunk_mechanisms
-    missing_in_this_hyp = trunk_mechanisms - returned
-    if missing_in_this_hyp:
-        mark f"假设 {hyp.id} 未回到 trunk 机制: {missing_in_this_hyp}"
-
-# 3. 检查是否有 trunk 机制从未被任何调节假设回到
-never_returned = trunk_mechanisms - union(all returned sets)
-if never_returned:
-    mark f"装饰性机制（H1 立立但无调节假设回到）: {never_returned}"
-
-# 4. 方向标记连贯性（per mechanism × per moderator）
-for mechanism in trunk_mechanisms:
-    directions = {(hyp.id, hyp.direction_label) for hyp in H2..HN if mechanism in hyp.returned}
-    # 检查同 mechanism 在不同假设间的方向是否需显式说明
-```
-
-**输出**：
-- ✅ **PASS**：所有调节假设一致复用 trunk 机制全集，无方向冲突，无装饰性机制
-- ⚠️ **WARNING**：机制复用不一致或有装饰性机制
-  - **修复指令**：
-    - 子集复用 → 补全调节假设对缺失机制的论证，或在假设段开头说明"本假设聚焦机制 X，因 [理论理由] 不涉及机制 Y/Z"（显式豁免优于沉默遗漏）
-    - 装饰性机制 → 回到 Phase 3 必要性门控重新审视该机制是否应删除（参见 `reasoning_soundness_protocol.md` §3 Q3："删掉本机制故事不照样成立？"）；或补一个调节假设回到它
-    - 方向冲突 → 补一句显式说明为何同向机制作用产生反向 net effect（如 moderator A 强化的机制与 moderator B 强化的机制虽同向，但对 DV 的净效应方向相反，因 [理论理由]）
-- ❌ **FAIL**：≥2 个调节假设完全未回到 trunk（各论证独立机制）→ 假设树碎片化
-  - **修复指令**：重构调节假设段落，强制每个假设明确引用 trunk 机制；或重新审视 trunk 设计是否合理（可能 trunk 本身是强行拼凑，应改为假设树型 C 而非 trunk+branches）
-
----
+- **v2.0.0** (2026-08-03): 改用 canonical story 与动态段落功能；将机制深度从变量数量中分离；加入 mechanism necessity、conditionality/boundary、form-measurement 与契约审计；修正“所有 moderator 必须复用全部 trunk 机制”的错误规则；取消关键词、固定槽位和修辞配额式自动判定。
+- **v1.0.0** (2026-06-01): 初始验证器。

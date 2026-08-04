@@ -171,7 +171,7 @@ than [entities] with [opposite state].
 
 ## Reconciliation 收束句（嵌入最后假设推导段末尾）
 
-辩证对立型的 reconciliation 嵌入最后一个假设推导段的末尾（2-3 句），而非独立段落。功能是将对立预测整合为统一的理论叙事。
+辩证对立型的 reconciliation 嵌入最后一个假设推导段的末尾，以完成整合所需的最短内容呈现，而非独立段落。功能是将对立预测整合为统一的理论叙事。
 
 ```
 The above hypotheses propose that [state] makes [entities] [adjective A] to 
@@ -267,6 +267,82 @@ H[X]: [IV] has an inverted U-shaped impact on [outcome], such that [moderate lev
 
 ---
 
+## Bendig–Hensellek–Schulte 2024 型：不利结果中的成本先占优—学习后占优
+
+**状态**: EMERGING section variant（单篇架构；两阶段曲线论证已获第二篇交叉验证）
+
+**适用**: 文献对同一战略活动同时记录资源/学习收益与执行/整合成本；本文的具体 Y 是失败、伤害或风险概率，而非正向绩效。
+
+### 共同理论主干（T2）
+
+```text
+[Resource lens] explains why organizations seek external resources and why those resources can improve adaptation. [Learning lens] explains why search, absorption, and reusable routines take time to develop. Together, the lenses imply that execution costs can appear immediately while experience benefits mature only after repeated activity.
+```
+
+### 不利结果的主导权转换（H1/H2）
+
+```text
+At low-to-moderate [X], each additional activity requires [search, screening, coordination, and internal resource diversion]. Because the organization lacks [reusable routines/capability], these burdens increase [adverse Y].
+
+As activity accumulates, the organization builds [templates, dedicated personnel, governance routines, relationship capital, and absorptive capacity]. These assets raise the learning value and reduce the marginal execution burden of subsequent activity.
+
+At higher [X], accumulated learning and integration capability dominate the initial costs, so [adverse Y] falls. H[X]: [X] has an inverted-U relationship with [adverse Y], whose middle range represents the highest risk rather than the best performance.
+```
+
+### 平行战略模式的差异化 warrant
+
+```text
+[Mode A] instantiates the shared trunk through [unilateral control / weak exchange obligation / monitoring].
+[Mode B] instantiates it through [bilateral contracting / mutual adjustment / interactive learning].
+The curve form may be shared, but mode-specific governance determines the mechanism details and how a boundary condition changes curve height, steepness, or turning point.
+```
+
+**关键原则**:
+- 必须先说明 Y 是正向还是负向；同一倒 U 对两类 Y 的理论含义相反。
+- “活动更多”不等于“经验更多”的充分识别；若机制只在理论层，结果措辞应保持解释性而非声称已测得中介。
+- 两个战略模式可以共享 dominance rule，但必须有独立治理 warrant，不能复制段落后替换构念名。
+
+---
+
+## Lee–Park 2024 型：共同必要条件反向变化 + 短板切换 + 拐点延后
+
+**状态**: EMERGING section variant（单篇架构；通用两阶段曲线论证已有跨论文验证）
+
+**适用**: 同一 X–Y 关系存在方向相反的过程解释，且 Y 需要两个条件共同充足；X 累积时一个条件改善、另一个条件恶化，W 只维持后者。
+
+### 对称建立两个可信过程（R3）
+
+```text
+[Positive account] Repeated X expands [opportunity/information/capacity], enabling [learning or performance process].
+[Negative account] The same repeated X erodes [motivation/attention/willingness] through [distinct process], inhibiting the same Y.
+[Coexistence turn] The accounts are not mutually exclusive. The unresolved issue is which prerequisite is limiting at each range of X.
+```
+
+### 共同必要性与三状态整合（H1）
+
+```text
+[Y] requires sufficient A and B.
+Low X: low A × high B → low Y.
+Moderate X: sufficient A × sufficient B → peak Y.
+High X: high A × low B → low Y.
+H1: X has an inverted-U relationship with Y.
+```
+
+### 选择性维持与拐点右移（H2）
+
+```text
+[W] gives actors a larger initial stock of B and slows B's depletion by weakening [negative process 1] and [negative process 2]. Because W does not alter the accumulation of A, its distinctive implication concerns when B becomes limiting, not whether A increases.
+H2: The turning point occurs at a higher X under higher W.
+```
+
+**关键原则**:
+- 先证明 A/B 是共同必要而非可替代的净效应成分。
+- 低、中、高三状态必须分别说明 binding constraint；表格是压缩 why-chain 的工具，不是理论证据本身。
+- W 的理论作用应落在具体 prerequisite 上；若声称拐点移动，Methods/Results 必须直接比较拐点。
+- 若 A/B 未被直接测量，只能说结果与机制一致，并用机制靶向的补充分析或定性证据加厚，不能声称中介成立。
+
+---
+
 ## 假设陈述格式
 
 | 类型 | 模板 | 示例 (Pontikes 2012) |
@@ -283,6 +359,7 @@ H[X]: [IV] has an inverted U-shaped impact on [outcome], such that [moderate lev
 - **G1 受众角色二分 + 镜像假设**：参见 `corpus/subprotocols/hypothesis_derivation_patterns.md`（audience_role_dichotomy_mirrored_hypotheses——同一 IV 因受众角色不同产生方向反转预测，Pontikes 2012 锚定）
 - **G2 机制开关型边界条件（方向反转）**：参见 `corpus/subprotocols/bilateral_argumentation_templates.md`（sign_flipping_boundary_condition——受众角色切换 IV-DV 关系符号，是 G 辩证反转的高/低双边论证载体）
 - **G3 双重逻辑 + 输入-效率分解 + 倒 U 形整合**：参见 `corpus/subprotocols/hypothesis_derivation_patterns.md`（dual_logic_input_efficiency_inverted_u——Zhou 2017 型：制度逻辑（输入）vs 效率逻辑（转换）产生倒 U）
+- **G4 不利结果的成本—学习主导权转换**：参见 `corpus/subprotocols/hypothesis_derivation_patterns.md`（curvilinear_relationship_two_phase_argumentation——Bendig et al. 2024 提供 adverse-Y 的成本先占优→学习后占优实例）
 
 > **与 E（调节效应型）的边界**：G 的"反转"必须是**方向反转**（sign flip，+变-），触发条件见本文件"触发条件"段；若只是**强度变化**（更强/更弱但方向不变）→ 路由到 E 变体。
 

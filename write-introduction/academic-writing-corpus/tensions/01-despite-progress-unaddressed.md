@@ -29,7 +29,8 @@ source_papers:
   - cui_yang_vertinsky_smj (SMJ): "三重维度并列缺口: outcome scope × portfolio type × network context"
   - paruchuri_andrus_sullivan2026 (AMJ, 2026): "受众边界延伸型: internal hierarchy → external audience"
   - desjardine_shi_cheng2023 (ASQ, 2023): "visible-vs-invisible domain gap + oversight drives manipulation underground (invisible hands)"
-updated: 2026-07-30
+  - ilicic_brennan2026 (JM, 2026): "outcome-valence asymmetry: beneficial political-consumption outcomes studied, harmful/addictive outcomes underexamined"
+updated: 2026-08-03
 created: 2026-05-18
 source: Extracted from MVP30 narrative_analysis files + mannor2016 + darby2025 distill + grewal2025 + paruchuri_andrus_sullivan2026
 ---
@@ -711,6 +712,27 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 **适用**: 研究某**大主体/核心力量**对某结果的影响，而该主体尽管在域内占比最大却最少被研究（机构投资者、平台、政府、媒体、算法、监管者、数据供应商）。需权威警告 + 例外枚举 + 规模悖论三重背书来确立缺口，常见于 ASQ/SMJ 的"被忽视的经济力量"研究。
 **禁忌**: 权威警告必须真实可引（带页码）；"最大主体"必须可证（institutional investors own 85%）——规模-忽视悖论若主体其实不大则不成立；例外枚举须穷尽或显式限定（"the few exceptions"），若有更多例外须引用并区分。
+
+---
+
+### 变体 AB：结果效价不对称缺口（ilicic_brennan2026 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "Research has established that [focal construct] shapes beneficial consumer outcomes, including [example 1], [example 2], and [example 3]. Less is known about whether the same construct also organizes harmful behaviors and outcomes. This asymmetry is consequential because [harmful domain] imposes [human/economic burden]. We therefore examine whether, why, and under what intervention [focal construct] predicts responses in [harmful domain]."
+
+**来源**: Ilicic & Brennan (2026, *Journal of Marketing*), Introduction P1–P2.
+
+**关键特征**:
+- 不是笼统声称“负面结果没人研究”，而是先列举同一自变量在正向结果上的成熟证据，再指出 outcome valence 的系统性偏斜。
+- 缺口、stakes 与研究问题在同一条逻辑链上：已有正向行为知识 → 有害行为未知 → 有害领域代价高 → 需要机制与干预。
+- 对前人文献保持 progressive coherence：既有研究提供构念合法性，本文改变的是结果域而非否定其结论。
+
+**诚实边界**:
+- 必须核实既有文献确实主要集中于正向/社会期许结果；若已有大量有害结果研究，应改写为边界、机制或混合发现 gap。
+- 从正向结果迁移到负向结果必须解释为何机制可能改变，不能只替换 DV 标签。
+- 若 Introduction 只提出结果域缺口，而反直觉理论预测要到 Theory 才出现，应在蒸馏中标记为“清晰优先、悬念后置”，不可声称首段已建立方向悖论。
 
 ---
 

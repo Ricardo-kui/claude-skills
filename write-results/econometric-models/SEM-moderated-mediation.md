@@ -10,9 +10,10 @@ source_papers:
   - "vadakkepatt_arora_martin_paharia_2022_lobbying_jm (Journal of Marketing): simultaneous-equation SEM reporting with IV diagnostics + Granger causality"
   - "ilicic_brennan_2026_jm (Journal of Marketing): ten-study multimethod investigation of political ideology and consumer responses to addictive products; sense of agency -> perceived product danger mechanism; personally directed threat appeal moderator"
   - "reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc (Organization Science): event-contingent indirect effects remain interpretable despite inconsistent direct interaction, with pre/post bootstrap CIs"
-variants_count: 6
+  - "kashmiri_nicol_arora_2017_jams (Journal of the Academy of Marketing Science): one shared mediator tested across heterogeneous outcome branches; two indirect effects supported and one explicitly unsupported"
+variants_count: 7
 created: 2026-06-03
-updated: 2026-08-02
+updated: 2026-08-03
 source: Distilled from Habel et al. (2016, JM) by distill-methods-exemplar
 ---
 
@@ -271,29 +272,31 @@ supporting Hypothesis [N+1].
 - IV 诊断放在脚注或附录 → 当 IV 是主识别策略时，必须在正文报告
 - 每个方程独立建表 → 多列表格更高效且便于跨方程对比
 - 不报告 first-stage 系数 → 读者无法判断 instrument relevance 的方向和幅度
-## 反转中介顺序以确认因果排序：Reverse-Order Mediation Test (ilicic_brennan 2026 型)
+## 反转中介顺序的竞争排序敏感性检查：Reverse-Order Mediation Sensitivity Test (ilicic_brennan 2026 型)
 
 ### 功能描述
 
-当 Theory 提出序列中介 [IV] -> [M1] -> [M2] -> [DV]，审稿人必问"为什么是 M1->M2 而不是 M2->M1？"。Reverse-order test 的回答：反转两个中介的位置重测序列中介，若反向间接效应的 bootstrap CI 含零，则排除替代因果排序。这是 PROCESS Model 6 序列中介的标准因果方向验证手法（Fairchild & McDaniel 2017）。
+当 Theory 提出序列中介 [IV] -> [M1] -> [M2] -> [DV]，读者会追问“为什么是 M1->M2，而不是 M2->M1？”Reverse-order test 将两个中介交换后重新估计间接路径。若反向路径的 bootstrap CI 含零，只能说明样本没有为该替代序列提供清晰证据；它与提议排序相容，但不能单独排除替代顺序，更不能确认时间或因果方向。显著路径与不显著路径的差异本身也未必显著。
 
 ### 适用场景
 
 - 序列中介假设（X->M1->M2->Y）且 M1、M2 理论上可互换顺序
-- measurement-of-process 设计（测量而非操纵中介）——观察数据中中介顺序只能靠反向重测排除，不能靠操纵确立
-- 区别于上方 qiao2026 "Reverse-Code + Wald"：那是把两条**方向相反通道** reverse-code 后比较时间持续性（differential persistence）；本节是反转**同一序列中两个中介的位置**确认因果排序（causal-ordering confirmation）
+- measurement-of-process 设计（测量而非操纵中介）——可将反向模型作为竞争解释的敏感性检查，但必须另寻时间分离、操纵或纵向证据
+- 区别于上方 qiao2026 "Reverse-Code + Wald"：那是把两条**方向相反通道** reverse-code 后比较时间持续性（differential persistence）；本节只比较**同一序列中两个中介的位置**，不构成 causal-ordering confirmation
 
 ### 报告骨架
 
 ```
-To verify the causal ordering of variables, we conducted a second serial mediation
+To probe a competing ordering of the variables, we conducted a second serial mediation
 analysis reversing the order of the mediators ([Fairchild and McDaniel 2017]), testing
 whether [predictor] was associated with [M2_reversed], which in turn was associated with
 [M1_reversed], and subsequently with [outcome]. The results showed that the 95%
 bootstrapped CI for the indirect effect of [predictor] on [outcome] included zero
 (effect = [value], SE = [value], 95% CI = [[lower], [upper]]), indicating no significant
-serial mediation effect. These results are consistent with the proposed ordering of
-variables and do not indicate evidence of alternative directional associations.
+serial mediation effect. The data therefore provide no clear evidence for this competing
+sequence. Together with the theoretical argument and any temporal or experimental evidence,
+this pattern is more consistent with the proposed ordering; by itself, however, it does not
+establish temporal or causal order.
 ```
 
 ### 关键技术点
@@ -302,18 +305,20 @@ variables and do not indicate evidence of alternative directional associations.
 |------|------|------|
 | 1. 报告正向序列间接效应 | bootstrap CI 不含零 | 建立主假设支持 |
 | 2. 反转中介顺序重测 | M2->M1 而非 M1->M2 | 构造竞争因果排序 |
-| 3. 报告反向间接效应 | CI 含零 | 排除替代排序 |
-| 4. 一句话收束 | "consistent with the proposed ordering" | 把因果方向从断言升级为证据 |
+| 3. 报告反向间接效应 | CI 含零 | 说明未检测到该竞争序列，不写“排除” |
+| 4. 一句话收束 | "consistent with the proposed ordering, but not causal proof" | 将敏感性证据与识别边界同时交代 |
 
 ### 反模式
 
-- **只报正向序列不报反向**：序列中介的因果排序是审稿人默认质疑，不主动排除显得回避
+- **把一显著、一不显著写成两者显著不同**：必须直接检验两个间接效应的差异，不能比较星号
+- **把反向不显著写成确认因果顺序**：横截面 PROCESS 无法建立时间优先性；结果变量若先于中介测量，限制更强
+- **只报正向序列不讨论竞争顺序**：若两个中介理论上可互换，应报告竞争模型，但结论保持为敏感性而非排除
 - **混淆 reverse-order test 与 reverse-code**：reverse-order 反转中介位置（顺序问题）；reverse-code 改变变量符号（方向比较问题）——两者统计逻辑完全不同
-- **在操纵了中介的设计中仍报 reverse-order test**：若已用 moderation of process 操纵 M1 建立因果，reverse-order test 冗余——它是 measurement-of-process 设计的补救手段
+- **用 reverse-order test 替代操纵或时间分离**：它可以补充 measurement-of-process，不能替代更强的机制识别
 
 ### 语料锚定
 
-- ilicic_brennan_2026_jm (Journal of Marketing) — Study 4：political ideology -> sense of agency (M1) -> perceived product danger (M2) -> gambling severity。正向间接效应 CI [.01, .02]；反转顺序后 CI [-.01, .01] 含零，确认 agency->danger 排序。配 measurement-of-process 设计（见 `../write-methods/econometric-models/实验.md` 变体6）。
+- ilicic_brennan_2026_jm (Journal of Marketing) — Study 4：political ideology -> sense of agency (M1) -> perceived product danger (M2) -> gambling severity。正向间接效应 CI [.01, .02]；反转顺序后 CI [-.01, .01] 含零。该结果支持“提议排序更符合数据”的有限表述，但不能确认 agency->danger 的因果顺序；主文中 gambling severity 还先于两个中介测量。配 measurement-of-process 设计（见 `../write-methods/econometric-models/实验.md` 变体6）。
 
 ## 事件条件间接效应：直接交互不一致时的分层报告（Reinwald et al. 2026 型）
 
@@ -344,3 +349,43 @@ The [X × event] interaction on [mediator] was [coefficient and CI/p], indicatin
 - 显著间接效应在统计上不要求显著 total/direct effect；但它只支持条件性机制路径，不能把不显著 direct interaction 改写为“行为效应已复制”。
 - `M → Y` 若与结果同时测量，因果方向仍依赖理论与设计，bootstrap CI 不会自动解决中介内生性。
 - 若上游 threat 只在理论或补充研究中测量，主文的经验中介链应从实际观测到的 proximal mediator 开始。
+
+## 共享中介跨异质结果分支的证据账本（Kashmiri–Nicol–Arora 2017 型）
+
+### 验证状态
+
+EMERGING（单篇来源；仅作 `section_variant`）。适用于同一中介被理论化为连接一个 predictor 与多个 outcome，且各 outcome 使用不同估计器或量纲。
+
+### 报告骨架
+
+```text
+We evaluate the proposed mediator separately for each outcome branch. The a-path from
+[X] to [M] is reported once. For [Y1], the estimated indirect effect is [effect, CI],
+supporting [H1b]. For [Y2], the interval [includes/excludes] zero, so [H2b] is [not]
+supported even though the direct association between [X] and [Y2] is [status]. For [Y3],
+the indirect effect is [effect, CI], supporting [H3b]. Thus, [M] transmits the relationship
+to [supported branches], but the evidence does not show that it explains the full outcome
+portfolio. We retain the unsupported branch as a mechanism boundary rather than treating
+the significant direct effect as a substitute for mediation evidence.
+```
+
+### 强制证据账本
+
+| 分支 | 直接关系 | 间接效应与区间 | 假设判定 | 可写结论 |
+|------|----------|----------------|----------|----------|
+| `[Y1]` | `[status]` | `[estimate, CI]` | 支持/不支持 | `[M]` 部分传递该分支 |
+| `[Y2]` | `[status]` | `[estimate, CI]` | 支持/不支持 | 直接关系不能挽救失败的中介假设 |
+| `[Y3]` | `[status]` | `[estimate, CI]` | 支持/不支持 | 仅对该分支声明中介 |
+
+### 为什么有效
+
+1. 把“一个共同中介”拆成多个可证伪的间接效应，避免用总体叙事覆盖分支差异。
+2. 先共享 a-path，再逐 outcome 报 b-path/indirect effect，减少重复同时保留完整审计链。
+3. 失败分支为 Discussion 提供精确边界：同一组织导向未必通过同一过程塑造速度、创新性与安全性。
+
+### 诚实边界
+
+- Kashmiri et al. 的主分析使用 PROCESS/binary-mediation 与传统 causal-steps 语言；当前写作应优先报告估计的 indirect effect、bootstrap/Monte Carlo CI，并说明不同链接函数下的尺度。
+- 不同 outcome 使用负二项、fractional logit 与 logit 时，间接效应不能直接比较原始系数大小；应使用兼容的边际量或分别解释。
+- `partial mediation` 只说明直接路径仍存在，不证明遗漏机制的具体内容。
+- 传统 Baron–Kenny 条件计数不能替代 moderated-mediation index 或条件间接效应区间。

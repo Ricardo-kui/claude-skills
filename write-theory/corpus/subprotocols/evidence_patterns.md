@@ -46,15 +46,15 @@ because regulators are responsive to political pressure from firms.
 <!-- 
 pattern_id: case_as_warrant_for_mechanism
 build_type: 机制推演型
-source_papers: ["Shen_Zhou_Wang_Zhang_2022_JOM"]
-confidence: medium
+source_papers: ["Shen_Zhou_Wang_Zhang_2022_JOM", "Moon_Tuli_Mukherjee_2023_JM"]
+confidence: high
 status: ready_for_corpus
 -->
 
 ## Pattern: Case as Warrant for Mechanism Step
 
 **适用场景**: 当机制步骤比较抽象，需要让读者在经验世界中"看见"它时。用企业/行业案例作为 Warrant。
-**范文来源**: Shen, Zhou, Wang, and Zhang (2022), *Journal of Operations Management*
+**范文来源**: Shen, Zhou, Wang, and Zhang (2022), *Journal of Operations Management*; Moon, Tuli, and Mukherjee (2023), *Journal of Marketing*
 
 **骨架**:
 ```
@@ -73,6 +73,24 @@ significant overcapacity during the COVID-19 pandemic, could not lay off 70 empl
 operational costs because the chair of the board was a provincial delegate and was expected to 
 take care of social welfare (Hunan Daily, 2021).
 ```
+
+### 子型 B：利益相关者反应作为 Audience-Reality Warrant
+
+**骨架**:
+```
+[Academic evidence] establishes that [information/action] is relevant to [decision task].
+Consistent with this mechanism, when [organization] changed [practice], [identified stakeholder]
+publicly explained that the information had been useful for [specific task]; a separate
+[institutional decision/case] elicited the same concern. These reactions do not establish
+causality, but they show that the proposed audience recognizes the theorized function in practice.
+Therefore, we expect [directional relationship].
+```
+
+**来源**: Moon, Tuli, and Mukherjee (2023), *Journal of Marketing*, H2 推导段
+
+**与原子型差异**: 原子型用企业处境展示一个抽象机制如何实际运作；本子型用具名利益相关者对组织/监管决策的反应，验证理论所设定的 audience、decision task 与信息价值并非作者虚构。学术证据承担一般化，现实反应承担 face validity，理论回收句把两者重新接回假设。
+
+**诚实边界**: Stakeholder reaction 只能作 warrant，不能作为效应大小或因果方向的证据；若只有单一匿名评论或评论者与假设中的受众不一致，不应使用。
 
 **为什么有效**: 案例把抽象机制具体化，同时显示机制的边界条件。
 

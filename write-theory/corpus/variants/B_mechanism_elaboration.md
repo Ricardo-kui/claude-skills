@@ -1,21 +1,30 @@
 # 变体 B：机制推演型
 
 > **适用**: 解释 X 如何/为什么影响 Y 的因果机制链
-> **范文**: Wu 2025 (OrgSci), Keeves 2017 (AMJ), Zhou 2017 (ASQ)
+> **范文**: Wu 2025 (OrgSci), Keeves 2017 (ASQ), Zhou 2017 (ASQ)
 > **最佳期刊**: SMJ ⭐⭐⭐⭐⭐ | AMJ ⭐⭐⭐⭐⭐ | ASQ ⭐⭐⭐⭐
+
+## 先选分支：B0 过程解释 vs B1 正式中介
+
+| 分支 | 适用条件 | 正式假设 | 不可声称 |
+|------|----------|----------|----------|
+| **B0 理论过程解释** | why-chain 解释 X→Y，但过程状态未被概念化/测量为 mediator | 可只有 X→Y（或相应形状/条件关系） | 不得声称实证检验 mediation |
+| **B1 正式中介** | M 是清晰构念，X→M 与 M→Y 均有理论基础，设计能检验间接效应 | X→M、M→Y 和/或 formal mediation（按期刊与设计） | 不得用未测量的叙述性步骤冒充 mediator |
+
+“attention → interpretation → choice”之类可以是 B0 的 reasoning moves；它们不会因为出现在机制链中就自动成为三个统计中介。先按理论与测量决定 B0/B1，再决定段落与假设数量。
 
 ---
 
-## 段落功能地图
+## 动态段落功能地图
 
 | 段落 | 功能 | 推荐词数 | 必须度 |
 |------|------|----------|--------|
-| P1 | 核心构念界定（所有主角）+ 理论视角引入 | 80-150 | ✅ |
-| P2 | 机制预览（"We argue that X influences Y through..."） | 60-100 | ✅ |
-| P3-P4 | 机制 Step 1 推演 + H1 | 各 70-120 | ✅ |
-| P5-P6 | 机制 Step 2 推演 + H2 | 各 70-120 | ✅ |
-| P7 | 收束论证（Mediation hypothesis / Taken together）——自然收敛，不附加独立 Closure 段 | 60-100 | ✅ |
-| P8+ | [可选] 边界条件/调节 | 各 60-100 | ⚠️ |
+| 开篇 | 核心构念、scope 与理论视角；继承 knot | 80-150 | ✅ |
+| 机制预览 | 说明要解释的关系与核心过程，不把过程标签当作证明 | 60-100 | ✅ |
+| 推导段 | 按依赖顺序展开 reasoning moves，并收敛到正式预测 | 各 70-180 | ✅ |
+| **B0 终点** | X→Y（或条件/形状）假设；标明过程为理论解释、证据边界 | 60-120 | 条件触发 |
+| **B1 终点** | 只有在 M 概念化且可检验时，推导路径与 mediation hypothesis | 60-150 | 条件触发 |
+| 边界段 | 仅在 conditionality gate 有机制依据时加入 | 各 60-150 | ⚠️ |
 
 > **注意**: 管理学 Theory 部分的标准做法是文献回顾嵌入在构念定义和 why-chain 推导中，不以独立的"文献对话"或"文献综述"段落出现。文献引用服务于理论构建——"Prior research has established X. However, what if Y? We argue that Z."（验证自 Park & Westphal 2013 ASQ, "On the tip of the brain" SMJ, Malik et al. 2025 JM, Pollock et al. 2015 ASQ）。部分 JM 论文将 Theory 章节直接命名为 "Literature Review and Conceptual Background"（如 Malshe & Agarwal 2015, Shi et al. 2021），整章即文献回顾+假设——这是章节命名惯例，不是段落结构要求。
 > 
@@ -35,9 +44,15 @@ defined as [definition]. This theoretical lens allows us to explain not just whe
 [X affects Y], but how and why."
 ```
 
-**多步机制链**：参见 `corpus/sentences/mechanism_chain.md`
+**多步机制链**：参见 `../sentences/mechanism_chain.md`
 
-**收束论证（中介假设）**：
+**B0 收束（过程解释，不声称中介）**：
+```
+"Taken together, these process arguments explain why [X] should [increase/decrease]
+[Y] within [scope]. We therefore predict: [directional/form-specific hypothesis]."
+```
+
+**B1 收束（仅正式中介分支）**：
 ```
 "Taken together, H1 and H2 suggest a mediated relationship. [IV] influences [DV] 
 not merely through [direct channel], but through the [mechanism] of [mediator]. 
@@ -51,9 +66,9 @@ that has dominated prior research. Thus:"
 
 | 类型 | 模板 |
 |------|------|
-| 基础关系 | "H[N]. [IV] is [positively/negatively] related to [DV]." |
-| 中介效应 | "H[N]. [Mediator] mediates the [positive/negative] relationship between [IV] and [DV]." |
-| 中介等价 | "H[N]. This prediction is formally equivalent to hypothesizing that [mediator] will mediate effects of [IV] on [DV]." |
+| B0 基础/过程解释 | "H[N]. [IV] is [positively/negatively] related to [DV]."（按实际形状与条件具体化） |
+| B1 中介效应 | "H[N]. [Mediator] mediates the [positive/negative] relationship between [IV] and [DV]." |
+| B1 中介等价 | "H[N]. This prediction is formally equivalent to hypothesizing that [mediator] will mediate effects of [IV] on [DV]." |
 
 ---
 
@@ -72,15 +87,15 @@ that has dominated prior research. Thus:"
 
 机制推演型论文的核心是把"为什么 X 影响 Y"讲清楚。根据 MVP30 范文语料库，特别是 Singh & Grewal (2023, JMR)、Shen et al. (JOM)、Gamache et al. (2020, SMJ)、Zhao-Ding & Gaba (ORSC) 和 Cui et al. (SMJ) 五篇的对比，机制推演型（及相关变体）有五种主流的假设推导组织方式。选择哪一种取决于你的研究问题和理论野心。
 
-### 方式一：深度链式（Depth Chain）
+### 方式一：深度过程链（Depth Process Chain）
 
 **代表**: Singh & Grewal (2023, JMR) 的铁三角机制 + Shen et al. (JOM) 的三机制 trunk
 **适用**: 研究问题关注"通过什么机制"，且机制可以被拆解为多个因果步骤
 **结构**:
 ```
-X → M1 → M2 → Y
-或
-X → [mechanism 1 / mechanism 2 / mechanism 3] → Y
+X → [actor/process state 1] → [state 2] → Y   （B0，可不测量中间状态）
+或 X → M1 → M2 → Y                            （B1，正式中介）
+或 X → [mechanism 1 / mechanism 2 / mechanism 3] → Y
 ```
 **优势**: 理论深度强，能回答 "how"
 **风险**: 步骤过多可能让读者迷失；每个步骤都必须有独立理论依据
@@ -144,7 +159,8 @@ High X → decreasing Y  (reason 1 + reason 2)
 
 | 如果你的核心问题是... | 选择 | 关键判断标准 |
 |---------------------|------|------------|
-| "X 如何通过 M 影响 Y？" | 深度链式 | 机制可被拆解为 2-3 个因果步骤 |
+| "X 为什么影响 Y，但过程不作为正式中介检验？" | B0 深度过程链 | 有完整 reasoning moves，并明确证据边界 |
+| "X 如何通过可测量的 M 影响 Y？" | B1 正式中介 | M 是构念；路径与间接效应可检验 |
 | "为什么 X 影响 Y 有多种理论支撑？" | 宽度理由并行 | 存在 2-3 个概念独立的理论理由 |
 | "X→Y 在什么条件下成立/反向？" | 条件化复杂化 | 边界条件本身是理论核心而非稳健性检验 |
 | "X 的维度 A 和维度 B 对 Y1 和 Y2 产生对称反向效应？" | 2×2 对称矩阵 | IV 有两维、DV 有两类、理论预期对称反向 |
@@ -157,9 +173,10 @@ High X → decreasing Y  (reason 1 + reason 2)
 
 ## QC 检查点
 
-- [ ] 每个假设前的 why chain 是否有至少 2-3 步推理？
+- [ ] 每个假设前是否有足够的 reasoning moves（按推理转换而非变量数量计算）？
 - [ ] 机制链是否可证伪？（是否能想到 alternative mechanism？）
-- [ ] Mediator 是否与 IV 和 DV 在理论上都有链接？
-- [ ] 是否避免了 "X affects M, M affects Y, therefore mediation" 的机械拼接？
+- [ ] 已明确选择 B0 或 B1？B0 是否避免声称已检验中介？
+- [ ] 若为 B1，Mediator 是否为清晰构念，且与 IV/DV 的链接和间接效应均可检验？
+- [ ] 若为 B1，是否避免了 "X affects M, M affects Y, therefore mediation" 的机械拼接？
 - [ ] 收束论证是否明确说明了"比直接效应范式多知道了什么"？
 - [ ] 最后假设是否自然收束（非突然中断）？

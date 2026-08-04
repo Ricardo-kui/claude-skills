@@ -89,6 +89,7 @@ MVP30 索引已对 28 篇论文完成 Pollock 对齐标注。这些论文可以�
 | 维度 | 选项 |
 |------|------|
 | Gap 类型 | Incompleteness / Inadequacy / Incommensurability |
+| Incommensurability 路由 | R1 X 分类 / R2 Y 分类 / R3 对立机制 / R4 情境调节 / unclassified；仅该 Gap 激活 |
 | Contribution 维度 | Constructs / Mechanism / Boundary / Phenomenon / Level / Mode / Question / Output |
 | Conversation 策略 | Progressive Coherence / Synthesized Coherence / Non-Coherence |
 | Hook 能量级 | 低 (Cold-start) / 中 (Contrast/Debate) / 高 (Consensus challenge) |
@@ -121,12 +122,29 @@ MVP30 索引已对 28 篇论文完成 Pollock 对齐标注。这些论文可以�
 [存疑说明]: 如置信度为低，说明为什么
 ```
 
+### Incommensurability 二级分类（仅该 Gap 激活）
+
+读取 `../../write-introduction/references/incommensurability-introduction-routing.md`。先提炼 L0 stable narrative kernel，再将 R1–R4 作为**可反驳的分类假设**，而非必填标签：
+
+- 输出 `primary_route`、可选 `secondary_route`、`route_confidence` 与 `closest_alternative`；
+- 无法完整解释的特征写入 `unclassified_residual`，不得为完成分类强行归类；
+- 记录 L2 narrative tactic，但只有说服动作或 resolution operator 不同时才提出新 subtype；
+- 段落数、行业、具体理论名、案例、修辞比喻和原句放入 L3 paper signature，不得进入核心路由。
+
+更细分类的用途是提高同类范文检索、跨论文比较和条件化生成精度，不是让每个类别绑定一个固定 Hook 或段落模板。
+
 ### 输出格式
 
 ```yaml
 paper_id: "[作者_年份_期刊]"
 phase_0_combo_profile:
   gap_type: "Incompleteness / Inadequacy / Incommensurability"
+  incommensurability_route:  # 仅该 Gap 填写
+    primary: "R1 / R2 / R3 / R4 / unclassified"
+    secondary: "R1 / R2 / R3 / R4 / null"
+    confidence: "high / medium / low"
+    closest_alternative: "[route + reason]"
+    unclassified_residual: "[无法由四路解释的特征或 null]"
   contribution_dimension: "Constructs / Mechanism / Boundary / ..."
   conversation_strategy: "Progressive / Synthesized / Non-Coherence"
   hook_energy_level: "低 / 中 / 高"
@@ -136,6 +154,7 @@ phase_0_combo_profile:
   paragraph_count: "[N]"
   has_explicit_puzzle_statement: true/false
   has_stakes_paragraph: true/false
+```
 
 > **Story Architecture 核心字段**（Pollock Ch02-Ch05，供下游 write-introduction theory_hints 消费）已外置：见 `../protocols/story_architecture_fields.md`。生成 Phase 0 输出的 `story_architecture` 字段时加载。
 
@@ -156,6 +175,7 @@ phase_0_combo_profile:
 |-------------|------------|------------|
 | 任意组合 | `../../write-introduction/academic-writing-corpus/hooks/_index.md` | — |
 | Gap = Inadequacy 或 Incommensurability | `../../write-introduction/academic-writing-corpus/literature-turns/literature-turn-templates.md` | — |
+| Gap = Incommensurability | `../../write-introduction/references/incommensurability-introduction-routing.md` | 只加载与 primary/secondary route 匹配的 Tension、Theory Lens 与 Transition 文件 |
 | Contribution = Constructs | `../../write-introduction/academic-writing-corpus/contributions/_index.md` | — |
 | Preview 需方法防御 | `../../write-introduction/academic-writing-corpus/previews/_index.md` | — |
 | Theory Lens 需框架选择 | `../../write-introduction/academic-writing-corpus/theory-lens/_index.md` | — |

@@ -3,11 +3,13 @@ type: canonical_reference
 canonical_id: "04-public-health-safety"
 status: ✓ STANDARD
 gap_type: all
-cross_paper: VERIFIED
+cross_paper: EMERGING
 generativity: ADAPTABLE
 exclusivity: MEDIUM
 source_papers:
   - darby2023 (MSOM, 2023): "Fifteen injuries and one death prior to recall initiation"
+  - ilicic_brennan2026 (JM, 2026): "economic burden + exposed population + annual deaths across addiction categories"
+updated: 2026-08-03
 created: 2026-05-19
 source: Extracted from MVP30 narrative_analysis + darby2023 distill
 ---
@@ -58,6 +60,27 @@ source: Extracted from MVP30 narrative_analysis + darby2023 distill
 
 **模板**:
 > "Although [regulatory body] establishes guidelines for [action], they rely upon [actors] to actually initiate [response]. [Second sentence: the gap between regulation and reality — delays of weeks, months, or even years]. [Third sentence: the human cost of this implementation gap]."
+
+---
+
+### 变体 D：成本—暴露—死亡三联量化型（ilicic_brennan2026 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "[Harmful domain] burdens [families/communities/systems], generating more than [annual economic cost] in [country]. [Focal subtype] affects approximately [population count and share], while [broader harm category] contributes to [annual mortality or morbidity] worldwide. These burdens make it important to understand [behavioral or institutional driver] and identify [intervention target]."
+
+**来源**: Ilicic & Brennan (2026, *Journal of Marketing*), Introduction P1.
+
+**关键特征**:
+- 三个数字各承担不同功能：成本说明制度负担，人数/占比说明暴露面，死亡数说明后果严重性。
+- 数字之后立即连接可解释的行为驱动与可干预目标，避免将公共健康统计写成装饰。
+- 可与政治、文化或市场分群变量相接，但不得把群体平均差异写成个体诊断或污名化标签。
+
+**诚实边界**:
+- 三类数字必须口径兼容并有权威来源；“成瘾相关成本”和“某一成瘾类型人数”不能被误写成同一总体。
+- 公共健康 stakes 证明问题重要，不证明本文自变量是这些损失的主要原因。
+- 数字较多时不要再叠加同功能的 `02-quantified-economic-loss`，以免首段变成统计清单。
 
 ---
 

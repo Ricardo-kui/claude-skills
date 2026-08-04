@@ -1,4 +1,4 @@
-# Phase 4 硬化输出块（corpus_enrichment / style_profile_enrichment）
+# Phase 4 硬化输出块（corpus / style / skill design feedback）
 
 > 外置自 `distill-introduction-exemplar/SKILL.md`。何时加载：Phase 4 聚合输出生成时加载。
 
@@ -169,3 +169,57 @@ style_profile_enrichment:
 - `corpus_enrichment` → 定量证据（paper_count、status、gap_distribution）→ 进注册表
 - `style_profile_enrichment` → 风格数据（tone、rhythm、features、avoids）→ 进 corpus 文件 `## 风格画像` + 供跨模板风格推荐
 - 两者在 Phase 4 末尾同时产出，互不替代
+
+### skill_design_feedback 硬化输出块
+
+每次 Phase 4 都附加此块；没有候选缺陷时输出 `observations: []`。同一缺陷跨论文必须复用稳定的 `defect_id`。
+
+```yaml
+skill_design_feedback:
+  batch_id: "batch_YYYY-MM-DD"
+  last_updated: "YYYY-MM-DD"
+  observations:
+    - defect_id: "conversation-gap-coupling"
+      classification: "routing_defect"
+      current_rule: "[逐字或可精确定位的现行规则]"
+      rule_excerpt: "[从目标文件逐字复制的最小规则片段]"
+      rule_locator: "[section heading 或行号，仅作提示]"
+      target: "write-introduction/academic-writing-corpus/_routing_tables.yaml"
+      diagnosis: "[观察为何表明这是技能设计问题，而非仅缺少一个模板]"
+      absolute_rule: false
+      decisive_falsifier: false
+      risk: "low / medium / high"
+      evidence:
+        papers:
+          - id: "author_year"
+            journal: "AMJ"
+            evidence_anchor: "Introduction P2-P3: [简短功能描述，不复制长原文]"
+            evidence_quality: "full_text_verified / functional_summary / metadata_only"
+      proposed_change:
+        action: "decouple / conditionalize / add_branch / correct_validator / revise_output_contract"
+        summary: "[最小有边界修正]"
+      regression_cases:
+        positive:
+          prompt: "[能触发新分支的真实写作任务，不含预期答案]"
+          expected_invariants:
+            - "[新行为必须满足的功能性质，不规定具体措辞]"
+        preservation:
+          prompt: "[应继续沿用旧行为的真实写作任务]"
+          expected_invariants:
+            - "[旧行为必须保留的功能性质]"
+      resolution: null  # 仅在核心修订实际尝试后替换为 resolution mapping
+```
+
+字段纪律：
+
+- `rule_excerpt` 必须从 `target` 逐字复制并由更新脚本核验；找不到时不得输出 defect。若技能已支持该行为，只登记 confirming evidence。
+- `target` 只含相对文件路径，不带 `:line`；章节或行号放入 `rule_locator`。
+- `evidence_anchor` 记录段落/句群的功能证据，不复制受版权保护的长句。
+- `defect_id` 描述规则层问题，不包含论文 ID；同类观察才能跨论文聚合。
+- `classification` 只能是 `corpus_gap`、`routing_defect`、`validator_defect`、`output_contract_defect`、`schema_defect`、`stage_gate_defect`。
+- `evidence_quality` 只有直接读取并核验论文 Introduction 才能写 `full_text_verified`；用户摘要和功能摘要不得升级核心规则。
+- `decisive_falsifier` 只用于已核验完整文本清晰推翻绝对规则的情况，并同时要求 `absolute_rule: true`。
+- 每个核心候选必须同时提供 positive 与 preservation regression；只有 corpus gap 可以省略。
+- `resolution` 只记录已经实际发生的修改和验证，不得预填；`applied` 必须包含 `{status, modified_targets, rule_excerpt_after, old_rule_excerpt_absent, validation: {quick_validate, regression, forward_test}, date}`。脚本会在注册目标中核验新的规则片段；只有核验和三项验证都通过才把 lifecycle 置为 `resolved`。
+
+运行 `_update_design_feedback.py` 后，注册表自动计算 `EMERGING / VERIFIED / ROBUST / FALSIFIER` 和行动资格。该块与 `corpus_enrichment` 正交：前者回答“技能设计是否错误”，后者回答“语料是否需要扩充”。

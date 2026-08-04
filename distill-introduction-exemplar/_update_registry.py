@@ -29,9 +29,9 @@ REGISTRY_PATH = Path(__file__).parent.parent / "write-introduction" / "academic-
 _PAPER_GAPS_BOOTSTRAP = {
     'ceo_regulatory_focus_ijrm': 'Inadequacy', 'darby2024': 'Incompleteness',
     'eilert2017': 'Incompleteness', 'han2020': 'Inadequacy', 'han2024': 'Inadequacy',
-    'keeves2017': 'Incommensurability', 'kundro2023': 'Incommensurability',
+    'keeves2017': 'Inadequacy', 'kundro2023': 'Inadequacy',
     'lashley_pollock2020': 'Inadequacy', 'lovelace2021': 'Inadequacy',
-    'park2013': 'Incompleteness', 'park2025': 'Incommensurability',
+    'park2013': 'Incompleteness', 'park2025': 'Inadequacy',
     'paruchuri2020': 'Inadequacy', 'pollock2015': 'Incompleteness',
     'pontikes2012': 'Incommensurability', 'shen2022': 'Inadequacy',
     'shi2021': 'Incompleteness', 'shipilov2020': 'Inadequacy',
@@ -49,6 +49,8 @@ _PAPER_GAPS_BOOTSTRAP = {
     'employee_free_speech2024': 'Inadequacy',
     'haunschild2015': 'Incompleteness',
     'darby2023': 'Incompleteness',
+    'vidal_mitchell2015': 'Incommensurability',
+    'jiang2026': 'Incompleteness',
 }
 
 MODULE_KEY = {

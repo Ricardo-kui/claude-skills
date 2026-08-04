@@ -15,9 +15,10 @@ source_papers:
   - "pupovac_astvansh_carrillat_legoux_2026_pom (Production and Operations Management): automotive supplier setting defense, mandatory/voluntary disclosure threshold operationalization"
   - "du_tsolmon_2024_post_ma_retention_orsc (Organization Science): TMT retention rate DV 文献基准锚定（54.8% vs 前人 55%/59.4%）+ 三层异质数据库漏斗附录审计"
   - "malshe2015 (Journal of Marketing): cross-database manual matching (ACSI↔Compustat no common ID) + 5-source merge funnel"
-variants_count: 26
+  - "schumacher_keck_tang_2020_smj (Strategic Management Journal): nonoverlapping construct-formation/outcome windows + media/option dual-proxy convergence"
+variants_count: 27
 created: 2026-05-18
-updated: 2026-07-30
+updated: 2026-08-03
 ---
 
 # 面板数据-OLS — Methods 骨架
@@ -299,6 +300,44 @@ updated: 2026-07-30
 > "We assembled a data set using multiple sources, including [source 1], [source 2], [source 3], [source 4], and [source 5]. [Table] provides a description of these variables and the source of the specific data items. We obtained [financial data] from [database A]. Because there is no common [firm-level] identifier between [database A] and [database B], we **manually matched** [database B units] belonging to corresponding [database A entities]. Because one of our research questions pertains to [shareholder value], we retained only those [firms] that are [publicly listed] at any time during our sample period. We obtained [market data] from [database C]. Finally, we obtained [ownership data] from [database D] and derived [other ownership] from [database E]. After we merged the [N] data sets and removed [M] [firm-year] observations pertaining to [excluded segment, e.g., financial firms], our final sample consisted of [N_final] [firm-year] observations spanning a [Y]-year period ([year_start]–[year_end]) for which all the relevant variables have nonmissing values."
 **与原骨架差异**: 区别于变体16（多源 alliance **自动**交叉验证）与变体2（逐步样本交集漏斗）——本变体处理两个核心数据库**无共同标识符**的硬情况（如 ACSI 品牌与 Compustat 企业无公用 firm ID），须**手工匹配**（manually matched）下游单位到上游实体。三要素：(1) 五库多源 + 每变量的数据源声明表；(2) **手工匹配的明示**（不可假装自动 merge）；(3) 合并后漏斗（合并 N 库 → 排除 M 个 [金融行业] 观测 → 最终 N_final，且限定"上市"以配合股东价值 RQ）。配套反模式（见"多数据库无漏斗"）：即便无法逐步漏斗，也须报告关键交集 N。适用于营销-金融、营销-会计等跨职能多源面板（ACSI/Compustat/CRSP/ExecuComp/Thomson Reuters 组合）。
 **诚实边界**: 手工匹配的匹配率与匹配规则须报告（多少 brand 成功匹配到 firm？规则是否可复现？）；限定"上市"会引入生存偏误（上市公司更大更老），须在 limitation 讨论。
+
+### 变体 27: M4 构念形成窗—结果观察窗分离 + 双代理收敛 (1篇高价值)
+**来源论文**: Schumacher, Keck & Tang (2020, Strategic Management Journal)
+**验证状态**: 通过（单篇入库，待第二篇交叉验证）
+**写入日期**: 2026-08-03
+**槽位**: M2 / M4 / M8
+**骨架**:
+> To reduce contamination between [stable actor trait] and the outcomes used to test its consequences, we use nonoverlapping windows. We construct the trait from observable behavior during the first [k] periods of each actor's tenure and estimate its relationship with outcomes only in subsequent periods. We operationalize the trait with two proxies grounded in different data-generating processes: [public-description/text proxy] and [revealed-choice/portfolio proxy]. Convergent directional results reduce dependence on any one proxy, while each proxy's distinct contamination channel is examined separately.
+
+**与原骨架差异**: 变体19采用同期/滞后期权 moneyness；本变体把**完整构念形成期**与**完整结果观察期**切开，并将媒体描述与期权行为两种方法异质的痕迹并行使用。它同时完成时间优先性与测量三角化，但不应被写成外生性识别。
+
+**适用**: 相对稳定的 CEO/TMT 特质；trait proxy 可能被同期企业结果反向污染；拥有两类以上独立痕迹数据。
+
+**诚实边界**: 非重叠时间窗仍不能排除早期企业环境的共同影响；双代理同向不证明代理纯度。必须逐一说明媒体、投资组合、文本或行为代理的替代解释。若 trait 在形成窗之后可能变化，需报告稳定性或短窗敏感性分析。
+
+**配套微模板**: `micro-templates/executive-confidence-operationalization.md` 选项4–5。
+
+### 变体 28: M7 Binary-panel GEE + 全零单元保留 + 正式曲线识别链 (1篇高价值)
+**来源论文**: Bendig, Hensellek & Schulte (2024, Entrepreneurship Theory and Practice)
+**验证状态**: 通过（单篇高价值；与变体22共同验证 GEE 的可迁移性，但选择理由不同）
+**写入日期**: 2026-08-04
+**槽位**: M5 / M7 / M8
+**骨架**:
+> We estimate a generalized estimating equation (GEE) model for three design-specific reasons. First, repeated observations within [unit] may be correlated. Second, many units record zero outcomes in every period; these units still contain theoretically relevant variation in [IV], whereas a fixed-effects binary model would remove them. Third, robust GEE inference accommodates heteroskedasticity and misspecification of the working covariance. Because [DV] is binary, we specify a binomial family with a logit link, a [exchangeable / AR(1)] working correlation justified by [within-unit dependence assumption], and robust standard errors. We include [year] and [industry/context] fixed effects.
+>
+> A significant quadratic coefficient alone does not establish the hypothesized [U/inverted-U]. We therefore require the squared term to have the predicted sign, the slope at the lower bound to be significantly [positive/negative], the slope at the upper bound to be significantly opposite, and the turning point with its [Fieller/bootstrap] confidence interval to fall within the observed support of [IV].
+
+**与变体22的差异**: 变体22因焦点 IV 时不变、firm FE 会吸收主效应而选择 GEE，并使用 AR(1)。本变体的首要理由是**保留结果始终为零但 X 仍有信息的面板单元**，同时处理单元内相关和异方差；working correlation 为 exchangeable。新增的第二段把曲线理论翻译为四个事前统计约束，阻止“负二次项=倒 U”的不充分检验。
+
+**适用**: 二元面板结果中存在大量 all-zero units，且理论关注 population-average 关系；假设包含 U/倒 U及其调节。
+
+**诚实边界**:
+- GEE 保留全零单元但不吸收所有 unit-level time-invariant confounds；不得写成 firm FE 的因果等价物。
+- exchangeable 与 AR(1) 必须依据相关结构选择，不能为了软件方便默认。
+- Fieller 区间或 turning point 落入样本范围只确认函数形态，不确认理论机制。
+- 若极端 X 区间样本稀疏，应报告支持范围、观测密度并进行敏感性分析。
+
+**跨 skill 对齐**: `../write-results/econometric-models/Logit-Probit-Ordered-Probit.md` 变体9–11（正式 U-test、条件曲线概率图与经济成本换算）；`../write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md`（two-phase curvilinear argumentation）。
 
 ## 反模式
 

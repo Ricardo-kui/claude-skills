@@ -6,7 +6,7 @@
 
 如果是 `--batch` 模式，在多篇论文提炼完成后执行此阶段。
 
-### 四重验证标准（nuwa-skill 迁移版）
+### 五重验证标准（nuwa-skill 迁移版）
 
 | 标准 | 问题 | 淘汰门槛 |
 |------|------|----------|
@@ -14,12 +14,17 @@
 | **生成力** | 它能不能指导一篇新论文组装出对应功能模块？ | 无法填入占位符生成模块的骨架丢弃 |
 | **范式排他性** | 它是不是某类构建类型特别需要？ | 所有构建类型都通用的"废话骨架"（如"Theory is important"）丢弃 |
 | **故事忠实度** | 它是否让 central knot 更紧并保持角色与 storyline 一致？ | `story_fidelity.classification = reject` |
+| **抽象层级正确** | 它是跨路线 L0、路线级 L1、可选 L2，还是单篇模型签名 L3？ | L3 进入核心/路由，或仅因 H 数量、变量图、方程不同而新建架构，均拒绝 |
 
 ### 构建类型模式聚合分析
 
 ```yaml
 phase_4_batch_analysis:
   build_type_distribution: {"机制推演型": 8, "构念辨析型": 4, "假设树型": 3, "质性过程理论型": 2}
+  incommensurability_route_distribution: {"R1": 2, "R2": 1, "R3": 4, "R4": 3, "hybrid": 1, "unclassified": 1}
+  cross_route_reasoning_invariants: ["[跨 R1-R4 复现的 L0 推理功能]"]
+  route_specific_architectures: {"R1": ["[L2 architecture]"], "R2": [], "R3": [], "R4": []}
+  model_signature_only: ["[不得推广的 L3 特征]"]
   module_sequence_patterns:
     standard_sequence: "T1→T2→T3→T4→T5→最后假设自然收敛进入 METHODS (10/17)"
     with_independent_t6: "T1→T2→T3→T4→T5→独立 T6 段落→METHODS (1/17, 非管理学标准)"
@@ -71,7 +76,7 @@ phase_4_batch_analysis:
     contrast: "10%"
     pave: "4%"
     rebut: "1%"
-  three_element_citation_rate_avg: "78%"
+  citation_function_match_avg: "78%"
   write_theory_constraint_alignment:
     C10_interaction_pattern_clear: "9/10"
     C20_bilateral_argumentation: "8/10"
@@ -161,7 +166,7 @@ phase_4_corpus_reference:
         skeleton: "..."
         source_papers: ["作者_年份", "作者_年份"]
         vault_path: "fine_grained/batch_N/theory_skeletons/"
-        note: "供写作者参考，不自动写入 skill"
+        note: "reference candidate；满足授权、证据与去重门槛时可受控写入 corpus"
     patterns_to_note:
       - module: "T1"
         build_type: "构念辨析型"
@@ -181,7 +186,9 @@ phase_4_corpus_reference:
     rejected_reasons: ["仅出现1次", "不可生成模块", "通用废话"]
 ```
 
-**关键原则**：Phase 4 的产出先存入 Vault。`section_variant` / `ritual_only` 只可进入 reference corpus；`core_candidate` 必须显式人工审核。不得自动修改 write-theory 的 SKILL.md、路由、强制模块顺序、canonical story schema 或 stage gate。
+**关键原则**：Phase 4 同时产生 reference-corpus 建议与设计反馈。`section_variant` / `ritual_only` 可受控写入 reference corpus；`core_candidate` 先进入设计缺陷注册表。只有满足 `design-feedback-loop.md` 的证据、授权、风险和双回归门槛，才可做有边界核心修订；schema、stage gate 和高风险变更始终显式审核。
+
+**Incommensurability 专属原则**：细分类提高推理比较和架构检索精度，不降低核心规则证据门槛。L2 即使达到 VERIFIED/ROBUST 也默认保持 route-specific optional architecture；只有跨路线复现且通过设计反馈门控的 L0 reasoning function 才可成为普遍核心候选。L3 model signature 永不晋升。
 
 ### 证据注册表回写（`write-theory/corpus/_evidence_registry.yaml`）
 
@@ -196,6 +203,19 @@ phase_4_corpus_reference:
 
 ---
 
-## Phase 4.5 — 回写提醒
+## Phase 4.6 — Reference 回写提醒
 
-> 回写提醒的完整清单见 `../protocols/writeback_reminders.md`。加载后仍必须服从 Phase 0.5：reference-level 变体可写入 corpus；core candidate 只生成审核包，不执行核心文件修改。
+> 回写提醒的完整清单见 `../protocols/writeback_reminders.md`。reference-level 变体服从 corpus 证据门槛；core candidate 不走 reference 回写通道。
+
+## Phase 4.7 — Write-Theory 技能设计反馈
+
+加载 `design-feedback-loop.md` 并执行：
+
+1. 用逐字 `rule_excerpt` 证明目标规则真实存在；已支持的做法只登记 confirming evidence。
+2. 区分 `corpus_gap` 与 routing / validator / output-contract / schema / stage-gate defect。
+3. 为每个非 corpus 缺陷定义 positive 与 preservation 两个回归案例。
+4. 每次输出 `skill_design_feedback`；运行 `_update_design_feedback.py` 持久化到 `write-theory/corpus/_skill_design_feedback.yaml`。
+5. 只对 registry 判为 `safe_core_patch_candidate` 或 `conditionalize_candidate` 且通过授权/风险门控的条目实施核心修订。
+6. 修订后完成 quick validation、结构检查、双回归和隔离前向测试；`applied` resolution 还必须记录目标中可逐字核验的 `rule_excerpt_after`，并在适用时声明旧绝对规则已经消失，之后才可关闭缺陷。
+
+`corpus_enrichment` 回答“需要增加什么写作资产”；`skill_design_feedback` 回答“当前技能规则是否错误”。两者不得互相替代。

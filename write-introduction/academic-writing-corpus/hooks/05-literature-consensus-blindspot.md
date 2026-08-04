@@ -15,7 +15,8 @@ source_papers:
   - lashley_pollock2020 (ASQ, 2020): "stigma literature consensus → missing audience heterogeneity"
   - ahmadi2017 (JMS, 2017): "truism-establishment narrowing — managers' role in exploration known, psychological drivers unknown"
   - qiao2026 (SMJ, 2026): "cross-four-field consensus + theory definition — imprinting theory's breadth across entrepreneurship, strategy, OT, IB"
-updated: 2026-07-07
+  - kashmiri_nicol_arora2017 (JAMS, 2017): "upper-echelons consensus narrowed from demographic proxies to the psychological black box behind innovation and product-safety outcomes"
+updated: 2026-08-03
 created: 2026-05-18
 source: Manually curated from MVP30 narrative_analysis files
 ---

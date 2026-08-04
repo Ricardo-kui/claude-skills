@@ -31,6 +31,8 @@
 [功能标签]: Tension — Incompleteness 标志性开场
 [骨架]: Although prior research has extensively examined [established relationship] ([citations]), the [mechanism/condition/process] through which [X] affects [Y] remains [poorly understood / unclear / largely unaddressed]. This omission is theoretically important because [theoretical consequence of not knowing].
 [可迁移性]: 高 — 出现在 10/28 篇范文中
+[抽象层级]: "L0 invariant / L1 route / L2 optional tactic / L3 paper signature"
+[Incommensurability 路由适配]: "R1 / R2 / R3 / R4 / cross-route / n.a."
 [范式排他性]: Incompleteness 专用，Inadequacy/Incommensurability 不应使用 "remains unclear"
 [Gap 变体]:
   - Inadequacy 版本: "While prior research has treated [X] as [assumption], this view overlooks [specific limitation] because [reason]."
@@ -61,6 +63,18 @@
     avoids_passive: true/false
 ```
 
+### Incommensurability 反过拟合抽象
+
+对该类范文，先使用 `../../write-introduction/references/incommensurability-introduction-routing.md` 的 L0–L3 profile，再提炼骨架：
+
+1. 先写 L0 功能摘要，不看原句是否“漂亮”。
+2. 用 R1–R4 标记 resolution operator；route 只缩小检索范围。
+3. 将模块排列、揭示时机和对话配置标为 L2 tactic；只有它改变说服动作时才可成为新变体。
+4. 将段落数、案例、比喻、具体理论和期刊修辞标为 L3；L3 只能作原文锚点。
+5. 运行 leave-one-paper-out、minimal-sufficient abstraction、counterexample tolerance、route stability 与 functional novelty 五项测试。
+
+若骨架只能复现来源论文而不能迁移到另一篇同路由论文，降为 L3；若在多篇论文中复现但不是跨路由必要功能，保留为 L2 optional variant；只有跨路由反复出现的功能才可提出 L0 核心候选。
+
 ### 语料库感知比对（Corpus-Aware Comparison）
 
 > **核心原则**：在标记 `[入库动作]` 之前，必须读取目标 corpus 文件，将新骨架与已有变体逐一比对。不读文件就标记"新变体" = 可能重复入库。
@@ -89,6 +103,8 @@
    | 与某个已有变体功能相似度 ≥ 70% | `none` | 该骨架已被 corpus 覆盖——记录匹配到的变体编号（如"匹配已有变体 C"） |
    | 与所有已有变体功能相似度 < 70% | `append_variant` | 这是已有 canonical_id 的新变体——填写 `[变体类型名]` 和 `[原文锚定句]` |
    | 目标文件不存在（新 canonical_id） | `create_new_file` | 这是 corpus 中没有的全新模板——还需填写 `[变体类型名]` |
+
+   对 Incommensurability 增加一项覆盖规则：若差异只来自 L3 paper signature，强制 `none`；若是 L2 tactic 但说服动作未改变，匹配最近变体并记录确认性证据，不新建 subtype。
 
 5. **记录比对证据**：在 Phase 2.2 输出中附一句比对摘要（不输出给用户，供 Phase 4.6 使用）：
    ```
@@ -131,6 +147,8 @@ phase_2_distillation:
     expression_skeletons:
       - skeleton: "..."
         transferability: "高 (10/28)"
+        abstraction_level: "L0 / L1 / L2 / L3"
+        incommensurability_route_fit: "R1 / R2 / R3 / R4 / cross-route / n.a."
         paradigm_exclusivity: "Incompleteness 专用"
         gap_variants: ["Inadequacy 版本", "Incommensurability 版本"]
         dorobantu_question: "Why is this puzzle important?"
@@ -215,6 +233,8 @@ phase_2_4_skeleton_critic:
   status: "distilled"
   combo: "[gap_type] × [contribution_dimension]"
   gap_type: "[Phase 0]"
+  incommensurability_route: "[R1 / R2 / R3 / R4 / unclassified / n.a.]"
+  route_confidence: "[high / medium / low / n.a.]"
   contribution_dimension: "[Phase 0]"
   hook_canonical_id: "[Phase 2.2 对应语料库字段中提取的 canonical_id]"
   tension_canonical_id: "[同上]"
@@ -235,7 +255,7 @@ phase_2_4_skeleton_critic:
   vault_profile_path: "[Fine-Grained Profile 的 Vault 存储路径]"
 ```
 
-同时更新 `combos_accumulator.[combo]` 的累积字段（追加 paper_id、hook_id、tension_id、module_sequence、tone、module_ratios、distinctive_features、avoids）。
+同时更新 `combos_accumulator.[combo]` 的累积字段（追加 paper_id、hook_id、tension_id、module_sequence、tone、module_ratios、distinctive_features、avoids）；Incommensurability 论文还要累计 route、route confidence、L0 invariant 候选、L2 tactic 与 L3 signature，三层不得混合计数。
 
 **写入方式**：Read `_batch_state.yaml` → 定位 `papers` 列表末尾 → Edit 追加新条目 → 更新 `combos_accumulator` → 更新 `papers_processed` 和 `last_updated`。
 

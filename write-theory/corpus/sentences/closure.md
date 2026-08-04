@@ -2,7 +2,7 @@
 
 ## 全局收束骨架（⚠️ 管理学非标准——不推荐使用）
 
-> **管理学惯例**: JMS, AMJ, SMJ, ASQ, OS 等期刊的 Theory 部分以最后假设为终点，**不要求独立的 Closure 段落**。以下骨架仅供极少数理论密集型 ASQ/ASR 论文参考——且应压缩为 2-3 句嵌入最后假设段末尾，非独立段落。
+> **管理学惯例**: JMS, AMJ, SMJ, ASQ, OS 等期刊的 Theory 部分以最后假设为终点，**不要求独立的 Closure 段落**。以下骨架仅供极少数理论密集型 ASQ/ASR 论文参考——且应压缩为恢复整体模型可理解性所必需的最短内容，嵌入最后假设段末尾，而非独立成段。
 
 **功能**（如确实需要）：将分散假设整合为统一理论叙事，明确假设间逻辑关系。
 
@@ -63,7 +63,7 @@ through [unifying mechanism]."
 **与全文收束的关系**:
 - 轨道级局部收束 ≠ 全文收束
 - 管理学标准: 每条轨道局部收束后直接进入下一条轨道或 METHODS（如 malik_wang_martin_gomezmejia2025 JM, singh_grewal2023 JMR）
-- 可选: 如假设间逻辑关系不够自明，可在最后假设段末尾嵌入 2-3 句框架总结
+- 可选: 如假设间逻辑关系不够自明，可在最后假设段末尾嵌入最短必要的框架总结
 - 非标准: 独立的全文 T6 段落
 
 ---
@@ -190,7 +190,7 @@ work]. We test these predictions using [brief empirical strategy reference]."
 
 ## 按架构类型的整合建议（非强制）
 
-> **管理学惯例**: 不要求独立 Closure 段。以下为按推理架构的**可选整合策略**——当假设间逻辑关系不够自明时，可在最后假设段末尾嵌入 2-3 句框架总结，而非添加独立段落。
+> **管理学惯例**: 不要求独立 Closure 段。以下为按推理架构的**可选整合策略**——当假设间逻辑关系不够自明时，可在最后假设段末尾嵌入最短必要的框架总结，而非添加独立段落。
 
 **核心**: 不同推理架构的假设间逻辑自明程度不同。矩阵型和 Y-shaped 架构的假设关系对读者最不透明，嵌入简短框架总结的收益最高。
 
@@ -207,7 +207,7 @@ work]. We test these predictions using [brief empirical strategy reference]."
 - toh_pyun (SMJ): Y-shaped 5 假设, 无框架总结 → 仍发表
 - malik_wang_martin_gomezmejia2025 (JM): 双轨 4 假设, 用轨道级局部收束替代 → 仍发表
 
-**2×2 矩阵嵌入总结模板**（嵌入最后假设段末尾，2-3 句，非独立段落）:
+**2×2 矩阵嵌入总结模板**（嵌入最后假设段末尾，只保留必要整合，非独立段落）:
 ```
 "Taken together, our 2×2 framework reveals a [diagonal symmetry / cross-pattern]: 
 [IV dimension 1]'s effect is [strengthened/weakened] by [moderator A] but 
@@ -216,7 +216,7 @@ pattern. This diagonal symmetry underscores that [core theoretical insight about
 the two IVs respond differently to the two moderators]."
 ```
 
-**Y-shaped 嵌入总结模板**（嵌入最后假设段末尾，2-3 句，非独立段落）:
+**Y-shaped 嵌入总结模板**（嵌入最后假设段末尾，只保留必要整合，非独立段落）:
 ```
 "Taken together, our Y-shaped framework suggests that while [IV] unambiguously 
 [benefits/harms] [Group A] by [mechanism], its effect on [Group B] is contingent on 

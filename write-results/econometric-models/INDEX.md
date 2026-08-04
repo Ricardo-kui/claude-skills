@@ -4,7 +4,7 @@ description: Results 填空骨架变体库，按结果类型组织。由 distill
 organization: by_result_type
 result_types_count: 19
 created: 2026-05-18
-updated: 2026-08-02
+updated: 2026-08-04
 ---
 
 # Results Econometric Models Corpus
@@ -19,15 +19,15 @@ updated: 2026-08-02
 
 | 文件 | 结果类型 | 变体数 | 最后更新 |
 |------|---------|--------|---------|
-| [OLS-FE](OLS-FE.md) | OLS-FE | 42 | 2026-07-30 |
-| [Logit-Probit-Ordered-Probit](Logit-Probit-Ordered-Probit.md) | Logit-Probit-Ordered-Probit | 8 | 2026-07-07 |
+| [OLS-FE](OLS-FE.md) | OLS-FE | 44 | 2026-08-03 |
+| [Logit-Probit-Ordered-Probit](Logit-Probit-Ordered-Probit.md) | Logit-Probit-Ordered-Probit | 13 | 2026-08-04 |
 | [生存分析](生存分析.md) | 生存分析 | 19 | 2026-08-01 |
 | [DiD](DiD.md) | DiD | 2 | 2026-08-02 |
-| [计数模型](计数模型.md) | 计数模型 | 11 | 2026-07-07 |
-| [实验](实验.md) | 实验 | 3 | 2026-07-07 |
+| [计数模型](计数模型.md) | 计数模型 | 12 | 2026-08-03 |
+| [实验](实验.md) | 实验 | 5 | 2026-08-03 |
 | [多研究](多研究.md) | 多研究 | 8 | 2026-08-02 |
 | [定性过程研究](定性过程研究.md) | 定性过程研究 | 4 | 2026-07-07 |
-| [IV-2SLS](IV-2SLS.md) | IV-2SLS | 6 | 2026-07-25 |
+| [IV-2SLS](IV-2SLS.md) | IV-2SLS | 7 | 2026-08-03 |
 | [匹配DiD](匹配DiD.md) | 匹配DiD | 0 | 2026-05-18 |
 | [堆叠扩散Logit](堆叠扩散Logit.md) | 堆叠扩散Logit | 0 | 2026-05-18 |
 | [同伴效应-网络效应](同伴效应-网络效应.md) | 同伴效应-网络效应 | 0 | 2026-05-18 |
@@ -35,7 +35,7 @@ updated: 2026-08-02
 | [跨受众构念对比](跨受众构念对比.md) | 跨受众构念对比 | 1 | 2026-07-30 |
 | [三向交互](三向交互.md) | 三向交互 | 3 | 2026-07-30 |
 | [构造暴露分解](构造暴露分解.md) | 构造暴露分解 | 0 | 2026-05-18 |
-| [SEM-moderated-mediation](SEM-moderated-mediation.md) | SEM/调节中介 | 6 | 2026-08-02 |
+| [SEM-moderated-mediation](SEM-moderated-mediation.md) | SEM/调节中介 | 7 | 2026-08-03 |
 | [事件研究法](事件研究法.md) | 事件研究法 | 5 | 2026-07-23 |
 | [VARX-PVAR](VARX-PVAR.md) | VARX-PVAR | 7 | 2026-07-15 |
 
@@ -47,6 +47,14 @@ updated: 2026-08-02
 4. 变体达到 3+ 时，考虑提升为 skill 主骨架
 
 ## 语料库质量状态
+
+> ✅ **2026-08-04 更新（Lee–Park 2024）**: Logit/Probit 结果语料新增“条件转折点 + 直接 Wald 差异检验”与“选择性路径机制辨析”两种写作变体。Lee & Park 经用户专家审计为典型 U／倒 U 写作范文，因此正式曲线检验链和转折点位置型调节均登记为 **VERIFIED**；选择性路径机制辨析仍为 EMERGING，因为它不是本次曲线范文审计的对象。新增五条反模式：正式 U 检验后置、用交互项代替几何比较、预测尺度未标注、`p = .00/p < .00`、以及用“全部支持”抹平完整模型中的证据衰减。核心路由不变。
+
+> ✅ **2026-08-03 更新（Schumacher–Keck–Tang 2020）**: OLS-FE 新增“组内方向切换但不显著→直接组间系数差异裁决”和“三类构念效度威胁定向三角验证”。前者强制区分组内斜率、组内显著性与组间差异；后者把补充分析按 rival interpretation 组织。二者均为单篇 EMERGING reference variants。
+
+> ✅ **2026-08-03 更新（Kashmiri–Nicol–Arora 2017）**: SEM/调节中介新增“共享中介跨异质结果分支的证据账本”：a-path 只报一次，但每个 outcome 的直接关系、间接效应区间与假设判定必须分别报告，并保留 radical-innovation 分支的不支持结果。OLS-FE 与全局注册表新增高风险反模式：不得通过删除当期不显著 controls 把 `p < .10` 挽救为 `p < .05` 并升级假设判定；legacy Baron–Kenny 条件计数不得替代间接效应区间或 moderated-mediation index。
+
+> ✅ **2026-08-03 更新（Vidal–Mitchell 2015；Moon–Tuli–Mukherjee 2023）**: 计数模型新增“双极参照点分支：先报 null、再报子类型主发现与部分支持”；IV-2SLS 新增“稳健性例外账本：稳定结论、形态变化与脆弱边界分层报告”。二者均保留单篇 EMERGING 状态与诚实边界。
 
 > ✅ **2026-08-02 更新（Lee–Wu–Bednar, Organization Science）**: 首次填充 DiD 结果类型：新增“交互项→经济幅度→双端条件效应→逐端假设核对”和“理论前提探测式补充证据链”。同时加入两条诚实边界：显著交互项不自动等于符号反转假设完整成立；TWFE+Bacon 只作旧式诊断，不替代异质性稳健错位 DiD 与平行趋势敏感性分析。
 
@@ -140,8 +148,10 @@ updated: 2026-08-02
 >
 > ✅ **2026-07-22 更新**: 蒸馏 Ilicic & Brennan (2026, JM) "Political Ideology Shapes Consumer Responses to Addictive Products" 新增 2 个高价值变体（均单篇、待第二篇交叉验证声明已标注）：
 >   - 多研究 变体5：**逐研究 Discussion 接力立项** — 每个 Study Discussion 末段固定三拍（贡献→具体限制→下一研究如何补救），consumer psychology 多研究标志性接力节奏（区别于变体2 的 Study 开场复制声明）
->   - SEM-moderated-mediation 追加：**Reverse-Order Mediation Test** — 反转序列中介顺序重测，反向间接效应 CI 含零即确认因果排序（Fairchild & McDaniel 2017）；区别于 qiao2026 reverse-code+Wald（那是对立通道持续性比较）
+>   - SEM-moderated-mediation 追加：**Reverse-Order Mediation Sensitivity Test** — 反转序列中介顺序重测；反向间接效应 CI 含零只说明未检测到该竞争序列，与提议排序相容但不能确认时间或因果顺序；区别于 qiao2026 reverse-code+Wald（那是对立通道持续性比较）
 >   - 配套 write-methods：实验 变体6（measurement/moderation of process 双设计 + rival accounts battery）、多研究 变体5（Empirical Plan 因果阶段化预告段）
+>
+> ✅ **2026-08-03 复审修正**: 将 reverse-order mediation 从“因果排序确认”降级为竞争排序敏感性检查；实验新增变体4（三条件干预的 omnibus→组间→组内→稳定组拆解）与变体5（竞争中介排序的有界报告）。两者均为单篇 EMERGING section variant。
 
 > ✅ **2026-07-22 更新**: 蒸馏 Kim & Lee (2026, SMJ) "Putting a Price on Mission" 新增 3 个高价值变体（均单篇、待第二篇交叉验证声明已标注）：
 >   - OLS-FE 变体27：**多阶段同 IV 管道衰减 profile** — single-study single-IV multi-stage（attraction+/selection+/attrition null）+ 跨阶段对比句把"前置显著+后置 null"提升为机制发现（signaling 衰减裁决）；区别 多研究.md 的 cross-study synthesis

@@ -14,7 +14,8 @@ source_papers:
   - shi2021 (JMR, 2021): "organizational herding in advertising disclosures"
   - vadakkepatt2022 (JM, 2022): "130% lobbying growth, 22,000% ROI, $325M→$338B contracts"
   - kim2022 (MS, 2022): "50M vehicle recalls in 2016 → firms may not test enough before launch"
-updated: 2026-05-24
+  - ilicic_brennan2026 (JM, 2026): "cross-national polarization counts + U.S. addiction burden + global mortality"
+updated: 2026-08-03
 created: 2026-05-18
 source: Manually curated from MVP30 narrative_analysis files
 ---

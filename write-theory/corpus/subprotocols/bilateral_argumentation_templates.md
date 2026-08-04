@@ -7,7 +7,7 @@
 <!--
 pattern_id: social_identity_boundary_condition
 build_type: 调节效应型 / 机制推演型
-source_papers: ["Keeves_2017_AMJ"]
+source_papers: ["Keeves_2017_ASQ"]
 confidence: high
 status: ready_for_corpus
 -->
@@ -311,6 +311,46 @@ H[X]: [Relative advantage] positively moderates the relationship between [IV] an
 
 ---
 
+<!--
+pattern_id: turning_point_delay_selective_prerequisite
+build_type: 调节效应型 / 辩证对立
+source_papers: ["Lee_Park_2024_SMJ"]
+confidence: medium
+status: emerging_single_paper
+-->
+
+## Pattern: Turning-Point Delay via Selective Prerequisite Preservation（选择性维持条件→拐点右移）
+
+**适用场景**: 基线曲线来自两个共同必要条件 A/B，其中 B 随 X 下降；W 只维持 B，不改变 A，因此理论预测是 turning point 延后，而不是整条曲线笼统变平、变陡或上移。
+
+**微观动作序列**: Baseline bottleneck switch → W 的初始存量作用 → W 对 B 衰减率的作用 → A 路径不变的排除说明 → 低/高 W 拐点直接比较。
+
+**骨架**:
+```text
+[Baseline recap] As X accumulates, A increases while B declines; Y falls once B becomes the binding constraint.
+
+[Initial stock] Actors with higher W begin with a larger stock of B because [mechanism and warrant].
+[Attenuation] They are also less susceptible to [process that depletes B], allowing B to remain sufficient across a wider range of X.
+[Selective-path boundary] W does not materially change A because [mechanism-specific invariance reason].
+
+[Bilateral comparison] Under lower W, B becomes limiting at [earlier X]. Under higher W, the same limiting state occurs only at [later X].
+[Prediction] H[N]: The turning point of the X–Y curve occurs at a higher X when W is higher.
+```
+
+**为什么有效**:
+- 把 moderator 的理论作用绑定到一个特定 prerequisite，避免为了对称而虚构第二条调节路径。
+- 预测一个可直接检验的几何量（turning-point location），使 Theory 与估计式、Wald-type comparison 和图形保持一致。
+- 双边论证不是 high W 有效果、low W 无效果，而是两种状态下短板何时出现的直接比较。
+
+**范文来源**: Lee and Park (2024), *Strategic Management Journal*：perceived ability 提高并维持学习动机，使动机成为短板的时间更晚。
+
+**禁忌**:
+- 不能用一组显著、另一组不显著替代拐点差异的直接检验。
+- 若 W 同时改变 A 与 B，必须分别推导两条路径，不能声称“selective preservation”。
+- 代理变量若只反映实际能力而非感知能力，Theory、Measures 与 Discussion 必须说明构念距离。
+
+---
+
 <!-- 
 pattern_id: dual_mechanism_convergent_moderation
 build_type: 机制推演型 + 调节边界（双机制主效应）
@@ -358,6 +398,7 @@ H[X]: The [main effect] is [strengthened / weakened] by [W].
 （范文用一个 4 行 × 2 列表把"理论论证 + 3 moderator × 双通道"一次性呈现，读者与审稿人可逐格核验每个 moderator 是否真覆盖了双通道。）
 
 **为什么有效**:
+- **适用范围**：本矩阵是“两个通道同向收敛，且每个 moderator 确实同时作用于两个通道”的专用模板，不是所有多机制调节的通用硬约束。选择性作用于单一路径时，使用 mechanism mapping（作用点 + invariant path + 净效应），允许另一格为 N/A 并说明理论理由。
 - 主效应若建立在双机制上，调节变量必须经**两个通道**分别推理，否则审稿人会问"这个 moderator 作用于哪条机制？为何忽略另一条？"
 - 显式论证两通道**同向收敛**（convergent）才能用一个带符号假设（strengthens / weakens）合法概括双机制——这是 dual-mechanism 理论写带符号调节假设的理论牌照
 - 矩阵表把 N moderator × 2 通道的推理**一次性可见化**，降低读者认知负荷，并使"每个 moderator 都覆盖双通道"可被逐格核验
@@ -365,12 +406,12 @@ H[X]: The [main effect] is [strengthened / weakened] by [W].
 
 **注意事项**:
 - 两通道必须**真的同向收敛**才能写带符号假设；若两通道反向，必须披露并改用 competing/ambiguous hypothesis（参见 write-theory C14 竞争假设收敛信号）
-- 矩阵表每个 cell 必须有**独立的机制逻辑**，不能只填关键词；空 cell = 该 moderator 未覆盖该通道 = 调节论证缺口
+- 在本 convergent 双通道模板内，每个 cell 必须有**独立的机制逻辑**；若采用选择性路径模板，未作用通道应标 N/A + invariance reason，而不是伪造逻辑填满矩阵
 - **H1 与 H2-H4 的机制基础必须一致**：H1 也应经双机制收敛推导，保证主效应与调节共用同一套机制语言
 - moderator framework 的"扩展网络/多重利益相关者"framing 必须在引入第一个 moderator 之前就说明，否则矩阵显得 arbitrary
 
 **反模式**:
-- 只论证 moderator 作用于**一个**通道（如只讲 prism/categorization，漏掉 pipe/cash flow）→ 双机制理论的调节论证不完整，矩阵出现空 cell
+- 声称 moderator 同时改变两个通道，却只论证一个通道 → 论证不完整；如果理论上只作用一个通道，应明确改用 selective-path mapping，而非判为自动失败
 - 把矩阵表当装饰——cell 里只有关键词而无机制逻辑
 - 主效应 H1 单机制推导、调节变量却双机制推理 → 机制基础不一致，审稿人质疑"为什么 H1 不需要双机制而 H2 需要"
 - 把本应收敛的两通道写成对立却不解释 → 应改 competing hypothesis 而非强行写带符号假设

@@ -39,6 +39,8 @@
 [骨架]: Drawing on [theory] ([citation]), we argue that [IV] creates [mechanism state]—a [definition of mechanism state]—that [action/implication]. Specifically, [step 1: how IV creates mechanism state]. [Theoretical justification]. Consequently, [step 2: how mechanism state affects DV]. [Theoretical justification]. Therefore:
 [假设嵌入]: [Hypothesis]: [IV] is [positively/negatively] related to [mediator].
 [可迁移性]: 高 — 出现在 8/28 篇机制推演型范文中
+[抽象层级]: "L0 invariant / L1 route / L2 optional architecture / L3 model signature"
+[Incommensurability 路由适配]: "R1 / R2 / R3 / R4 / cross-route / n.a."
 [范式排他性]: 机制推演型专用，构念辨析型不应使用此骨架
 [构建类型变体]:
   - 构念辨析型: "We differentiate [Construct A] from [Construct B]. Whereas [A] entails [definition], [B] involves [definition]. This distinction matters because [theoretical consequence]."
@@ -46,6 +48,18 @@
   - 质性过程理论型: "The relationship between [IV] and [DV] unfolds through [N] phases. In Phase 1, [process]. As [transition condition], the process shifts to Phase 2, where [process]."
 [问题对应]: Dorobantu Q — "WHY should we expect these relationships between constructs (mechanisms)?"
 ```
+
+### Incommensurability 反过拟合抽象
+
+先用 `../../write-theory/references/incommensurability-resolution-routes.md` 生成 L0–L3 profile，再提炼 T3/T4：
+
+1. L0 只保留 rival-account chains、exact incompatibility、resolution operator、combination rule 与 distinguishing prediction。
+2. L1 用 R1–R4 缩小可比较范文范围，不直接选择 A–G。
+3. L2 记录 paired/differential/competing/nonlinear/conditional/proposition 等架构，并写 `necessity_warrant` 与被排除的更简单形式。
+4. L3 记录具体构念、理论、H 编号/数量、mediator/moderator、方程和测量；L3 仅作 evidence anchor。
+5. 执行 construct substitution、hypothesis-count invariance、model-form necessity、simpler architecture、discriminating prediction、measurement firewall 六项检验。
+
+若一个骨架只能复现来源论文的变量图而不能迁移其推理操作，降为 L3。若多篇同路线论文复现相同架构但跨路线并非必要，保留为 L2 optional architecture。只有跨路线复现的推理功能才可成为 L0 core candidate。
 
 **必须记录的信息**：
 - 骨架句法（用方括号标记占位符）
@@ -143,6 +157,9 @@ phase_2_distillation:
     expression_skeletons:
       - skeleton: "..."
         transferability: "高 (8/28)"
+        abstraction_level: "L0 / L1 / L2 / L3"
+        incommensurability_route_fit: "R1 / R2 / R3 / R4 / cross-route / n.a."
+        architecture_necessity: "[为何该假设形式不可由更简单形式替代]"
         paradigm_exclusivity: "机制推演型专用"
         build_type_variants: ["构念辨析型版本", "假设树型版本", "过程理论型版本"]
         dorobantu_question: "WHY should we expect these relationships between constructs?"
@@ -174,6 +191,11 @@ phase_2_distillation:
    - 骨架的推理模式是否与判定的构建类型匹配？
    - 例如：构念辨析型骨架中出现了因果链语言 → 不纳入（模式错配）
 
+4. **架构必要性检查（Architecture-Necessity Test；Incommensurability 必做）**
+   - route 是否真的要求 paired hypotheses、mediator、moderator、competing hypotheses 或曲线？
+   - 一个更简单的 differential/conditional hypothesis 能否表达相同 contribution？
+   - 若复杂度只来自来源论文的估计模型 → 降为 L3，不进入架构语料。
+
 **裁决格式**：
 
 ```yaml
@@ -191,13 +213,17 @@ phase_2_4_skeleton_check:
   type_fidelity_test:
     build_type_match: true/false
     mismatch_details: "..."
+  architecture_necessity_test:
+    complex_form_required: true/false/n.a.
+    simpler_alternative: "[更简单形式或 null]"
+    verdict_effect: "[保留 L2 / 降为 L3 / n.a.]"
 ```
 
 **裁决标准**：
 
 | 裁决 | 条件 | 后续动作 |
 |------|------|----------|
-| **通过** | 三项测试全部通过 | 骨架进入 Phase 3 和 Phase 4 |
+| **通过** | 通用三项测试通过；Incommensurability 还须通过架构必要性检查 | 骨架进入 Phase 3 和 Phase 4 |
 | **需修正** | 生成力或机制内容测试未通过，但可通过改写修复 | 标记后在 Phase 4 中尝试改写后重新验证 |
 | **不纳入** | 构建类型错配，或过度抽象失去生成力 | 丢弃，不进入语料库 |
 

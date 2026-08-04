@@ -57,17 +57,17 @@ description: |
 
 > **重要前提**：一篇论文可以包含多种 gap 组合——诊断主 gap（驱动路由）+ 次 gap（可选，在 Tension 叠加）。
 
-**Step A：主 gap（GBL 三档，驱动段落结构/能量/Conversation 策略）**：
-1. 你的研究对已有文献的**主要**定位是**补充**（Incompleteness）、**修正**（Inadequacy）还是**颠覆**（Incommensurability）？
-2. 已有文献的主要问题是什么——漏了东西、理解偏了、还是自相矛盾？
+**Step A：主 gap（GBL 三档，驱动张力类型、叙事能量与结构复杂度）**：
+1. 你的研究对已有文献的**主要**定位是**补充**（Incompleteness）、**修正**（Inadequacy），还是**裁决/重组不可兼容主张**（Incommensurability）？Incommensurability 不要求推翻所有既有理论；强解法通常说明各方在何种范围内仍然成立。
+2. 已有文献的主要问题是什么——漏了东西、理解偏了，还是在可比的 X、Y、层次与时间范围上推出不可兼容的预测或状态？
 
 **Step B：次 gap（可选——多数顶刊论文有组合）**：
 3. 除主 gap 外，你的研究是否还**同时**回应另一种 gap？（如：主 gap = Incompleteness"激进投资者未被考察"，次 gap = Application"agency theory 应用到 supply chain spillover 新现象"）
-   - 次 gap 不改变段落结构/能量/Conversation 策略（那些由主 gap 驱动），但在 Tension 段内叠加呈现，丰富 gap 论证。
+   - 次 gap 不改变主张力的结构与能量，但可在 Tension 内作为补充论证；Conversation 策略始终独立诊断。
    - 常见组合：Incompleteness + Application（填缺口 + 借理论）、Inadequacy + Confusion（视角偏 + 证据矛盾）、Incommensurability + Confusion（理论对立 + 数据冲突）。
    - 若无次 gap，单 gap 也完全合法（多数论文是单 gap）。
 
-> **Gap 深化参考（不在诊断阶段执行）**：找法标签（Sandberg 三模式）+ 三档风险权衡 + Müller-Bloch 6 类 + gap verification 已外置到 [`references/gap-deepening-reference.md`](references/gap-deepening-reference.md)。这些是 Tension 写法的微调参考，**不影响段落结构/能量/Conversation 策略**。Phase 3 渲染 Tension 时按需加载，不在 Phase 1 诊断时全过。
+> **Gap 深化参考（不在诊断阶段执行）**：找法标签（Sandberg 三模式）+ 三档风险权衡 + Müller-Bloch 6 类 + gap verification 已外置到 [`references/gap-deepening-reference.md`](references/gap-deepening-reference.md)。这些是 Tension 写法的微调参考，**不决定 Conversation 策略**。Phase 3 渲染 Tension 时按需加载，不在 Phase 1 诊断时全过。
 
 ### Phase 1.1: GBL Four-Move 对齐
 
@@ -93,105 +93,53 @@ Four Moves 不构成新写作模式，也不写入 `paper-state.yaml`。缺失 m
 
 ### Phase 1.5: Vault 基线检索（默认执行——主动查用户的文献库）
 
-在路由前，**默认尝试**从用户的 Obsidian 文献库拉取当前主题的文献证据。**不再静默跳过**——这是 Literature Turn 质量的关键输入源，用户的 1800+ 文献笔记是核心资产。按以下三级回退（不阻塞，逐级降级）：
-
-```
-第 1 级：paper-state.yaml 有 vault 配置?
-│
-├── vault.section_evidence_map 非空 → 读取该文件
-│   → 过滤到 "Introduction" / "I" 行（按 Section 列或命题 ID 前缀匹配）
-│   → 提取每行: 命题ID, citation key, Vault note path, 证据用途
-│   → 如有 vault.war_room，补读 Gap 状态和 canonical handle buckets
-│   → 生成 "Vault Knowledge Brief (Introduction)"
-│
-第 2 级：无 vault 配置，但有已知 Vault 路径?
-│
-├── Vault 根路径来源（按优先级）：
-│     ① paper-state.yaml 的 paper.vault 子节（即使 section_evidence_map 为空，war_room 等其他字段可能含路径线索）
-│     ② 若 paper-state.yaml 无 vault 节，向用户询问："请提供你的 Obsidian Vault 根路径（文献笔记所在目录）"，并提示可在 paper-state.yaml 配 vault 节以避免每次询问
-│   → 拿到 Vault 根路径后，用 paper.title、theory_hints.core_constructs、Gap 关键词为搜索词
-│   → 在该路径下用文件系统检索（grep markdown 文件的标题/frontmatter/正文）
-│     · 优先搜含 citekey/findings/gap 字段的文献笔记子目录
-│     · 次搜项目作战室/证据映射类文件
-│   → 限制 10-15 条最相关结果 → 提取 citation key、note path、核心发现
-│   → 若 Obsidian MCP 可用（search_notes 工具存在），改用 MCP 做语义检索（更准）
-│   → 生成 "Vault Knowledge Brief (Introduction)"（标注"文件系统检索，非配置映射"）
-│
-第 3 级：Vault 路径不可达 / 无命中?
-│
-└── 主动提示用户：
-    "我尝试检索你的 Obsidian 文献库 [路径] 但未找到与 [主题] 相关的笔记。
-     你可以：(1) 提供 3-5 篇核心文献的 citekey 或笔记路径；
-            (2) 确认 Vault 路径是否正确；
-            (3) 在 paper-state.yaml 配置 vault 节以启用精确映射检索。"
-    然后用用户提供的引文继续，不阻塞流程。
-```
-
-**为何默认执行**：Literature Turn 的核心是"加入一个真实的学术对话"——没有真实引文支撑，AI 只能凭空编造或只用用户给的几篇，导致"罗列而非对话"。Vault 检索是把用户积累的文献资产接入生成流程的关键桥梁。即使无 paper-state.yaml 配置，也应主动尝试文件系统检索。
-
-**Vault Knowledge Brief 输出格式**（所有内容来自 Vault，不编造）：
-
-```markdown
-## Vault 知识简报（Introduction）
-
-### 章节-证据映射（来自 paper-state.yaml vault.section_evidence_map，或文件系统检索）
-| 命题ID | Citation Key | 证据用途 | 来源 |
-|--------|-------------|---------|------|
-| [I1] | [@citekey] | [用途——来自 Vault 文件原文] | 映射/检索 |
-
-### Gap 锚定（来自项目作战室，如有）
-- [从 war_room 的 Gap 状态节提取]
-
-### 推荐引文（按 Literature Turn 角色）
-- Literature Turn [文献流 A] 核心引用: [2-4 篇，含至少 1 篇 review/meta，跨期刊]
-- Literature Turn [文献流 B] 核心引用: [若 Synthesized/Non-Coherence 策略]
-- Gap 句引用: [支撑 gap 存在性的引文]
-- Rival explanations: [从证据映射或 war_room 的 rival/boundary anchors 提取]
-
-### 证据完整度
-- Vault 命中: N 条引言级证据
-- [如命中数 < 3，提示 "证据映射中 Introduction 条目较少，建议补充或提供核心引文"]
-- 检索方式: [配置映射 / 文件系统检索 / MCP 语义检索 / 用户提供]
-```
-
-**使用方式**：Brief 中的 citation keys 作为 Phase 3 渲染的建议输入——Hook 的 `[consensus/dominant finding]` 和 Literature Turn 的 `[citations]` + `[per-citation finding]` 槽位**优先使用 Brief 推荐的引文及其发现方向**（这些引文与用户在 Vault 中的项目设计一致）。Brief 不覆盖用户主动提供的引文，只标注"Vault 建议 vs 用户选择"的不一致处。**关键**：每个推荐引文必须附"发现方向"（increases/decreases/positive/negative），供 Phase 3 的对话编织使用（见 Phase 3 Literature Turn 渲染纪律）。
-
-**通用性保证**：本步骤不假定 Vault 的目录结构、命名约定或文件格式。所有路径和文件名来自 paper-state.yaml 的 vault 字段——该文件由用户按项目配置，技能本身不含任何项目特定硬编码。
+完整 Introduction 或 front-end 模式读取 [`references/vault-introduction-retrieval.md`](references/vault-introduction-retrieval.md)，按“配置映射 → 语义/文件检索 → 明示缺口”的顺序生成 Vault Knowledge Brief。检索失败时保留证据占位并继续 Story Intake 或架构设计，不因等待路径而阻塞。local-only 请求不启动 Vault 检索。
 
 ## Phase 2: 路由
 
 > **路径基准**：本文件中 `academic-writing-corpus/...` 相对路径均以本 SKILL.md 所在目录（`write-introduction/`）为基准；语料文件内部的 `hooks/...`、`tensions/...` 等引用以 `academic-writing-corpus/` 为基准。
 
 读取 `academic-writing-corpus/_routing_tables.yaml`，根据**主** Gap 类型确定：
-- 段落结构（紧凑型/标准型/扩展型，4-9段）
-- Conversation 策略（Progressive / Synthesized / Non-Coherence）
+- 结构复杂度提示（紧凑型/标准型/扩展型，4-9段；不是固定段号）
 - Hook 候选列表（按能量级匹配）
 - Tension 候选列表
-- **Incommensurability 专属**: 若主 Gap = Incommensurability，读取 `_routing_tables.yaml` §`incommensurability_resolution.combo_to_resolution`，用 Gap×Contribution 组合自动匹配解决方案策略（Constructs→audience_heterogeneity, Mechanism→facet_decomposition, Boundary→contingency_revelation）。将匹配到的 `theory_lens_pattern` 和 `exemplar` 融入 Theory Lens 段。若为 Constructs 贡献，额外执行正交性嗅探（见 Constructs 贡献专属章节）
+- **Incommensurability 专属**: 若主 Gap = Incommensurability，先读取 [`references/incommensurability-introduction-routing.md`](references/incommensurability-introduction-routing.md) 执行两阶段真实性门控与 L0–L3 抽象：对话阶段只要求共享理论对象或可辩护的高阶 X/Y 家族，不要求完全相同的低阶 Y；R3/R4 进入 Theory 正式推理时才锁定具体 X、Y、层级、时间范围与 estimand。再读取 `_routing_tables.yaml` §`incommensurability_resolution`，按冲突位于 X、Y、对立机制还是情境选择 R1–R4。R1–R4 只选择必需的说服功能和候选语料，不规定固定段序、Hook 或措辞；低置信时保留 L0 稳定内核并报告两个候选路线。Makadok 维度只校验贡献，不得机械决定路由。将同一 route 写入 P3 诊断、Theory Lens、Preview、Contribution 与 `paper-state.yaml`；Constructs 贡献仍额外执行正交性嗅探
 
-> **路由基于主 Gap；次 gap（若有）不改变段落结构/能量/Conversation 策略**，而是在 Phase 3 渲染 Tension 段时叠加呈现——主 gap 驱动 Tension 主结构，次 gap 作为补充论证嵌入（如"不仅遗漏了 X，而且现有理论 Y 应用到本情境时需修正 Z"）。单 gap（无次 gap）完全合法。
+**Conversation 独立路由（强制）**：优先消费上游 `conversation_strategy`；缺失时根据文献真实状态与作者构造目的选择 Progressive / Synthesized / Non-Coherence。不得由 `gap_type` 反推 Conversation，反之亦然；读取 `../diagnose-introduction/references/intertextual-construction-playbook.md` 的 3×3 矩阵处理非对角组合。
+
+> **路由基于主 Gap；次 gap（若有）不改变主张力结构/能量**，而是在 Phase 3 渲染 Tension 时叠加呈现。Conversation 策略是独立轴。单 gap 完全合法。
 
 读取 `academic-writing-corpus/_evidence_registry.yaml`，过滤掉 `gap_distribution` 中用户 Gap 类型计数为 0 的模板。
 
 **能量阶梯**: Hook 能量级 ≤ Gap 能量级 ≤ Stakes 能量级。Incompleteness 用低-中能量开场，Incommensurability 用中-高能量。检查输出时确保无"高开低走"（高能量 Hook 后接弱 Tension）或叙事阶段倒退。
 
+### 开篇功能合同（先定功能，再编号）
+
+先从路由表选择 4-9 段的功能序列，再编号。不得先套 P1=Hook、P2=Literature Turn、P3=Tension。开篇早期通常在前三个功能单元内完成下列任务；单元可以合并、换序或跨段延续，但进入 Theory Lens / Preview 前不得缺项：
+
+1. **有后果的张力**：用现实事实、悖论、反直觉差异、文献共识或经典理论争论建立问题，并说明它为何给相关理论或决策制造 trouble；禁止只写“X 很重要”。
+2. **可识别的学术对话**：说明目标受众已知什么、凭什么知道、现有解释据此会预测什么。理论驱动型开场可以先呈现共识或争论，再在下一单元引入现实反例。
+3. **诊断性 problematization**：指出现有解释的遗漏、误置或矛盾如何损害预测、解释或边界，并转向本文的回应方向。紧凑型可以在同一段内完成对话与诊断。
+
+**压缩规则**：合并模块时，一个段落只能有一个**主导修辞功能**，但内部仍需 Point → Support/Warrant → Link。模块合并不等于句子拼接。
+
 ## Phase 3: 渲染
 
-对选中的每个模块，读取对应的 corpus 文件获取句法变体：
+对选中的每个模块，读取对应 corpus 获取句法变体；其中 P2/P7-P8 等段号只记录范文原位，不覆盖本技能的动态功能序列：
 - Hook: `hooks/[canonical_id].md`
 
   **Hook 渲染强制检查**：
   1. 🔴 **Hook→Tension 必须配对**：读 `hooks/_index.md` 的「必须配对表」，所选 Hook 必须配对兼容的 Tension（如 `22-twin-complication` 必须配 `01-despite-progress` 类田野张力）。不兼容组合 = 叙事断裂。
   2. 🟡 **禁忌互斥**：所选 Hook 不与同用的其他 Hook 冲突（如 `24-positive-trait-dark-side` 不与 `06-paradigm-challenge` 同用——前者边界反转后者范式颠覆）。
-  3. 🟡 **human face**（除非期刊偏好纯学术开场如 JMS）：Hook 含 ≥1 个具体 actor/案例/情境，不用 "many firms" 类泛称。
+  3. 🟡 **human face / 理论驱动例外**：现象或案例型 Hook 优先含 ≥1 个具体 actor、案例或情境，不用 "many firms" 类泛称；若故事契约与目标期刊支持文献共识、经典争论或理论命题直接开场（如部分 ASQ/SMJ 论文），可不强制 human face，但必须在紧邻单元给出可观察的现实后果或判别性问题。
   4. 🔴 **能量匹配**：Hook 能量 ≤ Gap 能量（见 Phase 2 能量阶梯）——Incommensurability 不用低能量 data-shock 开场。
 - Tension: `tensions/[canonical_id].md`
 
   **Tension 渲染强制检查**：
-  1. 🔴 **gap 必须解释"为什么遗漏是结构性的"**——"few studies have examined" 无解释 = 反模式。必须说明遗漏源于新数据/新方法/新现象/新构念边界，而非"没人想到"。
+  1. 🔴 **gap 必须解释"为什么现有解释会系统性漏掉/误置它"**——"few studies have examined" 无解释 = 反模式。新数据或新方法只能说明为何现在可研究，不能单独构成理论 gap；必须落到既有假设、构念边界、分析层次、相互冲突的预测或新情境对理论条件的破坏。
   2. 🔴 **被遗漏的东西必须用可操作化构念命名**——"the role of X" 模糊表达不合格；要落到具体机制/条件/过程。
   3. 🟡 **theoretical consequence 必须具体**——"limits our understanding" 是废话；要落到某理论的预测能力/边界条件受何影响。
-  4. 🟡 **反直觉 gap 用多理由支撑**——若 gap 声明反直觉（"surprisingly"），给 2-3 个理由，每个有 citation（参见 malshe2015 三原因论证法）。只给 1 个理由 = 欠说服力。
+  4. 🟡 **反直觉 gap 需要充分支撑**——若 gap 声明反直觉（"surprisingly"），用足以排除最直接替代解释的独立理由和匹配证据建立可信度；理由数量由争议程度决定，不把单篇范文的理由数设成配额。
   5. **多 gap 组合的 Tension 写法**——若诊断有主 gap + 次 gap（Phase 1 Step A/B），Tension 段的主结构由主 gap 驱动（如 Incompleteness 的 "despite progress, X remains unaddressed"），次 gap 作为**补充论证**嵌入同一段或紧邻段，用转折/递进连接：
      - 主 Incompleteness + 次 Application："Not only has [X] been overlooked, but [theory Y], while informative, has not been examined in [new context] where [condition] may alter its predictions."
      - 主 Inadequacy + 次 Confusion："Existing work assumes [view A], but this overlooks [perspective B]—and the evidence itself is split: some studies find [result 1] while others report [result 2]."
@@ -206,11 +154,11 @@ Four Moves 不构成新写作模式，也不写入 `paper-state.yaml`。缺失 m
 - Literature Turn: `literature-turns/literature-turn-templates.md`（条件读取：满足「模块跳过指南」条件——≤5段 Intro 且 Hook 已充分展示跨文献流对话——时跳过）。策略选择服从文献状态与构造目的，不由 gap_type 反推；非对角组合（如 Synthesized × Incompleteness）的合法性与构造机制见 `../diagnose-introduction/references/intertextual-construction-playbook.md` §2
 
   **Literature Turn 对话编织纪律（强制——防止"罗列而非对话"）**：
-  1. 🔴 **每条引文必须锚定一个带方向的发现从句**——"Smith (2020) finds that X increases Y"，不是"Smith (2020)"堆在句末。方向还原测试：任取一个引文，能一句话说出其发现方向。
-  2. 🔴 **禁止 citation lumping（范畴断言+句末堆引）**——"X has been widely studied (A; B; C; D)" 是堆叠而非综合。≥2 引文的句子，每个引文必须有独立发现从句，或拆成发现锚定从句。
+  1. 🔴 **每条引文必须锚定可还原的支持内容**——实证研究写方向/边界；理论研究写命题/假设；review/meta 写共识/异质性；构念来源写定义/区分；情境来源写事实。禁止把非实证来源强改成“方向性发现”。
+  2. 🔴 **禁止 citation lumping（范畴断言+句末堆引）**——"X has been widely studied (A; B; C; D)" 是堆叠而非综合。≥2 引文的句子必须说明各引文共同或分别支持什么；真正支持同一共识时可合并，但须由 review/meta 或代表性证据证明该共识。
   3. 🟡 **多文献流必须均衡呈现**——Synthesized/Non-Coherence 策略有 2+ 文献流时，每流都要有实质发现展示，不能第二流一笔带过（"some studies in other fields have also examined..."是稻草人信号）。
   4. 🟡 **用文献流的张力/共识/分歧驱动叙事**——不是"先列 A 流再列 B 流"，而是显化两流的关系（although / however / while A emphasizes X, B focuses on Y / these perspectives offer incompatible predictions）。
-  5. 🟡 **引文来源优先用 Phase 1.5 Vault Brief 的推荐引文**（含发现方向），不凭空编造。每流 2-4 篇，含至少 1 篇 review/meta，跨期刊，避免全是同一期刊或全 10 年前。
+  5. 🟡 **引文来源优先用 Phase 1.5 Vault Brief 的推荐引文**（含发现方向），不凭空编造。每条文献流用足以证明其核心命题、边界或分歧的代表性证据；review/meta 仅在确实承担共识或异质性判断时优先，不设固定篇数或来源类型配额。
   6. 🟡 **标签用文献流自己的术语**，不要自创（"the corporate political strategy literature"若文献数据库搜不到 = 读者无法定位你在和谁对话）。
   7. 🟡 **Literature 不是 received 而是 constructed**（GBL Ch02 Move 2）——"文献"没有预置仓库，是你主动 select & shape 来为贡献腾出空间（"configure the available pieces of a jigsaw puzzle so they contour an opening into which your storyline fits"）。这解释了为什么 Synthesized coherence 要"rewrite each literature to highlight commonality"、为什么 Non-coherence 要"position camps against each other"——不是中立综述，是为你的贡献**重新组织**文献。**纪律**：有灵活性但 within outer limits（不能歪曲文献立场、不能像稻草人那样把文献描绘得比实际更片面）；rewriting 是合法的学术建构，misrepresentation 不是。
   8. 🟡 **区分 Literature 1 与 Literature 2**（Shepherd & Wiklund 2020）——Literature 1 = 提供 gap 的本领域文献（你的研究流）；Literature 2 = 提供填补 gap 的理论资源（借用的理论）。两者都要在引言可见：Literature Turn 要展示你从 Lit 2 借了什么，Contribution 要说明你回馈了 Lit 2 什么。**只借理论不回馈 theory literature = 拒稿信号**。
@@ -243,7 +191,7 @@ Four Moves 不构成新写作模式，也不写入 `paper-state.yaml`。缺失 m
 - Transitions: `transitions/[canonical_id].md`（按需读取段落间过渡模板）
 - Differentiation: `differentiation/01-prior-work-boundary-clarification.md`（仅当存在极易混淆的 prior work 时读取——多数论文不需要，见「模块跳过指南」）
 
-**以上所有模块（Hook / Tension / Stakes / Theory Lens / Preview / Contribution / Transitions）统一适用以下变体选择策略**——不只 Literature Turn。从变体列表中选出最匹配用户情境的变体。**变体选择策略**：不要默认用变体 A——先读变体的"适用场景/范文锚定"判断哪个变体最贴合用户的 (研究情境, Gap 类型, 文献流数量)，选出**主推变体**，再选 **2 个备选变体**（不同风格/能量）。输出时主推变体展开为完整骨架，备选变体各给 1 句话摘要 + "何时改用它"。如果 corpus 文件有 `## 风格画像` 章节，提取语气建议。
+**变体选择策略**：不要默认用变体 A。依据适用场景、证据状态、研究情境和期刊选择一个主推变体。仅当两个方案会实质改变故事路径时，额外给 **1 个**备选及切换条件；不要为每个模块机械输出两个备选。
 
 **变体选择优先级**: corpus 文件的变体级约束（适用场景/范文锚定）> 用户研究情境匹配 > 路由表的模板级推荐。
 
@@ -254,9 +202,13 @@ Four Moves 不构成新写作模式，也不写入 `paper-state.yaml`。缺失 m
 | JTBD Block | 验证问题 | 不合格信号 |
 |-----------|---------|-----------|
 | **1. Target audience** | Hook 是否锁定具体受众（研究流/理论社群），非泛泛 "researchers/managers"？ | 受众太宽 = "why should anyone care" |
+| **2. Progress/challenges** | Literature Turn 是否准确建立已有进展、共享语境及仍待解决的挑战？ | 只列文献，不说明已知与争议 |
 | **3. Gain/pain** | Tension+Stakes 是否具体到后果/成本（"state costs or consequences when presenting problems; state benefits to intensify solution"）？ | 只有 "important" 无后果 = gain/pain 太弱 |
+| **4. Proposed solution** | Theory Lens/RQ 是否直接回应 gain/pain，而不是另起一个理论问题？ | solution 与 tension 关键词和机制脱节 |
 | **5. Credibility** | Preview 是否提前交代理论依据/方法/证据强度（不止描述数据）？ | 只描述数据不 justify 可信度 |
-| **claim_fit_check** | Theory Lens 的理论承诺与 Preview 的方法/数据是否 fit？ | 不 fit = "deal-breaking" 拒稿（editor 最常拒的理由） |
+| **6. Implications** | Contribution 是否回到目标受众，说明其理解将从什么转向什么？ | broad claim，未兑现 reader shift |
+
+另做 `claim_fit_check`：Theory Lens 的理论承诺与 Preview 的方法、数据和因果措辞是否匹配；不匹配即列为必须修复。
 
 不合格项标入"提醒"段的修复建议。
 
@@ -285,26 +237,24 @@ Four Moves 不构成新写作模式，也不写入 `paper-state.yaml`。缺失 m
 
 ## [Gap类型] × [贡献维度] Introduction 骨架
 
-### 段落结构
-[简述每段功能和推荐段落数，标注期刊差异]
+### 功能序列与压缩决策
+[列出路由后的实际序列，例如：P1 Hook+Literature（主导功能=现象张力）→ P2 Tension+Stakes（主导功能=problematization）→ P3 Theory Lens → P4 Preview → P5 Contribution。说明合并/跳过理由与期刊差异。]
 
-### P1: Hook — [模块名]
-[直接写出句法骨架，占位符用 [brackets]。可选附 1-2 句槽位提示]
+### 前三段合同
+| 段落 | 主导功能 | 必须完成 | 失败风险 |
+|------|---------|---------|---------|
+| P1 | 现象张力 | 前三句出现 anomaly/puzzle + theory trouble | 背景先行、埋没主旨 |
+| P2 | 学术对话 | 已知什么、证据角色、现有预测 | 罗列而非对话 |
+| P3 | Problematization | 诊断失败 + theoretical consequence + response pivot | 只有空白，没有理论问题 |
 
-### P2: Literature Turn — [策略名]
-[句法骨架]
+> 紧凑型如合并 P1/P2 或 P2/P3，在表中标明功能落在哪个段落；不得生成空的固定段号。
 
-### P3: Tension — [模块名]
-[句法骨架]
+### 段落骨架（按实际序列动态渲染）
 
-### P4-P5: Stakes + Theory Lens
-[句法骨架，根据 Gap 类型可能需要 Stakes 独立段]
+#### P[N]: [主导功能] — [所选模块/策略]
+[直接写句法骨架；占位符用 [brackets]；标注本段包含的次级功能。按实际段数重复。]
 
-### P6-P7: Preview + Contribution
-[句法骨架]
-
-### P8 (可选): Differentiation — [prior-work-boundary-clarification]
-[仅在存在极易混淆的 prior work 时追加；句法骨架]
+**Differentiation 放置纪律**：若需要区分 closest prior work，将其嵌入 Literature Turn、Tension 或 Contribution；不得在 Contribution 之后新增独立 Differentiation 段重新开启问题。
 
 ### 提醒
 - **必须配对**: [检查 Hook→Tension 强制配对（见 `_routing_tables.yaml` §7）；标注是否满足]
@@ -371,10 +321,21 @@ introduction:
 
   theory_hints:
     gap_type:
-      primary: "[Incompleteness / Inadequacy / Incommensurability]"  # 驱动路由（段落结构/能量/Conversation 策略）
+      primary: "[Incompleteness / Inadequacy / Incommensurability]"  # 驱动主张力、结构复杂度与能量；不决定 Conversation
       primary_method: "[confusion / neglect / application spotting]"  # Sandberg 找法标签
       secondary: "[可选: Incompleteness / Inadequacy / Incommensurability / null]"  # 次 gap，在 Tension 叠加
       secondary_method: "[可选: confusion / neglect / application spotting / null]"
+      incommensurability_resolution:  # 仅 primary = Incommensurability 时填写
+        authenticity_gate: "[pass / fail / uncertain]"
+        comparability:
+          conversation_level: "[pass / fail / uncertain]"
+          shared_object_or_family: "[共享理论对象或可辩护的高阶 X/Y 家族]"
+          member_mapping: "[低阶构念/指标如何映射到共享对象]"
+          formal_lock: "[R3/R4 的具体 X、Y、层级、时间范围、estimand：pass / fail / pending]"
+        conflict_location: "[X / Y / mechanism / context / measurement-or-design]"
+        primary_route: "[R1 / R2 / R3 / R4]"
+        secondary_route: "[R1 / R2 / R3 / R4 / null]"
+        adjudicating_prediction: "[可直接区分本文解释与最强既有解释的预测]"
     makadok_dimension: "[Constructs / Mechanism / Boundary / Phenomenon / Level / Mode / Question / Output]"
     tension_template: "[canonical_id from _routing_tables.yaml]"
     recommended_theory_variant: "[构念辨析型 (A) / 机制推演型 (B) / 假设树型 (C) / 质性过程理论型 (D) / 调节效应型 (E) / 竞争假设型 (F) / 辩证对立型 (G)]"
@@ -396,84 +357,7 @@ introduction:
 
 # 槽位填充指南
 
-每个模块的核心槽位和常见陷阱。只填你知道的——不确定的槽位留空比编造好。
-
-> **与 Phase 3 渲染纪律的关系**：本节与 Phase 3 各模块的"渲染强制检查"有部分重叠（三处时机不同：Phase 3 生成时检查 / 本节填充时查阅 / 反模式清单输出后扫描）。重叠项**以 Phase 3 渲染纪律为准**（🔴 必查项）。本节侧重"每个槽位填什么"的快速参考，不含 Phase 3 的完整纪律。
-
-## Hook
-| 槽位 | 填什么 | 陷阱 |
-|------|--------|------|
-| `[consensus/dominant finding]` | 领域共识，2-3篇跨期刊引文支撑 | 稻草人：把文献描绘得比自己需要的更片面 |
-| `[anomaly/counter-evidence]` | 与共识矛盾的系统性反例（具体数字/案例，非"some studies"） | 反例太弱：用模糊断言代替具体事实 |
-| `[quantification]` | 有权威来源的精确数字 | 数字无来源或过时 |
-
-## Literature Turn
-| 槽位 | 填什么 | 陷阱 |
-|------|--------|------|
-| `[field/literature stream]` | 文献流内部使用的术语，不要发明标签 | 标签发明：自创名称让读者无法定位 |
-| `[citations]` | 每个流2-4篇，含至少1篇review/meta，跨期刊 | 全是同一期刊或全是10年前的 |
-| `[per-citation finding]` | 每个引文锚定一个带方向的发现从句（increases / decreases / faster / slower）。方向还原测试：任取一个引文，能一句话说出其发现方向；引文-命题匹配测试：引文研究对象确属其所在句的命题范畴 | 范畴断言+句末堆引（citation lumping）；引文-命题错挂——把研究 X 的引文挂在关于 Y 的句子上 |
-
-## Tension
-| 槽位 | 填什么 | 陷阱 |
-|------|--------|------|
-| `[gap statement]` | 精确指出遗漏了什么，解释**为什么**这个遗漏是结构性的（源于新数据/新方法/新现象/新构念边界，非"没人想到"） | "few studies have examined" 无解释 |
-| `[theoretical consequence]` | 具体到某理论的预测能力/边界条件受影响 | "limits our understanding"（废话） |
-| `[mechanism/condition/process]` | 用可操作化构念命名被遗漏的东西 | "the role of X" 模糊表达 |
-| `[concrete scenario]` | 不解决这个 gap 的具体后果——1个可观察场景（公司/市场/决策情境） | 用 generic 描述代替具体场景（"firms may suffer"） |
-| `[why surprising]`（可选） | Gap 为何反直觉：2-3个理由，每个有 citation 支撑（参见 malshe2015 三原因论证法） | 只给 1 个理由 → 欠说服力 |
-
-## Stakes
-| 槽位 | 填什么 | 陷阱 |
-|------|--------|------|
-| `[quantified cost/scale]` | 政府统计/行业报告/上市公司数据；无法量化则用 narrative Stakes | 无数字且无具体案例 = 退回 generic |
-| `[who suffers]` | 具体到某类 stakeholder | "firms""managers" 过于宽泛 |
-
-## Theory Lens
-| 槽位 | 填什么 | 陷阱 |
-|------|--------|------|
-| `[theory name]` | 标准名称+标志性引用 | 理论堆砌：3+理论各担1句 |
-| `[core claim]` | "We argue that X affects Y through [mechanism]" 含方向性预测 | "we examine the role of X" 无方向 |
-
-## Preview
-| 槽位 | 填什么 | 陷阱 |
-|------|--------|------|
-| `[empirical setting]` | 情境+为什么适合检验理论（1句） | 只描述数据不 justify 情境 |
-| `[finding direction]` | 方向（"X increases Y"），不给系数 | 预告所有 H1-H4 方向 = 过度承诺 |
-
-**Preview 的叙事功能**: 不是"方法摘要"，而是从理论世界切换到实证世界的 motion 段落。用 "To test these arguments," / "We evaluate our predictions using..." 等主动信号词明确切换。禁止 "In the next section, we describe our methods"（纯结构导航，无 motion）。
-
-## Contribution
-| 槽位 | 填什么 | 陷阱 |
-|------|--------|------|
-| `[Makadok dimension]` | 紧扣前文 Gap：mechanism gap → Mechanism 句式 | 贡献散弹：5+个贡献各1行 |
-| `[field extension]` | 文献流 + 具体拓展点（新构念/机制/边界） | 只提文献流不提具体拓展 |
-| `[contrast with prior]` | "In contrast with prior studies suggesting [dominant view], we contend that..." | 对比太弱：只说"不同于X"不说"X具体说了什么" |
-
-## Research Question（嵌入 Preview 或独立段）
-| 槽位 | 填什么 | 陷阱 |
-|------|--------|------|
-| `[RQ preamble]` | "To fill this void, we ask:" 或 "This study addresses the following questions:" | 无 preamble 直接抛问句——读者不知为什么突然出现问句 |
-| `[RQ1: main effect]` | IV → DV 方向性问句，含分析单元 | "How does X affect firm outcomes?" — DV 太宽泛 |
-| `[RQ2: moderator]` | 什么条件下主效应变化？暗示但不展开具体 moderator | RQ2 无理论层次——两个 RQ 并列而非递进 |
-
-## Differentiation（可选）
-| 槽位 | 填什么 | 陷阱 |
-|------|--------|------|
-| `[closest prior work]` | 最易混淆的 1 篇论文，作者+年份 | 区分多篇——分散焦点 |
-| `[praise token]` | "seminal work" / "important contribution" | 过度称赞或暗讽 |
-| `[difference dimensions]` | DV 不同 / IV 不同 / 理论机制不同（选 2 个最关键的） | 假区分：只是样本/行业/年份不同 |
-| `[complement frame]` | "our study complements the insights by..." | 用 "contradicts" / "is superior to" |
-
-## Constructs 贡献专属：正交性嗅探
-
-当 Makadok 维度 = Constructs 时，在输出 Theory Lens 骨架后执行此 3 问嗅探：
-
-1. **同时为高？** 一个实体能否在两个构念上**同时**得高分？（若不能 → 互为反面 → tautology）
-2. **独立变异？** 两个构念是否由**不同的理论机制**驱动？（若同一机制 → 重命名）
-3. **不同预测？** 两个构念是否对**不同 DV** 或**同一 DV 的不同方向**产生预测？（若同一预测 → 无需区分）
-
-pontikes2012 通过示例：market-taker 和 market-maker **不是组织的属性而是受众的角色**——同一个 ambiguous label 对两个受众同时为"高（相关）"，但产生相反预测（consumer 避开 ↔ VC 偏好）。关键设计：区分不在组织内部而在**外部受众的评估逻辑**。
+渲染具体模块时按需读取 [`references/introduction-slot-contracts.md`](references/introduction-slot-contracts.md)。只填已知信息；不确定的证据槽位保留占位，不编造引文、数字或发现方向。
 
 # 模块跳过指南
 
@@ -505,15 +389,15 @@ pontikes2012 通过示例：market-taker 和 market-maker **不是组织的属�
 
 | 反模式 | 修复 |
 |--------|------|
-| **稻草人**: 把文献描绘得比实际更片面 | 引用被广泛引用的论文（>100 citations）证明共识 |
-| **弱缺口**: "few studies have examined" 无解释 | 解释为什么遗漏是结构性的（新数据/新方法/新现象） |
+| **稻草人**: 把文献描绘得比实际更片面 | 用 review/meta、代表性研究和反例共同验证立场；被引量只表示影响力，不能证明共识 |
+| **弱缺口**: "few studies have examined" 无解释 | 说明既有假设、构念边界、层次或冲突预测为何产生理论 trouble；新数据/方法只能是可研究性条件 |
 | **缺 Stakes**: Gap 后直接跳贡献 | Gap 和 Contribution 间插入 1-2 句 stakes |
 | **过度承诺**: "revolutionize""first to" | 用 "extend""refine""reconcile""clarify" |
 | **贡献散弹**: 5+个贡献各一行 | 聚焦 2-3 个，每个充分展开（**实证论文**默认；理论论文走 AMR 模式单核自明，见 `references/theory-paper-amr-mode.md`） |
 | **期刊错位**: ASQ 用数据开场 / SMJ 无案例 | 查期刊适配表 |
 | **缺少人脸**: Hook 用 "many firms" | 除非期刊偏好纯学术开场（JMS），补充 >=1 个具体 actor |
 | **机器声**: "It is argued that" / "By examining..." | 改用 "We argue that" / 直接写研究问题 |
-| **胖子西装**: P1 > 120词 / 前3段 > 350词 | 压缩背景到 Lit Turn；P1 只保留最小上下文 |
+| **胖子西装**: P1 或前三段因背景堆积而推迟 puzzle、对话或 problematization | 以约 120/350 词作为诊断提示而非自动失败线；按期刊和功能密度压缩背景到 Lit Turn |
 | **埋没主旨**: 段首句不是核心判断 | 段首句 = 主语 + 主动动词 + 方向/发现 |
 | **Preview 无 motion**: "In the next section, we describe..." / 被动语态 | 用 "To test these arguments, we..." 主动切换场景 |
 | **假区分**: 声称"不同于X"但实际区别仅是样本/行业/年份 | 区分必须基于理论构念或研究问题的不同——DV不同+IV不同是最低门槛 |
@@ -521,7 +405,7 @@ pontikes2012 通过示例：market-taker 和 market-maker **不是组织的属�
 | **显式RQ无理论层次**: 两个 RQ 并列且无关（如 RQ1=主效应, RQ2=不同的主效应） | RQ 应有递进：RQ1=主效应 → RQ2=边界条件/调节 |
 | **构念重命名** (Constructs 专属): 新构念只是旧构念的重新标签——A=高X, B=低X | 嗅探：两个构念能否在同一实体上**同时为高**？能否同时为低？若回答"否"→ tautology。修：重新定义构念使其独立（pontikes2012: market-taker vs market-maker 与组织属性无关，与受众视角有关）|
 | **作者名开头**: 段首句主语为 "Smith (2020)"，段落沦为文献注脚 | 段首换成自己的 claim，作者名移到句中证据位；见 prose-craft-checklist §0.6-1 |
-| **清嗓开头**: 段首为 "Before turning to..." / "It is worth noting..." 热身句 | 删除或压缩为 ≤15 词的合法 transition/background 句；见 §0.6-2 |
+| **清嗓开头**: 段首为 "Before turning to..." / "It is worth noting..." 热身句 | 删除，或压缩成只承担必要衔接/背景功能的短句；见 §0.6-2 |
 | **孤儿引语**: epigraph/引语独立存在，后无 pivot 解读句 | 引语后必须接 "This quote captures..." 式 pivot；见 §0.6-3 |
 | **引文堆叠无锚点** (citation lumping): ≥2 引文的句子中无任何引文带独立发现从句，综合退化为"范畴断言+句末堆引" | 拆为发现锚定从句（"finding with direction ([cite]), whereas contrasting finding ([cite])"），或删去无法说明发现的引文；合格线：任取一个引文可还原其发现方向；句式见 `literature-turns/literature-turn-templates.md` 变体D |
 | **方向压平** (direction flattening): 把方向相反的发现概括进 "X 和 Y 都影响 Z" 式无方向类别句 | 恢复 whereas/but 对比结构，让每个发现的 valence 可见；Constructs / Mechanism distinction 类贡献强制检查——方向对比往往是贡献的立论前提 |
@@ -546,6 +430,10 @@ pontikes2012 通过示例：market-taker 和 market-maker **不是组织的属�
 - **无期刊自引**：目标期刊零自引 = fit 存疑（不知道该刊在对话什么）
 - **compound hypothesis**：一条假设含多个关系 = 理论推导不清晰
 
+# Evidence-driven evolution
+
+范文蒸馏通过两条通道演化本 skill：reference-level 模式更新 `academic-writing-corpus/` 与 `_evidence_registry.yaml`；规则层反例或缺陷更新 `academic-writing-corpus/_skill_design_feedback.yaml`。执行演化任务时读取 `../distill-introduction-exemplar/references/phase-4-validation-writeback.md` 与其 hardened output schema。单篇论文不得建立普遍规则；只有 VERIFIED/ROBUST，或针对绝对规则的 full-text FALSIFIER，且通过授权、风险、positive regression、preservation regression 与修改后规则片段核验，才可做有边界的 conditionalize、decouple、add branch 或 validator correction。schema、stage gate 与高风险变更始终人工审核。
+
 # Constraints
 
 - **不诊断 Gap 类型**（除非用户不确定）。用户已知则直接路由。
@@ -557,6 +445,7 @@ pontikes2012 通过示例：market-taker 和 market-maker **不是组织的属�
   contribution 字段；不得新增平行 taxonomy 或 GBL 专属 paper-state 字段。
 - **Four Moves 是功能而非段数**：不得机械要求一段一个 move；按期刊和
   Introduction 长度合并功能。
+- **段落规则解释**：每段只有一个主导修辞功能；段内仍应有 Point、Support/Warrant 与 Link。不得把“one paragraph, one function”误读为禁止证据或衔接句。
 - **Prose Craft 为推荐非硬性要求**: Human Face、Showing vs Telling、Conversational Voice 是 Pollock 的最佳实践建议，按期刊风格灵活适用——ASQ/AMJ 严格，JMS/JOM 宽松。段落级 architecture（PEEL/PEAL、paragraph length、topic sentence placement、coherence）参见 `academic-writing-corpus/storytelling/prose-craft-checklist.md` §0；句子级 transition 信号词参见 `academic-writing-corpus/micro-templates/transition-signals.md`；中心论点与既有观点的关系定位（纠错/补缺/修正/假设检验四模型 + thesis 句法权力分配）参见 `academic-writing-corpus/micro-templates/thesis-models.md`。
 - **措辞润色语料库（Phase 4 默认调用）**：`academic-writing-corpus/phrasebank/` 提供 auxiliary 层措辞变化与强度校准——`hedging-strength.md`（hedging 5 档强度阶梯）、`critique-phrases.md`（单研究/单理论方法学批判）、`methods-process.md`（过程描述）、`quantities-trends.md`（数值与趋势）。索引见 `phrasebank/_index.md`。作者人设诊断见 `academic-writing-corpus/storytelling/authorial-persona.md`（institutional vs human scientist 可见度）。五病速查见 `../pollock-qc/references/prose-pathology.md`。调用纪律：骨架优先，phrasebank 只提供措辞变体不替代结构；每句位 ≤2-3 候选；specificity gate 强制具体化。
 - **输出末尾追加 paper-state.yaml 片段**：在 Introduction 骨架输出末尾，自动附加 `### paper-state.yaml 片段` 块。该片段供下游技能（write-theory Phase 0、write-methods Phase 1、write-results Phase 0）自动消费。用户复制到项目 `paper-state.yaml` 的 `introduction:` 节下。如用户未提及 paper-state.yaml 协议，该片段的 YAML 注释头应包含使用说明。

@@ -1,13 +1,7 @@
 ---
 name: write-methods
 description: |
-  顶刊 Methods 填空段落骨架生成器。输入设计类型后输出带 [placeholder] 的可直接粘贴段落（M1–M10 槽位，骨架在 `references/slot-*.md` 按需加载）。
-  覆盖 23 种设计类型：面板数据-OLS、自然实验-DiD、非线性模型、生存分析（含复发事件风险模型变体）、SEM、实验、多研究、稀有结果、实证对象构建、事件历史+事件研究、同时方程、IV/2SLS、动态面板-GMM、匹配DiD-广义DiD、同伴效应-网络效应、文本构念测量、PSM匹配面板、堆叠扩散Logit、多行为者设计、推断二元结果、定性过程研究、两阶段模型、VARX-PVAR。稳健性检验的正文写作属 write-results（R7/R8）。
-  蒸馏请求（「蒸馏 methods」「methods 范文分析」「处理新论文 methods」「methods 骨架提炼」）不直接处理——自动路由到 `distill-methods-exemplar` 执行 Phase 0–5 蒸馏协议；验证通过的变体由其 Phase 4 写入 `econometric-models/[设计类型].md`。
-  触发词：「写methods」「methods模板」「方法部分怎么写」「帮我写methodology」「method skeleton」「写方法」「方法论」「model specification」「估计方法」「样本选择」「变量定义」「测量辩护」「构念创新」「自创变量」「风险模型」「hazard model」「CEM matching」「CEO turnover coding」。
-  当用户提及变量操作化、识别策略、模型设定、样本漏斗、内生性处理、测量局限辩护、新构念操作化时也应触发。
-  **与 write-results 的实验/多研究分工**：实验**设计**（操纵、随机化、样本分配、预实验）与多研究的**研究设计序列**属本 skill（Methods）；实验**结果**（主效应/交互显著性）与多研究的**结果对比/跨研究综合**属 `write-results`。用户只说"实验/多研究"未指定 section 时，先确认是写设计还是写结果。
-  **与 write-theory 的识别策略分工**：识别策略的**实现**（IV 第一阶段、DiD 估计量、RDD 带宽选择、标准误聚类）属本 skill；识别策略的**理论论证**（IV 排除限制理论依据、DiD 平行趋势理论基础）属 `write-theory`。
+  顶刊 Methods 填空段落骨架生成器。输入设计类型后输出带 [placeholder] 的可直接粘贴段落（M1–M10 槽位，按需加载 `references/slot-*.md`）。覆盖面板数据、DiD、非线性模型、生存分析、SEM、实验、多研究、IV/2SLS、动态面板、匹配、文本测量、事件历史、同时方程、网络效应与两阶段模型等设计；稳健性结果正文归 `write-results`。用户请求蒸馏或范文分析时，路由到 `distill-methods-exemplar`，由其 Phase 4 写回验证通过变体。触发词包括：写 methods、方法模板、methodology、method skeleton、model specification、估计方法、样本选择、变量定义、测量辩护、构念操作化、识别策略实现、内生性处理、hazard model、CEM matching、CEO turnover coding。实验/多研究的设计属于本 skill，结果与跨研究综合属于 `write-results`；识别策略实现属于本 skill，理论论证属于 `write-theory`。
 ---
 
 # Role

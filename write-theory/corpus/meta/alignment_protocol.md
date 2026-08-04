@@ -21,8 +21,8 @@
 | Makadok 声明 | Introduction 句式（I7） | Theory 必须出现的模块 | 缺失即违约 |
 |--------------|------------------------|----------------------|------------|
 | Constructs | "We clarify [construct] by distinguishing [A] from [B]..." | T1（双构念界定）+ T3（区分维度推演） | T1 只定义一个构念 |
-| Mechanism | "We explain why [X] affects [Y] by identifying [mechanism]..." | T3（≥2步机制链）+ T4（中介假设） | T3 单步跳跃 / T4 无中介假设 |
-| Boundary | "We show that [relationship] depends on [moderator]..." | T5（调节机制）或 T3 嵌入边界 | 无调节假设 |
+| Mechanism | "We explain why [X] affects [Y] by identifying [mechanism]..." | 足够的 reasoning moves + 机制必要性 + 可区分预测；中介假设仅在概念与设计需要时出现 | 只有变量箭头/机制标签，或删掉机制预测不变 |
+| Boundary | "We show that [relationship] depends on [condition]..." | 条件如何改变机制 + 与承诺一致的条件假设；若仅声明 scope，则 Introduction 也必须降级为 scope 承诺 | 装饰性 moderator / 无条件化逻辑 |
 | Level | "We bridge [level A] and [level B]..." | T3（跨层机制：composition/emergence） | 无跨层论证 |
 | Mode | "We reveal how [process] unfolds over time..." | T3（阶段序列+过渡条件） | 无时间/阶段标记 |
 
@@ -58,13 +58,12 @@
 **Narrative Continuity 详细检查**：
 
 1. **Knot 继承检查**：
-   - Introduction 的 `central_knot_statement` 是否在 Theory P1 中被明确承接？
-   - 如果 Introduction 说"好公司为什么做坏事"，Theory P1 是否以"To resolve this paradox..."开头？
-   - 如果 P1 未提及 knot → ⚠️ "Theory 开头未承接 Introduction 的 knot"
+   - Introduction 的 `story.central_knot` 是否在 Theory 开篇被实质承接？
+   - 允许换一种更精确的表述；不要求出现相同关键词或固定 "To resolve..." 句式。
+   - 若开篇讨论的问题、角色或关系已改变 → ❌ "Theory 未继承 canonical knot"
 
 2. **角色一致性检查**：
-   - Introduction 的 `protagonist_construct` 是否与 Theory 的核心 DV 一致？
-   - Introduction 的 `supporting_constructs` 是否在 Theory 中以配角身份出现？
+   - Introduction 的 `story.protagonist` / `story.characters` 是否与 Theory 的理论角色一致？
    - 如果 Theory 引入了 Introduction 未提及的新主角 → ⚠️ "新主角未在 Introduction 中预告"
 
 3. **叙事阶段连续性检查**：
@@ -76,8 +75,8 @@
    - 如果某段落的叙事功能弱于前一段（如 Knot Deepening 后回到 Knot Inheritance）→ ⚠️ "叙事阶段倒退"
 
 4. **Rising Action 完整性检查**：
-   - Theory 是否有 Knot Deepening（P1-P3：构念定义 → 理论透镜 → 机制预览）？
-   - Theory 是否有 Knot Tying（P4-PN：假设推导，每个假设有 why chain）？
+   - Theory 是否有 Knot Deepening（构念、理论透镜和必要前提按依赖顺序展开，不限定 P1-P3）？
+   - Theory 是否有 Knot Tying（每个假设有完整 why chain，不限定 P4-PN）？
    - 最后假设是否自然收敛（非突然中断进入 METHODS）？
    - 如果缺少构念定义或 why chain → ⚠️ "Rising Action 不完整"
    

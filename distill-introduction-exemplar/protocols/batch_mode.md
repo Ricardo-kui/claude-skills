@@ -65,6 +65,12 @@ papers:
     distinctive_features: ["quantified stakes with government data", "three-reason论证法"]
     avoids: ["overclaiming causality"]
     weakest_aspect: "Stakes could be more specific — uses 'theoretically important' without quantification"
+    design_observations:
+      - defect_id: "conversation-gap-coupling"
+        classification: "routing_defect"
+        target: "write-introduction/academic-writing-corpus/_routing_tables.yaml"
+        evidence_anchor: "Introduction P2-P3: non-diagonal Conversation×Gap combination"
+        evidence_quality: "full_text_verified"
     vault_profile_path: "D:/OneDrive/.../darby2024_distilled_introduction.md"
 
 combos_accumulator:
@@ -77,6 +83,13 @@ combos_accumulator:
     module_ratios_accumulator: [{hook: 15, ...}, {hook: 18, ...}, ...]
     distinctive_features_accumulator: [["quantified stakes", ...], [...], ...]
     avoids_accumulator: [["overclaiming causality"], [...], ...]
+
+design_feedback_accumulator:
+  conversation-gap-coupling:
+    classification: "routing_defect"
+    paper_ids: ["darby2024", "paper_b"]
+    journals: ["AMJ", "ASQ"]
+    targets: ["write-introduction/academic-writing-corpus/_routing_tables.yaml"]
 ```
 
 ### 操作规则
@@ -91,14 +104,16 @@ combos_accumulator:
 1. 从 Phase 0-2.4 的输出中提取轻量摘要字段
 2. 追加到 `_batch_state.yaml` 的 `papers` 列表
 3. 更新 `combos_accumulator` 中对应 combo 的累积字段
-4. `papers_processed += 1`，`last_updated` 更新为当前日期
-5. 用 Edit 或 Write 工具写回 `_batch_state.yaml`
+4. 将本篇 `design_observations` 按稳定 `defect_id` 合并到 `design_feedback_accumulator`；没有观察时写空列表，不虚构缺陷
+5. `papers_processed += 1`，`last_updated` 更新为当前日期
+6. 用文件编辑工具写回 `_batch_state.yaml`
 
 **所有论文处理完毕后（Phase 4 执行时）**：
 1. 读取 `_batch_state.yaml`（这是 Phase 4 聚合的**唯一数据源**——不从上下文中读取原始蒸馏数据）
 2. 从 `combos_accumulator` 中提取每个 combo 的聚合数据
-3. 执行 Phase 4 原有的跨论文模式验证逻辑
-4. 完成后将 `status` 更新为 `completed`
+3. 从 `design_feedback_accumulator` 生成 `skill_design_feedback`，并用原论文摘要中的 evidence anchor 回填证据
+4. 执行 Phase 4 原有的跨论文模式验证逻辑及 Phase 4.7 设计反馈闭环
+5. 完成后将 `status` 更新为 `completed`
 
 **跨 Session 恢复**：
 - 每次启动 distill 时检查 `_batch_state.yaml`
@@ -110,7 +125,7 @@ combos_accumulator:
 | 操作 | 同时持有的论文数 | 每篇上下文中数据 |
 |------|----------------|----------------|
 | 单篇蒸馏（Phase 0→2.4） | 1 篇 | 完整 Introduction 文本 + 完整骨架 |
-| 检查点写入 | 1 篇 | 仅 ~15 行 YAML 摘要 |
+| 检查点写入 | 1 篇 | 轻量 YAML 摘要 + 紧凑设计观察 |
 | Phase 4 聚合 | 0 篇原始数据 | 仅读取 `_batch_state.yaml`（30 篇 × 15 行 = 450 行 YAML，远低于上下文限制） |
 | Phase 4.5/4.6 入库 | 0 篇原始数据 | 基于 Phase 4 聚合输出 + corpus_enrichment |
 

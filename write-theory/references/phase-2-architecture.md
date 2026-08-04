@@ -12,25 +12,25 @@
 
 | 因素 | 诊断问题 | 结构含义 | Showing vs Telling 要求 |
 |------|---------|----------|------------------------|
-| **理论域数量** | 论文涉及几个理论域？ | 1 个 → progressive coherence；2+ → 需要整合框架 | 每个理论域首次引入时，用 1 个具体研究场景说明其适用范围 |
-| **构念新旧** | 有全新构念吗？ | 是 → early placement + 专门定义+区分段落；否 → 可灵活放置 | 新构念定义后必须跟 1 个 concrete illustration |
-| **主角配置** | IV 还是 DV？几个？ | 单一 DV → DV 先行；单一 IV → IV 先行；多 IV+DV → 取决于叙事线 | 每个主角构念首次出现时，用 1 个具体案例说明其操作化方式 |
-| **配角配置** | 配角是什么角色？ | DV 配角 → early；Mediator/Moderator → 随故事展开 | 配角构念引入时，用 1 个微型场景说明其调节/中介逻辑 |
-| **Context** | Context 对理解角色必要吗？ | 必要 → 开头；提供例子 → 穿插；实验/泛化 → 最后 | Context 描述需包含 ≥1 个具体行业/公司/制度实例 |
-| **Figure** | 理论图还是总结模型图？ | 理论图 → 相关讨论处；总结模型图 → 全部假设后 | 理论图的文字描述中，每个路径必须有 1 个场景化说明 |
-| **叙事节奏（Ch02-Ch03）** | Theory section 的动作-评论比例？ | 理论推演（stroke）> 文献解释（glide），但不能没有 glide | Stroke 段落每个因果步骤后需有 concrete illustration；Glide 段落用比喻/场景解释 |
+| **理论域数量** | 论文涉及几个理论域？ | 1 个 → progressive coherence；2+ → 需要整合框架 | 理论域陌生或跨域迁移时，用短场景澄清适用范围；熟悉理论不强制举例 |
+| **构念新旧** | 有全新构念吗？ | 是 → early placement + 专门定义+区分段落；否 → 可灵活放置 | 新构念抽象、易混淆或测量不直观时才优先给 concrete illustration |
+| **主角配置** | IV 还是 DV？几个？ | 单一 DV → DV 先行；单一 IV → IV 先行；多 IV+DV → 取决于叙事线 | 说明理论角色，不把经验操作化案例误当构念定义 |
+| **配角配置** | 配角是什么角色？ | DV 配角 → early；Mediator/Moderator → 随故事展开 | 用机制说明配角为何改变过程；仅在逻辑仍抽象时补微型场景 |
+| **Context** | Context 对理解角色必要吗？ | 必要 → 开头；提供例子 → 穿插；实验/泛化 → 最后 | 情境事实只保留理解机制所必需的部分；实例按需使用 |
+| **Figure** | 理论图还是总结模型图？ | 理论图 → 相关讨论处；总结模型图 → 全部假设后 | 每条路径必须有文字理论；场景化说明不是逐路径硬性要求 |
+| **叙事节奏（Ch02-Ch03）** | Theory section 的动作-评论是否失衡？ | 理论推演（stroke）推动关系，解释（glide）帮助吸收 | 用读者负荷和论证难度判断是否需要例子，不执行固定配额 |
 
 **叙事节奏详细说明（第7因素）**：
 
-Pollock Ch03 用 "stroke and glide"（划桨与滑行）比喻动作与评论的平衡——原书只给定性判据："全 stroke 无 glide → forced march（急行军）"，"全 glide 无 stroke → ponderous pace（沉闷）"（Pollock 2025 Ch03），**未给具体百分比**。下表的百分比是 **skill 的操作化建议**（把 Pollock 定性原则具体化为可执行阈值，非原书数字）：
+Pollock Ch03 用 "stroke and glide"（划桨与滑行）比喻动作与评论的平衡——原书给的是定性判据："全 stroke 无 glide → forced march（急行军）"，"全 glide 无 stroke → ponderous pace（沉闷）"。因此本 skill 不把比例或例子数量设为通过门槛：
 - **Stroke（动作）**：推进理论的主动作——因果推理、假设推导、机制展开
 - **Glide（评论）**：帮助读者吸收的解释——文献总结、定义澄清、边界说明
 
-| 段落类型 | 推荐比例（skill 操作化） | Showing vs Telling 要求 | 风险（Pollock 原书定性判据） |
+| 段落类型 | 主要任务 | Showing vs Telling 判断 | 风险 |
 |---------|---------|------------------------|------|
-| 机制推演段落 | 70% stroke / 30% glide | 每个 stroke 句子后需有 concrete illustration 或比喻 | 全 stroke → "forced march" |
-| 文献铺垫段落 | 40% stroke / 60% glide | Glide 段落用具体研究场景解释，非纯引用罗列 | 全 glide → "ponderous pace" |
-| 构念定义段落 | 50% stroke / 50% glide | 定义后立即给 1 个例子 | 纯定义无方向 → 读者失去兴趣 |
+| 机制推演段落 | 推进可检验的过程逻辑 | 推理跨层、反直觉或高度抽象时补例子/反事实 | 全 stroke → "forced march"；例子过多 → 机制被轶事替代 |
+| 文献铺垫段落 | 建立前提与理论对话 | 需要时用代表性发现澄清，不罗列研究名单 | 全 glide → "ponderous pace" |
+| 构念定义段落 | 建立 definition、scope、lineage 与区别 | 只在定义仍不直观时给正例/反例 | 纯定义无方向；例子反客为主 |
 
 #### 章节标签惯例
 
@@ -56,7 +56,7 @@ Pollock Ch03 用 "stroke and glide"（划桨与滑行）比喻动作与评论的
 P1: 承接 knot（knot inheritance）
 P2-P3: 加深 knot（knot deepening）
 P4-P(N): 机制 tying（knot tying through mechanism）
-最后一个假设 → 自然收敛进入 METHODS（无独立 Closure 段）
+最后一个假设/命题 → 默认自然收敛进入 METHODS；复杂构念或过程模型如仍需整合，只在末段嵌入或紧随其后作最短必要回扣
 ```
 
 **2.2 Institutional Background**（可选前置模块）

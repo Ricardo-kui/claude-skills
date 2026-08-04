@@ -44,6 +44,7 @@ Resolve the route in this order: `diagnosis type -> depth -> output`.
 - `genre mode`: identify which of the ten productive genres (or three pseudo-genres) the paper belongs to
 - `gap-audit mode`: evaluate whether the stated or implied gap is genuine, compelling, and properly aligned with its knowledge-claim status
 - `contribution-mechanism mode`: identify which theory lever(s) the paper pulls and whether that lever is appropriate for the outlet
+- `incommensurability-resolution mode`: verify that a directional conflict is genuine, then locate its resolution on X, Y, opposing mechanisms, or context
 - `full diagnosis mode`: run all three in sequence (default for first-time users)
 - `generation mode`: gap not yet formed — run Part IV synthesis chain + counterfactual generator to generate candidate gaps, then audit them with Parts I–III
 
@@ -66,6 +67,7 @@ Resolve the route in this order: `diagnosis type -> depth -> output`.
 - "is my gap strong enough?" or reviewer says "gap is not compelling" -> `gap-audit mode`
 - "what is my theoretical contribution?" or reviewer says "theoretical contribution unclear" -> `contribution-mechanism mode`
 - reviewer says "contribution not clear" without further specification -> `full diagnosis mode` at `deep depth`
+- prior findings or theories make incompatible directional claims -> add `incommensurability-resolution mode`; read `references/incommensurability-resolution-routes.md`
 
 ## Part I: Genre Diagnosis (Zuckerman 2017)
 
@@ -187,6 +189,10 @@ Cross-reference with four types of knowledge claims:
 4. Identify the primary lever (most papers pull one or two) and any secondary levers.
 5. Check outlet fit: ASQ/OS expect primary lever to be causal mechanism, constructs, or boundary conditions. AMJ/SMJ accept research question + phenomenon + outputs more readily.
 
+### Incommensurability resolution routing
+
+When the gap rests on incompatible predictions or findings, read `references/incommensurability-resolution-routes.md` before recommending a genre, lever, or writing architecture. Run its two-stage authenticity gate: first establish a shared theoretical object or defensible higher-order family without demanding identical low-level Y indicators; then apply the route-specific formal lock (strict concrete X/Y/level/horizon/estimand for R3/R4). Identify one primary route (`R1 X-side differentiation`, `R2 Y-side disaggregation`, `R3 opposing mechanisms`, or `R4 contextual contingency`) and state an adjudicating prediction. Do not select a route mechanically from the contribution lever.
+
 ## Part IV: Counterfactual Gap Generation & Synthesis Chain (Greene & Lidinsky 2017)
 
 Parts I–III 诊断**已有**的 gap；本部分是**生成性**工具——当用户只有模糊兴趣或一堆文献笔记、gap 尚未成形时使用（呼应 Boundaries 的 ideation-stage 条款）。来源：Greene & Lidinsky (2017) Ch05 (issues→questions) 与 Ch08 (synthesis)，管理学适配为本 skill 添加。
@@ -246,6 +252,17 @@ Part IV 生成的每个候选 gap **必须**回流审计，禁止直接输出给
 - Secondary lever(s): [lever name + specific move, if any]
 - Lever-genre alignment: [ALIGNED / MISALIGNED; explanation]
 
+### Incommensurability Resolution (only when applicable)
+- Authenticity gate: [PASS / FAIL / UNCERTAIN]
+- Conversation-level comparability: [PASS / FAIL / UNCERTAIN; shared theoretical object or higher-order family]
+- Member mapping: [how lower-order X/Y indicators belong to the shared object/family]
+- Formal lock: [R3/R4 concrete X, Y, unit/level, horizon, estimand fixed? PASS / FAIL / PENDING]
+- Conflict location: [X / Y / mechanism / context / measurement-or-design]
+- Primary route: [R1 / R2 / R3 / R4]
+- Secondary route: [R1 / R2 / R3 / R4 / none]
+- Adjudicating prediction: [directly testable contrast]
+- Misclassification risk: [closest alternative diagnosis]
+
 ### Outlet Fit
 - Target outlet: [journal name]
 - Genre-outlet fit: [GOOD / MODERATE / POOR; explanation]
@@ -277,8 +294,9 @@ Part IV 生成的每个候选 gap **必须**回流审计，禁止直接输出给
 1. Run genre diagnosis (Part I).
 2. Run gap-strength audit (Part II).
 3. Run contribution-mechanism mapping (Part III).
-4. Fill in the full diagnosis output template.
-5. Prioritize recommendations by impact.
+4. If incompatible directional claims are present, run the Incommensurability authenticity gate and R1–R4 route diagnosis.
+5. Fill in the full diagnosis output template.
+6. Prioritize recommendations by impact.
 
 ### Deep Diagnosis
 
@@ -300,4 +318,4 @@ Part IV 生成的每个候选 gap **必须**回流审计，禁止直接输出给
 
 ## Reference Loading
 
-This skill embeds its core frameworks directly. No separate reference files are needed for standard use. For deep diagnosis on a specific outlet, apply the outlet-specific heuristics inline (management-journal conventions, theory-tension emphasis, or empirical-contribution emphasis) based on the diagnosed genre and lever, rather than loading overlay files.
+This skill embeds its core frameworks directly. For an Incommensurability claim, load `references/incommensurability-resolution-routes.md`; otherwise no separate reference is needed for standard use. For deep diagnosis on a specific outlet, apply the outlet-specific heuristics inline (management-journal conventions, theory-tension emphasis, or empirical-contribution emphasis) based on the diagnosed genre and lever, rather than loading overlay files.

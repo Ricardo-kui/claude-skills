@@ -26,7 +26,7 @@
 
 > **注意**：write-theory v3.3.0 明确——管理学顶刊（JMS, AMJ, SMJ, ASQ, OS 等）**不要求独立的 T6 Closure 段落**。最后假设推导段的局部收束信号（"Therefore, we hypothesize:" / "Thus," / "Accordingly,"）已承担收敛功能。因此本 skill 的 T6 QC 从"是否存在独立 T6"改为"是否存在合适的收束策略"。
 
-- [ ] **局部收束信号**：每个假设前是否有 Therefore/Thus/Accordingly 等收敛信号？
+- [ ] **局部收束功能**：每个假设是否由前文推理自然收敛？连接词只是证据之一；单向预测可用 Therefore/Thus，竞争预测应使用并列/裁决信号。
 - [ ] **独立 T6 段落**：是否存在独立的 "Taken together..." 段落？→ 如存在，标记为"非管理学标准但可选"；如不存在，标记为"管理学标准做法"
 - [ ] **框架整合位置**：如假设间逻辑关系不够自明，框架总结出现在哪里？（A）最后假设段末尾嵌入 2-3 句 /（B）Discussion 开篇 /（C）缺失，可能导致追问
 - [ ] **T6 Voice**：如存在独立或嵌入的框架总结，是否使用 accountable first-person（"we have argued"），无被动语态？
@@ -45,12 +45,12 @@ t6_closure_qc:
   discussion_compensation: true/false/null
 ```
 
-#### Prose Craft QC（v1.2.0 新增）
-- [ ] **Human Face in Theory**: P1 有具体场景说明 knot 在现实世界的样子？
-- [ ] **Construct Illustration**: 每个新构念首次出现配 1 个 concrete illustration？
-- [ ] **Why-chain Scenes**: 关键步骤可配微型场景（1-2句）？
-- [ ] **Stroke/Glide 比例**: 机制推演段落 70% stroke / 30% glide？
-- [ ] **Conversational Voice**: P1 用 "To resolve the paradox..."; 假设推导用 "We argue that..."; T6 用 "In sum, we have argued that..."
+#### Prose Craft QC（按功能判断，不执行修辞配额）
+- [ ] **Human Face in Theory**: knot 抽象、跨层或反直觉时，是否需要短场景帮助读者模拟？缺少场景不自动失败。
+- [ ] **Construct Illustration**: 新构念抽象、易混淆或定义后仍不直观时，是否用正例/反例澄清？不要求每个构念配置例子。
+- [ ] **Why-chain Scenes**: 场景是否真正澄清过程，而非替代 warrant 或证据？
+- [ ] **Stroke/Glide 平衡**: 是否出现 forced march 或 ponderous pace？不计算固定百分比。
+- [ ] **Conversational Voice**: 作者是否对核心判断负责并保持可读论证声？不要求 P1/T6 使用固定开头。
 - [ ] **无被动语态**: 无 "It is argued that..." / "It is hypothesized that..." / "The literature suggests that..."
 - [ ] **无 Inflated Symbolism**: 无 "paradigm shift" / "fundamentally transforms"
 
@@ -65,14 +65,14 @@ t6_closure_qc:
 
 以下检查项用于**评估范文在假设论证、论点论据安排、证据摆放三个维度上是否符合 write-theory 的协议**，并提取其偏离方式。目的是帮你在沉淀语料库时判断：哪些范做法可直接复用，哪些需要标注为"例外"或"反模式"。
 
-- [ ] **微观动作完整性**: 每个假设推导段落是否包含 Anchor → Gap/Puzzle → Mechanism Move → Warrant → Prediction 的完整序列？缺失哪个动作？
+- [ ] **微观功能完整性**: 每个假设是否具备足够的前提、reasoning moves、warrant 与 prediction？Gap/Puzzle 是否因该段任务而必要，不机械要求固定五拍。
 - [ ] **双边论证完整性**: 调节/边界条件段落是否同时论证 high-condition 和 low-condition 的机制？（write-theory C20）
 - [ ] **替代解释排除**: 论文是否识别并主动排除主要 competing explanations？使用什么策略？
 - [ ] **安排模式识别**: 论文主要使用 Warrant-Embedded / Warrant-First / Evidence-Contrast / Cumulative / Parallel 中的哪一种？是否功能等价？
-- [ ] **Concrete Illustration 规则**: 是否存在连续 2 个推理步骤无 illustration 的情况？
-- [ ] **证据类型健康度**: Empirical finding + theoretical argument 是否占证据总数的 ≥70%？是否存在 evidence type 与论点功能错配？
+- [ ] **Concrete Illustration 适配**: 跨层、反直觉或抽象步骤是否需要 illustration？例子是否被误用为理论证据？
+- [ ] **证据类型健康度**: 证据类型是否匹配其承担的前提/warrant/边界功能？不设跨论文通用百分比。
 - [ ] **证据功能多样性**: 是否只有 support 型引用？qualify / contrast / pave / rebut 功能是否缺失？
-- [ ] **文献引用三要素**: 每个引用是否同时满足 concrete finding + argument summary + link to current mechanism？
+- [ ] **文献引用功能**: 引用是否说明支持哪个前提、机制或边界？理论引用不强制报告 concrete finding 或数字。
 - [ ] **交互模式明确度**: 调节假设是否明确 enhancing / buffering / antagonistic / existence / competing？（write-theory C10）
 - [ ] **竞争假设收敛信号**: 竞争假设是否避免使用 "Therefore" 等传统因果收敛信号？（write-theory C14）
 - [ ] **辩证对立对称性**: 两个对立机制的步骤数是否对称？方向是否真正反转（而非仅强度变化）？（write-theory C16-C17）
@@ -86,10 +86,10 @@ argumentation_qc:
   bilateral_argumentation: {high: true, low: true, symmetry: "完整"}
   alternative_explanations: {identified: ["account1"], ruled_out: ["account1"], strategy: "scope_condition"}
   arrangement_pattern: "Warrant-Embedded + Cumulative"
-  illustration_gap_count: 0
+  illustration_need: "needed_and_present / needed_but_missing / not_needed"
   evidence_type_health: {empirical: 0.5, theoretical: 0.3, boundary: 0.1, negative: 0.1, analogical: 0.0}
   evidence_function_diversity: {support: 5, qualify: 1, contrast: 1, pave: 1, rebut: 0}
-  three_element_citation_rate: "85%"
+  citation_function_match: "strong / mixed / weak"
   write_theory_constraint_alignment:
     C10_interaction_pattern: "明确 enhancing"
     C14_competing_hypothesis_signal: "通过"
@@ -110,6 +110,7 @@ argumentation_qc:
 6. **Corpus Reference Notes**（供人工审阅的语料库沉淀注释，不自动修改 skill）
 7. **QC Result**（通过/需修正/拒绝入库）
 8. **模仿风险提示**（原文叙事薄弱点清单，防止用户在模仿时踩坑）
+9. **skill_design_feedback**（无缺陷时 `observations: []`；有缺陷时含持久化与行动资格）
 
 ### 模仿风险提示
 
@@ -129,21 +130,21 @@ argumentation_qc:
 | Phase 1.5 (T6 检查) | 独立 T6 Closure 段落 | 论文有独立的 "Taken together..." 段落 | 非管理学标准，可能被审稿人视为冗余 | 如需框架总结，嵌入最后假设段末尾 2-3 句，或放到 Discussion 开篇 |
 | Phase 1.5 (T6 检查) | 无局部收敛信号 | 假设前无 Therefore/Thus/Accordingly | 假设像从天而降，非从机制推导 | 每个假设前必须有因果连接词收敛 |
 | Phase 1.5 (T6 检查) | 框架总结能量骤降 | 框架总结用 "In conclusion, we tested..." 纯方法总结 | 破坏 Rising Action 连续性，读者失去兴趣 | 如需框架总结，用 "In sum, we have argued that..." 保持理论能量 |
-| Phase 0.75 (Prose QC) | 无人脸 Theory | T1 定义只有抽象描述，无 "A promotion-focused CEO, for example..." | 模仿后读者难以将抽象构念与经验世界连接 | 每个新构念首次出现配 1 个具体例子 |
+| Phase 0.75 (Prose QC) | 抽象负荷未管理 | 构念跨层/反直觉且定义后仍无法想象 | 模仿后读者难以将理论与经验世界连接 | 在真正需要处补正例、反例或短场景，不设置逐构念配额 |
 | Phase 0.75 (Prose QC) | 机器声 Theory | 假设推导用 "It is hypothesized that..." | 模仿后像模板生成而非研究者判断 | 改用 "We hypothesize that..." |
 | Phase 1.25 (制度冲击) | 识别策略与理论脱节 | Methods 详细描述 IV/DiD/RDD 但 Theory 完全未论证 | 模仿后审稿人质疑"为什么这个识别策略在理论上是合理的？" | Theory 中必须嵌入识别假设的理论论证 |
 | Phase 2.5 (段落 QC) | Topic Sentence 埋藏核心判断 | 段首句用 "Drawing on institutional theory..." 无方向性预测 | 读者读完整段才知道论点 | 段首句必须在 15 词内说出核心判断：主语+主动动词+方向 |
-| Phase 2.5 (段落 QC) | 无收敛信号 | 假设前无 Therefore/Thus/Accordingly | 假设像从天而降，非从机制推导 | 每个假设前必须有因果连接词收敛 |
+| Phase 2.5 (段落 QC) | 无推理收敛 | 假设改变了前文方向/条件，或前提无法推出预测 | 假设像从天而降 | 修复推理链；连接词只用于标示已经成立的逻辑关系 |
 | Phase 2.5 (段落 QC) | Citation 替代机制 | T3 只有 "Smith (2010) argues... Jones (2012) found..." | 模仿后变成文献综述而非理论推演 | 每个引用必须总结 argument 并链接到机制步骤 |
 | Phase 2.6 (微观动作) | 论证动作缺失 | 假设段落直接从 "We argue" 开始，无 Anchor 或 Gap | 读者不知道为什么需要这个新假设 | 补充 Anchor（学界共识）和 Gap（现有解释不足） |
 | Phase 2.6 (微观动作) | Warrant 薄弱 | Mechanism Move 后只有一句 "consistent with [theory]"，无具体文献 | 机制步骤像作者臆断 | 每个 mechanism move 后嵌入 1-2 个总结 argument 的 citation |
 | Phase 2.6 (双边论证) | 只论证调节增强方向 | 段落只说 "when W is high, X→Y is stronger"，未解释 low-W 条件 | 审稿人质疑机制完整性 | 同时论证 high-W 和 low-W 条件下的理论逻辑 |
 | Phase 2.6 (替代解释) | 未排除竞争解释 | 论文提出新机制但 ignore 明显 alternative account | 审稿人会提出 "what about..." | 主动识别 1-2 个主要 competing explanations 并用理论/范围条件排除 |
-| Phase 2.7 (安排模式) | 连续两步无 illustration | 机制链连续两个步骤都只有抽象推理，无案例/数字/场景 | 读者难以把抽象机制与经验世界连接 | 每两个推理步骤间至少插入 1 句 concrete illustration |
+| Phase 2.7 (安排模式) | 抽象步骤无法模拟 | 跨层或反直觉机制只有标签，读者无法恢复行动者过程 | 读者难以把机制与经验世界连接 | 在该困难步骤补过程解释、反事实或短场景；不按每两步机械插入例子 |
 | Phase 2.7 (复杂假设) | 假设间关系不明 | H1 和 H2 段落无逻辑连接词，像两个独立 mini-papers | 论文理论框架显得碎片化 | 用 "Building on H1..." / "Beyond this direct effect..." 等明确假设间关系 |
 | Phase 2.8 (证据类型) | 证据类型单一 | 全部 citation 都是 empirical finding，无 theoretical argument | 论证缺乏理论根基 | 每个机制步骤同时嵌入 empirical finding 和 theoretical warrant |
 | Phase 2.8 (证据功能) | 只有 support 型引用 | 所有 citation 都用来"支持"，无 qualify / contrast / rebut | 论证显得 one-sided，缺乏 nuance | 在关键步骤加入限定、对比或排除替代解释的引用 |
-| Phase 2.8 (文献引用三要素) | Citation 无 concrete finding | "Smith (2010) argues that..." 只有抽象主张，无具体发现 | 引用无法支撑具体机制步骤 | 改写为 "Smith (2010) found that [具体发现] — [argument summary]" |
+| Phase 2.8 (引用功能) | Citation 功能不明 | 引用被罗列，未说明支持前提、warrant 还是边界 | 引用无法承担当前推理任务 | 概括与本步骤相关的 argument 或 finding，并明确链接；理论文献不强制提供数字 |
 | Phase 2.8 / C10 | 交互模式不明确 | 调节假设只说 "W moderates X→Y"，未说明 enhancing/buffering/antagonistic | 读者无法判断理论预期 | 在机制和假设中明确交互模式类型 |
 | Phase 2.8 / C18 | Moderator 选择无框架 | "We also examine the moderating role of Z" 无理由逐个引入 | 审稿人质疑为什么选这些 moderator | 用元框架（如 awareness vs capacity）解释 moderator 选择 |
 | Phase 2.8 / C19 | 连续 IV 只论证一端 | "High X increases Y" 但未讨论 low/middle X 的行为 | 理论预测不完整 | 对称论证 high / middle / low 三点的行为差异 |

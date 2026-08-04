@@ -34,9 +34,9 @@ Central knot 必须从 Introduction 传递到 Theory，再到 Methods、Results�
 
 | 检查项 | Introduction | Theory | 一致标准 | 不一致信号 |
 |--------|-------------|--------|---------|-----------|
-| Knot 表述 | `central_knot_statement` | P1 是否提及/暗示 | Theory P1 必须包含 Introduction knot 的关键词 | P1 用完全不同的词汇描述问题 |
-| 主角 | `protagonist_construct` | 核心 DV/IV | 名称一致 | Theory 引入了新的核心构念 |
-| 对手 | `antagonist_construct` | 被挑战的理论/现象 | 身份一致 | Theory 挑战了不同的理论 |
+| Knot 表述 | `story.central_knot` | 开篇是否实质继承 | 问题、核心关系和 stakes 一致；不要求关键词复现 | 换词不算断裂，换问题才算 |
+| 主角 | `story.protagonist` / `story.characters` | 核心理论角色 | 名称、层级和角色一致 | Theory 引入未更新契约的新主角 |
+| 对手 | `story.antagonist`（如适用） | 被挑战的理论/现象 | 身份一致 | Theory 挑战了不同的理论 |
 | 能量 | `contribution_energy` | P1 能量级 | Theory P1 ≥ Introduction Contribution - 1 | Theory 开头能量骤降 |
 | Davis 有趣性 | `daviss_index_types` | Theory 机制 | Theory 的机制支撑 Introduction 承诺的有趣性 | Theory 无法支撑有趣性 |
 
@@ -45,7 +45,7 @@ Central knot 必须从 Introduction 传递到 Theory，再到 Methods、Results�
 | 检查项 | Theory | Methods | 一致标准 | 不一致信号 |
 |--------|--------|---------|---------|-----------|
 | 假设 | H1-HN | 检验变量 | Methods 的变量与 Theory 的假设完全对应 | 变量缺失或多余 |
-| 机制 | why chain | 识别策略 | Methods 的设计能检验 why chain 的每一步 | 识别策略无法检验机制 |
+| 机制 | why chain | 识别策略与变量 | Methods 应检验正式机制主张；纯过程解释若不可直接测量，须明确其证据边界 | 声称已检验机制但设计只识别总关系 |
 | Context | 情境描述 | 样本选择 | Methods 的样本来自 Theory 描述的情境 | 样本与 Theory 情境不符 |
 
 ### Theory → Results
@@ -54,7 +54,7 @@ Central knot 必须从 Introduction 传递到 Theory，再到 Methods、Results�
 |--------|--------|---------|---------|-----------|
 | 假设 | H1-HN | 假设检验 | Results 按 H1-HN 的顺序呈现 | Results 遗漏假设或增加未假设的发现 |
 | 方向 | 假设方向 | 系数方向 | 方向一致 | 方向相反（除非有合理的后 hoc 解释） |
-| 机制 | 中介/调节机制 | 机制检验 | Results 包含机制检验（如中介分析、调节分析） | 只报告主效应，不检验机制 |
+| 机制 | B0 过程解释 / B1 中介 / 调节 | 相应证据 | B1/E 的正式机制主张须检验；B0 可只检验 X→Y，但不得把过程写成已检验结果 | 正式声称 mediation/moderation 却只报告主效应 |
 
 ### Results → Discussion
 
@@ -69,7 +69,7 @@ Central knot 必须从 Introduction 传递到 Theory，再到 Methods、Results�
 | 断裂模式 | 表现 | 检测 | 修复 |
 |---------|------|------|------|
 | **Introduction 讲 A，Theory 讲 B** | Intro 的 knot 是"好公司做坏事"，Theory 的假设是"绩效→创新" | 检查 Theory P1 是否承接了 Intro 的 knot | 统一 knot，重写 Theory P1 或 Intro |
-| **Theory 讲机制 A，Methods 检验机制 B** | Theory 推导了中介机制，Methods 只做了 OLS | 检查 Methods 的变量是否包含中介变量 | 补充中介检验，或修改 Theory 假设 |
+| **Theory 的机制证据身份漂移** | B0 叙述性过程在 Results 被写成“已验证中介”，或 B1 中介没有对应测量 | 比较机制分支与设计 | B0 降级措辞并标证据边界；B1 补检验或修改假设 |
 | **Results 发现 X→Y 负向，Discussion 解释为正向** | 方向不一致 | 检查 Discussion 是否诚实面对反向结果 | 重新解释，或承认假设未被支持 |
 | **Discussion 引入新理论** | Discussion 用 Theory C 解释结果，但 Theory section 用的是 Theory A | 检查 Discussion 是否回到 Theory section 的理论 | 删除新理论，或用 Theory A 重新解释 |
 | **Title/Abstract 的承诺未兑现** | Title 暗示颠覆性发现，Results 只有增量贡献 | 检查 Results 是否兑现了 Title/Abstract 的承诺 | 降低 Title/Abstract 的能量级，或加强 Results |
@@ -79,12 +79,12 @@ Central knot 必须从 Introduction 传递到 Theory，再到 Methods、Results�
 ### 跨 Section 对齐流程
 
 ```
-Step 1: 从 Introduction 提取 central_knot_statement
-Step 2: 检查 Theory P1 是否包含该 statement 的关键词
-Step 3: 检查 Theory 的假设是否直接回应该 statement
+Step 1: 从 canonical story 提取 central_knot、characters 与 storylines
+Step 2: 比较 Theory 开篇的问题、角色、关系与 stakes 是否实质一致
+Step 3: 检查每个假设是否绑定并回应某个 storyline
 Step 4: 检查 Methods 的变量是否与 Theory 假设完全对应
 Step 5: 检查 Results 是否按假设顺序呈现
-Step 6: 检查 Discussion 是否回到 central_knot_statement 并给出 resolution
+Step 6: 检查 Discussion 是否回到 story.central_knot 并给出 resolution
 Step 7: 如果任何一步不一致 → 标记断裂位置，给出修复建议
 ```
 

@@ -112,7 +112,7 @@ source: Extracted from mannor2016 + paruchuri_andrus_sullivan2026 distillations
 
 ### Burying the Lead 检查点
 
-CEO 特征类论文段首句必须在 **15 词内**说出核心判断：
+CEO 特征类论文段首句应尽早说出核心判断；以下短句是可用形式，而非固定词数门槛：
 
 ❌ "Corporate social responsibility (CSR) refers to corporate actions that positively affect society and go beyond the firm's direct business interests."（P1 段首句，仅定义，无判断）
 

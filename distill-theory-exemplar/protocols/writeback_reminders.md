@@ -14,19 +14,19 @@
 2. **跨论文复现 ≥ 2 篇**（或批量模式下同一构建类型内 ≥ 2 篇）
 3. **构建类型明确**（非 "ambiguous between X and Y"）
 4. **模块功能归属明确**（T1–T6 或 T6-Variant 之一，非 "unclassified"）
-5. **与当前 write-theory v3.3.0 不冲突**——回写前必须对照 write-theory 当前版本的约束（如 T6 Closure 非强制、文献引用以交织式为默认等）
+5. **已与当前 write-theory 逐条比较**——兼容模式走 reference 回写；若完整文本显示现行规则可能错误，转入 `references/design-feedback-loop.md`，不得静默压成“与 skill 冲突”
 
 **不触发回写提醒的情况**：
 - 仅 1 篇论文中出现的模式 → 留存为 Vault 参考注释，积累到 ≥3 篇后再提醒
 - 构建类型模糊的论文 → 标记为 "pending_type_clarification"
 - 骨架批评家裁决为"需修正/不纳入" → 不回写
-- **与 write-theory 当前版本核心约束冲突** → 标记为 "pending_protocol_revision"，先更新 write-theory 或降级为"可选变体"，不回写为默认规则
+- **与 write-theory 当前核心约束冲突** → 先判断原文薄弱点、合法变体或设计缺陷；设计缺陷必须持久化，不得仅降级后遗忘
 
 ### 回写分类：默认规则 vs 可选变体
 
 | 类型 | 判断标准 | 回写位置 |
 |------|---------|---------|
-| **默认规则** | ≥3 篇跨期刊论文一致，且与 write-theory 当前约束兼容 | 更新 `SKILL.md` Constraints / Phase 默认结构 |
+| **默认规则候选** | ≥3 篇完整文本、跨 ≥2 期刊且适用范围一致 | 先入设计反馈注册表；通过核心修订门控后才更新 Constraints / Phase |
 | **可选变体（架构级）** | 2-3 篇论文一致但存在期刊/类型特异性，或与当前约束不完全兼容 | 写入 `corpus/variants/` 或 `corpus/subprotocols/` 作为变体 |
 | **可选变体（句式级）** | 2-3 篇论文一致的句位级措辞（topic 句 / why-chain transition / 假设句 / Wrap 句写法，见 Phase 2.2b） | 写入 `corpus/sentences/[对应文件]`（见下表"句式级回写落点"） |
 | **待审阅** | 仅 1 篇出现，或样本有偏 | 只入 Vault 注释，不入 skill |
@@ -73,7 +73,7 @@
 - `注意事项`（边界和风险）
 - `反模式`（不该用的情况）
 
-**不自动执行写入**。模型只生成预览，最终写入由用户审核后完成。
+reference-level 写入在用户已授权 write 系列自动回写且满足证据/去重门槛时可自动执行；core rule、schema 与 stage gate 不走本节预览通道，必须服从 design-feedback 门控。
 
 **示例条目预览格式**（以 Shen_etal_2022_JOM 的 Parallel Moderation 为例）：
 
@@ -110,7 +110,7 @@ Therefore, H[X+1]: ...
 
 **为什么有效**: 读者先在 H1 理解完整的机制 trunk，之后每个 moderator 只需说明它如何改变 trunk 的每个分支，避免重复建立新机制。
 **注意事项**: 
-- 每个 branch 必须回到 trunk 的机制分别论证，不能只笼统说 "W moderates the relationship"
+- 每个 branch 必须明确映射到它实际改变的 trunk 机制；选择性改变单一路径时，解释其他路径为何 invariant，并推出净效应，不强制复用机制全集
 - 建议用元框架（如 environmental/organizational 或 supply/demand）组织多个 moderators
 **反模式**: 如果 moderators 之间没有 conceptual 联系，不要强行 parallel，应改为假设树型逐个引入。
 ```

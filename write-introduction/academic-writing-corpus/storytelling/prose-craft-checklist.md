@@ -8,6 +8,16 @@ version: 1.5.0
 
 # Prose Craft Checklist（Pollock 2025 Ch03）
 
+## Contents
+
+- §0 Paragraph Architecture
+- §1 Human Face
+- §2 Showing vs Telling
+- §3 Conversational Voice
+- §4 Motion and Pacing
+- §5 Ch04 prose pathologies
+- §6 Williams clarity principles
+
 ## 0. Paragraph Architecture（段落架构）
 
 > 本层补充通用学术写作指南中的 paragraph-level 原则（PEEL/PEAL、paragraph length、topic sentence placement），作为 Ch03/Ch04 句法级检查的上一级检查。
@@ -81,25 +91,19 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 
 ### 0.2 Paragraph Length
 
-**健康区间**: 200–300 词（Hull LibGuides 一般建议）
+**功能判据**：段落长度由主导修辞任务、论证难度和期刊节奏共同决定。100–350 词可作为观察区间，但不能自动决定通过或失败。
 
-**检查标准**:
-- [ ] 无 < 100 词的段落（可能 evidence/explanation 不足）
-- [ ] 无 > 350 词的段落（可能包含多个论点，需检查是否拆分）
-- [ ] 单段 >150 词且只有 1–2 句 → 必须拆分（Sentence Stuffing 检查）
-
-**期刊差异**:
-- AMJ/ASQ: 偏好 200–300 词的充实段落
-- SMJ/JM: 可接受 150–250 词的紧凑段落
-- JMS/JOM: 有时使用 100–150 词的短段落，但需确保每段仍有 Point + Evidence
-
-**来源差异说明**: Dunleavy 建议研究性文本段落 100–200 词，Hull LibGuides 建议 200–300 词。二者语境不同——Dunleavy 针对书章/学位论文（长文节奏），Hull 针对期刊文章。**期刊论文以上方期刊差异表为准**；撰写书章/学位论文时可下调至 100–200 词区间。两条规则对两种体裁（§0.0）都适用。
+**检查标准**：
+- [ ] 短段落是否仍完成 Point + 必要 Evidence/Warrant + Link，而不是只留下断言？
+- [ ] 长段落是否仍只有一个主导任务，而不是混入第二个独立 claim？
+- [ ] 句法密度是否迫使读者反复回读；若是，按论证动作拆分，而不是按词数机械切段？
+- [ ] 段落长度是否与相邻段落形成可读节奏，并符合目标期刊的常见密度？
 
 ---
 
 ### 0.3 Topic Sentence Placement
 
-**默认规则**: Topic sentence 放在段首，15 词内说出核心判断。
+**默认规则**：尽早给出 topic sentence，使读者在最小必要背景后即可判断本段的核心立场；不以固定词数作为合格线。
 
 **允许延迟的两种情况**:
 1. **Transition-first**: 段首 1 句专门承接前段，第 2 句给出核心判断
@@ -107,7 +111,7 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 2. **Background-first**: 段首 1 句提供最小必要背景，第 2 句给出核心判断
    - 示例: "In leadership settings, CEOs communicate frequently with investors. These communications..."
 
-**禁止（仅说服体裁）**: 段首 3 句以上仍未出现 topic sentence（严重 Burying the Lead）。**适用范围：Introduction / Theory / Discussion**。Methods/Results 段落的假设重述-first（"Hypothesis 1 predicted..."）、table-first（"Table 2 reports..."）、procedure-first（"We began with..."）开头不受此限——这些是审计体裁的合法段首（见 §0.0），其"topic sentence"等效物是段尾的支持判断。
+**禁止（仅说服体裁）**：背景或过渡持续到读者无法判断本段支持、反对或修正什么。**适用范围：Introduction / Theory / Discussion**。Methods/Results 的 hypothesis-first、table-first 或 procedure-first 属于审计体裁的合法段首。
 
 > **Key line 三分法词汇**：总起式 key line = 本节的 topic sentence；连接式 key line（承上+启下双要素句法）与总结式 key line（段末 wrap 正面语料）见 `../micro-templates/key-line-patterns.md`。"缺乏条理/没有 key line"类诊断按三分法分流修复。
 
@@ -185,7 +189,7 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 
 2. **Throat-clearing（清嗓开头）**：段首 1–2 句是功能性热身（"Before turning to X, it is important to note..." / "It is worth mentioning..."），推迟正事。
    - 与既有规则的关系：§5.2 已覆盖"元评论段首"（"本节讨论..."）；本类补充其余热身形式（背景铺垫式、客套式），两者检测方法相同、命名互补。
-   - 修复：删除或压缩为 ≤15 词的 §0.3 合法 transition/background 句。
+   - 修复：删除，或压缩为只承担必要衔接/背景功能的 §0.3 合法 transition/background 句。
 
 3. **Orphaned quote（孤儿引语）**：引语独立存在，前无 framing（"As X shows:"）、后无 interpretation（"This means..."），引语替作者说话。
    - 修复：每个引语前加 1 句 claim、后加 1 句解读；epigraph 型 Hook 必须接 pivot 句。
@@ -242,12 +246,12 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 ## 2. Showing vs Telling（展示而非告知）
 
 ### 定义
-每个抽象主张必须配对至少一个具体例子、比喻、类比或场景。抽象解释（telling）与具体例证（showing）的比例不超过 2:1。
+当抽象主张、跨层机制或反直觉转换使读者难以模拟过程时，用具体例子、反事实、类比或场景降低理解负担。例证是澄清工具，不是固定配额，也不能替代 warrant 或证据。
 
 ### 检查清单
-- [ ] 每个 major construct 首次出现时，有 concrete illustration
-- [ ] 每个核心发现方向，有具体场景说明"这意味着什么"
-- [ ] 不允许连续 2 句纯抽象链条无例子
+- [ ] 新构念首次出现后，读者是否能区分其边界；不能时再补正例/反例
+- [ ] 核心发现或机制是否抽象到无法想象其行为含义；是时补一个匹配场景
+- [ ] 例子是否真正澄清推理，而不是装饰或替代理论
 
 ### Telling → Showing 转换表
 
@@ -279,7 +283,7 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 - [ ] 无 "It is hypothesized that" → 改用 "We hypothesize that"
 - [ ] 无 inflated symbolism（"paradigm shift", "fundamentally transforms"）
 - [ ] 无 vague attribution（"Prior research has shown..." 不说明谁）
-- [ ] 被动语态 <=20%（Contribution 和 Theory Lens 段优先检查）
+- [ ] 被动语态是否服务于对象聚焦或未知行动者，而不是掩盖作者判断
 - [ ] Read-aloud test：大声朗读 Hook 和 Contribution，是否自然？
 
 ### 禁用词表（与 ACADEMIC_COMMUNICATION.md 对齐）
@@ -299,7 +303,7 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 ### Read-aloud Test 协议
 1. 大声朗读 P1 Hook — 是否像有人在讲故事？
 2. 大声朗读 P7-P8 Contribution — 是否像研究者在解释自己的判断？
-3. 大声朗读 T6 Closure — 是否像总结而非重复？
+3. 大声朗读最后一个理论收敛段或假设段 — 是否自然完成推理而非机械重复？
 4. 如果任何一句读起来像"报告"而非"对话" → 标记为需要 voice 修订
 
 ---
@@ -316,19 +320,19 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 | **Stroke** | 推进论证 | 因果推理、假设推导、机制展开 | 全 stroke → "forced march" |
 | **Glide** | 帮助吸收 | 文献总结、定义澄清、边界说明 | 全 glide → "ponderous pace" |
 
-### 段落级比例要求
+### 段落级平衡诊断
 
-| 段落类型 | Stroke | Glide | 检查问题 |
-|---------|--------|-------|---------|
-| 机制推演 | 70% | 30% | 每个 stroke 句子后是否有 illustration？ |
-| 文献铺垫 | 40% | 60% | glide 是否用具体场景解释，非纯引用罗列？ |
-| 构念定义 | 50% | 50% | 定义后是否立即给 1 个例子？ |
-| Hook | 80% | 20% | 是否有具体 actor 推进？ |
-| Contribution | 60% | 40% | 是否先 claim 后 justify？ |
+| 段落类型 | 主导动作 | 何时补 glide | 失败信号 |
+|---------|---------|-------------|---------|
+| 机制推演 | 推进因果或过程转换 | 跨层、反直觉或认知负荷高时 | 只有连接词，没有可恢复的推理 |
+| 文献铺垫 | 建立前提或学术对话 | 文献关系不直观时 | 引用停滞，迟迟不回到作者 claim |
+| 构念定义 | 定义、范围与区分 | 定义仍抽象或易混淆时 | 例子取代定义，或定义无边界 |
+| Hook | 推进现象张力 | 读者缺少最小情境时 | 背景堆积或轶事与理论问题脱节 |
+| Contribution | 先给 reader shift，再解释价值 | 新理解的后果不自明时 | 只罗列做了什么，未说明学到了什么 |
 
 ### 检测 "forced march"
-- 连续 3+ 句都是 stroke（因果推理/假设推导）且无 glide（解释/例证）
-- 修复：在关键推理步骤后插入 1 句 glide（"That is," / "For example,"）
+- 连续推理使目标读者无法恢复某一步为何成立
+- 修复：只在负荷最高的转换后补解释、反事实或例证
 
 ### 检测 "ponderous pace"
 - 连续 3+ 句都是 glide（文献总结/定义澄清）且无 stroke（推进）
@@ -346,10 +350,10 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 
 **定义**：文章开头塞了过多背景信息，读者迟迟看不到核心问题， central knot 被淹没在铺垫中。
 
-**检测标准（满足任一即标记）**：
-- P1 Hook 词数 > 120（英文）/ > 180 字（中文）
-- 前 3 段总词数 > 350（英文）/ > 500 字（中文）
-- 前 3 段中纯背景信息（历史、定义、共识描述）占比 > 60%，问题/张力/悖论占比 < 40%
+**检测标准**：
+- P1 的主要篇幅是否用于理解 puzzle 所不需要的历史、定义或领域背景？
+- 前三段结束时，读者能否清楚复述现象张力、学术对话和诊断性问题？
+- 约 120 词的 P1、约 350 词的前三段仅作为压缩提示；超出后结合期刊、功能密度和证据需要判断，不自动标错。
 
 **修复策略**：
 - 将背景压缩到 Lit Turn 段，P1 只保留理解 paradox 所需的最小上下文
@@ -365,19 +369,19 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 **定义**：段落的核心信息被埋在中间或末尾，而非段首句。读者必须读到段中或段尾才能知道段落目的。
 
 **检测标准（满足任一即标记）**：
-- 段首句未在 15 词内说出核心判断、发现或 claim
+- 最小必要背景后仍未说出核心判断、发现或 claim
 - 段首句是元评论（"本节讨论..." / "接下来我们..."）或纯过渡句，无实质信息
 - 读者只读段首句时，无法判断该段支持/反对/修正什么观点
-- **新增**：topic sentence 出现在第 3 句或更后（允许第 2 句出现，但第 1 句必须是明确 transition/background）
+- topic sentence 被多句热身、文献名单或元评论推迟，读者无法及早判断本段任务
 
 **修复策略**：
 - 重写段首句为"核心判断句"：主语 + 主动动词 + 方向/发现
 - 模板："We argue that [X] [verbs] [Y] because [机制]." / "[Actor] faces a tension: [具体矛盾]."
 - 元评论和过渡信息移到段尾或删除
 - 检查：将段首句单独提取，是否仍是一个完整且有力的学术判断？
-- **新增**：如确实需要 transition-first 结构，确保第 1 句 ≤15 词且第 2 句立即给出核心判断
+- 如确实需要 transition-first，保持过渡最短，并在下一句给出核心判断
 
-**嵌入点**：write-introduction 所有段落；write-theory 的 Topic Sentence（四段式论证链）和 T6 Closure
+**嵌入点**：write-introduction 所有段落；write-theory 的 Topic Sentence 与最后一个理论收敛段/假设段
 
 ---
 
@@ -385,11 +389,11 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 
 **定义**：一个句子塞入过多从句、括号、修饰语，导致读者 parsing 困难。本质是作者想在一句话里说太多。
 
-**检测标准（满足任一即标记）**：
-- 单句词数 > 30（英文）/ > 50 字（中文）
-- 单句包含 > 2 个从属连词（which/that/because/although/while/whereas）
-- 单段 > 150 词且只有 1-2 个句子
-- 一句话中包含 > 1 组括号或破折号插入语
+**检测标准**：
+- 一个句子是否同时承担两个以上可独立判断的 claim？
+- 从句、括号或插入语是否遮蔽主语—动作—结果骨架？
+- 读者是否必须回读才能确定修饰语指向或因果关系？
+- 30 词等长度指标只用于定位候选句，不能单独判定失败。
 
 **修复策略**：
 - 拆分为 2-3 个短句，每句一个核心判断
@@ -397,7 +401,7 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 - 将括号内容移到独立句子或删除
 - 优先删除：非限制性定语从句（, which...）→ 常可独立成句
 
-**嵌入点**：write-introduction 的 Stakes 和 Contribution 段（易 stuffing）；write-theory 的假设推导段和 T6 Closure
+**嵌入点**：write-introduction 的 Stakes 和 Contribution 段；write-theory 的假设推导段与最后一个理论收敛段/假设段
 
 ---
 
@@ -406,14 +410,14 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 **定义**：作者假设读者已经知道自己在想什么，缺少过渡和解释，造成逻辑跳跃。读者被迫"脑补"中间步骤。
 
 **检测标准（满足任一即标记）**：
-- 段落间无 explicit transition（缺少 "However"/"Consequently"/"This leads to"/"Thus" 等信号词）
+- 段落关系无法由语义、重复主语或必要的 transition 恢复；没有显式连接词本身不构成失败
 - 因果推理中从 A 直接跳到 C，缺少 B 的中间步骤（如从"CEO 自恋"直接到"召回延迟"，跳过"信息过滤→风险低估"）
 - 使用暗示读者已知的表述："显然" / "不难看出" / "as is well known" / " needless to say"
 - 新构念首次出现时无定义或上下文，直接用于推理
 
 **修复策略**：
-- 每段段首添加 transition 信号词，明确本段与前段的关系（转折/因果/递进/对比）
-- why chain 中每个因果步骤用至少 1 句话说明；检查：相邻两个 claim 之间是否可插入"因为...所以..."？
+- 仅在语义关系不自明时添加 transition，避免机械地每段用连接词开头
+- why chain 中把必要转换写清；一个句子可承担多个紧密相连的动作，只要逻辑可恢复
 - 删除所有"显然"类表述，替换为具体推理
 - 新构念首次出现必须伴随定义或指向前文定义
 

@@ -58,6 +58,8 @@
 
 | 维度 | 选项 |
 |------|------|
+| Gap 类型 | Incompleteness / Inadequacy / Incommensurability；优先继承 Introduction，Theory 文本单独推断时标 provisional |
+| Incommensurability 路由 | R1 X 分类 / R2 Y 分类 / R3 对立机制 / R4 情境调节 / unclassified；仅该 Gap 激活 |
 | 构建类型 | 构念辨析型 / 机制推演型 / 假设树型 / 质性过程理论型 |
 | Makadok 维度 | Constructs / Mechanism / Boundary / Level / Mode / Question / Output |
 | 推理结构 | 线性因果链 (X→M→Y) / 发散树 (X→Y1/Y2/Y3) / 收敛网 (X1/X2→Y) / 辩证对立 (A vs B) / 过程演化 (Phase1→Phase2→Phase3) |
@@ -108,6 +110,16 @@
 [排除辩证对立]: 无 A vs B 对立论证结构
 ```
 
+### Incommensurability 二级分类（仅该 Gap 激活）
+
+读取 `../../write-theory/references/incommensurability-resolution-routes.md`。先提取 L0 stable reasoning kernel，再将 R1–R4 作为可反驳的冲突定位：
+
+- 输出 primary/secondary route、confidence、closest alternative 与 `unclassified_residual`；
+- 将 A–G 变体、paired/competing/nonlinear/conditional 等形式视为 L2 候选，不得从 route 自动推出；
+- 把具体构念、理论名、H 数量、mediator/moderator、方程与估计形式放入 L3 model signature；
+- 只有当替代更简单架构不能表达同一理论贡献时，复杂架构才具有 necessity warrant；
+- 若 Theory 文本无法证明 Introduction 所称冲突的 commensurability，降低 route confidence 并记录跨 Section 风险。
+
 #### 假设结构证据链
 
 ```text
@@ -146,6 +158,13 @@
 ```yaml
 paper_id: "[作者_年份_期刊]"
 phase_0_theory_profile:
+  gap_type: "Incompleteness / Inadequacy / Incommensurability / provisional"
+  incommensurability_route:  # 仅该 Gap 填写
+    primary: "R1 / R2 / R3 / R4 / unclassified"
+    secondary: "R1 / R2 / R3 / R4 / null"
+    confidence: "high / medium / low"
+    closest_alternative: "[route + reason]"
+    unclassified_residual: "[无法由四路解释的理论特征或 null]"
   build_type: "构念辨析型 / 机制推演型 / 假设树型 / 质性过程理论型 / 调节效应型"
   build_type_evidence:
     signature_language: ["具体句1 (位置)", "具体句2 (位置)"]

@@ -20,8 +20,10 @@ source_papers:
   - bamberger_homburg_wielgos2021 (JM, 2021): "Dual-gap mechanism/decomposition preview with complementary study roles"
   - lee_wu_bednar_orsc_18968 (Organization Science): "Interview-grounded contingency + staggered DiD + communication corroboration"
   - reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science, 2026): "Event activation mechanism + constructive-replication repair ladder"
+  - schumacher_keck_tang2020 (SMJ, 2020): "Formal belief-updating model + asymmetric feedback predictions + survival-threshold reversal"
+  - ilicic_brennan2026 (JM, 2026): "Phenomenon + serial mechanism + multimethod evidence roles + personally directed intervention"
 created: 2026-05-18
-updated: 2026-08-02
+updated: 2026-08-03
 source: Extracted from MVP30 narrative_analysis files + grewal2025 + bamberger_homburg_wielgos2021
 ---
 
@@ -33,7 +35,7 @@ P5-P6 的功能：在理论框架建立之后，向读者预告"我们做了什�
 
 | 文件 | 内容 | 适用场景 |
 |------|------|---------|
-| [mechanism-preview.md](mechanism-preview.md) | 变体 A-J：理论整合、分层机制、挑战性预测、双理论整合、融合段、非线性、多方法、**双缺口→机制簇→净效应分解→研究分工**、**定性扎根→条件化机制→准实验→行为—传播双结果**、**宏观事件激活→近端机制→建设性复制修复梯度** | 需要预告核心理论逻辑的研究；E/H 适用于 JM/JMR 紧凑风格，I 适用于 interview-grounded quasi-experiment，J 适用于事件激活的多研究条件过程 |
+| [mechanism-preview.md](mechanism-preview.md) | 变体 A-M：理论整合、分层机制、挑战性预测、双理论整合、融合段、非线性、多方法、**双缺口→机制簇→净效应分解→研究分工**、**定性扎根→条件化机制→准实验→行为—传播双结果**、**宏观事件激活→近端机制→建设性复制修复梯度**、**正式模型→双侧反馈预测→阈值反转**、**现象→双中介→机制靶向干预→证据角色列举**、**收益—伤害结果组合→共享导向→选择性制衡** | 需要预告核心理论逻辑的研究；E/H/L 适用于 JM/JMR 紧凑风格，I 适用于 interview-grounded quasi-experiment，J 适用于事件激活的多研究条件过程，K 适用于正式模型生成非对称主效应与边界反转；M 适用于同一高管特质同时关联创新收益与产品安全风险的单篇 EMERGING 变体 |
 | [findings-preview.md](findings-preview.md) | 变体 D-G：经济显著性型、反例驱动型、两层因果链型、调节效应预览型 | 需要预告实证结果的研究 |
 | [robustness-preview.md](robustness-preview.md) | 变体 H：稳健性密集预览型 + 紧凑版 | 方法复杂、检验繁多的实证论文 |
 | [extreme-case-justification.md](extreme-case-justification.md) | 变体 J：极端案例+混合方法辩护型 | 使用极端案例和多方法设计的研究 |

@@ -14,8 +14,9 @@ source_papers:
   - grewal2025 (JM, 2025): "Consensus building + practice complexity in digital advertising ecosystems"
   - cui_yang_vertinsky_smj (SMJ): "Consensus + stakes + three unaddressed issues preview"
   - malshe2015 (JM, 2015): "Nascent marketing–finance stream + complementary-half pivot (equity examined, debt not)"
+  - schumacher_keck_tang2020 (SMJ, 2020): "Two mature streams joined through a necessary interpretive bottleneck"
 created: 2026-05-19
-updated: 2026-07-30
+updated: 2026-08-03
 source: Extracted from literature-turn-templates.md + MVP30 validation
 ---
 
@@ -203,6 +204,30 @@ P2-P3 的功能：承认文献已有实质进展，但精确指出被遗漏的�
 - 源学科证据支撑 gap 时，每条理由的引文必须来自源学科的经典/综述，不可用目标学科的边缘文献充数
 
 **与贡献段的回响**: 本变体的 equity/debt 互补半区应在贡献段兑现为"among the first to study [debt half]" + "combine literature from both [source] and [target]"——gap 与贡献共享同一互补半区逻辑，形成 hook→turn→gap→contribution 的紧致回响（malshe2015 P5 即如此）。
+
+---
+
+### 变体 I：双成熟文献流 + 必要解释瓶颈（Schumacher–Keck–Tang 2020 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "[Stream A] has established that [objective signal relative to a reference point] shapes [organizational response]. Yet the signal can influence action only after [focal decision maker] interprets it. Separately, [Stream B] shows that [decision-maker disposition] systematically biases the processing of [relevant information]. Although each stream is well developed, their intersection remains underexamined: we do not yet know how [disposition] changes the interpretation of [signal] and thereby alters [response]."
+
+**来源**: Schumacher, Keck, and Tang (2020), *Strategic Management Journal*, Introduction P1.
+
+**关键特征**:
+1. 两套文献各自先获得完整承认，避免把任一方写成稻草人。
+2. 用“信号必须先被行动者解释”建立必要中间环节，再证明第二套文献恰好会改变这个环节。
+3. Gap 位于两个成熟知识块的交叉处，而不是任何一套文献内部的错误或互补极性遗漏。
+4. 交叉点直接生成可检验链条：`disposition → interpretation of signal → organizational response`。
+
+**适用**: 宏观刺激—组织行为关系依赖关键行动者的认知处理，且另有成熟的个体偏差、身份或倾向文献可解释该处理过程。典型为 `Incompleteness × (Mechanism + Boundary)`。
+
+**禁忌**:
+- 必须证明该解释环节对 X→Y 是必要的；不能仅因两套文献共享一个行动者就声称需要整合。
+- 两流的既有结论须分别准确呈现；若已有研究已直接检验交叉关系，应改写为边界或机制精细化，而不是“尚未交叉”。
+- 不要用方向反转把 Gap 误标为前人结论矛盾；反转若来自本文新边界，主 Gap 仍可是不完整性。
 
 ---
 

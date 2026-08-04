@@ -16,9 +16,9 @@
 | P2-P3 | [定性论文] 文献回顾子节：合成已有研究发现，建立过程模型的理论地基。定量论文中此功能嵌入在 P1 构念定义和 P4 过程模型预览中 | 各 60-100 | ⚠️ 定性=是 / 定量=嵌入 |
 | P4 | 过程模型预览（"We develop a process model of..."） | 60-80 | ✅ |
 | P5-P7 | 过程阶段推演（Stage 1 → Stage 2 → Stage 3...） | 各 70-120 | ✅ |
-| P8-P10 | 命题陈述（而非正式假设）——最后命题即为 Theory 的终点 | 各 40-80 | ✅ |
+| P8-P10 | 命题陈述（而非正式假设）——最后命题通常完成 Theory；若阶段关系仍不自明，可追加最短必要的整合来恢复过程连贯性 | 由命题复杂度决定 | ✅ |
 
-> **注意**: 管理学顶刊不要求独立的 Closure 段落。过程模型的最后命题即为 Theory 的终点。
+> **注意**：管理学顶刊不要求独立 Closure。默认以最后命题自然结束；仅当多个阶段或命题需要重新连接为一个过程模型时，允许在末段嵌入或紧随其后加入最短必要的 integrative synthesis。该 synthesis 不得引入新构念、新命题或新贡献。
 
 ---
 
@@ -119,4 +119,4 @@ Proposition [N]: In [context], [collective action] leads to [outcome], mediated 
 - [ ] 过程模型是否包含了 transition/contingency 逻辑（而非只是阶段列表）？
 - [ ] 是否区分了 necessary conditions 和 sufficient conditions？
 - [ ] 理论化是否与我们观察到的 empirical variation 一致？
-- [ ] 最后命题是否自然收束（非突然中断）？
+- [ ] 最后命题是否自然收束？若阶段关系仍不自明，整合是否只保留恢复过程连贯性所必需的内容，且没有新增理论内容？

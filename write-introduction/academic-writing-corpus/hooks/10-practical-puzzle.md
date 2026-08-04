@@ -12,8 +12,9 @@ source_papers:
   - desjardine2023 (OS, 2023): "Although [phenomenon] may seem advantageous... it has created a new challenge"
   - kalaignanam2017 (JM, 2017): "NPD outsourcing trend + Toyota/Boeing cases → mixed evidence about quality impact"
   - grewal2025 (JM, 2025): "brand safety definition + cruise lines case → digital advertising ecosystem challenges"
+  - moon_tuli_mukherjee2023 (JM, 2023): "theory premise → Apple disclosure reversal → analyst reaction → multi-firm generalization"
 created: 2026-05-18
-updated: 2026-07-10
+updated: 2026-08-03
 source: Extracted from MVP30 narrative_analysis files
 ---
 
@@ -119,6 +120,28 @@ source: Extracted from MVP30 narrative_analysis files
 
 **适用**: 新管理现象或重新定义现有构念；JM/JMR/IJRM 风格
 **禁忌**: 案例必须与核心构念直接相关
+
+---
+
+### 变体 E：理论前提—企业反差—受众反应型（Moon, Tuli & Mukherjee 2023 型）
+
+**模板**:
+> "[Research stream] consistently shows that [organizational input/action] is a leading indicator of [future outcome]. Yet current rules leave [focal actors] discretion over whether to disclose [corresponding information]. Consider [named organization]: although it publicly describes [input/action] as critical, it ceased reporting [information] after [observable change]. [Stakeholder group] objected because the information had been useful for [specific decision task]. This is not an isolated case: [additional cases/base-rate evidence]."
+
+**来源**: Moon, Tuli, and Mukherjee (2023), *Journal of Marketing*, P1–P2
+
+**原文锚定（释义）**: 作者先用营销文献确立广告支出对未来绩效的预测意义，再呈现 Apple 一方面公开承认广告重要、另一方面停止披露支出的组织反差；随后加入 Wells Fargo 分析师对信息损失的公开反应，并用其他公司与总体披露率将个案一般化。
+
+**关键特征**:
+- 学术文献先给案例“定性”，使企业行为从新闻事实变成理论 puzzle
+- 同一组织的公开承诺与披露行为形成可见反差
+- 具名利益相关者反应验证 target audience 确实感受到信息损失
+- 单案例后立即补充多案例或基础比例，防止 anecdotal cherry-picking
+- 案例只建立问题真实性；因果机制仍由后续 Theory 与 Methods 检验
+
+**适用**: Incompleteness × Question/Mechanism；营销—金融接口、披露、监管、透明度及其他有公开公司档案与利益相关者评论的研究。特别适合 JM/JMR/IJRM。
+
+**禁忌**: 不可用利益相关者抱怨直接证明因果效应；公司公开表述、行为变化与外部评论必须可核验；案例后必须完成一般化，并认真呈现一个有现实基础的反方解释。
 
 ---
 

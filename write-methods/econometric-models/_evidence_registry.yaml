@@ -1,10 +1,87 @@
 meta:
-  last_updated: '2026-08-02'
+  last_updated: '2026-08-04'
   total_design_types: 22
-  batches_processed: 11
-  source: corpus INDEX.md + product_recall_cross_validation + cutolo2024_jm_text_count + falchetti2022_smj_experiment + lashley_pollock2020_asq_qualitative_process + chung_low_rust_2022_jams_executive_confidence_myopia + ilicic_brennan_2026_jm_political_ideology_addictive_products + kim_lee_2026_putting_a_price_on_mission_smj + bamberger_homburg_wielgos_2021_jm_backfill + lee_wu_bednar_orsc_18968_distill + reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc_distill
+  batches_processed: 16
+  source: corpus INDEX.md + product_recall_cross_validation + cutolo2024_jm_text_count + falchetti2022_smj_experiment + lashley_pollock2020_asq_qualitative_process + chung_low_rust_2022_jams_executive_confidence_myopia + ilicic_brennan_2026_jm_political_ideology_addictive_products + kim_lee_2026_putting_a_price_on_mission_smj + bamberger_homburg_wielgos_2021_jm_backfill + lee_wu_bednar_orsc_18968_distill + reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc_distill + moon_tuli_mukherjee_2023_jm + schumacher_keck_tang_2020_smj + kashmiri_nicol_arora_2017_jams + bendig_hensellek_schulte_2024_etp + lee_park_2024_smj
 evidence:
   by_source_paper:
+    lee_park_2024_smj:
+      journal: Strategic Management Journal
+      title: "Giving up learning from failures? An examination of learning from one's own failures in the context of heart surgeons"
+      status: VERIFIED
+      verification_basis: user_expert_audit
+      design_types:
+        - 面板数据-OLS
+        - 非线性模型
+      slots_covered:
+        - M1
+        - M2
+        - M3
+        - M4
+        - M5
+        - M6
+        - M7
+        - M8
+      note: "User-audited canonical exemplar for U/inverted-U Methods writing. Bounded outcome motivates fractional logit; the curve-support contract predeclares endpoint slopes plus an interior turning point, and turning-point-location moderation is adjudicated by condition-specific vertices and a direct Wald equality test. The formulas define the narrative estimand rather than create a software tutorial. Use turning point/vertex, not inflection point."
+    bendig_hensellek_schulte_2024_etp:
+      journal: Entrepreneurship Theory and Practice
+      title: "Beneficial, Harmful, or Both? Effects of Corporate Venture Capital and Alliance Activity on Product Recalls"
+      status: EMERGING (1p)
+      design_types:
+        - 面板数据-OLS
+        - 非线性模型
+      slots_covered:
+        - M1
+        - M2
+        - M3
+        - M4
+        - M5
+        - M7
+        - M8
+        - M9
+      note: "Binomial-logit GEE with exchangeable correlation and robust SE is justified by within-firm correlation, retention of all-zero panels, and heteroskedasticity. The curve test requires quadratic sign, opposite endpoint slopes, turning point, and Fieller CI. Lagging and untabulated industry-IV checks mitigate but do not resolve endogeneity."
+    kashmiri_nicol_arora_2017_jams:
+      journal: Journal of the Academy of Marketing Science
+      title: "Me, myself, and I: influence of CEO narcissism on firms' innovation strategy and the likelihood of product-harm crises"
+      status: EMERGING (1p)
+      design_types:
+        - 面板数据-OLS
+        - 非线性模型
+        - 文本构念测量
+      micro_templates:
+        - executive-confidence-operationalization
+        - model-selection-comparison
+      slots_covered:
+        - M2
+        - M3
+        - M4
+        - M7
+        - M8
+      note: "Four-indicator archival CEO-narcissism composite with succession-year exclusion; regulatory product-harm indicator explicitly bounded away from recall timing/strategy/severity; one theory uses outcome-specific pooled OLS, RE negative binomial, fractional logit, and RE logit. Long-tenure sample restriction creates survivorship/tenure-selection risk, and null predictor regressions do not establish exogeneity."
+    schumacher_keck_tang_2020_smj:
+      journal: Strategic Management Journal
+      title: "Biased interpretation of performance feedback: The role of CEO overconfidence"
+      status: EMERGING (1p)
+      design_types:
+        - 面板数据-OLS
+      micro_templates:
+        - executive-confidence-operationalization
+      slots_covered:
+        - M2
+        - M4
+        - M8
+      note: "Nonoverlapping first-three-year trait formation window and subsequent outcome window; media and option proxies provide method-heterogeneous convergence but do not establish construct purity or exogeneity."
+    moon_tuli_mukherjee_2023_jm:
+      journal: Journal of Marketing
+      title: "Does Disclosure of Advertising Spending Help Investors and Analysts?"
+      status: EMERGING (1p)
+      design_types:
+        - IV-2SLS
+        - 两阶段模型
+      slots_covered:
+        - M7
+        - M8
+      note: "peer-IV proximity gradient + multi-endogeneity correction ledger (binary choice, continuous spending, mediator, coverage selection)"
     reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc:
       journal: Organization Science
       title: "The Elephant and Donkey in the Room: Time-Varying Effects of Political Dissimilarity on Social Interactions at Work During U.S. Elections"
@@ -68,7 +145,7 @@ evidence:
         - M5
         - M8
         - M9
-      note: "consumer psychology 机制证明传统（measurement/moderation of process + rival accounts battery，Spencer Zanna Fong 2005）；待第二篇交叉验证"
+      note: "consumer psychology 机制证据组合（measurement of process + rival accounts battery；补充研究以 moderation of process 操纵 agency）。主文 Study 4 为横截面测量且结果变量先于中介，反转中介顺序仅是竞争排序敏感性检查，不能确认时间或因果顺序；补充研究正文不可见，故因果收敛主张需保留审计边界。"
     chung_low_rust_2022_jams:
       journal: Journal of the Academy of Marketing Science
       title: "Executive confidence and myopic marketing management"
@@ -91,13 +168,17 @@ evidence:
       note: "待第二篇 exemplar 提升为 ROBUST；DWH + Gaussian copula 内生性叙事需与传统 IV 研究进一步交叉验证"
   by_design_type:
     面板数据-OLS:
-      paper_count: 5
+      paper_count: 9
       papers:
+      - lee_park_2024_smj (SMJ)
+      - bendig_hensellek_schulte_2024_etp (ETP)
       - darby2023 (MSOM)
       - darby2025 (JSCM)
       - darby2026 (JOM)
       - eilert2017 (JM)
       - chung_low_rust_2022_jams (JAMS)
+      - schumacher_keck_tang_2020_smj (SMJ)
+      - kashmiri_nicol_arora_2017_jams (JAMS)
       status: VERIFIED
       slots_covered:
       - M1
@@ -108,6 +189,7 @@ evidence:
       - M5
       - M6
       - M7
+      - M8
       - M10
       common_failures:
       - 控制变量无 because 逻辑——仅列举变量名
@@ -138,19 +220,29 @@ evidence:
         reject: 0
         common_revise_reasons: []
     非线性模型:
-      paper_count: 1
+      paper_count: 4
       papers:
+      - lee_park_2024_smj (SMJ)
+      - bendig_hensellek_schulte_2024_etp (ETP)
       - cutolo2024 (JM)
-      status: EMERGING
+      - kashmiri_nicol_arora_2017_jams (JAMS)
+      status: VERIFIED
       slots_covered:
+      - M1
+      - M2
+      - M3
       - M4
       - M5
+      - M6
       - M7
+      - M8
       - M10
       - M14
       common_failures:
       - 未说明为何拒绝 Poisson / 未报告过度分散检验
       - 未预告系数将翻译为 predicted counts / IRRs
+      - 曲线关系只写二次项符号，不预先声明端点斜率、内部转折点与数据支持区间
+      - 曲线调节未声明改变的是转折点位置、陡峭度、垂直位移还是形状翻转
       validation_history:
         total_runs: 0
         validated: 0
@@ -334,11 +426,12 @@ evidence:
         reject: 0
         common_revise_reasons: []
     IV-2SLS:
-      paper_count: 2
+      paper_count: 3
       papers:
       - wowak2025 (MS)
       - chung_low_rust_2022_jams (JAMS)
-      status: EMERGING
+      - moon_tuli_mukherjee_2023_jm (JM)
+      status: VERIFIED
       slots_covered:
       - M4
       - M7
@@ -388,9 +481,10 @@ evidence:
         reject: 0
         common_revise_reasons: []
     文本构念测量:
-      paper_count: 1
+      paper_count: 2
       papers:
       - cutolo2024 (JM)
+      - kashmiri_nicol_arora_2017_jams (JAMS)
       status: EMERGING
       slots_covered:
       - M2
@@ -464,12 +558,13 @@ evidence:
         reject: 0
         common_revise_reasons: []
     两阶段模型:
-      paper_count: 3
+      paper_count: 4
       papers:
       - darby2023 (MSOM)
       - zhou2017 (ASQ)
       - chung_low_rust_2022_jams (JAMS)
-      status: EMERGING
+      - moon_tuli_mukherjee_2023_jm (JM)
+      status: VERIFIED
       slots_covered:
       - M7
       - M8

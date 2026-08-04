@@ -4,9 +4,10 @@ status: 📋 TEMPLATE
 source_papers:
   - "wowak2025_tmt_political_ideology_ms"
   - "qiao_hiatt_sine2026 (SMJ, 2026): control-function residual as nonlinear DWH test + finite-sample-bias caveat"
-variants_count: 6
+  - "moon_tuli_mukherjee_2023_jm (Journal of Marketing): robustness exception ledger distinguishing stable, form-sensitive, and fragile inferences"
+variants_count: 7
 created: 2026-05-18
-updated: 2026-07-25
+updated: 2026-08-03
 ---
 
 # IV-2SLS — Results 骨架
@@ -87,3 +88,18 @@ updated: 2026-07-25
 **与原骨架差异**: 区别于变体 3（mediation post hoc 解释"为什么"）——本变体是**离散度（coefficient of variation）作为新焦点预测变量的 post hoc**，回答"该怎么办"（actionable mitigation）。三个关键转移：(1) **焦点构念从均值（trait level）转向离散度（trait dispersion/diversity）**——同一数据生成完全不同的理论构念；(2) **"best of both" 框架**——调和主结果中两极各赢一个维度的张力（[pole_A] wins on DV_1, [pole_B] wins on DV_2 → dispersion captures both benefits）；(3) 用同估计器对两 DV 重复，展示离散度**同时改善两维度**。CV = SD/mean 的测量选择有方法论引用支撑（Baginski et al. 1993; Busenbark et al. 2017）。诚实边界：post hoc 性质须明确标注（非 confirmatory hypothesis），且须包含低阶构成项（mean + SD）以满足 ratio 变量规范。
 **适用**: 主结果发现两个对立群体/条件各赢一个维度（如 liberal 更少召回 + conservative 更快召回；exploration 创新 + exploitation 效率）的研究；任何用群体内离散度/多样性作为可操作干预杠杆的 post hoc；需要 "actionable + tested" 管理含义、把"发现"转化为"干预"的研究。
 **禁忌**: 离散度必须是**可操作的管理干预**（如 TMT 构成、团队组合可调整）——不可操作的稳定特质不适用；"best of both" 框架要求主结果中两极**确实各赢一个维度**（若一极全胜则无 "both" 可言，应换框架）；CV 测量须引用离散度测量文献且报告低阶构成项；post hoc 须标注为探索性，不可包装成 confirmatory（见反模式"事后分析未标记"）。
+
+### 变体 7: R6/R7 稳健性例外账本——稳定结论、形态变化与脆弱边界分层报告
+
+**来源论文**: Moon, Tuli & Mukherjee (2023, *Journal of Marketing*)
+**验证状态**: 单篇高价值 reference-level 变体，待跨论文验证
+**写入日期**: 2026-08-03
+**槽位**: R6/R7
+**骨架**:
+> We assess the sensitivity of our conclusions to [alternative measurement], [alternative instrument families], [alternative classification], and [additional omitted-information control]. The headline conclusions for [core hypotheses] remain consistent. Two qualifications are important. First, the mediation inference changes from [partial] to [complete/stronger] because [the direct path becomes weaker/nonsignificant] under [specification]. Second, the evidence for [weakly supported moderator] becomes nonsignificant under [alternative specification]. We therefore treat [headline effect] as robust, the exact form of [mediation] as specification-sensitive, and [moderator hypothesis] as weaker evidence.
+
+**与原骨架差异**: 常见 R7 用 “results remain unchanged” 抹平所有规格差异；本变体把稳健性结论分成三层：(1) 方向与显著性稳定的 headline；(2) 结论仍成立但**形式改变**的机制（partial ↔ complete mediation）；(3) 在合理替代规格下消失的脆弱边界。稳健性段因此既维护核心发现，也更新证据权重。
+
+**诚实边界**: partial→complete mediation 不能简单称为“更强”，而应标记为机制分解的规格敏感性；基准模型仅边际显著、替代模型为 null 的假设不可继续写成普遍支持；若符号反转或核心主效应消失，应升级为 substantive inconsistency，而非 qualification。
+
+**适用**: IV/2SLS、control-function、mediation 或多 moderator 研究；替代工具、分类或测量可能改变路径形态但不必推翻全部 headline 的情境。

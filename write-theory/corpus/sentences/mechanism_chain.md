@@ -92,7 +92,7 @@ Thus:"
 
 **语料锚定**：
 - Wu 2025 (OrgSci) — digital transformation → routine updating → innovation
-- Keeves 2017 (AMJ) — 标准两步链范式
+- Keeves 2017 (ASQ) — 标准两步链范式
 
 ---
 
@@ -166,11 +166,17 @@ We argue that which path prevails depends on [moderator]. When [moderator = high
 [positive path logic: why benefit path strengthens]. When [moderator = low], [negative 
 path logic: why cost path strengthens].
 
-[Convergence to hypotheses]
-In line with this reasoning, we derive [N] formal hypotheses:
-H1: [Moderated overall effect of IV on DV]
-H2a: [Positive indirect effect through M1, moderated by W]
-H2b: [Negative indirect effect through M2, moderated by W]
+[Selective-path moderation — when theory says W changes only one substrate]
+[Moderator W] changes [exposure/capacity/interpretation/constraint] underlying [M2 cost path],
+thereby [weakening/strengthening] that path. It does not alter [M1 benefit path] because
+[mechanism-specific invariance reason]. Holding M1 constant, weakening the negative M2 path
+makes the net X→Y effect [more positive/less negative]; strengthening M2 makes it [less
+positive/more negative]. Do not manufacture an M1 effect merely to make the paths symmetric.
+
+[Convergence to hypotheses — choose one branch]
+Shared-path branch: H1 [moderated overall effect]; H2a/H2b [both indirect paths moderated].
+Selective-path branch: H1 [net X→Y effect becomes more positive/less negative when W weakens M2];
+optionally H2 [only the indirect effect through M2 is moderated]. Do not write an M1 moderation hypothesis.
 ```
 
 **语料锚定**:
@@ -708,7 +714,7 @@ particularly relevant when considering how observers respond to [behavior]."
 - kundro_rothbard (AMJ) — Alternative Mechanisms section (warmth, competence, dominance)
 
 **关键特征**:
-- 每个替代机制 2-3 句，独立成段
+- 每个替代机制用足以区分其因果逻辑的最短独立论证，是否独立成段由辨析负荷决定
 - 替代机制的选择必须基于文献（不能随意发明）
 - 核心机制辩护通常给出 2 个理由（直接相关性 + 情境显著性）
 - 反模式：只列替代机制而不解释为何排除；替代机制与核心机制在概念上重叠
@@ -866,6 +872,7 @@ is [high/low] rather than [low/high]."
 **语料锚定**: shen_zhou_wang_zhang (JOM) — H2-H5 推导段落
 
 **关键特征**:
+- **作用域警示**：以下“严格对应”只适用于该 JOM 范文中 moderator 被理论化为同时改变三个子机制的 convergent 结构。若 moderator 只改变一个机制，改用 selective-path mapping，并从“受影响路径 + 未受影响路径”推出净效应。
 - 每个调节器段落都重复 "First... Second... Third..." 结构
 - 三个子机制与主效应的三个机制**严格对应**（complacency ↔ motivation; lock-in ↔ waste reduction; path dependence ↔ learning）
 - "Thus, [IV] become [more/less] harmful to [DV]" 作为段落收敛
@@ -873,7 +880,7 @@ is [high/low] rather than [low/high]."
 
 **反模式**:
 - 三个原因概念重叠（如 "complacency" 和 "lack of motivation" 实为同一机制）
-- 调节器的子机制与主效应的子机制不对应（审稿人会质疑"为什么这个调节器不影响机制3？"）
+- 在声称 moderator 同时改变全部机制时，调节器的子机制与主效应机制不对应；若理论主张是选择性作用，则须解释未受影响机制为何 invariant，而非强行补齐
 - 三个原因中有一个仅基于常识而无文献支撑 → **反模式"常识谚语作为机制"**：用 folk wisdom（"don't fix something not broken"）替代理论文献。实证证据：shipilov_greve_rowley2019 (SMJ) 中基于 complacency 常识谚语论证的 H1b/H2b 在实证中被反转
 
 ---
@@ -1174,7 +1181,7 @@ H[B-]: [Prediction].
 - 四假设篇幅极度不均（某个单元格只有 3 行，另一个 15 行）→ 暗示该单元格是事后添加的
 - 第二行只重复第一行的机制而不提供独立的桥接逻辑（"同理可得" 无理论依据）→ 需要 "learning from others" / "spillover" / "contagion" 类桥接理论
 - 正负方向用同一常识谚语论证（"don't fix something not broken"）→ 常识不是理论，需特定理论机制支撑每方向
-- 四个假设无整体收束 → 不视为缺陷：管理学顶刊标准做法无独立 T6 全局收束段（最后一个假设推导完毕即进入 METHODS），收敛功能由各假设段落的局部收束（"Therefore, we hypothesize:"）承担；仅理论密集型 ASQ/ASR 论文例外，可有 2-3 句整合
+- 四个假设无整体收束 → 不视为缺陷：管理学顶刊标准做法无独立 T6 全局收束段（最后一个假设推导完毕即进入 METHODS），收敛功能由各假设段落的局部收束（"Therefore, we hypothesize:"）承担；仅理论密集型 ASQ/ASR 论文例外，可作最短必要整合
 
 ---
 

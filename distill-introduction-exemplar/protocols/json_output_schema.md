@@ -10,7 +10,7 @@
 
 ```json
 {
-  "$schema": "distill-introduction-exemplar-batch/v2.1",
+  "$schema": "distill-introduction-exemplar-batch/v2.2",
   "paper_id": "string",
   "phase_0_combo_profile": {
     "gap_type": "string",
@@ -104,6 +104,35 @@
       "rejected_skeletons": "number",
       "rejected_reasons": ["string"]
     }
+  },
+  "skill_design_feedback": {
+    "batch_id": "string",
+    "last_updated": "YYYY-MM-DD",
+    "observations": [
+      {
+        "defect_id": "string",
+        "classification": "corpus_gap / routing_defect / validator_defect / output_contract_defect / schema_defect / stage_gate_defect",
+        "current_rule": "string",
+        "rule_excerpt": "string",
+        "rule_locator": "string",
+        "target": "string",
+        "diagnosis": "string",
+        "absolute_rule": "boolean",
+        "decisive_falsifier": "boolean",
+        "risk": "low / medium / high",
+        "evidence": {
+          "papers": [
+            {"id": "string", "journal": "string", "evidence_anchor": "string", "evidence_quality": "full_text_verified / functional_summary / metadata_only"}
+          ]
+        },
+        "proposed_change": {"action": "string", "summary": "string"},
+        "regression_cases": {
+          "positive": {"prompt": "string", "expected_invariants": ["string"]},
+          "preservation": {"prompt": "string", "expected_invariants": ["string"]}
+        },
+        "resolution": null
+      }
+    ]
   },
   "phase_2_4_skeleton_critic": {
     "skeleton_id": "string",
@@ -201,4 +230,4 @@
 ```
 
 ---
-*基于 Pollock 2025 Ch05、Dorobantu et al. (2024)、Simsek & Li (2022) JTBD 框架、MVP30 范文语料库构建。版本 2.0.0 — Introduction 蒸馏 Meta-Skill。*
+*基于 Pollock 2025 Ch05、Dorobantu et al. (2024)、Simsek & Li (2022) JTBD 框架、MVP30 范文语料库构建。版本 2.2.0 — Introduction 蒸馏 Meta-Skill。*

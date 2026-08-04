@@ -336,3 +336,60 @@ H1. [Match/similarity] is positively associated with [outcome].
 - 配一张 Table 并列 4 个 cell 的 [integration focus / actor role / knowledge relevance / outcome implication]——可视化 typology 的论证结构
 
 **反模式**: 把 2×2 当成假设组织框架（产生 4 个假设）而非主效应推导装置——本模式的力量在于 4 条路径归纳出 1 个主效应，若每 cell 各出一个假设则退化为对称矩阵模式。
+
+<!--
+pattern_id: shared_orientation_divergent_outcomes_selective_remedy
+build_type: 机制推演型 + 假设树型 + 调节效应型
+source_papers: ["Kashmiri_Nicol_Arora_2017_JAMS"]
+confidence: low
+status: needs_validation
+-->
+
+## Pattern: Shared Orientation → Divergent Outcome Portfolio → Selective Remedy
+
+**适用场景**: 同一 actor trait 先塑造一种组织导向，该导向再关联多个战略结果；部分结果有益、部分有害，且一个内部治理力量只针对有害分支发挥缓冲作用。
+
+**结构**: Actor trait → organizational orientation（H1）→ parallel outcome branches（direct + mediated hypotheses）→ harmful branch only → direct countervailing moderation + mechanism-bearing indirect moderation。
+
+**范文来源**: Kashmiri, Nicol, and Arora (2017), *Journal of the Academy of Marketing Science*（CEO narcissism → competitive aggressiveness → innovation speed / novelty / product-harm crisis；marketing power → customer orientation → product-safety buffering）。
+
+**骨架**:
+```text
+[Common trunk]
+[Actor trait] channels attention, interpretation, and organizational control toward
+[organizational orientation]. Therefore, H1 predicts [trait → orientation].
+
+[Beneficial branch 1]
+The trait directly changes [risk/visibility calculus], while the orientation accelerates
+[process], jointly predicting [beneficial outcome 1]. State the direct and indirect
+predictions separately.
+
+[Beneficial branch 2]
+Rebuild the branch-specific why-chain for [beneficial outcome 2]. Do not assume that
+because the same orientation appears in branch 1, it automatically transmits this branch.
+
+[Harmful branch]
+The trait reallocates attention away from [less visible safeguard], and the orientation
+compresses [testing/deliberation time], increasing [harmful outcome].
+
+[Selective remedy]
+[Countervailing internal actor/resource] has both the motive and influence to protect
+[stake/asset harmed by the outcome]. It buffers the harmful branch directly and, where
+measured, strengthens [protective orientation] that carries part of the buffering process.
+```
+
+**为什么有效**:
+- 一个共同主干降低认知负荷，三个结果分支又各自保留 outcome-specific warrant，避免“同一中介万能化”。
+- 结果的正负效价形成 rising action：先交付战略收益，再揭示安全代价，最后给出可治理的选择性制衡。
+- Remedy 不是附加管理启示，而是从受损资产、内部角色动机与权力来源推演出的正式边界条件。
+
+**注意事项**:
+- 每个分支必须独立通过 why-chain audit；共享 antecedent 或 mediator 不等于共享全部机制。
+- 若某个间接效应不成立，Results 与 Discussion 必须保留失败分支，并缩窄“shared mechanism”措辞。
+- 调节段应分别解释强/弱治理条件；Kashmiri et al. 对高营销权力的论证较充分，对低权力条件的显式双边推演较弱，模仿时应补齐。
+- 不同测量尺度的结果可组成理论 portfolio，但除非联合模型真实估计 trade-off，否则不能声称净收益或净损失。
+
+**反模式**:
+- 为了假设编号对称，让同一中介机械地解释全部结果。
+- 没有角色动机与影响力来源，仅把任意部门权力写成“checks and balances”。
+- 将 safety controversy、product-harm crisis、recall occurrence、recall timing 和 recall strategy 混为同一构念。

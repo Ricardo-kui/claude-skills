@@ -20,7 +20,8 @@ source_papers:
   - qiao2026 (SMJ, 2026): "Fundamental question return — 'answering one fundamental question—why firms persistently differ (Rumelt, 1994)—through demonstrating that...'"
   - weng_yang (JMS): "Contrast-framed twofold — each contribution opens with 'In contrast with prior studies...', anchored in different literature streams, ends with broader implication"
   - wowak2025 (MS, 2025): "Convergent dual-literature-scan + awareness-and-mitigation — two parallel 'known→unknown' scans converge on one gap from opposite directions; implications split into descriptive awareness + empirically-tested mitigation"
-updated: 2026-07-25
+  - kashmiri_nicol_arora2017 (JAMS, 2017): "Humanize firm strategy + open the mechanism black box + install a controllable countervailing remedy"
+updated: 2026-08-03
 created: 2026-05-19
 source: Extracted from MVP30 narrative_analysis files + SKILL.md Makadok table
 ---
@@ -462,6 +463,29 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 - mitigation 必须是本文实证检验过的干预，不能只是推测性建议或"future research should…"——否则"awareness + mitigation"结构无法兑现
 - "awareness + mitigation"双价值结构要求论文确实存在可操作的干预变量（如 TMT 构成、治理结构）；纯描述性/相关性研究不适用
 - 不要把两个扫描写成两个独立贡献（twofold）——本变体的力量在于**一个缺口被两个文献流共同确认**，而非两个缺口
+
+---
+
+### 变体 P：去拟人化纠偏 → 机制黑箱 → 可控制衡（Kashmiri–Nicol–Arora 2017 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "First, we restore [powerful actor] to accounts that have treated [firm process] as largely actorless, showing that [actor attribute] is associated with [outcome portfolio]. Second, we open the mechanism black box by identifying [organizational orientation/process] as a partial pathway to both [productive branch] and [harmful branch], thereby revealing a previously neglected downside of that orientation. Third, we identify a controllable source of internal tension: [countervailing actor/resource] promotes [protective orientation] and attenuates [harmful relationship]."
+
+**来源**: Kashmiri, Nicol, and Arora (2017), *Journal of the Academy of Marketing Science*, Conceptual Framework.
+
+**关键特征**:
+- 三项贡献的动词承担不同 Makadok 功能：restore/humanize = Level/Phenomenon；open/identify pathway = Mechanism；identify countervailing force = Boundary/Output。
+- 第二项不只说“发现中介”，还重估中介本身：同一组织导向既能加速创新，也会增加安全风险。
+- 第三项从危害识别转向可治理的组织设计，回应董事会“可以做什么”。
+
+**适用**: 文献把组织过程写成无主体系统；论文引入高管属性，揭示兼具收益与风险的中介，并检验可控的内部缓解机制。
+
+**禁忌**:
+- 只有一个普通主效应时不要使用三层贡献；每层都必须由 Theory 与 Results 独立兑现。
+- “机制黑箱”不得仅靠回归系数命名；需要可追踪的 why-chain 与正式间接效应证据。
+- 可控缓解变量若只与结果相关、未检验交互或间接调节，不得升级为 remedy。
 
 ---
 

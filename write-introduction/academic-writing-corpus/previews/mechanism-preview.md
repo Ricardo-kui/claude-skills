@@ -3,7 +3,7 @@ type: canonical_reference
 canonical_id: "mechanism-preview"
 status: ✓ STANDARD
 gap_type: all
-cross_paper: VERIFIED
+cross_paper: ROBUST
 generativity: ADAPTABLE
 exclusivity: LOW
 source_papers:
@@ -17,7 +17,11 @@ source_papers:
   - 'bamberger_homburg_wielgos2021 (JM, 2021): Dual-gap mechanism/decomposition preview + study-role allocation'
   - 'lee_wu_bednar_orsc_18968 (Organization Science): Interview-grounded contingency mechanism + staggered DiD + communication corroboration'
   - 'reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science, 2026): Event activation mechanism + constructive-replication repair ladder'
-updated: 2026-08-02
+  - 'schumacher_keck_tang2020 (SMJ, 2020): Formal belief-updating model + two-sided response + survival-threshold reversal'
+  - 'ilicic_brennan2026 (JM, 2026): Full mechanism + multimethod evidence + personally directed intervention in a three-paragraph compressed Introduction'
+  - 'kashmiri_nicol_arora2017 (JAMS, 2017): Benefit-hazard outcome portfolio + shared organizational orientation + selective countervailing remedy'
+  - 'lee_park2024 (SMJ, 2024): Opposing joint prerequisites + accumulation-dependent bottleneck switch + rightward turning-point shift'
+updated: 2026-08-03
 created: 2026-05-18
 source: Extracted from MVP30 narrative_analysis files + grewal2025 + paruchuri_andrus_sullivan2026 + bamberger_homburg_wielgos2021 + lee_wu_bednar_orsc_18968 + reinwald et al. 2026
 ---
@@ -249,6 +253,100 @@ P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者
 - 自然发生的选举前后时点不是随机处理，不得把 Study 2 写成完整随机化的 2×2 实验。
 - 若直接交互效应跨研究不一致，Preview 应承诺“机制与时间模式检验”，不得承诺直接行为效应会在每项研究复制。
 - 替代机制测量只有在理论构念覆盖更完整时才算修复；简单换量表不构成设计升级。
+
+---
+
+### 变体 K：正式模型 → 双侧反馈预测 → 阈值反转（Schumacher–Keck–Tang 2020 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "We formalize how [biased belief] changes the updating of [expected state] after [negative versus positive feedback]. The model predicts weaker movement toward [risky response] after negative feedback and stronger movement toward [conservative response] after positive feedback. We then introduce [survival/constraint threshold] as a boundary: when expected performance approaches that threshold, attention shifts from [aspiration goal] to [survival goal], causing the conditional effect of [bias] to reverse. We test these predictions using [panel/archival setting]."
+
+**来源**: Schumacher, Keck, and Tang (2020), *Strategic Management Journal*, Introduction P2.
+
+**关键特征**:
+1. 不把“formal model”当作方法标签，而是翻译为三个读者可追踪的理论承诺：双侧反馈、目标切换、方向反转。
+2. 先交付 ordinary regime 的对称预测，再用阈值改变决策目标；反转不是无缘由的第三个 moderator。
+3. Preview 同时绑定 Theory 的模型结构、Methods 的边界操作化与 Results 的组间差异检验。
+
+**适用**: 信念更新、参考点或阈值驱动的决策模型；理论含两个信号方向，并在严重约束/危机状态下改变目标函数。
+
+**禁忌**:
+- 只有交互回归而无可审计模型推导时，不要宣称“formalize”。
+- 阈值边界必须改变决策目标或机制；只改变效应大小应使用普通 moderation preview。
+- Introduction 只预告可理解的模型结论；分布假设、参数和证明留在 Theory/Appendix。
+
+---
+
+### 变体 L：现象—机制—干预一段交付 + 证据角色列举（Ilicic–Brennan 2026 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "Across [large observational source], [field behavior source], and [number] online studies, we identify a consistent relationship between [predictor contrast] and [harmful response]. We argue that [predictor] is associated with [M1], which lowers [M2] and thereby produces [response]. When audiences receive [mechanism-targeting intervention], particularly in [high-self-relevance form], [M1] weakens, [M2] rises, and the harmful response attenuates."
+
+**来源**: Ilicic & Brennan (2026, *Journal of Marketing*), Introduction P2.
+
+**关键特征**:
+1. 先用数据源角色而非“Study 1–10”编号建立证据广度：代表性调查、现场行为、在线实验。
+2. 在同一段完整交付 `X → M1 → M2 → Y`，随后让干预直接作用于 M1，而非突然附加一个管理启示。
+3. 边界条件被写成可操作的 intervention intensifier：一般威胁先削弱机制，个人指向语言再提高自我关联。
+4. 适合 JM/JMR 的三段压缩引言：P1 stakes+gap，P2 answer+evidence+intervention，P3 contribution+actionability。
+
+**诚实边界**:
+- “consistent relationship”可概括跨设计收敛，但只有随机操纵的研究可承担相应因果主张；观察性大样本与现场评分主要贡献外部效度。
+- 若补充研究或附录不可见，不应在蒸馏报告中独立确认其程序与结果，只能注明作者报告的角色。
+- 机制、边界与干预全部提前交付会降低 suspense；若目标期刊偏好逐步揭示，应拆成 mechanism preview 与 findings preview 两段。
+
+---
+
+### 变体 M：收益—伤害结果组合 → 共享导向 → 选择性制衡（Kashmiri–Nicol–Arora 2017 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "We examine how [actor trait] shapes a portfolio of [strategic outcomes]: it is associated with [beneficial outcome 1] and [beneficial outcome 2], yet also with [harmful outcome]. We propose that [organizational orientation] transmits part of the relationship to [supported branches]. Finally, [controllable internal actor/resource] strengthens [protective orientation] and selectively attenuates the harmful branch without requiring the beneficial branches to disappear."
+
+**来源**: Kashmiri, Nicol, and Arora (2017), *Journal of the Academy of Marketing Science*, Introduction and Conceptual Framework.
+
+**关键特征**:
+1. 把多个 DV 组织成一个可记忆的 outcome portfolio：速度、创新性与安全性不是结果清单，而是“生产性收益—损害性风险”的张力。
+2. 共享中介只承诺解释实际获得理论与经验支持的分支；不为对称美感宣称所有分支都被同一机制解释。
+3. 调节变量被写成可治理的 countervailing force，只修复有害路径，形成“保留收益、降低伤害”的管理承诺。
+4. Preview 同时为 Results 的分支式证据账本设定预期：主效应、中介与缓解机制需要逐结果兑现。
+
+**适用**: 同一高管特质、战略导向或组织能力同时关联正负结果；治理变量可选择性抑制安全、伦理或声誉风险；JAMS/JM/JOM/SMJ 的 archival panel 研究。
+
+**禁忌**:
+- 不要把不同量纲的 DV 合成未经估计的“净效应”；只能称结果组合或 trade-off agenda。
+- 若中介对某分支不成立，Introduction 与 Discussion 都必须保留该不支持结果。
+- “保留收益”必须有设计支持；仅检验 moderator 对 harmful outcome 时，应写“selectively attenuates the harmful branch”，不要声称收益不受影响。
+- 产品伤害危机不是召回时机、召回主动性或召回严重度的替代测量。
+
+---
+
+### 变体 N：共同必要条件反向变化 → 短板切换 → 拐点右移（Lee–Park 2024 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "We argue that [outcome] requires sufficient levels of both [prerequisite A] and [prerequisite B]. As [cumulative X] rises, [A] increases because [enabling process], while [B] declines because [inhibiting process]. [Outcome] is therefore low when A is scarce, peaks while both remain sufficient, and falls once B becomes the binding constraint. We further propose that [W] preserves B without materially changing A, delaying the point at which the declining prerequisite becomes limiting and shifting the turning point to a higher level of X."
+
+**来源**: Lee and Park (2024), *Strategic Management Journal*, Introduction P5–P6.
+
+**关键特征**:
+1. 不是把正负机制相加，而是先声明结果由两个共同必要条件联合生产。
+2. 用 `scarce A → joint sufficiency → scarce B` 三状态压缩整条倒 U why-chain。
+3. moderator 只作用于下降中的 prerequisite，因此预告的是 turning-point location，而非含糊的“关系更强/更弱”。
+4. 方法与发现预览直接报告拐点差异，使 Introduction、Theory、Methods 和 Results 共享同一 estimand。
+
+**适用**: 两个共同必要条件随累计 X 反向变化，且 W 有机制依据只维持其中一个条件；理论与设计能够直接比较拐点或阈值。
+
+**禁忌**:
+- 若 A 与 B 只是可替代的净收益/净成本，不要使用“共同必要”措辞。
+- 若 W 同时改变曲线两侧或只改变垂直高度，应使用 flatten/steepen 或 level-shift 预览。
+- 不能由显著/不显著的分组结果推断拐点移动；必须直接估计并比较 turning point。
 
 ---
 

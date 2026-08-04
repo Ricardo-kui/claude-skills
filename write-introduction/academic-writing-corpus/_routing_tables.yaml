@@ -10,7 +10,7 @@ gap_types:
     energy: low
     core_logic: "已有进展，但遗漏了某个维度/机制/时点"
     attitude: "你们做得好，但漏了一块"
-    conversation_strategy: "Progressive Coherence"
+    conversation_hint_only: "Progressive Coherence"
     paragraph_structure: "紧凑型: Hook+Lit → Gap+Stakes → Theory → Preview+Findings → Contribution"
     paragraph_count: 5
     exemplar: "eilert2017 (JM)"
@@ -18,7 +18,7 @@ gap_types:
     energy: medium
     core_logic: "现有视角抓住了现象，但误置了构念/层次/边界"
     attitude: "你们看到了现象，但理解偏了"
-    conversation_strategy: "Synthesized Coherence"
+    conversation_hint_only: "Synthesized Coherence"
     paragraph_structure: "标准型: Hook → Lit → Gap → Stakes/Theory → Preview → Contribution"
     paragraph_count: "6-7"
     exemplar: "gamache2020 (SMJ)"
@@ -26,7 +26,7 @@ gap_types:
     energy: high
     core_logic: "不同理论/证据推出不兼容解释，需要新框架"
     attitude: "你们说得都对，但互相矛盾"
-    conversation_strategy: "Non-Coherence"
+    conversation_hint_only: "Non-Coherence"
     paragraph_structure: "扩展型: Hook → Lit → Gap → Stakes → Theory → Preview → Findings → Contribution"
     paragraph_count: "8-9"
     exemplar: "zhou2017 (ASQ)"
@@ -133,16 +133,19 @@ hooks:
       note: "用数据建立新现象域，或用极端案例叙事建立现象存在性"
 
 # §3 — Conversation strategies
+# Independent axis: select from the literature's actual state and the author's
+# construction purpose. The gap-type entries above are hints from common diagonal
+# combinations, never routing rules. Do not infer gap_type from conversation or vice versa.
 conversation_strategies:
-  Incompleteness:
-    strategy: "Progressive Coherence"
+  Progressive_Coherence:
     core_logic: "承认已有进展，逐步聚焦到缺口"
-  Inadequacy:
-    strategy: "Synthesized Coherence"
+    select_when: "一个文献流形成累积进展，本文沿其轨迹推进或指出下一步"
+  Synthesized_Coherence:
     core_logic: "连接多个文献流，展示共同盲区"
-  Incommensurability:
-    strategy: "Non-Coherence"
+    select_when: "两个或以上文献流可围绕共同机制、构念或问题重新组织"
+  Non_Coherence:
     core_logic: "呈现两个理论的不兼容预测"
+    select_when: "真实文献存在可核查的冲突命题、预测或证据，且本文将处理该冲突"
 
 # §4 — Tension selector
 tensions:
@@ -206,46 +209,80 @@ tensions:
       registry_status: "EMERGING (0p — 模板占位，待范文入库)"
       exclusivity: "Incommensurability 专用"
 
-# Incommensurability resolution strategies
-# Incommensurability Introductions need to HINT at the resolution, not just identify the paradox.
-# These three strategies map to preferred Introduction architectures and Theory Lens patterns.
+# Incommensurability resolution routes
+# Diagnose where the conflict sits before matching a contribution lever.
+# See references/incommensurability-introduction-routing.md for paragraph-level use.
 incommensurability_resolution:
-  facet_decomposition:
-    description: "Two competing logics are reframed as different facets of the same phenomenon"
-    intro_structure: "Hook (paradox) → Lit (two theories) → Gap (mixed evidence) → Theory Lens (facet naming) → Preview → Contribution"
-    theory_lens_pattern: "We theorize that [logic A] and [logic B] pertain to different facets of [phenomenon]: [facet A] and [facet B], so they are intertwined in explaining [outcome]."
-    exemplar: "zhou2017 (ASQ): institutional logic → resource allocation, efficiency logic → resource utilization"
-    requires: "Clear conceptual distinction between facets; each facet must map to one side of the paradox"
-    variant_in_corpus: "04-reality-contradicts-consensus 变体 A"
-  audience_heterogeneity:
-    description: "The paradox resolves when you consider that different audiences evaluate differently"
-    intro_structure: "Hook (consensus→anomaly) → Lit (market-takers known, market-makers unknown) → Gap → Theory Lens (audience typology) → Preview → Contribution"
-    theory_lens_pattern: "There are at least two roles for audiences: [audience A], who [evaluation logic A], and [audience B], who [evaluation logic B]. Previous literature has only investigated [audience A]."
-    exemplar: "pontikes2012 (ASQ): market-takers (consumers) devalue ambiguity, market-makers (VCs) prefer it"
-    requires: "Two audiences with genuinely different evaluation criteria; empirical access to both audiences"
-    variant_in_corpus: "04-reality-contradicts-consensus 变体 E"
-  contingency_revelation:
-    description: "The paradox exists because prior work ignored a key boundary condition"
-    intro_structure: "Hook (paradox) → Lit → Gap (contradictory findings) → Stakes → Theory Lens (moderator) → Preview → Contribution"
-    theory_lens_pattern: "We propose that [relationship] depends on [moderator], which determines whether [mechanism A] or [mechanism B] dominates."
-    exemplar: "gamache2023 (SMJ): female CEO risk aversion → depends on board composition and acquisition context"
-    requires: "Genuine moderator with theoretical basis; empirical variation in moderator"
-    variant_in_corpus: "04-reality-contradicts-consensus 变体 B"
-
-  # Auto-match resolution strategy from Gap×Contribution combo
-  combo_to_resolution:
-    "Incommensurability × Constructs":
-      strategy: "audience_heterogeneity"
-      rationale: "Constructs 贡献的 Incommensurability 通常通过区分不同受众/评估者的视角来实现——新构念不是组织的属性而是受众的角色"
-      exemplar: "pontikes2012 (ASQ): market-taker vs market-maker"
-    "Incommensurability × Mechanism":
-      strategy: "facet_decomposition"
-      rationale: "Mechanism 贡献的 Incommensurability 通常通过将对立逻辑重构为同一现象的不同面向（facet）来实现"
-      exemplar: "zhou2017 (ASQ): institutional logic→resource allocation, efficiency logic→resource utilization"
-    "Incommensurability × Boundary":
-      strategy: "contingency_revelation"
-      rationale: "Boundary 贡献的 Incommensurability 通常通过识别被忽略的边界条件——矛盾在什么条件下向哪方倾斜"
-      exemplar: "gamache2023 (SMJ): female CEO risk aversion depends on board composition"
+  evidence_status: "USER-DERIVED working taxonomy; revise only with full-text counterexamples or recurring hybrid evidence"
+  local_evidence_calibration_2026_08_04:
+    R1: "EMERGING strict-core evidence — Vidal and Mitchell (2015)"
+    R2: "EMERGING secondary evidence — Pontikes (2012), Vidal and Mitchell (2015), and Bendig, Hensellek and Schulte (2024), subordinate to their respective R4, R1, and R3 primary resolutions"
+    R3: "EMERGING strict-core evidence — Zhou et al. (2017), Bendig, Hensellek and Schulte (2024), and Anderson and Reeb (2004)"
+    R4: "EMERGING strict-core evidence — Pontikes (2012), with Anderson and Reeb (2004) as R3-primary/R4-secondary evidence"
+    excluded_as_strict_core: "Keeves et al. (2017) and Park et al. (2025) fail the authenticity gate; Kundro and Rothbard (2023) remains an Inadequacy × Boundary case with only uncertain Incommensurability candidacy"
+  use_rule: "R1-R4 select required persuasive functions and corpus candidates; they do not prescribe fixed module order, paragraph count, Hook, or wording"
+  stable_kernel:
+    - "Build the strongest prior accounts fairly"
+    - "Identify the exact incompatibility and its theoretical consequence"
+    - "Locate the conflict and name the resolution operator"
+    - "Preview an adjudicating prediction while preserving what remains valid in prior theory"
+  authenticity_gate:
+    comparability: "At the conversation gate, studies share a theoretical object, umbrella construct, or defensible higher-order X/Y family; identical concrete indicators are not required"
+    comparability_stages:
+      conversation_level: "Map every lower-order X/Y member to the shared object or family and show that the rival claims answer the same theoretical question"
+      R1_R2_member_discipline: "Different concrete X or Y members are permitted because differentiation is the resolution; define members ex ante and keep the unaffected comparison frame stable"
+      R3_R4_formal_lock: "Before formal hypothesis derivation, fix concrete X, Y, unit/level, time horizon, scope, and estimand; vary only mechanism dominance or W state"
+      failure_condition: "A shared topic label, vague omnibus outcome category, or measurement/sample/design difference without a theoretical family does not establish comparability"
+    directional_conflict: "Theories or findings imply incompatible directions; significant vs nonsignificant is insufficient"
+    theoretical_consequence: "Resolution changes an explanation, prediction, or boundary"
+    real_world_referent: "The disagreement matters for an observable phenomenon or decision"
+  route_selection:
+    priority_rule: "Locate hidden aggregation/conflict first; use Makadok dimension only as a compatibility check"
+    max_routes: "One primary route plus at most one secondary route"
+    R1_x_side_differentiation:
+      description: "Prior work pools theoretically distinct types, dimensions, or facets of X"
+      intro_structure: "Hook (consequential conflict) → Lit (unitary X assumption) → Gap (hidden X heterogeneity) → Theory Lens (X1/X2) → Preview → Contribution"
+      theory_lens_pattern: "We distinguish [X1] from [X2] and argue that each activates a different process toward [Y]."
+      contribution_compatibility: ["Constructs", "Mechanism"]
+      requires: "Ex ante conceptual basis for X types; not alternative proxies or a post-hoc split"
+      sequence_status: "illustrative_not_mandatory"
+    R2_y_side_disaggregation:
+      description: "Prior work pools theoretically distinct outcomes, audiences, functions, levels, or horizons as Y"
+      intro_structure: "Hook (same X, divergent consequences) → Lit (omnibus Y claim) → Gap (hidden outcome heterogeneity) → Theory Lens (Y1/Y2) → Preview → Contribution"
+      theory_lens_pattern: "We disaggregate [Y] into [Y1] and [Y2] and explain why [X] has different consequences for each."
+      contribution_compatibility: ["Output", "Constructs", "Mechanism"]
+      requires: "Y1/Y2 are distinct members of a defensible higher-order outcome family"
+      sequence_status: "illustrative_not_mandatory"
+    R3_opposing_mechanisms:
+      description: "The same X activates countervailing mechanisms toward the same Y"
+      intro_structure: "Hook (opposite predictions) → Lit (strong forms of both accounts) → Gap (no combination rule) → Theory Lens (mechanism dominance) → Preview → Contribution"
+      theory_lens_pattern: "We identify [mechanism A] and [mechanism B] and theorize how their relative strength produces [adjudicating pattern]."
+      contribution_compatibility: ["Mechanism", "Mode", "Question"]
+      requires: "Symmetric why-chains plus a combination rule; opposite mechanisms alone do not justify U/倒U"
+      nonlinear_guardrail: "Use U/倒U only when relative mechanism strength changes systematically along X and a turning-point prediction follows"
+      sequence_status: "illustrative_not_mandatory"
+    R4_contextual_contingency:
+      description: "A theoretically prior W changes which mechanism or prediction dominates"
+      intro_structure: "Hook (conditional conflict) → Lit (rival accounts) → Gap (different hidden W states) → Theory Lens (moderator) → Preview → Contribution"
+      theory_lens_pattern: "We argue that [W] changes [specific mechanism], such that [X] produces [prediction A] under [W1] but [prediction B] under [W2]."
+      contribution_compatibility: ["Boundary", "Mechanism"]
+      requires: "W explains a real directional conflict or another deductively incompatible state, and both conditional states are derived and directly compared"
+      classification_guardrail: "Same-sign magnitude moderation is normally Inadequacy × Boundary. Effect-versus-null qualifies only when the null is theory-derived and the conditional difference is tested directly; significant versus nonsignificant subgroups are insufficient."
+      sequence_status: "illustrative_not_mandatory"
+  abstraction_policy:
+    L0_invariant: "Cross-route narrative kernel; core-rule candidate only after cross-paper validation"
+    L1_route: "R1-R4 retrieval and reasoning family"
+    L2_tactic: "Optional evidence-tagged variant; new subtype requires a distinct persuasive action"
+    L3_signature: "Paper-specific case, metaphor, exact sequence, or wording; exemplar-only"
+    unclassified_allowed: true
+  combination_rules:
+    - "R3 + R4 when opposing mechanisms explain why W reverses the net effect"
+    - "R1 + R2 only for a theoretically sparse X-type × Y-type matrix"
+    - "R2 + R4 when outcome disaggregation is primary and context explains one branch"
+  legacy_pattern_map:
+    facet_decomposition: "Classify as R1, R2, or R3 based on whether the facets belong to X, Y, or the causal process"
+    audience_heterogeneity: "Classify as R2 when outcomes are audience-specific; classify as R4 when audience type is W"
+    contingency_revelation: "R4"
 
 # Tension wording intensity
 tension_wording_intensity:
@@ -420,9 +457,9 @@ exemplar_anchoring:
   "Inadequacy × Boundary": { exemplar: "Han 2020", journal: "AMP" }
   "Inadequacy × Phenomenon": { exemplar: "DesJardine 2023, Weng & Yang (JMS)", journal: "AMJ, JMS" }
   "Incommensurability × Constructs": { exemplar: "Pontikes 2012", journal: "ASQ" }
-  "Incommensurability × Mechanism": { exemplar: "Zhou 2017", journal: "ASQ" }
-  "Incommensurability × Boundary": { exemplar: "Park 2025", journal: "OS" }
-  "Incommensurability × Level": { exemplar: "Keeves 2017", journal: "AMJ" }
+  "Incommensurability × Mechanism": { exemplar: "Zhou 2017; Bendig, Hensellek & Schulte 2024; Anderson & Reeb 2004", journal: "ASQ; ETP" }
+  "Incommensurability × Boundary": { exemplar: "NO_STRICT_LOCAL_EXEMPLAR", journal: "—", note: "Park 2025 is classified as Inadequacy × Mode/Boundary" }
+  "Incommensurability × Level": { exemplar: "NO_STRICT_LOCAL_EXEMPLAR", journal: "—", note: "Keeves 2017 is classified as Inadequacy × Level/Mechanism" }
 
 # Template health check thresholds
 # Only CAUTION is actionable — HEALTHY and INSUFFICIENT_DATA are handled silently.
@@ -458,13 +495,13 @@ evidence_confidence:
 transitions:
   universal:
     - canonical_id: "01-hook-to-literature"
-      position: "P1(Hook) → P2(Literature Turn)"
+      position: "Hook 功能 → Literature Turn 功能"
       trigger: "当 Introduction 有独立的 Literature Turn 段时读取"
     - canonical_id: "10-literature-to-gap"
-      position: "P2(Literature Turn) → P3(Gap)"
+      position: "Literature Turn 功能 → Tension 功能"
       trigger: "当 Literature Turn 和 Gap 为独立段落时读取"
     - canonical_id: "gap-to-contribution"
-      position: "P6(Preview) → P7-P8(Contribution)"
+      position: "Preview 功能 → Contribution 功能"
       trigger: "当 Contribution 为独立段时读取（期刊为 ASQ/AMJ/ASR 时；JOM/MS/POM 可跳过）"
     - canonical_id: "11-roadmap"
       position: "Introduction 结尾"

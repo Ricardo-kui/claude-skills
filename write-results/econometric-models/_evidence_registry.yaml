@@ -5,10 +5,10 @@
 meta:
   schema_version: 1.0.0
   registry_type: estimator-slot-skeleton
-  last_updated: '2026-08-02'
-  last_batch_id: batch_19_reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc
-  batches_processed: 20
-  total_papers_indexed: 21
+  last_updated: '2026-08-04'
+  last_batch_id: batch_26_lee_park_2024_smj
+  batches_processed: 26
+  total_papers_indexed: 27
   subfields:
   - strategy
   - ob_hr
@@ -22,7 +22,8 @@ status_rules:
     description: 单篇或两篇论文中出现，尚未形成稳定模式
   VERIFIED:
     paper_count_min: 3
-    description: 至少3篇论文复现，可作为可靠备选
+    expert_audit_override: true
+    description: 至少3篇论文复现，或经用户专家审计确认为典型范文；可作为可靠备选，并须记录 verification_basis
   ROBUST:
     paper_count_min: 5
     cross_subfields_min: 2
@@ -94,6 +95,19 @@ global_anti_patterns:
   - OLS_FE
   - Logit_Probit_Ordered_Probit
   note: 控制变量的增删必须有理论依据（DAG/prior studies），不能仅基于"significant in one specification, dropped in another"。Yuan et al. 2026 JOM REC B3.3。
+- id: ap_significance_rescue_control_deletion
+  pattern: 焦点系数仅边际显著后，删除当期不显著控制变量并将 p<.05 宣称为更强假设支持
+  severity: high
+  affected_slots:
+  - R3
+  - R7
+  affected_estimators:
+  - OLS_FE
+  - Logit_Probit_Ordered_Probit
+  note: 控制集须由理论、设计或预先规则决定；替代控制集只能作为透明敏感性分析，不得升级完整规格的假设判定。
+  source_count: 1
+  sources:
+  - Kashmiri_Nicol_Arora_2017_JAMS
 global_honesty_boundaries:
 - id: hb_causal_language_ols
   boundary: OLS/FE 论文不得使用 'effect of' / 'causes' / 'leads to'
@@ -354,6 +368,22 @@ estimators:
           - percentile_marginal_effect_trajectory
           - shape_verbalization
           corpus_path: econometric-models/OLS-FE.md
+        - id: r4_ols_threshold_group_coefficient_difference
+          skeleton: Within the [boundary-present] subsample, the focal interaction changes to the predicted direction but is estimated imprecisely. This result alone does not establish a reversal. We therefore directly test whether the interaction coefficient differs across boundary groups; rejection of coefficient equality supports heterogeneity while leaving the within-boundary slope uncertain.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Schumacher_Keck_Tang_2020_SMJ
+          transferability: high
+          paradigm_exclusivity: split-sample OLS/FE interaction with theory-based external threshold
+          rhythm_tags:
+          - within_group_imprecision
+          - direct_coefficient_difference
+          - boundary_heterogeneity
+          - honest_reversal_language
+          corpus_path: econometric-models/OLS-FE.md
       R5:
         description: 经济 / 实质显著性
         skeleton_variants:
@@ -503,6 +533,39 @@ estimators:
           - indirect_as_pct_of_total
           - instrumented_mediator
           corpus_path: econometric-models/OLS-FE.md
+        - id: r8_ols_construct_validity_directed_triangulation
+          skeleton: We evaluate three rival interpretations of [latent trait] through a nomological opposite-pattern test, a same-actor cross-context stability test, and a short-horizon temporal-stability test. Convergence strengthens the proposed interpretation but does not uniquely identify the latent construct.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Schumacher_Keck_Tang_2020_SMJ
+          transferability: medium
+          paradigm_exclusivity: archival latent-trait proxies in executive/actor panel studies
+          rhythm_tags:
+          - rival_interpretation
+          - nomological_contrast
+          - cross_context_stability
+          - temporal_stability
+          corpus_path: econometric-models/OLS-FE.md
+        - id: r8_shared_mediator_outcome_branch_ledger
+          skeleton: Report the shared a-path once, then audit each outcome branch separately with its direct relationship, estimated indirect effect and confidence interval, and hypothesis verdict. Preserve unsupported branches and narrow the mechanism claim to the outcomes for which the interval excludes zero.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Kashmiri_Nicol_Arora_2017_JAMS
+          transferability: high
+          paradigm_exclusivity: Cross-estimator multi-outcome mediation; outcomes may be count, fractional, binary, or continuous
+          rhythm_tags:
+          - shared_a_path
+          - branch_specific_indirect_effect
+          - unsupported_path_preserved
+          - mechanism_scope_narrowing
+          notes: "Direct support for an outcome does not rescue a failed mediation hypothesis. Prefer indirect-effect intervals to legacy Baron-Kenny condition counting."
+          corpus_path: econometric-models/SEM-moderated-mediation.md
       R9:
         description: Results→Discussion 过渡
         skeleton_variants: []
@@ -581,6 +644,28 @@ estimators:
           corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
       R3:
         skeleton_variants:
+        - id: r3_binary_gee_curvilinear_formal_utest_chain
+          skeleton: >-
+            [Hypothesis restatement for U/inverted-U in a binary outcome]. [Quadratic term sign and significance as first evidence]. [Formal U-test: significant slope at lower bound and significant opposite slope at upper bound]. [Turning point and Fieller/bootstrap confidence interval within observed support]. [Predicted-probability figure]. [Support judgment].
+          skeleton_level: paragraph
+          paper_count: 2
+          status: VERIFIED
+          verification_basis: user_expert_audit
+          subfield_distribution:
+            entrepreneurship_strategy: 1
+          sources:
+          - Bendig_Hensellek_Schulte_2024_ETP
+          - Lee_Park_2024_SMJ
+          transferability: high
+          paradigm_exclusivity: "Binary or fractional logit-link curvilinear relationships; do not interpret link-scale coefficients as response-scale changes"
+          rhythm_tags:
+          - curve_shape
+          - endpoint_slopes
+          - turning_point_ci
+          - predicted_probability
+          - support
+          notes: "Verified across Bendig 2024 and the user-audited Lee & Park 2024 exemplar. A quadratic coefficient alone is insufficient; curve shape is established by joint restrictions and then displayed on the probability/response scale."
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r3_logit_four_beat
           skeleton: Hypothesis [x] predicted... Model [y] shows that the coefficient for [predictor] is [positive/negative]
             and statistically significant (β = [value], p < [threshold]). Because logit coefficients are not directly interpretable,
@@ -716,6 +801,25 @@ estimators:
           corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
       R5:
         skeleton_variants:
+        - id: r5_probability_cost_activity_value_benchmark
+          skeleton: >-
+            [Predicted probability change between theoretically meaningful X values]. [Multiply the probability difference by a transparent external average event-cost benchmark]. [Compare implied expected-risk magnitude with the average value of one focal activity/deal]. [Explicit caveat that this illustrates scale rather than realized firm-specific loss].
+          skeleton_level: paragraph
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            entrepreneurship_strategy: 1
+          sources:
+          - Bendig_Hensellek_Schulte_2024_ETP
+          transferability: medium
+          paradigm_exclusivity: "Probability outcomes with defensible external cost and activity-value benchmarks"
+          rhythm_tags:
+          - predicted_probability
+          - economic_significance
+          - cost_benchmark
+          - caveat
+          notes: "Expected cost is a magnitude illustration, not an observed causal loss; source and assumptions must be disclosed."
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r5_robustness_gee_heckman_endogeneity
           skeleton: '[Robustness section opens by stating the limitation of the primary test (lack of controls for CAR size)
             and introduces GEE regression as a supplemental check]. [Explicit caveat that the regression does not directly
@@ -739,6 +843,27 @@ estimators:
           corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
       R7:
         skeleton_variants:
+        - id: r7_curvilinear_six_threat_robustness_ladder
+          skeleton: >-
+            [Map each check to a threat: alternative lags/windows for timing; count DV for binary information loss; alternative panel estimator for estimator dependence; value proxy for focal-variable measurement; expanded regulator/industry sample for setting dependence; IV/control-function model for omitted-variable endogeneity]. [Summarize directional stability]. [Disclose any p-value weakening rather than claiming full invariance].
+          skeleton_level: section
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            entrepreneurship_strategy: 1
+          sources:
+          - Bendig_Hensellek_Schulte_2024_ETP
+          transferability: high
+          paradigm_exclusivity: "Curvilinear panel models; instrument diagnostics still required"
+          rhythm_tags:
+          - threat_method_result
+          - timing
+          - measurement
+          - estimator
+          - sample_boundary
+          - endogeneity
+          notes: "Untabulated IV results cannot carry decisive identification; significance attenuation must remain visible."
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r7_threat_based_iv_heckman
           skeleton: '[Threat positioning]. [Method description with instrument rationale]. [First-stage / test results]. [Second-stage
             / consistency statement]. [Conclusion reducing threat concern].'
@@ -844,6 +969,48 @@ estimators:
       R4:
         description: ''
         skeleton_variants:
+        - id: r4_curvilinear_moderation_geometric_probability_translation
+          skeleton: >-
+            [Report interaction between W and the squared X term]. [Navigate to predicted-probability figure]. [State whether high W shifts the curve, changes steepness, or moves the turning point]. [Give vertices/meaningful probability levels under high and low W]. [Translate the geometric change into the altered mechanism or risk interpretation]. [Support judgment].
+          skeleton_level: paragraph
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            entrepreneurship_strategy: 1
+          sources:
+          - Bendig_Hensellek_Schulte_2024_ETP
+          transferability: high
+          paradigm_exclusivity: "Moderated U/inverted-U in binary probability models"
+          rhythm_tags:
+          - quadratic_interaction
+          - curve_geometry
+          - predicted_probability
+          - mechanism_interpretation
+          - support
+          notes: "Do not reduce curve moderation to a significant squared interaction; state exactly what changes geometrically."
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
+        - id: r4_curvilinear_moderation_turning_point_shift_wald
+          skeleton: >-
+            [Restate the predicted turning-point displacement]. [Treat X-by-W and X-squared-by-W coefficients as ingredients rather than the conclusion]. [Report the two condition-specific turning points and intervals]. [Report their difference and a direct Wald/delta/bootstrap test]. [Confirm both points lie in data-supported regions]. [Plot conditional predictions on a named scale]. [Issue a calibrated support judgment].
+          skeleton_level: paragraph
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: user_expert_audit
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Lee_Park_2024_SMJ
+          transferability: high
+          paradigm_exclusivity: "Moderated U/inverted-U hypotheses that specifically predict turning-point location"
+          rhythm_tags:
+          - hypothesis_geometry
+          - conditional_vertices
+          - direct_difference_test
+          - observed_support
+          - scale_label
+          - calibrated_support
+          notes: "Lee & Park 2024 is user-audited as a canonical turning-point-location writing exemplar. Do not infer a vertex shift from separate interaction p values. Report attenuation in the full model rather than collapsing marginal and conventional significance into 'all supported'."
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r4_subgroup_mean_comparison_ttest
           skeleton: '[Results organized by subgroup category (high reputation / celebrity / none) with mean CARs, pairwise
             differences, and significance from paired t-tests of unequal variances]. [Directional predictions tested by comparing
@@ -963,6 +1130,29 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
+      R8:
+        description: Mechanism-discriminating supplemental evidence
+        skeleton_variants:
+        - id: r8_curvilinear_mechanism_discriminator_selective_path
+          skeleton: >-
+            [Name the mechanisms assigned to the rising and declining portions]. [Introduce a comparison exposure expected to activate one mechanism without the other]. [Report the predicted linear pattern and null/nonmatching quadratic pattern]. [State that the contrast is consistent with mechanism separation]. [Explicitly deny mediation or causal-process identification when mechanisms are not directly measured].
+          skeleton_level: paragraph
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Lee_Park_2024_SMJ
+          transferability: medium
+          paradigm_exclusivity: "Curvilinear theories with separable mechanisms and a defensible selective-path comparison exposure"
+          rhythm_tags:
+          - mechanism_assignment
+          - selective_path
+          - contrast_pattern
+          - corroboration
+          - causal_boundary
+          notes: "Qualitative agreement and a null squared term are corroborative, not mediation evidence."
           corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
     cross_slot_patterns:
     - id: csp_Logit_Probit_Ordered_Probit_R2_9f484872
@@ -2669,6 +2859,22 @@ estimators:
           rhythm_tags: []
           notes: ''
           corpus_path: econometric-models/IV-2SLS.md
+        - id: r7_iv_robustness_exception_ledger
+          skeleton: We assess sensitivity to [alternative measurement], [alternative instrument families], [alternative classification], and [additional omitted-information control]. The headline conclusions for [core hypotheses] remain consistent. Two qualifications are important. First, [mediation inference] changes from [partial] to [complete/stronger] because [direct path changes]. Second, [weakly supported moderator] becomes nonsignificant under [alternative specification]. We therefore treat [headline effect] as robust, the exact form of [mediation] as specification-sensitive, and [moderator hypothesis] as weaker evidence.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Moon_Tuli_Mukherjee_2023_JM
+          transferability: high
+          paradigm_exclusivity: IV/2SLS + mediation/moderation
+          rhythm_tags:
+          - robustness_exception_ledger
+          - mediation_form_sensitivity
+          - fragile_boundary
+          notes: "Do not collapse partial-to-complete mediation into 'stronger'; downgrade weak moderator when a reasonable specification yields null."
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r7_sentence_robustness_confirmation
           skeleton: We [still/find] [robust/significant] [effect] ([coefficient], p < [threshold], Column [Y], [Table X]).
           skeleton_level: sentence
@@ -3374,10 +3580,49 @@ estimators:
           - bounded_claim
           notes: "Indirect effects may be estimable without a significant direct interaction, but they do not rescue the direct-effect hypothesis."
           corpus_path: econometric-models/SEM-moderated-mediation.md
+      R4:
+        skeleton_variants:
+        - id: r4_experiment_three_condition_intervention_decomposition
+          skeleton: >
+            Report the omnibus [group × three-level intervention] interaction, then decompose it with prespecified contrasts in this order: group differences within each condition, intervention contrasts within the focal group, and the same contrasts within the comparison group. Conclude with the bounded claim about which group changed and where the baseline difference narrowed.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Ilicic_Brennan_2026_JM
+          transferability: high
+          paradigm_exclusivity: 三水平随机干预 × 连续或二元组别变量
+          rhythm_tags:
+          - omnibus_interaction
+          - between_group_contrasts
+          - within_group_contrasts
+          - stable_comparison_group
+          - bounded_claim
+          notes: "A significant-vs-nonsignificant contrast is not a difference test; use the interaction or direct contrasts. A three-level treatment is not automatically a three-way interaction."
+          corpus_path: econometric-models/实验.md
       R7:
         skeleton_variants: []
-      R2:
-        skeleton_variants: []
+      R8:
+        skeleton_variants:
+        - id: r8_serial_mediation_competing_order_sensitivity
+          skeleton: >
+            Report the proposed serial indirect effect and its bootstrap CI, then estimate the reversed mediator sequence as a competing-order sensitivity check. If the competing CI includes zero, state that no clear evidence was detected for that sequence; do not claim that causal or temporal order has been established.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Ilicic_Brennan_2026_JM
+          transferability: high
+          paradigm_exclusivity: measured serial mediation / PROCESS Model 6
+          rhythm_tags:
+          - serial_indirect_effect
+          - competing_order
+          - bootstrap_ci
+          - causal_boundary
+          notes: "Significant versus nonsignificant indirect paths need not differ. Cross-sectional path ordering, especially when Y is measured before the mediators, cannot establish causal sequence."
+          corpus_path: econometric-models/SEM-moderated-mediation.md
     cross_slot_patterns: []
     anti_patterns: []
     honesty_boundaries: []
@@ -3479,6 +3724,24 @@ estimators:
           - mixed_direct_effect
           - replicated_mechanism
           - duration_boundary
+          corpus_path: econometric-models/多研究.md
+        - id: r9_multistudy_limitation_repair_relay
+          skeleton: >
+            Close Study [N] by stating its bounded contribution, naming one concrete design limitation, and specifying how Study [N+1] changes the design to repair that limitation. At the start of Study [N+1], confirm the repair before adding the next theoretical task.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Ilicic_Brennan_2026_JM
+          transferability: high
+          paradigm_exclusivity: 多研究论文专用
+          rhythm_tags:
+          - limitation
+          - design_repair
+          - study_relay
+          - progressive_validity
+          notes: "The limitation must be real and the next study must actually repair it; do not use a cosmetic limitation merely to advertise another study."
           corpus_path: econometric-models/多研究.md
     cross_slot_patterns:
     - id: opposing_paths_horizon_adjudication
@@ -3890,4 +4153,46 @@ batch_history:
   source_paper: Reinwald_Kanitz_Bamberger_Backmann_Hoegl_2026_ORSC
   source_subfield: ob_hr
   slot_updates_count: 2
+  novel_patterns_count: 2
+- batch_id: batch_21_moon_tuli_mukherjee_2023_jm
+  timestamp: '2026-08-03'
+  estimator_family: IV_2SLS
+  source_paper: Moon_Tuli_Mukherjee_2023_JM
+  source_subfield: marketing
+  slot_updates_count: 1
+  novel_patterns_count: 1
+- batch_id: batch_22_schumacher_keck_tang_2020_smj
+  timestamp: '2026-08-03'
+  estimator_family: OLS_FE
+  source_paper: Schumacher_Keck_Tang_2020_SMJ
+  source_subfield: strategy
+  slot_updates_count: 2
+  novel_patterns_count: 2
+- batch_id: batch_23_ilicic_brennan_2026_jm
+  timestamp: '2026-08-03'
+  estimator_family: 实验 / Serial Mediation / 多研究
+  source_paper: Ilicic_Brennan_2026_JM
+  source_subfield: marketing
+  slot_updates_count: 3
+  novel_patterns_count: 3
+- batch_id: batch_24_kashmiri_nicol_arora_2017_jams
+  timestamp: '2026-08-03'
+  estimator_family: OLS / RE Negative Binomial / Fractional Logit / RE Logit / Mediation
+  source_paper: Kashmiri_Nicol_Arora_2017_JAMS
+  source_subfield: marketing
+  slot_updates_count: 2
+  novel_patterns_count: 2
+- batch_id: batch_25_bendig_hensellek_schulte_2024_etp
+  timestamp: '2026-08-04'
+  estimator_family: Logit_Probit_Ordered_Probit / GEE
+  source_paper: Bendig_Hensellek_Schulte_2024_ETP
+  source_subfield: entrepreneurship / strategy / product safety
+  slot_updates_count: 4
+  novel_patterns_count: 3
+- batch_id: batch_26_lee_park_2024_smj
+  timestamp: '2026-08-04'
+  estimator_family: Logit_Probit_Ordered_Probit / Fractional Logit
+  source_paper: Lee_Park_2024_SMJ
+  source_subfield: strategy / organizational learning / healthcare
+  slot_updates_count: 3
   novel_patterns_count: 2

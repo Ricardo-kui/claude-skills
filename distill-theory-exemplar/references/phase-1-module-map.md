@@ -256,14 +256,14 @@ phase_1_5_quality_gate:
     coverage_rate: "83%"
   type_alignment:
     detected_type: "机制推演型"
-    properly_addressed: ["T3 包含两步机制链", "T4 每个假设前有 Therefore"]
+    properly_addressed: ["T3 有足够的 reasoning moves（不按变量数计）", "T4 的收敛方式与单向/竞争预测匹配"]
     inadequately_addressed: ["T3 第2步跳跃：缺少中间机制论证"]
   cross_matrix_alignment:
     detected_hypothesis_structure: "主效应+中介"
-    mechanism_depth: "两步 (X→M→Y)"
-    module_requirements: {"T1": "M", "T2": "M", "T3": "M (≥2步)", "T4": "M (H1:X→M, H2:M→Y)", "T5": "O", "T6": "M"}
+    mechanism_depth: "两个推理转换；不等同于 X→M→Y"
+    module_requirements: {"T1": "按构念需要", "T2": "理论透镜按需", "T3": "足够的 reasoning moves", "T4": "与实际关系形式匹配", "T5": "条件化时需要", "T6": "独立段落非强制"}
     matrix_breaches: ["T1 未定义 mediator M 的 scope condition"]
-    depth_sufficiency: "两步为机制推演型标准配置，深度合格"
+    depth_sufficiency: "根据前提→过程→预测是否完整判断，不因存在中介自动合格"
   theory_sufficiency:
     why_chain_integrity: true/false
     construct_scope_clear: true/false

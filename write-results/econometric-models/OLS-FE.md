@@ -17,9 +17,11 @@ source_papers:
   - "du_tsolmon_2024_post_ma_retention_structural_knowledge_orsc (Organization Science): selection three-step defense (descriptive→CEM→Heckman), null-finding-as-mechanism-evidence, heterogeneity-as-alternative-rebuttal, external-benchmark threshold discovery, downstream performance post hoc, 2x2 cross-diagonal typology comparison"
   - "pollock2015 (Administrative Science Quarterly, 2015): dynamic panel AB-GMM — ρ persistence % interpretation, split-sample Wald χ² coefficient comparison + partial support, Monte Carlo power for GMM null, post-hoc spline reconciliation of surprising negative, 3SLS alternative-estimator robustness with LDV-bias caveat"
   - "malshe2015 (Journal of Marketing, 2015): SUR system — floodlight (Johnson-Neyman) sign-flipping interaction dual transition points, 3-condition cross-equation mediation + asymmetric support, counterintuitive reverse deferred to Discussion"
-variants_count: 42
+  - "schumacher_keck_tang_2020_smj (Strategic Management Journal): direct cross-group coefficient test for an imprecise within-group reversal; construct-validity triangulation across nomological contrast, cross-firm stability, and temporal stability"
+  - "kashmiri_nicol_arora_2017_jams (Journal of the Academy of Marketing Science): marginal focal result followed by significance-driven control deletion, retained as an anti-pattern rather than a reporting template"
+variants_count: 44
 created: 2026-05-18
-updated: 2026-07-30
+updated: 2026-08-03
 ---
 
 # OLS-FE — Results 骨架
@@ -473,6 +475,30 @@ updated: 2026-07-30
 **与原骨架差异**: 区别于变体6（符号反转跨条件 + **当场**理论解释）与变体30（预测性零结果作机制证据）——本变体处理**单一调节变量上预测方向反转**，且采用**两段式诚实叙事**：(1) Results 段**当场承认反转**（"in contrast to H_c"）+ **明确推迟解释到 Discussion**（不在 Results 强行编造机制）；(2) Discussion 段给出**事后（post-hoc）机制猜想** + **数据局限声明**（"do not allow us to explore... further research can resolve"）。这种"诚实承认 + 延迟解释 + 标注 post-hoc 与局限"的三段式，比在 Results 当场硬解释更审稿人友好（避免过度解读），也比隐瞒反转更诚信。适用于调节假设方向与数据相反、且机制需推测的研究。
 **诚实边界**: 须在 Results 当场标明 "in contrast to H"（不可只在 Discussion 轻描淡写）；Discussion 的事后解释必须标注为推测（post-hoc / a potential explanation）而非确证；须承认数据局限并指向 future research；不可把反转重新包装为"部分支持"。
 
+### 变体 43: R4/R6 — 组内方向切换但不显著 → 直接组间系数差异裁决 (1篇高价值)
+**来源论文**: Schumacher, Keck & Tang (2020, Strategic Management Journal)
+**验证状态**: 通过（单篇入库，待第二篇交叉验证）
+**写入日期**: 2026-08-03
+**槽位**: R4 / R6
+**骨架**:
+> Within the [boundary-present] subsample, the focal interaction changes to the predicted direction but is estimated imprecisely ([estimate], [p-value], [confidence interval]). This within-group result alone does not establish a reversal. We therefore directly test whether the interaction coefficient differs between [boundary-present] and [boundary-absent] groups. The coefficient-difference test rejects equality ([test statistic], [p-value]), supporting heterogeneity across the boundary while leaving the exact within-boundary slope uncertain.
+
+**与原骨架差异**: 变体36也报告分样本 Wald 比较，但聚焦两个动态方程的相对大小与 partial support；本变体处理**同一交互关系在外部阈值两侧的条件差异**。其关键价值是把三个统计命题分开：①组内方向是否改变；②组内斜率是否显著；③两组系数是否显著不同。理论边界主要由③裁决，不能由“一组显著、另一组不显著”替代。
+
+**诚实边界**: 组间差异显著只支持异质性；若边界组内 CI 跨零，不得声称该组的反转效应已确证。分组阈值必须事前有理论/外部依据，并报告阈值两侧 N 与不平衡程度。
+
+### 变体 44: R8 — 三类构念效度威胁的定向三角验证 (1篇高价值)
+**来源论文**: Schumacher, Keck & Tang (2020, Strategic Management Journal)
+**验证状态**: 通过（单篇入库，待第二篇交叉验证）
+**写入日期**: 2026-08-03
+**槽位**: R8
+**骨架**:
+> We evaluate three rival interpretations of [latent actor trait]. First, a theoretically related [demographic/nomological] contrast should produce the opposite conditional pattern if the proposed trait interpretation is valid. Second, the proxy should remain associated for the same actor across organizational contexts if it reflects the actor rather than the focal organization. Third, accumulated feedback should not erase the relationship over a short horizon if the trait is relatively stable. Evidence across these tests strengthens the proposed interpretation, but does not uniquely identify the latent construct.
+
+**与原骨架差异**: 不是普通 robustness checklist。三项分析分别对应三个构念效度威胁：`真实能力或相邻特质`、`企业特定而非个人特质`、`trait 随反馈内生更新`。每项都由 rival interpretation 立项，再用最匹配的观测模式回应，形成 nomological + cross-context + temporal 三角验证。
+
+**诚实边界**: 人口特征对比依赖额外同质性假设；跨组织重复样本可能很小；短期稳定不等于永久不变；三角验证提升解释可信度但不能证明代理只测量一个潜在构念。
+
 ## 反模式
 
 | 反模式 | 表现 | 应做 |
@@ -483,6 +509,7 @@ updated: 2026-07-30
 | **多项式/交互模型未报告 mean-centering 和 condition number** | 高阶项和交互项可能造成多重共线性但未诊断 | 使用变体 20 的三重诊断 |
 | **显著性语言不一致** | 同一论文中 p=0.052 称 "significant" 而 p=0.071/0.075 称 "marginal" | p > 0.05 一律统一标 "marginally significant"（du_tsolmon2024 警示案例） |
 | **Split-sample 系数对比无 Wald 检验** | 仅用 "larger vs smaller" 描述性断言跨子样本系数差异（0.190 vs 0.069），未检验系数相等性 | 跨子样本系数对比须配 Wald χ² / seemingly unrelated estimation 检验（du_tsolmon2024 警示案例） |
+| **删除不显著控制变量以“挽救”焦点系数** | 完整模型仅 `p < .10`，随后删除当期不显著 controls 并把 `p < .05` 宣称为 stronger support | 控制变量由理论、设计或预先规则决定；完整规格保留为主结果，替代控制集只能作为透明敏感性分析，且不得升级原假设判定（Kashmiri–Nicol–Arora 2017 警示案例） |
 
 ## 诚实边界
 

@@ -84,7 +84,7 @@ Literature Turn（P2-P3）的核心功能是将 Hook 建立的注意力转化为
 | **解决方案** | 填补空白 | 连接盲区 | 超越对立 |
 | **典型 Hook** | data-shock, practical-puzzle | consensus-blindspot, forward-looking-shift | paradigm-challenge, classic-debate-constraint |
 | **典型 Tension** | despite-progress-unaddressed | implicit-assumption-wrong, structural-blindspot | reality-contradicts-consensus, theoretical-imbalance |
-| **变体数量** | 8 (A–H) | 5 (A–E) | 5 (A–E) |
+| **变体数量** | 9 (A–I) | 5 (A–E) | 5 (A–E) |
 | **反模式风险** | 弱缺口（没有解释为什么遗漏重要） | 虚假合成（两个"传统"实为同一流派变体） | 稻草人（一方被描绘得极其愚蠢） |
 
 ---
@@ -139,7 +139,7 @@ Literature Turn 的策略选择影响 write-theory 的推荐变体：
 ```
 literature-turns/
 ├── _index.md                          ← 本文件（路由图 + 速查表）
-├── 01-progressive-coherence.md        ← Progressive Coherence (5 variants)
+├── 01-progressive-coherence.md        ← Progressive Coherence (9 variants)
 ├── 02-synthesized-coherence.md        ← Synthesized Coherence (5 variants)
 ├── 03-non-coherence.md                ← Non-Coherence (5 variants)
 ├── literature-turn-templates.md       ← 快速参考卡（三种策略的核心模板精简版）
@@ -150,11 +150,13 @@ literature-turns/
 
 ## 新增 Literature Turn（待分类）
 
-- table-embedded-review.md — Systematic literature table embedded in Introduction
+- table-embedded-review.md — Systematic literature table embedded in Introduction；含跨领域机制回顾、本领域结构性空白和“本文”对照行三种变体
 
 ---
 
 ## 更新日志
+
+- **2026-08-03**: 蒸馏 Schumacher, Keck, and Tang (2020, SMJ)——新增 `01-progressive-coherence` **变体 I：双成熟文献流 + 必要解释瓶颈**。该写法不是把两条文献流包装成彼此冲突，而是先分别承认两者成熟贡献，再指出“反馈效应依赖解释，而解释研究尚未进入该对话”的必要中介缺口；适用于行为理论 × 高管认知等跨层整合。
 
 - **2026-07-30（续）**: 重新蒸馏 Malshe & Agarwal (2015, JM) 引言文献对话——新增 `01-progressive-coherence` **变体 H：新兴交叉流 + 互补半区缺口型（malshe2015 型）**。补回此前蒸馏遗漏的 Move-2 literature turn（"Recently, marketers have begun to examine... Yet little research investigates [debt half]"）：源学科纵深建立 → 新兴交叉流承认（recently/begun）→ 互补半区 pivot（equity done / debt not）。区别于变体 A/B（成熟流）与变体 G（跨独立维度缺口）——本变体是单一维度内镜像极性的缺口，专供跨学科嫁接、交叉流尚新兴的研究。malshe2015 的 Move-1 hook（跨学科类比 `hooks/01` 变体 B）与 Move-3 gap（"surprising for three reasons" `tensions/01` 变体 D）此前后已入库；本次补齐 Move-2，使四动作完整。Progressive 变体数 7→8 (A–H)。
 

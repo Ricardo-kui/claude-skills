@@ -11,7 +11,11 @@ source_papers:
   - keeves2017 (ASQ, 2017): "Asymmetry: ingratiation benefits but backfires"
   - pontikes2012 (ASQ, 2012): "Category spanning: positive or negative?"
   - kundro2023 (AMJ, 2023): "Power protects vs gender role theory"
+  - vidal_mitchell2015 (OS, 2015): "nested evidence synthesis: majority pattern plus exceptions for levels, followed by opposing findings for changes"
+  - bendig_hensellek_schulte2024 (ETP, 2024): "benefit-oriented outcome consensus is reopened through product-safety harm, then resolved by a cost-learning dominance schedule"
+  - lee_park2024 (SMJ, 2024): "positive and negative failure-learning accounts are steelmanned symmetrically, treated as coexisting, and reconciled through an accumulation-dependent dominance schedule"
 created: 2026-05-19
+updated: 2026-08-04
 source: Extracted from literature-turn-templates.md + MVP30 validation
 ---
 
@@ -101,6 +105,94 @@ zhou2017 的 non-coherence 实为**双层叠加**，是其文献对话的高质�
 - "raise a puzzle" → 将矛盾转化为研究问题
 
 **适用**: 挑战元分析共识的研究
+
+---
+
+### 变体 D：多数结论—例外—相反结果的嵌套综合型（Vidal & Mitchell 型）
+
+**模板**:
+> "Prior research has addressed [phenomenon] from two related vantage points. Work on [dimension A] most commonly finds [dominant relationship], while also documenting [named exceptions]. A smaller stream examines [dimension B], where the evidence is more varied: [finding one] contrasts with [finding two]. Taken together, the literature establishes that [shared baseline], but it does not support a single directional account of [focal relationship]."
+
+**来源**: Vidal & Mitchell (Organization Science, 2015), Introduction P1
+
+**原文锚定（释义）**:
+> 文献对话先给主流结论，再主动承认例外，之后切换到规模较小但结果更分散的第二条研究线，最后把两条线压缩成一个方向性冲突。
+
+**关键特征**:
+- 每条引文都承担分类功能：支持多数模式、标记例外或代表相反方向，而非按作者逐篇摘要。
+- “较小研究流”不是 Gap 本身；它的作用是提供足以破坏单一方向解释的证据。
+- 先建立前人研究已经知道什么，再精确指出这些知识为何无法共同组成一个连贯解释。
+
+**适用**: 前人研究结论矛盾型 Gap；尤其适合存在“主流关系 + 例外”以及另一条“方向混合”研究线的情形。
+
+**禁忌**: 不要把样本、指标或情境完全不同的系数机械放在一起；必须先证明这些研究确实在回答可比较的问题。
+
+---
+
+### 变体 E：高阶后果冲突 → 固定关系机制裁决型（Bendig–Hensellek–Schulte 型，EMERGING）
+
+**模板**:
+> "Research commonly evaluates [strategic activity] through [financial/innovation outcomes], emphasizing gains from [resources and learning]. Yet the same activity requires [search, coordination, and integration], which can disrupt [core operations] and produce [high-stakes adverse outcome]. These findings do not merely add another dependent variable; they reveal that the broader consequences of [activity] include both benefits and harms. We therefore introduce [adverse Y] into the outcome family and theorize, for the fixed relationship between [activity intensity] and [adverse Y], how [cost mechanism] dominates initially while [learning mechanism] becomes stronger after experience accumulates."
+
+**来源**: Bendig, Hensellek, and Schulte (2024), *Entrepreneurship Theory and Practice*
+
+**两级结构**:
+1. **R2 让冲突可见**：先把财务价值、创新产出与产品安全上卷为“对母公司及利益相关者的后果”这一可辩护高阶结果族。
+2. **R3 让冲突可检验**：进入理论裁决后，锁定同一 X、同一 Y 和同一时间单位，规定成本与学习收益如何沿 X 改变相对主导权。
+
+**为什么不同于变体 D**:
+- 变体 D 在同一经验关系内整理多数模式、例外与相反方向，再按 X 方向或行动形式分解。
+- 本变体先揭示既有结果空间偏向正向绩效，再以高风险 Y 暴露净评价冲突，最后在新的固定 X→Y 关系中完成机制裁决。
+
+**适用**: 研究领域习惯以财务、创新或增长结果评价某战略“有益”，但已有可靠证据显示该战略还可能产生运营、产品安全、员工或社会伤害；作者能够证明这些结果属于同一高阶有效性/利益相关者后果判断。
+
+**禁忌**:
+- 新旧 Y 之间必须有明确高阶家族，不得把概念无关的结果拼成“矛盾”。
+- 高阶 R2 只负责建立问题；具体预测仍须固定 X/Y，不能直接比较不同模型中的不可比系数。
+- 两个相反机制只有在相对强度随 X、时间或状态系统变化时，才足以预告 U/倒 U。
+
+---
+
+### 变体 F：侵占威胁 → 平均优势 → 制衡追问型（Anderson–Reeb 型，EMERGING）
+
+**模板**:
+> "Evidence on [concentrated control arrangement] documents the risk of [appropriation/entrenchment harm]. Yet the same arrangement is widespread and, on average, associated with [performance advantage], partly because it enables [monitoring/commitment benefit]. This coexistence raises a sharper question: what governance arrangement preserves [benefit] while constraining [harm]? We therefore shift attention from [conventional conflict dyad] to [controlling-owner–outside-claimant conflict] and examine how the relative representation of [actor A] and [actor B] determines which mechanism dominates."
+
+**来源**: Anderson and Reeb (2004), *Administrative Science Quarterly*
+
+**关键动作**:
+1. **先让伤害可信**：以理论和可核查事实建立控制权转化为私人收益的风险。
+2. **完整承认平均优势**：不把既有正向结果写成错误，而是说明其监督、承诺和专用知识基础。
+3. **以制衡问题联结两边**：问题不是“到底正还是负”，而是什么结构能保留收益并抑制伤害。
+4. **重画冲突对象**：从管理者—股东冲突转向控制股东—外部股东冲突。
+5. **进入 R3 才固定关系**：将 X 锁定为两类董事的相对配置，将 Y 锁定为企业价值，再推导机制优势切换。
+
+**为什么不同于变体 E**:
+- 变体 E 从被忽视的负向 Y 扩展高阶结果族，再在新的 X→Y 关系内裁决成本与学习机制。
+- 本变体不靠增加 Y 制造张力，而是把同一组织形式的平均优势分解为不同治理配置，并将“谁来制衡”设为理论问题。
+
+**适用**: 既有研究一方面记录集中控制、创始人权力或强势行动者的监督/承诺收益，另一方面有可比较的侵占、固化或利益相关者伤害证据；研究能提出维持收益所需的制衡配置。
+
+**禁忌**: 不要仅凭正面平均系数与几个负面案例宣称矛盾；必须证明双方回答同一个价值后果问题，并在正式推理中固定具体 X、Y、层级、时间范围和 estimand。
+
+---
+
+### 变体 G：对称双流 → 共存声明 → 累积轴裁决型（Lee–Park 型，EMERGING）
+
+**模板**:
+> "One stream shows that [repeated experience] improves [outcome] because it expands [enabling process]. A second stream shows that the same experience can impair [outcome] because it erodes [constraining prerequisite]. Both accounts are theoretically credible and address the same focal relation. Rather than asking which account is universally correct, we ask how the two processes coexist and change in relative strength as [experience] accumulates."
+
+**来源**: Lee and Park (2024), *Strategic Management Journal*, Introduction P1–P4.
+
+**关键特征**:
+- 两个文献流按“发现 → 机制”完全对称展开，先让双方都达到最强版本，再谈整合。
+- Departure point 不是笼统的 `findings are mixed`，而是指出单一方向理论无法表示两个过程会同时发生。
+- 用累计暴露轴替代简单选边：理论任务变成说明哪个过程在哪个区间成为约束性短板。
+- Stakes 被嵌入共存声明：在失败反复出现且后果严重的情境中，误判主导过程会直接误判学习轨迹。
+
+**适用**: 同一个 X–Y 关系存在方向相反、证据充分的过程解释；X 可累积、分阶段或沿连续区间变化；研究能够给出机制相对强度如何变化的理论依据。
+
+**禁忌**: 不要仅凭正负研究并存就推导曲线；必须固定同一 X、Y、层级与时间范围，并说明两个过程为何会共存、为何其相对强度会随 X 系统变化。
 
 ---
 

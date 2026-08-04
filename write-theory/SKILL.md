@@ -23,25 +23,27 @@ Full Theory generation requires a valid story contract. Theory is rising action:
 
 ## Workflow
 
-1. Diagnose the build type using `references/phase-1-diagnosis.md` and `corpus/meta/routing_table.md`. 确认路由后查 `corpus/_index.md` 快速决策表（variant→文件名映射 + 该变体应配的 subprotocols/sentences）；推荐任何 pattern 前，查 `corpus/_evidence_registry.yaml` 的 EMERGING/VERIFIED/ROBUST 状态，EMERGING 须标注单/双源不得作默认。
+1. Diagnose the build type using `references/phase-1-diagnosis.md` and `corpus/meta/routing_table.md`. 若主 Gap = Incommensurability，先读 `references/incommensurability-resolution-routes.md` 提取 L0 稳定推理内核、定位 R1–R4，再把 A–G 视为候选架构；route 不规定假设数量、编号、变量数量或模型形式，低置信时保留 L0 并报告两个候选路线。不得由 Makadok 维度机械代替冲突定位。确认路由后查 `corpus/_index.md` 快速决策表（variant→文件名映射 + 该变体应配的 subprotocols/sentences）；推荐任何 pattern 前，查 `corpus/_evidence_registry.yaml` 的 EMERGING/VERIFIED/ROBUST 状态，EMERGING 须标注单/双源不得作默认。
 2. Choose construct order, mechanism depth, hypothesis structure, and narrative arc using `references/phase-2-architecture.md`.
-3. Derive each hypothesis through a complete why-chain using `references/phase-3-hypothesis-derivation.md`（含 8 项语料调用清单）; load only the selected variant from `corpus/variants/[variant_filename]`（filename 来自 phase-1 输出；或查 `corpus/_index.md` 变体表） and the necessary sentence-pattern files.
+3. 先执行 conditionality gate（稳定无条件效应是否有理论依据？）；再通过完整 why-chain 推导每个假设，见 `references/phase-3-hypothesis-derivation.md`（含 8 项语料调用清单）。load only the selected variant from `corpus/variants/[variant_filename]`（filename 来自 phase-1 输出；或查 `corpus/_index.md` 变体表） and the necessary sentence-pattern files.
 4. Audit construct consistency, alternative mechanisms, hypothesis testability, paragraph architecture, and cross-section promises using `references/phase-4-qc-alignment.md`.
 5. Produce the scaffold, storyline-linked hypothesis statements, paragraph function map, evidence gaps, QC results, and the `paper-state.yaml` theory fields needed by Methods and Results. Structure the full reply per `references/output-format.md`.
 
 ## Selection rules
 
 - Use construct differentiation when the contribution changes what a construct means.
-- Use mechanism elaboration when the contribution explains why or how an effect occurs.
+- Use mechanism elaboration when the contribution explains why or how an effect occurs. Route to B0 when the process is theoretical explanation only; route to B1 only when a mediator is a defined construct and the design can test the indirect effect.
 - Use a hypothesis tree when several predictions share a common theoretical trunk.
 - Use process theory for temporal stages or qualitative process models.
-- Use moderation for boundary conditions; distinguish within-level from cross-level interactions.
+- Before selecting a main-effect structure, ask whether the mechanism is expected to operate stably across the stated scope. If not, make the conditional relationship primary; do not invent a moderator merely to make the model look richer.
+- Use moderation only when a theoretically specified boundary changes a mechanism, exposure, capacity, or interpretation; distinguish within-level from cross-level interactions.
 - Use competing hypotheses when credible theories predict opposing outcomes.
 - Use dialectical opposition when the contribution depends on sustained tension between mechanisms.
+- For Incommensurability, locate the conflict before choosing an architecture: differentiate X (R1), disaggregate Y (R2), model opposing mechanisms (R3), or specify contextual contingency (R4). Treat paired hypotheses, mediation, competing hypotheses, moderation, thresholds, and U/倒U as L2 candidates requiring a necessity warrant. Opposing mechanisms do not by themselves justify a U/倒U; same-sign moderation normally does not justify an Incommensurability label.
 
 ## Output contract
 
-Return a tailored scaffold, not unsupported substantive claims. Mark every literature-dependent statement with an evidence placeholder until verified. Keep construct names stable across prose, hypotheses, methods, and results. State null, competing, or boundary predictions precisely enough to test.
+Return a tailored scaffold, not unsupported substantive claims. Mark every literature-dependent statement with an evidence placeholder until verified. Keep construct names stable across prose, hypotheses, methods, and results. State null, competing, or boundary predictions precisely enough to test. Include a mechanism-and-conditionality audit that distinguishes reasoning depth from mediator/moderator count. For Incommensurability, also report L0–L3, route confidence, closest alternative, unclassified residual, and why the selected hypothesis architecture is necessary.
 
 ## Hard constraints（协议层速查）
 
@@ -49,20 +51,22 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 
 | # | 硬约束 | 细则位置 |
 |---|--------|---------|
-| 1 | 每个假设前必须有 2–3 步因果/过程推理链；禁止逻辑跳跃 | `references/phase-3-hypothesis-derivation.md` + `corpus/subprotocols/hypothesis_derivation_patterns.md` |
+| 1 | 每个假设前必须有足以连接前提与预测的因果/过程推理链；通常至少 2 个有内容的推理环节。环节数按推理移动计算，不按中介/调节变量数量计算；禁止为满足步数机械添加变量 | `references/phase-3-hypothesis-derivation.md` + `corpus/subprotocols/hypothesis_derivation_patterns.md` |
 | 2 | 假设推导段用交织式论证结构（文献嵌入推理，非罗列） | `references/phase-3-hypothesis-derivation.md` §交织式论证链 |
 | 3 | 假设句必须明确 IV/DV/方向/形状/条件，形式与测量尺度匹配；禁 "is associated with" | `corpus/sentences/hypothesis_forms.md` 决策矩阵 |
 | 4 | 新构念必须完成 definition + scope conditions + lineage + adjacent differentiation + justification（必要性/独特价值）五步 | `corpus/sentences/construct_definition.md`；justification 见 AMJ Management Research Canvas（"definition, differentiation, and justification"） |
 | 5 | 主角（核心构念）不超过 3 个；段落内术语统一 | 审查侧：`theory-review` Step 1、`pollock-qc` prose 表 |
 | 6 | 调节假设必须指定交互模式类型并排除反向交互；区分 differential prediction 与 differential validity | `corpus/variants/E_moderation.md` + `corpus/sentences/moderation.md` |
 | 7 | 跨层调节必须在 P1 声明 focal unit of analysis 与 nesting structure | `corpus/variants/E_moderation.md` + `corpus/meta/routing_table.md` |
-| 8 | 无独立 Closure 段——最后一个假设后即进 METHODS | `corpus/sentences/closure.md` |
+| 8 | 默认不设独立 Closure；最后假设/命题自然收敛。仅当复杂构念或过程模型仍需整合时，允许在末段嵌入或紧随其后作最短必要回扣，不得增加新构念、命题或贡献 | `corpus/sentences/closure.md` |
 | 9 | 竞争假设用非传统收敛信号（"Given these competing arguments…"），禁 "Therefore" | `corpus/variants/F_competing_hypotheses.md` |
 | 10 | 辩证对立必须满足对称性 + dialectical turn 标记 + theory-based reconciliation；"反转"必须是方向反转而非强度变化（强度变化路由到 E 型） | `corpus/variants/G_dialectical_opposition.md` |
 | 11 | ≥2 个 moderators 必须有理论驱动的选择理由（元框架/统一分类）；调节论证双边完整（high AND low） | `corpus/subprotocols/moderator_selection_frameworks.md` + `corpus/subprotocols/bilateral_argumentation_templates.md` |
 | 12 | 连续谱 IV 需论证两端（+理论中间行为者作零效应基准） | `corpus/subprotocols/hypothesis_derivation_patterns.md` |
 | 13 | 图不能替代文字理论；Literature Support 必须是 argument 总结而非 citation 罗列 | `corpus/sentences/mechanism_chain.md` |
 | 14 | 输出末尾自动附加 `### paper-state.yaml 片段` 块 | `corpus/meta/paper_state_fragment.md` |
+| 15 | 主效应推导前必须执行 conditionality gate；若机制只在特定条件下成立，条件关系优先，主效应仅可作为有依据的基线 | `references/phase-3-hypothesis-derivation.md` + `corpus/storytelling/post-generation-validator.md` |
+| 16 | Incommensurability 使用两阶段可比性门控：对话层只要求共享理论对象或可辩护的高阶 X/Y 家族；R3/R4 在正式假设推理前必须锁定具体 X、Y、层级、时间范围与 estimand。继续标记 L0–L3 与 R1–R4；A–G、H 数量及模型形式均为候选而非自动输出。R3 只有在机制相对强度随 X 系统变化时才推出 U/倒U，R4 必须双边推导并直接检验条件差异 | `references/incommensurability-resolution-routes.md` |
 
 ## 反模式速查（加载语料前先生效；完整版见 `corpus/_index.md` 反模式速查）
 
@@ -93,8 +97,8 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 
 | 句位 | 查的语料库 | 动作 |
 |------|-----------|------|
-| 构念定义 / why-chain / 假设句 / 让步反论 / 主导动机串联 | `corpus/sentences/` 全部（`construct_definition` / `mechanism_chain`（含 `cost_benefit_calculus` 这条 why-chain voice） / `moderation` / `hypothesis_forms` / `acknowledgment_response` / `leitmotif-section-opener` / `closure`） | 为机制链步骤、构念定义、假设句提供 2-3 个措辞变体 |
-| 假设推导的 hedging 强度 | `../write-introduction/academic-writing-corpus/phrasebank/hedging-strength.md` | Theory 假设推导用**弱档** hedge（方向性非确定性：is likely to / appears to），禁用无 hedge 确定句 |
+| 构念定义 / why-chain / 假设句 / 让步反论 / 主导动机串联 | 按句位选择 `corpus/sentences/` 中一个匹配文件（`construct_definition` / `mechanism_chain` / `moderation` / `hypothesis_forms` / `acknowledgment_response` / `leitmotif-section-opener` / `closure`） | 为关键句位提供 2–3 个措辞变体；不预载整个目录 |
+| 假设推导的 hedging 强度 | `../write-introduction/academic-writing-corpus/phrasebank/hedging-strength.md` | 对尚待检验的方向和机制使用与证据匹配的弱档 hedge；构念定义、已确立前提和逻辑关系可用明确陈述，不机械给每句加 hedge |
 | 处理竞争机制/竞争理论的批判措辞 | `../write-introduction/academic-writing-corpus/phrasebank/critique-phrases.md`（先读同目录 `_index.md`） | 为 "prior theory fails to account for..." 类句提供变体（**必须配具体理论+局限**） |
 | 角色 ordering 决策 | `corpus/subprotocols/character_ordering.md` | 多 IV/多 DV 时校验主角配角出场顺序 |
 | 五病速查 | `../pollock-qc/references/prose-pathology.md` | 扫一遍五病，标 △ 处给改写建议 |
@@ -107,8 +111,12 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 - `/paper-review`、`/theory-review` — 以本 skill 输出作为跨 Section 对齐与 Theory 草稿审查的基准
 - `/distill-theory-exemplar` — 新论文 Theory 蒸馏后回写 `corpus/`
 
+## Evidence-driven evolution
+
+范文蒸馏对本 skill 的影响分两条通道：reference-level 模式更新 `corpus/` 与 `_evidence_registry.yaml`；规则层反例/缺陷更新 `corpus/_skill_design_feedback.yaml`。执行演化任务时读取 `../distill-theory-exemplar/references/design-feedback-loop.md`：单篇模式不得直接建立普遍规则；只有 VERIFIED/ROBUST 或针对绝对规则的 full-text FALSIFIER，且通过授权、风险、positive regression 与 preservation regression 门控后，才可 conditionalize、decouple、add branch 或修正 validator。`resolved` 还必须核验目标文件中的 `rule_excerpt_after`；schema/stage-gate/high-risk 变更始终人工审核。
+
 ## Resource loading
 
 > **与 Workflow 的关系**：本节是加载**总则**（按需加载、不预载、查 registry 状态）；上方 Workflow step 1-5 是**执行顺序**。两者一致——按 Workflow 顺序执行，每步的文件选择服从本节总则。
 
-Read `references/intake-and-story-gate.md` when paper-state is present, missing, or legacy-shaped. Do not preload `corpus/`. Start with `corpus/meta/routing_table.md`, then load only the chosen variant, required construct or mechanism patterns, and the relevant storytelling/QC file. Before recommending a pattern as the default approach, check its EMERGING/VERIFIED/ROBUST status in `corpus/_evidence_registry.yaml`; EMERGING patterns must be flagged as single-/dual-source, not presented as defaults. Use sibling Introduction assets only for cross-section continuity checks.
+Read `references/intake-and-story-gate.md` when paper-state is present, missing, or legacy-shaped. Do not preload `corpus/`. Start with `corpus/meta/routing_table.md`; when the primary gap is Incommensurability, also load `references/incommensurability-resolution-routes.md`. Then load only the chosen variant, required construct or mechanism patterns, and the relevant storytelling/QC file. Before recommending a pattern as the default approach, check its EMERGING/VERIFIED/ROBUST status in `corpus/_evidence_registry.yaml`; EMERGING patterns must be flagged as single-/dual-source, not presented as defaults. Use sibling Introduction assets only for cross-section continuity checks.

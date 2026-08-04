@@ -1,6 +1,6 @@
 interface:
   display_name: "Distill Introduction Exemplar"
-  short_description: "Distill introductions with story-fidelity governance"
-  default_prompt: "Use $distill-introduction-exemplar to distill this Introduction and classify reusable patterns by story fidelity."
+  short_description: "Distill intros and improve writing-skill design"
+  default_prompt: "Use $distill-introduction-exemplar to distill this Introduction, preserve evidence provenance, and flag reusable patterns or write-introduction design defects."
 policy:
   allow_implicit_invocation: true

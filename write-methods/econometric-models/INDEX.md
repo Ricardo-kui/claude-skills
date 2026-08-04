@@ -4,7 +4,7 @@ description: Methods 填空骨架变体库，按设计类型组织。由 distill
 organization: by_design_type
 design_types_count: 23
 created: 2026-05-18
-updated: 2026-08-02
+updated: 2026-08-04
 ---
 
 # Methods Econometric Models Corpus
@@ -21,19 +21,19 @@ updated: 2026-08-02
 
 | 文件 | 设计类型 | 变体数 | 最后更新 |
 |------|---------|--------|---------|
-| [面板数据-OLS](面板数据-OLS.md) | 面板数据-OLS | 26 | 2026-07-30 |
+| [面板数据-OLS](面板数据-OLS.md) | 面板数据-OLS | 28 | 2026-08-04 |
 | [自然实验-DiD](自然实验-DiD.md) | 自然实验-DiD | 3 | 2026-08-02 |
-| [非线性模型](非线性模型.md) | 非线性模型 | 11 | 2026-07-30 |
+| [非线性模型](非线性模型.md) | 非线性模型 | 14 | 2026-08-04 |
 | [生存分析](生存分析.md) | 生存分析 | 22 | 2026-08-01 |
 | [SEM](SEM.md) | SEM | 4 | 2026-05-18 |
-| [实验](实验.md) | 实验 | 6 | 2026-07-22 |
+| [实验](实验.md) | 实验 | 6 | 2026-08-03 |
 | [多研究](多研究.md) | 多研究 | 9 | 2026-08-02 |
 | [定性过程研究](定性过程研究.md) | 定性过程研究 | 6 | 2026-07-07 |
 | [稀有结果](稀有结果.md) | 稀有结果 | 0 | 2026-05-18 |
 | [实证对象构建](实证对象构建.md) | 实证对象构建 | 5 | 2026-07-30 |
 | [事件历史+事件研究](事件历史+事件研究.md) | 事件历史+事件研究 | 11 | 2026-08-02 |
 | [同时方程](同时方程.md) | 同时方程 | 4 | 2026-07-30 |
-| [IV-2SLS](IV-2SLS.md) | IV-2SLS | 10 | 2026-07-30 |
+| [IV-2SLS](IV-2SLS.md) | IV-2SLS | 11 | 2026-08-03 |
 | [动态面板-GMM](动态面板-GMM.md) | 动态面板-GMM | 4 | 2026-07-30 |
 | [匹配DiD-广义DiD](匹配DiD-广义DiD.md) | 匹配DiD-广义DiD | 0 | 2026-05-18 |
 | [同伴效应-网络效应](同伴效应-网络效应.md) | 同伴效应-网络效应 | 4 | 2026-07-30 |
@@ -42,7 +42,7 @@ updated: 2026-08-02
 | [堆叠扩散Logit](堆叠扩散Logit.md) | 堆叠扩散Logit | 0 | 2026-05-18 |
 | [多行为者设计](多行为者设计.md) | 多行为者设计 | 1 | 2026-07-08 |
 | [推断二元结果](推断二元结果.md) | 推断二元结果 | 0 | 2026-05-18 |
-| [两阶段模型](两阶段模型.md) | 两阶段模型 | 5 | 2026-07-21 |
+| [两阶段模型](两阶段模型.md) | 两阶段模型 | 6 | 2026-08-03 |
 | [VARX-PVAR](VARX-PVAR.md) | VARX-PVAR | 8 | 2026-07-15 |
 
 ## 写入规则
@@ -53,6 +53,14 @@ updated: 2026-08-02
 4. 变体达到 3+ 时，考虑提升为 skill 主骨架
 
 ## 语料库质量状态
+
+> ✅ **2026-08-04 更新（Lee–Park 2024）**: 非线性模型新增两条写作型变体：有界结果的“估计尺度—正式形状标准—可解释尺度”契约，以及“先声明几何对象、再直接比较条件转折点”的位置型曲线调节。Lee & Park 经用户专家审计为典型 U／倒 U 写作范文，两条变体均登记为 **VERIFIED**。同步加入术语与边界：quadratic vertex 不称 inflection point；二次项和交互项的符号不能替代端点斜率、内部转折点及直接差异检验。主 skill 路由不变。
+
+> ✅ **2026-08-03 更新（Schumacher–Keck–Tang 2020）**: 面板数据-OLS 新增“任期早期构念形成窗与后续结果观察窗完全分离 + 媒体/期权方法异质双代理”变体；`executive-confidence-operationalization` 同步补入 M4 生成骨架与两条诚实边界：窗口分离不等于外生性，双代理同向不等于构念纯度。该变体为单篇 EMERGING reference，不提升为默认核心规则。
+
+> ✅ **2026-08-03 更新（Kashmiri–Nicol–Arora 2017）**: `executive-confidence-operationalization` 增加“视觉显著性 + 传播显著性 + 相对现金/非现金薪酬”的 CEO narcissism 复合代理，并加入 succession-year exclusion、同一 CEO 跨期稳定性与同一企业继任 CEO 对照；`model-selection-comparison` 增加多结果 `measurement property → estimator → interpretation scale` 路由；M3 新增 product-harm crisis 与 recall timing/strategy/severity 的强制边界声明。均为单篇 EMERGING reference，不改变核心槽位。
+
+> ✅ **2026-08-03 更新（Vidal–Mitchell 2015；Moon–Tuli–Mukherjee 2023）**: 非线性模型新增“随机效应面板 Poisson：分布诊断—estimand 对齐”变体；IV-2SLS 新增“同行 IV 距离梯度组合”变体；两阶段模型新增“多内生性威胁—修正方法配对账本”变体。均为 reference-level / EMERGING，不替代既有 Tobit、地理 IV 或单一控制函数变体。
 
 > ✅ **2026-08-02 更新（Lee–Wu–Bednar, Organization Science）**: 首次填充自然实验-DiD：跨层级冲击映射与样本漏斗、有符号计数衍生 DV 的估计器选择、错位 DiD 三层诊断栈。第三项标记为 **LEGACY-DIAGNOSTIC**：Bacon 分解只诊断传统 TWFE，不替代 Callaway–Sant'Anna / Sun–Abraham 与平行趋势敏感性分析。
 
@@ -165,7 +173,7 @@ updated: 2026-08-02
 > ✅ **2026-07-22 更新**: 蒸馏 Ilicic & Brennan (2026, JM) "Political Ideology Shapes Consumer Responses to Addictive Products" 新增 2 个高价值变体（均单篇、待第二篇交叉验证声明已标注）——首次填充 consumer psychology 机制证明传统：
 >   - 实验 变体6：**测量过程+操纵过程双设计 + rival accounts battery** — Spencer, Zanna & Fong (2005) 双过程收敛机制设计；一次研究测量 9+ 竞争中介并逐一排除 + 随机化中介呈现顺序（区别于 slot-R8 的 1-2 个替代中介结果报告）
 >   - 多研究 变体5：**Empirical Plan 因果阶段化预告段** — foundation→effect→process→intervention 理论因果阶梯（区别于变体4 的方法论效度阶梯）；含 foundation pilot（现象建立型）+ "Having established... we next investigated whether..." 因果阶段转折句
->   - 配套 write-results：多研究 变体5（逐研究 Discussion 接力立项）、SEM-moderated-mediation（reverse-order mediation test 确认序列中介因果排序）
+>   - 配套 write-results：多研究 变体5（逐研究 Discussion 接力立项）、SEM-moderated-mediation（reverse-order mediation 仅作竞争排序敏感性检查；不能确认序列中介的时间或因果顺序）
 >   - 配套 write-theory：hypothesis_forms（序列中介叙事打包式）、hypothesis_derivation_patterns（counterintuitive direction-reversal via mechanism substitution）
 
 > ✅ **2026-07-22 更新**: 蒸馏 Kim & Lee (2026, SMJ) "Putting a Price on Mission" 新增 3 个高价值变体（均单篇、待第二篇交叉验证声明已标注）——empirical strategy / strategic human capital 风格（首篇多阶段决策管道 + WTP）：
@@ -174,8 +182,10 @@ updated: 2026-08-02
 >   - 文本构念测量 变体12：**手工二元编码 + 多源聚合 + embedded/peripheral 构念边界**（区别变体11 的边界案例披露，本变体理论上限定构念范围到 core identity）
 >   - 配套 write-results：OLS-FE 变体27（多阶段管道衰减 profile + 跨阶段对比句）、slot-R5（WTP 经济显著性双 benchmark）、slot-R6（Slough post-treatment selection 诚实边界）
 
-> **已填充变体**: 118个 (分布于 14个设计类型文件；本轮 pontikes2012 +1：实证对象构建 +1)
+> **已填充变体**: 120个 (分布于 14个设计类型文件；本轮 Bendig et al. 2024 +1：面板数据-OLS M7 +1)
 > **新设计类型解锁**: 同伴效应-网络效应、多行为者设计
+
+> ✅ **2026-08-04 更新（Bendig, Hensellek & Schulte 2024 ETP 蒸馏）**: 面板数据-OLS 变体28新增 **binary-panel GEE + all-zero panel retention + formal U-test chain**。该变体与既有 GEE 变体22构成“同估计器、不同选择理由”的对照：变体22服务于时不变 IV；变体28服务于保留始终无事件但焦点活动有变异的企业，并预先要求二次项、两端斜率、拐点与 Fieller 区间共同支持曲线。
 >
 > ✅ **2026-07-23 更新（sync from local backup）**: 从 pre-sync 备份补回两批本地蒸馏成果：
 >   - **VARX-PVAR 设计类型接入**（Borah & Tellis 2016, JMR）：8 个 Methods 变体（行业情境 4-reason 辩护、品牌选择 + quasi-experiment、第三方 NLP 数据 + 人工匹配、算法准确率双重验证、VARX 框架 3-reason 辩护、Granger causality 外生性论证、VARX 方程规格、VARX 估计细节）。配套 `../write-results/econometric-models/VARX-PVAR.md`（7 个 Results 变体）。

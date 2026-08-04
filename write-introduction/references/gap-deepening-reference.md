@@ -1,6 +1,6 @@
 # Gap 深化诊断参考（Tension 渲染时按需加载）
 
-> **何时加载**：`write-introduction` Phase 3 渲染 Tension 模块时加载本文件。本文件内容**不影响段落结构/能量/Conversation 策略**（那些由 Phase 1 第一层的 主 gap 决定），只在渲染 Tension 时提供措辞微调与风险预警。
+> **何时加载**：`write-introduction` Phase 3 渲染 Tension 模块时加载本文件。本文件只微调 Gap/Tension 的论证和风险预警；Conversation 策略由文献真实状态与作者构造目的独立选择，不由主 gap 决定。
 > **不在 Phase 1 诊断阶段全过**——Phase 1 只做 Step A（主 gap）+ Step B（次 gap），确定路由后进入 Phase 3，渲染 Tension 时才查本文件。
 
 ---

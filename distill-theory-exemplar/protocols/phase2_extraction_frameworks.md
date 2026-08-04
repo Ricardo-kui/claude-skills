@@ -46,14 +46,14 @@ write-theory v3.3.0 将每个假设推导段落定义为**交织式论证链（I
 | 要素 | 提取问题 | 失败信号 | 记录格式 |
 |------|---------|---------|---------|
 | **Topic Sentence 精准度** | 是否同时包含话题+核心观点+限定范围？是否使用 active verb + concrete subject？段首句是否在 15 词内说出核心判断？ | 段首句只陈述事实/只定义变量/无主语被动语态（"It is argued that"） | `{topic_sentence_quality: "高/中/低", word_count_to_core_claim: N, has_active_verb: true/false, has_concrete_subject: true/false}` |
-| **Reasoning-Literature 交织度** | 文献引用是否嵌入在机制链步骤中？每个引用是否总结了 argument 并链接到 concrete finding？ | 独立的文献罗列段落；citation 与 mechanism 步骤脱节；citation 替代机制推演 | `{interwoven: true/false, citations_count: N, argument_summarized_count: N, concrete_finding_linked_count: N, citation_vs_mechanism_alignment: "高/中/低"}` |
-| **Theoretical Reasoning 完整性** | 从 X 到 Y 的每一步因果推理是否明确写出？每步间是否有 explicit transition？ | 逻辑跳跃（省略关键步骤）；缺少 transition（从 A 直接跳到 C）；用 "obviously" 代替论证 | `{mechanism_steps_count: N, logical_jumps: ["从 X 到 M 缺少中间步骤"], transitions: ["Consequently", "Thus", "In turn"]}` |
-| **Hypothesis Transition 收敛质量** | 收束句是否总结了推理链而非简单重复 "we hypothesize"？ | 无理论收束直接 "we hypothesize"；Therefore 方向与机制矛盾 | `{has_theoretical_closure: true/false, transition_phrase: "Therefore/Thus/Accordingly", hypothesis_direction_matches_mechanism: true/false}` |
-| **Concrete Illustration（可选）** | 每个因果步骤后是否有 1 句 concrete illustration？ | 连续 2 个推理步骤无 illustration | `{illustration_count: N, illustration_types: ["案例", "场景", "比喻"], showing_gaps: ["步骤2无 illustration"]}` |
+| **Reasoning-Literature 交织度** | 文献引用是否嵌入推理并说明支持的前提/warrant/边界？实证引用可链接 finding，理论引用可概括 argument。 | 独立文献罗列；citation 与 reasoning move 脱节；citation 替代推演 | `{interwoven: true/false, citations_count: N, citation_functions_mapped: N, finding_or_argument_linked: N, citation_vs_mechanism_alignment: "高/中/低"}` |
+| **Theoretical Reasoning 完整性** | 从前提到预测的必要 reasoning moves 是否明确？相邻移动的逻辑能否恢复？ | 省略行动者/层级/时间转换；用连接词掩盖 A→C 跳跃 | `{reasoning_moves_count: N, logical_jumps: ["从 X 到 Y 缺少行动者过程"], transitions: ["Consequently", "Thus", "In turn"]}` |
+| **Hypothesis Transition 收敛质量** | 假设是否由推理链收敛，且单向/竞争关系使用合适的结论方式？ | 假设方向/条件与前文矛盾；竞争路径被 Therefore 抹成单向结论 | `{has_theoretical_closure: true/false, convergence_mode: "directional/competing/conditional", hypothesis_direction_matches_mechanism: true/false}` |
+| **Concrete Illustration（按需）** | 跨层、反直觉或抽象步骤是否需要 illustration？例子是否澄清而非替代理论？ | 读者无法模拟关键过程；案例被当成 warrant | `{illustration_count: N, illustration_types: ["案例", "场景", "比喻"], illustration_need: "needed_and_present/needed_but_missing/not_needed"}` |
 | **识别策略嵌入**（制度冲击类） | Theory 中是否嵌入了对识别假设的理论论证？ | Methods 描述了识别策略但 Theory 完全未提及 | `{identification_strategy_in_theory: true/false, iv_exclusion_restriction: "...", did_parallel_trends: "...", location: "P[段号]"}` |
 | **节奏变体标记** | 论文使用的是交织式还是分离式？是否功能等价？ | 分离式但文献与机制无明确链接 | `{rhythm_variant: "interwoven / separated / hybrid", functional_equivalent: true/false}` |
 
-**逻辑跳跃诊断**：逐句标记因果连接词（Consequently/Thus/Thereby/As a result/This leads to...）。缺少中间步骤 → 记录具体跳跃位置。
+**逻辑跳跃诊断**：逐句标记前提、过程转换、warrant、证据与预测，再检查相邻功能间是否缺少行动者/层级/时间转换。连接词只能显示关系，不能证明关系。
 
 **Topic Sentence 反模式示例提取**：
 - ❌ 被动语态例句："It is argued that CEO overconfidence affects firm risk." → 记录并标记为违反 Conversational Voice
@@ -295,11 +295,11 @@ phase_2_1_7_arrangement_pattern:
 
 #### Concrete Illustration 提取
 
-`write-theory` Phase 3（段落级 QC 检查表）把"不允许连续 2 个推理步骤无 illustration"作为写作规则。本节用于**提取范文如何执行这一规则**：它在哪些步骤放 illustration？用的是什么类型？哪些步骤省略了？这些提取结果可作为 `write-theory` Prose Craft 子协议的素材。
+本节提取范文在何种理论负荷下使用 illustration：它澄清了哪个跨层、反直觉或抽象步骤？哪些论文无需 illustration 仍能保持 reasoning trace？不得按固定句数把“没有例子”编码为失败。
 
 ```yaml
 concrete_illustration_pattern:
-  illustration_density: "每个推理步骤后 1 句 / 每 2 步 1 句 / 稀疏"
+  illustration_density: "dense / selective / none"
   illustration_types:
     - type: "公司案例"
       example: "When Apple faced [situation], [mechanism] produced [outcome]."
@@ -307,8 +307,8 @@ concrete_illustration_pattern:
       example: "A 1-standard-deviation increase in X corresponds to..."
     - type: "比喻"
       example: "This is akin to..."
-  missing_illustration_steps: ["步骤2", "步骤3"]
-  note_for_corpus: "如某类 illustration 在同类论文中高频出现，可沉淀为 write-theory 推荐"
+  illustration_need: "needed_and_present / needed_but_missing / not_needed"
+  note_for_corpus: "只有 illustration 与功能需求稳定共现时，才沉淀为有边界建议"
 ```
 
 #### 复杂假设的段落安排
@@ -332,7 +332,7 @@ complex_hypothesis_organization:
 
 ### 2.1.8 证据类型与功能编码（Evidence Typology & Function Coding）
 
-`distill-theory-exemplar` 已经检查 citation 是否总结 argument 并链接 concrete finding，但还没有系统分析**范文把什么当证据、证据执行什么功能、如何与论点交织**。本节提供一个编码框架，帮你在阅读时识别：顶刊作者是用 empirical finding 支撑机制？用 theoretical argument 做 warrant？还是用 negative evidence 排除替代解释？编码结果可沉淀为 `write-theory` 的证据使用指南。
+本节系统分析**范文把什么当证据、证据执行什么功能、如何与论点交织**。实证文献可提供 finding，理论文献可提供 warrant；二者不必同时出现在每条引用中。
 
 #### 证据类型学（用于编码范文中的证据）
 
@@ -356,24 +356,26 @@ complex_hypothesis_organization:
 | `pave` | 为后续推理铺路 | "This raises the question of whether..." |
 | `rebut` | 排除替代解释 | "This alternative account cannot explain..." |
 
-#### 文献引用三要素模板
+#### 文献引用功能匹配模板
 
-`write-theory` 要求每个引用总结 argument 并链接 concrete finding。提炼可复用的三要素句式：
+引用必须明确服务于当前推理任务。若来源是实证研究，可用 finding→premise；若来源是理论研究，可用 argument→warrant：
 
 ```text
 [Author] (year) found that [concrete finding] — [argument summary].
 This suggests that [mechanism step], because [theoretical reason].
 ```
 
-蒸馏时提取每个 citation 是否满足三要素：
+蒸馏时提取每个 citation 的功能匹配，而不是要求所有引用同时具备 finding 与 argument：
 
 ```yaml
-evidence_three_element_check:
+evidence_function_check:
   citation: "Smith (2010)"
   concrete_finding: "firms delaying recalls experienced 23% greater stock-price declines"
   argument_summary: "market punishes uncertainty more than bad news"
   link_to_current_mechanism: "consistent with our argument that X increases perceived uncertainty"
-  three_elements_complete: true/false
+  source_type: "empirical / theoretical / review / qualitative"
+  assigned_function: "premise / warrant / boundary / contrast / rebut"
+  function_match: true/false
 ```
 
 #### 蒸馏任务：证据地图
@@ -389,12 +391,14 @@ phase_2_1_8_evidence_map:
         type: "empirical_finding"
         function: "support"
         mechanism_step: "X → state A"
-        three_elements_complete: true
+        assigned_function: "premise"
+        function_match: true
       - citation: "Jones (2012)"
         type: "theoretical_argument"
         function: "pave"
         mechanism_step: "state A → state B"
-        three_elements_complete: true
+        assigned_function: "warrant"
+        function_match: true
     evidence_type_distribution: {"empirical_finding": 2, "theoretical_argument": 1}
     evidence_function_distribution: {"support": 2, "pave": 1}
     evidence_placement: "embedded_in_mechanism"  # 或 "separate_literature_block" / "front_loaded"
