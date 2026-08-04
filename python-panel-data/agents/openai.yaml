@@ -1,5 +1,0 @@
-interface:
-  display_name: Python Panel Data
-  short_description: Panel data analysis with Python using linearmodels and pandas
-  default_prompt: Use $python-panel-data to panel data analysis with Python using
-    linearmodels and pandas.

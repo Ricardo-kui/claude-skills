@@ -1,5 +1,0 @@
-interface:
-  display_name: DID Analysis
-  short_description: Guides practitioners through modern Difference-in-Differences...
-  default_prompt: Use $did-analysis to guides practitioners through modern Difference-in-Differences
-    (DiD) causal inference analysis in R.

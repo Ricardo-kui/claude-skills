@@ -287,11 +287,215 @@ honest_results <- createSensitivityResults_relativeMagnitudes(
 4. **Power**: Non-significant pre-trends does NOT mean parallel trends holds; low power makes pre-test uninformative
 5. **Sensitivity**: Don't skip -- crucial for credibility; low breakdown M = fragile results
 
-## Advanced Reference
+## Cross-Package Coefficient Extraction Cookbook
 
-Use the bundled reference files for estimator-specific gotchas, coefficient extraction recipes, and package-level details:
+Different estimators store results differently. Use these patterns to extract `betahat`, `sigma`, and `tVec` for HonestDiD/pretrends.
 
-- `references/did-step-1-treatment-structure.md` through `references/did-step-5-sensitivity-inference.md` for the detailed 5-step workflow.
-- `references/did-advanced-methods.md` and `references/did-troubleshooting.md` for edge cases and fixes.
-- `references/package-versions.md` and `references/packages/` for installation and package-specific notes.
+**Time Period Parsing** (works across estimators):
+```r
+extract_time_periods <- function(coef_names) {
+  patterns <- c(
+    ".*::([+-]?[0-9]+)$",               # fixest sunab: "year::3" -> 3
+    "^([+-]?[0-9]+)$",                  # did: "-2" -> -2
+    ".*[Tt]ime[^0-9+-]*([+-]?[0-9]+)$"  # generic: "Time_to_treat-3" -> -3
+  )
+  for (pat in patterns) {
+    m <- regmatches(coef_names, regexec(pat, coef_names))
+    if (all(lengths(m) > 1)) {
+      tVec <- as.numeric(vapply(m, `[[`, character(1), 2))
+      if (!any(is.na(tVec))) return(tVec)
+    }
+  }
+  return(NULL)  # No pattern matched -- handle in calling code
+}
+```
 
+**From fixest (Sun-Abraham):**
+```r
+# coef() and vcov() have mismatched dimensions for sunab models.
+# Use sunab_beta_vcv() to get properly aggregated, conformable objects.
+bv      <- HonestDiD:::sunab_beta_vcv(sa_model)
+betahat <- bv$beta
+sigma   <- bv$sigma
+tVec    <- extract_time_periods(names(coef(sa_model)))
+```
+
+**From did (Callaway-Sant'Anna):**
+```r
+es <- aggte(cs_out, type = "dynamic")
+betahat <- es$att.egt
+names(betahat) <- es$egt
+sigma <- diag(es$se^2)  # diagonal covariance from SEs
+tVec  <- as.numeric(es$egt)
+```
+
+**From didimputation (BJS):**
+```r
+# did_imputation() returns a data.table, not a fixest object.
+# Extract coefficients and SEs from the table columns directly.
+betahat <- bjs_model$estimate
+names(betahat) <- bjs_model$term
+sigma   <- diag(bjs_model$std.error^2)
+tVec    <- extract_time_periods(bjs_model$term)
+```
+
+## Data Preparation Gotchas Per Estimator
+
+Each estimator has specific requirements for the `gname` (first treatment period) variable:
+
+| Estimator   | Never-Treated Coding | Special Requirements |
+|-------------|---------------------|----------------------|
+| CS (`did`)  | `gname = 0`         | Must not be NA for never-treated |
+| SA (`fixest`) | `gname = Inf`      | NA drops rows; convert NA → Inf |
+| BJS (`didimputation`) | `gname = max(time)+10` | Balanced panel required; data.table format |
+| Gardner (`did2s`) | Derive `treat` indicator | `treat = 1` when `time >= gname & gname > 0` |
+| Staggered   | `gname = Inf`       | Must not be 0 or NA for never-treated |
+| DCDH (`DIDmultiplegt`) | `gname = 0` | Binary 0/1 treatment indicator needed |
+
+**Sampling/Population Weights Per Estimator:**
+
+| Estimator | Parameter | Syntax |
+|-----------|-----------|--------|
+| CS (`did`) | `weightsname` | `att_gt(..., weightsname = "W")` |
+| SA (`fixest`) | `weights` | `feols(..., weights = ~W)` |
+| BJS (`didimputation`) | `wname` | `did_imputation(..., wname = "W")` |
+| Gardner (`did2s`) | `weights` | `did2s(..., weights = "W")` |
+| Staggered | — | Not supported; use CS or Gardner |
+
+> **When to weight**: Omit for unit-level effects; include population weights for population-representative effects (e.g., mortality across states of varying size).
+
+**BJS Balanced Panel Preparation** (critical -- didimputation will fail without this):
+```r
+library(data.table)
+
+# 1. Create balanced grid
+unique_ids   <- sort(unique(df[[idname]]))
+unique_times <- sort(unique(df[[tname]]))
+balanced <- expand.grid(id = unique_ids, time = unique_times,
+                        stringsAsFactors = FALSE)
+names(balanced) <- c(idname, tname)
+
+# 2. Merge with original data
+merged <- merge(balanced, df, by = c(idname, tname), all.x = TRUE)
+
+# 3. Convert to data.table (required by didimputation)
+dt <- data.table::as.data.table(merged)
+
+# 4. Set never-treated gname to max(time) + 10 (not 0, NA, or Inf)
+max_t <- max(dt[[tname]], na.rm = TRUE)
+dt[[gname]][dt[[gname]] == 0 | is.na(dt[[gname]])] <- max_t + 10
+
+# 5. Coerce column types (all required)
+dt[[idname]] <- as.integer(dt[[idname]])
+dt[[tname]]  <- as.integer(dt[[tname]])
+dt[[gname]]  <- as.numeric(dt[[gname]])
+dt[[yname]]  <- as.numeric(dt[[yname]])
+```
+
+## Package Installation Reference
+
+```r
+# Core estimators (all on CRAN)
+install.packages(c("did", "fixest", "did2s", "staggered"))
+install.packages("didimputation")
+
+# Diagnostics (CRAN)
+install.packages(c("bacondecomp", "TwoWayFEWeights"))
+
+# Visualization & covariate balance (CRAN)
+install.packages(c("panelView", "cobalt"))
+
+# Sensitivity & power (CRAN + GitHub)
+install.packages(c("HonestDiD", "DRDID"))
+remotes::install_github("jonathandroth/pretrends")  # GitHub only
+
+# Advanced methods (CRAN + GitHub)
+install.packages(c("etwfe", "YatchewTest", "gsynth"))
+
+# DIDmultiplegtDYN requires polars (Rust-based, not on CRAN)
+# Step 1: Install Rust if needed (macOS: brew install rust)
+# Step 2: Install polars from r-universe
+install.packages("polars", repos = "https://community.r-multiverse.org")
+# Step 3: Install DIDmultiplegtDYN and DIDmultiplegt
+install.packages(c("DIDmultiplegtDYN", "DIDmultiplegt"))
+# IMPORTANT: Always load polars before DIDmultiplegtDYN (namespace bug in v2.3.0)
+# library(polars); library(DIDmultiplegtDYN)
+
+# Synthetic control methods (GitHub only)
+remotes::install_github("synth-inference/synthdid")
+```
+
+## Reference Files (`references/`)
+
+### Step Guides
+
+| File | Contents |
+|------|----------|
+| `references/did-master-guide.md` | Condensed practitioner's guide to the 5-step workflow |
+| `references/did-step-1-treatment-structure.md` | Treatment-structure assessment and routing |
+| `references/did-step-2-diagnostics.md` | TWFE diagnostics workflow |
+| `references/did-step-3-estimation.md` | Robust-estimator selection and execution |
+| `references/did-step-4-power-analysis.md` | Pre-trends power analysis |
+| `references/did-step-5-sensitivity-inference.md` | HonestDiD sensitivity and final inference |
+| `references/did-advanced-methods.md` | DIDmultiplegt/DYN, gsynth, synthdid, etwfe, YatchewTest |
+| `references/did-troubleshooting.md` | Runtime errors, installation failures, and fixes |
+| `references/package-versions.md` | Version tracking for all 17 packages |
+
+### Package Documentation (`references/packages/`)
+
+Each package has three files. Always read `*_quick_start.md` first, then open `*.md` only for the needed sections.
+
+- **`*_quick_start.md`**: Function map, workflow, GitHub source pointers
+- **`*.md`**: Full CRAN-level API documentation
+- **`*-additional.md`**: Supplementary notes from GitHub repos
+
+| Package | Quick Start | Full Docs | Additional |
+|---------|-------------|-----------|------------|
+| bacondecomp | `bacondecomp_quick_start.md` | `bacondecomp.md` | `bacondecomp-additional.md` |
+| TwoWayFEWeights | `TwoWayFEWeights_quick_start.md` | `TwoWayFEWeights.md` | `TwoWayFEWeights-additional.md` |
+| did | `did_quick_start.md` | `did.md` | `did-additional.md` |
+| fixest | `fixest_quick_start.md` | `fixest.md` | `fixest-additional.md` |
+| didimputation | `didimputation_quick_start.md` | `didimputation.md` | `didimputation-additional.md` |
+| did2s | `did2s_quick_start.md` | `did2s.md` | `did2s-additional.md` |
+| staggered | `staggered_quick_start.md` | `staggered.md` | `staggered-additional.md` |
+| HonestDiD | `HonestDiD_quick_start.md` | `HonestDiD.md` | `HonestDiD-additional.md` |
+| pretrends | `pretrends_quick_start.md` | `pretrends.md` | `pretrends-additional.md` |
+| DRDID | `DRDID_quick_start.md` | `DRDID.md` | `DRDID-additional.md` |
+| DIDmultiplegt | `DIDmultiplegt_quick_start.md` | `DIDmultiplegt.md` | `DIDmultiplegt-additional.md` |
+| DIDmultiplegtDYN | `DIDmultiplegtDYN_quick_start.md` | `DIDmultiplegtDYN.md` | `DIDmultiplegtDYN-additional.md` |
+| gsynth | `gsynth_quick_start.md` | `gsynth.md` | `gsynth-additional.md` |
+| synthdid | `synthdid_quick_start.md` | `synthdid.md` | `synthdid-additional.md` |
+| etwfe | `etwfe_quick_start.md` | `etwfe.md` | `etwfe-additional.md` |
+| panelView | `panelView_quick_start.md` | `panelView.md` | `panelView-additional.md` |
+| YatchewTest | `YatchewTest_quick_start.md` | `YatchewTest.md` | `YatchewTest-additional.md` |
+
+## Simulating Test Data for DiD Analysis
+
+When the user needs example data to test their code or learn the workflow:
+
+```r
+create_did_example_data <- function(n_units = 100, n_periods = 10,
+                                    treatment_period = 6, seed = 12345) {
+  set.seed(seed)
+  data <- expand.grid(unit_id = 1:n_units, time = 1:n_periods)
+
+  # Staggered treatment: 30% never-treated, 4 treated cohorts
+  n_never <- floor(n_units * 0.3)
+  remaining <- n_units - n_never
+  cohort_times <- treatment_period + c(-2, 0, 2, 3)
+  cohort_sizes <- as.integer(c(0.2, 0.3, 0.3, 0.2) * remaining)
+  cohort_sizes[length(cohort_sizes)] <- remaining - sum(cohort_sizes[-length(cohort_sizes)])
+  first_treat <- c(rep(NA, n_never),
+                   unlist(mapply(rep, cohort_times, cohort_sizes)))
+  data$first_treat <- first_treat[data$unit_id]
+  data$treated <- ifelse(is.na(data$first_treat), 0,
+                         ifelse(data$time >= data$first_treat, 1, 0))
+
+  # Outcome with true ATT = 2.0
+  unit_fe <- rnorm(n_units, mean = 10, sd = 2)
+  time_fe <- rnorm(n_periods, mean = 0, sd = 0.5)
+  data$outcome <- unit_fe[data$unit_id] + time_fe[data$time] +
+                  2.0 * data$treated + rnorm(nrow(data), sd = 1)
+  data
+}
+```
