@@ -5,9 +5,10 @@ source_papers:
   - "wowak2025_tmt_political_ideology_ms"
   - "qiao_hiatt_sine2026 (SMJ, 2026): control-function residual as nonlinear DWH test + finite-sample-bias caveat"
   - "moon_tuli_mukherjee_2023_jm (Journal of Marketing): robustness exception ledger distinguishing stable, form-sensitive, and fragile inferences"
-variants_count: 7
+  - "Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ (Strategic Management Journal): multi-DV parallel IV climax + selective moderation attenuation + kind-vs-degree construct battery"
+variants_count: 10
 created: 2026-05-18
-updated: 2026-08-03
+updated: 2026-08-05
 ---
 
 # IV-2SLS — Results 骨架
@@ -103,3 +104,46 @@ updated: 2026-08-03
 **诚实边界**: partial→complete mediation 不能简单称为“更强”，而应标记为机制分解的规格敏感性；基准模型仅边际显著、替代模型为 null 的假设不可继续写成普遍支持；若符号反转或核心主效应消失，应升级为 substantive inconsistency，而非 qualification。
 
 **适用**: IV/2SLS、control-function、mediation 或多 moderator 研究；替代工具、分类或测量可能改变路径形态但不必推翻全部 headline 的情境。
+
+### 变体 8: R3 多 DV 平行 climax — 同 IV、设计匹配幅度翻译（% / 货币 / OR）(EMERGING)
+
+**来源论文**: Zorn, Shropshire, Martin, Combs & Ketchen (2017, SMJ)
+**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**写入日期**: 2026-08-05
+**槽位**: R3
+**骨架**:
+> Table [X] presents the main effects of [endogenous structure] on [DV_family_1], [DV_family_2], and [DV_family_3] (Hypotheses [H_set]). Hypothesis [Ha] predicted that [structure] would [increase/decrease] [DV_a]. Results in Model [1] support Hypothesis [Ha] (b = [value], p = [exact_p]). [Instrumented continuous translation:] [Units] with [structure] [received / exhibited] roughly [percentage] [greater/lower] [DV_a] than peers; given mean [pay/level] of [currency_mean], this implies about [currency_delta] in [excess/gap]. Hypothesis [Hb] predicted a larger [gap_DV]; Model [2] supports this claim (b = [value], p = [exact_p]), a [currency_delta] larger gap relative to the sample mean gap of [currency_mean]. [Optional mechanism check:] We find no relationship between [structure] and [component_DV], suggesting the gap arises from higher [focal actor] [pay] rather than lower [peer group] [pay]. Hypothesis [H_binary] predicted greater [rare event] likelihood. Model [3] supports Hypothesis [H_binary] (b = [value], p = [exact_p]); the odds ratio implies [structure] [units] are [OR] times as likely to experience [rare event]. Hypothesis [H_perf] anticipated weaker [performance]. Models [4]–[5] support Hypothesis [H_perf] ([perf_1]: b = [value], p = [exact_p]; [perf_2]: b = [value], p = [exact_p]). In practical terms, [perf_1] is roughly [percentage] lower for [structure] [units], corresponding to about [currency_delta] less [net income] at the sample mean. [First-stage diagnostics appear in the table notes / text: first-stage F = [values]; Hansen J = [values], failing to reject exogeneity.]
+
+**与原骨架差异**: 变体 1 是竞争假设赢家报告；变体 4 是非线性 IV；本变体是**同一内生结构、多结果家族的平行四拍**，且幅度翻译按估计器匹配（2SLS 连续 → %/货币；Logit → OR；绩效 → % + 绝对美元）。诚实边界：稀有二元主分析若非 IV，因果动词须弱于 instrumented 连续结果；不可把所有 DV 写成同等 “effect of”；货币翻译须锚定样本均值并标明假设（“given mean…”）。
+
+**适用**: 治理/组织设计同时影响薪酬、违规与绩效等多结果的 IV/2SLS 面板。
+
+**节奏标记**: [假设提醒][系数+精确p][设计匹配幅度][支持判断] × N 个 DV；诊断嵌入表注。
+
+### 变体 9: R4/R6 调节衰减 — 交互项 → mean/±1SD 条件斜率 → 边际支持诚实 → 跨 DV 选择性 null (EMERGING)
+
+**来源论文**: Zorn, Shropshire, Martin, Combs & Ketchen (2017, SMJ)
+**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**写入日期**: 2026-08-05
+**槽位**: R4 / R6
+**骨架**:
+> Table [Y] reports moderation by [external monitor_1] and [external monitor_2] (Hypotheses [H4–H5]). We discuss each interaction and then whether the conditional effect of [structure] differs from zero at different levels of the moderator ([citation for conditional-effects protocol]). Hypothesis [H4a-i] predicted that [monitor_1] attenuates the positive association between [structure] and [DV_a]. The interaction in Model [1] is [direction] (b = [value], p = [exact_p]). The slope of [structure] at the mean of [monitor_1] ([mean_level]) is [marginal/significant] (b = [value], p = [exact_p]). As shown in Figure [1], the slope at −1 SD ([low_level]) is [b, p] and at +1 SD ([high_level]) is [b, p]. Overall, Hypothesis [H4a-i] received [marginal / full] support. Hypothesis [H4a-ii] predicted attenuation for [gap_DV]; this hypothesis was not supported (b = [value], p = [exact_p]). Hypothesis [H4b] for [rare_DV] was not supported (b = [value], p = [exact_p]). Hypothesis [H4c] for [performance] is supported: the interaction predicts [perf_1] (b = [value], p = [exact_p]) and [perf_2] (b = [value], p = [exact_p]); conditional slopes at the mean and at ±1 SD remain [meaningful/marginal] and are plotted in Figure [2]. [Repeat parallel block for monitor_2.] To summarize, [structure] harms [DV_set_supported], but negative effects on [attenuated_DVs] are reduced when [external monitors] are stronger; we do not find attenuation for [null_DVs], suggesting external actors may be selective in where they exert pressure—or that pressure is not always effective.
+
+**与原骨架差异**: OLS-FE 变体 9 给单侧边际效应；变体 11 给边际显著 90% CI；Moon 变体 7 是稳健性例外账本。本变体专用于 **IV 主效应之后的双外部治理调节**：强制 (1) 交互项；(2) mean/±1SD 条件斜率；(3) 图；(4) 「marginal support」诚实措辞（不得把 p≈.06–.08 升级为 full support）；(5) 跨 DV **选择性 null** 提升为理论边界而非遗漏。诚实边界：条件斜率在调节模型中系数尺度可能膨胀——须同时报告交互显著性与条件斜率，不可只挑显著端；null 调节不可事后改写成“支持部分路径”而不改假设判定。
+
+**适用**: 内部治理弱点 × 外部监督（分析师、机构投资者、媒体、审计）衰减假说；多 DV 时预期衰减并非均匀。
+
+**节奏标记**: [交互][条件斜率 mean][±1SD+图][marginal/full/not supported][跨DV选择性收束]
+
+### 变体 10: R7 kind-vs-degree 构念电池 — dual-category 反转 / 连续独立性子样本 / Chow 跳跃检验 (EMERGING)
+
+**来源论文**: Zorn, Shropshire, Martin, Combs & Ketchen (2017, SMJ)
+**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**写入日期**: 2026-08-05
+**槽位**: R7
+**骨架**:
+> We theorized that [focal structure] is categorically different from other [board/organizational] types—a change in kind rather than degree. Accordingly, we verify that results are not simply a linear relationship in which each additional [insider / continuous unit] improves outcomes by similar amounts. First, the practical range of [count variable] is narrow: only [pct_3]% have [three], [pct_4]% have [four], and fewer than [pct_5]% have [five or more], so little information is lost by dichotomizing beyond [focal category]. Second, a quadratic in [count] yields no curvilinear effects, consistent with categorical uniqueness. Third, replacing [focal indicator] with [adjacent category: e.g., dual-insider boards] produces a distinct pattern: [adjacent category] is [not positively related / negatively related] to [DV_a] (b = [value], p = [exact_p]), [direction] for [gap_DV] (b = [value], p = [exact_p]), [reversed] for [rare_DV] (b = [value], p = [exact_p]), and [null/weak] for [performance]—across outcomes, having at least one [non-focal insider] appears beneficial relative to [focal structure]. Fourth, in the subsample of non-[focal-structure] [units], a continuous measure of [independence / insider count] becomes insignificant for [DV_a], [gap_DV], and [rare_DV], though not for [performance]; Chow tests show that moving from [one] to [two] [insiders] has significantly larger effects than moving from [two] to [three or more] (F = [value_1] and [value_2] for [perf_1] and [perf_2]). Taken together, these results support treating [focal structure] as an empirically unique phenomenon rather than a point on a linear [independence] gradient.
+
+**与原骨架差异**: 常见 R7 按估计器/样本/测量威胁组织；本变体是**构念操作化威胁**专用电池——证明二元「极端结构」不可还原为 continuous majority-independence / count。诚实边界：dual-category 模型须报告自身 first-stage 诊断（不可借用主模型 F）；Chow / 子样本检验是构念辩护而非主假设的额外支持；若连续测量在非焦点子样本仍显著且无跳跃，应削弱 kind 主张。
+
+**适用**: Methods 已声明 kind ≠ degree 的离散治理/组织结构研究（见 write-methods 面板数据-OLS 变体 32）。

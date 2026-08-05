@@ -8,7 +8,7 @@
 
 | 文件 | canonical_id | 核心特征 | 验证状态 | 代表范文 |
 |------|-------------|---------|---------|---------|
-| `01-general-theory-practice.md` | `01-general-theory-practice` | 分别论证理论和实践重要性 | ROBUST | 多篇顶刊 |
+| `01-general-theory-practice.md` | `01-general-theory-practice` | 分别论证理论和实践重要性（含变体 G：制度化实践 critically-evaluate，EMERGING） | ROBUST | 多篇顶刊；zorn2017 (SMJ) |
 | `06-two-reason-enumerated.md` | `06-two-reason-enumerated` | 枚举式双理由（理论/实践） | VERIFIED | — |
 
 ## 量化损失/危机

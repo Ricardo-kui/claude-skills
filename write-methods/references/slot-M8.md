@@ -15,16 +15,28 @@ To address concerns about [threat], we [design feature/test]. This check assesse
 Our identification strategy relies on [source of variation]. [Shock/event/policy] creates variation in [treatment] that is plausibly exogenous to [outcome] because [reason]. The key identifying assumption is that [treated and control units] would have followed similar trends absent [treatment]. We assess this assumption in the Results section using [event-study/leads-lags] specifications. We first estimate a parsimonious specification because [controls] may be affected by [treatment].
 ```
 
-**固定效应局限诚实说明变体**（hoffmann2024 型 — 条件 Logit 不能加入 firm FE 时的诚实辩护）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：省略或脚注提及
+**固定效应局限诚实说明变体**（hoffmann_cheong_phan_zurbruegg2024 型 — 二元 rare outcome 下无法加入 firm FE）： 🔬 EXPERIMENTAL（1 篇范文，2026-08-05 重蒸馏）⚠️ 保守替代：省略或脚注提及
 ```text
-An important methodological note concerns our use of [industry/state] rather than [firm] fixed effects. Ideally, we would include [firm] fixed effects to absorb all time-invariant firm-level heterogeneity. However, in a conditional logit framework with a binary dependent variable, [firm] fixed effects create an incidental parameters problem: the number of fixed effects grows with sample size, producing inconsistent estimates. We therefore include [industry/state] fixed effects, which absorb unobserved heterogeneity at the [industry/state] level, and we control for observable time-varying [firm] characteristics — including [examples: e.g., firm size, leverage, R&D intensity, profitability] — that may correlate with both [treatment] and [outcome]. While this approach does not eliminate all firm-level confounding, the staggered adoption design and the inclusion of [number] time-varying firm controls provide meaningful mitigation. We also report robustness checks using a linear probability model with [firm] fixed effects, which yields [qualitatively similar / directionally consistent] results, increasing confidence that our findings are not artifacts of unobserved firm heterogeneity.
+It is not possible to include [unit] fixed effects given how our data are structured. Our sample includes [units] that never experience the binary outcome alongside [units] that do, leaving no within-[unit] variation in the dependent variable for the former group; [unit] fixed effects would therefore be perfectly collinear with the outcome. Consistent with prior work in comparable settings ([citation]), we instead include year fixed effects to absorb common temporal shocks and industry fixed effects to absorb time-invariant industry heterogeneity — for example, [industry-specific confound: e.g., product types with different baseline hazard of the outcome]. We further control for observable time-varying [unit] characteristics, including [named controls], that may correlate with both [treatment] and [outcome]. While this approach does not eliminate all [unit]-level confounding, the staggered adoption design and these controls provide meaningful mitigation.
 ```
 
 **固定效应局限诚实说明 QC**:
 - 必须诚实说明为什么不能使用 firm FE（不能假装不存在这个问题）
+- **禁止误引 incidental parameters**：若真实理由是 always-zero outcome → perfect collinearity，必须如实写 collinearity，而非泛化为 incidental parameters
 - 必须命名具体的 time-varying firm controls 来辩护替代方案（不能只写 "we control for firm characteristics"）
-- 必须报告替代估计量结果（如 LPM + firm FE）作为 robustness
+- 必须给出 industry FE 的 because（如产品类型/监管强度差异），不能只说 "we use industry FE"
 - 不能声称 "we fully address endogeneity" — 使用 "meaningful mitigation" / "increase confidence" 等诚实措辞
+
+**Staggered DiD 识别栈变体**（hoffmann_cheong_phan_zurbruegg2024 型 — model-free → 机制检验 → 平行趋势 → 安慰剂）： 🔬 EXPERIMENTAL（1 篇范文，2026-08-05 重蒸馏）⚠️ 保守替代：自然实验/DiD 变体
+```text
+We follow [Goldfarb, Tucker & Wang 2022] guidelines for quasi-experiments in marketing. Our identification relies on staggered adoption of [law/policy] across [jurisdictions], creating variation in [treatment construct] while [assignment rule: e.g., incorporation state] determines exposure.
+
+Before estimating regressions, we present model-free evidence comparing mean [outcome] for exposed versus unexposed [unit-years]. Although our theory centers on [mechanism/threat construct], prior literature documents that [observable manipulation check: e.g., actual filings/behavior] declines significantly after adoption ([citations]), supporting that the shock operates through the theorized channel.
+
+The key DiD assumption is parallel trends. We add pretreatment indicators [Pre(-3)], [Pre(-2)], and [Pre(-1)] and interact each with [TreatGroup]; insignificant pretreatment interactions indicate no detectable pretrend. We also test whether adoption coincided with unrelated changes in [outcome] by conducting a falsification test: we randomly reassign each [unit]'s [jurisdiction attribute] to another [jurisdiction] with different adoption timing, reestimate the model, save the test statistic, and repeat [N] times. If state-level confounds drive the results, placebo assignments should often reproduce significance; the distribution of placebo statistics relative to the true estimate supports identification.
+
+Finally, while adoption itself may not be random, prior work shows that adoption timing is plausibly exogenous ([citation]) and does not affect [assignment rule] ([citation]), reducing selection concerns.
+```
 
 **DiD 置换检验预览补充**（可选，置于自然实验/DiD 变体后）：
 ```text

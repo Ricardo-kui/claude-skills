@@ -4,11 +4,12 @@ status: 📋 TEMPLATE
 source_papers:
   - "pfarrer_pollock_rindova_2010_tale_of_two_assets_amj (Academy of Management Journal): RE logit odds-ratio reporting, matched-pair hypotheses across positive/negative surprise tables, event-study CAR subgroup comparisons"
   - "malik_wang_martin_gomez-mejia_2025_mixed_gambles_jm (Journal of Management): Heckman probit two-stage + marginal effects CI-based testing + 1-SD→percentage point economic significance + dual DV parallel reporting"
-  - "bendig_hensellek_schulte_2024_etp (Entrepreneurship Theory and Practice): binary-GEE inverted-U formal test + conditional probability curves + probability-to-cost benchmark + threat-indexed robustness"
+  - "bendig_hensellek_schulte_2024_etp (Entrepreneurship Theory and Practice): binary-GEE inverted-U formal test + dual parallel curves + shift-vs-steepen differential moderation + probability-to-cost benchmark + threat-indexed robustness"
   - "lee_park_2024_giving_up_learning_smj (Strategic Management Journal): fractional-logit inverted-U evidence chain + turning-point-shift moderation + selective-path mechanism corroboration"
-variants_count: 13
+  - "hoffmann_cheong_phan_zurbruegg2024_jm (Journal of Marketing): DiD+conditional logit OR→relative probability + low-base-rate honesty + moderator attenuation % + two-step rival exclusion"
+variants_count: 18
 created: 2026-05-18
-updated: 2026-08-04
+updated: 2026-08-05
 ---
 
 # Logit-Probit-Ordered-Probit — Results 骨架
@@ -117,7 +118,7 @@ updated: 2026-08-04
 
 **与原骨架差异**: 变体2只处理线性 logit 主效应；OLS-FE 的曲线变体要求同类三步，但不能直接搬用线性系数解释。本变体为二元 GEE/logit 明确区分：(1) 链接函数上的系数形状证据；(2) 正式端点斜率与拐点区间；(3) 预测概率展示。
 
-**诚实边界**: 二次项显著不是充分证据；拐点须在有观测支持的范围内。形状检验不能确认理论机制，极端区间稀疏时应展示观测密度或置信带。
+**诚实边界**: 二次项显著不是充分证据；拐点须在有观测支持的范围内。形状检验不能确认理论机制，极端区间稀疏时应展示观测密度或置信带。当 Y 为不利事件（recall、failure、crisis）时，顶点是中间强度的最大风险区，不是绩效曲线意义上的“最优中间”；不得套用 stuck-in-the-middle 的 Discussion 措辞代替概率顶点报告，但应避免把 vertex 写成 desirable optimum。
 
 ### 变体 10: R4/R5 条件曲线几何翻译 + 概率—成本—价值 benchmark (1篇高价值)
 **来源论文**: Bendig, Hensellek & Schulte (2024, Entrepreneurship Theory and Practice)
@@ -129,9 +130,9 @@ updated: 2026-08-04
 >
 > To assess substantive magnitude, moving from [baseline X] to [curve location] changes the predicted probability of Y by [Δ percentage points]. Using an externally sourced average event cost of [C] as a transparent benchmark, this probability difference corresponds to an expected-cost magnitude of [Δp × C]. Relative to the average value of one [activity/deal], the implied risk cost is approximately [share]. This calculation illustrates scale; it is not a firm-specific realized-loss estimate.
 
-**与原骨架差异**: 不把曲线调节压缩为“二次交互显著”。先用几何词汇说明究竟是上移、变陡或拐点移动，再把预测概率接到成本与活动价值 benchmark，形成从统计形状到管理后果的完整接力。
+**与原骨架差异**: 不把曲线调节压缩为“二次交互显著”。先用几何词汇说明究竟是上移、变陡或拐点移动，再把预测概率接到成本与活动价值 benchmark，形成从统计形状到管理后果的完整接力。单 IV 条件曲线用本变体；同一 W 下两 IV 预测不同几何（shift vs steepen）时改用变体 18。
 
-**诚实边界**: 外部平均成本包含情境与测量误差，必须披露来源和假设；不得把期望成本写成已观察因果损失。若 ±1 SD 超出 X/W 支持范围，应使用实际分位数或范围内百分比。
+**诚实边界**: 外部平均成本包含情境与测量误差，必须披露来源和假设；不得把期望成本写成已观察因果损失。若 ±1 SD 超出 X/W 支持范围，应使用实际分位数或范围内百分比。X²×W 系数符号本身不能区分垂直平移与变陡；几何裁决必须落到图或条件预测。
 
 ### 变体 11: R7 曲线关系的六威胁稳健性梯 (1篇高价值)
 **来源论文**: Bendig, Hensellek & Schulte (2024, Entrepreneurship Theory and Practice)
@@ -165,10 +166,60 @@ updated: 2026-08-04
 **与原骨架差异**: 不用泛化的 additional analysis 堆叠更多相关性，而是选择一个能“保留机会、移除动机损耗”的对照暴露，使补充证据对应曲线两段的机制分工。
 **诚实边界**: 该写法只允许 `consistent with`、`corroborates` 或 `helps distinguish`；访谈、替代暴露和 null quadratic 均不能升级为因果中介证据。
 
+### 变体 14: R3 DiD+Logit 主效应 — OR→相对概率 + 低基准诚实 + stakes（2026-08-05）
+**来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (Journal of Marketing)
+**验证状态**: EMERGING（单篇；2026-08-05 重蒸馏校准）
+**story_fidelity**: `section_variant` / climax
+**槽位**: R3
+**骨架**:
+> "Across model specifications, [treatment × post] is consistently [direction] and significant. The odds ratio is [OR], implying [X]% [less/more] likelihood of [outcome]. While sizeable in relative terms, the absolute change is modest given the low base probability ([Y]%). However, given serious consequences for [stakeholders], we document an important effect. Thus, H[x] is supported."
+**与原骨架差异**: 变体2 只到 likelihood 翻译；本变体强制 **低基准率 modest absolute 诚实句** + **stakes 论证**，适用于稀有二元结果（recall, fraud, IPO withdrawal）。
+**诚实边界**: stakes 论证不能替代幅度量化；若绝对变化可计算百分点，应在 appendix 报告。
+
+### 变体 15: R5 调节 — 25th→75th 处理效应衰减 %（2026-08-05）
+**来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (Journal of Marketing)
+**验证状态**: EMERGING（单篇）
+**槽位**: R5（嵌入 R4 调节段）
+**骨架**:
+> "Moving [moderator] from the 25th to the 75th percentile reduces the impact of [treatment] on [outcome] likelihood by [X]%, based on average predicted probabilities across the sample distribution."
+**与原骨架差异**: 变体7 报告 1-SD→概率百分点；本变体报告 **treatment-effect attenuation %**，与三向 DiD 交互配套。
+**诚实边界**: 衰减 % 的计算方法须在 Methods 或 footnote 可追溯（margins/average predicted probabilities）。
+
+### 变体 16: R7 替代解释 — CONTROL + INTERACT 两步 + need/willingness 收束（2026-08-05）
+**来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (Journal of Marketing)
+**验证状态**: EMERGING（单篇）
+**槽位**: R7
+**骨架**:
+> "We rule out [rival: higher quality → lower need] through two steps: (1) CONTROL for [rival proxy]—[treatment × post] remains significant; (2) INTERACT [treatment × post] with [rival proxy]—interaction not significant. Combined, findings reflect lower willingness rather than lower need."
+**与原骨架差异**: 变体4 为 Heckman/GEE 结构；本变体专用于 **理论 rival 区分 observable need vs latent willingness** 的 DiD/Logit 设计。
+**诚实边界**: OPERATIONAL_IMPROVEMENT 类 rival 若主效应为正（更多 mention → 更多 recall），须在 Results 一句交代，避免读者混淆方向。
+
+### 变体 17: R3 双焦点 IV 平行倒 U — 分模型→联合模型→并列表 U-test（2026-08-05 gap audit）
+**来源论文**: Bendig, Hensellek & Schulte (2024, Entrepreneurship Theory and Practice)
+**验证状态**: EMERGING（单篇；gap audit 补缺口）
+**story_fidelity**: `section_variant` / climax
+**槽位**: R3
+**骨架**:
+> Hypotheses [xa] and [xb] each predicted an inverted-U association between [IV_a / IV_b] and the likelihood of [binary adverse Y]. Model [m_a] introduces [IV_a] and its square; the squared term is [negative] and significant (b = [value], p [threshold]). Model [m_b] repeats the sequence for [IV_b] (b = [value], p [threshold]). Model [m_joint] retains both quadratic pairs. A formal U-test table then reports, for each IV, the slope at the lower bound, the opposite slope at the upper bound, the extremum, and the [Fieller/bootstrap] interval within observed support. Both curves meet these joint restrictions (p [threshold]). Taken together, the evidence supports Hypotheses [xa] and [xb] as parallel shape claims on the same outcome, not as rival substitutes. Predicted-probability figures display response-scale likelihoods; link-scale coefficients are not read as probability changes.
+**与原骨架差异**: 变体8 是线性双 IV 对称报告；变体9 是单 IV 曲线检验链。本变体专用于**两个焦点活动对同一不利二元结果提出同形倒 U** 的平行展演：分模型建立各自二次项 → 联合模型确认共存 → 并列表正式 U-test 一次裁决两边。
+**诚实边界**: 平行支持不等于两 IV 可互换或可加总为“总 venturing”；不得把观察性关联写成因果效应。若一侧仅边际显著，应分别校准支持强度，不可一句 “both supported” 抹平。
+
+### 变体 18: R4 同调节双模式几何对比 — shift vs steepen 分图裁决（2026-08-05 gap audit）
+**来源论文**: Bendig, Hensellek & Schulte (2024, Entrepreneurship Theory and Practice)
+**验证状态**: EMERGING（单篇；gap audit 补缺口）
+**story_fidelity**: `section_variant` / climax（条件化）
+**槽位**: R4（可嵌入 R5 双成本 benchmark）
+**骨架**:
+> Hypothesis [x_shift] predicted that [W] would [shift] the inverted-U between [IV_a] and [Y] [upward/downward]; Hypothesis [x_steepen] predicted that the same [W] would [steepen/flatten] the inverted-U for [IV_b]. In Models [m], both [IV_a]²×[W] and [IV_b]²×[W] are [same or differing signs] and significant, but matching interaction signs do not adjudicate geometry. Figure [f_a] shows the [IV_a] curves: at high [W] the curve [shifts up/down], with vertex at [[X_a], [p_a]], versus [[X_a'], [p_a']] at low [W]—a vertical risk-level change. Figure [f_b] shows the [IV_b] curves: at high [W] the inverted-U [steepens/flattens], peaking at [[X_b], [p_b]] and converging toward [lower/higher] likelihood beyond that point more [quickly/slowly] than under low [W]—a curvature/pace change. Thus the same contingency amplifies risk through different geometries across venturing modes. [Optional R5:] Translating each baseline-to-vertex probability change with an external average event cost and comparing to average [deal/alliance] value illustrates scale for each mode separately; these are benchmarks, not realized losses.
+**与原骨架差异**: 变体10 处理单 IV 的几何翻译；OLS-FE 变体18 与 Lee–Park 变体12 分别覆盖 flatten/steepen 与转折点位移，但均为单曲线。本变体强制 **同一 W、两 IV、两种事前几何预测** 的对比节奏：先报交互原料 → 声明符号不裁决几何 → 分图分别命名 shift 与 steepen → 一句收束“同调节、异几何”。
+**诚实边界**: 不得仅因两边 X²×W 同号就宣称“调节方式相同”；不得把 shift 写成 steepen（或反之）。观测关联/likelihood 语言；图示若用非 ±1 SD 的范围内百分比，须说明原因。stuck-in-the-middle 的理论收束属 Discussion，Results 只报告中间强度的 peak likelihood。
+
 ## 曲线结果写作反模式
 
-- **正式 U 棔验后置**：在主结果只凭二次项宣称支持、再把端点斜率与转折点区间埋进 robustness，会让核心结论先于核心证据。正式形状检验应紧邻假设判断。
+- **正式 U 检验后置**：在主结果只凭二次项宣称支持、再把端点斜率与转折点区间埋进 robustness，会让核心结论先于核心证据。正式形状检验应紧邻假设判断。
 - **交互项替代几何比较**：若假设预测顶点位置，必须比较顶点；若预测陡峭度或垂直位移，则应改用相应几何与预测量。
+- **同号交互抹平异几何**：同一调节下两 IV 的 X²×W 同号时，不得省略分图对比而写成“调节方式相同”；shift 与 steepen 须分别命名。
+- **不利倒 U 顶点写成最优中间**：adverse Y 的 vertex 是最大风险中间区，不是 performance optimum；Discussion 的 stuck-in-the-middle 隐喻不可替代 Results 的概率顶点报告。
 - **尺度未标注**：logit-link 上的预测值不能被写成原始概率或结果单位变化；图与正文必须说明 response scale 或 link scale。
 - **无效 p 值格式**：不得写 `p = .00` 或 `p < .00`，应写 `p < .001` 或报告可用的准确值。
 - **选择性支持总结**：单独模型显著、完整模型仅边际显著时，应报告证据衰减，而不是用一句“全部支持”抹平差异。

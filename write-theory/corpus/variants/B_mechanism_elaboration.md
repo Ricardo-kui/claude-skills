@@ -80,6 +80,8 @@ that has dominated prior research. Thus:"
 - **B5 对称反向双轨机制**: 参见 `corpus/subprotocols/hypothesis_derivation_patterns.md`（Symmetric Opposing Dual-Track）
 - **B6 曲线关系双阶段论证**: 参见 `corpus/subprotocols/hypothesis_derivation_patterns.md`（Curvilinear Relationship — Two-Phase Argumentation）
 - **B7 T2 竞争解释管理**: 参见 `corpus/subprotocols/argumentation_patterns.md`（Preemptive Competing Account Management）
+- **B8 Background-as-Theory（无正式 H）**: 双通道同向 + 信息稀缺驱动的阶段衰减 + external-validity incompleteness；参见 `corpus/subprotocols/hypothesis_derivation_patterns.md`（Background-as-Theory Dual-Channel + Stage Attenuation；EMERGING）
+- **B9 机制丧失→多结果树→外部部分替代边界**: 结构移除某类行动者后收益归零，同一丧失态映射多 outcome，再用外部监督衰减；参见 `corpus/subprotocols/hypothesis_organization_patterns.md`（Mechanism-Loss Trunk → Multi-Outcome Tree → External Partial-Substitute；EMERGING；`section_variant`，不改核心路由）
 
 ---
 
@@ -166,6 +168,8 @@ High X → decreasing Y  (reason 1 + reason 2)
 | "X 的维度 A 和维度 B 对 Y1 和 Y2 产生对称反向效应？" | 2×2 对称矩阵 | IV 有两维、DV 有两类、理论预期对称反向 |
 | "两个条件如何对同一组互补维度产生镜像反向效应？" | 对称反向双轨 | 两个条件理论上是镜像，DV 两个维度是互补关系 |
 | "X→Y 为什么是曲线关系（先增后减/先减后增）？" | 曲线关系双阶段论证 | 理论预期存在成本-收益权衡、激励反转或阈值效应 |
+| "用 BACKGROUND 承载双通道机制与阶段衰减，且不立正式 H？" | B8 Background-as-Theory | 期刊允许无编号假设；通道为 B0；衰减有信息稀缺 warrant；见 hypothesis_derivation_patterns |
+| "结构移除某类行动者后，同一机制丧失态要映射多 outcome，并加外部部分替代边界？" | B9 机制丧失→多结果树 | 先列收益再论证丧失；每 outcome 仍需独立 warrant；见 hypothesis_organization_patterns（EMERGING） |
 
 **混合策略**：一篇论文可以混合使用。例如 Singh & Grewal 在 H1 用深度链式（铁三角机制），在 H2-H4 用条件化复杂化。Shen et al. 在 H1 用深度链式（三机制 trunk），在 H2-H5 用条件化复杂化。Cui et al. 在 H1 用曲线关系双阶段论证，在 H2-H4 用宽度理由并行调节论证。
 
@@ -180,3 +184,4 @@ High X → decreasing Y  (reason 1 + reason 2)
 - [ ] 若为 B1，是否避免了 "X affects M, M affects Y, therefore mediation" 的机械拼接？
 - [ ] 收束论证是否明确说明了"比直接效应范式多知道了什么"？
 - [ ] 最后假设是否自然收束（非突然中断）？
+- [ ] 若为 B8（无正式 H）：是否用阶段研究问题/empirical agenda 收束，而非伪造编号假设？阶段衰减是否锚定信息稀缺而非空泛 “over time”？

@@ -5,10 +5,10 @@
 meta:
   schema_version: 1.0.0
   registry_type: estimator-slot-skeleton
-  last_updated: '2026-08-04'
-  last_batch_id: batch_26_lee_park_2024_smj
-  batches_processed: 26
-  total_papers_indexed: 27
+  last_updated: '2026-08-05'
+  last_batch_id: batch_29_castellaneta_conti_kacperczyk_2017_smj
+  batches_processed: 29
+  total_papers_indexed: 30
   subfields:
   - strategy
   - ob_hr
@@ -664,7 +664,26 @@ estimators:
           - turning_point_ci
           - predicted_probability
           - support
-          notes: "Verified across Bendig 2024 and the user-audited Lee & Park 2024 exemplar. A quadratic coefficient alone is insufficient; curve shape is established by joint restrictions and then displayed on the probability/response scale."
+          notes: "Verified across Bendig 2024 and the user-audited Lee & Park 2024 exemplar. A quadratic coefficient alone is insufficient; curve shape is established by joint restrictions and then displayed on the probability/response scale. For adverse Y, the vertex is a maximum-risk intermediate zone, not a performance optimum."
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
+        - id: r3_dual_focal_iv_parallel_inverted_u_utest
+          skeleton: >-
+            [Restate parallel inverted-U hypotheses for IV_a and IV_b on the same binary adverse Y]. [Model for IV_a: squared term sign and significance]. [Model for IV_b: parallel squared-term beat]. [Joint model retaining both quadratic pairs]. [Side-by-side formal U-test table: lower-bound slope, upper-bound opposite slope, extremum, Fieller/bootstrap interval in support for each IV]. [Joint but separable support judgment]. [Response-scale likelihood display; no link-scale probability reading].
+          skeleton_level: paragraph
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            entrepreneurship_strategy: 1
+          sources:
+          - Bendig_Hensellek_Schulte_2024_ETP
+          transferability: high
+          paradigm_exclusivity: "Two focal activities with the same curvilinear shape claim on one binary outcome; distinct from linear dual-IV parallel reporting"
+          rhythm_tags:
+          - dual_iv_parallel
+          - curve_shape
+          - formal_utest_table
+          - joint_support
+          notes: "2026-08-05 gap audit. Parallel support ≠ interchangeable IVs. Calibrate separately if one side is only marginally significant."
           corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r3_logit_four_beat
           skeleton: Hypothesis [x] predicted... Model [y] shows that the coefficient for [predictor] is [positive/negative]
@@ -987,7 +1006,26 @@ estimators:
           - predicted_probability
           - mechanism_interpretation
           - support
-          notes: "Do not reduce curve moderation to a significant squared interaction; state exactly what changes geometrically."
+          notes: "Do not reduce curve moderation to a significant squared interaction; state exactly what changes geometrically. Single-IV geometry only; for dual-mode shift vs steepen under one W, use r4_dual_mode_shift_vs_steepen_figure_adjudication."
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
+        - id: r4_dual_mode_shift_vs_steepen_figure_adjudication
+          skeleton: >-
+            [Restate H_shift for IV_a and H_steepen for IV_b under the same W]. [Report both squared-by-W interactions as ingredients]. [Explicitly state that matching interaction signs do not adjudicate geometry]. [Figure for IV_a: name vertical shift with high/low-W vertices]. [Figure for IV_b: name steepen/flatten with pace-to-zero or curvature contrast]. [One-sentence close: same contingency, different geometries across modes]. [Optional dual probability-to-cost benchmarks with external average event cost].
+          skeleton_level: paragraph
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            entrepreneurship_strategy: 1
+          sources:
+          - Bendig_Hensellek_Schulte_2024_ETP
+          transferability: high
+          paradigm_exclusivity: "Same moderator, two focal IVs, theoretically distinct curve geometries (shift vs steepen)"
+          rhythm_tags:
+          - dual_mode_contrast
+          - shift_vs_steepen
+          - figure_adjudication
+          - optional_cost_benchmark
+          notes: "2026-08-05 gap audit. Distinct from single-IV geometric translation and from turning-point-location Wald tests. Stuck-in-the-middle framing belongs in Discussion, not as a Results substitute for peak-likelihood reporting."
           corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r4_curvilinear_moderation_turning_point_shift_wald
           skeleton: >-
@@ -1972,6 +2010,39 @@ estimators:
           - treatment_effect
           - magnitude
           corpus_path: econometric-models/DiD.md
+        - id: r3_did_net_effect_then_opposing_contingencies
+          skeleton: "Table [x] presents the main results. The impact of [treatment] is, overall, [positive/negative]. Based on [column], [treatment] [increases/decreases] [outcome] of the average [unit] by about [X]% (covariates at means). Whereas [treatment] might produce both positive and negative effects (see below), the [dominant] effect is on average stronger, generating a net [increase/decrease]."
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Castellaneta_Conti_Kacperczyk_2017_SMJ
+          transferability: high
+          paradigm_exclusivity: "Quasi-experimental DiD with opposing contingency hypotheses"
+          rhythm_tags:
+          - average_net_effect
+          - opposing_contingencies_preview
+          - climax_setup
+          notes: "Average net effect is narrative setup for bidirectional contingencies; not a third hypothesis."
+          corpus_path: econometric-models/DiD.md
+        - id: r3_did_interaction_fourbeat_onesd_pct
+          skeleton: "Hypothesis [x] predicted that [treatment] [increases/decreases] [outcome] when [moderator] is [high/low]. [Column] of Table [x] supports Hypothesis [x]: the [treatment] × [moderator] interaction is [sign] ([p]). As [moderator] changes by one SD ([sd]), treatment [augments/reduces] [outcome] by about [Y]%."
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Castellaneta_Conti_Kacperczyk_2017_SMJ
+          transferability: high
+          paradigm_exclusivity: "DiD/OLS interaction in main table without interaction plot"
+          rhythm_tags:
+          - direction
+          - interaction_significance
+          - onesd_percent_magnitude
+          - support_judgment
+          notes: "Full four-beat without figure; use Lee two-pole variant if hypothesis predicts opposite simple-effect signs."
+          corpus_path: econometric-models/DiD.md
       R4:
         skeleton_variants:
         - id: r4_did_interaction_two_pole_hypothesis_audit
@@ -1997,20 +2068,56 @@ estimators:
           skeleton: To further assess the robustness of our DiD estimates, we conduct [placebo tests / permutation tests /
             randomization inference]. The results, reported in Table [x], show that [description]. These findings reduce concerns
             that [specific threat].
-          paper_count: 5
+          paper_count: 6
           status: VERIFIED
           subfield_distribution:
-            strategy: 3
+            strategy: 4
             om: 1
             finance: 1
           sources:
           - Lee_Wu_Bednar_ORSC_18968
+          - Castellaneta_Conti_Kacperczyk_2017_SMJ
           transferability: high
           paradigm_exclusivity: DiD/自然实验 专用
           rhythm_tags:
           - placebo_test
           - permutation
           - threat_reduction
+          corpus_path: econometric-models/DiD.md
+        - id: r7_did_identification_threat_section_battery
+          skeleton: "Validity subsections by threat: Matching (CEM on ex-ante value/risk) → Political economy of [policy] (enactment predictors null) → Supply/demand of [units] (treatment uncorrelated with quantities) → Placebo ±[k] → Early vs late enactment equality test → Alternative measures. Each subsection names the threat, states the test, and concludes robustness/exogeneity."
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Castellaneta_Conti_Kacperczyk_2017_SMJ
+          transferability: high
+          paradigm_exclusivity: "Staggered policy / quasi-experiment DiD without event-study as sole ID display"
+          rhythm_tags:
+          - threat_section_headers
+          - matching
+          - political_economy
+          - supply_demand
+          - placebo
+          - early_late
+          - alternative_measures
+          corpus_path: econometric-models/DiD.md
+        - id: r7_did_null_placebo_lead_lag_identification
+          skeleton: "To rule out chance significance, create placebo treatments [k] periods before and after the true change. Expect weaker/null effects. Neither the direct placebo impact nor interactions are significant ([appendix table])."
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Castellaneta_Conti_Kacperczyk_2017_SMJ
+          transferability: high
+          paradigm_exclusivity: "Policy-timing placebo as identification corroboration"
+          rhythm_tags:
+          - placebo_lead_lag
+          - expected_null
+          - identification_corroboration
+          notes: "Null placebo corroborates identification; it does not support substantive hypotheses."
           corpus_path: econometric-models/DiD.md
       R8:
         skeleton_variants:
@@ -2039,6 +2146,15 @@ estimators:
       paper_count: 1
       status: EMERGING
       note: "Prevents interaction significance from masking failure of one predicted pole."
+    - id: csp_did_net_effect_then_heterogeneous_contingencies
+      pattern: "R2/R3 average net treatment effect → preview opposing contingencies → sequential interaction four-beats (direction→sig→1SD%→support) → R7 threat-section identification battery"
+      from_slot: R3
+      to_slot: R7
+      paper_count: 1
+      status: EMERGING
+      note: "For theories with bidirectional contingencies; average net effect sets climax before unpacking."
+      sources:
+      - Castellaneta_Conti_Kacperczyk_2017_SMJ
     anti_patterns:
     - id: ap_did_significant_interaction_full_support
       pattern: "Calling a sign-switch hypothesis fully supported solely because the interaction coefficient is significant"
@@ -2053,6 +2169,23 @@ estimators:
       affected_slots:
       - R7
       source_count: 1
+    - id: ap_did_marginal_p_as_full_support
+      pattern: "Labeling a contingency hypothesis fully supported at p≈.06 without acknowledging marginal/.10 convention"
+      severity: medium
+      affected_slots:
+      - R3
+      - R4
+      source_count: 1
+      sources:
+      - Castellaneta_Conti_Kacperczyk_2017_SMJ
+    - id: ap_did_placebo_null_as_hypothesis_support
+      pattern: "Treating null placebo (fake treatment timing) as evidence that substantive hypotheses are supported"
+      severity: high
+      affected_slots:
+      - R7
+      source_count: 1
+      sources:
+      - Castellaneta_Conti_Kacperczyk_2017_SMJ
     honesty_boundaries:
     - id: hb_did_two_pole_prediction_audit
       boundary: "If a hypothesis predicts opposite signs at high and low moderator values, each sign must be checked separately; a significant interaction alone supports only differential effects."
@@ -2069,6 +2202,18 @@ estimators:
     - id: hb_did_corroborative_not_mechanism_identification
       boundary: "Associations between behavior, communication, and intermediary attention may corroborate premises but do not identify a causal mechanism without separate mediation identification."
       allowed_language: "consistent with / corroborates selected premises / suggests"
+      affected_estimators:
+      - DiD
+      violation_count: 0
+    - id: hb_did_placebo_null_identification_only
+      boundary: "Null results on lead/lag placebo treatments corroborate that findings are not chance/spurious timing; they do not constitute support for substantive hypotheses."
+      allowed_language: "reduces concerns that results arise by chance / consistent with exogenous timing"
+      affected_estimators:
+      - DiD
+      violation_count: 0
+    - id: hb_did_threat_battery_not_parallel_trends_substitute
+      boundary: "A matching/political-economy/placebo threat battery does not substitute for event-study parallel-trends evidence when the design is classic unit×time DiD; if the design is holding-period treatment or similar, state why event-study is not applicable."
+      allowed_language: "design-appropriate identification checks / not a substitute for parallel trends when required"
       affected_estimators:
       - DiD
       violation_count: 0
@@ -3783,10 +3928,33 @@ estimators:
       R3:
         skeleton_variants: []
       R7:
-        skeleton_variants: []
+        skeleton_variants:
+        - id: r7_matched_did_cem_exante_symmetry
+          skeleton: "In a quasi-experimental setting, treated and control [units] may differ ex ante on characteristics correlating with both [treatment] and [outcome]. Re-estimate baseline specifications after CEM matching on [value proxy] and [risk proxy] (Iacus, King, and Porro, 2009). Results remain robust ([appendix table])."
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Castellaneta_Conti_Kacperczyk_2017_SMJ
+          transferability: high
+          paradigm_exclusivity: "Matching-as-robustness for DiD/quasi-experiment (not matched DiD as sole primary estimator)"
+          rhythm_tags:
+          - exante_asymmetry_threat
+          - cem
+          - remain_robust
+          notes: "First fill of 匹配DiD corpus; CEM addresses observables only."
+          corpus_path: econometric-models/匹配DiD.md
     cross_slot_patterns: []
     anti_patterns: []
-    honesty_boundaries: []
+    honesty_boundaries:
+    - id: hb_matched_did_cem_observables_only
+      boundary: "CEM matching as robustness addresses selection on observables only; do not claim it resolves unobserved confounding."
+      allowed_language: "remain robust in the matched sample / reduces concerns about ex-ante observable imbalance"
+      affected_estimators:
+      - 匹配DiD
+      - DiD
+      violation_count: 0
   堆叠扩散Logit:
     display_name: 堆叠扩散 Logit (Stacked Diffusion Logit)
     forced_slots:
@@ -3913,6 +4081,116 @@ estimators:
     cross_slot_patterns: []
     anti_patterns: []
     honesty_boundaries: []
+  BLP-状态空间:
+    display_name: BLP Random-Coefficient Demand + State Space (Kalman/GMM)
+    forced_slots:
+    - R2
+    - R3
+    - R8
+    high_risk_missing:
+      R2: 缺嵌套模型比较或 GMM 信息准则，直接报全模型
+      R3: 只报静态系数，不解释 state innovation (σ) 与 recovered path
+      R8: 无量化 counterfactual 分解或验证期 out-of-sample 展示
+    cross_validation_notes:
+    - 当前仅 Liu & Shankar 2015 单来源
+    - 政策模拟须含 non-optimality 声明（区别于 BLP 供给面）
+    slots:
+      R2:
+        skeleton_variants:
+        - id: r2_gmm_nested_mmsc_aic
+          skeleton: "Nested GMM model comparison using MMSC-AIC; stepwise Model 1→2→3 tied to incremental mechanisms"
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Liu_Shankar_2015_MS
+          transferability: high
+          paradigm_exclusivity: GMM structural demand专用
+          rhythm_tags:
+          - nested_model_comparison
+          - mmsc_aic
+          - incremental_mechanism
+          corpus_path: econometric-models/BLP-状态空间.md
+      R3:
+        skeleton_variants:
+        - id: r3_state_space_initial_sigma_path
+          skeleton: "RQ-driven reporting: initial λ₀ + σ diagnostic → recovered path inference → theory-linked interpretation"
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Liu_Shankar_2015_MS
+          transferability: high
+          paradigm_exclusivity: Kalman/state-space recovered parameters
+          rhythm_tags:
+          - research_question
+          - state_recovery
+          - sigma_diagnostic
+          corpus_path: econometric-models/BLP-状态空间.md
+        - id: r3_dual_level_indirect_heterogeneity
+          skeleton: "Nameplate vs parent indirect channels + strong/weak brand carryover heterogeneity + endogeneity confirmation"
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Liu_Shankar_2015_MS
+          transferability: medium
+          paradigm_exclusivity: multi-level advertising effectiveness in structural demand
+          rhythm_tags:
+          - hierarchy_comparison
+          - brand_strength_heterogeneity
+          corpus_path: econometric-models/BLP-状态空间.md
+      R8:
+        skeleton_variants:
+        - id: r8_counterfactual_decomposition
+          skeleton: "With/without shock counterfactual fit + short/long-term loss + four-channel decomposition"
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Liu_Shankar_2015_MS
+          transferability: high
+          paradigm_exclusivity: structural counterfactual decomposition
+          rhythm_tags:
+          - counterfactual_validation
+          - direct_indirect_spillover
+          - short_long_term
+          corpus_path: econometric-models/BLP-状态空间.md
+        - id: r8_policy_simulation_non_optimal
+          skeleton: "Non-optimality framing + scenario ladder reallocation simulation on validation sample"
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Liu_Shankar_2015_MS
+          transferability: high
+          paradigm_exclusivity: demand-side policy simulation (not supply-side BLP optimum)
+          rhythm_tags:
+          - policy_simulation
+          - scenario_ladder
+          - managerial_magnitude
+          corpus_path: econometric-models/BLP-状态空间.md
+    cross_slot_patterns:
+    - id: structural_results_arc
+      pattern: "R2 model comparison → R3 parameters by mechanism → R8 counterfactual decomposition → R8 policy simulation"
+      sources:
+      - Liu_Shankar_2015_MS
+    anti_patterns:
+    - id: ap_structural_hypothesis_hardcode
+      pattern: "Forcing H1/H2 support language on empirical-driven structural papers without numbered hypotheses"
+      severity: medium
+      affected_slots:
+      - R3
+      note: "Use research-question / model-prediction cadence instead"
+    honesty_boundaries:
+    - id: hb_policy_sim_no_uncertainty
+      boundary: "Point-estimate policy simulation without confidence bands must use conditional predicted-gain language, not causal certainty"
+      allowed_language: "predicted gain under scenario / simulated increase"
   定性过程研究:
     display_name: Qualitative Process Study / Grounded Theory
     forced_slots:
@@ -4189,6 +4467,14 @@ batch_history:
   source_subfield: entrepreneurship / strategy / product safety
   slot_updates_count: 4
   novel_patterns_count: 3
+- batch_id: batch_25b_bendig_hensellek_schulte_2024_etp_gap_audit
+  timestamp: '2026-08-05'
+  estimator_family: Logit_Probit_Ordered_Probit / GEE
+  source_paper: Bendig_Hensellek_Schulte_2024_ETP
+  source_subfield: entrepreneurship / strategy / product safety
+  slot_updates_count: 2
+  novel_patterns_count: 2
+  notes: "Gap audit after initial distillation. Methods all SKIP. Results ADD dual parallel inverted-U (R3) + shift-vs-steepen dual-mode figure adjudication (R4). EXTEND honesty on adverse-Y vertex and interaction-sign non-adjudication. SKIP stuck-in-the-middle as Results-only variant. No core/SKILL promotion."
 - batch_id: batch_26_lee_park_2024_smj
   timestamp: '2026-08-04'
   estimator_family: Logit_Probit_Ordered_Probit / Fractional Logit
@@ -4196,3 +4482,27 @@ batch_history:
   source_subfield: strategy / organizational learning / healthcare
   slot_updates_count: 3
   novel_patterns_count: 2
+- batch_id: batch_27_hoffmann_cheong_phan_zurbruegg_2024_jm
+  timestamp: '2026-08-05'
+  estimator_family: DiD / Logit_Probit_Ordered_Probit
+  source_paper: Hoffmann_Cheong_Phan_Zurbruegg_2024_JM
+  source_subfield: marketing / governance / product safety
+  slot_updates_count: 6
+  novel_patterns_count: 4
+  notes: "Re-distillation calibration; R3/R5 metric fix; R4 switch-off split; no core promotion (single paper)"
+- batch_id: batch_28_liu_shankar2015_ms
+  timestamp: '2026-08-05'
+  estimator_family: BLP_state_space_GMM
+  source_paper: Liu_Shankar_2015_MS
+  source_subfield: marketing / product safety / structural demand
+  slot_updates_count: 5
+  novel_patterns_count: 5
+  notes: "New result type BLP-状态空间; RQ-driven R3; counterfactual decomposition + policy simulation as R8; no SKILL routing change"
+- batch_id: batch_29_castellaneta_conti_kacperczyk_2017_smj
+  timestamp: '2026-08-05'
+  estimator_family: DiD / 匹配DiD
+  source_paper: Castellaneta_Conti_Kacperczyk_2017_SMJ
+  source_subfield: strategy / law / private equity
+  slot_updates_count: 5
+  novel_patterns_count: 4
+  notes: "DiD +4 (net-effect opener; 1SD interaction four-beat; ID threat battery; null placebo); 匹配DiD first fill CEM-as-robustness; core_candidate only reported; no SKILL routing change"

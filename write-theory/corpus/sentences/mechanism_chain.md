@@ -801,6 +801,22 @@ H1. [IV] is [direction] related to [DV]."
 
 **功能**: 适用于政策冲击/法律变化类研究——treatment 的作用机制是移除了对既存激励的约束，而非直接引入新激励。
 
+**模块映射（Hoffmann 2024 JM 重蒸馏）**:
+| 模块 | 功能 | 内容 |
+|------|------|------|
+| T2 双透镜开场 | 理论分工预告 | Agency theory + business ethics 并列宣告；agency 负责 H1，ethics 负责 H2/H3 |
+| T3a Agency + Derivative Lawsuits | 治理机制铺垫 | 所有权-控制权分离 → 股东诉讼威胁 → 应用于 myopic recall avoidance |
+| T3b Managerial Liability | 主效应 why-chain | Recall 成本/收益 → Concession-Rebuttal（prospect theory）→ trade-off 框架 → UD shock → H1 |
+| T5 Boundary Conditions | 统一框架 + 平行分支 | Husted taxonomy → corporate culture 小节 → normative control 小节 → H2/H3 |
+
+**Why-chain（H1）**:
+```
+Agency separation → derivative lawsuits discipline managers
+→ managers avoid recalls (ST costs) BUT shareholders may sue for not recalling (LT damage)
+→ trade-off: (1) avoid immediate costs vs (2) litigation risk
+→ UD shock reduces (2) → (1) gains prominence and dominates → fewer recalls
+```
+
 **核心逻辑**: Agent 面临私人激励 A 和制度约束 B 之间的权衡 → 外生冲击削弱了 B → A 在权衡中占主导 → 行为变化
 
 **句法模板**:
@@ -843,7 +859,7 @@ Hence, we expect that [cost] will not outweigh [benefit] in [agent's] mind.
 
 **适用**: 政策冲击/法律变化/制度变革研究，其中 treatment 移除或削弱了一个既存的治理/监督机制。特别适合 agency theory 驱动的 Incompleteness × Mechanism 组合。
 
-**语料锚定**: hoffmann_cheong_phan_zurbruegg2024 (JM) — UD laws → reduced litigation risk → managerial opportunism → fewer recalls
+**语料锚定**: hoffmann_cheong_phan_zurbruegg2024 (JM) — UD laws → reduced litigation risk → managerial opportunism → fewer recalls. **假设结构**: H1 纯主效应（负向）；H2/H3 为 weaken-moderation（非 high/low 双边对称论证）。
 
 **禁忌**: 
 - 不能用于 treatment 直接引入新激励的场景（如补贴、税收优惠）——此时用标准 X→M→Y
@@ -1887,3 +1903,47 @@ H[N+1]: [group B] [evaluate] [stimulus variant Y] more [positively] than [stimul
 - `corpus/sentences/hypothesis_forms.md` — Competing form（X 对两组方向相反）
 - `corpus/subprotocols/argumentation_patterns.md` — minimal-pair contrast vignette（Cutolo 隔离 abstraction 变量，使适配机制显形）
 - `corpus/subprotocols/moderator_selection_frameworks.md` — parallel_buffering_moderators_single_mechanism（Cutolo：多维刺激特征经同一 fluency 机制缓冲）
+
+---
+
+## What-Is-Lost：收益清单 → 结构缺失丧失态（EMERGING）
+
+<!--
+pattern_id: what_is_lost_benefit_inventory_then_absence
+build_type: 机制推演型
+source_papers: ["Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ"]
+confidence: low
+status: needs_validation
+story_fidelity: section_variant
+sentence_position: topic_sentence / why_chain_transition
+-->
+
+**适用**: 在主导理论鼓励“更多某种结构特征”的拥挤文献中，把 IV 写成**移除某类行动者后机制收益归零**，而不是再贴一个 characteristic→DV 标签。
+
+**功能节拍**: 收益清单（2 项为宜）→ 结构 S 使收益丧失 → 焦点行动者自利空间扩大 →（可选）转入多 outcome 应用
+
+**模板**:
+```
+Drawing on [counter-stream within the dominant lens], [removed actor class] supplies
+two benefits that help [remaining monitors] constrain [focal agent]:
+(1) [Benefit1 — information channel];
+(2) [Benefit2 — contestation / succession threat].
+Under [structure S], these benefits are lost. [Focal agent] can therefore more readily
+pursue self-serving actions at [principal]'s expense.
+```
+
+**过渡句变体**:
+- "These benefits are lost under [S], which implies..."
+- "Without [removed actor class], [remaining monitors] confront [information/contestation deficit]..."
+
+**语料锚定**:
+- Zorn et al. (2017, SMJ) — non-CEO insiders' information + succession/contestation benefits lost on lone-insider boards
+
+**关键特征**:
+- 先写 **what was supplied**，再写 **what is lost**；读者看到的是机制空洞，不是变量标签。
+- 与架构级模式 `mechanism_loss_trunk_multi_outcome_external_substitute` 配套；本条只负责 trunk 句位。
+
+**反模式**:
+- 未列清收益就断言“结构 S 有害”。
+- 把收益清单写成五条以上的文献综述。
+- 连续 8+ 词复述范文措辞。

@@ -30,9 +30,11 @@ source_papers:
   - paruchuri_andrus_sullivan2026 (AMJ, 2026): "受众边界延伸型: internal hierarchy → external audience"
   - desjardine_shi_cheng2023 (ASQ, 2023): "visible-vs-invisible domain gap + oversight drives manipulation underground (invisible hands)"
   - ilicic_brennan2026 (JM, 2026): "outcome-valence asymmetry: beneficial political-consumption outcomes studied, harmful/addictive outcomes underexamined"
-updated: 2026-08-03
+  - castellaneta_conti_kacperczyk2017 (SMJ, 2017): "Disclosure-requiring IPR progress may not transfer to non-disclosure forms; firm-value link missing"
+  - kim_lee2026 (SMJ, 2026): "Temp/hypothetical SRO-recruitment evidence incomplete for full-time high-stakes + post-hiring durability"
+updated: 2026-08-05
 created: 2026-05-18
-source: Extracted from MVP30 narrative_analysis files + mannor2016 + darby2025 distill + grewal2025 + paruchuri_andrus_sullivan2026
+source: Extracted from MVP30 narrative_analysis files + mannor2016 + darby2025 distill + grewal2025 + paruchuri_andrus_sullivan2026 + castellaneta_conti_kacperczyk2017 + kim_lee2026
 ---
 
 # 01-despite-progress-unaddressed — 已有进展但遗漏 Tension
@@ -736,6 +738,56 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 ---
 
+### 变体 AC：披露型 IPR 进展不外推 + 非披露保护—价值链接缺口（Castellaneta–Conti–Kacperczyk 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "A large body of work on [broader IPR class] has established that stronger legal protection [mitigates imitation / raises appropriability] and thereby increases [firm market value / returns] ([citations]). However, these accounts have mainly focused on [disclosure-requiring form, e.g., patents], which require [complete disclosure of the protected knowledge] and therefore [facilitate assessment by outsiders]. Insights from this literature might not extend to [non-disclosure form, e.g., trade secrets], whose owners are rewarded for [keeping information away from the public for an unlimited duration]. Hence, we ask: How does [legal protection of the non-disclosure form] affect [firm market value]? Yet researchers have not linked [this protection] to [firm value], even though its effects have been documented for [adjacent outcomes such as employee mobility, innovation incentives, or clustering] ([citations]). To fill this gap, we focus on [strategic factor market / corporate control market] where [bundles of resources are traded and competitive advantage is monetized]."
+
+**来源**: Castellaneta, Conti & Kacperczyk (2017, SMJ), P1–P2
+
+**原文锚定**:
+> "However, the extant accounts have mainly focused on the role of patents... which require complete disclosure... Insights gleaned from this literature might not extend to other forms of IPR protection, such as trade secrets... Yet, researchers have not linked trade secret protection to firm value, even though its effect has been documented with respect to employee mobility... incentives to innovate... and to cluster."
+
+**关键特征**:
+- **保护形式转移性限制**：先承认广义 IPR→市值的成熟正面结论，再用"披露要求"作为机制边界，声明结论不可机械外推到非披露保护形式——不是笼统 "few studies on trade secrets"。
+- **相邻结果已证、目标 DV 未链**：明确 mobility / innovation / clustering 已有证据，唯独 firm value 链接缺失——把 Incompleteness 收窄为 DV 缺口而非现象空白。
+- **显式 RQ 收束 + 情境选择**：用 "Hence, we ask" 锁定主效应问题后，立即以战略要素市场/控制权市场作为填补缺口的舞台。
+- **轻度 Inadequacy 语气嵌套在 Incompleteness 中**："might not extend" 批评外推前提，但主 Gap 仍是遗漏链接，而非推翻专利文献。
+
+**适用**: Incompleteness × (Boundary + Mechanism)；一类知识产权/制度保护文献成熟于某一制度形式（专利、版权、商标），本文转向另一制度形式且 DV 尚未被链接；SMJ/AMJ 制度—战略交叉稿。
+
+**禁忌**: 不得暗示披露型 IPR 文献"错误"——只限制外推；相邻结果文献必须真实存在，否则退化为弱 "few studies"；若主贡献是对立理论辩论，应改用 Incommensurability 路由而非本变体。
+
+---
+
+### 变体 AD：低 stakes 证据库 → 理论关键高 stakes 情境 + 阶段延伸缺口（Kim–Lee 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**功能节拍**: 承认既有关系证据 → 标记证据库为 incomplete → 用战略理论抬升 stakes（为何该情境才算理论关键）→ 双缺口收束（情境外推 + 阶段外延）
+
+**模板**:
+> "These findings provide important but incomplete evidence on [X→Y / competitive-advantage pathway]. [Strategic theory] emphasizes [actors/relationships] that develop through [long-term / high-commitment affiliations] ([citations]). The practical significance of [documented advantages] therefore depends on whether they translate into [high-stakes decision setting] in which [actors] face [substantial opportunity costs / deliberative trade-offs]. Relative to the [temporary / hypothetical / low-cost] settings that constitute the bulk of prior evidence, such decisions involve [higher personal stakes and deliberative choice]. Whether [X] yields advantages in [high-stakes setting]—and whether any advantages extend beyond [initial stage]—therefore remains an important, underexplored question."
+
+**来源**: Kim & Lee (2026, SMJ), P2
+
+**原文锚定**（仅溯源，勿作生成句）:
+> incomplete evidence → strategic human capital / long-term affiliations → full-time competitive labor markets → higher stakes vs temporary-hypothetical bulk → underexplored (full-time + beyond initial hiring).
+
+**关键特征**:
+- **证据完整性缺口，非构念误置**: 主标签是 Incompleteness（"important but incomplete"），不是"文献理解错了"。
+- **理论抬升 stakes**: 用战略人力资本（或同类理论）说明为何只有高承诺/全职情境才对竞争优势论证有意义——stakes 嵌入 Tension。
+- **双缺口并列收束**: (1) 情境外推（低 stakes → 高 stakes）；(2) 阶段外延（初始录用 → 录用后保留）——一句完成。
+- **轻度 Inadequacy undertone**: "bulk of prior evidence" 暗示外部效度担忧，但不升级为推翻既有发现。
+
+**适用**: Incompleteness × Boundary；既有证据主要来自临时/实验/假设情境，而目标理论要求高 stakes、长期关系或全职承诺；招聘/CSR/非金钱工作属性等战略人力资本交叉稿；SMJ。
+
+**禁忌**: 不得把临时/实验证据写成"错误"——只声明对理论关键情境 incomplete；双缺口必须都能被设计兑现（否则删掉阶段延伸）；勿与 WEIRD 情境泛化（`18-context-generalizability`）混淆——本变体是 stakes/commitment 边界，不是制度文化机制反转。
+
+---
+
 ## 组装规则
 
 ### 反模式提醒
@@ -751,7 +803,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 | 期刊 | 适配度 | 注意事项 |
 |------|--------|---------|
 | JM/JMR | ⭐⭐⭐ 极高 | 变体 D（多重原因论证型）最适配 JM 风格 |
-| SMJ | ⭐⭐⭐ 高 | 变体 B（权威引语型）适配 SMJ "冷静专业"风格；变体 K（融合型紧凑段落）适配 quasi-experiment SMJ 论文 |
+| SMJ | ⭐⭐⭐ 高 | 变体 B（权威引语型）适配 SMJ "冷静专业"风格；变体 K（融合型紧凑段落）适配 quasi-experiment SMJ 论文；变体 AD 适配高 stakes 情境外推稿 |
 | AMJ | ⭐⭐⭐ 高 | 需要解释为什么这个遗漏有理论重要性 |
 | OS | ⭐⭐ 中 | 偏好系统/结构性缺口论证 |
 | ASQ | ⭐ 低 | ASQ 偏好更强的理论缺口（Inadequacy/Incommensurability） |
@@ -773,7 +825,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 ## 风格画像
 
 > 以下风格特征是从使用本模板的多篇顶刊论文中聚合提取的。不是每篇论文都必须遵守，但偏离时应有明确理由。
-> 最后更新: 2026-07-10 | 聚合论文数: 15
+> 最后更新: 2026-08-05 | 聚合论文数: 16
 
 ### 语气光谱
 - **主语气**: cautious — 证据: "remains poorly understood" (wu2025), "has gone largely unaddressed" (pollock2015), "underdeveloped, and fundamental pieces are missing" (ahmadi2017)
@@ -783,21 +835,24 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 - **典型节奏**: 承认已有进展（1-2句）→ 精确指出缺口位置（1-2句）→ 解释为什么这个缺口重要（1-2句）
 - **ahmadi2017 压缩节奏**: 三段递进（笼统→具体→呼吁）在一个段落内完成 —— 每步 1 句，无展开
 - **cui_yang_vertinsky_smj 三重维度节奏**: 三个 First/Second/Third 缺口各 1 段，分别锚定 outcome scope、portfolio composition、network context
+- **kim_lee2026 双缺口收束节奏**: incomplete evidence → strategic-theory stakes lift → whether [high-stakes setting] AND whether beyond [initial stage] 一句收束
 
 ### 标志性叙事标记
 - [eilert2017]: "predominantly focused on X and Y. However, little attention has been paid to Z" — 经典三段式
 - [ahmadi2017]: "'underdeveloped' → 'only limited research' → 'emphasizes the need to investigate'" — 呼吁外包型结尾，将 gap 合法性推给领域权威
 - [gamache_etal2020]: "三层递进 Incompleteness: general→specific gap→why 层面根本问题" — Stakes 嵌入 Tension ("This omission is critical, as...")
 - [cui_yang_vertinsky_smj]: "First... remains poorly understood / Second... while overlooking... / Third... while largely overlooking" — 三重维度并列缺口，每个维度用不同 Incompleteness 标志性语言
+- [kim_lee2026]: "important but incomplete evidence" + strategic-theory stakes + underexplored (setting + stage) — 低 stakes 证据库外推缺口
 
 ### 刻意回避
 - [ahmadi2017]: avoids independent Tension paragraph — Tension 与 Literature Turn 共段，适合 JMS 压缩风格
 - [ahmadi2017]: avoids strong gap language ("fundamentally wrong", "overlooked") — 始终保持 Incompleteness 边界（"underdeveloped" 而非 "misunderstood"）
+- [kim_lee2026]: avoids claiming prior temporary/hypothetical findings are wrong — only incomplete for theory-critical high-stakes settings
 
 ### 质量标记
-- **最值得模仿**: 变体 D（多重原因论证型 malshe2015）— "This is surprising for [N] reasons" 将缺口从观察到论证升级
+- **最值得模仿**: 变体 D（多重原因论证型 malshe2015）— "This is surprising for [N] reasons" 将缺口从观察到论证升级；变体 AD（Kim–Lee）— 用战略理论抬升为何高 stakes 情境才算完整
 - **已知风险**: 变体 R (ahmadi2017) 的呼吁外包型结尾能量偏低 —— "emphasizes the need to investigate" 是引用别人说"应该研究"，而非作者论证"为什么现在必须研究"。AMJ/ASQ 投稿不建议使用
 
 ### 模块比重参考
 - Tension 通常占 Introduction 的 15-25%；压缩版（ahmadi2017）仅占~8%
-- *来源: eilert2017 (JM), gamache_etal2020 (SMJ), ahmadi2017 (JMS)*
+- *来源: eilert2017 (JM), gamache_etal2020 (SMJ), ahmadi2017 (JMS), kim_lee2026 (SMJ)*

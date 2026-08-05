@@ -1,10 +1,11 @@
 ---
 result_type: "匹配DiD"
-status: 📋 TEMPLATE
-source_papers: []
-variants_count: 0
+status: 🧪 EMERGING
+source_papers:
+  - castellaneta_conti_kacperczyk_2017_smj (Strategic Management Journal; DOI 10.1002/smj.2533)
+variants_count: 1
 created: 2026-05-18
-updated: 2026-05-18
+updated: 2026-08-05
 ---
 
 # 匹配DiD — Results 骨架
@@ -15,16 +16,29 @@ updated: 2026-05-18
 
 ## 证据节奏摘要
 
-<!-- 由 distill-results-exemplar 首次蒸馏后填充 -->
+- **CEM 作 DiD/准实验稳健性**（Castellaneta et al. 2017）：匹配不是主估计器，而是回应“处理组与对照组事前不对称”威胁；匹配变量须是 ex-ante value / risk 代理，并指向平衡表附录。
+- 完整识别电池（政治经济、供需、placebo 等）见 `DiD.md` 变体 9；本文件只沉淀**匹配步骤本身**的可迁移写法。
 
 ## 累积变体
 
 <!-- distill-results-exemplar Phase 4 验证通过的变体写入此处 -->
-<!-- 格式：
-### 变体 N: [来源论文] (YYYY-MM-DD)
-**验证状态**: 通过 / 需修正
-**槽位**: R?
+
+### 变体 1：CEM 匹配作准实验事前对称威胁回应（2026-08-05）
+
+**来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+
+**验证状态**: EMERGING（单篇；`section_variant`）
+
+**槽位**: R7
+
+**story_fidelity**: falling_action（unravel selection-on-observables confound）
+
 **骨架**:
-> "..."
-**与原骨架差异**: ...
--->
+> "In a quasi-experimental setting, random assignment is less likely to hold, which is a concern if treated [units] differ ex ante from controls on characteristics that correlate with both [treatment] and [outcome]. For instance, [ex-ante value] or [business risk] may correlate with policymakers' effort to enact [policy] or with subsequent [outcome] change. To account for such potential confounders, we re-estimate the baseline specifications while matching treatment and control on [value proxy] and [risk proxy]. We use coarsened exact matching (CEM) (Iacus, King, and Porro, 2009). As shown in [appendix balance/results table], our results remain robust."
+
+**与原骨架差异**: 首次填充「匹配DiD」结果类型；本变体是 **matching-as-robustness**（主估计仍为 DiD-equivalent OLS），不是 matched DiD 作为唯一主规格。强调威胁句（ex ante asymmetry）→ 匹配变量理论代理 → CEM 引用 → appendix 指针 → remain robust。
+
+**诚实边界**:
+- CEM 只处理可观测事前差异；不可声称已解决不可观测选择。
+- 须报告匹配变量；若正文不放平衡统计，附录须有，且正文至少一句“remain robust”。
+- 若匹配后样本量骤降，须报告保留 N，不得只报显著性不变。

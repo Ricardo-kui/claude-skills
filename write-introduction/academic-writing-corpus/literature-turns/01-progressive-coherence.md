@@ -15,9 +15,13 @@ source_papers:
   - cui_yang_vertinsky_smj (SMJ): "Consensus + stakes + three unaddressed issues preview"
   - malshe2015 (JM, 2015): "Nascent marketing–finance stream + complementary-half pivot (equity examined, debt not)"
   - schumacher_keck_tang2020 (SMJ, 2020): "Two mature streams joined through a necessary interpretive bottleneck"
-created: 2026-05-19
-updated: 2026-08-03
-source: Extracted from literature-turn-templates.md + MVP30 validation
+  - hoffmann_cheong_phan_zurbruegg2024 (JM, 2024): "Institutional shock deep-dive — derivative lawsuit mechanism → UD law procedural hurdle before tension pivot"
+  - liu_shankar2015 (MS, 2015): "Three methodology streams (case/lab/empirical) + third-stream internal conflicting findings"
+  - castellaneta_conti_kacperczyk2017 (SMJ, 2017): "Disclosure-requiring IPR consensus → non-disclosure form as transferability boundary"
+  - kim_lee2026 (SMJ, 2026): "SRO-recruitment finding consensus → evidence-source foreshadow (temp/hypothetical bulk)"
+  - Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ (SMJ, 2017): "Literature division — adoption answered; proximal consequences open; adjacent composite-only use"
+updated: 2026-08-05
+source: Extracted from literature-turn-templates.md + MVP30 validation + kim_lee2026 + zorn2017
 ---
 
 # 01-progressive-coherence — Progressive Coherence 递进式文献对话
@@ -231,6 +235,129 @@ P2-P3 的功能：承认文献已有实质进展，但精确指出被遗漏的�
 
 ---
 
+### 变体 J：制度冲击机制深描型（hoffmann2024 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "[Institutional enforcement mechanism] are brought by [plaintiff type] in the name of [entity] to enforce [fiduciary standard] and make [actors] compensate for [alleged damage] ([citations]). They are costly for [actors] because [reputation/career consequences] ([citations]). Hence, [actors] should be motivated to avoid [behaviors inviting enforcement]. Against this background, the adoption of [policy/shock] is important, as it imposes a significant [procedural hurdle] for [plaintiff type] by requiring [demand step] ([citations]). [Policy adoption] is driven by [legal principle] ([citations]). In effect, [policy] aims to [primary intended benefit] ([citations]) and to [secondary sorting benefit] ([citations]), to avoid [cost of business disruption] ([citations])."
+
+**来源**: hoffmann_cheong_phan_zurbruegg2024 (JM), P2–P4
+
+**原文锚定**:
+> "Derivative lawsuits are brought by shareholders in the name of the firm to enforce managers' fiduciary duties... Against this background, the adoption of universal demand (UD) laws is important, as it imposes a significant procedural hurdle for shareholders to be able to file a derivative lawsuit by requiring them to first demand that the firm's board of directors take legal action against the wrongdoers... In effect, UD laws aim to prevent frivolous derivative litigation (Erickson 2011) and to sort cases with merit from those without (Erickson 2017), to avoid unwarranted disruption of a firm's normal business operations..."
+
+**关键特征**:
+- **"Against this background" 作为 pivot**: 先深描 baseline 治理机制（derivative lawsuits），再引入 policy shock——读者理解 shock 前必须先理解被削弱的 discipline 是什么
+- **制度意图双重建构**: 分别交代 legal principle（directors manage）与 operational intent（prevent frivolous litigation / sort merit）——为后续 Tension 的 "well-intended but unintended consequences" 铺垫
+- **Literature Turn 承担 treatment 定义**: quasi-natural experiment 论文在 Tension 之前完成 shock 的操作性定义，Gap 段才转向后果争议
+- **与 Hook 的 litigation-risk 链衔接**: P1 建立 recall↔litigation 关联，P2–P4 解释 litigation 的制度细节
+
+**适用**: 准自然实验 / 法律或监管冲击研究；Treatment 对非法律背景读者不直观；Progressive Coherence 策略；Incompleteness × Mechanism
+
+**禁忌**: 机制深描不能超过 Intro 预算（通常 2–3 段）——细节留给 Methods；必须保持 policy-neutral 语气（"aims to prevent frivolous litigation"）；不要在没有 baseline mechanism 的情况下直接讨论 shock
+
+---
+
+### 变体 K：三方法流分类 + 第三流内部矛盾发现型（liu_shankar2015 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "Existing research can be classified into three broad streams. The first stream [uses method family 1 — e.g., case studies / qualitative strategy] to investigate [managerial response focus] ([citations]). The second stream uses [method family 2 — e.g., lab experiments] to examine how [actor responses] vary with [expectations or beliefs] ([citations]). Although these two streams provide some guidance to practitioners on [actionable topic], they do not offer insights into the underlying mechanisms of [how harm occurs] and what corrective actions may be appropriate under different conditions. The third stream empirically studies the impact of [phenomenon] on [outcome family spanning performance, marketing, financial, and secondary incidence domains] ([citations]). [Author A] find [finding A]. In contrast, [Author B] suggest [opposing finding B]. With regard to [heterogeneity dimension such as prior quality or reputation], [Author C] suggest [direction C], whereas [Author D], based on [different context], suggest [opposing direction D]."
+
+**来源**: liu_shankar2015 (MS), P2–P3
+
+**原文锚定**:
+> "Existing research can be classified into three broad streams. The first stream investigates the appropriate strategy and managerial action during and after crises using case studies... The second stream of research uses lab experiments... Although these two streams provide some guidance to practitioners... they do not offer insights into the underlying mechanisms... The third stream empirically studies the impact of product-harm crises on performance measures... Wynne and Hoffer (1976)... find that recalls have little impact... In contrast, Crafton et al. (1981)... suggest that severe product recall is a significant determinant of demand."
+
+**关键特征**:
+- **分类轴是研究方法论**（案例 / 实验 / 实证），不是主题双流的 "stream A vs stream B"——前两流被**共同降级**为缺机制，第三流承接本文估计任务。
+- **第三流段落内嵌 mini-debate**：在 Progressive Coherence 中段呈现**经验发现矛盾**（little impact vs significant determinant；reputation liability vs buffer），为后文 "deeper issues" 枚举预热，但不升级为 Incommensurability 主 Gap。
+- **"Although these two streams provide some guidance... they do not offer insights into underlying mechanisms"**：尊重非实证文献贡献的同时，精确指出其**无法支撑**动态结构估计——适合无 Theory 章节的 Intro→Model 论文。
+- **Outcome family 列举**：第三流一次横跨 sales、marketing effectiveness、stock performance、future incidence——展示文献广度后收窄到本文 DV 组合。
+
+**适用**: 成熟现象已有案例+实验+实证三类文献；本文贡献为动态结构/计量模型；Incompleteness × Output/Phenomenon；MS/MkSc/MSOM 营销-计量交叉稿。
+
+**禁忌**: 三流分类必须真实对应文献生态——不能强行把主题流伪装成方法流；第三流矛盾引用必须**具体到作者与发现方向**，不能 vague "results are mixed"；不要在 Literature Turn 解决矛盾——留给后文 Tension 枚举或估计策略。
+
+---
+
+### 变体 L：披露型 IPR 共识 → 非披露形式作为外推边界（Castellaneta–Conti–Kacperczyk 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "The strategy literature has long argued that [valuable resources / proprietary knowledge] are key for [sustainable advantage] ([citations]). [Legal appropriability regime] plays a crucial role: a large body of work on [IPRs] has established that strong legal protection [mitigates imitation] and increases [market value] ([citations]). However, extant accounts have mainly focused on [disclosure-requiring IPR form], which [require complete disclosure and facilitate assessment]. Insights from this literature might not extend to [non-disclosure IPR form], whose owners are rewarded for [keeping information away from the public]."
+
+**来源**: Castellaneta, Conti & Kacperczyk (2017, SMJ), P1
+
+**原文锚定**:
+> "A large body of work on intellectual property rights (IPRs) has established that a strong legal IPR protection mitigates the risk of imitation... and so increases their market value... However, the extant accounts have mainly focused on the role of patents... Insights gleaned from this literature might not extend to other forms of IPR protection, such as trade secrets..."
+
+**关键特征**:
+- **从资源/知识共识下钻到 appropriability，再收窄到具体 IPR 形式**——Progressive Coherence 的"自然推进"以制度形式为最后一阶，而非主题变量。
+- **"might not extend" 作为 Conversation 内的外推边界句**：在进入显式 Gap 之前先限制既有共识的适用范围。
+- **与 Tension 变体 AC 配对**：本变体完成 common ground；AC 完成 "未链接到 firm value" 的缺口落地。
+
+**适用**: 广义制度/IP 文献已就某一主导保护形式形成共识，本文转向机制上不可互换的相邻形式；Progressive × Incompleteness；SMJ。
+
+**禁忌**: 不要在 Literature Turn 展开双刃剑机制——留给 Theory Lens/Tension；不要把专利文献写成错误范式。
+
+---
+
+### 变体 M：关系发现共识 → 证据源类型 foreshadow（Kim–Lee 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**功能节拍**: 增长文献建立 X→Y 共识 → 机制/偏好微观理由 → 证据源类型清单（临时/假设/调查）作外推边界 foreshadow
+
+**模板**:
+> "A growing literature suggests that [X-oriented actors] enjoy advantages in [recruitment/evaluation pathway]—an important link between [X] and [firm performance] ([citations]). Because [actors'] preferences are shaped by [intrinsic motive] and [social norm] ([citations]), they tend to show greater [initial interest] in [X] ([citations]) and are often willing to [accept lower compensation / trade off pecuniary terms] ([citations]). This evidence comes primarily from [temporary / hypothetical / survey] contexts, including [setting class 1], [setting class 2], and [setting class 3]."
+
+**来源**: Kim & Lee (2026, SMJ), P1
+
+**原文锚定**（仅溯源，勿作生成句）:
+> growing SRO-recruitment literature → altruism/norms → interest + wage trade-off → evidence primarily from gig / lab-style / survey contexts.
+
+**关键特征**:
+- **Hook + Literature Turn 融合**: 首段同时完成兴趣锚定与 common ground；末句用证据源类型 foreshadow Tension，不在本段完成缺口。
+- **与变体 L 对照**: L 以外推的**制度形式**为边界；本变体以外推的**证据 stakes/情境类**为边界。
+- **配对 Tension AD**: 本变体建共识并预埋证据库局限；AD 用战略理论抬升为何高 stakes 情境才算完整。
+
+**适用**: Progressive × Incompleteness；既有正向发现充分但证据库集中于低 stakes 情境；招聘/CSR/非金钱工作属性；SMJ。
+
+**禁忌**: 证据源分类必须真实（不能夸大"全部"来自临时情境）；不要在本段写 "underexplored"——留给 Tension；勿把既有发现写成错误。
+
+---
+
+### 变体 N：文献分工 — 采纳已答 / 近端后果未清（Zorn et al. 2017 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**功能节拍**: 承认主流制度压力与理论推荐 → 标出极端结构非强制却已普及 → 提出双问题（为何采纳 / 后果为何）→ 引用采纳研究关闭第一问 → 精确打开近端后果缺口 → 标注相邻领域仅作 composite/间接指标
+
+**模板**:
+> "Although [theory] advances [moderate recommendation — e.g., majority outsiders] and [institutional pressure] supports that threshold ([citations]), adopting [extreme structure X] is not mandated by [legislation / exchange rules]. Yet adoption of [X] has increased rapidly. This raises two questions: (a) why firms adopt [X], and (b) what its consequences are. [Prior study] answers the first, showing that [adoption mechanism] ([citation]). The consequences of [X], however, remain unclear. [Adjacent field] studies [assume / embed] [X] only as [composite power item / indirect variability measure] ([citations]), leaving effects on [proximal outcomes A/B/C] unknown."
+
+**来源**: Zorn et al. (2017, SMJ), background section (Intro 扩展模块) + Intro P4–P5
+
+**原文锚定**（仅溯源，勿作生成句）:
+> lone-insider not mandated → raises why adopt / what consequences → Joseph et al. answer adoption → consequences remain unclear → finance uses as power composite or performance variability → proximal outcomes unknown.
+
+**关键特征**:
+- **用文献分工取代弱缺口** — 不说"没人研究 X"，而说"采纳问已答、后果问未答"
+- **双问题收窄** — 显式列出 (a)(b)，再关闭 (a)、打开 (b)，读者感到增量精确
+- **相邻领域降级使用** — composite / variability 证明现象已被看见但未作为治理结构被理论化
+- **Progressive × Inadequacy 非对角** — 累积承认主流 independence 推荐，问题化的是极端外推而非主流本身
+
+**与变体 L/M 对照**: L/M 用外推边界（形式/证据源）foreshadow Tension；本变体用**研究问题分工**（antecedent vs consequence）打开 Tension，配对 `21-institutionalized-extreme-structural-warrant`。
+
+**适用**: 拥挤治理/战略文献中新结构特征已有采纳/扩散研究，但后果（尤其 proximal outcomes）未清；Progressive × Inadequacy；SMJ。
+
+**禁忌**: 不可伪造"已有采纳研究"；若采纳与后果都空白，改用标准 Progressive incompleteness，勿假装分工；不要在本变体展开机制推演（留给 Theory Lens）。
+
+---
 
 ## 组装规则
 

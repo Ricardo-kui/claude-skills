@@ -2,9 +2,9 @@
 corpus: write-methods
 description: Methods 填空骨架变体库，按设计类型组织。由 distill-methods-exemplar 手动写入验证通过的变体。
 organization: by_design_type
-design_types_count: 23
+design_types_count: 24
 created: 2026-05-18
-updated: 2026-08-04
+updated: 2026-08-05
 ---
 
 # Methods Econometric Models Corpus
@@ -21,29 +21,30 @@ updated: 2026-08-04
 
 | 文件 | 设计类型 | 变体数 | 最后更新 |
 |------|---------|--------|---------|
-| [面板数据-OLS](面板数据-OLS.md) | 面板数据-OLS | 28 | 2026-08-04 |
-| [自然实验-DiD](自然实验-DiD.md) | 自然实验-DiD | 3 | 2026-08-02 |
-| [非线性模型](非线性模型.md) | 非线性模型 | 14 | 2026-08-04 |
+| [面板数据-OLS](面板数据-OLS.md) | 面板数据-OLS | 32 | 2026-08-05 |
+| [自然实验-DiD](自然实验-DiD.md) | 自然实验-DiD | 13 | 2026-08-05 |
+| [非线性模型](非线性模型.md) | 非线性模型 | 15 | 2026-08-05 |
 | [生存分析](生存分析.md) | 生存分析 | 22 | 2026-08-01 |
 | [SEM](SEM.md) | SEM | 4 | 2026-05-18 |
 | [实验](实验.md) | 实验 | 6 | 2026-08-03 |
 | [多研究](多研究.md) | 多研究 | 9 | 2026-08-02 |
 | [定性过程研究](定性过程研究.md) | 定性过程研究 | 6 | 2026-07-07 |
-| [稀有结果](稀有结果.md) | 稀有结果 | 0 | 2026-05-18 |
+| [稀有结果](稀有结果.md) | 稀有结果 | 1 | 2026-08-05 |
 | [实证对象构建](实证对象构建.md) | 实证对象构建 | 5 | 2026-07-30 |
 | [事件历史+事件研究](事件历史+事件研究.md) | 事件历史+事件研究 | 11 | 2026-08-02 |
 | [同时方程](同时方程.md) | 同时方程 | 4 | 2026-07-30 |
-| [IV-2SLS](IV-2SLS.md) | IV-2SLS | 11 | 2026-08-03 |
+| [IV-2SLS](IV-2SLS.md) | IV-2SLS | 13 | 2026-08-05 |
 | [动态面板-GMM](动态面板-GMM.md) | 动态面板-GMM | 4 | 2026-07-30 |
-| [匹配DiD-广义DiD](匹配DiD-广义DiD.md) | 匹配DiD-广义DiD | 0 | 2026-05-18 |
+| [匹配DiD-广义DiD](匹配DiD-广义DiD.md) | 匹配DiD-广义DiD | 1 | 2026-08-05 |
 | [同伴效应-网络效应](同伴效应-网络效应.md) | 同伴效应-网络效应 | 4 | 2026-07-30 |
-| [文本构念测量](文本构念测量.md) | 文本构念测量 | 12 | 2026-07-22 |
+| [文本构念测量](文本构念测量.md) | 文本构念测量 | 13 | 2026-08-05 |
 | [PSM匹配面板](PSM匹配面板.md) | PSM匹配面板 | 3 | 2026-06-16 |
 | [堆叠扩散Logit](堆叠扩散Logit.md) | 堆叠扩散Logit | 0 | 2026-05-18 |
 | [多行为者设计](多行为者设计.md) | 多行为者设计 | 1 | 2026-07-08 |
-| [推断二元结果](推断二元结果.md) | 推断二元结果 | 0 | 2026-05-18 |
-| [两阶段模型](两阶段模型.md) | 两阶段模型 | 6 | 2026-08-03 |
+| [推断二元结果](推断二元结果.md) | 推断二元结果 | 1 | 2026-08-05 |
+| [两阶段模型](两阶段模型.md) | 两阶段模型 | 7 | 2026-08-05 |
 | [VARX-PVAR](VARX-PVAR.md) | VARX-PVAR | 8 | 2026-07-15 |
+| [结构需求-state-space](结构需求-state-space.md) | 结构需求-state-space | 6 | 2026-08-05 |
 
 ## 写入规则
 
@@ -53,6 +54,29 @@ updated: 2026-08-04
 4. 变体达到 3+ 时，考虑提升为 skill 主骨架
 
 ## 语料库质量状态
+
+> ✅ **2026-08-05 更新（Zorn–Shropshire–Martin–Combs–Ketchen 2017 SMJ）**: S&P 1500 lone-insider boards + 2SLS。新增：
+>   - **IV-2SLS** 变体12–13：industry leave-out 均值 IV（CEO 推动采纳内生性）+ 连续 DV 用 2SLS/FE、稀有二元放弃 FE 改聚类 Logit（IV-Probit 稳健性预告）
+>   - **面板数据-OLS** 变体32：结构二元「kind rather than degree」相对 majority-independence 的构念辩护
+>   - **稀有结果** 变体1（**首填**）：低事件率 → FE 丢样本 → 年份虚拟+单元聚类 Logit
+>   均为单篇 EMERGING；未改 SKILL.md 核心路由。配套 Results：`../write-results/econometric-models/IV-2SLS.md` 变体8–10。
+
+> ✅ **2026-08-05 更新（Castellaneta–Conti–Kacperczyk 2017 SMJ 蒸馏）**: 交错 UTSA + PE buyout 持有窗截面。新增：
+>   - **自然实验-DiD** 变体8–13：dual-sale setting、持有窗处理+staggered 示例、IRR/ΔV≈DiD 一阶差分等价、entry/exit 年 FE 栈、政治经济外生性电池、±k 年日历安慰剂
+>   - **匹配DiD-广义DiD** 变体1（**首填**）：CEM 匹配 ex-ante 价值+风险代理作为准实验稳健性
+>   均为单篇 EMERGING；不将 IRR≈DiD 提升为现代面板 staggered-DiD 默认路由；未改 SKILL.md 核心。
+
+> ✅ **2026-08-05 gap audit（Kim & Lee 2026 SMJ）**: Methods **无需新增**（多研究变体6 / 非线性变体10 / 文本构念变体12 已覆盖）；配套 Results 缺口补写见 `../write-results/econometric-models/`（OLS-FE 变体45–46）。
+
+> ✅ **2026-08-05 更新（Liu & Shankar 2015 MS 蒸馏）**: **首次填充**设计类型 `结构需求-state-space`（BLP + Kalman + GMM，product-harm crises 需求侧动态）变体1–6；扩展 `面板数据-OLS` 变体29–31（severity 理论分类、媒体 relevancy 阈值、异频月聚合）、`两阶段模型` 变体7（价格 BLP-IV + 广告双端 CF + 跨品类媒体 IV）。均为单篇 EMERGING；与 survival/time-to-recall 召回家族分工，不修改核心路由。
+
+> ✅ **2026-08-05 更新（Hoffmann et al. 2024 JM 重蒸馏）**: 修正既有 hoffmann2024 slot 变体中的两处事实错误（误写 firm FE / incidental parameters；原文为 year+industry FE + always-zero DV collinearity）。新增：
+>   - **自然实验-DiD** 变体4–7：Marketing quasi-experiment 识别栈、无 firm FE 辩护、POST 共线性说明、裁量权/行业扩展漏斗
+>   - **非线性模型** 变体15：Schmitz reduced-form 三阶交互 + staggered collinearity
+>   - **文本构念测量** 变体13：validated dictionary 相对净得分 + 大规模语料辩护
+>   - **推断二元结果** 变体1（首填）：裁量权边界子样本
+>   - slot-M1/M2/M7/M8 EXPERIMENTAL 变体同步升级（paper_id: `hoffmann_cheong_phan_zurbruegg2024`）
+>   均为单篇 EMERGING；未使用 Sun–Abraham 估计器，不提升为核心路由规则。
 
 > ✅ **2026-08-04 更新（Lee–Park 2024）**: 非线性模型新增两条写作型变体：有界结果的“估计尺度—正式形状标准—可解释尺度”契约，以及“先声明几何对象、再直接比较条件转折点”的位置型曲线调节。Lee & Park 经用户专家审计为典型 U／倒 U 写作范文，两条变体均登记为 **VERIFIED**。同步加入术语与边界：quadratic vertex 不称 inflection point；二次项和交互项的符号不能替代端点斜率、内部转折点及直接差异检验。主 skill 路由不变。
 

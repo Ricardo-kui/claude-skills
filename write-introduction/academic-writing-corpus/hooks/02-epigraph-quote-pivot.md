@@ -14,8 +14,10 @@ source_papers:
   - lashley_pollock2020 (ASQ, 2020): "medical cannabis patient narrative — immersive stakeholder voice"
   - wowak2025 (MS, 2025): "JFK 'right answer' quote → political polarization paradox"
   - abdurakhmonov2026 (JOM, 2026): "Mercedes/Volvo public EV commitment vs trade-association lobbying — public-private discrepancy, no quote, indirect narration"
+  - hoffmann_cheong_phan_zurbruegg2024 (JM, 2024): "Levine quote on personal director liability → GM/Boeing dual-case recall/litigation chain → UD law shock RQ"
+updated: 2026-08-05
 created: 2026-05-19
-source: Extracted from MVP30 narrative_analysis + darby2026 distill
+source: Extracted from MVP30 narrative_analysis + darby2026 distill; re-distilled hoffmann2024 2026-08-05
 ---
 
 # 02-epigraph-quote-pivot — 权威引语/新闻个案 Hook

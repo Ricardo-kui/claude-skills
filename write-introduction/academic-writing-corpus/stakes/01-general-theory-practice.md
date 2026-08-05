@@ -13,9 +13,10 @@ source_papers:
   - pollock2015 (ASQ, 2015): "status and categorical purity in market categorization"
   - pontikes2012 (ASQ, 2012): "category-spanning and audience perceptions"
   - jiang2026 (JIBS, 2026): "IB reverse causality frame — firms not only respond to but also help shape institutional environments"
-updated: 2026-07-07
+  - Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ (SMJ, 2017): "without theorizing harm, practitioners see little reason to critically evaluate institutionalized extreme practice"
+updated: 2026-08-05
 created: 2026-05-19
-source: Extracted from MVP30 narrative_analysis files
+source: Extracted from MVP30 narrative_analysis files + zorn2017 distill
 ---
 
 # 01-general-theory-practice — 通用 Stakes（理论重要性 + 实践后果）
@@ -157,6 +158,32 @@ source: Extracted from MVP30 narrative_analysis files
 **适用**: IB、CSR、sustainability、political economy 等关注组织外部性的领域；特别适合论证 firm→society、business→institutions 反向因果的研究。Incompleteness × Level / Phenomenon 贡献组合首选
 
 **禁忌**: "not only respond to but also help shape" 必须有领域内具体引文支撑——不能空口说 "growing recognition"。如果领域内仅1-2篇论文提出此观点，降级为 "emerging recognition"。不要用于纯 firm-level 研究（无跨层次贡献）
+
+---
+
+### 变体 G：制度化实践 critically-evaluate 型（Zorn et al. 2017 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**功能节拍**: 列举 warrant 条件（新近但高普及 / 外推超理论 / 效力未知）→ 反事实 stakes：若不理论化危害并实证展示后果 → 实践者无 critically evaluate 动机 → 因此引出理论透镜与结果集
+
+**模板**:
+> "Given that [structure X] is [relatively new but increasingly prevalent], that this practice extends beyond [established theory's recommendations], and that its efficacy remains unknown, investigating [X] is both timely and warranted. Indeed, if researchers fail to build theory explaining why [X] might be harmful and empirically demonstrate its consequences, practitioners might see little reason to stop and critically evaluate this increasingly institutionalized practice. We therefore draw on [minority / neglected theoretical stream] to describe what is lost under [X] and investigate [proximal outcome set]."
+
+**来源**: Zorn et al. (2017, SMJ), Intro P4
+
+**原文锚定**（仅溯源，勿作生成句）:
+> new but prevalent + extends beyond theory + efficacy unknown → if researchers fail to theorize harm and demonstrate consequences, practitioners see little reason to critically evaluate institutionalized practice → draw on pro-insider stream → pay / misconduct / performance.
+
+**关键特征**:
+- **Stakes = 批判性评估动机**，不是抽象 "theoretically important"
+- **三重 given that** 把 Hook/Tension 条件收束为行动正当性
+- **反事实失败模式** — "if researchers fail..." 把学术不作为与制度化锁定绑定
+- **同段过渡到 Theory Lens + outcome preview** — 紧凑 SMJ 风格
+
+**适用**: 制度化极端结构 / 规范外推研究；配对 Tension 21；SMJ/OS 治理与实践规范论文。
+
+**禁忌**: 不可在没有 kind-vs-degree 或 practice-beyond-theory 铺垫时单独使用（会显得说教）；不要夸大为 "paradigm must be stopped"。
 
 ---
 

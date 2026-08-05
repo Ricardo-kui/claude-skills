@@ -1,6 +1,306 @@
 meta:
   schema_version: 1
-  last_updated: '2026-08-04'
-  observations_processed: 0
+  last_updated: '2026-08-05'
+  observations_processed: 5
   description: Evidence ledger for write-theory design defects inferred from Theory exemplar distillation.
-defects: {}
+defects:
+  e-family-missing-dual-edged-signed-contingency-variant:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: 调节效应型 E 族覆盖 E1–E7，含 E4 竞争响应裁决，但不覆盖双刃剑估值机制下异号增强/阻碍权变且无 unconditional 主效应假设的写法。
+    rule_excerpt: E1-E7 协议：同层/跨层调节、嵌入边界、竞争裁决、曲线多调节、序列嵌套调节、宏观事件激活与持续性
+    rule_locator: write-theory/corpus/_index.md variants table row for E_moderation.md (pre-writeback text)
+    target: write-theory/corpus/variants/E_moderation.md
+    diagnosis: Castellaneta et al. (2017) Theory 以 dual-blade trunk + enhancing/hindering 分节 + more positive/more negative
+      假设组织贡献；E4 裁决的是竞争响应 repertoire，G 常写受众分侧主效应，Shen 双刃剑句式常收束到单侧 DV。缺少可迁移的 E8 section_variant 会导致 write-theory 把合法异号权变硬套成
+      E1 stronger/weaker。
+    proposed_change:
+      action: add_branch
+      summary: ADD E8 dual-edged signed enhancing/hindering contingencies + companion organization/sentence patterns; register
+        EMERGING evidence.
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 调节效应型
+      hypothesis_families:
+      - dual_edged_contingency
+      - interaction_only_opposite_signed
+      journals: []
+      boundary: 仅当同一 X→Y 存在方向相反的机制刃、且正式假设为异号权变、可不设 unconditional 主效应 H 时适用；不替代 E4 或 G。
+    papers:
+    - id: Castellaneta_Conti_Kacperczyk_2017_SMJ
+      journal: SMJ
+      build_type: 调节效应型
+      hypothesis_family: ''
+      evidence_anchor: 'Theory: UTSA trade-secret definition → dual-blade trunk (rival vs buyer information) → Enhancing section
+        H1 (mobility) → Hindering section H2 (resource-value uncertainty) + H3 (poor-investment/lemons risk); no unconditional
+        main-effect H.'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - SMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - SMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-05'
+    last_seen: '2026-08-05'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  e-subtype-selection-cues-not-in-primary-routing:
+    classification: routing_defect
+    status: EMERGING
+    risk: medium
+    current_rule: Gap×Boundary 一级路由只指向变体 E，不区分 E4 竞争响应裁决与双刃剑异号权变（E8）等子协议。
+    rule_excerpt: Incompleteness|Inadequacy | Boundary | 调节/条件化 | E | （Castellaneta 主路由为 Incompleteness×Boundary；Inadequacy×Boundary
+      行仅作对照）
+    rule_locator: write-theory/corpus/meta/routing_table.md — 一级路由 Gap × 贡献杠杆表
+    target: write-theory/corpus/meta/routing_table.md
+    diagnosis: 一级路由正确选到 E，但缺少二级选择线索时，模型易默认 E1（先主效应再 stronger/weaker）。Castellaneta 类任务（Gap=Incompleteness，含轻度 Inadequacy undertone；非
+      Inadequacy-primary）需要显式提示：若净效应 a priori 不定且权变异号、可无主效应 H → 调用 E8/E4 族而非 E1。勿因双刃对立误标为 Inadequacy。
+    proposed_change:
+      action: add_branch
+      summary: 在 routing_table 的 E 族二级提示中增加：dual-edged/net-effect-ambiguous + opposite-signed contingencies → E8；competing
+        responses adjudicated by W → E4。
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 调节效应型
+      hypothesis_families:
+      - competing_baseline_moderation
+      - interaction_only_opposite_signed
+      journals: []
+      boundary: 仅建议增加 E 族二级选择提示；不得把 E8 升为默认或改变 Gap×Makadok 一级映射。
+    papers:
+    - id: Castellaneta_Conti_Kacperczyk_2017_SMJ
+      journal: SMJ
+      build_type: 调节效应型
+      hypothesis_family: ''
+      evidence_anchor: All formal hypotheses are opposite-signed industry contingencies; Theory never states an unconditional
+        protection→value H.
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - SMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - SMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive:
+      - prompt: Write Theory for a legal-protection treatment that may raise and lower acquisition prices through opposing
+          information mechanisms; only industry contingencies are hypothesized.
+        expected_invariants:
+        - no unconditional main-effect H required
+        - enhancing vs hindering branches
+        - opposite-signed contingency language
+      preservation:
+      - prompt: Write Theory for a positive X→Y baseline with one buffering moderator.
+        expected_invariants:
+        - E1 baseline-then-moderation still preferred
+        - stronger/weaker language acceptable
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-05'
+    last_seen: '2026-08-05'
+    auto_action:
+      eligibility: log_only
+      reason: Insufficient evidence for core revision.
+  b-family-missing-background-as-theory-no-h-variant:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: B 族覆盖 B0/B1 与多种有正式预测的组织方式，但不覆盖无编号假设的 BACKGROUND-as-Theory 双通道+阶段衰减写法。
+    rule_excerpt: 先选分支：B0 过程解释 vs B1 正式中介
+    rule_locator: write-theory/corpus/variants/B_mechanism_elaboration.md — B0/B1 branch table
+    target: write-theory/corpus/variants/B_mechanism_elaboration.md
+    diagnosis: Kim & Lee (2026) 用 BACKGROUND 完成 rising action：双通道同向 B0 + 信息稀缺阶段衰减 + stakes incompleteness，且无正式 H。缺少 B8 section_variant
+      时，write-theory 易误强制产出 H 表或误路由到 E/D。
+    proposed_change:
+      action: add_branch
+      summary: ADD B8 Background-as-Theory dual-channel + stage attenuation pattern (EMERGING); register honesty boundary
+        against forging H.
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 机制推演型
+      hypothesis_families:
+      - dual_channel_same_direction_stage_bound
+      - no_formal_hypothesis
+      journals: []
+      boundary: 仅当目标稿明确采用无编号假设的 Background/Literature Background 承载理论时适用；不替代 dual_mechanism_same_direction（有 H）或 B2。
+    papers:
+    - id: Kim_Lee_2026_SMJ
+      journal: SMJ
+      build_type: 机制推演型
+      hypothesis_family: ''
+      evidence_anchor: 'BACKGROUND: evaluation setting → taste channel → signaling channel → firsthand-info attenuation →
+        EV stakes incompleteness → activity-vs-attribute retention contrast; zero numbered H.'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - SMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - SMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-05'
+    last_seen: '2026-08-05'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  output-contract-assumes-numbered-hypotheses:
+    classification: output_contract_defect
+    status: EMERGING
+    risk: medium
+    current_rule: 完整 Theory 输出默认要求 storyline 绑定的假设陈述与按假设审计表。
+    rule_excerpt: 每个假设必须标注 `storyline_id`（对齐 `story.storylines[*].id`，供 write-methods / write-results 消费）。
+    rule_locator: write-theory/references/output-format.md — 假设陈述 / storyline 绑定
+    target: write-theory/references/output-format.md
+    diagnosis: '对 Background-as-Theory（无正式 H）合法稿件，强制假设表会诱导伪造 H 或误拒合格结构。需要有条件分支：当 hypothesis_structure=none / B8 时，改为 empirical_agenda
+      / 阶段研究问题映射，并允许 hypotheses: []。'
+    proposed_change:
+      action: conditionalize
+      summary: When B8/no-formal-H is diagnosed, render stage-agenda table instead of mandatory hypothesis×storyline table;
+        keep storyline binding for numbered-H papers.
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 机制推演型
+      hypothesis_families:
+      - no_formal_hypothesis
+      journals: []
+      boundary: 仅条件化输出合同；不得取消有正式 H 论文的 storyline 绑定要求。
+    papers:
+    - id: Kim_Lee_2026_SMJ
+      journal: SMJ
+      build_type: 机制推演型
+      hypothesis_family: ''
+      evidence_anchor: Section 2 BACKGROUND ends without H1–Hn; empirical questions are stage pipeline tests in EMPIRICAL
+        SETTING/RESULTS.
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - SMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - SMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive:
+      - prompt: Draft Theory for a multi-stage employment pipeline paper that uses BACKGROUND with two same-direction mechanisms
+          and stage attenuation, and the journal style has no numbered hypotheses.
+        expected_invariants:
+        - Does not invent numbered H1–Hn
+        - Provides dual-channel B0 why-chain plus stage-attenuation warrant
+        - Outputs empirical agenda / stage questions mapped to storylines if needed
+      preservation:
+      - prompt: Draft standard B0 Theory with one main-effect hypothesis and a clear why-chain.
+        expected_invariants:
+        - Still requires storyline_id on each numbered hypothesis
+        - Still produces hypothesis clarity checks
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-05'
+    last_seen: '2026-08-05'
+    auto_action:
+      eligibility: log_only
+      reason: Insufficient evidence for core revision.
+  corpus-gap-mechanism-loss-multi-outcome:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: hypothesis_organization_patterns covers common trunk→moderator branches and trait→divergent outcomes, but
+      not structural-absence→mechanism-loss→multi-outcome→external partial-substitute.
+    rule_excerpt: 'Pattern: Shared Orientation → Divergent Outcome Portfolio → Selective Remedy'
+    rule_locator: 'write-theory/corpus/subprotocols/hypothesis_organization_patterns.md :: shared_orientation pattern'
+    target: write-theory/corpus/subprotocols/hypothesis_organization_patterns.md
+    diagnosis: Crowded governance Theories often need a reusable organization for what-is-lost structural absence mapped to
+      multiple outcomes plus external substitute boundaries; absence of this skeleton pushes writers toward another board-characteristic→same-DV
+      template.
+    proposed_change:
+      action: add_branch
+      summary: Add EMERGING section_variant B9 / mechanism_loss_trunk_multi_outcome_external_substitute plus sentence companions;
+        do not alter core routing.
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 机制推演型
+      hypothesis_families:
+      - main_effect_plus_moderation
+      - multi_outcome_portfolio
+      journals: []
+      boundary: section_variant only; never core routing; EMERGING until ≥2 papers
+    papers:
+    - id: Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ
+      journal: SMJ
+      build_type: 机制推演型
+      hypothesis_family: ''
+      evidence_anchor: 'Theory: pro-insider benefit inventory → lost on lone-insider boards → H1a/H1b/H2/H3 → H4/H5 external
+        attenuation'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - SMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - SMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive:
+      - prompt: Board structure removes a class of directors; theorize multiple governance outcomes and external monitors
+          as partial substitutes.
+        expected_invariants:
+        - benefit inventory before loss
+        - multi-outcome warrants
+        - partial-substitute attenuation language
+      preservation:
+      - prompt: Ordinary buffering moderation of a single X→Y relationship without structural absence.
+        expected_invariants:
+        - ordinary buffering template still available
+        - no forced what-is-lost framing
+    resolution_history:
+    - status: applied
+      modified_targets:
+      - write-theory/corpus/subprotocols/hypothesis_organization_patterns.md
+      - write-theory/corpus/sentences/mechanism_chain.md
+      - write-theory/corpus/sentences/moderation.md
+      - write-theory/corpus/variants/B_mechanism_elaboration.md
+      - write-theory/corpus/_index.md
+      - write-theory/corpus/_evidence_registry.yaml
+      rule_excerpt_after: 'Pattern: Mechanism-Loss Trunk → Multi-Outcome Tree → External Partial-Substitute Boundary'
+      old_rule_excerpt_absent: false
+      validation:
+        quick_validate: true
+        regression: true
+        forward_test: true
+      date: '2026-08-05'
+      note: section_variant writeback only; core routing unchanged
+    lifecycle: resolved
+    first_seen: '2026-08-05'
+    last_seen: '2026-08-05'
+    auto_action:
+      eligibility: no_action
+      reason: Validated correction already applied.

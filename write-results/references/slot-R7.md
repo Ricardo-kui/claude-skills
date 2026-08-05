@@ -71,7 +71,17 @@ One might argue that the results for [audience B] are driven not by [theorized m
 To assess parallel trends, we estimate an event-study model with leads and lags around [event]. The pre-treatment coefficients are [not distinguishable from zero / stable], suggesting no detectable pre-treatment divergence. The post-treatment coefficients [emerge / increase / persist] after [event], which is consistent with [causal / timing claim]. The lack of pre-treatment movement reduces concern that [outcome trend] anticipated or caused [treatment].
 ```
 
-**替代解释两步排除变体**（hoffmann2024 型 — CONTROL 步 + INTERACT 步）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：替代解释三步反驳变体
+**Top-firm 集中度样本敏感性变体**（hoffmann2024 型）： 🔬 EXPERIMENTAL（1 篇范文；2026-08-05 重蒸馏）⚠️ 保守替代：R7 样本威胁 — 排除敏感性
+```text
+Finally, one might be concerned that our results are influenced by the fact that a few firms, such as [firm examples], account for a substantial proportion of the number of [outcome events]. Hence, as a sensitivity check, we exclude these top [N] [outcome]-producing firms — together accounting for [X]% of all [outcomes] — from our sample and re-estimate our models. [Appendix Table] confirms that our baseline results continue to hold, and so do the moderation effects when examined separately. When including both moderators simultaneously, the interaction effect of [moderator A] remains significant, while that of [moderator B] [only just fails to reach significance at conventional levels (z-statistic = [value]) / remains significant]. In sum, we conclude that our results are generally robust.
+```
+
+**Top-firm 集中度 QC**:
+- 必须报告被排除 firm 数量、合计占 [outcome] 比例、是否点名典型 firm
+- **联合调节显著性衰减**须诚实报告（如 z=1.62 边际不显著），禁止只写 "results hold"
+- 定位：样本组成威胁的 falling action，非新主效应
+
+**替代解释两步排除变体**（hoffmann2024 型 — CONTROL 步 + INTERACT 步）： 🔬 EXPERIMENTAL（1 篇范文；2026-08-05 重蒸馏校准）⚠️ 保守替代：替代解释三步反驳变体
 ```text
 A plausible alternative explanation for our main effect is that [alternative mechanism] — rather than [theorized mechanism] — drives the reduction in [outcome] following [treatment]. [Alternative mechanism] logic would predict that [treatment] changes [outcome] because [rival causal chain: e.g., firms improve governance in response to law, which independently reduces incidents that would trigger [outcome]], not because [theorized mechanism: e.g., managers facing lower litigation risk become less vigilant].
 
@@ -84,11 +94,14 @@ Second, we INTERACT [treatment] with [alternative mechanism proxy]. If [alternat
 Combined, these two tests — direct control and interaction — provide converging evidence against [alternative mechanism] as an alternative explanation for our findings.
 ```
 
-**替代解释两步排除 QC**:
+**替代解释两步排除 QC**（hoffmann2024 校准）:
 - CONTROL 步必须使用与 main specification 相同的模型规格（仅增加替代机制变量）
 - INTERACT 步的交互项方向必须有明确的理论预测（如果 rival 为真，交互应为正/负）
 - 两步必须都通过才算排除——仅 CONTROL 步通过（系数不变）但 INTERACT 步显著 → rival 部分成立
 - 替代机制变量不能与核心自变量高度相关（r > .7），否则 CONTROL 步的 "系数不变" 是多重共线性造成的假象
+- 应引用 **prior paper 的 measure construction**（如 Mayo et al. 2022 dictionary）并说明 rival 的 **need vs willingness** 逻辑
+- 收束句须区分 **lower need for [outcome]** vs **lower willingness**——排除 rival 后强化 theorized mechanism
+- 联合调节在 CONTROL/INTERACT 后 **可分别报告**（单独模型显著性更高），与主表 Col 3–4 vs 5 节奏一致
 
 **DiD 置换检验专用**： 🔬 EXPERIMENTAL（2-3 篇范文）⚠️ 保守替代：省略
 ```text

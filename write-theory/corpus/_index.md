@@ -26,6 +26,7 @@
 | 核心贡献是论证为何选择 focal DV（而非构念区分本身） | [`variants/A_construct_differentiation.md`](variants/A_construct_differentiation.md)（DV选择论证子变体） | [`subprotocols/construct_differentiation_patterns.md`](subprotocols/construct_differentiation_patterns.md), [`sentences/construct_definition.md`](sentences/construct_definition.md) |
 | 研究对象与相关现象机制不同但需借用文献 | [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md)（Simultaneously Recognize X but Leverage Y） | [`subprotocols/construct_differentiation_patterns.md`](subprotocols/construct_differentiation_patterns.md) |
 | 核心贡献是解释 X 如何影响 Y 的因果机制 | [`variants/B_mechanism_elaboration.md`](variants/B_mechanism_elaboration.md) | [`sentences/mechanism_chain.md`](sentences/mechanism_chain.md), [`sentences/hypothesis_forms.md`](sentences/hypothesis_forms.md), [`subprotocols/hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md) |
+| BACKGROUND/文献背景承载双通道机制 + 阶段衰减，且**无正式编号假设** | [`subprotocols/hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md)（Background-as-Theory Dual-Channel + Stage Attenuation；EMERGING / B8） | [`variants/B_mechanism_elaboration.md`](variants/B_mechanism_elaboration.md) B0；勿路由到必须产出 H 表的默认模板 |
 | 同一 IV 通过两条对立路径（benefit vs cost）影响同一 DV | [`variants/B_mechanism_elaboration.md`](variants/B_mechanism_elaboration.md) + [`sentences/mechanism_chain.md`](sentences/mechanism_chain.md)（辩证对立双路径；含 selective-path moderation） | 按条件作用点选择双路径共同重配或单路径选择性调节；不要路由到“双 IV 维度”的 B2 |
 | 用不同知识位置的访谈对象分别建立制度功能与战略解释 | [`sentences/mechanism_chain.md`](sentences/mechanism_chain.md)（多角色访谈三角化；EMERGING） | [`variants/E_moderation.md`](variants/E_moderation.md) E4（若访谈导出 contingency） |
 | 同一 IV 有多个角色分离的并行中介，且 direct/indirect 路径方向冲突并跨时间窗口比较 | [`subprotocols/hypothesis_organization_patterns.md`](subprotocols/hypothesis_organization_patterns.md)（Role-Separated Parallel Mediators → Effect Decomposition → Horizon Test；EMERGING） | [`variants/B_mechanism_elaboration.md`](variants/B_mechanism_elaboration.md) |
@@ -42,12 +43,14 @@
 | 领域默认机制推出方向 A，但新机制应推出相反方向 | [`subprotocols/hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md)（Counterintuitive Direction-Reversal via Mechanism Substitution；EMERGING） | [`variants/B_mechanism_elaboration.md`](variants/B_mechanism_elaboration.md), [`sentences/mechanism_chain.md`](sentences/mechanism_chain.md) |
 | 从有害机制链反推一般干预，并以自我关联/诊断性强化同一干预 | [`subprotocols/hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md)（Mechanism-Targeted Intervention Escalation；EMERGING） | [`variants/E_moderation.md`](variants/E_moderation.md), [`sentences/moderation.md`](sentences/moderation.md) |
 | 宏观事件激活平时可压抑的身份/差异，并需同时解释事件后持续性 | [`variants/E_moderation.md`](variants/E_moderation.md) E7（EMERGING） | [`sentences/moderation.md`](sentences/moderation.md) |
+| 双刃剑估值机制净效应不定，需异号增强/阻碍行业权变（无 unconditional 主效应 H） | [`variants/E_moderation.md`](variants/E_moderation.md) E8（EMERGING） | [`hypothesis_organization_patterns.md`](subprotocols/hypothesis_organization_patterns.md)；[`sentences/moderation.md`](sentences/moderation.md) |
 | 三向交互 (X x W1 x W2) | [`variants/E_moderation.md`](variants/E_moderation.md) | [`sentences/moderation.md`](sentences/moderation.md) |
 | 有中介的调节 (Moderated Mediation) | [`variants/E_moderation.md`](variants/E_moderation.md) | [`subprotocols/hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md)（Indirect Moderation / Mediated Moderation Derivation） |
 | 多调节器按层次/维度分类 | [`variants/E_moderation.md`](variants/E_moderation.md) | [`subprotocols/moderator_selection_frameworks.md`](subprotocols/moderator_selection_frameworks.md) |
 | 同一理论预测两个竞争响应，用 moderator 裁决 | [`variants/E_moderation.md`](variants/E_moderation.md) E4 节 | [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md)（Preemptive Competing Account Management） |
 | 曲线主效应 + 多个 moderators 同时调节曲线形状 | [`variants/E_moderation.md`](variants/E_moderation.md) E5 节 | [`subprotocols/hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md)（Curvilinear Two-Phase + Width-Type Parallel） |
 | 需要解释为什么选这些 moderators | [`subprotocols/moderator_selection_frameworks.md`](subprotocols/moderator_selection_frameworks.md) | — |
+| 结构移除使内部监督收益丧失，需把同一丧失态映射到多 outcome，并用外部监督作部分替代衰减 | [`subprotocols/hypothesis_organization_patterns.md`](subprotocols/hypothesis_organization_patterns.md)（Mechanism-Loss Trunk → Multi-Outcome Tree；EMERGING / B9） | [`sentences/mechanism_chain.md`](sentences/mechanism_chain.md)；[`sentences/moderation.md`](sentences/moderation.md) |
 | 需要组织多个并行调节假设 | [`subprotocols/hypothesis_organization_patterns.md`](subprotocols/hypothesis_organization_patterns.md) | [`subprotocols/arrangement_patterns.md`](subprotocols/arrangement_patterns.md) |
 | 需要论证假设段落内部如何摆证据 | [`subprotocols/evidence_patterns.md`](subprotocols/evidence_patterns.md) | [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md) |
 | 需要组织段落内部的论点-论据-总结布局（Topic→Reasoning→Tokens→Wrap + 文献/理论/案例三类论据决策） | [`subprotocols/paragraph_layout.md`](subprotocols/paragraph_layout.md) | [`subprotocols/evidence_patterns.md`](subprotocols/evidence_patterns.md), [`sentences/mechanism_chain.md`](sentences/mechanism_chain.md)（段内逻辑布局原则） |
@@ -63,7 +66,7 @@
 | [`B_mechanism_elaboration.md`](variants/B_mechanism_elaboration.md) | 机制推演型 | B0 理论过程解释 / B1 正式中介；why chain 与测量分离 | B0 可仅主效应；B1 才要求中介 |
 | [`C_hypothesis_tree.md`](variants/C_hypothesis_tree.md) | 假设树型 | 条件化分叉、树状展开、 moderator 引入时机 | 主效应 + 多调节 |
 | [`D_process_theory.md`](variants/D_process_theory.md) | 质性过程理论型 | 阶段序列、过渡条件、时间标记 | Proposition 为主 |
-| [`E_moderation.md`](variants/E_moderation.md) | 调节效应型 | E1-E7 协议：同层/跨层调节、嵌入边界、竞争裁决、曲线多调节、序列嵌套调节、宏观事件激活与持续性 | 主效应 + 调节（含复杂交互与条件间接效应） |
+| [`E_moderation.md`](variants/E_moderation.md) | 调节效应型 | E1-E8 协议：同层/跨层调节、嵌入边界、竞争裁决、曲线多调节、序列嵌套调节、宏观事件激活与持续性、双刃剑异号增强/阻碍权变 | 主效应 + 调节（含复杂交互、条件间接效应、无主效应异号权变） |
 | [`F_competing_hypotheses.md`](variants/F_competing_hypotheses.md) | 竞争假设型 | 对立预测呈现、非传统收敛信号、 net effect 论证 | 竞争假设对 |
 | [`G_dialectical_opposition.md`](variants/G_dialectical_opposition.md) | 辩证对立型 | 双受众对称机制、dialectical turn 标记、theory-based reconciliation | 对立预测（方向反转） |
 
@@ -81,7 +84,7 @@
 | [`reasoning_soundness_protocol.md`](subprotocols/reasoning_soundness_protocol.md) | 跨类型 | 论证可靠性（soundness）协议：前提三分法 [D]/[S]/[E] + 最弱环节防守（含 Booth warrant 五测试）+ 机制必要性门控（三问）+ 反例压力测试（六类 warrant 攻击面 + 第四种处置"承认但不回应"）+ warrant 明言/隐去表达纪律（Booth Ch8）；hypothesis_derivation_patterns 的 soundness 镜像，Phase 3 成稿后与 Phase 4 审计 4 使用 |
 | [`arrangement_patterns.md`](subprotocols/arrangement_patterns.md) | 跨类型 | 论点-论据安排模式（Warrant-Embedded / Evidence-Contrast / Cumulative / Parallel） |
 | [`evidence_patterns.md`](subprotocols/evidence_patterns.md) | 跨类型 | 证据类型、证据功能、文献引用三要素句式 |
-| [`hypothesis_organization_patterns.md`](subprotocols/hypothesis_organization_patterns.md) | 跨类型 | 复杂假设体系的段落级组织（common trunk / dual branch / baseline→moderation / 2×2 对称矩阵 / 角色分离并行中介→效应分解→时间检验） |
+| [`hypothesis_organization_patterns.md`](subprotocols/hypothesis_organization_patterns.md) | 跨类型 | 复杂假设体系的段落级组织（common trunk / dual branch / baseline→moderation / 2×2 对称矩阵 / 角色分离并行中介→效应分解→时间检验 / **机制丧失→多结果树→外部部分替代**） |
 | [`bilateral_argumentation_templates.md`](subprotocols/bilateral_argumentation_templates.md) | E 调节效应型 | 调节假设的 high/low 双边论证句法 |
 | [`moderator_selection_frameworks.md`](subprotocols/moderator_selection_frameworks.md) | E 调节效应型 / C 假设树型 | 多 moderator 选择元框架 |
 | [`intra_tmt_persuasion.md`](subprotocols/intra_tmt_persuasion.md) | E 调节效应型 / C 假设树型 | 下级高管如何通过信心启发式劝说上级决策者（含权力放大→三向交互） |

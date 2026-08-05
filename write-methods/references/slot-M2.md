@@ -23,11 +23,15 @@ No authoritative database exists for [empirical object], so we constructed the d
 Our primary sample consists of [units] observed from [period], drawn from [source] because it tracks [construct-relevant activity]. The observation window begins in [year] because [source/construct availability] and ends in [year] to capture [post-treatment horizon]. Treatment is observed for [treated units] after [event], while [control units] provide the counterfactual comparison. Because testing [moderation/mechanism] requires [additional source], the sample for H[x] is restricted to [available period/units].
 ```
 
-**Staggered DiD 样本周期双重辩护变体**（hoffmann2024 型）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：自然实验/DiD 变体
+**Staggered DiD 样本周期双重辩护变体**（hoffmann_cheong_phan_zurbruegg2024 型）： 🔬 EXPERIMENTAL（1 篇范文，2026-08-05 重蒸馏）⚠️ 保守替代：自然实验/DiD 变体
 ```text
-Our primary sample consists of [units] observed from [start year] to [end year]. We choose [start year] for two reasons: first, [data availability / quality reason]; second, this year coincides with [institutional event / regime change] that marks [theoretical relevance]. We end in [end year] to capture a meaningful post-treatment window following the last [law/policy] adoption in [last adoption year], while avoiding contamination from [confounding event: e.g., COVID-19 pandemic].
+Our primary sample consists of [units] observed from [start year] to [end year]. We begin in [start year] to ensure a pretreatment control period before the first [law/policy] adoption in [first adoption year]. We end in [end year] to allow a post-adoption window after the last adoption in [last adoption year], giving [units] time to incorporate the legal change into [decision type].
 
-We exclude [excluded observations] from our sample because they involve [exclusion rationale: e.g., known product defects that already caused injuries/deaths]. This exclusion is theoretically motivated: [theory-based justification — e.g., when harm has already materialized, managers face reputational and legal pressures that override the discretion mechanisms our theory examines]. The final sample consists of [N] [unit-years] across [K] [units].
+Treatment is assigned by [incorporation rule: e.g., state of incorporation], not [irrelevant geographic unit]. We drop [N] [units] that changed [assignment attribute] during the sample period to avoid misclassification and self-selection ([citation]).
+
+Following standard procedures in prior [outcome] DiD studies ([citation]), we include all [units] in [industry definition] industries with at least one [outcome event] during the sample period. To avoid omitting [units] that faced a defective-product signal but chose not to [outcome], we also include [units] in industries with consumer incident reports on [incident source] during the period.
+
+For the main analysis we focus on [outcome events] without [disqualifying prior condition: e.g., prior injuries/deaths] because [theory-based discretion argument: e.g., regulatory or legal pressure removes managerial discretion once harm materializes]. The final sample contains [N_events] [events] from [N_units] unique [units], yielding [N_outcome_states] [outcome] observations and [N_panel] [unit-years].
 ```
 
 **多研究变体**（逐研究）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 M2 段落 + M9 多研究过渡段

@@ -12,16 +12,16 @@ source_papers:
   - "ahmadi_khanagha_berchicci_jansen_2017_jms (Journal of Management Studies): 7-model hierarchical regression table navigation, three-way interaction conditional decomposition, asymmetric findings narrative"
   - "cui_yang_vertinsky_smj_attacking_partners (Strategic Management Journal): inverted U-shape + curve moderation, Lind-Mehlum three-step test, turning-point CI, flatten/steepen graph language"
   - "chung_low_rust_2022_jams (Journal of the Academy of Marketing Science): model-free quartile opening, interquartile economic significance, Heckman two-stage table navigation, alternative-DV falsification, threat-by-threat endogeneity table"
-  - "kim_lee_2026_putting_a_price_on_mission_smj (Strategic Management Journal): multi-stage same-IV pipeline attenuation profile, WTP coefficient-ratio economic significance, post-treatment selection caveat"
+  - "kim_lee_2026_putting_a_price_on_mission_smj (Strategic Management Journal): multi-stage same-IV pipeline attenuation profile, WTP coefficient-ratio economic significance, post-treatment selection caveat, stage-concentrated demographic heterogeneity, Cinelli-Hazlett sensitivity with observed-covariate benchmark"
   - "pupovac_astvansh_carrillat_legoux_2026_pom (Production and Operations Management): cross-sectional OLS/FE on event-study CAR; Control Function + Heckman two-stage correction navigation"
   - "du_tsolmon_2024_post_ma_retention_structural_knowledge_orsc (Organization Science): selection three-step defense (descriptive→CEM→Heckman), null-finding-as-mechanism-evidence, heterogeneity-as-alternative-rebuttal, external-benchmark threshold discovery, downstream performance post hoc, 2x2 cross-diagonal typology comparison"
   - "pollock2015 (Administrative Science Quarterly, 2015): dynamic panel AB-GMM — ρ persistence % interpretation, split-sample Wald χ² coefficient comparison + partial support, Monte Carlo power for GMM null, post-hoc spline reconciliation of surprising negative, 3SLS alternative-estimator robustness with LDV-bias caveat"
   - "malshe2015 (Journal of Marketing, 2015): SUR system — floodlight (Johnson-Neyman) sign-flipping interaction dual transition points, 3-condition cross-equation mediation + asymmetric support, counterintuitive reverse deferred to Discussion"
   - "schumacher_keck_tang_2020_smj (Strategic Management Journal): direct cross-group coefficient test for an imprecise within-group reversal; construct-validity triangulation across nomological contrast, cross-firm stability, and temporal stability"
   - "kashmiri_nicol_arora_2017_jams (Journal of the Academy of Marketing Science): marginal focal result followed by significance-driven control deletion, retained as an anti-pattern rather than a reporting template"
-variants_count: 44
+variants_count: 46
 created: 2026-05-18
-updated: 2026-08-03
+updated: 2026-08-05
 ---
 
 # OLS-FE — Results 骨架
@@ -498,6 +498,26 @@ updated: 2026-08-03
 **与原骨架差异**: 不是普通 robustness checklist。三项分析分别对应三个构念效度威胁：`真实能力或相邻特质`、`企业特定而非个人特质`、`trait 随反馈内生更新`。每项都由 rival interpretation 立项，再用最匹配的观测模式回应，形成 nomological + cross-context + temporal 三角验证。
 
 **诚实边界**: 人口特征对比依赖额外同质性假设；跨组织重复样本可能很小；短期稳定不等于永久不变；三角验证提升解释可信度但不能证明代理只测量一个潜在构念。
+
+### 变体 45: R4 — 管道阶段集中异质性：亚组吸收全部前端优势后下游熄灭 (1篇高价值)
+**来源论文**: Kim & Lee 2026 (Strategic Management Journal)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-08-05
+**槽位**: R4（可嵌入多阶段管道的 falling action）
+**骨架**:
+> We next test whether associations between [IV] and [stage outcomes] differ by [demographic/subgroup moderator]. Table [X] extends the main [stage] models by adding [IV] × [Moderator]. At the [front-end stage], the baseline coefficient on [IV] is close to zero (p = [value]), while the interaction is [direction] and statistically significant (p [relation] [threshold]); the pattern is robust to [unit] fixed effects where feasible (p [relation] [threshold]). These estimates indicate that [non-focal subgroup] shows no detectable association with [IV], and that [focal subgroup] accounts for essentially all of the estimated [front-end] advantage. This pattern does not persist in the [mid-pipeline] and [back-end] stages: the most-specified models find [IV] × [Moderator] coefficients that are [direction] and statistically imprecise (p = [value]; p = [value]). [If using unit FE for the main pipeline:] Because within-[unit] fixed effects absorb time-invariant [Moderator], between-subgroup comparisons rely on models without [unit] FE (or on split-sample margins); do not claim within-[unit] gender/demographic contrasts from FE columns.
+**与原骨架差异**: 区别于变体8（主效应 null + 交互显著的条件化再定位）与变体27（跨阶段主效应衰减、无亚组分解）——本变体的核心是**组成性裁决 + 阶段熄灭**：(1) 用接近零的 baseline [IV] 证明非焦点亚组无关联，从而把已显著的前端主效应重写为"几乎全部由焦点亚组驱动"；(2) 在同一决策管道的中后段报告交互熄灭，把异质性本身做成管道衰减故事的一部分。适用于 multi-stage recruitment / funnel / ASA 设计中人口或偏好异质性只在信息稀薄的前端成立的叙事。
+**诚实边界**: "accounts for all" 须有 baseline ≈ 0 的统计支撑，不可仅因交互显著就宣称；下游交互 null 受 post-treatment selection 约束（见 slot-R6 Slough）；关联语言优先（associated with / advantages），不可升级为因果异质性效应。配套管道主叙事见变体27。
+
+### 变体 46: R7 — Cinelli–Hazlett 敏感性：以强观测协变量为倍数基准 (1篇高价值)
+**来源论文**: Kim & Lee 2026 (Strategic Management Journal)
+**验证状态**: 待第二篇交叉验证
+**写入日期**: 2026-08-05
+**槽位**: R7
+**骨架**:
+> Because [IV] is a non-random [unit] attribute, a concern is that observed associations with [outcomes] could be sensitive to omitted variables. We conduct a sensitivity analysis that estimates how strong potential unobserved confounders would need to be to fully explain away the observed associations, following [Cinelli & Hazlett 2020]. For interpretability, we compare the required confounder strength with [strong observed predictor — e.g., log distance / size / prior performance] — a covariate that strongly predicts both [outcome_A] and [outcome_B] in our data. For [the stages / outcomes with significant associations], unobserved confounders assumed to be [k] times as strong as [benchmark] would still be insufficient to account for the estimated associations ([appendix table]). While this analysis does not rule out unobservables, it increases confidence that the estimated associations are not artifacts of omitted-variable bias alone.
+**与原骨架差异**: 区别于变体15（RIR + Oster δ/Rmax 参数化遗漏变量）——本变体用 **Cinelli–Hazlett robustness-value 逻辑 + 观测强预测变量作倍数基准**（"even k× as strong as [Log Distance] still insufficient"），把抽象敏感性阈值翻译成审稿人可直觉比较的协变量强度。适用于观察性关联设计（非 DiD/实验）且已有一个理论/经验上强的观测预测变量可作 benchmark。corpus 此前无 Cinelli–Hazlett 命中。
+**诚实边界**: 敏感性不证明因果；须明确只对已显著的 association 做该检验；benchmark 必须在同模型中确实强预测 outcome，不可事后挑选弱变量夸大稳健性；措辞保持 associational（"associations… not artifacts"）。
 
 ## 反模式
 

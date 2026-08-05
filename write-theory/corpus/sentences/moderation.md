@@ -264,6 +264,23 @@ will shift the main effect of [treatment] on [outcome].
 - 不能在引入框架后只讨论一个调节变量——框架承诺了两个类型，必须兑现
 - "A key distinction... is thus that the former relies on... while the latter is based on..." 型收束句必须出现
 
+**主效应→边界过渡句（hoffmann2024 型）**:
+```
+Given the argument that [core mechanism underlying main effect, e.g., agency conflicts] 
+underlie[s] [agents'] [opportunistic response to treatment], our investigation of the 
+boundary conditions of this main effect will be guided by insights from prior literature 
+on [organizational mechanisms that mitigate such conflicts / the secondary framework domain] 
+([citation]).
+```
+- 功能：从 H1 机制逻辑自然切换到调节讨论，避免 moderator 显得 ad-hoc
+- 出现位置：Boundary Conditions 小节首段，在引入 organizing taxonomy 之前
+
+**平行 weaken-moderator 子节结构（hoffmann2024 型）**:
+- 框架总览段（1 次）→ `#### [Moderator 1 label]` 子节 → H2 → `#### [Moderator 2 label]` 子节 → H3
+- 每个子节共用收束逻辑：`...will constrain [opportunistic tendency]... and thus weaken the main effect of [treatment]`
+- 假设形式：`The negative association between [IV] and [DV] is weaker for firms with [higher/stronger W].`
+- **非** bilateral high/low 对称论证——moderator 只论证缓冲/削弱方向
+
 ---
 
 ## 董事会放大型边界条件（Board Monitoring as Amplifying Boundary Condition，Chung/Low/Rust 2022 型）
@@ -332,6 +349,43 @@ board's scrutiny to [functional_domain] ([citations]). This may lead the board t
 
 ---
 
+## 异号增强/阻碍调节句（more positive / more negative，Castellaneta 型）
+
+**功能**: 在双刃剑净效应不定时，用“更正 / 更负”而非 “stronger/weaker of a signed main effect” 陈述权变，避免先承诺 unconditional 方向。
+
+**增强刃（enhancing）**:
+```
+"The impact of [X] on [Y] will be more positive when [W_enhance] is [higher/present],
+because [W_enhance] amplifies [rival-threat / leakage pathway] that [X] constrains."
+```
+
+**阻碍刃（hindering）**:
+```
+"The impact of [X] on [Y] will be more negative when [W_hinder] is [higher/present],
+because [W_hinder] raises the value of [buyer-side information] that [X] conceals,
+increasing [valuation uncertainty / adverse-selection discount]."
+```
+
+**分节导航（可选）**:
+```
+"### The enhancing effect of [X]"
+"### The hindering effect of [X]"
+```
+
+**语料锚定**:
+- Castellaneta, Conti & Kacperczyk (2017, SMJ) — mobility (more positive); resource-value uncertainty / poor-investment risk (more negative)
+
+**关键特征**:
+- “more positive / more negative” 直接编码交互符号，不依赖先陈述的主效应方向
+- Enhancing / Hindering 分节与假设符号对齐
+- 适合无 H0 主效应、仅估计交互项的设计叙事
+
+**反模式**:
+- 先写 “H1: X positively affects Y”，再写异号调节却不解释主效应为何可被反转
+- 阻碍假设只用 “will be weaker” 而未说明相对零/相对升值刃的方向
+
+---
+
 ## 倒U型曲率调节图形化描述（flatten / steepen）
 
 **功能**: 为二次交互项（IV² × Moderator）提供直观的图形化收敛语言，将统计系数符号转化为可理解的曲率变化。
@@ -359,3 +413,83 @@ board's scrutiny to [functional_domain] ([citations]). This may lead the board t
 **反模式**:
 - 只说 "W moderates the curvilinear relationship" 而不说明 flatten/steepen 方向。
 - 混淆 flatten（压低峰值）与 shift（平移曲线）。
+
+---
+
+## 倒U型垂直位移调节（shift upward / downward）
+
+**功能**: 为“整条曲线沿 Y 轴平移、曲率大体不变”的调节提供与 flatten/steepen、拐点右移可区分的图形化语言。适用于 adverse Y 的倒 U：W 提高各 X 水平上的风险基线，而不必然改变学习主导后的下降速率。
+
+**验证状态**: EMERGING（单篇来源 Bendig, Hensellek & Schulte 2024 ETP；仅作 `section_variant`）
+
+**功能节拍**: 重述基线倒 U → W 如何抬高（或压低）全程执行/评价摩擦 → 几何预测 = 垂直位移 → 与 steepen/拐点移动对照排除
+
+**模板（shift upward — adverse Y）**:
+```
+"[W] intensifies [search error / coordination burden / absorption friction] across the range of [X], raising [adverse Y] at comparable activity levels. The inverted-U therefore shifts upward under higher [W]: the peak risk is higher, without requiring a claim that the learning segment becomes steeper."
+```
+
+**模板（与 steepen 对照句）**:
+```
+"Unlike a steepening prediction, an upward shift implies a higher [adverse Y] locus for given [X], not necessarily a faster post-turning-point decline."
+```
+
+**语料锚定**:
+- Bendig, Hensellek & Schulte (2024, ETP) — market turbulence shifts the CVC–recall inverted-U upward; the alliance curve is instead predicted to steepen (mode-differentiated geometry under the same W).
+
+**关键特征**:
+- shift = 曲线整体沿 Y 轴移动；steepen/flatten = 两侧斜率与峰值高度的曲率变化；turning-point delay = 拐点沿 X 轴移动。
+- 对 adverse Y，上移意味着“同等活动强度下更高伤害/失败风险”，不是“更优中间区间”。
+- 适合与平行模式对照：同一 W 可对 Mode A 预测 shift、对 Mode B 预测 steepen。
+
+**反模式**:
+- 用 “W strengthens the relationship” 同时覆盖 shift 与 steepen。
+- 声称上移却用仅检验曲率变化的语言，或把 Haans 意义上的 intercept/level shift 写成二次项符号故事而不核对几何含义。
+
+---
+
+## 外部部分替代衰减（External Partial-Substitute Attenuation）
+
+<!--
+pattern_id: external_partial_substitute_attenuation
+build_type: 机制推演型 + 调节效应型（边界）
+source_papers: ["Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ"]
+confidence: low
+status: needs_validation
+story_fidelity: section_variant
+sentence_position: moderation_mechanism
+-->
+
+**适用**: 内部治理因**结构缺失**而削弱后，外部监督者（分析师、机构投资者等）提供**替代性信息/压力**，衰减而非翻转主效应；且明确 **不能完全替代**被移除的内部行动者。
+
+**验证状态**: EMERGING（单篇 Zorn et al. 2017 SMJ；仅 `section_variant`）
+
+**功能节拍**: 承认董事会仍是第一道防线 → 内部弱时外部力量更活跃 → W 提供 substitute scrutiny/information → 明确非替换 → attenuate S→Y
+
+**模板**:
+```
+[Boards / internal monitors] remain the primary line of defense. When they are weakened
+by [structure S], [external monitor W] can pressure directors by supplying substitute
+[information / scrutiny] through [access channel].
+[W] does not replace [removed internal actor class], but raises directors' awareness
+of the need to constrain [focal agent].
+Accordingly, the [positive/negative] relationship between [S] and [Y] is attenuated
+as [W] increases.
+```
+
+**假设句配套**:
+```
+H[N]: The [+/-] relationship between [S] and [Y] is attenuated as [W] increases.
+```
+
+**语料锚定**:
+- Zorn et al. (2017, SMJ) — analyst coverage and institutional ownership attenuate lone-insider effects on pay, misconduct, and performance; authors explicitly note non-substitution for non-CEO insiders.
+
+**与近邻区分**:
+- vs 普通 Buffering：普通缓冲可不提“替代什么”；本句式必须声明 **partial substitute for a lost internal benefit**。
+- vs `board_governance_boundary_condition`：后者是董事会 **放大**短视；本句式是外部力量 **衰减**内部机制丧失的危害。
+
+**反模式**:
+- 写成“外部监督完全替代董事会/insider”。
+- 只论证 high-W，完全不交代 low-W 或对照逻辑。
+- 调节与 trunk 的 lost benefits 脱钩（变成任意治理控制变量）。

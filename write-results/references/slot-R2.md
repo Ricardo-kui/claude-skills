@@ -8,6 +8,16 @@
 Table [x] reports [model family] predicting [dependent variable]. Model [1] includes [baseline controls/fixed effects]. Model [2] adds [focal predictor]. Model [3] adds [interaction/moderator]. We use Model [x] as the preferred specification because [reason]. Hypothesis [a] is tested in Model [y], and Hypothesis [b] is tested in Model [z]. The pattern of coefficients is stable across models, suggesting that [interpretation].
 ```
 
+**DiD + Logit 调节分步入表导航变体**（hoffmann2024 型）： 🔬 EXPERIMENTAL（1 篇范文；2026-08-05 重蒸馏）⚠️ 保守替代：DiD 变体
+```text
+Table [x] reports DiD regression results for [outcome] (H[x]–H[y]). Columns [1] and [2] show models without and with control variables, respectively. To address multicollinearity issues, in Columns [3] and [4] we first report regression results where we add each of the moderators separately, before presenting the results of the full model in Column [5]. [Optional sample note: Because [moderator] relies on [data source available only from year Y], the sample period and size available for testing the boundary conditions are smaller than those available for testing the baseline results.] While both moderator variables remain significant when included simultaneously, the significance levels are higher when each is included separately.
+```
+
+**DiD 分步入表 QC**:
+- 导航段只映射列→假设，不提前解读系数
+- 必须说明 **分步入模** 原因（multicollinearity / reduced-form），不能只报 Col 5
+- moderator 数据可用性导致的 **样本缩短** 须在 R2 或 R4 首段预告
+
 **DiD 变体**： ✓ STANDARD（5-8 篇 DiD 范文复现）
 ```text
 Table [x] reports DiD estimates for [outcome]. Model [a] includes [baseline fixed effects], and Model [b] adds [controls]. Across these specifications, [treatment] is [direction/status]. We evaluate the hypotheses in the order presented in the theory section.

@@ -21,9 +21,10 @@ source_papers:
   - weng_yang (JMS): "Contrast-framed twofold — each contribution opens with 'In contrast with prior studies...', anchored in different literature streams, ends with broader implication"
   - wowak2025 (MS, 2025): "Convergent dual-literature-scan + awareness-and-mitigation — two parallel 'known→unknown' scans converge on one gap from opposite directions; implications split into descriptive awareness + empirically-tested mitigation"
   - kashmiri_nicol_arora2017 (JAMS, 2017): "Humanize firm strategy + open the mechanism black box + install a controllable countervailing remedy"
-updated: 2026-08-03
+  - kim_lee2026 (SMJ, 2026): "Full-time validation + revealed-preference WTP + stage durability null + gendered early-stage advantage"
+updated: 2026-08-05
 created: 2026-05-19
-source: Extracted from MVP30 narrative_analysis files + SKILL.md Makadok table
+source: Extracted from MVP30 narrative_analysis files + SKILL.md Makadok table + kim_lee2026
 ---
 
 # Contribution Statements — Introduction 贡献声明句法
@@ -486,6 +487,31 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 - 只有一个普通主效应时不要使用三层贡献；每层都必须由 Theory 与 Results 独立兑现。
 - “机制黑箱”不得仅靠回归系数命名；需要可追踪的 why-chain 与正式间接效应证据。
 - 可控缓解变量若只与结果相关、未检验交互或间接调节，不得升级为 remedy。
+
+---
+
+### 变体 Q：高 stakes 情境验证 → revealed-preference 幅度 → 阶段耐久性 → 早期异质性（Kim–Lee 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**功能节拍**: First 情境/理论验证 → Second 偏好显示幅度 → Third 跨阶段耐久性（含 null）→ Finally 早期异质性 → 收束（优势+边界）
+
+**模板**:
+> "Our work makes several contributions to research on [X] and [recruitment / evaluation outcomes]. First, we provide evidence that validates and extends prior findings to the [longer-term / higher-stakes] relationships central to [strategic theory] ([citations]). Second, we provide revealed-preference estimates of [actors'] willingness to pay for [X] in a [full-time / consequential] context—derived from choices among real, competing offers—showing that this willingness extends beyond [temporary / hypothetical] settings, albeit at a magnitude that is [low / mid] relative to prior estimates. Third, by leveraging data across multiple [employers] and stages, we examine the durability of [X] advantages in a way that single-stage studies cannot; we find that pre-[event] advantages do not translate into improved [retention / satisfaction], suggesting that mechanisms underlying [X]'s appeal may not sustain [attachment] over time. Finally, our findings demonstrate that the relationship is [gendered / subgroup-conditioned], with advantages at the earliest stage attributable largely to [subgroup] preferences. Taken together, the findings offer new evidence of [X]'s appeal while identifying limits to these advantages."
+
+**来源**: Kim & Lee (2026, SMJ), P5
+
+**原文锚定**（仅溯源，勿作生成句）:
+> validate/extend to strategic HC full-time → revealed-preference WTP → multi-stage durability (pre yes / post null) → gendered attraction → appeal + limits.
+
+**关键特征**:
+- **四层 Makadok 映射**: First=Boundary/Phenomenon（情境验证）；Second=Phenomenon/Mode（WTP）；Third=Boundary（阶段耐久性，含诚实 null）；Finally=Boundary（异质性）。
+- **null 写入贡献合同**: 第三贡献主动承诺"优势不延伸到保留"——不是 Discussion 才承认的局限。
+- **收束句对偶**: appeal + limits —— 避免单向"我们证明了优势"。
+
+**适用**: Incompleteness × Boundary；全管道/多阶段设计；有补偿权衡估计与异质性；SMJ 战略人力资本/CSR-招聘。
+
+**禁忌**: 四层须由 Results 逐项兑现；不得把单阶段研究硬写成"耐久性贡献"；WTP 贡献须有 revealed preference 设计，不可仅用 stated preference 冒充；异质性若仅 exploratory，降为简短附注而非 Finally 主贡献。
 
 ---
 

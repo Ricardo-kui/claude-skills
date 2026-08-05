@@ -299,4 +299,51 @@ In contrast, the HIGH version [drops the specific features / moves to a superord
 
 **反模式**: 把 minimal pair 写成"例子堆砌"（两个版本各举一堆不对应的具体公司），失去受控对比的隔离力；或用真实知名公司做对比引入事实争议；或在每条假设前都加 vignette 导致节奏破碎。
 
+---
+
+<!--
+pattern_id: dual_lens_main_boundary_division
+build_type: 机制推演型 + 调节效应型
+source_papers: ["Hoffmann_2024_JM"]
+confidence: medium
+status: ready_for_corpus
+-->
+
+## Pattern: Dual-Lens Main/Boundary Division
+
+**适用场景**: 主效应有成熟的核心理论（如 agency theory），但边界/调节变量的选择需要另一套 organizing framework（如 business ethics taxonomy），且后者**不**参与主效应机制推演。
+
+**与 Dual-Theory Two-Stage / Dual-Theory Architecture 的区分**:
+| | Dual-Lens Main/Boundary | Dual-Theory Two-Stage | Dual-Theory Architecture |
+|---|---|---|---|
+| 第二理论角色 | 仅选 moderator + 解释边界 | 同一 IV 不同阶段 | 两理论解释同一 outcome |
+| 出现位置 | T2 并列宣告；T5 才启用第二透镜 | T3 分阶段切换 | T2–T3 全程双理论 |
+| 假设分工 | H1=透镜1；H2/H3=透镜2 | H1/H2 vs H3/H4 分阶段 | 两理论共同支撑主效应 |
+
+**骨架**:
+```
+[T2 Opening] In developing our conceptual framework, we rely on arguments from 
+[primary theory] ([citation]) and the [secondary literature domain] ([citation]).
+
+[T3 Main Effect — primary lens only]
+[Agency/mechanism chain using primary theory] → H1.
+
+[T5 Boundary — secondary lens activated]
+Given the argument that [primary-mechanism logic] underlie[s] [main effect], 
+our investigation of boundary conditions will be guided by insights from 
+[secondary literature] on [mechanisms that mitigate the core conflict] ([citation]).
+
+[Secondary organizing framework taxonomy] → map to moderator 1 → H2; moderator 2 → H3.
+```
+
+**为什么有效**: 避免用主理论硬推 moderator（显得 ad-hoc），也避免双理论全程并行（喧宾夺主）；第二透镜只在"选哪些边界变量"时出场，理论分工清晰。
+
+**语料锚定**: Hoffmann, Cheong, Phan & Zurbruegg (2024, JM) — agency theory (H1 trade-off/shock) + Husted (2007) business ethics (H2 customer culture, H3 institutional monitoring).
+
+**注意事项**:
+- 第二理论必须是真实文献分类系统，不能是作者自创二分法
+- T2 必须预告双透镜分工，否则 T5 引入第二理论显得突兀
+- 主效应段落不得偷用第二理论的构念
+
+**反模式**: 两个理论都解释主效应（应合并或改用 Dual-Theory Architecture）；第二理论只在 Discussion 出现、Theory 无预告。
 

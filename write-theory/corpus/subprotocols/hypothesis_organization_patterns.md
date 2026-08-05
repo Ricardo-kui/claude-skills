@@ -393,3 +393,116 @@ measured, strengthens [protective orientation] that carries part of the bufferin
 - 为了假设编号对称，让同一中介机械地解释全部结果。
 - 没有角色动机与影响力来源，仅把任意部门权力写成“checks and balances”。
 - 将 safety controversy、product-harm crisis、recall occurrence、recall timing 和 recall strategy 混为同一构念。
+
+---
+
+<!--
+pattern_id: dual_edged_signed_enhancing_hindering_branches
+build_type: 调节效应型
+source_papers: ["Castellaneta_Conti_Kacperczyk_2017_SMJ"]
+confidence: medium
+status: EMERGING
+story_fidelity: section_variant
+-->
+
+## Pattern: Dual-Edged Trunk → Signed Enhancing/Hindering Branches
+
+**适用场景**: 主效应净方向事先不定（双刃剑）；理论用一组**异号**权变分别强化升值机制与贬值机制；不设 unconditional 主效应假设。
+**排列模式**: Dual-blade common trunk → Enhancing branch → Hindering branch(es)
+**范文来源**: Castellaneta, Conti, and Kacperczyk (2017), *Strategic Management Journal*
+
+**骨架**:
+```
+[Dual-blade trunk]
+[X] may raise [Y] by [enhancing mechanism toward rivals].
+[X] may lower [Y] by [hindering mechanism toward buyers].
+Net effect of [X] on [Y] is a priori ambiguous.
+
+[Enhancing branch]
+When [W_enhance] is high, the enhancing blade dominates because [amplification logic].
+H[e]: impact of [X] on [Y] is more positive when [W_enhance] is higher.
+
+[Hindering branch]
+When [W_hinder] is high, the hindering blade dominates because [amplification logic].
+H[h]: impact of [X] on [Y] is more negative when [W_hinder] is higher.
+[Optional] H[h2] for a second hinder-side industry contingency sharing the same blade.
+```
+
+**为什么有效**:
+- 先锁定双刃张力，再分节给出异号预测，读者不会把正/负交互当成论证不一致。
+- Enhancing / Hindering 分节标题本身就是假设体系的导航装置。
+- 允许多个 hindering moderators 共享贬值刃，只要各自入口构念可区分（如评估不确定性 vs lemons 风险）。
+
+**注意事项**:
+- 每个 hindering moderator 必须有独立 why-chain，不能只重复 “information asymmetry → discount”。
+- 若实证出现同号交互，Results 需收窄“双刃”措辞，不能事后改写成单刃。
+- 与 E4（竞争响应裁决）近亲：E4 裁决的是 response repertoire；本模式裁决的是 valuation blade。
+
+**反模式**:
+- 双刃只在 Introduction 出现，Theory 假设全是同号调节。
+- 无 trunk 直接写三个行业交互 → 像变量清单而非理论故事。
+- 把 buyer-side 与 rival-side 信息机制混成同一句话而不分刃。
+
+---
+
+<!--
+pattern_id: mechanism_loss_trunk_multi_outcome_external_substitute
+build_type: 机制推演型
+source_papers: ["Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ"]
+confidence: low
+status: needs_validation
+story_fidelity: section_variant
+-->
+
+## Pattern: Mechanism-Loss Trunk → Multi-Outcome Tree → External Partial-Substitute Boundary
+
+**适用场景**: 拥挤的治理/结构文献中，IV 不是“又一个 board/TMT characteristic”，而是**某类内部行动者被结构移除后，其原本提供的监督收益丧失**；同一丧失状态映射到多个近端/远端治理结果，再用外部监督力量作为**部分替代**边界（衰减而非完全替换）。
+
+**结构**: Benefit inventory（T 提供什么）→ Loss under structure S → Parallel outcome branches（Y1…Yn）→ External monitors W1/W2 attenuate S→Y across the portfolio。
+
+**范文来源**: Zorn, Shropshire, Martin, Combs, and Ketchen (2017), *Strategic Management Journal*（lone-insider boards；CEO pay / misconduct / performance；analysts & institutional owners）。
+
+**骨架**:
+```text
+[Benefit inventory — common trunk]
+Drawing on [counter-stream within the dominant lens], members of [removed actor class]
+enable [remaining monitors] by supplying (1) [Benefit1: information channel] and
+(2) [Benefit2: contestation / succession threat].
+
+[Mechanism loss]
+Under [structure S], these benefits are lost. [Focal agent] therefore gains discretion
+for self-serving action at [principal]'s expense.
+
+[Outcome portfolio — parallel branches]
+The same loss state implies:
+- Y1 via [outcome-specific warrant tied to Benefit1/2] → H[a]
+- Y2 via [distinct warrant] → H[b]
+- Y3 via [distinct warrant] → H[c]
+Do not invent a new master mechanism per DV; rebuild only the branch warrant.
+
+[External partial-substitute boundary]
+[W] does not restore [removed actor class], but injects substitute [scrutiny/information]
+that raises [board/monitor] awareness when internal monitoring is weak.
+Hence each S→Y link is attenuated as W increases → H[mod] family.
+```
+
+**为什么有效**:
+- 把 IV 从“结构标签”改写为“机制丧失状态”，在拥挤文献中重新打开贡献空间。
+- 读者只学一次 trunk，多 outcome 成为同一 knot 的证据组合，而非变量清单。
+- 外部边界承认治理束（governance bundle），又明确 **partial substitute**，避免“外部监督可完全替代董事会”的过度主张。
+
+**与近邻模式区分**:
+- vs `common_trunk_parallel_branches`：后者分支主要是 **同一 DV 上的 moderators**；本模式先分支 **多个 DVs**，再挂跨组合的衰减调节。
+- vs `shared_orientation_divergent_outcomes_selective_remedy`：后者是 trait→orientation→正负结果，remedy **选择性打击有害支**；本模式是 **结构缺失→收益丧失**，外部 W **同向衰减整个结果族**。
+- vs `board_governance_boundary_condition`：后者董事会 independence **放大**短视压力；本模式外部监督 **衰减**内部机制丧失的危害。
+
+**注意事项**:
+- 每个 outcome 分支仍需独立 warrant；禁止“丧失状态万能解释”而无分支论证。
+- Benefit 清单应短（通常 2 项）且理论可追溯；不要为了凑数扩成五项。
+- 调节段应写明 W **不能替换**被移除行动者，只能部分补偿信息/压力。
+- 单篇 EMERGING：未验证前不要作为 write-theory 默认路由。
+
+**反模式**:
+- 把任意 board dummy 都写成 what-is-lost，却说不清被移除者原先提供的具体收益。
+- 多 DV 共用一段机制、假设处只换因变量名。
+- 将 analysts/institutions 写成完全替代董事会的治理机制。

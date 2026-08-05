@@ -15,9 +15,10 @@ source_papers:
   - vadakkepatt2022 (JM, 2022): "130% lobbying growth, 22,000% ROI, $325M→$338B contracts"
   - kim2022 (MS, 2022): "50M vehicle recalls in 2016 → firms may not test enough before launch"
   - ilicic_brennan2026 (JM, 2026): "cross-national polarization counts + U.S. addiction burden + global mortality"
-updated: 2026-08-03
+  - Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ (SMJ, 2017): "escaped-attention extreme structure — handful→majority prevalence; practice-beyond-theory foreshadow"
+updated: 2026-08-05
 created: 2026-05-18
-source: Manually curated from MVP30 narrative_analysis files
+source: Manually curated from MVP30 narrative_analysis files + zorn2017 distill
 ---
 
 # 03-data-shock — 数据冲击 Hook
@@ -214,3 +215,29 @@ source: Manually curated from MVP30 narrative_analysis files
 - 第三方损失 % 必须来自可引用的已发表研究，不可媒体估算或自算
 - 不要超过两个实例——"成对"的张力来自"二"；三个以上会退回变体 D 的 stat-stacking
 - 现象定义句（"defined as..."）不可省略，否则 Hook 只有冲击力而无概念锚定，读者不知道两个数字在证明什么
+
+---
+
+### 变体 H：逃逸注意力的极端结构普及型（Zorn et al. 2017 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**功能节拍**: 实践持续演变 → 点名被学术注意力逃逸的极端结构并定义 → 制度压力背景一句 → 普及轨迹（少数→过半）→ "worth investigating" 轻收束（不在此完成 Gap）
+
+**模板**:
+> "[Domain] practice continues to evolve. One evolution that has largely escaped scholarly attention is [extreme structure X], which occurs when [one-sentence definition]. As evidenced by [regulatory / exchange pressure], [actors] face pressure to increase [institutionalized virtue]. As a result, a rising number of [firms] have taken the ultimate step by adopting [X]. Indeed, from [low base at earlier date], [X] now account for [prevalence > threshold] of [population]. As a growing trend, [X] appear worthy of investigation."
+
+**来源**: Zorn et al. (2017, SMJ), P1
+
+**原文锚定**（仅溯源，勿作生成句）:
+> governance practice evolves → lone-insider escaped attention → SOX/NYSE-NASDAQ pressure → ultimate step toward independence → handful pre-1990 → more than half of S&P 1500 → worthy of investigation.
+
+**关键特征**:
+- **"escaped scholarly attention" + 普及数据** — 同时完成注意力缺口与规模感，但不把 Gap 写成 few studies
+- **"ultimate step"** — foreshadow 后续 practice-beyond-theory / kind-vs-degree，Hook 只点到极端
+- **轻收束** — "worthy of investigation" 打开门，真正 warrant 留给 Tension 21
+- **可服务 Inadequacy** — 与标准 data-shock（Incompleteness）不同，本变体为制度化极端问题化铺垫
+
+**适用**: 拥挤文献中新结构特征已高度普及但学术命名/理论化滞后；配对 Tension `21-institutionalized-extreme-structural-warrant`；SMJ/治理研究。
+
+**禁忌**: 不要在 Hook 展开隐含假设或机制；普及统计必须可核实；若无"非强制极端"后续拍，不要单独用本变体冒充完整 Gap。

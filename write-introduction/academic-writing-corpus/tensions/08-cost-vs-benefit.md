@@ -3,15 +3,16 @@ type: canonical_reference
 canonical_id: "08-cost-vs-benefit"
 status: ✓ STANDARD
 gap_type: Incompleteness / Inadequacy
-cross_paper: EMERGING
 generativity: ADAPTABLE
 exclusivity: MEDIUM
 source_papers:
   - eilert2017 (JM, 2017): "Recall costs vs delay costs — Toyota $17.35m → GM $900m escalation"
   - kim2022 (MS, 2022): "On the one hand / On the other hand dilemma articulation — testing vs rushing to market"
-updated: 2026-05-24
+  - castellaneta_conti_kacperczyk2017 (SMJ, 2017): "Double-edged information-asymmetry paradox — rival vs buyer channels of same legal protection"
+cross_paper: VERIFIED
+updated: 2026-08-05
 created: 2026-05-19
-source: Extracted from MVP30 narrative_analysis + eilert2017 distill
+source: Extracted from MVP30 narrative_analysis + eilert2017 distill + castellaneta_conti_kacperczyk2017
 ---
 
 # 08-cost-vs-benefit — 成本收益权衡张力
@@ -100,6 +101,32 @@ source: Extracted from MVP30 narrative_analysis + eilert2017 distill
 **适用**: 适用于分析模型论文的 Introduction——需要先建立决策情境的丰富纹理再引入形式模型；适用于运营管理、营销战略、管理科学等接受 "决策困境" 作为 Introduction 核心组织逻辑的领域
 
 **禁忌**: "两边必须大致均衡——如果一边的成本/收益明显压倒另一边，决策困境变得虚假；'on the one hand / on the other hand' 是强标记语言——如果期刊要求更 subtle 的写作风格（如 ASQ），应改用 'Firms face a tradeoff between...' 等效表述"
+
+---
+
+### 变体 D：双刃剑信息不对称悖论型（Castellaneta–Conti–Kacperczyk 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**功能节拍**: 对立效应声明 → 通道 A（升值）→ 通道 B（贬值）→ 双刃命名 → 权变消解预告
+
+**模板**:
+> "We argue that [X] can move [Y] in opposite directions. Via [channel A: rival-side information / appropriability], stronger [X] [raises Y] by [reducing imitation or misappropriation]. Via [channel B: buyer-side information / adverse selection], stronger [X] [lowers Y] by [worsening valuation uncertainty and bid discounts]. The same instrument thus creates [advantageous asymmetries toward rivals] and [disadvantageous asymmetries toward buyers]. Because the net effect is ambiguous ex ante, we examine when [W_enhance] amplifies channel A and when [W_hinder…] amplify channel B."
+
+**来源**: Castellaneta, Conti & Kacperczyk (2017, SMJ), P3–P4
+
+**原文锚定**（仅溯源，勿作生成句）:
+> 同一保护工具 → 对手侧 vs 买方侧信息不对称 → double-edged → 行业权变消解。
+
+**关键特征**:
+- **同一工具、相反通道**：不是决策者在 A/B 行动间选择（变体 C），而是同一制度变量同时制造升值与贬值机制。
+- **对称命名双刃**：两边都落在信息对象差异上，便于后续异号调节分别放大各通道。
+- **悖论后必须接权变预告**：避免 Intro 停在不可裁决的对立。
+- **可兼作 Theory Lens**：在独立 Theory 之前用机制对仗完成解释承诺。
+
+**适用**: Incompleteness × (Mechanism + Boundary)；制度/IP 保护对交易定价或市值可能符号反转；控制权市场、重复交易、信息不对称定价；SMJ。
+
+**禁忌**: 两边机制篇幅须大致对称；不得无消解路径结束；勿与受众价值观对立（`07-same-policy-opposite-effects`）混用；勿整段复述源论文成语。
 
 ---
 

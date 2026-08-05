@@ -7,9 +7,10 @@ source_papers:
   - "chung_low_rust_2022_jams (Journal of the Academy of Marketing Science): Durbin-Wu-Hausman test + Gaussian copula endogeneity narrative"
   - "zhou_gao_zhao_2017 (Administrative Science Quarterly): geography-based IV (distance to seaports for institutional development, Frankel-Romer)"
   - "moon_tuli_mukherjee_2023_jm (Journal of Marketing): peer-IV proximity gradient balancing relevance and exclusion validity"
-variants_count: 11
+  - "Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ (Strategic Management Journal): industry leave-out mean IV for endogenous lone-insider board adoption + dual estimator for continuous vs rare-binary DVs"
+variants_count: 13
 created: 2026-05-18
-updated: 2026-08-03
+updated: 2026-08-05
 ---
 
 # IV-2SLS — Methods 骨架
@@ -149,3 +150,33 @@ updated: 2026-08-03
 **诚实边界**: 工具变量数量增加不会自动修复共同的排除限制；每一类 peers 都必须单独识别潜在直接渠道。逐类剔除只能显示结论不依赖某一工具族，不能证明剩余工具外生。必须报告第一阶段强度，并在可能时提供过度识别或替代识别检验。
 
 **适用**: 行为扩散、披露、治理实践、同伴效应等可构造行业/部门/审计师/地理/网络多层同行池的研究。
+
+### 变体 12: M8 行业 leave-out 均值 IV — 应对「行动者推动采纳」的内生二元结构 (EMERGING)
+
+**来源论文**: Zorn, Shropshire, Martin, Combs & Ketchen (2017, SMJ)
+**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**写入日期**: 2026-08-05
+**槽位**: M8
+**骨架**:
+> Endogeneity concerns can arise when [binary governance / structural choice] is correlated with the error term—particularly recursive relationships between [governance] and [outcomes] and omitted determinants of adoption ([citations]). Of special concern is that [powerful actors: e.g., CEOs] may lobby for [the focal structure], making adoption endogenous to anticipated [pay / misconduct / performance] outcomes. To isolate variation in [endogenous binary structure] that is not correlated with the error term, we estimate two-stage least squares with [unit] and [time] fixed effects. Following research that instruments firm-level governance with industry averages excluding the focal firm ([citations]), our primary instrument is the [industry]-average incidence of [focal structure], computed leaving out the focal [unit]. Industry averages correlate with focal adoption because firms in the same industry share similar [business / investment / institutional] conditions, but an industry mean that excludes the focal firm is not endogenous to focal outcomes. We supplement this instrument with [N] additional instruments that correlate with [structure] but show only weak relationships with the dependent variables—[instrument_2: e.g., sum of directors' ages] and/or [instrument_3: e.g., sum of directors' tenures], selecting the secondary instrument set by dependent variable as needed ([citation]). We assess relevance with the first-stage F-test and exogeneity with Hansen's J statistic; both support instrument validity and are reported with the second-stage results.
+
+**与原骨架差异**: 区别变体 5（Chung：同行均值作 DWH 工具、常用于连续 IV）、变体 11（Moon：多层 peers 距离梯度）——本变体的内生回归元是**二元治理/结构采纳**，威胁叙事显式锚定「[actor] 推动采纳」的 recursive governance–outcome 关系；工具组合是 **industry leave-out mean（主）+ 弱相关董事会构成汇总统计（辅）**，并按 DV 切换辅工具。诚实边界：leave-out industry mean 的排除限制依赖「行业冲击不通过非结构渠道影响焦点结果」——若行业共同冲击直接驱动 DV，排除限制受损；须报告 first-stage F 与 Hansen J，不可只声明 “valid instruments”；辅工具（董事年龄/任期之和）的相关性与外生性须分 DV 诊断，弱第一阶段不可硬用。
+
+**适用**: 董事会结构、领导结构、委员会设置、所有权安排等可能由 CEO/内部人推动采纳的内生二元治理变量；S&P / Compustat 类大样本面板。
+
+**跨 skill 对齐**: Results 见 `../write-results/econometric-models/IV-2SLS.md` 变体 8–10；构念「kind vs degree」辩护见 `面板数据-OLS.md` 变体 32。
+
+### 变体 13: M7 连续 DV 用 2SLS+双向 FE；稀有二元 DV 放弃 FE 改用聚类 Logit（+ IV-Probit 稳健性预告）(EMERGING)
+
+**来源论文**: Zorn, Shropshire, Martin, Combs & Ketchen (2017, SMJ)
+**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**写入日期**: 2026-08-05
+**槽位**: M7
+**骨架**:
+> Our sample is an unbalanced panel; annual observations are not independent. For continuous outcomes ([DV_list_continuous]), we estimate two-stage least squares with two-way fixed effects for [unit] and [time], which identifies effects from within-[unit] changes in [endogenous structure]. For the binary outcome ([rare_DV]), we use [logistic / probit] regression with [time] dummies and robust standard errors clustered by [unit] ([citation]). Given the low base-rate of [rare_DV]—many [units] never experience the event—fixed-effects models drop a substantial number of observations that lack within-[unit] variance in the dependent variable. We therefore absorb firm-level dependence via clustered standard errors rather than conditional fixed effects ([citation]). Because no exact logistic analogue of 2SLS exists, we confirm the binary-outcome results in robustness checks using an instrumental-variable [bivariate probit / IV-probit] specification with [time] dummies and [unit]-clustered robust standard errors.
+
+**与原骨架差异**: 变体 8（Wowak：同 IV 下 NB FE vs 2SLS，因 DV 为计数 vs 连续）解决的是**分布族匹配**；本变体解决的是**稀有二元结果与 FE 的样本损失冲突**：主分析对连续 DV 保留 2SLS+FE（准实验强度），对稀有二元 DV 显式放弃 FE 并说明原因，用聚类 Logit 保样本，再以 IV-Probit 把识别强度拉回稳健性。诚实边界：主分析中稀有二元结果的因果语言须弱于 instrumented 连续结果（“associated with / more likely”），不可把聚类 Logit 写成与 2SLS 同等识别强度；IV-Probit 必须实际出现在 Results/Robustness，不可只预告。
+
+**适用**: 同一理论 IV 同时预测连续结果（薪酬、绩效）与稀有二元结果（重述、违规、诉讼）的治理/战略面板。
+
+**跨 skill 对齐**: 首次填充 `稀有结果.md` 变体 1；Results 多 DV 平行报告见 write-results IV-2SLS 变体 8。

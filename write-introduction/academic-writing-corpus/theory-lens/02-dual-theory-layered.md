@@ -10,8 +10,8 @@ source_papers:
   - hoffmann_cheong_phan_zurbruegg2024 (JM, 2024): "Agency theory for main effect mechanism + business ethics framework for boundary conditions"
   - cutolo_ferriani2024 (JOM, 2024): "Processing fluency theory for main-effect mechanism + Bloom & Lahey (1978) linguistics taxonomy (content/form/use) for 3 narrative-feature moderators"
 created: 2026-06-05
-updated: 2026-07-22
-source: Distilled by distill-introduction-exemplar from Hoffmann et al. 2024 JM; enriched 2026-07-22 with Cutolo & Ferriani 2024 JOM (2nd source, cross-field)
+updated: 2026-08-05
+source: Distilled by distill-introduction-exemplar from Hoffmann et al. 2024 JM; enriched 2026-07-22 with Cutolo & Ferriani 2024 JOM (2nd source, cross-field); re-distilled hoffmann2024 2026-08-05
 ---
 
 # 02-dual-theory-layered — 双理论分层锚定 Theory Lens

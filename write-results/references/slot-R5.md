@@ -23,12 +23,23 @@ To assess the economic impact of [predictor], we examine predicted changes in [d
 To assess substantive magnitude, we examine [outcome] across quartiles of [predictor]. Table [x] presents the range of [outcome] for [subsamples]. Moving from the first quartile ([Q1 value]) to the second quartile ([Q2 value]) — an approximately [time/amount] change — is associated with a [percentage] [increase/decrease] in [outcome]. The magnitude is meaningful because [industry benchmark or theoretical reason].
 ```
 
-**调节变量经济显著性：25th→75th 百分位预测概率变体**（hoffmann2024 型）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 R5 段落
+**调节变量经济显著性：25th→75th 处理效应衰减变体**（hoffmann2024 型）： 🔬 EXPERIMENTAL（1 篇范文；2026-08-05 重蒸馏校准）⚠️ 保守替代：通用 R5 段落
+```text
+For an economic interpretation of this result, we examine the effect size of [moderator] by generating average predicted probabilities across the sample distribution of [moderator]. We calculate the difference in average predicted probabilities when changing the value of [moderator] from that representing the 25th percentile to that representing the 75th percentile. Moving from [low-moderator label] to [high-moderator label] in this way reduces the impact of [treatment] on [outcome] likelihood by [X]%.
+```
+
+**调节 25th→75th 处理效应衰减 QC**（hoffmann2024 校准）:
+- 度量对象是 **treatment 效应被 moderator 衰减的百分比**（impact attenuation），不是 treatment=1 下预测概率的百分点变化
+- 必须写明 P25→P75 的操作化；通过 **average predicted probabilities** 跨样本分布计算，不能只用交互项系数
+- 每个 moderator 单独报告衰减 %（如 10.56% / 10.01%）；可与 R3 交互显著性段紧邻
+- 禁止误用为 "treatment=0 vs treatment=1 下概率差"——那是不同范式（见下方通用 R5 段落）
+
+**调节变量经济显著性：25th→75th 预测概率对比变体**（通用；非 hoffmann 主范式）： 🔬 EXPERIMENTAL ⚠️ 保守替代：通用 R5 段落
 ```text
 To assess the economic significance of the moderating effect, we calculate predicted probabilities of [outcome] at different combinations of [moderator] and [treatment]. Holding other variables at their means, moving from the 25th to the 75th percentile of [moderator] changes the predicted probability of [outcome] by [X] percentage points when [treatment condition] holds — an economically meaningful shift given that the unconditional probability in our sample is only [Y]%. In contrast, when [treatment condition] does not hold, the same change in [moderator] is associated with a [smaller / negligible] shift of only [Z] percentage points. This asymmetry confirms that [moderator] primarily operates through the [treatment → outcome] channel, as our theory predicts.
 ```
 
-**调节经济显著性 QC**:
+**调节预测概率对比 QC**:
 - 必须报告 25th 和 75th 百分位的具体值，不能只写 "low" 和 "high"
 - 必须同时报告 treatment=0 和 treatment=1 两种状态下的预测概率变化（展示不对称性）
 - 必须引用无条件基准概率作为"meaningful"的参照

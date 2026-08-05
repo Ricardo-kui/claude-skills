@@ -1405,3 +1405,69 @@ status: needs_validation
 - 正式模型只证明在假设成立时的逻辑结果；不能据此宣称行动者真实使用该更新规则。
 
 **反模式**: 用危机 dummy 随意翻转交互方向；在没有目标切换机制时宣称 threshold reversal；只比较“一组显著、另一组不显著”而不做系数差异检验；把模型可导出性误写成机制已被直接观察。
+
+---
+
+<!--
+pattern_id: background_as_theory_dual_channel_stage_attenuation
+build_type: 机制推演型 (B0)
+source_papers: ["Kim_Lee_2026_SMJ"]
+confidence: medium
+status: EMERGING
+story_fidelity: section_variant
+related: dual_mechanism_same_direction (argumentation_patterns.md) — 后者收敛到正式 H；本模式允许无正式编号假设
+-->
+
+## Pattern: Background-as-Theory Dual-Channel + Stage Attenuation（无正式 H）
+
+**适用场景**: 期刊/设计选择用 **BACKGROUND**（或同类 Literature/Conceptual Background）承载 rising-action 理论工作，**不立正式编号假设**；核心是 (1) 两条同向、概念独立的 B0 机制通道解释 pre-outcome 优势；(2) 其中一条通道带**信息稀缺依赖**的阶段衰减预测；(3) 用 stakes/external-validity 论证把既有低成本证据定位为 incompleteness；(4) 用构念对比限定 post-outcome 文献的可外推性。实证问题由 pipeline 阶段自然承接，而非 H1/H2 列表。
+
+**微观动作序列**: Evaluation setting → Channel A (preference/taste) → Channel B (signaling of unobservables) → Stage-attenuation warrant → Evidence synthesis (support) → External-validity incompleteness → Adjacent-construct contrast for later-stage claims → Open empirical agenda (no numbered H)
+
+**范文来源**: Kim & Lee (2026), *Strategic Management Journal*（employer social-responsibility orientation → attraction/selection advantages；signaling 随一手信息增加而衰减；retention 证据有限）
+
+**骨架**:
+```text
+[Setting] [Actor] evaluations of [employer/offer] are intense at [early stage] and again at [choice stage].
+
+[Channel A — preference] [Attribute X] may be valued as a nonpecuniary job feature because [taste/norm warrant]. Thus seekers may show a [directional preference] for [X] employers.
+
+[Channel B — signaling] Separately, visible [X] can signal [unobservable valued traits] when direct information is scarce. Under this account, [X] positively distinguishes employers in [pre-outcome] choices.
+
+[Stage attenuation] Because signaling is most informative when firsthand information is scarce, advantages tied to Channel B are expected to [attenuate/weaken] after [actors] gain direct experience—implying weaker [post-outcome attachment] predictions from the same attribute.
+
+[Evidence synthesis] Prior [survey/platform/gig/hypothetical] studies support [pre-outcome] advantages for [X] employers [citations].
+
+[External-validity incompleteness] Those settings may overstate [X] advantages: lab/low-stakes preferences need not translate when opportunity costs rise, and [warm-glow-type] responses may weaken as stakes increase. Whether [X] advantages hold in [high-stakes full-time] markets therefore remains open.
+
+[Adjacent-construct contrast] Evidence that [optional activity/program participation] raises retention answers a different question than whether [X-as-employer-attribute] improves retention; the latter remains limited.
+
+[No formal H closure] The section therefore motivates multi-stage empirical questions without numbered hypotheses; Methods/Results carry stage-specific tests.
+```
+
+**为什么有效**:
+- 双通道同向收敛解释 pre-outcome，却用**信息条件**把 durability 写成可证伪的阶段边界，而不是硬写成无条件的 retention 主效应。
+- External-validity 段把 Intro 的 Incompleteness knot 钉在 Theory 内，避免变成单纯文献综述。
+- 活动 vs 雇主属性对比防止用错误文献填补 retention 缺口。
+- 无正式 H 时仍完成 rising action：机制 → 阶段预测 → 证据边界 → 开放议程。
+
+**与邻近模式的区别**:
+- 区别于 `dual_mechanism_same_direction`：后者以 “Accordingly, we hypothesize: H[N]” 收束；本模式**禁止伪造 H**。
+- 区别于 B2 双轨：B2 要求两维度产生**差异化/对称反向**预测；本模式两通道对 pre-outcome **同向**，差异在**阶段耐久性**。
+- 区别于调节效应型 E：衰减是信息阶段边界，不是正式 W×X 交互假设。
+- 区别于质性过程理论 D：不建立 Phase1→Phase2 过渡条件模型；阶段来自就业 pipeline，非过程理论化。
+
+**诚实边界（Background-as-Theory）**:
+- 仅当期刊惯例/设计明确允许无编号假设（常见于部分 SMJ empirical、自然实验/描述性 pipeline 文）时使用。
+- 不得把“开放问题”改写成假的 H1–Hn 以迎合 write-theory 默认模板。
+- 不得声称已检验 mediation；通道保持 B0。
+- 若作者实际立了正式 H，应改用 `dual_mechanism_same_direction` 或标准 B0 收束，不调用本模式。
+- write-theory 生成时：输出“阶段研究问题 / empirical agenda”映射表，而非强制 `storyline_id` 假设表；paper-state 可用 `hypotheses: []` + `empirical_agenda` 字段（若 schema 尚未支持，保留 provisional 注释）。
+
+**注意事项**:
+- Channel A 与 Channel B 必须概念独立；若只是同义改写，删并为一通道。
+- 阶段衰减必须锚定在**信息稀缺逻辑**，不能仅说 “effects may differ over time”。
+- External-validity 段是 incompleteness 论证，不是 Inadequacy（勿声称既有机制“错误”）。
+- Retention 对比段只限定可外推边界，不自动推出“无 retention 效应”假设。
+
+**反模式**: 无机制双通道却写成长文献综述；把活动参与文献直接当作雇主属性预测；为通过模板伪造编号假设；把 signaling 衰减写成已验证中介消失；把 stakes 关切标成 Inadequacy-primary。

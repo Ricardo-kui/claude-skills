@@ -38,27 +38,27 @@ We estimate a difference-in-differences model in which [outcome] is regressed on
 We cluster standard errors at the [level] to address [dependence structure] ([citation, e.g., Bertrand et al. 2004; Jager et al. 2021]). Where relevant, we present numbered equations: Equation (1) reports the baseline DiD specification, and Equation (2) reports the event-study leads-and-lags specification.
 ```
 
-**Staggered DiD + 条件 Logit 变体**（hoffmann2024 型，二元结果 + 交错处理时点）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：DiD 变体 + 非线性模型变体
+**Staggered DiD + 条件 Logit 变体**（hoffmann_cheong_phan_zurbruegg2024 型，二元结果 + 交错处理时点 + year/industry FE）： 🔬 EXPERIMENTAL（1 篇范文，2026-08-05 重蒸馏）⚠️ 保守替代：DiD 变体 + 非线性模型变体
 ```text
-Because our dependent variable [outcome] is binary and [treatment] adoption is staggered across [jurisdictions] over time, we estimate a conditional (fixed-effects) logit model. The conditional logit specification accounts for [unit]-invariant unobserved heterogeneity through [unit] fixed effects, while the staggered adoption structure provides identifying variation through two channels: (1) within-[unit] before-after comparisons (units switching from non-adoption to adoption) and (2) cross-[unit] comparisons at each point in time (adopting vs. not-yet-adopting units). The estimated equation is:
+Because [outcome] is binary and [law/policy] adoption is staggered across [jurisdictions] over time, we implement a staggered difference-in-differences design using a conditional (fixed-effects) logit panel model ([Greene 2003]). Treatment exposure is defined at the [incorporation/headquarters] level: [TreatGroup]_i indicates whether unit i is ever subject to [law], and [Post]_it indicates whether unit i at time t is in a [jurisdiction] that has already adopted [law]. The focal coefficient is the interaction [TreatGroup]_i × [Post]_{i,t-1}, lagged one period to preserve temporal ordering.
 
-[Outcome]_{it} = α_i + β[Treat]_{it} + γ[X]_{it} + δ_t + ε_{it}
+We control for unobservable time-variant shocks with year fixed effects and for time-invariant industry heterogeneity with industry fixed effects. We cannot include [unit] fixed effects because [structural collinearity reason: e.g., many units never experience the binary outcome, leaving no within-unit variation in the dependent variable and making unit fixed effects perfectly collinear with the outcome]. Prior literature in comparable settings therefore relies on year and industry fixed effects ([citation]).
 
-where [Treat]_{it} equals one after [jurisdiction] i adopts [law/policy] in year t, and zero otherwise; α_i are [unit] fixed effects; [X]_{it} is a vector of time-varying controls; and δ_t are year fixed effects. Because [outcome] is binary, we use conditional logit rather than linear probability model as our primary specification. Standard errors are clustered at the [jurisdiction/unit] level to account for serial correlation and within-[cluster] dependence ([Bertrand et al. 2004]). We report odds ratios for economic interpretation, supplemented by predicted probabilities at key values of [treatment] and [moderators] to aid substantive interpretation.
+Because [Post] is perfectly collinear with [TreatGroup] × [Post] in a staggered, state-specific adoption design, the standalone [Post] indicator drops from the model ([citation to staggered DiD precedent]). For boundary-condition tests, we follow the reduced-form interaction approach of [Schmitz et al. 2020]: three-way terms [TreatGroup] × [Post] × [Moderator] are retained, while lower-order interactions that are mechanically collinear are omitted; moderators are also entered separately when entered sequentially to limit multicollinearity.
 
-Four features of this estimation strategy merit discussion. First, we cannot include [unit] fixed effects in a standard linear probability model estimated via OLS with a large number of [units] and a rare binary outcome — this would create an incidental parameters problem. Conditional logit addresses this through the fixed-effects estimator. Second, a consequence of this specification choice is that [time-invariant predictors: e.g., industry dummies, state-level characteristics] cannot be included because they are absorbed by the [unit] fixed effects. Where such variables are theoretically relevant (e.g., for moderation analyses), we interact them with [treatment] rather than including them as main effects. Third, we lag all time-varying predictors by [one period/year] to preserve temporal ordering and reduce simultaneity concerns. Fourth, we conduct a comprehensive set of sensitivity analyses — including [alternative estimators: LPM with FE, random-effects logit], [alternative samples: balanced panel, excluding early/late adopters], and [placebo tests: pseudo-adoption dates, pre-treatment leads] — to assess the robustness of our findings.
+Equation (1) examines the main effect; Equation (2) adds the moderation terms. All time-varying controls are lagged one period. Because [outcome] is binary, coefficients indicate direction; substantive interpretation uses odds ratios and predicted probabilities.
 ```
 
-**Staggered DiD + 条件 Logit 的 6 个关键范式**（hoffmann2024 蒸馏）：
+**Staggered DiD + 条件 Logit 的 6 个关键范式**（hoffmann_cheong_phan_zurbruegg2024 重蒸馏，2026-08-05）：
 
 | # | 范式 | 功能 | 方法防御 |
 |---|------|------|---------|
-| 1 | **样本周期双重辩护** | 建立样本窗口的理论+制度合理性 | start year: 数据可用性 + 制度事件双重理由；end year: 最后 adoption + N 年 post-treatment + 排除 confound |
-| 2 | **样本排除理论化** | 将样本限制与理论机制对齐 | 排除"伤害已发生的召回"→ 理论关心的是管理者有裁量权的召回决策 |
-| 3 | **条件 Logit 选择辩护** | 解释为什么不能用 OLS FE | 二元 DV + 大量固定效应 → incidental parameters problem → 条件 Logit 的 FE estimator 解决 |
-| 4 | **时不变变量处理** | 解释为什么某些变量不能出现 | "absorbed by FE" → 交互项而非主效应 → 但限于调节分析 |
-| 5 | **固定效应局限诚实说明** | 承认方法局限而非隐藏 | "cannot include firm FE because of incidental parameters problem; firm controls proxy for some of this variation" |
-| 6 | **滞后与敏感性预注册** | 在 Methods 中预承诺稳健性分析范围 | 滞后所有 time-varying predictors + 列出全部 sensitivity checks（非在 Results 中 cherry-pick）
+| 1 | **样本周期双重辩护** | 建立样本窗口的制度合理性 | start year: 首次 adoption 前需有 control period；end year: 最后一次 adoption 后留 post-treatment 窗口 |
+| 2 | **裁量权子样本理论化** | 将样本限制与识别机制对齐 | 排除"伤害已发生"的 [outcome] → 理论只关心 [actor] 有裁量权的决策 |
+| 3 | **条件 Logit + year/industry FE** | 匹配二元 rare outcome 与 DiD 结构 | 非 firm FE；用 conditional logit 处理二元面板，year FE 吸收共同冲击，industry FE 吸收行业异质性 |
+| 4 | **staggered POST 共线性说明** | 预防审稿人质疑变量遗漏 | 说明 state-specific staggered timing 下 [Post] 与 [TreatGroup×Post] 完全共线故自动 dropped |
+| 5 | **无 firm FE 的诚实说明** | 承认局限而非误引 incidental parameters | 真实理由：always-zero DV units → perfect collinearity；辅以 time-varying controls + 先验文献 |
+| 6 | **reduced-form 三阶交互** | 处理调节项共线性 | Schmitz et al. 2020 式 reduced-form：保留三阶项，省略机械共线的低阶交互；分步进入 moderator |
 
 **生存分析变体**： 🔬 EXPERIMENTAL（2-3 篇范文：Zhou 2017, Pontikes 2012 等）⚠️ 保守替代：通用 M7 段落 + 说明分布选择
 ```text

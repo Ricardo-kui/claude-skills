@@ -30,20 +30,19 @@ Hypothesis [x] predicted that [predictor] would be [positive/negative] related t
 Hypothesis [x] predicted that [predictor] would [increase/decrease] [outcome]. Because [model] is nonlinear, we interpret Hypothesis [x] using [marginal effects/predicted probabilities] rather than coefficient size alone. The marginal effect of [predictor] is [direction] and statistically significant ([value], p < [threshold]), indicating that [substantive probability change]. Thus, Hypothesis [x] is supported.
 ```
 
-**Logit 经济显著性三层解释变体**（hoffmann2024 型）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：Logit/Probit 专用
+**Logit-DiD 经济显著性：OR→相对概率+低基准诚实变体**（hoffmann2024 型）： 🔬 EXPERIMENTAL（1 篇范文；2026-08-05 重蒸馏校准）⚠️ 保守替代：Logit/Probit 专用
 ```text
-Hypothesis [x] predicted that [treatment] would [increase/decrease] the likelihood of [outcome]. Because we estimate a conditional logit model, we interpret results using three complementary approaches to convey economic significance.
+Hypothesis [x] predicted that [treatment] would be [negatively/positively] associated with the likelihood that firms will [outcome]. We present the regression results of Equation [n] in Table [z]. For robustness, Columns [a] and [b] show models [without and with / across alternative] control variables. Across the alternative model specifications, the effect of [treatment × post] on [outcome] is consistently [direction] and significant, supporting H[x].
 
-First, the odds ratio for [treatment] is [value] (p < [threshold]), indicating that [treatment] is associated with a [X]% [increase/decrease] in the odds of [outcome] relative to [baseline condition]. Second, to translate this into more interpretable units, we compute the relative change in predicted probability: moving from [baseline] to [treatment condition], the predicted probability of [outcome] [increases/decreases] by approximately [X]% relative to the baseline probability of [base rate]%. Third, we anchor this effect in the absolute base rate: this relative change corresponds to an absolute change of [X] percentage points in the probability of [outcome] — a meaningful shift given that [base rate contextualization: e.g., the unconditional probability of [rare outcome] in any given year is only Y%].
-
-This three-layer interpretation — odds ratio → relative probability change → absolute base-rate change — allows readers to assess both statistical and practical significance without overinterpreting logit coefficients, which lack a natural metric.
+For the economic interpretation of these logit regressions, we focus on the odds ratio of the variable of interest. The odds ratio for [treatment × post] in Column [b] is [OR value], implying that firms in [treatment states] are, on average, [X]% [less/more] likely to [outcome] relative to firms in [control states]. [Optional formula transparency: This relative-probability translation follows OR / (1 + OR) = [computed share].] While the reduction in [outcome] probability associated with [treatment] is sizeable in relative terms, the absolute change in probability is more modest given the low average base probability of [outcome] during the sample period ([Y]%; see Table [descriptives]). However, as the consequences of [behavior implied by outcome] can be very serious for [stakeholders], we document an important effect. Thus, Hypothesis [x] is supported.
 ```
 
-**Logit 经济显著性三层解释 QC**:
-- Layer 1 (odds ratio): 必须报告 p 值或置信区间，不能只报告点估计
-- Layer 2 (relative change): 必须从 odds ratio 转换为预测概率变化（非手动计算，需用 margins/marginsplot 或等效命令）
-- Layer 3 (absolute base rate): 必须引用具体的基准概率（如样本中无条件召回概率），"meaningful" 判断必须有基准
-- 三层必须同时出现，不能只报告 odds ratio 就跳到 "thus supported"
+**Logit-DiD OR→相对概率 QC**（hoffmann2024 校准）:
+- 必须嵌入 **Col 无控制/有控制** 的规格稳健性一句，不能只在 R2 导航
+- Beat-3 用 **odds ratio → 相对概率变化**（OR/(1+OR) 或等效 margins），禁止直接解释 logit 系数
+- 必须 **诚实承认绝对幅度 modest**（引用无条件基准率），再用 **stakes/context** 论证 practical importance——禁止只报 "29% less likely" 而不提低基准
+- "important effect" 类判断需有理论/后果锚点（消费者福利、长期价值等），不能空泛
+- 与下方「三层解释」旧标签的区别：原文 **未** 用 "First/Second/Third" 分层标题；节奏是 显著性→OR→相对概率→低基准诚实→stakes→支持判断
 
 **有序 Probit 专用**： 🔬 EXPERIMENTAL（2-3 篇范文）⚠️ 保守替代：Logit/Probit 专用 + 增加序数解释句
 ```text

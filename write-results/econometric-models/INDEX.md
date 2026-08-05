@@ -2,9 +2,9 @@
 corpus: write-results
 description: Results 填空骨架变体库，按结果类型组织。由 distill-results-exemplar 手动写入验证通过的变体。
 organization: by_result_type
-result_types_count: 19
+result_types_count: 20
 created: 2026-05-18
-updated: 2026-08-04
+updated: 2026-08-05
 ---
 
 # Results Econometric Models Corpus
@@ -19,16 +19,16 @@ updated: 2026-08-04
 
 | 文件 | 结果类型 | 变体数 | 最后更新 |
 |------|---------|--------|---------|
-| [OLS-FE](OLS-FE.md) | OLS-FE | 44 | 2026-08-03 |
-| [Logit-Probit-Ordered-Probit](Logit-Probit-Ordered-Probit.md) | Logit-Probit-Ordered-Probit | 13 | 2026-08-04 |
+| [OLS-FE](OLS-FE.md) | OLS-FE | 46 | 2026-08-05 |
+| [Logit-Probit-Ordered-Probit](Logit-Probit-Ordered-Probit.md) | Logit-Probit-Ordered-Probit | 18 | 2026-08-05 |
 | [生存分析](生存分析.md) | 生存分析 | 19 | 2026-08-01 |
-| [DiD](DiD.md) | DiD | 2 | 2026-08-02 |
+| [DiD](DiD.md) | DiD | 10 | 2026-08-05 |
 | [计数模型](计数模型.md) | 计数模型 | 12 | 2026-08-03 |
 | [实验](实验.md) | 实验 | 5 | 2026-08-03 |
 | [多研究](多研究.md) | 多研究 | 8 | 2026-08-02 |
 | [定性过程研究](定性过程研究.md) | 定性过程研究 | 4 | 2026-07-07 |
-| [IV-2SLS](IV-2SLS.md) | IV-2SLS | 7 | 2026-08-03 |
-| [匹配DiD](匹配DiD.md) | 匹配DiD | 0 | 2026-05-18 |
+| [IV-2SLS](IV-2SLS.md) | IV-2SLS | 10 | 2026-08-05 |
+| [匹配DiD](匹配DiD.md) | 匹配DiD | 1 | 2026-08-05 |
 | [堆叠扩散Logit](堆叠扩散Logit.md) | 堆叠扩散Logit | 0 | 2026-05-18 |
 | [同伴效应-网络效应](同伴效应-网络效应.md) | 同伴效应-网络效应 | 0 | 2026-05-18 |
 | [推断二元结果](推断二元结果.md) | 推断二元结果 | 0 | 2026-05-18 |
@@ -38,6 +38,7 @@ updated: 2026-08-04
 | [SEM-moderated-mediation](SEM-moderated-mediation.md) | SEM/调节中介 | 7 | 2026-08-03 |
 | [事件研究法](事件研究法.md) | 事件研究法 | 5 | 2026-07-23 |
 | [VARX-PVAR](VARX-PVAR.md) | VARX-PVAR | 7 | 2026-07-15 |
+| [BLP-状态空间](BLP-状态空间.md) | BLP + Kalman/GMM 结构需求 | 5 | 2026-08-05 |
 
 ## 写入规则
 
@@ -47,6 +48,14 @@ updated: 2026-08-04
 4. 变体达到 3+ 时，考虑提升为 skill 主骨架
 
 ## 语料库质量状态
+
+> ✅ **2026-08-05 更新（Zorn–Shropshire–Martin–Combs–Ketchen 2017 SMJ）**: 多 DV 治理后果 + 外部监督调节。新增 IV-2SLS 变体8–10：
+>   - 变体8：多 DV 平行 climax（%/货币/OR 设计匹配幅度翻译）
+>   - 变体9：调节衰减 + mean/±1SD 条件斜率 + marginal support 诚实 + 跨 DV 选择性 null
+>   - 变体10：kind-vs-degree 构念电池（dual-insider 反转 / 连续独立性子样本 / Chow 跳跃）
+>   均为单篇 EMERGING；因果语言：instrumented 连续结果可用 effect/influence，稀有二元主 Logit 保持 associated/more likely。未改 SKILL 核心。
+
+> ✅ **2026-08-05 更新（Hoffmann–Cheong–Phan–Zurbruegg 2024 JM）**: DiD+conditional logit 重蒸馏校准。修正 R5 误标（处理效应衰减 % ≠ 预测概率百分点）；R3 从「三层标题」改为 OR→相对概率+低基准诚实；R4 switch-off 拆分为 **90th 文本中和**（原文）与 **四场景图**（扩展范式）。新增 R2 分步入表、R7 top-firm 敏感性。全部保持 EMERGING / 单篇，不升 core。
 
 > ✅ **2026-08-04 更新（Lee–Park 2024）**: Logit/Probit 结果语料新增“条件转折点 + 直接 Wald 差异检验”与“选择性路径机制辨析”两种写作变体。Lee & Park 经用户专家审计为典型 U／倒 U 写作范文，因此正式曲线检验链和转折点位置型调节均登记为 **VERIFIED**；选择性路径机制辨析仍为 EMERGING，因为它不是本次曲线范文审计的对象。新增五条反模式：正式 U 检验后置、用交互项代替几何比较、预测尺度未标注、`p = .00/p < .00`、以及用“全部支持”抹平完整模型中的证据衰减。核心路由不变。
 
@@ -153,6 +162,11 @@ updated: 2026-08-04
 >
 > ✅ **2026-08-03 复审修正**: 将 reverse-order mediation 从“因果排序确认”降级为竞争排序敏感性检查；实验新增变体4（三条件干预的 omnibus→组间→组内→稳定组拆解）与变体5（竞争中介排序的有界报告）。两者均为单篇 EMERGING section variant。
 
+> ✅ **2026-08-05 gap audit（Kim & Lee 2026 SMJ）**: 对照 2026-07-22 已入库资产后，**Methods 全部 SKIP**；Results 仅新增 2 个真正缺口变体（均单篇 EMERGING；未改 SKILL 核心；因果语言保持 association/advantage）：
+>   - OLS-FE 变体45：**管道阶段集中异质性** — baseline IV≈0 ⇒ 亚组吸收全部前端优势，交互在中后段熄灭（区别变体8；配套变体27）
+>   - OLS-FE 变体46：**Cinelli–Hazlett 敏感性 + 强观测协变量倍数基准**（区别变体15 RIR+Oster；corpus 零命中 Cinelli）
+>   - SKIP：HC quality / next job / job satisfaction null / specification curve（slot-R7 已有）/ 既有 Methods 三变体与 slot-R5/R6
+
 > ✅ **2026-07-22 更新**: 蒸馏 Kim & Lee (2026, SMJ) "Putting a Price on Mission" 新增 3 个高价值变体（均单篇、待第二篇交叉验证声明已标注）：
 >   - OLS-FE 变体27：**多阶段同 IV 管道衰减 profile** — single-study single-IV multi-stage（attraction+/selection+/attrition null）+ 跨阶段对比句把"前置显著+后置 null"提升为机制发现（signaling 衰减裁决）；区别 多研究.md 的 cross-study synthesis
 >   - slot-R5 追加：**WTP coefficient-ratio 经济显著性** — 系数比翻译为工资百分比 + 双 benchmark（vs prior 定位 lower end + vs other attributes 论证 higher than）；corpus 零命中 WTP
@@ -218,3 +232,27 @@ updated: 2026-08-04
 >   - **生存分析** 变体18：**Threat-based 稳健性四威胁报告（生存分析专属）**（R7）——omitted/reverse/measurement/alternative-estimator 四威胁分节叙述式报告；与变体11（Darby2026 表格导航 19 检查）互补：≤8 个用叙述式，>10 个用表格
 >   - **生存分析** 变体19：**PSM 平均处理效应结果报告（one-to-one, ATE 天数翻译）**（R7+R5）——PSM one-to-one + 中位数 0 分割 + ATE→天数 + "Put differently" 重述；变体9（CEM 双向）的姊妹变体，构成匹配类稳健性双轨
 >   - 配套 write-methods：生存分析 +7 变体（16-22）；配套 write-theory：新增 `sentences/leitmotif-section-opener.md`
+
+> ✅ **2026-08-05 更新（liu_shankar2015 蒸馏）**: 基于 Liu & Shankar (2015, *Management Science*) "The Dynamic Impact of Product-Harm Crises…"——**首次填充「BLP-状态空间」结果类型**（Kalman filter + random-coefficient demand + GMM）：
+>   - BLP-状态空间 变体1：**GMM 嵌套模型 MMSC-AIC 逐步升级**（R2）
+>   - BLP-状态空间 变体2：**RQ 驱动状态参数解读（initial + σ → recovered path → 理论）**（R3）
+>   - BLP-状态空间 变体3：**双层级间接通道 + 品牌强度异质性**（R3 续块）
+>   - BLP-状态空间 变体4：**反事实拟合验证 + 四通道长期损失分解**（R8）
+>   - BLP-状态空间 变体5：**非最优性政策模拟 scenario ladder**（R8）
+>   - 未写入：Table 5 控制变量 “as expected” 流水账（通用、无范式排他性）
+>   - 注：不修改 write-results SKILL 路由（单篇 EMERGING）；validation 替代传统 R7 仅作 design note
+>
+> ✅ **2026-08-05 更新（castellaneta_conti_kacperczyk_2017_smj 蒸馏）**: 基于 Castellaneta, Conti & Kacperczyk (2017, *SMJ*) "Money Secrets"——准自然实验 OLS / DiD-equivalent（州 UTSA 错位颁布）。DiD +4、匹配DiD 首次填充 +1（均单篇 EMERGING；不升 core）：
+>   - DiD 变体7：**平均净效应开场 + 正负权变预告**（R2+R3）
+>   - DiD 变体8：**交互假设完整四拍（1-SD% 幅度，无交互图）**（R3+R4+R5）
+>   - DiD 变体9：**识别威胁分节电池** Matching→政治经济→供需→Placebo→Early/Late→替代测量（R7）
+>   - DiD 变体10：**Null placebo（±k 期）作为识别确证**（R7）
+>   - 匹配DiD 变体1：**CEM 作事前对称威胁回应**（matching-as-robustness，非主估计器）
+>   - 反模式/诚实边界：边际 p≈.06 不得与 p<.05 同等“supported”；placebo null ≠ 假设支持；无 event-study 时不得暗示已检平行趋势
+>   - `core_candidate`（仅报告）：对立权变理论默认“净效应→权变展开”节奏；准实验 R7 强制分节威胁电池——单篇不改核心路由
+
+> ✅ **2026-08-05 gap audit（Bendig, Hensellek & Schulte 2024 ETP）**: 对照 2026-08-04 已入库资产后，**Methods 全部 SKIP**（变体28 已覆盖 GEE+全零保留+U-test 链）；Results 仅新增 2 个真正缺口变体 + 轻量质量边界（均单篇 EMERGING；未改 SKILL 核心；关联/likelihood 语言）：
+>   - Logit 变体17：**双焦点 IV 平行倒 U** — 分模型→联合模型→并列表 U-test（区别变体8 线性双 IV / 变体9 单曲线）
+>   - Logit 变体18：**同调节双模式 shift vs steepen 分图裁决**（区别变体10 单 IV 几何；OLS-FE 变体18 / Lee–Park 变体12 均为单曲线）
+>   - EXTEND：变体9/10 诚实边界（不利 Y 顶点≠最优中间；X²×W 同号不裁决几何）+ 反模式 2 条
+>   - SKIP：stuck-in-the-middle 独立 Results 变体（Discussion/Theory 收束；Results 只报 peak likelihood）；形式 U-test / 概率成本 / threat-indexed R7 / Methods GEE 链（已入库）

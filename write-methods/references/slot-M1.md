@@ -13,9 +13,9 @@
 We examine [phenomenon] using [policy/event/institutional change] that altered [exposure/risk/incentive] across [units] and time. [Empirical setting] is well suited because [process] is well documented and [context controls] reduce [confounding concern].
 ```
 
-**Staggered DiD + 二元结果 变体**（hoffmann2024 型，替换首句）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：自然实验/DiD 变体 + M7 非线性模型变体
+**Staggered DiD + 二元结果 变体**（hoffmann_cheong_phan_zurbruegg2024 型，替换首句）： 🔬 EXPERIMENTAL（1 篇范文，2026-08-05 重蒸馏）⚠️ 保守替代：自然实验/DiD 变体 + M7 非线性模型变体
 ```text
-We examine [phenomenon] in the context of staggered adoption of [policy/law] across [jurisdictions] over [period]. Because [law] adoption is staggered across [N] [jurisdictions/states] between [start year] and [end year] — affording us both temporal and cross-sectional identifying variation — we use a difference-in-differences design in which [outcome] is regressed on [treatment indicator], [controls], and [fixed effects]. Since [outcome] is binary, we estimate [conditional logit / linear probability model] to assess whether [law] adoption affects the likelihood of [outcome]. The identifying assumption is that [law] adoption in any given [jurisdiction] is orthogonal to changes in [outcome] in the same [jurisdiction], conditional on [controls] and [fixed effects].
+We examine [phenomenon] by exploiting the staggered adoption of [policy/law] across [jurisdictions] between [first adoption year] and [last adoption year]. Staggered timing yields identifying variation from (1) within-[jurisdiction] before-after comparisons and (2) cross-[jurisdiction] comparisons among not-yet-adopted versus already-adopted units at each point in time. Exposure is determined by [assignment rule: e.g., state of incorporation], and the focal treatment term is [TreatGroup] × [Post], where [Post] switches on once a [unit]'s [jurisdiction] has adopted [law]. Because [outcome] is binary, we estimate a conditional logit panel model with year and industry fixed effects. We verify the quasi-experiment using model-free evidence, pretreatment trend tests, and a [jurisdiction]-reassignment placebo exercise before interpreting the regression estimates.
 ```
 
 **实验变体**： ✓ STANDARD（5-6 篇实验范文复现）

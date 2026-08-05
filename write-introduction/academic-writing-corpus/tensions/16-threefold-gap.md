@@ -1,17 +1,19 @@
 ---
 type: canonical_reference
 canonical_id: "16-threefold-gap"
-status: EMERGING
+status: VERIFIED
 gap_type: Incompleteness
-cross_paper: EMERGING
+cross_paper: VERIFIED
 generativity: ADAPTABLE
 exclusivity: HIGH
 source_papers:
   - malshe_agarwal2015 (JM, 2015): "Yet little research investigates the effects of debt on marketing. This is surprising for three reasons."
   - cui_yang_vertinsky (SMJ): "three important issues remain unaddressed: product-market competition, portfolio composition, network embeddedness"
+  - liu_shankar2015 (MS, 2015): "four deeper issues + nested opposing claims as empirical-resolution motivators within Incompleteness gap"
 created: 2026-05-24
-updated: 2026-07-08
+updated: 2026-08-05
 source: Extracted from MVP30 batch_2026-05-24 + distilled by Phase 4.6
+note: "canonical_id 字面 threefold；功能覆盖 N≥3 结构化枚举（含变体 C 四维）。变体 C 本身仍为单篇 EMERGING section_variant。"
 ---
 
 # 16-threefold-gap — 结构化三方论证缺口
@@ -70,6 +72,30 @@ source: Extracted from MVP30 batch_2026-05-24 + distilled by Phase 4.6
 **适用**: 当缺口可从三个相互独立但理论相关的维度展开，且三个维度分别对应论文的不同假设群/贡献时
 
 **禁忌**: 三个问题必须是独立的理论缺口，不能是同一缺口的三种表述；每个问题都需要具体文献引用支撑
+
+---
+
+### 变体 C：四维度枚举 + 缺口项内嵌对立主张待实证裁决型（liu_shankar2015 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "Although prior research provides a basic understanding [and conflicting results on core outcome], several important deeper issues remain unexplored. First, not much is known about the [long-term/dynamic dimension] of [primary DV] and [secondary marketing lever such as advertising effectiveness]. [Stakes sentence: immediate event costs may pale relative to persistent preference erosion and indirect effects through the marketing lever]. Second, effects may vary by [event characteristic A], [characteristic B], and [characteristic C], yet little empirical research examines these sources of heterogeneity. Consider [characteristic A]: [context establishing why the characteristic matters]. On one hand, [mechanism/citation supporting adverse effect]. On the other hand, [mechanism/citation supporting offsetting or opposite effect]. These opposing theoretical claims highlight the need for empirical research on [characteristic A]. [Repeat 'Consider next' blocks for additional characteristics as needed, each closing with the same empirical-adjudication pivot]. Third, prior studies primarily focus on [single brand / one-time event / independent events], whereas in reality [multi-event pattern with carryover or emotional-inertia mechanism citation]. Finally, [normative managerial question about resource allocation across types] depends on [substantive quantification question about differential effectiveness]."
+
+**来源**: liu_shankar2015 (MS), P4–P7
+
+**原文锚定**:
+> "Although prior research provides a basic understanding and conflicting results on the effects of a product-harm crisis, several important deeper issues remain unexplored." / "Consider first, media coverage... On one hand, media can hurt... On the other hand, 'any news is good news'... These opposing theoretical claims on the effects of media coverage highlight the need for empirical research on these effects."
+
+**关键特征**:
+- **主框架是 Incompleteness**："deeper issues remain unexplored" + "not much is known"——对立主张是**某一缺口维度内的待裁决子问题**，不是全文 Incommensurability 路由。
+- **"Consider first / Consider next / Finally" 四段枚举**：比变体 B 的 "First/Second/Third" 多一个 normative-practice 收口（广告类型分配），且每项缺口可自带 Stakes（长期 vs 短期成本）。
+- **"On one hand... On the other hand... highlight the need for empirical research"**：不承诺理论整合或机制 dominance schedule——Intro 把裁决任务交给估计策略；区别于 `14-debate-unresolved` 的 "there is a debate" + Theory 调和。
+- **无独立 Theory Lens 段**：对立主张来自 consumer-behavior/psychology 引文，嵌入 gap 而非前置新框架。
+
+**适用**: Incompleteness × (Phenomenon + Output + Boundary)；Intro→Data→Model 无 Theory 章节的 MS/JMR/MSOM 式实证论文；事件特征异质性（媒体、严重度、先验信念）需同时量化；多事件动态 + 营销杠杆间接效应。
+
+**禁忌**: 不要把 "opposing claims" 误判为 Incommensurability——若无 "consensus is wrong" 或 paradigm-reformulation 语言，保持 Incompleteness；每个 Consider 块必须收束到 **empirical research need**，不得在 Intro 预选哪一方正确；四段必须对应四个可估计维度，不能凑数。
 
 ---
 

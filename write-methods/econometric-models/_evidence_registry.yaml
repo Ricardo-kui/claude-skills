@@ -1,8 +1,8 @@
 meta:
-  last_updated: '2026-08-04'
+  last_updated: '2026-08-05'
   total_design_types: 22
-  batches_processed: 16
-  source: corpus INDEX.md + product_recall_cross_validation + cutolo2024_jm_text_count + falchetti2022_smj_experiment + lashley_pollock2020_asq_qualitative_process + chung_low_rust_2022_jams_executive_confidence_myopia + ilicic_brennan_2026_jm_political_ideology_addictive_products + kim_lee_2026_putting_a_price_on_mission_smj + bamberger_homburg_wielgos_2021_jm_backfill + lee_wu_bednar_orsc_18968_distill + reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc_distill + moon_tuli_mukherjee_2023_jm + schumacher_keck_tang_2020_smj + kashmiri_nicol_arora_2017_jams + bendig_hensellek_schulte_2024_etp + lee_park_2024_smj
+  batches_processed: 17
+  source: corpus INDEX.md + product_recall_cross_validation + cutolo2024_jm_text_count + falchetti2022_smj_experiment + lashley_pollock2020_asq_qualitative_process + chung_low_rust_2022_jams_executive_confidence_myopia + ilicic_brennan_2026_jm_political_ideology_addictive_products + kim_lee_2026_putting_a_price_on_mission_smj + bamberger_homburg_wielgos_2021_jm_backfill + lee_wu_bednar_orsc_18968_distill + reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc_distill + moon_tuli_mukherjee_2023_jm + schumacher_keck_tang_2020_smj + kashmiri_nicol_arora_2017_jams + bendig_hensellek_schulte_2024_etp + lee_park_2024_smj + hoffmann_cheong_phan_zurbruegg2024_jm_redistill
 evidence:
   by_source_paper:
     lee_park_2024_smj:
@@ -106,6 +106,43 @@ evidence:
         - M7
         - M8
       note: "County-level staggered newspaper declines mapped to headquartered firms; signed CSR strengths-minus-concerns motivates linear FE. TWFE+Bacon retained only as a legacy diagnostic, with modern staggered-DiD and HonestDiD requirements added as boundaries."
+    hoffmann_cheong_phan_zurbruegg2024_jm:
+      journal: Journal of Marketing
+      title: "So, Sue Me…If You Can! How Legal Changes Diminishing Managers' Risk of Being Held Liable by Shareholders Affect Firms' Likelihood to Recall Products"
+      status: EMERGING (1p)
+      verification_basis: distill-methods-exemplar_redistill_2026-08-05
+      design_types:
+        - 自然实验-DiD
+        - 非线性模型
+        - 文本构念测量
+        - 推断二元结果
+      slots_covered:
+        - M1
+        - M2
+        - M3
+        - M5
+        - M6
+        - M7
+        - M8
+      story_fidelity: section_variant
+      note: "Staggered UD-law DiD + conditional logit with year/industry FE (not firm FE; collinearity from always-zero recall firms). Identification stack: model-free means, external manipulation check, Pre(-3/-2/-1) pretrends, 1000x state-reassignment placebo. Discretion subsample excludes injury/death recalls. Text moderator via Zachary et al. dictionary on 10-K. Prior slot variants incorrectly cited firm FE and incidental parameters — corrected in redistill."
+    liu_shankar2015:
+      journal: Management Science
+      title: "The Dynamic Impact of Product-Harm Crises on Brand Preference and Advertising Effectiveness"
+      status: EMERGING (1p)
+      verification_basis: distill-methods-exemplar_2026-08-05
+      design_types:
+        - 结构需求-state-space
+        - 面板数据-OLS
+        - 两阶段模型
+      slots_covered:
+        - M2
+        - M3
+        - M4
+        - M7
+        - M8
+      story_fidelity: section_variant
+      note: "BLP random-coefficient demand + Kalman state-space for latent brand preference and time-varying ad/recall coefficients; GMM. Preliminary reduced-form bridges to structural model. Recall exogeneity via NHTSA mandate; price BLP-IV, advertising intercept/slope CF, cross-category media CF. Complements survival/time-to-recall recall corpus on demand-side dynamics."
     bamberger_homburg_wielgos_2021_wage_inequality_jm:
       journal: Journal of Marketing
       title: "Wage Inequality: Its Impact on Customer Satisfaction and Firm Performance"
@@ -133,7 +170,7 @@ evidence:
         - M4
         - M7
         - M9
-      note: "empirical strategy / strategic human capital；多阶段决策管道(atraction/selection/attrition)+revealed-preference WTP+embedded/peripheral CSR手工编码；待第二篇交叉验证"
+      note: "empirical strategy / strategic human capital；多阶段决策管道(attraction/selection/attrition)+revealed-preference WTP+embedded/peripheral CSR手工编码；2026-08-05 gap audit：Methods 无新增；Results 补 stage-concentrated hetero + Cinelli-Hazlett（见 write-results OLS-FE 变体45–46）；待第二篇交叉验证"
     ilicic_brennan_2026_jm:
       journal: Journal of Marketing
       title: "Political Ideology Shapes Consumer Responses to Addictive Products"

@@ -129,12 +129,19 @@ zhou2017 的 non-coherence 实为**双层叠加**，是其文献对话的高质�
 
 ---
 
-### 变体 E：高阶后果冲突 → 固定关系机制裁决型（Bendig–Hensellek–Schulte 型，EMERGING）
+### 变体 E：高阶后果冲突 → 固定关系机制裁决型（Bendig–Hensellek–Schulte 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`；Incommensurability R3-primary / R2-secondary）
+
+**功能节拍**: 正向结果空间建共识 → 执行成本/暗面证据 → 上卷为高阶后果族（R2）→ 固定 X–adverse Y → 成本—学习主导权预告（R3）
 
 **模板**:
 > "Research commonly evaluates [strategic activity] through [financial/innovation outcomes], emphasizing gains from [resources and learning]. Yet the same activity requires [search, coordination, and integration], which can disrupt [core operations] and produce [high-stakes adverse outcome]. These findings do not merely add another dependent variable; they reveal that the broader consequences of [activity] include both benefits and harms. We therefore introduce [adverse Y] into the outcome family and theorize, for the fixed relationship between [activity intensity] and [adverse Y], how [cost mechanism] dominates initially while [learning mechanism] becomes stronger after experience accumulates."
 
 **来源**: Bendig, Hensellek, and Schulte (2024), *Entrepreneurship Theory and Practice*
+
+**原文锚定**（仅溯源，勿作生成句）:
+> CVC/alliance 文献偏财务价值与专利 → 执行成本与整合负担 → 产品召回作为有意义不利后果 → RBV+learning 下成本先占优、学习后占优的倒 U 预告。
 
 **两级结构**:
 1. **R2 让冲突可见**：先把财务价值、创新产出与产品安全上卷为“对母公司及利益相关者的后果”这一可辩护高阶结果族。
@@ -150,6 +157,7 @@ zhou2017 的 non-coherence 实为**双层叠加**，是其文献对话的高质�
 - 新旧 Y 之间必须有明确高阶家族，不得把概念无关的结果拼成“矛盾”。
 - 高阶 R2 只负责建立问题；具体预测仍须固定 X/Y，不能直接比较不同模型中的不可比系数。
 - 两个相反机制只有在相对强度随 X、时间或状态系统变化时，才足以预告 U/倒 U。
+- 模板保持功能节拍+placeholder；勿贴源论文长段或专有交易类型名作生成句。
 
 ---
 

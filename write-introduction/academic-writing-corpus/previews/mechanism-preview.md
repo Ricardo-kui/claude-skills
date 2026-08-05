@@ -21,9 +21,13 @@ source_papers:
   - 'ilicic_brennan2026 (JM, 2026): Full mechanism + multimethod evidence + personally directed intervention in a three-paragraph compressed Introduction'
   - 'kashmiri_nicol_arora2017 (JAMS, 2017): Benefit-hazard outcome portfolio + shared organizational orientation + selective countervailing remedy'
   - 'lee_park2024 (SMJ, 2024): Opposing joint prerequisites + accumulation-dependent bottleneck switch + rightward turning-point shift'
-updated: 2026-08-03
+  - 'hoffmann_cheong_phan_zurbruegg2024 (JM, 2024): Dual RQ + moderator theory preview + theoretical sample restriction + consistent-with-framework findings teaser'
+  - 'liu_shankar2015 (MS, 2015): No-Theory empirical stack — explicit RQ list + state-space/Kalman + BLP integration + dataset scope'
+  - 'castellaneta_conti_kacperczyk2017 (SMJ, 2017): Endogeneity challenge → staggered state-law QNE → dual-transaction PE observability'
+  - 'kim_lee2026 (SMJ, 2026): Full employment-pipeline observability + within-candidate multi-offer + revealed-preference WTP warrant'
+updated: 2026-08-05
 created: 2026-05-18
-source: Extracted from MVP30 narrative_analysis files + grewal2025 + paruchuri_andrus_sullivan2026 + bamberger_homburg_wielgos2021 + lee_wu_bednar_orsc_18968 + reinwald et al. 2026
+source: Extracted from MVP30 narrative_analysis files + grewal2025 + paruchuri_andrus_sullivan2026 + bamberger_homburg_wielgos2021 + lee_wu_bednar_orsc_18968 + reinwald et al. 2026 + castellaneta_conti_kacperczyk2017 + kim_lee2026
 ---
 
 # Mechanism Preview — 机制预览句法
@@ -347,6 +351,105 @@ P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者
 - 若 A 与 B 只是可替代的净收益/净成本，不要使用“共同必要”措辞。
 - 若 W 同时改变曲线两侧或只改变垂直高度，应使用 flatten/steepen 或 level-shift 预览。
 - 不能由显著/不显著的分组结果推断拐点移动；必须直接估计并比较 turning point。
+
+---
+
+### 变体 O：双RQ + 理论样本限制 + 发现预告融合型（hoffmann2024 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "From [secondary framework] perspective, [N] main [constraint type] to constrain [self-interest behavior] are [type 1] and [type 2] ([citation]). Regarding [type 1], we expect that if [organizational culture condition], [culture mechanism] will constrain [opportunistic tendency] once [treatment weakens external discipline]. Regarding [type 2], we expect that if [monitoring condition], [normative control mechanism] will constrain [opportunistic response]. To address our research questions, we compile [data scope and sources]. Since [theoretical scope condition for when treatment should matter], our main analysis includes only [sample restriction with theoretical justification]. Consistent with our conceptual framework, we find [main effect direction]. We also document that [moderation pattern in plain language]."
+
+**来源**: hoffmann_cheong_phan_zurbruegg2024 (JM), P6–P7
+
+**原文锚定**:
+> "From a business ethics perspective, two main mechanisms of organizational governance to constrain agents' self-interest-seeking behavior... are corporate culture and normative control (Husted 2007)... To address our research questions, we compile a comprehensive data set... Since managerial decision making regarding product recalls should only be influenced by the reduced risk of being held personally liable... if managers actually have discretion regarding whether to recall, our main analysis includes only recalls without prior injuries or deaths. Consistent with our conceptual framework, we find a negative relationship between UD law adoption and firms' subsequent likelihood to recall a product. We also document that the aforementioned relationship is less pronounced for firms with a more customer-focused market orientation or those subject to more stringent monitoring by institutional investors."
+
+**关键特征**:
+- **Preview 四段链**: moderator 理论预告 → 数据描述 → **理论驱动的样本限制** → 发现方向预告——四步在同一节完成，适合 JM 紧凑 Intro
+- **样本限制必须有理论 warrant**: "should only be influenced... if managers actually have discretion"——不是 Methods 细节泄露，而是识别策略的理论边界声明
+- **"Consistent with our conceptual framework, we find..."** 将发现预告锚回已建立的 agency 框架，避免 naked findings teaser
+- **与 RQ 变体 C 配对**: 前接 "We first ask / We then ask"，本变体承接 RQ2 的 moderator 逻辑并闭合 empirical arc
+
+**适用**: Incompleteness × (Mechanism + Boundary)；quasi-natural experiment；DV 存在可理论论证的子样本（ discretion / voluntary action 边界）；JM/JMR 风格
+
+**禁忌**: 样本限制若无理论依据（纯统计 convenience）→ 不得写入 Intro；发现预告不得给出系数/显著性细节——方向 + moderation 模式即可；不要与 Methods Identification 段逐字重复
+
+---
+
+### 变体 P：无 Theory 章节 — RQ 枚举 + 动态方法栈 + 结构需求整合预览型（liu_shankar2015 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "In this paper, we address these important research gaps and contribute to the literature by investigating the following important questions. What are the [short- and long-term] effects of [multi-event treatment] on [primary latent state such as brand preference]? How do [event characteristics list] influence the negative impact of [treatment]? What effects do [treatment events] have on the effectiveness of [different marketing-instrument types]? How can [actors] utilize [marketing lever] to better handle [crisis type]? To this end, we develop [dynamic state-space or latent-state model] to capture dynamics in [state 1], [state 2], and [consumer response] that stem from changes in [treatment] and [marketing inputs]. Our model allows for differential effects of [events] with different [characteristic vector]. In addition, it incorporates both direct and indirect effects on [primary state]. We integrate the [filtering/estimation process] with [random-coefficient structural demand model citation]. We estimate our model on [industry/setting], comprising [N parent units], [N sub-units], and [N treatment events] during [period]."
+
+**来源**: liu_shankar2015 (MS), P8
+
+**原文锚定**:
+> "In this paper, we address these important research gaps and contribute to the literature by investigating the following important questions." / "To this end, we develop a state space model and estimate it using Kalman filter to capture the dynamics in brand preference... We integrate the Kalman filter process with a random coefficient demand model based on Berry, Levinsohn, and Pakes (1995)... comprising 35 parent brands and 193 car nameplates that had a total of 359 recalls during 1997–2002."
+
+**关键特征**:
+- **Preview 替代 Theory Lens**：用显式 RQ 四问收束前文枚举缺口，再用方法栈（动态潜变量 + 结构需求）建立可信度——适合 Intro→Data→Model 无 Hypotheses 章节的设计。
+- **方法句承担机制承诺**："direct and indirect effects" + "differential effects... with different recall characteristics" 对应前文 gap，无需 "Drawing on [theory] we argue"。
+- **数据规模三数字**：parent brands / sub-brands / events——MS 营销-计量论文的可信度 ritual，与 RQ 清单一一兑现。
+- **Kalman/BLP 命名**：引用标准需求模型（BLP）+ 动态滤波，向读者信号识别与估计复杂度。
+
+**适用**: 无 Theory & Hypotheses 章节的实证营销/IO 论文；动态处理（multi-event, carryover, time-varying coefficients）；异质性来自事件特征而非 actor types；Management Science / Marketing Science / MSOM。
+
+**禁忌**: 不要在没有动态或结构需求必要性的 OLS/FE 设计中堆叠 state-space 修辞；RQ 数量须与前文 gap 枚举一一对应；若 Intro 已预告具体系数符号，避免与本变体的方向性 findings 段重复过度承诺。
+
+---
+
+### 变体 Q：内生性挑战 → 交错制度采纳 → 重复交易可观测设定（Castellaneta–Conti–Kacperczyk 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**功能节拍**: 内生性威胁 → 交错采纳冲击 → 外生性背书 → 重复定价情境 warrant → 持有窗 treatment/control
+
+**模板**:
+> "Estimating how [institutional change X] affects [Y] is difficult because adoption may be endogenous to [Y / local conditions] (e.g., [policy response to economic conditions] or [lobbying]). We address this by exploiting the staggered adoption of [statute/policy] across [jurisdictions] over [period]. Prior political-economy evidence suggests adoption timing was largely unrelated to [observable jurisdiction confounders] ([citation]). We situate the test in a [repeated-transaction] market where the same [assets] are typically [priced] at least twice, enabling a quasi-experimental contrast between units that experienced adoption during the [holding/exposure] window and units that did not."
+
+**来源**: Castellaneta, Conti & Kacperczyk (2017, SMJ), P5–P6
+
+**原文锚定**（仅溯源，勿作生成句）:
+> 内生性威胁 → 交错州法准实验 → 政治经济外生性引用 → PE 双重交易使 Δvalue 可观测 → 持有窗 treatment/control。
+
+**关键特征**:
+- **先威胁、后识别**：identification 是对内生性的回应，不是方法炫耀开场。
+- **交错采纳 + 外生性文献背书**：shock 合法性依赖既有政治经济证据，而非作者断言。
+- **重复交易是识别 warrant**：情境选择服务于“冲击前后价值变化可观测”，不是便利抽样。
+- **用暴露窗定义处理**：把 staggered adoption 译成持有/暴露期内是否经历采纳。
+
+**适用**: Incompleteness × (Mechanism + Boundary)；交错制度采纳；需观察同一单位冲击前后价值变化且存在重复交易市场；SMJ/AMJ。
+
+**禁忌**: 外生性须有文献或制度史支撑；Intro 不展开全部稳健性；若无法观察两次定价/回报，勿借用重复交易 warrant；模板保持 4–6 句，勿贴原文长段。
+
+---
+
+### 变体 R：全管道可观测设定 → 多 offer 内比较 → revealed-preference WTP（Kim–Lee 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**功能节拍**: 结构化招聘情境 → 纵贯 attraction→selection→attrition → 多 offer 内比较 + 薪酬补充 → 联合观测 warrant
+
+**模板**:
+> "We address this question using microdata from a structured [recruitment / matching] process in which [employers] hire [full-time candidates] from a defined pool. In each cohort, the setting tracks candidates as they [express interest], [receive offers], [enter employment], and [remain or depart]—generating a longitudinal record at the stages of [attraction], [selection], and [attrition]. We supplement these data with [post-decision survey / offer archive] capturing [competing offers and salaries], enabling within-candidate comparisons between [X] and [non-X] employers. By tracking the same pool across the full pipeline, the design examines not only whether [X] attracts greater interest, but also whether advantages persist into [offer acceptance], [wage determination], and [retention]—outcomes that prior studies have rarely observed jointly in [long-term / full-time] relationships."
+
+**来源**: Kim & Lee (2026, SMJ), P3
+
+**原文锚定**（仅溯源，勿作生成句）:
+> VFA structured fellowship → attraction/selection/attrition tracking → alumni offer-salary survey → within-candidate SRO vs non-SRO → joint observation warrant.
+
+**关键特征**:
+- **全管道可观测是核心 warrant**: 不是便利抽样叙事，而是"同一候选人池跨阶段联合观测"证明情境选择。
+- **within-candidate 多 offer** 为 revealed preference / WTP 铺路，不在本段报告幅度。
+- **与变体 Q 对照**: Q 用交错冲击+重复交易服务因果识别；本变体用管道阶段+多 offer 服务偏好显示与阶段耐久性。
+
+**适用**: Incompleteness × Boundary；招聘/匹配市场；需同时观察吸引、录用与保留；SMJ/AMJ 战略人力资本。
+
+**禁忌**: 不得在 Intro 展开编码细则或估计器；若无多 offer 子样本，勿承诺 WTP；管道阶段名可替换，但须与后文 Findings Preview 阶段一一对应。
 
 ---
 

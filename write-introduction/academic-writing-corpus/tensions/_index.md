@@ -8,8 +8,8 @@
 
 | 文件 | 核心特征 |
 |------|---------|
-| `01-despite-progress-unaddressed.md` | 已有进展，但遗漏了关键变量/机制（含变体P：双重证据缺口；变体AB：正向结果成熟→有害结果不足的 outcome-valence asymmetry，EMERGING） |
-| `08-cost-vs-benefit.md` | 成本收益权衡中的文献空白 |
+| `01-despite-progress-unaddressed.md` | 已有进展，但遗漏了关键变量/机制（含变体P：双重证据缺口；变体AB：正向结果成熟→有害结果不足的 outcome-valence asymmetry；变体AC：披露型IPR进展不外推到非披露形式+firm-value链接缺口；变体AD：低stakes证据→高stakes情境+阶段延伸，EMERGING） |
+| `08-cost-vs-benefit.md` | 成本收益权衡中的文献空白（含变体D：同一保护工具的 rival vs buyer 双刃剑信息不对称悖论，EMERGING） |
 | `12-forward-vs-backward-looking.md` | 前瞻 vs 后视视角的文献空白 |
 | `cross-domain-migration.md` | 将外部领域文献迁移到目标领域的张力 |
 
@@ -25,6 +25,7 @@
 | `15-practical-puzzle.md` | 实践传统智慧 vs 新发现 downside → 实践谜题（practical puzzle） |
 | `20-opposite-predictions-positive-trait.md` | 同一正向特质的两个文献流做出相反预测（EMERGING: chung_low_rust_2022_jams JAMS） |
 | `18-context-generalizability.md` | WEIRD↔non-WEIRD 情境泛化性 gap：现有证据 context-bound，因果机制在非 WEIRD 语境可能反转/被抵消（EMERGING: li2026 POM） |
+| `21-institutionalized-extreme-structural-warrant.md` | 拥挤文献中正当化新结构特征：kind-vs-degree + practice-beyond-theory + 隐含零价值假设 + 文献分工 + 反直觉 remedy（EMERGING: Zorn et al. 2017 SMJ） |
 
 ## Incommensurability
 

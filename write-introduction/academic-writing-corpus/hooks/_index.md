@@ -29,7 +29,7 @@
 
 | Hook | canonical_id | 核心特征 | 验证状态 | 代表范文 |
 |------|-------------|---------|---------|---------|
-| **数据冲击 Hook** | `03-data-shock` | 具体数字 → scale → "yet little is known" | VERIFIED | eilert2017 (JM), vadakkepatt2022 (JM) |
+| **数据冲击 Hook** | `03-data-shock` | 具体数字 → scale → "yet little is known"（含变体 H：逃逸注意力的极端结构普及，EMERGING） | ROBUST | eilert2017 (JM), vadakkepatt2022 (JM), zorn2017 (SMJ) |
 | **文献共识盲点 Hook** | `05-literature-consensus-blindspot` | "While important... considers... broadly" | ROBUST (≥5 papers) | gamache2020 (SMJ), shipilov2020 (SMJ), shen2022 (JOM) |
 | **范式挑战 Hook** | `06-paradigm-challenge` | "According to conventional view... In reality, however..." | ROBUST (≥6 papers) | zhou2017 (ASQ), hahl2017 (ASR), gamache2023 (SMJ) |
 | **跨学科类比 Hook** | `01-cross-disciplinary-analogy` | 领域A概念 → 领域B类似问题 | VERIFIED (≥2 papers) | pollock2015 (ASQ), malshe2015 (JM) |
@@ -117,7 +117,7 @@
 |------|-------------------|------|
 | `06-paradigm-challenge` | `04-reality-contradicts-consensus` | 高能量颠覆需要高能量 Gap 支撑 |
 | `05-literature-consensus-blindspot` | `02-implicit-assumption-wrong` 或 `03-structural-blindspot` | 共识建立后需要系统性盲点的解释 |
-| `03-data-shock` | `01-despite-progress-unaddressed` | 数据建立 stakes，递进缺口转化为学术问题 |
+| `03-data-shock` | `01-despite-progress-unaddressed` 或（极端结构正当化时）`21-institutionalized-extreme-structural-warrant` | 数据建立 stakes，递进缺口转化为学术问题；变体 H 配对 Tension 21 |
 | `04-puzzle-paradox` | `02-implicit-assumption-wrong` | puzzle 需要假设错误的解释 |
 | `12-contrary-to-belief` | `02-implicit-assumption-wrong` | 反差直接证明隐性假设错误 |
 | `24-positive-trait-dark-side` | `20-opposite-predictions-positive-trait` 或 `02-implicit-assumption-wrong` | 正向特质阴暗面需要解释文献为何忽略其负面边界 |

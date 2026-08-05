@@ -219,12 +219,19 @@ source: Manually curated from MVP30 narrative_analysis files
 
 ---
 
-### 变体 I：正向结果空间 vs 高风险运营后果型（Bendig–Hensellek–Schulte 型，EMERGING）
+### 变体 I：正向结果空间 vs 高风险运营后果型（Bendig–Hensellek–Schulte 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`；配对 Lit Turn 变体 E）
+
+**功能节拍**: 正向评价空间 → 执行负担/运营暗面 → 双模式证据并存 → 改问组合规则（非二元有益/有害）
 
 **模板**:
 > "Prior work has primarily assessed [activity] through [positive outcome family], where [benefit mechanism] implies favorable consequences. However, executing [activity] also consumes [resources] and creates [coordination/integration burden], which can impair [core process] and increase [adverse outcome]. Evidence of both patterns means the unresolved question is not whether [activity] is categorically beneficial or harmful, but how the two mechanisms combine as [activity intensity] changes."
 
 **来源**: Bendig, Hensellek, and Schulte (2024), *Entrepreneurship Theory and Practice*
+
+**原文锚定**（仅溯源，勿作生成句）:
+> 外部创业的资源/学习收益叙事 → 搜索与整合成本 → 产品安全伤害证据 → gap 收束为强度轴上的机制组合规则。
 
 **关键特征**:
 - Tension 来自“评价空间偏向收益”与“运营暗面真实存在”的碰撞，而非要求所有前人研究使用同一个低阶 Y。
@@ -234,7 +241,7 @@ source: Manually curated from MVP30 narrative_analysis files
 
 **适用**: 战略活动具有成熟的收益文献，同时有足够证据表明其执行过程可能产生运营或利益相关者伤害；研究旨在判断净效应何时转换。
 
-**禁忌**: 不要把“新 Y 更严重”当成理论矛盾；不要在缺少 changing-dominance warrant 时用标题式“有益还是有害”制造伪悖论。
+**禁忌**: 不要把“新 Y 更严重”当成理论矛盾；不要在缺少 changing-dominance warrant 时用标题式“有益还是有害”制造伪悖论；勿整段复述源论文成语或交易类型专名。
 
 ---
 

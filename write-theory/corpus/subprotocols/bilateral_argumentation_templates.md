@@ -312,6 +312,52 @@ H[X]: [Relative advantage] positively moderates the relationship between [IV] an
 ---
 
 <!--
+pattern_id: inverted_u_mode_differentiated_geometry
+build_type: 辩证对立 / 调节效应型 / 曲线关系
+source_papers: ["Bendig_Hensellek_Schulte_2024_ETP"]
+confidence: medium
+status: emerging_single_paper
+-->
+
+## Pattern: Mode-Differentiated Curve Geometry under Shared W（同边界条件、异几何变换）
+
+**适用场景**: 两个战略模式共享同一条成本—学习倒 U 主干，但治理形式不同；同一环境边界条件 W 因此改变**不同的几何量**（例如 Mode A 垂直上移，Mode B 变陡），而不是对两条曲线给出同质的 “W strengthens the effect”。
+
+**微观动作序列**: Shared inverted-U trunk → Mode A/B governance contrast → W 对 Mode A 的全程摩擦放大（shift）→ W 对 Mode B 的治理/交换加速（steepen）→ 两条可区分的几何预测。
+
+**骨架**:
+```text
+[Shared trunk] Both [Mode A] and [Mode B] follow a cost-first then learning-later schedule with [adverse Y], producing inverted-U baselines.
+
+[Governance contrast] [Mode A] relies on [unilateral control / weak exchange obligation]. [Mode B] relies on [bilateral contracting / mutual adjustment].
+
+[Mode A × W → shift] Under higher [W], [Mode A] actors face amplified [evaluation error and transfer friction] with limited partner-side correction, raising [adverse Y] across comparable [X]. Prediction: the inverted-U shifts upward.
+
+[Mode B × W → steepen] Under higher [W], [Mode B] partners intensify [information exchange and mutual adjustment], so costs bite quickly at low-to-moderate [X] while learning gains arrive faster thereafter. Prediction: the inverted-U steepens.
+
+[Discriminating claim] The same [W] therefore changes curve height for [Mode A] and curvature for [Mode B]; a single “stronger curvilinear effect” statement is insufficient.
+```
+
+**为什么有效**:
+- 把比较研究的贡献从“两个 IV”提升为“同一 W 的可区分几何含义”，避免平行假设复制。
+- 强制作者把治理差异写成机制，而不是标签替换。
+- 与 flatten/steepen（Cui）和 turning-point delay（Lee–Park）并列，补齐垂直位移这一几何类别。
+
+**范文来源**: Bendig, Hensellek, and Schulte (2024), *Entrepreneurship Theory and Practice*：市场动荡使 CVC–召回倒 U 上移，使联盟–召回倒 U 变陡。
+
+**与邻近 pattern 的边界**:
+- `inverted_u_bilateral_moderation`：同一 X–Y 曲线的两侧曲率调节（flatten/steepen），不要求双模式对照。
+- `turning_point_delay_selective_prerequisite`：预测拐点沿 X 移动，不是垂直位移或双侧变陡。
+- 本 pattern：双模式 + 同一 W + 异几何；L2 可选，不得升格为强制路由。
+
+**禁忌**:
+- 不得在缺少治理 warrant 时仅因两个活动都倒 U 就宣称差异化调节。
+- 不得把 stuck-in-the-middle 管理寓言写进假设推导核心；那是贡献/讨论层修辞，不是几何预测的 warrant。
+- 单篇 EMERGING；未获跨篇验证前保持 optional variant。
+
+---
+
+<!--
 pattern_id: turning_point_delay_selective_prerequisite
 build_type: 调节效应型 / 辩证对立
 source_papers: ["Lee_Park_2024_SMJ"]

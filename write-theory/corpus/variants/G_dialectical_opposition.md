@@ -297,10 +297,21 @@ At higher [X], accumulated learning and integration capability dominate the init
 The curve form may be shared, but mode-specific governance determines the mechanism details and how a boundary condition changes curve height, steepness, or turning point.
 ```
 
+### 同一边界条件、异几何变换（H3/H4）
+
+```text
+[Shared W] complicates search, valuation, and knowledge absorption for both modes. The prediction is not a generic “stronger effect,” but a mode-specific change in curve geometry.
+
+[Mode A → vertical shift] Under [unilateral / weak-obligation] governance, [W] amplifies [opportunistic search, evaluation error, and transfer friction] across the activity range, raising [adverse Y] at comparable [X]. H[X]: [W] shifts the inverted-U upward.
+
+[Mode B → steepen] Under [bilateral / mutual-adjustment] governance, [W] raises the pressure to govern and exchange more intensively, accelerating experience benefits once routines form. The ascending cost segment and descending learning segment both become steeper. H[X]: [W] steepens the inverted-U.
+```
+
 **关键原则**:
 - 必须先说明 Y 是正向还是负向；同一倒 U 对两类 Y 的理论含义相反。
 - “活动更多”不等于“经验更多”的充分识别；若机制只在理论层，结果措辞应保持解释性而非声称已测得中介。
 - 两个战略模式可以共享 dominance rule，但必须有独立治理 warrant，不能复制段落后替换构念名。
+- 同一 W 的两种几何预测必须分别绑定 mode-specific governance；不得把 shift、steepen、turning-point delay 当作可互换的“调节”同义词（句式见 `sentences/moderation.md`；双侧曲率调节见 `bilateral_argumentation_templates.md`）。
 
 ---
 
@@ -360,6 +371,7 @@ H2: The turning point occurs at a higher X under higher W.
 - **G2 机制开关型边界条件（方向反转）**：参见 `corpus/subprotocols/bilateral_argumentation_templates.md`（sign_flipping_boundary_condition——受众角色切换 IV-DV 关系符号，是 G 辩证反转的高/低双边论证载体）
 - **G3 双重逻辑 + 输入-效率分解 + 倒 U 形整合**：参见 `corpus/subprotocols/hypothesis_derivation_patterns.md`（dual_logic_input_efficiency_inverted_u——Zhou 2017 型：制度逻辑（输入）vs 效率逻辑（转换）产生倒 U）
 - **G4 不利结果的成本—学习主导权转换**：参见 `corpus/subprotocols/hypothesis_derivation_patterns.md`（curvilinear_relationship_two_phase_argumentation——Bendig et al. 2024 提供 adverse-Y 的成本先占优→学习后占优实例）
+- **G5 同 W、异几何（shift vs steepen）**：参见 `corpus/subprotocols/bilateral_argumentation_templates.md`（inverted_u_mode_differentiated_geometry）与 `corpus/sentences/moderation.md`（倒U垂直位移）
 
 > **与 E（调节效应型）的边界**：G 的"反转"必须是**方向反转**（sign flip，+变-），触发条件见本文件"触发条件"段；若只是**强度变化**（更强/更弱但方向不变）→ 路由到 E 变体。
 

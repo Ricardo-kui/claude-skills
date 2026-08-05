@@ -13,9 +13,11 @@ source_papers:
   - ceo_regulatory_focus_ijrm (IJRM, 2021): Findings preview with effect size
   - mayo2021 (POM, 2021): Findings preview with theory-empiricism cycle
   - vadakkepatt2022 (JM, 2022): Compact four-part preview (main effect + mediation + moderation + mechanism)
+  - castellaneta_conti_kacperczyk2017 (SMJ, 2017): Contingent sign-flipping findings + double-edged sword closing
+  - kim_lee2026 (SMJ, 2026): Pipeline advantages + revealed-preference WTP band + stage-attenuation null + early-stage subgroup
 created: 2026-05-18
-updated: 2026-05-19
-source: Extracted from MVP30 narrative_analysis files
+updated: 2026-08-05
+source: Extracted from MVP30 narrative_analysis files + kim_lee2026
 ---
 
 # Findings Preview — 发现预览句法
@@ -185,6 +187,56 @@ P5-P6 的下半段功能：向读者预告实证结果。这是 Introduction 中
 **禁忌**:
 - 调节枚举不得超过 3 个（认知负荷）
 - 每个调节必须在 Theory 中有独立的机制论证段落，否则 Introduction 预告无法兑现
+
+---
+
+### 变体 O：符号反转权变 + 双刃剑收束型（Castellaneta–Conti–Kacperczyk 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**功能节拍**: 权变声明 → 增强条件（正向）→ 阻碍条件（负向）→ 双刃剑收束回扣 Theory Lens
+
+**模板**:
+> "The effect of [X] on [Y] is contingent. It becomes [more positive / more favorable] when [W_enhance] is high, and [more negative / more adverse] when [W_hinder1] [and/or W_hinder2] [is/are] high. Altogether, [X] acts as a double-edged instrument: its net consequences for [Y] depend on which channel [industry/context conditions] amplify."
+
+**来源**: Castellaneta, Conti & Kacperczyk (2017, SMJ), P7
+
+**原文锚定**（仅溯源，勿作生成句）:
+> 权变净效应 + 流动条件正向 / 不确定与 lemon 条件负向 + double-edged 收束（trade secret × firm market value）。
+
+**关键特征**:
+- **异号权变，非同向加强**：至少一个增强条件、至少一个阻碍条件——兑现 Boundary。
+- **先权变、后双刃收束**：回扣 Intro Theory Lens 的对立通道，不新开机制。
+- **不报告系数/p 值**：只给方向与条件，细节留给 Results。
+
+**适用**: Boundary 主导、机制通道对立已在 Intro 建立；实证为异质性/交互；SMJ。
+
+**禁忌**: 若所有调节同向（只改变幅度），用变体 M；不得在 Intro 堆叠交互系数；勿复述源论文成语块（如 "contingent in its nature"）。
+
+---
+
+### 变体 P：管道优势 + WTP 区间 + 阶段衰减 null + 早期异质性（Kim–Lee 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**功能节拍**: 录用前优势确认 → revealed-preference 幅度（相对先验区间定位）→ 早期阶段异质性 → 录用后 null 收束
+
+**模板**:
+> "Our findings show that [X] employers enjoy advantages in both [attraction] and [offer acceptance], consistent with prior research. Using a revealed-preference framework to estimate willingness to pay for [X], we find that candidates are willing to forgo approximately [WTP band] of [annual compensation]—a substantial premium, though toward the [lower / mid] end of the range found by prior [experimental / temporary-setting] studies ([citations]). Notably, the advantage at [initial attraction] is attributable almost entirely to [subgroup], but [subgroup] differences are not observed past this stage. Advantages in pre-hiring stages also do not extend to the post-hiring phase: we find no meaningful differences in [voluntary attrition] or [job satisfaction]."
+
+**来源**: Kim & Lee (2026, SMJ), P4
+
+**原文锚定**（仅溯源，勿作生成句）:
+> attraction+selection advantages → WTP 13–18.5% (lower vs prior experiments) → female-driven attraction only → attrition/satisfaction null.
+
+**关键特征**:
+- **先确认、再定价、再边界**: 与先验一致的优势 → 幅度定位 → 异质性与阶段衰减——Boundary 贡献在 Findings 段兑现。
+- **WTP 相对先验区间**: 不只报数字，还相对实验/临时情境估计定位（lower/mid）——呼应 Tension 的 stakes 论证。
+- **null 作为发现而非失败**: 录用后无优势是贡献契约的一部分，不是"未支持假设"的歉语。
+
+**适用**: Incompleteness × Boundary；全管道设计；有 revealed-preference 或补偿权衡估计；SMJ。
+
+**禁忌**: Intro 不报告回归系数/p 值；WTP 区间须有 Results 兑现；若无异质性或无 post-hiring 检验，删去对应节拍；勿把 null 写成"与先验矛盾的颠覆"（除非另有 Incommensurability 合同）。
 
 ---
 

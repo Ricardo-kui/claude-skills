@@ -396,3 +396,90 @@ Outside [macro-event period], individuals can suppress or compartmentalize [iden
 - 宏观事件时点通常不可随机化；事件前后差异可能包含同期冲击，需避免完整因果处理语言。
 - 事件后斜率不显著是“未检测到衰减”，不是等效性证据；应同时报告观察窗末端的条件差异及其区间。
 - 若直接交互不复制但条件间接效应复制，理论结论应收束在近端机制与时间条件，不能宣称行为直接效应稳健复制。
+
+---
+
+## E8. 双刃剑估值机制 → 异号增强/阻碍权变（Dual-Edged Valuation → Signed Enhancing/Hindering Contingencies，Castellaneta et al. 2017 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**适用**: 同一制度/保护强度通过两条方向相反的信息机制作用于同一 DV（市场估值），净效应事先不定；理论贡献是用一组**异号**行业权变分别放大“升值刃”与“贬值刃”，且**不设 unconditional 主效应假设**。
+
+**Gap 对齐**（与 Intro 一致）: 主标签 **Incompleteness**（遗漏非披露保护形式→firm value 链接；相邻结果已证）；可含轻度 Inadequacy undertone（披露型 IPR 洞见不可机械外推）。**不要**把本范文升格为 Inadequacy-primary 路由。
+
+**与邻近变体的区别**:
+
+| 维度 | E4（竞争响应→调节裁决） | G（辩证对立受众） | E8（本变体） | Shen 双刃剑（sentences） |
+|------|------------------------|-------------------|-------------|-------------------------|
+| 对立对象 | 两种响应策略 | 两类受众对同一构念 | 两条估值机制（升值 vs 贬值） | 好处面 vs 坏处面，常收束到单侧 DV |
+| 正式假设 | 多为调节假设 | 常有受众分侧主效应 | **仅异号调节假设** | 可有主效应+调节 |
+| 组织标记 | “conditions under which A rather than B” | Audience A / Audience B | **"enhancing effect" / "hindering effect" 分节** | benefit then downside |
+| moderator 符号 | 常同一 W 裁决哪侧 | 可选边界 | **增强型 W 与阻碍型 W 分属不同刃** | 常单一或同向 |
+
+**段落功能地图**:
+
+| 步骤 | 段落功能 | 必须度 |
+|------|----------|--------|
+| 1 | T1：界定焦点保护构念；必要时用维度（scope / remedies / punishment）锚定“保护强度” | ✅ |
+| 2 | Gap 桥：说明邻近保护形式（如 disclosure-based IPR）的净正估值洞见为何不可外推 | ✅ |
+| 3 | Dual-blade trunk：On one hand 升值机制（减少对手信息/模仿）；On the other 贬值机制（减少买方信息→不确定性/adverse selection） | ✅ |
+| 4 | 声明净效应不定，转向行业权变 | ✅ |
+| 5 | Enhancing 分节：只推导放大升值刃的 W1 → H_enhancing | ✅ |
+| 6 | Hindering 分节：推导放大贬值刃的 W2（及可选 W3）→ H_hindering… | ✅ |
+| 7 | 最后阻碍假设自然收束进 METHODS（无独立 T6） | ✅ |
+
+**骨架**:
+```
+[T1] We define [protection construct] as [definition]. Protection strength varies along
+[dimension_1], [dimension_2], and [dimension_3].
+
+[Gap bridge] Insights from [disclosure-based IPR] on [DV] may not extend because
+[protection construct] rewards [non-disclosure / concealment], altering information available
+to [rival audience] and [buyer audience] differently.
+
+[Dual-blade trunk]
+On one hand, stronger [protection] reduces [information available to rivals], lowering
+[imitation / misappropriation risk] and raising [target value].
+On the other hand, stronger [protection] reduces [information available to buyers] about
+[target and rivals], raising [valuation uncertainty / adverse-selection risk] and lowering
+[bids / market value].
+Thus [protection] is a double-edged sword for [DV]; the net effect is a priori ambiguous.
+
+[Enhancing branch]
+The value-enhancing blade is stronger when [W_enhance] is high because [W_enhance]
+amplifies [leakage / rival-threat pathway] that protection constrains.
+H[e]: The impact of [protection] on [DV] is more positive when [W_enhance] is higher.
+
+[Hindering branch]
+The value-hindering blade is stronger when [W_hinder] is high because [W_hinder]
+amplifies the need for [buyer-side information] that protection conceals.
+H[h]: The impact of [protection] on [DV] is more negative when [W_hinder] is higher.
+[Optional parallel hinder] H[h2]: ... when [W_hinder2] is higher.
+```
+
+**假设模板（异号权变）**:
+```
+H[e]. The impact of [X] on [Y] will be more positive when [W_enhance] is higher.
+H[h]. The impact of [X] on [Y] will be more negative when [W_hinder] is higher.
+```
+
+**语料锚定**: Castellaneta, Conti, & Kacperczyk (2017), *Strategic Management Journal* — trade secret protection × knowledge-worker mobility (enhancing); × resource-value uncertainty and poor-investment/lemons risk (hindering).
+
+**关键特征**:
+- 双刃作用于**同一 DV**，但信息对象分属对手 vs 买方（受众分化服务于机制，不写成受众主效应假设）
+- 分节标题显式标记 enhancing / hindering，降低读者对“为何有的交互为正、有的为负”的认知负荷
+- 多个 hindering moderators 共享同一贬值刃，各自有独立理论入口（不确定性评估 vs lemons 折扣）
+- 允许无 H0 主效应：净效应由异号交互在实证中显现
+
+**反模式**:
+- 把升值刃与贬值刃写成 unconditional 主效应对打，却不做权变裁决 → 更接近未完成的 F/G，而非 E8
+- 所有 moderator 同号（全是 stronger positive）却声称双刃剑 → 双刃未进入假设结构
+- 阻碍节只堆 Akerlof 引用而无“保护如何加深信息不对称”的机制步 → citation list 假机制
+- 将 disclosure-based IPR 的正估值结果直接移植为 trade-secret 主效应 → Gap 桥失效
+
+**调用语料**:
+- `corpus/variants/E_moderation.md` E4（竞争基线→调节裁决的近亲）
+- `corpus/variants/G_dialectical_opposition.md`（受众分化修辞，但不强制受众分侧 H）
+- `corpus/sentences/mechanism_chain.md`（opposing mechanisms / double-edged 句式；本变体保留双刃至假设层）
+- `corpus/subprotocols/hypothesis_organization_patterns.md`（dual_edged_signed_enhancing_hindering_branches）
+- `corpus/sentences/moderation.md`（more positive / more negative 异号调节句）

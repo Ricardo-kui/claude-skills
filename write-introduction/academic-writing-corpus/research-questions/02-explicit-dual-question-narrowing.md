@@ -9,8 +9,9 @@ exclusivity: LOW
 source_papers:
   - weng_yang (JMS): "Two explicit RQs — main effect question + moderator question — embedded in paragraph with 'To fill this void, we ask:' preamble"
   - cui_yang_vertinsky (SMJ): "Two explicit RQs — main effect question + moderator question — preceded by dual-theory integration statement and directly introduced with 'We ask,'"
+  - hoffmann_cheong_phan_zurbruegg2024 (JM, 2024): "We first ask / We then ask — main effect + agency-mitigation moderators, agency-theory-grounded expectations before each RQ"
+updated: 2026-08-05
 created: 2026-07-07
-updated: 2026-07-08
 source: Distilled by distill-introduction-exemplar Phase 4.6
 ---
 
@@ -84,6 +85,28 @@ source: Distilled by distill-introduction-exemplar Phase 4.6
 **适用**: 当 RQ 前已充分建立 gap，不需要 "To fill this void" 这类显式信号句时；理论整合型研究（双视角）；SMJ/JM/JMS 紧凑风格
 
 **禁忌**: 不要在前文 gap 论证不充分时使用直接 "We ask,"——缺少 preamble 会暴露 gap 薄弱；两个问句必须有理论层次，不能是并列的无关问题
+
+---
+
+### 变体 C：序贯双问 + 机制预期铺垫型（hoffmann2024 型）
+
+**模板**:
+> "In particular, we design an empirical strategy to address two main research questions. We first ask whether [treatment/shock] affects [outcome]. In this regard, we expect that if [reduced discipline condition], [private incentive to avoid immediate costs] could come to dominate [decision making]. This expectation is grounded in [primary theory documenting agency conflict] ([citation]) and [adjacent literature on short-termism] ([citation]). We then ask what factors could mitigate the [underlying conflict] underlying [opportunistic response] and thus weaken the main effect of [treatment] on [outcome]."
+
+**来源**: hoffmann_cheong_phan_zurbruegg2024 (JM), P6
+
+**原文锚定**:
+> "In particular, we design an empirical strategy to address two main research questions. We first ask whether the adoption of UD laws affects the likelihood of firms to recall products. In this regard, we expect that if an external shock leads to less discipline being imposed on managers, the private incentives to try to avoid a recall to avert its immediate costs could come to dominate their decision making. This expectation is grounded in finance literature documenting agency conflicts in publicly listed firms (Jensen and Meckling 1976) and marketing literature on how such conflicts can induce managerial short-termism (Mizik 2010). We then ask what factors could mitigate the agency conflicts underlying a potential opportunistic response from managers to a reduction in shareholder litigation risk and thus weaken the main effect of UD law adoption on a firm's product recall likelihood."
+
+**关键特征**:
+- **"We first ask... We then ask..."** 序贯编号替代 "To fill this void, we ask"——适合 quasi-natural experiment 论文，RQ1 锁定处理效应、RQ2 锁定边界条件
+- **RQ1 前嵌入机制预期**: "In this regard, we expect that if..." 把主效应 RQ 与 agency/short-termism 机制绑定，RQ 不是裸问句而是带理论方向的检验
+- **RQ2 用 "mitigate the [conflict] underlying [response]"** 将调节问题锚定在已建立的代理冲突逻辑上，而非 generic "what moderates?"
+- **与 Preview 融合**: 同一节继续展开 moderator 理论（business ethics 双机制）→ 数据 → 样本限制 → 发现预告，RQ 段是长 Preview 的起手
+
+**适用**: Incompleteness × (Mechanism + Boundary)；quasi-natural experiment / 法律冲击设计；JM/SMJ 接受 "We first/then ask" 序贯 RQ 的期刊
+
+**禁忌**: RQ1 前的 "we expect" 必须与 Theory 假设方向一致——不能 Intro 预期 A 方向、Theory 假设 B 方向；不要用超过两个 "We ask"——第三层问题应转入 Hypothesis 编号而非继续 RQ 问句
 
 ---
 

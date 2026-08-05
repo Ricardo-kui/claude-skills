@@ -3,9 +3,11 @@ design_type: "自然实验-DiD"
 status: 🧪 EMERGING
 source_papers:
   - lee_wu_bednar_orsc_18968 (Organization Science; DOI 10.1287/orsc.2024.18968)
-variants_count: 3
+  - hoffmann_cheong_phan_zurbruegg2024_jm (Journal of Marketing; staggered UD-law DiD + conditional logit + binary recall)
+  - Castellaneta_Conti_Kacperczyk_2017_SMJ (SMJ; staggered UTSA + PE buyout IRR ≈ DiD first difference)
+variants_count: 13
 created: 2026-05-18
-updated: 2026-08-02
+updated: 2026-08-05
 ---
 
 # 自然实验-DiD — Methods 骨架
@@ -83,3 +85,189 @@ updated: 2026-08-02
 - Goodman–Bacon 分解不能替代 Callaway–Sant'Anna / Sun–Abraham 等异质性稳健估计。
 - “处理前系数不显著”不是平行趋势成立的充分证据；应给联合检验、置信区间和图形，并在可行时做 HonestDiD/Rambachan–Roth 型敏感性分析。
 - 随机置换必须保持真实处理设计的簇结构与实施时序约束；任意打乱会产生无意义的安慰剂分布。
+
+### 变体 4：staggered DiD 识别栈 — model-free → 机制锚定 → pretrend → jurisdiction 安慰剂（2026-08-05）
+
+**来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (*Journal of Marketing*)
+
+**验证状态**: EMERGING（单篇；`section_variant`）
+
+**槽位**: M8（Identification Strategy）
+
+**骨架**:
+> "Before estimating regressions, we compare mean [outcome] for [unit-years] exposed versus unexposed to [law/policy], following [Goldfarb, Tucker & Wang 2022]. Although theory centers on [threat/mechanism construct], prior work shows that [observable manipulation outcome: e.g., lawsuit filings] declines after adoption ([citations]), supporting the shock channel. We then test parallel trends by interacting [TreatGroup] with pretreatment indicators [Pre(-3)], [Pre(-2)], and [Pre(-1)]; insignificant pretreatment interactions indicate no detectable pretrend. Finally, we conduct a falsification test by randomly reassigning each [unit]'s [jurisdiction attribute] to another [jurisdiction] with different adoption timing, reestimating the model, saving the test statistic, and repeating [N] times ([Janakiraman, Lim & Rishika 2018]). The placebo distribution relative to the true estimate supports that state-level confounds are unlikely to drive the results."
+
+**与原骨架差异**: 变体3 强调 TWFE 诊断栈；本变体是 **Marketing quasi-experiment 四段式说服链**：无模型证据 → 文献 manipulation check → 事件窗 pretrend → 地理属性置换安慰剂。
+
+**边界**:
+- manipulation check 引用他人结果不等于本文 manipulation test；须明确是 external validation。
+- jurisdiction 安慰剂须保持真实 adoption 时序结构，仅 shuffle assignment rule。
+- 入库的是叙事组织，非对 Sun–Abraham 估计器的推荐。
+
+### 变体 5：二元 rare outcome 下 year + industry FE，无法 firm FE（perfect collinearity）（2026-08-05）
+
+**来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (*Journal of Marketing*)
+
+**验证状态**: EMERGING（单篇；`section_variant`）
+
+**槽位**: M7 + M8
+
+**骨架**:
+> "We estimate a conditional logit panel model with year and industry fixed effects. We cannot include [unit] fixed effects because many [units] never experience the binary outcome, leaving no within-[unit] variation in the dependent variable; [unit] fixed effects would therefore be perfectly collinear with the outcome. We control for time-varying [unit] characteristics — [named controls] — and cite prior [outcome] studies using the same FE structure ([citation]). Industry fixed effects absorb heterogeneity such as [industry-specific baseline hazard example]."
+
+**与原骨架差异**: 纠正常见误写：Hoffmann **不用 firm FE**，理由也不是 incidental parameters，而是 always-zero outcome → collinearity。
+
+**边界**:
+- 若样本中所有 unit 都有 outcome variation，此辩护不适用。
+- industry FE 不能替代 firm FE；不得写 "fully addresses unobserved heterogeneity"。
+
+### 变体 6：staggered adoption 下 POST 与 Treat×Post 共线性说明（2026-08-05）
+
+**来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (*Journal of Marketing*)
+
+**验证状态**: EMERGING（单篇；`section_variant`）
+
+**槽位**: M7
+
+**骨架**:
+> "In our staggered, [jurisdiction]-specific adoption design, there is no single event date; [Post] switches on only for [units] in adopting [jurisdictions] after the local adoption year and remains zero for [units] in never-adopting or not-yet-adopting [jurisdictions]. Because [Post] is perfectly collinear with [TreatGroup] × [Post], the standalone [Post] indicator drops from the model, consistent with prior staggered state-law DiD studies ([citations])."
+
+**与原骨架差异**: 把 staggered DiD 的变量代数写进 Methods，预防 "为什么没控制 post period" 的审稿质疑。
+
+**边界**:
+- 仅适用于 ever-treated group × post indicator 的 state-law 设计。
+- cohort-specific event study 设计需改写此叙事。
+
+### 变体 7：裁量权子样本 + 行业/event 扩展漏斗（2026-08-05）
+
+**来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (*Journal of Marketing*)
+
+**验证状态**: EMERGING（单篇；`section_variant`）
+
+**槽位**: M2
+
+**骨架**:
+> "We begin with [starting universe] over [period]. We drop [units] that changed [assignment attribute: e.g., state of incorporation] during the window ([citation]). Following prior [outcome] DiD work ([citation]), we include all [units] in industries with at least one [outcome event] and also [units] in industries with consumer incident reports on [incident source], so we do not omit [units] that may have faced a defect signal but chose not to [outcome]. For the main test we focus on [events] without [prior harm condition] because [regulatory/legal pressure] removes [actor] discretion once [harm] materializes ([footnote/citation]). The final panel contains [N_units] [units] and [N_panel] [unit-years]."
+
+**与原骨架差异**: 漏斗含 assignment stability exclusion、防遗漏 non-outcomers 的行业扩展、理论驱动子样本聚焦三层。
+
+**边界**:
+- 子样本聚焦须在 Results 报告全样本/替代子样本稳健性。
+- incident-report 扩展假设报告可代理 latent defect need。
+
+### 变体 8：重复交易情境（buyout dual-sale）使制度冲击前后价值变化可观测（2026-08-05）
+
+**来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+
+**验证状态**: EMERGING（单篇；`section_variant`）
+
+**槽位**: M1（Research Setting）
+
+**骨架**:
+> "The ideal setting to test [theoretical relationship] would allow us to observe changes in [unit market value / priced outcome] after an increase in [institutional protection]: that is, the same [unit] would need to be [sold/transacted] twice—before and after the strengthening of [protection]. While identifying such a context can be challenging, we leverage the [PE buyout / repeated-transaction] market. [Investors] make profits by buying and reselling [targets] over relatively short holding periods. This setting holds an important advantage because the great majority of [units] are [transacted] at least twice: once at [entry/acquisition] and again at [exit/resale]. Moreover, we can identify [units] acquired before the strengthening of [protection] and sold after, as well as [units] acquired and sold without any intervening change in [protection]."
+
+**与原骨架差异**: 通用 DiD setting 只论证"冲击外生 + 可观测暴露"。本变体把 **重复定价/双重交易** 写成理论检验的前提条件，并用 buyout holding period 同时定义 treated（冲击落在持有窗内）与 untreated（持有窗内无冲击）的可观测性。
+
+**边界**:
+- 仅当研究问题要求观察 **同一资产的价值变化**（而非水平）时适用。
+- Setting 优势不等于识别完成；仍需 jurisdiction assignment、外生性与对照构造。
+
+### 变体 9：持有窗内处理编码 + staggered 教学示例（treatment/control 随时间重组）（2026-08-05）
+
+**来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+
+**验证状态**: EMERGING（单篇；`section_variant`）
+
+**槽位**: M4 / M8（Treatment definition + Identification）
+
+**骨架**:
+> "We use a quasi-experimental design with a treatment group of [units] in [jurisdictions] that adopted [law/policy] during the [holding/exposure] window between [t_entry] and [t_exit], and a control group of [units] in [jurisdictions] that did not. [Treatment] equals 1 if [law] was enacted in the [assignment jurisdiction: e.g., state of incorporation] between [t_entry] and [t_exit], and 0 otherwise. Identification can be illustrated with an example. Consider [Jurisdiction]'s [year] enactment. Treated [units] are those acquired before [year] and resold after [year] in [Jurisdiction]. Controls are similar [units] acquired before [year] and resold after [year] but located in [jurisdictions] where no [law] passed in that window. β is the difference in [Δoutcome] between treated and control groups. Relative to this single-event example, the regression accounts for staggered adoption: the composition of both treatment and control groups changes over time as progressively more [jurisdictions] become treated. This design mitigates the concern that treatment and control groups are systematically different ([citation: e.g., Bertrand & Mullainathan 2003]). We cluster standard errors at the [jurisdiction] level—the level of the shock."
+
+**与原骨架差异**: 变体6 解决 POST 与 Treat×Post 共线性；本变体解决 **持有窗（非日历年面板）处理赋值**，并用单州示例→staggered 重组的两段叙事降低审稿人理解成本。
+
+**边界**:
+- Assignment jurisdiction（incorporation vs HQ vs operations）必须有制度理由；错配会污染处理。
+- 教学示例不能替代平行趋势/异质性稳健估计的正式讨论（若数据允许 unit-time 面板）。
+
+### 变体 10：ΔV/IRR 作为一阶差分 → 截面估计等价于 DiD 的识别叙事（2026-08-05）
+
+**来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+
+**验证状态**: EMERGING（单篇；`section_variant`）
+
+**槽位**: M3 / M7 / M8（Outcome + Identification equivalence）
+
+**骨架**:
+> "Our analysis is conducted at the single-[unit] level. The main dependent variable is [IRR / holding-period return / percentage change in market value], a standard performance measure in [buyout/private markets] ([citations]). There is a natural connection between [investor return] and [unit] market value: [investor] earns a positive return only if, during the holding period, the value of the [unit] exceeds the price initially paid. [ΔV measure] thus captures the [unit]'s percentage change in market value over the holding period ([citation/appendix]). Our approach is cross-sectional: each [unit] is a single observation. A full difference-in-differences regression would require observing [price/level] at least twice, before and after treatment. Because the data allow us to observe only the percentage change in [outcome]—not repeated levels—the DiD framework is difficult to implement fully. However, the strategy is equivalent to DiD to the extent that [ΔV measure] already incorporates the first difference before versus after treatment. We therefore estimate OLS of [ΔV_i] on [Treatment_{t_entry,t_exit}] and controls. Causal language ("effect of") is warranted only if treatment timing is plausibly exogenous."
+
+**与原骨架差异**: corpus 此前无 **"outcome embeds first difference → cross-section ≈ DiD"** 叙事。区别于标准 unit-year TWFE DiD（变体3–4）。
+
+**边界 / 诚实边界**:
+- 等价性依赖于 [ΔV] 确实度量市场价值变化；杠杆、中期现金流、费用分摊、异常值截尾可能破坏该映射，须在 appendix或稳健性中处理。
+- 此叙事 **不是** Callaway–Sant'Anna / Sun–Abraham 的替代品；当研究者拥有 unit-time 面板时，不应以此回避现代 staggered-DiD 估计器与平行趋势检验。
+- 可将强度编码（binary vs continuous protection index）作为稳健性，而非主识别的唯一形式。
+
+### 变体 11：entry/exit 年 FE + 多维 FE + 冲击层级聚类（持有窗截面）（2026-08-05）
+
+**来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+
+**验证状态**: EMERGING（单篇；`section_variant`）
+
+**槽位**: M6 / M7（Controls + Specification）
+
+**骨架**:
+> "Although [policy shock] provides a quasi-experimental setting, we include controls to alleviate remaining concerns. We include [deal/investment size] because [larger deals may induce greater political monitoring or lobbying]. Longer holdings are more likely to experience institutional change, and by construction duration correlates with [ΔV]; we therefore include entry-year fixed effects for [t_entry] and exit-year fixed effects for [t_exit]. These absorb year-specific shocks at entry and exit and also control for holding duration ([t_exit] − [t_entry]). We include [investor/PE-firm] fixed effects for time-invariant [investor] characteristics (e.g., political connections), [industry] fixed effects, and [jurisdiction] fixed effects to mitigate concern that treatment is driven by [pro-business culture] that is hard to capture with observables. We also include indicators for [public-at-entry / exit mode: e.g., IPO]. Standard errors are clustered by [jurisdiction]—the level at which treatment varies ([citation])."
+
+**与原骨架差异**: 标准面板 DiD 用 unit FE + year FE。本变体针对 **每单位一次观测的持有窗截面**：用 entry×exit 年 FE 同时吸收时长与两端宏观冲击，并用 investor FE 堵住"谁选择交易"的通道。
+
+**边界**:
+- Entry/exit FE 不能替代 jurisdiction 外生性论证。
+- 高维 FE 在小样本或稀有处理下可能过度吸收；须报告处理份额与有效自由度意识。
+
+### 变体 12：政治经济外生性电池 — 质性检索 + LPM/hazard 采纳时点 + 供需零相关（2026-08-05）
+
+**来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+
+**验证状态**: EMERGING（单篇；`section_variant`）
+
+**槽位**: M8（Validity / Exogeneity）
+
+**骨架**:
+> "Identification assumes that enactment of [law] is exogenous with respect to [unit] and [jurisdiction] characteristics associated with [outcome]. We address this threat in three steps. First, we search [press database] for evidence that [affected actors] actively lobbied for [law]; absence of such evidence is consistent with prior work arguing that adoption timing was unrelated to [jurisdiction] economic or political conditions ([citation]). Second, we estimate linear probability models in which the dependent variable is an indicator for the year of [law] enactment in a [jurisdiction], including lagged [investment/disposal volume], [GDP per capita], [number of firms], and [political party of governor]. These covariates should not significantly predict enactment if timing is as-good-as-random; we obtain similar nulls with discrete-time survival models (logistic hazard and proportional hazard). Third, because a shift in [investor] supply or demand could mechanically move [unit] value, we test whether [law] enactment correlates with (log) [number of firms] or with the value of [investor] investments and disposals; null associations mitigate this channel."
+
+**与原骨架差异**: 变体4 是 Marketing 四段式（model-free→机制→pretrend→置换安慰剂）。本变体是 **政策时点外生性电池**：质性游说检索 + 采纳方程（LPM/hazard）+ 市场侧供需检验，专攻"政治经济内生采纳"威胁。
+
+**边界**:
+- 采纳方程的 null 不是外生性证明，只是与可观测州特征不相关的证据。
+- 游说检索受媒体覆盖偏误限制；应与既有政治经济文献互证。
+
+### 变体 13：日历安慰剂 ±k 年（假处理弱于真处理）（2026-08-05）
+
+**来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+
+**验证状态**: EMERGING（单篇；`section_variant`）
+
+**槽位**: M8（Placebo / Falsification）
+
+**骨架**:
+> "To rule out the possibility that treatment generates statistically significant results merely by chance, we create placebo treatments by pretending that the change in [protection] occurs [k] years before and [k] years after the real year of change. We expect the fake treatment to have a weaker or null effect on [outcome] relative to the actual treatment—including null main effects and null interactions with [moderators]. Results are reported in [table/appendix]."
+
+**与原骨架差异**: 变体3/4 的安慰剂是 **置换/重分配** jurisdiction 或处理时点；本变体是 **固定错位 ±k 年日历安慰剂**，更适合持有窗截面、难以画标准 event-study 的设计。
+
+**边界**:
+- ±k 的选择须事前或按惯例说明；k 太小会与真处理窗重叠。
+- 安慰剂应在 Methods 预告位置（M8/M10）；仅塞进 Results 附录会削弱"设计内建"印象。
+
+## 反模式（Castellaneta 蒸馏补充）
+
+| 反模式 | 问题 | 应改为 |
+|--------|------|--------|
+| **ΔV≈DiD 却省略等价条件** | 声称截面 IRR/回报"等价于 DiD"但不说明 DV 如何嵌入一阶差分、也不讨论现金流/截尾对映射的破坏 | 先写测量→一阶差分映射，再写"难以实施完整 DiD"的数据约束，并加诚实边界 |
+| **持有窗处理无 assignment 规则** | 只说"州级法律"，不说明 incorporation / HQ / operations 哪一层映射到分析单位 | 显式声明 assignment jurisdiction + 文献/制度理由 |
+| **外生性电池无 Methods 预告** | 政治经济 LPM、供需检验、±k 安慰剂全部首次出现在 Results，Methods 无位置预告 | 在 M8/M10 预告检验族与威胁对应关系 |
+
+## 诚实边界（设计级）
+
+- 本家族变体 8–13 服务 **交错州法 + 持有窗截面（非 unit-year 面板）**；不得默认迁移为现代 TWFE/CS-SA 面板 DiD 的主模板。
+- Binary 政策编码忽略强度异质性时，须准备连续保护指数或强度稳健性。
+- CEM / 政治经济 null / 日历安慰剂均不替代不可观测混淆的完整讨论。

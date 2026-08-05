@@ -8,6 +8,8 @@ generativity: ADAPTABLE
 exclusivity: LOW
 source_papers:
   - haunschild2015 (OS, 2015): "foundation for a phenomenon... extends our knowledge... indicates the consequential nature"
+  - hoffmann_cheong_phan_zurbruegg2024 (JM, 2024): "Theory/practice split — antecedents vs consequences pivot + Table 1 + multi-stakeholder policy practical"
+updated: 2026-08-05
 created: 2026-05-19
 source: Distilled from Haunschild, Polidoro & Chandler (2015), Organization Science
 ---
@@ -134,3 +136,29 @@ source: Distilled from Haunschild, Polidoro & Chandler (2015), Organization Scie
 **注意**: 三层递进型 vs 列表式选择的判断标准：
 - 若贡献维度之间有**逻辑递进关系**（现象→机制→后果），用三层递进
 - 若贡献维度之间是**并列关系**（理论贡献 + 方法贡献 + 实践贡献），用列表式
+
+---
+
+### 变体 D：前因—后果理论贡献 + 多利益相关方政策实践型（hoffmann2024 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "Theoretically, we further our understanding of the *antecedents* of [phenomenon] in terms of factors driving [decision], whereas prior research focuses on the *consequences* of [phenomenon] after [decision was made]. [Table X] positions our study relative to the limited literature on [antecedent domain], to which we add by examining how [novel factor] influences [outcome decision]. [Optional: In doing so, we respond to [citation]'s critique that prior work lacks [specific omission].] [Optional: Finally, with the majority of previous work coming from [dominant discipline], the existing literature does not provide insights about how variables under [alternative function], such as [specific variable], can act as boundary conditions of [mechanism of interest]."
+>
+> "Practically, we offer insights about how [governance mechanism], as a corporate governance mechanism, affects [behavior] concerning [topic relevant to consumers and owners]. While [policy] is well-intended, our finding that [negative main finding] suggests *unintended negative consequences* of [reduced discipline]. To mitigate the potentially detrimental effects on [stakeholder welfare] and [firm viability], the implications include suggested [amendment type] for [legislators], guidelines for [policymakers] on how to evaluate [new legislation], and recommendations for [stakeholder group 1] and [stakeholder group 2] on how to [structural mitigation]."
+
+**来源**: hoffmann_cheong_phan_zurbruegg2024 (JM), P7–P8
+
+**原文锚定**:
+> "Theoretically, we further our understanding of the antecedents of product recalls in terms of factors driving a firm's decision to recall or not, whereas prior research focuses on the consequences of recalls after they were already decided on. Table 1 positions our study..." / "Practically, we offer insights about how changes in shareholder litigation risk, as a corporate governance mechanism, affect managerial behavior concerning a topic of particular relevance for both consumers and firm owners—product recalls. While UD laws are well-intended, our finding that they also reduce the likelihood of firms to recall products suggests unintended negative consequences..."
+
+**关键特征**:
+- **Theory / Practically 双段分割**：理论贡献段聚焦 antecedents pivot + Table 1；实践段聚焦 unintended consequences + 多受众政策建议
+- **斜体 unintended negative consequences**：与 Tension 变体 V（政策意外后果）形成 Intro 首尾呼应
+- **实践建议三分法**: legislators（修法）+ policymakers（评估新立法）+ shareholders/advocates（董事会/股权结构）——每类受众一条可操作建议
+- **Table 1 嵌入理论贡献句**：不是独立 Literature Turn，而是贡献定位的可视化证据
+
+**适用**: Incompleteness × (Mechanism + Boundary)；quasi-natural experiment / 政策评估；后果文献饱和、前因稀缺的现象领域；JM/JMR 重视 consumer + shareholder 双 stakes 的研究
+
+**禁忌**: "Practically" 建议必须可从发现推导——不能 Intro 承诺立法修正案但 Results 无支撑；policy-neutral 语气——承认 policy well-intended；不要只有 generic managerial implications 而无 multi-stakeholder 结构

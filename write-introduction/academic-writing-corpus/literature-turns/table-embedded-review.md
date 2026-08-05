@@ -64,3 +64,33 @@ Prior work on [broad relationship] has primarily examined [dominant proxy/actor/
 - 表格紧接低能量理论冷启动却没有正文导读，导致读者在故事尚未成形时被迫处理高密度信息。
 
 **适用组合**：Incompleteness × Mechanism / Phenomenon / Boundary；尤其适合 upper-echelons、产品安全和创新结果组合研究。
+
+---
+
+## 变体 D：前因—后果对照 + 贡献定位表（hoffmann2024 型）
+
+**验证状态**：EMERGING（单篇来源；仅作 `section_variant`）
+
+**适用**：同一现象已有大量**后果**研究，本文转向**前因/决策驱动**；Table 嵌入 Contribution 段而非 Literature Turn 段。
+
+**骨架**：
+```text
+Theoretically, we further our understanding of the antecedents of [phenomenon] in terms of factors driving [decision to act or not], whereas prior research focuses on the consequences of [phenomenon] after [decision was already made]. [Table X] positions our study relative to the limited literature on [antecedent subdomain]. In doing so, we add by examining how [novel driver/shock] influences [outcome decision]. [Optional: respond to named critique that prior work lacks theory on precursors beyond [dominant factor]]. [Optional: discipline perspective gap — majority from [field A], missing [function B] variables as boundary conditions].
+```
+
+**关键特征**：
+- **Antecedents vs consequences 斜体对照**：用 *antecedents* / *consequences* 或同等结构标记，把贡献从"又一个后果研究"翻转为"决策前驱动因素"
+- **Table 在贡献段落地**：Table 1 不是文献综述附录，而是"本文 vs 有限前因文献"的可视化定位
+- **三层缺口可嵌于贡献句**：broad omission（后果主导）→ specific omission（novel driver）→ discipline gap（OM vs marketing boundary）——与 Tension 变体 Q 外部批评授权型呼应
+- **Practically 段独立接续**：理论贡献 + Table 后，另起 "Practically..." 面向立法者/政策制定者/股东等多利益相关方
+
+**语料锚定**：Hoffmann et al. (2024, JM) — Table 1: Our Study Relative to Prior Work on the Antecedents of Product Recalls
+
+**反模式**：
+- 若领域后果与前因文献都丰富，"antecedents vs consequences" 框架不成立
+- Table 只列方法/样本而不显示理论/驱动因素增量
+- 把 Bendig 等外部批评放在 Contribution 却无 Table 或具体缺口对应——批评悬空
+
+**适用组合**：Incompleteness × (Mechanism + Boundary)；产品召回、CSR 决策、创新投放等"决策前因"被后果文献淹没的领域；JM/JMR
+
+---

@@ -130,7 +130,7 @@ def recalc_entry(entry, paper_index=None):
     }
 
     if missing:
-        print(f"  ⚠ {entry.get('canonical_id', '?' )}: {len(missing)} paper(s) missing gap type: {missing}")
+        print(f"  WARN {entry.get('canonical_id', '?' )}: {len(missing)} paper(s) missing gap type: {missing}")
 
     if entry['paper_count'] >= 5 and len(journals) >= 2:
         entry['status'] = 'ROBUST'
@@ -243,7 +243,7 @@ def apply_enrichment(reg, enrichment):
         if cid:
             for mod_key in ['hooks', 'tensions', 'stakes', 'literature_turns']:
                 if cid in reg['evidence'].get(mod_key, {}):
-                    recalc_entry(reg['evidence'][mod_key][cid])
+                    recalc_entry(reg['evidence'][mod_key][cid], paper_index)
 
     # Update meta
     reg['meta']['last_updated'] = enrichment.get('last_updated', '2026-05-21')

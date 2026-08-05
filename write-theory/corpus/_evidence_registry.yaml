@@ -6,11 +6,11 @@
 meta:
   schema_version: "1.0.0"
   registry_type: theory-fragment-registry
-  last_updated: "2026-08-04"
-  total_papers_indexed: 61
-  batches_processed: 18
+  last_updated: "2026-08-05"
+  total_papers_indexed: 64
+  batches_processed: 22
   auxiliary_sources_note: "Entries with source_tier: auxiliary are writing-craft books, not empirical papers. They register provenance and stay EMERGING until the pattern is cross-validated in empirical paper distills; they never count toward VERIFIED/ROBUST paper_count thresholds on their own."
-  latest_batch_note: "2026-08-04: Lee & Park (2024, SMJ) added an R3-primary/R4-secondary Incommensurability exemplar. It becomes the fourth cross-context source for two-phase curvilinear argumentation and adds two EMERGING section variants: opposing joint prerequisites with a bottleneck switch, and selective preservation of the declining prerequisite that shifts the turning point rightward. No core route, schema, or mandatory slot changed."
+  latest_batch_note: "2026-08-05e Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ: ADD mechanism_loss_trunk_multi_outcome_external_substitute + what_is_lost_benefit_inventory_then_absence + external_partial_substitute_attenuation (EMERGING section_variants); B9 pointer in B_mechanism_elaboration. Gap=Inadequacy aligned with Intro (do not drift to Incompleteness-primary). No core routing change."
   note: "Reverse-engineered from existing corpus anchors. Batch 2026-07-09: distilled 4 recall papers (Darby 2023 MSOM, Mayo 2022 POM, Ball 2018 JOM, Darby 2026 JOM) into subprotocols and registry. Batch 2026-07-10: expanded Cui, Yang & Vertinsky (SMJ) with inverted-U mechanism, bilateral argumentation, flatten/steepen language, and local closure templates. Batch 2026-07-22: distilled Li, Bapuji, Talluri, Singh & Narayanan (2025 JSCM, Vertical Spillover of Product Recalls) — added dual_mechanism_convergent_moderation pattern to bilateral_argumentation_templates.md (moderator×mechanism matrix) and registered H1 dual-mechanism convergence under existing dual_mechanism_same_direction. Batch 2026-07-22b: distilled Cutolo & Ferriani (2024 JOM, narratives & atypicality) — added minimal_pair_contrast_vignette pattern to argumentation_patterns.md (Leah controlled-contrast showing device); registered parallel_buffering_moderators_single_mechanism; cutolo_ferriani also a 2nd source for write-introduction theory-lens/02-dual-theory-layered (processing fluency + Bloom & Lahey taxonomy). Batch 2026-07-22c: distilled Falchetti, Cattani & Ferriani (2022 SMJ, Start with Why) — added congruency_fit_fluency_mechanism to sentences/mechanism_chain.md (genuine gap; spans Falchetti + Cutolo); CORRECTED misclassification of falchetti_2022_smj (was construct_differentiation tfr_017, has no such content) → reclassified to congruency mechanism; construct_differentiation source_count 5→4. Falchetti intro hook (23-popular-debate) and Methods (多研究 变体1/2, 实验 变体1) already distilled in prior sessions. Batch 2026-07-28: backfill + wiring batch — registered two auxiliary sources whose fragments entered corpus in the 2026-07-27/28 waves but were never registered: Booth/Williams/Colomb (The Craft of Research, premise soundness gate + warrant tests + acknowledgment-response matrix + voice firewall → reasoning_soundness_protocol.md, acknowledgment_response.md) and Greene & Lidinsky 2017 (Rogerian four-step → acknowledgment_response.md §5; fallacy probes → reasoning_soundness_protocol.md §8). Same batch wired the registry into consumption: corpus/_index.md selection-stage pointer, write-theory/SKILL.md resource-loading clause, distill-theory-exemplar Phase 4 registry-writeback protocol. Registry previously orphaned (no .md referenced it) since creation. Batch 2026-08-03: distilled Schumacher, Keck & Tang (2020, SMJ); added the belief-updating/attention-threshold reversal pattern as EMERGING. Reference-level writeback was explicitly authorized by the user; no core routing or mandatory-slot rule was changed."
 
 status_rules:
@@ -236,6 +236,108 @@ source_papers:
         makadok_dimension: "Constructs"
         status: "EMERGING"
 
+  castellaneta_conti_kacperczyk_2017_smj:
+    display_name: "Castellaneta, Conti & Kacperczyk (2017, SMJ)"
+    journal: "Strategic Management Journal"
+    year: 2017
+    subfield: "strategy"
+    gap_type: "Incompleteness"
+    gap_undertone: "mild Inadequacy (disclosure-IPR insights may not extend to non-disclosure forms)"
+    theory_build_type: "Boundary / Mechanism"
+    gap_alignment_note: "Aligned with write-introduction distill (2026-08-05 QC fix): primary Gap=Incompleteness; do not route as Inadequacy-primary."
+    fragments:
+      - fragment_id: tfr_151
+        type: dual_edged_signed_enhancing_hindering_contingencies
+        title: "双刃剑估值机制 → 异号增强/阻碍权变（E8）"
+        home_files:
+          - "variants/E_moderation.md"
+          - "subprotocols/hypothesis_organization_patterns.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Trade secret protection raises value via rival-information asymmetry and lowers value via buyer-side uncertainty/adverse selection; industry contingencies are opposite-signed; no unconditional main-effect H. H3 OCR in source note reconstructed as poor-investment/lemons risk."
+      - fragment_id: tfr_152
+        type: dual_edged_signed_enhancing_hindering_branches
+        title: "Dual-blade trunk → enhancing/hindering branches"
+        home_files:
+          - "subprotocols/hypothesis_organization_patterns.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Section organization pattern companion to E8."
+      - fragment_id: tfr_153
+        type: signed_more_positive_more_negative_moderation_sentence
+        title: "异号 more positive / more negative 调节句"
+        home_files:
+          - "sentences/moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Hypothesis language that encodes interaction sign without presupposing an unconditional main-effect direction."
+
+  kim_lee_2026_smj:
+    display_name: "Kim & Lee (2026, SMJ)"
+    journal: "Strategic Management Journal"
+    year: 2026
+    subfield: "strategy / strategic human capital"
+    gap_type: "Incompleteness"
+    gap_undertone: "none (do not mark Inadequacy-primary)"
+    theory_build_type: "Mechanism (B0) / Boundary (stage durability)"
+    theory_section_form: "BACKGROUND-as-Theory; no numbered hypotheses"
+    gap_alignment_note: "Aligned with Intro: incomplete evidence from low-stakes/temporary settings + incomplete stage durability (pre-hire vs post-hire); not Inadequacy."
+    fragments:
+      - fragment_id: tfr_154
+        type: background_as_theory_dual_channel_stage_attenuation
+        title: "Background-as-Theory：双通道同向 + 信息稀缺阶段衰减（无正式 H）"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+          - "variants/B_mechanism_elaboration.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Taste/preference channel + signaling-of-unobservables channel converge on pre-hire advantages; signaling attenuates with firsthand information; EV stakes incompleteness; B0 only; no formal H."
+      - fragment_id: tfr_155
+        type: activity_vs_attribute_retention_contrast
+        title: "活动参与 vs 雇主属性：retention 文献相邻构念对比"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+        note: "Embedded in B8 pattern: prior retention studies of optional SRO activities do not answer employer-attribute SRO retention; keeps post-hire agenda open without false H."
+
+
+  zorn_shropshire_martin_combs_ketchen_2017_smj:
+    display_name: "Zorn, Shropshire, Martin, Combs & Ketchen (2017, SMJ)"
+    journal: "Strategic Management Journal"
+    year: 2017
+    subfield: "strategy / corporate governance"
+    gap_type: "Inadequacy"
+    gap_undertone: "Incompleteness-as-empirical-warrant (efficacy of new structure unknown); not Gap-primary"
+    theory_build_type: "Mechanism (B0) / Boundary (external substitute attenuation)"
+    gap_alignment_note: "Aligned with Intro problematization: extreme independence rests on the inadequate assumption that non-CEO insiders add little value; Theory answers via what-is-lost. Do not route as Incompleteness-primary."
+    fragments:
+      - fragment_id: tfr_156
+        type: mechanism_loss_trunk_multi_outcome_external_substitute
+        title: "机制丧失主干 → 多结果树 → 外部部分替代边界"
+        home_files:
+          - "subprotocols/hypothesis_organization_patterns.md"
+          - "variants/B_mechanism_elaboration.md"
+        makadok_dimension: "Mechanism / Boundary / Output"
+        status: "EMERGING"
+        note: "Single-paper section variant (B9). Benefit inventory → loss under lone-insider structure → pay/misconduct/performance portfolio → analysts & institutions attenuate without replacing non-CEO insiders. Not core routing."
+      - fragment_id: tfr_157
+        type: what_is_lost_benefit_inventory_then_absence
+        title: "What-is-lost：收益清单 → 结构缺失丧失态"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Sentence-level companion for the loss trunk; do not copy Zorn wording."
+      - fragment_id: tfr_158
+        type: external_partial_substitute_attenuation
+        title: "外部部分替代衰减调节句"
+        home_files:
+          - "sentences/moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "W supplies substitute scrutiny/information but does not replace removed internal actors; attenuates S→Y."
+
   eilert_2017_jm:
     display_name: "Eilert (2017, JM)"
     journal: "Journal of Marketing"
@@ -381,7 +483,7 @@ source_papers:
     journal: "Journal of Marketing"
     year: 2024
     subfield: "marketing"
-    theory_build_type: "Mechanism / Boundary"
+    theory_build_type: "Mechanism + Moderation"
     fragments:
       - fragment_id: tfr_025
         type: tradeoff_shock_dominance
@@ -390,7 +492,7 @@ source_papers:
           - "sentences/mechanism_chain.md"
         makadok_dimension: "Mechanism"
         status: "EMERGING"
-        note: "UD laws reduce litigation risk → managerial opportunism → fewer recalls."
+        note: "H1 trunk: agency/myopia → recall trade-off (avoid ST costs vs litigation risk) → UD shock weakens discipline → opportunism dominates → fewer recalls. Concession-rebuttal via prospect theory precedes trade-off."
       - fragment_id: tfr_026
         type: unified_framework_moderator_selection
         title: "统一框架型调节变量选择"
@@ -398,14 +500,15 @@ source_papers:
           - "sentences/moderation.md"
         makadok_dimension: "Boundary"
         status: "EMERGING"
-        note: "Husted (2007) business ethics taxonomy → corporate culture (intrinsic) + institutional monitoring (extrinsic)."
-      - fragment_id: tfr_027
-        type: bilateral_moderation_derivation_om
-        title: "OM 三三制调节器推导"
+        note: "H2/H3: Husted (2007) intrinsic culture (customer focus) + extrinsic normative control (institutional ownership); parallel subsections each weaken H1 negative association."
+      - fragment_id: tfr_150
+        type: dual_lens_main_boundary_division
+        title: "双透镜分工（主效应/边界）"
         home_files:
-          - "sentences/mechanism_chain.md"
+          - "subprotocols/argumentation_patterns.md"
         makadok_dimension: "Boundary"
         status: "EMERGING"
+        note: "Agency theory for H1 mechanism; business ethics (Husted 2007) exclusively for boundary moderator selection — not dual-theory same-stage."
 
   jiang_2026_jibs:
     display_name: "Jiang (2026, JIBS)"
@@ -900,6 +1003,14 @@ source_papers:
           - "subprotocols/hypothesis_derivation_patterns.md"
         makadok_dimension: "Mechanism"
         status: "EMERGING"
+      - fragment_id: tfr_027
+        type: bilateral_moderation_derivation_om
+        title: "OM 三三制调节器推导"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Reassigned from Hoffmann 2024 JM (misclassification corrected 2026-08-05). First/Second/Third sub-mechanism maps to main-effect trunk."
       - fragment_id: tfr_056
         type: bilateral_moderation_derivation
         title: "双边论证调节推导"
@@ -1519,6 +1630,8 @@ source_papers:
     year: 2024
     subfield: "entrepreneurship / strategy / product safety"
     theory_build_type: "Dialectical Mechanism / Curvilinear / Boundary"
+    gap_type: "Incommensurability"
+    incommensurability_route: "R3-primary, R2-secondary"
     fragments:
       - fragment_id: tfr_145
         type: curvilinear_relationship_two_phase_argumentation
@@ -1528,7 +1641,7 @@ source_papers:
           - "variants/G_dialectical_opposition.md"
         makadok_dimension: "Mechanism / Output / Boundary"
         status: "EMERGING"
-        note: "R3-primary, R2-secondary strict Incommensurability exemplar. A higher-order outcome-family conflict is narrowed to fixed activity intensity→recall likelihood; execution costs dominate initially and learning routines dominate at higher activity. Mechanisms remain B0 explanations rather than measured mediators."
+        note: "R3-primary, R2-secondary strict Incommensurability exemplar. A higher-order outcome-family conflict is narrowed to fixed activity intensity→recall likelihood; execution costs dominate initially and learning routines dominate at higher activity. Mechanisms remain B0 explanations rather than measured mediators. Gap-audit 2026-08-05: Intro↔Theory Gap label aligned (Incommensurability); no drift."
       - fragment_id: tfr_146
         type: product_harm_recall_construct_boundary
         title: "企业—年份召回概率与召回次数、严重性、时点和主动性的边界"
@@ -1537,6 +1650,24 @@ source_papers:
         makadok_dimension: "Constructs / Measurement Boundary"
         status: "EMERGING"
         note: "The binary firm-year outcome records at least one FDA Class I/II recall. It does not measure product-level failure probability, recall count, continuous severity, timing, or voluntariness."
+      - fragment_id: tfr_145b
+        type: inverted_u_mode_differentiated_geometry
+        title: "同边界条件、异几何变换（shift vs steepen）"
+        home_files:
+          - "subprotocols/bilateral_argumentation_templates.md"
+          - "variants/G_dialectical_opposition.md"
+          - "sentences/moderation.md"
+        makadok_dimension: "Boundary / Mode"
+        status: "EMERGING"
+        note: "Gap-audit ADD 2026-08-05. Shared cost–learning inverted-U trunk; same W (turbulence) shifts Mode A (unilateral) upward and steepens Mode B (bilateral). Complements Cui flatten/steepen and Lee–Park turning-point delay. L2 optional; not core routing."
+      - fragment_id: tfr_145c
+        type: inverted_u_vertical_shift_language
+        title: "倒U垂直位移（shift upward）图形化语言"
+        home_files:
+          - "sentences/moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Gap-audit ADD 2026-08-05. Distinguishes vertical locus shift from steepen/flatten and turning-point delay; anchored by Bendig H3."
 
   anderson_reeb_2004_asq:
     display_name: "Anderson & Reeb (2004, Administrative Science Quarterly)"
@@ -1758,13 +1889,34 @@ patterns:
     home_file: "subprotocols/hypothesis_derivation_patterns.md"
   bilateral_moderation_derivation:
     description: "High/low condition symmetric mechanism derivation"
-    status: "VERIFIED"
-    source_count: 3
+    status: "EMERGING"
+    source_count: 2
     source_papers:
       - "shen_zhou_wang_zhang_2022_jom"
       - "weng_yang_jms"
-      - "hoffmann_cheong_phan_zurbruegg_2024_jm"
     home_file: "subprotocols/hypothesis_derivation_patterns.md"
+    note: "Hoffmann 2024 JM removed 2026-08-05 — uses unified-framework weaken-moderation, not bilateral high/low three-mechanism."
+  tradeoff_shock_dominance:
+    description: "External shock removes disciplinary constraint; pre-existing private incentive dominates trade-off"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "hoffmann_cheong_phan_zurbruegg_2024_jm"
+    home_file: "sentences/mechanism_chain.md"
+  unified_framework_moderator_selection:
+    description: "External taxonomy systematically selects paired moderators (e.g., intrinsic vs extrinsic constraint)"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "hoffmann_cheong_phan_zurbruegg_2024_jm"
+    home_file: "sentences/moderation.md"
+  dual_lens_main_boundary_division:
+    description: "Primary theory explains main effect; secondary theory exclusively organizes boundary/moderator selection"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "hoffmann_cheong_phan_zurbruegg_2024_jm"
+    home_file: "subprotocols/argumentation_patterns.md"
   construct_differentiation:
     description: "Distinction between two easily-confused constructs"
     legacy_implicit: true
@@ -2019,6 +2171,22 @@ patterns:
       - "lee_park_2024_smj"
     home_file: "subprotocols/bilateral_argumentation_templates.md"
     note: "Single-paper L2 boundary architecture. Requires direct turning-point comparison and an invariance reason for the unaffected prerequisite."
+  inverted_u_mode_differentiated_geometry:
+    description: "Two modes share a cost–learning inverted-U trunk; the same environmental W changes different geometric features (e.g., vertical shift vs steepen) via mode-specific governance."
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "bendig_hensellek_schulte_2024_etp"
+    home_file: "subprotocols/bilateral_argumentation_templates.md"
+    note: "Gap-audit ADD 2026-08-05. L2 optional; complements Cui flatten/steepen and Lee–Park turning-point delay. Not core routing."
+  inverted_u_vertical_shift_language:
+    description: "Graphical language for vertical locus shift of an inverted-U under W, distinct from steepen/flatten and turning-point delay."
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "bendig_hensellek_schulte_2024_etp"
+    home_file: "sentences/moderation.md"
+    note: "Gap-audit ADD 2026-08-05. Anchored by Bendig H3 (turbulence shifts CVC–recall curve upward)."
   environmental_organizational_resource_availability:
     description: "Environmental Organizational Resource Availability"
     status: "EMERGING"
@@ -2227,16 +2395,81 @@ patterns:
       - "reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc"
     home_file: "variants/E_moderation.md"
     note: "Section variant only. Treat event timing as a boundary condition, not automatically as randomized treatment; persistence means no detected decay within the observed window."
+  dual_edged_signed_enhancing_hindering_contingencies:
+    description: "Same protection/treatment raises and lowers a single DV through opposing information mechanisms; industry contingencies are opposite-signed (enhancing vs hindering) and replace an unconditional main-effect hypothesis."
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "castellaneta_conti_kacperczyk_2017_smj"
+    home_file: "variants/E_moderation.md"
+    note: "Section variant E8. Near-neighbor of competing_baseline_moderation_resolution (E4) and dialectical opposition (G); do not collapse into E1 stronger/weaker templates."
+  dual_edged_signed_enhancing_hindering_branches:
+    description: "Hypothesis-system layout: dual-blade trunk then enhancing branch then hindering branch(es) with explicit section navigation."
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "castellaneta_conti_kacperczyk_2017_smj"
+    home_file: "subprotocols/hypothesis_organization_patterns.md"
+    note: "Companion organization pattern for E8."
+  signed_more_positive_more_negative_moderation_sentence:
+    description: "Moderation hypothesis wording that states more positive / more negative impact under W, without presupposing an unconditional signed main effect."
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "castellaneta_conti_kacperczyk_2017_smj"
+    home_file: "sentences/moderation.md"
+    note: "Sentence-level companion to E8."
+  background_as_theory_dual_channel_stage_attenuation:
+    description: "BACKGROUND (or equivalent) carries rising-action theory without numbered hypotheses: two same-direction B0 channels, information-scarcity stage attenuation, stakes-based external-validity incompleteness, and open multi-stage empirical agenda."
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "kim_lee_2026_smj"
+    home_file: "subprotocols/hypothesis_derivation_patterns.md"
+    note: "B8 section variant. Near-neighbor of dual_mechanism_same_direction but must not forge H; not B2 (no opposing tracks); not E (no formal W×X)."
+  activity_vs_attribute_retention_contrast:
+    description: "Contrast optional activity/program participation evidence with employer-attribute claims when theorizing post-hire retention durability."
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "kim_lee_2026_smj"
+    home_file: "subprotocols/hypothesis_derivation_patterns.md"
+    note: "Companion construct-boundary move inside B8; prevents mis-borrowing retention literatures."
+
+  mechanism_loss_trunk_multi_outcome_external_substitute:
+    description: "Benefit inventory lost under structural absence; same loss state maps to a multi-outcome portfolio; external monitors attenuate as partial substitutes."
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "zorn_shropshire_martin_combs_ketchen_2017_smj"
+    home_file: "subprotocols/hypothesis_organization_patterns.md"
+    note: "B9 section variant. Near-neighbor of common_trunk_parallel_branches and shared_orientation_divergent_outcomes_selective_remedy; do not collapse. Not core routing."
+  what_is_lost_benefit_inventory_then_absence:
+    description: "Sentence-level what-is-lost trunk: list benefits supplied by a removed actor class, then state that structure S extinguishes them."
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "zorn_shropshire_martin_combs_ketchen_2017_smj"
+    home_file: "sentences/mechanism_chain.md"
+    note: "Companion sentence pattern for B9 trunk."
+  external_partial_substitute_attenuation:
+    description: "External monitors attenuate harm from internal mechanism loss as partial substitutes, without replacing the removed actors."
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "zorn_shropshire_martin_combs_ketchen_2017_smj"
+    home_file: "sentences/moderation.md"
+    note: "Companion boundary sentence pattern for B9; opposite direction from board_governance_amplifying_boundary."
 
 # Status summary by Makadok dimension
 summary_by_dimension:
   Constructs:
-    total_fragments: 14
-    source_papers: 10
+    total_fragments: 15
+    source_papers: 11
     verified_patterns: 1
   Mechanism:
-    total_fragments: 58
-    source_papers: 30
+    total_fragments: 59
+    source_papers: 31
     verified_patterns: 5
   Boundary:
     total_fragments: 34
@@ -2274,6 +2507,14 @@ honesty_boundaries:
     affected_files:
       - "sentences/moderation.md"
       - "variants/E_moderation.md"
+  - id: hb_background_as_theory_no_forged_hypotheses
+    boundary: "当范文/目标稿采用无正式编号假设的 Background-as-Theory（B8）时，不得为迎合默认输出合同伪造 H1–Hn；应输出阶段研究问题/empirical agenda，并标明诚实边界"
+    allowed_language: "open empirical question / we examine whether / advantages are expected to attenuate when..."
+    affected_files:
+      - "subprotocols/hypothesis_derivation_patterns.md"
+      - "variants/B_mechanism_elaboration.md"
+      - "references/output-format.md"
+    source: "Kim_Lee_2026_SMJ distill (2026-08-05c)"
 
 # Next batch targets (to move EMERGING → VERIFIED / ROBUST)
 next_batch_targets:
@@ -2294,6 +2535,22 @@ next_batch_targets:
     current_sources:
       - "wowak_2025_ms"
     note: "Add F variant exemplars from AMJ/ASQ/OS."
+  - pattern: "dual_edged_signed_enhancing_hindering_contingencies"
+    papers_needed: 2
+    current_sources:
+      - "castellaneta_conti_kacperczyk_2017_smj"
+    note: "Seek a second SMJ/AMJ strategy or IPR/factor-market paper with opposite-signed contingencies and no unconditional main-effect H to move E8 toward VERIFIED."
+  - pattern: "background_as_theory_dual_channel_stage_attenuation"
+    papers_needed: 2
+    current_sources:
+      - "kim_lee_2026_smj"
+    note: "Seek a second SMJ/ASQ/OrgSci empirical paper whose Theory/Background carries dual same-direction B0 channels + stage/information attenuation without numbered H."
+  - pattern: "mechanism_loss_trunk_multi_outcome_external_substitute"
+    papers_needed: 2
+    current_sources:
+      - "zorn_shropshire_martin_combs_ketchen_2017_smj"
+    note: "Seek a second SMJ/AMJ/OrgSci governance paper that theorizes structural removal as mechanism loss, maps one loss state to multiple outcomes, and uses external monitors as partial-substitute attenuators."
+
   - pattern: "rogerian_four_step_deescalation / fallacy_probes / premise_soundness_gate"
     papers_needed: 3
     current_sources:

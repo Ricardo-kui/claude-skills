@@ -8,8 +8,9 @@ generativity: GENERATIVE
 exclusivity: MEDIUM
 source_papers:
   - habel2016 (JM, 2016): "goal conflict: being perceived as socially caring vs. fair in terms of price"
+  - hoffmann_cheong_phan_zurbruegg2024 (JM, 2024): "theory-practice gap on recall: long-term fiduciary duty vs short-term cost avoidance; embedded in Hook not standalone Stakes"
+updated: 2026-08-05
 created: 2026-06-03
-updated: 2026-06-03
 source: Distilled from Habel et al. (2016, JM) by distill-introduction-exemplar
 ---
 
@@ -75,6 +76,28 @@ source: Distilled from Habel et al. (2016, JM) by distill-introduction-exemplar
 > "If [competing outcome A], [stakeholder] will face a goal conflict, requiring [trade-off management]. [Quantified evidence] underscores this dilemma: [N]% of [stakeholders] report [manifestation of conflict] ([source]). Thus, examining [linkage] is highly relevant to [domain-specific outcome]."
 
 **与变体 A 的差异**: 在 goal conflict 后追加量化数据支撑，增强说服力。适用于有行业数据可引用的场景。
+
+---
+
+### 变体 C：规范—实践落差 + 短长期权衡型（hoffmann2024 型）
+
+**模板**:
+> "Although, in theory, [actors] should [normative long-term behavior aligned with principal interests], in practice, they often face [countervailing short-term pressures] ([citation]), which could motivate [undesirable short-term behavior] ([citation]). [High-profile case exemplifying undesirable behavior] is a case in point ([citation]). However, [undesirable behavior] can jeopardize [stakeholder welfare / long-term viability] ([citation]), exposing [actors] to [institutional or legal risk from principals] ([citation])."
+
+**来源**: hoffmann_cheong_phan_zurbruegg2024 (JM), P1 (Hook 内嵌 Stakes)
+
+**原文锚定**:
+> "Although, in theory, managers of publicly listed firms should strive to safeguard the long-term value of the firm, in practice, they often face incentives and feel pressures leading to an overemphasis on short-term goals (Mizik 2010), which could motivate them to try to avoid recalls to avert their immediate costs (Eilert et al. 2017). General Motors knowing for ten years about faulty ignition switches before issuing a recall is a case in point (Valdes-Dapena 2014). However, not recalling can jeopardize consumer welfare and hurt the firm's long-term viability (Eilert et al. 2017), exposing managers to the risk of being sued by shareholders for neglecting their fiduciary duties..."
+
+**关键特征**:
+- **"Although in theory... in practice..."** 建立规范—实践落差，而非直接声明 goal conflict 标签——适合 agency/short-termism 研究
+- **案例承担 "in practice" 证据功能**: GM 案例证明管理者确实会为了短期成本延迟召回
+- **"However"  pivot 引入长期/法律 stakes**: 不召回→消费者福利+长期生存+股东诉讼风险，形成短长期权衡链
+- **Stakes 嵌入 Hook**: 无独立 Stakes 段——与 epigraph-quote-pivot 变体 F 的 Hook+Stakes 融合结构配对
+
+**适用**: 代理冲突/短视管理/产品安全/召回决策研究；Incompleteness × Mechanism；JM/SMJ 接受 Hook 内嵌 stakes 的紧凑结构
+
+**禁忌**: 不要缺少 "in theory/in practice" 对比——否则退化为 generic "recalls are costly"；案例必须证明 **行为**（逃避召回）而非仅证明 **风险存在**；若期刊期望独立 Stakes 段（AMJ/ASQ），应将此骨架拆出为独立段落
 
 ---
 

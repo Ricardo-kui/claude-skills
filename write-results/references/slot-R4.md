@@ -44,9 +44,20 @@ Hypothesis [x] predicted that [predictor] would [increase/decrease] [outcome], a
 Model [x] tests whether [moderator] conditions the effect of [treatment] on [outcome]. The interaction is [direction/status]. As Figure [y] shows, the treatment effect is [stronger/weaker] when [moderator] is high and [weaker/null] when [moderator] is low, consistent with [mechanism].
 ```
 
-**联合调节变量 "Switch-Off" 分析变体**（hoffmann2024 型）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：DiD 调节专用 + 分别报告两个交互项
+**联合调节 "Switch-Off" 高百分位中和变体**（hoffmann2024 型 — 文本式）： 🔬 EXPERIMENTAL（1 篇范文；2026-08-05 重蒸馏校准）⚠️ 保守替代：DiD 调节专用 + 分别报告两个交互项
 ```text
-Our theory predicts that [moderator 1] (an [intrinsic] constraint) and [moderator 2] (an [extrinsic] constraint) each independently weaken the negative effect of [treatment] on [outcome]. To provide a more complete picture of how these constraints jointly shape [outcome] decisions, we examine what happens when both constraints are simultaneously present versus absent.
+As a final sensitivity analysis, we explore whether there are conditions where [moderator 1] and [moderator 2] do not just weaken the effect of [treatment] on [outcome], but can effectively "switch it off." In this regard, we find that when the values of [moderator 1] and [moderator 2] are both at or above those representing the [90th percentile], the [negative/positive] effect of [treatment] on [outcome] is neutralized. However, note that due to the limited overlap of the distributions of [moderator 1] and [moderator 2], only for [X]% of all [unit]-observations, both cutoff levels are concurrently met. In other words, the effect of [treatment] extends to almost all [units].
+```
+
+**联合调节 Switch-Off 高百分位 QC**（hoffmann2024 校准）:
+- 必须在 **两个 moderator 分别显著** 之后报告；标注为 sensitivity / final analysis，非新假设
+- 阈值必须透明（如 90th percentile）；**必须报告联合满足阈值的样本占比**——否则 switch-off 易过度解读
+- 原文 **无** 2×2 场景图；以 predicted-probability 计算 + 文本中和为主；若有 Figure 则为可选增强
+- "extends to almost all firms" 类收束句把边界条件叙事从 **机制有效** 拉回 **普遍适用性**
+
+**联合调节变量 "Switch-Off" 四场景图变体**（扩展范式；hoffmann 未用）： 🔬 EXPERIMENTAL ⚠️ 保守替代：上方高百分位中和变体
+```text
+Our theory predicts that [moderator 1] (an [intrinsic] constraint) and [moderator 2] (an [extrinsic] constraint) each independently weaken the [direction] effect of [treatment] on [outcome]. To provide a more complete picture of how these constraints jointly shape [outcome] decisions, we examine what happens when both constraints are simultaneously present versus absent.
 
 We define four joint-constraint scenarios based on [moderator 1] and [moderator 2] being at their [low/high] levels ([operational cutoff: e.g., above/below median]). Figure [x] plots the predicted probability of [outcome] under [treatment = 0] versus [treatment = 1] for each scenario.
 
@@ -55,7 +66,7 @@ When [treatment] is absent, the predicted probability of [outcome] is [relativel
 This "switch-off" analysis — documenting that the main effect is strongest when both constraints are absent and weakest (or absent) when both are present — provides a holistic view of how [intrinsic] and [extrinsic] governance mechanisms jointly shape [agent] decision making.
 ```
 
-**联合调节 "Switch-Off" QC**:
+**联合调节四场景 QC**:
 - 必须在两种约束分别测试通过（各自单独显著）之后，再做联合分析
 - 四种场景的定义必须透明（median split / quartile / specific threshold），不能隐含分类逻辑
 - "worst-case" 和 "best-case" 必须有理论依据——对应理论预测中约束最弱和最强的组合

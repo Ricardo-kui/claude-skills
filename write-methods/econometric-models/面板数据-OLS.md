@@ -16,9 +16,11 @@ source_papers:
   - "du_tsolmon_2024_post_ma_retention_orsc (Organization Science): TMT retention rate DV 文献基准锚定（54.8% vs 前人 55%/59.4%）+ 三层异质数据库漏斗附录审计"
   - "malshe2015 (Journal of Marketing): cross-database manual matching (ACSI↔Compustat no common ID) + 5-source merge funnel"
   - "schumacher_keck_tang_2020_smj (Strategic Management Journal): nonoverlapping construct-formation/outcome windows + media/option dual-proxy convergence"
-variants_count: 27
+  - "liu_shankar2015 (Management Science): recall severity theory-based classification, media relevancy-score threshold, parent-brand vs nameplate advertising split, monthly recall aggregation"
+  - "Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ (Strategic Management Journal): categorical lone-insider board as change-in-kind vs continuous independence"
+variants_count: 32
 created: 2026-05-18
-updated: 2026-08-03
+updated: 2026-08-05
 ---
 
 # 面板数据-OLS — Methods 骨架
@@ -338,6 +340,70 @@ updated: 2026-08-03
 - 若极端 X 区间样本稀疏，应报告支持范围、观测密度并进行敏感性分析。
 
 **跨 skill 对齐**: `../write-results/econometric-models/Logit-Probit-Ordered-Probit.md` 变体9–11（正式 U-test、条件曲线概率图与经济成本换算）；`../write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md`（two-phase curvilinear argumentation）。
+
+### 变体 29: M4 召回严重度理论分类 — 后果类型二元操作化 (1篇高价值)
+
+**来源论文**: Liu & Shankar 2015 (Management Science)
+
+**验证状态**: EMERGING（单篇；与 Kashmiri 2017 severity 边界声明互补）
+
+**槽位**: M4
+
+**骨架**:
+> To measure the severity of [product-harm event], we classify events into two types based on the consequence of product failure described in [regulatory/administrative data]. [Severity type 1] events [increase immediate catastrophic risk — e.g., crash or fire] and reflect an immediate safety concern; an example is [defective brake pedal]. [Severity type 2] events [increase injury risk conditional on an exogenous accident — e.g., airbag/seatbelt failure when crash is not caused by the defect] and therefore may trigger less negative consumer response than type 1. [Severity_it] equals one for type 1 and zero for type 2. In our sample, [percentage]% of events are type 1 and [percentage]% are type 2.
+
+**与原骨架差异**: 召回家族现有 time-to-recall、裁量权子样本（Hoffmann）与 regulatory indicator（Kashmiri）；本变体把 **NHTSA 后果描述 → 心理学归因可辩护的二元 severity** 写进 M4，并给每类一个可想象例子 + 样本占比。
+
+**诚实边界**: 二元分类损失 severity 连续信息；须在稳健性报告 alternative coding 或 include continuous units recalled。
+
+---
+
+### 变体 30: M4 媒体覆盖 — 双索引相关度阈值 + 互补数据源 (1篇高价值)
+
+**来源论文**: Liu & Shankar 2015 (Management Science)
+
+**验证状态**: EMERGING（单篇；待与 `文本构念测量` 交叉验证）
+
+**槽位**: M4
+
+**骨架**:
+> We obtain print media reports about [events] from [LexisNexis/Factiva]. We search [all major outlets / firm name within study window] using two index terms: ["product recall" as subject] and [firm name as company tag]. [Provider] assigns a relevancy score for each index in each article; we retain articles only if relevancy scores for both indices are at least [threshold: e.g., 60%], ensuring discussion concerns the focal firm's [events] rather than incidental mentions. We complement [provider A] with [provider B: e.g., Wall Street Journal via Factiva company/subject tags] using parallel exclusion rules for irrelevant articles. [Media_ijt] is the count of qualifying articles in [period t] for [unit ij].
+
+**与原骨架差异**: 区别于 generic media count——本变体强制 **双索引 relevancy 阈值** 作为 face-validity 链，并写 **双数据源互补** 与 irrelevant-mention 排除逻辑。召回 shock 研究可复用。
+
+**诚实边界**: 阈值（60%）为 judgment call，须报告敏感性；print-only 遗漏 social/streaming 渠道。
+
+---
+
+### 变体 31: M2/M4 异频数据时间对齐 — 事件聚合至结果频率 (1篇高价值)
+
+**来源论文**: Liu & Shankar 2015 (Management Science)
+
+**验证状态**: EMERGING（单篇；待第二篇交叉验证）
+
+**槽位**: M2 / M4
+
+**骨架**:
+> [Sales/advertising/outcome data] are observed at [monthly] frequency, whereas [event registry data] are recorded at [event/day level] and [product characteristics/prices] are [annual]. To utilize the high-frequency marketing and outcome data, we aggregate [event counts/intensity] to [monthly unit-level totals] (e.g., total units recalled per month per [nameplate]). Annual [characteristic/price] variables are held constant within year but enter the [monthly] demand system with [CPI deflation / interpolation rule stated explicitly].
+
+**与原骨架差异**: 面板 OLS 变体2/26 强调多库交集 N；本变体解决 **event-day vs month vs year 三频对齐**——Marketing/IO 面板常见但未在召回语料显式化。
+
+**诚实边界**: 月内事件堆叠假设事件效应在月内可加；年度价格仅 CPI 月变会低估 within-year price variation——须 limitation 承认 MSRP 代理限制。
+
+### 变体 32: M4 结构二元特征操作化为「kind」而非「degree」— 相对 majority-independence 的 discrete construct (EMERGING)
+
+**来源论文**: Zorn, Shropshire, Martin, Combs & Ketchen (2017, SMJ)
+**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**写入日期**: 2026-08-05
+**槽位**: M4
+**骨架**:
+> Our independent variable is whether the focal [unit] adopted [extreme categorical structure: e.g., a lone-insider board]. To capture the most conservative specification, we code [units] as 1 if [threshold that removes an entire historically represented group—e.g., the CEO is the only inside or affiliated director], and 0 otherwise. [Units] may move into and out of [the structure] over the panel. We theorize that [this structure] is categorically different from simply increasing [continuous alternative: e.g., the proportion of independent directors]: removing [the last non-CEO insider] is a change in kind rather than degree because it eliminates [information / contestation / succession] benefits that majority-[independence] alone does not remove. We therefore do not treat [continuous independence / insider count] as interchangeable with our indicator. Below (and in robustness), we verify that effects are not reducible to a linear [insider-count / independence] gradient—including tests that replace the indicator with [adjacent category: e.g., dual-insider], examine continuous [independence] among non-[focal-structure] units, and compare the [1→2] jump with later increments.
+
+**与原骨架差异**: 现有 M4 变体多为连续构念、阈值披露或双代理收敛；本变体专门处理**治理/组织「极端结构」二元化**时必须完成的构念辩护：(1) 保守编码规则；(2) 理论声明 kind ≠ degree（相对 majority-independence / 连续计数）；(3) Methods 即预告 kind-vs-degree 稳健性电池。诚实边界：若经验分布上「2+」类别极少，二分损失的信息有限——须报告类别频数；不能仅靠理论断言，Results 必须出现 dual-category / continuous / Chow 类检验（见 write-results IV-2SLS 变体 10）；若理论其实是线性 dose-response，不应使用本骨架。
+
+**适用**: 董事会 lone-insider、完全独立委员会、单一大股东、零内部人等高阶离散结构相对「比例/计数」连续操作化的研究。
+
+**跨 skill 对齐**: IV 内生采纳见 `IV-2SLS.md` 变体 12；Results kind-vs-degree 电池见 write-results `IV-2SLS.md` 变体 10。
 
 ## 反模式
 

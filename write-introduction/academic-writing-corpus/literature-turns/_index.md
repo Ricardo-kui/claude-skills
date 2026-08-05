@@ -36,7 +36,7 @@ Literature Turn（P2-P3）的核心功能是将 Hook 建立的注意力转化为
 
 | 策略 | 文件 | 默认 Gap 配对 | 能量 | 核心逻辑 | 文献诊断 |
 |------|------|---------|------|---------|---------|
-| **Progressive Coherence** | `01-progressive-coherence.md` | Incompleteness | 低–中 | "已有进展，但遗漏了 C" | 单一传统充分发展，自然留下空白 |
+| **Progressive Coherence** | `01-progressive-coherence.md` | Incompleteness | 低–中 | "已有进展，但遗漏了 C"（含变体 N：采纳已答/近端后果未清的文献分工，EMERGING） | 单一传统充分发展，自然留下空白 |
 | **Synthesized Coherence** | `02-synthesized-coherence.md` | Inadequacy | 中 | "多个传统各自合理，但在交汇处集体盲区" | 多个传统各自正确，但互不知晓 |
 | **Non-Coherence** | `03-non-coherence.md` | Incommensurability | 高 | "两个理论不能同时正确——除非重新理解" | 两个理论都有证据，但预测相反 |
 
@@ -84,7 +84,7 @@ Literature Turn（P2-P3）的核心功能是将 Hook 建立的注意力转化为
 | **解决方案** | 填补空白 | 连接盲区 | 超越对立 |
 | **典型 Hook** | data-shock, practical-puzzle | consensus-blindspot, forward-looking-shift | paradigm-challenge, classic-debate-constraint |
 | **典型 Tension** | despite-progress-unaddressed | implicit-assumption-wrong, structural-blindspot | reality-contradicts-consensus, theoretical-imbalance |
-| **变体数量** | 9 (A–I) | 5 (A–E) | 5 (A–E) |
+| **变体数量** | 14 (A–N) | 5 (A–E) | 5 (A–E) |
 | **反模式风险** | 弱缺口（没有解释为什么遗漏重要） | 虚假合成（两个"传统"实为同一流派变体） | 稻草人（一方被描绘得极其愚蠢） |
 
 ---
@@ -139,7 +139,7 @@ Literature Turn 的策略选择影响 write-theory 的推荐变体：
 ```
 literature-turns/
 ├── _index.md                          ← 本文件（路由图 + 速查表）
-├── 01-progressive-coherence.md        ← Progressive Coherence (9 variants)
+├── 01-progressive-coherence.md        ← Progressive Coherence (13 variants, A–M)
 ├── 02-synthesized-coherence.md        ← Synthesized Coherence (5 variants)
 ├── 03-non-coherence.md                ← Non-Coherence (5 variants)
 ├── literature-turn-templates.md       ← 快速参考卡（三种策略的核心模板精简版）
@@ -155,6 +155,10 @@ literature-turns/
 ---
 
 ## 更新日志
+
+- **2026-08-05（Zorn）**: 蒸馏 Zorn et al. (2017, SMJ)——新增 `01-progressive-coherence` **变体 N：文献分工（采纳已答 / 近端后果未清）**；新建 Tension `21-institutionalized-extreme-structural-warrant`。Progressive 变体数更新为 A–N（14）。配对 Hook 03-H、Stakes 01-G。
+- **2026-08-05（续）**: 蒸馏 Kim & Lee (2026, SMJ)——新增 `01-progressive-coherence` **变体 M：关系发现共识 → 证据源类型 foreshadow**。配对 Tension AD（低 stakes 证据→高 stakes 情境+阶段延伸）；Preview R/P；Contribution Q。QC：模板抽象功能节拍，原文锚定仅溯源。Progressive 变体数更新为 A–M（13）。
+- **2026-08-05**: 蒸馏 Castellaneta, Conti & Kacperczyk (2017, SMJ)——新增 `01-progressive-coherence` **变体 L：披露型 IPR 共识 → 非披露形式作为外推边界**。Progressive 变体数更新为 A–L（12）。配对 Tension AC（DV 链接缺口）与 Preview Q/O；QC 修补后 Intro 模板已抽象化，避免近原文复刻。
 
 - **2026-08-03**: 蒸馏 Schumacher, Keck, and Tang (2020, SMJ)——新增 `01-progressive-coherence` **变体 I：双成熟文献流 + 必要解释瓶颈**。该写法不是把两条文献流包装成彼此冲突，而是先分别承认两者成熟贡献，再指出“反馈效应依赖解释，而解释研究尚未进入该对话”的必要中介缺口；适用于行为理论 × 高管认知等跨层整合。
 
