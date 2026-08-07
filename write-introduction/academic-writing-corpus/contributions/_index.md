@@ -22,7 +22,8 @@ source_papers:
   - wowak2025 (MS, 2025): "Convergent dual-literature-scan + awareness-and-mitigation — two parallel 'known→unknown' scans converge on one gap from opposite directions; implications split into descriptive awareness + empirically-tested mitigation"
   - kashmiri_nicol_arora2017 (JAMS, 2017): "Humanize firm strategy + open the mechanism black box + install a controllable countervailing remedy"
   - kim_lee2026 (SMJ, 2026): "Full-time validation + revealed-preference WTP + stage durability null + gendered early-stage advantage"
-updated: 2026-08-05
+  - li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM, 2026): "pipes/prisms integration + network liability + extended network intermediaries"
+updated: 2026-08-06
 created: 2026-05-19
 source: Extracted from MVP30 narrative_analysis files + SKILL.md Makadok table + kim_lee2026
 ---
@@ -512,6 +513,33 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 **适用**: Incompleteness × Boundary；全管道/多阶段设计；有补偿权衡估计与异质性；SMJ 战略人力资本/CSR-招聘。
 
 **禁忌**: 四层须由 Results 逐项兑现；不得把单阶段研究硬写成"耐久性贡献"；WTP 贡献须有 revealed preference 设计，不可仅用 stated preference 冒充；异质性若仅 exploratory，降为简短附注而非 Finally 主贡献。
+
+---
+
+### 变体 S：双文献流整合 + 网络负债 + 延伸网络三段型（li_narayanan_2026_jscm 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "This study adds three insights to the literature on [stream A] and [stream B]. First, it distinguishes between [direction A] and [direction B] spillover effects and uses a [theoretical lens] to examine the propagation of [risk events]. Previous studies on [stream A topic] have focused primarily on the [mechanism 1 label] ([citations]), whereas research on [stream B topic] has primarily focused on the [mechanism 2 label] ([citations]). However, each research stream only explains a part of the phenomenon. Drawing on [theory] ([citation]), this study integrates these two views by theorizing [relationship ties] as [metaphor A] and [metaphor B] that cause the propagation of [events] in the [network context]. Second, while prior research has demonstrated the merits of [network benefit construct] ([citations]), the present research shows that [network connections] can become liabilities in adverse situations; that is, more [moderator that amplifies] enhance the [spillover effect]. This finding echoes previous studies on [related dark-side network literature] ([citations]), underscoring the need to consider both the benefits and risks of [network property]. Third, this study extends [theory] by hypothesizing and empirically testing how [third-party intermediaries] are embedded within [interorganizational networks] and how their shared presence across firms conditions [spillover effects]. The findings indicate that [intermediary A] and [intermediary B] between [dyad actors] affect the [spillover effect], highlighting under-examined stakeholders in [field] studies."
+
+**来源**: li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM), §1 P6–P8
+
+**原文锚定**（压缩）:
+> "First... integrates categorization and supply chain propagation via pipes and prisms... Second... network connections can become liabilities... common business ties enhance vertical spillover... Third... common institutional ownership and common analyst coverage... extend social network theory to institutional intermediaries."
+
+**关键特征**:
+- **三段映射 Theory lens / Dark-side network / Extended network**：与 `theory-lens/08` + H2–H4 一一对应，不是 Makadok 四型机械套用
+- **每段先承认双流各自贡献再整合**：First 段不 claim "first to study spillovers"，而是 claim **integration**
+- **Second 段 liability 须有 empirical direction**："more X enhance" 把贡献与 H2 绑定，避免纯理论宣言
+- **Third 段双 intermediary 并列**：ownership + analysts 同属 extended network，共享一句 findings direction
+
+**适用**: 双机制（impression + operational/cash-flow）整合研究；network benefit 文献已有 dark-side 对话对象；extended network moderators ≥2；JSCM/SMJ/JOM 供应链溢出
+
+**禁忌**:
+- First 段两种机制标签须与 Theory 隐喻一致（pipes/prisms 或等价），不可 Intro 换名 Theory 不换
+- Second 段不能只说 "networks have dark sides"——必须点名**哪个 network property** 在**哪种 adverse event** 下成为 liability
+- Third 段 intermediary 须已在 Theory Table 1 矩阵中推导——不能 Intro 新增 Discussion 才出现的 actor
 
 ---
 

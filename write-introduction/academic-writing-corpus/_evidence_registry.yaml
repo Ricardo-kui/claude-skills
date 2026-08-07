@@ -1,12 +1,12 @@
 meta:
-  last_updated: '2026-08-05'
-  total_mvp30_papers_indexed: 58
-  batches_processed: 27
-  latest_batch_note: '2026-08-05 Zorn et al. 2017 SMJ (Intro+background): CREATE tension 21-institutionalized-extreme-structural-warrant;
-    EXTEND lit-turn 01-N, hook 03-H, stakes 01-G. Gap=Inadequacy (proximal-outcome Incompleteness secondary). Castellaneta QC
-    (功能节拍+placeholder; 原文锚定 only). No core routing change.'
+  last_updated: '2026-08-06'
+  total_mvp30_papers_indexed: 59
+  batches_processed: 30
+  canonical_asset_source: asset_governance
+  evidence_status_rule: 'ROBUST: >=5 papers and >=2 journals; VERIFIED: >=3 papers; otherwise EMERGING'
+  latest_batch_note: '2026-08-06h metadata: canonical paper IDs unified — JSCM li_bapuji_talluri_singh_narayanan_2026_jscm vs POM li_bapuji_talluri_singh_venkataraman_2026_pom (replaces li2025/li_jscm_2026/li2026 aliases). Prior 2026-08-06g distill unchanged.'
   source: mvp30_index + 9_distill_files + path_B_confirmation + cui_yang_vertinsky_smj_distill + paruchuri_andrus_sullivan2026_amj_distill
-    + li2025_jscm_distill + li2026_pom_distill + du_tsolmon2024_orsc_distill + lee_wu_bednar_orsc_18968_distill + reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc_distill
+    + li_bapuji_talluri_singh_narayanan_2026_jscm_distill + li_bapuji_talluri_singh_venkataraman_2026_pom_distill + du_tsolmon2024_orsc_distill + lee_wu_bednar_orsc_18968_distill + reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc_distill
     + vidal_mitchell2015_orsc_distill + moon_tuli_mukherjee2023_jm_distill + schumacher_keck_tang2020_smj_distill + kashmiri_nicol_arora2017_jams_distill
     + bendig_hensellek_schulte2024_etp_distill + anderson_reeb2004_asq_distill + lee_park2024_smj_distill + castellaneta_conti_kacperczyk2017_smj_distill
     + kim_lee2026_smj_distill + bendig_hensellek_schulte2024_etp_gap_audit + zorn_shropshire_martin_combs_ketchen2017_smj_distill
@@ -19,15 +19,26 @@ meta:
     G (成对跨行业灾难实例化型) to hooks/03-data-shock; created new theory-lens/08-dual-metaphor-stream-reconciliation (单理论双隐喻调和双文献流,
     pipes/prisms reconciling categorization + supply chain propagation). 2026-07-22 distilled li_bapuji_talluri_singh_venkataraman2026
     (POM, supply base geographical distance/dispersion): created new tensions/18-context-generalizability (WEIRD↔non-WEIRD
-    gap); added li2026 as 7th source to tensions/05-construct-confusion (distance/dispersion conflation); paired methods slot-M3
-    context-customized-DV variant + results slot-R6 null-rescue variant. 2026-07-25 re-distilled wowak2025 (MS) Introduction
+    gap); GHOST-then-BACKFILL li2026 on tensions/05 (corpus variant D written 2026-08-06e); paired methods slot-M3
+    context-customized-DV variant + results slot-R6 null-rescue variant. 2026-08-06 distilled chen_ganesan_liu2009 (JM):
+    hook 03-I (serial vivid-instance enumeration), tension 01-AE; write-theory G single-sided dialectical variant +
+    audience-split mechanism chain (tfr_159/160). 2026-08-06b distilled kalaignanam_kushwaha_eilert2013 (JM): hook 03-J
+    (stat+instance+flagship escalation), tension 01-AF (skeptical evidence + dual-stakeholder gap), transition 12-C;
+    write-theory ability-motivation enablers framework, equivocal nondirectional moderation, trivial-response-exclusion
+    temporal mediation + hb_granger_causality_ceiling. 2026-08-06c distilled thirumalai_sinha2011 (MS): hook 03-K, stakes
+    04-E, research-questions 02-D, findings-preview Q; write-theory temporal_dual_role_same_variable. 2026-08-06d RETRACTED haunschild_rhee2004 (MS) Introduction corpus writeback (hooks/27, non-coherence H, RQ 02-E, contrib R); Theory distill kept. 2026-07-25 re-distilled wowak2025 (MS) Introduction
     (L2 gap-fill): verified 5 existing variants accurate (hooks/02 variant E epigraph-quote-pivot; tensions/14 variant B debate-unresolved
     from Theory; literature-turns/02 variant D synthesized-coherence; previews/findings-preview variant L dual-DV-competting-directions;
     transitions/12 variant A high-risk-high-reward setting-justification, sole source); filled sole gap by adding contributions/_index
     variant O (convergent dual-literature-scan + awareness-and-mitigation). Confirmed 2 known narrative risks: no explicit
     puzzle statement; Preview over-detailed (announces all post hoc results). 2026-08-03 distilled schumacher_keck_tang2020
     (SMJ): added Progressive-Coherence variant I for joining two mature streams through a necessary interpretive bottleneck,
-    and mechanism-preview variant K for formal-model-driven asymmetric feedback predictions plus threshold reversal.'
+    and mechanism-preview variant K for formal-model-driven asymmetric feedback predictions plus threshold reversal.
+
+    Li team 2026 — two papers, two canonical IDs (do not interchange):
+    - li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM): Vertical Spillover / pipes-prisms / US auto recalls.
+    - li_bapuji_talluri_singh_venkataraman_2026_pom (POM): supply-base geographical distance vs dispersion / China auto / WEIRD.
+    Deprecated aliases: li2025, li_jscm_2026, li_bapuji_talluri_singh_narayanan2025/2026, li2026 (bare), li2026_pom.'
 evidence:
   hooks:
     01-cross-disciplinary-analogy:
@@ -40,7 +51,7 @@ evidence:
         Incompleteness: 3
         Inadequacy: 0
         Incommensurability: 0
-      status: EMERGING
+      status: VERIFIED
       generativity: ADAPTABLE
       exclusivity: MEDIUM
       common_failures: []
@@ -80,21 +91,24 @@ evidence:
         reject: 0
         common_revise_reasons: []
     03-data-shock:
-      paper_count: 10
+      paper_count: 13
       papers:
       - Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ (SMJ)
+      - chen_ganesan_liu2009 (JM)
       - darby2024 (MSOM)
       - darby2025 (JSCM)
       - eilert2017 (JM)
       - ilicic_brennan2026 (JM)
+      - kalaignanam_kushwaha_eilert2013 (JM)
       - kim2022 (MS)
-      - li2025 (JSCM)
+      - li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM)
       - shi2021 (JMR)
+      - thirumalai_sinha2011 (MS)
       - vadakkepatt2022 (JM)
       - wu2025 (SMJ)
       gap_distribution:
         Incompleteness: 6
-        Inadequacy: 1
+        Inadequacy: 4
         Incommensurability: 0
       status: ROBUST
       generativity: ADAPTABLE
@@ -614,11 +628,12 @@ evidence:
         common_revise_reasons: []
   tensions:
     01-despite-progress-unaddressed:
-      paper_count: 29
+      paper_count: 32
       papers:
       - ahmadi2017 (JMS)
       - cancellieri2023 (SMJ)
       - castellaneta_conti_kacperczyk2017 (SMJ)
+      - chen_ganesan_liu2009 (JM)
       - cui_yang_vertinsky_smj (SMJ)
       - darby2024 (MSOM)
       - darby2025 (JSCM)
@@ -630,7 +645,9 @@ evidence:
       - hoffmann_cheong_phan_zurbruegg2024 (JM)
       - ilicic_brennan2026 (JM)
       - jiang2026 (JIBS)
+      - kalaignanam_kushwaha_eilert2013 (JM)
       - kim_lee2026 (SMJ)
+      - li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM)
       - lehman2014 (MS)
       - malshe2015 (JM)
       - mannor2016 (SMJ)
@@ -646,8 +663,8 @@ evidence:
       - wowak2025 (MS)
       - wu2025 (SMJ)
       gap_distribution:
-        Incompleteness: 19
-        Inadequacy: 0
+        Incompleteness: 21
+        Inadequacy: 2
         Incommensurability: 0
       status: ROBUST
       generativity: GENERATIVE
@@ -755,7 +772,7 @@ evidence:
       - pfarrer2010 (AMJ)
       - pollock2015 (ASQ)
       - shen2022 (JOM)
-      - li2026 (POM)
+      - li_bapuji_talluri_singh_venkataraman_2026_pom (POM)
       gap_distribution:
         Incompleteness: 1
         Inadequacy: 6
@@ -933,7 +950,7 @@ evidence:
         Incompleteness: 0
         Inadequacy: 5
         Incommensurability: 0
-      status: VERIFIED
+      status: ROBUST
       generativity: GENERATIVE
       exclusivity: MEDIUM
       common_failures: []
@@ -1021,7 +1038,7 @@ evidence:
     18-context-generalizability:
       paper_count: 1
       papers:
-      - li2026 (POM)
+      - li_bapuji_talluri_singh_venkataraman_2026_pom (POM)
       gap_distribution:
         Incompleteness: 0
         Inadequacy: 1
@@ -1145,15 +1162,16 @@ evidence:
         reject: 0
         common_revise_reasons: []
     04-public-health-safety:
-      paper_count: 2
+      paper_count: 3
       papers:
       - darby2023 (MSOM)
       - ilicic_brennan2026 (JM)
+      - thirumalai_sinha2011 (MS)
       gap_distribution:
         Incompleteness: 2
-        Inadequacy: 0
+        Inadequacy: 1
         Incommensurability: 0
-      status: EMERGING
+      status: VERIFIED
       generativity: ADAPTABLE
       exclusivity: MEDIUM
       common_failures: []
@@ -1405,7 +1423,7 @@ evidence:
         Inadequacy: 2
         Incommensurability: 2
     findings-preview:
-      paper_count: 44
+      paper_count: 46
       papers:
       - castellaneta_conti_kacperczyk2017 (SMJ)
       - ceo_regulatory_focus_ijrm (IJRM)
@@ -1445,6 +1463,8 @@ evidence:
       - shi2021 (JMR)
       - shipilov2020 (SMJ)
       - singh2023 (JMR)
+      - thirumalai_sinha2011 (MS)
+      - li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM)
       - toh2023 (SMJ)
       - vadakkepatt2022 (JM)
       - wowak2025 (MS)
@@ -1463,7 +1483,7 @@ evidence:
         common_revise_reasons: []
       gap_distribution:
         Incompleteness: 22
-        Inadequacy: 20
+        Inadequacy: 21
         Incommensurability: 2
     robustness-preview:
       paper_count: 1
@@ -1508,7 +1528,7 @@ evidence:
         common_revise_reasons: []
   contributions:
     contribution-statements:
-      paper_count: 47
+      paper_count: 48
       papers:
       - ahmadi2017 (JMS)
       - ceo_regulatory_focus_ijrm (IJRM)
@@ -1533,6 +1553,7 @@ evidence:
       - keeves2017 (ASQ)
       - kim2022 (MS)
       - kim_lee2026 (SMJ)
+      - li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM)
       - kundro2023 (AMJ)
       - lashley_pollock2020 (ASQ)
       - lehman2014 (MS)
@@ -1610,16 +1631,18 @@ evidence:
         reject: 0
         common_revise_reasons: []
     02-explicit-dual-question-narrowing:
-      paper_count: 3
+      paper_count: 5
       papers:
       - weng_yang (JMS)
       - cui_yang_vertinsky (SMJ)
       - hoffmann_cheong_phan_zurbruegg2024 (JM)
+      - thirumalai_sinha2011 (MS)
+      - li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM)
       gap_distribution:
-        Incompleteness: 2
-        Inadequacy: 1
+        Incompleteness: 3
+        Inadequacy: 2
         Incommensurability: 0
-      status: VERIFIED
+      status: ROBUST
       generativity: GENERATIVE
       exclusivity: LOW
       common_failures: []
@@ -1711,7 +1734,7 @@ evidence:
     08-dual-metaphor-stream-reconciliation:
       paper_count: 1
       papers:
-      - li_bapuji_talluri_singh_narayanan2025 (JSCM)
+      - li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM)
       gap_distribution:
         Incompleteness: 1
         Inadequacy: 0
@@ -1838,3 +1861,72 @@ paper_index:
   castellaneta_conti_kacperczyk2017: Incompleteness
   kim_lee2026: Incompleteness
   Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ: Inadequacy
+  chen_ganesan_liu2009: Inadequacy
+  kalaignanam_kushwaha_eilert2013: Inadequacy
+  thirumalai_sinha2011: Inadequacy
+  li_bapuji_talluri_singh_venkataraman_2026_pom: Inadequacy
+  li_bapuji_talluri_singh_narayanan_2026_jscm: Incompleteness
+
+# BEGIN MANAGED ASSET GOVERNANCE
+asset_governance:
+  schema_version: 1
+  default_parent_record:
+    role: reference_strategy
+    lifecycle: active
+    merged_into: null
+    legacy_ids: []
+    evidence_additions: []
+    evidence_status: EMERGING
+    paper_count: 0
+    verification_basis: inventory_migration
+  default_variant_record:
+    role: reference_exemplar
+    lifecycle: active
+    merged_into: null
+    legacy_ids: []
+    evidence_additions: []
+  snapshot:
+    total_parent_assets: 94
+    total_variant_assets: 345
+    inventory_sha256: 05ee7d332a64a2a4fd1023fac8d1a6ac3205b1af7f031f3295c1ee0633d774c7
+    last_validated: '2026-08-06'
+  active_variant_cap_per_parent: 5
+  render_cap: 4
+  parent_overrides: {}
+  variant_overrides:
+    previews:findings-preview:vS:
+      role: reference_exemplar
+      lifecycle: merged
+      merged_into: previews:findings-preview:vM
+  representative_reference_menus:
+    tensions:01-despite-progress-unaddressed:
+    - tensions:01-despite-progress-unaddressed:vA
+    - tensions:01-despite-progress-unaddressed:vB
+    - tensions:01-despite-progress-unaddressed:vC
+    - tensions:01-despite-progress-unaddressed:vD
+    - tensions:01-despite-progress-unaddressed:vG
+    previews:mechanism-preview:
+    - previews:mechanism-preview:vA
+    - previews:mechanism-preview:vB
+    - previews:mechanism-preview:vC
+    - previews:mechanism-preview:vI
+    - previews:mechanism-preview:vK
+    literature-turns:01-progressive-coherence:
+    - literature-turns:01-progressive-coherence:vA
+    - literature-turns:01-progressive-coherence:vB
+    - literature-turns:01-progressive-coherence:vC
+    - literature-turns:01-progressive-coherence:vD
+    - literature-turns:01-progressive-coherence:vE
+    previews:findings-preview:
+    - previews:findings-preview:vD
+    - previews:findings-preview:vE
+    - previews:findings-preview:vF
+    - previews:findings-preview:vG
+    - previews:findings-preview:vQ
+    hooks:03-data-shock:
+    - hooks:03-data-shock:vA
+    - hooks:03-data-shock:vB
+    - hooks:03-data-shock:vC
+    - hooks:03-data-shock:vG
+    - hooks:03-data-shock:vK
+# END MANAGED ASSET GOVERNANCE

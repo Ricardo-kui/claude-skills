@@ -32,7 +32,10 @@ source_papers:
   - ilicic_brennan2026 (JM, 2026): "outcome-valence asymmetry: beneficial political-consumption outcomes studied, harmful/addictive outcomes underexamined"
   - castellaneta_conti_kacperczyk2017 (SMJ, 2017): "Disclosure-requiring IPR progress may not transfer to non-disclosure forms; firm-value link missing"
   - kim_lee2026 (SMJ, 2026): "Temp/hypothetical SRO-recruitment evidence incomplete for full-time high-stakes + post-hiring durability"
-updated: 2026-08-05
+  - chen_ganesan_liu2009 (JM, 2009): "双流交叉定位: marketing(consumer evals)×finance(firm value, mixed) → 'More important... not considered the role of recall strategies'; 'paucity is glaring because' 严重性显式论证"
+  - kalaignanam_kushwaha_eilert2013 (JM, 2013): "怀疑实践证据+双重利益相关者缺口型: program goal vs 'beyond minimal response' → 正反证据并置 → WSJ 1983 GM 陈旧怀疑案例 → 消费者+监管者双 stakes → managerial and policy 双背书"
+  - li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM, 2026): "horizontal spillover documented → vertical spillover + mechanisms under-researched; horizontal vs vertical complexity contrast"
+updated: 2026-08-06
 created: 2026-05-18
 source: Extracted from MVP30 narrative_analysis files + mannor2016 + darby2025 distill + grewal2025 + paruchuri_andrus_sullivan2026 + castellaneta_conti_kacperczyk2017 + kim_lee2026
 ---
@@ -788,6 +791,98 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 ---
 
+### 变体 AE：双流文献交叉定位型（chen2009 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**功能节拍**: 流 A 承认贡献 → 流 A 缺口（Y2 未研究）→ 缺口严重性显式论证 → 流 B 混合结果枚举 → 流 B 局限 → "More important" 升级到真缺口（X 未被考虑）
+
+**模板**:
+> "Only a limited number of [field A] studies have investigated the impact of [phenomenon] by focusing on [outcome Y1] ([citations]). These studies provide valuable insights into [what stream A established]. [Limitation of stream A: method/setting], and the broader issue of how [phenomenon] might influence [outcome Y2] has not been studied. This paucity in research is glaring because [stakes justification 1]. Moreover, [stakes justification 2]. Several studies in [field B] have examined the impact of [phenomenon] on [Y2] for several [contexts], but the results are mixed ([citations]). For example, [Author 1] find [result 1]. [Author 2] reexamine and find [contradicting result 2]. [Author 3] find [result 3]. Most of these studies focus on [narrow contexts]. [Scope limitation with exception noted]. More important, when examining the impact of [phenomenon], the extant studies have not considered the role of [focal factor X]."
+
+**来源**: chen_ganesan_liu2009 (JM), P4-P5
+
+**原文锚定**:
+> "Only a limited number of marketing studies have investigated the impact of product-harm crisis management strategies by focusing on consumer evaluations of products and services... These studies provide valuable insights into how consumers perceive and respond to product-recall strategies. Most of these studies were conducted in a laboratory setting, and the broader issue of how different crisis management strategies might influence firms' financial value has not been studied. This paucity in research is glaring because there has been increased attention on understanding the linkage between firm strategies and stock market performance."
+>
+> "Several studies in economics and finance have examined the impact of product recalls on firm value for several product categories, but the results are mixed... Jarrell and Peltzman (1985) find that automobile and drug recalls are associated with negative abnormal stock returns. Hoffer, Pruitt, and Reilly (1988) reexamine the same data and find that recall announcements do not significantly affect firm value after controlling for potential confounding events... More important, when examining the impact of product recalls, the extant studies have not considered the role of alternative product-recall strategies."
+
+**关键特征**:
+- **双流交叉定位**：流 A（marketing）覆盖 consumer evaluations 不覆盖 firm value；流 B（econ/finance）覆盖 firm value 但结果混合且忽略策略异质性——缺口定位于两流**交叉处**（recall strategies × firm value），而非任何单一流内部
+- **"This paucity in research is glaring because"**：缺口严重性显式论证，不给审稿人留"so what"空间——双理由叠加（strategy-performance linkage 受关注 + consumer strategies 终极目标是 shareholder value）
+- **"More important, ... have not considered the role of [X]"**：升级标记词——流 B 的混合结果只是**铺垫**，真缺口是"没有考虑策略异质性"。混合发现本身不是贡献，X 才是
+- **混合结果三连枚举**（negative → null after controls → significant losses）各一句话，展示文献掌握但不恋战——与变体 S（jiang2026）的区别：变体 S 用 mixed findings 直接论证 moderator 必要性；本变体的 mixed findings 是流 B 的**缺陷证据**，主 pivot 在 "More important" 之后
+- **与变体 E（vadakkepatt2022 跨学科缺口）的区别**：变体 E 是 A 领域理论暗示 → B 领域无实证（单向跨学科）；本变体是两个实证流各自残缺、缺口在交叉处（双向定位）
+
+**适用**: 研究主题位于两个文献流的交叉（如 营销×金融、OB×战略）；两流各自有可陈述的覆盖范围与具体局限；真缺口是"被忽略的关键因素/异质性"而非单纯"没人做过 Y2"；Incompleteness × Mechanism 组合
+
+**禁忌**:
+- 两流必须真实独立且各引 2+ 篇——若其中一流实际是另一流的子集，退化为变体 A
+- "More important" 之后必须是论文真正检验的因素——修辞性升级后必须在 Theory/Results 兑现，否则 Discussion 会被攻击
+- 流 A 的局限要具体（"laboratory setting"），不可泛泛 "limited"
+- 严重性论证（"glaring because"）需双重理由支撑，单理由显得勉强
+
+---
+
+### 变体 AF：怀疑实践证据 + 双重利益相关者缺口型（kalaignanam2013 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**功能节拍**: 现象目标陈述（program goal）→ "little is known about whether firms respond beyond X" → 正反证据并置（some evidence vs skeptical reports）→ 陈旧怀疑案例引述（时间距离作张力资源）→ 利益相关者 1 stakes（消费者）→ 利益相关者 2 stakes（监管者，no systematic evidence）→ "valuable from managerial and public policy perspective" 双重背书
+
+**模板**:
+> "[Phenomenon programs] reflect [underlying problem] ([citations]). Although the goal of [program] is to [stated goal], little is known about whether [actors] respond to [phenomenon] beyond [minimal mandated response]. While there is some evidence to suggest that [positive response] ([citations]), there are also reports indicating that [actors] are skeptical about the merits of the [program]. For example, as a [news source] from more than [N] decades ago notes, '[skeptical practitioner quote]' ([news citation, year], p. X). Understanding whether [actors improve outcome] after [phenomenon] is critical because [stakeholder 1 mechanism: consumers' uncertainty → purchase decisions] ([citations]). Similarly, although [stakeholder 2: regulatory agents] contend that [program benefit], there is no systematic evidence to support this contention. An understanding of whether and how [phenomenon] influence [outcome] is thus valuable from a managerial and public policy perspective."
+
+**来源**: kalaignanam_kushwaha_eilert2013 (JM), P2
+
+**原文锚定**:
+> "Although the goal of product recall programs is to solve potential safety problems, little is known about whether firms respond to product recalls beyond withdrawing and repairing the defective products. While there is some evidence to suggest that firms seek to improve reliability following external failures (Chao, Iravani, and Savaskan 2009; Ward's Auto World 1997), there are also reports indicating that firms are skeptical about the merits of the product recall program. For example, as a business report from more than two decades ago notes, 'General Motors has been trying to persuade the Federal Government that it isn't dangerous if the rear wheel and axle fall off, in an effort to avoid a recall' (The Wall Street Journal 1983, p. 2). Understanding whether firms improve product reliability after product recalls is critical because consumers' uncertainty about the quality of the firm's offerings tends to increase in the wake of product recalls (Zhao, Zhao, and Helsen 2011) and in turn affects purchase decisions (J.D. Power and Associates 2004). Similarly, although regulatory agents contend that product recalls are beneficial because they reduce the harm caused by hazardous products, there is no systematic evidence to support this contention. An understanding of whether and how product recalls influence learning outcomes for firms in the future is thus valuable from a managerial and public policy perspective."
+
+**关键特征**:
+- **正反证据并置制造张力**："While there is some evidence... there are also reports indicating skepticism"——不直接断言文献缺口，而是先展示**证据与态度的背离**（有些证据说企业会改进，但企业自己怀疑），张力来自这种背离
+- **陈旧案例引述作张力资源**："from more than two decades ago notes" + WSJ 1983 GM 引述——用一条 26 年前的怀疑证据暗示"问题长期存在且未解决"。时间距离本身论证缺口的持久性，比 "few studies" 更有历史纵深感
+- **利益相关者双重 stakes**：消费者侧（uncertainty → purchase decisions）+ 监管者侧（contend benefit but no systematic evidence）——缺口对两类受众都成立，任一都不充分，合并才构成"glaring"
+- **"beyond withdrawing and repairing"**：缺口不是"没人研究召回"，而是"没人研究超出法定最低响应的部分"——缺口定位在行为光谱的高阶区，这是 Inadequacy（现有研究不充分）而非 Incompleteness（完全空白）
+- **"managerial and public policy perspective" 双重背书**：JM 风格标记——缺口重要性同时锚定实践界与政策界，不只学术文献
+
+**与变体 AE（chen2009）的区别**: AE 是两个实证文献流的交叉定位（营销流 × 金融流），缺口靠"More important, have not considered X"升级；本变体是**实践怀疑证据 + 双重利益相关者需求**驱动，缺口靠"陈旧案例的时间深度 + 两类受众都不满足"叠加。AE 的引擎是文献结构，本变体的引擎是现象-实践-政策的三角张力。
+
+**适用**: 现象有明确的法定/最低响应（mandated response），研究问题是"行为是否超出最低响应"；存在可引用的实践界怀疑证据（越陈旧越好）；缺口对两类以上利益相关者（消费者/监管者/投资者）都成立；Inadequacy × Mechanism 组合；JM/JMR/MSOM 等政策相关期刊首选
+
+**禁忌**:
+- 陈旧案例必须真实且引述完整（"p. 2" 级精度）——模糊转述会破坏历史纵深感
+- 正反证据并置不可省略正面证据——只说怀疑会让张力变成单面控诉，且显得 straw man
+- 双重利益相关者的 stakes 必须有独立引用支撑（消费者侧 Zhao 2011，监管者侧无引用即断言——此为本变体允许的例外，因为监管者 contention 本身是"无证据"）
+- 不要在 Introduction 就给出"managerial and policy implications"的具体内容——那是 Discussion 的事，这里只需标记双受众相关性
+
+---
+
+### 变体 AG：水平溢出已建 + 垂直溢出空白型（li_narayanan_2026_jscm 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "Prior research has documented spillover effects of [events] across [industry A] and [industry B] ([citations]). However, these and other studies (e.g., [citations]) have only examined [horizontal direction label] (i.e., [losses experienced by competitors / same-category actors]), leaving [vertical direction label] of [events] and the mechanisms through which they manifest largely under-researched. Examining [vertical direction] has both theoretical and practical significance. Theoretically, [vertical direction] are not only distinct from [horizontal direction] but also more complex. [Horizontal mechanism summary sentence] ([citation]). In contrast, [vertical mechanism summary sentence] ([citations]). Importantly, the factors that amplify or mitigate risks in [interdependent network context] are likely to differ from those that shape risks emerging from [shared membership context]. Practically, [supply-side statistic or trend showing upstream role in events] ([citations])."
+
+**来源**: li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM), §1 P2–P3（理论/实践 stakes）；47% 供应链归因统计见 §2.2，可作 practice 段可选填充，非 Intro 原文
+
+**原文锚定**（压缩）:
+> "Prior research has documented spillover effects of product recalls... However... only examined horizontal spillovers... leaving vertical spillovers... under-researched. Examining vertical spillover effects has both theoretical and practical significance... horizontal through shared industry categorization... vertical disrupt specific supplier-buyer ties... [Intro P3 practice 仅泛指 supply chain factors，无 47%；47% 在 §2.2:] approximately 47% of recalls are associated with component suppliers..."
+
+**关键特征**:
+- **方向性缺口（horizontal vs vertical）**：不是"没人研究 spillover"，而是**研究了错误方向**——比 generic incompleteness 更精确
+- **理论+实践双 stakes 段**：Theory 段对比 categorization vs interdependency；Practice 段用供应链归因统计（47%）把缺口接到 collective action 动机
+- **常接 hooks/03-G**：Hook 实例化 vertical spillover 定义，本变体承担文献扫描与方向对比
+
+**适用**: 已有 horizontal/competitor spillover 文献、但 vertical/dyad propagation 空白；危机/召回/ESG 传播；JSCM/JOM/MSOM/SMJ
+
+**禁忌**:
+- 必须引用至少 2 篇 horizontal spillover 代表作——不能无文献断言 "only horizontal"
+- horizontal vs vertical 的机制对比须准确——不能把 vertical 说成 "same as horizontal but across tiers"
+- 47% 类供应链统计是 **practice stakes**，不是主效应证据——不要在此段报告 CAR
+
+---
+
 ## 组装规则
 
 ### 反模式提醒
@@ -825,7 +920,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 ## 风格画像
 
 > 以下风格特征是从使用本模板的多篇顶刊论文中聚合提取的。不是每篇论文都必须遵守，但偏离时应有明确理由。
-> 最后更新: 2026-08-05 | 聚合论文数: 16
+> 最后更新: 2026-08-06 | 聚合论文数: 18
 
 ### 语气光谱
 - **主语气**: cautious — 证据: "remains poorly understood" (wu2025), "has gone largely unaddressed" (pollock2015), "underdeveloped, and fundamental pieces are missing" (ahmadi2017)
@@ -843,6 +938,8 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 - [gamache_etal2020]: "三层递进 Incompleteness: general→specific gap→why 层面根本问题" — Stakes 嵌入 Tension ("This omission is critical, as...")
 - [cui_yang_vertinsky_smj]: "First... remains poorly understood / Second... while overlooking... / Third... while largely overlooking" — 三重维度并列缺口，每个维度用不同 Incompleteness 标志性语言
 - [kim_lee2026]: "important but incomplete evidence" + strategic-theory stakes + underexplored (setting + stage) — 低 stakes 证据库外推缺口
+- [chen_ganesan_liu2009]: "This paucity in research is glaring because..." + "More important, ... have not considered the role of [X]" — 双流交叉定位：严重性显式论证 + 升级标记把真缺口（策略异质性）从混合结果铺垫中分离
+- [kalaignanam_kushwaha_eilert2013]: "as a business report from more than two decades ago notes, 'General Motors has been trying to persuade...'" — 陈旧怀疑案例引述：时间距离本身作张力资源，暗示问题长期未解决；正反证据并置（some evidence vs skeptical reports）制造背离张力
 
 ### 刻意回避
 - [ahmadi2017]: avoids independent Tension paragraph — Tension 与 Literature Turn 共段，适合 JMS 压缩风格
@@ -855,4 +952,5 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 ### 模块比重参考
 - Tension 通常占 Introduction 的 15-25%；压缩版（ahmadi2017）仅占~8%
-- *来源: eilert2017 (JM), gamache_etal2020 (SMJ), ahmadi2017 (JMS), kim_lee2026 (SMJ)*
+- chen2009 双流版：两段各 ~120 词（流 A 缺口段 + 流 B 缺口段），合计 ~20%——双流结构允许单流段落更短，因为交叉定位本身承担整合功能
+- *来源: eilert2017 (JM), gamache_etal2020 (SMJ), ahmadi2017 (JMS), kim_lee2026 (SMJ), chen_ganesan_liu2009 (JM), kalaignanam_kushwaha_eilert2013 (JM)*

@@ -15,8 +15,10 @@ source_papers:
   - vadakkepatt2022 (JM, 2022): Compact four-part preview (main effect + mediation + moderation + mechanism)
   - castellaneta_conti_kacperczyk2017 (SMJ, 2017): Contingent sign-flipping findings + double-edged sword closing
   - kim_lee2026 (SMJ, 2026): Pipeline advantages + revealed-preference WTP band + stage-attenuation null + early-stage subgroup
+  - thirumalai_sinha2011 (MS, 2011): Contrary-to-expectations main-effect null preview + 'at an aggregate level' scope qualifier + 'However' heterogeneity rescue
+  - li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM, 2026): vertical spillover confirmed + convergent moderators (strengthen ties / weaken ownership & analyst overlap)
 created: 2026-05-18
-updated: 2026-08-05
+updated: 2026-08-06
 source: Extracted from MVP30 narrative_analysis files + kim_lee2026
 ---
 
@@ -237,6 +239,73 @@ P5-P6 的下半段功能：向读者预告实证结果。这是 Introduction 中
 **适用**: Incompleteness × Boundary；全管道设计；有 revealed-preference 或补偿权衡估计；SMJ。
 
 **禁忌**: Intro 不报告回归系数/p 值；WTP 区间须有 Results 兑现；若无异质性或无 post-hiring 检验，删去对应节拍；勿把 null 写成"与先验矛盾的颠覆"（除非另有 Incommensurability 合同）。
+
+---
+
+### 变体 Q：Contrary-to-expectations 主效应 null 预告型（thirumalai2011 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**功能节拍**: 数据/方法一句 → "Contrary to our expectations" 显式反预期标记 → 主效应 null（at an aggregate level）→ "However" 转折到异质性发现（企业特征调节效应存在）→ 前因发现 + 机制标签（learning）
+
+**模板**:
+> "The econometric analyses in the study are based on data from [sample] over [time period]. Contrary to our expectations, the findings of the study indicate that at an aggregate level, [expected main effect] are not significant, i.e., at the aggregate level, [theoretical expectation] does not hold. However, we find systematic differences in the magnitude of [the effect] across [heterogeneous actors]. We find that [moderator 1], [moderator 2], [moderator 3], and [moderator 4] affect the magnitude of [the consequences]. In our analyses exploring [the antecedent question], we find that [antecedent finding 1]. Also, we find that [antecedent finding 2], indicating the presence of [mechanism label]."
+
+**来源**: thirumalai_sinha2011 (MS), P7
+
+**原文锚定**:
+> "The econometric analyses in the study are based on data from manufacturers in the medical device industry over a four-year period from 2002 to 2005. Contrary to our expectations, the findings of the study indicate that at an aggregate level, the market penalties for medical device recalls are not significant, i.e., at the aggregate level, the costs of poor quality are not severe. However, we find systematic differences in the magnitude of financial consequences across firms. We find that the product scope, sales, growth prospects, and the capital structure of a firm affect the magnitude of the financial consequences of recalls. In our analyses exploring the sources of device recalls, we find that firms with a research and development (R&D) focus, developing broader product portfolios, have a higher likelihood of device recalls. Also, we find that firms with prior recall experience have a lower likelihood of future recalls, indicating the presence of learning."
+
+**关键特征**:
+- **null 即贡献，不是歉语**："Contrary to our expectations" 显式承认假设方向未被支持，但紧跟 "i.e., at the aggregate level, the costs of poor quality are not severe"——把统计 null 转译为**实质性发现**（市场威慑失灵），为 Discussion 的政策含义（监管不能依赖市场纪律）埋下伏笔
+- **"at an aggregate level" 双重限定**：null 被限定在 aggregate 层面——为 "However" 后的异质性发现预留逻辑空间（aggregate 无效应 ≠ 对所有企业无效应）。scope 限定词让 null 与 heterogeneity 并存而不矛盾
+- **"However" 转折承担救援功能**：主效应 null 之后立刻转向"但效应幅度随企业特征系统变化"——Preview 的能量从"主效应显著"转移到"效应结构被发现"
+- **前因发现附机制标签**："indicating the presence of learning"——前因发现不只报方向，还赋予机制命名（learning），为 Theory 的 learning 文献定位背书
+
+**与变体 P（kim_lee2026）的区别**: P 的 null 是**管道末端阶段衰减**（录用后无差异），主发现在先、null 在后，null 是边界收束；本变体的 null 是**主效应本身**（aggregate 惩罚不显著），null 在先、异质性救援在后，null 的理论载荷（市场威慑失灵）即贡献。判据：null 出现在主效应位置→本变体；null 出现在管道后段/边界位置→变体 P
+
+**与 hooks/20-counterintuitive-finding 的边界**: hook 20 是 P1 Hook，挑战**文献**的 dominant valence（"Most research finds X→Y; we find X→not-Y under Z"）；本变体是 P7 Findings Preview，报告**自身结果 vs 自身假设**的背离。判据：反预期对象是文献共识→hook 20；反预期对象是作者自己的假设→本变体
+
+**适用**: 主效应假设（方向性）未被支持、但异质性/边界条件分析有系统发现的实证论文；null 结果有实质性理论或政策含义（市场威慑失灵、监管无效等）可承载贡献；事件研究/横截面设计；Inadequacy × Boundary 组合；MS/MSOM/POM/JOM
+
+**禁忌**:
+- "Contrary to our expectations" 必须与 Abstract 一致——本文 Abstract 同样使用此句；Introduction 与 Abstract 的 null 表述不可一个坦率一个粉饰
+- null 后必须紧跟实质性转译（"i.e., ..."）——只报告 "not significant" 而不说其实质含义，是把解释负担推给读者
+- 异质性救援必须已在 Theory 中有对应假设（本文 H2-H5）——不得用探索性异质性事后包装 null
+- 若主效应显著但**方向相反**，用变体 L（双 DV 相反方向）或 hooks/20；本变体专用于"无显著效应"的 null
+- Intro 预告 null 即承诺 Discussion 解释 null——本文 Discussion 用三重解释兑现（市场学习预期 Bromiley & Marcus 贝叶斯模型 + FDA 监管庇护含 Reigel v. Medtronic 责任豁免 + 供应链合同关系）；无此兑现计划的论文不要用本变体
+
+---
+
+### 变体 S：主效应确认 + 收敛调节方向型（li_narayanan_2026_jscm 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**功能节拍**: 主效应确认（vertical spillover）→ 调节方向与 Theory 一致（一个加强、两个削弱）
+
+**模板**:
+> "Confirming the [phenomenon label], the findings indicate that [buyer event] results in a significant [outcome] for [third-party actors]. Such effect is stronger when [actor pair] [share more of moderator A], but weaker when there is a high level of [moderator B] and [moderator C] between [actors]."
+
+**来源**: li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM), Abstract（本文 Intro §1 无独立 Findings Preview 段，预览句在 Abstract）
+
+**原文锚定**:
+> "Confirming the vertical spillover effect, the findings indicate that a buyer's automobile recalls result in a significant loss of firm value for its suppliers. Such effect is stronger when the supplier shares more common business ties with the recalling automakers but weaker when there is a high level of common institutional ownership and common analyst coverage."
+
+**关键特征**:
+- **"Confirming the [label]" 开头**：与 Abstract 共用同一现象标签——本文 Intro 未重复该预览句；若写 Intro Preview 可自 Abstract 迁移
+- **三个调节同向收敛预告**：一个 strengthen + 两个 weaken，与 Theory 双机制矩阵（Table 1）方向一致，不在 Intro 展开 pipes/prisms
+- **不预告系数或 post hoc 机制检验**：机制确认（analyst downgrade、negative media）留给 Results R8，Intro 只承诺 H1–H4 方向
+
+**与近邻区分**:
+- vs M（darby 主效应+调节）：M 常含 agency 机制句；本变体更紧凑，调节枚举即全部 Preview
+- vs Q（aggregate null + heterogeneity）：Q 的主效应为 null；本变体主效应显著且方向符合 H1
+
+**适用**: 事件研究主效应 + 2–3 个 extended-network 调节；pipes/prisms 双机制已在 Theory 建立；JSCM/JOM/MSOM 供应链溢出研究
+
+**禁忌**:
+- 三个调节方向必须与 Table 1 / 正式假设一致——Intro 不能预告与 H2–H4 相反的方向
+- 若主效应为 null 或 contrary，改用 Q 或 R6，不用本变体
+- 不要在 Preview 预告 post hoc 机制表（Table A3/A4）——那是 Results 增值，非 Intro 合同
 
 ---
 

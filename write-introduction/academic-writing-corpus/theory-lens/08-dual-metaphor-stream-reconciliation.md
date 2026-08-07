@@ -7,9 +7,9 @@ cross_paper: EMERGING
 generativity: GENERATIVE
 exclusivity: HIGH
 source_papers:
-  - li_bapuji_talluri_singh_narayanan2025 (JSCM, 2025): "Social network theory — pipes + prisms reconciling categorization (impression) and supply chain propagation (cash flow) streams"
+  - li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM, 2026): "Social network theory — pipes + prisms reconciling categorization (impression) and supply chain propagation (cash flow) streams"
 created: 2026-07-22
-source: Distilled by distill-introduction-exemplar from Li, Bapuji, Talluri, Singh & Narayanan (2025), JSCM
+source: Distilled by distill-introduction-exemplar from Li, Bapuji, Talluri, Singh & Narayanan (2026), JSCM
 ---
 
 # 08-dual-metaphor-stream-reconciliation — 单理论双隐喻调和双文献流 Theory Lens
@@ -33,7 +33,7 @@ source: Distilled by distill-introduction-exemplar from Li, Bapuji, Talluri, Sin
 ## 验证状态
 
 ### 跨论文复现
-- **EMERGING** (1 paper): li_bapuji_talluri_singh_narayanan2025 (JSCM)
+- **EMERGING** (1 paper): li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM)
 
 ### 生成力
 - **GENERATIVE**: 任何"两条文献流各解释一半 + 存在含双隐喻的理论"的研究都可套用。supply chain / network / institutional / stakeholder 领域尤其多见此类"半解释"割裂
@@ -45,12 +45,12 @@ source: Distilled by distill-introduction-exemplar from Li, Bapuji, Talluri, Sin
 
 ## 句法模板
 
-### 变体 A：双隐喻流映射型（li2025 型）
+### 变体 A：双隐喻流映射型（li_narayanan_2026_jscm 型）
 
 **模板**:
 > "[Two-sentence gap recap: stream A captures sub-effect 1; stream B captures sub-effect 2; each explains only part of the phenomenon.] Drawing on [single theory] ([citation]), we [argue/suggest] that [relationship tie / connective construct] serve as '[metaphor 1]' and '[metaphor 2]' that transmit [sub-effect 1] and [sub-effect 2], respectively, of [phenomenon] from [source actor] to [recipient actor]. Specifically, as [metaphor 1], [connective construct] [mechanism logic mapping onto stream A], resulting in [sub-effect 1]. As [metaphor 2], [connective construct] [mechanism logic mapping onto stream B], leading to [sub-effect 2] through '[label for stream-B process]'."
 
-**来源**: li_bapuji_talluri_singh_narayanan2025 (JSCM), P4 (lens) + P6 (contribution 1 reconciliation)
+**来源**: li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM), P4 (lens) + P6 (contribution 1 reconciliation)
 
 **原文锚定**:
 > "This research draws on social network theory (Podolny 2001) to suggest that relationship ties between a recalling firm and its suppliers serve as 'pipes' and 'prisms' that transmit the cash flow effect and impression effect, respectively, of product recalls from the recalling firm to its suppliers. Specifically, as pipes, buyer–supplier relationships transmit operational disruptions caused by product recalls, resulting in a reduction in the future cash flow of the supplier firm (i.e., cash flow effect). As prisms, buyer–supplier relationships shape categorization such that the buyer and suppliers are grouped together, leading to negative impressions spreading from the recalling firm to suppliers through 'guilt by association' (i.e., impression effect)."
@@ -133,6 +133,6 @@ source: Distilled by distill-introduction-exemplar from Li, Bapuji, Talluri, Sin
 
 ## 诚实边界
 
-- **EMERGING 状态**: 本模板当前仅 1 篇范文（li2025 JSCM）。pipes/prisms 这一具体隐喻对来自 Podolny (2001)，迁移到其他理论时必须确认目标理论内部确有可分离的双隐喻——不可把单机制硬拆成两半。
+- **EMERGING 状态**: 本模板当前仅 1 篇范文（li_bapuji_talluri_singh_narayanan_2026_jscm）。pipes/prisms 这一具体隐喻对来自 Podolny (2001)，迁移到其他理论时必须确认目标理论内部确有可分离的双隐喻——不可把单机制硬拆成两半。
 - **不可把单理论双隐喻降格为修辞**: 两个隐喻必须各自承担可检验的子效应。若后文只检验合并后的总效应，本 lens 的"双隐喻"承诺即落空——应改用标准单机制 Theory Lens。
 - **"each explains only part of the phenomenon" 必须为真**: 若两条文献流其实并不割裂（只是作者没读到整合文献），强行套用本模板会被审稿人指出"伪割裂"。务必先做 literature-turn 确认割裂真实存在。

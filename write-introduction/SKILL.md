@@ -109,7 +109,9 @@ Four Moves 不构成新写作模式，也不写入 `paper-state.yaml`。缺失 m
 
 > **路由基于主 Gap；次 gap（若有）不改变主张力结构/能量**，而是在 Phase 3 渲染 Tension 时叠加呈现。Conversation 策略是独立轴。单 gap 完全合法。
 
-读取 `academic-writing-corpus/_evidence_registry.yaml`，过滤掉 `gap_distribution` 中用户 Gap 类型计数为 0 的模板。
+运行 `python scripts/introduction_asset_catalog.py list-parents --module <module>`，只从 active `generative_strategy` 中选择父级说服策略；需要审计 EMERGING/未登记策略时显式加 `--include-reference`。证据状态、生命周期和菜单资格只由 `_evidence_registry.yaml -> asset_governance` 与 catalog 解析，routing table 不复制这些状态。registry/catalog 不可解析时停止并报告治理错误，不得静默回退到静态推荐。
+
+若 catalog 标记 `health=CAUTION`，在输出中简短呈现其累计的 `REJECT` 原因，并建议验证或替代策略；它不自动排除该资产，也不改变 evidence status、路由或生成资格。没有 `CAUTION` 时不展示健康信息。
 
 **能量阶梯**: Hook 能量级 ≤ Gap 能量级 ≤ Stakes 能量级。Incompleteness 用低-中能量开场，Incommensurability 用中-高能量。检查输出时确保无"高开低走"（高能量 Hook 后接弱 Tension）或叙事阶段倒退。
 
@@ -125,7 +127,7 @@ Four Moves 不构成新写作模式，也不写入 `paper-state.yaml`。缺失 m
 
 ## Phase 3: 渲染
 
-对选中的每个模块，读取对应 corpus 获取句法变体；其中 P2/P7-P8 等段号只记录范文原位，不覆盖本技能的动态功能序列：
+对选中的每个模块，先确定 L0 功能合同与 L1 父级说服策略，再用 catalog 检索 L2/L3。精确变体默认均为 `reference_exemplar`：高密度父策略只显示 registry 中最多 5 个代表性 reference，每次最多渲染 4 个精确资产，且必须显式使用 `--allow-reference`；它们提供可迁移类比，不是整段模板。用“核心说服动作 × 证据载体 × 能量/语气 × 衔接方式”重组文本，不复制单篇论文的领域填充。需要查看全部历史实例时才使用 `list-variants --include-all`。其中 P2/P7-P8 等段号只记录范文原位，不覆盖本技能的动态功能序列：
 - Hook: `hooks/[canonical_id].md`
 
   **Hook 渲染强制检查**：
@@ -432,14 +434,14 @@ introduction:
 
 # Evidence-driven evolution
 
-范文蒸馏通过两条通道演化本 skill：reference-level 模式更新 `academic-writing-corpus/` 与 `_evidence_registry.yaml`；规则层反例或缺陷更新 `academic-writing-corpus/_skill_design_feedback.yaml`。执行演化任务时读取 `../distill-introduction-exemplar/references/phase-4-validation-writeback.md` 与其 hardened output schema。单篇论文不得建立普遍规则；只有 VERIFIED/ROBUST，或针对绝对规则的 full-text FALSIFIER，且通过授权、风险、positive regression、preservation regression 与修改后规则片段核验，才可做有边界的 conditionalize、decouple、add branch 或 validator correction。schema、stage gate 与高风险变更始终人工审核。
+范文蒸馏通过两条通道演化本 skill：reference-level 模式进入 `academic-writing-corpus/` 与 `_evidence_registry.yaml -> asset_governance`；规则层反例或缺陷进入 `_skill_design_feedback.yaml`。执行演化任务时读取 `../distill-introduction-exemplar/references/phase-4-validation-writeback.md`。将治理计划先交给 `python scripts/introduction_corpus_governance.py apply-plan <plan.yaml> --dry-run`，确认后再正式执行；最后运行 governance `validate` 与 catalog `audit`。默认使用 REUSE/EXTEND_SOURCE/ADD_REFERENCE；不能说明“合并会损失何种可迁移生成能力”时不得 PROPOSE_VARIANT。单篇资产只作 reference，不得进入默认菜单；PROMOTE、MERGE、DEPRECATE 保留旧 ID 和来源。story schema、stage gate、routing change 与高风险变更始终只生成显式审核包。
 
 # Constraints
 
 - **不诊断 Gap 类型**（除非用户不确定）。用户已知则直接路由。
 - **直接输出可适配骨架**。用户替换括号里术语即可，不需要拿着"组装方案"再去别处找模板。
-- **两步读取**: 选择阶段读 `_routing_tables.yaml` + `_evidence_registry.yaml`；渲染阶段读对应 corpus 文件。
-- **注册表不存在时回退**到 `_routing_tables.yaml` 的静态推荐，不中断输出。
+- **分层读取**: 选择阶段读 `_routing_tables.yaml` 并调用 catalog；渲染阶段只读取选定父策略与最多 4 个精确 reference。不得预载完整 corpus。
+- **治理失败即显式失败**: registry 缺失、snapshot 漂移、重复 ID、悬空 merge、失效 routing reference 或候选超限均停止并报告；不得静默回退。
 - **如用户提及目标期刊**：按期刊适配表给出针对性建议。期刊差异优先于通用规则。
 - **默认执行 Four-Move 对齐**：复用现有 Gap、Conversation、storyline 与
   contribution 字段；不得新增平行 taxonomy 或 GBL 专属 paper-state 字段。
