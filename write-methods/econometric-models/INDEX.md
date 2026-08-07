@@ -4,7 +4,7 @@ description: Methods 填空骨架变体库，按设计类型组织。由 distill
 organization: by_design_type
 design_types_count: 24
 created: 2026-05-18
-updated: 2026-08-05
+updated: 2026-08-06
 ---
 
 # Methods Econometric Models Corpus
@@ -17,6 +17,11 @@ updated: 2026-08-05
 
 另：`micro-templates/` 子目录为 18 类句法级微模板（槽位映射与使用协议见其 `INDEX.md`），由 `write-methods` 在表达润色时按需选读。
 
+> **当前规范（2026-08-06）**：正文文件是唯一内容来源；从 `write-methods/` 运行
+> `python scripts/methods_variant_catalog.py audit` 实时计算数量与菜单角色。当前共 **192** 个可解析资产，
+> 分布于 23 个已填充设计类型：9 个 registry 授权的默认算子、183 个 reference exemplars。
+> 下方按日期排列的“总变体数”只是在当时的历史快照，不得用于当前路由。
+
 ## 设计类型索引
 
 | 文件 | 设计类型 | 变体数 | 最后更新 |
@@ -27,11 +32,11 @@ updated: 2026-08-05
 | [生存分析](生存分析.md) | 生存分析 | 22 | 2026-08-01 |
 | [SEM](SEM.md) | SEM | 4 | 2026-05-18 |
 | [实验](实验.md) | 实验 | 6 | 2026-08-03 |
-| [多研究](多研究.md) | 多研究 | 9 | 2026-08-02 |
-| [定性过程研究](定性过程研究.md) | 定性过程研究 | 6 | 2026-07-07 |
+| [多研究](多研究.md) | 多研究 | 9 | 2026-08-06 |
+| [定性过程研究](定性过程研究.md) | 定性过程研究 | 7 | 2026-08-06 |
 | [稀有结果](稀有结果.md) | 稀有结果 | 1 | 2026-08-05 |
 | [实证对象构建](实证对象构建.md) | 实证对象构建 | 5 | 2026-07-30 |
-| [事件历史+事件研究](事件历史+事件研究.md) | 事件历史+事件研究 | 11 | 2026-08-02 |
+| [事件历史+事件研究](事件历史+事件研究.md) | 事件历史+事件研究 | 12 | 2026-08-06 |
 | [同时方程](同时方程.md) | 同时方程 | 4 | 2026-07-30 |
 | [IV-2SLS](IV-2SLS.md) | IV-2SLS | 13 | 2026-08-05 |
 | [动态面板-GMM](动态面板-GMM.md) | 动态面板-GMM | 4 | 2026-07-30 |
@@ -42,7 +47,7 @@ updated: 2026-08-05
 | [堆叠扩散Logit](堆叠扩散Logit.md) | 堆叠扩散Logit | 0 | 2026-05-18 |
 | [多行为者设计](多行为者设计.md) | 多行为者设计 | 1 | 2026-07-08 |
 | [推断二元结果](推断二元结果.md) | 推断二元结果 | 1 | 2026-08-05 |
-| [两阶段模型](两阶段模型.md) | 两阶段模型 | 7 | 2026-08-05 |
+| [两阶段模型](两阶段模型.md) | 两阶段模型 | 8 | 2026-08-06 |
 | [VARX-PVAR](VARX-PVAR.md) | VARX-PVAR | 8 | 2026-07-15 |
 | [结构需求-state-space](结构需求-state-space.md) | 结构需求-state-space | 6 | 2026-08-05 |
 
@@ -50,10 +55,15 @@ updated: 2026-08-05
 
 1. 仅 `distill-methods-exemplar` Phase 4 验证通过的变体可写入
 2. 每个变体标注来源论文、验证状态、写入日期
-3. 不覆盖现有变体，仅追加
-4. 变体达到 3+ 时，考虑提升为 skill 主骨架
+3. 默认判决是复用既有变体或 `none`；只有合并会损失独立生成能力时才新增
+4. 未登记于 `_evidence_registry.yaml -> variant_evidence` 的资产一律为 `reference_exemplar`，不进入默认生成菜单
+5. 同构模式达到跨论文复现或通过显式用户专家审计后，才在 registry 中晋升为 `optional_operator` 或 `core_operator`
+6. 不覆盖或删除历史来源；合并时保留来源映射和旧 ID，避免引用失效
+7. 写入后从 `write-methods/` 运行 `python scripts/methods_variant_catalog.py audit`；数量、槽位或 ID 异常时不得结束 Phase 4
 
 ## 语料库质量状态
+
+> ✅ **2026-08-06 更新（Li team 2026 双论文蒸馏 + 治理升级）**: 新增 **两阶段模型** 变体8（M8 供应商选择修正 + 条件 Logit 双阶段；li_bapuji_talluri_singh_venkataraman_2026_pom）与 **事件历史+事件研究** 变体12（li_bapuji_talluri_singh_narayanan_2026_jscm），均为单篇 EMERGING；同步上线两阶段渐进检索治理（catalog list/render + 15 项测试），`variant_evidence` 为唯一晋升授权表，清除非法槽位 M14；registry 文献覆盖摘要补登两篇论文。
 
 > ✅ **2026-08-05 更新（Zorn–Shropshire–Martin–Combs–Ketchen 2017 SMJ）**: S&P 1500 lone-insider boards + 2SLS。新增：
 >   - **IV-2SLS** 变体12–13：industry leave-out 均值 IV（CEO 推动采纳内生性）+ 连续 DV 用 2SLS/FE、稀有二元放弃 FE 改聚类 Logit（IV-Probit 稳健性预告）

@@ -1,8 +1,68 @@
 meta:
-  last_updated: '2026-08-05'
-  total_design_types: 22
-  batches_processed: 17
-  source: corpus INDEX.md + product_recall_cross_validation + cutolo2024_jm_text_count + falchetti2022_smj_experiment + lashley_pollock2020_asq_qualitative_process + chung_low_rust_2022_jams_executive_confidence_myopia + ilicic_brennan_2026_jm_political_ideology_addictive_products + kim_lee_2026_putting_a_price_on_mission_smj + bamberger_homburg_wielgos_2021_jm_backfill + lee_wu_bednar_orsc_18968_distill + reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc_distill + moon_tuli_mukherjee_2023_jm + schumacher_keck_tang_2020_smj + kashmiri_nicol_arora_2017_jams + bendig_hensellek_schulte_2024_etp + lee_park_2024_smj + hoffmann_cheong_phan_zurbruegg2024_jm_redistill
+  last_updated: '2026-08-06'
+  schema_version: 2
+  canonical_promotion_source: variant_evidence
+  evidence_summary_semantics: literature_coverage_not_menu_routing
+  total_design_types: 24
+  filled_design_types: 23
+  total_variants: 192
+  empty_design_types:
+    - 堆叠扩散Logit
+  menu_roles:
+    core_operator: 6
+    optional_operator: 3
+    reference_exemplar: 183
+  batches_processed: 19
+  source: corpus INDEX.md + product_recall_cross_validation + cutolo2024_jm_text_count + falchetti2022_smj_experiment + lashley_pollock2020_asq_qualitative_process + chung_low_rust_2022_jams_executive_confidence_myopia + ilicic_brennan_2026_jm_political_ideology_addictive_products + kim_lee_2026_putting_a_price_on_mission_smj + bamberger_homburg_wielgos_2021_jm_backfill + lee_wu_bednar_orsc_18968_distill + reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc_distill + moon_tuli_mukherjee_2023_jm + schumacher_keck_tang_2020_smj + kashmiri_nicol_arora_2017_jams + bendig_hensellek_schulte_2024_etp + lee_park_2024_smj + hoffmann_cheong_phan_zurbruegg2024_jm_redistill + li_bapuji_talluri_singh_narayanan_2026_jscm_distill + li_bapuji_talluri_singh_venkataraman_2026_pom_distill
+
+# 唯一的默认菜单晋升授权表。未列出的变体无论 Markdown 状态如何，
+# 一律视为 reference_exemplar。单篇资产只有经显式专家审计才可晋升。
+variant_evidence:
+  "生存分析:v1":
+    role: core_operator
+    status: ROBUST
+    paper_count: 4
+    verification_basis: cross_paper_replication
+  "生存分析:v4":
+    role: core_operator
+    status: ROBUST
+    paper_count: 3
+    verification_basis: cross_paper_replication
+  "面板数据-OLS:v1":
+    role: core_operator
+    status: ROBUST
+    paper_count: 4
+    verification_basis: cross_paper_replication
+  "面板数据-OLS:v2":
+    role: core_operator
+    status: ROBUST
+    paper_count: 3
+    verification_basis: cross_paper_replication
+  "非线性模型:v13":
+    role: core_operator
+    status: VERIFIED
+    paper_count: 2
+    verification_basis: cross_estimator_verification
+  "非线性模型:v14":
+    role: core_operator
+    status: VERIFIED
+    paper_count: 1
+    verification_basis: user_expert_audit
+  "PSM匹配面板:v1":
+    role: optional_operator
+    status: VERIFIED
+    paper_count: 2
+    verification_basis: cross_paper_replication
+  "事件历史+事件研究:v1":
+    role: optional_operator
+    status: VERIFIED
+    paper_count: 2
+    verification_basis: cross_paper_replication
+  "定性过程研究:v7":
+    role: optional_operator
+    status: VERIFIED
+    paper_count: 2
+    verification_basis: dual_framework_source
 evidence:
   by_source_paper:
     lee_park_2024_smj:
@@ -274,7 +334,6 @@ evidence:
       - M7
       - M8
       - M10
-      - M14
       common_failures:
       - 未说明为何拒绝 Poisson / 未报告过度分散检验
       - 未预告系数将翻译为 predicted counts / IRRs
@@ -428,12 +487,13 @@ evidence:
         reject: 0
         common_revise_reasons: []
     事件历史+事件研究:
-      paper_count: 4
+      paper_count: 5
       papers:
       - zhou2017 (ASQ)
       - pontikes2012 (ASQ)
       - shi2021 (JMR)
       - reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science)
+      - li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM)
       status: VERIFIED
       slots_covered:
       - M2
@@ -530,7 +590,6 @@ evidence:
       - M6
       - M7
       - M10
-      - M14
       common_failures:
       - 文本测量缺少人工验证或替代测量交叉检验
       - 复合文本指标未做 component disaggregation
@@ -595,14 +654,50 @@ evidence:
         reject: 0
         common_revise_reasons: []
     两阶段模型:
-      paper_count: 4
+      paper_count: 5
       papers:
       - darby2023 (MSOM)
       - zhou2017 (ASQ)
       - chung_low_rust_2022_jams (JAMS)
       - moon_tuli_mukherjee_2023_jm (JM)
+      - li_bapuji_talluri_singh_venkataraman_2026_pom (POM)
       status: VERIFIED
       slots_covered:
+      - M7
+      - M8
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    VARX-PVAR:
+      paper_count: 1
+      papers:
+      - borah_tellis_2016 (JMR)
+      status: EMERGING
+      slots_covered:
+      - M1
+      - M2
+      - M3
+      - M5
+      - M7
+      - M8
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    结构需求-state-space:
+      paper_count: 1
+      papers:
+      - liu_shankar2015 (Management Science)
+      status: EMERGING
+      slots_covered:
+      - M3
       - M7
       - M8
       common_failures: []

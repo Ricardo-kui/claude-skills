@@ -141,7 +141,20 @@ description: |
 | M9 多研究/实验程序 | `references/slot-M9.md` | 仅多研究设计 | 非多研究 |
 | M10 Methods→Results 过渡 | `references/slot-M10.md` | 通常省略（顶刊 <10%） | 默认跳过 |
 
-> **设计类型变体加载（飞轮积累，勿漏读）**：确定 design type 后，**先查 `econometric-models/INDEX.md` 的「设计类型索引表」**（L22-46）确认该类型的变体数与最后更新日期；若变体数 >0，**必须加载 `econometric-models/[设计类型].md`** 读取已蒸馏变体（飞轮积累，如面板数据-OLS 已有 26 变体、生存分析 22 变体），与主 slot 骨架配合使用——只用 slot 主骨架而漏读已蒸馏变体 = 飞轮价值流失。变体数 = 0 的设计类型（如自然实验-DiD、稀有结果）仅用 slot 主骨架。新蒸馏变体经 `distill-methods-exemplar` → Phase 4 写入并同步更新 INDEX.md 变体数。
+### 设计类型变体：两阶段渐进检索
+
+`references/slot-M*.md` 是默认生成骨架；`econometric-models/*.md` 是证据分层的补充资产，不再整文件加载。每处理一个槽位：
+
+1. 先加载对应 `references/slot-M<编号>.md`；质性设计使用其 Q 槽专用骨架。`M7补充` 只加载 `slot-M7-supplement.md`，目录查询会正常返回空候选。
+2. 查询同一设计类型、同一槽位的默认候选：
+   `python scripts/methods_variant_catalog.py list --design-type "<设计类型>" --slot M<编号>`
+3. 仅在候选确实增加生成能力时，按稳定 ID 精确读取，单槽最多 4 个：
+   `python scripts/methods_variant_catalog.py render --id "<设计类型>:vN"`
+   四个名额必须功能互补，例如分别覆盖操作化、估计器选择、识别辩护和效度边界；不得用近义标题凑满。候选用于提取论证动作，不得拼接或仿写其表层句式。
+4. 若默认候选为空或不匹配，但任务明确需要某个特殊技术，再加 `--include-reference` 查看单篇 exemplar；选定后须用 `render ... --allow-reference`。单槽最多使用 2 个 `reference_exemplar`，其余名额留给 core/optional 或当前 slot 骨架。
+5. 不得仅因“该设计类型有变体”就读取整个 `econometric-models/[设计类型].md`。仅当目录脚本报错、资产无法解析或用户显式要求 legacy 全库审查时，才整文件回退，并说明原因。
+
+菜单晋升只认 `econometric-models/_evidence_registry.yaml` 的 `variant_evidence`：`core_operator` 与 `optional_operator` 可进入默认候选；未显式登记的资产无论 Markdown 写“通过”与否，一律是 `reference_exemplar`。目录接受 SKILL 对外名称别名（如 `IV/2SLS`、`面板数据/OLS`），并拒绝未知 ID、非法槽位、重复 ID 或未经授权的 reference，禁止静默回退。
 
 **句法微模板（默认润色阶段调用）**：骨架生成后，按 `econometric-models/micro-templates/INDEX.md` 的「分类索引」槽位映射表，选读对应本设计的 1–3 个微模板（如 causal-hedging / transitions / because-clauses / funnel-rhythm / variable-operationalization / identification-exogeneity），为关键句位提供 2–3 个备选措辞，避免跨论文表达同质化。**默认执行**（不再要求用户额外说"润色"）。高风险微模板（如强因果动词）只能在对应设计强度的骨架中使用。
 
@@ -416,7 +429,7 @@ Pollock 不把四类效度当 checklist 逐条回答，而是嵌入 describe-exp
 
 ## 语料与变体
 
-设计类型的具体变体见 `econometric-models/[设计类型].md`。新论文的蒸馏结果通过 `distill-methods-exemplar` → Phase 4 `skill_update_instructions` 自动写入。
+设计类型变体仍以 `econometric-models/[设计类型].md` 为唯一正文来源；`_evidence_registry.yaml` 是菜单晋升的唯一授权源；`scripts/methods_variant_catalog.py` 建立实时只读目录并校验两者快照一致。新论文经 `distill-methods-exemplar` → Phase 4 写入后，运行 `python scripts/methods_variant_catalog.py audit` 检查总数、槽位、角色与 registry。不得把新增变体数作为质量 KPI；优先记录复用、晋升、合并/降级与无新增（none）。
 
 ---
-*基于 34 篇 MVP30 范文语料库、Pollock 2025 Ch07 构建。版本 3.2.0。*
+*基于 34 篇 MVP30 范文语料库、Pollock 2025 Ch07 构建。版本 3.3.1。*
