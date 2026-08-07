@@ -1,6 +1,6 @@
 ---
 name: econometrics-agent
-description: Use the installed local econometrics-agent CLI at C:\Users\admin\Econometrics-Agent for structured econometric execution on csv, dta, parquet, or xlsx data. Trigger when the user explicitly mentions econometrics-agent, asks to use this local agent or local econometrics tool, requests this specific CLI to run OLS, FE, IV, DID, event-study, PSM, IPW, AIPW, IPWRA, RDD, or fuzzy-RDD, or wants balance tables, coefficient tables, narrative summaries, dataset inspection, or specification sweeps from this CLI. Do not use for purely conceptual methodology advice, paper writing, or referee-style review unless the user explicitly wants this CLI.
+description: Use the installed local econometrics-agent CLI at ~/Econometrics-Agent for structured econometric execution on csv, dta, parquet, or xlsx data. Trigger when the user explicitly mentions econometrics-agent, asks to use this local agent or local econometrics tool, requests this specific CLI to run OLS, FE, IV, DID, event-study, PSM, IPW, AIPW, IPWRA, RDD, or fuzzy-RDD, or wants balance tables, coefficient tables, narrative summaries, dataset inspection, or specification sweeps from this CLI. Do not use for purely conceptual methodology advice, paper writing, or referee-style review unless the user explicitly wants this CLI.
 ---
 
 # Econometrics Agent
@@ -29,7 +29,7 @@ In those cases, prefer the existing econometrics or writing skills unless the us
 
 ## Use The Right Entry Point
 
-Prefer the global command, provided by a shim in `C:\Users\admin\.local\bin` (an extensionless bash shim for git-bash, and `econometrics-agent.cmd` for PowerShell/cmd):
+Prefer the global command, provided by a shim in `~/.local/bin` (an extensionless bash shim for git-bash, and `econometrics-agent.cmd` for PowerShell/cmd):
 
 ```powershell
 econometrics-agent
@@ -38,7 +38,7 @@ econometrics-agent
 If the shim is ever missing, fall back to the fixed local install:
 
 ```powershell
-C:\Users\admin\Econometrics-Agent\.venv\Scripts\python.exe C:\Users\admin\Econometrics-Agent\lite_econometrics_agent.py
+~/Econometrics-Agent/.venv/Scripts/python.exe ~/Econometrics-Agent/lite_econometrics_agent.py
 ```
 
 ## Inspect The Dataset Deterministically
@@ -48,7 +48,7 @@ If the user gives a data file but does not clearly specify the usable column nam
 Prefer the bundled wrapper:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File C:\Users\admin\.claude\skills\econometrics-agent\scripts\inspect_dataset.ps1 -Data "C:\path\to\data.dta"
+powershell -ExecutionPolicy Bypass -File ~/.claude/skills/econometrics-agent/scripts/inspect_dataset.ps1 -Data "C:\path\to\data.dta"
 ```
 
 This prints a compact JSON profile with:
@@ -62,14 +62,14 @@ This prints a compact JSON profile with:
 The preferred one-step path is:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File C:\Users\admin\.claude\skills\econometrics-agent\scripts\draft_run_command.ps1 -Data "C:\path\to\data.dta" -Model fe
+powershell -ExecutionPolicy Bypass -File ~/.claude/skills/econometrics-agent/scripts/draft_run_command.ps1 -Data "C:\path\to\data.dta" -Model fe
 ```
 
 If you want a two-step path with a saved inspection artifact, save the JSON and pass it to the bundled draft-command wrapper:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File C:\Users\admin\.claude\skills\econometrics-agent\scripts\inspect_dataset.ps1 -Data "C:\path\to\data.dta" -OutFile ".\inspection.json"
-powershell -ExecutionPolicy Bypass -File C:\Users\admin\.claude\skills\econometrics-agent\scripts\draft_run_command.ps1 -Inspection ".\inspection.json" -Model fe
+powershell -ExecutionPolicy Bypass -File ~/.claude/skills/econometrics-agent/scripts/inspect_dataset.ps1 -Data "C:\path\to\data.dta" -OutFile ".\inspection.json"
+powershell -ExecutionPolicy Bypass -File ~/.claude/skills/econometrics-agent/scripts/draft_run_command.ps1 -Inspection ".\inspection.json" -Model fe
 ```
 
 If the user still has not chosen `outcome` or `treatment` after inspection, ask one short follow-up question. Do not guess.
@@ -95,16 +95,16 @@ If the user gives a file but not the column names, inspect the dataset schema fi
 - `run`: execute one specification
 - `sweep`: run multiple specifications from a JSON config and export a comparison table or results paragraph
 
-Open [command-patterns.md](C:/Users/admin/.claude/skills/econometrics-agent/references/command-patterns.md) when you need exact command templates or option reminders. Open [troubleshooting.md](C:/Users/admin/.claude/skills/econometrics-agent/references/troubleshooting.md) when the command fails or the user gives an incomplete specification.
+Open [command-patterns.md](~/.claude/skills/econometrics-agent/references/command-patterns.md) when you need exact command templates or option reminders. Open [troubleshooting.md](~/.claude/skills/econometrics-agent/references/troubleshooting.md) when the command fails or the user gives an incomplete specification.
 
 ## Method Knowledge (Reusable Across Skills)
 
 The econometric reasoning behind this CLI is documented as prose so other skills (`causal-analysis`, `did-analysis`, `stata-regression`, and the write/review stack) can reuse it, not just this CLI:
 
-- [method-cards.md](C:/Users/admin/.claude/skills/econometrics-agent/references/method-cards.md) — per-estimator cards: when to use, identification logic, diagnostics, failure modes, and a **Tool boundary** line marking where this CLI stops and Stata should take over.
-- [model-selection-rules.md](C:/Users/admin/.claude/skills/econometrics-agent/references/model-selection-rules.md) — the transparent, rule-based routing tree and how selection reasons are generated.
-- [diagnostics-and-reflection.md](C:/Users/admin/.claude/skills/econometrics-agent/references/diagnostics-and-reflection.md) — what the CLI auto-detects (routing upgrades, data cleaning, per-estimator diagnostics) and what the researcher still owes.
-- [sweep-templates.md](C:/Users/admin/.claude/skills/econometrics-agent/references/sweep-templates.md) — robustness-sweep design (covariance, pscore-suite, RDD sensitivity, panel clustering).
+- [method-cards.md](~/.claude/skills/econometrics-agent/references/method-cards.md) — per-estimator cards: when to use, identification logic, diagnostics, failure modes, and a **Tool boundary** line marking where this CLI stops and Stata should take over.
+- [model-selection-rules.md](~/.claude/skills/econometrics-agent/references/model-selection-rules.md) — the transparent, rule-based routing tree and how selection reasons are generated.
+- [diagnostics-and-reflection.md](~/.claude/skills/econometrics-agent/references/diagnostics-and-reflection.md) — what the CLI auto-detects (routing upgrades, data cleaning, per-estimator diagnostics) and what the researcher still owes.
+- [sweep-templates.md](~/.claude/skills/econometrics-agent/references/sweep-templates.md) — robustness-sweep design (covariance, pscore-suite, RDD sensitivity, panel clustering).
 
 When the user asks conceptual estimator-choice or identification questions without wanting this CLI, read these reference files instead of running the tool.
 
