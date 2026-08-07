@@ -184,6 +184,9 @@ two audiences may form a complementary [two-stage / sequential] process.
 ```
 
 **关键原则**:
+- 两个对立机制必须锁定同一评价结果（same outcome, opposite signs）；benefit 与 burden 不得分别落在不同结局变量上
+- Dominance 条件必须从机制属性推导（何时哪个机制更强、为何），不得只罗列与结果相关的条件
+- 若两个机制各有独立的强度驱动因素，dominance 规则按机制分述——每个条件绑定一个机制的可观察属性、独立可检验，不得合并为单一混合阈值
 - Reconciliation 不是 hand-waving ("both perspectives are valid")
 - 必须是 theory-based reconciliation（temporal sequence / contextual separation）
 - 如果两类受众同时在评估同一实体，不能只用 "different perspectives" 替代 reconciliation
@@ -354,6 +357,45 @@ H2: The turning point occurs at a higher X under higher W.
 
 ---
 
+## Chen–Ganesan–Liu 2009 型：单侧辩证——共识受众侧作前提，新受众侧单假设
+
+**状态**: EMERGING section variant（单篇架构）
+
+**适用**: 同一行动被两类受众作**相反解读**（消费者：责任/质量信号；投资者：严重损失信号），但受众 A 侧已是文献共识（无需再检验），理论增量全部在受众 B 侧。
+
+**与标准 G（Pontikes 2012）的区别**:
+
+| | 标准 G（Pontikes） | Chen2009 单侧辩证 |
+|---|---|---|
+| 假设结构 | 镜像假设对（H1a/b 受众 A + H2a/b 受众 B） | 单假设（仅受众 B 侧 H1） |
+| 受众 A 侧处理 | 完整 T3 机制推演 | 共识复盘（"Previous research has indicated..."），不派生假设 |
+| Reconciliation | 必须有 theory-based 收束 | 无——相反解读的整合延迟到 Discussion（"responsible policy can be interpreted differently by different stakeholders"） |
+| DV | 同一 DV（appeal），方向相反 | 不同 DV 家族（brand equity/perceptions vs firm value），分裂即贡献 |
+
+### 段落功能地图
+
+| 段落 | 功能 | 说明 |
+|------|------|------|
+| T2 前提段 | 信息不对称主干 + 信号解读框架 | Myers & Majluf 信息不对称 → 危机放大不对称 → 市场解读行动为信号（Ross 1977） |
+| T3 共识侧复盘 | 受众 A 正面解读的文献共识 + 实践轶事 | 3+ 实证引用（消费者感知/品牌资产/购买意向）+ 1 个 practitioner anecdote（Mattel 入选 Fortune 最佳雇主因快速召回） |
+| T4 分裂 pivot + 受众 B 机制 | "However, it is likely that [audience B] view... differently from [audience A]" → 目标函数对比 → 信号严重性推断 → 基准背离放大 → 单假设 | 详见 `sentences/mechanism_chain.md`「信号解读的受众分裂链」 |
+
+### 关键原则
+
+- **共识侧必须厚**：受众 A 侧若无 3+ 引用 + 实践轶事支撑，"分裂"就缺乏支点——读者无法确认"同一行动，两种解读"
+- **分裂的理论理由是目标函数不同**：consumers 关心信任/质量，investors 关心短期现金流/诉讼损失——不是 demographic 差异
+- **"别无选择"推断是信号解读的核心**："the firm had no other choice but to act proactively"——行动越主动，越反推问题严重。负面解读不靠"投资者悲观"的常识，靠信号的 diagnosticity
+- **基准背离放大器**：多数企业被动（文献 + 自家数据双重佐证）→ 主动行为背离基准 → 引来额外审视 → 负面解读加权
+- **单假设收束**：H 只写受众 B 侧；不要为对称补受众 A 侧假设——那已是文献共识，检验它不产生增量
+
+### 禁忌
+
+- 不要在 Theory 里 reconcile 两侧——本变体的贡献恰恰是"揭示分裂存在"，reconciliation 属于 Discussion 的 boundary conditions
+- 共识侧复盘不可省略轶事——纯学术引用的"正面解读"缺乏实践质感（chen2009 用 Mattel/Fortune 轶事锚定）
+- 若两类受众的解读差异没有目标函数基础，路由回标准 G 或 E
+
+---
+
 ## 假设陈述格式
 
 | 类型 | 模板 | 示例 (Pontikes 2012) |
@@ -411,6 +453,8 @@ with an ambiguous label] (label-level)."
 ## QC 检查点
 
 - [ ] T3 和 T4 的机制步骤数是否接近对称（差 ≤ 1 步）？
+- [ ] 两个对立机制是否作用于同一评价结果、方向相反（而非分别落在不同结局上）？
+- [ ] Reconciliation 的 dominance 条件是否从机制属性推导，而非相关条件的罗列？
 - [ ] T4 首句是否有明确的 dialectical turn 标记（"Despite research showing..." / "This may be because..."）？
 - [ ] 两类受众的理论区分是否有文献基础（不是随意的 demographic 分组）？
 - [ ] "反转"是否真的方向反转（不是强度变化）？如果只是强弱差异，应路由到 [E] 调节效应型

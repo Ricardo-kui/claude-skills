@@ -1,0 +1,33 @@
+schema_version: 1
+aggregation:
+  judges: 2
+  dimensions: 8
+  pairwise_vote: "X=1, tie=0, Y=-1; map label to condition, sum votes, zero=tie"
+  critical_failure: "any judge flag counts"
+per_task:
+  - {id: R5Q01, stratum: targeted, governed_label: X, governed_mean: 36.5, legacy_mean: 40.0, result: loss, governed_critical_failures: [unsupported_causal_language]}
+  - {id: R5Q02, stratum: targeted, governed_label: Y, governed_mean: 40.0, legacy_mean: 40.0, result: tie, governed_critical_failures: []}
+  - {id: R5Q03, stratum: targeted, governed_label: Y, governed_mean: 39.0, legacy_mean: 40.0, result: loss, governed_critical_failures: []}
+  - {id: R5Q04, stratum: targeted, governed_label: X, governed_mean: 40.0, legacy_mean: 37.5, result: win, governed_critical_failures: []}
+  - {id: R5Q05, stratum: targeted, governed_label: Y, governed_mean: 40.0, legacy_mean: 38.0, result: win, governed_critical_failures: []}
+  - {id: R5Q06, stratum: targeted, governed_label: X, governed_mean: 40.0, legacy_mean: 40.0, result: loss, governed_critical_failures: []}
+  - {id: R5Q07, stratum: preservation, governed_label: Y, governed_mean: 39.5, legacy_mean: 37.0, result: win, governed_critical_failures: []}
+  - {id: R5Q08, stratum: preservation, governed_label: X, governed_mean: 40.0, legacy_mean: 39.0, result: win, governed_critical_failures: []}
+  - {id: R5Q09, stratum: preservation, governed_label: X, governed_mean: 40.0, legacy_mean: 39.0, result: win, governed_critical_failures: []}
+  - {id: R5Q10, stratum: preservation, governed_label: Y, governed_mean: 40.0, legacy_mean: 38.0, result: win, governed_critical_failures: []}
+  - {id: R5Q11, stratum: preservation, governed_label: Y, governed_mean: 35.5, legacy_mean: 40.0, result: loss, governed_critical_failures: []}
+  - {id: R5Q12, stratum: preservation, governed_label: X, governed_mean: 39.0, legacy_mean: 39.5, result: loss, governed_critical_failures: []}
+summary:
+  overall: {governed_wins: 6, governed_losses: 5, ties: 1, governed_mean: 39.125, legacy_mean: 39.0, delta: 0.125}
+  targeted: {governed_wins: 2, governed_losses: 3, ties: 1, governed_mean: 39.25, legacy_mean: 39.25, delta: 0.0}
+  preservation: {governed_wins: 4, governed_losses: 2, ties: 0, governed_mean: 39.0, legacy_mean: 38.75, delta: 0.25}
+  governed_explicit_compliance: 12
+  governed_critical_failures: 1
+  governed_manifest_task_coverage: 12
+  governed_manifest_valid: true
+decision:
+  accepted: false
+  failed_conditions:
+    - governed_critical_failures
+    - governed_mean_score_superiority
+    - targeted_task_losses

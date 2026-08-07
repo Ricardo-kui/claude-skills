@@ -64,10 +64,66 @@ We simultaneously (1) recognize that the mechanisms by which [related phenomenon
 
 ---
 
+<!--
+pattern_id: geometric_sibling_construct_minimal_pair
+build_type: 构念辨析型（showing device）
+source_papers: ["Li_Bapuji_Talluri_Singh_Venkataraman_2026_POM"]
+confidence: low
+status: needs_validation
+related: argumentation_patterns.md::minimal_pair_contrast_vignette（语言/表征最小对）；本模式 = 空间/结构几何最小对
+-->
+
+## Pattern: Geometric Sibling-Construct Minimal Pair（几何兄弟构念最小对）
+
+**适用场景**: 两个兄弟维度（sibling dimensions of an umbrella construct）在文献中被互换测量，需要在 Theory 开篇用**受控几何对比**证明它们可独立变化——固定维度 A、只变维度 B——从而合法地把后续机制分工建立在"可分离构念"上。
+
+**微观动作序列**: Define A + Define B → Hold A constant / vary B（Figure）→ State that managing challenges differ → Bridge to mechanism division
+
+**范文来源**: Li, Bapuji, Talluri, Singh & Venkataraman (2026), *Production and Operations Management*（Figure 1：supply bases A and B 平均地理距离同为 d，但 A 集中、B 分散）
+
+**骨架**:
+```text
+Although [dimension A] and [dimension B] are related, they capture different aspects of [umbrella].
+[Dimension A] refers to [definition A]; [dimension B] represents [definition B].
+As Figure [N] illustrates, [quantity of A] is the same for [unit set 1] and [unit set 2]
+(both equal to [constant]). However, [units] are more [low on B] in [set 1] and more
+[high on B] in [set 2]. As a result, the challenges of managing [set 1] differ from those
+of managing [set 2]. Thus, theoretically distinguishing [A] and [B] and assessing their
+empirical effects are important.
+```
+
+**原文锚定**:
+> Although geographical distance and geographical dispersion are related, they capture different aspects of complexity. Geographical distance refers to the physical distance between the buyer firm and its direct suppliers (Bray et al., 2019); geographical dispersion represents the extent to which suppliers are spread across different areas (Lorentz et al., 2012). As Figure 1 illustrates, the average geographical distance between buyers and suppliers is the same for supply bases A and B (both equal to d). However, suppliers are more concentrated in supply base A and more dispersed in supply base B. As a result, the challenges of managing supply base A are different from those of managing supply base B.
+
+**关键特征**:
+- **几何最小对，不是 vignette 叙事**: 固定一个可测标量（平均距离 d），只变空间构型（集中 vs 分散）——实验设计逻辑移植到构念辨析图
+- **证明可分离性先于机制**: 图的功能是"A 与 B 可独立变化"，不是直接推 H；机制分工放在后续小节
+- **与 Intro 变体 D 接力**: Intro `tensions/05` 变体 D 立互换测量缺口；本模式在 Theory 用图兑现"概念上可分"
+
+**为什么有效**: 读者对"相关但不同"的口头主张常存疑；同 d、异分散的图把可识别性一次钉死，后续 monitoring vs coordination 双轨才站得住。
+
+**注意事项**:
+- 图中被固定的量必须是维度 A 的**充分统计量**（如平均距离），被变化的必须是维度 B 的构型；若图同时动了供应商数量等第三变量，最小对失效
+- 辨析段后必须接机制分工（见 `sibling_ivs_mechanism_division_shared_buffer`）；图 alone 不是贡献
+- 单篇 EMERGING：未跨论文验证前不作 write-theory 默认路由
+
+**反模式**:
+- 用真实供应链地图堆砌例子却不控制平均距离——失去 minimal
+- 把图写成装饰性"概念框架图"而不做 hold-constant 对比
+- 与 Cutolo 语言最小对混用：本模式服务**构念可分**，彼模式服务**机制显形**
+
+**与近邻区分**:
+- vs `minimal_pair_contrast_vignette`（Cutolo）：语言/表征变量的两句并置；本模式是空间几何构型
+- vs `table_construct_differentiation`：多维表格边界；本模式是二维几何证明可分离
+- vs B2 / sibling dual-track：那些推机制与 H；本模式只完成 T1 可分证明
+
+---
+
 ## 与相邻语料文件的关系
 
 - [`../sentences/construct_definition.md`](../sentences/construct_definition.md)：微观句式模板（如 "We define X as..."）
-- [`../subprotocols/argumentation_patterns.md`](argumentation_patterns.md)：微观动作组合
+- [`../subprotocols/argumentation_patterns.md`](argumentation_patterns.md)：微观动作组合（含语言版 minimal pair）
+- [`../subprotocols/hypothesis_organization_patterns.md`](hypothesis_organization_patterns.md)：兄弟 IV 机制分工 + 共享缓冲（本模式之后的组织）
 - [`../variants/A_construct_differentiation.md`](../variants/A_construct_differentiation.md)：构念辨析型整篇结构
 
-> **使用顺序**：先查本文件确定 T1 辨析策略 → 再查 `construct_definition.md` 填充具体句式 → 再查 `argumentation_patterns.md` 组织论证动作。
+> **使用顺序**：先查本文件确定 T1 辨析策略 → 再查 `construct_definition.md` 填充具体句式 → 再查 `argumentation_patterns.md` / `hypothesis_organization_patterns.md` 组织论证动作。

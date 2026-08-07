@@ -59,3 +59,14 @@
 - [ ] 是否使用了 "Conversely" 或 "In contrast" 明确标记轨道切换？
 - [ ] 若有两条轨道，是否考虑增加调节假设解释 "何时 Track A 主导 vs Track B 主导"？
 - [ ] 最后假设是否自然收敛（"Therefore/Thus" 局部收束）？
+
+---
+
+## 近邻变体（不要与 B2 混用）
+
+| 模式 | 何时用 | 文件 |
+|------|--------|------|
+| **B2（本文件）** | 同一构念两维度 → 常异号/异行为预测 | 本文件 |
+| **Sibling IVs + shared buffer** | 兄弟 IV（如 distance/dispersion）→ **同向**同 DV → 共享缓冲调节 H3a/H3b | `hypothesis_organization_patterns.md`::`sibling_ivs_mechanism_division_shared_buffer` |
+| **Dual mechanism same direction** | **单** IV → 两条中介汇聚 → **一个** H | `argumentation_patterns.md`::`dual_mechanism_same_direction` |
+| **Geometric sibling minimal pair** | 用图证明兄弟维度可分离（固定 A 变 B） | `construct_differentiation_patterns.md`::`geometric_sibling_construct_minimal_pair` |

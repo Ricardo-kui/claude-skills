@@ -1,0 +1,15 @@
+seed: "theory-r5-2026-08-07-v1"
+rule: "SHA256(seed + ':' + task_id); even first byte means governed=X, odd means governed=Y"
+labels:
+  R5Q01: {governed: X, legacy: Y, sha256: 7203e39da9db9e353b0d9cd88a9812b2a42ca7c0c015251bb3c9ffc8938eae92}
+  R5Q02: {governed: Y, legacy: X, sha256: 43f956599e583e46695bed901293a71305aae8a76eca4c7ba16c54650797785b}
+  R5Q03: {governed: Y, legacy: X, sha256: 33711fe822ffe24faaf10c98e1265b79d801cd0a4b00068f4b1bef166fcab7dd}
+  R5Q04: {governed: X, legacy: Y, sha256: 88dd67cb01debca8066cf8030a88ae32830503447ac65761b1dc77edc3b36a3f}
+  R5Q05: {governed: Y, legacy: X, sha256: 0b5a2a20efc7f5990b3024063159cf33859c3474630c31e0d5116b8a4e75cbdc}
+  R5Q06: {governed: X, legacy: Y, sha256: be83e72d82af79a9ca0bc22e8c4af24a001ab7d5a45562f866a23d02093f8cd7}
+  R5Q07: {governed: Y, legacy: X, sha256: 1ffd2791dcc71acda65631181661879f2b6dd3d35835c5db99038043c14c1a22}
+  R5Q08: {governed: X, legacy: Y, sha256: daa1e19e4623510344bbab584ea4e04ed62fc3296f964c374aa7aacc483b2a7c}
+  R5Q09: {governed: X, legacy: Y, sha256: 6099b1360c50e528533ef7da37170a12f59fe97fd60bdbb44b2373154984193e}
+  R5Q10: {governed: Y, legacy: X, sha256: 13cbb61d2304b31152d681dc23e7c26bad9ea21ad72a17b33d683ff22fea3636}
+  R5Q11: {governed: Y, legacy: X, sha256: 77cc9ff5b4ba8b43b9b04f5a4d8759b32d70d3822bd7168efe92913139ce7aeb}
+  R5Q12: {governed: X, legacy: Y, sha256: 4054e8c5591b26811c5bda9c6bbfa3e6c7ecf9955e368855a8e20b9429b7b3d9}

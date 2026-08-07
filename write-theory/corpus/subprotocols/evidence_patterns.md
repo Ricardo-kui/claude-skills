@@ -92,6 +92,23 @@ Therefore, we expect [directional relationship].
 
 **诚实边界**: Stakeholder reaction 只能作 warrant，不能作为效应大小或因果方向的证据；若只有单一匿名评论或评论者与假设中的受众不一致，不应使用。
 
+### 子型 C：具名案例作为预设异议反驳（Named-Case Objection Rebuttal）
+
+**骨架**:
+```
+[Anticipated objection — 作者替读者说出] One might think that [mechanism premise] would not
+be a problem in [this context], i.e., [why the context seems special].
+[Rebuttal pivot] This is not, however, always the case.
+[Named case] For example, in the recent [Company/event], [actor] knew of [problem] in
+[time/place], [duration] before [taking action] ([news citation]).
+```
+
+**来源**: Haunschild and Rhee (2004), *Management Science*——惯性前提看似不适用于安全召回情境（"any problem that poses a potential threat to consumer safety would be swiftly dealt with"），作者用 Firestone/Bridgestone 案例反驳：Ford 早在 1998 年就知道委内瑞拉市场的轮胎问题，两年后才更换。
+
+**与原子型差异**: 原子型用案例**正面展示**机制如何运作（warrant）；本子型用案例**防御性反驳**"本情境例外"的预设异议——案例证明例外不存在，而非证明机制存在。功能一攻一守，不可互换。
+
+**诚实边界**: 案例必须具名、可核查、与异议直接对应（行业特殊性异议不能用其他行业案例反驳）；反驳后立即回到机制推导，不展开案例细节；异议必须是读者真实会提出的——反驳稻草人异议反而暴露论证焦虑。
+
 **为什么有效**: 案例把抽象机制具体化，同时显示机制的边界条件。
 
 **注意事项**: 
@@ -197,3 +214,45 @@ The researchers note, '[quote establishing importance]' and caution that
 - 最佳用法是与一个学术案例并置（如 McKinsey 报告 + Haspeslagh & Jemison 钢铁案例），形成 practitioner+academic 双源 warrant
 
 **反模式**: 用 practitioner 引语代替机制推演（"McKinsey says integration is hard. Therefore H1."）；或引用无样本规模的单一专家观点。
+
+---
+
+<!--
+pattern_id: original_mini_analysis_premise_warrant
+build_type: 跨类型（证据类型扩展）
+source_papers: ["Haunschild_Rhee_2004_MS"]
+confidence: low
+status: needs_validation
+-->
+
+## Pattern: Evidence Type — Original Mini-Analysis as Premise Warrant
+
+**适用场景**: 机制链依赖一个**经验性前提**（如"X 类事件比 Y 类事件更显著/更受媒体关注"），已有文献未直接证明它；前提若假，整条机制链坍塌。作者在 Theory 节内嵌入一个**小型原创描述性分析**（计数 + 比例 + 简单检验）当场证明前提，而非断言。
+
+**范文来源**: Haunschild and Rhee (2004), *Management Science*（为支撑"非自愿召回更显著"这一 attention 阵营的承重前提，当场统计：1998 年 235 起召回中仅 22% 为非自愿，而 ABI/INFORM 368 篇商业报道中 47% 涉及非自愿召回；Pearson χ²(1)=37.2067, p<0.001）。
+
+**骨架**:
+```
+[Premise to defend] We argue that [X-type events] are more [salient/visible/consequential]
+than [Y-type events].
+[Base rates] According to [data source], there were [N1] [events] in [period].
+Of these, [p1]% were [X-type] and [p2]% [Y-type].
+[Mini-analysis] We [counted/analyzed] the [coverage/reports] of these [events]:
+of [N2] [articles], [q1]% discussed [X-type]. A test of [expected versus actual] is
+significant ([statistic], p<[value]), supporting the idea that [premise].
+[Recovery to theory] The [coverage] of [X-type events] is likely to be both a cause and
+a consequence of the [premise property] of these events.
+```
+
+**为什么有效**:
+- 把"作者断言"升级为"当场可验证的事实"——前提辩护不依赖读者信任。
+- 在 Incommensurability/竞争假设设计中，它把某一理论阵营 steelman 到最强（前提扎实），使后续裁决更有说服力；亦满足 front-end contract 对"strongest prior conversation"的要求。
+- 检验统计量的出现向审稿人发出"作者对前提与对假设同样严谨"的信号。
+
+**注意事项**:
+- 分析必须小型、描述性（计数、比例、χ²/t 检验），不得喧宾夺主变成结果节。
+- 数据来源必须公开可查（本文：NHTSA 召回记录 + ABI/INFORM 报刊索引）。
+- 必须有理论回收句把统计结果接回前提（本文末句：报道既是显著性的因也是果）。
+- 前提必须是**承重的**——边缘前提不配原创分析；一篇论文至多一到两处。
+
+**反模式**: 用轶事断言替代计数（"press coverage is extensive"）；或把完整计量模型搬进 Theory 节，模糊理论/实证的体裁边界。

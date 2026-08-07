@@ -1,0 +1,90 @@
+schema_version: 1
+description: "Pre-registered R4 blinded comparison of revised governed retrieval against legacy direct-index retrieval."
+blinding:
+  seed: "theory-r4-2026-08-07-v1"
+  rule: "For each task, SHA256(seed + ':' + task_id); even first byte means governed=X, odd means governed=Y. Evaluators receive prompts and labeled outputs only."
+decision_rule:
+  primary_integrity:
+    governed_critical_failures_max: 0
+    governed_explicit_task_compliance_required: 12
+  comparative_superiority:
+    governed_pairwise_wins_must_exceed_losses: true
+    governed_mean_score_must_exceed_legacy_by_at_least: 0.25
+    targeted_task_losses_max: 2
+  preservation:
+    governed_preservation_critical_failures_max: 0
+    governed_preservation_mean_must_be_at_least_legacy_minus: 0.50
+  interpretation: "All conditions must hold for provisional R4 acceptance. Do not alter thresholds after scoring."
+tasks:
+  - id: RQ01
+    stratum: targeted
+    architecture: E
+    mode: hypotheses
+    story_state: complete
+    prompt: "Theorize how cybersecurity-disclosure specificity affects employee trust differently when breach verifiability is high versus low. Give affirmative mechanisms for both states and no unconditional main-effect hypothesis."
+  - id: RQ02
+    stratum: targeted
+    architecture: E
+    mode: hypotheses
+    story_state: complete
+    prompt: "Develop a cross-level argument in which firm-level supply-chain traceability affects buyer retention under high versus low industry-level enforcement volatility. State nesting, transmission, and signed conditional predictions."
+  - id: RQ03
+    stratum: targeted
+    architecture: D
+    mode: propositions
+    story_state: complete
+    prompt: "Develop a three-stage process from a whistleblower allegation to board-led investigation and organizational reform. Each transition must name the actor, condition, observable marker, and possible failed branch."
+  - id: RQ04
+    stratum: targeted
+    architecture: D
+    mode: no_numbered_hypotheses
+    story_state: complete
+    prompt: "Explain how feedback after an alliance failure reaches a specified recipient and can reinforce, redirect, or terminate repair efforts. Preserve an open empirical agenda and use no numbered claims."
+  - id: RQ05
+    stratum: targeted
+    architecture: B
+    mode: no_numbered_hypotheses
+    story_state: local_only
+    prompt: "Provide a local-only diagnostic of two accounts linking board interlocks to exploratory innovation: information access versus conformity pressure. The interlock construct and outcome horizon remain unresolved."
+  - id: RQ06
+    stratum: targeted
+    architecture: E
+    mode: no_numbered_hypotheses
+    story_state: local_only
+    prompt: "Map a possible boundary argument linking algorithmic transparency to seller participation when platform market concentration may change the mechanism. Do not produce hypotheses, propositions, contribution claims, or paper-state updates."
+  - id: RQ07
+    stratum: preservation
+    architecture: A
+    mode: hypotheses
+    story_state: complete
+    prompt: "Differentiate symbolic safety compliance from operational safety integration and derive one discriminating prediction about organizational defect learning."
+  - id: RQ08
+    stratum: preservation
+    architecture: B
+    mode: hypotheses
+    story_state: complete
+    prompt: "Develop a two-step why-chain from predictive-maintenance analytics to plant recovery speed when no formal mediator test is available."
+  - id: RQ09
+    stratum: preservation
+    architecture: C
+    mode: hypotheses
+    story_state: complete
+    prompt: "Build a shared-trunk hypothesis tree from employee voice to error correction, with one modifier of issue visibility and one modifier of managerial response capacity."
+  - id: RQ10
+    stratum: preservation
+    architecture: F
+    mode: hypotheses
+    story_state: complete
+    prompt: "Develop a fair theoretical horse race over the effect of board independence on exploratory innovation using agency and resource-dependence accounts on the same unit and horizon."
+  - id: RQ11
+    stratum: preservation
+    architecture: G
+    mode: propositions
+    story_state: complete
+    prompt: "Develop symmetric benefit and burden mechanisms for workplace data sharing across customer-service and employee-autonomy facets, then state a theory-based reconciliation."
+  - id: RQ12
+    stratum: preservation
+    architecture: B
+    mode: no_numbered_hypotheses
+    story_state: complete
+    prompt: "Write Background-as-Theory in which a professional certification improves early evaluator judgments through preference and signaling channels, while richer direct experience attenuates only signaling. Use no numbered hypotheses."

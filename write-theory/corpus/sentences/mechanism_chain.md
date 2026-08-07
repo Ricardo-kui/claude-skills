@@ -1947,3 +1947,146 @@ pursue self-serving actions at [principal]'s expense.
 - 未列清收益就断言“结构 S 有害”。
 - 把收益清单写成五条以上的文献综述。
 - 连续 8+ 词复述范文措辞。
+
+---
+
+## 信号解读的受众分裂链 + 基准背离放大（chen2009 型）
+
+<!--
+pattern_id: audience_split_signal_interpretation_base_rate_deviance
+build_type: 机制推演型（signaling，单侧假设）
+source_papers: ["Chen_Ganesan_Liu_2009_JM"]
+confidence: low
+status: needs_validation
+story_fidelity: section_variant
+sentence_position: theory T4 pivot + why-chain
+-->
+
+**适用**: 同一企业行动是信号，但两类受众解读相反；文献共识只覆盖受众 A 侧，受众 B 侧的负面解读需要信号 diagnosticity + 基准背离双重论证。配套架构变体见 `../variants/G_dialectical_opposition.md`「Chen–Ganesan–Liu 2009 型」。
+
+**模板**:
+```
+[共同前提 — 信息不对称主干]
+A significant amount of information asymmetry exists between [firms] and [external
+audience] ([citation]). This asymmetry is accentuated during [crisis events]. [Firms]
+possess more private information about [hazard nature/consequences] than [audience].
+In addition to publicly available information, [audience] pays close attention to a
+firm's actions and strategies and tries to interpret these as signals of [future
+outcome] ([citation]).
+
+[受众 A 共识侧 — 不派生假设]
+Previous research has indicated that [action] may have positive consequences on
+[audience A] ([citations]). [Practitioner anecdote anchoring the consensus].
+
+[分裂 pivot + 目标函数对比]
+However, it is likely that [audience B] view the implications of [action] differently
+from [audience A]. Although [action] may have the potential benefits of [A-side
+benefit], [audience B] tend to be more concerned about [B-side objective: short-run
+cash flow / litigation exposure].
+
+[信号严重性推断 — "别无选择"]
+By observing that the firm is [behavioral signature: moving quickly and early],
+[audience B] may speculate that the [consequences] are going to be severe and that
+the firm had no other choice but to act [proactively] to reduce the potential impact.
+In other words, [audience B] are likely to interpret [action] as a signal of [severe
+negative outcome].
+
+[基准背离放大]
+Furthermore, [firms] are ill-prepared to handle [crisis] and tend to react [passively]
+([citations]). This is supported in our data, in which [modal behavior] are more
+frequently observed. This implies that compared with [modal behavior], [deviant
+behavior] might receive greater attention and scrutiny from [audience B], resulting
+in more negative interpretations.
+
+[单假设收束]
+Therefore, we propose that [deviant action] will receive greater [audience B]
+attention and that [audience B] will interpret it as a signal of [negative outcome].
+In turn, [DV] will be affected more negatively when [deviant] than when [modal].
+H1: [Deviant action] is more negatively related to [DV] than [modal action].
+```
+
+**语料锚定**:
+- Chen, Ganesan & Liu (2009, JM) — proactive recall: consumers 读作责任信号（共识侧，不检验），investors 读作严重损失信号（H1 负向）。"the firm had no other choice but to act proactively" + "passive recalls are more frequently observed [in our data]"
+
+**关键特征**:
+- **"had no other choice but to act"** — 信号 diagnosticity 的核心推断：行动越主动，越反推问题严重；负面解读建立在推断逻辑上，不靠"投资者悲观"常识
+- **"In other words" 复述收束** — 推断句后立即用平白语言重述一次，确保读者跟上反直觉链条
+- **引用堆叠分工** — 每条引用承担一个推断增量，不允许两条引用做同一件事：信息不对称（Myers & Majluf 1984）→ 行动即信号（Ross 1977）→ 企业常态被动（Dawar & Pillutla 2000; Pearson & Clair 1998）
+- **基准背离用自家数据佐证** — "supported in our data"：Theory 段罕见地用描述统计为机制前提背书；前提是样本描述统计已可得，且不泄露假设检验结果
+- **negativity 不引用泛化心理学** — 负面解读由"别无选择"推断 + 背离放大推出，未依赖 negativity bias 文献；若借用 negativity bias（"negative information is weighted more"），须另补引用且与信号链逻辑并联，不可串联重复
+
+**反模式**:
+- 只写"投资者可能解读为负面信号"而无"别无选择"的推断步骤 → 信号解读沦为断言
+- 受众 A 侧共识引用不足（<3 篇）就宣布"看法不同" → 分裂无支点
+- "supported in our data" 但前文未交代数据来源 → 在 Theory 段凭空引用数据是硬伤
+- 为对称补受众 A 侧假设（"H2: 消费者正面评价"）→ 共识侧不产生增量，审稿人会问为何检验已确立结论
+
+**诚实边界**:
+- 信号解读链是 B0 层理论解释，不是已测中介；Results 未测 signal interpretation 时，Discussion 必须保持"解读"措辞，不得升级为"证明了投资者如此推断"
+- 基准背离（modal vs deviant）依赖样本构成；若样本中两类行为频率接近，删除放大步骤，只保留信号推断
+
+---
+
+## 平凡响应排除 + 时间分离中介链（kalaignanam2013 型）
+
+<!--
+pattern_id: trivial_response_exclusion_temporal_mediation
+build_type: 机制推演型（中介链）
+source_papers: ["Kalaignanam_Kushwaha_Eilert_2013_JM"]
+confidence: medium
+status: needs_validation
+story_fidelity: section_variant
+sentence_position: theory 假设推导段内部
+-->
+
+**适用**: 现象自带一个**法定的/平凡的最低响应**（mandated response，如召回=撤架+修复），理论增量在于论证行为**超出**最低响应的部分（root-cause learning → 广义可靠性提升）；且中介链有时间结构（X at t−1 → M at t → Y at t+1），需要理论推导与数据滞后结构严格对齐时使用。
+
+**模板**:
+```
+[机制起点] [Events] can be viewed as a manifestation of [underlying failure].
+It is known that [failures] are often an opportunity for [actors] to learn
+([citations]). However, not all [failures] influence [learning]. The ability
+and motivation to learn from [failures] depend on the [magnitude] of the [event].
+
+[平凡响应排除] The [actor]'s response to [events] could encompass a wide range
+of behaviors. A mandated response involves [minimal required action: withdrawing
+defective products and repairing them]. However, the impact of this response is
+limited to the [directly affected units]. Alternately, [actors] learn through a
+[deeper mechanism: root cause analysis] by developing a complex understanding of
+the association between the causes and effects of the [event].
+
+[广义机制论证] The scope of such learning is broader as [actors] aim to eliminate
+problems that led to the [event]. If so, such learning should result in
+[broader outcome beyond the directly affected units].
+
+[中介链假设] Thus:
+H[N]a: [X] leads to [M].
+H[N]b: [M] mediates the impact of [X] on [Y1].
+H[N]c: [M] mediates the impact of [X] on [Y2].
+
+[时间对齐声明（Methods 前置承诺）] A rigorous test of our hypotheses requires
+a close alignment of the theory, measures, and empirical model. We model the
+impact of [X] in time period t − 1 on [M] in time period t and [Y] in time
+period t + 1. The temporal separation enables us to test the hypothesized
+chain of events.
+```
+
+**语料锚定**:
+- Kalaignanam, Kushwaha & Eilert (2013, JM) — recall magnitude (t−1) → product reliability (t) → future injuries / recall frequency (t+1)。"A mandated response involves firms withdrawing defective products from the marketplace and repairing them. However, the impact of this response is limited to the defective products. Alternately, firms learn through a root cause analysis by developing a complex understanding of the association between the causes and effects of the product recall."
+
+**关键特征**:
+- **平凡响应排除的论证功能**：mandated response（撤架+修复）是**现象的默认解读**——不先排除它，读者会以为"召回后可靠性提升只是因为修好了坏车"，理论增量（root-cause learning 惠及未召回型号）就被遮蔽。排除句的 pivot 是 "the impact of this response is limited to..."——指出平凡机制的**作用域局限**，从而凸显广义机制的必要性
+- **与 Preemptive Competing Account Management（argumentation_patterns.md）的边界**：那是预防**读者/文献的竞争预测**（"One might expect X, alternatively Y"），发生在 T2→T3 过渡段；本句型排除的是**现象内的平凡响应模式**（mandated vs discretionary response），发生在单个假设推导段内部。判据：排除对象是"对 X→Y 关系的替代理论预测"→ 用 Preemptive 模式；排除对象是"现象的最低阶响应形式"→ 用本句型
+- **"Alternately" 转换标记**：从平凡响应到广义机制用 "Alternately, [actors] learn through..."——不换段、不用 however，保持推导连续性
+- **时间分离的理论声明**："A rigorous test... requires a close alignment of the theory, measures, and empirical model"——把滞后结构从统计技术提升为**理论检验的必要条件**（事件链必须有时间先后），这在 Theory 段预告、Methods 段兑现
+- **中介假设的三分形式**：H_a（X→M）+ H_b（M mediates X→Y1）+ H_c（M mediates X→Y2）——双 DV 共享同一中介，中介假设拆成"前半链 + 两个后半链"
+
+**诚实边界**:
+- 时间分离 ≠ 因果识别。panel + first-differencing + 滞后允许的最强措辞是 **Granger causality**（本文 Methods: "allows the results to be interpreted as Granger causality"），正文用 "lead to" / "impact"，不得写 "cause" / "causal effect"
+- 平凡响应排除要求该响应确实存在且是默认解读（撤架修复是召回的法定义务）；若"平凡响应"是稻草人，排除动作失效
+- 中介链的 M 必须在理论上可测且与 X、Y 有时间可分离性（reliability 在 recall 之后、injuries 之前）；若 M 与 Y 同时测量，中介论证退化为相关
+
+**反模式**:
+- 只做机制排除不做时间对齐声明 → 读者无法判断中介链是否有实证可行性
+- "Alternately" 后的广义机制没有作用域扩展（仍限于直接受影响单位）→ 排除平凡响应就失去了理论意义
+- 双 DV 中介链只检验一个 DV → 若 H_b 成立 H_c 不成立，Discussion 必须解释机制为何对 Y2 失效，不能沉默

@@ -1,0 +1,15 @@
+seed: "theory-r6-2026-08-07-v1"
+rule: "SHA256(seed:task_id); even first byte => governed=X"
+map:
+  R6Q01: {X: legacy, Y: governed}
+  R6Q02: {X: governed, Y: legacy}
+  R6Q03: {X: governed, Y: legacy}
+  R6Q04: {X: governed, Y: legacy}
+  R6Q05: {X: governed, Y: legacy}
+  R6Q06: {X: legacy, Y: governed}
+  R6Q07: {X: governed, Y: legacy}
+  R6Q08: {X: governed, Y: legacy}
+  R6Q09: {X: legacy, Y: governed}
+  R6Q10: {X: governed, Y: legacy}
+  R6Q11: {X: legacy, Y: governed}
+  R6Q12: {X: legacy, Y: governed}

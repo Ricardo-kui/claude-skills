@@ -2,6 +2,8 @@
 
 本索引提供 `write-theory` skill 语料文件的快速导航和决策入口。
 
+> **治理入口优先**：本文件保留为人工导航与历史参考，不是默认生成菜单。生成时先运行 `../scripts/theory_asset_catalog.py list-architectures` 选择 A–G，再按当前 T1–T5/transition slot 查询最多 5 个 reference。单篇、UNREGISTERED 或已 merged 的 pattern 不得仅因在本索引中可见而进入默认生成；所有写回必须经 `theory_corpus_governance.py apply-plan --dry-run`。
+
 ---
 
 ## 证据注册表（模式验证状态，选择阶段查询）
@@ -14,7 +16,7 @@
 - **structural**（协议/综合/句式 voice）：非单一论文蒸馏的结构性语料（决策表、验证协议、教科书框架应用），登记在 registry 的 `unattributed_corpus` 节，**不参与** VERIFIED/ROBUST 论文计数——可直接使用，无需"单源"标注
 - `source_tier: auxiliary` 的来源（写作工艺书，如 Booth、G&L）只登记出处，不计入 VERIFIED/ROBUST 的论文计数
 
-**两步读取**（与 write-introduction 一致）：选择阶段读本索引 + `_evidence_registry.yaml`（过滤/标注模式状态）；渲染阶段才读对应 corpus 文件。`next_batch_targets` 节列出距 VERIFIED 还差几篇论文的模式——蒸馏新论文时优先命中这些目标。
+**两步读取**：选择阶段读 catalog + `_evidence_registry.yaml -> asset_governance`（过滤/标注模式状态）；渲染阶段才读对应 corpus 文件。仅在审计、解释路由或显式 `include-all` 时使用本索引。`next_batch_targets` 节列出值得寻找交叉验证的模式，但不是自动晋升规则。
 
 ---
 
@@ -36,6 +38,8 @@
 | 需要主动管理读者/文献中的竞争预测 | [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md)（Preemptive Competing Account Management） | — |
 | 需要从一个领域向另一个领域扩展理论机制 | [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md)（Extension Logic） | — |
 | 同一构念的两个维度产生相反/互补预测 | [`subprotocols/B2_dual_track.md`](subprotocols/B2_dual_track.md) | [`sentences/mechanism_chain.md`](sentences/mechanism_chain.md)（双轨并行部分） |
+| 兄弟 IV 机制分工（同向同 DV）+ 共享缓冲调节 | [`subprotocols/hypothesis_organization_patterns.md`](subprotocols/hypothesis_organization_patterns.md)（Sibling IVs — Mechanism Division + Shared Buffer；EMERGING） | [`subprotocols/construct_differentiation_patterns.md`](subprotocols/construct_differentiation_patterns.md)（几何最小对）；[`subprotocols/B2_dual_track.md`](subprotocols/B2_dual_track.md)（近邻，勿混用） |
+| 用几何最小对证明兄弟维度可分离（固定 A 变 B） | [`subprotocols/construct_differentiation_patterns.md`](subprotocols/construct_differentiation_patterns.md)（Geometric Sibling-Construct Minimal Pair；EMERGING） | [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md)（语言版 minimal pair） |
 | 核心贡献是多层次/多条件的假设体系 | [`variants/C_hypothesis_tree.md`](variants/C_hypothesis_tree.md) | [`sentences/moderation.md`](sentences/moderation.md) |
 | 核心贡献是揭示动态过程和时间演化 | [`variants/D_process_theory.md`](variants/D_process_theory.md) | — |
 | 核心贡献是识别 boundary condition / contingency | [`variants/E_moderation.md`](variants/E_moderation.md) | [`sentences/moderation.md`](sentences/moderation.md), [`subprotocols/E1_categorical_moderation.md`](subprotocols/E1_categorical_moderation.md), [`subprotocols/bilateral_argumentation_templates.md`](subprotocols/bilateral_argumentation_templates.md), [`subprotocols/hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md), [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md)（Competing Baseline Resolution） |
@@ -76,7 +80,7 @@
 
 | 文件 | 父变体 | 适用场景 |
 |------|--------|---------|
-| [`construct_differentiation_patterns.md`](subprotocols/construct_differentiation_patterns.md) | A 构念辨析型 | 构念辨析的表格化定义、差异-借用过渡（Simultaneously Recognize X but Leverage Y） |
+| [`construct_differentiation_patterns.md`](subprotocols/construct_differentiation_patterns.md) | A 构念辨析型 | 构念辨析的表格化定义、差异-借用过渡（Simultaneously Recognize X but Leverage Y）、几何兄弟构念最小对 |
 | [`B2_dual_track.md`](subprotocols/B2_dual_track.md) | B 机制推演型 | 同一构念两个维度产生相反预测（损失规避 vs 长期聚焦） |
 | [`E1_categorical_moderation.md`](subprotocols/E1_categorical_moderation.md) | E 调节效应型 | Moderator 为分类变量（分组调节） |
 | [`argumentation_patterns.md`](subprotocols/argumentation_patterns.md) | 跨类型 | **T2→T3 过渡段/非常规论证动作**：竞争解释管理（Preemptive Competing Account Management）、Extension Logic、双理论两阶段机制、行业情境限定、双机制汇聚、最小对对比 vignette。段落级假设推导骨架（Anchor→Mechanism→Warrant→Prediction）已归 `hypothesis_derivation_patterns.md`，间接调节论证亦在该文件 |

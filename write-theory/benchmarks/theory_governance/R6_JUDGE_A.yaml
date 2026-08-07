@@ -1,0 +1,302 @@
+judge_id: A
+tasks:
+  - id: R6Q01
+    x_scores:
+      mechanism_completeness: 4
+      premise_and_warrant_soundness: 4
+      construct_discrimination: 4
+      boundary_level_time_precision: 4
+      prediction_testability: 4
+      task_contract_alignment: 5
+      adaptability_rather_than_templating: 5
+      epistemic_honesty: 5
+    y_scores:
+      mechanism_completeness: 5
+      premise_and_warrant_soundness: 5
+      construct_discrimination: 4
+      boundary_level_time_precision: 5
+      prediction_testability: 5
+      task_contract_alignment: 5
+      adaptability_rather_than_templating: 5
+      epistemic_honesty: 5
+    x_explicit_compliance: true
+    y_explicit_compliance: true
+    x_critical_failures: []
+    y_critical_failures: []
+    pairwise_choice: Y
+    reason: Y specifies a tighter level (port-level local union), effect timing (one or two bargaining rounds), and divergent diagnostic observations, and explicitly defends the low-state mechanism as affirmative rather than a mere absence.
+  - id: R6Q02
+    x_scores:
+      mechanism_completeness: 4
+      premise_and_warrant_soundness: 4
+      construct_discrimination: 4
+      boundary_level_time_precision: 4
+      prediction_testability: 4
+      task_contract_alignment: 5
+      adaptability_rather_than_templating: 5
+      epistemic_honesty: 5
+    y_scores:
+      mechanism_completeness: 5
+      premise_and_warrant_soundness: 4
+      construct_discrimination: 4
+      boundary_level_time_precision: 4
+      prediction_testability: 5
+      task_contract_alignment: 5
+      adaptability_rather_than_templating: 5
+      epistemic_honesty: 5
+    x_explicit_compliance: true
+    y_explicit_compliance: true
+    x_critical_failures: []
+    y_critical_failures: []
+    pairwise_choice: Y
+    reason: Y delivers two per-state signed conditional hypotheses plus richer, state-specific observable traces, whereas X collapses the prediction into a single comparative statement with thinner traces.
+  - id: R6Q03
+    x_scores:
+      mechanism_completeness: 5
+      premise_and_warrant_soundness: 5
+      construct_discrimination: 4
+      boundary_level_time_precision: 5
+      prediction_testability: 5
+      task_contract_alignment: 5
+      adaptability_rather_than_templating: 5
+      epistemic_honesty: 5
+    y_scores:
+      mechanism_completeness: 4
+      premise_and_warrant_soundness: 4
+      construct_discrimination: 4
+      boundary_level_time_precision: 4
+      prediction_testability: 5
+      task_contract_alignment: 5
+      adaptability_rather_than_templating: 5
+      epistemic_honesty: 5
+    x_explicit_compliance: true
+    y_explicit_compliance: true
+    x_critical_failures: []
+    y_critical_failures: []
+    pairwise_choice: X
+    reason: X's transition condition is operationalized and auditable (threshold over two consecutive seasons) and its proposition folds in the failed-branch redirect, while Y's transition condition rests on an unobservable assembly judgment.
+  - id: R6Q04
+    x_scores:
+      mechanism_completeness: 5
+      premise_and_warrant_soundness: 5
+      construct_discrimination: 5
+      boundary_level_time_precision: 5
+      prediction_testability: 5
+      task_contract_alignment: 5
+      adaptability_rather_than_templating: 5
+      epistemic_honesty: 5
+    y_scores:
+      mechanism_completeness: 4
+      premise_and_warrant_soundness: 4
+      construct_discrimination: 4
+      boundary_level_time_precision: 4
+      prediction_testability: 4
+      task_contract_alignment: 5
+      adaptability_rather_than_templating: 3
+      epistemic_honesty: 5
+    x_explicit_compliance: true
+    y_explicit_compliance: true
+    x_critical_failures: []
+    y_critical_failures: []
+    pairwise_choice: X
+    reason: X fully instantiates every transport role with concrete archival traces and poses a sharp translation-fidelity agenda with rival readings of identical traces, while Y's graph stays at generic placeholder labels and its open agenda is a broader category-scheme question.
+  - id: R6Q05
+    x_scores:
+      mechanism_completeness: 5
+      premise_and_warrant_soundness: 5
+      construct_discrimination: 4
+      boundary_level_time_precision: 4
+      prediction_testability: 4
+      task_contract_alignment: 5
+      adaptability_rather_than_templating: 5
+      epistemic_honesty: 5
+    y_scores:
+      mechanism_completeness: 4
+      premise_and_warrant_soundness: 5
+      construct_discrimination: 4
+      boundary_level_time_precision: 4
+      prediction_testability: 5
+      task_contract_alignment: 5
+      adaptability_rather_than_templating: 5
+      epistemic_honesty: 5
+    x_explicit_compliance: true
+    y_explicit_compliance: true
+    x_critical_failures: []
+    y_critical_failures: []
+    pairwise_choice: Y
+    reason: Y's reconciliation is the more theory-based dominance rule, separating the severity-expectation gap from remediability into two independently testable conditions, while X bundles two benefit sub-mechanisms and a single capacity threshold.
+  - id: R6Q06
+    x_scores:
+      mechanism_completeness: 4
+      premise_and_warrant_soundness: 5
+      construct_discrimination: 4
+      boundary_level_time_precision: 5
+      prediction_testability: 5
+      task_contract_alignment: 5
+      adaptability_rather_than_templating: 5
+      epistemic_honesty: 5
+    y_scores:
+      mechanism_completeness: 5
+      premise_and_warrant_soundness: 5
+      construct_discrimination: 4
+      boundary_level_time_precision: 5
+      prediction_testability: 4
+      task_contract_alignment: 5
+      adaptability_rather_than_templating: 5
+      epistemic_honesty: 5
+    x_explicit_compliance: true
+    y_explicit_compliance: true
+    x_critical_failures: []
+    y_critical_failures: []
+    pairwise_choice: tie
+    reason: Both give warranted countervailing mechanisms, tenure-based temporal ordering, and divergent traces; Y adds a compliance-monitoring contingency while X offers more directly observable behavioral traces, leaving them evenly matched.
+  - id: R6Q07
+    x_scores:
+      mechanism_completeness: 4
+      premise_and_warrant_soundness: 5
+      construct_discrimination: 5
+      boundary_level_time_precision: 4
+      prediction_testability: 4
+      task_contract_alignment: 5
+      adaptability_rather_than_templating: 5
+      epistemic_honesty: 5
+    y_scores:
+      mechanism_completeness: 5
+      premise_and_warrant_soundness: 5
+      construct_discrimination: 5
+      boundary_level_time_precision: 5
+      prediction_testability: 5
+      task_contract_alignment: 5
+      adaptability_rather_than_templating: 5
+      epistemic_honesty: 5
+    x_explicit_compliance: true
+    y_explicit_compliance: true
+    x_critical_failures: []
+    y_critical_failures: []
+    pairwise_choice: Y
+    reason: Y names cleaner capability dimensions, a dynamic temporal scope (accrual and decay across episodes), and discriminating observations pitched against both adjacent constructs, while X's discriminating test targets mainly the brokerage contrast.
+  - id: R6Q08
+    x_scores:
+      mechanism_completeness: 5
+      premise_and_warrant_soundness: 4
+      construct_discrimination: 4
+      boundary_level_time_precision: 4
+      prediction_testability: 4
+      task_contract_alignment: 5
+      adaptability_rather_than_templating: 5
+      epistemic_honesty: 5
+    y_scores:
+      mechanism_completeness: 5
+      premise_and_warrant_soundness: 5
+      construct_discrimination: 4
+      boundary_level_time_precision: 4
+      prediction_testability: 5
+      task_contract_alignment: 5
+      adaptability_rather_than_templating: 5
+      epistemic_honesty: 5
+    x_explicit_compliance: true
+    y_explicit_compliance: true
+    x_critical_failures: []
+    y_critical_failures: []
+    pairwise_choice: Y
+    reason: Y names its warrants more specifically (psychological safety and error-reporting research) and offers the sharper observable implication by tying recurrence intervals to completed structural action items.
+  - id: R6Q09
+    x_scores:
+      mechanism_completeness: 4
+      premise_and_warrant_soundness: 5
+      construct_discrimination: 4
+      boundary_level_time_precision: 5
+      prediction_testability: 5
+      task_contract_alignment: 5
+      adaptability_rather_than_templating: 5
+      epistemic_honesty: 5
+    y_scores:
+      mechanism_completeness: 4
+      premise_and_warrant_soundness: 5
+      construct_discrimination: 4
+      boundary_level_time_precision: 3
+      prediction_testability: 4
+      task_contract_alignment: 4
+      adaptability_rather_than_templating: 5
+      epistemic_honesty: 5
+    x_explicit_compliance: true
+    y_explicit_compliance: true
+    x_critical_failures: []
+    y_critical_failures: []
+    pairwise_choice: X
+    reason: X explicitly locks a three-year post-adoption horizon and defends branch coherence against mechanism drift, whereas Y never actually specifies its claimed fixed horizon.
+  - id: R6Q10
+    x_scores:
+      mechanism_completeness: 5
+      premise_and_warrant_soundness: 5
+      construct_discrimination: 4
+      boundary_level_time_precision: 5
+      prediction_testability: 5
+      task_contract_alignment: 5
+      adaptability_rather_than_templating: 5
+      epistemic_honesty: 5
+    y_scores:
+      mechanism_completeness: 5
+      premise_and_warrant_soundness: 5
+      construct_discrimination: 4
+      boundary_level_time_precision: 5
+      prediction_testability: 5
+      task_contract_alignment: 5
+      adaptability_rather_than_templating: 5
+      epistemic_honesty: 5
+    x_explicit_compliance: true
+    y_explicit_compliance: true
+    x_critical_failures: []
+    y_critical_failures: []
+    pairwise_choice: tie
+    reason: Both steelman the two camps at equal depth on the same locked unit and horizon with opposite-signed hypotheses and genuinely discriminating leave-usage observables; neither has a decisive edge.
+  - id: R6Q11
+    x_scores:
+      mechanism_completeness: 4
+      premise_and_warrant_soundness: 4
+      construct_discrimination: 4
+      boundary_level_time_precision: 4
+      prediction_testability: 4
+      task_contract_alignment: 5
+      adaptability_rather_than_templating: 5
+      epistemic_honesty: 5
+    y_scores:
+      mechanism_completeness: 5
+      premise_and_warrant_soundness: 5
+      construct_discrimination: 4
+      boundary_level_time_precision: 4
+      prediction_testability: 5
+      task_contract_alignment: 5
+      adaptability_rather_than_templating: 5
+      epistemic_honesty: 5
+    x_explicit_compliance: true
+    y_explicit_compliance: true
+    x_critical_failures: []
+    y_critical_failures: []
+    pairwise_choice: Y
+    reason: Y's pre-formalization marker (prepaid accounts under a named treasurer) is more concrete and its warrant is explicitly argued as informal-stage evidence, and it introduces a genuinely new next actor (the interim steering circle).
+  - id: R6Q12
+    x_scores:
+      mechanism_completeness: 4
+      premise_and_warrant_soundness: 4
+      construct_discrimination: 4
+      boundary_level_time_precision: 4
+      prediction_testability: 5
+      task_contract_alignment: 5
+      adaptability_rather_than_templating: 5
+      epistemic_honesty: 5
+    y_scores:
+      mechanism_completeness: 5
+      premise_and_warrant_soundness: 5
+      construct_discrimination: 4
+      boundary_level_time_precision: 4
+      prediction_testability: 5
+      task_contract_alignment: 5
+      adaptability_rather_than_templating: 5
+      epistemic_honesty: 5
+    x_explicit_compliance: true
+    y_explicit_compliance: true
+    x_critical_failures: []
+    y_critical_failures: []
+    pairwise_choice: Y
+    reason: Y frames expertise explicitly as a prior scope condition, defends the low-state gaming logic as affirmative, and gives exceptionally discriminating traces (category redefinitions and methodological footnotes under flat capex).

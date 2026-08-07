@@ -6,13 +6,12 @@
 meta:
   schema_version: "1.0.0"
   registry_type: theory-fragment-registry
-  last_updated: "2026-08-05"
-  total_papers_indexed: 64
-  batches_processed: 22
+  last_updated: "2026-08-06"
+  total_papers_indexed: 69
+  batches_processed: 27
   auxiliary_sources_note: "Entries with source_tier: auxiliary are writing-craft books, not empirical papers. They register provenance and stay EMERGING until the pattern is cross-validated in empirical paper distills; they never count toward VERIFIED/ROBUST paper_count thresholds on their own."
-  latest_batch_note: "2026-08-05e Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ: ADD mechanism_loss_trunk_multi_outcome_external_substitute + what_is_lost_benefit_inventory_then_absence + external_partial_substitute_attenuation (EMERGING section_variants); B9 pointer in B_mechanism_elaboration. Gap=Inadequacy aligned with Intro (do not drift to Incompleteness-primary). No core routing change."
-  note: "Reverse-engineered from existing corpus anchors. Batch 2026-07-09: distilled 4 recall papers (Darby 2023 MSOM, Mayo 2022 POM, Ball 2018 JOM, Darby 2026 JOM) into subprotocols and registry. Batch 2026-07-10: expanded Cui, Yang & Vertinsky (SMJ) with inverted-U mechanism, bilateral argumentation, flatten/steepen language, and local closure templates. Batch 2026-07-22: distilled Li, Bapuji, Talluri, Singh & Narayanan (2025 JSCM, Vertical Spillover of Product Recalls) — added dual_mechanism_convergent_moderation pattern to bilateral_argumentation_templates.md (moderator×mechanism matrix) and registered H1 dual-mechanism convergence under existing dual_mechanism_same_direction. Batch 2026-07-22b: distilled Cutolo & Ferriani (2024 JOM, narratives & atypicality) — added minimal_pair_contrast_vignette pattern to argumentation_patterns.md (Leah controlled-contrast showing device); registered parallel_buffering_moderators_single_mechanism; cutolo_ferriani also a 2nd source for write-introduction theory-lens/02-dual-theory-layered (processing fluency + Bloom & Lahey taxonomy). Batch 2026-07-22c: distilled Falchetti, Cattani & Ferriani (2022 SMJ, Start with Why) — added congruency_fit_fluency_mechanism to sentences/mechanism_chain.md (genuine gap; spans Falchetti + Cutolo); CORRECTED misclassification of falchetti_2022_smj (was construct_differentiation tfr_017, has no such content) → reclassified to congruency mechanism; construct_differentiation source_count 5→4. Falchetti intro hook (23-popular-debate) and Methods (多研究 变体1/2, 实验 变体1) already distilled in prior sessions. Batch 2026-07-28: backfill + wiring batch — registered two auxiliary sources whose fragments entered corpus in the 2026-07-27/28 waves but were never registered: Booth/Williams/Colomb (The Craft of Research, premise soundness gate + warrant tests + acknowledgment-response matrix + voice firewall → reasoning_soundness_protocol.md, acknowledgment_response.md) and Greene & Lidinsky 2017 (Rogerian four-step → acknowledgment_response.md §5; fallacy probes → reasoning_soundness_protocol.md §8). Same batch wired the registry into consumption: corpus/_index.md selection-stage pointer, write-theory/SKILL.md resource-loading clause, distill-theory-exemplar Phase 4 registry-writeback protocol. Registry previously orphaned (no .md referenced it) since creation. Batch 2026-08-03: distilled Schumacher, Keck & Tang (2020, SMJ); added the belief-updating/attention-threshold reversal pattern as EMERGING. Reference-level writeback was explicitly authorized by the user; no core routing or mandatory-slot rule was changed."
-
+  latest_batch_note: "2026-08-06h metadata: li_bapuji_talluri_singh_narayanan_2026_jscm renamed to li_bapuji_talluri_singh_narayanan_2026_jscm (year 2026). POM id unchanged: li_bapuji_talluri_singh_venkataraman_2026_pom."
+  note: "Batch 2026-08-06e Li_2026_POM Theory + quality-fix — see latest_batch_note. Batch 2026-08-06d Haunschild_Rhee_2004_MS — see prior. Batch 2026-08-06c Thirumalai_Sinha_2011_MS. Batch 2026-08-06b Kalaignanam. Prior batches unchanged."
 status_rules:
   EMERGING:
     paper_count_max: 2
@@ -26,6 +25,30 @@ status_rules:
     description: Pattern replicated across 5+ papers and 2+ subfields; can be default recommendation
 
 source_papers:
+  li_bapuji_talluri_singh_venkataraman_2026_pom:
+    display_name: "Li, Bapuji, Talluri, Singh & Venkataraman (2026, POM)"
+    journal: "Production and Operations Management"
+    year: 2026
+    subfield: "om"
+    theory_build_type: "Construct Differentiation → Mechanism Division → Boundary (shared buffer)"
+    fragments:
+      - fragment_id: tfr_170
+        type: geometric_sibling_construct_minimal_pair
+        title: "几何兄弟构念最小对——固定平均距离 d、只变分散构型（Figure 1）"
+        home_files:
+          - "subprotocols/construct_differentiation_patterns.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+        note: "Supply bases A vs B share average geographical distance d; A concentrated, B dispersed. Proves sibling dimensions are separable before mechanism division. Distinct from Cutolo language minimal-pair vignette."
+      - fragment_id: tfr_171
+        type: sibling_ivs_mechanism_division_shared_buffer
+        title: "兄弟 IV 机制分工 + 共享缓冲调节（distance→monitoring / dispersion→coordination / VI H3a/H3b）"
+        home_files:
+          - "subprotocols/hypothesis_organization_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Same-signed dual tracks on quality risk; not B2 opposing dimensions; not dual_mechanism_same_direction (single IV). H1 null + H3b reverse-signed handled in Results R6, not by rewriting Theory organization. Distinct from li_bapuji_talluri_singh_narayanan_2026_jscm dual_mechanism_convergent_moderation (same author team, different paper)."
+
   andersson_cuervo_cazurra_nielsen_2014_jibs_editorial:
     display_name: "Andersson, Cuervo-Cazurra & Nielsen (2014, JIBS Editorial)"
     journal: "Journal of International Business Studies"
@@ -42,6 +65,126 @@ source_papers:
         makadok_dimension: "Boundary"
         status: "EMERGING"
         note: "Provides the canonical nesting-structure declaration for cross-level moderation."
+
+  haunschild_rhee_2004_ms:
+    display_name: "Haunschild & Rhee (2004, MS)"
+    journal: "Management Science"
+    year: 2004
+    subfield: "om"
+    theory_build_type: "Incommensurability R1 (primary: X-side differentiation voluntary/involuntary) + R3-style discriminating test on classified X + R4 (secondary: generalism); Mechanism / Boundary"
+    fragments:
+      - fragment_id: tfr_165
+        type: competing_theories_sectioned_horse_race
+        title: "理论对垒分节赛马架构——镜像小节 × 序数互斥竞争假设（服务于 R1 分类后的裁决）"
+        home_files:
+          - "subprotocols/hypothesis_organization_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "PRIMARY ROUTE CORRECTION (user 2026-08-06): resolution operator is R1 — classify umbrella X (recall experience) into voluntary vs involuntary by volition; rival camps make opposite predictions about which X member produces more learning. Sectioned horse race (H2/H3) is the staging device AFTER X classification, not a pure R3 coexistence schedule. Volition camp vs attention camp; H2A process evidence; empirics adjudicate (H2 wins). Fills corpus gap vs Lee-Park R3 coexistence exemplars. Distinct from pontikes2012 (both hold), zhao-ding dual-track, wowak lettered pair, kalaignanam nondirectional."
+      - fragment_id: tfr_166
+        type: sectioned_competing_hypotheses
+        title: "分节编号竞争假设（H2/H3 序数互斥 vs Wowak H1a/H1b 字母对）"
+        home_files:
+          - "sentences/hypothesis_forms.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Sentence-level carrier of post-R1 adjudication: sequential numbers when each camp needs its own steelman subsection on a classified X member; lettered pair when contesting within one derivation unit. Mirrored closing sentence marks symmetry."
+      - fragment_id: tfr_167
+        type: original_mini_analysis_premise_warrant
+        title: "原创小型分析作前提担保（理论节内嵌计数+χ²检验）"
+        home_files:
+          - "subprotocols/evidence_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Load-bearing premise 'involuntary recalls are more salient' defended in situ: 1998 NHTSA 235 recalls (22% involuntary) vs ABI/INFORM 368 press articles (47% involuntary), Pearson chi-square(1)=37.2067, p<0.001; recovery sentence ties coverage as cause and consequence of salience."
+      - fragment_id: tfr_168
+        type: named_case_objection_rebuttal
+        title: "具名案例反驳预设异议（Case-as-Warrant 子型 C）"
+        home_files:
+          - "subprotocols/evidence_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "'One might think that inertia would not be a problem in the product recall context... This is not, however, always the case. For example, [Firestone/Bridgestone—Ford Venezuela 1998, two-year delay].' Defensive counterexample (exception does not exist), distinct from positive mechanism warrant."
+      - fragment_id: tfr_169
+        type: plain_language_prestatement_formal_hypothesis
+        title: "平语预告→正式假设双步式（starting hypothesis 标记基线地位）"
+        home_files:
+          - "sentences/hypothesis_forms.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "'We therefore use as our starting hypothesis a basic learning effect: [plain English].' → HYPOTHESIS 1 [formal]. Only for baseline hypotheses whose mechanism is already well documented; forbidden for novel core hypotheses."
+
+  thirumalai_sinha_2011_ms:
+    display_name: "Thirumalai & Sinha (2011, MS)"
+    journal: "Management Science"
+    year: 2011
+    subfield: "om"
+    theory_build_type: "Mechanism / Boundary (descriptive directional hypotheses; exploratory)"
+    fragments:
+      - fragment_id: tfr_164
+        type: temporal_dual_role_same_variable
+        title: "时间双重角色——同一变量作 ex ante 前因 × ex post 缓冲（符号相反）"
+        home_files:
+          - "subprotocols/hypothesis_organization_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Product scope as driver of recall likelihood (H7, focus dilution, Skinner 1974 focused factory) and as buffer of recall market penalties (H2, fallback options, Girotra 2007 substitutes). Two roles in separate models (conditional FE negbin vs event-study CAR WLS); Discussion integrates as diversification trade-off. Distinct from B2 (two dimensions→same DV), dual-edged trunk (same-time signed contingencies), F (inter-theory rivalry)."
+
+  kalaignanam_kushwaha_eilert_2013_jm:
+    display_name: "Kalaignanam, Kushwaha & Eilert (2013, JM)"
+    journal: "Journal of Marketing"
+    year: 2013
+    subfield: "marketing"
+    theory_build_type: "Mechanism / Boundary"
+    fragments:
+      - fragment_id: tfr_161
+        type: ability_motivation_enablers_framework
+        title: "能力-动机双调节锚定元框架"
+        home_files:
+          - "subprotocols/moderator_selection_frameworks.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Learning meta-consensus (ability vs motivation) anchors two moderators: shared product assets = transfer enabler (ability), prior brand quality = attention enabler (motivation). Orthogonal dimensions; distinct from darby2026 info-asymmetry two-level framework (same concept across levels)."
+      - fragment_id: tfr_162
+        type: equivocal_bilateral_nondirectional_moderation
+        title: "equivocal 双边论证 + 无向调节假设"
+        home_files:
+          - "sentences/moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Two schools of thought on one moderator (differentiation erosion vs expectation insulation) → single nondirectional H ('stronger or weaker'). Distinct from F competing-hypotheses: rivalry is intra-moderator, not inter-theory. Discussion must adjudicate winning mechanism."
+      - fragment_id: tfr_163
+        type: trivial_response_exclusion_temporal_mediation
+        title: "平凡响应排除 + 时间分离中介链"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Exclude mandated response (withdraw+repair, limited scope) to foreground root-cause learning (broad scope). Temporal chain X(t-1) → M(t) → Y(t+1) with theory-measures-model alignment declaration. Granger causality is the ceiling claim."
+
+  chen_ganesan_liu_2009_jm:
+    display_name: "Chen, Ganesan & Liu (2009, JM)"
+    journal: "Journal of Marketing"
+    year: 2009
+    subfield: "marketing"
+    theory_build_type: "Mechanism / Boundary"
+    fragments:
+      - fragment_id: tfr_159
+        type: single_sided_dialectical_opposition
+        title: "单侧辩证——共识受众侧作前提，新受众侧单假设"
+        home_files:
+          - "variants/G_dialectical_opposition.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Proactive recall: consumers read responsibility (consensus, not tested), investors read severe loss (H1 negative). Opposite readings reconcile in Discussion, not Theory."
+      - fragment_id: tfr_160
+        type: audience_split_signal_interpretation_base_rate_deviance
+        title: "信号解读的受众分裂链 + 基准背离放大"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "Info-asymmetry trunk → consensus side recap → 'had no other choice but to act proactively' severity inference → base-rate deviance amplification (own data) → single H1. Citation stacking with per-citation division of labor; no generic negativity-bias crutch."
 
   chung_low_rust_2022_jams:
     display_name: "Chung, Low & Rust (2022, JAMS)"
@@ -1449,10 +1592,10 @@ source_papers:
         status: "EMERGING"
         note: "FDA device class I/II vs III as information asymmetry boundary condition."
 
-  li_bapuji_talluri_singh_narayanan_2025_jscm:
-    display_name: "Li, Bapuji, Talluri, Singh & Narayanan (2025, JSCM)"
+  li_bapuji_talluri_singh_narayanan_2026_jscm:
+    display_name: "Li, Bapuji, Talluri, Singh & Narayanan (2026, JSCM)"
     journal: "Journal of Supply Chain Management"
-    year: 2025
+    year: 2026
     subfield: "om"
     theory_build_type: "Mechanism / Boundary"
     fragments:
@@ -1954,7 +2097,7 @@ patterns:
   paired_hypotheses:
     description: "a/b paired hypotheses for same IV across two DVs"
     legacy_implicit: true
-    status: "VERIFIED"
+    status: "EMERGING"
     source_count: 2
     source_papers:
       - "malik_wang_martin_gomez_mejia_2025_jm"
@@ -1963,7 +2106,7 @@ patterns:
   track_level_local_closure:
     description: "Track-level In summary → Therefore: H[N]a/H[N]b"
     legacy_implicit: true
-    status: "VERIFIED"
+    status: "EMERGING"
     source_count: 2
     source_papers:
       - "singh_grewal_2023_jmr"
@@ -2025,14 +2168,14 @@ patterns:
     source_count: 2
     source_papers:
       - "ball_shah_donohue_2018_jom"
-      - "li_bapuji_talluri_singh_narayanan_2025_jscm"
+      - "li_bapuji_talluri_singh_narayanan_2026_jscm"
     home_file: "subprotocols/argumentation_patterns.md"
   dual_mechanism_convergent_moderation:
     description: "Each moderator of a dual-mechanism main effect is reasoned through BOTH underlying mechanism channels and shown to converge on the same net direction, justifying a single signed moderation hypothesis; optionally presented as a moderator×mechanism matrix table"
     status: "EMERGING"
     source_count: 1
     source_papers:
-      - "li_bapuji_talluri_singh_narayanan_2025_jscm"
+      - "li_bapuji_talluri_singh_narayanan_2026_jscm"
     home_file: "subprotocols/bilateral_argumentation_templates.md"
   asymmetric_disposition_context_moderation:
     description: "Multiple moderators all weaken (or all strengthen) a disposition→outcome main effect, but each moderator operates via a DIFFERENT asymmetric mechanism on the two disposition poles (e.g., liberal vs conservative; promotion vs prevention). Three observed sub-variants: dampen-and-maintain, floor+ceiling compression, equilibrium lock-in"
@@ -2041,7 +2184,7 @@ patterns:
     source_papers:
       - "abdurakhmonov_ingram_ridge_2026_jom"
     home_file: "subprotocols/bilateral_argumentation_templates.md"
-    note: "Conceptually orthogonal companion to dual_mechanism_convergent_moderation (Li 2025): Li = moderator×mechanism matrix (symmetric convergence); this = moderator×disposition-pole matrix (varied asymmetry). Distinct from parallel_buffering_moderators_single_mechanism (multiple moderators, ONE shared mechanism)."
+    note: "Conceptually orthogonal companion to dual_mechanism_convergent_moderation (li_bapuji_talluri_singh_narayanan_2026_jscm): Li JSCM = moderator×mechanism matrix (symmetric convergence); this = moderator×disposition-pole matrix (varied asymmetry). Distinct from parallel_buffering_moderators_single_mechanism (multiple moderators, ONE shared mechanism)."
   multi_construct_comparison_table_definition:
     description: "New construct introduced via a multi-column comparison table against 3+ sibling constructs across functional facets (Core Idea × Mechanism × Pattern × Agency × Limitations), with explicit gap-filling positioning in the new construct's row; bookended by a distinguishing-features paragraph before and a synthesis paragraph after"
     status: "EMERGING"
@@ -2057,6 +2200,22 @@ patterns:
     source_papers:
       - "cutolo_ferriani_2024_jom"
     home_file: "subprotocols/argumentation_patterns.md"
+    note: "Language/representational vignette. Geometric sibling-construct subtype lives in geometric_sibling_construct_minimal_pair (li 2026 POM)."
+  geometric_sibling_construct_minimal_pair:
+    description: "Hold one sibling dimension's scalar constant and vary the other's spatial/structural configuration (figure) to prove construct separability before mechanism division"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "li_bapuji_talluri_singh_venkataraman_2026_pom"
+    home_file: "subprotocols/construct_differentiation_patterns.md"
+  sibling_ivs_mechanism_division_shared_buffer:
+    description: "Two sibling IVs each bind a distinct primary mechanism to the same signed outcome, then a shared buffer moderator attenuates both tracks (H3a/H3b)"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "li_bapuji_talluri_singh_venkataraman_2026_pom"
+    home_file: "subprotocols/hypothesis_organization_patterns.md"
+    note: "Near-neighbor of B2 (same-construct dimensions, often opposing) and of dual_mechanism_same_direction (single IV, one H). Do not conflate with li_bapuji_talluri_singh_narayanan_2026_jscm dual_mechanism_convergent_moderation."
   parallel_buffering_moderators_single_mechanism:
     description: "Multiple parallel moderators all buffer the same main-effect penalty via a single mechanism, organized by an external N-component taxonomy"
     status: "EMERGING"
@@ -2461,6 +2620,101 @@ patterns:
     home_file: "sentences/moderation.md"
     note: "Companion boundary sentence pattern for B9; opposite direction from board_governance_amplifying_boundary."
 
+  single_sided_dialectical_opposition:
+    description: "Single construct read oppositely by two audiences; consensus side recapped as premise (3+ citations + practitioner anecdote, no H), all theoretical increment on the new audience side; reconciliation deferred to Discussion."
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "chen_ganesan_liu_2009_jm"
+    home_file: "variants/G_dialectical_opposition.md"
+    note: "Chen2009 single-sided dialectic. Contrast with standard G (Pontikes 2012 mirrored H-pairs, same DV, theory-based reconciliation). Different DV families are the point."
+  audience_split_signal_interpretation_base_rate_deviance:
+    description: "Signaling mechanism chain: information-asymmetry trunk, consensus-side recap, 'no other choice but to act' severity inference, base-rate deviance amplification backed by own data, single H1."
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "chen_ganesan_liu_2009_jm"
+    home_file: "sentences/mechanism_chain.md"
+    note: "Sentence-level companion to tfr_159. Per-citation division of labor; 'supported in our data' requires descriptive stats already available; no negativity-bias crutch."
+
+  ability_motivation_enablers_framework:
+    description: "Anchor two moderators to the learning literature's ability-vs-motivation meta-consensus: structural asset as transfer enabler (ability side), perceptual asset as attention enabler (motivation side)."
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "kalaignanam_kushwaha_eilert_2013_jm"
+    home_file: "subprotocols/moderator_selection_frameworks.md"
+    note: "Fifth framework in the file. Orthogonal dimensions; distinct from darby2026 info-asymmetry two-level (same concept across levels) and Singh-Grewal information/attention (complementary, not orthogonal)."
+  equivocal_bilateral_nondirectional_moderation:
+    description: "Two schools of thought on one moderator with balanced literature support, resolving into a single nondirectional H ('stronger or weaker'); Discussion must adjudicate the winning mechanism."
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "kalaignanam_kushwaha_eilert_2013_jm"
+    home_file: "sentences/moderation.md"
+    note: "Boundary vs F: rivalry is intra-moderator (two schools), not inter-theory. First corpus entry of nondirectional hypothesis form."
+  trivial_response_exclusion_temporal_mediation:
+    description: "Exclude the phenomenon's mandated/trivial minimal response (limited scope) to foreground the broader discretionary mechanism; mediation chain X(t-1) → M(t) → Y(t+1) with theory-measures-model alignment declaration."
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "kalaignanam_kushwaha_eilert_2013_jm"
+    home_file: "sentences/mechanism_chain.md"
+    note: "Distinct from Preemptive Competing Account Management (which targets readers' rival theoretical predictions at T2→T3); this targets the phenomenon's minimal response form within a hypothesis-derivation paragraph."
+  temporal_dual_role_same_variable:
+    description: "Same firm characteristic plays opposite-signed dual roles across time: ex ante antecedent of the event (driver, harmful) and ex post buffer of the event's consequences (moderator, beneficial); two roles enter separate hypotheses in separate models; Discussion trade-off integration is obligatory."
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "thirumalai_sinha_2011_ms"
+    home_file: "subprotocols/hypothesis_organization_patterns.md"
+    note: "Distinct from B2 dual-track (two dimensions of one construct→same DV), dual-edged trunk (same-time signed enhancing/hindering contingencies), and F competing hypotheses (inter-theory rivalry adjudicated by data). No trade-off if both roles share the same sign."
+
+  competing_theories_sectioned_horse_race:
+    description: "Incommensurability R3 theory-section architecture: shared RQ + 'conflicting answers' opening → mirrored subsections each steelmanning one theory camp → sequential mutually-exclusive directional hypotheses (H[N] vs H[N+1]) on the same locked X/Y/unit/horizon/estimand → mechanism sub-hypothesis (H[N]A) supplies process evidence → empirics adjudicate → Discussion explains why the losing mechanism is weaker here."
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "haunschild_rhee_2004_ms"
+    home_file: "subprotocols/hypothesis_organization_patterns.md"
+    note: "Distinct from audience-role dichotomy (both hold across audiences), symmetric opposing dual-track (two DV dimensions, both hold), Wowak lettered pair (shared hypothesis number, adjacent paragraphs), and kalaignanam2013 equivocal nondirectional (avoids adjudication). Mirrored verbatim closing sentence is the symmetry marker."
+
+  sectioned_competing_hypotheses:
+    description: "Sequential-number competing hypotheses (H2 vs H3) instead of lettered pair (H1a/H1b) when each rival camp requires its own full steelman subsection; mirrored closing formula marks the two subsections' symmetric structure."
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "haunschild_rhee_2004_ms"
+    home_file: "sentences/hypothesis_forms.md"
+    note: "Selection rule added under 竞争假设: lettered pair = quick contest within one derivation unit; sectioned sequential = formal horse race with per-camp subsections (R3 discriminating test)."
+
+  original_mini_analysis_premise_warrant:
+    description: "Embed a small original descriptive analysis (counts + proportions + chi-square/t test) inside the Theory section to prove a load-bearing empirical premise in situ, rather than asserting it; must close with a recovery sentence tying the statistic back to the premise."
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "haunschild_rhee_2004_ms"
+    home_file: "subprotocols/evidence_patterns.md"
+    note: "Press-coverage chi-square (368 ABI/INFORM articles, 47% involuntary vs 22% base rate) supports the salience premise of the attention camp. Max 1-2 per paper; descriptive only—must not blur theory/results genre boundary."
+
+  named_case_objection_rebuttal:
+    description: "Anticipate the reader's context-exception objection in their own voice ('One might think that...'), pivot ('This is not, however, always the case'), then rebut with a named, verifiable case; defensive counterpart to Case-as-Warrant's positive illustration."
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "haunschild_rhee_2004_ms"
+    home_file: "subprotocols/evidence_patterns.md"
+    note: "Registered as 子型 C of case_as_warrant_for_mechanism. Firestone/Bridgestone-Ford Venezuela 1998 two-year delay rebuts 'no inertia for safety issues'. Case must be named, checkable, and directly on-point; return to derivation immediately."
+
+  plain_language_prestatement_formal_hypothesis:
+    description: "Two-step announcement for baseline hypotheses with well-documented mechanisms: plain-language proposition marked as 'starting hypothesis', then the formal HYPOTHESIS statement; spreads comprehension cost and separates baseline from novel hypotheses."
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "haunschild_rhee_2004_ms"
+    home_file: "sentences/hypothesis_forms.md"
+    note: "Plain and formal statements must be logically equivalent. Forbidden for novel core hypotheses (dilutes derivation)."
+
 # Status summary by Makadok dimension
 summary_by_dimension:
   Constructs:
@@ -2468,12 +2722,12 @@ summary_by_dimension:
     source_papers: 11
     verified_patterns: 1
   Mechanism:
-    total_fragments: 59
-    source_papers: 31
+    total_fragments: 67
+    source_papers: 35
     verified_patterns: 5
   Boundary:
-    total_fragments: 34
-    source_papers: 24
+    total_fragments: 37
+    source_papers: 26
     verified_patterns: 3
   Level:
     total_fragments: 0
@@ -2515,6 +2769,14 @@ honesty_boundaries:
       - "variants/B_mechanism_elaboration.md"
       - "references/output-format.md"
     source: "Kim_Lee_2026_SMJ distill (2026-08-05c)"
+  - id: hb_granger_causality_ceiling_for_panel_lag_designs
+    boundary: "面板 + 滞后 + first-differencing 设计允许的最强措辞是 Granger causality，且必须显式命名（'interpreted as Granger causality'）；正文假设可用 'lead to' / 'impact'，但不得写 'cause' / 'causal effect' / 'causal impact'"
+    allowed_language: "lead to / impact / interpreted as Granger causality"
+    exemplar: "Kalaignanam_Kushwaha_Eilert_2013_JM — Methods 显式声明 'allows the results to be interpreted as Granger causality'；全文未出现 structural causality 措辞"
+    affected_files:
+      - "sentences/mechanism_chain.md"
+      - "variants/B_mechanism_elaboration.md"
+    source: "Kalaignanam_Kushwaha_Eilert_2013_JM distill (2026-08-06)"
 
 # Next batch targets (to move EMERGING → VERIFIED / ROBUST)
 next_batch_targets:
@@ -2550,6 +2812,11 @@ next_batch_targets:
     current_sources:
       - "zorn_shropshire_martin_combs_ketchen_2017_smj"
     note: "Seek a second SMJ/AMJ/OrgSci governance paper that theorizes structural removal as mechanism loss, maps one loss state to multiple outcomes, and uses external monitors as partial-substitute attenuators."
+  - pattern: "temporal_dual_role_same_variable"
+    papers_needed: 2
+    current_sources:
+      - "thirumalai_sinha_2011_ms"
+    note: "Seek a second paper where one firm characteristic is both ex ante antecedent (driver) and ex post consequence buffer (moderator) with opposite normative signs, integrated as a trade-off in Discussion. Candidate hunting grounds: diversification/scope, R&D intensity, slack, geographic dispersion in event-consequence + event-likelihood dual designs (recalls, accidents, breaches, lawsuits)."
 
   - pattern: "rogerian_four_step_deescalation / fallacy_probes / premise_soundness_gate"
     papers_needed: 3
@@ -2610,3 +2877,85 @@ unattributed_corpus:
     function: "段内论点-论据-总结句布局：Topic→Reasoning→Tokens→Wrap 四段位 + 文献/理论/案例三类论据决策矩阵 + 段内 12 项诊断清单"
     consumed_by: ["references/phase-3-hypothesis-derivation.md §3.2 语料调用第8项", "corpus/_index.md 快速决策表+子协议表"]
     note: "整合四源（Dunleavy LSE Topic-Body-Tokens-Wrap + Indiana University coherence + Belcher 2019 Wk2 Toulmin + Jonsen et al. 2018 first/second-order 桥接）的结构性协议，非单一论文蒸馏。"
+  - file: "subprotocols/process_transition_operators.md"
+    status: structural
+    function: "D 型过程理论的阶段边界与反馈传输推理算子"
+    consumed_by: ["SKILL.md workflow 3-4", "variants/D_process_theory.md"]
+    note: "非论文验证协议；无 pattern_id，不进入 evidence/reference 状态机。只有独立论文蒸馏可另行产生 reference exemplar。"
+
+# -- THEORY ASSET GOVERNANCE START --
+asset_governance:
+  schema_version: 1
+  policy:
+    single_paper: reference_only
+    default_action_order:
+    - NONE
+    - REUSE
+    - EXTEND_SOURCE
+    - ADD_REFERENCE
+    - PROPOSE_VARIANT
+    cross_family_merge: review_only
+  default_architecture_record:
+    role: generative_strategy
+    lifecycle: active
+    evidence_status: structural
+    legacy_ids: []
+    validation_history_additions: []
+  default_pattern_record:
+    role: reference_exemplar
+    lifecycle: active
+    legacy_ids: []
+    validation_history_additions: []
+    source_paper_additions: []
+  default_legacy_record:
+    role: reference_exemplar
+    lifecycle: active
+    evidence_status: UNREGISTERED
+    legacy_ids: []
+    validation_history_additions: []
+    source_paper_additions: []
+  asset_overrides: {}
+  managed_references: {}
+  representative_reference_menus: {}
+  generation_guards:
+    default:
+      required:
+      - "State one stable argument graph: construct -> premise -> why-chain -> boundary/level/time -> prediction."
+      - "Name the actor-level conversion process; do not substitute labels or citations for the why-chain."
+      - "Keep any unverified setting fact, mechanism, or sign as an explicit placeholder or uncertainty."
+      - "Select one actor, one cue or constraint, one resulting action, and one diagnostic observation per reasoning branch; do not leave a menu of generic alternatives in final prose."
+      - "Turn the contract into a continuous argument; do not reproduce its checklist vocabulary as the paragraph structure."
+    D:
+      required:
+      - "For every proposed stage transition, name the actor, the transition condition, and the observable next state."
+      - "Build each boundary as current actor/action -> transition condition -> pre-next-stage observable marker -> next actor/state -> failed-transition branch; do not use the next stage's first action as the marker."
+      - "Specify who receives feedback, whether it reinforces, redirects, or terminates the process, and what could reveal that branch."
+      - "Transport feedback through source -> carrier/channel -> translation/aggregation -> decision-capable recipient -> interpretation criterion -> branch -> observable trace."
+      - "Use propositions or open process claims rather than a universal net-effect hypothesis unless the task independently warrants one."
+      - "Use a transition marker observable before the final outcome; state the warrant that makes the marker evidence of movement rather than a relabeled stage outcome."
+      - "Close the stage chain at the terminal process state named in the task or claim; chain further boundary crossings with their own markers when the immediate next state is only intermediate."
+    E:
+      required:
+      - "Derive both boundary states separately: condition meaning -> actor interpretation/capacity -> named mechanism -> directional outcome."
+      - "Place the boundary state before its condition-specific interpretation and mechanism in both graph and prose: boundary state as prior scope, X -> actor interpretation/capacity under that state -> mechanism -> Y; no directed edge may run from X to the boundary state."
+      - "State why the low-condition logic is more than the absence of the high-condition logic."
+      - "When directions oppose, make the conditional claim primary and do not add an unsupported unconditional main-effect hypothesis."
+      - "If the derivation fixes the sign in each boundary state, state signed predictions per state; reserve comparative 'more positive/more negative' wording for theoretically unfixed per-state net signs."
+    local_only:
+      required:
+      - "Return a local diagnostic: lock the immediate constructs, unit, time horizon, and unresolved routing decision."
+      - "Classify each disputed element as construct, alternative operationalization, mechanism, measured mediator, contextual condition, or temporal stage; name the observation that could discriminate the live alternatives."
+      prohibited:
+      - "Numbered hypotheses or propositions."
+      - "paper-state.yaml update, paper-level contribution claim, or corpus writeback."
+    no_numbered_hypotheses:
+      prohibited:
+      - "Numbered hypotheses or propositions."
+  reference_menu_cap: 5
+  render_cap: 4
+  section_render_cap: 8
+  snapshot:
+    architecture_assets: 7
+    pattern_assets: 120
+    inventory_sha256: ae7a54d43eb424b5934bcebce78b27855ebf03c8226772cf84d20ee4ecaeb3e7
+# -- THEORY ASSET GOVERNANCE END --
