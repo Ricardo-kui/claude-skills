@@ -193,31 +193,20 @@
 ## Non-Transferable Facts
 [仅适用于该论文的特定构念、理论视角、机制内容，不可迁移]
 
-## Corpus Recommendations（v1.4.0 新增）
+## Governance Plan
 
-基于本篇论文的提取结果，按 Corpus Taxonomy 分类给出沉淀建议。
+基于本篇论文的提取结果，按 Corpus Taxonomy 给出受控治理动作；不得提供可直接 append 的 corpus 条目。
 
 ```yaml
-corpus_recommendations:
-  ready_for_corpus:
-    - pattern_id: "[唯一标识，如 parallel_three_mechanisms]"
-      pattern_name: "[人类可读名称]"
+governance_plan:
+  actions:
+    - action: "NONE / REUSE / EXTEND_SOURCE / ADD_REFERENCE / PROPOSE_VARIANT"
+      pattern_id: "[ADD_REFERENCE 时的唯一标识]"
       source_paper: "[作者_年份_期刊]"
-      corpus_path: "corpus/subprotocols/arrangement_patterns.md"
-      section: "[建议写入的章节]"
-      build_type: "[适用构建类型]"
-      confidence: "high / medium / low"
-      cross_paper_evidence: "[已验证的范文数 / 需要再积累的范文数]"
-      rationale: "[为什么这个模式值得沉淀]"
-      entry_preview: |
-        ### [Pattern Name]
-        [可直接写入 corpus 的 markdown 条目预览]
-  needs_validation:
-    - pattern_id: "[唯一标识]"
-      pattern_name: "[名称]"
-      source_paper: "[作者_年份_期刊]"
-      corpus_path: "[目标路径]"
-      note: "[为什么还需要验证 / 需要找什么类型的论文验证]"
+      target_architecture_id: "[theory:architecture:A-G]"
+      home_file: "[ADD_REFERENCE 的 corpus 相对路径]"
+      nearest_neighbor_id: "[现有 governed asset]"
+      capability_loss_if_merged: "[没有它会失去什么可迁移生成能力]"
   anti_patterns:
     - pattern_id: "[唯一标识]"
       pattern_name: "[名称]"
@@ -227,7 +216,7 @@ corpus_recommendations:
 ```
 
 **记录原则**：
-- 单篇论文出现的新颖模式 → 优先放入 `needs_validation`
+- 单篇论文出现的新颖模式 → `NONE`，或有明确能力损失时 `ADD_REFERENCE`（hidden reference）
 - 与 write-theory 当前 Constraints 冲突的做法 → 放入 `anti_patterns`
 - 过于论文特异的机制内容 → 不进入任何 corpus，只在 Non-Transferable Facts 记录
 

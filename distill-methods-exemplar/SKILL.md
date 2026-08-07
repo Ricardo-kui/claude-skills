@@ -209,12 +209,16 @@ phase_1_5_quality_gate:
 - 可迁移性评分（高/中/低）及证据（出现频次）
 - 范式排他性（该骨架是否只为某类设计所需）
 - 设计变体（同类骨架在不同设计中的改写模式）
-- **skill_gap**（相对于 write-methods 当前 corpus 的状态）：
-  - `ADD`：当前 corpus **无**此类变体 → 新增到目标设计类型文件
-  - `EXTEND`：当前 corpus **有**但本论文提供了额外维度 → 追加为变体
-  - `REPLACE`：当前 corpus 的旧变体**质量不如**本论文 → 标记旧变体，建议替换
-  - `SKIP`：与当前 corpus **高度重叠** → 不写入，仅在学习要点中记录
-  - 每个骨架必须标注对应的 `目标文件`（如 `生存分析.md`）和 `目标槽位`（如 M7）
+- **skill_gap**（相对于 write-methods 当前 corpus 的状态）：先运行
+  `python ../write-methods/scripts/methods_variant_catalog.py list --design-type "<设计类型>" --slot M<编号> --include-reference`
+  查看最近邻，再按以下顺序判决：
+  - `NONE`（默认）：没有独立、可迁移的生成能力 → 不写入
+  - `REUSE`（默认）：既有资产已覆盖说服动作 → 只增加学习记录，不新建变体
+  - `EXTEND_SOURCE`：与既有变体同构 → 只把论文加入该变体的来源/证据，不新建编号
+  - `ADD_REFERENCE`：只有并入最近邻会损失独立生成能力时，才新增单篇 reference exemplar
+  - `PROMOTE`：同构模式达到跨论文复现或通过用户专家审计 → 只更新 evidence registry 的菜单角色
+  - `REPLACE_REFERENCE`：旧 reference 存在事实或生成缺陷 → 保留旧 ID 映射并替换内容
+  - 每个非 `NONE` 判决必须标注目标文件、目标槽位、最近邻 ID；`ADD_REFERENCE` 还必须回答 `capability_loss_if_merged`
 
 ### 2.3 Validity Logic 提炼
 
@@ -277,7 +281,7 @@ phase_2_distillation:
 ## Slot Coverage (M1–M10) — 含 quality + learn_worth
 [Phase 1 输出]
 
-## 值得学的骨架（skill_gap != SKIP）
+## 值得学的骨架（skill_gap 为 EXTEND_SOURCE / ADD_REFERENCE / PROMOTE / REPLACE_REFERENCE）
 [来自 Phase 2.2 — 仅列出真正新增的]
 
 ## 论证手法诊断
@@ -296,40 +300,44 @@ phase_2_distillation:
 
 本阶段生成**受治理的 adoption instructions**。输出回答三个问题：
 1. **改哪个文件** → 精确到 `write-methods/econometric-models/[设计类型].md`
-2. **怎么改** → ADD / EXTEND / REPLACE / SKIP，含具体骨架和插入位置
+2. **怎么改** → NONE / REUSE / EXTEND_SOURCE / ADD_REFERENCE / PROMOTE / REPLACE_REFERENCE
 3. **为什么** → 与当前 corpus 的差异 + 对 write-methods skill 的提升
 
 ### skill_update_instructions 格式
 
 ```yaml
 phase_4_skill_update_instructions:
-  - action: "ADD"           # ADD / EXTEND / REPLACE / SKIP
+  - action: "ADD_REFERENCE"
     story_fidelity_classification: "section_variant"
     target_file: "生存分析.md"  # write-methods/econometric-models/ 下的文件名
     target_slot: "M7"
     insert_after: "变体 6（piecewise exponential）"  # 语义定位——描述该插入在哪个已有变体之后，不硬编码数字
     skeleton: "..."
     reason: "当前 生存分析 M7 变体1-6 全部是 AFT+Weibull 框架——缺少指数/参数风险模型的复发事件处理。本论文填补了这一缺口，且包含了 gap-time vs continuous-time 的显式论证。"
+    nearest_neighbor_id: "生存分析:v4"
+    capability_loss_if_merged: "既有变体处理复发事件相关性；本资产独立处理 gap-time 与 continuous-time 的 estimand 选择。"
     source_paper: "Mayo_Ball_Mills_2022_POM"
 
-  - action: "SKIP"
+  - action: "REUSE"
     target_file: "生存分析.md"
     target_slot: "M7"
+    nearest_neighbor_id: "生存分析:v1"
     reason: "AFT+Weibull 段落与已有变体1（4/4 复现）高度重叠——不构成新的叙事模式。"
 
-  - action: "EXTEND"
+  - action: "EXTEND_SOURCE"
     target_file: "面板数据-OLS.md"
     target_slot: "M2"
-    insert_after: "变体 8（回顾性偏差三角检验）"
-    skeleton: "..."
-    reason: "当前 面板数据-OLS M2 变体默认要求逐步排除漏斗。本论文展示了一种替代模式（多数据库交集→直接报告最终 N），需作为可选变体加入。"
+    nearest_neighbor_id: "面板数据-OLS:v2"
+    reason: "样本交集漏斗与既有变体同构；增加来源和 paper_count，不新建编号。"
 
-  - action: "REPLACE"
-    target_file: "计数模型.md"
-    target_slot: "R3"
-    replace_variant: "变体 1（Cutolo 负二项四拍）"  # 描述要替换的变体
-    replacement_skeleton: "..."
-    reason: "当前变体的拍数不够完整——本论文的四拍节奏更完整（假设提醒→双DV方向→百分比翻译→支持判断）。"
+  - action: "PROMOTE"
+    target_file: "面板数据-OLS.md"
+    target_slot: "M2"
+    target_asset_id: "面板数据-OLS:v2"
+    registry_role: "core_operator"
+    paper_count: 4
+    verification_basis: "cross_paper_replication"
+    reason: "新增独立论文使同构样本漏斗达到 4 篇复现；只更新 registry，不复制正文。"
 
   new_anti_patterns_for_skill:
     - target_file: "面板数据-OLS.md"
@@ -348,15 +356,18 @@ phase_4_skill_update_instructions:
 
 ### 写入后操作
 
-只有 `story_fidelity_classification` 为 `section_variant` 或 `ritual_only`，且目标仅是 reference corpus 时，才对 `action != SKIP` 的指令执行写入：
-1. 打开 `target_file`
-2. 在 `insert_after_variant: N` 之后插入新变体
-3. 更新 `source_papers` 列表
-4. 更新 `variants_count` 和 `updated`
-5. 对 `new_anti_patterns_for_skill` → 写入目标文件的「反模式」段落
-6. 更新 `INDEX.md` 表行和「已填充变体」计数
+执行写入前必须再次精确渲染 `nearest_neighbor_id`。然后按 action 分流：
 
-`core_candidate`、单篇证据，或任何 `skill_main_skeleton_update` 只生成显式人工审核包；不得自动修改 SKILL.md、路由、强制槽位顺序、story schema 或 stage gate。
+1. `NONE` / `REUSE`：不修改 corpus。
+2. `EXTEND_SOURCE`：只更新既有变体的来源、复现计数和 `_evidence_registry.yaml` 的来源证据；不新建编号，也不自动写入 `variant_evidence`。
+3. `ADD_REFERENCE`：仅当 `capability_loss_if_merged` 具体且可审计时追加变体；新资产不得写入 registry 的晋升表。
+4. `PROMOTE`：只更新 `_evidence_registry.yaml -> variant_evidence`；单篇证据不得晋升，除非记录 `verification_basis: user_expert_audit`。
+5. `REPLACE_REFERENCE`：保留旧 asset ID 与来源映射；不得把替换伪装成新增资产。
+6. 新增 reference 时更新目标文件 `source_papers`、`variants_count`、`updated` 和 `INDEX.md`；无新增时不改计数。
+7. 对 `new_anti_patterns_for_skill` 写入目标文件的「反模式」段落。
+8. 最后从 `write-methods/` 运行 `python scripts/methods_variant_catalog.py audit`。任何 registry 快照、角色、槽位、数量或 ID 不一致都使 Phase 4 失败。
+
+`core_candidate`、单篇晋升请求，或任何 `skill_main_skeleton_update` 只生成显式人工审核包；不得自动修改 SKILL.md、路由、强制槽位顺序、story schema 或 stage gate。
 
 ---
 
@@ -373,19 +384,21 @@ phase_4_skill_update_instructions:
 - [ ] **Substance not Verbatim**: 具体事实已泛化为 [placeholder]；论证结构和过渡句式可保留原貌
 - [ ] **Fact Boundary**: 所有不可迁移事实已被明确标记
 - [ ] **Causal Language Audit**: 提取的骨架中因果语言强度与设计类型匹配
-- [ ] **Skill Update Audit**: Phase 4 的每个 `ADD/EXTEND/REPLACE` 指令都有明确的目标文件和插入位置
+- [ ] **Skill Update Audit**: Phase 4 的每个非 `NONE/REUSE` 指令都有目标文件、槽位、最近邻 ID 与证据动作
+- [ ] **Consolidation Gate**: `ADD_REFERENCE` 均说明合并会损失的独立生成能力；答不出则改为 `REUSE`
+- [ ] **Registry Audit**: 晋升仅来自 `_evidence_registry.yaml -> variant_evidence`，且 catalog audit 通过
 - [ ] **Story Fidelity Audit**: 每个 adoption 指令都有 classification；单篇论文未改变核心规则
 
 ### skill_version_impact（新增）
 
-每个 `ADD/EXTEND/REPLACE` 行动必须附带版本影响评估：
+每个 `EXTEND_SOURCE/ADD_REFERENCE/PROMOTE/REPLACE_REFERENCE` 行动必须附带版本影响评估：
 
 ```yaml
 phase_5_skill_version_impact:
   write_methods:
-    current_version: "3.0.0"
-    suggested_version: "3.1.0"  # 或 "3.0.0"（仅 minor 时不变）
-    bump_reason: "ADD 6 个变体 / EXTEND 2 个变体 / 新增 1 个主骨架警告"
+    current_version: "3.3.1"
+    suggested_version: "3.3.1"  # reference/registry 更新通常不改主 skill 版本
+    bump_reason: "ADD_REFERENCE 1 个 / EXTEND_SOURCE 2 个 / PROMOTE 1 个"
     changed_files:
       - "生存分析.md: +2 变体 (13-14)"
       - "面板数据-OLS.md: +1 变体 (9)"
@@ -394,14 +407,14 @@ phase_5_skill_version_impact:
       - "生存分析 M7: 增加 CEM 预处理建议行"
       - "面板数据-OLS M2: 增加多数据库合并替代方案注释"
   distill_methods:
-    current_version: "1.1.0"
-    suggested_version: "1.1.0"  # 本次蒸馏未发现 skill 自身协议需修改
+    current_version: "1.2.0"
+    suggested_version: "1.2.0"
 ```
 
 ### 最终输出物清单
 
 1. **Phase 4 Skill Update Instructions**（可执行的技能更新指令——这是核心产出）
-2. **Expression Skeletons**（仅含 `skill_gap != SKIP` 的骨架）
+2. **Expression Skeletons**（仅含 `EXTEND_SOURCE/ADD_REFERENCE/PROMOTE/REPLACE_REFERENCE` 的骨架）
 3. **Validity Logic Map**（该设计类型的 threat 处理模式）
 4. **Methods DNA with Skill Comparison**（DNA 指标 + skill 对比解读）
 5. **Skill Version Impact**（版本号建议 + 变更文件清单）
@@ -424,4 +437,4 @@ phase_5_skill_version_impact:
 - **`methods-review`** — Phase 1.5 槽位覆盖检查可复用
 
 ---
-*基于 Pollock 2025 Ch07、MVP30 范文语料库构建。版本 1.1.0。*
+*基于 Pollock 2025 Ch07、MVP30 范文语料库构建。版本 1.2.0。*

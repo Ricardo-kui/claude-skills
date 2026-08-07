@@ -7,7 +7,7 @@ description: |
   三层目标：
   1. **学习顶刊证据展演手法** — 理解 Results 如何组织假设检验、处理非显著、管理读者预期
   2. **完善 write-results skill** — Results DNA 和跨论文节奏对比反哺主骨架和路由逻辑
-  3. **丰富 econometric-models** — 验证通过的变体写入 write-results 内部 corpus，corpus 是学习成果的沉淀
+  3. **治理 econometric-models** — 默认复用或扩展既有来源；单篇独特写法仅进入 reference，跨论文验证后才提议晋升 operator
 
   下游：`write-results` (v3.0.0+) 检测到蒸馏请求时自动路由到本 skill。
   触发词：「蒸馏 results」「results 范文分析」「拆解 results」「提取 results 模板」「处理新论文 results」「results 骨架提炼」。
@@ -22,7 +22,7 @@ description: |
 **你的工作是三层递进**：
 1. **学习顶刊证据展演手法**（Phase 0–2）：估计器分类 → 槽位映射 → 段落节奏 + 表达骨架——回答"这篇论文的 Results 是怎么让读者相信假设被支持/拒绝的？"
 2. **量化和跨论文对比**（Phase 3–4）：Results DNA 指标 + 与已有 corpus 交叉验证——回答"这个节奏模式是独特的还是已经在 corpus 里了？"
-3. **沉淀到 corpus**（Phase 4–5）：仅将验证通过且真正新增的变体写入 `write-results/econometric-models/[结果类型].md`——corpus 是学习成果，不是目标本身
+3. **治理 corpus**（Phase 4–5）：先复用、追加证据或合并近邻；只有确有独立生成能力的写法才新增 reference，晋升 operator 必须独立审核——corpus 是学习成果，不是目标本身
 
 核心原则：
 - **How > What**：提炼 Results 如何组织假设检验、如何处理非显著结果、如何管理读者预期，而非复制具体系数和 p 值。
@@ -236,17 +236,24 @@ Results 不是静态描述，而是**节奏化的证据展演**。提炼每个�
   - IV: 拆分为第一阶段→第二阶段两段
   - 实验: 替换为 t-test 格式
 [节奏标记]: [方向][显著性+系数][幅度解释][支持判断]
-[skill_gap]: ADD / EXTEND / REPLACE / SKIP
+[nearest_neighbor_id]: "<结果类型>:vN / NONE"
+[capability_loss_if_merged]: "若并入最近邻，会损失的独立输入条件、证据转换动作、输出义务或诚实边界；无损失则写 NONE"
+[governance_action]: NONE / REUSE / EXTEND_SOURCE / ADD_REFERENCE / PROPOSE_OPERATOR / PROMOTE / MERGE / DEPRECATE
 [目标文件]: "OLS-FE.md / 生存分析.md / ..."
 [目标槽位]: "R3 / R4 / R7 / ..."
 ```
 
-**skill_gap 标准**：
-- `ADD`：当前 write-results corpus **无**此类骨架 → 新增到目标文件
-- `EXTEND`：当前 **有**但本论文提供了额外维度（如新的交互报告节奏）→ 追加为变体
-- `REPLACE`：当前旧变体质量不如本论文（如缺少 CI）→ 标记替换
-- `SKIP`：与当前 corpus 高度重叠 → 不写入，仅在学习要点中记录
-- 每个骨架必须标注 `目标文件`（如 `OLS-FE.md`）和 `目标槽位`（如 R3）
+**治理判决标准**（默认 `REUSE` 或 `NONE`）：
+- `NONE`：没有值得沉淀的新增证据组织能力。
+- `REUSE`：既有资产已完整覆盖；不改正文，仅在报告中记录复用。
+- `EXTEND_SOURCE`：与既有资产同构；只向 registry/来源记录增加论文、paper count 与子领域，不新建编号。
+- `ADD_REFERENCE`：单篇写法有明确学习价值，且合并确会损失独立生成能力；新增后必须保持 `reference_exemplar`。
+- `PROPOSE_OPERATOR`：已达到跨论文复现门槛且具有独立生成能力；只生成审核包，不自动晋升。
+- `PROMOTE`：人工确认审核包后，只更新 `_evidence_registry.yaml -> asset_governance.overrides`；不复制正文。
+- `MERGE`：将同构资产并入母资产；保留来源和旧 ID 映射。
+- `DEPRECATE`：资产失去路由价值；保留旧 ID，但退出活动菜单。
+
+每个候选先查询同结果类型、同槽位的最近邻，并回答 `capability_loss_if_merged`。仅“论文、变量、领域、表格编号或表层句式不同”时必须 `REUSE`、`EXTEND_SOURCE` 或 `NONE`，不得新建。
 
 ### 2.3 Validity Logic 提炼
 
@@ -294,8 +301,8 @@ Results 不是静态描述，而是**节奏化的证据展演**。提炼每个�
 ## Slot Coverage (R1–R9) — 含 quality + learn_worth
 [Phase 1 输出]
 
-## 值得学的骨架（skill_gap != SKIP）
-[来自 Phase 2.2 — 仅列出真正新增的]
+## 治理判决
+[来自 Phase 2.2；列出最近邻、能力损失与 NONE/REUSE/EXTEND_SOURCE/ADD_REFERENCE/PROPOSE_OPERATOR/MERGE/DEPRECATE]
 
 ## 论证手法诊断
 [Phase 3 诊断维度]
@@ -310,37 +317,56 @@ Results 不是静态描述，而是**节奏化的证据展演**。提炼每个�
 
 本阶段生成**受治理的 adoption instructions**，回答三个问题：
 1. **改哪个文件** → 精确到 `write-results/econometric-models/[结果类型].md`
-2. **怎么改** → ADD / EXTEND / REPLACE / SKIP，含具体骨架和插入位置
+2. **怎么改** → 优先 NONE / REUSE / EXTEND_SOURCE；仅在独立生成能力成立时 ADD_REFERENCE / PROPOSE_OPERATOR，并支持 PROMOTE / MERGE / DEPRECATE
 3. **为什么** → 与当前 corpus 的差异 + 对 write-results skill 的提升
 
 ### skill_update_instructions 格式
 
 ```yaml
-phase_4_skill_update_instructions:
-  - action: "ADD"
+actions:
+  - action: "EXTEND_SOURCE"
     story_fidelity_classification: "section_variant"
     target_file: "生存分析.md"
     target_slot: "R3"
-    insert_after: "变体 5（事件研究 CAR 第二阶段）"  # 语义定位
-    skeleton: "..."
-    reason: "当前 生存分析 R3 变体1-5 全部是 AFT 的 exponentiated beta 解释。本论文展示了指数风险模型的 exp(β)−1 百分比三拍节奏，填补了参数风险模型 R3 的空白。"
+    target_asset_id: "生存分析:v1"
+    nearest_neighbor_id: "生存分析:v1"
+    capability_loss_if_merged: "NONE"
+    reason: "与既有 AFT 四拍同构；本论文只增加跨论文证据，不新增生成动作。"
     source_paper: "Mayo_Ball_Mills_2022_POM"
 
-  new_anti_patterns_for_skill:
-    - target_file: "OLS-FE.md"
-      slot: "R7"
-      pattern: "稳健性按表格机械罗列而不按威胁组织"
+  - action: "ADD_REFERENCE"
+    story_fidelity_classification: "section_variant"
+    target_file: "生存分析.md"
+    target_slot: "R4"
+    nearest_neighbor_id: "生存分析:v2"
+    capability_loss_if_merged: "新增直接 Wald 跨组系数差异裁决；既有资产只有分别显著/不显著对照。"
+    registry_role: "reference_exemplar"
+    insert_after: "生存分析:v2"
+    skeleton: "..."
+    source_paper: "..."
 
-  new_honesty_boundaries_for_skill:
-    - target_file: "计数模型.md"
-      boundary: "分样本 H3 的 null-in-one-subgroup 只有在分样本基于理论驱动时才可解释为确证性证据"
+new_anti_patterns_for_skill:
+  - target_file: "OLS-FE.md"
+    slot: "R7"
+    pattern: "稳健性按表格机械罗列而不按威胁组织"
 
-  skill_main_skeleton_update: []
+new_honesty_boundaries_for_skill:
+  - target_file: "计数模型.md"
+    boundary: "分样本 H3 的 null-in-one-subgroup 只有在分样本基于理论驱动时才可解释为确证性证据"
+
+skill_main_skeleton_update: []
 ```
 
-### 写入后操作
+### 写入与晋升规则
 
-只有 classification 为 `section_variant` 或 `ritual_only`，且目标仅为 reference corpus 时，才对 `action != SKIP` 的指令执行写入并更新索引、计数。`core_candidate`、单篇证据及任何核心骨架、路由、强制槽位顺序、story schema 或 stage gate 变更只生成显式人工审核包，不自动执行。
+1. `NONE` / `REUSE`：不改 corpus。
+2. `EXTEND_SOURCE`：只更新既有资产的 `evidence_additions`，不新建编号；重复来源必须幂等。
+3. `ADD_REFERENCE`：仅在 `capability_loss_if_merged` 具体且可审计时写入；新资产保持默认 `reference_exemplar`。
+4. `PROPOSE_OPERATOR`：只生成显式人工审核包。
+5. `PROMOTE`：人工确认后只更新 `_evidence_registry.yaml -> asset_governance.overrides`。1–2 篇证据不得晋升，除非记录 `verification_basis: user_expert_audit`；专家覆盖只允许 optional。
+6. `MERGE` / `DEPRECATE`：保留旧 ID、来源和迁移目标，不物理删除历史证据。
+7. Slot core、强制槽位顺序、story schema 或 stage gate 变更始终只生成审核包，不自动执行。
+8. 将 `actions` 保存为 YAML，先运行 `python scripts/results_corpus_governance.py apply-plan <plan.yaml> --dry-run`；人工确认后去掉 `--dry-run`。脚本必须在临时副本通过 catalog 验证后，才同步写回 Markdown、registry 与 INDEX。最后运行 governance `validate` 和 catalog `audit`；任何数量、槽位、角色、生命周期、重复 ID 或映射错误都使 Phase 4 失败。
 
 ---
 
@@ -357,7 +383,8 @@ phase_4_skill_update_instructions:
 - [ ] **Causal Language Audit**: 提取的骨架中因果语言强度与估计器类型匹配
 - [ ] **Nonsignificant Audit**: 如果原文有非显著假设，蒸馏报告是否记录了其句式处理
 - [ ] **Robustness Audit**: 稳健性检验是否按 threat 组织，而非机械列表
-- [ ] **Skill Update Audit**: Phase 4 的每个 ADD/EXTEND/REPLACE 指令都有明确的目标文件和插入位置
+- [ ] **Nearest-Neighbor Audit**: 每个 ADD_REFERENCE / PROPOSE_OPERATOR 都有最近邻和不可合并能力说明
+- [ ] **Registry Audit**: 全部资产由 `_evidence_registry.yaml -> asset_governance` 物化，且 governance validate 与 catalog audit 均通过
 - [ ] **Story Fidelity Audit**: headline answer/climax 与 robustness/falling action 已判定，单篇论文未改变核心规则
 
 ### skill_version_impact（新增）
@@ -365,9 +392,9 @@ phase_4_skill_update_instructions:
 ```yaml
 phase_5_skill_version_impact:
   write_results:
-    current_version: "3.0.0"
-    suggested_version: "3.1.0"
-    bump_reason: "ADD 5 个变体 / EXTEND 2 个变体 / 新增 1 个 R7 主骨架要求"
+    current_version: "3.5.0"
+    suggested_version: "3.5.0"
+    bump_reason: "EXTEND_SOURCE 5 个既有资产 / ADD_REFERENCE 1 个 / 无 operator 自动晋升"
     changed_files:
       - "生存分析.md: +2 变体"
       - "OLS-FE.md: +1 变体"
@@ -375,14 +402,14 @@ phase_5_skill_version_impact:
       - "生存分析 R3: 增加 exp(β)−1 百分比翻译拍"
       - "OLS-FE R7: 强制 threat-based 组织"
   distill_results:
-    current_version: "1.1.0"
-    suggested_version: "1.1.0"
+    current_version: "1.3.0"
+    suggested_version: "1.3.0"
 ```
 
 ### 最终输出物清单
 
 1. **Phase 4 Skill Update Instructions**（可执行的技能更新指令——核心产出）
-2. **Expression Skeletons**（仅含 skill_gap != SKIP 的骨架）
+2. **Expression Skeletons**（按治理判决列出；NONE/REUSE 也必须保留判决依据）
 3. **Rhythm Map**（假设检验节奏、稳健性节奏）
 4. **Results DNA with Skill Comparison**（DNA 指标 + skill 对比解读）
 5. **Skill Version Impact**（版本号建议 + 变更文件清单）
@@ -406,9 +433,6 @@ phase_5_skill_version_impact:
 - **`results-review`** — Phase 1.5 槽位覆盖 + Rhythm Map 可复用
 
 ---
-*基于 Pollock 2025 Ch07、MVP30 范文语料库构建。版本 1.1.1。*
-
----
 
 ## 反模式（蒸馏过程中主动排查）
 
@@ -424,4 +448,4 @@ phase_5_skill_version_impact:
 
 
 ---
-*基于 nuwa-skill 流水线框架、Pollock 2025 Ch07、MVP30 范文语料库构建。版本 1.0.0 — Results 蒸馏 Meta-Skill。*
+*基于 nuwa-skill 流水线框架、Pollock 2025 Ch07、MVP30 范文语料库构建。版本 1.3.0 — Results 蒸馏治理 Meta-Skill。*
