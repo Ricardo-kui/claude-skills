@@ -1,0 +1,167 @@
+schema_version: "0.1.0-pilot"
+pilot_status: shadow_only
+decision_node: results.R2.OLS_FE
+description: >-
+  Read-only sidecar index for testing targeted retrieval against the unchanged
+  OLS-FE legacy corpus. This file does not authorize merging, deletion, status
+  promotion, or default-path changes.
+
+sources:
+  legacy_corpus:
+    file: econometric-models/OLS-FE.md
+    sha256: 3b372d78cac2e824a20441a5c784e81d38f5c13edba5fef6b6e077334eae54ae
+    expected_variant_headings: 46
+  evidence_registry:
+    file: econometric-models/_evidence_registry.yaml
+
+selection_policy:
+  hard_filter: requires_all
+  ranking:
+    - matched_required_features
+    - matched_optional_features
+    - evidence_status
+    - asset_id
+  include_fallback_when_top_k_allows: true
+  default_top_k: 3
+  note: >-
+    Specific task fit outranks evidence status. EMERGING assets may be retrieved
+    for an explicit matching task but are never marked default_eligible. When
+    top_k is greater than one, reserve the final position for the ROBUST fallback.
+  output_contract:
+    - Map each hypothesis to the model or column where its focal term first enters.
+    - Keep R2 as navigation; do not report support, coefficients, or significance beyond task-supplied first-stage facts.
+    - Treat first-stage significance as relevance evidence only, not proof of exclusion validity or resolved endogeneity.
+    - Do not infer the baseline fixed-effects structure, table layout, or diagnostic results when the task does not state them.
+  feature_aliases:
+    heckman: heckman_selection
+    heckman_two_stage: heckman_selection
+    heckman_procedure: heckman_selection
+    heckman_correction: heckman_selection
+    selection_correction: heckman_selection
+    model_free_preview: model_free_evidence
+    descriptive_quartile_preview: model_free_evidence
+    polynomial_relationship: polynomial_model
+    curvilinear_model: polynomial_model
+    experimental_regression: experimental_design
+    factorial_experiment: experimental_design
+    binary_endogenous_variable: binary_endogenous_predictor
+    residual_inclusion: control_function
+
+assets:
+  - asset_id: r2_ols_model_sequence
+    asset_role: slot_core
+    lifecycle: active
+    evidence_status: ROBUST
+    default_eligible: true
+    fallback: true
+    requires_all: []
+    match_features:
+      - standard_ols
+      - hierarchical_models
+      - table_navigation
+    locator:
+      type: registry_skeleton
+      file: econometric-models/_evidence_registry.yaml
+      estimator: OLS_FE
+      slot: R2
+      variant_id: r2_ols_model_sequence
+
+  - asset_id: r2_ols_experimental_seven_model_hierarchy
+    asset_role: optional_operator
+    lifecycle: candidate
+    evidence_status: EMERGING
+    default_eligible: false
+    fallback: false
+    requires_all:
+      - experimental_design
+      - three_way_interaction
+    match_features:
+      - seven_model_sequence
+      - multiple_traits
+      - manipulated_moderators
+      - simple_slope_comparison
+    locator:
+      type: markdown_heading
+      file: econometric-models/OLS-FE.md
+      legacy_variant: 16
+      heading: "### 变体 16: R2 7模型层次回归表导航 — 主效应→双向→三向递进 (1篇高价值)"
+
+  - asset_id: r2_ols_polynomial_curve_moderation_sequence
+    asset_role: optional_operator
+    lifecycle: candidate
+    evidence_status: EMERGING
+    default_eligible: false
+    fallback: false
+    requires_all:
+      - polynomial_model
+    match_features:
+      - curve_moderation
+      - multiple_moderators
+      - full_model_stability
+      - panel_data
+    locator:
+      type: markdown_heading
+      file: econometric-models/OLS-FE.md
+      legacy_variant: 19
+      heading: "### 变体 19: R2 模型序列 — 多项式主效应 + 多个曲线调节 (1篇高价值)"
+
+  - asset_id: r2_ols_model_free_quartile_opening
+    asset_role: optional_operator
+    lifecycle: candidate
+    evidence_status: EMERGING
+    default_eligible: false
+    fallback: false
+    requires_all:
+      - model_free_evidence
+    match_features:
+      - quartile_means
+      - descriptive_preview
+      - scatter_plot
+      - continuous_predictor
+    locator:
+      type: markdown_heading
+      file: econometric-models/OLS-FE.md
+      legacy_variant: 22
+      heading: "### 变体 22: R2 无模型证据开场 — 四分位均值/中位数单调性 (1篇高价值)"
+
+  - asset_id: r2_ols_heckman_two_stage_table_navigation
+    asset_role: optional_operator
+    lifecycle: candidate
+    evidence_status: EMERGING
+    default_eligible: false
+    fallback: false
+    requires_all:
+      - heckman_selection
+    match_features:
+      - separate_first_stage_table
+      - multiple_hypotheses
+      - column_navigation
+      - inverse_mills_ratio
+    generation_guardrails:
+      - End with an explicit mapping from the focal, two-way, and three-way hypotheses to their stated columns.
+      - Describe a firm-fixed-effects column as an alternative specification unless the prior fixed-effects structure is supplied.
+    locator:
+      type: markdown_heading
+      file: econometric-models/OLS-FE.md
+      legacy_variant: 24
+      heading: "### 变体 24: R2 Heckman 两阶段表格导航 — 第一阶段 Table 3 → 第二阶段 Columns 1-4 (1篇高价值)"
+
+  - asset_id: r2_ols_dual_endogeneity_selection_navigation
+    asset_role: optional_operator
+    lifecycle: candidate
+    evidence_status: EMERGING
+    default_eligible: false
+    fallback: false
+    requires_all:
+      - control_function
+      - binary_endogenous_predictor
+    match_features:
+      - heckman_selection
+      - sample_selection
+      - same_table_first_stage
+      - residual_inclusion
+    locator:
+      type: markdown_heading
+      file: econometric-models/OLS-FE.md
+      legacy_variant: 28
+      heading: "### 变体 28: R2 — 截面 OLS/FE 中二元内生变量 + 样本选择的双阶段修正表导航 (1篇高价值)"

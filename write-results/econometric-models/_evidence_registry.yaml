@@ -3,9 +3,12 @@
 # 设计说明见 INDEX.md
 
 meta:
-  schema_version: 1.0.0
-  registry_type: estimator-slot-skeleton
-  last_updated: '2026-08-05'
+  schema_version: 2
+  registry_type: estimator-slot-skeleton+asset-governance
+  canonical_promotion_source: asset_governance.overrides
+  asset_id_scheme: markdown_stem_variant_number
+  evidence_summary_semantics: literature_coverage_not_menu_routing
+  last_updated: '2026-08-06'
   last_batch_id: batch_29_castellaneta_conti_kacperczyk_2017_smj
   batches_processed: 29
   total_papers_indexed: 30
@@ -16,6 +19,98 @@ meta:
   - marketing
   - finance
   - accounting
+  total_result_types: 20
+  filled_result_types: 16
+  total_variants: 163
+  empty_result_types:
+  - 同伴效应-网络效应
+  - 堆叠扩散Logit
+  - 推断二元结果
+  - 构造暴露分解
+  menu_roles:
+    core_operator: 0
+    optional_operator: 4
+    reference_exemplar: 159
+  variants_by_result_type:
+    BLP-状态空间: 5
+    DiD: 10
+    IV-2SLS: 10
+    Logit-Probit-Ordered-Probit: 18
+    OLS-FE: 46
+    SEM-moderated-mediation: 7
+    VARX-PVAR: 7
+    三向交互: 3
+    事件研究法: 5
+    匹配DiD: 1
+    同伴效应-网络效应: 0
+    堆叠扩散Logit: 0
+    多研究: 8
+    定性过程研究: 6
+    实验: 5
+    推断二元结果: 0
+    构造暴露分解: 0
+    生存分析: 19
+    计数模型: 12
+    跨受众构念对比: 1
+
+# BEGIN MANAGED ASSET GOVERNANCE
+# 所有 Markdown 资产按 inventory + default_record 物化为一对一记录；只有
+# 非默认角色、证据增量或生命周期变更写入 overrides，避免复制163份相同字段。
+asset_governance:
+  schema_version: 1
+  locator_scheme: parsed_markdown_block
+  default_record:
+    role: reference_exemplar
+    lifecycle: active
+    merged_into: null
+    legacy_ids: []
+  inventory:
+    BLP-状态空间: 5
+    DiD: 10
+    IV-2SLS: 10
+    Logit-Probit-Ordered-Probit: 18
+    OLS-FE: 46
+    SEM-moderated-mediation: 7
+    VARX-PVAR: 7
+    三向交互: 3
+    事件研究法: 5
+    匹配DiD: 1
+    同伴效应-网络效应: 0
+    堆叠扩散Logit: 0
+    多研究: 8
+    定性过程研究: 6
+    实验: 5
+    推断二元结果: 0
+    构造暴露分解: 0
+    生存分析: 19
+    计数模型: 12
+    跨受众构念对比: 1
+  overrides:
+    OLS-FE:v2:
+      role: optional_operator
+      status: VERIFIED
+      paper_count: 4
+      cross_subfields: 3
+      verification_basis: cross_paper_replication
+    Logit-Probit-Ordered-Probit:v9:
+      role: optional_operator
+      status: VERIFIED
+      paper_count: 2
+      cross_subfields: 2
+      verification_basis: user_expert_audit
+    Logit-Probit-Ordered-Probit:v12:
+      role: optional_operator
+      status: VERIFIED
+      paper_count: 1
+      cross_subfields: 1
+      verification_basis: user_expert_audit
+    生存分析:v1:
+      role: optional_operator
+      status: VERIFIED
+      paper_count: 4
+      cross_subfields: 2
+      verification_basis: cross_paper_replication
+# END MANAGED ASSET GOVERNANCE
 status_rules:
   EMERGING:
     paper_count_max: 2
@@ -1525,7 +1620,7 @@ estimators:
           rhythm_tags: []
           notes: ''
           corpus_path: econometric-models/生存分析.md
-        - id: r4_sentence_interaction_significance
+        - id: r4_survival_sentence_interaction_significance
           skeleton: The coefficient for [moderator] * [IV] (β = [value], p < [threshold]) is [positive/negative] and significant,
             indicating that the [high/low] hazard of [DV] [early/late] in [IV] is [stronger/weaker] when [moderator condition],
             lending support to Hypothesis [N].
@@ -1649,7 +1744,7 @@ estimators:
           rhythm_tags: []
           notes: ''
           corpus_path: econometric-models/生存分析.md
-        - id: r7_sentence_threat_positioning
+        - id: r7_survival_sentence_threat_positioning
           skeleton: One concern is that our findings depend on [specific threat].
           skeleton_level: sentence
           paper_count: 1
@@ -1663,7 +1758,7 @@ estimators:
           rhythm_tags: []
           notes: ''
           corpus_path: econometric-models/生存分析.md
-        - id: r7_sentence_test_action
+        - id: r7_survival_sentence_test_action
           skeleton: To address this concern, we re-estimate our models using [alternative method].
           skeleton_level: sentence
           paper_count: 1

@@ -1,10 +1,10 @@
 ---
 corpus: write-results
-description: Results 填空骨架变体库，按结果类型组织。由 distill-results-exemplar 手动写入验证通过的变体。
+description: Results 证据展演资产库，按结果类型组织；reference 与 operator 由 distill-results-exemplar 和 evidence registry 分轨治理。
 organization: by_result_type
 result_types_count: 20
 created: 2026-05-18
-updated: 2026-08-05
+updated: 2026-08-06
 ---
 
 # Results Econometric Models Corpus
@@ -13,7 +13,13 @@ updated: 2026-08-05
 
 按结果类型组织。每个文件包含：
 1. **主骨架引用** — 指向 `references/slot-R*.md` 中对应设计类型的变体（按需加载规则见 `write-results/SKILL.md` → 槽位骨架加载）
-2. **累积变体** — 由 `distill-results-exemplar` Phase 4 自动写入的验证通过变体
+2. **累积资产** — 由 `distill-results-exemplar` 治理的 reference exemplars 与经 registry 显式晋升的 operators
+
+> **当前规范（2026-08-06）**：正文文件是唯一内容来源；从 `write-results/` 运行
+> `python scripts/results_variant_catalog.py audit` 实时计算数量与菜单角色。当前共 **163** 个可解析资产，
+> 分布于 16 个已填充结果类型：4 个 registry 明示的 optional operators、159 个单篇/EMERGING/未充分结构化的 reference exemplars；通用 core 由 `references/slot-R*.md` 承担。
+> `_evidence_registry.yaml -> asset_governance` 是全部资产生命周期和菜单晋升的唯一授权源；Markdown 中的“通过”、VERIFIED 或复现比例本身不授权进入默认菜单。
+> 下方按日期排列的“总变体数”只是在当时的历史快照，不得用于当前路由。
 
 ## 结果类型索引
 
@@ -25,8 +31,8 @@ updated: 2026-08-05
 | [DiD](DiD.md) | DiD | 10 | 2026-08-05 |
 | [计数模型](计数模型.md) | 计数模型 | 12 | 2026-08-03 |
 | [实验](实验.md) | 实验 | 5 | 2026-08-03 |
-| [多研究](多研究.md) | 多研究 | 8 | 2026-08-02 |
-| [定性过程研究](定性过程研究.md) | 定性过程研究 | 4 | 2026-07-07 |
+| [多研究](多研究.md) | 多研究 | 8 | 2026-08-06 |
+| [定性过程研究](定性过程研究.md) | 定性过程研究 | 6 | 2026-08-06 |
 | [IV-2SLS](IV-2SLS.md) | IV-2SLS | 10 | 2026-08-05 |
 | [匹配DiD](匹配DiD.md) | 匹配DiD | 1 | 2026-08-05 |
 | [堆叠扩散Logit](堆叠扩散Logit.md) | 堆叠扩散Logit | 0 | 2026-05-18 |
@@ -42,10 +48,13 @@ updated: 2026-08-05
 
 ## 写入规则
 
-1. 仅 `distill-results-exemplar` Phase 4 验证通过的变体可写入
+1. 蒸馏默认执行 `NONE`、`REUSE` 或 `EXTEND_SOURCE`；只有合并会损失独立生成能力时才 `ADD_REFERENCE`
 2. 每个变体标注来源论文、验证状态、写入日期
-3. 不覆盖现有变体，仅追加
-4. 变体达到 3+ 时，考虑提升为 skill 主骨架
+3. 新增前必须记录最近邻 ID 与 `capability_loss_if_merged`
+4. 单篇/EMERGING 写法登记为 `reference_exemplar`，不进入默认生成菜单
+5. 晋升只写入 registry：VERIFIED 或专家审核可成为 `optional_operator`；`core_operator` 还需 ROBUST、5+ 篇、跨至少两个子领域并通过行为验证
+6. 不覆盖或删除历史来源；合并时保留来源映射和旧 ID，避免引用失效
+7. 把 Phase 4 `actions` 交给 `python scripts/results_corpus_governance.py apply-plan <plan.yaml>`；该脚本在临时副本验证后同步正文、registry 与 INDEX。最后运行 `python scripts/results_corpus_governance.py validate` 和 `python scripts/results_variant_catalog.py audit`
 
 ## 语料库质量状态
 

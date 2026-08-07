@@ -2,8 +2,8 @@
 name: write-results
 description: |
   顶刊 Results 填空段落骨架生成器。输入结果类型后输出带 [placeholder] 的可直接粘贴段落（R1–R9 槽位，骨架在 `references/slot-*.md` 按需加载）。
-  覆盖 19 种结果类型：OLS-FE、Logit-Probit-Ordered-Probit、生存分析、DiD、计数模型（含AME+区域显著性）、实验、多研究、IV/2SLS、匹配DiD、堆叠扩散Logit、同伴效应-网络效应、推断二元结果、跨受众构念对比、三向交互、构造暴露分解、SEM-moderated-mediation、事件研究法、定性过程研究、VARX-PVAR。双受众平行对比见 slot-R3 变体；非显著深化/反方向见 slot-R6。
-  蒸馏请求（「蒸馏 results」「results 范文分析」「处理新论文 results」「results 骨架提炼」）不直接处理——自动路由到 `distill-results-exemplar` 执行 Phase 0–5 蒸馏协议；验证通过的变体由其 Phase 4 写入 `econometric-models/[结果类型].md`。
+  覆盖 20 种结果类型：OLS-FE、Logit-Probit-Ordered-Probit、生存分析、DiD、计数模型（含AME+区域显著性）、实验、多研究、IV/2SLS、匹配DiD、堆叠扩散Logit、同伴效应-网络效应、推断二元结果、跨受众构念对比、三向交互、构造暴露分解、SEM-moderated-mediation、事件研究法、定性过程研究、VARX-PVAR、BLP-状态空间。双受众平行对比见 slot-R3 变体；非显著深化/反方向见 slot-R6。
+  蒸馏请求（「蒸馏 results」「results 范文分析」「处理新论文 results」「results 骨架提炼」）不直接处理——自动路由到 `distill-results-exemplar` 执行 Phase 0–5 治理协议；默认复用或扩展来源，独特单篇只写为 reference，operator 晋升只由 registry 显式授权。
   触发词：「写results」「results模板」「结果部分怎么写」「帮我写results」「result skeleton」「写结果」「假设检验」「交互效应」「稳健性检验」「经济显著性」「平行趋势」「marginal effect」「双受众」「对立结果」「替代解释」「hazard model」「风险模型」「survival analysis」「CEM」「split sample」。
   当用户提及系数解释、表格导航、模型序列、robustness check、安慰剂检验、机制检验、非显著深化、方向相反时也应触发。
   **与 write-methods 的实验/多研究分工**：实验**结果**（主效应/交互显著性、操纵检验结果）与多研究的**结果对比/跨研究综合**属本 skill（Results）；实验**设计**（操纵、随机化、样本分配）与多研究的**研究设计序列**属 `write-methods`。用户只说"实验/多研究"未指定 section 时，先确认是写结果还是写设计。
@@ -199,12 +199,26 @@ robustness_plan:
 | R8 补充/事后/机制 | `references/slot-R8.md` | 约 2/3 论文包含 | — |
 | R9 Results 证据收束 | `references/slot-R9.md` | 需要总结复杂或混合证据时 | 默认跳过 |
 
-> **结果类型变体加载（飞轮积累，勿漏读）**：确定结果类型后，**先查 `econometric-models/INDEX.md` 的「结果类型索引表」**确认该类型的变体数与最后更新日期；若变体数 >0，**必须加载 `econometric-models/[结果类型].md`** 读取已蒸馏变体（飞轮积累，如 OLS-FE 已有 42 变体、生存分析 19 变体、计数模型 11 变体），与主 slot 骨架配合使用——只用 slot 主骨架而漏读已蒸馏变体 = 飞轮价值流失。变体数 = 0 的结果类型（如 DiD）仅用 slot 主骨架。新蒸馏变体经 `distill-results-exemplar` → Phase 4 写入并同步更新 INDEX.md 变体数。
+### 结果类型变体：两阶段渐进检索
+
+`references/slot-R*.md` 是默认生成骨架；`econometric-models/*.md` 是证据分层的补充资产，不再整文件加载。每处理一个槽位：
+
+1. 先加载对应 `references/slot-R<编号>.md`。
+2. 将用户输入和 `paper-state.yaml` 中的结果类型规范化为 corpus 文件名。目录接受对外接口别名，包括 `OLS/FE`/`fixed effects`→`OLS-FE`、`Logit`/`Probit`/`ordered probit`→`Logit-Probit-Ordered-Probit`、`Cox`/`AFT`/`hazard model`→`生存分析`、`negative binomial`/`Poisson`→`计数模型`、`IV/2SLS`→`IV-2SLS`、`同伴效应/网络效应`→`同伴效应-网络效应`、`定性过程研究/定性发现`→`定性过程研究`。
+3. 查询同一结果类型、同一槽位的默认候选：
+   `python scripts/results_variant_catalog.py list --result-type "<结果类型>" --slot R<编号>`
+4. 仅在候选确实增加生成能力时，按稳定 ID 精确读取，单槽选择 **0–4 个**：
+   `python scripts/results_variant_catalog.py render --id "<结果类型>:vN"`
+   四个是复杂任务的安全上限，不是目标配额；通常选择 0–2 个。候选必须功能互补，例如分别覆盖表格导航、假设裁决、幅度翻译和证据边界；不得用近义标题凑满。候选用于提取论证动作，不得拼接或仿写其表层句式。
+5. 若默认候选为空或不匹配，但任务明确需要某个特殊技术，再加 `--include-reference` 查看单篇 exemplar；选定后须用 `render ... --allow-reference`，并把它当类比材料而非通用规则。单槽最多使用 2 个 `reference_exemplar`，其余名额留给 operator 或当前 slot 骨架。
+6. 不得仅因“该结果类型有变体”就读取整个 `econometric-models/[结果类型].md`。仅当目录脚本报错、资产无法解析或用户显式要求 legacy 全库审查时，才整文件回退，并说明原因。
+
+`econometric-models/_evidence_registry.yaml -> asset_governance` 是全部资产身份、生命周期与菜单晋升的唯一授权源。163 个资产由 inventory + default record + sparse overrides 一对一物化；未覆盖角色的资产无论 Markdown 标为“通过”、VERIFIED 或何种复现比例，一律是 `reference_exemplar`。1–2 篇证据默认不得晋升；只有记录 `verification_basis: user_expert_audit` 时才可成为 `optional_operator`。`core_operator` 还必须满足 ROBUST、5+ 篇、跨至少两个子领域并通过行为验证。未知类型、非法槽位、未知或重复 ID、失效 merge target、未授权 reference 均必须报错，禁止静默回退。
 
 ---
 ## 按设计类型路由
 
-具体变体见 `econometric-models/[结果类型].md`。以下为示例骨架（OLS/FE + 交互效应）：
+具体变体通过上方目录脚本按槽位精确读取。以下为示例骨架（OLS/FE + 交互效应）：
 
 **输入**：`/write-results OLS/FE --hypotheses="H1: DT -> Routine updating (+); H2: Routine updating -> Innovation (+); H3: DT × AC -> Innovation" --has-interactions`
 
@@ -464,7 +478,7 @@ results:
 
 ## 语料与变体
 
-具体变体见 `econometric-models/[结果类型].md`。新蒸馏结果通过 `distill-results-exemplar` → Phase 4 自动写入。
+具体变体仍以 `econometric-models/[结果类型].md` 为唯一正文来源；`_evidence_registry.yaml -> asset_governance` 是资产证据增量、菜单晋升和生命周期的唯一治理权威。`scripts/results_variant_catalog.py` 建立实时只读目录；`scripts/results_corpus_governance.py` 事务化执行来源扩展、新增 reference、晋升、合并与降级，并在临时副本验证后才写回。执行蒸馏计划：`python scripts/results_corpus_governance.py apply-plan <plan.yaml>`；预检使用 `--dry-run`；最终运行两个脚本的 `validate` / `audit`。不得把新增编号数作为质量 KPI；优先记录 REUSE、EXTEND_SOURCE、PROMOTE、MERGE/DEPRECATE 与 NONE。
 
 ---
-*基于 34 篇 MVP30 范文语料库、Pollock 2025 Ch07、Yuan et al. (2026) JOM 六维稳健性框架构建。版本 3.2.0。*
+*基于 34 篇 MVP30 范文语料库、Pollock 2025 Ch07、Yuan et al. (2026) JOM 六维稳健性框架构建。版本 3.5.0。*

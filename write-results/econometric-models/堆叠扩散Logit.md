@@ -19,7 +19,7 @@ updated: 2026-05-18
 
 ## 累积变体
 
-<!-- distill-results-exemplar Phase 4 验证通过的变体写入此处 -->
+<!-- distill-results-exemplar Phase 4 仅在独立生成能力成立时追加 reference；菜单晋升由 registry 授权 -->
 <!-- 格式：
 ### 变体 N: [来源论文] (YYYY-MM-DD)
 **验证状态**: 通过 / 需修正
