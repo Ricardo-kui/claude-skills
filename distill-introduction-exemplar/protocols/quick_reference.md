@@ -119,4 +119,4 @@ Constructs / Mechanism / Boundary / Phenomenon / Level / Mode / Question / Outpu
 
 1. 保存报告到 Vault fine_grained 目录
 2. 检查是否有**新骨架**需要注册到 `write-introduction` 语料库
-3. 如有新 tension/hook → 创建 corpus 文件 + 更新 `_evidence_registry.yaml` + 更新 `SKILL.md`
+3. 如发现新 tension/hook → 输出 `PROPOSE_ROUTING_CHANGE` 或 `ADD_REFERENCE` 审核计划；不得直接创建 corpus 文件、修改 `_evidence_registry.yaml` 或修改 `SKILL.md`

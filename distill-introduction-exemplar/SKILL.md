@@ -27,7 +27,7 @@ Distill how a published Introduction works—not what it says—into reusable, e
 4. Load supporting protocols only when their output is required: `protocols/batch_mode.md`, `protocols/profile_template.md`, `protocols/story_architecture_fields.md`, `protocols/product_validation.md`, `protocols/phase4_output_blocks.md`, `protocols/corpus_file_templates.md`, and `protocols/json_output_schema.md`.
 5. Preserve evidence provenance. Do not promote a one-paper pattern to a stable corpus rule. Use fine-grained Incommensurability routes for retrieval and comparison, not as mandatory templates: L2 tactics remain optional variants and L3 paper signatures never enter core routing.
 6. In Phase 4, compare observed practice with current `write-introduction` rules and emit `skill_design_feedback`. Persist every candidate with `_update_design_feedback.py`; distinguish corpus gaps from routing, validator, output-contract, schema, and stage-gate defects.
-7. Auto-write reference variants. Apply bounded core corrections only when the evidence and authorization gates in `references/phase-4-validation-writeback.md` pass; always review schema or stage-gate changes explicitly.
+7. Emit a governed action plan; do not edit corpus files directly. Default to REUSE or EXTEND_SOURCE, add a single-paper pattern only as ADD_REFERENCE, and require an explicit PROMOTE before it can enter a generative menu. Apply the plan through `../write-introduction/scripts/introduction_corpus_governance.py`, always dry-run first. Review routing, schema, stage-gate, and other high-risk changes explicitly.
 
 ## Output contract
 
