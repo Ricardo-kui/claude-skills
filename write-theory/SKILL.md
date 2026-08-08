@@ -111,6 +111,10 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 - `/paper-review`、`/theory-review` — 以本 skill 输出作为跨 Section 对齐与 Theory 草稿审查的基准
 - `/distill-theory-exemplar` — 新论文 Theory 蒸馏后回写 `corpus/`
 
+## 原文锚点使用纪律（verbatim anchor）
+
+语料变体/句式模板的 `**原文锚点**` 字段是来源论文原句的风格参照（由 distill-theory-exemplar 提取，见其"原文锚点提取规则"）。生成段落时：**结构跟骨架、语言风味跟锚点**——填入 [placeholder] 后保持锚点的句式节奏与措辞质感，用于校准"顶刊味道"；**不得逐字复制锚点内容，不得保留其专有名词/数字**。无锚点的旧变体（标注"待补"）按骨架直接生成。选材时参照"选材 Gate"（distill-theory-exemplar）的 routing 表 + 验证状态三带判定。
+
 ## Evidence-driven evolution
 
 范文蒸馏对本 skill 的影响分两条通道：reference-level 模式更新 `corpus/` 与 `_evidence_registry.yaml`；规则层反例/缺陷更新 `corpus/_skill_design_feedback.yaml`。执行演化任务时读取 `../distill-theory-exemplar/references/design-feedback-loop.md`：单篇模式不得直接建立普遍规则；只有 VERIFIED/ROBUST 或针对绝对规则的 full-text FALSIFIER，且通过授权、风险、positive regression 与 preservation regression 门控后，才可 conditionalize、decouple、add branch 或修正 validator。`resolved` 还必须核验目标文件中的 `rule_excerpt_after`；schema/stage-gate/high-risk 变更始终人工审核。

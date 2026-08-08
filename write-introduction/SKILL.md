@@ -430,6 +430,10 @@ introduction:
 - **无期刊自引**：目标期刊零自引 = fit 存疑（不知道该刊在对话什么）
 - **compound hypothesis**：一条假设含多个关系 = 理论推导不清晰
 
+# 原文锚定使用纪律（verbatim anchor）
+
+语料变体的 `**原文锚定**` 字段是来源论文原句的风格参照（由 distill-introduction-exemplar 提取，见其"原文锚定提取规则"）。生成段落时：**结构跟骨架、语言风味跟锚点**——填入 [placeholder] 后保持锚点的句式节奏与措辞质感，用于校准"顶刊味道"；**不得逐字复制锚点内容，不得保留其专有名词/数字**。无锚定的旧变体（标注"待补"）按骨架直接生成。选材时参照"选材 Gate"（distill-introduction-exemplar）的 _index 验证状态三带判定。
+
 # Evidence-driven evolution
 
 范文蒸馏通过两条通道演化本 skill：reference-level 模式更新 `academic-writing-corpus/` 与 `_evidence_registry.yaml`；规则层反例或缺陷更新 `academic-writing-corpus/_skill_design_feedback.yaml`。执行演化任务时读取 `../distill-introduction-exemplar/references/phase-4-validation-writeback.md` 与其 hardened output schema。单篇论文不得建立普遍规则；只有 VERIFIED/ROBUST，或针对绝对规则的 full-text FALSIFIER，且通过授权、风险、positive regression、preservation regression 与修改后规则片段核验，才可做有边界的 conditionalize、decouple、add branch 或 validator correction。schema、stage gate 与高风险变更始终人工审核。
