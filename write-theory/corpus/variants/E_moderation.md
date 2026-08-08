@@ -134,10 +134,16 @@ distinguishing this cross-level direct effect from the cross-level interaction e
 "An attribute that creates a dilemma for firms when [decision] is [moderator]. [Moderator] refers to [definition] ([citation]). Although [moderator] increases [cost] for [Option B] and favors [Option A], firms may not have the expertise to [implement]. Therefore, [reasoning A]. [Citation support]. [Reasoning B]. [Meta-analytic evidence] supports this view and suggests that [finding] ([citation]). The rationale is that [theoretical mechanism]. In contrast, when [moderator condition is low], the [advantage] is likely to be suppressed. Given these arguments, we expect [prediction]."
 ```
 
+**原文锚点**:
+> "The firm's shared product assets—that is, the extent to which products in the family share assets (e.g., parts/components, design, manufacturing facilities)—are likely to be an important boundary condition for learning. Sharing of product assets has an impact on the firm's cost structure and market performance (Hauser 1999; Krishnan and Gupta 2001; Ramdas 2003). … 'Prior brand quality' refers to the consumer's existing perceptions of the overall quality of the brand (Aaker and Jacobson 1994). The rationale for examining prior brand quality as a moderator stems from extant research that emphasizes the importance of motivational factors in influencing the learning efforts of firms (Boulding and Staelin 1995; Cyert and March 1963; Greve 1998)."
+
 **收敛到假设**:
 ```
 "H[N]. The [direction] effect of [IV] on [DV] is [stronger/weaker] when [moderator] is [high/low]."
 ```
+
+**原文锚点**:
+> "Given the presence of equivocal arguments for the moderating effect of prior brand quality, we propose a nondirectional hypothesis: … brands with lower prior quality improve product reliability to a greater extent after a recall than brands with higher prior quality."
 
 **语料锚定**:
 - kalaignanam2017 (JM) — 4 个 moderator（technological complexity, NPD capability×2, PLAF），每个 moderator 一个小节，结构完全平行
@@ -197,16 +203,30 @@ distinguishing this cross-level direct effect from the cross-level interaction e
 On the other hand, [response B] because [theoretical reason]."
 ```
 
+**原文锚点**:
+> "Institutional theory can be adapted to suggest at least two organizational responses in this situation."
+> — Desai (2012), *Academy of Management Journal*
+
 **提出缺口**:
 ```
 "Therefore, it is important to determine the conditions under which [A] rather than [B] is more likely."
 ```
+
+**原文锚点**:
+> "Therefore, it is important to determine the conditions under which organizational agents either engage in—or avoid—fieldwide defensive efforts."
+> — Desai (2012), *Academy of Management Journal*
 
 **调节裁决**:
 ```
 "We argue that [moderator] determines which response prevails. When [moderator condition 1], [response A] is more likely because [mechanism]. 
 In contrast, when [moderator condition 2], [response B] is more likely because [mechanism]."
 ```
+
+**原文锚点**:
+> "Extending this process to fieldwide defense suggests two broad considerations."
+> 
+> "Therefore, agents in an organizational field may conclude that active defense will yield greater success than a more passive approach."
+> — Desai (2012), *Academy of Management Journal*
 
 **语料锚定**:
 - Desai (2012, AMJ) — defend vs. avoid 两个竞争响应，field-level / firm-level scrutiny 作为 moderator 裁决
@@ -255,20 +275,36 @@ In contrast, when [moderator condition 2], [response B] is more likely because [
 "We maintain that increases in [IV] facilitate [mechanism], increasing [DV]. However, there is a cost/benefit trade-off involved in [action]. As [IV] increases, [escalating cost/risk] may reach a threshold at which the expected cost becomes higher than the expected benefit, resulting in a [curve shape] relationship between [IV] and [DV]."
 ```
 
+**原文锚点**:
+> "We maintain that increases in the proportion of exploratory alliances within the collaborative portfolio between a firm and its partner facilitate identification of the partner's vulnerabilities and appropriation of its capacities, increasing the firm's incentive to launch competitive action against its partner. However, there is a cost/benefit trade-off involved in launching competitive attacks."
+> — Cui, Yang & Vertinsky (2018), *Strategic Management Journal*
+
 **阶段论证**:
 ```
 "Specifically, there are two reasons. First, [reason 1]. Second, [reason 2]."
 ```
+
+**原文锚点**:
+> "In this type of orientation, increases in the proportion of exploratory alliances provide opportunities and incentives to compete in product markets. Specifically, there are two reasons."
+> — Cui, Yang & Vertinsky (2018), *Strategic Management Journal*
 
 **转折句**:
 ```
 "However, as [IV] continues to increase, [turning point condition]."
 ```
 
+**原文锚点**:
+> "As the proportion of exploratory alliances increases, the escalating damage to long-term benefits and the risk of "tit-for-tat" retaliatory attacks from the partner may reach a threshold at which the expected cost becomes higher than the expected benefit of launching further competitive attacks."
+> — Cui, Yang & Vertinsky (2018), *Strategic Management Journal*
+
 **调节假设段落开场**:
 ```
 "We argue that [moderator] [direction] moderates the [curve shape] relationship between [IV] and [DV] by (a) [low-to-medium mechanism] and (b) [medium-to-high mechanism]."
 ```
+
+**原文锚点**:
+> "We argue that repeated collaboration attenuates the inverted U-shaped relationship between relative exploration and the firm's competition against its partner by (a) lowering the firm's incentive to act opportunistically when the partnership is more transaction oriented and (b) increasing the cost of aggressive intrusions when the partnership is more relation oriented."
+> — Cui, Yang & Vertinsky (2018), *Strategic Management Journal*
 
 **语料锚定**:
 - Cui, Yang, and Vertinsky (*Strategic Management Journal*) — relative exploration → competitive aggressiveness（inverted U-shape），三个 embeddedness moderators
@@ -317,6 +353,12 @@ In contrast, when [moderator condition 2], [response B] is more likely because [
 When [W1] is high, [mechanism that modifies baseline]."
 ```
 
+**原文锚点**:
+> "In other words, a highly confident CMO is more likely to be able to convince the confident CEO of the merits of continued long-term investments in marketing assets."
+> 
+> "The positive impact of highly confident CEOs on firms' propensity to engage in myopic marketing management is reduced in the presence of highly confident CMOs."
+> — Chung, Low & Rust (2022), *Journal of the Academy of Marketing Science*
+
 **第二层嵌套调节引入**:
 ```
 "Whether [W1] can effectively [buffer/amplify] the [IV]→[DV] relationship is likely 
@@ -324,11 +366,21 @@ to depend on [W2]. When [W2] is high, the [buffering/amplifying] effect of [W1]
 becomes [stronger/weaker] because [mechanism]."
 ```
 
+**原文锚点**:
+> "Whether highly confident CMOs can effectively dissuade their confident CEOs from myopic marketing management will likely depend on the relative power they have vis-à-vis their CEOs."
+> — Chung, Low & Rust (2022), *Journal of the Academy of Marketing Science*
+
 **三向交互假设**:
 ```
 "H[N]. The [buffering/amplifying] effect of [W1] on the relationship between [IV] 
 and [DV] is [stronger/weaker] when [W2] is high than when [W2] is low."
 ```
+
+**原文锚点**:
+> "The effect of H2 (highly confident CMOs' ability to curb the myopic marketing management tendencies of highly confident CEOs) is greater when CMOs wield greater power vis-à-vis the CEO."
+> 
+> "The effect of H4 (independent board's positive impact on a confident CEO's myopic marketing management inclinations) is less when the CMO is more confident."
+> — Chung, Low & Rust (2022), *Journal of the Academy of Marketing Science*（H3 与 H5）
 
 **语料锚定**:
 - Chung, Low & Rust (2022, JAMS) — CEO confidence × CMO confidence (W1) × CMO power (W2); CEO confidence × board independence (W1) × CMO confidence (W2)
@@ -376,6 +428,10 @@ and [DV] is [stronger/weaker] when [W2] is high than when [W2] is low."
 ```text
 Outside [macro-event period], individuals can suppress or compartmentalize [identity/difference], limiting its relevance to [work interaction]. During [event], however, repeated cues heighten the salience of [identity] and increase perceived identity threat. This defensive orientation consumes resources and reduces motivation for [proximal mediator], making [negative outcome] more likely. We therefore expect [difference] to have a stronger [direction] association with [outcome] during and after [event] than before it, with this conditional effect operating through [mediator]. Because threat-consistent cues receive selective attention and become linked in associative memory, the activation may persist beyond the event itself; the duration claim is limited to the observed postevent window.
 ```
+
+**原文锚点**:
+> "Politically dissimilar individuals may try to suppress their political identity at work to self-protect and instead draw on other relevant social identities in the workplace (e.g., professional identity, team identity, organizational identity). This may, however, be impossible during macro events such as elections, protests, the passage of controversial laws, government breakdowns, or politically motivated violence."
+> — Reinwald, Kanitz, Bamberger, Backmann & Hoegl (2026), *Organization Science*（"The Elephant and Donkey in the Room"）
 
 **假设组织**:
 
@@ -457,11 +513,17 @@ H[h]: The impact of [protection] on [DV] is more negative when [W_hinder] is hig
 [Optional parallel hinder] H[h2]: ... when [W_hinder2] is higher.
 ```
 
+**原文锚点** (Castellaneta, Conti & Kacperczyk 2017, SMJ; 双刃剑双机制段——同一致保护强度对同一 DV 的两条相反信息路径):
+> "On one hand, a stronger trade secret protection may decrease valuable firm-specific information available to competitors—and thus enhance the target's value. On the other hand, a stronger protection of trade secrets may decrease information about the target and its rivals available to potential buyers—and thus decrease the target's value."
+
 **假设模板（异号权变）**:
 ```
 H[e]. The impact of [X] on [Y] will be more positive when [W_enhance] is higher.
 H[h]. The impact of [X] on [Y] will be more negative when [W_hinder] is higher.
 ```
+
+**原文锚点** (Castellaneta, Conti & Kacperczyk 2017, SMJ; 异号权变假设——H1 正号增强刃、H2 负号阻碍刃，均无 unconditional 主效应):
+> "Hypothesis 1 (H1): The impact of trade secret protection on firm market value will be more positive when the target company operates in an industry characterized by a higher mobility rate of knowledge workers." ... "Hypothesis 2 (H2): The impact of trade secret protection on firm market value will be more negative when the target company operates in an industry characterized by greater resource-value uncertainty."
 
 **语料锚定**: Castellaneta, Conti, & Kacperczyk (2017), *Strategic Management Journal* — trade secret protection × knowledge-worker mobility (enhancing); × resource-value uncertainty and poor-investment/lemons risk (hindering).
 

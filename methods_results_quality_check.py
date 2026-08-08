@@ -8,6 +8,8 @@ Usage:
     python methods_results_quality_check.py --input paper_distilled.json --type methods
     python methods_results_quality_check.py --input paper_distilled.json --type results
     python methods_results_quality_check.py --input paper_distilled.json --type results --output report.json
+    python methods_results_quality_check.py --corpus-check write-methods/econometric-models
+    python methods_results_quality_check.py --corpus-check write-results/econometric-models
 
 Exit codes:
     0 = PASS
@@ -704,6 +706,74 @@ class ResultsChecker(BaseChecker):
         return self.report
 
 
+VALID_STATUS_RE = re.compile(r"^(?:通过（\d/\d 复现）|通过（双篇/专家审计）|通过（单篇）|待交叉|可选)$")
+
+
+def check_corpus_quickref(corpus_dir: Path) -> QualityReport:
+    """Corpus 模式：校验目录内每个文件顶部「变体速查表」与正文变体一致。
+
+    检查项：
+    - QR_001：有正文变体但缺「变体速查表」→ REJECT
+    - QR_002：速查表行与正文 `### 变体 N:` 不一致（缺行/孤儿行/状态词表违规）→ REJECT
+    - QR_000：一致 → PASS
+    零变体文件（骨架-only）无需速查表。
+    """
+    report = QualityReport(paper_id=corpus_dir.name, check_type="corpus")
+    md_files = sorted(
+        p for p in corpus_dir.glob("*.md")
+        if p.name != "INDEX.md" and "草案" not in p.name  # 排除待预览的转写/速查表草案
+    )
+
+    for f in md_files:
+        text = f.read_text(encoding="utf-8")
+        body_variants = re.findall(r"^### 变体 (\d+)[:：]", text, re.M)  # 兼容半角/全角冒号（语料两套惯例）
+
+        m = re.search(r"^## 变体速查表\s*$", text, re.M)
+        if m is None:
+            if body_variants:
+                report.items.append(CheckItem(
+                    check_id="QR_001", category="quickref", severity=Severity.REJECT,
+                    description=f"{f.name}: 有 {len(body_variants)} 个正文变体但缺「变体速查表」",
+                    detail="推广未覆盖或速查表被删除；需补建（槽位分组 + 六列表）",
+                    fix_priority=1))
+            continue  # 无正文变体且无速查表 = 骨架-only 文件，PASS
+
+        section_end = text.find("\n## ", m.end())
+        section = text[m.end(): section_end if section_end != -1 else len(text)]
+        table_rows = re.findall(
+            r"^\| (\d+) \| ([^|]+) \| ([^|]+) \| ([^|]+) \| ([^|]+) \| ([^|]+) \|",
+            section, re.M,
+        )
+        row_nums = [r[0] for r in table_rows]
+        missing = sorted(set(body_variants) - set(row_nums), key=int)
+        orphan = sorted(set(row_nums) - set(body_variants), key=int)
+        bad_vocab = [r[0] for r in table_rows if not VALID_STATUS_RE.match(r[4].strip())]
+
+        if missing or orphan or bad_vocab:
+            report.items.append(CheckItem(
+                check_id="QR_002", category="quickref", severity=Severity.REJECT,
+                description=f"{f.name}: 速查表与正文变体不一致",
+                detail=(f"正文有但表中缺: {missing or '—'}; 表中有但正文缺: {orphan or '—'}; "
+                        f"状态词表违规行: {bad_vocab or '—'}"),
+                fix_priority=1))
+        else:
+            report.items.append(CheckItem(
+                check_id="QR_000", category="quickref", severity=Severity.PASS,
+                description=f"{f.name}: 速查表一致（{len(row_nums)} 行）"))
+
+    n_reject = sum(1 for i in report.items if i.severity == Severity.REJECT)
+    n_pass = sum(1 for i in report.items if i.severity == Severity.PASS)
+    report.overall_status = Severity.REJECT if n_reject else Severity.PASS
+    report.summary = {
+        "total_checks": len(report.items),
+        "pass_count": n_pass,
+        "flag_count": 0,
+        "reject_count": n_reject,
+        "corpus_mode": "quickref-consistency",
+    }
+    return report
+
+
 def print_report(report: QualityReport, output_path: Optional[str] = None) -> None:
     print(f"\n{'='*60}")
     print(f"Quality Report: {report.paper_id}")
@@ -738,11 +808,27 @@ def print_report(report: QualityReport, output_path: Optional[str] = None) -> No
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="QC check for distilled Methods/Results JSON output")
-    parser.add_argument("--input", "-i", required=True, help="Path to JSON file from distill skill")
-    parser.add_argument("--type", "-t", required=True, choices=["methods", "results"], help="Distillation type")
+    parser = argparse.ArgumentParser(
+        description="QC check: (a) distilled Methods/Results JSON output; (b) corpus 变体速查表一致性"
+    )
+    parser.add_argument("--input", "-i", help="Path to JSON file from distill skill")
+    parser.add_argument("--type", "-t", choices=["methods", "results"], help="Distillation type")
     parser.add_argument("--output", "-o", help="Optional path to write JSON report")
+    parser.add_argument("--corpus-check", "-c", metavar="DIR",
+                        help="Corpus mode: 校验目录内所有文件的变体速查表与正文一致性")
     args = parser.parse_args()
+
+    if args.corpus_check:
+        corpus_dir = Path(args.corpus_check)
+        if not corpus_dir.is_dir():
+            print(f"Error: Corpus directory not found: {corpus_dir}", file=sys.stderr)
+            return 2
+        report = check_corpus_quickref(corpus_dir)
+        print_report(report, args.output)
+        return 0 if report.overall_status == Severity.PASS else 2
+
+    if not args.input or not args.type:
+        parser.error("需要 --input + --type，或 --corpus-check")
 
     input_path = Path(args.input)
     if not input_path.exists():

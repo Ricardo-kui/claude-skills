@@ -9,6 +9,9 @@ because [Z] reduces the [cost/risk/uncertainty/constraint] that underlies the
 is dampened], thereby [consequence for X→Y relationship]."
 ```
 
+**原文锚点** (Eilert, Jayachandran, Kalaignanam & Swartz 2017, JM "Does It Pay to Recall Your Product Early?"):
+> "H2: The higher a brand's reliability, the weaker the relationship between problem severity and time to recall."
+
 **语料锚定**：
 - Eilert 2017 (JM) — 缓冲型调节
 
@@ -21,6 +24,9 @@ is dampened], thereby [consequence for X→Y relationship]."
 because [Z] amplifies the [baseline mechanism] by [amplification logic]. When 
 [Z is high], [how the baseline mechanism is reinforced], thereby [consequence]."
 ```
+
+**原文锚点** (Eilert, Jayachandran, Kalaignanam & Swartz 2017, JM "Does It Pay to Recall Your Product Early?"):
+> "H3: The higher a brand's diversification, the stronger the relationship between problem severity and time to recall."
 
 **语料锚定**：
 - Eilert 2017 (JM) — 增强型调节
@@ -76,6 +82,9 @@ a [actor] and a [moderator] can operate to compromise the [pole-A actor]'s
 [capacity] to [outcome action]."
 ```
 
+**原文锚点** (Weng & Yang, JMS "Is Red or Blue More Likely to Narrow the Gap?"):
+> "In our context, this means that the 'ideological fit' between a liberal CEO and a liberal board may expand the CEO's awareness of firm income inequality." ... "In other words, the 'ideological misfit' between a CEO and a board can operate to compromise the liberal CEO's capacity to narrow income inequality within a firm."
+
 **语料锚定**：
 - Weng & Yang (JMS) — "ideological fit" / "ideological misfit" between CEO and board
 
@@ -117,6 +126,9 @@ Ultimately, with limited [moderator], both [pole-A] and [pole-B] [actors]'
 capacity to [action] will be constrained."
 ```
 
+**原文锚点** (Weng & Yang, JMS "Is Red or Blue More Likely to Narrow the Gap?"):
+> "We postulate that CEO power may alter the effect of CEO political liberalism on CEO-employee pay disparity as greater power increases a CEO's capacity to address the issue of within-firm pay disparity." ... "Alternatively, with limited power, a CEO, whether liberal or conservative, may be less able to manage the issue of within-firm pay inequality based on his or her view."
+
 **语料锚定**：
 - Weng & Yang (JMS) — CEO power as capacity amplifier
 
@@ -152,6 +164,9 @@ distinct from Z's direct effect on Y through [separate channel]."
 [Evidence B]. Given these differences, we expect:"
 ```
 
+**原文锚点** (Darby, Wowak, Ketchen & Connelly 2025, JSCM "An Agency Theory Perspective on Activist Investors and Supply Chain Failures"):
+> "H2. The spillover effect of activist investor stock ownership on time-to-recall will differ for design-related defects and manufacturing-related defects, such that the recall-quickening effect is stronger for design-related defects relative to manufacturing-related defects." ... "H3. The spillover effect of activist investor stock ownership on time-to-recall will differ for high-severity and low-severity recalls, such that the recall-quickening effect is stronger for high-severity recalls relative to low-severity recalls."
+
 **语料锚定**：
 - Darby 2024 (MSOM) — manufacturing vs design defects
 - Darby 2025 (JSCM) — severity 分组
@@ -164,6 +179,9 @@ distinct from Z's direct effect on Y through [separate channel]."
 
 **模板**:
 > "The [core theory] consists of two related parts: the [hypothesis_1_name] considers that [core mechanism description] ([citations]), and the [hypothesis_2_name] considers that the [core mechanism] effects accumulate and compound over time with the support of [moderator theoretical resource] ([citations]). [Moderator construct] reflects the availability of [theoretical resource] ([citation]). Thus, [moderator] should [strengthen/weaken] the [X]→[Y] relationship because [specific mechanism linking moderator to core theory's secondary hypothesis]."
+
+**原文锚点** (Wang 2024, SMJ "Does CEO Emotion Matter? CEO Affectivity and Corporate Social Responsibility"):
+> "The broaden-and-build theory consists of two related parts: the broaden hypothesis considers the expansive nature of positive emotions, and the build hypothesis considers that the broaden effects of positive emotions accumulate and compound over time with the support of social resources (Isgett & Fredrickson, 2015). We propose that CEO social capital can provide critical social resources that sustain an upward spiral of the broaden effect elicited by CEO PA, and that they help direct expansive CEO attention toward diverse stakeholders' needs."
 
 **语料锚定**:
 - wang2024 (SMJ) — broaden-and-build theory 的 broaden hypothesis + build hypothesis。social capital → build hypothesis 的 social resources，使调节假设从理论内部自然生长。
@@ -256,6 +274,9 @@ will shift the main effect of [treatment] on [outcome].
 
 **适用**: Incompleteness × Boundary 组合。当主效应的理论无法自然推导出边界条件（或推导出的不够系统），且有两个或以上调节变量需要一个统一分类框架时。
 
+**原文锚点** (Hoffmann, Cheong, Phan & Zurbruegg 2024, JM "So, Sue Me…If You Can!"):
+> "The business ethics literature distinguishes two main governance mechanisms to constrain the self-interest-seeking behavior of agents and reduce the occurrence of moral problems in organizations—corporate culture and normative control (Husted 2007)." ... "A key distinction between these two solutions to agency conflicts is thus that the former relies on managers intrinsically wanting to do 'the right thing,' while the latter is based on extrinsically forcing them to do so by means of formal accountability to a higher authority."
+
 **语料锚定**: hoffmann_cheong_phan_zurbruegg2024 (JM) — business ethics taxonomy (Husted 2007) → corporate culture (intrinsic) + institutional monitoring (extrinsic)
 
 **禁忌**:
@@ -326,6 +347,9 @@ they can effectively signal that [myopic_action] would damage [long-term_asset],
 board's scrutiny to [functional_domain] ([citations]). This may lead the board to resist cutting 
 [investment_at_risk], thereby weakening the amplification effect of [governance_mechanism].
 ```
+
+**原文锚点** (Chung, Low & Rust 2022, JAMS "Executive Confidence and Myopic Marketing Management"):
+> "However, shareholders have been known to focus on short-term firm performance when making their demands (Graham et al. 2005), leading to boards dismissing CEOs, or cutting their compensation when CEOs miss short-term earnings expectations (Fisman et al. 2014; Matsunaga & Park 2001)." ... "The responsiveness of boards to shareholders has been criticized to have the perverse impact of leading to myopic corporate behaviors, as directors bow to investors' demand for short-term performance and use short-term metrics to evaluate and assess CEOs (Baysinger & Hoskisson 1990)." ... "Highly confident CEOs, who believe in their superior ability to run the firm, would especially consider such negative assessments by an independent board to be unjustifiable, and seek to avoid them."
 
 **语料锚定**:
 - Chung, Low & Rust (2022, JAMS) — board independence exacerbates confident CEO's myopic marketing management; CMO confidence tempers board effect
@@ -402,6 +426,9 @@ increasing [valuation uncertainty / adverse-selection discount]."
 "At both sides of the inverted U-shape, the effect of [IV] on [DV] is enlarged by [moderator]. The slope is likely to be steeper, and the peak higher."
 ```
 
+**原文锚点** (Cui, Yang & Vertinsky, SMJ "Attacking your partners"):
+> "Hypothesis 2 (H2) Repeated alliance ties between a firm and its partner negatively moderate the relationship between relative exploration and the firm's competition against this partner in the product market, such that the inverted U-shape is flattened when the number of repeated alliance ties is higher." ... "Hypothesis 3 (H3) A firm's relative centrality vis-à-vis its partner positively moderates the relationship between relative exploration and the firm's competition against this partner in the product market, such that the inverted U-shape is steepened when the firm's relative centrality is higher."
+
 **语料锚定**:
 - Cui, Yang & Vertinsky (SMJ) — relational/structural embeddedness flattens the inverted U; positional embeddedness steepens it.
 
@@ -433,6 +460,9 @@ increasing [valuation uncertainty / adverse-selection discount]."
 ```
 "Unlike a steepening prediction, an upward shift implies a higher [adverse Y] locus for given [X], not necessarily a faster post-turning-point decline."
 ```
+
+**原文锚点** (Bendig, Hensellek & Schulte 2024, ETP "Beneficial, Harmful, or Both: Effects of Corporate Venture Capital and Alliance Activity on Product Recalls"):
+> "Hypothesis 3: Market turbulence moderates the inverted U-shaped relationship of CVC activity with product recall likelihood. Higher market turbulence shifts the inverted U-shaped curve upwards." ... "Hypothesis 4: Market turbulence moderates the inverted U-shaped relationship of alliance activity with product recall likelihood. Higher market turbulence steepens the inverted U-shaped curve."
 
 **语料锚定**:
 - Bendig, Hensellek & Schulte (2024, ETP) — market turbulence shifts the CVC–recall inverted-U upward; the alliance curve is instead predicted to steepen (mode-differentiated geometry under the same W).
@@ -481,6 +511,9 @@ as [W] increases.
 ```
 H[N]: The [+/-] relationship between [S] and [Y] is attenuated as [W] increases.
 ```
+
+**原文锚点** (Zorn, Shropshire, Martin, Combs & Ketchen 2017, SMJ "Home Alone: The Effects of Lone-Insider Boards on CEO Pay, Financial Misconduct, and Firm Performance"):
+> "However, when the board is not effectively guiding and incentivizing management, external governance forces may become more active and pressure the board to limit the CEO's self-serving actions (Aguilera et al. 2015)." ... "Thus, while stock analysts do not replace or substitute for non-CEO insiders, they do provide critical information that should alert independent directors on lone-insider boards of the need to constrain their CEOs." ... "Hypothesis 4a: The positive relationship between lone-insider boards and CEO pay is attenuated as analyst coverage increases."
 
 **语料锚定**:
 - Zorn et al. (2017, SMJ) — analyst coverage and institutional ownership attenuate lone-insider effects on pay, misconduct, and performance; authors explicitly note non-substitution for non-CEO insiders.

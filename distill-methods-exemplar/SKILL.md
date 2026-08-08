@@ -370,6 +370,7 @@ phase_4_skill_update_instructions:
     target_file: "生存分析.md"  # write-methods/econometric-models/ 下的文件名
     target_slot: "M7"
     insert_after: "变体 6（piecewise exponential）"  # 语义定位——描述该插入在哪个已有变体之后，不硬编码数字
+    distinct_from: "变体 6（piecewise exponential）— 本变体是 Cox-type 参数风险模型（continuous-time），变体 6 是 AFT 框架（piecewise）"  # ADD/EXTEND 必填：与最近变体的一句差异，写入速查表「区别」列
     skeleton: "..."
     verbatim_anchor: "We estimate a gap-time model that allows the hazard to depend on the time elapsed since the previous recall, in line with prior work on recurrent events."  # 来源论文原句 1–2 句，15–40 tokens，风格参照
     reason: "当前 生存分析 M7 变体1-6 全部是 AFT+Weibull 框架——缺少指数/参数风险模型的复发事件处理。本论文填补了这一缺口，且包含了 gap-time vs continuous-time 的显式论证。"
@@ -384,6 +385,7 @@ phase_4_skill_update_instructions:
     target_file: "面板数据-OLS.md"
     target_slot: "M2"
     insert_after: "变体 8（回顾性偏差三角检验）"
+    distinct_from: "变体 8（回顾性偏差三角检验）— 本变体是多库交集→直接报最终 N（省略逐步排除），变体 8 是逐步排除漏斗"
     skeleton: "..."
     reason: "当前 面板数据-OLS M2 变体默认要求逐步排除漏斗。本论文展示了一种替代模式（多数据库交集→直接报告最终 N），需作为可选变体加入。"
 
@@ -422,6 +424,7 @@ Phase 4 输出的每条 `action != SKIP` 指令渲染为「待写入预览块」
 ### 待写入 #N：[action] → [target_file] [slot]（[变体名]）
 - **来源论文**: [source_paper]
 - **插入位置**: [insert_after]
+- **区别于**: [distinct_from——确认与最近变体的一句区分是否准确]
 - **理由**: [reason]
 - **原始句锚点**: [verbatim_anchor 原句展示——风格参照，评估风味是否地道]
 - **骨架全文**:
@@ -439,7 +442,7 @@ Phase 4 输出的每条 `action != SKIP` 指令渲染为「待写入预览块」
 - **批量模式（--batch）**：一次确认写入全部 `ADD/EXTEND`；`REPLACE` 仍逐个确认（替换是破坏性动作）。
 - 用户说"全部写入"即跳过剩余逐个确认。
 
-确认后的写入步骤不变：打开 `target_file` → 按 `insert_after` 插入 → 更新 `source_papers` / `variants_count` / `updated` → 对 `new_anti_patterns_for_skill` 写入「反模式」段落 → 更新 `INDEX.md` 表行和「已填充变体」计数。
+确认后的写入步骤不变：打开 `target_file` → 按 `insert_after` 插入 → 更新 `source_papers` / `variants_count` / `updated` → 对 `new_anti_patterns_for_skill` 写入「反模式」段落 → 更新 `INDEX.md` 表行和「已填充变体」计数 → **更新文件顶部「变体速查表」**（新变体行 + 槽位分布总览，`区别` 列直接取 `distinct_from`；速查表与正文变体必须同步，quality_check 会校验）。
 
 **旧变体锚点回填**：`REPLACE`/`EXTEND` 触碰已有变体且该变体缺 `原始句锚点` 时，按上述锚点来源检索规则**顺带补锚点**（检索不到原文则标"待补"，不阻塞写入）。
 
@@ -541,4 +544,4 @@ phase_5_skill_version_impact:
 - **`methods-review`** — Phase 1.5 槽位覆盖检查可复用
 
 ---
-*基于 Pollock 2025 Ch07、MVP30 范文语料库构建。版本 1.7.0（Phase 0.75 批评驱动选材 + 趋同批评聚合检查 + Phase 4.5 批评登记 + 写入预览-确认两段式 + 变体原始句锚点与 Obsidian 知识库回填）。*
+*基于 Pollock 2025 Ch07、MVP30 范文语料库构建。版本 1.8.0（Phase 0.75 批评驱动选材 + 趋同批评聚合检查 + Phase 4.5 批评登记 + 写入预览-确认两段式 + 变体原始句锚点与 Obsidian 知识库回填 + distinct_from 字段与速查表维护）。*

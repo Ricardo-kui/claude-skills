@@ -31,6 +31,12 @@ unfolds through a dynamic process. We develop a process model that explains how
 [actor] moves from [initial state] to [final state] through [N] stages."
 ```
 
+**原文锚点**:
+> "Thus much of the research on core-stigmatized organizations has considered how they act in isolation to cope with the effects of stigma on their individual firms and has given limited attention to the collective actions necessary for reducing their category's stigma."
+> 
+> "Our goal is to build theory that explains the process of reducing an industry category's stigma."
+> — Lashley & Pollock (2020), *Organization Science*（Theory 段）
+
 **文献回顾子节（P2-P3，定性/归纳型论文使用）**：
 ```
 "Prior research on [phenomenon] has suggested [dominant view 1] ([citations]). 
@@ -42,12 +48,20 @@ that explains how [phenomenon] unfolds over time through [N] stages."
 ```
 > 文献回顾子节的功能是**合成已有知识作为过程模型的理论地基**，而非重复 Introduction 的 gap statement。结尾应收束到"基于这些基础，我们构建过程模型"，而非"现有研究忽视了 X"。定量论文中文献回顾嵌入 P1-P4 构念定义和模型预览中，不需要独立的文献回顾子节。
 
+**原文锚点**:
+> "Thus while Adams's (2012) study provides a useful starting point for exploring issues related to reducing category stigma, it leaves unanswered the nature of the relationship between category- and organization-level actions as the process unfolds, as well as the actual process through which stigma reduction occurs."
+> — Lashley & Pollock (2020), *Organization Science*（Theory 段）
+
 **过程模型预览**：
 ```
 "We develop a process model of [phenomenon] that unfolds across [N] stages: 
 [Stage 1], [Stage 2], and [Stage 3]. This process is shaped by [contextual factor], 
 which determines whether [contingency]."
 ```
+
+**原文锚点**:
+> "Our findings suggest that categorical stigma reduction unfolds in three distinct but overlapping phases: initiating a moral agenda, moral prototyping, and morality infusion."
+> — Lashley & Pollock (2020), *Organization Science*（Discussion 中对 Findings 过程模型的正式陈述）
 
 **阶段推演**：
 ```
@@ -56,11 +70,21 @@ which determines whether [contingency]."
 The transition from [Stage 1] to [Stage 2] occurs when [threshold/condition]."
 ```
 
+**原文锚点**:
+> "Each phase was triggered by an event or collection of events that started externally and moved internally as the process evolved."
+> 
+> "For example, creating a moral prototype and category emergence cannot occur until a clear and acceptable moral agenda has been established, and morality infusion will be unsuccessful if the actions associated with creating a moral prototype have not occurred first."
+> — Lashley & Pollock (2020), *Organization Science*（Findings / Discussion）
+
 **命题陈述**：
 ```
 "Proposition [N]: In [context], [actor]'s [action/characteristic] leads to [outcome], 
 mediated by [process mechanism]."
 ```
+
+**原文锚点**:
+> "A moral agenda based on broadly acceptable values jumpstarts the process, and the industry then creates a new moral prototype reflecting these values that industry actors can identify with. Category members must publicly disidentify with the current, stigmatized prototypes and infuse the new moral prototype among their stakeholder audiences through their language and practices, creating emotional connections that lead to cognitive acceptance."
+> — Lashley & Pollock (2020), *Organization Science*（Abstract，过程命题式陈述）
 
 ---
 
@@ -89,6 +113,10 @@ mediated by [process mechanism]."
 后台生存违规行为持续，集体形象与个体资源获取之间的张力贯穿始终。
 ```
 
+**原文锚点**:
+> "A key finding of our study is that the stigma reduction process was a contentious, multiphased effort involving front-stage collective actions that convey the industry's moral agenda and practices, backstage organizational coping activities by medical cannabis entrepreneurs and dispensary owners that conflicted with the message presented on the front stage, and collective side-stage negotiations."
+> — Lashley & Pollock (2020), *Organization Science*（Findings，Figure 2 过程模型总述）
+
 **关键转折逻辑**:
 - 触发点由外部逐渐转移到内部
 - 叙事/符号边界工作必须先于物质变化（污名化类别的反向涌现顺序）
@@ -98,6 +126,10 @@ mediated by [process mechanism]."
 ```
 Proposition [N]: In [context], [collective action] leads to [outcome], mediated by [process mechanism].
 ```
+
+**原文锚点**:
+> "This process is messy, as individual organizations often need to continue engaging in stigmatized behaviors to survive, even as they publicly disidentify with them."
+> — Lashley & Pollock (2020), *Organization Science*（Abstract）
 
 **范围条件**:
 - 污名是核心/身份导向的，而非事件导向的

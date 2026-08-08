@@ -71,6 +71,9 @@
 | **Difference (同IV不同条件)** | "[X] will have a [greater/lesser] effect on [Y] for [group A] than for [group B]." | 比较跨组/跨条件效应 |
 | **Difference (不同IV同DV)** | "[X1] will have a [greater/lesser] effect on [Y] than [X2] will have on [Y]." | 多 IV 竞争比较 |
 
+**原文锚点** (Han, Pollock & Paruchuri, SMJ "Public enemies?"):
+> "This leads to our baseline expectation that both reputation and celebrity enhance misconduct scandalization's likelihood." ... "However, we further argue that differences in reputation and celebrity's sociocognitive content lead them to vary in when and why they attract attention and are newsworthy, resulting in different effects on the extent to which the media scandalizes a firm's misconduct."
+
 **语料锚定**：
 - Han 2024 (AMP) — reputation vs celebrity 差异主效应
 
@@ -87,6 +90,9 @@
 
 **语料锚定**:
 - malik_wang_martin_gomezmejia2025 (JM) — H1a/H1b (current wealth → timing/silence), H2a/H2b (prospective wealth → timing/silence), H3a/H3b, H4a/H4b
+
+**原文锚点** (Malik, Wang, Martin & Gomez-Mejia 2025, JM "Mixed Gambles in Product Recalls"):
+> "Hypothesis 1a: The greater a CEO's current option wealth, the higher the likelihood that the recall is initiated on an inattentive day." ... "Hypothesis 1b: The greater a CEO's current option wealth, the higher the likelihood of strategic silence (i.e., press releases not mentioning product recalls)." ... "Hypothesis 2a: The greater a CEO's prospective option wealth, the lower the likelihood that the recall is initiated on an inattentive day."
 
 **关键特征**:
 - a/b 编号暗示两个假设共享理论机制但应用于不同 DV——读者预期两个假设同时成立或同时不成立
@@ -164,6 +170,9 @@
 - Eilert 2017 (JM) — enhancing 型
 - Darby 2024 (MSOM) — existence 型（severity 分组）
 
+**原文锚点** (Eilert, Jayachandran, Kalaignanam & Swartz 2017, JM "Does It Pay to Recall Your Product Early?"; Darby et al. 2023, MSOM "CEO Stock Ownership, Recall Timing, and Stock Market Penalties"):
+> "H3: The higher a brand's diversification, the stronger the relationship between problem severity and time to recall." ... "The recall-slowing effect of CEO stock ownership is stronger for high-severity recalls than for low-severity recalls."
+
 ---
 
 ## 分组调节
@@ -176,6 +185,9 @@
 **语料锚定**：
 - Darby 2024 (MSOM) — severity 分组
 - Darby 2025 (JSCM) — defect type 分组
+
+**原文锚点** (Darby et al. 2025, JSCM "An Agency Theory Perspective on Activist Investors and Supply Chain Failures"; Darby et al. 2023, MSOM):
+> "H2. The spillover effect of activist investor stock ownership on time-to-recall will differ for design-related defects and manufacturing-related defects, such that the recall-quickening effect is stronger for design-related defects relative to manufacturing-related defects." ... "H3. The spillover effect of activist investor stock ownership on time-to-recall will differ for high-severity and low-severity recalls, such that the recall-quickening effect is stronger for high-severity recalls relative to low-severity recalls."
 
 ---
 
@@ -195,6 +207,9 @@ how [X] may influence [Y]:"
 **语料锚定**：
 - Wowak 2025 (MS) — H1a/H1b 竞争假设对
 
+**原文锚点** (Wowak et al. 2025, Management Science "The Politics of Product Safety: Top Management Team Political Ideology and Serious Medical Product Recalls"):
+> "Hypothesis 1(a). There is a negative relationship between top management team liberalism and the count of recalls." ... "Hypothesis 1(b). There is a positive relationship between top management team liberalism and the count of recalls."
+
 ---
 
 ## 矩阵假设（多 IV × 多 DV）
@@ -205,6 +220,9 @@ how [X] may influence [Y]:"
 
 **语料锚定**：
 - Malik 2025 (JM) — current/prospective × timing/silence × media 2×2×2 矩阵
+
+**原文锚点** (Malik, Wang, Martin & Gomez-Mejia 2025, JM "Mixed Gambles in Product Recalls"):
+> "Hypothesis 1a: The greater a CEO's current option wealth, the higher the likelihood that the recall is initiated on an inattentive day." ... "Hypothesis 2a: The greater a CEO's prospective option wealth, the lower the likelihood that the recall is initiated on an inattentive day." ... "Hypothesis 3a: The positive relationship between a CEO's current option wealth and recall initiation on an inattentive day is weaker (less positive) with more negative media coverage."
 
 ---
 
@@ -314,6 +332,9 @@ H4: [IV B] × [Moderator B] → [DV] (+)  [positive moderation — opposite of H
 ```
 
 **语料锚定**: han_pollock_paruchuri (SMJ) — reputation/celebrity × objective/perceived severity
+
+**原文锚点** (Han, Pollock & Paruchuri, SMJ "Public enemies?"):
+> "Hypothesis 1. The positive relationship between high reputation and misconduct scandalization strengthens as objective misconduct severity increases." ... "Hypothesis 4. The positive relationship between celebrity and misconduct scandalization strengthens as perceived misconduct severity increases."
 
 **关键特征**:
 - 4 个假设全部为调节 (无双主效应假设)

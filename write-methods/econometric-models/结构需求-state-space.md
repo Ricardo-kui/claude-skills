@@ -7,8 +7,41 @@ variants_count: 6
 created: 2026-08-05
 updated: 2026-08-05
 ---
-
 # 结构需求-state-space — Methods 骨架
+
+## 变体速查表
+
+> 检索辅助。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架与诚实边界见下方变体正文。
+
+### 槽位分布
+
+| 槽位 | 变体数 | 变体编号 |
+|---|---|---|
+| M3 | 1 | 变体 1 |
+| M7 | 2 | 变体 2、3 |
+| M8 | 3 | 变体 4、5、6 |
+
+### M3（1）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 1 | 约化式预备分析 → 结构模型动机桥（副槽位 M7） | "先 log-linear 探路、再 structural 正式估计"的设计，需把预备分析写成数据模式证明 + 结构模型必要性双步时 | — | 待交叉 | Liu & Shankar 2015 Management Science |
+
+### M7（2）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 2 | 三层动态架构 — 品牌偏好累积 + 时变系数 transfer function + 事件特异 random walk | BLP/Kalman 设计需在同一段完成"偏好 stock→direct/indirect 通道→事件异质性→嵌入离散选择"架构导航时 | 首个在同一 M7 段完成三层架构导航的变体，避免只堆公式 | 待交叉 | Liu & Shankar 2015 Management Science |
+| 3 | 估计栈 — contraction mapping + Kalman 转移/观测方程 + GMM | 需把 contraction→KF→GMM 三拍写成可读估计栈、并交代初始条件与归一化时 | 区别于 `动态面板-GMM` 的 moment conditions 叙述 | 待交叉 | Liu & Shankar 2015 Management Science |
+
+### M8（3）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 4 | 直接 vs 间接效应识别 — 约化式交互类比 | 结构式中 direct/indirect/spillover/特征调节四类识别逻辑需显式映射到预备回归交互时 | 区别于"黑箱结构"写法，识别逻辑与约化式交互一一对应降低不信任 | 待交叉 | Liu & Shankar 2015 Management Science |
+| 5 | 监管强制召回外生性 — 法定披露窗口论证 | 强制召回情境（NHTSA/CPSC 法定披露窗口）需论证 recall 外生于管理裁量时 | 区别于 Hoffmann 裁量权子样本与 IV/DiD 识别，补强制召回 regulatory exogeneity 通道 | 待交叉 | Liu & Shankar 2015 Management Science |
+| 6 | State-space 可观测等价排除 — 附录解析证明 + 模拟恢复 | 需排除 state-space 可观测等价系统、证明参数识别（构造等价系统→约束→文献先例→模拟）时 | 区别于 VARX 的 Granger 与 IV 的 exclusion restriction，是 state-space 专属识别论证 | 待交叉 | Liu & Shankar 2015 Management Science |
+
 
 ## 主骨架
 

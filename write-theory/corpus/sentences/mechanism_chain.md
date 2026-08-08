@@ -38,6 +38,9 @@
 [Outcome] often requires substantial resources, but access to [resource type] in [context] is heavily controlled by the government. [IV] helps a firm to [access], [borrow], and [obtain subsidies], enabling it to spend more on [mediator]. Moreover, [IV] offers access to [policy support], and [focal actors] are under strong regulatory pressures to fulfill [government requirements].
 ```
 
+**原文锚点** (Zhou, Gao & Zhao 2017, ASQ "State Ownership and Firm Innovation in China: An Integrated View of Institutional and Efficiency Logics"):
+> "We propose that state ownership should enable firms to gain more resources to invest in R&D activities. Innovation often requires substantial resources, but access to financial capital in many emerging economies is heavily controlled by the government (Musacchio and Lazzarini, 2014)."
+
 **语料锚定**: Zhou, Gao & Zhao (2017, *ASQ*) — state ownership → R&D input via subsidized credit, state-owned banks, government R&D funding.
 
 **关键特征**:
@@ -58,6 +61,9 @@
 Second, [problem dimension 2: political appointments]. [Theoretical justification]. As a result, [managers] lack [capabilities/motivations], reducing the efficiency of converting [input] into [outcome].
 ```
 
+**原文锚点** (Zhou, Gao & Zhao 2017, ASQ):
+> "Shareholders of private firms may not always succeed at controlling their management teams, but SOEs likely suffer more from the dual agency problem. First, the principal is not clearly defined in SOEs, and there is no visible owner (Shleifer, 1998)." ... "Second, in many emerging economies, politicians as principals may appoint managers of SOEs more for political reasons than for their capabilities as managers (Qian, 1996; Ramaswamy, 2001)."
+
 **语料锚定**: Zhou, Gao & Zhao (2017, *ASQ*) — undefined principal + political appointments reduce R&D-to-innovation efficiency.
 
 **关键特征**:
@@ -75,6 +81,9 @@ Second, [problem dimension 2: political appointments]. [Theoretical justificatio
 Consequently, [DV outcome] emerges through [final link]. Thus:"
 ```
 
+**原文锚点** (Darby, Wowak, Ketchen & Connelly 2025, JSCM — activist investor ownership → faster recalls):
+> "As the ownership stakes of activist investors increase, the potential threat of becoming the next target increases (Gantchev et al. 2019). This should lead supply chain managers, in turn, to recall more quickly to favorably manage the perceptions of activist investors who own shares in their firm."
+
 **语料锚定**：
 - Darby 2024 (MSOM) — recall speed → spillover 单步链
 
@@ -89,6 +98,9 @@ This [first-order consequence] in turn generates [second-order consequence] beca
 [mechanism step 2]. Consequently, [DV outcome] emerges through [mechanism step 3]. 
 Thus:"
 ```
+
+**原文锚点** (Keeves, Westphal & McDonald 2017, ASQ "Those Closest Wield the Sharpest Knife"):
+> "Thus our final hypothesis posits that feelings of resentment toward the CEO that result from ingratiatory behavior will be positively associated with the top managers' subsequent propensity to engage in negative commentary about the CEO's leadership in communicating with journalists." ... "This prediction is formally equivalent to hypothesizing that resentment toward the CEO will mediate effects of the independent variables from the first two sets of hypotheses on negative commentary about the CEO's leadership in communication with journalists."
 
 **语料锚定**：
 - Wu 2025 (OrgSci) — digital transformation → routine updating → innovation
@@ -124,6 +136,9 @@ tactics are likely to be revealed, reducing their effectiveness. Furthermore,
 "In summary, high [X_B] reduces [主体]'s reliance on short-term [Y]. Therefore: 
 H[M]: [X_B] → [Y] (-)"
 ```
+
+**原文锚点** (Malik, Wang, Martin & Gomez-Mejia 2025, JM "Mixed Gambles in Product Recalls"):
+> "In summary, high prospective wealth reduces CEOs' reliance on short-term IM tactics that may fail as additional information emerges over time, shifting the focus away from current wealth preservation. Therefore:" ... "Hypothesis 2a: The greater a CEO's prospective option wealth, the lower the likelihood that the recall is initiated on an inattentive day."
 
 **语料锚定**：
 - Malik 2025 (JM) — current wealth (loss aversion) vs prospective wealth (long-term focus)
@@ -316,6 +331,9 @@ H[N]. [IV] (a) [increases/decreases] [DV] for [Group A] and (b) [decreases/incre
 for [Group B].
 ```
 
+**原文锚点** (Organization Science "Employee 'Free' Speech vs. Organizational Censorship on Social Media", DOI 10.1287/orsc.2024.19506):
+> "Organizations that censor employees for prejudiced social media posts should signal to liberals—who prioritize safeguards—that their concerns and opinions related to inclusivity and social equity are aligned with the organization's values and can be expressed freely without fear of being dismissed or disparaged (e.g., labeled 'woke'). But conservatives—who prioritize free speech—should feel less psychologically safe, as policies that exert such control in nonwork contexts marginalize their values." ... "We theorize that censorship of employees who post prejudiced content on social media fosters the psychological safety of liberals while impeding the psychological safety of conservatives."
+
 **语料锚定**：
 - employee_free_speech (OS) — censorship increases psychological safety for liberals (value congruence with safeguards) but decreases for conservatives (psychological reactance to autonomy threat)
 
@@ -363,6 +381,9 @@ Research suggests that [X_high] are more [特征] and, correspondingly, [行为]
 Indeed, research indicates that [结果] can be particularly [后果], so [X_low] 
 who tend to focus on [价值] may be more motivated to [行为3] ([文献])."
 ```
+
+**原文锚点** (Wowak et al. 2025, Management Science "The Politics of Product Safety: Top Management Team Political Ideology and Serious Medical Product Recalls"):
+> "However, the literatures on recalls and political ideology offer potentially conflicting arguments as to the influence of TMT political ideology on recall counts. On the one hand, firms with more liberal TMTs may experience fewer recalls because of their socially oriented quality prioritization during product design and manufacturing." ... "On the other hand, firms with more conservative TMTs may experience fewer serious recalls because they appreciate the long-term financial value of prioritizing product quality during the design and manufacturing phases." ... "Given these competing arguments, we put forth the following hypotheses for how liberal and conservative TMTs may influence a firm's recall count:"
 
 **语料锚定**：
 - Wowak 2025 (MS) — liberal vs conservative CEO recall behavior
@@ -441,6 +462,9 @@ H2: [Option A] has a more positive impact on [DV2] than [Option B].
 "First, [mechanism 1 description with theoretical basis]. Second, [mechanism 2 description with theoretical basis]. Third, [mechanism 3 description with theoretical basis]. Overall, whether it is due to [M1], [M2], or [M3], we posit: [Hypothesis]."
 ```
 
+**原文锚点** (Darby et al. 2023, MSOM "CEO Stock Ownership, Recall Timing, and Stock Market Penalties"):
+> "Building on this body of work, we theorize about three different ways in which a CEO's ownership stakes may influence time-to-recall. First, although they may not even realize it, CEOs with large stock ownership stakes are likely to have the firm's financial interests—particularly the stock price—subtly lurking in the back of their minds as they make important decisions (Walters et al. 2008)." ... "Overall, whether it is intentional or unintentional, and whether it is due to the firm's financial interests, the CEO's power in the firm, or the CEO's personal financial interests, we posit:"
+
 **语料锚定**：
 - Darby 2023 (MSOM) — CEO stock ownership → recall timing (multiple parallel mechanisms converging on one hypothesis)
 
@@ -474,6 +498,9 @@ Therefore, because of [cumulative summary of 3 reasons], we believe that [hypoth
 
 [Hypothesis]: [IV] will be [positively/negatively] associated with [DV].
 ```
+
+**原文锚点** (Gamache et al. 2020, SMJ "Serving Differently: CEO Regulatory Focus and Firm Stakeholder Strategy"):
+> "Therefore, when CEOs with a high prevention focus consider what they 'ought' to do, it will naturally translate into a greater emphasis on initiatives and arrangements that satisfy their felt obligation to put the shareholder first." ... "Additionally, people high in prevention focus have a tendency to worry about 'what might happen' and, as such, work to prepare for the worst with an emphasis on preventing mistakes." ... "Finally, a prevention focus is associated with an emphasis on rules and a need for accuracy. Therefore, because of their strong sense of duty, obligation, and responsibility, combined with their desire for accuracy, we believe that CEOs high in prevention focus are likely to engage in governance-oriented stakeholder initiatives."
 
 **语料锚定**:
 - gamache_etal2020 (SMJ) — H1: prevention focus → governance initiatives (3 reasons: duty/obligation→shareholder primacy + worry/safety→board monitoring + rules/accuracy→accountability)
@@ -512,6 +539,9 @@ Therefore, because of [cumulative summary of 3 reasons], we believe that [hypoth
 
 **NA 方向（镜像/收缩路径）**:
 > "Conversely, we expect that [IV_negative] will be negatively related to [DV]. First, [IV_negative] narrows a [actor]'s scope of [mechanism domain 1], preventing [actor] from [cognitive consequence] ([citations]). Second, high-[IV_negative] individuals tend to [opposite social mechanism], which [opposite social consequence] ([citations]). Third, the [theory] proposes that [IV_negative] shortens individuals' [mechanism domain 3], leading [actor] to [opposite temporal consequence] ([citations])."
+
+**原文锚点** (Wang 2024, SMJ "Does CEO Emotion Matter? CEO Affectivity and Corporate Social Responsibility"):
+> "Drawing on the broaden-and-build theory, we expect that CEO PA will be positively related to CSR. First, PA broadens a CEO's scope of attention and action, which expands CEOs' awareness of their surroundings." ... "Second, high-PA individuals tend to embrace more inclusive social categories and use a more expansive definition of in-group members (Isgett & Fredrickson, 2015)." ... "Third, the broaden-and-build theory proposes that PA enlarges individuals' time horizons such that they will 'invest resources in far-future outcomes in addition to present ones' (Cohn & Fredrickson, 2006, p. 40)."
 
 **语料锚定**:
 - wang2024 (SMJ) — PA/NA → CSR via broaden-and-build theory。PA: broaden attention → social inclusion → extended time horizon。NA: narrow attention → social exclusion → shortened time horizon。
@@ -568,6 +598,9 @@ When explaining how [IV] affects [DV] differently across phases/conditions, use 
 
 **Theory B for Phase 2:**
 "Theoretical support for [behavior in phase 2] is found in [theory B]. [Theory B] proposes that [core premise] and that [implication]. Consequently, when [condition], [actor] may [behavior]."
+
+**原文锚点** (Mayo, Ball & Mills 2022, POM "CEO Tenure and Recall Risk Management in the Consumer Products Industry"):
+> "We leverage attribution theory to help explain the relationship between CEO tenure and risk management in recall decision-making. Attribution theory is a framework that explains how people attribute blame or credit following noteworthy events (Heider 1958, Weiner 1985). Attribution theory is framed by studies finding evidence that individuals may take credit for successes and deflect blame for failures (Kelley and Michela 1980, Weiner 1985, Zuckerman 1979)."
 
 **Key rule:** The two theories must be conceptually independent (not overlapping mechanisms). If they overlap, use a single overarching theory instead.
 
@@ -651,6 +684,9 @@ H1: [IV] [direction] [DV].
 - 可在 motivation 路径中嵌入辅助理论（如 threat-rigidity, prospect theory, accountability theory）增强说服力
 - 假设树型论文中，每个 moderator 小节重复使用该框架：moderator 通过增强/削弱 ability 和 motivation 来改变主效应
 
+**原文锚点** (Eilert, Jayachandran, Kalaignanam & Swartz 2017, JM "Does It Pay to Recall Your Product Early?"):
+> "The ability of the firm to provide a quick response is closely linked to whether the firm can identify a potential solution to fix the defect. In this regard, severe problems will trigger 'problemistic' or problem-oriented investigations in firms. However, problemistic search behavior is myopic in that the investigation will rely on traditional routines and, thus, may not quickly arrive at a solution (Argote and Greve 2007)." ... "Research has also shown that stakeholders are more likely to punish severe recalls than less severe recalls (Cheah, Chan, and Chieng 2007; Chen, Ganesan, and Liu 2009; Liu and Shankar 2015). Furthermore, lawsuits are more likely in cases of severe defects, and therefore, the stakes are higher. Thus, as problem severity increases, firms will also be motivated to avoid external accountability and delay the recall."
+
 **语料锚定**：
 - Eilert 2017 (JM) — H1: problem severity -> time to recall (ability via problemistic search myopia; motivation via accountability avoidance + threat-rigidity)
 - Eilert 2017 (JM) — H2/H3: each moderator explained via ability + motivation alignment
@@ -710,6 +746,9 @@ increase its salience over these other attributes ([citations]), meaning that it
 particularly relevant when considering how observers respond to [behavior]."
 ```
 
+**原文锚点** (Kundro & Rothbard, AMJ "Does Power Protect Female Moral Objectors?"):
+> "While we propose that perceived self-control is a primary mechanism that explains the relationship between power, gender, and moral objection framing on retaliation, it is important to consider other potential mechanisms. One potential mechanism is warmth. When women morally object, they may violate expectations for communal behavior and thus be viewed as lower in warmth." ... "A final alternative mechanism is dominance. Women who are high in power may appear overly dominant when they engage in moral objections because they violate stereotypes for communal behavior." ... "While the three mechanisms discussed above are plausible, we focus on perceived self-control as our key mechanism for two reasons. First, we focus on perceived self-control because self-control has been more directly linked with morality in prior work. ... Second, self-control is an attribute that is considered particularly relevant by observers in social and interpersonal contexts, which may increase its salience over these other attributes."
+
 **语料锚定**:
 - kundro_rothbard (AMJ) — Alternative Mechanisms section (warmth, competence, dominance)
 
@@ -742,6 +781,9 @@ suggests that when [条件], observers [反应]. Specifically, when [具体条�
 - **理论A**（基线理论）：解释基线期望（如 Power role theory -> 高权力者被期望采取 agentic 行为）
 - **理论B**（差异理论）：解释群体/情境差异（如 Gender role theory -> 男性和女性面临不同期望）
 - **理论C**（机制理论）：解释过程/后果（如 Expectancy violation theory -> 期望违背如何导致负面评价）
+
+**原文锚点** (Kundro & Rothbard, AMJ "Does Power Protect Female Moral Objectors?"):
+> "To understand the expectations that observers have of different moral objectors, we draw on two types of role theories, those based on power and those based on gender, and discuss their interplay. We argue that power roles and gender roles have implications for whom observers expect to engage in moral objection." ... "Moreover, we draw on expectancy violation theory to understand why power and gender role violations elicit negative evaluations and retaliation. Indeed, expectancy violation theory suggests that when individuals violate expectations for agentic behavior, observers view their behavior as socially inappropriate."
 
 **语料锚定**:
 - kundro_rothbard (AMJ) — Power role + Gender role + Expectancy violation theory 整合
@@ -785,6 +827,9 @@ hypothesis:
 
 H1. [IV] is [direction] related to [DV]."
 ```
+
+**原文锚点** (Shen, Zhou, Wang & Zhang, JOM "Do Political Ties Facilitate Operational Efficiency? A Contingent Political Embeddedness Perspective"):
+> "We suggest that political ties may inhibit operational efficiency for three reasons. First, when firms garner resource benefits from political ties, they may become complacent, which decreases their motivation to build an efficiency-driven culture (Li, Poppo, & Zhou, 2008; Sun et al., 2010)." ... "Second, the resource benefits of political ties may lead to structural lock-in, preventing firms from streamlining existing operational systems."
 
 **语料锚定**: shen_zhou_wang_zhang (JOM) — "Political ties and operational efficiency"
 
@@ -858,6 +903,9 @@ Hence, we expect that [cost] will not outweigh [benefit] in [agent's] mind.
 | 代理问题 | 核心（管理者 vs 股东利益冲突） | 可有可无 |
 
 **适用**: 政策冲击/法律变化/制度变革研究，其中 treatment 移除或削弱了一个既存的治理/监督机制。特别适合 agency theory 驱动的 Incompleteness × Mechanism 组合。
+
+**原文锚点** (Hoffmann, Cheong, Phan & Zurbruegg 2024, JM "So, Sue Me…If You Can!"):
+> "Against this backdrop, we argue that when deciding whether to issue a product recall, managers of publicly listed firms face a trade-off between (1) the private incentives to avoid its immediate costs and (2) the risk of being sued by shareholders for neglecting their fiduciary duties in terms of ensuring the long-term viability of the firm when doing so. We expect that the external shock of UD law adoption—which diminishes managers' exposure to the threat of shareholder litigation—leads the incentives to avoid recalls to gain prominence in the aforementioned trade-off and come to dominate managerial decision making."
 
 **语料锚定**: hoffmann_cheong_phan_zurbruegg2024 (JM) — UD laws → reduced litigation risk → managerial opportunism → fewer recalls. **假设结构**: H1 纯主效应（负向）；H2/H3 为 weaken-moderation（非 high/low 双边对称论证）。
 
@@ -933,6 +981,9 @@ firms' [A], they may also impair their [B]. Accordingly, we explicitly examine h
 [DV], an indicator of [B], to illustrate the mechanism underlying the dark side of [IV]."
 ```
 
+**原文锚点** (Shen, Zhou, Wang & Zhang, JOM "Do Political Ties Facilitate Operational Efficiency?"):
+> "According to the political embeddedness perspective, political ties can benefit firms by yielding valuable financial and regulatory resources. First, political ties provide opportunities for accessing government-controlled resources, such as tax breaks and subsidies, low-cost bank loans, and government contracts (Okhmatovskiy, 2010)." ... "However, the political embeddedness perspective also suggests the potential downsides of political ties." ... "Although earlier studies have indicated various reasons for the dark side of political ties, we identify that they all have an implicit focus on resource utilization. That is, although political ties can benefit firms' resource acquisition, they may also impair their independence and capability in resource utilization."
+
 **语料锚定**: shen_zhou_wang_zhang (JOM) — 2.2 Political embeddedness perspective
 
 **关键特征**:
@@ -985,6 +1036,9 @@ Following this discussion, we propose that higher [IV] is likely to reduce [M1] 
 H[N]: The (negative) impact of higher [IV] on [DV] is mediated by (a) [M1] and (b) [M2]."
 ```
 
+**原文锚点** (Malshe & Agarwal 2015, JM "From Finance to Marketing: The Impact of Financial Leverage on Customer Satisfaction"):
+> "We argue that leverage affects customer satisfaction through two mediating observable expenditures: R&D and advertising. There is also a direct link from leverage to customer satisfaction to account for other (unmeasured) impacts such as cost cutting, lower maintenance, and so on, as we discussed previously." ... "H1: The (negative) impact of higher leverage on customer satisfaction is mediated by a firm's (a) advertising expenditures and (b) R&D expenditures."
+
 **语料锚定**: malshe_agarwal_2015 (JM) — leverage → advertising/R&D → customer satisfaction
 
 **关键特征**:
@@ -1036,6 +1090,9 @@ turn, [final effect on DV2]. [Additional reasoning about attractiveness of outco
 
 H2: [IV] will induce [actors] to [DV2 outcome]."
 ```
+
+**原文锚点** (Mannor, Wowak, Bartkus & Gomez-Mejia 2016, SMJ "Heavy Lies the Crown: How Job Anxiety Affects Top Executive Decision Making in Gain and Loss Contexts"):
+> "Our first hypothesis concerns the decision-making teams that top executives surround themselves with when facing strategic situations." ... "Hypothesis 1: Job anxiety will induce top executives to choose decision-making teams that provide a higher level of social buffering." ... "Our second hypothesis pertains to the level of risk that top executives are willing to accept in their firms' strategies." ... "Hypothesis 2: Job anxiety will induce top executives to pursue lower-risk strategies."
 
 **语料锚定**: mannor_wowak_bartkus_gomez-mejia_2016 (SMJ) — job anxiety → social buffering (H1) + strategic risk taking (H2)
 
@@ -1107,6 +1164,9 @@ B]. Our prediction allows for both.
 H[N]: [Core prediction]."
 ```
 
+**原文锚点** (park_lange_jeon, SMJ "How shareholder litigation risk influences firm orientation toward stakeholders"):
+> "Shareholder litigation risk can function as a governance mechanism, as it makes salient for managers that their actions are monitored and that mismanagement will have negative consequences (La Porta et al., 1998; Shleifer & Vishny, 1997)." ... "However, much like other types of governance mechanisms, shareholder litigation risk can have the unintended consequence of making managers more constrained and myopic (Goranova et al., 2017; Hoskisson et al., 1991; Lin et al., 2021)." ... "We make that prediction recognizing that different motivations might underlie the shift in managerial attention to broader stakeholder issues. ... Our prediction that managers will be more attentive to stakeholder engagement after UD law adoption allows for both of those motivations."
+
 **语料锚定**: park_lange_jeon (SMJ) — Section 2.1 (litigation risk as governance mechanism) → 2.2 (UD law legislation) → 2.3 (stakeholder strategy effect)
 
 **关键特征**:
@@ -1174,6 +1234,9 @@ Thus:
 H[B-]: [Prediction].
 ```
 
+**原文锚点** (Shipilov, Greve & Rowley 2019, SMJ "Is All Publicity Good Publicity? The Impact of Direct and Indirect Media Pressure on the Adoption of Governance Practices"):
+> "It is important to note that negative media coverage is different from the absence of positive coverage. An increase in negative coverage means that the company's name is increasingly surrounded by negative words and phrases that are distinct from neutral or positive descriptions." ... "Again, when analyzing media coverage, positive coverage is different from the absence of negative coverage, because positive coverage is associated with specific words and phrases praising the firms that are distinct from a neutral tone." ... "Hypothesis 1a: The more negative is the tone of the company's own media coverage, the more likely is the company to adopt new board reform practices."
+
 **语料锚定**: shipilov_greve_rowley2019 (SMJ) — 媒体报道 (own/interlock) × 语调 (positive/negative) → 治理实践采纳。4 个假设按 source × tone 组织，每个单元格有独立 T3 推演。
 
 **关键特征**:
@@ -1222,6 +1285,9 @@ This discussion suggests that firms deploy strategies to curry favors from regul
 H1: [IV] has a [negative] association with [DV dimension 1] and [DV dimension 2].
 ```
 
+**原文锚点** (Singh & Grewal 2023, JMR "Lobbying and Product Recalls: A Study of the U.S. Automobile Industry"):
+> "Laffont and Tirole (1991) present a 'regulation capture' view that suggests that firms engage in rent seeking for preferential treatment, which leads regulators to make decisions that benefit the firms they are supposed to regulate (Stigler 1971). Figure 3 depicts this 'iron triangle' interaction (Adams 1981; Freeman 1965), which includes a broad set of incentive exchanges among government (legislators), regulators, and industry actors." ... "Finally, firms interact with the regulator by leveraging political connections to influence enforcement decisions."
+
 **语料锚定**:
 - singh_grewal2023 (JMR) — lobbying → voluntary & mandatory recalls。Iron triangle (Adams 1981; Freeman 1965) + regulation capture (Stigler 1971; Peltzman 1976)。三边论证: 行业↔立法者 (campaign contributions, political support), 立法者↔NHTSA (budgets, oversight), 行业↔NHTSA (political connections → enforcement leniency)。
 
@@ -1249,6 +1315,9 @@ Our conceptual foundation resonates with [perspective A] and [perspective B] fro
 
 In [empirical context], an [perspective A] emphasizes [economic consideration 1] and [economic consideration 2], whereas a [perspective B] focuses on whether [actors] are legitimate in the social context, such as whether they [legitimacy-seeking behavior]. [Define legitimacy] ([citation]). Because [actors] risk illegitimacy penalties if they fail to gain recognition as legitimate ([citation]), they often [legitimacy-enhancing action] ([citation]). Such elements arise, indirectly, from concerns about [social fitness] that prompt influential institutions (e.g., [examples]) or mechanisms (e.g., [examples]) to implement features that require organizations to make trade-offs. This duality of [perspective A] and [perspective B] thus provides a more holistic perspective on [actors]' reactions to [institutional pressures].
 ```
+
+**原文锚点** (Singh & Grewal 2023, JMR "Lobbying and Product Recalls"):
+> "Our conceptual foundation resonates with efficiency and legitimacy perspectives from organizational sociology literature (Meyer and Rowan 1977; Zucker 1987) and its marketing offshoots (e.g., Ertimur and Coskuner-Balli 2015; Grewal and Dharwadkar 2002). Lobbying does not change product quality, so an efficiency perspective implies that it should not influence recalls. But organizational sociology theories from a legitimacy perspective (DiMaggio and Powell 1983) would predict a potential relationship between lobbying and recalls. In turn, a combination of efficiency (economic fitness) and legitimacy (social fitness) perspectives might explain how firms cope with institutional demands (Oliver 1991)."
 
 **语料锚定**:
 - singh_grewal2023 (JMR) — Efficiency perspective (Meyer & Rowan 1977; Zucker 1987) vs Legitimacy perspective (DiMaggio & Powell 1983; Suchman 1995)。效率视角预测 lobbying 不应影响召回（不改变产品质量）。合法性视角预测 lobbying 可能影响召回（企业通过政治资本构建社会合法性）。
@@ -1279,6 +1348,9 @@ The [revised theory], introduced by [Author(s) (year)], posits that [actors] are
 
 Extending the [revised theory] ([citations]), the "[extension name]" perspective highlights that [actor] decision-making relies on [cognitive mechanism] about their [reference object], with [mental process] used to manage [cognitive limitation] ([citation]). More specifically, it suggests that decision-makers are influenced by [N] key factors: (1) [factor 1 definition] and (2) [factor 2 definition]. For [actors], [construct A] represents [what could be lost] (the downside), while [construct B] reflects [what could be gained] (the upside). [Actors] with [high construct A] tend to prioritize [short-term strategy] to [protective action], focusing on the downside. Conversely, those with [high construct B] tend toward [long-term strategy] aimed at [pursuit action], making the upside more appealing ([citations]).
 ```
+
+**原文锚点** (Malik, Wang, Martin & Gomez-Mejia 2025, JM "Mixed Gambles in Product Recalls"):
+> "Grounded in classical agency theory, stock-option compensation has become a common practice to incentivize CEOs to maximize shareholder returns (Fama 1980; Jensen and Meckling 1976). ... This 'risk differential' (Beatty & Zajac, 1995) suggests that CEOs make less optimal decisions by avoiding risks." ... "The BAM, introduced by Wiseman and Gomez-Mejia (1998), posits that agents are loss averse (from prospect theory; Kahneman and Tversky 1979), in contrast to the classical theory's assumption of risk aversion (Jensen and Meckling 1976)." ... "Extending the BAM (DesJardine and Shi 2021; Martin et al. 2013), the 'mixed gamble' perspective highlights that CEO decision-making relies on heuristics about their personal wealth ... it suggests that decision-makers are influenced by two key factors: (1) the avoidance of potential losses to current, or 'endowed,' wealth and (2) the pursuit of potential gains to future, or 'prospective,' wealth."
 
 **语料锚定**:
 - malik_wang_martin_gomezmejia2025 (JM) — Classical Agency Theory (Jensen & Meckling 1976) → Behavioral Agency Model (Wiseman & Gomez-Mejia 1998) → Mixed Gamble perspective (Martin et al. 2013)。三层递进: risk aversion → loss aversion → dual-factor heuristics (current vs prospective wealth)。
@@ -1354,6 +1426,9 @@ In sum, we expect high [IV dimension 2] to lead [actors] to [prediction for DV 1
 of Track A] while [prediction for DV 2, opposite of Track A].
 ```
 
+**原文锚点** (Zhao-Ding & Gaba, Organization Science "Positioning in Digital Markets: A Demand-Side View"):
+> "Taken together, we expect that high overall dissatisfaction will lead entrants to increase focus on the core function while simultaneously encouraging differentiation in peripheral functions relative to successful products." ... "In sum, we expect high evaluation heterogeneity to lead entrants to reduce focus on the core function while increasing overlap of peripheral functions with successful products."
+
 **语料锚定**:
 - zhao-ding_gaba (ORSC) — dissatisfaction → core focus (+), peripheral overlap (-); heterogeneity → core focus (-), peripheral overlap (+)
 
@@ -1404,6 +1479,9 @@ H2. [Negative moderation prediction, opposite direction from H1].
 
 [Cell 3 + Cell 4 follow same pattern with Moderator B]
 ```
+
+**原文锚点** (Han, Pollock & Paruchuri, SMJ "Public enemies?"):
+> "In contrast to its effect on reputation, low-level misconduct is likely to enhance, and objectively severe misconduct is likely to weaken celebrity's relationship with scandalization." ... "Hypothesis 2. The positive relationship between celebrity and misconduct scandalization weakens as objective misconduct severity increases." ... "In contrast, we expect availability cascades to complement celebrity's effect and strengthen its positive relationship with scandalization."
 
 **语料锚定**:
 - han_pollock_paruchuri (SMJ) — reputation/celebrity × objective/perceived severity → scandalization。对角线对称: H1↔H4 (positive moderation), H2↔H3 (negative moderation)
@@ -1457,6 +1535,9 @@ situations where [difficulty is amplified].
 → H4: [Buffering factor A] → attenuates H2 (-)
 → H5: [Buffering factor B] → attenuates H2 (-)
 ```
+
+**原文锚点** (Toh & Pyun, SMJ "Risky Business"):
+> "For the standard-owner, standardization improves clarity on its position to appropriate value relative to before." ... "For the non-standard-owner, we argue that standardization makes it less clear if it can be in a viable competitive position to appropriate value relative to before." ... "Hypothesis H1. For a standard-owner-firm, standardization reduces uncertainty over its future financial performance in the ecosystem." ... "Hypothesis H2. For a non-standard-owner-firm, standardization heightens uncertainty over its future financial performance in the ecosystem."
 
 **语料锚定**: toh_pyun (SMJ) — standardization → standard-owner (↓uncertainty) / non-standard-owner (↑uncertainty) → strong rival (+), complementary tech (-), production assets (-)
 
@@ -1546,6 +1627,9 @@ them appear better by comparison.
 - 引用经典社会比较文献(March & Simon 1958; Porac et al. 1999)作为理论基础
 - 适用于: reputational spillover, status competition, market positioning研究
 
+**原文锚点** (Paruchuri, Pollock & Kumar 2020, SMJ "On the Tip of the Brain"):
+> "Since social evaluations are made compared to some referent (March & Simon, 1958; Mishina, Dykes, Block, & Pollock, 2010; Porac, Wade, & Pollock, 1999), a given level of performance can look better or worse depending on how well or poorly the comparative referents perform, and how similar they are perceived to be to the focal actor." ... "If a category member demonstrates a major capability failure associated with their differentiating actions, other firms will look better not because they enhanced their performance, but because their comparative referent did something different and worse, making them appear better by comparison."
+
 **语料锚定**: paruchuri_pollock_kumar2020 (SMJ) — Chipotle E. coli → positive reputation spillover to proximal Mexican restaurants
 
 ---
@@ -1571,6 +1655,9 @@ and disappear once the [trigger] ceases to be salient.
 - **"continually reinforced"** → 声誉/社会评价类构念的核心属性——需要持续强化否则消退
 - 引用cognitive psychology经典(Fiske & Taylor 1991; Tversky & Kahneman 1973)作为理论基础
 - 适用于: event studies, reputational spillover, media effects, crisis management中的时效性论证
+
+**原文锚点** (Paruchuri, Pollock & Kumar 2020, SMJ "On the Tip of the Brain"):
+> "We also argue that reputation spillover effects will only persist as long as the event precipitating the spillover continues to be salient, or cognitively available to the stakeholders making the assessments (Fiske & Taylor, 1991; Pollock et al., 2008)." ... "Extreme and frequently occurring stimuli tend to be more cognitively available because they are figural, or stand out relative to the typical flow of information, and therefore are more easily recalled when making assessments (Khaneman, 2011; Taylor & Fiske, 1975)." ... "However, since reputations need to be continually reinforced (Pollock, Lee, Jin, & Lashley, 2015; Washington & Zajac, 2005), when the crisis abates it will become less salient and its influence will weaken, eventually ceasing to factor into stakeholders' assessments of other category members."
 
 **语料锚定**: paruchuri_pollock_kumar2020 (SMJ) — salience decay→positive spillover disappears when media coverage stops
 
@@ -1669,6 +1756,9 @@ H5: [Moderator 2] negatively moderates the relationship between [origin conditio
 - 比较两个一正一负 interaction 系数时不做 reverse-code → Wald test 不可直接解读
 - 印记者后续变迁与创始印记脱节 → moderator 必须明确作用于"起源印记者本身"的当下状态（如军方当局 vs 民用化），而非无关事件
 
+**原文锚点** (Qiao, Hiatt & Sine 2026, SMJ "From Armed Roots to Airline Routes in South America: A Dual Imprinting Perspective"):
+> "The internal capability imprint is manifested as partner-derived operational procedures, safety protocols, and organizational routines associated with military institutions that enhance performance, while the external identity imprint is manifested through enduring perceptions by external audiences that shape regulatory approval and market acceptance." ... "Internal capabilities persist longer because they are embedded in organizational structures and tacit knowledge, while external identity resides in more malleable stakeholder perceptions." ... "Post-founding changes to the imprinter reshape these effects asymmetrically: the transition to civilian air traffic control erodes the competitive advantage of military-derived capabilities by diffusing previously scarce expertise, while military coups intensify the negative consequences of a military-associated identity."
+
 **语料锚定**: qiao_hiatt_sine2026 (SMJ) — 创始军方伙伴 → 内部 capability imprint（操作流程/安全协议，+ 国际化）+ 外部 identity imprint（军方名称/联想，− 国际化）；H3 capability 比 identity 更持久；H4 民用化空管 democratize 能力底物；H5 军事政变 amplify 身份威胁。配合 `../write-methods/econometric-models/生存分析.md` 变体 6、`../write-methods/econometric-models/IV-2SLS.md` 变体 4、`../write-results/econometric-models/IV-2SLS.md` 变体 4 使用。
 
 ---
@@ -1722,6 +1812,9 @@ therefore, unlikely to [directional action]."
 "As [theory authority] maintain, '[closing quote]' (p. XXX). We thus propose: [Hypothesis]."
 ```
 
+**原文锚点** (Weng & Yang, JMS "Is Red or Blue More Likely to Narrow the Gap?"):
+> "We suggest that CEOs' political ideologies reflect their values through the lens that they use to interpret the pay-disparity situation. Specifically, the degree to which a CEO is more liberal or conservative influences a firm's CEO-employee pay disparity for two reasons. First, liberals are more aware of the inequality issue." ... "Second, liberals are more open to ideas for social change." ... "In contrast, a conservative CEO may behave differently. On the one hand, the conservative CEO attend less closely to issues of inequality as he or she thinks that the labour market functions efficiently." ... "Apart from liberals and conservatives, there are CEOs whose orientations are politically moderate."
+
 **语料锚定**:
 - Weng & Yang (JMS) — CEO political liberalism → CEO-employee pay disparity; "for two reasons"; liberal/conservative/moderate tripartite comparison; Hambrick & Mason (1984) quote as closing authority
 
@@ -1774,6 +1867,9 @@ Furthermore, [lower_actor]'s performance evaluation depends more on [functional_
 on [profitability_target], so [action] would adversely affect their career outcomes ([citations]).
 ```
 
+**原文锚点** (Chung, Low & Rust 2022, JAMS "Executive Confidence and Myopic Marketing Management"):
+> "Overall, we expect the perceived higher benefits and lower long-term costs from myopic marketing management may drive confident CEOs to 'borrow' from future earnings to cover any current potential earnings shortfall as stated in the following hypothesis:"
+
 **语料锚定**:
 - Chung, Low & Rust (2022, JAMS) — CEO confidence → myopic marketing management; CMO vs CEO cost-benefit calculus
 
@@ -1817,6 +1913,9 @@ Second, [IV] enhances [mediator 2: capacity] because it requires sharing of prop
 
 However, as [IV] increases, overlap in the firms' long-term stakes also rises, enlarging their mutual dependence in developing [critical innovations]. The risk of retaliation from an attacked partner also increases, as the partner now holds more critical information about the firm. The firms' interdependence, on the one hand, and the risk of retaliation, on the other, may escalate to a point at which the expected costs exceed the benefits of [action], suffocating the firms' incentives to further [DV].
 ```
+
+**原文锚点** (Cui, Yang & Vertinsky, SMJ "Attacking your partners"):
+> "First, increases in the proportion of exploratory alliances enhance a firm's awareness of opportunities to benefit from competition. Second, exploratory collaboration enhances a firm's capacity to develop competing products because it requires sharing of proprietary know-how." ... "However, as the proportion of exploratory alliances increases, overlap in the firms' long-term stakes also rises, enlarging their mutual dependence in developing critical innovations. ... The firms' interdependence, on the one hand, and the risk of retaliation, on the other, may escalate to a point at which the expected costs exceed the benefits of launching a competitive action, suffocating the firms' incentives to further intrude into each other's product market domains."
 
 **语料锚定**:
 - Cui, Yang & Vertinsky (SMJ) — relative exploration → competitive aggressiveness

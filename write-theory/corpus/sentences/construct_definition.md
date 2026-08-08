@@ -10,6 +10,9 @@ This definition captures [N] critical elements: (1) [element 1], (2) [element 2]
 and (3) [element 3]."
 ```
 
+**原文锚点** (Pollock et al. 2015, ASQ "(Un)Tangled"):
+> "Reputation ... is best understood as broad public recognition of the quality of a firm's activities and outputs." ... "Status, for organizations as well as individuals, is broadly understood as the position in a social hierarchy that results from accumulated acts of deference." ... "Although these definitions are conceptually similar, they differ in four fundamental ways."
+
 **语料锚定**：
 - Pollock 2015 (ASQ) — reputation / status 界定
 - Han 2024 (AMP) — reputation vs celebrity 界定
@@ -25,6 +28,9 @@ they have all focused on [common element] and incorporated three elements:
 (a) [element a], (b) [element b], and (c) [element c]."
 ```
 
+**原文锚点** (Malik, Wang, Martin & Gomez-Mejia 2025, JM "Mixed Gambles in Product Recalls"):
+> "More specifically, it suggests that decision-makers are influenced by two key factors: (1) the avoidance of potential losses to current, or 'endowed,' wealth and (2) the pursuit of potential gains to future, or 'prospective,' wealth. For CEOs, current option wealth represents what could be lost if a decision fails (the downside), while prospective option wealth reflects the potential future gains if a decision succeeds (the upside)."
+
 **语料锚定**：
 - Malik 2025 (JM) — current / prospective wealth 双维度界定
 
@@ -37,6 +43,9 @@ they have all focused on [common element] and incorporated three elements:
 "[Construct] is broadly understood as [definition] ([Author, year]). [Elaboration]. 
 A central thesis of [field] research is that [core proposition] ([Author, year])."
 ```
+
+**原文锚点** (Darby, Wowak, Ketchen & Connelly 2025, JSCM — spillover effect 引用 Shi et al. 2020 经典定义):
+> "This phenomenon—known as a spillover effect—occurs when an attack on 'a firm or firms in an investor's portfolio of holdings influences actions within other firms that are not presently targeted for activism' (Shi et al. 2020, p. 1866)."
 
 **语料锚定**：
 - Darby 2024 (MSOM) — spillover effect 引用经典定义
@@ -54,6 +63,9 @@ tend to prioritize [价值A], even at the expense of [价值B] ([文献]).
 On the other end of the spectrum are [构念B], who, on average, emphasize 
 [价值C] over [价值D] ([文献]). Consequently, [构念B] emphasize [行为倾向3]."
 ```
+
+**原文锚点** (Wowak et al. 2025, Management Science "The Politics of Product Safety: Top Management Team Political Ideology and Serious Medical Product Recalls"):
+> "On one end of the spectrum are liberals, who tend to be more sensitive to and aware of social issues than conservatives and see responsibilities to society as collective rather than individual (Gupta et al. 2017)." ... "In sum, more liberal executives tend to prioritize minimizing harm to consumers and contributing to society, even at the expense of economic outcomes (Briscoe et al. 2014; Gupta et al. 2017; Gupta and Briscoe 2020)." ... "On the other end of the political ideology spectrum are conservatives, who, on average, emphasize individual agency and wealth creation over societal welfare (Gupta et al. 2019)."
 
 **语料锚定**：
 - Wowak 2025 (MS) — liberal / conservative CEO 对称界定
@@ -78,6 +90,9 @@ Finally, [dimension 3: comparison].
 
 [Table [N] summarizes these differences across the three dimensions]."
 ```
+
+**原文锚点** (Weng & Yang, JMS "Is Red or Blue More Likely to Narrow the Gap?"):
+> "In a recent review, Swigart et al. (2020) suggest that political ideology has three interrelated aspects: cognitive, social, and behavioural. First, the cognitive lens focuses on the values of individuals that vary across a spectrum of value systems such as embracing change versus tradition and emphasizing equality versus hierarchy." ... "Our study applies the cognitive lens of political ideology to postulate that liberal executives differ from their conservative counterparts in three ways (see Table I for a summary)."
 
 **语料锚定**：
 - Weng & Yang (JMS) — CEO political ideology 通过 Swigart et al. (2020) 三层框架定义，Table I 对比 liberal vs conservative CEOs
@@ -145,6 +160,9 @@ more [Dimension B] will [behavioral consequence different from Dimension A]."
 this means [contextual specification]..."
 ```
 
+**原文锚点** (Eilert, Jayachandran, Kalaignanam & Swartz 2017, JM "Does It Pay to Recall Your Product Early?"):
+> "Problem severity refers to the seriousness of the consequences of product defects from the standpoint of consumer safety. We expect problem severity to be significantly related to recall timing because of its impact on the ability and motivation of firms to respond."
+
 **语料锚定**：
 - Darby 2024 (MSOM) — time-to-recall 嵌入定义
 - Eilert 2017 (JM) — recall speed 嵌入定义
@@ -164,6 +182,9 @@ this means [contextual specification]..."
 H[X]a: [attribute-level X] is [direction] related to [outcome].
 H[X]b: [entity-level X] is [direction] related to [outcome].
 ```
+
+**原文锚点** (Pontikes 2012, ASQ "Two Sides of the Same Coin"):
+> "Together, these studies suggest that ambiguous classification can arise when an organization identifies with multiple labels (organization-level ambiguity) or if it identifies with an ambiguous label (label-level ambiguity). In either case, ambiguity causes confusion and results in devaluation of the organization."
 
 **语料锚定**: Pontikes (2012, *ASQ*) — label-level ambiguity vs organization-level ambiguity; both create confusion but operate through different mechanisms.
 
@@ -217,6 +238,9 @@ We join the conversation pertaining to [debate domain] by exploring how [specifi
 influences [outcome]."
 ```
 
+**原文锚点** (park_lange_jeon, SMJ "How shareholder litigation risk influences firm orientation toward stakeholders"):
+> "Disagreement is evident in both the academic literature and in public discussions among practitioners about which stakeholders the managers of a publicly held corporation should prioritize first and foremost. One perspective, often called shareholder primacy or the shareholder-oriented model, holds that the corporation should focus on serving the financial interests of its shareholders." ... "The competing stakeholder perspective holds that the corporation should focus on creating value for all of its key stakeholders, including shareholders (Freeman et al. 2018)." ... "We join the conversation pertaining to the shareholder primacy versus the stakeholder perspective by exploring how shareholder litigation risk influences managerial attention and resource allocation."
+
 **语料锚定**: park_lange_jeon (SMJ) — Theory P1-P4 (shareholder primacy vs stakeholder perspective)
 
 **关键特征**:
@@ -248,6 +272,9 @@ This [construct name] is related to [existing author]'s notion of [related conce
 tactics, such as [alternative 1], [alternative 2], and [alternative 3], affect [narrower 
 scope]. In contrast, [our focus] may more generally affect [broader scope].
 ```
+
+**原文锚点** (Desai 2012, AMJ "Mass Media and Massive Failures"):
+> "This defensive institutional work is related to Oliver's (1991) notion of manipulating external constituents' expectations. Oliver provides a typology of actions that organizations take to manage threats to their legitimacy. Of these types, manipulation is the one most appropriate to theory regarding how organizations may influence an overall field's legitimacy. Other tactics, such as compromise with constituents, defiance of institutional demands, and concealment of activities, affect how external parties view the focal firm. In contrast, manipulation of external constituents' expectations may more generally affect how those external parties view all organizations in the field."
 
 **语料锚定**: desai2012 (AMJ) — defensive institutional work 对齐到 Oliver (1991)的 manipulation 策略
 
@@ -306,6 +333,9 @@ First, they infer [inference 1], which shapes [DV dimension 1]. Second, they ass
 [assessment 2], which influences [DV dimension 2].
 ```
 
+**原文锚点** (Zhao-Ding & Gaba, Organization Science "Positioning in Digital Markets: A Demand-Side View"):
+> "The growth of digital markets such as app stores, video game distribution platforms, and self-publishing book platforms has expanded the set of options available to consumers and content creators (Rietveld 2018; Caminade and von Wartburg 2022). Because digitized products can be created, recombined, and distributed at very low marginal cost, market positions with moderate appeal that would be difficult to sustain in traditional markets can become viable and attractive in digital markets (Waldfogel 2017)." ... "In short, digital markets enable hyper-differentiation: entry into a large, recombinable product space in which firms can pursue many distinct configurations (Boudreau 2012, p. 1412)."
+
 **语料锚定**: zhao-ding_gaba (ORSC) — Layer 1: digital markets enable hyper-differentiation; Layer 2: market positions as core/peripheral function combinations; Layer 3: dissatisfaction vs heterogeneity as two feedback dimensions
 
 **关键特征**:
@@ -361,6 +391,9 @@ value ([citations]). Specifically, [mechanism of persistence] ([citation]). The 
 in [Construct A] and [Construct B]'s [differentiating feature] lead them to affect [outcome] 
 differently.
 ```
+
+**原文锚点** (Han, Pollock & Paruchuri, SMJ "Public enemies? The differential effects of reputation and celebrity on corporate misconduct scandalization"):
+> "Social approval assets' sociocognitive content defines audiences' expectations, and these expectations shape what the public wants to know about the firms, and thus their misconduct's newsworthiness (Chandler et al. 2020)." ... "The rational aspect 'reflects audiences' efforts to make reasoned assessments of a firm's capabilities and worth' (Pollock et al. 2019, p. 446); the emotional aspect 'reflects the emotional responses of audiences to firms, their attributes, and their actions' (Pollock et al. 2019, p. 448)." ... "Although all social evaluations reflect all three aspects to some extent, different aspects dominate different social evaluations (Pollock et al. 2019)."
 
 **语料锚定**: han_pollock_paruchuri (SMJ) — reputation (rational) vs celebrity (emotional)，基于 Pollock et al. (2019) 的 rational/emotional/moral 三维度框架
 
@@ -418,6 +451,9 @@ necessarily related to [IV] though. Below, we lay out how [system-level] and [un
 uncertainty are affected by [IV].
 ```
 
+**原文锚点** (Toh & Pyun, SMJ "Risky Business: How standardization as coordination tool in ecosystems impacts firm-level uncertainty"):
+> "An innovation ecosystem, much like a traditional vertical value chain, experiences various forms of uncertainty that contribute to variations in its overall performance and growth (Arrow 1974; McGrath 1997)." ... "However, at the firm-level, there is an additional layer of uncertainty—whether the firm can occupy a viable position in the ecosystem to appropriate value in the midst of competition." ... "The above descriptions are meant to illustrate that firm-level uncertainty over value appropriation can be pronounced and separate from ecosystem-level uncertainty over coordination."
+
 **语料锚定**: toh_pyun (SMJ) — ecosystem-level uncertainty (5+ forms) vs firm-level uncertainty (adds value-appropriation as "third form")
 
 **关键特征**:
@@ -455,6 +491,9 @@ characterized as [Type B] failures. Key to [standard outcome] are that [conditio
 standard outcome] ([citations]). However, what if [alternative condition from Type A]? 
 We argue that in this situation the [dynamics] are likely to be different.
 ```
+
+**原文锚点** (Paruchuri, Pollock & Kumar 2020, SMJ "On the Tip of the Brain: Understanding when negative reputational events can have positive reputation spillovers, and for how long"):
+> "Connelly, Ketchen, Gangloff, and Shook (2016) argued that crises result from two types of failure, which they labeled competency failures and integrity failures. Competency, or capability, failures refer to 'specific situations where a firm falls short of technically proficient performance,' while integrity, or character, failures refer to situations where 'the firm's motives, honesty, and/or character fall short' (Connelly et al. 2016, p. 2136)." ... "However, what if the negative action is the outcome of capability failings that result from taking different actions than those taken by others in the industry? In other words, what if the action is less likely to be shared by others in the same category because the firm differentiated itself by adopting nonstandard practices, and it is these practices that have led to the crisis? We argue that in this situation the spillover dynamics are likely to be different."
 
 **语料锚定**: paruchuri_pollock_kumar2020 (SMJ) — Connelly et al. (2016) capability vs integrity failure typology → applied to reputation spillover valence
 
@@ -506,6 +545,9 @@ In sum, [NEW CONSTRUCT] arises when [trigger condition]. Unlike [Sibling 1], whi
 that fills the gaps in the Limitations column]. In doing so, it shows how [broader
 theoretical implication].
 ```
+
+**原文锚点** (Lee & Wang 2026, JOM "There's More Than Meets the Eye: Assessing the Impact of Immigrants on Firm Environmental Performance"):
+> "Building on these perspectives, we introduce the concept of institutional crowding to describe how heightened political salience in one policy domain can redirect limited fiscal and administrative resources toward that domain, thereby diminishing the effective enforcement capacity in other domains. This definition highlights two features that distinguish it from related mechanisms. First, institutional crowding is salience-driven: It occurs because certain domains attract exceptional political and societal attention, pulling resources disproportionately toward them. Second, it is cross-domain in nature: Rather than enforcement weakening evenly across the board, crowding produces selective deprioritization of less visible or less politically urgent domains (e.g., environmental enforcement) as others (e.g., migration) rise in prominence. Table 1 highlights the distinctive features of institutional crowding in comparison to related constructs."
 
 **语料锚定**: Lee & Wang (2026, *JOM*) — "institutional crowding" 对比 Regulatory Overload / Bureaucratic Trade-Offs / Regulatory Drift & Ambiguity across 5 functional columns；2 个区分特征命名：*salience-driven* 与 *cross-domain*。
 

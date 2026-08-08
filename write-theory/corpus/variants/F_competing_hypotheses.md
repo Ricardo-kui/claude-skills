@@ -32,12 +32,18 @@
 arguments as to the influence of [X] on [Y]."
 ```
 
+**原文锚点**:
+> "However, the literatures on recalls and political ideology offer potentially conflicting arguments as to the influence of TMT political ideology on recall counts."
+
 **路径A论证**：
 ```
 "On the one hand, [X_high] may [increase/decrease] [Y] because [mechanism_A]. 
 Research suggests that [X_high] are more [特征] and, correspondingly, [行为] 
 ([文献]). In other words, this research argues that [X_high] tend to [行为2]."
 ```
+
+**原文锚点**:
+> "On the one hand, firms with more liberal TMTs may experience fewer recalls because of their socially oriented quality prioritization during product design and manufacturing. ... In other words, this research argues that more liberal TMTs tend to engage in firm activities that minimize detrimental outcomes to society."
 
 **路径B论证**：
 ```
@@ -46,11 +52,17 @@ Indeed, research indicates that [结果] can be particularly [后果], so [X_low
 who tend to focus on [价值] may be more motivated to [行为3] ([文献])."
 ```
 
+**原文锚点**:
+> "On the other hand, firms with more conservative TMTs may experience fewer serious recalls because they appreciate the long-term financial value of prioritizing product quality during the design and manufacturing phases, reducing the risk that products subsequently fail in the market and require a recall."
+
 **竞争收敛（非传统 Therefore）**：
 ```
 "Given these competing arguments, we put forth the following hypotheses for 
 how [X] may influence [Y]:"
 ```
+
+**原文锚点**:
+> "Given these competing arguments, we put forth the following hypotheses for how liberal and conservative TMTs may influence a firm's recall count:"
 
 ---
 
@@ -59,6 +71,9 @@ how [X] may influence [Y]:"
 | 类型 | 模板 | 示例 |
 |------|------|------|
 | 竞争假设对 | "H1a: [X] is [negatively/positively] related to [Y]. H1b: [X] is [positively/negatively] related to [Y]." | H1a: Liberalism → fewer recalls. H1b: Liberalism → more recalls. |
+
+**原文锚点**:
+> "Hypothesis 1(a). There is a negative relationship between top management team liberalism and the count of recalls. Hypothesis 1(b). There is a positive relationship between top management team liberalism and the count of recalls."
 
 ---
 
@@ -102,6 +117,9 @@ is consistent with studies showing that [state] can result in [decision-making b
 ([citation]), which, in our context, may result in [behavior_OPPOSITE].
 ```
 
+**原文锚点**:
+> "One could argue that more liberal TMTs would recall products faster because not doing so might harm consumers, particularly in cases involving serious product quality issues. ... Conversely, if more liberal TMTs prioritize quality during product design and manufacturing, it could foster a sense of overconfidence that the product is better (i.e., of higher quality) than it actually is (Schwartz 2019, Reis 2020), resulting in slower response time when making recall decisions."
+
 **wowak2025 范例（time-to-recall）**:
 - **Liberal 直觉**: 自由派关心消费者/社会责任 → recall 更快
 - **Liberal 自反性反机制**: 自由派优先质量投入 → **过度自信**产品优于实际 → 更慢识别质量问题 → 把问题归因于 random failure 而非 design/manufacturing → recall 更慢
@@ -142,6 +160,9 @@ is consistent with studies showing that [state] can result in [decision-making b
               H[X]a: [X] is [negatively] related to [DV2].
               H[X]b: [X] is [positively] related to [DV2].
 ```
+
+**原文锚点**:
+> "Conversely, firms with more conservative TMTs may recall products more slowly because of their tendency to be risk-averse and uncertainty-avoidant (Jost et al. 2007). In our context, these tendencies for risk aversion and uncertainty avoidance may result in more conservative TMTs recalling more slowly to avoid the risk of a 'false alarm,' or issuing a recall when it is not necessary."
 
 **为什么有效**:
 - 多 DV 研究中，每增加一个 DV **不应机械重复**同样的 2-mechanism 结构；自反性反机制让后续 DV 的理论论证逐级加深，避免"复制粘贴式"假设

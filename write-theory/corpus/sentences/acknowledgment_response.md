@@ -48,6 +48,9 @@ status: emerging
 [回应] But there is another line of argument: [your mechanism], which [why it better accounts for the specific pattern].
 ```
 
+**原文锚点** (Booth et al. 2024, The Craft of Research, Ch09 Quick Tip #1):
+> "If your argument is about cause and effect, remember that no effect has a single cause and no cause has a single effect. If you argue that X causes Y, everyone will think of other causes. Honeybee colonies may be collapsing because of pesticide use, but someone knowledgeable about honeybees could also list other possible factors, including loss of habitat, disease, genetically modified crops, and parasites. So if you focus on one cause out of many, acknowledge the others."
+
 ### 2.2 反例（"What about these counterexamples?"）
 
 **规则**：主动提出**生动且可信**的反例（尤其变异大的现象），承认后解释为何不视为致命（Booth Quick Tip #2）。警惕读者把正态分布内的异常个案当反例。
@@ -62,6 +65,9 @@ status: emerging
 [回应] But a single [case/observation] within the normal range of variation does not disconfirm a claim about [population-level relationship]; the mechanism we propose predicts [pattern], which is precisely what we observe in [test].
 ```
 
+**原文锚点** (Booth et al. 2024, The Craft of Research, Ch09 Quick Tip #2):
+> "No matter how rich your evidence, some skeptical members of your audience are likely to think of exceptions and counterexamples that they believe undermine your argument. So you must think of them first, acknowledge the more plausible ones, especially if they are vivid, and then explain why you don't consider them as damaging as those skeptics might." ... "People who do not understand statistical reasoning will focus on an aberrant case, even though it falls within a normal distribution: a cold Fourth of July in Miami does not disprove a claim about climate change, any more than a warm New Year's Day in Montreal proves it."
+
 ### 2.3 证据局限（acknowledge without response 的主场）
 
 **规则**：无法修复的弱点诚实承认，用三种姿态之一回应（Booth §9.4.2）；**禁止**忽略（读者发现后质疑 competence，认为你隐藏则质疑 honesty）。
@@ -71,6 +77,9 @@ status: emerging
 [未来研究姿态] While this limitation is serious, further research with [better data/design] will show a way around it.
 [洞见姿态] While this weakness makes it impossible to accept our claim fully, our argument offers important insight into [question] and suggests what attributes a better answer would have.
 ```
+
+**原文锚点** (Booth et al. 2024, The Craft of Research, Ch09 §9.4.2):
+> "Candidly acknowledge the issue and respond that the rest of your argument more than compensates for the weakness. ... while the weakness is serious, more research will show a way around it. ... while the weakness makes it impossible to accept your claim fully, your argument offers important insight into the question and suggests what attributes a better answer would have." ... "It might seem that when jurors hear the facts of a case in a form that focuses on victims' suffering, they will be more likely to blame the accused. That is, after all, the standard practice of plaintiffs' lawyers and what we expected our research to affirm. But in fact, we found no correlation between . . ."
 
 **失败转成功变体**（Booth §9.4.2）：把本想支持却未能支持的 claim 写成"看似合理但被证伪的假设"——
 > "It might seem that [expected relationship]. That is, after all, [standard practice / what we expected to affirm]. But in fact, we found no correlation between ..."
@@ -88,6 +97,9 @@ status: emerging
 ```
 [次级论证] This definition is preferable to [alternative definition] for two reasons. First, [reason 1]. Second, [reason 2] ([citations]).
 ```
+
+**原文锚点** (Booth et al. 2024, The Craft of Research, Ch09 §9.4.3 / Quick Tip #3):
+> "When your argument hinges on the meaning of a term, define it to support your solution and offer a subordinate argument for your definition. Don't treat a dictionary definition as authoritative (never begin, 'According to Webster's, "addiction" means . . .')." ... "If you use a technical term that also has a common meaning (like social class or theory), acknowledge that common meaning and explain why you have adopted the technical one."
 
 ---
 
@@ -123,6 +135,9 @@ status: emerging
 1. **一句解释**（最小回应）："While some organizations recommend against [X], we are concerned specifically with [scope where objection does not apply]."
 2. **追加让步 + 证据**："We recognize that [additional concession], but [Author] et al. ([year]) have shown that [counter-evidence]."
 3. **完整次级论证**：异议足够重要时，为回应本身配 reason + evidence 的完整小论证。
+
+**原文锚点** (Booth et al. 2024, The Craft of Research, Ch09 §9.5):
+> "While some organizations, such as the US Preventive Services Task Force (USPSTF), recommend against routine PSA screening of men over 55, we are concerned specifically with the value of screenings for higher-risk populations such as men with a family history of prostate cancer." ... "We recognize that routine PSA screenings have resulted in overdiagnosis and overtreatment, subjecting many men to adverse side effects unnecessarily, but Tsai et al. (2021) have shown that coupled with effective counseling, the testing of at-risk populations reduces the incidence of . . ."
 
 ---
 

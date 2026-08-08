@@ -386,6 +386,7 @@ phase_4_skill_update_instructions:
     target_file: "生存分析.md"
     target_slot: "R3"
     insert_after: "变体 5（事件研究 CAR 第二阶段）"  # 语义定位
+    distinct_from: "变体 5（事件研究 CAR 第二阶段）— 本变体是 exp(β)−1 百分比三拍，变体 5 是 exponentiated beta 双拍"  # ADD/EXTEND 必填：与最近变体的一句差异，写入速查表「区别」列
     skeleton: "..."
     verbatim_anchor: "The hazard ratio of [x] indicates that a one-unit increase in [predictor] is associated with a [value]% decrease in the rate of [event] (p < .01)."  # 来源论文原句 1–2 句，15–40 tokens，风格参照
     reason: "当前 生存分析 R3 变体1-5 全部是 AFT 的 exponentiated beta 解释。本论文展示了指数风险模型的 exp(β)−1 百分比三拍节奏，填补了参数风险模型 R3 的空白。"
@@ -415,6 +416,7 @@ Phase 4 输出的每条 `action != SKIP` 指令渲染为「待写入预览块」
 ### 待写入 #N：[action] → [target_file] [slot]（[skeleton_id]）
 - **来源论文**: [source_paper]
 - **插入位置**: [insert_after / 同 slot 变体列表中的位置]
+- **区别于**: [distinct_from——确认与最近变体的一句区分是否准确]
 - **理由**: [reason]
 - **原始句锚点**: [verbatim_anchor 原句展示——风格参照，评估风味是否地道]
 - **骨架全文**:
@@ -432,7 +434,7 @@ Phase 4 输出的每条 `action != SKIP` 指令渲染为「待写入预览块」
 - **批量模式（--batch）**：一次确认写入全部 `ADD/EXTEND`；`REPLACE` 仍逐个确认（替换是破坏性动作）。
 - 用户说"全部写入"即跳过剩余逐个确认。
 
-确认后的写入步骤不变：按 Phase 4 指令执行写入并更新索引、计数。
+确认后的写入步骤不变：按 Phase 4 指令执行写入并更新索引、计数，**并同步更新目标文件顶部「变体速查表」**（新变体行 + 槽位分布总览，`区别` 列直接取 `distinct_from`；速查表与正文变体必须同步，quality_check 会校验）。
 
 **旧变体锚点回填**：`REPLACE`/`EXTEND` 触碰已有变体且该变体缺 `原始句锚点` 时，按上述锚点来源检索规则**顺带补锚点**（检索不到原文则标"待补"，不阻塞写入）。
 
@@ -532,7 +534,7 @@ phase_5_skill_version_impact:
 - **`results-review`** — Phase 1.5 槽位覆盖 + Rhythm Map 可复用
 
 ---
-*基于 Pollock 2025 Ch07、MVP30 范文语料库构建。版本 1.7.0（Phase 0.75 批评驱动选材 + 趋同批评聚合检查 + Phase 4.5 批评登记 + 写入预览-确认两段式 + 变体原始句锚点与 Obsidian 知识库回填）。*
+*基于 Pollock 2025 Ch07、MVP30 范文语料库构建。版本 1.8.0（Phase 0.75 批评驱动选材 + 趋同批评聚合检查 + Phase 4.5 批评登记 + 写入预览-确认两段式 + 变体原始句锚点与 Obsidian 知识库回填 + distinct_from 字段与速查表维护）。*
 
 ---
 
