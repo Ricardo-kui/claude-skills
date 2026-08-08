@@ -85,7 +85,7 @@ Consequently, [DV outcome] emerges through [final link]. Thus:"
 > "As the ownership stakes of activist investors increase, the potential threat of becoming the next target increases (Gantchev et al. 2019). This should lead supply chain managers, in turn, to recall more quickly to favorably manage the perceptions of activist investors who own shares in their firm."
 
 **语料锚定**：
-- Darby 2024 (MSOM) — recall speed → spillover 单步链
+- Darby et al. 2025 (JSCM) — activist investor ownership → faster recalls 单步链（2026-08-08 审计校正：原标 2024 MSOM，锚点逐字核验出自 2025 JSCM）
 
 ---
 

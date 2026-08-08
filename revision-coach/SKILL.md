@@ -58,6 +58,34 @@ description: Use when the user receives peer-reviewer comments or a decision let
 - **整体投稿前 QC**:交 `pollock-qc` / `paper-review`。
 - 本 skill 只产出"改什么、按什么顺序、回复怎么搭骨架、回复体检",不越界做上面这些事。
 
+## 审稿信号回流（critique-driven，路线图交付后的收尾步骤）
+
+R&R 产出后,把**审稿人反复质疑的方法/写作论点**登记回 write-* 批评 registry(`econometric-models/_evidence_registry.yaml`)。审稿人是比日常用户批评更高权重的信号源(editor 背书 + 跨轮次重复出现);登记后直接进入下一轮蒸馏的 critique_heavy 判定(revise + reject ≥ 2 → REPLACE/EXTEND 优先),与 Phase 0.75 选材闭环。
+
+**登记条件**(只登写作可改进点,避免噪音登记):
+- 同一方法/写作论点**跨审稿人或跨轮次(R1/R2)反复出现**;或
+- 针对论证结构/报告方式(而非实证结果本身)的质疑——结果层面的拒绝属于论文缺陷,不属于语料缺陷,不回流。
+
+**映射规则**:审稿质疑 → 论文主分析估计器/设计 → registry 键名
+- 主分析估计器 → results registry `estimators` 键(如 `OLS_FE`、`DiD`、`生存分析`)
+- Methods 设计 → methods registry `by_design_type` 键(如 `面板数据-OLS`、`自然实验-DiD`)
+- 同一质疑可双侧登记(如"稳健性检验组织混乱"→ methods M8 与 results R7 双侧)
+
+**执行**(回复骨架交付后):
+
+```bash
+# critiques.yaml 格式(同 distill Phase 4.5):
+# critique_updates:
+#   - estimator_family: "OLS_FE"    # results 侧键名(estimator_family);methods 侧用 design_type
+#     verdict: "revise"             # revise=需大改 / reject=被弃用重写
+#     reason: "审稿人 R1#2 与 R2#5 两轮均质疑 R3 经济显著性缺幅度翻译"
+#     date: "YYYY-MM-DD"            # 可选,默认今天
+python ../distill-results-exemplar/_update_registry.py --record-critique critiques.yaml
+python ../distill-methods-exemplar/_update_registry.py --record-critique critiques.yaml
+```
+
+登记后可选跑一次体检确认 critique_heavy 触发:`python ../corpus_health_check.py --type both`。
+
 ## 需要按需读取的参考文件
 - 解析 / 归类 / 承诺拆解 / 优先级规则:`references/comment-parsing.md`
 - 路线图 + 回复信骨架 + 追踪表模板 + 工作量估计:`references/roadmap-and-response-template.md`

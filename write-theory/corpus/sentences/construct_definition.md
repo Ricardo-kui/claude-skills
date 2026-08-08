@@ -48,7 +48,7 @@ A central thesis of [field] research is that [core proposition] ([Author, year])
 > "This phenomenon—known as a spillover effect—occurs when an attack on 'a firm or firms in an investor's portfolio of holdings influences actions within other firms that are not presently targeted for activism' (Shi et al. 2020, p. 1866)."
 
 **语料锚定**：
-- Darby 2024 (MSOM) — spillover effect 引用经典定义
+- Darby et al. 2025 (JSCM) — spillover effect 引用经典定义（2026-08-08 审计校正：原标 2024 MSOM，锚点逐字核验出自 2025 JSCM）
 
 ---
 
