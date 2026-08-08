@@ -54,7 +54,7 @@ Imagine [founding/managing/operating] [an organization / a venture] when [instit
 **来源**: lashley_pollock2020 (ASQ), P1
 
 **原文锚定**:
-> "Imagine starting a business when the federal government has declared your product illegal, when traditional sources of financing are unavailable because bankers fear being accused of money laundering, and when you cannot advertise through conventional media because your product violates federal advertising standards."
+> "Imagine starting a business when the federal government has declared your product or service illegal, banks will not let you open a checking account, you cannot deduct your business expenses or pay your taxes through conventional means, you are forced to pay your employees in cash, your friends and neighbors look at you with suspicion, and many of your customers do not want to admit they use your product or service. These are the sorts of things that can happen (Hudson and Okhuysen, 2009; Kovaleski, 2014; Voss, 2015) when an entire industry category is predicated on a product or activity that is subject to 'core' stigma (Hudson, 2008)."
 
 **关键特征**:
 - 三连"when"从句制造累积的约束感

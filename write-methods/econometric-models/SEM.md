@@ -22,6 +22,7 @@ updated: 2026-07-07
 
 ### 变体 1: M7 联立方程 SEM + 工具变量 + 相关误差 (1篇高价值)
 **来源论文**: Vadakkepatt, Arora, Martin & Paharia 2022 (Journal of Marketing)
+**原始句锚点**: We have multiple equations in which the errors across them can be correlated, so we estimate the equations jointly using a structural equation model approach with correlated errors.
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: M7
@@ -31,6 +32,7 @@ updated: 2026-07-07
 
 ### 变体 2: M8 面板 Granger 因果检验 + 平稳性检验作为前置诊断 (1篇高价值)
 **来源论文**: Vadakkepatt, Arora, Martin & Paharia 2022 (Journal of Marketing)
+**原始句锚点**: Prior to specifying our models, we conducted panel Granger causality tests to examine whether lobbying Granger-causes customer satisfaction or vice versa. They reveal that lobbying Granger-causes customer satisfaction (χ² = 5.04, p < .10) and not the reverse.
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: M8
@@ -40,6 +42,7 @@ updated: 2026-07-07
 
 ### 变体 3: M7 残差中心化处理交互项多重共线性 (1篇高价值)
 **来源论文**: Vadakkepatt, Arora, Martin & Paharia 2022 (Journal of Marketing)
+**原始句锚点**: In addition, to rule out multicollinearity concerns for the interaction terms (with r > .70), we residual-centered the interaction of lobbying with product market lobbying.
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: M7
@@ -49,6 +52,7 @@ updated: 2026-07-07
 
 ### 变体 4: M3/M4 表格式变量文档 (1篇高价值)
 **来源论文**: Vadakkepatt, Arora, Martin & Paharia 2022 (Journal of Marketing)
+**原始句锚点**: Customer satisfaction, advertising spend, and R&D spend are widely used variables, so we do not detail their construction here, beyond the information provided in Table 2. Instead, we focus on the variables that require additional explanation or coding or are unique to our research.
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: M3/M4

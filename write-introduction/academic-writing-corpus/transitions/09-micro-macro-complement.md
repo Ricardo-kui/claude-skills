@@ -48,6 +48,8 @@ source: Extracted from lehman2014 + zhou2017 distill-introduction-exemplar
 **原文锚定**:
 > "In our view, organization theory would be enhanced when coupled with a fuller view of the transition process to rationalized norms, one focused on the micro aspects of acceptance and choice by individuals. This microleaning view would complement the widely studied macro process of organizational adoption and diffusion of rationalized structural features (e.g., Dobbin et al. 1993, Sutton et al. 1994, Hedström 1994, Dobbin and Kelly 2007). In an effort to better understand this transition process, we study the restaurant context in greater depth."
 
+（原文不在库，未验证）
+
 **关键特征**:
 - "would be enhanced when coupled with" → 谦逊但自信的贡献声明：不是推翻已有理论，而是丰富它
 - "one focused on the micro aspects of..." → 用同位语精确说明补充的内容

@@ -37,6 +37,7 @@ updated: 2026-08-05
 ### 变体 1：跨层级冲击映射 + 处理事件样本漏斗（2026-08-02）
 
 **来源论文**: Lee, Wu & Bednar, *Organization Science*, DOI 10.1287/orsc.2024.18968
+**原始句锚点**: "While their analysis is at the county level, ours focuses on firms. As a result, our sample includes fewer instances of newspaper decline because not every affected county has a publicly traded firm."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -54,6 +55,7 @@ updated: 2026-08-05
 ### 变体 2：有符号的计数衍生因变量 → 线性 FE 估计器选择（2026-08-02）
 
 **来源论文**: Lee, Wu & Bednar, *Organization Science*, DOI 10.1287/orsc.2024.18968
+**原始句锚点**: "Because our dependent variable contains negative values, fixed effects Poisson or negative binomial regressions are not applicable even though the measure is essentially count-based. Following prior studies employing similar measures (e.g., Qian et al. 2019, Jia et al. 2020, Wu et al. 2026), we therefore use fixed-effects linear regressions."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -71,6 +73,7 @@ updated: 2026-08-05
 ### 变体 3：错位 DiD 三层诊断栈 + 现代估计诚实边界（2026-08-02）
 
 **来源论文**: Lee, Wu & Bednar, *Organization Science*, DOI 10.1287/orsc.2024.18968
+**原始句锚点**: "The recent DiD literature has acknowledged that two-way fixed-effect estimators in staggered DiD design may introduce a "bad comparison" problem that differs from a violation of the parallel-trends assumption but is similarly problematic (Goodman-Bacon 2021), resulting in staggered DiD estimates subject to under-identification issues (Borusyak et al. 2016)."
 
 **验证状态**: EMERGING / LEGACY-DIAGNOSTIC（可借用组织方式，不得把原估计方案当现代默认）
 
@@ -89,6 +92,7 @@ updated: 2026-08-05
 ### 变体 4：staggered DiD 识别栈 — model-free → 机制锚定 → pretrend → jurisdiction 安慰剂（2026-08-05）
 
 **来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (*Journal of Marketing*)
+**原始句锚点**: "Before estimating our regression models, we present model-free evidence and explore the raw data to assess whether the quasi-experiment of the staggered adoption of UD laws appears to have an effect on the dependent variable, as per Goldfarb, Tucker, and Wang's (2022) recommendation."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -107,6 +111,7 @@ updated: 2026-08-05
 ### 变体 5：二元 rare outcome 下 year + industry FE，无法 firm FE（perfect collinearity）（2026-08-05）
 
 **来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (*Journal of Marketing*)
+**原始句锚点**: "It is worth noting that it is not possible to include firm fixed effects because of the way our data is structured. That is, our sample includes a set of firms that never issue a recall but are in the same industries as the firms that do issue a recall."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -124,6 +129,7 @@ updated: 2026-08-05
 ### 变体 6：staggered adoption 下 POST 与 Treat×Post 共线性说明（2026-08-05）
 
 **来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (*Journal of Marketing*)
+**原始句锚点**: "Because the interaction term UD_LAW × POST_ADOPTION would be perfectly collinear with the POST_ADOPTION indicator, the main effect of POST_ADOPTION drops out from our models."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -141,6 +147,7 @@ updated: 2026-08-05
 ### 变体 7：裁量权子样本 + 行业/event 扩展漏斗（2026-08-05）
 
 **来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (*Journal of Marketing*)
+**原始句锚点**: "To ensure that we do not omit observations where there might have been a need for a product recall (i.e., an instance of a defective product) but the firm decided not to issue one, we also include all firms from industries in which, during the sample period, there was an incident report filed by consumers with the CPSC through its "Safer Products" website, indicating that they experienced an issue with an unsafe product."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -158,6 +165,7 @@ updated: 2026-08-05
 ### 变体 8：重复交易情境（buyout dual-sale）使制度冲击前后价值变化可观测（2026-08-05）
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+**原始句锚点**: "The ideal setting to test our theory would allow us to observe changes in company market value after an increase in the legal protection of trade secrets: that is, the same company would need to be sold twice—before and after the strengthening of trade secrecy protection."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -175,6 +183,7 @@ updated: 2026-08-05
 ### 变体 9：持有窗内处理编码 + staggered 教学示例（treatment/control 随时间重组）（2026-08-05）
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+**原始句锚点**: "UTSA_{tbuy,tsell} is equal to 1 if the UTSA was enacted in the state where the company is incorporated during the period between t_buy (the year of its purchase by the PE company) and t_sell (the year of its sale by that company to another firm), and 0 otherwise."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -192,6 +201,7 @@ updated: 2026-08-05
 ### 变体 10：ΔV/IRR 作为一阶差分 → 截面估计等价于 DiD 的识别叙事（2026-08-05）
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+**原始句锚点**: "However, our empirical strategy is equivalent to the DiD framework to the extent that the IRR measures change in the target firm's market value, and so the dependent variable incorporates the first difference before and after the treatment."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -210,6 +220,7 @@ updated: 2026-08-05
 ### 变体 11：entry/exit 年 FE + 多维 FE + 冲击层级聚类（持有窗截面）（2026-08-05）
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+**原始句锚点**: "To address this concern, we include entry-year fixed effects, a dummy for the year t_buy of company purchase by the PE company, and exit-year fixed effects, a dummy for the year t_sell of company sale."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -227,6 +238,7 @@ updated: 2026-08-05
 ### 变体 12：政治经济外生性电池 — 质性检索 + LPM/hazard 采纳时点 + 供需零相关（2026-08-05）
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+**原始句锚点**: "Specifically, we search the Lexis-Nexis database for press releases indicating that PE firms actively lobbied for the UTSA statutes. Not surprisingly, we find no such evidence."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -244,6 +256,7 @@ updated: 2026-08-05
 ### 变体 13：日历安慰剂 ±k 年（假处理弱于真处理）（2026-08-05）
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+**原始句锚点**: "To rule out the possibility that our treatment generates statistically significant results merely by chance, we next perform a series of robustness checks by creating a "placebo" treatment. In particular, we pretend that the change in trade secrets occurs five years before and five years after the real year of change."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 

@@ -150,8 +150,8 @@ def apply_registry_updates(reg, enrichment):
                     'slots_covered': [],
                     'common_failures': [],
                     'validation_history': {
-                        'total_runs': 0, 'validated': 0,
                         'revise': 0, 'reject': 0,
+                        'last_critique': None,
                         'common_revise_reasons': [],
                     },
                 }
@@ -260,14 +260,17 @@ def append_skeleton_to_corpus(update):
     validation_status = meta.get('validation_status', 'VALIDATED')
     transferability = meta.get('transferability', 'medium')
     note = meta.get('note', '')
+    # 原始句锚点（verbatim anchor）：来源论文原句，风格参照用；空则不渲染该行（兼容旧指令）
+    anchor = str(update.get('verbatim_anchor', '') or meta.get('verbatim_anchor', '') or '').strip()
 
+    anchor_line = f"**原始句锚点**: {anchor}\n" if anchor else ""
     variant_block = f"""\n### 变体: {variant_name}
 **验证状态**: {validation_status}
 **来源论文**: {', '.join(source_papers) if source_papers else '待补充'}
 **可迁移性**: {transferability}
 **写入日期**: {datetime.now().strftime('%Y-%m-%d')}
 **槽位**: {slot}
-**骨架**:
+{anchor_line}**骨架**:
 ```text
 {skeleton_text}
 ```
@@ -322,9 +325,76 @@ def apply_corpus_updates(enrichment):
 
 
 # ---------------------------------------------------------------------------
+# Usage recording (Skill-SP frontier curriculum port)
+# ---------------------------------------------------------------------------
+def apply_critique_updates(reg, critique_updates):
+    """Record user critiques of write-methods output into per-design-type validation_history.
+
+    Each update: {design_type: str, verdict: 'revise'|'reject', reason: str, date: 'YYYY-MM-DD'}
+    Signals per registry meta.usage_stats_schema (critique-driven, no pruning):
+      gap: slots_covered 缺口（静态，不依赖登记）
+      critique_heavy: revise + reject >= 2 → 精炼优先（REPLACE/EXTEND 候选）
+      quiet: 无批评 → 正常蒸馏
+    """
+    section = reg['evidence']['by_design_type']
+    MAX_REASONS = 8
+    if not critique_updates:
+        print("  No critique_updates found.")
+        return
+
+    for upd in critique_updates:
+        dt = str(upd.get('design_type', '')).strip()
+        verdict = str(upd.get('verdict', '')).strip().lower()
+        reason = str(upd.get('reason', '') or '').strip()
+        date = str(upd.get('date', '') or '').strip() or datetime.now().strftime('%Y-%m-%d')
+        if dt not in section:
+            print(f"  SKIP: design_type '{dt}' not in registry")
+            continue
+        if verdict not in ('revise', 'reject'):
+            print(f"  SKIP: verdict '{verdict}' invalid (revise/reject)")
+            continue
+
+        vh = section[dt].setdefault('validation_history', {
+            'revise': 0, 'reject': 0, 'last_critique': None, 'common_revise_reasons': [],
+        })
+        vh[verdict] = int(vh.get(verdict, 0)) + 1
+        vh['last_critique'] = date
+        if reason:
+            reasons = list(vh.get('common_revise_reasons', []))
+            if reason not in reasons:
+                reasons.insert(0, reason)
+                vh['common_revise_reasons'] = reasons[:MAX_REASONS]
+
+        total = vh['revise'] + vh['reject']
+        signal = 'critique_heavy' if total >= 2 else 'quiet'
+        print(f"  CRITIQUE {dt}: {verdict} ({date}) -> revise={vh['revise']}, reject={vh['reject']} [{signal}]")
+
+    reg['meta']['last_updated'] = datetime.now().strftime('%Y-%m-%d')
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 def main():
+    if '--record-critique' in sys.argv:
+        try:
+            critique_path = sys.argv[sys.argv.index('--record-critique') + 1]
+        except IndexError:
+            print("用法: python _update_registry.py --record-critique <critiques.yaml>")
+            sys.exit(1)
+        print("=" * 60)
+        print("Critique Recorder (critique-driven stats)")
+        print("=" * 60)
+        critiques = load_yaml(critique_path)
+        if isinstance(critiques, dict) and 'critique_updates' in critiques:
+            critiques = critiques['critique_updates']
+        reg = load_registry()
+        apply_critique_updates(reg, critiques)
+        save_registry(reg)
+        print(f"Registry updated: {REGISTRY_PATH}")
+        print("Done.")
+        return
+
     if len(sys.argv) > 1 and sys.argv[1] not in ('--stdin', '-h', '--help'):
         enrichment = load_yaml(sys.argv[1])
     elif '--stdin' in sys.argv or len(sys.argv) == 1:

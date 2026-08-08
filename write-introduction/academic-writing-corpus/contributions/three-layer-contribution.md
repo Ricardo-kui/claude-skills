@@ -122,14 +122,17 @@ source: Distilled from Haunschild, Polidoro & Chandler (2015), Organization Scie
 ### 变体 B：四段式贡献（加入实践/政策层）
 
 在三层基础上增加第四层（实践/政策）：
-> "For practice, these findings suggest that [managerial implication]. For public policy, [policy implication]."
+> "For practice, [practical actors] are wary of [what they are wary of], but our findings highlight an important benefit: [benefit]. For public policy, our findings may help [policy body] better allocate its limited [resources] by identifying factors that influence [outcome]."
 
 来源: darby2026 (JOM)
+
+**原文锚定**:
+> "For practice, many executives are wary of the increased monitoring that large institutional investors bring, but our findings highlight an important benefit of this pressure: faster recalls. For public policy, our findings may help the FDA better allocate its limited monitoring resources by identifying factors that influence how quickly—or slowly—companies recall medical devices with dangerous defects."
 
 ### 变体 C：列表式贡献（malshe2015 型）
 
 若贡献维度较多（3+），可用列表：
-> "We contribute to the [field] literature in several ways. First... Second... Third..."
+> "We contribute to the [field] literature in several ways. First... Second... Finally..."
 
 来源: malshe2015 (JM)
 
@@ -151,7 +154,7 @@ source: Distilled from Haunschild, Polidoro & Chandler (2015), Organization Scie
 **来源**: hoffmann_cheong_phan_zurbruegg2024 (JM), P7–P8
 
 **原文锚定**:
-> "Theoretically, we further our understanding of the antecedents of product recalls in terms of factors driving a firm's decision to recall or not, whereas prior research focuses on the consequences of recalls after they were already decided on. Table 1 positions our study..." / "Practically, we offer insights about how changes in shareholder litigation risk, as a corporate governance mechanism, affect managerial behavior concerning a topic of particular relevance for both consumers and firm owners—product recalls. While UD laws are well-intended, our finding that they also reduce the likelihood of firms to recall products suggests unintended negative consequences..."
+> "Theoretically, we further our understanding of the *antecedents* of product recalls in terms of factors driving a firm's decision to recall or not, whereas prior research focuses on the *consequences* of recalls after they were already decided on. Table 1 positions our study relative to the limited literature on recall antecedents, to which we add by examining how an external shock diminishing managers' risk of being sued by shareholders for failing their fiduciary duties influences a firm's subsequent likelihood to recall a product. ... Practically, we offer insights about how changes in shareholder litigation risk, as a corporate governance mechanism, affect managerial behavior concerning a topic of particular relevance for both consumers and firm owners—product recalls. While UD laws are well-intended, our finding that they also reduce the likelihood of firms to recall products suggests *unintended negative consequences* of imposing less discipline on managers."
 
 **关键特征**:
 - **Theory / Practically 双段分割**：理论贡献段聚焦 antecedents pivot + Table 1；实践段聚焦 unintended consequences + 多受众政策建议

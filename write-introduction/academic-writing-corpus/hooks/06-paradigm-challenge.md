@@ -55,7 +55,7 @@ source: Manually curated from MVP30 narrative_analysis files
 **来源**: gamache2023 (SMJ), P1
 
 **原文锚定**:
-> "Upper echelons research echoes this view, with several studies finding that female top executives are less likely to engage in risky endeavors than male top executives. Although the theoretical mechanisms proposed to motivate such divergent behavior differ, the collective findings suggest that female top executives tend to favor more conservative strategic actions. However, we argue that conceptualizing female CEOs as universally conservative decision-makers may paint too simplistic a picture."
+> "Upper echelons research echoes this view, with several studies finding that female top executives are less likely to engage in risky endeavors than male top executives. Although the theoretical mechanisms proposed to motivate such divergent behavior differ, the collective findings suggest that female top executives tend to favor more conservative strategic actions than their male counterparts. However, we argue that conceptualizing female CEOs as universally conservative decision-makers may paint too simplistic a picture."
 
 **关键特征**:
 - "research echoes this view" → 承认共识存在
@@ -72,7 +72,7 @@ source: Manually curated from MVP30 narrative_analysis files
 **来源**: hahl2017 (ASR), P1
 
 **原文锚定**:
-> "Classic sociological treatments depict cultural consumption as homologous with socioeconomic status. The most famous statements of this idea may be found in Weber's observations on how different status groups 'express' their positions by enacting a particular 'style of life,' and in Bourdieu's argument that elite socialization produces sophisticated consumers whose discourse and practices mark them off from lower classes. But a large body of sociological research since the 1990s has shattered this image."
+> "Classic sociological treatments depict cultural consumption as homologous with socioeconomic status. The most famous statements of this idea may be found in Weber's observations on how different status groups 'express' their positions by enacting a particular 'style of life,' and in Bourdieu's argument that elite socialization produces sophisticated consumers whose discourse and practices mark them off from lower classes. But a large body of sociological research since the 1990s has shattered this image of homology between status and expressed taste."
 
 **关键特征**:
 - 点名经典理论家（Weber, Bourdieu）建立智识权威

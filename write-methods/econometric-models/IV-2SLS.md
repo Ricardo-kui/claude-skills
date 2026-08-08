@@ -32,6 +32,7 @@ updated: 2026-08-05
 
 ### 变体 1: Lewbel (2012) Heteroskedastic Identified Instrument 三步法
 **来源论文**: Wowak2025 MS
+**原始句锚点**: "To address this challenge, we use an IV approach that has emerged from the econometrics literature called the heteroskedastic identified instrument technique. This procedure allows us to generate valid instruments via three steps (Lewbel 2012, 2018; Bun and Harrison 2019)."
 **验证状态**: 通过 (1/5 产品召回，但方法泛用性极高)
 **写入日期**: 2026-05-20
 **槽位**: M7
@@ -41,6 +42,7 @@ updated: 2026-08-05
 
 ### 变体 2: IV 有效性诊断链完整报告 (Lewbel + 传统诊断)
 **来源论文**: Wowak2025 MS
+**原始句锚点**: "It is worth underscoring that our generated instruments also conform to the traditional diagnostic tests pertaining to relevance and exogeneity for any type of IV."
 **验证状态**: 通过 (1/5 产品召回，IV研究的必写段落)
 **写入日期**: 2026-05-20
 **槽位**: M7/M8
@@ -52,6 +54,7 @@ updated: 2026-08-05
 
 ### 变体 3: 政治意识形态操作化 — 四步四指标聚合流程
 **来源论文**: Wowak2025 MS
+**原始句锚点**: "Following research precedence, we averaged the indicators to calculate each TMT member's political ideology (Briscoe and Joshi 2017, Chin and Semadeni 2017, Gupta and Wowak 2017). In line with this literature, we assign a score of 0.5 to individuals with no political donations, indicating that they are politically moderate (Chin et al. 2013, Gupta and Wowak 2017, Gupta et al. 2018)."
 **验证状态**: 可选变体 (1/5，政治意识形态研究特有)
 **写入日期**: 2026-05-20
 **槽位**: M4
@@ -61,6 +64,7 @@ updated: 2026-08-05
 
 ### 变体 4: 外部自然事件作工具变量 + 三因排除限制论证 (1篇高价值)
 **来源论文**: Qiao, Hiatt & Sine 2026 (SMJ)
+**原始句锚点**: "We focused on natural disasters in the airline's home country as an instrumental variable. First, natural disasters are exogenous, reflecting "nature's fury" (Ballesteros et al., 2017; Dutta, 2017: 443), and are not affected by airlines' international expansion."
 **验证状态**: 通过 (单篇高价值，"外部自然事件→非正式关系"工具变量论证的稀缺范式)
 **写入日期**: 2026-06-16
 **槽位**: M8
@@ -70,6 +74,7 @@ updated: 2026-08-05
 
 ### 变体 5: M8 Durbin-Wu-Hausman (DWH) Test + Gaussian Copula 内生性叙事 (1篇高价值)
 **来源论文**: Chung, Low & Rust (2022, JAMS)
+**原始句锚点**: "Therefore, to further address endogeneity concerns, we conduct the Durbin-Wu-Hausman (DWH) test (Malshe & Agarwal, 2015; Whitler et al., 2018). To further substantiate the case of no endogeneity, we also use the instrument-free Gaussian copula joint estimation method (Park & Gupta, 2012) and reach similar conclusions."
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-08
 **槽位**: M8
@@ -81,6 +86,7 @@ updated: 2026-08-05
 
 ### 变体 6: M8 早年传记性暴露作工具变量（政治社会化 / imprinting）+ 第二组织级工具变量 (1篇高价值)
 **来源论文**: Abdurakhmonov, Ingram & Ridge (2026, JOM)
+**原始句锚点**: "The political environment during a CEO's adolescence is likely to shape their long-term ideological orientation but is less likely to directly influence the firm's CPT (Jennings & Niemi, 2014; Malmendier & Nagel, 2011). Specifically, for each CEO, we calculated the average Democratic political exposure between the ages of 15 and 25—a period widely recognized as critical for the formation of durable political beliefs."
 **验证状态**: 通过（单篇入库，待第二篇交叉验证；corpus 此前无 biographical / imprinting 类 IV 变体）
 **写入日期**: 2026-07-22
 **槽位**: M8
@@ -93,6 +99,7 @@ updated: 2026-08-05
 
 ### 变体 7: M8 Shift-Share / Bartik 工具变量（push × pull interaction）+ 双重独立排除限制 (1篇高价值)
 **来源论文**: Lee & Wang (2026, Journal of Management)
+**原始句锚点**: "Following the shift–share approach in economics (Burchardi, Chaney, & Hassan, 2019; Card, 2001; Tabellini, 2019), we construct a state–year instrumental variable that predicts the salience of migration issues by interacting a time-varying "push" factor with a state-specific historical "pull" factor. However, it is unlikely that either ancestry patterns fixed over four decades ago or armed conflicts occurring outside the United States plausibly affect facility-level toxic emissions except through their impact on migration and its salience, supporting the exclusion restriction."
 **验证状态**: 通过（单篇入库，待第二篇交叉验证；corpus 此前无 shift-share / Bartik 类 IV 变体）
 **写入日期**: 2026-07-22
 **槽位**: M8
@@ -105,6 +112,7 @@ updated: 2026-08-05
 
 ### 变体 8: M7 双估计器双层级两阶段 IV（同一 IV 对两个不同性质/层级 DV）
 **来源论文**: Wowak2025 MS
+**原始句锚点**: "We examine the influence of TMT political ideology on each of our dependent variables using similar forms of two-stage instrumental variable (IV) fixed effects regression. The level of analysis for the recall count model is the firm-year, and the level of analysis for the time-to-recall model is the individual recall."
 **验证状态**: 通过（补足变体 1 的估计器选择维度；corpus 此前无"同 IV 双 DV 双估计器双层级"显式变体）
 **写入日期**: 2026-07-25
 **槽位**: M7
@@ -116,6 +124,7 @@ updated: 2026-08-05
 
 ### 变体 9: M8 simultaneity 先证伪后 IV 的 "abundance of caution" 叙事
 **来源论文**: Wowak2025 MS
+**原始句锚点**: "However, out of an abundance of caution, and to further ameliorate concerns related to endogeneity bias that may be caused by this type of simultaneity, or other sources of endogeneity, we use IV estimation."
 **验证状态**: 通过（单篇高价值；corpus 此前无"先证伪最可能威胁再以防御性 IV 收尾"的 M8 修辞变体）
 **写入日期**: 2026-07-25
 **槽位**: M8
@@ -128,6 +137,7 @@ updated: 2026-08-05
 
 ### 变体 10: M8 地理外生性工具变量（geography-based IV，Frankel-Romer 型）(2026-07-30)
 **来源论文**: Zhou, Gao & Zhao (2017, Administrative Science Quarterly)
+**原始句锚点**: "Because regions' geographic location is exogenous and predetermined by nature (Frankel and Romer, 1999), we used the distance of each province to major seaports as the instrument for the index of institutional development (Wei and Wu, 2001). We calculated the shortest physical distance from the capital city of each province to one of the two major seaports—Hong Kong and Shanghai—using the Great Circle formula with the latitudes and longitudes of cities."
 **验证状态**: 通过（单篇，待第二篇交叉验证）
 **槽位**: M8
 **骨架**:
@@ -139,6 +149,7 @@ updated: 2026-08-05
 ### 变体 11: M8 同行 IV 的距离梯度组合——显式管理 relevance–validity trade-off
 
 **来源论文**: Moon, Tuli & Mukherjee (2023, *Journal of Marketing*)
+**原始句锚点**: "Therefore, there is a natural trade-off between the strength and validity of peer-based instruments (see Papies, Ebbes, and Van Heerde 2017). Accordingly, to strengthen our identification strategy, we use three types of peers (i.e., industry, sector, and auditor peers) that represent different degrees of competitive proximity to the focal firm."
 **验证状态**: 单篇高价值 reference-level 变体，待跨论文验证
 **写入日期**: 2026-08-03
 **槽位**: M8
@@ -154,6 +165,7 @@ updated: 2026-08-05
 ### 变体 12: M8 行业 leave-out 均值 IV — 应对「行动者推动采纳」的内生二元结构 (EMERGING)
 
 **来源论文**: Zorn, Shropshire, Martin, Combs & Ketchen (2017, SMJ)
+**原始句锚点**: "To find suitable instruments for 2SLS, we follow recent research in top finance journals that uses the industry average of the focal independent variable, excluding the focal firm, to instrument for the focal predictor (Liu, Miletkov, Wei, & Yang, 2015; Yang & Zhao, 2014). Industry averages correlate with the focal firm given that firms in the same industry often have similar businesses and investment opportunities, but an industry average that excludes the focal firm is not endogenous with focal firm outcomes."
 **验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
 **写入日期**: 2026-08-05
 **槽位**: M8
@@ -169,6 +181,7 @@ updated: 2026-08-05
 ### 变体 13: M7 连续 DV 用 2SLS+双向 FE；稀有二元 DV 放弃 FE 改用聚类 Logit（+ IV-Probit 稳健性预告）(EMERGING)
 
 **来源论文**: Zorn, Shropshire, Martin, Combs & Ketchen (2017, SMJ)
+**原始句锚点**: "To model financial misconduct, which is a binary dependent variable, we use logistic regression with year dummies and robust standard errors clustered by firm (Burns & Kedia, 2006). Given the low base rate occurrence of financial restatement (i.e., many firms never restate), fixed effects models drop a significant number of observations due to lack of variance in the dependent variable."
 **验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
 **写入日期**: 2026-08-05
 **槽位**: M7

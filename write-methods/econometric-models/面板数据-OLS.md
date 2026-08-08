@@ -40,6 +40,7 @@ updated: 2026-08-05
 
 ### 变体 1: 控制变量分层 because 结构 (4/4 复现)
 **来源论文**: Darby2026 JOM / Darby2025 JSCM / Eilert2017 JM / Darby2023 MSOM
+**原始句锚点**: We included a broad set of control variables that influence recalls directly and those that help address alternative explanations (Shang and Rönkkö 2022); in our case, variables correlated with ownership by large institutional investors that may also influence the time-to-recall.
 **验证状态**: 通过
 **写入日期**: 2026-05-19
 **更新日期**: 2026-05-20 (新增 Darby2023 MSOM 复现)
@@ -56,6 +57,7 @@ updated: 2026-08-05
 
 ### 变体 2: 样本交集漏斗 (3/4 复现)
 **来源论文**: Darby2026 JOM / Darby2025 JSCM / Darby2023 MSOM
+**原始句锚点**: The intersection of these datasets resulted in a sample of 2982 high severity recalls across 69 publicly traded firms from 2002 to 2020.
 **验证状态**: 通过
 **写入日期**: 2026-05-19
 **更新日期**: 2026-05-20 (新增 Darby2023 MSOM 复现)
@@ -67,6 +69,7 @@ updated: 2026-08-05
 
 ### 变体 3: IV 选择三层 because 论证链
 **来源论文**: Darby2023 MSOM
+**原始句锚点**: We used CEO Ownership as our primary measure because it is a broad, comprehensive measure that reflects the three related, but distinct, mechanisms we theorized about in Hypothesis 1—firm financial interests, CEO power, and CEO financial interests.
 **验证状态**: 可选变体 (1/4，但生成力极高)
 **写入日期**: 2026-05-20
 **槽位**: M4
@@ -76,6 +79,7 @@ updated: 2026-08-05
 
 ### 变体 4: Mixed-effects within/between 机制分解
 **来源论文**: Darby2023 MSOM
+**原始句锚点**: The results suggest that the effect of CEO stock ownership is driven by the within-component rather than the between-component. That is, it is not the difference in CEO stock ownership between firms, but, rather, a relative increase in stock ownership for a given CEO within the same firm that explains recall delays.
 **验证状态**: 可选变体 (1/4，机制检验设计特有)
 **写入日期**: 2026-05-20
 **槽位**: M5
@@ -85,6 +89,7 @@ updated: 2026-08-05
 
 ### 变体 5: 替代变量机制对齐矩阵
 **来源论文**: Darby2023 MSOM
+**原始句锚点**: To probe these three mechanisms at a more granular level, we replicated our recurrent-event AFT analyses using two alternative measures of CEO stock ownership—specifically, CEO Equity-Based Compensation and CEO Ownership (Monetary).
 **验证状态**: 可选变体 (1/4，需配合 Figure 1 机制对齐图使用)
 **写入日期**: 2026-05-20
 **槽位**: M5
@@ -94,6 +99,7 @@ updated: 2026-08-05
 
 ### 变体 6: M2 多通道精英/关键行为人招募 (1篇高价值)
 **来源论文**: Mannor, Wowak, Bartkus & Gomez-Mejia 2016 (Strategic Management Journal)
+**原始句锚点**: Recognizing the challenge of the last criterion in particular, we used four methods to recruit participants. First, several key advocates for our research served on the boards of Fortune 500 companies and agreed to contact as many of their director colleagues as possible on our behalf.
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: M2
@@ -103,6 +109,7 @@ updated: 2026-08-05
 
 ### 变体 7: M7 嵌套横截面数据的聚类稳健标准误 (1篇高价值)
 **来源论文**: Mannor, Wowak, Bartkus & Gomez-Mejia 2016 (Strategic Management Journal)
+**原始句锚点**: To account for the nonindependence in our data (i.e., the multiple strategic decisions per executive), we specified Huber/White/sandwich standard errors using the “robust” option in Stata 12. Decisions were clustered by executive.
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: M7
@@ -112,6 +119,7 @@ updated: 2026-08-05
 
 ### 变体 8: M8 回顾性偏差三角检验 (1篇高价值)
 **来源论文**: Mannor, Wowak, Bartkus & Gomez-Mejia 2016 (Strategic Management Journal)
+**原始句锚点**: We thus took steps to ensure that the lengthier time horizon for some of the decisions did not introduce retrospective bias into our study. First, and as we discuss later, we controlled for executives' self-ratings of decision quality and recent performance in all models.
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: M8
@@ -121,6 +129,7 @@ updated: 2026-08-05
 
 ### 变体 9: M2 制度断点样本辩护 — 行业收缩+时间边界双重正当性 (1篇高价值)
 **来源论文**: Desai 2011 (Academy of Management Journal)
+**原始句锚点**: I tested these hypotheses on a panel of all U.S. class I railroad firms operating between 1980 and 2003. The U.S. railroad industry was deregulated in 1980, making prior years incomparable with later ones (Smith & Grimm, 1987).
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: M2
@@ -130,6 +139,7 @@ updated: 2026-08-05
 
 ### 变体 10: M7 Hausman 检验 — FE vs RE 选择 (1篇高价值)
 **来源论文**: Bamberger, Homburg & Wielgos 2021 (Journal of Marketing)
+**原始句锚点**: Our choice for a fixed-effects model over a mixed-effects model is appropriate, as the Hausman (1978) test indicates (χ2/d.f. = 24.6, p <.01).
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: M7
@@ -139,6 +149,7 @@ updated: 2026-08-05
 
 ### 变体 11: M2 匹配样本层次回退 + 匹配平衡保守检验 (1篇高价值)
 **来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
+**原始句锚点**: "We then matched each high-reputation firm with three firms from the same four-digit SIC code that were similar in assets, revenues, and return on assets (ROA) (Combs & Skill, 2003; Porac, Wade, & Pollock, 1999). Where appropriate matches were not found at the four-digit level, we looked at three-digit and two-digit SIC codes for similar firms (Combs & Skill, 2003). … A t-test comparing differences in firm size (total assets) revealed no significant differences between the 80 high-reputation and 211 matched companies (t = −0.35, n.s.); however, in keeping with the predictions of prior reputation research (Roberts & Dowling, 2002), there were significant differences in revenues and ROA ($35.1 vs. $16.8 billion, p < .001; and 8.97 percent vs. 4.28 percent, p < .001, respectively)."
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: M2
@@ -148,6 +159,7 @@ updated: 2026-08-05
 
 ### 变体 12: M2 单行业面板 + SIC 边界意识 + 限制样本稳健性 (1篇高价值)
 **来源论文**: Darby, Wowak, Ketchen, Connelly & Skowronski 2026 (Journal of Operations Management)
+**原始句锚点**: However, the sample was not limited to this industry because firms may be formally classified in other industries (e.g., Proctor & Gamble in SIC 284 or General Electric in SIC 999) but still produce—and potentially recall—medical devices.
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: M2
@@ -157,6 +169,7 @@ updated: 2026-08-05
 
 ### 变体 13: M7 随机效应选择三重辩护 — 理论+Hausman+ICC (1篇高价值)
 **来源论文**: Li, Chiu, Kong, Cropanzano & Ho 2026 (Journal of Management)
+**原始句锚点**: We used panel regressions with random-effects estimations, because theoretically, we were more interested in the differential effects across CEOs rather than changes within CEOs. The Hausman test (p =.169) confirmed that using the random-effects (vs. fixed-effects) method was more appropriate.
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: M7
@@ -167,6 +180,7 @@ updated: 2026-08-05
 
 ### 变体 14: M6 全谱系控制变量 — 高 because 密度 + RavenPack事件控制 + CEO人格特质 (1篇高价值)
 **来源论文**: Li, Chiu, Kong, Cropanzano & Ho 2026 (Journal of Management)
+**原始句锚点**: We controlled for several variables to account for their unique influence on investors' reactions. The control variable data were derived from the previous quarter before the focal earnings call unless otherwise indicated.
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: M6
@@ -179,6 +193,7 @@ updated: 2026-08-05
 
 ### 变体 15: M1 单行业设置 — 双重现象共存辩护 (1篇高价值)
 **来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
+**原始句锚点**: We chose the U.S. pharmaceutical industry as an appropriate setting for examining our hypotheses because it features both extensive alliance activities and competition for new products (Lichtenberg & Philipson, 2002; Mowery et al., 1996).
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-08
 **槽位**: M1
@@ -188,6 +203,7 @@ updated: 2026-08-05
 
 ### 变体 16: M2 多源 alliance 数据库合并与交叉验证 (1篇高价值)
 **来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
+**原始句锚点**: We constructed a more comprehensive alliance database by combining these three data sources. By relying on multiple sources, we minimized the possibility of double-counting alliances and of counting alliances that were announced but not realized.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-08
 **槽位**: M2
@@ -199,6 +215,7 @@ updated: 2026-08-05
 
 ### 变体 17: M3 多维行为指标 → factor score → 平均值 (1篇高价值)
 **来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
+**原始句锚点**: We ran a factor analysis of these three items and found that all three loaded high (>0.73) on one latent factor, while the value of Cronbach's alpha is .81, which suggests that it is a reliable construct.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-08
 **槽位**: M3
@@ -208,6 +225,7 @@ updated: 2026-08-05
 
 ### 变体 18: M7 dyad fixed effects + dyad 聚类标准误 + 具体混淆源举例 (1篇高价值)
 **来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
+**原始句锚点**: For example, if unobserved heterogeneities, such as the attractiveness of partners to one another and their tendencies to compete with each other, are constant within firm–partner dyads, then there might be an endogeneity concern. A fixed-effects estimator can rule out such a possibility by eliminating time-invariant heterogeneities.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-08
 **槽位**: M7
@@ -218,6 +236,7 @@ updated: 2026-08-05
 
 ### 变体 19: M4 高管信心期权 moneyness 操作化 (1篇高价值)
 **来源论文**: Chung, Low & Rust (2022, JAMS)
+**原始句锚点**: The average moneyness is defined as the ratio of average value per option to the average strike price. The constructs are measured with a lag relative to the measurement of the dependent variable to create temporal distance and maintain causal priority.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-08
 **槽位**: M4
@@ -228,6 +247,7 @@ updated: 2026-08-05
 
 ### 变体 20: M2.5 Model-Free Evidence 预览 (1篇高价值)
 **来源论文**: Chung, Low & Rust (2022, JAMS)
+**原始句锚点**: We then calculate the mean and median MMM for the firms in each quartile. Consistent with H1, there is a monotonic increase in MMM from the first quartile where CEOs have the lowest level of confidence to the fourth quartile where CEOs are the most confident.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-08
 **槽位**: M2.5
@@ -238,6 +258,7 @@ updated: 2026-08-05
 
 ### 变体 21: M7 三向交互模型设定 (1篇高价值)
 **来源论文**: Chung, Low & Rust (2022, JAMS)
+**原始句锚点**: For ease of interpretation of the interaction coefficients, we follow the recommendations of prior literature (e.g., Irwin & McClelland, 2001) and mean-center CEO confidence, CMO confidence, Board independence, and CMO power before including them in the regressions.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-08
 **槽位**: M7
@@ -249,6 +270,7 @@ updated: 2026-08-05
 
 ### 变体 22: M7 GEE + AR(1) working correlation — 时不变焦点 IV 的估计量选择论证 (1篇高价值)
 **来源论文**: Abdurakhmonov, Ingram & Ridge (2026, JOM)
+**原始句锚点**: We follow prior CEO political ideology research by employing generalized estimating equations (GEE) with robust standard errors (Chin & Semadeni, 2017; Chin et al., 2013) because of this model's appropriateness when including time-invariant variables such as CEO liberalism (Chatterjee & Hambrick, 2007; Quigley & Hambrick, 2012).
 **验证状态**: 通过（单篇入库，待第二篇交叉验证；GEE 在 corpus 中此前无独立变体）
 **写入日期**: 2026-07-22
 **槽位**: M7
@@ -261,6 +283,7 @@ updated: 2026-08-05
 
 ### 变体 23: M1 行业统计 + 先例对齐的设置辩护 (1篇高价值)
 **来源论文**: Pupovac, Astvansh, Carrillat & Legoux 2026 (POM)
+**原始句锚点**: Measuring recalls' contagion from a manufacturer-customer to a supplier requires an empirical setting in which manufacturers and suppliers are interdependent in the product market (Cho et al., 2021). The automotive industry meets this requirement because suppliers produce 70% of an automobile, on average (McGee, 2017), suggesting high interdependence.
 **验证状态**: 通过（单篇高价值，待第二篇交叉验证）
 **写入日期**: 2026-07-21
 **槽位**: M1
@@ -273,6 +296,7 @@ updated: 2026-08-05
 
 ### 变体 24: M4 法律强制披露阈值 → 自愿披露操作化 (1篇高价值)
 **来源论文**: Pupovac, Astvansh, Carrillat & Legoux 2026 (POM)
+**原始句锚点**: U.S. law requires a publicly traded supplier to disclose in its annual report (i.e., the Form 10-K the firm files with the SEC) the sales revenue it received from each "major" customer—that is, a customer from whom the supplier received at least 10% of its total sales revenue in the focal year.
 **验证状态**: 通过（单篇高价值，待第二篇交叉验证）
 **写入日期**: 2026-07-21
 **槽位**: M4
@@ -285,6 +309,7 @@ updated: 2026-08-05
 
 ### 变体 25: M3 DV 文献基准锚定 — 均值与前人文献对比 (1篇高价值)
 **来源论文**: Du & Tsolmon 2024 (Organization Science)
+**原始句锚点**: The mean TMT retention rate in our sample is 54.8%, which is comparable to the mean retention rates found in the two empirical studies on postacquisition turnover: 55% in Hambrick and Cannella (1993), who examined 109 acquisitions from 1980 to 1984, and 59.4% in Krug and Hegarty (1997), who examined 207 acquisitions of U.S. firms by domestic and foreign acquirers from 1986 to 1988.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-25
 **槽位**: M3
@@ -295,6 +320,7 @@ updated: 2026-08-05
 
 ### 变体 26: M2 跨库手工匹配（无共同标识符）+ 多源漏斗 (1篇高价值)
 **来源论文**: Malshe & Agarwal (2015, Journal of Marketing)
+**原始句锚点**: We obtained firms' financial information on balance sheets, income statements, and cash flow statements from S&P's Compustat database. Because there is no common firm-level identifier between the ACSI and Compustat, we manually matched ACSI brands belonging to corresponding Compustat firms.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-30
 **槽位**: M2
@@ -305,6 +331,7 @@ updated: 2026-08-05
 
 ### 变体 27: M4 构念形成窗—结果观察窗分离 + 双代理收敛 (1篇高价值)
 **来源论文**: Schumacher, Keck & Tang (2020, Strategic Management Journal)
+**原始句锚点**: We employ two separate measures of overconfidence derived from the prior literature to test our hypotheses. This helps us to ensure that our findings are not driven by the idiosyncrasies of any specific measure of CEO overconfidence and to overcome some of the limitations that each individual measure might have.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-08-03
 **槽位**: M2 / M4 / M8
@@ -321,6 +348,7 @@ updated: 2026-08-05
 
 ### 变体 28: M7 Binary-panel GEE + 全零单元保留 + 正式曲线识别链 (1篇高价值)
 **来源论文**: Bendig, Hensellek & Schulte (2024, Entrepreneurship Theory and Practice)
+**原始句锚点**: Second, many of our observations are zero for all years for one firm. We need to include these observations in our regression as they contain relevant venturing information.
 **验证状态**: 通过（单篇高价值；与变体22共同验证 GEE 的可迁移性，但选择理由不同）
 **写入日期**: 2026-08-04
 **槽位**: M5 / M7 / M8
@@ -344,6 +372,7 @@ updated: 2026-08-05
 ### 变体 29: M4 召回严重度理论分类 — 后果类型二元操作化 (1篇高价值)
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
+**原始句锚点**: To measure the effects of the severity of product recall, we classify two severity types based on the consequence of product failure described in the data. Severity type 1 product recalls, which increase the chance of crash or fire, involves an immediate safety concern.
 
 **验证状态**: EMERGING（单篇；与 Kashmiri 2017 severity 边界声明互补）
 
@@ -361,6 +390,7 @@ updated: 2026-08-05
 ### 变体 30: M4 媒体覆盖 — 双索引相关度阈值 + 互补数据源 (1篇高价值)
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
+**原始句锚点**: LexisNexis assigns a relevancy score for each index (e.g., product recall) of each article. We use this score to ensure the articles do indeed discuss the recall events of the firm of interest and that they are not incidental mentions.
 
 **验证状态**: EMERGING（单篇；待与 `文本构念测量` 交叉验证）
 
@@ -378,6 +408,7 @@ updated: 2026-08-05
 ### 变体 31: M2/M4 异频数据时间对齐 — 事件聚合至结果频率 (1篇高价值)
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
+**原始句锚点**: To fully utilize the monthly sales and advertising data, we aggregate the product recall data for each month and each car nameplate. Although all car characteristics and price data are annual, the advertising expenditures and product recall data are monthly.
 
 **验证状态**: EMERGING（单篇；待第二篇交叉验证）
 
@@ -393,6 +424,7 @@ updated: 2026-08-05
 ### 变体 32: M4 结构二元特征操作化为「kind」而非「degree」— 相对 majority-independence 的 discrete construct (EMERGING)
 
 **来源论文**: Zorn, Shropshire, Martin, Combs & Ketchen (2017, SMJ)
+**原始句锚点**: Our independent variable is whether the focal board of directors was a lone-insider board. To capture the most conservative specification, we coded firms as "1" if the CEO was the only inside or affiliated member on the board; other board structures were coded as "0."
 **验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
 **写入日期**: 2026-08-05
 **槽位**: M4

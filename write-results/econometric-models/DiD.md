@@ -44,6 +44,8 @@ updated: 2026-08-05
 
 **来源论文**: Lee, Wu & Bednar, *Organization Science*, DOI 10.1287/orsc.2024.18968
 
+**原始句锚点**: "In Model 2, we introduce the interaction between post local newspaper declines and national newspaper coverage, revealing a positive moderating effect (β = 0.38, p < 0.001). … When national newspaper coverage is higher, the decline of local newspapers appears to have a positive relationship with CSR engagement. In contrast, when national newspaper coverage is lower, the decline of local newspapers has a slightly negative relationship with CSR engagement."
+
 **验证状态**: EMERGING（单篇；`section_variant`）
 
 **槽位**: R4 + R5 + R6
@@ -61,6 +63,8 @@ updated: 2026-08-05
 ### 变体 2：理论前提探测式补充证据链（2026-08-02）
 
 **来源论文**: Lee, Wu & Bednar, *Organization Science*, DOI 10.1287/orsc.2024.18968
+
+**原始句锚点**: "To empirically assess this assumption, we regress national newspaper coverage, analyst coverage, and credit rating coverage on firms' CSR engagement … higher CSR engagement is indeed associated with increased national newspaper coverage and greater analyst attention, but not with higher credit rating coverage."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -80,6 +84,8 @@ updated: 2026-08-05
 
 **来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (*Journal of Marketing*)
 
+**原始句锚点**: The odds ratio for the UD_LAW × POST_ADOPTION coefficient in Column 2 is .4093, implying that firms in UD law states are, on average, 29.04% less likely to announce a product recall relative to firms headquartered in states that have not adopted UD laws.
+
 **验证状态**: EMERGING（单篇；`section_variant`；2026-08-05 重蒸馏校准）
 
 **槽位**: R2 + R3
@@ -94,6 +100,8 @@ updated: 2026-08-05
 ### 变体 4：双 moderator 25th→75th 处理效应衰减 + 90th 联合 switch-off（2026-08-05）
 
 **来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (*Journal of Marketing*)
+
+**原始句锚点**: We calculate the difference in average predicted probabilities when changing the value of INST_OWNERSHIP from that representing the 25th percentile to that representing the 75th percentile. Moving from firms with lower to higher institutional ownership in this way reduces the impact of UD law adoption on product recall likelihood by 10.01%.
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -110,6 +118,8 @@ updated: 2026-08-05
 
 **来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (*Journal of Marketing*)
 
+**原始句锚点**: That is, it is unlikely that the documented effect of the reduced threat of managers being sued by shareholders on firms' likelihood to recall is an artefact of a lower *need* for recalls instead of reflecting a lower *willingness* of managers to recall.
+
 **验证状态**: EMERGING（单篇；`section_variant`）
 
 **槽位**: R7
@@ -123,6 +133,8 @@ updated: 2026-08-05
 
 **来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (*Journal of Marketing*)
 
+**原始句锚点**: When including both moderators simultaneously, the interaction effect of customer focus remains significant, while that of institutional ownership only just fails to reach significance at conventional levels (z-statistic = 1.62). In sum, we conclude that our results are generally robust.
+
 **验证状态**: EMERGING（单篇；`section_variant`）
 
 **槽位**: R7
@@ -135,6 +147,8 @@ updated: 2026-08-05
 ### 变体 7：平均净效应开场 + 正负权变预告（2026-08-05）
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+
+**原始句锚点**: This suggests that whereas a stronger trade-secrecy protection might produce both positive and negative effects (see results below), the positive effect is on average stronger than the negative one, generating a net increase in the firm market value.
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -155,6 +169,8 @@ updated: 2026-08-05
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
 
+**原始句锚点**: The positive coefficient of the interaction term implies that, as worker mobility increases by one standard deviation (equal in our sample to 0.061), the treatment augments the firm market value of the focal company by about 18 percent.
+
 **验证状态**: EMERGING（单篇；`section_variant`）
 
 **槽位**: R3 + R4 + R5（幅度嵌入）
@@ -174,6 +190,8 @@ updated: 2026-08-05
 ### 变体 9：准实验识别威胁分节电池（Matching→政治经济→供需→Placebo→Early/Late→替代测量）（2026-08-05）
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+
+**原始句锚点**: Our identification strategy assumes that the enactment of the UTSA laws is exogenous with respect to firm and state characteristics associated with firm market value. In the following, we discuss potential identification concerns and describe how our specification helps address them.
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -213,6 +231,8 @@ updated: 2026-08-05
 ### 变体 10：Null placebo（±k 期伪处理）作为识别确证（2026-08-05）
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+
+**原始句锚点**: We expect the fake treatment to have a weaker (or even null) effect on the dependent variable when compared with the actual treatment. Consistent with this idea, we find that neither the direct impact of our 'placebo treatment' nor any interaction is significant; results are shown in Table S3.
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 

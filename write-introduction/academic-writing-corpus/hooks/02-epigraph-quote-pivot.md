@@ -181,7 +181,7 @@ source: Extracted from MVP30 narrative_analysis + darby2026 distill; re-distille
 **来源**: abdurakhmonov_ingram_ridge_2026 (JOM), P1
 
 **原文锚定**:
-> "On November 9, 2021, The New York Times reported that Mercedes-Benz and Volvo, among other automakers, had committed to ending the production of gasoline and diesel vehicles by 2040... However, behind the scenes, the Truck and Engine Manufacturers Association, a lobbying group representing these firms, was working to weaken legislation aimed at curbing emissions... This discrepancy between the firms' public commitments and private actions underscores a critical tension in corporate political activity (CPA)."
+> "On November 9, 2021, The New York Times reported that Mercedes-Benz and Volvo, among other automakers, had committed to ending the production of gasoline and diesel vehicles by 2040 (Plumer & Tabuchi, 2021). However, behind the scenes, the Truck and Engine Manufacturers Association, a lobbying group representing these firms, was working to weaken legislation aimed at curbing emissions (Phillips, 2022). This discrepancy between the firms' public commitments and private actions underscores a critical tension in corporate political activity (CPA): firms often engage in covert influence efforts while outwardly signaling support for progressive policies."
 
 **关键特征**:
 - **公开-私下虚伪对比（discrepancy 揭示）**: 不靠引语或内部文件曝光，而是并列两个可公开查证的事实——[公开承诺] vs [私下行动]——让虚伪从两者矛盾中自然浮现。区别于变体 A（揭示制度缺陷）与变体 C（曝光隐藏证据）：本变体的说服力来自两个 public-facing 事实之间的张力

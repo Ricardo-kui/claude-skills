@@ -53,6 +53,9 @@ Traditional approaches to [phenomenon] have focused on [conventional lens — e.
 
 **来源**: zhao_ding2022 (OS), P1
 
+**原文锚定**:
+> "The advent of digital technologies has sharply reduced the costs of producing, distributing, and promoting products... These lower costs have contributed not only to exponential growth in the number of product offerings but also to unprecedented variety and a proliferation of heterogeneous market positions."
+
 **关键特征**:
 - "While this lens has yielded important insights" — 对旧视角的尊重，不 strawman
 - "creates a fundamentally different challenge" — 新条件是驱动视角转移的因果力量
@@ -70,6 +73,9 @@ In principle, [actors] would choose [ideal strategy] based on [internal factors 
 ```
 
 **来源**: zhao_ding2022 (OS), adapted
+
+**原文锚定**:
+> "In principle, entrants would choose functional combinations that closely align with the target customers' needs and preferences. In practice, they often face substantial demand uncertainty about the functional attributes customers are likely to value in products... Hence, we propose that entrants in digital markets learn about the demand environment by observing customers' evaluations of other products and use this external market feedback to inform their initial market positions."
 
 **关键特征**:
 - "In principle... In practice..." — 认可旧逻辑在理想条件下的合理性

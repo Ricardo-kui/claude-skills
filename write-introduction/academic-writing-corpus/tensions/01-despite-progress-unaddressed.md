@@ -196,7 +196,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 **来源**: mannor2016 (SMJ), P2 前半
 
 **原文锚定**:
-> "This is somewhat puzzling given the robust literature on executive job demands, although the difficulty in obtaining data on sensitive psychological attributes of top executives has likely contributed to the absence of research on the topic. Most studies of top executives rely upon demographic indicators as proxies for underlying psychological attributes, and numerous investigations have shown that certain demographic characteristics can affect strategic outcomes (for a review, see Finkelstein, Hambrick, and Cannella, 2009). But the central premise of upper echelons theory holds that executives' experiences, values, and personalities greatly influence their interpretations of strategic situations (Hambrick, 2007), and research in this domain has begun to shift away from a strict focus on demographics and toward a focus on executives' psychological attributes (e.g., Gamache et al., 2015; Wowak et al., 2016)."
+> "This is somewhat puzzling given the robust literature on top executives, although the difficulty in obtaining data on sensitive psychological attributes has likely contributed to the absence of research on the topic. Most studies of top executives rely upon archival proxies for underlying psychological attributes, and numerous investigations have shown that observable characteristics such as work experience, age, tenure, and education can affect an executive's decisions and actions (for a review, see Finkelstein, Hambrick, and Cannella, 2009). But the central premise of upper echelons theory holds that it is the personal biases and dispositions of top executives that influence strategic decision making and the organizational outcomes that follow (Hambrick and Mason, 1984), and research in this domain has begun to shift away from archival proxies and toward a focus on more fundamental psychological constructs (e.g., Nadkarni and Herrmann, 2010; Simsek, Heavey, and Veiga, 2010)."
 
 **关键特征**:
 - "This is somewhat puzzling" → 温和指出缺口，不指责文献
@@ -222,7 +222,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 **来源**: darby2025 (JSCM), P3
 
 **原文锚定**:
-> "This study takes a logical next step by examining activist investors. Activist investors, defined as 'shareholders who acquire large stakes in publicly traded companies and pressure management for changes intended to increase shareholder value' (Goranova and Ryan, 2014: 1232), have received significant attention in finance and management research. Growing evidence suggests activist investors' influence may extend beyond financial performance to affect a firm's operational outcomes. This phenomenon—known as a spillover effect—occurs when an actor or event influences outcomes beyond the intended or traditional target (Ahuja and Novelli, 2017). As a former Ford executive shared, 'When an activist shows up, it definitely puts you on edge... you start looking at everything differently—including your products.' Accordingly, activist investors take notice when product quality issues arise, taking actions to avoid negative spillover effects, such as pushing for earlier product recalls, demanding stricter quality controls, and increasing oversight of safety protocols."
+> "This study takes a logical next step by examining a group of stockholders who are increasingly vocal about supply chain failures: activist investors. Activist investors are a subset of institutional investors—i.e., those that manage more than $100 million in equity across their portfolios—who aim to bring about material change in the operations and outcomes of firms they target (Shi et al. 2020)... Growing evidence suggests that the influence of activist investors may extend beyond the firms they target (e.g., Gantchev et al. 2019). This phenomenon—known as a spillover effect—occurs when an attack on 'a firm or firms in an investor's portfolio of holdings influences actions within other firms that are not presently targeted for activism' (Shi et al. 2020, p. 1866). As a board member of a healthcare company shared, observing an attack 'definitely puts you on edge. It creates a heightened sensitivity when you see an activist acting aggressively toward another company.' Accordingly, executives take notice when other firms are under attack by activist investors who also own stock in their firm, and they take actions to avoid being targeted, such as decreasing growth initiatives (Shi et al. 2020), increasing productivity (Aslan and Kumar 2016), and improving asset utilization (Gantchev et al. 2019)."
 
 **关键特征**:
 - "takes a logical next step" → 积极缺口语言（非批评式），适合 Incompleteness
@@ -274,7 +274,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 **来源**: darby2023 (MSOM), P2
 
 **原文锚定**:
-> "A single recall can have very different implications for the recalling firm and its investors depending on when the recall is initiated, but such implications are not reflected in outcomes such as firm value or stock returns."
+> "A single recall can have very different implications for the firm and for the individuals who rely on the product depending on how long the firm takes to initiate it, but such implications are not reflected in outcomes such as recall likelihood ([66]) or recall hazard ([45])."
 
 **关键特征**:
 - **"A single [event] can have very different implications"** → 强调同一事件内部的异质性（而非不同事件之间的差异）
@@ -602,7 +602,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 **来源**: Grewal, Vana, and Stephen (2025), *Journal of Marketing*, P3
 
 **原文锚定**:
-> "Some research has identified the effects of negative advertising contexts on consumers' brand-related responses (e.g., Divya and Vassar 2021; Moorman, Norris, and D'Alessandro 2019), though Bellman et al. (2018) suggest limited effects of negative ad context. Notably though, prior research takes a generalized view of the overall negative versus positive environments surrounding brand advertisements. Such an approach fails to account for how various brand safety incidents, in different digital environments, involving diverse brands and consumers, might influence relevant brand outcomes."
+> "Some limited brand safety research has identified the effects of adjacent, unsafe digital content on critical brand outcomes such as ad recall, brand liking, and loyalty (Bushman 2007; Johnson, Voorhees, and Khodakarami 2023; Lee, Kim, and Lim 2021; Manatt, Avital, and Ofer 2018), though Bellman et al. (2018) suggest null effects. Notably though, prior research takes a generalized view of the overall negative versus positive environments surrounding brand advertisements. Such an approach fails to account for how various brand safety incidents, in different digital environments, involving diverse brands and consumers, might influence relevant brand outcomes."
 
 **关键特征**:
 - 不批评"没人研究"，而是批评"研究过于 general"

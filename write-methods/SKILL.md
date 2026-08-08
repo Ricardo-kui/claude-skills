@@ -154,6 +154,8 @@ description: |
 
 **润色纪律**（auxiliary 层）：骨架优先，变化库只提供措辞变体不替代结构（方法选择理由、识别论证、因果梯度仍归 slot 骨架）；每句位 ≤2-3 候选；specificity gate 强制具体化；结果以 `### 措辞润色建议` 块附骨架末尾，不覆盖原文。
 
+**锚点使用纪律**（verbatim anchor）：设计类型变体（`econometric-models/[设计类型].md`）的每个变体带 `原始句锚点`（来源论文原句，风格参照）。生成段落时：**结构跟骨架、语言风味跟锚点**——锚点用于校准"顶刊味道"（句式节奏、措辞质感、过渡衔接），填入 [placeholder] 后应保持锚点的语言质地；**不得逐字复制锚点内容，不得保留其专有名词/数字**。旧变体无锚点（标注"待补"）时按骨架直接生成。
+
 ---
 
 ## 下游接口
@@ -414,9 +416,35 @@ Pollock 不把四类效度当 checklist 逐条回答，而是嵌入 describe-exp
 - 不要把模型选择埋在方程里而没有文字解释。
 - **输出末尾追加 paper-state.yaml 片段**：在 Methods 骨架输出末尾，自动附加 `### paper-state.yaml 片段` 块。该片段包含 `methods.design_type`、`methods.estimator_family`、`methods.sample`、`methods.variables`、`methods.hypothesis_variable_map`、`methods.results_preview`，供下游 write-results Phase 0 自动消费。用户复制到项目 `paper-state.yaml` 的 `methods:` 节下。
 
+## 批评登记（critique-driven stats）
+
+**当用户对本 skill 产出表示不满时，当场把批评登记到 `econometric-models/_evidence_registry.yaml`**——这是语料精炼的唯一反馈信号，无需询问用户。
+
+### 识别批评
+
+用户可能以多种方式表达：
+- 直接否定："这个骨架不行"、"这段不像顶刊写法"
+- 指出具体缺陷："M2 漏斗缺数字"、"M7 这段不适用于我的设计"、"控制变量没有 because 逻辑"
+- 要求重做/换一种写法："重新生成"、"不要这个结构"
+
+### 登记动作
+
+1. 定位设计类型（本次调用的 `design_type`，如 `面板数据-OLS`）
+2. 在 `evidence.by_design_type.<类型>.validation_history` 下：
+   - 严重度判定：需大改 → `revise` +1；弃用/要求换写法 → `reject` +1
+   - `last_critique: "YYYY-MM-DD"`（今天）
+   - 批评要点去重后插入 `common_revise_reasons` 首位（最多保留 8 条）
+3. 不登记满意信号；同一会话中同一缺陷只登记一次（合并为一条）
+
+### 登记边界
+
+- 只登记对**变体产出质量**的批评，不登记对 [placeholder] 填充流程的抱怨、风格偏好或与语料无关的意见
+- 不因批评自动修改 corpus 文件——批评只落 registry，由后续蒸馏（`distill-methods-exemplar` Phase 0.75 critique_heavy 带）驱动精炼
+- 批量补登可用 `python _update_registry.py --record-critique <critiques.yaml>`
+
 ## 语料与变体
 
 设计类型的具体变体见 `econometric-models/[设计类型].md`。新论文的蒸馏结果通过 `distill-methods-exemplar` → Phase 4 `skill_update_instructions` 自动写入。
 
 ---
-*基于 34 篇 MVP30 范文语料库、Pollock 2025 Ch07 构建。版本 3.2.0。*
+*基于 34 篇 MVP30 范文语料库、Pollock 2025 Ch07 构建。版本 3.4.0（新增批评登记 + 变体原始句锚点使用纪律）。*

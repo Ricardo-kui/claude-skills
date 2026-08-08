@@ -51,7 +51,7 @@ source: Manually curated from MVP30 narrative_analysis files
 **来源**: zhou2017 (ASQ), P4
 
 **原文锚定**:
-> "To resolve the theoretical and empirical inconsistencies, we theorize that the institutional and efficiency logics pertain to different facets of state ownership: the institutional logic focuses on resource allocation, and the efficiency logic refers to resource utilization, so they are intertwined in explaining innovation."
+> "To resolve the theoretical and empirical inconsistencies about the effects of state ownership, we theorize in this paper that the institutional and efficiency logics pertain to different facets of state ownership: the institutional logic focuses on resource allocation, and the efficiency logic refers to resource utilization, so they are intertwined in explaining the impact of state ownership on innovation."
 
 **关键特征**:
 - "To resolve... we theorize that" → 从问题诊断直接跳到解决方案
@@ -70,7 +70,7 @@ source: Manually curated from MVP30 narrative_analysis files
 **来源**: keeves2017 (ASQ), P6 (contribution section, functioning as transition)
 
 **原文锚定**:
-> "Thus while existing theory shows how ingratiation can build social capital by inducing positive affect, our theory suggests that ingratiation can also elicit negative affect toward the influence target... Though a growing body of research has examined the behavioral mechanisms by which social capital is acquired, few studies have examined the micro-level, interpersonal mechanisms by which social capital is lost or damaged."
+> "Thus while existing theory shows how ingratiation can build social capital by inducing positive affect and goodwill that motivates social support of the ingratiator, our theory suggests that ingratiation can also elicit negative affect toward the influence target, which may in turn trigger behavior that damages the social capital of the target with important third parties. Though a growing body of research has examined the behavioral mechanisms by which social capital is acquired in organizations, few studies have examined the micro-level, interpersonal mechanisms by which social capital is lost or damaged."
 
 **关键特征**:
 - "Thus while existing theory shows X, our theory suggests Y" → 对比句式，立即确立贡献的张力
@@ -89,7 +89,7 @@ source: Manually curated from MVP30 narrative_analysis files
 **来源**: eilert2017 (JM), P5
 
 **原文锚定**:
-> "The article makes two contributions... First, to date, no study to our knowledge has examined the factors that influence the timing of product recalls. The product recall literature has predominantly focused on the consequences of recalls and the firm's ability to learn and prevent future recalls. However, little attention has been paid to the actual recall behavior of the firm. By examining time to recall as its key dependent variable, our study offers insights on the behavioral aspects of product recalls."
+> "The article makes two contributions to marketing theory and practice. First, to date, no study to our knowledge has examined the factors that influence the timing of product recalls. The product recall literature in marketing, as summarized in Table 1, has predominantly focused on the consequences of recalls for the firm's bottom line (e.g., Borah and Tellis 2016; Chen, Ganesan, and Liu 2009; Cleeren, Van Heerde, and Dekimpe 2013; Liu and Shankar 2015; Van Heerde, Helsen, and Dekimpe 2007) and the firm's ability to learn and prevent future recalls (Haunschild and Rhee 2004; Thirumalai and Sinha 2011). However, little attention has been paid to the actual recall behavior of the firm. By examining the time to recall, our study offers insights on when firms are likely to respond swiftly to defects that are under external investigation."
 
 **关键特征**:
 - "no study to our knowledge has examined" → 谨慎但明确的贡献定位
@@ -108,7 +108,7 @@ source: Manually curated from MVP30 narrative_analysis files
 **来源**: desjardine2023 (OS), P4
 
 **原文锚定**:
-> "Most research underscores the devious influence common owners have on corporate strategy and overlooks their systematic risk dilemma. A number of studies conclude that common owners engage firms to foster cooperation and anticompetitive behaviors... We propose an alternative but overlooked strategy: Common owners impel firms in their portfolios to adopt corporate strategies that minimize negative externalities and create spillover benefits..."
+> "Most research underscores the devious influence common owners have on corporate strategy and overlooks their systematic risk dilemma. A number of studies conclude that common owners engage firms to foster cooperation and anticompetitive behaviors (Gutiérrez and Philippon 2017; Azar et al. 2018), restricting firms from executing intra-industry, winner-take-most strategies... We propose an alternative but overlooked strategy: Common owners impel firms in their portfolios to adopt corporate strategies that minimize negative externalities and create spillover benefits for other same-industry firms in their portfolios, amplifying their own investment returns in the process."
 
 **关键特征**:
 - "Most research underscores X and overlooks Y" → 简洁的两极对比
@@ -127,7 +127,7 @@ source: Manually curated from MVP30 narrative_analysis files
 **来源**: gamache2020 (SMJ), P5-P7
 
 **原文锚定**:
-> "We make several key contributions. First, we provide evidence that attributes of CEOs... influence the specific orientation of their firms' stakeholder strategies... Second, our study provides evidence that there are important nuances to consider in firms' stakeholder strategies. Most prior research... considers all stakeholder strategies collectively... Third, we contribute to research on CEO regulatory focus by expanding our understanding of its influence on firm outcomes."
+> "We make several key contributions to strategic leadership and stakeholder strategy research. First, we provide evidence that attributes of CEOs—and specifically those related to their regulatory foci—influence the specific orientation of their firms' stakeholder strategies; an important refinement to our understanding of firm-stakeholder interactions, which is only beginning to consider the influence of top executives... Second, our study provides evidence that there are important nuances to consider in firms' stakeholder strategies. Most prior research investigating the role of CEOs considers all stakeholder strategies collectively, typically lumping governance-oriented strategies along with broader socially-oriented strategies (e.g., Tang et al., 2018), or, in some cases, excluding governance-oriented strategies altogether (e.g., Chin et al., 2013)... Finally, we contribute to research on CEO regulatory focus by expanding our understanding of its influence on firm outcomes."
 
 **关键特征**:
 - "We make several key contributions" → 最直接的过渡
@@ -146,7 +146,7 @@ source: Manually curated from MVP30 narrative_analysis files
 **来源**: hahl2017 (ASR), P3
 
 **原文锚定**:
-> "In this article, we develop and test the argument that authentic lowbrow culture helps address a sense of insecurity in authenticity that is common among elites, depending on how they are understood to have attained status. To develop this argument, we build on recent research that highlights a potential 'soft underbelly' of status hierarchies... We build, in particular, on Hahl and Zuckerman's (2014) theory for why high-status actors are often perceived—by themselves and others—as less authentic."
+> "In this article, we develop and test the argument that authentic lowbrow culture helps address a sense of insecurity in authenticity that is common among elites, depending on how they are understood to have attained status. To develop this argument, we build on recent research that highlights a potential 'soft underbelly' of status hierarchies, whereby those who attain status tend to be insulated from concerns about their competence (Sgourev and Althuizen 2014) but not from concerns about their moral character (Phillips, Turco, and Zuckerman 2013; cf. Adut 2008; Graffin et al. 2013)... We build, in particular, on Hahl and Zuckerman's (2014; see also Hahl 2016) theory for why high-status actors are often perceived—by themselves and others—as less authentic (and less considerate) than lower-status actors."
 
 **关键特征**:
 - "In this article, we develop and test the argument that" → 从 gap 直接过渡到核心主张

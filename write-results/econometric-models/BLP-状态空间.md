@@ -26,6 +26,7 @@ updated: 2026-08-05
 ### 变体 1: R2 — GMM 嵌套模型比较（MMSC-AIC 逐步升级）
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
+**原始句锚点**: The values of MMSC-AIC and the objective function in Table 3 show that the fit of Model 1 is significantly worse than Model 2, underlining the importance of considering a product recall's direct effect on brand preference.
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -43,6 +44,7 @@ updated: 2026-08-05
 ### 变体 2: R3 — 研究问题驱动的状态空间参数解读（initial + σ → recovered path → 理论）
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
+**原始句锚点**: The negative media coverage coefficients suggest that greater publicity of product recall events enhances consumers' negative perceptions of the brand, consistent with Siomkos and Kurzbard (1994).
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -60,6 +62,7 @@ updated: 2026-08-05
 ### 变体 3: R3 — 双层级间接通道与品牌强度异质性（nameplate vs parent; strong vs weak）
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
+**原始句锚点**: Since parent-brand-level advertising is hurt less than nameplate-level advertising during product recall, the loss due to the decreased effectiveness of parent-brand-level advertising is smaller and ranges from about one percent to seven percent.
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -75,6 +78,7 @@ updated: 2026-08-05
 ### 变体 4: R8 — 反事实拟合验证 + 多通道长期损失分解
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
+**原始句锚点**: The model with product recall effects predicts market shares better than the one without product recall effects for all four car nameplates in both the estimation and validation samples.
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -92,6 +96,7 @@ updated: 2026-08-05
 ### 变体 5: R8 — 非最优性政策模拟（scenario ladder + 验证期 what-if）
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
+**原始句锚点**: This simulation differs from supply side analysis in the classic random coefficient model (BLP 1995, Sudhir 2001) where optimal firm decision is assumed. We follow Dube et al. (2005) and Sriram et al. (2006) and do not impose any “optimality” on the firms’ decision when estimating the demand model.
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 

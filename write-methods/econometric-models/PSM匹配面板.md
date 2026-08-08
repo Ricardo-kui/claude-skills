@@ -28,6 +28,7 @@ updated: 2026-06-16
 
 ### 变体 1: CEM 五步论证链 (主分析版本)
 **来源论文**: Darby2026 JOM / Darby2023 MSOM
+**原始句锚点**: While AFT models account for the fact that the likelihood of an event (i.e., a recall) changes with the passage of time due to underlying factors (Bhattacharjee et al. 2007), they may not account for characteristics that influence a firm’s ownership stakes and the time-to-recall. To address concerns related to selection on observable characteristics, we first processed our data using CEM (Yılmaz et al. 2024).
 **验证状态**: 通过 (2/4 复现)
 **写入日期**: 2026-05-19
 **更新日期**: 2026-05-20 (新增 Darby2023 MSOM 复现)
@@ -46,6 +47,7 @@ updated: 2026-06-16
 
 ### 变体 2: CEM 作为外生冲击的稳健性验证
 **来源论文**: Darby2023 MSOM
+**原始句锚点**: We address this endogeneity concern by exploiting an exogenous shock in our data—a change in a firm’s CEO. A change in the CEO is an exogenous shock to the amount of stock owned by a CEO, contingent upon one key criterion: Past recalls should not predict the likelihood of the previous CEO’s departure.
 **验证状态**: 可选变体 (1/4，将CEM置于稳健性检验的新位置)
 **写入日期**: 2026-05-20
 **槽位**: M8
@@ -59,6 +61,7 @@ updated: 2026-06-16
 
 ### 变体 3: Entropy Balancing (EBM) — 重加权、保留全部观测 (1篇高价值)
 **来源论文**: Qiao, Hiatt & Sine 2026 (SMJ)
+**原始句锚点**: Table S2 shows the covariate balancing results after EBM: after matching, the differences of all control variables, in terms of their means, between the treatment and control groups become negligible. These results suggest that the treatment we have can be seen as random to the extent that we have ruled out selection on these observable variables.
 **验证状态**: 通过 (单篇高价值，EBM 区别于 CEM/PSM 的关键卖点论证清晰)
 **写入日期**: 2026-06-16
 **槽位**: M8

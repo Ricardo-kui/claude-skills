@@ -49,7 +49,7 @@ Inadequacy 问题化的一个特定变体：不只是在某个具体假设上有
 **来源**: gamache2020 (SMJ), P2-P3
 
 **原文锚定**:
-> "While important, research on corporate social responsibility generally considers stakeholder strategies broadly... This structural tendency has limited our understanding... Most prior research considers all stakeholder strategies collectively, overlooking how specific types of strategies may be driven by different CEO characteristics."
+> "Most prior research investigating the role of CEOs considers all stakeholder strategies collectively, typically lumping governance-oriented strategies along with broader socially-oriented strategies (e.g., Tang et al., 2018), or, in some cases, excluding governance-oriented strategies altogether (e.g., Chin et al., 2013). This work neglects the fact that different stakeholder strategies may appeal to different CEOs."
 
 **关键特征**:
 - "structural tendency" → 明确指出这不是个别疏忽，而是系统模式

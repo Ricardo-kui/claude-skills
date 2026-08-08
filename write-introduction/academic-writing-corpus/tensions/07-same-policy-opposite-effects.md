@@ -36,6 +36,9 @@ source: Extracted from MVP30 narrative_analysis files
 
 **来源**: employee_free_speech2024 (OS), adapted
 
+**原文锚定**:
+> "We highlight the tension created when the same censorship policy fosters psychological safety for some individuals (i.e., liberals) while undermining psychological safety for others (i.e., conservatives). Organizations that censor employees for prejudiced social media posts should signal to liberals—who prioritize safeguards—that their concerns and opinions related to inclusivity and social equity are aligned with the organization's values and can be expressed freely without fear of being dismissed or disparaged (e.g., labeled 'woke'). But conservatives—who prioritize free speech—should feel less psychologically safe, as policies that exert such control in nonwork contexts marginalize their values."
+
 **关键特征**:
 - 以研究问句开场，直接声明差异化效应
 - 两组论证完全对称，各占相近篇幅

@@ -3,12 +3,29 @@
 # 设计说明见 INDEX.md
 
 meta:
-  schema_version: 1.0.0
+  schema_version: 1.1.0
   registry_type: estimator-slot-skeleton
-  last_updated: '2026-08-05'
+  last_updated: '2026-08-08'
   last_batch_id: batch_29_castellaneta_conti_kacperczyk_2017_smj
   batches_processed: 29
   total_papers_indexed: 30
+  usage_stats_schema:
+    origin: "Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑"
+    granularity: "per estimator（对应 econometric-models/[结果类型].md 文件）"
+    rationale: "用户不会报告满意，但会在对话中批评产出——批评是唯一可靠且零成本的使用反馈信号"
+    fields:
+      revise: 用户对该估计器产出的不满/需大改的批评次数（Claude 在 write-results 会话中自动登记）
+      reject: 产出被弃用/重写/推翻的次数（同上）
+      last_critique: 最近一次批评日期 YYYY-MM-DD（null = 从未被批评）
+      common_revise_reasons: 最近批评要点（去重，最多 8 条——精炼时的直接依据）
+    signals:
+      gap: "slots 未覆盖缺口（静态，不依赖登记）→ 蒸馏优先（ADD 候选）"
+      critique_heavy: "revise + reject >= 2 → 变体产出不可用，精炼优先（REPLACE/EXTEND 候选）"
+      quiet: "revise + reject == 0 → 正常蒸馏，无额外优先级"
+    non_signals:
+      - "不登记 accepted（用户不报告满意，登记必然为零）"
+      - "不设 too_easy/淘汰（变体是长期资产；频繁使用且好用应提升路由权重，而非降级）"
+    record_path: "Claude 在 write-results 会话中捕获用户批评后自动登记（见 write-results SKILL.md 批评登记）；批量登记可用 python _update_registry.py --record-critique <critiques.yaml>（见 distill-results-exemplar SKILL.md Phase 4.5）"
   subfields:
   - strategy
   - ob_hr
@@ -148,6 +165,11 @@ global_honesty_boundaries:
 estimators:
   OLS_FE:
     display_name: OLS / Fixed Effects
+    usage_stats:
+      revise: 0
+      reject: 0
+      last_critique: null
+      common_revise_reasons: []
     forced_slots:
     - R1
     - R2
@@ -595,6 +617,11 @@ estimators:
       note: Model 1→2→3 必须有清晰的 incremental justification
   Logit_Probit_Ordered_Probit:
     display_name: Logit / Probit / Ordered Probit
+    usage_stats:
+      revise: 0
+      reject: 0
+      last_critique: null
+      common_revise_reasons: []
     forced_slots:
     - R1
     - R2
@@ -1276,6 +1303,11 @@ estimators:
     honesty_boundaries: []
   生存分析:
     display_name: 生存分析 (Survival Analysis / AFT / Cox)
+    usage_stats:
+      revise: 0
+      reject: 0
+      last_critique: null
+      common_revise_reasons: []
     forced_slots:
     - R1
     - R2
@@ -1959,6 +1991,11 @@ estimators:
     honesty_boundaries: []
   DiD:
     display_name: Difference-in-Differences
+    usage_stats:
+      revise: 0
+      reject: 0
+      last_critique: null
+      common_revise_reasons: []
     forced_slots:
     - R2
     - R3
@@ -2219,6 +2256,11 @@ estimators:
       violation_count: 0
   计数模型:
     display_name: 计数模型 (Count Models / Negative Binomial)
+    usage_stats:
+      revise: 0
+      reject: 0
+      last_critique: null
+      common_revise_reasons: []
     forced_slots:
     - R1
     - R2
@@ -2430,6 +2472,11 @@ estimators:
     honesty_boundaries: []
   IV_2SLS:
     display_name: Instrumental Variables / 2SLS
+    usage_stats:
+      revise: 0
+      reject: 0
+      last_critique: null
+      common_revise_reasons: []
     forced_slots:
     - R2
     - R3
@@ -3645,6 +3692,11 @@ estimators:
     honesty_boundaries: []
   实验:
     display_name: 实验 (Experiment / ANOVA / Lab/Field)
+    usage_stats:
+      revise: 0
+      reject: 0
+      last_critique: null
+      common_revise_reasons: []
     forced_slots:
     - R2
     - R3
@@ -3773,6 +3825,11 @@ estimators:
     honesty_boundaries: []
   多研究:
     display_name: 多研究 (Multi-study Paper)
+    usage_stats:
+      revise: 0
+      reject: 0
+      last_critique: null
+      common_revise_reasons: []
     forced_slots:
     - R1
     - R2
@@ -3915,6 +3972,11 @@ estimators:
     - "A nonsignificant postevent slope means no attenuation was detected in the observed window, not that the effect is permanent."
   匹配DiD:
     display_name: 匹配 DiD (PSM + DiD / CEM + DiD)
+    usage_stats:
+      revise: 0
+      reject: 0
+      last_critique: null
+      common_revise_reasons: []
     forced_slots:
     - R2
     - R3
@@ -3957,6 +4019,11 @@ estimators:
       violation_count: 0
   堆叠扩散Logit:
     display_name: 堆叠扩散 Logit (Stacked Diffusion Logit)
+    usage_stats:
+      revise: 0
+      reject: 0
+      last_critique: null
+      common_revise_reasons: []
     forced_slots:
     - R2
     - R3
@@ -3976,6 +4043,11 @@ estimators:
     honesty_boundaries: []
   同伴效应_网络效应:
     display_name: 同伴效应 / 网络效应 (Peer Effects / Network Effects)
+    usage_stats:
+      revise: 0
+      reject: 0
+      last_critique: null
+      common_revise_reasons: []
     forced_slots:
     - R3
     - R4
@@ -3994,6 +4066,11 @@ estimators:
     honesty_boundaries: []
   推断二元结果:
     display_name: 推断二元结果 (Fuzzy-set / Crisp-set QCA 等)
+    usage_stats:
+      revise: 0
+      reject: 0
+      last_critique: null
+      common_revise_reasons: []
     forced_slots:
     - R3
     - R7
@@ -4009,6 +4086,11 @@ estimators:
     honesty_boundaries: []
   跨受众构念对比:
     display_name: 跨受众构念对比 (Cross-audience Construct Comparison)
+    usage_stats:
+      revise: 0
+      reject: 0
+      last_critique: null
+      common_revise_reasons: []
     forced_slots:
     - R3
     - R5
@@ -4028,6 +4110,11 @@ estimators:
     honesty_boundaries: []
   三向交互:
     display_name: 三向交互 (Three-way Interaction)
+    usage_stats:
+      revise: 0
+      reject: 0
+      last_critique: null
+      common_revise_reasons: []
     forced_slots:
     - R3
     - R4
@@ -4064,6 +4151,11 @@ estimators:
     honesty_boundaries: []
   构造暴露分解:
     display_name: 构造暴露分解 (Construct Exposure Decomposition)
+    usage_stats:
+      revise: 0
+      reject: 0
+      last_critique: null
+      common_revise_reasons: []
     forced_slots:
     - R3
     - R4
@@ -4083,6 +4175,11 @@ estimators:
     honesty_boundaries: []
   BLP-状态空间:
     display_name: BLP Random-Coefficient Demand + State Space (Kalman/GMM)
+    usage_stats:
+      revise: 0
+      reject: 0
+      last_critique: null
+      common_revise_reasons: []
     forced_slots:
     - R2
     - R3
@@ -4193,6 +4290,11 @@ estimators:
       allowed_language: "predicted gain under scenario / simulated increase"
   定性过程研究:
     display_name: Qualitative Process Study / Grounded Theory
+    usage_stats:
+      revise: 0
+      reject: 0
+      last_critique: null
+      common_revise_reasons: []
     forced_slots:
     - F1
     - F2

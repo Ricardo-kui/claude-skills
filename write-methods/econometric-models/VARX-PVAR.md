@@ -22,6 +22,7 @@ VARX/VAR/PVAR 是**多内生变量动态系统**的估计框架，核心识别�
 
 ### 变体 1: 行业情境 4-reason 辩护 (1/1 复现)
 **来源论文**: Borah & Tellis 2016 (JMR)
+**原始句锚点**: We select the U.S. automobile industry to analyze the effect of recalls for several reasons. First, this industry has a high frequency of recalls, which provides an ample number of recall events for our analysis.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-15
 **槽位**: M1
@@ -32,6 +33,7 @@ VARX/VAR/PVAR 是**多内生变量动态系统**的估计框架，核心识别�
 
 ### 变体 2: 品牌选择递进正当性 + Quasi-Experiment 设计 (1/1 复现)
 **来源论文**: Borah & Tellis 2016 (JMR)
+**原始句锚点**: We selected these brands because they constitute four of the five brands that had the most recalls in 2010.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-15
 **槽位**: M2
@@ -42,6 +44,7 @@ VARX/VAR/PVAR 是**多内生变量动态系统**的估计框架，核心识别�
 
 ### 变体 3: 第三方 NLP 数据 + 人工链接匹配 (1/1 复现)
 **来源论文**: Borah & Tellis 2016 (JMR)
+**原始句锚点**: In the original data provided to us, nameplates were not mentioned. Thus, we visited each specific blog, review, and forum and determined the nameplate discussed in order to link the chatter to the nameplate level.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-15
 **槽位**: M3
@@ -52,6 +55,7 @@ VARX/VAR/PVAR 是**多内生变量动态系统**的估计框架，核心识别�
 
 ### 变体 4: 算法准确率双重验证 (1/1 复现)
 **来源论文**: Borah & Tellis 2016 (JMR)
+**原始句锚点**: The interrater agreement was 86%. We found the algorithm to have a classification accuracy of 80%; that is, 80% of the chatter classified as negative by the algorithm was also classified as negative by both research assistants.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-15
 **槽位**: M3
@@ -62,6 +66,7 @@ VARX/VAR/PVAR 是**多内生变量动态系统**的估计框架，核心识别�
 
 ### 变体 5: VARX 框架 3-reason 辩护 (1/1 复现)
 **来源论文**: Borah & Tellis 2016 (JMR)
+**原始句锚点**: We use the VARX framework for three reasons. First, it allows estimation of Granger causality among a set of variables (endogenous variables) through use of their lagged values.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-15
 **槽位**: M5
@@ -72,6 +77,7 @@ VARX/VAR/PVAR 是**多内生变量动态系统**的估计框架，核心识别�
 
 ### 变体 6: Granger Causality 作为外生性核心论证 (1/1 复现)
 **来源论文**: Borah & Tellis 2016 (JMR)
+**原始句锚点**: We acknowledge that it is possible recalls could be endogenously determined by consumer reaction in online chatter, and thus our design is not a rigorous experiment.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-15
 **槽位**: M8
@@ -82,6 +88,7 @@ VARX/VAR/PVAR 是**多内生变量动态系统**的估计框架，核心识别�
 
 ### 变体 7: VARX 方程规格 (1/1 复现)
 **来源论文**: Borah & Tellis 2016 (JMR)
+**原始句锚点**: We estimate the relationships between concerns and other endogenous variables of the various nameplates using the VARX framework. For ease of exposition, below is the specification using levels of the variables for the Japanese nameplates belonging to the Small Pickup segment.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-15
 **槽位**: M7
@@ -92,6 +99,7 @@ VARX/VAR/PVAR 是**多内生变量动态系统**的估计框架，核心识别�
 
 ### 变体 8: VARX 估计细节 (1/1 复现)
 **来源论文**: Borah & Tellis 2016 (JMR)
+**原始句锚点**: The optimal lag length is 1 for most of the 17 VARX equations, except in a few cases in which it is 2, as per the (Schwartz's) Bayesian information criterion.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-15
 **槽位**: M7

@@ -57,7 +57,9 @@ P2-P3 的功能：呈现两个或多个理论/文献流的不兼容性，它们�
 **来源**: zhou2017 (ASQ), adapted
 
 **原文锚定**:
-> "Understanding how state ownership affects firm innovation is critical because institutional theory and efficiency logic offer competing predictions. Institutional theory predicts that state ownership constrains innovation by imposing political goals, whereas efficiency logic suggests state ownership facilitates innovation by providing resources and reducing uncertainty."
+> "According to the conventional, efficiency-based economic view, mostly rooted in agency theory, state ownership plays a minor role in spurring firms' innovation and performance. ... According to this view, SOEs should gradually lose their innovativeness and competitiveness over time. In reality, however, many SOEs in emerging economies have evolved into dynamic dynamos, rather than the predicted dying dinosaurs (Ralston et al., 2006; Musacchio and Lazzarini, 2014; Stan, Peng, and Bruton, 2014). An institutional perspective helps to explain this growth. ... Because SOEs have access to policy information, government support, and valuable resources (Chen et al., 2014; Musacchio and Lazzarini, 2014), these advantages presumably could foster innovation."
+
+（修正说明：原锚定 "Understanding how state ownership affects firm innovation is critical because..." 为合成句且两逻辑立场与原文相反；已替换为原文 P2–P3 逐字句。）
 
 **关键特征**:
 - "A long-standing debate" → 承认分歧的历史深度

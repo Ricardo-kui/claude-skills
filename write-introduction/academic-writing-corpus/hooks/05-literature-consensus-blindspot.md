@@ -58,7 +58,7 @@ source: Manually curated from MVP30 narrative_analysis files
 **来源**: gamache2020 (SMJ), P1-P2
 
 **原文锚定**:
-> "Research in strategic management has long recognized the importance of engaging with key stakeholders and has often attempted to understand the factors that shape firms' stakeholder strategies. As part of this effort, recent research has drawn on upper echelons theory to focus on the role of the CEO. While important, much of the work on the role of the CEO in stakeholder strategy is general and considers the decision of whether to engage with stakeholders in a very broad sense. Research has yet to seriously consider how and why CEOs might pursue more specific stakeholder strategies reflecting unique priorities and goals."
+> "Research in strategic management has long recognized the importance of engaging with key stakeholders and has often attempted to understand the factors that shape firms' stakeholder strategies—the sets of plans and actions used to engage with stakeholders in the pursuit of positive shared value. As part of this effort, recent research has drawn on upper echelons theory to focus on the role of the CEO. While important, much of the work on the role of the CEO in stakeholder strategy is general and considers the decision of whether to engage with stakeholders in a very broad sense. Research has yet to seriously consider how and why CEOs might pursue more specific stakeholder strategies reflecting unique priorities and goals."
 
 **关键特征**:
 - "has long recognized" → 承认领域成熟度

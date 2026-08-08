@@ -58,7 +58,7 @@ source: Extracted from MVP30 narrative_analysis files + zorn2017 distill
 **来源**: zhou2017 (ASQ), P1-P2
 
 **原文锚定**:
-> "Understanding how state ownership affects firm innovation is critical because institutional theory and efficiency logic offer competing predictions. Institutional theory predicts that state ownership constrains innovation by imposing political goals, whereas efficiency logic suggests state ownership facilitates innovation by providing resources and reducing uncertainty. Resolving this tension is essential not only for advancing our theoretical understanding of state ownership but also for guiding managers and policy makers in emerging economies."
+> "Whereas prior studies generally show that SOEs perform worse than their private counterparts (see Megginson and Netter, 2001, for a review), empirical evidence is mixed on the effects of state ownership on innovation... To resolve the theoretical and empirical inconsistencies about the effects of state ownership, we theorize in this paper that the institutional and efficiency logics pertain to different facets of state ownership: the institutional logic focuses on resource allocation, and the efficiency logic refers to resource utilization."
 
 **关键特征**:
 - "Understanding how [X] affects [Y] is critical because..." → 最标准的通用 Stakes 开场
@@ -77,7 +77,7 @@ source: Extracted from MVP30 narrative_analysis files + zorn2017 distill
 **来源**: keeves2017 (AMJ), P2-P3
 
 **原文锚定**:
-> "This is important because ingratiation has unintended consequences that prior research has overlooked. Westphal and colleagues have argued that ingratiation helps CEOs build social capital, yet the psychological mechanisms through which ingratiation backfires remain poorly understood. Without understanding why ingratiation leads to resentment, CEOs cannot effectively manage their relationships with board members."
+> "Drawing from social psychological theory and research on interpersonal influence, this literature suggests that ingratiation is a fundamental means by which managers build and maintain their social capital (Jones, 1964; Brass and Burkhardt, 1993; Westphal and Stern, 2006; Stern and Westphal, 2010)... Though a growing body of research has examined the behavioral mechanisms by which social capital is acquired in organizations, few studies have examined the micro-level, interpersonal mechanisms by which social capital is lost or damaged (Burt, 2002: 343)."
 
 **关键特征**:
 - "This is important because [mechanism] has [consequence] that prior research has overlooked" → 直接锚定机制缺口
@@ -96,7 +96,7 @@ source: Extracted from MVP30 narrative_analysis files + zorn2017 distill
 **来源**: han2020 (AMJ), P1
 
 **原文锚定**:
-> "This is problematic because audiences may be more or less drawn to transgressions for reasons that have little to do with the focal actor and may impose penalties that are both inconsistent and unfair. Without understanding how context shapes scandalization, managers cannot effectively manage their firms' reputational risks."
+> "This is problematic because scandals originate from misconduct that occurs in private, and that may be tolerated if it remains private... Further, most research on the relationship between status and scandalization has treated the misbehaving actor's status as decontextualized. This is also problematic because the context in which an event or action occurs can differentially shape assessments and responses, sometimes even inverting the relationships."
 
 **关键特征**:
 - "This is problematic because..." → 直接陈述不研究的负面后果
@@ -172,8 +172,8 @@ source: Extracted from MVP30 narrative_analysis files + zorn2017 distill
 
 **来源**: Zorn et al. (2017, SMJ), Intro P4
 
-**原文锚定**（仅溯源，勿作生成句）:
-> new but prevalent + extends beyond theory + efficacy unknown → if researchers fail to theorize harm and demonstrate consequences, practitioners see little reason to critically evaluate institutionalized practice → draw on pro-insider stream → pay / misconduct / performance.
+**原文锚定**:
+> "Given that lone-insider boards are a relatively new but increasingly prevalent governance structure, that this practice extends beyond the recommendations of established theory, and that their efficacy remains unknown, investigating the consequences of lone-insider boards is both timely and warranted. Indeed, if researchers fail to build theory to explain why lone-insider boards might be harmful and empirically demonstrate their consequences, practitioners might see little reason to stop and critically evaluate this increasingly institutionalized practice."
 
 **关键特征**:
 - **Stakes = 批判性评估动机**，不是抽象 "theoretically important"

@@ -84,7 +84,7 @@ source: Extracted from MVP30 narrative_analysis files
 **来源**: darby2024 (MSOM), P6
 
 **原文锚定**:
-> "We find that delaying the initiation of a recall significantly magnifies the stock market penalty... Moreover, no studies of which we are aware have examined the stock market implications of time-to-recall."
+> "Moreover, no studies of which we are aware have examined the stock market implications of time-to-recall... We find that delaying the initiation of a recall significantly magnifies the stock market penalty..."
 
 **关键特征**:
 - "significantly magnifies" → 不只说"有影响"，说"放大惩罚"

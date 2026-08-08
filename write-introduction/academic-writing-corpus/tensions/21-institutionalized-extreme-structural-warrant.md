@@ -68,7 +68,7 @@ source: Distilled by distill-introduction-exemplar Phase 4.6 from Zorn et al. 20
 **来源**: Zorn, Shropshire, Martin, Combs, & Ketchen (2017, SMJ), Introduction P1–P5 + background "Lone-Insider Boards: Changing Dynamics" (Intro 扩展模块)
 
 **原文锚定**（仅溯源，勿作生成句）:
-> "practical extension of agency theory that goes well beyond the theory's recommendations" → "change in kind rather than degree" → "completely removes a historically represented group" → "implicitly assumes that such directors bring little value" → Joseph et al. answer adoption; "consequences... remain unclear" → finance uses as power composite / performance variability → "practitioners might see little reason to stop and critically evaluate this increasingly institutionalized practice."
+> "practical extension of agency theory that goes well beyond the theory's recommendations" → "change in kind rather than degree" → "completely removes a historically represented group" → "implicitly assumes that such directors bring little value" → "Given that lone-insider boards are a relatively new but increasingly prevalent governance structure, that this practice extends beyond the recommendations of established theory, and that their efficacy remains unknown, investigating the consequences of lone-insider boards is both timely and warranted" → "practitioners might see little reason to stop and critically evaluate this increasingly institutionalized practice."
 
 **关键特征**:
 - **正当性来自结构质变，而非文献空白声明** — 禁止退化为 "few studies examine X"

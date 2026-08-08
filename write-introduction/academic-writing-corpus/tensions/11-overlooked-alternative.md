@@ -36,6 +36,9 @@ source: Extracted from MVP30 narrative_analysis files
 
 **来源**: zhao_ding2022 (OS), adapted
 
+**原文锚定**:
+> "Prior studies document how digitization expands product variety and heterogeneous positioning in settings such as film and music but have paid less attention to how entrants decide which positions to occupy. We complement this work by identifying external market feedback as a key driver of positioning decisions."
+
 **关键特征**:
 - 先承认主流解释的合理性（"understandable given"）
 - "overlooked a more fundamental driver" → 精准但不过度攻击

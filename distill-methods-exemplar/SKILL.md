@@ -77,6 +77,61 @@ phase_0_design_profile:
 
 ---
 
+## Phase 0.75 — 选材 Gate（批评驱动，Skill-SP 启发）
+
+在进入 Phase 1 深读前，用 `write-methods/econometric-models/_evidence_registry.yaml` 中该设计类型的 `validation_history` 判断**这篇论文值不值得深蒸馏、优先级多高**。批评由 Claude 在 write-methods 会话中自动登记，也可用 `_update_registry.py --record-critique` 批量补登（见 Phase 4.5 批评登记）。
+
+### 三带判定（依据 registry meta.usage_stats_schema）
+
+| 带 | 判定条件 | 处理 |
+|----|---------|------|
+| **gap**（未覆盖） | `slots_covered` 相对本文档覆盖存在缺口（静态，不依赖登记） | **HIGH**：ADD 候选，优先深读 |
+| **critique_heavy**（批评密集） | `revise + reject >= 2` | **HIGH**：REPLACE/EXTEND 候选，优先对比已有变体质量；`common_revise_reasons` 是精炼的直接依据 |
+| **quiet**（无批评） | 其余情况 | MEDIUM：正常蒸馏 |
+
+**明确不做的**：不按使用频率/accepted_rate 淘汰或降级变体——语料是长期写作资产，频繁使用且好用应提升路由权重，而非降级（Skill-SP 语义修正，见 registry `non_signals`）。
+
+### 执行规则
+
+- **单篇论文（用户明确指定蒸馏）**：不拒绝，但必须输出带判定供 Phase 3 新颖度判断参考。
+- **批量模式（--batch）**：按带排序（gap/critique_heavy → quiet），优先深读 HIGH 档；资源不足时 quiet 档仅做 Phase 1 粗标注，不进入 Phase 2 深提炼。
+- **重复闸门**：Phase 2.2 得出骨架后，若与已有变体（corpus 或 registry）高度重叠（jaccard ≥ 0.33 或同源模式），按 SKIP 处理——不为重复模式新增变体（对应 Skill-SP `find_duplicate_skill` 语义）。
+
+### 输出格式
+
+```yaml
+phase_0_75_selection_gate:
+  design_type: "生存分析"
+  band: "gap | critique_heavy | quiet"
+  evidence:
+    revise: 1
+    reject: 0
+    last_critique: "2026-06-01"
+    critique_reasons: ["复发事件独立性假设的边界说明不充分"]
+  priority: "HIGH | MEDIUM"
+  rationale: "1 句话：为什么这篇论文处于该带"
+```
+
+### 趋同批评聚合检查（meta-skill 轻量版）
+
+若该设计类型 `common_revise_reasons` 中**同一原因出现 ≥2 次**（趋同批评），在 Phase 0.75 输出中追加聚合检查块：
+
+```yaml
+phase_0_75_convergent_critique_check:
+  design_type: "生存分析"
+  convergent_patterns:
+    - pattern: "复发事件独立性假设的边界说明不充分"
+      count: 2
+      last_critique: "2026-08-08"
+  aggregation_suggestion: "该模式是否应升级为主骨架级修订（REPLACE 主骨架段落或增加警告行）——由本次蒸馏证据决定，仍走预览-确认 gate"
+```
+
+- **批评计数 < 2 时静默**——不输出该块，不预建机制。
+- 若本次蒸馏的骨架恰好与该模式相关：Phase 4 的 `skill_update_instructions` 应包含主骨架级修订候选（`skill_main_skeleton_update`），同样先预览后确认。
+- 若本次蒸馏的骨架与批评模式无关：聚合建议标记为"待后续蒸馏验证"，不强行修订。
+
+---
+
 ## Phase 1 — Methods 文本读取与粗粒度解构
 
 读取 Methods 全文，按叙事槽位目录（M1–M10）进行**粗粒度标注**。标注时只定位段落功能，不做深入分析。
@@ -199,6 +254,7 @@ phase_1_5_quality_gate:
 ```text
 [功能标签]: 论证 setting 合法性
 [骨架]: [Empirical setting] provides an appropriate context for examining [theoretical relationship] for [N] reasons. First, [setting property] makes [mechanism] observable. Second, [scope condition] reduces [confound]. Third, [data feature] allows us to observe [unit/process] over [period].
+[原始句锚点]: "This setting provides a natural laboratory for examining how firms' product portfolios shape competitive dynamics, for three reasons."（来源论文原句 1–2 句，15–40 tokens，风格参照用）
 [可迁移性]: 高 — 出现在 12/28 篇范文中
 [范式排他性]: 通用 setting 论证，不绑定特定设计
 [设计变体]: DiD 版本替换首句为政策冲击描述；实验版本替换为"We test X using a Y experiment"
@@ -206,6 +262,12 @@ phase_1_5_quality_gate:
 
 **必须记录的信息**：
 - 骨架句法（用方括号标记占位符）
+- **原始句锚点（verbatim anchor）**：来源论文中的 1–2 句原文（15–40 tokens），保留原味——骨架抽象负责"结构可迁移"，锚点负责"语言风味不丢失"。生成时以锚点校准"顶刊味道"，不逐字复制。选句标准：最能代表该变体叙事手法的句子（不是信息量最大的，而是最有"论文味"的）
+- **锚点来源检索**（取原句/补锚点时）：优先本次蒸馏论文原文；其次按论文 id/作者/标题检索 Obsidian 知识库：
+  - `D:\OneDrive\Obsidian Vault\00 工作台\叙述模板训练集\_parsed_texts\mvp30`（MVP30 解析文本，主力库，frontmatter 含 journal/author/year，正文为全文）
+  - `D:\OneDrive\Obsidian Vault\Clippings`（网页剪藏）
+  - `D:\OneDrive\Obsidian Vault\文献笔记库\01 导入\论文导入`（OvisOCR 论文导入）
+  检索不到原文时锚点标记"待补"，不阻塞写入
 - 可迁移性评分（高/中/低）及证据（出现频次）
 - 范式排他性（该骨架是否只为某类设计所需）
 - 设计变体（同类骨架在不同设计中的改写模式）
@@ -309,6 +371,7 @@ phase_4_skill_update_instructions:
     target_slot: "M7"
     insert_after: "变体 6（piecewise exponential）"  # 语义定位——描述该插入在哪个已有变体之后，不硬编码数字
     skeleton: "..."
+    verbatim_anchor: "We estimate a gap-time model that allows the hazard to depend on the time elapsed since the previous recall, in line with prior work on recurrent events."  # 来源论文原句 1–2 句，15–40 tokens，风格参照
     reason: "当前 生存分析 M7 变体1-6 全部是 AFT+Weibull 框架——缺少指数/参数风险模型的复发事件处理。本论文填补了这一缺口，且包含了 gap-time vs continuous-time 的显式论证。"
     source_paper: "Mayo_Ball_Mills_2022_POM"
 
@@ -329,6 +392,7 @@ phase_4_skill_update_instructions:
     target_slot: "R3"
     replace_variant: "变体 1（Cutolo 负二项四拍）"  # 描述要替换的变体
     replacement_skeleton: "..."
+    verbatim_anchor: "Across models, the positive effect of advertising on recall counts remains consistent, with an incident-rate ratio of [x] (p < .01)."  # REPLACE 时同时提供新锚点
     reason: "当前变体的拍数不够完整——本论文的四拍节奏更完整（假设提醒→双DV方向→百分比翻译→支持判断）。"
 
   new_anti_patterns_for_skill:
@@ -346,17 +410,70 @@ phase_4_skill_update_instructions:
       update: "M7 主骨架增加一行：'若处理组/控制组存在系统性差异，应在估计前使用 CEM 预处理数据（参见变体13）。'"
 ```
 
-### 写入后操作
+### 写入后操作（两段式：预览 → 确认 → 写入）
 
-只有 `story_fidelity_classification` 为 `section_variant` 或 `ritual_only`，且目标仅是 reference corpus 时，才对 `action != SKIP` 的指令执行写入：
-1. 打开 `target_file`
-2. 在 `insert_after_variant: N` 之后插入新变体
-3. 更新 `source_papers` 列表
-4. 更新 `variants_count` 和 `updated`
-5. 对 `new_anti_patterns_for_skill` → 写入目标文件的「反模式」段落
-6. 更新 `INDEX.md` 表行和「已填充变体」计数
+**原则：所有待写入内容必须先展示给用户评估，用户确认后才写入。不自动写入任何变体。**
 
-`core_candidate`、单篇证据，或任何 `skill_main_skeleton_update` 只生成显式人工审核包；不得自动修改 SKILL.md、路由、强制槽位顺序、story schema 或 stage gate。
+#### Step 1 — 写入预览（Preview）
+
+Phase 4 输出的每条 `action != SKIP` 指令渲染为「待写入预览块」，随蒸馏报告一起输出：
+
+```markdown
+### 待写入 #N：[action] → [target_file] [slot]（[变体名]）
+- **来源论文**: [source_paper]
+- **插入位置**: [insert_after]
+- **理由**: [reason]
+- **原始句锚点**: [verbatim_anchor 原句展示——风格参照，评估风味是否地道]
+- **骨架全文**:
+  [skeleton 逐字展示，不摘要]
+- **评估要点**: [该变体应满足的标准，如"无机构名残留"、"填入实际内容后可生成顶刊风格段落"]
+```
+
+- 预览块必须展示**骨架全文**，不是摘要。
+- `REPLACE` 额外给出「旧变体 vs 新变体」并排对比，标注被替换变体名。
+
+#### Step 2 — 评估确认（Gate）
+
+用户明确表态后才执行写入。默认确认粒度：
+- **单篇模式**：逐个确认——用户可指出哪条不写、哪条需修改（修改后重新展示）。
+- **批量模式（--batch）**：一次确认写入全部 `ADD/EXTEND`；`REPLACE` 仍逐个确认（替换是破坏性动作）。
+- 用户说"全部写入"即跳过剩余逐个确认。
+
+确认后的写入步骤不变：打开 `target_file` → 按 `insert_after` 插入 → 更新 `source_papers` / `variants_count` / `updated` → 对 `new_anti_patterns_for_skill` 写入「反模式」段落 → 更新 `INDEX.md` 表行和「已填充变体」计数。
+
+**旧变体锚点回填**：`REPLACE`/`EXTEND` 触碰已有变体且该变体缺 `原始句锚点` 时，按上述锚点来源检索规则**顺带补锚点**（检索不到原文则标"待补"，不阻塞写入）。
+
+#### 评估清单（供用户参考）
+
+- [ ] 骨架无机构名/政策名/数据库名残留（[placeholder] 泛化彻底）
+- [ ] 与已有变体不重复（Phase 3 新颖度成立）
+- [ ] 骨架填入实际内容后能产出顶刊风格段落（可生成性）
+- [ ] **原始句锚点保留原文风味**（生成时可据此校准"顶刊味道"；锚点非复制源）
+- [ ] 因果语言强度与设计类型匹配
+- [ ] 符合你的写作习惯与当前论文需要
+
+`core_candidate`、单篇证据，或任何 `skill_main_skeleton_update` 只生成显式人工审核包——同样先展示后由用户决定；不得自动修改 SKILL.md、路由、强制槽位顺序、story schema 或 stage gate。
+
+### 批评登记（critique-driven stats）
+
+登记来源 = **Claude 在 write-methods 会话中自动捕获用户批评**（见 write-methods SKILL.md 批评登记），用户零动作；批量补登可用：
+
+```bash
+python _update_registry.py --record-critique critiques.yaml
+```
+
+`critiques.yaml` 格式：
+
+```yaml
+critique_updates:
+  - design_type: "生存分析"
+    verdict: "revise"    # revise=需大改 / reject=被弃用重写
+    reason: "复发事件独立性假设的边界说明不充分"   # 进入 common_revise_reasons，精炼直接依据
+    date: "YYYY-MM-DD"   # 可选，默认今天
+```
+
+- 脚本累加 `revise/reject`、更新 `last_critique`、去重追加 `common_revise_reasons`（最多 8 条），输出信号（quiet/critique_heavy）供下一轮 Phase 0.75 选材。
+- 不登记满意信号、不设淘汰逻辑——语义见 registry `meta.usage_stats_schema`。
 
 ---
 
@@ -400,7 +517,7 @@ phase_5_skill_version_impact:
 
 ### 最终输出物清单
 
-1. **Phase 4 Skill Update Instructions**（可执行的技能更新指令——这是核心产出）
+1. **Phase 4 Skill Update Instructions**（候选技能更新指令——随待写入预览块输出，经用户确认后执行）
 2. **Expression Skeletons**（仅含 `skill_gap != SKIP` 的骨架）
 3. **Validity Logic Map**（该设计类型的 threat 处理模式）
 4. **Methods DNA with Skill Comparison**（DNA 指标 + skill 对比解读）
@@ -424,4 +541,4 @@ phase_5_skill_version_impact:
 - **`methods-review`** — Phase 1.5 槽位覆盖检查可复用
 
 ---
-*基于 Pollock 2025 Ch07、MVP30 范文语料库构建。版本 1.1.0。*
+*基于 Pollock 2025 Ch07、MVP30 范文语料库构建。版本 1.7.0（Phase 0.75 批评驱动选材 + 趋同批评聚合检查 + Phase 4.5 批评登记 + 写入预览-确认两段式 + 变体原始句锚点与 Obsidian 知识库回填）。*

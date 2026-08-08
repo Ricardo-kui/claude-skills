@@ -201,6 +201,8 @@ robustness_plan:
 
 > **结果类型变体加载（飞轮积累，勿漏读）**：确定结果类型后，**先查 `econometric-models/INDEX.md` 的「结果类型索引表」**确认该类型的变体数与最后更新日期；若变体数 >0，**必须加载 `econometric-models/[结果类型].md`** 读取已蒸馏变体（飞轮积累，如 OLS-FE 已有 42 变体、生存分析 19 变体、计数模型 11 变体），与主 slot 骨架配合使用——只用 slot 主骨架而漏读已蒸馏变体 = 飞轮价值流失。变体数 = 0 的结果类型（如 DiD）仅用 slot 主骨架。新蒸馏变体经 `distill-results-exemplar` → Phase 4 写入并同步更新 INDEX.md 变体数。
 
+**锚点使用纪律**（verbatim anchor）：结果类型变体（`econometric-models/[结果类型].md`）的每个变体带 `原始句锚点`（来源论文原句，风格参照）。生成段落时：**结构跟骨架、语言风味跟锚点**——锚点用于校准"顶刊味道"（四拍节奏、幅度翻译的措辞、threat 定位句的句式），填入 [placeholder] 后应保持锚点的语言质地；**不得逐字复制锚点内容，不得保留其具体系数/p 值/专有名词**。旧变体无锚点（标注"待补"）时按骨架直接生成。
+
 ---
 ## 按设计类型路由
 
@@ -462,9 +464,35 @@ results:
   - **润色纪律**：四拍与效应量解读仍归 slot 骨架；每位置 ≤2-3 候选；specificity gate 强制具体化；结果以 `### 措辞润色建议` 块附骨架末尾。
 - **输出末尾追加 paper-state.yaml 片段**：在 Results 骨架输出末尾，自动附加 `### paper-state.yaml 片段` 块。该片段包含 `results.estimator_family`、`results.hypothesis_results`、`results.story_resolution`、`results.key_findings`、`results.unexpected_findings`，供 paper-review 和 results-review 消费。
 
+## 批评登记（critique-driven stats）
+
+**当用户对本 skill 产出表示不满时，当场把批评登记到 `econometric-models/_evidence_registry.yaml`**——这是语料精炼的唯一反馈信号，无需询问用户。
+
+### 识别批评
+
+用户可能以多种方式表达：
+- 直接否定："这个骨架不行"、"这段不像顶刊写法"
+- 指出具体缺陷："R3 缺经济显著性翻译"、"R7 按表格罗列而非 threat 组织"、"平行趋势句式不适用于交错处理"
+- 要求重做/换一种写法："重新生成"、"不要这个节奏"
+
+### 登记动作
+
+1. 定位估计器（本次调用的 estimator_family，registry `estimators` 中的键名，如 `OLS_FE`、`DiD`、`生存分析`）
+2. 在 `estimators.<名称>.usage_stats` 下：
+   - 严重度判定：需大改 → `revise` +1；弃用/要求换写法 → `reject` +1
+   - `last_critique: "YYYY-MM-DD"`（今天）
+   - 批评要点去重后插入 `common_revise_reasons` 首位（最多保留 8 条）
+3. 不登记满意信号；同一会话中同一缺陷只登记一次（合并为一条）
+
+### 登记边界
+
+- 只登记对**变体产出质量**的批评，不登记对 [placeholder] 填充流程的抱怨、风格偏好或与语料无关的意见
+- 不因批评自动修改 corpus 文件——批评只落 registry，由后续蒸馏（`distill-results-exemplar` Phase 0.75 critique_heavy 带）驱动精炼
+- 批量补登可用 `python _update_registry.py --record-critique <critiques.yaml>`
+
 ## 语料与变体
 
 具体变体见 `econometric-models/[结果类型].md`。新蒸馏结果通过 `distill-results-exemplar` → Phase 4 自动写入。
 
 ---
-*基于 34 篇 MVP30 范文语料库、Pollock 2025 Ch07、Yuan et al. (2026) JOM 六维稳健性框架构建。版本 3.2.0。*
+*基于 34 篇 MVP30 范文语料库、Pollock 2025 Ch07、Yuan et al. (2026) JOM 六维稳健性框架构建。版本 3.4.0（新增批评登记 + 变体原始句锚点使用纪律）。*

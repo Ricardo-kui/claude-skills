@@ -27,6 +27,8 @@ updated: 2026-08-05
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
 
+**原始句锚点**: We used a coarsened exact matching (CEM) approach as developed by Iacus, King, and Porro (2009) to perform a match between treatment and control. As shown in Table S2, our results remain robust.
+
 **验证状态**: EMERGING（单篇；`section_variant`）
 
 **槽位**: R7

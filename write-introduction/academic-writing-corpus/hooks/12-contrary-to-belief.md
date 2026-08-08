@@ -53,7 +53,7 @@ source: Extracted from MVP30 narrative_analysis files
 **来源**: eilert2017 (JM), P1
 
 **原文锚定**:
-> "Contrary to popular belief, firm executives — not regulators — decide whether and when to recall potentially defective products."
+> "Contrary to popular belief, firm executives—not regulators—decide whether and when to recall faulty medical devices in the United States."（实际原文出处：Darby et al. 2024 (MSOM) "CEO Stock Ownership, Recall Timing, and Stock Market Penalties"，非 eilert2017）
 
 **关键特征**:
 - "Contrary to popular belief" → 直接挑战读者默认假设
@@ -73,7 +73,7 @@ source: Extracted from MVP30 narrative_analysis files
 **来源**: habel2016 (JM), P1-P2
 
 **原文锚定**:
-> "Prior research might lead one to assume a positive association of CSR engagement and perceived price fairness... because the 'warm glow' created by helping others adds to customers' benefits... However, we argue that despite its intuitive appeal, this logic may be misleading because customers do not judge price fairness solely on the basis of the benefits they obtain."
+> "Prior research might lead one to assume a positive association of CSR engagement and perceived price fairness... because the 'warm glow' created by helping others adds to customers' benefits... However, we argue that despite its intuitive appeal, this logic may be misleading because customers do not judge price fairness solely on the basis of the benefits they obtain."（原文不在库，未验证）
 
 **关键特征**:
 - **"despite its intuitive appeal, this logic may be misleading"** — 比 "contrary to popular belief" 更温和。不声称常识完全错误，而是指出其盲区

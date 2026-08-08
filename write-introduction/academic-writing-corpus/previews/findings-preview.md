@@ -116,7 +116,7 @@ P5-P6 的下半段功能：向读者预告实证结果。这是 Introduction 中
 **来源**: vadakkepatt2022 (JM), P5
 
 **原文锚定**:
-> "The tests of our hypotheses rely on an unbalanced panel of 758 observations involving 87 publicly traded firms during the period 2000–2014. We find a significant, negative effect of lobbying on customer satisfaction, providing novel evidence of the dark side of firm lobbying. We also replicate previous findings of a positive effect of lobbying on firm value but identify a negative counteracting effect when we account for customer satisfaction. Consistent with our expectations, we also show that the CEO's background, advertising spend, R&D spend, and product market lobbying each positively moderate the lobbying–customer satisfaction relationship. Finally, a decrease in customer focus helps explain the negative lobbying–customer satisfaction link."
+> "The tests of our hypotheses rely on an unbalanced panel of 758 observations involving 87 publicly traded firms during the period 2000–2014. We find a significant, negative effect of lobbying on customer satisfaction, providing novel evidence of the dark side of firm lobbying. We also replicate previous findings of a positive effect of lobbying on firm value but identify a negative counteracting effect when we account for customer satisfaction. ... Consistent with our expectations, we also show that the CEO's background, advertising spend, R&D spend, and product market lobbying each positively moderate the lobbying–customer satisfaction relationship. Finally, a decrease in customer focus helps explain the negative lobbying–customer satisfaction link."
 
 **关键特征**:
 - **一句话数据说明** → **主效应** → **复制+修正已有发现** → **调节效应** → **机制**

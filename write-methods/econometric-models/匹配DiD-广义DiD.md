@@ -28,6 +28,7 @@ updated: 2026-08-05
 ### 变体 1：CEM 匹配 ex-ante 价值代理 + 风险代理（准实验 DiD 稳健性）（2026-08-05）
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+**原始句锚点**: "In a quasi-experimental setting, this ideal condition is less likely to hold, which could be a concern if the treated firms are ex ante different from control firms along some characteristics that correlate with both our treatment (i.e., UTSA enactment) and our outcome (i.e., change in firm market value). To account for such potential confounders, we reestimate the baseline specifications, while also matching the treatment and control firms on the basis of ex ante investment size, which proxies for the target's ex ante value, and industry resource–value uncertainty, which proxies for the target's business riskiness (Acharya et al., 2013; Castellaneta and Zollo, 2015; Shepherd, 1999)."
 
 **验证状态**: EMERGING（单篇；`section_variant`；本设计类型首填）
 

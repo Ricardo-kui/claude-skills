@@ -28,6 +28,7 @@ updated: 2026-08-05
 ### 变体 1: M3/M7 约化式预备分析 → 结构模型动机桥（1篇高价值）
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
+**原始句锚点**: Although the preliminary analysis suggests that we indeed observe decreases in sales and advertising effectiveness during a product-harm crisis in the automobile industry, it does not capture the richness of the processes or mechanisms by which product recalls affect demand.
 
 **验证状态**: EMERGING（单篇；待第二篇交叉验证）
 
@@ -47,6 +48,7 @@ updated: 2026-08-05
 ### 变体 2: M7 三层动态架构 — 品牌偏好累积 + 时变系数 transfer function + 事件特异 random walk（1篇高价值）
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
+**原始句锚点**: Brand preference is an unobserved stock variable captured as a state space model based on Kalman filtering (KF). We then integrate this KF process with a random coefficient demand model based on BLP (1995).
 
 **验证状态**: EMERGING（单篇；待第二篇交叉验证）
 
@@ -64,6 +66,7 @@ updated: 2026-08-05
 ### 变体 3: M7 估计栈 — contraction mapping + Kalman 转移/观测方程 + GMM（1篇高价值）
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
+**原始句锚点**: By minimizing a quadratic form of these error terms, we obtain the model parameters with a GMM procedure similar to BLP (1995).
 
 **验证状态**: EMERGING（单篇；待第二篇交叉验证）
 
@@ -81,6 +84,7 @@ updated: 2026-08-05
 ### 变体 4: M8 直接 vs 间接效应识别 — 约化式交互类比（1篇高价值）
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
+**原始句锚点**: The identification of the direct and indirect effects (through advertising effectiveness) of product recall on preference is analogous to the identification of the main effect of product recall and the interaction effect of product recall and advertising in the simple regression model discussed in §3.
 
 **验证状态**: EMERGING（单篇；待第二篇交叉验证）
 
@@ -98,6 +102,7 @@ updated: 2026-08-05
 ### 变体 5: M8 监管强制召回外生性 — 法定披露窗口论证（1篇高价值）
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
+**原始句锚点**: According to the National Traffic and Motor Vehicle Safety Act of 1966, an automaker has five business days to inform the NHTSA after it discovers a problem. Therefore, product recall is outside management control and is therefore treated as an exogenous variable in this study.
 
 **验证状态**: EMERGING（单篇；与 Hoffmann 裁量权子样本形成对照）
 
@@ -115,6 +120,7 @@ updated: 2026-08-05
 ### 变体 6: M8 State-space 可观测等价排除 — 附录解析证明 + 模拟恢复（1篇高价值）
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
+**原始句锚点**: The mean utility parameters are identified if there exists no other system observationally equivalent to the one specified in Equations (11b) and (12b) (Harvey 1991, Bass et al. 2007).
 
 **验证状态**: EMERGING（单篇；待第二篇交叉验证）
 

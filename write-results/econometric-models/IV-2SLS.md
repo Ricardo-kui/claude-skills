@@ -28,6 +28,7 @@ updated: 2026-08-05
 
 ### 变体 1: 竞争假设的赢家报告模式 (1/5 复现)
 **来源论文**: Wowak2025 MS
+**原始句锚点**: The results in column (IV) imply the former (β = 0.453; p < 0.01), such that firms with more liberal TMTs are slower to initiate recalls than firms with more conservative TMTs.
 **验证状态**: 通过 (竞争假设设计的标准模板)
 **写入日期**: 2026-05-20
 **槽位**: R3
@@ -41,6 +42,7 @@ updated: 2026-08-05
 
 ### 变体 2: Model-Free Evidence 预览 (1/5 复现)
 **来源论文**: Wowak2025 MS
+**原始句锚点**: Before discussing regression results, we first explore model-free support for our hypotheses. The mean number of recalls for firms with more liberal TMTs is 3.78, whereas it is 5.73 for firms with more conservative TMTs, suggesting that firms with more liberal TMTs tend to issue fewer recalls in any given year.
 **验证状态**: 可选变体
 **写入日期**: 2026-05-20
 **槽位**: R1/R3 (在正式回归之前)
@@ -50,6 +52,7 @@ updated: 2026-08-05
 
 ### 变体 3: IV 第一阶段诊断嵌入 R3 (1/5 复现)
 **来源论文**: Wowak2025 MS
+**原始句锚点**: Indeed, the partial F-statistic exceeds the thresholds that scholars suggest represent relevance (partial F-stat = 59.534; p < 0.001), and the two-step identification test from Andrews (2018) does not contain zero [-15.390, -3.943], reflecting relevant instruments (Stock et al. 2002).
 **验证状态**: 可选变体 (IV 研究的最佳实践)
 **写入日期**: 2026-05-20
 **槽位**: R2/R3
@@ -59,6 +62,7 @@ updated: 2026-08-05
 
 ### 变体 4: 非线性估计器下的 IV — 控制函数残差作 DWH 检验 + 有限样本偏误诚实提示 (1篇高价值)
 **来源论文**: Qiao, Hiatt & Sine 2026 (SMJ)
+**原始句锚点**: Further, because standard Durbin–Wu–Hausman tests rely on linear-model assumptions and are not valid for nonlinear survival models, we adopted a control-function approach in which the first-stage residual is included in the hazard equation and the examination of whether the residual is statistically significant constitutes the nonlinear analogue of a Durbin–Wu–Hausman test for endogeneity (Terza et al., 2008; Wooldridge, 2010, 2015).
 **验证状态**: 通过 (单篇高价值，生存/有限因变量模型下内生性检验的标准做法 + 罕见的诚实提示)
 **写入日期**: 2026-06-16
 **槽位**: R2/R3
@@ -68,6 +72,7 @@ updated: 2026-08-05
 
 ### 变体 5: R7 "去 IV" 稳健性 — 用非工具变量估计展示内生性偏误低 (1篇高价值)
 **来源论文**: Wowak2025 MS
+**原始句锚点**: Although we employed IVs that met the relevance and exclusion criteria in our main analysis, the consistency of our results from the noninstrumented approach indicates that bias from endogeneity may be relatively low in our setting.
 **验证状态**: 通过（单篇高价值；corpus 此前无"移除识别策略以反向论证偏误低"的元稳健性变体）
 **写入日期**: 2026-07-25
 **槽位**: R7
@@ -79,6 +84,7 @@ updated: 2026-08-05
 
 ### 变体 6: R8 离散度 post hoc — "best of both" 调和型事后分析 (1篇高价值)
 **来源论文**: Wowak2025 MS
+**原始句锚点**: A logical conclusion from our research is that firms may seek to diversify their TMTs politically in the hopes of having both fewer recalls and faster ones.
 **验证状态**: 通过（单篇高价值；corpus 此前无"焦点构念从均值转向离散度、并框架为调和两极张力"的 post hoc 变体）
 **写入日期**: 2026-07-25
 **槽位**: R8
@@ -93,6 +99,7 @@ updated: 2026-08-05
 ### 变体 7: R6/R7 稳健性例外账本——稳定结论、形态变化与脆弱边界分层报告
 
 **来源论文**: Moon, Tuli & Mukherjee (2023, *Journal of Marketing*)
+**原始句锚点**: Considering Models 10a–10c, we find that analyst uncertainty completely mediates the effect of disclosure of advertising spending on idiosyncratic risk.
 **验证状态**: 单篇高价值 reference-level 变体，待跨论文验证
 **写入日期**: 2026-08-03
 **槽位**: R6/R7
@@ -108,6 +115,7 @@ updated: 2026-08-05
 ### 变体 8: R3 多 DV 平行 climax — 同 IV、设计匹配幅度翻译（% / 货币 / OR）(EMERGING)
 
 **来源论文**: Zorn, Shropshire, Martin, Combs & Ketchen (2017, SMJ)
+**原始句锚点**: Lone-insider CEOs received roughly 82% greater pay than their non-lone-insider peers. Practically speaking, given the mean value of total pay in our sample of $5.7 million, results suggest that lone-insider CEOs receive $4.7 million in excess pay.
 **验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
 **写入日期**: 2026-08-05
 **槽位**: R3
@@ -123,6 +131,7 @@ updated: 2026-08-05
 ### 变体 9: R4/R6 调节衰减 — 交互项 → mean/±1SD 条件斜率 → 边际支持诚实 → 跨 DV 选择性 null (EMERGING)
 
 **来源论文**: Zorn, Shropshire, Martin, Combs & Ketchen (2017, SMJ)
+**原始句锚点**: Next, we examine whether the conditional effect of lone-insider boards is different from zero depending on the amount of analyst coverage. The slope of the relationship between lone-insider boards and excess pay at the mean value of analyst coverage (approximately 12 analysts) is marginal (b = 5.59, p =.08).
 **验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
 **写入日期**: 2026-08-05
 **槽位**: R4 / R6
@@ -138,6 +147,7 @@ updated: 2026-08-05
 ### 变体 10: R7 kind-vs-degree 构念电池 — dual-category 反转 / 连续独立性子样本 / Chow 跳跃检验 (EMERGING)
 
 **来源论文**: Zorn, Shropshire, Martin, Combs & Ketchen (2017, SMJ)
+**原始句锚点**: Taken together, these results support our theorizing that having at least one non-CEO insider represents a change in kind rather than degree.
 **验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
 **写入日期**: 2026-08-05
 **槽位**: R7

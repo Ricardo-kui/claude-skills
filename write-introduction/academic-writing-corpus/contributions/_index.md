@@ -127,7 +127,7 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 ## 变体 D：列表展开型（malshe2015 型）
 
 **模板**:
-> "We contribute to the [field] literature in several ways. First, we [contribution 1]. Second, we [contribution 2]. Third, we [contribution 3]."
+> "We contribute to the [field] literature in several ways. First, we [contribution 1]. Second, we [contribution 2]. Finally, we [contribution 3]."
 
 **来源**: malshe2015 (JM), P4
 
@@ -336,7 +336,7 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 **模板**:
 > "Our study makes [N] contributions to [field] theory and practice. First, our study is one of the first to test [specific relationship]. [Brief literature context + specific gap]. Second, our study tests [specific distinction] and contributes to prior research in important ways. [Prior research limitation]. Our study responds to this call. We distinguish between [dimension A] and [dimension B] in an effort to provide a more complete picture of [consequences]. Third, our study contributes to conversations in prior research about [trade-offs inherent in choices]. [Prior research on trade-off]. Our study contributes to this stream by showing [specific finding direction]."
 
-**原文锚定**:
+**原文锚定**（原文不在库，未验证）:
 > "Our study makes three contributions to marketing theory and practice. First, our study is one of the first to test the impact of NPD make/buy decisions on product quality. A small but emerging body of literature in marketing has investigated issues related to firm–supplier relationships... However, to the best of our knowledge, no study has examined the product quality effects of both NPD modes... Second, our study tests the impact of NPD make/buy choices on immediate and future product quality... Moorman and Day (2016) note that the emphasis in prior research has been on understanding factors that enhance the effectiveness of NPD buy decisions, and they call for more research on this topic. Our study responds to this call... Third, our study contributes to conversations in prior research about the trade-offs inherent in the NPD make/buy choices..."
 
 **来源**: kalaignanam2017 (JM), P3-P5
@@ -569,7 +569,7 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 - [ahmadi2017]: avoids standalone significance statements — 每个贡献的 "so what" 通过 "we address the calls to..." 间接表达
 
 ### 质量标记
-- **最值得模仿**: 变体 D（列表展开型 malshe2015）的 "First... Second... Third..." 结构 —— 读者可预测、审稿人可逐项检查兑现
+- **最值得模仿**: 变体 D（列表展开型 malshe2015）的 "First... Second... Finally..." 结构 —— 读者可预测、审稿人可逐项检查兑现
 - **已知风险**: 变体 L (ahmadi2017) 的压缩版三贡献在 AMJ/ASQ 投稿中可能被视为贡献论证不充分 —— 每个贡献 3-5 句无法展示充分的文献对话
 
 ### 模块比重参考

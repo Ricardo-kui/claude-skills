@@ -22,6 +22,7 @@ VARX/PVAR Results 的叙事核心是**动态交叉效应的量化与可视化**�
 
 ### 变体 1: R3 GIRF-based Halo Metric — Percentage of Significant Cross-Effects (1篇高价值)
 **来源论文**: Borah & Tellis 2016 (Journal of Marketing Research)
+**原始句锚点**: To provide a measure of perverse halo, we compute the extent of perverse halo between brands within a segment as the percentage of times that concerns about any nameplate of one brand have a significant positive effect on concerns about any nameplate of another brand.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-15
 **槽位**: R3
@@ -33,6 +34,7 @@ VARX/PVAR Results 的叙事核心是**动态交叉效应的量化与可视化**�
 
 ### 变体 2: R3 Graded Support Language — "Full/Moderate/Considerable Support" (1篇高价值)
 **来源论文**: Borah & Tellis 2016 (Journal of Marketing Research)
+**原始句锚点**: Thus, we find moderate support for H2, which states that perverse halo is stronger for brands from the same country.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-15
 **槽位**: R3/R6
@@ -48,6 +50,7 @@ VARX/PVAR Results 的叙事核心是**动态交叉效应的量化与可视化**�
 
 ### 变体 3: R5 Basis-Points→Dollars Translation (Event Study + VARX) (1篇高价值)
 **来源论文**: Borah & Tellis 2016 (Journal of Marketing Research)
+**原始句锚点**: In dollar terms, this drop translates into a loss of approximately $17.1 million from Toyota's average market capitalization.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-15
 **槽位**: R5
@@ -64,6 +67,7 @@ VARX/PVAR Results 的叙事核心是**动态交叉效应的量化与可视化**�
 
 ### 变体 4: R5 FEVD Relative Importance — Partial-R² Analog for PVAR (1篇高价值)
 **来源论文**: Borah & Tellis 2016 (Journal of Marketing Research)
+**原始句锚点**: Next, we report the results of the forecast error variance decomposition (FEVD). This analysis determines to what extent the endogenous variables contribute to the deviation in the focal nameplate's sales from its baseline expectations.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-15
 **槽位**: R5
@@ -79,6 +83,7 @@ VARX/PVAR Results 的叙事核心是**动态交叉效应的量化与可视化**�
 
 ### 变体 5: R3/R4 Venn Diagram Visualization of Halo Overlap (1篇高价值)
 **来源论文**: Borah & Tellis 2016 (Journal of Marketing Research)
+**原始句锚点**: Figure 2, Panel A, shows the estimated perverse halo among Toyota, Honda, and Nissan according to the above formulas. We find a considerable total symmetric three-way perverse halo (26%) among the three Japanese car brands.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-15
 **槽位**: R3/R4
@@ -95,6 +100,7 @@ VARX/PVAR Results 的叙事核心是**动态交叉效应的量化与可视化**�
 
 ### 变体 6: R5 Elasticity Table for Symmetric Two-Way Halo (1篇高价值)
 **来源论文**: Borah & Tellis 2016 (Journal of Marketing Research)
+**原始句锚点**: These results mean a 1% increase in negative chatter about one nameplate increases negative chatter about another nameplate of the same country by approximately 8.73% (averaging the results for symmetric two-way perverse halo).
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-15
 **槽位**: R5
@@ -110,6 +116,7 @@ VARX/PVAR Results 的叙事核心是**动态交叉效应的量化与可视化**�
 
 ### 变体 7: R3 Dynamics — Wear-in/Wear-out Period (1篇高价值)
 **来源论文**: Borah & Tellis 2016 (Journal of Marketing Research)
+**原始句锚点**: As for the dynamics, we find that perverse halo has a short wear-in period of one day, and most of the accumulated effect of concerns about one nameplate on concerns about another nameplate reaches the asymptote within six days.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-15
 **槽位**: R3

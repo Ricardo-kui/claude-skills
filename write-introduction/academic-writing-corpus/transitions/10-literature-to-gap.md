@@ -51,9 +51,9 @@ source: Migrated from global corpus + MVP30 validation
 **来源**: eilert2017 (JM) + wu2025 (SMJ)
 
 **原文锚定**:
-> "The product recall literature has predominantly focused on the consequences of recalls and the firm's ability to learn and prevent future recalls. However, little attention has been paid to the actual recall behavior of the firm."
+> "The product recall literature in marketing, as summarized in Table 1, has predominantly focused on the consequences of recalls for the firm's bottom line (e.g., Borah and Tellis 2016; Chen, Ganesan, and Liu 2009; Cleeren, Van Heerde, and Dekimpe 2013; Liu and Shankar 2015; Van Heerde, Helsen, and Dekimpe 2007) and the firm's ability to learn and prevent future recalls (Haunschild and Rhee 2004; Thirumalai and Sinha 2011). However, little attention has been paid to the actual recall behavior of the firm."
 >
-> "Yet, despite some noteworthy exceptions (e.g., [Exception A]; [Exception B]), [gap] remains poorly understood."
+> "Yet, despite some noteworthy exceptions (e.g., Odziemkowska & Dorobantu, 2021; Yue et al., 2013), how firms respond in anticipation of, rather than in reaction to, stakeholder activism remains poorly understood."
 
 **关键特征**:
 - "Despite..." → 先承认已有进展
