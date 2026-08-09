@@ -207,6 +207,10 @@ phase_4_corpus_reference:
 
 > 回写提醒的完整清单见 `../protocols/writeback_reminders.md`。reference-level 变体服从 corpus 证据门槛；core candidate 不走 reference 回写通道。
 
+**索引/路由表同步（2026-08-09 闭环补丁）**：写入 corpus 文件后，必须同步：
+1. `write-theory/corpus/meta/routing_table.md`——若新增了理论构建变体类型或路由分支，更新路由表（Gap × 贡献杠杆 → 变体映射）；追加变体不改变路由时不强制
+2. `write-theory/corpus/_index.md`——新增/更新模式条目（变体类型、验证状态）。`_index` 与 routing_table 是选材 Gate 的读入源，不同步会导致下轮选材看不到新变体。
+
 ## Phase 4.7 — Write-Theory 技能设计反馈
 
 加载 `design-feedback-loop.md` 并执行：

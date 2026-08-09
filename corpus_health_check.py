@@ -28,7 +28,8 @@ import sys
 from pathlib import Path
 
 SKILLS = Path(__file__).resolve().parent
-VAR_RE = re.compile(r"^### 变体 (\d+)[:：]", re.M)
+# 数字（methods/results）与字母（intro/theory 的 变体 A/B/C）均计数
+VAR_RE = re.compile(r"^### 变体 ([A-Za-z0-9]+)[:：]", re.M)
 
 VALID_KEYS = ("revise", "reject", "last_critique", "common_revise_reasons")
 
@@ -66,26 +67,70 @@ def load_usage(registry_path: Path) -> dict:
     return out
 
 
+def load_critique_usage(registry_path: Path) -> dict:
+    """读 critique.per_file 段（键 = 相对路径如 hooks/03-data-shock.md）——intro/theory 使用。"""
+    import yaml
+    data = yaml.safe_load(registry_path.read_text(encoding="utf-8"))
+    out = {}
+    if not isinstance(data, dict):
+        return out
+    per = (data.get("critique") or {}).get("per_file")
+    if isinstance(per, dict):
+        for rel, info in per.items():
+            if isinstance(info, dict):
+                out[norm_key(rel)] = info
+    return out
+
+
 def collect(side: str) -> list:
-    """返回 [{type, file, variants, revise, reject, last_critique, reasons}]"""
-    corpus = SKILLS / f"write-{side}" / "econometric-models"
-    usage = load_usage(corpus / "_evidence_registry.yaml")
+    """返回 [{type, file, variants, revise, reject, last_critique, reasons}]
+    side: methods / results（registry validation_history/usage_stats）或 intro / theory（critique.per_file）。"""
+    if side in ("methods", "results"):
+        corpus = SKILLS / f"write-{side}" / "econometric-models"
+        usage = load_usage(corpus / "_evidence_registry.yaml")
+        rows = []
+        for f in sorted(corpus.glob("*.md")):
+            if f.name == "INDEX.md" or "草案" in f.name:
+                continue
+            n = count_variants(f)
+            u = usage.get(norm_key(f.stem), {})
+            rows.append({
+                "side": "M" if side == "methods" else "R",
+                "type": f.stem,
+                "file": f.name,
+                "variants": n,
+                "revise": int(u.get("revise", 0) or 0),
+                "reject": int(u.get("reject", 0) or 0),
+                "last_critique": u.get("last_critique"),
+                "reasons": u.get("common_revise_reasons") or [],
+            })
+        return rows
+
+    # intro / theory：遍历子目录 canonical 文件，读 critique.per_file
+    if side == "intro":
+        corpus = SKILLS / "write-introduction" / "academic-writing-corpus"
+        registry = corpus / "_evidence_registry.yaml"
+    else:  # theory
+        corpus = SKILLS / "write-theory" / "corpus"
+        registry = corpus / "_evidence_registry.yaml"
+    usage = load_critique_usage(registry)
     rows = []
-    for f in sorted(corpus.glob("*.md")):
-        if f.name == "INDEX.md" or "草案" in f.name:
-            continue
-        n = count_variants(f)
-        u = usage.get(norm_key(f.stem), {})
-        rows.append({
-            "side": "M" if side == "methods" else "R",
-            "type": f.stem,
-            "file": f.name,
-            "variants": n,
-            "revise": int(u.get("revise", 0) or 0),
-            "reject": int(u.get("reject", 0) or 0),
-            "last_critique": u.get("last_critique"),
-            "reasons": u.get("common_revise_reasons") or [],
-        })
+    for d in sorted(p for p in corpus.iterdir() if p.is_dir()):
+        for f in sorted(d.glob("*.md")):
+            if f.name == "_index.md":
+                continue
+            rel = f"{d.name}/{f.name}"
+            u = usage.get(norm_key(rel), {})
+            rows.append({
+                "side": "I" if side == "intro" else "T",
+                "type": rel,
+                "file": f.name,
+                "variants": count_variants(f),
+                "revise": int(u.get("revise", 0) or 0),
+                "reject": int(u.get("reject", 0) or 0),
+                "last_critique": u.get("last_critique"),
+                "reasons": u.get("reasons") or [],
+            })
     return rows
 
 
@@ -128,15 +173,20 @@ def print_report(rows: list) -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description="语料库体检：变体数 vs 批评数聚合（选材输入）")
-    ap.add_argument("--type", "-t", choices=["methods", "results", "both"], default="both")
+    ap.add_argument("--type", "-t", choices=["methods", "results", "intro", "theory", "both", "all"],
+                    default="all", help="both=methods+results（兼容旧用法）；all=四个 skills")
     ap.add_argument("--json", action="store_true", help="输出 JSON")
     args = ap.parse_args()
 
     rows = []
-    if args.type in ("methods", "both"):
+    if args.type in ("methods", "both", "all"):
         rows += collect("methods")
-    if args.type in ("results", "both"):
+    if args.type in ("results", "both", "all"):
         rows += collect("results")
+    if args.type in ("intro", "all"):
+        rows += collect("intro")
+    if args.type in ("theory", "all"):
+        rows += collect("theory")
     rows = fmt_rows(rows)
 
     if args.json:

@@ -434,6 +434,16 @@ introduction:
 
 语料变体的 `**原文锚定**` 字段是来源论文原句的风格参照（由 distill-introduction-exemplar 提取，见其"原文锚定提取规则"）。生成段落时：**结构跟骨架、语言风味跟锚点**——填入 [placeholder] 后保持锚点的句式节奏与措辞质感，用于校准"顶刊味道"；**不得逐字复制锚点内容，不得保留其专有名词/数字**。无锚定的旧变体（标注"待补"）按骨架直接生成。选材时参照"选材 Gate"（distill-introduction-exemplar）的 _index 验证状态三带判定。
 
+# 批评登记（critique-driven stats）
+
+**当用户对本 skill 产出表示不满时，当场把批评登记到 `academic-writing-corpus/_evidence_registry.yaml` 的 `critique.per_file` 段**（2026-08-09 闭环补丁，与 write-methods/results 的批评登记同构）——这是语料精炼的反馈信号，无需询问用户。
+
+- 定位：本次调用涉及的 canonical 文件（如 `hooks/03-data-shock.md`、`tensions/01-despite-progress-unaddressed.md`）
+- 登记：`revise` +1（需大改）或 `reject` +1（弃用/换写法）、`last_critique`=今天、批评要点去重插入 `reasons` 首位（最多 8 条）
+- 不登记满意信号；同一会话中同一缺陷只登记一次
+- 只登记对**变体产出质量**的批评，不登记对 [placeholder] 填充流程的抱怨、风格偏好或与语料无关的意见
+- 批评只落 registry，不自动修改 corpus 文件——由后续蒸馏（distill-introduction-exemplar 选材 Gate）驱动精炼
+
 # Evidence-driven evolution
 
 范文蒸馏通过两条通道演化本 skill：reference-level 模式更新 `academic-writing-corpus/` 与 `_evidence_registry.yaml`；规则层反例或缺陷更新 `academic-writing-corpus/_skill_design_feedback.yaml`。执行演化任务时读取 `../distill-introduction-exemplar/references/phase-4-validation-writeback.md` 与其 hardened output schema。单篇论文不得建立普遍规则；只有 VERIFIED/ROBUST，或针对绝对规则的 full-text FALSIFIER，且通过授权、风险、positive regression、preservation regression 与修改后规则片段核验，才可做有边界的 conditionalize、decouple、add branch 或 validator correction。schema、stage gate 与高风险变更始终人工审核。
