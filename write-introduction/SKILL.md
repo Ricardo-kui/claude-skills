@@ -1,6 +1,7 @@
 ---
 name: write-introduction
-description: 顶刊论文 Introduction 段落骨架生成器（Hook/Tension/Stakes/Literature Turn/Theory Lens/Preview/Contribution + GBL Four-Move 对齐 + paper-state 片段）。Use when writing or planning an introduction for a management-journal paper——用户写引言 / 要 intro 模板 / 要 hook/gap/contribution 句法骨架 / 提供 Gap 类型与 Makadok 维度要可填充骨架。Not for: 蒸馏范文（→ distill-introduction-exemplar）；审查草稿（→ intro-review）；写前深度诊断（→ diagnose-introduction）。
+description: >-
+  顶刊论文 Introduction 段落骨架生成器（Hook/Tension/Stakes/Literature Turn/Theory Lens/Preview/Contribution + GBL Four-Move 对齐 + paper-state 片段）。Use when writing or planning an introduction for a management-journal paper——用户写引言 / 要 intro 模板 / 要 hook/gap/contribution 句法骨架 / 提供 Gap 类型与 Makadok 维度要可填充骨架。Not for: 蒸馏范文（→ distill-introduction-exemplar）；审查草稿（→ intro-review）；写前深度诊断（→ diagnose-introduction）。
 ---
 
 # Write Introduction（引言写作顾问）

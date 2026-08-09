@@ -1,11 +1,7 @@
 ---
 name: distill-introduction-exemplar
-description: |
-  Introduction 范文蒸馏 meta-skill。输入单篇或批量论文的 Introduction 文本，输出结构化提炼报告：功能模块拆解、叙事结构模式、修辞策略 DNA、模块级表达骨架、Gap×Contribution 组合验证，并将跨论文证据反馈为 write-introduction 的语料缺口或技能设计缺陷。
-  核心原则：Introduction 内容高度非标准化，但功能框架标准化。提炼 HOW they stage the narrative, not WHAT they say。不复制具体措辞，只提取可跨论文复现的功能组织方式和修辞策略。
-  触发词：「蒸馏 introduction」「intro 范文分析」「拆解 introduction」「提取 intro 模板」「处理新论文 intro」「introduction 骨架提炼」。
-  **消歧**：用户未指定 section（只说"分析这篇论文""蒸馏一下"）时，先询问蒸馏哪个 section（Introduction/Theory/Methods/Results），不默认本 skill。
-  **反向边界**：Introduction 写作用 `write-introduction`；审查已有 Introduction 草稿用 `intro-review`；写前深度诊断用 `diagnose-introduction`；全稿 QC 用 `pollock-qc`。本 skill 只蒸馏范文，不生成写作、不做 QC。
+description: >-
+  Introduction 范文蒸馏 meta-skill——输入单篇或批量论文的 Introduction 文本，输出结构化提炼报告（功能模块拆解、叙事结构模式、修辞策略 DNA、Gap×Contribution 组合验证），并将跨论文证据反馈为 write-introduction 的语料缺口或技能设计缺陷。Use when 蒸馏 introduction 范文——提炼 HOW they stage the narrative, not WHAT they say。Not for: Introduction 写作（→ write-introduction）；草稿审查（→ intro-review）；写前诊断（→ diagnose-introduction）；全稿 QC（→ pollock-qc）。
 ---
 
 # Distill Introduction Exemplar
@@ -14,7 +10,7 @@ Distill how a published Introduction works—not what it says—into reusable, e
 
 ## Workflow
 
-1. Confirm whether the request is exemplar distillation or validation of a drafted Introduction.
+1. Confirm whether the request is exemplar distillation or validation of a drafted Introduction；用户只说"分析/蒸馏这篇论文"未指定 section 时，先询问蒸馏哪个 section（Introduction/Theory/Methods/Results），不默认本 skill。
 2. Read `references/intake-and-classification.md`, classify Gap × Contribution, and apply the shared story-fidelity gate before extracting or adopting patterns. For Incommensurability, also read `../write-introduction/references/incommensurability-introduction-routing.md`; produce its L0–L3 full-text distillation profile before extracting skeletons.
 3. Load only the phase reference needed for the current step:
    - module mapping: `references/phase-1-module-map.md`
