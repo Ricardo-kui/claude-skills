@@ -1,12 +1,6 @@
 ---
 name: write-theory
-description: |
-  诊断-路由-生成式 Theory & Hypotheses 写作引擎。
-  覆盖 7 种理论构建变体（构念辨析型、机制推演型、假设树型、质性过程理论型、调节效应型、竞争假设型、辩证对立型）。
-  蒸馏请求（「蒸馏 theory」「theory 范文分析」「处理新论文 theory」）不直接处理——自动路由到 `distill-theory-exemplar`；验证通过的模式回写 `corpus/`。
-  触发词：「写theory」「写理论」「theory template」「理论部分」「hypothesis写作」「调节效应假设」「跨层调节」「构念界定」「机制推演」「why chain」「双受众」「对立机制」。
-  **反向边界**：审查/润色已有 Theory 草稿用 `theory-review`；全稿 QC 用 `pollock-qc`；蒸馏范文用 `distill-theory-exemplar`。
-  **与 write-methods 的识别策略分工**：识别策略的**理论论证**（IV 排除限制的理论依据、DiD 平行趋势的理论基础、RDD 断点局部可比较性）属本 skill（Theory 段嵌入）；识别策略的**实现**（IV 第一阶段、DiD 估计量、RDD 带宽选择）属 `write-methods`。
+description: Theory & Hypotheses 写作引擎——诊断理论构建问题、选架构、生成可落地假设骨架（7 变体：构念辨析/机制推演/假设树/过程理论/调节效应/竞争假设/辩证对立）。Use when writing theory or hypotheses for a management-journal paper——用户写 theory / 要假设推导 / 调节或跨层调节 / why chain / 竞争假设 / 双受众机制。Not for: 蒸馏范文（→ distill-theory-exemplar）；审查草稿（→ theory-review）；全稿 QC（→ pollock-qc）。识别策略分工：识别策略的理论论证属本 skill（Theory 段嵌入），实现属 write-methods。
 ---
 
 # Write Theory and Hypotheses
@@ -21,13 +15,20 @@ Collect the core constructs, theoretical lens, intended contribution, level of a
 
 Full Theory generation requires a valid story contract. Theory is rising action: every construct and why-chain must deepen the central knot, every hypothesis must include a `storyline_id`, and new main characters require a contract update. Preparing-stage work is diagnosis only; refining and finishing require a confirmed contract. A local hypothesis may bypass the full gate only with an explicit local-only notice and no paper-state update.
 
+**knot 架构检查（非门禁，frame_type 存在时执行）**：若 `story.story_frame.frame_type` 已选定（经 Introduction 输出的 `story.story_frame` 或契约），生成假设前读 `corpus/storytelling/knot-architecture-modulation.md` 对应节的**签名假设架构**——对照目标架构（双边对置 / 竞争假设 / 复现-消解 / 双轨并行 / 挑战先行 / 2×2 对称等）与 knot 签名是否一致；不一致时输出架构偏差标注与理由（或建议回契约调整 frame_type）。frame_type 缺失时跳过本检查，走默认路径。
+
 ## Workflow
 
-1. Diagnose the build type using `references/phase-1-diagnosis.md` and `corpus/meta/routing_table.md`. 若主 Gap = Incommensurability，先读 `references/incommensurability-resolution-routes.md` 提取 L0 稳定推理内核、定位 R1–R4，再把 A–G 视为候选架构；route 不规定假设数量、编号、变量数量或模型形式，低置信时保留 L0 并报告两个候选路线。不得由 Makadok 维度机械代替冲突定位。确认路由后查 `corpus/_index.md` 快速决策表（variant→文件名映射 + 该变体应配的 subprotocols/sentences）；推荐任何 pattern 前，查 `corpus/_evidence_registry.yaml` 的 EMERGING/VERIFIED/ROBUST 状态，EMERGING 须标注单/双源不得作默认。
-2. Choose construct order, mechanism depth, hypothesis structure, and narrative arc using `references/phase-2-architecture.md`.
-3. 先执行 conditionality gate（稳定无条件效应是否有理论依据？）；再通过完整 why-chain 推导每个假设，见 `references/phase-3-hypothesis-derivation.md`（含 8 项语料调用清单）。load only the selected variant from `corpus/variants/[variant_filename]`（filename 来自 phase-1 输出；或查 `corpus/_index.md` 变体表） and the necessary sentence-pattern files.
-4. Audit construct consistency, alternative mechanisms, hypothesis testability, paragraph architecture, and cross-section promises using `references/phase-4-qc-alignment.md`.
-5. Produce the scaffold, storyline-linked hypothesis statements, paragraph function map, evidence gaps, QC results, and the `paper-state.yaml` theory fields needed by Methods and Results. Structure the full reply per `references/output-format.md`.
+1. 诊断构建类型：读 `references/phase-1-diagnosis.md` + `corpus/meta/routing_table.md`。主 Gap = Incommensurability 时先读 `references/incommensurability-resolution-routes.md`（L0 稳定推理内核 + R1–R4），再把 A–G 视为候选架构；route 不规定假设数量、编号、变量数量或模型形式，低置信时保留 L0 并报告两个候选路线。冲突定位由理论对象与预测分歧裁定；Makadok 维度只校验贡献方向。路由后查 `corpus/_index.md` 快速决策表（variant→文件名映射 + 应配 subprotocols/sentences）；推荐任何 pattern 前，查 `corpus/_evidence_registry.yaml` 的 EMERGING/VERIFIED/ROBUST 状态——EMERGING 须标注单/双源，不作默认。
+   **完成判据**：变体已选；EMERGING 已标注。
+2. 用 `references/phase-2-architecture.md` 定构念顺序、机制深度、假设结构与叙事弧。
+   **完成判据**：构念顺序 + 机制深度已定。
+3. 先执行 conditionality gate（稳定无条件效应是否有理论依据？）；再按 `references/phase-3-hypothesis-derivation.md`（含 8 项语料调用清单）通过完整 why-chain 推导每个假设；只 load 所选变体 `corpus/variants/[variant_filename]` 与必要的 sentence-pattern 文件。
+   **完成判据**：每个假设有完整 why-chain + storyline_id；硬约束 #1–#16 逐条过。
+4. 用 `references/phase-4-qc-alignment.md` 审计构念一致性、替代机制、假设可检验性、段落架构与跨节承诺。
+   **完成判据**：四维审计无未修复项。
+5. 产出骨架 + storyline 链接假设 + 段落功能图 + 证据缺口 + QC 结果 + `paper-state.yaml` theory 字段；格式按 `references/output-format.md`。
+   **完成判据**：输出合同全项（含 paper-state 片段、机制与条件性审计）。
 
 ## Selection rules
 
@@ -39,7 +40,7 @@ Full Theory generation requires a valid story contract. Theory is rising action:
 - Use moderation only when a theoretically specified boundary changes a mechanism, exposure, capacity, or interpretation; distinguish within-level from cross-level interactions.
 - Use competing hypotheses when credible theories predict opposing outcomes.
 - Use dialectical opposition when the contribution depends on sustained tension between mechanisms.
-- For Incommensurability, locate the conflict before choosing an architecture: differentiate X (R1), disaggregate Y (R2), model opposing mechanisms (R3), or specify contextual contingency (R4). Treat paired hypotheses, mediation, competing hypotheses, moderation, thresholds, and U/倒U as L2 candidates requiring a necessity warrant. Opposing mechanisms do not by themselves justify a U/倒U; same-sign moderation normally does not justify an Incommensurability label.
+- For Incommensurability, locate the conflict before choosing an architecture (differentiate X R1 / disaggregate Y R2 / opposing mechanisms R3 / contextual contingency R4); paired hypotheses, mediation, competing hypotheses, moderation, thresholds, and U/倒U are L2 candidates requiring a necessity warrant. Opposing mechanisms do not by themselves justify a U/倒U; same-sign moderation normally does not justify an Incommensurability label.
 
 ## Output contract
 
@@ -47,14 +48,14 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 
 ## Hard constraints（协议层速查）
 
-细则在指针所指的语料层；本节只列不可违反的协议规则，不重复语料内容（旧约束 #15 纪律）。
+细则在指针所指的语料层；本节只列不可违反的协议规则，不重复语料内容。
 
 | # | 硬约束 | 细则位置 |
 |---|--------|---------|
 | 1 | 每个假设前必须有足以连接前提与预测的因果/过程推理链；通常至少 2 个有内容的推理环节。环节数按推理移动计算，不按中介/调节变量数量计算；禁止为满足步数机械添加变量 | `references/phase-3-hypothesis-derivation.md` + `corpus/subprotocols/hypothesis_derivation_patterns.md` |
 | 2 | 假设推导段用交织式论证结构（文献嵌入推理，非罗列） | `references/phase-3-hypothesis-derivation.md` §交织式论证链 |
 | 3 | 假设句必须明确 IV/DV/方向/形状/条件，形式与测量尺度匹配；禁 "is associated with" | `corpus/sentences/hypothesis_forms.md` 决策矩阵 |
-| 4 | 新构念必须完成 definition + scope conditions + lineage + adjacent differentiation + justification（必要性/独特价值）五步 | `corpus/sentences/construct_definition.md`；justification 见 AMJ Management Research Canvas（"definition, differentiation, and justification"） |
+| 4 | 新构念必须完成 definition + scope conditions + lineage + adjacent differentiation + justification（必要性/独特价值）五步 | `corpus/sentences/construct_definition.md`；justification 见 AMJ Management Research Canvas |
 | 5 | 主角（核心构念）不超过 3 个；段落内术语统一 | 审查侧：`theory-review` Step 1、`pollock-qc` prose 表 |
 | 6 | 调节假设必须指定交互模式类型并排除反向交互；区分 differential prediction 与 differential validity | `corpus/variants/E_moderation.md` + `corpus/sentences/moderation.md` |
 | 7 | 跨层调节必须在 P1 声明 focal unit of analysis 与 nesting structure | `corpus/variants/E_moderation.md` + `corpus/meta/routing_table.md` |
@@ -68,7 +69,7 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 | 15 | 主效应推导前必须执行 conditionality gate；若机制只在特定条件下成立，条件关系优先，主效应仅可作为有依据的基线 | `references/phase-3-hypothesis-derivation.md` + `corpus/storytelling/post-generation-validator.md` |
 | 16 | Incommensurability 使用两阶段可比性门控：对话层只要求共享理论对象或可辩护的高阶 X/Y 家族；R3/R4 在正式假设推理前必须锁定具体 X、Y、层级、时间范围与 estimand。继续标记 L0–L3 与 R1–R4；A–G、H 数量及模型形式均为候选而非自动输出。R3 只有在机制相对强度随 X 系统变化时才推出 U/倒U，R4 必须双边推导并直接检验条件差异 | `references/incommensurability-resolution-routes.md` |
 
-## 反模式速查（加载语料前先生效；完整版见 `corpus/_index.md` 反模式速查）
+## 反模式速查（加载语料前先生效；完整版见 `corpus/_index.md`）
 
 | 反模式 | 一句话判据 |
 |--------|-----------|
@@ -81,15 +82,9 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 | 假设树碎片化 | 4+ 假设各自独立、无逻辑递进 |
 | 调解/中介链缺环 | E4 有中介的调节未先建立基础中介链 |
 
-## 期刊适配（影响 Phase 1 变体选择，非仅措辞）
+## 期刊适配
 
-| 期刊 | Theory 偏好 |
-|------|------------|
-| AMJ / SMJ | Hypothesis-driven、机制链显式；变体 B/E/C 为主场 |
-| ASQ / OS | 接受 proposition 与过程理论；变体 D/G 友好，理论密度高于假设数量 |
-| MS / MSOM | 模型邻近；变体 F（竞争假设裁决）与命名机制友好 |
-| AMR | 纯理论：proposition 而非实证假设；构念辨析（A）与 scope 扩展为主 |
-| JM / JOM | 机制必须落到行动者可操作的杠杆；实践相关性前置 |
+用户提及目标期刊时读 `references/journal-fit.md`（影响 Phase 1 变体选择，非仅措辞——AMJ/SMJ 变体 B/E/C 主场、ASQ/OS D/G 友好、AMR 纯理论等）。
 
 ## 措辞润色（QC 后、output 前默认执行）
 
@@ -106,6 +101,7 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 **润色纪律**：骨架优先，语料库只提供措辞变体不替代论证结构；每句位 ≤2-3 候选；specificity gate 强制具体化；hedging 强度不得突破 causal-hedging 设计家族上限。结果以 `### 措辞润色建议` 块附骨架末尾，不覆盖原文。
 
 ## Downstream interfaces（供其他 Skill 消费）
+
 - `/write-methods`、`/write-results` — 经 paper-state.yaml 消费 `theory.constructs` / `theory.hypotheses` / `theory.mechanism_chains`（假设-变量映射、Hypothesis-Result Fulfillment Map）
 - `/write-discussion`（review 侧）— 以假设列表与机制链作为 Discussion 理论贡献的对齐锚点
 - `/paper-review`、`/theory-review` — 以本 skill 输出作为跨 Section 对齐与 Theory 草稿审查的基准
@@ -113,11 +109,11 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 
 ## 原文锚点使用纪律（verbatim anchor）
 
-语料变体/句式模板的 `**原文锚点**` 字段是来源论文原句的风格参照（由 distill-theory-exemplar 提取，见其"原文锚点提取规则"）。生成段落时：**结构跟骨架、语言风味跟锚点**——填入 [placeholder] 后保持锚点的句式节奏与措辞质感，用于校准"顶刊味道"；**不得逐字复制锚点内容，不得保留其专有名词/数字**。无锚点的旧变体（标注"待补"）按骨架直接生成。选材时参照"选材 Gate"（distill-theory-exemplar）的 routing 表 + 验证状态三带判定。
+语料变体/句式模板的 `**原文锚点**` 字段是来源论文原句的风格参照（由 distill-theory-exemplar 提取）。生成段落时：**结构跟骨架、语言风味跟锚点**——填入 [placeholder] 后保持锚点的句式节奏与措辞质感；不逐字复制锚点内容，不保留其专有名词/数字。无锚点的旧变体（标注"待补"）按骨架直接生成。选材时参照"选材 Gate"（distill-theory-exemplar）的 routing 表 + 验证状态三带判定。
 
 ## 批评登记（critique-driven stats）
 
-**当用户对本 skill 产出表示不满时，当场把批评登记到 `corpus/_evidence_registry.yaml` 的 `critique.per_file` 段**（2026-08-09 闭环补丁，与 write-methods/results 的批评登记同构）——这是语料精炼的反馈信号，无需询问用户。
+**当用户对本 skill 产出表示不满时，当场把批评登记到 `corpus/_evidence_registry.yaml` 的 `critique.per_file` 段**——这是语料精炼的反馈信号，无需询问用户。
 
 - 定位：本次调用涉及的 corpus 文件（如 `variants/E_moderation.md`、`sentences/mechanism_chain.md`）
 - 登记：`revise` +1（需大改）或 `reject` +1（弃用/换写法）、`last_critique`=今天、批评要点去重插入 `reasons` 首位（最多 8 条）

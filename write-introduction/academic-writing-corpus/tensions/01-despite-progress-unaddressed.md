@@ -62,6 +62,46 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 ---
 
+
+## 变体速查表
+
+> 检索辅助（2026-08-09 P0 补建）。状态列空白 = 正文未标注验证状态（旧变体）。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架、适用条件与诚实边界见下方变体正文。
+
+| # | 变体 | 家族 | 适用场景 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| A | 三段式递进型（eilert2017 型） | 递进收窄 | 承认主流研究进展后指出单一遗漏维度（'predominantly focused on X, little attention to Z'） |  | eilert2017 (JM), P5 |
+| B | 权威引语转折型（wu2025 型） |  | 有权威引语可作为从进展到缺口的转折支点 |  | wu2025 (SMJ), P2 |
+| C | 精确计数型（darby2024 型） |  | 文献可精确计数枚举（'Our review uncovered N studies... though none examine'） |  | darby2024 (MSOM), P2 |
+| D | 多重原因论证型（malshe2015 型） | 惊讶修辞 | 缺口的惊讶性可枚举多个独立原因（'This is surprising for N reasons'） |  | malshe2015 (JM), P2 |
+| E | 跨学科缺口型（vadakkepatt2022 型） |  | 将领域A的成熟构念/理论引入领域B的跨学科研究 |  | vadakkepatt2022 (JM), P2-P3 |
+| F | "Curiously Silent" 型（lehman2014 型） | 惊讶修辞 | - 已有文献确实做了很多相关研究（不能是空白领域） |  | lehman2014 (MS), P3-P4 |
+| G | 方法障碍型缺口（mannor2016 型） |  | - 研究需要测量难以获取的敏感构念（心理属性、私人信息、未公开数据等） |  | mannor2016 (SMJ), P2 前半 |
+| H | Spillover Framing 型（darby2025 型） |  | - 将一个已在其他领域研究的行为者/因素引入新结果域 |  | darby2025 (JSCM), P3 |
+| I | 构念区分进展后关系缺口型（pollock2015 型） |  | - 两个相似构念已被文献部分区分（已有定义、测量、效果差异的研究） |  | pollock2015 (ASQ), P2 |
+| J | "未反映在结果中"型（darby2023 型） |  | - 已有文献研究了某事件/行为对某结果的影响 |  | darby2023 (MSOM), P2 |
+| K | 融合型紧凑段落型（park_lange_jeon 型） |  | - 使用外生冲击（quasi-experiment/DiD）作为 empirical con |  | park_lange_jeon (SMJ), P2-P3 |
+| L | 自引 Nonfinding + 方法论诊断型（shipilov_greve_rowl |  | - 作者此前在同一领域有已发表研究，且该研究发现相关关系的 null result |  | shipilov_greve_rowley2019 (SMJ |
+| M | Inadequacy加深Incompleteness型（desai2012 型） | 批评深化 | - 缺口的持久性需要解释（非"刚被发现"的新缺口，而是"一直被忽视"的老缺口） |  | desai2012 (AMJ), P4 |
+| O | 双过程视角转折型（wang2024 型） |  | - 将心理学 dual-process 框架引入组织/战略研究 |  | wang2024 (SMJ), P2-P3 |
+| P | 双重证据缺口型（habel2016 型） | 双缺口 | - 学术文献缺乏但实践/媒体已有直觉观察的研究场景 |  | habel2016 (JM), P3-P4 |
+| N | 三层递进Incompleteness型（gamache_etal2020 型） | 递进收窄 | - Gap确实是一个递进结构：现有文献→太general→specific缺口→why层面的 |  | gamache_etal2020 (SMJ), P2 |
+| Q | 外部批评授权型（hoffmann2024 型） | hoffmann2024 系列 | 适用于有明确文献批评可引用的 Incompleteness 场景。当领域内已有学者明确提出" |  | hoffmann_cheong_phan_zurbruegg |
+| R | 半压缩递进+呼吁闭环型（ahmadi2017 型） | 递进收窄 | 适用于 Introduction 字数预算极紧的 JMS/JOM/OS 风格论文；当独立的 |  | ahmadi2017 (JMS), P1 |
+| S | 混合发现 pivot + 焦点转移型（jiang2026 型） |  | 适用于已有实证结果混合（正/负/null）的研究领域；Boundary 贡献首选——混合发现 |  | jiang2026 (JIBS), P3 |
+| T | 双缺口并列枚举型（qiao2026 型） | 双缺口 | 适用于有 2-3 个清晰缺口且缺口类型不同的论文；当论文同时做 Incompleteness |  | qiao2026 (SMJ), P2 |
+| U | Paradox 阐述 + Rhetorical Question pivot 型（c |  | 适用于研究涉及两个 desirable but conflicting goals 的论文（ |  | cancellieri2023 (SMJ), P1-P2 |
+| V | 政策意外后果型（hoffmann2024 型） | hoffmann2024 系列 | 适用于使用 quasi-natural experiment（法律变更、监管冲击、政策 ad |  | hoffmann2024 (JM), P6-P7 (Intr |
+| W | 过度概括批评型（grewal2025 型） | 批评深化 | 研究对象内部异质性高（不同类型、不同情境、不同主体），已有研究用单一框架处理 |  | Grewal, Vana, and Stephen (202 |
+| X | 三重维度并列缺口型（cui_yang_vertinsky_smj 型） |  | Incompleteness × (Mechanism + Boundary) 组合；论文同 |  | Cui, Yang & Vertinsky (SMJ), P |
+| Y | 受众边界延伸型（paruchuri2026型） |  | 已有理论/构念在内部/原领域充分发展，需要扩展到外部受众或新分析层次。 |  | paruchuri_andrus_sullivan2026 |
+| Z | 可见-不可见域缺口 + 监督驱动地下化（DesJardine2023 隐形之手型） | DesJardine2023 系列 | - 研究对象是被刻意隐藏/隐蔽进行的机制或行为（暗中操纵、隐蔽渠道、非正式安排、幕后影响、灰 |  | DesJardine, Shi & Cheng (2023, |
+| AA | 权威警告 + 例外枚举 + 规模-忽视悖论（DesJardine2023 P8 型） | DesJardine2023 系列 | 研究某大主体/核心力量对某结果的影响，而该主体尽管在域内占比最大却最少被研究（机构投资者、平 |  | DesJardine, Shi & Cheng (2023, |
+| AB | 结果效价不对称缺口（ilicic_brennan2026 型） |  | 同一构念的效价不对称缺口（有益结果成熟、有害结果不足） | EMERGING（单篇来源；仅作 | Ilicic & Brennan (2026, *Journ |
+| AC | 披露型 IPR 进展不外推 + 非披露保护—价值链接缺口（Castellaneta– |  | Incompleteness × (Boundary + Mechanism)；一类知识产权 | EMERGING（单篇来源；仅作 | Castellaneta, Conti & Kacpercz |
+| AD | 低 stakes 证据库 → 理论关键高 stakes 情境 + 阶段延伸缺口（Ki |  | Incompleteness × Boundary；既有证据主要来自临时/实验/假设情境，而 | EMERGING（单篇来源；仅作 | Kim & Lee (2026, SMJ), P2 |
+| AE | as-clause 前提 + 惊讶单句 overlooked 型（desjardin | 惊讶修辞 | 信息中介/中间人/传导机制类研究；前提（中介塑造结果）是领域共识但"中介作为主动武器"未被检 | EMERGING（单篇来源；仅作 | DesJardine, Li & Shi (2025, *A |
+| AF | 外生条件清单→可操作杠杆缺口型（cutolo2024 型） |  | 已有条件/调节研究但条件全部外生（受众结构、制度流动、地位等）；缺口定位为"行动者可操控杠杆" | EMERGING（单篇来源；仅作 | Cutolo & Ferriani (2024, *Journal of Management*), P5 |
+
 ## 句法模板
 
 ### 变体 A：三段式递进型（eilert2017 型）
@@ -785,6 +825,58 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 **适用**: Incompleteness × Boundary；既有证据主要来自临时/实验/假设情境，而目标理论要求高 stakes、长期关系或全职承诺；招聘/CSR/非金钱工作属性等战略人力资本交叉稿；SMJ。
 
 **禁忌**: 不得把临时/实验证据写成"错误"——只声明对理论关键情境 incomplete；双缺口必须都能被设计兑现（否则删掉阶段延伸）；勿与 WEIRD 情境泛化（`18-context-generalizability`）混淆——本变体是 stakes/commitment 边界，不是制度文化机制反转。
+
+---
+
+### 变体 AE：as-clause 前提 + 惊讶单句 overlooked 型（desjardine2025 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**功能节拍**: 前提从句（中介/行动者塑造认知的既有共识）→ "it is surprising that... have mostly overlooked" 单句压缩 → 概念转译（could be leveraged as conduits）
+
+**模板**:
+> "As [premise about intermediaries/actors shaping outcome] ([citations]), it is surprising that [scholars] have mostly overlooked how [mechanism] could be leveraged as [conduit/instrument] in [field]."
+
+**来源**: DesJardine, Li & Shi (2025, *Academy of Management Journal*), P2
+
+**原文锚定**:
+> "As stakeholders' views and attitudes about firms are also shaped by the content that information intermediaries publish about those firms and their competitors (Ravasi, Rindova, Etter & Cornelissen, 2018; Sharkey, Kovács & Hsu, 2023), it is surprising that organizational scholars have mostly overlooked how information intermediaries could be leveraged as conduits in information-based competition."
+
+**关键特征**:
+- **as-clause 前提 + 惊讶单句**: 与变体 D（multi-reason "surprising for N reasons"）不同——本文一个惊讶词只承载一个前提，句法紧凑，适合 Hook 后直接衔接
+- **概念转译嵌入 Tension**: "could be leveraged as conduits" 把信息中介从被动塑造者转译为主动武器——Tension 同时完成概念转译（hook→tension 的转译连续性）
+- **双层 Tension 结构**: 本变体为领域级（scholars mostly overlooked），可搭配近邻研究级 Tension（如 literature-turns 变体 O 的静态观批评）构成双层递进——领域盲区 + 最近研究维度缺失，resolution 是同一动作
+- **与变体 F（curiously silent）判别**: F 是文献充分但"似乎故意忽视"的高阶表达；本变体是"前提明显蕴含机制可用，却没人做"——惊讶来自前提与盲区的直接矛盾
+
+**适用**: 信息中介/中间人/传导机制类研究；前提（中介塑造结果）是领域共识但"中介作为主动武器"未被检视；与 `01-progressive-coherence` 变体 O 配对构成双层 Tension。
+
+**禁忌**: 惊讶必须名副其实——前提必须是领域公认（有 citation 支撑）；"could be leveraged" 的转译须在后文兑现（Theory/贡献段必须证明 leverage 是真实的）；单句结构不承载 multi-reason 论证（多原因用变体 D）。
+
+---
+
+### 变体 AF：外生条件清单 → 可操作杠杆缺口型（cutolo2024 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）。story_fidelity: section_role=exposition; knot_relation=tie（knot 的系紧点：已知条件不可控 → 缺杠杆）; character_effect=none; pacing_effect=improves（条件清单快进 → 外生性诊断急停 → 杠杆登场）; classification=section_variant。
+
+**功能节拍**: 承认条件研究贡献（多流清单）→ 外生性诊断（全部不可控）→ 操作性缺口（不能开处方）→ actor 侧杠杆登场（来自 nascent stream，非凭空发明）
+
+**模板**:
+> These studies have identified several [sociocognitive] factors shaping [evaluative responses], thereby unveiling the [mechanism metaphor] ([citation]). Yet these explanations are limited in their ability to offer prescriptive advice to actors who [do not enjoy / cannot rely on] [advantages: reputational advantages / benign audiences / favorable conditions]. Because [prior work] focuses primarily on factors over which [actors] have no or very limited control — [condition list: the audience's structure or orientation, exogenous conditions of categorical flux, status, etc.] — we know much less about how [actors] can strategically [mobilize] [actionable lever] to shape [audience responses] according to their interests. To address this limitation, we draw on [the nascent stream of scholarship on X] ([citations]) and propose that one overlooked source of variation is [the lever].
+
+**来源**: Cutolo & Ferriani (2024, *Journal of Management*), P5
+
+**原文锚定**:
+> "Yet these explanations are limited in their ability to offer prescriptive advice to actors who do not enjoy reputational advantages or who must simply hope for demand characterized by heterogeneous evaluative orientations; exogenous conditions of categorical flux; or, more simply, benign audiences."
+> "We seek to address this limitation by drawing on the nascent stream of scholarship concerned with how actors can strategically mobilize cultural elements to shape audience members' responses to their offers ... and propose that one overlooked source of variation is the linguistic composition of actors' narratives."
+
+**关键特征**:
+- **条件清单 → 外生性诊断（签名动作）**: 把已有条件研究逐类列出（audience structure / categorical flux / status…），再统一诊断"全部不可控"——缺口不是"条件研究不够"，而是"条件研究无法开处方"
+- **"prescriptive advice" 关键词**: 把 gap 定义为"文献不能给行动者开处方"——缺口从认知缺憾（不知道）转为实践缺憾（不能做）
+- **杠杆从 nascent stream 取**: 被忽视的来源（叙事语言学）从"战略文化动员"新兴流借来——不是凭空发明，是既有小流被放大
+- **actor 侧 vs audience 侧对照**: 已有研究全是 audience-side/exogenous 因素，本文的杠杆是 actor-side/可控因素——二维对照让缺口精确
+
+**适用**: 已有条件/调节研究但条件全部外生（受众结构、制度流动、地位等）的研究；需要把 gap 定位为"行动者可操控杠杆"（叙事、策略、构念操作化）的论文；与 `01-progressive-coherence` 变体 P（共识-让步-目标收窄）配对。
+**禁忌**: ① 条件清单必须真实且确实外生——若有可控条件已被研究，本变体不成立；② 杠杆必须可操作化（本文=文本特征可测量）；③ 不要与变体 Z（监督驱动地下化）混淆——Z 是"关注制造盲区"，本变体是"条件研究的功能局限"。
 
 ---
 

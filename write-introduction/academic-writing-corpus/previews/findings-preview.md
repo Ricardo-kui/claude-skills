@@ -240,6 +240,32 @@ P5-P6 的下半段功能：向读者预告实证结果。这是 Introduction 中
 
 ---
 
+### 变体 Q：术语转译锚定型（desjardine2025 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**功能节拍**: 主发现预告 → 领域既有语汇命名（parlance）→ 术语映射定义 → 理论身份转变声明（新角色用既有语汇 + 新映射）
+
+**模板**:
+> "In our main analyses, we use a sample of [empirical population] ([data source]). We find that [target's outcome] is [direction] associated with [IV]. In [field] parlance, there are [concept A] and [concept B]. We use the term '[A]' to refer to [mapping of empirical role 1], and '[B]' to [mapping of empirical role 2]. Our results suggest that [actors with both stakes] can themselves become [concept B] of the [target] by [mechanism through which influence operates]."
+
+**来源**: DesJardine, Li & Shi (2025, *Academy of Management Journal*), P6
+
+**原文锚定**:
+> "In competitive dynamics parlance, there are targets and attackers. We use the term "target" to refer to firms that have their ratings altered by investors in "rival" firms in common owners' portfolios. Our results suggest that institutional investors with ownership stakes in both a rating agency and a target firm's rivals can themselves become rivals of the target firm by tainting the owned rating agency's coverage of the target firm."
+
+**关键特征**:
+- **parlance 转译**: 新现象（外部投资者经中介影响评级）用领域既有语汇（targets/attackers）重新命名——降低读者认知负荷，把发现锚进既有理论框架
+- **双重命名 + 身份转变**: 既有术语映射（target=被改评级者）+ 新映射（investors as rivals）——"can themselves become rivals" 一句完成理论身份转变声明
+- **mechanism 收束**: 末句用 "by [mechanism]" 交代影响通道（tainting the owned rating agency's coverage），Preview 兼作机制预告
+- **与变体 G/L/O 的判别**: G 是调节效应预览、L 是双 DV 竞争方向、O 是符号反转权变——本变体不预告调节或方向竞争，而是**用既有语汇命名新角色**，适合引入新概念/新角色身份的研究
+
+**适用**: 研究发现可映射到领域既有语汇（竞争动态 target/attacker、生态 niche 等）；Preview 需要给读者快速概念锚的研究；概念贡献（introducing a new concept）型论文。
+
+**禁忌**: 术语映射必须与领域文献一致（不能自造术语冒充既有语汇）；"become rivals" 类身份转变须在 Theory 假设中兑现；Parlance 句只用于真正可映射的场景，不可为装饰硬套。
+
+---
+
 ## 组装规则
 
 ### 必须配对

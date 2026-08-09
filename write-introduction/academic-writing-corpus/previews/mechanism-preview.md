@@ -32,6 +32,32 @@ source: Extracted from MVP30 narrative_analysis files + grewal2025 + paruchuri_a
 
 # Mechanism Preview — 机制预览句法
 
+
+## 变体速查表
+
+> 检索辅助（2026-08-09 P0 补建）。状态列空白 = 正文未标注验证状态（旧变体）。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架、适用条件与诚实边界见下方变体正文。
+
+| # | 变体 | 适用场景 | 状态 | 来源 |
+|---|---|---|---|---|
+| A | 理论整合型 | Incommensurability 型 Gap，需要整合两个对立理论的研究 |  | zhou2017 (ASQ), P4-P5 |
+| B | 分层机制型 | 机制链复杂、存在条件性中介的研究 |  | keeves2017 (ASQ), adapted |
+| C | 挑战性预测型 | 需要建立理论悬念、挑战共识的研究 |  | gamache2023 (SMJ), adapted |
+| D | 双理论整合型（mannor2016 型） | 需要整合两个不同学科（如战略管理+心理学，组织理论+认知科学）来解释新现象的研究 |  | mannor2016 (SMJ), P3 |
+| E | 机制-边界-发现-贡献四合一融合段（grewal2025 型） | 目标期刊偏好紧凑 Introduction（JM/JMR/IJRM）；研究贡献涉及 Mech |  | Grewal, Vana, and Stephen (202 |
+| F | 倒U型成本收益转折 + 多调节方向预告（cui_yang_vertinsky_smj | 有倒U型或非线性主效应，并伴随多个边界条件的研究；SMJ/AMJ。 | EMERGING（单篇来源，待第 | Cui, Yang & Vertinsky (SMJ), P |
+| G | 对称双调节 + 多方法预览型（paruchuri2026型） | 理论预测包含对称/反向调节机制、使用多方法（archival + experiment） | EMERGING（单篇来源；仅作 | paruchuri_andrus_sullivan2026 |
+| H | 双缺口嵌套 → 机制簇 → 净效应分解 → 研究分工（Bamberger 2021 型） | 同一自变量可能同时产生短期收益与关系性长期成本；研究用互补数据源识别内部机制与外部绩效 | EMERGING（单篇来源，待第 | Bamberger, Homburg, and Wielgo |
+| I | 定性扎根 → 条件化机制 → 准实验检验 → 行为—传播双结果（Lee–Wu–Bedna | 理论先验存在两条反向路径，需要访谈识别行为者如何解释冲击，再用档案准实验检验净效应及异质 | EMERGING（单篇来源；仅作 s | Lee, Wu, and Bednar, *Organizat |
+| J | 宏观事件激活 → 近端机制 → 建设性复制修复梯度（Reinwald et al. 20 | 时间变化的条件间接效应；宏观事件不可由研究者随机化，但个体差异/关系条件可以操纵；多研究 | EMERGING（单篇来源；仅作 s | Reinwald et al. (2026), *Organ |
+| K | 正式模型 → 双侧反馈预测 → 阈值反转（Schumacher–Keck–Tang 20 | 信念更新、参考点或阈值驱动的决策模型；理论含两个信号方向，并在严重约束/危机状态下改变目 | EMERGING（单篇来源；仅作 s | Schumacher, Keck, and Tang (20 |
+| L | 现象—机制—干预一段交付 + 证据角色列举（Ilicic–Brennan 2026 型） | 压缩式 Introduction：现象→机制→干预一段交付，证据角色显式列举 | EMERGING（单篇来源；仅作 s | Ilicic & Brennan (2026, *Journa |
+| M | 收益—伤害结果组合 → 共享导向 → 选择性制衡（Kashmiri–Nicol–Aror | 同一高管特质、战略导向或组织能力同时关联正负结果；治理变量可选择性抑制安全、伦理或声誉风 | EMERGING（单篇来源；仅作 s | Kashmiri, Nicol, and Arora (20 |
+| N | 共同必要条件反向变化 → 短板切换 → 拐点右移（Lee–Park 2024 型） | 两个共同必要条件随累计 X 反向变化，且 W 有机制依据只维持其中一个条件；理论与设计能 | EMERGING（单篇来源；仅作 s | Lee and Park (2024), *Strategic |
+| O | 双RQ + 理论样本限制 + 发现预告融合型（hoffmann2024 型） | Incompleteness × (Mechanism + Boundary)；quas | EMERGING（单篇来源；仅作 s | hoffmann_cheong_phan_zurbruegg2 |
+| P | 无 Theory 章节 — RQ 枚举 + 动态方法栈 + 结构需求整合预览型（liu_ | 无 Theory & Hypotheses 章节的实证营销/IO 论文；动态处理（mul | EMERGING（单篇来源；仅作 s | liu_shankar2015 (MS), P8 |
+| Q | 内生性挑战 → 交错制度采纳 → 重复交易可观测设定（Castellaneta–Cont | Incompleteness × (Mechanism + Boundary)；交错制度 | EMERGING（单篇来源；仅作 s | Castellaneta, Conti & Kacpercz |
+| R | 全管道可观测设定 → 多 offer 内比较 → revealed-preference | Incompleteness × Boundary；招聘/匹配市场；需同时观察吸引、录用 | EMERGING（单篇来源；仅作 s | Kim & Lee (2026, SMJ), P3 |
+
 ## 功能描述
 
 P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者预告核心理论逻辑。机制预览解释"为什么"，发现预览展示"找到了什么证据"。两者必须语义连接。

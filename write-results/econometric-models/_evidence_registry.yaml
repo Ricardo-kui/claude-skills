@@ -5,10 +5,10 @@
 meta:
   schema_version: 1.1.0
   registry_type: estimator-slot-skeleton
-  last_updated: '2026-08-08'
-  last_batch_id: batch_29_castellaneta_conti_kacperczyk_2017_smj
-  batches_processed: 29
-  total_papers_indexed: 30
+  last_updated: '2026-08-09'
+  last_batch_id: batch_30_desjardine_li_shi_2025_amj
+  batches_processed: 30
+  total_papers_indexed: 31
   usage_stats_schema:
     origin: "Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑"
     granularity: "per estimator（对应 econometric-models/[结果类型].md 文件）"

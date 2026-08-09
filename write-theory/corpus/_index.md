@@ -47,6 +47,9 @@
 | 三向交互 (X x W1 x W2) | [`variants/E_moderation.md`](variants/E_moderation.md) | [`sentences/moderation.md`](sentences/moderation.md) |
 | 有中介的调节 (Moderated Mediation) | [`variants/E_moderation.md`](variants/E_moderation.md) | [`subprotocols/hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md)（Indirect Moderation / Mediated Moderation Derivation） |
 | 多调节器按层次/维度分类 | [`variants/E_moderation.md`](variants/E_moderation.md) | [`subprotocols/moderator_selection_frameworks.md`](subprotocols/moderator_selection_frameworks.md) |
+| 4+ 调节变量按机制要素分组（威胁→动机 / 机会→能力） | [`variants/E_moderation.md`](variants/E_moderation.md) E9 | [`subprotocols/moderator_selection_frameworks.md`](subprotocols/moderator_selection_frameworks.md)（Willing-and-Able Dual-Axis；EMERGING） |
+| 主效应机制由 push+pull 双通道收敛（主动施加 + 被动迎合） | [`variants/B_mechanism_elaboration.md`](variants/B_mechanism_elaboration.md) B0 | [`subprotocols/hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md)（Dual-Channel Convergence；EMERGING） |
+| 假设后解释为何不预测相邻对象/方向（效应选择性） | [`variants/E_moderation.md`](variants/E_moderation.md) E1 Step 6 扩展 | [`subprotocols/hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md)（Why-Not Reverse Boundary Declaration；EMERGING） |
 | 同一理论预测两个竞争响应，用 moderator 裁决 | [`variants/E_moderation.md`](variants/E_moderation.md) E4 节 | [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md)（Preemptive Competing Account Management） |
 | 曲线主效应 + 多个 moderators 同时调节曲线形状 | [`variants/E_moderation.md`](variants/E_moderation.md) E5 节 | [`subprotocols/hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md)（Curvilinear Two-Phase + Width-Type Parallel） |
 | 需要解释为什么选这些 moderators | [`subprotocols/moderator_selection_frameworks.md`](subprotocols/moderator_selection_frameworks.md) | — |
@@ -66,7 +69,7 @@
 | [`B_mechanism_elaboration.md`](variants/B_mechanism_elaboration.md) | 机制推演型 | B0 理论过程解释 / B1 正式中介；why chain 与测量分离 | B0 可仅主效应；B1 才要求中介 |
 | [`C_hypothesis_tree.md`](variants/C_hypothesis_tree.md) | 假设树型 | 条件化分叉、树状展开、 moderator 引入时机 | 主效应 + 多调节 |
 | [`D_process_theory.md`](variants/D_process_theory.md) | 质性过程理论型 | 阶段序列、过渡条件、时间标记 | Proposition 为主 |
-| [`E_moderation.md`](variants/E_moderation.md) | 调节效应型 | E1-E8 协议：同层/跨层调节、嵌入边界、竞争裁决、曲线多调节、序列嵌套调节、宏观事件激活与持续性、双刃剑异号增强/阻碍权变 | 主效应 + 调节（含复杂交互、条件间接效应、无主效应异号权变） |
+| [`E_moderation.md`](variants/E_moderation.md) | 调节效应型 | E1-E9 协议：同层/跨层调节、嵌入边界、竞争裁决、曲线多调节、序列嵌套调节、宏观事件激活与持续性、双刃剑异号增强/阻碍权变、**双侧镜像调节（同一构念 rival/target 侧镜像预测，DesJardine 2025，EMERGING）** | 主效应 + 调节（含复杂交互、条件间接效应、无主效应异号权变、双侧镜像调节对） |
 | [`F_competing_hypotheses.md`](variants/F_competing_hypotheses.md) | 竞争假设型 | 对立预测呈现、非传统收敛信号、 net effect 论证 | 竞争假设对 |
 | [`G_dialectical_opposition.md`](variants/G_dialectical_opposition.md) | 辩证对立型 | 双受众对称机制、dialectical turn 标记、theory-based reconciliation | 对立预测（方向反转） |
 

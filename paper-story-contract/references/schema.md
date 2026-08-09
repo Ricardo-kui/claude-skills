@@ -30,6 +30,16 @@ story:
   reader_shift:
     from: "[prior understanding]"
     to: "[target understanding]"
+  story_frame:   # 可选（Story Frame Selection 产物，非门禁字段）
+    frame_type: "[knot 类型，见 ../story-blueprints/_schema.md 类型表]"
+    resolution_type: "[resolution 类型]"
+    one_liner: "[一句话故事——即 GBL 2007 的 theorized storyline：贯穿全文的理论主张线，不是摘要]"
+    exemplar_blueprint: "[story-blueprints/blueprints/ 中的原型 id]"
+    assumption_type: "[仅 frame_type=assumption-flip 时填写：in-house | root-metaphor | paradigm | ideology | field——见 ../diagnose-introduction/references/assumption-challenging.md]"
+    alt_frames:
+      - frame: "[被拒候选]"
+        rejected_reason: "[理由]"
+    risk_notes: "[前提风险核对结果]"
 ```
 
 ## Invariants

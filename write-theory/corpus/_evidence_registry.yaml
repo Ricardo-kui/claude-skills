@@ -6,11 +6,11 @@
 meta:
   schema_version: "1.0.0"
   registry_type: theory-fragment-registry
-  last_updated: "2026-08-05"
-  total_papers_indexed: 64
-  batches_processed: 22
+  last_updated: "2026-08-09"
+  total_papers_indexed: 65
+  batches_processed: 23
   auxiliary_sources_note: "Entries with source_tier: auxiliary are writing-craft books, not empirical papers. They register provenance and stay EMERGING until the pattern is cross-validated in empirical paper distills; they never count toward VERIFIED/ROBUST paper_count thresholds on their own."
-  latest_batch_note: "2026-08-05e Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ: ADD mechanism_loss_trunk_multi_outcome_external_substitute + what_is_lost_benefit_inventory_then_absence + external_partial_substitute_attenuation (EMERGING section_variants); B9 pointer in B_mechanism_elaboration. Gap=Inadequacy aligned with Intro (do not drift to Incompleteness-primary). No core routing change."
+  latest_batch_note: "2026-08-09 DesJardine, Li & Shi 2025 AMJ (Theory): ADD E9 same_construct_mirror_moderation (variants/E_moderation.md) + willing_able_dual_axis (subprotocols/moderator_selection_frameworks.md) + dual_channel_convergence + why_not_reverse_boundary_declaration (subprotocols/hypothesis_derivation_patterns.md), all EMERGING section_variants, tfr_159-162. Build type = moderation (main) + mechanism elaboration (H1 embedded). Gap=Incompleteness primary aligned with Intro. Routing unchanged (E family, no new build type)."
   note: "Reverse-engineered from existing corpus anchors. Batch 2026-07-09: distilled 4 recall papers (Darby 2023 MSOM, Mayo 2022 POM, Ball 2018 JOM, Darby 2026 JOM) into subprotocols and registry. Batch 2026-07-10: expanded Cui, Yang & Vertinsky (SMJ) with inverted-U mechanism, bilateral argumentation, flatten/steepen language, and local closure templates. Batch 2026-07-22: distilled Li, Bapuji, Talluri, Singh & Narayanan (2025 JSCM, Vertical Spillover of Product Recalls) — added dual_mechanism_convergent_moderation pattern to bilateral_argumentation_templates.md (moderator×mechanism matrix) and registered H1 dual-mechanism convergence under existing dual_mechanism_same_direction. Batch 2026-07-22b: distilled Cutolo & Ferriani (2024 JOM, narratives & atypicality) — added minimal_pair_contrast_vignette pattern to argumentation_patterns.md (Leah controlled-contrast showing device); registered parallel_buffering_moderators_single_mechanism; cutolo_ferriani also a 2nd source for write-introduction theory-lens/02-dual-theory-layered (processing fluency + Bloom & Lahey taxonomy). Batch 2026-07-22c: distilled Falchetti, Cattani & Ferriani (2022 SMJ, Start with Why) — added congruency_fit_fluency_mechanism to sentences/mechanism_chain.md (genuine gap; spans Falchetti + Cutolo); CORRECTED misclassification of falchetti_2022_smj (was construct_differentiation tfr_017, has no such content) → reclassified to congruency mechanism; construct_differentiation source_count 5→4. Falchetti intro hook (23-popular-debate) and Methods (多研究 变体1/2, 实验 变体1) already distilled in prior sessions. Batch 2026-07-28: backfill + wiring batch — registered two auxiliary sources whose fragments entered corpus in the 2026-07-27/28 waves but were never registered: Booth/Williams/Colomb (The Craft of Research, premise soundness gate + warrant tests + acknowledgment-response matrix + voice firewall → reasoning_soundness_protocol.md, acknowledgment_response.md) and Greene & Lidinsky 2017 (Rogerian four-step → acknowledgment_response.md §5; fallacy probes → reasoning_soundness_protocol.md §8). Same batch wired the registry into consumption: corpus/_index.md selection-stage pointer, write-theory/SKILL.md resource-loading clause, distill-theory-exemplar Phase 4 registry-writeback protocol. Registry previously orphaned (no .md referenced it) since creation. Batch 2026-08-03: distilled Schumacher, Keck & Tang (2020, SMJ); added the belief-updating/attention-threshold reversal pattern as EMERGING. Reference-level writeback was explicitly authorized by the user; no core routing or mandatory-slot rule was changed."
 
 status_rules:
@@ -1823,6 +1823,46 @@ source_papers:
         status: "EMERGING"
         note: "The KLD safety-concern indicator captures recorded product-harm crisis occurrence, not recall timing, recall strategy, crisis severity, or defect-awareness timing. Recall passivity appears only as a future-research conjecture."
 
+  desjardine_li_shi_2025_amj:
+    display_name: "DesJardine, Li & Shi (2025, AMJ)"
+    journal: "Academy of Management Journal"
+    year: 2025
+    subfield: "strategy / competitive dynamics / ESG"
+    theory_build_type: "Moderation / Mechanism Elaboration"
+    fragments:
+      - fragment_id: tfr_159
+        type: same_construct_mirror_moderation
+        title: "双侧镜像调节（同一构念 rival/target 侧镜像预测）"
+        home_files:
+          - "variants/E_moderation.md"
+        makadok_dimension: "Boundary / Mechanism"
+        status: "EMERGING"
+        note: "E9. H2a/H2b + H3a/H3b：同一调节构念（威胁/机会）在 rival 侧增强、target 侧减弱。减弱侧用 spillover 消散相对比较锁方向。与 E8（双受众估值分化）、bilateral high/low（同一对象条件对比）判别见 E_moderation.md E9 节。"
+      - fragment_id: tfr_160
+        type: willing_able_dual_axis
+        title: "Willing-and-Able 双轴调节框架（威胁→动机 / 机会→能力）"
+        home_files:
+          - "subprotocols/moderator_selection_frameworks.md"
+        makadok_dimension: "Boundary / Mechanism"
+        status: "EMERGING"
+        note: "4+ 调节变量按机制要素分轴；满足硬约束 #11。与 unified_framework_moderator_selection（外部 taxonomy）判别见文件内 note。"
+      - fragment_id: tfr_161
+        type: dual_channel_convergence
+        title: "双通道收敛（push 主动施加 + pull 被动迎合 → 同一预测）"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "H1 机制链：讨论反馈通道 + 高管迎合通道 + 不透明性可行性条件。与 B2（不同预测）判别：收敛于同一预测，用于加固。"
+      - fragment_id: tfr_162
+        type: why_not_reverse_boundary_declaration
+        title: "Why-Not 反向边界声明（为何不预测相邻对象）"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Boundary / Mechanism"
+        status: "EMERGING"
+        note: "H1 后两理由（检测风险 + 相对效应）解释为何不预测攻击方自己的组合企业。与 E1 Step 6（排除反向交互）判别见文件内 note。"
+
 # Cross-paper pattern aggregation (derived above)
 patterns:
   shared_orientation_divergent_outcomes_selective_remedy:
@@ -2460,6 +2500,38 @@ patterns:
       - "zorn_shropshire_martin_combs_ketchen_2017_smj"
     home_file: "sentences/moderation.md"
     note: "Companion boundary sentence pattern for B9; opposite direction from board_governance_amplifying_boundary."
+  same_construct_mirror_moderation:
+    description: "同一调节构念在攻击方侧（rival）与受害方侧（target）产生镜像预测——rival 侧增强主效应、target 侧减弱主效应，两侧各需完整 why chain，减弱侧须处理 spillover 消散的相对比较"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "desjardine_li_shi_2025_amj"
+    home_file: "variants/E_moderation.md"
+    note: "E9 双侧镜像调节。与 E8（双受众估值分化）判别：E8 是同一机制双受众分化；本模式是同一调节构念双侧角色镜像，机制是动机/能力变化。与 bilateral high/low 判别：后者是同一 moderator 的 high/low 条件对比，本模式是两个不同对象（角色侧）的镜像。"
+  willing_able_dual_axis:
+    description: "4+ 调节变量按机制要素分轴——威胁/压力改变动机（motivation）、机会/资源改变能力（ability），willing-and-able 框架统一调节变量的理论地位，构念定义就地嵌入"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "desjardine_li_shi_2025_amj"
+    home_file: "subprotocols/moderator_selection_frameworks.md"
+    note: "Willing-and-Able Dual-Axis。满足 write-theory 硬约束 #11（≥2 moderators 理论驱动选择理由）。与 unified_framework_moderator_selection（hoffmann2024 外部分类法）判别：后者是外部 taxonomy 选择配对调节；本模式是机制要素映射。"
+  dual_channel_convergence:
+    description: "主效应机制由 push（主动施加）与 pull（被动迎合）两条独立通道构成，收敛于同一预测；可行性条件（不透明性/低检测风险）作为第三环；与 B2 判别：B2 要求不同预测，本模式双通道收敛用于加固"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "desjardine_li_shi_2025_amj"
+    home_file: "subprotocols/hypothesis_derivation_patterns.md"
+    note: "Dual-Channel Convergence。与 dual_mechanism_same_direction（两独立中介同向）判别：本模式是双通道（主动/被动）而非双中介；与 B2 双轨机制判别：收敛于同一预测而非不同预测。"
+  why_not_reverse_boundary_declaration:
+    description: "主效应假设后解释为何不预测相邻对象/方向——First（检测/暴露风险）→ Second（相对效应 + 单元内比较）→ 收束（双重逻辑合并），把效应的选择性理论化"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "desjardine_li_shi_2025_amj"
+    home_file: "subprotocols/hypothesis_derivation_patterns.md"
+    note: "Why-Not Reverse Boundary Declaration。与 E1 Step 6（排除反向交互）判别：Step 6 是'为何 Z 调节 X→Y'；本模式是'为何 X 不作用于相邻对象'。理由间张力须在收束句统一。"
 
 # Status summary by Makadok dimension
 summary_by_dimension:

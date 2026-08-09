@@ -43,6 +43,7 @@ description: 根据用户的研究描述，诊断 Gap/Problematization 类型、
 - `references/hook-recommendations.md` — 按 Gap 强度和期刊风格的 Hook 策略
 - `references/golden-biddle-locke-four-moves.md` — Four-Move 对齐、现有字段映射与采用边界
 - `references/intertextual-construction-playbook.md` — Literature Turn 构造机制 + 3×3 组合矩阵（仅在需要构造/修复 Literature Turn 或判断非对角组合时读取，不预加载）
+- `references/assumption-challenging.md` — 假设挑战诊断（Alvesson & Sandberg 2013：五类可问题化假设 + 六步法 + mystery construction）——Step 3.5 用；与 GBL 三型问题化正交
 
 ### Step 2: 范文匹配
 
@@ -69,6 +70,15 @@ description: 根据用户的研究描述，诊断 Gap/Problematization 类型、
 - **Puzzle-Gap 混淆**：直接用 "few studies have examined..." 代替 puzzle 陈述（这是 gap，不是 puzzle）
 
 > **为什么重要**：如果 puzzle 本身不够 broad 或不够重要，即使 Gap 诊断正确，论文也可能因 "so what?" 而被拒。Puzzle 是回答 "Why should anyone care?" 的最终锚点。
+
+### Step 3.5: 假设挑战诊断（Alvesson & Sandberg 2013）
+
+在 Gap 类型确定后、Makadok 贡献诊断之前，读取 `references/assumption-challenging.md`，判断"研究挑战的是哪一类假设"：
+
+- **必做**：Gap = Inadequacy（视角不全面/前提可疑）或研究描述涉及"挑战共识/隐含假设/重新框定"时
+- **可标 none**：纯 Incompleteness 填空型（"没人做过 X"且不挑战任何前提）——如实标注，不硬凑假设挑战
+- **输出**：`assumption_challenging` 块（五类假设定位 + 洞见×惊异性 + 目标受众适配（六步法第 5 步）+ mystery 锚 + G-L thesis 交叉验证 + 风险）
+- **与 story 层接口**：本块直接喂给 story-frame-menu Step A 问题 9（assumption-flip 家族）与讲法汇编家族 10；`field` 类假设可升级为 overlooked-alternative 的领域级变体
 
 ### Step 3: Gap 类型诊断
 

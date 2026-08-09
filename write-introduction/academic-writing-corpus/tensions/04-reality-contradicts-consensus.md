@@ -47,6 +47,25 @@ source: Manually curated from MVP30 narrative_analysis files
 
 ---
 
+
+## 变体速查表
+
+> 检索辅助（2026-08-09 P0 补建）。状态列空白 = 正文未标注验证状态（旧变体）。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架、适用条件与诚实边界见下方变体正文。
+
+| # | 变体 | 适用场景 | 状态 | 来源 |
+|---|---|---|---|---|
+| A | 文献不一致 + 实证混杂型（zhou2017 型） | 文献内部不一致 + 实证证据混杂的对立呈现 |  | zhou2017 (ASQ), P4 |
+| B | 反例+数据爆发型（gamache2023 型） | 反例或数据爆发直接挑战既有理论共识 |  | gamache2023 (SMJ), P2 |
+| C | 经典理论 vs 当代现象型（hahl2017 型） | 经典理论预测 vs 当代现象实际发展的落差 |  | hahl2017 (ASR), P2 |
+| D | 悖论核心陈述型（keeves2017 型） | 悖论的核心陈述：理论承诺与经验现实的矛盾 |  | keeves2017 (ASQ), P2 |
+| E | 双受众对立评价型（pontikes2012 型） | Incommensurability × Constructs 组合；任何"X 对不同受众有 |  | pontikes2012 (ASQ), P3-P4 |
+| F | 理论预测 vs 宏观量化事实型——替代透镜的入场券（zhou2017 P3 型） | 当一个理论预测 decline / failure / marginalization，但宏 |  | zhou2017 (ASQ), P2–P3 |
+| G | 共识惩罚 vs 行为持续 + 修辞问 pivot（pontikes2012 P1–P | 当文献有强共识说某行为/特征受惩罚，但现实中该行为/特征持续存在或扩散——用作引入"被忽略的 |  | Pontikes (2012, ASQ), P1–P2 |
+| H | 嵌套式结论冲突—方向分解型（Vidal & Mitchell 型） | Incommensurability × (Mechanism + Mode)；同一关系存在 |  | Vidal & Mitchell (Organization |
+| I | 正向结果空间 vs 高风险运营后果型（Bendig–Hensellek–Schult | 战略活动具有成熟的收益文献，同时有足够证据表明其执行过程可能产生运营或利益相关者伤害；研究旨 | EMERGING（单篇来源；仅作 | Bendig, Hensellek, and Schulte |
+| J | 平均优势 → 治理配置分解型（Anderson–Reeb 型，EMERGING） | 某类组织或战略安排平均上优于基准组，但其价值创造机制与滥权/伤害机制会随内部治理配置改变相对 |  | Anderson and Reeb (2004), *Adm |
+| K | 同一关系的正负证据 → 共存过程缺口型（Lee–Park 型，EMERGING） | R3 对立机制；相反发现确实对应同一理论对象，并能被一个随强度、时间或累计经验变化的 dom |  | Lee and Park (2024), *Strategi |
+
 ## 句法模板
 
 ### 变体 A：文献不一致 + 实证混杂型（zhou2017 型）

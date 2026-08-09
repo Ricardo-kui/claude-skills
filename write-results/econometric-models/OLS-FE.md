@@ -19,9 +19,10 @@ source_papers:
   - "malshe2015 (Journal of Marketing, 2015): SUR system — floodlight (Johnson-Neyman) sign-flipping interaction dual transition points, 3-condition cross-equation mediation + asymmetric support, counterintuitive reverse deferred to Discussion"
   - "schumacher_keck_tang_2020_smj (Strategic Management Journal): direct cross-group coefficient test for an imprecise within-group reversal; construct-validity triangulation across nomological contrast, cross-firm stability, and temporal stability"
   - "kashmiri_nicol_arora_2017_jams (Journal of the Academy of Marketing Science): marginal focal result followed by significance-driven control deletion, retained as an anti-pattern rather than a reporting template"
-variants_count: 46
+  - "desjardine_li_shi_2025_amj (Academy of Management Journal): min/mean/max marginal-effect table with slope-direction language, collinearity-absorption explanation for full-model interaction attenuation, ITCV omitted-variable threshold defense, dual-benchmarking deviation test, acquisition quasi-natural experiment as influence-channel switch, Bushee investor-type decomposition with Wald test, sequential moderator introduction→paired→full-model navigation"
+variants_count: 53
 created: 2026-05-18
-updated: 2026-08-05
+updated: 2026-08-09
 ---
 
 # OLS-FE — Results 骨架
@@ -42,13 +43,13 @@ updated: 2026-08-05
 | 槽位 | 功能 | 变体数 | 变体 |
 |---|---|---|---|
 | R1 | 描述统计与诊断 | 1 | 20 |
-| R2 | 模型序列与表导航 | 5 | 16, 19, 22, 24, 28 |
-| R3 | 主假设检验 | 9 | 8, 11, 17, 23, 27, 34, 35, 36, 41 |
-| R4 | 交互/调节/阈值 | 7 | 9, 14, 18, 32, 40, 43, 45 |
+| R2 | 模型序列与表导航 | 6 | 16, 19, 22, 24, 28, 53 |
+| R3 | 主假设检验 | 10 | 8, 11, 17, 23, 27, 34, 35, 36, 41, 48 |
+| R4 | 交互/调节/阈值 | 8 | 9, 14, 18, 32, 40, 43, 45, 47 |
 | R5 | 经济显著性 | 3 | 3, 10, 13 |
 | R6 | 非显著/反转/Null | 5 | 4, 6, 30, 37, 42 |
-| R7 | 稳健性与威胁处理 | 11 | 1, 2, 7, 12, 15, 25, 26, 29, 31, 39, 46 |
-| R8 | 补充/事后/机制 | 5 | 5, 21, 33, 38, 44 |
+| R7 | 稳健性与威胁处理 | 14 | 1, 2, 7, 12, 15, 25, 26, 29, 31, 39, 46, 49, 50, 51 |
+| R8 | 补充/事后/机制 | 6 | 5, 21, 33, 38, 44, 52 |
 | R9 | 证据收束（可选） | 0 独立 | 27（R3+R9）；多研究变体4/5 亦用 |
 
 ### R1 描述统计与诊断（1）
@@ -66,8 +67,9 @@ updated: 2026-08-05
 | 22 | 无模型证据开场 | 四分位均值/中位数单调性作结果开场 | vs 变体34 2×2 类型学（分类变量版，见决策对3） | 待交叉 | Chung 2022 JAMS |
 | 24 | Heckman 两阶段表导航 | 第一阶段表→第二阶段列的表导航 | vs 变体28 双修正导航 vs 变体29 三步防御（决策对7） | 待交叉 | Chung 2022 JAMS |
 | 28 | 双阶段修正表导航 | 截面二元内生+样本选择的 CF+Heckman 表导航 | vs 变体24 仅选择修正 | 待交叉 | Pupovac 2026 POM |
+| 53 | 逐调节引入→成对→全模型导航 | 4+ 两向交互按理论 family 成对聚合后全模型 | vs 变体16（三向递进）：两两成对聚合+共线吸收预告 | 待交叉 | DesJardine 2025 AMJ |
 
-### R3 主假设检验（9）
+### R3 主假设检验（10）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -80,8 +82,9 @@ updated: 2026-08-05
 | 35 | ρ 持久性百分比解释 | 动态面板 ρ→「% persists in t」+跨构念对比（副槽位 R5） | 动态面板-GMM 专用；vs 变体23 截面四分位 | 待交叉 | Pollock 2015 ASQ |
 | 36 | 分样本 Wald χ² + partial support | 跨阈值 χ²(1) 系数相等性+诚实判定 H 支持（副槽位 R6） | vs 变体43 组间差异裁决（决策对6）；vs 变体8 交互条件化 | 待交叉 | Pollock 2015 ASQ |
 | 41 | 三条件中介+非对称支持 | 跨方程系数乘积+Sobel 三条件中介（同时方程系统） | vs 变体5 MCMC 中介（决策对4）；失败根因定位到条件 | 通过（单篇） | Malshe 2015 JM |
+| 48 | 共线吸收解释 | 全模型交互显著性下降归因调节间高相关（Cortina） | vs 变体16 序列导航（只描述不解释）；配套变体53 | 待交叉 | DesJardine 2025 AMJ |
 
-### R4 交互/调节/阈值（7）
+### R4 交互/调节/阈值（8）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -92,6 +95,7 @@ updated: 2026-08-05
 | 40 | Floodlight 双转折点 | 线性交互符号反转：零交叉+显著性交叉+90% CI 带（副槽位 R5） | vs 变体17/18 曲线；vs 变体32 外部阈值；vs 变体9 ±1SD | 通过（单篇） | Malshe 2015 JM |
 | 43 | 组内切换→组间裁决 | 组内方向切换但不显著→直接组间系数差异检验（副槽位 R6） | vs 变体9 单侧边际；vs 变体36 分样本 Wald（决策对6） | 通过（单篇） | Schumacher 2020 SMJ |
 | 45 | 亚组吸收+阶段熄灭 | baseline≈0+交互显著→亚组吸收全部优势+中后段熄灭 | vs 变体8 单期条件化 vs 变体27 无亚组版（决策对1） | 待交叉 | Kim & Lee 2026 SMJ |
+| 47 | min/mean/max 三值边际效应表 | 连续/二元调节的三值边际效应表+斜率方向语言 | vs 变体9 单侧；vs 变体40 floodlight 转折点 | 待交叉 | DesJardine 2025 AMJ |
 
 ### R5 经济显著性（3）
 
@@ -126,8 +130,11 @@ updated: 2026-08-05
 | 31 | 替代解释三连驳斥 | 多个替代解释逐一排除+异质性模式裁决收束 | vs 变体25 单一 DV 证伪；vs 变体44 构念效度三角 | 待交叉 | Du & Tsolmon 2024 OS |
 | 39 | 替代估计器+LDV 偏误警示 | 3SLS 稳健性+用替代估计器失败**反向佐证**主估计器 | 反向佐证 vs 变体2/15 正向稳健性 | 待交叉 | Pollock 2015 ASQ |
 | 46 | Cinelli–Hazlett 敏感性 | 强观测协变量倍数基准的 confounder 强度论证 | vs 变体15 RIR+Oster（参数化）；corpus 首命中 Cinelli | 待交叉 | Kim & Lee 2026 SMJ |
+| 49 | ITCV 省略变量阈值 | 双重相关阈值+impact 阈值+最强控制对比（Frank 2000） | vs 变体46 Cinelli 倍数基准；vs 变体15 RIR+Oster | 待交叉 | DesJardine 2025 AMJ |
+| 50 | 双基准化偏离检验 | 构造"评级−外部基准"差变量，前门基准无关+后门差变量被影响 | vs 变体25 替代 DV 证伪（单 DV）；vs 变体7 同向复制 | 待交叉 | DesJardine 2025 AMJ |
+| 51 | 收购准自然实验 | 影响通道开关（私有→公开所有权切换）+ 收购前不显著 | vs 变体29 选择偏误防御（无通道切换）；vs 变体26 内生性表 | 待交叉 | DesJardine 2025 AMJ |
 
-### R8 补充/事后/机制（5）
+### R8 补充/事后/机制（6）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -136,6 +143,7 @@ updated: 2026-08-05
 | 33 | 下游绩效 post hoc | 时间增长+多指标收敛+提示性收尾 | vs 变体21 清单；vs 变体12 复制；vs 变体5 MCMC | 待交叉 | Du & Tsolmon 2024 OS |
 | 38 | post-hoc spline 重解释 | 意外负效应用 spline+递减理论重解释（明标 post-hoc） | vs 变体42 延迟到 Discussion；vs 变体6 当场解释 | 待交叉 | Pollock 2015 ASQ |
 | 44 | 构念效度威胁三角验证 | 按 rival interpretation 组织三类效度威胁（nomological+跨情境+时序） | vs 变体31 替代解释；vs 变体15 稳健性电池 | 通过（单篇） | Schumacher 2020 SMJ |
+| 52 | 机制异质性分解（Bushee 类型） | 既有分类把动机/能力操作化为亚型+系数对比+Wald 检验 | vs 变体44 效度三角（多指标收敛）；vs 变体31 替代解释 | 待交叉 | DesJardine 2025 AMJ |
 
 ## 易混决策对（跨槽位附录——槽位分不开时查这里）
 
@@ -686,6 +694,127 @@ updated: 2026-08-05
 > Because [IV] is a non-random [unit] attribute, a concern is that observed associations with [outcomes] could be sensitive to omitted variables. We conduct a sensitivity analysis that estimates how strong potential unobserved confounders would need to be to fully explain away the observed associations, following [Cinelli & Hazlett 2020]. For interpretability, we compare the required confounder strength with [strong observed predictor — e.g., log distance / size / prior performance] — a covariate that strongly predicts both [outcome_A] and [outcome_B] in our data. For [the stages / outcomes with significant associations], unobserved confounders assumed to be [k] times as strong as [benchmark] would still be insufficient to account for the estimated associations ([appendix table]). While this analysis does not rule out unobservables, it increases confidence that the estimated associations are not artifacts of omitted-variable bias alone.
 **与原骨架差异**: 区别于变体15（RIR + Oster δ/Rmax 参数化遗漏变量）——本变体用 **Cinelli–Hazlett robustness-value 逻辑 + 观测强预测变量作倍数基准**（"even k× as strong as [Log Distance] still insufficient"），把抽象敏感性阈值翻译成审稿人可直觉比较的协变量强度。适用于观察性关联设计（非 DiD/实验）且已有一个理论/经验上强的观测预测变量可作 benchmark。corpus 此前无 Cinelli–Hazlett 命中。
 **诚实边界**: 敏感性不证明因果；须明确只对已显著的 association 做该检验；benchmark 必须在同模型中确实强预测 outcome，不可事后挑选弱变量夸大稳健性；措辞保持 associational（"associations… not artifacts"）。
+
+---
+
+### 变体 47: R4 — 连续调节的 min/mean/max 三值边际效应表 + 斜率方向解读 (1篇高价值)
+
+**来源论文**: DesJardine, Li & Shi (2025, AMJ)
+**原始句锚点**: "Following prior literature (Busenbark, Graffin, et al., 2022; Gamache, Devers, Klein & Hannigan, 2023; Wiersema & Bowen, 2009), we calculated the marginal effect of rival–MSCI CIO on MSCI ESG rating when the moderators assume different values (see Table 3). ... when rival ESG media controversies takes its minimum value, the negative marginal effect of rival-MSCI CIO on MSCI ESG rating is relatively weak (β = -0.166, p = .020); by comparison, when rival ESG media controversies takes its maximum value, the negative marginal effect of rival-MSCI CIO on MSCI ESG rating is much stronger (β = -0.344, p = .003)."
+**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**写入日期**: 2026-08-09
+**槽位**: R4
+**骨架**:
+> Following prior literature ([citations]), we calculated the marginal effect of [predictor] on [DV] when the moderators assume different values (see Table [N]). For Hypothesis [Na], when [moderator] takes its minimum value, the [sign] marginal effect of [predictor] on [DV] is relatively weak (β = [value], p = [threshold]); by comparison, when [moderator] takes its maximum value, the [sign] marginal effect is much stronger (β = [value], p = [threshold]). Plotted in Figure [N], the marginal effect of [predictor] is almost always [sign] and significant across different values of [moderator], and [moderator] strengthens the [sign] marginal effect, consistent with Hypothesis [Na]. [For the target-side hypothesis: ...weakens the [sign] marginal effect, as illustrated by the positive slope, which supports Hypothesis [Nb].]
+
+**与原骨架差异**: 区别于变体 9（调节边际效应的单侧显著报告——只报一侧）与变体 40（Floodlight 双转折点）——本变体是**连续调节的 min/mean/max 三值边际效应表 + 图 + 斜率方向语言**：三值（min/mean/max）表 + 每对调节用同一节奏（最小值弱→最大值强 + "almost always negative and significant" 诚实表达 + 斜率方向语言 strengthens/weakens）。二元调节（0/1）用两值版本。适用于连续/二元调节的四拍节奏扩展版。
+**诚实边界**: "almost always significant" 须属实——若有区间不显著须如实说明；min/mean/max 三值的 p 值均须报告；二元调节须用 0/1 而非 min/max。
+
+**适用**: 主效应+调节设计、边际效应图配套、调节效应的完整区间报告。
+
+---
+
+### 变体 48: R3 — 全模型交互显著性下降的共线吸收解释 (1篇高价值)
+
+**来源论文**: DesJardine, Li & Shi (2025, AMJ)
+**原始句锚点**: "Model 8 includes both sets of moderating effects, with four moderators in total. The decrease in statistical significance observed in certain interaction terms might stem from the high correlation between media controversies and ESG awards (up to 0.60), which could absorb each other's moderating effect (Cortina, Markell-Goldstein, Green & Chang, 2021)."
+**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**写入日期**: 2026-08-09
+**槽位**: R3
+**骨架**:
+> Model [N] includes both sets of moderating effects, with [K] moderators in total. The decrease in statistical significance observed in certain interaction terms might stem from the high correlation between [moderator family 1] and [moderator family 2] (up to [r]), which could absorb each other's moderating effect ([citation]).
+
+**与原骨架差异**: 区别于变体 16（模型序列导航——只描述递进而未解释显著性下降）——本变体是**全模型交互显著性下降的共线吸收解释**：多个相关调节并存时，单个交互项显著性下降归因于调节变量间高相关（引用 Cortina et al. 2021），诚实承认而非掩盖。适用于 4+ 相关调节并存的全模型报告。
+**诚实边界**: 必须报告实际相关值（up to [r]）；"might stem from" 是假设性解释——若全模型不显著项过多（超过一半），单句解释可能不足，需补充分模型 vs 全模型的系统性对比；不可把不显著宣称成显著。
+
+**适用**: 多调节变量并存、调节间相关高（r > 0.5）的研究。
+
+---
+
+### 变体 49: R7 — ITCV 省略变量阈值解释（Frank 2000）(1篇高价值)
+
+**来源论文**: DesJardine, Li & Shi (2025, AMJ)
+**原始句锚点**: "Based on Model 1 of Table 2, ITCV results show that an omitted variable would need to be correlated at 0.137 (-0.137) with rival-MSCI CIO and at -0.137 (0.137) with MSCI ESG rating to invalidate the focal inference. Correspondingly, the impact of an omitted variable must be -0.019 (= -0.137 × 0.137) to invalidate our inference. Among our controls, the variable with the strongest impact is rival ESG regulatory enforcements, which equals -0.005, far from the -0.019 threshold."
+**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**写入日期**: 2026-08-09
+**槽位**: R7
+**骨架**:
+> To estimate the influence an omitted variable would need to have to invalidate our inferences in the main effect, we applied the ITCV approach ([citation]), which has been adopted in recent management research to address omitted variable bias (e.g., [citations]). Based on Model [N], ITCV results show that an omitted variable would need to be correlated at [r] ([r]) with [predictor] and at [r] ([r]) with [DV] to invalidate the focal inference. Correspondingly, the impact of an omitted variable must be [impact = r × r] to invalidate our inference. Among our controls, the variable with the strongest impact is [control], which equals [value], far from the [threshold] threshold. Combined with our comprehensive set of controls, our focal inference is unlikely to be driven by an omitted variable.
+
+**与原骨架差异**: 区别于变体 15（RIR + Oster δ/Rmax）与变体 46（Cinelli–Hazlett 强协变量倍数基准）——本变体是 **ITCV（Frank 2000）**：省略变量需达到的**双重相关阈值**（predictor/DV）+ **impact 阈值**（乘积）+ **最强控制变量 impact 对比**（"far from the threshold"）——量化省略变量偏误防御。
+**诚实边界**: ITCV 不证明因果；阈值与最强控制的对比须报告实际数字；"unlikely to be driven by an omitted variable" 只在该对比真实成立时使用。
+
+**适用**: 观察性关联设计、有全面控制集的主效应省略变量防御。
+
+---
+
+### 变体 50: R7 — 双基准化检验：评级偏离合理基准 (1篇高价值)
+
+**来源论文**: DesJardine, Li & Shi (2025, AMJ)
+**原始句锚点**: "To address the possibility that common ownership in an ESG rating agency and a target firm's rivals is associated with actual ESG performance, we examined the extent to which MSCI's ESG rating deviates from the reasonable ESG benchmarks. We constructed a new dependent variable, MSCI-incident difference, by using the media coverage of the target firm's ESG risk incidents as a benchmark... Higher values indicate that MSCI ESG ratings deviated more from ESG incidents covered in the media."
+**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**写入日期**: 2026-08-09
+**槽位**: R7
+**骨架**:
+> To address the possibility that [predictor] is associated with actual [performance], we examined the extent to which [agency's rating] deviates from the reasonable [performance benchmarks]. We constructed a new dependent variable, [rating-benchmark difference], by using [benchmark 1: media coverage of risk incidents] as a benchmark, as these incidents may directly capture a firm's [performance]. [Scaling logic: we generated scaled [rating] and scaled [benchmark] by scaling both to an interval between 0 and 1 to make them comparable.] We then measured [difference] using the formula: [difference] = scaled [rating] − (1 − scaled [benchmark]). Higher values indicate that [rating] deviated more from [benchmark]. [Benchmark 2: compared to a second agency's evaluation.] As shown in Model [N], when [benchmark evaluation] is the dependent variable, the coefficient for [predictor] is statistically insignificant, suggesting that [benchmark] may not be associated with [predictor]. As shown in Model [N+1], when [difference] is the dependent variable, the coefficient for [predictor] is [value] (p < [threshold]), consistent with our arguments.
+
+**与原骨架差异**: 区别于变体 25（替代 DV 证伪——领域外结果预期不显著）——本变体是**双基准化检验**：构造"评级−外部基准"差变量（媒体事件基准 / 另一机构基准），先证基准本身与 predictor 无关（前门），再证差变量被 predictor 影响（后门）——偏差针对性地偏离合理基准而非真实绩效差异。两个独立基准互为复制。
+**诚实边界**: 缩放逻辑（0-1 区间）须透明；基准选择须与 DV 同域（媒体事件/其他机构评估）；"may not be associated" 的基准不显著是前门必要条件，若基准本身与 predictor 相关则差变量解释失效。
+
+**适用**: 评级/评分偏差研究、需区分"真实绩效差异 vs 评估偏差"的研究。
+
+---
+
+### 变体 51: R7 — 收购准自然实验：影响通道开关 (1篇高价值)
+
+**来源论文**: DesJardine, Li & Shi (2025, AMJ)
+**原始句锚点**: "Prior to the acquisition by MSCI, KLD was privately owned, meaning the common owners of a target firm's rivals and MSCI would have been unable to influence the firm's ESG assessment by KLD; however, according to our theory, a negative relationship should exist after MSCI became the owner of KLD because common owners (of MSCI and other firms) could then influence KLD's ESG ratings. ... The coefficient for this interaction is -0.746 (p < .1, two-tailed test), indicating that the association between rival-MSCI CIO and KLD score became more negative after MSCI became the owner of KLD, also consistent with our theory."
+**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**写入日期**: 2026-08-09
+**槽位**: R7
+**骨架**:
+> To mitigate [omitted variable and reverse causality] concerns, we conducted "quasi-natural" experiments on [ownership changes] associated with [acquisitions of the intermediaries]. Such acquisitions would have shifted the [common ownership] in an [intermediary] and rated firms, but this may not have been driven by [common owners]. Therefore, a pre- and post-acquisition analysis of [ratings] around these events could illustrate to what extent the change in [ratings] stemmed from the new common owners after these acquisitions. In [year], the [intermediary] was acquired by [acquirer], making it wholly owned by [acquirer]. Prior to the acquisition, [intermediary] was privately owned, meaning the [common owners] would have been unable to influence the [assessments]; however, according to our theory, a [sign] relationship should exist after [acquirer] became the owner because [common owners] could then influence [assessments]. [Second replication with another acquisition.] The coefficient for [predictor] × post-acquisition is [value] (p < [threshold], two-tailed test), indicating that the [sign] association became stronger after the acquisition. In untabulated results, we investigated the effect of [predictor] during the pre-acquisition period: the coefficient is [value] and statistically insignificant, indicating that it did not affect [outcome] prior to the acquisition.
+
+**与原骨架差异**: 区别于变体 29（选择偏误三步防御：描述模式→CEM→Heckman）——本变体是**收购作为影响通道开关的准自然实验**：中介机构从私有（无法影响）→公开（可影响）的所有权切换，前后对比检验理论通道。双收购复制（KLD + ASSET4）+ 交互项（predictor × post）+ 收购前不显著（untabulated 诚实报告）。
+**诚实边界**: p < .1 的弱显著性须如实报告（本文两尾）；"quasi-natural" 引导词不可省略；收购可能伴随其他变化（方法变更、数据调整）——须论证收购本身不直接影响 DV 生成过程；untabulated 的收购前结果必须真实存在。
+
+**适用**: 影响通道开关型准自然实验（所有权变更、平台开放/关闭、机构私有/上市转换）。
+
+---
+
+### 变体 52: R8 — Bushee 投资者类型分解：动机/能力异质性 (1篇高价值)
+
+**来源论文**: DesJardine, Li & Shi (2025, AMJ)
+**原始句锚点**: "Following Bushee (1998), numerous studies have distinguished dedicated institutional investors, which have long investment horizons and concentrated portfolio holdings, from transient institutional investors, which have short investment horizons and diversified portfolio holdings. ... As such, if our theory is accurate, we should observe that our main effect is stronger for dedicated institutional investors than for transient institutional investors. ... Model 1 of Table 11 shows that the coefficient for rival-MSCI CIO (dedicated) is -0.931 (p < .01) and the coefficient for rival-MSCI CIO (transient) is -0.249 (p < .05). A Wald test shows that the coefficients significantly differ (p = .039, one-tailed test)."
+**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**写入日期**: 2026-08-09
+**槽位**: R8
+**骨架**:
+> As outlined in our study, the influence we theorize is likely to hinge on [mechanism element: an actor's motivation and ability] to influence [intermediaries]. Following [classification source], numerous studies have distinguished [type A actors], which have [long horizons and concentrated holdings], from [type B actors], which have [short horizons and diversified holdings]. Compared to their [type B] counterparts, and because of their more concentrated investments, [type A actors] are assumed to have more power to influence their portfolio firms ([citations]). Moreover, given their long investment horizons, they are more motivated than [type B] actors to exert their influence. As such, if our theory is accurate, we should observe that our main effect is stronger for [type A] than for [type B]. We tested this idea by separately replicating [the IV calculation] for [type A] and [type B] [and a third group], and standardized these variables for the regression. [Model results: the coefficient for [type A] is [value] (p < [threshold]) and the coefficient for [type B] is [value] (p < [threshold]).] A Wald test shows that the coefficients significantly differ (p = [value], [one/two]-tailed test).
+
+**与原骨架差异**: 区别于变体 44（构念效度威胁定向三角验证——多指标收敛）——本变体是**机制异质性分解**：用既有分类（Bushee 1998 投资者类型）把"动机/能力"操作化为可比较的亚型，主效应按类型分解 + 系数对比 + Wald 检验——验证"效应由该机制类型驱动"。补充分析标签（supplementary）。
+**诚实边界**: 分类必须引用既有文献（不可自造）；Wald 检验是必需的（无检验的 "larger vs smaller" 描述性断言是反模式）；若亚型间差异不显著但各自显著，如实报告"both types show the effect, difference not significant"。
+
+**适用**: 机制异质性验证（投资者类型、所有权结构、行为者类型的亚组分解）。
+
+---
+
+### 变体 53: R2 — 逐调节引入→成对→全模型的 8 模型导航 (1篇高价值)
+
+**来源论文**: DesJardine, Li & Shi (2025, AMJ)
+**原始句锚点**: "Model 6 includes both reputational threat moderators, and the results continue to support Hypothesis 1, Hypothesis 2a, and Hypothesis 2b. Likewise, Model 7 includes both reputational opportunity moderators and the results continue to support Hypothesis 1, Hypothesis 3a, and Hypothesis 3b. Model 8 includes both sets of moderating effects, with four moderators in total."
+**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**写入日期**: 2026-08-09
+**槽位**: R2
+**骨架**:
+> [Model 1: main effect.] [Model 2-5: each moderating relationship entered separately — one per hypothesis, each with coefficient and p-value.] [Model 6: both [family-1] moderators — results continue to support H1 and the [family-1] hypotheses.] Likewise, [Model 7: both [family-2] moderators — results continue to support H1 and the [family-2] hypotheses.] [Model 8: both sets of moderating effects, with [K] moderators in total.] [Caveat: the decrease in statistical significance in certain interaction terms might stem from the high correlation between [family 1] and [family 2] (up to [r]), which could absorb each other's moderating effect ([citation]).]
+
+**与原骨架差异**: 区别于变体 16（主效应→双向→三向递进——三向交互论文）——本变体是**4 个两向交互的逐步引入**：Model 1 主效应 → Model 2-5 各单调节 → Model 6-7 成对聚合（威胁对/机会对）→ Model 8 全模型——两两成对聚合是核心结构（成对模型既验证 family 内一致性又逐步逼近全模型）。末句共线吸收预告（与变体 48 同源）。
+**诚实边界**: 成对聚合（Model 6/7）必须按理论 family 分组而非随意两两；"continue to support" 只在该模型确实支持时使用；全模型显著性下降的预告须与变体 48 解释一致。
+
+**适用**: 多调节（4+）、可归入 2 个理论 family 的研究；主效应+两向交互的逐步引入。
+
+---
 
 ## 反模式
 

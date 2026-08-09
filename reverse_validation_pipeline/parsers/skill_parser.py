@@ -116,33 +116,77 @@ def _parse_slot_section(section_text: str, section_name: str) -> Dict[str, Slot]
     return slots
 
 
-def parse_skill_md(skill_path: Path) -> TemplateLibrary:
-    """Parse a SKILL.md file into TemplateLibrary."""
-    text = skill_path.read_text(encoding="utf-8")
+_SLOT_FILENAME_RE = re.compile(r'slot-([MR]\d+(?:_\d+)?(?:-supplement)?)\.md')
+_GENERIC_RE = re.compile(r'\*\*通用填空段落.*?\*\*\s*[:：]?\s*\n?```(?:text)?\n(.*?)```', re.DOTALL)
+# 变体名后可能跟（组成注记）：状态标记（🔬 EXPERIMENTAL / ✓ STANDARD / ⭐ PREMIUM 等）再进代码块
+_VARIANT_RE = re.compile(
+    r'\*\*([^*]+?)\*\*\s*(?:（([^）]+)）)?\s*[:：]?\s*[^`]*?\n?```(?:text)?\n(.*?)```',
+    re.DOTALL
+)
 
-    # Determine if this is methods or results
+
+def _slot_id_from_filename(name: str) -> Optional[str]:
+    m = _SLOT_FILENAME_RE.match(name)
+    return m.group(1) if m else None
+
+
+def _parse_slot_text(slot_text: str, slot_id: str, section_name: str) -> Slot:
+    """Parse one slot file / section (通用填空段落 + variants) into a Slot."""
+    slot = Slot(id=slot_id, name=slot_id, section=section_name)
+    generic_match = _GENERIC_RE.search(slot_text)
+    if generic_match:
+        slot.generic_template = generic_match.group(1).strip()
+    for vmatch in _VARIANT_RE.finditer(slot_text):
+        variant_name = vmatch.group(1).strip()
+        if "通用" in variant_name:
+            continue
+        variant = TemplateVariant(
+            name=variant_name,
+            template_text=vmatch.group(3).strip(),
+            slot=slot_id,
+            composition_note=vmatch.group(2) if vmatch.group(2) else "",
+            section=section_name,
+        )
+        slot.variants.append(variant)
+    return slot
+
+
+def parse_skill_md(skill_path: Path) -> TemplateLibrary:
+    """Parse a skill into TemplateLibrary.
+
+    新架构（write-methods v3.5.0 起）：槽位骨架在 `references/slot-*.md`，
+    每文件一个槽位——优先从该目录加载；旧架构（骨架内嵌 SKILL.md）走回退解析。
+    """
     section_name = "methods" if "write-methods" in skill_path.name else "results"
 
-    # Find the section containing the template skeletons
-    # In both files, it starts with "## 填空段落骨架" and ends before "## 按设计类型一键生成示例"
-    start_marker = "## 填空段落骨架"
-    end_marker = "## 按设计类型一键生成示例"
+    # 新架构：references/slot-*.md
+    refs_dir = skill_path.parent / "references"
+    if refs_dir.is_dir():
+        slot_files = sorted(refs_dir.glob("slot-*.md"))
+        if slot_files:
+            library = TemplateLibrary()
+            for f in slot_files:
+                slot_id = _slot_id_from_filename(f.name)
+                if not slot_id:
+                    continue
+                library.slots[slot_id] = _parse_slot_text(
+                    f.read_text(encoding="utf-8"), slot_id, section_name)
+            return library
 
-    start_idx = text.find(start_marker)
-    end_idx = text.find(end_marker)
-
+    # 旧架构回退：SKILL.md 内嵌骨架
+    text = skill_path.read_text(encoding="utf-8")
+    start_idx = text.find("## 填空段落骨架")
     if start_idx == -1:
-        # Try alternative markers
+        start_idx = text.find("## 槽位骨架加载")
+    if start_idx == -1:
         start_idx = text.find("## M1.")
-        if start_idx == -1:
-            start_idx = 0
+    if start_idx == -1:
+        start_idx = 0
+    end_idx = text.find("## 按设计类型一键生成示例")
     if end_idx == -1:
         end_idx = len(text)
 
-    skeleton_section = text[start_idx:end_idx]
-
-    slots = _parse_slot_section(skeleton_section, section_name)
-    return TemplateLibrary(slots=slots)
+    return _parse_slot_section(text[start_idx:end_idx], section_name)
 
 
 def list_all_variants(library: TemplateLibrary) -> List[str]:

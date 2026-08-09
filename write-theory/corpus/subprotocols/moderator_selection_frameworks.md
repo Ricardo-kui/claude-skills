@@ -171,4 +171,41 @@ status: ready_for_corpus
 
 **反模式**: 若 moderator 之间没有清晰的层级归属，不要强行套用；可改用理论逻辑逐个引入。
 
+---
+
+## Framework: Willing-and-Able Dual-Axis（动机/能力双轴，DesJardine–Li–Shi 2025 型）
+
+**适用场景**: 4+ 个调节变量且可分成两组时，用**机制要素双轴**组织——一组调节攻击方/施动方的**动机（motivation）**，另一组调节其**能力（ability）**（willing and able 框架）——给"为什么有这么多调节变量"提供统一理论解释，避免 moderator 堆砌感。
+
+**范文来源**: DesJardine, Li & Shi (2025), *Academy of Management Journal*（H2a/b 威胁→motivation；H3a/b 奖项→ability）
+
+**原文锚点**:
+> "Beyond the motivation to influence information intermediaries, common owners need the ability to do so, as reflected in the notion of being willing and able (Durand, Hawn & Ioannou, 2019). In line with competitive dynamics research (Chen & Miller, 2015), where ESG reputational threats affect a common owner's motivations to engage in information-based competition, ESG reputational opportunities affect their ability to make these attacks. By ESG reputational opportunities, we mean situations or circumstances that impact a firm's public image for ESG and the malleability of that image to outside influence."
+
+**框架结构**:
+```
+Beyond the motivation to influence [intermediaries], [attackers] need the ability to do so, as reflected in the notion of being willing and able ([citation]). In line with [domain research] ([citation]), where [axis-1 moderator family: threats/pressure] affect a [attacker]'s motivations to engage in [attack], [axis-2 moderator family: opportunities/resources] affect their ability to make these attacks. By [construct of axis 2], we mean [definition — situations that impact the malleability of the image to outside influence]. [Axis-2 source] can arise from a variety of factors, particularly [concrete source].
+
+[随后每个轴一个独立小节，轴内每侧一个假设：轴 1 = H2a/H2b 镜像对；轴 2 = H3a/H3b 镜像对——见 E_moderation E9]
+```
+
+**为什么有效**:
+- **机制要素映射**: 调节变量不是平行堆叠，而是分别锚定到机制链的不同环节（motivation vs ability）——给"为什么有 4 个调节变量"提供元框架，满足 write-theory 硬约束 #11（≥2 moderators 必须有理论驱动的选择理由）
+- **两轴与竞争动态理论对接**: 威胁→动机、机会→能力，直接用 competitive dynamics 的 willing-and-able 传统（Chen & Miller 2015; Durand et al. 2019）——元框架有理论来源而非自造分类
+- **构念定义嵌入**: "By [opportunities], we mean [definition]"——调节构念定义就地完成，不另开定义段
+- **轴间顺序 = 推理依赖**: motivation 轴在前（H2）、ability 轴在后（H3）——先问"想不想"再问"能不能"，与主效应机制链的展开顺序一致
+
+**适用条件**:
+- 调节变量可干净地分成"动机/意愿侧"与"能力/机会侧"两组（威胁、压力、争议→动机；资源、奖项、信息→能力）
+- 每组内部又可按角色侧镜像展开（攻击方 vs 受害方）——与 E9 配对使用
+- 主效应机制链包含动机与能力两个环节（或至少能论证两轴分别作用于不同环节）
+
+**注意事项**:
+- 框架必须在引入第一组调节变量之前就明确说明
+- 每轴的理论锚点必须真实（willing-and-able 是竞争动态传统，不可自造）
+- 两轴调节必须都有完整 why chain——不能 motivation 轴详细而 ability 轴只列方向
+- 轴内仍执行 conditionality gate（改变动机/能力 ≠ 自动成立调节）
+
+**反模式**: 只有两个调节变量也硬套双轴；两轴构念在概念上不可分（威胁也影响能力、奖项也影响动机时，先检查概念边界）；轴名与机制链环节不匹配。
+
 

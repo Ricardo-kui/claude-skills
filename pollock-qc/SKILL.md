@@ -73,6 +73,12 @@ description: 按 Pollock 2025 框架进行全稿或指定 Section 的快速 QC �
 - 每个 section 是否服务同一个 research question？
 - 是否存在 Theme 漂移？
 
+**Storyteller 人设检查（GBL 2007 Ch04，2026-08-09 接入）**：
+- 作者是否同时呈现 **institutional scientist**（制度科学家：文献掌握、方法纪律、规范引用）与 **human scientist**（人文科学家：田野在场、共情、第一人称声音）两面？只显制度面 → 稿件"没有人"；只显人文面 → 可信度受损
+- **technical competence**（技术胜任）是否可见？——方法与分析的复杂性被诚实呈现（不炫技也不回避）
+- **field knowledge**（田野熟手）是否可见？——现象细节、语境知识、具体例证（定性论文尤其；定量论文以现象锚点承担）
+- 人设是否**全文一致**？（引言建立的声音到 Discussion 没有跳变——如引言第一人称、Discussion 突然第三人称）
+
 #### 如果 section = introduction
 
 | QC 项 | 检查标准 | 评分 |

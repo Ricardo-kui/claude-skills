@@ -1,10 +1,11 @@
 meta:
-  last_updated: '2026-08-05'
-  total_mvp30_papers_indexed: 58
-  batches_processed: 27
-  latest_batch_note: '2026-08-05 Zorn et al. 2017 SMJ (Intro+background): CREATE tension 21-institutionalized-extreme-structural-warrant;
-    EXTEND lit-turn 01-N, hook 03-H, stakes 01-G. Gap=Inadequacy (proximal-outcome Incompleteness secondary). Castellaneta QC
-    (功能节拍+placeholder; 原文锚定 only). No core routing change.'
+  last_updated: '2026-08-09'
+  total_mvp30_papers_indexed: 59
+  batches_processed: 30
+  latest_batch_note: '2026-08-09 DesJardine, Li & Shi 2025 AMJ (Introduction): EXTEND lit-turn 01-O (近邻研究静态观批评→动态化 bridge,
+    theory-first + fulcrum 句 + 领域标准惊讶), tension 01-AE (as-clause 前提 + 惊讶单句 overlooked), previews/findings-preview Q (术语转译锚定
+    targets/attackers), contributions R (主贡献分离 + several-other-streams 多流对比). Gap=Incompleteness 主 + Inadequacy 次 (static
+    view 批评). All new variants EMERGING, section_variant. No core routing change.'
   source: mvp30_index + 9_distill_files + path_B_confirmation + cui_yang_vertinsky_smj_distill + paruchuri_andrus_sullivan2026_amj_distill
     + li2025_jscm_distill + li2026_pom_distill + du_tsolmon2024_orsc_distill + lee_wu_bednar_orsc_18968_distill + reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc_distill
     + vidal_mitchell2015_orsc_distill + moon_tuli_mukherjee2023_jm_distill + schumacher_keck_tang2020_smj_distill + kashmiri_nicol_arora2017_jams_distill
@@ -109,9 +110,10 @@ evidence:
         reject: 0
         common_revise_reasons: []
     04-puzzle-paradox:
-      paper_count: 8
+      paper_count: 9
       papers:
       - anderson_reeb2004 (ASQ)
+      - cutolo2024 (JM)
       - employee_free_speech (OS)
       - gamache2023 (SMJ)
       - han2024 (SMJ)
@@ -120,7 +122,7 @@ evidence:
       - pontikes2012 (ASQ)
       - singh2023 (JMR)
       gap_distribution:
-        Incompleteness: 0
+        Incompleteness: 1
         Inadequacy: 6
         Incommensurability: 2
       status: ROBUST
@@ -614,17 +616,19 @@ evidence:
         common_revise_reasons: []
   tensions:
     01-despite-progress-unaddressed:
-      paper_count: 29
+      paper_count: 31
       papers:
       - ahmadi2017 (JMS)
       - cancellieri2023 (SMJ)
       - castellaneta_conti_kacperczyk2017 (SMJ)
       - cui_yang_vertinsky_smj (SMJ)
+      - cutolo2024 (JM)
       - darby2024 (MSOM)
       - darby2025 (JSCM)
       - darby2026 (JOM)
       - desai2012 (AMJ)
       - desjardine2023 (OS)
+      - desjardine_li_shi_2025_amj (AMJ)
       - eilert2017 (JM)
       - hoffmann2024 (JM)
       - hoffmann_cheong_phan_zurbruegg2024 (JM)
@@ -646,7 +650,7 @@ evidence:
       - wowak2025 (MS)
       - wu2025 (SMJ)
       gap_distribution:
-        Incompleteness: 19
+        Incompleteness: 22
         Inadequacy: 0
         Incommensurability: 0
       status: ROBUST
@@ -1267,17 +1271,19 @@ evidence:
         common_revise_reasons: []
   literature_turns:
     01-progressive-coherence:
-      paper_count: 29
+      paper_count: 31
       papers:
       - Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ (SMJ)
       - castellaneta_conti_kacperczyk2017 (SMJ)
       - ceo_regulatory_focus_ijrm (IJRM)
       - cui_yang_vertinsky_smj (SMJ)
+      - cutolo2024 (JM)
       - darby2024 (MSOM)
       - darby2025 (JSCM)
       - darby2026 (JOM)
       - desai2012 (AMJ)
       - desjardine2023 (OS)
+      - desjardine_li_shi_2025_amj (AMJ)
       - eilert2017 (JM)
       - employee_free_speech (OS)
       - gamache2020 (SMJ)
@@ -1299,7 +1305,7 @@ evidence:
       - wowak2025 (MS)
       - wu2025 (SMJ)
       gap_distribution:
-        Incompleteness: 19
+        Incompleteness: 20
         Inadequacy: 7
         Incommensurability: 0
       status: ROBUST
@@ -1405,7 +1411,7 @@ evidence:
         Inadequacy: 2
         Incommensurability: 2
     findings-preview:
-      paper_count: 44
+      paper_count: 45
       papers:
       - castellaneta_conti_kacperczyk2017 (SMJ)
       - ceo_regulatory_focus_ijrm (IJRM)
@@ -1415,6 +1421,7 @@ evidence:
       - darby2026 (JOM)
       - desai2012 (AMJ)
       - desjardine2023 (OS)
+      - desjardine_li_shi_2025_amj (AMJ)
       - eilert2017 (JM)
       - employee_free_speech (OS)
       - employee_free_speech2024 (OS)
@@ -1462,7 +1469,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 22
+        Incompleteness: 23
         Inadequacy: 20
         Incommensurability: 2
     robustness-preview:
@@ -1508,16 +1515,18 @@ evidence:
         common_revise_reasons: []
   contributions:
     contribution-statements:
-      paper_count: 47
+      paper_count: 49
       papers:
       - ahmadi2017 (JMS)
       - ceo_regulatory_focus_ijrm (IJRM)
+      - cutolo2024 (JM)
       - darby2023 (MSOM)
       - darby2024 (MSOM)
       - darby2025 (JSCM)
       - darby2026 (JOM)
       - desai2012 (AMJ)
       - desjardine2023 (OS)
+      - desjardine_li_shi_2025_amj (AMJ)
       - eilert2017 (JM)
       - employee_free_speech (OS)
       - employee_free_speech2024 (OS)
@@ -1568,7 +1577,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 21
+        Incompleteness: 22
         Inadequacy: 20
         Incommensurability: 2
     three-layer-contribution:
@@ -1838,15 +1847,8 @@ paper_index:
   castellaneta_conti_kacperczyk2017: Incompleteness
   kim_lee2026: Incompleteness
   Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ: Inadequacy
-
+  cutolo2024: Incompleteness
 critique:
-  schema: "critique-driven usage stats（2026-08-09 闭环补丁：与 distill-methods/results registry 语义同构）"
-  rationale: "用户对 write-* 产出的批评与审稿回流（revision-coach）登记于此；revise+reject >= 2 触发 critique_heavy，供下一轮蒸馏选材 Gate 读取"
-  per_file:
-    # 键 = corpus 文件相对路径（如 hooks/03-data-shock.md）
-    # 示例（登记时按此结构新增/更新）:
-    #   hooks/03-data-shock.md:
-    #     revise: 0
-    #     reject: 0
-    #     last_critique: null
-    #     reasons: []
+  schema: critique-driven usage stats（2026-08-09 闭环补丁：与 distill-methods/results registry 语义同构）
+  rationale: 用户对 write-* 产出的批评与审稿回流（revision-coach）登记于此；revise+reject >= 2 触发 critique_heavy，供下一轮蒸馏选材 Gate 读取
+  per_file: null

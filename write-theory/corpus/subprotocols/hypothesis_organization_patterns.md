@@ -12,6 +12,24 @@ confidence: medium
 status: ready_for_corpus
 -->
 
+
+## 变体速查表
+
+> 检索辅助（2026-08-09 P0 补建）。状态列空白 = 正文未标注验证状态（旧 Pattern）。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架、适用条件与诚实边界见下方变体正文。
+
+| # | 变体 | 适用场景 | 状态 | 来源 |
+|---|---|---|---|---|
+| 1 | Pattern: Triple Parallel Boundary Conditio | 主效应明确后，需要系统检验三类来自不同理论角度的情境异质性；调节变量之间没有统一元框架，但各 |  | Malshe & Agarwal (2015), *Jour |
+| 2 | Pattern: Common Trunk → Parallel Branches | 主效应有多个并行的机制路径，每个 moderator 都通过影响这些路径来调节主效应。 |  | Shen, Zhou, Wang, and Zhang (2 |
+| 3 | Pattern: Common Trunk → Role-Separated Par | 同一结构性自变量通过多个可区分的组织行为/文化路径影响近端利益相关者结果，并且还可能存在方向 | EMERGING（单篇来源，待第 |  |
+| 4 | Pattern: Baseline Mechanism → Dual Path →  | 主效应机制清晰，但有两个相对独立的 moderators，最后还有一个建立在前两者基础上的复 |  | Singh and Grewal (2023), *Jour |
+| 5 | Pattern: 2×2 Symmetric Hypothesis Matrix | IV 有两个互补/对立的维度或条件，DV 有两种相关类型或维度，理论预期两个 IV 值对两个 |  | - Gamache, McNamara, Mannor, a |
+| 6 | Pattern: Sequential Two-Stage Screening wi | 当理论中的理想信息/线索（ideal screen）因制度、成本或隐私原因不可得时，acto |  | Pupovac, Astvansh, Carrillat,  |
+| 7 | Pattern: 2×2 Combination Enumeration to In | 当主效应是 match/fit/similarity → positive outcome， |  | Du and Tsolmon (2024), *Organi |
+| 8 | Pattern: Shared Orientation → Divergent Ou | 同一 actor trait 先塑造一种组织导向，该导向再关联多个战略结果；部分结果有益、部 |  | Kashmiri, Nicol, and Arora (20 |
+| 9 | Pattern: Dual-Edged Trunk → Signed Enhanci | 主效应净方向事先不定（双刃剑）；理论用一组异号权变分别强化升值机制与贬值机制；不设 unco |  | Castellaneta, Conti, and Kacpe |
+| 10 | Pattern: Mechanism-Loss Trunk → Multi-Outc | 拥挤的治理/结构文献中，IV 不是“又一个 board/TMT characteristic |  | Zorn, Shropshire, Martin, Comb |
+
 ## Pattern: Triple Parallel Boundary Conditions
 
 **适用场景**: 主效应明确后，需要系统检验三类来自不同理论角度的情境异质性；调节变量之间没有统一元框架，但各自有独立理论依据。
