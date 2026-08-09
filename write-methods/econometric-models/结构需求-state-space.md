@@ -135,7 +135,7 @@ updated: 2026-08-05
 ### 变体 5: M8 监管强制召回外生性 — 法定披露窗口论证（1篇高价值）
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
-**原始句锚点**: According to the National Traffic and Motor Vehicle Safety Act of 1966, an automaker has five business days to inform the NHTSA after it discovers a problem. Therefore, product recall is outside management control and is therefore treated as an exogenous variable in this study.
+**原始句锚点**: According to the National Traffic and Motor Vehicle Safety Act of 1966, an automaker has five business days to inform the NHTSA after it discovers a problem. … Therefore, product recall is outside management control and is therefore treated as an exogenous variable in this study.
 
 **验证状态**: EMERGING（单篇；与 Hoffmann 裁量权子样本形成对照）
 

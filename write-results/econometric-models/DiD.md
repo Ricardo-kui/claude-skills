@@ -240,7 +240,7 @@ updated: 2026-08-05
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
 
-**原始句锚点**: Our identification strategy assumes that the enactment of the UTSA laws is exogenous with respect to firm and state characteristics associated with firm market value. In the following, we discuss potential identification concerns and describe how our specification helps address them.
+**原始句锚点**: Our identification strategy assumes that the enactment of the UTSA laws is exogenous with respect to firm and state characteristics associated with firm market value. … In the following, we discuss potential identification concerns and describe how our specification helps address them.
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
