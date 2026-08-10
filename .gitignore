@@ -99,6 +99,12 @@
 !officecli/**
 !_reference/
 !_reference/**
+!_governance/
+!_governance/**
+!grill-the-claim/
+!grill-the-claim/**
+!handoff/
+!handoff/**
 
 # Track user's loose files
 !empirical-writeup.md

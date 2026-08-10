@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """全量复核：输出每份 blueprint 的完整 climax 文本 + primary + fa_len。"""
 import glob, os, re
-d = r'C:\Users\40500\.claude\skills\story-blueprints\blueprints'
+d = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'blueprints')
 for p in sorted(glob.glob(os.path.join(d, '*.md'))):
     if p.endswith('_index.md'):
         continue

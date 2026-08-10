@@ -1,5 +1,5 @@
 ---
-name: paper-distill-pipeline
+name: notebooklm-pipeline
 description: |
   学术文献 NotebookLM 流水线。把本地 PDF、Obsidian 笔记、网页作为 sources 批量推送到 NotebookLM，执行文献综述/理论框架/方法-结果语料三类蒸馏，并将结构化结果落库到 Obsidian。
   触发词：「notebooklm 流水线」「文献蒸馏」「批量跑 notebooklm」「把 PDF 丢给 notebooklm」「理论框架提取」「方法语料蒸馏」「文献综述自动化」。
@@ -24,7 +24,7 @@ version: 0.1.0
 
 ## Phase 0: 解析用户意图
 
-用户调用 `/paper-distill-pipeline` 时，通常会给出：
+用户调用 `/notebooklm-pipeline` 时，通常会给出：
 - 研究主题（如 "AI 采纳对企业创新的非线性影响"）
 - 待分析的材料（PDF 路径、Obsidian 笔记路径、URL）
 - 期望的输出类型（文献综述 / 理论框架 / 方法-结果语料）
@@ -45,9 +45,9 @@ version: 0.1.0
 
 ## Phase 2: 创建 NotebookLM Notebook
 
-1. 用 Bash 调用 Python 脚本 `C:\Users\40500\.claude\skills\notebooklm-pipeline\notebooklm_pipeline.py`：
+1. 用 Bash 调用 Python 脚本 `~/.claude/skills/notebooklm-pipeline/notebooklm_pipeline.py`：
    ```bash
-   python "C:\Users\40500\.claude\skills\notebooklm-pipeline\notebooklm_pipeline.py" create "<notebook-title>"
+   python ~/.claude/skills/notebooklm-pipeline/notebooklm_pipeline.py create "<notebook-title>"
    ```
 2. 记录返回的 notebook ID。
 
@@ -55,8 +55,8 @@ version: 0.1.0
 
 1. 使用同一个脚本，通过 `--add-source` 逐个或批量添加 sources：
    ```bash
-   python "C:\Users\40500\.claude\skills\notebooklm-pipeline\notebooklm_pipeline.py" use <notebook-id>
-   python "C:\Users\40500\.claude\skills\notebooklm-pipeline\notebooklm_pipeline.py" add-source "<path-or-url>"
+   python ~/.claude/skills/notebooklm-pipeline/notebooklm_pipeline.py use <notebook-id>
+   python ~/.claude/skills/notebooklm-pipeline/notebooklm_pipeline.py add-source "<path-or-url>"
    ```
 2. 等待所有 sources 处理完成（脚本内置 `source wait`）。
 

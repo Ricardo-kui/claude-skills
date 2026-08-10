@@ -1,5 +1,6 @@
 ---
 name: distill-story-exemplar
+disable-model-invocation: true
 description: >-
   整篇论文故事蒸馏 meta-skill（Pollock Ch02/Ch03 视角）——输入范文（全文/四区段文本/已有蒸馏记录），输出结构化故事快照（knot 类型与复合结构、反派构造、角色、五幕落点、解法性格、alternative tellings、Ch03 工具层）并写入 story-blueprints 语料库。Use when the user asks to 蒸馏 story / 整篇故事蒸馏 / 故事快照 / 讲法对比 / 同一关系不同故事，or supplies a paper and wants the story-level distillation (not section-level). 核心原则：论文是一个故事单元——提炼 HOW they tell the story, not WHAT they found。事实纪律：字段必须来自原文或已验证蒸馏记录，缺失标 `待补`，禁止编造。Not for: 自己论文的故事设计（→ paper-story-contract）；草稿审查（→ paper-review/pollock-qc）；section 级蒸馏（→ distill-introduction/theory/methods/results-exemplar）。消歧：用户只说"蒸馏这篇论文"未指定层面时，先询问 section 级还是 story 级，不默认本 skill。
 ---

@@ -37,7 +37,11 @@ from typing import List, Optional
 
 
 NOTEBOOKLM_BIN = "notebooklm"
-DEFAULT_OUTPUT_DIR = Path("D:/OneDrive/Obsidian Vault/00 工作台/NotebookLM 输出")
+# 可用环境变量 NOTEBOOKLM_OUTPUT_DIR 覆盖；默认指向本机 Obsidian Vault
+DEFAULT_OUTPUT_DIR = Path(os.environ.get(
+    "NOTEBOOKLM_OUTPUT_DIR",
+    "D:/OneDrive/Obsidian Vault/00 工作台/NotebookLM 输出",
+))
 
 
 def run_cmd(args: List[str], capture: bool = True, timeout: Optional[int] = None) -> subprocess.CompletedProcess:
@@ -265,7 +269,7 @@ def cmd_run(args):
     downstream = """
 ## 下游使用提示
 
-本文件由 `paper-distill-pipeline` skill 自动生成，可直接作为以下 skill 的输入素材：
+本文件由 `notebooklm-pipeline` skill 自动生成，可直接作为以下 skill 的输入素材：
 - `/write-introduction`：基于「文献综述与缺口识别」结果撰写 Introduction。
 - `/write-theory`：基于「理论框架提取」结果构建 Theory & Hypotheses。
 - `/write-methods` / `/write-results`：基于「方法-结果语料蒸馏」结果撰写 Methods/Results。

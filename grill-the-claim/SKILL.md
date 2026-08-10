@@ -1,0 +1,39 @@
+---
+name: grill-the-claim
+description: >-
+  贡献主张/研究设计的压力测试访谈——把主张展开成 claim tree，按 frontier 轮次追问，直到没有隐含假设未被检视。Use when the user wants to stress-test a contribution claim, research design, or theoretical story before writing。触发词：「烤一下这个 idea」「压力测试」「这个贡献站得住吗」「grill 我的研究设计」「帮我挑刺」「这个 gap 是真的吗」。Not for: 快速分诊与路由（→ empirical-intake）；文档级 gap 类型诊断（→ research-gap-diagnosis）；Introduction 结构与 hook 诊断（→ diagnose-introduction）；写作执行（→ write-*）。
+---
+
+# Grill the Claim — 学术压力测试访谈
+
+对用户的贡献主张、研究设计或理论故事做 relentless interview，直到 claim tree 的每个分支都被检视。本技能是**交互协议**，不做文档诊断（那是 research-gap-diagnosis / diagnose-introduction 的活）；产出是"经得起追问的主张清单"，不是评分表。
+
+## Claim tree
+
+把被测对象展开成一棵树：主贡献主张是根，每个主张分枝出五类子节点：
+
+1. **隐含前提**：主张成立依赖哪些未明说的假设？每个假设可证伪吗？
+2. **边界条件**：主张在何种 scope（情境、层级、时间窗、样本）之外失效？
+3. **替代解释**：有没有更简单的机制解释同一现象？——审稿人一定会替你找。
+4. **证据-主张匹配**：现有或计划中的证据，真能承载这个主张的强度吗？（区分 significant coefficient 与 credible evidence）
+5. **Gap 真实性**：所称的 gap 是文献真空，还是只是没读到？（此分支的事实核查由你负责，见下）
+
+## Frontier 轮次协议
+
+- **frontier** = 前提已确定、现在就能问的问题集合。一轮问完整个 frontier：每题编号、附你的推荐答案；等用户答完再进入下一轮。
+- 用户的每个回答重塑这棵树：已解决的节点把 frontier 向外推，解锁依赖它们的问题。每轮重算 frontier。依赖本轮未决问题的题，放到后面的轮次。
+- **查事实是你的活，不是用户的。** frontier 问题需要事实（文献真实状态、数据可得性、Vault 已有结论）时自己查——Vault 按工作区 Vault Protocol 检索，文献用可用检索工具。只有**判断与取舍**才问用户。检索不阻塞访谈：进行中的核查是未决前提，只有它的下游问题等待，其余 frontier 照常问。
+- **结束条件**：frontier 为空——每个分支都走到叶，没有"默认假设"剩下。用户确认达成 shared understanding 之前，不进入任何写作执行（write-* / paper-story-contract 立约）。
+
+## 提问格式
+
+每轮一个编号列表，每题包含：一句话标题、问题本体（可多段、含选项）、你的推荐答案及依据。依据必须区分三方：(a) 文献已确立的、(b) 用户项目正在连接的、(c) 未检验的判断——三者不得混为一谈。一轮不超过 7 题；超过说明 frontier 归并太粗。
+
+## 收尾输出
+
+frontier 清空后输出烤后小结：
+
+- **存活的主张**（含追问中产生的修订版）
+- **被杀死或降级的主张**及死因
+- **遗留未决判断**——明确标注"这是判断，不是事实"
+- **建议路由**：→ `paper-story-contract` 立约 / → `diagnose-introduction` 结构诊断 / → `empirical-intake` 实证分诊 / → `write-*` 写作

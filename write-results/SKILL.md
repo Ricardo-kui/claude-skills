@@ -1,7 +1,7 @@
 ---
 name: write-results
 description: >-
-  顶刊 Results 证据展演结构生成器——输入结果类型输出带 [placeholder] 的可直接粘贴段落（R1-R9 槽位；覆盖 19 种结果类型）。Use when writing the results section of a management-journal paper。Not for: 蒸馏范文（→ distill-results-exemplar）；审查草稿（→ results-review）。分工：实验/多研究的设计属 write-methods，结果与跨研究综合属本 skill；用户只说"实验/多研究"未指定 section 时先确认。
+  顶刊 Results 证据展演结构生成器——输入结果类型输出带 [placeholder] 的可直接粘贴段落（R1-R9 槽位；覆盖 19 种结果类型）。Use when writing the results section of a management-journal paper。触发词：写结果、结果部分、稳健性检验、平行趋势、交互效应、调节结果、经济显著性、marginal effect、系数解读、假设检验汇报。Not for: 蒸馏范文（→ distill-results-exemplar）；审查草稿（→ results-review）。分工：实验/多研究的设计属 write-methods，结果与跨研究综合属本 skill；用户只说"实验/多研究"未指定 section 时先确认。
 ---
 
 # Role
