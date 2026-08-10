@@ -116,7 +116,7 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 
 **当用户对本 skill 产出表示不满时，当场把批评登记到 `corpus/_evidence_registry.yaml` 的 `critique.per_file` 段**——这是语料精炼的反馈信号，无需询问用户。
 
-- 定位：本次调用涉及的 corpus 文件（如 `variants/E_moderation.md`、`sentences/mechanism_chain.md`）
+- 定位：本次调用涉及的 corpus 文件（如 `corpus/variants/E_moderation.md`、`corpus/sentences/mechanism_chain.md`）
 - 登记：`revise` +1（需大改）或 `reject` +1（弃用/换写法）、`last_critique`=今天、批评要点去重插入 `reasons` 首位（最多 8 条）
 - 不登记满意信号；同一会话中同一缺陷只登记一次
 - 只登记对**变体产出质量**的批评，不登记对 [placeholder] 填充流程的抱怨、风格偏好或与语料无关的意见

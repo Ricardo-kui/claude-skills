@@ -655,4 +655,4 @@ H2. The [penalty] decreases as the [feature 1] of [actor]'s [carrier] increases.
 **调用语料**:
 - `corpus/sentences/mechanism_chain.md`（每调节小节的学科证据→机制→应用链）
 - `corpus/subprotocols/hypothesis_derivation_patterns.md`（调节推导句式）
-- 上游联动: write-introduction `theory-lens/02-dual-theory-layered.md` 变体B（同论文：lens 的 N:1 映射在 Theory 兑现为 N 个调节小节）——taxonomy 在 lens 预告、在 theory 兑现，两处 1:1 对齐是强一致信号
+- 上游联动: `write-introduction/academic-writing-corpus/theory-lens/02-dual-theory-layered.md` 变体B（同论文：lens 的 N:1 映射在 Theory 兑现为 N 个调节小节）——taxonomy 在 lens 预告、在 theory 兑现，两处 1:1 对齐是强一致信号

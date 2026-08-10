@@ -94,7 +94,7 @@ description: >-
 ## 生成后检查
 
 - **反模式自查（先生效）**：`references/anti-patterns.md`（14 项逐条排查）。
-- **自检清单**：`references/post-generation-checklist.md`——Completeness/Clarity/Credibility（含 Yuan 六维覆盖声明 + Booth 证据五问 + 视觉证据）/论证质量诊断/反向审查。
+- **自检清单**：`references/post-generation-checklist.md`——Completeness/Clarity/Credibility（含 Yuan 六维覆盖声明 + Booth 证据五问 `references/evidence-standards.md` + 视觉证据 `references/visual-evidence.md`——R2 表格导航 / R4 交互图 / R7 稳健性表图设计时必读）/论证质量诊断/反向审查。
 - **输出元数据**：骨架末尾按需附加 `---metadata---` JSON 区块（`references/output-metadata-template.md`——slot_map / hypothesis_fulfillment_map / cross_section_alignment / feedback_interface），供 paper-review 与 distill-results-exemplar 消费。
 
 **完成判据**：自检清单逐条全过；反模式零命中。

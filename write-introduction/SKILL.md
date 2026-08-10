@@ -19,14 +19,14 @@ description: >-
 
 1. 读 canonical `story`（`/paper-story-contract` 门控；旧字段按 `../paper-story-contract/references/schema.md` 迁移标 provisional）。
 2. `story.story_frame.frame_type` 已选定 → 读 `references/story-modulation.md` 对应类型规则（frame_type 只收窄变体形态，不改 gap_type 主路由）；未选定跳过。
-3. 模式：`introduction`（默认）｜`front-end`（标题+Abstract+promise 对齐，读 `references/front-end-mode.md`）｜`align`（只审查对齐）。
+3. 模式（`--mode=introduction|front-end|align`）：`introduction`（默认）｜`front-end`（标题+Abstract+promise 对齐，读 `references/front-end-mode.md`）｜`align`（只审查对齐）。
 4. 门控：`preparing` 只出骨架（跳过润色）；`refining/finishing` 要求 `story.status: confirmed`；stakes.theoretical 与 reader_shift 非空。若无法同时陈述 theme question 与 central knot，停止在 Story Intake。单模块请求可 local-only bypass（标记"未经整篇故事契约验证"，不更新 paper state）。
 
 **完成判据**：门控满足或显式记录跳过；story_frame 存在性已确认。
 
 ## Phase 1: 诊断
 
-1. 分支判定：理论论文 → `references/theory-paper-amr-mode.md`；定性/归纳 → `references/qualitative-mode.md`（均跳过实证诊断；用户未声明但内容明显定性时先询问）。
+1. 分支判定：理论论文 → `references/theory-paper-amr-mode.md`（AMR 模式贡献声明限一条核心贡献，paper-state 片段加 `theory_paper: true`；贡献清单罗列仅适用实证论文）；定性/归纳 → `references/qualitative-mode.md`（均跳过实证诊断；用户未声明但内容明显定性时先询问）。
 2. 用户未给 Gap/贡献时诊断：
    - **Step A 主 gap**（GBL 三档，驱动张力类型、叙事能量与结构复杂度）：研究对已有文献的主要定位是**补充**（Incompleteness）、**修正**（Inadequacy）还是**裁决/重组不可兼容主张**（Incommensurability）？已有文献的主要问题——漏了东西、理解偏了，还是在可比的 X、Y、层次与时间范围上推出不可兼容预测？
    - **Step B 次 gap**（可选，多数顶刊论文有组合）：是否**同时**回应另一种 gap？常见组合：Incompleteness+Application（填缺口+借理论）、Inadequacy+Confusion（视角偏+证据矛盾）、Incommensurability+Confusion（理论对立+数据冲突）。次 gap 不改变主张力结构与能量，仅在 Tension 内叠加；单 gap 完全合法。
@@ -72,7 +72,7 @@ description: >-
 
 ## Phase 4: 检查与润色
 
-1. 质量门（生成后必过）：`references/quality-gates.md`——GBL Four-Move 对齐 + JTBD 六模块完整性 + claim_fit + 首尾句测试；不合格项入"提醒"段。
+1. 质量门（生成后必过）：`references/quality-gates.md`——GBL Four-Move 对齐（共享规则见 `../diagnose-introduction/references/golden-biddle-locke-four-moves.md`）+ JTBD 六模块完整性 + claim_fit + 首尾句测试；不合格项入"提醒"段。
 2. 反模式自查：`references/anti-patterns.md`（22 项逐条扫描）+ 拒稿信号 `references/rejection-signals.md`。
 3. 期刊适配：用户提目标期刊时读 `references/journal-fit.md`（期刊差异优先于通用规则）。
 4. 措辞润色（默认执行，preparing 跳过）：按句位查语料库——Hook/human face → `storytelling/prose-craft-checklist.md` §0/§5；批判措辞 → `phrasebank/critique-phrases.md`；hedging → `phrasebank/hedging-strength.md`；过渡 → `transitions/` + `micro-templates/transition-signals.md`；中心论点定位 → `micro-templates/thesis-models.md`；五病 → `../pollock-qc/references/prose-pathology.md`；人设 → `storytelling/authorial-persona.md`；因果声明 → `../write-methods/econometric-models/micro-templates/causal-hedging.md`。纪律：不改骨架占位、每句位 ≤2-3 候选、specificity gate（替换后可放进任何论文 = 不合格）、润色结果以 `### 措辞润色建议` 附末（不覆盖骨架原文）。

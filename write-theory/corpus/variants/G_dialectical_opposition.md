@@ -363,7 +363,7 @@ The curve form may be shared, but mode-specific governance determines the mechan
 - 必须先说明 Y 是正向还是负向；同一倒 U 对两类 Y 的理论含义相反。
 - “活动更多”不等于“经验更多”的充分识别；若机制只在理论层，结果措辞应保持解释性而非声称已测得中介。
 - 两个战略模式可以共享 dominance rule，但必须有独立治理 warrant，不能复制段落后替换构念名。
-- 同一 W 的两种几何预测必须分别绑定 mode-specific governance；不得把 shift、steepen、turning-point delay 当作可互换的“调节”同义词（句式见 `sentences/moderation.md`；双侧曲率调节见 `bilateral_argumentation_templates.md`）。
+- 同一 W 的两种几何预测必须分别绑定 mode-specific governance；不得把 shift、steepen、turning-point delay 当作可互换的“调节”同义词（句式见 `../sentences/moderation.md`；双侧曲率调节见 `bilateral_argumentation_templates.md`）。
 
 ---
 
