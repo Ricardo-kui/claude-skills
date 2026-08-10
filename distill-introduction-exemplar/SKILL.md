@@ -25,6 +25,8 @@ Distill how a published Introduction works—not what it says—into reusable, e
 6. In Phase 4, compare observed practice with current `write-introduction` rules and emit `skill_design_feedback`. Persist every candidate with `_update_design_feedback.py`; distinguish corpus gaps from routing, validator, output-contract, schema, and stage-gate defects.
 7. Auto-write reference variants. Apply bounded core corrections only when the evidence and authorization gates in `references/phase-4-validation-writeback.md` pass; always review schema or stage-gate changes explicitly.
 
+**完成判据**：①请求性质已确认（蒸馏 vs 校验；section 已消歧）；②Gap × Contribution 分类 + story-fidelity 判定已输出（Incommensurability 时含 L0–L3 profile 与 route confidence）；③所用 phase 的输出件按请求深度齐全（module map / coverage / skeletons / DNA / QC）；④每个写入变体附带原文锚定字段；⑤`skill_design_feedback` 已用 `_update_design_feedback.py` 持久化；⑥core 修正仅经 phase-4 证据与授权门禁。
+
 ## 选材 Gate（轻量版：读 _index 验证状态）
 
 蒸馏选材时，读目标目录的 `write-introduction/academic-writing-corpus/<目录>/_index.md` 验证状态列（ROBUST/VERIFIED/EMERGING）做三带判定：

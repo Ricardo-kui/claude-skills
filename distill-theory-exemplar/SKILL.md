@@ -25,6 +25,8 @@ Distill the architecture and reasoning of a published Theory section into reusab
 6. In Phase 4, load `references/design-feedback-loop.md`, compare observed practice with current write-theory rules, and always emit `skill_design_feedback`（无缺陷时 `observations: []`）. Persist candidates with `_update_design_feedback.py`.
 7. Auto-write eligible reference variants. Apply bounded core corrections only when the evidence, authorization, risk, and dual-regression gates pass; schema/stage-gate/high-risk changes always require explicit review.
 
+**完成判据**：①请求性质已确认（蒸馏 vs 审查；section 已消歧）；②理论构建类型 + 假设结构 + story-fidelity 分类已输出（Incommensurability 时含 L0–L3 profile、route confidence 与 distinguishing prediction）；③所用 phase 输出件按请求深度齐全（module map / why-chains / DNA / QC）；④每个写入变体/句式附带原文锚点字段；⑤`skill_design_feedback` 必发（无缺陷时 `observations: []`）并已持久化；⑥自动写回仅限 reference 级变体与有界低风险 core 修正。
+
 ## 选材 Gate（轻量版：读 routing 表与验证状态）
 
 蒸馏选材时，读 `write-theory/corpus/meta/routing_table.md`（Gap × 贡献杠杆 → 首选变体）与目标变体文件的验证状态做三带判定：
