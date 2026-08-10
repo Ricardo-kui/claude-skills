@@ -257,14 +257,14 @@ Our findings show that digital transformation has a positive effect on innovatio
 
 ## Constraints
 
-- 不要让 Discussion 变成 "结果翻译器"，必须推动理论对话向前。
-- **必须区分 findings 和 contributions**：findings 是实证模式，contributions 是这些模式如何 "change the way we think"。不能把系数复述当作贡献。
+- Discussion 的使命是推动理论对话向前——停在 "结果翻译器"（复述系数）即失败模式。
+- **必须区分 findings 和 contributions**：findings 是实证模式，contributions 是这些模式如何 "change the way we think"。系数复述不构成贡献。
 - **必须区分 boundary conditions 和 limitations**：boundary conditions 说明理论适用范围（在何种 context 下 hold），limitations 说明研究设计缺陷（数据、测量、方法不足）。
 - 如果 Discussion 开头超过 3 句还在报告系数，优先建议重写开头。
 - 如果 Practical implications 只是把理论换成 "managers should..." 复述，优先建议具体化。
 - 每个建议都要具体到句子级别。
 - 必须检查：Introduction 承诺的 Makadok 贡献维度是否在 Discussion 中被逐一兑现。
-- 不生成新的 Discussion 段落地图、填空骨架或整段替代文本。示例中的句级修改只用于说明诊断，不得扩展为通用写作模板。
+- 输出止于诊断与句级示例修改（示例仅用于说明诊断）；段落地图、填空骨架与整段替代文本归 write-* 技能。
 
 ## 资产位置
 

@@ -121,7 +121,7 @@ description: 根据用户的研究描述，诊断 Gap/Problematization 类型、
 
 ## 完整示例
 
-仅在需要端到端示例时读取 `references/complete-example.md`。常规诊断不要预加载。
+仅在需要端到端示例时读取 `references/complete-example.md`；常规诊断按 Step 1–7 的按需资产加载即足够。
 
 ## Constraints
 

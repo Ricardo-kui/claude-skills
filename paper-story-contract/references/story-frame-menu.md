@@ -1,8 +1,8 @@
 # Story Frame Menu — 故事框架选择菜单（v0.1）
 
-> 消费 `../story-blueprints/` 语料（**59 份 blueprint、10 型 knot（9 型有实证样本）、6 型 resolution、对照对家族**；布局实证见 `../story-blueprints/layout-inventory.md`）。给定研究描述，生成 2-3 个候选故事框架（knot 类型 × 解法性格），由用户拍板后写入 story 契约的 `story_frame` 字段。
+> 消费 `../story-blueprints/` 语料（knot 类型词表与原型状态的唯一权威 = `../story-blueprints/_schema.md`；各型实例计数 = `../story-blueprints/blueprints/_index.md` knot 主型列实时统计；布局实证见 `../story-blueprints/layout-inventory.md`）。给定研究描述，生成 2-3 个候选故事框架（knot 类型 × 解法性格），由用户拍板后写入 story 契约的 `story_frame` 字段。
 > **Gate**：发生在 Story Intake（theme_question + central_knot 初判）之后、契约定稿之前。菜单是**选择工具不是强制模板**——用户可拒绝全部候选自定框架；被拒候选记入 `alt_frames`（含拒绝理由）。
-> **多原型优先（≥2 份 blueprint 实证）**：irony-reversal（8）/ paradigms-at-war（8）/ neglected-arena（9）/ overlooked-alternative（8）/ half-domain-gap（9）/ consensus-puzzle（7）/ assumption-flip（6）/ tangled-constructs（3）均有实证；单原型（cross-domain-unification）与待建（paradox）使用时需对照原型 blueprint 的"适用/禁忌"核对前提。
+> **多原型优先（≥2 份 blueprint 实证）**：优先级 irony-reversal / paradigms-at-war / neglected-arena / overlooked-alternative / half-domain-gap / consensus-puzzle / assumption-flip / tangled-constructs（实例计数动态演进，以 `_index.md` 统计为准）；单原型（cross-domain-unification）与待建（paradox）使用时需对照原型 blueprint 的"适用/禁忌"核对前提。
 
 ## Step A: 冲突定位诊断（研究描述 → knot 类型候选）
 

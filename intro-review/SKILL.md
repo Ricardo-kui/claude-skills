@@ -265,7 +265,7 @@ Digital transformation has become a strategic imperative for firms worldwide. Ex
 
 ## Constraints
 
-- 不要重写整段，只针对最薄弱的 1-2 个句子或 1 个段落提供建议。
+- 建议聚焦最薄弱的 1-2 个句子或 1 个段落；整段重写归 write-introduction。
 - 必须基于 Introduction 原文作为证据，不凭空判断。
 - 如果引言没有明确的 rhetorical question 或 puzzle，优先建议补充。
 - 必须指出 Hook 强度是否与推断的 Gap 强度匹配。
