@@ -68,7 +68,7 @@ RESOLUTION_TYPES = (
 )
 PAPER_TYPES = ("quantitative", "qualitative", "theory")
 SECTION_TYPES = {"intro", "theory", "methods", "results"}
-INDEX_STATUS = {"ROBUST", "PARTIAL"}
+INDEX_STATUS = {"ROBUST", "PARTIAL", "claimed_complete", "claimed_partial"}
 CN_NUM = {"九": 9, "八": 8, "七": 7, "六": 6, "五": 5, "四": 4, "三": 3, "二": 2, "单": 1}
 CONFLICT_MARKERS = (
     "？", "?", "vs", "versus",

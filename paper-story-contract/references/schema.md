@@ -30,16 +30,13 @@ story:
   reader_shift:
     from: "[prior understanding]"
     to: "[target understanding]"
-  story_frame:   # 可选（Story Frame Selection 产物，非门禁字段）
-    frame_type: "[knot 类型，见 ../story-blueprints/_schema.md 类型表]"
-    resolution_type: "[resolution 类型]"
-    one_liner: "[一句话故事——即 GBL 2007 的 theorized storyline：贯穿全文的理论主张线，不是摘要]"
-    exemplar_blueprint: "[story-blueprints/blueprints/ 中的原型 id]"
-    assumption_type: "[仅 frame_type=assumption-flip 时填写：in-house | root-metaphor | paradigm | ideology | field——见 ../diagnose-introduction/references/assumption-challenging.md]"
-    alt_frames:
-      - frame: "[被拒候选]"
-        rejected_reason: "[理由]"
-    risk_notes: "[前提风险核对结果]"
+  integrity:  # 新输出必须经 project-owned integrity gate 填写；不包含范文或故事类型
+    theme_grounding: grounded | provisional | unsupported
+    knot_authenticity: grounded | provisional | unsupported
+    character_discipline: grounded | provisional | unsupported
+    payoff_feasibility: grounded | provisional | unsupported
+    unsupported_moves: ["[尚不可辩护、不得写入正文的故事动作]"]
+    notes: "[基于项目材料的简短判断；不写范文推荐]"
 ```
 
 ## Invariants
@@ -50,6 +47,7 @@ story:
 - Storyline IDs are unique and stable across Theory, Methods, and Results.
 - `provisional` means one or more values were inferred or remain unconfirmed.
 - `confirmed` means the user or manuscript evidence supports all fields needed at the current stage.
+- `integrity` records whether the project can defend its own story. It must contain no exemplar identifier, taxonomy label, or recommended rhetorical frame.
 
 ## Legacy Read Compatibility
 
@@ -69,6 +67,7 @@ Migration behavior:
 2. Create a canonical `story` block with `status: provisional`.
 3. Do not write legacy aliases into new output.
 4. Preserve unrelated legacy fields so existing consumers do not lose data.
+5. If a legacy `story.story_frame` exists, preserve it as historical metadata but do not use, update, validate, or propagate it. Do not migrate it into new output.
 
 ## Section Extensions
 

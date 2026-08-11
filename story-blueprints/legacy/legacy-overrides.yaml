@@ -1,0 +1,380 @@
+# Optional human-verified enrichment for the generated legacy manifest.
+# Do not edit legacy blueprints. A candidate must name the v0.4 seed and the
+# concrete comparison question that justified re-reading it.
+cards:
+  bendig2024:
+    migration_status: migrated
+    seed_relations:
+      - seed_id: zhou2017
+        relation_hypothesis: >-
+          Both papers may derive a nonlinear relation from mechanisms whose
+          relative dominance changes, but Zhou concerns competing facets of one
+          innovation process while Bendig may concern an adverse recall outcome
+          where external-venturing costs precede accumulated learning benefits.
+        comparison_question: >-
+          Does full-text re-reading establish a genuine cost-before-learning-
+          benefit schedule for CVC and alliances, distinguish their unilateral
+          versus bilateral governance logic, and test curve shape inside the
+          observed range? Which theoretical mechanisms are story explanations
+          rather than empirically observed intermediate processes?
+        status: confirmed
+  wowak2015:
+    migration_status: migrated
+    seed_relations:
+      - seed_id: wowak2025
+        relation_hypothesis: >-
+          Both papers use serious product recalls to represent product-safety
+          outcomes, but Wowak 2015 may concern an upstream safety-production
+          incidence process shaped by CEO option incentives whereas Wowak 2025
+          separates pre-market recall incidence from post-awareness response time.
+        comparison_question: >-
+          Does full-text re-reading keep recall occurrence and count as two
+          operationalizations of one upstream incidence construct, distinguish it
+          from later recall timing, and identify which proposed option-to-quality
+          transmission links are observed rather than inferred? How do tenure and
+          founder status qualify an incentive association without demonstrating the
+          underlying cognitive route?
+        status: confirmed
+  pupovac2025:
+    migration_status: migrated
+    seed_relations:
+      - seed_id: darby2025
+        relation_hypothesis: >-
+          Both papers study firms indirectly exposed to an event at another
+          organization. Pupovac may examine a realized buyer recall that changes
+          supplier value through customer-portfolio information, whereas Darby
+          examines an anticipated activist threat that may change a non-target
+          firm's recall timing.
+        comparison_question: >-
+          Does full-text re-reading distinguish realized vertical exposure from a
+          prospective monitoring threat, and does it observe supply-chain demand,
+          stakeholder screening, or only their valuation-consistent traces? How
+          does general disclosure differ from disclosed dependence as an exposure cue?
+        status: confirmed
+  liu2016:
+    migration_status: migrated
+    seed_relations:
+      - seed_id: darby2024
+        relation_hypothesis: >-
+          Both papers treat a recall as a post-awareness decision shaped by
+          executive incentives. Liu may concern remedy completeness and a cost–harm
+          weighting problem, whereas Darby concerns initiation delay and a later
+          self-defeating market consequence.
+        comparison_question: >-
+          Does full-text re-reading keep remedy choice distinct from timing and
+          demonstrate that CEO incentives reweight the two decision criteria rather
+          than simply predict a response? Compared with Darby, is the market outcome
+          a consequence of a prior decision or an audience interpretation of visible
+          remedy?
+        status: confirmed
+  chen2009:
+    migration_status: migrated
+    seed_relations:
+      - seed_id: darby2024
+        relation_hypothesis: >-
+          Both papers use a market consequence to change the meaning of recall
+          behavior. Chen may treat proactive response as an externally decoded
+          signal of hidden severity, whereas Darby traces a prior delay to a later
+          penalty that makes the decision itself self-defeating.
+        comparison_question: >-
+          Does full-text re-reading distinguish a market reaction to a response
+          signal from a market reaction caused by a documented decision-consequence
+          chain? Which audience beliefs or severity indicators are observed, and
+          which remain explanatory inference?
+        status: confirmed
+  lun2026:
+    migration_status: migrated
+    seed_relations:
+      - seed_id: wowak2025
+        relation_hypothesis: >-
+          Both papers connect a top-management condition to recall-related safety
+          outcomes while needing to distinguish an upstream quality-production
+          process from a later response process. Lun may make EO a source of
+          recall incidence and COO power an attentional governance boundary.
+        comparison_question: >-
+          Does full-text re-reading separate product recall incidence from product
+          quality itself, and does it provide process evidence for EO-induced
+          quality-control strain and COO attention rather than only proxy-consistent
+          associations? Compared with Wowak, are outcome dimensions distinct stages
+          or a single upstream failure process with nested governance conditions?
+        status: confirmed
+  hoffmann2024:
+    migration_status: migrated
+    seed_relations:
+      - seed_id: darby2026
+        relation_hypothesis: >-
+          Both papers examine how shareholder-side governance can influence product
+          recall decisions. Hoffmann may treat institutional ownership as a
+          substitute monitor when shareholder litigation discipline is relaxed,
+          whereas Darby examines large institutional ownership as a direct influence
+          on the post-awareness timing of a severe medical-device recall.
+        comparison_question: >-
+          Does full-text re-reading keep recall incidence, managerial willingness,
+          and defect need conceptually distinct while showing that legal protection
+          weakens accountability? Compared with Darby, when is institutional
+          ownership a direct monitor of a response and when is it a boundary on a
+          legal-governance shock?
+        status: confirmed
+  malik2025:
+    migration_status: migrated
+    seed_relations:
+      - seed_id: darby2024
+        relation_hypothesis: >-
+          Both papers ask how CEO-linked wealth exposure shapes the handling of a
+          known medical-device problem. Malik may show that a single stock-option
+          portfolio contains opposed preservation and prospective-gain orientations,
+          but its outcomes are communication tactics rather than an awareness-to-
+          initiation delay and downstream penalty chain.
+        comparison_question: >-
+          Does full-text re-reading sustain a genuine current-versus-prospective
+          wealth story across timing and silence, and which results are directly
+          supported versus inferred as impression management? Compared with Darby,
+          does the paper explain response duration, public visibility, or both?
+        status: confirmed
+  eilert2017:
+    migration_status: migrated
+    seed_relations:
+      - seed_id: wowak2025
+        relation_hypothesis: >-
+          Both papers treat time-to-recall as a managerially meaningful response
+          window. Eilert may provide the more explicit decision-trade-off story:
+          acting early risks a premature and costly response, while waiting raises
+          exposure to legal, reputational, and market penalties. Unlike Wowak's
+          paired product-safety outcomes, its focal tension may be internal to the
+          timing decision itself.
+        comparison_question: >-
+          Does the full paper genuinely build, sustain, and resolve the early-action
+          versus delayed-action trade-off across Introduction, Theory, Results, and
+          Discussion? If so, what does this single-decision story do better or worse
+          than Wowak's split between pre-market recall count and post-awareness
+          time-to-recall, and which parts depend on Eilert's investigation-to-recall
+          measurement window?
+        status: confirmed
+  darby2024:
+    migration_status: candidate
+    seed_relations:
+      - seed_id: wowak2025
+        relation_hypothesis: >-
+          Both papers use an awareness-to-initiation time-to-recall outcome in the
+          medical-device setting. Darby may turn its timing outcome into a more
+          sharply closed consequence chain: CEO wealth exposure can delay recall,
+          while the delay that protects short-run wealth produces larger subsequent
+          stock-market penalties.
+        comparison_question: >-
+          On full re-reading, does the paper make the private short-run protection
+          versus public later-penalty trade-off a disciplined whole-paper story, or
+          does it mainly append market penalties after explaining delay? Compared
+          with Wowak, how does a single timing decision with a downstream consequence
+          differ from two distinct product-safety processes, and is the ending
+          prepared before the results?
+        status: proposed
+  mayo2022:
+    migration_status: migrated
+    seed_relations:
+      - seed_id: malik2025
+        relation_hypothesis: >-
+          Both papers concern CEO-linked incentives around product recalls, but Mayo
+          may use tenure to organize opposite recall-incidence patterns whereas
+          Malik separates current and prospective option wealth across public
+          handling tactics after a recall is underway.
+        comparison_question: >-
+          Does full-text re-reading sustain a two-phase tenure story with distinct
+          boundary conditions, while keeping recall incidence separate from public
+          response timing and silence? Compared with Malik, which CEO conditions
+          change whether a recall is initiated versus how it is communicated?
+        status: confirmed
+  singh2023:
+    migration_status: migrated
+    seed_relations:
+      - seed_id: hoffmann2024
+        relation_hypothesis: >-
+          Both papers examine institutional sources of accountability that can alter
+          recall incidence. Singh may show political influence over voluntary and
+          mandatory decisions, while Hoffmann examines a legal change that reduces
+          shareholder-litigation discipline and its governance substitutes.
+        comparison_question: >-
+          Does full-text re-reading distinguish a genuine efficiency-versus-political
+          influence conflict from a generic nonmarket antecedent story, and does it
+          preserve the two separate firm and regulator decision arenas? Compared
+          with Hoffmann, is accountability relaxed by law, captured through political
+          influence, or inferred too broadly from lower recall counts?
+        status: confirmed
+  kalaignanam2013:
+    migration_status: migrated
+    seed_relations:
+      - seed_id: wowak2025
+        relation_hypothesis: >-
+          Both papers distinguish product-safety processes rather than treating every
+          recall count as the same outcome. Kalaignanam may make recall magnitude a
+          trigger for later reliability learning, whereas Wowak separates pre-market
+          recall incidence from post-awareness recall responsiveness.
+        comparison_question: >-
+          Does full-text re-reading make recall magnitude, future recall frequency,
+          and product reliability temporally distinct enough to support a learning
+          chain? Compared with Wowak, when does a recall-related count indicate a
+          quality-production process, a learning consequence, or a different response
+          process altogether?
+        status: confirmed
+  li2026:
+    migration_status: migrated
+    seed_relations:
+      - seed_id: darby2025
+        relation_hypothesis: >-
+          Both papers study effects on organizations not directly targeted by the
+          focal event. Li may distinguish a realized buyer shock that harms vertically
+          tied suppliers through cash-flow and impression channels from Darby's
+          anticipated activist threat that can induce preemptive recall action at an
+          untargeted firm.
+        comparison_question: >-
+          Does full-text re-reading make vertical exposure distinct from horizontal
+          categorization and preserve pipes and prisms as separate inferred pathways?
+          Compared with Darby, is the non-target firm reacting prospectively to a
+          possible sanction, or absorbing a realized interdependent shock?
+        status: confirmed
+  fang2025:
+    migration_status: migrated
+    seed_relations:
+      - seed_id: darby2025
+        relation_hypothesis: >-
+          Both papers ask how a firm reacts to a salient negative event at another
+          organization. Fang may be a horizontal contrast: substitute brands manage
+          competition and contagion through advertising, whereas Darby studies
+          proactive recall timing in response to anticipated activist pressure.
+        comparison_question: >-
+          Does full-text re-reading keep consumer comparison, manager interpretation,
+          advertising components, and sales payoff distinct enough to support a mixed
+          opportunity-threat story? Compared with Darby, is the external event a
+          feared future monitor or a rival's realized quality failure?
+        status: confirmed
+  kashmiri2017:
+    migration_status: migrated
+    seed_relations:
+      - seed_id: wowak2025
+        relation_hypothesis: >-
+          Both papers connect senior-leader psychology to an upstream product-safety
+          outcome. Kashmiri may distinguish an innovation-production posture and
+          product-harm-crisis risk from Wowak's separate recall-incidence and
+          post-awareness timing processes.
+        comparison_question: >-
+          Does full-text re-reading keep innovation speed, radicalness, and product-
+          harm risk as distinct outcome processes linked by competitive aggressiveness,
+          and does marketing power selectively change customer-oriented safety control?
+          Compared with Wowak, is the leader effect located in quality production,
+          recall incidence, or later response after a known defect?
+        status: confirmed
+  vadakkepatt2022:
+    migration_status: migrated
+    seed_relations:
+      - seed_id: singh2023
+        relation_hypothesis: >-
+          Both papers examine lobbying as an institutional strategy with consequences
+          beyond direct political returns. Vadakkepatt may make customer-focus loss a
+          countervailing value path, whereas Singh distinguishes firm political
+          influence from regulatory recall decisions.
+        comparison_question: >-
+          Does full-text re-reading sustain distinct direct regulatory-capture and
+          indirect customer-satisfaction paths, and do its attention-alignment
+          conditions genuinely alter the customer path? Compared with Singh, is
+          lobbying's consequence a change in institutional decision making, customer
+          value, or both through separate mechanisms?
+        status: confirmed
+  malshe2015:
+    migration_status: migrated
+    seed_relations:
+      - seed_id: chunglow2022
+        relation_hypothesis: >-
+          Both papers explain customer-facing marketing consequences through an
+          intertemporal or resource-pressure decision. Malshe may treat financial
+          leverage as a constraint on advertising and customer satisfaction, while
+          Chung and Low treat CEO regulatory focus as a reweighting of marketing
+          budget gains and losses.
+        comparison_question: >-
+          Does full-text re-reading distinguish an actual advertising mediation from
+          an unsupported R&D route, and does leverage separately change the market
+          value of customer satisfaction? Compared with Chung and Low, is the
+          proposed pressure a firm-level financial constraint or a CEO-level temporal
+          valuation process?
+        status: confirmed
+  desai2012:
+    migration_status: migrated
+    seed_relations:
+      - seed_id: darby2025
+        relation_hypothesis: >-
+          Both papers consider organizations not directly targeted by an event at
+          another organization. Desai may concern a realized field-legitimacy threat
+          and rhetorical collective defense, whereas Darby concerns anticipated
+          activist monitoring and faster operational response.
+        comparison_question: >-
+          Does full-text re-reading distinguish fieldwide judgment, response
+          credibility, and the defend-versus-avoid choice from an anticipated-
+          sanction story? Which similarity makes a responder stigmatized, and which
+          creates a credible common vulnerability? Compared with Darby, is the
+          organization preserving an existing field or preempting future targeting?
+        status: confirmed
+  desjardine2022:
+    migration_status: migrated
+    seed_relations:
+      - seed_id: desai2012
+        relation_hypothesis: >-
+          Both papers consider how one organization's conduct affects judgments and
+          outcomes across an organizational field. DesJardine may treat positive CSR
+          spillovers as a common owner's systematic-risk-management opportunity,
+          whereas Desai examines defensive rhetoric after a realized legitimacy crisis.
+        comparison_question: >-
+          Does full-text re-reading distinguish prospective positive CSR spillovers
+          from reactive field-legitimacy defense, and do long horizon, stakeholder
+          sensitivity, and materiality all diagnose a portfolio-risk mechanism?
+          Compared with Desai, is the investor changing underlying conduct or the
+          field's public interpretation of crisis?
+        status: confirmed
+  desjardine2025:
+    migration_status: migrated
+    seed_relations:
+      - seed_id: desjardine2022
+        relation_hypothesis: >-
+          Both papers theorize common-owner portfolio incentives around ESG-related
+          outcomes, but DesJardine 2025 may use ownership in a rating agency to
+          disadvantage a target firm's rivals, rather than internalize CSR spillovers
+          among firms an investor jointly owns.
+        comparison_question: >-
+          Does full-text re-reading preserve the owner–rater–rival–target topology,
+          distinguish reputational threat motivation from opportunity-based rater
+          receptivity, and avoid claiming directly observed influence? Compared with
+          DesJardine 2022, is ownership managing shared externalities or creating an
+          indirect competitive attack?
+        status: confirmed
+  desjardine2023:
+    migration_status: migrated
+    seed_relations:
+      - seed_id: desjardine2025
+        relation_hypothesis: >-
+          Both papers may study common-owner influence through a third-party
+          information intermediary, but DesJardine 2023 may make media coverage
+          the output of a bilateral owner–media-executive influence chain, whereas
+          DesJardine 2025 examines a rating-agency assessment under reputational
+          threat and opportunity windows.
+        comparison_question: >-
+          Does full-text re-reading preserve the investor–media–rival–target
+          topology, distinguish owner incentive and power from media-executive
+          catering, and avoid claiming observed editorial influence? Compared with
+          DesJardine 2025, is the intermediary's output public coverage or an
+          evaluative score, and what conditions make each indirect attack credible?
+        status: confirmed
+  anton2025:
+    migration_status: migrated
+    seed_relations:
+      - seed_id: desjardine2022
+        relation_hypothesis: >-
+          Both papers may treat common ownership as making cross-firm externalities
+          portfolio-relevant. Antón et al. may instead require two peer relations:
+          technological peers gain from the focal firm's innovation while product-
+          market peers lose through business stealing, making the predicted effect
+          conditional rather than uniformly positive.
+        comparison_question: >-
+          Does full-text re-reading preserve the owner–focal innovator–technology
+          beneficiary–product-market harmed-peer topology, distinguish potential
+          technological spillovers from realized knowledge sharing, and avoid
+          treating an ambiguous average association as a mechanism? Compared with
+          DesJardine 2022, is the portfolio externality one-directional risk
+          reduction or a pair of opposed innovation payoffs?
+        status: confirmed

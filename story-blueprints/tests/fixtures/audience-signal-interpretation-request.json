@@ -1,0 +1,9 @@
+{
+  "section": "theory",
+  "paper_type": "quantitative",
+  "story_needs": ["establish-genuine-tension"],
+  "theoretical_problem_form": ["cross-audience-interpretation"],
+  "retrieval_signals": ["audience-specific-interpretation"],
+  "validated_conditions": ["cross-audience-valuation"],
+  "max_results": 2
+}

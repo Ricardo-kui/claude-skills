@@ -1,0 +1,9 @@
+{
+  "section": "introduction",
+  "paper_type": "quantitative",
+  "story_needs": ["leverage-to-advertising-to-satisfaction"],
+  "theoretical_problem_form": ["finance-to-marketing-bridge"],
+  "retrieval_signals": ["capital-structure-customer-consequence", "financial-constraint-on-marketing"],
+  "validated_conditions": [],
+  "max_results": 2
+}

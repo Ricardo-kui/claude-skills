@@ -77,4 +77,4 @@
 ## 变体选择
 
 - 按适用场景、证据状态、研究情境和期刊选**一个主推变体**（不默认变体 A）；仅当两个方案会实质改变故事路径时，额外给 **1 个**备选及切换条件——不为每个模块机械输出两个备选。
-- 优先级：corpus 文件的变体级约束（适用场景/范文锚定）> 用户研究情境匹配 > 路由表的模板级推荐 > **story_frame 调制**（若 `story.story_frame.frame_type` 存在：读 `references/story-modulation.md` 对应类型——Tension 候选优先级、Hook 形态、Preview 布局、climax 铺垫；调制不改变 gap_type 路由与结构复杂度，只收窄已选变体的形态空间）。
+- 优先级：corpus 文件的变体级约束（适用场景/范文锚定）> 用户研究情境匹配 > 路由表的模板级推荐。项目故事的具体组织只能由 canonical `story` 与 `story.integrity` 的已确认内容收窄；不得由故事类型、legacy blueprint 或 exemplar 身份调制。

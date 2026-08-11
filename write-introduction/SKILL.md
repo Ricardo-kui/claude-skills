@@ -17,12 +17,11 @@ description: >-
 
 ## Phase 0: 契约与模式
 
-1. 读 canonical `story`（`/paper-story-contract` 门控；旧字段按 `../paper-story-contract/references/schema.md` 迁移标 provisional）。
-2. `story.story_frame.frame_type` 已选定 → 读 `references/story-modulation.md` 对应类型规则（frame_type 只收窄变体形态，不改 gap_type 主路由）；未选定跳过。
-3. 模式（`--mode=introduction|front-end|align`）：`introduction`（默认）｜`front-end`（标题+Abstract+promise 对齐，读 `references/front-end-mode.md`）｜`align`（只审查对齐）。
-4. 门控：`preparing` 只出骨架（跳过润色）；`refining/finishing` 要求 `story.status: confirmed`；stakes.theoretical 与 reader_shift 非空。若无法同时陈述 theme question 与 central knot，停止在 Story Intake。单模块请求可 local-only bypass（标记"未经整篇故事契约验证"，不更新 paper state）。
+1. 读 canonical `story`（`/paper-story-contract` 门控；旧字段按 `../paper-story-contract/references/schema.md` 迁移标 provisional），并读取 project-owned `story.integrity` ledger。忽略任何 legacy `story.story_frame`。
+2. 模式（`--mode=introduction|front-end|align`）：`introduction`（默认）｜`front-end`（标题+Abstract+promise 对齐，读 `references/front-end-mode.md`）｜`align`（只审查对齐）。
+3. 门控：`preparing` 只出骨架（跳过润色）；`refining/finishing` 要求 `story.status: confirmed`；stakes.theoretical 与 reader_shift 非空。`story.integrity` 有任一 `unsupported` 时停止在 Story Intake；`provisional` 仅能输出带假设标记的骨架。若无法同时陈述 theme question 与 central knot，停止在 Story Intake。单模块请求可 local-only bypass（标记"未经整篇故事契约验证"，不更新 paper state）。
 
-**完成判据**：门控满足或显式记录跳过；story_frame 存在性已确认。
+**完成判据**：门控满足或显式记录跳过；项目自身 story integrity 已确认。
 
 ## Phase 1: 诊断
 
@@ -36,6 +35,17 @@ description: >-
 5. Vault 基线检索（默认执行）：读 `references/vault-introduction-retrieval.md` 生成 Knowledge Brief；检索失败保留占位不阻塞；local-only 请求跳过。
 
 **完成判据**：三元组齐全；主/次 gap 已判定；分支已判定；Vault Brief 已生成或显式跳过。
+
+## Phase 1.5: 即时范文学习对象（v0.4-lite 试点）
+
+仅在完整 Introduction / front-end 重构请求中执行，且 project-owned integrity gate 为 PASS 或 PROVISIONAL；单模块、句子润色、标题或显式 `--exemplars=off` 请求跳过。本阶段只服务本次调用，绝不把推荐写入项目文件或改写 canonical `story`。
+
+1. 依据当前输入生成临时 request：`section=introduction`、论文类型、当前 story needs（如 `clarify-theme`、`establish-genuine-tension`、`introduce-main-characters`）及已确认的理论问题形式。只有在本次 story gate 已证实的情况下才填入 `validated_conditions`；不确定时留空，宁可不推荐也不放宽范文的适用前提。
+2. 运行 `python ../story-blueprints/scripts/retrieve_exemplars.py --request <临时 JSON>`；如果结果非空，只读取被选中的 1–2 张 v0.4-lite 卡的 Introduction learning block，不加载整库。
+3. 推荐只回答“学什么、为什么适配、不能照搬什么、应比较什么”；不得将范文类型改写成用户项目的强制 story frame，或凭范文生成贡献、机制与结果。
+4. 无可靠匹配时明确报告“当前 v0.4-lite 库无适合的 Introduction 学习对象”，继续正常写作；不得凑数或回退到未经评估的 v0.3 蓝图。
+
+**完成判据**：推荐已显示或已明确无匹配；推荐不改变 Gap/贡献诊断与故事契约的权威地位。
 
 ## Phase 2: 路由
 
@@ -81,7 +91,7 @@ description: >-
 
 ## 输出合同
 
-按 `references/output-format.md`：Gap×维度标题 → 功能序列与压缩决策 → 前三段合同表 → 动态段落骨架 → 提醒 → 证据置信度（EMERGING 标注单/双源）→ GBL 对齐表 → **paper-state.yaml 片段**（schema 见 `references/paper-state-schema.md`；用户未提及协议时注释头含使用说明）。
+按 `references/output-format.md`：Gap×维度标题 → 功能序列与压缩决策 → 前三段合同表 → 动态段落骨架 → 提醒 → 证据置信度（EMERGING 标注单/双源）→ GBL 对齐表 → **paper-state.yaml 片段**（schema 见 `references/paper-state-schema.md`；用户未提及协议时注释头含使用说明）。完整请求在此之前附 `## 本次可学习的顶刊对象`：至多一篇主学习对象与一篇对照对象；每篇仅列匹配、可学习动作、不可照搬条件与比较问题。
 
 快速模式：只请求单模块 → 输出该模块句法骨架 + 槽位提示 + 1 个反模式提醒。
 

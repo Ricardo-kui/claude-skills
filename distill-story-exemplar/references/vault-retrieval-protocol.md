@@ -14,7 +14,7 @@
 - `methods_results/mvp30/methods/<key>_methods_narrative.md` + `results/<key>_results_narrative.md` — 单节 narrative
 - `_story_arcs/<key>_story_arc.md` — 早期故事弧资产（见下）
 
-检索到即更新 `distilled_sections`（memory 只记 intro/theory 但 batch 报告在 → 直接升 ROBUST，如 gamache2020/cutolo2024 先例；报告与 memory 冲突时以报告为准并在 blueprint 标注）。
+检索到即更新旧资产的覆盖记录；v0.3 中原称 `ROBUST` 的状态只能翻译为 `legacy_coverage_confidence: claimed_complete`，不代表叙事质量或 runtime 范文资格。报告与 memory 冲突时以报告为准，并在 Legacy Evidence Layer 的 override 或后续 v0.4 卡中记录。
 
 **vault `_story_arcs/` 处理规则**：该目录是早期故事层资产（`<key>_story_arc.md` + `_story_arc_index.md`）。blueprint 与之是"链接不复制"关系——在 `corpus_links` 或 `vault_reports` 中引用其路径，不把其内容搬进 blueprint；若其字段与 blueprint 冲突（早期字段定义不同），以 blueprint 的 `_schema.md` 为准并标注差异。
 
@@ -32,4 +32,4 @@
 
 ## 4. 既有 blueprint 检索
 
-检索 `../story-blueprints/blueprints/_index.md`，判断是否存在同构念对 / 同 GBL 对角线 / 同设计类型的既有 blueprint（供 Phase 4 对照）。
+先运行 `python ../story-blueprints/scripts/query_legacy_candidates.py`，以历史 knot、构念、情境或迁移状态发现 1–3 篇**复读候选**。再打开其原始 blueprint 及全文，判断是否构成有价值的对照。Legacy 查询结果不得直接成为范文推荐、项目故事框架或 v0.4 分类依据。

@@ -62,6 +62,22 @@ def main() -> int:
     }
     require("valid canonical contract", validator.validate(base) == [])
 
+    integrity = {
+        **base,
+        "story": {
+            **base["story"],
+            "integrity": {
+                "theme_grounding": "grounded",
+                "knot_authenticity": "grounded",
+                "character_discipline": "grounded",
+                "payoff_feasibility": "provisional",
+                "unsupported_moves": ["claim a confirmed mechanism"],
+                "notes": "Evidence for the mechanism remains incomplete.",
+            },
+        },
+    }
+    require("integrity ledger validates", validator.validate(integrity) == [])
+
     missing_knot = {"story": {**base["story"], "central_knot": ""}}
     require(
         "full-section contract blocks a missing knot",
@@ -78,13 +94,17 @@ def main() -> int:
 
     require("Introduction exposes front-end and alignment modes", "--mode=introduction|front-end|align" in intro)
     require("Introduction permits only labelled local bypass", "local-only bypass" in intro)
+    require("Introduction ignores legacy story frames", "忽略任何 legacy `story.story_frame`" in intro)
     require("Theory maps hypotheses to storylines", "storyline_id" in theory)
     require("Theory blocks silent new main characters", "不得静默引入新的主角构念" in theory or "new main characters require" in theory)
-    require("Methods contains story-to-model alignment", "methods.story_alignment" in methods or "story_alignment:" in methods)
+    require(
+        "Methods contains story-to-model alignment",
+        "storyline–hypothesis–variable mapping" in methods or "story_alignment" in methods,
+    )
     require("Methods blocks untestable promised resolutions", "无法兑现的 storyline" in methods)
     require("Results has four honest resolution states", "supported | mixed | unsupported | unresolved" in results)
     require("Results identifies climax and falling action", "climax" in results and "falling action" in results)
-    require("Preparing stage prevents Results prose", "`preparing` 阶段不生成 Results" in results)
+    require("Preparing stage prevents Results prose", "`preparing` 不生成 Results" in results)
     require("Discussion writer is a non-generative boundary", "must not" in retired and "do not draft" in retired)
     require("Discussion writer cannot invoke implicitly", "allow_implicit_invocation: false" in retired_agent)
     require("Discussion review does not route to writer", "$write-discussion" not in discussion_review)
@@ -109,6 +129,11 @@ def main() -> int:
 
     migration = read("paper-story-contract/references/schema.md")
     require("legacy paper state has an explicit migration path", "central_knot_statement" in migration)
+    require("canonical schema omits story-frame output", "exemplar_blueprint:" not in migration)
+    require("story-integrity gate replaces frame selection", "story-integrity-gate.md" in read("paper-story-contract/SKILL.md"))
+    require("retired frame menu is absent", not (SKILL_ROOT / "references" / "story-frame-menu.md").exists())
+    require("retired Introduction modulation is absent", not (PACKAGE_ROOT / "write-introduction" / "references" / "story-modulation.md").exists())
+    require("retired Theory modulation is absent", not (PACKAGE_ROOT / "write-theory" / "corpus" / "storytelling" / "knot-architecture-modulation.md").exists())
     print("PASS: all workflow contract tests")
     return 0
 

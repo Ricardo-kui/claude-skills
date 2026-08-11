@@ -1,0 +1,9 @@
+{
+  "section": "theory",
+  "paper_type": "quantitative",
+  "story_needs": ["manage-multiple-storylines", "theory-as-rising-action"],
+  "theoretical_problem_form": ["severity-contingent-governance"],
+  "retrieval_signals": ["severity-structured-decision-discretion"],
+  "validated_conditions": ["distinct-outcome-processes", "shared-higher-order-theme"],
+  "max_results": 2
+}

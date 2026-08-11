@@ -1,0 +1,4167 @@
+{
+  "schema_version": "legacy-evidence-layer-1.0",
+  "generated_on": "2026-08-11",
+  "source_policy": "Generated from immutable v0.3 blueprints plus optional human-verified overrides.",
+  "runtime_policy": "Legacy entries are discovery and migration evidence only; runtime recommendation is prohibited.",
+  "entries": [
+    {
+      "id": "anton2025",
+      "original_blueprint": "blueprints/anton2025-common-ownership-innovation.md",
+      "paper": {
+        "legacy_citation": "Antón, Ederer, Giné & Schmalz (2025, MgmtSci) — Innovation: The Bright Side of Common Ownership?",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "overlooked-alternative",
+        "knot_compound": [],
+        "resolution_excerpt": "`revelation` 揭幕（揭幕共同所有权的亮面——溢出机制 + 邻近度条件化——\"问号标题\"的答案）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "美国上市公司全样本、BGI 收购外生变异（BlackRock）、Softbank Vision Fund 案例"
+        ],
+        "main_constructs": [
+          "common ownership（X）",
+          "corporate innovation（DV——投入+产出）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [
+        {
+          "seed_id": "desjardine2022",
+          "relation_hypothesis": "Both papers may treat common ownership as making cross-firm externalities portfolio-relevant. Antón et al. may instead require two peer relations: technological peers gain from the focal firm's innovation while product- market peers lose through business stealing, making the predicted effect conditional rather than uniformly positive.",
+          "comparison_question": "Does full-text re-reading preserve the owner–focal innovator–technology beneficiary–product-market harmed-peer topology, distinguish potential technological spillovers from realized knowledge sharing, and avoid treating an ambiguous average association as a mechanism? Compared with DesJardine 2022, is the portfolio externality one-directional risk reduction or a pair of opposed innovation payoffs?",
+          "status": "confirmed"
+        }
+      ],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "anton2025"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "OCR parsed full text"
+      ]
+    },
+    {
+      "id": "bendig2024",
+      "original_blueprint": "blueprints/bendig2024-cvc-alliance-recalls.md",
+      "paper": {
+        "legacy_citation": "Bendig, Hensellek & Schulte (2024) — Beneficial, Harmful, or Both? Effects of Corporate Venture Capital and Alliance Activity on Product Recalls",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "paradigms-at-war",
+        "knot_compound": [],
+        "resolution_excerpt": "`arbitration` 仲裁（**倒 U 裁决**——与 zhou2017 同款裁决工具——两阵营各对一半：正面派对了低强度/大强度区间、暗面派对了中等区间）+ 市场动荡条件化。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "75 FDA S&P 500 公司 2009-2017、GEE（Wowak 2015 规格）、U-test（Haans 三标准/Fieller）、CPSC 扩展样本 125 公司"
+        ],
+        "main_constructs": [
+          "CVC activity + alliance activity（X——双模式）",
+          "product recall likelihood（DV）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [
+        {
+          "seed_id": "zhou2017",
+          "relation_hypothesis": "Both papers may derive a nonlinear relation from mechanisms whose relative dominance changes, but Zhou concerns competing facets of one innovation process while Bendig may concern an adverse recall outcome where external-venturing costs precede accumulated learning benefits.",
+          "comparison_question": "Does full-text re-reading establish a genuine cost-before-learning- benefit schedule for CVC and alliances, distinguish their unilateral versus bilateral governance logic, and test curve shape inside the observed range? Which theoretical mechanisms are story explanations rather than empirically observed intermediate processes?",
+          "status": "confirmed"
+        }
+      ],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "bendig2024"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "parsed full text（Clippings——检索协议路径命中）"
+      ]
+    },
+    {
+      "id": "chen2009",
+      "original_blueprint": "blueprints/chen2009-recall-strategy-value.md",
+      "paper": {
+        "legacy_citation": "Chen, Ganesan & Liu (2009, JM) — Does a Firm's Product-Recall Strategy Affect Its Financial Value? An Examination of Strategic Alternatives During Product-Harm Crises",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "irony-reversal",
+        "knot_compound": [],
+        "resolution_excerpt": "`revelation` 揭幕（揭幕策略的投资者视角——信号反果——市场解读机制 + 声誉条件化）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "CPSC 召回 1996-2007、事件研究 CAR + 横截面 + 中介 + Heckman、Merck Vioxx/Topps 案例"
+        ],
+        "main_constructs": [
+          "recall strategy（X——proactive vs passive）",
+          "firm financial value（DV——股票回报）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [
+        {
+          "seed_id": "darby2024",
+          "relation_hypothesis": "Both papers use a market consequence to change the meaning of recall behavior. Chen may treat proactive response as an externally decoded signal of hidden severity, whereas Darby traces a prior delay to a later penalty that makes the decision itself self-defeating.",
+          "comparison_question": "Does full-text re-reading distinguish a market reaction to a response signal from a market reaction caused by a documented decision-consequence chain? Which audience beliefs or severity indicators are observed, and which remain explanatory inference?",
+          "status": "confirmed"
+        }
+      ],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "chen2009"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "OCR parsed full text"
+      ]
+    },
+    {
+      "id": "crash_risk",
+      "original_blueprint": "blueprints/crash-risk-common-ownership.md",
+      "paper": {
+        "legacy_citation": "（2025, JCF — Journal of Corporate Finance）— The Information Advantage of Industry Common Owners and Its Spillover Effect on Stock Price Crash Risk",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "paradigms-at-war",
+        "knot_compound": [],
+        "resolution_excerpt": "`arbitration` 仲裁（两解释相反预测实证裁决——信息优势解释胜出——stabilizing 确认）+ 多测量稳健。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "美国 1980-2017（10%→80%+ 企业有行业共同所有者）、OLS + 多测量 + 控制（机构所有权/块所有权/共同所有权）、FE"
+        ],
+        "main_constructs": [
+          "industry common ownership（X）",
+          "stock price crash risk（DV——负偏度）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "parsed full text（共同所有权/07 原文）"
+      ]
+    },
+    {
+      "id": "csr_decoupling_china",
+      "original_blueprint": "blueprints/csr-decoupling-china.md",
+      "paper": {
+        "legacy_citation": "（2025, JBE）— Can Common Institutional Ownership Govern CSR Decoupling? Evidence from China",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "paradigms-at-war",
+        "knot_compound": [],
+        "resolution_excerpt": "`arbitration` 仲裁（两假设实证裁决——coordinated governance 胜出）+ 三渠道 + 三条件化。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "中国上市公司 2009-2022、DesJardine 2023 引用（A Rising Tide——OrgSci 34(5) 印刷版年份）、2016 后 CIO 超 20%"
+        ],
+        "main_constructs": [
+          "common institutional ownership（X——CIO）",
+          "CSR decoupling（DV）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "parsed full text（共同所有权/07 原文）"
+      ]
+    },
+    {
+      "id": "cutolo2024",
+      "original_blueprint": "blueprints/cutolo2024-now-it-makes-more-sense.md",
+      "paper": {
+        "legacy_citation": "Cutolo & Ferriani (2024, JM) — Now It Makes More Sense: How Narratives Can Help Atypical Actors Increase Market Appeal",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "not_assessed",
+        "verification": "not_currently_verified",
+        "basis": "v0.3 metadata does not establish a current full-text locator."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "consensus-puzzle",
+        "knot_compound": [],
+        "resolution_excerpt": "`remedy` 解药（新解法性格，与 write-theory moderator-as-remedy / E10 手法同族）——**给已知惩罚加解药条件**：惩罚共识不撤销，而是被条件化——叙事是解药，且解药是 actor 可操控的（这正是与条件研究的分界：audience/flux/status 都不可控，文本特征可控）。研究者是\"配解药的人\"：承认毒性的存在（H1 基线），给出解毒配方（三特征）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "not_assessed",
+          "basis": "not_encoded_in_v0.3_metadata"
+        },
+        "empirical_setting": [
+          "在线市场情境（Etsy，78",
+          "758 crafters / 146 类别）、类别结构与常规性基准（LDA topic weights → category-average slope）"
+        ],
+        "main_constructs": [
+          "叙事文本特性 (X：abstraction/cohesion/conventionality，三特征群)",
+          "market appeal (Y)"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings",
+          "storytelling_tools"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "project_mvp30_cutolo2024_methods_results",
+        "project_mvp30_cutolo2024_intro_theory"
+      ]
+    },
+    {
+      "id": "darby2024",
+      "original_blueprint": "blueprints/darby2024-ceo-ownership-recalls.md",
+      "paper": {
+        "legacy_citation": "Darby, Ketchen, Ball & Mukherjee (2023/2024, MSOM) — CEO Stock Ownership, Recall Timing, and Stock Market Penalties",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "irony-reversal",
+        "knot_compound": [
+          "neglected-arena"
+        ],
+        "resolution_excerpt": "`revelation` 揭幕（揭幕对齐工具的另一面——持股放大延迟的三机制——内部治理的暗面）+ 后果链（延迟→市场惩罚——完整因果链：持股→慢→罚）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "2",
+          "144 医疗设备召回/50 公司/2002-2015、复发事件 AFT、CEM（CEO 变更外生冲击）、LeMaitre/Boston Scientific/Teleflex/Allergan 具名案例"
+        ],
+        "main_constructs": [
+          "CEO stock ownership（X）",
+          "time-to-recall（DV1——缺陷知晓到召回的天数）+ stock market penalty（DV2——CAR）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [
+        {
+          "seed_id": "wowak2025",
+          "relation_hypothesis": "Both papers use an awareness-to-initiation time-to-recall outcome in the medical-device setting. Darby may turn its timing outcome into a more sharply closed consequence chain: CEO wealth exposure can delay recall, while the delay that protects short-run wealth produces larger subsequent stock-market penalties.",
+          "comparison_question": "On full re-reading, does the paper make the private short-run protection versus public later-penalty trade-off a disciplined whole-paper story, or does it mainly append market penalties after explaining delay? Compared with Wowak, how does a single timing decision with a downstream consequence differ from two distinct product-safety processes, and is the ending prepared before the results?",
+          "status": "proposed"
+        }
+      ],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "darby2024"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "vault narrative/methods_results 报告",
+        "parsed full text"
+      ]
+    },
+    {
+      "id": "darby2025",
+      "original_blueprint": "blueprints/darby2025-activist-investors.md",
+      "paper": {
+        "legacy_citation": "Darby, Wowak, Ketchen & Connelly (2025, JSCM) — An Agency Theory Perspective on Activist Investors and Supply Chain Failures: The Case of Product Recalls",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "assumption-flip",
+        "knot_compound": [],
+        "resolution_excerpt": "`revelation` 揭幕（揭幕 activist 的隐性治理面——威慑者身份——外部监控的第二张脸）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "医疗设备召回、AFT + frailty/shared frailty、PSM（−23.10 天 ATE）、反向因果滞后检验"
+        ],
+        "main_constructs": [
+          "activist investor stock ownership（X——瞄准他企的 spillover）",
+          "time-to-recall（DV）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "darby2025"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "vault distill 报告（intro/methods/results fine）",
+        "parsed full text"
+      ]
+    },
+    {
+      "id": "darby2026",
+      "original_blueprint": "blueprints/darby2026-institutional-ownership.md",
+      "paper": {
+        "legacy_citation": "Darby, Wowak, Ketchen & Connelly (2026, JOM) — Toward Faster Recalls of Dangerous Medical Devices: Does Ownership by Large Institutional Investors Matter?",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "overlooked-alternative",
+        "knot_compound": [],
+        "resolution_excerpt": "`revelation` 揭幕（揭幕外部治理面——watchdog 的第二张脸——被警惕者=保护者）+ 信息不对称条件化（监督何时失效）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "2",
+          "932 严重缺陷召回/69 公司/2002-2020、AFT + CEM、19 项稳健性、Philips 呼吸机（Epigraph）"
+        ],
+        "main_constructs": [
+          "large institutional investor ownership（X——Big Four）",
+          "time-to-recall（DV）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "darby2026"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "vault distill 报告（intro/theory/methods/results fine）",
+        "parsed full text"
+      ]
+    },
+    {
+      "id": "denicolo2025",
+      "original_blueprint": "blueprints/denicolo2025-common-ownership-governance.md",
+      "paper": {
+        "legacy_citation": "Denicolò & Panunzi (2025, MgmtSci) — Common Ownership, Competition, and Corporate Governance",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "half-domain-gap",
+        "knot_compound": [],
+        "resolution_excerpt": "`exploration` 拓荒（理论版——补治理效应半区 + 均衡权衡建模——\"冲突效应的均衡\"作为理论 deliverable）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "theory",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "均衡模型（2 对称企业→多企业→非对称）、内/外部共同所有权、Grossman-Hart 搭便车、附录证明"
+        ],
+        "main_constructs": [
+          "common ownership level（X——均衡决定）",
+          "corporate profits（DV——竞争软化↑ vs 治理恶化↓的净效应）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "OCR parsed full text"
+      ]
+    },
+    {
+      "id": "desai2012",
+      "original_blueprint": "blueprints/desai2012-mass-media.md",
+      "paper": {
+        "legacy_citation": "Desai, V. M. (2011, AMJ) — Mass Media and Massive Failures: Determining Organizational Efforts to Defend Field Legitimacy Following Crises",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "neglected-arena",
+        "knot_compound": [],
+        "resolution_excerpt": "`exploration` 拓荒 + 条件化——**competing baseline → moderation resolution**：先让 defend vs avoid 对峙，再用条件（审视度/相似性）决定胜负。研究者是拓荒者+条件测绘者：地图上没人画过的 field-level 防御被画上，且标出\"何时防御\"的等高线（主效应负、条件转正——防御不是默认，是条件触发的勇敢行为）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "not_assessed",
+          "basis": "not_encoded_in_v0.3_metadata"
+        },
+        "empirical_setting": [
+          "36 家 class I 铁路 1980-2003（391 company-years，deregulation 制度断点辩护）、控制变量（自身事故/严重度/规模/并购/年龄）"
+        ],
+        "main_constructs": [
+          "组织对 field legitimacy 的防御 effort (Y，defensive institutional statements 计数)",
+          "others' accidents (X)"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings",
+          "storytelling_tools"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [
+        {
+          "seed_id": "darby2025",
+          "relation_hypothesis": "Both papers consider organizations not directly targeted by an event at another organization. Desai may concern a realized field-legitimacy threat and rhetorical collective defense, whereas Darby concerns anticipated activist monitoring and faster operational response.",
+          "comparison_question": "Does full-text re-reading distinguish fieldwide judgment, response credibility, and the defend-versus-avoid choice from an anticipated- sanction story? Which similarity makes a responder stigmatized, and which creates a credible common vulnerability? Compared with Darby, is the organization preserving an existing field or preempting future targeting?",
+          "status": "confirmed"
+        }
+      ],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "desai2012"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "project-mvp30-desai2012-intro",
+        "project-mvp30-desai2012-theory"
+      ]
+    },
+    {
+      "id": "desjardine2022",
+      "original_blueprint": "blueprints/desjardine2022-rising-tide.md",
+      "paper": {
+        "legacy_citation": "DesJardine, Grewal & Viswanathan (2022, Organization Science) — A Rising Tide Lifts All Boats: The Effects of Common Ownership on Corporate Social Responsibility",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "not_assessed",
+        "verification": "not_currently_verified",
+        "basis": "v0.3 metadata does not establish a current full-text locator."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "overlooked-alternative",
+        "knot_compound": [],
+        "resolution_excerpt": "`revelation` 揭幕（翻硬币）——提出被主流看漏的替代视角并检验：不是修正测量，而是把共同所有权从\"竞争危害\"翻到\"组合风险管理\"。双重贡献段（P1 对共同所有权主流文献 \"a new and opposing view\" + P2 对 CSR 前置文献）把\"翻面\"动作锚定到两条文献。研究者是翻硬币的人。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "not_assessed",
+          "basis": "not_encoded_in_v0.3_metadata"
+        },
+        "empirical_setting": [
+          "13F 持股数据（Thomson Reuters）、控制变量、firm FE（面板 OLS）"
+        ],
+        "main_constructs": [
+          "common ownership (X，出现 ~45 次)",
+          "CSR performance (Y)"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings",
+          "storytelling_tools"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [
+        {
+          "seed_id": "desai2012",
+          "relation_hypothesis": "Both papers consider how one organization's conduct affects judgments and outcomes across an organizational field. DesJardine may treat positive CSR spillovers as a common owner's systematic-risk-management opportunity, whereas Desai examines defensive rhetoric after a realized legitimacy crisis.",
+          "comparison_question": "Does full-text re-reading distinguish prospective positive CSR spillovers from reactive field-legitimacy defense, and do long horizon, stakeholder sensitivity, and materiality all diagnose a portfolio-risk mechanism? Compared with Desai, is the investor changing underlying conduct or the field's public interpretation of crisis?",
+          "status": "confirmed"
+        }
+      ],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "desjardine2022"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "project-mvp30-desjardine2022-intro"
+      ]
+    },
+    {
+      "id": "desjardine2023",
+      "original_blueprint": "blueprints/desjardine2023-new-invisible-hand.md",
+      "paper": {
+        "legacy_citation": "DesJardine, Shi & Cheng (2023, ASQ) — The New Invisible Hand: How Common Owners Use the Media as a Strategic Tool",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "not_assessed",
+        "verification": "not_currently_verified",
+        "basis": "v0.3 metadata does not establish a current full-text locator."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "irony-reversal",
+        "knot_compound": [
+          "neglected-arena"
+        ],
+        "resolution_excerpt": "`revelation` 揭幕（换镜头）——把镜头从可见域转向水面之下：不可见域不是没有证据，是没人看。构念命名 canonical inversion（The New Invisible Hand 反转 Adam Smith）在命名层完成视角翻转；Heckman 两阶段处理\"媒体覆盖的可观测性\"选择（镜头本身的盲区修正）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "not_assessed",
+          "basis": "not_encoded_in_v0.3_metadata"
+        },
+        "empirical_setting": [
+          "firm-media pairs（109",
+          "965 obs）、industry/year FE、RavenPack 数据、TNIC-3 竞争对手识别"
+        ],
+        "main_constructs": [
+          "media-rival common institutional ownership (X，共同所有者对媒体×竞争对手的双重持股)",
+          "media coverage negativity (Y，RavenPack ESS)"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings",
+          "storytelling_tools"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [
+        {
+          "seed_id": "desjardine2025",
+          "relation_hypothesis": "Both papers may study common-owner influence through a third-party information intermediary, but DesJardine 2023 may make media coverage the output of a bilateral owner–media-executive influence chain, whereas DesJardine 2025 examines a rating-agency assessment under reputational threat and opportunity windows.",
+          "comparison_question": "Does full-text re-reading preserve the investor–media–rival–target topology, distinguish owner incentive and power from media-executive catering, and avoid claiming observed editorial influence? Compared with DesJardine 2025, is the intermediary's output public coverage or an evaluative score, and what conditions make each indirect attack credible?",
+          "status": "confirmed"
+        }
+      ],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "desjardine2023"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "project-mvp30-desjardine2023-invisible-hand-intro"
+      ]
+    },
+    {
+      "id": "desjardine2025",
+      "original_blueprint": "blueprints/desjardine2025-information-competition.md",
+      "paper": {
+        "legacy_citation": "DesJardine, Li & Shi (2025, AMJ) — Information-Based Competition: The Case of Rival Owners in Rating Agencies",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "neglected-arena",
+        "knot_compound": [],
+        "resolution_excerpt": "`revelation` 揭幕（揭幕信息型竞争——评级渗透机制 + 声誉条件化——\"竞争的新战场\"）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "MSCI ESG 评级 2",
+          "787 公司、共同机构投资者、Quiznos/Subway/Cao et al. 先例"
+        ],
+        "main_constructs": [
+          "rival owners' ownership in rating agencies（X）",
+          "target firm's ESG rating（DV——MSCI）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [
+        {
+          "seed_id": "desjardine2022",
+          "relation_hypothesis": "Both papers theorize common-owner portfolio incentives around ESG-related outcomes, but DesJardine 2025 may use ownership in a rating agency to disadvantage a target firm's rivals, rather than internalize CSR spillovers among firms an investor jointly owns.",
+          "comparison_question": "Does full-text re-reading preserve the owner–rater–rival–target topology, distinguish reputational threat motivation from opportunity-based rater receptivity, and avoid claiming directly observed influence? Compared with DesJardine 2022, is ownership managing shared externalities or creating an indirect competitive attack?",
+          "status": "confirmed"
+        }
+      ],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "desjardine2025"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "OCR parsed full text"
+      ]
+    },
+    {
+      "id": "eilert2017",
+      "original_blueprint": "blueprints/eilert2017-recall-timing.md",
+      "paper": {
+        "legacy_citation": "Eilert, Jayachandran, Kalaignanam & Swartz (2017, JM) — Does It Pay to Recall Your Product Early? An Empirical Investigation in the Automobile Industry",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "neglected-arena",
+        "knot_compound": [],
+        "resolution_excerpt": "`exploration` 拓荒（补上被忽视的 prerecall 战场——severity 反直觉地图 + 品牌条件化 + 时机绩效后果——完整的前因后果地图）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "NHTSA 调查、美国汽车行业、Toyota $17.35M 罚款（Hook 案例）、Table 6 具名厂商召回时间对比（Toyota 最快）"
+        ],
+        "main_constructs": [
+          "problem severity（X——问题严重度）",
+          "time to recall（DV——Weibull AFT 生存时间）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [
+        {
+          "seed_id": "wowak2025",
+          "relation_hypothesis": "Both papers treat time-to-recall as a managerially meaningful response window. Eilert may provide the more explicit decision-trade-off story: acting early risks a premature and costly response, while waiting raises exposure to legal, reputational, and market penalties. Unlike Wowak's paired product-safety outcomes, its focal tension may be internal to the timing decision itself.",
+          "comparison_question": "Does the full paper genuinely build, sustain, and resolve the early-action versus delayed-action trade-off across Introduction, Theory, Results, and Discussion? If so, what does this single-decision story do better or worse than Wowak's split between pre-market recall count and post-awareness time-to-recall, and which parts depend on Eilert's investigation-to-recall measurement window?",
+          "status": "confirmed"
+        }
+      ],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "eilert2017"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "vault narrative/fine 报告（intro/methods/results 三份 fine + deep profile）",
+        "parsed full text"
+      ]
+    },
+    {
+      "id": "employee_free_speech",
+      "original_blueprint": "blueprints/employee-free-speech-censorship.md",
+      "paper": {
+        "legacy_citation": "（OS）— Employee 'Free' Speech vs. Organizational Censorship on Social Media: Balancing the Tension Between Free Expression and Safeguards to Foster Psychological Safety",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "irony-reversal",
+        "knot_compound": [],
+        "resolution_excerpt": "`revelation` 揭幕（揭幕同一政策的受众分裂——意识形态双面 + 四调节解药——\"控制与自主的平衡\"）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "全国代表性样本（金标准）、Study 1 开放式 + Study 2-3 预注册观察/实验 + Study 4 conjoint、Gaza 2023 背景"
+        ],
+        "main_constructs": [
+          "organizational censorship（X——审查偏见言论）",
+          "individual psychological safety（DV）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "vault narrative/fine/theory/methods/results 报告",
+        "parsed full text"
+      ]
+    },
+    {
+      "id": "fang2025",
+      "original_blueprint": "blueprints/fang2025-rival-recall-advertising.md",
+      "paper": {
+        "legacy_citation": "Fang, Astvansh, Tong, Lee & Guo (2025, POM) — How Do Brands Change Their Advertising Spending in Response to a Rival's Product Recall?",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "consensus-puzzle",
+        "knot_compound": [],
+        "resolution_excerpt": "`revelation` 揭幕（揭幕威胁解读的主导地位 + 广告类型的局部机会——细粒度策略地图 + 溢出机制的明智降广告）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "62 替代车型/31 周/308 地区/591",
+          "976 obs、RDiT、Sagitar 召回、Samsung/Toyota/GM 具名案例"
+        ],
+        "main_constructs": [
+          "rival's recall（X——Sagitar 召回）",
+          "substitute brand's ad spending（DV——总体 + 三类型分解）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [
+        {
+          "seed_id": "darby2025",
+          "relation_hypothesis": "Both papers ask how a firm reacts to a salient negative event at another organization. Fang may be a horizontal contrast: substitute brands manage competition and contagion through advertising, whereas Darby studies proactive recall timing in response to anticipated activist pressure.",
+          "comparison_question": "Does full-text re-reading keep consumer comparison, manager interpretation, advertising components, and sales payoff distinct enough to support a mixed opportunity-threat story? Compared with Darby, is the external event a feared future monitor or a rival's realized quality failure?",
+          "status": "confirmed"
+        }
+      ],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "fang2025"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "OCR parsed full text"
+      ]
+    },
+    {
+      "id": "gamache2020",
+      "original_blueprint": "blueprints/gamache2020-serving-differently.md",
+      "paper": {
+        "legacy_citation": "Gamache, Neville, Bundy & Short (2020, SMJ) — Serving Differently: CEO Regulatory Focus and Firm Stakeholder Strategy（DOI 10.1002/smj.3134）",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "not_assessed",
+        "verification": "not_currently_verified",
+        "basis": "v0.3 metadata does not establish a current full-text locator."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "cross-domain-unification",
+        "knot_compound": [],
+        "resolution_excerpt": "`unification` 统一（新解法性格候选）——**同一机制统一两个分离研究域**：2×2 对称映射（双构念 × 双域）+ estimator split 让两个 outcome family 各得其所。研究者是\"发现共同引擎\"的工程师：两个域的文献各有一张零件清单，本文证明共用一台发动机。辅以 ruling-out-alternatives（先证伪读者的直觉预测再给出正解）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "not_assessed",
+          "basis": "not_encoded_in_v0.3_metadata"
+        },
+        "empirical_setting": [
+          "威胁族控制（firm capacity / prior stakeholder pressure / external pressure / industry / persistence / CEO attributes）、文本测量字典"
+        ],
+        "main_constructs": [
+          "CEO regulatory focus (X，双系统 promotion/prevention 是双主角)",
+          "stakeholder strategy (Y，governance/social 双 outcome family)"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings",
+          "storytelling_tools"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "project-mvp30-gamache-etal2020",
+        "00 工作台/叙述模板训练集/narrative_analysis/methods_results/mvp30/fine_grained/batch_09_gamache2020_shipilov2020/gamache2020_regulatory_focus_stakeholder_fine_methods_results.md"
+      ]
+    },
+    {
+      "id": "gamache2023",
+      "original_blueprint": "blueprints/gamache2023-shifting-perspectives.md",
+      "paper": {
+        "legacy_citation": "Gamache, Devers, Klein & Hannigan (2023, SMJ) — Shifting Perspectives: How Scrutiny Shapes the Relationship Between CEO Gender and Acquisition Activity",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "consensus-puzzle",
+        "knot_compound": [
+          "assumption-flip"
+        ],
+        "resolution_excerpt": "`revelation` 揭幕（换视角——从\"性别特质\"镜头切到\"情境审视\"镜头——共识条件化消解）+ 机制替换（风险偏好→信息加工）。研究者是镜头切换师：先给共识特写（复现主效应），再切近景露出审视情境的调节面。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "Mayer/Fiorina/Rometty（具名反例）、10",
+          "351 firm-years、ITCV/治疗效应（稳健性）"
+        ],
+        "main_constructs": [
+          "CEO gender（X——female CEO）",
+          "acquisition activity（DV——数量+支出双测量）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "vault narrative/methods_results 报告",
+        "parsed full text"
+      ]
+    },
+    {
+      "id": "gao2015",
+      "original_blueprint": "blueprints/gao2015-prerecall-advertising.md",
+      "paper": {
+        "legacy_citation": "Gao, Xie, Wang & Chen (2015, JM) — Should Ad Spending Increase or Decrease Before a Recall Announcement? The Marketing–Finance Interface in Product-Harm Crisis Management",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "consensus-puzzle",
+        "knot_compound": [],
+        "resolution_excerpt": "`revelation` 揭幕（揭幕广告的条件地图——何时缓冲何时加剧——预防策略的细粒度 + 利润-价值冲突的揭示）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "汽车召回 + 详细广告支出 2005-2012、事件研究、营销-财务接口"
+        ],
+        "main_constructs": [
+          "prerecall ad spending adjustment（X——增/减）",
+          "postrecall stock value（DV）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "OCR parsed full text"
+      ]
+    },
+    {
+      "id": "hahl2017",
+      "original_blueprint": "blueprints/hahl2017-authentic-lowbrow.md",
+      "paper": {
+        "legacy_citation": "Hahl, Zuckerman & Kim (2017, ASR) — Why Elites Love Authentic Lowbrow Culture: Overcoming High-Status Denigration with Outsider Art",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "assumption-flip",
+        "knot_compound": [
+          "consensus-puzzle"
+        ],
+        "resolution_excerpt": "`revelation` 揭幕（机制揭幕——展示\"借取真实性\"的第二张脸）+ 双实验验证（需求侧 Study 1 + 观众侧 Study 2——先验需求再验归因）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "Q2/S2 竞赛实验、outsider art、Mechanical Turk、Bryson 爵士/重金属案例"
+        ],
+        "main_constructs": [
+          "high-status authenticity-insecure actors（地位者——真实性不安全感）",
+          "authentic lowbrow/outsider art（低眉真实文化品）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "vault narrative/methods_results 报告",
+        "parsed full text"
+      ]
+    },
+    {
+      "id": "han2020",
+      "original_blueprint": "blueprints/han2020-now-you-see-me.md",
+      "paper": {
+        "legacy_citation": "Han, Pollock & Graffin (2020, AMJ) — Now You See Me: How Status and Categorical Proximity Shape Misconduct Scandalization",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "consensus-puzzle",
+        "knot_compound": [],
+        "resolution_excerpt": "`revelation` 揭幕（揭幕情境如何调制地位效应——媒体惯例的 insider/outsider 剧本——\"Now You See Me\"：看见与否是情境的魔术）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "数据泄露 2015-2018、ordered probit、多媒体覆盖测量（LIWC 语气验证）"
+        ],
+        "main_constructs": [
+          "firm status（X）",
+          "misconduct scandalization（DV——ordinal：无覆盖/中等/丑闻化）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "vault narrative/methods_results 报告",
+        "parsed full text"
+      ]
+    },
+    {
+      "id": "han2024",
+      "original_blueprint": "blueprints/han2024-public-enemies.md",
+      "paper": {
+        "legacy_citation": "Han, Pollock & Paruchuri (2024, SMJ) — Public Enemies? The Differential Effects of Reputation and Celebrity on Corporate Misconduct Scandalization",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "tangled-constructs",
+        "knot_compound": [
+          "neglected-arena"
+        ],
+        "resolution_excerpt": "`revelation` 揭幕——把 celebrity 的情感面从 reputation 的理性面里翻出来：2×2 对角交叉（objective 高→reputation 赢；perceived 高→celebrity 赢）。研究者是拆结人+记分员：同一个屋顶下的两个构念各走各路，且各赢一个条件维度——与 wowak2025 的 dimension-split 家族相似但这里是构念区分（Constructs 贡献）而非 DV 拆维。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "not_assessed",
+          "basis": "not_encoded_in_v0.3_metadata"
+        },
+        "empirical_setting": [
+          "224 起数据泄露/157 家公司 2015-2018、2 周观察窗口、Factiva 5",
+          "118 篇文章（64% 零报道）、TNIC-3 竞争对手池、LIWC 情感测量"
+        ],
+        "main_constructs": [
+          "reputation (X1，理性评价)",
+          "celebrity (X2，情感光环)",
+          "scandalization (Y，违规报道日计数)"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings",
+          "storytelling_tools"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "{'vault narrative': 'narrative_analysis/mvp30/han2024_public_enemies_smj_narrative.md'}"
+      ]
+    },
+    {
+      "id": "haunschild2004",
+      "original_blueprint": "blueprints/haunschild2004-volition-learning.md",
+      "paper": {
+        "legacy_citation": "Haunschild & Rhee (2004, MgmtSci) — The Role of Volition in Organizational Learning: The Case of Automotive Product Recalls",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "paradigms-at-war",
+        "knot_compound": [],
+        "resolution_excerpt": "`arbitration` 仲裁（实证裁决——volition 派胜出但部分——organizational form 条件化——两派各对一部分）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "美国汽车业 1966-1999 全部召回、学习曲线传统、voluntary/involuntary 分类、generalist/specialist"
+        ],
+        "main_constructs": [
+          "recall volition（X——voluntary vs involuntary）",
+          "subsequent recall rates（DV——学习效果）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "OCR parsed full text"
+      ]
+    },
+    {
+      "id": "haunschild2015",
+      "original_blueprint": "blueprints/haunschild2015-oscillation-learning.md",
+      "paper": {
+        "legacy_citation": "Haunschild, Polidoro & Chandler (2015, OrgSci) — Organizational Oscillation Between Learning and Forgetting: The Dual Role of Serious Errors",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "consensus-puzzle",
+        "knot_compound": [],
+        "resolution_excerpt": "`revelation` 揭幕（揭幕振荡机制——errors 双角色 + 遗忘进程——\"学了为何退回\"的循环地图）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "NASA Challenger/Columbia 定性 + 制药 1997-2004 定量、负二项计数模型、安全/创新焦点测量"
+        ],
+        "main_constructs": [
+          "serious errors（X——双角色触发器）",
+          "safety focus oscillation（DV——学习/遗忘循环）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "project_mvp30_haunschild2015_methods_results",
+        "parsed full text"
+      ]
+    },
+    {
+      "id": "hoffmann2024",
+      "original_blueprint": "blueprints/hoffmann2024-sue-me-recalls.md",
+      "paper": {
+        "legacy_citation": "Hoffmann, Cheong, Phan & Zurbruegg (2024, JM) — So, Sue Me...If You Can! How Legal Changes Diminishing Managers' Risk of Being Held Liable by Shareholders Affect Firms' Likelihood to Recall Products",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "neglected-arena",
+        "knot_compound": [],
+        "resolution_excerpt": "`exploration` 拓荒（补 recall 前因的法律维度——UD 法律意外后果地图 + 双治理边界条件化）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "Compustat 1986-2018 + CPSC、交错 DiD（Goldfarb 指南）、无伤亡召回子样本、30",
+          "679 firm-years"
+        ],
+        "main_constructs": [
+          "UD law adoption（X——交错自然实验）",
+          "recall likelihood（DV）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [
+        {
+          "seed_id": "darby2026",
+          "relation_hypothesis": "Both papers examine how shareholder-side governance can influence product recall decisions. Hoffmann may treat institutional ownership as a substitute monitor when shareholder litigation discipline is relaxed, whereas Darby examines large institutional ownership as a direct influence on the post-awareness timing of a severe medical-device recall.",
+          "comparison_question": "Does full-text re-reading keep recall incidence, managerial willingness, and defect need conceptually distinct while showing that legal protection weakens accountability? Compared with Darby, when is institutional ownership a direct monitor of a response and when is it a boundary on a legal-governance shock?",
+          "status": "confirmed"
+        }
+      ],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "hoffmann2024"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "parsed full text"
+      ]
+    },
+    {
+      "id": "kalaignanam2013",
+      "original_blueprint": "blueprints/kalaignanam2013-recall-learning.md",
+      "paper": {
+        "legacy_citation": "Kalaignanam, Kushwaha & Eilert (2013, JM) — The Impact of Product Recalls on Future Product Reliability and Future Accidents: Evidence from the Automobile Industry",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "neglected-arena",
+        "knot_compound": [],
+        "resolution_excerpt": "`exploration` 拓荒（补学习后果战场——recall→reliability→未来事故/召回的完整学习链 + 双 enabler 条件化）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "459 make/year/27 制造商/1995-2011/汽车行业、中介模型、CPSC/NHTSA 情境"
+        ],
+        "main_constructs": [
+          "recall magnitude（X——t−1）",
+          "future accidents + future recalls（DV——t+1，reliability 中介 t）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [
+        {
+          "seed_id": "wowak2025",
+          "relation_hypothesis": "Both papers distinguish product-safety processes rather than treating every recall count as the same outcome. Kalaignanam may make recall magnitude a trigger for later reliability learning, whereas Wowak separates pre-market recall incidence from post-awareness recall responsiveness.",
+          "comparison_question": "Does full-text re-reading make recall magnitude, future recall frequency, and product reliability temporally distinct enough to support a learning chain? Compared with Wowak, when does a recall-related count indicate a quality-production process, a learning consequence, or a different response process altogether?",
+          "status": "confirmed"
+        }
+      ],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "kalaignanam2013"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "vault fine intro/theory 报告",
+        "OCR parsed full text"
+      ]
+    },
+    {
+      "id": "kashmiri2017",
+      "original_blueprint": "blueprints/kashmiri2017-narcissism-product-harm.md",
+      "paper": {
+        "legacy_citation": "Kashmiri, Nicol & Arora (2017, JAMS) — Me, Myself, and I: Influence of CEO Narcissism on Firms' Innovation Strategy and the Likelihood of Product-Harm Crises",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "neglected-arena",
+        "knot_compound": [],
+        "resolution_excerpt": "`exploration` 拓荒（补人格前因战场——自恋双后果地图 + 竞争侵略性中介 + marketing power 解药条件化）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "395 公司 2006-2010、媒体自恋测量、KLD 危机数据、GLS/负二项/分数 logit/RE logit、t-1 前置变量内生性"
+        ],
+        "main_constructs": [
+          "CEO narcissism（X——媒体测量）",
+          "product-harm crisis（DV）+ NPIs/radical innovation（双后果）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [
+        {
+          "seed_id": "wowak2025",
+          "relation_hypothesis": "Both papers connect senior-leader psychology to an upstream product-safety outcome. Kashmiri may distinguish an innovation-production posture and product-harm-crisis risk from Wowak's separate recall-incidence and post-awareness timing processes.",
+          "comparison_question": "Does full-text re-reading keep innovation speed, radicalness, and product- harm risk as distinct outcome processes linked by competitive aggressiveness, and does marketing power selectively change customer-oriented safety control? Compared with Wowak, is the leader effect located in quality production, recall incidence, or later response after a known defect?",
+          "status": "confirmed"
+        }
+      ],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "kashmiri2017"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "parsed full text（Clippings——检索协议路径命中）"
+      ]
+    },
+    {
+      "id": "keeves2017",
+      "original_blueprint": "blueprints/keeves2017-sharpest-knife.md",
+      "paper": {
+        "legacy_citation": "Keeves, Westphal & McDonald (2017, ASQ) — Those Closest Wield the Sharpest Knife: How Ingratiation Leads to Resentment and Social Undermining of the CEO",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "irony-reversal",
+        "knot_compound": [
+          "assumption-flip"
+        ],
+        "resolution_excerpt": "`revelation` 揭幕（展示被忽略的阴暗面——逢迎的代价面 + 不对称关系）+ 机制链揭幕（自尊威胁→外化归因→怨恨→社会破坏）。研究者是拆镜人：把逢迎的单面镜子翻过来，露出另一面的怨恨。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "3",
+          "895 manager-CEO dyads、调查+档案混合（park2013 同设计）、SEM、CEO 调查数据"
+        ],
+        "main_constructs": [
+          "ingratiation（X——focal/other 双源）",
+          "resentment（DV→中介）→ negative commentary/social undermining（最终 DV）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "vault narrative/methods_results/theory 报告",
+        "parsed full text",
+        "早期故事弧资产"
+      ]
+    },
+    {
+      "id": "kundro2023",
+      "original_blueprint": "blueprints/kundro2023-power-objectors.md",
+      "paper": {
+        "legacy_citation": "Kundro & Rothbard (2023, AMJ) — Does Power Protect Female Moral Objectors? How and When Moral Objectors' Gender, Power, and Use of Organizational Frames Influence Perceived Self-Control and Experienced Retaliation",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "consensus-puzzle",
+        "knot_compound": [
+          "assumption-flip"
+        ],
+        "resolution_excerpt": "`remedy` 解药（organizational frame——给已知惩罚加缓解条件——与 cutolo2024 同族；不是要更多权力，而是换框架）+ 机制揭幕（self-control 感知）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "U.S. Merit Board 档案、CIT 实验、MTurk 预注册实验×2"
+        ],
+        "main_constructs": [
+          "structural power（X）",
+          "retaliation（DV——报复）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "vault narrative/methods_results 报告",
+        "parsed full text"
+      ]
+    },
+    {
+      "id": "lashley2020",
+      "original_blueprint": "blueprints/lashley2020-waiting-to-inhale.md",
+      "paper": {
+        "legacy_citation": "Lashley & Pollock (2020, ASQ) — Waiting to Inhale: Reducing Stigma in the Medical Cannabis Industry",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "not_assessed",
+        "verification": "not_currently_verified",
+        "basis": "v0.3 metadata does not establish a current full-text locator."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "overlooked-alternative",
+        "knot_compound": [],
+        "resolution_excerpt": "`revelation` 揭幕（定性版）——**把后台露出来 + 关系空间分离**：front-stage/backstage/side-stage 并置 = 展示被公开话语遮蔽的背面；P2 命题（关系空间分离使集体去污名目标与个体生存行为共存）把\"矛盾\"转成\"分工\"。研究者是\"拉开舞台幕布\"的人，且从数据里长出来（inductive）。另：P3 命题（符号/叙事先于物质变化的反向顺序）是 category emergence 透镜的兑现。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "qualitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "多源数据（observations/interviews/archives 各捕获一角色）、Colorado/Oregon/Washington 情境、行业受众（按受众分别评估成功）、州与联邦政府（Success 评估的对手方）"
+        ],
+        "main_constructs": [
+          "category-level core stigma reduction process（过程，Y——定性论文的主角是过程/模型而非单一构念）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "alternative_tellings",
+          "storytelling_tools"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "project_mvp30_lashley_pollock2020_methods_results",
+        "project_mvp30_lashley_pollock2020_intro（vault 报告重建）"
+      ]
+    },
+    {
+      "id": "li2026",
+      "original_blueprint": "blueprints/li2026-vertical-spillover.md",
+      "paper": {
+        "legacy_citation": "Li, Bapuji, Talluri, Singh & Narayanan (2026, JSCM) — Vertical Spillover of Product Recalls: Theorization and Empirical Examination in the US Automobile Industry",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "assumption-flip",
+        "knot_compound": [
+          "neglected-arena"
+        ],
+        "resolution_excerpt": "`revelation` 揭幕（揭幕垂直溢出的双通道——管道/棱镜 + 三网络条件化——\"垂直溢出比想象的复杂\"）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "154 媒体报告大召回/752 dyads/2010-2019/美国汽车业、七源数据、VW/ZTE 案例"
+        ],
+        "main_constructs": [
+          "buyer recall（X）",
+          "supplier firm value（DV——垂直溢出损失）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [
+        {
+          "seed_id": "darby2025",
+          "relation_hypothesis": "Both papers study effects on organizations not directly targeted by the focal event. Li may distinguish a realized buyer shock that harms vertically tied suppliers through cash-flow and impression channels from Darby's anticipated activist threat that can induce preemptive recall action at an untargeted firm.",
+          "comparison_question": "Does full-text re-reading make vertical exposure distinct from horizontal categorization and preserve pipes and prisms as separate inferred pathways? Compared with Darby, is the non-target firm reacting prospectively to a possible sanction, or absorbing a realized interdependent shock?",
+          "status": "confirmed"
+        }
+      ],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "li2026"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "OCR parsed full text"
+      ]
+    },
+    {
+      "id": "liu2016",
+      "original_blueprint": "blueprints/liu2016-recall-remedy.md",
+      "paper": {
+        "legacy_citation": "Liu, Liu & Luo (2016, JM) — What Drives a Firm's Choice of Product Recall Remedy? The Impact of Remedy Cost, Product Hazard, and the CEO",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "half-domain-gap",
+        "knot_compound": [],
+        "resolution_excerpt": "`exploration` 拓荒（补 remedy 决策半区——成本-危害权衡地图 + CEO 激励条件化——补救选择的完整决定因素）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "CPSC 召回、logit remedy 选择模型、Big Lots/World Dryer/Enesco 具名案例"
+        ],
+        "main_constructs": [
+          "recall characteristics（X——remedy cost + product hazard）",
+          "remedy choice（DV——full vs partial）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [
+        {
+          "seed_id": "darby2024",
+          "relation_hypothesis": "Both papers treat a recall as a post-awareness decision shaped by executive incentives. Liu may concern remedy completeness and a cost–harm weighting problem, whereas Darby concerns initiation delay and a later self-defeating market consequence.",
+          "comparison_question": "Does full-text re-reading keep remedy choice distinct from timing and demonstrate that CEO incentives reweight the two decision criteria rather than simply predict a response? Compared with Darby, is the market outcome a consequence of a prior decision or an audience interpretation of visible remedy?",
+          "status": "confirmed"
+        }
+      ],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "liu2016"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "OCR parsed full text"
+      ]
+    },
+    {
+      "id": "lovelace2021",
+      "original_blueprint": "blueprints/lovelace2021-ceo-celebrity.md",
+      "paper": {
+        "legacy_citation": "Lovelace, Bundy, Pollock & Hambrick (2021, AMJ) — The Push and Pull of Attaining CEO Celebrity: A Media Routines Perspective",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "assumption-flip",
+        "knot_compound": [
+          "neglected-arena"
+        ],
+        "resolution_excerpt": "`revelation` 揭幕（揭幕媒体惯例的造星机制——push-pull 双通道——谁被拉入聚光灯、谁自己推进聚光灯）+ 序数概念化（B-list/A-list 分级揭晓 celebrity 的内部结构）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "纵向 CEO 样本、多媒体测量（报纸/杂志/广播/在线/Wikipedia）、Musk/Bezos/Legere（具名案例）、Don Roca 引语（'A-list and B-list'）"
+        ],
+        "main_constructs": [
+          "media routines（机制透镜）",
+          "CEO celebrity（DV——ordinal：noncelebrities/B-list/A-list）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "vault narrative/methods_results 报告",
+        "parsed full text"
+      ]
+    },
+    {
+      "id": "lun2026",
+      "original_blueprint": "blueprints/lun2026-eo-double-edged.md",
+      "paper": {
+        "legacy_citation": "Lun, Zurbruegg, Mount & Cheong (2026, ETP) — The Double-Edged Sword of Entrepreneurial Orientation: Product Recalls and the Role of COO Power",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "half-domain-gap",
+        "knot_compound": [],
+        "resolution_excerpt": "`exploration` 拓荒（补 EO 暗面半区——variance-enhancing 下尾地图 + COO power 解药 + 生命周期条件化）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "1998-2021 美国物理消费品企业、CPSC 8",
+          "000 死亡证明/年（stakes 背景）"
+        ],
+        "main_constructs": [
+          "entrepreneurial orientation（X）",
+          "product recalls（DV——下尾结果）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [
+        {
+          "seed_id": "wowak2025",
+          "relation_hypothesis": "Both papers connect a top-management condition to recall-related safety outcomes while needing to distinguish an upstream quality-production process from a later response process. Lun may make EO a source of recall incidence and COO power an attentional governance boundary.",
+          "comparison_question": "Does full-text re-reading separate product recall incidence from product quality itself, and does it provide process evidence for EO-induced quality-control strain and COO attention rather than only proxy-consistent associations? Compared with Wowak, are outcome dimensions distinct stages or a single upstream failure process with nested governance conditions?",
+          "status": "confirmed"
+        }
+      ],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "lun2026"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "OCR parsed full text（文献笔记库论文导入）"
+      ]
+    },
+    {
+      "id": "malik2025",
+      "original_blueprint": "blueprints/malik2025-mixed-gambles.md",
+      "paper": {
+        "legacy_citation": "Malik, Wang, Martin & Gomez-Mejia (2025, JM) — Mixed Gambles in Product Recalls: How CEO Stock Options Drive Impression Management Tactics",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "half-domain-gap",
+        "knot_compound": [],
+        "resolution_excerpt": "`exploration` 拓荒（补上危机情境半区——双轨财富动机分工 + 媒体监督条件化——\"保护\"与\"追求\"的动机地图）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "医疗设备召回（FDA）、Heckman probit（FDASIA IV）、2SLS（Bartik IV）、Boeing 737 Max（Discussion 案例）"
+        ],
+        "main_constructs": [
+          "CEO option wealth（X——current vs prospective 双成分）",
+          "IM tactics（DV——inattentive recall + strategic silence 双战术）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [
+        {
+          "seed_id": "darby2024",
+          "relation_hypothesis": "Both papers ask how CEO-linked wealth exposure shapes the handling of a known medical-device problem. Malik may show that a single stock-option portfolio contains opposed preservation and prospective-gain orientations, but its outcomes are communication tactics rather than an awareness-to- initiation delay and downstream penalty chain.",
+          "comparison_question": "Does full-text re-reading sustain a genuine current-versus-prospective wealth story across timing and silence, and which results are directly supported versus inferred as impression management? Compared with Darby, does the paper explain response duration, public visibility, or both?",
+          "status": "confirmed"
+        }
+      ],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "malik2025"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "project_mvp30_malik2025_intro",
+        "vault fine intro/theory 报告",
+        "parsed full text"
+      ]
+    },
+    {
+      "id": "malshe2015",
+      "original_blueprint": "blueprints/malshe2015-finance-to-marketing.md",
+      "paper": {
+        "legacy_citation": "Malshe & Agarwal (2015, JM) — From Finance to Marketing: The Impact of Financial Leverage on Customer Satisfaction",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "not_assessed",
+        "verification": "not_currently_verified",
+        "basis": "v0.3 metadata does not establish a current full-text locator."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "half-domain-gap",
+        "knot_compound": [
+          "counterevidence"
+        ],
+        "resolution_excerpt": "`exploration` 拓荒 + 路径分解——把杠杆按 debt/equity 拆开（补半区），把影响按 advertising/R&D 拆成两条通道（路径分解），再加 financial constraint 条件化。研究者是跨界测绘者：把 finance 的地图扩展进 marketing 的领域，并标出哪里通、哪里不通（非对称中介）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "not_assessed",
+          "basis": "not_encoded_in_v0.3_metadata"
+        },
+        "empirical_setting": [
+          "ACSI↔Compustat 五库手工匹配样本、行业与年份控制"
+        ],
+        "main_constructs": [
+          "financial leverage（debt 半区）(X)",
+          "customer satisfaction (Y)"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings",
+          "storytelling_tools"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [
+        {
+          "seed_id": "chunglow2022",
+          "relation_hypothesis": "Both papers explain customer-facing marketing consequences through an intertemporal or resource-pressure decision. Malshe may treat financial leverage as a constraint on advertising and customer satisfaction, while Chung and Low treat CEO regulatory focus as a reweighting of marketing budget gains and losses.",
+          "comparison_question": "Does full-text re-reading distinguish an actual advertising mediation from an unsupported R&D route, and does leverage separately change the market value of customer satisfaction? Compared with Chung and Low, is the proposed pressure a firm-level financial constraint or a CEO-level temporal valuation process?",
+          "status": "confirmed"
+        }
+      ],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "malshe2015"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "project-mvp30-malshe2015-intro"
+      ]
+    },
+    {
+      "id": "mayo2022",
+      "original_blueprint": "blueprints/mayo2022-ceo-tenure-recalls.md",
+      "paper": {
+        "legacy_citation": "Mayo, Ball & Mills (2022, POM) — CEO Tenure and Recall Risk Management in the Consumer Products Industry",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "half-domain-gap",
+        "knot_compound": [],
+        "resolution_excerpt": "`exploration` 拓荒（补上 OM 的召回情境半区——CEO 继任双机制地图——blame-shift/hide + 两个条件化）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "125 公司/307 新 CEO/584 自愿召回/1992-2016/消费产品、复发事件风险模型、Wald χ² 分样本比较、1 治理建议 + 4 CPSC 政策建议"
+        ],
+        "main_constructs": [
+          "CEO tenure（X——Early/Late 三分位）",
+          "recall hazard（DV——自愿召回）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [
+        {
+          "seed_id": "malik2025",
+          "relation_hypothesis": "Both papers concern CEO-linked incentives around product recalls, but Mayo may use tenure to organize opposite recall-incidence patterns whereas Malik separates current and prospective option wealth across public handling tactics after a recall is underway.",
+          "comparison_question": "Does full-text re-reading sustain a two-phase tenure story with distinct boundary conditions, while keeping recall incidence separate from public response timing and silence? Compared with Malik, which CEO conditions change whether a recall is initiated versus how it is communicated?",
+          "status": "confirmed"
+        }
+      ],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "mayo2022"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "project_mvp30_mayo2022_methods_results",
+        "vault narrative/fine/theory 报告",
+        "parsed full text"
+      ]
+    },
+    {
+      "id": "park2013",
+      "original_blueprint": "blueprints/park2013-social-discrimination.md",
+      "paper": {
+        "legacy_citation": "Park & Westphal (2013, ASQ) — Social Discrimination in the Corporate Elite",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "neglected-arena",
+        "knot_compound": [
+          "counterevidence"
+        ],
+        "resolution_excerpt": "`exploration` 拓荒——补\"进入后\"战场（treatment 子域空白），跨层次桥接（微观归因 → 中观记者 → 宏观声誉）把机制连到后果。研究者是补地图的人 + 显微镜操作员：画上\"进入后的歧视\"，用逆马太标出反直觉地形（越成功越危险）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "not_assessed",
+          "basis": "not_encoded_in_v0.3_metadata"
+        },
+        "empirical_setting": [
+          "3",
+          "000 target CEOs 2005-2007、18",
+          "147 CEO dyads / 21",
+          "235 journalist dyads、21+17 预访谈、调查响应率 ~40%、Heckman 负二项 RE"
+        ],
+        "main_constructs": [
+          "CEO 归因偏差 (X，source CEO 对 target CEO 的内部归因)",
+          "已进入少数族裔/女性 CEO 的声誉损害 (Y)"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings",
+          "storytelling_tools"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "{'vault narrative': 'narrative_analysis/mvp30/park2013_social_discrimination_asq_narrative.md'}"
+      ]
+    },
+    {
+      "id": "park2025",
+      "original_blueprint": "blueprints/park2025-shareholder-litigation.md",
+      "paper": {
+        "legacy_citation": "Park, Lange & Jeon (2025, SMJ) — How Shareholder Litigation Risk Influences Firm Orientation Toward Stakeholders",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "paradigms-at-war",
+        "knot_compound": [],
+        "resolution_excerpt": "`arbitration` 仲裁（**外生冲击实证裁决**——温和版：不裁决哲学争论，用自然实验裁决行为证据——stakeholder 预测胜出但不断言哲学结论）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "UD law 州级采纳、9",
+          "670 firm-years、generalized DiD + CEM、平行趋势检验"
+        ],
+        "main_constructs": [
+          "shareholder litigation risk（X——UD law 外生冲击）",
+          "stakeholder orientation（DV——stakeholder initiatives）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "vault narrative/methods_results 报告",
+        "parsed full text"
+      ]
+    },
+    {
+      "id": "paruchuri2020",
+      "original_blueprint": "blueprints/paruchuri2020-tip-of-the-brain.md",
+      "paper": {
+        "legacy_citation": "Paruchuri, Pollock & Kumar (2020, SMJ) — On the Tip of the Brain: Understanding When Negative Reputational Events Can Have Positive Reputation Spillovers, and for How Long",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "assumption-flip",
+        "knot_compound": [],
+        "resolution_excerpt": "`revelation` 揭幕——把\"正面溢出\"从 valence 单向假设里翻出来：associability × salience 条件化 + 自然实验给因果地位。研究者是翻硬币的人 + 定时器：不仅翻出渔利的一面，还测出这面能亮多久（salience 消退 → 溢出消失——持久性本身就是假设的胜利）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "not_assessed",
+          "basis": "not_encoded_in_v0.3_metadata"
+        },
+        "empirical_setting": [
+          "2",
+          "672 家西雅图餐厅、24 周窗口（危机前 8/中 8/后 8）、22",
+          "137 restaurant-week、Yelp 过滤评论、天气/人口控制"
+        ],
+        "main_constructs": [
+          "Chipotle E. coli 危机 (X，salience 作时变强度)",
+          "竞争者的 reputation (Y，周均 Yelp 评分)"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings",
+          "storytelling_tools"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "{'vault narrative': 'narrative_analysis/mvp30/paruchuri2020_tip_of_brain_smj_narrative.md'}"
+      ]
+    },
+    {
+      "id": "pfarrer2010",
+      "original_blueprint": "blueprints/pfarrer2010-tale-of-two-assets.md",
+      "paper": {
+        "legacy_citation": "Pfarrer, Pollock & Rindova (2010, AMJ) — A Tale of Two Assets: The Effects of Firm Reputation and Celebrity on Earnings Surprises and Investors' Reactions",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "tangled-constructs",
+        "knot_compound": [],
+        "resolution_excerpt": "`revelation` 揭幕（解结版）——不否定两类资产的价值，而是展示被混用的同一标签下是两张不同的脸（理性 vs 情感、稳定 vs 戏剧），按形成机制 + 信息加工拆开再对位预测。研究者是拆线人：knot 不是\"谁对谁错\"，而是\"一个词指了两样东西\"。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "无形资产文献、战略/组织研究、心理学信息加工文献"
+        ],
+        "main_constructs": [
+          "reputation（理性/分析框架）",
+          "celebrity（情感/联想框架）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "project_mvp30_pfarrer2010_intro",
+        "project_mvp30_pfarrer2010_methods",
+        "theory fine report (vault)",
+        "全文（文献笔记库）"
+      ]
+    },
+    {
+      "id": "pollock2015",
+      "original_blueprint": "blueprints/pollock2015-untangled.md",
+      "paper": {
+        "legacy_citation": "Pollock, Lee, Jin & Lashley (2015, ASQ) — (Un)Tangled: Exploring the Asymmetric Coevolution of New Venture Capital Firms' Reputation and Status",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "not_assessed",
+        "verification": "not_currently_verified",
+        "basis": "v0.3 metadata does not establish a current full-text locator."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "tangled-constructs",
+        "knot_compound": [
+          "assumption-flip"
+        ],
+        "resolution_excerpt": "`revelation` 揭幕（解结）——**让双向同时上场**：同时方程（动态双方程）+ Arellano–Bond difference GMM 把\"谁驱动谁\"从二选一改为\"两个方向各自多大、何时反转\"；age 作为时间轴揭示不对称反转；ρ 对比揭示\"粘性差异\"。研究者是解结人：不剪断结，而是把结拆开摊平。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "not_assessed",
+          "basis": "not_encoded_in_v0.3_metadata"
+        },
+        "empirical_setting": [
+          "网络位置（Bonacich 中心性）、跨年 rescaling 的 reputation index 构念测量、VC 行业情境与控制变量"
+        ],
+        "main_constructs": [
+          "status",
+          "reputation"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings",
+          "storytelling_tools"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "project-mvp30-pollock2015-untangled"
+      ]
+    },
+    {
+      "id": "pontikes2012",
+      "original_blueprint": "blueprints/pontikes2012-two-sides.md",
+      "paper": {
+        "legacy_citation": "Pontikes (2012, ASQ) — Two Sides of the Same Coin（software 行业 1990–2002）",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "not_assessed",
+        "verification": "not_currently_verified",
+        "basis": "v0.3 metadata does not establish a current full-text locator."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "irony-reversal",
+        "knot_compound": [
+          "consensus-puzzle"
+        ],
+        "resolution_excerpt": "`revelation` 揭幕——**换视角**：不是修正测量、不是选边，而是展示\"同一构念的第二张脸\"。再加 `temporal staging`（VC 早期筛选模糊创新者、consumer 后期评估存活者）把\"相反\"重释为\"互补\"，irony 转化为分工。研究者是揭幕者：读者以为认识这个标签，其实只见过一面。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "not_assessed",
+          "basis": "not_encoded_in_v0.3_metadata"
+        },
+        "empirical_setting": [
+          "软件行业情境、标签共属网络、控制变量"
+        ],
+        "main_constructs": [
+          "label ambiguity (X)",
+          "两类受众的评价 (Y)"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings",
+          "storytelling_tools"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "project-mvp30-pontikes2012-two-sides"
+      ]
+    },
+    {
+      "id": "product_market_threats",
+      "original_blueprint": "blueprints/product-market-threats-common-ownership.md",
+      "paper": {
+        "legacy_citation": "Kini, Lee & Shen (2024, MgmtSci) — Common Institutional Ownership and Product Market Threats",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "overlooked-alternative",
+        "knot_compound": [],
+        "resolution_excerpt": "`revelation` 揭幕（揭幕共同所有权的效率面——fluidity 新维度 + 行业条件化——\"净效应\"地图）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "美国上市公司、fluidity（Hoberg-Phillips 10-K 文本指标）、DiD（金融机构并购）、多共同所有权测量（MHHID/Cross/GGL）"
+        ],
+        "main_constructs": [
+          "common ownership（X）",
+          "product market fluidity（DV——竞争/威胁）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "parsed full text（共同所有权/07 原文）"
+      ]
+    },
+    {
+      "id": "pupovac2025",
+      "original_blueprint": "blueprints/pupovac2025-recall-contagion.md",
+      "paper": {
+        "legacy_citation": "Pupovac, Astvansh, Carrillat & Legoux (2025, POM) — Product Recall Contagion in the Supply Chain",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "neglected-arena",
+        "knot_compound": [],
+        "resolution_excerpt": "`revelation` 揭幕（揭幕传染的理性面——两阶段筛选机制——披露的双刃）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "896 dyads/28 大型召回/11 制造商/46 供应商（⚠️ Abstract 写 27——原文内部矛盾，正文 28 为准）、事件研究 CAR + 两阶段横截面、FASB/SEC 披露规则背景"
+        ],
+        "main_constructs": [
+          "manufacturer recall（X——大型召回）",
+          "supplier CAR（DV——股东惩罚）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [
+        {
+          "seed_id": "darby2025",
+          "relation_hypothesis": "Both papers study firms indirectly exposed to an event at another organization. Pupovac may examine a realized buyer recall that changes supplier value through customer-portfolio information, whereas Darby examines an anticipated activist threat that may change a non-target firm's recall timing.",
+          "comparison_question": "Does full-text re-reading distinguish realized vertical exposure from a prospective monitoring threat, and does it observe supply-chain demand, stakeholder screening, or only their valuation-consistent traces? How does general disclosure differ from disclosed dependence as an exposure cue?",
+          "status": "confirmed"
+        }
+      ],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "pupovac2025"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "OCR parsed full text"
+      ]
+    },
+    {
+      "id": "reporting_comparability",
+      "original_blueprint": "blueprints/reporting-comparability-common-ownership.md",
+      "paper": {
+        "legacy_citation": "（2025, CAR — Contemporary Accounting Research）— How Do Institutional Investors Facilitate Reporting Comparability? Evidence from Common Institutional Ownership in the United States",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "half-domain-gap",
+        "knot_compound": [],
+        "resolution_excerpt": "`exploration` 拓荒（补 CII 溢出半区——直接+两溢出效应地图 + 两机制 + DiD 因果识别）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "美国 firm-pairs 1980-2016、FRC（De Franco et al. 测量）、DiD（金融机构并购——He & Huang）、SEM 路径分析"
+        ],
+        "main_constructs": [
+          "common institutional ownership（X——CII）",
+          "financial reporting comparability（DV——FRC）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "parsed full text（共同所有权/07 原文）"
+      ]
+    },
+    {
+      "id": "shen2022",
+      "original_blueprint": "blueprints/shen2022-political-ties.md",
+      "paper": {
+        "legacy_citation": "Shen, Zhou, Wang & Zhang (2022, JOM) — Do Political Ties Facilitate Operational Efficiency? A Contingent Political Embeddedness Perspective",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "paradigms-at-war",
+        "knot_compound": [],
+        "resolution_excerpt": "`arbitration` 仲裁（**拆地整合**——资源获取/利用 facet 分解——与 zhou2017 同款裁决方式；两派各对一半）+ 环境四象限条件化（superfluous/destructive/double-edged sword）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "中国上市民企 3",
+          "410 obs、DEA 效率、PSM（半径/核匹配）、Shandong Molong（具名案例）"
+        ],
+        "main_constructs": [
+          "political ties（X）",
+          "operational efficiency（DV——DEA）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "vault narrative/fine 报告（intro fine + methods/results 全报告）",
+        "parsed full text"
+      ]
+    },
+    {
+      "id": "shi2021",
+      "original_blueprint": "blueprints/shi2021-herding-advertising-disclosure.md",
+      "paper": {
+        "legacy_citation": "Shi, Grewal & Sridhar (2021, JMR) — Organizational Herding in Advertising Spending Disclosures: Evidence and Mechanisms",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "half-domain-gap",
+        "knot_compound": [],
+        "resolution_excerpt": "`exploration` 拓荒（补羊群披露情境半区——信息级联机制 + 部分重叠识别 + 四子群信息源地图）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "美国上市公司、FRR44 前后、部分重叠战略组（Bramoullé 法）、Apple Business Insider 案例"
+        ],
+        "main_constructs": [
+          "peer disclosure（X——同行披露决策）",
+          "firm disclosure probability（DV——广告支出披露）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "vault narrative/fine/theory/methods/results 报告",
+        "parsed full text"
+      ]
+    },
+    {
+      "id": "shipilov2020",
+      "original_blueprint": "blueprints/shipilov2020-publicity-good.md",
+      "paper": {
+        "legacy_citation": "Shipilov, Greve & Rowley (2020, SMJ) — Is All Publicity Good Publicity? The Impact of Direct and Indirect Media Pressure on the Adoption of Governance Practices",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "assumption-flip",
+        "knot_compound": [
+          "consensus-puzzle"
+        ],
+        "resolution_excerpt": "`revelation` 揭幕（replicate-then-flip——先复现负面效应，再翻出\"正面同样有效\"的第二张脸 + 网络间接通道）——不推翻负面效应，揭示\"情绪化议程设置\"的补充机制（负面=批评应对、正面=议程认同）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "TSX 加拿大上市公司、78 匹配公司/16 处理、CEM 匹配、subprime crisis"
+        ],
+        "main_constructs": [
+          "media coverage（X——own/interlock × positive/negative 四流）",
+          "board reform adoption（DV）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "vault narrative/methods_results 报告",
+        "parsed full text"
+      ]
+    },
+    {
+      "id": "singh2023",
+      "original_blueprint": "blueprints/singh2023-lobbying-recalls.md",
+      "paper": {
+        "legacy_citation": "Singh & Grewal (2023, JMR) — Lobbying and Product Recalls: A Study of the U.S. Automobile Industry",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "overlooked-alternative",
+        "knot_compound": [
+          "counterevidence"
+        ],
+        "resolution_excerpt": "`revelation` 揭幕（deductive 宣战版）——不推翻效率视角的合理性，翻出被商业导向遮蔽的政治面：合法性机制 + 铁三角框架 + 双因果识别（county 政治捐款 IV + Flint 自然实验）。研究者是揭幕人 + 鉴证师：先换视角，再用识别策略给视角钉上因果地位。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "丰田（Hook 案例）、GM（Flint 自然实验）、消费者/安全倡导组织（stakes 受益者）"
+        ],
+        "main_constructs": [
+          "lobbying（IV——企业的政治行动）",
+          "recalls（DV——voluntary/mandatory 双流）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [
+        {
+          "seed_id": "hoffmann2024",
+          "relation_hypothesis": "Both papers examine institutional sources of accountability that can alter recall incidence. Singh may show political influence over voluntary and mandatory decisions, while Hoffmann examines a legal change that reduces shareholder-litigation discipline and its governance substitutes.",
+          "comparison_question": "Does full-text re-reading distinguish a genuine efficiency-versus-political influence conflict from a generic nonmarket antecedent story, and does it preserve the two separate firm and regulator decision arenas? Compared with Hoffmann, is accountability relaxed by law, captured through political influence, or inferred too broadly from lower recall counts?",
+          "status": "confirmed"
+        }
+      ],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "singh2023"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "project_mvp30_singh_grewal2023_intro",
+        "project_mvp30_singh_grewal2023_theory",
+        "singh2023 parsed full text（Results/Discussion 直接回读）"
+      ]
+    },
+    {
+      "id": "toh2023",
+      "original_blueprint": "blueprints/toh2023-risky-business.md",
+      "paper": {
+        "legacy_citation": "Toh & Pyun (2023, SMJ) — Risky Business: How Standardization as Coordination Tool in Ecosystems Impacts Firm-Level Uncertainty",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "irony-reversal",
+        "knot_compound": [
+          "consensus-puzzle"
+        ],
+        "resolution_excerpt": "`revelation` 揭幕（换镜头——从 ecosystem-level 镜头切到 firm-level 镜头，展示同一工具的镜像效应）+ 条件化（谁最受伤：强敌环伺、互补资产薄弱者）。研究者是镜头切换师：先给平均效应特写，再切近景露出分裂。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "SSO 标准制定、ICT 生态系统 1996-2010、股票期权隐含波动率、IBM/Nokia/Sony（具名案例）"
+        ],
+        "main_constructs": [
+          "standardization（X——SEP 披露：own/non-own 双暴露）",
+          "firm-level uncertainty（DV——隐含波动率）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "project_mvp30_toh_pyun_smj",
+        "vault narrative/methods_results 报告",
+        "parsed full text"
+      ]
+    },
+    {
+      "id": "top_mgmt_incentives",
+      "original_blueprint": "blueprints/top-management-incentives-common-ownership.md",
+      "paper": {
+        "legacy_citation": "Antón, Ederer, Giné & Schmalz（JPE）— Common Ownership, Competition, and Top Management Incentives",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "neglected-arena",
+        "knot_compound": [],
+        "resolution_excerpt": "`exploration` 拓荒（补激励合约机制子域——理论建模 + 实证检验——\"已记录未建模\"的机制地图）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "美国上市公司面板、WPS 测量、多共同所有权测量、行业-年份/公司 FE"
+        ],
+        "main_constructs": [
+          "common ownership（X——多测量）",
+          "top management incentives（DV——WPS 斜率）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "parsed full text（共同所有权/07 原文）"
+      ]
+    },
+    {
+      "id": "vadakkepatt2022",
+      "original_blueprint": "blueprints/vadakkepatt2022-dark-side-lobbying.md",
+      "paper": {
+        "legacy_citation": "Vadakkepatt, Arora, Martin & Paharia (2022, JM) — Shedding Light on the Dark Side of Firm Lobbying: A Customer Perspective",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "overlooked-alternative",
+        "knot_compound": [],
+        "resolution_excerpt": "`revelation` 揭幕（揭幕游说的顾客面——ABV 注意力转移机制 + 4 调节解药——\"赚了监管、丢了客户\"的双刃）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "ACSI 满意度 + 游说数据、2SLS（industry lobbying/lobbyist supply IV——Kleibergen-Paap/Hansen J）、10-K 文本分析、Oracle 轶事、音乐流媒体案例"
+        ],
+        "main_constructs": [
+          "firm lobbying（X）",
+          "customer satisfaction（DV——ACSI）+ firm value（Tobin's q 双后果）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [
+        {
+          "seed_id": "singh2023",
+          "relation_hypothesis": "Both papers examine lobbying as an institutional strategy with consequences beyond direct political returns. Vadakkepatt may make customer-focus loss a countervailing value path, whereas Singh distinguishes firm political influence from regulatory recall decisions.",
+          "comparison_question": "Does full-text re-reading sustain distinct direct regulatory-capture and indirect customer-satisfaction paths, and do its attention-alignment conditions genuinely alter the customer path? Compared with Singh, is lobbying's consequence a change in institutional decision making, customer value, or both through separate mechanisms?",
+          "status": "confirmed"
+        }
+      ],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "vadakkepatt2022"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "vault distill-introduction-exemplar",
+        "parsed full text"
+      ]
+    },
+    {
+      "id": "wowak2015",
+      "original_blueprint": "blueprints/wowak2015-throwing-caution.md",
+      "paper": {
+        "legacy_citation": "Wowak, Mannor & Wowak (2015, SMJ) — Throwing Caution to the Wind: The Effect of CEO Stock Option Pay on the Incidence of Product Safety Problems",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "irony-reversal",
+        "knot_compound": [
+          "neglected-arena",
+          "assumption-flip"
+        ],
+        "resolution_excerpt": "`revelation` 揭幕（揭幕期权的不谨慎面——big wins/big losses 不对称逻辑 + person-pay 条件化——激励的后果因人而异）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "386 CEOs/1",
+          "314 CEO-years/FDA 受监管企业 2004-2011、GEE（binomial + negative binomial）、J&J Weldon（具名案例）、Tylenol 1982（对照案例）"
+        ],
+        "main_constructs": [
+          "CEO stock option pay（X——总薪酬中期权比例）",
+          "product safety problems（DV——召回发生率 binary + 计数）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [
+        {
+          "seed_id": "wowak2025",
+          "relation_hypothesis": "Both papers use serious product recalls to represent product-safety outcomes, but Wowak 2015 may concern an upstream safety-production incidence process shaped by CEO option incentives whereas Wowak 2025 separates pre-market recall incidence from post-awareness response time.",
+          "comparison_question": "Does full-text re-reading keep recall occurrence and count as two operationalizations of one upstream incidence construct, distinguish it from later recall timing, and identify which proposed option-to-quality transmission links are observed rather than inferred? How do tenure and founder status qualify an incentive association without demonstrating the underlying cognitive route?",
+          "status": "confirmed"
+        }
+      ],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "wowak2015"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "parsed full text（文献笔记库/论文导入——OvisOCR2 导入）"
+      ]
+    },
+    {
+      "id": "wowak2025",
+      "original_blueprint": "blueprints/wowak2025-politics-of-product-safety.md",
+      "paper": {
+        "legacy_citation": "Wowak, Busenbark, Ball & Natarajan (2025, MS) — The Politics of Product Safety: TMT Political Ideology and Serious Medical Product Recalls",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "not_assessed",
+        "verification": "not_currently_verified",
+        "basis": "v0.3 metadata does not establish a current full-text locator."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "paradigms-at-war",
+        "knot_compound": [],
+        "resolution_excerpt": "`dimension-split` 维度分裂（新解法性格候选，单篇原型）——**对立预测在 DV 不同维度各成立**：不裁决谁对，而是把 Y 拆成两个维度（数量/速度），每个维度让一方赢；post hoc 再用政治多样性证明\"兼得\"存在（best of both = 调和两极张力的处方）。研究者是\"改判比赛规则\"的裁判：不是判谁赢，而是说明这场比赛本来就该分两场比。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "not_assessed",
+          "basis": "not_encoded_in_v0.3_metadata"
+        },
+        "empirical_setting": [
+          "CEO/TMT/board/firm 四层控制（表1）、firm FE（88 召回 + 41 非召回企业，2002-2015，4",
+          "072 recalls）、行业情境（High-Risk/High-Reward 论证）"
+        ],
+        "main_constructs": [
+          "TMT 政治意识形态 (X，liberal/conservative 双极双主角)",
+          "产品安全 (Y，双 DV：recall count / time-to-recall)"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings",
+          "storytelling_tools"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "wowak2025"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "project-mvp30-wowak2025-intro"
+      ]
+    },
+    {
+      "id": "wu2025",
+      "original_blueprint": "blueprints/wu2025-activism-risk.md",
+      "paper": {
+        "legacy_citation": "Wu, Bruton & Krause (2025, SMJ) — Activism Risk and Corporate Self-Regulation: Investigating How Anti-SLAPP Laws Impact Firms' Institutional Corporate Social Performance",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "half-domain-gap",
+        "knot_compound": [],
+        "resolution_excerpt": "`exploration` 拓荒——补 proactive 半区，用制度冲击（anti-SLAPP 交错立法）作准实验识别。研究者是跨界测绘者 + 因果鉴定人：文献地图上只有\"回应\"一块，本文画上\"预防\"并给出 DiD 证据。与 malshe2015 同型（补半区），识别策略是自然实验（更强）。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "not_assessed",
+          "basis": "not_encoded_in_v0.3_metadata"
+        },
+        "empirical_setting": [
+          "MSCI/Compustat 3",
+          "488 家 1991-2018、firm/state/year FE、BoardEx CSR 委员会（placebo）、SigWatch NGO 行动（补充）"
+        ],
+        "main_constructs": [
+          "anti-SLAPP laws (X，交错立法处理)",
+          "institutional CSP (Y，预防性自我规制的代理)"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings",
+          "storytelling_tools"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "{'vault narrative': 'narrative_analysis/mvp30/wu2025_activism_risk_antislapp_narrative.md'}"
+      ]
+    },
+    {
+      "id": "zhao_ding2022",
+      "original_blueprint": "blueprints/zhao_ding2022-positioning-digital.md",
+      "paper": {
+        "legacy_citation": "Zhao-Ding & Gaba (2022, OrgSci) — Positioning in Digital Markets: A Demand-Side View",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "reported_readable_from_legacy",
+        "verification": "not_currently_verified",
+        "basis": "Legacy text contains a full-text/OCR/Clippings reading marker."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "overlooked-alternative",
+        "knot_compound": [],
+        "resolution_excerpt": "`revelation` 揭幕（换镜头——供给侧→需求侧）+ 双轨机制分工（两种信号=两种 cue）+ 条件化（初始 vs 后续定位——信号只在无内部经验时主导）。研究者是镜头切换师 + 信号解码员：不推翻定位文献，装上一台\"外部反馈\"望远镜。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "quantitative",
+          "basis": "legacy_paper_type_field"
+        },
+        "empirical_setting": [
+          "Apple App Store Photo & Video 类目、4",
+          "957 apps、LDA 功能主题、film/music 行业趋势"
+        ],
+        "main_constructs": [
+          "external market feedback（X——dissatisfaction + heterogeneity 双信号）",
+          "positioning（DV——core focus + peripheral overlap 双维度）"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "no_v4_card_yet",
+        "v4_card_ids": []
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "not_assessed",
+      "source_records": [
+        "project_mvp30_zhao-ding_gaba_orsc",
+        "vault narrative/methods_results 报告",
+        "parsed full text"
+      ]
+    },
+    {
+      "id": "zhou2017",
+      "original_blueprint": "blueprints/zhou2017-state-ownership.md",
+      "paper": {
+        "legacy_citation": "Zhou, Gao & Zhao (2017, ASQ) — State Ownership and Firm Innovation in China: An Integrated View of Institutional and Efficiency Logics",
+        "identity_verification": "not_currently_verified"
+      },
+      "full_text": {
+        "availability": "not_assessed",
+        "verification": "not_currently_verified",
+        "basis": "v0.3 metadata does not establish a current full-text locator."
+      },
+      "legacy_coverage_confidence": {
+        "value": "claimed_complete",
+        "sections": [
+          "intro",
+          "theory",
+          "methods",
+          "results"
+        ],
+        "basis": "v0.3 distilled_sections declaration; not a narrative-quality judgment."
+      },
+      "legacy_interpretation": {
+        "knot_primary": "paradigms-at-war",
+        "knot_compound": [
+          "counterevidence"
+        ],
+        "resolution_excerpt": "`arbitration` 仲裁——**facet-decomposition**：两个逻辑各管一个 facet（institutional→资源获取 / efficiency→资源利用），分解后再整合出非单调（倒U）。研究者是\"拆地测绘的仲裁者\"，不是选边者。",
+        "status": "historical_analyst_interpretation_only"
+      },
+      "research_profile": {
+        "theoretical_domain": "not_assessed",
+        "research_form": {
+          "value": "not_assessed",
+          "basis": "not_encoded_in_v0.3_metadata"
+        },
+        "empirical_setting": [
+          "控制变量、制度情境、行业与年份"
+        ],
+        "main_constructs": [
+          "state ownership (X)",
+          "firm innovation (Y)"
+        ]
+      },
+      "legacy_story_evidence": {
+        "observed_assets": [
+          "one_liner",
+          "five_acts",
+          "alternative_tellings",
+          "storytelling_tools"
+        ],
+        "known_risks": [],
+        "unverified_aspects": [
+          "No independent v0.4 story assessment has established narrative quality.",
+          "No section-specific transfer conditions have been reviewed under v0.4."
+        ]
+      },
+      "seed_relations": [],
+      "v4_relation": {
+        "relation": "migrated_exact_id",
+        "v4_card_ids": [
+          "zhou2017"
+        ]
+      },
+      "runtime_eligibility": "no",
+      "migration_status": "migrated",
+      "source_records": [
+        "project-mvp30-zhou2017-state-ownership"
+      ]
+    }
+  ]
+}

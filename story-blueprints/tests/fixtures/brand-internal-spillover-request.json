@@ -1,0 +1,9 @@
+{
+  "section": "introduction",
+  "paper_type": "quantitative",
+  "story_needs": ["specific-violation-to-brand-wide-demand-shock"],
+  "theoretical_problem_form": ["unresolved-brand-internal-consequence"],
+  "retrieval_signals": ["brand-internal-negative-spillover", "unaffected-product-revaluation"],
+  "validated_conditions": [],
+  "max_results": 2
+}

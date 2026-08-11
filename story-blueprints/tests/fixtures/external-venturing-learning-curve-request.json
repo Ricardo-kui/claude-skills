@@ -1,0 +1,9 @@
+{
+  "section": "theory",
+  "paper_type": "quantitative",
+  "story_needs": ["cost-before-learning-benefit", "adverse-outcome-inverted-u"],
+  "theoretical_problem_form": ["competing-benefit-harm-logics"],
+  "retrieval_signals": ["external-search-integration"],
+  "validated_conditions": [],
+  "max_results": 2
+}

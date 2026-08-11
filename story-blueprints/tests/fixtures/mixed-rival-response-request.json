@@ -1,0 +1,9 @@
+{
+  "section": "results",
+  "paper_type": "quantitative",
+  "story_needs": ["results-as-climax", "manage-multiple-storylines"],
+  "theoretical_problem_form": ["mixed-horizontal-spillover-response"],
+  "retrieval_signals": ["mixed-opportunity-threat", "action-decomposition"],
+  "validated_conditions": [],
+  "max_results": 2
+}

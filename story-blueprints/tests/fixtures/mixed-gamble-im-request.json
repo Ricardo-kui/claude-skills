@@ -1,0 +1,9 @@
+{
+  "section": "theory",
+  "paper_type": "quantitative",
+  "story_needs": ["theory-as-rising-action"],
+  "theoretical_problem_form": ["mixed-gamble-decomposition"],
+  "retrieval_signals": ["current-versus-prospective-incentives", "impression-management-tactics"],
+  "validated_conditions": [],
+  "max_results": 2
+}

@@ -1,0 +1,9 @@
+{
+  "section": "theory",
+  "paper_type": "quantitative",
+  "story_needs": ["sustainability-safety-tension", "regulatory-pressure-to-technology-bundle"],
+  "theoretical_problem_form": ["underexamined-hidden-cost"],
+  "retrieval_signals": ["technology-bundling-quality-risk"],
+  "validated_conditions": [],
+  "max_results": 2
+}

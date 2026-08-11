@@ -1,0 +1,9 @@
+{
+  "section": "introduction",
+  "paper_type": "quantitative",
+  "story_needs": ["establish-genuine-tension", "introduce-main-characters"],
+  "theoretical_problem_form": ["efficiency-baseline-versus-political-influence"],
+  "retrieval_signals": ["political-influence-on-regulation", "efficiency-versus-legitimacy"],
+  "validated_conditions": [],
+  "max_results": 2
+}

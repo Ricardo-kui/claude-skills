@@ -1,0 +1,9 @@
+{
+  "section": "theory",
+  "paper_type": "theory",
+  "story_needs": ["anticipated-event-to-prediction", "pre-event-and-post-event-allocation"],
+  "theoretical_problem_form": ["anticipated-rival-event-under-uncertainty"],
+  "retrieval_signals": ["anticipated-rival-recall", "category-defense-marketing"],
+  "validated_conditions": [],
+  "max_results": 2
+}

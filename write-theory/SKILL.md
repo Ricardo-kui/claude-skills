@@ -16,7 +16,7 @@ Collect the core constructs, theoretical lens, intended contribution, level of a
 
 Full Theory generation requires a valid story contract. Theory is rising action: every construct and why-chain must deepen the central knot, every hypothesis must include a `storyline_id`, and new main characters require a contract update. Preparing-stage work is diagnosis only; refining and finishing require a confirmed contract. A local hypothesis may bypass the full gate only with an explicit local-only notice and no paper-state update.
 
-**knot 架构检查（非门禁，frame_type 存在时执行）**：若 `story.story_frame.frame_type` 已选定（经 Introduction 输出的 `story.story_frame` 或契约），生成假设前读 `corpus/storytelling/knot-architecture-modulation.md` 对应节的**签名假设架构**——对照目标架构（双边对置 / 竞争假设 / 复现-消解 / 双轨并行 / 挑战先行 / 2×2 对称等）与 knot 签名是否一致；不一致时输出架构偏差标注与理由（或建议回契约调整 frame_type）。frame_type 缺失时跳过本检查，走默认路径。
+**故事完整性检查（非门禁）**：生成假设前，读取 canonical `story.integrity` 与各 storyline 的 promised resolution。检查每个理论动作是否服务于项目已确认的 knot、角色与证据承诺；任何未经确认的冲突、反转、双轨或曲线承诺都必须标为 unsupported，而不得由范文类型或旧 `story_frame` 推断。必要的范文学习由本次 Theory 调用的独立即时检索承担，不写回项目状态。
 
 ## Workflow
 

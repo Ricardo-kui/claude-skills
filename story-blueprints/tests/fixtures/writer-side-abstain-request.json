@@ -1,0 +1,8 @@
+{
+  "section": "introduction",
+  "paper_type": "quantitative",
+  "story_needs": ["clarify-theme", "introduce-main-characters"],
+  "theoretical_problem_form": ["incompleteness"],
+  "validated_conditions": [],
+  "max_results": 2
+}

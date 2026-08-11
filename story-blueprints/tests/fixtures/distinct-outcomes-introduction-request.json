@@ -1,0 +1,8 @@
+{
+  "section": "introduction",
+  "paper_type": "quantitative",
+  "story_needs": ["manage-multiple-storylines"],
+  "theoretical_problem_form": ["cross-literature-gap"],
+  "validated_conditions": ["distinct-outcome-processes", "shared-higher-order-theme"],
+  "max_results": 2
+}

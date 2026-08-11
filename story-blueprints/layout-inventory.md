@@ -1,7 +1,7 @@
 # Layout Inventory — 类型 × 五幕布局实证分布（v0.1）
 
 > **数据来源**：59 份 blueprint 的 `five_acts` / `knot` / `storytelling_tools.pacing_notes` 字段（`scripts/extract_layout.py` 提取 + 人工编码，2026-08-09）。
-> **用途**：① story-frame-menu Step C 框架卡"五幕落点预告"的实证锚（从推理变实证）；② write-introduction/write-theory 的 story_frame 调制规则依据。
+> **现用途**：Legacy Evidence Layer 的历史布局观察，用于发现复读候选与形成反例问题。不得用于选择项目故事框架、调制 write-introduction / write-theory，或推断“商科论文默认”叙事规则。
 > **编码口径**：climax 落点分四类——A=Results 开头首揭 / B=主表或具体 Model/Table 揭晓 / C=多研究 Study 级递进 / D=理论揭晓（纯理论论文）。
 > **质量保证**：2026-08-09 **全量复核通过（59/59 零差异）**——完整 climax 文本逐份独立判定（`scripts/full_review.py`），A/B/C/D 编码与分布表完全吻合；falling_action 项数双轨解析（extract_layout.py × full_review.py）diff=0。边界口径记录：employee_free_speech 的 climax 叙述主语为 "Results——"（A 型），落点细节在 Study 2-3；kundro2023/hahl2017 的 climax 主语为 "Study N"（C 型）。
 
@@ -19,9 +19,9 @@
 | tangled-constructs | 3 | 3-5（4） | A×1、B×2 |
 | cross-domain-unification | 1 | 4 | B×1 |
 
-**总规律**：climax 压倒性落在 Results 开头首揭（A，39/59=66%）或主表（B，17/59=29%）；C 2 份、D 1 份。falling_action 典型 3-4 项。**"揭晓第一张脸"是商科实证论文的默认 climax 布局**。
+**历史观察，不是规范**：这 59 篇旧读本中多数 climax 标注为 Results 开头或主表。该分布不能推出“商科实证论文默认 climax 布局”，也不能作为任何项目的写作指令；只有经 v0.4 复审并与当前项目可比的证据才能形成 section-level 学习动作。
 
-## knot × resolution 联合分布（校准 story-frame-menu Step B）
+## 历史 knot × resolution 联合分布
 
 | knot × resolution | n | 占比 |
 |-------------------|---|------|

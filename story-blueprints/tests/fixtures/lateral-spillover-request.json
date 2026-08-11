@@ -1,0 +1,9 @@
+{
+  "section": "theory",
+  "paper_type": "quantitative",
+  "story_needs": ["recall-to-social-media-perverse-halo"],
+  "theoretical_problem_form": ["underexamined-cross-brand-consequence"],
+  "retrieval_signals": ["cross-brand-negative-spillover", "consumer-similarity-inference"],
+  "validated_conditions": [],
+  "max_results": 2
+}

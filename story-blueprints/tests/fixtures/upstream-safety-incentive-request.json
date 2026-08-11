@@ -1,0 +1,9 @@
+{
+  "section": "theory",
+  "paper_type": "quantitative",
+  "story_needs": ["alignment-reversal", "upstream-safety-incidence"],
+  "theoretical_problem_form": ["incentive-stakeholder-externality"],
+  "retrieval_signals": ["executive-risk-incentives-and-upstream-safety"],
+  "validated_conditions": [],
+  "max_results": 2
+}

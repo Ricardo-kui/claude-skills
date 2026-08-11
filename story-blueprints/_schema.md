@@ -1,4 +1,6 @@
-# Story Blueprint 字段规范（v0.3 定稿）
+# Story Blueprint 字段规范（v0.3 历史规范）
+
+> 此文件仅解释旧 `blueprints/` 的历史字段，不能用于项目故事路由、即时范文推荐或默认写作规则。其 knot 与 resolution 标签均为 `legacy_interpretation`；新工作以 v0.4 schema 和 Legacy Evidence Layer 为准。
 
 > 每篇论文一份 blueprint。字段事实性来源：蒸馏记录 + 全文回读。缺失标 `待补`，禁止编造。
 

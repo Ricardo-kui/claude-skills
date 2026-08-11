@@ -1,0 +1,9 @@
+{
+  "section": "introduction",
+  "paper_type": "quantitative",
+  "story_needs": ["narcissism-to-competitive-aggressiveness"],
+  "theoretical_problem_form": ["mixed-gamble-executive-antecedent"],
+  "retrieval_signals": ["executive-personality-mixed-consequences", "upstream-product-harm-risk"],
+  "validated_conditions": [],
+  "max_results": 2
+}

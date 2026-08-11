@@ -1,0 +1,9 @@
+{
+  "section": "theory",
+  "paper_type": "quantitative",
+  "story_needs": ["theory-as-rising-action"],
+  "theoretical_problem_form": ["underexamined-decision-process"],
+  "retrieval_signals": ["information-production-stage", "investigation-as-decision"],
+  "validated_conditions": [],
+  "max_results": 2
+}

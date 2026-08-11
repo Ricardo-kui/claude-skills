@@ -1,0 +1,9 @@
+{
+  "section": "theory",
+  "paper_type": "mixed_methods",
+  "story_needs": ["unsafe-adjacency-to-trust-erosion", "common-trunk-parallel-boundaries"],
+  "theoretical_problem_form": ["phenomenon-differentiation"],
+  "retrieval_signals": ["external-adjacency-reputational-risk"],
+  "validated_conditions": [],
+  "max_results": 2
+}

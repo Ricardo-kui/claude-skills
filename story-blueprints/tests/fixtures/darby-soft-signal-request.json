@@ -1,0 +1,9 @@
+{
+  "section": "results",
+  "paper_type": "quantitative",
+  "story_needs": ["results-as-climax"],
+  "theoretical_problem_form": [],
+  "retrieval_signals": ["self-defeating-incentive", "decision-consequence-chain"],
+  "validated_conditions": [],
+  "max_results": 2
+}

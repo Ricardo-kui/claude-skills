@@ -31,10 +31,13 @@ story:
   reader_shift:
     from: "[读者原有理解]"
     to: "[本文希望形成的新理解]"
-  story_frame:  # 仅 story-frame-menu 已选定时填写；可选非门禁——下游 write-theory Phase 0 消费 frame_type 做 knot 架构约束
-    frame_type: "[irony-reversal / paradigms-at-war / consensus-puzzle / neglected-arena / overlooked-alternative / tangled-constructs / half-domain-gap / assumption-flip / cross-domain-unification]"
-    resolution_type: "[arbitration / revelation / exploration / remedy / dimension-split / unification]"
-    exemplar_blueprint: "[blueprint id——实证锚，见 ../story-blueprints/layout-inventory.md]"
+  integrity:
+    theme_grounding: "[grounded / provisional / unsupported]"
+    knot_authenticity: "[grounded / provisional / unsupported]"
+    character_discipline: "[grounded / provisional / unsupported]"
+    payoff_feasibility: "[grounded / provisional / unsupported]"
+    unsupported_moves: []
+    notes: "[项目自身故事的证据边界；不写范文、类型或框架]"
 
 introduction:
   status: drafted

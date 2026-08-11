@@ -1,0 +1,9 @@
+{
+  "section": "theory",
+  "paper_type": "quantitative",
+  "story_needs": ["theory-as-rising-action", "dynamic-direct-and-indirect-damage"],
+  "theoretical_problem_form": ["dynamic-damage-process"],
+  "retrieval_signals": ["product-harm-dynamic-brand-preference", "recall-weakens-advertising-effectiveness"],
+  "validated_conditions": [],
+  "max_results": 2
+}

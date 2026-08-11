@@ -1,0 +1,8 @@
+{
+  "section": "introduction",
+  "paper_type": "quantitative",
+  "story_needs": ["theory-as-rising-action", "introduce-main-characters"],
+  "theoretical_problem_form": ["cross-domain-omission"],
+  "validated_conditions": ["cross-domain-mechanism-bridge"],
+  "max_results": 2
+}

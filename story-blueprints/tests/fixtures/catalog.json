@@ -1,0 +1,41 @@
+{
+  "schema_version": "4.0-lite-catalog",
+  "cards": [
+    {
+      "id": "fixture-primary",
+      "path": "v4/blueprints/fixture-primary.md",
+      "paper_type": "quantitative",
+      "outlet": "AMJ",
+      "publication_status": "published",
+      "coverage": "complete",
+      "theoretical_problem_form": ["competing-explanations"],
+      "narrative_dynamics": ["clarify-theme", "establish-genuine-tension"],
+      "overall_role": "exemplar",
+      "section_learning": {
+        "introduction": {
+          "suitable": "yes",
+          "learn": ["Make the competing explanations legible before promising a resolution."],
+          "caveat": ["Only works when both explanations genuinely predict different outcomes."]
+        }
+      }
+    },
+    {
+      "id": "fixture-contrast",
+      "path": "v4/blueprints/fixture-contrast.md",
+      "paper_type": "quantitative",
+      "outlet": "SMJ",
+      "publication_status": "published",
+      "coverage": "complete",
+      "theoretical_problem_form": ["competing-explanations"],
+      "narrative_dynamics": ["introduce-main-characters"],
+      "overall_role": "partial_exemplar",
+      "section_learning": {
+        "introduction": {
+          "suitable": "partial",
+          "learn": ["Introduce the focal constructs before adding boundary conditions."],
+          "caveat": ["Do not inherit this paper's long contextual opening."]
+        }
+      }
+    }
+  ]
+}

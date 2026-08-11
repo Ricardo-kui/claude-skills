@@ -1,0 +1,9 @@
+{
+  "section": "theory",
+  "paper_type": "quantitative",
+  "story_needs": ["theory-as-rising-action", "manage-multiple-storylines"],
+  "theoretical_problem_form": ["tenure-dependent-decision-pattern"],
+  "retrieval_signals": ["tenure-dependent-response", "blame-attribution-opportunity"],
+  "validated_conditions": [],
+  "max_results": 2
+}

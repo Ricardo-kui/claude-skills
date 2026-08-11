@@ -1,6 +1,6 @@
 interface:
   display_name: "Distill Story Exemplar"
-  short_description: "Distill whole-paper story blueprints (knot, characters, five acts, alternative tellings)"
-  default_prompt: "Use $distill-story-exemplar to distill this paper's story blueprint, preserve evidence provenance, and flag story-level corpus gaps or schema defects."
+  short_description: "Study a paper's whole story and extract bounded writing lessons"
+  default_prompt: "Use $distill-story-exemplar to reconstruct this paper's whole research story, assess only its storytelling, and extract section-specific learning moves without turning it into a template."
 policy:
-  allow_implicit_invocation: true
+  allow_implicit_invocation: false

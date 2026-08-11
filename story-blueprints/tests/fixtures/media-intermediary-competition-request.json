@@ -1,0 +1,9 @@
+{
+  "section": "theory",
+  "paper_type": "quantitative",
+  "story_needs": ["actor-channel-tie-target-mechanism"],
+  "theoretical_problem_form": ["indirect-competitive-channel"],
+  "retrieval_signals": ["media-as-strategic-asset", "outside-mediated-competitive-attack"],
+  "validated_conditions": [],
+  "max_results": 2
+}

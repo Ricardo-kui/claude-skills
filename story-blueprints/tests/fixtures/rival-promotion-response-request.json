@@ -1,0 +1,9 @@
+{
+  "section": "theory",
+  "paper_type": "quantitative",
+  "story_needs": ["rival-shock-opportunity-versus-risk", "action-and-payoff-stage-split"],
+  "theoretical_problem_form": ["underexamined-competitive-reaction"],
+  "retrieval_signals": ["rival-adverse-event-response"],
+  "validated_conditions": [],
+  "max_results": 2
+}

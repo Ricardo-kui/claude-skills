@@ -1,6 +1,8 @@
-# Story Blueprints — 整篇论文故事蒸馏语料（v0.3）
+# Story Blueprints — 整篇论文故事学习语料
 
-> 状态：**skill 接管 + 写侧已接入**。蒸馏协议归 `distill-story-exemplar`（v0.1，独立 skill，Phase 0–5 + 人工预览-确认 gate）；本目录是语料库（数据层），非 skill。当前 **59 份 blueprint：59 份全 ROBUST**（2026-08-09 共同所有权第四波收尾——reporting_comparability / crash_risk 完成，无 PARTIAL）。knot 类型表（2026-08-09 实证对账）：**九原型** neglected-arena / half-domain-gap ＞ **八原型** irony-reversal / overlooked-alternative / paradigms-at-war ＞ 七原型 consensus-puzzle ＞ 六原型 assumption-flip ＞ 三原型 tangled-constructs ＞ 单原型 cross-domain-unification（候选排除记录）＞ compound-only counterevidence ＞ 待建 paradox。**写侧消费已接通**：`paper-story-contract` 新增 `references/story-frame-menu.md`（研究描述 → 候选故事框架），选定后写入 `story.story_frame`（非门禁字段）。
+> **版本状态（2026-08-11）**：`blueprints/` 的 59 份卡现为 **Legacy Evidence Layer**：不可被运行时推荐、不可定义项目故事、不可因旧覆盖标签而被视为叙事范本。其可查询元数据见 `legacy/legacy-manifest.json`，生成与发现规则见 `references/legacy-evidence-layer.md`。`v4/blueprints/` 是唯一可进入即时学习检索的经复审卡层。
+
+> 状态：蒸馏协议归 `distill-story-exemplar`；本目录是语料库而非 skill。v0.3 的旧 `ROBUST/PARTIAL` 状态统一翻译为 `legacy_coverage_confidence: claimed_complete/claimed_partial`，仅说明旧蒸馏声称的覆盖度。它不表示叙事质量、理论正确性、因果可信度或写作可迁移性。`paper-story-contract` 已不消费本库来选择故事框架；项目故事先通过自身 integrity gate，写作 skill 才可按当次条件检索 v0.4 学习对象。
 
 ## 目的
 
@@ -13,12 +15,13 @@
 | 资产层 | 归属 | 产出 |
 |--------|------|------|
 | Section 级语料 | `write-introduction/academic-writing-corpus`、`write-theory/corpus`、`write-methods/econometric-models`、`write-results/econometric-models` | 模块骨架、表达 DNA、slot 模板 |
-| **Story 级蓝图（本库）** | `story-blueprints/blueprints/` | 每篇论文一份：knot/角色/五幕/解法/另类讲法 |
-| **讲法汇编（本库）** | `story-blueprints/tellings/alternative-tellings-compilation.md` | 12 讲法家族 × 实例聚合——两初心事的交点（蒸馏产物 → 设计原料） |
-| 故事契约 | `paper-story-contract` | 自己论文的 story 字段（消费本库做故事框架选择） |
+| **Legacy Evidence Layer** | `story-blueprints/blueprints/` + `legacy/legacy-manifest.json` | 历史阅读证据、发现与复读候选；`runtime_eligibility: no` |
+| **v0.4 Learning Layer** | `story-blueprints/v4/blueprints/` | 重建、评价、分节学习动作分离后的可检索学习卡 |
+| **讲法汇编（历史）** | `story-blueprints/tellings/alternative-tellings-compilation.md` | 旧资产的研究线索；不得直接成为项目故事或写作模板 |
+| 故事契约 | `paper-story-contract` | 项目自身 theme、knot、characters、storylines、reader shift 与 integrity，不消费范文类型 |
 | 审查 | `paper-review` Step 1、`pollock-qc` | 草稿的故事架构审计 |
 
-**语料不淘汰原则**：blueprint 不复制、不取代 section 变体——只通过 `corpus_links` 链接已有变体（如 Pontikes 的 intro 变体 `04-reality-contradicts-consensus` 变体G）。story 层与 section 层是同一论文的两个投影，不是竞争关系。
+**语料不淘汰原则**：legacy blueprint 不复制、不取代 section 变体；它作为历史证据保留。任何由它导出的 section 规则必须在独立 provenance registry 中获得 v0.4 复审支持，不能以旧卡数量或旧 knot 标签直接取得默认推荐资格。
 
 ## 覆盖度规则
 
@@ -37,10 +40,10 @@
 
 - [x] 独立 `distill-story-exemplar` skill 已建（v0.1，Phase 0–5 + 人工预览 gate）
 - [x] **Phase 0 vault 检索协议已入 skill**（2026-08-09）：按论文短名检索 `narrative_analysis/` 下 intro/theory/methods_results/deep_distillation/_story_arcs 报告，更新 distilled_sections；vault `_story_arcs/` 为早期故事层资产（链接不复制）
-- [x] 用 vault 检索升级 PARTIAL：lashley2020 与 desjardine2022 已升 ROBUST（9 ROBUST + 2 PARTIAL：desai2012 / desjardine2023）
+- [x] 历史记录：曾以 vault 检索补齐部分 v0.3 覆盖；该阶段的 `ROBUST/PARTIAL` 已由 Legacy Evidence Layer 翻译为 coverage claim，不保留为质量标签。
 - [x] **knot 类型表定稿评审（2026-08-09）**：11 型定稿（paradox 保留待建、counterevidence 降 compound-only、overlooked-alternative/irony-reversal/consensus-puzzle/paradigms-at-war 双原型达成、其余单原型标注）；resolution 6 型定稿（remedy 独立保留 + 边界规则 + paradigms-at-war→裁决类倾向配对）；knot×resolution 正交性验证通过（11 组合无重复）
-- [x] 回填剩余已深度蒸馏论文（2026-08-09 已扩至 59 份全 ROBUST——含 Mayo 2022、Desai 2011、Pfarrer 2010、Malik 2025 等；新类型全部找到多原型：tangled 三原型 / half-domain 九原型 / cross-domain-unification 单原型 / assumption-flip 六原型）
-- [x] 接入 `paper-story-contract`（story-frame-menu：研究描述 → 2-3 个候选故事框架；2026-08-09 实证回填 layout-inventory 锚 + 写侧接通方向 1——story-modulation/knot-architecture-modulation）
+- [x] 历史记录：v0.3 已扩展至 59 份，现整体纳入 Legacy Evidence Layer，作为发现和比较语料，而非类型学或推荐池。
+- [x] 已完成旧 story-frame 线路退役：`paper-story-contract` 仅维护 project-owned integrity；范文仅能在 section 调用后以 v0.4 瞬时比较出现。
 - [x] Ch03 工具层从 intro 扩展到全篇（storytelling_tools 五字段已全量补齐；pacing/布局实证聚合入 `layout-inventory.md`）
 - [x] knot 类型表定稿（2026-08-09：11 型定稿 + 原型计数持续演进——详见第 3 行状态行与 `_schema.md` 词表）
 - [x] **`validate_blueprints.py` 校验器接入**（2026-08-11）：对照 `_schema.md` 逐份校验（文件头/Story 节/knot 类型/resolution 类型）+ `_index.md` 同步 + knot 主型计数对账；入口 `python scripts/validate_blueprints.py`，退出码 0=无 ERROR。新增 blueprint 后跑一遍，index 与词表计数须保持对账一致

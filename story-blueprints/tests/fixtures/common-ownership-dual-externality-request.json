@@ -1,0 +1,9 @@
+{
+  "section": "theory",
+  "paper_type": "quantitative",
+  "story_needs": ["theory-as-rising-action", "conditional-dual-externality-account"],
+  "theoretical_problem_form": ["competing-cross-firm-externalities"],
+  "retrieval_signals": ["common-ownership-cross-firm-externalities", "technology-spillover-internalization"],
+  "validated_conditions": ["genuine-mechanism-paradox"],
+  "max_results": 2
+}

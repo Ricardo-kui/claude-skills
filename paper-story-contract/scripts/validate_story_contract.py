@@ -16,6 +16,7 @@ STATUS = {"provisional", "confirmed"}
 STAGES = {"preparing", "blocking", "refining", "finishing"}
 EVIDENCE_STATES = {"unstable", "mixed", "stable"}
 MAIN_ROLES = {"focal_predictor", "focal_outcome", "core_process"}
+INTEGRITY_STATES = {"grounded", "provisional", "unsupported"}
 
 
 def nonempty(value: Any) -> bool:
@@ -103,6 +104,27 @@ def validate(document: Any) -> list[str]:
                     errors.append(
                         f"{prefix}.constructs references undeclared character: {construct}"
                     )
+
+    integrity = story.get("integrity")
+    if integrity is not None:
+        if not isinstance(integrity, dict):
+            errors.append("story.integrity must be a mapping")
+        else:
+            for field in (
+                "theme_grounding",
+                "knot_authenticity",
+                "character_discipline",
+                "payoff_feasibility",
+            ):
+                if integrity.get(field) not in INTEGRITY_STATES:
+                    errors.append(f"story.integrity.{field} has an invalid value")
+            unsupported_moves = integrity.get("unsupported_moves")
+            if not isinstance(unsupported_moves, list) or not all(
+                nonempty(move) for move in unsupported_moves
+            ):
+                errors.append("story.integrity.unsupported_moves must be a list of non-empty strings")
+            if not nonempty(integrity.get("notes")):
+                errors.append("story.integrity.notes must be a non-empty string")
     return errors
 
 
@@ -179,6 +201,17 @@ def self_test() -> int:
             "unsupported version",
             {**base, "story": {**base["story"], "schema_version": 2}},
             "schema_version",
+        ),
+        (
+            "malformed integrity ledger",
+            {
+                **base,
+                "story": {
+                    **base["story"],
+                    "integrity": {"theme_grounding": "unknown"},
+                },
+            },
+            "story.integrity.theme_grounding",
         ),
     ]
     failed = False
