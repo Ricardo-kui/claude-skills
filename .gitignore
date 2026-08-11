@@ -104,6 +104,15 @@
 !handoff/
 !handoff/**
 
+# Book-to-skill distilled routers (Miles 2012 / Huntington-Klein 2025)
+!miles-management-organization-theories/
+!miles-management-organization-theories/**
+!huntington-klein-causal-design/
+!huntington-klein-causal-design/**
+# Codex-only agent config: keep locally (Codex still reads it), exclude from repo
+miles-management-organization-theories/agents/
+huntington-klein-causal-design/agents/
+
 # Track user's loose files
 !empirical-writeup.md
 !methods_results_quality_check.py
