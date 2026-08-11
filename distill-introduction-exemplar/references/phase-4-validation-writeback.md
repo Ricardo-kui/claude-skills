@@ -20,8 +20,8 @@
 - `module_sequence_patterns` → 从各 combo 的 `module_sequences` 列表统计
 - `hook_patterns` / `tension_patterns` → 从各 combo 的 `hook_ids` / `tension_ids` 统计
 - `tension_depth` / `stakes_specificity` → 从 `papers` 列表中各论文的对应字段统计
-- `novel_findings` → 基于 Phase 2.2 的治理动作（需辅以 Phase 2.4 的 VALIDATED skeletons；缺少资产级数据时只做 combo 聚合，不臆造新增资产）
-- `style_observations` → 可从 `combos_accumulator` 聚合后写入 Phase 4 报告；它不形成 corpus 写回或必填接口
+- `novel_findings` → 基于 Phase 2.2 的入库动作（已在 `_batch_state.yaml` 中不可直接获取——需辅以 Phase 2.4 的 VALIDATED skeletons 数据。如果上下文中有当前 Session 处理的论文的 Phase 2 数据，可合并使用；如果没有，仅基于 `_batch_state.yaml` 的 combo 级别模式做聚合，不做 skeleton 级别的 novel_findings）
+- `style_profile_enrichment.per_combo_styles` → 从 `combos_accumulator` 的 `tones`、`distinctive_features_accumulator`、`avoids_accumulator`、`module_ratios_accumulator` 聚合计算
 - `incommensurability_route_distribution` → 从各论文的 `incommensurability_route` 聚合 R1–R4、hybrid 与 unclassified；分开统计 L0 跨路由不变量、L2 route-specific tactics 和 L3 paper signatures
 
 **非批量模式**：如果当前运行**未**标记 `--batch`（单篇蒸馏），Phase 4 基于当前论文的 Phase 2-3 数据直接产出 corpus 沉淀建议，不读 `_batch_state.yaml`。
@@ -104,11 +104,11 @@ phase_4_corpus_reference:
 
 **Incommensurability 专属原则**：细分类提高检索和比较精度，不降低核心规则的证据门槛。L2 即使达到 VERIFIED/ROBUST 也默认保持 route-specific optional variant；只有跨路线复现且通过 Phase 4.7 的 L0 功能，才可成为普遍核心规则候选。L3 永不晋升。
 
-> **governance_plan / skill_design_feedback 两个硬化输出块**的完整 YAML 格式已外置：见 `../protocols/phase4_output_blocks.md`。风格观察保留在 Phase 3 报告，不走自动写回。
+> **corpus_enrichment / style_profile_enrichment / skill_design_feedback 三个硬化输出块**的完整 YAML 格式已外置：见 `../protocols/phase4_output_blocks.md`。Phase 4 聚合输出生成时加载。
 
-### Phase 4.5 — 证据与资产治理逻辑
+### Phase 4.5 — 证据注册表更新逻辑
 
-Phase 4 完成后生成 `actions`，交给 `../../write-introduction/scripts/introduction_corpus_governance.py`。不得分别手工修改 Markdown、registry 与 routing table。
+Phase 4 完成后，根据 `corpus_enrichment` 块更新 `../../write-introduction/academic-writing-corpus/_evidence_registry.yaml`：
 
 **状态自动判定规则**：
 
@@ -118,35 +118,29 @@ Phase 4 完成后生成 `actions`，交给 `../../write-introduction/scripts/int
 | `paper_count >= 3` | **VERIFIED** |
 | `paper_count <= 2` | **EMERGING** |
 
-**动作语义**：
+**更新步骤**：
 
-| 动作 | 写入效果 |
-|---|---|
-| `NONE` / `REUSE` | 不修改资产 |
-| `EXTEND_SOURCE` | 幂等追加证据，不新增编号 |
-| `ADD_REFERENCE` | 新增单篇 reference_exemplar，不进默认菜单 |
-| `PROPOSE_VARIANT` | 只验证提案，不写入生成菜单 |
-| `PROMOTE` | 满足门槛或人工专家审核后改变角色 |
-| `MERGE` / `DEPRECATE` | 保留旧 ID、来源与迁移信息，不物理删除 |
-| `SET_REFERENCE_MENU` | 合并或新增后原子替换某父策略最多 5 个代表性 reference |
-| `PROPOSE_ROUTING_CHANGE` | 只生成 `explicit_review: true` 审核包 |
+1. 将 Phase 4 输出的 `corpus_enrichment` YAML 块保存为临时文件（如 `/tmp/corpus_enrichment.yaml`）
+2. 运行本 skill 目录下的自动化工具：
+   ```bash
+   python _update_registry.py /tmp/corpus_enrichment.yaml
+   ```
+3. 工具自动完成：
+   - 读取 `_evidence_registry.yaml`
+   - 对每个 `evidence_updates` 条目：追加 papers、重算 paper_count、按阈值判定 status
+   - 应用 `gap_distribution_updates` 和 `anti_pattern_updates`
+   - 更新 `meta.last_updated` 和 `meta.batches_processed`
+   - 写回注册表
 
-```yaml
-actions:
-  - action: ADD_REFERENCE
-    target_parent_id: hooks:03-data-shock
-    nearest_neighbor_id: hooks:03-data-shock:vC
-    title: 跨层级升级型
-    source_paper: author_year (SMJ)
-    template: "[Trend] escalates into [cross-level consequence]."
-    capability_loss_if_merged: "新增跨层级升级这一可迁移证据载体。"
-```
+**工具位置**: `_update_registry.py`（与本 SKILL.md 同目录）
+
+**注意**：Phase 4.5 只更新证据注册表的**定量证据**。定性内容（句法模板、关键特征、反模式提醒）由 Phase 4.6 写入 corpus .md 文件。
 
 ---
 
-### Phase 4.6 — 事务化 writeback
+### Phase 4.6 — 语料库文件受控入库
 
-将通过 Phase 2.4 与 Story-Fidelity Gate 的计划保存为 YAML。单篇资产最多 ADD_REFERENCE；核心规则候选转交 Phase 4.7。
+将通过 Phase 2.4 且通过 Story-Fidelity Gate 的 reference-level 资产写入 corpus。核心规则候选转交 Phase 4.7，不在本阶段直接修改。
 
 #### 执行门控
 
@@ -155,25 +149,30 @@ actions:
 | 条件 | 来源 | 说明 |
 |------|------|------|
 | Phase 2.4 裁决 = VALIDATED | Phase 2.4 skeleton_critic | 三项测试全部通过 |
-| Phase 2.2 产生治理动作 | Phase 2.2 `[治理动作]` 字段 | 使用稳定 parent/asset ID |
-| 最近邻与能力损失 | catalog + Phase 2.2 | ADD_REFERENCE/PROPOSE_VARIANT 必须说明合并会损失什么能力 |
+| Phase 2.2 标记为需入库 | Phase 2.2 `[入库动作]` 字段 | 值为 `append_variant` 或 `create_new_file` |
+| 非重复 | 读取目标文件后人工判断 | 新变体与已有变体的模板句法相似度 < 70% |
 | Story fidelity | Phase 0.5 | 只能是 `section_variant` 或 `ritual_only` |
 
 **跳过条件**：
-- `[治理动作]` = `NONE` / `REUSE` → 不写 corpus
+- `[入库动作]` = `none` → 该骨架已被已有变体覆盖，跳过
 - Phase 2.4 裁决 = REVISE → 标记为待修正，不写入（但记录在 Phase 4.6 摘要的"待修正"栏）
 - Phase 2.4 裁决 = REJECT → 不写入
 - `core_candidate` → 输出 `skill_design_feedback` 并写入缺陷注册表，不在 Phase 4.6 写 corpus
 - 触及 SKILL.md、路由或验证器的建议 → 交 Phase 4.7 判定
 - 触及 story schema、stage gate 或跨技能接口的建议 → 标记 `explicit_review`
 
-**执行步骤**：
+#### 操作 A：追加变体到已有模板文件（`append_variant`）
 
-1. 将 `actions` 保存为计划文件。
-2. 运行 `python ../../write-introduction/scripts/introduction_corpus_governance.py apply-plan <plan.yaml> --dry-run`。
-3. 人工检查新增 reference、promotion/merge 边和 routing 审核包。
-4. 去掉 `--dry-run` 正式执行。
-5. 运行 governance `validate` 与 `introduction_asset_catalog.py audit`。snapshot、重复 ID、悬空 merge、角色门槛或每父策略候选上限任一失败即视为 Phase 4 失败。
+**步骤**：
+
+1. **读取目标文件**：Phase 2.2 `[对应语料库]` 字段指定的路径
+2. **确定变体编号**：找到文件中最后一个 `### 变体 [字母]`，使用下一个字母（A→B→...→Z）
+3. **组装变体块**：从 Phase 2.2 骨架字段提取数据，按以下格式组装。每个 corpus .md 字段右侧标注了数据来源——**直接从 Phase 2.2 复制，不重新阅读原文**：
+4. **同步目录索引 `_index.md`**（2026-08-09 闭环补丁）：写入 corpus 文件后，必须同步对应目录的 `_index.md`——新增/更新该文件行（核心特征、验证状态、变体明细）。`_index.md` 是选材 Gate 的读入源，不同步会导致下轮选材看不到新变体。新文件（`create_new_file`）必须在索引中新增行；追加变体必须更新已有行的变体明细。
+
+```
+> **入库 corpus 文件模板**（变体模板、canonical_id 文件模板、风格画像各节、Phase 4.6 入库摘要）已外置：见 `../protocols/corpus_file_templates.md`。Phase 4.6 写入 corpus 文件前加载。
+```
 
 ---
 
@@ -198,7 +197,7 @@ actions:
 
 - 功能摘要或元数据：可登记观察，但保持 `EMERGING/log_only`，不能触发核心修改。
 - 单篇完整文本：登记为 `EMERGING`，可生成 optional variant，不得建立普遍核心规则。
-- 至少 3 篇完整文本：`VERIFIED`；若未跨至少 2 个期刊，只能晋升为有范围限定的生成资产，不能据此建立跨期刊核心规则。
+- 至少 3 篇完整文本且跨至少 2 个期刊：`VERIFIED`，可成为有边界核心修正候选。
 - 至少 5 篇完整文本且跨至少 2 个期刊：`ROBUST`。
 - 决定性反例：若已核验的顶刊完整文本直接推翻“永远/必须/只能”式绝对规则，标记 `absolute_rule: true` + `decisive_falsifier: true`，状态为 `FALSIFIER`。它只允许将绝对规则**条件化**，不得据此建立相反的普遍规则。
 - 语料中的“零出现”不是排他性证据，除非样本覆盖充分且理论上能说明为何该模式不适用。

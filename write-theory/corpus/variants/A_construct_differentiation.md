@@ -33,12 +33,18 @@
 they differ in [N] fundamental ways."
 ```
 
+**原文锚点** (Pollock et al. 2015, ASQ "Untangled"):
+> "Further, the two constructs have many similarities: both are path dependent and accrue value over time; both provide signals that influence public evaluations of firms; and both affect organizational outcomes, including the ability to charge premium prices, acquire resources, and influence partnering decisions." ... "Although these definitions are conceptually similar, they differ in four fundamental ways."
+
 **差异辨析段落**（每个差异一段）：
 ```
 "First, [Construct A] is derived from [theoretical origin A], whereas [Construct B] 
 emerges from [theoretical origin B]. This difference in lineage means that [construct A] 
 emphasizes [aspect], while [construct B] prioritizes [different aspect]."
 ```
+
+**原文锚点** (Pollock et al. 2015, ASQ "Untangled"):
+> "First, status primarily reflects perceptions of an organization's position in a social hierarchy based on observable patterns of connections." ... "In contrast, reputation is derived from stakeholders' estimations of organizational attributes that shape expectations of the firm's future behaviors."
 
 **具象化差异**（用例子）：
 ```
@@ -47,12 +53,18 @@ emphasizes [aspect], while [construct B] prioritizes [different aspect]."
 similarity], [counterpoint showing difference]."
 ```
 
+**原文锚点** (Pollock et al. 2015, ASQ "Untangled"):
+> "Washington and Zajac's (2005) Jaguar example vividly illustrated the differences between reputation and status. Although the automobile manufacturer long suffered from a reputation for poor quality, it nonetheless was able to charge premium prices because of the privilege that accompanied its high social status as a luxury automobile manufacturer and the associated social status of those who drove its vehicles."
+
 **收束**：
 ```
 "Taken together, this research establishes clear theoretical differences between 
 [Construct A] and [Construct B]. By disentangling these constructs, we can develop 
 more precise predictions about their distinct effects on [outcome]."
 ```
+
+**原文锚点** (Pollock et al. 2015, ASQ "Untangled"):
+> "Taken together, this research establishes clear theoretical differences between status and reputation and shows the different ways they can influence strategic decision making and firm performance."
 
 ---
 
@@ -62,6 +74,9 @@ more precise predictions about their distinct effects on [outcome]."
 |------|------|------|
 | 差异主效应 | "[Construct A] will have a [stronger/weaker] [positive/negative] effect on [DV] than [Construct B]." | "Reputation will have a stronger positive effect on status than celebrity." |
 | 条件效应（基于辨析） | "When [condition derived from differentiation], [Construct A]'s effect on [DV] will be [enhanced/diminished]." | "When firms are young, reputation will have a greater effect on status." |
+
+**原文锚点** (Pollock et al. 2015, ASQ "Untangled"; 差异主效应与条件效应的假设原文):
+> "Hypothesis 1a (H1a): When VC firms are young, reputation will have a greater effect on status than status will have on reputation." ... "Hypothesis 1b (H1b): When VC firms are older, status will have a greater effect on reputation than reputation will have on status."
 
 ---
 
@@ -110,6 +125,9 @@ Fourth, [A] and [B] differentially influence [strategic decisions and stakeholde
 
 These differences set up our inquiry into how [A] and [B] coevolve.
 ```
+
+**原文锚点** (Pollock et al. 2015, ASQ "Untangled"):
+> "Reputation... is best understood as broad public recognition of the quality of a firm's activities and outputs." ... "Status, for organizations as well as individuals, is broadly understood as the position in a social hierarchy that results from accumulated acts of deference." ... "Although these definitions are conceptually similar, they differ in four fundamental ways."
 
 **关键原则**:
 - 每个差异必须有文献支撑，最好有例子

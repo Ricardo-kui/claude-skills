@@ -95,6 +95,32 @@ source: Manually curated from MVP30 narrative_analysis files
 
 ---
 
+### 变体 D：历史人物受难悖论型（cutolo2024 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）。story_fidelity: section_role=exposition; knot_relation=tie（把惩罚共识人格化系进故事）; character_effect=clarifies_main（主角 atypical actor 提前获得人脸）; pacing_effect=improves（压缩历史符号，一段完成 hook+scale-up）; classification=section_variant。
+
+**功能节拍**: 具名历史人物（受难事实）→ 后见之明反转（此人后来伟大）→ scale-up 到普遍现象 → 文献证据加固
+
+**模板**:
+> [Name] is considered one of the great [fathers/figures] of [domain], but [pronoun] was fiercely ostracized for defying established norms of [domain] in [his/her] time. A forerunner of [movement], [pronoun] [broke away from / deviated from] [mainstream] and developed a highly atypical [style/approach] that resisted categorization in contemporary [theories], resulting in the systematic rejection of [his/her] work: [institution] rejected [pronoun]'s submissions every single year from [Y1] to [Y2]. This example is illustrative of a widely studied phenomenon: [audiences] tend to misunderstand, avoid, or devaluate [actors] with atypical [traits/offers] who fail to conform to [category-based expectations] ([citations]).
+
+**来源**: Cutolo & Ferriani (2024, *Journal of Management*), P1
+
+**原文锚定**:
+> "Paul Cézanne is considered one of the great fathers of modern art, but he was fiercely ostracized for defying established norms of beauty in his time. A forerunner of Cubism, he broke away from Impressionism and developed a highly atypical aesthetic style that resisted categorization in contemporary aesthetic theories, resulting in the systematic rejection of his work: The Salon ... rejected Cézanne's submissions every single year from 1864 to 1869. This example is illustrative of a widely studied phenomenon in organizational and economic sociology: organizational audiences tend to misunderstand, avoid, or devaluate social actors with atypical traits..."
+
+**关键特征**:
+- **历史人物人格化**: 用具名文化伟人（Cézanne）的受难把"惩罚共识"从抽象规律变成有脸的悲剧——读者先共情人物，再接受现象
+- **后见之明反转（认知失调源）**: 读者知道 Cézanne 后来是现代艺术之父——"被拒 vs 伟大"并置制造"惩罚错了"的直觉，hook 的能量来自读者自己的知识
+- **具体时间数字**: "every single year from 1864 to 1869" 给受难以可验证的真实性与重复性（非一次性事件）
+- **scale-up 句**: "This example is illustrative of a widely studied phenomenon" 把个案升级为现象，随后文献证据加固（惩罚在战略/市场/身份/消费多域复现）
+
+**适用**: 共识惩罚/排斥/污名类现象（category penalty、nonconformity punishment、stigma）的开场；读者普遍知道该历史人物的最终地位（后见之明反转才成立）；Anecdote 型中能量。
+
+**禁忌**: ① 人物必须"最终被证明伟大"且读者知道这一点——否则没有认知失调；② 时间数字必须真实；③ 不要写成 10-immersive-narrative 的场景沉浸（本变体是压缩历史符号，非五幕叙事）；④ 与变体 A（valence 反转）区别——A 是结果层面反转，本变体是人物层面人格化悖论。
+
+---
+
 ## 组装规则
 
 ### 必须配对

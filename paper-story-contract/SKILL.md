@@ -5,6 +5,8 @@ description: Diagnose and maintain a Pollock-style whole-paper story contract be
 
 # Paper Story Contract
 
+> **核心理念（Pollock 2025 Ch01）**：把自己当作 storyteller 而非 reporter——写出来的不是 research report，是故事。本 skill 维护的正是这个故事的状态：theme（研究问题）、central knot（张力）、characters（构念）、storylines（旅程）、reader shift（读者改变）。Ch02 的告诫同样适用：**plot 从角色与情境中长出，不要强加**——故事框架（story_frame）是供你选择的范本，不是套上去的模具。
+
 ## Role
 
 Maintain the paper's shared storytelling state. Diagnose the story before section drafting, expose unresolved assumptions, and give downstream skills one canonical contract. Do not draft manuscript sections.
@@ -29,9 +31,10 @@ Defaults:
 2. If a canonical `story` block exists, validate it with `scripts/validate_story_contract.py`.
 3. If it is absent, inspect legacy Introduction fields using the migration map in `references/schema.md`.
 4. Identify the theme question, central knot, theoretical stakes, main and supporting characters, storylines, promised resolutions, reader shift, evidence state, and stage.
-5. Mark inferred values as assumptions. Use `status: provisional` until the user or manuscript evidence confirms them.
-6. Apply `references/stage-gates.md`. Stop at Story Intake when a required field is missing or contradictory.
-7. Return the canonical YAML block, validation result, unresolved assumptions, and the permissions granted to downstream writing skills.
+5. **故事框架选择（Story Frame Selection，可选但推荐）**：若用户提供研究描述且未指定故事框架，加载 `references/story-frame-menu.md`，从 `../story-blueprints/` 语料生成 2-3 个候选框架卡（knot 类型 × 解法性格 × 原型 blueprint），由用户拍板；选定结果写入 `story.story_frame`，被拒候选记入 `story_frame.alt_frames`。若用户已指定框架，或旧字段足以推断（`introduction.theory_hints.narrative_arc` 等），跳过本步并说明推断依据。`story_frame` 是契约的一部分但**不是门禁字段**——缺失不阻塞 Story Intake。
+6. Mark inferred values as assumptions. Use `status: provisional` until the user or manuscript evidence confirms them.
+7. Apply `references/stage-gates.md`. Stop at Story Intake when a required field is missing or contradictory.
+8. Return the canonical YAML block, validation result, unresolved assumptions, and the permissions granted to downstream writing skills.
 
 ## Universal Full-Section Gate
 
@@ -91,6 +94,7 @@ Return `BLOCKED` rather than generating a polished section when the theme questi
 - Canonical schema and legacy migration: `references/schema.md`
 - Stage semantics and section gates: `references/stage-gates.md`
 - Distillation adoption gate: `references/distillation-gate.md`
+- **故事框架选择菜单（Story Frame Menu）**: `references/story-frame-menu.md` — 研究描述 → 候选故事框架（knot × resolution × 原型 blueprint），消费 `../story-blueprints/` 语料（59 份 blueprint、9 型 knot 有实证样本、6 型 resolution、对照对家族；布局实证见 `../story-blueprints/layout-inventory.md`）
 - Deterministic validation: `python scripts/validate_story_contract.py <paper-state.yaml>`
 - Workflow contract tests: `python scripts/test_story_workflow.py`
 

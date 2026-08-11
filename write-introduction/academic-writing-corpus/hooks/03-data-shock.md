@@ -52,6 +52,22 @@ source: Manually curated from MVP30 narrative_analysis files + zorn2017 distill
 
 ---
 
+
+## 变体速查表
+
+> 检索辅助（2026-08-09 P0 补建）。状态列空白 = 正文未标注验证状态（旧变体）。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架、适用条件与诚实边界见下方变体正文。
+
+| # | 变体 | 适用场景 | 状态 | 来源 |
+|---|---|---|---|---|
+| A | 趋势+规模型（eilert2017 型） | 趋势数据冲击开场：规模数字建立 stakes 后转缺口 |  | eilert2017 (JM), P1 |
+| B | 行业新闻型（shi2021 型） | 行业新闻/事件数据开场：单一行业现象锚定 |  | shi2021 (JMR), adapted |
+| C | 成本量化型（eilert2017 P2-P3 型） | 成本量化冲击开场：数字→成本→后果递进 |  | eilert2017 (JM), P2-P3 |
+| E | 危机数据型（darby2025 型） | 产品召回、药品安全、食品安全、环境灾难等"延迟=伤亡"的研究领域 |  | darby2025 (JSCM), P1 |
+| F | 行业统计 + 现象归因型（kim2022 型） | 适用于有可获取行业统计数据的商业现象研究；特别适合 MS、JOM、POM 等运营/管理科学期 |  | kim2022 (MS), P1 |
+| D | 多重数据锚点型（vadakkepatt2022 型） | 管理相关性极强、但缺乏理论悬念的现象（如企业政治行为、高管薪酬、并购等） |  | vadakkepatt2022 (JM), P1 |
+| G | 成对跨行业灾难实例化型（li2025 型） | 第三方危害/溢出效应研究（供应商、合作伙伴、利益相关者间接受损）；有 ≥2 个已发表 eve |  | li_bapuji_talluri_singh_naraya |
+| H | 逃逸注意力的极端结构普及型（Zorn et al. 2017 型） | 拥挤文献中新结构特征已高度普及但学术命名/理论化滞后；配对 Tension 21-insti | EMERGING（单篇来源；仅作 | Zorn et al. (2017, SMJ), P1 |
+
 ## 句法模板
 
 ### 变体 A：趋势+规模型（eilert2017 型）
@@ -111,7 +127,7 @@ source: Manually curated from MVP30 narrative_analysis files + zorn2017 distill
 **来源**: darby2025 (JSCM), P1
 
 **原文锚定**:
-> "Navigating failure is a critical part of managing today's supply chains. Recalls are one painful failure with undesirable implications for supply chains and society. Although the FDA has guidelines for when a recall is warranted, firms have considerable discretion over when they initiate recalls. Unfortunately, slow recalls are all too common, and the implications for the recalling firm, its supply chain, and society grow as the time-to-recall increases. For example, the anti-inflammatory drug Vioxx was linked to as many as 88,000 heart attacks and 38,000 deaths between when Merck became aware of its dangers in 2000 and its recall of the drug in 2004. This leaves scholars, regulators, and consumers wondering: what can encourage more timely recalls?"
+> "Navigating failure is a critical part of managing today's supply chains. Recalls are one painful failure with undesirable implications for supply chains and society. Although the Food and Drug Administration (FDA) has guidelines for when a recall is warranted, firms have considerable discretion over when they initiate recalls. Unfortunately, slow recalls are all too common, and the implications for the recalling firm, its supply chain, and society grow as the time-to-recall increases. For example, the anti-inflammatory drug Vioxx was linked to as many as 88,000 heart attacks and 38,000 deaths between when Merck became aware of its dangers in 2000 and its recall of the drug in 2004. This leaves scholars, regulators, and consumers wondering: what can encourage more timely recalls?"
 
 **关键特征**:
 - **具体伤亡数字**: 用精确数字（88,000 heart attacks / 38,000 deaths）建立危机紧迫感
@@ -204,7 +220,7 @@ source: Manually curated from MVP30 narrative_analysis files + zorn2017 distill
 **来源**: li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM), P1
 
 **原文锚定**:
-> "Managing the negative impacts of crisis events has become a strategic issue for many organizations, as negative events such as chemical accidents (Diestre and Rajagopalan 2014), customer information breaches (Modi et al. 2015), and product-harm crises (Cleeren et al. 2017) threaten the long-term prosperity of the stricken organizations. The negative impact of such crises on an organization can also spread to its suppliers, even if they are not directly involved in the actions that precipitated the crisis. For example, the Volkswagen emissions scandal resulted in its Tier-1 suppliers experiencing a 2.69% firm value loss (Jacobs and Singhal 2020), and the 2018 US government ban on Chinese telecommunications firm ZTE caused a 3.33% abnormal firm value loss for US suppliers (Jacobs et al. 2022). These impacts are 'vertical spillovers,' defined as the losses a supplier firm incurs when its buyer firm experiences a negative event."
+> "Managing the negative impacts of crisis events has become a strategic issue for many organizations, as negative events such as chemical accidents (Diestre and Rajagopalan 2014), customer information breaches (Modi et al. 2015), and product-harm crises (Cleeren et al. 2017) threaten the long-term prosperity of the stricken organizations. The negative impact of such crises on an organization can also spread to its suppliers, even if they are not directly involved in the actions that precipitate the crisis. For example, the Volkswagen emissions scandal resulted in its Tier-1 suppliers experiencing a 2.69% firm value loss (Jacobs and Singhal 2020), and the 2018 US government ban on Chinese telecommunications firm ZTE caused a 3.33% abnormal firm value loss for US suppliers (Jacobs et al. 2022). These impacts are 'vertical spillovers,' defined as the losses a supplier firm incurs when its buyer firm experiences a negative event."
 
 **关键特征**:
 - **成对而非单一实例**：用两个独立真实危机（不同行业、不同国家：汽车排放丑闻 + 电信禁令）而非单一案例，证明现象跨情境复现——比单例（变体 C 的 Toyota）可迁移性更强

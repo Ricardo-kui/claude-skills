@@ -22,8 +22,8 @@ source_papers:
   - wowak2025 (MS, 2025): "Convergent dual-literature-scan + awareness-and-mitigation — two parallel 'known→unknown' scans converge on one gap from opposite directions; implications split into descriptive awareness + empirically-tested mitigation"
   - kashmiri_nicol_arora2017 (JAMS, 2017): "Humanize firm strategy + open the mechanism black box + install a controllable countervailing remedy"
   - kim_lee2026 (SMJ, 2026): "Full-time validation + revealed-preference WTP + stage durability null + gendered early-stage advantage"
-  - li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM, 2026): "pipes/prisms integration + network liability + extended network intermediaries"
-updated: 2026-08-06
+  - desjardine_li_shi_2025_amj (AMJ, 2025): "Primary contribution separated + 'several other streams' multi-stream contrast — most-prior-However-we-show per stream + call response embedded"
+updated: 2026-08-09
 created: 2026-05-19
 source: Extracted from MVP30 narrative_analysis files + SKILL.md Makadok table + kim_lee2026
 ---
@@ -128,7 +128,7 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 ## 变体 D：列表展开型（malshe2015 型）
 
 **模板**:
-> "We contribute to the [field] literature in several ways. First, we [contribution 1]. Second, we [contribution 2]. Third, we [contribution 3]."
+> "We contribute to the [field] literature in several ways. First, we [contribution 1]. Second, we [contribution 2]. Finally, we [contribution 3]."
 
 **来源**: malshe2015 (JM), P4
 
@@ -337,7 +337,7 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 **模板**:
 > "Our study makes [N] contributions to [field] theory and practice. First, our study is one of the first to test [specific relationship]. [Brief literature context + specific gap]. Second, our study tests [specific distinction] and contributes to prior research in important ways. [Prior research limitation]. Our study responds to this call. We distinguish between [dimension A] and [dimension B] in an effort to provide a more complete picture of [consequences]. Third, our study contributes to conversations in prior research about [trade-offs inherent in choices]. [Prior research on trade-off]. Our study contributes to this stream by showing [specific finding direction]."
 
-**原文锚定**:
+**原文锚定**（原文不在库，未验证）:
 > "Our study makes three contributions to marketing theory and practice. First, our study is one of the first to test the impact of NPD make/buy decisions on product quality. A small but emerging body of literature in marketing has investigated issues related to firm–supplier relationships... However, to the best of our knowledge, no study has examined the product quality effects of both NPD modes... Second, our study tests the impact of NPD make/buy choices on immediate and future product quality... Moorman and Day (2016) note that the emphasis in prior research has been on understanding factors that enhance the effectiveness of NPD buy decisions, and they call for more research on this topic. Our study responds to this call... Third, our study contributes to conversations in prior research about the trade-offs inherent in the NPD make/buy choices..."
 
 **来源**: kalaignanam2017 (JM), P3-P5
@@ -516,30 +516,60 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 
 ---
 
-### 变体 S：双文献流整合 + 网络负债 + 延伸网络三段型（li_narayanan_2026_jscm 型）
+### 变体 R：主贡献分离 + several-other-streams 多流对比型（desjardine2025 型）
 
 **验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
 
+**功能节拍**: 主贡献段（给主文献流，含概念引入 + 条件理论化 + 完整理论升级）→ 显式过渡句标记次级贡献（"we also contribute to several other streams"）→ 每流以 "In the literature on X, most prior studies... However, we show..." 对比展开 → 可嵌入 call 回应
+
 **模板**:
-> "This study adds three insights to the literature on [stream A] and [stream B]. First, it distinguishes between [direction A] and [direction B] spillover effects and uses a [theoretical lens] to examine the propagation of [risk events]. Previous studies on [stream A topic] have focused primarily on the [mechanism 1 label] ([citations]), whereas research on [stream B topic] has primarily focused on the [mechanism 2 label] ([citations]). However, each research stream only explains a part of the phenomenon. Drawing on [theory] ([citation]), this study integrates these two views by theorizing [relationship ties] as [metaphor A] and [metaphor B] that cause the propagation of [events] in the [network context]. Second, while prior research has demonstrated the merits of [network benefit construct] ([citations]), the present research shows that [network connections] can become liabilities in adverse situations; that is, more [moderator that amplifies] enhance the [spillover effect]. This finding echoes previous studies on [related dark-side network literature] ([citations]), underscoring the need to consider both the benefits and risks of [network property]. Third, this study extends [theory] by hypothesizing and empirically testing how [third-party intermediaries] are embedded within [interorganizational networks] and how their shared presence across firms conditions [spillover effects]. The findings indicate that [intermediary A] and [intermediary B] between [dyad actors] affect the [spillover effect], highlighting under-examined stakeholders in [field] studies."
+> "In terms of theoretical contributions, our study provides new insights into [main stream]. Most [main stream] research has focused on [dominant focus], and ignored the role played by [overlooked actor]. Building on recent research ([citation]), we introduce the concept of [new concept] and add a critical dimension by theorizing [conditions] ([citations]). Furthermore, by accounting for [multi-source integration], we offer a more complete [theory/model] of [phenomenon]. While we examine [concept] in one context, our theory has widespread theoretical generalizability, paving the way for future studies to further illuminate this [covert/novel] form of [phenomenon].
+>
+> By testing our theory in the context of [setting], we also contribute to several other streams of research. In the literature on [stream 1], most prior studies limit the origin of [bias/effect] to [prior scope] ([citations]). However, we show that [extension]. Our findings on [topic] contribute to [emerging debate] and answer [author]'s ([year]: [page]) call to direct '[quoted call]'. We also contribute to scholarship on [stream 2] by going beyond [prior scope] to further document [extension]."
 
-**来源**: li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM), §1 P6–P8
+**来源**: DesJardine, Li & Shi (2025, *Academy of Management Journal*), P8–P9
 
-**原文锚定**（压缩）:
-> "First... integrates categorization and supply chain propagation via pipes and prisms... Second... network connections can become liabilities... common business ties enhance vertical spillover... Third... common institutional ownership and common analyst coverage... extend social network theory to institutional intermediaries."
+**原文锚定**:
+> "In terms of theoretical contributions, our study provides new insights into the outside forces that shape competitive dynamics. Most competitive dynamics research has focused on actions launched by firms to outpace their competitors, and ignored the role played by outsiders with incentives to see some firms prevail and others fail. Building on recent research (DesJardine, Shi & Cheng, 2023), we introduce the concept of information-based competition and add a critical dimension by theorizing the conditions under which outside actors leverage their influence over information intermediaries to shape competitive dynamics."
+>
+> "By testing our theory in the context of common ownership in rating agencies, we also contribute to several other streams of research. In the literature on information intermediaries, most prior studies limit the origin of coverage bias to the firms and investors being covered by, for example, rating agencies (Cornaggia & Cornaggia, 2013; Tang, Peytcheva & Li, 2020) and news outlets (Beattie et al., 2021; Gurun & Butler, 2012). However, we show that a firm's coverage by rating agencies is also influenced by its rivals' investors."
 
 **关键特征**:
-- **三段映射 Theory lens / Dark-side network / Extended network**：与 `theory-lens/08` + H2–H4 一一对应，不是 Makadok 四型机械套用
-- **每段先承认双流各自贡献再整合**：First 段不 claim "first to study spillovers"，而是 claim **integration**
-- **Second 段 liability 须有 empirical direction**："more X enhance" 把贡献与 H2 绑定，避免纯理论宣言
-- **Third 段双 intermediary 并列**：ownership + analysts 同属 extended network，共享一句 findings direction
+- **主/次贡献分离**: 主贡献给主文献流（competitive dynamics），单独一段完整展开（概念引入 + 条件理论化 + "more complete theory" 升级 + 泛化性声明）；次级贡献用显式过渡句标记（"By testing our theory in the context of X, we also contribute to several other streams"）——读者知道哪些是核心贡献、哪些是外围
+- **每流内部 most-prior-However-we-show 对比**: 每个次级流都先承认 prior scope（"most prior studies limit the origin of bias to..."），再 "However, we show that..." 扩展——贡献=扩展边界而非推翻
+- **call 回应嵌入**: "answer [author]'s ([year]: [page]) call to direct '[quoted]'"——用他人 call 为贡献背书（与 tension 变体 Q 的外部授权型同族）
+- **"Building on recent research" 承上启下**: 主贡献段引用近邻研究（与 literature-turns 变体 O 同源）——文献对话在贡献段回响
+- **与变体 B（han2020 文献对话型）判别**: B 是线性 1-2 流（"We contribute to X by... We address these limitations by... Further... offer new insights into Y"）；本变体是**主贡献独立段 + 显式 several-other-streams 标记 + 每流内部对比**——适合主文献流明确、还有多个次级流（信息中介/ESG/investor influence 等）的论文
 
-**适用**: 双机制（impression + operational/cash-flow）整合研究；network benefit 文献已有 dark-side 对话对象；extended network moderators ≥2；JSCM/SMJ/JOM 供应链溢出
+**适用**: 主文献流 + 2-3 个次级文献流的跨流贡献；概念引入型（introducing a new concept）论文；AMJ/SMJ/OS（多流对话展示）。
 
-**禁忌**:
-- First 段两种机制标签须与 Theory 隐喻一致（pipes/prisms 或等价），不可 Intro 换名 Theory 不换
-- Second 段不能只说 "networks have dark sides"——必须点名**哪个 network property** 在**哪种 adverse event** 下成为 liability
-- Third 段 intermediary 须已在 Theory Table 1 矩阵中推导——不能 Intro 新增 Discussion 才出现的 actor
+**禁忌**: ① 次级流必须真实存在（每流有 prior scope 可"扩展"）——纯凑数流会被审稿人识破；② 主贡献段与次级流不得重复（competitive dynamics 的 outsiders 贡献不能又在信息中介流重复）；③ "several other streams" 后必须每流兑现，数量与篇幅匹配；④ call 引用须真实（作者确有此 call 且页码正确）。
+
+---
+
+### 变体 S：三流贡献型 — 机制 + 理论 + 方法论（cutolo2024 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）。story_fidelity: section_role=exposition; knot_relation=neutral; character_effect=none; pacing_effect=improves（Collectively→Moreover→Finally 三连，方法论贡献独立成条作收束）; classification=section_variant。
+
+**功能节拍**: 机制贡献（对直接文献线）→ 理论贡献（相邻领域，微观基础升级）→ 方法论贡献（计算文本分析，独立成条）→ 引用领域呼吁收束
+
+**模板**:
+> Collectively, our findings contribute to the recent line of scholarship on [conditions under which X], and specifically, the mechanisms whereby [lever] can alleviate [penalty/discount] ([citations]). Moreover, by illuminating the interplay between [construct A] and [specific lever features], we contribute to research in [adjacent theory domain] and add [micro-level foundations] to prior [broader approaches such as discourse or storytelling] that have primarily focused on [coarser level] ([citations]). Finally, leveraging [computational advances in textual analysis], we offer an original methodological approach to uncover [micro-mechanisms] whereby [individual narratives] elicit particular responses among [audiences], thereby contributing to increasing calls to "[enrich understanding of the links between words and action outcomes]" ([citation]).
+
+**来源**: Cutolo & Ferriani (2024, *Journal of Management*), P7
+
+**原文锚定**:
+> "Collectively, our findings contribute to the recent line of scholarship on the conditions under which atypical actors can overcome penalties related to a lack of categorical compliance, and specifically, the mechanisms whereby strategically deployed narratives can alleviate demand-side penalties for atypicality."
+> "Finally, leveraging computational advancements in textual analysis, we offer an original methodological approach to uncover micro-mechanisms whereby individual narratives elicit particular responses among audiences, thereby contributing to increasing calls to 'enrich understanding of the links between words and action outcomes' (Lockwood et al., 2019: 21)."
+
+**关键特征**:
+- **三流并列，各锚定一条文献**: 机制贡献（对直接文献线 atypicality 条件研究）→ 理论贡献（对相邻领域 cultural entrepreneurship——加 microlinguistics 微观基础，升级而非推翻 discourse/storytelling 的宏观路线）→ 方法论贡献（计算文本分析）——三条各自独立成条，不是逻辑递进
+- **方法论贡献独立成条**: 文本测量/计算方法论文的特征收尾——"we offer an original methodological approach" 给测量资产以贡献地位
+- **"Collectively... Moreover... Finally..." 标准三连**: 与三层递进型（变体 G haunschild：发现→知识→后果的逻辑递进）区别——本变体是**三条平行流**，每条锚定不同文献
+- **引用领域呼吁收束**: 以领域内已有呼吁（"enrich understanding of the links between words and action outcomes"）作方法论贡献的合法性背书
+
+**适用**: 方法论/测量贡献突出的论文（文本测量、NLP、计算方法、构念操作化创新）；三流贡献分别锚定三条不同文献的论文；JM/JOM/AMJ 文本分析类研究。
+**禁忌**: ① 方法论贡献必须真实创新（新测量/新方法），不可把常规做法包装成方法贡献；② 三流必须锚定三条不同文献，否则退回枚举型（变体 D malshe2015）；③ "micro-foundations/upgrade" 措辞必须兑现（本文确实从 discourse 降到 microlinguistics）。
 
 ---
 
@@ -597,7 +627,7 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 - [ahmadi2017]: avoids standalone significance statements — 每个贡献的 "so what" 通过 "we address the calls to..." 间接表达
 
 ### 质量标记
-- **最值得模仿**: 变体 D（列表展开型 malshe2015）的 "First... Second... Third..." 结构 —— 读者可预测、审稿人可逐项检查兑现
+- **最值得模仿**: 变体 D（列表展开型 malshe2015）的 "First... Second... Finally..." 结构 —— 读者可预测、审稿人可逐项检查兑现
 - **已知风险**: 变体 L (ahmadi2017) 的压缩版三贡献在 AMJ/ASQ 投稿中可能被视为贡献论证不充分 —— 每个贡献 3-5 句无法展示充分的文献对话
 
 ### 模块比重参考

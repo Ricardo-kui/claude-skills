@@ -1,0 +1,41 @@
+schema_version: "0.1.0-pilot"
+assets:
+  - r2_ols_model_sequence
+  - r2_ols_experimental_seven_model_hierarchy
+  - r2_ols_polynomial_curve_moderation_sequence
+  - r2_ols_model_free_quartile_opening
+  - r2_ols_heckman_two_stage_table_navigation
+  - r2_ols_dual_endogeneity_selection_navigation
+cases:
+  standard_hierarchical_fe:
+    expected_features: []
+    expected_first_asset: r2_ols_model_sequence
+    forbidden_assets: []
+  model_free_quartile_preview:
+    expected_features: [model_free_evidence, quartile_means]
+    expected_first_asset: r2_ols_model_free_quartile_opening
+    forbidden_assets: []
+  heckman_separate_tables:
+    expected_features: [heckman_selection, separate_first_stage_table]
+    expected_first_asset: r2_ols_heckman_two_stage_table_navigation
+    forbidden_assets: [r2_ols_dual_endogeneity_selection_navigation]
+  dual_control_function_selection:
+    expected_features: [control_function, binary_endogenous_predictor, heckman_selection, sample_selection]
+    expected_first_asset: r2_ols_dual_endogeneity_selection_navigation
+    forbidden_assets: []
+  polynomial_curve_moderation:
+    expected_features: [polynomial_model, curve_moderation]
+    expected_first_asset: r2_ols_polynomial_curve_moderation_sequence
+    forbidden_assets: []
+  experimental_three_way_hierarchy:
+    expected_features: [experimental_design, three_way_interaction]
+    expected_first_asset: r2_ols_experimental_seven_model_hierarchy
+    forbidden_assets: []
+  observational_three_way_boundary:
+    expected_features: [three_way_interaction]
+    expected_first_asset: r2_ols_model_sequence
+    forbidden_assets: [r2_ols_experimental_seven_model_hierarchy]
+  sparse_standard_navigation:
+    expected_features: []
+    expected_first_asset: r2_ols_model_sequence
+    forbidden_assets: []

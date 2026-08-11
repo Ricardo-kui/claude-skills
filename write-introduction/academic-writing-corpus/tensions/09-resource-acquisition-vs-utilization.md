@@ -37,7 +37,7 @@ source: Extracted from MVP30 narrative_analysis files
 **来源**: shen2022 (JOM), adapted
 
 **原文锚定**:
-> "Based on political embeddedness perspective, we suggest that although political ties may benefit firms' resource acquisition, they impose constraints on resource utilization, leading to reduced operational efficiency. We suggest three reasons: complacency, government expectations, and path dependence."
+> "Based on the political embeddedness perspective (Okhmatovskiy, 2010), we suggest that although political ties may benefit firms' resource acquisition, they impose constraints on resource utilization, leading to decreased operational efficiency. We suggest three reasons for this: (1) the resource benefits of political ties may induce complacency, inhibiting an efficiency-oriented culture; (2) political ties may bind firms to government expectations, limiting their ability to remove inefficiencies from their operations systems; and (3) the resource benefits of political ties may lead to path dependence, decreasing firms' ability to learn and apply operational knowledge."
 
 **关键特征**:
 - "although... may benefit... it imposes constraints" → 经典的让步-转折结构

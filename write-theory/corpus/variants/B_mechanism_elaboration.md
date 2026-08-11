@@ -44,6 +44,9 @@ defined as [definition]. This theoretical lens allows us to explain not just whe
 [X affects Y], but how and why."
 ```
 
+**原文锚点** (Wu, Bruton & Krause 2025, SMJ "Activism risk and corporate self-regulation"):
+> "Drawing on the literature on corporate preemptive self-regulation, we argue that firms will respond to an increased risk of stakeholder activism by increasing their institutional corporate social performance (CSP), defined as the tangible outcomes of firms' activities and initiatives in 'promoting social welfare outside firms' formal boundaries.'" ... "Specifically, we propose that when the environmental risk of stakeholder activism increases, institutional CSP will rise as an attempt to satisfy stakeholder activists' interests proactively; we further predict that this effect becomes stronger as the firm-level risk of activism increases."
+
 **多步机制链**：参见 `../sentences/mechanism_chain.md`
 
 **B0 收束（过程解释，不声称中介）**：
@@ -52,6 +55,9 @@ defined as [definition]. This theoretical lens allows us to explain not just whe
 [Y] within [scope]. We therefore predict: [directional/form-specific hypothesis]."
 ```
 
+**原文锚点** (Wu, Bruton & Krause 2025, SMJ "Activism risk and corporate self-regulation"):
+> "Taken together, these arguments suggest that media coverage of CSI conditions how firms respond to the increased activism risk triggered by the enactment of anti-SLAPP laws." ... "These firms are thus more likely to respond to anti-SLAPP legislation by enhancing institutional CSP, seeking to build moral capital and restore legitimacy."
+
 **B1 收束（仅正式中介分支）**：
 ```
 "Taken together, H1 and H2 suggest a mediated relationship. [IV] influences [DV] 
@@ -59,6 +65,9 @@ not merely through [direct channel], but through the [mechanism] of [mediator].
 By identifying this mediating mechanism, we move beyond the direct-effects paradigm 
 that has dominated prior research. Thus:"
 ```
+
+**原文锚点** (Keeves, Westphal & McDonald 2017, ASQ "Those Closest Wield the Sharpest Knife"):
+> "Thus our final hypothesis posits that feelings of resentment toward the CEO that result from ingratiatory behavior will be positively associated with the top managers' subsequent propensity to engage in negative commentary about the CEO's leadership in communicating with journalists." ... "This prediction is formally equivalent to hypothesizing that resentment toward the CEO will mediate effects of the independent variables from the first two sets of hypotheses on negative commentary about the CEO's leadership in communication with journalists."
 
 ---
 
@@ -69,6 +78,9 @@ that has dominated prior research. Thus:"
 | B0 基础/过程解释 | "H[N]. [IV] is [positively/negatively] related to [DV]."（按实际形状与条件具体化） |
 | B1 中介效应 | "H[N]. [Mediator] mediates the [positive/negative] relationship between [IV] and [DV]." |
 | B1 中介等价 | "H[N]. This prediction is formally equivalent to hypothesizing that [mediator] will mediate effects of [IV] on [DV]." |
+
+**原文锚点** (B0 基础假设 → Wu, Bruton & Krause 2025 SMJ; B1 中介等价 → Keeves, Westphal & McDonald 2017 ASQ):
+> "Hypothesis 1. Following the enactment of anti-SLAPP laws, institutional CSP increases." ... "This prediction is formally equivalent to hypothesizing that resentment toward the CEO will mediate effects of the independent variables from the first two sets of hypotheses on negative commentary about the CEO's leadership in communication with journalists."
 
 ---
 
@@ -99,6 +111,9 @@ X → [actor/process state 1] → [state 2] → Y   （B0，可不测量中间�
 或 X → M1 → M2 → Y                            （B1，正式中介）
 或 X → [mechanism 1 / mechanism 2 / mechanism 3] → Y
 ```
+
+**原文锚点** (Singh & Grewal 2023, JMR "Lobbying and Product Recalls"; 铁三角多步机制链):
+> "Figure 3 depicts this 'iron triangle' interaction, which includes a broad set of incentive exchanges among government (legislators), regulators, and industry actors." ... "Finally, firms interact with the regulator by leveraging political connections to influence enforcement decisions."
 **优势**: 理论深度强，能回答 "how"
 **风险**: 步骤过多可能让读者迷失；每个步骤都必须有独立理论依据
 **调用语料**: `corpus/sentences/mechanism_chain.md` + `corpus/subprotocols/arrangement_patterns.md`
@@ -113,6 +128,8 @@ X → Y  because [reason 1]
          because [reason 2]
          because [reason 3]
 ```
+**原文锚点** (Gamache et al. 2020, SMJ "Serving differently: CEO regulatory focus and firm stakeholder strategy"; "Therefore... Additionally... Finally..." 三理由并行、各自独立收束到同一预测):
+> "Therefore, when CEOs with a high prevention focus consider what they 'ought' to do, it will naturally translate into a greater emphasis on initiatives and arrangements that satisfy their felt obligation to put the shareholder first." ... "Additionally, people high in prevention focus have a tendency to worry about 'what might happen' and, as such, work to prepare for the worst with an emphasis on preventing mistakes." ... "Finally, a prevention focus is associated with an emphasis on rules and a need for accuracy. Therefore, because of their strong sense of duty, obligation, and responsibility, combined with their desire for accuracy, we believe that CEOs high in prevention focus are likely to engage in governance-oriented stakeholder initiatives."
 **优势**: 论证稳健性高，每个理由简短易读；适合 SMJ 等偏好简洁理论论证的期刊
 **风险**: 如果理由不独立会显得冗赘；不能替代对"过程机制"的解释
 **调用语料**: `corpus/subprotocols/hypothesis_derivation_patterns.md`（Width-Type Three-Reason Parallel）
@@ -127,6 +144,9 @@ X → Y, but this effect is contingent on W1, W2, ...
 或
 The interaction of W2 and X mediates the moderating effect of W1
 ```
+
+**原文锚点** (Singh & Grewal 2023, JMR "Lobbying and Product Recalls"; 间接调节):
+> "Through this influence, media coverage in combination with lobbying should mediate the moderating effect of death reports, as a measure of defect severity, on the lobbying–recall decision link. That is, when media publicize death reports, we predict that it mediates the influence of defect severity on recall decisions."
 **优势**: 理论精确性高，能回答 "when" / "for whom"
 **风险**: 容易过度复杂；每个 moderator 都需要独立理论依据；H4 类复杂假设容易论证不足
 **调用语料**: `corpus/variants/E_moderation.md` + `corpus/subprotocols/moderator_selection_frameworks.md`
@@ -140,6 +160,8 @@ The interaction of W2 and X mediates the moderating effect of W1
 Condition A → DV_dimension_1: +    Condition A → DV_dimension_2: -
 Condition B → DV_dimension_1: -    Condition B → DV_dimension_2: +
 ```
+**原文锚点** (Zhao-Ding & Gaba, Organization Science "Positioning in Digital Markets: A Demand-Side View"; 双轨镜像收束对——同一句式、方向全反):
+> "Taken together, we expect that high overall dissatisfaction will lead entrants to increase focus on the core function while simultaneously encouraging differentiation in peripheral functions relative to successful products." ... "In sum, we expect high evaluation heterogeneity to lead entrants to reduce focus on the core function while increasing overlap of peripheral functions with successful products."
 **优势**: 理论系统性强，两条机制链结构平行但方向相反，展示理论的完整图景
 **风险**: 如果两条 track 不是真正的镜像，会给人"为了对称而对称"的感觉
 **调用语料**: `corpus/subprotocols/hypothesis_derivation_patterns.md`（Symmetric Opposing Dual-Track）
@@ -153,6 +175,8 @@ Condition B → DV_dimension_1: -    Condition B → DV_dimension_2: +
 Low X  → increasing Y  (reason 1 + reason 2)
 High X → decreasing Y  (reason 1 + reason 2)
 ```
+**原文锚点** (Cui, Yang & Vertinsky, SMJ "Attacking your partners: Strategic alliances and competition between partners in product markets"; 递增段 "First/Second" 双理由 + "However" 转折阈值句):
+> "First, increases in the proportion of exploratory alliances enhance a firm's awareness of opportunities to benefit from competition. Second, exploratory collaboration enhances a firm's capacity to develop competing products because it requires sharing of proprietary know-how." ... "However, as the proportion of exploratory alliances increases, overlap in the firms' long-term stakes also rises, enlarging their mutual dependence in developing critical innovations. ... The firms' interdependence, on the one hand, and the risk of retaliation, on the other, may escalate to a point at which the expected costs exceed the benefits of launching a competitive action, suffocating the firms' incentives to further intrude into each other's product market domains."
 **优势**: 能完整解释曲线关系的两个阶段，展示理论对关系全区间的掌控；常与调节效应结合
 **风险**: 如果只有一个阶段机制强，另一个阶段薄弱，会显得牵强；转折点必须有理论依据
 **调用语料**: `corpus/subprotocols/hypothesis_derivation_patterns.md`（Curvilinear Relationship — Two-Phase Argumentation）

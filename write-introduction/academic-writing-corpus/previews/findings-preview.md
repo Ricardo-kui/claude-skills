@@ -15,10 +15,8 @@ source_papers:
   - vadakkepatt2022 (JM, 2022): Compact four-part preview (main effect + mediation + moderation + mechanism)
   - castellaneta_conti_kacperczyk2017 (SMJ, 2017): Contingent sign-flipping findings + double-edged sword closing
   - kim_lee2026 (SMJ, 2026): Pipeline advantages + revealed-preference WTP band + stage-attenuation null + early-stage subgroup
-  - thirumalai_sinha2011 (MS, 2011): Contrary-to-expectations main-effect null preview + 'at an aggregate level' scope qualifier + 'However' heterogeneity rescue
-  - li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM, 2026): vertical spillover confirmed + convergent moderators (strengthen ties / weaken ownership & analyst overlap)
 created: 2026-05-18
-updated: 2026-08-06
+updated: 2026-08-05
 source: Extracted from MVP30 narrative_analysis files + kim_lee2026
 ---
 
@@ -118,7 +116,7 @@ P5-P6 的下半段功能：向读者预告实证结果。这是 Introduction 中
 **来源**: vadakkepatt2022 (JM), P5
 
 **原文锚定**:
-> "The tests of our hypotheses rely on an unbalanced panel of 758 observations involving 87 publicly traded firms during the period 2000–2014. We find a significant, negative effect of lobbying on customer satisfaction, providing novel evidence of the dark side of firm lobbying. We also replicate previous findings of a positive effect of lobbying on firm value but identify a negative counteracting effect when we account for customer satisfaction. Consistent with our expectations, we also show that the CEO's background, advertising spend, R&D spend, and product market lobbying each positively moderate the lobbying–customer satisfaction relationship. Finally, a decrease in customer focus helps explain the negative lobbying–customer satisfaction link."
+> "The tests of our hypotheses rely on an unbalanced panel of 758 observations involving 87 publicly traded firms during the period 2000–2014. We find a significant, negative effect of lobbying on customer satisfaction, providing novel evidence of the dark side of firm lobbying. We also replicate previous findings of a positive effect of lobbying on firm value but identify a negative counteracting effect when we account for customer satisfaction. ... Consistent with our expectations, we also show that the CEO's background, advertising spend, R&D spend, and product market lobbying each positively moderate the lobbying–customer satisfaction relationship. Finally, a decrease in customer focus helps explain the negative lobbying–customer satisfaction link."
 
 **关键特征**:
 - **一句话数据说明** → **主效应** → **复制+修正已有发现** → **调节效应** → **机制**
@@ -242,70 +240,29 @@ P5-P6 的下半段功能：向读者预告实证结果。这是 Introduction 中
 
 ---
 
-### 变体 Q：Contrary-to-expectations 主效应 null 预告型（thirumalai2011 型）
+### 变体 Q：术语转译锚定型（desjardine2025 型）
 
 **验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
 
-**功能节拍**: 数据/方法一句 → "Contrary to our expectations" 显式反预期标记 → 主效应 null（at an aggregate level）→ "However" 转折到异质性发现（企业特征调节效应存在）→ 前因发现 + 机制标签（learning）
+**功能节拍**: 主发现预告 → 领域既有语汇命名（parlance）→ 术语映射定义 → 理论身份转变声明（新角色用既有语汇 + 新映射）
 
 **模板**:
-> "The econometric analyses in the study are based on data from [sample] over [time period]. Contrary to our expectations, the findings of the study indicate that at an aggregate level, [expected main effect] are not significant, i.e., at the aggregate level, [theoretical expectation] does not hold. However, we find systematic differences in the magnitude of [the effect] across [heterogeneous actors]. We find that [moderator 1], [moderator 2], [moderator 3], and [moderator 4] affect the magnitude of [the consequences]. In our analyses exploring [the antecedent question], we find that [antecedent finding 1]. Also, we find that [antecedent finding 2], indicating the presence of [mechanism label]."
+> "In our main analyses, we use a sample of [empirical population] ([data source]). We find that [target's outcome] is [direction] associated with [IV]. In [field] parlance, there are [concept A] and [concept B]. We use the term '[A]' to refer to [mapping of empirical role 1], and '[B]' to [mapping of empirical role 2]. Our results suggest that [actors with both stakes] can themselves become [concept B] of the [target] by [mechanism through which influence operates]."
 
-**来源**: thirumalai_sinha2011 (MS), P7
-
-**原文锚定**:
-> "The econometric analyses in the study are based on data from manufacturers in the medical device industry over a four-year period from 2002 to 2005. Contrary to our expectations, the findings of the study indicate that at an aggregate level, the market penalties for medical device recalls are not significant, i.e., at the aggregate level, the costs of poor quality are not severe. However, we find systematic differences in the magnitude of financial consequences across firms. We find that the product scope, sales, growth prospects, and the capital structure of a firm affect the magnitude of the financial consequences of recalls. In our analyses exploring the sources of device recalls, we find that firms with a research and development (R&D) focus, developing broader product portfolios, have a higher likelihood of device recalls. Also, we find that firms with prior recall experience have a lower likelihood of future recalls, indicating the presence of learning."
-
-**关键特征**:
-- **null 即贡献，不是歉语**："Contrary to our expectations" 显式承认假设方向未被支持，但紧跟 "i.e., at the aggregate level, the costs of poor quality are not severe"——把统计 null 转译为**实质性发现**（市场威慑失灵），为 Discussion 的政策含义（监管不能依赖市场纪律）埋下伏笔
-- **"at an aggregate level" 双重限定**：null 被限定在 aggregate 层面——为 "However" 后的异质性发现预留逻辑空间（aggregate 无效应 ≠ 对所有企业无效应）。scope 限定词让 null 与 heterogeneity 并存而不矛盾
-- **"However" 转折承担救援功能**：主效应 null 之后立刻转向"但效应幅度随企业特征系统变化"——Preview 的能量从"主效应显著"转移到"效应结构被发现"
-- **前因发现附机制标签**："indicating the presence of learning"——前因发现不只报方向，还赋予机制命名（learning），为 Theory 的 learning 文献定位背书
-
-**与变体 P（kim_lee2026）的区别**: P 的 null 是**管道末端阶段衰减**（录用后无差异），主发现在先、null 在后，null 是边界收束；本变体的 null 是**主效应本身**（aggregate 惩罚不显著），null 在先、异质性救援在后，null 的理论载荷（市场威慑失灵）即贡献。判据：null 出现在主效应位置→本变体；null 出现在管道后段/边界位置→变体 P
-
-**与 hooks/20-counterintuitive-finding 的边界**: hook 20 是 P1 Hook，挑战**文献**的 dominant valence（"Most research finds X→Y; we find X→not-Y under Z"）；本变体是 P7 Findings Preview，报告**自身结果 vs 自身假设**的背离。判据：反预期对象是文献共识→hook 20；反预期对象是作者自己的假设→本变体
-
-**适用**: 主效应假设（方向性）未被支持、但异质性/边界条件分析有系统发现的实证论文；null 结果有实质性理论或政策含义（市场威慑失灵、监管无效等）可承载贡献；事件研究/横截面设计；Inadequacy × Boundary 组合；MS/MSOM/POM/JOM
-
-**禁忌**:
-- "Contrary to our expectations" 必须与 Abstract 一致——本文 Abstract 同样使用此句；Introduction 与 Abstract 的 null 表述不可一个坦率一个粉饰
-- null 后必须紧跟实质性转译（"i.e., ..."）——只报告 "not significant" 而不说其实质含义，是把解释负担推给读者
-- 异质性救援必须已在 Theory 中有对应假设（本文 H2-H5）——不得用探索性异质性事后包装 null
-- 若主效应显著但**方向相反**，用变体 L（双 DV 相反方向）或 hooks/20；本变体专用于"无显著效应"的 null
-- Intro 预告 null 即承诺 Discussion 解释 null——本文 Discussion 用三重解释兑现（市场学习预期 Bromiley & Marcus 贝叶斯模型 + FDA 监管庇护含 Reigel v. Medtronic 责任豁免 + 供应链合同关系）；无此兑现计划的论文不要用本变体
-
----
-
-### 变体 S：主效应确认 + 收敛调节方向型（li_narayanan_2026_jscm 型）
-
-**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
-
-**功能节拍**: 主效应确认（vertical spillover）→ 调节方向与 Theory 一致（一个加强、两个削弱）
-
-**模板**:
-> "Confirming the [phenomenon label], the findings indicate that [buyer event] results in a significant [outcome] for [third-party actors]. Such effect is stronger when [actor pair] [share more of moderator A], but weaker when there is a high level of [moderator B] and [moderator C] between [actors]."
-
-**来源**: li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM), Abstract（本文 Intro §1 无独立 Findings Preview 段，预览句在 Abstract）
+**来源**: DesJardine, Li & Shi (2025, *Academy of Management Journal*), P6
 
 **原文锚定**:
-> "Confirming the vertical spillover effect, the findings indicate that a buyer's automobile recalls result in a significant loss of firm value for its suppliers. Such effect is stronger when the supplier shares more common business ties with the recalling automakers but weaker when there is a high level of common institutional ownership and common analyst coverage."
+> "In competitive dynamics parlance, there are targets and attackers. We use the term "target" to refer to firms that have their ratings altered by investors in "rival" firms in common owners' portfolios. Our results suggest that institutional investors with ownership stakes in both a rating agency and a target firm's rivals can themselves become rivals of the target firm by tainting the owned rating agency's coverage of the target firm."
 
 **关键特征**:
-- **"Confirming the [label]" 开头**：与 Abstract 共用同一现象标签——本文 Intro 未重复该预览句；若写 Intro Preview 可自 Abstract 迁移
-- **三个调节同向收敛预告**：一个 strengthen + 两个 weaken，与 Theory 双机制矩阵（Table 1）方向一致，不在 Intro 展开 pipes/prisms
-- **不预告系数或 post hoc 机制检验**：机制确认（analyst downgrade、negative media）留给 Results R8，Intro 只承诺 H1–H4 方向
+- **parlance 转译**: 新现象（外部投资者经中介影响评级）用领域既有语汇（targets/attackers）重新命名——降低读者认知负荷，把发现锚进既有理论框架
+- **双重命名 + 身份转变**: 既有术语映射（target=被改评级者）+ 新映射（investors as rivals）——"can themselves become rivals" 一句完成理论身份转变声明
+- **mechanism 收束**: 末句用 "by [mechanism]" 交代影响通道（tainting the owned rating agency's coverage），Preview 兼作机制预告
+- **与变体 G/L/O 的判别**: G 是调节效应预览、L 是双 DV 竞争方向、O 是符号反转权变——本变体不预告调节或方向竞争，而是**用既有语汇命名新角色**，适合引入新概念/新角色身份的研究
 
-**与近邻区分**:
-- vs M（darby 主效应+调节）：M 常含 agency 机制句；本变体更紧凑，调节枚举即全部 Preview
-- vs Q（aggregate null + heterogeneity）：Q 的主效应为 null；本变体主效应显著且方向符合 H1
+**适用**: 研究发现可映射到领域既有语汇（竞争动态 target/attacker、生态 niche 等）；Preview 需要给读者快速概念锚的研究；概念贡献（introducing a new concept）型论文。
 
-**适用**: 事件研究主效应 + 2–3 个 extended-network 调节；pipes/prisms 双机制已在 Theory 建立；JSCM/JOM/MSOM 供应链溢出研究
-
-**禁忌**:
-- 三个调节方向必须与 Table 1 / 正式假设一致——Intro 不能预告与 H2–H4 相反的方向
-- 若主效应为 null 或 contrary，改用 Q 或 R6，不用本变体
-- 不要在 Preview 预告 post hoc 机制表（Table A3/A4）——那是 Results 增值，非 Intro 合同
+**禁忌**: 术语映射必须与领域文献一致（不能自造术语冒充既有语汇）；"become rivals" 类身份转变须在 Theory 假设中兑现；Parlance 句只用于真正可映射的场景，不可为装饰硬套。
 
 ---
 

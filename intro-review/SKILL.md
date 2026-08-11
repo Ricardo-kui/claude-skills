@@ -80,6 +80,7 @@ version: 1.3.0
 | Target audience 是否可见（非泛称） | | | |
 | Preview 是否提前建立 Credibility | | | |
 | 贡献声明是否可被全文兑现（Claim fit） | | | |
+| 作者人设（GBL 2007 Ch04）——institutional scientist（文献掌握/方法纪律）与 human scientist（现象在场/共情/第一人称）是否双面可见、且与全文一致 | | | |
 
 **Conversation 三子项判定规则**：①②③ 任一不满足，母项最高只能打 △；发现错挂（引文研究对象不属于其所在句命题范畴）母项打 ✗ 并列为高优先级修复。子项③的判定必须引用原文或用户知识库中的 source note，不得凭印象。修复句式参照 `write-introduction/academic-writing-corpus/literature-turns/literature-turn-templates.md` 变体 D（发现锚定综合型）。
 
@@ -100,6 +101,8 @@ version: 1.3.0
 ### Step 5: 与 write-introduction 模板对齐
 
 根据诊断出的 Gap 类型和 Makadok 维度，推荐最接近的 `/write-introduction` 组合模板作为改写基准。
+
+**完成判据**（快速模式）：逐段功能标签 + QC 表全行评分齐全；最需改写段落唯一且建议到句子级；推荐模板指向具体 Gap×维度组合。`--deep` 追加：六层全评分 + 六项禁忌全答 + 范文对比落实到具体论文。
 
 ---
 
@@ -141,135 +144,19 @@ version: 1.3.0
 
 ## Output Format
 
-```
-## Introduction 结构解析
-[段落1] Function: Hook — 内容摘要...
-[段落2] Function: Conversation — 内容摘要...
-...
+→ 报告模板：`references/output-format.md`
 
-## QC 检查表
-| QC 项 | 评分 | 问题摘要 | 优先级 |
-...（表格）
-
-## 最需改写的段落
-段落 X — 原因：... — 对全文影响：...
-
-## 改写建议
-**模板**：...
-**说明**：...
-**变体**：...
-
-## 推荐写作模板
-基于本 Introduction 的 Gap 类型和 Makadok 维度，最接近的模板是：
-`/write-introduction [Gap类型] [贡献维度]`
-
-## 深度模式额外输出（当使用 `--deep` 时）
-
-```
-## 推断诊断
-- **推断 Gap 类型**: [Incompleteness / Inadequacy / Incommensurability]
-- **推断 Makadok 维度**: [Constructs / Mechanism / Boundary / ...]
-- **推断 Hook 策略**: ...
-- **最接近 MVP30 范文**: ...（[期刊], [年份]）
-
-## 六层 QC 检查
-| 层 | 检查项 | 评分 | 问题摘要 |
-|---|-------|------|---------|
-| L1 | Hook-Gap 匹配 | ✓/△/✗ | ... |
-| L2 | Conversation 策略 | ✓/△/✗ | ... |
-| L3 | Problematization 深度 | ✓/△/✗ | ... |
-| L4 | Makadok 声明 + JTBD 完整性 | ✓/△/✗ | ... |
-| L5 | 期刊风格匹配 | ✓/△/✗ | ... |
-| L6 | 范文对比 | ✓/△/✗ | ... |
-
-## 通用禁忌检查
-- [ ] 出现 "few studies have examined": [是/否]
-- [ ] 出现 "this study is important because": [是/否]
-- [ ] 出现 "the purpose of this study is to": [是/否]
-- [ ] 超过 3 个理论视角罗列: [是/否]
-- [ ] 出现未定义缩写: [是/否]
-- [ ] Introduction-Discussion 贡献声明不一致: [是/否]
-```
-
-## 回流检查
-修改后请确认：
-- [ ] Hook 是否仍与最后一句话呼应？
-- [ ] Discussion 是否能兑现这里预告的贡献？
-- [ ] 每段的功能标签是否清晰？
-- [ ] Gain/Pain 是否超越了 generic gap language，能用一句话说明具体价值或问题？
-- [ ] Target audience 是否在第 1 段就可见或强烈暗示？
-- [ ] 每个贡献声明都能被全文理论、数据、方法支持（Claim fit）？
-- [ ] （深度模式）Gap 类型推断是否正确？
-- [ ] （深度模式）Makadok 维度声明是否在 Discussion 中被兑现？
-- [ ] （深度模式）JTBD 6-Block 是否每个都有对应内容？
-```
 
 ## 完整示例
 
-### 输入
-```
-/intro-review
-Digital transformation has become a strategic imperative for firms worldwide. Existing research has extensively studied the direct effects of technology adoption on innovation outcomes. However, few studies have examined the mechanisms through which digital transformation affects innovation. Drawing on organizational routine theory, we argue that organizational routine updating mediates this relationship. Our study contributes to the literature by identifying this mechanism.
---journal=SMJ
-```
+→ 端到端输入输出示例：`references/complete-example.md`（仅在需要示例时阅读）
 
-### 输出
-```
-## Introduction 结构解析
-[段落1] Function: Hook — "Digital transformation has become a strategic imperative..."（cold-start definition，符合 SMJ 风格）
-[段落2] Function: Conversation — 技术采纳→创新绩效文献回顾（Progressive Coherence）
-[段落3] Function: Problematization — "However, few studies have examined..."（⚠️ 薄弱）
-[段落4] Function: Preview — 组织惯例理论 + 中介机制 + 贡献声明
-
-## QC 检查表
-| QC 项 | 评分 | 问题摘要 | 优先级 |
-|-------|------|---------|--------|
-| Hook 服务主题 | ✓ | 数字化转型定义 Hook，温和建立领域 | 低 |
-| Conversation 理论对话 | △ | 文献回顾较完整，但缺少明确的理论定位（如 RBV vs 动态能力） | 中 |
-| Problematization puzzle | ✗ | "few studies have examined" 是典型禁忌，未呈现 puzzle 或理论重要性 | **高** |
-| So what 重要性 | ✗ | 未解释为什么机制缺失是理论上重要的 | **高** |
-| What we learn 可见性 | △ | Mechanism 维度声明存在，但不够具体 | 中 |
-| 段落 transitions | ✓ | 逻辑过渡清晰 | 低 |
-| Hook-Gap 匹配 | ✓ | Cold-start 匹配 Incompleteness 低强度 Gap | 低 |
-| Gain/Pain 具体性 | ✗ | "few studies have examined" 是典型的 generic gap language，未说明具体 pain | **高** |
-| Target audience 可见性 | △ | 第 1 段暗示了技术战略学者，但未明确锁定理论社群 | 中 |
-| Preview Credibility | △ | 提到组织惯例理论但未交代为何该理论适合此情境 | 中 |
-| Claim fit | △ | 贡献声明（identifying mechanism）与结果范围一致，但不够具体 | 中 |
-
-## 最需改写的段落
-段落 3（Problematization）— 原因："few studies have examined" 直接暴露了 Incompleteness Gap 的最大风险——被解读为增量研究。这是 reviewer 最常攻击的点。— 对全文影响：如果 Problematization 不成立，后续所有理论贡献都会失去合法性。
-
-## 改写建议
-**模板**：
-"Despite the progress made in understanding how digital transformation affects firm performance, **the question of how and through what mechanisms this relationship unfolds has gone largely unaddressed**. This omission is theoretically important because without identifying the mediating mechanisms, we cannot explain why some firms successfully translate digital investments into innovation outcomes while others do not."
-
-**说明**：
-1. 保留 "has gone largely unaddressed" 作为 Incompleteness 标志性语言
-2. 增加 "theoretically important because..." 论证，超越 "few studies"
-3. 引入对比（some firms... while others...）制造轻微 tension
-
-**变体**（如需更强 tension）：
-"Although researchers have extensively studied the direct effects of technology adoption, **the mediating mechanisms that translate technological change into innovation remain poorly understood**. Existing theory assumes that digital investment automatically enhances innovation capacity, yet empirical evidence shows mixed results, suggesting that critical organizational processes have been overlooked."
-
-## 推荐写作模板
-本 Introduction 呈现 **Incompleteness × Mechanism** 组合特征。推荐参照：
-`/write-introduction Incompleteness Mechanism`
-
-## 回流检查
-修改后请确认：
-- [ ] Hook 是否仍与最后一句话呼应？
-- [ ] Discussion 是否能兑现 "organizational routine updating as mediating mechanism" 的承诺？
-- [ ] Problematization 是否超越了 "few studies have examined"？
-```
 
 ## Constraints
 
-- 不要重写整段，只针对最薄弱的 1-2 个句子或 1 个段落提供建议。
+- 建议聚焦最薄弱的 1-2 个句子或 1 个段落；整段重写归 write-introduction。
 - 必须基于 Introduction 原文作为证据，不凭空判断。
 - 如果引言没有明确的 rhetorical question 或 puzzle，优先建议补充。
 - 必须指出 Hook 强度是否与推断的 Gap 强度匹配。
 - 如果 Problematization 出现 "few studies have examined"，必须标记为 ✗ 并优先修复。
 
-## 资产位置
-
-无外部 references，所有审查标准和模板内联于本文件。

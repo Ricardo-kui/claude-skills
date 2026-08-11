@@ -36,7 +36,7 @@ Literature Turn（P2-P3）的核心功能是将 Hook 建立的注意力转化为
 
 | 策略 | 文件 | 默认 Gap 配对 | 能量 | 核心逻辑 | 文献诊断 |
 |------|------|---------|------|---------|---------|
-| **Progressive Coherence** | `01-progressive-coherence.md` | Incompleteness | 低–中 | "已有进展，但遗漏了 C"（含变体 N：采纳已答/近端后果未清的文献分工，EMERGING） | 单一传统充分发展，自然留下空白 |
+| **Progressive Coherence** | `01-progressive-coherence.md` | Incompleteness | 低–中 | "已有进展，但遗漏了 C"（含变体 N：采纳已答/近端后果未清的文献分工；变体 O：近邻研究静态观批评→动态化 bridge，desjardine2025 型，EMERGING） | 单一传统充分发展，自然留下空白 |
 | **Synthesized Coherence** | `02-synthesized-coherence.md` | Inadequacy | 中 | "多个传统各自合理，但在交汇处集体盲区" | 多个传统各自正确，但互不知晓 |
 | **Non-Coherence** | `03-non-coherence.md` | Incommensurability | 高 | "两个理论不能同时正确——除非重新理解" | 两个理论都有证据，但预测相反 |
 
@@ -156,6 +156,7 @@ literature-turns/
 
 ## 更新日志
 
+- **2026-08-09（DesJardine, Li & Shi 2025, AMJ）**: 蒸馏 "Information-Based Competition"——新增 `01-progressive-coherence` **变体 O：近邻研究静态观批评 → 动态化 bridge（theory-first + fulcrum 句 + 领域标准惊讶 + "more dynamic" 升级）**。Progressive 变体数更新为 A–O（15）。同论文配对 Tension 01 变体 AE（as-clause 前提 + 惊讶单句 overlooked）、Preview Q（术语转译锚定）、Contribution R（主贡献分离 + several-other-streams 多流对比）。Progressive × Inadequacy 非对角的具体实现（用传统自身标准证明遗漏）。
 - **2026-08-05（Zorn）**: 蒸馏 Zorn et al. (2017, SMJ)——新增 `01-progressive-coherence` **变体 N：文献分工（采纳已答 / 近端后果未清）**；新建 Tension `21-institutionalized-extreme-structural-warrant`。Progressive 变体数更新为 A–N（14）。配对 Hook 03-H、Stakes 01-G。
 - **2026-08-05（续）**: 蒸馏 Kim & Lee (2026, SMJ)——新增 `01-progressive-coherence` **变体 M：关系发现共识 → 证据源类型 foreshadow**。配对 Tension AD（低 stakes 证据→高 stakes 情境+阶段延伸）；Preview R/P；Contribution Q。QC：模板抽象功能节拍，原文锚定仅溯源。Progressive 变体数更新为 A–M（13）。
 - **2026-08-05**: 蒸馏 Castellaneta, Conti & Kacperczyk (2017, SMJ)——新增 `01-progressive-coherence` **变体 L：披露型 IPR 共识 → 非披露形式作为外推边界**。Progressive 变体数更新为 A–L（12）。配对 Tension AC（DV 链接缺口）与 Preview Q/O；QC 修补后 Intro 模板已抽象化，避免近原文复刻。

@@ -26,8 +26,6 @@
 | 连续 | 二分类/类别 | 关系方向翻转 | Competing | 跨组 slope/nature 翻转 | "[X] is positively related to [Y] for [A], but negatively for [B]." |
 | 连续 | 连续/类别 | 改变关系强度（r 而非 slope） | Differential validity | strength/correlation 改变 | "The [strength/correlation] of the [X]–[Y] relationship is [greater/lesser] when [Z] is high." |
 
-**形式路由规则**：推导已确定每个边界状态的符号（方向反转）→ 用 Competing 形式或分状态带符号假设对（每状态一句、各带符号）；仅当逐状态净符号在理论上未定时（双刃剑双刃叠加），才用 "more positive / more negative when W" 比较式（见 `moderation.md` 异号调节句）。比较式不固定任一状态的符号，不得替代已定号的分状态预测。
-
 **关键区分**（Andersson et al. 2014）——这是**理论层面**的区分，具体统计检验由 `write-methods` 根据设计选择：
 - **Differential prediction**：Z 改变 X→Y 的 *nature/slope*；假设中应出现 "effect... is stronger/weaker/changes" 等 slope 语言。
 - **Differential validity**：Z 改变 X→Y 的 *strength/correlation*；假设中应出现 "correlation/strength" 语言，不能用 slope 语言描述。
@@ -73,6 +71,9 @@
 | **Difference (同IV不同条件)** | "[X] will have a [greater/lesser] effect on [Y] for [group A] than for [group B]." | 比较跨组/跨条件效应 |
 | **Difference (不同IV同DV)** | "[X1] will have a [greater/lesser] effect on [Y] than [X2] will have on [Y]." | 多 IV 竞争比较 |
 
+**原文锚点** (Han, Pollock & Paruchuri, SMJ "Public enemies?"):
+> "This leads to our baseline expectation that both reputation and celebrity enhance misconduct scandalization's likelihood." ... "However, we further argue that differences in reputation and celebrity's sociocognitive content lead them to vary in when and why they attract attention and are newsworthy, resulting in different effects on the extent to which the media scandalizes a firm's misconduct."
+
 **语料锚定**：
 - Han 2024 (AMP) — reputation vs celebrity 差异主效应
 
@@ -89,6 +90,9 @@
 
 **语料锚定**:
 - malik_wang_martin_gomezmejia2025 (JM) — H1a/H1b (current wealth → timing/silence), H2a/H2b (prospective wealth → timing/silence), H3a/H3b, H4a/H4b
+
+**原文锚点** (Malik, Wang, Martin & Gomez-Mejia 2025, JM "Mixed Gambles in Product Recalls"):
+> "Hypothesis 1a: The greater a CEO's current option wealth, the higher the likelihood that the recall is initiated on an inattentive day." ... "Hypothesis 1b: The greater a CEO's current option wealth, the higher the likelihood of strategic silence (i.e., press releases not mentioning product recalls)." ... "Hypothesis 2a: The greater a CEO's prospective option wealth, the lower the likelihood that the recall is initiated on an inattentive day."
 
 **关键特征**:
 - a/b 编号暗示两个假设共享理论机制但应用于不同 DV——读者预期两个假设同时成立或同时不成立
@@ -166,6 +170,9 @@
 - Eilert 2017 (JM) — enhancing 型
 - Darby 2024 (MSOM) — existence 型（severity 分组）
 
+**原文锚点** (Eilert, Jayachandran, Kalaignanam & Swartz 2017, JM "Does It Pay to Recall Your Product Early?"; Darby et al. 2023, MSOM "CEO Stock Ownership, Recall Timing, and Stock Market Penalties"):
+> "H3: The higher a brand's diversification, the stronger the relationship between problem severity and time to recall." ... "The recall-slowing effect of CEO stock ownership is stronger for high-severity recalls than for low-severity recalls."
+
 ---
 
 ## 分组调节
@@ -179,6 +186,9 @@
 - Darby 2024 (MSOM) — severity 分组
 - Darby 2025 (JSCM) — defect type 分组
 
+**原文锚点** (Darby et al. 2025, JSCM "An Agency Theory Perspective on Activist Investors and Supply Chain Failures"; Darby et al. 2023, MSOM):
+> "H2. The spillover effect of activist investor stock ownership on time-to-recall will differ for design-related defects and manufacturing-related defects, such that the recall-quickening effect is stronger for design-related defects relative to manufacturing-related defects." ... "H3. The spillover effect of activist investor stock ownership on time-to-recall will differ for high-severity and low-severity recalls, such that the recall-quickening effect is stronger for high-severity recalls relative to low-severity recalls."
+
 ---
 
 ## 竞争假设
@@ -186,7 +196,6 @@
 | 形式 | 模板 | 示例 |
 |------|------|------|
 | **竞争假设对** | "H[N]a: [X] is [negatively/positively] related to [Y]. H[N]b: [X] is [positively/negatively] related to [Y]." | H1a: Liberalism → fewer recalls. H1b: Liberalism → more recalls. |
-| **分节竞争假设** | "[小节 A 完整 steelman 推导] HYPOTHESIS [N]. [X1] will [direction] [Y]. … [小节 B 镜像推导] HYPOTHESIS [N+1]. [X2] will [direction] [Y]." | H2: Voluntary recalls will lower the subsequent recall rate. H3: Involuntary recalls will lower the subsequent recall rate. (Haunschild & Rhee 2004) |
 
 **收敛信号（非 Therefore）**：
 ```
@@ -198,10 +207,8 @@ how [X] may influence [Y]:"
 **语料锚定**：
 - Wowak 2025 (MS) — H1a/H1b 竞争假设对
 
-**分节变体选择规则（haunschild_rhee2004 型）**：字母对（H1a/H1b）适合同一推导单元内的快速对峙；当对立双方各自需要独立小节的完整 steelman（Incommensurability R3 裁决设计）时，改用序数编号（H2/H3），并以逐字相同的镜像收束句标记两小节的对称结构——"According to these arguments, then, [mechanism summary] will result in [outcome]. This leads to the following hypothesis." 组织层架构见 `subprotocols/hypothesis_organization_patterns.md` 的 competing_theories_sectioned_horse_race。
-
-**语料锚定（分节变体）**：
-- Haunschild & Rhee 2004 (MS) — H2/H3 各占独立小节；H2 胜 H3 负，Discussion 以 H2A 机制过程证据（报告页数、问题解决率）解释败方机制
+**原文锚点** (Wowak et al. 2025, Management Science "The Politics of Product Safety: Top Management Team Political Ideology and Serious Medical Product Recalls"):
+> "Hypothesis 1(a). There is a negative relationship between top management team liberalism and the count of recalls." ... "Hypothesis 1(b). There is a positive relationship between top management team liberalism and the count of recalls."
 
 ---
 
@@ -213,6 +220,9 @@ how [X] may influence [Y]:"
 
 **语料锚定**：
 - Malik 2025 (JM) — current/prospective × timing/silence × media 2×2×2 矩阵
+
+**原文锚点** (Malik, Wang, Martin & Gomez-Mejia 2025, JM "Mixed Gambles in Product Recalls"):
+> "Hypothesis 1a: The greater a CEO's current option wealth, the higher the likelihood that the recall is initiated on an inattentive day." ... "Hypothesis 2a: The greater a CEO's prospective option wealth, the lower the likelihood that the recall is initiated on an inattentive day." ... "Hypothesis 3a: The positive relationship between a CEO's current option wealth and recall initiation on an inattentive day is weaker (less positive) with more negative media coverage."
 
 ---
 
@@ -227,30 +237,6 @@ how [X] may influence [Y]:"
 
 **语料锚定**：
 - Darby 2023 (MSOM) — italicized hypotheses without formal numbering
-
----
-
-## 平语预告→正式假设双步式（Plain-Language Pre-Statement，haunschild_rhee2004 型）
-
-**适用场景**: 基线/起点假设的机制已在经典文献中充分建立（如学习曲线），无需重新推导；作者希望读者先获得直觉表述，再进入正式形式。
-
-**骨架**:
-```
-"We therefore use as our starting hypothesis a basic [domain] effect:
-[plain-language proposition—无生僻构念].
-HYPOTHESIS [N]. [Formal statement with constructs]."
-```
-
-**语料锚定**：
-- Haunschild & Rhee 2004 (MS) — "We therefore use as our starting hypothesis a basic learning effect: More production experience will lead to fewer future errors in the form of product recalls." → "HYPOTHESIS 1. The higher the level of prior production experience, the lower the number of subsequent recalls."
-
-**为什么有效**: 白话句先建立直觉，正式句再锁定可检验形式——读者两次接触同一命题，理解成本被分摊；"starting hypothesis" 标记该假设的基线地位，与论文的新颖假设划清层次。
-
-**注意事项**:
-- 仅适用于机制已被充分文献化的基线假设；论文的核心新假设必须完整推导，不得以白话预告替代论证
-- 白话句与正式句必须逻辑等价——只降语言门槛，不降内容深度
-
-**反模式**: 对核心新假设也用双步式——白话预告会让审稿人觉得论证被稀释。
 
 ---
 
@@ -346,6 +332,9 @@ H4: [IV B] × [Moderator B] → [DV] (+)  [positive moderation — opposite of H
 ```
 
 **语料锚定**: han_pollock_paruchuri (SMJ) — reputation/celebrity × objective/perceived severity
+
+**原文锚点** (Han, Pollock & Paruchuri, SMJ "Public enemies?"):
+> "Hypothesis 1. The positive relationship between high reputation and misconduct scandalization strengthens as objective misconduct severity increases." ... "Hypothesis 4. The positive relationship between celebrity and misconduct scandalization strengthens as perceived misconduct severity increases."
 
 **关键特征**:
 - 4 个假设全部为调节 (无双主效应假设)

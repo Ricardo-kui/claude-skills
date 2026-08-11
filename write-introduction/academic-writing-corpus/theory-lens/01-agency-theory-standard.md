@@ -34,6 +34,9 @@ source: Extracted from darby2025 JSCM + darby2026 JOM Introduction distillations
 
 **来源**: darby2025 (JSCM), P4
 
+**原文锚定**:
+> "Examination of the research question is guided by agency theory, which explains relationships wherein principals (e.g., stockholders) delegate authority to agents (e.g., executives) to act on the principals' behalf. In this context, activist investors are a subset of the principals who own shares in the focal firm and delegate authority to executives to manage the firm, which includes navigating supply chain failures such as product recalls."
+
 **关键特征**:
 - "guided by agency theory" → 直接声明理论透镜
 - "principals delegate authority to agents" → 先建立一般框架
@@ -47,6 +50,9 @@ source: Extracted from darby2025 JSCM + darby2026 JOM Introduction distillations
 > "Agency theory suggests that principals (e.g., [stockholders]) face information asymmetry when monitoring agents (e.g., [executives]). This information asymmetry is exacerbated when [condition], making it difficult for principals to [monitoring_action]. As a result, [negative_outcome] may occur."
 
 **来源**: darby2026 (JOM), adapted
+
+**原文锚定**:
+> "Agency theory suggests that a firm's shareholders might be one possibility to encourage more timely recalls. As principals, shareholders play an important monitoring role wherein they try to ensure that their agents (executives) make good decisions, which, in turn, helps protect the value of their investments."
 
 ## 组装规则
 

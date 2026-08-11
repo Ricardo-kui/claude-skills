@@ -49,7 +49,7 @@ source: Distilled from Chung, Low & Rust (2022, JAMS)
 **来源**: chung_low_rust_2022_jams (JAMS), P2-P3
 
 **原文锚定**:
-> "We expect this persuasive role to be most effective when the CMO displays high confidence... We further model how the board of directors... affects the myopic marketing tendencies of the confident CEO through its intensive monitoring."
+> "We expect this persuasive role to be most effective when the CMO displays high confidence in their judgment and ability to extract value improvement from their marketing recommendations. We further model how the board of directors, being the top decision-making body in a firm, affects the myopic marketing tendencies of the confident CEO through its intensive monitoring."
 
 **关键特征**:
 - 每一层都有明确的机制关键词

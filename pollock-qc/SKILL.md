@@ -73,6 +73,12 @@ description: 按 Pollock 2025 框架进行全稿或指定 Section 的快速 QC �
 - 每个 section 是否服务同一个 research question？
 - 是否存在 Theme 漂移？
 
+**Storyteller 人设检查（GBL 2007 Ch04，2026-08-09 接入）**：
+- 作者是否同时呈现 **institutional scientist**（制度科学家：文献掌握、方法纪律、规范引用）与 **human scientist**（人文科学家：田野在场、共情、第一人称声音）两面？只显制度面 → 稿件"没有人"；只显人文面 → 可信度受损
+- **technical competence**（技术胜任）是否可见？——方法与分析的复杂性被诚实呈现（不炫技也不回避）
+- **field knowledge**（田野熟手）是否可见？——现象细节、语境知识、具体例证（定性论文尤其；定量论文以现象锚点承担）
+- 人设是否**全文一致**？（引言建立的声音到 Discussion 没有跳变——如引言第一人称、Discussion 突然第三人称）
+
 #### 如果 section = introduction
 
 | QC 项 | 检查标准 | 评分 |
@@ -175,61 +181,17 @@ Prose QC 分三组，对应 Pollock Ch03（故事工具）+ Ch04（五病/active
 
 **路由**：触发的谬误归入"最需要修复的 3 个问题"——straw man/either-or → `/write-introduction`（重做 gap framing）；post hoc → `/write-theory`（补机制）+ `/methods-review`（校准因果语言）；false analogy/hasty generalization → `/discussion-review`（限制外推）；middle ground → `/write-theory`（补独立机制）。
 
+**完成判据**：范围内每个 QC 项均有 ✓/△/✗ 评分与一句问题摘要；「最需要修复的 3 个问题」各含原因 + 修复建议 + 推荐 Skill；所有 ✗ 项均已列入修复优先级。
+
 ## Output Format
 
-```
-## Pollock QC 报告（[section]）
+→ 报告模板：`references/output-format.md`
 
-### 检查项评分
-| QC 项 | 评分 | 问题摘要 | 优先级 |
-|-------|------|---------|--------|
-| [检查项] | ✓ / △ / ✗ | [描述] | 高/中/低 |
-
-### 最需要修复的 3 个问题
-1. **[问题]** — [原因] — [修复建议] — [推荐 Skill]
-2. **[问题]** — [原因] — [修复建议] — [推荐 Skill]
-3. **[问题]** — [原因] — [修复建议] — [推荐 Skill]
-
-### 修复后回流检查
-修改后请确认：
-- [ ] [检查点 1]
-- [ ] [检查点 2]
-- [ ] [检查点 3]
-```
 
 ## 完整示例
 
-### 输入
-```
-/pollock-qc introduction
-[粘贴 Introduction 文本]
---journal=SMJ
-```
+→ 端到端输入输出示例：`references/complete-example.md`（仅在需要示例时阅读）
 
-### 输出
-```
-## Pollock QC 报告（introduction）
-
-### 检查项评分
-| QC 项 | 评分 | 问题摘要 | 优先级 |
-|-------|------|---------|--------|
-| Hook | ✓ | Cold-start definition，温和建立领域，符合 SMJ 风格 | 低 |
-| Conversation | △ | 文献回顾较完整，但缺少明确的理论定位（RBV vs 动态能力） | 中 |
-| Problematization | ✗ | "few studies have examined" 是典型禁忌，未呈现 puzzle | **高** |
-| So what | ✗ | 未解释为什么机制缺失是理论上重要的 | **高** |
-| What we learn | △ | Mechanism 维度声明存在，但不够具体 | 中 |
-
-### 最需要修复的 3 个问题
-1. **Problematization 使用 "few studies have examined"** — 这是 Incompleteness Gap 的最大风险信号 — 改用 "the mechanism through which... remains unclear" 并增加 "theoretically important because..." — 推荐：`/intro-review <文件路径>`
-2. **So what 缺失** — 读者不知道为什么要关心这个研究 — 补充：如果不考虑这个机制，就无法解释为什么有些企业数字化转型成功而有些失败 — 推荐：`/write-introduction Incompleteness Mechanism`
-3. **Conversation 理论定位模糊** — 文献回顾像罗列而非对话 — 明确加入理论对话： "While the resource-based view emphasizes... the dynamic capabilities perspective suggests... yet both perspectives overlook..." — 推荐：`/intro-review <文件路径>`
-
-### 修复后回流检查
-修改后请确认：
-- [ ] Problematization 是否超越了 "few studies have examined"？
-- [ ] So what 是否解释了 omission 的理论重要性？
-- [ ] Conversation 是否明确加入了理论对话（而非罗列文献）？
-```
 
 ## 下游接口（路由到其他 Skill）
 
@@ -254,8 +216,3 @@ Prose QC 分三组，对应 Pollock Ch03（故事工具）+ Ch04（五病/active
 - 必须给出**可执行的修复建议**，不能只说 "需要改进"。
 - 每个问题必须推荐对应的下游 Skill。
 
-## 资产位置
-
-- **Prose 病理学**（Ch04 五病诊断卡 + active writing + sound & cadence + 25 条 dos/don'ts）→ `references/prose-pathology.md`
-- **逻辑谬误自检**（G&L Ch09 六类顶刊高频谬误：straw man / either-or / post hoc / false analogy / hasty generalization / middle ground）→ `references/logical-fallacy-selfcheck.md`
-- 其余 QC 标准（Story Architecture、Section Playbook）内联于本文件。

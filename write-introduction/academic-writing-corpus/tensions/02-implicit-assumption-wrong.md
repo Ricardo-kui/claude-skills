@@ -71,7 +71,7 @@ Inadequacy 问题化的核心 Tension：不是"文献遗漏了东西"，而是"�
 **来源**: gamache2020 (SMJ), P2-P3
 
 **原文锚定**:
-> "While important, research on corporate social responsibility generally considers stakeholder strategies broadly. As a result, scholars have yet to systematically distinguish between the specific types of stakeholder strategies that firms pursue. This distinction is theoretically meaningful because different types of stakeholder strategies may have different antecedents..."
+> "While important, much of the work on the role of the CEO in stakeholder strategy is general and considers the decision of whether to engage with stakeholders in a very broad sense. Research has yet to seriously consider how and why CEOs might pursue more specific stakeholder strategies reflecting unique priorities and goals."
 
 **关键特征**:
 - "While important" → 先承认文献价值（不树稻草人）

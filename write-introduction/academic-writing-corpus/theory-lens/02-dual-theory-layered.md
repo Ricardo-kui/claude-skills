@@ -8,10 +8,10 @@ generativity: ADAPTABLE
 exclusivity: HIGH
 source_papers:
   - hoffmann_cheong_phan_zurbruegg2024 (JM, 2024): "Agency theory for main effect mechanism + business ethics framework for boundary conditions"
-  - cutolo_ferriani2024 (JOM, 2024): "Processing fluency theory for main-effect mechanism + Bloom & Lahey (1978) linguistics taxonomy (content/form/use) for 3 narrative-feature moderators"
+  - cutolo_ferriani2024 (JM, 2024): "Processing fluency theory for main-effect mechanism + Bloom & Lahey (1978) linguistics taxonomy (content/form/use) for 3 narrative-feature moderators"
 created: 2026-06-05
 updated: 2026-08-05
-source: Distilled by distill-introduction-exemplar from Hoffmann et al. 2024 JM; enriched 2026-07-22 with Cutolo & Ferriani 2024 JOM (2nd source, cross-field); re-distilled hoffmann2024 2026-08-05
+source: Distilled by distill-introduction-exemplar from Hoffmann et al. 2024 JM; enriched 2026-07-22 with Cutolo & Ferriani 2024 JM (2nd source, cross-field; journal label corrected 2026-08-09); re-distilled hoffmann2024 2026-08-05
 ---
 
 # 02-dual-theory-layered — 双理论分层锚定 Theory Lens
@@ -80,7 +80,7 @@ source: Distilled by distill-introduction-exemplar from Hoffmann et al. 2024 JM;
 > To [organize/systematize] the conditions under which this [mechanism] varies, we draw on [secondary framework from an adjacent discipline] ([citation]), which distinguishes [N] fundamental [components/dimensions] of [domain]: [component 1] ([label 1]), [component 2] ([label 2]), and [component 3] ([label 3]). For each [component], we derive one corresponding [mechanism-enabling feature / moderator]: [moderator 1] maps to [component 1]; [moderator 2] to [component 2]; [moderator 3] to [component 3].
 
 **原文锚定**:
-> "Marrying linguistics literature with processing fluency theory (Alter & Oppenheimer 2009; Reber et al. 2004; Schwarz 2004), we articulate and test three narrative features—abstraction, cohesion, and conventionality—that affect the subjective ease experienced while processing atypicality, thereby impacting evaluation. Each of these features reflects one of the three fundamental components of language (Bloom & Lahey, 1978): content, the meaning encoded in the language used; form [structure], the organization and relationship between linguistic elements; and use, the contextual embeddedness of the language used."
+> "Marrying linguistics literature with processing fluency theory (Alter & Oppenheimer, 2009; Reber, Schwarz, & Winkielman, 2004; Schwarz, 2004), we articulate and test three narrative features—abstraction, cohesion, and conventionality—that affect the subjective ease experienced while processing atypicality, thereby impacting evaluation. Each of these features reflects one of the three fundamental components of language (Bloom & Lahey, 1978): content, the meaning encoded in the language used; structure, the organization and relationship between linguistic elements; and use, the contextual embeddedness of the language used."
 
 **来源**: cutolo_ferriani2024 (JOM), Introduction P6-P7
 

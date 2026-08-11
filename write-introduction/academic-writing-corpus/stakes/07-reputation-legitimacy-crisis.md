@@ -57,7 +57,7 @@ source: Manually curated from MVP30 narrative_analysis files
 **来源**: han2020 (AMJ), P1-P2
 
 **原文锚定**:
-> "This is problematic because audiences may be more or less drawn to transgressions for reasons that have little to do with the focal actor and may impose penalties that are both inconsistent and unfair... Further, most research on the relationship between status and scandalization has treated the misbehaving actor's status as decontextualized. This is also problematic because the context in which an event or action occurs can differentially shape assessments and responses, sometimes even inverting the relationships."
+> "Further, most research on the relationship between status and scandalization has treated the misbehaving actor's status as decontextualized. This is also problematic because the context in which an event or action occurs can differentially shape assessments and responses, sometimes even inverting the relationships."
 
 **关键特征**:
 - "This is problematic because" → 直接陈述不研究的后果
@@ -75,7 +75,7 @@ source: Manually curated from MVP30 narrative_analysis files
 **来源**: paruchuri2020 (SMJ), P4
 
 **原文锚定**:
-> "Further, most research on reputation spillovers has focused on situations where a focal firm's negative action has negative spillover effects. We are aware of only one study where the valence of the spillover is different than the valence of the action... Piazza and Jourdan (2018) found that... While they explored this effect over a long time period, the 'pedophile priest' sex scandals continued to be in the news... keeping the Catholic Church's wrongdoing cognitively available... They also inferred reputational effects by observing parishioners' behaviors, rather than directly assessing reputation."
+> "Further, most research on reputation spillovers has focused on situations where a focal firm's negative action has negative spillover effects. We are aware of only one study where the valence of the spillover is different than the valence of the action... Piazza and Jourdan (2018) found that... While they explored this effect over a long time period, the 'pedophile priest' sex scandals continued to be in the news... keeping the Catholic Church's wrongdoing cognitively available... They also inferred reputational effects by observing parishioners' behaviors, rather than directly assessing Catholics' perceptions of the reputations of other denominations after the scandal broke."
 
 **关键特征**:
 - 用"only one study"强调知识的稀缺性
@@ -92,7 +92,7 @@ source: Manually curated from MVP30 narrative_analysis files
 **来源**: desjardine2023 (OS), P2-P3
 
 **原文锚定**:
-> "Although common ownership—and the power it bestows—may seem advantageous for investors, it has created a new investment challenge: When a single investor owns multiple firms in an industry, it becomes even more necessary to manage systematic risk... Such risk is critical to manage because when one firm suffers a negative shock, the negative fallout can spread to other firms in the investors' portfolios... At the same time, systematic risk cannot be reduced by diversification... or divestment... Therefore, as common owners contend with an elevated exposure to systematic risk, the question arises: How can common owners use their unique boundary-spanning ownership positions..."
+> "Although common ownership—and the power it bestows—may seem advantageous for investors, it has created a new investment challenge: When a single investor owns multiple firms in an industry, it becomes even more necessary to manage systematic risk... Such risk is critical to manage because one firm's errant behavior can inflict harm on an entire industry of bystander firms (Paruchuri and Misangyi 2015), amplifying losses for the industry and its common owners... At the same time, systematic risk cannot be reduced by diversification... or divestment... Therefore, as common owners contend with an elevated exposure to systematic risk, the question arises: How can common owners use their unique boundary-spanning ownership positions..."
 
 **关键特征**:
 - "Although... it has created a new challenge" → 从表面好处转向深层困境

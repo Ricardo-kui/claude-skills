@@ -10,8 +10,69 @@ variants_count: 10
 created: 2026-05-18
 updated: 2026-08-05
 ---
-
 # IV-2SLS — Results 骨架
+
+## 变体速查表
+
+> 检索辅助。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架与诚实边界见下方变体正文。
+
+槽位分布：
+
+| 槽位 | 变体数 | 变体编号 |
+|---|---|---|
+| R1 | 1 | 2 |
+| R2 | 2 | 3, 4 |
+| R3 | 2 | 1, 8 |
+| R4 | 1 | 9 |
+| R6 | 1 | 7 |
+| R7 | 2 | 5, 10 |
+| R8 | 1 | 6 |
+
+### R1（1）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 2 | Model-Free Evidence 预览 | 正式回归前用均值分组比较建立初步直觉，降低读者对"完全依赖复杂计量技术"的疑虑（副槽位 R3） | 区别于直接进入 IV 报告——先给模型无关证据预览 | 可选 | Wowak 2025 MS |
+
+### R2（2）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 3 | IV 第一阶段诊断嵌入 R3 | 因果识别研究：partial F / Sargan / Pagan-Hall / Breusch-Pagan 嵌入结果正文而非脚注（副槽位 R3） | 区别于诊断放脚注/Methods——让读者读结果时同步看到识别有效性 | 可选 | Wowak 2025 MS |
+| 4 | 非线性估计器下 IV：控制函数残差作 DWH | 生存/Probit/Tobit 主模型的内生性检验：一阶段残差入二阶段方程作 DWH 非线性类比 + 有限样本偏误诚实提示（副槽位 R3） | 区别于线性 DWH——非线性模型下标准 DWH 无效；须加系数被放大 caveat | 通过（单篇） | Qiao, Hiatt & Sine 2026 SMJ |
+
+### R3（2）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 1 | 竞争假设的赢家报告模式 | 并列双可能性假设（H1a vs H1b）在 R3 同时报告两方向解释，用显著性决定"赢家" | 区别于单方向假设——"A positive… whereas a negative…"→"imply the former/latter" | 通过（1/5 复现） | Wowak 2025 MS |
+| 8 | 多 DV 平行 climax | 同一内生结构的多结果家族（薪酬/违规/绩效）：按假设逐 DV 平行四拍，幅度翻译按估计器匹配（%/货币/OR），诊断嵌入表注 | 区别于变体 1（竞争赢家）——多 DV 平行；因果动词按估计器分级，货币翻译锚定样本均值 | 通过（单篇） | Zorn et al. 2017 SMJ |
+
+### R4（1）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 9 | 调节衰减：mean/±1SD 条件斜率 + 跨 DV 选择性 null | IV 主效应后双外部治理调节：交互项+条件斜率+图+"marginal support"措辞，选择性 null 提升为理论边界（副槽位 R6） | 区别于 OLS-FE 单侧边际效应变体——IV 场景强制全套条件斜率；不得把 p≈.06–.08 升级为 full support | 通过（单篇） | Zorn et al. 2017 SMJ |
+
+### R6（1）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 7 | 稳健性例外账本 | 替代测量/工具族/分类下把稳健性分三层报告：stable headline / 形式敏感 / 脆弱边界（副槽位 R7） | 区别于"results remain unchanged"抹平差异——分层的证据权重更新，符号反转须升级为 substantive inconsistency | 待交叉 | Moon, Tuli & Mukherjee 2023 JM |
+
+### R7（2）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 5 | "去 IV" 稳健性（非工具变量估计示偏误低） | 移除 IV 重跑，用 IV 与非 IV 估计一致反向论证内生性偏误低（识别策略的 meta-robustness，配合 abundance of caution 叙事） | 区别于"加 IV 防御"——移除识别策略反向证明；IV 与非 IV 差异大时禁止使用 | 通过（单篇） | Wowak 2025 MS |
+| 10 | kind-vs-degree 构念电池 | 二元"极端结构"须证明不可还原为连续梯度：dual-category 反转/连续独立性子样本/Chow 跳跃检验 | 区别于按估计器/样本/测量威胁组织的常见 R7——构念操作化威胁专用电池 | 通过（单篇） | Zorn et al. 2017 SMJ |
+
+### R8（1）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 6 | 离散度 post hoc（best of both 调和） | 主结果两对立群体各赢一个维度时，用群体内离散度（CV）作可操作干预的调和型事后分析 | 区别于 mediation post hoc（解释"为什么"）——焦点从均值转向离散度，"best of both"框架回答"该怎么办" | 通过（单篇） | Wowak 2025 MS |
+
 
 ## 主骨架
 
@@ -28,6 +89,7 @@ updated: 2026-08-05
 
 ### 变体 1: 竞争假设的赢家报告模式 (1/5 复现)
 **来源论文**: Wowak2025 MS
+**原始句锚点**: The results in column (IV) imply the former (β = 0.453; p < 0.01), such that firms with more liberal TMTs are slower to initiate recalls than firms with more conservative TMTs.
 **验证状态**: 通过 (竞争假设设计的标准模板)
 **写入日期**: 2026-05-20
 **槽位**: R3
@@ -41,6 +103,7 @@ updated: 2026-08-05
 
 ### 变体 2: Model-Free Evidence 预览 (1/5 复现)
 **来源论文**: Wowak2025 MS
+**原始句锚点**: Before discussing regression results, we first explore model-free support for our hypotheses. The mean number of recalls for firms with more liberal TMTs is 3.78, whereas it is 5.73 for firms with more conservative TMTs, suggesting that firms with more liberal TMTs tend to issue fewer recalls in any given year.
 **验证状态**: 可选变体
 **写入日期**: 2026-05-20
 **槽位**: R1/R3 (在正式回归之前)
@@ -50,6 +113,7 @@ updated: 2026-08-05
 
 ### 变体 3: IV 第一阶段诊断嵌入 R3 (1/5 复现)
 **来源论文**: Wowak2025 MS
+**原始句锚点**: Indeed, the partial F-statistic exceeds the thresholds that scholars suggest represent relevance (partial F-stat = 59.534; p < 0.001), and the two-step identification test from Andrews (2018) does not contain zero [-15.390, -3.943], reflecting relevant instruments (Stock et al. 2002).
 **验证状态**: 可选变体 (IV 研究的最佳实践)
 **写入日期**: 2026-05-20
 **槽位**: R2/R3
@@ -59,6 +123,7 @@ updated: 2026-08-05
 
 ### 变体 4: 非线性估计器下的 IV — 控制函数残差作 DWH 检验 + 有限样本偏误诚实提示 (1篇高价值)
 **来源论文**: Qiao, Hiatt & Sine 2026 (SMJ)
+**原始句锚点**: Further, because standard Durbin–Wu–Hausman tests rely on linear-model assumptions and are not valid for nonlinear survival models, we adopted a control-function approach in which the first-stage residual is included in the hazard equation and the examination of whether the residual is statistically significant constitutes the nonlinear analogue of a Durbin–Wu–Hausman test for endogeneity (Terza et al., 2008; Wooldridge, 2010, 2015).
 **验证状态**: 通过 (单篇高价值，生存/有限因变量模型下内生性检验的标准做法 + 罕见的诚实提示)
 **写入日期**: 2026-06-16
 **槽位**: R2/R3
@@ -68,6 +133,7 @@ updated: 2026-08-05
 
 ### 变体 5: R7 "去 IV" 稳健性 — 用非工具变量估计展示内生性偏误低 (1篇高价值)
 **来源论文**: Wowak2025 MS
+**原始句锚点**: Although we employed IVs that met the relevance and exclusion criteria in our main analysis, the consistency of our results from the noninstrumented approach indicates that bias from endogeneity may be relatively low in our setting.
 **验证状态**: 通过（单篇高价值；corpus 此前无"移除识别策略以反向论证偏误低"的元稳健性变体）
 **写入日期**: 2026-07-25
 **槽位**: R7
@@ -79,6 +145,7 @@ updated: 2026-08-05
 
 ### 变体 6: R8 离散度 post hoc — "best of both" 调和型事后分析 (1篇高价值)
 **来源论文**: Wowak2025 MS
+**原始句锚点**: A logical conclusion from our research is that firms may seek to diversify their TMTs politically in the hopes of having both fewer recalls and faster ones.
 **验证状态**: 通过（单篇高价值；corpus 此前无"焦点构念从均值转向离散度、并框架为调和两极张力"的 post hoc 变体）
 **写入日期**: 2026-07-25
 **槽位**: R8
@@ -93,6 +160,7 @@ updated: 2026-08-05
 ### 变体 7: R6/R7 稳健性例外账本——稳定结论、形态变化与脆弱边界分层报告
 
 **来源论文**: Moon, Tuli & Mukherjee (2023, *Journal of Marketing*)
+**原始句锚点**: Considering Models 10a–10c, we find that analyst uncertainty completely mediates the effect of disclosure of advertising spending on idiosyncratic risk.
 **验证状态**: 单篇高价值 reference-level 变体，待跨论文验证
 **写入日期**: 2026-08-03
 **槽位**: R6/R7
@@ -108,6 +176,7 @@ updated: 2026-08-05
 ### 变体 8: R3 多 DV 平行 climax — 同 IV、设计匹配幅度翻译（% / 货币 / OR）(EMERGING)
 
 **来源论文**: Zorn, Shropshire, Martin, Combs & Ketchen (2017, SMJ)
+**原始句锚点**: Lone-insider CEOs received roughly 82% greater pay than their non-lone-insider peers. Practically speaking, given the mean value of total pay in our sample of $5.7 million, results suggest that lone-insider CEOs receive $4.7 million in excess pay.
 **验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
 **写入日期**: 2026-08-05
 **槽位**: R3
@@ -123,6 +192,7 @@ updated: 2026-08-05
 ### 变体 9: R4/R6 调节衰减 — 交互项 → mean/±1SD 条件斜率 → 边际支持诚实 → 跨 DV 选择性 null (EMERGING)
 
 **来源论文**: Zorn, Shropshire, Martin, Combs & Ketchen (2017, SMJ)
+**原始句锚点**: Next, we examine whether the conditional effect of lone-insider boards is different from zero depending on the amount of analyst coverage. The slope of the relationship between lone-insider boards and excess pay at the mean value of analyst coverage (approximately 12 analysts) is marginal (b = 5.59, p =.08).
 **验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
 **写入日期**: 2026-08-05
 **槽位**: R4 / R6
@@ -138,6 +208,7 @@ updated: 2026-08-05
 ### 变体 10: R7 kind-vs-degree 构念电池 — dual-category 反转 / 连续独立性子样本 / Chow 跳跃检验 (EMERGING)
 
 **来源论文**: Zorn, Shropshire, Martin, Combs & Ketchen (2017, SMJ)
+**原始句锚点**: Taken together, these results support our theorizing that having at least one non-CEO insider represents a change in kind rather than degree.
 **验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
 **写入日期**: 2026-08-05
 **槽位**: R7

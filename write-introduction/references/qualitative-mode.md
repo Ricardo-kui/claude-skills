@@ -87,3 +87,36 @@
 ## 触发机制
 
 用户自报"本文是定性 / 归纳研究 / 过程研究"时，Phase 1 加载本文件（仿理论论文 AMR 模式的用户自报触发）。**不引入 paper_type 协议字段**——定性/理论分支都靠用户明确声明，不靠上游自动检测。若用户未声明但内容明显是定性（如提到访谈/编码/grounded theory），Phase 1 应主动询问论文类型后再路由。
+
+## Theorized Storyline 与 Telling-Showing-Telling（GBL 2007 Ch02-03，2026-08-09 接入）
+
+### Theorized Storyline（理论化叙事主线）——GBL 中央概念
+
+定性论文不是"把发现写下来"，而是构造一条 **theorized storyline**：把田野材料组织成一条**带理论主张的主线**——每个发现片段都被安置在这条主线上，而不是按时间/主题罗列。
+
+**与 Pollock storylines 的区分（防混用）**：
+- Pollock storylines = 构念的旅程（construct journeys——角色怎么走）
+- GBL theorized storyline = **贯穿全文的理论主张线**（the paper's one theoretical line——读者读完能复述的那句话）
+
+**二者的关系**：story_frame.one_liner（story-blueprints/paper-story-contract 字段）就是 theorized storyline 的压缩形态——一句话说清"这篇论文的理论主张线"（冲突 + 解法 + 理论含义），不是摘要（发现清单），也不是 Pollock 的构念旅程。
+
+### 定性引言在 storyline 构造中的角色
+
+GBL Four Moves 就是 storyline 的四个构造动作，引言结束时读者应能复述这条理论主张线：
+1. **Move 1（significance）**：把研究放在一个更大的、读者关心的世界里——storyline 的起点
+2. **Move 2（literature situation）**：选择 Synthesized / Progressive / Noncoherence 的对话方式——storyline 的定位
+3. **Move 3（problematization）**：指出文献缺口类型（Incomplete / Inadequate / Incommensurate）——storyline 的张力
+4. **Move 4（response foreshadow）**：预示本研究如何回应——storyline 的方向
+
+定性模式（foreshadow 而非 predict）意味着 Move 4 预示的是**研究旅程与理论产出的形态**（"we induct a process model of..."），不是假设方向。
+
+### Telling-Showing-Telling 节律（GBL Ch03）
+
+定性叙事的写作节律：**先讲主张（telling）→ 用材料展示（showing）→ 再回到主张的理论意义（telling）**。引言 Hook 适用：开场 telling（主张/问题）→ 现象 showing（田野片段/引语）→ 定位 telling（理论意义）。反模式：只有 showing 没有 telling（读者不知道这段田野意味着什么）或只有 telling 没有 showing（主张悬空无锚）。
+
+### 定性引言 storyline 完整性检查（QC）
+
+- [ ] 读者读完引言能否**一句话复述理论主张线**（= one_liner / theorized storyline）？
+- [ ] Hook 的 showing 是否**服务于主张线**而非装饰（删掉它主张线是否受损）？
+- [ ] 四 Moves 是否构成一条连续线（起点→定位→张力→方向），而非四个孤立段落？
+- [ ] Preview 的 foreshadow 是否暗示了理论产出的形态（过程模型/类型学/机制）？

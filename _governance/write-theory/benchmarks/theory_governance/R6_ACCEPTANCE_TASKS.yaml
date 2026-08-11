@@ -1,0 +1,118 @@
+schema_version: 1
+description: "Pre-registered R6 blind comparison on novel tasks after the R5 failure-targeted repairs (E boundary-scope graph notation, G same-outcome locking, D terminal-state closure, D discriminating open agenda, B horizon-contingent net effect)."
+blinding:
+  seed: "theory-r6-2026-08-07-v1"
+  rule: "For each task, SHA256(seed + ':' + task_id); even first byte means governed=X, odd means governed=Y. Judges receive prompts and X/Y outputs only."
+  generator_isolation: "Governed and legacy generators run in separate fresh threads and may not inspect benchmark, audit, evaluation, or each other's output files."
+  judge_design: "Two fresh judges independently score all 12 pairs. Encode X win=1, tie=0, Y win=-1; sum determines pair outcome and disagreement cancels to tie."
+evaluation_protocol:
+  output_contract: "For each task return a compact argument graph and 120-180 word English rationale; obey the task's requested hypothesis/proposition mode."
+  governed_route: "Use current write-theory SKILL.md and governed catalog. Run generation-contract and at least one list-references query per task. Record all list/render events in one hash-chained manifest; render zero assets when no exact reference is relevant."
+  legacy_route: "Use direct corpus index and architecture files without governed catalog, generation guards, process_transition_operators, retrieval manifest, or benchmark files."
+  scoring: "Each judge scores each output 1-5 on all eight dimensions. Condition means average across tasks, judges, and dimensions. Any judge-reported critical failure counts conservatively."
+  compliance: "Each judge records explicit_compliance for each output. Governed compliance requires both judges to mark all 12 tasks compliant."
+rubric:
+  dimensions:
+    - mechanism_completeness
+    - premise_and_warrant_soundness
+    - construct_discrimination
+    - boundary_level_time_precision
+    - prediction_testability
+    - task_contract_alignment
+    - adaptability_rather_than_templating
+    - epistemic_honesty
+  critical_failures:
+    - fabricated_source_or_setting_fact
+    - construct_drift
+    - prediction_unsupported_by_why_chain
+    - level_time_or_estimand_mismatch
+    - forced_mediator_moderator_hypothesis_or_proposition
+    - unsupported_causal_language
+    - paper_specific_reference_copied_as_prose
+decision_rule:
+  primary_integrity:
+    governed_critical_failures_max: 0
+    governed_explicit_task_compliance_required: 12
+    governed_manifest_task_coverage_required: 12
+    governed_manifest_must_validate: true
+  comparative_superiority:
+    governed_pairwise_wins_must_exceed_losses: true
+    governed_mean_score_must_exceed_legacy_by_at_least: 0.25
+    targeted_task_losses_max: 1
+  preservation:
+    governed_preservation_critical_failures_max: 0
+    governed_preservation_mean_must_be_at_least_legacy_minus: 0.50
+  interpretation: "All conditions must hold for R6 acceptance. Do not alter tasks, labels, rubric, aggregation, or thresholds after generation begins."
+tasks:
+  - id: R6Q01
+    stratum: targeted
+    architecture: E
+    mode: no_numbered_hypotheses
+    story_state: complete
+    prompt: "Explain how port automation investment affects dockworker union concession-making under high versus low regional reemployment prospects. Derive an affirmative actor-level mechanism for each reemployment state, place the boundary state before its interpretation and mechanism, specify level and timing, and use no numbered hypothesis."
+  - id: R6Q02
+    stratum: targeted
+    architecture: E
+    mode: hypotheses
+    story_state: complete
+    prompt: "Theorize how manager use of AI-assisted feedback drafting affects employee upward voice under high versus low perceived evaluation stakes. Give an affirmative and distinct mechanism for each state, identify observable traces, and state signed conditional predictions without an unconditional main-effect hypothesis."
+  - id: R6Q03
+    stratum: targeted
+    architecture: D
+    mode: propositions
+    story_state: complete
+    prompt: "Develop a process account of an agricultural cooperative moving from pilot traceability-app use to a binding member-wide traceability standard. Name the actors and transition condition, identify an observable readiness marker that exists before the standard begins, include a failed-transition branch, and end with one well-formed proposition."
+  - id: R6Q04
+    stratum: targeted
+    architecture: D
+    mode: no_numbered_hypotheses
+    story_state: complete
+    prompt: "Build a feedback-transport account for a humanitarian relief NGO: identify the field-feedback source, transport channel, translation into organizational categories, decision-capable recipient, interpretation criterion, and distinct traces showing reinforcement, redirection, and termination. Preserve an open empirical agenda and use no numbered claims."
+  - id: R6Q05
+    stratum: targeted
+    architecture: G
+    mode: propositions
+    story_state: complete
+    prompt: "Develop symmetric benefit and burden mechanisms through which mandatory human-rights audit disclosure shapes apparel buyers' supplier retention decisions, then provide a theory-based reconciliation that specifies when each mechanism dominates and state one proposition."
+  - id: R6Q06
+    stratum: targeted
+    architecture: B
+    mode: no_numbered_hypotheses
+    story_state: complete
+    prompt: "Explain how adopting standardized sales-playbook scripts changes salesperson adaptive selling through countervailing structure-benefit and script-rigidity mechanisms. Specify warrants, temporal ordering, and divergent observable traces without numbered hypotheses."
+  - id: R6Q07
+    stratum: preservation
+    architecture: A
+    mode: no_numbered_hypotheses
+    story_state: complete
+    prompt: "Define cross-sector convening capacity in regional decarbonization initiatives, distinguish it from network brokerage and from hierarchical leadership, and state its dimensionality, level, temporal scope, and discriminating observations. Do not formulate a numbered hypothesis."
+  - id: R6Q08
+    stratum: preservation
+    architecture: B
+    mode: hypotheses
+    story_state: complete
+    prompt: "Explain how blameless postmortem routines reduce incident recurrence in cloud-infrastructure teams through an explicit actor-action-state why-chain. State the warrants, observable implications, and one testable hypothesis without claiming a measured mediator."
+  - id: R6Q09
+    stratum: preservation
+    architecture: C
+    mode: hypotheses
+    story_state: complete
+    prompt: "Build a shared-trunk hypothesis tree linking warehouse robotics adoption to order-fulfillment reliability. Derive one branch for demand volatility and one for workforce tenure, keeping the same focal X, Y, unit, and time horizon across branches."
+  - id: R6Q10
+    stratum: preservation
+    architecture: F
+    mode: hypotheses
+    story_state: complete
+    prompt: "Develop a fair theoretical horse race over whether unlimited vacation policies increase employee recovery. Use an autonomy-restoration account and a self-exploitation account, lock the same unit and horizon, steelman both mechanisms, and state mutually discriminating directional hypotheses."
+  - id: R6Q11
+    stratum: preservation
+    architecture: D
+    mode: propositions
+    story_state: complete
+    prompt: "Explain how an urban farmers-market vendor association moves from informal coordination to formal dues-based governance. Specify the current-stage action, threshold, a pre-formalization marker, the next actor and state, and a failed branch in which disputes over fee use halt or redirect progression; state one proposition."
+  - id: R6Q12
+    stratum: preservation
+    architecture: E
+    mode: hypotheses
+    story_state: complete
+    prompt: "Theorize how ESG-linked executive pay affects capital reallocation toward green projects under high versus low board sustainability expertise. Give an affirmative mechanism for each state, identify observable traces, and state signed conditional predictions without an unconditional main-effect hypothesis."

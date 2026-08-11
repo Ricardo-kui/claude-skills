@@ -9,8 +9,72 @@ variants_count: 13
 created: 2026-05-18
 updated: 2026-08-05
 ---
-
 # 自然实验-DiD — Methods 骨架
+
+## 变体速查表
+
+> 检索辅助。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架与诚实边界见下方变体正文。
+
+### 槽位分布
+
+| 槽位 | 变体数 | 变体编号 |
+|---|---|---|
+| M8 | 4 | 3、4、12、13 |
+| M7 | 3 | 2、5、6 |
+| M2 | 2 | 1、7 |
+| M1 | 1 | 8 |
+| M3 | 1 | 10 |
+| M4 | 1 | 9 |
+| M6 | 1 | 11 |
+
+### M8（4）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 3 | 错位 DiD 三层诊断栈 + 现代估计诚实边界 | 错位实施 DiD 的可信度检查（按威胁组织） | 与变体 4 的界限：诊断（pretrend/置换/分解）vs 修复（异质性稳健估计） | 待交叉 | Lee, Wu & Bednar (OS) |
+| 4 | staggered DiD 识别栈（model-free → 机制 → pretrend → 安慰剂） | Marketing 准实验 staggered 采纳研究 | 区别于变体 3：加 model-free 证据 + 文献 manipulation check 四段式 | 待交叉 | Hoffmann et al. 2024 (JM) |
+| 12 | 政治经济外生性电池（质性检索 + LPM/hazard + 供需零相关） | 政策采纳时点可能随政治经济条件内生 | 区别于变体 4：专攻"政治经济内生采纳"威胁 | 待交叉 | Castellaneta et al. 2017 (SMJ) |
+| 13 | 日历安慰剂 ±k 年（假处理弱于真处理） | 持有窗截面、难画标准 event-study 的设计 | 区别于变体 3/4（置换/重分配安慰剂）：固定错位 ±k 年 | 待交叉 | Castellaneta et al. 2017 (SMJ) |
+
+### M7（3）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 2 | 有符号计数衍生 DV → 线性 FE 估计器选择 | 计数派生但因正负相减可取负值的 DV | 先检查支持域再选模型，避免按来源标签机械用 count model | 待交叉 | Lee, Wu & Bednar (OS) |
+| 5 | rare outcome 下 year + industry FE（无法 firm FE） | rare binary outcome、单位内无 DV 变异的面板（副槽位 M8） | 纠正常见误写：是 always-zero → collinearity 而非 incidental parameters | 待交叉 | Hoffmann et al. 2024 (JM) |
+| 6 | staggered adoption 下 POST 与 Treat×Post 共线性说明 | 州级法律 staggered 设计，预防"为何没控制 post"质疑 | 与变体 5 同类共线性代数，但针对 ever-treated×post 设计 | 待交叉 | Hoffmann et al. 2024 (JM) |
+
+### M2（2）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 1 | 跨层级冲击映射 + 处理事件样本漏斗 | 冲击在地理/制度层、分析单位为企业的研究 | 只报最终 N 之外，增加"冲击层→暴露规则→事件减少"可审计映射链 | 待交叉 | Lee, Wu & Bednar (OS) |
+| 7 | 裁量权子样本 + 行业/event 扩展漏斗 | 需防遗漏"有缺陷信号但不作为"单位的召回/事件样本 | 区别于变体 1：漏斗含 assignment stability 排除 + 防遗漏行业扩展 + 理论子样本聚焦 | 待交叉 | Hoffmann et al. 2024 (JM) |
+
+### M1（1）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 8 | 重复交易情境（双重出售使价值变化可观测） | 研究问题要求观察同一资产的价值变化（buyout 等） | 把双重定价/重复交易写成理论检验前提，而非仅论证冲击外生 | 待交叉 | Castellaneta et al. 2017 (SMJ) |
+
+### M3（1）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 10 | ΔV/IRR 作为一阶差分 → 截面估计等价于 DiD | 只有单次观测、DV 已嵌一阶差分的截面设计（副槽位 M7、M8） | 区别于标准 unit-year TWFE（变体 3–4）：等价性叙事 + 数据约束诚实说明 | 待交叉 | Castellaneta et al. 2017 (SMJ) |
+
+### M4（1）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 9 | 持有窗内处理编码 + staggered 教学示例 | 持有窗（非日历年面板）处理赋值的 staggered 设计（副槽位 M8） | 区别于变体 6：单州示例 → staggered 重组两段叙事降低理解成本 | 待交叉 | Castellaneta et al. 2017 (SMJ) |
+
+### M6（1）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 11 | entry/exit 年 FE + 多维 FE + 冲击层级聚类 | 每单位一次观测的持有窗截面（副槽位 M7） | 区别于标准 unit FE + year FE：entry×exit 年 FE 吸收时长与两端冲击 | 待交叉 | Castellaneta et al. 2017 (SMJ) |
+
 
 ## 主骨架
 
@@ -37,6 +101,7 @@ updated: 2026-08-05
 ### 变体 1：跨层级冲击映射 + 处理事件样本漏斗（2026-08-02）
 
 **来源论文**: Lee, Wu & Bednar, *Organization Science*, DOI 10.1287/orsc.2024.18968
+**原始句锚点**: "While their analysis is at the county level, ours focuses on firms. As a result, our sample includes fewer instances of newspaper decline because not every affected county has a publicly traded firm."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -54,6 +119,7 @@ updated: 2026-08-05
 ### 变体 2：有符号的计数衍生因变量 → 线性 FE 估计器选择（2026-08-02）
 
 **来源论文**: Lee, Wu & Bednar, *Organization Science*, DOI 10.1287/orsc.2024.18968
+**原始句锚点**: "Because our dependent variable contains negative values, fixed effects Poisson or negative binomial regressions are not applicable even though the measure is essentially count-based. Following prior studies employing similar measures (e.g., Qian et al. 2019, Jia et al. 2020, Wu et al. 2026), we therefore use fixed-effects linear regressions."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -71,6 +137,7 @@ updated: 2026-08-05
 ### 变体 3：错位 DiD 三层诊断栈 + 现代估计诚实边界（2026-08-02）
 
 **来源论文**: Lee, Wu & Bednar, *Organization Science*, DOI 10.1287/orsc.2024.18968
+**原始句锚点**: "The recent DiD literature has acknowledged that two-way fixed-effect estimators in staggered DiD design may introduce a "bad comparison" problem that differs from a violation of the parallel-trends assumption but is similarly problematic (Goodman-Bacon 2021), resulting in staggered DiD estimates subject to under-identification issues (Borusyak et al. 2016)."
 
 **验证状态**: EMERGING / LEGACY-DIAGNOSTIC（可借用组织方式，不得把原估计方案当现代默认）
 
@@ -89,6 +156,7 @@ updated: 2026-08-05
 ### 变体 4：staggered DiD 识别栈 — model-free → 机制锚定 → pretrend → jurisdiction 安慰剂（2026-08-05）
 
 **来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (*Journal of Marketing*)
+**原始句锚点**: "Before estimating our regression models, we present model-free evidence and explore the raw data to assess whether the quasi-experiment of the staggered adoption of UD laws appears to have an effect on the dependent variable, as per Goldfarb, Tucker, and Wang's (2022) recommendation."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -107,6 +175,7 @@ updated: 2026-08-05
 ### 变体 5：二元 rare outcome 下 year + industry FE，无法 firm FE（perfect collinearity）（2026-08-05）
 
 **来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (*Journal of Marketing*)
+**原始句锚点**: "It is worth noting that it is not possible to include firm fixed effects because of the way our data is structured. That is, our sample includes a set of firms that never issue a recall but are in the same industries as the firms that do issue a recall."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -124,6 +193,7 @@ updated: 2026-08-05
 ### 变体 6：staggered adoption 下 POST 与 Treat×Post 共线性说明（2026-08-05）
 
 **来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (*Journal of Marketing*)
+**原始句锚点**: "Because the interaction term UD_LAW × POST_ADOPTION would be perfectly collinear with the POST_ADOPTION indicator, the main effect of POST_ADOPTION drops out from our models."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -141,6 +211,7 @@ updated: 2026-08-05
 ### 变体 7：裁量权子样本 + 行业/event 扩展漏斗（2026-08-05）
 
 **来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (*Journal of Marketing*)
+**原始句锚点**: "To ensure that we do not omit observations where there might have been a need for a product recall (i.e., an instance of a defective product) but the firm decided not to issue one, we also include all firms from industries in which, during the sample period, there was an incident report filed by consumers with the CPSC through its "Safer Products" website, indicating that they experienced an issue with an unsafe product."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -158,6 +229,7 @@ updated: 2026-08-05
 ### 变体 8：重复交易情境（buyout dual-sale）使制度冲击前后价值变化可观测（2026-08-05）
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+**原始句锚点**: "The ideal setting to test our theory would allow us to observe changes in company market value after an increase in the legal protection of trade secrets: that is, the same company would need to be sold twice—before and after the strengthening of trade secrecy protection."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -175,6 +247,7 @@ updated: 2026-08-05
 ### 变体 9：持有窗内处理编码 + staggered 教学示例（treatment/control 随时间重组）（2026-08-05）
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+**原始句锚点**: "UTSA_{tbuy,tsell} is equal to 1 if the UTSA was enacted in the state where the company is incorporated during the period between t_buy (the year of its purchase by the PE company) and t_sell (the year of its sale by that company to another firm), and 0 otherwise."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -192,6 +265,7 @@ updated: 2026-08-05
 ### 变体 10：ΔV/IRR 作为一阶差分 → 截面估计等价于 DiD 的识别叙事（2026-08-05）
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+**原始句锚点**: "However, our empirical strategy is equivalent to the DiD framework to the extent that the IRR measures change in the target firm's market value, and so the dependent variable incorporates the first difference before and after the treatment."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -210,6 +284,7 @@ updated: 2026-08-05
 ### 变体 11：entry/exit 年 FE + 多维 FE + 冲击层级聚类（持有窗截面）（2026-08-05）
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+**原始句锚点**: "To address this concern, we include entry-year fixed effects, a dummy for the year t_buy of company purchase by the PE company, and exit-year fixed effects, a dummy for the year t_sell of company sale."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -227,6 +302,7 @@ updated: 2026-08-05
 ### 变体 12：政治经济外生性电池 — 质性检索 + LPM/hazard 采纳时点 + 供需零相关（2026-08-05）
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+**原始句锚点**: "Specifically, we search the Lexis-Nexis database for press releases indicating that PE firms actively lobbied for the UTSA statutes. Not surprisingly, we find no such evidence."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -244,6 +320,7 @@ updated: 2026-08-05
 ### 变体 13：日历安慰剂 ±k 年（假处理弱于真处理）（2026-08-05）
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+**原始句锚点**: "To rule out the possibility that our treatment generates statistically significant results merely by chance, we next perform a series of robustness checks by creating a "placebo" treatment. In particular, we pretend that the change in trade secrets occurs five years before and five years after the real year of change."
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 

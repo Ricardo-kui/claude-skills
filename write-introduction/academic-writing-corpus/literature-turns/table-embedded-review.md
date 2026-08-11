@@ -12,6 +12,9 @@ Use a systematic table (4-12 rows) summarizing prior studies when migrating lite
 ## Source
 Mayo et al. POMS
 
+**原文锚定**:
+> "In fact, research outside of operations management (OM) indicates that CEOs may manage risks related to negative events via at least two mechanisms: avoiding the negative event altogether or avoiding the blame for the negative event, and that the chosen risk management mechanism may depend on the CEO's tenure. The contexts of these empirical CEO turnover and risk management studies are predominantly in finance and accounting; see Table 1."
+
 ---
 
 ## 变体 B：本领域结构性回顾表格（Eilert 2017 型）
@@ -31,6 +34,9 @@ The [field] literature in [discipline], as summarized in [Table X], has predomin
 
 **语料锚定**：
 - Eilert 2017 (JM) — Table 1: Literature Overview on Product Recalls（按 Study / Performance Outcomes / Recall Timing / Prerecall/Postrecall / Industry / Relevant Findings 组织）
+
+**原文锚定**:
+> "The product recall literature in marketing, as summarized in Table 1, has predominantly focused on the consequences of recalls for the firm's bottom line and the firm's ability to learn and prevent future recalls. However, little attention has been paid to the actual recall behavior of the firm."
 
 **反模式**：
 - 表格变成附录式罗列（无分类维度）→ 沦为 citation list
@@ -56,7 +62,10 @@ Prior work on [broad relationship] has primarily examined [dominant proxy/actor/
 - 在表内保留 “This study” 行，让读者横向比较本文与前人，而不是让表格停留在综述功能。
 - 正文先给主缺口，表格负责证据化；表后再把空白收窄到研究问题与结果组合。
 
-**语料锚定**：Kashmiri, Nicol, and Arora (2017, JAMS), Introduction Table 1；短语锚点：“black box problem”。
+**语料锚定**：Kashmiri, Nicol, and Arora (2017, JAMS), Introduction Table 1；短语锚点：”black box problem”。
+
+**原文锚定**:
+> “However, as highlighted in Table 1, researchers investigating the influence of executives' characteristics have focused mainly on the impact of demographic variables such as age, social class, functional background, education, and tenure, even though such variables tend to be noisy, incomplete, and imprecise proxies of executives' attitudes and values. This focus on executives' demographic characteristics has also resulted in a “black box problem”, where we know little about the real psychological processes that drive executive choices.”
 
 **反模式**：
 - 列太多但没有任何一列直接支撑贡献声明。
@@ -85,6 +94,9 @@ Theoretically, we further our understanding of the antecedents of [phenomenon] i
 - **Practically 段独立接续**：理论贡献 + Table 后，另起 "Practically..." 面向立法者/政策制定者/股东等多利益相关方
 
 **语料锚定**：Hoffmann et al. (2024, JM) — Table 1: Our Study Relative to Prior Work on the Antecedents of Product Recalls
+
+**原文锚定**:
+> "Theoretically, we further our understanding of the antecedents of product recalls in terms of factors driving a firm's decision to recall or not, whereas prior research focuses on the consequences of recalls after they were already decided on. Table 1 positions our study relative to the limited literature on recall antecedents, to which we add by examining how an external shock diminishing managers' risk of being sued by shareholders for failing their fiduciary duties influences a firm's subsequent likelihood to recall a product."
 
 **反模式**：
 - 若领域后果与前因文献都丰富，"antecedents vs consequences" 框架不成立

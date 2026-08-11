@@ -23,12 +23,20 @@
 !distill-introduction-exemplar/**
 !distill-theory-exemplar/
 !distill-theory-exemplar/**
+!distill-story-exemplar/
+!distill-story-exemplar/**
 !intro-review/
 !intro-review/**
 !methods-review/
 !methods-review/**
 !paper-story-contract/
 !paper-story-contract/**
+!story-blueprints/
+!story-blueprints/**
+!paper-state-protocol/
+!paper-state-protocol/**
+!paper-writing-stack/
+!paper-writing-stack/**
 !paper-review/
 !paper-review/**
 !pollock-qc/
@@ -84,11 +92,24 @@
 !python-panel-data/
 !python-panel-data/**
 
+# Tool skills & reference archive
+!notebooklm-pipeline/
+!notebooklm-pipeline/**
+!officecli/
+!officecli/**
+!_reference/
+!_reference/**
+!_governance/
+!_governance/**
+!grill-the-claim/
+!grill-the-claim/**
+!handoff/
+!handoff/**
+
 # Track user's loose files
 !empirical-writeup.md
 !methods_results_quality_check.py
-!paper-state-protocol.md
-!paper-writing-stack.md
+!corpus_health_check.py
 
 # Exclude Python cache and backup files
 __pycache__/

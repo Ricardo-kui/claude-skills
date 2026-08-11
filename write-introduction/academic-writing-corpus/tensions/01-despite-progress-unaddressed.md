@@ -32,10 +32,7 @@ source_papers:
   - ilicic_brennan2026 (JM, 2026): "outcome-valence asymmetry: beneficial political-consumption outcomes studied, harmful/addictive outcomes underexamined"
   - castellaneta_conti_kacperczyk2017 (SMJ, 2017): "Disclosure-requiring IPR progress may not transfer to non-disclosure forms; firm-value link missing"
   - kim_lee2026 (SMJ, 2026): "Temp/hypothetical SRO-recruitment evidence incomplete for full-time high-stakes + post-hiring durability"
-  - chen_ganesan_liu2009 (JM, 2009): "双流交叉定位: marketing(consumer evals)×finance(firm value, mixed) → 'More important... not considered the role of recall strategies'; 'paucity is glaring because' 严重性显式论证"
-  - kalaignanam_kushwaha_eilert2013 (JM, 2013): "怀疑实践证据+双重利益相关者缺口型: program goal vs 'beyond minimal response' → 正反证据并置 → WSJ 1983 GM 陈旧怀疑案例 → 消费者+监管者双 stakes → managerial and policy 双背书"
-  - li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM, 2026): "horizontal spillover documented → vertical spillover + mechanisms under-researched; horizontal vs vertical complexity contrast"
-updated: 2026-08-06
+updated: 2026-08-05
 created: 2026-05-18
 source: Extracted from MVP30 narrative_analysis files + mannor2016 + darby2025 distill + grewal2025 + paruchuri_andrus_sullivan2026 + castellaneta_conti_kacperczyk2017 + kim_lee2026
 ---
@@ -64,6 +61,46 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 - **HIGH**: 几乎只在 Incompleteness 中出现
 
 ---
+
+
+## 变体速查表
+
+> 检索辅助（2026-08-09 P0 补建）。状态列空白 = 正文未标注验证状态（旧变体）。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架、适用条件与诚实边界见下方变体正文。
+
+| # | 变体 | 家族 | 适用场景 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| A | 三段式递进型（eilert2017 型） | 递进收窄 | 承认主流研究进展后指出单一遗漏维度（'predominantly focused on X, little attention to Z'） |  | eilert2017 (JM), P5 |
+| B | 权威引语转折型（wu2025 型） |  | 有权威引语可作为从进展到缺口的转折支点 |  | wu2025 (SMJ), P2 |
+| C | 精确计数型（darby2024 型） |  | 文献可精确计数枚举（'Our review uncovered N studies... though none examine'） |  | darby2024 (MSOM), P2 |
+| D | 多重原因论证型（malshe2015 型） | 惊讶修辞 | 缺口的惊讶性可枚举多个独立原因（'This is surprising for N reasons'） |  | malshe2015 (JM), P2 |
+| E | 跨学科缺口型（vadakkepatt2022 型） |  | 将领域A的成熟构念/理论引入领域B的跨学科研究 |  | vadakkepatt2022 (JM), P2-P3 |
+| F | "Curiously Silent" 型（lehman2014 型） | 惊讶修辞 | - 已有文献确实做了很多相关研究（不能是空白领域） |  | lehman2014 (MS), P3-P4 |
+| G | 方法障碍型缺口（mannor2016 型） |  | - 研究需要测量难以获取的敏感构念（心理属性、私人信息、未公开数据等） |  | mannor2016 (SMJ), P2 前半 |
+| H | Spillover Framing 型（darby2025 型） |  | - 将一个已在其他领域研究的行为者/因素引入新结果域 |  | darby2025 (JSCM), P3 |
+| I | 构念区分进展后关系缺口型（pollock2015 型） |  | - 两个相似构念已被文献部分区分（已有定义、测量、效果差异的研究） |  | pollock2015 (ASQ), P2 |
+| J | "未反映在结果中"型（darby2023 型） |  | - 已有文献研究了某事件/行为对某结果的影响 |  | darby2023 (MSOM), P2 |
+| K | 融合型紧凑段落型（park_lange_jeon 型） |  | - 使用外生冲击（quasi-experiment/DiD）作为 empirical con |  | park_lange_jeon (SMJ), P2-P3 |
+| L | 自引 Nonfinding + 方法论诊断型（shipilov_greve_rowl |  | - 作者此前在同一领域有已发表研究，且该研究发现相关关系的 null result |  | shipilov_greve_rowley2019 (SMJ |
+| M | Inadequacy加深Incompleteness型（desai2012 型） | 批评深化 | - 缺口的持久性需要解释（非"刚被发现"的新缺口，而是"一直被忽视"的老缺口） |  | desai2012 (AMJ), P4 |
+| O | 双过程视角转折型（wang2024 型） |  | - 将心理学 dual-process 框架引入组织/战略研究 |  | wang2024 (SMJ), P2-P3 |
+| P | 双重证据缺口型（habel2016 型） | 双缺口 | - 学术文献缺乏但实践/媒体已有直觉观察的研究场景 |  | habel2016 (JM), P3-P4 |
+| N | 三层递进Incompleteness型（gamache_etal2020 型） | 递进收窄 | - Gap确实是一个递进结构：现有文献→太general→specific缺口→why层面的 |  | gamache_etal2020 (SMJ), P2 |
+| Q | 外部批评授权型（hoffmann2024 型） | hoffmann2024 系列 | 适用于有明确文献批评可引用的 Incompleteness 场景。当领域内已有学者明确提出" |  | hoffmann_cheong_phan_zurbruegg |
+| R | 半压缩递进+呼吁闭环型（ahmadi2017 型） | 递进收窄 | 适用于 Introduction 字数预算极紧的 JMS/JOM/OS 风格论文；当独立的 |  | ahmadi2017 (JMS), P1 |
+| S | 混合发现 pivot + 焦点转移型（jiang2026 型） |  | 适用于已有实证结果混合（正/负/null）的研究领域；Boundary 贡献首选——混合发现 |  | jiang2026 (JIBS), P3 |
+| T | 双缺口并列枚举型（qiao2026 型） | 双缺口 | 适用于有 2-3 个清晰缺口且缺口类型不同的论文；当论文同时做 Incompleteness |  | qiao2026 (SMJ), P2 |
+| U | Paradox 阐述 + Rhetorical Question pivot 型（c |  | 适用于研究涉及两个 desirable but conflicting goals 的论文（ |  | cancellieri2023 (SMJ), P1-P2 |
+| V | 政策意外后果型（hoffmann2024 型） | hoffmann2024 系列 | 适用于使用 quasi-natural experiment（法律变更、监管冲击、政策 ad |  | hoffmann2024 (JM), P6-P7 (Intr |
+| W | 过度概括批评型（grewal2025 型） | 批评深化 | 研究对象内部异质性高（不同类型、不同情境、不同主体），已有研究用单一框架处理 |  | Grewal, Vana, and Stephen (202 |
+| X | 三重维度并列缺口型（cui_yang_vertinsky_smj 型） |  | Incompleteness × (Mechanism + Boundary) 组合；论文同 |  | Cui, Yang & Vertinsky (SMJ), P |
+| Y | 受众边界延伸型（paruchuri2026型） |  | 已有理论/构念在内部/原领域充分发展，需要扩展到外部受众或新分析层次。 |  | paruchuri_andrus_sullivan2026 |
+| Z | 可见-不可见域缺口 + 监督驱动地下化（DesJardine2023 隐形之手型） | DesJardine2023 系列 | - 研究对象是被刻意隐藏/隐蔽进行的机制或行为（暗中操纵、隐蔽渠道、非正式安排、幕后影响、灰 |  | DesJardine, Shi & Cheng (2023, |
+| AA | 权威警告 + 例外枚举 + 规模-忽视悖论（DesJardine2023 P8 型） | DesJardine2023 系列 | 研究某大主体/核心力量对某结果的影响，而该主体尽管在域内占比最大却最少被研究（机构投资者、平 |  | DesJardine, Shi & Cheng (2023, |
+| AB | 结果效价不对称缺口（ilicic_brennan2026 型） |  | 同一构念的效价不对称缺口（有益结果成熟、有害结果不足） | EMERGING（单篇来源；仅作 | Ilicic & Brennan (2026, *Journ |
+| AC | 披露型 IPR 进展不外推 + 非披露保护—价值链接缺口（Castellaneta– |  | Incompleteness × (Boundary + Mechanism)；一类知识产权 | EMERGING（单篇来源；仅作 | Castellaneta, Conti & Kacpercz |
+| AD | 低 stakes 证据库 → 理论关键高 stakes 情境 + 阶段延伸缺口（Ki |  | Incompleteness × Boundary；既有证据主要来自临时/实验/假设情境，而 | EMERGING（单篇来源；仅作 | Kim & Lee (2026, SMJ), P2 |
+| AE | as-clause 前提 + 惊讶单句 overlooked 型（desjardin | 惊讶修辞 | 信息中介/中间人/传导机制类研究；前提（中介塑造结果）是领域共识但"中介作为主动武器"未被检 | EMERGING（单篇来源；仅作 | DesJardine, Li & Shi (2025, *A |
+| AF | 外生条件清单→可操作杠杆缺口型（cutolo2024 型） |  | 已有条件/调节研究但条件全部外生（受众结构、制度流动、地位等）；缺口定位为"行动者可操控杠杆" | EMERGING（单篇来源；仅作 | Cutolo & Ferriani (2024, *Journal of Management*), P5 |
 
 ## 句法模板
 
@@ -199,7 +236,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 **来源**: mannor2016 (SMJ), P2 前半
 
 **原文锚定**:
-> "This is somewhat puzzling given the robust literature on executive job demands, although the difficulty in obtaining data on sensitive psychological attributes of top executives has likely contributed to the absence of research on the topic. Most studies of top executives rely upon demographic indicators as proxies for underlying psychological attributes, and numerous investigations have shown that certain demographic characteristics can affect strategic outcomes (for a review, see Finkelstein, Hambrick, and Cannella, 2009). But the central premise of upper echelons theory holds that executives' experiences, values, and personalities greatly influence their interpretations of strategic situations (Hambrick, 2007), and research in this domain has begun to shift away from a strict focus on demographics and toward a focus on executives' psychological attributes (e.g., Gamache et al., 2015; Wowak et al., 2016)."
+> "This is somewhat puzzling given the robust literature on top executives, although the difficulty in obtaining data on sensitive psychological attributes has likely contributed to the absence of research on the topic. Most studies of top executives rely upon archival proxies for underlying psychological attributes, and numerous investigations have shown that observable characteristics such as work experience, age, tenure, and education can affect an executive's decisions and actions (for a review, see Finkelstein, Hambrick, and Cannella, 2009). But the central premise of upper echelons theory holds that it is the personal biases and dispositions of top executives that influence strategic decision making and the organizational outcomes that follow (Hambrick and Mason, 1984), and research in this domain has begun to shift away from archival proxies and toward a focus on more fundamental psychological constructs (e.g., Nadkarni and Herrmann, 2010; Simsek, Heavey, and Veiga, 2010)."
 
 **关键特征**:
 - "This is somewhat puzzling" → 温和指出缺口，不指责文献
@@ -225,7 +262,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 **来源**: darby2025 (JSCM), P3
 
 **原文锚定**:
-> "This study takes a logical next step by examining activist investors. Activist investors, defined as 'shareholders who acquire large stakes in publicly traded companies and pressure management for changes intended to increase shareholder value' (Goranova and Ryan, 2014: 1232), have received significant attention in finance and management research. Growing evidence suggests activist investors' influence may extend beyond financial performance to affect a firm's operational outcomes. This phenomenon—known as a spillover effect—occurs when an actor or event influences outcomes beyond the intended or traditional target (Ahuja and Novelli, 2017). As a former Ford executive shared, 'When an activist shows up, it definitely puts you on edge... you start looking at everything differently—including your products.' Accordingly, activist investors take notice when product quality issues arise, taking actions to avoid negative spillover effects, such as pushing for earlier product recalls, demanding stricter quality controls, and increasing oversight of safety protocols."
+> "This study takes a logical next step by examining a group of stockholders who are increasingly vocal about supply chain failures: activist investors. Activist investors are a subset of institutional investors—i.e., those that manage more than $100 million in equity across their portfolios—who aim to bring about material change in the operations and outcomes of firms they target (Shi et al. 2020)... Growing evidence suggests that the influence of activist investors may extend beyond the firms they target (e.g., Gantchev et al. 2019). This phenomenon—known as a spillover effect—occurs when an attack on 'a firm or firms in an investor's portfolio of holdings influences actions within other firms that are not presently targeted for activism' (Shi et al. 2020, p. 1866). As a board member of a healthcare company shared, observing an attack 'definitely puts you on edge. It creates a heightened sensitivity when you see an activist acting aggressively toward another company.' Accordingly, executives take notice when other firms are under attack by activist investors who also own stock in their firm, and they take actions to avoid being targeted, such as decreasing growth initiatives (Shi et al. 2020), increasing productivity (Aslan and Kumar 2016), and improving asset utilization (Gantchev et al. 2019)."
 
 **关键特征**:
 - "takes a logical next step" → 积极缺口语言（非批评式），适合 Incompleteness
@@ -277,7 +314,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 **来源**: darby2023 (MSOM), P2
 
 **原文锚定**:
-> "A single recall can have very different implications for the recalling firm and its investors depending on when the recall is initiated, but such implications are not reflected in outcomes such as firm value or stock returns."
+> "A single recall can have very different implications for the firm and for the individuals who rely on the product depending on how long the firm takes to initiate it, but such implications are not reflected in outcomes such as recall likelihood ([66]) or recall hazard ([45])."
 
 **关键特征**:
 - **"A single [event] can have very different implications"** → 强调同一事件内部的异质性（而非不同事件之间的差异）
@@ -605,7 +642,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 **来源**: Grewal, Vana, and Stephen (2025), *Journal of Marketing*, P3
 
 **原文锚定**:
-> "Some research has identified the effects of negative advertising contexts on consumers' brand-related responses (e.g., Divya and Vassar 2021; Moorman, Norris, and D'Alessandro 2019), though Bellman et al. (2018) suggest limited effects of negative ad context. Notably though, prior research takes a generalized view of the overall negative versus positive environments surrounding brand advertisements. Such an approach fails to account for how various brand safety incidents, in different digital environments, involving diverse brands and consumers, might influence relevant brand outcomes."
+> "Some limited brand safety research has identified the effects of adjacent, unsafe digital content on critical brand outcomes such as ad recall, brand liking, and loyalty (Bushman 2007; Johnson, Voorhees, and Khodakarami 2023; Lee, Kim, and Lim 2021; Manatt, Avital, and Ofer 2018), though Bellman et al. (2018) suggest null effects. Notably though, prior research takes a generalized view of the overall negative versus positive environments surrounding brand advertisements. Such an approach fails to account for how various brand safety incidents, in different digital environments, involving diverse brands and consumers, might influence relevant brand outcomes."
 
 **关键特征**:
 - 不批评"没人研究"，而是批评"研究过于 general"
@@ -791,95 +828,55 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 ---
 
-### 变体 AE：双流文献交叉定位型（chen2009 型）
+### 变体 AE：as-clause 前提 + 惊讶单句 overlooked 型（desjardine2025 型）
 
 **验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
 
-**功能节拍**: 流 A 承认贡献 → 流 A 缺口（Y2 未研究）→ 缺口严重性显式论证 → 流 B 混合结果枚举 → 流 B 局限 → "More important" 升级到真缺口（X 未被考虑）
+**功能节拍**: 前提从句（中介/行动者塑造认知的既有共识）→ "it is surprising that... have mostly overlooked" 单句压缩 → 概念转译（could be leveraged as conduits）
 
 **模板**:
-> "Only a limited number of [field A] studies have investigated the impact of [phenomenon] by focusing on [outcome Y1] ([citations]). These studies provide valuable insights into [what stream A established]. [Limitation of stream A: method/setting], and the broader issue of how [phenomenon] might influence [outcome Y2] has not been studied. This paucity in research is glaring because [stakes justification 1]. Moreover, [stakes justification 2]. Several studies in [field B] have examined the impact of [phenomenon] on [Y2] for several [contexts], but the results are mixed ([citations]). For example, [Author 1] find [result 1]. [Author 2] reexamine and find [contradicting result 2]. [Author 3] find [result 3]. Most of these studies focus on [narrow contexts]. [Scope limitation with exception noted]. More important, when examining the impact of [phenomenon], the extant studies have not considered the role of [focal factor X]."
+> "As [premise about intermediaries/actors shaping outcome] ([citations]), it is surprising that [scholars] have mostly overlooked how [mechanism] could be leveraged as [conduit/instrument] in [field]."
 
-**来源**: chen_ganesan_liu2009 (JM), P4-P5
+**来源**: DesJardine, Li & Shi (2025, *Academy of Management Journal*), P2
 
 **原文锚定**:
-> "Only a limited number of marketing studies have investigated the impact of product-harm crisis management strategies by focusing on consumer evaluations of products and services... These studies provide valuable insights into how consumers perceive and respond to product-recall strategies. Most of these studies were conducted in a laboratory setting, and the broader issue of how different crisis management strategies might influence firms' financial value has not been studied. This paucity in research is glaring because there has been increased attention on understanding the linkage between firm strategies and stock market performance."
->
-> "Several studies in economics and finance have examined the impact of product recalls on firm value for several product categories, but the results are mixed... Jarrell and Peltzman (1985) find that automobile and drug recalls are associated with negative abnormal stock returns. Hoffer, Pruitt, and Reilly (1988) reexamine the same data and find that recall announcements do not significantly affect firm value after controlling for potential confounding events... More important, when examining the impact of product recalls, the extant studies have not considered the role of alternative product-recall strategies."
+> "As stakeholders' views and attitudes about firms are also shaped by the content that information intermediaries publish about those firms and their competitors (Ravasi, Rindova, Etter & Cornelissen, 2018; Sharkey, Kovács & Hsu, 2023), it is surprising that organizational scholars have mostly overlooked how information intermediaries could be leveraged as conduits in information-based competition."
 
 **关键特征**:
-- **双流交叉定位**：流 A（marketing）覆盖 consumer evaluations 不覆盖 firm value；流 B（econ/finance）覆盖 firm value 但结果混合且忽略策略异质性——缺口定位于两流**交叉处**（recall strategies × firm value），而非任何单一流内部
-- **"This paucity in research is glaring because"**：缺口严重性显式论证，不给审稿人留"so what"空间——双理由叠加（strategy-performance linkage 受关注 + consumer strategies 终极目标是 shareholder value）
-- **"More important, ... have not considered the role of [X]"**：升级标记词——流 B 的混合结果只是**铺垫**，真缺口是"没有考虑策略异质性"。混合发现本身不是贡献，X 才是
-- **混合结果三连枚举**（negative → null after controls → significant losses）各一句话，展示文献掌握但不恋战——与变体 S（jiang2026）的区别：变体 S 用 mixed findings 直接论证 moderator 必要性；本变体的 mixed findings 是流 B 的**缺陷证据**，主 pivot 在 "More important" 之后
-- **与变体 E（vadakkepatt2022 跨学科缺口）的区别**：变体 E 是 A 领域理论暗示 → B 领域无实证（单向跨学科）；本变体是两个实证流各自残缺、缺口在交叉处（双向定位）
+- **as-clause 前提 + 惊讶单句**: 与变体 D（multi-reason "surprising for N reasons"）不同——本文一个惊讶词只承载一个前提，句法紧凑，适合 Hook 后直接衔接
+- **概念转译嵌入 Tension**: "could be leveraged as conduits" 把信息中介从被动塑造者转译为主动武器——Tension 同时完成概念转译（hook→tension 的转译连续性）
+- **双层 Tension 结构**: 本变体为领域级（scholars mostly overlooked），可搭配近邻研究级 Tension（如 literature-turns 变体 O 的静态观批评）构成双层递进——领域盲区 + 最近研究维度缺失，resolution 是同一动作
+- **与变体 F（curiously silent）判别**: F 是文献充分但"似乎故意忽视"的高阶表达；本变体是"前提明显蕴含机制可用，却没人做"——惊讶来自前提与盲区的直接矛盾
 
-**适用**: 研究主题位于两个文献流的交叉（如 营销×金融、OB×战略）；两流各自有可陈述的覆盖范围与具体局限；真缺口是"被忽略的关键因素/异质性"而非单纯"没人做过 Y2"；Incompleteness × Mechanism 组合
+**适用**: 信息中介/中间人/传导机制类研究；前提（中介塑造结果）是领域共识但"中介作为主动武器"未被检视；与 `01-progressive-coherence` 变体 O 配对构成双层 Tension。
 
-**禁忌**:
-- 两流必须真实独立且各引 2+ 篇——若其中一流实际是另一流的子集，退化为变体 A
-- "More important" 之后必须是论文真正检验的因素——修辞性升级后必须在 Theory/Results 兑现，否则 Discussion 会被攻击
-- 流 A 的局限要具体（"laboratory setting"），不可泛泛 "limited"
-- 严重性论证（"glaring because"）需双重理由支撑，单理由显得勉强
+**禁忌**: 惊讶必须名副其实——前提必须是领域公认（有 citation 支撑）；"could be leveraged" 的转译须在后文兑现（Theory/贡献段必须证明 leverage 是真实的）；单句结构不承载 multi-reason 论证（多原因用变体 D）。
 
 ---
 
-### 变体 AF：怀疑实践证据 + 双重利益相关者缺口型（kalaignanam2013 型）
+### 变体 AF：外生条件清单 → 可操作杠杆缺口型（cutolo2024 型）
 
-**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）。story_fidelity: section_role=exposition; knot_relation=tie（knot 的系紧点：已知条件不可控 → 缺杠杆）; character_effect=none; pacing_effect=improves（条件清单快进 → 外生性诊断急停 → 杠杆登场）; classification=section_variant。
 
-**功能节拍**: 现象目标陈述（program goal）→ "little is known about whether firms respond beyond X" → 正反证据并置（some evidence vs skeptical reports）→ 陈旧怀疑案例引述（时间距离作张力资源）→ 利益相关者 1 stakes（消费者）→ 利益相关者 2 stakes（监管者，no systematic evidence）→ "valuable from managerial and public policy perspective" 双重背书
+**功能节拍**: 承认条件研究贡献（多流清单）→ 外生性诊断（全部不可控）→ 操作性缺口（不能开处方）→ actor 侧杠杆登场（来自 nascent stream，非凭空发明）
 
 **模板**:
-> "[Phenomenon programs] reflect [underlying problem] ([citations]). Although the goal of [program] is to [stated goal], little is known about whether [actors] respond to [phenomenon] beyond [minimal mandated response]. While there is some evidence to suggest that [positive response] ([citations]), there are also reports indicating that [actors] are skeptical about the merits of the [program]. For example, as a [news source] from more than [N] decades ago notes, '[skeptical practitioner quote]' ([news citation, year], p. X). Understanding whether [actors improve outcome] after [phenomenon] is critical because [stakeholder 1 mechanism: consumers' uncertainty → purchase decisions] ([citations]). Similarly, although [stakeholder 2: regulatory agents] contend that [program benefit], there is no systematic evidence to support this contention. An understanding of whether and how [phenomenon] influence [outcome] is thus valuable from a managerial and public policy perspective."
+> These studies have identified several [sociocognitive] factors shaping [evaluative responses], thereby unveiling the [mechanism metaphor] ([citation]). Yet these explanations are limited in their ability to offer prescriptive advice to actors who [do not enjoy / cannot rely on] [advantages: reputational advantages / benign audiences / favorable conditions]. Because [prior work] focuses primarily on factors over which [actors] have no or very limited control — [condition list: the audience's structure or orientation, exogenous conditions of categorical flux, status, etc.] — we know much less about how [actors] can strategically [mobilize] [actionable lever] to shape [audience responses] according to their interests. To address this limitation, we draw on [the nascent stream of scholarship on X] ([citations]) and propose that one overlooked source of variation is [the lever].
 
-**来源**: kalaignanam_kushwaha_eilert2013 (JM), P2
+**来源**: Cutolo & Ferriani (2024, *Journal of Management*), P5
 
 **原文锚定**:
-> "Although the goal of product recall programs is to solve potential safety problems, little is known about whether firms respond to product recalls beyond withdrawing and repairing the defective products. While there is some evidence to suggest that firms seek to improve reliability following external failures (Chao, Iravani, and Savaskan 2009; Ward's Auto World 1997), there are also reports indicating that firms are skeptical about the merits of the product recall program. For example, as a business report from more than two decades ago notes, 'General Motors has been trying to persuade the Federal Government that it isn't dangerous if the rear wheel and axle fall off, in an effort to avoid a recall' (The Wall Street Journal 1983, p. 2). Understanding whether firms improve product reliability after product recalls is critical because consumers' uncertainty about the quality of the firm's offerings tends to increase in the wake of product recalls (Zhao, Zhao, and Helsen 2011) and in turn affects purchase decisions (J.D. Power and Associates 2004). Similarly, although regulatory agents contend that product recalls are beneficial because they reduce the harm caused by hazardous products, there is no systematic evidence to support this contention. An understanding of whether and how product recalls influence learning outcomes for firms in the future is thus valuable from a managerial and public policy perspective."
+> "Yet these explanations are limited in their ability to offer prescriptive advice to actors who do not enjoy reputational advantages or who must simply hope for demand characterized by heterogeneous evaluative orientations; exogenous conditions of categorical flux; or, more simply, benign audiences."
+> "We seek to address this limitation by drawing on the nascent stream of scholarship concerned with how actors can strategically mobilize cultural elements to shape audience members' responses to their offers ... and propose that one overlooked source of variation is the linguistic composition of actors' narratives."
 
 **关键特征**:
-- **正反证据并置制造张力**："While there is some evidence... there are also reports indicating skepticism"——不直接断言文献缺口，而是先展示**证据与态度的背离**（有些证据说企业会改进，但企业自己怀疑），张力来自这种背离
-- **陈旧案例引述作张力资源**："from more than two decades ago notes" + WSJ 1983 GM 引述——用一条 26 年前的怀疑证据暗示"问题长期存在且未解决"。时间距离本身论证缺口的持久性，比 "few studies" 更有历史纵深感
-- **利益相关者双重 stakes**：消费者侧（uncertainty → purchase decisions）+ 监管者侧（contend benefit but no systematic evidence）——缺口对两类受众都成立，任一都不充分，合并才构成"glaring"
-- **"beyond withdrawing and repairing"**：缺口不是"没人研究召回"，而是"没人研究超出法定最低响应的部分"——缺口定位在行为光谱的高阶区，这是 Inadequacy（现有研究不充分）而非 Incompleteness（完全空白）
-- **"managerial and public policy perspective" 双重背书**：JM 风格标记——缺口重要性同时锚定实践界与政策界，不只学术文献
+- **条件清单 → 外生性诊断（签名动作）**: 把已有条件研究逐类列出（audience structure / categorical flux / status…），再统一诊断"全部不可控"——缺口不是"条件研究不够"，而是"条件研究无法开处方"
+- **"prescriptive advice" 关键词**: 把 gap 定义为"文献不能给行动者开处方"——缺口从认知缺憾（不知道）转为实践缺憾（不能做）
+- **杠杆从 nascent stream 取**: 被忽视的来源（叙事语言学）从"战略文化动员"新兴流借来——不是凭空发明，是既有小流被放大
+- **actor 侧 vs audience 侧对照**: 已有研究全是 audience-side/exogenous 因素，本文的杠杆是 actor-side/可控因素——二维对照让缺口精确
 
-**与变体 AE（chen2009）的区别**: AE 是两个实证文献流的交叉定位（营销流 × 金融流），缺口靠"More important, have not considered X"升级；本变体是**实践怀疑证据 + 双重利益相关者需求**驱动，缺口靠"陈旧案例的时间深度 + 两类受众都不满足"叠加。AE 的引擎是文献结构，本变体的引擎是现象-实践-政策的三角张力。
-
-**适用**: 现象有明确的法定/最低响应（mandated response），研究问题是"行为是否超出最低响应"；存在可引用的实践界怀疑证据（越陈旧越好）；缺口对两类以上利益相关者（消费者/监管者/投资者）都成立；Inadequacy × Mechanism 组合；JM/JMR/MSOM 等政策相关期刊首选
-
-**禁忌**:
-- 陈旧案例必须真实且引述完整（"p. 2" 级精度）——模糊转述会破坏历史纵深感
-- 正反证据并置不可省略正面证据——只说怀疑会让张力变成单面控诉，且显得 straw man
-- 双重利益相关者的 stakes 必须有独立引用支撑（消费者侧 Zhao 2011，监管者侧无引用即断言——此为本变体允许的例外，因为监管者 contention 本身是"无证据"）
-- 不要在 Introduction 就给出"managerial and policy implications"的具体内容——那是 Discussion 的事，这里只需标记双受众相关性
-
----
-
-### 变体 AG：水平溢出已建 + 垂直溢出空白型（li_narayanan_2026_jscm 型）
-
-**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
-
-**模板**:
-> "Prior research has documented spillover effects of [events] across [industry A] and [industry B] ([citations]). However, these and other studies (e.g., [citations]) have only examined [horizontal direction label] (i.e., [losses experienced by competitors / same-category actors]), leaving [vertical direction label] of [events] and the mechanisms through which they manifest largely under-researched. Examining [vertical direction] has both theoretical and practical significance. Theoretically, [vertical direction] are not only distinct from [horizontal direction] but also more complex. [Horizontal mechanism summary sentence] ([citation]). In contrast, [vertical mechanism summary sentence] ([citations]). Importantly, the factors that amplify or mitigate risks in [interdependent network context] are likely to differ from those that shape risks emerging from [shared membership context]. Practically, [supply-side statistic or trend showing upstream role in events] ([citations])."
-
-**来源**: li_bapuji_talluri_singh_narayanan_2026_jscm (JSCM), §1 P2–P3（理论/实践 stakes）；47% 供应链归因统计见 §2.2，可作 practice 段可选填充，非 Intro 原文
-
-**原文锚定**（压缩）:
-> "Prior research has documented spillover effects of product recalls... However... only examined horizontal spillovers... leaving vertical spillovers... under-researched. Examining vertical spillover effects has both theoretical and practical significance... horizontal through shared industry categorization... vertical disrupt specific supplier-buyer ties... [Intro P3 practice 仅泛指 supply chain factors，无 47%；47% 在 §2.2:] approximately 47% of recalls are associated with component suppliers..."
-
-**关键特征**:
-- **方向性缺口（horizontal vs vertical）**：不是"没人研究 spillover"，而是**研究了错误方向**——比 generic incompleteness 更精确
-- **理论+实践双 stakes 段**：Theory 段对比 categorization vs interdependency；Practice 段用供应链归因统计（47%）把缺口接到 collective action 动机
-- **常接 hooks/03-G**：Hook 实例化 vertical spillover 定义，本变体承担文献扫描与方向对比
-
-**适用**: 已有 horizontal/competitor spillover 文献、但 vertical/dyad propagation 空白；危机/召回/ESG 传播；JSCM/JOM/MSOM/SMJ
-
-**禁忌**:
-- 必须引用至少 2 篇 horizontal spillover 代表作——不能无文献断言 "only horizontal"
-- horizontal vs vertical 的机制对比须准确——不能把 vertical 说成 "same as horizontal but across tiers"
-- 47% 类供应链统计是 **practice stakes**，不是主效应证据——不要在此段报告 CAR
+**适用**: 已有条件/调节研究但条件全部外生（受众结构、制度流动、地位等）的研究；需要把 gap 定位为"行动者可操控杠杆"（叙事、策略、构念操作化）的论文；与 `01-progressive-coherence` 变体 P（共识-让步-目标收窄）配对。
+**禁忌**: ① 条件清单必须真实且确实外生——若有可控条件已被研究，本变体不成立；② 杠杆必须可操作化（本文=文本特征可测量）；③ 不要与变体 Z（监督驱动地下化）混淆——Z 是"关注制造盲区"，本变体是"条件研究的功能局限"。
 
 ---
 
@@ -920,7 +917,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 ## 风格画像
 
 > 以下风格特征是从使用本模板的多篇顶刊论文中聚合提取的。不是每篇论文都必须遵守，但偏离时应有明确理由。
-> 最后更新: 2026-08-06 | 聚合论文数: 18
+> 最后更新: 2026-08-05 | 聚合论文数: 16
 
 ### 语气光谱
 - **主语气**: cautious — 证据: "remains poorly understood" (wu2025), "has gone largely unaddressed" (pollock2015), "underdeveloped, and fundamental pieces are missing" (ahmadi2017)
@@ -938,8 +935,6 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 - [gamache_etal2020]: "三层递进 Incompleteness: general→specific gap→why 层面根本问题" — Stakes 嵌入 Tension ("This omission is critical, as...")
 - [cui_yang_vertinsky_smj]: "First... remains poorly understood / Second... while overlooking... / Third... while largely overlooking" — 三重维度并列缺口，每个维度用不同 Incompleteness 标志性语言
 - [kim_lee2026]: "important but incomplete evidence" + strategic-theory stakes + underexplored (setting + stage) — 低 stakes 证据库外推缺口
-- [chen_ganesan_liu2009]: "This paucity in research is glaring because..." + "More important, ... have not considered the role of [X]" — 双流交叉定位：严重性显式论证 + 升级标记把真缺口（策略异质性）从混合结果铺垫中分离
-- [kalaignanam_kushwaha_eilert2013]: "as a business report from more than two decades ago notes, 'General Motors has been trying to persuade...'" — 陈旧怀疑案例引述：时间距离本身作张力资源，暗示问题长期未解决；正反证据并置（some evidence vs skeptical reports）制造背离张力
 
 ### 刻意回避
 - [ahmadi2017]: avoids independent Tension paragraph — Tension 与 Literature Turn 共段，适合 JMS 压缩风格
@@ -952,5 +947,4 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 ### 模块比重参考
 - Tension 通常占 Introduction 的 15-25%；压缩版（ahmadi2017）仅占~8%
-- chen2009 双流版：两段各 ~120 词（流 A 缺口段 + 流 B 缺口段），合计 ~20%——双流结构允许单流段落更短，因为交叉定位本身承担整合功能
-- *来源: eilert2017 (JM), gamache_etal2020 (SMJ), ahmadi2017 (JMS), kim_lee2026 (SMJ), chen_ganesan_liu2009 (JM), kalaignanam_kushwaha_eilert2013 (JM)*
+- *来源: eilert2017 (JM), gamache_etal2020 (SMJ), ahmadi2017 (JMS), kim_lee2026 (SMJ)*

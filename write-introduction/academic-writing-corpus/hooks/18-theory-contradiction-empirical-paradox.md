@@ -59,7 +59,7 @@ This [puzzling/contradictory] empirical pattern suggests that neither caricature
 **来源**: zhou2017 (ASQ), P1–P2
 
 **原文锚定**:
-> "Theoretical treatments of state-owned enterprises (SOEs) have yielded conflicting predictions. One perspective characterizes SOEs as 'dying dinosaurs' burdened by political interference and inefficient resource allocation... Another perspective, by contrast, portrays SOEs as 'dynamic dynamos' that benefit from state support and preferential access to resources... These conflicting images are not merely academic. In 2014, 106 Chinese firms appeared on the Fortune Global 500 list; two-thirds were SOEs."
+> "According to the conventional, efficiency-based economic view, mostly rooted in agency theory, state ownership plays a minor role in spurring firms' innovation and performance. Because state-owned enterprises (SOEs) are governed by administrative rather than economic imperatives, government intervention is unavoidable, and political tasks hinder firms' development (Shleifer and Vishny, 1994; Shleifer, 1998; Ramaswamy, 2001)... In reality, however, many SOEs in emerging economies have evolved into dynamic dynamos, rather than the predicted dying dinosaurs (Ralston et al., 2006; Musacchio and Lazzarini, 2014; Stan, Peng, and Bruton, 2014). China now has 106 companies in the 2015 Fortune Global 500—four times more than in 2006—about two-thirds of which are SOEs."
 
 **关键特征**:
 - 对称隐喻（dying dinosaurs vs dynamic dynamos）——头韵 + 动物隐喻 + 生死对比

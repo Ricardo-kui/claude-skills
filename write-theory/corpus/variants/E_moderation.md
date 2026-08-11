@@ -45,6 +45,24 @@
 
 ---
 
+
+## 变体速查表
+
+> 检索辅助（2026-08-09 P0 补建）。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架、适用条件与诚实边界见下方变体正文。
+
+| # | 变体 | 家族 | 适用场景 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| E1 | 同层调节（7 步协议） | 基础协议 | 核心贡献是识别 boundary condition、qualify 已有关系；X→Y 基线机制+moderator 理论选择+机制修改推演 | 通过（双篇/专家审计） | Andersson et al. 2014 JIBS; Pollock 2025 Ch06 |
+| E2 | 跨层调节 (Cross-Level Moderation) — 9 步协议 | 基础协议 | focal unit 嵌套声明+跨层机制推演+排除反向交互 |  |  |
+| E3 | 嵌入型边界条件（Embedded Boundary Conditions，kalai |  | moderator 数量较多（≥3 个）且每个 moderator 有独立理论依据，独立 T |  |  |
+| E4 | 竞争基线 → 调节裁决（Competing Baseline → Moderatio |  | 同一理论框架预测了两个（或多个）相反/竞争的响应，研究贡献是用 moderator 决定"何 |  |  |
+| E5 | 曲线关系 + 多调节变量的联合论证（Cui et al. 型） |  | 理论预期 X→Y 是曲线关系（如 inverted U-shape），且多个 moderat |  |  |
+| E6 | 序列嵌套调节（Sequential Nested Moderation，Chung/ | 时间/嵌套 | 研究包含两层边界条件：第一层调节变量（W1）直接影响 X→Y 关系；第二层调节变量（W2）调 |  |  |
+| E7 | 宏观事件激活与持续性调节（Event-Activated Temporal Mode | 时间/嵌套 | 核心差异/身份在常态中可被压抑，但宏观事件使其显著化；理论需要解释事件前、事件冲击与事件后的 | EMERGING（单篇来源；仅作 |  |
+| E8 | 双刃剑估值机制 → 异号增强/阻碍权变（Dual-Edged Valuation → | 受众分化 | 同一制度/保护强度通过两条方向相反的信息机制作用于同一 DV（市场估值），净效应事先不定；理 | EMERGING（单篇来源；仅作 |  |
+| E9 | 双侧镜像调节（Same-Construct Mirror Moderation，De | 受众分化 | 主效应是"攻击方/施动方对受害方造成影响"，同一调节构念（威胁、机会、压力等）在攻击方侧与受 | EMERGING（单篇来源；仅作 | DesJardine, Li & Shi (2025), * |
+| E10 | 跨学科分类框架驱动的 N 平行缓解调节（Taxonomy-Driven N-Parallel，Cutolo–Ferriani 2024 型） |  | 主效应是文献共识惩罚/负面效应（baseline-from-consensus），贡献全在 N 个缓解调节；N 由跨学科既成框架 1:1 映射，机制统一落同一透镜 | EMERGING（单篇来源；仅作 | Cutolo & Ferriani (2024), *Journal of Management* |
+
 ## E2. 跨层调节 (Cross-Level Moderation) — 9 步协议
 
 **前置声明模板**：
@@ -134,10 +152,16 @@ distinguishing this cross-level direct effect from the cross-level interaction e
 "An attribute that creates a dilemma for firms when [decision] is [moderator]. [Moderator] refers to [definition] ([citation]). Although [moderator] increases [cost] for [Option B] and favors [Option A], firms may not have the expertise to [implement]. Therefore, [reasoning A]. [Citation support]. [Reasoning B]. [Meta-analytic evidence] supports this view and suggests that [finding] ([citation]). The rationale is that [theoretical mechanism]. In contrast, when [moderator condition is low], the [advantage] is likely to be suppressed. Given these arguments, we expect [prediction]."
 ```
 
+**原文锚点**:
+> "The firm's shared product assets—that is, the extent to which products in the family share assets (e.g., parts/components, design, manufacturing facilities)—are likely to be an important boundary condition for learning. Sharing of product assets has an impact on the firm's cost structure and market performance (Hauser 1999; Krishnan and Gupta 2001; Ramdas 2003). … 'Prior brand quality' refers to the consumer's existing perceptions of the overall quality of the brand (Aaker and Jacobson 1994). The rationale for examining prior brand quality as a moderator stems from extant research that emphasizes the importance of motivational factors in influencing the learning efforts of firms (Boulding and Staelin 1995; Cyert and March 1963; Greve 1998)."
+
 **收敛到假设**:
 ```
 "H[N]. The [direction] effect of [IV] on [DV] is [stronger/weaker] when [moderator] is [high/low]."
 ```
+
+**原文锚点**:
+> "Given the presence of equivocal arguments for the moderating effect of prior brand quality, we propose a nondirectional hypothesis: … brands with lower prior quality improve product reliability to a greater extent after a recall than brands with higher prior quality."
 
 **语料锚定**:
 - kalaignanam2017 (JM) — 4 个 moderator（technological complexity, NPD capability×2, PLAF），每个 moderator 一个小节，结构完全平行
@@ -197,16 +221,30 @@ distinguishing this cross-level direct effect from the cross-level interaction e
 On the other hand, [response B] because [theoretical reason]."
 ```
 
+**原文锚点**:
+> "Institutional theory can be adapted to suggest at least two organizational responses in this situation."
+> — Desai (2012), *Academy of Management Journal*
+
 **提出缺口**:
 ```
 "Therefore, it is important to determine the conditions under which [A] rather than [B] is more likely."
 ```
+
+**原文锚点**:
+> "Therefore, it is important to determine the conditions under which organizational agents either engage in—or avoid—fieldwide defensive efforts."
+> — Desai (2012), *Academy of Management Journal*
 
 **调节裁决**:
 ```
 "We argue that [moderator] determines which response prevails. When [moderator condition 1], [response A] is more likely because [mechanism]. 
 In contrast, when [moderator condition 2], [response B] is more likely because [mechanism]."
 ```
+
+**原文锚点**:
+> "Extending this process to fieldwide defense suggests two broad considerations."
+> 
+> "Therefore, agents in an organizational field may conclude that active defense will yield greater success than a more passive approach."
+> — Desai (2012), *Academy of Management Journal*
 
 **语料锚定**:
 - Desai (2012, AMJ) — defend vs. avoid 两个竞争响应，field-level / firm-level scrutiny 作为 moderator 裁决
@@ -255,20 +293,36 @@ In contrast, when [moderator condition 2], [response B] is more likely because [
 "We maintain that increases in [IV] facilitate [mechanism], increasing [DV]. However, there is a cost/benefit trade-off involved in [action]. As [IV] increases, [escalating cost/risk] may reach a threshold at which the expected cost becomes higher than the expected benefit, resulting in a [curve shape] relationship between [IV] and [DV]."
 ```
 
+**原文锚点**:
+> "We maintain that increases in the proportion of exploratory alliances within the collaborative portfolio between a firm and its partner facilitate identification of the partner's vulnerabilities and appropriation of its capacities, increasing the firm's incentive to launch competitive action against its partner. However, there is a cost/benefit trade-off involved in launching competitive attacks."
+> — Cui, Yang & Vertinsky (2018), *Strategic Management Journal*
+
 **阶段论证**:
 ```
 "Specifically, there are two reasons. First, [reason 1]. Second, [reason 2]."
 ```
+
+**原文锚点**:
+> "In this type of orientation, increases in the proportion of exploratory alliances provide opportunities and incentives to compete in product markets. Specifically, there are two reasons."
+> — Cui, Yang & Vertinsky (2018), *Strategic Management Journal*
 
 **转折句**:
 ```
 "However, as [IV] continues to increase, [turning point condition]."
 ```
 
+**原文锚点**:
+> "As the proportion of exploratory alliances increases, the escalating damage to long-term benefits and the risk of "tit-for-tat" retaliatory attacks from the partner may reach a threshold at which the expected cost becomes higher than the expected benefit of launching further competitive attacks."
+> — Cui, Yang & Vertinsky (2018), *Strategic Management Journal*
+
 **调节假设段落开场**:
 ```
 "We argue that [moderator] [direction] moderates the [curve shape] relationship between [IV] and [DV] by (a) [low-to-medium mechanism] and (b) [medium-to-high mechanism]."
 ```
+
+**原文锚点**:
+> "We argue that repeated collaboration attenuates the inverted U-shaped relationship between relative exploration and the firm's competition against its partner by (a) lowering the firm's incentive to act opportunistically when the partnership is more transaction oriented and (b) increasing the cost of aggressive intrusions when the partnership is more relation oriented."
+> — Cui, Yang & Vertinsky (2018), *Strategic Management Journal*
 
 **语料锚定**:
 - Cui, Yang, and Vertinsky (*Strategic Management Journal*) — relative exploration → competitive aggressiveness（inverted U-shape），三个 embeddedness moderators
@@ -317,6 +371,12 @@ In contrast, when [moderator condition 2], [response B] is more likely because [
 When [W1] is high, [mechanism that modifies baseline]."
 ```
 
+**原文锚点**:
+> "In other words, a highly confident CMO is more likely to be able to convince the confident CEO of the merits of continued long-term investments in marketing assets."
+> 
+> "The positive impact of highly confident CEOs on firms' propensity to engage in myopic marketing management is reduced in the presence of highly confident CMOs."
+> — Chung, Low & Rust (2022), *Journal of the Academy of Marketing Science*
+
 **第二层嵌套调节引入**:
 ```
 "Whether [W1] can effectively [buffer/amplify] the [IV]→[DV] relationship is likely 
@@ -324,11 +384,21 @@ to depend on [W2]. When [W2] is high, the [buffering/amplifying] effect of [W1]
 becomes [stronger/weaker] because [mechanism]."
 ```
 
+**原文锚点**:
+> "Whether highly confident CMOs can effectively dissuade their confident CEOs from myopic marketing management will likely depend on the relative power they have vis-à-vis their CEOs."
+> — Chung, Low & Rust (2022), *Journal of the Academy of Marketing Science*
+
 **三向交互假设**:
 ```
 "H[N]. The [buffering/amplifying] effect of [W1] on the relationship between [IV] 
 and [DV] is [stronger/weaker] when [W2] is high than when [W2] is low."
 ```
+
+**原文锚点**:
+> "The effect of H2 (highly confident CMOs' ability to curb the myopic marketing management tendencies of highly confident CEOs) is greater when CMOs wield greater power vis-à-vis the CEO."
+> 
+> "The effect of H4 (independent board's positive impact on a confident CEO's myopic marketing management inclinations) is less when the CMO is more confident."
+> — Chung, Low & Rust (2022), *Journal of the Academy of Marketing Science*（H3 与 H5）
 
 **语料锚定**:
 - Chung, Low & Rust (2022, JAMS) — CEO confidence × CMO confidence (W1) × CMO power (W2); CEO confidence × board independence (W1) × CMO confidence (W2)
@@ -376,6 +446,10 @@ and [DV] is [stronger/weaker] when [W2] is high than when [W2] is low."
 ```text
 Outside [macro-event period], individuals can suppress or compartmentalize [identity/difference], limiting its relevance to [work interaction]. During [event], however, repeated cues heighten the salience of [identity] and increase perceived identity threat. This defensive orientation consumes resources and reduces motivation for [proximal mediator], making [negative outcome] more likely. We therefore expect [difference] to have a stronger [direction] association with [outcome] during and after [event] than before it, with this conditional effect operating through [mediator]. Because threat-consistent cues receive selective attention and become linked in associative memory, the activation may persist beyond the event itself; the duration claim is limited to the observed postevent window.
 ```
+
+**原文锚点**:
+> "Politically dissimilar individuals may try to suppress their political identity at work to self-protect and instead draw on other relevant social identities in the workplace (e.g., professional identity, team identity, organizational identity). This may, however, be impossible during macro events such as elections, protests, the passage of controversial laws, government breakdowns, or politically motivated violence."
+> — Reinwald, Kanitz, Bamberger, Backmann & Hoegl (2026), *Organization Science*（"The Elephant and Donkey in the Room"）
 
 **假设组织**:
 
@@ -457,11 +531,17 @@ H[h]: The impact of [protection] on [DV] is more negative when [W_hinder] is hig
 [Optional parallel hinder] H[h2]: ... when [W_hinder2] is higher.
 ```
 
+**原文锚点** (Castellaneta, Conti & Kacperczyk 2017, SMJ; 双刃剑双机制段——同一致保护强度对同一 DV 的两条相反信息路径):
+> "On one hand, a stronger trade secret protection may decrease valuable firm-specific information available to competitors—and thus enhance the target's value. On the other hand, a stronger protection of trade secrets may decrease information about the target and its rivals available to potential buyers—and thus decrease the target's value."
+
 **假设模板（异号权变）**:
 ```
 H[e]. The impact of [X] on [Y] will be more positive when [W_enhance] is higher.
 H[h]. The impact of [X] on [Y] will be more negative when [W_hinder] is higher.
 ```
+
+**原文锚点** (Castellaneta, Conti & Kacperczyk 2017, SMJ; 异号权变假设——H1 正号增强刃、H2 负号阻碍刃，均无 unconditional 主效应):
+> "Hypothesis 1 (H1): The impact of trade secret protection on firm market value will be more positive when the target company operates in an industry characterized by a higher mobility rate of knowledge workers." ... "Hypothesis 2 (H2): The impact of trade secret protection on firm market value will be more negative when the target company operates in an industry characterized by greater resource-value uncertainty."
 
 **语料锚定**: Castellaneta, Conti, & Kacperczyk (2017), *Strategic Management Journal* — trade secret protection × knowledge-worker mobility (enhancing); × resource-value uncertainty and poor-investment/lemons risk (hindering).
 
@@ -483,3 +563,96 @@ H[h]. The impact of [X] on [Y] will be more negative when [W_hinder] is higher.
 - `corpus/sentences/mechanism_chain.md`（opposing mechanisms / double-edged 句式；本变体保留双刃至假设层）
 - `corpus/subprotocols/hypothesis_organization_patterns.md`（dual_edged_signed_enhancing_hindering_branches）
 - `corpus/sentences/moderation.md`（more positive / more negative 异号调节句）
+
+---
+
+## E9. 双侧镜像调节（Same-Construct Mirror Moderation，DesJardine–Li–Shi 2025 型）
+
+**适用**: 主效应是"攻击方/施动方对受害方造成影响"，同一调节构念（威胁、机会、压力等）在**攻击方侧**与**受害方侧**产生**镜像预测**——rival 侧增强主效应、target 侧减弱主效应。调节变量的"角色侧"决定预测方向，两侧各需完整 why chain。
+
+**来源**: DesJardine, Li & Shi (2025), *Academy of Management Journal*（H2a/b：对手 vs 目标 ESG 媒体争议；H3a/b：对手 vs 目标 ESG 奖项）
+
+**原文锚点**:
+> "Because ESG ratings effectively counteract media-induced reputational damage, and because stakeholders' assessments are based on relative comparisons between similar firms, common owners may be especially motivated to attempt to enhance the relative reputations of portfolio firms that have recently sustained damage to their reputations due to ESG media controversies."
+>
+> "Although rivals may become subject to negative spillover effects of the target firm's ESG media controversy (DesJardine, Grewal & Viswanathan, 2023; Shi, Connelly, Hoskisson & Ketchen, 2020), they should still fare better than the target firm that directly incurs the controversy. This follows from the idea that spillover effects dissipate, such that firms involved in controversies are almost always more heavily penalized than any 'bystander' peers subject to negative spillovers (Shi, Wajda & Aguilera, 2022)."
+
+**骨架**（威胁对 H2a/H2b；机会对同构替换）:
+```
+[增强侧——攻击方侧] When a [portfolio firm] incurs [reputational damage] from [source], subsequent [positive signal] becomes more useful in mitigating [stakeholder harm] ([citation]). Because [stakeholders] trust [signal type], those [signals] may make the firm appear [better than its peers]. Because [signals] effectively counteract [damage type], and because stakeholders' assessments are based on relative comparisons between similar firms, [attackers] may be especially motivated to [attack] by [mechanism]. Following our prior logic, we expect [attackers] to achieve this goal by [tarnishing the reputations of] (target) firms that compete with their portfolio firms. That is, a target firm is likely to receive worse [coverage] from [intermediary] in which rivals' investors have greater ownership when those rivals face more [threat]. Thus:
+H2a. The negative relationship between [IV] and [DV] is stronger when [rivals] face more [threat].
+
+[减弱侧——受害方侧] Likewise, when [threat] plagues a target firm that competes with the portfolio firms of [attackers], [attackers'] motivations to [intervene] are likely to wane. In such cases, the target firm is already subject to intense [scrutiny] and may be penalized by [raters] for their perceived misdeeds, meaning rivals compare favorably against these firms. Although rivals may become subject to negative spillover effects ([citation]), they should still fare better than the target firm that directly incurs the [threat]. This follows from the idea that spillover effects dissipate, such that firms involved in [controversies] are almost always more heavily penalized than any 'bystander' peers subject to negative spillovers ([citation]). Therefore, we expect:
+H2b. The negative relationship between [IV] and [DV] is weaker when the [target] firm faces more [threat].
+```
+
+**关键特征**:
+- **同一构念双侧镜像**: 不是两个不同调节变量，而是同一调节构念在 rival/target 两侧的对称预测——rival 侧增强、target 侧减弱，方向相反但机制逻辑对称
+- **镜像论证的对称结构**: 每对假设先论证增强侧（动机上升），再用 "Likewise" 反转论证减弱侧（动机下降 + spillover 消散逻辑）——两侧各完成完整 why chain，不允许一侧只写方向
+- **spillover 消散作为减弱侧机制**: target 受害时 rival 也有负溢出，但 "still fare better" + "dissipate" 论证净效应仍有利于 rival——用相对比较锁住方向
+- **相对比较作为核心推理节拍**: "stakeholders' assessments are based on relative comparisons between similar firms"——两侧论证都依赖 within-group 相对比较（评级/评估的序数性质）
+- **与 E8（双刃剑估值）判别**: E8 是同一机制双受众分化（信息对象分属对手 vs 买方，估值双刃）；本变体是**同一调节构念双侧角色镜像**（攻击方 vs 受害方），机制是动机/能力变化而非估值双刃；E8 允许无主效应，本变体必须有 H1 主效应作为 trunk
+- **与 bilateral_argumentation（high/low 双边论证）判别**: 现有模板论证"同一 moderator 在 high vs low 条件下的机制"；本变体是**同一调节构念在两个不同对象（角色侧）上的镜像**——两侧各自有完整 why chain，不是同一对象的条件对比
+- **与 willing-and-able 双轴（moderator_selection_frameworks）配对**: 两组镜像对（威胁对/机会对）用动机/能力双轴统一——威胁改变动机、机会改变能力
+
+**反模式**:
+- 两侧不对称——增强侧有完整机制而减弱侧只写"likely weaker"而无机制 → 选择性论证
+- 减弱侧没有处理 spillover/直接受害的相对比较——必须证明"即使有溢出，净效应仍相反"
+- 把镜像写成两个不同构念（rival 威胁 vs target 威胁如果概念不同则是两个调节而非镜像）
+- 每侧假设语言不一致——镜像对必须用同构假设句式（"is stronger when..." / "is weaker when..."）
+
+**调用语料**:
+- `corpus/subprotocols/moderator_selection_frameworks.md`（willing-and-able 双轴：威胁→动机 / 机会→能力）
+- `corpus/subprotocols/bilateral_argumentation_templates.md`（high/low 双边论证；本变体的镜像论证是其角色侧推广）
+- `corpus/sentences/moderation.md`（stronger/weaker 假设句式）
+- `corpus/subprotocols/hypothesis_derivation_patterns.md`（相对比较推理、spillover 消散）
+
+---
+
+## E10. 跨学科分类框架驱动的 N 平行缓解调节（Taxonomy-Driven N-Parallel Penalty-Mitigation Moderators，Cutolo–Ferriani 2024 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）。story_fidelity: section_role=rising_action; knot_relation=tie（H1 文献基线把惩罚 knot 钉死，H2-H4 是解药机制）; character_effect=supports（三调节=配角群，统一框架让配角成建制登场）; pacing_effect=improves（三小节平行结构 + 最小对比对给机制以具体形象）; classification=section_variant。
+
+**适用**: 主效应是文献共识的惩罚/负面效应（baseline-from-consensus），论文贡献全部在 N 个**缓解型调节**（"penalty decreases as [feature] increases"）；N 个调节变量由**跨学科既成分类框架**（如语言学的 content/form/use 三维）1:1 映射驱动——预先回答"为什么选这 N 个调节变量"；每个调节一个小节，机制统一落到**同一理论透镜**（如 processing fluency）。
+
+**来源**: Cutolo & Ferriani (2024), *Journal of Management*（H1 文献基线 + H2 抽象度 / H3 内聚度 / H4 常规性）
+
+**原文锚点**:
+> "Overall, the conceptualized mechanisms in the existing literature suggest the following baseline hypothesis: Hypothesis 1 (H1): Categorically atypical producers have lower expected market appeal than typical ones."
+>
+> "Each of these features reflects one of the three fundamental components of language (Bloom & Lahey, 1978): content, the meaning encoded in the language used; structure, the organization and relationship between linguistic elements; and use, the contextual embeddedness of the language used."
+>
+> "Leah is an extraordinary painter and a talented musician." / "Leah is an extraordinary artist."（最小对比对：basic-level 双名词 vs superordinate 单名词）
+
+**骨架**:
+```
+[H1 文献基线] Overall, the conceptualized mechanisms in the existing literature suggest the following baseline hypothesis:
+H1. [Atypical actors] have lower expected [outcome] than [typical ones].
+
+[统一透镜 + taxonomy 映射] Marrying [primary theory] with [adjacent-discipline literature], we articulate and test [N] features that affect [mechanism state] while processing [X]. Each of these features reflects one of the [N] fundamental components of [language/domain] ([taxonomy citation]): [dimension 1]..., [dimension 2]..., [dimension 3].... Specifically, we contend that [decisions about feature 1, feature 2, feature 3] directly result in [mechanism state] that affects how [audiences] make inferences about [X].
+
+[每调节一小节——平行结构: 学科证据 → 机制 → 应用到 X → 假设]
+小节 1: [Linguistics/cognition evidence for feature 1] ... [minimal-pair illustration: 两个只差 feature 1 的句子/方案并置] ... [应用: feature 1 缓解 X 的困惑] ... Thus:
+H2. The [penalty] decreases as the [feature 1] of [actor]'s [carrier] increases.
+小节 2（同构）: ...
+小节 3（同构）: ...
+```
+
+**关键特征**:
+- **baseline-from-consensus（签名节拍）**: H1 直接从文献共识导出（"the conceptualized mechanisms in the existing literature suggest the following baseline hypothesis"），零推演预算——主效应假设是引用不是推导，全部理论篇幅给调节。与 E4（competing baseline）区别：E4 有两个竞争响应需裁决，本变体的 baseline 是单一共识惩罚、无竞争
+- **taxonomy 1:1 映射**: 跨学科既成框架的 N 维（Bloom & Lahey 内容/形式/使用）→ N 个调节变量 1:1（抽象度/内聚度/常规性）——框架先于调节存在（可引用），"为什么选这 N 个"被框架本身回答
+- **统一透镜落点**: 所有调节的机制统一落到同一理论透镜（processing fluency）——调节间不是各说各话，而是同一机制状态的 N 个上游特征
+- **最小对比对示例（theory 级 showing）**: "painter and musician" vs "artist"——两个仅差一个抽象层级的句子并置，让抽象机制（superordinate categorization）一次可见。这是 Ch03 showing 在 Theory 内的落地：机制链配最小对比对
+- **penalty-mitigation 方向**: 调节预期统一为"penalty decreases as [feature] increases"——解药型调节（与 story-blueprints resolution_logic `remedy` 同族），调节方向与 baseline 反向对抗
+
+**反模式**:
+- taxonomy 拼凑——分类框架必须真实存在且可引用（Bloom & Lahey 1978 是既成框架），不可临时造三维
+- 调节机制不统一——N 个调节必须落到同一透镜，否则退化为 N 个无关调节的堆叠
+- 最小对比对必须真最小——两个示例只能差一个维度（其余词类/句式相同），否则读者不知道哪个特征起了作用
+- baseline 重推——H1 是引用共识，不要再花篇幅论证惩罚（那是 Intro 的活）；若 H1 本身有竞争（两派预测相反），改用 E4
+- 缓解方向不可倒置——"penalty decreases as X increases" 的 X 必须理论上是缓解机制（提高流畅度），不可只是相关性借口
+
+**调用语料**:
+- `corpus/sentences/mechanism_chain.md`（每调节小节的学科证据→机制→应用链）
+- `corpus/subprotocols/hypothesis_derivation_patterns.md`（调节推导句式）
+- 上游联动: `write-introduction/academic-writing-corpus/theory-lens/02-dual-theory-layered.md` 变体B（同论文：lens 的 N:1 映射在 Theory 兑现为 N 个调节小节）——taxonomy 在 lens 预告、在 theory 兑现，两处 1:1 对齐是强一致信号

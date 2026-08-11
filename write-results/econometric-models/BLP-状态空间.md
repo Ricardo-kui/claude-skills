@@ -7,8 +7,40 @@ variants_count: 5
 created: 2026-08-05
 updated: 2026-08-05
 ---
-
 # BLP + 状态空间（Kalman filter + GMM）— Results 骨架
+
+## 变体速查表
+
+> 检索辅助。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架与诚实边界见下方变体正文。
+
+### 槽位分布
+
+| 槽位 | 变体数 | 变体编号 |
+|---|---|---|
+| R2 | 1 | 1 |
+| R3 | 2 | 2, 3 |
+| R8 | 2 | 4, 5 |
+
+### R2（1）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 1 | GMM 嵌套模型比较（MMSC-AIC 逐步升级） | BLP/GMM 结构模型以嵌套模型逐步比较 + GMM 专用信息准则证立各机制通道必要性 | 区别于 OLS "加控制变量"式表导航——每步比较对应一个理论机制 | 待交叉 | Liu & Shankar 2015 (MS) |
+
+### R3（2）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 2 | 研究问题驱动的状态空间参数解读（initial + σ → recovered path → 理论） | Kalman/状态空间 recovered 参数按研究问题分块解读：方程提醒→initial 显著性→σ 诊断→分特征实质解读→通道级结论 | 区别于静态 β 解读四拍——结构专用五拍，用 σ 诊断决定路径是否时变 | 待交叉 | Liu & Shankar 2015 (MS) |
+| 3 | 双层级间接通道与品牌强度异质性（nameplate vs parent; strong vs weak） | 时变有效性间接通道的层级对比（nameplate vs parent）+ 品牌强度异质性 + 内生性诊断同块完成（槽位 R3 续：间接/溢出块） | 区别于变体 2 的直接通道解读——同块完成层级+异质性+内生性确认，避免拆成多个假设段落 | 待交叉 | Liu & Shankar 2015 (MS) |
+
+### R8（2）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 4 | 反事实拟合验证 + 多通道长期损失分解 | 结构反事实模拟（with vs without shock）在估计/验证双样本拟合 + short vs long-term 损失四通道分解 | 区别于 SEM 式 direct/indirect 分解——结构反事实模拟分解，强制双样本与跨案例交叉叙事 | 待交叉 | Liu & Shankar 2015 (MS) |
+| 5 | 非最优性政策模拟（scenario ladder + 验证期 what-if） | 管理含义政策模拟：非最优性声明（区别 BLP 供给面）+ 预算再分配 scenario ladder + 验证期应用 + 幅度翻译 | 区别于变体 4 的反事实拟合验证——以估计参数做 what-if 模拟，明确非均衡反事实边界 | 待交叉 | Liu & Shankar 2015 (MS) |
+
 
 ## 主骨架
 
@@ -26,6 +58,7 @@ updated: 2026-08-05
 ### 变体 1: R2 — GMM 嵌套模型比较（MMSC-AIC 逐步升级）
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
+**原始句锚点**: The values of MMSC-AIC and the objective function in Table 3 show that the fit of Model 1 is significantly worse than Model 2, underlining the importance of considering a product recall's direct effect on brand preference.
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -43,6 +76,7 @@ updated: 2026-08-05
 ### 变体 2: R3 — 研究问题驱动的状态空间参数解读（initial + σ → recovered path → 理论）
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
+**原始句锚点**: The negative media coverage coefficients suggest that greater publicity of product recall events enhances consumers' negative perceptions of the brand, consistent with Siomkos and Kurzbard (1994).
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -60,6 +94,7 @@ updated: 2026-08-05
 ### 变体 3: R3 — 双层级间接通道与品牌强度异质性（nameplate vs parent; strong vs weak）
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
+**原始句锚点**: Since parent-brand-level advertising is hurt less than nameplate-level advertising during product recall, the loss due to the decreased effectiveness of parent-brand-level advertising is smaller and ranges from about one percent to seven percent.
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -75,6 +110,7 @@ updated: 2026-08-05
 ### 变体 4: R8 — 反事实拟合验证 + 多通道长期损失分解
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
+**原始句锚点**: The model with product recall effects predicts market shares better than the one without product recall effects for all four car nameplates in both the estimation and validation samples.
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 
@@ -92,6 +128,7 @@ updated: 2026-08-05
 ### 变体 5: R8 — 非最优性政策模拟（scenario ladder + 验证期 what-if）
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
+**原始句锚点**: This simulation differs from supply side analysis in the classic random coefficient model (BLP 1995, Sudhir 2001) where optimal firm decision is assumed. We follow Dube et al. (2005) and Sriram et al. (2006) and do not impose any “optimality” on the firms’ decision when estimating the demand model.
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 

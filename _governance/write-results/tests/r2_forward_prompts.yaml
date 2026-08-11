@@ -1,0 +1,51 @@
+schema_version: "0.1.0-pilot"
+decision_node: results.R2.OLS_FE
+cases:
+  - case_id: standard_hierarchical_fe
+    task: >-
+      请为一项公司—年度面板研究写 Results 的 R2 表格导航段。Table 3 包含五个固定效应模型：
+      Model 1 只有控制变量与公司、年份固定效应；Model 2 加入核心自变量；Model 3 加入调节变量；
+      Model 4 加入交互项；Model 5 是完整模型。H1 在 Model 2 检验，H2 在 Model 4 检验。
+      只写导航，不提前判断假设是否得到支持。
+
+  - case_id: model_free_quartile_preview
+    task: >-
+      请写 Results 的 R2 开场。正式回归前，作者希望先报告 model-free evidence：按核心连续自变量分成四分位，
+      比较各组因变量的均值和中位数，并引用附录散点图。分组结果呈单调上升，但这只是描述性证据，
+      不能替代后续控制混淆因素的固定效应模型。随后再过渡到 Table 4 的模型结果。
+
+  - case_id: heckman_separate_tables
+    task: >-
+      请为使用 Heckman 两阶段样本选择修正的研究写 R2 表格导航。Table 3 报告第一阶段选择方程，
+      排除限制显著预测进入观察样本；Table 4 的 Column 1 报核心关系，Column 2 加入两个两向调节，
+      Column 3 加入三向交互，Column 4 换用企业固定效应。不要把相关性条件写成已经证明排他性成立。
+
+  - case_id: dual_control_function_selection
+    task: >-
+      请写一段 R2 表格导航。研究的核心解释变量是二元且可能内生，同时最终结果样本还存在选择偏误。
+      作者先报告把核心变量视为外生的 OLS 列，然后在同一张表中依次报告 control-function 第一阶段、
+      残差纳入的第二阶段，以及 Heckman 选择修正。需要清楚区分工具变量相关性、残差项和逆米尔斯比，
+      不得因第一阶段显著就宣称完全解决了内生性。
+
+  - case_id: polynomial_curve_moderation
+    task: >-
+      请为公司面板数据的倒 U 型研究写 R2。Model 1 只有控制变量，Model 2 加入一次项和二次项，
+      Models 3–5 分别加入三个调节变量与一次项、二次项的交互，Model 6 同时纳入所有项。
+      正文报告原始变量尺度结果，附录提供中心化估计和 VIF。R2 只解释模型递进及各假设对应列。
+
+  - case_id: experimental_three_way_hierarchy
+    task: >-
+      请为一项 2×2 实验写 R2 表格导航。研究包含两个稳定特质自变量、两个操纵条件，先检验主效应，
+      再逐个加入特质×操纵的两向交互，最后加入三向交互，总计七个模型。后续 R4 会报告简单斜率，
+      因此本段只需要明确模型层级和假设—模型映射，不要在这里展开交互结果。
+
+  - case_id: observational_three_way_boundary
+    task: >-
+      请为一项普通公司固定效应面板研究写 R2。Table 5 先加入控制变量和核心自变量，再加入两个连续调节变量、
+      两向交互和一个三向交互。研究不是实验，也没有操纵变量或多个稳定特质。请给出简洁的模型序列和
+      假设—列对应关系，不要引入实验设计语言。
+
+  - case_id: sparse_standard_navigation
+    task: >-
+      Table 2 报告四个 OLS 模型：控制变量、核心自变量、调节变量和完整交互模型。请写一段简洁的 R2 导航，
+      说明 H1 和 H2 分别在哪一列检验；不要报告系数、p 值或支持结论。

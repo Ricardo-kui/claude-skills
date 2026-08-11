@@ -270,6 +270,7 @@ def apply_slot_update(registry, update, source_paper, source_subfield, status_ru
         new_variant = {
             "id": skeleton_id,
             "skeleton": skeleton_text,
+            "verbatim_anchor": str(update.get("verbatim_anchor", "") or "").strip(),
             "skeleton_level": skeleton_level,
             "paper_count": 1,
             "status": "EMERGING",
@@ -306,6 +307,7 @@ def apply_slot_update(registry, update, source_paper, source_subfield, status_ru
             new_variant = {
                 "id": skeleton_id,
                 "skeleton": skeleton_text,
+                "verbatim_anchor": str(update.get("verbatim_anchor", "") or "").strip(),
                 "skeleton_level": skeleton_level,
                 "paper_count": 1,
                 "status": "EMERGING",
@@ -378,15 +380,87 @@ def apply_novel_patterns(registry, patterns, estimator_family, dry_run=False):
         print(f"  ✅ 添加 novel cross-slot pattern: {pattern_id} (EMERGING)")
 
 
+def apply_critique_updates(registry, critique_updates):
+    """Record user critiques of write-results output into per-estimator usage_stats.
+
+    Each update: {estimator_family: str, verdict: 'revise'|'reject', reason: str, date: 'YYYY-MM-DD'}
+    Signals per registry meta.usage_stats_schema (critique-driven, no pruning):
+      gap: slots 未覆盖缺口（静态，不依赖登记）
+      critique_heavy: revise + reject >= 2 → 精炼优先（REPLACE/EXTEND 候选）
+      quiet: 无批评 → 正常蒸馏
+    """
+    MAX_REASONS = 8
+    if not critique_updates:
+        print("  No critique_updates found.")
+        return
+
+    for upd in critique_updates:
+        est = str(upd.get("estimator_family", "")).strip()
+        verdict = str(upd.get("verdict", "")).strip().lower()
+        reason = str(upd.get("reason", "") or "").strip()
+        date = str(upd.get("date", "") or "").strip() or datetime.now().strftime("%Y-%m-%d")
+        estimators = registry.get("estimators", {})
+        if est not in estimators:
+            print(f"  SKIP: estimator '{est}' not in registry")
+            continue
+        if verdict not in ("revise", "reject"):
+            print(f"  SKIP: verdict '{verdict}' invalid (revise/reject)")
+            continue
+
+        stats = estimators[est].setdefault("usage_stats", {
+            "revise": 0, "reject": 0, "last_critique": None, "common_revise_reasons": [],
+        })
+        stats[verdict] = int(stats.get(verdict, 0)) + 1
+        stats["last_critique"] = date
+        if reason:
+            reasons = list(stats.get("common_revise_reasons", []))
+            if reason not in reasons:
+                reasons.insert(0, reason)
+                stats["common_revise_reasons"] = reasons[:MAX_REASONS]
+
+        total = stats["revise"] + stats["reject"]
+        signal = "critique_heavy" if total >= 2 else "quiet"
+        print(f"  CRITIQUE {est}: {verdict} ({date}) -> revise={stats['revise']}, "
+              f"reject={stats['reject']} [{signal}]")
+
+    meta = registry.setdefault("meta", {})
+    meta["last_updated"] = datetime.now().strftime("%Y-%m-%d")
+
+
 # ============================================================
 # 主函数
 # ============================================================
 
 def main():
     parser = argparse.ArgumentParser(description="更新 Results Evidence Registry")
-    parser.add_argument("input", help="corpus_enrichment.yaml 路径")
+    parser.add_argument("input", nargs="?", help="corpus_enrichment.yaml 路径")
     parser.add_argument("--dry-run", action="store_true", help="预览变更但不写入文件")
+    parser.add_argument("--record-critique", metavar="critiques.yaml",
+                        help="仅登记用户批评到 usage_stats（revise/reject + reason，不更新 skeleton）")
     args = parser.parse_args()
+
+    if args.record_critique:
+        critique_path = Path(args.record_critique)
+        if not critique_path.exists():
+            print(f"❌ critique 文件不存在: {critique_path}")
+            sys.exit(1)
+        print(f"📖 读取 critique: {critique_path}")
+        critique_data = load_yaml(critique_path)
+        critiques = critique_data.get("critique_updates", critique_data) if isinstance(critique_data, dict) else critique_data
+
+        print(f"\n📖 读取 registry: {REGISTRY_PATH}")
+        registry = load_yaml(REGISTRY_PATH)
+        print("\n🔄 登记批评...")
+        apply_critique_updates(registry, critiques)
+        print(f"\n💾 保存 registry...")
+        save_yaml(REGISTRY_PATH, registry, header_lines=REGISTRY_HEADER_LINES)
+        print("\n" + "=" * 50)
+        print("批评登记完成")
+        return
+
+    if not args.input:
+        parser.print_help()
+        sys.exit(1)
 
     input_path = Path(args.input)
     if not input_path.exists():

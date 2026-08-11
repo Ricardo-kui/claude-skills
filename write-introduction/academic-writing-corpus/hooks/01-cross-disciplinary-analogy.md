@@ -104,7 +104,7 @@ source: Extracted from MVP30 narrative_analysis files
 **来源**: jiang2026 (JIBS), P1
 
 **原文锚定**:
-> "There has been a long-standing interest among economic and sociology researchers in identifying macrolevel or societal drivers of income inequality, such as globalization (Goldberg & Pavcnik, 2007), technological advances (Autor et al., 2008), labor union strength (Western & Rosenfeld, 2011), and tax policies (Piketty, 2014; Stiglitz, 2012). Beyond societal drivers, management scholars suggest that firms can shape societal-level income inequality through firm practices such as executive compensation, employment arrangements, and pay-setting norms (Bapuji et al., 2018; Cobb, 2016). However, empirical work exploring the societal impact of firm-level pay practices remains scarce (Bapuji et al., 2020)."
+> "There has been a long-standing interest among economic and sociology researchers in identifying macrolevel or societal drivers of income inequality, such as globalization (Goldberg & Pavcnik, 2007), technological advances (Autor et al., 2008), labor union strength (Western & Rosenfeld, 2011), tax policies (Piketty, 2014; Stiglitz, 2012), and welfare provisions (Radcliff, 2013). Beyond societal drivers, management scholars suggest that firms can shape societal-level income inequality through firm practices such as executive compensation, employment arrangements, and pay-setting norms (Bapuji et al., 2018; Cobb, 2016). However, empirical work exploring the societal impact of firm-level pay practices remains scarce (Bapuji et al., 2020)."
 
 **关键特征**:
 - **"'long-standing interest among [discipline A] and [discipline B]'"**: 先承认其他学科的成熟研究，四点枚举建立跨学科学术合法性，每项1引用干净利落

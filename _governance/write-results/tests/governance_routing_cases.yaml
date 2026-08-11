@@ -1,0 +1,29 @@
+cases:
+  - id: ols_r7_threat_narrative
+    result_type: OLS/FE
+    slot: R7
+    expected_default_ids:
+      - OLS-FE:v2
+  - id: logit_r3_curve_test
+    result_type: Logit/Probit/Ordered Probit
+    slot: R3
+    expected_default_ids:
+      - Logit-Probit-Ordered-Probit:v9
+  - id: logit_r4_turning_point_moderation
+    result_type: Logit/Probit/Ordered Probit
+    slot: R4
+    expected_default_ids:
+      - Logit-Probit-Ordered-Probit:v12
+  - id: survival_r3_aft_translation
+    result_type: 生存分析
+    slot: R3
+    expected_default_ids:
+      - 生存分析:v1
+  - id: did_r2_core_only
+    result_type: 自然实验/DiD
+    slot: R2
+    expected_default_ids: []
+  - id: qualitative_f1_core_only
+    result_type: 定性过程研究/定性发现
+    slot: F1
+    expected_default_ids: []

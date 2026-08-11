@@ -53,6 +53,9 @@ The debate between [Perspective A] and [Perspective B] is one of the most enduri
 
 **来源**: shareholder litigation & stakeholder orientation (SMJ), adapted
 
+**原文锚定**:
+> "A long-standing debate in corporate governance centers on two perspectives: the stakeholder view, which emphasizes considering the interests of all key stakeholders in a company, and the shareholder primacy view, which focuses on maximizing shareholder wealth... Specifically, realizing that business leaders shape their organizations' orientations over time in response to various institutional pressures, we explore what they might do if certain constraints were relaxed, allowing them greater flexibility in decision-making."
+
 **关键特征**:
 - 先建立辩论的学术合法性（"most enduring" + 具体引用）
 - 对称呈现双方核心主张（不可 strawman 任何一方）

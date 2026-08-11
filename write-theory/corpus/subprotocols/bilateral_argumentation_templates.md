@@ -12,6 +12,26 @@ confidence: high
 status: ready_for_corpus
 -->
 
+
+## 变体速查表
+
+> 检索辅助（2026-08-09 P0 补建）。状态列空白 = 正文未标注验证状态（旧 Pattern）。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架、适用条件与诚实边界见下方变体正文。
+
+| # | 变体 | 适用场景 | 状态 | 来源 |
+|---|---|---|---|---|
+| 1 | Pattern: Group Identity as Boundary Condit | moderator 涉及社会类别（race/gender/status），需要用社会心理学理 |  | Keeves, Westphal & McDonald (2 |
+| 2 | Pattern: Benchmark Leaders vs. Similar Pee | 同一 peer 行为可由不同类型 peer 引发，需预测哪类信息源占主导。 |  | Shi, Grewal & Sridhar (2021),  |
+| 3 | Pattern: Boundary Condition as Remedy for  | IV 通过双重代理问题降低资源转换效率；边界条件（竞争、新创身份、制度发展）通过外部治理/生 |  | Zhou, Gao & Zhao (2017), *ASQ* |
+| 4 | Pattern: Bilateral Argumentation — High/Lo | 当 moderator 影响主效应的三个并行机制时，分别论证 high 和 low 条件下每 |  | Shen, Zhou, Wang, and Zhang (2 |
+| 5 | Pattern: Bilateral Argumentation with Boun | 当 moderator 的 high/low 条件对应不同的制度/市场环境时，把边界条件嵌入 |  | Shen, Zhou, Wang, and Zhang (2 |
+| 6 | Pattern: Categorical Severity Moderation — | moderator 为分类变量（如 high-severity vs low-severit |  | Darby, Ketchen, Ball & Mukherj |
+| 7 | Pattern: Categorical Risk Moderation — Low | moderator 为产品风险分类（如 FDA Class I/II vs Class II |  | Darby, Wowak, Ketchen & Connel |
+| 8 | Pattern: Inverted-U Moderation — High/Low  | moderator 改变倒U型关系的曲率（flatten 或 steepen），需要分别论证 |  | Cui, Yang, and Vertinsky (SMJ) |
+| 9 | Pattern: Mode-Differentiated Curve Geometr | 两个战略模式共享同一条成本—学习倒 U 主干，但治理形式不同；同一环境边界条件 W 因此改变 |  | Bendig, Hensellek, and Schulte |
+| 10 | Pattern: Turning-Point Delay via Selective | 基线曲线来自两个共同必要条件 A/B，其中 B 随 X 下降；W 只维持 B，不改变 A，因 |  | Lee and Park (2024), *Strategi |
+| 11 | Pattern: Dual-Mechanism Convergent Moderat | 当主效应建立在两个互补机制上（如 pipes/prisms、资源获取/资源利用、合法性/效率 |  | Li, Bapuji, Talluri, Singh & N |
+| 12 | Pattern: Asymmetric Disposition×Context Mo | 主效应为 "[disposition trait] → [outcome]"，且 dispo |  | Abdurakhmonov, Ingram & Ridge  |
+
 ## Pattern: Group Identity as Boundary Condition
 
 **适用场景**: moderator 涉及社会类别（race/gender/status），需要用社会心理学理论解释为什么边界条件改变机制强度。
@@ -201,6 +221,7 @@ status: ready_for_corpus
 ## Pattern: Categorical Severity Moderation — High vs Low
 
 **适用场景**: moderator 为分类变量（如 high-severity vs low-severity recalls），且需论证两边机制差异。
+**判别**: 与 Categorical Risk Moderation（Darby 2026）近邻——本模式强调『分类非连续 + 心理机制』（not on a continuum, but as different categories）；Risk 模式强调『监管分类 + 信息不对称』（FDA 类别的信息可评估性差异）。分类变量无监管框架时用本模式。
 **范文来源**: Darby, Ketchen, Ball & Mukherjee (2023), *Manufacturing & Service Operations Management*
 
 **骨架**:
@@ -234,6 +255,7 @@ status: ready_for_corpus
 ## Pattern: Categorical Risk Moderation — Low vs High Risk Devices
 
 **适用场景**: moderator 为产品风险分类（如 FDA Class I/II vs Class III），需论证两边信息不对称差异。
+**判别**: 与 Categorical Severity Moderation（Darby 2023）近邻——本模式强调『监管分类 + 信息不对称』（类别间的缺陷后果可评估性差异）；Severity 模式强调『分类非连续 + 心理机制』。有监管分类框架时用本模式。
 **范文来源**: Darby, Wowak, Ketchen & Connelly (2026), *Journal of Operations Management*
 
 **骨架**:

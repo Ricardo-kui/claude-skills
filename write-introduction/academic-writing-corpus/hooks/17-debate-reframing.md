@@ -47,6 +47,9 @@ to achieve a desired orientation toward [outcome]."
 
 **来源**: park_lange_jeon (SMJ), P1
 
+**原文锚定**:
+> "Rather than attempting to settle that disagreement here as a theoretical or philosophical matter, our interest lies in how these perspectives manifest in practice. Specifically, realizing that business leaders shape their organizations' orientations over time in response to various institutional pressures, we explore what they might do if certain constraints were relaxed, allowing them greater flexibility in decision-making."
+
 **关键要素**:
 - "A long-standing debate in [field] centers on..." — 呈现辩论
 - "Rather than attempting to settle that disagreement here as a theoretical or philosophical matter" — **pivot 句**（精华所在）

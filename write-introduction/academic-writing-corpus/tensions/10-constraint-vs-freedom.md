@@ -36,6 +36,9 @@ source: Extracted from MVP30 narrative_analysis files
 
 **来源**: zhao_ding2022 (OS), adapted
 
+**原文锚定**:
+> "In principle, entrants would choose functional combinations that closely align with the target customers' needs and preferences. In practice, they often face substantial demand uncertainty about the functional attributes customers are likely to value in products."
+
 **关键特征**:
 - "The advent of... has sharply reduced" → 建立自由扩展
 - "In principle... In practice, however..." → 经典双句法，引入约束

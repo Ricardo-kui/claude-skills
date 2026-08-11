@@ -1,37 +1,20 @@
 ---
 name: distill-results-exemplar
-description: |
-  Results 范文蒸馏 meta-skill。输入单篇或批量论文的 Results 文本，输出结构化提炼报告：段落骨架、表达 DNA、假设-结果节奏、可迁移范式、不可迁移边界、以及 write-results 更新建议。
-  核心原则：提炼 HOW they stage evidence, not WHAT they found。不复制具体系数，只提取证据组织的节奏和说服逻辑。
-
-  三层目标：
-  1. **学习顶刊证据展演手法** — 理解 Results 如何组织假设检验、处理非显著、管理读者预期
-  2. **完善 write-results skill** — Results DNA 和跨论文节奏对比反哺主骨架和路由逻辑
-  3. **治理 econometric-models** — 默认复用或扩展既有来源；单篇独特写法仅进入 reference，跨论文验证后才提议晋升 operator
-
-  下游：`write-results` (v3.0.0+) 检测到蒸馏请求时自动路由到本 skill。
-  触发词：「蒸馏 results」「results 范文分析」「拆解 results」「提取 results 模板」「处理新论文 results」「results 骨架提炼」。
-  **消歧**：用户未指定 section（只说"分析这篇论文""蒸馏一下"）时，先询问蒸馏哪个 section（Introduction/Theory/Methods/Results），不默认本 skill。
-  **反向边界**：Results 写作用 `write-results`；审查已有 Results 草稿用 `results-review`；全稿 QC 用 `pollock-qc`。本 skill 只蒸馏范文，不生成写作、不做 QC。
+description: >-
+  Results 范文蒸馏 meta-skill——输入单篇或批量论文的 Results 文本，输出结构化提炼报告（估计器分类、R1–R9 槽位映射、假设-结果节奏、表达骨架），并将验证通过的变体写回 write-results 语料。Use when 蒸馏 results 范文——提炼 HOW they stage evidence, not WHAT they found。Not for: Results 写作（→ write-results）；草稿审查（→ results-review）；全稿 QC（→ pollock-qc）。
 ---
 
-# Role
+# Distill Results Exemplar
 
-你是 Results 范文的**结构化蒸馏器**。基于 nuwa-skill 的流水线逻辑和 Pollock 2025 Ch07，将单篇或批量论文的 Results 转化为可复用、可验证、可入库的写作资产。
+Distill how a published Results section stages evidence—not what it found—into reusable, evidence-traceable writing assets for `write-results/econometric-models/`。
 
-**你的工作是三层递进**：
-1. **学习顶刊证据展演手法**（Phase 0–2）：估计器分类 → 槽位映射 → 段落节奏 + 表达骨架——回答"这篇论文的 Results 是怎么让读者相信假设被支持/拒绝的？"
-2. **量化和跨论文对比**（Phase 3–4）：Results DNA 指标 + 与已有 corpus 交叉验证——回答"这个节奏模式是独特的还是已经在 corpus 里了？"
-3. **治理 corpus**（Phase 4–5）：先复用、追加证据或合并近邻；只有确有独立生成能力的写法才新增 reference，晋升 operator 必须独立审核——corpus 是学习成果，不是目标本身
-
-核心原则：
-- **How > What**：提炼 Results 如何组织假设检验、如何处理非显著结果、如何管理读者预期，而非复制具体系数和 p 值。
-- **节奏 > 数字**：提炼"方向→显著性→幅度→支持判断"的四拍节奏，以及稳健性检验如何按 threat 组织。
+三层递进：学习顶刊证据展演手法（Phase 0–2）→ 量化与跨论文对比（Phase 3–4）→ 沉淀到 corpus（Phase 4–5）。核心原则：How > What；节奏 > 数字（"方向→显著性→幅度→支持判断"四拍 + 稳健性按 threat 组织）；范式排他性（只提取该类估计器特别需要的报告方式）。
 
 ## Phase 0.5 — Story-Fidelity Gate
 
-加载 `../paper-story-contract/references/distillation-gate.md` 并输出 `story_fidelity`。Results 的 headline answer 应分类为 `climax`，稳健性、异质性和补充分析应说明它们如何 `unravel` 该答案并形成 `falling_action`。只报表格顺序而不改善答案揭示或可信度的模式标记为 `ritual_only`；隐藏 mixed/null evidence 或用模板替代判断的模式标记为 `reject`。
-- **范式排他性**：只提取某类估计器或设计**特别需要**的结果报告方式，而非所有文章都有的通用流水账。
+加载 `../paper-story-contract/references/distillation-gate.md` 并输出 `story_fidelity`。Results 的 headline answer 分类为 `climax`；稳健性、异质性和补充分析说明它们如何 `unravel` 该答案并形成 `falling_action`。只报表格顺序而不改善答案揭示或可信度的模式标记为 `ritual_only`；隐藏 mixed/null evidence 或用模板替代判断的模式标记为 `reject`。
+
+**完成判据**：story_fidelity 已输出；climax/falling_action 判定完成。
 
 ## 调用方式
 
@@ -39,413 +22,93 @@ description: |
 /distill-results-exemplar <输入路径或文本> [--batch] [--estimator-filter=OLS/FE/DiD/Logit/...] [--output-format=markdown/json]
 ```
 
-**参数说明**：
-- `<输入路径或文本>`（必填）: 论文文件路径、PDF 路径、粘贴文本、或包含多篇论文材料的目录
-- `[--batch]`（可选）: 标记批量处理模式，输出跨论文模式聚合报告
-- `[--estimator-filter]`（可选）: 只处理特定估计器类型的论文
-- `[--output-format]`（可选）: 默认 `markdown`，可选 `json` 供脚本消费
-
-**如果省略输入**，进入交互式询问后执行蒸馏。
-
----
+- `<输入路径或文本>`（必填）：论文文件路径、PDF 路径、粘贴文本、或包含多篇论文材料的目录；省略时进入交互式询问。
+- `--batch`：批量处理模式，输出跨论文模式聚合报告；`--estimator-filter`：只处理特定估计器类型；`--output-format`：默认 markdown，可选 json 供脚本消费。
+- **消歧**：用户只说"分析/蒸馏这篇论文"未指定 section 时，先询问蒸馏哪个 section（Introduction/Theory/Methods/Results），不默认本 skill。`write-results` 检测到蒸馏请求时路由到本 skill。
 
 ## Phase 0 — 估计器类型与 Results 结构分类
 
-在读取 Results 正文前，先判断该 Results 的**证据架构**，决定后续槽位检查清单和蒸馏焦点。
+读 `references/intake-and-classification.md`（八维分类表 + 输出 yaml），在读取正文前判定证据架构。
 
-### 分类维度
+**完成判据**：`phase_0_results_profile` 各维齐全。
 
-| 维度 | 选项 |
-|------|------|
-| 估计器 | OLS/FE / Logit/Probit/Ordered Probit / 生存分析 / DiD / 计数模型 / IV/2SLS / 匹配DiD / 堆叠扩散Logit / 实验(ANOVA/OLS) |
-| 假设结构 | 纯主效应 / 主效应+交互 / 主效应+中介 / 三向交互 / 构造暴露分解 |
-| 稳健性组织 | 按 threat 组织 / 按表格机械罗列 / 混合 |
-| 预处理变异报告 | 有 / 无（新增 v1.2.0 — Yuan et al. 2026 JOM） |
-| 协变量变异报告 | 有 / 无（新增 v1.2.0 — Yuan et al. 2026 JOM） |
-| 非显著处理 | 全部报告 / 选择性报告 / 仅在附录 / 混合 |
-| 经济显著性 | 嵌入主效应 / 独立段落 / 缺失 |
-| 图形使用 | 交互图 / 平行趋势图 / AME 区域显著性图 / 无 |
+## Phase 0.75 — 选材 Gate（批评驱动）
 
-### 输出格式
+用 `write-results/econometric-models/_evidence_registry.yaml` 的 `usage_stats` 判定本文值不值得深蒸馏：
 
-```yaml
-paper_id: "[作者_年份_期刊]"
-phase_0_results_profile:
-  estimator_family: "OLS/FE / Logit / DiD / ..."
-  hypothesis_structure: "主效应 / 主效应+交互 / 主效应+中介 / ..."
-  robustness_organization: "按 threat / 按表格 / 混合"
-  preprocessing_variation_reported: true/false  # 新增 v1.2.0
-  covariate_variation_reported: true/false  # 新增 v1.2.0
-  nonsignificant_reporting: "全部报告 / 选择性 / 附录 / 混合"
-  economic_significance_placement: "嵌入R3 / 独立R5 / 缺失"
-  figure_types: ["交互图", "平行趋势", ...]
-  hypotheses_tested: ["H1", "H2", ...]
-  nonsignificant_findings: ["H4"]  # 仅列编号，不计数
-```
+| 带 | 判定条件 | 处理 |
+|----|---------|------|
+| **gap** | 该估计器 slots 覆盖存在缺口（静态） | **HIGH**：ADD 候选，优先深读 |
+| **critique_heavy** | `revise + reject >= 2` | **HIGH**：REPLACE/EXTEND 候选；`common_revise_reasons` 是精炼依据 |
+| **quiet** | 其余 | MEDIUM：正常蒸馏 |
 
----
+单篇不拒绝但必须输出带判定；批量按带排序。频繁使用且好用的变体提升路由权重，语料不因使用频率淘汰（registry `non_signals`）。
 
-## Phase 1 — Results 文本读取与粗粒度解构
+输出 yaml、执行规则、重复闸门（jaccard ≥ 0.33 → SKIP）与趋同批评聚合检查：读 `references/selection-gate.md`。
 
-读取 Results 全文，按叙事槽位目录（R1–R9）进行**粗粒度标注**。标注时只定位段落功能，不做深入分析。
+**完成判据**：band + priority + rationale 已输出；趋同批评 ≥2 时已追加聚合检查块。
 
-### 槽位映射表（与 write-results 对齐）
+## Phase 1 — 文本读取与槽位映射（R1–R9）
 
-| 槽位 | 功能 | 粗粒度标注任务 |
-|------|------|----------------|
-| R1 | 描述性统计 / 诊断导向 | 定位 descriptives 段落，标记诊断检验（VIF/multicollinearity） |
-| R2 | 模型序列 / 表格导航 | 定位 table navigation，标记 Model 1→2→3 的增量逻辑 |
-| R3 | 主假设检验 | 逐假设定位，标记方向→显著性→幅度→支持判断的四拍完整性 |
-| R4 | 交互效应 / 条件效应 | 定位交互项报告，标记 simple slopes / AME / 图示 |
-| R5 | 经济 / 实质显著性 | 定位 magnitude 解释，标记基准对比方式 |
-| R6 | 非显著 / 混合 / 意外发现（可选，若无非显著假设） | 定位 null/mixed findings，标记处理方式。若 number_of_nonsignificant_findings = 0 或 1，缺失不严重惩罚 |
-| R7 | 稳健性 / 效度 / 敏感性 | 逐 threat 定位，标记组织方式（threat-based vs table-based） |
-| R8 | 补充 / 事后 / 机制 | 定位 supplemental，标记探索性/验证性标签 |
-| R9 | Results→Discussion 过渡（可选） | 定位 transition，标记核心模式总结。顶刊实证论文中约 70% 缺失，若缺失不严重惩罚覆盖率 |
+读 `references/phase-1-module-map.md`（槽位映射表 + 特殊分支顺序记录 + 输出 yaml），只定位段落功能，不做深入分析。
 
-### 特殊分支顺序记录
-
-记录该论文是否使用标准顺序（R1→R2→R3→...→R9）或特殊顺序：
-- DiD: 平行趋势前置？
-- IV: 第一阶段前置？
-- 多研究: 逐研究重复还是合并？
-- 实验: 排除→操纵检验→假设检验？
-
-### 输出格式
-
-```yaml
-phase_1_slot_map:
-  R1:
-    quality: "✅ 强 / ⚠️ 可改进 / ❌ 缺失"
-    paragraph_range: "[第X段–第Y段]"
-    diagnostics_reported: ["VIF", "correlation matrix"]
-    learn_worth: "值得学/不值得学/反模式 — 1句话原因"
-  R3:
-    quality: "✅ 强 / ⚠️ 可改进 / ❌ 缺失"
-    hypotheses_covered: ["H1", "H2", "H3"]
-    four_beat_completeness: "3/3 假设完整四拍"
-    nonsignificant_hypotheses: ["H4"]
-    learn_worth: "值得学/不值得学/反模式 — 1句话原因"
-  # ... 其余槽位
-actual_sequence: ["R1", "R2", "R3", "R4", "R5", "R7", "R9"]
-deviation_from_standard: "R6 缺失（无不显著假设）; R8 缺失"
-```
-
----
+**完成判据**：每个槽位有 quality + learn_worth 标记；actual_sequence 与 deviation 已记录。
 
 ## Phase 1.5 — 槽位覆盖检查与调研质量摘要
 
-这是质量控制检查点。对照估计器类型，检查 Results 是否覆盖了该类设计**必须出现**的槽位。
+读 `references/phase-1-5-coverage.md`（16 类估计器强制槽位表 + 质量摘要 yaml）。
 
-### 估计器类型强制槽位表
+**完成判据**：coverage_verdict + skill_implication 已输出。
 
-| 估计器类型 | 强制槽位 | 缺失即高风险 |
-|------------|----------|--------------|
-| OLS/FE | R1, R2, R3, R7 | R1 缺诊断、R3 缺经济显著性 |
-| Logit/Probit | R1, R2, R3, R5(嵌入), R7 | R3 直接解释系数大小、R5 缺边际效应 |
-| Ordered Probit | R1, R2, R3, R5, R7 | R3 未区分 category-specific effects |
-| 生存分析 | R1, R2, R3, R7 | R3 缺 shape parameter 解释 |
-| DiD | R2, R3, R7(平行趋势+安慰剂) | R7 缺 event-study / permutation |
-| 计数模型 | R1, R2, R3, R5(AME), R7 | R3 只报 IRR 不解释方向 |
-| IV/2SLS | R2(第一阶段), R3, R7 | R2 缺 F-statistic / R7 缺排他性检验 |
-| 匹配DiD | R2, R3, R7 | R7 缺匹配敏感性 / 重叠支撑 |
-| 实验 | R2(排除/操纵检验), R3, R7 | R2 缺 manipulation check |
-| 堆叠扩散Logit | R2, R3, R7 | R3 未解释风险集 |
-| 同伴效应/网络效应 | R3, R4, R7 | R7 缺 falsification / 安慰剂网络 |
-| 推断二元结果 | R3, R7 | R7 缺阈值敏感性 |
-| 多研究 | R1–R8(逐研究), R9(跨研究综合) | 缺少跨研究一致性对比、未标记研究间设计升级逻辑 |
-| 构造暴露分解 | R3, R4, R7 | R3 未分解为 component A/B、R4 未报告暴露强度异质性 |
-| 跨受众构念对比 | R3, R5, R7 | R3 未在多 outcome 间做上层梯队对比、R5 缺 audience-specific 幅度解释 |
-| 三向交互 | R3, R4, R7 | R4 缺简单斜率分解、未报告 conditional slope 标准误 |
+## Phase 2 — 深度提炼（节奏 / 骨架 / Validity Logic）
 
-### 调研质量摘要输出
+读 `references/phase-2-extraction.md`（R3 四拍与 R7 threat 节奏模板 + 骨架格式 + skill_gap 标准）。锚点规则见文末「原文锚定提取规则」。
 
-```yaml
-phase_1_5_quality_gate:
-  slot_coverage:
-    required_slots: ["R1", "R2", "R3", ...]
-    present_slots: ["R1", "R2", "R3", ...]
-    missing_slots: ["R5"]
-    coverage_verdict: "完整 / 轻微缺口 / 严重缺失"
-  special_design_markers:
-    detected: ["三向交互", "AME+区域显著性"]
-    properly_addressed: ["R4 分解了简单斜率"]
-    inadequately_addressed: ["R5 未报告区域显著性的转折值"]
-  source_sufficiency:
-    all_hypotheses_reported: true/false
-    robustness_organized_by_threat: true/false
-    economic_significance_present: true/false
-    nonsignificant_not_skipped: true/false
-  contradictions_or_gaps: ["R3 声称支持 H2 但系数方向相反", "R7 报告了安慰剂检验但在 Methods 中未预告"]
-  information_poverty_dimensions: ["未报告置信区间", "未说明 simple slope 的标准误"]
-  skill_implication:
-    - slot: "R3"
-      implication: "四拍完整但缺少 CI → write-results 生存分析 R3 主骨架应增加 CI 报告要求"
-    - slot: "R7"
-      implication: "稳健性按表格罗列而非按威胁 → 建议在 R7 主骨架中强制 threat-based 组织"
-```
+**完成判据**：每个骨架有节奏标记 + skill_gap 标注 + 目标文件/槽位 + verbatim_anchor。
 
----
+## Phase 3 — Results DNA 量化与结构化报告
 
-## Phase 2 — 深度提炼：段落节奏、表达骨架、Validity Logic
+读 `references/phase-3-dna-report.md`（五维诊断 + fine_grained profile 模板 + 反模式排查表）。每个诊断维度附带 skill 对比：`[定性判断] → 与 write-results 当前模板的关系 → [skill 改进方向]`。
 
-对 Phase 1 定位到的每个槽位段落，执行三重提炼。
+**完成判据**：五维诊断齐全；反模式表逐条排查过；fine_grained profile 已生成。
 
-### 2.1 段落节奏提炼（Rhythm Distillation）
+## Phase 4 — 技能更新指令生成
 
-Results 不是静态描述，而是**节奏化的证据展演**。提炼每个槽位的节奏模式。
+读 `references/phase-4-validation-writeback.md`（指令格式 + 待写入预览块模板 + 批评登记）。**所有待写入内容先展示预览、用户确认后才写入**——单篇逐个确认，批量一次确认 ADD/EXTEND、REPLACE 仍逐个确认。
 
-#### R3 主假设检验四拍节奏
+**完成判据**：每条 ADD/EXTEND/REPLACE 有 target_file + insert_after + distinct_from；预览块含骨架全文与原始句锚点。
 
-```text
-[拍1-方向]: Hypothesis [x] predicted that [predictor] would be [positive/negative] associated with [outcome].
-[拍2-显著性]: As shown in Model [y] of Table [z], the coefficient for [predictor] is [positive/negative] and statistically significant ([coefficient], [p-value]).
-[拍3-幅度]: Substantively, a [one-SD] increase in [predictor] is associated with a [Y-unit] [increase/decrease] in [outcome].
-[拍4-判断]: Thus, Hypothesis [x] is supported.
-```
+## Phase 5 — 质量验证与版本影响
 
-提炼任务：
-- 该论文是否严格遵循四拍？是否有变体（如拍3嵌入拍2、拍5添加经济显著性）？
-- 非线性模型的四拍如何调整（系数→边际效应→概率变化→支持判断）？
-- 非显著结果的四拍如何调整（方向→不显著→不解释幅度→不支持）？
+读 `references/phase-5-qc.md`（QC Checklist 11 项 + skill_version_impact 格式 + 最终输出物清单 8 项）。
 
-#### R7 稳健性检验节奏
+**完成判据**：QC 11 项全过；每个 ADD/EXTEND/REPLACE 附带版本影响评估。
 
-```text
-[威胁定位]: One concern is that our findings depend on [specific threat].
-[检验动作]: To address this concern, we re-estimate our models using [method].
-[结果]: The results are substantively unchanged.
-[结论]: reducing concerns that [threat] drives the findings.
-```
+## 原文锚定提取规则（语料锚点层）
 
-提炼任务：
-- 稳健性是否按 threat 组织，还是按表格机械罗列？
-- 每个稳健性检验是否对应明确的 threat？
-- "unchanged" 的表述强度（consistent / qualitatively similar / unchanged）
+每个待写入变体必须附带 `verbatim_anchor`——来源论文 1–2 句 verbatim 原句（15–40 tokens），风格参照用：
 
-### 2.2 表达骨架提炼（Expression Skeleton）
-
-**骨架格式**：
-```text
-[功能标签]: 主假设检验四拍（OLS/FE 版）
-[骨架]: Hypothesis [x] predicted that [predictor] would be [positive/negative] related to [outcome]. Model [y] of Table [z] shows that the coefficient for [predictor] is [positive/negative] and statistically significant (β = [value], p < [threshold], 95% CI [[lower], [upper]]). The R² increases from [value] to [value] when [predictor] is added, indicating that [predictor] explains an additional [value]% of the variance in [outcome]. Thus, Hypothesis [x] is supported.
-[可迁移性]: 高 — 出现在 15/28 篇范文中
-[范式排他性]: OLS/FE 专用，Logit 版本需替换为边际效应
-[设计变体]: 
-  - DiD: 替换 "Model [y]" 为 "Model [y] provides the baseline DiD estimate"
-  - IV: 拆分为第一阶段→第二阶段两段
-  - 实验: 替换为 t-test 格式
-[节奏标记]: [方向][显著性+系数][幅度解释][支持判断]
-[nearest_neighbor_id]: "<结果类型>:vN / NONE"
-[capability_loss_if_merged]: "若并入最近邻，会损失的独立输入条件、证据转换动作、输出义务或诚实边界；无损失则写 NONE"
-[governance_action]: NONE / REUSE / EXTEND_SOURCE / ADD_REFERENCE / PROPOSE_OPERATOR / PROMOTE / MERGE / DEPRECATE
-[目标文件]: "OLS-FE.md / 生存分析.md / ..."
-[目标槽位]: "R3 / R4 / R7 / ..."
-```
-
-**治理判决标准**（默认 `REUSE` 或 `NONE`）：
-- `NONE`：没有值得沉淀的新增证据组织能力。
-- `REUSE`：既有资产已完整覆盖；不改正文，仅在报告中记录复用。
-- `EXTEND_SOURCE`：与既有资产同构；只向 registry/来源记录增加论文、paper count 与子领域，不新建编号。
-- `ADD_REFERENCE`：单篇写法有明确学习价值，且合并确会损失独立生成能力；新增后必须保持 `reference_exemplar`。
-- `PROPOSE_OPERATOR`：已达到跨论文复现门槛且具有独立生成能力；只生成审核包，不自动晋升。
-- `PROMOTE`：人工确认审核包后，只更新 `_evidence_registry.yaml -> asset_governance.overrides`；不复制正文。
-- `MERGE`：将同构资产并入母资产；保留来源和旧 ID 映射。
-- `DEPRECATE`：资产失去路由价值；保留旧 ID，但退出活动菜单。
-
-每个候选先查询同结果类型、同槽位的最近邻，并回答 `capability_loss_if_merged`。仅“论文、变量、领域、表格编号或表层句式不同”时必须 `REUSE`、`EXTEND_SOURCE` 或 `NONE`，不得新建。
-
-### 2.3 Validity Logic 提炼
-
-提取该 Results 如何处理三类证据可信性问题：
-
-| 可信性问题 | 提炼问题 |
-|------------|----------|
-| 统计结论效度 | 是否同时报告统计显著性和经济显著性？是否报告置信区间？ |
-| 内部效度 | 稳健性检验是否真正回应了 identification threat？还是 placebo 堆砌？ |
-| 构造效度 | 测量替代检验的结果是否与主效应一致？ |
-
----
-
-## Phase 3 — Academic Results DNA 量化与结构化报告
-
-量化该论文 Results 的"表达 DNA"，生成 fine-grained profile。
-
-### 论证手法诊断
-
-不量化机械指标（句数、定位率），而是诊断这篇 Results 在证据展演上的强弱之处。
-
-| 维度 | 诊断问题 | 输出 |
-|------|---------|------|
-| **四拍节奏** | 主效应段落是否有方向→显著性→幅度→支持判断的完整节奏？非显著结果如何处理？ | 完整/缺拍 + 非显著处理方式 |
-| **因果语言自律** | "associated with" vs "effect of" 的分布是否匹配估计器设计？ | 越级/一致/过于保守 |
-| **稳健性组织** | 按威胁组织还是按表格机械罗列？ | threat-based / table-based / mixed |
-| **非显著叙事** | 不显著结果是被诚实报告、跳过、还是转化为边界发现？ | 陈述处理方式 |
-| **新颖度** | 这篇 Results 的证据展演节奏与 write-results 当前模板有多少不同？ | 高度新颖 / 部分新颖 / 与模板一致 |
-
-每个诊断维度输出时附带 skill 对比：
-```
-[定性判断] → 与 write-results 当前模板的关系 → [skill 改进方向]
-```
-
-### 结构化报告输出（fine_grained profile）
-
-```markdown
-# Fine-Grained Profile: [作者_年份_期刊]
-
-## Paper Identity
-- 估计器分类: [来自 Phase 0]
-- 期刊: [journal]
-- 新颖度: 这篇 Results 的证据展演节奏与现有模板的差异程度
-
-## Slot Coverage (R1–R9) — 含 quality + learn_worth
-[Phase 1 输出]
-
-## 治理判决
-[来自 Phase 2.2；列出最近邻、能力损失与 NONE/REUSE/EXTEND_SOURCE/ADD_REFERENCE/PROPOSE_OPERATOR/MERGE/DEPRECATE]
-
-## 论证手法诊断
-[Phase 3 诊断维度]
-
-## Validity Logic Map
-[来自 Phase 2.3]
-```
-
----
-
-## Phase 4 — 技能更新指令生成（Skill Update Instructions）
-
-本阶段生成**受治理的 adoption instructions**，回答三个问题：
-1. **改哪个文件** → 精确到 `write-results/econometric-models/[结果类型].md`
-2. **怎么改** → 优先 NONE / REUSE / EXTEND_SOURCE；仅在独立生成能力成立时 ADD_REFERENCE / PROPOSE_OPERATOR，并支持 PROMOTE / MERGE / DEPRECATE
-3. **为什么** → 与当前 corpus 的差异 + 对 write-results skill 的提升
-
-### skill_update_instructions 格式
-
-```yaml
-actions:
-  - action: "EXTEND_SOURCE"
-    story_fidelity_classification: "section_variant"
-    target_file: "生存分析.md"
-    target_slot: "R3"
-    target_asset_id: "生存分析:v1"
-    nearest_neighbor_id: "生存分析:v1"
-    capability_loss_if_merged: "NONE"
-    reason: "与既有 AFT 四拍同构；本论文只增加跨论文证据，不新增生成动作。"
-    source_paper: "Mayo_Ball_Mills_2022_POM"
-
-  - action: "ADD_REFERENCE"
-    story_fidelity_classification: "section_variant"
-    target_file: "生存分析.md"
-    target_slot: "R4"
-    nearest_neighbor_id: "生存分析:v2"
-    capability_loss_if_merged: "新增直接 Wald 跨组系数差异裁决；既有资产只有分别显著/不显著对照。"
-    registry_role: "reference_exemplar"
-    insert_after: "生存分析:v2"
-    skeleton: "..."
-    source_paper: "..."
-
-new_anti_patterns_for_skill:
-  - target_file: "OLS-FE.md"
-    slot: "R7"
-    pattern: "稳健性按表格机械罗列而不按威胁组织"
-
-new_honesty_boundaries_for_skill:
-  - target_file: "计数模型.md"
-    boundary: "分样本 H3 的 null-in-one-subgroup 只有在分样本基于理论驱动时才可解释为确证性证据"
-
-skill_main_skeleton_update: []
-```
-
-### 写入与晋升规则
-
-1. `NONE` / `REUSE`：不改 corpus。
-2. `EXTEND_SOURCE`：只更新既有资产的 `evidence_additions`，不新建编号；重复来源必须幂等。
-3. `ADD_REFERENCE`：仅在 `capability_loss_if_merged` 具体且可审计时写入；新资产保持默认 `reference_exemplar`。
-4. `PROPOSE_OPERATOR`：只生成显式人工审核包。
-5. `PROMOTE`：人工确认后只更新 `_evidence_registry.yaml -> asset_governance.overrides`。1–2 篇证据不得晋升，除非记录 `verification_basis: user_expert_audit`；专家覆盖只允许 optional。
-6. `MERGE` / `DEPRECATE`：保留旧 ID、来源和迁移目标，不物理删除历史证据。
-7. Slot core、强制槽位顺序、story schema 或 stage gate 变更始终只生成审核包，不自动执行。
-8. 将 `actions` 保存为 YAML，先运行 `python scripts/results_corpus_governance.py apply-plan <plan.yaml> --dry-run`；人工确认后去掉 `--dry-run`。脚本必须在临时副本通过 catalog 验证后，才同步写回 Markdown、registry 与 INDEX。最后运行 governance `validate` 和 catalog `audit`；任何数量、槽位、角色、生命周期、重复 ID 或映射错误都使 Phase 4 失败。
-
----
-
-## Phase 5 — 质量验证、QC 输出、技能版本影响
-
-### QC Checklist
-
-- [ ] **Completeness**: 所有强制槽位已被覆盖
-- [ ] **Clarity**: 每个骨架都有明确的 [占位符] 和插入位置
-- [ ] **Credibility**: 未将单篇论文的特殊统计发现泛化为通用规则
-- [ ] **Replicability**: 骨架填入具体信息后，能生成类似顶刊风格的 Results 段落
-- [ ] **Substance not Verbatim**: 具体事实已泛化为 [placeholder]；节奏标记和过渡句式可保留原貌
-- [ ] **Fact Boundary**: 所有不可迁移统计事实已被明确标记
-- [ ] **Causal Language Audit**: 提取的骨架中因果语言强度与估计器类型匹配
-- [ ] **Nonsignificant Audit**: 如果原文有非显著假设，蒸馏报告是否记录了其句式处理
-- [ ] **Robustness Audit**: 稳健性检验是否按 threat 组织，而非机械列表
-- [ ] **Nearest-Neighbor Audit**: 每个 ADD_REFERENCE / PROPOSE_OPERATOR 都有最近邻和不可合并能力说明
-- [ ] **Registry Audit**: 全部资产由 `_evidence_registry.yaml -> asset_governance` 物化，且 governance validate 与 catalog audit 均通过
-- [ ] **Story Fidelity Audit**: headline answer/climax 与 robustness/falling action 已判定，单篇论文未改变核心规则
-
-### skill_version_impact（新增）
-
-```yaml
-phase_5_skill_version_impact:
-  write_results:
-    current_version: "3.5.0"
-    suggested_version: "3.5.0"
-    bump_reason: "EXTEND_SOURCE 5 个既有资产 / ADD_REFERENCE 1 个 / 无 operator 自动晋升"
-    changed_files:
-      - "生存分析.md: +2 变体"
-      - "OLS-FE.md: +1 变体"
-    main_skeleton_updates:
-      - "生存分析 R3: 增加 exp(β)−1 百分比翻译拍"
-      - "OLS-FE R7: 强制 threat-based 组织"
-  distill_results:
-    current_version: "1.3.0"
-    suggested_version: "1.3.0"
-```
-
-### 最终输出物清单
-
-1. **Phase 4 Skill Update Instructions**（可执行的技能更新指令——核心产出）
-2. **Expression Skeletons**（按治理判决列出；NONE/REUSE 也必须保留判决依据）
-3. **Rhythm Map**（假设检验节奏、稳健性节奏）
-4. **Results DNA with Skill Comparison**（DNA 指标 + skill 对比解读）
-5. **Skill Version Impact**（版本号建议 + 变更文件清单）
-6. **学习要点**（3-5 条：这篇论文最值得学的 Results 叙事手法 + 为什么有效）
-7. **可改进之处**（这篇顶刊论文 Results 仍然可以做得更好的地方——反哺 skill 的警告列表）
-8. **QC Result**（通过/需修正/拒绝入库）
-
----
+- **选句标准**：最能代表该变体节奏/措辞手法的句子（如 R3 幅度翻译句、R7 threat 定位句）
+- **拼接硬规则**：多句锚点保留省略号标记；跨段落/跨研究小节拼接必须显式标注（Study 1 段与 Study 2 段不得直接并置），同段删句用 "..." 标注
+- **提取来源**：优先本次蒸馏论文原文；缺失时检索 Obsidian 三库（路径见 `references/phase-2-extraction.md`）；检索不到标"待补"，不阻塞写入
+- **边界**：锚定是风格参照不是复制源——写入时 placeholder 泛化系数/表格编号，citation 链接还原为纯文本
 
 ## 红线
 
-- 骨架用 [placeholder] 泛化具体内容（变量名、系数值、表格编号）；但节奏标记短语（"Thus, Hypothesis [N] was supported" "As Figure [X] shows"）和稳健性过渡句式（"To address this concern"）可原样保留——这些正是要学的证据展演节奏
-- causal language 强度匹配估计器设计（OLS→"associated with", DiD→"effect of"）
-- 骨架中不编造统计量；原文薄弱处如实记录
-- post hoc 机制检验≠稳健性检验，必须明确标注
-- 选择性报告非显著结果 → 记录为反模式，不将其正常化
+- 骨架用 [placeholder] 泛化具体内容（变量名、系数值、表格编号）；节奏标记短语（"Thus, Hypothesis [N] was supported" "As Figure [X] shows"）和稳健性过渡句式（"To address this concern"）保留原样——这些正是要学的证据展演节奏
+- causal language 强度匹配估计器设计（OLS→"associated with"，DiD→"effect of"）
+- 统计量与事实严格取自原文；原文薄弱处如实记录
+- post hoc 机制检验与稳健性检验分开标注
+- 选择性报告非显著结果：记录为反模式并显式标注
 
 ## 与下游 Skill 的接口
 
 - **`write-results`** — Phase 4 `skill_update_instructions` 直接指定写入文件和插入位置
 - **`results-review`** — Phase 1.5 槽位覆盖 + Rhythm Map 可复用
 
----
+## Context discipline
 
-## 反模式（蒸馏过程中主动排查）
-
-| 反模式 | 表现 | 处理方式 |
-|--------|------|----------|
-| **原文依赖型骨架** | 骨架中包含论文特有的变量名、表格编号、具体系数 | 泛化为 [predictor] / [Table X] / [coefficient] |
-| **系数即解释** | 原文只报 "β=0.15, p<0.05" 不翻译实质含义 | 记录为反模式，不将其作为"标准骨架"提取 |
-| **因果越级语言** | 将 OLS 结果中的 "caused" "led to" 原样保留 | 在骨架中降级或标注 design-specific 允许范围 |
-| **交互后主效应独立解释** | 交互显著后仍独立解释主效应 | 记录为反模式，在 skill 中增加警告骨架 |
-| **稳健性机械罗列** | 按 Table 3/4/5 罗列而非按 threat 组织 | 记录为反模式，提取 threat-based 替代骨架 |
-| **忽略非显著** | 原文跳过不显著假设 | 在 R6 部分标记为"缺失"，并记录为非支持处理反例 |
-| **事后分析未标记** | post hoc 检验包装成 confirmatory | 记录为反模式，在 R8 中增加探索性标记骨架 |
-
+按需加载单个 phase reference，不预读全部；先查 `write-results/econometric-models/INDEX.md` 与 `_evidence_registry.yaml`，再打开具体语料文件对比或写回。
 
 ---
-*基于 nuwa-skill 流水线框架、Pollock 2025 Ch07、MVP30 范文语料库构建。版本 1.3.0 — Results 蒸馏治理 Meta-Skill。*
+*基于 Pollock 2025 Ch07、MVP30 范文语料库构建。版本 1.9.0（2026-08-10 writing-for-agents 结构优化：Phase 0–5 模板/表格/示例迁移至 references/ 八文件，SKILL.md 557→约 100 行；description 压缩；反模式表并入 phase-3 reference；保留 Phase 0.75 批评驱动选材 + 写入预览-确认两段式 + distinct_from 速查表维护 + 原文锚定规则）。*

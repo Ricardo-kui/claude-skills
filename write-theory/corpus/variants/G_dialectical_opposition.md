@@ -52,6 +52,9 @@ external audiences, who may accept or reject the claim. Thus [audiences] can
 indirectly affect [focal outcome] if they favor certain [identities/features].
 ```
 
+**原文锚点**:
+> "Classification helps people make sense of a complex domain. It is a natural human process that allows people to access large amounts of information with minimal effort (Rosch, 1978)."
+
 **关键原则**: P1 不能预判哪一方受益、哪一方受损。用中性语言建立场域。
 
 ---
@@ -75,6 +78,9 @@ e.g., mere labeling effects] show that [explanation with 2-3 studies]. Simply
 if underlying attributes are unchanged.
 ```
 
+**原文锚点**:
+> "Previous research suggests that organizations that are not easily classified will be ignored or devalued. ... Together, these studies suggest that ambiguous classification can arise when an organization identifies with multiple labels (organization-level ambiguity) or if it identifies with an ambiguous label (label-level ambiguity). In either case, ambiguity causes confusion and results in devaluation of the organization."
+
 **关键原则**: 
 - T2 用 3-5 个研究的快速综述建立"baseline consensus"
 - 每个研究 1 句，不展开细节
@@ -95,6 +101,9 @@ less likely to find [entities] that are [state], so [state] causes [entities]
 to [negative outcome: fall outside consideration set]. When [audience A] do 
 evaluate [entities] in [state], they use inappropriate criteria and expectations 
 are not met ([citation]).
+
+**原文锚点**:
+> "Market-takers use classification to find an organization (or other entity) that can satisfy particular requirements but are not concerned with producing new types of classification. ... A market-taker looking for a certain type of product will be less likely to find organizations that are not classified as expected, so ambiguous classification can cause organizations to fall outside the consideration set."
 
 [Audience A] can range from [subtype X] to [subtype Y]. [Boundary condition: 
 Expertise/trait] can temper how much an entity is devalued. [Evidence with 1-2 
@@ -161,6 +170,10 @@ Hypothesis 2b: [Entities] with [state B] will be more appealing to [audience B]
 than [entities] with [opposite state].
 ```
 
+**原文锚点**:
+> "Despite research showing that people are put off by ambiguous classification, it persists. In fact, ambiguity is widespread in the software industry's folk taxonomy. This may be because ambiguity is appealing to some audiences."
+> "For a market-maker, ambiguity presents an opportunity to produce new types of classification. Market-makers evaluate organizations with an eye toward how they can redefine market structures, and organizations that create something novel have the potential to do this."
+
 **关键原则**:
 - T4 首句必须使用 dialectical turn 标记: "Despite research showing..., it persists. This may be because..."
 - T3 和 T4 的机制步骤数应接近对称（差不超过 1 步）
@@ -182,6 +195,9 @@ requires audience A's eventual acceptance]. But it is important to remember that
 audience A patronizes later-stage survivors]. As a result, reactions from these 
 two audiences may form a complementary [two-stage / sequential] process.
 ```
+
+**原文锚点**:
+> "The above hypotheses propose that ambiguous classification makes organizations seem unclear to consumers but flexible to venture capitalists, leading to opposing evaluations. This may seem ironic, given that venture capitalists aim to invest in companies that will at some point attract consumers. But it is important to remember that venture capitalists invest in early-stage organizations, and so reactions to classification from these two audiences may form a complementary two-stage process."
 
 **关键原则**:
 - 两个对立机制必须锁定同一评价结果（same outcome, opposite signs）；benefit 与 burden 不得分别落在不同结局变量上
@@ -212,6 +228,10 @@ In addition, [entities] in this industry sought to appeal to both [audience A] a
 how these audiences respond to [focal phenomenon].
 ```
 
+**原文锚点**:
+> "I tested the hypotheses using the empirical context of the U.S. software industry from 1990 through 2002. The software industry is segmented by many labels, 456 in this study, and classification evolves rapidly."
+> "In addition, organizations in this industry sought to appeal to both consumers, who are market-takers, and venture capitalists, who are market-makers. As a result, this industry is a good context in which to investigate how these audiences respond to ambiguous classification."
+
 ---
 
 ## Zhou 2017 型：双重逻辑 + 输入-效率分解 + 倒 U 形整合
@@ -228,12 +248,18 @@ how these audiences respond to [focal phenomenon].
 The conventional economic view is that [IV] is incompatible with [outcome]. According to [Theory B], as long as [condition], [problem] arises because [agent] may take advantage of [position]. To reduce [problem], [actors] in [alternative setting] devise [mechanism 1] and [mechanism 2].
 ```
 
+**原文锚点**:
+> "Institutional theory focuses on the interaction between institutions and organizations and emphasizes how a firm's behavior is shaped by the surrounding institutions (Scott, 1995), which include both formal organizations, such as social, economic, and political bodies, and informal social norms and rules (North, 1990; Peng, 2003). ... The conventional economic view is that state ownership is incompatible with efficiency, defined as the degree of transformation of resource input into product output (Shleifer, 1998; Megginson and Netter, 2001)."
+
 ### 资源获取机制（H1a）
 
 ```
 We propose that [IV] should enable firms to gain more resources to invest in [mediator]. [Outcome] often requires substantial resources, but access to [resource type] in [context] is heavily controlled by the government. [IV] helps a firm to [access], [borrow], and [obtain subsidies], enabling it to spend more on [mediator]. Moreover, [IV] offers access to [policy support], and [focal actors] are under strong regulatory pressures to fulfill [government requirements].
 H[X]: [IV] has a positive effect on [mediator].
 ```
+
+**原文锚点**:
+> "We propose that state ownership should enable firms to gain more resources to invest in R&D activities. Innovation often requires substantial resources, but access to financial capital in many emerging economies is heavily controlled by the government (Musacchio and Lazzarini, 2014)."
 
 ### 资源利用效率机制（H1b）
 
@@ -243,6 +269,10 @@ H[X]: [IV] has a positive effect on [mediator].
 Second, [problem dimension 2: political appointments]. [Theoretical justification]. As a result, [managers] lack [capabilities/motivations], reducing the efficiency of converting [input] into [outcome].
 H[X]: [IV] negatively moderates the effect of [mediator] on [outcome].
 ```
+
+**原文锚点**:
+> "Shareholders of private firms may not always succeed at controlling their management teams, but SOEs likely suffer more from the dual agency problem. First, the principal is not clearly defined in SOEs, and there is no visible owner (Shleifer, 1998)."
+> "Second, in many emerging economies, politicians as principals may appoint managers of SOEs more for political reasons than for their capabilities as managers (Qian, 1996; Ramaswamy, 2001)."
 
 ### 倒 U 形整合（H1c）
 
@@ -255,6 +285,9 @@ As [IV] moves from [moderate] to [high], however, [additional advantage] increas
 H[X]: [IV] has an inverted U-shaped impact on [outcome], such that [moderate level] generates the most [outcome].
 ```
 
+**原文锚点**:
+> "Whereas the institutional view emphasizes the resource advantage brought by state ownership, the efficiency view highlights the dual agency problem caused by state ownership. Because both views offer valid arguments, we need to consider both when examining the overall effect of state ownership on innovation."
+
 ### 边界条件作为补救机制（H2-H4）
 
 ```
@@ -262,6 +295,10 @@ H[X]: [IV] has an inverted U-shaped impact on [outcome], such that [moderate lev
 [Competition] weakens the negative [IV] × [mediator] → [outcome] effect because exit threat and performance benchmarks reduce political interference.
 [Start-up status] weakens the negative [IV] × [mediator] → [outcome] effect because clear objectives, close scrutiny, and fewer legacy burdens reduce dual agency problems.
 ```
+
+**原文锚点**:
+> "We posit that institutional development will weaken the effect of state ownership on R&D input. ... A higher level of industrial competition should reduce the dual agency problem of SOEs and push them to be more efficient in generating innovation output."
+> "As a result, state start-ups suffer less from the dual agency problem and can use their resource input more efficiently to generate innovation."
 
 **关键原则**:
 - 两种逻辑必须指向不同 facet（投入 vs 效率）
@@ -282,6 +319,9 @@ H[X]: [IV] has an inverted U-shaped impact on [outcome], such that [moderate lev
 [Resource lens] explains why organizations seek external resources and why those resources can improve adaptation. [Learning lens] explains why search, absorption, and reusable routines take time to develop. Together, the lenses imply that execution costs can appear immediately while experience benefits mature only after repeated activity.
 ```
 
+**原文锚点**:
+> "Hence, external venturing can bring major learning and knowledge integration costs to a firm before the firm can build new routines to absorb and integrate external knowledge and capitalize on the benefits of experience learning (Titus et al., 2014; Wadhwa & Kotha, 2006). Considering the contrasting costs and benefits of CVC deals and alliances, we argue that their relationships with product recalls are not linear."
+
 ### 不利结果的主导权转换（H1/H2）
 
 ```text
@@ -292,6 +332,10 @@ As activity accumulates, the organization builds [templates, dedicated personnel
 At higher [X], accumulated learning and integration capability dominate the initial costs, so [adverse Y] falls. H[X]: [X] has an inverted-U relationship with [adverse Y], whose middle range represents the highest risk rather than the best performance.
 ```
 
+**原文锚点**:
+> "Accordingly, and consistent with the notion of experience learning (Greve, 2021; Penrose, 1959), we expect that CVC investments initially lead to more product recalls, but with more knowledge and experience gained from greater CVC activity, the product recall likelihood will decrease."
+> "Hypothesis 1: CVC activity has an inverted U-shaped relationship with product recall likelihood. Higher CVC activity is associated with higher product recall likelihood; however, beyond a tipping point, higher CVC activity is associated with lower product recall likelihood."
+
 ### 平行战略模式的差异化 warrant
 
 ```text
@@ -299,6 +343,10 @@ At higher [X], accumulated learning and integration capability dominate the init
 [Mode B] instantiates it through [bilateral contracting / mutual adjustment / interactive learning].
 The curve form may be shared, but mode-specific governance determines the mechanism details and how a boundary condition changes curve height, steepness, or turning point.
 ```
+
+**原文锚点**:
+> "Upon investment, the investor tries to establish formal relationships (e.g., filling board seats with executives or R&D/CVC managers) as well as informal ones (e.g., frequent social exchange through calls or visits) with the venture to ensure control and facilitate knowledge exchange and integration (Belderbos et al., 2018; Wadhwa et al., 2016; Wadhwa & Basu, 2013)."
+> "This is why the most common form of learning in alliances is interactive learning (Srivastava & Frankwick, 2011), mutual information exchange between the partners (Inkpen & Tsang, 2005), which creates new common knowledge, as well as realistic assumptions about the collaboration and each partner's expertise (Das & Kumar, 2007; Srivastava & Frankwick, 2011)."
 
 ### 同一边界条件、异几何变换（H3/H4）
 
@@ -310,11 +358,15 @@ The curve form may be shared, but mode-specific governance determines the mechan
 [Mode B → steepen] Under [bilateral / mutual-adjustment] governance, [W] raises the pressure to govern and exchange more intensively, accelerating experience benefits once routines form. The ascending cost segment and descending learning segment both become steeper. H[X]: [W] steepens the inverted-U.
 ```
 
+**原文锚点**:
+> "Firms will likely engage in more diverse, opportunistic, and risky CVC deals, leading to more product failures before the benefits of learning are realized."
+> "Thus, we argue that market turbulence will initially increase the likelihood of product recalls, but tighter governance and more frequent exchange between alliance partners will accelerate learning. A steeper learning curve will result, helping prevent product recalls with fewer alliances."
+
 **关键原则**:
 - 必须先说明 Y 是正向还是负向；同一倒 U 对两类 Y 的理论含义相反。
 - “活动更多”不等于“经验更多”的充分识别；若机制只在理论层，结果措辞应保持解释性而非声称已测得中介。
 - 两个战略模式可以共享 dominance rule，但必须有独立治理 warrant，不能复制段落后替换构念名。
-- 同一 W 的两种几何预测必须分别绑定 mode-specific governance；不得把 shift、steepen、turning-point delay 当作可互换的“调节”同义词（句式见 `sentences/moderation.md`；双侧曲率调节见 `bilateral_argumentation_templates.md`）。
+- 同一 W 的两种几何预测必须分别绑定 mode-specific governance；不得把 shift、steepen、turning-point delay 当作可互换的“调节”同义词（句式见 `../sentences/moderation.md`；双侧曲率调节见 `bilateral_argumentation_templates.md`）。
 
 ---
 
@@ -332,6 +384,10 @@ The curve form may be shared, but mode-specific governance determines the mechan
 [Coexistence turn] The accounts are not mutually exclusive. The unresolved issue is which prerequisite is limiting at each range of X.
 ```
 
+**原文锚点**:
+> "Thus, each new failure offers unique knowledge that can synergistically modify and extend the existing knowledge of these individuals, opening up opportunities for improving task performance."
+> "However, as these failures repeat and accumulate over time, the initial high motivation to learn from one's own failures is likely to diminish."
+
 ### 共同必要性与三状态整合（H1）
 
 ```text
@@ -342,12 +398,20 @@ High X: high A × low B → low Y.
 H1: X has an inverted-U relationship with Y.
 ```
 
+**原文锚点**:
+> "Hence, to effectively learn from their own failures, individuals will need sufficient levels of both the opportunity and motivation to learn."
+> "Hypothesis H1. There will be an inverted-U-shaped relationship between a surgeon's own accumulated failures and learning, such that a surgeon's subsequent surgery performance will improve as a function of their own accumulated failures up to a point but will deteriorate once that point is passed."
+
 ### 选择性维持与拐点右移（H2）
 
 ```text
 [W] gives actors a larger initial stock of B and slows B's depletion by weakening [negative process 1] and [negative process 2]. Because W does not alter the accumulation of A, its distinctive implication concerns when B becomes limiting, not whether A increases.
 H2: The turning point occurs at a higher X under higher W.
 ```
+
+**原文锚点**:
+> "This implies that individuals with higher perceived ability to learn will start off with a larger “stock” of motivation to learn from their own failures, which will be depleted later than those with lower perceived ability as their failures accumulate."
+> "Hence, we predict that the inverted-U-shaped relationship between one's accumulated failures and learning hypothesized in H1 will shift to the right for these individuals, as depicted in Figure 1."
 
 **关键原则**:
 - 先证明 A/B 是共同必要而非可替代的净效应成分。
@@ -405,6 +469,10 @@ H2: The turning point occurs at a higher X under higher W.
 | H2a (Audience B, label-level) | `[Entities] with [state] will be more appealing to [audience B]` | Organizations with ambiguous labels will be more appealing to VCs |
 | H2b (Audience B, org-level) | `[Entities] with [state] will be more appealing to [audience B]` | Organizations that span multiple labels will be more appealing to VCs |
 
+**原文锚点**:
+> "Organizations that affiliate with more ambiguous labels will be less appealing to consumers than organizations that affiliate with less ambiguous labels."
+> "Organizations that affiliate with more ambiguous labels will be more appealing to venture capitalists than organizations that affiliate with less ambiguous labels."
+
 ---
 
 ## 子协议索引
@@ -427,12 +495,18 @@ H2: The turning point occurs at a higher X under higher W.
 because [state] is appealing to some audiences."
 ```
 
+**原文锚点**:
+> "Despite research showing that people are put off by ambiguous classification, it persists. In fact, ambiguity is widespread in the software industry's folk taxonomy. This may be because ambiguity is appealing to some audiences."
+
 ### Symmetric Mechanism Contrast
 ```
 For [audience A], [state] makes [entities] [adjective A: unclear].
 But for [audience B], this same [state] represents [adjective B: flexibility].
 Thus the way [state] is regarded depends on the perspective of the evaluator.
 ```
+
+**原文锚点**:
+> "Thus the way an ambiguous identity is regarded depends on the perspective of the person evaluating the organization. For market-takers, ambiguous classification makes organizations unclear. But for market-makers, this same ambiguity represents flexibility."
 
 ### T6 Reconciliation
 ```
@@ -441,12 +515,18 @@ to remember that [temporal/contextual separation]. As a result, reactions from
 these two audiences may form a complementary [two-stage] process."
 ```
 
+**原文锚点**:
+> "This may seem ironic, given that venture capitalists aim to invest in companies that will at some point attract consumers. But it is important to remember that venture capitalists invest in early-stage organizations, and so reactions to classification from these two audiences may form a complementary two-stage process."
+
 ### Two-Source Construct Discrimination
 ```
 "[Focal construct] can arise when [entities] [source A: e.g., identify with 
 multiple labels] (organization-level) or if [entities] [source B: e.g., identify 
 with an ambiguous label] (label-level)."
 ```
+
+**原文锚点**:
+> "Together, these studies suggest that ambiguous classification can arise when an organization identifies with multiple labels (organization-level ambiguity) or if it identifies with an ambiguous label (label-level ambiguity). In either case, ambiguity causes confusion and results in devaluation of the organization."
 
 ---
 

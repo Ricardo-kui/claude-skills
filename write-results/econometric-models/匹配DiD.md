@@ -7,8 +7,16 @@ variants_count: 1
 created: 2026-05-18
 updated: 2026-08-05
 ---
-
 # 匹配DiD — Results 骨架
+
+## 变体速查表
+
+> 检索辅助。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架与诚实边界见下方变体正文。
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 1 | CEM 匹配作准实验事前对称威胁回应 | DiD/准实验把 CEM 作事前组间不对称威胁的稳健性回应：威胁句→匹配变量理论代理→CEM 引用→附录平衡表指针→remain robust（槽位 R7） | 首次填充匹配DiD——matching-as-robustness（主估计仍为 DiD-equivalent OLS），非 matched DiD 作唯一主规格；只处理可观测选择 | 待交叉 | Castellaneta, Conti & Kacperczyk 2017 (SMJ) |
+
 
 ## 主骨架
 
@@ -26,6 +34,8 @@ updated: 2026-08-05
 ### 变体 1：CEM 匹配作准实验事前对称威胁回应（2026-08-05）
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+
+**原始句锚点**: We used a coarsened exact matching (CEM) approach as developed by Iacus, King, and Porro (2009) to perform a match between treatment and control. As shown in Table S2, our results remain robust.
 
 **验证状态**: EMERGING（单篇；`section_variant`）
 

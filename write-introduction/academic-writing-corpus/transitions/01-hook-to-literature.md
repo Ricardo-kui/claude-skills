@@ -51,7 +51,9 @@ source: Migrated from global corpus + MVP30 validation
 **来源**: lashley_pollock2020 (ASQ), P1
 
 **原文锚定**:
-> "This puzzle is not merely an industry-specific curiosity; it reflects a broader theoretical gap concerning how stigmatized organizations manage legitimacy."
+> "The question thus becomes, how can a category's core stigma be reduced?"
+
+（原文无 "This puzzle is not merely an industry-specific curiosity..." 句式；上句为原文 P1 结尾的真实 hook→文献过渡句，原锚定为合成句）
 
 **关键特征**:
 - **"not merely"** → 否定特异性

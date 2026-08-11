@@ -14,6 +14,75 @@ updated: 2026-08-05
 
 # Logit-Probit-Ordered-Probit — Results 骨架
 
+## 变体速查表
+
+> 检索辅助。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架与诚实边界见下方变体正文。
+
+### 槽位分布
+
+| 槽位 | 变体数 | 变体编号 |
+|---|---|---|
+| R1 | 1 | 1 |
+| R2 | 1 | 5 |
+| R3 | 6 | 2, 6, 8, 9, 14, 17 |
+| R4 | 4 | 3, 10, 12, 18 |
+| R5 | 2 | 7, 15 |
+| R7 | 3 | 4, 11, 16 |
+| R8 | 1 | 13 |
+
+### R1（1）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 1 | R1 四合一密集开场（描述统计+诊断+估计器+报告惯例） | 篇幅受限时把描述统计、共线性诊断、估计器声明、OR 报告惯例压成一段开场 | AMJ 风格高密度压缩——替代标准分节式 R1 | 待交叉 | Pfarrer et al. 2010 AMJ |
+
+### R2（1）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 5 | R2 Heckman 第一阶段表格 + 逆米尔斯比率进入第二阶段 | Heckman 作主识别策略时：第一阶段表格+instrument relevance+IMR 进入第二阶段声明 | 与 OLS/FE 的 R2（Model 1→2→3 递进）结构完全不同 | 待交叉 | Malik et al. 2025 JM |
+
+### R3（6）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 2 | R3 Logit 主效应四拍（odds ratio + likelihood 翻译） | Logit 主效应：方向→OR+p→likelihood 翻译→支持判断 | 变体14 在其上强制加低基准诚实句与 stakes；本变体为纯四拍 | 待交叉 | Pfarrer et al. 2010 AMJ |
+| 6 | R3 Probit 边际效应 CI 检验（"CI does not cross zero" 支持标准） | 概率模型系数不可直接解释时以 AME 图 CI 不跨零作支持标准 | 与变体7 配套——检验标准放 CI、经济显著性单独成句 | 待交叉 | Malik et al. 2025 JM |
+| 8 | R3 双 DV 平行对称报告 | 两个 IV 对同一 DV 对称反向预测时同段平行报告 | 与变体17 的区别——线性双 IV 平行 vs 双焦点倒 U 平行 | 待交叉 | Malik et al. 2025 JM |
+| 9 | R3 Binary-GEE 曲线完整检验链（二次项→端点斜率→Fieller 区间） | 二元结果倒 U 完整证据链：二次项→U-test→拐点区间→预测概率图 | 与变体17 区别——单 IV 完整链 vs 双 IV 并列表；须标注 link/response 尺度 | 通过（双篇/专家审计） | Bendig et al. 2024 ETP |
+| 14 | R3 DiD+Logit 主效应（OR→相对概率 + 低基准诚实 + stakes） | 稀有二元结果（recall/fraud/退市）：相对概率+低基准 modest 诚实句+stakes | 变体2 之上强制低基准诚实句与 stakes 论证 | 待交叉 | Hoffmann et al. 2024 JM |
+| 17 | R3 双焦点 IV 平行倒 U（分模型→联合模型→并列表 U-test） | 两个焦点 IV 对同一不利结果同形倒 U 的平行展演 | 与变体8 区别——双倒 U vs 线性双 IV；与变体9 区别——双 IV 并列表 vs 单 IV 链 | 待交叉 | Bendig et al. 2024 ETP |
+
+### R4（4）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 3 | R4 事件研究 CAR 分组比较（非参数验证+t检验替代回归交互） | 理论预测离散类别序位差异时：分组均值比较+paired t 检验替代回归交互 | 先非参数验证 CAR 行为正常再做子组 t 检验——无需交互项 | 待交叉 | Pfarrer et al. 2010 AMJ |
+| 10 | R4/R5 条件曲线几何翻译 + 概率—成本—价值 benchmark | 单 IV 条件曲线：几何词汇（上移/变陡/拐点移动）+外部成本 benchmark 转管理后果（副槽位 R5） | 与变体12 的区别——一般几何翻译 vs 转折点位置型强制差异检验 | 通过（单篇） | Bendig et al. 2024 ETP |
+| 12 | R4 转折点位置型调节（条件顶点 + 直接差异检验） | 理论明确预测拐点位置移动：报双顶点+差值+直接检验作主句 | 与变体10 互补——强制顶点差与直接检验而非只报交互显著 | 通过（双篇/专家审计） | Lee & Park 2024 SMJ |
+| 18 | R4 同调节双模式几何对比（shift vs steepen 分图裁决） | 同一调节对两 IV 预测不同几何（shift/steepen）时分图裁决+"同调节异几何"收束（副槽位 R5） | 与变体10 的区别——单 IV 几何 vs 双 IV 几何对比；交互同号不裁决几何 | 待交叉 | Bendig et al. 2024 ETP |
+
+### R5（2）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 7 | R5 Probit 经济显著性（1-SD → 概率百分点变化） | probit/logit 经济显著性：1-SD 从均值→X%→Y% 概率变化，一句完成 | 与变体15 的区别——1-SD 概率变化 vs 25th→75th 处理效应衰减 % | 待交叉 | Malik et al. 2025 JM |
+| 15 | R5 调节 — 25th→75th 处理效应衰减 % | 三向 DiD 交互配套：moderator 25th→75th 时处理效应衰减 %（副槽位 R4） | 与变体7 的区别——处理效应衰减 % vs 1-SD 概率变化 | 待交叉 | Hoffmann et al. 2024 JM |
+
+### R7（3）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 4 | R7 GEE 补充回归 + Heckman 两阶段内生性纠正 | R7 补充回归+Heckman 两阶段报告，两段均保留诚实声明 | 与变体16 的区别——GEE/Heckman 结构 vs 理论 rival 两步排除 | 待交叉 | Pfarrer et al. 2010 AMJ |
+| 11 | R7 曲线关系的六威胁稳健性梯 | 曲线结果稳健性按六类威胁映射（lag/DV/估计器/测量/样本/内生性） | 与逐表罗列的区别——按威胁组织；5%→10% 降档如实报告 | 通过（单篇） | Bendig et al. 2024 ETP |
+| 16 | R7 替代解释 — CONTROL + INTERACT 两步 + need/willingness 收束 | DiD/Logit 设计区分 observable need vs latent willingness 的 rival 排除 | 与变体4 的区别——理论 rival 两步排除 vs Heckman/GEE 结构 | 待交叉 | Hoffmann et al. 2024 JM |
+
+### R8（1）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 13 | R8 曲线机制的选择性路径辨析（激活一条机制而不激活另一条） | 机制分工检验：选择只激活一条机制的对照暴露，linear 显著而平方项 null | 与泛化 additional analysis 的区别——证据对应曲线两段机制分工；措辞限 consistent with | 待交叉 | Lee & Park 2024 SMJ |
+
 ## 主骨架
 
 参见 `write-results/SKILL.md` → 槽位骨架加载 → 本类型适用的 `references/slot-R*.md`（各 slot 文件内含 `Logit-Probit-Ordered-Probit` 专用变体）。
@@ -36,6 +105,7 @@ updated: 2026-08-05
 
 ### 变体 1: R1 四合一密集开场 — 描述统计+诊断+估计器+报告惯例 (1篇高价值)
 **来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
+**原始句锚点**: "Table 1 presents descriptive statistics and a correlation matrix for the variables used in testing our hypotheses. The means and standard deviations reflect values for raw rather than transformed measures. All variance inflation factors were below five, with an average of 2.4. Thus, multicollinearity is not a concern (Chatterjee & Price, 1991; Pedhazur, 1997). … We report odds ratios to allow easier interpretation of the magnitude of effects. An odds ratio greater than one indicates the likelihood that an event will occur increases with a one-unit increase in the independent variable."
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: R1
@@ -45,6 +115,7 @@ updated: 2026-08-05
 
 ### 变体 2: R3 Logit 主效应四拍 — odds ratio + likelihood 翻译 (1篇高价值)
 **来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
+**原始句锚点**: "For positive surprises, Table 2 shows that high-reputation firms had an odds ratio of 0.48 (p < .01), which means they were less likely to generate a positive earnings surprise than firms that did not possess high reputation. However, Table 3 shows high reputation did not have a significant effect on the likelihood of negative surprises. Thus, Hypothesis 1a was supported, and Hypothesis 1b was not."
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: R3
@@ -54,6 +125,7 @@ updated: 2026-08-05
 
 ### 变体 3: R4 事件研究 CAR 分组比较 — 非参数验证+t检验替代回归交互 (1篇高价值)
 **来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
+**原始句锚点**: "Initial nonparametric tests (Patell Z and generalized sign) indicated that the market viewed positive earnings surprises favorably (p < .05) and perceived negative earnings surprises as 'bad news' (p < .05). … The CARs for the high-reputation (2.30 percent) and celebrity categories (3.32 percent) were significantly larger than the CAR for the 'none' category (1.74 percent), and the CAR for celebrity was significantly larger than the CAR for high reputation (p < .05)."
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: R4
@@ -63,6 +135,7 @@ updated: 2026-08-05
 
 ### 变体 4: R7 GEE 补充回归 + Heckman 两阶段内生性纠正 (1篇高价值)
 **来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
+**原始句锚点**: "Because our tests did not allow us to control for other factors that can affect the size of a CAR, we ran GEE regressions that predicted the magnitude of the three-day CARs while controlling for a variety of other factors (Wade et al., 2006). … Using Bascle's (2008) criteria to select the appropriate estimation approach, we employed a Heckman correction model (Hamilton & Nickerson, 2003; Heckman, 1979). We included predictor variables in the first-stage models that were significantly associated with the likelihood of positive and negative surprises, but not with the CARs. The first-stage models were highly significant in predicting the likelihood of positive and negative surprises, but the selection correction instrument was not significant when entered into the second-stage models. Thus, endogeneity did not appear to be a significant problem in our study (Bascle, 2008; Mesquita & Brush, 2008; Tong, Reuer, & Peng, 2008)."
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: R7
@@ -74,6 +147,7 @@ updated: 2026-08-05
 
 ### 变体 5: R2 Heckman 第一阶段表格 + 逆米尔斯比率进入第二阶段 (1篇高价值)
 **来源论文**: Malik, Wang, Martin & Gomez-Mejia 2025 (Journal of Management)
+**原始句锚点**: Table 2 presents the first-stage results, where the FDASIA variable exhibits a robust positive coefficient (b = 0.288, p < 0.05), confirming that FDASIA is highly relevant for predicting medical device recalls.
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: R2
@@ -83,6 +157,7 @@ updated: 2026-08-05
 
 ### 变体 6: R3 Probit 边际效应 CI 检验 — "CI does not cross zero" 作为支持标准 (1篇高价值)
 **来源论文**: Malik, Wang, Martin & Gomez-Mejia 2025 (Journal of Management)
+**原始句锚点**: The average marginal effect is visualized in Figure 1. The confidence intervals (CIs) of the marginal effects do not cross zero, thus supporting Hypothesis 1a.
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: R3
@@ -92,6 +167,7 @@ updated: 2026-08-05
 
 ### 变体 7: R5 Probit 经济显著性 — 1-SD → 概率百分点变化 (1篇高价值)
 **来源论文**: Malik, Wang, Martin & Gomez-Mejia 2025 (Journal of Management)
+**原始句锚点**: A one-standard-deviation increase in the CEO's current option wealth from the mean value (18.7 to 44.1 million USD) increased the probability of initiating an inattention recall from 23% to 25%.
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: R5
@@ -101,6 +177,7 @@ updated: 2026-08-05
 
 ### 变体 8: R3 双 DV 平行对称报告 (1篇高价值)
 **来源论文**: Malik, Wang, Martin & Gomez-Mejia 2025 (Journal of Management)
+**原始句锚点**: As Model 5 (Table 4) reports, the coefficient for CEO current option wealth was positive and significant (b = 0.012, p < 0.001). Furthermore, the coefficient for CEO prospective option wealth was negative and significant (b = −0.002, p < 0.01).
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: R3
@@ -110,6 +187,7 @@ updated: 2026-08-05
 
 ### 变体 9: R3 Binary-GEE 曲线完整检验链 — 二次项→端点斜率→Fieller 区间 (1篇高价值)
 **来源论文**: Bendig, Hensellek & Schulte (2024, Entrepreneurship Theory and Practice)
+**原始句锚点**: All requirements for inverted U-shapes are met for CVC and alliance activity; the slopes at the low ends (XL) are positive, the slopes at the high end (XH) are negative and the extreme points lie within the Fieller intervals.
 **验证状态**: VERIFIED（Bendig 2024 与经用户专家审计的 Lee & Park 2024 构成跨估计器验证）
 **写入日期**: 2026-08-04
 **槽位**: R3
@@ -122,6 +200,7 @@ updated: 2026-08-05
 
 ### 变体 10: R4/R5 条件曲线几何翻译 + 概率—成本—价值 benchmark (1篇高价值)
 **来源论文**: Bendig, Hensellek & Schulte (2024, Entrepreneurship Theory and Practice)
+**原始句锚点**: Market turbulence moderates the relationship between CVC activity and product recall likelihood such that high turbulence shifts the curve up (vertex at 67% and six CVC deals) and low turbulence shifts the curve down (vertex at 52% and eight CVC deals).
 **验证状态**: 通过（单篇高价值，待第二篇概率曲线研究交叉验证）
 **写入日期**: 2026-08-04
 **槽位**: R4 / R5
@@ -136,6 +215,7 @@ updated: 2026-08-05
 
 ### 变体 11: R7 曲线关系的六威胁稳健性梯 (1篇高价值)
 **来源论文**: Bendig, Hensellek & Schulte (2024, Entrepreneurship Theory and Practice)
+**原始句锚点**: The squared alliance term showed lower significance at the 10% level. The other results remained stable.
 **验证状态**: 通过（单篇高价值，待交叉验证）
 **写入日期**: 2026-08-04
 **槽位**: R7
@@ -148,6 +228,7 @@ updated: 2026-08-05
 
 ### 变体 12: R4 转折点位置型调节 — 条件顶点 + 直接差异检验 (1篇高价值)
 **来源论文**: Lee & Park 2024 (Strategic Management Journal)
+**原始句锚点**: Testing the difference in inverted-U curves' inflection points (e.g., H2a–c) requires computing the inflection points for a given pair of surgeon types based on coefficient estimates and examining whether the two points statistically differs (see Medappa & Srivastava, 2019).
 **验证状态**: VERIFIED（Lee & Park 2024 经用户专家审计为位置型曲线调节的典型范文；与变体 10 的一般曲线几何翻译互补）
 **写入日期**: 2026-08-04
 **槽位**: R4
@@ -158,6 +239,7 @@ updated: 2026-08-05
 
 ### 变体 13: R8 曲线机制的选择性路径辨析 — 激活一条机制而不激活另一条 (1篇高价值)
 **来源论文**: Lee & Park 2024 (Strategic Management Journal)
+**原始句锚点**: Likewise, in Model 2, the squared term of surgeon's accumulated others' failures was statistically insignificant (p = .47), whereas the single term remained positive (p = .08), in line with our prediction.
 **验证状态**: EMERGING（单篇机制辨析写法）
 **写入日期**: 2026-08-04
 **槽位**: R8
@@ -168,6 +250,7 @@ updated: 2026-08-05
 
 ### 变体 14: R3 DiD+Logit 主效应 — OR→相对概率 + 低基准诚实 + stakes（2026-08-05）
 **来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (Journal of Marketing)
+**原始句锚点**: While the reduction in recall probability associated with the adoption of UD laws is sizeable in relative terms, the absolute change in probability is more modest given the low average base probability of any firm experiencing a product recall during the sample period (1.64%; see Table 3).
 **验证状态**: EMERGING（单篇；2026-08-05 重蒸馏校准）
 **story_fidelity**: `section_variant` / climax
 **槽位**: R3
@@ -178,6 +261,7 @@ updated: 2026-08-05
 
 ### 变体 15: R5 调节 — 25th→75th 处理效应衰减 %（2026-08-05）
 **来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (Journal of Marketing)
+**原始句锚点**: Moving from less to more customer-focused firms in this way reduces the impact of UD law adoption on product recall likelihood by 10.56%.
 **验证状态**: EMERGING（单篇）
 **槽位**: R5（嵌入 R4 调节段）
 **骨架**:
@@ -187,6 +271,7 @@ updated: 2026-08-05
 
 ### 变体 16: R7 替代解释 — CONTROL + INTERACT 两步 + need/willingness 收束（2026-08-05）
 **来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (Journal of Marketing)
+**原始句锚点**: That is, it is unlikely that the documented effect of the reduced threat of managers being sued by shareholders on firms' likelihood to recall is an artefact of a lower need for recalls instead of reflecting a lower willingness of managers to recall.
 **验证状态**: EMERGING（单篇）
 **槽位**: R7
 **骨架**:
@@ -196,6 +281,7 @@ updated: 2026-08-05
 
 ### 变体 17: R3 双焦点 IV 平行倒 U — 分模型→联合模型→并列表 U-test（2026-08-05 gap audit）
 **来源论文**: Bendig, Hensellek & Schulte (2024, Entrepreneurship Theory and Practice)
+**原始句锚点**: Hypothesis 1 predicts an inverted U-shaped relationship between CVC activity and recall likelihood. We found a significant negative relationship between the squared CVC activity and product recall likelihood (Model 2: β = −.021, p < .05) which indicates the inverted U-shape relationship.
 **验证状态**: EMERGING（单篇；gap audit 补缺口）
 **story_fidelity**: `section_variant` / climax
 **槽位**: R3
@@ -206,6 +292,7 @@ updated: 2026-08-05
 
 ### 变体 18: R4 同调节双模式几何对比 — shift vs steepen 分图裁决（2026-08-05 gap audit）
 **来源论文**: Bendig, Hensellek & Schulte (2024, Entrepreneurship Theory and Practice)
+**原始句锚点**: We find that both relationships are moderated by market turbulence such that the inverted U-shapes will shift up (for CVC) and steepen (for alliances) if firms operate under high market turbulence.
 **验证状态**: EMERGING（单篇；gap audit 补缺口）
 **story_fidelity**: `section_variant` / climax（条件化）
 **槽位**: R4（可嵌入 R5 双成本 benchmark）

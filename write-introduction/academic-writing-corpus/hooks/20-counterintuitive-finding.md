@@ -53,6 +53,9 @@ Most research on [topic] has focused on situations where [dominant direction —
 
 **来源**: paruchuri_pollock_kumar2020 (SMJ), P1–P2
 
+**原文锚定**:
+> "Further, most research on reputation spillovers has focused on situations where a focal firm's negative action has negative spillover effects. We are aware of only one study where the valence of the spillover is different than the valence of the action—that is, where a negative action has a positive spillover effect on others."
+
 **关键特征**:
 - "Most research..." 建立 dominant valence 的真实性
 - "We are aware of only one study..." 承认稀有的例外（学术诚实）

@@ -43,6 +43,9 @@ Because both [A] and [B] provide benefits that aid in developing the other, we e
 As this expectation is unsurprising, we do not present a formal hypothesis, but it forms our baseline assumption.
 ```
 
+**原文锚点** (Pollock et al. 2015, ASQ "Untangled"):
+> "Research has established that status and reputation are positively correlated. High reputation based on strong performance can increase access to elite social circles while high status can provide greater access to the information, opportunities, and resources that can enhance reputation." ... "Because both reputation and status provide benefits that aid in developing the other construct, we expect them to have a positive relationship as they coevolve. As this expectation is unsurprising, we do not present a formal hypothesis, but it does form our baseline assumption."
+
 ### 生命周期不对称（H1a/H1b）
 
 ```
@@ -58,6 +61,9 @@ Therefore, in later life stages [B] should have a greater effect on [A]:
 H1b: When firms are older, [B] has a greater effect on [A] than [A] has on [B].
 ```
 
+**原文锚点** (Pollock et al. 2015, ASQ "Untangled"):
+> "During its early years a firm has little standing in its industry's social hierarchy, and what status it has is largely the result of the founder's personal status." ... "Thus we expect that reputation will have a greater influence on status than status has on reputation during the early years of a VC firm's life, when both are more malleable." ... "As such, we expect that as firms mature, status will have a greater influence on reputation than reputation will have on status."
+
 ### 路径依赖的时间衰减（H2）
 
 ```
@@ -66,6 +72,9 @@ Initial conditions strongly influence [B] when firms are young and their [B] pos
 In contrast, [A] must be continually reinforced and therefore remains susceptible to changes in prior [A]; its path dependence should not weaken with age ([citations]).
 H2: The effect of prior [B] on current [B] weakens as firms age, but the effect of prior [A] on current [A] is unaffected by age.
 ```
+
+**原文锚点** (Pollock et al. 2015, ASQ "Untangled"):
+> "Research has shown that initial conditions influence subsequent status when firms are young and their position in the status order is being established, that status becomes more stable and tends toward equilibrium over time, and that reputation is dynamic and needs to be continually reinforced." ... "Because reputation needs to be continually reinforced, it is always susceptible to changes in prior reputation; thus the effect of changes in prior reputation on current reputation will not weaken as the VC firm ages."
 
 ### 大事件可见性效应（H3a/H3b）
 
@@ -80,6 +89,9 @@ H3a: When firms are young, blockbuster events positively affect both [A] and [B]
 H3b: When firms are older, blockbuster events positively affect [A] but not [B].
 ```
 
+**原文锚点** (Pollock et al. 2015, ASQ "Untangled"):
+> "Research on path dependence shows that significant events can change organizations' life trajectories." ... "Thus when firms are young and unknown, we expect blockbuster deals will enhance their status because they bring the firms to the attention of high-status VCs. But as a VC firm ages and its position in the status order stabilizes, the visibility and attention are less likely to affect its status."
+
 ### 先验期望违背型水平调节（H4）
 
 ```
@@ -89,6 +101,9 @@ Thus the lower observers' prior expectations of a blockbuster event, the bigger 
 High-[A]/high-[B] actors are already expected to participate in blockbuster events, so the incremental benefit is smaller; low-[A]/low-[B] actors gain more because the event violates expectations.
 H4: The positive effect of blockbuster events on current [A] and [B] is stronger when prior [A] and [B] are low than when they are high.
 ```
+
+**原文锚点** (Pollock et al. 2015, ASQ "Untangled"):
+> "Blockbuster deals provide valuable signals only if they provide new information, and information disconfirming prior beliefs is more salient and likely to be noticed than information confirming expectations. Thus the lower the expectation that a VC will be involved in a blockbuster deal, the bigger the surprise and the greater the effect on reputation and status participating in a blockbuster deal is likely to have."
 
 ---
 
@@ -102,6 +117,9 @@ influence, while enhancing [Construct B]'s effect. This asymmetric pattern arise
 because [underlying logic differentiating the two constructs]."
 ```
 
+**原文锚点** (Han, Pollock & Paruchuri 2024, SMJ "Public enemies?"; reputation vs celebrity 的对称反向调节):
+> "We argue that objective severity, reflected in the misconduct's magnitude, influences reputation's effect by creating a bigger expectancy violation for high-reputation firms than for lower-reputation firms." ... "We argue that availability cascades weaken high reputation's influence on misconduct scandalization because the perceived severity dominates assessments of the misconduct's newsworthiness. In contrast, availability cascades complement celebrity's effect on scandalization."
+
 **三向交互**：
 ```
 "We argue that the interaction between [IV] and [Moderator 1] will be further 
@@ -111,12 +129,18 @@ is [high/low]. This three-way interaction captures [theoretical insight beyond
 two-way interaction]."
 ```
 
+**原文锚点** (Paruchuri, Pollock & Kumar 2020, SMJ "On the tip of the brain"; 双条件互锁的三向推演):
+> "Thus, for a negative event such as a capability failure to affect others' reputations, both the event and the firms affected have to be cognitively available and easily recalled together in order for the event to influence perceptions of the other firms." ... "Hypothesis 2. Given category members' high associability, the lower the salience of the differentiation-based capability failure the weaker the positive reputation spillover."
+
 **层次递进**：
 ```
 "Having established that [baseline effect], we now consider when this effect is 
 more versus less pronounced. Not all [actors/contexts] will experience [the effect] 
 equally, because [moderator logic]."
 ```
+
+**原文锚点** (Han, Pollock & Paruchuri 2024, SMJ "Public enemies?"):
+> "This leads to our baseline expectation that both reputation and celebrity enhance misconduct scandalization's likelihood." ... "However, we further argue that differences in reputation and celebrity's sociocognitive content lead them to vary in when and why they attract attention and are newsworthy, resulting in different effects on the extent to which the media scandalizes a firm's misconduct."
 
 ---
 
@@ -128,6 +152,9 @@ equally, because [moderator logic]."
 | 调节效应 | "H2. The relationship between [IV] and [DV] is moderated by [Z], such that the [positive/negative] effect of [IV] on [DV] is [stronger/weaker] when [Z] is [high/present]." |
 | 三向交互 | "H3. The moderating effect of [Z] on the [IV]→[DV] relationship is further moderated by [W], such that [Z]'s [enhancing/buffering] effect becomes [stronger/weaker] when [W] is [high]." |
 | 条件效应（双假设） | "H2a: When [condition A], [effect A]. H2b: When [condition B], [effect B]." |
+
+**原文锚点** (Han, Pollock & Paruchuri 2024, SMJ "Public enemies?"; 调节效应假设的原文格式):
+> "Hypothesis 1. The positive relationship between high reputation and misconduct scandalization strengthens as objective misconduct severity increases." ... "Hypothesis 4. The positive relationship between celebrity and misconduct scandalization strengthens as perceived misconduct severity increases."
 
 ---
 
@@ -175,6 +202,9 @@ H1a: [negative change] is [direction] associated with [overall action / mode A].
 H1b: [positive change] is [direction] associated with [overall action / mode B].
 H2a/H2b: These associations are [stronger/weaker] when [state level] is [condition], because [boundary mechanism].
 ```
+
+**原文锚点** (Vidal & Mitchell 2015, *Organization Science* "Adding by Subtracting"):
+> "A negative performance gap occurs when a firm's performance is lower than that of relevant aspiration levels; in parallel, a positive performance gap occurs when a firm's performance exceeds an aspiration level." ... "We expect firms with increasing performance to be more likely to pursue partial divestitures, given the differences in pressures that they face, whereas firms with declining performance will tend toward full divestitures."
 
 **关键约束**:
 - 负/正两端必须各有独立 why-chain，不能只在第二分支套用“相反地”。

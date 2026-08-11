@@ -248,6 +248,9 @@ contingencies that matter for Group B]."
 "Taken together, [incentive] is enhanced at low to medium levels of [IV], while [cost] is reduced at medium to high levels of [IV]. Thus, at both sides of the inverted U-shape, the effect of [IV] on [DV] is enlarged by [moderator]. The slope is likely to be steeper, and the peak higher."
 ```
 
+**原文锚点** (Cui, Yang & Vertinsky, SMJ "Attacking your partners: Strategic alliances and competition between partners in product markets"):
+> "Hypothesis 2 (H2) Repeated alliance ties between a firm and its partner negatively moderate the relationship between relative exploration and the firm's competition against this partner in the product market, such that the inverted U-shape is flattened when the number of repeated alliance ties is higher." ... "Hypothesis 3 (H3) A firm's relative centrality vis-à-vis its partner positively moderates the relationship between relative exploration and the firm's competition against this partner in the product market, such that the inverted U-shape is steepened when the firm's relative centrality is higher."
+
 **语料锚定**:
 - Cui, Yang & Vertinsky (SMJ) — H2/H3/H4 每个 moderator 段末尾的 Taken together 收束。
 

@@ -1,12 +1,7 @@
 ---
 name: distill-theory-exemplar
-description: |
-  Theory & Hypotheses 范文蒸馏 meta-skill。输入单篇或批量论文的 Theory 文本，输出结构化提炼报告：理论构建类型识别、功能模块拆解、why-chain 模式、构念关系组织方式、模块级表达骨架，并将跨论文证据反馈为 write-theory 的语料缺口或技能设计缺陷。
-  从已发表论文的 Theory 中提炼可复用骨架：理论构建类型识别、功能模块拆解、why-chain 模式、构念关系组织方式、模块级表达骨架。不验证用户写作——Theory 写作 QC 请使用 `/theory-review`。
-  核心原则：Theory 内容高度非标准化（因研究问题而异），但功能框架和推理结构是标准化的。提炼 HOW they explain why, not WHAT they explain。不复制具体机制内容，只提取可跨论文复现的理论论证组织方式和 why-chain 结构。
-  触发词：「蒸馏 theory」「理论范文分析」「拆解 theory」「提取 theory 模板」「处理新论文 theory」「theory 骨架提炼」「why chain 提炼」。
-  **消歧**：用户未指定 section（只说"分析这篇论文""蒸馏一下"）时，先询问蒸馏哪个 section（Introduction/Theory/Methods/Results），不默认本 skill。
-  **反向边界**：Theory 写作用 `write-theory`；审查已有 Theory 草稿用 `theory-review`；全稿 QC 用 `pollock-qc`。本 skill 只蒸馏范文，不生成写作、不做 QC。
+description: >-
+  Theory & Hypotheses 范文蒸馏 meta-skill——输入单篇或批量论文的 Theory 文本，输出结构化提炼报告（理论构建类型识别、功能模块拆解、why-chain 模式、构念关系组织方式），并将跨论文证据反馈为 write-theory 的语料缺口或技能设计缺陷。Use when 蒸馏 theory 范文——提炼 HOW they explain why, not WHAT they explain。Not for: Theory 写作（→ write-theory）；草稿审查（→ theory-review）；全稿 QC（→ pollock-qc）。
 ---
 
 # Distill Theory Exemplar
@@ -14,6 +9,8 @@ description: |
 Distill the architecture and reasoning of a published Theory section into reusable patterns without copying its substantive claims.
 
 ## Workflow
+
+先确认请求性质：范文蒸馏走本 skill；草稿审查 → `theory-review`；用户只说"分析/蒸馏这篇论文"未指定 section 时，先询问蒸馏哪个 section（Introduction/Theory/Methods/Results），不默认本 skill。
 
 1. Read `references/intake-and-classification.md`; identify theory-building type, hypothesis structure, evidence boundaries, and story-fidelity classification. For Incommensurability, also read `../write-theory/references/incommensurability-resolution-routes.md` and produce its L0–L3 full-text profile before extracting hypothesis skeletons.
 2. Load only the phase required:
@@ -27,6 +24,29 @@ Distill the architecture and reasoning of a published Theory section into reusab
 5. Treat single-paper patterns as candidates, not stable corpus rules. A useful single-paper pattern may be retained only as a hidden `reference_exemplar`; it cannot enter a default generative menu. For Incommensurability, use R1–R4 to compare reasoning, not to impose model form: L2 architectures remain optional and L3 model signatures never enter core routing. Default actions are NONE → REUSE → EXTEND_SOURCE → ADD_REFERENCE → PROPOSE_VARIANT. `PROPOSE_VARIANT` requires an explicit explanation of the transferable capability lost if merged into its nearest neighbor.
 6. In Phase 4, load `references/design-feedback-loop.md`, compare observed practice with current write-theory rules, and always emit `skill_design_feedback`（无缺陷时 `observations: []`）. Persist candidates with `_update_design_feedback.py`.
 7. Emit `governance_plan` using `protocols/governance_plan_schema.md`; do not edit `write-theory/corpus/` directly. Apply a plan only through `../write-theory/scripts/theory_corpus_governance.py`, always dry-run first. Apply bounded core corrections only when the evidence, authorization, risk, and dual-regression gates pass; schema/stage-gate/high-risk changes always require explicit review.
+
+**完成判据**：①请求性质已确认（蒸馏 vs 审查；section 已消歧）；②理论构建类型 + 假设结构 + story-fidelity 分类已输出（Incommensurability 时含 L0–L3 profile、route confidence 与 distinguishing prediction）；③所用 phase 输出件按请求深度齐全（module map / why-chains / DNA / QC）；④每个写入变体/句式附带原文锚点字段；⑤`skill_design_feedback` 必发（无缺陷时 `observations: []`）并已持久化；⑥自动写回仅限 reference 级变体与有界低风险 core 修正。
+
+## 选材 Gate（轻量版：读 routing 表与验证状态）
+
+蒸馏选材时，读 `write-theory/corpus/meta/routing_table.md`（Gap × 贡献杠杆 → 首选变体）与目标变体文件的验证状态做三带判定：
+
+| 带 | 判定条件 | 处理 |
+|----|---------|------|
+| **gap** | routing 表/语料中无对应理论构建变体 | **HIGH**：ADD 候选，优先深读 |
+| **薄弱** | 目标变体单篇来源/EMERGING/「待第二篇交叉验证」 | **HIGH**：EXTEND/REPLACE 候选 |
+| **quiet** | 目标变体多篇验证 | MEDIUM：正常蒸馏（除非论文带来明确新维度） |
+
+批量模式按带排序优先处理 HIGH 档。单篇论文（用户明确指定）不拒绝，但输出带判定。
+
+## 原文锚点提取规则（语料锚点层）
+
+每个待写入变体/句式模板必须附带 `**原文锚点**` 字段——来源论文 1-2 句 verbatim 原句（15-50 tokens），风格参照用：
+
+- **选句标准**：最能代表该变体论证手法的句子（如构念辨析的定义区分句、机制链的推导句、调节的交互预期句、辩证对立的整合 resolution 句）
+- **提取来源**：优先本次蒸馏论文原文；缺失时按知识库检索（mvp30 / Clippings / 论文导入 / 写作指导 四源，见 `corpus/variants/` 既有锚点格式）
+- **检索不到原文**：锚点标"待补"，不阻塞写入
+- **边界**：锚点是风格参照不是复制源——不得保留专有名词/数字；citation 链接还原为纯文本；OCR 污染句优先选无污染句
 
 ## Output contract
 

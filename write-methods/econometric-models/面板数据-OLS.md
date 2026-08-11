@@ -18,12 +18,112 @@ source_papers:
   - "schumacher_keck_tang_2020_smj (Strategic Management Journal): nonoverlapping construct-formation/outcome windows + media/option dual-proxy convergence"
   - "liu_shankar2015 (Management Science): recall severity theory-based classification, media relevancy-score threshold, parent-brand vs nameplate advertising split, monthly recall aggregation"
   - "Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ (Strategic Management Journal): categorical lone-insider board as change-in-kind vs continuous independence"
-variants_count: 32
+  - "desjardine_li_shi_2025_amj (Academy of Management Journal): single-intermediary setting defense (a/b/c + single-agency consistency), multi-source list + coverage-bound sample window, letter-grade DV boundary-distance operationalization, composite-construct stepwise construction + threshold defense + feasibility argument, rival mirror control convention, theory-estimator alignment + no-lag defense (Bellemare)"
+variants_count: 38
 created: 2026-05-18
-updated: 2026-08-05
+updated: 2026-08-09
 ---
 
 # 面板数据-OLS — Methods 骨架
+
+## 变体速查表
+
+> 检索辅助。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架与诚实边界见下方变体正文。
+
+| 槽位 | 变体数 | 变体编号 |
+|---|---|---|
+| M1 | 3 | 15, 23, 33 |
+| M2 | 10 | 2, 6, 9, 11, 12, 16, 26, 27, 31, 34 |
+| M2.5 | 1 | 20 |
+| M3 | 3 | 17, 25, 35 |
+| M4 | 7 | 3, 19, 24, 29, 30, 32, 36 |
+| M5 | 3 | 4, 5, 28 |
+| M6 | 3 | 1, 14, 37 |
+| M7 | 7 | 7, 10, 13, 18, 21, 22, 38 |
+| M8 | 1 | 8 |
+
+### M1（2）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 15 | 单行业设置 — 双重现象共存辩护 | 单行业样本一句式情境正当化：两个理论前提现象同时存在 | — | 通过（单篇） | Cui, Yang & Vertinsky SMJ |
+| 23 | 行业统计 + 先例对齐的设置辩护 | 单行业事件研究：行业统计证互依 + "大事件"抽样标准 + 先例对齐 | 区别于变体9（制度断点）与变体15（双重现象）：行业统计+抽样阈值+先例对齐 | 通过（单篇） | Pupovac et al. 2026 POM |
+| 33 | 单一中介机构设置辩护 | 以单个评级/平台/审核机构为情境：a/b/c 三理由+单一机构一致性 | 区别于变体15（双重现象）与变体23（行业统计）：中介机构选择+方法差异消解 | 待交叉 | DesJardine, Li & Shi 2025 AMJ |
+
+### M2（10）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 2 | 样本交集漏斗 | 多库合并后报告起始N到最终N的逐层排除审计 | — | 通过（3/4 复现） | Darby2026/2025/2023 |
+| 6 | 多通道精英/关键行为人招募 | 难以接触的研究对象（高管/董事/精英决策者）多通道招募 | — | 待交叉 | Mannor et al. 2016 SMJ |
+| 9 | 制度断点样本辩护 | 单行业面板：制度事件定起始、数据可得定终止、单行业理论理由 | 区别于变体15（M1 设置辩护）：M2 样本边界三重正当性 | 待交叉 | Desai 2011 AMJ |
+| 11 | 匹配样本层次回退 + 匹配平衡保守检验 | 匹配质量与样本量存在 trade-off 的匹配样本设计 | — | 待交叉 | Pfarrer et al. 2010 AMJ |
+| 12 | 单行业面板 + SIC 边界意识 + 限制样本稳健性 | 单行业样本受少数非核心行业企业驱动的担忧 | 区别于变体9（制度断点定边界）：行业分类模糊性+限制样本稳健性 | 待交叉 | Darby et al. 2026 JOM |
+| 16 | 多源 alliance 数据库合并与交叉验证 | 多数据库互补合并，防重复计数、防 announced-but-not-realized | 在变体2（交集漏斗）基础上扩展为完整段落：多源互补+人工 due diligence | 通过（单篇） | Cui, Yang & Vertinsky SMJ |
+| 26 | 跨库手工匹配（无共同标识符）+ 多源漏斗 | 两核心库无共同标识符（如 ACSI↔Compustat）须手工匹配 | 区别于变体16（自动交叉验证）与变体2（逐步交集）：手工匹配明示+五库漏斗 | 通过（单篇） | Malshe & Agarwal 2015 JM |
+| 27 | 构念形成窗—结果观察窗分离 + 双代理收敛 | 稳定特质代理可能被同期结果反向污染（副槽位 M4、M8） | 区别于变体19（同期/滞后期权 moneyness）：完整形成期与观察期切开+双代理三角化 | 通过（单篇） | Schumacher, Keck & Tang 2020 SMJ |
+| 31 | 异频数据时间对齐 — 事件聚合至结果频率 | event-day vs 月 vs 年三频数据对齐（副槽位 M4） | 区别于变体2/26（强调多库交集N）：解决频率对齐 | 待交叉 | Liu & Shankar 2015 MS |
+| 34 | 多源清单 + 覆盖边界定样本窗 | 多库枚举后直接交集，数据库覆盖边界定起始/终止 | 区别于变体9（制度事件定起始）：数据覆盖驱动双边界 | 待交叉 | DesJardine, Li & Shi 2025 AMJ |
+
+### M2.5（1）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 20 | Model-Free Evidence 预览 | 正式回归前以 quartile 均值/中位数展示无条件关系 | — | 通过（单篇） | Chung, Low & Rust 2022 JAMS |
+
+### M3（2）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 17 | 多维行为指标 → factor score → 平均值 | 多维行为 DV：子维度理论含义+信度+合成方式 | — | 通过（单篇） | Cui, Yang & Vertinsky SMJ |
+| 25 | DV 文献基准锚定 — 均值与前人文献对比 | 新构建比率/计数 DV 的外部效度锚定 | 语料内首见 DV 外部效度锚定（现有变体无） | 通过（单篇） | Du & Tsolmon 2024 ORSC |
+| 35 | 离散化等级 DV 边界距离操作化 | letter-grade DV：边界距离变量+边际影响预检验 | 区别于变体17（factor score）与变体25（文献锚定）：边界聚集+边际影响声明 | 待交叉 | DesJardine, Li & Shi 2025 AMJ |
+
+### M4（7）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 3 | IV 选择三层 because 论证链 | 单一操作化同时代理多个理论机制的 IV 辩护 | — | 可选 | Darby2023 MSOM |
+| 19 | 高管信心期权 moneyness 操作化 | 高管自信构念操作化（公式+滞后+因果优先） | — | 通过（单篇） | Chung, Low & Rust 2022 JAMS |
+| 24 | 法律强制披露阈值 → 自愿披露操作化 | 法律-会计准则张力转化为构念变异空间 | — | 通过（单篇） | Pupovac et al. 2026 POM |
+| 29 | 召回严重度理论分类 — 后果类型二元操作化 | 监管后果描述→心理学可辩护的二元 severity | — | 待交叉 | Liu & Shankar 2015 MS |
+| 30 | 媒体覆盖 — 双索引相关度阈值 + 互补数据源 | 媒体计数需 face-validity 链：双索引阈值+双源互补 | 区别于 generic media count：强制双索引 relevancy 阈值+排除逻辑 | 待交叉 | Liu & Shankar 2015 MS |
+| 32 | 结构二元特征操作化为「kind」而非「degree」 | 治理/组织极端结构二元化（lone-insider 董事会等） | 区别于现有 M4 变体（连续构念/阈值披露/双代理收敛）：kind≠degree 辩护+稳健性预告 | 通过（单篇） | Zorn et al. 2017 SMJ |
+| 36 | 复合测量构念分步构建 | 乘积/交集型复合 IV：阈值辩护+可行性论证+分步计算 | 区别于变体3（三层 because 机制代理）与变体19（moneyness）：双持有侧乘积+可行性 | 待交叉 | DesJardine, Li & Shi 2025 AMJ |
+
+### M5（3）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 4 | Mixed-effects within/between 机制分解 | 面板中区分个体内变化 vs 个体间差异的机制检验 | — | 可选 | Darby2023 MSOM |
+| 5 | 替代变量机制对齐矩阵 | 一个构念→多个可分离机制的三角验证（配合机制对齐图） | 区别于变体4（within/between 分解）：主变量+替代变量×机制映射矩阵 | 可选 | Darby2023 MSOM |
+| 28 | Binary-panel GEE + 全零单元保留 + 正式曲线识别链 | 二元面板大量全零单元 + U/倒U假设（副槽位 M7、M8） | 区别于变体22（时不变 IV 选 GEE）：保留全零单元为首要理由+曲线四事前约束 | 通过（单篇） | Bendig et al. 2024 ETP |
+
+### M6（2）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 1 | 控制变量分层 because 结构 | 控制变量的黄金标准：按层级递进+每变量显式 because | — | 通过（4/4 复现） | Darby2026/2025/2023 + Eilert2017 |
+| 14 | 全谱系控制变量 — 高 because 密度 + 事件控制 + CEO 人格 | 文本构念+市场反应交叉领域、多种混淆来源并存 | 在变体1（分层 because）基础上三升级：RavenPack 事件控制+Big5 人格+互补DV维度 | 待交叉 | Li et al. 2026 JOM |
+| 37 | rival 镜像控制变量惯例 | 对手侧镜像控制：引用前例+命名规则+聚合方式一句完成 | 区别于变体1（分层 because）与变体14（全谱系）：跨主体镜像控制 | 待交叉 | DesJardine, Li & Shi 2025 AMJ |
+
+### M7（7）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 7 | 嵌套横截面数据的聚类稳健标准误 | 数据嵌套（决策嵌于高管）但不足以跑多层模型 | — | 待交叉 | Mannor et al. 2016 SMJ |
+| 10 | Hausman 检验 — FE vs RE 选择 | 标准 FE/RE 选择三步段 | 与变体13 互补（其处理 theory→RE 路径） | 待交叉 | Bamberger et al. 2021 JM |
+| 13 | 随机效应选择三重辩护 — 理论+Hausman+ICC | 理论指向 RE（关注跨单元差异）时的系统辩护 | 区别于变体10（标准 Hausman→FE）：理论理由+Hausman+ICC 三层递进 | 待交叉 | Li et al. 2026 JOM |
+| 18 | dyad fixed effects + dyad 聚类标准误 | dyad 面板 + 需具体时不变混淆源举例 | 与变体7（嵌套横截面聚类）互补：dyad FE+混淆源实例化 | 通过（单篇） | Cui, Yang & Vertinsky SMJ |
+| 21 | 三向交互模型设定 | X×W1×W2 设计：完整方程+mean-centering+聚类SE | — | 通过（单篇） | Chung, Low & Rust 2022 JAMS |
+| 22 | GEE + AR(1) working correlation — 时不变焦点 IV | 焦点 IV 时不变（意识形态/人格/创始人身份等），firm FE 会吸收主效应 | 区别于变体10/13（Hausman/ICC 选 FE/RE）：按 IV 时不变性选 GEE | 通过（单篇） | Abdurakhmonov et al. 2026 JOM |
+| 38 | 理论-估计量对齐 + 不滞后辩护 | between-unit 理论 → pooled OLS 显式对齐；当前期机制 → 不滞后（Bellemare） | 区别于变体10/13（Hausman/ICC）：理论对齐+不滞后反向论证 | 待交叉 | DesJardine, Li & Shi 2025 AMJ |
+
+### M8（1）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 8 | 回顾性偏差三角检验 | 依赖事后自我报告的数据：控制情感变量+定性定量一致性+替代测量复制 | — | 待交叉 | Mannor et al. 2016 SMJ |
 
 ## 主骨架
 
@@ -40,6 +140,7 @@ updated: 2026-08-05
 
 ### 变体 1: 控制变量分层 because 结构 (4/4 复现)
 **来源论文**: Darby2026 JOM / Darby2025 JSCM / Eilert2017 JM / Darby2023 MSOM
+**原始句锚点**: We included a broad set of control variables that influence recalls directly and those that help address alternative explanations (Shang and Rönkkö 2022); in our case, variables correlated with ownership by large institutional investors that may also influence the time-to-recall.
 **验证状态**: 通过
 **写入日期**: 2026-05-19
 **更新日期**: 2026-05-20 (新增 Darby2023 MSOM 复现)
@@ -56,6 +157,7 @@ updated: 2026-08-05
 
 ### 变体 2: 样本交集漏斗 (3/4 复现)
 **来源论文**: Darby2026 JOM / Darby2025 JSCM / Darby2023 MSOM
+**原始句锚点**: The intersection of these datasets resulted in a sample of 2982 high severity recalls across 69 publicly traded firms from 2002 to 2020.
 **验证状态**: 通过
 **写入日期**: 2026-05-19
 **更新日期**: 2026-05-20 (新增 Darby2023 MSOM 复现)
@@ -67,6 +169,7 @@ updated: 2026-08-05
 
 ### 变体 3: IV 选择三层 because 论证链
 **来源论文**: Darby2023 MSOM
+**原始句锚点**: We used CEO Ownership as our primary measure because it is a broad, comprehensive measure that reflects the three related, but distinct, mechanisms we theorized about in Hypothesis 1—firm financial interests, CEO power, and CEO financial interests.
 **验证状态**: 可选变体 (1/4，但生成力极高)
 **写入日期**: 2026-05-20
 **槽位**: M4
@@ -76,6 +179,7 @@ updated: 2026-08-05
 
 ### 变体 4: Mixed-effects within/between 机制分解
 **来源论文**: Darby2023 MSOM
+**原始句锚点**: The results suggest that the effect of CEO stock ownership is driven by the within-component rather than the between-component. That is, it is not the difference in CEO stock ownership between firms, but, rather, a relative increase in stock ownership for a given CEO within the same firm that explains recall delays.
 **验证状态**: 可选变体 (1/4，机制检验设计特有)
 **写入日期**: 2026-05-20
 **槽位**: M5
@@ -85,6 +189,7 @@ updated: 2026-08-05
 
 ### 变体 5: 替代变量机制对齐矩阵
 **来源论文**: Darby2023 MSOM
+**原始句锚点**: To probe these three mechanisms at a more granular level, we replicated our recurrent-event AFT analyses using two alternative measures of CEO stock ownership—specifically, CEO Equity-Based Compensation and CEO Ownership (Monetary).
 **验证状态**: 可选变体 (1/4，需配合 Figure 1 机制对齐图使用)
 **写入日期**: 2026-05-20
 **槽位**: M5
@@ -94,6 +199,7 @@ updated: 2026-08-05
 
 ### 变体 6: M2 多通道精英/关键行为人招募 (1篇高价值)
 **来源论文**: Mannor, Wowak, Bartkus & Gomez-Mejia 2016 (Strategic Management Journal)
+**原始句锚点**: Recognizing the challenge of the last criterion in particular, we used four methods to recruit participants. First, several key advocates for our research served on the boards of Fortune 500 companies and agreed to contact as many of their director colleagues as possible on our behalf.
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: M2
@@ -103,6 +209,7 @@ updated: 2026-08-05
 
 ### 变体 7: M7 嵌套横截面数据的聚类稳健标准误 (1篇高价值)
 **来源论文**: Mannor, Wowak, Bartkus & Gomez-Mejia 2016 (Strategic Management Journal)
+**原始句锚点**: To account for the nonindependence in our data (i.e., the multiple strategic decisions per executive), we specified Huber/White/sandwich standard errors using the “robust” option in Stata 12. Decisions were clustered by executive.
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: M7
@@ -112,6 +219,7 @@ updated: 2026-08-05
 
 ### 变体 8: M8 回顾性偏差三角检验 (1篇高价值)
 **来源论文**: Mannor, Wowak, Bartkus & Gomez-Mejia 2016 (Strategic Management Journal)
+**原始句锚点**: We thus took steps to ensure that the lengthier time horizon for some of the decisions did not introduce retrospective bias into our study. First, and as we discuss later, we controlled for executives' self-ratings of decision quality and recent performance in all models.
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: M8
@@ -121,6 +229,7 @@ updated: 2026-08-05
 
 ### 变体 9: M2 制度断点样本辩护 — 行业收缩+时间边界双重正当性 (1篇高价值)
 **来源论文**: Desai 2011 (Academy of Management Journal)
+**原始句锚点**: I tested these hypotheses on a panel of all U.S. class I railroad firms operating between 1980 and 2003. The U.S. railroad industry was deregulated in 1980, making prior years incomparable with later ones (Smith & Grimm, 1987).
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: M2
@@ -130,6 +239,7 @@ updated: 2026-08-05
 
 ### 变体 10: M7 Hausman 检验 — FE vs RE 选择 (1篇高价值)
 **来源论文**: Bamberger, Homburg & Wielgos 2021 (Journal of Marketing)
+**原始句锚点**: Our choice for a fixed-effects model over a mixed-effects model is appropriate, as the Hausman (1978) test indicates (χ2/d.f. = 24.6, p <.01).
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: M7
@@ -139,6 +249,7 @@ updated: 2026-08-05
 
 ### 变体 11: M2 匹配样本层次回退 + 匹配平衡保守检验 (1篇高价值)
 **来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
+**原始句锚点**: "We then matched each high-reputation firm with three firms from the same four-digit SIC code that were similar in assets, revenues, and return on assets (ROA) (Combs & Skill, 2003; Porac, Wade, & Pollock, 1999). Where appropriate matches were not found at the four-digit level, we looked at three-digit and two-digit SIC codes for similar firms (Combs & Skill, 2003). … A t-test comparing differences in firm size (total assets) revealed no significant differences between the 80 high-reputation and 211 matched companies (t = −0.35, n.s.); however, in keeping with the predictions of prior reputation research (Roberts & Dowling, 2002), there were significant differences in revenues and ROA ($35.1 vs. $16.8 billion, p < .001; and 8.97 percent vs. 4.28 percent, p < .001, respectively)."
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: M2
@@ -148,6 +259,7 @@ updated: 2026-08-05
 
 ### 变体 12: M2 单行业面板 + SIC 边界意识 + 限制样本稳健性 (1篇高价值)
 **来源论文**: Darby, Wowak, Ketchen, Connelly & Skowronski 2026 (Journal of Operations Management)
+**原始句锚点**: However, the sample was not limited to this industry because firms may be formally classified in other industries (e.g., Proctor & Gamble in SIC 284 or General Electric in SIC 999) but still produce—and potentially recall—medical devices.
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: M2
@@ -157,6 +269,7 @@ updated: 2026-08-05
 
 ### 变体 13: M7 随机效应选择三重辩护 — 理论+Hausman+ICC (1篇高价值)
 **来源论文**: Li, Chiu, Kong, Cropanzano & Ho 2026 (Journal of Management)
+**原始句锚点**: We used panel regressions with random-effects estimations, because theoretically, we were more interested in the differential effects across CEOs rather than changes within CEOs. The Hausman test (p =.169) confirmed that using the random-effects (vs. fixed-effects) method was more appropriate.
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: M7
@@ -167,6 +280,7 @@ updated: 2026-08-05
 
 ### 变体 14: M6 全谱系控制变量 — 高 because 密度 + RavenPack事件控制 + CEO人格特质 (1篇高价值)
 **来源论文**: Li, Chiu, Kong, Cropanzano & Ho 2026 (Journal of Management)
+**原始句锚点**: We controlled for several variables to account for their unique influence on investors' reactions. The control variable data were derived from the previous quarter before the focal earnings call unless otherwise indicated.
 **验证状态**: 待第二篇交叉验证
 **写入日期**: 2026-07-07
 **槽位**: M6
@@ -179,6 +293,7 @@ updated: 2026-08-05
 
 ### 变体 15: M1 单行业设置 — 双重现象共存辩护 (1篇高价值)
 **来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
+**原始句锚点**: We chose the U.S. pharmaceutical industry as an appropriate setting for examining our hypotheses because it features both extensive alliance activities and competition for new products (Lichtenberg & Philipson, 2002; Mowery et al., 1996).
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-08
 **槽位**: M1
@@ -188,6 +303,7 @@ updated: 2026-08-05
 
 ### 变体 16: M2 多源 alliance 数据库合并与交叉验证 (1篇高价值)
 **来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
+**原始句锚点**: We constructed a more comprehensive alliance database by combining these three data sources. By relying on multiple sources, we minimized the possibility of double-counting alliances and of counting alliances that were announced but not realized.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-08
 **槽位**: M2
@@ -199,6 +315,7 @@ updated: 2026-08-05
 
 ### 变体 17: M3 多维行为指标 → factor score → 平均值 (1篇高价值)
 **来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
+**原始句锚点**: We ran a factor analysis of these three items and found that all three loaded high (>0.73) on one latent factor, while the value of Cronbach's alpha is .81, which suggests that it is a reliable construct.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-08
 **槽位**: M3
@@ -208,6 +325,7 @@ updated: 2026-08-05
 
 ### 变体 18: M7 dyad fixed effects + dyad 聚类标准误 + 具体混淆源举例 (1篇高价值)
 **来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
+**原始句锚点**: For example, if unobserved heterogeneities, such as the attractiveness of partners to one another and their tendencies to compete with each other, are constant within firm–partner dyads, then there might be an endogeneity concern. A fixed-effects estimator can rule out such a possibility by eliminating time-invariant heterogeneities.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-08
 **槽位**: M7
@@ -218,6 +336,7 @@ updated: 2026-08-05
 
 ### 变体 19: M4 高管信心期权 moneyness 操作化 (1篇高价值)
 **来源论文**: Chung, Low & Rust (2022, JAMS)
+**原始句锚点**: The average moneyness is defined as the ratio of average value per option to the average strike price. The constructs are measured with a lag relative to the measurement of the dependent variable to create temporal distance and maintain causal priority.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-08
 **槽位**: M4
@@ -228,6 +347,7 @@ updated: 2026-08-05
 
 ### 变体 20: M2.5 Model-Free Evidence 预览 (1篇高价值)
 **来源论文**: Chung, Low & Rust (2022, JAMS)
+**原始句锚点**: We then calculate the mean and median MMM for the firms in each quartile. Consistent with H1, there is a monotonic increase in MMM from the first quartile where CEOs have the lowest level of confidence to the fourth quartile where CEOs are the most confident.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-08
 **槽位**: M2.5
@@ -238,6 +358,7 @@ updated: 2026-08-05
 
 ### 变体 21: M7 三向交互模型设定 (1篇高价值)
 **来源论文**: Chung, Low & Rust (2022, JAMS)
+**原始句锚点**: For ease of interpretation of the interaction coefficients, we follow the recommendations of prior literature (e.g., Irwin & McClelland, 2001) and mean-center CEO confidence, CMO confidence, Board independence, and CMO power before including them in the regressions.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-08
 **槽位**: M7
@@ -249,6 +370,7 @@ updated: 2026-08-05
 
 ### 变体 22: M7 GEE + AR(1) working correlation — 时不变焦点 IV 的估计量选择论证 (1篇高价值)
 **来源论文**: Abdurakhmonov, Ingram & Ridge (2026, JOM)
+**原始句锚点**: We follow prior CEO political ideology research by employing generalized estimating equations (GEE) with robust standard errors (Chin & Semadeni, 2017; Chin et al., 2013) because of this model's appropriateness when including time-invariant variables such as CEO liberalism (Chatterjee & Hambrick, 2007; Quigley & Hambrick, 2012).
 **验证状态**: 通过（单篇入库，待第二篇交叉验证；GEE 在 corpus 中此前无独立变体）
 **写入日期**: 2026-07-22
 **槽位**: M7
@@ -261,6 +383,7 @@ updated: 2026-08-05
 
 ### 变体 23: M1 行业统计 + 先例对齐的设置辩护 (1篇高价值)
 **来源论文**: Pupovac, Astvansh, Carrillat & Legoux 2026 (POM)
+**原始句锚点**: Measuring recalls' contagion from a manufacturer-customer to a supplier requires an empirical setting in which manufacturers and suppliers are interdependent in the product market (Cho et al., 2021). The automotive industry meets this requirement because suppliers produce 70% of an automobile, on average (McGee, 2017), suggesting high interdependence.
 **验证状态**: 通过（单篇高价值，待第二篇交叉验证）
 **写入日期**: 2026-07-21
 **槽位**: M1
@@ -273,6 +396,7 @@ updated: 2026-08-05
 
 ### 变体 24: M4 法律强制披露阈值 → 自愿披露操作化 (1篇高价值)
 **来源论文**: Pupovac, Astvansh, Carrillat & Legoux 2026 (POM)
+**原始句锚点**: U.S. law requires a publicly traded supplier to disclose in its annual report (i.e., the Form 10-K the firm files with the SEC) the sales revenue it received from each "major" customer—that is, a customer from whom the supplier received at least 10% of its total sales revenue in the focal year.
 **验证状态**: 通过（单篇高价值，待第二篇交叉验证）
 **写入日期**: 2026-07-21
 **槽位**: M4
@@ -285,6 +409,7 @@ updated: 2026-08-05
 
 ### 变体 25: M3 DV 文献基准锚定 — 均值与前人文献对比 (1篇高价值)
 **来源论文**: Du & Tsolmon 2024 (Organization Science)
+**原始句锚点**: The mean TMT retention rate in our sample is 54.8%, which is comparable to the mean retention rates found in the two empirical studies on postacquisition turnover: 55% in Hambrick and Cannella (1993), who examined 109 acquisitions from 1980 to 1984, and 59.4% in Krug and Hegarty (1997), who examined 207 acquisitions of U.S. firms by domestic and foreign acquirers from 1986 to 1988.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-25
 **槽位**: M3
@@ -295,6 +420,7 @@ updated: 2026-08-05
 
 ### 变体 26: M2 跨库手工匹配（无共同标识符）+ 多源漏斗 (1篇高价值)
 **来源论文**: Malshe & Agarwal (2015, Journal of Marketing)
+**原始句锚点**: We obtained firms' financial information on balance sheets, income statements, and cash flow statements from S&P's Compustat database. Because there is no common firm-level identifier between the ACSI and Compustat, we manually matched ACSI brands belonging to corresponding Compustat firms.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-07-30
 **槽位**: M2
@@ -305,6 +431,7 @@ updated: 2026-08-05
 
 ### 变体 27: M4 构念形成窗—结果观察窗分离 + 双代理收敛 (1篇高价值)
 **来源论文**: Schumacher, Keck & Tang (2020, Strategic Management Journal)
+**原始句锚点**: We employ two separate measures of overconfidence derived from the prior literature to test our hypotheses. This helps us to ensure that our findings are not driven by the idiosyncrasies of any specific measure of CEO overconfidence and to overcome some of the limitations that each individual measure might have.
 **验证状态**: 通过（单篇入库，待第二篇交叉验证）
 **写入日期**: 2026-08-03
 **槽位**: M2 / M4 / M8
@@ -321,6 +448,7 @@ updated: 2026-08-05
 
 ### 变体 28: M7 Binary-panel GEE + 全零单元保留 + 正式曲线识别链 (1篇高价值)
 **来源论文**: Bendig, Hensellek & Schulte (2024, Entrepreneurship Theory and Practice)
+**原始句锚点**: Second, many of our observations are zero for all years for one firm. We need to include these observations in our regression as they contain relevant venturing information.
 **验证状态**: 通过（单篇高价值；与变体22共同验证 GEE 的可迁移性，但选择理由不同）
 **写入日期**: 2026-08-04
 **槽位**: M5 / M7 / M8
@@ -344,6 +472,7 @@ updated: 2026-08-05
 ### 变体 29: M4 召回严重度理论分类 — 后果类型二元操作化 (1篇高价值)
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
+**原始句锚点**: To measure the effects of the severity of product recall, we classify two severity types based on the consequence of product failure described in the data. Severity type 1 product recalls, which increase the chance of crash or fire, involves an immediate safety concern.
 
 **验证状态**: EMERGING（单篇；与 Kashmiri 2017 severity 边界声明互补）
 
@@ -361,6 +490,7 @@ updated: 2026-08-05
 ### 变体 30: M4 媒体覆盖 — 双索引相关度阈值 + 互补数据源 (1篇高价值)
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
+**原始句锚点**: LexisNexis assigns a relevancy score for each index (e.g., product recall) of each article. We use this score to ensure the articles do indeed discuss the recall events of the firm of interest and that they are not incidental mentions.
 
 **验证状态**: EMERGING（单篇；待与 `文本构念测量` 交叉验证）
 
@@ -378,6 +508,7 @@ updated: 2026-08-05
 ### 变体 31: M2/M4 异频数据时间对齐 — 事件聚合至结果频率 (1篇高价值)
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
+**原始句锚点**: To fully utilize the monthly sales and advertising data, we aggregate the product recall data for each month and each car nameplate. Although all car characteristics and price data are annual, the advertising expenditures and product recall data are monthly.
 
 **验证状态**: EMERGING（单篇；待第二篇交叉验证）
 
@@ -393,6 +524,7 @@ updated: 2026-08-05
 ### 变体 32: M4 结构二元特征操作化为「kind」而非「degree」— 相对 majority-independence 的 discrete construct (EMERGING)
 
 **来源论文**: Zorn, Shropshire, Martin, Combs & Ketchen (2017, SMJ)
+**原始句锚点**: Our independent variable is whether the focal board of directors was a lone-insider board. To capture the most conservative specification, we coded firms as "1" if the CEO was the only inside or affiliated member on the board; other board structures were coded as "0."
 **验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
 **写入日期**: 2026-08-05
 **槽位**: M4
@@ -404,6 +536,110 @@ updated: 2026-08-05
 **适用**: 董事会 lone-insider、完全独立委员会、单一大股东、零内部人等高阶离散结构相对「比例/计数」连续操作化的研究。
 
 **跨 skill 对齐**: IV 内生采纳见 `IV-2SLS.md` 变体 12；Results kind-vs-degree 电池见 write-results `IV-2SLS.md` 变体 10。
+
+---
+
+### 变体 33: M1 单一中介机构设置辩护 — a/b/c 三理由 + 单一机构一致性 (1篇高价值)
+
+**来源论文**: DesJardine, Li & Shi (2025, AMJ)
+**原始句锚点**: We used ratings by MSCI ESG Research as our empirical context because MSCI: (a) is a publicly traded firm, which allowed us to obtain information on its institutional investors' holdings; (b) is the largest and arguably most influential ESG rating provider in the world; and (c) provides the most extensive coverage. Using a single rating agency also mitigates issues arising from divergence in the methodologies across different rating agencies.
+**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**写入日期**: 2026-08-09
+**槽位**: M1
+**骨架**:
+> We used [intermediary] as our empirical context because [intermediary]: (a) [data-accessibility property — e.g., is publicly traded, allowing us to obtain ownership/holdings data]; (b) is the [superlative position — largest / most influential] provider in the world ([citations]); and (c) provides the most extensive coverage. Using a single [intermediary] also mitigates issues arising from divergence in the methodologies across different [intermediaries] ([citations]).
+
+**与原骨架差异**: 现有 M1 变体为单行业设置（变体15 双重现象、变体23 行业统计+先例）——本变体是**单一中介机构选择辩护**（评级机构/平台/审核方作为研究情境）：a/b/c 三理由各自对应数据可得性、影响力、覆盖度，末句用单一机构一致性论证回应"为什么只研究一家"的质疑（方法差异被单机构设计消解）。适用于以某个具体中介/平台/机构为情境的研究（评级机构、平台市场、审核机构）。
+**诚实边界**: a/b/c 必须真实对应数据需求；"single [intermediary] mitigates divergence" 只有在理论机制与中介机构内部运作相关时才成立；若多个机构可用且方法差异是关键变异来源，本骨架不适用。
+
+**适用**: 评级机构（ESG/信用）、平台（App Store/Amazon）、审核/认证机构、媒体机构作为研究情境的论文。
+
+---
+
+### 变体 34: M2 多源清单 + 覆盖边界定样本窗 (1篇高价值)
+
+**来源论文**: DesJardine, Li & Shi (2025, AMJ)
+**原始句锚点**: We collected remaining data from multiple sources, including institutional ownership data from Thomson Reuters Institutional (13F) Holdings; geographic operations data from 10-K filings (via EDGAR); firm financial data from Compustat; ... Since coverage of the MSCI ESG Ratings Time Series database is not comprehensive before 2013, our sample period ranges from 2013 to 2019, where 2019 is the final year for which all data sources were available. The sample includes 2,787 unique firms with 12,634 firm-year observations.
+**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**写入日期**: 2026-08-09
+**槽位**: M2
+**骨架**:
+> We collected data from multiple sources, including [source 1: data type from database]; [source 2: data type from database]; ... and [source N: data type from database]. Since coverage of the [main database] is not comprehensive before [year_start], our sample period ranges from [year_start] to [year_end], where [year_end] is the final year for which all data sources were available. The sample includes [N] unique [units] with [N] [unit-year] observations.
+
+**与原骨架差异**: 区别于变体 9（制度事件定起始）——本变体是**数据覆盖边界定样本窗**：起点=主数据库覆盖不足的年份、终点=全部数据源可得的最后一年；多源清单以"data type from database"格式枚举后直接报告交集最终 N（与变体 2 的逐层漏斗互补——多库枚举后直接交集，不强制每库 N）。适用于依赖多个专有数据库交集的面板研究。
+**诚实边界**: 若可构建逐层漏斗（变体 2）应优先使用；数据覆盖边界需说明"not comprehensive"的判断依据（如数据库官方说明）；最终 N 前可补一句中间交集说明（"of the [N] firms in [primary], [N] could be matched"）增强可审计性。
+
+**适用**: 多数据库交集面板（13F/Compustat/专有库混合）、数据库覆盖有时间边界的研究。
+
+---
+
+### 变体 35: M3 离散化等级 DV 的边界距离操作化 + 边际影响预检验 (1篇高价值)
+
+**来源论文**: DesJardine, Li & Shi (2025, AMJ)
+**原始句锚点**: Because the variable is initially continuous, the central limit theorem applies, which implies that if MSCI had not preset the letter rating for each firm, the distribution of industry-adjusted scores would likely fall close to a normal distribution... the scores (before being categorized into letters) cluster heavily at the boundaries of each letter rating's interval... We find that the correlation between rival–MSCI CIO and distance from upper boundary is negative and statistically significant (r = -0.080, p < .001), which suggests that firms with industry-adjusted scores closer to the upper boundaries have higher levels of rival common ownership with MSCI, as our theory would predict.
+**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**写入日期**: 2026-08-09
+**槽位**: M3
+**骨架**:
+> [DV] is measured on a [N]-point [letter/number] scale ([source]). [Optional: distributional logic — because the underlying variable is initially continuous, the central limit theorem implies an approximately normal distribution, yet scores cluster heavily at the boundaries of each interval, deviating from normality.] Although our theory implies that [predictor] may influence [DV], we do not anticipate that [influence] carries such weight that it drastically [moves a unit multiple categories]. Instead, we expect the influence to happen on the margins. To examine this prediction, we construct a new variable, [distance from upper boundary], which equals [formula per interval]. To illustrate the importance of these boundaries, consider a [unit] with a [score] of [value]: this [unit] would have a distance from upper boundary of [value], meaning its [score] would be just below the level needed to receive the next higher [rating] ([threshold]). We find that the correlation between [predictor] and [distance] is [sign] and statistically significant ([r], p < [threshold]), which suggests that [units] with [scores] closer to the upper boundaries have higher levels of [predictor], as our theory would predict.
+
+**与原骨架差异**: 现有 M3 变体（factor score、文献基准锚定）——本变体是**离散化等级 DV 的边界距离操作化**：①分布逻辑（连续底层 → 边界聚集偏离正态）②"influence happens on the margins" 预期声明（不跃级，只推边际）③边界距离变量分区间公式 ④图→变量→相关性三段预检验（Figure → 变量构造 → 相关系数）。适用于 letter-grade/分档型 DV（评级、星级、等级），理论预期影响发生在类别边界而非跨类别。
+**诚实边界**: 边界距离变量须与主 DV 在同一尺度（区间内线性距离）；相关性预检验是描述性证据，不可替代主回归；"influence on the margins" 的理论依据须在 Theory 明确。
+
+**适用**: ESG/信用评级、星级评价、字母分档等离散化等级 DV 的研究。
+
+---
+
+### 变体 36: M4 复合测量构念分步构建 + 阈值辩护 + 可行性论证 (1篇高价值)
+
+**来源论文**: DesJardine, Li & Shi (2025, AMJ)
+**原始句锚点**: After obtaining institutional ownership data from Thomson Reuters Institutional (13F) Holdings, we retained investors that owned more than 1% of outstanding shares in each firm (i.e., at least 1% in MSCI and 1% in another firm) because such investors have been shown to have sufficient incentives and power to actively intervene in corporate decision-making (Connelly et al., 2019; Gilje, Gormley & Levit, 2020). The average number of investors with at least 1% ownership in MSCI each year is 20, making it feasible for MSCI executives to be aware of each large investor.
+**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**写入日期**: 2026-08-09
+**槽位**: M4
+**骨架**:
+> Our independent variable, [composite IV], captures [construct definition]. After obtaining [ownership data] from [source], we retained [actors] that owned more than [threshold]% of outstanding shares in each firm because such investors have been shown to have sufficient incentives and power to actively [intervene] ([citations]). [Feasibility argument: the average number of [actors] above the threshold is [N], making it feasible for [target actors] to be aware of each large [actor]]. We used the following formula to calculate [composite IV]: [formula]. For each [unit]'s [rival] pairs, we first calculated [step 1: within-actor aggregation], then computed [step 2: product across the two sides], and then calculated [step 3: aggregation across rivals].
+
+**与原骨架差异**: 现有 M4 变体（三层 because、moneyness、阈值披露）——本变体是**复合乘积构念的分步构建**：①阈值辩护（1% → 激励权力 + 引用）②可行性论证（平均 N 家 → 高管可知晓每家）③分步计算（先内部聚合 → 再跨侧乘积 → 再跨对手平均）。适用于两个持有侧乘积/交集型复合构念（共同所有权、重叠关系、跨市场关联）。
+**诚实边界**: 阈值选择须有文献依据；可行性论证（"average N makes it feasible for executives to be aware"）须与机制一致——若理论不依赖知晓，可行性论证是加分项而非必需；分步公式须与 Results 变量定义完全一致。
+
+**适用**: common ownership、共同持股、双角色重叠、跨侧乘积构念的研究。
+
+---
+
+### 变体 37: M6 rival 镜像控制变量惯例 — 引用前例 + 命名规则 + 聚合方式 (1篇高价值)
+
+**来源论文**: DesJardine, Li & Shi (2025, AMJ)
+**原始句锚点**: To address cross-rival effects on ESG ratings, we followed Guo, Sengul, and Yu (2020) to control for rival characteristics, denoted by the word "rival" (e.g., rival firm slack). Each variable is measured as the average value among all rivals identified by the FIC-100.
+**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**写入日期**: 2026-08-09
+**槽位**: M6
+**骨架**:
+> To address cross-[rival] effects on [DV], we followed [citation] to control for [rival] characteristics, denoted by the word "[rival]" (e.g., [rival] [variable]). Each variable is measured as the average value among all rivals identified by [classification source].
+
+**与原骨架差异**: 现有 M6 变体（分层 because、全谱系+事件控制）——本变体是**对手侧镜像控制惯例**：引用既有惯例（如 Guo, Sengul & Yu 2020）+ 命名规则（"rival" 前缀标记）+ 聚合方式（对手平均值）——一句完成跨主体效应控制。适用于 focal unit 与其 rivals/peers 竞争互动的面板（对手特征可能同时影响 DV 与 IV 的关联）。
+**诚实边界**: 引用惯例必须真实存在且适用；命名规则须贯穿 Methods/Results/Table（"rival" 前缀一致）；若对手定义随分类变动（FIC-100 vs 替代分类），须与 M4 对手识别一致。
+
+**适用**: 竞争动态、同伴效应、对手特征控制的面板研究。
+
+---
+
+### 变体 38: M7 理论-估计量对齐 + 不滞后辩护（Bellemare 反向论证）(1篇高价值)
+
+**来源论文**: DesJardine, Li & Shi (2025, AMJ)
+**原始句锚点**: Since our theory focuses on between-firm effects, we used pooled OLS models with industry-year fixed effects, where industries are defined by the FIC-100 (Hoberg & Phillips, 2010, 2016). In each industry-year, the median (mean) value of the number of rivals with MSCI ESG ratings is 14 (24), and the minimum (maximum) value is 2 (189), making it feasible to make cross-sectional comparisons. ... Since investors most likely exert their influence on firms and ESG rating agencies during their current holding periods, we did not lag the explanatory variables, as doing so could cause incorrect inferences (Bellemare, Masaki & Pepinsky, 2017).
+**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**写入日期**: 2026-08-09
+**槽位**: M7
+**骨架**:
+> Since our theory focuses on between-[unit] effects, we used pooled OLS models with [industry]-year fixed effects, where industries are defined by [classification] ([citations]). [Feasibility of cross-sectional comparison: in each industry-year, the median (mean) number of [comparison units] is [N] ([range]), making it feasible to make cross-sectional comparisons.] We clustered standard errors at the [industry-year] level to address potential correlations of residuals within each [cluster] ([citation]). To alleviate potential influence of outliers, we winsorized all continuous control variables at the [1st and 99th] percentiles, but the results are similar without winsorizing. Since [actors] most likely exert their influence during their current [holding] periods, we did not lag the explanatory variables, as doing so could cause incorrect inferences ([citation]).
+
+**与原骨架差异**: 现有 M7 变体（Hausman、GEE、dyad FE）——本变体是**between-firm 理论 → pooled OLS 显式对齐** + **Bellemare 不滞后辩护**：五要素——①理论-估计量对齐（between-unit 理论 → pooled OLS，不用 firm FE 作主模型）②行业-年聚类 + 可比单元数可行性（median/mean + range）③winsorize + "results similar without" ④不滞后辩护（当前持有期影响 → 滞后导致错误推断，Bellemare et al. 2017）⑤交互中心化（表注预告）。适用于 between-unit 变异为主的理论（构念在单元间差异而非单元内变化）。
+**诚实边界**: 不滞后必须引用 Bellemare et al. (2017) 且论证机制发生在当前期；若领域惯例是滞后，需显式说明偏离理由；firm FE 版本（稳健性）须在 Results 报告并解释效应缩小。
+
+**适用**: between-unit 理论（共同所有权、行业竞争结构、评级偏差）、当前期影响机制的面板研究。
+
+---
 
 ## 反模式
 

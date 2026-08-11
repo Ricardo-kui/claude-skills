@@ -25,6 +25,48 @@ confidence: high
 status: ready_for_corpus
 -->
 
+
+## 变体速查表
+
+> 检索辅助（2026-08-09 P0 补建）。状态列空白 = 正文未标注验证状态（旧 Pattern）。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架、适用条件与诚实边界见下方变体正文。
+
+| # | 变体 | 家族 | 适用场景 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 1 | Pattern: Audience-Role Dichotomy + Mirrore |  | 同一核心构念对至少两类受众/情境产生理论上相反的效果；不是强度差异，而是真正的方向反转。 |  | Pontikes (2012), *Administrati |
+| 2 | Pattern: Sign-Flipping Boundary Condition | 反直觉/反转 | 同一 IV 对 DV 的方向因受众/情境/角色而异；需要用机制解释方向反转，而非仅做交互项。 |  | Pontikes (2012), *ASQ*（audienc |
+| 3 | Pattern: Three-Condition Framework for Inf |  | 研究组织在不确定性决策中向同伴学习/模仿的现象；需要将经典信息级联理论转化为可检验的组织情境 |  | Shi, Grewal & Sridhar (2021), |
+| 4 | Pattern: Institutional Shock as Theory Hoo |  | 政策/规则变化创造自然实验，观察组织行为模式变化；需要用制度冲击和 aggregate tr |  | Shi, Grewal & Sridhar (2021), |
+| 5 | Pattern: Dual-Logic Integration — Input vs |  | 同一构念在文献中存在两种对立预测；两种逻辑作用于不同 facet（投入量 vs 转换效率）， |  | Zhou, Gao & Zhao (2017), *Admi |
+| 6 | Pattern: Anchor → Mechanism Move(s) → Warr |  | 绝大多数 Theory 假设推导段落的基础结构。适用于主效应、中介、调节等所有假设类型。 |  | ： |
+| 7 | Pattern: Theory-Driven Anchor + Puzzle Tur | 反直觉/反转 | 当文献中存在一个被默认接受的强理论直觉，而你的研究要挑战或反转它时使用。 |  | ：Singh and Grewal (2023), *Jou |
+| 8 | Pattern: Multi-Mechanism Trunk |  | 主效应有多个并行的机制路径，后续调节假设需要分别回到这些机制上展开。 |  | ：Shen, Zhou, Wang, and Zhang ( |
+| 9 | Pattern: Bilateral Moderation Derivation（h |  | 调节效应型论文中，需要同时论证 moderator 高值和低值条件下的机制变化。 |  | ：Shen, Zhou, Wang, and Zhang ( |
+| 10 | Pattern: Indirect Moderation / Mediated Mo |  | 当理论预期一个 moderator 的调节作用本身被另一个变量中介时使用（mediated |  | ：Singh and Grewal (2023), *Jou |
+| 11 | Pattern: Cumulative Moderation Build-Up |  | 后续调节假设建立在前面调节假设的基础上，形成累积式论证结构。 |  | ：Singh and Grewal (2023), *Jou |
+| 12 | Pattern: Counterintuitive Anchor + Three P | 反直觉/反转 | 研究挑战文献共识，指出某一常见行为对某个目标对象有隐性负面后果；同一 DV 可由多个独立的心 |  | Keeves, Westphal & McDonald (2 |
+| 13 | Pattern: Parallel Dual-Source Antecedents |  | 同一 mediator 可由 focal actor 自身行为和他人行为共同引发；需要分别推 |  | Keeves, Westphal & McDonald (2 |
+| 14 | Pattern: Emotion Action Tendency → Interpe |  | 研究需要从情绪 mediator 延伸到具体的人际伤害行为后果；需要把抽象情绪与具体行为连接 |  | Keeves, Westphal & McDonald (2 |
+| 15 | Pattern: Cross-Disciplinary Theoretical Le |  | 将金融/治理/制度变量引入营销、创新、CSR 等职能结果研究；需要先建立原领域理论，再论证跨 |  | Malshe & Agarwal (2015), *Jour |
+| 16 | Pattern: Four-Reason Parallel Mechanism De | 多理由并行 | 解释为什么资源约束会导致某类长期投资/投入被削减；需要多个独立且互补的理由增强机制可信度。 |  | Malshe & Agarwal (2015), *JM*（ |
+| 17 | Pattern: Intangible Asset Real Options + F |  | 无形资产（品牌资产、顾客满意度、专利/技术）通过增长期权创造价值，而该价值受融资约束/财务灵 |  | Malshe & Agarwal (2015), *JM*（ |
+| 18 | Pattern: Dual-Channel Convergence（双通道收敛，De | 双通道/双轨 | 主效应机制由两条独立通道构成——①施动方主动施加影响（push 通道）；②中介方/接收方主动 |  | DesJardine, Li & Shi (2025), * |
+| 19 | Pattern: Why-Not Reverse Boundary Declarat |  | 主效应假设后，立即解释为何不预测相邻方向/相邻对象的效应——把效应的"选择性"理论化（攻击方 |  | DesJardine, Li & Shi (2025), * |
+| 20 | Pattern: Width-Type Parallel Mechanism | 多理由并行 | 当 X→Y 的关系不是通过单一中介链，而是通过多个（2–3 个）独立的理论理由共同支撑时使用 |  | - Gamache, McNamara, Mannor, a |
+| 21 | Pattern: Symmetric Opposing Dual-Track Mec | 双通道/双轨 | 当同一理论框架下两个条件（或 IV 的两个维度）对同一组结果产生镜像反向效应时使用。 |  | Zhao-Ding and Gaba, *Organizat |
+| 22 | Pattern: Curvilinear Relationship — Two-Ph | 曲线/拐点 | 当理论预期 IV 和 DV 之间存在曲线关系（如 inverted U-shape / U- |  | Cui, Yang, and Vertinsky, *Str |
+| 23 | Pattern: Opposing Joint Prerequisites → Bo | 曲线/拐点 | Y 不是两条路径的简单净和，而是只有在两个共同必要条件都达到足够水平时才会提高；随着累计 X |  | Lee and Park (2024), *Strategi |
+| 24 | Pattern: Sequential Nested Moderation（序列嵌套 | 嵌套/持久 | 研究包含两层边界条件：第一层 moderator（W1）直接影响 X→Y 关系；第二层 mo |  | Chung, Low, and Rust (2022), * |
+| 25 | Pattern: Three Parallel Single-Step Mechan | 多理由并行 | 单一 IV 通过多个并行的、概念独立的微观路径影响同一 DV，且每条路径都有独立文献支撑。 |  | Darby, Ketchen, Ball & Mukherj |
+| 26 | Pattern: Two-Levers Theory Progression |  | 核心理论（如 agency theory）提出多个机制/杠杆，已有文献覆盖其中一个，本文覆盖 |  | Darby, Wowak, Ketchen & Connel |
+| 27 | Pattern: Embedded Prose Predictions in Con |  | 目标期刊偏好 Conceptual Framework 而非独立 Hypotheses 部分 |  | Grewal, Vana, and Stephen (202 |
+| 28 | Pattern: Counterintuitive Direction-Revers | 反直觉/反转 | 论文主效应的方向符号（X→Y 是正还是负）与 field 默认机制推导出的预期相反；作者不凭 |  | Ilicic & Brennan (2026), *Jour |
+| 29 | Pattern: Mechanism-Targeted Intervention E |  | 论文已经建立 X -> M1 -> M2 -> Y 的有害路径，需要从“解释现象”推进到“如 |  |  |
+| 30 | Pattern: Mismatch Subtype Refinement Hypot |  | 当主效应是 match/similarity → outcome（如 H1: structu |  | Du and Tsolmon (2024), *Organi |
+| 31 | Pattern: Developmental Reversal of Recipro | 嵌套/持久 | 两个构念相互因果（coevolution / simultaneous / reciproc |  | Pollock, Lee, Jin, and Lashley |
+| 32 | Pattern: Differential Persistence / Lagged | 嵌套/持久 | 动态面板/自回归设计中，研究问题不是某 IV→DV 斜率被调节，而是两个构念的路径依赖（pa |  | Pollock, Lee, Jin, and Lashley |
+| 33 | Pattern: Belief Updating → Attention-Thres |  | 行动者根据相对参考点的反馈选择风险/保守行动；稳定偏差改变其对未来状态的信念；当预期状态接近 |  | Schumacher, Keck, and Tang (20 |
+| 34 | Pattern: Background-as-Theory Dual-Channel | 双通道/双轨 | 期刊/设计选择用 BACKGROUND（或同类 Literature/Conceptual |  | Kim & Lee (2026), *Strategic M |
+
 ## Pattern: Audience-Role Dichotomy + Mirrored Hypotheses
 
 **适用场景**: 同一核心构念对至少两类受众/情境产生理论上相反的效果；不是强度差异，而是真正的方向反转。
@@ -703,6 +745,70 @@ H[X]: The impact of [M] on [DV] is [weaker/more negative] for firms with [high/l
 
 ---
 
+## Pattern: Dual-Channel Convergence（双通道收敛，DesJardine–Li–Shi 2025 型）
+
+**适用场景**: 主效应机制由**两条独立通道**构成——①施动方主动施加影响（push 通道）；②中介方/接收方主动迎合（pull 通道）——两条通道**收敛于同一预测**，用于加固主效应机制而非裁决。
+
+**微观动作序列**: 通道 1（主动施加：讨论/反馈/游说）→ "On the other side of the equation" 通道 2（被动迎合：讨好/忌惮）→ "Importantly" 可行性条件（不透明性/低检测风险）→ 假设
+
+**范文来源**: DesJardine, Li & Shi (2025), *Academy of Management Journal*（H1：投资者讨论反馈 + 评级机构高管迎合 + 评级过程不透明）
+
+**原文锚点**:
+> "Influence begins with the discussions that occur between common owners and rating agency executives, and, sometimes, analysts."
+>
+> "On the other side of the equation, executives of rating agencies may cater to the interests of their major institutional investors."
+>
+> "Importantly, the opacity of the ESG rating process facilitates these opportunities for rating influence while decreasing the risk of detection for both institutional investors and rating agency insiders."
+
+**骨架**:
+```
+[通道 1：主动施加] Influence begins with the [channel 1: discussions between attackers and intermediary executives]. [Intermediary] analysts and executives struggle to [access/understand target's activities], and are at times limited by the information they can collect from [data source] ([citation]). One information source [intermediaries] might value is [attackers], who may be perceived as competent and informed ([citation]). In these discussions, [attackers] may naturally speak more positively about [their portfolio firms], and more negatively about those firms' competitors—the 'target' firms. [Intermediary] executives and analysts could consciously or subconsciously use this feedback to inform their [assessments] ([citation]).
+
+[通道 2：被动迎合] On the other side of the equation, executives of [intermediaries] may cater to the interests of their major institutional investors. Prior studies show that executives sometimes go to great lengths to appease their investors ([citation]), partially because losing or upsetting investors can cause financial and reputational harm to executives ([citation]). To reduce that risk, standard [protocols] advise executives to pay close attention to major investors' holdings in other companies and try to account for those investors' economic interests ([citation]).
+
+[可行性条件] Importantly, the [opacity] of the [assessment] process facilitates these opportunities for influence while decreasing the risk of detection for both [attackers] and [intermediary] insiders. The theorized channel through which [attackers] influence [intermediaries] is legal. The subjectivity of [assessments] not only gives [intermediaries] latitude in their evaluations, but also gives their executives and analysts flexibility to adjust [assessments] based on an [attacker's] advice. Thus, if [attackers] go to great lengths to directly coordinate activities among multiple portfolio firms ([citation]), it seems plausible that they use their ownership influence in [intermediaries] to shape [assessments] for their own benefit, and that some [intermediary] executives are open to that influence.
+
+[H 收敛] We expect [targets] to receive less favorable [assessments] from [intermediaries] in which their rivals' institutional investors have greater ownership. Formally:
+H1. The level of [IV] is negatively associated with [DV].
+```
+
+**为什么有效**:
+- **push + pull 双通道加固**: 主动施加（施动方有动机和手段）+ 被动迎合（接收方有忌惮和利益）——两条独立通道都指向同一预测，机制可信度高于单通道
+- **与 B2（双轨机制）的判别**: B2 要求两条路径产生**不同**的可检验预测、时间轨迹或条件反应；本模式两条通道**收敛于同一预测**——用于加固主效应而非裁决。若两条通道预测相反（如一条增强一条减弱），改用 B2/F
+- **可行性作为第三环**: 动机（willing）+ 手段（able）之外，**不透明性/低检测风险**是影响发生的第三前提——"hidden" 维度：机制在何种条件下能隐蔽运作
+- **合法性声明**: "The theorized channel... is legal"——明确影响渠道合法，防审稿人质疑伦理/合法性
+- **三节拍连接词**: 通道 1（无标记）→ "On the other side of the equation" → "Importantly"——每节拍一个显式连接，无跳跃
+
+**反模式**: 两条通道实际是同一机制的同义改写（一个说"投资者施加影响"一个说"高管接受影响"而无独立机制步）——必须是概念独立的两条通道；可行性条件写成无关的稳健性注释而非机制环节；把双通道写成 B2 双轨（预测不同）。
+
+---
+
+## Pattern: Why-Not Reverse Boundary Declaration（"why not" 反向边界声明，DesJardine–Li–Shi 2025 型）
+
+**适用场景**: 主效应假设后，立即解释**为何不预测相邻方向/相邻对象的效应**——把效应的"选择性"理论化（攻击方为何选择受害方而非自己人），防止读者追问，同时深化机制。
+
+**微观动作序列**: 假设 H1 → "There are two related reasons why we do not hypothesize that..." → First（检测/暴露风险）→ Second（相对效应/比较逻辑）→ 收束（双重逻辑合并）
+
+**范文来源**: DesJardine, Li & Shi (2025), *Academy of Management Journal*（H1 后：为何不预测影响自己的组合企业）
+
+**原文锚点**:
+> "There are two related reasons why we do not hypothesize that institutional investors seek to influence the ratings of their own portfolio firms. First, as warnings about the anticompetitive effects of common owners have been raised among regulators, common owners can decrease their risk of detection by procuring worse ESG ratings for firms not in their portfolios. Second, by handicapping a target firm that competes with their portfolio firms, common owners can realize improved investment prospects among several of their portfolio firms."
+
+**骨架**:
+```
+There are two related reasons why we do not hypothesize that [attackers] seek to influence the [assessments] of their own portfolio firms. First, as warnings about the [anticompetitive effects] of [attackers] have been raised among [regulators], [attackers] can decrease their risk of detection by procuring worse [assessments] for firms not in their portfolios. Second, by handicapping a target firm that competes with their portfolio firms, [attackers] can realize improved investment prospects among several of their portfolio firms. This relative effect occurs because [standards] differ widely between industries, forcing stakeholders and investors to make comparisons on a within-[unit] basis. Taken together, by negatively influencing their portfolio firms' rivals, [attackers] can realize the rewards of their [influence] while decreasing the risk of their influence being detected.
+```
+
+**为什么有效**:
+- **反向边界声明**: 不预测什么 + 为什么——把选择性本身理论化（检测风险最小化 + 相对效应最大化），而非留白
+- **两理由结构**: First（检测风险/暴露）→ Second（相对效应 + 单元内比较）→ 收束（rewards + detection 双重逻辑合并）——理由之间有张力（一个说"减少暴露"一个说"增加收益"），收束句将两者统一
+- **相对比较嵌入**: "comparisons on a within-industry basis"——用评估的序数/相对性质解释为何选择"别人的企业"
+- **与 E1 Step 6（排除反向交互）的关系**: 排除反向交互是"为什么是 Z 调节 X→Y"；本模式是"为什么 X 不作用于相邻对象"——选择性效应辩护
+
+**反模式**: 假设后没有边界声明但读者会追问相邻对象——边界声明缺失；理由之间矛盾（一个说"减少暴露"一个说"增加收益"却不收束统一）；把边界声明写成第二个假设（"我们同样预测..."）而非排除。
+
+---
+
 ## 段内逻辑布局原则
 
 ### 1. 连接词的功能分类
@@ -754,6 +860,7 @@ status: ready_for_corpus
 ## Pattern: Width-Type Parallel Mechanism
 
 **适用场景**: 当 X→Y 的关系不是通过单一中介链，而是通过多个（2–3 个）独立的理论理由共同支撑时使用；可支撑线性主效应、曲线关系的某一阶段，或调节假设的某一边。
+**家族判别（多理由并行三兄弟）**: 与 Three Parallel Single-Step Mechanisms、Four-Reason Parallel Mechanism Derivation 同属『多理由并行』家族，差异在抽象层级——本模式（Width-Type）最通用（理由可支撑任何假设的任意一边，2-3 条）；Three Parallel 是『单一 IV 的多个概念独立微观路径』（每条路径有独立文献，Darby 2023）；Four-Reason 是『压力情境下的显式枚举收敛』（decline for N reasons，Malshe 2015）。机制路径可检验时用 Three Parallel；压力→枚举时用 Four-Reason；通用理由支撑时用本模式。
 **微观动作序列**: Anchor（理论前提）→ Mechanism Move 1 + Warrant 1 → Mechanism Move 2 + Warrant 2 → [Mechanism Move 3 + Warrant 3] → Prediction
 **范文来源**:
 - Gamache, McNamara, Mannor, and Johnson (2020), *Strategic Management Journal*（3 个理由支撑线性主效应）
@@ -1000,6 +1107,7 @@ status: ready_for_corpus
 ## Pattern: Three Parallel Single-Step Mechanisms
 
 **适用场景**: 单一 IV 通过多个并行的、概念独立的微观路径影响同一 DV，且每条路径都有独立文献支撑。
+**家族判别（多理由并行三兄弟）**: 与 Width-Type Parallel Mechanism（通用理由 2-3 条）、Four-Reason Parallel Mechanism Derivation（压力枚举）同族——本模式强调『微观机制路径』：每条路径有独立文献且概念独立（Darby 2023: financial interests / CEO power / personal interests）。机制路径须可区分（否则并入 Width-Type）。
 **微观动作序列**: Anchor（IV 对 DV 的影响已被初步接受）→ Mechanism Move 1/2/3（每个路径独立展开，配 citation + illustration）→ Prediction
 **范文来源**: Darby, Ketchen, Ball & Mukherjee (2023), *Manufacturing & Service Operations Management*（CEO stock ownership → slower recalls via firm-financial interests / CEO power / personal financial interests）
 

@@ -20,8 +20,9 @@ source_papers:
   - castellaneta_conti_kacperczyk2017 (SMJ, 2017): "Disclosure-requiring IPR consensus → non-disclosure form as transferability boundary"
   - kim_lee2026 (SMJ, 2026): "SRO-recruitment finding consensus → evidence-source foreshadow (temp/hypothetical bulk)"
   - Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ (SMJ, 2017): "Literature division — adoption answered; proximal consequences open; adjacent composite-only use"
-updated: 2026-08-05
-source: Extracted from literature-turn-templates.md + MVP30 validation + kim_lee2026 + zorn2017
+  - desjardine_li_shi_2025_amj (AMJ, 2025): "Neighboring-study static-view critique → dynamization bridge (variants: static→dynamic upgrade)"
+updated: 2026-08-09
+source: Extracted from literature-turn-templates.md + MVP30 validation + kim_lee2026 + zorn2017 + desjardine_li_shi_2025
 ---
 
 # 01-progressive-coherence — Progressive Coherence 递进式文献对话
@@ -50,6 +51,30 @@ P2-P3 的功能：承认文献已有实质进展，但精确指出被遗漏的�
 - **MEDIUM**: 几乎只在 Incompleteness 中出现
 
 ---
+
+
+## 变体速查表
+
+> 检索辅助（2026-08-09 P3 补建）。状态列空白 = 正文未标注验证状态（旧变体）。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架、适用条件与诚实边界见下方变体正文。
+
+| # | 变体 | 家族 | 适用场景 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| A | 自然推进型（gamache2020 型） | 成熟流递进 | 成熟文献流的自然推进：领域长期研究后自然留下空白 |  | gamache2020 (SMJ), adapted |
+| B | 快速文献回顾型（eilert2017 型） | 成熟流递进 | 3-4 句快速建立文献共识后指出精确遗漏 |  | eilert2017 (JM), adapted |
+| C | 权威引语过渡型（wu2025 型） |  | 有权威引语可作为从进展到缺口的转折支点 |  | wu2025 (SMJ), P1-P2 |
+| D | 跨学科引入型（mayo2021 型） |  | 跨学科引入：外部领域机制迁移到目标领域 |  | mayo2021 (POM), P2 |
+| E | Table 1 文献矩阵型（darby2025 型） |  | 文献>=15 篇需要展示广度：Table 1 矩阵替代长篇叙述 |  | darby2025 (JSCM), P2 + Table 1 |
+| F | 共识建立 + 实践复杂性型（grewal2025 型） |  | 共识建立+实践复杂性：新兴环境挑战传统实践 |  | Grewal, Vana, and Stephen (2025), *Jou |
+| G | 共识 + Stakes 嵌入 + 三重缺口预告（cui_yang_vertinsky | 成熟流递进 | 共识+Stakes 嵌入+三重缺口预告（紧凑 SMJ 风格） |  | Cui, Yang & Vertinsky (SMJ), P2 |
+| H | 新兴交叉流 + 互补半区缺口型（malshe2015 型） | 近邻工作推进 | 新兴交叉流+互补半区：源学科成熟、目标学科刚起步且只做了一半 |  | Malshe & Agarwal (2015, *Journal of Ma |
+| I | 双成熟文献流 + 必要解释瓶颈（Schumacher–Keck–Tang 2020 |  | 双成熟文献流通过必要解释瓶颈连接（信号→解释→响应） |  | Schumacher, Keck, and Tang (2020), *St |
+| J | 制度冲击机制深描型（hoffmann2024 型） |  | 制度冲击机制深描：treatment 对非法律读者不直观 |  | hoffmann_cheong_phan_zurbruegg2024 (JM |
+| K | 三方法流分类 + 第三流内部矛盾发现型（liu_shankar2015 型） |  | 三方法流分类：案例/实验/实证，第三流内部矛盾发现 |  | liu_shankar2015 (MS), P2–P3 |
+| L | 披露型 IPR 共识 → 非披露形式作为外推边界（Castellaneta–Cont | 外推边界 | 披露型 IPR 共识→非披露形式的制度外推边界 |  | Castellaneta, Conti & Kacperczyk (2017 |
+| M | 关系发现共识 → 证据源类型 foreshadow（Kim–Lee 型） | 外推边界 | 关系发现共识→证据源类型（临时/假设/调查）外推边界 |  | Kim & Lee (2026, SMJ), P1 |
+| N | 文献分工 — 采纳已答 / 近端后果未清（Zorn et al. 2017 型） | 外推边界 | 文献分工：采纳问已答、近端后果问未清 |  | Zorn et al. (2017, SMJ), background se |
+| O | 近邻研究静态观批评 → 动态化 bridge（desjardine2025 型） | 近邻工作推进 | 近邻研究已奠基但只有静态版，本文做动态化升级（静态观批评+领域标准惊讶） |  | DesJardine, Li & Shi (2025, *Academy o |
+| P | 共识-让步-反证-目标收窄型（cutolo2024 型） |  | 共识让步→反证受益→目标收窄：把 knot 锁定在'条件'而非'受益' |  |  |
 
 ## 句法模板
 
@@ -356,6 +381,60 @@ P2-P3 的功能：承认文献已有实质进展，但精确指出被遗漏的�
 **适用**: 拥挤治理/战略文献中新结构特征已有采纳/扩散研究，但后果（尤其 proximal outcomes）未清；Progressive × Inadequacy；SMJ。
 
 **禁忌**: 不可伪造"已有采纳研究"；若采纳与后果都空白，改用标准 Progressive incompleteness，勿假装分工；不要在本变体展开机制推演（留给 Theory Lens）。
+
+---
+
+### 变体 O：近邻研究静态观批评 → 动态化 bridge（desjardine2025 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**功能节拍**: 理论声明前置（theory-first）→ 近邻研究奠基承认 → 静态观批评（时间维度缺失）→ 领域标准惊讶 → 动态化 bridge
+
+**模板**:
+> "Against this backdrop, we develop a theory of [X] that puts [Y] at the center of [Z]. The fulcrum of our theory is that [core claim about actors' influence]. In line with our theory, recent work ([author, year]) has shown that [neighboring finding]. However, this work provides a highly static view of [construct], assuming that [static assumption]. This static view is surprising, because scholars have long acknowledged that [field standard — the very temporal/dynamic principle the static view ignores] ([citation]). We build on this research by providing a more dynamic theory of [X]."
+
+**来源**: DesJardine, Li & Shi (2025, *Academy of Management Journal*), P4
+
+**原文锚定**:
+> "However, this work provides a highly static view of investor influence over information intermediaries, assuming that influence is exerted without any regard for the ongoing dynamics of the competitive landscape. This static view is surprising, because scholars have long acknowledged that competitive attacks are initiated by firms to take advantage of threats and opportunities in the competitive landscape (Chen & Miller, 2015). We build on this research by providing a more dynamic theory of information-based competition."
+
+**关键特征**:
+- **四节拍递进**: ① 理论声明前置（"we develop a theory of X that puts Y at the center of Z" + "The fulcrum of our theory is that..." 支点句——Theory Lens 嵌入 Literature Turn）→ ② 近邻研究奠基承认（"In line with our theory, recent work has shown..."——把前人工作定位为支持本文的证据，非竞争）→ ③ 静态观批评（"provides a highly static view of X, assuming that..."——批评维度缺失而非错误）→ ④ 领域标准惊讶 + 动态化 bridge（"This static view is surprising, because scholars have long acknowledged that... We build on this research by providing a more dynamic theory"）
+- **惊讶用领域自身标准支撑**: 不引用外部权威，而是用该传统自己的时间性主张（Chen & Miller 2015）证明静态观的遗漏——Progressive × Inadequacy 非对角的"用传统自身标准证明遗漏"
+- **bridge 是"more dynamic"而非"correct"**: 近邻研究被定位为奠基的静态版，本文是升级版——避免否定式批评，保留对话连续性
+- **"more dynamic" 必须有机制兑现**: 动态化必须落到具体的动态轴（本文=威胁→动机/机会→能力），不能只是修辞升级
+
+**与变体 H/N/L/M/I 的判别**: H（malshe2015）是互补半区（镜像极性）、N（zorn2017）是研究问题分工、L（castellaneta2017）是制度形式外推边界、M（kim_lee2026）是证据源类型 foreshadow、I（schumacher2020）是双流解释瓶颈——本变体是**时间维度升级**（静态截面 → 动态过程），批评对象必须是"最近最邻近的单篇研究"而非整个领域。
+
+**适用**: 近邻研究（常为同一作者/同一团队前作或最邻近工作）已奠基但只有静态/截面版本，本文做动态化升级；Progressive × Inadequacy 非对角；AMJ/SMJ/OS。
+
+**禁忌**: ① 批评对象必须是"最近最邻近的研究"而非整个领域；② 惊讶必须有领域标准引用支撑，不能自说自话；③ "more dynamic" 必须落实到具体动态机制，否则退化为修辞；④ 不可把近邻研究写成"错误范式"——它是奠基，不是稻草人。
+
+---
+
+### 变体 P：共识-让步-反证-目标收窄型（cutolo2024 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）。story_fidelity: section_role=exposition; knot_relation=tie（共识让步→反证受益→目标收窄把 knot 锁定在"条件"而非"受益"）; character_effect=none; pacing_effect=improves（反证段给共识一个呼吸点，目标声明句明确收束方向）; classification=section_variant。
+
+**功能节拍**: 共识让步（含理论权威深化惩罚机制）→ 反证受益（Luckily 转折）→ 目标收窄 pivot（"Our goal, however, is different"）→ 条件进展清单（多流各配引用）
+
+**模板**:
+> These recurring [empirical associations] across [domains] are partly the result of [cognitive constraints]... But they are also emblematic of what [theorist] called the "[concept]," referring to [one-sentence explication of the mechanism behind the consensus] ([citation]). Luckily, despite abundant evidence regarding the [penalties of X], [noncompliance/atypicality] can still be a risk worth taking, and conditions may even exist whereby the benefits of [X] exceed those of [conformity]: [benefit evidence 1] ([citation]), [benefit evidence 2] ([citation]). These findings may seem unsurprising to [adjacent scholars]. Our goal, however, is different. We are not interested in demonstrating the [upsides] of [X]. Instead, we aim to expose conditions under which [otherwise punished behavior] may be tolerated and even rewarded. Recently, researchers have made significant strides in exposing such conditions: [condition stream 1: audience-side factors] ([citations]); [condition stream 2: categorical flux] ([citations]); [condition stream 3: visible signals] ([citations]); [condition stream 4: identity features such as status/reputation] ([citations]).
+
+**来源**: Cutolo & Ferriani (2024, *Journal of Management*), P2–P4
+
+**原文锚定**:
+> "Luckily, despite abundant evidence regarding the penalties of atypicality, noncompliance can still be a risk worth taking, and conditions may even exist whereby the benefits of atypicality exceed those of conformity."
+> "Our goal, however, is different. We are not interested in demonstrating the performance upsides of atypicality. Instead, in the spirit of Smith (2011: 63), we aim to expose conditions under which 'otherwise punishable nonconformity may be tolerated and even rewarded by relevant audiences.'"
+
+**关键特征**:
+- **共识让步 + 理论权威深化**: 先给共识让步（惩罚证据充分），再用理论权威（Foucault "normalizing society"/"penalty of the norm"）给共识以机制深度——共识不是被推翻而是被理解
+- **反证受益（Luckily 转折）**: 同一现象的受益面（突破、超额回报）先于缺口登场——为"目标收窄"提供被排除的替代故事
+- **目标收窄 pivot（签名句式）**: "Our goal, however, is different. We are not interested in demonstrating [upsides]. Instead, we aim to expose conditions under which..." —— 显式排除一个诱惑性的替代故事（受益故事），锁定本文的故事（条件故事）。这是 "alternative tellings" 在 Introduction 级的实现：作者主动声明"我不讲那个故事"
+- **条件进展清单**: 多流条件研究（audience/flux/signals/status）各配引用，为 Tension 的"操作性缺口"蓄力——清单本身是 Tension 的靶子
+
+**适用**: Incompleteness × (Mechanism + Boundary)；共识稳固 + 存在反证受益面 + 条件研究已有进展但缺 actor 侧杠杆的研究；与 `01-despite-progress-unaddressed` 变体 AF（外生条件→可操作杠杆缺口）配对。
+**禁忌**: ① 目标收窄必须名副其实——"not interested in [upsides]" 后不能再偷偷用受益叙事；② 条件清单必须真实（各流有引用），不可拼凑；③ 理论权威引用（Foucault 型）必须服务于机制深化而非装饰。
 
 ---
 

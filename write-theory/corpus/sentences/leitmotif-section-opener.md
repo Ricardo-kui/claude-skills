@@ -23,6 +23,11 @@ moderating / main effect of the current hypothesis's specific variable]."
 
 随后展开该假设特有的机制链（buffering / enhancing / 对称对比），最后给出 H[N]。
 
+**原文锚点** (Darby, Wowak, Ketchen & Connelly 2025, JSCM "An Agency Theory Perspective on Activist Investors and Supply Chain Failures: The Case of Product Recalls"):
+> H1 段首: "At the core of agency theory is the agency problem, which arises because of (i) goal incongruence—i.e., principals and agents have different aims and risk preferences, and (ii) information asymmetry—i.e., agents know more about the firm's operations than principals know (Kauppi et al. 2024)."
+> H2 段首: "Agency theory suggests that characteristics of the delegated task—in this context, managing product recalls—may influence the degree of information asymmetry between principals and agents (Eisenhardt 1989)."
+> H3 段首: "Previous research suggests that the severity of an event also may influence the extent to which agents try to manage principals' perceptions (Graffin et al. 2016)."
+
 **语料锚定**:
 - Darby, Wowak, Ketchen & Connelly (2025, JSCM) — agency theory 三假设段。三个假设段落分别以结构平行的引导句开头，均回扣"information asymmetry between principals and agents"这一核心构念：
   - H1 段首（主效应）: "At the core of [agency theory] is the agency problem, which arises because of (i) goal incongruence... and (ii) information asymmetry..."
