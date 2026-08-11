@@ -43,3 +43,4 @@
 - [x] 接入 `paper-story-contract`（story-frame-menu：研究描述 → 2-3 个候选故事框架；2026-08-09 实证回填 layout-inventory 锚 + 写侧接通方向 1——story-modulation/knot-architecture-modulation）
 - [x] Ch03 工具层从 intro 扩展到全篇（storytelling_tools 五字段已全量补齐；pacing/布局实证聚合入 `layout-inventory.md`）
 - [x] knot 类型表定稿（2026-08-09：11 型定稿 + 原型计数持续演进——详见第 3 行状态行与 `_schema.md` 词表）
+- [x] **`validate_blueprints.py` 校验器接入**（2026-08-11）：对照 `_schema.md` 逐份校验（文件头/Story 节/knot 类型/resolution 类型）+ `_index.md` 同步 + knot 主型计数对账；入口 `python scripts/validate_blueprints.py`，退出码 0=无 ERROR。新增 blueprint 后跑一遍，index 与词表计数须保持对账一致

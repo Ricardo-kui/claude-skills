@@ -1,4 +1,4 @@
-# Story Blueprint 字段规范（草案 v0.1）
+# Story Blueprint 字段规范（v0.3 定稿）
 
 > 每篇论文一份 blueprint。字段事实性来源：蒸馏记录 + 全文回读。缺失标 `待补`，禁止编造。
 
@@ -39,7 +39,7 @@ knot:
   antagonist_built_by: ["<构造反派的修辞手法，如：双层 non-coherence 排布、三情境加固、修辞问 pivot>"]
 ```
 
-**knot 类型表（v0.2 定稿，2026-08-09 评审，基于 11 份 blueprint；2026-08-09 实证对账扩至 59 份——各类型实例计数见词表行）**：
+**knot 类型表（v0.3 定稿，2026-08-09 评审，基于 11 份 blueprint；2026-08-09 实证对账扩至 59 份——各类型实例计数见词表行）**：
 
 > **元性质**：所有 knot 均具悖论性张力（Pollock: knot 即 central tension）——`paradox` 不作独立主型路由，保留为待建类型（等纯悖论型论文如 Mishina 2010 入库再定）。原型状态词表（**2026-08-09 修订：无硬上限——家族钉死按实例计数，≥2 即交叉验证**）：**九原型**（neglected-arena/half-domain-gap）＞**八原型**（irony-reversal/overlooked-alternative/paradigms-at-war）＞**七原型**（consensus-puzzle）＞**六原型**（assumption-flip）＞**三原型**（tangled-constructs）＞**单原型**（cross-domain-unification——观察中）＞**compound-only**（counterevidence）＞**待建**（paradox）。计数以 `scripts/extract_layout.py` 实证提取为准（2026-08-09 对账）。
 
@@ -68,7 +68,7 @@ characters:
 ```
 
 ### resolution_logic
-解法性格（研究者以什么姿态解开 knot）。**定稿 v0.2（2026-08-09 评审）**：
+解法性格（研究者以什么姿态解开 knot）。**定稿 v0.3（2026-08-09 评审）**：
 - `arbitration` 仲裁：拆解到 facet 再整合（两派都只对一半）——Zhou 2017（paradigms-at-war 裁决类）
 - `revelation` 揭幕：换视角，展示被共识忽略的第二张脸——Pontikes 2012；Pollock 2015（解结）；DesJardine 2022（翻硬币）；DesJardine 2023（换镜头）；Lashley & Pollock 2020（拉开幕布，inductive 版）——**5 原型，最稳**
 - `exploration` 拓荒：补上被忽视的战场，条件化解决——Desai 2012；Malshe 2015（补半区 + 路径分解）
