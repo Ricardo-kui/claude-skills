@@ -5,8 +5,6 @@
 !.gitignore
 
 # Track user's custom skill directories
-!check-alignment/
-!check-alignment/**
 !revision-coach/
 !revision-coach/**
 !academic-writing-corpus/
