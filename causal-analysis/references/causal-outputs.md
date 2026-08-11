@@ -1,48 +1,34 @@
 # Causal Outputs
 
-## Analysis Plan Template
+## Analysis Manifest Template
 
 ```text
-Causal Analysis Plan
+Causal Analysis Manifest
 
+Design Packet path:
+Data Contract path:
+Data Contract hash:
 Design:
+Estimand:
+Treatment timing:
+Assignment unit:
+Comparison group:
+Identifying sample:
+Key assumptions:
 Outcome:
 Treatment / endogenous variable:
 Sample:
 Identifiers:
-Clustering:
+Fixed effects:
+Clustering / uncertainty rule:
 Baseline specification:
 Primary diagnostic:
 Primary robustness check:
-Secondary implementation lane:
+Stop rules:
+Runtime and primary executor:
+Package / command versions:
+Deviation policy:
 Target outputs:
 ```
 
-## Verification Note Template
-
-```text
-Causal Verification Note
-
-Preferred specification:
-Input data:
-Script path:
-Sample N:
-Coefficient and SE:
-Clustering rule:
-Main diagnostic result:
-Robustness status:
-Residual identification risks:
-Ready for writeup: yes/no
-```
-
-## Writeup Handoff Template
-
-```text
-Writeup Handoff
-
-Headline finding:
-Table or figure source:
-Interpretation bounds:
-Required caveat:
-Appendix items still needed:
-```
+This skill emits only the Analysis Manifest. Execution, verification, Evidence Packet, and writing handoff belong to later pipeline stages.

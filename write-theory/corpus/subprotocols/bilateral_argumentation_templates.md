@@ -422,7 +422,7 @@ status: emerging_single_paper
 <!-- 
 pattern_id: dual_mechanism_convergent_moderation
 build_type: 机制推演型 + 调节边界（双机制主效应）
-source_papers: ["li_bapuji_talluri_singh_narayanan_2026_jscm"]
+source_papers: ["Li_Bapuji_Talluri_Singh_Narayanan_2025_JSCM"]
 confidence: high
 status: ready_for_corpus
 related_intro_lens: write-introduction/academic-writing-corpus/theory-lens/08-dual-metaphor-stream-reconciliation.md
@@ -434,7 +434,7 @@ related_intro_lens: write-introduction/academic-writing-corpus/theory-lens/08-du
 
 **微观动作序列**: Dual-mechanism main effect（H1 经双机制收敛推导）→ Moderator framework setup（为何选这些 moderator，通常 framing 为"扩展网络/多重利益相关者"）→ Per-moderator dual-channel reasoning（通道 1 + 通道 2）→ Convergence claim（两通道同向）→ Signed hypothesis
 
-**范文来源**: Li, Bapuji, Talluri, Singh & Narayanan (2026), *Journal of Supply Chain Management*（vertical spillover of product recalls: H1 pipes+prisms 主效应；H2-H4 common business ties / common institutional ownership / common analyst coverage 各经 cash-flow 通道 + impression 通道收敛推导）
+**范文来源**: Li, Bapuji, Talluri, Singh & Narayanan (2025), *Journal of Supply Chain Management*（vertical spillover of product recalls: H1 pipes+prisms 主效应；H2-H4 common business ties / common institutional ownership / common analyst coverage 各经 cash-flow 通道 + impression 通道收敛推导）
 
 **骨架（主效应 H1 — 双机制收敛推导）**:
 ```
@@ -489,7 +489,7 @@ pattern_id: asymmetric_disposition_context_moderation
 build_type: 调节效应型 / 假设树型 (disposition × context)
 source_papers: ["abdurakhmonov_ingram_ridge_2026_jom"]
 status: EMERGING (1 篇)
-related: 与 dual_mechanism_convergent_moderation (li_bapuji_talluri_singh_narayanan_2026_jscm) 概念正交：
+related: 与 dual_mechanism_convergent_moderation (Li 2025) 概念正交：
          Li = moderator × 双机制矩阵（对称收敛，同一 moderator 经两条同向机制）；
          本 pattern = moderator × disposition-pole 矩阵（不对称，每个 moderator 对两极的机制不同）。
 -->
@@ -551,7 +551,7 @@ H[X+1]: [W2] weakens the positive relationship between [disposition] and [outcom
 H[X+2]: [W3] weakens the positive relationship between [disposition] and [outcome].
 ```
 
-**呈现装置 — moderator×disposition-pole reasoning table（可选，与 li_bapuji_talluri_singh_narayanan_2026_jscm 的 moderator×mechanism 矩阵互补）**:
+**呈现装置 — moderator×disposition-pole reasoning table（可选，与 Li 2025 的 moderator×mechanism 矩阵互补）**:
 
 | | Pole A (high-trait) channel | Pole B (low-trait) channel |
 |---|---|---|
@@ -559,7 +559,7 @@ H[X+2]: [W3] weakens the positive relationship between [disposition] and [outcom
 | **[W2] norms** | CEILING: 从众限制差异化上限 | FLOOR: 合法性成本抬高最低阈值 |
 | **[W3] structure** | LOCK-OUT: 结构性偏离 disincentive | LOCK-IN: 均衡维持偏好状态 |
 
-（li_bapuji_talluri_singh_narayanan_2026_jscm 矩阵的 cell = 同一 moderator 的两条机制；本矩阵的 cell = 同一 moderator 对两极的不同机制。）
+（Li 2025 矩阵的 cell = 同一 moderator 的两条机制；本矩阵的 cell = 同一 moderator 对两极的不同机制。）
 
 **为什么有效**:
 - 当主效应建立在两极 disposition 上时，每个 moderator 对两极的约束机制通常不同。若只写 "W weakens X→Y" 而不分别论证两极，审稿人会问"这个 moderator 是压制了 pole-A 的发挥，还是托底了 pole-B 的反向倾向？机制是什么？"

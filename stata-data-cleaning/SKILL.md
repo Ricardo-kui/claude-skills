@@ -1,6 +1,6 @@
 ---
 name: stata-data-cleaning
-description: Clean and transform messy data in Stata with reproducible workflows
+description: Audit, clean, and transform empirical data in Stata with reproducible workflows. Use audit-only mode to produce the pipeline Data Contract without mutating or saving data; use cleaning mode only when transformations and output paths are explicitly authorized.
 ---
 
 
@@ -18,11 +18,18 @@ This skill helps economists clean, transform, and prepare datasets for analysis 
 - Creating analysis-ready panel datasets
 - Documenting data transformations for replication
 
+## Operating Modes
+
+- `audit_only` (pipeline default): inspect schema, grain, keys, time coverage, missingness, merge expectations, treatment paths, variable domains, and sample funnel. Do not drop, replace, impute, winsorize, save datasets, or overwrite data; writing the Data Contract and audit log is required.
+- `cleaning`: apply only transformations justified in an approved cleaning plan. Never overwrite raw data; write to a versioned or explicitly authorized output path.
+
+In `run-empirical-research` Stage 1, use `audit_only` and return a **Data Contract** containing source paths, unit and time grain, keys, coverage, missingness, merges, sample funnel, variable dictionary, integrity failures, and the reproducible build path.
+
 ## Instructions
 
 ### Step 1: Understand the Data
 
-Before generating code, ask the user:
+Inspect supplied files and existing code before asking. Resolve these fields:
 1. What is the data source? (survey, administrative, API, etc.)
 2. What is the unit of observation?
 3. What are the key variables needed for analysis?
@@ -103,9 +110,8 @@ rename q3 education_level
 * Replace missing value codes with .
 mvdecode age income_reported, mv(-99 -88 -77)
 
-* Cap outliers at 99th percentile
-qui sum income_reported, detail
-replace income_reported = r(p99) if income_reported > r(p99) & !mi(income_reported)
+* Apply outlier handling only when the cleaning plan authorizes it.
+* Do not infer a winsorization rule from the distribution alone.
 
 * --- Clean string variables ---
 * Standardize state names
@@ -209,12 +215,14 @@ log close
 ### Software
 - Stata 15+ (some commands require newer versions)
 
-### Recommended User-Written Commands
+### Optional User-Written Commands
 ```stata
-ssc install unique     // For unique value checking
-ssc install mdesc      // For missing data patterns
-ssc install labutil    // For label manipulation
+which unique
+which mdesc
+which labutil
 ```
+
+If a dependency is missing, report it and ask before installation when installation is not already authorized. Never use unconditional `ssc install ..., replace` in a reusable template.
 
 ## Best Practices
 

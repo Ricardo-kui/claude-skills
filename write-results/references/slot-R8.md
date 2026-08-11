@@ -52,26 +52,6 @@ To unpack the underlying cognitive process, we measured [mediator] and ran a med
 - 若理论预测机制对两组都成立但实证只对一组成立，Discussion **必须解释**（不能只报数字），通常指向两组认知路径的质性差异
 - "PROCESS model 4 分别跑两组" 与 "moderated mediation (model 7/8/14)" 不同——本变体是分组跑 mediation 后描述性比较，非正式的 moderated-mediation 检验；若要正式检验"中介是否跨组不同"，应用 moderated mediation 而非分组对比
 
-**双机制旁证检验（pipes + prisms 各一条 operationalization）**（li_narayanan_2026_jscm 型）： 🔬 EXPERIMENTAL（1 篇范文）— 当 Theory 主张 cash-flow + impression 双通道收敛于同一 spillover DV，但无正式 mediation 模型时
-
-```text
-This study also tested the mechanisms underlying the [spillover effect] (i.e., [cash-flow mechanism label] and [impression mechanism label]). To test the [cash-flow mechanism], [analyst/other expectation data] were collected from [database], as [proxy rationale]. Specifically, [cash-flow construct] reflects [operationalization, e.g., number of analysts who downgraded sales/EPS forecasts following the event]. Because [data frequency constraint], [aggregation rule]. As [Table_reference] shows, [recall intensity / event severity] is positively related to [downgrade count] over the next [period]. The results confirm the [cash-flow mechanism], indicating that [events] lowered [market actors]' expectations of [third-party] [performance metrics].
-
-The [impression mechanism] was tested by examining [negative media / sentiment measure] of the [third-party actor] following [events]. Specifically, this effect was measured as [operationalization with time window]. Data were collected from [database]. The results ([Table_reference]) indicate that [negative coverage measure] after the event is positively related to [event severity proxy, e.g., focal firm value loss]. These results confirm the [impression mechanism], indicating that [focal events] negatively affect [stakeholders]' impression of [third-party actors].
-```
-
-**关键特征**:
-- **两机制各用不同数据源 operationalize**：I/B/E/S analyst downgrades → cash flow；RavenPack negative media → impression——与 Theory pipes/prisms 一一对应
-- **非正式 mediation**：报告关联检验 + "confirm the [mechanism]" 语言，不伪造 Baron-Kenny 路径——诚实边界是 **corroborating** 而非 **identifying**
-- **severity 作 impression 检验的 IV**：OEM firm value loss 作 recall severity——把 event study 主结果链接到机制表
-
-**适用**: 双机制主效应（H1）已有 event study 支持；机制检验为 post hoc / supplemental；供应链溢出、危机传播；JSCM/JOM
-
-**禁忌**:
-- 不能说 "mediation" 或 "causal mechanism identified"——除非有正式中介模型
-- 两机制检验须分开成段，各报一张附录表——不能合并为一个 omnibus test
-- analyst 数据若为月度聚合，须在 Methods 说明频率约束（本文 recall intensity 按月聚合）
-
 **观察面板中介：Baron-Kenny 步骤 + Bootstrap CI + 间接效应占比 + 工具变量中介变体**（Lee & Wang 2026 型）： ✓ STANDARD 候选 — 适用于观察性面板 OLS/FE 中的中介检验，需要回应"中介本身内生"的审稿质疑
 
 ```text

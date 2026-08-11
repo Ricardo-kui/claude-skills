@@ -39,14 +39,13 @@
   - Incommensurability 版本: "A consensus is building that [dominant view] ([citations]). Yet [counter-evidence], suggesting that [alternative view] may be [more accurate / incomplete]."
 [问题对应]: Dorobantu Q — "What is missing in prior research? What are its limitations?"
 [对应语料库]: ../../write-introduction/academic-writing-corpus/tensions/01-despite-progress-unaddressed.md
-[治理动作]: NONE / REUSE / EXTEND_SOURCE / ADD_REFERENCE / PROPOSE_VARIANT
-[最近邻资产 ID]: "[由 introduction_asset_catalog.py 返回的稳定 ID]"
-[若合并将损失的生成能力]: "[必须是可迁移写作决策；答不出则 REUSE/EXTEND_SOURCE]"
-[变体类型名]: "[仅 ADD_REFERENCE/PROPOSE_VARIANT：描述说服动作，不以领域名词制造类别]"
-[原文锚定句]: "[仅作证据，不作为可复用模板长句]"
-[来源段落]: "[作者_年份 (期刊), P段落号]"
-[适用情境]: "[路由、证据载体、actor/层级/时间结构等边界]"
-[使用禁忌]: "[真实性边界与最直接误用风险]"
+[入库动作]: none / append_variant / create_new_file
+[变体类型名]: "[如入库动作为 append_variant，给新变体起一个描述性名称，如'制度冲突型（lehman2014型）']"
+[原文锚定句]: "[如入库动作非 none，提取原文中能代表该变体的 1-2 个关键句，供 Phase 4.6 写入 corpus 文件]"
+[来源段落]: "[如入库动作非 none：作者_年份 (期刊), P[段落号]——从 Phase 1 module_map 的 paragraph_range 提取]"
+[关键特征列表]: "[如入库动作非 none：列出 2-4 个使该变体与已有变体不同的特征。每个特征一个短句，聚焦说服机制和标志性语言，如'用 regulatory shock 而非 efficiency logic 建立共识'、'以问题收束双段而非在同一段内完成转折']"
+[适用情境]: "[如入库动作非 none：什么研究情境下选这个变体而非其他变体？如'适用于有具体监管事件/政策冲击的研究场景'、'Incommensurability × Constructs 组合；ASQ 标志性双段 Hook 结构']"
+[使用禁忌]: "[如入库动作非 none：使用该变体时的注意事项，如'不要在没有充分文献回顾的情况下使用'、'反例必须有具体数据/案例支撑']"
 
 # Prose Craft 标注（Ch03）—— 新增于 v2.1.0
 [prose_craft]:
@@ -78,38 +77,38 @@
 
 ### 语料库感知比对（Corpus-Aware Comparison）
 
-> **核心原则**：先运行 `introduction_asset_catalog.py list-variants --parent <parent_id> --include-all`。新增是最后选项；单篇差异默认只扩展来源或增加 reference，不自动进入生成菜单。
+> **核心原则**：在标记 `[入库动作]` 之前，必须读取目标 corpus 文件，将新骨架与已有变体逐一比对。不读文件就标记"新变体" = 可能重复入库。
 
 **比对流程**：
 
-1. **定位父策略**：根据 `[对应语料库]` 得到稳定 `parent_id`。父策略不存在时只输出 `PROPOSE_ROUTING_CHANGE` 审核包，不直接创建文件。
+1. **定位目标文件**：根据 `[对应语料库]` 字段确定目标 corpus 文件路径
+   - 如果该路径的文件**不存在** → 这是一个全新模板，`[入库动作]` = `create_new_file`，跳过后续步骤
+   - 如果文件**存在** → 进入步骤 2
 
-2. **检索已有资产**：先看最多 5 个代表性 reference；只有无法判定最近邻时才读取全部历史实例。
+2. **读取已有变体**：读取目标 corpus 文件，提取所有已有变体的句法模板（`**模板**:` 后的文本）
 
-3. **能力比对**：比较新骨架与最近邻，而不是计算句法百分比。
+3. **逐变体相似度比对**：将新提炼的骨架（`[骨架]` 字段）与每个已有变体的句法模板进行功能相似度比较。比对标准（按优先级）：
 
    | 比对维度 | 权重 | 判断方法 |
    |---------|------|---------|
    | **说服动作** | 最高 | 两个变体完成的是否为同一说服动作？（如都在做"共识建立→反例颠覆"） |
-   | **证据载体** | 高 | 是否要求不同来源类型、actor、层级、时间或比较结构？ |
-   | **逻辑转折** | 高 | 共识→遗漏、共识→反例、双流→交叉等关系是否真正不同？ |
-   | **句法/领域填充** | 低 | 句式、行业、事件、数字不同本身不构成新能力。 |
+   | **句法结构** | 高 | 核心句式是否同构？（如都是 "According to X... In reality, however..."） |
+   | **槽位类型** | 中 | 占位符的类型和数量是否接近？（如都有 [consensus] + [anomaly] + [resolution hint]） |
+   | **措辞层面** | 低 | 具体用词是否雷同？（措辞相似不重要——功能相似才重要） |
 
-4. **判定治理动作**：
+4. **判定入库动作**：
 
-   | 比对结果 | `[治理动作]` | 说明 |
+   | 比对结果 | `[入库动作]` | 说明 |
    |---------|-------------|------|
-   | 完全覆盖 | `REUSE` | 不写 corpus，记录最近邻 |
-   | 同一能力、增加跨论文证据 | `EXTEND_SOURCE` | 幂等追加来源，不新增编号 |
-   | 单篇但具有有用类比 | `ADD_REFERENCE` | 保持 reference_exemplar，不进默认菜单 |
-   | 合并会损失明确的可迁移决策能力 | `PROPOSE_VARIANT` | 只生成审核候选；通过证据门槛后另行 PROMOTE |
-   | 只涉及领域词、案例、数字或句法 | `NONE` | 不新建资产 |
+   | 与某个已有变体功能相似度 ≥ 70% | `none` | 该骨架已被 corpus 覆盖——记录匹配到的变体编号（如"匹配已有变体 C"） |
+   | 与所有已有变体功能相似度 < 70% | `append_variant` | 这是已有 canonical_id 的新变体——填写 `[变体类型名]` 和 `[原文锚定句]` |
+   | 目标文件不存在（新 canonical_id） | `create_new_file` | 这是 corpus 中没有的全新模板——还需填写 `[变体类型名]` |
 
-   若父策略已有 5 个 active generative variants，任何 `PROPOSE_VARIANT` 必须同时给出 merge/replacement 方案。Incommensurability 的 L3 paper signature 强制 NONE/ADD_REFERENCE；L2 tactic 未改变说服动作时使用 EXTEND_SOURCE。
+   对 Incommensurability 增加一项覆盖规则：若差异只来自 L3 paper signature，强制 `none`；若是 L2 tactic 但说服动作未改变，匹配最近变体并记录确认性证据，不新建 subtype。
 
 5. **记录比对证据**：在 Phase 2.2 输出中附一句比对摘要（不输出给用户，供 Phase 4.6 使用）：
    ```
-   [比对摘要]: 最近邻 hooks:03-data-shock:vC；差异仅为行业事件与数字 → REUSE
+   [比对摘要]: 与已有变体 C（效率逻辑→现实反驳型）说服动作重叠但句法结构不同（本变体用 regulatory shock 而非 efficiency logic 建立共识）→ append_variant
    ```
 
 **必须记录的信息**：
@@ -119,9 +118,16 @@
 - Gap 变体（同类骨架在不同 Gap 类型中的改写模式）
 - **问题对应**：该骨架回答 Dorobantu et al. (2024) 研究设计问题链中的哪个问题
 - **对应语料库**：如该骨架与 `../../write-introduction/academic-writing-corpus/` 中的 canonical 模板对应，标注路径
-- **治理动作**：默认 `NONE`/`REUSE`/`EXTEND_SOURCE`；单篇独特实例最多 `ADD_REFERENCE`；`PROPOSE_VARIANT` 不自动晋升。
-- **最近邻与能力损失**：所有非 NONE 动作必须填写稳定资产 ID；ADD_REFERENCE/PROPOSE_VARIANT 必须具体说明合并会损失的能力。
-- **证据与边界**：记录来源段落、可迁移功能、适用边界和禁忌；原文锚点只用于核验，不复制为模板。
+- **入库动作**：
+  - `none` = 该骨架已被已有变体覆盖，无需入库（默认值）
+  - `append_variant` = 该骨架是已有 canonical_id 的新变体，Phase 4.6 将追加到对应 .md 文件
+  - `create_new_file` = 该骨架属于 corpus 中不存在的全新 canonical_id，Phase 4.6 将创建新 .md 文件
+- **变体类型名**（仅 `append_variant`/`create_new_file` 时填写）：给新变体起一个描述性名称，格式为 "[变体中文描述]（[来源论文]型）"，如 "监管冲击型（darby2024型）"
+- **原文锚定句**（仅 `append_variant`/`create_new_file` 时填写）：提取原文中能代表该变体的 1-2 个关键句，保留原文措辞，供 Phase 4.6 写入 corpus 文件的 `**原文锚定**` 字段
+- **来源段落**（仅 `append_variant`/`create_new_file` 时填写）：从 Phase 1 `module_map.[module].paragraph_range` 提取。格式：`作者_年份 (期刊), P[段落号]`。供 Phase 4.6 写入 `**来源**` 字段
+- **关键特征列表**（仅 `append_variant`/`create_new_file` 时填写）：2-4 个短句，每个聚焦一个使该变体**与已有变体不同**的特征。聚焦说服机制和标志性语言——不重复模板本身的描述。供 Phase 4.6 写入 `**关键特征**` 字段
+- **适用情境**（仅 `append_variant`/`create_new_file` 时填写）：1-2 句说明什么研究情境下选这个变体而非其他变体。包括 Gap×Contribution 组合偏好、期刊适配、数据/方法前提。供 Phase 4.6 写入 `**适用**` 字段
+- **使用禁忌**（仅 `append_variant`/`create_new_file` 时填写）：1-2 句说明使用该变体时的注意事项。如 Phase 2.4 批评家发现了已知风险，优先记录。如无已知禁忌，填写 "暂无"。供 Phase 4.6 写入 `**禁忌**` 字段
 
 ### 2.3 Rhetorical Logic 提炼
 
@@ -147,16 +153,14 @@ phase_2_distillation:
         gap_variants: ["Inadequacy 版本", "Incommensurability 版本"]
         dorobantu_question: "Why is this puzzle important?"
         corpus_path: "../../write-introduction/academic-writing-corpus/hooks/06-paradigm-challenge.md"
-        governance_action: "NONE / REUSE / EXTEND_SOURCE / ADD_REFERENCE / PROPOSE_VARIANT"
-        nearest_neighbor_id: "hooks:06-paradigm-challenge:vA"
-        capability_loss_if_merged: "[NONE，或具体的可迁移决策能力]"
-        variant_name: "[仅 ADD_REFERENCE/PROPOSE_VARIANT]"
-        original_anchor: "[仅作证据核验]"
-        source_location: "darby2024 (MSOM), P2"
+        enrichment_action: "none / append_variant / create_new_file"
+        variant_name: "[如 append_variant: '监管冲击型（darby2024型）']"
+        original_anchor: "[如 append_variant: '原文关键句...']"
+        source_location: "[如 append_variant: 'darby2024 (MSOM), P2']"
         key_features: ["[特征1]", "[特征2]", "[特征3]"]
-        applicability: "[路由与证据前提]"
-        taboos: "[真实性边界]"
-        comparison_summary: "[最近邻 + 能力裁决 + 治理动作]"
+        applicability: "[如 append_variant: '适用于有具体监管事件/政策冲击的研究场景']"
+        taboos: "[如 append_variant: '反例必须有具体数据/案例支撑']"
+        comparison_summary: "[如 append_variant: '与已有变体 C 说服动作重叠但句法结构不同 → append_variant']"
     rhetorical_logic:
       audience_alignment: "..."
       puzzle_gap_rq_layering: "..."

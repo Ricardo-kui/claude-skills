@@ -1,5 +1,4 @@
 interface:
-  display_name: Empirical Writeup
-  short_description: Turn analysis output into journal-ready evidence.
-  default_prompt: Use $empirical-writeup when empirical outputs need methods, results,
-    tables, and figures.
+  display_name: "Empirical Evidence Packager"
+  short_description: "Package verified results and bound downstream claims"
+  default_prompt: "Use $empirical-writeup to turn verified outputs into an Evidence Packet and route tables, figures, and prose."

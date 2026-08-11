@@ -20,7 +20,7 @@
 |------|----------|---------|---------|------|
 | **L1: 索引级注册** | Phase 0 | 论文已有 Pollock 对齐标注（如 MVP30 索引中的 Gap 类型、Hook 描述、Conversation 策略）且无新型骨架 | 5 分钟 | Phase 0 combo profile + 注册表 paper 列表更新 |
 | **L2: 骨架提取** | Phase 0→1→2→2.4 | 论文包含现有 corpus 未覆盖的句式模式，或需要确认索引推断的 Hook→canonical_id 映射 | 20-30 分钟 | Fine-Grained Profile（精简版）+ 新骨架 + 注册表确认 |
-| **L3: 完整蒸馏** | Phase 0→1→1.5→2→2.4→3→4→4.5→5 | 论文引入了新型 Gap×Contribution 组合、新型模块排列、或具有教学价值的叙事结构 | 30-60 分钟 | 完整 Fine-Grained Profile + governed action plan；仅在 dry-run 与审核后更新注册表 |
+| **L3: 完整蒸馏** | Phase 0→1→1.5→2→2.4→3→4→4.5→5 | 论文引入了新型 Gap×Contribution 组合、新型模块排列、或具有教学价值的叙事结构 | 30-60 分钟 | 完整 Fine-Grained Profile + corpus_enrichment 块 + 注册表自动更新 |
 
 ## Phase 0.5 — Story-Fidelity Gate
 
@@ -37,7 +37,7 @@
 - 如果论文的 `narrative_structure` 为"螺旋深入"或"范式颠覆"（非标准线性收缩）→ 建议 L3
 
 **L1 快速通道**：
-MVP30 索引已对 28 篇论文完成 Pollock 对齐标注。L1 只生成 REUSE/EXTEND_SOURCE 计划，不直接编辑 registry；映射不确定或出现新的可迁移说服能力时才升级到 L2/L3，并仍通过治理门控。
+MVP30 索引已对 28 篇论文完成 Pollock 对齐标注。这些论文可以直接通过 L1 注册到 `_evidence_registry.yaml`——提取其 Gap 类型和 Hook 描述，映射到 canonical_id，更新注册表的 paper_count。只有当 L1 映射不确定或论文包含明显的新型句式时，才升级到 L2。
 
 ## 调用方式
 
@@ -197,9 +197,9 @@ phase_0_combo_profile:
 |---------|---------|
 | 该 Gap×Contribution 组合已有 ≥5 篇论文 | 默认 L2 起步——优先识别新变体而非重复已知模式 |
 | 该组合仅有 1-2 篇论文 | 默认 L3——论文对 corpus 扩展价值高 |
-| 论文的 Hook 类型在 corpus 中无对应 canonical_id | 自动升级到 L3——只生成 PROPOSE_ROUTING_CHANGE 审核包 |
+| 论文的 Hook 类型在 corpus 中无对应 canonical_id | 自动升级到 L3——可能需要 create_new_file |
 | 论文的 Tension 措辞在已有变体中无相似匹配 | Tension 模块升级到 L3 精度 |
 
-**注意**：如果 `_evidence_registry.yaml`、catalog 或 snapshot 不可用，停止 writeback 并报告治理错误。允许继续完成只读蒸馏报告，但不得回退到静态表执行入库。
+**注意**：如果 `_evidence_registry.yaml` 或索引文件不存在，回退到 SKILL.md 内嵌的决策表（即 Phase 0 和 Phase 2.2 的静态知识），不中断蒸馏。
 
 ---

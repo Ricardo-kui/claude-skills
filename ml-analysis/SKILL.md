@@ -7,13 +7,13 @@ description: Structure machine-learning workflows for empirical research. Use wh
 
 ## Overview
 
-Use this skill as the planning and governance layer for ML work in empirical projects. It does not assume a dedicated installed ML executor; instead, it forces a clean workflow around target definition, splits, baselines, validation, and interpretation before coding.
+Use this skill as the planning and governance layer for ML work in empirical projects. It locks target definition, splits, baselines, validation, and interpretation before `empirical-pipeline-python` executes the Analysis Manifest.
 
 ## Current Stack Reality
 
 - `exploratory-data-analysis`: first pass on unfamiliar data files
 - `jupyter-notebook`: use when the deliverable should be a notebook
-- `python-panel-data`: use when panel indexing, aggregation, or FE-style preprocessing is central
+- `empirical-pipeline-python`: execute the locked ML Analysis Manifest when Python is requested or already owns the project
 - `empirical-writeup`: use after metrics, plots, and interpretation are stable
 - `econometrics-agent`: use only for its supported econometric or propensity-score tasks, not as a general ML engine
 
@@ -26,6 +26,14 @@ Use this skill as the planning and governance layer for ML work in empirical pro
 - split rule
 - evaluation metric
 - desired output: score, ranking, class, forecast, feature importance, or benchmark table
+
+## Pipeline Contracts
+
+At Stage 2, produce an **ML Design Packet** with the prediction point, label horizon, target population, unit, feature-availability boundary, split logic, primary metric, untouched holdout policy, leakage risks, and noncausal claim ceiling.
+
+At Stage 3, produce an **ML Analysis Manifest** with the Data Contract path and hash, runtime, environment, data-build path, feature pipeline, benchmark ladder, tuning budget, threshold or decision rule, calibration plan, error-slice plan, output paths, and deviations policy.
+
+Do not merge these contracts: the executor may tune implementation choices inside the manifest but may not redefine the prediction target or holdout policy.
 
 ## Standard Workflow
 
@@ -71,6 +79,7 @@ Use this skill as the planning and governance layer for ML work in empirical pro
 - out-of-sample metrics
 - error analysis notes
 - figure list for `empirical-writeup`
+- or an ML Delivery Handoff when the endpoint is an operational model rather than a paper
 
 ## Reference
 

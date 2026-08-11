@@ -19,7 +19,7 @@
 
 1. **来源与时间窗**:哪个库、哪几年、为什么这个窗口(剔除危机年/疫情年要有故事,见 xianzhu-skill 的 `robustness-levers.md`)。
 2. **行级过滤**:每条 `keep if` / `drop if` 及其理由 + 剔除前后 N。
-3. **合并键**:`merge` 用 `assert(using==3)` 或 `assert(using==1)` 防止 m:m 错合并;记匹配率。
+3. **合并键**:先 `isid` 验证双方键;按预期使用 `merge 1:1`、`m:1` 或 `1:m`,并以有效的 `assert(match master using)` 子集约束实际结果;禁止 `m:m`;记录各类匹配率。
 4. **缺失处理**:`misstable` 报告;是列删(listwise)、插补还是保留,要写清。
 5. **面板平衡性**:`xtset` 后用 `xtdescribe` 看覆盖;平衡面板 vs 非平衡要说明。
 
@@ -31,8 +31,8 @@ isid firm_id year
 misstable sum y x controls
 * 3. 时间连续性(或记录缺口)
 xtset firm_id year
-* 4. 处理变量在样本期内变异
-tabstat x, by(firm_id) stat(min max sd)   // 截面无变异的删掉
+* 4. 诊断处理变量在样本期内的变异;不要自动删除无组内变异单元
+tabstat x, by(firm_id) stat(min max sd)
 * 5. 样本量与论文一致
 count
 ```
@@ -53,5 +53,5 @@ $$y_{it} = \beta \, x_{it} + \gamma' Z_{it} + \mu_i + \tau_t + \varepsilon_{it}$
 **3. 威胁预判**:列出 2–3 个最可能的识别威胁,并在 Step 6 稳健性箱里**事先**对应解决(例:自选择 → Heckman;平行趋势 → 事件研究 + honestdid;少聚类 → wild bootstrap)。
 
 ## 与其它栈的衔接
-- 方程与识别策略的**设计取舍**(选 DiD 还是 IV)由 `causal-analysis` 定;本步是把它**写下来**并接入 Stata。
+- 方程与识别策略的**设计取舍**(选 DiD 还是 IV)由 `huntington-klein-causal-design` 锁定;`causal-analysis` 只把它转成 Analysis Manifest;本步负责在 Stata 执行链中验证契约。
 - 样本清洗的**深度语法**见 `stata-data-cleaning`;本步只讲契约与留痕。

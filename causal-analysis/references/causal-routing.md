@@ -2,11 +2,13 @@
 
 ## Design To Skill
 
-- `staggered did / event study` -> `did-analysis` first, then `r-econometrics` or `stata`
+- `staggered did / event study, Stata default` -> `staggered-did`
+- `staggered did / event study, explicit R` -> `did-analysis`
+- `complete locked Stata design` -> `empirical-pipeline-stata`
 - `quick local baseline or sweep` -> `econometrics-agent`
-- `iv / rdd in r` -> `r-econometrics`
+- `iv / rdd in explicit R` -> no dedicated installed executor; keep execution blocked until the runtime changes to Stata or a dedicated R executor is installed or created and validated
 - `stata package workflow` -> `stata`
-- `python-native panel pipeline` -> `python-panel-data`
+- `python-native full pipeline` -> `empirical-pipeline-python`
 
 ## Minimum Spec Grid
 
@@ -17,11 +19,8 @@
 - controls
 - clustering
 - baseline sample
+- diagnostics, falsification tests, and stop rules
 
-## Verification Checklist
+## Handoff boundary
 
-- sample N matches expectation
-- coefficient sign and scale are interpretable
-- SE and clustering are explicit
-- one robustness lane is completed before major expansion
-- headline result reproduced in a second script or environment when feasible
+End after the Analysis Manifest. `run-empirical-research` owns execution and routes post-run implementation verification to `review-code` and methodological verification to `check-methodology`.

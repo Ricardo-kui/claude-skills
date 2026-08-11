@@ -6,7 +6,7 @@
 
 ## 批量模式上下文管理（Incremental Batch Strategy）
 
-> **路径基准**：本文件中 `academic-writing-corpus/...` 路径指兄弟技能 `write-introduction` 的语料库；所有 writeback 通过其 `scripts/introduction_corpus_governance.py`，`protocols/...` 相对路径以本 SKILL.md 所在目录为基准。
+> **路径基准**：本文件中 `academic-writing-corpus/...` 路径指**兄弟技能** `write-introduction` 的语料库，即 `../write-introduction/academic-writing-corpus/...`（与 `_update_registry.py` 的路径解析一致）；`protocols/...` 等相对路径以本 SKILL.md 所在目录为基准。
 
 > **问题**：30 篇论文 × 每篇 7 个模块的骨架 → 上下文窗口无法同时持有。Phase 4 跨论文聚合不能依赖内存中的数据。
 > **方案**：每篇论文蒸馏完成后，将其**轻量摘要**持久化到 `academic-writing-corpus/_batch_state.yaml`。Phase 4 只读取这个摘要文件做聚合，不依赖上下文中的原始蒸馏数据。
@@ -127,7 +127,7 @@ design_feedback_accumulator:
 | 单篇蒸馏（Phase 0→2.4） | 1 篇 | 完整 Introduction 文本 + 完整骨架 |
 | 检查点写入 | 1 篇 | 轻量 YAML 摘要 + 紧凑设计观察 |
 | Phase 4 聚合 | 0 篇原始数据 | 仅读取 `_batch_state.yaml`（30 篇 × 15 行 = 450 行 YAML，远低于上下文限制） |
-| Phase 4.5/4.6 入库 | 0 篇原始数据 | 基于 Phase 4 聚合 `governance_plan`，经 dry-run 与审核 |
+| Phase 4.5/4.6 入库 | 0 篇原始数据 | 基于 Phase 4 聚合输出 + corpus_enrichment |
 
 **安全原则**：Phase 4 聚合**永远不**同时持有原始蒸馏数据。如果 `_batch_state.yaml` 不存在或不完整，先运行单篇蒸馏补全，再运行 Phase 4。
 

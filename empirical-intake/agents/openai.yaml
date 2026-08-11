@@ -1,5 +1,4 @@
 interface:
-  display_name: Empirical Intake
-  short_description: Clarify design, data, and success criteria.
-  default_prompt: Use $empirical-intake when an empirical project needs structured
-    intake before analysis.
+  display_name: "Empirical Intake"
+  short_description: "Create an execution-ready empirical Intake Packet"
+  default_prompt: "Use $empirical-intake to clarify an empirical project and produce its Intake Packet before design or execution."

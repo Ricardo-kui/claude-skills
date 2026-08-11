@@ -7,7 +7,7 @@ cross_paper: EMERGING
 generativity: GENERATIVE
 exclusivity: HIGH
 source_papers:
-  - li_bapuji_talluri_singh_venkataraman_2026_pom (POM, 2026): "WEIRD-bound geographical-distance→quality-risk prediction reversed/offset in non-WEIRD (Chinese) context via institutional-gradient direction"
+  - li_bapuji_talluri_singh_venkataraman2026 (POM, 2026): "WEIRD-bound geographical-distance→quality-risk prediction reversed/offset in non-WEIRD (Chinese) context via institutional-gradient direction"
 created: 2026-07-22
 source: Distilled by distill-introduction-exemplar from Li, Bapuji, Talluri, Singh & Venkataraman (2026), POM
 ---
@@ -35,7 +35,7 @@ source: Distilled by distill-introduction-exemplar from Li, Bapuji, Talluri, Sin
 ## 验证状态
 
 ### 跨论文复现
-- **EMERGING** (1 paper): li_bapuji_talluri_singh_venkataraman_2026_pom (POM)
+- **EMERGING** (1 paper): li_bapuji_talluri_singh_venkataraman2026 (POM)
 - WEIRD-generalizability 是跨 field 增长议程（心理学 Arnett 2008、管理 Barkema 2015、IB），多 source 后可升 VERIFIED
 
 ### 生成力
@@ -48,7 +48,7 @@ source: Distilled by distill-introduction-exemplar from Li, Bapuji, Talluri, Sin
 
 ## 句法模板
 
-### 变体 A：制度梯度方向反转型（li_venkataraman_2026_pom 型）
+### 变体 A：制度梯度方向反转型（li2026 型）
 
 **模板**:
 > "Prior empirical research on [topic] has predominantly been conducted in [WEIRD / developed-market] contexts ([citations]). In these settings, [core WEIRD-bound finding] because [mechanism A]. However, this prediction may not generalize to [non-WEIRD / emerging-market] settings. [In WEIRD contexts, focal firms [source down the institutional gradient — e.g., to weaker-institution suppliers], so [mechanism A produces the predicted effect]]. In contrast, [in non-WEIRD contexts, focal firms [source up the institutional gradient — e.g., to stronger-institution suppliers], so [the same variable's effect is reversed / offset by an opposing force]]. By failing to consider differences in [institutional context] between [WEIRD] and [non-WEIRD] countries, research on [topic] risks generating erroneous implications for theory and practice. We examine [topic] in [non-WEIRD context] to [test the generalizability / reveal the context-dependence] of [WEIRD-bound prediction]."
@@ -56,7 +56,7 @@ source: Distilled by distill-introduction-exemplar from Li, Bapuji, Talluri, Sin
 **原文锚定**:
 > "prior empirical research on supply chain geographical complexity has mostly been conducted in research contexts that are Western, educated, industrialized, rich, and democratic (WEIRD; Henrich et al. 2010). Firms from WEIRD countries source down the institutional gradient and thus geographical distance increases risks for firms (Steven and Britto 2016). However, similar risks may not affect firms from non-WEIRD countries if they source up the institutional gradient or source from a combination of domestic and foreign suppliers from WEIRD countries. By failing to consider differences in institutional contexts between WEIRD and non-WEIRD countries, research on supply chain geographical complexity risks generating erroneous implications for theory and practice."
 
-**来源**: li_bapuji_talluri_singh_venkataraman_2026_pom (POM), §1 P3
+**来源**: li_bapuji_talluri_singh_venkataraman2026 (POM), §1 P3
 
 **关键特征**:
 - **机制层差异，不是 sampling gap**: WEIRD 样本不是缺口本身——缺口是 WEIRD-bound 的因果机制在非 WEIRD 语境下可能不成立。"source down vs up the institutional gradient" 是标志句
@@ -64,7 +64,7 @@ source: Distilled by distill-introduction-exemplar from Li, Bapuji, Talluri, Sin
 - **风险升级**: "risks generating erroneous implications" —— 把 gap 从"值得补充"升级为"不加检验会产生错误理论/实践建议"
 - **可配 "asset of foreignness" / 制度替代逻辑**: 强制度供应商环境可替代买方监督（liability → asset）
 
-**适用**: 任何 field 中证据集中在 WEIRD/发达市场、但能论证同一机制在新兴市场因制度/文化/市场结构差异而方向或强度不同的研究。li_venkataraman_2026_pom POM（地理距离→质量风险）；可迁移到 IB、战略、组织、营销的"context-sensitive theorizing"议程。
+**适用**: 任何 field 中证据集中在 WEIRD/发达市场、但能论证同一机制在新兴市场因制度/文化/市场结构差异而方向或强度不同的研究。li2026 POM（地理距离→质量风险）；可迁移到 IB、战略、组织、营销的"context-sensitive theorizing"议程。
 
 **禁忌**:
 - 必须论证"**为何非 WEIRD 不同**"（机制层），不能只说"prior research used WEIRD samples"（那只是 sampling gap → 用 Incompleteness 01）
@@ -78,7 +78,7 @@ source: Distilled by distill-introduction-exemplar from Li, Bapuji, Talluri, Sin
 ### 必须配对
 - **与 `write-methods` slot-M3「context-customized DV / measurement」配对**: 非 WEIRD 研究不能直接照搬 WEIRD 的测量（如 product recall 在弱制度语境下被低估 → 用 consumer complaints；观测窗口随语境调校）。gap 声称语境不同，methods 就必须相应调校测量
 - **与 "context as theoretically consequential" contribution 配对**: Discussion/Contribution 须显式把"empirical context"从背景条件提升为理论变异来源
-- **与 posthoc moderator that reveals the offsetting force 配对** (write-results R6): 若主效应在非 WEIRD 为 null/反转，须用一个揭示抵消力的 posthoc moderator 解释（如 li_venkataraman_2026_pom: supplier-country regulatory quality moderates distance→risk，解释 H1 null）
+- **与 posthoc moderator that reveals the offsetting force 配对** (write-results R6): 若主效应在非 WEIRD 为 null/反转，须用一个揭示抵消力的 posthoc moderator 解释（如 li2026: supplier-country regulatory quality moderates distance→risk，解释 H1 null）
 
 ### 互斥
 - **不能与单纯 Incompleteness (01-despite-progress) 同用**: 若只是"缺非 WEIRD 样本"而无机制差异论证，用 01；本模板要求机制层差异

@@ -33,7 +33,7 @@
 
 ## 与外部 Skill 的接口
 
-- **`write-introduction`** — 两层接口：(1) Phase 4 `governance_plan` → dry-run → 审核后由事务治理更新 `_evidence_registry.yaml` 与 corpus；(2) `skill_design_feedback` → 缺陷证据账本。风格观察保留在蒸馏报告，直到存在可消费的治理接口。Phase 6 即时 QC 可生成 `RECORD_VALIDATION`，由 catalog 汇总为健康警示；它不自动改变路由或核心规则。
+- **`write-introduction`** — 两层接口：(1) Phase 4 `corpus_enrichment` YAML 块 → Phase 4.5 → `_evidence_registry.yaml`（自动更新定量证据）；(2) Phase 4 `vault_enrichment` → Vault（人工审阅后更新 corpus 定性内容）。Phase 6 即时 QC 接收 write-introduction 的段落功能地图作为参考基准，输出五维评分（含 Prose Craft QC）和修正建议；验证结果存档至 Vault，积累 10+ 次后人工汇总 common_revise_reasons 模式。
 - **`diagnose-introduction`** — Phase 0 的组合分类可作为 diagnose 的验证基准
 - **`intro-review`** — Phase 1.5 的模块覆盖检查可作为 intro-review 的预检清单；Phase 6 的验证报告可作为 intro-review 的预诊断输入
 - **`paper-review`** — Rhetorical Logic Map 可用于跨 section 对齐检查（Introduction 承诺 vs Discussion 兑现）

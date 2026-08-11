@@ -10,7 +10,7 @@
 
 | 标准 | 问题 | 淘汰门槛 |
 |------|------|----------|
-| **跨论文复现** | 这个模块写法是否在多个顶刊范文中出现？ | 只出现 1 次的骨架只能作为 hidden `reference_exemplar`，不得进入默认生成菜单 |
+| **跨论文复现** | 这个模块写法是否在多个顶刊范文中出现？ | 只出现 1 次的骨架降级为 "optional variant" |
 | **生成力** | 它能不能指导一篇新论文组装出对应功能模块？ | 无法填入占位符生成模块的骨架丢弃 |
 | **范式排他性** | 它是不是某类构建类型特别需要？ | 所有构建类型都通用的"废话骨架"（如"Theory is important"）丢弃 |
 | **故事忠实度** | 它是否让 central knot 更紧并保持角色与 storyline 一致？ | `story_fidelity.classification = reject` |
@@ -186,22 +186,20 @@ phase_4_corpus_reference:
     rejected_reasons: ["仅出现1次", "不可生成模块", "通用废话"]
 ```
 
-**关键原则**：Phase 4 同时产生 `governance_plan` 与设计反馈。`section_variant` / `ritual_only` 只能通过 `ADD_REFERENCE` 受控写入 hidden reference corpus；`core_candidate` 先进入设计缺陷注册表。不得直接 append corpus 文件。只有满足 `design-feedback-loop.md` 的证据、授权、风险和双回归门槛，才可做有边界核心修订；schema、stage gate 和高风险变更始终显式审核。治理计划 schema 见 `../protocols/governance_plan_schema.md`。
+**关键原则**：Phase 4 同时产生 reference-corpus 建议与设计反馈。`section_variant` / `ritual_only` 可受控写入 reference corpus；`core_candidate` 先进入设计缺陷注册表。只有满足 `design-feedback-loop.md` 的证据、授权、风险和双回归门槛，才可做有边界核心修订；schema、stage gate 和高风险变更始终显式审核。
 
 **Incommensurability 专属原则**：细分类提高推理比较和架构检索精度，不降低核心规则证据门槛。L2 即使达到 VERIFIED/ROBUST 也默认保持 route-specific optional architecture；只有跨路线复现且通过设计反馈门控的 L0 reasoning function 才可成为普遍核心候选。L3 model signature 永不晋升。
 
-### 证据注册表治理写入（`write-theory/corpus/_evidence_registry.yaml`）
+### 证据注册表回写（`write-theory/corpus/_evidence_registry.yaml`）
 
-当一个模式通过治理计划写入 write-theory corpus（reference-level 变体或经审核的 core candidate）时，`theory_corpus_governance.py` 必须同步登记注册表——语料入库而未登记，等同于模式丢失。以下是治理引擎的职责，不是蒸馏端的手工编辑步骤：
+当一个模式实际写入 write-theory corpus（reference-level 变体或经审核的 core candidate）时，必须同步登记注册表——语料入库而未登记，等同于模式丢失（注册表曾是孤儿文件，2026-07-28 才接线）：
 
-1. **登记资产与来源**：将现有 pattern 的新增来源记录为 `EXTEND_SOURCE`，将单篇新资产记录为 `managed_references`；两者均保留可审计 source identifier。
-2. **定状态**：按 `status_rules` 重新计算有效来源——1–2 = EMERGING，3+ = VERIFIED，5+ 且跨 2 子领域 = ROBUST。`source_tier: auxiliary` 不计入晋升。
-3. **定生成资格**：单篇与双篇资产保持 `reference_exemplar`；达到证据门槛后仍需显式 `PROMOTE`，不能由 status 自动进入生成菜单。
-4. **保留兼容性**：MERGE/DEPRECATE 写入 lifecycle 与 alias；旧 asset ID 必须仍可解析。
-5. **更新 snapshot**：每次成功执行后重算 catalog inventory hash；注册表、正文 asset 和菜单不一致即拒绝提交。
-6. **保留 batch 线索**：`next_batch_targets` 是蒸馏选材提示；引擎不把它当作 evidence，也不凭目标命中自动晋升。
-
-蒸馏端只输出 action；必须先 `apply-plan --dry-run`，再由引擎一次性更新 corpus、registry 与 catalog snapshot。
+1. **登记来源**：在 `source_papers` 下添加论文条目（`作者_年份_期刊` 键），含 display_name / journal / year / subfield / theory_build_type。写作工艺书（非实证论文）额外标注 `source_tier: "auxiliary"`。
+2. **登记 fragment**：每个入库模式一个 `tfr_NNN`（沿用全表最大编号递增），含 type / title / home_files / makadok_dimension / status。
+3. **定状态**：按 `status_rules`——1–2 来源 = EMERGING，3+ = VERIFIED，5+ 且跨 2 子领域 = ROBUST。auxiliary 来源单独永远停在 EMERGING，只登记出处。
+4. **更新 patterns 聚合**：若该模式已有 patterns 条目，追加 source_papers 并升级 status；没有则新建。
+5. **更新 meta**：`last_updated`、`total_papers_indexed`、`batches_processed`，并在 `note` 追加一行批次摘要（蒸馏了哪篇、加了什么模式、有无纠正误分类）。
+6. **检查 `next_batch_targets`**：若新论文命中某个目标模式，更新 current_sources/papers_needed；凑齐即在批次摘要中宣告状态升级。
 
 ---
 
@@ -225,3 +223,14 @@ phase_4_corpus_reference:
 6. 修订后完成 quick validation、结构检查、双回归和隔离前向测试；`applied` resolution 还必须记录目标中可逐字核验的 `rule_excerpt_after`，并在适用时声明旧绝对规则已经消失，之后才可关闭缺陷。
 
 `corpus_enrichment` 回答“需要增加什么写作资产”；`skill_design_feedback` 回答“当前技能规则是否错误”。两者不得互相替代。
+
+## Phase 4 收尾 — 回写后语料体检
+
+回写完成后运行 skills 根目录的体检脚本：
+
+```bash
+PYTHONIOENCODING=utf-8 python ~/.claude/skills/corpus_health_check.py --type theory
+```
+
+- exit 0 = 正常；exit 1 = 存在 critique_heavy 类型——在输出中列出这些类型，作为下一轮蒸馏 REPLACE/EXTEND 的优先级依据。
+- 脚本缺失或运行失败不阻断回写，但必须在输出中声明"体检未执行"，不得静默跳过。

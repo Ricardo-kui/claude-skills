@@ -1,20 +1,20 @@
 ---
 name: did-analysis
 description: >
-  Guides practitioners through modern Difference-in-Differences (DiD) causal
-  inference analysis in R. Provides an expanded modern 5-step workflow with
-  practical extensions: diagnose TWFE problems, select and run
-  heterogeneity-robust estimators (Callaway-Sant'Anna, Sun-Abraham, BJS,
-  Gardner, etc.), conduct power analysis for pre-trends, and perform HonestDiD
-  sensitivity analysis. Use when the user needs help with DiD estimation, event
-  studies, staggered treatment adoption, parallel trends testing, or TWFE
-  diagnostics.
-metadata:
-  author: Xianyang Zhang
-  version: 1.0.0
-  category: statistics
-  tags: [causal-inference, difference-in-differences, econometrics, R]
+  Execute modern Difference-in-Differences analysis in R when the user
+  explicitly requests R. Covers TWFE diagnosis, heterogeneity-robust estimators
+  such as Callaway-Sant'Anna, Sun-Abraham, BJS, and Gardner, pre-trend power,
+  event studies, and HonestDiD sensitivity analysis. Do not select this as the
+  default runtime; use staggered-did for the default Stata lane. Trigger on
+  Callaway-Sant'Anna, Callaway-Sant’Anna, CS-DID, att_gt, or aggte only when R
+  is explicit.
 ---
+
+## Pipeline entry contract
+
+For causal execution, require a locked Design Packet from `huntington-klein-causal-design` and an Analysis Manifest from `causal-analysis`. A named R estimator (`att_gt`, `aggte`, CS-DID) fixes the runtime, not the estimand, comparison group, assumptions, or inference plan. If either artifact is absent, invoke those design/planning stages first; do not estimate and backfill the rationale afterward.
+
+Return R scripts, environment/package versions, logs, diagnostics, estimates, and deviations as the method-specific Run Manifest + Results Inventory.
 
 ## Contents
 - [Progressive Disclosure](#progressive-disclosure)

@@ -232,24 +232,32 @@ promise_fulfillment:
 - **若修正 3-4 项**：建议修正后再次运行 `--validate`
 - **若需更换核心模块**（如 P1 Hook 类型或 Gap 类型）：建议重新运行 `/write-introduction` 生成新组装方案
 
-## 验证反馈受控累积
+## 验证反馈自动回写（增量累积，无需等待 10+ 次）
 
-每次验证都可形成 `RECORD_VALIDATION`，但不得手工修改计数或自动把重复建议提升为规则。
+> **此节替代旧的"人工汇总"流程。** 每次 `--validate` 运行后，验证结果**立即**回写到 `_evidence_registry.yaml`。不再需要等待 10+ 次验证后人工检查——每次验证都在累积数据，模式随数据增长自动浮现。
 
-### 写入步骤
+### 自动回写步骤
 
 1. **提取验证数据**：从 Phase 6 五维评分卡的骨架生成力验证（维度4）和 Prose Craft QC（维度5）中提取每个模板的 verdict：
    - VALIDATED → 模板在此次使用中生效
    - REVISE → 模板部分生效，有修正建议
    - REJECT → 模板在此次使用中失效
 
-2. **生成稳定验证 ID**：使用 `project/date/module`，同一验证重复运行必须幂等。
-3. **生成 actions**：每个父策略一个 `RECORD_VALIDATION`，包含 verdict 与简短 reason。
-4. **治理写入**：先 dry-run，再由 governance 正式写入。重复失败模式只形成审核候选，不自动改变角色、routing 或核心规则。
+2. **更新注册表**：使用 Read 工具读取 `academic-writing-corpus/_evidence_registry.yaml`，定位到每个被评估模板的 `validation_history` 块，使用 Edit 工具做以下增量更新：
+   - `total_runs: N` → `total_runs: N+1`
+   - `validated: N` → `validated: N+1`（VALIDATED）/ `revise: N` → `revise: N+1`（REVISE）/ `reject: N` → `reject: N+1`（REJECT）
+   - 如果 verdict = REVISE 或 REJECT：在 `common_revise_reasons` 列表中追加新的修正建议字符串
+   - **操作方式**：对每个模板，使用 Edit 工具做精确的 `old_string` → `new_string` 替换，只改数字和追加列表项，不动其他内容
+
+3. **模式自动检测**：更新注册表后，检查每个模板的 `common_revise_reasons`：
+   - 相同或高度相似的修正建议出现 **≥2 次** → 自动提升为 `common_failures`
+   - 相似度判断：两个修正建议的核心动作相同（如都在建议"补充具体 Stakes"）
+
+4. **写入注册表**：将更新后的 `_evidence_registry.yaml` 写回文件
 
 ### validation_feedback 硬化输出块
 
-在 Phase 6 验证报告末尾，保留详细 `validation_feedback` 供人工阅读，并额外输出 governance 可消费的 actions：
+在 Phase 6 验证报告末尾，**必须附加**以下结构化 YAML 块。此块可直接被 `_update_registry.py` 消费：
 
 ```yaml
 validation_feedback:
@@ -301,36 +309,23 @@ validation_feedback:
     prose_craft_pass_rate: "[passed/total_checks]"
 ```
 
-对应的机器写入块使用稳定 parent ID：
-
-```yaml
-actions:
-  - action: RECORD_VALIDATION
-    target_asset_id: hooks:06-paradigm-challenge
-    validation_id: "project_slug:2026-08-06:hook"
-    verdict: REVISE
-    reason: "Hook 未建立足以支撑高能量 tension 的反例。"
-```
-
-同一 `validation_id` 重复执行必须幂等。
-
 **validation_feedback 字段说明**：
 
 | 字段 | 用途 | 消费方 |
 |------|------|--------|
-| `per_template_results[].verdict` | 单次验证中每个模板的生效/失效判定 | 转换为 `RECORD_VALIDATION` action |
-| `per_template_results[].revise_suggestion` | 具体修正建议文本 | 作为 action reason；不得自动提升为核心规则 |
+| `per_template_results[].verdict` | 单次验证中每个模板的生效/失效判定 | 写入 `_evidence_registry.yaml` validation_history |
+| `per_template_results[].revise_suggestion` | 具体修正建议文本 | 写入 `validation_history.common_revise_reasons`，≥2 次相似 → 提升为 `common_failures` |
 | `overall_validation.skeleton_generativity_rate` | 本次验证的整体骨架生效比例 | 跟踪 write-introduction 模板质量趋势 |
 
 ### 增量累积 vs 旧的人工汇总
 
 | | 旧设计 | 新设计 |
 |---|--------|--------|
-| **触发门槛** | 10+ 次验证后人工检查 | 每次验证生成受控 action |
-| **数据更新** | 人工读取 Vault 报告 → 手动编辑 YAML | governance dry-run 后事务写入 |
-| **模式检测** | 人工识别 patterns | 累积候选；达到证据门槛后仍需审核晋升 |
+| **触发门槛** | 10+ 次验证后人工检查 | 每次验证自动回写 |
+| **数据更新** | 人工读取 Vault 报告 → 手动编辑 YAML | LLM 在 Phase 6 末尾直接读写 `_evidence_registry.yaml` |
+| **模式检测** | 人工识别 patterns | 自动检测：≥2 次相同 revise_reason → 提升为 common_failure |
 | **适用性** | 需要多用户/大规模数据积累 | 单人单次验证即有反馈——随使用次数增加逐渐精确 |
-| **数据安全** | 无风险（不写注册表） | 幂等追加、临时副本验证与失败回滚 |
+| **数据安全** | 无风险（不写注册表） | 追加式更新——不删除已有数据，仅累积 |
 
 ### Phase 6 的两层定位（更新）
 
@@ -339,9 +334,9 @@ Phase 6 不是单一功能，而是服务于两个时间尺度的需求：
 | 层级 | 触发 | 产出 | 数据流向 | 目的 |
 |------|------|------|---------|------|
 | **即时 QC** | 每次 `--validate` | 五维评分 + 优先修正清单 | 直接给用户 | 写作辅助——发现偏离、承诺未兑现 |
-| **增量累积反馈** | 每次 `--validate`（受控 action） | `validation_history` 汇总为 catalog health | catalog 的 list/render/audit 输出 | 语料库维护——仅当 `REJECT/total ≥ 0.50` 且至少 2 次记录时显示 CAUTION；不自动改写模板或规则 |
+| **增量累积反馈** | 每次 `--validate`（自动） | validation_history 更新 + 模式检测 | `_evidence_registry.yaml` → write-introduction 渲染阶段消费 | 语料库维护——模板的 common_failures 随使用自动增长；≥2 次同因失效即标记 |
 
-**即时 QC 告诉用户“这次哪里写得不对”。增量累积反馈把受控验证记录转为 catalog 可见的健康警示。** 两者都需要生成 action plan 并完成 dry-run；重复失败只能触发 CAUTION，不会自动改变模板、路由或核心规则。
+**即时 QC 告诉用户"这次哪里写得不对"。增量累积反馈告诉系统"这个模板在真实使用中反复出什么问题"。** 两者在同一次 `--validate` 中完成，不需要额外步骤。当前 `validation_history` 全为 0 只是因为循环从未运行过——此修复使其在每次验证后自动更新。
 ```
 
 ---

@@ -1,34 +1,34 @@
 ---
 name: causal-analysis
-description: Coordinate causal-inference workflows for business-school empirical research. Use when Codex needs to design, run, or audit fixed-effects, DiD, event-study, IV, RDD, matching, or treatment-effect analyses; choose between econometrics-agent, did-analysis, R, Stata, and Python implementations; or plan robustness, placebo, heterogeneity, and verification steps for an empirical paper.
+description: Convert a locked causal Design Packet into an operational Analysis Manifest and route execution across installed econometrics skills. Use after huntington-klein-causal-design to choose the runtime, estimator implementation, diagnostics, robustness lanes, and verification steps for FE, DiD, event-study, IV, RDD, matching, or treatment-effect work. Do not use to invent the estimand or silently revise identification assumptions.
 ---
 
 # Causal Analysis
 
 ## Overview
 
-Use this skill as the routing layer above your existing econometrics stack. It decides which installed skill should lead, what the minimum specification set should be, and how to verify that high-stakes results are reproducible.
+Use this skill as the operational routing layer above the econometrics stack. It consumes a causal Design Packet, decides which installed executor should lead, and emits an Analysis Manifest. Return to `huntington-klein-causal-design` if the estimand, counterfactual, assumptions, or stop rules remain unresolved.
 
 ## Default Stack
 
-- `did-analysis`: first stop for staggered DiD, event study, TWFE diagnostics, HonestDiD
+- `staggered-did`: default Stata executor for staggered adoption, cohort-aware event studies, and DiD diagnostics
+- `empirical-pipeline-stata`: default whole-project Stata executor after the design is locked
 - `econometrics-agent`: fast local baseline, dataset inspection, and specification sweeps
-- `r-econometrics`: production R code for IV, DiD, and RDD
+- `did-analysis`: modern DiD in R only when the user explicitly requests R
 - `stata`: production Stata code, community packages, and table-ready workflows
-- `python-panel-data`: panel preprocessing or estimation when the pipeline is already in Python
-- `review-code`: correctness and reproducibility check after scripts stabilize
-- `empirical-writeup`: tables, figures, methods/results prose after results are verified
+- `empirical-pipeline-python`: Python-native Stage 4 execution when Python is requested or already owns the project
+- downstream verification and evidence packaging are owned by `run-empirical-research`, not this router
 
 ## Routing Rules
 
-- DiD or event study with staggered timing: run `did-analysis` before choosing code.
-- User explicitly wants the local CLI, a quick result, or a sweep: use `econometrics-agent`.
-- User needs final production code in R: use `r-econometrics`.
+- DiD or event study with staggered timing: use `staggered-did` by default; use `did-analysis` only for an explicit R lane.
+- User explicitly wants the local CLI, a quick result, or a sweep: use `econometrics-agent` only after the minimum Design Packet and Analysis Manifest exist; label reconnaissance output as non-authorizing.
+- User explicitly needs modern DiD in R: use `did-analysis`. There is no dedicated installed R executor for IV or RDD; do not imply otherwise. Keep execution blocked until the runtime is changed to the locked Stata lane or a dedicated R executor is installed or created and validated.
 - User needs final production code in Stata or Stata-specific packages: use `stata`.
-- Data cleaning and panel assembly are already in Python: use `python-panel-data` for the implementation lane.
+- The project is Python-native or Python is explicit: use `empirical-pipeline-python` for the implementation lane.
 - If the design is still conceptually weak, stop and diagnose identification before coding more specifications.
 
-## Minimum Spec Before Execution
+## Required Design Packet Before Execution
 
 - design type
 - outcome
@@ -38,6 +38,8 @@ Use this skill as the routing layer above your existing econometrics stack. It d
 - core controls
 - baseline sample rule
 - main threats and planned diagnostics
+- falsification tests and stop rules
+- maximum defensible claim
 
 ## Standard Workflow
 
@@ -57,22 +59,21 @@ Use this skill as the routing layer above your existing econometrics stack. It d
 
 3. Choose the execution lane:
    - quick reconnaissance -> `econometrics-agent`
-   - modern DiD decision support -> `did-analysis`
-   - production R -> `r-econometrics`
-   - production Stata -> `stata`
-   - Python-native panel pipeline -> `python-panel-data`
+   - modern DiD in Stata -> `staggered-did`
+   - whole-project Stata execution -> `empirical-pipeline-stata`
+   - explicit modern DiD in R -> `did-analysis`
+   - narrow production Stata task -> `stata`
+   - Python-native pipeline -> `empirical-pipeline-python`
 
-4. Verify before expanding:
-   - confirm sample size and panel structure
-   - confirm coefficient sign, magnitude, SE, and clustering
-   - for important headline results, reproduce in a second script or second environment when feasible
+4. Emit the Analysis Manifest before execution:
+   - locked design artifact path
+   - Data Contract path and hash
+   - runtime and executor
+   - estimator, formula, fixed effects, and uncertainty rule
+   - sample rule, diagnostics, stop rules, and planned outputs
+   - deviation policy
 
-5. Hand off only verified artifacts:
-   - cleaned analysis data or exact input path
-   - script path
-   - output table and figure paths
-   - residual identification risks
-   - next output task for `empirical-writeup`
+5. Return control to `run-empirical-research`, which owns execution, verification, evidence packaging, and writing handoff. This skill ends after the Analysis Manifest and must not mark results verified.
 
 ## Non-Negotiables
 
@@ -80,6 +81,7 @@ Use this skill as the routing layer above your existing econometrics stack. It d
 - Do not report causal language beyond what the design can support.
 - Do not let heterogeneity or mechanism work outrun baseline credibility.
 - Do not present a sweep as evidence unless the preferred specification is justified.
+- Do not change the Design Packet silently. Record deviations and invalidate downstream artifacts when material choices change.
 
 ## Reference
 

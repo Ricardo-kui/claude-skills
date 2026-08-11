@@ -28,7 +28,7 @@ We control for [participant characteristics] because [rival explanation]. Random
 The analysis controls for potential sources of heterogeneity across observations that might influence both the independent and dependent variables. In models estimating [DV1], we controlled for [DV2]; conversely, in models estimating [DV2], we controlled for [DV1]. This allows us to examine whether [focal IV] influences [DV1] and [DV2] net of each other, rather than merely reflecting [alternative explanation: e.g., a common third variable driving both foci]. To ensure that findings were not driven by collinearity involving the respective variables, we also ran models dropping the alternative focus from the equation.
 ```
 
-**表格化控制变量 + 每行 Rationale + Data source 变体**（li_narayanan_2026_jscm 型）： 🔬 EXPERIMENTAL（1 篇范文）— 当控制变量 ≥10 且各对应不同竞争解释、各来自不同数据库时尤为有效
+**表格化控制变量 + 每行 Rationale + Data source 变体**（Li et al. 2025 JSCM 型）： 🔬 EXPERIMENTAL（1 篇范文）— 当控制变量 ≥10 且各对应不同竞争解释、各来自不同数据库时尤为有效
 ```text
 This study controlled for [event / recall], [focal-actor firm], and [relationship] characteristics that may covary with the independent variables and affect [decision-makers]' reactions to [event] (summarized in Table [N]).
 

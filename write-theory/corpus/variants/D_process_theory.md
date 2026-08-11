@@ -141,7 +141,7 @@ Proposition [N]: In [context], [collective action] leads to [outcome], mediated 
 
 ## 子协议索引
 
-> **专属结构协议**：阶段边界与反馈传输使用 `../subprotocols/process_transition_operators.md`。它提供 stage-boundary 与 feedback-transport 推理算子，不是范文资产，不带 `pattern_id`，也不进入 evidence 晋升。D 变体与定量变体（B/E/C）的机制链/调节推导范式不共享微观动作模板；命题推导不套用 `hypothesis_derivation_patterns` 的 Anchor→Mechanism→Warrant→Prediction 序列。
+> **无专属子协议**。D 变体（质性过程理论）的论证核心是阶段序列 + 过渡条件 + 必要/充分条件区分 + 时间标记，与定量变体（B/E/C）的机制链/调节推导范式不共享微观动作模板。命题推导（而非假设推导）不适用 `hypothesis_derivation_patterns` 的 Anchor→Mechanism→Warrant→Prediction 序列。如需过程论证的过渡句式，参见本文件"关键句式模板"节。
 
 ---
 
@@ -149,8 +149,6 @@ Proposition [N]: In [context], [collective action] leads to [outcome], mediated 
 
 - [ ] 命题是否表达了清晰的理论关系（而非描述性观察）？
 - [ ] 过程模型是否包含了 transition/contingency 逻辑（而非只是阶段列表）？
-- [ ] 阶段 marker 是否是当前阶段产生、且在下一阶段核心行动前可观察的证据，而非下一阶段的首个行动？
-- [ ] 反馈是否明确区分 source、carrier/channel、translation 与有决策权的 recipient？
 - [ ] 是否区分了 necessary conditions 和 sufficient conditions？
 - [ ] 理论化是否与我们观察到的 empirical variation 一致？
 - [ ] 最后命题是否自然收束？若阶段关系仍不自明，整合是否只保留恢复过程连贯性所必需的内容，且没有新增理论内容？

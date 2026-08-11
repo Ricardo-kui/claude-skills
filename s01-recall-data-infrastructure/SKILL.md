@@ -46,6 +46,6 @@ Use this skill when a product recall project needs a common data backbone. The g
 ## Related Routing
 
 - Use `stata-data-cleaning` for Stata data construction.
-- Use `stata-regression` or `stata` for Cox models and publication tables.
+- Use `stata` for a single Cox/table task or `empirical-pipeline-stata` for the locked full execution chain.
 - Use `python-panel-data` only when Python is the better execution environment for the specific data task.
 - Consult `rules/axioms/e03_construct_measure_alignment.md` and `rules/axioms/p05_standardize_data_infrastructure_across_projects.md` in the academic infrastructure when making measurement or shared-infrastructure decisions.

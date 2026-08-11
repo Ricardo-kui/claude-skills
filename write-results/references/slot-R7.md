@@ -148,7 +148,7 @@ To distinguish true peer influence from common shocks or sorting, we re-estimate
 Because [binary outcome] is inferred using a threshold on [continuous signal / classifier probability], we test whether the results are sensitive to [threshold choice]. We reclassify [outcome] using [threshold – 1 SD / median / domain-specific cutoff] and re-estimate the models. The [predictor] effect remains [status] across all thresholds, indicating that [inference rule] does not mechanically produce the result. We also report [precision / recall / F1] at each threshold in [Appendix Table X].
 ```
 
-**稳健性检验汇总表变体（Aim / Tests / Results / Details 四列）**（li_narayanan_2026_jscm 型）： ✓ STANDARD candidate — 当稳健性/内生性检验 ≥4 项、跨多种威胁类型时，用一张表总览，正文再逐条展开
+**稳健性检验汇总表变体（Aim / Tests / Results / Details 四列）**（Li et al. 2025 JSCM 型）： ✓ STANDARD candidate — 当稳健性/内生性检验 ≥4 项、跨多种威胁类型时，用一张表总览，正文再逐条展开
 ```text
 Additional analyses (summarized in Table [N]) tested the robustness of the results and addressed endogeneity concerns.
 

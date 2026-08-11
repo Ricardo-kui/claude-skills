@@ -69,21 +69,21 @@ To translate the coefficient into a more interpretable cost metric, we divide th
 > - 必须提供一个保守或文献锚定的 per-event cost 作为基准
 > - 仅适用于计数或近似计数的结果（recalls, patents, lawsuits, product launches, failures）
 
-**事件研究小效应经济显著性辩护变体（相对比例 + 绝对金额双翻译）**（li_narayanan_2026_jscm 型）： ✓ STANDARD candidate — 专门防御 event study 中第三方/溢出效应"统计显著但绝对值小"的审稿质疑
+**事件研究小效应经济显著性辩护变体（相对比例 + 绝对金额双翻译）**（Li et al. 2025 JSCM 型）： ✓ STANDARD candidate — 专门防御 event study 中第三方/溢出效应"统计显著但绝对值小"的审稿质疑
 ```text
 Regarding the effect size, the results indicate that [recipients / third parties] experienced [−X% CAR / small coefficient] during [window / condition]. This corresponds to approximately [Y]% of the effect size of [focal actor]'s direct impact (i.e., [−Z% CAR / coefficient] during [same window]). Although [−X%] may appear small, in [market-value / dollar] terms, it translates into economically meaningful [losses / gains]. Given that the average [market value / revenue / scale] for the [recipient] sample was [$M] in [year], this effect implies an additional [loss / gain] of roughly [$K] for [recipients]. Thus, the results support H[X].
 
 Prior studies have reported [abnormal returns / coefficients] of a similar magnitude. For [phenomenon], [Author Year] reported [−A%] for [focal actor] on [event day / window], and [Author Year] found [−B%] over [window]. Within [field] studies, [Author Year] found that [recipient] experienced [−C%] ... [additional benchmark]. [Optional: This pattern places our effect within the normal range of published event studies on [topic].]
 ```
 **关键特征**:
-- **双翻译防御小效应**: (a) 相对比例——把第三方/溢出效应表达为焦点方直接效应的一个可观分数（如本文约 40% = −0.222%/−0.552%），论证"虽小但相对直接效应并非微不足道"；(b) 绝对金额——把小 % 乘以样本平均市值换算成美元（如 $57.45M），论证"小 % = 大美元"。注意：正文用 −0.552% 作 OEM 基准，Table 3 Panel A 同窗口为 −0.516%——属原文表文不一致，引用时以正文叙述为准并注明
+- **双翻译防御小效应**: (a) 相对比例——把第三方/溢出效应表达为焦点方直接效应的一个可观分数（如 43%），论证"虽小但相对直接效应并非微不足道"；(b) 绝对金额——把小 % 乘以样本平均市值换算成美元（如 $57.45M），论证"小 % = 大美元"
 - **直接回应"你的 CAR/系数太小"的审稿质疑**: event study 中第三方/溢出/间接效应天然远小于焦点方直接效应，本变体是把"小"转化为"实质显著"的标准辩护
 - **紧跟文献基准量级段**: 用一系列已发表 event-study 的可比量级（如 Javadinia −0.20%、Liu −0.69%、Jacobs VW 供应商 −2.69%/−0.35%/−0.17%）把本文效应置于正常区间，削弱"异常地小"的质疑
 
 **适用**: event study / 股票市场反应研究中，效应（尤其第三方/溢出/间接效应）统计显著但绝对值小的情况；任何需要把小系数翻译为实质显著的研究
 
 **禁忌**:
-- 相对比例的"基准效应"（focal actor direct effect）必须用**同一窗口、同一模型**估计，否则分数（如 40%）不可比
+- 相对比例的"基准效应"（focal actor direct effect）必须用**同一窗口、同一模型**估计，否则分数（如 43%）不可比
 - 绝对金额换算必须用样本的**平均**市值/规模并报告年份——不可用个别大公司市值夸大
 - 不要只做一种翻译——相对比例（说服"不小"）与绝对金额（说服"很值钱"）**双重**才构成完整辩护
 - 文献基准量级必须来自**已发表** event-study，不可用工作论文或媒体数字

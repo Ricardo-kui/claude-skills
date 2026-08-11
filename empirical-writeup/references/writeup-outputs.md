@@ -10,6 +10,10 @@ Evidence source:
 Model / figure id:
 Substantive interpretation:
 Caveat:
+Verification status:
+Verification provenance: formal_report / user_asserted
+Missing design, run, or verification artifacts:
+Claim authorization: authorized / qualified / prohibited
 ```
 
 ## Methods Paragraph Template
@@ -48,3 +52,7 @@ Appendix tables:
 Appendix figures:
 Open reconciliation issues:
 ```
+
+## Evidence Packet
+
+The final packet must link each claim to its table or figure, originating script or model, magnitude, uncertainty, caveat, verification status, and authorization class. Prose writers may narrow these claims but may not enlarge them.

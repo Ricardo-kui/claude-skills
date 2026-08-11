@@ -415,7 +415,7 @@ M8:
               template: "[Shock/event] creates variation in [treatment] that is plausibly exogenous to [outcome] because [reason]."
               tier: core
         - file: "identification-exogeneity.md"
-          section: "类型 1：外生性来源声明句"
+          section: "通用外生性论证"
           entries:
             - label: "DWH + Gaussian copula 内生性叙事"
               template: "Therefore, to further address endogeneity concerns, we conduct the Durbin-Wu-Hausman (DWH) test and use the instrument-free Gaussian copula joint estimation method."

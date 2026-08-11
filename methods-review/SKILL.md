@@ -1,7 +1,8 @@
 ---
 name: methods-review
 description: 顶刊论文 Methods 专项审查。检查样本漏斗、变量操作化、分析方法和控制逻辑的三C标准（Completeness, Clarity, Credibility）。基于 Pollock Ch07 和 MVP30 范文语料库。
-version: 1.1.0
+metadata:
+  version: 1.1.0
 ---
 
 # Role

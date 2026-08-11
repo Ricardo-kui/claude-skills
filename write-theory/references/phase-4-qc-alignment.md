@@ -43,7 +43,6 @@
 - [ ] **Matches theorized AND tested relationship**：假设措辞、理论关系形状、概念类型（differential prediction vs. differential validity）三者一致；统计检验方法由 `write-methods` 选择
 - [ ] **Contestability（反命题测试，Booth Ch6）**：写出假设的反命题并问"会有人愿意反驳它吗？"三种弱 claim 直接拦截：①纯主题宣告（反命题无意义）②易验证事实（反命题明显为假）③伪争议（反命题显然为真）。没人愿意反驳的 claim 不值得论证——要么升级为有张力的方向性预测，要么删除
 - [ ] **Figure–hypothesis linkage（Pollock Ch06）**：若 Theory 输出含 summarizing model figure，模型图中**每一条 path（IV→DV / 调节 / 中介连线）必须标注对应的假设编号**（H1、H2a 等）。无标签的总结图让审稿人无法快速核对"假设与图是否一致"——这是 Pollock 的硬性要求（"please label each link in your model with the associated hypothesis"）。另见 character ordering 决策表 `../corpus/subprotocols/character_ordering.md` 的 figure 放置规则。
-- [ ] **Argument graph–prose consistency（E 型必查）**：argument graph 中 boundary state 是前置作用域节点，不得存在 X → boundary state 的有向边；图中边界、解释、机制的顺序与正文叙述一致
 
 **Form–Measurement 匹配指南**见 `../corpus/sentences/hypothesis_forms.md` 的「假设形式决策矩阵」。常见错误：
 - 连续 IV + 连续 DV 却写成 If-then；

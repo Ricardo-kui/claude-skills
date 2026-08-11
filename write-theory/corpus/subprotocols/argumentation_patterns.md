@@ -237,7 +237,7 @@ status: ready_for_corpus
 ---
 
 <!--
-legacy_pattern_id: simultaneously_recognize_leverage
+pattern_id: simultaneously_recognize_leverage
 build_type: 跨类型
 source_papers: ["Grewal_Vana_Stephen_2025_JM"]
 confidence: medium
@@ -298,8 +298,6 @@ In contrast, the HIGH version [drops the specific features / moves to a superord
 - 一个机制段最多用 **1 个** minimal pair——多个会打断 why chain 的推演节奏
 
 **反模式**: 把 minimal pair 写成"例子堆砌"（两个版本各举一堆不对应的具体公司），失去受控对比的隔离力；或用真实知名公司做对比引入事实争议；或在每条假设前都加 vignette 导致节奏破碎。
-
-> **近邻**: 若最小对服务的是**兄弟构念可分离性**（固定维度 A 的标量、只变维度 B 的空间/结构构型），见 `construct_differentiation_patterns.md`::`geometric_sibling_construct_minimal_pair`（Li et al. 2026 POM Figure 1）——不要硬套本语言 vignette 骨架。
 
 ---
 

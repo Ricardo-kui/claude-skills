@@ -1,6 +1,6 @@
 ---
 name: empirical-intake
-description: Structure empirical research intake before coding or estimation. Use when Codex needs to turn a vague empirical idea, dataset, or research design into an execution-ready brief covering question, estimand or prediction target, unit and time structure, sample, variables, threats, success criteria, and downstream deliverables. Trigger for requests such as "先帮我梳理这个实证项目", "先做 intake", "这份数据该怎么分析", "帮我把研究设计说清楚", or when a data file is provided without a clear analysis brief.
+description: Structure an underspecified empirical project before coding or estimation. Use to create an Intake Packet covering the question, estimand or prediction target, unit and time structure, data assets, sample, derived measures or labels, risks, and deliverables. Trigger when the user asks to clarify an empirical project, provides data without an analysis brief, or enters Stage 0 of run-empirical-research. Do not estimate models or choose a causal design here.
 ---
 
 # Empirical Intake
@@ -32,6 +32,7 @@ Use this skill to convert an underspecified empirical task into a compact handof
    - outcome, treatment, key features, or labels
    - data asset paths and file formats
    - target outputs: table, figure, cleaned data, model object, draft text
+   - whether any analysis variable is produced by human coding, text/image/audio processing, an LLM or another fitted model, or synthetic generation
 
 3. Inspect available assets before asking follow-up questions:
    - use `exploratory-data-analysis` for unknown files or unfamiliar formats
@@ -42,15 +43,18 @@ Use this skill to convert an underspecified empirical task into a compact handof
    - identification risk for causal work
    - leakage or split risk for ML work
    - sample construction or missingness risk for any empirical work
+   - construct, timing, validation, and provenance risk for derived measures or labels
    - unclear output contract for downstream writing
 
+   When a derived measure is material, record its construct role, source corpus and time boundary, generation or coding process, available human-validation sample, and whether the same source or model also generates another variable in the analysis. Do not require these fields when all core variables are directly observed.
+
 5. Route immediately after intake:
-   - `causal-analysis` for causal or panel designs
+   - `huntington-klein-causal-design` for causal questions, then `causal-analysis` after the Design Packet is locked
    - `ml-analysis` for predictive workflows
    - `exploratory-data-analysis` for pure data audit
-   - `empirical-writeup` when the analysis already exists and the bottleneck is presentation
+   - `review-code` / `check-methodology` when analysis exists but verification is missing; `empirical-writeup` only after verification
 
-## Intake Memo Contract
+## Intake Packet Contract
 
 Return a short memo with these fields:
 
@@ -60,18 +64,20 @@ Return a short memo with these fields:
 - `data_assets`
 - `sample_and_structure`
 - `variables_or_features`
+- `derived_measurement_status` when applicable
 - `main_risks`
 - `requested_outputs`
+- `unresolved_inputs`
 - `recommended_next_skill`
 
 ## Default Downstream Pairings
 
 - Unknown dataset + unclear goal -> `exploratory-data-analysis` then re-enter intake
 - Public macro or policy series needed -> `api-data-fetcher`
-- Quick causal smoke test requested -> `econometrics-agent` after intake
-- Staggered DiD or event study -> `causal-analysis` with `did-analysis` first
+- Quick causal smoke test requested -> lock a minimal Design Packet and Analysis Manifest first, then use `econometrics-agent`; label the result reconnaissance-only
+- Staggered DiD or event study -> `huntington-klein-causal-design`, then `causal-analysis`; default execution is Stata via `staggered-did`
 - Prediction or classification -> `ml-analysis`
-- Regression tables, figures, methods/results prose -> `empirical-writeup`
+- Regression tables, figures, methods/results prose -> verify first if needed, then `empirical-writeup`
 
 ## Reference
 

@@ -1,19 +1,20 @@
 ---
 name: python-panel-data
 description: Panel data analysis with Python using linearmodels and pandas.
-workflow_stage: analysis
-compatibility:
-  - claude-code
-  - cursor
-  - codex
-  - gemini-cli
-author: Awesome Econ AI Community
-version: 1.0.0
-tags:
-  - python
-  - pandas
-  - linearmodels
-  - panel-data
+metadata:
+  workflow_stage: analysis
+  compatibility:
+    - claude-code
+    - cursor
+    - codex
+    - gemini-cli
+  author: Awesome Econ AI Community
+  version: 1.0.0
+  tags:
+    - python
+    - pandas
+    - linearmodels
+    - panel-data
 ---
 
 # Python Panel Data

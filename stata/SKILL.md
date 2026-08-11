@@ -4,8 +4,9 @@ description: >
   Comprehensive Stata reference for writing correct .do files, data management,
   econometrics, causal inference, graphics, Mata programming, and 20 community
   packages (reghdfe, estout, did, rdrobust, etc.). Covers syntax, options,
-  gotchas, and idiomatic patterns. Use this skill whenever the user asks you to
-  write, debug, or explain Stata code.
+  gotchas, regression/table workflows, and idiomatic patterns. Use this skill
+  whenever the user asks you to write, run, debug, or explain Stata code,
+  including a single regression or publication-table task.
 ---
 
 # Stata Skill

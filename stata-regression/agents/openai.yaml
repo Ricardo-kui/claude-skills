@@ -1,5 +1,0 @@
-interface:
-  display_name: Stata Regression
-  short_description: Run regression analyses in Stata with publication-ready outpu...
-  default_prompt: Use $stata-regression to run regression analyses in Stata with publication-ready
-    output tables.

@@ -1,7 +1,8 @@
 ---
 name: results-review
 description: 顶刊论文 Results 专项审查。检查结果段落节奏、假设完整性、稳健性检验组织方式。基于 Pollock Ch07 和 MVP30 范文语料库。
-version: 1.1.0
+metadata:
+  version: 1.1.0
 ---
 
 # Role

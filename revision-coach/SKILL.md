@@ -1,6 +1,6 @@
 ---
 name: revision-coach
-description: Use when the user receives peer-reviewer comments or a decision letter (R&R, major/minor revision, revise-and-resubmit, desk reject with resubmission invitation) and wants to (a) parse the comments into a structured Revision Roadmap + Response-to-Reviewers letter skeleton, or (b) audit an existing response/rebuttal draft for coverage gaps and risk flags. Trigger on "审稿意见", "我收到审稿意见了", "R&R", "major revision", "minor revision", "revise and resubmit", "回复审稿人", "response letter", "rebuttal", "审稿意见没回完吗", "帮我理一下审稿意见", "parse reviews", "revision roadmap". Do NOT use this skill to rewrite manuscript sections (use write-* / humanizer) or to re-run empirical analysis (use causal-analysis / stata / stata-regression). This skill plans and QA's the author's response; it does not write the revision itself or fabricate that a comment was addressed.
+description: Use when the user receives peer-reviewer comments or a decision letter (R&R, major/minor revision, revise-and-resubmit, desk reject with resubmission invitation) and wants to (a) parse the comments into a structured Revision Roadmap + Response-to-Reviewers letter skeleton, or (b) audit an existing response/rebuttal draft for coverage gaps and risk flags. Trigger on "审稿意见", "我收到审稿意见了", "R&R", "major revision", "minor revision", "revise and resubmit", "回复审稿人", "response letter", "rebuttal", "审稿意见没回完吗", "帮我理一下审稿意见", "parse reviews", "revision roadmap". Do NOT use this skill to rewrite manuscript sections (use write-* / humanizer) or to re-run empirical analysis (use causal-analysis / stata). This skill plans and QA's the author's response; it does not write the revision itself or fabricate that a comment was addressed.
 ---
 
 # Revision Coach — R&R 解析规划与回复体检
@@ -54,7 +54,7 @@ description: Use when the user receives peer-reviewer comments or a decision let
 
 ## 与你已有栈的分工
 - **实际重写正文某节**:路线图产出后,逐节交给 `write-introduction` / `write-theory` / `write-methods` / `write-results` / `write-discussion`;语言润色与去 AI 味交 `humanizer` / `proofread`。**路线图的每一行就是交给下游的工单**——"意见转述 + 责任节 + 兑现证据位置"三列原样传给对应 write-*/review skill,不重新转述(保留审稿人原意)。修改 storyline 的工单必须先过上面的 story contract 锚点。
-- **实证类要求**(重跑回归、换识别、加稳健性):交 `causal-analysis`(再路由到 `did-analysis` / `econometrics-agent` / `stata-regression`),或规格搜索交 `xianzhu-skill`。
+- **实证类要求**(重跑回归、换识别、加稳健性):交 `causal-analysis`(再路由到 `did-analysis` / `econometrics-agent` / `stata` / `empirical-pipeline-stata`),或规格搜索交 `xianzhu-skill`。
 - **整体投稿前 QC**:交 `pollock-qc` / `paper-review`。
 - 本 skill 只产出"改什么、按什么顺序、回复怎么搭骨架、回复体检",不越界做上面这些事。
 

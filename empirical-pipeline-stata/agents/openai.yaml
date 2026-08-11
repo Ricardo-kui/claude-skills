@@ -1,4 +1,4 @@
 interface:
-  display_name: Empirical Pipeline (Stata)
-  short_description: Run the full Stata empirical pipeline from clean data to paper-ready tables — modern staggered DiD, robustness battery, mechanism, survival for recall timing.
-  default_prompt: Use $empirical-pipeline-stata to execute the end-to-end Stata empirical analysis (sample & spec → baseline & modern staggered DiD → robustness battery → mechanism/mediation → publication tables), with survival/duration models for recall-timing.
+  display_name: "Empirical Pipeline (Stata)"
+  short_description: "Execute a locked design as a full Stata pipeline"
+  default_prompt: "Use $empirical-pipeline-stata to execute a locked empirical design in Stata and produce reproducible diagnostics, tables, and figures."

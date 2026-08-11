@@ -9,7 +9,7 @@ take over.
 
 These cards are **method knowledge, not execution instructions**. They are
 reusable across `econometrics-agent`, `causal-analysis`, `did-analysis`,
-`stata-regression`, and related skills. They describe estimators, not any one
+`stata`, and related skills. They describe estimators, not any one
 tool's flags.
 
 ## How to read a card

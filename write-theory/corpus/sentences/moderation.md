@@ -207,71 +207,6 @@ distinct from Z's direct effect on Y through [separate channel]."
 
 ---
 
-## equivocal 双边论证 + 无向调节假设（kalaignanam2013 型）
-
-**功能**: 当同一 moderator 存在两派相反的机制推论（一派论证增强、一派论证削弱），且文献均势、无法预判方向时，诚实呈现双边论证并收束为**单个无向假设**（nondirectional hypothesis），而非强行定向或拆成竞争假设对。
-
-**模板**:
-```
-[构念界定与区分] "[Moderator]" refers to [definition] ([citation]). This construct
-is conceptually distinct from [adjacent construct] in that [distinction criterion]
-([citations]).
-
-[双边论证宣告] The arguments for how [Z] might influence the [motivation/ability]
-of [actors] to [behavior] after [event] are conflicting and equivocal.
-
-[School A] One school of thought suggests that [Z-high actors] are likely to be
-more [motivated] than [Z-low actors] to [behavior]. This is because [mechanism A:
-e.g., they compete on differentiation, and the event erodes that advantage]
-([citations]). Therefore, [Z-high] are likely to be more motivated to [behavior]
-and restore their [advantage].
-
-[School B] Another school of thought contends that [Z] might insulate the [actor]
-from adverse [stakeholder] reactions to [negative events] ([citations]). If so,
-[events] involving [Z-high actors] might be viewed as an aberration or be
-attributed to circumstances beyond the [actor]'s control. This [confirmatory
-bias / attribution asymmetry] might lower the motivation of [Z-high actors] to
-[behavior] after [events].
-
-[无向收束] Given the presence of equivocal arguments for the moderating effect
-of [Z], we propose a nondirectional hypothesis:
-
-H[N]: The [direction] relationship between [X] and [Y] is stronger or weaker
-for [Z-high] than for [Z-low].
-```
-
-**语料锚定**:
-- Kalaignanam, Kushwaha & Eilert (2013, JM) — prior brand quality 调节 recall magnitude → reliability。School A: 高质量品牌靠差异化竞争，召回侵蚀差异化优势 → 更有动机改进（Aaker 2004; Rhee & Haunschild 2006）。School B: 品牌质量绝缘 adverse stakeholder reactions，召回被视为 aberration / 归因外部 → confirmatory bias 降低动机（Cleeren et al. 2008; Dawar & Pillutla 2000）。→ H4 无向。Results 得负号 → Discussion 用 double-edged sword 框架解释。
-
-**关键特征**:
-- **"conflicting and equivocal" 显式宣告**：不掩盖文献均势，把不确定性本身作为理论陈述对象——这比强行定向更诚实，也为 Results 的任一方向都预留合法性
-- **两派机制各自有独立引用支撑**：School A 与 School B 不是同一文献的正反读法，而是两个真实存在的文献阵营（differentiation erosion vs expectation insulation）——均势是经验事实，不是修辞姿态
-- **构念区分前置**：在双边论证之前先做构念界定（prior brand quality 主观感知 vs product reliability 客观绩效），确保两派争论的是同一构念——避免读者质疑"两派说的不是一回事"
-- **无向假设的措辞形式**："is stronger **or** weaker for... than for..."——单假设含双向，而非拆成 Ha/Hb 竞争对
-- **Discussion 兑现义务**：无向假设在 Results 报告方向后，Discussion 必须解释**为什么这一派胜出**（kalaignanam2013: insulation 效应压过 differentiation 效应 → brand quality as double-edged sword）——不能报告完系数就结束
-
-**与 F 变体（competing hypotheses）的边界**:
-
-| | equivocal 无向调节（本句型） | F 竞争假设（wowak2025） |
-|---|---|---|
-| 竞争来源 | 同一 moderator 的两派机制推论 | 两个独立理论对同一 X→Y 的对立预测 |
-| 假设形式 | 单个无向 H（stronger or weaker） | H_a / H_b 方向对立对 |
-| 收敛信号 | "Given the presence of equivocal arguments" | "Given these competing arguments" |
-| Discussion 义务 | 解释为何胜出的一派机制更强 | 理论裁判（哪一理论在本情境适用） |
-| 判据 | 竞争源自 "two schools of thought about one moderator" | 竞争源自 "two theories about one relationship" |
-
-**诚实边界**:
-- 无向假设不是"我赌不出方向"的遮羞布——仅当两派文献**确实均势**（各 2+ 独立引用、机制各自成立）时才允许使用；若一派明显更强（如已有 meta-analysis），必须定向
-- Results 报告无向假设时，方向结果 + 解释缺一不可——只报 "the coefficient is negative and significant, H4 is supported" 而不解释为何 insulation 胜出，是未完成论证
-- 不可在同一论文中混用：若 H1–H3 全部定向，H4 单独无向需有明确理由（该 moderator 文献均势而其他路径无均势）——不能为显得严谨而随机挑一个假设做成无向
-
-**反模式**:
-- 两派论证不对称（School A 详写 5 句、School B 一笔带过）→ 均势是伪造的，应定向
-- 用无向假设规避理论承诺 → 审稿人会问 "如果两派都有道理，你的理论贡献是什么？"
-- Discussion 不解释胜出方向 → 无向假设沦为统计报告，理论增量为零
-
----
-
 ## 跨层调节前置声明
 
 ```
@@ -468,7 +403,6 @@ increasing [valuation uncertainty / adverse-selection discount]."
 - “more positive / more negative” 直接编码交互符号，不依赖先陈述的主效应方向
 - Enhancing / Hindering 分节与假设符号对齐
 - 适合无 H0 主效应、仅估计交互项的设计叙事
-- **适用边界**：仅当逐状态净符号在理论上未定时使用；若推导已确定每个状态的符号（方向反转），改用 `hypothesis_forms.md` 的 Competing 形式或分状态带符号假设对
 
 **反模式**:
 - 先写 “H1: X positively affects Y”，再写异号调节却不解释主效应为何可被反转

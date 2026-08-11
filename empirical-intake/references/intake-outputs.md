@@ -1,9 +1,9 @@
 # Intake Outputs
 
-## Standard Intake Memo
+## Standard Intake Packet
 
 ```text
-Empirical Intake Memo
+Empirical Intake Packet
 
 Task type:
 Question:
@@ -16,6 +16,7 @@ Data assets:
 Sample rule:
 Main risks:
 Requested outputs:
+Unresolved inputs:
 Recommended next skill:
 ```
 
@@ -36,4 +37,7 @@ Route onward when the memo contains:
 - target
 - data path
 - sample or panel structure
+- unresolved inputs are explicit
 - next-skill recommendation
+
+For a causal task, the next skill is normally `huntington-klein-causal-design`. Route to `causal-analysis` only after a Design Packet exists.

@@ -1,7 +1,8 @@
 ---
 name: theory-review
 description: 顶刊论文 Theory / Hypotheses 专项审查。检查构念清晰度、why chain、假设形式和角色排序。基于 Pollock Ch06 和 MVP30 范文语料库。
-version: 1.2.0
+metadata:
+  version: 1.2.0
 ---
 
 # Role

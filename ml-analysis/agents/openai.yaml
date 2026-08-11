@@ -1,5 +1,4 @@
 interface:
-  display_name: ML Analysis
-  short_description: Structure ML workflows for empirical research.
-  default_prompt: Use $ml-analysis when an empirical project needs supervised learning
-    workflow design and validation.
+  display_name: "ML Analysis"
+  short_description: "Plan prediction workflows, validation, and leakage checks"
+  default_prompt: "Use $ml-analysis to define a prediction target, split, validation plan, and guarded execution handoff."

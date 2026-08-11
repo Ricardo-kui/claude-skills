@@ -1,13 +1,13 @@
 ---
 name: empirical-writeup
-description: Turn empirical analysis output into journal-ready methods, results, tables, figures, appendix material, and claim-evidence maps. Use when Codex needs to convert regressions, event studies, robustness checks, ML metrics, or analysis logs into management-journal prose and presentation artifacts.
+description: Package verified empirical outputs into an Evidence Packet and route journal-ready tables, figures, methods, results, and appendix work. Use after execution and verification to map claims to regressions, event studies, robustness checks, ML metrics, scripts, and caveats. Do not authorize claims that exceed the Design Packet or Verification Report.
 ---
 
 # Empirical Writeup
 
 ## Overview
 
-Use this skill after the analysis is already run or substantially stabilized. It keeps the empirical story anchored to actual evidence and routes the work across your installed writing, table, and figure skills.
+Use this skill after execution is stabilized and verification is complete. It constructs the evidence boundary before prose drafting and routes the work across installed writing, table, and figure skills.
 
 ## Default Stack
 
@@ -24,7 +24,12 @@ Use this skill after the analysis is already run or substantially stabilized. It
 - variable definitions and sample notes
 - model choice and SE or clustering rule
 - key caveats and robustness notes
+- Design Packet and Analysis Manifest
+- Verification Report and its disposition
+- Run Manifest and Results Inventory
 - target journal or field when available
+
+For direct entry with externally produced or user-asserted verified tables, construct a provisional Evidence Packet. Mark verification provenance as `user_asserted`, record missing design or run artifacts, and narrow claim language accordingly. Do not fabricate formal verification.
 
 ## Writeup Workflow
 
@@ -43,6 +48,7 @@ Use this skill after the analysis is already run or substantially stabilized. It
    - association language for associative designs
    - causal language only when the design and diagnostics support it
    - support, partial support, or no support should track the actual estimates
+   - stop if verification disposition is `fail`; a `conditional` disposition must carry its unresolved conditions into every affected claim
 
 4. Separate sections cleanly:
    - methods: sample, measures, model choice
@@ -54,13 +60,16 @@ Use this skill after the analysis is already run or substantially stabilized. It
    - if table counts do not match the script, use `review-code`
    - if a figure implies a different story than the coefficient table, resolve that before polishing text
 
-## Output Contract
+## Evidence Packet Contract
 
 - table inventory
 - figure inventory
-- methods or results subsection draft
-- explicit caveat list
+- claim-to-evidence-to-script map
+- effect magnitude and uncertainty
+- authorized, qualified, and prohibited claims
+- explicit caveat and unresolved-issue list
 - appendix items still needed
+- recommended writing skill and section target
 
 ## Reference
 

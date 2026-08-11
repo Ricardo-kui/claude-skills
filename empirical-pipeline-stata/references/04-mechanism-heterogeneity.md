@@ -1,117 +1,44 @@
-# Step 7 · 机制 / 异质性 / 中介(Stata)
+# Step 7 · Conditional Mechanism and Heterogeneity
 
-把主 ATT 展开成"故事":对谁最强(异质性)、通过什么渠道(机制)、在什么条件下(调节/中介)。AMJ/SMJ 这一节往往是理论贡献的落脚点,`margins`/`marginsplot` 是主力。
+Run this stage only when all three gates pass:
 
-## 1. 异质性:factor-variable 交互 + Wald
-交互项系数本身就是异质性检验,别只跑分组。
-```stata
-* 二值调节变量
-reghdfe y c.x##i.high_risk $controls, absorb(firm_id year) vce(cluster firm_id)
-margins, dydx(x) at(high_risk=(0 1))
-marginsplot, recast(connected) yline(0) title("x 的边际效应,按风险组")
-graph export "figures/het_risk.pdf", replace
-* x#1.high_risk 系数 = ΔATT(高风险 − 低风险)
+1. theory prespecifies the mechanism, moderator, subgroup, or mediation target;
+2. the Design Packet and Analysis Manifest authorize the contrast and its assumptions;
+3. the baseline estimate and core diagnostics are credible enough to support expansion.
 
-* 连续调节变量(AMJ/SMJ 调节假设 H2 标配)
-reghdfe y c.x##c.tenure $controls, absorb(firm_id year) vce(cluster firm_id)
-margins, dydx(x) at(tenure=(p5(1)p95))           // 沿支撑画边际效应
-marginsplot, recast(line) recastci(rarea) yline(0) ///
-    title("x 的边际效应沿 tenure") xtitle("tenure")
-```
+No minimum number of moderators, subgroups, outcomes, or mediation models is required.
 
-## 2. 分组估计 + 跨方程 Wald(`suest`)
-要分跑子样本又想要形式化等价检验:
-```stata
-eststo m1: qui reghdfe y x $controls if high_risk==0, absorb(firm_id year) vce(cluster firm_id)
-eststo m2: qui reghdfe y x $controls if high_risk==1, absorb(firm_id year) vce(cluster firm_id)
-suest m1 m2
-test [m1_mean]x = [m2_mean]x
-```
-> 注意:`suest` 不直接支持 `reghdfe` 吸收的 FE;用 `xtreg, fe` 重跑,或用系数差的手动 Wald 近似(√(se1²+se2²))。
+## Distinguish the questions
 
-## 3. 三重差分(DDD)
-```stata
-reghdfe y c.treated##c.post##c.high_exposure $controls, absorb(firm_id year) vce(cluster firm_id)
-* treated#post#high_exposure = 差分 ATT(高暴露 − 低暴露)
-margins, dydx(treated) at(post=1 high_exposure=(0 1))
-```
+- **Treatment-effect heterogeneity:** does the same estimand differ across prespecified baseline characteristics?
+- **Moderation:** does theory predict a conditional effect, and is the interaction estimand identified on observed support?
+- **Mechanism evidence:** does treatment move a preregistered intermediate outcome in the predicted temporal sequence?
+- **Causal mediation:** what direct/indirect effects are identified under additional sequential-ignorability or alternative mediation assumptions?
 
-## 4. Outcome ladder(机制"向下传导")
-同一处理跑在一串"近端 → 远端"结果上;机制为真则效应沿链条递减传导。
-```stata
-eststo clear
-foreach out in mech_proximate mech_intermediate y_distal {
-    eststo `out': qui reghdfe `out' x $controls, absorb(firm_id year) vce(cluster firm_id)
-}
-esttab mech_proximate mech_intermediate y_distal using "tables/outcome_ladder.tex", ///
-    replace booktabs se star(* 0.10 ** 0.05 *** 0.01) label keep(x)
-coefplot (mech_proximate, label("近端")) (mech_intermediate, label("中介")) ///
-         (y_distal, label("远端 y")), keep(x) vertical xline(0) title("Outcome ladder")
-```
+Do not label subgroup differences or a treatment–mediator–outcome regression as a mechanism by themselves.
 
-## 5. 中介:Baron–Kenny 手动 + bootstrap
-```stata
-* c: 总效应; a: T→M; b,c': T+M→Y
-qui reghdfe y x $controls, absorb(firm_id year): scalar c = _b[x]
-qui reghdfe M x $controls, absorb(firm_id year): scalar a = _b[x]
-qui reghdfe y x M $controls, absorb(firm_id year): scalar cprime = _b[x]
-scalar b = _b[M]
-di "indirect a*b=" a*b "  (% of total = " 100*a*b/c ")"
-* 间接效应 bootstrap CI
-program define medbk, rclass
-    qui reghdfe M x $controls, absorb(firm_id year): scalar a = _b[x]
-    qui reghdfe y x M $controls, absorb(firm_id year): scalar b = _b[M]
-    return scalar indirect = a*b
-end
-bootstrap r(indirect), reps(1000) seed(42) cluster(firm_id): medbk
-```
+## Implementation rules
 
-## 6. 中介:`medsem` / `khb` / SEM
-```stata
-ssc install medsem, replace
-medsem, indep(x) med(M) dep(y) mcreps(1000) zlc            // sem + bootstrap
+- Prefer a fully interacted model with an explicit Wald test over comparing significance across separate subgroup regressions.
+- Use `margins`/`marginsplot` only over observed support and report the underlying interaction test.
+- Keep moderators and subgroup definitions pretreatment unless the design explicitly targets post-treatment variables.
+- For staggered DiD, use heterogeneity procedures compatible with the cohort-aware estimator rather than adding interactions to a conventional TWFE model.
+- Treat an outcome ladder as ordered auxiliary evidence, not proof of mediation.
+- Run mediation only when treatment, mediator, and outcome timing are coherent and the extra assumptions are stated. Otherwise call it exploratory mechanism-consistent evidence.
+- Check optional commands with `which`; never use unconditional `ssc install ..., replace`.
 
-ssc install khb, replace
-khb logit y x || M, summary                                  // 非线性(logit/probit)中介
+## Required output
 
-sem (y <- x $controls M) (M <- x $controls), vce(cluster firm_id)
-estat teffects                                              // 直接/间接/总
-```
-> 严肃的因果中介(Imai 敏感性)Stata 无原生实现;要的话用 Stata–Python 桥或 R `mediation`。
+For each authorized extension, record:
 
-## 7. 调节中介
-按调节变量分组分别跑 `medsem`,或用 `sem ... , group(mod) ginvariant(none)` 多组约束,检验 a·d 是否跨组相等。
+- theoretical prediction and estimand
+- subgroup/moderator/mechanism definition and timing
+- support and sample
+- model and inference rule
+- multiplicity family when applicable
+- estimate, uncertainty, and joint test
+- identifying assumptions and competing explanations
+- effect on authorized claims
 
-## 8. 连续处理:dose-response
-```stata
-xtile dose = x_intensity, nq(10)
-reghdfe y i.dose $controls, absorb(firm_id year) vce(cluster firm_id)
-margins i.dose
-marginsplot, recast(connected) xtitle("处理强度十分位") ytitle("预测 y")
-```
+If the baseline gate fails, return `not_authorized_baseline_failed` and do not run this stage.
 
-## 9. 高维 CATE:Stata–Python 桥到 econml
-Stata 16+ 内嵌 Python。要因果森林等高维 CATE:
-```stata
-python:
-from sfi import Data
-from econml.dml import CausalForestDML
-from sklearn.ensemble import GradientBoostingRegressor
-y=Data.get("y"); t=Data.get("x"); X=Data.get("$catevars".split())
-cf=CausalForestDML(model_y=GradientBoostingRegressor(),model_t=GradientBoostingRegressor(),
-                   n_estimators=1000,min_samples_leaf=5,cv=5).fit(y,t,X=X)
-Data.addVarFloat("tau_hat"); Data.store("tau_hat",None,cf.effect(X).tolist())
-end
-binscatter tau_hat tenure, nquantiles(20) xtitle("tenure") ytitle("估计 CATE")
-```
-
-## 10. 溢出 / SUTVA 违反(召回/竞争研究常遇)
-```stata
-* 同行业/同市场处理同伴的暴露比例
-bysort industry year: egen share_treated = mean(x)
-reghdfe y x share_treated $controls, absorb(firm_id year) vce(cluster industry)
-* share_treated 系数 = 溢出
-```
-
-## Step 7 至少产出
-1 张异质性表(3–5 个预设调节变量) + 1 张 marginsplot + 1 张 outcome ladder 表/图 + 1 个带 bootstrap CI 的中介估计(附"无混淆"假设讨论) + 视设计补 DDD 或 dose-response。

@@ -19,50 +19,48 @@
    - 同一模式若只在某构建类型中出现 → 写入该构建类型的 variant
    - 同一模式跨多个构建类型出现 → 写入 `subprotocols/` 并标注 `[跨类型]`
 
-3. **按证据强度与生成资格分开准入**：
-   - 单篇论文出现 → 可由治理计划写为 hidden `reference_exemplar`，不进入默认生成菜单
-   - 2 篇同类型论文出现 → 优先 `EXTEND_SOURCE`；仍是 optional reference，除非人工审核其生成能力
-   - ≥3 篇跨期刊论文出现 → 可申请 `PROMOTE` 为 `generative_strategy`；不得仅凭数量直接修改 `variants/` 或 `SKILL.md`
+3. **按证据强度准入**：
+   - 单篇论文出现 → 只入 Vault 参考注释
+   - 2 篇同类型论文出现 → `subprotocols/` 作为可选变体
+   - ≥3 篇跨期刊论文出现 → 可进入 `variants/` 或 `SKILL.md` 默认规则
 
 ### Taxonomy 映射表
 
-下表只决定提取产物的 **home_file 指定**（沉淀位置）；**生成资格一律按第 3 条原则**（单篇 → `ADD_REFERENCE`；2 篇同类型 → `EXTEND_SOURCE`；≥3 篇跨期刊 → 可申请 `PROMOTE`），任何层级都不直接编辑 corpus 文件。
-
-| 提取产物 | 沉淀位置 | 文件名/路径 |
-|---------|---------|------------|
-| 构建类型整体结构（T1–T6 模块序列、比例、节奏） | `corpus/variants/` | `A_construct_differentiation.md`<br>`B_mechanism_elaboration.md`<br>`C_hypothesis_tree.md`<br>`D_process_theory.md`<br>`E_moderation.md`<br>`F_competing_hypotheses.md`<br>`G_dialectical_opposition.md` |
-| 假设论证微观动作（Anchor/Gap/Mechanism/Warrant/Prediction） | `corpus/subprotocols/` | `argumentation_patterns.md` |
-| **假设推导段落级模板（完整 Anchor→Mechanism→Warrant→Prediction）** | `corpus/subprotocols/` | `hypothesis_derivation_patterns.md` |
-| 论点-论据安排模式（Warrant-Embedded / Evidence-Contrast / Cumulative / Parallel） | `corpus/subprotocols/` | `arrangement_patterns.md` |
-| 复杂假设段落组织（common trunk / dual branch / baseline→moderation） | `corpus/subprotocols/` | `hypothesis_organization_patterns.md` |
-| 证据类型、证据功能、文献三要素句式 | `corpus/subprotocols/` | `evidence_patterns.md` |
-| 双边论证 high/low 句法 | `corpus/subprotocols/` | `bilateral_argumentation_templates.md` |
-| Moderator 选择元框架 | `corpus/subprotocols/` | `moderator_selection_frameworks.md` |
-| Closure 策略（局部收束 / 嵌入框架总结 / Discussion 回补） | `corpus/subprotocols/` | `closure_strategies.md` |
-| 识别策略理论嵌入（IV/DiD/RDD/生存分析） | `corpus/subprotocols/` | `identification_strategy_in_theory.md` |
-| 构念定义句式 | `corpus/sentences/` | `construct_definition.md` |
-| 理论视角引入句式 | `corpus/sentences/` | `theoretical_lens.md` |
-| 机制推演句式 | `corpus/sentences/` | `mechanism_chain.md` |
-| 调节假设句式 | `corpus/sentences/` | `moderation.md` |
-| 假设形式句式 | `corpus/sentences/` | `hypothesis_forms.md` |
-| 收束/过渡连接词句式 | `corpus/sentences/` | `closure.md`<br>`connectors.md` |
+| 提取产物 | 沉淀位置 | 文件名/路径 | 准入门槛 |
+|---------|---------|------------|---------|
+| 构建类型整体结构（T1–T6 模块序列、比例、节奏） | `corpus/variants/` | `A_construct_differentiation.md`<br>`B_mechanism_elaboration.md`<br>`C_hypothesis_tree.md`<br>`D_process_theory.md`<br>`E_moderation.md`<br>`F_competing_hypotheses.md`<br>`G_dialectical_opposition.md` | ≥2 篇该构建类型论文一致 |
+| 假设论证微观动作（Anchor/Gap/Mechanism/Warrant/Prediction） | `corpus/subprotocols/` | `argumentation_patterns.md` | ≥2 篇论文出现同类动作序列 |
+| **假设推导段落级模板（完整 Anchor→Mechanism→Warrant→Prediction）** | `corpus/subprotocols/` | `hypothesis_derivation_patterns.md` | ≥2 篇论文出现同类段落结构 |
+| 论点-论据安排模式（Warrant-Embedded / Evidence-Contrast / Cumulative / Parallel） | `corpus/subprotocols/` | `arrangement_patterns.md` | ≥2 篇论文使用同模式 |
+| 复杂假设段落组织（common trunk / dual branch / baseline→moderation） | `corpus/subprotocols/` | `hypothesis_organization_patterns.md` | ≥2 篇复杂假设论文一致 |
+| 证据类型、证据功能、文献三要素句式 | `corpus/subprotocols/` | `evidence_patterns.md` | ≥2 篇论文出现同类证据策略 |
+| 双边论证 high/low 句法 | `corpus/subprotocols/` | `bilateral_argumentation_templates.md` | ≥2 篇调节效应型论文一致 |
+| Moderator 选择元框架 | `corpus/subprotocols/` | `moderator_selection_frameworks.md` | ≥2 篇多 moderator 论文一致 |
+| Closure 策略（局部收束 / 嵌入框架总结 / Discussion 回补） | `corpus/subprotocols/` | `closure_strategies.md` | ≥3 篇管理学顶刊论文一致 |
+| 识别策略理论嵌入（IV/DiD/RDD/生存分析） | `corpus/subprotocols/` | `identification_strategy_in_theory.md` | ≥2 篇制度冲击类论文一致 |
+| 构念定义句式 | `corpus/sentences/` | `construct_definition.md` | ≥3 篇论文使用同类句式 |
+| 理论视角引入句式 | `corpus/sentences/` | `theoretical_lens.md` | ≥3 篇论文使用同类句式 |
+| 机制推演句式 | `corpus/sentences/` | `mechanism_chain.md` | ≥3 篇论文使用同类句式 |
+| 调节假设句式 | `corpus/sentences/` | `moderation.md` | ≥3 篇论文使用同类句式 |
+| 假设形式句式 | `corpus/sentences/` | `hypothesis_forms.md` | ≥3 篇论文使用同类句式 |
+| 收束/过渡连接词句式 | `corpus/sentences/` | `closure.md`<br>`connectors.md` | ≥3 篇论文使用同类连接词 |
 
 ### 单篇蒸馏时的快速分类决策
 
 对每个提取出的骨架/模式，按以下问题链决定去向：
 
 ```text
-Q1: 若合并入最近邻，是否会失去一项可命名的生成能力？
-    ├── 否 → NONE / REUSE / EXTEND_SOURCE
-    └── 是 → Q2
+Q1: 该模式是否只适用于特定构建类型？
+    ├── 是 → 进入 corpus/variants/[build_type].md
+    └── 否 → Q2
 
-Q2: 该能力是整篇架构、论证操作还是句位表达？
-    ├── 架构 / 操作 / 句位 → 指定对应 home_file，但先作为 reference
-    └── 不确定 → 只登记为待审 reference
+Q2: 该模式是否涉及具体措辞/句法结构？
+    ├── 是 → 进入 corpus/sentences/[function].md
+    └── 否 → Q3
 
-Q3: 证据是否达到 PROMOTE 门槛？
-    ├── 否 → ADD_REFERENCE（或 EXTEND_SOURCE）
-    └── 是 → 生成 PROMOTE 审核动作；不得直接入默认菜单
+Q3: 该模式是否跨构建类型可复用？
+    ├── 是 → 进入 corpus/subprotocols/[pattern_type].md
+    └── 否/不确定 → 只入 Vault 参考注释
 ```
 
 ### Corpus Entry 标准格式

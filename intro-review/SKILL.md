@@ -1,7 +1,8 @@
 ---
 name: intro-review
 description: 顶刊论文 Introduction 专项审查。检查 Hook、Conversation、Problematization、贡献预告，并提供功能语句重写建议。基于 Pollock Ch05 和 MVP30 范文语料库。
-version: 1.3.0
+metadata:
+  version: 1.3.0
 ---
 
 # Role

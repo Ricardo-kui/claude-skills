@@ -233,3 +233,14 @@ python _update_design_feedback.py skill_design_feedback.yaml
 4. 用隔离上下文前向测试两个任务：新模式任务 + 旧行为保持任务。只传原始任务，不泄露预期修复。
 5. 任一验证失败，使用 `apply_patch` 撤回本轮自己的核心修改，保留缺陷记录为 `needs_revision`。
 6. 全部通过后，在注册表记录实际修改目标、`rule_excerpt_after`、旧规则是否应消失、验证结果和日期；更新脚本须在目标文件中核验新规则片段后才允许标记 `resolved`。共享 Junction 自动同步到 Claude Code。
+
+## Phase 4 收尾 — 回写后语料体检
+
+回写完成后运行 skills 根目录的体检脚本：
+
+```bash
+PYTHONIOENCODING=utf-8 python ~/.claude/skills/corpus_health_check.py --type intro
+```
+
+- exit 0 = 正常；exit 1 = 存在 critique_heavy 类型——在输出中列出这些类型，作为下一轮蒸馏 REPLACE/EXTEND 的优先级依据。
+- 脚本缺失或运行失败不阻断回写，但必须在输出中声明"体检未执行"，不得静默跳过。

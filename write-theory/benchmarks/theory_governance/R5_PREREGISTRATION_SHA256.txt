@@ -1,3 +1,0 @@
-R5_ACCEPTANCE_TASKS.yaml
-SHA256 df1320a05bcb0ae8f008aabfad0a122aec2c696c7b87ba3c6a61ea6003dae211
-Frozen before governed or legacy generation began on 2026-08-07 Asia/Shanghai.

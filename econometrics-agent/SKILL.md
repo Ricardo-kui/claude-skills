@@ -99,7 +99,7 @@ Open [command-patterns.md](~/.claude/skills/econometrics-agent/references/comman
 
 ## Method Knowledge (Reusable Across Skills)
 
-The econometric reasoning behind this CLI is documented as prose so other skills (`causal-analysis`, `did-analysis`, `stata-regression`, and the write/review stack) can reuse it, not just this CLI:
+The econometric reasoning behind this CLI is documented as prose so other skills (`causal-analysis`, `did-analysis`, `stata`, and the write/review stack) can reuse it, not just this CLI:
 
 - [method-cards.md](~/.claude/skills/econometrics-agent/references/method-cards.md) — per-estimator cards: when to use, identification logic, diagnostics, failure modes, and a **Tool boundary** line marking where this CLI stops and Stata should take over.
 - [model-selection-rules.md](~/.claude/skills/econometrics-agent/references/model-selection-rules.md) — the transparent, rule-based routing tree and how selection reasons are generated.
