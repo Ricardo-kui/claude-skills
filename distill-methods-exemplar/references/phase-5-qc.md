@@ -14,6 +14,10 @@
 - [ ] **Skill Update Audit**: Phase 4 的每个 `ADD/EXTEND/REPLACE` 指令都有明确的目标文件和插入位置
 - [ ] **Story Fidelity Audit**: 每个 adoption 指令都有 classification；单篇论文未改变核心规则
 
+## 反向验证（可选 gate）
+
+QC 通过后，本次蒸馏的 `*_methods_distilled.json` 可喂给本地反向验证工具 `reverse_validation_pipeline`，检验 `write-methods` 语料能否反向复现蒸馏出的 M 槽位结构与模板选择（"语料写不写得出来"）。用法与输出契约见 `reverse_validation_pipeline/SKILL.md`（skill：`reverse-validation-pipeline`；入口 `python reverse_validation_pipeline.py --methods-json ... --output-dir ...`）。critical gap → 先补语料/`design_type_map.json` 映射，再入库。
+
 ## skill_version_impact（新增）
 
 每个 `ADD/EXTEND/REPLACE` 行动必须附带版本影响评估：
