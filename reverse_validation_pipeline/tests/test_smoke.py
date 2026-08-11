@@ -18,8 +18,11 @@ import subprocess
 import sys
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
-PIPELINE = REPO_ROOT / "reverse_validation_pipeline.py"
+# tests/ -> reverse_validation_pipeline/ -> skills root (holds write-methods/,
+# write-results/, reverse_validation_pipeline/, and the SKILL.md files the
+# pipeline parses). PIPELINE lives one level up from this tests/ dir.
+REPO_ROOT = Path(__file__).resolve().parents[2]
+PIPELINE = Path(__file__).resolve().parents[1] / "reverse_validation_pipeline.py"
 PAPER_ID = "Smoke_Test_2026_ASQ"
 
 
