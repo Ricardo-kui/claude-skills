@@ -23,6 +23,8 @@
 !distill-theory-exemplar/**
 !distill-story-exemplar/
 !distill-story-exemplar/**
+!distill-paper-exemplar/
+!distill-paper-exemplar/**
 !intro-review/
 !intro-review/**
 !methods-review/
