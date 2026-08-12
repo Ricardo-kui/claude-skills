@@ -1588,10 +1588,11 @@ evidence:
         Inadequacy: 20
         Incommensurability: 2
     three-layer-contribution:
-      paper_count: 2
+      paper_count: 3
       papers:
       - haunschild2015 (OS)
       - hoffmann_cheong_phan_zurbruegg2024 (JM)
+      - fini_jourdan_perkmann_2017 (AMJ)
       status: EMERGING
       generativity: ADAPTABLE
       exclusivity: LOW
@@ -1603,7 +1604,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 2
+        Incompleteness: 3
         Inadequacy: 0
         Incommensurability: 0
   research_questions:
