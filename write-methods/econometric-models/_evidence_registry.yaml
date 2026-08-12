@@ -290,6 +290,24 @@ evidence:
       - M8
       story_fidelity: section_variant
       note: From-scratch custom dictionary + nine-step validity chain (component→expert sort→deductive dictionary→student sort→PFA→nomological→stability) and earnings-call speaker-attribution pipeline (M2/M4). Endogeneity 'balancing act' diagnose-first narrative (RIR N-to-overturn → cure second → naïve/cured pairing) and 2SRI with validation-measures reused as instruments (M8). Temporal-spacing one-liner and dual-sided because controls (M2.5/M6). No firm FE (SIC/year dummies) under-defended and 2SRI exclusion only implicit — recorded as anti-pattern warnings.
+    fini_jourdan_perkmann_2017_amj:
+      journal: Academy of Management Journal
+      title: 'Social Valuation across Multiple Audiences: The Interplay of Ability and Identity Judgments'
+      status: EMERGING (1p)
+      verification_basis: distill-methods-exemplar_2026-08-12
+      design_types:
+      - 面板数据-OLS
+      - 非线性模型
+      - PSM匹配面板
+      - 多研究
+      slots_covered:
+      - M1
+      - M5
+      - M7
+      - M8
+      - M9
+      story_fidelity: section_variant
+      note: 'Single-organization (Minerva) scientist panel 2001-2012; DV = peer grant award count (0-23); IV = cumulative industry contracts with squared term for inverted U; moderators = audience identity proximity + publication record. Identification stack: probit+IMR selection -> iterative Poisson GMM instrumenting three endogenous terms (peer eval, industry eval, industry eval^2) with 3 instruments + Hansen J -> CEM confirmatory replication -> explanatory sequential interviews. Writes M1 data-availability setting (面板数据-OLS 变体41), M5 moderator-dummy external validity chain via Tijssen U-I intensity (面板数据-OLS 变体42), M8 CEM confirmatory replication (PSM匹配面板 变体4), M9 explanatory sequential roadmap (多研究 变体10); core GMM narrative registered under 非线性模型 变体16. Anti-patterns recorded: CEM strata without balance stats, three-threats merged statement, squared-term exclusion not separately argued.'
   by_design_type:
     面板数据-OLS:
       paper_count: 11
