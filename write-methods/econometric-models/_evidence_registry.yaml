@@ -636,10 +636,11 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     PSM匹配面板:
-      paper_count: 2
+      paper_count: 3
       papers:
       - pfarrer2010 (AMJ)
       - mayo2021 (POMS)
+      - fini_jourdan_perkmann_2017_amj (AMJ)
       status: EMERGING
       slots_covered:
       - M2
