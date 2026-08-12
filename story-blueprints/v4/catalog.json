@@ -1750,98 +1750,88 @@
       "overall_role": "partial_exemplar"
     },
     {
-      "id": "fini2017",
+      "id": "fini2017-social-valuation",
       "path": "v4/blueprints/fini2017-social-valuation.md",
       "paper_type": "quantitative",
       "outlet": "Academy of Management Journal",
       "publication_status": "published",
       "coverage": "complete",
       "theoretical_problem_form": [
-        "cross-audience-partial-incommensurability",
+        "dual-channel-index-decomposition",
+        "cross-audience-partial-criterion-overlap",
         "socially-endogenous-inference-boundary"
       ],
       "narrative_dynamics": [
-        "dual-reading-of-one-signal",
-        "nonlinear-valuation-resolution",
-        "audience-identity-proximity",
-        "qualitative-payoff-check"
+        "opposing-channels-sum-to-inverted-U",
+        "channel-matched-dual-moderation",
+        "three-step-confirmation-chain",
+        "canonical-effect-offset"
       ],
-      "retrieval_signals": [],
+      "retrieval_signals": [
+        "social-valuation",
+        "multiple-audiences",
+        "exogenous-endogenous-indices",
+        "inverted-U",
+        "identity-conformance",
+        "peer-evaluation",
+        "university-industry"
+      ],
       "section_learning": {
         "introduction": {
           "suitable": "yes",
-          "requires": [
-            "cross-audience-valuation",
-            "shared-ability-baseline",
-            "identity-criteria-misalignment"
-          ],
+          "requires": [],
           "learn": [
-            "Start from a well-established inference that holds among peers, then make its portability to an external audience the precise question rather than treating multiple audiences as background complexity.",
-            "Name the dual reading of the same observed signal early: it can convey transferable ability while also revealing possible nonconformity with the focal audience's identity template."
+            "Open with a mechanism well documented under one condition, then make its portability to a new condition (homogenous peers -> multiple audiences) the precise research question, so the gap is a context extension with a single explicit, scope-narrowed RQ rather than a generic 'little is known' list.",
+            "Name the dual reading of the same observed signal early (ability + identity conformance), and let the theory-lens decomposition mechanically generate the inverted-U preview and channel-matched moderators in the preview paragraph, so the prediction is derived, not asserted."
           ],
           "caveat": [
-            "Transfer only when the focal audience can reasonably treat the external evaluation as some evidence of ability while applying a nonaligned identity standard; a totally irrelevant or stigmatized audience is a different theory problem.",
-            "Do not call every stakeholder difference incommensurability. The story requires a specified signal, a focal evaluator, and distinct evaluative meanings of that same signal."
+            "Transfer only when the focal audience can reasonably treat the external evaluation as some evidence of ability while applying a nonaligned identity standard; a totally irrelevant or stigmatized external audience is a different theory problem (the authors' own boundary, stated in the Conclusion).",
+            "The findings preview leaks exact magnitudes (9,502 / 2001-2012 / attenuation directions / interviews) without an economic-significance baseline; keep the preview at direction + moderation and defer numbers to Results."
           ]
         },
         "theory": {
           "suitable": "yes",
-          "requires": [
-            "cross-audience-valuation",
-            "shared-ability-baseline",
-            "identity-criteria-misalignment"
-          ],
+          "requires": [],
           "learn": [
-            "Separate the two inferential components before deriving the curve: a positive ability effect and an increasingly negative identity-conformance effect, rather than beginning from a preferred inverted-U result.",
-            "Use audience identity proximity and endogenous peer certification as boundary conditions because they respectively weaken the identity penalty and reduce dependence on the ambiguous external signal."
+            "Separate the two inferential components before deriving the curve — a positive linear ability channel offset by an increasingly negative identity-conformance channel, summed at every point (Haans et al. 2015) — rather than beginning from a preferred inverted-U result.",
+            "Carry a second, distinct gap layer in the theory (Inadequacy: the ability-only assumption of prior work revised into a dual channel) that fulfills the Introduction's Incompleteness; then derive each moderator FROM the two-channel decomposition and emit paired geometric hypotheses (curve shape + turning-point position) with an explicit invariance declaration for the untouched channel."
           ],
           "caveat": [
-            "The nonlinear prediction is justified here by distinct marginal effects with different shapes. A mere trade-off or conflicting stakeholder preference does not warrant an inverted U.",
-            "There must be at least partial overlap in the audiences' ability criteria. If the focal audience cannot regard the external audience's evaluation as ability-relevant at all, the paper's positive first mechanism disappears."
+            "The nonlinear prediction is justified here by distinct marginal effects with different shapes; a mere trade-off or conflicting stakeholder preference does not warrant an inverted U.",
+            "The paired-geometry moderator form requires a measurable geometric claim (Haans, Pieters & He 2016); without a direct inflection-point test the H[N]b half is untestable."
           ]
         },
         "methods": {
           "suitable": "partial",
-          "requires": [
-            "cross-audience-valuation",
-            "shared-ability-baseline",
-            "identity-criteria-misalignment"
-          ],
+          "requires": [],
           "learn": [
-            "Build an evidence arena in which the focal audience's decision, the external audience's prior evaluation, and peer-certified endogenous information can be separately observed; use qualitative accounts to assess whether the proposed readings are recognizable to evaluators."
+            "State the three-step confirmatory architecture as an explicit roadmap ('We proceed in three steps': full-panel GMM -> CEM -> interviews) that previews the Results reading order and explicitly limits interviews to mechanism corroboration rather than a second causal estimate.",
+            "For an inverted-U GMM, instrument the squared term alongside the linear term and include two-year-lagged endogenous variables interacted with boundary conditions (Abadie 2003), rather than treating the square as a derived term."
           ],
           "caveat": [
-            "The Minerva-university setting, grant counts, industry-contract measure, Poisson GMM, matching, interview sample, and identity-proximity operationalization are setting- and design-specific.",
-            "The interview evidence interprets the proposed mechanisms; it does not turn the quantitative association into a generally identified causal effect."
+            "The Poisson-GMM instruments require independent exclusion arguments per endogenous variable; the paper declares three instruments for the three endogenous variables jointly. The CEM confirmation reports no post-match balance statistics, and 'controlling for self-selection, unobserved heterogeneity, and autocorrelation' conflates three distinct threats — cautionary elements, not a model to copy."
           ]
         },
         "results": {
           "suitable": "yes",
-          "requires": [
-            "cross-audience-valuation",
-            "shared-ability-baseline",
-            "identity-criteria-misalignment"
-          ],
+          "requires": [],
           "learn": [
-            "Make the curve intelligible by showing increasing and decreasing slopes within the observed range and the turning point, then use moderation plots to show which side of the dual reading is being attenuated.",
-            "After statistical results establish the pattern, use qualitative evidence to test the reader's interpretation of the two mechanisms—ability recognition first, identity doubt at high external recognition—rather than merely adding illustrative quotations."
+            "Formally adjudicate a curvilinear claim — Lind-Mehlum endpoint slopes at the interval bounds, a Fieller turning-point interval, and an in-range check — rather than stopping at the significance of the squared term.",
+            "Report curve geometry, not interaction signs alone: conditional plots -> range-wide significance profile (Bowen) with explicit exceptions -> turning-point shift -> predicted-count translation; and adjudicate a rival mechanism via an alternative operationalization that produces an honest null ('We interpret this finding as discounting X and further supporting Y')."
           ],
           "caveat": [
-            "The interview material provides supportive interpretation, not a direct test that every evaluator used the stated reasoning; distinguish mechanism plausibility from complete process verification."
+            "Marginal linear interactions (p<.10) must keep the marginal label and not be merged into full support — the paper's 'consistent with hypothesis' wording for H2a/H3b linear terms is borderline; and the near-absence of CIs beyond the Fieller interval is a transparency target, not a model."
           ]
         },
         "discussion": {
           "suitable": "partial",
-          "requires": [
-            "cross-audience-valuation",
-            "shared-ability-baseline",
-            "identity-criteria-misalignment"
-          ],
+          "requires": [],
           "learn": [
-            "Close by revising the default implication of social evaluation: external appreciation is an asset only while its ability signal is not outweighed by the identity deviation it conveys to the focal audience."
+            "Return to the canonical mechanism named in the opening (the Matthew effect) and transform it into a bounded conditional rule — external appreciation is an asset up to the point it becomes an identity liability — rather than merely restating the findings.",
+            "State the boundary condition explicitly (moderate overlap of the audiences' ability criteria) and route open questions (reputation/status, the Tribe 'sellout' example) to future research."
           ],
           "caveat": [
-            "The Discussion has a broad multi-literature contribution inventory. A new paper should return first to its own focal cross-audience inference before expanding implications."
+            "The Discussion's four-literature contribution inventory (social valuation, social approval assets, institutional logics, academic science funding) is broad and delays the return to the focal cross-audience inference; a new paper should close its own loop before expanding implications."
           ]
         }
       },

@@ -478,6 +478,49 @@ increasing [valuation uncertainty / adverse-selection discount]."
 
 ---
 
+## 选择性组件不变性声明（Selective-Component Invariance Declaration）
+
+<!--
+pattern_id: selective_component_invariance_declaration
+build_type: 机制推演型 + 调节效应型
+source_papers: ["Fini_Jourdan_Perkmann_2017_AMJ_Social_Valuation"]
+confidence: emerging
+status: needs_cross_paper_validation
+story_fidelity: section_variant
+sentence_position: moderation_mechanism
+-->
+
+**功能**: 当 moderator 只绑定多分量效应（如倒 U 的两个相抵分量）中的**一个**分量时，必须显式声明另一分量**不变**。该声明把"W 只影响分量 X"这一理论范围边界讲清楚，是后续拆分双几何假设（shape + peak）的许可条件；同时也是审稿人防线的关键句。
+
+**适用**: 曲线基线由两个（以上）分量相加构成（`curvilinear_additive_opposing_components`）；moderator 选择性绑定其中一个分量；需要区分"被绑定分量的几何后果"与"未被绑定分量的不变性"。
+
+**模板**:
+```
+"We expect [W] to condition the (negative) [identity-conformance] effect of [signal]
+on [valuation] in such a way that the effect will be considerably reduced when [W] is
+[high/present] ... At the same time, [W] is unlikely to significantly affect the
+positive (ability-informed) effect of [signal] on [valuation]: in all [conditions],
+[signal] conveys appreciation of [competence]."
+```
+
+**原文锚点** (Fini, Jourdan & Perkmann 2017, AMJ "Social Valuation across Multiple Audiences"):
+> "We expect audience identity proximity to condition the (negative) identity conformity effect of exogenous indices on peer valuation in such a way that the effect will be considerably reduced in the academic disciplines most proximate to industry ... identity proximity is unlikely to significantly affect the positive (ability-informed) effect of external influences on peer valuation."
+
+**语料锚定**:
+- Fini, Jourdan & Perkmann (2017, *AMJ*) — identity proximity 只绑定 identity-conformance 负分量，显式声明不影响 ability 正分量；随后拆出 H2a（flatten）与 H2b（turning point 右移）。
+
+**关键特征**:
+- **"is unlikely to significantly affect" 是理论范围声明，不是统计交互预测**：它说"在全部 [条件] 下该信号都传达能力"，而非"W×signal 交互不显著"。
+- 与 `Turning-Point Delay via Selective Prerequisite Preservation`（bottleneck-switch 情境，Lee-Park）的判别：后者是"W 只维持 B 不改变 A"的单一几何预测；本微动作把同一不变语义推广到**任意选择性组件调节**，并作为双几何假设的前置。
+- 与 E5 整曲线调节（无不变性声明）判别：整曲线调节无分量可分，不需要本声明。
+- 该句通常紧跟"选择性绑定"句，直接引出 `paired_geometric_hypotheses_per_moderator`（E12）的两条假设。
+**反模式**:
+- 选择性组件调节却不作不变性声明 → 双几何假设的顶点预测失去理论依据，审稿人会质疑"为什么只 flatten 不 shift"。
+- 把不变性声明写成"W 与 ability 通道交互不显著"的统计预测 → 混淆理论范围声明与实证交互假设。
+- 声明不变后又让该分量驱动任何几何预测 → 自相矛盾。
+
+---
+
 ## 外部部分替代衰减（External Partial-Substitute Attenuation）
 
 <!--

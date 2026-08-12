@@ -13,7 +13,7 @@ source_papers:
   - 'zhao_ding2022 (OS, 2023): "challenges an implicit premise that lower entry barriers mechanically translate into greater product variety" (mechanical-causal-chain assumption; variant D)'
   - "weng_yang (JMS): self-labeled 'theoretical inadequacy' with embedded theory lens — 'While insightful, prior studies have fallen short... This is an important theoretical inadequacy since...'"
   - 'reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science, 2026): "mixed findings expose the implicit assumption that political-dissimilarity effects remain stable rather than being activated by macro events" (temporal-stability assumption; variant F)'
-  - 'fini_jourdan_perkmann_2017 (Academy of Management Journal, 2017): external audience approval is not a peer endorsement; it simultaneously conveys ability and possible identity deviation (cross-audience inference; variant G)'
+  - 'fini_jourdan_perkmann_2017 (Academy of Management Journal, 2017): external audience approval is not a peer endorsement; it simultaneously conveys ability and possible identity deviation (cross-audience inference; variant G; TWO-LAYER gap — primary Incompleteness + theory-level Inadequacy)'
 created: 2026-05-18
 updated: 2026-08-12
 source: Extracted from MVP30 narrative_analysis files + weng_yang distill + reinwald et al. 2026 distill
@@ -184,22 +184,25 @@ Inadequacy 问题化的核心 Tension：不是"文献遗漏了东西"，而是"�
 
 ### 变体 G：同质同侪推断 → 跨受众双信息分离型（Fini et al. 2017 型）
 
-**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）。**gap 分类**：两层结构——**primary Incompleteness**（同质受众已知机制 → 多受众情境延伸；Tension 句语言即 "we know relatively little about how it plays out when multiple audiences are present"）+ **theory-level Inadequacy**（既有文献把外部认可读作单一正向信号的假设被双通道分歧暴露为不完整）。因此本变体虽存于 `02-implicit-assumption-wrong`（Inadequacy 文件），其主 Gap 分类应为 Incompleteness；引用时应同时标注两层，勿单标 Inadequacy。
 
 **模板**:
 > "Prior research treats [prior evaluation] as a favorable indication of [quality] because the earlier and focal evaluators share [a theory of value]. That premise becomes incomplete when [focal audience] observes approval from [external audience]. The same approval may signal [capability relevant to the focal decision] while raising doubt about [conformity with the focal audience's expected identity]. The question is therefore not simply whether prior approval matters, but what information an approval issued under a different evaluative standard conveys."
 
-**来源**: Fini, Jourdan, and Perkmann (2017), *Academy of Management Journal*, Introduction.
+**来源**: Fini, Jourdan, and Perkmann (2017), *Academy of Management Journal*, Introduction, P3（Tension + RQ）。
 
 **原文锚定**:
-> "In the case of exogenous indices, both dimensions diverge; this has implications for how peer evaluators are influenced."
+> "While this powerful mechanism is well known and documented for homogenous audiences, we know relatively little about how it plays out when multiple audiences are present."
+
+（重锚定说明：原锚定误引 Theory Lens 句 "In the case of exogenous indices, both dimensions diverge..."，该句来自 P4 理论透镜而非 P3 Tension；已改锚至 Tension 句。此更正同时修正 gap 分类：Tension 语言是 Incompleteness（同质→多受众的情境延伸），而非纯 Inadequacy 的"隐性假设错误"。）
 
 **关键特征**:
 1. 不以“文献很少研究”开场，而是先准确指出既有正向推断成立的边界：前后评价者共享标准。
 2. 用同一可观察线索的“双重可读性”制造张力：能力信息可正向更新判断，身份信息可反向更新判断。
 3. 收束为解释任务而非预支倒 U 结果；曲线形状和条件性留给 Theory 与 Methods 兑现。
+4. 两层 gap 结构：Tension 句（P3）语言是 Incompleteness（多受众情境延伸）；theory-level 的 Inadequacy 由双通道分歧（P4）揭示——外部认可不是单一正向信号。
 
-**适用**: 已有文献默认将他方认可读作单一正向信号，但焦点评价者能够观察来自标准、身份或逻辑不同的外部受众的认可；贡献属于 Inadequacy × Mechanism。
+**适用**: 已有文献默认将他方认可读作单一正向信号，但焦点评价者能够观察来自标准、身份或逻辑不同的外部受众的认可；**主 Gap = Incompleteness（同质→多受众情境延伸）× Mechanism 贡献**，theory-level Inadequacy 作为次层（挑战"单一正向信号"假设）。引用时勿与纯 Inadequacy 型贡献混同。
 
 **禁忌**: 若外部认可不同时携带能力信息和身份/规范信息，不能为追求反直觉而套用双信号逻辑；若两类受众没有任何能力标准重叠，应先论证该认可为何仍具信息价值。
 - 只有一个事件后截面不能支持“随时间变化”的完整叙事；至少需要事件前后比较或重复测量。
@@ -216,7 +219,7 @@ Inadequacy 问题化的核心 Tension：不是"文献遗漏了东西"，而是"�
 
 ### 互斥
 - **不能与 `01-despite-progress-unaddressed` (Tension) 同用**: 前者是"好但不完整"，本品是"依赖错误假设"
-- **不能与 Incompleteness Gap 同用**: 逻辑矛盾
+- **不能与 Incompleteness Gap 同用**: 逻辑矛盾（**例外：变体 G（fini2017）为两层 gap 结构——primary Incompleteness + theory-level Inadequacy，是唯一明确允许与 Incompleteness 共用的变体**；引用该变体时须标注两层，勿与纯 Inadequacy 变体混同）
 
 ### 反模式提醒
 - **不要制造稻草人假设**: 不能声称一个文献没有的假设。必须引用具体的、被广泛引用的文献来证明假设确实存在

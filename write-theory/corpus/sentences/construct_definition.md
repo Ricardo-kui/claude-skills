@@ -581,3 +581,68 @@ theoretical implication].
 **可迁移性**: 高 — 适用于任何"新构念需要通过与多个相关但不同的概念区分来获得合法性"的研究场景：新治理机制、新组织形式、新战略现象、新制度压力类型等。适用于接受 Theory 中正式表格的期刊（JOM / AMJ / SMJ）；ASQ/OS 偏好纯文字理论推演，慎用。
 
 ---
+
+## 变体 M：双信息信号 + 源依赖对齐（Dual-Information Signal with Source-Dependent Alignment，Fini 2017 型）
+
+<!--
+pattern_id: dual_information_signal_source_dependent_alignment
+build_type: 构念辨析型 / 机制推演型
+source_papers: ["Fini_Jourdan_Perkmann_2017_AMJ_Social_Valuation"]
+confidence: emerging
+status: needs_cross_paper_validation
+story_fidelity: section_variant
+-->
+
+**适用**: 当 IV（或信号）是一个可观察的、累积的评价/认证（如合同、奖项、评分、背书），且对焦点受众同时携带**两类信息**——能力（ability）与身份契合（identity conformance）——时，需要在 T1 建立"同一信号双信息、且对齐取决于来源"的构念设置。这是多受众估值、认证/评级、背书、跨受众声誉机制的机制推演的前提 taxonomy。
+
+**模板**:
+```
+[Signal] provides two types of information to evaluators: indices of [ability], and
+indices of [identity conformance]. For indices stemming from [in-group/peer
+evaluation]—termed herein endogenous indices—the index of identity conformance will be
+aligned with the index of ability, making both indistinguishable in practice. The
+distinction between [endogenous] and [exogenous] indices is key to understanding
+[focal valuation]; because exogenous indices originate from [an external audience], the
+indices for ability and identity conformance are no longer aligned.
+```
+
+**原文锚点** (Fini, Jourdan & Perkmann 2017, AMJ "Social Valuation across Multiple Audiences"):
+> "We argue that such indices generally provide two types of information to evaluators: indices of ability, and indices of identity conformance." ... "For indices stemming from peer evaluation—termed herein endogenous indices—the index of identity conformance will be aligned with the index of ability, making both indistinguishable in practice ... because exogenous indices originate from an external audience, for example, industry in our case, the indices for ability and identity conformance are no longer aligned."
+
+**语料锚定**:
+- Fini, Jourdan & Perkmann (2017, *AMJ*) — grants（内生）vs contracts（外生）；内生对齐 → 单调正，外生不对齐 → 双通道倒 U。
+
+**关键特征**:
+- **"两个 index"是同一信号的两类信息读法，不是两个构念** — 与 construct_differentiation（两个不同构念）判别。
+- **对齐取决于信号来源**（source-dependent alignment）— 来源决定信息是否一致，这是 load-bearing 判别，不是背景修饰。
+- 与 `mechanism_chain.md` 的 `cross_audience_dual_signal_curvilinear_inference`（句级机制模板）配套：本变体是 T1 构念设置，机制模板是 T3 机制推演。
+- 与变体 E2（维度独立性论证）判别：E2 论证"两个维度独立"；本变体论证"两个信息读法对齐与否取决于来源"。
+**反模式**:
+- 把两个 index 写成两个独立构念 → 失去"同一信号"的分解前提，机制推演变形。
+- 只作内生/外生标签而无对齐逻辑 → 分类无理论后果。
+- 未与后续双通道曲线机制连接 → T1 构念设置悬空。
+
+---
+
+## 双信号信息读法嵌入句（Fini 2017 型，T1/T3 过渡）
+
+**适用**: 已经定义了主信号后，快速嵌入"该信号携带两类信息、且对齐取决于来源"的句子，直接为倒 U 机制铺垫。
+
+**模板**:
+```
+[Signal] generally provides two types of information to evaluators: indices of
+[ability], and indices of [identity conformance]. As per previous work on [socially
+endogenous inferences], positive [signal] positively influences evaluators in their
+verdict on a candidate because they indicate [ability]. [However, when the signal
+originates outside the focal audience, the two indices are no longer aligned.]
+```
+
+**原文锚点** (Fini, Jourdan & Perkmann 2017, AMJ):
+> "We argue that such indices generally provide two types of information to evaluators: indices of ability, and indices of identity conformance. As per previous work on socially endogenous inferences, positive previous peer evaluations positively influence evaluators in their verdict on a candidate because they indicate ability."
+
+**语料锚定**: Fini, Jourdan & Perkmann (2017, *AMJ*) — 双信息分解 + 社会内生推断的叠加，紧接着来源对齐判别。
+
+**关键特征**: 双信息句与机制句的衔接点；先给出"两类信息"，再引用既有推断机制解释正向读法，为反向读法（身份契合）的引入留出对位。
+**反模式**: 双信息句后不引用社会推断机制而直接断言正效应 → 正向读法失去理论支撑。
+
+---

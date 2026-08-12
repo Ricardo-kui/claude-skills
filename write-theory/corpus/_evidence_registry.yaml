@@ -7,10 +7,10 @@ meta:
   schema_version: "1.0.0"
   registry_type: theory-fragment-registry
   last_updated: "2026-08-12"
-  total_papers_indexed: 66
-  batches_processed: 24
+  total_papers_indexed: 67
+  batches_processed: 25
   auxiliary_sources_note: "Entries with source_tier: auxiliary are writing-craft books, not empirical papers. They register provenance and stay EMERGING until the pattern is cross-validated in empirical paper distills; they never count toward VERIFIED/ROBUST paper_count thresholds on their own."
-  latest_batch_note: "2026-08-12 Ridge, Hill, Ingram, Kolomeitsev & Worrell 2024 AMJ (Theory distill): ADD E11 trait_activation_dual_manifestation_cue_switch (variants/E_moderation.md) + mitigation_via_manifestation_switch (sentences/moderation.md) + threat_processing_cascade (sentences/mechanism_chain.md) + per_stakeholder_paired_main_cue_moderation (subprotocols/hypothesis_organization_patterns.md Pattern 11) + invariant_discriminant_spine (subprotocols/construct_differentiation_patterns.md) + cue_activation_bilateral_carve_out (subprotocols/bilateral_argumentation_templates.md, hard-constraint #11 conditional exception), all EMERGING single-source, tfr_163-168. Build type = moderation (main) + mechanism elaboration. Gap=Incompleteness × Boundary → E11 family. Authorized writeback (theory.report.yaml candidates 1-5) + bounded core correction (C11 carve-out). Routing unchanged at 一级 (E family); E 二级路由补充 E11 信号。"
+  latest_batch_note: "2026-08-12 Fini, Jourdan & Perkmann 2017 AMJ (Theory distill, 机制推演型 + 调节效应型): ADD curvilinear_additive_opposing_components (subprotocols/hypothesis_derivation_patterns.md) + paired_geometric_hypotheses_per_moderator (variants/E_moderation.md E5 sub-variant) + selective_component_invariance_declaration (sentences/moderation.md) + dual_information_signal_source_dependent_alignment (sentences/construct_definition.md); REGISTRY SYNC of pre-existing cross_audience_dual_signal_curvilinear_inference (mechanism_chain.md, sentence-level template from this same paper). All EMERGING single-source, tfr_169-173. Build type = mechanism elaboration (dual opposing channels → inverted U) + curvilinear moderation (paired geometric hypotheses). Gap=Inadequacy → B/E. Authorized writeback (theory.report.yaml candidates 1-5): candidates 1-4 EXTEND written; candidate 5 SKIP (existing cross_audience sentence template NOT re-added). No routing_table.md/SKILL.md edits. Registry previously had NO fini source entry despite mechanism_chain.md listing fini_jourdan_perkmann_2017_amj — drift repaired (additive only)."
   note: "Reverse-engineered from existing corpus anchors. Batch 2026-07-09: distilled 4 recall papers (Darby 2023 MSOM, Mayo 2022 POM, Ball 2018 JOM, Darby 2026 JOM) into subprotocols and registry. Batch 2026-07-10: expanded Cui, Yang & Vertinsky (SMJ) with inverted-U mechanism, bilateral argumentation, flatten/steepen language, and local closure templates. Batch 2026-07-22: distilled Li, Bapuji, Talluri, Singh & Narayanan (2025 JSCM, Vertical Spillover of Product Recalls) — added dual_mechanism_convergent_moderation pattern to bilateral_argumentation_templates.md (moderator×mechanism matrix) and registered H1 dual-mechanism convergence under existing dual_mechanism_same_direction. Batch 2026-07-22b: distilled Cutolo & Ferriani (2024 JOM, narratives & atypicality) — added minimal_pair_contrast_vignette pattern to argumentation_patterns.md (Leah controlled-contrast showing device); registered parallel_buffering_moderators_single_mechanism; cutolo_ferriani also a 2nd source for write-introduction theory-lens/02-dual-theory-layered (processing fluency + Bloom & Lahey taxonomy). Batch 2026-07-22c: distilled Falchetti, Cattani & Ferriani (2022 SMJ, Start with Why) — added congruency_fit_fluency_mechanism to sentences/mechanism_chain.md (genuine gap; spans Falchetti + Cutolo); CORRECTED misclassification of falchetti_2022_smj (was construct_differentiation tfr_017, has no such content) → reclassified to congruency mechanism; construct_differentiation source_count 5→4. Falchetti intro hook (23-popular-debate) and Methods (多研究 变体1/2, 实验 变体1) already distilled in prior sessions. Batch 2026-07-28: backfill + wiring batch — registered two auxiliary sources whose fragments entered corpus in the 2026-07-27/28 waves but were never registered: Booth/Williams/Colomb (The Craft of Research, premise soundness gate + warrant tests + acknowledgment-response matrix + voice firewall → reasoning_soundness_protocol.md, acknowledgment_response.md) and Greene & Lidinsky 2017 (Rogerian four-step → acknowledgment_response.md §5; fallacy probes → reasoning_soundness_protocol.md §8). Same batch wired the registry into consumption: corpus/_index.md selection-stage pointer, write-theory/SKILL.md resource-loading clause, distill-theory-exemplar Phase 4 registry-writeback protocol. Registry previously orphaned (no .md referenced it) since creation. Batch 2026-08-03: distilled Schumacher, Keck & Tang (2020, SMJ); added the belief-updating/attention-threshold reversal pattern as EMERGING. Reference-level writeback was explicitly authorized by the user; no core routing or mandatory-slot rule was changed."
 
 status_rules:
@@ -1919,6 +1919,56 @@ source_papers:
         status: "EMERGING"
         note: "cue/activation moderator 的 low 态=主效应默认基线时，双边覆盖由（主效应基线）+（high 态机制论证）满足，不强制冗余 low 段。对应 SKILL.md 硬约束 #11 条件化例外。"
 
+  fini_jourdan_perkmann_2017_amj:
+    display_name: "Fini, Jourdan & Perkmann (2017, Academy of Management Journal)"
+    journal: "Academy of Management Journal"
+    year: 2017
+    subfield: "strategy / entrepreneurship / multi-audience valuation"
+    theory_build_type: "Mechanism / Boundary"
+    gap_type: "Inadequacy"
+    gap_route: "B-primary / E-secondary"
+    fragments:
+      - fragment_id: tfr_169
+        type: cross_audience_dual_signal_curvilinear_inference
+        title: "跨受众评价的双信号曲线推导（句级模板，机制链）"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "REGISTRY SYNC — 语料条目已存在于 mechanism_chain.md（pattern_id cross_audience_dual_signal_curvilinear_inference，source_papers 已列 fini_jourdan_perkmann_2017_amj），但 registry 此前无 fini 来源条目；本次为 additive 登记（registry drift repair），不新增语料文本。"
+      - fragment_id: tfr_170
+        type: curvilinear_additive_opposing_components
+        title: "Additive Opposing Components → Inverted U（架构级曲线推导）"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "双同时单调分量（正线性 ability + 加速负 identity conformance）在每一点相加得倒 U；非 Two-Phase 阶段主导。与句级模板 tfr_169 配套（架构级 vs 句级）。"
+      - fragment_id: tfr_171
+        type: paired_geometric_hypotheses_per_moderator
+        title: "Paired Geometric Hypotheses per Moderator（E5 子变体）"
+        home_files:
+          - "variants/E_moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "选择性组件调节 → 每调节一对几何假设：H[N]a shape（flatten/steepen）+ H[N]b peak（turning point 沿 X 轴平移），各有直接检验（Haans, Pieters & He 2016）。与 E5 单衰减假设判别。"
+      - fragment_id: tfr_172
+        type: selective_component_invariance_declaration
+        title: "Selective-Component Invariance Declaration（微动作）"
+        home_files:
+          - "sentences/moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "当 moderator 只绑定多分量效应的一个分量时，显式声明另一分量不变（identity proximity 不影响 ability 通道）；是双几何假设的理论许可。从 bottleneck-switch 情境推广为通用微动作。"
+      - fragment_id: tfr_173
+        type: dual_information_signal_source_dependent_alignment
+        title: "Dual-Information Signal with Source-Dependent Alignment（T1 构念设置）"
+        home_files:
+          - "sentences/construct_definition.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+        note: "同一可观察信号携带 ability + identity conformance 两类信息；对齐取决于信号来源（endogenous 对齐 / exogenous 不对齐）——机制的前提 taxonomoy。与机制链句级模板判别：T1 构念 vs T3 机制。"
+
 # Cross-paper pattern aggregation (derived above)
 patterns:
   shared_orientation_divergent_outcomes_selective_remedy:
@@ -2636,20 +2686,60 @@ patterns:
       - "ridge_hill_ingram_kolomeitsev_worrell_2024_amj"
     home_file: "subprotocols/bilateral_argumentation_templates.md"
     note: "Cue-Activation Carve-Out。对照仍需双边：E1 Step5/7、Buffering、E9 镜像、Pattern 12 不对称。QC 不得按字面 C11 判此类结构不完整。"
+  cross_audience_dual_signal_curvilinear_inference:
+    description: "外部受众认可对焦点受众同时是能力线索与身份契合威胁；两信息推理速率不同，认可与焦点评价呈倒 U；调节按'改变身份惩罚'或'改变对外部信号依赖'分别映射到曲率与顶点"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "fini_jourdan_perkmann_2017_amj"
+    home_file: "sentences/mechanism_chain.md"
+    note: "REGISTRY SYNC（tfr_169）— 语料条目先于登记存在；本聚合条目补登记，不改语料文本。句级模板；架构级骨架见 curvilinear_additive_opposing_components。"
+  curvilinear_additive_opposing_components:
+    description: "倒 U 由两个同时单调、方向相反、斜率不同的分量相加生成（正线性 ability 分量 offset 由加速负 identity 分量）——曲线的必要性来自机制主导权变化而非阶段切换"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "fini_jourdan_perkmann_2017_amj"
+    home_file: "subprotocols/hypothesis_derivation_patterns.md"
+    note: "与 Two-Phase（Cui/Bendig/Anderson-Reeb，阶段主导切换）判别：本模式两分量同时存在、每点相加；与 Dual-Logic（不同 facet 两透镜）判别：同一信号的两信息读法。架构级；句级模板 tfr_169。"
+  paired_geometric_hypotheses_per_moderator:
+    description: "曲线基线 + 选择性组件调节 → 每调节产出配对几何假设：H[N]a 形状（flatten/steepen）+ H[N]b 顶点位置（turning point 沿 X 轴平移），各有直接检验（Haans, Pieters & He 2016）"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "fini_jourdan_perkmann_2017_amj"
+    home_file: "variants/E_moderation.md"
+    note: "E5 子变体。与 E5 单衰减假设（moderator 绑定整条曲线）判别：本模式只绑定一个分量，须先作不变性声明。"
+  selective_component_invariance_declaration:
+    description: "当 moderator 只绑定多分量效应的一个分量时，显式声明另一分量不变（理论范围声明而非统计交互预测），为双几何假设提供许可"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "fini_jourdan_perkmann_2017_amj"
+    home_file: "sentences/moderation.md"
+    note: "从 turning_point_delay_selective_prerequisite（bottleneck-switch 情境）推广为通用微动作；与 E5 整曲线调节（无不变性声明）判别。"
+  dual_information_signal_source_dependent_alignment:
+    description: "一个可观察信号携带两类信息（ability + identity conformance）；两类信息是否对齐取决于信号来源（endogenous 对齐 / exogenous 不对齐）——多受众估值机制的前提 taxonomy"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "fini_jourdan_perkmann_2017_amj"
+    home_file: "sentences/construct_definition.md"
+    note: "T1 构念设置，与机制链句级模板 tfr_169 配套；与 construct_differentiation（两个构念区分）判别：本模式是一个构念的两种信息读法。"
 
 # Status summary by Makadok dimension
 summary_by_dimension:
   Constructs:
-    total_fragments: 15
-    source_papers: 11
+    total_fragments: 16
+    source_papers: 12
     verified_patterns: 1
   Mechanism:
-    total_fragments: 59
-    source_papers: 31
+    total_fragments: 61
+    source_papers: 32
     verified_patterns: 5
   Boundary:
-    total_fragments: 34
-    source_papers: 24
+    total_fragments: 36
+    source_papers: 25
     verified_patterns: 3
   Level:
     total_fragments: 0
@@ -2733,6 +2823,12 @@ next_batch_targets:
       - "booth_williams_colomb_2016_craft"
       - "greene_lidinsky_2017"
     note: "All six Batch-2026-07-28 patterns rest on auxiliary writing-craft sources only. Watch for empirical paper distills that independently exhibit Rogerian structuring, explicit warrant management, or premise typing (e.g., AMR/ASQ theory pieces) to cross-validate toward VERIFIED."
+
+  - pattern: "curvilinear_additive_opposing_components / paired_geometric_hypotheses_per_moderator / selective_component_invariance_declaration / dual_information_signal_source_dependent_alignment"
+    papers_needed: 1
+    current_sources:
+      - "fini_jourdan_perkmann_2017_amj"
+    note: "All four Fini 2017 AMJ patterns are single-source EMERGING (tfr_170-173; tfr_169 is the pre-existing sentence template that the architecture-level patterns complement). Seek a second multi-audience valuation / dual-signal curvilinear paper (reputation/status certification, ratings, endorsements, grants-vs-contracts) to move the paired-geometry and additive-components patterns toward VERIFIED."
 
 # Structural corpus files (not traceable to a single distilled paper).
 # These files exist on disk and are referenced by SKILL.md / variants / references,

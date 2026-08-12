@@ -10,7 +10,7 @@
 |----|----------------|
 | **基础序列**（主效应段落骨架） | Anchor→Mechanism→Warrant→Prediction (L244) · Theory-Driven Anchor + Puzzle Turn（Singh&Grewal 2023）(L286) · Multi-Mechanism Trunk（Shen 2022）(L326) |
 | **主效应推导**（单 IV→DV 变体） | Audience-Role Dichotomy + Mirrored Hypotheses（Pontikes 2012）(L27) · Sign-Flipping Boundary Condition（Pontikes 2012）(L78) · Three-Condition Framework for Information-Based Herding（Shi&Grewal 2021）(L117) · Width-Type Parallel Mechanism（2-3 独立理由）(L753) · Symmetric Opposing Dual-Track Mechanism（Zhao-Ding&Gaba）(L800) · Counterintuitive Anchor + Three Parallel Psychological Threats（Keeves 2017）(L494) · Parallel Dual-Source Antecedents Converging on One Mediator（Keeves 2017）(L532) · Emotion Action Tendency→Interpersonal Harm（Keeves 2017）(L567) · Cross-Disciplinary Theoretical Lens（Malshe&Agarwal 2015）(L603) · Four-Reason Parallel Mechanism Derivation（Malshe&Agarwal 2015）(L637) · Three Parallel Single-Step Mechanisms（Darby 2023）(L945) · Two-Levers Theory Progression（Darby 2026）(L980) · Embedded Prose Predictions in Conceptual Framework (L1011) |
-| **调节推导**（moderation 段落） | Bilateral Moderation Derivation / high/low 双边论证（Shen 2022）(L374) · Indirect Moderation / Mediated Moderation Derivation（Singh&Grewal 2023）(L417) · Cumulative Moderation Build-Up（Singh&Grewal 2023）(L456) · Curvilinear Relationship — Two-Phase Argumentation（Cui 2026）(L838) · Sequential Nested Moderation（Chung/Low/Rust 2022）(L881) · Intangible Asset Real Options + Financial Constraint Distal Moderation（Malshe&Agarwal 2015）(L677) |
+| **调节推导**（moderation 段落） | Bilateral Moderation Derivation / high/low 双边论证（Shen 2022）(L374) · Indirect Moderation / Mediated Moderation Derivation（Singh&Grewal 2023）(L417) · Cumulative Moderation Build-Up（Singh&Grewal 2023）(L456) · Curvilinear Relationship — Two-Phase Argumentation（Cui 2026）(L838) · Additive Opposing Components → Inverted U（Fini 2017）(L991) · Sequential Nested Moderation（Chung/Low/Rust 2022）(L881) · Intangible Asset Real Options + Financial Constraint Distal Moderation（Malshe&Agarwal 2015）(L677) |
 | **辩证 / 反转 / 时序不对称** | Dual-Logic Integration — Input vs Efficiency + Inverted U（Zhou 2017）(L189) · Institutional Shock as Theory Hook（Shi&Grewal 2021）(L157) · Counterintuitive Direction-Reversal via Mechanism Substitution (L1061) · Mismatch Subtype Refinement Hypothesis（主效应后递进）(L1096) · Developmental Reversal of Reciprocal-Causation Asymmetry（pollock2015 H1a/H1b）(L1143) · Differential Persistence / Lagged-DV Moderation（pollock2015 H2）(L1211) |
 | **机制靶向干预** | Counterintuitive Direction-Reversal via Mechanism Substitution（Ilicic–Brennan 2026） · Mechanism-Targeted Intervention Escalation（Ilicic–Brennan 2026） |
 | **元规则**（非 pattern，段落布局与文件关系） | 段内逻辑布局原则（连接词/段落长度/Warrant 摆放）(L705) · 与相邻语料文件的关系（validity vs soundness 分工）(L733) |
@@ -66,6 +66,7 @@ status: ready_for_corpus
 | 32 | Pattern: Differential Persistence / Lagged | 嵌套/持久 | 动态面板/自回归设计中，研究问题不是某 IV→DV 斜率被调节，而是两个构念的路径依赖（pa |  | Pollock, Lee, Jin, and Lashley |
 | 33 | Pattern: Belief Updating → Attention-Thres |  | 行动者根据相对参考点的反馈选择风险/保守行动；稳定偏差改变其对未来状态的信念；当预期状态接近 |  | Schumacher, Keck, and Tang (20 |
 | 34 | Pattern: Background-as-Theory Dual-Channel | 双通道/双轨 | 期刊/设计选择用 BACKGROUND（或同类 Literature/Conceptual |  | Kim & Lee (2026), *Strategic M |
+| 35 | Pattern: Additive Opposing Components → I | 曲线/拐点 | 同一信号携带两条同时单调、方向相反、斜率不同的信息推理，逐点相加得倒 U（非阶段主导切换）；两分量全程并存、可被不同调节分别绑定 | EMERGING（单篇；待第二篇 | Fini, Jourdan & Perkmann (2017), *Academy of Management Journal* |
 
 ## Pattern: Audience-Role Dichotomy + Mirrored Hypotheses
 
@@ -985,6 +986,63 @@ When [IV] is [high/low], [DV] [decreases/increases] as [IV] increases, for two r
 - 对 negative/adverse Y，必须明确“曲线顶点是风险最高点”而非“最优中间值”
 - 对 ratio/configuration X，必须分别说明分子与分母的理论角色，并用成分变量、替代规格或区间检验排除同值异构问题
 **反模式**: 如果只有一个阶段的机制强，另一个阶段只是"反向论证"或"常识推断"，会显得薄弱；如果两个阶段的理由没有统一框架，会像是两个独立假设硬凑。
+
+---
+
+<!--
+pattern_id: curvilinear_additive_opposing_components
+build_type: 机制推演型 / 调节效应型
+source_papers: ["Fini_Jourdan_Perkmann_2017_AMJ_Social_Valuation"]
+confidence: emerging
+status: needs_cross_paper_validation
+story_fidelity: section_variant
+-->
+
+## Pattern: Additive Opposing Components → Inverted U（双同时单调分量相抵）
+
+**适用场景**: 当理论预期 IV 和 DV 之间存在曲线关系，且曲线的必要性不是来自"两个阶段先后主导"（Two-Phase），而是来自**两个同时存在、方向相反、斜率不同的单调分量在每一点相加**时使用。典型情形：同一可观察信号对焦点受众同时携带两条信息推理（如能力信号 → 正、身份契合信号 → 负），二者随 IV 累积以不同速率变化，其代数和在每一点上即曲线值。
+
+**与 Two-Phase 的判别（决定性）**:
+| | Two-Phase Argumentation | Additive Opposing Components |
+|---|---|---|
+| 曲线来源 | 阶段主导权切换（Phase 1 机制先占优，转 Phase 2） | 两个分量**同时存在**，逐点相加（SUM） |
+| 机制时态 | 时态先后（先增后减/先减后增） | 同时性（一条线性正 + 一条加速负） |
+| 转折点依据 | 显式转折条件（transition condition） | 两分量边际变化率相等的点 |
+| 分量可得性 | 阶段内各自主导 | 两个分量全程并存、可被不同调节变量分别绑定 |
+| 范文 | Cui (SMJ), Bendig (ETP), Anderson-Reeb (ASQ) | Fini, Jourdan & Perkmann (2017, *AMJ*) |
+
+**微观动作序列**: Anchor（信号携带双信息）→ Channel A（ability 正线性）→ Channel B（identity conformance 加速负）→ Sum（正线性 a offset 由加速负 b = 倒 U，Haans et al. 2015 分解）→ Prediction
+**范文来源**: Fini, Jourdan & Perkmann (2017), *Academy of Management Journal*（industry evaluation → peer evaluation of scientists，倒 U）
+
+**骨架**:
+```
+[Anchor — dual information] [Signal] provides two types of information to evaluators:
+indices of [ability], and indices of [identity conformance].
+
+[Channel A — positive, linear] First, as an index of [ability], [signal] is positively
+related to [valuation], because [capability mechanism]; this effect is linear.
+
+[Channel B — negative, accelerating] Second, as an index of [identity conformance],
+[signal] is negatively related to [valuation], because [identity-deviation mechanism];
+this penalty becomes increasingly salient as [signal] accumulates.
+
+[Sum] The combination of two distinct effects—a positive linear [ability] effect (a)
+offset by an increasingly negative [identity] effect (b)—results in a curvilinear,
+inverted U-shaped relationship (c) ([Haans et al. 2015 citation]).
+
+[Prediction] Therefore, we hypothesize: H[N]: There is an inverted U-shape relationship
+between [signal] and [valuation].
+```
+
+**为什么有效**: 曲线由两个已有理论支撑的单调分量相加生成，转折点是分量边际变化率的相等点，而非需要另找的"转折机制"；同时——关键设计优势——**两个分量全程并存，允许后续不同的调节变量分别绑定其中一个分量**，为调节假设提供了"选择性绑定 + 不变性声明"的天然抓手（见 `paired_geometric_hypotheses_per_moderator` 与 `selective_component_invariance_declaration`）。
+
+**注意事项**:
+- 必须明确两个分量以不同速率变化（一个线性、一个加速），否则相加仍是单调，推不出倒 U。
+- 两个分量必须是**同一信号**的两种信息读法、作用于**同一焦点评价者**；不是两个独立 IV。
+- 引用 Haans, Pieters & He (2016) 的分解：倒 U 可由"正线性 + 加速负"合成，且分量的相对强弱决定顶点位置。
+- 与机制链句级模板的关系：本模式是**架构级段落骨架**；`sentences/mechanism_chain.md` 的 `cross_audience_dual_signal_curvilinear_inference` 是**句级模板**，二者配套。
+**反模式**: 只有"有正有负两条机制"而无速率差异说明 → 推不出倒 U；把两个同时分量误写成阶段先后主导（Two-Phase）→ 丢失"分量可被分别绑定"的调节抓手；把两个分量写成两个独立 IV 的平行效应 → 不是同一信号的分解。
+**诚实边界**: 单篇 EMERGING（Fini et al. 2017 AMJ），需第二篇跨论文验证；不得据此改变 write-theory 的通用曲线路由。
 
 ---
 

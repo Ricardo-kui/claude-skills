@@ -20,7 +20,8 @@ source_papers:
   - "Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ (Strategic Management Journal): categorical lone-insider board as change-in-kind vs continuous independence"
   - "desjardine_li_shi_2025_amj (Academy of Management Journal): single-intermediary setting defense (a/b/c + single-agency consistency), multi-source list + coverage-bound sample window, letter-grade DV boundary-distance operationalization, composite-construct stepwise construction + threshold defense + feasibility argument, rival mirror control convention, theory-estimator alignment + no-lag defense (Bellemare)"
   - "ridge_hill_ingram_kolomeitsev_worrell_2024_amj (Academy of Management Journal): one-sentence temporal-spacing declaration (DV t+1 / IV & controls t) as reverse-causality preemption; control variables dual-sided because (one reason for DV + one reason for covarying with the trait)"
-variants_count: 40
+  - "fini_jourdan_perkmann_2017_amj (Academy of Management Journal): data-availability-challenge single-organization setting defense (M1 变体41), moderator-dummy external validity chain via Tijssen discipline U-I intensity (M5 变体42); core Poisson GMM narrative in 非线性模型 变体16; confirmatory CEM re-estimation in PSM匹配面板 变体4; explanatory sequential roadmap in 多研究 变体10"
+variants_count: 42
 created: 2026-05-18
 updated: 2026-08-12
 ---
@@ -33,23 +34,24 @@ updated: 2026-08-12
 
 | 槽位 | 变体数 | 变体编号 |
 |---|---|---|
-| M1 | 3 | 15, 23, 33 |
+| M1 | 4 | 15, 23, 33, 41 |
 | M2 | 10 | 2, 6, 9, 11, 12, 16, 26, 27, 31, 34 |
 | M2.5 | 2 | 20, 39 |
 | M3 | 3 | 17, 25, 35 |
 | M4 | 7 | 3, 19, 24, 29, 30, 32, 36 |
-| M5 | 3 | 4, 5, 28 |
+| M5 | 4 | 4, 5, 28, 42 |
 | M6 | 4 | 1, 14, 37, 40 |
 | M7 | 7 | 7, 10, 13, 18, 21, 22, 38 |
 | M8 | 1 | 8 |
 
-### M1（2）
+### M1（4）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
 | 15 | 单行业设置 — 双重现象共存辩护 | 单行业样本一句式情境正当化：两个理论前提现象同时存在 | — | 通过（单篇） | Cui, Yang & Vertinsky SMJ |
 | 23 | 行业统计 + 先例对齐的设置辩护 | 单行业事件研究：行业统计证互依 + "大事件"抽样标准 + 先例对齐 | 区别于变体9（制度断点）与变体15（双重现象）：行业统计+抽样阈值+先例对齐 | 通过（单篇） | Pupovac et al. 2026 POM |
 | 33 | 单一中介机构设置辩护 | 以单个评级/平台/审核机构为情境：a/b/c 三理由+单一机构一致性 | 区别于变体15（双重现象）与变体23（行业统计）：中介机构选择+方法差异消解 | 待交叉 | DesJardine, Li & Shi 2025 AMJ |
+| 41 | 数据可得性挑战→独特档案数据集设置辩护 | 单组织/单一评价领域研究，关键结果变量部分 censored 或未披露，须自建档案数据集 | 区别于变体15（双重现象）与变体33（单一中介机构）：数据可得性挑战驱动设置合法性 + 双制度张力情境 | 待交叉 | Fini et al. 2017 (AMJ) |
 
 ### M2（10）
 
@@ -93,13 +95,14 @@ updated: 2026-08-12
 | 32 | 结构二元特征操作化为「kind」而非「degree」 | 治理/组织极端结构二元化（lone-insider 董事会等） | 区别于现有 M4 变体（连续构念/阈值披露/双代理收敛）：kind≠degree 辩护+稳健性预告 | 通过（单篇） | Zorn et al. 2017 SMJ |
 | 36 | 复合测量构念分步构建 | 乘积/交集型复合 IV：阈值辩护+可行性论证+分步计算 | 区别于变体3（三层 because 机制代理）与变体19（moneyness）：双持有侧乘积+可行性 | 待交叉 | DesJardine, Li & Shi 2025 AMJ |
 
-### M5（3）
+### M5（4）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
 | 4 | Mixed-effects within/between 机制分解 | 面板中区分个体内变化 vs 个体间差异的机制检验 | — | 可选 | Darby2023 MSOM |
 | 5 | 替代变量机制对齐矩阵 | 一个构念→多个可分离机制的三角验证（配合机制对齐图） | 区别于变体4（within/between 分解）：主变量+替代变量×机制映射矩阵 | 可选 | Darby2023 MSOM |
 | 28 | Binary-panel GEE + 全零单元保留 + 正式曲线识别链 | 二元面板大量全零单元 + U/倒U假设（副槽位 M7、M8） | 区别于变体22（时不变 IV 选 GEE）：保留全零单元为首要理由+曲线四事前约束 | 通过（单篇） | Bendig et al. 2024 ETP |
+| 42 | 调节 dummy 的外部效度链 — 外部连续学科测量 + 定性锚定 | 自造调节 dummy（如受众身份 proximity）需辩护二分依据（副槽位 M7） | 区别于变体4/5（机制分解）与变体28（估计器曲线链）：调节变量测量本身的构造效度链，非机制或估计器 | 待交叉 | Fini et al. 2017 (AMJ) |
 
 ### M6（4）
 
@@ -667,6 +670,48 @@ updated: 2026-08-12
 > We include several control variables that may covary with the focal outcomes and [IV]. We control for [control 1], [control 2], and [control 3] because [DV] may be affected by all three ([citation]). Likewise, there is reason to expect that each may covary with [IV], given [mechanism linking controls to the trait]. From a [stakeholder/governance] perspective, we control for [control 4] and [control 5] given that these variables are potential outcomes of [focal behavior] ([citation]). Finally, at the [actor] level, we include [actor-level controls] because [reason].
 **与原骨架差异**: 区别变体 14（Li et al. 2026 高 because 密度——强调每个控制的 DV 面理由）——本变体是**"双面结构"**：每个控制对 DV 一条理由（"may be affected by all three"）+ 对 IV 共变一条理由（"each may covary with [IV], given tendencies of those higher in the trait to [behavior]"），形成平行论证。CEO 特质研究最常被质疑"控制为何与特质共变"，双面 because 预先回答此质疑。
 **诚实边界**: 对 IV 的共变理由必须指向真实机制（如"高特质者倾向回避关注"），不能泛泛而谈；若某控制对 IV 的共变理由无法给出，应质疑是否真的需要控制它。
+
+---
+
+### 变体 41: M1 数据可得性挑战→独特档案数据集设置辩护 (1篇高价值) (2026-08-12)
+
+**来源论文**: Fini, Jourdan & Perkmann (2017, *Academy of Management Journal*)
+
+**原始句锚点**: "Studying how industry evaluation affects the peer evaluation of academic scientists is challenging in terms of data requirements. While awarded grants may be known, data on unsuccessful grant applications are often neither disclosed by the funders, nor reported by the scientists."
+
+**验证状态**: 待第二篇交叉验证
+
+**写入日期**: 2026-08-12
+
+**槽位**: M1
+
+**骨架**:
+> Studying how [IV] affects [DV] is challenging in terms of data requirements. While [the observable part of the outcome — e.g., awarded grants] may be known, data on [the censored/unreported part — e.g., unsuccessful applications] are often neither disclosed by [the funding body / regulator], nor reported by [the actors]. We therefore assembled a unique archival dataset covering [population] over [period]. [Setting rationale: this institutional arena combines [tension_1 — e.g., scientific-excellence logic] and [tension_2 — e.g., commercialization mission], making it an ideal context to observe [multi-audience evaluation] ([citation]).]
+
+**与原骨架差异**: 现有 M1 变体为单行业设置（变体 15 双重现象、变体 23 行业统计+先例、变体 33 单一中介机构 a/b/c）——本变体是**数据可得性挑战驱动**的单组织/单一评价领域设置合法性：DV 的关键部分（未成功申请）被 censored 或未披露，迫使研究者自建独特档案数据集；末句用双制度张力（而非"最大/最有影响力"中介属性）锚定情境的理论价值。适用于以单一组织（大学、平台、监管体）为情境、结果变量部分不可观测、须自建数据的研究。主识别叙事（Poisson GMM）见 非线性模型 变体16。
+
+**诚实边界**: 单组织情境的外推须留给 Discussion（跨组织一般化不是 Methods 声明）；censored/未披露的部分无法从档案验证，估计只对可观测子样本成立；数据可得性驱动必须与理论选择绑定——若只是"恰好有这家组织的数据"而非"这家的制度张力恰好检验理论"，本骨架不适用。
+
+---
+
+### 变体 42: M5 调节 dummy 的外部效度链 — 外部连续学科测量 + 定性锚定 (1篇高价值) (2026-08-12)
+
+**来源论文**: Fini, Jourdan & Perkmann (2017, *Academy of Management Journal*)
+
+**原始句锚点**: "To operationalize identity proximity with industry, we selected a measure that indicates a candidate's membership in a disciplinary grouping rather than an individual measure of proximity, because grant applications are evaluated by members of those broader disciplinary groupings... We validated the identity proximity variable by using a discipline-specific measure of proximity based on university–industry collaboration intensity (Tijssen 2012)."
+
+**验证状态**: 待第二篇交叉验证
+
+**写入日期**: 2026-08-12
+
+**槽位**: M5 / M7
+
+**骨架**:
+> To operationalize [moderator], we selected a measure that indicates a [unit]'s membership in a [grouping] rather than an individual measure of [proximity/attribute], because [outcome decisions] are evaluated by members of those broader [groupings]. [Moderator] equals one for [definition of the =1 group: e.g., engineering and medicine] and zero otherwise. We validated [moderator] by using an external continuous measure of [proximity] based on [university–industry collaboration intensity] ([citation]); across the [groups], the external index takes values of [0.071, 0.061, 0.046, 0.039], consistent with the ordering implied by our dummy. We corroborated the grouping boundary through [interviews / expert validation], which confirmed that the [theoretical boundary condition] aligns with the observed classification.
+
+**与原骨架差异**: 现有 M5 变体处理机制分解（变体 4 within/between、变体 5 机制对齐矩阵）与估计器曲线链（变体 28 GEE）——本变体是**调节变量测量本身的构造效度链**：①二分依据（评价由更宽学科组成员执行）；②外部连续学科测量（Tijssen U-I 强度）逐组给出数值验证顺序；③访谈定性锚定边界。回应审稿人对"自造调节 dummy 的二分凭什么成立"的质疑。适用于身份 proximity、受众类别、制度距离等自造调节分类的研究。
+
+**诚实边界**: 外部效度测量的数据窗口可能在样本窗之后（如 Tijssen 2009–2013 验证 2001–2012 样本）——须声明属事后锚定并说明为何仍相关；dummy 二分损失连续 proximity 的信息，稳健性应报告连续版或替代阈值；外部指标只佐证构念效度，不替代理论边界论证（"为什么正好是这两组"）。
 
 ---
 

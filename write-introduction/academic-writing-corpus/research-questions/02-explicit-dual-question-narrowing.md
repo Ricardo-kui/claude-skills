@@ -10,7 +10,8 @@ source_papers:
   - weng_yang (JMS): "Two explicit RQs — main effect question + moderator question — embedded in paragraph with 'To fill this void, we ask:' preamble"
   - cui_yang_vertinsky (SMJ): "Two explicit RQs — main effect question + moderator question — preceded by dual-theory integration statement and directly introduced with 'We ask,'"
   - hoffmann_cheong_phan_zurbruegg2024 (JM, 2024): "We first ask / We then ask — main effect + agency-mitigation moderators, agency-theory-grounded expectations before each RQ"
-updated: 2026-08-05
+  - fini_jourdan_perkmann_2017 (AMJ, 2017): "Single explicit RQ + scope-narrowing preamble 'we focus on the common case of X' — single-RQ narrowing, distinct from dual-question variants A/B/C"
+updated: 2026-08-12
 created: 2026-07-07
 source: Distilled by distill-introduction-exemplar Phase 4.6
 ---
@@ -32,6 +33,7 @@ source: Distilled by distill-introduction-exemplar Phase 4.6
 
 ### 跨论文复现
 - **EMERGING** (1 paper): weng_yang (JMS)
+- **变体 D（single-RQ scope-narrowing，fini_jourdan_perkmann_2017 型）**: EMERGING（单篇来源；与变体 A/B/C 双问句结构判别，属"单问句 + 范围收窄"独立分支）
 
 ### 生成力
 - **GENERATIVE**: "To fill this void, we ask: [RQ1]? [RQ2]?" 框架可迁移到任何有主效应+调节的研究
@@ -107,6 +109,29 @@ source: Distilled by distill-introduction-exemplar Phase 4.6
 **适用**: Incompleteness × (Mechanism + Boundary)；quasi-natural experiment / 法律冲击设计；JM/SMJ 接受 "We first/then ask" 序贯 RQ 的期刊
 
 **禁忌**: RQ1 前的 "we expect" 必须与 Theory 假设方向一致——不能 Intro 预期 A 方向、Theory 假设 B 方向；不要用超过两个 "We ask"——第三层问题应转入 Hypothesis 编号而非继续 RQ 问句
+
+---
+
+### 变体 D：单研究问题 + 范围收窄前置型（single-RQ scope-narrowing，fini2017 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "In this research, we focus on the common case of [candidates evaluated by an audience of peers], that is, [定义该受众：一组对候选人提供认可或资源依赖的行动者]，and explore the following question: How is [focal evaluation] of a candidate influenced by the earlier evaluations made by [external, non-peer audiences]?"
+
+**来源**: fini_jourdan_perkmann_2017 (AMJ), P3
+
+**原文锚定**:
+> "In this research, we focus on the common case of candidates evaluated by an audience of peers (Cattani, Ferriani & Allison, 2014; Shymko & Roulet, 2017), that is, a set of like-minded actors on whom candidates depend for recognition or resources, and explore the following question: How is the peer evaluation of a candidate influenced by the earlier evaluations made by external, non-peer audiences?"
+
+**关键特征**:
+1. **单研究问题（single RQ）而非双问**：全 Introduction 只有一个显式问句（"explore the following question: How is...?"），区别于变体 A/B/C 的双问结构——本变体是单问句的独立分支，RQ 后不再叠加调节问句（调节/边界条件留到 Preview 段预告，见 `previews/mechanism-preview.md` 变体 F 的通道匹配调节）。
+2. **范围收窄前置（scope-narrowing preamble）**："we focus on the common case of X, that is, [定义]"——在问句前先把研究对象收窄到多受众中的一类（同侪受众），并当场给出操作性定义（"a set of like-minded actors on whom candidates depend for recognition or resources"）。这使 RQ 不是宽泛的多受众问题，而是"同侪评估如何被外部非同行受众的早期评估影响"这一窄问题。
+3. **问句内嵌 IV×DV 结构**：RQ 一句内完成 "peer evaluation of a candidate (DV) ← earlier evaluations by external, non-peer audiences (IV)" 的因果方向指定，且与收窄前置（同侪受众）咬合——问句在已收窄的受众子集中提问。
+
+**适用**: Incompleteness（同质受众已知机制→多受众情境延伸）；多受众/多重受众评价研究；研究只有一个核心问题（主效应），调节/边界条件后置到 Preview 或 Hypothesis 而非升格为第二 RQ；AMJ 叙事驱动风格下需要显式单问句锚定焦点。
+
+**禁忌**: 收窄前置必须真实收窄（"common case" 必须落在研究实际样本上，不能收窄 A 却实证 B）；问句只能有一个——若主效应之外还有必须独立提问的边界条件，应回到变体 A/B/C 双问结构；不要与 01 编号列表式三问混用；单问句后不得在同一段再以陈述句伪装的隐式问句补一个 RQ。
 
 ---
 

@@ -3,13 +3,14 @@ type: canonical_contribution
 canonical_id: "contribution-three-layer"
 status: VERIFIED
 gap_type: all
-cross_paper: VERIFIED (1 paper, distinctive)
+cross_paper: VERIFIED (1 paper, distinctive) + EMERGING variant E (canonical-effect-offset, fini2017)
 generativity: ADAPTABLE
 exclusivity: LOW
 source_papers:
   - haunschild2015 (OS, 2015): "foundation for a phenomenon... extends our knowledge... indicates the consequential nature"
   - hoffmann_cheong_phan_zurbruegg2024 (JM, 2024): "Theory/practice split — antecedents vs consequences pivot + Table 1 + multi-stakeholder policy practical"
-updated: 2026-08-05
+  - fini_jourdan_perkmann_2017 (AMJ, 2017): "Canonical-effect-offset — conditional negative flip offsetting the well-documented 'Matthew effect' + audience-specific nature of past appreciation indices"
+updated: 2026-08-12
 created: 2026-05-19
 source: Distilled from Haunschild, Polidoro & Chandler (2015), Organization Science
 ---
@@ -165,3 +166,26 @@ source: Distilled from Haunschild, Polidoro & Chandler (2015), Organization Scie
 **适用**: Incompleteness × (Mechanism + Boundary)；quasi-natural experiment / 政策评估；后果文献饱和、前因稀缺的现象领域；JM/JMR 重视 consumer + shareholder 双 stakes 的研究
 
 **禁忌**: "Practically" 建议必须可从发现推导——不能 Intro 承诺立法修正案但 Results 无支撑；policy-neutral 语气——承认 policy well-intended；不要只有 generic managerial implications 而无 multi-stakeholder 结构
+
+---
+
+### 变体 E：经典正效应抵消型（canonical-effect-offset，fini2017 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "We propose the novel idea that [prior indices of evaluation expressed by external audiences] may, under certain conditions, have a negative effect on [focal valuation] by revealing a potential [identity deviance]—offsetting the well-documented '[canonical positive mechanism]' ([citation]). By revealing the [audience-specific / source-specific] nature of past appreciation indices for [social valuation], we also contribute to work exploring the consequences for actors exposed to multiple or heterogeneous audiences ([citations]): our findings highlight the potential downside of [reaching out to an external audience for resources]."
+
+**来源**: fini_jourdan_perkmann_2017 (AMJ), P7
+
+**原文锚定**:
+> "We propose the novel idea that prior indices of evaluation expressed by external audiences may have, under certain conditions, a negative effect on peer valuation by revealing a potential identity deviance–offsetting the well-documented 'Matthew effect' in science (Merton, 1968b). By revealing the audience-specific nature of past appreciation indices for social valuation, we also contribute to work exploring the consequences for actors being exposed to multiple or heterogeneous audiences (Cattani et al., 2014; Ertug et al., 2016; Kim & Jensen, 2014; Pontikes, 2012): our findings highlight the potential downside of reaching out to an external audience for resources."
+
+**关键特征**:
+1. **点名一个广受认可的正向机制（canonical positive mechanism）**，再提出一个**条件性负向翻转**（"under certain conditions"）来抵消它——被否定的是一个被庆祝的评价机制（Matthew effect），而非企业行为。这是与 vadakkepatt2022 暗面技巧（beneficial firm actions harm stakeholders）的判别点：翻转对象、条件性、以及"抵消"（offset）而非"同时伤害"的措辞。
+2. **主贡献 + 次级贡献双递进**：主贡献 = 条件负效应抵消经典正效应；次级贡献 = 揭示 past appreciation indices 的受众/来源特定性（audience-specific nature）——后者是 Mechanism/Constructs 层的溢出。
+3. **"under certain conditions" 诚实边界**：翻转是条件的（身份邻近 + 内源指数可得性），不是普遍负效应——贡献声明不得读作"外部认可普遍有害"。
+
+**适用**: Incompleteness × Mechanism（可含 theory-level Inadequacy 次层）；多受众评价/社会评价研究；文献中有明确被庆祝的正向机制（Matthew effect、累积优势、herding）可作为对照对象；论文贡献维度含 Mechanism（主）+ Constructs/Boundary（次）。
+
+**禁忌**: 翻转必须条件化（"under certain conditions"），不得写为外部认可普遍有害；被抵消的经典正效应必须真实存在且可被文献引用支撑（不能 strawman）；次级贡献（audience-specific nature）必须由后文 Theory/Discussion 兑现；不要与过度承诺同用（"first to" / "revolutionize" 会破坏 offset 措辞的精确性）。

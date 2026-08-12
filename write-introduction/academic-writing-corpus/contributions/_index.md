@@ -23,7 +23,8 @@ source_papers:
   - kashmiri_nicol_arora2017 (JAMS, 2017): "Humanize firm strategy + open the mechanism black box + install a controllable countervailing remedy"
   - kim_lee2026 (SMJ, 2026): "Full-time validation + revealed-preference WTP + stage durability null + gendered early-stage advantage"
   - desjardine_li_shi_2025_amj (AMJ, 2025): "Primary contribution separated + 'several other streams' multi-stream contrast — most-prior-However-we-show per stream + call response embedded"
-updated: 2026-08-09
+  - fini_jourdan_perkmann_2017 (AMJ, 2017): "Canonical-effect-offset — conditional negative flip offsetting the well-documented 'Matthew effect' + audience-specific nature of past appreciation indices (变体 E in three-layer-contribution.md)"
+updated: 2026-08-12
 created: 2026-05-19
 source: Extracted from MVP30 narrative_analysis files + SKILL.md Makadok table + kim_lee2026
 ---
@@ -54,6 +55,8 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 - 三层之间形成"发现→扩展→后果"的逻辑递进
 
 **适用**: 多维贡献（Mechanism + Phenomenon + Output）的实证研究
+
+**相关变体**: `three-layer-contribution.md` 新增 **变体 E（canonical-effect-offset，fini2017 型，EMERGING）**——点名被庆祝的正向机制（Matthew effect）并做条件性负向翻转抵消之，与暗面技巧（vadakkepatt 技巧3）的判别点是"翻转对象是评价机制、条件性、offset 措辞"。详见 `three-layer-contribution.md`。
 
 **反模式提醒**:
 - 空洞的"important" → 用三层具体化替代

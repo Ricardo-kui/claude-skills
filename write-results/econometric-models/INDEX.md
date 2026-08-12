@@ -29,7 +29,7 @@ updated: 2026-08-12
 | [Logit-Probit-Ordered-Probit](Logit-Probit-Ordered-Probit.md) | Logit-Probit-Ordered-Probit | 18 | 2026-08-05 |
 | [生存分析](生存分析.md) | 生存分析 | 19 | 2026-08-01 |
 | [DiD](DiD.md) | DiD | 10 | 2026-08-05 |
-| [计数模型](计数模型.md) | 计数模型 | 16 | 2026-08-12 |
+| [计数模型](计数模型.md) | 计数模型 | 21 | 2026-08-12 |
 | [实验](实验.md) | 实验 | 5 | 2026-08-03 |
 | [多研究](多研究.md) | 多研究 | 8 | 2026-08-02 |
 | [定性过程研究](定性过程研究.md) | 定性过程研究 | 4 | 2026-07-07 |
@@ -55,6 +55,8 @@ updated: 2026-08-12
 4. 变体达到 3+ 时，考虑提升为 skill 主骨架
 
 ## 语料库质量状态
+
+> ✅ **2026-08-12 更新（Fini, Jourdan & Perkmann 2017 AMJ, Gate ① 全部写入）**: 计数模型 16→21。ADD 5 变体（均单篇 EMERGING）：R7 Poisson-GMM 威胁电池（生成回归元→bootstrap SE / 过离散→负二项 / 调节正交→Gram-Schmidt / 离群→截尾-winsorizing）、R4 曲线调节范围级验证（Bowen 二次项轮廓 + 显式例外）、R8 同 IV 替代操作化机制裁决（相对 vs 绝对 → null → 折扣竞争机制）、R8 量化-定性访谈三角验证（explanatory sequential design）、R7 system GMM 复制（连续化 DV + 内生性分类 + AR/Hansen 诊断）。反模式 +2（枚举型稳健性条目须逐条 threat 定位；曲线调节只报交互符号不报转折点/幅度）、诚实边界 +3（marginal p<.10 须显式标；替代操作化 null 须排除低功效；访谈只作三角验证）。registry sync 修复：变体13 补登 R3，R4 槽位对齐 3 变体，R7/R8 补登新变体。核心倒U链（变体13）已在本轮前入库，本次为残差缺口。未改 SKILL 核心。
 
 > ✅ **2026-08-12 更新（Ridge et al. 2024 AMJ）**: 首次填充「Tobit」结果类型（变体1：左删失 DV 条件幅度四拍 + 实际重要性拍5），并扩展计数模型（变体14–16：显著但实际效应小降调 / null 符号反转替代机制 / 混合结果综合 + Discussion 交接）与 OLS-FE（变体54–55：前置 RIR + naive-vs-cure 2SRI 防御 / 外部证据实际重要性）。均为单篇 EMERGING，不升 core。诚实边界 +3（显著小效应必须降调；null 符号反转只作推测推迟 Discussion；规格敏感性把 null 变显著须透明 + 系数通胀对冲）。
 

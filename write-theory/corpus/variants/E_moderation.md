@@ -64,6 +64,7 @@
 | E9 | 双侧镜像调节（Same-Construct Mirror Moderation，De | 受众分化 | 主效应是"攻击方/施动方对受害方造成影响"，同一调节构念（威胁、机会、压力等）在攻击方侧与受 | EMERGING（单篇来源；仅作 | DesJardine, Li & Shi (2025), * |
 | E10 | 跨学科分类框架驱动的 N 平行缓解调节（Taxonomy-Driven N-Parallel，Cutolo–Ferriani 2024 型） |  | 主效应是文献共识惩罚/负面效应（baseline-from-consensus），贡献全在 N 个缓解调节；N 由跨学科既成框架 1:1 映射，机制统一落同一透镜 | EMERGING（单篇来源；仅作 | Cutolo & Ferriani (2024), *Journal of Management* |
 | E11 | 特质激活双表现型 cue 切换调节（Trait-Activation Dual-Manifestation Cue-Switch，Ridge et al. 2024 AMJ 型） | 受众分化/机制切换 | IV 是特质（默认表现型=主效应基线，如 paranoia→avoidance）；stakeholder cue 激活对立表现型（如 aggression）作用于**同一 DV**；low-cue 态即已论证的主效应，moderation 只论 high（activation）侧；双边覆盖由"主效应基线 + high 态完整机制"满足 | EMERGING（单篇来源；仅作 | Ridge, Hill, Ingram, Kolomeitsev & Worrell (2024), *Academy of Management Journal* |
+| E12 | 曲线基线 + 每调节一对几何假设（Paired Geometric Hypotheses per Moderator，Fini et al. 2017 AMJ 型） | 曲线/几何 | 曲线基线由多分量相加构成，moderator 只绑定一个分量 → 产出**一对**几何假设：H[N]a 形状（flatten/steepen/attenuate）+ H[N]b 顶点位置（turning point 沿 X 轴平移），各一直接检验；与 E5 主模板（单衰减假设，绑定整条曲线）判别；必须先作不变性声明 | EMERGING（单篇来源；仅作 | Fini, Jourdan & Perkmann (2017), *Academy of Management Journal* |
 
 ## E2. 跨层调节 (Cross-Level Moderation) — 9 步协议
 
@@ -273,7 +274,7 @@ In contrast, when [moderator condition 2], [response B] is more likely because [
 | baseline 假设 | H1: X→Y 线性主效应 | H1: X→Y 曲线关系（inverted U-shape / U-shape） |
 | 机制论证 | 单段 why chain | 两段 why chain（递增段 + 递减段），每段多个理由 |
 | 调节机制 | Z 改变 X→Y 的斜率 | Z 改变曲线两侧的形状（flatten/steepen） |
-| 假设数量 | 1 主效应 + 1-3 调节 | 1 曲线主效应 + 3 个调节（常见配置） |
+| 假设数量 | 1 主效应 + 1-3 调节 | 1 曲线主效应 + 3 个调节（常见配置）；若某调节只绑定曲线一个分量 → 该调节产出**一对**几何假设（shape + peak，见下方子变体 Paired Geometric Hypotheses per Moderator，E12） |
 | 双边论证 | high/low 两边 | 曲线的 low-to-medium 和 medium-to-high 两边 |
 
 **段落功能地图**:
@@ -339,6 +340,71 @@ In contrast, when [moderator condition 2], [response B] is more likely because [
 - `corpus/subprotocols/hypothesis_derivation_patterns.md`（Width-Type Parallel Mechanism）
 - `corpus/subprotocols/bilateral_argumentation_templates.md`（high/low 双边论证，应用于曲线两侧）
 - `corpus/subprotocols/moderator_selection_frameworks.md`（多 moderator 选择元框架）
+
+**子变体：Paired Geometric Hypotheses per Moderator（曲线基线 + 每调节一对几何假设，Fini 2017 型）**
+
+<!--
+pattern_id: paired_geometric_hypotheses_per_moderator
+build_type: 调节效应型
+source_papers: ["Fini_Jourdan_Perkmann_2017_AMJ_Social_Valuation"]
+confidence: emerging
+status: needs_cross_paper_validation
+story_fidelity: section_variant
+-->
+
+**适用**: 曲线基线由两个（或以上）分量相加构成（见 `curvilinear_additive_opposing_components`），且某个 moderator **只绑定其中一个分量**。此时该 moderator 应产出**一对几何假设**——H[N]a 管曲线形状（flatten/steepen 或 attenuation/accentuation）、H[N]b 管顶点位置（turning point 沿 X 轴平移）——因为被绑定分量改变形状，而未被绑定分量不变时整体曲线发生平移。与 E5 主模板（每调节单条衰减假设，moderator 绑定整条曲线）判别：本子变体是"选择性组件调节"的曲线几何表达。
+
+**与 E5 主模板的判别（决定性）**:
+
+| | E5 主模板（Cui 型） | Paired Geometric Hypotheses（Fini 型） |
+|---|---|---|
+| 调节绑定对象 | 整条曲线两侧（flatten/steepen） | 曲线的一个分量（选择性组件） |
+| 假设产出 | 每调节 1 条（衰减/增强） | 每调节 2 条（shape + peak） |
+| 几何维度 | 曲率（斜率/峰值高度） | 曲率 + 顶点位置（沿 X 轴） |
+| 直接检验 | 交互项符号 | 各假设各有直接检验（Haans, Pieters & He 2016） |
+| 前提 | 无不变性声明 | 必须先作不变性声明（未绑定分量不变） |
+| 范文 | Cui et al. (SMJ) | Fini, Jourdan & Perkmann (2017, *AMJ*) |
+
+**微观动作序列**: 假设重述（负效应依赖身份解读）→ 定义 W1 → 选择性绑定（W1 只减某分量）→ 不变性声明（W1 不影响另一分量）→ Geometry 1（shape → H[N]a）→ Geometry 2（peak → H[N]b）
+
+**骨架**:
+```
+[Assumption] The negative effect rests on [peers] interpreting [external valuation] as
+deviation from [expected identity]; the magnitude of this discount depends on [W1].
+
+[Selective binding + invariance declaration] [W1] conditions the (negative)
+[identity-conformance] effect so that it is reduced when [W1] is high. At the same
+time, [W1] is unlikely to significantly affect the positive (ability-informed) effect:
+in all [conditions], [external valuation] conveys appreciation of [competence].
+
+[Geometry 1 — shape] When [W1] is high, the marginal effect of an additional [signal]
+decreases; the curve flattens.
+H[N]a: The inverted U-shaped relationship between [external valuation] and [peer
+valuation] is moderated by [W1] so that it is attenuated in [conditions] with high
+[W1] and accentuated in [conditions] with low [W1].
+
+[Geometry 2 — peak] When [W1] is high, [external valuation] is more accepted, so the
+turning point shifts [rightward].
+H[N]b: The turning point occurs at higher levels of [external valuation] when [W1] is
+high, at lower levels when low.
+```
+
+**原文锚点**:
+> "We expect audience identity proximity to condition the (negative) identity conformity effect of exogenous indices on peer valuation in such a way that the effect will be considerably reduced in the academic disciplines most proximate to industry ... identity proximity is unlikely to significantly affect the positive (ability-informed) effect of external influences on peer valuation."
+> — Fini, Jourdan & Perkmann (2017), *Academy of Management Journal*（选择性绑定 + 不变性声明，line 120）
+
+> "it will result in a flattening or steepening of the U-shape (d) predicted in Hypothesis 1; on the other, it will horizontally shift (e) its turning point."
+> — Fini, Jourdan & Perkmann (2017), *Academy of Management Journal*（配对几何：形状 + 顶点，line 122）
+
+**语料锚定**:
+- Fini, Jourdan & Perkmann (2017, *AMJ*) — H2a (shape) + H2b (peak) 由 identity proximity 驱动；H3a + H3b 由 endogenous indices 驱动（每调节一对几何假设）
+
+**关键特征**:
+- **两条几何假设各有直接检验**：形状检验二次交互，顶点检验一阶项平移（Haans, Pieters & He 2016）——比单条衰减假设多一个判别点。
+- **不变性声明是许可条件**：只有显式声明"未绑定分量不变"，才能合法地把"形状变化"与"顶点平移"拆成两条假设；否则二者纠缠。
+- 与 `selective_component_invariance_declaration`（`corpus/sentences/moderation.md`）配套使用。
+**反模式**: 无不变性声明就拆两条几何假设（顶点预测失去依据）；把整曲线调节硬拆成 shape+peak 两条（与 E5 主模板重复）；只写 shape 不写 peak 或反之（丢失判别检验）。
+**诚实边界**: 单篇 EMERGING（Fini 2017 AMJ）；turning-point shift 作为概念仍为 EMERGING 单源（Lee-Park bottleneck-switch、Bendig vertical-shift 相近但不同），配对几何组织为单篇变体，待第二篇跨论文验证；不得据此改变 E 路由。
 
 ---
 

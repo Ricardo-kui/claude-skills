@@ -14,8 +14,9 @@ source_papers:
   - vadakkepatt2022 (JM, 2022): Moderator systematization theory lens
   - darby2025 (JSCM, 2025): Agency theory — principal-agent + impression management
   - darby2026 (JOM, 2026): Agency theory — information asymmetry
+  - fini_jourdan_perkmann_2017 (AMJ, 2017): Dual-channel index decomposition (ability + identity-conformance, alignment depends on index source)
 created: 2026-05-19
-updated: 2026-07-22
+updated: 2026-08-12
 source: Extracted from MVP30 narrative_analysis files + haunschild2015 distillation
 ---
 
@@ -38,6 +39,7 @@ Theory Lens（P4-P5）的功能：在 Gap/Tension 建立之后，向读者提供
 | [09-construct-contrast-introduction.md](09-construct-contrast-introduction.md) | 构念对照引入：新构念借同家族旧构念对照获得合法性，价值锚定在旧构念失效的 scope condition（EMERGING 1源: du_tsolmon2024 ORSC） | Constructs 贡献；knowledge/capability 类构念细分研究 |
 | [04-screening-theory-two-stage.md](04-screening-theory-two-stage.md) | Screening Theory 两阶段筛选：理想筛选不可得时的替代性信息筛选程序 | Incompleteness × Mechanism；信息不对称/自愿披露/信号解读研究 |
 | [theory-lens-templates.md](theory-lens-templates.md) | 跨框架句法模板集：不绑定单一理论名的可迁移透镜模式（变体 A：trait-activation 动态透镜，ridge2024，EMERGING） | 稳定倾向 + 情境激活开关的动态机制研究；特质效应随时间变化的 time-varying designs |
+| [dual-channel-decomposition.md](dual-channel-decomposition.md) | 双通道指数分解：同一可观察信号（indices）拆为能力 + 身份一致两个信息维度，对齐条件取决于信号来源（endogenous 对齐 / exogenous 分歧）（EMERGING 1源: fini2017 AMJ） | Incompleteness × Mechanism；endorsement/rating/certification/prior-evaluation 信号解读、多受众评价研究 |
 
 ---
 
@@ -78,6 +80,7 @@ Theory Lens（P4-P5）的功能：在 Gap/Tension 建立之后，向读者提供
 | 08 | dual-metaphor-stream-reconciliation | 单理论双隐喻（pipes/prisms）调和两条各解释一半的文献流 |
 | 09 | construct-contrast-introduction | 新构念借同家族旧构念对照引入，价值锚定在旧构念失效的情境 |
 | — | theory-lens-templates | 跨框架句法模板集（变体 A：trait-activation 动态透镜——稳定倾向 + 情境激活开关的个体内切换） |
+| — | dual-channel-decomposition | 双通道指数分解：单信号拆为能力 + 身份一致两维，对齐取决于信号来源（endogenous 对齐 / exogenous 分歧）；曲线预测从分歧机制推导（变体 A：双通道指数分解型，fini2017，EMERGING） |
 
 ---
 

@@ -25,7 +25,8 @@ source_papers:
   - 'liu_shankar2015 (MS, 2015): No-Theory empirical stack — explicit RQ list + state-space/Kalman + BLP integration + dataset scope'
   - 'castellaneta_conti_kacperczyk2017 (SMJ, 2017): Endogeneity challenge → staggered state-law QNE → dual-transaction PE observability'
   - 'kim_lee2026 (SMJ, 2026): Full employment-pipeline observability + within-candidate multi-offer + revealed-preference WTP warrant'
-updated: 2026-08-05
+  - 'fini_jourdan_perkmann_2017 (AMJ, 2017): Inverted-U cost-benefit preview + channel-matched moderation (each moderator binds one countervailing channel); second source for variant F'
+updated: 2026-08-12
 created: 2026-05-18
 source: Extracted from MVP30 narrative_analysis files + grewal2025 + paruchuri_andrus_sullivan2026 + bamberger_homburg_wielgos2021 + lee_wu_bednar_orsc_18968 + reinwald et al. 2026 + castellaneta_conti_kacperczyk2017 + kim_lee2026
 ---
@@ -44,7 +45,7 @@ source: Extracted from MVP30 narrative_analysis files + grewal2025 + paruchuri_a
 | C | 挑战性预测型 | 需要建立理论悬念、挑战共识的研究 |  | gamache2023 (SMJ), adapted |
 | D | 双理论整合型（mannor2016 型） | 需要整合两个不同学科（如战略管理+心理学，组织理论+认知科学）来解释新现象的研究 |  | mannor2016 (SMJ), P3 |
 | E | 机制-边界-发现-贡献四合一融合段（grewal2025 型） | 目标期刊偏好紧凑 Introduction（JM/JMR/IJRM）；研究贡献涉及 Mech |  | Grewal, Vana, and Stephen (202 |
-| F | 倒U型成本收益转折 + 多调节方向预告（cui_yang_vertinsky_smj | 有倒U型或非线性主效应，并伴随多个边界条件的研究；SMJ/AMJ。 | EMERGING（单篇来源，待第 | Cui, Yang & Vertinsky (SMJ), P |
+| F | 倒U型成本收益转折 + 多调节方向预告（cui_yang_vertinsky_smj | 有倒U型或非线性主效应，并伴随多个边界条件的研究；SMJ/AMJ。**子特征：通道匹配调节（fini2017，每个 moderator 绑定一条反作用通道）** | EMERGING（双篇：cui_vertinsky + fini2017，待第三 | Cui, Yang & Vertinsky (SMJ), P8-P9；Fini et al. (AMJ), P5 |
 | G | 对称双调节 + 多方法预览型（paruchuri2026型） | 理论预测包含对称/反向调节机制、使用多方法（archival + experiment） | EMERGING（单篇来源；仅作 | paruchuri_andrus_sullivan2026 |
 | H | 双缺口嵌套 → 机制簇 → 净效应分解 → 研究分工（Bamberger 2021 型） | 同一自变量可能同时产生短期收益与关系性长期成本；研究用互补数据源识别内部机制与外部绩效 | EMERGING（单篇来源，待第 | Bamberger, Homburg, and Wielgo |
 | I | 定性扎根 → 条件化机制 → 准实验检验 → 行为—传播双结果（Lee–Wu–Bedna | 理论先验存在两条反向路径，需要访谈识别行为者如何解释冲击，再用档案准实验检验净效应及异质 | EMERGING（单篇来源；仅作 s | Lee, Wu, and Bednar, *Organizat |
@@ -192,6 +193,18 @@ P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者
 **适用**: 有倒U型或非线性主效应，并伴随多个边界条件的研究；SMJ/AMJ。
 
 **禁忌**: 必须确保调节方向与后文假设一致；上升段和下降段机制都要有理论依据；不要在未建立 Theory Lens 的情况下直接跳到 mechanism preview。
+
+**第二来源 + 子特征：通道匹配调节（fini_jourdan_perkmann_2017 型，AMJ, P5）**
+
+**原文锚定**:
+> "Considering these two counter-balancing effects leads us to hypothesize an inverted U-shaped relationship between exogenous indices and peer valuation. We further predict that this curvilinear relationship is moderated by the identity proximity between the academic and the industry audiences, and by the availability of endogenous indices through an academic's publishing trajectory."
+
+**验证状态**: 由 EMERGING（单篇来源 cui_yang_vertinsky_smj）升级为 **EMERGING（双篇交叉验证）**；待第三篇升 VERIFIED。
+
+**子特征（channel-matched moderation）**:
+- **每个调节变量绑定一条反作用通道**（而非并列罗列）：identity proximity 绑定身份一致通道（跨受众身份越近，身份偏离疑虑越弱），endogenous-index 可用性绑定能力通道（内部同行评价越充分，外部认可的能力增量越弱）。
+- 与 cui 型变体 F 的差别：cui 的三个 moderators（relational/positional/structural embeddedness）是并列的网络边界条件，未做通道匹配；本子特征把每个 moderator 显式映射到一个 counter-balancing effect——这是区分二者、也是把倒 U 从"net effect"升级为"可分解 why-chain"的关键。
+- 与 `theory-lens/dual-channel-decomposition.md`（fini 型双通道透镜）配对使用：预览承接透镜的通道分解，逐通道指派调节。
 
 ---
 

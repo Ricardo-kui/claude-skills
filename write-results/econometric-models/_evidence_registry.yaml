@@ -550,7 +550,8 @@ estimators:
           - sign_stability
           corpus_path: econometric-models/OLS-FE.md
         - id: r7_ols_front_loaded_rir_naive_cure
-          skeleton: A concern in testing how [characteristic] affects [outcome] is endogeneity, especially from nonrandom
+          skeleton: >-
+            A concern in testing how [characteristic] affects [outcome] is endogeneity, especially from nonrandom
             [selection]. First, we use robustness of inference to replacement (RIR): to alter our inferences for [outcome 1],
             [N] observations would have to be replaced with observations for which there is an effect of zero, and for [outcome
             2], [N] observations. Next, we pair 'naive' analyses that do not use tools to 'cure' endogeneity with analyses
@@ -2362,8 +2363,86 @@ estimators:
           rhythm_tags: []
           notes: ''
           corpus_path: econometric-models/计数模型.md
+        - id: r3_count_poisson_gmm_inverted_u_chain
+          skeleton: 'Table [X] first reports the [Poisson-GMM / count-model] sequence: [baseline models] establish the focal curve, [subsequent models] introduce the pre-specified moderators, and the final model retains all terms. Hypothesis [H1] predicts an inverted-U-shaped association between [X] and expected [count outcome]. In Model [M], the linear term is [positive] and the quadratic term is [negative], both [statistically distinguishable/not distinguishable] from zero. Because these coefficients alone do not establish a curve, we test whether the marginal slope is [positive] at the lower supported value of X and [negative] at the upper value, and whether the estimated turning point [with confidence interval] lies within the observed support. Figure [F] plots predicted expected counts across that supported range. Thus, the joint shape evidence [supports/does not support] H1.'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Fini_Jourdan_Perkmann_2017_AMJ
+          transferability: high
+          paradigm_exclusivity: 计数模型专用，Poisson-GMM 倒U形状裁决
+          rhythm_tags:
+          - inverted_u
+          - lind_mehlum
+          - turning_point_ci
+          - curve_geometry
+          notes: 二次项显著不是倒U充分证据；须端点斜率+转折点区间+支持范围（corpus 变体13）
+          corpus_path: econometric-models/计数模型.md
       R4:
-        skeleton_variants: []
+        skeleton_variants:
+        - id: r4_count_moderation_translation
+          skeleton: Because the interaction term is in log-count units, we translate it into predicted [outcome] differences. At the minimum observed value of [moderator], [high baseline group] is predicted to [experience] approximately [N] fewer [outcomes] than [low baseline group]. At the maximum observed value of [moderator], this gap narrows to [N] fewer [outcomes], representing a [percent] reduction in the penalty.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Cutolo_Ferriani_2024_JM
+          transferability: high
+          paradigm_exclusivity: 计数模型专用，交互项解释
+          rhythm_tags:
+          - predicted_counts
+          - min_max_contrast
+          - penalty_reduction
+          notes: 同 r5_count_moderation_translation（槽位 R4/R5 双标）；负二项交互项须用 predicted counts（corpus 变体4）
+          corpus_path: econometric-models/计数模型.md
+        - id: r4_count_nonlinear_moderation_subgroup
+          skeleton: Hypothesis [N] predicts that the [positive/negative] impact of [IV] on [DV] [diminishes/intensifies] over [moderator]. The traditional approach to testing such a contingency effect through interaction terms is inappropriate in the context of our analysis because we adopt a [nonlinear specification]... we tested this hypothesis through graphical analysis and a formal econometric test of differences in marginal effects of [IV] across subsamples containing different levels of [moderator].
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Haunschild_Polidoro_Chandler_2015_ORSC
+          transferability: high
+          paradigm_exclusivity: 非线性模型（负二项/Poisson/Logit）调节，须引 Hoetker 正当化
+          rhythm_tags:
+          - subgroup_marginal_effect
+          - graphical
+          - t_test
+          notes: 交互项不适用时用图形+子样本边际效应差异 t 检验（corpus 变体8）
+          corpus_path: econometric-models/计数模型.md
+        - id: r4_count_conditional_reversal
+          skeleton: The main effect of [predictor] is consistently significant and [negative/positive]. As [predictor] increases, [units] are generally [less/more] likely to [outcome]. However, the interaction between [predictor] and [moderator] is consistently [positive/negative] and significant, suggesting that [moderator] moderates the direct effect of [predictor].
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            ob_hr: 1
+          sources:
+          - Desai_2011_AMJ
+          transferability: ''
+          paradigm_exclusivity: ''
+          rhythm_tags: []
+          notes: 主效应与交互方向相反时先报一致主效应再用 However 条件反转；同 r3_count_cross_model_consistency（R3/R4 双标）（corpus 变体10）
+          corpus_path: econometric-models/计数模型.md
+        - id: r4_count_rangewide_moderation_profile
+          skeleton: 'Given the non-linear nature of our count models, we also compute the linear and squared terms of the secondary effects to evaluate the true value and significance of the moderating effects across the whole range of the variable distribution ([citation]). Results confirm that the secondary effects of [moderator 1], [moderator 2], and [moderator 3] are in the expected direction and significant (p < .01) in at least [X]% of cases, with the exception of the linear effect of [moderator] (p < .1) and [moderator] (n.s.). Overall, these results add support to [hypotheses].'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Fini_Jourdan_Perkmann_2017_AMJ
+          transferability: high
+          paradigm_exclusivity: 计数模型专用，曲线调节范围级验证
+          rhythm_tags:
+          - bowen_secondary_effect
+          - rangewide_significance
+          - explicit_exception
+          notes: 曲线调节须对 IV 全范围验证显著性轮廓，显式报例外（corpus 变体18）
+          corpus_path: econometric-models/计数模型.md
       R5:
         skeleton_variants:
         - id: r5_count_moderation_translation
@@ -2514,6 +2593,77 @@ estimators:
           - construct_boundary
           - facet_comparison
           notes: 复合文本指标必须分解以显示哪个 facet 驱动效应
+          corpus_path: econometric-models/计数模型.md
+        - id: r7_count_poisson_gmm_robustness_battery
+          skeleton: 'We conduct further tests to check that our results are robust to changes in specifications. First, to confirm the validity of our [count-GMM] estimation, we follow [validity procedure/citation]. Second, to address standard error inefficiencies from the generated regressor ([name]) in the outcome equation, we re-estimate the models bootstrapping the standard errors [N] times with robust standard errors. Third, to account for overdispersion ([rough share]% of cases), we use a [negative binomial] estimator in lieu of [Poisson]. Fourth, to address selection into [endogenous behavior], we specify [N] alternative selection models using [fine-grained auxiliary data]. Fifth, we test alternative specifications of [IV and DV]. Sixth, because [external reference] is unavailable for years before [cutoff], we use an alternative measure of [construct] with a bounded denominator. Seventh, to address correlation among the moderators, we re-estimate the main models using a modified [orthogonalization] procedure. Finally, to check sensitivity to outliers, we run censoring analyses excluding values above [thresholds] and winsorizing with lower and upper cut-offs ([citation]). The results of these tests remain consistent with our hypothesized relationships.'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Fini_Jourdan_Perkmann_2017_AMJ
+          transferability: high
+          paradigm_exclusivity: 计数模型专用，Poisson-GMM 威胁电池
+          rhythm_tags:
+          - generated_regressor
+          - bootstrap_se
+          - overdispersion
+          - orthogonalization
+          - winsorizing
+          notes: 逐条 to address X 定位；区别于文本测量专属变体5/6 与通用枚举 OLS-FE 变体21（corpus 变体17）
+          corpus_path: econometric-models/计数模型.md
+        - id: r7_count_system_gmm_replication
+          skeleton: 'Finally, in further analysis, we replicate our findings with a linear GMM estimation [citation], using the logarithmic transformation of the monetary amount of [outcome] as a dependent variable. Compared to our main specification, this procedure allows us to include individual fixed effects and thus control for (invariant) unobserved heterogeneity. The correlation between this continuous measure and the count measure used in our main models is just above [threshold]. We employ a system GMM estimator rather than a difference GMM estimator, as the former allows for more instruments. We treat [IV], its squared term, [lagged DV], and the interaction terms as endogenous; all remaining variables, except [time controls] and [group affiliation], are considered predetermined. Robust standard errors, clustered by [unit], are included in all specifications. We assess the validity of the GMM estimator and the selected instruments via serial correlation tests (AR(1) and AR(2)) and the Hansen test of overidentification restrictions. The results of the linear models are similar to the main specification, adding support to our hypotheses.'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Fini_Jourdan_Perkmann_2017_AMJ
+          transferability: high
+          paradigm_exclusivity: 计数模型专用，system GMM 替代估计器复制
+          rhythm_tags:
+          - continuous_dv_swap
+          - endogeneity_classification
+          - ar_hansen_diagnostics
+          - cross_measure_correlation
+          notes: 换连续 DV + system GMM + 内生性分类 + AR/Hansen；区别于 OLS-FE 变体39（3SLS）（corpus 变体21）
+          corpus_path: econometric-models/计数模型.md
+      R8:
+        description: 补充 / 事后 / 机制
+        skeleton_variants:
+        - id: r8_count_alt_operationalization_mechanism_adjudication
+          skeleton: 'Furthermore, we explore whether [evaluators] consider [IV] relative to [benchmark] (i.e., as a proportion of [combined measure] rather than as an absolute value). Rather than a deviation from [identity], a relative measure may capture the [rival mechanism], suggesting a different mechanism from [focal mechanism]. To test this possibility, we compute further iterations of our models with an alternative specification of [IV], operationalized as [relative operationalization]. We find the level of significance of our explanatory variables to be lower or absent with this alternative specification. We interpret this finding as discounting the [rival mechanism] argument and further supporting the [focal mechanism]: [mechanism rationale].'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Fini_Jourdan_Perkmann_2017_AMJ
+          transferability: high
+          paradigm_exclusivity: 跨估计器；同 IV 替代操作化机制裁决
+          rhythm_tags:
+          - alt_operationalization
+          - null_as_mechanism_evidence
+          - rival_mechanism_discount
+          notes: 同 IV 替代操作化 null 折扣竞争机制；须排除低功效/测量噪声（corpus 变体19）
+          corpus_path: econometric-models/计数模型.md
+        - id: r8_quant_results_qual_mechanism_triangulation
+          skeleton: 'Finally, we interviewed [informants] in order to further elucidate and interpret our results. We first focus on the main [effect]. Statements from our informants suggest that—without being specifically prompted—they considered both of our two postulated mechanisms as relevant. On the one hand, they considered [IV] as signaling generic ability, or, in the words of one respondent, [ability quote]. Simultaneously, informants suggested that high levels of [IV] were likely to trigger negative evaluations, highlighting [identity] concerns rather than imputed ability: [identity quote]. These respondents all reiterated that this negative effect would not apply to a normal or reasonable amount of [IV] but only when it became excessive; this provides support for our conjecture that lower and moderate levels have little or no negative effects. Overall, our interview evidence provides additional support for our hypothesis posing a [curvilinear] effect as a result of two interacting effects, a positive [ability] effect, and a negative [identity] effect.'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Fini_Jourdan_Perkmann_2017_AMJ
+          transferability: high
+          paradigm_exclusivity: 跨估计器；量化 Results 内嵌访谈三角验证
+          rhythm_tags:
+          - mechanism_quote_cadence
+          - reiterated_pattern
+          - boundary_qualifier
+          - explanatory_sequential
+          notes: 访谈只 corroborate 机制解释不识别效应；显式标探索性（corpus 变体20）
           corpus_path: econometric-models/计数模型.md
       R2:
         description: ''

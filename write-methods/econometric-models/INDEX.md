@@ -27,13 +27,13 @@ updated: 2026-08-12
 
 | 文件 | 设计类型 | 变体数 | 最后更新 |
 |------|---------|--------|---------|
-| [面板数据-OLS](面板数据-OLS.md) | 面板数据-OLS | 40 | 2026-08-12 |
+| [面板数据-OLS](面板数据-OLS.md) | 面板数据-OLS | 42 | 2026-08-12 |
 | [自然实验-DiD](自然实验-DiD.md) | 自然实验-DiD | 13 | 2026-08-05 |
 | [非线性模型](非线性模型.md) | 非线性模型 | 16 | 2026-08-12 |
 | [生存分析](生存分析.md) | 生存分析 | 22 | 2026-08-01 |
 | [SEM](SEM.md) | SEM | 4 | 2026-05-18 |
 | [实验](实验.md) | 实验 | 6 | 2026-08-03 |
-| [多研究](多研究.md) | 多研究 | 9 | 2026-08-02 |
+| [多研究](多研究.md) | 多研究 | 10 | 2026-08-12 |
 | [定性过程研究](定性过程研究.md) | 定性过程研究 | 6 | 2026-07-07 |
 | [稀有结果](稀有结果.md) | 稀有结果 | 1 | 2026-08-05 |
 | [实证对象构建](实证对象构建.md) | 实证对象构建 | 5 | 2026-07-30 |
@@ -44,7 +44,7 @@ updated: 2026-08-12
 | [匹配DiD-广义DiD](匹配DiD-广义DiD.md) | 匹配DiD-广义DiD | 1 | 2026-08-05 |
 | [同伴效应-网络效应](同伴效应-网络效应.md) | 同伴效应-网络效应 | 4 | 2026-07-30 |
 | [文本构念测量](文本构念测量.md) | 文本构念测量 | 15 | 2026-08-12 |
-| [PSM匹配面板](PSM匹配面板.md) | PSM匹配面板 | 3 | 2026-06-16 |
+| [PSM匹配面板](PSM匹配面板.md) | PSM匹配面板 | 4 | 2026-08-12 |
 | [堆叠扩散Logit](堆叠扩散Logit.md) | 堆叠扩散Logit | 0 | 2026-05-18 |
 | [多行为者设计](多行为者设计.md) | 多行为者设计 | 1 | 2026-07-08 |
 | [推断二元结果](推断二元结果.md) | 推断二元结果 | 1 | 2026-08-05 |
@@ -60,6 +60,15 @@ updated: 2026-08-12
 4. 变体达到 3+ 时，考虑提升为 skill 主骨架
 
 ## 语料库质量状态
+
+> ✅ **2026-08-12 更新（Fini–Jourdan–Perkmann 2017 AMJ，distill-methods-exemplar writeback，Gate ① 全部写入）**: Social valuation across multiple audiences（Minerva scientist panel + Poisson GMM）。核心识别叙事已由 非线性模型 变体16 覆盖（今日入库）；本轮补 4 变体 + 3 反模式（均单篇 EMERGING，`section_variant`）：
+>   - **面板数据-OLS** 变体41（M1）：**数据可得性挑战→独特档案数据集设置辩护**（DV 部分 censored/未披露 → 自建档案；双制度张力情境）——区别于单行业（15/23）与单一中介机构（33）
+>   - **面板数据-OLS** 变体42（M5）：**调节 dummy 外部效度链**（身份 proximity dummy 用 Tijssen 学科 U-I 强度 0.071/0.061/0.046/0.039 外部连续测量验证 + 访谈锚定）——band=gap，corpus 首个调节测量效度链
+>   - **PSM匹配面板** 变体4（M8）：**CEM 确认性复制**（内生焦点变量自身作处理，匹配后重估同估计器）——区别于变体1/2 主分析与外生冲击位置
+>   - **多研究** 变体10（M9）：**Explanatory Sequential 三步确认路线图**（量化主分析→匹配确认→访谈机制佐证）——单研究内递进，访谈仅作机制佐证
+>   - **非线性模型** 变体16 EXTEND：**平方项/边界交互工具化增量**（Abadie 2003）
+>   - 新增反模式：CEM 匹配只报 strata 不报平衡统计量（PSM匹配面板 M8）、"三威胁合并表述"（非线性模型 M7）、工具化平方项/交互 exclusion 未逐一论证（IV-2SLS M8）
+>   均为单篇 EMERGING；未改 SKILL.md 核心路由。
 
 > ✅ **2026-08-12 更新（Ridge–Hill–Ingram–Kolomeitsev–Worrell 2024 AMJ，whole-paper distillation 的 methods writeback）**: CEO paranoia × stakeholder engagement（earnings-call 文本构念 + Tobit/NB + RIR/2SRI）。新增 6 变体（均单篇 EMERGING，`section_variant`）：
 >   - **文本构念测量** 变体14–15：**从零自定义词典九步效度链**（组件→专家 sort→演绎词典→学生 sort→PFA→nomological→stability）+ **earnings-call speaker-attribution 管线**（fuzzy-match + 手工核对 + firm-year 折叠）
