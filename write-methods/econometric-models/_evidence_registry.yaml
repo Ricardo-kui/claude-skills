@@ -310,7 +310,7 @@ evidence:
       note: 'Single-organization (Minerva) scientist panel 2001-2012; DV = peer grant award count (0-23); IV = cumulative industry contracts with squared term for inverted U; moderators = audience identity proximity + publication record. Identification stack: probit+IMR selection -> iterative Poisson GMM instrumenting three endogenous terms (peer eval, industry eval, industry eval^2) with 3 instruments + Hansen J -> CEM confirmatory replication -> explanatory sequential interviews. Writes M1 data-availability setting (面板数据-OLS 变体41), M5 moderator-dummy external validity chain via Tijssen U-I intensity (面板数据-OLS 变体42), M8 CEM confirmatory replication (PSM匹配面板 变体4), M9 explanatory sequential roadmap (多研究 变体10); core GMM narrative registered under 非线性模型 变体16. Anti-patterns recorded: CEM strata without balance stats, three-threats merged statement, squared-term exclusion not separately argued.'
   by_design_type:
     面板数据-OLS:
-      paper_count: 11
+      paper_count: 12
       papers:
       - lee_park_2024_smj (SMJ)
       - bendig_hensellek_schulte_2024_etp (ETP)
@@ -323,6 +323,7 @@ evidence:
       - kashmiri_nicol_arora_2017_jams (JAMS)
       - desjardine_li_shi_2025_amj (AMJ)
       - ridge_hill_ingram_kolomeitsev_worrell_2024_amj (AMJ)
+      - fini_jourdan_perkmann_2017_amj (AMJ)
       status: VERIFIED
       slots_covered:
       - M1
