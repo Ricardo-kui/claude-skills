@@ -363,12 +363,13 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     非线性模型:
-      paper_count: 4
+      paper_count: 5
       papers:
       - lee_park_2024_smj (SMJ)
       - bendig_hensellek_schulte_2024_etp (ETP)
       - cutolo2024 (JM)
       - kashmiri_nicol_arora_2017_jams (JAMS)
+      - fini_jourdan_perkmann_2017_amj (AMJ)
       status: VERIFIED
       slots_covered:
       - M1

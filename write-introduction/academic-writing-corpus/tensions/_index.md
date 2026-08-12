@@ -17,7 +17,7 @@
 
 | 文件 | 核心特征 |
 |------|---------|
-| `02-implicit-assumption-wrong.md` | 隐性假设错误（含变体D：挑战机械因果链前提；变体F：混合发现→稳定效应假设→宏观事件激活；变体G：同质同侪推断→跨受众双信息分离，EMERGING） |
+| `02-implicit-assumption-wrong.md` | 隐性假设错误（含变体D：挑战机械因果链前提；变体F：混合发现→稳定效应假设→宏观事件激活；变体G：同质同侪推断→跨受众双信息分离，EMERGING，**两层 gap——primary Incompleteness + theory-level Inadequacy，已重锚至 Tension 句**） |
 | `03-structural-blindspot.md` | 结构性盲点 |
 | `05-construct-confusion.md` | 构念混淆 |
 | `11-overlooked-alternative.md` | 被忽视的替代解释 |
