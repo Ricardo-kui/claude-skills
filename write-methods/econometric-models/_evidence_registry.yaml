@@ -448,13 +448,14 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     多研究:
-      paper_count: 5
+      paper_count: 6
       papers:
       - falchetti2022 (SMJ)
       - ilicic_brennan_2026 (JM)
       - kim_lee_2026 (SMJ)
       - bamberger_homburg_wielgos2021 (JM)
       - reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science)
+      - fini_jourdan_perkmann_2017_amj (AMJ)
       status: VERIFIED
       slots_covered:
       - M1
