@@ -33,6 +33,16 @@ Read `config.json` for machine-specific defaults. Current defaults are:
 
 Keep `config.json` and the scripts in sync. Do not hardcode stale machine-specific paths into new updates.
 
+## Source Authority
+
+Use the strongest available full text for substantive reading and verification, in this order:
+
+1. User-provided or vault full-text Markdown (including `文献笔记库/01 导入/论文导入/` and `Clippings/`)
+2. A local PDF only when no authoritative full-text Markdown exists, or when a page-image/layout check is specifically necessary
+3. Abstract, DOI, URL, title, or other partial metadata
+
+Treat a supplied complete Markdown file as the paper's authoritative reading source. Read it directly; do not reopen a Zotero PDF merely to read or verify the paper. Zotero is a metadata service: use it only to resolve citation key, DOI, bibliographic fields, and optional attachment links. Record the actual full-text Markdown path and the verification method in the note.
+
 ## Router
 
 Resolve the task in this order:
@@ -60,7 +70,7 @@ Load:
 
 ### `upgrade-note`
 
-Trigger when the user already has a rough note, highlights, or extracted Markdown and wants a better literature note.
+Trigger when the user already has a rough note, highlights, or extracted/full-text Markdown and wants a better literature note. A complete Markdown is a full-text source, not an inferior proxy.
 
 Load:
 
@@ -158,9 +168,11 @@ Use it to:
 - surface likely related notes
 - detect whether the task is a fresh note or an upgrade
 
-### 2. Choose extraction route first
+### 2. Choose the authoritative reading source first
 
-For local PDFs, prefer the bundled wrapper:
+For a supplied or vault full-text Markdown, read that file directly. It is the default authoritative source for content, evidence, tables transcribed into Markdown, hypotheses, and methods. Do not extract it again and do not switch to Zotero PDF for substantive reading.
+
+Only when authoritative full-text Markdown is unavailable, extract a local PDF with the bundled wrapper:
 
 ```powershell
 python "$env:USERPROFILE\.claude\skills\literature-notes-obsidian\scripts\read_pdf.py" "paper.pdf"
@@ -182,7 +194,7 @@ python "$env:USERPROFILE\.claude\skills\literature-notes-obsidian\scripts\read_p
 
 If only a DOI, URL, title, or abstract is available, gather the best available metadata first and label the evidence level honestly.
 
-### 3. Resolve Zotero metadata
+### 3. Resolve metadata (optional Zotero lookup)
 
 When the user gives a title-like query and wants a quick Zotero match, use:
 
@@ -190,7 +202,7 @@ When the user gives a title-like query and wants a quick Zotero match, use:
 python "$env:USERPROFILE\.claude\skills\literature-notes-obsidian\scripts\query_zotero.py" "title keyword"
 ```
 
-For full note scaffolding, the main scaffold script already tries DOI, attachment, and title matching against Zotero.
+For full note scaffolding, the main scaffold script may resolve DOI, citation key, and optional attachment/title links against Zotero. This lookup never changes the selected reading source.
 
 ### 4. Read with the right depth
 
@@ -233,7 +245,7 @@ python "$env:USERPROFILE\.claude\skills\literature-notes-obsidian\scripts\scaffo
   --year 2024 `
   --journal "Journal Name" `
   --doi "10.0000/example" `
-  --pdf-path "D:\papers\paper.pdf" `
+  --markdown-path "D:\papers\paper-fulltext.md" `
   --reading-mode researcher `
   --vault-root "D:\Onedrive\Obsidian Vault"
 ```
@@ -241,6 +253,7 @@ python "$env:USERPROFILE\.claude\skills\literature-notes-obsidian\scripts\scaffo
 The scaffold script now supports:
 
 - `--reading-mode researcher|writer`
+- `--markdown-path` and `--source-type markdown` for authoritative full-text Markdown
 - Zotero-aware frontmatter
 - citation-key resolution
 - writer-mode note bodies
@@ -277,7 +290,8 @@ Get-Content -Raw ".\note.md" | python "$env:USERPROFILE\.claude\skills\literatur
 ## Operating Rules
 
 - Preserve traceable metadata: title, authors, year, source, DOI/URL when available.
-- Preserve Zotero linkage when available: item key, attachment key, select link, and PDF link.
+- Preserve Zotero linkage when available: item key, attachment key, select link, and PDF link; these are metadata pointers, not a reading-source preference.
+- State the actual full-text source in frontmatter and Metadata Notes. For complete Markdown, label it `verified-from-fulltext-markdown`.
 - Prefer a Zotero or Better BibTeX citation key when one is available; otherwise fall back to the generated citekey.
 - Keep the paper's constructs and original terminology accurate even if the analysis is written in Chinese.
 - If only part of the paper was read, say so directly.
@@ -310,7 +324,7 @@ Get-Content -Raw ".\note.md" | python "$env:USERPROFILE\.claude\skills\literatur
 - `scripts/scaffold_obsidian_literature_note.py`
   - create a new note file with frontmatter and section skeleton
   - resolve a default Obsidian literature-note directory
-  - try to resolve a Zotero parent item and PDF attachment from the local Zotero database
+  - accept authoritative full-text Markdown paths and separately resolve optional Zotero metadata
   - support `researcher` and `writer` note bodies
 
 - `references/reading-framework.md`
