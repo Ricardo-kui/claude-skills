@@ -1382,7 +1382,7 @@ evidence:
         common_revise_reasons: []
   previews:
     mechanism-preview:
-      paper_count: 18
+      paper_count: 19
       papers:
       - bamberger_homburg_wielgos2021 (JM)
       - castellaneta_conti_kacperczyk2017 (SMJ)
@@ -1402,6 +1402,7 @@ evidence:
       - reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science)
       - schumacher_keck_tang2020 (SMJ)
       - zhou2017 (ASQ)
+      - fini_jourdan_perkmann_2017 (AMJ)
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: LOW
@@ -1413,7 +1414,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 5
+        Incompleteness: 6
         Inadequacy: 2
         Incommensurability: 2
     findings-preview:
