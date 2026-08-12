@@ -1627,13 +1627,14 @@ evidence:
         reject: 0
         common_revise_reasons: []
     02-explicit-dual-question-narrowing:
-      paper_count: 3
+      paper_count: 4
       papers:
       - weng_yang (JMS)
       - cui_yang_vertinsky (SMJ)
       - hoffmann_cheong_phan_zurbruegg2024 (JM)
+      - fini_jourdan_perkmann_2017 (AMJ)
       gap_distribution:
-        Incompleteness: 2
+        Incompleteness: 3
         Inadequacy: 1
         Incommensurability: 0
       status: VERIFIED
