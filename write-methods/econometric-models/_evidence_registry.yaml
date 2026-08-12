@@ -1,7 +1,7 @@
 meta:
   last_updated: '2026-08-12'
   total_design_types: 22
-  batches_processed: 18
+  batches_processed: 19
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
     granularity: per design_type（对应 econometric-models/[设计类型].md 文件）
