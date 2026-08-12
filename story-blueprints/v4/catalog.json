@@ -3710,6 +3710,92 @@
       "overall_role": "partial_exemplar"
     },
     {
+      "id": "ridge2024-ceo-paranoia",
+      "path": "v4/blueprints/ridge2024-ceo-paranoia.md",
+      "paper_type": "quantitative",
+      "outlet": "Academy of Management Journal",
+      "publication_status": "published",
+      "coverage": "complete",
+      "theoretical_problem_form": [
+        "trait-valence-asymmetry",
+        "stable-disposition-situation-activation"
+      ],
+      "narrative_dynamics": [
+        "safety-behavior-continuum",
+        "cue-triggered-behavioral-switch",
+        "stakeholder-parallel-arenas",
+        "honest-mixed-evidence-staging"
+      ],
+      "retrieval_signals": [
+        "ceo-paranoia",
+        "stakeholder-engagement",
+        "avoidance-aggression-switch",
+        "trait-activation",
+        "lobbying-breadth",
+        "competitive-actions"
+      ],
+      "section_learning": {
+        "introduction": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Ground a construct in practitioner discourse before the academic definition: let named CEOs speak the construct's own name, then formalize it into a measurable disposition ('As the epigraphs imply...').",
+            "Preview an honest asymmetric result: announce support for one of two parallel theorized targets and an explicit null for the other in the findings preview, so the front-end contract is honest about boundaries."
+          ],
+          "caveat": [
+            "The epigraphs must genuinely use the construct's name; do not pile more than ~4 practitioner voices, and the academic definition must follow immediately or the hook reads as journalism.",
+            "The trait-valence carve-out is a mild Inadequacy flavor that the theory does not separately revise; it works here only because the primary Incompleteness is delivered by the mechanism extension. Do not copy the valence carve-out unless the theory will cash it."
+          ]
+        },
+        "theory": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Model a stable disposition as two manifestations on one continuum (avoidance and aggression on a safety-behavior continuum), with a dedicated second-act theory subsection (trait activation) carrying its own theoretical engine and generating cue-triggered moderation hypotheses.",
+            "Organize hypotheses as per-stakeholder paired parallel: each stakeholder (government, competitors) receives a paired main effect and its own cue-triggered moderation, so the reader sees where the trait works and where it fails."
+          ],
+          "caveat": [
+            "The activation switch requires a concrete cue operationalization (here, regulatory ruling severity and rival attacks defined as stakeholder actions targeting the firm); without observable paranoia-relevant cues the switch reads as situationism hand-waving.",
+            "Safety behaviors are B0 process states, not measured mediators; do not copy the theory into a formal-mediation claim. The mitigation-interaction form implies the moderator switches on an OPPOSITE manifestation (aggression), not mere buffering."
+          ]
+        },
+        "methods": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Build the focal measure from scratch with a full validity chain (components -> expert sort -> deductive dictionary -> student sort -> PFA -> nomological -> stability), making the measure a co-contribution that enables the whole test.",
+            "Declare temporal spacing in one sentence (DV t+1, IV and controls t) and stage endogeneity as diagnose-first (RIR with N-to-overturn counts) then cure-second (2SRI), pairing naive and cured estimates."
+          ],
+          "caveat": [
+            "Reusing validation measures as 2SRI instruments (sadness/negativity) requires an independent exclusion argument; the paper only implies it. The single-sentence estimator choice (Tobit / negative binomial) with no censoring share or overdispersion test, and the undefended no-firm-FE choice, are cautionary elements, not a model to copy."
+          ]
+        },
+        "results": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Front-load the identification defense (RIR + 2SRI naive-vs-cure pairing) before the main results, establishing credibility before revealing the evidence.",
+            "Stage mixed evidence honestly: report a null in full with a sign-reversal read as an alternative mechanism rather than skipping it; explicitly de-emphasize a significant-but-small effect ('does not appear to be particularly meaningful in practice'); and synthesize the mixture into a single boundary thesis (effects differ by stakeholder) with an explicit hand-off to the Discussion."
+          ],
+          "caveat": [
+            "The small-effect de-emphasis only works when the effect truly is small and the honesty is part of the front-end contract; do not de-emphasize a meaningful effect, and do not upgrade a sensitivity-to-null (Tables A9/A10) into support — hedge it with inflation mechanics (Kalnins 2018)."
+          ]
+        },
+        "discussion": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Return to the field call (Gamache et al.'s temporal-dynamics call) and the two gap layers, then convert mixed evidence into a theoretical boundary (stakeholder differentiation) instead of merely repeating findings.",
+            "Reframe the trait as bright-and-dark (a balanced view) to open future directions and soften the stigma of a 'dark' disposition."
+          ],
+          "caveat": [
+            "The competitor-anomaly explanation ('it may be that government is viewed with more skepticism because of coercive political power') is explicitly speculative; route it to future research rather than turning it into a post-hoc claim of support."
+          ]
+        }
+      },
+      "overall_role": "partial_exemplar"
+    },
+    {
       "id": "singh2023",
       "path": "v4/blueprints/singh2023-lobbying-recalls.md",
       "paper_type": "quantitative",

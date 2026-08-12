@@ -31,6 +31,7 @@ status: ready_for_corpus
 | 10 | Pattern: Turning-Point Delay via Selective | 基线曲线来自两个共同必要条件 A/B，其中 B 随 X 下降；W 只维持 B，不改变 A，因 |  | Lee and Park (2024), *Strategi |
 | 11 | Pattern: Dual-Mechanism Convergent Moderat | 当主效应建立在两个互补机制上（如 pipes/prisms、资源获取/资源利用、合法性/效率 |  | Li, Bapuji, Talluri, Singh & N |
 | 12 | Pattern: Asymmetric Disposition×Context Mo | 主效应为 "[disposition trait] → [outcome]"，且 dispo |  | Abdurakhmonov, Ingram & Ridge  |
+| 13 | Cue-Activation Carve-Out（硬约束 #11 例外） | moderator 是特质相关 cue、low 态=主效应默认基线、只论 high（activation）侧即可满足双边覆盖，不强制冗余 low 段 | 条件化 carve-out | Ridge et al. (2024), *AMJ*（2026-08-12 蒸馏）；对照仍需双边：E1 Step5/7、Buffering、E9、Pattern 12 |
 
 ## Pattern: Group Identity as Boundary Condition
 
@@ -579,4 +580,28 @@ H[X+2]: [W3] weakens the positive relationship between [disposition] and [outcom
 - 多个 moderator 的不对称机制实际相同（如全部是 risk-override）→ 应合并为单一 moderator
 - meta-framework 引入太晚或太弱（"we also examine several moderators"）→ 失去 theoretical organizing function
 - H1 单一方向论证（只讲 pole-A → outcome）而 H2-H4 突然引入两极不对称 → 机制基础不一致
+
+---
+
+## 条件化 carve-out：cue/activation moderator（硬约束 #11 例外）
+
+> **适用范围**：硬约束 #11（"调节论证双边完整（high AND low）"）**不机械适用**于 cue-triggered / trait-activation moderation。当 moderator 是一个**特质相关 cue**、且 **low（cue 缺失）条件即特质默认表现型、已在主效应中作为基线论证过**时，双边覆盖可由以下两条满足，**不强制写冗余的 low 态段落**：
+>
+> (a) **low 态** = 主效应已论证的默认表现型基线（引用 H 主效应即可，无需重推机制）；
+> (b) **high（激活）态** = 完整机制论证（cue 证伪默认表现型 → 切换到对立表现型）。
+>
+> 此时只写 activation/high 侧是**结构完整**的，不违反双边论证的意图（两条件均有理论规定）；QC/审查不得按字面 C11 把此类结构判为不完整。
+
+**典型结构**: E11（特质激活双表现型 cue 切换）——paranoia（trait）→ avoidance（默认表现型，主效应 H1/H2）→ paranoia-relevant cues 激活 aggression（H3/H4，只论 high-cue 侧）。
+
+**仍需双边论证的对照（本 carve-out 不改变这些）**:
+- E1 Step 5/7 标准 strengthen/weaken moderator：high 与 low 都是新颖理论状态、各需机制 → 双边都必须论证。
+- `moderation.md` Buffering 模板：dampening 逻辑两侧都有独立内容 → 双边都必须论证。
+- E9 双侧镜像调节（DesJardine）：两个角色侧（rival/target）各有完整 why chain → 不受影响。
+- Pattern 12 不对称 disposition×context（Abdurakhmonov/Ingram/Ridge 2026）：每个 moderator 对 pole-A/pole-B 分别论证 → 不受影响。
+
+**判定问题（写 moderation 前自问）**:
+1. 该 moderator 是"特质相关 cue"（evidence that the default manifestation has failed），还是"一般情境强度"？前者可触发 carve-out，后者仍需双边。
+2. low 态是否已在主效应中作为默认表现型论证过？若是，引用即可；若 low 态本身是新颖状态，仍需双边。
+3. 只写 high 态时，是否明确指向"主效应基线（low）+ high 态机制"的覆盖关系？若只是漏写 low 而无理论理由，仍属不完整。
 

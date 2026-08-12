@@ -4,7 +4,7 @@ description: Methods 填空骨架变体库，按设计类型组织。由 distill
 organization: by_design_type
 design_types_count: 24
 created: 2026-05-18
-updated: 2026-08-05
+updated: 2026-08-12
 ---
 
 # Methods Econometric Models Corpus
@@ -27,9 +27,9 @@ updated: 2026-08-05
 
 | 文件 | 设计类型 | 变体数 | 最后更新 |
 |------|---------|--------|---------|
-| [面板数据-OLS](面板数据-OLS.md) | 面板数据-OLS | 38 | 2026-08-09 |
+| [面板数据-OLS](面板数据-OLS.md) | 面板数据-OLS | 40 | 2026-08-12 |
 | [自然实验-DiD](自然实验-DiD.md) | 自然实验-DiD | 13 | 2026-08-05 |
-| [非线性模型](非线性模型.md) | 非线性模型 | 15 | 2026-08-05 |
+| [非线性模型](非线性模型.md) | 非线性模型 | 16 | 2026-08-12 |
 | [生存分析](生存分析.md) | 生存分析 | 22 | 2026-08-01 |
 | [SEM](SEM.md) | SEM | 4 | 2026-05-18 |
 | [实验](实验.md) | 实验 | 6 | 2026-08-03 |
@@ -43,12 +43,12 @@ updated: 2026-08-05
 | [动态面板-GMM](动态面板-GMM.md) | 动态面板-GMM | 4 | 2026-07-30 |
 | [匹配DiD-广义DiD](匹配DiD-广义DiD.md) | 匹配DiD-广义DiD | 1 | 2026-08-05 |
 | [同伴效应-网络效应](同伴效应-网络效应.md) | 同伴效应-网络效应 | 4 | 2026-07-30 |
-| [文本构念测量](文本构念测量.md) | 文本构念测量 | 13 | 2026-08-05 |
+| [文本构念测量](文本构念测量.md) | 文本构念测量 | 15 | 2026-08-12 |
 | [PSM匹配面板](PSM匹配面板.md) | PSM匹配面板 | 3 | 2026-06-16 |
 | [堆叠扩散Logit](堆叠扩散Logit.md) | 堆叠扩散Logit | 0 | 2026-05-18 |
 | [多行为者设计](多行为者设计.md) | 多行为者设计 | 1 | 2026-07-08 |
 | [推断二元结果](推断二元结果.md) | 推断二元结果 | 1 | 2026-08-05 |
-| [两阶段模型](两阶段模型.md) | 两阶段模型 | 7 | 2026-08-05 |
+| [两阶段模型](两阶段模型.md) | 两阶段模型 | 9 | 2026-08-12 |
 | [VARX-PVAR](VARX-PVAR.md) | VARX-PVAR | 8 | 2026-07-15 |
 | [结构需求-state-space](结构需求-state-space.md) | 结构需求-state-space | 6 | 2026-08-05 |
 
@@ -60,6 +60,13 @@ updated: 2026-08-05
 4. 变体达到 3+ 时，考虑提升为 skill 主骨架
 
 ## 语料库质量状态
+
+> ✅ **2026-08-12 更新（Ridge–Hill–Ingram–Kolomeitsev–Worrell 2024 AMJ，whole-paper distillation 的 methods writeback）**: CEO paranoia × stakeholder engagement（earnings-call 文本构念 + Tobit/NB + RIR/2SRI）。新增 6 变体（均单篇 EMERGING，`section_variant`）：
+>   - **文本构念测量** 变体14–15：**从零自定义词典九步效度链**（组件→专家 sort→演绎词典→学生 sort→PFA→nomological→stability）+ **earnings-call speaker-attribution 管线**（fuzzy-match + 手工核对 + firm-year 折叠）
+>   - **两阶段模型** 变体8–9：**内生性"balancing act"诊断先行叙事**（RIR 数量化 N-to-overturn → 治愈第二 → naïve/cured 配对）+ **2SRI 治愈 + validation-measures 复用为 instruments**
+>   - **面板数据-OLS** 变体39–40：**时间间隔一句声明（DV t+1 / IV t）** + **控制变量"双面 because"（对 DV 一条 + 对 IV 共变一条）**
+>   - 新增反模式：非线性估计器单句选择无诊断链（非线性模型 M7）、理论检验型面板缺设置合法性（面板 M1）、行业/年度 dummy 替代 firm FE 未辩护 + 未声明聚类 SE（面板 M7）
+>   均为单篇 EMERGING；未改 SKILL.md 核心路由。配套 Results 由同批 distillation 的 write-results worker 处理。
 
 > ✅ **2026-08-05 更新（Zorn–Shropshire–Martin–Combs–Ketchen 2017 SMJ）**: S&P 1500 lone-insider boards + 2SLS。新增：
 >   - **IV-2SLS** 变体12–13：industry leave-out 均值 IV（CEO 推动采纳内生性）+ 连续 DV 用 2SLS/FE、稀有二元放弃 FE 改聚类 Logit（IV-Probit 稳健性预告）

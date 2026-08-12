@@ -37,6 +37,7 @@ Theory Lens（P4-P5）的功能：在 Gap/Tension 建立之后，向读者提供
 | [08-dual-metaphor-stream-reconciliation.md](08-dual-metaphor-stream-reconciliation.md) | 单理论双隐喻调和双文献流：一个理论内部的两个互补隐喻（如 pipes/prisms）分别拯救两条割裂文献流 | Incompleteness（带 synthesis 贡献）；supply chain/network/institutional 领域"两条流各解释一半"的研究 |
 | [09-construct-contrast-introduction.md](09-construct-contrast-introduction.md) | 构念对照引入：新构念借同家族旧构念对照获得合法性，价值锚定在旧构念失效的 scope condition（EMERGING 1源: du_tsolmon2024 ORSC） | Constructs 贡献；knowledge/capability 类构念细分研究 |
 | [04-screening-theory-two-stage.md](04-screening-theory-two-stage.md) | Screening Theory 两阶段筛选：理想筛选不可得时的替代性信息筛选程序 | Incompleteness × Mechanism；信息不对称/自愿披露/信号解读研究 |
+| [theory-lens-templates.md](theory-lens-templates.md) | 跨框架句法模板集：不绑定单一理论名的可迁移透镜模式（变体 A：trait-activation 动态透镜，ridge2024，EMERGING） | 稳定倾向 + 情境激活开关的动态机制研究；特质效应随时间变化的 time-varying designs |
 
 ---
 
@@ -76,6 +77,7 @@ Theory Lens（P4-P5）的功能：在 Gap/Tension 建立之后，向读者提供
 | 07 | socio-cognitive-frame | 社会认知解释框架：interpretive frames / lenses 解释受众选择性解读组织信号 |
 | 08 | dual-metaphor-stream-reconciliation | 单理论双隐喻（pipes/prisms）调和两条各解释一半的文献流 |
 | 09 | construct-contrast-introduction | 新构念借同家族旧构念对照引入，价值锚定在旧构念失效的情境 |
+| — | theory-lens-templates | 跨框架句法模板集（变体 A：trait-activation 动态透镜——稳定倾向 + 情境激活开关的个体内切换） |
 
 ---
 

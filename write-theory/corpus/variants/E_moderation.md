@@ -35,6 +35,7 @@
 | Antagonistic | "H[N]. Although [X] and [Z] each [positively/negatively] affect [Y], their interaction effect on [Y] is [negative/positive]." |
 | Existence | "H[N]. [X] is [positively/negatively] related to [Y] for [group A], but unrelated to [Y] for [group B]." |
 | Competing | "H[N]. [X] is positively related to [Y] for [group A], but negatively related to [Y] for [group B]." |
+| Mitigation via Manifestation-Switch | "H[N]. There will be a [positive/negative] interaction effect of [IV] and [cue] on [DV], such that the [negative/positive] relationship between [IV] and [DV] is mitigated as [cue] increases and prompts more [opposing manifestation] action." |
 
 ---
 
@@ -62,6 +63,7 @@
 | E8 | 双刃剑估值机制 → 异号增强/阻碍权变（Dual-Edged Valuation → | 受众分化 | 同一制度/保护强度通过两条方向相反的信息机制作用于同一 DV（市场估值），净效应事先不定；理 | EMERGING（单篇来源；仅作 |  |
 | E9 | 双侧镜像调节（Same-Construct Mirror Moderation，De | 受众分化 | 主效应是"攻击方/施动方对受害方造成影响"，同一调节构念（威胁、机会、压力等）在攻击方侧与受 | EMERGING（单篇来源；仅作 | DesJardine, Li & Shi (2025), * |
 | E10 | 跨学科分类框架驱动的 N 平行缓解调节（Taxonomy-Driven N-Parallel，Cutolo–Ferriani 2024 型） |  | 主效应是文献共识惩罚/负面效应（baseline-from-consensus），贡献全在 N 个缓解调节；N 由跨学科既成框架 1:1 映射，机制统一落同一透镜 | EMERGING（单篇来源；仅作 | Cutolo & Ferriani (2024), *Journal of Management* |
+| E11 | 特质激活双表现型 cue 切换调节（Trait-Activation Dual-Manifestation Cue-Switch，Ridge et al. 2024 AMJ 型） | 受众分化/机制切换 | IV 是特质（默认表现型=主效应基线，如 paranoia→avoidance）；stakeholder cue 激活对立表现型（如 aggression）作用于**同一 DV**；low-cue 态即已论证的主效应，moderation 只论 high（activation）侧；双边覆盖由"主效应基线 + high 态完整机制"满足 | EMERGING（单篇来源；仅作 | Ridge, Hill, Ingram, Kolomeitsev & Worrell (2024), *Academy of Management Journal* |
 
 ## E2. 跨层调节 (Cross-Level Moderation) — 9 步协议
 
@@ -656,3 +658,69 @@ H2. The [penalty] decreases as the [feature 1] of [actor]'s [carrier] increases.
 - `corpus/sentences/mechanism_chain.md`（每调节小节的学科证据→机制→应用链）
 - `corpus/subprotocols/hypothesis_derivation_patterns.md`（调节推导句式）
 - 上游联动: `write-introduction/academic-writing-corpus/theory-lens/02-dual-theory-layered.md` 变体B（同论文：lens 的 N:1 映射在 Theory 兑现为 N 个调节小节）——taxonomy 在 lens 预告、在 theory 兑现，两处 1:1 对齐是强一致信号
+
+---
+
+## E11. 特质激活双表现型 cue 切换调节（Trait-Activation Dual-Manifestation Cue-Switch，Ridge et al. 2024 AMJ 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）。story_fidelity: section_role=rising_action; knot_relation=tie（cue 是否推翻 avoidance 默认，把张力留到 moderation 段）; character_effect=supports（cue 是配角，把特质从静态标签变成情境触发过程）; pacing_effect=improves（主效应段先钉默认表现型，moderation 段再开对立表现型，形成"默认→翻转"的节拍）; classification=section_variant。
+
+**适用**: IV 是一个**特质/倾向**（trait, disposition），该特质有一个**默认表现型**（default manifestation）作为主效应；moderator 是一个**特质相关 cue**（trait-relevant situational cue），该 cue 激活同一特质的**对立表现型**作用于**同一 DV**。论文贡献=揭示"同一特质在什么情境下从默认行为切换到对立行为"。代表结构：trait（paranoia）→ 默认表现型（avoidance，主效应 H1/H2）→ cue（stakeholder actions targeting the firm / regulatory ruling severity）激活对立表现型（aggression，H3/H4）。理论基底是 trait-activation / person-situation interaction（Tett & Burnett 2003; Mischel & Shoda 1995），行为端是行为连续谱（safety behavior continuum：avoidance 与 aggression 是同一连续谱两端，Chan & McAllister 2014）。
+
+**来源**: Ridge, Hill, Ingram, Kolomeitsev & Worrell (2024), *Academy of Management Journal*（CEO paranoia × stakeholder engagement：lobbying breadth / M&A activity）
+
+**原文锚点**:
+> "when cues indicate that avoidance has not offered protection from external entities, individuals higher in the trait tend to shift away from avoidance to directly engage the external entities. This direct engagement, referred to as aggression, in effect sits on the opposite end of the safety behavior continuum"
+>
+> "actions by stakeholders that target a CEO or the CEO's firm are paranoia-relevant cues that provide evidence that avoidance has not provided protection"
+>
+> "paranoia is not only distrust but also an active perception of ill will by the suspicious other"
+
+**骨架**:
+```
+[特质双表现型 opener]
+[IV trait] is not only [adjacent construct] but also [active perception/state that shapes behavior]. Across contexts, [trait] manifests through [default manifestation], which [behavioral tendency]: [default manifestation aims to reduce the intensity of contact with the core threat].
+
+[主效应 = 默认表现型（安全行为连续谱一端）]
+Individuals higher in [trait] are hyper-vigilant: they incessantly scan and monitor their environments for perceived threats from, or vulnerabilities to, external entities ([citation]). They disproportionately believe that external entities both target them ([bias 1]) and have malintent ([bias 2]). Accordingly, [trait] is strongly associated with [default manifestation]—which [function of default manifestation]. Thus:
+H1: [Trait] is [negatively/positively] related to [DV] (because [default manifestation] reduces engagement with external entities).
+
+[cue 定义：特质相关线索 = 默认表现型失效的证据]
+Actions by [external entities] that target [actor/firm] are [trait]-relevant cues. Such cues provide evidence that [default manifestation] has NOT provided protection.
+
+[moderation = cue 激活对立表现型（机制切换，非机制削弱）]
+When cues indicate that [default manifestation] has not offered protection, individuals higher in [trait] shift away from [default manifestation] to directly engage the external entities. This direct engagement—[opposing manifestation]—sits on the OPPOSITE end of the [behavioral continuum]. Thus the cue does not dampen the baseline mechanism; it switches the dominant manifestation to [opposing manifestation], which can overtake the baseline. Thus:
+H2: There will be a [positive/negative] interaction effect of [trait] and [cue] on [DV], such that the [negative/positive] relationship between [trait] and [DV] is mitigated as [cue] increases and prompts more [opposing manifestation] action.
+```
+
+**关键特征**:
+- **双表现型同一连续谱（签名节拍）**: 默认表现型与对立表现型必须同属一个行为/动机连续谱的两端（avoidance↔aggression、flight↔fight、accommodation↔contention）。"on the opposite end of the continuum" 是签名句——它把两个看似无关的行为绑在同一理论对象上
+- **cue = 默认表现型失效的证据**: moderator 不是任意情境变量，而是"证明默认策略无效"的线索。这给了 moderation 一个理论必然性：cue 存在 → 默认策略被证伪 → 切换
+- **机制切换（manifestation-switch）≠ 机制削弱（buffering）**: buffering 弱化同一机制的成本/风险基础；本变体的 cue 激活的是**对立机制/表现型**，能把基线方向整个覆盖（negative→positive）。与 `moderation.md` 的 Mitigation via Manifestation-Switch 句式配套
+- **moderation 只论 high（activation）侧**: low-cue 态即主效应已论证的默认表现型基线——双边覆盖由"主效应基线（low 态）+ high 态完整机制论证"满足，不强制冗余 low 段。这对应 `bilateral_argumentation_templates.md` 的 cue/activation 条件化 carve-out（硬约束 #11 例外）
+- **主效应段先钉默认表现型**: H1 必须把默认表现型论证充分（含 hyper-vigilance 的扫描/归因两步），moderation 段才能只说"cue 证伪了它"
+
+**与近邻变体判别**:
+- vs **E7（宏观事件激活与持续性，Reinwald 2026）**: E7 要求**宏观事件**（身份/差异被压制→事件使其显著化→事件后持续性），机制是 identity salience + temporal persistence，DV 常在受冲击受众侧；本变体是**连续特质相关 cue**（stakeholder action）作用于**同一 DV**，机制是行为表现型切换，无 temporal-persistence 承诺。E7 的 cue 是离散宏观事件；本变体的 cue 可以是连续强度（如 regulatory ruling severity）
+- vs **E9（同一构念双侧镜像，DesJardine 2025）**: E9 是同一调节构念在**两个角色侧**（rival/target）的镜像预测，两侧各有完整 why chain；本变体是**同一对象**的特质在**两种表现型**之间随 cue 切换，无角色侧
+- vs **E8（双刃剑异号权变，Castellaneta 2017）**: E8 是同一 X 通过方向相反的**两条信息机制**作用于 DV、净效应事先不定、可无主效应；本变体必须有主效应（默认表现型），且两表现型是同一特质的行为连续谱两端，不是两条独立机制
+- vs **E1（同层调节 7 步协议）**: E1 的 moderator 调节单一机制的强度（stronger/weaker）；本变体的 moderator 是 cue，切换机制而非改强度
+- vs **E10（taxonomy N 平行缓解）**: E10 的 N 个缓解调节由跨学科框架 1:1 驱动、统一透镜；本变体是单一 trait-relevant cue、无 taxonomy 框架
+
+**与相邻子协议判别**:
+- vs `bilateral_argumentation_templates.md` Pattern 12（Asymmetric Disposition×Context Moderation，Abdurakhmonov/Ingram/Ridge 2026）：同一研究纲领（Ridge 合著者），但 Pattern 12 是"disposition×context 各 moderator 经**不对称机制削弱主效应**（dampen-and-maintain / floor+ceiling / equilibrium lock-in）"，多个 moderator 都指向削弱；本变体是 cue **切换表现型/方向**（可覆盖主效应），且 cue 是特质相关线索而非一般情境。区分判据：若所有 moderator 都是削弱主效应→Pattern 12；若 moderator 激活对立表现型→E11
+
+**反模式**:
+- 把 cue 写成一般 buffering moderator（"weakens the negative relationship"）→ 丢失机制切换的理论引擎；应明确"激活对立表现型"
+- 两表现型不在同一连续谱两端 → 变成两个独立构念，丢失"同一特质"的统一性
+- 主效应段没把默认表现型钉死 → moderation 段"cue 证伪默认"失去参照系
+- 机械补 low-cue 段（重复主效应）→ 违背本变体的 carve-out；low 态引用主效应基线即可
+- cue 无"默认失效"证据逻辑 → moderation 变成任意情境交互
+- 把 E7 的 temporal persistence 硬塞进来 → 过度承诺
+
+**调用语料**:
+- `corpus/subprotocols/hypothesis_organization_patterns.md`（Per-Stakeholder Paired (Main + Cue-Moderation) Parallel：两 stakeholder 各带 main + cue-moderation 对的并行架构）
+- `corpus/sentences/moderation.md`（Mitigation via Manifestation-Switch 假设句式；与 Buffering 判别）
+- `corpus/sentences/mechanism_chain.md`（Threat-Processing Cascade：扫描→归因→安全行为 的认知链）
+- `corpus/subprotocols/bilateral_argumentation_templates.md`（cue/activation 条件化 carve-out：双边覆盖由主效应基线 + high 态满足）
+- 上游联动: `write-introduction/academic-writing-corpus/theory-lens/`（upper echelons 透镜在 Intro 预告特质→行为，Theory 兑现默认表现型→cue 切换）

@@ -8,7 +8,7 @@
 
 | 文件 | 核心特征 |
 |------|---------|
-| `01-despite-progress-unaddressed.md` | 已有进展，但遗漏了关键变量/机制（含变体P：双重证据缺口；变体AB：正向结果成熟→有害结果不足的 outcome-valence asymmetry；变体AC：披露型IPR进展不外推到非披露形式+firm-value链接缺口；变体AD：低stakes证据→高stakes情境+阶段延伸；变体AE：as-clause前提+惊讶单句overlooked型，desjardine2025，EMERGING） |
+| `01-despite-progress-unaddressed.md` | 已有进展，但遗漏了关键变量/机制（含变体P：双重证据缺口；变体AB：正向结果成熟→有害结果不足的 outcome-valence asymmetry；变体AC：披露型IPR进展不外推到非披露形式+firm-value链接缺口；变体AD：低stakes证据→高stakes情境+阶段延伸；变体AE：as-clause前提+惊讶单句overlooked型，desjardine2025，EMERGING；变体AG：特质效价不对称缺口——前因/特质极性，研究自我膨胀向特质、忽视自我规避向特质，ridge2024，EMERGING） |
 | `08-cost-vs-benefit.md` | 成本收益权衡中的文献空白（含变体D：同一保护工具的 rival vs buyer 双刃剑信息不对称悖论，EMERGING） |
 | `12-forward-vs-backward-looking.md` | 前瞻 vs 后视视角的文献空白 |
 | `cross-domain-migration.md` | 将外部领域文献迁移到目标领域的张力 |
@@ -17,7 +17,7 @@
 
 | 文件 | 核心特征 |
 |------|---------|
-| `02-implicit-assumption-wrong.md` | 隐性假设错误（含变体D：挑战机械因果链前提；变体F：混合发现→稳定效应假设→宏观事件激活，EMERGING） |
+| `02-implicit-assumption-wrong.md` | 隐性假设错误（含变体D：挑战机械因果链前提；变体F：混合发现→稳定效应假设→宏观事件激活；变体G：同质同侪推断→跨受众双信息分离，EMERGING） |
 | `03-structural-blindspot.md` | 结构性盲点 |
 | `05-construct-confusion.md` | 构念混淆 |
 | `11-overlooked-alternative.md` | 被忽视的替代解释 |

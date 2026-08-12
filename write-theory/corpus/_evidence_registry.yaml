@@ -6,11 +6,11 @@
 meta:
   schema_version: "1.0.0"
   registry_type: theory-fragment-registry
-  last_updated: "2026-08-09"
-  total_papers_indexed: 65
-  batches_processed: 23
+  last_updated: "2026-08-12"
+  total_papers_indexed: 66
+  batches_processed: 24
   auxiliary_sources_note: "Entries with source_tier: auxiliary are writing-craft books, not empirical papers. They register provenance and stay EMERGING until the pattern is cross-validated in empirical paper distills; they never count toward VERIFIED/ROBUST paper_count thresholds on their own."
-  latest_batch_note: "2026-08-09 DesJardine, Li & Shi 2025 AMJ (Theory): ADD E9 same_construct_mirror_moderation (variants/E_moderation.md) + willing_able_dual_axis (subprotocols/moderator_selection_frameworks.md) + dual_channel_convergence + why_not_reverse_boundary_declaration (subprotocols/hypothesis_derivation_patterns.md), all EMERGING section_variants, tfr_159-162. Build type = moderation (main) + mechanism elaboration (H1 embedded). Gap=Incompleteness primary aligned with Intro. Routing unchanged (E family, no new build type)."
+  latest_batch_note: "2026-08-12 Ridge, Hill, Ingram, Kolomeitsev & Worrell 2024 AMJ (Theory distill): ADD E11 trait_activation_dual_manifestation_cue_switch (variants/E_moderation.md) + mitigation_via_manifestation_switch (sentences/moderation.md) + threat_processing_cascade (sentences/mechanism_chain.md) + per_stakeholder_paired_main_cue_moderation (subprotocols/hypothesis_organization_patterns.md Pattern 11) + invariant_discriminant_spine (subprotocols/construct_differentiation_patterns.md) + cue_activation_bilateral_carve_out (subprotocols/bilateral_argumentation_templates.md, hard-constraint #11 conditional exception), all EMERGING single-source, tfr_163-168. Build type = moderation (main) + mechanism elaboration. Gap=Incompleteness × Boundary → E11 family. Authorized writeback (theory.report.yaml candidates 1-5) + bounded core correction (C11 carve-out). Routing unchanged at 一级 (E family); E 二级路由补充 E11 信号。"
   note: "Reverse-engineered from existing corpus anchors. Batch 2026-07-09: distilled 4 recall papers (Darby 2023 MSOM, Mayo 2022 POM, Ball 2018 JOM, Darby 2026 JOM) into subprotocols and registry. Batch 2026-07-10: expanded Cui, Yang & Vertinsky (SMJ) with inverted-U mechanism, bilateral argumentation, flatten/steepen language, and local closure templates. Batch 2026-07-22: distilled Li, Bapuji, Talluri, Singh & Narayanan (2025 JSCM, Vertical Spillover of Product Recalls) — added dual_mechanism_convergent_moderation pattern to bilateral_argumentation_templates.md (moderator×mechanism matrix) and registered H1 dual-mechanism convergence under existing dual_mechanism_same_direction. Batch 2026-07-22b: distilled Cutolo & Ferriani (2024 JOM, narratives & atypicality) — added minimal_pair_contrast_vignette pattern to argumentation_patterns.md (Leah controlled-contrast showing device); registered parallel_buffering_moderators_single_mechanism; cutolo_ferriani also a 2nd source for write-introduction theory-lens/02-dual-theory-layered (processing fluency + Bloom & Lahey taxonomy). Batch 2026-07-22c: distilled Falchetti, Cattani & Ferriani (2022 SMJ, Start with Why) — added congruency_fit_fluency_mechanism to sentences/mechanism_chain.md (genuine gap; spans Falchetti + Cutolo); CORRECTED misclassification of falchetti_2022_smj (was construct_differentiation tfr_017, has no such content) → reclassified to congruency mechanism; construct_differentiation source_count 5→4. Falchetti intro hook (23-popular-debate) and Methods (多研究 变体1/2, 实验 变体1) already distilled in prior sessions. Batch 2026-07-28: backfill + wiring batch — registered two auxiliary sources whose fragments entered corpus in the 2026-07-27/28 waves but were never registered: Booth/Williams/Colomb (The Craft of Research, premise soundness gate + warrant tests + acknowledgment-response matrix + voice firewall → reasoning_soundness_protocol.md, acknowledgment_response.md) and Greene & Lidinsky 2017 (Rogerian four-step → acknowledgment_response.md §5; fallacy probes → reasoning_soundness_protocol.md §8). Same batch wired the registry into consumption: corpus/_index.md selection-stage pointer, write-theory/SKILL.md resource-loading clause, distill-theory-exemplar Phase 4 registry-writeback protocol. Registry previously orphaned (no .md referenced it) since creation. Batch 2026-08-03: distilled Schumacher, Keck & Tang (2020, SMJ); added the belief-updating/attention-threshold reversal pattern as EMERGING. Reference-level writeback was explicitly authorized by the user; no core routing or mandatory-slot rule was changed."
 
 status_rules:
@@ -1863,6 +1863,62 @@ source_papers:
         status: "EMERGING"
         note: "H1 后两理由（检测风险 + 相对效应）解释为何不预测攻击方自己的组合企业。与 E1 Step 6（排除反向交互）判别见文件内 note。"
 
+  ridge_hill_ingram_kolomeitsev_worrell_2024_amj:
+    display_name: "Ridge, Hill, Ingram, Kolomeitsev & Worrell (2024, AMJ)"
+    journal: "Academy of Management Journal"
+    year: 2024
+    subfield: "strategy"
+    theory_build_type: "Boundary"
+    fragments:
+      - fragment_id: tfr_163
+        type: trait_activation_dual_manifestation_cue_switch
+        title: "特质激活双表现型 cue 切换调节（E11）"
+        home_files:
+          - "variants/E_moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "Trait（paranoia）→ 默认表现型（avoidance）主效应 + paranoia-relevant cues（regulatory ruling severity）激活对立表现型（aggression）作用于同一 DV。与 E7（宏观事件+时间持续性）/E9（角色侧镜像）/E8（双刃剑净效应不定）判别见 E11 正文。"
+      - fragment_id: tfr_164
+        type: mitigation_via_manifestation_switch
+        title: "Mitigation via Manifestation-Switch 缓解交互"
+        home_files:
+          - "sentences/moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "H3/H4 假设句式：positive interaction effect ... negative relationship is mitigated as cue increases and prompts more [opposing manifestation] action。与 Buffering（机制削弱）判别：本句式是机制/表现型切换。"
+      - fragment_id: tfr_165
+        type: threat_processing_cascade
+        title: "威胁处理级联（Threat-Processing Cascade）"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "5 拍认知链：hyper-vigilance 扫描 → self-as-target + sinister attribution 双偏差 → 结论跃迁 → 安全行为选择（连续谱一端）→ 收敛假设。与两步链/Wang 对称三步链判别见正文。"
+      - fragment_id: tfr_166
+        type: per_stakeholder_paired_main_cue_moderation
+        title: "Per-Stakeholder Paired (Main + Cue-Moderation) Parallel"
+        home_files:
+          - "subprotocols/hypothesis_organization_patterns.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "两 stakeholder（regulators→lobbying breadth、acquirers→M&A activity）各带 main + cue-moderation 配对，共享同一 trait 默认表现型机制。"
+      - fragment_id: tfr_167
+        type: invariant_discriminant_spine
+        title: "Invariant Discriminant Spine（不变判别主轴）"
+        home_files:
+          - "subprotocols/construct_differentiation_patterns.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+        note: "paranoia vs distrust：一条不变主轴（'不仅是怀疑，还有对恶意的主观感知'）沿各相邻构念逐一排除。与 Table-Based 判别：主轴承担全部区分工作而非多维并列。"
+      - fragment_id: tfr_168
+        type: cue_activation_bilateral_carve_out
+        title: "Cue-Activation Carve-Out（硬约束 #11 例外）"
+        home_files:
+          - "subprotocols/bilateral_argumentation_templates.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "cue/activation moderator 的 low 态=主效应默认基线时，双边覆盖由（主效应基线）+（high 态机制论证）满足，不强制冗余 low 段。对应 SKILL.md 硬约束 #11 条件化例外。"
+
 # Cross-paper pattern aggregation (derived above)
 patterns:
   shared_orientation_divergent_outcomes_selective_remedy:
@@ -2532,6 +2588,54 @@ patterns:
       - "desjardine_li_shi_2025_amj"
     home_file: "subprotocols/hypothesis_derivation_patterns.md"
     note: "Why-Not Reverse Boundary Declaration。与 E1 Step 6（排除反向交互）判别：Step 6 是'为何 Z 调节 X→Y'；本模式是'为何 X 不作用于相邻对象'。理由间张力须在收束句统一。"
+  trait_activation_dual_manifestation_cue_switch:
+    description: "特质 IV 有默认表现型（主效应）；特质相关 cue 激活对立表现型作用于同一 DV——cue 是'默认失效'证据，假设用 Mitigation via Manifestation-Switch 句式"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "ridge_hill_ingram_kolomeitsev_worrell_2024_amj"
+    home_file: "variants/E_moderation.md"
+    note: "E11。与 E7（宏观事件+时间持续性）/E9（角色侧镜像）/E8（双刃剑净效应不定）判别见正文。低-cue 态=主效应基线，moderation 只论 high 侧——对应 Cue-Activation Carve-Out（tfr_168）。"
+  mitigation_via_manifestation_switch:
+    description: "cue 不削弱基线机制，而是激活对立表现型（manifestation-switch），把负向关系缓解/覆盖——'mitigated as [cue] increases and prompts more [opposing manifestation] action'"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "ridge_hill_ingram_kolomeitsev_worrell_2024_amj"
+    home_file: "sentences/moderation.md"
+    note: "与 Buffering（同一机制削弱）判别：本句式是行为表现型切换。与 Zorn External Partial-Substitute（替代已丧失收益）判别：无 substitute 逻辑。"
+  threat_processing_cascade:
+    description: "5 拍认知处理链：hyper-vigilance 扫描 → self-as-target + sinister attribution 双偏差 → 结论跃迁 → 安全行为选择（连续谱一端）→ 收敛假设"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "ridge_hill_ingram_kolomeitsev_worrell_2024_amj"
+    home_file: "sentences/mechanism_chain.md"
+    note: "与两步链（标准）判别：本链是多拍认知序列；与 Wang 2024 对称三步链判别：后者是情绪特质三通道对称展开，本链是单线递进威胁处理。安全行为连续谱为 E11 埋钩。"
+  per_stakeholder_paired_main_cue_moderation:
+    description: "同一特质 IV 面对多个外部利益相关者，各产生'主效应（默认表现型）+ cue 切换（对立表现型）'配对；特质机制只推一次，各 stakeholder 应用+切换"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "ridge_hill_ingram_kolomeitsev_worrell_2024_amj"
+    home_file: "subprotocols/hypothesis_organization_patterns.md"
+    note: "Pattern 11。与 Triple Parallel Boundary（多个独立 moderator）/Common Trunk Parallel Branches（同一 DV 多机制）判别见正文。"
+  invariant_discriminant_spine:
+    description: "一条不变判别主轴贯穿所有相邻构念排除——主轴承担全部区分工作，相邻构念是对主轴的逐个检验"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "ridge_hill_ingram_kolomeitsev_worrell_2024_amj"
+    home_file: "subprotocols/construct_differentiation_patterns.md"
+    note: "与 Table-Based Construct Differentiation（多维并列对比）判别：本模式主轴恒定、逐个排除。主轴须落在可衔接理论后果的位置。"
+  cue_activation_bilateral_carve_out:
+    description: "硬约束 #11 条件化例外——cue/activation moderator 的 low 态=主效应已论证默认基线时，双边覆盖由（主效应基线）+（high 态机制论证）满足，不强制冗余 low 段"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "ridge_hill_ingram_kolomeitsev_worrell_2024_amj"
+    home_file: "subprotocols/bilateral_argumentation_templates.md"
+    note: "Cue-Activation Carve-Out。对照仍需双边：E1 Step5/7、Buffering、E9 镜像、Pattern 12 不对称。QC 不得按字面 C11 判此类结构不完整。"
 
 # Status summary by Makadok dimension
 summary_by_dimension:

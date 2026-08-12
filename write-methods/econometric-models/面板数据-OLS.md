@@ -19,9 +19,10 @@ source_papers:
   - "liu_shankar2015 (Management Science): recall severity theory-based classification, media relevancy-score threshold, parent-brand vs nameplate advertising split, monthly recall aggregation"
   - "Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ (Strategic Management Journal): categorical lone-insider board as change-in-kind vs continuous independence"
   - "desjardine_li_shi_2025_amj (Academy of Management Journal): single-intermediary setting defense (a/b/c + single-agency consistency), multi-source list + coverage-bound sample window, letter-grade DV boundary-distance operationalization, composite-construct stepwise construction + threshold defense + feasibility argument, rival mirror control convention, theory-estimator alignment + no-lag defense (Bellemare)"
-variants_count: 38
+  - "ridge_hill_ingram_kolomeitsev_worrell_2024_amj (Academy of Management Journal): one-sentence temporal-spacing declaration (DV t+1 / IV & controls t) as reverse-causality preemption; control variables dual-sided because (one reason for DV + one reason for covarying with the trait)"
+variants_count: 40
 created: 2026-05-18
-updated: 2026-08-09
+updated: 2026-08-12
 ---
 
 # 面板数据-OLS — Methods 骨架
@@ -34,11 +35,11 @@ updated: 2026-08-09
 |---|---|---|
 | M1 | 3 | 15, 23, 33 |
 | M2 | 10 | 2, 6, 9, 11, 12, 16, 26, 27, 31, 34 |
-| M2.5 | 1 | 20 |
+| M2.5 | 2 | 20, 39 |
 | M3 | 3 | 17, 25, 35 |
 | M4 | 7 | 3, 19, 24, 29, 30, 32, 36 |
 | M5 | 3 | 4, 5, 28 |
-| M6 | 3 | 1, 14, 37 |
+| M6 | 4 | 1, 14, 37, 40 |
 | M7 | 7 | 7, 10, 13, 18, 21, 22, 38 |
 | M8 | 1 | 8 |
 
@@ -65,11 +66,12 @@ updated: 2026-08-09
 | 31 | 异频数据时间对齐 — 事件聚合至结果频率 | event-day vs 月 vs 年三频数据对齐（副槽位 M4） | 区别于变体2/26（强调多库交集N）：解决频率对齐 | 待交叉 | Liu & Shankar 2015 MS |
 | 34 | 多源清单 + 覆盖边界定样本窗 | 多库枚举后直接交集，数据库覆盖边界定起始/终止 | 区别于变体9（制度事件定起始）：数据覆盖驱动双边界 | 待交叉 | DesJardine, Li & Shi 2025 AMJ |
 
-### M2.5（1）
+### M2.5（2）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
 | 20 | Model-Free Evidence 预览 | 正式回归前以 quartile 均值/中位数展示无条件关系 | — | 通过（单篇） | Chung, Low & Rust 2022 JAMS |
+| 39 | 时间间隔声明（DV t+1 / IV & controls t） | 纵贯面板需在 Methods 层预先化解反向因果 | 区别于变体 20（model-free 预览）与变体 27（窗口分离）：单句 baseline 承诺，更通用 | EMERGING | Ridge et al. 2024 (AMJ) |
 
 ### M3（2）
 
@@ -99,13 +101,14 @@ updated: 2026-08-09
 | 5 | 替代变量机制对齐矩阵 | 一个构念→多个可分离机制的三角验证（配合机制对齐图） | 区别于变体4（within/between 分解）：主变量+替代变量×机制映射矩阵 | 可选 | Darby2023 MSOM |
 | 28 | Binary-panel GEE + 全零单元保留 + 正式曲线识别链 | 二元面板大量全零单元 + U/倒U假设（副槽位 M7、M8） | 区别于变体22（时不变 IV 选 GEE）：保留全零单元为首要理由+曲线四事前约束 | 通过（单篇） | Bendig et al. 2024 ETP |
 
-### M6（2）
+### M6（4）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
 | 1 | 控制变量分层 because 结构 | 控制变量的黄金标准：按层级递进+每变量显式 because | — | 通过（4/4 复现） | Darby2026/2025/2023 + Eilert2017 |
 | 14 | 全谱系控制变量 — 高 because 密度 + 事件控制 + CEO 人格 | 文本构念+市场反应交叉领域、多种混淆来源并存 | 在变体1（分层 because）基础上三升级：RavenPack 事件控制+Big5 人格+互补DV维度 | 待交叉 | Li et al. 2026 JOM |
 | 37 | rival 镜像控制变量惯例 | 对手侧镜像控制：引用前例+命名规则+聚合方式一句完成 | 区别于变体1（分层 because）与变体14（全谱系）：跨主体镜像控制 | 待交叉 | DesJardine, Li & Shi 2025 AMJ |
+| 40 | 控制变量"双面 because" — 对 DV 一条理由 + 对 IV 共变一条理由 | CEO/个体特质 → 结果研究，控制为何与特质共变最易被质疑时 | 区别于变体14（强调 because 密度）：每个控制对 DV 与对 IV 各一条理由，平行论证结构 | EMERGING | Ridge et al. 2024 (AMJ) |
 
 ### M7（7）
 
@@ -641,6 +644,32 @@ updated: 2026-08-09
 
 ---
 
+### 变体 39: M2.5 时间间隔声明 — DV t+1 / IV & controls t 的反向因果预先化解（2026-08-12）
+
+**来源论文**: Ridge, Hill, Ingram, Kolomeitsev & Worrell 2024 (*Academy of Management Journal*)
+**原始句锚点**: "All the dependent variables are measured in year t + 1, while all independent and control variables are measured in year t to establish temporal spacing."（英文原句——源论文为英文，非中文锚点）
+**验证状态**: EMERGING（单篇；`section_variant`）
+**写入日期**: 2026-08-12
+**槽位**: M2.5
+**骨架**:
+> All the dependent variables are measured in year [t + 1], while all independent and control variables are measured in year [t] to establish temporal spacing.
+**与原骨架差异**: 区别变体 20（Model-Free Evidence 预览）与变体 27（构念形成窗—结果观察窗分离）——本变体是**单句时间间隔声明**（DV t+1 / IV t），把反向因果威胁在 Methods 层面预先化解，是 CEO 特质→结果类纵贯面板的高性价比 baseline 承诺。更通用：任何 lead-DV / lag-IV 面板都可复用。
+**诚实边界**: 时间间隔只缓解反向因果，不解决遗漏变量/选择偏差；若机制实际发生在同期（如投资者当期反应），须按 Bellemare 反向论证（见变体 38）说明为何不滞后。
+
+### 变体 40: M6 控制变量"双面 because" — 对 DV 一条理由 + 对 IV 共变一条理由（2026-08-12）
+
+**来源论文**: Ridge, Hill, Ingram, Kolomeitsev & Worrell 2024 (*Academy of Management Journal*)
+**原始句锚点**: "We control for firm size (logarithm of total assets), market performance (measured as Tobin's Q), and tax aggressiveness... because lobbying and competitive actions may be affected by all three. Likewise, there is reason to expect that each may covary with paranoia, given tendencies of those higher in the trait to avoid attention."（英文原句——源论文为英文，非中文锚点）
+**验证状态**: EMERGING（单篇；`section_variant`）
+**写入日期**: 2026-08-12
+**槽位**: M6
+**骨架**:
+> We include several control variables that may covary with the focal outcomes and [IV]. We control for [control 1], [control 2], and [control 3] because [DV] may be affected by all three ([citation]). Likewise, there is reason to expect that each may covary with [IV], given [mechanism linking controls to the trait]. From a [stakeholder/governance] perspective, we control for [control 4] and [control 5] given that these variables are potential outcomes of [focal behavior] ([citation]). Finally, at the [actor] level, we include [actor-level controls] because [reason].
+**与原骨架差异**: 区别变体 14（Li et al. 2026 高 because 密度——强调每个控制的 DV 面理由）——本变体是**"双面结构"**：每个控制对 DV 一条理由（"may be affected by all three"）+ 对 IV 共变一条理由（"each may covary with [IV], given tendencies of those higher in the trait to [behavior]"），形成平行论证。CEO 特质研究最常被质疑"控制为何与特质共变"，双面 because 预先回答此质疑。
+**诚实边界**: 对 IV 的共变理由必须指向真实机制（如"高特质者倾向回避关注"），不能泛泛而谈；若某控制对 IV 的共变理由无法给出，应质疑是否真的需要控制它。
+
+---
+
 ## 反模式
 
 | 反模式 | 表现 | 应做 |
@@ -652,6 +681,8 @@ updated: 2026-08-09
 | **调节效应论文 Methods 未报告交互项构造** | 论文核心贡献是调节效应，但 Methods 未说明交互项、去心化或二次项 | 在 M5/M7 明确说明交互项形式、是否 mean-centered、是否包含二次项及其构造方式 |
 | **仅凭 Hausman 选择 RE** | 仅报告 "Hausman test not significant (p > .05), so we use RE"，无理论理由 | 参见变体13——RE 选择需理论理由（跨单元差异>单元内变化）+ Hausman + ICC 三重辩护 |
 | **控制变量无 because** | 罗列变量名和操作化但不解释"为什么控制这个变量" | 每个控制变量必须回答：(1) 为什么影响 DV，(2) 为什么可能与 IV 相关 |
+| **理论检验型面板缺设置合法性论证（M1 反模式）** | S&P 1500 等样本框仅作为样本呈现，未论证为何该情境适合检验理论前提 | M1 至少一句情境正当化：指出该情境中理论相关的两个前提现象并存（见变体 15 双重现象、变体 23 行业统计、变体 33 单一中介机构） |
+| **行业/年度 dummy 替代 firm FE 未辩护 + 未声明聚类 SE 层级（M7 反模式）** | 面板用行业/年度 dummy 而非 firm FE，却不解释取舍；未说明标准误聚类层级 | 明示为何不取 firm FE（如 Tobit/NB 收敛、时不变焦点 IV、between-unit 理论对齐，见变体 13/22/38），并声明聚类 SE 层级（firm/industry-year/嵌套） |
 
 ## 诚实边界
 

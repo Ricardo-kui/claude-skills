@@ -35,6 +35,45 @@ Among varied perspectives on [domain], [construct] represents a distinct form of
 ---
 
 <!--
+pattern_id: invariant_discriminant_spine
+build_type: 构念辨析型
+source_papers: ["Ridge_Hill_Ingram_Kolomeitsev_Worrell_2024_AMJ"]
+confidence: emerging
+status: needs_cross_paper_validation
+story_fidelity: section_variant
+-->
+
+## Pattern: Invariant Discriminant Spine
+
+**适用场景**: 新构念与相关构念在**多个维度**上看似相近，但存在**一条贯穿所有维度、恒定不变的判别主轴**（invariant discriminant spine），把新构念从相关构念中一次性区隔出来。与 Table-Based 的区别：Table-Based 是"多维并列对比"（每行一个维度、整体建立边界）；本模式是"**先声明一条不变主轴，再沿该主轴解释每个相邻构念为何被排除**"——主轴的逻辑承担全部区分工作，相邻构念是对主轴的逐个检验。
+
+**微观动作序列**: Spine claim（声明不变判别主轴）→ Adjacent construct elimination（沿主轴排除相邻构念 A/B）→ Definition consequence（主轴蕴含的理论后果）
+**范文来源**: Ridge, Hill, Ingram, Kolomeitsev & Worrell (2024), *Academy of Management Journal*（paranoia vs distrust：主轴 = "不仅是怀疑，还有对恶意的主观感知"）
+
+**骨架**:
+```
+[Spine claim]
+[Construct] is not only [adjacent construct] but also [invariant discriminant spine]. The distinguishing feature is [spine content]: [active perception / specific state] rather than [mere absence / passive belief].
+
+[Adjacent construct elimination — 逐个沿主轴检验]
+This distinction matters for how [construct] shapes [outcome]. [Adjacent construct A] reflects [A's content]—a [passive/specific] state that [does not carry the spine]. [Adjacent construct B], by contrast, [B's content], which [also lacks the spine / differs on the spine dimension]. Only [construct] combines [spine element 1] with [spine element 2].
+
+[Definition consequence]
+Because [construct] carries [spine], it [predicts behavior/phenomenon] in ways [adjacent constructs] do not: [consequence tied to the spine].
+```
+
+**为什么有效**: 读者只需要记住一条主轴，相邻构念的排除成为对主轴的重复检验——比"每行一个维度"更省认知、更不易被审稿人反驳；主轴直接为后续机制提供因果入口（如"主动恶意感知"→ 威胁扫描 → 回避行为）。
+
+**注意事项**:
+- 主轴必须是**不变的**（贯穿所有相邻构念的判别都回到它），不能每个相邻构念换一条判别线。
+- 主轴要落在**理论后果可衔接**的位置——它必须能解释后续机制的方向（如"主动感知"支撑 hyper-vigilance），否则只是词源辨析。
+- 相邻构念排除要具体（每个构念"缺什么"），不能只写"X is different"。
+
+**反模式**: 主轴不恒定（A 用维度 1、B 用维度 2 排除）→ 退化为列表；主轴与机制无关（区分完即弃用）；相邻构念排除流于形式（无内容差异）。
+
+---
+
+<!--
 pattern_id: simultaneously_recognize_leverage
 build_type: 跨类型
 source_papers: ["Grewal_Vana_Stephen_2025_JM"]

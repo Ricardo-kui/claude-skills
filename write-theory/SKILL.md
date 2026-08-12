@@ -63,7 +63,7 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 | 8 | 默认不设独立 Closure；最后假设/命题自然收敛。仅当复杂构念或过程模型仍需整合时，允许在末段嵌入或紧随其后作最短必要回扣，不得增加新构念、命题或贡献 | `corpus/sentences/closure.md` |
 | 9 | 竞争假设用非传统收敛信号（"Given these competing arguments…"），禁 "Therefore" | `corpus/variants/F_competing_hypotheses.md` |
 | 10 | 辩证对立必须满足对称性 + dialectical turn 标记 + theory-based reconciliation；"反转"必须是方向反转而非强度变化（强度变化路由到 E 型） | `corpus/variants/G_dialectical_opposition.md` |
-| 11 | ≥2 个 moderators 必须有理论驱动的选择理由（元框架/统一分类）；调节论证双边完整（high AND low） | `corpus/subprotocols/moderator_selection_frameworks.md` + `corpus/subprotocols/bilateral_argumentation_templates.md` |
+| 11 | ≥2 个 moderators 必须有理论驱动的选择理由（元框架/统一分类）；调节论证双边完整（high AND low）。**cue/activation moderator 例外**：当 moderator 是特质相关 cue、low 态即主效应已论证的默认表现型基线时，双边覆盖可由（主效应基线）+（high 态完整机制论证）满足，不强制冗余 low 段 | `corpus/subprotocols/moderator_selection_frameworks.md` + `corpus/subprotocols/bilateral_argumentation_templates.md`（含 Cue-Activation Carve-Out） |
 | 12 | 连续谱 IV 需论证两端（+理论中间行为者作零效应基准） | `corpus/subprotocols/hypothesis_derivation_patterns.md` |
 | 13 | 图作为文字理论的辅助呈现（文字承载论证）；Literature Support 必须是 argument 总结而非 citation 罗列 | `corpus/sentences/mechanism_chain.md` |
 | 14 | 输出末尾自动附加 `### paper-state.yaml 片段` 块 | `corpus/meta/paper_state_fragment.md` |

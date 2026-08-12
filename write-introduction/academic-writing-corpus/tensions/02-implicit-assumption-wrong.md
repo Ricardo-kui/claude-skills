@@ -13,8 +13,9 @@ source_papers:
   - 'zhao_ding2022 (OS, 2023): "challenges an implicit premise that lower entry barriers mechanically translate into greater product variety" (mechanical-causal-chain assumption; variant D)'
   - "weng_yang (JMS): self-labeled 'theoretical inadequacy' with embedded theory lens — 'While insightful, prior studies have fallen short... This is an important theoretical inadequacy since...'"
   - 'reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science, 2026): "mixed findings expose the implicit assumption that political-dissimilarity effects remain stable rather than being activated by macro events" (temporal-stability assumption; variant F)'
+  - 'fini_jourdan_perkmann_2017 (Academy of Management Journal, 2017): external audience approval is not a peer endorsement; it simultaneously conveys ability and possible identity deviation (cross-audience inference; variant G)'
 created: 2026-05-18
-updated: 2026-08-02
+updated: 2026-08-12
 source: Extracted from MVP30 narrative_analysis files + weng_yang distill + reinwald et al. 2026 distill
 ---
 
@@ -178,6 +179,29 @@ Inadequacy 问题化的核心 Tension：不是"文献遗漏了东西"，而是"�
 
 **禁忌**:
 - 不得把任何结果异质性都归因于“时间变化”；必须指出理论上可识别的激活事件与机制。
+
+---
+
+### 变体 G：同质同侪推断 → 跨受众双信息分离型（Fini et al. 2017 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "Prior research treats [prior evaluation] as a favorable indication of [quality] because the earlier and focal evaluators share [a theory of value]. That premise becomes incomplete when [focal audience] observes approval from [external audience]. The same approval may signal [capability relevant to the focal decision] while raising doubt about [conformity with the focal audience's expected identity]. The question is therefore not simply whether prior approval matters, but what information an approval issued under a different evaluative standard conveys."
+
+**来源**: Fini, Jourdan, and Perkmann (2017), *Academy of Management Journal*, Introduction.
+
+**原文锚定**:
+> "In the case of exogenous indices, both dimensions diverge; this has implications for how peer evaluators are influenced."
+
+**关键特征**:
+1. 不以“文献很少研究”开场，而是先准确指出既有正向推断成立的边界：前后评价者共享标准。
+2. 用同一可观察线索的“双重可读性”制造张力：能力信息可正向更新判断，身份信息可反向更新判断。
+3. 收束为解释任务而非预支倒 U 结果；曲线形状和条件性留给 Theory 与 Methods 兑现。
+
+**适用**: 已有文献默认将他方认可读作单一正向信号，但焦点评价者能够观察来自标准、身份或逻辑不同的外部受众的认可；贡献属于 Inadequacy × Mechanism。
+
+**禁忌**: 若外部认可不同时携带能力信息和身份/规范信息，不能为追求反直觉而套用双信号逻辑；若两类受众没有任何能力标准重叠，应先论证该认可为何仍具信息价值。
 - 只有一个事件后截面不能支持“随时间变化”的完整叙事；至少需要事件前后比较或重复测量。
 - “事件后斜率不显著”只能写为观察窗内未检测到衰减，不能写成永久效应。
 

@@ -20,9 +20,10 @@ source_papers:
   - "schumacher_keck_tang_2020_smj (Strategic Management Journal): direct cross-group coefficient test for an imprecise within-group reversal; construct-validity triangulation across nomological contrast, cross-firm stability, and temporal stability"
   - "kashmiri_nicol_arora_2017_jams (Journal of the Academy of Marketing Science): marginal focal result followed by significance-driven control deletion, retained as an anti-pattern rather than a reporting template"
   - "desjardine_li_shi_2025_amj (Academy of Management Journal): min/mean/max marginal-effect table with slope-direction language, collinearity-absorption explanation for full-model interaction attenuation, ITCV omitted-variable threshold defense, dual-benchmarking deviation test, acquisition quasi-natural experiment as influence-channel switch, Bushee investor-type decomposition with Wald test, sequential moderator introduction→paired→full-model navigation"
-variants_count: 53
+  - "ridge_et_al_2024_amj (Academy of Management Journal): front-loaded endogeneity defense (RIR replacement count + naive-vs-cure 2SRI pairing), external-evidence practical-importance beat (R5)"
+variants_count: 55
 created: 2026-05-18
-updated: 2026-08-09
+updated: 2026-08-12
 ---
 
 # OLS-FE — Results 骨架
@@ -46,9 +47,9 @@ updated: 2026-08-09
 | R2 | 模型序列与表导航 | 6 | 16, 19, 22, 24, 28, 53 |
 | R3 | 主假设检验 | 10 | 8, 11, 17, 23, 27, 34, 35, 36, 41, 48 |
 | R4 | 交互/调节/阈值 | 8 | 9, 14, 18, 32, 40, 43, 45, 47 |
-| R5 | 经济显著性 | 3 | 3, 10, 13 |
+| R5 | 经济显著性 | 4 | 3, 10, 13, 55 |
 | R6 | 非显著/反转/Null | 5 | 4, 6, 30, 37, 42 |
-| R7 | 稳健性与威胁处理 | 14 | 1, 2, 7, 12, 15, 25, 26, 29, 31, 39, 46, 49, 50, 51 |
+| R7 | 稳健性与威胁处理 | 15 | 1, 2, 7, 12, 15, 25, 26, 29, 31, 39, 46, 49, 50, 51, 54 |
 | R8 | 补充/事后/机制 | 6 | 5, 21, 33, 38, 44, 52 |
 | R9 | 证据收束（可选） | 0 独立 | 27（R3+R9）；多研究变体4/5 亦用 |
 
@@ -104,6 +105,7 @@ updated: 2026-08-09
 | 3 | Quartile Penalty 表 | 主效应经济显著性表格化（四分位罚金） | vs 变体23 行文版 vs 变体10 条件边际（决策对5） | 可选 | Darby2023 MSOM |
 | 10 | ΔR²+条件边际经济显著性 | 增量方差+条件百分比联合论证（调节的条件分解） | vs 变体13 交互联合变化；vs 变体23 四分位距（决策对5） | 待交叉 | Mannor 2016 SMJ |
 | 13 | 交互联合百分比经济显著性 | IV×M 同时变化 1% 的联合幅度翻译（LIWC 等百分比单位变量适配） | vs 变体10 条件分解；vs 变体23 主效应四分位（决策对5） | 待交叉 | Li 2026 JOM |
+| 55 | 外部证据实际重要性辩护拍 | 幅度翻译后用外部文献证明微小变化净显著收益 → "likely to be particularly important in practice" | vs 变体13 联合翻译——本变体追加拍5 实际重要性辩护；vs 生存分析变体15 "every day counts" 同拍跨场景 | 待交叉 | Ridge et al. 2024 AMJ |
 
 ### R6 非显著/反转/Null（5）
 
@@ -133,6 +135,7 @@ updated: 2026-08-09
 | 49 | ITCV 省略变量阈值 | 双重相关阈值+impact 阈值+最强控制对比（Frank 2000） | vs 变体46 Cinelli 倍数基准；vs 变体15 RIR+Oster | 待交叉 | DesJardine 2025 AMJ |
 | 50 | 双基准化偏离检验 | 构造"评级−外部基准"差变量，前门基准无关+后门差变量被影响 | vs 变体25 替代 DV 证伪（单 DV）；vs 变体7 同向复制 | 待交叉 | DesJardine 2025 AMJ |
 | 51 | 收购准自然实验 | 影响通道开关（私有→公开所有权切换）+ 收购前不显著 | vs 变体29 选择偏误防御（无通道切换）；vs 变体26 内生性表 | 待交叉 | DesJardine 2025 AMJ |
+| 54 | 前端识别防御（RIR 替换计数 + naive-vs-cure 2SRI 配对） | 内生性作为组织威胁且需前置到主结果之前：威胁定位→RIR 替换计数→naive vs 2SRI cure 配对→"consistent across approaches" | vs 变体15 五威胁标签化序列（RIR+Oster+CEM 三件套）——本变体是 RIR 量化替换 + naive-vs-cure 双轨节奏 + 前置；vs 变体2 基础四威胁 | 待交叉 | Ridge et al. 2024 AMJ |
 
 ### R8 补充/事后/机制（6）
 
@@ -816,6 +819,38 @@ updated: 2026-08-09
 
 ---
 
+### 变体 54: R7 前端识别防御 — RIR 替换计数 + naive-vs-cure (2SRI) 配对 (1篇高价值)
+
+**来源论文**: Ridge, Kim, Ingram & Lee 2024 (Academy of Management Journal)
+**原始句锚点**: "RIR results suggest that to alter our inferences for lobbying breadth, 675 observations would have to be replaced with observations for which there is an effect of zero, and for competitive actions, 1,793 observations would have to be replaced... we follow best practices to diagnose potential endogeneity and assess robustness across analyses."
+**验证状态**: 待第二篇交叉验证（EMERGING / 单篇 section_variant）
+**写入日期**: 2026-08-12
+**槽位**: R7
+**骨架**:
+> A concern in testing how [characteristic] affects [outcome] is endogeneity, especially from nonrandom [selection]. First, we use robustness of inference to replacement (RIR): to alter our inferences for [outcome 1], [N] observations would have to be replaced with observations for which there is an effect of zero, and for [outcome 2], [N] observations. Next, we pair 'naive' analyses that do not use tools to 'cure' endogeneity with analyses that attempt such a cure [e.g., two-stage residual inclusion], finding estimates are consistent across approaches.
+**与原骨架差异**: 区别于变体15（Li 2026 五威胁标签化序列 RIR+Oster+CEM 三件套）与变体2（基础四威胁叙述）——本变体是**前端识别防御节奏**：内生性作为唯一组织性 threat 且**前置到主结果之前**（先建立可信度再展示证据），RIR 用**可替换观测计数**量化稳健性（675 / 1,793 obs），并以 **naive-vs-cure 配对**（不处理 vs 2SRI residual inclusion）收束于 "estimates are consistent across approaches"。RIR 的量化替换计数（"N observations would have to be replaced"）是关键节奏标记。
+**诚实边界**: RIR 需在 Methods/Appendix 说明替换阈值与 Oster δ/Rmax 等参数；2SRI 需报告工具变量及其外生性论证；naive-vs-cure 配对要求两套分析在同一 DV 上可比，且 "consistent across approaches" 不可夸大为因果识别。
+
+**适用**: 非随机选择是主要内生性威胁的非实验研究；希望在主结果之前完成识别防御的结构；RIR 已有可报告的替换计数。
+
+---
+
+### 变体 55: R5 外部证据实际重要性辩护拍 — "likely to be particularly important in practice" (1篇高价值)
+
+**来源论文**: Ridge, Kim, Ingram & Lee 2024 (Academy of Management Journal)
+**原始句锚点**: "Evidence suggests that even small changes in lobbying can net significant benefits such as tax rate savings... meaning the 7% decrease we observe is likely to be particularly important in practice."
+**验证状态**: 待第二篇交叉验证（EMERGING / 单篇 section_variant）
+**写入日期**: 2026-08-12
+**槽位**: R5
+**骨架**:
+> A [one-SD] increase in [predictor] corresponds to a [value]% [increase/decrease] in [outcome]. Evidence suggests that even small changes in [outcome] can net significant benefits such as [external evidence]. Thus, the [value]% change we observe is likely to be particularly important in practice.
+**与原骨架差异**: 区别于 r5_ols_embedded_magnitude（只给幅度+语境对比）与变体13（交互联合翻译）——本变体追加**实际重要性辩护拍（拍5）**：先给幅度（"A [one-SD] increase... corresponds to a [value]% [change]"），再用**外部文献锚定**证明微小变化净显著收益（"even small changes in [outcome] can net significant benefits such as [external evidence]"），收束于 "likely to be particularly important in practice"。与生存分析变体15 "every day counts"（darby2025）同属实际重要性辩护节奏，但场景为**百分比幅度 + 外部收益锚**而非天数 + stakes 重框。
+**诚实边界**: 外部证据必须来自已发表文献或可核验基准，且须与该 [outcome] 的决策场景对应；"likely to be particularly important" 是判断而非事实，须由外部锚支撑；幅度与外部锚必须同量纲可比。
+
+**适用**: 效应量看似小的观察性研究，需要用外部证据把"小 %"翻译为"实际重要"；百分比幅度的主效应或调节效应。
+
+---
+
 ## 反模式
 
 | 反模式 | 表现 | 应做 |
@@ -834,3 +869,6 @@ updated: 2026-08-09
 - **转折点 CI**：转折点置信区间必须落在数据范围内，否则倒 U 型证据不足。
 - **非中心复制**：mean-centering 后报告非中心化系数是可选策略，但需解释为何更便于解释；若中心与非中心结果不一致，需讨论。
 - **Post-hoc 标签**：将 "robustness checks" 与 "additional insights" 并列时，应逐条标注哪些是确证性稳健性、哪些是探索性分析，避免审稿人质疑。
+- **显著但实际效应小必须显式降调**：交互项或主效应统计显著但实际效应过小时，必须在正文显式降调（"does not appear to be particularly meaningful in practice"），不得仅以显著性宣布支持。（变体14/55）
+- **null 主效应符号反转只作推测框架**：null 主效应若符号反转并读作"同一构念的另一极"，只作推测框架并推迟到 Discussion，不得声称支持。（变体15）
+- **规格敏感性把 null 变显著必须透明披露并机制对冲**：规格敏感性把 null 变成显著时，必须透明披露并用系数通胀机制（如 Kalnins 2018）对冲，不得升级为假设支持。（Ridge et al. 2024 A9/A10 范本）

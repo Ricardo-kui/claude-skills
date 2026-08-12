@@ -15,7 +15,8 @@ source_papers:
   - wowak2025 (MS, 2025): "JFK 'right answer' quote → political polarization paradox"
   - abdurakhmonov2026 (JOM, 2026): "Mercedes/Volvo public EV commitment vs trade-association lobbying — public-private discrepancy, no quote, indirect narration"
   - hoffmann_cheong_phan_zurbruegg2024 (JM, 2024): "Levine quote on personal director liability → GM/Boeing dual-case recall/litigation chain → UD law shock RQ"
-updated: 2026-08-05
+  - ridge_hill_ingram_kolomeitsev_worrell2024 (AMJ, 2024): "Dual-CEO-epigraph practitioner chorus grounding the paranoia CONSTRUCT (variant H, construct-grounding)"
+updated: 2026-08-12
 created: 2026-05-19
 source: Extracted from MVP30 narrative_analysis + darby2026 distill; re-distilled hoffmann2024 2026-08-05
 ---
@@ -192,6 +193,28 @@ source: Extracted from MVP30 narrative_analysis + darby2026 distill; re-distille
 **适用**: corporate political activity、CSR decoupling、ESG greenwashing、corporate hypocrisy 研究中，存在两个可公开引用的矛盾事实（一公开承诺、一私下行动）的场景；Incompleteness × Mechanism / Phenomenon；JOM / JM / OS / SMJ 适配
 
 **禁忌**: 两个事实（公开承诺 + 私下行动）必须都有可引用的公开来源，不能只有一方有 citation；私下行动必须是公开记录可查的（如游说立法记录），不能是未经证实的指控；第三方中介必须与被点名企业有明确代表关系；揭示的虚伪必须与论文核心构念直接对应，不能只是装饰性开场
+
+---
+
+### 变体 H：从业者合唱构念落地型（ridge2024 型） 🔬 EMERGING（1 篇范文）
+
+**模板**:
+> "[Practitioner voice 1] — [Speaker 1], [role]. [Practitioner voice 2] — [Speaker 2], [role]. As these voices imply, [actors] may view [targets] through a prism of [construct], defined as '[academic definition]' ([citation]). Indeed, [exemplar actor 1] has often been cited for [construct-related principle], which is said to have shaped [his/her] choice to [behavior]. Similarly, [exemplar actor 2], whose guiding motto was '[motto]', was quoted as saying that [he/she] [construct-related behavior]."
+
+**来源**: ridge_hill_ingram_kolomeitsev_worrell2024 (AMJ), P1
+
+**原文锚定**:
+> "As the epigraphs imply, chief executive officers may view stakeholders such as the government and competitors through a prism of paranoia, defined as relatively stable tendencies toward suspiciousness, feelings of ill will or resentment, mistrust, and belief in external control or influence."
+
+**关键特征**:
+- **多从业者声音先于学术定义登场**: 2 个 epigraph + 2 个 exemplar（共 4 位具名 CEO）在学术定义之前先用从业者自己的语言说出构念的名字——把构念锚定在被研究人群自己的语汇（lived idiom）里
+- **"As the epigraphs imply" pivot**: 用一句作者转译把从业者的生活语汇形式化为可测量的倾向（academic definition 紧随其后），防止 Hook 读作新闻式开场
+- **每个 exemplar 为构念附上行为签名**: 如对政府的怀疑、对竞争对手 "running scared"——让构念在登场时就有可观察的行为对应
+- **与变体 A-G 的本质区别**: A-G 用外部声音为 PHENOMENON/EVENT 建立合法性；本变体用从业者合唱为一个 CONSTRUCT 建立落地感——construct-grounding 是 02 家族此前未建模的子功能
+
+**适用**: upper echelons / strategic-leadership 研究引入具有从业者流通性的心理构念；AMJ/ASQ/OS theory-oriented Incompleteness × Mechanism 或 Constructs
+
+**禁忌**: epigraphs 必须真的说出构念的名字（不能只是暗示）；从业者声音不超过 ~4 个；学术定义必须紧随其后，否则开场失去理论锚
 
 ---
 

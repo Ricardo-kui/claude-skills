@@ -2,9 +2,9 @@
 corpus: write-results
 description: Results 填空骨架变体库，按结果类型组织。由 distill-results-exemplar 手动写入验证通过的变体。
 organization: by_result_type
-result_types_count: 20
+result_types_count: 21
 created: 2026-05-18
-updated: 2026-08-09
+updated: 2026-08-12
 ---
 
 # Results Econometric Models Corpus
@@ -25,16 +25,17 @@ updated: 2026-08-09
 
 | 文件 | 结果类型 | 变体数 | 最后更新 |
 |------|---------|--------|---------|
-| [OLS-FE](OLS-FE.md) | OLS-FE | 53 | 2026-08-09 |
+| [OLS-FE](OLS-FE.md) | OLS-FE | 55 | 2026-08-12 |
 | [Logit-Probit-Ordered-Probit](Logit-Probit-Ordered-Probit.md) | Logit-Probit-Ordered-Probit | 18 | 2026-08-05 |
 | [生存分析](生存分析.md) | 生存分析 | 19 | 2026-08-01 |
 | [DiD](DiD.md) | DiD | 10 | 2026-08-05 |
-| [计数模型](计数模型.md) | 计数模型 | 12 | 2026-08-03 |
+| [计数模型](计数模型.md) | 计数模型 | 16 | 2026-08-12 |
 | [实验](实验.md) | 实验 | 5 | 2026-08-03 |
 | [多研究](多研究.md) | 多研究 | 8 | 2026-08-02 |
 | [定性过程研究](定性过程研究.md) | 定性过程研究 | 4 | 2026-07-07 |
 | [IV-2SLS](IV-2SLS.md) | IV-2SLS | 10 | 2026-08-05 |
 | [匹配DiD](匹配DiD.md) | 匹配DiD | 1 | 2026-08-05 |
+| [Tobit](Tobit.md) | Tobit | 1 | 2026-08-12 |
 | [堆叠扩散Logit](堆叠扩散Logit.md) | 堆叠扩散Logit | 0 | 2026-05-18 |
 | [同伴效应-网络效应](同伴效应-网络效应.md) | 同伴效应-网络效应 | 0 | 2026-05-18 |
 | [推断二元结果](推断二元结果.md) | 推断二元结果 | 0 | 2026-05-18 |
@@ -54,6 +55,8 @@ updated: 2026-08-09
 4. 变体达到 3+ 时，考虑提升为 skill 主骨架
 
 ## 语料库质量状态
+
+> ✅ **2026-08-12 更新（Ridge et al. 2024 AMJ）**: 首次填充「Tobit」结果类型（变体1：左删失 DV 条件幅度四拍 + 实际重要性拍5），并扩展计数模型（变体14–16：显著但实际效应小降调 / null 符号反转替代机制 / 混合结果综合 + Discussion 交接）与 OLS-FE（变体54–55：前置 RIR + naive-vs-cure 2SRI 防御 / 外部证据实际重要性）。均为单篇 EMERGING，不升 core。诚实边界 +3（显著小效应必须降调；null 符号反转只作推测推迟 Discussion；规格敏感性把 null 变显著须透明 + 系数通胀对冲）。
 
 > ✅ **2026-08-05 更新（Zorn–Shropshire–Martin–Combs–Ketchen 2017 SMJ）**: 多 DV 治理后果 + 外部监督调节。新增 IV-2SLS 变体8–10：
 >   - 变体8：多 DV 平行 climax（%/货币/OR 设计匹配幅度翻译）

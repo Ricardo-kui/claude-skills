@@ -28,7 +28,8 @@ status: ready_for_corpus
 | 7 | Pattern: 2×2 Combination Enumeration to In | 当主效应是 match/fit/similarity → positive outcome， |  | Du and Tsolmon (2024), *Organi |
 | 8 | Pattern: Shared Orientation → Divergent Ou | 同一 actor trait 先塑造一种组织导向，该导向再关联多个战略结果；部分结果有益、部 |  | Kashmiri, Nicol, and Arora (20 |
 | 9 | Pattern: Dual-Edged Trunk → Signed Enhanci | 主效应净方向事先不定（双刃剑）；理论用一组异号权变分别强化升值机制与贬值机制；不设 unco |  | Castellaneta, Conti, and Kacpe |
-| 10 | Pattern: Mechanism-Loss Trunk → Multi-Outc | 拥挤的治理/结构文献中，IV 不是“又一个 board/TMT characteristic |  | Zorn, Shropshire, Martin, Comb |
+| 10 | Pattern: Mechanism-Loss Trunk → Multi-Outc | 拥挤的治理/结构文献中，IV 不是”又一个 board/TMT characteristic |  | Zorn, Shropshire, Martin, Comb |
+| 11 | Pattern: Per-Stakeholder Paired (Main + Cue-M | 同一特质 IV 对多个外部利益相关者各产生”主效应（默认表现型）+ cue 切换（对立表现型）”配对；贡献=同一特质在多个 stakeholder 关系中的切换节律 | EMERGING（单篇来源，待第 | Ridge, Hill, Ingram, Kolomeitsev |
 
 ## Pattern: Triple Parallel Boundary Conditions
 
@@ -524,3 +525,60 @@ Hence each S→Y link is attenuated as W increases → H[mod] family.
 - 把任意 board dummy 都写成 what-is-lost，却说不清被移除者原先提供的具体收益。
 - 多 DV 共用一段机制、假设处只换因变量名。
 - 将 analysts/institutions 写成完全替代董事会的治理机制。
+
+---
+
+<!--
+pattern_id: per_stakeholder_paired_main_cue_moderation
+build_type: 调节效应型
+source_papers: ["Ridge_Hill_Ingram_Kolomeitsev_Worrell_2024_AMJ"]
+confidence: emerging
+status: needs_cross_paper_validation
+story_fidelity: section_variant
+-->
+
+## Pattern: Per-Stakeholder Paired (Main + Cue-Moderation) Parallel
+
+**适用场景**: 同一特质/倾向 IV 面对**多个外部利益相关者**（如 regulators、acquiring firms），理论预期对每个 stakeholder 关系都存在"主效应（默认表现型）+ cue 切换（对立表现型）"的配对结构。论文贡献=同一特质在多条 stakeholder 关系中呈现一致的"默认→切换"节律。区别于把每个 stakeholder 写成一个独立 moderator 的堆叠：这里的**每对 main+cue-moderation 共享同一特质机制**，配对架构让读者看到"同一个 trait 逻辑在不同 stakeholder 上复现"。
+
+**微观动作序列**: Trait default manifestation（一次）→ 对每个 stakeholder：主效应（默认表现型应用到该关系）→ cue 定义（该 stakeholder 的什么动作是"默认失效"证据）→ 切换假设（cue 激活对立表现型）
+**范文来源**: Ridge, Hill, Ingram, Kolomeitsev & Worrell (2024), *Academy of Management Journal*（CEO paranoia → lobbying breadth（regulators）、M&A activity（acquirers）；paranoia-relevant cues 激活 aggression）
+
+**骨架**:
+```
+[特质默认表现型（全局一次，避免每个 stakeholder 重复）]
+[IV trait] is strongly associated with [default manifestation]—which [function]. Individuals higher in [trait] [scan/monitor] and [attribute malintent], leading them to [default behavior] toward external entities.
+
+[Per-Stakeholder 1: 主效应（默认表现型）]
+Stakeholder 1 是 [regulator/actor type]。Organizations with CEOs higher in [trait] will tend to [default manifestation toward stakeholder 1] to prevent antagonizing them and eliciting negative repercussions. Thus:
+H1: [Trait] is [negatively] related to [DV 1] (engagement with stakeholder 1).
+
+[Per-Stakeholder 1: cue 定义 + 切换]
+Actions by [stakeholder 1] that target the [CEO/firm] are [trait]-relevant cues—evidence that [default manifestation] has not provided protection. When such cues accumulate (e.g., [cue intensity] increases), CEOs higher in [trait] shift from [default manifestation] to [opposing manifestation], directly engaging [stakeholder 1]. Thus:
+H2: There will be a positive interaction effect of [trait] and [cue 1] on [DV 1], such that the negative relationship between [trait] and [DV 1] is mitigated as [cue 1] increases and prompts more [opposing manifestation] action.
+
+[Per-Stakeholder 2: 同构配对（复用 trait 逻辑，仅换 stakeholder 与 DV）]
+Stakeholder 2 是 [another actor type]. The same logic applies: [trait] defaults to [default manifestation toward stakeholder 2]... Thus:
+H3: [Trait] is [negatively] related to [DV 2].
+H4: The positive interaction effect of [trait] and [cue 2] on [DV 2] mitigates the negative relationship as [cue 2] increases.
+```
+
+**为什么有效**: 特质机制只论证一次（默认表现型全局 opener），每个 stakeholder 段落只需应用+切换——避免"每个 DV 重推同一 trait 机制"的重复；配对结构把"默认→切换"的节律做成可复现的节奏，审稿人看到的是同一理论逻辑的多点验证而非变量清单。
+
+**与近邻模式区分**:
+- vs `triple_parallel_boundary_conditions`：后者是**多个独立 moderator** 各改主效应强度（无 trait-default 配对、无切换）；本模式是**同一特质**在每个 stakeholder 上的 main+cue 配对。
+- vs `common_trunk_parallel_branches`：后者分支是**同一 DV 上的多机制/moderator**；本模式分支是**多个 stakeholder 关系**，每个关系内部是主效应+cue 切换的两步。
+- vs `dual_edged_trunk_signed_enhancing_hindering`（E8）：后者是双刃剑**净效应不定、可无主效应**；本模式必须有主效应（默认表现型）。
+- vs `shared_orientation_divergent_outcomes`：后者是 trait→orientation→多结果；本模式是 trait→每个 stakeholder 的默认表现型 + cue 切换。
+
+**注意事项**:
+- 特质默认表现型的机制论证应**只做一次**（全局 opener），各 stakeholder 段落引用即可，不要重复推演。
+- 每个 stakeholder 的 cue 必须具体（"什么动作是默认失效的证据"），不能写成泛化的情境强度。
+- 配对假设句式必须同构（"negative relationship ... mitigated as [cue] increases"），否则失去平行节律。
+- 单篇 EMERGING：未验证前不要作为 write-theory 默认路由。
+
+**反模式**:
+- 每个 stakeholder 都重推一遍 trait 机制 → 冗长且失去全局统一性。
+- 只有主效应、没有 cue 切换，或切换假设写成 buffering（机制削弱）而非 manifestation-switch。
+- 把不同 stakeholder 写成不同 trait 机制（机制不一致）→ 配对架构崩塌。
+- cue 与该 stakeholder 关系脱钩（泛化情境）→ 切换逻辑失去证据基础。

@@ -78,6 +78,7 @@ version: 2.2.0
 | `interaction_type: cross` | 跨层调节 | focal unit、nesting 与跨层传递机制 |
 | categorical moderator | 分组调节 | 类别改变机制而非仅切样本 |
 | 两套理论在不同条件下成立 | 竞争基线裁决 | 条件能够区分理论预测 |
+| IV 是特质/倾向，moderator 是特质相关 cue（low 态=主效应默认基线，cue 激活对立表现型） | **E11 Trait-Activation Dual-Manifestation Cue-Switch**（EMERGING，单源；仅作 `section_variant`） | 两表现型同属一个行为连续谱两端；cue 是"默认失效"证据而非一般情境；假设用 Mitigation via Manifestation-Switch 句式（`sentences/moderation.md`） |
 
 ### C 假设树
 

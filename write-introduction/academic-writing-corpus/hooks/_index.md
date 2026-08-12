@@ -19,9 +19,9 @@
 
 | Hook | canonical_id | 核心特征 | 验证状态 | 代表范文 |
 |------|-------------|---------|---------|---------|
-| **权威引语/新闻个案 Hook** | `02-epigraph-quote-pivot` | 新闻引语/内部文件/沉浸式叙事作为开场 | ROBUST (≥4 papers) | darby2026 (JOM), desjardine2023 (OS), singh2023 (JMR), lashley_pollock2020 (ASQ) |
+| **权威引语/新闻个案 Hook** | `02-epigraph-quote-pivot` | 新闻引语/内部文件/沉浸式叙事作为开场（含变体 H：从业者合唱构念落地型 ridge2024，EMERGING） | ROBUST (≥4 papers) | darby2026 (JOM), desjardine2023 (OS), singh2023 (JMR), lashley_pollock2020 (ASQ), ridge2024 (AMJ) |
 
-*Quote 类型当前仅 1 个 hook，但 `02-epigraph-quote-pivot` 包含 4 个变体（新闻个案型、权威声明型、内部文件型、沉浸式叙事型），覆盖范围较广。*
+*Quote 类型当前仅 1 个 hook，但 `02-epigraph-quote-pivot` 已扩展至 8 个变体（新闻个案型、权威声明型、内部文件型、沉浸式叙事型、政治悖论型、双重案例锚定型、公开-私下虚伪揭示型、从业者合唱构念落地型），覆盖从现象/事件落地到构念落地的全谱系。*
 
 ---
 

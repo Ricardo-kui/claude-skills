@@ -1,5 +1,5 @@
 meta:
-  last_updated: '2026-08-09'
+  last_updated: '2026-08-12'
   total_design_types: 22
   batches_processed: 18
   usage_stats_schema:
@@ -28,7 +28,7 @@ meta:
     + lee_wu_bednar_orsc_18968_distill + reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc_distill
     + moon_tuli_mukherjee_2023_jm + schumacher_keck_tang_2020_smj + kashmiri_nicol_arora_2017_jams
     + bendig_hensellek_schulte_2024_etp + lee_park_2024_smj + hoffmann_cheong_phan_zurbruegg2024_jm_redistill
-    + desjardine_li_shi_2025_amj_distill
+    + desjardine_li_shi_2025_amj_distill + ridge_hill_ingram_kolomeitsev_worrell_2024_amj_distill
 evidence:
   by_source_paper:
     lee_park_2024_smj:
@@ -273,9 +273,25 @@ evidence:
       - M8
       - M10
       note: 待第二篇 exemplar 提升为 ROBUST；DWH + Gaussian copula 内生性叙事需与传统 IV 研究进一步交叉验证
+    ridge_hill_ingram_kolomeitsev_worrell_2024_amj:
+      journal: Academy of Management Journal
+      title: 'Avoidance and Aggression in Stakeholder Engagement: The Impact of CEO Paranoia and Paranoia-Relevant Cues'
+      status: EMERGING (1p)
+      verification_basis: distill-methods-exemplar_2026-08-12
+      design_types:
+      - 面板数据-OLS
+      - 两阶段模型
+      - 文本构念测量
+      slots_covered:
+      - M2
+      - M4
+      - M6
+      - M8
+      story_fidelity: section_variant
+      note: From-scratch custom dictionary + nine-step validity chain (component→expert sort→deductive dictionary→student sort→PFA→nomological→stability) and earnings-call speaker-attribution pipeline (M2/M4). Endogeneity 'balancing act' diagnose-first narrative (RIR N-to-overturn → cure second → naïve/cured pairing) and 2SRI with validation-measures reused as instruments (M8). Temporal-spacing one-liner and dual-sided because controls (M2.5/M6). No firm FE (SIC/year dummies) under-defended and 2SRI exclusion only implicit — recorded as anti-pattern warnings.
   by_design_type:
     面板数据-OLS:
-      paper_count: 10
+      paper_count: 11
       papers:
       - lee_park_2024_smj (SMJ)
       - bendig_hensellek_schulte_2024_etp (ETP)
@@ -287,6 +303,7 @@ evidence:
       - schumacher_keck_tang_2020_smj (SMJ)
       - kashmiri_nicol_arora_2017_jams (JAMS)
       - desjardine_li_shi_2025_amj (AMJ)
+      - ridge_hill_ingram_kolomeitsev_worrell_2024_amj (AMJ)
       status: VERIFIED
       slots_covered:
       - M1
@@ -573,10 +590,11 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     文本构念测量:
-      paper_count: 2
+      paper_count: 3
       papers:
       - cutolo2024 (JM)
       - kashmiri_nicol_arora_2017_jams (JAMS)
+      - ridge_hill_ingram_kolomeitsev_worrell_2024_amj (AMJ)
       status: EMERGING
       slots_covered:
       - M2
@@ -645,12 +663,13 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     两阶段模型:
-      paper_count: 4
+      paper_count: 5
       papers:
       - darby2023 (MSOM)
       - zhou2017 (ASQ)
       - chung_low_rust_2022_jams (JAMS)
       - moon_tuli_mukherjee_2023_jm (JM)
+      - ridge_hill_ingram_kolomeitsev_worrell_2024_amj (AMJ)
       status: VERIFIED
       slots_covered:
       - M7

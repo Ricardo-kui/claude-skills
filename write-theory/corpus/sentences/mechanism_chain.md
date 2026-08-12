@@ -9,7 +9,7 @@
 | **双轨 / 对立 / 竞争** | 双轨并行机制链（Track A/B）(L99) · 辩证对立双路径机制（habel2016）(L136) · 对称分组双路径调节机制 (L259) · 竞争机制链（路径 A vs B）(L309) · 辩证对立型机制推演（kalaignanam2017）(L336) · 对称反向双轨机制链 (L1256) · 双原因+三方行为者对比型（weng_yang）(L1623) · 双重印记对立通道+持续性差异（qiao2026）(L1530) |
 | **矩阵 / Y形 / 嵌套架构** | 2×2 并行矩阵架构 (L1080) · 2×2 Cell-by-Cell 调节机制矩阵 (L1330) · Y-shaped 架构（Common Trunk→Dual Path→Contingency）(L1381) · 多层收窄型机制链（Macro→Meso→Micro）(L1011) · 三层嵌套理论演进 (L1217) · 双视角对比+框架整合 (L1189) |
 | **特定理论框架型** | 制度真空→政府关联→资源获取（Zhou 2017）(L32) · 双重代理问题导致资源转换低效（Zhou 2017）(L50) · Ability-Motivation 双路径框架（Eilert 2017）(L580) · Iron Triangle 三边机制论证 (L1151) · Trade-off→Shock→Dominance 逻辑链（hoffmann2024）(L764) · "双刃剑"理论框架骨架 (L851) · Dual-Theory Architecture Variant（Mayo POMS）(L526) · 双理论分别解释不同 DV 变体（kalaignanam2017）(L540) · 成本-收益计算机制链（Chung/Low/Rust 2022）(L1688) · 倒U型两步机制链：awareness+capacity→mutual dependence+retaliation (L1753) |
-| **认知 / 社会 / 流畅性** | 社会比较机制（paruchuri_pollock_kumar2020）(L1476) · 认知可用性时效机制（paruchuri_pollock_kumar2020）(L1500) · 认知适配/契合→加工流畅性→正向评价 (L1804) |
+| **认知 / 社会 / 流畅性** | 社会比较机制（paruchuri_pollock_kumar2020）(L1476) · 认知可用性时效机制（paruchuri_pollock_kumar2020）(L1500) · 认知适配/契合→加工流畅性→正向评价 (L1804) · 威胁处理级联（Threat-Processing Cascade，ridge2024）(L2115) |
 | **排除 / 整合 / Pivot** | 替代机制排除骨架 (L636) · 多理论整合骨架 (L688) · Rhetorical-Question 理论 Pivot (L1425) · 联合必要性门控逻辑 (L1450) · Focus Group / 定性证据嵌入机制推演（habel2016）(L210，含 Lee–Wu–Bednar 多角色访谈三角化子变体) |
 
 ---
@@ -2046,3 +2046,111 @@ pursue self-serving actions at [principal]'s expense.
 - 未列清收益就断言“结构 S 有害”。
 - 把收益清单写成五条以上的文献综述。
 - 连续 8+ 词复述范文措辞。
+
+---
+
+<!--
+pattern_id: cross_audience_dual_signal_curvilinear_inference
+build_type: 机制推演型
+source_papers: ["fini_jourdan_perkmann_2017_amj"]
+confidence: emerging
+status: needs_cross_paper_validation
+story_fidelity: section_variant
+-->
+
+## 跨受众评价的双信号曲线推导（Fini et al. 型）
+
+**适用**: [focal audience] 观察到 [external audience] 对候选人的累积认可；该认可既能证明与焦点评价相关的能力，又可能表明候选人偏离焦点受众期待的身份或规范。适用于“外部认可是否有助于核心受众评价”的机制推演型论文，而非任意双机制或一般曲线。
+
+**功能节拍**: 同一线索的正向可读性 → 同一线索的反向可读性 → 两者为何随强度以不同速度变化 → 曲线命题 → 将不同条件分别映射到曲率与顶点位置。
+
+**模板**:
+```
+[External audience approval] gives [focal evaluators] two distinguishable kinds of
+information. First, it is an index of [capability]: as [approval] accumulates,
+[evaluators] infer that [candidate] can [relevant capability], which increases
+[focal valuation]. Second, it is an index of [identity conformance]. Because the
+approval originates in [external audience] rather than [focal audience], repeated
+approval can make [candidate]'s commitment to [focal identity/norm] less credible.
+
+These inferences need not increase at the same rate. At low levels of [approval],
+the capability inference supplies a benefit while the identity implication remains
+within the range of accepted conduct. As [approval] accumulates, the identity
+penalty becomes increasingly salient and can outweigh the informational benefit.
+Thus, [approval] has an inverted-U-shaped association with [focal valuation],
+peaking at an intermediate level.
+
+[Boundary condition A] changes the identity penalty by altering how compatible
+[external] and [focal] identities appear; it therefore predicts [flattening/
+steepening and, if theorized, a turning-point shift]. [Boundary condition B]
+changes how much focal evaluators need the external ability signal; it therefore
+predicts [attenuation/amplification] without being casually relabeled a second
+mechanism.
+```
+
+**原文锚点**:
+> "Such indices generally provide two types of information to evaluators: indices of ability, and indices of identity conformance."
+
+**关键特征**:
+- 不是把两条机制各写一段后机械相加：两条推理必须围绕**同一个可观察评价**和**同一个焦点评价者**展开。
+- 曲线的必要性来自机制主导权的变化；“有正有负机制”本身不足以推出倒 U。
+- 曲率、峰值高度和顶点位置是不同的几何命题。只有理论明确说明何种信息推理改变，才能分别提出相应调节假设。
+
+**边界**:
+- [External audience] 的认可必须至少是 [focal audience] 可理解的能力线索；若能力标准完全不相容，正向段未获理论支持。
+- 外部认可的累积须对焦点评价者可见；不可将不可观察的评价当作社会推断线索。
+- 这是单篇 EMERGING 变体；不得据此改变 `write-theory` 的通用曲线或调节路由。
+
+---
+
+<!--
+pattern_id: threat_processing_cascade
+build_type: 机制推演型
+source_papers: ["Ridge_Hill_Ingram_Kolomeitsev_Worrell_2024_AMJ"]
+confidence: emerging
+status: needs_cross_paper_validation
+story_fidelity: section_variant
+-->
+
+## 威胁处理级联（Threat-Processing Cascade，Ridge et al. 2024 型）
+
+**功能**: 当研究的理论机制是"个体/组织对威胁的**认知处理级联**"（trait 感知偏差 → 行为倾向 → 对外部实体的回避/攻击）时使用。这是 5 拍的认知处理链，把特质（IV）到安全行为（DV 机制）之间的心理过程逐拍展开。与两步机制链（标准）的区别：本链是**多拍认知序列**（扫描→归因→结论→行为），每拍都有独立的理论内容；与 Wang 2024 对称三步链的区别：后者是情绪特质→认知/社会/时间三通道的对称展开，本链是**单线递进的威胁处理序列**。
+
+**模板**:
+```
+[Trait 感知基底] Individuals higher in [trait] are [hyper-vigilant]: they incessantly scan and monitor their environments for perceived threats from, or vulnerabilities to, external entities ([citation]).
+
+[威胁归因双偏差] They disproportionately believe that external entities both (1) target them ([bias 1: self-as-target]) and (2) have malintent toward them ([bias 2: sinister attribution]).
+
+[结论跃迁] As a result, [ambiguous actions] by external entities are interpreted as [threatening/attacking], and the actor [jumps to the conclusion] that [preventive/direct] response is warranted.
+
+[安全行为选择（连续谱一端）] This drives [safety behavior]: [trait] is strongly associated with [default manifestation], which [aims to reduce the strength or intensity of contact with a core threat].
+
+[收敛假设] Thus, [trait] → [default manifestation] → [DV]: H[N]: [trait] is [negatively/positively] related to [DV].
+```
+
+**原文锚点** (Ridge, Hill, Ingram, Kolomeitsev & Worrell 2024, AMJ):
+> "hyper-vigilance, with individuals higher in paranoia tending to incessantly scan and monitor their environments for perceived threats from, or vulnerabilities to, external entities"
+>
+> "disproportionately believe that external entities both target them (known as self-as-target bias) and have malintent (known as sinister attribution bias)"
+>
+> "paranoia tends to be associated strongly with safety behaviors ... individuals higher in paranoia primarily tend toward the safety behavior of avoidance, which aims to reduce the strength or intensity of contact with a core threat"
+
+**语料锚定**:
+- Ridge, Hill, Ingram, Kolomeitsev & Worrell (2024, *AMJ*) — CEO paranoia → avoidance default via hyper-vigilance scanning + self-as-target/sinister-attribution biases → safety behavior continuum. (2026-08-12 Theory distill)
+
+**关键特征**:
+- **多拍认知序列（扫描→归因→跃迁→行为）**: 每拍是独立理论内容，不是同义改写；扫描（监控环境）、归因（两个偏差）、结论跃迁（把模糊动作读为威胁）、行为选择（连续谱一端）
+- **双偏差并置**: self-as-target bias（"target me"）+ sinister attribution bias（"they have ill will"）是两个可区分的认知组件，常在同一句内并置以增强机制的厚度
+- **行为落点 = 连续谱一端**: 认知链的终点是一个"安全行为"，且该行为是行为连续谱的一端——这为后续 moderation（cue 切到另一端）埋下伏笔
+- **安全行为连续谱作为扩展钩子**: 若后续有 cue 切换（E11），本链的"安全行为"概念直接支撑"同谱另一端"的切换逻辑
+
+**适用**: 机制推演型（B0 过程解释，非正式中介）；trait/个体差异 IV 需要通过认知处理链解释行为/DV 时；当"hyper-vigilance + 归因偏差"是该理论传统的核心组件（如 paranoia、hostile attribution、threat sensitivity）时。
+
+**边界**: 若认知链只是把 trait 定义换个说法（无独立理论内容的拍），应压缩为两步链；若存在可检验的中间构念且设计能检验间接效应，路由到 B1 中介而非本链。
+
+**反模式**:
+- 拍与拍之间无独立理论内容（扫描=归因=行为 同义改写）→ 退化为 padding。
+- 用谚语/folk wisdom 解释某拍（"they see threats everywhere" 无文献支撑）→ 违反 honesty boundary。
+- 认知链只论证 high-trait 端、low-trait 端完全缺失 → 若 DV 有主效应需双侧铺垫（除非后续用 cue/activation carve-out 以主效应基线覆盖 low 态）。
+- 把本链写成正式中介模型（声称 X→scan→attribute→behavior→Y 是 mediation）除非确实检验间接效应。

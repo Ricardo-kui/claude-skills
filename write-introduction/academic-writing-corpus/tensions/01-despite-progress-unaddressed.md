@@ -32,7 +32,8 @@ source_papers:
   - ilicic_brennan2026 (JM, 2026): "outcome-valence asymmetry: beneficial political-consumption outcomes studied, harmful/addictive outcomes underexamined"
   - castellaneta_conti_kacperczyk2017 (SMJ, 2017): "Disclosure-requiring IPR progress may not transfer to non-disclosure forms; firm-value link missing"
   - kim_lee2026 (SMJ, 2026): "Temp/hypothetical SRO-recruitment evidence incomplete for full-time high-stakes + post-hiring durability"
-updated: 2026-08-05
+  - ridge_hill_ingram_kolomeitsev_worrell2024 (AMJ, 2024): "Trait-valence asymmetry carve-out — UE studied self-aggrandizing traits, less attention to self-deflecting traits (paranoia)"
+updated: 2026-08-12
 created: 2026-05-18
 source: Extracted from MVP30 narrative_analysis files + mannor2016 + darby2025 distill + grewal2025 + paruchuri_andrus_sullivan2026 + castellaneta_conti_kacperczyk2017 + kim_lee2026
 ---
@@ -101,6 +102,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 | AD | 低 stakes 证据库 → 理论关键高 stakes 情境 + 阶段延伸缺口（Ki |  | Incompleteness × Boundary；既有证据主要来自临时/实验/假设情境，而 | EMERGING（单篇来源；仅作 | Kim & Lee (2026, SMJ), P2 |
 | AE | as-clause 前提 + 惊讶单句 overlooked 型（desjardin | 惊讶修辞 | 信息中介/中间人/传导机制类研究；前提（中介塑造结果）是领域共识但"中介作为主动武器"未被检 | EMERGING（单篇来源；仅作 | DesJardine, Li & Shi (2025, *A |
 | AF | 外生条件清单→可操作杠杆缺口型（cutolo2024 型） |  | 已有条件/调节研究但条件全部外生（受众结构、制度流动、地位等）；缺口定位为"行动者可操控杠杆" | EMERGING（单篇来源；仅作 | Cutolo & Ferriani (2024, *Journal of Management*), P5 |
+| AG | 特质效价不对称缺口（ridge2024 型） |  | 宿主文献聚焦自我膨胀向特质、忽视自我规避向特质（前因/特质极性不对称；区别于 AB 的 outcome-valence） | EMERGING（单篇来源；仅作 | Ridge, Hill, Ingram, Kolomeitsev & Worrell (2024, AMJ), P3 |
 
 ## 句法模板
 
@@ -877,6 +879,32 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 **适用**: 已有条件/调节研究但条件全部外生（受众结构、制度流动、地位等）的研究；需要把 gap 定位为"行动者可操控杠杆"（叙事、策略、构念操作化）的论文；与 `01-progressive-coherence` 变体 P（共识-让步-目标收窄）配对。
 **禁忌**: ① 条件清单必须真实且确实外生——若有可控条件已被研究，本变体不成立；② 杠杆必须可操作化（本文=文本特征可测量）；③ 不要与变体 Z（监督驱动地下化）混淆——Z 是"关注制造盲区"，本变体是"条件研究的功能局限"。
+
+---
+
+### 变体 AG：特质效价不对称型（ridge2024 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**功能节拍**: 让步承认框架理论已提供特质→结果逻辑 → 指出宿主文献只研究了特质谱系的一半（自我膨胀向）→ 指出被忽略的一半（自我规避向）→ 两理由 stakes 收束
+
+**模板**:
+> "Further, although [framework theory] offers logic for how [actors'] traits affect [outcome] (e.g., [citations]), extant [framework] studies have primarily considered [actors] to have high levels of [positive/self-aggrandizing traits] ([citations]), while less attention has been given to more self-deflecting traits such as [focal construct] ([citation]). Thus, understanding how [focal construct] impacts [outcome] is particularly important for at least two reasons."
+
+**来源**: ridge_hill_ingram_kolomeitsev_worrell2024 (AMJ), P3
+
+**原文锚定**:
+> "extant upper echelons studies have primarily considered CEOs to have high levels of self-belief, confidence, and attention-seeking tendencies, while less attention has been given to more self-deflecting traits such as paranoia."
+
+**关键特征**:
+- **前因/特质极性不对称（签名动作）**: 沿 trait VALENCE（自我膨胀向 self-aggrandizing vs 自我规避向 self-deflecting）在单一宿主传统内部切开缺口——不对称落在 ANTECEDENT/特质极性上
+- **与变体 AB 的判别**: AB（ilicic_brennan2026）的不对称在 OUTCOME 效价（有益结果成熟、有害结果不足）；本变体的不对称在 **trait/前因极性**（研究了自利膨胀特质、忽视了自我规避特质）——检索时必须区分两种不对称的"效价位置"
+- **"Further, although [framework] offers logic..." 让步句**: 保住宿主理论完整性的同时暴露其选择性注意——保持 Incompleteness 边界，不升级为 Inadequacy（不要说文献"错了"，只说"注意力偏了"）
+- **直接喂养两理由 stakes**: "Thus, understanding how [construct] impacts [outcome] is particularly important for at least two reasons" 把切开的缺口无缝转交给 Stakes——本变体常与 `06-two-reason-enumerated` 变体 C 配对
+
+**适用**: upper echelons / behavioral strategy 研究引入负性效价或自我规避型倾向到聚焦正向特质的文献；Incompleteness × Mechanism/Constructs
+
+**禁忌**: 不要让效价批评滑向完整的 Inadequacy 攻击（不得声称先前特质文献"错了"）；被忽略的特质必须真正缺席（不能只是被少引）——若已有实质研究，改写为 boundary/mechanism gap
 
 ---
 

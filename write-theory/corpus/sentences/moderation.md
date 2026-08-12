@@ -526,3 +526,39 @@ H[N]: The [+/-] relationship between [S] and [Y] is attenuated as [W] increases.
 - 写成“外部监督完全替代董事会/insider”。
 - 只论证 high-W，完全不交代 low-W 或对照逻辑。
 - 调节与 trunk 的 lost benefits 脱钩（变成任意治理控制变量）。
+
+---
+
+<!--
+pattern_id: mitigation_via_manifestation_switch
+build_type: 调节效应型
+source_papers: ["Ridge_Hill_Ingram_Kolomeitsev_Worrell_2024_AMJ"]
+confidence: emerging
+status: needs_cross_paper_validation
+story_fidelity: section_variant
+-->
+
+## Mitigation via Manifestation-Switch（机制切换型缓解交互）
+
+**功能**: 当 moderator 是**特质相关 cue**，且该 cue 不是削弱 X→Y 的基线机制，而是**激活同一特质的对立行为表现型**（manifestation-switch），从而把负向关系缓解/覆盖时使用。这是 E11 的配套假设句式。与 Buffering 的本质区别：Buffering 弱化同一机制的**成本/风险基础**（"Z reduces the cost/risk underlying X→Y"）；本句式是"cue 切换机制"，把主效应的行为从连续谱一端换到另一端（如 avoidance→aggression），因此是 **mitigated + prompts more [opposing manifestation] action**，而非简单的 weaker。
+
+**假设模板**:
+```
+H[N]: There will be a [positive/negative] interaction effect of [IV] and [cue] on [DV], such that the [negative/positive] relationship between [IV] and [DV] is mitigated as [cue] increases and prompts more [opposing manifestation] action.
+```
+
+**为什么有效**: "mitigated as [cue] increases" 保留了对负向基线的承认（审稿人看到你不否认主效应），"prompts more [opposing manifestation] action" 点名了机制（不是强度减弱，是行为切换）。这让交互的方向（positive interaction）与理论引擎（manifestation-switch）在假设句内同时可见。
+
+**与近邻句式判别**:
+- vs **Buffering（Eilert 2017）**: buffering 的机制是"Z 削弱成本/风险/约束 → X→Y 变弱"（same mechanism, dampened）；本句式是"cue 激活对立表现型 → 行为切换 → 可覆盖基线"（different manifestation, switched）。若理论讲的是"cue 降低了对回避的依赖"而非"cue 激活了攻击"，仍用 buffering。
+- vs **External Partial-Substitute Attenuation（Zorn 2017）**: 后者是外部 W **部分替代已丧失的内部收益**（衰减同向关系族）；本句式是**同一特质的行为表现型切换**，无"替代失去的收益"逻辑。
+- vs **Antagonistic / Competing**: 后两者是 X 与 Z 各自有主效应且交互方向相反/竞争响应裁决；本句式 Z（cue）**无独立主效应**，只在 trait 高者身上触发切换。
+- vs **异号增强/阻碍（Castellaneta E8）**: 后者是双刃剑净效应不定、可无主效应；本句式**必须有主效应基线**（默认表现型），且两表现型同属一个行为连续谱。
+
+**语料锚定**:
+- Ridge, Hill, Ingram, Kolomeitsev & Worrell (2024, *AMJ*) — "the negative relationship between CEO paranoia and lobbying breadth argued in Hypothesis 1 will be mitigated as regulatory ruling severity increases and prompts more aggressive lobbying action."（2026-08-12 Theory distill）
+
+**反模式**:
+- 把 manifestation-switch 硬写成 buffering（"weakens the negative relationship"）→ 丢失机制切换引擎，审稿人会问"为什么是 positive interaction？"。
+- 只写 "mitigated" 而不写 "prompts more [opposing manifestation]" → 交互的方向与机制脱钩，假设形式模糊。
+- cue 无独立理论角色（只是任意情境强度）→ 交互退化为相关性借口。

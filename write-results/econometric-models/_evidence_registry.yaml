@@ -5,10 +5,10 @@
 meta:
   schema_version: 1.1.0
   registry_type: estimator-slot-skeleton
-  last_updated: '2026-08-09'
-  last_batch_id: batch_30_desjardine_li_shi_2025_amj
-  batches_processed: 30
-  total_papers_indexed: 31
+  last_updated: '2026-08-12'
+  last_batch_id: batch_31_ridge_et_al_2024_amj
+  batches_processed: 31
+  total_papers_indexed: 32
   usage_stats_schema:
     origin: "Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑"
     granularity: "per estimator（对应 econometric-models/[结果类型].md 文件）"
@@ -427,6 +427,24 @@ estimators:
           - benchmark
           - contextualization
           corpus_path: econometric-models/OLS-FE.md
+        - id: r5_ols_external_evidence_practical_importance
+          skeleton: A [one-SD] increase in [predictor] corresponds to a [value]% [increase/decrease] in [outcome]. Evidence
+            suggests that even small changes in [outcome] can net significant benefits such as [external evidence]. Thus, the
+            [value]% change we observe is likely to be particularly important in practice.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Ridge_et_al_2024_AMJ
+          transferability: high
+          paradigm_exclusivity: OLS/FE 幅度拍5 扩展——外部文献锚定实际重要性
+          rhythm_tags:
+          - magnitude
+          - external_evidence
+          - practical_importance
+          notes: 先给幅度再追加拍5 实际重要性辩护；外部证据须已发表且场景对应
+          corpus_path: econometric-models/OLS-FE.md
       R6:
         description: 非显著 / 混合 / 意外发现
         skeleton_variants: []
@@ -530,6 +548,28 @@ estimators:
           - analyst_degrees_of_freedom
           - visual_robustness
           - sign_stability
+          corpus_path: econometric-models/OLS-FE.md
+        - id: r7_ols_front_loaded_rir_naive_cure
+          skeleton: A concern in testing how [characteristic] affects [outcome] is endogeneity, especially from nonrandom
+            [selection]. First, we use robustness of inference to replacement (RIR): to alter our inferences for [outcome 1],
+            [N] observations would have to be replaced with observations for which there is an effect of zero, and for [outcome
+            2], [N] observations. Next, we pair 'naive' analyses that do not use tools to 'cure' endogeneity with analyses
+            that attempt such a cure [e.g., two-stage residual inclusion], finding estimates are consistent across approaches.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Ridge_et_al_2024_AMJ
+          transferability: high
+          paradigm_exclusivity: OLS/FE 前端识别防御——RIR 替换计数 + naive-vs-cure 2SRI 配对
+          rhythm_tags:
+          - endogeneity
+          - rir_replacement_count
+          - naive_vs_cure
+          - two_stage_residual_inclusion
+          - front_loaded
+          notes: 区别于变体15（RIR+Oster+CEM 三件套五威胁）——RIR 量化替换计数 + naive-vs-cure 双轨 + 前置到主结果之前
           corpus_path: econometric-models/OLS-FE.md
       R8:
         description: 补充 / 事后 / 机制分析
@@ -2347,6 +2387,69 @@ estimators:
           - penalty_reduction
           notes: 负二项交互项不能解释为 count difference，必须用 predicted counts
           corpus_path: econometric-models/计数模型.md
+      R6:
+        description: 非显著 / 混合 / 意外发现
+        skeleton_variants:
+        - id: r6_count_significant_small_effect_downgrade
+          skeleton: The interaction is [positive/negative] and statistically significant ([coefficient]; p = [value]); this
+            hypothesis receives some support. However, the practical result is quite small and should be considered with caution.
+            To be clear, the statistically significant effect we find does not appear to be particularly meaningful in practice.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Ridge_et_al_2024_AMJ
+          transferability: high
+          paradigm_exclusivity: 跨估计器；显著但实际效应小必须显式降调
+          rhythm_tags:
+          - significant_but_small
+          - honesty_downgrade
+          - to_be_clear
+          notes: 对抗显著性崇拜——显著性与实际意义分离；'receives some support' 保留但显式声明实际意义有限
+          corpus_path: econometric-models/计数模型.md
+        - id: r6_count_null_sign_reversal_alternative
+          skeleton: Hypothesis [x] predicted a [negative] relationship between [predictor] and [outcome]. The findings in Model
+            [y] of Table [z] do not offer support for the hypothesis ([coefficient]; p = [value]). In fact, while not significantly
+            different from 0, the coefficient is [positive], suggesting that the effect may manifest in a different manner than
+            the expected [mechanism].
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Ridge_et_al_2024_AMJ
+          transferability: high
+          paradigm_exclusivity: 跨估计器；null 主效应符号反转读作替代机制
+          rhythm_tags:
+          - null
+          - sign_reversal
+          - alternative_mechanism
+          - deferred_to_discussion
+          notes: null 不跳过；符号反转只作推测框架（'suggesting that... may manifest in a different manner'）不声称支持
+          corpus_path: econometric-models/计数模型.md
+      R9:
+        description: Results 证据收束
+        skeleton_variants:
+        - id: r9_count_mixed_results_synthesis
+          skeleton: Broadly, the results for [theory relating IV to DV2] are either not supportive or exhibit a pattern that
+            is not particularly meaningful in practice. When considered in concert with the results supporting [H1/H3], the
+            findings suggest that the effects of [IV] differ for different stakeholders. We revisit these possibilities in
+            greater detail in the Discussion section.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Ridge_et_al_2024_AMJ
+          transferability: high
+          paradigm_exclusivity: 跨估计器；混合结果综合为受众/利益相关者分化论点
+          rhythm_tags:
+          - mixed_results_synthesis
+          - stakeholder_differentiation
+          - discussion_handoff
+          notes: 把 null/small 结果与支持结果并置综合进 headline answer；显式 Discussion 交接
+          corpus_path: econometric-models/计数模型.md
       R7:
         skeleton_variants:
         - id: r7_theory_derived_posthoc
@@ -3690,6 +3793,71 @@ estimators:
       note: New sentence-level template for attenuation-within-range robustness. Recommend inclusion.
     anti_patterns: []
     honesty_boundaries: []
+  Tobit:
+    display_name: Tobit (corner-solution / 左删失连续)
+    usage_stats:
+      revise: 0
+      reject: 0
+      last_critique: null
+      common_revise_reasons: []
+    forced_slots:
+    - R1
+    - R2
+    - R3
+    - R5
+    - R7
+    high_risk_missing:
+      R1: 缺删失比例 / censoring 结构报告
+      R3: 缺条件幅度（among units that engage in at least some activity）
+      R5: 缺实际重要性锚定
+    slots:
+      R3:
+        skeleton_variants:
+        - id: r3_tobit_conditional_magnitude_four_beat
+          skeleton: Hypothesis [x] predicted a [negative/positive] relationship between [predictor] and [outcome]. The coefficient
+            in Model [y] of Table [z] is [negative/positive] and statistically significant ([coefficient], p = [value]), supporting
+            Hypothesis [x]. As [predictor] increases from the mean to one standard deviation above the mean, [outcome] decreases
+            by approximately [value]% among [units] that engage in at least some [activity]. Evidence suggests that even small
+            changes in [outcome] can net significant benefits such as [external evidence], so the [value]% change is likely
+            to be particularly important in practice.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Ridge_et_al_2024_AMJ
+          transferability: high
+          paradigm_exclusivity: Tobit/corner-solution 专用；拍3 限定参与子样本条件期望
+          rhythm_tags:
+          - tobit
+          - conditional_magnitude
+          - censored
+          - practical_importance
+          notes: 左删失 DV 拍3 必须限定 'among units that engage in at least some activity'（删失条件期望）；拍5 用外部文献锚定实际重要性
+          corpus_path: econometric-models/Tobit.md
+      R5:
+        skeleton_variants: []
+      R7:
+        skeleton_variants: []
+    cross_slot_patterns: []
+    anti_patterns:
+    - id: ap_tobit_uncensored_unconditional_magnitude
+      pattern: Tobit 幅度用全体样本无条件解释，而非限定参与者
+      severity: high
+      affected_slots:
+      - R3
+      note: 拍3 幅度必须限定参与子样本（conditional expectation）
+      source_count: 0
+    honesty_boundaries:
+    - id: hb_tobit_censoring_transparency
+      boundary: Tobit 必须报告删失比例与 censoring 机制（未参与=0 的论证）
+      required: R1/R2 报告左删失观测比例；删失假设在 Methods 论证
+      affected_slots:
+      - R1
+      - R2
+      - R3
+      note: 不报删失结构 → 审稿人无法判断删失假设是否成立
+      violation_count: 0
   实验:
     display_name: 实验 (Experiment / ANOVA / Lab/Field)
     usage_stats:
@@ -4608,3 +4776,11 @@ batch_history:
   slot_updates_count: 5
   novel_patterns_count: 4
   notes: "DiD +4 (net-effect opener; 1SD interaction four-beat; ID threat battery; null placebo); 匹配DiD first fill CEM-as-robustness; core_candidate only reported; no SKILL routing change"
+- batch_id: batch_31_ridge_et_al_2024_amj
+  timestamp: '2026-08-12'
+  estimator_family: Tobit / 计数模型 (Negative Binomial)
+  source_paper: Ridge_et_al_2024_AMJ
+  source_subfield: strategy / governance
+  slot_updates_count: 5
+  novel_patterns_count: 5
+  notes: "New result type Tobit (corner-solution) — registry gap fill; 计数模型 R6 +2 (significant-but-small downgrade; null sign-reversal alternative read); R9 +1 (mixed-results synthesis + Discussion handoff); OLS-FE R7 +1 (front-loaded RIR + naive-vs-cure 2SRI); R5 +1 (external-evidence practical-importance beat). All EMERGING/single-paper; no SKILL routing change."

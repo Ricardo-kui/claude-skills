@@ -1,6 +1,6 @@
 meta:
   schema_version: 1
-  last_updated: '2026-08-05'
+  last_updated: '2026-08-12'
   observations_processed: 9
   description: Evidence ledger for design defects inferred from Introduction exemplar distillation.
 defects:

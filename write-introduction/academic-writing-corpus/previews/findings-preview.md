@@ -3,7 +3,7 @@ type: canonical_reference
 canonical_id: "findings-preview"
 status: ✓ STANDARD
 gap_type: all
-cross_paper: VERIFIED
+cross_paper: ROBUST
 generativity: ADAPTABLE
 exclusivity: LOW
 source_papers:
@@ -15,8 +15,9 @@ source_papers:
   - vadakkepatt2022 (JM, 2022): Compact four-part preview (main effect + mediation + moderation + mechanism)
   - castellaneta_conti_kacperczyk2017 (SMJ, 2017): Contingent sign-flipping findings + double-edged sword closing
   - kim_lee2026 (SMJ, 2026): Pipeline advantages + revealed-preference WTP band + stage-attenuation null + early-stage subgroup
+  - ridge_hill_ingram_kolomeitsev_worrell2024 (AMJ, 2024): Parallel-target asymmetric findings preview — support for one theorized target + explicit null for the other (variant R)
 created: 2026-05-18
-updated: 2026-08-05
+updated: 2026-08-12
 source: Extracted from MVP30 narrative_analysis files + kim_lee2026
 ---
 
@@ -263,6 +264,32 @@ P5-P6 的下半段功能：向读者预告实证结果。这是 Introduction 中
 **适用**: 研究发现可映射到领域既有语汇（竞争动态 target/attacker、生态 niche 等）；Preview 需要给读者快速概念锚的研究；概念贡献（introducing a new concept）型论文。
 
 **禁忌**: 术语映射必须与领域文献一致（不能自造术语冒充既有语汇）；"become rivals" 类身份转变须在 Theory 假设中兑现；Parlance 句只用于真正可映射的场景，不可为装饰硬套。
+
+---
+
+### 变体 R：平行靶标非对称发现型（ridge2024 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**功能节拍**: scope 收窄（两个平行靶标）→ 构念视角的恰切性 → 测度开发预告 → 主发现 + 显式 null（两靶标之一）→ 中介性证据堆叠 → 激活逻辑收束
+
+**模板**:
+> "While we expect a variety of [targets] to be affected by [focal construct], as an initial exposition of our logic we focus on [target 1] and [target 2]. Viewing [targets] through [construct] is particularly germane given [construct-specific perception]. To test our theorizing, we develop and validate a [measure type] measure of [focal construct] following both theory and evidence in [source discipline], as well as methodological best practices and recent exemplars. Using our validated measure, we capture [construct] from [data source]. In a longitudinal sample from [population], we find support for our theoretical logic that [construct] relates to [behavior toward target 1] (but do not find a systematic relationship with [behavior toward target 2]). As further tests of our premise, we likewise find evidence that [actor] higher in [construct] [intermediary outcome]. We also find broad support for our [activation] logic that when cues indicate that [baseline] is not offering safety, [actors] higher in [construct] shift away from [baseline] to directly engage [targets]."
+
+**来源**: ridge_hill_ingram_kolomeitsev_worrell2024 (AMJ), P8
+
+**原文锚定**:
+> "we find support for our theoretical logic that CEO paranoia relates to avoidance of government (but do not find a systematic relationship with avoidance of competitors)."
+
+**关键特征**:
+- **平行靶标非对称 null 内嵌于发现契约**: 对两个平行理论化的靶标之一宣布支持、另一个宣布显式 null——诚实性直接写进 preview 契约，提前消解"cherry-picking"质疑
+- **与变体 P（Kim–Lee 阶段衰减 null）的判别**: P 的 null 是时间衰减（录用后无优势）；本变体的 null 是**平行靶标间的截面不对称**——边界问题（为什么竞争对手不同）留给 Discussion
+- **中介性结果作为"进一步检验前提"堆叠**: TMT risk perceptions 等次级证据叠在主 DV 发现之后，形成证据阶梯——次级发现不冲淡头条
+- **测度开发本身也是预告的贡献**: content-analytic measure 在发现之前预告，提前标记 Constructs 贡献维度（measure-as-contribution）
+
+**适用**: multi-stakeholder / multi-context 研究中理论预测平行效应；论文有新测度且测度本身就是贡献
+
+**禁忌**: null 必须真正为 null（不能是失败的操作化）；不报系数/p 值；null 只保留一个从句，让头条发现保持干净
 
 ---
 
