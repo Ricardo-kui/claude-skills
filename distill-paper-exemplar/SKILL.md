@@ -87,6 +87,8 @@ L4 反馈收敛        核对 design_feedback 已持久化；报告三路输出�
 - `--pdm` 指定 PDM 文件位置；缺省 = `<论文 MD 同目录>/<citekey>.pdm.yaml`。
 - `--dry-run`：只产出 PDM 骨架 + 分发清单，不实际分发（用于预览计划）。
 - 单节请求应路由回对应 `distill-*-exemplar`，不进入本 skill。
+- 用户侧标准提示词模板（WHAT 槽位 + 纪律清单，反模式）见 `references/launch-prompt-template.md`；
+  提示词只填 动作/来源/焦点/约束，HOW 全部由本协议继承，不在提示词里重述流程。
 
 ## 完成判据
 
