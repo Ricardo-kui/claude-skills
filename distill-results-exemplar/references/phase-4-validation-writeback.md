@@ -97,3 +97,14 @@ critique_updates:
 
 - 脚本累加 `revise/reject`、更新 `last_critique`、去重追加 `common_revise_reasons`（最多 8 条），输出信号（quiet/critique_heavy）供下一轮 Phase 0.75 选材。
 - 不登记满意信号、不设淘汰逻辑——语义见 registry `meta.usage_stats_schema`。
+
+## Phase 4 收尾 — 回写后语料体检
+
+回写完成后运行 skills 根目录的体检脚本：
+
+```bash
+PYTHONIOENCODING=utf-8 python ~/.claude/skills/corpus_health_check.py --type results
+```
+
+- exit 0 = 正常；exit 1 = 存在 critique_heavy 类型——在输出中列出这些类型，作为下一轮蒸馏 REPLACE/EXTEND 的优先级依据。
+- 脚本缺失或运行失败不阻断回写，但必须在输出中声明"体检未执行"，不得静默跳过。
