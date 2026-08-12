@@ -671,7 +671,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     02-implicit-assumption-wrong:
-      paper_count: 14
+      paper_count: 15
       papers:
       - ceo_regulatory_focus_ijrm (IJRM)
       - employee_free_speech (OS)
@@ -687,8 +687,9 @@ evidence:
       - singh2023 (JMR)
       - zhao_ding2022 (OS)
       - reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science)
+      - fini_jourdan_perkmann_2017 (AMJ)
       gap_distribution:
-        Incompleteness: 0
+        Incompleteness: 1
         Inadequacy: 14
         Incommensurability: 0
       status: ROBUST
