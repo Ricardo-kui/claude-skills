@@ -21,7 +21,8 @@ source_papers:
   - "kashmiri_nicol_arora_2017_jams (Journal of the Academy of Marketing Science): marginal focal result followed by significance-driven control deletion, retained as an anti-pattern rather than a reporting template"
   - "desjardine_li_shi_2025_amj (Academy of Management Journal): min/mean/max marginal-effect table with slope-direction language, collinearity-absorption explanation for full-model interaction attenuation, ITCV omitted-variable threshold defense, dual-benchmarking deviation test, acquisition quasi-natural experiment as influence-channel switch, Bushee investor-type decomposition with Wald test, sequential moderator introduction→paired→full-model navigation"
   - "ridge_et_al_2024_amj (Academy of Management Journal): front-loaded endogeneity defense (RIR replacement count + naive-vs-cure 2SRI pairing), external-evidence practical-importance beat (R5)"
-variants_count: 55
+  - "chenganesanliu2009 (Journal of Marketing, 2009): binary strategy as complete mediator of firm characteristics on AR — legacy Kenny joint-read + market-signal coda (R8)"
+variants_count: 56
 created: 2026-05-18
 updated: 2026-08-12
 ---
@@ -50,7 +51,7 @@ updated: 2026-08-12
 | R5 | 经济显著性 | 4 | 3, 10, 13, 55 |
 | R6 | 非显著/反转/Null | 5 | 4, 6, 30, 37, 42 |
 | R7 | 稳健性与威胁处理 | 15 | 1, 2, 7, 12, 15, 25, 26, 29, 31, 39, 46, 49, 50, 51, 54 |
-| R8 | 补充/事后/机制 | 6 | 5, 21, 33, 38, 44, 52 |
+| R8 | 补充/事后/机制 | 7 | 5, 21, 33, 38, 44, 52, 56 |
 | R9 | 证据收束（可选） | 0 独立 | 27（R3+R9）；多研究变体4/5 亦用 |
 
 ### R1 描述统计与诊断（1）
@@ -137,7 +138,7 @@ updated: 2026-08-12
 | 51 | 收购准自然实验 | 影响通道开关（私有→公开所有权切换）+ 收购前不显著 | vs 变体29 选择偏误防御（无通道切换）；vs 变体26 内生性表 | 待交叉 | DesJardine 2025 AMJ |
 | 54 | 前端识别防御（RIR 替换计数 + naive-vs-cure 2SRI 配对） | 内生性作为组织威胁且需前置到主结果之前：威胁定位→RIR 替换计数→naive vs 2SRI cure 配对→"consistent across approaches" | vs 变体15 五威胁标签化序列（RIR+Oster+CEM 三件套）——本变体是 RIR 量化替换 + naive-vs-cure 双轨节奏 + 前置；vs 变体2 基础四威胁 | 待交叉 | Ridge et al. 2024 AMJ |
 
-### R8 补充/事后/机制（6）
+### R8 补充/事后/机制（7）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -147,6 +148,7 @@ updated: 2026-08-12
 | 38 | post-hoc spline 重解释 | 意外负效应用 spline+递减理论重解释（明标 post-hoc） | vs 变体42 延迟到 Discussion；vs 变体6 当场解释 | 待交叉 | Pollock 2015 ASQ |
 | 44 | 构念效度威胁三角验证 | 按 rival interpretation 组织三类效度威胁（nomological+跨情境+时序） | vs 变体31 替代解释；vs 变体15 稳健性电池 | 通过（单篇） | Schumacher 2020 SMJ |
 | 52 | 机制异质性分解（Bushee 类型） | 既有分类把动机/能力操作化为亚型+系数对比+Wald 检验 | vs 变体44 效度三角（多指标收敛）；vs 变体31 替代解释 | 待交叉 | DesJardine 2025 AMJ |
+| 56 | 二元策略完全中介 + 市场信号（legacy Kenny） | firm chars→策略选择 probit + 策略→AR 显著 + firm→AR 直接路径消失 → complete mediation + 信号收束 | vs 变体41 Sobel/乘积；vs 变体5 MCMC；**必须标 legacy**（决策对4） | 待交叉 | Chen, Ganesan & Liu 2009 (JM); source=chenganesanliu2009 |
 
 ## 易混决策对（跨槽位附录——槽位分不开时查这里）
 
@@ -155,7 +157,7 @@ updated: 2026-08-12
 | 1 | 8 / 27 / 45 | R3 / R3+R9 / R4 | 都处理"主效应在子群/阶段层面的命运"。**单期**（主效应 null+调节显著）→ 8；**管道无亚组分解** → 27；**管道有亚组吸收+熄灭** → 45 |
 | 2 | 17 vs 18 | R3 vs R4 | 同一论文姊妹变体：17 倒 U **主效应**（Lind-Mehlum 三步），18 倒 U **被调节**（二阶交互符号+flatten/steepen）。顺序：先 17 后 18 |
 | 3 | 22 vs 34 | R2 vs R3 | 都是回归前描述性证据开场：22 **连续变量**（四分位单调性），34 **分类变量**（2×2 类型学对角比较） |
-| 4 | 41 vs 5 | R3 vs R8 | 都是中介检验：41 **同时方程系统**三条件中介（Sobel+非对称支持+失败根因定位），5 **MCMC 显式中介**（贝叶斯路径，一般面板） |
+| 4 | 41 vs 5 vs 56 | R3 vs R8 | 都是中介检验：41 **同时方程系统**三条件中介（Sobel+非对称支持+失败根因定位），5 **MCMC 显式中介**（贝叶斯路径，一般面板），56 **二元策略 legacy Kenny 完全中介 + 市场信号**（须标 legacy / 补间接效应区间） |
 | 5 | 3 / 10 / 13 / 23 / 35 | R5 / R5 / R5 / R3 / R3 | 经济显著性翻译五件套：3 四分位罚金**表**（主效应表格化）、10 ΔR²+**条件边际**（调节的条件分解）、13 **交互联合**百分比（IV×M 同变）、23 P25→P75 **行文**翻译（主效应）、35 ρ 持久性（动态面板专用）。按效应类型选：主效应→3/23；调节条件→10；交互联合→13；动态面板→35 |
 | 6 | 36 vs 43 | R3/R6 vs R4/R6 | 都是分样本系数比较：36 **跨多阈值** χ²(1) 相等性+partial support 判定（发展性假设），43 **单一边界**两侧组间差异裁决（组内切换不显著时用 Chow 类检验） |
 | 7 | 24 / 28 vs 29 | R2 / R2 vs R7 | Heckman 家族三件套：24 两阶段**表导航**、28 二元内生+选择**双修正导航**（CF+Heckman）、29 选择偏误**三步防御论证**（描述性→CEM→Heckman 递进）。要导航选 24/28，要论证选 29 |
@@ -851,6 +853,24 @@ updated: 2026-08-12
 
 ---
 
+### 变体 56: R8 — 二元策略完全中介 firm characteristics + 市场信号收束（legacy Kenny）(1篇高价值)
+
+**来源论文**: Chen, Ganesan & Liu 2009 (Journal of Marketing)
+**source**: chenganesanliu2009
+**skeleton_id**: `r8_ols_strategy_complete_mediation_kenny_signal`
+**原始句锚点**: Based on the steps that Kenny, Kashy, and Bolger (1998) outline, these effects indicate that product-recall strategies completely mediate the influences of firm characteristics on abnormal returns.
+**验证状态**: 待第二篇交叉验证（EMERGING / 单篇 section_variant；**LEGACY**）
+**写入日期**: 2026-08-12
+**槽位**: R8
+**骨架**:
+> A question, then, is whether these [firm_characteristics] influence firms' choice of [strategy]. If we obtain significant effects of [firm_characteristics] on strategy choice, it would indicate that [strategy], as a signal to the stock market, mediate the effects of [firm_characteristics] on [AR] ([Kenny citation]). We estimate a probit on Pr([strategy]). [Key_firm_char] is significantly [negative/positive], suggesting that [theory_buffer_claim]. More important, [AR_table] and [probit_table] jointly show the mediation effects: (1) the direct impact of [strategy] on [AR] is significant, and (2) [firm_characteristics] that influence strategy choice, especially [key_firm_char], do not affect [AR] when [strategy] is included. Based on the steps that [Kenny et al.] outline, these effects indicate that [strategy] completely mediate the influences of [firm_characteristics] on [AR]. Therefore, the stock market consolidates the impact of various firm and product characteristics and reacts mainly to a firm's [strategy] as a signal to evaluate the potential consequence of the crisis.
+**与原骨架差异**: 区别于变体 41（同时方程三条件 + Sobel 乘积检验）与变体 5（MCMC 显式间接效应 CI）——本变体是**二元策略中介** firm characteristics 对 AR 的 **legacy Kenny 条件计数**展演：问句 → probit 选择方程 → 联合读表（策略→AR 显著 + firm→策略显著 + firm→AR 直接路径消失）→ complete mediation → 市场以策略为危机后果信号。定位为 supplemental/mechanism（R8），非主假设四拍。
+**诚实边界（强制 · LEGACY）**: 不得将 Baron–Kenny 条件计数升级为现代间接效应证据；写入时必须要求补充 indirect-effect interval（bootstrap/PROCESS/Sobel）**或**显式标注 legacy complete-mediation claim。Kashmiri 诚实边界继续有效：不得用条件计数替代间接效应区间。因果语言优先 `associated with` / `mediate the influences` 的关联读法，不可升为现代因果中介识别。
+
+**适用**: 截面 AR/CAR + 二元策略选择；firm/product characteristics 直接影响消失、策略路径显著；仅作历史范式参考或显式 legacy 报告。
+
+---
+
 ## 反模式
 
 | 反模式 | 表现 | 应做 |
@@ -862,6 +882,7 @@ updated: 2026-08-12
 | **显著性语言不一致** | 同一论文中 p=0.052 称 "significant" 而 p=0.071/0.075 称 "marginal" | p > 0.05 一律统一标 "marginally significant"（du_tsolmon2024 警示案例） |
 | **Split-sample 系数对比无 Wald 检验** | 仅用 "larger vs smaller" 描述性断言跨子样本系数差异（0.190 vs 0.069），未检验系数相等性 | 跨子样本系数对比须配 Wald χ² / seemingly unrelated estimation 检验（du_tsolmon2024 警示案例） |
 | **删除不显著控制变量以“挽救”焦点系数** | 完整模型仅 `p < .10`，随后删除当期不显著 controls 并把 `p < .05` 宣称为 stronger support | 控制变量由理论、设计或预先规则决定；完整规格保留为主结果，替代控制集只能作为透明敏感性分析，且不得升级原假设判定（Kashmiri–Nicol–Arora 2017 警示案例） |
+| **仅用 Baron–Kenny 条件计数宣称 completely mediate** | 无间接效应区间/bootstrap，仅凭直接路径消失声称完全中介 | 补间接效应 CI，或显式标 legacy；优先变体 5/41 或现代中介标准（变体 56 警示） |
 
 ## 诚实边界
 
@@ -872,3 +893,4 @@ updated: 2026-08-12
 - **显著但实际效应小必须显式降调**：交互项或主效应统计显著但实际效应过小时，必须在正文显式降调（"does not appear to be particularly meaningful in practice"），不得仅以显著性宣布支持。（变体14/55）
 - **null 主效应符号反转只作推测框架**：null 主效应若符号反转并读作"同一构念的另一极"，只作推测框架并推迟到 Discussion，不得声称支持。（变体15）
 - **规格敏感性把 null 变显著必须透明披露并机制对冲**：规格敏感性把 null 变成显著时，必须透明披露并用系数通胀机制（如 Kalnins 2018）对冲，不得升级为假设支持。（Ridge et al. 2024 A9/A10 范本）
+- **Legacy Kenny complete-mediation**：仅用条件计数宣称 completely mediate 时必须附间接效应区间或显式标 legacy；不得替代现代中介报告。（变体 56；Kashmiri 边界继续有效）

@@ -37,7 +37,7 @@ Literature Turn（P2-P3）的核心功能是将 Hook 建立的注意力转化为
 | 策略 | 文件 | 默认 Gap 配对 | 能量 | 核心逻辑 | 文献诊断 |
 |------|------|---------|------|---------|---------|
 | **Progressive Coherence** | `01-progressive-coherence.md` | Incompleteness | 低–中 | "已有进展，但遗漏了 C"（含变体 N：采纳已答/近端后果未清的文献分工；变体 O：近邻研究静态观批评→动态化 bridge，desjardine2025 型，EMERGING） | 单一传统充分发展，自然留下空白 |
-| **Synthesized Coherence** | `02-synthesized-coherence.md` | Inadequacy | 中 | "多个传统各自合理，但在交汇处集体盲区" | 多个传统各自正确，但互不知晓 |
+| **Synthesized Coherence** | `02-synthesized-coherence.md` | Inadequacy | 中 | "多个传统各自合理，但在交汇处集体盲区"（含变体F：连续统地图→双学科顺序批判→交叉沉默，chen2009，EMERGING；非对角 Synthesized×Incompleteness） | 多个传统各自正确，但互不知晓 |
 | **Non-Coherence** | `03-non-coherence.md` | Incommensurability | 高 | "两个理论不能同时正确——除非重新理解" | 两个理论都有证据，但预测相反 |
 
 ---
@@ -84,7 +84,7 @@ Literature Turn（P2-P3）的核心功能是将 Hook 建立的注意力转化为
 | **解决方案** | 填补空白 | 连接盲区 | 超越对立 |
 | **典型 Hook** | data-shock, practical-puzzle | consensus-blindspot, forward-looking-shift | paradigm-challenge, classic-debate-constraint |
 | **典型 Tension** | despite-progress-unaddressed | implicit-assumption-wrong, structural-blindspot | reality-contradicts-consensus, theoretical-imbalance |
-| **变体数量** | 14 (A–N) | 5 (A–E) | 5 (A–E) |
+| **变体数量** | 14 (A–N) | 6 (A–F) | 5 (A–E) |
 | **反模式风险** | 弱缺口（没有解释为什么遗漏重要） | 虚假合成（两个"传统"实为同一流派变体） | 稻草人（一方被描绘得极其愚蠢） |
 
 ---
@@ -140,7 +140,7 @@ Literature Turn 的策略选择影响 write-theory 的推荐变体：
 literature-turns/
 ├── _index.md                          ← 本文件（路由图 + 速查表）
 ├── 01-progressive-coherence.md        ← Progressive Coherence (13 variants, A–M)
-├── 02-synthesized-coherence.md        ← Synthesized Coherence (5 variants)
+├── 02-synthesized-coherence.md        ← Synthesized Coherence (6 variants, A–F)
 ├── 03-non-coherence.md                ← Non-Coherence (5 variants)
 ├── literature-turn-templates.md       ← 快速参考卡（三种策略的核心模板精简版）
 └── table-embedded-review.md           ← 表格嵌入型文献回顾
@@ -155,6 +155,8 @@ literature-turns/
 ---
 
 ## 更新日志
+
+- **2026-08-12（Chen, Ganesan & Liu 2009, JM）**: 蒸馏 product-recall strategy → firm value——新增 `02-synthesized-coherence` **变体 F：策略连续统地图→双学科顺序批判→交叉沉默（chen2009 型）**。Synthesized 变体数更新为 A–F（6）。同论文配对 Tension 01 变体 AH（双流互为遗漏交叉点）、Hook 08 变体 D（定义→频次→品牌级联→具名市值灾难）、Contribution 变体 T（受众重解读型暗面）；Stakes 05 confirming only。Synthesized × Incompleteness 非对角的顺序双段实现。
 
 - **2026-08-09（DesJardine, Li & Shi 2025, AMJ）**: 蒸馏 "Information-Based Competition"——新增 `01-progressive-coherence` **变体 O：近邻研究静态观批评 → 动态化 bridge（theory-first + fulcrum 句 + 领域标准惊讶 + "more dynamic" 升级）**。Progressive 变体数更新为 A–O（15）。同论文配对 Tension 01 变体 AE（as-clause 前提 + 惊讶单句 overlooked）、Preview Q（术语转译锚定）、Contribution R（主贡献分离 + several-other-streams 多流对比）。Progressive × Inadequacy 非对角的具体实现（用传统自身标准证明遗漏）。
 - **2026-08-05（Zorn）**: 蒸馏 Zorn et al. (2017, SMJ)——新增 `01-progressive-coherence` **变体 N：文献分工（采纳已答 / 近端后果未清）**；新建 Tension `21-institutionalized-extreme-structural-warrant`。Progressive 变体数更新为 A–N（14）。配对 Hook 03-H、Stakes 01-G。

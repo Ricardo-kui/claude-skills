@@ -34,6 +34,7 @@
 | 同一构念的两个维度对两种 DV 类型产生对称反向效应 | [`subprotocols/hypothesis_organization_patterns.md`](subprotocols/hypothesis_organization_patterns.md)（2×2 对称矩阵） | [`sentences/mechanism_chain.md`](sentences/mechanism_chain.md) |
 | 两个条件对同一组互补 DV 维度产生镜像反向效应 | [`subprotocols/hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md)（对称反向双轨） | [`subprotocols/hypothesis_organization_patterns.md`](subprotocols/hypothesis_organization_patterns.md)（2×2 交叉反向子变体） |
 | 需要主动管理读者/文献中的竞争预测 | [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md)（Preemptive Competing Account Management） | — |
+| 文献默认受众 A 对行动正向，但 DV 由受众 B 定价（反直觉比较主效应；**勿升格为 G**） | [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md)（Audience-Foil then Focal-Signal；EMERGING / `chenganesanliu2009`） | [`sentences/acknowledgment_response.md`](sentences/acknowledgment_response.md) §5b；[`sentences/hypothesis_forms.md`](sentences/hypothesis_forms.md) Comparative Main Effect |
 | 需要从一个领域向另一个领域扩展理论机制 | [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md)（Extension Logic） | — |
 | 同一构念的两个维度产生相反/互补预测 | [`subprotocols/B2_dual_track.md`](subprotocols/B2_dual_track.md) | [`sentences/mechanism_chain.md`](sentences/mechanism_chain.md)（双轨并行部分） |
 | 核心贡献是多层次/多条件的假设体系 | [`variants/C_hypothesis_tree.md`](variants/C_hypothesis_tree.md) | [`sentences/moderation.md`](sentences/moderation.md) |
@@ -83,7 +84,7 @@
 | [`construct_differentiation_patterns.md`](subprotocols/construct_differentiation_patterns.md) | A 构念辨析型 | 构念辨析的表格化定义、差异-借用过渡（Simultaneously Recognize X but Leverage Y）、**Invariant Discriminant Spine（不变判别主轴，Ridge 2024，EMERGING）** |
 | [`B2_dual_track.md`](subprotocols/B2_dual_track.md) | B 机制推演型 | 同一构念两个维度产生相反预测（损失规避 vs 长期聚焦） |
 | [`E1_categorical_moderation.md`](subprotocols/E1_categorical_moderation.md) | E 调节效应型 | Moderator 为分类变量（分组调节） |
-| [`argumentation_patterns.md`](subprotocols/argumentation_patterns.md) | 跨类型 | **T2→T3 过渡段/非常规论证动作**：竞争解释管理（Preemptive Competing Account Management）、Extension Logic、双理论两阶段机制、行业情境限定、双机制汇聚、最小对对比 vignette。段落级假设推导骨架（Anchor→Mechanism→Warrant→Prediction）已归 `hypothesis_derivation_patterns.md`，间接调节论证亦在该文件 |
+| [`argumentation_patterns.md`](subprotocols/argumentation_patterns.md) | 跨类型 | **T2→T3 过渡段/非常规论证动作**：竞争解释管理（Preemptive Competing Account Management）、Extension Logic、双理论两阶段机制、行业情境限定、双机制汇聚、最小对对比 vignette、**Audience-Foil then Focal-Signal 单比较 H（chenganesanliu2009，EMERGING；勿升格为 G）**。段落级假设推导骨架（Anchor→Mechanism→Warrant→Prediction）已归 `hypothesis_derivation_patterns.md`，间接调节论证亦在该文件 |
 | [`hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md) | 跨类型 | 假设推导段落的心脏模板：Anchor→Mechanism→Warrant→Prediction 完整序列，含宽度型并行机制、对称反向双轨、曲线关系双阶段论证、默认机制替换的方向反转、机制靶向干预递进 |
 | [`reasoning_soundness_protocol.md`](subprotocols/reasoning_soundness_protocol.md) | 跨类型 | 论证可靠性（soundness）协议：前提三分法 [D]/[S]/[E] + 最弱环节防守（含 Booth warrant 五测试）+ 机制必要性门控（三问）+ 反例压力测试（六类 warrant 攻击面 + 第四种处置"承认但不回应"）+ warrant 明言/隐去表达纪律（Booth Ch8）；hypothesis_derivation_patterns 的 soundness 镜像，Phase 3 成稿后与 Phase 4 审计 4 使用 |
 | [`arrangement_patterns.md`](subprotocols/arrangement_patterns.md) | 跨类型 | 论点-论据安排模式（Warrant-Embedded / Evidence-Contrast / Cumulative / Parallel） |
@@ -105,8 +106,8 @@
 | [`mechanism_chain.md`](sentences/mechanism_chain.md) | 机制推演 | why chain 连接词、单步/两步/双轨/竞争/多理论/OM三三制/双刃剑/双中介并行/双DV并行/多层收窄型/替代机制排除/Ability-Motivation 框架/Iron Triangle三边机制/双视角对比框架整合/三层嵌套理论演进/Rhetorical-Question Pivot/联合必要性门控逻辑/**辩证对立双路径(habel2016)/Focus Group定性嵌入(habel2016，含多角色访谈三角化)/成本-收益计算机制链(chung2022)/威胁处理级联(ridge2024)** |
 | [`cost_benefit_calculus.md`](sentences/cost_benefit_calculus.md) | 成本-收益机制 voice | 感知高收益 + 感知低成本 + 综合收敛 + 上下级激励差异对比 |
 | [`moderation.md`](sentences/moderation.md) | 调节机制 | 机制修改论证、假设模板、修辞问句开场、Ability-Motivation 双路径调节、共享调节器反向调节、多调节器同向设计、双边论证调节推演、注意力基础观调节论证、不对称调节、**董事会放大型边界条件(chung2022)**、**Mitigation via Manifestation-Switch 缓解交互(ridge2024)** |
-| [`hypothesis_forms.md`](sentences/hypothesis_forms.md) | 假设形式 | 各类假设的标准句法（主效应、中介、调节、三向交互、有中介的调节、配对假设a/b格式、条件假设Given格式） |
-| [`acknowledgment_response.md`](sentences/acknowledgment_response.md) | 异议处置 voice | 承认与回应句式（Booth Ch9）：四类异议（替代解释/反例/证据局限/定义分歧）× 承认/回应标记词权重表 + 回应强度三级 + 承认但不回应三姿态；§5 Rogerian 四步对话结构（G&L 2017，高威胁异议的段落级降防御序列）；与 reasoning_soundness_protocol §4 配套 |
+| [`hypothesis_forms.md`](sentences/hypothesis_forms.md) | 假设形式 | 各类假设的标准句法（主效应、**比较型主效应 A more negatively related than B（chenganesanliu2009，EMERGING）**、中介、调节、三向交互、有中介的调节、配对假设a/b格式、条件假设Given格式） |
+| [`acknowledgment_response.md`](sentences/acknowledgment_response.md) | 异议处置 voice | 承认与回应句式（Booth Ch9）：四类异议（替代解释/反例/证据局限/定义分歧）× 承认/回应标记词权重表 + 回应强度三级 + 承认但不回应三姿态；§5 Rogerian 四步对话结构（G&L 2017，高威胁异议的段落级降防御序列）；**§5b Audience-Foil Pivot 异质受众切换句（chenganesanliu2009，EMERGING）**；与 reasoning_soundness_protocol §4 配套 |
 | [`closure.md`](sentences/closure.md) | 收束/过渡 | **注意：管理学不要求独立 Closure 段。** 局部收束信号（"Therefore, we hypothesize:"）、段落收束→假设过渡（按论证类型）、**H1 收敛信号强制提醒** |
 | [`leitmotif-section-opener.md`](sentences/leitmotif-section-opener.md) | 段首回扣句 | 多假设共享同一核心构念时的段首回扣句（leitmotif）；SKILL.md 措辞润色表"主导动机串联"句位查此文件 |
 

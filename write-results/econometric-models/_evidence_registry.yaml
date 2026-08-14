@@ -6,26 +6,27 @@ meta:
   schema_version: 1.1.0
   registry_type: estimator-slot-skeleton
   last_updated: '2026-08-12'
-  last_batch_id: batch_31_ridge_et_al_2024_amj
-  batches_processed: 31
-  total_papers_indexed: 32
+  last_batch_id: batch_32_chenganesanliu2009
+  batches_processed: 32
+  total_papers_indexed: 33
   usage_stats_schema:
-    origin: "Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑"
-    granularity: "per estimator（对应 econometric-models/[结果类型].md 文件）"
-    rationale: "用户不会报告满意，但会在对话中批评产出——批评是唯一可靠且零成本的使用反馈信号"
+    origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
+    granularity: per estimator（对应 econometric-models/[结果类型].md 文件）
+    rationale: 用户不会报告满意，但会在对话中批评产出——批评是唯一可靠且零成本的使用反馈信号
     fields:
       revise: 用户对该估计器产出的不满/需大改的批评次数（Claude 在 write-results 会话中自动登记）
       reject: 产出被弃用/重写/推翻的次数（同上）
       last_critique: 最近一次批评日期 YYYY-MM-DD（null = 从未被批评）
       common_revise_reasons: 最近批评要点（去重，最多 8 条——精炼时的直接依据）
     signals:
-      gap: "slots 未覆盖缺口（静态，不依赖登记）→ 蒸馏优先（ADD 候选）"
-      critique_heavy: "revise + reject >= 2 → 变体产出不可用，精炼优先（REPLACE/EXTEND 候选）"
-      quiet: "revise + reject == 0 → 正常蒸馏，无额外优先级"
+      gap: slots 未覆盖缺口（静态，不依赖登记）→ 蒸馏优先（ADD 候选）
+      critique_heavy: revise + reject >= 2 → 变体产出不可用，精炼优先（REPLACE/EXTEND 候选）
+      quiet: revise + reject == 0 → 正常蒸馏，无额外优先级
     non_signals:
-      - "不登记 accepted（用户不报告满意，登记必然为零）"
-      - "不设 too_easy/淘汰（变体是长期资产；频繁使用且好用应提升路由权重，而非降级）"
-    record_path: "Claude 在 write-results 会话中捕获用户批评后自动登记（见 write-results SKILL.md 批评登记）；批量登记可用 python _update_registry.py --record-critique <critiques.yaml>（见 distill-results-exemplar SKILL.md Phase 4.5）"
+    - 不登记 accepted（用户不报告满意，登记必然为零）
+    - 不设 too_easy/淘汰（变体是长期资产；频繁使用且好用应提升路由权重，而非降级）
+    record_path: Claude 在 write-results 会话中捕获用户批评后自动登记（见 write-results SKILL.md 批评登记）；批量登记可用 python _update_registry.py --record-critique
+      <critiques.yaml>（见 distill-results-exemplar SKILL.md Phase 4.5）
   subfields:
   - strategy
   - ob_hr
@@ -111,7 +112,8 @@ global_anti_patterns:
   affected_estimators:
   - OLS_FE
   - Logit_Probit_Ordered_Probit
-  note: 控制变量的增删必须有理论依据（DAG/prior studies），不能仅基于"significant in one specification, dropped in another"。Yuan et al. 2026 JOM REC B3.3。
+  note: 控制变量的增删必须有理论依据（DAG/prior studies），不能仅基于"significant in one specification, dropped in another"。Yuan et al. 2026 JOM
+    REC B3.3。
 - id: ap_significance_rescue_control_deletion
   pattern: 焦点系数仅边际显著后，删除当期不显著控制变量并将 p<.05 宣称为更强假设支持
   severity: high
@@ -228,10 +230,10 @@ estimators:
           corpus_path: econometric-models/OLS-FE.md
         - id: r2_ols_model_free_quartile_opening
           skeleton: We first present model-free evidence regarding the relationship between [IV] and [DV]. In the [web appendix],
-            we show scatter plots of [DV] against [IV] for [subgroup description]. In Fig. [X], we divide the sample into [four
-            quartiles] based on [IV] and calculate the mean and median [DV] for each quartile. Consistent with Hypothesis [N],
-            there is a monotonic [increase/decrease] in [DV] from the first quartile, where [IV] is lowest, to the fourth quartile,
-            where [IV] is highest. The mean (median) [DV] is significantly different across the quartiles.
+            we show scatter plots of [DV] against [IV] for [subgroup description]. In Fig. [X], we divide the sample into
+            [four quartiles] based on [IV] and calculate the mean and median [DV] for each quartile. Consistent with Hypothesis
+            [N], there is a monotonic [increase/decrease] in [DV] from the first quartile, where [IV] is lowest, to the fourth
+            quartile, where [IV] is highest. The mean (median) [DV] is significantly different across the quartiles.
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -248,9 +250,9 @@ estimators:
         - id: r2_ols_heckman_two_stage_table_navigation
           skeleton: Table [X] shows the results of the first-stage selection equation. Our exclusion restriction, [instrument],
             significantly and [positively/negatively] predicts [selection_DV] (β = [value], p < [threshold]), consistent with
-            [theory]. Table [Y] reports the second-stage Heckman selection results. Column 1 tests Hypothesis [H1]. Column 2
-            adds the two-way moderating relationships. Column 3 introduces the three-way interactions. Column 4 shows that the
-            results are robust to the inclusion of [firm fixed effects].
+            [theory]. Table [Y] reports the second-stage Heckman selection results. Column 1 tests Hypothesis [H1]. Column
+            2 adds the two-way moderating relationships. Column 3 introduces the three-way interactions. Column 4 shows that
+            the results are robust to the inclusion of [firm fixed effects].
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -330,9 +332,9 @@ estimators:
           corpus_path: econometric-models/OLS-FE.md
         - id: r3_ols_interquartile_magnitude
           skeleton: The coefficient for [IV] is [positive/negative] and statistically significant (β = [value], p < [threshold]).
-            An interquartile move in [IV] from the 25th percentile to the 75th percentile is associated with a [N] [unit / percentage
-            point] [increase/decrease] in [DV]. In untabulated tests, we also find support using [alternative sample], with similar
-            economic significance.
+            An interquartile move in [IV] from the 25th percentile to the 75th percentile is associated with a [N] [unit /
+            percentage point] [increase/decrease] in [DV]. In untabulated tests, we also find support using [alternative sample],
+            with similar economic significance.
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -351,10 +353,10 @@ estimators:
         skeleton_variants:
         - id: r4_ols_three_way_marginal_effects_table
           skeleton: Model [N] of Table [X] shows the full specification including the triple interaction among [IV], [moderator_1],
-            and [moderator_2]. The coefficient on the triple interaction term is [positive/negative] and significant (β = [value],
-            p < [threshold]), consistent with Hypothesis [H_3way]. The marginal effects are reported in Panel [B/C] of Table [Y].
-            They show the coefficient on [IV] (δ1) at [one SD below/above] the mean of [moderator_1] and [moderator_2]. As [moderator_1]
-            increases, the [positive/negative] effect of [IV] on [DV] becomes [stronger/weaker]; this [amplification/attenuation]
+            and [moderator_2]. The coefficient on the triple interaction term is [positive/negative] and significant (β =
+            [value], p < [threshold]), consistent with Hypothesis [H_3way]. The marginal effects are reported in Panel [B/C]
+            of Table [Y]. They show the coefficient on [IV] (δ1) at [one SD below/above] the mean of [moderator_1] and [moderator_2].
+            As [moderator_1] increases, the [positive/negative] effect of [IV] on [DV] becomes [stronger/weaker]; this [amplification/attenuation]
             is [greater/smaller] when [moderator_2] is higher.
           paper_count: 1
           status: EMERGING
@@ -372,10 +374,10 @@ estimators:
         - id: r4_continuous_moderator_dual_quantile_trajectory
           skeleton: Hypothesis [x] posits that [moderator] weakens the effect of [predictor] on [outcome]. The interaction
             term is [negative/positive] and significant (β = [value], p < [threshold]). In practical terms (Figure [Xa]),
-            when [moderator] is low, increasing [predictor] from −1 SD to +1 SD leads to a [A]% increase in [outcome],
-            but when [moderator] is high, the same increase yields only [B]% [or "virtually no effect"]. Figure [Xb] shows
-            the marginal effect of [predictor] decreases steadily across percentiles of [moderator], falling from strongly
-            positive at the 1st percentile to near zero [or slightly negative] at the 95th percentile.
+            when [moderator] is low, increasing [predictor] from −1 SD to +1 SD leads to a [A]% increase in [outcome], but
+            when [moderator] is high, the same increase yields only [B]% [or "virtually no effect"]. Figure [Xb] shows the
+            marginal effect of [predictor] decreases steadily across percentiles of [moderator], falling from strongly positive
+            at the 1st percentile to near zero [or slightly negative] at the 95th percentile.
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -391,7 +393,10 @@ estimators:
           - shape_verbalization
           corpus_path: econometric-models/OLS-FE.md
         - id: r4_ols_threshold_group_coefficient_difference
-          skeleton: Within the [boundary-present] subsample, the focal interaction changes to the predicted direction but is estimated imprecisely. This result alone does not establish a reversal. We therefore directly test whether the interaction coefficient differs across boundary groups; rejection of coefficient equality supports heterogeneity while leaving the within-boundary slope uncertain.
+          skeleton: Within the [boundary-present] subsample, the focal interaction changes to the predicted direction but
+            is estimated imprecisely. This result alone does not establish a reversal. We therefore directly test whether
+            the interaction coefficient differs across boundary groups; rejection of coefficient equality supports heterogeneity
+            while leaving the within-boundary slope uncertain.
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -429,8 +434,8 @@ estimators:
           corpus_path: econometric-models/OLS-FE.md
         - id: r5_ols_external_evidence_practical_importance
           skeleton: A [one-SD] increase in [predictor] corresponds to a [value]% [increase/decrease] in [outcome]. Evidence
-            suggests that even small changes in [outcome] can net significant benefits such as [external evidence]. Thus, the
-            [value]% change we observe is likely to be particularly important in practice.
+            suggests that even small changes in [outcome] can net significant benefits such as [external evidence]. Thus,
+            the [value]% change we observe is likely to be particularly important in practice.
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -491,10 +496,10 @@ estimators:
           corpus_path: econometric-models/OLS-FE.md
         - id: r7_ols_alternative_dv_falsification
           skeleton: An alternative way to establish causality is to provide a falsification test where we examine [alternative_DV],
-            an outcome that is outside the decision-making domain of [focal_actor]. We use the [estimator] specification in [Table
-            X], Column [N], except that we replace [DV] with [alternative_DV]. As expected, the [interactions/effects] involving
-            [actor-specific variables] are insignificant, because [alternative_DV] is not within the decision-making domain of
-            [focal_actor].
+            an outcome that is outside the decision-making domain of [focal_actor]. We use the [estimator] specification in
+            [Table X], Column [N], except that we replace [DV] with [alternative_DV]. As expected, the [interactions/effects]
+            involving [actor-specific variables] are insignificant, because [alternative_DV] is not within the decision-making
+            domain of [focal_actor].
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -510,11 +515,11 @@ estimators:
           corpus_path: econometric-models/OLS-FE.md
         - id: r7_ols_endogeneity_threat_table
           skeleton: Endogeneity is mainly caused by issues relating to omitted variables and simultaneity. We include [control_strategy]
-            to rule out omitted variables and use [temporal_strategy] to ensure causal priority. We also use the [DWH test] with
-            strong instruments and [cannot reject/reject] the null hypothesis that [IV] is exogenous. This conclusion is validated
-            with the [instrument-free Gaussian copula estimation method]. We tabulate complementary tests in Table [X] to rule out
-            [threat_1], [threat_2], [threat_3], and [threat_4]. The supporting evidence confirms that there is little reason to
-            believe that endogeneity issues are solely driving the results.
+            to rule out omitted variables and use [temporal_strategy] to ensure causal priority. We also use the [DWH test]
+            with strong instruments and [cannot reject/reject] the null hypothesis that [IV] is exogenous. This conclusion
+            is validated with the [instrument-free Gaussian copula estimation method]. We tabulate complementary tests in
+            Table [X] to rule out [threat_1], [threat_2], [threat_3], and [threat_4]. The supporting evidence confirms that
+            there is little reason to believe that endogeneity issues are solely driving the results.
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -532,9 +537,9 @@ estimators:
         - id: r7_ols_epistemic_map_specification_curve
           skeleton: To further assess the robustness of our findings to analyst degrees-of-freedom, we develop an epistemic
             map of the coefficient on [predictor] (King, Goldfarb, & Simcoe, 2021). We plot the coefficient and 95% CI across
-            all combinations of [specification dimensions], yielding [N_total_models] specifications. Figure [X] shows that all
-            [N_total_models] coefficients are [of predicted sign], and [N_significant] are significant at the [threshold] level.
-            The coefficients cluster tightly around the main estimate (β ≈ [value]).
+            all combinations of [specification dimensions], yielding [N_total_models] specifications. Figure [X] shows that
+            all [N_total_models] coefficients are [of predicted sign], and [N_significant] are significant at the [threshold]
+            level. The coefficients cluster tightly around the main estimate (β ≈ [value]).
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -550,12 +555,12 @@ estimators:
           - sign_stability
           corpus_path: econometric-models/OLS-FE.md
         - id: r7_ols_front_loaded_rir_naive_cure
-          skeleton: >-
-            A concern in testing how [characteristic] affects [outcome] is endogeneity, especially from nonrandom
-            [selection]. First, we use robustness of inference to replacement (RIR): to alter our inferences for [outcome 1],
-            [N] observations would have to be replaced with observations for which there is an effect of zero, and for [outcome
-            2], [N] observations. Next, we pair 'naive' analyses that do not use tools to 'cure' endogeneity with analyses
-            that attempt such a cure [e.g., two-stage residual inclusion], finding estimates are consistent across approaches.
+          skeleton: 'A concern in testing how [characteristic] affects [outcome] is endogeneity, especially from nonrandom
+            [selection]. First, we use robustness of inference to replacement (RIR): to alter our inferences for [outcome
+            1], [N] observations would have to be replaced with observations for which there is an effect of zero, and for
+            [outcome 2], [N] observations. Next, we pair ''naive'' analyses that do not use tools to ''cure'' endogeneity
+            with analyses that attempt such a cure [e.g., two-stage residual inclusion], finding estimates are consistent
+            across approaches.'
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -579,9 +584,9 @@ estimators:
           skeleton: To examine whether [mediator] transmits the effect of [predictor] on [outcome], we adopt two complementary
             approaches. First, following Baron & Kenny (1986), we estimate the a-path ([predictor]→[mediator]) and b-path
             ([mediator]→[outcome]|[predictor]). The product a×b ≈ [value] is the indirect effect, accounting for ~[%] of the
-            total effect. Second, a non-parametric bootstrap with [N] replications yields an indirect effect of [value]
-            (95% CI [[lower],[upper]], excluding zero). Because the mediator may be endogenous, [Model 2] instruments
-            [mediator] with [instrument(s)].
+            total effect. Second, a non-parametric bootstrap with [N] replications yields an indirect effect of [value] (95%
+            CI [[lower],[upper]], excluding zero). Because the mediator may be endogenous, [Model 2] instruments [mediator]
+            with [instrument(s)].
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -597,7 +602,9 @@ estimators:
           - instrumented_mediator
           corpus_path: econometric-models/OLS-FE.md
         - id: r8_ols_construct_validity_directed_triangulation
-          skeleton: We evaluate three rival interpretations of [latent trait] through a nomological opposite-pattern test, a same-actor cross-context stability test, and a short-horizon temporal-stability test. Convergence strengthens the proposed interpretation but does not uniquely identify the latent construct.
+          skeleton: We evaluate three rival interpretations of [latent trait] through a nomological opposite-pattern test,
+            a same-actor cross-context stability test, and a short-horizon temporal-stability test. Convergence strengthens
+            the proposed interpretation but does not uniquely identify the latent construct.
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -613,7 +620,9 @@ estimators:
           - temporal_stability
           corpus_path: econometric-models/OLS-FE.md
         - id: r8_shared_mediator_outcome_branch_ledger
-          skeleton: Report the shared a-path once, then audit each outcome branch separately with its direct relationship, estimated indirect effect and confidence interval, and hypothesis verdict. Preserve unsupported branches and narrow the mechanism claim to the outcomes for which the interval excludes zero.
+          skeleton: Report the shared a-path once, then audit each outcome branch separately with its direct relationship,
+            estimated indirect effect and confidence interval, and hypothesis verdict. Preserve unsupported branches and narrow
+            the mechanism claim to the outcomes for which the interval excludes zero.
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -627,8 +636,40 @@ estimators:
           - branch_specific_indirect_effect
           - unsupported_path_preserved
           - mechanism_scope_narrowing
-          notes: "Direct support for an outcome does not rescue a failed mediation hypothesis. Prefer indirect-effect intervals to legacy Baron-Kenny condition counting."
+          notes: Direct support for an outcome does not rescue a failed mediation hypothesis. Prefer indirect-effect intervals
+            to legacy Baron-Kenny condition counting.
           corpus_path: econometric-models/SEM-moderated-mediation.md
+        - id: r8_ols_strategy_complete_mediation_kenny_signal
+          skeleton: 'A question, then, is whether these [firm_characteristics] influence firms'' choice of [strategy]. If
+            we obtain significant effects of [firm_characteristics] on strategy choice, it would indicate that [strategy],
+            as a signal to the stock market, mediate the effects of [firm_characteristics] on [AR] ([Kenny citation]). We
+            estimate a probit on Pr([strategy]). [Key_firm_char] is significantly [negative/positive], suggesting that [theory_buffer_claim].
+            More important, [AR_table] and [probit_table] jointly show the mediation effects: (1) the direct impact of [strategy]
+            on [AR] is significant, and (2) [firm_characteristics] that influence strategy choice, especially [key_firm_char],
+            do not affect [AR] when [strategy] is included. Based on the steps that [Kenny et al.] outline, these effects
+            indicate that [strategy] completely mediate the influences of [firm_characteristics] on [AR]. Therefore, the stock
+            market consolidates the impact of various firm and product characteristics and reacts mainly to a firm''s [strategy]
+            as a signal to evaluate the potential consequence of the crisis.'
+          verbatim_anchor: Based on the steps that Kenny, Kashy, and Bolger (1998) outline, these effects indicate that product-recall
+            strategies completely mediate the influences of firm characteristics on abnormal returns.
+          skeleton_level: paragraph
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Chen_Ganesan_Liu_2009_JM
+          - chenganesanliu2009
+          transferability: medium
+          paradigm_exclusivity: 截面 AR/CAR + 二元策略中介
+          rhythm_tags:
+          - mediation_question
+          - probit_choice
+          - kenny_joint_read
+          - complete_mediation
+          - signal_interpretation
+          notes: 'LEGACY: 不得将 Baron–Kenny 条件计数升级为现代间接效应证据；须补 indirect-effect interval 或显式标 legacy。Kashmiri 诚实边界继续有效。'
+          corpus_path: econometric-models/OLS-FE.md
       R9:
         description: Results→Discussion 过渡
         skeleton_variants: []
@@ -652,10 +693,26 @@ estimators:
       affected_slots:
       - R1
       source_count: 0
+    - id: ap_ols_kenny_complete_mediation_without_ie
+      pattern: 仅用 Baron–Kenny 条件计数宣称 completely mediate，无间接效应区间
+      severity: high
+      affected_slots:
+      - R8
+      note: legacy complete-mediation 须附间接效应区间或显式标 legacy；source=chenganesanliu2009
+      source_count: 1
+      sources:
+      - chenganesanliu2009
     honesty_boundaries:
     - id: hb_ols_r2_beta_only
       boundary: R2 不得只报 R² 而不解释增量模型逻辑
       note: Model 1→2→3 必须有清晰的 incremental justification
+    - id: hb_ols_legacy_kenny_complete_mediation
+      boundary: Legacy Kenny complete-mediation 声称必须附间接效应区间或显式标 legacy；不得替代现代中介报告
+      required: bootstrap/PROCESS/Sobel 间接效应 CI，或正文显式标注 legacy Baron–Kenny claim
+      affected_slots:
+      - R8
+      note: Kashmiri 边界继续有效；source=chenganesanliu2009
+      violation_count: 0
   Logit_Probit_Ordered_Probit:
     display_name: Logit / Probit / Ordered Probit
     usage_stats:
@@ -713,8 +770,10 @@ estimators:
       R3:
         skeleton_variants:
         - id: r3_binary_gee_curvilinear_formal_utest_chain
-          skeleton: >-
-            [Hypothesis restatement for U/inverted-U in a binary outcome]. [Quadratic term sign and significance as first evidence]. [Formal U-test: significant slope at lower bound and significant opposite slope at upper bound]. [Turning point and Fieller/bootstrap confidence interval within observed support]. [Predicted-probability figure]. [Support judgment].
+          skeleton: '[Hypothesis restatement for U/inverted-U in a binary outcome]. [Quadratic term sign and significance
+            as first evidence]. [Formal U-test: significant slope at lower bound and significant opposite slope at upper bound].
+            [Turning point and Fieller/bootstrap confidence interval within observed support]. [Predicted-probability figure].
+            [Support judgment].'
           skeleton_level: paragraph
           paper_count: 2
           status: VERIFIED
@@ -725,18 +784,24 @@ estimators:
           - Bendig_Hensellek_Schulte_2024_ETP
           - Lee_Park_2024_SMJ
           transferability: high
-          paradigm_exclusivity: "Binary or fractional logit-link curvilinear relationships; do not interpret link-scale coefficients as response-scale changes"
+          paradigm_exclusivity: Binary or fractional logit-link curvilinear relationships; do not interpret link-scale coefficients
+            as response-scale changes
           rhythm_tags:
           - curve_shape
           - endpoint_slopes
           - turning_point_ci
           - predicted_probability
           - support
-          notes: "Verified across Bendig 2024 and the user-audited Lee & Park 2024 exemplar. A quadratic coefficient alone is insufficient; curve shape is established by joint restrictions and then displayed on the probability/response scale. For adverse Y, the vertex is a maximum-risk intermediate zone, not a performance optimum."
+          notes: Verified across Bendig 2024 and the user-audited Lee & Park 2024 exemplar. A quadratic coefficient alone
+            is insufficient; curve shape is established by joint restrictions and then displayed on the probability/response
+            scale. For adverse Y, the vertex is a maximum-risk intermediate zone, not a performance optimum.
           corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r3_dual_focal_iv_parallel_inverted_u_utest
-          skeleton: >-
-            [Restate parallel inverted-U hypotheses for IV_a and IV_b on the same binary adverse Y]. [Model for IV_a: squared term sign and significance]. [Model for IV_b: parallel squared-term beat]. [Joint model retaining both quadratic pairs]. [Side-by-side formal U-test table: lower-bound slope, upper-bound opposite slope, extremum, Fieller/bootstrap interval in support for each IV]. [Joint but separable support judgment]. [Response-scale likelihood display; no link-scale probability reading].
+          skeleton: '[Restate parallel inverted-U hypotheses for IV_a and IV_b on the same binary adverse Y]. [Model for IV_a:
+            squared term sign and significance]. [Model for IV_b: parallel squared-term beat]. [Joint model retaining both
+            quadratic pairs]. [Side-by-side formal U-test table: lower-bound slope, upper-bound opposite slope, extremum,
+            Fieller/bootstrap interval in support for each IV]. [Joint but separable support judgment]. [Response-scale likelihood
+            display; no link-scale probability reading].'
           skeleton_level: paragraph
           paper_count: 1
           status: EMERGING
@@ -745,13 +810,15 @@ estimators:
           sources:
           - Bendig_Hensellek_Schulte_2024_ETP
           transferability: high
-          paradigm_exclusivity: "Two focal activities with the same curvilinear shape claim on one binary outcome; distinct from linear dual-IV parallel reporting"
+          paradigm_exclusivity: Two focal activities with the same curvilinear shape claim on one binary outcome; distinct
+            from linear dual-IV parallel reporting
           rhythm_tags:
           - dual_iv_parallel
           - curve_shape
           - formal_utest_table
           - joint_support
-          notes: "2026-08-05 gap audit. Parallel support ≠ interchangeable IVs. Calibrate separately if one side is only marginally significant."
+          notes: 2026-08-05 gap audit. Parallel support ≠ interchangeable IVs. Calibrate separately if one side is only marginally
+            significant.
           corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r3_logit_four_beat
           skeleton: Hypothesis [x] predicted... Model [y] shows that the coefficient for [predictor] is [positive/negative]
@@ -889,8 +956,10 @@ estimators:
       R5:
         skeleton_variants:
         - id: r5_probability_cost_activity_value_benchmark
-          skeleton: >-
-            [Predicted probability change between theoretically meaningful X values]. [Multiply the probability difference by a transparent external average event-cost benchmark]. [Compare implied expected-risk magnitude with the average value of one focal activity/deal]. [Explicit caveat that this illustrates scale rather than realized firm-specific loss].
+          skeleton: '[Predicted probability change between theoretically meaningful X values]. [Multiply the probability difference
+            by a transparent external average event-cost benchmark]. [Compare implied expected-risk magnitude with the average
+            value of one focal activity/deal]. [Explicit caveat that this illustrates scale rather than realized firm-specific
+            loss].'
           skeleton_level: paragraph
           paper_count: 1
           status: EMERGING
@@ -899,13 +968,13 @@ estimators:
           sources:
           - Bendig_Hensellek_Schulte_2024_ETP
           transferability: medium
-          paradigm_exclusivity: "Probability outcomes with defensible external cost and activity-value benchmarks"
+          paradigm_exclusivity: Probability outcomes with defensible external cost and activity-value benchmarks
           rhythm_tags:
           - predicted_probability
           - economic_significance
           - cost_benchmark
           - caveat
-          notes: "Expected cost is a magnitude illustration, not an observed causal loss; source and assumptions must be disclosed."
+          notes: Expected cost is a magnitude illustration, not an observed causal loss; source and assumptions must be disclosed.
           corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r5_robustness_gee_heckman_endogeneity
           skeleton: '[Robustness section opens by stating the limitation of the primary test (lack of controls for CAR size)
@@ -931,8 +1000,10 @@ estimators:
       R7:
         skeleton_variants:
         - id: r7_curvilinear_six_threat_robustness_ladder
-          skeleton: >-
-            [Map each check to a threat: alternative lags/windows for timing; count DV for binary information loss; alternative panel estimator for estimator dependence; value proxy for focal-variable measurement; expanded regulator/industry sample for setting dependence; IV/control-function model for omitted-variable endogeneity]. [Summarize directional stability]. [Disclose any p-value weakening rather than claiming full invariance].
+          skeleton: '[Map each check to a threat: alternative lags/windows for timing; count DV for binary information loss;
+            alternative panel estimator for estimator dependence; value proxy for focal-variable measurement; expanded regulator/industry
+            sample for setting dependence; IV/control-function model for omitted-variable endogeneity]. [Summarize directional
+            stability]. [Disclose any p-value weakening rather than claiming full invariance].'
           skeleton_level: section
           paper_count: 1
           status: EMERGING
@@ -941,7 +1012,7 @@ estimators:
           sources:
           - Bendig_Hensellek_Schulte_2024_ETP
           transferability: high
-          paradigm_exclusivity: "Curvilinear panel models; instrument diagnostics still required"
+          paradigm_exclusivity: Curvilinear panel models; instrument diagnostics still required
           rhythm_tags:
           - threat_method_result
           - timing
@@ -949,7 +1020,7 @@ estimators:
           - estimator
           - sample_boundary
           - endogeneity
-          notes: "Untabulated IV results cannot carry decisive identification; significance attenuation must remain visible."
+          notes: Untabulated IV results cannot carry decisive identification; significance attenuation must remain visible.
           corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r7_threat_based_iv_heckman
           skeleton: '[Threat positioning]. [Method description with instrument rationale]. [First-stage / test results]. [Second-stage
@@ -1057,8 +1128,10 @@ estimators:
         description: ''
         skeleton_variants:
         - id: r4_curvilinear_moderation_geometric_probability_translation
-          skeleton: >-
-            [Report interaction between W and the squared X term]. [Navigate to predicted-probability figure]. [State whether high W shifts the curve, changes steepness, or moves the turning point]. [Give vertices/meaningful probability levels under high and low W]. [Translate the geometric change into the altered mechanism or risk interpretation]. [Support judgment].
+          skeleton: '[Report interaction between W and the squared X term]. [Navigate to predicted-probability figure]. [State
+            whether high W shifts the curve, changes steepness, or moves the turning point]. [Give vertices/meaningful probability
+            levels under high and low W]. [Translate the geometric change into the altered mechanism or risk interpretation].
+            [Support judgment].'
           skeleton_level: paragraph
           paper_count: 1
           status: EMERGING
@@ -1067,18 +1140,22 @@ estimators:
           sources:
           - Bendig_Hensellek_Schulte_2024_ETP
           transferability: high
-          paradigm_exclusivity: "Moderated U/inverted-U in binary probability models"
+          paradigm_exclusivity: Moderated U/inverted-U in binary probability models
           rhythm_tags:
           - quadratic_interaction
           - curve_geometry
           - predicted_probability
           - mechanism_interpretation
           - support
-          notes: "Do not reduce curve moderation to a significant squared interaction; state exactly what changes geometrically. Single-IV geometry only; for dual-mode shift vs steepen under one W, use r4_dual_mode_shift_vs_steepen_figure_adjudication."
+          notes: Do not reduce curve moderation to a significant squared interaction; state exactly what changes geometrically.
+            Single-IV geometry only; for dual-mode shift vs steepen under one W, use r4_dual_mode_shift_vs_steepen_figure_adjudication.
           corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r4_dual_mode_shift_vs_steepen_figure_adjudication
-          skeleton: >-
-            [Restate H_shift for IV_a and H_steepen for IV_b under the same W]. [Report both squared-by-W interactions as ingredients]. [Explicitly state that matching interaction signs do not adjudicate geometry]. [Figure for IV_a: name vertical shift with high/low-W vertices]. [Figure for IV_b: name steepen/flatten with pace-to-zero or curvature contrast]. [One-sentence close: same contingency, different geometries across modes]. [Optional dual probability-to-cost benchmarks with external average event cost].
+          skeleton: '[Restate H_shift for IV_a and H_steepen for IV_b under the same W]. [Report both squared-by-W interactions
+            as ingredients]. [Explicitly state that matching interaction signs do not adjudicate geometry]. [Figure for IV_a:
+            name vertical shift with high/low-W vertices]. [Figure for IV_b: name steepen/flatten with pace-to-zero or curvature
+            contrast]. [One-sentence close: same contingency, different geometries across modes]. [Optional dual probability-to-cost
+            benchmarks with external average event cost].'
           skeleton_level: paragraph
           paper_count: 1
           status: EMERGING
@@ -1087,17 +1164,20 @@ estimators:
           sources:
           - Bendig_Hensellek_Schulte_2024_ETP
           transferability: high
-          paradigm_exclusivity: "Same moderator, two focal IVs, theoretically distinct curve geometries (shift vs steepen)"
+          paradigm_exclusivity: Same moderator, two focal IVs, theoretically distinct curve geometries (shift vs steepen)
           rhythm_tags:
           - dual_mode_contrast
           - shift_vs_steepen
           - figure_adjudication
           - optional_cost_benchmark
-          notes: "2026-08-05 gap audit. Distinct from single-IV geometric translation and from turning-point-location Wald tests. Stuck-in-the-middle framing belongs in Discussion, not as a Results substitute for peak-likelihood reporting."
+          notes: 2026-08-05 gap audit. Distinct from single-IV geometric translation and from turning-point-location Wald
+            tests. Stuck-in-the-middle framing belongs in Discussion, not as a Results substitute for peak-likelihood reporting.
           corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r4_curvilinear_moderation_turning_point_shift_wald
-          skeleton: >-
-            [Restate the predicted turning-point displacement]. [Treat X-by-W and X-squared-by-W coefficients as ingredients rather than the conclusion]. [Report the two condition-specific turning points and intervals]. [Report their difference and a direct Wald/delta/bootstrap test]. [Confirm both points lie in data-supported regions]. [Plot conditional predictions on a named scale]. [Issue a calibrated support judgment].
+          skeleton: '[Restate the predicted turning-point displacement]. [Treat X-by-W and X-squared-by-W coefficients as
+            ingredients rather than the conclusion]. [Report the two condition-specific turning points and intervals]. [Report
+            their difference and a direct Wald/delta/bootstrap test]. [Confirm both points lie in data-supported regions].
+            [Plot conditional predictions on a named scale]. [Issue a calibrated support judgment].'
           skeleton_level: paragraph
           paper_count: 1
           status: VERIFIED
@@ -1107,7 +1187,7 @@ estimators:
           sources:
           - Lee_Park_2024_SMJ
           transferability: high
-          paradigm_exclusivity: "Moderated U/inverted-U hypotheses that specifically predict turning-point location"
+          paradigm_exclusivity: Moderated U/inverted-U hypotheses that specifically predict turning-point location
           rhythm_tags:
           - hypothesis_geometry
           - conditional_vertices
@@ -1115,7 +1195,9 @@ estimators:
           - observed_support
           - scale_label
           - calibrated_support
-          notes: "Lee & Park 2024 is user-audited as a canonical turning-point-location writing exemplar. Do not infer a vertex shift from separate interaction p values. Report attenuation in the full model rather than collapsing marginal and conventional significance into 'all supported'."
+          notes: Lee & Park 2024 is user-audited as a canonical turning-point-location writing exemplar. Do not infer a vertex
+            shift from separate interaction p values. Report attenuation in the full model rather than collapsing marginal
+            and conventional significance into 'all supported'.
           corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
         - id: r4_subgroup_mean_comparison_ttest
           skeleton: '[Results organized by subgroup category (high reputation / celebrity / none) with mean CARs, pairwise
@@ -1241,8 +1323,10 @@ estimators:
         description: Mechanism-discriminating supplemental evidence
         skeleton_variants:
         - id: r8_curvilinear_mechanism_discriminator_selective_path
-          skeleton: >-
-            [Name the mechanisms assigned to the rising and declining portions]. [Introduce a comparison exposure expected to activate one mechanism without the other]. [Report the predicted linear pattern and null/nonmatching quadratic pattern]. [State that the contrast is consistent with mechanism separation]. [Explicitly deny mediation or causal-process identification when mechanisms are not directly measured].
+          skeleton: '[Name the mechanisms assigned to the rising and declining portions]. [Introduce a comparison exposure
+            expected to activate one mechanism without the other]. [Report the predicted linear pattern and null/nonmatching
+            quadratic pattern]. [State that the contrast is consistent with mechanism separation]. [Explicitly deny mediation
+            or causal-process identification when mechanisms are not directly measured].'
           skeleton_level: paragraph
           paper_count: 1
           status: EMERGING
@@ -1251,14 +1335,15 @@ estimators:
           sources:
           - Lee_Park_2024_SMJ
           transferability: medium
-          paradigm_exclusivity: "Curvilinear theories with separable mechanisms and a defensible selective-path comparison exposure"
+          paradigm_exclusivity: Curvilinear theories with separable mechanisms and a defensible selective-path comparison
+            exposure
           rhythm_tags:
           - mechanism_assignment
           - selective_path
           - contrast_pattern
           - corroboration
           - causal_boundary
-          notes: "Qualitative agreement and a null squared term are corroborative, not mediation evidence."
+          notes: Qualitative agreement and a null squared term are corroborative, not mediation evidence.
           corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
     cross_slot_patterns:
     - id: csp_Logit_Probit_Ordered_Probit_R2_9f484872
@@ -1325,7 +1410,8 @@ estimators:
       to_slot: ''
       paper_count: 1
       status: EMERGING
-      note: 目前 corpus 中尚无此变体，建议审阅后入库。适用于事件研究论文中主检验为分组比较而非回归的场景。
+      note: 原缺口已由事件研究法.md 变体6（r3_eventstudy_subgroup_ar_multitest_contrast；source=chenganesanliu2009）入库；本 CSP 保留为 Logit 语境下的
+        sanity-check 导航提示。
     - id: csp_Logit_Probit_Ordered_Probit_R4_dc077851
       pattern: 分组均值比较（high reputation vs celebrity vs none）+ paired t-tests 作为非回归交互的调节效应检验方式
       from_slot: R4
@@ -2089,7 +2175,10 @@ estimators:
           - magnitude
           corpus_path: econometric-models/DiD.md
         - id: r3_did_net_effect_then_opposing_contingencies
-          skeleton: "Table [x] presents the main results. The impact of [treatment] is, overall, [positive/negative]. Based on [column], [treatment] [increases/decreases] [outcome] of the average [unit] by about [X]% (covariates at means). Whereas [treatment] might produce both positive and negative effects (see below), the [dominant] effect is on average stronger, generating a net [increase/decrease]."
+          skeleton: Table [x] presents the main results. The impact of [treatment] is, overall, [positive/negative]. Based
+            on [column], [treatment] [increases/decreases] [outcome] of the average [unit] by about [X]% (covariates at means).
+            Whereas [treatment] might produce both positive and negative effects (see below), the [dominant] effect is on
+            average stronger, generating a net [increase/decrease].
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -2097,15 +2186,17 @@ estimators:
           sources:
           - Castellaneta_Conti_Kacperczyk_2017_SMJ
           transferability: high
-          paradigm_exclusivity: "Quasi-experimental DiD with opposing contingency hypotheses"
+          paradigm_exclusivity: Quasi-experimental DiD with opposing contingency hypotheses
           rhythm_tags:
           - average_net_effect
           - opposing_contingencies_preview
           - climax_setup
-          notes: "Average net effect is narrative setup for bidirectional contingencies; not a third hypothesis."
+          notes: Average net effect is narrative setup for bidirectional contingencies; not a third hypothesis.
           corpus_path: econometric-models/DiD.md
         - id: r3_did_interaction_fourbeat_onesd_pct
-          skeleton: "Hypothesis [x] predicted that [treatment] [increases/decreases] [outcome] when [moderator] is [high/low]. [Column] of Table [x] supports Hypothesis [x]: the [treatment] × [moderator] interaction is [sign] ([p]). As [moderator] changes by one SD ([sd]), treatment [augments/reduces] [outcome] by about [Y]%."
+          skeleton: 'Hypothesis [x] predicted that [treatment] [increases/decreases] [outcome] when [moderator] is [high/low].
+            [Column] of Table [x] supports Hypothesis [x]: the [treatment] × [moderator] interaction is [sign] ([p]). As [moderator]
+            changes by one SD ([sd]), treatment [augments/reduces] [outcome] by about [Y]%.'
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -2113,18 +2204,21 @@ estimators:
           sources:
           - Castellaneta_Conti_Kacperczyk_2017_SMJ
           transferability: high
-          paradigm_exclusivity: "DiD/OLS interaction in main table without interaction plot"
+          paradigm_exclusivity: DiD/OLS interaction in main table without interaction plot
           rhythm_tags:
           - direction
           - interaction_significance
           - onesd_percent_magnitude
           - support_judgment
-          notes: "Full four-beat without figure; use Lee two-pole variant if hypothesis predicts opposite simple-effect signs."
+          notes: Full four-beat without figure; use Lee two-pole variant if hypothesis predicts opposite simple-effect signs.
           corpus_path: econometric-models/DiD.md
       R4:
         skeleton_variants:
         - id: r4_did_interaction_two_pole_hypothesis_audit
-          skeleton: "The [treatment] × [moderator] interaction is [direction] and significant. We translate its magnitude and plot the treatment effect at both theoretically relevant moderator values. The [high] condition matches the predicted [sign], whereas the [low] condition is [observed sign] rather than [predicted sign]. Thus, the contingency receives support, but the sign-switch hypothesis is only [partially/not] supported as stated."
+          skeleton: The [treatment] × [moderator] interaction is [direction] and significant. We translate its magnitude and
+            plot the treatment effect at both theoretically relevant moderator values. The [high] condition matches the predicted
+            [sign], whereas the [low] condition is [observed sign] rather than [predicted sign]. Thus, the contingency receives
+            support, but the sign-switch hypothesis is only [partially/not] supported as stated.
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -2132,13 +2226,13 @@ estimators:
           sources:
           - Lee_Wu_Bednar_ORSC_18968
           transferability: high
-          paradigm_exclusivity: "DiD with moderation / heterogeneous treatment effects"
+          paradigm_exclusivity: DiD with moderation / heterogeneous treatment effects
           rhythm_tags:
           - interaction_coefficient
           - substantive_magnitude
           - two_pole_plot
           - partial_support
-          notes: "A significant interaction does not establish both predicted simple-effect signs."
+          notes: A significant interaction does not establish both predicted simple-effect signs.
           corpus_path: econometric-models/DiD.md
       R7:
         skeleton_variants:
@@ -2163,7 +2257,10 @@ estimators:
           - threat_reduction
           corpus_path: econometric-models/DiD.md
         - id: r7_did_identification_threat_section_battery
-          skeleton: "Validity subsections by threat: Matching (CEM on ex-ante value/risk) → Political economy of [policy] (enactment predictors null) → Supply/demand of [units] (treatment uncorrelated with quantities) → Placebo ±[k] → Early vs late enactment equality test → Alternative measures. Each subsection names the threat, states the test, and concludes robustness/exogeneity."
+          skeleton: 'Validity subsections by threat: Matching (CEM on ex-ante value/risk) → Political economy of [policy]
+            (enactment predictors null) → Supply/demand of [units] (treatment uncorrelated with quantities) → Placebo ±[k]
+            → Early vs late enactment equality test → Alternative measures. Each subsection names the threat, states the test,
+            and concludes robustness/exogeneity.'
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -2171,7 +2268,7 @@ estimators:
           sources:
           - Castellaneta_Conti_Kacperczyk_2017_SMJ
           transferability: high
-          paradigm_exclusivity: "Staggered policy / quasi-experiment DiD without event-study as sole ID display"
+          paradigm_exclusivity: Staggered policy / quasi-experiment DiD without event-study as sole ID display
           rhythm_tags:
           - threat_section_headers
           - matching
@@ -2182,7 +2279,8 @@ estimators:
           - alternative_measures
           corpus_path: econometric-models/DiD.md
         - id: r7_did_null_placebo_lead_lag_identification
-          skeleton: "To rule out chance significance, create placebo treatments [k] periods before and after the true change. Expect weaker/null effects. Neither the direct placebo impact nor interactions are significant ([appendix table])."
+          skeleton: To rule out chance significance, create placebo treatments [k] periods before and after the true change.
+            Expect weaker/null effects. Neither the direct placebo impact nor interactions are significant ([appendix table]).
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -2190,17 +2288,20 @@ estimators:
           sources:
           - Castellaneta_Conti_Kacperczyk_2017_SMJ
           transferability: high
-          paradigm_exclusivity: "Policy-timing placebo as identification corroboration"
+          paradigm_exclusivity: Policy-timing placebo as identification corroboration
           rhythm_tags:
           - placebo_lead_lag
           - expected_null
           - identification_corroboration
-          notes: "Null placebo corroborates identification; it does not support substantive hypotheses."
+          notes: Null placebo corroborates identification; it does not support substantive hypotheses.
           corpus_path: econometric-models/DiD.md
       R8:
         skeleton_variants:
         - id: r8_did_theoretical_premise_probe_chain
-          skeleton: "We probe observable implications of the proposed mechanism by examining [communication outcome], [communication capacity as a condition], and whether [core behavior] is associated with attention from each proposed intermediary. Convergent patterns support selected premises; domain-specific nulls narrow the mechanism. These analyses are corroborative and do not identify the causal mechanism."
+          skeleton: We probe observable implications of the proposed mechanism by examining [communication outcome], [communication
+            capacity as a condition], and whether [core behavior] is associated with attention from each proposed intermediary.
+            Convergent patterns support selected premises; domain-specific nulls narrow the mechanism. These analyses are
+            corroborative and do not identify the causal mechanism.
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -2208,47 +2309,49 @@ estimators:
           sources:
           - Lee_Wu_Bednar_ORSC_18968
           transferability: high
-          paradigm_exclusivity: "Quasi-experimental studies with observable mechanism implications"
+          paradigm_exclusivity: Quasi-experimental studies with observable mechanism implications
           rhythm_tags:
           - behavior_communication_pair
           - premise_probe
           - domain_specific_null
           - bounded_mechanism_claim
-          notes: "Organize corroborative analyses by theoretical premise, not by a list of extra outcomes."
+          notes: Organize corroborative analyses by theoretical premise, not by a list of extra outcomes.
           corpus_path: econometric-models/DiD.md
     cross_slot_patterns:
     - id: csp_did_conditional_effect_full_audit
-      pattern: "R4 significant interaction → R5 magnitude → conditional-effect plot at both poles → R6 support judgment against every directional clause"
+      pattern: R4 significant interaction → R5 magnitude → conditional-effect plot at both poles → R6 support judgment against
+        every directional clause
       from_slot: R4
       to_slot: R6
       paper_count: 1
       status: EMERGING
-      note: "Prevents interaction significance from masking failure of one predicted pole."
+      note: Prevents interaction significance from masking failure of one predicted pole.
     - id: csp_did_net_effect_then_heterogeneous_contingencies
-      pattern: "R2/R3 average net treatment effect → preview opposing contingencies → sequential interaction four-beats (direction→sig→1SD%→support) → R7 threat-section identification battery"
+      pattern: R2/R3 average net treatment effect → preview opposing contingencies → sequential interaction four-beats (direction→sig→1SD%→support)
+        → R7 threat-section identification battery
       from_slot: R3
       to_slot: R7
       paper_count: 1
       status: EMERGING
-      note: "For theories with bidirectional contingencies; average net effect sets climax before unpacking."
+      note: For theories with bidirectional contingencies; average net effect sets climax before unpacking.
       sources:
       - Castellaneta_Conti_Kacperczyk_2017_SMJ
     anti_patterns:
     - id: ap_did_significant_interaction_full_support
-      pattern: "Calling a sign-switch hypothesis fully supported solely because the interaction coefficient is significant"
+      pattern: Calling a sign-switch hypothesis fully supported solely because the interaction coefficient is significant
       severity: high
       affected_slots:
       - R4
       - R6
       source_count: 1
     - id: ap_did_bacon_as_bias_correction
-      pattern: "Presenting Goodman-Bacon decomposition as if it corrected heterogeneous cohort/time effects in TWFE"
+      pattern: Presenting Goodman-Bacon decomposition as if it corrected heterogeneous cohort/time effects in TWFE
       severity: high
       affected_slots:
       - R7
       source_count: 1
     - id: ap_did_marginal_p_as_full_support
-      pattern: "Labeling a contingency hypothesis fully supported at p≈.06 without acknowledging marginal/.10 convention"
+      pattern: Labeling a contingency hypothesis fully supported at p≈.06 without acknowledging marginal/.10 convention
       severity: medium
       affected_slots:
       - R3
@@ -2257,7 +2360,7 @@ estimators:
       sources:
       - Castellaneta_Conti_Kacperczyk_2017_SMJ
     - id: ap_did_placebo_null_as_hypothesis_support
-      pattern: "Treating null placebo (fake treatment timing) as evidence that substantive hypotheses are supported"
+      pattern: Treating null placebo (fake treatment timing) as evidence that substantive hypotheses are supported
       severity: high
       affected_slots:
       - R7
@@ -2266,32 +2369,38 @@ estimators:
       - Castellaneta_Conti_Kacperczyk_2017_SMJ
     honesty_boundaries:
     - id: hb_did_two_pole_prediction_audit
-      boundary: "If a hypothesis predicts opposite signs at high and low moderator values, each sign must be checked separately; a significant interaction alone supports only differential effects."
-      allowed_language: "partial support / supports the contingency but not the predicted low-condition sign"
+      boundary: If a hypothesis predicts opposite signs at high and low moderator values, each sign must be checked separately;
+        a significant interaction alone supports only differential effects.
+      allowed_language: partial support / supports the contingency but not the predicted low-condition sign
       affected_estimators:
       - DiD
       violation_count: 0
     - id: hb_did_legacy_twfe_diagnostic_only
-      boundary: "Bacon decomposition diagnoses comparison weights but does not repair TWFE bias under heterogeneous treatment effects; use a heterogeneity-robust staggered-DiD estimator and sensitivity analysis."
-      allowed_language: "diagnostic evidence / decomposition of conventional TWFE"
+      boundary: Bacon decomposition diagnoses comparison weights but does not repair TWFE bias under heterogeneous treatment
+        effects; use a heterogeneity-robust staggered-DiD estimator and sensitivity analysis.
+      allowed_language: diagnostic evidence / decomposition of conventional TWFE
       affected_estimators:
       - DiD
       violation_count: 0
     - id: hb_did_corroborative_not_mechanism_identification
-      boundary: "Associations between behavior, communication, and intermediary attention may corroborate premises but do not identify a causal mechanism without separate mediation identification."
-      allowed_language: "consistent with / corroborates selected premises / suggests"
+      boundary: Associations between behavior, communication, and intermediary attention may corroborate premises but do not
+        identify a causal mechanism without separate mediation identification.
+      allowed_language: consistent with / corroborates selected premises / suggests
       affected_estimators:
       - DiD
       violation_count: 0
     - id: hb_did_placebo_null_identification_only
-      boundary: "Null results on lead/lag placebo treatments corroborate that findings are not chance/spurious timing; they do not constitute support for substantive hypotheses."
-      allowed_language: "reduces concerns that results arise by chance / consistent with exogenous timing"
+      boundary: Null results on lead/lag placebo treatments corroborate that findings are not chance/spurious timing; they
+        do not constitute support for substantive hypotheses.
+      allowed_language: reduces concerns that results arise by chance / consistent with exogenous timing
       affected_estimators:
       - DiD
       violation_count: 0
     - id: hb_did_threat_battery_not_parallel_trends_substitute
-      boundary: "A matching/political-economy/placebo threat battery does not substitute for event-study parallel-trends evidence when the design is classic unit×time DiD; if the design is holding-period treatment or similar, state why event-study is not applicable."
-      allowed_language: "design-appropriate identification checks / not a substitute for parallel trends when required"
+      boundary: A matching/political-economy/placebo threat battery does not substitute for event-study parallel-trends evidence
+        when the design is classic unit×time DiD; if the design is holding-period treatment or similar, state why event-study
+        is not applicable.
+      allowed_language: design-appropriate identification checks / not a substitute for parallel trends when required
       affected_estimators:
       - DiD
       violation_count: 0
@@ -2364,7 +2473,14 @@ estimators:
           notes: ''
           corpus_path: econometric-models/计数模型.md
         - id: r3_count_poisson_gmm_inverted_u_chain
-          skeleton: 'Table [X] first reports the [Poisson-GMM / count-model] sequence: [baseline models] establish the focal curve, [subsequent models] introduce the pre-specified moderators, and the final model retains all terms. Hypothesis [H1] predicts an inverted-U-shaped association between [X] and expected [count outcome]. In Model [M], the linear term is [positive] and the quadratic term is [negative], both [statistically distinguishable/not distinguishable] from zero. Because these coefficients alone do not establish a curve, we test whether the marginal slope is [positive] at the lower supported value of X and [negative] at the upper value, and whether the estimated turning point [with confidence interval] lies within the observed support. Figure [F] plots predicted expected counts across that supported range. Thus, the joint shape evidence [supports/does not support] H1.'
+          skeleton: 'Table [X] first reports the [Poisson-GMM / count-model] sequence: [baseline models] establish the focal
+            curve, [subsequent models] introduce the pre-specified moderators, and the final model retains all terms. Hypothesis
+            [H1] predicts an inverted-U-shaped association between [X] and expected [count outcome]. In Model [M], the linear
+            term is [positive] and the quadratic term is [negative], both [statistically distinguishable/not distinguishable]
+            from zero. Because these coefficients alone do not establish a curve, we test whether the marginal slope is [positive]
+            at the lower supported value of X and [negative] at the upper value, and whether the estimated turning point [with
+            confidence interval] lies within the observed support. Figure [F] plots predicted expected counts across that
+            supported range. Thus, the joint shape evidence [supports/does not support] H1.'
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -2383,7 +2499,10 @@ estimators:
       R4:
         skeleton_variants:
         - id: r4_count_moderation_translation
-          skeleton: Because the interaction term is in log-count units, we translate it into predicted [outcome] differences. At the minimum observed value of [moderator], [high baseline group] is predicted to [experience] approximately [N] fewer [outcomes] than [low baseline group]. At the maximum observed value of [moderator], this gap narrows to [N] fewer [outcomes], representing a [percent] reduction in the penalty.
+          skeleton: Because the interaction term is in log-count units, we translate it into predicted [outcome] differences.
+            At the minimum observed value of [moderator], [high baseline group] is predicted to [experience] approximately
+            [N] fewer [outcomes] than [low baseline group]. At the maximum observed value of [moderator], this gap narrows
+            to [N] fewer [outcomes], representing a [percent] reduction in the penalty.
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -2399,7 +2518,11 @@ estimators:
           notes: 同 r5_count_moderation_translation（槽位 R4/R5 双标）；负二项交互项须用 predicted counts（corpus 变体4）
           corpus_path: econometric-models/计数模型.md
         - id: r4_count_nonlinear_moderation_subgroup
-          skeleton: Hypothesis [N] predicts that the [positive/negative] impact of [IV] on [DV] [diminishes/intensifies] over [moderator]. The traditional approach to testing such a contingency effect through interaction terms is inappropriate in the context of our analysis because we adopt a [nonlinear specification]... we tested this hypothesis through graphical analysis and a formal econometric test of differences in marginal effects of [IV] across subsamples containing different levels of [moderator].
+          skeleton: Hypothesis [N] predicts that the [positive/negative] impact of [IV] on [DV] [diminishes/intensifies] over
+            [moderator]. The traditional approach to testing such a contingency effect through interaction terms is inappropriate
+            in the context of our analysis because we adopt a [nonlinear specification]... we tested this hypothesis through
+            graphical analysis and a formal econometric test of differences in marginal effects of [IV] across subsamples
+            containing different levels of [moderator].
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -2415,7 +2538,10 @@ estimators:
           notes: 交互项不适用时用图形+子样本边际效应差异 t 检验（corpus 变体8）
           corpus_path: econometric-models/计数模型.md
         - id: r4_count_conditional_reversal
-          skeleton: The main effect of [predictor] is consistently significant and [negative/positive]. As [predictor] increases, [units] are generally [less/more] likely to [outcome]. However, the interaction between [predictor] and [moderator] is consistently [positive/negative] and significant, suggesting that [moderator] moderates the direct effect of [predictor].
+          skeleton: The main effect of [predictor] is consistently significant and [negative/positive]. As [predictor] increases,
+            [units] are generally [less/more] likely to [outcome]. However, the interaction between [predictor] and [moderator]
+            is consistently [positive/negative] and significant, suggesting that [moderator] moderates the direct effect of
+            [predictor].
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -2428,7 +2554,11 @@ estimators:
           notes: 主效应与交互方向相反时先报一致主效应再用 However 条件反转；同 r3_count_cross_model_consistency（R3/R4 双标）（corpus 变体10）
           corpus_path: econometric-models/计数模型.md
         - id: r4_count_rangewide_moderation_profile
-          skeleton: 'Given the non-linear nature of our count models, we also compute the linear and squared terms of the secondary effects to evaluate the true value and significance of the moderating effects across the whole range of the variable distribution ([citation]). Results confirm that the secondary effects of [moderator 1], [moderator 2], and [moderator 3] are in the expected direction and significant (p < .01) in at least [X]% of cases, with the exception of the linear effect of [moderator] (p < .1) and [moderator] (n.s.). Overall, these results add support to [hypotheses].'
+          skeleton: Given the non-linear nature of our count models, we also compute the linear and squared terms of the secondary
+            effects to evaluate the true value and significance of the moderating effects across the whole range of the variable
+            distribution ([citation]). Results confirm that the secondary effects of [moderator 1], [moderator 2], and [moderator
+            3] are in the expected direction and significant (p < .01) in at least [X]% of cases, with the exception of the
+            linear effect of [moderator] (p < .1) and [moderator] (n.s.). Overall, these results add support to [hypotheses].
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -2446,12 +2576,10 @@ estimators:
       R5:
         skeleton_variants:
         - id: r5_count_moderation_translation
-          skeleton: Because the interaction term is in log-count units, we translate
-            it into predicted [outcome] differences. At the minimum observed value
-            of [moderator], [high baseline group] is predicted to [experience] approximately
-            [N] fewer [outcomes] than [low baseline group]. At the maximum observed
-            value of [moderator], this gap narrows to [N] fewer [outcomes], representing
-            a [percent] reduction in the penalty.
+          skeleton: Because the interaction term is in log-count units, we translate it into predicted [outcome] differences.
+            At the minimum observed value of [moderator], [high baseline group] is predicted to [experience] approximately
+            [N] fewer [outcomes] than [low baseline group]. At the maximum observed value of [moderator], this gap narrows
+            to [N] fewer [outcomes], representing a [percent] reduction in the penalty.
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -2488,10 +2616,10 @@ estimators:
           notes: 对抗显著性崇拜——显著性与实际意义分离；'receives some support' 保留但显式声明实际意义有限
           corpus_path: econometric-models/计数模型.md
         - id: r6_count_null_sign_reversal_alternative
-          skeleton: Hypothesis [x] predicted a [negative] relationship between [predictor] and [outcome]. The findings in Model
-            [y] of Table [z] do not offer support for the hypothesis ([coefficient]; p = [value]). In fact, while not significantly
-            different from 0, the coefficient is [positive], suggesting that the effect may manifest in a different manner than
-            the expected [mechanism].
+          skeleton: Hypothesis [x] predicted a [negative] relationship between [predictor] and [outcome]. The findings in
+            Model [y] of Table [z] do not offer support for the hypothesis ([coefficient]; p = [value]). In fact, while not
+            significantly different from 0, the coefficient is [positive], suggesting that the effect may manifest in a different
+            manner than the expected [mechanism].
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -2548,15 +2676,12 @@ estimators:
           notes: ''
           corpus_path: econometric-models/计数模型.md
         - id: r7_text_measure_robustness_bundle
-          skeleton: We assess whether the findings depend on specific choices in measuring
-            [text construct]. First, to address the concern that the results are sensitive
-            to [dictionary/tool choice], we re-estimate the models using [alternative
-            dictionary/tool]; the focal interactions remain [direction/status]. Second,
-            to address [topic granularity/aggregation rule], we re-estimate using [alternative
-            topic count/aggregation method]; the results are [consistent/qualified].
-            Third, to address [component validity], we examine [components] separately
-            and find that [pattern]. Together, these checks reduce concern that the
-            findings are artifacts of the particular text-measurement pipeline.
+          skeleton: We assess whether the findings depend on specific choices in measuring [text construct]. First, to address
+            the concern that the results are sensitive to [dictionary/tool choice], we re-estimate the models using [alternative
+            dictionary/tool]; the focal interactions remain [direction/status]. Second, to address [topic granularity/aggregation
+            rule], we re-estimate using [alternative topic count/aggregation method]; the results are [consistent/qualified].
+            Third, to address [component validity], we examine [components] separately and find that [pattern]. Together,
+            these checks reduce concern that the findings are artifacts of the particular text-measurement pipeline.
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -2572,14 +2697,11 @@ estimators:
           notes: 文本测量稳健性必须按测量威胁组织，而非按表格罗列
           corpus_path: econometric-models/计数模型.md
         - id: r7_composite_text_disaggregation
-          skeleton: Because [text construct] is a composite of [component 1], [component
-            2], and [component 3], we examine whether the interaction with [baseline
-            predictor] holds for each component separately. Replacing the composite
-            with [component 1] leaves the interaction [direction/status], and the
-            [component 2] interaction is also [direction/status]. However, the [component
-            3] interaction is [not consistent/opposite/null]. This pattern suggests
-            that the moderating effect operates through [facet captured by components
-            1 and 2] rather than [facet captured by component 3].
+          skeleton: Because [text construct] is a composite of [component 1], [component 2], and [component 3], we examine
+            whether the interaction with [baseline predictor] holds for each component separately. Replacing the composite
+            with [component 1] leaves the interaction [direction/status], and the [component 2] interaction is also [direction/status].
+            However, the [component 3] interaction is [not consistent/opposite/null]. This pattern suggests that the moderating
+            effect operates through [facet captured by components 1 and 2] rather than [facet captured by component 3].
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -2595,7 +2717,18 @@ estimators:
           notes: 复合文本指标必须分解以显示哪个 facet 驱动效应
           corpus_path: econometric-models/计数模型.md
         - id: r7_count_poisson_gmm_robustness_battery
-          skeleton: 'We conduct further tests to check that our results are robust to changes in specifications. First, to confirm the validity of our [count-GMM] estimation, we follow [validity procedure/citation]. Second, to address standard error inefficiencies from the generated regressor ([name]) in the outcome equation, we re-estimate the models bootstrapping the standard errors [N] times with robust standard errors. Third, to account for overdispersion ([rough share]% of cases), we use a [negative binomial] estimator in lieu of [Poisson]. Fourth, to address selection into [endogenous behavior], we specify [N] alternative selection models using [fine-grained auxiliary data]. Fifth, we test alternative specifications of [IV and DV]. Sixth, because [external reference] is unavailable for years before [cutoff], we use an alternative measure of [construct] with a bounded denominator. Seventh, to address correlation among the moderators, we re-estimate the main models using a modified [orthogonalization] procedure. Finally, to check sensitivity to outliers, we run censoring analyses excluding values above [thresholds] and winsorizing with lower and upper cut-offs ([citation]). The results of these tests remain consistent with our hypothesized relationships.'
+          skeleton: We conduct further tests to check that our results are robust to changes in specifications. First, to
+            confirm the validity of our [count-GMM] estimation, we follow [validity procedure/citation]. Second, to address
+            standard error inefficiencies from the generated regressor ([name]) in the outcome equation, we re-estimate the
+            models bootstrapping the standard errors [N] times with robust standard errors. Third, to account for overdispersion
+            ([rough share]% of cases), we use a [negative binomial] estimator in lieu of [Poisson]. Fourth, to address selection
+            into [endogenous behavior], we specify [N] alternative selection models using [fine-grained auxiliary data]. Fifth,
+            we test alternative specifications of [IV and DV]. Sixth, because [external reference] is unavailable for years
+            before [cutoff], we use an alternative measure of [construct] with a bounded denominator. Seventh, to address
+            correlation among the moderators, we re-estimate the main models using a modified [orthogonalization] procedure.
+            Finally, to check sensitivity to outliers, we run censoring analyses excluding values above [thresholds] and winsorizing
+            with lower and upper cut-offs ([citation]). The results of these tests remain consistent with our hypothesized
+            relationships.
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -2613,7 +2746,16 @@ estimators:
           notes: 逐条 to address X 定位；区别于文本测量专属变体5/6 与通用枚举 OLS-FE 变体21（corpus 变体17）
           corpus_path: econometric-models/计数模型.md
         - id: r7_count_system_gmm_replication
-          skeleton: 'Finally, in further analysis, we replicate our findings with a linear GMM estimation [citation], using the logarithmic transformation of the monetary amount of [outcome] as a dependent variable. Compared to our main specification, this procedure allows us to include individual fixed effects and thus control for (invariant) unobserved heterogeneity. The correlation between this continuous measure and the count measure used in our main models is just above [threshold]. We employ a system GMM estimator rather than a difference GMM estimator, as the former allows for more instruments. We treat [IV], its squared term, [lagged DV], and the interaction terms as endogenous; all remaining variables, except [time controls] and [group affiliation], are considered predetermined. Robust standard errors, clustered by [unit], are included in all specifications. We assess the validity of the GMM estimator and the selected instruments via serial correlation tests (AR(1) and AR(2)) and the Hansen test of overidentification restrictions. The results of the linear models are similar to the main specification, adding support to our hypotheses.'
+          skeleton: Finally, in further analysis, we replicate our findings with a linear GMM estimation [citation], using
+            the logarithmic transformation of the monetary amount of [outcome] as a dependent variable. Compared to our main
+            specification, this procedure allows us to include individual fixed effects and thus control for (invariant) unobserved
+            heterogeneity. The correlation between this continuous measure and the count measure used in our main models is
+            just above [threshold]. We employ a system GMM estimator rather than a difference GMM estimator, as the former
+            allows for more instruments. We treat [IV], its squared term, [lagged DV], and the interaction terms as endogenous;
+            all remaining variables, except [time controls] and [group affiliation], are considered predetermined. Robust
+            standard errors, clustered by [unit], are included in all specifications. We assess the validity of the GMM estimator
+            and the selected instruments via serial correlation tests (AR(1) and AR(2)) and the Hansen test of overidentification
+            restrictions. The results of the linear models are similar to the main specification, adding support to our hypotheses.
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -2633,7 +2775,13 @@ estimators:
         description: 补充 / 事后 / 机制
         skeleton_variants:
         - id: r8_count_alt_operationalization_mechanism_adjudication
-          skeleton: 'Furthermore, we explore whether [evaluators] consider [IV] relative to [benchmark] (i.e., as a proportion of [combined measure] rather than as an absolute value). Rather than a deviation from [identity], a relative measure may capture the [rival mechanism], suggesting a different mechanism from [focal mechanism]. To test this possibility, we compute further iterations of our models with an alternative specification of [IV], operationalized as [relative operationalization]. We find the level of significance of our explanatory variables to be lower or absent with this alternative specification. We interpret this finding as discounting the [rival mechanism] argument and further supporting the [focal mechanism]: [mechanism rationale].'
+          skeleton: 'Furthermore, we explore whether [evaluators] consider [IV] relative to [benchmark] (i.e., as a proportion
+            of [combined measure] rather than as an absolute value). Rather than a deviation from [identity], a relative measure
+            may capture the [rival mechanism], suggesting a different mechanism from [focal mechanism]. To test this possibility,
+            we compute further iterations of our models with an alternative specification of [IV], operationalized as [relative
+            operationalization]. We find the level of significance of our explanatory variables to be lower or absent with
+            this alternative specification. We interpret this finding as discounting the [rival mechanism] argument and further
+            supporting the [focal mechanism]: [mechanism rationale].'
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -2649,7 +2797,16 @@ estimators:
           notes: 同 IV 替代操作化 null 折扣竞争机制；须排除低功效/测量噪声（corpus 变体19）
           corpus_path: econometric-models/计数模型.md
         - id: r8_quant_results_qual_mechanism_triangulation
-          skeleton: 'Finally, we interviewed [informants] in order to further elucidate and interpret our results. We first focus on the main [effect]. Statements from our informants suggest that—without being specifically prompted—they considered both of our two postulated mechanisms as relevant. On the one hand, they considered [IV] as signaling generic ability, or, in the words of one respondent, [ability quote]. Simultaneously, informants suggested that high levels of [IV] were likely to trigger negative evaluations, highlighting [identity] concerns rather than imputed ability: [identity quote]. These respondents all reiterated that this negative effect would not apply to a normal or reasonable amount of [IV] but only when it became excessive; this provides support for our conjecture that lower and moderate levels have little or no negative effects. Overall, our interview evidence provides additional support for our hypothesis posing a [curvilinear] effect as a result of two interacting effects, a positive [ability] effect, and a negative [identity] effect.'
+          skeleton: 'Finally, we interviewed [informants] in order to further elucidate and interpret our results. We first
+            focus on the main [effect]. Statements from our informants suggest that—without being specifically prompted—they
+            considered both of our two postulated mechanisms as relevant. On the one hand, they considered [IV] as signaling
+            generic ability, or, in the words of one respondent, [ability quote]. Simultaneously, informants suggested that
+            high levels of [IV] were likely to trigger negative evaluations, highlighting [identity] concerns rather than
+            imputed ability: [identity quote]. These respondents all reiterated that this negative effect would not apply
+            to a normal or reasonable amount of [IV] but only when it became excessive; this provides support for our conjecture
+            that lower and moderate levels have little or no negative effects. Overall, our interview evidence provides additional
+            support for our hypothesis posing a [curvilinear] effect as a result of two interacting effects, a positive [ability]
+            effect, and a negative [identity] effect.'
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -3305,7 +3462,12 @@ estimators:
           notes: ''
           corpus_path: econometric-models/IV-2SLS.md
         - id: r7_iv_robustness_exception_ledger
-          skeleton: We assess sensitivity to [alternative measurement], [alternative instrument families], [alternative classification], and [additional omitted-information control]. The headline conclusions for [core hypotheses] remain consistent. Two qualifications are important. First, [mediation inference] changes from [partial] to [complete/stronger] because [direct path changes]. Second, [weakly supported moderator] becomes nonsignificant under [alternative specification]. We therefore treat [headline effect] as robust, the exact form of [mediation] as specification-sensitive, and [moderator hypothesis] as weaker evidence.
+          skeleton: We assess sensitivity to [alternative measurement], [alternative instrument families], [alternative classification],
+            and [additional omitted-information control]. The headline conclusions for [core hypotheses] remain consistent.
+            Two qualifications are important. First, [mediation inference] changes from [partial] to [complete/stronger] because
+            [direct path changes]. Second, [weakly supported moderator] becomes nonsignificant under [alternative specification].
+            We therefore treat [headline effect] as robust, the exact form of [mediation] as specification-sensitive, and
+            [moderator hypothesis] as weaker evidence.
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -3318,7 +3480,8 @@ estimators:
           - robustness_exception_ledger
           - mediation_form_sensitivity
           - fragile_boundary
-          notes: "Do not collapse partial-to-complete mediation into 'stronger'; downgrade weak moderator when a reasonable specification yields null."
+          notes: Do not collapse partial-to-complete mediation into 'stronger'; downgrade weak moderator when a reasonable
+            specification yields null.
           corpus_path: econometric-models/IV-2SLS.md
         - id: r7_sentence_robustness_confirmation
           skeleton: We [still/find] [robust/significant] [effect] ([coefficient], p < [threshold], Column [Y], [Table X]).
@@ -4028,14 +4191,11 @@ estimators:
       R3:
         skeleton_variants:
         - id: r3_experiment_anova_four_beat
-          skeleton: Hypothesis [x] predicted that [condition A] would elicit higher
-            [DV] than [condition B] among [audience]. We first checked for outliers
-            using [rule] and [removed/retained] [number]. A one-way ANOVA revealed
-            a significant effect of [IV] on [DV], F([df1], [df2]) = [value], p [relation]
-            [threshold], η² = [value]. Participants in [condition A] reported higher
-            [DV] (M = [value], SD = [value], 95% CI [[lower], [upper]]) than those
-            in [condition B] (M = [value], SD = [value], 95% CI [[lower], [upper]]).
-            These results support Hypothesis [x].
+          skeleton: Hypothesis [x] predicted that [condition A] would elicit higher [DV] than [condition B] among [audience].
+            We first checked for outliers using [rule] and [removed/retained] [number]. A one-way ANOVA revealed a significant
+            effect of [IV] on [DV], F([df1], [df2]) = [value], p [relation] [threshold], η² = [value]. Participants in [condition
+            A] reported higher [DV] (M = [value], SD = [value], 95% CI [[lower], [upper]]) than those in [condition B] (M
+            = [value], SD = [value], 95% CI [[lower], [upper]]). These results support Hypothesis [x].
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -4053,15 +4213,12 @@ estimators:
           notes: 实验 ANOVA 必须报告 η² 和条件均值/CI
           corpus_path: econometric-models/实验.md
         - id: r3_experiment_mediation_hayes
-          skeleton: To examine whether [mediator] explains the effect of [IV] on [DV],
-            we first tested whether [IV] influenced [mediator]. A one-way ANOVA showed
-            that [condition A] led to [higher/lower] [mediator] (M = [value], SD =
-            [value]) than [condition B] (M = [value], SD = [value]), F([df1], [df2])
-            = [value], p [relation] [threshold]. We also tested [alternative mediator
-            1] and [alternative mediator 2] and found no significant effect of [IV].
-            We then estimated the indirect effect using Hayes's PROCESS model [4] with
-            [number] bootstrap iterations. The indirect effect was b = [value], SE =
-            [value], 95% CI [[lower], [upper]].
+          skeleton: To examine whether [mediator] explains the effect of [IV] on [DV], we first tested whether [IV] influenced
+            [mediator]. A one-way ANOVA showed that [condition A] led to [higher/lower] [mediator] (M = [value], SD = [value])
+            than [condition B] (M = [value], SD = [value]), F([df1], [df2]) = [value], p [relation] [threshold]. We also tested
+            [alternative mediator 1] and [alternative mediator 2] and found no significant effect of [IV]. We then estimated
+            the indirect effect using Hayes's PROCESS model [4] with [number] bootstrap iterations. The indirect effect was
+            b = [value], SE = [value], 95% CI [[lower], [upper]].
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -4078,8 +4235,12 @@ estimators:
           notes: Hayes PROCESS + bootstrap CI 是实验中介报告标准
           corpus_path: econometric-models/实验.md
         - id: r3_event_conditional_indirect_direct_inconsistent
-          skeleton: >
-            Report [X × event → mediator], [mediator → outcome], and the bootstrapped conditional indirect effect separately before and after the event. Then report the direct interaction independently; if it is null or inconsistent across studies, conclude that the event-contingent mechanism replicated without claiming replication of the direct behavioral effect.
+          skeleton: 'Report [X × event → mediator], [mediator → outcome], and the bootstrapped conditional indirect effect
+            separately before and after the event. Then report the direct interaction independently; if it is null or inconsistent
+            across studies, conclude that the event-contingent mechanism replicated without claiming replication of the direct
+            behavioral effect.
+
+            '
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -4093,13 +4254,18 @@ estimators:
           - conditional_indirect_ci
           - direct_effect_separation
           - bounded_claim
-          notes: "Indirect effects may be estimable without a significant direct interaction, but they do not rescue the direct-effect hypothesis."
+          notes: Indirect effects may be estimable without a significant direct interaction, but they do not rescue the direct-effect
+            hypothesis.
           corpus_path: econometric-models/SEM-moderated-mediation.md
       R4:
         skeleton_variants:
         - id: r4_experiment_three_condition_intervention_decomposition
-          skeleton: >
-            Report the omnibus [group × three-level intervention] interaction, then decompose it with prespecified contrasts in this order: group differences within each condition, intervention contrasts within the focal group, and the same contrasts within the comparison group. Conclude with the bounded claim about which group changed and where the baseline difference narrowed.
+          skeleton: 'Report the omnibus [group × three-level intervention] interaction, then decompose it with prespecified
+            contrasts in this order: group differences within each condition, intervention contrasts within the focal group,
+            and the same contrasts within the comparison group. Conclude with the bounded claim about which group changed
+            and where the baseline difference narrowed.
+
+            '
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -4114,15 +4280,19 @@ estimators:
           - within_group_contrasts
           - stable_comparison_group
           - bounded_claim
-          notes: "A significant-vs-nonsignificant contrast is not a difference test; use the interaction or direct contrasts. A three-level treatment is not automatically a three-way interaction."
+          notes: A significant-vs-nonsignificant contrast is not a difference test; use the interaction or direct contrasts.
+            A three-level treatment is not automatically a three-way interaction.
           corpus_path: econometric-models/实验.md
       R7:
         skeleton_variants: []
       R8:
         skeleton_variants:
         - id: r8_serial_mediation_competing_order_sensitivity
-          skeleton: >
-            Report the proposed serial indirect effect and its bootstrap CI, then estimate the reversed mediator sequence as a competing-order sensitivity check. If the competing CI includes zero, state that no clear evidence was detected for that sequence; do not claim that causal or temporal order has been established.
+          skeleton: 'Report the proposed serial indirect effect and its bootstrap CI, then estimate the reversed mediator
+            sequence as a competing-order sensitivity check. If the competing CI includes zero, state that no clear evidence
+            was detected for that sequence; do not claim that causal or temporal order has been established.
+
+            '
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -4136,7 +4306,8 @@ estimators:
           - competing_order
           - bootstrap_ci
           - causal_boundary
-          notes: "Significant versus nonsignificant indirect paths need not differ. Cross-sectional path ordering, especially when Y is measured before the mediators, cannot establish causal sequence."
+          notes: Significant versus nonsignificant indirect paths need not differ. Cross-sectional path ordering, especially
+            when Y is measured before the mediators, cannot establish causal sequence.
           corpus_path: econometric-models/SEM-moderated-mediation.md
     cross_slot_patterns: []
     anti_patterns: []
@@ -4167,9 +4338,10 @@ estimators:
       R2:
         skeleton_variants:
         - id: r2_multistudy_replication_extension_repair_map
-          skeleton: >
-            Study [N] replicates the focal relationship from Study [N-1] and extends it by replacing [measurement/source],
+          skeleton: 'Study [N] replicates the focal relationship from Study [N-1] and extends it by replacing [measurement/source],
             moving from [context A] to [context B], and expanding [short-term scope] to [long-term scope].
+
+            '
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -4184,16 +4356,14 @@ estimators:
       R7:
         skeleton_variants:
         - id: r7_multistudy_cross_study_synthesis
-          skeleton: >
-            Across [number] studies, the findings converge on a consistent
-            pattern: [summary of supported hypotheses]. This convergence is notable
-            because the studies varied [dimensions: ideas, presentation modes, dependent
-            variables, audiences]. Study [1] showed [result with audience A and DV1].
-            Study [2] replicated the effect with [audience B and DV1]. Study [3] extended
-            it to [DV2] and provided evidence for [mechanism]. Study [4] confirmed the
-            pattern with [audience C and DV3]. Together, these results suggest that
-            [theoretical claim] is robust across [boundary conditions], although [remaining
-            limitation/boundary] warrants future research.
+          skeleton: 'Across [number] studies, the findings converge on a consistent pattern: [summary of supported hypotheses].
+            This convergence is notable because the studies varied [dimensions: ideas, presentation modes, dependent variables,
+            audiences]. Study [1] showed [result with audience A and DV1]. Study [2] replicated the effect with [audience
+            B and DV1]. Study [3] extended it to [DV2] and provided evidence for [mechanism]. Study [4] confirmed the pattern
+            with [audience C and DV3]. Together, these results suggest that [theoretical claim] is robust across [boundary
+            conditions], although [remaining limitation/boundary] warrants future research.
+
+            '
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -4212,9 +4382,11 @@ estimators:
       R9:
         skeleton_variants:
         - id: r9_multistudy_opposing_paths_horizon_adjudication
-          skeleton: >
-            Study [1] separates opposing direct and stakeholder-mediated components; Study [2] tests which component persists across
-            [short/long] outcome horizons, reports the total association separately, and preserves unresolved null/causal questions.
+          skeleton: 'Study [1] separates opposing direct and stakeholder-mediated components; Study [2] tests which component
+            persists across [short/long] outcome horizons, reports the total association separately, and preserves unresolved
+            null/causal questions.
+
+            '
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -4229,8 +4401,11 @@ estimators:
           - bounded_claim
           corpus_path: econometric-models/多研究.md
         - id: r9_multistudy_claim_level_evidence_ledger
-          skeleton: >
-            Summarize evidence by theoretical claim—direct interaction, mediator interaction, conditional indirect effect, duration, and subgroup asymmetry—rather than counting studies as supported or unsupported. Preserve nulls and attach a separate bounded conclusion to each claim.
+          skeleton: 'Summarize evidence by theoretical claim—direct interaction, mediator interaction, conditional indirect
+            effect, duration, and subgroup asymmetry—rather than counting studies as supported or unsupported. Preserve nulls
+            and attach a separate bounded conclusion to each claim.
+
+            '
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -4246,8 +4421,11 @@ estimators:
           - duration_boundary
           corpus_path: econometric-models/多研究.md
         - id: r9_multistudy_limitation_repair_relay
-          skeleton: >
-            Close Study [N] by stating its bounded contribution, naming one concrete design limitation, and specifying how Study [N+1] changes the design to repair that limitation. At the start of Study [N+1], confirm the repair before adding the next theoretical task.
+          skeleton: 'Close Study [N] by stating its bounded contribution, naming one concrete design limitation, and specifying
+            how Study [N+1] changes the design to repair that limitation. At the start of Study [N+1], confirm the repair
+            before adding the next theoretical task.
+
+            '
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -4261,7 +4439,8 @@ estimators:
           - design_repair
           - study_relay
           - progressive_validity
-          notes: "The limitation must be real and the next study must actually repair it; do not use a cosmetic limitation merely to advertise another study."
+          notes: The limitation must be real and the next study must actually repair it; do not use a cosmetic limitation
+            merely to advertise another study.
           corpus_path: econometric-models/多研究.md
     cross_slot_patterns:
     - id: opposing_paths_horizon_adjudication
@@ -4273,7 +4452,7 @@ estimators:
       - R3
       - R6
       - R9
-      note: "Direct/indirect/total decomposition in Study 1 followed by short/long persistence comparison in Study 2."
+      note: Direct/indirect/total decomposition in Study 1 followed by short/long persistence comparison in Study 2.
     - id: claim_level_evidence_ledger
       status: EMERGING
       source_count: 1
@@ -4283,11 +4462,13 @@ estimators:
       - R3
       - R6
       - R9
-      note: "Separates inconsistent direct interactions from replicated mediator interactions and conditional indirect effects; duration and subgroup findings receive independent verdicts."
+      note: Separates inconsistent direct interactions from replicated mediator interactions and conditional indirect effects;
+        duration and subgroup findings receive independent verdicts.
     anti_patterns: []
     honesty_boundaries:
-    - "Do not call a direct behavioral interaction replicated when only the mediator interaction and conditional indirect effect recur."
-    - "A nonsignificant postevent slope means no attenuation was detected in the observed window, not that the effect is permanent."
+    - Do not call a direct behavioral interaction replicated when only the mediator interaction and conditional indirect effect
+      recur.
+    - A nonsignificant postevent slope means no attenuation was detected in the observed window, not that the effect is permanent.
   匹配DiD:
     display_name: 匹配 DiD (PSM + DiD / CEM + DiD)
     usage_stats:
@@ -4310,7 +4491,9 @@ estimators:
       R7:
         skeleton_variants:
         - id: r7_matched_did_cem_exante_symmetry
-          skeleton: "In a quasi-experimental setting, treated and control [units] may differ ex ante on characteristics correlating with both [treatment] and [outcome]. Re-estimate baseline specifications after CEM matching on [value proxy] and [risk proxy] (Iacus, King, and Porro, 2009). Results remain robust ([appendix table])."
+          skeleton: In a quasi-experimental setting, treated and control [units] may differ ex ante on characteristics correlating
+            with both [treatment] and [outcome]. Re-estimate baseline specifications after CEM matching on [value proxy] and
+            [risk proxy] (Iacus, King, and Porro, 2009). Results remain robust ([appendix table]).
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -4318,19 +4501,19 @@ estimators:
           sources:
           - Castellaneta_Conti_Kacperczyk_2017_SMJ
           transferability: high
-          paradigm_exclusivity: "Matching-as-robustness for DiD/quasi-experiment (not matched DiD as sole primary estimator)"
+          paradigm_exclusivity: Matching-as-robustness for DiD/quasi-experiment (not matched DiD as sole primary estimator)
           rhythm_tags:
           - exante_asymmetry_threat
           - cem
           - remain_robust
-          notes: "First fill of 匹配DiD corpus; CEM addresses observables only."
+          notes: First fill of 匹配DiD corpus; CEM addresses observables only.
           corpus_path: econometric-models/匹配DiD.md
     cross_slot_patterns: []
     anti_patterns: []
     honesty_boundaries:
     - id: hb_matched_did_cem_observables_only
-      boundary: "CEM matching as robustness addresses selection on observables only; do not claim it resolves unobserved confounding."
-      allowed_language: "remain robust in the matched sample / reduces concerns about ex-ante observable imbalance"
+      boundary: CEM matching as robustness addresses selection on observables only; do not claim it resolves unobserved confounding.
+      allowed_language: remain robust in the matched sample / reduces concerns about ex-ante observable imbalance
       affected_estimators:
       - 匹配DiD
       - DiD
@@ -4444,10 +4627,10 @@ estimators:
         skeleton_variants:
         - id: r4_three_way_continuous_moderator_marginal_effects
           skeleton: Model [N] of Table [X] shows the full specification including the triple interaction among [IV], [moderator_1],
-            and [moderator_2]. The coefficient on the triple interaction term is [positive/negative] and significant (β = [value],
-            p < [threshold]), consistent with Hypothesis [H_3way]. The marginal effects are reported in Panel [B/C] of Table [Y],
-            showing the coefficient on [IV] (δ1) at [one SD below/above] the mean of [moderator_1] and [moderator_2]. As [moderator_1]
-            increases, the [positive/negative] effect of [IV] on [DV] becomes [stronger/weaker]; this [amplification/attenuation]
+            and [moderator_2]. The coefficient on the triple interaction term is [positive/negative] and significant (β =
+            [value], p < [threshold]), consistent with Hypothesis [H_3way]. The marginal effects are reported in Panel [B/C]
+            of Table [Y], showing the coefficient on [IV] (δ1) at [one SD below/above] the mean of [moderator_1] and [moderator_2].
+            As [moderator_1] increases, the [positive/negative] effect of [IV] on [DV] becomes [stronger/weaker]; this [amplification/attenuation]
             is [greater/smaller] when [moderator_2] is higher.
           paper_count: 1
           status: EMERGING
@@ -4513,7 +4696,7 @@ estimators:
       R2:
         skeleton_variants:
         - id: r2_gmm_nested_mmsc_aic
-          skeleton: "Nested GMM model comparison using MMSC-AIC; stepwise Model 1→2→3 tied to incremental mechanisms"
+          skeleton: Nested GMM model comparison using MMSC-AIC; stepwise Model 1→2→3 tied to incremental mechanisms
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -4530,7 +4713,7 @@ estimators:
       R3:
         skeleton_variants:
         - id: r3_state_space_initial_sigma_path
-          skeleton: "RQ-driven reporting: initial λ₀ + σ diagnostic → recovered path inference → theory-linked interpretation"
+          skeleton: 'RQ-driven reporting: initial λ₀ + σ diagnostic → recovered path inference → theory-linked interpretation'
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -4545,7 +4728,7 @@ estimators:
           - sigma_diagnostic
           corpus_path: econometric-models/BLP-状态空间.md
         - id: r3_dual_level_indirect_heterogeneity
-          skeleton: "Nameplate vs parent indirect channels + strong/weak brand carryover heterogeneity + endogeneity confirmation"
+          skeleton: Nameplate vs parent indirect channels + strong/weak brand carryover heterogeneity + endogeneity confirmation
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -4561,7 +4744,7 @@ estimators:
       R8:
         skeleton_variants:
         - id: r8_counterfactual_decomposition
-          skeleton: "With/without shock counterfactual fit + short/long-term loss + four-channel decomposition"
+          skeleton: With/without shock counterfactual fit + short/long-term loss + four-channel decomposition
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -4576,7 +4759,7 @@ estimators:
           - short_long_term
           corpus_path: econometric-models/BLP-状态空间.md
         - id: r8_policy_simulation_non_optimal
-          skeleton: "Non-optimality framing + scenario ladder reallocation simulation on validation sample"
+          skeleton: Non-optimality framing + scenario ladder reallocation simulation on validation sample
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -4592,20 +4775,21 @@ estimators:
           corpus_path: econometric-models/BLP-状态空间.md
     cross_slot_patterns:
     - id: structural_results_arc
-      pattern: "R2 model comparison → R3 parameters by mechanism → R8 counterfactual decomposition → R8 policy simulation"
+      pattern: R2 model comparison → R3 parameters by mechanism → R8 counterfactual decomposition → R8 policy simulation
       sources:
       - Liu_Shankar_2015_MS
     anti_patterns:
     - id: ap_structural_hypothesis_hardcode
-      pattern: "Forcing H1/H2 support language on empirical-driven structural papers without numbered hypotheses"
+      pattern: Forcing H1/H2 support language on empirical-driven structural papers without numbered hypotheses
       severity: medium
       affected_slots:
       - R3
-      note: "Use research-question / model-prediction cadence instead"
+      note: Use research-question / model-prediction cadence instead
     honesty_boundaries:
     - id: hb_policy_sim_no_uncertainty
-      boundary: "Point-estimate policy simulation without confidence bands must use conditional predicted-gain language, not causal certainty"
-      allowed_language: "predicted gain under scenario / simulated increase"
+      boundary: Point-estimate policy simulation without confidence bands must use conditional predicted-gain language, not
+        causal certainty
+      allowed_language: predicted gain under scenario / simulated increase
   定性过程研究:
     display_name: Qualitative Process Study / Grounded Theory
     usage_stats:
@@ -4632,8 +4816,8 @@ estimators:
         skeleton_variants:
         - id: f1_process_model_overview
           skeleton: Our findings suggest that [process] unfolds through [number] partially overlapping phases. We use [analytical
-            lens] to understand how [collective actors] and [individual actors] pursue [competing goals] across different relational
-            spaces.
+            lens] to understand how [collective actors] and [individual actors] pursue [competing goals] across different
+            relational spaces.
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -4650,8 +4834,8 @@ estimators:
       F2:
         skeleton_variants:
         - id: f2_phase_opening
-          skeleton: The [phase name] phase began around [time/event]. [Actors], motivated by [goal], responded by [action]. This
-            established [new agenda/prototype], which was visible on the front stage through [practices].
+          skeleton: The [phase name] phase began around [time/event]. [Actors], motivated by [goal], responded by [action].
+            This established [new agenda/prototype], which was visible on the front stage through [practices].
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -4667,9 +4851,9 @@ estimators:
       F3:
         skeleton_variants:
         - id: f3_front_stage_backstage_contrast
-          skeleton: On the front stage, the collective [action] to signal [value/identity]. While the collective publicly [front-stage
-            action], individual organizations often [backstage action] to access [resource]. This created a tension between [collective
-            goal] and [organizational survival need].
+          skeleton: On the front stage, the collective [action] to signal [value/identity]. While the collective publicly
+            [front-stage action], individual organizations often [backstage action] to access [resource]. This created a tension
+            between [collective goal] and [organizational survival need].
           paper_count: 1
           status: EMERGING
           subfield_distribution:
@@ -4737,6 +4921,144 @@ estimators:
       affected_estimators:
       - 定性过程研究
       note: 可使用机制解释，但必须标记为理论构建而非因果识别
+      violation_count: 0
+  事件研究法:
+    display_name: 事件研究法 (Event Study / CAR-AR)
+    usage_stats:
+      revise: 0
+      reject: 0
+      last_critique: null
+      common_revise_reasons: []
+    forced_slots:
+    - R2
+    - R3
+    - R7
+    high_risk_missing:
+      R3: 缺分组 AR 多检验 / 组间对比主检验
+      R7: 稳健性机械罗列而非按 threat 组织
+      R9: 缺 climax 后 stakeholder 收束
+    slots:
+      R3:
+        description: ''
+        skeleton_variants:
+        - id: r3_eventstudy_subgroup_ar_multitest_contrast
+          skeleton: Table [X], Panel A, shows that the average abnormal return for [strategy_A] is [signed_pct], which is
+            consistently significant in the common t-test, the t-Patell test, and the t-BMP test. In contrast, none of the
+            three tests are significant for [strategy_B]. We further compare the abnormal returns by conducting a two-sample
+            t-test and a nonparametric Wilcoxon rank-sum test. As Table [X], Panel B, shows, [strategy_A] have significantly
+            more negative abnormal returns than [strategy_B]. The difference is [signed_pct] (p < [threshold]). Overall, these
+            results provide consistent evidence that [strategy_A] are associated with significantly more negative abnormal
+            returns than [strategy_B]. On average, the abnormal return for [strategy_A] is approximately [N] percentage points
+            lower than that for [strategy_B] (p < [threshold]). Thus, Hypothesis [H] is supported, suggesting that the stock
+            market interprets [strategy_A] as a signal of [severe_loss_construct].
+          verbatim_anchor: Therefore, significantly negative abnormal stock return is associated with proactive recalls but
+            not with passive recalls. ... Thus, our hypothesis is supported, suggesting that the stock market interprets a
+            proactive product-recall strategy as a signal of severe financial losses.
+          skeleton_level: paragraph
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Chen_Ganesan_Liu_2009_JM
+          - chenganesanliu2009
+          transferability: high
+          paradigm_exclusivity: 事件研究法分组 AR 主检验（非回归）
+          rhythm_tags:
+          - direction
+          - multi_test_significance
+          - between_group_contrast
+          - magnitude_pp
+          - support
+          - signal_interpretation
+          notes: 填补 Patell+分组 CAR 主检验缺口；对照策略 null 正面报告；百分点幅度嵌入 R3
+          corpus_path: econometric-models/事件研究法.md
+      R7:
+        description: ''
+        skeleton_variants:
+        - id: r7_eventstudy_heckman_null_lambda_unbiased_confirmation
+          skeleton: If firm characteristics are unobservable to the researcher but affect both market outcomes and firm strategy,
+            self-selection bias may arise in estimating the impact of [strategy] on [AR/CAR] ([citations]). We carry out the
+            Heckman two-step estimation to show that the cross-sectional analysis is not subject to self-selection bias. The
+            first stage is a probit on [strategy_choice]. For identification, we exclude [exclusion_vars] from the second-stage
+            OLS because there is no a priori reason to believe that they significantly influence [AR/CAR], which is also confirmed
+            by [prior_table]. As [Table], Model [N] shows, the coefficients of the self-selection parameters λ are not significantly
+            different from zero for the [strategy_A] subsample and the [strategy_B] subsample. Therefore, the cross-sectional
+            model yields an unbiased estimate of the effect of [strategy] (i.e., [strategy_A] remain associated with more
+            negative [AR/CAR]). Together with the significance of [strategy] in [Eq.], the Heckman results further demonstrate
+            that [strategy] are key influencers of abnormal stock returns, regardless of firm and product characteristics.
+          verbatim_anchor: As Model 2 in Table 5 shows, this is indeed the case. The coefficients of the self-selection bias
+            parameters βλ1 and βλ0 are not significantly different from zero for the proactive subsample and the passive subsample.
+          skeleton_level: paragraph
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Chen_Ganesan_Liu_2009_JM
+          - chenganesanliu2009
+          transferability: medium
+          paradigm_exclusivity: 事件研究→截面策略选择 + Heckman
+          rhythm_tags:
+          - threat_positioning
+          - heckman_two_step
+          - exclusion_restriction
+          - null_lambda
+          - unbiased_confirmation
+          notes: null λ 不能证明无内生性；因果语言优先 associated with
+          corpus_path: econometric-models/事件研究法.md
+      R9:
+        description: ''
+        skeleton_variants:
+        - id: r9_eventstudy_counterintuitive_stakeholder_coda
+          skeleton: In contrast to previous studies that have focused on the positive aspects of [strategy] from a [audience_A]
+            perspective ([citations]), our findings point to the potential drawback of [strategy] by examining [market_metric].
+            Our results indicate that in [crisis_context], though overtly [socially_responsible_label] behavior by a firm
+            may generate positive responses from [audience_A], it may be interpreted by the [audience_B] negatively. Therefore,
+            firms need to be sensitive to how the [audience_B] might interpret their [proactive_actions].
+          verbatim_anchor: In contrast to previous studies that have focused on the positive aspects of proactive recall strategies
+            from a consumer's perspective ... it may be interpreted by the stock market negatively.
+          skeleton_level: paragraph
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            marketing: 1
+          sources:
+          - Chen_Ganesan_Liu_2009_JM
+          - chenganesanliu2009
+          transferability: high
+          paradigm_exclusivity: 事件研究/市场反应论文，双受众解读冲突
+          rhythm_tags:
+          - stakeholder_contrast
+          - counterintuitive_coda
+          - managerial_bridge
+          notes: 事件研究法首个 R9 变体；不改主系数，做跨受众反直觉收口
+          corpus_path: econometric-models/事件研究法.md
+    cross_slot_patterns: []
+    anti_patterns:
+    - id: ap_eventstudy_skip_contrast_null_ar
+      pattern: 只报显著组 AR、跳过对照策略的 null AR
+      severity: high
+      affected_slots:
+      - R3
+      note: 对照策略三检验全不显著是对比证据，必须正面报告
+      source_count: 1
+      sources:
+      - chenganesanliu2009
+    honesty_boundaries:
+    - id: hb_eventstudy_subgroup_ar_not_causal
+      boundary: 分组 AR 的显著性支持市场反应差异，不等于截面因果；策略效应仍须截面/选择修正确认
+      required: 因果措辞优先 associated with；截面补证或选择修正后再谈策略效应
+      affected_slots:
+      - R3
+      note: source=chenganesanliu2009
+      violation_count: 0
+    - id: hb_eventstudy_heckman_null_lambda
+      boundary: Heckman null λ 降低 self-selection 关切，不证明无内生性；因果语言保持 associated with
+      required: 报告双 subsample λ；exclusion 有 a priori + 实证辩护；不得把 null λ 写成无内生性
+      affected_slots:
+      - R7
+      note: source=chenganesanliu2009
       violation_count: 0
 batch_history:
 - batch_id: batch_2026-05-22_desai2011
@@ -4894,7 +5216,9 @@ batch_history:
   source_subfield: entrepreneurship / strategy / product safety
   slot_updates_count: 2
   novel_patterns_count: 2
-  notes: "Gap audit after initial distillation. Methods all SKIP. Results ADD dual parallel inverted-U (R3) + shift-vs-steepen dual-mode figure adjudication (R4). EXTEND honesty on adverse-Y vertex and interaction-sign non-adjudication. SKIP stuck-in-the-middle as Results-only variant. No core/SKILL promotion."
+  notes: Gap audit after initial distillation. Methods all SKIP. Results ADD dual parallel inverted-U (R3) + shift-vs-steepen
+    dual-mode figure adjudication (R4). EXTEND honesty on adverse-Y vertex and interaction-sign non-adjudication. SKIP stuck-in-the-middle
+    as Results-only variant. No core/SKILL promotion.
 - batch_id: batch_26_lee_park_2024_smj
   timestamp: '2026-08-04'
   estimator_family: Logit_Probit_Ordered_Probit / Fractional Logit
@@ -4909,7 +5233,7 @@ batch_history:
   source_subfield: marketing / governance / product safety
   slot_updates_count: 6
   novel_patterns_count: 4
-  notes: "Re-distillation calibration; R3/R5 metric fix; R4 switch-off split; no core promotion (single paper)"
+  notes: Re-distillation calibration; R3/R5 metric fix; R4 switch-off split; no core promotion (single paper)
 - batch_id: batch_28_liu_shankar2015_ms
   timestamp: '2026-08-05'
   estimator_family: BLP_state_space_GMM
@@ -4917,7 +5241,8 @@ batch_history:
   source_subfield: marketing / product safety / structural demand
   slot_updates_count: 5
   novel_patterns_count: 5
-  notes: "New result type BLP-状态空间; RQ-driven R3; counterfactual decomposition + policy simulation as R8; no SKILL routing change"
+  notes: New result type BLP-状态空间; RQ-driven R3; counterfactual decomposition + policy simulation as R8; no SKILL routing
+    change
 - batch_id: batch_29_castellaneta_conti_kacperczyk_2017_smj
   timestamp: '2026-08-05'
   estimator_family: DiD / 匹配DiD
@@ -4925,7 +5250,8 @@ batch_history:
   source_subfield: strategy / law / private equity
   slot_updates_count: 5
   novel_patterns_count: 4
-  notes: "DiD +4 (net-effect opener; 1SD interaction four-beat; ID threat battery; null placebo); 匹配DiD first fill CEM-as-robustness; core_candidate only reported; no SKILL routing change"
+  notes: DiD +4 (net-effect opener; 1SD interaction four-beat; ID threat battery; null placebo); 匹配DiD first fill CEM-as-robustness;
+    core_candidate only reported; no SKILL routing change
 - batch_id: batch_31_ridge_et_al_2024_amj
   timestamp: '2026-08-12'
   estimator_family: Tobit / 计数模型 (Negative Binomial)
@@ -4933,4 +5259,14 @@ batch_history:
   source_subfield: strategy / governance
   slot_updates_count: 5
   novel_patterns_count: 5
-  notes: "New result type Tobit (corner-solution) — registry gap fill; 计数模型 R6 +2 (significant-but-small downgrade; null sign-reversal alternative read); R9 +1 (mixed-results synthesis + Discussion handoff); OLS-FE R7 +1 (front-loaded RIR + naive-vs-cure 2SRI); R5 +1 (external-evidence practical-importance beat). All EMERGING/single-paper; no SKILL routing change."
+  notes: New result type Tobit (corner-solution) — registry gap fill; 计数模型 R6 +2 (significant-but-small downgrade; null sign-reversal
+    alternative read); R9 +1 (mixed-results synthesis + Discussion handoff); OLS-FE R7 +1 (front-loaded RIR + naive-vs-cure
+    2SRI); R5 +1 (external-evidence practical-importance beat). All EMERGING/single-paper; no SKILL routing change.
+- timestamp: '2026-08-12'
+  estimator_family: 事件研究法 / OLS_FE
+  source_paper: Chen_Ganesan_Liu_2009_JM
+  source_subfield: marketing
+  slot_updates_count: 4
+  novel_patterns_count: 0
+  notes: 'Gate① writeback: 事件研究法 +3 (R3 subgroup AR multitest; R7 Heckman null-λ; R9 stakeholder coda); OLS-FE +1 (R8 legacy
+    Kenny complete mediation + signal). First registry entry for 事件研究法. No SKILL/PDM change.'

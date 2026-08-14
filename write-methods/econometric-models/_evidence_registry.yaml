@@ -1,7 +1,7 @@
 meta:
   last_updated: '2026-08-12'
   total_design_types: 22
-  batches_processed: 19
+  batches_processed: 20
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
     granularity: per design_type（对应 econometric-models/[设计类型].md 文件）
@@ -18,24 +18,21 @@ meta:
     non_signals:
     - 不登记 accepted/validated（用户不报告满意，登记必然为零）
     - 不设 too_easy/淘汰（变体是长期资产；频繁使用且好用应提升路由权重，而非降级）
-    record_path: Claude 在 write-methods 会话中捕获用户批评后自动登记（见 write-methods SKILL.md 批评登记）；批量登记可用
-      python _update_registry.py --record-critique <critiques.yaml>（见 distill-methods-exemplar
-      SKILL.md Phase 4.5）
-  source: corpus INDEX.md + product_recall_cross_validation + cutolo2024_jm_text_count
-    + falchetti2022_smj_experiment + lashley_pollock2020_asq_qualitative_process +
-    chung_low_rust_2022_jams_executive_confidence_myopia + ilicic_brennan_2026_jm_political_ideology_addictive_products
-    + kim_lee_2026_putting_a_price_on_mission_smj + bamberger_homburg_wielgos_2021_jm_backfill
-    + lee_wu_bednar_orsc_18968_distill + reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc_distill
-    + moon_tuli_mukherjee_2023_jm + schumacher_keck_tang_2020_smj + kashmiri_nicol_arora_2017_jams
-    + bendig_hensellek_schulte_2024_etp + lee_park_2024_smj + hoffmann_cheong_phan_zurbruegg2024_jm_redistill
-    + desjardine_li_shi_2025_amj_distill + ridge_hill_ingram_kolomeitsev_worrell_2024_amj_distill
-    + fini_jourdan_perkmann_2017_amj_distill
+    record_path: Claude 在 write-methods 会话中捕获用户批评后自动登记（见 write-methods SKILL.md 批评登记）；批量登记可用 python _update_registry.py --record-critique
+      <critiques.yaml>（见 distill-methods-exemplar SKILL.md Phase 4.5）
+  source: corpus INDEX.md + product_recall_cross_validation + cutolo2024_jm_text_count + falchetti2022_smj_experiment + lashley_pollock2020_asq_qualitative_process
+    + chung_low_rust_2022_jams_executive_confidence_myopia + ilicic_brennan_2026_jm_political_ideology_addictive_products
+    + kim_lee_2026_putting_a_price_on_mission_smj + bamberger_homburg_wielgos_2021_jm_backfill + lee_wu_bednar_orsc_18968_distill
+    + reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc_distill + moon_tuli_mukherjee_2023_jm + schumacher_keck_tang_2020_smj
+    + kashmiri_nicol_arora_2017_jams + bendig_hensellek_schulte_2024_etp + lee_park_2024_smj + hoffmann_cheong_phan_zurbruegg2024_jm_redistill
+    + desjardine_li_shi_2025_amj_distill + ridge_hill_ingram_kolomeitsev_worrell_2024_amj_distill     + fini_jourdan_perkmann_2017_amj_distill
+    + chen_ganesan_liu_2009_jm_distill
 evidence:
   by_source_paper:
     lee_park_2024_smj:
       journal: Strategic Management Journal
-      title: Giving up learning from failures? An examination of learning from one's
-        own failures in the context of heart surgeons
+      title: Giving up learning from failures? An examination of learning from one's own failures in the context of heart
+        surgeons
       status: VERIFIED
       verification_basis: user_expert_audit
       design_types:
@@ -50,16 +47,13 @@ evidence:
       - M6
       - M7
       - M8
-      note: User-audited canonical exemplar for U/inverted-U Methods writing. Bounded
-        outcome motivates fractional logit; the curve-support contract predeclares
-        endpoint slopes plus an interior turning point, and turning-point-location
-        moderation is adjudicated by condition-specific vertices and a direct Wald
-        equality test. The formulas define the narrative estimand rather than create
-        a software tutorial. Use turning point/vertex, not inflection point.
+      note: User-audited canonical exemplar for U/inverted-U Methods writing. Bounded outcome motivates fractional logit;
+        the curve-support contract predeclares endpoint slopes plus an interior turning point, and turning-point-location
+        moderation is adjudicated by condition-specific vertices and a direct Wald equality test. The formulas define the
+        narrative estimand rather than create a software tutorial. Use turning point/vertex, not inflection point.
     bendig_hensellek_schulte_2024_etp:
       journal: Entrepreneurship Theory and Practice
-      title: Beneficial, Harmful, or Both? Effects of Corporate Venture Capital and
-        Alliance Activity on Product Recalls
+      title: Beneficial, Harmful, or Both? Effects of Corporate Venture Capital and Alliance Activity on Product Recalls
       status: EMERGING (1p)
       design_types:
       - 面板数据-OLS
@@ -73,15 +67,13 @@ evidence:
       - M7
       - M8
       - M9
-      note: Binomial-logit GEE with exchangeable correlation and robust SE is justified
-        by within-firm correlation, retention of all-zero panels, and heteroskedasticity.
-        The curve test requires quadratic sign, opposite endpoint slopes, turning
-        point, and Fieller CI. Lagging and untabulated industry-IV checks mitigate
-        but do not resolve endogeneity.
+      note: Binomial-logit GEE with exchangeable correlation and robust SE is justified by within-firm correlation, retention
+        of all-zero panels, and heteroskedasticity. The curve test requires quadratic sign, opposite endpoint slopes, turning
+        point, and Fieller CI. Lagging and untabulated industry-IV checks mitigate but do not resolve endogeneity.
     kashmiri_nicol_arora_2017_jams:
       journal: Journal of the Academy of Marketing Science
-      title: 'Me, myself, and I: influence of CEO narcissism on firms'' innovation
-        strategy and the likelihood of product-harm crises'
+      title: 'Me, myself, and I: influence of CEO narcissism on firms'' innovation strategy and the likelihood of product-harm
+        crises'
       status: EMERGING (1p)
       design_types:
       - 面板数据-OLS
@@ -96,12 +88,10 @@ evidence:
       - M4
       - M7
       - M8
-      note: Four-indicator archival CEO-narcissism composite with succession-year
-        exclusion; regulatory product-harm indicator explicitly bounded away from
-        recall timing/strategy/severity; one theory uses outcome-specific pooled OLS,
-        RE negative binomial, fractional logit, and RE logit. Long-tenure sample restriction
-        creates survivorship/tenure-selection risk, and null predictor regressions
-        do not establish exogeneity.
+      note: Four-indicator archival CEO-narcissism composite with succession-year exclusion; regulatory product-harm indicator
+        explicitly bounded away from recall timing/strategy/severity; one theory uses outcome-specific pooled OLS, RE negative
+        binomial, fractional logit, and RE logit. Long-tenure sample restriction creates survivorship/tenure-selection risk,
+        and null predictor regressions do not establish exogeneity.
     schumacher_keck_tang_2020_smj:
       journal: Strategic Management Journal
       title: 'Biased interpretation of performance feedback: The role of CEO overconfidence'
@@ -114,9 +104,8 @@ evidence:
       - M2
       - M4
       - M8
-      note: Nonoverlapping first-three-year trait formation window and subsequent
-        outcome window; media and option proxies provide method-heterogeneous convergence
-        but do not establish construct purity or exogeneity.
+      note: Nonoverlapping first-three-year trait formation window and subsequent outcome window; media and option proxies
+        provide method-heterogeneous convergence but do not establish construct purity or exogeneity.
     moon_tuli_mukherjee_2023_jm:
       journal: Journal of Marketing
       title: Does Disclosure of Advertising Spending Help Investors and Analysts?
@@ -127,12 +116,12 @@ evidence:
       slots_covered:
       - M7
       - M8
-      note: peer-IV proximity gradient + multi-endogeneity correction ledger (binary
-        choice, continuous spending, mediator, coverage selection)
+      note: peer-IV proximity gradient + multi-endogeneity correction ledger (binary choice, continuous spending, mediator,
+        coverage selection)
     reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc:
       journal: Organization Science
-      title: 'The Elephant and Donkey in the Room: Time-Varying Effects of Political
-        Dissimilarity on Social Interactions at Work During U.S. Elections'
+      title: 'The Elephant and Donkey in the Room: Time-Varying Effects of Political Dissimilarity on Social Interactions
+        at Work During U.S. Elections'
       status: EMERGING (1p)
       design_types:
       - 多研究
@@ -142,14 +131,12 @@ evidence:
       - M7
       - M8
       - M9
-      note: Three-study constructive replication; event-centered DGCM separates pretrend,
-        election transition, and postevent trend. Study 2 randomizes political dissimilarity
-        but not election timing; Study 3 has one preevent observation and therefore
-        cannot estimate a pretrend.
+      note: Three-study constructive replication; event-centered DGCM separates pretrend, election transition, and postevent
+        trend. Study 2 randomizes political dissimilarity but not election timing; Study 3 has one preevent observation and
+        therefore cannot estimate a pretrend.
     lee_wu_bednar_orsc_18968:
       journal: Organization Science
-      title: 'When the Headlines Fade, the Story Goes On: Investigating How Local
-        Newspaper Decline Affects Firm CSR Engagement'
+      title: 'When the Headlines Fade, the Story Goes On: Investigating How Local Newspaper Decline Affects Firm CSR Engagement'
       status: EMERGING (1p)
       design_types:
       - 自然实验-DiD
@@ -157,14 +144,13 @@ evidence:
       - M2
       - M7
       - M8
-      note: County-level staggered newspaper declines mapped to headquartered firms;
-        signed CSR strengths-minus-concerns motivates linear FE. TWFE+Bacon retained
-        only as a legacy diagnostic, with modern staggered-DiD and HonestDiD requirements
-        added as boundaries.
+      note: County-level staggered newspaper declines mapped to headquartered firms; signed CSR strengths-minus-concerns motivates
+        linear FE. TWFE+Bacon retained only as a legacy diagnostic, with modern staggered-DiD and HonestDiD requirements added
+        as boundaries.
     hoffmann_cheong_phan_zurbruegg2024_jm:
       journal: Journal of Marketing
-      title: So, Sue Me…If You Can! How Legal Changes Diminishing Managers' Risk of
-        Being Held Liable by Shareholders Affect Firms' Likelihood to Recall Products
+      title: So, Sue Me…If You Can! How Legal Changes Diminishing Managers' Risk of Being Held Liable by Shareholders Affect
+        Firms' Likelihood to Recall Products
       status: EMERGING (1p)
       verification_basis: distill-methods-exemplar_redistill_2026-08-05
       design_types:
@@ -181,16 +167,13 @@ evidence:
       - M7
       - M8
       story_fidelity: section_variant
-      note: 'Staggered UD-law DiD + conditional logit with year/industry FE (not firm
-        FE; collinearity from always-zero recall firms). Identification stack: model-free
-        means, external manipulation check, Pre(-3/-2/-1) pretrends, 1000x state-reassignment
-        placebo. Discretion subsample excludes injury/death recalls. Text moderator
-        via Zachary et al. dictionary on 10-K. Prior slot variants incorrectly cited
-        firm FE and incidental parameters — corrected in redistill.'
+      note: 'Staggered UD-law DiD + conditional logit with year/industry FE (not firm FE; collinearity from always-zero recall
+        firms). Identification stack: model-free means, external manipulation check, Pre(-3/-2/-1) pretrends, 1000x state-reassignment
+        placebo. Discretion subsample excludes injury/death recalls. Text moderator via Zachary et al. dictionary on 10-K.
+        Prior slot variants incorrectly cited firm FE and incidental parameters — corrected in redistill.'
     liu_shankar2015:
       journal: Management Science
-      title: The Dynamic Impact of Product-Harm Crises on Brand Preference and Advertising
-        Effectiveness
+      title: The Dynamic Impact of Product-Harm Crises on Brand Preference and Advertising Effectiveness
       status: EMERGING (1p)
       verification_basis: distill-methods-exemplar_2026-08-05
       design_types:
@@ -204,11 +187,9 @@ evidence:
       - M7
       - M8
       story_fidelity: section_variant
-      note: BLP random-coefficient demand + Kalman state-space for latent brand preference
-        and time-varying ad/recall coefficients; GMM. Preliminary reduced-form bridges
-        to structural model. Recall exogeneity via NHTSA mandate; price BLP-IV, advertising
-        intercept/slope CF, cross-category media CF. Complements survival/time-to-recall
-        recall corpus on demand-side dynamics.
+      note: BLP random-coefficient demand + Kalman state-space for latent brand preference and time-varying ad/recall coefficients;
+        GMM. Preliminary reduced-form bridges to structural model. Recall exogeneity via NHTSA mandate; price BLP-IV, advertising
+        intercept/slope CF, cross-category media CF. Complements survival/time-to-recall recall corpus on demand-side dynamics.
     bamberger_homburg_wielgos_2021_wage_inequality_jm:
       journal: Journal of Marketing
       title: 'Wage Inequality: Its Impact on Customer Satisfaction and Firm Performance'
@@ -222,12 +203,11 @@ evidence:
       - M7
       - M8
       - M9
-      note: B2B key-informant SEM + B2C external panel FE; Study 2 forms a limitation→repair
-        chain for measurement independence, contextual breadth, and time horizon.
+      note: B2B key-informant SEM + B2C external panel FE; Study 2 forms a limitation→repair chain for measurement independence,
+        contextual breadth, and time horizon.
     kim_lee_2026_putting_a_price_on_mission_smj:
       journal: Strategic Management Journal
-      title: 'Putting a price on mission: Social responsibility orientation and startup
-        employment'
+      title: 'Putting a price on mission: Social responsibility orientation and startup employment'
       status: EMERGING (1p)
       design_types:
       - 多研究
@@ -238,9 +218,9 @@ evidence:
       - M4
       - M7
       - M9
-      note: empirical strategy / strategic human capital；多阶段决策管道(attraction/selection/attrition)+revealed-preference
-        WTP+embedded/peripheral CSR手工编码；2026-08-05 gap audit：Methods 无新增；Results 补
-        stage-concentrated hetero + Cinelli-Hazlett（见 write-results OLS-FE 变体45–46）；待第二篇交叉验证
+      note: empirical strategy / strategic human capital；多阶段决策管道(attraction/selection/attrition)+revealed-preference WTP+embedded/peripheral
+        CSR手工编码；2026-08-05 gap audit：Methods 无新增；Results 补 stage-concentrated hetero + Cinelli-Hazlett（见 write-results OLS-FE
+        变体45–46）；待第二篇交叉验证
     ilicic_brennan_2026_jm:
       journal: Journal of Marketing
       title: Political Ideology Shapes Consumer Responses to Addictive Products
@@ -252,8 +232,8 @@ evidence:
       - M5
       - M8
       - M9
-      note: consumer psychology 机制证据组合（measurement of process + rival accounts battery；补充研究以
-        moderation of process 操纵 agency）。主文 Study 4 为横截面测量且结果变量先于中介，反转中介顺序仅是竞争排序敏感性检查，不能确认时间或因果顺序；补充研究正文不可见，故因果收敛主张需保留审计边界。
+      note: consumer psychology 机制证据组合（measurement of process + rival accounts battery；补充研究以 moderation of process 操纵 agency）。主文
+        Study 4 为横截面测量且结果变量先于中介，反转中介顺序仅是竞争排序敏感性检查，不能确认时间或因果顺序；补充研究正文不可见，故因果收敛主张需保留审计边界。
     chung_low_rust_2022_jams:
       journal: Journal of the Academy of Marketing Science
       title: Executive confidence and myopic marketing management
@@ -289,7 +269,11 @@ evidence:
       - M6
       - M8
       story_fidelity: section_variant
-      note: From-scratch custom dictionary + nine-step validity chain (component→expert sort→deductive dictionary→student sort→PFA→nomological→stability) and earnings-call speaker-attribution pipeline (M2/M4). Endogeneity 'balancing act' diagnose-first narrative (RIR N-to-overturn → cure second → naïve/cured pairing) and 2SRI with validation-measures reused as instruments (M8). Temporal-spacing one-liner and dual-sided because controls (M2.5/M6). No firm FE (SIC/year dummies) under-defended and 2SRI exclusion only implicit — recorded as anti-pattern warnings.
+      note: From-scratch custom dictionary + nine-step validity chain (component→expert sort→deductive dictionary→student
+        sort→PFA→nomological→stability) and earnings-call speaker-attribution pipeline (M2/M4). Endogeneity 'balancing act'
+        diagnose-first narrative (RIR N-to-overturn → cure second → naïve/cured pairing) and 2SRI with validation-measures
+        reused as instruments (M8). Temporal-spacing one-liner and dual-sided because controls (M2.5/M6). No firm FE (SIC/year
+        dummies) under-defended and 2SRI exclusion only implicit — recorded as anti-pattern warnings.
     fini_jourdan_perkmann_2017_amj:
       journal: Academy of Management Journal
       title: 'Social Valuation across Multiple Audiences: The Interplay of Ability and Identity Judgments'
@@ -307,7 +291,35 @@ evidence:
       - M8
       - M9
       story_fidelity: section_variant
-      note: 'Single-organization (Minerva) scientist panel 2001-2012; DV = peer grant award count (0-23); IV = cumulative industry contracts with squared term for inverted U; moderators = audience identity proximity + publication record. Identification stack: probit+IMR selection -> iterative Poisson GMM instrumenting three endogenous terms (peer eval, industry eval, industry eval^2) with 3 instruments + Hansen J -> CEM confirmatory replication -> explanatory sequential interviews. Writes M1 data-availability setting (面板数据-OLS 变体41), M5 moderator-dummy external validity chain via Tijssen U-I intensity (面板数据-OLS 变体42), M8 CEM confirmatory replication (PSM匹配面板 变体4), M9 explanatory sequential roadmap (多研究 变体10); core GMM narrative registered under 非线性模型 变体16. Anti-patterns recorded: CEM strata without balance stats, three-threats merged statement, squared-term exclusion not separately argued.'
+      note: 'Single-organization (Minerva) scientist panel 2001-2012; DV = peer grant award count (0-23); IV = cumulative
+        industry contracts with squared term for inverted U; moderators = audience identity proximity + publication record.
+        Identification stack: probit+IMR selection -> iterative Poisson GMM instrumenting three endogenous terms (peer eval,
+        industry eval, industry eval^2) with 3 instruments + Hansen J -> CEM confirmatory replication -> explanatory sequential
+        interviews. Writes M1 data-availability setting (面板数据-OLS 变体41), M5 moderator-dummy external validity chain via Tijssen
+        U-I intensity (面板数据-OLS 变体42), M8 CEM confirmatory replication (PSM匹配面板 变体4), M9 explanatory sequential roadmap (多研究
+        变体10); core GMM narrative registered under 非线性模型 变体16. Anti-patterns recorded: CEM strata without balance stats, three-threats
+        merged statement, squared-term exclusion not separately argued.'
+    chen_ganesan_liu_2009_jm:
+      journal: Journal of Marketing
+      title: "Does a Firm's Product-Recall Strategy Affect Its Financial Value? An Examination of Monitoring Versus Initiating Recalls"
+      status: EMERGING (1p)
+      verification_basis: distill-methods-exemplar_2026-08-12
+      design_types:
+      - 事件历史+事件研究
+      - 两阶段模型
+      slots_covered:
+      - M1
+      - M2
+      - M4
+      - M5
+      - M8
+      story_fidelity: section_variant
+      note: 'Multi-stage CPSC event-study stack: regulator multi-reason M1 legitimacy; threat-triad
+        prescreen (confound/leakage+AE ruling/classification ambiguity); zero-incident=proactive
+        archival strategy dichotomy; Kenny mediation (probit+cross-section AR); Heckman strategy-switching
+        with no-a-priori+main-table exclusion restrictions (λ=0 validates main cross-section).
+        SKIP market-model formula and basic CAR cross-section. Anti-patterns: funnel without step
+        Ns; Heckman/mediation only in Results.'
   by_design_type:
     面板数据-OLS:
       paper_count: 12
@@ -528,22 +540,28 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     事件历史+事件研究:
-      paper_count: 4
+      paper_count: 5
       papers:
-      - zhou2017 (ASQ)
+      - chen_ganesan_liu_2009_jm (JM)
       - pontikes2012 (ASQ)
-      - shi2021 (JMR)
       - reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science)
-      status: VERIFIED
+      - shi2021 (JMR)
+      - zhou2017 (ASQ)
+      status: ROBUST
       slots_covered:
       - M2
       - M3
       - M7
       - M8
+      - M1
+      - M4
+      - M5
       common_failures:
       - 将宏观事件 DGCM 与资本市场 CAR event study 混为同一估计量
       - 只有一个事件前观测却声称检验了预趋势
       - 将不显著 postevent slope 写成永久效应证据
+      - 威胁筛选步骤齐全但只报告最终N，无逐步剔除量 — 审稿人无法审计数据损失
+      - 将Heckman/中介规格仅放在Results而不在Methods预告识别栈 — 读者在Methods结束时误以为设计止于AR均值检验
       validation_history:
         revise: 0
         reject: 0
@@ -686,18 +704,20 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     两阶段模型:
-      paper_count: 5
+      paper_count: 6
       papers:
-      - darby2023 (MSOM)
-      - zhou2017 (ASQ)
+      - chen_ganesan_liu_2009_jm (JM)
       - chung_low_rust_2022_jams (JAMS)
+      - darby2023 (MSOM)
       - moon_tuli_mukherjee_2023_jm (JM)
       - ridge_hill_ingram_kolomeitsev_worrell_2024_amj (AMJ)
-      status: VERIFIED
+      - zhou2017 (ASQ)
+      status: ROBUST
       slots_covered:
       - M7
       - M8
-      common_failures: []
+      common_failures:
+      - 排除限制事后改口 — 主回归中排除变量显著后仍声称无直接效应
       validation_history:
         revise: 0
         reject: 0

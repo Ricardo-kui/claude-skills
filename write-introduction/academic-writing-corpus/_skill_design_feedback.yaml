@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
   last_updated: '2026-08-12'
-  observations_processed: 9
+  observations_processed: 11
   description: Evidence ledger for design defects inferred from Introduction exemplar distillation.
 defects:
   incompleteness-embedded-opposing-claims-vs-incommensurability:
@@ -353,6 +353,98 @@ defects:
     lifecycle: open
     first_seen: '2026-08-05'
     last_seen: '2026-08-05'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  corpus-gap-audience-reinterpretation-contribution:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: Contribution dark-side tip covers otherwise-beneficial firm actions harming outcomes, but not same-action
+      reinterpreted differently across audiences.
+    rule_excerpt: ''
+    rule_locator: contributions/_index.md 技巧3 dark-side
+    target: write-introduction/academic-writing-corpus/contributions/_index.md
+    diagnosis: 需要可选 section_variant：受众分裂解读（audience A wisdom vs audience B signal reading）， 与 vadakkepatt 组织机制暗面区分。
+    proposed_change:
+      action: append_optional_variant
+      summary: 在 contributions 增加受众重解读型暗面变体（EMERGING），不改路由。
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: chen_ganesan_liu_2009_JM
+      journal: JM
+      evidence_anchor: investors may view proactive recall strategies differently from consumers, interpreting them as a signal
+        of severe product hazard and financial damage
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - JM
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - JM
+    verified_journal_count: 1
+    regression_cases:
+      positive:
+      - prompt: 同一策略对消费者有益但对投资者像坏信号
+        expected_invariants:
+        - 可检索到受众重解读变体
+        - 不强制 Incommensurability
+      preservation:
+      - prompt: CSR 行动损害顾客满意度的暗面
+        expected_invariants:
+        - 仍走 vadakkepatt otherwise-beneficial harm 路径
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-12'
+    last_seen: '2026-08-12'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  corpus-gap-dual-stream-sequential-incompleteness:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: Synthesized Coherence variant D covers dual-stream silence, but not continuum-map + sequential discipline-by-discipline
+      incompleteness.
+    rule_excerpt: ''
+    rule_locator: literature-turns/02-synthesized-coherence.md 变体D
+    target: write-introduction/academic-writing-corpus/literature-turns/02-synthesized-coherence.md
+    diagnosis: JM/跨学科事件研究常见：先建策略地图，再顺序指出 Stream A 缺财务 DV、Stream B 缺策略 IV。
+    proposed_change:
+      action: append_optional_variant
+      summary: 追加顺序双学科批判交叉沉默变体；保持 Synthesized×Incompleteness 非对角合法。
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: chen_ganesan_liu_2009_JM
+      journal: JM
+      evidence_anchor: broader issue of how different crisis management strategies might influence firms' financial value
+        has not been studied
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - JM
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - JM
+    verified_journal_count: 1
+    regression_cases:
+      positive:
+      - prompt: 营销实验室策略文献 + 金融事件研究文献交叉
+        expected_invariants:
+        - 可选顺序双段变体
+        - 不强制 Non-Coherence
+      preservation:
+      - prompt: wowak 式双流交叉沉默单段
+        expected_invariants:
+        - 变体D 仍可用
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-12'
+    last_seen: '2026-08-12'
     auto_action:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.

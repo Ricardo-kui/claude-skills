@@ -11,8 +11,10 @@ source_papers:
   - vadakkepatt2022 (JM, 2022): "positive lobbying→firm value but negative via customer satisfaction"
   - malshe2015 (JM, 2015): "1-SD leverage increase → $26M operating cash flow loss"
   - darby2024 (MSOM, 2024): "stock market penalties magnified by recall delay"
+  - chenganesanliu2009 / Chen_Ganesan_Liu_2009_JM (JM, 2009): "CONFIRMING — named firm-value catastrophe showing (one-day collapse / bankruptcy) for firm sustainability stakes; no new variant"
 created: 2026-05-19
-source: Extracted from MVP30 narrative_analysis files + global corpus migration
+updated: 2026-08-12
+source: Extracted from MVP30 narrative_analysis files + global corpus migration + chenganesanliu2009 confirming
 ---
 
 # 05-firm-value-stock-market — 企业价值/资本市场 Stakes
@@ -33,6 +35,7 @@ source: Extracted from MVP30 narrative_analysis files + global corpus migration
 ### 跨论文复现
 - **VERIFIED** (≥4 papers): eilert2017 (JM), malshe2015 (JM), darby2024 (MSOM), vadakkepatt2022 (JM)
 - 跨越产品召回、财务杠杆、游说、召回时机等多元领域
+- **Confirming evidence** (2026-08-12): `chenganesanliu2009` / Chen_Ganesan_Liu_2009_JM (JM, 2009) — Hook/Stakes 用具名市值崩塌与破产案例把危机行动货币化为 shareholder value / firm sustainability（锚定: "Thus, the fundamental sustainability of the firm may be at risk."）。匹配已有 firm-value stakes 的 showing 逻辑；**不新建变体骨架**。
 
 ### 生成力
 - **ADAPTABLE**: "market prices this information" 逻辑高度可迁移，但需要清晰的中介链

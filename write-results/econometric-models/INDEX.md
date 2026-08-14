@@ -25,7 +25,7 @@ updated: 2026-08-12
 
 | 文件 | 结果类型 | 变体数 | 最后更新 |
 |------|---------|--------|---------|
-| [OLS-FE](OLS-FE.md) | OLS-FE | 55 | 2026-08-12 |
+| [OLS-FE](OLS-FE.md) | OLS-FE | 56 | 2026-08-12 |
 | [Logit-Probit-Ordered-Probit](Logit-Probit-Ordered-Probit.md) | Logit-Probit-Ordered-Probit | 18 | 2026-08-05 |
 | [生存分析](生存分析.md) | 生存分析 | 19 | 2026-08-01 |
 | [DiD](DiD.md) | DiD | 10 | 2026-08-05 |
@@ -43,7 +43,7 @@ updated: 2026-08-12
 | [三向交互](三向交互.md) | 三向交互 | 3 | 2026-07-30 |
 | [构造暴露分解](构造暴露分解.md) | 构造暴露分解 | 0 | 2026-05-18 |
 | [SEM-moderated-mediation](SEM-moderated-mediation.md) | SEM/调节中介 | 7 | 2026-08-03 |
-| [事件研究法](事件研究法.md) | 事件研究法 | 5 | 2026-07-23 |
+| [事件研究法](事件研究法.md) | 事件研究法 | 8 | 2026-08-12 |
 | [VARX-PVAR](VARX-PVAR.md) | VARX-PVAR | 7 | 2026-07-15 |
 | [BLP-状态空间](BLP-状态空间.md) | BLP + Kalman/GMM 结构需求 | 5 | 2026-08-05 |
 
@@ -55,6 +55,8 @@ updated: 2026-08-12
 4. 变体达到 3+ 时，考虑提升为 skill 主骨架
 
 ## 语料库质量状态
+
+> ✅ **2026-08-12 更新（Chen, Ganesan & Liu 2009 JM, Gate ① 全部写入）**: 事件研究法 5→8；OLS-FE 55→56。ADD 4 变体（均单篇 EMERGING / section_variant）：事件研究法 R3 分组 AR 多检验+组间 Wilcoxon 主检验（`r3_eventstudy_subgroup_ar_multitest_contrast`）、R7 Heckman 双 subsample null-λ → 原截面无偏（`r7_eventstudy_heckman_null_lambda_unbiased_confirmation`）、R9 stakeholder 反直觉收束（`r9_eventstudy_counterintuitive_stakeholder_coda`）；OLS-FE R8 二元策略 legacy Kenny 完全中介 + 市场信号（`r8_ols_strategy_complete_mediation_kenny_signal`，强制标 legacy）。反模式 +2（跳过对照 null AR；仅 Kenny 条件计数宣称 completely mediate）。诚实边界 +3（分组 AR≠截面因果；null λ≠无内生性；legacy Kenny 须附间接效应区间或显式标 legacy）。registry 首次登记「事件研究法」estimator；填补 Patell+分组 CAR 待入库缺口。SKIP R2/截面 PROACT 四拍（≈ Pupovac）。未改 SKILL 核心 / PDM 根。
 
 > ✅ **2026-08-12 更新（Fini, Jourdan & Perkmann 2017 AMJ, Gate ① 全部写入）**: 计数模型 16→21。ADD 5 变体（均单篇 EMERGING）：R7 Poisson-GMM 威胁电池（生成回归元→bootstrap SE / 过离散→负二项 / 调节正交→Gram-Schmidt / 离群→截尾-winsorizing）、R4 曲线调节范围级验证（Bowen 二次项轮廓 + 显式例外）、R8 同 IV 替代操作化机制裁决（相对 vs 绝对 → null → 折扣竞争机制）、R8 量化-定性访谈三角验证（explanatory sequential design）、R7 system GMM 复制（连续化 DV + 内生性分类 + AR/Hansen 诊断）。反模式 +2（枚举型稳健性条目须逐条 threat 定位；曲线调节只报交互符号不报转折点/幅度）、诚实边界 +3（marginal p<.10 须显式标；替代操作化 null 须排除低功效；访谈只作三角验证）。registry sync 修复：变体13 补登 R3，R4 槽位对齐 3 变体，R7/R8 补登新变体。核心倒U链（变体13）已在本轮前入库，本次为残差缺口。未改 SKILL 核心。
 

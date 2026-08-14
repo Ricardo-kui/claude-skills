@@ -70,6 +70,51 @@
 |------|------|---------|
 | **Difference (同IV不同条件)** | "[X] will have a [greater/lesser] effect on [Y] for [group A] than for [group B]." | 比较跨组/跨条件效应 |
 | **Difference (不同IV同DV)** | "[X1] will have a [greater/lesser] effect on [Y] than [X2] will have on [Y]." | 多 IV 竞争比较 |
+| **Comparative main effect (策略/极点对)** | "[Strategy A] is more [negatively/positively] related to [DV] than [Strategy B]." | 同一 continuum 两端（或两类策略）对**同一 DV** 的相对方向；非相对零的简单主效应 |
+
+### Comparative Main Effect（比较型主效应；EMERGING）
+
+<!--
+pattern_id: comparative_main_effect_hypothesis_form
+build_type: 机制推演型 / 纯主效应
+source: chenganesanliu2009
+source_papers: ["Chen_Ganesan_Liu_2009_JM"]
+confidence: medium
+status: EMERGING
+note: 待第二篇交叉验证；配套架构 audience_foil_then_focal_signal_single_H
+-->
+
+**适用**: IV 是两类策略/响应极点的比较（非连续量相对零点）；理论预测是 **A 相对 B 更负/更正**，而非 "A is negatively related to Y" 的简单方向句。
+
+**验证状态**: EMERGING（单源 `chenganesanliu2009`；待第二篇验证）
+
+**模板**:
+```
+H[N]. [Strategy A] is more negatively related to [DV] than [Strategy B].
+```
+
+**收敛前缀（可选）**:
+```
+Therefore, we propose that [strategy A] will receive greater [evaluator] attention
+and be interpreted as a signal of [severe downside], so [DV] is affected more
+negatively when [A] than when [B].
+```
+
+**原文锚点** (Chen, Ganesan & Liu 2009, JM):
+> "Proactive product-recall strategies are more negatively related to the firms' financial value than passive product-recall strategies."
+
+**语料锚定**：
+- Chen, Ganesan & Liu (2009, *JM*) — proactive vs passive → firm financial value（比较型单 H）
+
+**与邻近形式的判别**:
+| 本形式 | Difference（跨组效应） | 简单主效应 |
+|--------|----------------------|------------|
+| 比较两个 **IV 极点/策略** 对同一 DV | 同一 IV 在不同 **group/condition** 上的效应强弱 | "[IV] is negatively related to [DV]"（相对零） |
+| 常接 foil→focal 单 H 架构 | 常接调节/分组设计 | 无对照极点时用 |
+
+**反模式**:
+- 有明确对照极点却写成相对零的简单方向句，丢失比较信息
+- 把比较句误写成调节假设（"effect stronger for A than B" 若 A/B 是 IV 水平而非 W）
 
 **原文锚点** (Han, Pollock & Paruchuri, SMJ "Public enemies?"):
 > "This leads to our baseline expectation that both reputation and celebrity enhance misconduct scandalization's likelihood." ... "However, we further argue that differences in reputation and celebrity's sociocognitive content lead them to vary in when and why they attract attention and are newsworthy, resulting in different effects on the extent to which the media scandalizes a firm's misconduct."

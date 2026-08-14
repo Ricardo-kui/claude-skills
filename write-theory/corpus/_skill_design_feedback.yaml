@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
   last_updated: '2026-08-12'
-  observations_processed: 8
+  observations_processed: 9
   description: Evidence ledger for write-theory design defects inferred from Theory exemplar distillation.
 defects:
   e-family-missing-dual-edged-signed-contingency-variant:
@@ -308,11 +308,12 @@ defects:
     classification: validator_defect
     status: EMERGING
     risk: low
-    current_rule: 硬约束 #11 要求调节论证双边完整（high AND low），对 cue-triggered trait-activation moderation 会误伤——low-cue 态即主效应已论证的默认表现型基线，强制 low 段会冗余重述主效应。
-    rule_excerpt: '≥2 个 moderators 必须有理论驱动的选择理由（元框架/统一分类）；调节论证双边完整（high AND low）'
-    rule_locator: write-theory/SKILL.md 硬约束 #11；write-theory/corpus/subprotocols/bilateral_argumentation_templates.md
+    current_rule: 硬约束
+    rule_excerpt: ≥2 个 moderators 必须有理论驱动的选择理由（元框架/统一分类）；调节论证双边完整（high AND low）
+    rule_locator: write-theory/SKILL.md 硬约束
     target: write-theory/SKILL.md + write-theory/corpus/subprotocols/bilateral_argumentation_templates.md
-    diagnosis: Ridge et al. (2024 AMJ) H3/H4 moderation 只论证 high-cue（activation）侧，low-cue 为 avoidance 默认主效应基线——结构完整，仅违反规则字面。双边规则本为"high/low 均为新颖理论状态各需机制"设计，cue/activation moderator 的 low 态定义上即默认表现型（已论证）。
+    diagnosis: Ridge et al. (2024 AMJ) H3/H4 moderation 只论证 high-cue（activation）侧，low-cue 为 avoidance 默认主效应基线——结构完整，仅违反规则字面。双边规则本为"high/low
+      均为新颖理论状态各需机制"设计，cue/activation moderator 的 low 态定义上即默认表现型（已论证）。
     proposed_change:
       action: conditionalize
       summary: C11 增加 cue/activation carve-out——low 态=主效应默认基线时，双边覆盖由（主效应基线）+（high 态完整机制论证）满足，不强制冗余 low 段。
@@ -330,7 +331,7 @@ defects:
       journal: AMJ
       build_type: 调节效应型
       hypothesis_family: ''
-      evidence_anchor: 'H3/H4 moderation 段只论 high-cue 侧；low-cue = avoidance 默认主效应基线（L78-84）'
+      evidence_anchor: H3/H4 moderation 段只论 high-cue 侧；low-cue = avoidance 默认主效应基线（L78-84）
       evidence_quality: full_text_verified
     paper_count: 1
     journals:
@@ -342,7 +343,8 @@ defects:
     verified_journal_count: 1
     regression_cases:
       positive:
-      - prompt: CEO paranoia → lobbying breadth，moderator 为 regulatory ruling severity（cue，low 态=avoidance 默认主效应），只写 high-cue 激活 aggression 侧。
+      - prompt: CEO paranoia → lobbying breadth，moderator 为 regulatory ruling severity（cue，low 态=avoidance 默认主效应），只写 high-cue
+          激活 aggression 侧。
         expected_invariants:
         - 不强制冗余 low-cue 段落
         - high（activation）侧完整机制论证
@@ -360,17 +362,19 @@ defects:
     resolution_history:
     - status: applied
       modified_targets:
-      - write-theory/SKILL.md（硬约束 #11 措辞条件化）
+      - write-theory/SKILL.md（硬约束
       - write-theory/corpus/subprotocols/bilateral_argumentation_templates.md（Cue-Activation Carve-Out 小节 + 速查表 row 13）
       - write-theory/corpus/_skill_design_feedback.yaml
-      rule_excerpt_after: '调节论证双边完整（high AND low）。**cue/activation moderator 例外**：当 moderator 是特质相关 cue、low 态即主效应已论证的默认表现型基线时，双边覆盖可由（主效应基线）+（high 态完整机制论证）满足，不强制冗余 low 段'
+      rule_excerpt_after: 调节论证双边完整（high AND low）。**cue/activation moderator 例外**：当 moderator 是特质相关 cue、low 态即主效应已论证的默认表现型基线时，双边覆盖可由（主效应基线）+（high
+        态完整机制论证）满足，不强制冗余 low 段
       old_rule_excerpt_absent: false
       validation:
         quick_validate: true
         regression: true
         forward_test: true
       date: '2026-08-12'
-      note: bounded core-correction per design-feedback-loop；corpus_health_check 通过；dual-regression positive+preservation 通过
+      note: bounded core-correction per design-feedback-loop；corpus_health_check 通过；dual-regression positive+preservation
+        通过
     lifecycle: resolved
     first_seen: '2026-08-12'
     last_seen: '2026-08-12'
@@ -382,13 +386,15 @@ defects:
     status: EMERGING
     risk: low
     current_rule: E_moderation 变体速查表覆盖 E1-E10，无 trait-activation dual-manifestation cue-switch 家族成员。
-    rule_excerpt: '| E7 | 宏观事件激活与持续性调节 ... |'  # E_moderation.md E7 行（最近邻）
+    rule_excerpt: '| E7 | 宏观事件激活与持续性调节 ... |'
     rule_locator: write-theory/corpus/variants/E_moderation.md
     target: write-theory/corpus/variants/E_moderation.md
-    diagnosis: Ridge et al. (2024) 架构=稳定特质（paranoia）→默认表现型（avoidance）主效应 + 特质相关 cue 激活对立表现型（aggression）作用于同一 DV。E7 需要宏观事件+时间持续性，E1 是通用 strengthen/weaken，均不覆盖。writer 易误路由到 E1 或过度套 E7。
+    diagnosis: Ridge et al. (2024) 架构=稳定特质（paranoia）→默认表现型（avoidance）主效应 + 特质相关 cue 激活对立表现型（aggression）作用于同一 DV。E7 需要宏观事件+时间持续性，E1
+      是通用 strengthen/weaken，均不覆盖。writer 易误路由到 E1 或过度套 E7。
     proposed_change:
       action: add_branch
-      summary: ADD E11 Trait-Activation Dual-Manifestation Cue-Switch Moderation（EMERGING，单源）+ 速查表 row + hypothesis template table 新增 Mitigation via Manifestation-Switch 模式。
+      summary: ADD E11 Trait-Activation Dual-Manifestation Cue-Switch Moderation（EMERGING，单源）+ 速查表 row + hypothesis template
+        table 新增 Mitigation via Manifestation-Switch 模式。
     absolute_rule: false
     decisive_falsifier: false
     applicability:
@@ -403,7 +409,7 @@ defects:
       journal: AMJ
       build_type: 调节效应型
       hypothesis_family: ''
-      evidence_anchor: 'trait paranoia → avoidance default（H1/H2）→ paranoia-relevant cues 激活 aggression（H3/H4）'
+      evidence_anchor: trait paranoia → avoidance default（H1/H2）→ paranoia-relevant cues 激活 aggression（H3/H4）
       evidence_quality: full_text_verified
     paper_count: 1
     journals:
@@ -434,7 +440,8 @@ defects:
       - write-theory/corpus/_evidence_registry.yaml（tfr_163-166）
       - write-theory/corpus/_index.md
       - write-theory/corpus/meta/routing_table.md（E 二级路由补充）
-      rule_excerpt_after: '| E11 | 特质激活双表现型 cue 切换调节（Trait-Activation Dual-Manifestation Cue-Switch，Ridge et al. 2024 AMJ 型）|'
+      rule_excerpt_after: '| E11 | 特质激活双表现型 cue 切换调节（Trait-Activation Dual-Manifestation Cue-Switch，Ridge et al. 2024 AMJ
+        型）|'
       old_rule_excerpt_absent: false
       validation:
         quick_validate: true
@@ -453,10 +460,13 @@ defects:
     status: EMERGING
     risk: low
     current_rule: moderation 句式集覆盖 buffering/enhancing/antagonistic/existence/competing，无"mitigation via manifestation-switch"（行为切换）模式。
-    rule_excerpt: 'The [positive/negative] effect of [X] on [Y] is weakened when [Z] is [high/present] because [Z] reduces the [cost/risk/uncertainty/constraint] that underlies the [X]→[Y] mechanism.'  # moderation.md 缓冲型模板
+    rule_excerpt: The [positive/negative] effect of [X] on [Y] is weakened when [Z] is [high/present] because [Z] reduces
+      the [cost/risk/uncertainty/constraint] that underlies the [X]→[Y] mechanism.
     rule_locator: write-theory/corpus/sentences/moderation.md
     target: write-theory/corpus/sentences/moderation.md + write-theory/corpus/variants/E_moderation.md（假设模板按交互模式 table）
-    diagnosis: Ridge et al. (2024) H3/H4 框架是 "positive interaction effect ... negative relationship is mitigated as [cue] increases and prompts more [aggressive] action"——cue 不削弱避免机制，而是激活对立行为表现型（manifestation-switch）。Buffering 是最近邻但编码不同理论引擎（弱化机制）。writer 会把 switch-moderation 硬塞进 buffering，腐蚀 why-chain。
+    diagnosis: Ridge et al. (2024) H3/H4 框架是 "positive interaction effect ... negative relationship is mitigated as [cue]
+      increases and prompts more [aggressive] action"——cue 不削弱避免机制，而是激活对立行为表现型（manifestation-switch）。Buffering 是最近邻但编码不同理论引擎（弱化机制）。writer
+      会把 switch-moderation 硬塞进 buffering，腐蚀 why-chain。
     proposed_change:
       action: add_branch
       summary: ADD 'Mitigation via Manifestation-Switch' 交互模式到 moderation.md（句+判别）与 E_moderation.md 假设模板表；判别于 Buffering（机制削弱）。
@@ -488,7 +498,7 @@ defects:
       positive:
       - prompt: IV=特质，cue 激活对立表现型，需写缓解交互假设。
         expected_invariants:
-        - "mitigated as [cue] increases and prompts more [opposing manifestation] action"
+        - mitigated as [cue] increases and prompts more [opposing manifestation] action
         - 机制语言为 manifestation-switch 而非 dampening
       preservation:
       - prompt: 真机制削弱（Eilert 2017 buffering）。
@@ -503,7 +513,9 @@ defects:
       - write-theory/corpus/sentences/moderation.md（Mitigation via Manifestation-Switch 句 + 判别）
       - write-theory/corpus/variants/E_moderation.md（假设模板表新增 Mitigation via Manifestation-Switch 行）
       - write-theory/corpus/_evidence_registry.yaml（tfr_164 + pattern mitigation_via_manifestation_switch）
-      rule_excerpt_after: 'H[N]: There will be a [positive/negative] interaction effect of [IV] and [cue] on [DV], such that the [negative/positive] relationship between [IV] and [DV] is mitigated as [cue] increases and prompts more [opposing manifestation] action.'
+      rule_excerpt_after: 'H[N]: There will be a [positive/negative] interaction effect of [IV] and [cue] on [DV], such that
+        the [negative/positive] relationship between [IV] and [DV] is mitigated as [cue] increases and prompts more [opposing
+        manifestation] action.'
       old_rule_excerpt_absent: false
       validation:
         quick_validate: true
@@ -517,3 +529,54 @@ defects:
     auto_action:
       eligibility: no_action
       reason: Validated writeback applied on 2026-08-12.
+  missing-audience-foil-single-H-pattern:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: '变体 G 覆盖双受众对立成对假设；acknowledgment_response 覆盖一般异议处置， 但缺少「仅用对手受众作 foil、收敛到单 DV 比较主效应」的可调用骨架。
+
+      '
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/subprotocols/argumentation_patterns.md
+    diagnosis: '规则路由（Inadequacy×Mechanism→B）正确；缺口在语料：写作者易误路由到完整 G， 或缺少 foil→focal 句式。属 corpus_gap，非 routing_defect。
+
+      '
+    proposed_change:
+      action: add_branch
+      summary: 在 argumentation_patterns 增加 audience-foil→focal-signal（single H）可选骨架，并交叉链接勿升格为 G
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 机制推演型
+      hypothesis_families:
+      - comparative_main_effect
+      - main_effect_only
+      journals: []
+      boundary: 反直觉主效应；DV 由单一评价者定价；对手受众文献仅作 foil
+    papers:
+    - id: chenganesanliu2009
+      journal: JM
+      build_type: 机制推演型
+      hypothesis_family: comparative_main_effect
+      evidence_anchor: 'Theory Effects: consumer-positive foil → investor-negative signal chain → H1 comparative'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - JM
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - JM
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-12'
+    last_seen: '2026-08-12'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.

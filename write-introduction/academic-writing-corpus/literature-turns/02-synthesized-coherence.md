@@ -3,7 +3,7 @@ type: canonical_reference
 canonical_id: "02-synthesized-coherence"
 status: ✓ STANDARD
 gap_type: Inadequacy
-cross_paper: VERIFIED
+cross_paper: ROBUST
 generativity: GENERATIVE
 exclusivity: MEDIUM
 source_papers:
@@ -11,6 +11,8 @@ source_papers:
   - pollock2015 (ASQ, 2015): "Interdependence of constructs... question gone unaddressed"
   - pfarrer2010 (AMJ, 2010): "general vs specific + labels vs proxies confusion"
   - shipilov2020 (SMJ, 2020): "Multi-literature synthesis"
+  - chenganesanliu2009 / Chen_Ganesan_Liu_2009_JM (JM, 2009): "Continuum map → sequential dual-discipline incompleteness → intersection silence (变体F)"
+updated: 2026-08-12
 created: 2026-05-19
 source: Extracted from literature-turn-templates.md + MVP30 validation
 ---
@@ -33,7 +35,7 @@ P2-P3 的功能：连接多个文献流，展示它们共享一个盲区——�
 ## 验证状态
 
 ### 跨论文复现
-- **VERIFIED** (≥4 papers): gamache2020 (SMJ), pollock2015 (ASQ), pfarrer2010 (AMJ), shipilov2020 (SMJ)
+- **ROBUST** (≥5 papers, ≥2 journals): gamache2020 (SMJ), pollock2015 (ASQ), pfarrer2010 (AMJ), shipilov2020 (SMJ), chenganesanliu2009 (JM)
 
 ### 生成力
 - **GENERATIVE**: 多文献流连接逻辑在跨学科研究中高度可迁移
@@ -151,6 +153,38 @@ P2-P3 的功能：连接多个文献流，展示它们共享一个盲区——�
 - 权威定义锚定的引用必须是领域公认的*区分性*定义（如 Washington & Zajac 2005 对 status vs reputation），不能引用非权威或非区分性定义
 - 推测/考虑/系统研究三层必须*递进*——"推测" = 无实证支撑的理论猜测，"考虑" = 相邻但更窄的实证角度，"系统研究" = 本文填补的 void；若三层不分梯度会显得堆砌引用
 - 不要在构念尚未被区分时使用——"progress made in distinguishing" 的前提必须成立，否则缺口无支点
+
+---
+
+### 变体 F：策略连续统地图→双学科顺序批判→交叉沉默（chen2009 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "Previous literature has classified [crisis responses] into [continuum] ([citations]). A major distinction is whether the firm acts [pole A] or [pole B]. A fundamental question is whether [pole B strategy] helps attenuate effects on [firm value]. The theoretical and empirical evidence remains equivocal. Only a limited number of [discipline A] studies have investigated [strategies] by focusing on [audience A outcomes] ([citations])... the broader issue of how strategies influence [audience B outcome / firm value] has not been studied. Several studies in [discipline B] have examined [event→firm value], but results are mixed ([citations])... More important, extant studies have not considered the role of alternative [strategies]."
+
+**来源**: Chen, Ganesan & Liu (2009, *Journal of Marketing*) / `chenganesanliu2009` / Chen_Ganesan_Liu_2009_JM, P4–P6
+
+**原文锚定**:
+> "Only a limited number of marketing studies have investigated the impact of product-harm crisis management strategies by focusing on consumer evaluations of products and services. Most of these studies were conducted in a laboratory setting, and the broader issue of how different crisis management strategies might influence firms' financial value has not been studied."
+
+**关键特征**:
+- **连续统地图作入口**: 先用策略 continuum 建立共享坐标系，再进入双学科批判——读者先有"地图"，后有"缺口"
+- **顺序双段 incompleteness（签名动作）**: Stream A（如营销实验室）承认策略洞察但缺财务 DV；Stream B（如金融事件研究）承认 event→firm value 但缺策略 IV——两流各自正确，交叉点沉默
+- **"remains equivocal" + "has not been studied" + "have not considered"**: 三层 Incompleteness 语言递进，收束到交叉 RQ
+- **与变体 D（wowak 双流交叉沉默）判别**: D 是趋势升级→单段 parallel silence；本变体是 continuum 地图 + **顺序双段**学科批判，再钉交叉点——段落预算更大、学科边界更显式
+- **Synthesized × Incompleteness 非对角合法**: 两流各自充分，缺口在交汇而非任一透视"错了"
+
+**适用**:
+- 跨学科/双成熟文献流研究（营销×金融、战略×OM、组织×资本市场等）
+- 需要先建立策略/响应类型学地图再指出交叉沉默
+- JM/SMJ 等接受多段 literature turn 的期刊；Incompleteness 主轴（可嵌 mild Inadequacy 仅在贡献兑现层）
+
+**禁忌**:
+- 两个学科流都必须有实质引用——不能稻草人化任一方
+- 若只用 "limited number" 而无交叉点具体遗漏（财务 DV / 策略 IV），Tension 会塌缩为 weak few-studies
+- 不要把本变体写成两理论互斥（Incommensurability）——顺序批判是遗漏互补，不是对垒裁决
+- 单篇来源 → 仅作 optional `section_variant`，不得升 core
 
 ---
 
