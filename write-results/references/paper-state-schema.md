@@ -13,8 +13,8 @@ results:
   estimator_family: "[OLS / FE / Logit / Cox / DiD / IV/2SLS / ...]"
 
   hypothesis_results:
-    H1: {direction: "[positive / negative / null]", significant: [true / false], supported: [true / false]}
-    # H2: {direction: "...", significant: ..., supported: ...}
+    H1: {direction: "[positive / negative / null]", significant: [true / false], baseline_verdict: "[supported / partially_supported / not_supported]", overall_evidence: "[stable / qualified / mixed / unresolved]"}
+    # H2: {direction: "...", significant: ..., baseline_verdict: "...", overall_evidence: "..."}
 
   story_resolution:
     headline_answer: "[对 theme question 的证据约束式回答]"
@@ -40,4 +40,19 @@ results:
     optional: ["[可选检验的维度]"]
     excluded:
       "[维度名]": "[排除理由]"
+
+  revision_constraints:
+    hypothesis_order: ["H1", "H2"]
+    section_order: []
+    terminology_required: []
+    terminology_prohibited: []
+    language_locks: []
+    active_feedback_rule_ids: []
+
+  validation:
+    source_fidelity: "[pass / fail]"
+    analysis_unit_logic: "[pass / fail]"
+    paragraph_cohesion: "[pass / fail]"
+    language_locks: "[pass / fail]"
+    mixed_evidence_disclosure: "[pass / fail]"
 ```

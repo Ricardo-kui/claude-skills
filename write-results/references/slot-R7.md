@@ -1,6 +1,17 @@
-<!-- write-results 槽位骨架 R7：由 SKILL.md「槽位骨架加载」按路由决策加载。内容为原 SKILL.md 该槽位段落骨架（通用 + 设计类型变体 + QC），未做语义修改。 -->
+<!-- write-results 槽位骨架 R7：由 SKILL.md「槽位骨架加载」按路由决策加载。 -->
 
 ### R7. 稳健性 / 效度 / 敏感性检验
+
+**问题—检验契约（强制）**：每个独立分析单元必须交代六项功能：
+
+1. 具体问题路径：什么数据生成、样本进入、变量测量、时序或识别过程会产生何种偏差；
+2. 受影响的推断：该问题威胁哪一假设、系数、样本或解释；
+3. 若问题成立，数据中应出现什么诊断性表现；
+4. 所用检验为什么能够区分该问题；
+5. 结果及其幅度/不确定性；
+6. 判决与仍未解决的边界。
+
+这六项是逻辑功能，不要求六句。像 “A first concern is selection” 或 “firm-years enter the record” 但不说明进入机制、偏差方向和受影响推断的表述不合格。Selection 与 endogeneity 默认分节；不同内生性来源也应分别使用问题导向的小标题。
 
 **通用填空段落（按威胁组织，每威胁一段）**：
 
@@ -85,7 +96,7 @@ Finally, one might be concerned that our results are influenced by the fact that
 ```text
 A plausible alternative explanation for our main effect is that [alternative mechanism] — rather than [theorized mechanism] — drives the reduction in [outcome] following [treatment]. [Alternative mechanism] logic would predict that [treatment] changes [outcome] because [rival causal chain: e.g., firms improve governance in response to law, which independently reduces incidents that would trigger [outcome]], not because [theorized mechanism: e.g., managers facing lower litigation risk become less vigilant].
 
-We rule out this alternative through a two-step empirical strategy. 
+We rule out this alternative through a two-step empirical strategy.
 
 First, we CONTROL for [alternative mechanism proxy] directly. Model [x] of Table [y] adds [control variable(s)] measuring [alternative mechanism]. If [alternative mechanism] were driving the main effect, including these controls should attenuate or eliminate the [treatment] coefficient. Instead, [treatment] remains [direction] and statistically significant ([coefficient], [p-value]), and its magnitude is [qualitatively similar / only modestly reduced] compared to the baseline specification. This indicates that [alternative mechanism] does not account for the main effect.
 
@@ -167,6 +178,18 @@ Additional analyses (summarized in Table [N]) tested the robustness of the resul
 - Aim 列按**威胁类型**组织（测量/样本/时点/内生性/替代数据/长期影响），与 R7 threat-based 逻辑一致
 - Details 列引用具体表/附录，把分散在多张附录表的检验**可追溯地索引**
 - 表格做总览，正文仍逐条展开关键检验的**细节与解释**——表格不替代文字论证
+
+**实证证据与假设支持矩阵（Table 4 式）**：当论文有至少两个假设且补充分析不少于四项，或任何关键结果出现 mixed/qualified evidence 时，增加一张跨分析总表。它回答“哪项分析对哪条假设提供何种证据”，不能以稳健性检验数量投票。
+
+```text
+| Analysis | Problem addressed | H1 evidence | H2 evidence | Interpretation | Location |
+|---|---|---|---|---|---|
+| Baseline specification | Designated hypothesis test | supported / partially supported / not supported / n.a. | supported / partially supported / not supported / n.a. | Baseline verdict only | Table [x] |
+| [Selection check] | [Exact entry/composition path] | stable / qualified / mixed / unresolved / n.a. | [...] | [What changed and residual boundary] | Table [y] |
+| [Endogeneity check] | [Specific omitted-variable/reverse-causality path] | [...] | [...] | [...] | Table [z] |
+```
+
+矩阵中的 baseline 行使用 hypothesis verdict；后续行使用 evidence status。若替代测量翻号、IPW 改变方向或某项检验只适用于 H1，必须分别写为 mixed/qualified/n.a.，不得合并成 “all hypotheses supported”。
 
 **适用**: 稳健性检验 ≥4 项、跨多种威胁类型的研究（event study + 内生性 + 替代数据 + 长期效应的组合尤为典型）；正文篇幅紧张、需要紧凑呈现多重检验时
 
@@ -254,7 +277,7 @@ Theoretical guidance on which covariates to include is sometimes ambiguous. To a
 To examine whether our findings generalize across theoretically meaningful subgroups, we re-estimate our models within subsamples defined by [theoretically relevant moderator: e.g., firm size (above/below median) / industry (manufacturing vs. services) / time period (pre- vs. post-regulation) / demographic group]. If the [focal effect] were driven by a specific subset of the data, we would expect the coefficient to be concentrated in [subgroup A] and absent in [subgroup B]. Instead, we find that [focal predictor] is [direction] and [significant / not significant] in both [subgroup A] (β = [value], p = [value]) and [subgroup B] (β = [value], p = [value]). The [similarity / difference] in coefficients across subgroups [supports generalizability / reveals a boundary condition that warrants further theorizing]. [If applicable: We also employed random subsampling ([N] draws of [X%] of the sample) and find that the [focal coefficient] is [direction] in [Y%] of draws, with a mean coefficient of [value] (95% CI [[lo], [hi]]), consistent with the full-sample estimate.]
 ```
 
-### Fragility / Divergent Findings Honest Reporting（新增）
+### Fragility / Direct Reporting of Divergent Findings（新增）
 
 对应论文 Section D——当稳健性检验结果**不一致**时的诚实报告范式。
 
@@ -263,7 +286,7 @@ To examine whether our findings generalize across theoretically meaningful subgr
 ```text
 [When some robustness checks yield divergent results — DO NOT hide behind "results are unchanged":]
 
-We conducted a series of robustness analyses to assess the stability of our findings across [dimensions tested]. Most tests confirm the [direction and significance] of the [focal relationship]: [summarize 2-3 supporting checks briefly]. However, when we [specific test that diverged], the coefficient on [focal predictor] is [attenuated / not significant / directionally inconsistent] ([specific result]). We do not interpret this as disconfirmation but rather as evidence that the [focal relationship] is [sensitive to / moderated by / bounded by] [specific analytical choice]. Specifically, [substantive interpretation: e.g., the effect appears to hold under condition A but not condition B, suggesting a boundary condition]. We return to this fragility in the Discussion, where we consider its implications for [theory / measurement / generalizability].
+Most robustness analyses preserve the [direction and significance] of the [focal relationship]: [summarize 2-3 supporting checks briefly]. Under [specific divergent test], however, the coefficient on [focal predictor] is [attenuated / not significant / directionally inconsistent] ([specific result]). This divergence bounds the relationship to [specific sample, measure, period, or analytical condition] and leaves [remaining uncertainty] unresolved. The overall evidence is therefore [qualified / mixed], despite [baseline verdict].
 
 [When ALL major robustness checks are consistent — the standard happy path:]
 
@@ -277,6 +300,9 @@ Across all robustness analyses, the [focal coefficient] remains [direction] and 
 > - Journal space constraints are NOT a valid reason to hide divergent findings — use online supplements if needed (Yuan et al. 2026 REC C3)
 
 > **R7 段落级体裁 QC**（审计体裁）:
-> - **Threat-first 开头**：每段以威胁声明开篇（"One concern is..." / "A potential threat is..."）；禁止 table-first-without-threat（段首 "Table 5 reports robustness checks..."）——威胁 frame 必须先于证据
+> - **Problem-path first**：开头必须命名具体因果/数据路径和受影响的推断，而不只是套用 "One concern is..."。禁止 table-first-without-problem，也禁止只有 selection/endogeneity/measurement 这类工具标签
+> - **Diagnostic fit**：在结果前说明若问题成立会观察到什么，以及该检验为何能诊断它；检验名称本身不是论证
+> - **可导航标题**：每一项实质不同的 selection、endogeneity、mechanism、heterogeneity 或 robustness 分析应有短小、问题导向的小标题
 > - **单段单威胁**：一段内出现 ≥3 个异质检验（如替代测量 + 安慰剂 + 子样本挤在一段）→ 按威胁拆段；与 §0.2 长度上限联动
+> - **残余边界**：不得用 “addresses endogeneity” 或 “results are robust” 收尾；说明结果降低了哪一担忧、仍不能排除什么
 > - **预期行为说明（非误报）**：本 threat-first 标准高于多数已发表论文的稳健性写作——Yuan et al. (2026) 指出大多数研究的稳健性报告不足（多为 "We performed three robustness checks. First... Second... Finally..." 式 laundry-list / procedure-first 开篇）。因此对既有范文（如 Malshe and Agarwal 2015, JM 的 R7 段）触发 flag 属预期行为，目的是把 laundry-list 写法推向 threat-framed，而非描述当前常态

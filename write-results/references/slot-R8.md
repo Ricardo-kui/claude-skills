@@ -1,6 +1,10 @@
-<!-- write-results 槽位骨架 R8：由 SKILL.md「槽位骨架加载」按路由决策加载。内容为原 SKILL.md 该槽位段落骨架（通用 + 设计类型变体 + QC），未做语义修改。 -->
+<!-- write-results 槽位骨架 R8：由 SKILL.md「槽位骨架加载」按路由决策加载。 -->
 
 ### R8. 补充 / 事后 / 机制分析
+
+**分析定位与导航（强制）**：先将每项分析标记为 confirmatory mechanism、rival explanation、corroborating evidence、heterogeneity 或 exploratory extension，并在标题和判决中维持该证据地位。不同分析原则上使用独立、问题导向的小标题。若变量或样本信息已从 Methods 移出，首次出现时必须自包含地给出数据源、操作化、时间窗口和样本边界。
+
+**段落逻辑**：机制和竞争解释段落按“理论预测/竞争预测 → 可观察含义 → 检验匹配 → 结果 → 判决与边界”组织。该链条是功能约束，不是统一四句模板；应从 corpus 中选择与当前功能匹配的句法并段落级改写，避免逐项罗列。
 
 **通用填空段落**：
 

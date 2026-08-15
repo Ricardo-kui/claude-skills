@@ -1,17 +1,19 @@
-<!-- write-results 槽位骨架 R3：由 SKILL.md「槽位骨架加载」按路由决策加载。内容为原 SKILL.md 该槽位段落骨架（通用 + 设计类型变体 + QC），未做语义修改。 -->
+<!-- write-results 槽位骨架 R3：由 SKILL.md「槽位骨架加载」按路由决策加载。 -->
 
-### R3. 主假设检验（四拍节奏）
+### R3. 主假设检验（四项证据功能）
 
-**通用填空段落（每假设一段，内置四拍）**： ⭐ PREMIUM（28/28 篇范文使用）
+**通用参考段落（每假设一段，覆盖四项证据功能）**： ⭐ PREMIUM（28/28 篇范文使用）
 
 ```text
 Hypothesis [x] predicted that [predictor] would be [positive/negative] associated with [outcome]. As shown in Model [y] of Table [z], the coefficient for [predictor] is [positive/negative] and statistically significant ([coefficient], [p-value]). Substantively, a [one-SD / one-unit / IQR] increase in [predictor] is associated with a [Y-unit / percentage-point / probability-shift] [increase/decrease] in [outcome], representing approximately [X%] change relative to [baseline / mean / median]. Thus, Hypothesis [x] is supported.
 ```
 
-> **四拍完整性检查**：方向 → 显著性+系数 → 幅度+基准 → 支持判断。Beat-3（幅度）必须使用具体数值基准（one-SD / one-unit / IQR / 概率变化 / 百分比），禁止仅写 "This indicates that..." 等模糊表述。
+> **功能完整性检查**：方向 → 不确定性/统计证据 → 幅度+基准 → 基准假设判断。这是证据功能，不是固定四句。可压缩为 2–3 句，也可因解释需要扩展；不得机械复制相同句法。幅度必须使用具体数值基准（one-SD / one-unit / IQR / 概率变化 / 百分比），禁止仅写 "This indicates that..." 等模糊表述。
 
-> **R3 段落级体裁 QC**（审计体裁；补充四拍检查）:
-> - **假设重述-first 是义务不是病**：段首必须是 "Hypothesis [x] predicted..." frame；禁止 table-first-without-frame（段首直接 "Model 2 shows that..."）——读者在 Beat-1 前需要假设锚点
+> **R3 段落级体裁 QC**（审计体裁；补充功能检查）:
+> - **假设锚点必须清楚，但句法可以变化**：在前两句内标明假设及其预测；无需每段机械使用完全相同的 "Hypothesis [x] predicted..." 开头。禁止在没有假设 frame 时直接进入表格数字
+> - **假设顺序锁定**：默认 H1 → H2 → …；理论重要性只改变强调，不自动改变展示顺序
+> - **两层判断分离**：R3 只给指定基准检验的 `baseline verdict`。后续 selection、endogeneity、measurement、robustness 证据决定 `overall evidence` 是否 stable、qualified、mixed 或 unresolved；不得在此预写“整体稳健”
 > - **Beat-skip**：缺 Beat-3（幅度）即既有强制要求。**判决位置不限**：可在假设重述之后早出（verdict-early-then-interpreted：判决前置→幅度/边际分析→解释性 wrap），也可置尾（verdict-last）——两种均为顶刊标准（Pontikes 2012 ASQ / Shen et al. 2022 JOM 用前者；Zhou et al. 2017 ASQ / Pollock et al. 2015 ASQ 用后者）。禁止的是判决早出后**又加同义判决**（见下条 Double wrap）
 > - **Double wrap**：禁止两句**同义判决**重复（"Thus, Hypothesis [x] is supported." 后又加 "This confirms our prediction."）。**但早判决 + 晚解释性 wrap 合法**——晚 wrap 若是幅度解读/比较/边界（如 Pontikes 2012 "The same ambiguity that makes orgs less appealing to consumers makes them more appealing to VCs"）而非第二句判决，不算 double wrap。Beat-4（判决）只出现一次，解释性 wrap 可叠加
 

@@ -5,7 +5,7 @@ meta:
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
     granularity: per design_type（对应 econometric-models/[设计类型].md 文件）
-    rationale: 用户不会报告满意，但会在对话中批评产出——批评是唯一可靠且零成本的使用反馈信号
+    rationale: 仅汇总指向具体设计类型变体的 corpus 质量信号；详细用户反馈、项目规则与旧建议覆盖关系以 references/feedback-registry.json 为准
     fields:
       revise: 用户对该设计类型产出的不满/需大改的批评次数（Claude 在 write-methods 会话中自动登记）
       reject: 产出被弃用/重写/推翻的次数（同上）
@@ -18,8 +18,8 @@ meta:
     non_signals:
     - 不登记 accepted/validated（用户不报告满意，登记必然为零）
     - 不设 too_easy/淘汰（变体是长期资产；频繁使用且好用应提升路由权重，而非降级）
-    record_path: Claude 在 write-methods 会话中捕获用户批评后自动登记（见 write-methods SKILL.md 批评登记）；批量登记可用 python _update_registry.py --record-critique
-      <critiques.yaml>（见 distill-methods-exemplar SKILL.md Phase 4.5）
+    canonical_feedback: references/feedback-registry.json
+    record_path: 先按 references/feedback-protocol.md 登记详细反馈；只有明确指向某设计类型变体时，才由 distill-methods-exemplar 后续同步 revise/reject 聚合计数
   source: corpus INDEX.md + product_recall_cross_validation + cutolo2024_jm_text_count + falchetti2022_smj_experiment + lashley_pollock2020_asq_qualitative_process
     + chung_low_rust_2022_jams_executive_confidence_myopia + ilicic_brennan_2026_jm_political_ideology_addictive_products
     + kim_lee_2026_putting_a_price_on_mission_smj + bamberger_homburg_wielgos_2021_jm_backfill + lee_wu_bednar_orsc_18968_distill
