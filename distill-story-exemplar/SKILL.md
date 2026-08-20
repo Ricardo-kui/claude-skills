@@ -38,7 +38,7 @@ The first two sections are the primary story-reading object; Results and Discuss
 
 ## Inputs
 
-Prefer the complete paper plus any verified section distillations. Read `references/vault-retrieval-protocol.md` for the Vault retrieval route when a Vault source is supplied. If only partial text is available, record `coverage: partial` and do not make the card eligible for recommendations in unobserved sections.
+Prefer the complete paper plus any verified section distillations. **When the paper comes from the PDM pipeline, read only `<citekey>.pdm/fulltext.text-only.md`** — the raw paper-import MD carries base64 images (up to ~90% of bytes) and must never enter context. Read `references/vault-retrieval-protocol.md` for the Vault retrieval route when a Vault source is supplied. If only partial text is available, record `coverage: partial` and do not make the card eligible for recommendations in unobserved sections.
 
 ## Workflow
 

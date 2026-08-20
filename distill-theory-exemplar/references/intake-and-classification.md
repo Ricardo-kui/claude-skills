@@ -1,5 +1,11 @@
 # Intake and classification
 
+> **输入纪律（2026-08-20 起）**：若输入来自 distill-paper-exemplar 编排（PDM 工作目录），
+> 只读 `<citekey>.pdm/sections/<本节>.md` 物化切片；需要全文上下文时读
+> `fulltext.text-only.md`。**禁止直接读原始 paper-import MD**——其中 44–89% 字节是
+> base64 图片单行巨串，读入即炸上下文。单独调用本 skill 且只有原始 MD 时，先运行
+> `distill-paper-exemplar/scripts/preprocess_l0.py <MD>` 再读产物。
+
 > Imported from the upstream protocol. Resolve relative resource paths from this reference file's directory.
 
 # Role

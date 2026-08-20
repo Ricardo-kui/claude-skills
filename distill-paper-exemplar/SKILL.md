@@ -23,9 +23,12 @@ whenToUse: "当用户给出一篇完整论文（PDF/MD/路径）要求整篇学�
 
 ```
 L0 获取与分解     paper-import(OvisOCR2/MinerU) → 全文 MD
-                 → 切片 4 段 + frontmatter/citekey → 创建 PDM（status: manifest）
+                 → scripts/preprocess_l0.py（确定性，无 LLM）：剥 base64 图
+                   （paper-import MD 的 44–89% 字节是 data:image 单行巨串，
+                   直读全文会炸上下文）→ <citekey>.pdm/fulltext.text-only.md
+                   + 物化切片 sections/<section>.md → 创建 PDM（status: manifest）
 L1 分节蒸馏 ×4    并行分发 distill-introduction/theory/methods/results-exemplar
-   （复用，零改动） 每节 → section JSON/报告 + skill_design_feedback
+   （复用，零改动） 输入 = PDM 切片文件（非全文）；每节 → section JSON/报告 + feedback
                  → 该节自己的写回预览门禁（gate ①，不绕过）→ write-* corpus
 L2 跨节一致性      由本 skill 执行（读 references/cross-section-coherence.md）
    （本层新建）    从 PDM 四节 identity 交叉校验 → ok | flagged，只标记不擅改
@@ -48,8 +51,12 @@ L4 反馈收敛        核对 design_feedback 已持久化；报告三路输出�
 ## 工作流
 
 1. **L0 获取与分解**。PDF → `paper-import`（80 页内 OvisOCR2，超长/图书 MinerU）；已是 MD
-   则直接用。切分 Intro/Theory/Methods/Results（+Discussion 归 results 或单列）。登记
-   frontmatter/citekey（Zotero 为元数据源）。创建 PDM 骨架。
+   则直接用。**随后必跑** `python scripts/preprocess_l0.py <全文MD>`（确定性脚本，不经 LLM）：
+   剥除 base64 图片（→ `![fig-N](image-ref-N)` 占位符）生成 `<citekey>.pdm/fulltext.text-only.md`，
+   并按标题物化切片 `sections/introduction|theory|methods|results|discussion.md`；
+   检测不到的节在 l0_manifest.json 标 `unknown`，由主循环人工切分补齐，不阻塞。
+   登记 frontmatter/citekey（Zotero 为元数据源）。创建 PDM 骨架，把 manifest 的
+   切片路径写入 `source_provenance.section_slices`。
 2. **L1 分节蒸馏分发**。按用户范围（默认 4 节全跑）并行分发：
    `/distill-introduction-exemplar <切片> --output-format=json` → `sections/introduction.json`
    （theory/methods/results 同理）。每个子任务完成后：子任务写自己的 section 文件与
@@ -59,8 +66,8 @@ L4 反馈收敛        核对 design_feedback 已持久化；报告三路输出�
    estimator_family）就位后执行 rubric（见 references/cross-section-coherence.md）。
    输出 `cross_section_identity` 块。仅标记，不自动修正；flag 汇总呈现给用户。
    若用户只蒸馏单节，fill 已知、标 `unknown`，不阻塞。
-4. **L3 整篇整合**。用户确认 L2 结果后，分发 `distill-story-exemplar`，输入 = 全文 +
-   PDM 中 `verified` 分节蒸馏。产出 blueprint 卡后**不代确认**（gate ② 归 story skill），
+4. **L3 整篇整合**。用户确认 L2 结果后，分发 `distill-story-exemplar`，输入 = **text-only 全文**
+   （`<citekey>.pdm/fulltext.text-only.md`，非原始 MD）+ PDM 中 `verified` 分节蒸馏。产出 blueprint 卡后**不代确认**（gate ② 归 story skill），
    确认后运行其内建 `validate_blueprints_v4.py` + `build_catalog_v4.py`。将 L2 flag 作为
    卡 assessment 的参考输入（论文内部不一致本身是可学习的信号）。
 5. **L4 反馈归拢（best-effort）**。核对 `skill_design_feedback` 已持久化——仅
@@ -102,4 +109,6 @@ L4 反馈收敛        核对 design_feedback 已持久化；报告三路输出�
 ## Context discipline
 
 不预读四个分节 skill 的语料；按 `references/pdm-schema.md` 维护 PDM，按需打开
-`references/cross-section-coherence.md`。全文 MD 只读，PDM 是唯一写入交接物。
+`references/cross-section-coherence.md`。**原始全文 MD（含 base64 图片）禁止读入上下文**——
+所有阅读只经 `<citekey>.pdm/fulltext.text-only.md` 与 `sections/*.md` 切片；原始 MD 只读存档，
+PDM 是唯一写入交接物。
