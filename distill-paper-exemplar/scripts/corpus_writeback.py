@@ -263,12 +263,15 @@ def main() -> int:
             messages.append(f"[{name}] REFUSED: verdict SKIP（语料已覆盖，禁止写回）")
             rc = 1
             continue
-        spec = blocks.get(name)
-        if spec is None:
-            messages.append(f"[{name}] SKIPPED: no block in blocks.yaml")
+        entry = blocks.get(name) or {}
+        block_text = entry.get("block_text") or item.get("block_text")
+        index_note = entry.get("index_note") or item.get("index_note") or ""
+        file_override = entry.get("file") or item.get("file_override")
+        if not block_text:
+            messages.append(f"[{name}] SKIPPED: no block_text (blocks.yaml 与 plan 均无)")
             rc = 1
             continue
-        target = resolve_target(corpus_root, item, spec.get("file"))
+        target = resolve_target(corpus_root, item, file_override)
         if target is None:
             messages.append(f"[{name}] SKIPPED: no anchor file (override via blocks.yaml file:)")
             rc = 1
