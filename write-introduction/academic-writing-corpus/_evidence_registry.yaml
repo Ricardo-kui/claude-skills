@@ -476,11 +476,12 @@ evidence:
         reject: 0
         common_revise_reasons: []
     17-debate-reframing:
-      paper_count: 1
+      paper_count: 2
       papers:
       - park_lange_jeon (SMJ)
+      - westphalzajac1995 (AMJ)
       gap_distribution:
-        Incompleteness: 0
+        Incompleteness: 1
         Inadequacy: 0
         Incommensurability: 1
       status: EMERGING
@@ -621,7 +622,7 @@ evidence:
         common_revise_reasons: []
   tensions:
     01-despite-progress-unaddressed:
-      paper_count: 31
+      paper_count: 32
       papers:
       - ahmadi2017 (JMS)
       - cancellieri2023 (SMJ)
@@ -654,8 +655,9 @@ evidence:
       - wang2023 (SMJ)
       - wowak2025 (MS)
       - wu2025 (SMJ)
+      - westphalzajac1995 (AMJ)
       gap_distribution:
-        Incompleteness: 22
+        Incompleteness: 23
         Inadequacy: 0
         Incommensurability: 0
       status: ROBUST
@@ -1649,7 +1651,7 @@ evidence:
         common_revise_reasons: []
   theory_lens:
     theory-lens-templates:
-      paper_count: 43
+      paper_count: 44
       papers:
       - anderson_reeb2004 (ASQ)
       - ceo_regulatory_focus_ijrm (IJRM)
@@ -1694,6 +1696,7 @@ evidence:
       - wu2025 (SMJ)
       - zhao_ding2022 (OS)
       - zhou2017 (ASQ)
+      - westphalzajac1995 (AMJ)
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: LOW
@@ -1857,6 +1860,7 @@ paper_index:
   kim_lee2026: Incompleteness
   Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ: Inadequacy
   cutolo2024: Incompleteness
+  westphalzajac1995: Incompleteness
 critique:
   schema: critique-driven usage stats（2026-08-09 闭环补丁：与 distill-methods/results registry 语义同构）
   rationale: 用户对 write-* 产出的批评与审稿回流（revision-coach）登记于此；revise+reject >= 2 触发 critique_heavy，供下一轮蒸馏选材 Gate 读取

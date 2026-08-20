@@ -8,8 +8,9 @@ generativity: ADAPTABLE
 exclusivity: MEDIUM
 source_papers:
   - pontikes2012 (ASQ, 2012): Dual-audience theory lens drives preview structure
+  - westphalzajac1995 (AMJ, 1995): 变体 P——前因—后果双框架 + 双视角链接预览
 created: 2026-06-04
-updated: 2026-06-04
+updated: 2026-08-20
 source: Distilled from Pontikes (2012, ASQ) — Two Sides of the Same Coin
 ---
 
@@ -61,6 +62,29 @@ P5-P6 的变体：不是按照"主效应→调节→机制"的通用结构预览
 - **禁忌**: 如果构念的两个来源没有独立的理论含义（只是不同的操作化方式），使用通用 findings preview
 
 **适用**: 构念有多个理论上有意义的来源/维度、需要分别检验每个来源的研究
+
+---
+
+## 变体 P：前因—后果双框架 + 双视角链接预览型（westphalzajac1995 型）
+
+**模板**:
+> "The study then addresses an important and tangible potential consequence of [construct] for [outcome domain]: whether [construct] results in [consequence]. The study links [theory perspective A] and [theory perspective B] on [domain] and tests hypotheses on the antecedents and consequences of [construct] using [data/setting description]."
+
+**来源**: westphalzajac1995 (AMJ), P3
+
+**原文锚定**:
+> "The study then addresses an important and tangible potential consequence of increased demographic similarity between the CEO and the board for board decision making: whether increased similarity results in a more generous level and mix of compensation in CEOs' contracts. The study links sociopolitical and social psychological perspectives on organizational governance and tests hypotheses on the antecedents and consequences of increased demographic similarity using longitudinal data on new director characteristics and change in CEO compensation among 413 Fortune/Forbes 500 companies from 1986 to 1991."
+
+**关键特征**:
+- **前因+后果双框架组织预览**: 假设群不按方法层次也不按受众，而按构念在因果链中的位置（antecedents → consequences）分两段预览；前因段已在 Tension 段末预告（"we propose that..."），后果段用 "The study then addresses..." 承接
+- **后果以设问预告**: "whether [construct] results in [consequence]"——只预告研究问题不预告发现方向，适合后果检验结果不确定或双向的论文
+- **"links [perspective A] and [perspective B]"**: 用理论视角的链接声明贡献定位（Mechanism 型贡献的典型一句），视角数量=2 时最自然
+- **数据一句收尾**: "using [data] on [setting] from [period]"——样本规模+时间跨度一句话带过，不开方法段
+- **贡献嵌入式**: 无独立 contribution 段，"important and tangible potential consequence" 一句同时完成 stakes 与贡献定位
+
+**适用**: 研究同时检验某构念的前因与后果（治理/人口统计学/网络位置类构念常见）；理论贡献=链接两个此前分离的视角；1990s AMJ 三段式或当代紧凑风格
+
+**禁忌**: 前因与后果必须共享同一构念，否则双框架塌缩为两篇论文拼贴；"links A and B" 的两个视角须在后文理论段真正对话，不能只是 citation 并置
 
 ---
 

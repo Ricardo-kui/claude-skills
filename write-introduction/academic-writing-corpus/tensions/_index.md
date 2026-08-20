@@ -8,7 +8,7 @@
 
 | 文件 | 核心特征 |
 |------|---------|
-| `01-despite-progress-unaddressed.md` | 已有进展，但遗漏了关键变量/机制（含变体P：双重证据缺口；变体AB：正向结果成熟→有害结果不足的 outcome-valence asymmetry；变体AC：披露型IPR进展不外推到非披露形式+firm-value链接缺口；变体AD：低stakes证据→高stakes情境+阶段延伸；变体AE：as-clause前提+惊讶单句overlooked型，desjardine2025，EMERGING；变体AG：特质效价不对称缺口——前因/特质极性，研究自我膨胀向特质、忽视自我规避向特质，ridge2024，EMERGING；变体AH：双流互为遗漏交叉点——Stream A 缺财务 DV、Stream B 缺策略 IV，chen2009，EMERGING） |
+| `01-despite-progress-unaddressed.md` | 已有进展，但遗漏了关键变量/机制（含变体P：双重证据缺口；变体AB：正向结果成熟→有害结果不足的 outcome-valence asymmetry；变体AC：披露型IPR进展不外推到非披露形式+firm-value链接缺口；变体AD：低stakes证据→高stakes情境+阶段延伸；变体AE：as-clause前提+惊讶单句overlooked型，desjardine2025，EMERGING；变体AG：特质效价不对称缺口——前因/特质极性，研究自我膨胀向特质、忽视自我规避向特质，ridge2024，EMERGING；变体AH：双流互为遗漏交叉点——Stream A 缺财务 DV、Stream B 缺策略 IV，chen2009，EMERGING；变体AI：可信性让步+证据/理论同源双缺口枚举——"seems plausible" 让步后 First 证据缺口/Second 理论基础缺口共指同一机制主张，westphalzajac1995，EMERGING） |
 | `08-cost-vs-benefit.md` | 成本收益权衡中的文献空白（含变体D：同一保护工具的 rival vs buyer 双刃剑信息不对称悖论，EMERGING） |
 | `12-forward-vs-backward-looking.md` | 前瞻 vs 后视视角的文献空白 |
 | `cross-domain-migration.md` | 将外部领域文献迁移到目标领域的张力 |

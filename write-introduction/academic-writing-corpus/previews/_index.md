@@ -40,7 +40,7 @@ P5-P6 的功能：在理论框架建立之后，向读者预告"我们做了什�
 | [robustness-preview.md](robustness-preview.md) | 变体 H：稳健性密集预览型 + 紧凑版 | 方法复杂、检验繁多的实证论文 |
 | [extreme-case-justification.md](extreme-case-justification.md) | 变体 J：极端案例+混合方法辩护型 | 使用极端案例和多方法设计的研究 |
 | [dv-methodology-defense.md](dv-methodology-defense.md) | 变体 I：DV 方法论辩护型（正负不对称性） | DV 有天然双情境的研究 |
-| [theory-lens-driven-preview.md](theory-lens-driven-preview.md) | 变体 N-O：理论透镜驱动型、双构念来源分解型 | 双受众/双机制/双构念维度设计的研究 |
+| [theory-lens-driven-preview.md](theory-lens-driven-preview.md) | 变体 N-P：理论透镜驱动型、双构念来源分解型、前因—后果双框架+双视角链接型（westphalzajac1995，EMERGING） | 双受众/双机制/双构念维度设计、前因+后果同检的研究 |
 
 ## 组装规则
 

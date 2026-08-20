@@ -939,6 +939,31 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 ---
 
+### 变体 AI：可信性让步 + 证据/理论双缺口枚举型（westphalzajac1995 型）
+
+**模板**:
+> "While [the prevailing view] seems plausible, it raises several issues that require additional research attention. First, there is very little [large-sample / systematic] empirical evidence regarding [phenomenon]. Second, the theoretical basis for assuming [mechanism claim] is not yet fully understood."
+
+**来源**: westphalzajac1995 (AMJ), P2
+
+**原文锚定**:
+> "While this view seems plausible, it raises several issues that require additional research attention. First, there is very little large-sample, empirical evidence regarding CEOs' role in the selection of new directors. Second, the theoretical basis for assuming that recently appointed outside directors are more likely to be sympathetic to the desires of CEOs is not yet fully understood."
+
+**关键特征**:
+- **"While this view seems plausible" 让步 pivot**: 先承认主流观点的直觉可信性，再戳破——比 "Despite advances" 更柔和，适合挑战对象是单一盛行观点（而非整个文献）时
+- **双缺口同质但分层**: Gap1=证据缺口（very little empirical evidence），Gap2=理论基础缺口（theoretical basis... not yet fully understood）——两个缺口攻击**同一**机制主张的两个支撑面（实证记录 × 理论逻辑），与变体 T（双缺口须异质、Incompleteness+Inadequacy 配对）恰好相反
+- **枚举前铺陈证据链**: 本变体前面通常已有 2-4 个权威证据/引语（survey、quote）为 prevailing view 背书，让步才有对象
+- **缺口即贡献预告**: "The present study seeks to address both of these issues" 直接衔接，双缺口与后文贡献一一对应
+
+**适用**: Incompleteness × Mechanism；文献存在一个主导性实务/理论观点，其流行度远超其证据基础；1990s AMJ 三段式或当代稳重风格
+
+**禁忌**:
+- 不要与变体 T 混用：T 要求两个缺口 Gap 类型不同且有显式计数（"two critical gaps"）；本变体是同源双缺口（证据+理论共指一个假设），用 "raises several issues" 模糊计数
+- 让步对象必须是真实盛行的观点（有引用背书），否则 "seems plausible" 无的放矢
+- 单篇来源 → 仅作 optional `section_variant`
+
+---
+
 ## 组装规则
 
 ### 反模式提醒

@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
-  last_updated: '2026-08-12'
-  observations_processed: 11
+  last_updated: '2026-08-20'
+  observations_processed: 12
   description: Evidence ledger for design defects inferred from Introduction exemplar distillation.
 defects:
   incompleteness-embedded-opposing-claims-vs-incommensurability:
@@ -445,6 +445,49 @@ defects:
     lifecycle: open
     first_seen: '2026-08-12'
     last_seen: '2026-08-12'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  corpus-gap-1990s-classic-debate-three-paragraph-intro:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: 语料缺乏 1990s AMJ 经典三段式 intro 的三个微动作：多文献中央问题 hook、 可信性让步+同源双缺口 tension、前因—后果双框架 preview。
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/hooks/17-debate-reframing.md
+    diagnosis: westphalzajac1995 (AMJ) 开场用 "has long been a subject of theoretical analysis and debate in the A, B, and C
+      literatures... A central question is whether X, or whether Y" 多文献枚举+中央问题设问；tension 用 "While this view seems plausible,
+      it raises several issues... First... very little empirical evidence... Second, the theoretical basis... not yet fully
+      understood" 同源双缺口（证据+理论共指一个机制主张，与变体 T 异质双缺口相反）；preview 用 "links perspective A and B + tests hypotheses on the antecedents
+      and consequences" 前因—后果双框架。三者语料均无对应变体。
+    proposed_change:
+      action: append_optional_variant
+      summary: 已写回：hooks/17-debate-reframing 变体 A（多文献中央问题型）； tensions/01-despite-progress-unaddressed 变体 AI（可信性让步+证据/理论双缺口枚举型）；
+        previews/theory-lens-driven-preview 变体 P（前因—后果双框架+双视角链接预览型）。 三个 _index 与 _evidence_registry 已同步。
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: westphalzajac1995
+      journal: AMJ
+      evidence_anchor: A central question is whether boards are an effective management control mechanism, or whether they
+        are a "management tool"
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - AMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - AMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-20'
+    last_seen: '2026-08-20'
     auto_action:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
