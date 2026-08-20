@@ -27,8 +27,10 @@ L0 获取与分解     paper-import(OvisOCR2/MinerU) → 全文 MD
                    （paper-import MD 的 44–89% 字节是 data:image 单行巨串，
                    直读全文会炸上下文）→ <citekey>.pdm/fulltext.text-only.md
                    + 物化切片 sections/<section>.md → 创建 PDM（status: manifest）
-L1 分节蒸馏 ×4    并行分发 distill-introduction/theory/methods/results-exemplar
-   （复用，零改动） 输入 = PDM 切片文件（非全文）；每节 → section JSON/报告 + feedback
+L1 分节蒸馏 ×4    默认串行分发 distill-introduction/theory/methods/results-exemplar
+   （复用，零改动） （2026-08 实测：并行 4 agent 触发限流→整批作废重发，重试开销
+                   30–40%，串行更省；--parallel 可显式开启）
+                 输入 = PDM 切片文件（非全文）；每节 → section JSON/报告 + feedback
                  → 该节自己的写回预览门禁（gate ①，不绕过）→ write-* corpus
 L2 跨节一致性      由本 skill 执行（读 references/cross-section-coherence.md）
    （本层新建）    从 PDM 四节 identity 交叉校验 → ok | flagged，只标记不擅改
@@ -57,7 +59,8 @@ L4 反馈收敛        核对 design_feedback 已持久化；报告三路输出�
    检测不到的节在 l0_manifest.json 标 `unknown`，由主循环人工切分补齐，不阻塞。
    登记 frontmatter/citekey（Zotero 为元数据源）。创建 PDM 骨架，把 manifest 的
    切片路径写入 `source_provenance.section_slices`。
-2. **L1 分节蒸馏分发**。按用户范围（默认 4 节全跑）并行分发：
+2. **L1 分节蒸馏分发**。按用户范围（默认 4 节全跑）**串行**分发（每次 1 个子任务，
+   完成再发下一个；`--parallel` 显式开启并行）：
    `/distill-introduction-exemplar <切片> --output-format=json` → `sections/introduction.json`
    （theory/methods/results 同理）。每个子任务完成后：子任务写自己的 section 文件与
    feedback 文件 → 主循环合并进 PDM → 更新该节 `status`。
@@ -74,6 +77,7 @@ L4 反馈收敛        核对 design_feedback 已持久化；报告三路输出�
    intro/theory 两个 distill skill 内建 `_update_design_feedback.py`，methods/results
    无该基础设施（能力缺口），missing 不视为违约，须在 `feedback_ledger.note` 注明
    根因（能力缺口 vs 运行缺失，见 references/pdm-schema.md 已知摩擦①）；汇总三路输出落点。
+   完成后运行 `preprocess_l0.py <MD> --unlock` 释放 PDM 锁（中断续跑则保留锁）。
 
 ## 调用方式
 
@@ -105,6 +109,9 @@ L4 反馈收敛        核对 design_feedback 已持久化；报告三路输出�
 - 同一篇论文被多次蒸馏时，以新 PDM 为准；若已有旧 PDM，续跑而非重造（见 schema 状态机）。
 - feedback 产出能力不对称（2/4）：见 `references/pdm-schema.md` 已知摩擦①；L4 为
   best-effort，missing 须区分能力缺口与运行缺失。
+- **单窗口纪律（2026-08-20 起）**：同一 PDM 同一时间只在一个 Claude Code 会话跑——
+  L0 脚本会创建 `<citekey>.pdm/LOCK`（12h 内拒绝二次启动，陈旧锁用 `--force`，
+  完成后 `--unlock`）。2026-08 实测双窗口把 L1–L3 整链路跑两遍，是单次运行最大浪费源。
 
 ## Context discipline
 
