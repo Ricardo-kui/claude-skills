@@ -73,6 +73,8 @@ L4 反馈收敛        核对 design_feedback 已持久化；报告三路输出�
    `~/.claude/distill-work/<citekey>.pdm/`（`DISTILL_WORK_ROOT` 可改）——**Vault/OneDrive
    之外**，不向论文目录生成中间文件；全部产物可从源 MD 确定性重建，可随意删。
    仅当需要随论文留档时才用 `--outdir` 显式放到论文旁。
+   **零留痕（用户裁决）**：feedback/sections/slices/plan 等中间产物对用户无价值，
+   不得落论文目录或任何长期位置；L4 `--clean` 是强制收尾，不是可选。
 2. **L1 分节蒸馏分发**。按用户范围（默认 4 节全跑）**串行**分发（每次 1 个子任务，
    完成再发下一个；`--parallel` 显式开启并行）：
    `/distill-introduction-exemplar <切片> --output-format=json` → `sections/introduction.json`

@@ -6,6 +6,10 @@
 > base64 图片单行巨串，读入即炸上下文。单独调用本 skill 且只有原始 MD 时，先运行
 > `distill-paper-exemplar/scripts/preprocess_l0.py <MD>` 再读产物。PDM 工作目录默认在
 > `~/.claude/distill-work/`（Vault 之外），编排层传入的路径为准。
+> **零留痕纪律**：工作目录是一次性现场——单节蒸馏在写回完成后、整篇蒸馏在 L4，
+> 必须运行 `preprocess_l0.py <MD> --clean` 整目录清除；不得把 feedback/sections/
+> slices/plan 等中间产物存到论文目录或任何长期位置（2026-08-20 用户裁决：
+> 这些产物对用户无价值，全部可从源 MD 确定性重建）。
 
 > **结构自适应（2026-08-20 起）**：输入切片可能不是独立 Theory 节——编排层按
 > `l0_manifest.json` 的 `structure_type` 路由：`extended-intro`（经济学/金融风格长引言）
