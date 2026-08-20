@@ -411,69 +411,74 @@
       "publication_status": "published",
       "coverage": "complete",
       "theoretical_problem_form": [
+        "cross-audience-interpretation",
         "assumption-under-strain",
-        "cross-audience-interpretation"
+        "dual-stream-intersection-gap"
       ],
       "narrative_dynamics": [
         "responsible-action-signal-reversal",
-        "stakeholder-interpretation-divergence",
+        "audience-foil-then-focal",
         "action-as-severity-cue"
       ],
       "retrieval_signals": [
         "audience-specific-interpretation",
         "visible-action-as-signal",
-        "responsible-action-with-short-run-cost"
+        "proactive-recall-market-penalty",
+        "consumer-vs-investor-reading"
       ],
       "section_learning": {
         "introduction": {
-          "suitable": "partial",
+          "suitable": "yes",
           "requires": [
-            "cross-audience-valuation"
+            "cross-audience-valuation",
+            "dual-literature-intersection"
           ],
           "learn": [
-            "Turn a seemingly settled response recommendation into a sharper question by identifying a second audience that evaluates the same visible action against a different payoff horizon.",
-            "State the action, its favorable established interpretation, and the distinct external evaluation to be explained before announcing a reversal result."
+            "Map two mature streams so each supplies what the other lacks (audience-outcome vs strategy IV), then place the RQ at their silent intersection rather than as a few-studies claim.",
+            "Hold the consumer-responsibility conventional wisdom until the contribution beat, then fulfill it as an audience-reinterpretation of the same visible action."
           ],
           "caveat": [
-            "A stakeholder contrast is meaningful only when each audience has a specified evaluation object and some observable evidence; a generic claim that 'stakeholders differ' is not a knot.",
-            "The paper observes market returns but does not observe consumer responses in its own sample."
+            "Do not promote the findings-paragraph Inadequacy rhetoric into the Gap type if the problematization is still incompleteness at the intersection; JM may fuse Theory Lens into the contribution beat—AMJ/SMJ imitators often need an earlier signal sentence."
           ]
         },
         "theory": {
-          "suitable": "partial",
+          "suitable": "yes",
           "requires": [
-            "cross-audience-valuation"
+            "cross-audience-valuation",
+            "single-dv-counterintuitive-main-effect"
           ],
           "learn": [
-            "Use information asymmetry to explain why an observable response can become a cue for hidden crisis severity rather than a transparent indicator of benevolence."
+            "Use the opponent audience's favorable reading as foil, then pivot with one sentence to the focal evaluator's downside-signal chain and converge on a single comparative main-effect hypothesis—do not force paired audience hypotheses.",
+            "Give the signal reading behavioral warrants (loss aversion; ambiguity→worst-case) so the counterintuitive prediction emerges from evaluator psychology, not from citation stacking."
           ],
           "caveat": [
-            "The signal argument is plausible but not directly tested: the design does not measure investor beliefs, true expected recall costs, or whether proactivity was unavoidable.",
-            "Do not collapse early timing, voluntary cooperation, communication breadth, and compensation into one mechanism unless the measurement shows which action is carrying the meaning."
+            "Theory does not theorize why strategy is chosen (L2 C3); do not treat later Heckman as fulfilling a theoretical endogeneity promise. Do not upgrade the foil into a full dialectical G architecture."
           ]
         },
         "methods": {
           "suitable": "partial",
           "requires": [
-            "cross-audience-valuation"
+            "clean-public-event",
+            "archival-strategy-classification"
           ],
           "learn": [
-            "When the promised consequence is an external valuation, make the announcement event and the audience-specific outcome the evidence arena, then separately model observable correlates of the response choice."
+            "Choose a regulatory announcement setting that simultaneously delivers a clean event date, a structured field for coding strategy poles, and pre-specified threat screens (confounds, leakage, classification ambiguity)."
           ],
           "caveat": [
-            "CPSC announcements, a 153-event stock-return sample, the proactive/passive coding, event study, and Heckman correction cannot identify the market's latent inference process."
+            "Zero prior incident reports = proactive bundles information state with response posture; it is not recall speed. Heckman after a Theory that never modeled selection is a cautionary handoff, not an exemplar of theory–design unity."
           ]
         },
         "results": {
-          "suitable": "partial",
+          "suitable": "yes",
           "requires": [
-            "cross-audience-valuation"
+            "counterintuitive-event-study-payoff"
           ],
           "learn": [
-            "Reveal the counterintuitive valuation result first, then use selection and cross-sectional analyses to delimit what the result is and is not driven by."
+            "Stage the group abnormal-return contrast (with multiple tests and a null passive baseline) as climax before cross-section, then immediately restate the stakeholder reinterpretation so the table answers the opening knot.",
+            "Use selection and mediation as falling action that delimit the strategy–return association—not as proof that investor beliefs mediate."
           ],
           "caveat": [
-            "The reported mediation is firm and product characteristics → strategy category → abnormal return; it is not a test that investor severity beliefs mediate the strategy–return association."
+            "Baron–Kenny 'complete mediation' of firm characteristics via strategy is supplemental storytelling, not a test of the severity-signal mechanism. Causal effect/impact language outruns the event-study design."
           ]
         },
         "discussion": {
@@ -482,14 +487,14 @@
             "cross-audience-valuation"
           ],
           "learn": [
-            "Close an audience-interpretation story by identifying the communication problem created when a protective action can be mistaken for evidence of hidden loss."
+            "Return to the opening by translating the investor reading into a communication/information-asymmetry problem for managers and regulators, and by naming long-run consumer benefits as an open boundary."
           ],
           "caveat": [
-            "A managerial recommendation to communicate more cannot establish that disclosure would change investors' interpretation without evidence on disclosure content and market response."
+            "A call to 'communicate the rationale' does not show that disclosure would correct the inferred signal; do not close an unobserved-belief story with an untested communication fix."
           ]
         }
       },
-      "overall_role": "contrastive_case"
+      "overall_role": "partial_exemplar"
     },
     {
       "id": "chen2025-free-expression-stock-crash-risk",

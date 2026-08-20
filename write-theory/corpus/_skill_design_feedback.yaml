@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
-  last_updated: '2026-08-13'
-  observations_processed: 12
+  last_updated: '2026-08-20'
+  observations_processed: 13
   description: Evidence ledger for write-theory design defects inferred from Theory exemplar distillation.
 defects:
   e-family-missing-dual-edged-signed-contingency-variant:
@@ -726,3 +726,55 @@ defects:
     auto_action:
       eligibility: optional_variant_only
       reason: Corpus changes do not alter core routing.
+  missing-audience-foil-single-H-pattern:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: '变体 G 覆盖双受众对立成对假设；acknowledgment_response 覆盖一般异议处置， 但缺少「仅用对手受众作 foil、收敛到单 DV 比较主效应」的可调用骨架。
+
+      '
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/subprotocols/argumentation_patterns.md
+    diagnosis: '规则路由（Inadequacy×Mechanism→B）正确；缺口在语料：写作者易误路由到完整 G， 或缺少 foil→focal 句式。属 corpus_gap，非 routing_defect。
+
+      '
+    proposed_change:
+      action: add_branch
+      summary: 在 argumentation_patterns 增加 audience-foil→focal-signal（single H）可选骨架，并交叉链接勿升格为 G
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 机制推演型
+      hypothesis_families:
+      - comparative_main_effect
+      - main_effect_only
+      journals: []
+      boundary: 反直觉主效应；DV 由单一评价者定价；对手受众文献仅作 foil
+    papers:
+    - id: chenganesanliu2009
+      journal: JM
+      build_type: 机制推演型
+      hypothesis_family: comparative_main_effect
+      evidence_anchor: 'Theory Effects: consumer-positive foil → investor-negative signal chain → H1 comparative'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - JM
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - JM
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-12'
+    last_seen: '2026-08-12'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+

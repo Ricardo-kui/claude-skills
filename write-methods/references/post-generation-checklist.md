@@ -3,29 +3,35 @@
 > 由 write-methods 生成 Methods 段落后**逐条核对**。
 
 ## Completeness
+- [ ] revision 模式已读取当前 Methods 正文与修订记录，并明确 manuscript/audit 边界
 - [ ] M1：研究情境有至少 3 个理由，且与理论机制直接挂钩
 - [ ] M2：样本漏斗包含起始总体 → 每步排除（理由+数字）→ 最终 N
 - [ ] M2.5（如适用）：复杂识别设计前是否插入 model-free evidence 作为可信度铺垫
 - [ ] M3：因变量有构念定义 + 操作化 + 测量来源 + 方向解释
 - [ ] M4：每假设一段，含 Hypothesis 编号对齐，变量按理论顺序排列
-- [ ] M5：调节/中介/机制变量有操作化和交互项说明
+- [ ] M5（如适用）：当前 Theory/设计确有调节、中介或机制变量时才写；已撤销变量不因旧稿或 corpus 恢复
 - [ ] M6：每个控制变量都有 because [rival explanation]
 - [ ] M7：estimator + fixed effects + SE clustering + 选择理由（文字+诊断）
 - [ ] M7补充：若 Theory 含调节假设，检验方法（MMR / 分组相关比较 / HLM 跨层交互）与 differential prediction/differential validity 声明一致
-- [ ] M8：关键识别假设 + 检验方法 + 结果位置
-- [ ] M10：Results 预告（表格顺序、特殊解释需求、识别检验位置）
+- [ ] M8（如适用）：基准识别策略的关键假设 + 检验方法 + 结果位置；补充稳健性不提前搬入
+- [ ] M10（如保留）：Results 预告不含系数、显著性或支持判断；无必要时省略
 
 ## Clarity
 - [ ] 变量名与 Results 表格完全一致
 - [ ] 时间顺序明确（滞后几期、事件窗口、观测期起止）
 - [ ] 因果语言强度与 design strength 匹配
 - [ ] 所有 [placeholder] 已被替换，无残留方括号
+- [ ] 完成的研究程序使用主动过去时；定义、制度事实、公式项与估计器性质使用现在时
+- [ ] active feedback 的术语、样本、时间窗、语态与 section/design-type 约束全部落实
+- [ ] `supersedes` 指向的旧建议、旧构念和 stale source 没有复活
+- [ ] `lint_methods_language.py` 已对正文运行并通过；修订记录中的反例未被误算为正文
 
 ## Credibility
 - [ ] 识别假设有检验（平行趋势/过度识别/manipulation check）
 - [ ] 样本漏斗可审计（每步有数字和排除理由）
 - [ ] 模型选择有文字解释，不埋在方程里
 - [ ] 非显著假设在 Methods 中未预告支持状态
+- [ ] 非基准的 selection/endogeneity/robustness/mechanism/heterogeneity 分析仍由 Results 承担
 
 ### Three-horned dilemma 自我定位（McGrath 1982 / Pollock Ch07）
 所有研究设计都 "fatally flawed"——沿**测量精度（measurement precision）/ 可推广性（generalizability）/ 情境真实度（contextual realism）**三维度排列，**最多只能在两个维度强、第三个弱**。
@@ -49,6 +55,7 @@ Pollock 不把四类效度当 checklist 逐条回答，而是嵌入 describe-exp
 - [ ] **审计链完整**：M2 起始 N → 每步排除（含理由+数字）→ 最终 N，全程可追踪
 - [ ] **时间逻辑清晰**：所有预测变量标注 t-1 / contemporaneous / event window
 - [ ] **段落体裁适配**：Methods 段落遵循审计体裁约定——procedure-first（M2 样本漏斗）/ construct-first（M3–M5 变量）/ justification-first（M7 模型）为合法段首；通用段落规则见 `../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md` §0.0/§0.2/§0.5；§0.1/§0.3/§0.6 为说服体裁专用，不适用
+- [ ] **反馈回归**：`feedback-registry.json` 中与 skill/project/section/design_type 匹配的 active rules 均有 pass/fail 结果
 
 ## 反向审查（可选但建议）
 生成完成后，可使用 `/distill-methods-exemplar` 对输出段落进行反向蒸馏审查，生成 Vault 参考注释，供人工判断：

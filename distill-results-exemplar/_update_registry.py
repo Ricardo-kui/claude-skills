@@ -94,6 +94,7 @@ ESTIMATOR_TO_CORPUS_FILE = {
     "跨受众构念对比": "跨受众构念对比.md",
     "三向交互": "三向交互.md",
     "构造暴露分解": "构造暴露分解.md",
+    "事件研究法": "事件研究法.md",
 }
 
 def estimator_to_corpus_path(estimator_family):

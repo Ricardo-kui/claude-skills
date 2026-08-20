@@ -1,6 +1,6 @@
 interface:
   display_name: "Write Results"
-  short_description: "Report Results as evidence-backed story resolution"
-  default_prompt: "Use $write-results to report the evidence and resolve each declared storyline without overclaiming."
+  short_description: "Draft and revise Results with explicit evidence logic"
+  default_prompt: "Use $write-results to revise my current Results draft while preserving hypothesis order, threat-specific reasoning, active language constraints, and mixed evidence."
 policy:
   allow_implicit_invocation: true

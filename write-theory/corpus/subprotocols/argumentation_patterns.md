@@ -389,4 +389,64 @@ status: ready_for_corpus
 - 与 Dual-Lens Main/Boundary 分工：本模式管 T2 视角选择；后者管主效应理论 vs 边界 taxonomy
 
 **反模式**: 把 advantage vs experimentation 写成必须二选一的竞争假设；或对照之后仍用均值绩效当 DV。
+pattern_id: audience_foil_then_focal_signal_single_H
+build_type: 机制推演型（反直觉主效应）
+source_papers: ["Chen_Ganesan_Liu_2009_JM"]
+source: chenganesanliu2009
+confidence: medium
+status: EMERGING
+story_fidelity: section_variant
+note: 待第二篇交叉验证；勿升格为完整 G（成对受众假设）
+-->
+
+## Pattern: Audience-Foil then Focal-Signal (Single Comparative H)
+
+**适用场景**: 文献默认受众 A 对行动 X 给**正评价**，但论文的 DV 由受众 B 定价；需要用 A 的正面解读作 **foil/concession**，再转折到 B 的负面信号链，收敛为**单一比较主效应**（非 Audience A/B 成对假设）。
+
+**验证状态**: EMERGING（单源 `chenganesanliu2009`；待第二篇异领域交叉验证）
+
+**微观动作序列**: Prior-work foil (audience A positive) → However pivot (audience B reads X differently) → Focal signal mechanism (+ loss aversion / ambiguity warrants) → Optional rarity/scrutiny amplifier → Therefore + single comparative H
+
+**范文来源**: Chen, Ganesan, & Liu (2009), *Journal of Marketing*（consumer-positive foil → investor-negative signal → H1 comparative）
+
+**骨架**:
+```
+[Foil] Prior work suggests [action X] has positive consequences for [audience A]
+because [quality / trust / reputation signal].
+[Pivot] However, [audience B] may view the implications of [X] differently from [audience A]:
+observing [early / proactive / visible] moves, they infer [severity severity / forced disclosure / downside],
+amplified by [loss aversion / ambiguity→worst-case].
+[Amplifier — optional] Rarity of [X] further increases scrutiny.
+[Convergence] Therefore, we propose that [X / strategy pole A] receives greater [evaluator B] attention
+and is interpreted as a signal of [severe downside], so [DV_B] is affected more negatively when
+[strategy A] than when [strategy B / contrast pole].
+[H] [Strategy A] is more negatively related to [DV_B] than [Strategy B].
+```
+
+**与变体 G（辩证对立）的硬区分**:
+| | Audience-foil → single H（本模式） | 变体 G 辩证对立 |
+|---|---|---|
+| DV | 单一（由受众 B 定价） | 常为多受众 / 成对 outcome |
+| 假设 | **1 条比较主效应** | Audience A/B **成对**假设 |
+| 受众 A 角色 | foil / concession（不成假设） | 独立机制 + 独立 H |
+| 适用贡献 | 反直觉：同行动、异解读 → 对 B 更负 | 贡献对象就是异质受众对立评价 |
+
+**为什么有效**: 保留文献正面预期的张力，却不把贡献漂移成双受众理论；why 靠「同行动、异解读」完成，而非堆 citation。
+
+**配套句式**:
+- 受众切换句 → `../sentences/acknowledgment_response.md`（Audience-Foil Pivot）
+- 比较型主效应 H → `../sentences/hypothesis_forms.md`（Comparative Main Effect）
+
+**注意事项**:
+- foil 必须是读者真实会想到的默认正面解读，不能 straw man
+- 焦点机制必须有独立 warrant（信号 + 行为金融/模糊处理等），不能只靠 However
+- DV 必须明确由受众 B 定价；若贡献对象是双受众对立，改用变体 G
+
+**反模式**:
+- 强行写成 Audience A/B 成对假设（那是变体 G）
+- 长制度/流程叙述冒充机制链（流程只提供 scope，不提供 X→Y warrant）
+- 把能力/信任正面信号与 downside 信号并列却不裁决主导解读
+
+**原文锚点** (Chen, Ganesan & Liu 2009, JM):
+> "However, it is likely that the stock market and investors view the implications of a proactive product-recall strategy differently from consumers."
 

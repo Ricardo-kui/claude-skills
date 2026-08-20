@@ -1,6 +1,8 @@
-<!-- write-results 槽位骨架 R2：由 SKILL.md「槽位骨架加载」按路由决策加载。内容为原 SKILL.md 该槽位段落骨架（通用 + 设计类型变体 + QC），未做语义修改。 -->
+<!-- write-results 槽位骨架 R2：由 SKILL.md「槽位骨架加载」按路由决策加载。 -->
 
 ### R2. 模型序列 / 表格导航
+
+**顺序锁定**：表格导航和后续正文默认按假设编号展开（H1 → H2 → …）。理论锚点、故事高潮或结果强弱只能改变篇幅与强调，不能自行把 H2 提到 H1 之前。只有用户或当前有效 Theory 明确指定另一顺序时才可调整。
 
 **通用填空段落**：
 
@@ -61,4 +63,5 @@ Table [x] reports the matched difference-in-differences estimates. Before presen
 > **导航段段落级 QC**（审计体裁）:
 > - 导航段必须以 hypothesis→model 映射收尾（"Hypothesis [a] is tested in Model [y]"）——这是 audit-genre 的 Link beat；禁止停在 "Table [x] reports..."（audit-genre 的 abrupt stop）
 > - R2 只做导航不做判断：段内不得提前解读系数方向/显著性（那是 R3 的 Beat-1/2）
+> - hypothesis→model 映射与 R3 均须遵守已锁定的假设顺序；不得因某一结果更重要而重排
 > - 表格导航缺失（直接跳入 R3 主效应）是既有反模式，此处补充其段落级表现：R2 与 R3 合并成单段且超过 §0.2 长度上限时必须拆分

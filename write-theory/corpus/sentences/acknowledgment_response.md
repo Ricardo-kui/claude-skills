@@ -160,6 +160,52 @@ status: emerging
 
 ---
 
+## 5b. Audience-Foil Pivot（异质受众切换句；非完整异议处置）
+
+<!--
+pattern_id: audience_foil_pivot_sentence
+function: foil→focal audience switch
+source: chenganesanliu2009
+source_papers: ["Chen_Ganesan_Liu_2009_JM"]
+confidence: medium
+status: EMERGING
+note: 待第二篇交叉验证；配套架构见 ../subprotocols/argumentation_patterns.md → audience_foil_then_focal_signal_single_H
+-->
+
+**适用**: 文献默认受众 A 对行动 X 正向；论文 DV 由受众 B 定价。一句完成 **foil → focal** 受众切换，随后进入 B 侧信号机制——**不成对写出 Audience A/B 假设**（那是变体 G）。
+
+**验证状态**: EMERGING（单源 `chenganesanliu2009`；待第二篇验证）
+
+**模板**:
+```
+However, it is likely that [audience B] view the implications of [action] differently from [audience A].
+```
+
+**变体（同功能）**:
+```
+However, [audience B] may view the same [action] differently from [audience A]:
+[they infer downside / severity / forced disclosure].
+```
+
+**原文锚点** (Chen, Ganesan & Liu 2009, JM):
+> "However, it is likely that the stock market and investors view the implications of a proactive product-recall strategy differently from consumers."
+
+**语料锚定**:
+- Chen, Ganesan & Liu (2009, *JM*) — consumer-positive foil → investor focal pivot → single comparative H1
+
+**与邻近语料的分工**:
+| 本句 | §2 承认-回应矩阵 | 变体 G 辩证对立 |
+|------|------------------|----------------|
+| 切换评价者，**不**处理对自己论证的异议 | 处置读者对**本论证**的异议 | 成对受众机制 + 成对 H |
+| 后接 focal 信号链 → 单 H | 后接回应/让步姿态 | 后接 Audience B 独立假设族 |
+
+**反模式**:
+- 写完切换句后仍为受众 A 另立假设（升格为 G）
+- 用本句替代 focal 机制 warrant（However  alone 不够）
+- 每段都做受众切换（频次：通常 0–1；仅反直觉单 DV 比较主效应需要）
+
+---
+
 ## 6. 定量实证适配与分工
 
 - **与 `mechanism_chain.md`「替代机制排除骨架」的分工**：排除骨架用于**中介提出之后**的系统性排他（Results/Discussion 方向）；本文件用于**假设推导段内**的即时异议处置（Theory 内）与"承认但不回应"的诚实出口。

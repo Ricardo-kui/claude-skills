@@ -7,10 +7,10 @@ meta:
   schema_version: "1.0.0"
   registry_type: theory-fragment-registry
   last_updated: "2026-08-12"
-  total_papers_indexed: 67
-  batches_processed: 25
+  total_papers_indexed: 68
+  batches_processed: 26
   auxiliary_sources_note: "Entries with source_tier: auxiliary are writing-craft books, not empirical papers. They register provenance and stay EMERGING until the pattern is cross-validated in empirical paper distills; they never count toward VERIFIED/ROBUST paper_count thresholds on their own."
-  latest_batch_note: "2026-08-12 Fini, Jourdan & Perkmann 2017 AMJ (Theory distill, 机制推演型 + 调节效应型): ADD curvilinear_additive_opposing_components (subprotocols/hypothesis_derivation_patterns.md) + paired_geometric_hypotheses_per_moderator (variants/E_moderation.md E5 sub-variant) + selective_component_invariance_declaration (sentences/moderation.md) + dual_information_signal_source_dependent_alignment (sentences/construct_definition.md); REGISTRY SYNC of pre-existing cross_audience_dual_signal_curvilinear_inference (mechanism_chain.md, sentence-level template from this same paper). All EMERGING single-source, tfr_169-173. Build type = mechanism elaboration (dual opposing channels → inverted U) + curvilinear moderation (paired geometric hypotheses). Gap=Inadequacy → B/E. Authorized writeback (theory.report.yaml candidates 1-5): candidates 1-4 EXTEND written; candidate 5 SKIP (existing cross_audience sentence template NOT re-added). No routing_table.md/SKILL.md edits. Registry previously had NO fini source entry despite mechanism_chain.md listing fini_jourdan_perkmann_2017_amj — drift repaired (additive only)."
+  latest_batch_note: "2026-08-12 Chen, Ganesan & Liu 2009 JM (Theory distill writeback, gate confirmed): ADD audience_foil_then_focal_signal_single_H (subprotocols/argumentation_patterns.md) + audience_foil_pivot_sentence (sentences/acknowledgment_response.md §5b) + comparative_main_effect_hypothesis_form (sentences/hypothesis_forms.md). All EMERGING single-source chenganesanliu2009, tfr_174-176. Build type = 机制推演型 (audience foil → focal signal → single comparative H); Gap=Inadequacy → B. Do NOT route to full G. _index.md quick-decision + subprotocol/sentence coverage updated; routing_table.md/SKILL.md/PDM untouched."
   note: "Reverse-engineered from existing corpus anchors. Batch 2026-07-09: distilled 4 recall papers (Darby 2023 MSOM, Mayo 2022 POM, Ball 2018 JOM, Darby 2026 JOM) into subprotocols and registry. Batch 2026-07-10: expanded Cui, Yang & Vertinsky (SMJ) with inverted-U mechanism, bilateral argumentation, flatten/steepen language, and local closure templates. Batch 2026-07-22: distilled Li, Bapuji, Talluri, Singh & Narayanan (2025 JSCM, Vertical Spillover of Product Recalls) — added dual_mechanism_convergent_moderation pattern to bilateral_argumentation_templates.md (moderator×mechanism matrix) and registered H1 dual-mechanism convergence under existing dual_mechanism_same_direction. Batch 2026-07-22b: distilled Cutolo & Ferriani (2024 JOM, narratives & atypicality) — added minimal_pair_contrast_vignette pattern to argumentation_patterns.md (Leah controlled-contrast showing device); registered parallel_buffering_moderators_single_mechanism; cutolo_ferriani also a 2nd source for write-introduction theory-lens/02-dual-theory-layered (processing fluency + Bloom & Lahey taxonomy). Batch 2026-07-22c: distilled Falchetti, Cattani & Ferriani (2022 SMJ, Start with Why) — added congruency_fit_fluency_mechanism to sentences/mechanism_chain.md (genuine gap; spans Falchetti + Cutolo); CORRECTED misclassification of falchetti_2022_smj (was construct_differentiation tfr_017, has no such content) → reclassified to congruency mechanism; construct_differentiation source_count 5→4. Falchetti intro hook (23-popular-debate) and Methods (多研究 变体1/2, 实验 变体1) already distilled in prior sessions. Batch 2026-07-28: backfill + wiring batch — registered two auxiliary sources whose fragments entered corpus in the 2026-07-27/28 waves but were never registered: Booth/Williams/Colomb (The Craft of Research, premise soundness gate + warrant tests + acknowledgment-response matrix + voice firewall → reasoning_soundness_protocol.md, acknowledgment_response.md) and Greene & Lidinsky 2017 (Rogerian four-step → acknowledgment_response.md §5; fallacy probes → reasoning_soundness_protocol.md §8). Same batch wired the registry into consumption: corpus/_index.md selection-stage pointer, write-theory/SKILL.md resource-loading clause, distill-theory-exemplar Phase 4 registry-writeback protocol. Registry previously orphaned (no .md referenced it) since creation. Batch 2026-08-03: distilled Schumacher, Keck & Tang (2020, SMJ); added the belief-updating/attention-threshold reversal pattern as EMERGING. Reference-level writeback was explicitly authorized by the user; no core routing or mandatory-slot rule was changed."
 
 status_rules:
@@ -1969,6 +1969,42 @@ source_papers:
         status: "EMERGING"
         note: "同一可观察信号携带 ability + identity conformance 两类信息；对齐取决于信号来源（endogenous 对齐 / exogenous 不对齐）——机制的前提 taxonomoy。与机制链句级模板判别：T1 构念 vs T3 机制。"
 
+
+  chen_ganesan_liu_2009_jm:
+    display_name: "Chen, Ganesan & Liu (2009, Journal of Marketing)"
+    journal: "Journal of Marketing"
+    year: 2009
+    subfield: "marketing / product-harm crisis / event study"
+    theory_build_type: "Mechanism"
+    gap_type: "Inadequacy"
+    gap_route: "B-primary"
+    citekey: "chenganesanliu2009"
+    fragments:
+      - fragment_id: tfr_174
+        type: audience_foil_then_focal_signal_single_H
+        title: "Audience-Foil then Focal-Signal (Single Comparative H)"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "对手受众正面解读作 foil → 焦点受众负面信号链 → 单一比较主效应；勿升格为变体 G 成对受众假设。待第二篇交叉验证。"
+      - fragment_id: tfr_175
+        type: audience_foil_pivot_sentence
+        title: "Audience-Foil Pivot（异质受众切换句）"
+        home_files:
+          - "sentences/acknowledgment_response.md"
+        makadok_dimension: "Mode"
+        status: "EMERGING"
+        note: "一句完成 foil→focal 受众切换；非 Booth 异议处置矩阵条目。配套 tfr_174。"
+      - fragment_id: tfr_176
+        type: comparative_main_effect_hypothesis_form
+        title: "Comparative Main Effect Hypothesis Form（比较型主效应句）"
+        home_files:
+          - "sentences/hypothesis_forms.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "[Strategy A] is more negatively related to [DV] than [Strategy B]；非相对零的简单主效应。配套 tfr_174。"
+
 # Cross-paper pattern aggregation (derived above)
 patterns:
   shared_orientation_divergent_outcomes_selective_remedy:
@@ -2727,6 +2763,32 @@ patterns:
     home_file: "sentences/construct_definition.md"
     note: "T1 构念设置，与机制链句级模板 tfr_169 配套；与 construct_differentiation（两个构念区分）判别：本模式是一个构念的两种信息读法。"
 
+  audience_foil_then_focal_signal_single_H:
+    description: "文献默认受众 A 对行动 X 正向；用 A 作 foil 后转折到受众 B 的负面信号解读，收敛为单一比较主效应（不成对受众假设）"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "chen_ganesan_liu_2009_jm"
+    home_file: "subprotocols/argumentation_patterns.md"
+    note: "与变体 G 判别：单 DV + 单比较 H；受众 A 不成假设。待第二篇异领域交叉验证。"
+  audience_foil_pivot_sentence:
+    description: "However, audience B views implications of action differently from audience A——foil→focal 受众切换句"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "chen_ganesan_liu_2009_jm"
+    home_file: "sentences/acknowledgment_response.md"
+    note: "acknowledgment_response §5b；非异议处置矩阵。配套 audience_foil_then_focal_signal_single_H。"
+  comparative_main_effect_hypothesis_form:
+    description: "比较型主效应假设句：Strategy A is more negatively related to DV than Strategy B（相对对照极点，非相对零）"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "chen_ganesan_liu_2009_jm"
+    home_file: "sentences/hypothesis_forms.md"
+    note: "与 Difference（跨组效应强弱）/简单主效应判别见语料正文。待第二篇验证。"
+
+
 # Status summary by Makadok dimension
 summary_by_dimension:
   Constructs:
@@ -2734,8 +2796,8 @@ summary_by_dimension:
     source_papers: 12
     verified_patterns: 1
   Mechanism:
-    total_fragments: 61
-    source_papers: 32
+    total_fragments: 63
+    source_papers: 33
     verified_patterns: 5
   Boundary:
     total_fragments: 36
@@ -2745,8 +2807,8 @@ summary_by_dimension:
     total_fragments: 0
     source_papers: 0
   Mode:
-    total_fragments: 2
-    source_papers: 2
+    total_fragments: 3
+    source_papers: 3
   Question:
     total_fragments: 0
     source_papers: 0
@@ -2829,6 +2891,13 @@ next_batch_targets:
     current_sources:
       - "fini_jourdan_perkmann_2017_amj"
     note: "All four Fini 2017 AMJ patterns are single-source EMERGING (tfr_170-173; tfr_169 is the pre-existing sentence template that the architecture-level patterns complement). Seek a second multi-audience valuation / dual-signal curvilinear paper (reputation/status certification, ratings, endorsements, grants-vs-contracts) to move the paired-geometry and additive-components patterns toward VERIFIED."
+
+  - pattern: "audience_foil_then_focal_signal_single_H / audience_foil_pivot_sentence / comparative_main_effect_hypothesis_form"
+    papers_needed: 1
+    current_sources:
+      - "chen_ganesan_liu_2009_jm"
+    note: "Single-source EMERGING (tfr_174-176, chenganesanliu2009). Seek a second paper where default-audience-positive literature is used only as foil, then focal evaluators read the same action as downside signal, converging to one comparative main-effect H (not full G paired-audience hypotheses)."
+
 
 # Structural corpus files (not traceable to a single distilled paper).
 # These files exist on disk and are referenced by SKILL.md / variants / references,
