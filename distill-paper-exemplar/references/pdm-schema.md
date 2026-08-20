@@ -16,6 +16,7 @@ PDM 是 `distill-paper-exemplar` 唯一的跨层交接物：一篇论文一份�
   sections/<section>.json                # 各分节 skill 的 JSON/报告（子任务写）
   sections/<section>.report.md           # （可选）该节 skill 的 markdown 报告
   feedback/<section>.feedback.yaml       # 该节 skill_design_feedback（子任务写）
+  writeback_plan.<section>.yaml          # corpus_precheck.py 产物：选带/查重/锚点（写回的唯一依据）
 ```
 
 **铁律**：原始 paper-import MD 含 base64 图片（单文件 44–89% 字节、单行可达 100KB），
