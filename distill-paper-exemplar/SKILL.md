@@ -62,6 +62,11 @@ L4 反馈收敛        核对 design_feedback 已持久化；报告三路输出�
    剥除 base64 图片（→ `![fig-N](image-ref-N)` 占位符）生成 `<citekey>.pdm/fulltext.text-only.md`，
    并按标题物化切片 `sections/introduction|theory|methods|results|discussion.md`；
    检测不到的节在 l0_manifest.json 标 `unknown`，由主循环人工切分补齐，不阻塞。
+   **结构自适应（2026-08-20 起）**：先读 manifest 的 `structure_type`——
+   `extended-intro`（长引言内嵌理论/假设，直接进 Data，经济学/金融风格）时，theory
+   蒸馏路由到 `sections/introduction.md`（标注 `embedded: true`，由 intro 蒸馏按功能
+   映射模块），**不再要求人工补切 theory**；`formal-model`（"Theoretical Model" 节）
+   时 theory 蒸馏按模型类内容处理，不套假设发展模板；`classic-imrad` 为默认。
    登记 frontmatter/citekey（Zotero 为元数据源）。创建 PDM 骨架，把 manifest 的
    切片路径写入 `source_provenance.section_slices`。
 2. **L1 分节蒸馏分发**。按用户范围（默认 4 节全跑）**串行**分发（每次 1 个子任务，

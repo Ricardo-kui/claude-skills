@@ -6,6 +6,13 @@
 > base64 图片单行巨串，读入即炸上下文。单独调用本 skill 且只有原始 MD 时，先运行
 > `distill-paper-exemplar/scripts/preprocess_l0.py <MD>` 再读产物。
 
+> **结构自适应（2026-08-20 起）**：输入切片可能不是独立 Theory 节——编排层按
+> `l0_manifest.json` 的 `structure_type` 路由：`extended-intro`（经济学/金融风格长引言）
+> 时你会收到引言切片并标注 `embedded: true`——文献综述与假设发展以 subsection 形式
+> 嵌在引言内，按功能定位理论构建内容，不要求独立的 Hypotheses 节；`formal-model`
+> 时切片是形式化模型（如 "Theoretical Model"）——按模型结构（假设→推导→命题）
+> 提取，不套管理学假设发展模板；无法对应时标 `unclassified residual`，不硬分类。
+
 > Imported from the upstream protocol. Resolve relative resource paths from this reference file's directory.
 
 # Role

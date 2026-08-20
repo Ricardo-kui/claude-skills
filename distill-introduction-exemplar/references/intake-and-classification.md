@@ -6,6 +6,21 @@
 > base64 图片单行巨串，读入即炸上下文。单独调用本 skill 且只有原始 MD 时，先运行
 > `distill-paper-exemplar/scripts/preprocess_l0.py <MD>` 再读产物。
 
+> **自适应深度（2026-08-20 起）**——不刻板套用完整流程：
+>
+> 1. **短节快道**：切片 < 800 词 且 Phase 1 模块映射全部命中已知模式（经典三段式等）
+>    → 按 L2 深度执行，可跳过 Phase 1.5（coverage）与 Phase 3（DNA 报告），直接进
+>    Phase 2 提取 + 2.4 critic。**2.4 critic 永不跳**；报告中标注 `depth: L2-fast`。
+> 2. **结构自适应**（读 `l0_manifest.json` 的 `structure_type`）：
+>    - `classic-imrad`：默认流程。
+>    - `extended-intro`（长引言内嵌文献综述/假设发展，之后直接进 Data——经济学/金融
+>      风格渐多）：不强制经典模块位置假设——Lit Turn/假设预览可能以 subsection 形式
+>      嵌在引言内，**按功能而非位置映射模块**；报告中标注 `embedded_theory: true`，
+>      供编排层把 theory 蒸馏路由到本切片。
+>    - `formal-model`（"Theoretical Model" 形式化模型节）：本 skill 流程不变；
+>      该节的 theory 蒸馏由编排层按模型类内容处理，不适用假设发展模板。
+>    - `unknown`：按保守原则处理，不猜结构。
+
 > Imported from the upstream protocol. Resolve relative resource paths from this reference file's directory.
 
 # Role
