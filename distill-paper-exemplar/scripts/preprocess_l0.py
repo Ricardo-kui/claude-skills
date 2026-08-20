@@ -5,11 +5,17 @@ Deterministic, no-LLM step run BEFORE any distillation:
   1. strip base64 data-URI images (44-89% of paper-import MD bytes) -> placeholder refs
   2. materialize section slice files (introduction/theory/methods/results/discussion)
 
-Output layout (PDM workdir, sibling of the source MD):
-  <paper_dir>/<citekey>.pdm/
+Output layout (PDM workdir):
+  DEFAULT: <DISTILL_WORK_ROOT or ~/.claude/distill-work>/<citekey>.pdm/
+    — deliberately OUTSIDE the vault/OneDrive (2026-08-20 user ruling: 蒸馏
+    不得在论文目录生成一堆中间文件). Everything in the workdir is
+    deterministically rebuildable from the source MD; delete freely.
+    Pass --outdir to keep the workdir next to the paper (archival runs).
     fulltext.text-only.md          # base64-stripped full text (only file agents may read)
     sections/<section>.md          # materialized slices (best effort)
     l0_manifest.json               # detection report for PDM registration
+
+  --unlock removes the LOCK; --clean removes the whole workdir (run at L4).
 
 The raw source MD is NEVER modified and must never be read by distill agents.
 Section detection is heading-based and conservative: anything uncertain is
@@ -19,7 +25,9 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
+import shutil
 import sys
 from pathlib import Path
 
