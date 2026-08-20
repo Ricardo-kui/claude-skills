@@ -1,5 +1,0 @@
-interface:
-  display_name: Stata C Plugins
-  short_description: Develop high-performance C/C++ plugins for Stata using the st...
-  default_prompt: Use $stata-c-plugins to develop high-performance C/C++ plugins for
-    Stata using the stplugin.h SDK.

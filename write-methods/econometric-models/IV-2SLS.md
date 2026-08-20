@@ -8,7 +8,7 @@ source_papers:
   - "zhou_gao_zhao_2017 (Administrative Science Quarterly): geography-based IV (distance to seaports for institutional development, Frankel-Romer)"
   - "moon_tuli_mukherjee_2023_jm (Journal of Marketing): peer-IV proximity gradient balancing relevance and exclusion validity"
   - "Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ (Strategic Management Journal): industry leave-out mean IV for endogenous lone-insider board adoption + dual estimator for continuous vs rare-binary DVs"
-variants_count: 13
+variants_count: 14
 created: 2026-05-18
 updated: 2026-08-05
 ---
@@ -236,8 +236,29 @@ updated: 2026-08-05
 
 ---
 
+
+### 变体 14: M8 exclusion 两句式 + 预测值代入（非默认；带诚实边界） (2026-08-13)
+
+**来源论文**: Kalaignanam, Kushwaha & Eilert 2013 (*Journal of Marketing*)
+
+**原始句锚点**: "Advertising expenses is an appropriate instrument in this context because although it is expected to positively affect brand quality (Mitra and Golder 2006), it is unlikely to influence product reliability, which is based on objective product performance."
+
+**验证状态**: 待第二篇交叉验证
+
+**写入日期**: 2026-08-13
+
+**槽位**: M8
+
+**骨架**:
+> It is plausible that [endogenous regressor] at time [t-1] might be determined by [DV] and [IV] from time periods [t-1]. We resolve this potential endogeneity using instrumental variable techniques. We use [instrument] as an instrument for the endogenous [regressor]. [Instrument] is an appropriate instrument in this context because although it is expected to [affect the endogenous regressor] ([citation]), it is unlikely to influence [the structural DV], which is based on [exclusion rationale]. To resolve this endogeneity, we estimated a regression model with [endogenous regressor] as the dependent outcome and [instrument] as the independent variable and used the predicted value of [endogenous regressor] from this regression in [structural equation]. Because the [instrument] is exogenous to the system, using predicted scores enables us to have exogenous variation in [endogenous regressor].
+
+**与原骨架差异**: 区别变体 4（三层 exclusion + 真正 2SLS）——本变体是两句 exclusion + 预测值代入（generated regressor）。**不是 2026 默认**；写入只为学会 exclusion 两句式。
+
+**诚实边界**: 必须报第一阶段 F / 偏 R²，并用 2SLS 或控制函数作为默认升级。预测值代入不处理 generated-regressor 推断。不得把 resolve endogeneity 写成已完成 2SLS。
+
 ## 反模式（IV 排除限制论证）
 
 | 反模式 | 表现 | 应做 |
 |--------|------|------|
 | **工具化平方项/交互项时 exclusion 未逐一论证** | 内生回归元含平方项或交互项（倒 U、曲线 IV、boundary-condition 交互），只对线性项给工具与排除理由；平方项/交互项工具的第一阶段相关性与排除限制未单独论证 | 对每个被工具化项（线性项、平方项、交互项）分别给工具、报第一阶段 F/偏 R²、独立论证排除限制；Hansen J 未拒绝不是排除限制成立的充分证明（联合过度识别检验只验证工具整体相关性，不验证每项的 exclusion）。Fini et al. 2017 (AMJ) 工具化三内生变量（peer eval / industry eval / industry eval²）即未对平方项独立论证——见 非线性模型 变体16 边界 |
+| **预测值代入结构方程却不报第一阶段、也不处理 generated-regressor 推断** | 用工具回归的预测值直接代入结构方程，无 partial F，无 2SLS 标准误讨论 | exclusion 两句式可学，但默认升级为 2SLS/CF 并报第一阶段。Kalaignanam et al. 2013 JM 警示案例 |

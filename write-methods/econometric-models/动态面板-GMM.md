@@ -3,9 +3,9 @@ design_type: "动态面板-GMM"
 status: ✓ POPULATED
 source_papers:
   - pollock2015 (ASQ, 2015): "AB difference GMM — three-source endogeneity; status↔reputation coevolution"
-variants_count: 4
+variants_count: 5
 created: 2026-05-18
-updated: 2026-07-30
+updated: 2026-08-13
 ---
 # 动态面板-GMM — Methods 骨架
 
@@ -17,7 +17,7 @@ updated: 2026-07-30
 
 | 槽位 | 变体数 | 变体编号 |
 |---|---|---|
-| M7 | 2 | 1、2 |
+| M7 | 3 | 1、2、5 |
 | M8 | 1 | 3 |
 | M4 | 1 | 4 |
 
@@ -27,6 +27,7 @@ updated: 2026-07-30
 |---|---|---|---|---|---|
 | 1 | AB difference GMM 三源内生性统一处理 | LDV + 同时性 + 未观测异质性三源内生性并存（副槽位 M8） | 首变体：逐一列举三源内生性及其方向，再以 AB 作统一解 | 通过（单篇） | Pollock et al. 2015 (ASQ) |
 | 2 | difference GMM vs system GMM 选择（稳态/平稳性论证） | 样本处于发展早期、远离稳态（young firms）时 | 在效率（system GMM）与一致性（difference GMM）间做有理论依据的权衡 | 通过（单篇） | Pollock et al. 2015 (ASQ) |
+| 5 | FD 后 t-2 工具化 LDV（Anderson–Hsiao） | FD+LDV 的 Nickell/差分内生，不必上 AB-GMM | 区别于变体1：只工具化 LDV，不处理同时性 | 待交叉 | Kalaignanam et al. 2013 JM |
 
 ### M8（1）
 
@@ -84,3 +85,23 @@ updated: 2026-07-30
 **骨架**:
 > "To test [developmental / age-contingent hypotheses H_a/H_b] we [ran a series of regressions splitting the sample into subsamples based on different age increments]. To have enough observations to conduct meaningful tests we began with [actors] less than or equal to, and [actors] greater than, [base age] years of age, and we increased the lower age break by [N] years in each regression. [Because there is no theoretical reason to determine a specific break point, we tested this hypothesis using the results over a range of age thresholds rather than imposing a single split.]"
 **与原骨架差异**: 当发展性调节变量（age/stage）**无理论断点**时，不强行施加单一交互或单一分样本切点，而是**跨多个阈值切点重复检验**，报告效应随阈值变化的模式（如"效应在 ≤7 岁显著、8–10 岁不显著、≥11 岁反向"）。这把"无理论断点"从弱点转化为**展示效应梯度**的优势。配套 Results 需报告每个阈值子样本的 N 与系数（小 N 子样本结果需谨慎解读，参见配套 write-results 分样本叙事）。
+
+### 变体 5: M7 FD 后用 t-2 工具化 LDV（Anderson–Hsiao 式） (2026-08-13)
+
+**来源论文**: Kalaignanam, Kushwaha & Eilert 2013 (*Journal of Marketing*)
+
+**原始句锚点**: "The lagged dependent variable in Model 1b ... is likely to be correlated to the random error. ... we use the second lag (t - 2) of the dependent variable as an instrument for the lagged dependent variable."
+
+**验证状态**: 待第二篇交叉验证
+
+**写入日期**: 2026-08-13
+
+**槽位**: M7
+
+**骨架**:
+> The lagged dependent variable in [the first-differenced equation] is likely to be correlated to the random error. Consistent with previous research ([citations]), we use the second lag ([t-2]) of the dependent variable as an instrument for the lagged dependent variable.
+
+**与原骨架差异**: 区别变体 1（AB-GMM 统一处理 LDV/同时性/异质性）——本变体只用 t-2 工具化 FD 后的 LDV，不声称处理同时性。避免所有 FD+LDV 被路由到 xtabond2。
+
+**诚实边界**: 未报 Hansen J / AR(2) 时不得写成 GMM；这是 Anderson–Hsiao 简易 IV。工具化相关误差，不升级为因果效应。
+

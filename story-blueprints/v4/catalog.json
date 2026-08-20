@@ -2294,7 +2294,8 @@
             "Make the evidence sequence mirror the proposed process by placing recall magnitude at t-1, reliability at t, and accidents and recall frequency at t+1."
           ],
           "caveat": [
-            "The make-year panel, J.D. Power reliability score, FARS injury data, first differences, and advertising instrument are setting-specific operationalizations and do not observe the firms' root-cause analysis directly."
+            "The make-year panel, J.D. Power reliability score, FARS injury data, first differences, and advertising instrument are setting-specific operationalizations and do not observe the firms' root-cause analysis directly.",
+            "Lag structure plus an LDV does not license 'Granger causality' without a formal test, and a balanced panel's within-unit contrast is not 'drawing causal inferences.'"
           ]
         },
         "results": {
@@ -2793,7 +2794,8 @@
             "Return to the decision criteria by explaining why governance can change the balance between immediate accounting burden and consumer protection, while retaining the operational category on which the evidence rests."
           ],
           "caveat": [
-            "The ethical and policy prescriptions are stronger than the observed compensation–remedy associations; do not convert proxy-based evidence into a claim of confirmed CEO self-interest."
+            "The ethical and policy prescriptions are stronger than the observed compensation–remedy associations; do not convert proxy-based evidence into a claim of confirmed CEO self-interest.",
+            "Discussion recycles cost–harm and CEO main effects but does not return to the tenure-interaction null; learn the Results spillover-null sentence, not the Discussion omission."
           ]
         }
       },

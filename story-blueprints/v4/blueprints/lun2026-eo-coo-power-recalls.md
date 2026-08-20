@@ -6,7 +6,7 @@
 schema_version: "4.0-lite"
 id: lun2026
 paper:
-  citekey: null
+  citekey: lunDoubleEdgedSwordEntrepreneurial2026
   title: "The Double-Edged Sword of Entrepreneurial Orientation: Product Recalls and the Role of COO Power"
   outlet: "Entrepreneurship Theory and Practice"
   year: 2026
@@ -121,7 +121,7 @@ The paper begins with entrepreneurial orientation (EO) as an extensively celebra
 - **Knot integrity:** `works` — a theory that predicts variance but is usually evaluated through beneficial outcomes creates a genuine and consequential omission.
 - **Plot emergence:** `works` — the executive and life-cycle conditions arise from the proposed attentional capacity story rather than as disconnected moderators.
 - **Tie–unravel alignment:** `partly_works` — the associations and nested interactions test the headline claims; QMS gives partial process evidence, but no complete mediation or direct executive-attention evidence is observed.
-- **Ending quality:** `partly_works` — it returns effectively to the downside of EO, but extends from conditional recall associations to a more affirmative disciplined-experimentation account than the evidence fully verifies.
+- **Ending quality:** `partly_works` — it returns effectively to the downside of EO, but extends from conditional recall associations to a more affirmative disciplined-experimentation account than the evidence fully verifies. Whole-paper L2 recode (2026-08-13): C1 (Intro Inadequacy vs Theory Incompleteness) was a sequencing artifact of Theory labeling gap before Intro finished—identities align (B0 serves Inadequacy; E6 serves secondary named object). C4 was misapplied: Intro promised weaken and Results delivered it; sign reversal is surplus marked Interestingly, not an undelivered promise. Discussion's two-way "does not reverse" is a conservative reading of a marginal AME, already covered by the results caveat below.
 - **Boundary:** This evaluates storytelling only; it is not a judgment about causal identification, EO theory, executive roles, or research quality.
 
 ## Learning Affordances

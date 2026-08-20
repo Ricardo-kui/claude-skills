@@ -1,6 +1,7 @@
 ---
 name: research-gap-diagnosis
-description: "Diagnose a paper's contribution type, evaluate the strength and developmental status of its research gap, and prescribe the correct framing strategy. Synthesizes Zuckerman (2008, 2017) genre theory, Simsek et al. (2022) knowledge-weaving process, Makadok et al. (2018) theory-contribution taxonomy, and Greene & Lidinsky (2017) counterfactual synthesis heuristics (Part IV, generation mode). Use when Codex needs to identify what kind of contribution a project makes, whether the gap is genuine and compelling, which genre the paper belongs to, how to reframe a weak gap into a defensible one, or how to generate candidate gaps from a body of literature notes."
+description: "诊断论文的贡献类型与研究 gap 强度并开出框定策略——基于 Zuckerman 文体理论、Makadok 贡献分类等，判断 gap 是否真实有力、属于哪种贡献、弱 gap 如何重框。触发词：gap 诊断、研究缺口、贡献类型、研究定位"
+whenToUse: "当用户在动笔前想确认研究 gap 是否成立、贡献属于什么类型、论文属于哪种文体，或需要把弱 gap 重框成可辩护的定位时使用。触发词：gap 诊断、这个研究缺口成立吗、贡献类型是什么、研究定位、我的贡献是什么、怎么框定这个 gap"
 ---
 
 # Research Gap Diagnosis

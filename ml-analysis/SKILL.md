@@ -1,6 +1,7 @@
 ---
 name: ml-analysis
-description: Structure machine-learning workflows for empirical research. Use when Codex needs prediction, classification, feature engineering, train-validation-test design, leakage control, model comparison, tuning, model interpretation, or ML-oriented robustness checks on business, strategy, marketing, or operations datasets.
+description: "为实证研究中的机器学习任务做规划与治理：预测/分类目标定义、特征工程、训练-验证-测试划分、数据泄漏控制、模型比较与调参、可解释性与 ML 稳健性。触发：机器学习、预测模型、分类、特征重要性、模型评估。"
+whenToUse: "当用户说“用机器学习预测……”“做个分类/预测模型”“训练验证测试集怎么切”“防止数据泄漏”“比较几个模型”“调超参”“看特征重要性/SHAP 解释”“做 ML 稳健性检验”时使用；设计锁定后交 empirical-pipeline-python 执行。"
 ---
 
 # Ml Analysis

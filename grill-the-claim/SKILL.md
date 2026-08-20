@@ -1,7 +1,7 @@
 ---
 name: grill-the-claim
-description: >-
-  贡献主张/研究设计的压力测试访谈——把主张展开成 claim tree，按 frontier 轮次追问，直到没有隐含假设未被检视。Use when the user wants to stress-test a contribution claim, research design, or theoretical story before writing。触发词：「烤一下这个 idea」「压力测试」「这个贡献站得住吗」「grill 我的研究设计」「帮我挑刺」「这个 gap 是真的吗」。Not for: 快速分诊与路由（→ empirical-intake）；文档级 gap 类型诊断（→ research-gap-diagnosis）；Introduction 结构与 hook 诊断（→ diagnose-introduction）；写作执行（→ write-*）。
+description: "贡献主张/研究设计的压力测试访谈——把主张展开成 claim tree，按 frontier 轮次追问，直到没有隐含假设未被检视；产出经得起追问的主张清单。触发词：烤一下这个 idea、压力测试、这个贡献站得住吗、grill 我的研究设计、帮我挑刺、这个 gap 是真的吗。"
+whenToUse: "当用户想在动笔前压力测试一个贡献主张、研究设计、理论故事或 gap 的真实性，希望被逐轮追问、挑刺、挑战隐含假设时使用。触发词：烤一下这个 idea、压力测试、这个贡献站得住吗、grill 我的研究设计、帮我挑刺、这个 gap 是真的吗、挑战一下我的假设、这个 idea 行不行"
 ---
 
 # Grill the Claim — 学术压力测试访谈

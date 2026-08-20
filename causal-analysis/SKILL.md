@@ -1,6 +1,7 @@
 ---
 name: causal-analysis
-description: Convert a locked causal Design Packet into an operational Analysis Manifest and route execution across installed econometrics skills. Use after huntington-klein-causal-design to choose the runtime, estimator implementation, diagnostics, robustness lanes, and verification steps for FE, DiD, event-study, IV, RDD, matching, or treatment-effect work. Do not use to invent the estimand or silently revise identification assumptions.
+description: "因果分析执行规划路由：把锁定的 causal Design Packet 转成可操作的 Analysis Manifest，决定运行时（Stata/Python/R）与估计器实现、诊断与稳健性安排，并路由到对应执行 skill。在 huntington-klein-causal-design 锁定设计之后使用；不用于发明 estimand 或擅改识别假设。"
+whenToUse: "当用户识别设计已定、要决定具体用哪个估计器和软件来跑、规划执行方案、或问这个因果设计该交给哪个工具执行时使用。触发词：执行计划、Analysis Manifest、用哪个估计器、Stata 还是 Python 跑、路由到执行、跑哪个回归"
 ---
 
 # Causal Analysis

@@ -1,6 +1,7 @@
 ---
 name: results-review
-description: 顶刊论文 Results 专项审查。检查结果段落节奏、假设完整性、稳健性检验组织方式。基于 Pollock Ch07 和 MVP30 范文语料库。
+description: "顶刊论文 Results 专项审查：检查结果段落节奏、假设完整性和稳健性检验组织方式，基于 Pollock Ch07 和 MVP30 范文语料库。从零写结果用 write-results。"
+whenToUse: "当用户提供结果部分草稿要求审查、诊断或改写建议时使用。触发词：审查结果、results review、看看我的结果部分、结果部分检查、稳健性检验审查、结果汇报检查、投稿前查 results、帮我改结果部分"
 metadata:
   version: 1.1.0
 ---

@@ -1093,14 +1093,14 @@ status: emerging_single_paper
 <!--
 pattern_id: sequential_nested_moderation
 build_type: 调节效应型 / 假设树型
-source_papers: ["Chung_Low_Rust_2022_JAMS"]
+source_papers: ["Chung_Low_Rust_2022_JAMS", "lunetal2026_ETP"]
 confidence: medium
-status: emerging (1p)
+status: emerging (2p)
 -->
 
 ## Pattern: Sequential Nested Moderation（序列嵌套调节）
 
-**适用场景**: 研究包含**两层边界条件**：第一层 moderator（W1）直接影响 X→Y 关系；第二层 moderator（W2）调节 W1 的调节效应，形成三向交互（X × W1 × W2）。典型于 upper echelons 研究：下级行为者的劝说/缓冲效应被其相对权力放大，或董事会治理压力被下级行为者信心缓冲。
+**适用场景**: 研究包含**两层边界条件**：第一层 moderator（W1）直接影响 X→Y 关系；第二层 moderator（W2）调节 W1 的调节效应，形成三向交互（X × W1 × W2）。典型于 upper echelons：下级劝说被相对权力放大（Chung 2022），或功能高管的注意治理缓冲被任务负荷再调节（Lun et al. 2026）。
 
 **微观动作序列**:
 1. **Anchor**：建立 X→Y 基线机制（H1）
@@ -1130,7 +1130,9 @@ mechanism].
 [W1] on the relationship between [IV] and [DV] is [stronger/weaker] when [W2] is high.
 ```
 
-**范文来源**: Chung, Low, and Rust (2022), *Journal of the Academy of Marketing Science*（CEO confidence × CMO confidence × CMO power; CEO confidence × board independence × CMO confidence）
+**范文来源**:
+- Chung, Low, and Rust (2022), *Journal of the Academy of Marketing Science*（CEO confidence × CMO confidence × CMO power; CEO confidence × board independence × CMO confidence）
+- Lun, Zurbruegg, Mount & Cheong (2026), *Entrepreneurship Theory and Practice*（EO × COO power × product life cycle；W2 = 注意带宽 / 任务负荷）
 
 **为什么有效**: 通过"先建立 two-way，再在其上叠加 three-way"的递进结构，让读者理解三向交互不是统计补丁，而是有理论层次的边界条件。每一层都有独立的机制解释，避免了一次性抛出复杂交互的认知超载。
 

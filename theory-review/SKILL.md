@@ -1,6 +1,7 @@
 ---
 name: theory-review
-description: 顶刊论文 Theory / Hypotheses 专项审查。检查构念清晰度、why chain、假设形式和角色排序。基于 Pollock Ch06 和 MVP30 范文语料库。
+description: "顶刊论文 Theory / Hypotheses 专项审查：检查构念清晰度、why chain、假设形式和角色排序，基于 Pollock Ch06 和 MVP30 范文语料库。从零写理论用 write-theory。"
+whenToUse: "当用户提供理论或假设草稿要求审查、诊断或改写建议时使用。触发词：审查理论、看看我的 theory、假设审查、theory review、检查假设推导、why chain 检查、理论部分润色、帮我改理论"
 metadata:
   version: 1.2.0
 ---

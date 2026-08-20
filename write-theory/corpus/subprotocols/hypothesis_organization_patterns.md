@@ -30,6 +30,7 @@ status: ready_for_corpus
 | 9 | Pattern: Dual-Edged Trunk → Signed Enhanci | 主效应净方向事先不定（双刃剑）；理论用一组异号权变分别强化升值机制与贬值机制；不设 unco |  | Castellaneta, Conti, and Kacpe |
 | 10 | Pattern: Mechanism-Loss Trunk → Multi-Outc | 拥挤的治理/结构文献中，IV 不是”又一个 board/TMT characteristic |  | Zorn, Shropshire, Martin, Comb |
 | 11 | Pattern: Per-Stakeholder Paired (Main + Cue-M | 同一特质 IV 对多个外部利益相关者各产生”主效应（默认表现型）+ cue 切换（对立表现型）”配对；贡献=同一特质在多个 stakeholder 关系中的切换节律 | EMERGING（单篇来源，待第 | Ridge, Hill, Ingram, Kolomeitsev |
+| 12 | Pattern: Dual-Role IV → Shared-Logic Compressed T5 | 对立力量 trunk 后，同一组 W 先立主效应，再用共享短/长期逻辑压缩全部交互，而非每 moderator 独立嵌入 | EMERGING（单篇来源，待第二篇） | Liu, Liu & Luo (2016), *Journal of Marketing* |
 
 ## Pattern: Triple Parallel Boundary Conditions
 
@@ -582,3 +583,51 @@ H4: The positive interaction effect of [trait] and [cue 2] on [DV 2] mitigates t
 - 只有主效应、没有 cue 切换，或切换假设写成 buffering（机制削弱）而非 manifestation-switch。
 - 把不同 stakeholder 写成不同 trait 机制（机制不一致）→ 配对架构崩塌。
 - cue 与该 stakeholder 关系脱钩（泛化情境）→ 切换逻辑失去证据基础。
+
+---
+
+<!--
+pattern_id: dual_role_iv_then_shared_logic_compressed_t5
+build_type: 机制推演型 + 调节效应型
+source_papers: ["Liu_Liu_Luo_2016_JM"]
+confidence: medium
+status: emerging
+-->
+
+## Pattern: Dual-Role IV → Shared-Logic Compressed T5
+
+**适用场景**: 两条对立力量构成 trunk；同一组行动者特征既有独立主效应，又调节 trunk 上的每条力量；交互数量多（≥4）且共享同一短/长期逻辑，不宜每条交互独立成节。
+**结构**: H1–H2 (opposing-force trunk) → H3–H4 (W 独立主效应) → H5–H8 (同一逻辑压缩全部 W×X 交互)
+**范文来源**: Liu, Liu & Luo (2016), *Journal of Marketing*
+
+**骨架**:
+```
+We first discuss two basic [event] characteristics, [cost] and [harm], which form the base for [choice]. We then discuss how the [actor]'s personal interests may influence a [unit]'s [choice], both directly and indirectly through interactions with [cost] and [harm].
+
+[Trunk — H1/H2]
+[Cost] reduces the likelihood of [complete option] because [short-term earnings logic]. [Harm] increases that likelihood because [long-term trust logic].
+
+[Dual-role W — H3/H4]
+[Cash] tilts [actor] toward short-term earnings and therefore away from [complete option]. [Equity] tilts [actor] toward long-term value and therefore toward [complete option]. [Tenure] [entrenchment / short-horizon logic].
+
+[Compressed T5]
+Based on similar theoretical reasoning, we now explore how the [k] [actor] characteristics might moderate the impact of the two [event] characteristics on [choice]. Because of the short- versus long-term orientation of [cash] versus [equity], these two characteristics should moderate the impact of [event] characteristics in opposite directions.
+```
+
+**为什么有效**: 把 W 写成双角色预测变量（先主效应、再权重调节），再用 similar theoretical reasoning 避免六条交互各写一遍 why-chain；读者看到的是同一短/长期逻辑在两条对立基线上的倾斜，而不是假设树或平行嵌入。
+
+**与近邻模式区分**:
+- vs `common_trunk_parallel_branches`：后者分支是同一 DV 上的多机制路径；本模式 trunk 是两条对立 IV，W 既是第三组 IV 又是调节。
+- vs E3 每 moderator 独立嵌入：E3 要求每 W 单独成节；本模式用共享逻辑压缩 T5。
+- vs E1 Step 4 把 Z→Y 标为可选：本模式强制先写 W 的独立主效应，再写交互。
+
+**注意事项**:
+- 压缩过度时双边论证会变薄（C20）；每条交互至少要有方向句，不能只写"similar reasoning"然后列假设。
+- 单篇 EMERGING：未验证前不要作为 write-theory 默认路由。
+
+**反模式**:
+- 把双角色写成假设树（每个 W 一个子树）。
+- 交互节重写主效应 why-chain。
+- 把成本与伤害写成不可通约的对立理论。
+
+**原文锚点**: "We then discuss how the CEO's personal interests may influence a company's remedy decision, both directly and indirectly through interactions with remedy cost and consumer harm."

@@ -155,19 +155,20 @@ distinguishing this cross-level direct effect from the cross-level interaction e
 "An attribute that creates a dilemma for firms when [decision] is [moderator]. [Moderator] refers to [definition] ([citation]). Although [moderator] increases [cost] for [Option B] and favors [Option A], firms may not have the expertise to [implement]. Therefore, [reasoning A]. [Citation support]. [Reasoning B]. [Meta-analytic evidence] supports this view and suggests that [finding] ([citation]). The rationale is that [theoretical mechanism]. In contrast, when [moderator condition is low], the [advantage] is likely to be suppressed. Given these arguments, we expect [prediction]."
 ```
 
-**原文锚点**:
-> "The firm's shared product assets—that is, the extent to which products in the family share assets (e.g., parts/components, design, manufacturing facilities)—are likely to be an important boundary condition for learning. Sharing of product assets has an impact on the firm's cost structure and market performance (Hauser 1999; Krishnan and Gupta 2001; Ramdas 2003). … 'Prior brand quality' refers to the consumer's existing perceptions of the overall quality of the brand (Aaker and Jacobson 1994). The rationale for examining prior brand quality as a moderator stems from extant research that emphasizes the importance of motivational factors in influencing the learning efforts of firms (Boulding and Staelin 1995; Cyert and March 1963; Greve 1998)."
+**原文锚点（2017 平行小节开场；待补 2017 全文句）**:
+> 待补：kalaignanam2017 四个 moderator 小节的统一开场句。2013 的 shared-product-assets / prior-brand-quality 锚点已移出 E3——2013 只有两个调节、且 H4 为非定向，不是本变体的 ≥3 平行嵌入结构。见 `hypothesis_forms.md` 非定向调节句与 `moderator_selection_frameworks.md` 的 transfer vs attention enabler。
 
 **收敛到假设**:
 ```
 "H[N]. The [direction] effect of [IV] on [DV] is [stronger/weaker] when [moderator] is [high/low]."
 ```
 
-**原文锚点**:
-> "Given the presence of equivocal arguments for the moderating effect of prior brand quality, we propose a nondirectional hypothesis: … brands with lower prior quality improve product reliability to a greater extent after a recall than brands with higher prior quality."
+**原文锚点（假设收敛）**:
+> 待补：kalaignanam2017 定向调节假设句。2013 的 "Given the presence of equivocal arguments... we propose a nondirectional hypothesis" 不是 E3 收敛句——那是单一非定向调节，见 `hypothesis_forms.md`。
 
 **语料锚定**:
 - kalaignanam2017 (JM) — 4 个 moderator（technological complexity, NPD capability×2, PLAF），每个 moderator 一个小节，结构完全平行
+- **不要**把 kalaignanam2013 挂到 E3：2013 是 ability/motivation 双使能 + 一个非定向 H4，不是 ≥3 平行嵌入小节
 
 **关键特征**:
 - "An attribute that creates a dilemma..." — 统一的小节开场句式
@@ -410,7 +411,7 @@ high, at lower levels when low.
 
 ## E6. 序列嵌套调节（Sequential Nested Moderation，Chung/Low/Rust 2022 型）
 
-**适用**: 研究包含**两层边界条件**：第一层调节变量（W1）直接影响 X→Y 关系；第二层调节变量（W2）调节 W1 的调节效应，形成三向交互（X × W1 × W2）。常见于 upper echelons 研究中 lower-level actor 的劝说效应被其相对权力放大/削弱，或 board-level 压力被 CMO 信心缓冲。
+**适用**: 研究包含**两层边界条件**：第一层调节变量（W1）直接影响 X→Y 关系；第二层调节变量（W2）调节 W1 的调节效应，形成三向交互（X × W1 × W2）。机制族至少两条：(a) 劝说×相对权力（Chung 2022：下级劝说上级被权力放大）；(b) 注意治理×任务负荷（Lun et al. 2026：功能高管权力缓冲主效应，组合阶段的注意负荷再调节该缓冲）。
 
 **与 E1/E3 的区别**:
 
@@ -470,6 +471,17 @@ and [DV] is [stronger/weaker] when [W2] is high than when [W2] is low."
 
 **语料锚定**:
 - Chung, Low & Rust (2022, JAMS) — CEO confidence × CMO confidence (W1) × CMO power (W2); CEO confidence × board independence (W1) × CMO confidence (W2)
+- Lun, Zurbruegg, Mount & Cheong (2026, ETP) — EO × COO power (W1) × product life cycle (W2)；W2 调节的是 W1 的注意带宽，不是劝说效力
+
+**机制族 B（注意治理 × 任务负荷，lunetal2026 型）**:
+
+**原文锚点**:
+> "COO power represents an attentional governance contingency that shapes the TMT's interpretive focus—conditioning the extent to which entrepreneurial experimentation is accompanied by operational discipline."
+>
+> "This suggests that the moderating effect of COO power on EO’s downside risks will vary across contextual conditions."
+> — Lun, Zurbruegg, Mount & Cheong (2026), *Entrepreneurship Theory and Practice*
+
+第二层嵌套在此族的机制槽位是 attentional load：早期组合把有限注意摊薄，削弱 W1 缓冲；晚期组合收窄不确定项目，放大 W1 缓冲。假设形式可用 stronger (weaker) / late (early) 单句两极。
 
 **反模式**:
 - 未建立 H2 two-way 直接进入 H3 three-way → 读者无法理解嵌套结构

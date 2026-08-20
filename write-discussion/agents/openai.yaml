@@ -1,6 +1,0 @@
-interface:
-  display_name: "Retired Discussion Writer"
-  short_description: "Explain the Discussion writing boundary and route reviews"
-  default_prompt: "Use $write-discussion only to explain the retired writing boundary and route an existing draft to $discussion-review."
-policy:
-  allow_implicit_invocation: false

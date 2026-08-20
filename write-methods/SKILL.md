@@ -1,7 +1,7 @@
 ---
 name: write-methods
-description: >-
-  顶刊 Methods 论证结构生成器——输入设计类型输出带 [placeholder] 的可直接粘贴段落（M1-M10 槽位；覆盖 23+ 设计类型）。Use when writing the methods section of a management-journal paper。触发词：写方法、方法部分、样本选择、变量定义、变量测量、估计方法、识别策略、内生性处理、DiD/IV/生存分析/匹配的 Methods 段。Not for: 蒸馏范文（→ distill-methods-exemplar）；审查草稿（→ methods-review）；稳健性结果正文（→ write-results）。分工：识别策略的理论论证属 write-theory，实现属本 skill；实验/多研究设计属本 skill，结果与跨研究综合属 write-results。
+description: "顶刊 Methods 论证结构生成器——输入设计类型输出带 [placeholder] 的可直接粘贴段落（M1-M10 槽位；覆盖 23+ 设计类型）。触发词：写方法、方法部分、样本选择、变量定义、变量测量、估计方法、识别策略、内生性处理、DiD/IV/生存分析/匹配的 Methods 段。审查草稿用 methods-review。"
+whenToUse: "当用户要求写方法部分、描述样本与数据来源、定义变量、说明估计方法或识别策略时使用。触发词：写方法、方法部分、样本选择、变量定义、变量测量、估计方法、识别策略、内生性处理、稳健性检验的写法、写 Methods 段"
 ---
 
 # Role

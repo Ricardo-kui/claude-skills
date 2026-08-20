@@ -210,6 +210,35 @@ how [X] may influence [Y]:"
 **原文锚点** (Wowak et al. 2025, Management Science "The Politics of Product Safety: Top Management Team Political Ideology and Serious Medical Product Recalls"):
 > "Hypothesis 1(a). There is a negative relationship between top management team liberalism and the count of recalls." ... "Hypothesis 1(b). There is a positive relationship between top management team liberalism and the count of recalls."
 
+### 单一非定向调节（Nondirectional Competing Moderator）
+
+**适用**: 两套对立动机/注意力理论对**同一个**调节效应给出相反方向，但不拆成 H[N]a/H[N]b；用单一 "stronger or weaker" 假设把裁决交给证据。
+
+| 形式 | 模板 | 变量要求 |
+|------|------|---------|
+| **Nondirectional competing moderator** | "H[N]. The [positive/negative] relationship between [X] and [Y] is **stronger or weaker** for [units] with higher [Z] than for [units] with lower [Z]." | 连续/类别调节；理论给出两套相反动机，不预先选边 |
+
+**收敛信号（用 Given，不用 Therefore）**:
+```
+"Given the presence of equivocal arguments for the moderating effect of [Z], we propose a nondirectional hypothesis:"
+```
+
+**语料锚定**:
+- kalaignanametal2013 (JM) — H4 prior brand quality 对 recall magnitude → future reliability
+
+**原文锚点** (Kalaignanam, Kushwaha & Eilert 2013, Journal of Marketing):
+> "Given the presence of equivocal arguments for the moderating effect of prior brand quality, we propose a nondirectional hypothesis"
+
+> "The positive relationship between recall magnitude and future product reliability is stronger or weaker for brands with higher prior quality than for brands with lower prior quality."
+
+**与竞争假设对的区别**:
+- 竞争假设对（Wowak）是两个方向相反的**主效应** H[N]a/H[N]b
+- 本形式是**一个**调节假设内部保留方向开放；Results 用交互符号裁决，不得在 Theory 用 Therefore 收束
+
+**反模式**:
+- 把 2013 H4 写成 E3 的定向 "stronger/weaker when high/low"
+- 在 Theory 段用 Results 发现（"brands with lower prior quality improve... to a greater extent"）替换非定向假设句
+
 ---
 
 ## 矩阵假设（多 IV × 多 DV）
@@ -248,6 +277,25 @@ how [X] may influence [Y]:"
 
 **语料锚定**：
 - Paruchuri 2020 (SMJ) — 三向交互范式
+- Lun et al. 2026 (ETP) — stronger (weaker) when late-stage (early-stage)
+- Liu, Liu & Luo 2016 (JM) — enhanced (reduced) when cash (equity)
+
+---
+
+## 括号异号双调节句（parenthetical opposite-signed dual moderator，liuliuluo2016 型）
+
+**适用**: 两个方向相反的 moderator 调节同一条基线斜率；把异号对收进一条交互假设，避免拆成 H5a/H5b 两句。
+
+```
+"The [negative/positive] impact of [X] on the likelihood of [DV] is enhanced (reduced) when the [actor] receives greater [W_short] ([W_long]) [incentive]."
+```
+
+**原文锚点** (Liu, Liu & Luo 2016, JM):
+> "The negative impact of product value on the likelihood of full remedy is enhanced (reduced) when the CEO receives greater cash (equity) compensation."
+
+**与三向 parenthetical 的区分**: 三向模板是 stronger (weaker) when A (B) 的两极情境；本模板是两个异号 moderator 一次写出对同一斜率的增强/削弱。
+
+**禁忌**: 两个 W 必须理论方向相反；不要用于同号调节对；不要把括号当成 a/b 配对主效应。
 
 ---
 

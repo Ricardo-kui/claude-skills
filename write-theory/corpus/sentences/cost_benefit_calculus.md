@@ -4,14 +4,14 @@ function: mechanism voice
 type: sentence corpus
 source_exemplar: chung_low_rust_2022_jams
 confidence: medium
-status: emerging (1p)
+status: emerging (2p)
 -->
 
 # 成本-收益计算机制句语料库
 
 > **功能**: 为 "行为者如何感知某行动的高收益 + 低成本" 提供可复用的机制表达
-> **来源范文**: Chung, Low & Rust (2022, JAMS) — CEO confidence → myopic marketing management
-> **核心逻辑**: 决策者面对 [current_benefit] 与 [long_term_cost] 的权衡；[IV] 通过提升前者/降低后者的感知来改变行动概率
+> **来源范文**: Chung, Low & Rust (2022, JAMS) — CEO confidence → myopic marketing management；Liu, Liu & Luo (2016, JM) — 对立力量同级 IV 再加权
+> **核心逻辑**: 决策者面对 [current_benefit] 与 [long_term_cost] 的权衡；[IV] 通过提升前者/降低后者的感知来改变行动概率。第二源：成本与伤害是两条同级、方向相反的 IV，行动者激励改变的是两条力量的相对权重。
 
 ---
 
@@ -28,6 +28,28 @@ will impact the perceived costs and benefits of engaging in [action].
 When [actor] perceives the former to be high and the latter to be low, [action] becomes 
 more attractive.
 ```
+
+---
+
+## 对立力量同级 IV 再加权（liuliuluo2016 型）
+
+**适用**: 成本与伤害（或任何两条方向相反的决策准则）是同级自变量，不是对同一行动的感知高低；行动者激励改变的是两条力量的相对权重。
+
+```
+We first discuss two basic [event] characteristics, [cost] and [harm], which form the 
+base for [choice]. For [actors], [complete option] is usually more expensive than 
+[partial option]; at the same time, more severe [harm] demands better [responses]. 
+[Actor] incentives then reweight these two forces: [short-horizon incentive] 
+enhances the negative impact of [cost] and reduces the positive impact of [harm]; 
+[long-horizon incentive] does the reverse.
+```
+
+**原文锚点** (Liu, Liu & Luo 2016, JM):
+> "We first discuss two basic recall characteristics, remedy cost and consumer harm, which form the base for remedy choice."
+
+**与 Chung 感知型的区分**: Chung 是单一行动的感知高收益/低成本；本变体是两条同级、方向相反的 IV，W 改变相对权重而非对同一行动的感知。
+
+**禁忌**: 不要把对立力量写成两套不可通约理论；不要省略"同级 IV"而退回感知型。
 
 ---
 

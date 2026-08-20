@@ -1,7 +1,7 @@
 ---
 name: distill-theory-exemplar
-description: >-
-  Theory & Hypotheses 范文蒸馏 meta-skill——输入单篇或批量论文的 Theory 文本，输出结构化提炼报告（理论构建类型识别、功能模块拆解、why-chain 模式、构念关系组织方式），并将跨论文证据反馈为 write-theory 的语料缺口或技能设计缺陷。Use when 蒸馏 theory 范文——提炼 HOW they explain why, not WHAT they explain。Not for: Theory 写作（→ write-theory）；草稿审查（→ theory-review）；全稿 QC（→ pollock-qc）。
+description: "蒸馏顶刊论文 Theory & Hypotheses 范文——识别理论构建类型、拆解功能模块与 why-chain 模式（提炼 HOW they explain why），并反馈 write-theory 语料缺口。当用户要求学习/蒸馏某篇论文理论与假设部分的写法时使用。"
+whenToUse: "当用户要求蒸馏、提炼、学习某篇（或批量）论文 Theory 或 Hypotheses 部分的论证手法时使用。触发词：蒸馏 theory、提炼理论部分、学习这篇理论写法、分析假设怎么推的、theory 范文蒸馏、批量蒸馏理论与假设"
 ---
 
 # Distill Theory Exemplar

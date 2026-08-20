@@ -1,8 +1,7 @@
 ---
 name: notebooklm-pipeline
-description: |
-  学术文献 NotebookLM 流水线。把本地 PDF、Obsidian 笔记、网页作为 sources 批量推送到 NotebookLM，执行文献综述/理论框架/方法-结果语料三类蒸馏，并将结构化结果落库到 Obsidian。
-  触发词：「notebooklm 流水线」「文献蒸馏」「批量跑 notebooklm」「把 PDF 丢给 notebooklm」「理论框架提取」「方法语料蒸馏」「文献综述自动化」。
+description: "学术文献 NotebookLM 批量流水线：把本地 PDF、Obsidian 笔记、网页批量推送到 NotebookLM，执行文献综述/理论框架/方法-结果语料三类蒸馏并将结果落库 Obsidian。触发词：notebooklm 流水线、文献蒸馏、批量跑 notebooklm、理论框架提取、方法语料蒸馏、文献综述自动化"
+whenToUse: "当用户要批量把 PDF/Obsidian 笔记/网页推送到 NotebookLM 做文献综述、理论框架提取或 Methods/Results 语料蒸馏，并把结构化结果写回 Obsidian 时使用。触发词：notebooklm 流水线、文献蒸馏、批量跑 notebooklm、把 PDF 丢给 notebooklm、理论框架提取、方法语料蒸馏、文献综述自动化"
 version: 0.1.0
 ---
 

@@ -1,6 +1,7 @@
 ---
 name: huntington-klein-causal-design
-description: "Identification-first causal-design and causal-claim audit based on Huntington-Klein's The Effect (2nd ed., 2025). Use when defining or auditing a causal question, treatment contrast, estimand, DGP/DAG, identifying variation, control set, assumptions, diagnostics, or claim boundary; comparing regression adjustment, matching, fixed effects/event studies, DiD, IV, RDD, partial identification, or advanced causal methods; or explaining a named chapter or concept. When data execution or software syntax is requested, produce a design handoff for causal-analysis or Stata."
+description: "因果识别设计与因果主张审查（基于 Huntington-Klein《The Effect》第 2 版）：定义或审计因果问题、处理对比、estimand、DGP/DAG、识别变异、控制集、假设与诊断；比较回归调整、匹配、固定效应/事件研究、DiD、IV、RDD 等设计。要落地执行时输出交接给 causal-analysis 或 Stata。"
+whenToUse: "当用户讨论识别策略、因果研究设计、画 DAG、选控制变量、审查某个因果结论、或比较 DiD/IV/RDD/匹配哪个设计更合适时使用。触发词：识别策略、因果设计、内生性怎么办、这个因果结论站得住吗、DAG、控制变量怎么选、用 DiD 还是 IV"
 ---
 
 # The Effect: Causal Research Design

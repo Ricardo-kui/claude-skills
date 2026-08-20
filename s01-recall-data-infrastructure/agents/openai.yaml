@@ -1,4 +1,0 @@
-interface:
-  display_name: "Recall Data Infrastructure"
-  short_description: "Set up shared product recall timing and NHTSA data infrastructure."
-  default_prompt: "Use $s01-recall-data-infrastructure to audit or build the product recall data backbone for this project."

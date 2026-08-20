@@ -1,5 +1,0 @@
-interface:
-  display_name: "Modern DiD in R"
-  short_description: "Run modern staggered DiD when R is explicit"
-  default_prompt: "Use $did-analysis to execute a modern staggered-adoption DiD analysis in R with cohort-aware diagnostics."
-

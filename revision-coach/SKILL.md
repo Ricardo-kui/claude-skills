@@ -1,6 +1,7 @@
 ---
 name: revision-coach
-description: Use when the user receives peer-reviewer comments or a decision letter (R&R, major/minor revision, revise-and-resubmit, desk reject with resubmission invitation) and wants to (a) parse the comments into a structured Revision Roadmap + Response-to-Reviewers letter skeleton, or (b) audit an existing response/rebuttal draft for coverage gaps and risk flags. Trigger on "审稿意见", "我收到审稿意见了", "R&R", "major revision", "minor revision", "revise and resubmit", "回复审稿人", "response letter", "rebuttal", "审稿意见没回完吗", "帮我理一下审稿意见", "parse reviews", "revision roadmap". Do NOT use this skill to rewrite manuscript sections (use write-* / humanizer) or to re-run empirical analysis (use causal-analysis / stata). This skill plans and QA's the author's response; it does not write the revision itself or fabricate that a comment was addressed.
+description: "收到审稿意见或编辑决定信（R&R、major/minor revision、revise and resubmit）后使用：把意见逐条解析成 Revision Roadmap + Response-to-Reviewers 回复信骨架，或对已有回复草稿做逐条覆盖体检；不重写正文、不重跑实证。触发词：审稿意见、R&R、回复审稿人、rebuttal、revision roadmap。"
+whenToUse: "当用户收到审稿意见或决定信（R&R、major/minor revision、revise and resubmit、desk reject 邀请重投），想整理修改路线图、搭建 response letter 骨架，或检查已写回复是否漏点时使用。触发词：审稿意见、我收到审稿意见了、R&R、major revision、回复审稿人、response letter、rebuttal、帮我理一下审稿意见、审稿意见回完了吗"
 ---
 
 # Revision Coach — R&R 解析规划与回复体检

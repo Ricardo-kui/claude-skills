@@ -1,15 +1,7 @@
 ---
 name: distill-paper-exemplar
-description: >-
-  整篇顶刊论文蒸馏编排入口——输入完整论文（PDF/MD/路径），按 PDM（Paper Distillation
-  Manifest）协议将整篇分解为 Introduction/Theory/Methods/Results 四节，分发到对应
-  distill-*-exemplar skill 并行蒸馏，执行跨节一致性检查，再交由 distill-story-exemplar
-  生成整篇 story blueprint 学习卡；最终收敛为三路输出：write-* 语料更新 +
-  story-blueprints 卡 + skill_design_feedback 台账。这是「整篇输入消费」的定式化编排层，
-  四个分节 distill skill 本体零改动。Use when 用户给出一篇完整论文要求整篇蒸馏学习 /
-  整篇输入消费 / 蒸馏这篇论文（全篇）。Not for: 单节蒸馏（→ 对应 distill-*-exemplar）；
-  单节草稿审查（→ intro-review / theory-review / methods-review / results-review）；
-  全稿 QC（→ pollock-qc）；写自己的论文（→ write-*）。
+description: "整篇顶刊论文蒸馏编排入口——按 PDM 协议把完整论文分解为 Intro/Theory/Methods/Results 四节并行蒸馏、跨节一致性检查、生成 story blueprint 学习卡，最终写回 write-* 语料。触发词：整篇蒸馏、蒸馏这篇论文、整篇输入消费。单节蒸馏走对应 distill-*-exemplar。"
+whenToUse: "当用户给出一篇完整论文（PDF/MD/路径）要求整篇学习、整篇消化时使用。触发词：整篇蒸馏、蒸馏这篇论文、整篇输入消费、把这篇论文整个消化一遍、全文蒸馏、整体学习这篇顶刊论文、这篇论文全篇蒸馏"
 ---
 
 # Distill Paper Exemplar — 整篇蒸馏编排协议

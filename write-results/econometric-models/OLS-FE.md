@@ -21,9 +21,9 @@ source_papers:
   - "kashmiri_nicol_arora_2017_jams (Journal of the Academy of Marketing Science): marginal focal result followed by significance-driven control deletion, retained as an anti-pattern rather than a reporting template"
   - "desjardine_li_shi_2025_amj (Academy of Management Journal): min/mean/max marginal-effect table with slope-direction language, collinearity-absorption explanation for full-model interaction attenuation, ITCV omitted-variable threshold defense, dual-benchmarking deviation test, acquisition quasi-natural experiment as influence-channel switch, Bushee investor-type decomposition with Wald test, sequential moderator introduction→paired→full-model navigation"
   - "ridge_et_al_2024_amj (Academy of Management Journal): front-loaded endogeneity defense (RIR replacement count + naive-vs-cure 2SRI pairing), external-evidence practical-importance beat (R5)"
-variants_count: 55
+variants_count: 61
 created: 2026-05-18
-updated: 2026-08-12
+updated: 2026-08-13
 ---
 
 # OLS-FE — Results 骨架
@@ -44,12 +44,12 @@ updated: 2026-08-12
 | 槽位 | 功能 | 变体数 | 变体 |
 |---|---|---|---|
 | R1 | 描述统计与诊断 | 1 | 20 |
-| R2 | 模型序列与表导航 | 6 | 16, 19, 22, 24, 28, 53 |
-| R3 | 主假设检验 | 10 | 8, 11, 17, 23, 27, 34, 35, 36, 41, 48 |
-| R4 | 交互/调节/阈值 | 8 | 9, 14, 18, 32, 40, 43, 45, 47 |
+| R2 | 模型序列与表导航 | 7 | 16, 19, 22, 24, 28, 53, 56 |
+| R3 | 主假设检验 | 12 | 8, 11, 17, 23, 27, 34, 35, 36, 41, 48, 57, 58 |
+| R4 | 交互/调节/阈值 | 9 | 9, 14, 18, 32, 40, 43, 45, 47, 59 |
 | R5 | 经济显著性 | 4 | 3, 10, 13, 55 |
-| R6 | 非显著/反转/Null | 5 | 4, 6, 30, 37, 42 |
-| R7 | 稳健性与威胁处理 | 15 | 1, 2, 7, 12, 15, 25, 26, 29, 31, 39, 46, 49, 50, 51, 54 |
+| R6 | 非显著/反转/Null | 6 | 4, 6, 30, 37, 42, 60 |
+| R7 | 稳健性与威胁处理 | 16 | 1, 2, 7, 12, 15, 25, 26, 29, 31, 39, 46, 49, 50, 51, 54, 61 |
 | R8 | 补充/事后/机制 | 6 | 5, 21, 33, 38, 44, 52 |
 | R9 | 证据收束（可选） | 0 独立 | 27（R3+R9）；多研究变体4/5 亦用 |
 
@@ -69,6 +69,7 @@ updated: 2026-08-12
 | 24 | Heckman 两阶段表导航 | 第一阶段表→第二阶段列的表导航 | vs 变体28 双修正导航 vs 变体29 三步防御（决策对7） | 待交叉 | Chung 2022 JAMS |
 | 28 | 双阶段修正表导航 | 截面二元内生+样本选择的 CF+Heckman 表导航 | vs 变体24 仅选择修正 | 待交叉 | Pupovac 2026 POM |
 | 53 | 逐调节引入→成对→全模型导航 | 4+ 两向交互按理论 family 成对聚合后全模型 | vs 变体16（三向递进）：两两成对聚合+共线吸收预告 | 待交叉 | DesJardine 2025 AMJ |
+| 56 | Direct/Indirect/Total 路径表架构 | 中介 climax 做成 Direct vs Total 系数对照 | vs 16/53 层次列；vs 24/28 Heckman 两阶段 | 待交叉 | Kalaignanam 2013 JM |
 
 ### R3 主假设检验（10）
 
@@ -84,6 +85,8 @@ updated: 2026-08-12
 | 36 | 分样本 Wald χ² + partial support | 跨阈值 χ²(1) 系数相等性+诚实判定 H 支持（副槽位 R6） | vs 变体43 组间差异裁决（决策对6）；vs 变体8 交互条件化 | 待交叉 | Pollock 2015 ASQ |
 | 41 | 三条件中介+非对称支持 | 跨方程系数乘积+Sobel 三条件中介（同时方程系统） | vs 变体5 MCMC 中介（决策对4）；失败根因定位到条件 | 通过（单篇） | Malshe 2015 JM |
 | 48 | 共线吸收解释 | 全模型交互显著性下降归因调节间高相关（Cortina） | vs 变体16 序列导航（只描述不解释）；配套变体53 | 待交叉 | DesJardine 2025 AMJ |
+| 57 | 测量覆盖范围 warrant「学习」 | a-path 显著后用测量覆盖范围主张学习而非仅修复 | vs 变体41 检验中介是否成立 | 待交叉 | Kalaignanam 2013 JM |
+| 58 | 衰减+χ²+Sobel+bootstrap 堆叠确认 | confirmatory 部分中介 | vs 变体41 SUR 非对称；vs 变体5 post-hoc MCMC | 待交叉 | Kalaignanam 2013 JM |
 
 ### R4 交互/调节/阈值（8）
 
@@ -97,6 +100,7 @@ updated: 2026-08-12
 | 43 | 组内切换→组间裁决 | 组内方向切换但不显著→直接组间系数差异检验（副槽位 R6） | vs 变体9 单侧边际；vs 变体36 分样本 Wald（决策对6） | 通过（单篇） | Schumacher 2020 SMJ |
 | 45 | 亚组吸收+阶段熄灭 | baseline≈0+交互显著→亚组吸收全部优势+中后段熄灭 | vs 变体8 单期条件化 vs 变体27 无亚组版（决策对1） | 待交叉 | Kim & Lee 2026 SMJ |
 | 47 | min/mean/max 三值边际效应表 | 连续/二元调节的三值边际效应表+斜率方向语言 | vs 变体9 单侧；vs 变体40 floodlight 转折点 | 待交叉 | DesJardine 2025 AMJ |
+| 59 | spotlight ±1SD + Δslope + region | 一侧显著一侧不显著时的 region 主张（含无方向变体） | vs 变体9 无 Δslope；vs 变体40 floodlight 变号 | 待交叉 | Kalaignanam 2013 JM |
 
 ### R5 经济显著性（3）
 
@@ -116,6 +120,7 @@ updated: 2026-08-12
 | 30 | 预测性 null 作机制证据 | 理论预测的 null 排除替代解释（副槽位 R8） | vs 变体37 功效分析；vs 变体25 证伪 | 待交叉 | Du & Tsolmon 2024 OS |
 | 37 | Monte Carlo 功效分析 | 理论关键 null 交互的功效量化（排除 Type II） | vs 变体4 通用诚实声明；vs 变体30 预测性 null | 待交叉 | Pollock 2015 ASQ |
 | 42 | 反直觉反转+延迟 Discussion | 预测方向反转当场承认+推迟事后解释 | vs 变体6 当场解释；vs 变体30 预测性 null | 通过（单篇） | Malshe 2015 JM |
+| 60 | 调节变量主效应 null 驳斥 rival conjecture | 非假设 null 的可审计写法 | vs 变体30 预测性机制 null | 待交叉 | Kalaignanam 2013 JM |
 
 ### R7 稳健性与威胁处理（11）
 
@@ -136,6 +141,7 @@ updated: 2026-08-12
 | 50 | 双基准化偏离检验 | 构造"评级−外部基准"差变量，前门基准无关+后门差变量被影响 | vs 变体25 替代 DV 证伪（单 DV）；vs 变体7 同向复制 | 待交叉 | DesJardine 2025 AMJ |
 | 51 | 收购准自然实验 | 影响通道开关（私有→公开所有权切换）+ 收购前不显著 | vs 变体29 选择偏误防御（无通道切换）；vs 变体26 内生性表 | 待交叉 | DesJardine 2025 AMJ |
 | 54 | 前端识别防御（RIR 替换计数 + naive-vs-cure 2SRI 配对） | 内生性作为组织威胁且需前置到主结果之前：威胁定位→RIR 替换计数→naive vs 2SRI cure 配对→"consistent across approaches" | vs 变体15 五威胁标签化序列（RIR+Oster+CEM 三件套）——本变体是 RIR 量化替换 + naive-vs-cure 双轨节奏 + 前置；vs 变体2 基础四威胁 | 待交叉 | Ridge et al. 2024 AMJ |
+| 61 | 面板 GLS 四威胁电池 | 测量/替代估计器/分析单元上卷/滞后 BIC | vs 变体2 通用威胁；滞后 BIC 是规格辩护不是系数稳健性 | 待交叉 | Kalaignanam 2013 JM |
 
 ### R8 补充/事后/机制（6）
 
@@ -850,6 +856,126 @@ updated: 2026-08-12
 **适用**: 效应量看似小的观察性研究，需要用外部证据把"小 %"翻译为"实际重要"；百分比幅度的主效应或调节效应。
 
 ---
+
+
+### 变体 56: R2 Direct/Indirect/Total 路径表架构 (2026-08-13)
+
+**来源论文**: Kalaignanam, Kushwaha & Eilert 2013 (*Journal of Marketing*)
+
+**原始句锚点**: "We compare the coefficients for the impact of changes in recall magnitude in the direct-effects model (see Table 4) and the total-effects model (see Table 5)."
+
+**验证状态**: 待第二篇交叉验证
+
+**写入日期**: 2026-08-13
+
+**槽位**: R2
+
+**骨架**:
+> We report the [direct-effects] estimates in [columns] of [Table X] and the [indirect-effects] estimates in [column] of the same table. The [direct-effects] model tests the association between changes in [predictor] and subsequent changes in [outcome_1] and [outcome_2]. The [total-effects] model, reported in [Table Y], retains that direct path and adds the indirect path through changes in [mediator]. We compare coefficients on [predictor] across the [direct-effects] and [total-effects] specifications before testing the product of paths.
+
+**与原骨架差异**: 区别变体 16/53（层次列递增）与变体 24/28（Heckman 两阶段）——本变体是 Direct/Indirect/Total 路径表架构，把中介 climax 做成表上的系数对照。
+
+**诚实边界**: 因果语言降为 association；比较系数不等于中介成立，须接衰减/Sobel/bootstrap。
+
+
+### 变体 57: R3 测量覆盖范围 warrant「学习」而非仅修复 (2026-08-13)
+
+**来源论文**: Kalaignanam, Kushwaha & Eilert 2013 (*Journal of Marketing*)
+
+**原始句锚点**: "We interpret this finding as indicative of learning because the reliability measure ... is aggregated across all new models of the make in the following year (i.e., including models not affected by the recall)."
+
+**验证状态**: 待第二篇交叉验证
+
+**写入日期**: 2026-08-13
+
+**槽位**: R3
+
+**骨架**:
+> Consistent with [H_a], the coefficient for changes in [predictor] on subsequent changes in [mediator] is [positive/negative] and significant ([coefficient], p < [threshold]). We interpret this association as indicative of [mechanism: learning] because the [mediator] measure is aggregated across [coverage: all new models of the unit in the following period], including [units not directly affected by the event].
+
+**与原骨架差异**: 区别变体 41（检验中介是否成立）——本变体用测量覆盖范围为 a-path 提供学习机制 warrant，否则显著正系数只是修复被召回单元。
+
+**诚实边界**: 写 indicative of 而非 causes learning；覆盖范围必须是测量事实，不能事后发明。
+
+
+### 变体 58: R3 Direct-vs-Total 衰减 + 嵌套χ² + Sobel + bootstrap 堆叠确认 (2026-08-13)
+
+**来源论文**: Kalaignanam, Kushwaha & Eilert 2013 (*Journal of Marketing*)
+
+**原始句锚点**: "Collectively, we find support for our hypotheses that product reliability partially mediates the relationship between recall magnitude and future injuries (H2b) and future recall frequency (H2c)."
+
+**验证状态**: 待第二篇交叉验证
+
+**写入日期**: 2026-08-13
+
+**槽位**: R3
+
+**骨架**:
+> To test whether [mediator] transmits the association between [predictor] and [outcome], we use sequential procedures [Baron and Kenny (1986)] and compare coefficients on [predictor] in the [direct-effects] model ([Table X]) and the [total-effects] model ([Table Y]). The coefficient is [direction] in the [direct-effects] model ([value], p < [threshold]) but smaller in magnitude in the [total-effects] model ([value], p < [threshold]). This pattern implies that the association manifests in part through the [mediator] pathway. Following [prior citation], we computed Sobel's test statistic ([value], p < [threshold]; report one- vs two-tailed explicitly). Following [Zhao, Lynch, and Chen (2010)], we generated an empirical sampling distribution for the indirect effect with [N] bootstrap samples; the [95%] bootstrap confidence interval is ([lower], [upper]) and excludes zero. Nested chi-square comparisons show that the [total-effects] model fits significantly better than the [direct-effects] and [indirect-effects] models (Δχ²([df]) = [value], p < [threshold]). Collectively, [mediator] partially mediates the relationship: the indirect path is distinguishable from zero, and the remaining direct path remains significant. Thus, [H_mediation] is supported.
+
+**与原骨架差异**: 区别变体 41（SUR 非对称失败）与变体 5（post-hoc MCMC）——本变体是 confirmatory 部分中介的堆叠确认。BK 不替代区间。
+
+**诚实边界**: partial 不得升级 full；Sobel 单尾必须标明；一阶差分+IGLS 不得写 lead to / have an effect。
+
+
+### 变体 59: R4 spotlight ±1SD + Δslope + region of manifestation（含无方向假设变体） (2026-08-13)
+
+**来源论文**: Kalaignanam, Kushwaha & Eilert 2013 (*Journal of Marketing*)
+
+**原始句锚点**: "This spotlight analysis again provides evidence to support H3 and highlights the region in which this interaction effect manifests."
+
+**验证状态**: 待第二篇交叉验证
+
+**写入日期**: 2026-08-13
+
+**槽位**: R4
+
+**骨架**:
+> [H_mod] posits that the [positive] association between [predictor] and [mediator] is stronger when [moderator] is higher. As evidenced in [Table X], the coefficient for the interaction is [positive/negative] and significant ([value], p < [threshold]). Thus, [H_mod] is supported: [theoretical translation of the interaction, not of the main effect]. To gain a deeper understanding of this interaction, we followed [Aiken and West 1991] and performed a spotlight analysis, shifting the mean of [moderator] up and down by one standard deviation. The association is [positive] and significant at high [moderator] ([value], p < [threshold]) but insignificant at low [moderator] (p > [threshold]). The slopes differ across high and low levels (Δslope = [value], p < [threshold]). This spotlight analysis again provides evidence to support [H_mod] and highlights the region in which this interaction effect manifests. [Nondirectional variant:] Recall that we proposed a nondirectional hypothesis for the moderating effect of [moderator]. The interaction is [negative] and significant ([value], p < [threshold]). Thus, [units] of higher [moderator] are [less] [motivated/able] than [units] of lower [moderator] to [improve the mediator].
+
+**与原骨架差异**: 区别变体 9（无 Δslope）与变体 40（floodlight 变号）——一侧显著一侧不显著时，region 主张必须有 Δslope。无方向变体分开写。
+
+**诚实边界**: 无交互图仍可写；无方向调节的符号解读是竞争预测裁决，不是预先定向假设的支持。
+
+
+### 变体 60: R6 调节变量主效应 null 驳斥 rival conjecture (2026-08-13)
+
+**来源论文**: Kalaignanam, Kushwaha & Eilert 2013 (*Journal of Marketing*)
+
+**原始句锚点**: "We do not find the direct impact of shared product assets on reliability to be statistically significant (p > .10). Thus, there is no evidence to support conjectures that sharing of product assets adversely affects reliability."
+
+**验证状态**: 待第二篇交叉验证
+
+**写入日期**: 2026-08-13
+
+**槽位**: R6
+
+**骨架**:
+> We do not find the direct association of [moderator] with [mediator] to be statistically significant (p > [threshold]). Thus, there is no evidence to support conjectures that [rival claim].
+
+**与原骨架差异**: 区别变体 30（预测性机制 null）——本变体是调节变量主效应 null 驳斥有害猜想，不是假设支持。
+
+**诚实边界**: null 不升级为 H 支持；conjectures 措辞可保留。
+
+
+### 变体 61: R7 面板 GLS 四威胁电池（测量 / IGLS vs PCSE / 单元上卷 / 滞后 BIC） (2026-08-13)
+
+**来源论文**: Kalaignanam, Kushwaha & Eilert 2013 (*Journal of Marketing*)
+
+**原始句锚点**: "The results with firm as the unit of analysis are consistent with those reported for the make unit of analysis, though, as might be expected, the statistical significance for some of the findings is at marginally higher levels."
+
+**验证状态**: 待第二篇交叉验证
+
+**写入日期**: 2026-08-13
+
+**槽位**: R7
+
+**骨架**:
+> To assess the robustness of our empirical findings, we conducted a battery of additional tests. [Threat 1 — Measurement / size confound]: A potential concern about this measure is that some of the indicants might be correlated with [confound: size]. We reestimated using [subset measures that drop the confounded indicants]. As [Web Appendix Table] indicates, the substantive conclusions remain unchanged. Thus, the results are not an artifact of the measure used to operationalize [construct]. [Threat 2 — Alternate estimator]: We estimated the results using the [primary: IGLS] estimator to account for [first-order serial correlation, cross-sectional dependence, and heteroskedasticity]. We assessed robustness to [PCSE / Prais-Winsten]. The estimates are similar, though the standard errors are slightly higher for the [alternate] estimator. Importantly, the substantive conclusions are the same regardless of whether [primary] or [alternate] is used. [Threat 3 — Unit of analysis]: We reestimated using the [higher-level unit] rather than [primary unit], aggregating to [N] observations and excluding [year dummies] to conserve degrees of freedom. The results are consistent, though, as might be expected, the statistical significance for some of the findings is at marginally higher levels. [Threat 4 — Lag structure (specification justification, not coefficient robustness)]: We compared fit statistics of models with alternate lag structures using [BIC]. A specification with [one lag of the DV and one lag of the IVs, i.e., ADL(1,1)] offers the best fit. Thus, a [one-period] time lag between the independent variables and dependent variables is appropriate in this context.
+
+**与原骨架差异**: 区别变体 2（通用威胁）与变体 39（替代估计器失败反向佐证）——本变体是 IGLS/PCSE + 分析单元上卷 + 滞后 BIC。滞后 BIC 是规格辩护，不是系数稳健性。
+
+**诚实边界**: 分析单元上卷后须报告 marginally higher p，不得只写 consistent；滞后 BIC 不得写成结果不变。
 
 ## 反模式
 

@@ -1,9 +1,8 @@
 ---
+disableModelInvocation: true
 name: paper-state-protocol
-description: |
-  paper-state.yaml 协议 v1.2.0 — write-* 技能族跨 Section 状态传递协议。
-  在论文写作过程中持久化各 Section 的 metadata，使下游技能能自动消费上游输出，
-  代替当前"用户手动复制 theory_hints YAML"的断裂。
+description: "paper-state.yaml 协议 v1.2.0——write-* 技能族跨 Section 状态传递规范：在论文写作过程中持久化各 Section 的 metadata（theory_hints、构念、假设、变量、假设结果），使下游技能自动消费上游输出。触发词：paper-state、状态传递、跨 section 状态。"
+whenToUse: "当需要创建、读取、更新或审计项目的 paper-state.yaml，让 write-introduction/write-theory/write-methods/write-results 之间自动传递 theory_hints、构念、假设、变量等写作链状态时使用。触发词：paper-state、paper-state.yaml、状态文件、跨 section 传递、上下游衔接、状态同步、写作状态持久化"
 version: 1.2.0
 ---
 
