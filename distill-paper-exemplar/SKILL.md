@@ -69,6 +69,10 @@ L4 反馈收敛        核对 design_feedback 已持久化；报告三路输出�
    时 theory 蒸馏按模型类内容处理，不套假设发展模板；`classic-imrad` 为默认。
    登记 frontmatter/citekey（Zotero 为元数据源）。创建 PDM 骨架，把 manifest 的
    切片路径写入 `source_provenance.section_slices`。
+   **工作目录纪律（2026-08-20 用户裁决）**：PDM 工作目录默认在
+   `~/.claude/distill-work/<citekey>.pdm/`（`DISTILL_WORK_ROOT` 可改）——**Vault/OneDrive
+   之外**，不向论文目录生成中间文件；全部产物可从源 MD 确定性重建，可随意删。
+   仅当需要随论文留档时才用 `--outdir` 显式放到论文旁。
 2. **L1 分节蒸馏分发**。按用户范围（默认 4 节全跑）**串行**分发（每次 1 个子任务，
    完成再发下一个；`--parallel` 显式开启并行）：
    `/distill-introduction-exemplar <切片> --output-format=json` → `sections/introduction.json`
@@ -91,7 +95,8 @@ L4 反馈收敛        核对 design_feedback 已持久化；报告三路输出�
    intro/theory 两个 distill skill 内建 `_update_design_feedback.py`，methods/results
    无该基础设施（能力缺口），missing 不视为违约，须在 `feedback_ledger.note` 注明
    根因（能力缺口 vs 运行缺失，见 references/pdm-schema.md 已知摩擦①）；汇总三路输出落点。
-   完成后运行 `preprocess_l0.py <MD> --unlock` 释放 PDM 锁（中断续跑则保留锁）。
+   完成后运行 `preprocess_l0.py <MD> --clean` 清除整个工作目录（默认位置在 Vault 外，
+   删除零成本）；中断续跑则保留现场；`--unlock` 仅放锁不删文件。
 
 ## 调用方式
 
@@ -101,7 +106,7 @@ L4 反馈收敛        核对 design_feedback 已持久化；报告三路输出�
 ```
 
 - `--sections` 默认四节全跑；可缩范围。
-- `--pdm` 指定 PDM 文件位置；缺省 = `<论文 MD 同目录>/<citekey>.pdm.yaml`。
+- `--pdm` 指定 PDM 文件位置；缺省 = `~/.claude/distill-work/<citekey>.pdm.yaml`（Vault 之外）。
 - `--dry-run`：只产出 PDM 骨架 + 分发清单，不实际分发（用于预览计划）。
 - `--parallel`：并行分发 L1 子任务（缺省串行，见 L1 注释）。
 - `--auto-write`：预先授权各分节 skill 按 corpus_precheck 的 writeback plan 直接写回

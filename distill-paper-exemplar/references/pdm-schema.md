@@ -7,8 +7,11 @@ PDM 是 `distill-paper-exemplar` 唯一的跨层交接物：一篇论文一份�
 ## 文件布局（并行安全）
 
 ```
-<论文MD同目录>/<citekey>.pdm.yaml        # PDM 根，仅主循环写
-<论文MD同目录>/<citekey>.pdm/            # L0 预处理工作目录（scripts/preprocess_l0.py 生成）
+<distill-work>/<citekey>.pdm.yaml        # PDM 根，仅主循环写（默认随工作目录落在
+                                         # ~/.claude/distill-work/；--outdir 留档时同跟随）
+<distill-work>/<citekey>.pdm/            # L0 工作目录（preprocess_l0.py 生成；默认
+                                         # ~/.claude/distill-work/ 下，Vault 之外，
+                                         # 可随意删；--outdir 才落到论文旁留档）
   fulltext.text-only.md                  # 剥除 base64 后的全文（唯一可读的“全文”）
   l0_manifest.json                       # 切片检测报告（行区间、词数、unknown 节、
                                          # structure_type: classic-imrad | extended-intro
