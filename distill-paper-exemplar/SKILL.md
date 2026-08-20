@@ -32,7 +32,8 @@ L1 分节蒸馏 ×4    默认串行分发 distill-introduction/theory/methods/re
                    30–40%，串行更省；--parallel 可显式开启）
                  输入 = PDM 切片文件（非全文）；每节 → section JSON/报告 + feedback
                  → corpus_precheck.py 产出 writeback plan（选带/查重/锚点，确定性）
-                 → 按 plan 走写回预览门禁（gate ①；--auto-write 时按 plan 直写）
+                 → 各节 plan 攒齐后**一次性批量呈审**（gate ① 按论文不按节，
+                   2026-08-20 起；--auto-write 时跳过呈审按 plan 直写）
                  → corpus_writeback.py 执行确认后的 plan（dry-run diff→--apply；
                    自动续变体编号、更新 _index/registry、SKIP 拒写）
                  → write-* corpus
@@ -68,7 +69,11 @@ L4 反馈收敛        核对 design_feedback 已持久化；报告三路输出�
    `/distill-introduction-exemplar <切片> --output-format=json` → `sections/introduction.json`
    （theory/methods/results 同理）。每个子任务完成后：子任务写自己的 section 文件与
    feedback 文件 → 主循环合并进 PDM → 更新该节 `status`。
-   **不得代答或代确认各分节 skill 的写回预览**（gate ① 归各 skill 自己）。
+   **gate ① 按论文批量呈审（2026-08-20 起）**：整篇模式下各节子任务跑到 writeback
+   plan 产出即暂停写回；四节（或指定范围）plan 攒齐后，由主循环汇总为一份批量呈审
+   （每节：verdict 摘要 + anchor_candidates top-3 + 拟写回文件），用户一次确认全部，
+   主循环再逐节调 `corpus_writeback.py` 执行。单节蒸馏不受此限，仍随产随审。
+   主循环**只汇总呈审，不代用户确认**；`--auto-write` 时跳过呈审逐节直写。
 3. **L2 跨节一致性检查**。四节 identity（gap_type / theory_building_type / design_family /
    estimator_family）就位后执行 rubric（见 references/cross-section-coherence.md）。
    输出 `cross_section_identity` 块。仅标记，不自动修正；flag 汇总呈现给用户。

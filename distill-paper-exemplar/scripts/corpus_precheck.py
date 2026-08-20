@@ -18,6 +18,10 @@ candidates.yaml:
       target: "OLS-FE.md"          # file name or corpus subdir hint (optional)
       skeleton_text: "A question, then, is whether these [firm_characteristics] ..."
       keywords: ["kenny", "mediation"]   # optional, improves registry match
+      block_text: |                # OPTIONAL full variant block ({NEXT} placeholder);
+        ### 变体 {NEXT}：...        # passed through into the plan so the writeback
+        ...                        # executor needs no separate blocks.yaml
+      index_note: "变体 {NEXT}：..."  # optional _index row note
 
 Plan output: per candidate -> band (gap/薄弱/quiet), dedup verdict
 (SKIP at jaccard>=0.33 / EXTEND / ADD) with best match, registry matches,
@@ -175,7 +179,7 @@ def main() -> int:
         name = cand.get("name", "unnamed")
         target = find_target_file(corpus_root, cand.get("target"))
 
-        skeleton_tokens = tokenize(cand.get("skeleton_text", "") or name)
+        skeleton_tokens = tokenize(cand.get("skeleton_text") or cand.get("block_text", "") or name)
         # dedup scan: compare against blocks of the target file/dir first, else all corpus files
         if target is None:
             scan_files = sorted(corpus_root.rglob("*.md"))
@@ -244,7 +248,7 @@ def main() -> int:
             anchor = {"file": best["file"], "insert_after_line": best["line"],
                       "after_heading": best["heading"]}
 
-        plan_items.append({
+        plan_item = {
             "name": name,
             "band": band,
             "band_evidence": band_ev,
@@ -255,7 +259,12 @@ def main() -> int:
                                                  cand.get("keywords", []) or []),
             "anchor": anchor,
             "human_review": "gate ① 仍须确认本 plan 后再写回（除非 --auto-write 已授权）",
-        })
+        }
+        # pass-through: write once in candidates.yaml, executor reads from plan
+        for k in ("block_text", "index_note", "file_override"):
+            if cand.get(k):
+                plan_item[k] = cand[k]
+        plan_items.append(plan_item)
 
     plan = {"section": args.section, "citekey": args.citekey,
             "corpus_root": str(corpus_root),

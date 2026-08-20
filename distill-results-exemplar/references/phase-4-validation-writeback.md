@@ -19,8 +19,11 @@
 > （或批量模式用户预先授权）时，可按 plan 直接写回 ADD/EXTEND 项（**SKIP 项永不写回**），
 > 并在写回报告中标注 `auto-write: plan <plan路径>`。
 >
+> **整篇编排模式（distill-paper-exemplar 分发）下**：plan 产出即停，把 plan 路径交回
+> 主循环等待批量 gate ①（四节攒齐一次呈审），不要自行进入写回；单节模式随产随审。
+>
 > **写回执行（gate ① 确认后，2026-08-20 起）**：用确定性执行器，不手改语料——
-> `python ../distill-paper-exemplar/scripts/corpus_writeback.py --plan <plan> --blocks <blocks.yaml> --paper <citekey> --journal <刊名> --gap <Gap类型>`
+> `python ../distill-paper-exemplar/scripts/corpus_writeback.py --plan <plan> --paper <citekey> --journal <刊名> --gap <Gap类型>`（block_text/index_note 已在 candidates.yaml 写一遍并透传进 plan，无需 blocks.yaml）
 > 默认 dry-run 打印全部 diff 供复核，`--apply` 才落盘（插块自动续 `{NEXT}` 编号、
 > _index 行注、registry 计数、SKIP 拒绝）。gate ① 改判锚点文件时在 blocks.yaml 加
 > `file:` 覆盖。完整 blocks.yaml 格式见
