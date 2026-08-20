@@ -242,8 +242,11 @@ def main() -> int:
     args = ap.parse_args()
 
     plan = yaml.safe_load(Path(args.plan).read_text(encoding="utf-8"))
-    blocks_spec = yaml.safe_load(Path(args.blocks).read_text(encoding="utf-8"))
-    blocks = {b["name"]: b for b in (blocks_spec.get("blocks") or [])}
+    if args.blocks:
+        blocks_spec = yaml.safe_load(Path(args.blocks).read_text(encoding="utf-8"))
+        blocks = {b["name"]: b for b in (blocks_spec.get("blocks") or [])}
+    else:
+        blocks = {}
     corpus_root = Path(plan["corpus_root"])
     if not corpus_root.is_dir():
         print(f"ERROR: corpus root missing: {corpus_root}", file=sys.stderr)
