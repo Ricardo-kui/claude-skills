@@ -111,6 +111,29 @@ def slice_sections(lines: list[str]) -> dict:
         else:
             end = len(lines)
         spans[bucket] = {"start": ln + 1, "end": end, "heading": ti}
+
+    # Implicit introduction (2026-08-20): AMJ-style papers often leave the intro
+    # unlabeled — text between the Abstract and the first classified heading IS
+    # the introduction. Skip only the abstract paragraph itself.
+    if "introduction" not in spans and classified:
+        first_ln = min(ln for ln, _, _, _ in classified)  # 0-based
+        start = None
+        for ln, _lv, ti, _b in headings:
+            if ln >= first_ln:
+                break
+            if re.match(r"(?i)\s*abstract\b", _strip_num(ti)):
+                j = ln + 1
+                while j < first_ln and not lines[j].strip():
+                    j += 1
+                while j < first_ln and lines[j].strip():  # skip abstract paragraph
+                    j += 1
+                start = j
+        if start is None:
+            prev = [ln for ln, _, _, _ in headings if ln < first_ln]
+            start = (max(prev) + 1) if prev else 0
+        if len(" ".join(lines[start:first_ln]).split()) >= 50:
+            spans["introduction"] = {"start": start + 1, "end": first_ln,
+                                     "heading": "(implicit introduction)"}
     return spans
 
 
