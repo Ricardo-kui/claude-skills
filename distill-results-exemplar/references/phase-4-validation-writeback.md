@@ -1,5 +1,24 @@
 # Phase 4 — 技能更新指令生成（Skill Update Instructions）
 
+> **写回前必跑预检（2026-08-20 起）**：候选骨架定稿后、读取任何语料前，运行
+> `python ../distill-paper-exemplar/scripts/corpus_precheck.py --section <本节名> --citekey <citekey> --candidates <candidates.yaml>`
+> 产出 writeback plan（选带判定 + jaccard/containment 查重 + registry 定点匹配 + insert_after 锚点）。
+> **禁止为查重/选带/锚点定位而整读 corpus 或 `_evidence_registry.yaml`**（单个文件可达 54–257KB）——
+> 一切以 plan 为准；仅当 plan 的 verdict 可疑时，才允许按 plan 标注的文件+行号定点核对。
+>
+> candidates.yaml 格式：
+> ```yaml
+> candidates:
+>   - name: <skeleton_id>
+>     target: "<目标文件或目录提示，如 OLS-FE.md / tensions>"
+>     skeleton_text: "<骨架模板文本（查重输入）>"
+>     keywords: ["<registry 匹配关键词，可选>"]
+> ```
+>
+> **--auto-write**：默认仍需 gate ① 人审确认 plan 后写回；调用方显式传 `--auto-write`
+> （或批量模式用户预先授权）时，可按 plan 直接写回 ADD/EXTEND 项（**SKIP 项永不写回**），
+> 并在写回报告中标注 `auto-write: plan <plan路径>`。
+
 本阶段生成**受治理的 adoption instructions**，回答三个问题：
 1. **改哪个文件** → 精确到 `write-results/econometric-models/[结果类型].md`
 2. **怎么改** → ADD / EXTEND / REPLACE / SKIP，含具体骨架和插入位置

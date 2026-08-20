@@ -16,7 +16,7 @@
 
 - **单篇论文（用户明确指定蒸馏）**：不拒绝，但必须输出带判定供 Phase 3 新颖度判断参考。
 - **批量模式（--batch）**：按带排序（gap/critique_heavy → quiet），优先深读 HIGH 档；资源不足时 quiet 档仅做 Phase 1 粗标注，不进入 Phase 2 深提炼。
-- **重复闸门**：Phase 2.2 得出骨架后，若与已有变体（corpus 或 registry）高度重叠（jaccard ≥ 0.33 或同源模式），按 SKIP 处理——不为重复模式新增变体（对应 Skill-SP `find_duplicate_skill` 语义）。
+- **重复闸门**：Phase 2.2 得出骨架后，若与已有变体（corpus 或 registry）高度重叠，按 SKIP 处理——不为重复模式新增变体（对应 Skill-SP `find_duplicate_skill` 语义）。**重叠判定由 `distill-paper-exemplar/scripts/corpus_precheck.py` 确定性计算**（jaccard ≥ 0.33 或 containment ≥ 0.60 → SKIP），见 phase-4 参考文件头部的预检协议；代理不得整读语料自行比对。
 
 ## 输出格式
 

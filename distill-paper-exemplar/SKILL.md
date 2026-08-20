@@ -31,7 +31,9 @@ L1 分节蒸馏 ×4    默认串行分发 distill-introduction/theory/methods/re
    （复用，零改动） （2026-08 实测：并行 4 agent 触发限流→整批作废重发，重试开销
                    30–40%，串行更省；--parallel 可显式开启）
                  输入 = PDM 切片文件（非全文）；每节 → section JSON/报告 + feedback
-                 → 该节自己的写回预览门禁（gate ①，不绕过）→ write-* corpus
+                 → corpus_precheck.py 产出 writeback plan（选带/查重/锚点，确定性）
+                 → 按 plan 走写回预览门禁（gate ①；--auto-write 时按 plan 直写）
+                 → write-* corpus
 L2 跨节一致性      由本 skill 执行（读 references/cross-section-coherence.md）
    （本层新建）    从 PDM 四节 identity 交叉校验 → ok | flagged，只标记不擅改
 L3 整篇整合        distill-story-exemplar ← 全文 + PDM 已验证分节蒸馏
@@ -83,12 +85,15 @@ L4 反馈收敛        核对 design_feedback 已持久化；报告三路输出�
 
 ```
 /distill-paper-exemplar <论文路径|PDF|MD|目录> [--sections=intro,theory,methods,results]
-                       [--pdm=<path>] [--dry-run]
+                       [--pdm=<path>] [--dry-run] [--parallel] [--auto-write]
 ```
 
 - `--sections` 默认四节全跑；可缩范围。
 - `--pdm` 指定 PDM 文件位置；缺省 = `<论文 MD 同目录>/<citekey>.pdm.yaml`。
 - `--dry-run`：只产出 PDM 骨架 + 分发清单，不实际分发（用于预览计划）。
+- `--parallel`：并行分发 L1 子任务（缺省串行，见 L1 注释）。
+- `--auto-write`：预先授权各分节 skill 按 corpus_precheck 的 writeback plan 直接写回
+  ADD/EXTEND 项（SKIP 项永不写回），跳过 gate ① 的逐条确认；缺省仍需人审。
 - 单节请求应路由回对应 `distill-*-exemplar`，不进入本 skill。
 - 用户侧标准提示词模板（WHAT 槽位 + 纪律清单，反模式）见 `references/launch-prompt-template.md`；
   提示词只填 动作/来源/焦点/约束，HOW 全部由本协议继承，不在提示词里重述流程。
