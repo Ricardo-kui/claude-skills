@@ -36,11 +36,12 @@ year: ~
 journal: ""
 
 source_provenance:
-  fulltext_md: "<绝对路径>"            # 权威源（MinerU/OvisOCR2 输出）
+  fulltext_md: "<绝对路径>"            # 权威源（MinerU/OvisOCR2 输出；含 base64，禁止直读）
+  text_only_md: "<citekey>.pdm/fulltext.text-only.md"   # L0 预处理产物，代理可读
   zotero_ref: "<path 或 citekey>"     # 元数据源（Zotero）
   ingestion: "paper-import (OvisOCR2|MinerU)"
-  section_slices:                     # 切片定位，便于续跑/复核
-    introduction: "<path 或 'title...line N' 区间>"
+  section_slices:                     # 物化切片路径（L0 脚本生成；人工补切时手填）
+    introduction: "<citekey>.pdm/sections/introduction.md"
     theory: ""
     methods: ""
     results: ""
