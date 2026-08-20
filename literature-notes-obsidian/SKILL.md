@@ -1,6 +1,7 @@
 ---
 name: literature-notes-obsidian
-description: Read one academic paper or a small paper set into Obsidian-ready literature notes, with a management and social-science bias. Use when Codex needs to read a local PDF, DOI, URL, title, or abstract; upgrade an existing literature note; compare 2-5 papers; or write a reusable Obsidian note that captures research motivation, exact gap, theory or hypothesis logic, variable measurement, empirical strategy, contribution, threats, and reuse value. Also use when the user wants a paper read in `researcher` mode or `writer` mode, wants Zotero metadata resolved into the note, wants the note saved into an Obsidian vault with note logging, or wants writing deconstruction mapped onto `write-introduction`, `write-theory`, `write-methods`, and `write-results`.
+description: "把一篇或几篇学术论文读成结构化 Obsidian 文献笔记（含 gap、理论逻辑、变量测量、识别策略、贡献与可复用点），支持 researcher/writer 模式与 Zotero 元数据解析。触发词：读这篇论文、做文献笔记、精读论文、对比这几篇文献、升级文献笔记"
+whenToUse: "当用户要求阅读/精读某篇论文（本地 PDF、DOI、URL、标题或摘要）并写成 Obsidian 文献笔记，或升级已有笔记、对比 2-5 篇论文、做写作拆解（researcher/writer 模式）时使用。触发词：读这篇论文、做文献笔记、精读文献、对比论文、升级笔记、文献笔记入库"
 ---
 
 # Literature Notes for Obsidian

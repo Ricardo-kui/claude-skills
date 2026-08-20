@@ -6,7 +6,7 @@
 schema_version: "4.0-lite"
 id: kalaignanam2013
 paper:
-  citekey: null
+  citekey: kalaignanamImpactProductRecalls2013
   title: "The Impact of Product Recalls on Future Product Reliability and Future Accidents: Evidence from the Automobile Industry"
   outlet: "Journal of Marketing"
   year: 2013
@@ -19,6 +19,7 @@ reading_scope:
   coverage: complete
   source_records:
     - "Kartik Kalaignanam et al.md"
+    - "kalaignanametal2013.pdm.yaml (L1 four-section distill + L2 C1 flag kept as learning point)"
 analysis_focus:
   primary: [introduction, theory]
   supporting: [results, discussion]
@@ -53,6 +54,7 @@ section_learning:
       - "Make the evidence sequence mirror the proposed process by placing recall magnitude at t-1, reliability at t, and accidents and recall frequency at t+1."
     caveat:
       - "The make-year panel, J.D. Power reliability score, FARS injury data, first differences, and advertising instrument are setting-specific operationalizations and do not observe the firms' root-cause analysis directly."
+      - "Lag structure plus an LDV does not license 'Granger causality' without a formal test, and a balanced panel's within-unit contrast is not 'drawing causal inferences.'"
   results:
     suitable: "yes"
     requires: []
@@ -110,12 +112,15 @@ The paper begins with recalls as public safety events whose formal purpose is to
 ### Alternative readings
 
 - **analyst_counterfactual:** The study could have stopped at future recall frequency as a learning-by-experience account. Its distinctive, and riskier, choice is to put reliability between recall magnitude and both later safety outcomes; that interpretation remains conditional on the temporal measures rather than direct observation of learning routines.
+- **documented_literature_alternative:** Introduction can be classified as Inadequacy (wrong experience-as-learning proxy) while Theory reads as Incompleteness (unmapped ability/motivation boundaries). The paper itself never names either gap type; the dual reading is an analyst classification kept as a learning point (PDM L2 C1).
 
 ## Story Assessment
 
 - **Theme coherence:** `works` — the question of learning after recall consistently connects magnitude, reliability, injuries, recurring recalls, and the ending's policy claim.
 - **Character discipline:** `works` — reliability has a clear mediating role and the two moderators are distinguished as transfer ability and attention motivation.
-- **Knot integrity:** `partly_works` — the lack of direct evidence on whether recall programs generate learning is consequential, but the front end relies more on an empirical unknown than a genuine theoretical conflict.
+- **Knot integrity:** `partly_works` — the lack of direct evidence on whether recall programs generate learning is consequential, but the front end relies more on an empirical unknown than a genuine theoretical conflict. L2 C1 is a learnable label tension, not a plot break: Introduction stages Inadequacy (experience volume is the wrong proxy for quality learning; the named reliability path was never measured), while Theory can be read as Incompleteness (ability and motivation boundaries still unmapped). Keep both; do not collapse them into one gap type.
+- **Plot emergence:** `works` — the temporal chain and the two enablers arise naturally from the organizational-learning account.
+- **Tie–unravel alignment:** `partly_works` — temporal separation and broad reliability measurement support the promised chain, but root-cause search and learning routines remain inferred and mediation is partial. Predicted-value instruments and IGLS are design extensions, not theory promises.
 - **Plot emergence:** `works` — the temporal chain and the two enablers arise naturally from the organizational-learning account.
 - **Tie–unravel alignment:** `partly_works` — temporal separation and broad reliability measurement support the promised chain, but root-cause search and learning routines remain inferred and mediation is partial.
 - **Ending quality:** `works` — the discussion returns to the original policy skepticism and identifies the broader reliability change required for a recall to produce safety benefit.

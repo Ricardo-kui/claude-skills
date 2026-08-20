@@ -1,6 +1,7 @@
 ---
 name: discussion-review
-description: Review an existing management-journal Discussion for contribution alignment, treatment of mixed or unexpected findings, practical implications, boundary conditions, and limitations. Use only when the user supplies a Discussion draft; this skill diagnoses and suggests targeted revisions but does not generate a new Discussion or reusable writing template.
+description: "审查已有的管理学论文 Discussion 草稿——Introduction 贡献对齐、意外/混合发现处理、实践启示、边界条件与局限；只诊断并给修改建议，不从零生成 Discussion。当用户提供 Discussion 文本要求审查时使用。"
+whenToUse: "当用户提供 Discussion 草稿要求审查、挑毛病、给修改意见时使用。触发词：审查 discussion、讨论部分帮我看看、discussion review、讨论写得行不行、看看我的讨论部分、给讨论部分提修改意见、review discussion"
 ---
 
 # Role

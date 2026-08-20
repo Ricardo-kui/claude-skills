@@ -1,6 +1,7 @@
 ---
 name: econometrics-agent
-description: Use the installed local econometrics-agent CLI at ~/Econometrics-Agent for structured econometric execution on csv, dta, parquet, or xlsx data. Trigger when the user explicitly mentions econometrics-agent, asks to use this local agent or local econometrics tool, requests this specific CLI to run OLS, FE, IV, DID, event-study, PSM, IPW, AIPW, IPWRA, RDD, or fuzzy-RDD, or wants balance tables, coefficient tables, narrative summaries, dataset inspection, or specification sweeps from this CLI. Do not use for purely conceptual methodology advice, paper writing, or referee-style review unless the user explicitly wants this CLI.
+description: "调用本机已装的 econometrics-agent CLI（~/Econometrics-Agent）对 csv/dta/parquet/xlsx 快速执行 OLS/FE/IV/DID/事件研究/PSM/IPW/AIPW/RDD 等，输出系数表、平衡表与 JSON。触发：用户点名 econometrics-agent、本地计量 agent/CLI，或要快速本地结构化计量结果。"
+whenToUse: "当用户明确提到 econometrics-agent，或说“用本地计量 agent/CLI 跑一下”“快速本地跑个 OLS/DID/IV/PSM/RDD 并给我系数表”“做个规格 sweep”“导出平衡表/term table”“先检查数据集再选变量”时使用。概念性方法讨论、论文写作或审稿式评审不要用本 skill。"
 ---
 
 # Econometrics Agent

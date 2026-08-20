@@ -1,7 +1,7 @@
 ---
 name: distill-results-exemplar
-description: >-
-  Results 范文蒸馏 meta-skill——输入单篇或批量论文的 Results 文本，输出结构化提炼报告（估计器分类、R1–R9 槽位映射、假设-结果节奏、表达骨架），并将验证通过的变体写回 write-results 语料。Use when 蒸馏 results 范文——提炼 HOW they stage evidence, not WHAT they found。Not for: Results 写作（→ write-results）；草稿审查（→ results-review）；全稿 QC（→ pollock-qc）。
+description: "蒸馏顶刊论文 Results 范文——估计器分类、R1–R9 槽位映射、假设-结果节奏与表达骨架（提炼 HOW they stage evidence），验证通过的变体写回 write-results 语料。当用户要求学习/蒸馏某篇论文结果部分的写法时使用。"
+whenToUse: "当用户要求蒸馏、提炼、学习某篇（或批量）论文 Results 部分的证据展演方式时使用。触发词：蒸馏 results、提炼结果部分、学习这篇结果写法、分析 results 怎么写的、results 范文蒸馏、批量蒸馏结果部分"
 ---
 
 # Distill Results Exemplar

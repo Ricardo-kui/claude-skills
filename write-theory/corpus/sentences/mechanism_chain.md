@@ -10,7 +10,7 @@
 | **矩阵 / Y形 / 嵌套架构** | 2×2 并行矩阵架构 (L1080) · 2×2 Cell-by-Cell 调节机制矩阵 (L1330) · Y-shaped 架构（Common Trunk→Dual Path→Contingency）(L1381) · 多层收窄型机制链（Macro→Meso→Micro）(L1011) · 三层嵌套理论演进 (L1217) · 双视角对比+框架整合 (L1189) |
 | **特定理论框架型** | 制度真空→政府关联→资源获取（Zhou 2017）(L32) · 双重代理问题导致资源转换低效（Zhou 2017）(L50) · Ability-Motivation 双路径框架（Eilert 2017）(L580) · Iron Triangle 三边机制论证 (L1151) · Trade-off→Shock→Dominance 逻辑链（hoffmann2024）(L764) · "双刃剑"理论框架骨架 (L851) · Dual-Theory Architecture Variant（Mayo POMS）(L526) · 双理论分别解释不同 DV 变体（kalaignanam2017）(L540) · 成本-收益计算机制链（Chung/Low/Rust 2022）(L1688) · 倒U型两步机制链：awareness+capacity→mutual dependence+retaliation (L1753) |
 | **认知 / 社会 / 流畅性** | 社会比较机制（paruchuri_pollock_kumar2020）(L1476) · 认知可用性时效机制（paruchuri_pollock_kumar2020）(L1500) · 认知适配/契合→加工流畅性→正向评价 (L1804) · 威胁处理级联（Threat-Processing Cascade，ridge2024）(L2115) |
-| **排除 / 整合 / Pivot** | 替代机制排除骨架 (L636) · 多理论整合骨架 (L688) · Rhetorical-Question 理论 Pivot (L1425) · 联合必要性门控逻辑 (L1450) · Focus Group / 定性证据嵌入机制推演（habel2016）(L210，含 Lee–Wu–Bednar 多角色访谈三角化子变体) |
+| **排除 / 整合 / Pivot** | 替代机制排除骨架 (L636) · 多理论整合骨架 (L688) · Rhetorical-Question 理论 Pivot (L1425) · After-not-before 反问开场（kalaignanam2013） · 联合必要性门控逻辑 (L1450) · Focus Group / 定性证据嵌入机制推演（habel2016）(L210，含 Lee–Wu–Bednar 多角色访谈三角化子变体) |
 
 ---
 
@@ -1578,6 +1578,57 @@ However, what if [negative action] is the outcome of [failure type] that result 
 **反模式**:
 - 问句后没有 "We argue that..." 的确定性回答——问句必须立即被论证跟进
 - "what if" 链过长 (≥3 个) → 读者失去耐心
+
+---
+
+<!--
+pattern_id: why_after_not_before_rq
+build_type: 机制推演型
+source_papers: ["kalaignanametal2013"]
+confidence: emerging
+status: needs_cross_paper_validation
+story_fidelity: section_variant
+-->
+
+## After-not-before 反问开场（kalaignanam2013 型）
+
+**适用**: 正式中介路径（X→M）开场。用一个时间不对称反问，迫使读者解释**为何冲击之后才改进 M、事前不改**，而不是再叙一遍 X 与 M 相关。
+
+**模板**:
+```
+Why do [actors] improve [process outcome M] after [failure/shock] and not before them?
+[Then the why-chain — not the question — must answer it.] Absent [failure], [actors] [ignore information / become overconfident about existing knowledge]; [performance] may not fall below [aspiration], so they persist above a [reliability/quality] threshold. Large [failures] catalyze costly improvement that would not otherwise occur.
+```
+
+**原文锚点** (Kalaignanam, Kushwaha & Eilert 2013, *Journal of Marketing*):
+> "Why do firms improve reliability after product recalls and not before them?"
+
+**锚点边界**: 反问句之后的英文在 OvisOCR2 全文中被截断（`Firms typically have economic incen-` 后跳到 H2 陈述）。aspiration / overconfidence / threshold 据文献笔记恢复，**不得当作英文 verbatim 模板**。模仿时只复用反问句法，why-chain 须用自己论文可核验的机制句补全。
+
+**语料锚定**:
+- kalaignanametal2013 (JM) — recall magnitude → future product reliability 中介路径的 T3 开场（2026-08-13 Theory distill；单篇 EMERGING）
+
+**关键特征**:
+- 反问的对象是**时间不对称**（after vs before），不是反事实前提（what if）
+- 问句本身就是机制起点：读者必须解释为何事前不改 M
+- 随后必须立刻进入 why-chain；不得反问完直接写 H2
+
+**与 Rhetorical-Question 理论 Pivot（What-If Pivot）的区别**:
+| | After-not-before（本变体） | What-If Pivot（paruchuri 2019） |
+|---|---|---|
+| 问句功能 | 打开 X→M 的 why-chain | 从文献共识转向反直觉前提 |
+| 问句形态 | "Why ... after ... and not before?" | 连续两个 "what if" |
+| 位置 | 中介路径 T3 开场 | 理论 pivot，改变前提条件 |
+| 随后必须 | 回答时间不对称的机制 | "We argue that in this situation..." |
+
+**适用条件**:
+- 理论承诺是冲击后的过程改进（学习、可靠性、能力），且需要解释为何该改进不发生在冲击前
+- 适合 B1 正式中介；不要用在单纯主效应段
+
+**反模式**:
+- 反问后直接接假设句，中间无 why-chain
+- 把恢复的 aspiration/overconfidence 段当作 2013 原文复制
+- 把本变体写成 What-If Pivot（改前提）或写成调节开场
 
 ---
 

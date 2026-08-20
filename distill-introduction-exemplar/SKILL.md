@@ -1,7 +1,7 @@
 ---
 name: distill-introduction-exemplar
-description: >-
-  Introduction 范文蒸馏 meta-skill——输入单篇或批量论文的 Introduction 文本，输出结构化提炼报告（功能模块拆解、叙事结构模式、修辞策略 DNA、Gap×Contribution 组合验证），并将跨论文证据反馈为 write-introduction 的语料缺口或技能设计缺陷。Use when 蒸馏 introduction 范文——提炼 HOW they stage the narrative, not WHAT they say。Not for: Introduction 写作（→ write-introduction）；草稿审查（→ intro-review）；写前诊断（→ diagnose-introduction）；全稿 QC（→ pollock-qc）。
+description: "蒸馏顶刊论文 Introduction 范文——拆解功能模块、叙事结构模式与修辞策略 DNA（提炼 HOW they stage，不是 WHAT they say），并反馈 write-introduction 语料缺口。当用户要求学习/蒸馏某篇论文引言的写法时使用。"
+whenToUse: "当用户要求蒸馏、提炼、学习某篇（或批量）论文 Introduction 部分的写法与叙事手法时使用。触发词：蒸馏 introduction、提炼这篇引言、学习范文引言写法、分析这篇 intro 怎么写的、introduction 范文蒸馏、批量蒸馏引言"
 ---
 
 # Distill Introduction Exemplar

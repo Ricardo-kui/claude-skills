@@ -1,6 +1,7 @@
 ---
 name: intro-review
-description: 顶刊论文 Introduction 专项审查。检查 Hook、Conversation、Problematization、贡献预告，并提供功能语句重写建议。基于 Pollock Ch05 和 MVP30 范文语料库。
+description: "顶刊论文 Introduction 专项审查：检查 Hook、Conversation、Problematization、贡献预告，并提供功能语句重写建议，基于 Pollock Ch05 和 MVP30 范文语料库。从零写引言用 write-introduction。"
+whenToUse: "当用户提供引言草稿要求审查、诊断、打分或改写建议时使用。触发词：审查引言、看看我的 introduction、引言润色、introduction review、帮我改引言、检查 hook、投稿前检查引言、引言诊断"
 metadata:
   version: 1.3.0
 ---

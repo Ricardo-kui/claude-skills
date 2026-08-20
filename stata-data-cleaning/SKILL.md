@@ -1,6 +1,7 @@
 ---
 name: stata-data-cleaning
-description: Audit, clean, and transform empirical data in Stata with reproducible workflows. Use audit-only mode to produce the pipeline Data Contract without mutating or saving data; use cleaning mode only when transformations and output paths are explicitly authorized.
+description: "在 Stata 中审计、清洗、转换实证数据的可复现工作流：默认 audit-only 只产出 Data Contract 不动数据，明确授权后才执行清洗且不覆盖原始数据。触发：数据清洗、合并多数据集、缺失值/重复值/异常值处理、面板数据准备。"
+whenToUse: "当用户说“清洗数据”“整理原始数据”“合并几个数据集”“处理缺失值/重复值/异常值”“做样本漏斗”“生成 analysis-ready 面板数据”“先审计数据质量/产出 Data Contract”时使用；也是 run-empirical-research Stage 1 数据审计的默认入口。"
 ---
 
 

@@ -1,6 +1,7 @@
 ---
 name: methods-review
-description: 顶刊论文 Methods 专项审查。检查样本漏斗、变量操作化、分析方法和控制逻辑的三C标准（Completeness, Clarity, Credibility）。基于 Pollock Ch07 和 MVP30 范文语料库。
+description: "顶刊论文 Methods 专项审查：按三C标准（Completeness, Clarity, Credibility）检查样本漏斗、变量操作化、分析方法和控制逻辑，基于 Pollock Ch07 和 MVP30 范文语料库。从零写方法用 write-methods。"
+whenToUse: "当用户提供方法部分草稿要求审查、诊断或改写建议时使用。触发词：审查方法、methods review、看看我的方法部分、方法部分检查、样本选择审查、变量测量审查、投稿前查 methods、帮我改方法部分"
 metadata:
   version: 1.1.0
 ---

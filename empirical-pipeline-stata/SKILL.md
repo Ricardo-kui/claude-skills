@@ -1,12 +1,13 @@
 ---
 name: empirical-pipeline-stata
-description: Execute a locked empirical design as a complete Stata pipeline from analysis-ready data to reproducible scripts, logs, diagnostics, tables, and figures. Use for broad Stata execution covering baselines, modern staggered DiD, robustness, mechanisms, heterogeneity, mediation, or survival models. Require a Design Packet and Analysis Manifest first. Do not use for design choice, isolated Stata syntax, or paper prose.
+description: "Stata 实证执行流水线：把实证设计执行成可复现的 do-file、日志、诊断、回归表与图；含设计锁定前的规格探索（Step −2，可按显著性筛选并全量留痕）与锁定后的正式执行。用于基准回归、交叠 DiD、稳健性、机制与异质性的整套 Stata 执行；单个语法问题请用 stata skill。"
+whenToUse: "当用户要用 Stata 跑完整回归流水线、执行基准回归加稳健性检验、按论文顺序串起整个实证分析、或在设计锁定前做规格搜索时使用。触发词：跑实证、Stata 回归流水线、主回归和稳健性、把设计跑出来、执行分析、出回归表"
 ---
 
 # Empirical Pipeline — Stata(实证执行流水线)
 
 ## 目标
-把已锁定设计与分析就绪数据在 **Stata** 中执行成可复现的脚本、日志、诊断、表与图。只运行 Analysis Manifest 授权的基准、设计专属诊断、威胁对应检验及预先指定的扩展。它不是语法手册、设计路由或写作工具。
+把实证设计在 **Stata** 中执行成可复现的脚本、日志、诊断、表与图。支持两段式工作流:**前置探索段(Step −2)** 在设计锁定前做规格搜索与模型选择(允许按显著性筛选);**正式执行段(Step −1 起)** 只运行 Analysis Manifest 授权的基准、设计专属诊断、威胁对应检验及预先指定的扩展。它不是语法手册、设计路由或写作工具。
 
 ## 与你已有栈的分工(关键)
 | 你已有的 skill | 职责 | 本 skill 的关系 |
@@ -18,11 +19,23 @@ description: Execute a locked empirical design as a complete Stata pipeline from
 | `xianzhu-skill` | 规格搜索纪律(口径/变换) | 本 skill 跑的是**正式主表+稳健性箱**,不是探索性搜索 |
 | `latex-tables` / `write-results` | 表格排版 / 结果写作 | 本 skill 产出 esttab/coefplot 原始表图,交给它们排版与写作 |
 
-**铁律**:识别取舍归 `huntington-klein-causal-design`;`causal-analysis` 只把锁定设计转成执行计划。本 skill 不得自行更换设计、比较组、样本、聚类规则或 estimand。
+**铁律**:识别取舍归 `huntington-klein-causal-design`;`causal-analysis` 只把锁定设计转成执行计划。正式执行段(Step −1 起)不得自行更换设计、比较组、样本、聚类规则或 estimand。Step −2 前置探索段不受此限(彼时设计尚未锁定),但探索必须全量留痕,且设计一旦锁定即封板。
+
+## Step −2 · 前置探索:规格与模型选择(可选,设计锁定前)
+
+用户的实证工作流是**先定变量与模型、再锁设计**。因此在 Design Packet 存在之前,允许在正式 pipeline 内做探索性规格搜索以确立模型选择:变量形式与变换(log/asinh/levels)、控制集、固定效应结构、样本口径、初步估计器比较。**允许按显著性筛选候选规格**——这是本段的显式目的之一。
+
+纪律(不可省略):
+
+- 所有探索在独立的 `explore/` do 文件与 log 中进行,与正式回归链物理隔离。
+- **全量留痕**:试过的每一个规格都记录(包括不显著、被丢弃的),形成搜索日志;不能只留"赢的那列"。
+- 探索结束时输出《模型选择记录》:最终选定规格 + 选择依据(显著性/拟合/理论)+ 被否决规格清单。
+- 该记录作为输入交给 `huntington-klein-causal-design` / `causal-analysis`,在 Design Packet 中注明哪些选择来自显著性筛选;正文报告时不得把探索后选中的规格包装成纯理论驱动的事前设定。
+- **一旦设计锁定、进入 Step −1 及以后,禁止再按显著性改规格**——口子只在锁定前开放。需要继续探索时,显式退回 Step −2 并在搜索日志中追加一轮。
 
 ## 入口与出口契约
 
-执行前必须读取 `huntington-klein-causal-design` 的 Design Packet 与 `causal-analysis` 的 Analysis Manifest。若二者冲突,停止并退回设计阶段,不得由执行代码自行选择口径。
+正式执行段(Step −1 起)之前必须读取 `huntington-klein-causal-design` 的 Design Packet 与 `causal-analysis` 的 Analysis Manifest。若二者冲突,停止并退回设计阶段,不得由执行代码自行选择口径。Step −2 前置探索段先于二者运行,其《模型选择记录》是 Design Packet 的输入之一。
 
 执行后返回 Run Manifest 与 Results Inventory,至少包括:
 
@@ -45,6 +58,7 @@ description: Execute a locked empirical design as a complete Stata pipeline from
 ## 流水线 8 步(总览)
 每步只给最常用一种写法;深度变体见对应 reference。
 
+- **Step −2 · 前置探索(可选)** — 设计锁定前的规格搜索与模型选择,允许按显著性筛选;全量留痕,产出《模型选择记录》。见上方专节。
 - **Step −1 / 0 · 预注册与样本契约** — PAP(AEA RCT 风格)+ 样本构建日志 + 5 项数据契约。见 `references/01-pipeline-discipline.md`。
 - **Step 1 · 数据导入与清洗** — `use/import`、`destring`、`misstable`、`duplicates`、`merge ... assert`、`xtset`。深度语法见 `stata-data-cleaning`;本 skill 只强调流水线里的契约。
 - **Step 2 · 变量构造** — `winsor2`、`xtile`、`L./F./D./S.`、CPI 平减、交错 DiD 时间变量(first_treat / rel_p)。
@@ -60,7 +74,7 @@ description: Execute a locked empirical design as a complete Stata pipeline from
 ## 何时不要用
 - 只想查某条 Stata 命令的语法 → 用 `stata`。
 - 还没定识别策略、在 DiD/IV/RDD 之间选 → 先用 `huntington-klein-causal-design`,设计锁定后再用 `causal-analysis` 生成执行计划。
-- 在做探索性规格搜索(试到显著)→ 用 `xianzhu-skill`。
+- 要做正式的多元宇宙治理(multiverse、规格曲线、投稿级披露)→ 用 `xianzhu-skill`;pipeline 内的快速规格筛选用本 skill 的 Step −2。
 - 要写 Results/Discussion 文字 → 用 `empirical-writeup` 先建立 Evidence Packet,再交给 `write-methods-and-results` / `write-discussion-and-conclusion`。
 
 ## 需要按需读取的参考文件
@@ -71,6 +85,6 @@ description: Execute a locked empirical design as a complete Stata pipeline from
 - 召回时机的生存/持续期模型:`references/05-survival-recall-timing.md`
 
 ## 执行纪律(与 xianzhu-skill 一致)
-- 每轮搜索/每张表独立成 do 文件与 log,不污染主回归链(见你已有的 Stata 输出约定)。
+- 每轮搜索/每张表独立成 do 文件与 log,不污染主回归链(见你已有的 Stata 输出约定);Step −2 探索统一放 `explore/` 目录。
 - 跑完要能回答三问:试了什么、为什么停、正文为什么选这一列。
-- **过程优先于显著性**:稳健性箱是为了证明结论稳,不是为了筛出显著的列。
+- **过程留痕优先**:Step −2 允许按显著性筛选模型,但搜索全日志必须保留;Step −1 起稳健性箱只为证明结论稳,不为筛出显著的列。

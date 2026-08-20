@@ -1,7 +1,7 @@
 ---
 name: distill-story-exemplar
-description: >-
-  Distill a published paper as an integrated academic story for the story-blueprints learning corpus. Use when the user asks to study how a whole exemplar paper tells its research story, compare whole-paper narratives, or add a reviewed learning card. Reconstruct the paper before evaluating it; distinguish the paper's story from the analyst's assessment; extract section-specific learning moves with transfer conditions. Do not use for drafting the user's paper, section-only distillation, or automatic story-frame selection.
+description: "把整篇已发表论文作为一个完整学术故事蒸馏成 story-blueprints 学习卡——重构主题、角色、故事线与五幕结构，提取可迁移的结构手法。当用户要求学习某篇范文如何讲故事、比较整篇叙事、或生成学习卡时使用。"
+whenToUse: "当用户要求从整篇范文学习叙事结构、对比两篇论文的整篇故事、或向 story-blueprints 语料库新增学习卡时使用。触发词：故事蒸馏、story blueprint、学习卡、这篇论文的故事怎么讲、整篇叙事分析、对比两篇论文的故事、生成 blueprint 卡"
 ---
 
 # Distill Story Exemplar

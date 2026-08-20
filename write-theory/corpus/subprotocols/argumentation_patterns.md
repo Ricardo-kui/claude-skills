@@ -347,3 +347,46 @@ our investigation of boundary conditions will be guided by insights from
 
 **反模式**: 两个理论都解释主效应（应合并或改用 Dual-Theory Architecture）；第二理论只在 Discussion 出现、Theory 无预告。
 
+---
+
+<!--
+pattern_id: neglected_lens_via_dominant_view_contrast
+build_type: 机制推演型 / 视角选择
+source_papers: ["lunetal2026"]
+confidence: medium
+status: ready_for_corpus
+-->
+
+## Pattern: Neglected Lens via Dominant-View Contrast（优势视角对照被忽视透镜）
+
+**适用场景**: T2 开场需要把读者从过度复制的正向/优势视角转到对话内部已有、但被忽视的方差/实验透镜，再把抽象方差收成可观察下尾失败。不是辩证对立，也不是竞争假设——两条透镜可共存，作者选择被忽视的一条来兑现其蕴含。
+
+**微观动作序列**: Dominant view（优势/均值上移）→ Implicit assumption named → Neglected lens（方差/实验）→ Concrete lower-tail object → Pivot to H1 mechanism
+
+**范文来源**: Lun, Zurbruegg, Mount & Cheong (2026), *Entrepreneurship Theory and Practice*
+
+**骨架**:
+```
+[Dominant view] [Construct] is commonly viewed as a [performance-enhancing orientation], [shifting the distribution upward] ([citations]). This view—the [label-as-advantage] perspective—"implicitly assumes that [construct] somehow provides an advantage" ([citation]).
+
+[Neglected lens] Notwithstanding the benefits, [adjacent theory] highlights that the very mechanism through which value is generated necessarily widens the distribution of outcomes. This is consistent with the [variance-enhancing] logic of the [label-as-experimentation] perspective ([citation]).
+
+[Contrast] Yet most research remains anchored in the [advantage] perspective, emphasizing benefits while overlooking downsides. Even within the smaller [experimentation] body, scholars have examined [dispersion around the mean] rather than the specific types of failure [construct] may produce.
+
+[Pivot] Without theorizing how [construct] manifests as failure, we lack insight into the mechanisms through which exploratory tendencies produce harmful outcomes. To address this omission, we focus on [observable operational failure].
+```
+
+**原文锚定**:
+> "Yet, most EO research remains anchored in the EO-as-advantage perspective, emphasizing its performance-enhancing benefits while overlooking its downsides."
+
+**为什么有效**: 缺口不是"缺一篇调节论文"，而是优势透镜未兑现其自身蕴含的下尾；对照让机制修订显得内在而非外加。
+
+**适用条件**: 对话内部必须真有可引用的 neglected lens；不能事后发明第二条理论来打稻草人。
+
+**注意事项**:
+- 不要写成 Incommensurability（两条不可通约的对立预测）
+- 下尾对象必须可观察、可记录，不能停在 abstract failure / exit
+- 与 Dual-Lens Main/Boundary 分工：本模式管 T2 视角选择；后者管主效应理论 vs 边界 taxonomy
+
+**反模式**: 把 advantage vs experimentation 写成必须二选一的竞争假设；或对照之后仍用均值绩效当 DV。
+

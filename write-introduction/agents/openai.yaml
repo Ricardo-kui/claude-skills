@@ -1,6 +1,0 @@
-interface:
-  display_name: "Write Introduction"
-  short_description: "Draft Pollock introductions with story alignment"
-  default_prompt: "Use $write-introduction to draft or align this paper's Introduction against its shared story contract."
-policy:
-  allow_implicit_invocation: true

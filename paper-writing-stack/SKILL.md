@@ -1,6 +1,7 @@
 ---
 name: paper-writing-stack
-description: "Route management-journal paper writing across the Pollock story contract and section-specialized Introduction, Theory, Methods, and Results skills. Use when deciding the current writing stage, real bottleneck, revision order, or cross-section alignment. Existing Discussion drafts may be reviewed, but Discussion generation is intentionally outside this stack."
+description: "管理学顶刊论文写作全流程路由总控：判断当前写作阶段、真实瓶颈与修改顺序，按 Pollock story contract 把任务分派到 write-introduction/write-theory/write-methods/write-results/paper-review/pollock-qc 等专用 skill；不在本 skill 内起草正文。触发词：论文写作、写作瓶颈、下一步写哪节。"
+whenToUse: "当用户在做管理学论文写作，不确定当前处于哪个写作阶段、瓶颈在哪、下一步该写或先改哪个 section，或需要跨章节对齐与任务路由时使用。触发词：论文写作流程、写作瓶颈、该先写哪部分、章节修改顺序、写作总控、写作路由、整篇论文怎么推进、先写 introduction 还是 theory"
 ---
 
 # Paper Writing Stack

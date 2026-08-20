@@ -1,7 +1,7 @@
 ---
 name: write-theory
-description: >-
-  Theory & Hypotheses 写作引擎——诊断理论构建问题、选架构、生成可落地假设骨架（7 变体：构念辨析/机制推演/假设树/过程理论/调节效应/竞争假设/辩证对立）。Use when writing theory or hypotheses for a management-journal paper。Not for: 蒸馏范文（→ distill-theory-exemplar）；审查草稿（→ theory-review）；全稿 QC（→ pollock-qc）。分工：识别策略的理论论证属本 skill（Theory 段嵌入），实现属 write-methods。
+description: "Theory & Hypotheses 写作引擎——诊断理论构建类型、选架构、生成带 why-chain 的可落地假设骨架（7 变体：构念辨析/机制推演/假设树/过程理论/调节效应/竞争假设/辩证对立）。审查已有 Theory 草稿用 theory-review，全稿 QC 用 pollock-qc。"
+whenToUse: "当用户要求写理论部分、推导假设、构建机制或调节效应的理论论证时使用。触发词：写理论、写 hypothesis、推导假设、理论框架、机制论证、why chain、假设树、写 Theory & Hypotheses、调节效应的理论推导"
 ---
 
 # Write Theory and Hypotheses

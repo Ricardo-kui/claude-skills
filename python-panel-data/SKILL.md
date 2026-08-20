@@ -1,6 +1,7 @@
 ---
 name: python-panel-data
-description: Panel data analysis with Python using linearmodels and pandas.
+description: "用 Python（pandas/statsmodels/linearmodels）做面板数据分析：固定效应/随机效应、聚类稳健标准误、面板上的 DiD、回归表与图。触发：用户明确要求用 Python 跑面板回归、固定效应、linearmodels/PanelOLS（默认计量仍以 Stata 为主）。"
+whenToUse: "当用户明确说“用 Python 做面板回归”“用 linearmodels/PanelOLS 估固定效应”“Python 跑双向固定效应”“用 Python 在面板数据上做 DiD”“Python 出回归表”，或坚持不用 Stata 而要用 Python 做面板计量时使用。"
 metadata:
   workflow_stage: analysis
   compatibility:

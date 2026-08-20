@@ -103,6 +103,34 @@ We simultaneously (1) recognize that the mechanisms by which [related phenomenon
 
 ---
 
+<!--
+pattern_id: dichotomize_strategy_menu_by_fundamental_cut
+build_type: 机制推演型（辅：策略菜单二分，非构念辨析贡献）
+source_papers: ["Liu_Liu_Luo_2016_JM"]
+confidence: medium
+status: emerging
+-->
+
+## Pattern: Dichotomize Strategy Menu by Fundamental Cut
+
+**适用场景**: 实证对象是连续/多类策略菜单，理论贡献不在新构念辨析，而在沿一条理论主轴把菜单切成二分 DV，并声明组内差异只是程度。
+**范文来源**: Liu, Liu & Luo (2016), *Journal of Marketing*
+
+**骨架**:
+```
+The distinction between [complete option] and [partial option] is fundamental and conceptually important, whereas the differences among the various [partial options] are more of varying degree. We therefore treat [choice] as a binary outcome: [complete] versus [partial].
+```
+
+**为什么有效**: 把测量选择写成理论切割而非数据便利；审稿人看到的是"这条切分承载假设"，而不是"我们把多类压成 0/1"。
+
+**注意事项**: 切分轴必须是理论主轴（补偿完整性/成本），不能是样本量最大的两类。组内程度差异须诚实声明，并预告有序模型可能变弱。
+
+**反模式**: 把策略菜单二分写成新构念辨析贡献；切分后仍用"各种补救"的连续语义解释系数。
+
+**原文锚点**: "The distinction between full and partial remedy is fundamental and conceptually important, whereas the differences among the various partial remedies are more of varying degree."
+
+---
+
 ## 与相邻语料文件的关系
 
 - [`../sentences/construct_definition.md`](../sentences/construct_definition.md)：微观句式模板（如 "We define X as..."）

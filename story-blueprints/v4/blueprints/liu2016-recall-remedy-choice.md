@@ -6,7 +6,7 @@
 schema_version: "4.0-lite"
 id: liu2016
 paper:
-  citekey: null
+  citekey: liuliuluo2016
   title: "What Drives a Firm's Choice of Product Recall Remedy? The Impact of Remedy Cost, Product Hazard, and the CEO"
   outlet: "Journal of Marketing"
   year: 2016
@@ -69,9 +69,14 @@ section_learning:
       - "Return to the decision criteria by explaining why governance can change the balance between immediate accounting burden and consumer protection, while retaining the operational category on which the evidence rests."
     caveat:
       - "The ethical and policy prescriptions are stronger than the observed compensation–remedy associations; do not convert proxy-based evidence into a claim of confirmed CEO self-interest."
+      - "Discussion recycles cost–harm and CEO main effects but does not return to the tenure-interaction null; learn the Results spillover-null sentence, not the Discussion omission."
 story_assessment:
   overall_role: partial_exemplar
   mode: second_read_reviewed
+  l2_flags_fed: true
+  l2_notes:
+    - "C2 info: main estimator is event-level probit; Results adds IV+control-function and Heckman-on-CAR as falling action, not a family mismatch."
+    - "C4 info: Intro promises (cost–harm, CEO main effects, financial-interest moderation) are delivered. H7/H8 tenure interactions are a Theory subplot, reported as do not support; Discussion does not recycle that null."
 ```
 
 ## Story Reading

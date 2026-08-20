@@ -1,7 +1,7 @@
 ---
 name: distill-methods-exemplar
-description: >-
-  Methods 范文蒸馏 meta-skill——输入单篇或批量论文的 Methods 文本，输出结构化提炼报告（设计分类、M1–M10 槽位映射、表达骨架、Validity Logic），并将验证通过的变体写回 write-methods 语料。Use when 蒸馏 methods 范文——提炼 HOW they argue, not WHAT they said。Not for: Methods 写作（→ write-methods）；草稿审查（→ methods-review）；全稿 QC（→ pollock-qc）。
+description: "蒸馏顶刊论文 Methods 范文——设计分类、M1–M10 槽位映射、表达骨架与 Validity Logic（提炼 HOW they argue），验证通过的变体写回 write-methods 语料。当用户要求学习/蒸馏某篇论文方法部分的写法时使用。"
+whenToUse: "当用户要求蒸馏、提炼、学习某篇（或批量）论文 Methods 部分的论证组织方式时使用。触发词：蒸馏 methods、提炼方法部分、学习这篇方法写法、分析 methods 怎么写的、methods 范文蒸馏、批量蒸馏方法部分"
 ---
 
 # Distill Methods Exemplar

@@ -1,6 +1,7 @@
 ---
 name: empirical-intake
-description: Structure an underspecified empirical project before coding or estimation. Use to create an Intake Packet covering the question, estimand or prediction target, unit and time structure, data assets, sample, derived measures or labels, risks, and deliverables. Trigger when the user asks to clarify an empirical project, provides data without an analysis brief, or enters Stage 0 of run-empirical-research. Do not estimate models or choose a causal design here.
+description: "实证项目需求结构化（Intake Packet）：在编码或估计前澄清研究问题、estimand/预测目标、单位与时间结构、数据资产、样本、风险与交付物。用于需求模糊的实证任务、只给了数据没有分析方案、或 run-empirical-research 的 Stage 0；不在此估计模型或选因果设计。"
+whenToUse: "当用户丢来数据但需求不清、要先梳理实证任务、明确研究问题和变量口径、或启动一个新实证项目时使用。触发词：帮我理一理这个实证项目、拿到数据不知道怎么做、需求澄清、Intake Packet、开始一个新实证分析"
 ---
 
 # Empirical Intake

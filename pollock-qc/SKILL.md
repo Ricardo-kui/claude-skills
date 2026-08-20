@@ -1,6 +1,7 @@
 ---
 name: pollock-qc
-description: 按 Pollock 2025 框架进行全稿或指定 Section 的快速 QC 检查（投稿前健康检查）。覆盖 Story Architecture、Section Playbook、Prose QC（含 Ch04 五病、active writing、sound & cadence、25 条 dos/don'ts）三个层面。输出结构化评分表（✓/△/✗）和修复优先级。如需深度审查和具体重写建议，请使用各 section 专用 review skills（intro-review/theory-review/methods-review/results-review/discussion-review）或全稿总控 paper-review。
+description: "按 Pollock 2025 框架对全稿或指定 Section 做投稿前快速 QC 健康检查，覆盖故事架构、Section Playbook、Prose QC 三层，输出 ✓/△/✗ 结构化评分表与修复优先级；深度重写建议走各 section review skills 或 paper-review。触发词：QC、投稿前检查、健康检查。"
+whenToUse: "当用户要求投稿前检查、快速体检、对论文或某个 section 做 Pollock QC 打分（✓/△/✗ 评分表），或检查故事架构、prose 语言质量、dos/don'ts 合规情况时使用。触发词：QC、投稿前检查、健康检查、体检、快速查一遍、评分表、pre-submission check、检查一下有没有问题"
 ---
 
 # Role

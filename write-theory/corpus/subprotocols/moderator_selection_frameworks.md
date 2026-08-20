@@ -208,4 +208,90 @@ Beyond the motivation to influence [intermediaries], [attackers] need the abilit
 
 **反模式**: 只有两个调节变量也硬套双轴；两轴构念在概念上不可分（威胁也影响能力、奖项也影响动机时，先检查概念边界）；轴名与机制链环节不匹配。
 
+---
+
+<!--
+pattern_id: transfer_vs_attention_enablers
+build_type: 机制推演型 / 调节效应型
+source_papers: ["kalaignanametal2013"]
+confidence: medium
+status: ready_for_corpus
+-->
+
+## Framework: Transfer vs Attention Enablers（能力转移 vs 动机注意，Kalaignanam et al. 2013 型）
+
+**适用场景**: 主效应是失败/冲击后的学习或可靠性改进；恰好两个调节，一个改变**能否把教训转移到产品族**（ability / transfer），一个改变**是否把事件当回事**（motivation / attention）。不要套 Willing-and-Able 的 4+ 攻击情境。
+
+**范文来源**: Kalaignanam, Kushwaha & Eilert (2013), *Journal of Marketing*
+
+**原文锚点**:
+> "we identify “transfer enablers” and “attention enablers” as contingency factors for improvement in product reliability."
+
+**框架结构**:
+```
+It is well recognized that the extent to which [units] learn depends on their ability and motivation to do so ([citations]). Consistent with this stream, we identify “[transfer enablers]” and “[attention enablers]” as contingency factors for improvement in [mediator].
+
+[Transfer enabler]: [shared assets / common platforms] enable the transfer of learning from the [event] in one [product] to other [products] in the family.
+[Attention enabler]: the extent to which [units] attend to the [event] depends on prior [quality / reputation], which alters the motivation to learn.
+```
+
+**为什么有效**:
+- 两个调节不是平行堆砌，而是分别锚定学习的能力侧与动机侧
+- 比 Willing-and-Able（DesJardine 2025）更窄：这里是学习转移 vs 注意力，不是攻击意愿 vs 攻击能力
+- 允许两个调节的假设形式不对称（一个定向增强，一个非定向竞争）
+
+**适用条件**:
+- 主效应是冲击后的学习/质量改进，不是多受众攻击
+- 恰好两个调节，且能干净分成 transfer vs attention
+- 框架必须在引入第一个调节之前说出
+
+**注意事项**:
+- 不要把 2013 的双使能误标为 E3（E3 要求 ≥3 个平行嵌入小节）
+- attention 侧若理论对立，用非定向假设，不要在框架段预先选边
+
+**反模式**: 把 cost/revenue 文献里的资产共享直接写成学习调节，却不论证 transfer；把品牌质量写成通用正向/负向调节，却不论证 attention/motivation。
+
+---
+
+<!--
+pattern_id: uet_situation_characteristic_nested_moderators
+build_type: 机制推演型 / 调节效应型
+source_papers: ["lunetal2026"]
+confidence: medium
+status: ready_for_corpus
+-->
+
+## Framework: UET Situation–Characteristic Nested Moderators（特征→情境嵌套，Lun et al. 2026 型）
+
+**适用场景**: 主效应来自战略姿态/实验逻辑；恰好两个调节，且必须嵌套——W1 是**高管特征/功能权力**（改变主机制如何被enact），W2 是**组织情境**（改变该特征如何转化为结果）。不要把二者写成平行 E3。
+
+**范文来源**: Lun, Zurbruegg, Mount & Cheong (2026), *Entrepreneurship Theory and Practice*
+
+**原文锚点**:
+> "In addition to executive roles, UET also highlights that organizational context acts as a critical contingency influencing how executive characteristics translate into firm outcomes."
+
+**框架结构**:
+```
+[Secondary theory] asserts that organizational outcomes reflect [executive characteristics] and that [organizational context] influences how those characteristics translate into outcomes ([citation]).
+
+[W1 — characteristic / role power]: the [functional executive] who carries the [countervailing operational logic] makes [reliability / quality] salient in collective decisions, [buffering] the [posture]→[failure] relationship.
+[W2 — situation / attentional load]: when [portfolios] concentrate in [high-uncertainty stage], demands on [executive] attention increase, reducing the extent to which [W1] can mitigate the risk; the reverse holds when [portfolios] concentrate in [stable stage].
+```
+
+**为什么有效**:
+- 两个调节不是平行堆砌：W2 条件化的是 W1 的缓冲能力，对应 E6 而非 E3
+- 选型理由来自 UET 自身的「特征 × 情境」命题，不是事后找两个相关变量
+- 与 Dual-Lens Main/Boundary（Hoffmann）互补：那里次框架是 taxonomy；这里次理论直接规定嵌套顺序
+
+**适用条件**:
+- 主效应已由第一理论解释；第二理论是 UET 或同等的 executive-influence 理论
+- W1 必须是可点名的功能角色/权力，W2 必须改变该角色的注意或转化条件
+- 框架须在引入 W1 之前或 W1→W2 过渡句中说出
+
+**注意事项**:
+- 不要把 W2 写成另一个独立 two-way（那是 E3）
+- 薪酬比等结构代理不能在框架段写成注意力或决策权重的直接证据
+
+**反模式**: 选 COO/CFO 只因为数据里有 title；选生命周期只因为创新文献常用，却不论证它如何改变该高管的注意带宽。
+
 

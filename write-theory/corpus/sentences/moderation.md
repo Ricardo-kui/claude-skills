@@ -30,6 +30,18 @@ because [Z] amplifies the [baseline mechanism] by [amplification logic]. When
 
 **语料锚定**：
 - Eilert 2017 (JM) — 增强型调节
+- Liu, Liu & Luo 2016 (JM) — 短/长期激励作为异号调节对，同时作用于两条反向基线
+
+```
+"Because of the short- versus long-term orientation of [W_short] versus [W_long], 
+these two [actor] characteristics should moderate the impact of [event] 
+characteristics in opposite directions."
+```
+
+**原文锚点** (Liu, Liu & Luo 2016, JM):
+> "Because of the short- versus long-term orientation of CEO cash compensation versus equity incentive, these two CEO characteristics should moderate the impact of recall characteristics in opposite directions."
+
+**增量**: Malik 2025 是异号主效应配对；本句把同一对 W 同时用于两条方向相反的基线（成本负向、伤害正向），形成 2×2 权重倾斜。
 
 ---
 
@@ -153,7 +165,15 @@ capacity to [action] will be constrained."
 
 "The moderating effect of Z operates through [mechanism channel], which is 
 distinct from Z's direct effect on Y through [separate channel]."
+
+"Based on similar theoretical reasoning, we now explore how the [k] [actor] 
+characteristics might moderate the impact of the [event] characteristics on [choice]."
 ```
+
+**原文锚点** (Liu, Liu & Luo 2016, JM):
+> "Based on similar theoretical reasoning, we now explore how the three CEO characteristics (CEO cash compensation, equity incentive, and tenure) might moderate the impact of the two recall characteristics (remedy cost and consumer harm) on remedy."
+
+**增量**: 现有句区分 Z→Y 与 Z 的 moderation 通道；本句用 similar theoretical reasoning 显式复用主效应逻辑，避免六条交互重写 why-chain。压缩过度时双边论证会变薄。
 
 ---
 
