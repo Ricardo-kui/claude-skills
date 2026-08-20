@@ -128,6 +128,8 @@ def main() -> int:
     ap.add_argument("source_md", help="path to paper-import full-text MD (read-only)")
     ap.add_argument("--citekey", default=None, help="PDM citekey (default: derived from filename)")
     ap.add_argument("--outdir", default=None, help="PDM workdir (default: <paper_dir>/<citekey>.pdm/)")
+    ap.add_argument("--force", action="store_true", help="override a fresh PDM LOCK")
+    ap.add_argument("--unlock", action="store_true", help="remove the PDM LOCK and exit")
     args = ap.parse_args()
 
     src = Path(args.source_md)
@@ -136,7 +138,27 @@ def main() -> int:
         return 2
     citekey = args.citekey or derive_citekey(src)
     outdir = Path(args.outdir) if args.outdir else src.parent / f"{citekey}.pdm"
-    sections_dir = outdir / "sections"
+
+    # Double-run guard: one PDM must never be distilled in two concurrent windows
+    # (2026-08 实测：双窗口把 L1–L3 整链路跑了两遍，是单次运行最大浪费源)。
+    lock = outdir / "LOCK"
+    if args.unlock:
+        lock.unlink(missing_ok=True)
+        print(f"unlocked: {lock}")
+        return 0
+    if lock.exists() and not args.force:
+        import time
+
+        age_h = (time.time() - lock.stat().st_mtime) / 3600
+        if age_h < 12:
+            print(
+                f"ERROR: {lock} exists (age {age_h:.1f}h < 12h) — another session may be "
+                "distilling this PDM. If it is stale, rerun with --force.",
+                file=sys.stderr,
+            )
+            return 3
+    outdir.mkdir(parents=True, exist_ok=True)
+    lock.write_text(f"pid={__import__('os').getpid()}\n", encoding="utf-8")
     sections_dir.mkdir(parents=True, exist_ok=True)
 
     raw = src.read_text(encoding="utf-8", errors="replace")
