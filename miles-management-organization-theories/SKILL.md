@@ -1,7 +1,8 @@
 ---
 name: miles-management-organization-theories
-description: "Miles 40 个管理/组织理论的路由器：为管理现象选择或比较锚定理论，澄清构念、机制、层次与边界，发展理论驱动的假设。触发词：选理论、锚定理论、理论透镜、用什么理论解释"
-whenToUse: "当用户在为管理/组织现象挑选锚定理论、比较两个候选理论、澄清构念边界、或需要理论支撑来推假设时使用。触发词：选个理论、用什么理论解释这个现象、锚定理论、理论透镜、Miles 理论、帮我找个理论框架"
+description: "Management-theory router for Miles's 40 theories — selecting or comparing anchor theories, clarifying constructs, mechanisms, levels, boundaries; theory-grounded hypotheses; named-theory lookup."
+when_to_use: "选锚定理论、澄清构念/机制/层次、按理论推假设、或查某个理论时使用。"
+whenToUse: Use when selecting, comparing, or applying a management or organization theory to a phenomenon, construct, mechanism, or hypothesis. Trigger words: 用什么理论, 锚定理论, 管理学理论, organization theory, 理论视角, Miles
 ---
 
 # Management and Organization Theory: A Jossey-Bass Reader

@@ -1,7 +1,8 @@
 ---
 name: revision-coach
-description: "收到审稿意见或编辑决定信（R&R、major/minor revision、revise and resubmit）后使用：把意见逐条解析成 Revision Roadmap + Response-to-Reviewers 回复信骨架，或对已有回复草稿做逐条覆盖体检；不重写正文、不重跑实证。触发词：审稿意见、R&R、回复审稿人、rebuttal、revision roadmap。"
-whenToUse: "当用户收到审稿意见或决定信（R&R、major/minor revision、revise and resubmit、desk reject 邀请重投），想整理修改路线图、搭建 response letter 骨架，或检查已写回复是否漏点时使用。触发词：审稿意见、我收到审稿意见了、R&R、major revision、回复审稿人、response letter、rebuttal、帮我理一下审稿意见、审稿意见回完了吗"
+description: "收到审稿意见或 decision letter（R&R、major/minor revision）后：解析为 Revision Roadmap + Response letter 骨架，或审计已有回复稿的覆盖缺口与风险。不代写修改稿本身。"
+when_to_use: "任何涉及审稿意见解析/回复信/修改路线图的任务；触发词：审稿意见、R&R、response letter、rebuttal。"
+whenToUse: Use when the user has received reviewer comments or a decision letter and needs a revision roadmap, a response-to-reviewers skeleton, or an audit of an existing rebuttal draft. Trigger words: 审稿意见, R&R, major revision, 回复审稿人, rebuttal, response letter, 帮我理一下审稿意见
 ---
 
 # Revision Coach — R&R 解析规划与回复体检

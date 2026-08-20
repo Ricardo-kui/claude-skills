@@ -1,7 +1,8 @@
 ---
 name: intro-review
-description: "顶刊论文 Introduction 专项审查：检查 Hook、Conversation、Problematization、贡献预告，并提供功能语句重写建议，基于 Pollock Ch05 和 MVP30 范文语料库。从零写引言用 write-introduction。"
-whenToUse: "当用户提供引言草稿要求审查、诊断、打分或改写建议时使用。触发词：审查引言、看看我的 introduction、引言润色、introduction review、帮我改引言、检查 hook、投稿前检查引言、引言诊断"
+description: 顶刊论文 Introduction 专项审查。检查 Hook、Conversation、Problematization、贡献预告，并提供功能语句重写建议。基于 Pollock Ch05 和 MVP30 范文语料库。
+when_to_use: "已有 Introduction 草稿要审查（Hook/Conversation/Problematization）时使用。"
+whenToUse: "Use when 用户提供已有的管理学论文 Introduction 草稿需要专项审查，检查 Hook、文献对话、Problematization 与贡献预告并给出功能语句重写建议。Trigger words: 审查引言, 检查 introduction, intro review, 引言改写建议, 帮我看看引言, review my introduction"
 metadata:
   version: 1.3.0
 ---
@@ -161,4 +162,3 @@ metadata:
 - 如果引言没有明确的 rhetorical question 或 puzzle，优先建议补充。
 - 必须指出 Hook 强度是否与推断的 Gap 强度匹配。
 - 如果 Problematization 出现 "few studies have examined"，必须标记为 ✗ 并优先修复。
-

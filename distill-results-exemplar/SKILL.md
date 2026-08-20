@@ -1,7 +1,8 @@
 ---
 name: distill-results-exemplar
-description: "蒸馏顶刊论文 Results 范文——估计器分类、R1–R9 槽位映射、假设-结果节奏与表达骨架（提炼 HOW they stage evidence），验证通过的变体写回 write-results 语料。当用户要求学习/蒸馏某篇论文结果部分的写法时使用。"
-whenToUse: "当用户要求蒸馏、提炼、学习某篇（或批量）论文 Results 部分的证据展演方式时使用。触发词：蒸馏 results、提炼结果部分、学习这篇结果写法、分析 results 怎么写的、results 范文蒸馏、批量蒸馏结果部分"
+description: "Results 范文蒸馏——输入范文 Results，输出估计器分类/R1-R9 槽位映射/假设-结果节奏提炼报告并反馈 write-results 语料。Use when 蒸馏 results 范文（学 HOW they stage evidence）。"
+when_to_use: "输入是已发表范文且目标是学写法时；写作用 write-results，审查用 results-review。"
+whenToUse: "Use when 用户要蒸馏已发表论文的 Results 范文，提炼其证据展演节奏、R1-R9 槽位映射与表达骨架并写回 write-results 语料。Trigger words: 蒸馏结果部分, 蒸馏 results 范文, 学习这篇结果怎么呈现, exemplar distillation, 范文提炼"
 ---
 
 # Distill Results Exemplar

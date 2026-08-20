@@ -1,7 +1,8 @@
 ---
 name: distill-methods-exemplar
-description: "蒸馏顶刊论文 Methods 范文——设计分类、M1–M10 槽位映射、表达骨架与 Validity Logic（提炼 HOW they argue），验证通过的变体写回 write-methods 语料。当用户要求学习/蒸馏某篇论文方法部分的写法时使用。"
-whenToUse: "当用户要求蒸馏、提炼、学习某篇（或批量）论文 Methods 部分的论证组织方式时使用。触发词：蒸馏 methods、提炼方法部分、学习这篇方法写法、分析 methods 怎么写的、methods 范文蒸馏、批量蒸馏方法部分"
+description: "Methods 范文蒸馏——输入范文 Methods，输出设计分类/M1-M10 槽位映射/表达骨架提炼报告并反馈 write-methods 语料。Use when 蒸馏 methods 范文（学 HOW they argue）。"
+when_to_use: "输入是已发表范文且目标是学写法时；写作用 write-methods，审查用 methods-review。"
+whenToUse: "Use when 用户要蒸馏已发表论文的 Methods 范文，提炼其论证结构、设计分类、M1-M10 槽位映射与表达骨架并写回 write-methods 语料。Trigger words: 蒸馏方法部分, 蒸馏 methods 范文, 学习这篇方法怎么写, exemplar distillation, 范文提炼"
 ---
 
 # Distill Methods Exemplar

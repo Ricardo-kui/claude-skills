@@ -1,8 +1,8 @@
 ---
 name: reverse-validation-pipeline
-description: >-
-  反向验证 write-methods / write-results 语料覆盖度：验证语料能否反向复现蒸馏出的顶刊范文（M1–M10 / R1–R9 槽位覆盖、模板选择、Gap 分析、跨技能一致性），在 distill-*-exemplar 产出 *_distilled.json 后运行。触发词：反向验证、校验语料覆盖、跑反向验证管线
-whenToUse: 当用户要求反向验证、校验 write-methods/write-results 语料能否复现蒸馏范文、检查槽位覆盖缺口，或拿到蒸馏 JSON 对想要覆盖 Gap 报告时使用。触发词：反向验证、reverse-validate、校验语料覆盖、跑反向验证管线、语料覆盖检查
+description: "运行本地反向验证工具，检验 write-methods/write-results 语料能否反向复现蒸馏出的范文（M1-M10/R1-R9 槽位覆盖、模板选择、跨技能一致性）。Use after distill-* 产出 JSON 后。"
+when_to_use: "触发词：反向验证、校验语料覆盖、coverage gap report。蒸馏用 distill-*，改语料先看 Gap 报告。"
+whenToUse: "Use when running reverse validation to check whether write-methods or write-results corpora can regenerate distilled exemplar slot maps and produce a coverage gap report. Trigger words: 反向验证, reverse validation, 语料覆盖检查, 跑反向验证管线, coverage gap report, distilled JSON 校验"
 ---
 
 # Reverse Validation Pipeline

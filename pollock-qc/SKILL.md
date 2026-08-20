@@ -1,7 +1,8 @@
 ---
 name: pollock-qc
-description: "按 Pollock 2025 框架对全稿或指定 Section 做投稿前快速 QC 健康检查，覆盖故事架构、Section Playbook、Prose QC 三层，输出 ✓/△/✗ 结构化评分表与修复优先级；深度重写建议走各 section review skills 或 paper-review。触发词：QC、投稿前检查、健康检查。"
-whenToUse: "当用户要求投稿前检查、快速体检、对论文或某个 section 做 Pollock QC 打分（✓/△/✗ 评分表），或检查故事架构、prose 语言质量、dos/don'ts 合规情况时使用。触发词：QC、投稿前检查、健康检查、体检、快速查一遍、评分表、pre-submission check、检查一下有没有问题"
+description: "按 Pollock 2025 框架对全稿或指定 Section 快速 QC（投稿前健康检查）——Story Architecture、Section Playbook、Prose QC 三层，输出 ✓/△/✗ 评分表与修复优先级。"
+when_to_use: "投稿前快速体检；触发词：QC、打分、健康检查。深度审查用分节 review 或 paper-review。"
+whenToUse: "Use when 用户要在投稿前对论文全稿或指定章节做 Pollock 框架快速 QC 健康检查，输出结构化评分表与修复优先级。Trigger words: 投稿前检查, pollock qc, 快速 QC, 健康检查, 评分表, pre-submission check"
 ---
 
 # Role
@@ -208,6 +209,9 @@ Prose QC 分三组，对应 Pollock Ch03（故事工具）+ Ch04（五病/active
 | Discussion 贡献/局限性/升华 | `/discussion-review` |
 | 跨 Section 一致性（假设-变量映射、承诺-兑现） | `/paper-review`（已包含对齐检查） |
 | 全稿故事架构 + 断裂识别 | `/paper-review` |
+| AI 痕迹（破折号、AI 词汇、否定式排比、学术模型腔） | `humanizer` 学术模式（英文稿）/ `humanizer-zh`（中文稿） |
+
+**权威边界**：Prose QC 只诊断工艺问题（五病、active/cadence、术语一致性）并打分，是唯一 QC 权威；AI 痕迹的识别与改写归 `humanizer`/`humanizer-zh`，其检查脚本是硬禁令的唯一执行者。QC 不给"AI 味"打分，humanizer 不改故事结构与证据。
 
 ## Constraints
 
@@ -216,4 +220,3 @@ Prose QC 分三组，对应 Pollock Ch03（故事工具）+ Ch04（五病/active
 - 如果用户没有提供文件，可以基于对话中的文本进行 QC。
 - 必须给出**可执行的修复建议**，不能只说 "需要改进"。
 - 每个问题必须推荐对应的下游 Skill。
-

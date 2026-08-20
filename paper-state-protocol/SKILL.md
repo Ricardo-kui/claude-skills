@@ -1,8 +1,8 @@
 ---
-disableModelInvocation: true
 name: paper-state-protocol
-description: "paper-state.yaml 协议 v1.2.0——write-* 技能族跨 Section 状态传递规范：在论文写作过程中持久化各 Section 的 metadata（theory_hints、构念、假设、变量、假设结果），使下游技能自动消费上游输出。触发词：paper-state、状态传递、跨 section 状态。"
-whenToUse: "当需要创建、读取、更新或审计项目的 paper-state.yaml，让 write-introduction/write-theory/write-methods/write-results 之间自动传递 theory_hints、构念、假设、变量等写作链状态时使用。触发词：paper-state、paper-state.yaml、状态文件、跨 section 传递、上下游衔接、状态同步、写作状态持久化"
+description: "paper-state.yaml 协议 v1.2.0 — write-* 技能族跨 Section 状态传递：持久化各 Section metadata，让下游技能自动消费上游输出，替代手动复制 theory_hints。"
+when_to_use: "write-* 之间需要传递或消费 section 状态、排查状态断裂时使用。"
+whenToUse: "Use when write-* skills need to persist and pass section state across Introduction, Theory, Methods, and Results through a paper-state.yaml file. Trigger words: paper-state.yaml, paper state protocol, theory_hints, 状态传递, 跨 section 状态, 论文状态文件"
 version: 1.2.0
 ---
 
@@ -32,6 +32,9 @@ YAML 到了写 Theory 时需要用户回忆并重新输入。
 - 本文件的权威范围：四个 Section 的 status / output_path / theory_hints /
   constructs / hypotheses / variables / hypothesis_results 等**写作链
   metadata**，以及 §5 的 Vault 检索协议。
+- **finishing 阶段片段**（`finishing.*`，如 humanize 状态、检查时间、引用比对
+  是否清零）：以对应技能（humanizer / humanizer-zh）为唯一权威，本协议不
+  定义其字段，只约束它不覆盖写作链 metadata。
 
 ## 2. 文件位置与发现
 

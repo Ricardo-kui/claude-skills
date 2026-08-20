@@ -1,7 +1,8 @@
 ---
 name: stata
-description: "Stata 综合参考：编写、运行、调试 .do 文件，数据管理、计量回归、因果推断、图形、Mata 及 reghdfe/estout/did/rdrobust 等 20 个社区命令的语法、选项与常见坑。触发：任何 Stata 代码任务，包括单个回归或发表级回归表。"
-whenToUse: "当用户要求写 Stata 代码、写/改 do 文件、跑回归、用 reghdfe/estout 出回归表、修 Stata 报错、解释 Stata 命令或选项、做数据管理/合并/制图，或问 Stata 特有陷阱（missing 值排序、= 与 ==）时使用。触发词：Stata、do文件、跑个回归、导出回归表、Stata报错。"
+description: "Comprehensive Stata reference for .do files, data management, econometrics, causal inference, graphics, Mata, and 20 community packages (reghdfe, estout, did, rdrobust). Use whenever writing, running, debugging, or explaining Stata code."
+when_to_use: "任何写/跑/调/解释 Stata 代码的任务，包括单条回归或出版级表格。"
+whenToUse: "Use whenever writing, running, debugging, or explaining Stata code and do-files, from a single regression to publication tables and community packages. Trigger words: stata, do file, reghdfe, esttab, 写 do 文件, Stata 代码, Stata 报错, Stata 回归, Stata 作图"
 ---
 
 # Stata Skill

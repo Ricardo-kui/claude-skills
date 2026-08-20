@@ -1,7 +1,8 @@
 ---
 name: empirical-writeup
-description: "实证证据打包与写作交接（Evidence Packet）：在执行与核验完成后，把每条主张映射到回归表、事件研究、稳健性检验与脚本，路由产出期刊级表图和 Methods/Results 写作。不授权超出 Design Packet 或 Verification Report 的主张。"
-whenToUse: "当用户实证已跑完核验、要把结果整理成论文表图和正文证据、生成 LaTeX 回归表与事件研究图、或准备动笔写 Methods/Results 时使用。触发词：结果打包、出论文表格、整理证据、把回归结果写成正文、Evidence Packet"
+description: "Package verified empirical outputs into an Evidence Packet and route journal-ready tables, figures, methods, results, appendix — maps claims to regressions and tests with caveats. Never exceeds the Design Packet."
+when_to_use: "估计与验证完成后、进入成稿/表格打包阶段时使用。"
+whenToUse: "Use after empirical execution and verification are complete, to package outputs into an Evidence Packet and route journal-ready tables, figures, methods and results writing. Trigger words: write up results, evidence packet, empirical writeup, 写结果部分, 出投稿表格, 图表和正文, claims to regressions"
 ---
 
 # Empirical Writeup

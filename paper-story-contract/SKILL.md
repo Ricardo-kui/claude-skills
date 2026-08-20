@@ -1,7 +1,8 @@
 ---
 name: paper-story-contract
-description: "在动笔 Introduction/Theory/Methods/Results 之前，诊断并维护 Pollock 式全稿故事契约（研究问题、central knot、构念角色、storylines、读者改变、证据状态、写作阶段），并审计跨章节故事一致性。触发词：故事契约、story contract、研究问题定位、核心张力。"
-whenToUse: "当用户需要明确研究问题、中心张力（central knot）、构念角色与故事线，在写任何 section 前先立约/审计 story contract，或检查跨章节故事是否对齐时使用。触发词：故事契约、story contract、central knot、研究问题是什么、核心张力、故事线、跨章节对齐、动笔前先把故事定下来、角色和主线"
+description: "Diagnose and maintain a Pollock-style whole-paper story contract (research question, central knot, characters, storylines, stakes, evidence state, writing stage) before drafting; audits cross-section alignment."
+when_to_use: "起草任何章节之前、跨章节对齐审计、或维护故事契约时使用；是其他 Pollock 写作技能的 story gate。"
+whenToUse: "Use when defining or auditing the whole-paper story, research question, central knot, characters, storylines, or writing stage before drafting any section. Trigger words: story contract, central knot, storyline, 故事契约, 故事线, 核心张力, 写作阶段诊断, paper story, story gate"
 ---
 
 # Paper Story Contract

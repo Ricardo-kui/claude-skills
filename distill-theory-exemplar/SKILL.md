@@ -1,7 +1,8 @@
 ---
 name: distill-theory-exemplar
-description: "蒸馏顶刊论文 Theory & Hypotheses 范文——识别理论构建类型、拆解功能模块与 why-chain 模式（提炼 HOW they explain why），并反馈 write-theory 语料缺口。当用户要求学习/蒸馏某篇论文理论与假设部分的写法时使用。"
-whenToUse: "当用户要求蒸馏、提炼、学习某篇（或批量）论文 Theory 或 Hypotheses 部分的论证手法时使用。触发词：蒸馏 theory、提炼理论部分、学习这篇理论写法、分析假设怎么推的、theory 范文蒸馏、批量蒸馏理论与假设"
+description: "Theory 范文蒸馏——输入范文 Theory，输出理论构建类型/why-chain 模式/构念关系组织提炼报告并反馈 write-theory 语料。Use when 蒸馏 theory 范文（学 HOW they explain why）。"
+when_to_use: "输入是已发表范文且目标是学写法时；写作用 write-theory，审查用 theory-review。"
+whenToUse: "Use when 用户要蒸馏已发表论文的 Theory 范文，提炼其理论构建类型、why-chain 模式与构念组织方式，并反馈 write-theory 语料缺口。Trigger words: 蒸馏理论部分, 蒸馏 theory 范文, 学习这篇理论怎么推导, exemplar distillation, 范文提炼"
 ---
 
 # Distill Theory Exemplar

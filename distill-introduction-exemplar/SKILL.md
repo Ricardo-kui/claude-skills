@@ -1,7 +1,8 @@
 ---
 name: distill-introduction-exemplar
-description: "蒸馏顶刊论文 Introduction 范文——拆解功能模块、叙事结构模式与修辞策略 DNA（提炼 HOW they stage，不是 WHAT they say），并反馈 write-introduction 语料缺口。当用户要求学习/蒸馏某篇论文引言的写法时使用。"
-whenToUse: "当用户要求蒸馏、提炼、学习某篇（或批量）论文 Introduction 部分的写法与叙事手法时使用。触发词：蒸馏 introduction、提炼这篇引言、学习范文引言写法、分析这篇 intro 怎么写的、introduction 范文蒸馏、批量蒸馏引言"
+description: "Introduction 范文蒸馏——输入范文 Introduction，输出功能模块/叙事结构/修辞策略提炼报告并反馈 write-introduction 语料。Use when 蒸馏 introduction 范文（学 HOW，不是 WHAT）。"
+when_to_use: "输入是已发表范文且目标是学写法时；用户说蒸馏/学习这篇 introduction。写作用 write-introduction，审查用 intro-review。"
+whenToUse: "Use when 用户要蒸馏已发表论文的 Introduction 范文，提炼其叙事结构、功能模块与修辞策略而非内容，并反馈 write-introduction 语料缺口。Trigger words: 蒸馏引言, 蒸馏 introduction 范文, 学习这篇引言怎么写, exemplar distillation, 范文提炼"
 ---
 
 # Distill Introduction Exemplar

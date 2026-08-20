@@ -1,7 +1,8 @@
 ---
 name: research-gap-diagnosis
-description: "诊断论文的贡献类型与研究 gap 强度并开出框定策略——基于 Zuckerman 文体理论、Makadok 贡献分类等，判断 gap 是否真实有力、属于哪种贡献、弱 gap 如何重框。触发词：gap 诊断、研究缺口、贡献类型、研究定位"
-whenToUse: "当用户在动笔前想确认研究 gap 是否成立、贡献属于什么类型、论文属于哪种文体，或需要把弱 gap 重框成可辩护的定位时使用。触发词：gap 诊断、这个研究缺口成立吗、贡献类型是什么、研究定位、我的贡献是什么、怎么框定这个 gap"
+description: "Diagnose a paper's contribution type, gap strength, and framing strategy via Zuckerman genre theory, Simsek knowledge-weaving, Makadok taxonomy, Greene-Lidinsky synthesis. Use when testing whether a gap is genuine or reframing a weak one."
+when_to_use: "判断贡献类型、gap 是否成立、如何重构 gap、或从文献笔记生成候选 gap 时使用。"
+whenToUse: "Use when diagnosing what kind of contribution a paper makes, whether its research gap is genuine and compelling, or how to reframe a weak gap before drafting. Trigger words: research gap, contribution type, 研究缺口, 贡献诊断, gap 太弱, contribution 不清晰, 论文定位, 诊断 gap, 研究空白"
 ---
 
 # Research Gap Diagnosis

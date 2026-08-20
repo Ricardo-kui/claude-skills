@@ -1,7 +1,8 @@
 ---
 name: empirical-pipeline-stata
-description: "Stata 实证执行流水线：把实证设计执行成可复现的 do-file、日志、诊断、回归表与图；含设计锁定前的规格探索（Step −2，可按显著性筛选并全量留痕）与锁定后的正式执行。用于基准回归、交叠 DiD、稳健性、机制与异质性的整套 Stata 执行；单个语法问题请用 stata skill。"
-whenToUse: "当用户要用 Stata 跑完整回归流水线、执行基准回归加稳健性检验、按论文顺序串起整个实证分析、或在设计锁定前做规格搜索时使用。触发词：跑实证、Stata 回归流水线、主回归和稳健性、把设计跑出来、执行分析、出回归表"
+description: "Execute a locked empirical design as a complete reproducible Stata pipeline — baselines, staggered DiD, robustness, mechanisms, heterogeneity, mediation, survival. Requires Design Packet + Analysis Manifest first."
+when_to_use: "设计与清单锁定后的大范围 Stata 执行；单条语法问答用 stata，设计选择用 causal-analysis。"
+whenToUse: "Use when a locked empirical design must be executed end to end in Stata as a reproducible pipeline of scripts, logs, diagnostics, tables, and figures. Trigger words: Stata pipeline, run the analysis in Stata, 跑实证, Stata 执行流水线, 基准回归加稳健性, 主表和图, 交错 DiD Stata"
 ---
 
 # Empirical Pipeline — Stata(实证执行流水线)

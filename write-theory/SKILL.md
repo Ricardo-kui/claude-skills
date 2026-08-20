@@ -1,7 +1,8 @@
 ---
 name: write-theory
-description: "Theory & Hypotheses 写作引擎——诊断理论构建类型、选架构、生成带 why-chain 的可落地假设骨架（7 变体：构念辨析/机制推演/假设树/过程理论/调节效应/竞争假设/辩证对立）。审查已有 Theory 草稿用 theory-review，全稿 QC 用 pollock-qc。"
-whenToUse: "当用户要求写理论部分、推导假设、构建机制或调节效应的理论论证时使用。触发词：写理论、写 hypothesis、推导假设、理论框架、机制论证、why chain、假设树、写 Theory & Hypotheses、调节效应的理论推导"
+description: "Theory & Hypotheses 写作引擎——诊断理论构建问题、选架构、生成假设骨架（7 变体：构念辨析/机制推演/假设树/过程理论/调节/竞争假设/辩证对立）。Use when 写理论或假设。"
+when_to_use: "起草 Theory/Hypotheses 或选择理论架构时使用；识别策略理论论证属本 skill，实现细节归 write-methods。"
+whenToUse: "Use when 用户要为管理学顶刊论文写 Theory 与 Hypotheses 部分，需要构念辨析、机制推演、假设树或调节效应等理论骨架。Trigger words: 写理论, 写假设, theory 部分, hypotheses, 机制推导, 调节效应, 竞争假设, why chain, 理论框架"
 ---
 
 # Write Theory and Hypotheses

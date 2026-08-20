@@ -1,7 +1,8 @@
 ---
 name: literature-notes-obsidian
-description: "把一篇或几篇学术论文读成结构化 Obsidian 文献笔记（含 gap、理论逻辑、变量测量、识别策略、贡献与可复用点），支持 researcher/writer 模式与 Zotero 元数据解析。触发词：读这篇论文、做文献笔记、精读论文、对比这几篇文献、升级文献笔记"
-whenToUse: "当用户要求阅读/精读某篇论文（本地 PDF、DOI、URL、标题或摘要）并写成 Obsidian 文献笔记，或升级已有笔记、对比 2-5 篇论文、做写作拆解（researcher/writer 模式）时使用。触发词：读这篇论文、做文献笔记、精读文献、对比论文、升级笔记、文献笔记入库"
+description: "Read a paper (PDF/DOI/URL/title/abstract) into Obsidian-ready literature notes with management/social-science bias — motivation, gap, theory, measurement, strategy, contribution, reuse value; resolves Zotero metadata and logs into the vault."
+when_to_use: "读文献做笔记、升级已有笔记、或对比 2-5 篇论文并落库 Obsidian 时使用。"
+whenToUse: Use when reading a paper PDF, DOI, URL, or abstract into an Obsidian literature note, upgrading an existing note, or comparing a small paper set. Trigger words: 做文献笔记, 读论文, 阅读笔记, literature note, 笔记这篇, 写笔记
 ---
 
 # Literature Notes for Obsidian

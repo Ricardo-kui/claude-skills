@@ -1,7 +1,8 @@
 ---
 name: paper-writing-stack
-description: "管理学顶刊论文写作全流程路由总控：判断当前写作阶段、真实瓶颈与修改顺序，按 Pollock story contract 把任务分派到 write-introduction/write-theory/write-methods/write-results/paper-review/pollock-qc 等专用 skill；不在本 skill 内起草正文。触发词：论文写作、写作瓶颈、下一步写哪节。"
-whenToUse: "当用户在做管理学论文写作，不确定当前处于哪个写作阶段、瓶颈在哪、下一步该写或先改哪个 section，或需要跨章节对齐与任务路由时使用。触发词：论文写作流程、写作瓶颈、该先写哪部分、章节修改顺序、写作总控、写作路由、整篇论文怎么推进、先写 introduction 还是 theory"
+description: "Route management-journal paper writing across the Pollock story contract and section skills — decide current writing stage, real bottleneck, revision order, cross-section alignment. Discussion generation excluded."
+when_to_use: "不确定当前写作阶段/真正瓶颈/修改顺序时先来这里定路线。"
+whenToUse: "Use when 用户要写管理学顶刊论文但不确定当前写作阶段、真实瓶颈、修订顺序或该调用哪个章节 skill，需要整栈路由编排。Trigger words: 论文写作流程, 该从哪开始写, 写作阶段, 修订顺序, paper writing stack, 写作路由"
 ---
 
 # Paper Writing Stack
@@ -15,6 +16,7 @@ whenToUse: "当用户在做管理学论文写作，不确定当前处于哪个�
 5. `write-results` — report the climax and evidence-constrained resolution
 6. `paper-review` — diagnose whole-paper alignment and the weakest section
 7. `pollock-qc` — run pre-submission health checks
+8. `humanizer` — finishing-stage de-AI pass in academic mode, section by section with terminology locked
 
 Section review skills remain available after a draft exists: `intro-review`, `theory-review`, `methods-review`, `results-review`, and `discussion-review`.
 
@@ -37,6 +39,7 @@ Default routes:
 - evidence narration, interactions, nulls, magnitude, robustness, or headline answer → `write-results`
 - whole-paper architecture or weakest-section diagnosis → `paper-review`
 - pre-submission health check → `pollock-qc`
+- AI tells, 模型腔, 去AI味, or pre-submission language polish at `finishing` → `humanizer` (academic mode; English manuscripts) / `humanizer-zh` (Chinese manuscripts)
 - existing Discussion draft → `discussion-review`
 - request to generate Discussion → explain that this stack intentionally has no standardized Discussion writing skill
 
@@ -44,6 +47,8 @@ Default routes:
 
 - Full-section generation must pass `paper-story-contract`; local fragments may use its labelled local-only bypass.
 - Do not polish a downstream section while its upstream promise remains structurally unstable.
+- `humanizer` runs only at `finishing` with a confirmed story contract, after structural QC; it changes expression, never structure, evidence, or terminology. Locked tokens from paper-state.yaml (`theory.constructs`, `methods.variables`, hypothesis labels) are do-not-touch inputs to any humanize pass.
+- After a heavy humanize pass, re-run alignment (`paper-review` or `pollock-qc prose`) before submission.
 - Keep outcome domain, main characters, storyline IDs, and evidence strength stable across sections.
 - When evidence is mixed or unstable, narrow the front-end promise rather than upgrading the claim.
 - Discussion review may test whether an existing draft delivers the evidence and promised reader shift, but it does not supply a template.

@@ -1,7 +1,8 @@
 ---
 name: paper-review
-description: "顶刊量化论文全稿总控审查：输入论文路径或全文，做故事架构审查与写作阶段诊断，识别最薄弱 Section 并自动路由到对应章节 review skill；不做逐段重写，不做 ✓/△/✗ 打分表（→ pollock-qc）。触发词：全稿审查、整篇诊断、最弱章节。"
-whenToUse: "当用户要求对整篇论文做全面诊断、评估故事架构是否成立、找出最薄弱的章节，或不知道先改哪一节、需要修改优先级排序时使用。触发词：全稿审查、整篇诊断、看看我论文整体怎么样、最弱的 section、先改哪里、故事架构审查、论文总控诊断、帮我看看这篇稿子"
+description: 顶刊量化论文全稿总控审查。输入论文文件路径或全文，执行故事架构审查、写作阶段诊断，识别最薄弱 Section，并自动路由到对应章节 skill。诊断与路由枢纽——不做逐段重写（→ 各章节 review skills），不做 ✓/△/✗ 打分表（→ pollock-qc）。基于 Pollock (2025) 和 MVP30 范文语料库。
+when_to_use: "全稿审查入口：识别最薄弱 Section 并路由到对应分节 review skill。"
+whenToUse: "Use when 用户提供整篇管理学量化论文需要全稿总控审查，诊断故事架构与写作阶段、识别最薄弱章节并路由到对应 review skill。Trigger words: 审查整篇论文, 全稿审查, paper review, 帮我看看这篇论文, 论文诊断, 最薄弱的章节"
 ---
 
 # Role

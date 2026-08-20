@@ -1,7 +1,8 @@
 ---
 name: results-review
-description: "顶刊论文 Results 专项审查：检查结果段落节奏、假设完整性和稳健性检验组织方式，基于 Pollock Ch07 和 MVP30 范文语料库。从零写结果用 write-results。"
-whenToUse: "当用户提供结果部分草稿要求审查、诊断或改写建议时使用。触发词：审查结果、results review、看看我的结果部分、结果部分检查、稳健性检验审查、结果汇报检查、投稿前查 results、帮我改结果部分"
+description: 顶刊论文 Results 专项审查。检查结果段落节奏、假设完整性、稳健性检验组织方式。基于 Pollock Ch07 和 MVP30 范文语料库。
+when_to_use: "已有 Results 草稿要审查（节奏/假设完整性/稳健性组织）时使用。"
+whenToUse: "Use when 用户提供已有的 Results 草稿需要专项审查，检查结果段落节奏、假设报告完整性与稳健性检验组织方式。Trigger words: 审查结果部分, 检查 results, results review, 结果段落检查, 稳健性检验审查, 帮我看看结果部分"
 metadata:
   version: 1.1.0
 ---
@@ -84,4 +85,3 @@ metadata:
 - 非显著结果必须检查是否排除了 type II error（统计效力）。
 - 每个建议都要具体到假设编号、表格编号、模型编号。
 - 交互效应必须检查：是否提供了简单斜率或边际效应图。
-

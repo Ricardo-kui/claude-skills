@@ -1,7 +1,8 @@
 ---
 name: write-methods
-description: "顶刊 Methods 论证结构生成器——输入设计类型输出带 [placeholder] 的可直接粘贴段落（M1-M10 槽位；覆盖 23+ 设计类型）。触发词：写方法、方法部分、样本选择、变量定义、变量测量、估计方法、识别策略、内生性处理、DiD/IV/生存分析/匹配的 Methods 段。审查草稿用 methods-review。"
-whenToUse: "当用户要求写方法部分、描述样本与数据来源、定义变量、说明估计方法或识别策略时使用。触发词：写方法、方法部分、样本选择、变量定义、变量测量、估计方法、识别策略、内生性处理、稳健性检验的写法、写 Methods 段"
+description: "顶刊 Methods 论证结构生成器——按设计类型输出带 [placeholder] 的段落（M1-M10 槽位，覆盖 23+ 设计类型）。Use when 写方法部分。触发词：写方法、样本选择、变量定义、识别策略、内生性处理。"
+when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别策略表述）时使用；结果正文归 write-results。"
+whenToUse: "Use when 用户要写管理学顶刊论文的 Methods 部分，包括样本、变量测量、模型设定、识别策略与内生性处理的论证段落。Trigger words: 写方法, 方法部分, methods section, 样本选择, 变量定义, 变量测量, 估计方法, 识别策略, 内生性处理, DiD, IV, 生存分析, 匹配"
 ---
 
 # Role

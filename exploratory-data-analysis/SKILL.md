@@ -1,7 +1,8 @@
 ---
 name: exploratory-data-analysis
-description: "对各类数据文件（尤其科学数据，200+ 格式）做全面探索性分析 EDA：自动识别文件类型，提取结构、质量指标与统计摘要，生成 markdown 报告并给后续分析建议。触发：探索/分析/总结一个数据文件、数据质量检查、看看文件里有什么。"
-whenToUse: "当用户给出一个数据文件路径并说“探索一下这个数据”“分析/总结这个文件”“看看数据的结构和内容”“检查数据质量/完整性”“这个文件适合做什么分析”“先出个 EDA 报告”时使用；覆盖化学、生信、显微、光谱、蛋白质组、代谢组等科学格式。"
+description: "Comprehensive EDA on scientific data files across 200+ formats — auto-detects type, reports structure, content, quality metrics, and downstream recommendations. Use when analyzing any scientific data file to understand it."
+when_to_use: "拿到数据文件先摸底（结构/内容/质量）时使用，输出分析前 markdown 报告。"
+whenToUse: "Use when the user provides a scientific data file in any of 200+ formats and wants its structure, content, and quality explored with a markdown report. Trigger words: explore this data file, EDA, analyze this dataset, data quality report, 数据探索, 看看这个数据文件, 分析这个数据"
 license: MIT license
 metadata:
     skill-author: K-Dense Inc.
@@ -442,4 +443,3 @@ Based on data characteristics, recommend:
 
 ### assets/
 - `report_template.md`: Comprehensive markdown template for EDA reports
-

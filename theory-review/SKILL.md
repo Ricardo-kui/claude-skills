@@ -1,7 +1,8 @@
 ---
 name: theory-review
-description: "顶刊论文 Theory / Hypotheses 专项审查：检查构念清晰度、why chain、假设形式和角色排序，基于 Pollock Ch06 和 MVP30 范文语料库。从零写理论用 write-theory。"
-whenToUse: "当用户提供理论或假设草稿要求审查、诊断或改写建议时使用。触发词：审查理论、看看我的 theory、假设审查、theory review、检查假设推导、why chain 检查、理论部分润色、帮我改理论"
+description: 顶刊论文 Theory / Hypotheses 专项审查。检查构念清晰度、why chain、假设形式和角色排序。基于 Pollock Ch06 和 MVP30 范文语料库。
+when_to_use: "已有 Theory/Hypotheses 草稿要审查（构念清晰度/why chain/假设形式）时使用。"
+whenToUse: "Use when 用户提供已有的 Theory 或 Hypotheses 草稿需要专项审查，检查构念清晰度、why chain、假设形式与角色排序。Trigger words: 审查理论部分, 检查 theory, theory review, 假设审查, 帮我看看理论推导, review my hypotheses"
 metadata:
   version: 1.2.0
 ---
@@ -122,4 +123,3 @@ Step 2 查 why chain 的**形式**（完整/深度/断裂）；本步查论证�
 - 如果 why chain 出现 "这就是常识" 但没有引用的断言，标记为 ✗。
 - 如果机制通过形式审查但过不了必要性门控三问（Q1 替代充分性 / Q2 可区分性 / Q3 反事实塌陷），必须在 Soundness 审查中指出——装饰性机制比缺失机制更伤可信度。
 - 反向检查：推导段声音若像"作者在回答想象中的审稿人"（每段承认-回应套路、协议术语泄漏进正文、防守句盖过主张句），按 `reasoning_soundness_protocol.md` §7 声音防火墙标记——**过度防御与防守缺失同样是声音问题**，顶刊论证的听觉中心是 claim 与机制推进。
-

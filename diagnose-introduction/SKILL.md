@@ -1,7 +1,8 @@
 ---
 name: diagnose-introduction
-description: "诊断研究想法的 Gap/Problematization 类型、Makadok 贡献维度、Hook 策略与 Four-Move 故事线对齐，基于 MVP30 范文输出结构化诊断报告（只诊断、不出模板）。当用户描述研究并想知道 gap 是否成立、贡献是什么、引言怎么定位时使用。"
-whenToUse: "当用户给出研究描述，要求诊断 gap 类型、贡献维度、Hook 策略，或写 Introduction 前做定位诊断时使用。触发词：诊断 gap、这个 gap 是什么类型、我的贡献是什么、诊断 introduction、gap 诊断、帮我看看研究缺口、Hook 怎么选"
+description: 根据用户的研究描述，诊断 Gap/Problematization 类型、Makadok 贡献维度、Hook 策略与 Golden-Biddle & Locke Four-Move 理论化故事线对齐。通过 MVP30 范文类比（28篇），输出供下游 Skill 直接消费的结构化报告。
+when_to_use: "写引言前的深度诊断——用户给出研究描述但尚未动笔，或要求诊断 gap 类型/hook 策略/故事线对齐时使用。"
+whenToUse: "Use when 用户描述了研究主题但还没写引言，需要先诊断 Gap 类型、Problematization 类型、Makadok 贡献维度与 Hook 策略。Trigger words: 诊断 gap, gap 类型, 贡献维度, hook 策略, 引言诊断, diagnose introduction, 这个 gap 是什么类型"
 ---
 
 # Role

@@ -1,7 +1,8 @@
 ---
 name: discussion-review
-description: "审查已有的管理学论文 Discussion 草稿——Introduction 贡献对齐、意外/混合发现处理、实践启示、边界条件与局限；只诊断并给修改建议，不从零生成 Discussion。当用户提供 Discussion 文本要求审查时使用。"
-whenToUse: "当用户提供 Discussion 草稿要求审查、挑毛病、给修改意见时使用。触发词：审查 discussion、讨论部分帮我看看、discussion review、讨论写得行不行、看看我的讨论部分、给讨论部分提修改意见、review discussion"
+description: "Review an existing management-journal Discussion for contribution alignment, mixed findings, implications, boundary conditions, limitations. Diagnoses and suggests revisions; does not draft new Discussion."
+when_to_use: "Use when the user supplies a Discussion draft for review. Not for generating a Discussion."
+whenToUse: "Use when 用户提供已有的管理学论文 Discussion 草稿，需要审查贡献对齐、意外发现处理、实践启示、边界条件与局限性，不从零生成 Discussion。Trigger words: 审查讨论部分, 检查 discussion, discussion review, 帮我看看讨论与结论, review my discussion"
 ---
 
 # Role
@@ -139,4 +140,3 @@ whenToUse: "当用户提供 Discussion 草稿要求审查、挑毛病、给修�
 - 每个建议都要具体到句子级别。
 - 必须检查：Introduction 承诺的 Makadok 贡献维度是否在 Discussion 中被逐一兑现。
 - 输出止于诊断与句级示例修改（示例仅用于说明诊断）；段落地图、填空骨架与整段替代文本归 write-* 技能。
-
