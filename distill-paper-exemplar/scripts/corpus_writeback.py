@@ -9,15 +9,21 @@ and --dry-run (default) prints unified diffs for review before --apply.
 
 Usage:
   python corpus_writeback.py --plan writeback_plan.introduction.yaml \
-      --blocks blocks.yaml --paper westphalzajac1995 --journal AMJ \
+      [--blocks blocks.yaml] --paper westphalzajac1995 --journal AMJ \
       --gap Incompleteness [--apply]
+
+Block source precedence (blocks.yaml is OPTIONAL — 2026-08-20 merge: write the
+variant once in candidates.yaml; precheck passes block_text/index_note through
+into the plan, so the executor can read everything from the plan):
+  1. blocks.yaml entry for the item (its file: override beats everything)
+  2. plan item's own block_text / index_note / file_override fields
+  gate ① anchor reassignment = set file_override in the plan item, or file:
+  in blocks.yaml.
 
 blocks.yaml:
   blocks:
     - name: hook_classic_debate_central_question   # must match plan item
-      file: "hooks/17-debate-reframing.md"          # OPTIONAL override — use
-                                                    # when gate ① reassigns the
-                                                    # anchor (lexical != taxonomic)
+      file: "hooks/17-debate-reframing.md"          # OPTIONAL override
       block_text: |                                 # {NEXT} -> assigned label
         ### 变体 {NEXT}：多文献中央问题型（westphalzajac1995 型）
         ...
