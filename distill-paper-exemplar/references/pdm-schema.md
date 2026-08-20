@@ -10,7 +10,10 @@ PDM 是 `distill-paper-exemplar` 唯一的跨层交接物：一篇论文一份�
 <论文MD同目录>/<citekey>.pdm.yaml        # PDM 根，仅主循环写
 <论文MD同目录>/<citekey>.pdm/            # L0 预处理工作目录（scripts/preprocess_l0.py 生成）
   fulltext.text-only.md                  # 剥除 base64 后的全文（唯一可读的“全文”）
-  l0_manifest.json                       # 切片检测报告（行区间、词数、unknown 节）
+  l0_manifest.json                       # 切片检测报告（行区间、词数、unknown 节、
+                                         # structure_type: classic-imrad | extended-intro
+                                         # | formal-model | unknown —— extended-intro 时
+                                         # theory 路由到引言切片，见 SKILL.md L0）
   sections/introduction.md               # 物化切片（text-only；L1 子任务的输入）
   sections/theory.md / methods.md / results.md / discussion.md
   sections/<section>.json                # 各分节 skill 的 JSON/报告（子任务写）
