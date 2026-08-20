@@ -172,6 +172,25 @@ def main() -> int:
     text_only.write_text(text, encoding="utf-8")
 
     spans = slice_sections(lines)
+
+    # structure classification (2026-08-20): not every paper is classic IMRaD.
+    # econ/finance style often runs a long introduction (lit review + theory +
+    # hypotheses embedded) straight into Data; flag it instead of forcing a
+    # theory slice that does not exist.
+    intro_words = len("\n".join(
+        lines[spans["introduction"]["start"] - 1 : spans["introduction"]["end"]]
+    ).split()) if "introduction" in spans else 0
+    theory_heading = spans.get("theory", {}).get("heading", "")
+    if "theory" in spans:
+        structure_type = ("formal-model" if re.search(r"model", theory_heading, re.I)
+                          else "classic-imrad")
+    elif "introduction" in spans and intro_words > 1200:
+        structure_type = "extended-intro"
+    elif {"introduction", "methods", "results"} <= set(spans):
+        structure_type = "classic-imrad"
+    else:
+        structure_type = "unknown"
+
     manifest = {
         "citekey": citekey,
         "source_md": str(src),
@@ -179,6 +198,13 @@ def main() -> int:
         "raw_bytes": raw_bytes,
         "text_only_bytes": len(text.encode("utf-8")),
         "images_replaced": n_images,
+        "structure_type": structure_type,
+        "structure_note": (
+            "long introduction without a separate theory section — theory/hypotheses "
+            "likely embedded in the introduction slice; route theory distillation to "
+            "sections/introduction.md with embedded=true"
+            if structure_type == "extended-intro" else ""
+        ),
         "section_slices": {},
         "sections_unknown": [b for b in BUCKET_ORDER if b not in spans],
     }
