@@ -281,14 +281,14 @@ def main() -> int:
         text = new_text.get(path) or target.read_text(encoding="utf-8")
         lines = text.split("\n")
         label = next_variant_label(lines)
-        body = spec["block_text"].replace("{NEXT}", label).strip("\n")
+        body = block_text.replace("{NEXT}", label).strip("\n")
         at = insertion_index(lines, item, target)
         lines[at:at] = ["", body, ""]
         new_text[path] = "\n".join(lines)
         messages.append(f"[{name}] {verdict} -> {target.name} 变体 {label} "
                         f"(inserted after line {at})")
 
-        note = (spec.get("index_note") or "").replace("{NEXT}", label)
+        note = index_note.replace("{NEXT}", label)
         messages.append(f"[{name}] " + update_index(corpus_root, target, note, new_text))
         if registry:
             messages.append(f"[{name}] " + update_registry(
