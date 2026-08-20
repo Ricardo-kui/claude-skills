@@ -164,17 +164,26 @@ def update_registry(registry: Path, stem: str, paper: str, journal: str,
     end = m.end() + nxt.start() if nxt else len(text)
     entry = text[start:end]
     entry2 = entry.replace(f"paper_count: {count}", f"paper_count: {count + 1}", 1)
-    paper_line = f"{sub[:-2]}- {paper} ({journal})\n"
-    pm = re.search(r"^( +)- .+$", entry2, re.M)
-    if pm:  # append after last papers list item (list items sit at sub level)
-        items = list(re.finditer(r"^%s- .+$\n?" % re.escape(sub[:-2]), entry2, re.M))
-        # papers items share indent with 'papers:' key + 0..2; take consecutive run
-        pos = items[-1].end()
-        # only safe when the run belongs to papers:; verify the last item is
-        # before gap_distribution/status if present
-        entry2 = entry2[:pos] + paper_line + entry2[pos:]
-    else:
+    # locate the papers: list and append after its last consecutive item
+    lines2 = entry2.split("\n")
+    papers_idx = next((i for i, l in enumerate(lines2)
+                       if re.match(r"^\s*papers:\s*$", l)), None)
+    if papers_idx is None:
         return f"REGISTRY: entry '{key}' has no papers list — SKIPPED papers append"
+    item_re = re.compile(r"^(\s*)- .+$")
+    last = papers_idx
+    for j in range(papers_idx + 1, len(lines2)):
+        if item_re.match(lines2[j]):
+            last = j
+        elif lines2[j].strip() == "":
+            continue
+        else:
+            break
+    if last == papers_idx:
+        return f"REGISTRY: entry '{key}' papers list empty — SKIPPED papers append"
+    ind_item = item_re.match(lines2[last]).group(1)
+    lines2.insert(last + 1, f"{ind_item}- {paper} ({journal})")
+    entry2 = "\n".join(lines2)
     gm = re.search(r"^(\s+)%s: (\d+)$" % re.escape(gap), entry2, re.M)
     if gm:
         entry2 = (entry2[:gm.start()]
