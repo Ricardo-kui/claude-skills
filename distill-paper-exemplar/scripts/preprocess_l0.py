@@ -155,29 +155,47 @@ def derive_citekey(path: Path) -> str:
     return stem[:60] or "paper"
 
 
+def work_root() -> Path:
+    env = os.environ.get("DISTILL_WORK_ROOT")
+    return Path(env) if env else Path.home() / ".claude" / "distill-work"
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="L0 preprocess: strip base64 + materialize section slices")
     ap.add_argument("source_md", help="path to paper-import full-text MD (read-only)")
     ap.add_argument("--citekey", default=None, help="PDM citekey (default: derived from filename)")
-    ap.add_argument("--outdir", default=None, help="PDM workdir (default: <paper_dir>/<citekey>.pdm/)")
+    ap.add_argument("--outdir", default=None,
+                    help="PDM workdir (default: <DISTILL_WORK_ROOT or ~/.claude/distill-work>/<citekey>.pdm/"
+                         " — outside the vault; use --outdir to keep it next to the paper)")
     ap.add_argument("--force", action="store_true", help="override a fresh PDM LOCK")
     ap.add_argument("--unlock", action="store_true", help="remove the PDM LOCK and exit")
+    ap.add_argument("--clean", action="store_true",
+                    help="remove the whole PDM workdir (implies --unlock) and exit")
     args = ap.parse_args()
 
     src = Path(args.source_md)
-    if not src.is_file():
+    citekey = args.citekey or (derive_citekey(src) if src.is_file() else None)
+    if not citekey:
         print(f"ERROR: not a file: {src}", file=sys.stderr)
         return 2
-    citekey = args.citekey or derive_citekey(src)
-    outdir = Path(args.outdir) if args.outdir else src.parent / f"{citekey}.pdm"
+    outdir = Path(args.outdir) if args.outdir else work_root() / f"{citekey}.pdm"
 
-    # Double-run guard: one PDM must never be distilled in two concurrent windows
-    # (2026-08 实测：双窗口把 L1–L3 整链路跑了两遍，是单次运行最大浪费源)。
     lock = outdir / "LOCK"
+    if args.clean:
+        if not (outdir / "l0_manifest.json").is_file() and not lock.is_file():
+            print(f"ERROR: {outdir} does not look like a PDM workdir — refusing to delete",
+                  file=sys.stderr)
+            return 2
+        shutil.rmtree(outdir, ignore_errors=True)
+        print(f"cleaned: {outdir}")
+        return 0
     if args.unlock:
         lock.unlink(missing_ok=True)
         print(f"unlocked: {lock}")
         return 0
+    if not src.is_file():
+        print(f"ERROR: not a file: {src}", file=sys.stderr)
+        return 2
     if lock.exists() and not args.force:
         import time
 
