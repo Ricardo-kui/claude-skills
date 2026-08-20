@@ -9,9 +9,10 @@ exclusivity: LOW
 source_papers:
   - mayo2021 (POM, 2021): Consequence cascade hook for product recalls
   - wu2025 (SMJ, 2025): "定义+后果清单型" — activism risk definition → 4 consequences → "Accordingly" literature transition
+  - chenganesanliu2009 / Chen_Ganesan_Liu_2009_JM (JM, 2009): "定义→频次→品牌级联→具名市值灾难多段型（变体D）"
 created: 2026-05-19
-updated: 2026-05-21
-source: Extracted from mayo2021 + wu2025 distill-introduction-exemplar
+updated: 2026-08-12
+source: Extracted from mayo2021 + wu2025 + chenganesanliu2009 distill-introduction-exemplar
 ---
 
 # 08-consequence-cascade — 后果清单型 Hook
@@ -72,6 +73,33 @@ source: Extracted from mayo2021 + wu2025 distill-introduction-exemplar
 **适用**: 社会运动、制度压力、监管行动等外部治理现象；Incompleteness 开场（后果清单建立重要性但不用反例挑战文献）
 
 **禁忌**: 不要在需要高能量张力时使用——这是低能量 Incompleteness Hook，不适合 Incommensurability
+
+---
+
+### 变体 D：定义→频次→品牌级联→具名市值灾难多段型（chen2009 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**模板**:
+> "[Negative marketplace incidents] are ubiquitous, ranging from [example set]. These incidents are [phenomenon label] ([citations]). They occur when [definitional criteria]. Often the consequence involves [focal action]. According to [authority], [frequency statistic]. Moreover, [action] is likely to occur more often because of [trend drivers]. [Phenomenon] can damage [consequence 1], [consequence 2], and [consequence 3] ([citations]). In the worst case, [action] could destroy investor confidence..., putting firm sustainability at risk. For example, [named firm A] [quantified stock collapse]; [named firm B] [existential outcome]."
+
+**来源**: Chen, Ganesan & Liu (2009, *Journal of Marketing*) / `chenganesanliu2009` / Chen_Ganesan_Liu_2009_JM, P1–P3
+
+**原文锚定**:
+> "For example, Merck's stock price plummeted from $45.07 to $33.00 in a single day on September 30, 2004, when Vioxx was recalled. Topps... went bankrupt after it was forced to recall 21.7 million pounds of frozen hamburger..."
+
+**关键特征**:
+- **多段 JM 级联（签名动作）**: 定义 → 频次/趋势 → 品牌/声誉损害清单 → 具名 firm-value 灾难收束——比变体 A（mayo dread-word 单段）与变体 C（wu 定义+Accordingly）段落更长、收束更货币化
+- **冷启动定义 + 权威频次**: 先建现象合法性，再升级 urgency
+- **具名市值灾难作 showing**: 用具体企业一日崩盘/破产把召回升格为 firm-sustainability 问题（与 Stakes 05 confirming 同源）
+- **Hook 不预告反直觉发现**: 只建 urgency；puzzle（策略→firm value）与 twist 留给后文
+
+**适用**: 产品伤害危机、召回、丑闻等负面市场事件；JM/JMR 中能量 Incompleteness 开场；需要把现象从消费者伤害推到股东价值受众
+
+**禁忌**:
+- 模板槽位禁止把专有名词/数字 verbatim 固化为可复用句——具名案例仅作锚定/showing，换领域须替换
+- 不要在 Hook 提前泄露"proactive 反而更负"的反直觉贡献
+- 单篇来源 → 仅作 optional `section_variant`
 
 ---
 

@@ -24,9 +24,10 @@ source_papers:
   - kim_lee2026 (SMJ, 2026): "Full-time validation + revealed-preference WTP + stage durability null + gendered early-stage advantage"
   - desjardine_li_shi_2025_amj (AMJ, 2025): "Primary contribution separated + 'several other streams' multi-stream contrast — most-prior-However-we-show per stream + call response embedded"
   - fini_jourdan_perkmann_2017 (AMJ, 2017): "Canonical-effect-offset — conditional negative flip offsetting the well-documented 'Matthew effect' + audience-specific nature of past appreciation indices (变体 E in three-layer-contribution.md)"
+  - chenganesanliu2009 / Chen_Ganesan_Liu_2009_JM (JM, 2009): "Audience-reinterpretation dark side — consumer benefit wisdom → investor hazard signal (变体T)"
 updated: 2026-08-12
 created: 2026-05-19
-source: Extracted from MVP30 narrative_analysis files + SKILL.md Makadok table + kim_lee2026
+source: Extracted from MVP30 narrative_analysis files + SKILL.md Makadok table + kim_lee2026 + chenganesanliu2009
 ---
 
 # Contribution Statements — Introduction 贡献声明句法
@@ -239,6 +240,8 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 **反模式提醒**:
 - 不要只展示暗面而不提供解决方案——审稿人会质疑研究的管理价值
 - 不要过度否定已有文献——"augment shortcomings" 比 "fundamentally flawed" 更安全
+
+**相关变体**: 若暗面核心是**同一策略被不同受众解读为不同信号**（而非行动伤害另一利益相关方的组织机制），改用 **变体 T：受众重解读型暗面（chen2009 型）**。
 
 ---
 
@@ -573,6 +576,35 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 
 **适用**: 方法论/测量贡献突出的论文（文本测量、NLP、计算方法、构念操作化创新）；三流贡献分别锚定三条不同文献的论文；JM/JOM/AMJ 文本分析类研究。
 **禁忌**: ① 方法论贡献必须真实创新（新测量/新方法），不可把常规做法包装成方法贡献；② 三流必须锚定三条不同文献，否则退回枚举型（变体 D malshe2015）；③ "micro-foundations/upgrade" 措辞必须兑现（本文确实从 discourse 降到 microlinguistics）。
+
+---
+
+### 变体 T：受众重解读型暗面（chen2009 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**功能节拍**: 反直觉主发现 → 对照 audience A 文献智慧 → audience B 信号解读机制 → 缓冲证据一致性 → 管理含义（对市场受众解读敏感）
+
+**模板**:
+> "Our key finding is that contrary to conventional wisdom, [strategy pole B] has a more negative effect on [stock returns] than [pole A], regardless of [controls]. This differs from [audience A] literature suggesting responsiveness attenuates damage to [brand/perception/intention]. In contrast, [audience B] may interpret [pole B] as a signal of [severe hazard and financial damage], which negatively influences firm value. Consistent with this explanation, [pole B] is used more by [less buffered firms]. Firms therefore need to be sensitive to how [market audience] might interpret [pole B]."
+
+**来源**: Chen, Ganesan & Liu (2009, *Journal of Marketing*) / `chenganesanliu2009` / Chen_Ganesan_Liu_2009_JM, P8
+
+**原文锚定**:
+> "In contrast, our findings indicate that investors may view proactive recall strategies differently from consumers, interpreting them as a signal of severe product hazard and financial damage... to the firm."
+
+**关键特征**:
+- **受众分裂解读（签名动作）**: 同一策略对 audience A（如消费者）可能有益，但对 audience B（如投资者）被读成严重危害信号——暗面来自**重解读**，不是行动直接伤害另一利益相关方
+- **与技巧 3（vadakkepatt otherwise-beneficial harm）判别**: 技巧3 = 有益组织行动→损害某 outcome 的组织机制暗面；本变体 = **同一行动、两套受众信号**——检索时必须区分
+- **反直觉措辞仅在贡献兑现层**: Gap 段保持 Incompleteness（遗漏交叉点）；"contrary to conventional wisdom" 不回溯污染 Gap 类型为 Inadequacy
+- **机制合同可讨论**: signaling / information interpretation 可在 Discussion 兑现；JM 可压缩进发现段，AMJ/SMJ 宜前移理论承诺
+
+**适用**: Mechanism + Phenomenon；策略/危机响应的资本市场定价；消费者/实验室智慧与投资者事件研究交叉；JM 首选
+
+**禁忌**:
+- 不得把本变体推荐为 Incommensurability 对垒模板——两受众解读差异是机制解释，不是两理论互斥
+- 若只有"otherwise-beneficial → harm stakeholder"而无受众分裂，走技巧3
+- 单篇来源 → 仅作 optional `section_variant`，不得升 core
 
 ---
 

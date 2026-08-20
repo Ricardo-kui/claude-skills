@@ -33,9 +33,10 @@ source_papers:
   - castellaneta_conti_kacperczyk2017 (SMJ, 2017): "Disclosure-requiring IPR progress may not transfer to non-disclosure forms; firm-value link missing"
   - kim_lee2026 (SMJ, 2026): "Temp/hypothetical SRO-recruitment evidence incomplete for full-time high-stakes + post-hiring durability"
   - ridge_hill_ingram_kolomeitsev_worrell2024 (AMJ, 2024): "Trait-valence asymmetry carve-out — UE studied self-aggrandizing traits, less attention to self-deflecting traits (paranoia)"
+  - chenganesanliu2009 / Chen_Ganesan_Liu_2009_JM (JM, 2009): "Dual-stream mutual omission at intersection — Stream A misses firm-value DV; Stream B misses strategy IV (变体AH)"
 updated: 2026-08-12
 created: 2026-05-18
-source: Extracted from MVP30 narrative_analysis files + mannor2016 + darby2025 distill + grewal2025 + paruchuri_andrus_sullivan2026 + castellaneta_conti_kacperczyk2017 + kim_lee2026
+source: Extracted from MVP30 narrative_analysis files + mannor2016 + darby2025 distill + grewal2025 + paruchuri_andrus_sullivan2026 + castellaneta_conti_kacperczyk2017 + kim_lee2026 + chenganesanliu2009
 ---
 
 # 01-despite-progress-unaddressed — 已有进展但遗漏 Tension
@@ -103,6 +104,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 | AE | as-clause 前提 + 惊讶单句 overlooked 型（desjardin | 惊讶修辞 | 信息中介/中间人/传导机制类研究；前提（中介塑造结果）是领域共识但"中介作为主动武器"未被检 | EMERGING（单篇来源；仅作 | DesJardine, Li & Shi (2025, *A |
 | AF | 外生条件清单→可操作杠杆缺口型（cutolo2024 型） |  | 已有条件/调节研究但条件全部外生（受众结构、制度流动、地位等）；缺口定位为"行动者可操控杠杆" | EMERGING（单篇来源；仅作 | Cutolo & Ferriani (2024, *Journal of Management*), P5 |
 | AG | 特质效价不对称缺口（ridge2024 型） |  | 宿主文献聚焦自我膨胀向特质、忽视自我规避向特质（前因/特质极性不对称；区别于 AB 的 outcome-valence） | EMERGING（单篇来源；仅作 | Ridge, Hill, Ingram, Kolomeitsev & Worrell (2024, AMJ), P3 |
+| AH | 双流互为遗漏交叉点（chen2009 型） | 双缺口 | Stream A 缺财务 DV、Stream B 缺策略 IV；交叉点（strategy × firm value）equivocal/unexamined | EMERGING（单篇来源；仅作 | Chen, Ganesan & Liu (2009, JM), P4–P6 |
 
 ## 句法模板
 
@@ -908,6 +910,35 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 ---
 
+### 变体 AH：双流互为遗漏交叉点（chen2009 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+**功能节拍**: Stream A 进展（audience-outcome）但缺 firm-value DV → Stream B 进展（event→firm value）但缺 strategy IV → 交叉点 remains equivocal / unexamined
+
+**模板**:
+> "[Stream A] provides insights into how [audience A] perceive [strategies], but has not studied effects on [firm financial value]. [Stream B] examines [event]→[firm value] with mixed results, yet has not considered alternative [strategies]. Thus the intersection—how [strategy pole] affects [stock returns]—remains [equivocal / unexamined], despite rising attention to strategy–stock-market linkages."
+
+**来源**: Chen, Ganesan & Liu (2009, *Journal of Marketing*) / `chenganesanliu2009` / Chen_Ganesan_Liu_2009_JM, P4–P6
+
+**原文锚定**:
+> "More important, when examining the impact of product recalls, the extant studies have not considered the role of alternative product-recall strategies."
+
+**关键特征**:
+- **双学术流互为遗漏（签名动作）**: 不是"学术+practitioner 双重证据"（变体 P），而是两学术流各自进展、各自缺对方的 IV/DV——交叉点才是 RQ
+- **具体 pain 超越 few-studies**: 遗漏钉在"策略×firm value"交叉点，而非笼统 "limited number"
+- **与 lit-turn 变体 F 配对**: lit-turn 提供 continuum + 顺序双段批判；本 Tension 变体压缩为交叉点钉子句
+- **Incompleteness 专用**: 两流各自正确，缺口是互补遗漏，不是透视错误
+
+**适用**: Incompleteness × Mechanism；营销实验室策略文献 × 金融/事件研究文献（或同类双学科对）；需与 `02-synthesized-coherence` 变体 F 或变体 D 配对
+
+**禁忌**:
+- 若删去交叉点具体遗漏句，会塌缩为 weak "limited number"
+- 不要写成两理论对垒（Incommensurability）
+- 单篇来源 → 仅作 optional `section_variant`
+
+---
+
 ## 组装规则
 
 ### 反模式提醒
@@ -945,7 +976,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 ## 风格画像
 
 > 以下风格特征是从使用本模板的多篇顶刊论文中聚合提取的。不是每篇论文都必须遵守，但偏离时应有明确理由。
-> 最后更新: 2026-08-05 | 聚合论文数: 16
+> 最后更新: 2026-08-12 | 聚合论文数: 17
 
 ### 语气光谱
 - **主语气**: cautious — 证据: "remains poorly understood" (wu2025), "has gone largely unaddressed" (pollock2015), "underdeveloped, and fundamental pieces are missing" (ahmadi2017)
@@ -963,11 +994,13 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 - [gamache_etal2020]: "三层递进 Incompleteness: general→specific gap→why 层面根本问题" — Stakes 嵌入 Tension ("This omission is critical, as...")
 - [cui_yang_vertinsky_smj]: "First... remains poorly understood / Second... while overlooking... / Third... while largely overlooking" — 三重维度并列缺口，每个维度用不同 Incompleteness 标志性语言
 - [kim_lee2026]: "important but incomplete evidence" + strategic-theory stakes + underexplored (setting + stage) — 低 stakes 证据库外推缺口
+- [chenganesanliu2009]: "Stream A misses firm-value DV / Stream B misses strategy IV → intersection unexamined" — 双流互为遗漏交叉点
 
 ### 刻意回避
 - [ahmadi2017]: avoids independent Tension paragraph — Tension 与 Literature Turn 共段，适合 JMS 压缩风格
 - [ahmadi2017]: avoids strong gap language ("fundamentally wrong", "overlooked") — 始终保持 Incompleteness 边界（"underdeveloped" 而非 "misunderstood"）
 - [kim_lee2026]: avoids claiming prior temporary/hypothetical findings are wrong — only incomplete for theory-critical high-stakes settings
+- [chenganesanliu2009]: avoids Incommensurability framing for dual-stream gap — mutual omission, not theory duel
 
 ### 质量标记
 - **最值得模仿**: 变体 D（多重原因论证型 malshe2015）— "This is surprising for [N] reasons" 将缺口从观察到论证升级；变体 AD（Kim–Lee）— 用战略理论抬升为何高 stakes 情境才算完整

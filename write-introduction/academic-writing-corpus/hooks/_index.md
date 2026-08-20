@@ -33,7 +33,7 @@
 | **文献共识盲点 Hook** | `05-literature-consensus-blindspot` | "While important... considers... broadly" | ROBUST (≥5 papers) | gamache2020 (SMJ), shipilov2020 (SMJ), shen2022 (JOM) |
 | **范式挑战 Hook** | `06-paradigm-challenge` | "According to conventional view... In reality, however..." | ROBUST (≥6 papers) | zhou2017 (ASQ), hahl2017 (ASR), gamache2023 (SMJ) |
 | **跨学科类比 Hook** | `01-cross-disciplinary-analogy` | 领域A概念 → 领域B类似问题 | VERIFIED (≥2 papers) | pollock2015 (ASQ), malshe2015 (JM) |
-| **后果清单 Hook** | `08-consequence-cascade` | 负面事件递进式后果清单 | VERIFIED | mayo2021 (POM) |
+| **后果清单 Hook** | `08-consequence-cascade` | 负面事件递进式后果清单（含变体D：定义→频次→品牌级联→具名市值灾难多段型，chen2009，EMERGING） | VERIFIED | mayo2021 (POM), wu2025 (SMJ), chenganesanliu2009 (JM) |
 | **"Contrary to Belief" Hook** | `12-contrary-to-belief` | 打破普遍认知的制度事实（含变体C：直觉反转保留共识型 habel2016 — "despite its intuitive appeal, this logic may be misleading"） | VERIFIED | eilert2017 (JM), darby2023 (MSOM), habel2016 (JM) |
 | **正向特质阴暗面 Hook** | `24-positive-trait-dark-side` | 正向 CEO 特质 → 反直觉负面组织后果 | EMERGING (1p) | chung_low_rust_2022_jams (JAMS) |
 
