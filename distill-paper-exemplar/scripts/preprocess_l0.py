@@ -36,7 +36,8 @@ SECTION_PATTERNS = {
         r"^identification\b", r"materials and methods", r"^methodology\b",
     ],
     "results": [r"^results?\b", r"^findings?\b", r"^analys(e|i)s\b", r"empirical results"],
-    "discussion": [r"^discussion\b", r"^conclusions?\b", r"discussion and conclusion"],
+    "discussion": [r"^discussion\b", r"^conclusions?\b", r"discussion and conclusion",
+                   r"discussion\b", r"^extensions?\b", r"^concluding"],
 }
 BUCKET_ORDER = ["introduction", "theory", "methods", "results", "discussion"]
 
