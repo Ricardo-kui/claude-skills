@@ -2,7 +2,6 @@
 name: write-results
 description: >-
   顶刊 Results 写作与深度修订技能——读取当前草稿、修订记录、Methods 和实际表格后，按假设顺序与证据问题组织 Results，并生成连贯的段落、小标题、幅度解释和诚实的支持判断；也可从零输出带 [placeholder] 的 R1–R9 骨架，覆盖 19 种结果类型。Use when writing, revising, restructuring, or paragraph-level rewriting the Results section of a management-journal paper。触发词：写结果、修改/重写 Results、结果部分、稳健性检验、样本选择、内生性、机制、异质性、平行趋势、交互效应、经济显著性、marginal effect、系数解读、假设检验汇报。Not for: 只审查不改写（→ results-review）；蒸馏范文（→ distill-results-exemplar）。
-whenToUse: "当用户要求写结果部分、汇报回归或假设检验结果、组织稳健性检验、解读系数或经济显著性时使用。触发词：写结果、结果部分、汇报回归结果、稳健性检验、平行趋势、交互效应、经济显著性、系数解读、假设检验汇报"
 ---
 
 # Role
