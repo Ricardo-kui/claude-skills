@@ -232,7 +232,8 @@ def update_index(corpus_root: Path, target: Path, note: str,
 def main() -> int:
     ap = argparse.ArgumentParser(description="Execute a confirmed writeback plan")
     ap.add_argument("--plan", required=True)
-    ap.add_argument("--blocks", required=True)
+    ap.add_argument("--blocks", default=None,
+                    help="optional; plan items may carry block_text/index_note directly")
     ap.add_argument("--paper", required=True, help="citekey")
     ap.add_argument("--journal", required=True)
     ap.add_argument("--gap", default="Incompleteness",
