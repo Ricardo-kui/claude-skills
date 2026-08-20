@@ -159,6 +159,7 @@ def main() -> int:
             return 3
     outdir.mkdir(parents=True, exist_ok=True)
     lock.write_text(f"pid={__import__('os').getpid()}\n", encoding="utf-8")
+    sections_dir = outdir / "sections"
     sections_dir.mkdir(parents=True, exist_ok=True)
 
     raw = src.read_text(encoding="utf-8", errors="replace")
