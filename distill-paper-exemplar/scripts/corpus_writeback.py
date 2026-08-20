@@ -197,7 +197,9 @@ def update_index(corpus_root: Path, target: Path, note: str,
                  new_text: dict) -> str:
     """Append an index note to the row mentioning the target file stem.
     Recognized rows end with '） |' (parenthetical variant list) — insert before
-    the closing paren; otherwise append '；<note>' before the trailing ' |'."""
+    the closing paren; otherwise append '；<note>' before the trailing ' |'
+    (lands in the LAST cell of multi-column tables — approximate; the dry-run
+    diff is the review surface, fix placement there if it matters)."""
     if not note:
         return "INDEX: no index_note given — SKIPPED"
     for idx in sorted(target.parent.glob("_index.md")) + sorted(target.parent.glob("INDEX.md")):
