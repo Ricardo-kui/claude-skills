@@ -8,10 +8,19 @@ PDM 是 `distill-paper-exemplar` 唯一的跨层交接物：一篇论文一份�
 
 ```
 <论文MD同目录>/<citekey>.pdm.yaml        # PDM 根，仅主循环写
+<论文MD同目录>/<citekey>.pdm/            # L0 预处理工作目录（scripts/preprocess_l0.py 生成）
+  fulltext.text-only.md                  # 剥除 base64 后的全文（唯一可读的“全文”）
+  l0_manifest.json                       # 切片检测报告（行区间、词数、unknown 节）
+  sections/introduction.md               # 物化切片（text-only；L1 子任务的输入）
+  sections/theory.md / methods.md / results.md / discussion.md
   sections/<section>.json                # 各分节 skill 的 JSON/报告（子任务写）
   sections/<section>.report.md           # （可选）该节 skill 的 markdown 报告
   feedback/<section>.feedback.yaml       # 该节 skill_design_feedback（子任务写）
 ```
+
+**铁律**：原始 paper-import MD 含 base64 图片（单文件 44–89% 字节、单行可达 100KB），
+任何 distill 代理都不得直接读取；一律经 `fulltext.text-only.md` 与 `sections/*.md`。
+切片检测保守：识别不出的节在 manifest 标 `unknown`，主循环人工补齐，不猜。
 
 并行分发时，子任务只写自己的 `sections/*` 与 `feedback/*`；主循环在每节完成后把
 `status`/`writeback`/`identity` 合并进根文件。**任何进程不得同时改写根文件。**
