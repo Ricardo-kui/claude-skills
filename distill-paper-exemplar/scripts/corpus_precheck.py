@@ -174,8 +174,13 @@ def main() -> int:
         target = find_target_file(corpus_root, cand.get("target"))
 
         skeleton_tokens = tokenize(cand.get("skeleton_text", "") or name)
-        # dedup scan: compare against blocks of the target file first, else all corpus files
-        scan_files = [target] if target else sorted(corpus_root.rglob("*.md"))
+        # dedup scan: compare against blocks of the target file/dir first, else all corpus files
+        if target is None:
+            scan_files = sorted(corpus_root.rglob("*.md"))
+        elif target.is_dir():
+            scan_files = sorted(target.rglob("*.md"))
+        else:
+            scan_files = [target]
         best = {"file": None, "heading": None, "jaccard": 0.0, "containment": 0.0,
                 "line": None, "block_text": None}
         for f in scan_files:
@@ -204,8 +209,16 @@ def main() -> int:
                              or band_from_indexes(corpus_root, target))
 
         anchor = None
-        if verdict == "ADD" and target is not None:
-            blocks = load_blocks(target)
+        # for ADD: anchor in the target file, or (dir/unspecified target) in the
+        # best-match file when similarity is non-trivial
+        anchor_file = None
+        if verdict == "ADD":
+            if target is not None and target.is_file():
+                anchor_file = target
+            elif best["file"] and best["containment"] >= 0.10:
+                anchor_file = Path(best["file"])
+        if anchor_file is not None:
+            blocks = load_blocks(anchor_file)
             # prefer anchoring after the last variant/pattern block, not a trailing
             # boundaries/anti-pattern section
             variant_blocks = [b for b in blocks
@@ -213,7 +226,7 @@ def main() -> int:
                               and not re.search(r"反模式|诚实边界|anti-?pattern|boundar", b["heading"], re.I)]
             anchor_block = (variant_blocks or blocks)[-1] if blocks else None
             if anchor_block:
-                anchor = {"file": str(target),
+                anchor = {"file": str(anchor_file),
                           "insert_after_line": anchor_block["start_line"]
                           + len(anchor_block["text"].splitlines()) - 1,
                           "after_heading": anchor_block["heading"][:80]}
