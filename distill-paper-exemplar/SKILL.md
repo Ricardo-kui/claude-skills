@@ -98,8 +98,8 @@ L4 反馈收敛        核对 design_feedback 已持久化；报告三路输出�
 
 ## 已知摩擦与边界
 
-- intro/theory 的 SKILL.md 尚未同步 v1.9.0 重构且含重复块（完成判据/选材Gate/原文锚定各
-  出现两次）——编排时以其 references/ 与协议字段为准，不依赖 SKILL.md 排版。
+- ~~intro/theory 的 SKILL.md 含重复块~~（2026-08-20 已修：三个重复块各删一份；T6 输出块与
+  Phase 1.5 t6_closure_quality 的内部重复已合并）。
 - theory 无 `--output-format=json` 契约——其 section 条目以 yaml profile/报告路径承接。
 - 全自动不可行且不追求：gate ①/② 是人审闸，属防抄写纪律。
 - 同一篇论文被多次蒸馏时，以新 PDM 为准；若已有旧 PDM，续跑而非重造（见 schema 状态机）。

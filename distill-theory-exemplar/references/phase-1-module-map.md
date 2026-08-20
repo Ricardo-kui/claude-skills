@@ -76,20 +76,10 @@ phase_1_module_map:
     paragraph_range: "[第X段–第Y段]"
     summarizes_framework: true/false
     previews_empirical_strategy: true/false
-    # v1.3.0 修订：write-theory v3.3.0 已取消独立 T6 强制要求。此处改为提取论文实际使用的收束策略（局部收束 / 嵌入框架总结 / 独立 Closure 段 / Discussion 开篇整合）。
-    knot_fully_tied: true/false  # 是否明确或暗示 "knot fully tied"
-    framework_locking: true/false  # 是否将分散假设整合为统一理论叙事
-    logic_explicit: true/false  # 是否用 1-2 句话说明 central knot 已被 fully tied
-    denouement_preview: true/false  # 是否预告 Results 将如何 unravel the knot
-    voice_check:  # T6 Voice 检查
-      uses_first_person_accountable: true/false  # "In sum, we have argued that..."
-      no_passive_voice: true/false
-      read_aloud_natural: true/false
-    institutional_shock_extra:  # 制度冲击类研究的额外检查（如适用）
-      previews_identification_strategy: true/false  # 是否预告 Results 将通过什么识别策略 unravel the knot
-      implies_theory_identification_link: true/false  # 是否暗示识别策略的理论基础已在 Theory 建立
-      survival_temporal_preview: true/false  # 如果使用生存分析：是否预告时间动态将是 Results 核心叙事
-    narrative_energy: "[高/中/低]"  # T6 结尾能量级应 ≥ Theory 最后假设推导段能量级
+    # v1.3.0：write-theory v3.3.0 已取消独立 T6 强制要求；记录实际收束策略
+    # （局部收束 / 嵌入框架总结 / 独立 Closure 段 / Discussion 开篇整合）。
+    # T6 扩展检查（knot_fully_tied / voice_check / institutional_shock_extra /
+    # narrative_energy）见 Phase 1.5 的 t6_closure_quality 输出块，此处不重复。
 actual_module_sequence: ["T1", "T2", "T3", "T4", "T5", "T6"]
 deviation_from_standard: "T2 在 T1 之前; T5 嵌入 T3 第2步"
 ```
