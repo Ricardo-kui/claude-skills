@@ -33,6 +33,8 @@ L1 分节蒸馏 ×4    默认串行分发 distill-introduction/theory/methods/re
                  输入 = PDM 切片文件（非全文）；每节 → section JSON/报告 + feedback
                  → corpus_precheck.py 产出 writeback plan（选带/查重/锚点，确定性）
                  → 按 plan 走写回预览门禁（gate ①；--auto-write 时按 plan 直写）
+                 → corpus_writeback.py 执行确认后的 plan（dry-run diff→--apply；
+                   自动续变体编号、更新 _index/registry、SKIP 拒写）
                  → write-* corpus
 L2 跨节一致性      由本 skill 执行（读 references/cross-section-coherence.md）
    （本层新建）    从 PDM 四节 identity 交叉校验 → ok | flagged，只标记不擅改

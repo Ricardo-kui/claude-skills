@@ -18,6 +18,47 @@
 > **--auto-write**：默认仍需 gate ① 人审确认 plan 后写回；调用方显式传 `--auto-write`
 > （或批量模式用户预先授权）时，可按 plan 直接写回 ADD/EXTEND 项（**SKIP 项永不写回**），
 > 并在写回报告中标注 `auto-write: plan <plan路径>`。
+>
+> **写回执行（gate ① 确认后，2026-08-20 起）**：用确定性执行器，不手改语料——
+> `python ../distill-paper-exemplar/scripts/corpus_writeback.py --plan <plan> --blocks <blocks.yaml> --paper <citekey> --journal <刊名> --gap <Gap类型>`
+> 默认 dry-run 打印全部 diff 供复核，`--apply` 才落盘。执行器负责：插变体块（`{NEXT}`
+> 占位符自动续编号/字母）、`_index.md` 行注、`_evidence_registry` 计数与 papers 追加、
+> SKIP 项拒绝写回。gate ① 若把锚点改判到别的文件（plan 的 `anchor_candidates` top-3
+> 里选），在 blocks.yaml 该项加 `file: "<相对路径>"` 覆盖即可。
+>
+> blocks.yaml 格式：
+> ```yaml
+> blocks:
+>   - name: <skeleton_id，与 plan item 对应>
+>     file: "<可选：gate ① 改判的目标文件，corpus 相对路径>"
+>     block_text: |        # 变体块全文；{NEXT} 会被替换为分配的编号/字母
+>       ### 变体 {NEXT}：<名称>（<citekey> 型）
+>       ...
+>     index_note: "变体 {NEXT}：<一句话特征>，<citekey>，EMERGING"
+> ```
+> registry/index 找不到条目时执行器只报告不猜——按报告手工补登记。
+>
+> **`_update_design_feedback.py` 输入 schema**（2026-08-20 实测文档化，勿再试错）：
+> ```yaml
+> skill_design_feedback:
+>   observations:
+>     - defect_id: <kebab-case 唯一 id>
+>       classification: corpus_gap | routing_defect | validator_defect
+>                       | output_contract_defect | schema_defect | stage_gate_defect
+>       current_rule: "<现状规则描述>"
+>       target: "write-introduction/<相对路径>"   # 必须在 write-introduction 内且文件存在
+>       diagnosis: "<诊断>"
+>       risk: low | medium | high                  # 默认 medium
+>       proposed_change: {action: ..., summary: ...}
+>       evidence:                                   # 注意：papers 必须嵌在 evidence: 下
+>         papers:
+>           - id: <citekey>
+>             journal: <刊名>
+>             evidence_anchor: "<原文锚点>"
+>             evidence_quality: full_text_verified | functional_summary | metadata_only
+> ```
+> 非 corpus_gap 类另需 `rule_excerpt`（规则原文摘录）与 `regression_cases`
+> （positive/preservation 各含 prompt + expected_invariants）。先 `--dry-run` 验证再实写。
 
 > Imported from the upstream protocol. Resolve relative resource paths from this reference file's directory.
 

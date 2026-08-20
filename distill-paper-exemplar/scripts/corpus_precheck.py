@@ -21,7 +21,9 @@ candidates.yaml:
 
 Plan output: per candidate -> band (gap/薄弱/quiet), dedup verdict
 (SKIP at jaccard>=0.33 / EXTEND / ADD) with best match, registry matches,
-and insert anchor (file + line of last variant heading).
+insert anchor (file + line of last variant heading), and anchor_candidates
+(top-3 lexical matches — 2026-08-20 实测词法最佳命中≠主题归属，gate ①
+人审应在此清单中选定归属文件后再写回）。
 """
 from __future__ import annotations
 
@@ -183,6 +185,7 @@ def main() -> int:
             scan_files = [target]
         best = {"file": None, "heading": None, "jaccard": 0.0, "containment": 0.0,
                 "line": None, "block_text": None}
+        top3: list[dict] = []  # for gate-① human review: lexical best != taxonomic home
         for f in scan_files:
             if f is None or f.name.startswith(("_", "INDEX")):
                 continue
@@ -190,10 +193,14 @@ def main() -> int:
                 bt = tokenize(blk["text"])
                 score = jaccard(skeleton_tokens, bt)
                 cover = containment(skeleton_tokens, bt)
+                entry = {"file": str(f), "heading": blk["heading"][:80],
+                         "jaccard": round(score, 3), "containment": round(cover, 3),
+                         "line": blk["start_line"]}
+                top3.append(entry)
+                top3.sort(key=lambda e: -max(e["jaccard"], e["containment"]))
+                del top3[3:]
                 if max(score, cover) > max(best["jaccard"], best["containment"]):
-                    best = {"file": str(f), "heading": blk["heading"][:80],
-                            "jaccard": round(score, 3), "containment": round(cover, 3),
-                            "line": blk["start_line"], "block_text": blk["text"]}
+                    best = {**entry, "block_text": blk["text"]}
         if best["jaccard"] >= JACCARD_SKIP_THRESHOLD or best["containment"] >= 0.60:
             verdict = "SKIP"
         elif target is not None and (best["jaccard"] >= 0.20 or best["containment"] >= 0.40):
@@ -243,6 +250,7 @@ def main() -> int:
             "band_evidence": band_ev,
             "dedup": {"verdict": verdict, "threshold": JACCARD_SKIP_THRESHOLD,
                       "best_match": {k: v for k, v in best.items() if k != "block_text"}},
+            "anchor_candidates": top3,
             "registry_matches": registry_matches(registry, args.citekey,
                                                  cand.get("keywords", []) or []),
             "anchor": anchor,

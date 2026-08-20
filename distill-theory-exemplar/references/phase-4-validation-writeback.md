@@ -18,6 +18,19 @@
 > **--auto-write**：默认仍需 gate ① 人审确认 plan 后写回；调用方显式传 `--auto-write`
 > （或批量模式用户预先授权）时，可按 plan 直接写回 ADD/EXTEND 项（**SKIP 项永不写回**），
 > 并在写回报告中标注 `auto-write: plan <plan路径>`。
+>
+> **写回执行（gate ① 确认后，2026-08-20 起）**：用确定性执行器，不手改语料——
+> `python ../distill-paper-exemplar/scripts/corpus_writeback.py --plan <plan> --blocks <blocks.yaml> --paper <citekey> --journal <刊名> --gap <Gap类型>`
+> 默认 dry-run 打印全部 diff 供复核，`--apply` 才落盘（插块自动续 `{NEXT}` 编号、
+> _index 行注、registry 计数、SKIP 拒绝）。gate ① 改判锚点文件时在 blocks.yaml 加
+> `file:` 覆盖。完整 blocks.yaml 格式与示例见
+> `../../distill-introduction-exemplar/references/phase-4-validation-writeback.md` 头部。
+>
+> **`_update_design_feedback.py` 输入 schema**：observations 必填
+> `defect_id / classification / current_rule / target / diagnosis`；papers 必须嵌在
+> `evidence:` 下（`evidence.papers: [{id, journal, evidence_anchor, evidence_quality}]`，
+> quality ∈ full_text_verified|functional_summary|metadata_only）；非 corpus_gap 类另需
+> `rule_excerpt` + `regression_cases`。先 `--dry-run` 再实写。
 
 > Imported from the upstream protocol. Resolve relative resource paths from this reference file's directory.
 
