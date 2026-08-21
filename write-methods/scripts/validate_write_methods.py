@@ -60,7 +60,7 @@ def check_frontmatter(text: str, errors: list[str]) -> None:
         if line and not line.startswith((" ", "\t", "#")) and ":" in line:
             keys.append(line.split(":", 1)[0].strip())
     required = {"name", "description"}
-    optional = {"whenToUse"}  # 多端部署自动触发字段（2026-08-19 起全库标配，见 CLAUDE 记忆）
+    optional = {"whenToUse", "when_to_use"}  # 多端部署自动触发字段（whenToUse 2026-08-19 标配；when_to_use 由 frontmatter 标准化引入）
     if not required.issubset(keys) or set(keys) - required - optional:
         errors.append(f"SKILL.md frontmatter keys must be name/description (whenToUse optional); found {keys}")
     if not re.search(r"^name:\s*write-methods\s*$", match.group(1), re.MULTILINE):
