@@ -106,11 +106,13 @@
 !handoff/
 !handoff/**
 
-# Book-to-skill distilled routers (Miles 2012 / Huntington-Klein 2025)
+# Book-to-skill distilled routers (Miles 2012 / Huntington-Klein 2025 / Wooldridge 2020)
 !miles-management-organization-theories/
 !miles-management-organization-theories/**
 !huntington-klein-causal-design/
 !huntington-klein-causal-design/**
+!wooldridge-econometrics/
+!wooldridge-econometrics/**
 # Codex-only agent config: keep locally (Codex still reads it), exclude from repo
 miles-management-organization-theories/agents/
 huntington-klein-causal-design/agents/
