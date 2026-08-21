@@ -4,7 +4,7 @@
 
 Purpose: discover the paper's question, knot, characters, and feasible evidence.
 
-- Allowed: diagnosis, story contract, evidence inventory, competing formulations.
+- Allowed: diagnosis, story contract, evidence inventory, competing formulations.  # 结果多而主线散时按 `candidate-storylines.md` 枚举并排序 2–4 条候选主线，再收敛到 central_knot
 - Not allowed: polished full-section prose.
 - Exit condition: a defensible provisional contract and an explicit evidence plan.
 
