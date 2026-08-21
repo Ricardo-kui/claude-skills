@@ -53,6 +53,8 @@ whenToUse: "Use when 用户提供已有的管理学论文 Discussion 草稿，�
 | **Meandering** | 缺乏焦点，东拉西扯 | 每段是否只服务一个论点？ | ✓/△/✗ |
 | **Overreaching** | 声称超出数据支持的范围 | 贡献声明是否有证据支撑？ | ✓/△/✗ |
 
+> **Overreaching 判定锚**：用 7 级 claim ladder（`../write-results/references/claim-calibration.md`）逐条核——Discussion 里每个 contribution 的主张层级必须 ≤ 前文证据层级（L1 观察 → L2 关联 → L3 预测 → L4 因果效应 → L5 机制 → L6 普适 → L7 应用）。Results 只支持 L2/L3 的，Discussion 不得升级为 L5/L6；L7 应用主张须指明具体决策者而非泛泛"managers"。
+
 ### Step 2.5: Discussion 正向标准检查（Shepherd & Wiklund, 2020; Simsek & Li, 2022）
 
 在识别缺陷的基础上，检查 Discussion 是否达到以下正向标准：

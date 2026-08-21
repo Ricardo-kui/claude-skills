@@ -88,8 +88,6 @@ def main() -> int:
     theory = read("write-theory/SKILL.md")
     methods = read("write-methods/SKILL.md")
     results = read("write-results/SKILL.md")
-    retired = read("write-discussion/SKILL.md")
-    retired_agent = read("write-discussion/agents/openai.yaml")
     discussion_review = read("discussion-review/SKILL.md")
 
     require("Introduction exposes front-end and alignment modes", "--mode=introduction|front-end|align" in intro)
@@ -105,8 +103,10 @@ def main() -> int:
     require("Results has four honest resolution states", "supported | mixed | unsupported | unresolved" in results)
     require("Results identifies climax and falling action", "climax" in results and "falling action" in results)
     require("Preparing stage prevents Results prose", "`preparing` 不生成 Results" in results)
-    require("Discussion writer is a non-generative boundary", "must not" in retired and "do not draft" in retired)
-    require("Discussion writer cannot invoke implicitly", "allow_implicit_invocation: false" in retired_agent)
+    require(
+        "Discussion writer is retired from active skills",
+        not (PACKAGE_ROOT / "write-discussion").exists(),
+    )
     require("Discussion review does not route to writer", "$write-discussion" not in discussion_review)
 
     for skill in (

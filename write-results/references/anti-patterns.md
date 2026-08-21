@@ -26,6 +26,7 @@
 - **四拍机械化**：把四个证据功能固化为四句同构句，导致假设段重复、生硬；四拍可以合并但不能缺失
 - **历史语言锁复发**：用户明确禁用的词、构念或句法在下一轮重新出现；默认禁止把 `model` 及其变体用作动词
 - **基准支持冒充总体稳定**：基准显著后仍存在翻号、失显著或敏感性，却用 `robust support`、`uniformly robust` 收口
+- **主张层级越级**：设计只支持关联（L2）却写机制（L5）或普适（L6）语句；或 claim 句缺范围/证据锚/不确定性，未用四件套句式（`Strong claim + scope + evidence basis + remaining uncertainty`）——校准见 `claim-calibration.md`
 - **范文架构压过本稿证据**：复制范文的章节或句子骨架，而未按当前样本、估计量、假设和用户裁定调整
 - **元报告替代事实**：用 `we report honestly`、`we disclose`、`for transparency`、`we do not present this as` 等话语评价作者自己的披露行为，而不直接陈述结果或限制
 - **旧建议复活**：新裁定已宣布防御性写作、元报告 wrapper 或某个“标志性句式”作废，后续却因历史记录或 corpus 命中而重新使用

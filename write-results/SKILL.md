@@ -106,8 +106,9 @@ whenToUse: "Use when 用户要新写、修订或重写管理学顶刊论文的 R
 6. **事实直陈默认语态**：先直接报告方向、显著性/不确定性和幅度；只保留一句完成必要解释，再把 verdict 绑定到假设或理论。不要用“我们诚实披露”“为了透明”“我们并不把它表述为”等自我评价式 wrapper 代替限制本身。
 7. **语言锁定**：主动读取用户禁用词和现稿术语表；默认不把 `model/modeled/modelled/modeling/modelling` 用作动词，改用 `estimate`、`re-estimate`、`analyze`、`specify` 或直接说明 unit of analysis。不得重新发明 Methods 已删除的上位构念。
 8. **因果语言强制词汇表**（按设计家族，与 write-methods 同表）：面板 OLS→"associated with"（禁 causes/leads to）；DiD→"effect of"（平行趋势支持后）；IV→"effect"（识别 preview 后，避免 causes）；非线性→边际效应/概率转述；生存分析→"changes the hazard of"；实验→"caused"。
+9. **主张层级校准**（claim level ≤ evidence level）：写 R3 claim 句 / R5 经济显著性 / Discussion 面向的 implication 句前读 `references/claim-calibration.md`——7 级 claim ladder（L1 观察 → L2 关联 → L3 预测 → L4 因果效应 → L5 机制 → L6 普适 → L7 应用）、过度声明动词表与强主张四件套句式（`Strong claim + scope + evidence basis + remaining uncertainty`）。与第 8 条互补：第 8 条按设计家族管动词，本条按主张层级管范围与强度；设计只支持 L2 就不得写 L5/L6 语句。
 
-**完成判据**：兑现映射五检查点全过；因果语言与估计器匹配；四项证据功能完整且包含幅度。
+**完成判据**：兑现映射五检查点全过；因果语言与估计器匹配；四项证据功能完整且包含幅度；claim 层级未越过证据层级（claim-calibration L 层匹配）。
 
 ## 生成后检查
 

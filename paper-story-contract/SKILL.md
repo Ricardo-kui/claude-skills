@@ -33,6 +33,7 @@ Defaults:
 2. If a canonical `story` block exists, validate it with `scripts/validate_story_contract.py`.
 3. If it is absent, inspect legacy Introduction fields using the migration map in `references/schema.md`.
 4. Identify the theme question, central knot, theoretical stakes, main and supporting characters, storylines, promised resolutions, reader shift, evidence state, and stage.
+4a. When `--stage=preparing` (or inferred preparing) and the project has many results but no settled main line: run `references/candidate-storylines.md` — enumerate 2–4 candidate story spines from the project's own material (protagonist / antagonist / turn), rank them, and downgrade chronology, hidden-assumption, and multiple-equal-contribution candidates — before committing to the knot. Candidate spines are project-owned variants, never exemplar frames.
 5. Apply `references/story-integrity-gate.md`. Test whether the theme, knot, characters, storylines, and promised payoff are grounded in the supplied research and evidence; name any story move that remains unsupported. Do not load `story-blueprints`, propose a story type, select an exemplar, or ask the user to choose a frame.
 6. Mark inferred values as assumptions. Use `status: provisional` until the user or manuscript evidence confirms them.
 7. Apply `references/stage-gates.md`. Stop at Story Intake when a required field is missing, contradictory, or fails the integrity gate.
@@ -95,6 +96,7 @@ Return `BLOCKED` rather than generating a polished section when the theme questi
 
 - Canonical schema and legacy migration: `references/schema.md`
 - Project-owned story integrity gate: `references/story-integrity-gate.md`
+- Candidate storyline enumeration and ranking (Preparing): `references/candidate-storylines.md`
 - Stage semantics and section gates: `references/stage-gates.md`
 - Distillation adoption gate: `references/distillation-gate.md`
 - Deterministic validation: `python scripts/validate_story_contract.py <paper-state.yaml>`
