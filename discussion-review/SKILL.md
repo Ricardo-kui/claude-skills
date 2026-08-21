@@ -1,6 +1,6 @@
 ---
 name: discussion-review
-description: "Review an existing management-journal Discussion for contribution alignment, mixed findings, implications, boundary conditions, limitations. Diagnoses and suggests revisions; does not draft new Discussion."
+description: "Review an existing management-journal Discussion for contribution alignment, mixed findings, implications, boundary conditions, limitations. Diagnoses and suggests revisions; does not draft new Discussion. 触发词：审查 Discussion、discussion review、讨论部分帮我看看、review my discussion、贡献对齐、意外发现、边界条件、局限、overreaching。Not for: 全稿/整节 QC 打分（→ pollock-qc）；Results 正文写作与主张层级（→ write-results）。"
 when_to_use: "Use when the user supplies a Discussion draft for review. Not for generating a Discussion."
 whenToUse: "Use when 用户提供已有的管理学论文 Discussion 草稿，需要审查贡献对齐、意外发现处理、实践启示、边界条件与局限性，不从零生成 Discussion。Trigger words: 审查讨论部分, 检查 discussion, discussion review, 帮我看看讨论与结论, review my discussion"
 ---
@@ -102,7 +102,7 @@ whenToUse: "Use when 用户提供已有的管理学论文 Discussion 草稿，�
 | Limitations | 测量局限 | 测量是否未能完全 capture 理论构念？ | ✓/△/✗ |
 | Limitations | 方法局限 | 因果推断、内生性、模型设定等问题是否被承认？ | ✓/△/✗ |
 | 结论升华 | — | 是否回到开头，展示 conversation 已改变？ | ✓/△/✗ |
-| 结论升华 | 反向三步（Booth Ch14） | ①主 claim 是否在结论开头重申且更充分（非逐字重复）？②是否给出 Introduction 之外的**新** significance（So what? 的新答案）？③后续研究呼吁是否具体（数据/设计/机制方向），而非 generic "more research is needed"？三步缺一即不完整（审计细则见 `../write-discussion/references/limitations-elevated-plane.md` 「Conclusion 反向三步」） | ✓/△/✗ |
+| 结论升华 | 反向三步（Booth Ch14） | ①主 claim 是否在结论开头重申且更充分（非逐字重复）？②是否给出 Introduction 之外的**新** significance（So what? 的新答案）？③后续研究呼吁是否具体（数据/设计/机制方向），而非 generic "more research is needed"？三步缺一即不完整（审计细则见 `../../skills-archive/write-discussion/references/limitations-elevated-plane.md` 「Conclusion 反向三步」） | ✓/△/✗ |
 
 > **常见错误**：把 boundary conditions 和 limitations 混在一个段落里笼统地说 "Our study has some limitations"。应分开处理：boundary conditions 说明理论适用范围，limitations 说明研究设计缺陷。
 

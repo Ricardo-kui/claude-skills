@@ -1,6 +1,6 @@
 ---
 name: write-results
-description: "顶刊 Results 写作与深度修订——按假设顺序组织 Results，生成段落/小标题/幅度解释/诚实支持判断；也可从零输出 R1-R9 骨架（19 种结果类型）。Use when 写、改或重排 Results。"
+description: "顶刊 Results 写作与深度修订——按假设顺序组织 Results，生成段落/小标题/幅度解释/诚实支持判断；也可从零输出 R1-R9 骨架（19 种结果类型）。Use when 写、改或重排 Results。触发词：写结果、修改 Results、重写 Results、结果部分、汇报回归结果、假设检验汇报、稳健性检验、平行趋势、系数解读、经济显著性、交互效应、机制检验、异质性。Not for: 只审查不改写（→ results-review）；蒸馏范文（→ distill-results-exemplar）。"
 when_to_use: "起草或深度修订 Results 段落时使用；只审查不改写用 results-review。"
 whenToUse: "Use when 用户要新写、修订或重写管理学顶刊论文的 Results 部分，按假设组织证据、解读系数幅度与稳健性检验。Trigger words: 写结果, 修改 Results, 重写 Results, 结果部分, 稳健性检验, 系数解读, 假设检验汇报, 平行趋势, 异质性, 机制检验, 经济显著性"
 ---
