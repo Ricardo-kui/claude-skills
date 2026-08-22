@@ -30,11 +30,11 @@ Distill how a published Introduction works—not what it says—into reusable, e
 
 ## 选材 Gate（轻量版：脚本查 _index 验证状态）
 
-蒸馏选材时，运行 `python ../distill-paper-exemplar/scripts/corpus_query.py index --section introduction --query "<变体/模块关键词>"`（确定性脚本，只输出命中行，默认 ≤50 行），读命中行的验证状态列（ROBUST/VERIFIED/EMERGING）做三带判定；**禁止整读 `_index.md` 或 `_routing_tables.yaml`**：
+蒸馏选材时，运行 `python ../distill-paper-exemplar/scripts/corpus_query.py index --section introduction --query "<变体/模块关键词>"`（确定性脚本，只输出命中行，默认 ≤50 行；**关键词中/英各查一轮，可含 canonical_id 前缀**），读命中行的验证状态列（ROBUST/VERIFIED/EMERGING）做三带判定；**禁止整读 `_index.md` 或 `_routing_tables.yaml`**：
 
 | 带 | 判定条件 | 处理 |
 |----|---------|------|
-| **gap** | _index 中无此类变体/模块 | **HIGH**：ADD 候选，优先深读 |
+| **gap** | 中/英复检后 _index 仍无此类变体/模块（零命中≠缺口） | **HIGH**：ADD 候选，优先深读 |
 | **薄弱** | 目标变体 EMERGING（单篇来源）或验证状态低 | **HIGH**：EXTEND/REPLACE 候选 |
 | **quiet** | 目标变体 ROBUST/VERIFIED | MEDIUM：正常蒸馏（除非论文带来明确新维度） |
 
