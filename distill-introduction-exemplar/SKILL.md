@@ -28,9 +28,9 @@ Distill how a published Introduction works—not what it says—into reusable, e
 
 **完成判据**：①请求性质已确认（蒸馏 vs 校验；section 已消歧）；②Gap × Contribution 分类 + story-fidelity 判定已输出（Incommensurability 时含 L0–L3 profile 与 route confidence）；③所用 phase 的输出件按请求深度齐全（module map / coverage / skeletons / DNA / QC）；④每个写入变体附带原文锚定字段；⑤`skill_design_feedback` 已用 `_update_design_feedback.py` 持久化；⑥core 修正仅经 phase-4 证据与授权门禁。
 
-## 选材 Gate（轻量版：读 _index 验证状态）
+## 选材 Gate（轻量版：脚本查 _index 验证状态）
 
-蒸馏选材时，读目标目录的 `write-introduction/academic-writing-corpus/<目录>/_index.md` 验证状态列（ROBUST/VERIFIED/EMERGING）做三带判定：
+蒸馏选材时，运行 `python ../distill-paper-exemplar/scripts/corpus_query.py index --section introduction --query "<变体/模块关键词>"`（确定性脚本，只输出命中行，默认 ≤50 行），读命中行的验证状态列（ROBUST/VERIFIED/EMERGING）做三带判定；**禁止整读 `_index.md` 或 `_routing_tables.yaml`**：
 
 | 带 | 判定条件 | 处理 |
 |----|---------|------|
@@ -55,4 +55,4 @@ Return the requested depth level, the functional module map, transferable expres
 
 ## Context discipline
 
-Do not preload every phase or the full writing corpus. Search the sibling `write-introduction/academic-writing-corpus/` indexes first, then open only the referenced files needed for comparison or writeback.
+Do not preload every phase or the full writing corpus. Index/registry 查询一律经 `python ../distill-paper-exemplar/scripts/corpus_query.py index|registry --section introduction --query "<关键词>"`（确定性，命中行默认 ≤50），然后只打开被命中的文件用于对比或写回。**整读 `_index.md` / `_evidence_registry.yaml` / `_routing_tables.yaml` 已废止**——这些文件 54–257KB/个，是蒸馏 token 的头号成本。

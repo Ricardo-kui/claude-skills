@@ -90,8 +90,9 @@ L4 反馈收敛        核对 design_feedback 已持久化；报告三路输出�
    estimator_family）就位后执行 rubric（见 references/cross-section-coherence.md）。
    输出 `cross_section_identity` 块。仅标记，不自动修正；flag 汇总呈现给用户。
    若用户只蒸馏单节，fill 已知、标 `unknown`，不阻塞。
-4. **L3 整篇整合**。用户确认 L2 结果后，分发 `distill-story-exemplar`，输入 = **text-only 全文**
-   （`<citekey>.pdm/fulltext.text-only.md`，非原始 MD）+ PDM 中 `verified` 分节蒸馏。产出 blueprint 卡后**不代确认**（gate ② 归 story skill），
+4. **L3 整篇整合**。用户确认 L2 结果后，分发 `distill-story-exemplar`，输入 = **PDM 切片**
+   （intro/theory 优先，路径见 PDM `source_provenance.section_slices`；切片缺失/`unknown` 时回退
+   `fulltext.text-only.md`，非原始 MD）+ PDM 中 `verified` 分节蒸馏。产出 blueprint 卡后**不代确认**（gate ② 归 story skill），
    确认后运行其内建 `validate_blueprints_v4.py` + `build_catalog_v4.py`。将 L2 flag 作为
    卡 assessment 的参考输入（论文内部不一致本身是可学习的信号）。
 5. **L4 反馈归拢（best-effort）**。核对 `skill_design_feedback` 已持久化——仅

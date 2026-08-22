@@ -30,7 +30,7 @@ Distill the architecture and reasoning of a published Theory section into reusab
 
 ## 选材 Gate（轻量版：读 routing 表与验证状态）
 
-蒸馏选材时，读 `write-theory/corpus/meta/routing_table.md`（Gap × 贡献杠杆 → 首选变体）与目标变体文件的验证状态做三带判定：
+蒸馏选材时，运行 `python ../distill-paper-exemplar/scripts/corpus_query.py routing --section theory --query "<gap/贡献杠杆关键词>"`（确定性脚本，只输出命中块，默认 ≤50 行）查 routing 表（Gap × 贡献杠杆 → 首选变体），再按命中打开**目标变体文件**读其验证状态做三带判定；**禁止整读 `routing_table.md`**：
 
 | 带 | 判定条件 | 处理 |
 |----|---------|------|
@@ -55,4 +55,4 @@ Return the theory-building classification, functional module map, why-chain, con
 
 ## Context discipline
 
-Do not preload the full write-theory corpus. Finish paper-first extraction, then inspect only the exact rule targets and corpus files needed for comparison, persistence, or writeback.
+Do not preload the full write-theory corpus. Finish paper-first extraction, then inspect only the exact rule targets and corpus files needed for comparison, persistence, or writeback. Routing 查询经 `python ../distill-paper-exemplar/scripts/corpus_query.py routing --section theory --query "<关键词>"`（确定性，命中行默认 ≤50），不整读 routing_table.md。
