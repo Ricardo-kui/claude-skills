@@ -21,6 +21,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import re
 import sys
 from pathlib import Path
 
@@ -56,6 +57,19 @@ class Budget:
         return True
 
 
+# 截断上限：hooks _index 实测最长行 316 字符；routing 关键散文实测 768 字符/行
+# （曾被 160 切在 "...architectur"，2026-08-22 实测）。放宽到内容完整，
+# 行数预算仍由 --limit 兜底，不失控。
+ROW_CAP = 320
+HEADER_CAP = 200
+PROSE_CAP = 800
+
+
+def clip(s: str, cap: int) -> str:
+    """截断加省略号——截断不可见等于喂半句话。"""
+    return s[:cap] + ("…" if len(s) > cap else "")
+
+
 def rel(p: Path) -> str:
     try:
         return str(p.relative_to(SKILLS_ROOT))
@@ -72,6 +86,11 @@ def hit(text: str, ts: list[str]) -> bool:
     return any(t in low for t in ts)
 
 
+def is_sep(s: str) -> bool:
+    """Markdown 表格分隔行（如 |------|------|）。"""
+    return bool(s.startswith("|")) and "-" in s and re.fullmatch(r"[\s|\-:]+", s) is not None
+
+
 def cmd_index(root: Path, query: str, budget: Budget) -> None:
     ts = terms(query)
     files = sorted(list(root.rglob("_index.md")) + list(root.rglob("INDEX.md")))
@@ -83,11 +102,36 @@ def cmd_index(root: Path, query: str, budget: Budget) -> None:
             lines = f.read_text(encoding="utf-8", errors="replace").splitlines()
         except OSError:
             continue
+        section = ""            # 最近的 # / ## 标题（子表归属）
+        sec_emitted: set[str] = set()
+        hdr_emitted: set[int] = set()   # 每张表头只输出一次（1-based 表头行号）
         for i, ln in enumerate(lines, 1):
             s = ln.strip()
-            if s.startswith("|") and hit(s, ts):
-                if not budget.emit(f"{rel(f)}:{i}: {s[:200]}"):
+            if s.startswith("#"):
+                section = s.lstrip("#").strip()
+                continue
+            if not (s.startswith("|") and hit(s, ts)):
+                continue
+            sep_above = lines[i - 2].strip() if i >= 3 else ""
+            hdr_above = lines[i - 3].strip() if i >= 4 else ""
+            hdr_idx = i - 2   # 表头行（1-based）
+            if is_sep(sep_above) and hdr_above.startswith("|"):
+                if hdr_idx not in hdr_emitted:
+                    hdr_emitted.add(hdr_idx)
+                    if section and section not in sec_emitted:
+                        sec_emitted.add(section)
+                        if not budget.emit(f"## {section}"):
+                            return
+                    if not budget.emit(f"{rel(f)}:{hdr_idx}: {clip(hdr_above, HEADER_CAP)}"):
+                        return
+                    if not budget.emit(f"{rel(f)}:{hdr_idx + 1}: {clip(sep_above, HEADER_CAP)}"):
+                        return
+            elif section and section not in sec_emitted:
+                sec_emitted.add(section)
+                if not budget.emit(f"## {section}"):
                     return
+            if not budget.emit(f"{rel(f)}:{i}: {clip(s, ROW_CAP)}"):
+                return
 
 
 def cmd_registry(root: Path, query: str, budget: Budget) -> None:
@@ -120,7 +164,7 @@ def _walk(node, ts, budget, f, path: str = ""):
         for i, v in enumerate(node):
             _walk(v, ts, budget, f, f"{path}[{i}]")
     elif isinstance(node, str) and hit(node, ts):
-        budget.emit(f"{rel(f)}: {path}: {node.strip()[:200]}")
+        budget.emit(f"{rel(f)}: {path}: {clip(node.strip(), PROSE_CAP)}")
 
 
 def _dump_scalars(node, budget, f, p: str, depth: int) -> None:
@@ -132,15 +176,15 @@ def _dump_scalars(node, budget, f, p: str, depth: int) -> None:
             if isinstance(v, (dict, list)):
                 _dump_scalars(v, budget, f, f"{p}.{k}", depth + 1)
             else:
-                budget.emit(f"{rel(f)}: {p}.{k}: {str(v)[:200]}")
+                budget.emit(f"{rel(f)}: {p}.{k}: {clip(str(v), PROSE_CAP)}")
     elif isinstance(node, list):
         for i, v in enumerate(node[:8]):
             if isinstance(v, (dict, list)):
                 _dump_scalars(v, budget, f, f"{p}[{i}]", depth + 1)
             else:
-                budget.emit(f"{rel(f)}: {p}[{i}]: {str(v)[:200]}")
+                budget.emit(f"{rel(f)}: {p}[{i}]: {clip(str(v), PROSE_CAP)}")
     else:
-        budget.emit(f"{rel(f)}: {p}: {str(node)[:200]}")
+        budget.emit(f"{rel(f)}: {p}: {clip(str(node), PROSE_CAP)}")
 
 
 def cmd_routing(root: Path, query: str, budget: Budget, section: str) -> None:
@@ -169,22 +213,24 @@ def cmd_routing(root: Path, query: str, budget: Budget, section: str) -> None:
                 return
             lines = [ln.strip() for ln in body.splitlines() if ln.strip()]
             if lines and lines[0].startswith("|"):
-                # 表格块：保留表头，其余只输出命中行
+                # 表格块：保留表头，其余只输出命中行（块尾散文命中同样输出）
                 for ln in lines[:2]:
-                    if not budget.emit(f"  {ln[:160]}"):
+                    if not budget.emit(f"  {clip(ln, HEADER_CAP)}"):
                         return
                 for ln in lines[2:]:
                     if hit(ln, ts):
-                        if not budget.emit(f"  {ln[:160]}"):
+                        # 表格块内可能混有块尾散文（如 R1–R4 判定段），按行型选上限
+                        cap = ROW_CAP if ln.startswith("|") else PROSE_CAP
+                        if not budget.emit(f"  {clip(ln, cap)}"):
                             return
             else:
                 # 散文块：输出第一个命中行及其上一行作上下文
                 for i, ln in enumerate(lines):
                     if hit(ln, ts):
                         if i > 0:
-                            if not budget.emit(f"  {lines[i - 1][:160]}"):
+                            if not budget.emit(f"  {clip(lines[i - 1], PROSE_CAP)}"):
                                 return
-                        if not budget.emit(f"  {ln[:160]}"):
+                        if not budget.emit(f"  {clip(ln, PROSE_CAP)}"):
                             return
                         break
     else:  # introduction: YAML routing tables
@@ -207,7 +253,8 @@ def main() -> int:
         description="确定性语料索引查询（选材 gate / routing 专用，输出 ≤ --limit 行）")
     ap.add_argument("cmd", choices=["index", "registry", "routing"])
     ap.add_argument("--section", required=True, choices=sorted(CORPUS_ROOTS))
-    ap.add_argument("--query", required=True, help="关键词（空格分隔，任一命中即输出）")
+    ap.add_argument("--query", required=True,
+                    help="关键词（空格分隔，任一命中即输出；建议中/英各查一轮，可含 canonical_id 前缀）")
     ap.add_argument("--limit", type=int, default=50, help="输出行上限（默认 50）")
     args = ap.parse_args()
 
@@ -233,7 +280,7 @@ def main() -> int:
     if budget.n >= args.limit:
         print(f"...（已截断至 {args.limit} 行；换更具体的 query 或调高 --limit）")
     elif budget.n == 0:
-        print("（无命中——按选材 gate 判 gap：语料中无此变体/模块）")
+        print("（无命中——零命中 ≠ 语料缺口：换关键词重试，中/英各查一轮；连续无命中才按选材 gate 判 gap）")
     return 0
 
 

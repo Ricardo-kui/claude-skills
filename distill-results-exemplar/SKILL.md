@@ -35,11 +35,11 @@ Distill how a published Results section stages evidence—not what it found—in
 
 ## Phase 0.75 — 选材 Gate（批评驱动）
 
-运行 `python ../distill-paper-exemplar/scripts/corpus_query.py registry --section results --query "<估计器关键词>"`（确定性脚本，只输出命中块，默认 ≤50 行），用命中块的 `usage_stats` 判定本文值不值得深蒸馏；**禁止整读 `_evidence_registry.yaml`**：
+运行 `python ../distill-paper-exemplar/scripts/corpus_query.py registry --section results --query "<估计器关键词>"`（确定性脚本，只输出命中块，默认 ≤50 行；**关键词中/英各查一轮**），用命中块的 `usage_stats` 判定本文值不值得深蒸馏；**禁止整读 `_evidence_registry.yaml`**：
 
 | 带 | 判定条件 | 处理 |
 |----|---------|------|
-| **gap** | 该估计器 slots 覆盖存在缺口（静态） | **HIGH**：ADD 候选，优先深读 |
+| **gap** | 中/英复检后仍无命中（零命中≠缺口），或该估计器 slots 覆盖存在缺口（静态） | **HIGH**：ADD 候选，优先深读 |
 | **critique_heavy** | `revise + reject >= 2` | **HIGH**：REPLACE/EXTEND 候选；`common_revise_reasons` 是精炼依据 |
 | **quiet** | 其余 | MEDIUM：正常蒸馏 |
 

@@ -30,11 +30,11 @@ Distill the architecture and reasoning of a published Theory section into reusab
 
 ## 选材 Gate（轻量版：读 routing 表与验证状态）
 
-蒸馏选材时，运行 `python ../distill-paper-exemplar/scripts/corpus_query.py routing --section theory --query "<gap/贡献杠杆关键词>"`（确定性脚本，只输出命中块，默认 ≤50 行）查 routing 表（Gap × 贡献杠杆 → 首选变体），再按命中打开**目标变体文件**读其验证状态做三带判定；**禁止整读 `routing_table.md`**：
+蒸馏选材时，运行 `python ../distill-paper-exemplar/scripts/corpus_query.py routing --section theory --query "<gap/贡献杠杆关键词>"`（确定性脚本，只输出命中块，默认 ≤50 行；**关键词中/英各查一轮**）查 routing 表（Gap × 贡献杠杆 → 首选变体），再按命中打开**目标变体文件**读其验证状态做三带判定；**禁止整读 `routing_table.md`**：
 
 | 带 | 判定条件 | 处理 |
 |----|---------|------|
-| **gap** | routing 表/语料中无对应理论构建变体 | **HIGH**：ADD 候选，优先深读 |
+| **gap** | 中/英复检后 routing 表/语料仍无对应理论构建变体（零命中≠缺口） | **HIGH**：ADD 候选，优先深读 |
 | **薄弱** | 目标变体单篇来源/EMERGING/「待第二篇交叉验证」 | **HIGH**：EXTEND/REPLACE 候选 |
 | **quiet** | 目标变体多篇验证 | MEDIUM：正常蒸馏（除非论文带来明确新维度） |
 

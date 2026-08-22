@@ -33,6 +33,7 @@ cache_read 是 fresh input 的 3.5 倍）。
 ## 主循环纪律
 
 - 主循环**只读**：PDM 根文件、各节 `sections/<section>.json`、子代理的 ≤20 行摘要。
+- 读 `sections/<section>.json` 时校验 `identity` 字段非空；空或缺文件 → 该节视为未完成，只重发该节（不整链路重跑）。
 - 主循环**不得打开**：任何分节 skill 的 references/、protocols/、语料索引
   （_index / INDEX / _evidence_registry / routing 表）、论文切片——这些只在子代理里读。
 - 合并：每节完成后主循环把摘要中的 identity/band 写入 PDM 该节条目、更新 `status`；
