@@ -39,12 +39,12 @@ The first two sections are the primary story-reading object; Results and Discuss
 
 ## Inputs
 
-Prefer the complete paper plus any verified section distillations. **When the paper comes from the PDM pipeline, read only `<citekey>.pdm/fulltext.text-only.md`** — the raw paper-import MD carries base64 images (up to ~90% of bytes) and must never enter context. Read `references/vault-retrieval-protocol.md` for the Vault retrieval route when a Vault source is supplied. If only partial text is available, record `coverage: partial` and do not make the card eligible for recommendations in unobserved sections.
+Prefer the complete paper plus any verified section distillations. **When the paper comes from the PDM pipeline, read the materialized slices, not the merged fulltext** — slice paths are in the PDM `source_provenance.section_slices`. Read in attention order: `sections/introduction.md` + `sections/theory.md` first (the primary story-reading object), then `sections/results.md` + `sections/discussion.md` for the payoff checks, and `sections/methods.md` only for the story-alignment audit. `fulltext.text-only.md` re-carries the reference list and front matter (no story signal) — read it only as fallback when a slice is missing or marked `unknown`. The raw paper-import MD carries base64 images (up to ~90% of bytes) and must never enter context. Read `references/vault-retrieval-protocol.md` for the Vault retrieval route when a Vault source is supplied. If only partial text is available, record `coverage: partial` and do not make the card eligible for recommendations in unobserved sections.
 
 ## Workflow
 
 1. **Register scope.** Record paper identity, publication status, paper type, source version, sections read, and why this paper enters the learning corpus. Do not guess missing metadata.
-2. **Descriptive reading.** Start with Introduction and Theory, then read Results, Discussion, and Methods as payoff and alignment checks. Write the theme question, a continuous whole-story synopsis, main/supporting characters with role reasons, storylines, five acts, and—only when useful—the source and construction of tension. Do not score quality at this point.
+2. **Descriptive reading.** Start with the Introduction and Theory slices, then read the Results, Discussion, and Methods slices as payoff and alignment checks. Write the theme question, a continuous whole-story synopsis, main/supporting characters with role reasons, storylines, five acts, and—only when useful—the source and construction of tension. Do not score quality at this point.
 3. **Section learning check.** For each section actually read, decide `yes`, `partial`, or `no` as a learning object. State one or two learnable structural moves and at least one caveat. A paper may be useful for Results but not for Introduction.
 4. **Assessment.** Apply the rubric only to distinguish effective, partial, cautionary, and descriptive learning roles. Assess storytelling only; do not infer research quality, causal credibility, or journal value from the story assessment.
 5. **Comparison.** Add an alternative reading only when it is documented in the literature, signaled by the authors, or clearly labelled as an analyst counterfactual. Add a cross-paper comparison only when it gives a concrete reading question.
@@ -60,3 +60,7 @@ Return the v0.4-lite learning card, a short distinction between descriptive read
 - Assessment terms: `../story-blueprints/references/story-assessment-rubric.md`
 - Learning-move extraction: `../story-blueprints/references/learning-affordance-protocol.md`
 - Dynamic writer integration: `../story-blueprints/references/retrieval-contract.md`
+
+## Context discipline
+
+Read the two primary slices (introduction + theory) first and complete the descriptive reading on them before opening the later slices. Do not read the merged `fulltext.text-only.md` when the slices exist — its reference list and front matter carry no story signal and were the largest single token cost of L3. Never read the raw paper-import MD (base64 images up to ~90% of bytes).

@@ -35,11 +35,11 @@ Distill how a published Results section stages evidence—not what it found—in
 
 ## Phase 0.75 — 选材 Gate（批评驱动）
 
-用 `write-results/econometric-models/_evidence_registry.yaml` 的 `usage_stats` 判定本文值不值得深蒸馏：
+运行 `python ../distill-paper-exemplar/scripts/corpus_query.py registry --section results --query "<估计器关键词>"`（确定性脚本，只输出命中块，默认 ≤50 行；**关键词中/英各查一轮**），用命中块的 `usage_stats` 判定本文值不值得深蒸馏；**禁止整读 `_evidence_registry.yaml`**：
 
 | 带 | 判定条件 | 处理 |
 |----|---------|------|
-| **gap** | 该估计器 slots 覆盖存在缺口（静态） | **HIGH**：ADD 候选，优先深读 |
+| **gap** | 中/英复检后仍无命中（零命中≠缺口），或该估计器 slots 覆盖存在缺口（静态） | **HIGH**：ADD 候选，优先深读 |
 | **critique_heavy** | `revise + reject >= 2` | **HIGH**：REPLACE/EXTEND 候选；`common_revise_reasons` 是精炼依据 |
 | **quiet** | 其余 | MEDIUM：正常蒸馏 |
 
@@ -109,7 +109,7 @@ Distill how a published Results section stages evidence—not what it found—in
 
 ## Context discipline
 
-按需加载单个 phase reference，不预读全部；先查 `write-results/econometric-models/INDEX.md` 与 `_evidence_registry.yaml`，再打开具体语料文件对比或写回。
+按需加载单个 phase reference，不预读全部；先经 `python ../distill-paper-exemplar/scripts/corpus_query.py index --section results --query "<槽位/估计器关键词>"` 与 `... registry --section results --query "<关键词>"` 查命中行（确定性，默认 ≤50 行），再打开具体语料文件对比或写回——**整读 INDEX.md / _evidence_registry.yaml 已废止**。
 
 ---
 *基于 Pollock 2025 Ch07、MVP30 范文语料库构建。版本 1.9.0（2026-08-10 writing-for-agents 结构优化：Phase 0–5 模板/表格/示例迁移至 references/ 八文件，SKILL.md 557→约 100 行；description 压缩；反模式表并入 phase-3 reference；保留 Phase 0.75 批评驱动选材 + 写入预览-确认两段式 + distinct_from 速查表维护 + 原文锚定规则）。*

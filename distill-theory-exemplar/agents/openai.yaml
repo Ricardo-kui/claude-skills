@@ -1,6 +1,6 @@
 interface:
   display_name: "Distill Theory Exemplar"
   short_description: "Distill theory patterns and improve write-theory"
-  default_prompt: "Use $distill-theory-exemplar to distill this Theory section, preserve evidence provenance, and flag reusable patterns or write-theory design defects."
+  default_prompt: "Use $distill-theory-exemplar to distill this Theory section, preserve evidence provenance, and flag reusable patterns or write-theory design defects. When dispatched from the paper pipeline (PDM): write sections/theory.json (or the yaml profile) and the feedback file to the PDM, and return only a <=20-line compact summary (identity, band, writeback candidates, paths, flags) — never full phase reports."
 policy:
   allow_implicit_invocation: true

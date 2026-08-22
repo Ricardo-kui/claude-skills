@@ -28,9 +28,10 @@ L0 获取与分解     paper-import(OvisOCR2/MinerU) → 全文 MD
                    （paper-import MD 的 44–89% 字节是 data:image 单行巨串，
                    直读全文会炸上下文）→ <citekey>.pdm/fulltext.text-only.md
                    + 物化切片 sections/<section>.md → 创建 PDM（status: manifest）
-L1 分节蒸馏 ×4    默认串行分发 distill-introduction/theory/methods/results-exemplar
-   （复用，零改动） （2026-08 实测：并行 4 agent 触发限流→整批作废重发，重试开销
-                   30–40%，串行更省；--parallel 可显式开启）
+L1 分节蒸馏 ×4    默认串行分发到子代理（Claude Code Task / Codex-Kimi agents/*.yaml，
+   （复用，零改动） Cursor/Zcode 各机制）；子代理契约 references/l1-subagent-protocol.md；
+                 主循环只收 ≤20 行摘要（2026-08 实测：并行 4 agent 触发限流→整批作废
+                 重发，重试开销 30–40%，串行更省；--parallel 可显式开启）
                  输入 = PDM 切片文件（非全文）；每节 → section JSON/报告 + feedback
                  → corpus_precheck.py 产出 writeback plan（选带/查重/锚点，确定性）
                  → 各节 plan 攒齐后**一次性批量呈审**（gate ① 按论文不按节，
@@ -76,11 +77,13 @@ L4 反馈收敛        核对 design_feedback 已持久化；报告三路输出�
    仅当需要随论文留档时才用 `--outdir` 显式放到论文旁。
    **零留痕（用户裁决）**：feedback/sections/slices/plan 等中间产物对用户无价值，
    不得落论文目录或任何长期位置；L4 `--clean` 是强制收尾，不是可选。
-2. **L1 分节蒸馏分发**。按用户范围（默认 4 节全跑）**串行**分发（每次 1 个子任务，
-   完成再发下一个；`--parallel` 显式开启并行）：
-   `/distill-introduction-exemplar <切片> --output-format=json` → `sections/introduction.json`
-   （theory/methods/results 同理）。每个子任务完成后：子任务写自己的 section 文件与
-   feedback 文件 → 主循环合并进 PDM → 更新该节 `status`。
+2. **L1 分节蒸馏分发（子代理）**。按用户范围（默认 4 节全跑）**串行**分发到子代理
+   （每次 1 个，完成再发下一个；`--parallel` 显式开启并行）。分发机制与提示词模板见
+   `references/l1-subagent-protocol.md`：Claude Code 用 `Task` 工具（general-purpose），
+   Codex/Kimi Code 用各节 `agents/openai.yaml` 子代理，Cursor/Zcode 按其子代理机制。
+   每个子代理完成后：写自己的 section 文件与 feedback 文件 → 回传 ≤20 行摘要 →
+   主循环把 identity/band 合并进 PDM → 更新该节 `status`。**主循环不打开 phase 参考
+   文件、语料索引或切片**（这些只在子代理上下文里读，约省 60% 主上下文 fresh input）。
    **gate ① 按论文批量呈审（2026-08-20 起）**：整篇模式下各节子任务跑到 writeback
    plan 产出即暂停写回；四节（或指定范围）plan 攒齐后，由主循环汇总为一份批量呈审
    （每节：verdict 摘要 + anchor_candidates top-3 + 拟写回文件），用户一次确认全部，
@@ -90,8 +93,9 @@ L4 反馈收敛        核对 design_feedback 已持久化；报告三路输出�
    estimator_family）就位后执行 rubric（见 references/cross-section-coherence.md）。
    输出 `cross_section_identity` 块。仅标记，不自动修正；flag 汇总呈现给用户。
    若用户只蒸馏单节，fill 已知、标 `unknown`，不阻塞。
-4. **L3 整篇整合**。用户确认 L2 结果后，分发 `distill-story-exemplar`，输入 = **text-only 全文**
-   （`<citekey>.pdm/fulltext.text-only.md`，非原始 MD）+ PDM 中 `verified` 分节蒸馏。产出 blueprint 卡后**不代确认**（gate ② 归 story skill），
+4. **L3 整篇整合**。用户确认 L2 结果后，分发 `distill-story-exemplar`，输入 = **PDM 切片**
+   （intro/theory 优先，路径见 PDM `source_provenance.section_slices`；切片缺失/`unknown` 时回退
+   `fulltext.text-only.md`，非原始 MD）+ PDM 中 `verified` 分节蒸馏。产出 blueprint 卡后**不代确认**（gate ② 归 story skill），
    确认后运行其内建 `validate_blueprints_v4.py` + `build_catalog_v4.py`。将 L2 flag 作为
    卡 assessment 的参考输入（论文内部不一致本身是可学习的信号）。
 5. **L4 反馈归拢（best-effort）**。核对 `skill_design_feedback` 已持久化——仅
@@ -141,6 +145,8 @@ L4 反馈收敛        核对 design_feedback 已持久化；报告三路输出�
 ## Context discipline
 
 不预读四个分节 skill 的语料；按 `references/pdm-schema.md` 维护 PDM，按需打开
-`references/cross-section-coherence.md`。**原始全文 MD（含 base64 图片）禁止读入上下文**——
-所有阅读只经 `<citekey>.pdm/fulltext.text-only.md` 与 `sections/*.md` 切片；原始 MD 只读存档，
-PDM 是唯一写入交接物。
+`references/cross-section-coherence.md`。L1 分发到子代理后，**主循环只读 PDM 与各节
+≤20 行摘要**——phase 参考文件、语料索引、切片一律只在子代理上下文里读（见
+`references/l1-subagent-protocol.md` 主循环纪律）。**原始全文 MD（含 base64 图片）禁止读入
+上下文**——所有阅读只经 `<citekey>.pdm/fulltext.text-only.md` 与 `sections/*.md` 切片；
+原始 MD 只读存档，PDM 是唯一写入交接物。
