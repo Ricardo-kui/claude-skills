@@ -1,6 +1,6 @@
 interface:
   display_name: "Distill Results Exemplar"
   short_description: "Distill Results climax and evidence-resolution patterns"
-  default_prompt: "Use $distill-results-exemplar to distill this Results section and classify reusable patterns by story fidelity."
+  default_prompt: "Use $distill-results-exemplar to distill this Results section and classify reusable patterns by story fidelity. When dispatched from the paper pipeline (PDM): write sections/results.json and the feedback file to the PDM, and return only a <=20-line compact summary (identity, band, writeback candidates, paths, flags) — never full phase reports."
 policy:
   allow_implicit_invocation: true

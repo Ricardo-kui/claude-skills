@@ -1,6 +1,6 @@
 interface:
   display_name: "Distill Methods Exemplar"
   short_description: "Distill Methods as credible empirical arenas"
-  default_prompt: "Use $distill-methods-exemplar to distill this Methods section and classify reusable patterns by story fidelity."
+  default_prompt: "Use $distill-methods-exemplar to distill this Methods section and classify reusable patterns by story fidelity. When dispatched from the paper pipeline (PDM): write sections/methods.json and the feedback file to the PDM, and return only a <=20-line compact summary (identity, band, writeback candidates, paths, flags) — never full phase reports."
 policy:
   allow_implicit_invocation: true
