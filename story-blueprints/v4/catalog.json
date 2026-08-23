@@ -3203,6 +3203,91 @@
       "overall_role": "partial_exemplar"
     },
     {
+      "id": "moon2026-trade-secret-protection-advertising",
+      "path": "v4/blueprints/moon2026-trade-secret-protection-advertising.md",
+      "paper_type": "quantitative",
+      "outlet": "Journal of Marketing",
+      "publication_status": "published",
+      "coverage": "complete",
+      "theoretical_problem_form": [
+        "incompleteness",
+        "competing-predictions"
+      ],
+      "narrative_dynamics": [
+        "bidirectional-prediction-resolution",
+        "attention-contingency-framework",
+        "protection-to-leverage-reframe"
+      ],
+      "retrieval_signals": [
+        "trade-secret-protection",
+        "inevitable-disclosure-doctrine",
+        "advertising-spending",
+        "attention-based-view",
+        "staggered-did",
+        "capital-market-expectations",
+        "ceo-duality",
+        "firm-age",
+        "peer-advertising"
+      ],
+      "section_learning": {
+        "introduction": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Stage a genuinely bidirectional prediction (protection relaxes competition vs. protection raises capital-market growth expectations) so the empirical question is real before the theory resolves it.",
+            "Preview three contributions that each address a different audience—theory (new mechanism), contingency/policy (boundary conditions), empirical (measurement correction of aggregated R&D+advertising proxies)."
+          ],
+          "caveat": [
+            "The preview leaks headline effect sizes (13.5%) and mechanism results into the introduction; this needs a real legal shock with contested directional priors and a journal culture that tolerates result-heavy previews."
+          ]
+        },
+        "theory": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Use attention scarcity (ABV) as the engine that converts an external institutional change into a resource-allocation prediction: the shock frees attention from protecting secrets and capital-market expectations redirect it to leveraging them.",
+            "Derive three moderators from one organizing scheme—individual (CEO duality), organizational (firm age), contextual (peer advertising) determinants of attention—so the contingency framework reads as one argument, not three add-ons."
+          ],
+          "caveat": [
+            "H1's hypothesis statement carries the entire mechanism narrative with no separate mechanism hypothesis; the attention chain is asserted, not designed for testing in this section."
+          ]
+        },
+        "methods": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Match staggered state-court rulings to firm headquarters exposure with firm/year fixed effects, and handle advertising-disclosure selection with a two-stage IMR using sector- and auditor-peer disclosure as exclusion restrictions."
+          ],
+          "caveat": [
+            "Methods never pre-announces the mechanism tests the theory promises; a reader auditing design-to-story alignment finds the attention measures only in the Discussion."
+          ]
+        },
+        "results": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Open with raw-data descriptives and parallel-trends dynamics before the focal DiD, then stage validity as a sequence: rejection counterfactual (GA/OH), augmented DiD, placebo DVs (SG&A, COGS), stacked DiD.",
+            "Report moderators with economic-magnitude contrasts (53%-100% differences across low/high levels), not just interaction significance."
+          ],
+          "caveat": [
+            "Results contain zero mechanism evidence; the payoff of the ABV promise is deferred entirely to the Discussion, which works here but leaves the results arc technically hypothesis-only."
+          ]
+        },
+        "discussion": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Close by transforming the opening premise: trade secret law is reframed from an anti-theft device into a leverage-enabling institution, and the ending extends outward to sales, state-level advertising jobs, and policy.",
+            "Embed post hoc mechanism probes (10-K brand emphasis, analyst revenue forecasts) as 'additional analyses' inside the implications flow rather than as a formal mechanism section—an observed JM convention."
+          ],
+          "caveat": [
+            "This post hoc mechanism placement is the paper's visible seam: it reads smoothly, but it cannot be cited as exemplary design practice for mechanism testing; treat it as the imperfect-paper learning signal."
+          ]
+        }
+      },
+      "overall_role": "partial_exemplar"
+    },
+    {
       "id": "mukherjee2018",
       "path": "v4/blueprints/mukherjee2018-medical-device-recall-bias.md",
       "paper_type": "quantitative",
@@ -4379,6 +4464,94 @@
         }
       },
       "overall_role": "partial_exemplar"
+    },
+    {
+      "id": "zhang-idd-advertising-rejected",
+      "path": "v4/blueprints/zhang-idd-advertising-rejected.md",
+      "paper_type": "quantitative",
+      "outlet": null,
+      "publication_status": "working",
+      "coverage": "complete",
+      "theoretical_problem_form": [
+        "incompleteness"
+      ],
+      "narrative_dynamics": [
+        "supply-side-to-demand-side-reframe",
+        "dual-mechanism-defense",
+        "paradigm-shift-claim"
+      ],
+      "retrieval_signals": [
+        "inevitable-disclosure-doctrine",
+        "idd-rejection",
+        "advertising-spending",
+        "brand-equity",
+        "knowledge-leakage",
+        "employee-mobility",
+        "rbv",
+        "staggered-did",
+        "differentiation",
+        "cost-leadership",
+        "b2c",
+        "glassdoor",
+        "rejected-manuscript"
+      ],
+      "section_learning": {
+        "introduction": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Reframe an incumbent paradigm with a supply-side/demand-side asymmetry (retention = stopping outflow vs. brand = devaluing leaked knowledge in rival hands), and back the reframe with a literature-positioning table (Table 1) that maps every cited prior study as supply-side-only.",
+            "Open with a live policy hook (FTC 2024 non-compete ban) to make a decades-old legal shock feel urgent."
+          ],
+          "caveat": [
+            "The 2024 FTC hook never returns in the evidence (identification is 1977-2023 state IDD rejections), so the opening promise and the tested setting drift apart; and the threefold contribution preview already claims paradigm status ('reconceptualize', 'pioneers', 'first to theorize and test') that the results cannot underwrite—a cautionary case of front-loading a claim the back end must then fail to pay off."
+          ]
+        },
+        "theory": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Derive one DV prediction from two stacked mechanisms (external demand-side isolation + internal nonpecuniary retention), then derive all three moderators from a single strategic-fit logic so the contingency set reads as one argument."
+          ],
+          "caveat": [
+            "The theory's named construct is brand equity (a perceptual stock) while the only operationalization is advertising spending (a flow); the paper narrates the stock but estimates the flow, and neither intermediate link (loyalty/switching costs, actual retention) is given a measurable form—do not copy the naming-overstretch or the unmeasurable middle."
+          ]
+        },
+        "methods": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Pair staggered state-court DiD with a Heckman IMR for advertising-disclosure selection, and pre-commit to heterogeneity-robust event-study estimators (Sun-Abraham, Borusyak-Jaravel-Spiess) for staggered timing."
+          ],
+          "caveat": [
+            "The measurement section carries the entire construct claim: a three-paragraph defense that advertising = brand equity investment is doing work that belongs to the theory-evidence link, and the limitations section later contradicts it by calling the DV a 'composite measure' of brand-building activities.",
+            "Disclosure-completeness gap (Web-Appendix-informed): the main text promises 'the first-stage estimation results are provided in Web Appendix A,' but Appendix A contains only the instrument construction and probit specification—no first-stage coefficient table appears anywhere—and the IMR is insignificant in most second-stage models (p roughly .055-.23), so the selection-correction storyline rests on an unshown first stage."
+          ]
+        },
+        "results": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Negative example worth studying: once interaction terms enter (Table 3 cols. 3-4), the IDD-rejection main effect flips to -0.090/-0.101 (p=.017/.008) for the B2B baseline group—negative and significant—and the text says only 'Column (4) confirms robustness in the full model.' An un-narrated sign reversal on the focal coefficient is exactly what referees find; the learnable move is that conditional main effects must be reported and interpreted, not absorbed silently.",
+            "The event-study layer is genuinely well staged (Web Appendix C): TWFE leads/lags with jointly zero pre-trends (Table C1), then Sun-Abraham and Borusyak-Jaravel-Spiess estimates on identical controls (Figure C1), then a 1,000-draw placebo distribution (Figure C3)—a validity escalation worth imitating as design sequencing."
+          ],
+          "caveat": [
+            "The baseline magnitude framing ('5.4-6.2% increase relative to the sample mean') is assembled from the coefficient and mean in a way that reads larger than the log-point estimate warrants; do not copy the economic-significance rhetoric without showing the arithmetic.",
+            "Web-Appendix-informed hardening: the sign reversal is not a one-table accident—it replicates in every appendix full model (D1 UTSA control: -0.100, p=.008; D2 adjacent-state matching: -0.091, p=.030; D3 5% winsorization: -0.127, p=.005; D4 text-based strategies with B2C: -0.090/-0.101, p=.017/.006)—and D3's prose asserts 'the main effect of IDD rejection remains positive and significant' while its own column (5) shows -0.127 (p=.005), an active mis-description of the table it introduces."
+          ]
+        },
+        "discussion": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Negative example: the ending claims a paradigm shift ('shifting the scholarly paradigm from internal employee retention to external, market-based defense') although the evidence shows only an advertising-spending response with a reversed main effect for B2B firms—the gap between ending altitude and evidence altitude is the rejection-relevant signal."
+          ],
+          "caveat": [
+            "The limitations subsection quietly re-describes the DV as a 'composite measure' of brand-building investment, contradicting the single-measure reality (advertising only); a discussion that re-labeled the construct to advertising response would have been more defensible."
+          ]
+        }
+      },
+      "overall_role": "cautionary_case"
     },
     {
       "id": "zhong2020",
