@@ -949,6 +949,14 @@ is [high/low] rather than [low/high]."
 
 ---
 
+
+### 变体 A：T3_attention_release_reallocation（moon2026）
+
+**模板/骨架**:
+> "[Shock] changes the attentional landscape for [actor] by removing some of the attention required to [old focus] and creating space for focusing on how to [new focus]. Because [shock] protects against [risk], attention previously devoted to [old focus] shifts to [new focus]."
+
+来源：Moon et al. (2026, Journal of Marketing)。
+
 ## "双刃剑"理论框架骨架（Double-Edged Sword）
 
 **适用**：某一策略/构念既有明显好处又有隐性坏处，需要系统呈现理论视角下的两面性

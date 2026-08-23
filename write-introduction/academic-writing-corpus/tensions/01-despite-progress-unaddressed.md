@@ -616,6 +616,26 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 ---
 
+
+### 变体 AJ：功能前提悖论型（moon2026 型）
+
+**模板**:
+> "Extant work examines [phenomenon X]'s impact on [adjacent domains A, B, C] ([citations]). Little, however, is known about how [X] affects [focal domain Y]. This is surprising because [X] has limited value unless [functional dependency: X's value is realized only through Y] ([citation])."
+
+**来源**: moon2026 (JM), P6（Lit Turn 后的 Tension 句群）
+
+**原文锚定**:
+> "Little, however, is known about how stronger trade secret protection affects firms' efforts to leverage their trade secrets through marketing actions. This is surprising because the protection of trade secrets has limited value unless firms can convert them into commercial outcomes."
+
+**关键特征**:
+- 邻域枚举式 gap：先列举 X 在 A/B/C 相邻决策域的已有证据，再指出目标域 Y 未被检验
+- 惊讶 warrant 是功能依赖而非热度："X 的价值除非经由 Y 实现，否则有限"——gap 的重要性由 X→Y 的功能前提关系逻辑推出
+- 与 outcome-valence 变体不同：缺口不是效价不对称，而是价值链上的环节遗漏
+
+**适用**: Incompleteness；当文献已在现象的多个相邻结果域积累证据、而 gap 域恰好是该现象价值实现的功能必经环节时（如保护→利用、投入→变现）
+
+**禁忌**: 功能依赖关系必须有外部权威或逻辑支撑（本文引 WIPO）；若 Y 只是"另一个有趣结果"而非 X 价值实现的前提环节，退回标准 01 变体
+
 ### 变体 V：政策意外后果型（hoffmann2024 型）
 
 **模板**:

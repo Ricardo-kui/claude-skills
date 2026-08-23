@@ -36,7 +36,7 @@ P5-P6 的功能：在理论框架建立之后，向读者预告"我们做了什�
 | 文件 | 内容 | 适用场景 |
 |------|------|---------|
 | [mechanism-preview.md](mechanism-preview.md) | 变体 A-R：理论整合、分层机制、挑战性预测、双理论整合、融合段、非线性、多方法、**双缺口→机制簇→净效应分解→研究分工**、**定性扎根→条件化机制→准实验→行为—传播双结果**、**宏观事件激活→近端机制→建设性复制修复梯度**、**正式模型→双侧反馈预测→阈值反转**、**现象→双中介→机制靶向干预→证据角色列举**、**收益—伤害结果组合→共享导向→选择性制衡**、**双RQ+理论样本限制**、**无Theory RQ+方法栈**、**内生性→交错制度采纳→重复交易可观测（Castellaneta 2017，EMERGING；QC 已抽象化）**、**全管道可观测→多offer内比较→revealed-preference WTP（Kim–Lee 2026，EMERGING）**；**变体F倒U成本收益+多调节方向预告已升级为双篇交叉验证（cui+fini2017），新增"通道匹配调节"子特征（每个moderator绑定一条反作用通道）** | 需要预告核心理论逻辑的研究；E/H/L 适用于 JM/JMR 紧凑风格，I 适用于 interview-grounded quasi-experiment，Q 适用于 staggered adoption + 重复交易识别 warrant，R 适用于全职招聘管道 + WTP |
-| [findings-preview.md](findings-preview.md) | 变体 D-R：经济显著性型、反例驱动型、两层因果链型、调节效应预览型、**符号反转权变+双刃剑收束（Castellaneta 2017，EMERGING；QC 已抽象化）**、**管道优势+WTP区间+阶段衰减null+早期异质性（Kim–Lee 2026，EMERGING）**、**术语转译锚定型（desjardine2025，EMERGING）**、**平行靶标非对称发现型（ridge2024，EMERGING；一靶标支持+一靶标显式null）** | 需要预告实证结果的研究 |
+| [findings-preview.md](findings-preview.md) | 变体 D-R：经济显著性型、反例驱动型、两层因果链型、调节效应预览型、**符号反转权变+双刃剑收束（Castellaneta 2017，EMERGING；QC 已抽象化）**、**管道优势+WTP区间+阶段衰减null+早期异质性（Kim–Lee 2026，EMERGING）**、**术语转译锚定型（desjardine2025，EMERGING）**、**平行靶标非对称发现型（ridge2024，EMERGING；一靶标支持+一靶标显式null）** | 需要预告实证结果的研究；变体 S：编号贡献块内嵌头条幅度+机制证据+调节幅度区间，moon2026，EMERGING |
 | [robustness-preview.md](robustness-preview.md) | 变体 H：稳健性密集预览型 + 紧凑版 | 方法复杂、检验繁多的实证论文 |
 | [extreme-case-justification.md](extreme-case-justification.md) | 变体 J：极端案例+混合方法辩护型 | 使用极端案例和多方法设计的研究 |
 | [dv-methodology-defense.md](dv-methodology-defense.md) | 变体 I：DV 方法论辩护型（正负不对称性） | DV 有天然双情境的研究 |

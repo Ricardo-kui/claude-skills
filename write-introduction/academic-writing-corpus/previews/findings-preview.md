@@ -293,6 +293,26 @@ P5-P6 的下半段功能：向读者预告实证结果。这是 Introduction 中
 
 ---
 
+
+### 变体 S：编号贡献内嵌量化发现型（moon2026 型）
+
+**模板**:
+> "The study seeks to make [N] contributions: First, drawing on [theory], we propose [thesis]. Consistent with this thesis, results show that [treatment] [increases/decreases] [outcome] by [headline magnitude]. In support of the proposed mechanism, [mechanism evidence]. Second, [contingency framework + moderator findings], with differences in magnitude ranging from [X%] to [Y%]. Third, by adopting [refined measurement], the study updates the conclusions reached by prior work."
+
+**来源**: moon2026 (JM), P10-P16（"the study seeks to make three contributions" 三段）
+
+**原文锚定**:
+> "Consistent with this thesis, results show that IDD recognition increases advertising spending of a firm by almost 13.5%. In support of the proposed mechanism, subsequent analyses show that IDD recognition leads to higher revenue expectations from financial analysts and greater discussion of brands by top management in 10-K reports."
+
+**关键特征**:
+- Contribution 块与 findings preview 融合：每条编号贡献 = 理论主张 + 头条幅度 + 机制证据，不再分设 Preview 段
+- 调节效应以幅度区间（53%-100% differential）呈现经济显著性，而非只报方向
+- 第三条贡献是"测量分辨率"型：指出前人用聚合度量（R&D+advertising+SG&A）得出 null/负效应，本文用聚焦度量更新结论
+
+**适用**: 主效应+多调节+机制证据齐全的准实验论文；JM/JMR 风格；当贡献点之间需要各自配发现证据时才用融合块
+
+**禁忌**: 贡献声明中的每个量化幅度必须能被 Results 精确兑现；调节幅度区间需注明是低/高水平组间差；不要让编号超过 3 条
+
 ## 组装规则
 
 ### 必须配对

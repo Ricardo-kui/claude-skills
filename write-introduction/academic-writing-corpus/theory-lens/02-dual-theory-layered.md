@@ -99,6 +99,26 @@ source: Distilled by distill-introduction-exemplar from Hoffmann et al. 2024 JM;
 
 ---
 
+
+### 变体 C：注意力重定向型（moon2026 型）
+
+**模板**:
+> "We draw on the attention-based view of the firm ([citations]), which posits that managerial decisions are shaped by what captures managers' scarce attention ([citation]). Because [institutional change] reduces the attention demanded by [prior protective concern] while raising [external stakeholder] expectations for [performance dimension], it redirects top management attention toward [focal leveraging action]."
+
+**来源**: moon2026 (JM), extended-intro 内嵌 Theory Lens 段（"Trade Secret Protection Law and Firm Behavior" 小节末段）
+
+**原文锚定**:
+> "Importantly, attention is scarce, and managerial attention can determine resource allocation decisions. In particular, managers tend to pay close attention to capital market expectations."
+
+**关键特征**:
+- 制度变迁的双重注意力效应：释放旧注意力需求（保护）+ 抬升外部期望（资本市场增长），二者合力重定向
+- ABV 不作静态框架而用为"注意力预算再分配"机制——旧担忧解除本身就是注意力释放源
+- 资本市场期望（投资者/分析师）作为注意力的具体指向物，而非泛泛"环境变化"
+
+**适用**: Incompleteness × Mechanism；制度/法律冲击改变 managerial attention 配置、且存在明确外部期望施予者（投资者/分析师/评级机构）的研究；营销资源分配类因变量
+
+**禁忌**: 不要在没有"注意力从何处释放出来"的制度逻辑时单独使用 ABV——仅有"注意力稀缺"断言而无重定向来源会退化为装饰性理论引用
+
 ## 组装规则
 
 ### 必须配对

@@ -5,7 +5,7 @@
 meta:
   schema_version: 1.1.0
   registry_type: estimator-slot-skeleton
-  last_updated: '2026-08-12'
+  last_updated: '2026-08-23'
   last_batch_id: batch_32_chenganesanliu2009
   batches_processed: 32
   total_papers_indexed: 33
@@ -2119,10 +2119,15 @@ estimators:
   DiD:
     display_name: Difference-in-Differences
     usage_stats:
-      revise: 0
+      revise: 3
       reject: 0
-      last_critique: null
-      common_revise_reasons: []
+      last_critique: '2026-08-23'
+      common_revise_reasons:
+      - SMJ R1#6 全模型主效应符号反转（-0.101, p=.008）未讨论、JAMS R1#8 交互显著但未报告 B2C 边际效应显著性、JAMS R3#6 效应量（5.5-6.2%）未与文献对标——结果解释层需强制：变号必叙述、边际效应必检验、效应量必相对化
+      - SMJ 编辑与 R1#2、JAMS R1 主问题#2：用被处理影响的变量（LnADV）与处理交互做机制检验构成 bad-controls；机制主张须由独立测度承接，post-treatment 交互只能降级为 only-when
+        条件性证据（moon2026 Table 6 三段式为正面模板）
+      - SMJ R1#8、R2#7 与 JAMS AE、R1（两轮四评审+编辑）一致要求 heterogeneity-robust 估计量（Sun-Abraham/Callaway-Sant'Anna/stacked/BJS）作主分析、TWFE
+        降级为基准，且调节效应也须在 robust 设计内重估；仅附录图示无系数表被判不足（moon2026 对照：stacked DiD 进主表 Model 7）
     forced_slots:
     - R2
     - R3

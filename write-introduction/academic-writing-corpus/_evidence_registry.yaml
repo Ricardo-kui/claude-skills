@@ -622,7 +622,7 @@ evidence:
         common_revise_reasons: []
   tensions:
     01-despite-progress-unaddressed:
-      paper_count: 32
+      paper_count: 33
       papers:
       - ahmadi2017 (JMS)
       - cancellieri2023 (SMJ)
@@ -656,8 +656,9 @@ evidence:
       - wowak2025 (MS)
       - wu2025 (SMJ)
       - westphalzajac1995 (AMJ)
+      - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
       gap_distribution:
-        Incompleteness: 23
+        Incompleteness: 24
         Inadequacy: 0
         Incommensurability: 0
       status: ROBUST
@@ -1420,7 +1421,7 @@ evidence:
         Inadequacy: 2
         Incommensurability: 2
     findings-preview:
-      paper_count: 45
+      paper_count: 46
       papers:
       - castellaneta_conti_kacperczyk2017 (SMJ)
       - ceo_regulatory_focus_ijrm (IJRM)
@@ -1467,6 +1468,7 @@ evidence:
       - wu2025 (SMJ)
       - zhao_ding2022 (OS)
       - zhou2017 (ASQ)
+      - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: LOW
@@ -1478,7 +1480,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 23
+        Incompleteness: 24
         Inadequacy: 20
         Incommensurability: 2
     robustness-preview:
@@ -1766,11 +1768,12 @@ evidence:
         reject: 0
         common_revise_reasons: []
     02-dual-theory-layered:
-      paper_count: 1
+      paper_count: 2
       papers:
       - hoffmann_cheong_phan_zurbruegg2024 (JM)
+      - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
       gap_distribution:
-        Incompleteness: 1
+        Incompleteness: 2
         Inadequacy: 0
         Incommensurability: 0
       status: EMERGING

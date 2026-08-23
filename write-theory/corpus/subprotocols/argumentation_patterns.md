@@ -450,3 +450,11 @@ and is interpreted as a signal of [severe downside], so [DV_B] is affected more 
 **原文锚点** (Chen, Ganesan & Liu 2009, JM):
 > "However, it is likely that the stock market and investors view the implications of a proactive product-recall strategy differently from consumers."
 
+
+
+### 变体 A：T3_rival_prediction_rebuttal（moon2026）
+
+**模板/骨架**:
+> "However, it can be argued that [treatment] is likely to [opposite-signed prediction] because [rival mechanism]. Consistent with this logic, research finds that [supporting evidence for rival]. However, this is unlikely to be the case because [superordinate premise / salience hierarchy]. In fact, research consistently finds that [evidence for superordinate premise]. Therefore, we expect [directional main-effect prediction]."
+
+来源：Moon et al. (2026, Journal of Marketing)。

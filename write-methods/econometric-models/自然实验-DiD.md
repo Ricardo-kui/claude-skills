@@ -335,6 +335,22 @@ updated: 2026-08-05
 - ±k 的选择须事前或按惯例说明；k 太小会与真处理窗重叠。
 - 安慰剂应在 Methods 预告位置（M8/M10）；仅塞进 Results 附录会削弱"设计内建"印象。
 
+
+### 变体 O：M8_judicial_shock_two_assumption（moon2026）
+
+**模板/骨架**:
+> "To identify the effect of [policy/legal change] on [outcome], we use [court ruling/regulatory event] as an exogenous shock. Considering [event] as an exogenous shock in our context rests on two assumptions. First, [decision-makers] should be aware of [the precedent-setting event], which becomes [institutional form]. Reassuringly, prior research shows that [actors] are likely to be aware of [event] because [dissemination channel] ([citation]). Second, [changes in the event] are not influenced by individual [units]. Indeed, prior work shows that [event] depend[s] on [case-specific circumstances/institutional discretion] and [are] thus largely independent of [unit] actions or lobbying efforts ([citation]). Therefore, considering the findings of prior work, [event] can be viewed as an exogenous shock."
+
+来源：Moon et al. (2026, Journal of Marketing)。
+
+
+### 变体 P：M2_staggered_did_always_treated_hygiene（moon2026）
+
+**模板/骨架**:
+> "Recent research on staggered difference-in-differences (DiD) notes that always-treated units are a potential source of bias in identifying the treatment effect ([citation]). In this context, the DiD estimate is a variance-weighted average of the constituent 2x2 DiD estimates in the data, and one of the comparisons includes always-treated units as effective controls. As always-treated units reflect the treatment effect in the outcomes, the treatment effect estimated from the staggered DiD in this case may potentially introduce a negative weight and bias the estimate ([citation]). To address this concern, we exclude [units treated before the sample period]. In addition, we do not include [units with only posttreatment observations]. To allow for variation before the treatment, we consider [events] that provide at least [N] years of pretreatment periods for the treated [units]. Using this approach, our sample consists of [final N] ([treated N] in the treatment group; [control N] in the control group)."
+
+来源：Moon et al. (2026, Journal of Marketing)。
+
 ## 反模式（Castellaneta 蒸馏补充）
 
 | 反模式 | 问题 | 应改为 |

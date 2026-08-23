@@ -393,6 +393,14 @@ board's scrutiny to [functional_domain] ([citations]). This may lead the board t
 
 ---
 
+
+### 变体 A：T5_salience_instrument_moderator（moon2026）
+
+**模板/骨架**:
+> "The salience of [action] as an instrument to [goal] is significantly higher for [units in condition W-high]. According to [lens], managers pay closer attention to [signals] that are salient and persistent in the external environment. Therefore, [units in W-high] are more likely to [response] in response to [shock]."
+
+来源：Moon et al. (2026, Journal of Marketing)。
+
 ## 异号增强/阻碍调节句（more positive / more negative，Castellaneta 型）
 
 **功能**: 在双刃剑净效应不定时，用“更正 / 更负”而非 “stronger/weaker of a signed main effect” 陈述权变，避免先承诺 unconditional 方向。

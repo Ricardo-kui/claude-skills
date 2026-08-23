@@ -106,3 +106,23 @@ Theoretically, we further our understanding of the antecedents of [phenomenon] i
 **适用组合**：Incompleteness × (Mechanism + Boundary)；产品召回、CSR 决策、创新投放等"决策前因"被后果文献淹没的领域；JM/JMR
 
 ---
+
+
+### 变体 E：综合表定位型（moon2026 型）
+
+**模板**:
+> "Extant research on [phenomenon] predominantly examines [N] domains (see Table [X]). [Table: rows = prior studies grouped by domain; columns = key findings | underlying mechanism; final row = Current Study with its focal finding and novel mechanism.] Across these domains, the predominant mechanism is [shared mechanism]; [unexamined focal domain or mechanism] remains open."
+
+**来源**: moon2026 (JM), "Trade Secret Protection Law and Firm Behavior" 小节首段 + Table 1
+
+**原文锚定**:
+> "extant research on IDD recognition predominantly focuses on directly examining the implications of these restrictions in four domains (see Table 1)."
+
+**关键特征**:
+- 引言内文献综述表按 领域×关键发现×底层机制 三轴组织，把 synthesis 从段落叙述升级为可扫描的证据矩阵
+- Current Study 作为表格最后一行入座，departure point 由表格结构本身（空缺的行/新机制列）呈现
+- 表后段落点出" predominant mechanism"共识，再用一段收窄到未检机制/领域，表格与文字互为索引
+
+**适用**: 文献体量大（15+ 核心研究）、跨多领域且共享单一主导机制的 Incompleteness 论文；extended-intro 结构；需要让"已有文献的机制单一性"一目了然的场景
+
+**禁忌**: 文献量小（<10 篇核心）或机制高度异质时不要上表——表格会夸大 synthesis 的完备性；Current Study 行的发现/机制必须与 Results 兑现严格一致

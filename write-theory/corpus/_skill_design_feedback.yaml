@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
-  last_updated: '2026-08-20'
-  observations_processed: 13
+  last_updated: '2026-08-23'
+  observations_processed: 15
   description: Evidence ledger for write-theory design defects inferred from Theory exemplar distillation.
 defects:
   e-family-missing-dual-edged-signed-contingency-variant:
@@ -777,4 +777,98 @@ defects:
     auto_action:
       eligibility: optional_variant_only
       reason: Corpus changes do not alter core routing.
+  corpus-gap-did-contrast-hypothesis-form:
+    classification: corpus_gap
+    status: EMERGING
+    risk: medium
+    current_rule: sentences/hypothesis_forms.md 与 subprotocols/institutional_shock_lens.md 未核验是否收录 DiD 处理-对照对比内嵌假设陈述形式
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/sentences/hypothesis_forms.md
+    diagnosis: '本文 H1 将识别对比（treated vs non-recognizing states）直接烤进假设陈述 （''as compared to firms headquartered in states that
+      have not recognized IDD. Formally: H1: ...''），使假设本身携带可检验的 DiD 对比。是否属语料缺口 待 writeback plan 的 jaccard/registry 预检确认；若已有同型句式则转为
+      confirming evidence。
 
+      '
+    proposed_change:
+      action: add_reference_variant
+      summary: 若预检确认缺失：在 hypothesis_forms.md 或 institutional_shock_lens.md 增加 'DiD treatment-contrast hypothesis statement'
+        参考变体
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: moon_2026
+      journal: JM
+      build_type: 调节效应型
+      hypothesis_family: ''
+      evidence_anchor: 'H1 derivation (¶61-63): DiD treatment-control contrast embedded in hypothesis statement'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - JM
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - JM
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-23'
+    last_seen: '2026-08-23'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  corpus-gap-trilevel-attention-moderator-framework:
+    classification: corpus_gap
+    status: EMERGING
+    risk: medium
+    current_rule: subprotocols/moderator_selection_frameworks.md 的既有框架是否覆盖 individual/organizational/contextual 三层注意权变元框架待核验
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/subprotocols/moderator_selection_frameworks.md
+    diagnosis: '本文用 ABV 的 ''degree of attention depends on individual, organizational, and contextual factors'' 作为三 moderator
+      的选择元框架，统一调节插入点为 注意程度。phase-4 文档示例曾将 moderator 元框架列为语料薄弱区，但现状 需以 corpus_precheck plan 的 registry 匹配为准。
+
+      '
+    proposed_change:
+      action: add_reference_variant
+      summary: 若预检确认缺失：EXTEND moderator_selection_frameworks.md，新增 ABV 三层注意权变框架变体
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: moon_2026
+      journal: JM
+      build_type: 调节效应型
+      hypothesis_family: ''
+      evidence_anchor: 'Moderating Effects preamble (¶67-71): tri-level meta-framework mapping CEO duality / firm age / peer
+        advertising spending onto individual/organizational/contextual levels'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - JM
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - JM
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-23'
+    last_seen: '2026-08-23'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.

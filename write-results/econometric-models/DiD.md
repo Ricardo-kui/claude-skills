@@ -277,6 +277,46 @@ updated: 2026-08-05
 - 若设计本应报告 event-study / 平行趋势而仅用本电池替代，须在 Methods/局限中说明为何适用（例如非经典单位×时间面板），不得暗示已完成平行趋势检验。
 - Appendix-only 结果须在正文保留一句结论，不能只写“see appendix”。
 
+
+
+
+
+
+### 变体 U：r7_did_alternative_shock_replication（moon2026）
+
+**模板/骨架**:
+> "In addition, we also test if our conclusions are robust in an alternative empirical setting that uses [related but distinct policy adoption] as an alternative shock. To this end, we identify [N] observations of [n] [units] headquartered in [state] that adopted [alternative policy] in [year] as the treated group and [N] observations of [n] [units] headquartered in [states] as the control groups that never adopted [alternative policy]. We estimate the simple diff-in-diff models on these alternative treated and control groups and find consistent empirical support for our thesis (see [appendix table] for more details)."
+
+来源：Moon et al. (2026, Journal of Marketing)。
+
+### 变体 T：r7_did_leave_one_out_treated_unit（moon2026）
+
+**模板/骨架**:
+> "The focal model examines the impact of [treatment] on [outcome] in [N] treated [states/units]. A potential critique is that our conclusions are driven by variations in a particular [state/unit]. Therefore, we construct alternative treated groups that exclude one treated [state/unit] at a time from our sample and re-estimate the models using [N] different samples ([citation]). Consistent with our expectations, we continue to find that [treatment] has a [positive] effect on [outcome] (see [appendix table])."
+
+来源：Moon et al. (2026, Journal of Marketing)。
+
+### 变体 S：r2_did_raw_descriptive_preview（moon2026）
+
+**模板/骨架**:
+> "Before discussing the results of the DiD models, it is important to explore the descriptive evidence with raw data to assess the impact of [treatment] on [outcome] ([citation]). Accordingly, we first examine the average [outcome] of the control and treated [units] [k] years before and after [treatment]. Figure [x] shows that the average [outcome] of the control [units] remains largely unchanged before and after [treatment], but that of the treated [units] [increases/decreases] following [treatment] (see Figure [x])."
+
+来源：Moon et al. (2026, Journal of Marketing)。
+
+### 变体 R：r2_did_selection_firststage_inline（moon2026）
+
+**模板/骨架**:
+> "To account for the potential selection bias arising from [disclosure/selection channel] by [units], we estimate a first-stage probit model where we find that both [exclusion restriction 1] (coef = [value], p = [threshold]) and [exclusion restriction 2] (coef = [value], p = [threshold]) are significant predictors of [selection outcome] (for details, see [appendix]). Importantly, the results of the Wald test for both instruments (chi2([df]) = [value], p = [threshold]) provide empirical support that weak instruments are unlikely to be a concern. To test the main effect hypothesis [H1], we examine the results of the main effect model in [Model x] of Table [y]."
+
+来源：Moon et al. (2026, Journal of Marketing)。
+
+### 变体 P：r7_did_stacked_staggered_robustness（moon2026）
+
+**模板/骨架**:
+> "Stacked diff-in-diff. In examining the impact of treatments that are staggered across time, a potential alternative estimation strategy would be to employ a stacked DiD model ([citation]). To this end, we construct an event specific sample with [units] in one [treatment state] as treated groups and those that never [receive treatment] as control groups, which forms a cohort, and stack all cohorts to construct the stacked dataset. The stacked DiD model incorporates the cohort-specific [unit] and [time] fixed effects and enables us to use relative time dummies, which allows for potentially cleaner comparison between the treated and control groups and alleviates the potential concern about the staggered treatment design ([citation]). As Model [x] in Table [y] shows, we consistently find support for the [positive/negative] effect of [treatment] on [outcome] in the stacked DiD models."
+
+来源：Moon et al. (2026, Journal of Marketing)。
+
 ### 变体 10：Null placebo（±k 期伪处理）作为识别确证（2026-08-05）
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
@@ -297,3 +337,30 @@ updated: 2026-08-05
 **诚实边界**:
 - Placebo null ≠ 假设得到支持；只能降低“结果纯属偶然/时点错置”的顾虑。
 - 必须预先声明期望（weaker/null）；若 placebo 显著，不得沉默，应报告为 identification threat。
+
+
+### 变体 O：r7_did_treatment_reversal_counterfactual（moon2026）
+
+**模板/骨架**:
+> "Counterfactual analysis: treatment reversal. In the treated groups of our sample, [units in states/regions A and B] first [adopted/recognized] [treatment] in [year] and then rejected it later in [year]. These rulings that reject [treatment] offer a natural empirical setting for counterfactual analysis. If [treatment] increases [outcome] of [units], [treatment] rejection is expected to have the opposite effect on [outcome]. To test this expectation, we focus on [units] in the [states] that [adopted treatment] in the post-treatment period. Specifically, we use [units] in [reversal states] as the treated groups and those in [still-treated states] as the control groups and estimate [equation]. As shown in Model [x] in Table [y], we find that [treatment] rejection has a significant [negative/opposite-sign] effect on [outcome] (coef = [value], p = [threshold]), which is consistent with our expectations."
+
+来源：Moon et al. (2026, Journal of Marketing)。
+
+
+### 变体 Q：r7_did_alternative_outcome_placebo（moon2026）
+
+**模板/骨架**:
+> "Placebo tests with alternative dependent variables. A potential alternative explanation for the observed [positive] effect of [treatment] on [outcome] could be that it reflects a general increase in [overall operating costs / broader category] following [treatment]. ... Therefore, we conduct an additional analysis using alternative dependent variables that reflect [general business expenses]. Specifically, we use [alternative DV 1] and [alternative DV 2] as the alternative dependent variables. As shown in Model [x] of Table [y], we do not find empirical support for the alternative argument that [treatment] is likely to lead to a general increase in [broader outcome category] (i.e., the effect of [treatment] on [alt DV 1] = [value], p = [n.s.]; on [alt DV 2] = [value], p = [n.s.])."
+
+来源：Moon et al. (2026, Journal of Marketing)。
+
+
+## 反模式（zhang-idd-advertising-rejected 拒稿案例补充，2026-08-23）
+
+来源：用户稿件 "Beyond Employee Retention..."（SMJ/JAMS 两轮拒稿）对照 Moon et al. (2026, JM) 的复盘；故事卡 `story-blueprints/v4/blueprints/zhang-idd-advertising-rejected.md`。
+
+| 反模式 | 问题 | 应改为 |
+|--------|------|--------|
+| **全模型主效应符号反转不叙述** | 调节全模型中处理主效应由正转负（如 −0.101, p=.008），正文仍写 "results remain robust"；附录稳健性表（D1–D4）系统性复现负主效应仍无叙述 | 主效应变号必须在 Results 正文显式讨论：H1 是普遍效应还是条件效应；报告调节变量均值处的净效应及其显著性 |
+| **正文与附录表述矛盾** | 附录表主效应为负且显著，正文/附录文字却写 "main effect remains positive and significant"——从漏叙述升级为误描述 | 投稿前逐表核对正文措辞与附录系数的符号和显著性；数量词（"三个稳健性检验"）与实际个数一致 |
+| **post-treatment 交互当机制确证** | 用被处理影响过的变量（广告支出）与处理交互预测下游结果，宣称 "confirms the mechanism"——bad-controls，两轮评审当场抓获 | 交互结果降级为条件性证据（only-when 措辞）；机制主张必须由独立测度（文本、调查、一阶段）承接 |

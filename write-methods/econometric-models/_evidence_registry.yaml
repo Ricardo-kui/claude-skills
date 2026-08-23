@@ -1,5 +1,5 @@
 meta:
-  last_updated: '2026-08-12'
+  last_updated: '2026-08-23'
   total_design_types: 22
   batches_processed: 20
   usage_stats_schema:
@@ -301,7 +301,8 @@ evidence:
         merged statement, squared-term exclusion not separately argued.'
     chen_ganesan_liu_2009_jm:
       journal: Journal of Marketing
-      title: "Does a Firm's Product-Recall Strategy Affect Its Financial Value? An Examination of Monitoring Versus Initiating Recalls"
+      title: Does a Firm's Product-Recall Strategy Affect Its Financial Value? An Examination of Monitoring Versus Initiating
+        Recalls
       status: EMERGING (1p)
       verification_basis: distill-methods-exemplar_2026-08-12
       design_types:
@@ -314,12 +315,11 @@ evidence:
       - M5
       - M8
       story_fidelity: section_variant
-      note: 'Multi-stage CPSC event-study stack: regulator multi-reason M1 legitimacy; threat-triad
-        prescreen (confound/leakage+AE ruling/classification ambiguity); zero-incident=proactive
-        archival strategy dichotomy; Kenny mediation (probit+cross-section AR); Heckman strategy-switching
-        with no-a-priori+main-table exclusion restrictions (λ=0 validates main cross-section).
-        SKIP market-model formula and basic CAR cross-section. Anti-patterns: funnel without step
-        Ns; Heckman/mediation only in Results.'
+      note: 'Multi-stage CPSC event-study stack: regulator multi-reason M1 legitimacy; threat-triad prescreen (confound/leakage+AE
+        ruling/classification ambiguity); zero-incident=proactive archival strategy dichotomy; Kenny mediation (probit+cross-section
+        AR); Heckman strategy-switching with no-a-priori+main-table exclusion restrictions (λ=0 validates main cross-section).
+        SKIP market-model formula and basic CAR cross-section. Anti-patterns: funnel without step Ns; Heckman/mediation only
+        in Results.'
   by_design_type:
     面板数据-OLS:
       paper_count: 12
@@ -357,9 +357,10 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     自然实验-DiD:
-      paper_count: 1
+      paper_count: 2
       papers:
       - lee_wu_bednar_orsc_18968 (Organization Science)
+      - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
       status: EMERGING
       slots_covered:
       - M2
@@ -370,10 +371,16 @@ evidence:
       - 仅凭处理前系数不显著声称平行趋势成立
       - 跨层级暴露映射不报告处理事件为何从原始数据库减少
       validation_history:
-        revise: 0
+        revise: 3
         reject: 0
-        last_critique: null
-        common_revise_reasons: []
+        last_critique: '2026-08-23'
+        common_revise_reasons:
+        - SMJ R1#7 与 JAMS R1#6/#7（跨刊跨审稿人）：调节变量 PCA 含 SG&A（含广告）与 DV 机械重叠、调节变量时变未固定于处理前——moderator 测量须与 DV 无会计重叠且固定 pre-treatment（moon2026
+          调节变量全部由理论推出且无重叠为正面模板）
+        - SMJ 编辑与 R1#2、JAMS R1 主问题#2：用被处理影响的变量（LnADV）与处理交互做机制检验构成 bad-controls；机制主张须由独立测度承接，post-treatment 交互只能降级为 only-when
+          条件性证据（moon2026 Table 6 三段式为正面模板）
+        - SMJ R1#8、R2#7 与 JAMS AE、R1（两轮四评审+编辑）一致要求 heterogeneity-robust 估计量（Sun-Abraham/Callaway-Sant'Anna/stacked/BJS）作主分析、TWFE
+          降级为基准，且调节效应也须在 robust 设计内重估；仅附录图示无系数表被判不足（moon2026 对照：stacked DiD 进主表 Model 7）
     非线性模型:
       paper_count: 5
       papers:
@@ -704,7 +711,7 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     两阶段模型:
-      paper_count: 6
+      paper_count: 7
       papers:
       - chen_ganesan_liu_2009_jm (JM)
       - chung_low_rust_2022_jams (JAMS)
@@ -712,6 +719,7 @@ evidence:
       - moon_tuli_mukherjee_2023_jm (JM)
       - ridge_hill_ingram_kolomeitsev_worrell_2024_amj (AMJ)
       - zhou2017 (ASQ)
+      - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
       status: ROBUST
       slots_covered:
       - M7

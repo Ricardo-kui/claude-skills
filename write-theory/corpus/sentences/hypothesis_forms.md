@@ -124,6 +124,14 @@ negatively when [A] than when [B].
 
 ---
 
+
+### 变体 A：T4_did_contrast_hypothesis（moon2026）
+
+**模板/骨架**:
+> "We expect that [treatment event] in [unit] is likely to lead to [directional change in outcome] of [treated units], as compared to [control units]. Formally: H[N]: [A unit exposed to treatment X increases its Y following X]."
+
+来源：Moon et al. (2026, Journal of Marketing)。
+
 ## 配对假设 (Paired Hypotheses a/b Format)
 
 **适用**: 多 DV 设计中同一 IV 对两个 DV 产生相同方向的预测——使用 a/b 配对保持 2×N 矩阵的可读性

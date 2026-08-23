@@ -295,3 +295,11 @@ status: ready_for_corpus
 **反模式**: 选 COO/CFO 只因为数据里有 title；选生命周期只因为创新文献常用，却不论证它如何改变该高管的注意带宽。
 
 
+
+
+### 变体 A：T5_moderator_metaframework_trilevel（moon2026）
+
+**模板/骨架**:
+> "Research on [lens] argues that because [scarce resource], the degree to which [actor] pays attention to [change] may depend on individual, organizational, and contextual factors. Accordingly, we examine [N] key factors: [W1], [W2], and [W3]. At the individual level, [W1 rationale]. At the organizational level, [W2 rationale]. At the environmental level, [W3 rationale]. Taken together, we expect that each of these factors shapes the degree to which [actor] [response]."
+
+来源：Moon et al. (2026, Journal of Marketing)。

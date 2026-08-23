@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
-  last_updated: '2026-08-20'
-  observations_processed: 12
+  last_updated: '2026-08-23'
+  observations_processed: 16
   description: Evidence ledger for design defects inferred from Introduction exemplar distillation.
 defects:
   incompleteness-embedded-opposing-claims-vs-incommensurability:
@@ -488,6 +488,157 @@ defects:
     lifecycle: open
     first_seen: '2026-08-20'
     last_seen: '2026-08-20'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  abv-attention-redirect-lens-missing:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: theory-lens 目录无 attention-based view 透镜模板；现有 01-agency/02-dual/04-screening/06-context-bridging/07-socio-cognitive/09-construct-contrast
+      均不覆盖'制度冲击释放旧注意力+外部期望牵引新注意力'的重定向机制
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/theory-lens/_index.md
+    diagnosis: 语料缺口：ABV 作为注意力重定向透镜在营销/战略顶刊渐多，缺可迁移变体；已通过 writeback plan 以 ADD 候选进入 theory-lens
+    proposed_change:
+      action: append_variant
+      summary: 新增 ABV 注意力重定向型理论透镜变体（moon2026 型），EMERGING，section_variant
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: moon2026
+      journal: JM
+      evidence_anchor: extended-intro 内嵌 Theory Lens 段：ABV 定义注意力稀缺 → 制度变迁（IDD）释放保护性注意力 + 资本市场增长期望牵引 → 重定向至 leveraging actions
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - JM
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - JM
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-23'
+    last_seen: '2026-08-23'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  intro-lit-synthesis-table-variant-missing:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: literature-turns 语料以段落式 synthesis 变体为主，无'引言内文献综合表 + Current Study 入座行'变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/literature-turns/_index.md
+    diagnosis: 语料缺口：大文献体量+单一主导机制场景下，表格式 synthesis 把 departure point 结构化为表格空缺行；已通过 writeback plan 以 ADD 候选进入 literature-turns
+    proposed_change:
+      action: append_variant
+      summary: 新增综合表定位型 Literature Turn 变体（moon2026 型），EMERGING，section_variant
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: moon2026
+      journal: JM
+      evidence_anchor: P18-P47：Table 1 按 领域×发现×机制 组织 17+ 研究，Current Study 为末行；表后段点出 predominant mechanism 再收窄至未检机制
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - JM
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - JM
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-23'
+    last_seen: '2026-08-23'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  contribution-embedded-quantified-findings-variant-missing:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: previews/findings-preview.md 变体 D-R 均为独立 Preview 段；无'编号贡献块内嵌头条幅度+机制证据+调节幅度区间'的融合型
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/previews/findings-preview.md
+    diagnosis: 语料缺口：贡献声明与发现预告融合块（每条贡献=主张+幅度+证据）未被覆盖；已通过 writeback plan 以 ADD 候选进入 findings-preview
+    proposed_change:
+      action: append_variant
+      summary: 新增编号贡献内嵌量化发现型 Preview 变体（moon2026 型），EMERGING，section_variant
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: moon2026
+      journal: JM
+      evidence_anchor: P10-P16：三条编号贡献各嵌入头条效应（13.5%）、机制证据（分析师收入预期+10-K 品牌讨论）、调节幅度区间（53%-100%）；第三条为测量分辨率贡献
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - JM
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - JM
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-23'
+    last_seen: '2026-08-23'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  tension-functional-prerequisite-warrant-variant:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: tensions/01-despite-progress-unaddressed.md 已有变体 A-AH，含 outcome-valence asymmetry（AB）与 IPR 形式外推（AC），但无'X
+      的价值除非经 Y 实现否则有限'的功能前提惊讶 warrant
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/tensions/01-despite-progress-unaddressed.md
+    diagnosis: 语料缺口：邻域枚举+功能前提依赖的 gap 正当化逻辑未被覆盖；已通过 writeback plan 以 EXTEND 候选进入 tension 01
+    proposed_change:
+      action: append_variant
+      summary: 追加功能前提悖论型变体（moon2026 型）至 tension 01，EMERGING，section_variant
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: moon2026
+      journal: JM
+      evidence_anchor: P6：邻域枚举（财务/员工、创新、估值）→ 'Little, however, is known about marketing actions' → 'This is surprising because
+        protection has limited value unless converted into commercial outcomes'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - JM
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - JM
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-23'
+    last_seen: '2026-08-23'
     auto_action:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
