@@ -245,7 +245,7 @@ source: Manually curated from MVP30 narrative_analysis files + zorn2017 distill
 
 **来源**: Zorn et al. (2017, SMJ), P1
 
-**原文锚定**（仅溯源，勿作生成句）:
+**原文锚定**:
 > governance practice evolves → lone-insider escaped attention → SOX/NYSE-NASDAQ pressure → ultimate step toward independence → handful pre-1990 → more than half of S&P 1500 → worthy of investigation.
 
 **关键特征**:

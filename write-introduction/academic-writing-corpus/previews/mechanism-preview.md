@@ -454,7 +454,7 @@ P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者
 
 **来源**: Castellaneta, Conti & Kacperczyk (2017, SMJ), P5–P6
 
-**原文锚定**（仅溯源，勿作生成句）:
+**原文锚定**:
 > 内生性威胁 → 交错州法准实验 → 政治经济外生性引用 → PE 双重交易使 Δvalue 可观测 → 持有窗 treatment/control。
 
 **关键特征**:
@@ -480,7 +480,7 @@ P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者
 
 **来源**: Kim & Lee (2026, SMJ), P3
 
-**原文锚定**（仅溯源，勿作生成句）:
+**原文锚定**:
 > VFA structured fellowship → attraction/selection/attrition tracking → alumni offer-salary survey → within-candidate SRO vs non-SRO → joint observation warrant.
 
 **关键特征**:

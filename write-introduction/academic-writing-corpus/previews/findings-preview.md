@@ -202,7 +202,7 @@ P5-P6 的下半段功能：向读者预告实证结果。这是 Introduction 中
 
 **来源**: Castellaneta, Conti & Kacperczyk (2017, SMJ), P7
 
-**原文锚定**（仅溯源，勿作生成句）:
+**原文锚定**:
 > 权变净效应 + 流动条件正向 / 不确定与 lemon 条件负向 + double-edged 收束（trade secret × firm market value）。
 
 **关键特征**:
@@ -227,7 +227,7 @@ P5-P6 的下半段功能：向读者预告实证结果。这是 Introduction 中
 
 **来源**: Kim & Lee (2026, SMJ), P4
 
-**原文锚定**（仅溯源，勿作生成句）:
+**原文锚定**:
 > attraction+selection advantages → WTP 13–18.5% (lower vs prior experiments) → female-driven attraction only → attrition/satisfaction null.
 
 **关键特征**:

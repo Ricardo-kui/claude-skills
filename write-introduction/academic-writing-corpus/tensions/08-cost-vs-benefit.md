@@ -115,7 +115,7 @@ source: Extracted from MVP30 narrative_analysis + eilert2017 distill + castellan
 
 **来源**: Castellaneta, Conti & Kacperczyk (2017, SMJ), P3–P4
 
-**原文锚定**（仅溯源，勿作生成句）:
+**原文锚定**:
 > 同一保护工具 → 对手侧 vs 买方侧信息不对称 → double-edged → 行业权变消解。
 
 **关键特征**:

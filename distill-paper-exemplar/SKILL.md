@@ -77,6 +77,11 @@ L4 反馈收敛        核对 design_feedback 已持久化；报告三路输出�
    仅当需要随论文留档时才用 `--outdir` 显式放到论文旁。
    **零留痕（用户裁决）**：feedback/sections/slices/plan 等中间产物对用户无价值，
    不得落论文目录或任何长期位置；L4 `--clean` 是强制收尾，不是可选。
+   **句子库存例外（2026-08-24 起，P1a）**：`preprocess_l0.py <MD> --keep-sentences`
+   把各节切片抽取成 `story-blueprints/v4/rhetoric-moves/sources/<citekey>.sentences.md`
+   （逐句一行 + `<!-- para N -->` 段落溯源，`--clean` **不删**它）。这是跨源合成的
+   原料池，不是中间产物；当用户目标含叙事/语言学习（而非仅结构）时主循环应默认加
+   此 flag，L4 不清理该归档。
 2. **L1 分节蒸馏分发（子代理）**。按用户范围（默认 4 节全跑）**串行**分发到子代理
    （每次 1 个，完成再发下一个；`--parallel` 显式开启并行）。分发机制与提示词模板见
    `references/l1-subagent-protocol.md`：Claude Code 用 `Task` 工具（general-purpose），

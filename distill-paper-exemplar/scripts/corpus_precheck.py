@@ -22,6 +22,11 @@ candidates.yaml:
         ### 变体 {NEXT}：...        # passed through into the plan so the writeback
         ...                        # executor needs no separate blocks.yaml
       index_note: "变体 {NEXT}：..."  # optional _index row note
+      source_anchor: "..."    # OPTIONAL verbatim source sentence (style reference,
+                              #   never to be copied wholesale). NOTE: distinct from
+                              #   the plan's internal `anchor` (insert location dict).
+      source_locator: "P5"    # OPTIONAL where in the source paper it lives
+                              #   (section / paragraph / figure-table)
 
 Plan output: per candidate -> band (gap/薄弱/quiet), dedup verdict
 (SKIP at jaccard>=0.33 / EXTEND / ADD) with best match, registry matches,
@@ -261,9 +266,29 @@ def main() -> int:
             "human_review": "gate ① 仍须确认本 plan 后再写回（除非 --auto-write 已授权）",
         }
         # pass-through: write once in candidates.yaml, executor reads from plan
-        for k in ("block_text", "index_note", "file_override"):
+        for k in ("block_text", "index_note", "file_override", "source_anchor", "source_locator"):
             if cand.get(k):
                 plan_item[k] = cand[k]
+        # provenance machine check (P1b, 2026-08-24): anchor capture becomes a
+        # verifiable contract, not just prose convention. ADD/EXTEND variants
+        # should carry either structured source_anchor+source_locator fields OR a
+        # 原文锚定/原文锚点/原始句锚点 line inside block_text; variants marked
+        # "待补" are exempt (no anchor yet by design). Missing provenance is
+        # surfaced as a warning at gate ① human review — not a hard block,
+        # because some variants legitimately ship anchor-less.
+        if verdict in ("ADD", "EXTEND"):
+            blk = cand.get("block_text") or cand.get("skeleton_text") or ""
+            has_structured = bool(cand.get("source_anchor") and cand.get("source_locator"))
+            has_marker = any(m in blk for m in ("原文锚定", "原文锚点", "原始句锚点"))
+            plan_item["provenance"] = {
+                "structured": has_structured,
+                "marker_in_block": has_marker,
+                "complete": has_structured or has_marker,
+            }
+            if not has_structured and not has_marker and "待补" not in blk:
+                plan_item["provenance_warning"] = (
+                    "无原文锚点来源（source_anchor+source_locator 字段或 block_text 内 原文锚定 行均缺）"
+                    "——gate ① 请确认该变体是否应带原文锚点")
         plan_items.append(plan_item)
 
     plan = {"section": args.section, "citekey": args.citekey,

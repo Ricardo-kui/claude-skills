@@ -142,7 +142,7 @@ zhou2017 的 non-coherence 实为**双层叠加**，是其文献对话的高质�
 
 **来源**: Bendig, Hensellek, and Schulte (2024), *Entrepreneurship Theory and Practice*
 
-**原文锚定**（仅溯源，勿作生成句）:
+**原文锚定**:
 > CVC/alliance 文献偏财务价值与专利 → 执行成本与整合负担 → 产品召回作为有意义不利后果 → RBV+learning 下成本先占优、学习后占优的倒 U 预告。
 
 **两级结构**:

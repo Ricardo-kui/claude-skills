@@ -108,7 +108,7 @@ whenToUse: "Use when 用户要写管理学顶刊论文的 Methods 部分，包�
 1. **句法微模板（默认执行）**：按 `econometric-models/micro-templates/INDEX.md` 分类索引选读 1–3 个对应微模板（causal-hedging / transitions / because-clauses / funnel-rhythm / variable-operationalization / identification-exogeneity 等），为关键句位提供 2–3 个备选措辞。高风险微模板（强因果动词）只能在对应设计强度的骨架中使用。
 2. **措辞变化库**：过程描述 → `../write-introduction/academic-writing-corpus/phrasebank/methods-process.md`；数值与趋势 → `quantities-trends.md`；hedging → `hedging-strength.md`（识别论证/局限辩护用）；试探性因果 → `causal-hedging.md`（Discussion 机制解释专用）；五病 → `../pollock-qc/references/prose-pathology.md`。
 3. **润色纪律**：骨架优先，变化库只提供措辞变体不替代结构；每句位 ≤2-3 候选；specificity gate 强制具体化；结果以 `### 措辞润色建议` 块附骨架末尾，不覆盖原文。
-4. **锚点使用纪律（verbatim anchor）**：设计类型变体的 `原始句锚点` 是来源论文原句的风格参照——**结构跟骨架、语言风味跟锚点**，填入 [placeholder] 后保持语言质地；不逐字复制锚点内容，不保留其专有名词/数字。旧变体无锚点（标注"待补"）时按骨架直接生成。
+4. **锚点使用纪律（verbatim anchor）**：设计类型变体的 `原始句锚点` 是来源论文原句的风格参照——**句式骨架跟锚点、词语全换**（替换专有名词、数字、机制词）；产出段落对所用锚点来源跑 `../story-blueprints/v4/rhetoric-moves/scripts/guard.py`，整体 4-gram 重合落在 [10%,40%] 才算过（<10% 软提示离骨架太远，>40% 查重风险），否则重写或跨源合成；首要保证通顺、符合学术表达、句子不过长。旧变体无锚点（标注"待补"）时按骨架直接生成。修辞动作级升级（把某段按某动作做得更讲究）路由 `../story-blueprints/v4/rhetoric-moves/_index.md`，润色走其 `_polish-protocol.md` 查重护栏。
 5. **revision 约束优先**：corpus、phrasebank 与“措辞润色建议”不得覆盖 active feedback 或恢复 `supersedes` 指向的旧建议；已发现相似风险时只借用段落功能、顺序与节奏，重写来源论文的句法骨架并保留标准技术术语。
 6. **Methods 语态纪律**：完成的研究程序使用主动过去时；定义、制度事实、公式符号、估计器性质和解释惯例使用现在时。限制与 scope condition 直接陈述，不添加防御性收尾或作者自我评价。
 7. **因果语言强制词汇表**（按设计家族，无越级）：

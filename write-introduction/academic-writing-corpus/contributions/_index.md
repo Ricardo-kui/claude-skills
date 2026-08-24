@@ -508,7 +508,7 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 
 **来源**: Kim & Lee (2026, SMJ), P5
 
-**原文锚定**（仅溯源，勿作生成句）:
+**原文锚定**:
 > validate/extend to strategic HC full-time → revealed-preference WTP → multi-stage durability (pre yes / post null) → gendered attraction → appeal + limits.
 
 **关键特征**:

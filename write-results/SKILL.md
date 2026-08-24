@@ -102,7 +102,7 @@ whenToUse: "Use when 用户要新写、修订或重写管理学顶刊论文的 R
 2. **段落证据链（revision 默认执行）**：按 `references/draft-revision-protocol.md` 构建精确小标题、问题路径、诊断逻辑、证据和限定结论；“One concern is ...”若未说明问题如何发生及影响哪个推断，视为未完成。
 3. **句法微模板（按需）**：从 `../write-methods/econometric-models/micro-templates/` 选读 causal-hedging、interquartile-economic-significance、subsample-grouping、transitions；只借用逻辑连接方式，不移植 Methods 语态或整句。
 4. **措辞变化库**：数值与趋势 → `../write-introduction/academic-writing-corpus/phrasebank/quantities-trends.md`；hedging → `hedging-strength.md`；五病 → `../pollock-qc/references/prose-pathology.md`。优先保证句间推理关系，不为变化而更换已经准确的术语。
-5. **锚点使用纪律（verbatim anchor）**：结构跟证据功能，语言只参考锚点的节奏；不逐字复制，不保留来源论文的系数、表号或专名。
+5. **锚点使用纪律（verbatim anchor）**：结构跟证据功能，句式骨架参考锚点、词语全换；不保留来源论文的系数、表号或专名。产出段落对所用锚点来源跑 `../story-blueprints/v4/rhetoric-moves/scripts/guard.py`，整体 4-gram 重合落在 [10%,40%] 才算过（<10% 软提示离骨架太远，>40% 查重风险），否则重写或跨源合成；首要保证通顺、符合学术表达、句子不过长。修辞动作级升级（反向反事实等）路由 `../story-blueprints/v4/rhetoric-moves/_index.md`，润色走其 `_polish-protocol.md` 查重护栏。
 6. **事实直陈默认语态**：先直接报告方向、显著性/不确定性和幅度；只保留一句完成必要解释，再把 verdict 绑定到假设或理论。不要用“我们诚实披露”“为了透明”“我们并不把它表述为”等自我评价式 wrapper 代替限制本身。
 7. **语言锁定**：主动读取用户禁用词和现稿术语表；默认不把 `model/modeled/modelled/modeling/modelling` 用作动词，改用 `estimate`、`re-estimate`、`analyze`、`specify` 或直接说明 unit of analysis。不得重新发明 Methods 已删除的上位构念。
 8. **因果语言强制词汇表**（按设计家族，与 write-methods 同表）：面板 OLS→"associated with"（禁 causes/leads to）；DiD→"effect of"（平行趋势支持后）；IV→"effect"（识别 preview 后，避免 causes）；非线性→边际效应/概率转述；生存分析→"changes the hazard of"；实验→"caused"。

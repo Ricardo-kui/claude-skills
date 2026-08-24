@@ -837,7 +837,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 **来源**: Kim & Lee (2026, SMJ), P2
 
-**原文锚定**（仅溯源，勿作生成句）:
+**原文锚定**:
 > incomplete evidence → strategic human capital / long-term affiliations → full-time competitive labor markets → higher stakes vs temporary-hypothetical bulk → underexplored (full-time + beyond initial hiring).
 
 **关键特征**:

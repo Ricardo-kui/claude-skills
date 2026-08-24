@@ -17,6 +17,11 @@ Output layout (PDM workdir):
 
   --unlock removes the LOCK; --clean removes the whole workdir (run at L4).
 
+  --keep-sentences writes a durable sentence inventory to
+    story-blueprints/v4/rhetoric-moves/sources/<citekey>.sentences.md
+    (cross-source synthesis raw material for P2 move enrichment; NOT deleted
+    by --clean — it is a deliberate asset, not an intermediate product).
+
 The raw source MD is NEVER modified and must never be read by distill agents.
 Section detection is heading-based and conservative: anything uncertain is
 reported as "unknown" so the orchestrator can fall back to manual slicing.
@@ -29,6 +34,7 @@ import os
 import re
 import shutil
 import sys
+from datetime import date
 from pathlib import Path
 
 # bucket -> heading patterns (case-insensitive, matched against heading text)
@@ -52,6 +58,12 @@ BUCKET_ORDER = ["introduction", "theory", "methods", "results", "discussion"]
 IMG_DATA_URI_MD = re.compile(r"!\[([^\]]*)\]\(\s*data:image/[^)\s]+[^)]*\)")
 IMG_DATA_URI_HTML = re.compile(r'<img\b[^>]*\bsrc="data:image/[^"]*"[^>]*/?>', re.I)
 HEADING = re.compile(r"^(#{1,3})\s+(.+?)\s*#*\s*$")
+SENTENCE_SPLIT = re.compile(r"(?<=[.!?])\s+(?=[A-Z\"'(])")
+
+SKILLS_ROOT = Path(__file__).resolve().parent.parent.parent
+DEFAULT_SOURCES_DIR = (
+    SKILLS_ROOT / "story-blueprints" / "v4" / "rhetoric-moves" / "sources"
+)
 
 
 def strip_base64(text: str) -> tuple[str, int]:
@@ -160,6 +172,79 @@ def work_root() -> Path:
     return Path(env) if env else Path.home() / ".claude" / "distill-work"
 
 
+def extract_sentences(body: str) -> list[tuple[int, str]]:
+    """Best-effort sentence split of a section slice.
+
+    Returns [(paragraph_1based_index, sentence), ...]. Drops headings, list
+    markers, table/figure captions, and fragments shorter than 40 chars.
+    Provenance is paragraph-level — enough to route a sentence back to its
+    context for P2 enrichment, not a citation formatter.
+    """
+    paragraphs = re.split(r"\n\s*\n", body.strip())
+    out: list[tuple[int, str]] = []
+    for idx, para in enumerate(paragraphs, start=1):
+        p = para.strip()
+        if not p or p.startswith("#"):
+            continue
+        if re.match(r"^(table|figure)\b", p, re.I):
+            continue
+        p = re.sub(r"^[-*+]\s+", "", p)
+        p = re.sub(r"^\d+[.)]\s+", "", p)
+        p = p.strip("|").strip()
+        for s in SENTENCE_SPLIT.split(p):
+            s = s.strip()
+            if len(s) >= 40:
+                out.append((idx, s))
+    return out
+
+
+def write_sentences_archive(citekey: str, src: Path, spans: dict,
+                            lines: list[str], sources_dir: Path) -> Path:
+    """Materialize a durable sentence inventory beside the PDM workdir.
+
+    One line per sentence, grouped by section, with paragraph-level provenance
+    as `<!-- para N -->` markers. This is the raw-material pool for cross-source
+    synthesis (P2 move enrichment): it survives `--clean` because it is a
+    deliberate asset, not an intermediate product.
+    """
+    sources_dir.mkdir(parents=True, exist_ok=True)
+    archive = sources_dir / f"{citekey}.sentences.md"
+    parts = [
+        "---",
+        "type: sentences-archive",
+        f'citekey: "{citekey}"',
+        f'source_md: "{src.resolve()}"',
+        f"created: {date.today().isoformat()}",
+        "note: >-",
+        "  跨源合成原料库存（distill-paper-exemplar L0 --keep-sentences 生成）。只读；",
+        "  任何产出必须过护栏 scripts/guard.py（单源 4-gram 重合 ≤50%）。",
+        "---",
+        "",
+        f"# {citekey} 句子库存",
+        "",
+    ]
+    for bucket in BUCKET_ORDER:
+        sp = spans.get(bucket)
+        if not sp:
+            continue
+        body = "\n".join(lines[sp["start"] - 1 : sp["end"]]).rstrip()
+        sentences = extract_sentences(body)
+        parts.append(f"## {bucket}")
+        if not sentences:
+            parts.append("_（本节约无 ≥40 字符句子）_")
+            parts.append("")
+            continue
+        cur_para: int | None = None
+        for para, sent in sentences:
+            if para != cur_para:
+                parts.append(f"<!-- para {para} -->")
+                cur_para = para
+            parts.append(sent)
+        parts.append("")
+    archive.write_text("\n".join(parts), encoding="utf-8")
+    return archive
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="L0 preprocess: strip base64 + materialize section slices")
     ap.add_argument("source_md", help="path to paper-import full-text MD (read-only)")
@@ -171,6 +256,13 @@ def main() -> int:
     ap.add_argument("--unlock", action="store_true", help="remove the PDM LOCK and exit")
     ap.add_argument("--clean", action="store_true",
                     help="remove the whole PDM workdir (implies --unlock) and exit")
+    ap.add_argument("--keep-sentences", action="store_true",
+                    help="write a durable sentence inventory to "
+                         "story-blueprints/v4/rhetoric-moves/sources/<citekey>.sentences.md "
+                         "(NOT deleted by --clean)")
+    ap.add_argument("--sources-dir", default=None,
+                    help="override the sentence-inventory root (default: "
+                         "skills/story-blueprints/v4/rhetoric-moves/sources)")
     args = ap.parse_args()
 
     src = Path(args.source_md)
@@ -268,6 +360,13 @@ def main() -> int:
             "words": len(body.split()),
             "heading": sp["heading"],
         }
+
+    manifest["sentences_archive"] = None
+    if args.keep_sentences:
+        sources_dir = Path(args.sources_dir) if args.sources_dir else DEFAULT_SOURCES_DIR
+        manifest["sentences_archive"] = str(
+            write_sentences_archive(citekey, src, spans, lines, sources_dir)
+        )
 
     (outdir / "l0_manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"

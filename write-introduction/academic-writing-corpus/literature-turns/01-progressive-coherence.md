@@ -342,7 +342,7 @@ P2-P3 的功能：承认文献已有实质进展，但精确指出被遗漏的�
 
 **来源**: Kim & Lee (2026, SMJ), P1
 
-**原文锚定**（仅溯源，勿作生成句）:
+**原文锚定**:
 > growing SRO-recruitment literature → altruism/norms → interest + wage trade-off → evidence primarily from gig / lab-style / survey contexts.
 
 **关键特征**:
@@ -367,7 +367,7 @@ P2-P3 的功能：承认文献已有实质进展，但精确指出被遗漏的�
 
 **来源**: Zorn et al. (2017, SMJ), background section (Intro 扩展模块) + Intro P4–P5
 
-**原文锚定**（仅溯源，勿作生成句）:
+**原文锚定**:
 > lone-insider not mandated → raises why adopt / what consequences → Joseph et al. answer adoption → consequences remain unclear → finance uses as power composite or performance variability → proximal outcomes unknown.
 
 **关键特征**:

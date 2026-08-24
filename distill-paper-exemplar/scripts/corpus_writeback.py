@@ -282,6 +282,14 @@ def main() -> int:
         lines = text.split("\n")
         label = next_variant_label(lines)
         body = block_text.replace("{NEXT}", label).strip("\n")
+        # provenance warning (P1b, 2026-08-24): precheck flagged the plan item
+        # as anchor-less; if the final body still carries no anchor marker,
+        # surface it for gate ① rather than silently writing back an unanchored
+        # variant. Warning only — no rc change.
+        if item.get("provenance_warning") and not any(
+            m in body for m in ("原文锚定", "原文锚点", "原始句锚点")
+        ):
+            messages.append(f"[{name}] WARN: {item['provenance_warning']}")
         at = insertion_index(lines, item, target)
         lines[at:at] = ["", body, ""]
         new_text[path] = "\n".join(lines)

@@ -27,6 +27,7 @@ Full Theory generation requires a valid story contract. Theory is rising action:
    **完成判据**：构念顺序 + 机制深度已定。
 3. 先执行 conditionality gate（稳定无条件效应是否有理论依据？）；再按 `references/phase-3-hypothesis-derivation.md`（含 8 项语料调用清单）通过完整 why-chain 推导每个假设；只 load 所选变体 `corpus/variants/[variant_filename]` 与必要的 sentence-pattern 文件；**D 型（过程理论）必须额外加载 `corpus/subprotocols/process_transition_operators.md`**（stage-boundary 与 feedback-transport 两个结构推理算子）。
    **完成判据**：每个假设有完整 why-chain + storyline_id；硬约束 #1–#16 逐条过。
+   修辞表达：机制双链（双链汇一）、调节元框架等理论动作的句子级执行 → `../story-blueprints/v4/rhetoric-moves/_index.md`（mechanism-two-chain 等）；润色走 `_polish-protocol.md` 查重护栏（护栏脚本 `scripts/guard.py`，整体 ≤40%）。
 4. 用 `references/phase-4-qc-alignment.md` 审计构念一致性、替代机制、假设可检验性、段落架构与跨节承诺；对每个 hypothesis/proposition 执行 argument graph（construct → premise → why-chain → boundary/level/time → prediction）：E 型 boundary state 为前置作用域节点，禁止出现 X → boundary state 的有向边；D 型逐阶段记录 current actor/action → transition condition → pre-next-stage marker → next actor/state → failed branch（细则见 `corpus/subprotocols/process_transition_operators.md`）。
    **完成判据**：四维审计无未修复项；E/D 型 argument graph 记录完整。
 5. 产出骨架 + storyline 链接假设 + 段落功能图 + 证据缺口 + QC 结果 + `paper-state.yaml` theory 字段；格式按 `references/output-format.md`。
@@ -111,7 +112,7 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 
 ## 原文锚点使用纪律（verbatim anchor）
 
-语料变体/句式模板的 `**原文锚点**` 字段是来源论文原句的风格参照（由 distill-theory-exemplar 提取）。生成段落时：**结构跟骨架、语言风味跟锚点**——填入 [placeholder] 后保持锚点的句式节奏与措辞质感；不逐字复制锚点内容，不保留其专有名词/数字。无锚点的旧变体（标注"待补"）按骨架直接生成。选材时参照"选材 Gate"（distill-theory-exemplar）的 routing 表 + 验证状态三带判定。
+语料变体/句式模板的 `**原文锚点**` 字段是来源论文原句的风格参照（由 distill-theory-exemplar 提取）。生成段落时：**句式骨架跟锚点、词语全换**（替换专有名词、数字、机制词）；产出段落对所用锚点来源跑 `../story-blueprints/v4/rhetoric-moves/scripts/guard.py`，整体 4-gram 重合落在 [10%,40%] 才算过（<10% 软提示离骨架太远，>40% 查重风险），否则重写或跨源合成；首要保证通顺、符合学术表达、句子不过长。无锚点的旧变体（标注"待补"）按骨架直接生成。选材时参照"选材 Gate"（distill-theory-exemplar）的 routing 表 + 验证状态三带判定。
 
 ## 批评登记（critique-driven stats）
 

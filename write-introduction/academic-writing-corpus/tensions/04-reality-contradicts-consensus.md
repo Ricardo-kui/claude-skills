@@ -249,7 +249,7 @@ source: Manually curated from MVP30 narrative_analysis files
 
 **来源**: Bendig, Hensellek, and Schulte (2024), *Entrepreneurship Theory and Practice*
 
-**原文锚定**（仅溯源，勿作生成句）:
+**原文锚定**:
 > 外部创业的资源/学习收益叙事 → 搜索与整合成本 → 产品安全伤害证据 → gap 收束为强度轴上的机制组合规则。
 
 **关键特征**:
