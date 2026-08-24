@@ -86,7 +86,7 @@
 - **Staggered / multi-period DiD** → TWFE is biased under heterogeneous effects; run `staggered-did` (de Chaisemartin–D'Haultfœuille, Goodman-Bacon, Sun–Abraham). The book's general w_it framework (ch14) is the flexible starting point.
 - **Few clusters** → cluster-robust SEs are unreliable with a handful of treated units; use wild cluster bootstrap / randomization inference (beyond the book).
 - **Weak instruments** → first-stage F < 10 is a screen, not a pass; under heteroskedasticity/serial correlation demand Montiel Olea–Pflueger F ≳ 20 (cheatsheet thresholds).
-- **Duration/survival outcomes** (time-to-recall, hazard) → **not in the book**; route to `stata` / econometrics-agent for Cox PH / AFT.
+- **Duration/survival outcomes** (time-to-recall, hazard) → beyond the book; start at [references/survival-duration-models.md](references/survival-duration-models.md) (Cox PH / AFT / competing risks / frailty), then `stata` / econometrics-agent for execution.
 
 **Completion criteria.** The chosen estimator is justified against the endogeneity sources of step 3; the assumption rung that makes it valid is named; every registered exception relevant to the design has been checked and routed.
 
