@@ -1,46 +1,63 @@
 ---
 name: wooldridge-econometrics
-description: "Wooldridge 计量经济学知识库（Introductory Econometrics, 8th ed.）：估计量选择与辩护、识别假设检查、诊断与补救。Use when choosing/defending an estimator (OLS, IV/2SLS, FE/RE, DiD, RD, logit/Tobit/Heckit), checking identifying assumptions (MLR/TS/FD/ATE ladders), diagnosing heteroskedasticity, serial correlation, endogeneity, weak instruments, or running treatment-effect/panel analyses. 触发词：Wooldridge、计量经济学、回归假设、工具变量、弱工具变量、双重差分、固定效应、随机效应、异方差、序列相关、单位根、时间序列回归、样本选择、稳健标准误、内生性、处理效应、estimator choice、identifying assumptions、Heckman selection、unit root、cointegration"
+description: "Wooldridge 计量经济学知识库（Introductory Econometrics, 8th ed.）：估计量选择与辩护、识别假设检查、诊断与补救，以及完整实证分析的理论指导。Use when choosing/defending an estimator (OLS, IV/2SLS, FE/RE, DiD, RD, logit/Tobit/Heckit), checking identifying assumptions (MLR/TS/FD/ATE ladders), diagnosing heteroskedasticity, serial correlation, endogeneity, weak instruments, running treatment-effect/panel analyses, or whenever you need the theoretical basis for an empirical analysis — estimator choice, diagnostics, robustness, or reviewer defense. 触发词：Wooldridge、计量经济学、回归假设、工具变量、弱工具变量、双重差分、固定效应、随机效应、异方差、序列相关、单位根、时间序列回归、样本选择、稳健标准误、内生性、处理效应、estimator choice、identifying assumptions、Heckman selection、unit root、cointegration、计量实证、实证分析怎么做"
 ---
 
-<!-- argument-hint: [topic, estimator name, or chapter number] -->
+<!-- argument-hint: [topic, estimator name, chapter number, or an empirical/diagnosis question] -->
 
 # Introductory Econometrics: A Modern Approach (8th ed.)
 **Author**: Jeffrey M. Wooldridge | **Pages**: ~940 | **Chapters**: 20 | **Generated**: 2026-08-21
 
 ## How to Use This Skill
 
-Topic or chapter question → find it in the Topic Index or Chapter Index below, read that chapter file before answering. Estimator-choice or diagnostic question → start from [cheatsheet.md](cheatsheet.md) and [patterns.md](patterns.md). Every answer should name the assumption rung it rests on (e.g. "unbiased under MLR.1–4").
+Pick your entry point:
 
----
+- **Running an empirical analysis end-to-end** → [workflow.md](workflow.md): the 7-step procedure with completion criteria — the "how to do it" spine.
+- **Diagnosing a problem** (null results, SEs that collapse, weak IV, a test firing, a reviewer objection) → [diagnostics.md](diagnostics.md): symptom → test → remedy → recheck.
+- **Choosing or defending an estimator** → [cheatsheet.md](cheatsheet.md) for the decision table and thresholds, [patterns.md](patterns.md) for the recipe, and the chapter file for the theory.
+- **Definitions** → [glossary.md](glossary.md). **A deep book question** → the chapter file (Chapter Index below).
 
-## Core Frameworks & Mental Models
+Every answer names the assumption rung it rests on (e.g. "unbiased under MLR.1–4"). If the question is modern staggered DiD, few-cluster inference, or identification-first design audits, the book is superseded — [workflow.md](workflow.md) routes you to the newer tool.
 
-**Everything is an assumption ladder.** Each estimator's credibility comes from a numbered assumption set; learn what each rung buys (full ladder table in [cheatsheet.md](cheatsheet.md)). When a claim fails, name the rung that failed — that is the diagnosis.
+## The Doing Spine (7 steps — full procedure in [workflow.md](workflow.md))
 
-**Zero conditional mean is the whole game (Ch 2–3).** E(u|x)=0 separates description from causation. Omitted variable bias: Bias(β̃₁) = β₂δ̃₁ — sign it with the Table 3.2 matrix before running anything. Use partialling out (Frisch-Waugh) to explain what any control actually does.
+1. **Pose the question** — population model (no hats) + ceteris paribus counterfactual. *Done when* you can name Y, X, population P, and the data structure in one sentence.
+2. **Audit the data** — lie-detector checklist (missing sentinels, units, proportions vs percentages, panel ordering, phantom obs). *Done when* every inherited dataset passes.
+3. **Declare the target & endogeneity sources** — causal coefficient vs prediction vs description; rule out omitted vars, self-selection, measurement error, simultaneity. *Done when* the load-bearing assumption rung is named.
+4. **Choose the estimator** — cheatsheet decision table; route the registered exceptions (staggered DiD → `staggered-did`, few clusters → wild bootstrap, weak IV → MOP, survival → beyond the book). *Done when* the estimator is justified against the endogeneity sources.
+5. **Run, then diagnose** — never read starred coefficients without the diagnostic pass. *Done when* every applicable diagnostic in diagnostics.md is run and interpreted.
+6. **Robustness grid** — defined ex ante, reported fully. *Done when* the grid is run and the main conclusion's survival is stated.
+7. **Report theory-first** — population equations, SEs/R²/n always, APEs for LDV, exact dummy-in-log effects. *Done when* a reader could redo the analysis.
 
-**Ceteris paribus first, estimator second (Ch 1, 20).** Write the population model (no hats) and state the counterfactual question; OLS/WLS/2SLS/FE are competing estimators of that model, never "models" themselves. There is no such thing as "an OLS model."
+One-model-once: t/F inference assumes one model estimated once — the grid documents the search so the assumption is honored by transparency.
 
-**Bad controls are worse than no controls (Ch 3, 6).** Never hold fixed mediators, colliders, or components of the outcome. Add controls that are treatment-uncorrelated only to shrink error variance. "Control for everything" is not a strategy.
+## Mental Models & Leading Words
 
-**R² is not evidence (Ch 2, 3, 10).** High R² between trending series is spurious; low R² with an unbiased causal coefficient is fine. Compare nonnested models with adjusted R²; never select for significance.
+**assumption ladder** — every estimator's credibility is a numbered assumption set; learn what each rung buys (full ladder in [cheatsheet.md](cheatsheet.md)). When a claim fails, name the rung that failed — that is the diagnosis.
 
-**Robust inference by default (Ch 8, 12).** Cross-sections: White/robust SEs always; BP or special White test only as diagnostics. Time series: Breusch-Godfrey test, then Newey-West/HAC (safe, needs only contemporaneous exogeneity) — reach for FGLS (Cochrane-Orcutt/Prais-Winsten) only under strict exogeneity, and if OLS≠FGLS, keep OLS.
+**E(u|x) = 0 is the whole game** (Ch 2–3) — separates description from causation. Omitted variable bias: sign it with the Table 3.2 matrix before running anything (formula and recipe in [patterns.md](patterns.md)).
 
-**Panel data trades assumptions for variation (Ch 13–14).** FD at T=2 ≡ DiD; FE (within) is the default for T≥2, RE only if Cov(x,aᵢ)=0 — test with Mundlak/CRE (add time-averages, F-test γ=0). Always cluster by unit. Strict exogeneity fails with lagged dependent variables and feedback.
+**ceteris paribus first, estimator second** (Ch 1, 20) — the population model (no hats) comes first; OLS/WLS/2SLS/FE are competing estimators of it, never "models" themselves. There is no such thing as "an OLS model."
 
-**IV is an argument, not a command (Ch 15–16).** Exogeneity (Cov(z,u)=0) is untestable — you must argue it; relevance is testable — first-stage |t|>3.2 / F>10. Run 2SLS in software (manual two-step gives wrong SEs). Diagnose with VAT/control-function and overid tests. SEMs additionally need autonomy: each equation must have its own ceteris paribus interpretation.
+**estimand first, estimator second** (Ch 19) — name the causal estimand (ATE/ATT/LATE) before choosing an estimator; an unnamed estimand is a red flag. ATE, ATT, and LATE answer different policy questions and need different assumption sets — estimators are competing implementations of the named estimand.
 
-**Potential outcomes unify causal inference (Ch 2, 19).** ATE/ATT under unconfoundedness (ATE.1) + overlap (ATE.2): RA → IPW → IPWRA (doubly robust), trim p̂∉[0.1,0.9]. IV without unconfoundedness gives LATE on compliers. RD gives local effects at the cutoff (local linear, IK bandwidth; fuzzy RD = IV). DiD needs parallel trends — show pre-trends or add a control dimension (DDD).
+**bad controls are worse than no controls** (Ch 3, 6) — never hold fixed mediators, colliders, or components of the outcome. Controls that only shrink error variance are optional, not required.
 
-**Match the estimator to the limited dependent variable (Ch 17).** Binary → LPM (robust) or logit/probit, report APEs not coefficients. Counts/corners → Poisson QMLE with exp-mean and robust SEs; never log(1+y). True censoring → Tobit with Φ-scaled partial effects. Selected sample → Heckit with a real exclusion restriction.
+**R² is not evidence** (Ch 2, 3, 10) — high R² between trending series is spurious; low R² with an unbiased causal coefficient is fine.
 
-**Persistence changes everything in time series (Ch 11, 18).** ρ̂ > 0.9 ⇒ treat as I(1): difference or use growth rates. Levels regressions of I(1) series are spurious unless cointegrated (Engle-Granger test → ECM). Forecast out-of-sample with RMSE/MAE; never trend-extrapolate a random walk.
+**robust inference by default** (Ch 8, 12) — White/robust SEs for cross-sections, HAC/Newey-West for time series; FGLS only under strict exogeneity, and if OLS ≠ FGLS, keep OLS (recipes in [patterns.md](patterns.md)).
 
-**Specification search discipline (Ch 9, 20).** RESET for functional form; proxy variables and plug-in solutions for OVB; CEV in x attenuates. t/F inference assumes one model estimated once — stepwise selection is data mining; run sensitivity grids and report them all.
+**panel trades assumptions for variation** (Ch 13–14) — FD at T=2 ≡ DiD; FE is the default for T≥2; RE only if Cov(x,aᵢ)=0, tested via Mundlak/CRE; always cluster by unit.
 
----
+**IV is an argument, not a command** (Ch 15–16) — exogeneity is untestable, you must argue it; relevance is testable (thresholds in [cheatsheet.md](cheatsheet.md)). Diagnose with VAT/overid tests.
+
+**potential outcomes unify causal inference** (Ch 2, 19) — ATE/ATT under unconfoundedness + overlap; IV gives LATE; RD gives local effects at the cutoff; DiD needs parallel trends (details and trims in [cheatsheet.md](cheatsheet.md)).
+
+**match the estimator to the LDV** (Ch 17) — binary → LPM or logit/probit, report APEs; counts/corners → Poisson QMLE (never log(1+y)); true censoring → Tobit; selected sample → Heckit with a real exclusion.
+
+**persistence changes everything** (Ch 11, 18) — ρ̂ > 0.9 ⇒ treat as I(1): difference or use growth rates; levels are spurious unless cointegrated.
+
+**specification search discipline** (Ch 9, 20) — RESET for functional form; proxies for OVB; CEV attenuates; t/F assumes one model estimated once — run sensitivity grids and report them all.
 
 ## Chapter Index
 
@@ -81,6 +98,7 @@ Topic or chapter question → find it in the Topic Index or Chapter Index below,
 - **Cointegration / ECM** → ch18
 - **Count data / Poisson QMLE** → ch17
 - **DiD / DDD / parallel trends** → ch13, ch19
+- **Duration / survival (Cox, AFT, competing risks, frailty)** → references/survival-duration-models.md (beyond the book)
 - **Dummy variables** → ch07
 - **Endogeneity (general)** → ch03, ch15, ch16
 - **Fixed effects / random effects / Mundlak** → ch14
@@ -106,12 +124,24 @@ Topic or chapter question → find it in the Topic Index or Chapter Index below,
 
 ## Supporting Files
 
-- [glossary.md](glossary.md) — all key terms with definitions
+- [workflow.md](workflow.md) — **the doing layer**: 7-step empirical analysis procedure with completion criteria, assumption rungs, and routing of book-superseded methods
+- [diagnostics.md](diagnostics.md) — symptom → test → remedy → recheck for the problems that actually stop an analysis
+- [cheatsheet.md](cheatsheet.md) — estimator decision table, tells & smells, thresholds, assumption ladders
 - [patterns.md](patterns.md) — estimator recipes and diagnostic techniques
-- [cheatsheet.md](cheatsheet.md) — estimator selection table, tells & smells, thresholds
+- [glossary.md](glossary.md) — all key terms with definitions
+- [references/](references/) — **beyond the book**: synthetic cards for methods Wooldridge 8e does not cover (currently: [survival-duration-models.md](references/survival-duration-models.md))
+- [chapters/](chapters/) — the book itself, one file per chapter
 
 ---
 
 ## Scope & Limits
 
-This skill covers the book content only (8th edition, incl. its Ch-19 causal-inference methods). For modern staggered-DiD estimators beyond the book, combine with the `staggered-did` skill; for identification-first design audits, `huntington-klein-causal-design`; for Stata execution, the `stata` skill. For topics beyond this book, check related skills or ask the agent directly.
+This skill covers the book content only (8th edition, incl. its Ch-19 causal-inference methods), organized as reference (chapters, cheatsheet, patterns) plus a doing layer (workflow, diagnostics) that turns the theory into procedure.
+
+**Where the book is superseded (registered exceptions, per the Academic Baseline):**
+- Staggered / multi-period DiD with heterogeneous effects → `staggered-did` skill (ch13/14's general w_it framework is the flexible starting point, but TWFE is biased under heterogeneity).
+- Few clusters (policy varies across a handful of units) → wild cluster bootstrap / randomization inference (beyond the book).
+- Modern weak-IV practice → Montiel Olea–Pflueger F ≳ 20 under heteroskedasticity/serial correlation (cheatsheet thresholds).
+- Identification-first design audits → `huntington-klein-causal-design`.
+
+**Beyond the book (synthetic reference cards in [references/](references/), clearly marked):** duration/survival models (Cox PH, AFT Weibull, competing risks) → [survival-duration-models.md](references/survival-duration-models.md). Modern ML prediction is not covered — flag it. For Stata execution generally, combine with the `stata` skill.

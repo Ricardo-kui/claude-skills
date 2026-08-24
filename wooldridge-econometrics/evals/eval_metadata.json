@@ -1,0 +1,38 @@
+{
+  "skill_name": "wooldridge-econometrics",
+  "eval_suite_version": 4,
+  "updated": "2026-08-24",
+  "assertion_provenance": [
+    {
+      "version": 1,
+      "date": "2026-08-21",
+      "change": "初始内容断言（3 eval，12 条）。iteration-1 验证：强模型全过（天花板）。"
+    },
+    {
+      "version": 2,
+      "date": "2026-08-24",
+      "change": "重写 eval-2 断言 5（beyond-book 披露 + 文献出处），消除与'勿提 skill 文件'提示的语义矛盾。iteration-2 验证：0/3 臂满足——暴露 citation 抑制 + 卡头可操作性缺口；iteration-2.5 双修（卡头强制披露 + 松提示）后 2/2 PASS。"
+    },
+    {
+      "version": 3,
+      "date": "2026-08-24",
+      "change": "新增 [结构签名] 断言（eval-1 加第 5 条、eval-2 加第 6 条、eval-3 加第 5 条）。内容断言已被证明无法判别 skill 版本（强模型天花板），结构断言测试答案是否携带 skill 的结构 DNA：eval-1=estimand-first 命名原则 + rung 层级；eval-2=survival 卡合成 rung（Cox.1–3/AFT.1–2/C.1/R.1）；eval-3=one-model-once 命名原则 + Null-results 诊断程序路由。用既有答案验证：with_skill 3/3 PASS，without_skill/zero_grounding 3/3 FAIL（见 workspace iteration-3/benchmark.md）。"
+    },
+    {
+      "version": 4,
+      "date": "2026-08-24",
+      "change": "estimand-first 提入路由层（SKILL.md Core Frameworks 新增 'estimand first, estimator second' 心智模型 + cheatsheet 'Which estimator for my data?' 首行原则声明）。起因：iteration-4 中性提示重跑证明 eval-1 结构断言 5 判别失效（with_skill 读了 ch19 却未表面化该原则——此前只在深层章节文件，salience 不足）。修复后重跑 eval-1 三臂：判别从 0/3 恢复到 1/3（with_skill 在估计量清单前声明 estimand-first，without_skill 在清单后引用、zero_grounding 无）。"
+    },
+    {
+      "version": 4.1,
+      "date": "2026-08-24",
+      "change": "方法学更正（iteration-3）：'快照 grep 零命中 → 结构层全是重构增量'部分为假——Grep 工具整目录遍历对存在内容返回假阴性。bash 复核后：'estimand first'/'one model estimated once'/'Assumption ladders' 均为共享书内容（快照有），仅 'One-model-once' 命名标签与 references/ 卡文件为真缺席。eval-1 判别机制修正为'路由层 salience/位置'而非'内容有无'；eval-2/3 判别结论不受影响（锚在卡文件与命名标签）。"
+    }
+  ],
+  "structural_assertion_notes": {
+    "why_now": "内容断言三臂全过（天花板效应），只有结构签名能区分 with_skill 与其他臂。",
+    "excluded_false_signature": "iteration-2 with_skill eval-1 曾出现 'CS.1/CS.2/CS.3' rung 命名——经 grep 确认非 skill 工件（模型自造），不纳入断言。",
+    "validated_on": "结构断言是评分规则、非 prompt 内容，故无需重跑即可用既有盲答验证；判别结果见 workspace iteration-3/grading/。",
+    "caveat": "词汇类结构断言可能被恰好知道命名短语（'one model estimated once'、'estimand first, estimator second'）的强模型假通过；最强判别器是卡路由（文件专属、模型先验无法凭空产出）。zero_grounding 臂作为先验对照持续把关。"
+  }
+}

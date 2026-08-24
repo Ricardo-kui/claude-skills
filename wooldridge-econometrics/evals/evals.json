@@ -1,0 +1,45 @@
+{
+  "skill_name": "wooldridge-econometrics",
+  "evals": [
+    {
+      "id": 1,
+      "name": "staggered-did-routing",
+      "prompt": "我的面板数据 T=10、N=5000，一项行业政策在 2015–2019 年间对一批公司交错生效，我目前的基准回归是 xtreg y treat i.year i.firm, fe。审稿人问我担不担心交错 DID 的偏误。我应该换用哪个估计量？理论依据是什么？需要检验哪些假设？",
+      "expected_output": "解释 TWFE 在异质处理效应下的偏误性质，路由到现代交错估计量（Callaway-Sant'Anna / Sun-Abraham / did2s），说明需检验的识别假设（并行趋势/同质性），并命名假设层级。",
+      "expectations": [
+        "指出 TWFE 在异质处理效应下是带负权重的 2×2 DiD 加权平均（Goodman-Bacon 分解/类似论述），不能当单一因果效应",
+        "路由到至少一个现代交错估计量（Callaway-Sant'Anna、Sun-Abraham、did2s、eventstudyinteract）",
+        "要求前趋势/平行趋势证据（pre-trend plot 或事件研究）",
+        "命名支撑估计量有效性的假设层级（如并行趋势假设、同质性/异质性假设）",
+        "[结构签名] 在给出估计量清单之前，先以命名原则的形式声明 estimand-first（'estimand first, estimator second' 或等价表述：先定目标估计量/识别对象，再选估计器），并据此为识别假设命名假设层级/rung（如把 cohort 特定平行趋势、无预期、重叠升格为命名 rung），而非仅给散文式假设清单或直接罗列估计量。"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "survival-recall",
+      "prompt": "我的结局变量是 time-to-recall（公司从暴露到首次召回的天数），约 60% 右删失，同一家公司窗口内会多次召回。我目前用 AFT Weibull 并加了 firm 和 year 固定效应。这个方法对吗？基准模型应该是什么？要检验哪些假设？",
+      "expected_output": "评估 AFT+固定效应在时长模型中的合理性，给出基准模型（Cox PH）、重复事件的处理（聚类/frailty）、以及需检验的假设（PH/删失），并标注这是书外内容。",
+      "expectations": [
+        "指出忽略右删失或用 OLS 对数时长作基准是错误的，Cox PH 是 duration 模型的基准",
+        "区分 Cox（hazard ratio）与 AFT（time ratio）的适用情形",
+        "处理重复事件：按 firm 聚类或 shared frailty，并指出 duration 模型内 firm FE 的 incidental-parameters/偏向问题",
+        "要求检验 PH 假设（如 Schoenfeld 残差或 log(-log S) 图）",
+        "明确披露时距/生存分析是 Wooldridge 8e 教材之外（beyond the book）的内容，并给出标准生存分析文献出处（如 Kalbfleisch & Prentice 2002 / Cleves et al. 2016 / Therneau & Grambsch 2000）",
+        "[结构签名] 用该 skill 生存参考卡特有的合成 rung 命名体系组织假设检验（答案中出现 ≥2 个如下 rung 名称：Cox.1 / Cox.2 / Cox.3 / AFT.1 / AFT.2 / C.1 / R.1），而不是用 MLR/FE/RE/ATE 类比（如 'MLR.1–4 类比'、'A1–A7 教科书类比'）或纯散文描述假设。"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "null-results",
+      "prompt": "我的主回归系数不显著（p≈0.35），但换一种度量方式就显著了。我该怎么做才是诚实的实证？",
+      "expected_output": "拒绝为显著性而搜索规格，区分'没有效应'与'功效不足'，定义并全量报告稳健性网格，命名 one-model-once 原则。",
+      "expectations": [
+        "明确拒绝为了显著性而搜索规格（p-hacking/规格搜索），并给出理由（t/F 假设模型只估计一次）",
+        "区分'没有效应'与'功效不足'，建议报告效应量与置信区间而非只看 p 值",
+        "建议定义并全量报告稳健性网格，解释'只在少数规格显著'的含义",
+        "给出可执行的下一步（审计设计/报告精度/跑网格），而不是换规格试到显著",
+        "[结构签名] 以命名原则 'one model estimated once'（该 skill 的命名心智模型）为锚组织稳健性建议：明确把它作为 t/F 推断的假设前提，并论证稳健性网格的作用是让规格搜索透明化、从而 honor 该假设（'grid documents the search so the assumption is honored by transparency'），同时把 null 情形路由到'先审计设计→报告精度/CI→定义并全量报告网格→绝不因显著性改规格'的诊断程序。仅以中文改写提'模型只估计一次'的概念、或不以它组织论证，不算达标。"
+      ]
+    }
+  ]
+}
