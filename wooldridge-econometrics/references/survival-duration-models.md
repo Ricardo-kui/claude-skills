@@ -1,6 +1,18 @@
 # Duration / Survival Models — beyond the book
 
-> **⚠ beyond the book**: Wooldridge 8e does **not** cover duration/survival analysis (time-to-event outcomes, right censoring, hazard models). This card is a synthetic reference synthesized from the standard survival-analysis literature — Cleves et al., *An Introduction to Survival Analysis Using Stata* (3rd ed., 2016); Kalbfleisch & Prentice (2002); Therneau & Grambsch (2000); Cameron & Trivedi, *Microeconometrics* (2005) ch. 17–18. It is not book content; treat its claims as resting on that literature, not on Wooldridge. The assumption-rung notation below follows the convention of the rest of this skill.
+> **⚠ beyond the book — 强制披露指令 (mandatory disclosure)**
+> Wooldridge 8e does **not** cover duration/survival analysis (time-to-event outcomes, right censoring, hazard models). **Every time you give duration/survival advice from this card, you MUST, in the body of your answer:**
+> 1. explicitly state that the method is **beyond the book** (outside Wooldridge 8e's coverage); and
+> 2. cite **at least one** standard survival reference from the list below.
+> This is a hard requirement of this card, not an optional footnote.
+>
+> **Standard References**
+> - Cleves, Gould, Gutierrez & Marchenko (2016), *An Introduction to Survival Analysis Using Stata* (3rd ed.)
+> - Kalbfleisch & Prentice (2002), *The Statistical Analysis of Failure Time Data* (2nd ed.)
+> - Therneau & Grambsch (2000), *Modeling Survival Data: Extending the Cox Model*
+> - Cameron & Trivedi (2005), *Microeconometrics*, ch. 17–18
+
+**Synthesis note**: this card is a synthetic reference synthesized from the standard survival-analysis literature above; it is not book content — treat its claims as resting on that literature, not on Wooldridge. The assumption-rung notation below follows the convention of the rest of this skill.
 
 **When to use**: the outcome is a duration / time-to-event — time to recall, time to exit, time to first event — with right censoring (the event has not happened for some observations by the end of the observation window). The Academic Baseline's method default is Cox proportional hazard as the baseline for duration models — never OLS on log duration.
 
