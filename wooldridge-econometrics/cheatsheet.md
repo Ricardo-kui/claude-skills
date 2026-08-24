@@ -2,6 +2,8 @@
 
 ## Which estimator for my data?
 
+> **Before choosing any estimator: name the estimand.** ATE, ATT, and LATE answer different policy questions and need different assumption sets (Ch 19). An unnamed estimand is a red flag — estimators are competing implementations of it.
+
 | Situation | Default method | Key assumption | Watch out for |
 |---|---|---|---|
 | Cross-section, continuous y | OLS + robust SE | MLR.4 zero conditional mean | Omitted variables; never interpret without ceteris paribus logic |
