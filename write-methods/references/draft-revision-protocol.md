@@ -72,4 +72,4 @@ A revision is incomplete if it:
 - changes sample years, severity classes, units, or estimands without evidence;
 - uses current-tense/passive procedural prose contrary to an active project rule;
 - reports findings, support verdicts, or robustness outcomes in Methods;
-- passes corpus similarity by copying a memorable sentence skeleton.
+- fails to replace source-specific content (proper names, numbers, coefficients, table numbers) when reusing corpus sentences.
