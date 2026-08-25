@@ -39,7 +39,7 @@ story-blueprints 的语言表达层：blueprint 卡教**故事结构**（五幕/
 
 ## 路由
 
-- **润色请求**（用户/agent 给出自己草稿，要升级语言表达）→ 读 `_polish-protocol.md` → 按动作取对应 move 文件 → 生成变体 → 过护栏。
+- **润色请求**（用户/agent 给出自己草稿，要升级语言表达）→ 读 `_polish-protocol.md` → **自动匹配动作**（按草稿修辞功能打分，见 `SKILL.md` 匹配表；用户无需点名动作）→ 取对应 move 文件 → 生成变体 → 过护栏。
 - **写作辅导**（agent 教某动作怎么写）→ 直接读对应 move 文件，用"结构蓝图 + 信号词 + 改写演示"教学，**不**引用只读参照句作为可复用文本。
 - **蒸馏管线**（distill-*-exemplar）→ 新论文蒸馏时，若发现既有 move 未覆盖的动作，按本格式新增文件；已有 move 则补充信号词与改写演示（跨论文积累）。
 - **write-\* skill（已接线 2026-08-24）**：各分节 SKILL.md 已含路由指针——write-introduction→bidirectional-staging；write-theory→mechanism-two-chain（含调节元框架）；write-methods/write-results→通用润色护栏（其锚点纪律已与 `_polish-protocol.md` 查重护栏衔接）。写作时如需修辞升级，先读本文件动作表再取对应 move。

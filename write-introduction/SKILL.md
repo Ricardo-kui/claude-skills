@@ -73,7 +73,7 @@ description: >-
 | Contribution | `contributions/_index.md` |
 | Transitions | `transitions/[canonical_id].md`（按需） |
 | Differentiation | `differentiation/01-prior-work-boundary-clarification.md`（仅存在极易混淆的 prior work 时） |
-| 修辞动作/语言表达升级 | `../story-blueprints/v4/rhetoric-moves/_index.md`（intro 动作=bidirectional-staging；润色走 `_polish-protocol.md` 查重护栏，护栏脚本 `../story-blueprints/v4/rhetoric-moves/scripts/guard.py`，整体 ≤40%） |
+| 修辞动作/语言表达升级 | `../story-blueprints/v4/rhetoric-moves/_index.md`（动作自动匹配草稿修辞功能，无需用户点名；intro 默认=bidirectional-staging；润色走 `_polish-protocol.md` 查重护栏，护栏脚本 `../story-blueprints/v4/rhetoric-moves/scripts/guard.py`，整体 ≤40%） |
 
 槽位：按需读 `references/introduction-slot-contracts.md`，只填已知信息，不确定的槽位保留占位（不编造引文/数字/发现方向）。
 

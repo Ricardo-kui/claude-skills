@@ -5,9 +5,10 @@ source_papers:
   - lee_wu_bednar_orsc_18968 (Organization Science; DOI 10.1287/orsc.2024.18968)
   - hoffmann_cheong_phan_zurbruegg2024 (Journal of Marketing; DOI 10.1177/00222429241231236)
   - castellaneta_conti_kacperczyk_2017_smj (Strategic Management Journal; DOI 10.1002/smj.2533)
-variants_count: 10
+  - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
+variants_count: 17
 created: 2026-05-18
-updated: 2026-08-05
+updated: 2026-08-23
 ---
 # DiD — Results 骨架
 
@@ -19,18 +20,20 @@ updated: 2026-08-05
 
 | 槽位 | 变体数 | 变体编号 |
 |---|---|---|
-| R2 | 2 | 3, 7 |
+| R2 | 4 | 3, 7, 11, 12 |
 | R3 | 1 | 8 |
 | R4 | 2 | 1, 4 |
-| R7 | 4 | 5, 6, 9, 10 |
+| R7 | 9 | 5, 6, 9, 10, 13, 14, 15, 16, 17 |
 | R8 | 1 | 2 |
 
-### R2（2）
+### R2（4）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
 | 3 | DiD+Logit 分步入表 + 规格稳健 | DiD+Logit 稀有结果：无/有控制分步列表 + OR→相对概率经济显著性 + 低基准率诚实（副槽位 R3） | 把 table navigation 与 logit 经济显著性绑定，平行趋势/安慰剂留 Methods、用附录指针作 falling action | 待交叉 | Hoffmann et al. 2024 JM |
 | 7 | 平均净效应开场 + 正负权变预告 | 对立机制/双向权变理论：先兑现平均净效应 climax，再括号预告"正负并存"引向交互段（副槽位 R3） | 区别于变体 3 标准主效应开场——平均净效应须来自交互规格均值处边际效应，非独立主假设 | 待交叉 | Castellaneta et al. 2017 SMJ |
+| 11 | 原始描述性证据开场（r2_did_raw_descriptive_preview） | 结果开篇先用裸数据报 control/treated 处理前后均值时序差异，再进入模型 | 区别于直接进模型（变体 3/7）——把处理前后趋势先立起来 | 待交叉 | Moon et al. 2026 JM |
+| 12 | 第一阶段选择回归内嵌（r2_did_selection_firststage_inline） | 结果段内嵌 disclosure/selection 第一阶段 probit（排他限制显著 + Wald 不弱工具），再进主效应 | 区别于压附录——第一阶段关键统计在正文给出 | 待交叉 | Moon et al. 2026 JM |
 
 ### R3（1）
 
@@ -45,7 +48,7 @@ updated: 2026-08-05
 | 1 | 交互项→幅度→双端条件效应→假设逐端核对 | 假设预测两端方向时必须逐端兑现：交互显著≠两端符号全兑现，意外端标 post hoc（副槽位 R5+R6） | 区别于变体 8 单侧四拍——含两端方向的假设必须逐端核对 | 待交叉 | Lee, Wu & Bednar, OS |
 | 4 | 双 moderator 衰减 + 90th 联合 switch-off | 三向交互：25th→75th 衰减百分比 + 双 90th 联合中和，须报 concurrent-cutoff 样本占比（副槽位 R5） | 区别于变体 1（双端符号核对）——强调 attenuation % 与文本式高百分位中和 | 待交叉 | Hoffmann et al. 2024 JM |
 
-### R7（4）
+### R7（9）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -53,6 +56,11 @@ updated: 2026-08-05
 | 6 | Top-firm 排除 + 联合调节边际不显著诚实 | 少数 firm 集中结果担忧 + 联合模型一边际显著时，用 qualified robustness 作标准 falling action | 区别于"all results hold"笼统收束——禁止笼统声明 | 待交叉 | Hoffmann et al. 2024 JM |
 | 9 | 准实验识别威胁分节电池 | staggered policy/准自然实验正文分节识别电池：Matching→政治经济→供需→Placebo→Early/Late→替代测量，每节标题即威胁标签 | 区别于单威胁段落（placebo 单点等）——正文分节的完整识别电池，各节须对应真实威胁 | 待交叉 | Castellaneta et al. 2017 SMJ |
 | 10 | Null placebo（±k 期伪处理）识别确证 | ±k 期伪政策时点+预期 null：主效应与交互同时不显著，null 框定为识别确证而非假设检验 | 区别于注册表泛化 placebo 模板——固定 ±k 期 + 双 null + 识别确证定位 | 待交叉 | Castellaneta et al. 2017 SMJ |
+| 13 | 替代冲击复制（r7_did_alternative_shock_replication） | 用相关但不同的政策采纳作替代外生冲击，重估简单 DiD | 区别于换测量/换结局——换的是识别来源本身 | 待交叉 | Moon et al. 2026 JM |
+| 14 | Leave-one-out 处理单位排除（r7_did_leave_one_out_treated_unit） | 逐州/单位排除重估，排除结论被个别单位驱动 | 区别于 top-firm 排除（变体 6）——逐单位而非按规模 | 待交叉 | Moon et al. 2026 JM |
+| 15 | Stacked staggered DiD 稳健性（r7_did_stacked_staggered_robustness） | 交错处理下用 stacked cohort 设计作稳健主表 | 区别于 TWFE 诊断——现代化估计量进主表 | 待交叉 | Moon et al. 2026 JM |
+| 16 | 处理撤销反事实（r7_did_treatment_reversal_counterfactual） | 先采纳后撤销的州作反事实，预期反向效应 | 区别于 placebo（变体 10）——撤销是真实事件而非伪处理 | 待交叉 | Moon et al. 2026 JM |
+| 17 | 替代结局 placebo（r7_did_alternative_outcome_placebo） | 用无关替代 DV 排除"效应只是泛化成本上升"的替代解释 | 区别于 null placebo（变体 10）——换结局而非换时点 | 待交叉 | Moon et al. 2026 JM |
 
 ### R8（1）
 
@@ -278,45 +286,6 @@ updated: 2026-08-05
 - Appendix-only 结果须在正文保留一句结论，不能只写“see appendix”。
 
 
-
-
-
-
-### 变体 U：r7_did_alternative_shock_replication（moon2026）
-
-**模板/骨架**:
-> "In addition, we also test if our conclusions are robust in an alternative empirical setting that uses [related but distinct policy adoption] as an alternative shock. To this end, we identify [N] observations of [n] [units] headquartered in [state] that adopted [alternative policy] in [year] as the treated group and [N] observations of [n] [units] headquartered in [states] as the control groups that never adopted [alternative policy]. We estimate the simple diff-in-diff models on these alternative treated and control groups and find consistent empirical support for our thesis (see [appendix table] for more details)."
-
-来源：Moon et al. (2026, Journal of Marketing)。
-
-### 变体 T：r7_did_leave_one_out_treated_unit（moon2026）
-
-**模板/骨架**:
-> "The focal model examines the impact of [treatment] on [outcome] in [N] treated [states/units]. A potential critique is that our conclusions are driven by variations in a particular [state/unit]. Therefore, we construct alternative treated groups that exclude one treated [state/unit] at a time from our sample and re-estimate the models using [N] different samples ([citation]). Consistent with our expectations, we continue to find that [treatment] has a [positive] effect on [outcome] (see [appendix table])."
-
-来源：Moon et al. (2026, Journal of Marketing)。
-
-### 变体 S：r2_did_raw_descriptive_preview（moon2026）
-
-**模板/骨架**:
-> "Before discussing the results of the DiD models, it is important to explore the descriptive evidence with raw data to assess the impact of [treatment] on [outcome] ([citation]). Accordingly, we first examine the average [outcome] of the control and treated [units] [k] years before and after [treatment]. Figure [x] shows that the average [outcome] of the control [units] remains largely unchanged before and after [treatment], but that of the treated [units] [increases/decreases] following [treatment] (see Figure [x])."
-
-来源：Moon et al. (2026, Journal of Marketing)。
-
-### 变体 R：r2_did_selection_firststage_inline（moon2026）
-
-**模板/骨架**:
-> "To account for the potential selection bias arising from [disclosure/selection channel] by [units], we estimate a first-stage probit model where we find that both [exclusion restriction 1] (coef = [value], p = [threshold]) and [exclusion restriction 2] (coef = [value], p = [threshold]) are significant predictors of [selection outcome] (for details, see [appendix]). Importantly, the results of the Wald test for both instruments (chi2([df]) = [value], p = [threshold]) provide empirical support that weak instruments are unlikely to be a concern. To test the main effect hypothesis [H1], we examine the results of the main effect model in [Model x] of Table [y]."
-
-来源：Moon et al. (2026, Journal of Marketing)。
-
-### 变体 P：r7_did_stacked_staggered_robustness（moon2026）
-
-**模板/骨架**:
-> "Stacked diff-in-diff. In examining the impact of treatments that are staggered across time, a potential alternative estimation strategy would be to employ a stacked DiD model ([citation]). To this end, we construct an event specific sample with [units] in one [treatment state] as treated groups and those that never [receive treatment] as control groups, which forms a cohort, and stack all cohorts to construct the stacked dataset. The stacked DiD model incorporates the cohort-specific [unit] and [time] fixed effects and enables us to use relative time dummies, which allows for potentially cleaner comparison between the treated and control groups and alleviates the potential concern about the staggered treatment design ([citation]). As Model [x] in Table [y] shows, we consistently find support for the [positive/negative] effect of [treatment] on [outcome] in the stacked DiD models."
-
-来源：Moon et al. (2026, Journal of Marketing)。
-
 ### 变体 10：Null placebo（±k 期伪处理）作为识别确证（2026-08-05）
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
@@ -339,7 +308,59 @@ updated: 2026-08-05
 - 必须预先声明期望（weaker/null）；若 placebo 显著，不得沉默，应报告为 identification threat。
 
 
-### 变体 O：r7_did_treatment_reversal_counterfactual（moon2026）
+### 变体 11：r2_did_raw_descriptive_preview（moon2026）
+
+**槽位**: R2
+
+**模板/骨架**:
+> "Before discussing the results of the DiD models, it is important to explore the descriptive evidence with raw data to assess the impact of [treatment] on [outcome] ([citation]). Accordingly, we first examine the average [outcome] of the control and treated [units] [k] years before and after [treatment]. Figure [x] shows that the average [outcome] of the control [units] remains largely unchanged before and after [treatment], but that of the treated [units] [increases/decreases] following [treatment] (see Figure [x])."
+
+来源：Moon et al. (2026, Journal of Marketing)。
+
+
+### 变体 12：r2_did_selection_firststage_inline（moon2026）
+
+**槽位**: R2
+
+**模板/骨架**:
+> "To account for the potential selection bias arising from [disclosure/selection channel] by [units], we estimate a first-stage probit model where we find that both [exclusion restriction 1] (coef = [value], p = [threshold]) and [exclusion restriction 2] (coef = [value], p = [threshold]) are significant predictors of [selection outcome] (for details, see [appendix]). Importantly, the results of the Wald test for both instruments (chi2([df]) = [value], p = [threshold]) provide empirical support that weak instruments are unlikely to be a concern. To test the main effect hypothesis [H1], we examine the results of the main effect model in [Model x] of Table [y]."
+
+来源：Moon et al. (2026, Journal of Marketing)。
+
+
+### 变体 13：r7_did_alternative_shock_replication（moon2026）
+
+**槽位**: R7
+
+**模板/骨架**:
+> "In addition, we also test if our conclusions are robust in an alternative empirical setting that uses [related but distinct policy adoption] as an alternative shock. To this end, we identify [N] observations of [n] [units] headquartered in [state] that adopted [alternative policy] in [year] as the treated group and [N] observations of [n] [units] headquartered in [states] as the control groups that never adopted [alternative policy]. We estimate the simple diff-in-diff models on these alternative treated and control groups and find consistent empirical support for our thesis (see [appendix table] for more details)."
+
+来源：Moon et al. (2026, Journal of Marketing)。
+
+
+### 变体 14：r7_did_leave_one_out_treated_unit（moon2026）
+
+**槽位**: R7
+
+**模板/骨架**:
+> "The focal model examines the impact of [treatment] on [outcome] in [N] treated [states/units]. A potential critique is that our conclusions are driven by variations in a particular [state/unit]. Therefore, we construct alternative treated groups that exclude one treated [state/unit] at a time from our sample and re-estimate the models using [N] different samples ([citation]). Consistent with our expectations, we continue to find that [treatment] has a [positive] effect on [outcome] (see [appendix table])."
+
+来源：Moon et al. (2026, Journal of Marketing)。
+
+
+### 变体 15：r7_did_stacked_staggered_robustness（moon2026）
+
+**槽位**: R7
+
+**模板/骨架**:
+> "Stacked diff-in-diff. In examining the impact of treatments that are staggered across time, a potential alternative estimation strategy would be to employ a stacked DiD model ([citation]). To this end, we construct an event specific sample with [units] in one [treatment state] as treated groups and those that never [receive treatment] as control groups, which forms a cohort, and stack all cohorts to construct the stacked dataset. The stacked DiD model incorporates the cohort-specific [unit] and [time] fixed effects and enables us to use relative time dummies, which allows for potentially cleaner comparison between the treated and control groups and alleviates the potential concern about the staggered treatment design ([citation]). As Model [x] in Table [y] shows, we consistently find support for the [positive/negative] effect of [treatment] on [outcome] in the stacked DiD models."
+
+来源：Moon et al. (2026, Journal of Marketing)。
+
+
+### 变体 16：r7_did_treatment_reversal_counterfactual（moon2026）
+
+**槽位**: R7
 
 **模板/骨架**:
 > "Counterfactual analysis: treatment reversal. In the treated groups of our sample, [units in states/regions A and B] first [adopted/recognized] [treatment] in [year] and then rejected it later in [year]. These rulings that reject [treatment] offer a natural empirical setting for counterfactual analysis. If [treatment] increases [outcome] of [units], [treatment] rejection is expected to have the opposite effect on [outcome]. To test this expectation, we focus on [units] in the [states] that [adopted treatment] in the post-treatment period. Specifically, we use [units] in [reversal states] as the treated groups and those in [still-treated states] as the control groups and estimate [equation]. As shown in Model [x] in Table [y], we find that [treatment] rejection has a significant [negative/opposite-sign] effect on [outcome] (coef = [value], p = [threshold]), which is consistent with our expectations."
@@ -347,7 +368,9 @@ updated: 2026-08-05
 来源：Moon et al. (2026, Journal of Marketing)。
 
 
-### 变体 Q：r7_did_alternative_outcome_placebo（moon2026）
+### 变体 17：r7_did_alternative_outcome_placebo（moon2026）
+
+**槽位**: R7
 
 **模板/骨架**:
 > "Placebo tests with alternative dependent variables. A potential alternative explanation for the observed [positive] effect of [treatment] on [outcome] could be that it reflects a general increase in [overall operating costs / broader category] following [treatment]. ... Therefore, we conduct an additional analysis using alternative dependent variables that reflect [general business expenses]. Specifically, we use [alternative DV 1] and [alternative DV 2] as the alternative dependent variables. As shown in Model [x] of Table [y], we do not find empirical support for the alternative argument that [treatment] is likely to lead to a general increase in [broader outcome category] (i.e., the effect of [treatment] on [alt DV 1] = [value], p = [n.s.]; on [alt DV 2] = [value], p = [n.s.])."

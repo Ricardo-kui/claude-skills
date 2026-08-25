@@ -5,9 +5,10 @@ source_papers:
   - lee_wu_bednar_orsc_18968 (Organization Science; DOI 10.1287/orsc.2024.18968)
   - hoffmann_cheong_phan_zurbruegg2024_jm (Journal of Marketing; staggered UD-law DiD + conditional logit + binary recall)
   - Castellaneta_Conti_Kacperczyk_2017_SMJ (SMJ; staggered UTSA + PE buyout IRR ≈ DiD first difference)
-variants_count: 13
+  - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
+variants_count: 15
 created: 2026-05-18
-updated: 2026-08-05
+updated: 2026-08-23
 ---
 # 自然实验-DiD — Methods 骨架
 
@@ -19,15 +20,15 @@ updated: 2026-08-05
 
 | 槽位 | 变体数 | 变体编号 |
 |---|---|---|
-| M8 | 4 | 3、4、12、13 |
+| M8 | 5 | 3、4、12、13、14 |
 | M7 | 3 | 2、5、6 |
-| M2 | 2 | 1、7 |
+| M2 | 3 | 1、7、15 |
 | M1 | 1 | 8 |
 | M3 | 1 | 10 |
 | M4 | 1 | 9 |
 | M6 | 1 | 11 |
 
-### M8（4）
+### M8（5）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -35,6 +36,7 @@ updated: 2026-08-05
 | 4 | staggered DiD 识别栈（model-free → 机制 → pretrend → 安慰剂） | Marketing 准实验 staggered 采纳研究 | 区别于变体 3：加 model-free 证据 + 文献 manipulation check 四段式 | 待交叉 | Hoffmann et al. 2024 (JM) |
 | 12 | 政治经济外生性电池（质性检索 + LPM/hazard + 供需零相关） | 政策采纳时点可能随政治经济条件内生 | 区别于变体 4：专攻"政治经济内生采纳"威胁 | 待交叉 | Castellaneta et al. 2017 (SMJ) |
 | 13 | 日历安慰剂 ±k 年（假处理弱于真处理） | 持有窗截面、难画标准 event-study 的设计 | 区别于变体 3/4（置换/重分配安慰剂）：固定错位 ±k 年 | 待交叉 | Castellaneta et al. 2017 (SMJ) |
+| 14 | 司法/监管冲击双假设外生性（awareness + 单位无影响） | 法院裁决/监管事件作外生冲击 | 区别于变体 12 政治经济电池：双前提叙事（awareness + 不受单位影响） | 待交叉 | Moon et al. 2026 (JM) |
 
 ### M7（3）
 
@@ -44,12 +46,13 @@ updated: 2026-08-05
 | 5 | rare outcome 下 year + industry FE（无法 firm FE） | rare binary outcome、单位内无 DV 变异的面板（副槽位 M8） | 纠正常见误写：是 always-zero → collinearity 而非 incidental parameters | 待交叉 | Hoffmann et al. 2024 (JM) |
 | 6 | staggered adoption 下 POST 与 Treat×Post 共线性说明 | 州级法律 staggered 设计，预防"为何没控制 post"质疑 | 与变体 5 同类共线性代数，但针对 ever-treated×post 设计 | 待交叉 | Hoffmann et al. 2024 (JM) |
 
-### M2（2）
+### M2（3）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
 | 1 | 跨层级冲击映射 + 处理事件样本漏斗 | 冲击在地理/制度层、分析单位为企业的研究 | 只报最终 N 之外，增加"冲击层→暴露规则→事件减少"可审计映射链 | 待交叉 | Lee, Wu & Bednar (OS) |
 | 7 | 裁量权子样本 + 行业/event 扩展漏斗 | 需防遗漏"有缺陷信号但不作为"单位的召回/事件样本 | 区别于变体 1：漏斗含 assignment stability 排除 + 防遗漏行业扩展 + 理论子样本聚焦 | 待交叉 | Hoffmann et al. 2024 (JM) |
+| 15 | always-treated 排除 + 处理组卫生（staggered DiD 样本构造） | 交错 DiD 排除 always-treated 单位、post-only 观测、预处理期不足事件 | 区别于变体 1/7 漏斗：专攻 staggered DiD 样本卫生 | 待交叉 | Moon et al. 2026 (JM) |
 
 ### M1（1）
 
@@ -336,7 +339,9 @@ updated: 2026-08-05
 - 安慰剂应在 Methods 预告位置（M8/M10）；仅塞进 Results 附录会削弱"设计内建"印象。
 
 
-### 变体 O：M8_judicial_shock_two_assumption（moon2026）
+### 变体 14：M8_judicial_shock_two_assumption（moon2026）
+
+**槽位**: M8
 
 **模板/骨架**:
 > "To identify the effect of [policy/legal change] on [outcome], we use [court ruling/regulatory event] as an exogenous shock. Considering [event] as an exogenous shock in our context rests on two assumptions. First, [decision-makers] should be aware of [the precedent-setting event], which becomes [institutional form]. Reassuringly, prior research shows that [actors] are likely to be aware of [event] because [dissemination channel] ([citation]). Second, [changes in the event] are not influenced by individual [units]. Indeed, prior work shows that [event] depend[s] on [case-specific circumstances/institutional discretion] and [are] thus largely independent of [unit] actions or lobbying efforts ([citation]). Therefore, considering the findings of prior work, [event] can be viewed as an exogenous shock."
@@ -344,7 +349,9 @@ updated: 2026-08-05
 来源：Moon et al. (2026, Journal of Marketing)。
 
 
-### 变体 P：M2_staggered_did_always_treated_hygiene（moon2026）
+### 变体 15：M2_staggered_did_always_treated_hygiene（moon2026）
+
+**槽位**: M2
 
 **模板/骨架**:
 > "Recent research on staggered difference-in-differences (DiD) notes that always-treated units are a potential source of bias in identifying the treatment effect ([citation]). In this context, the DiD estimate is a variance-weighted average of the constituent 2x2 DiD estimates in the data, and one of the comparisons includes always-treated units as effective controls. As always-treated units reflect the treatment effect in the outcomes, the treatment effect estimated from the staggered DiD in this case may potentially introduce a negative weight and bias the estimate ([citation]). To address this concern, we exclude [units treated before the sample period]. In addition, we do not include [units with only posttreatment observations]. To allow for variation before the treatment, we consider [events] that provide at least [N] years of pretreatment periods for the treated [units]. Using this approach, our sample consists of [final N] ([treated N] in the treatment group; [control N] in the control group)."

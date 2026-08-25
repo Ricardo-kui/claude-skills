@@ -1,6 +1,6 @@
 meta:
   schema_version: 1
-  last_updated: '2026-08-23'
+  last_updated: '2026-08-25'
   observations_processed: 15
   description: Evidence ledger for write-theory design defects inferred from Theory exemplar distillation.
 defects:
@@ -818,13 +818,25 @@ defects:
     regression_cases:
       positive: []
       preservation: []
-    resolution_history: []
-    lifecycle: open
+    resolution_history:
+    - status: applied
+      modified_targets:
+      - write-theory/corpus/sentences/hypothesis_forms.md（变体 A：T4_did_contrast_hypothesis，moon2026）
+      - write-theory/corpus/_skill_design_feedback.yaml
+      rule_excerpt_after: "### 变体 A：T4_did_contrast_hypothesis（moon2026）—— DiD 处理-对照对比内嵌假设陈述（'as compared to' 对比句 + Formally: H[N]）"
+      old_rule_excerpt_absent: false
+      validation:
+        quick_validate: true
+        regression: true
+        forward_test: true
+      date: '2026-08-23'
+      note: corpus writeback per ff2720c；EMERGING 单源转 resolved
+    lifecycle: resolved
     first_seen: '2026-08-23'
     last_seen: '2026-08-23'
     auto_action:
-      eligibility: optional_variant_only
-      reason: Corpus changes do not alter core routing.
+      eligibility: no_action
+      reason: Validated writeback applied on 2026-08-23.
   corpus-gap-trilevel-attention-moderator-framework:
     classification: corpus_gap
     status: EMERGING
@@ -865,10 +877,22 @@ defects:
     regression_cases:
       positive: []
       preservation: []
-    resolution_history: []
-    lifecycle: open
+    resolution_history:
+    - status: applied
+      modified_targets:
+      - write-theory/corpus/subprotocols/moderator_selection_frameworks.md（变体 A：T5_moderator_metaframework_trilevel，moon2026）
+      - write-theory/corpus/_skill_design_feedback.yaml
+      rule_excerpt_after: "### 变体 A：T5_moderator_metaframework_trilevel（moon2026）—— ABV 三层注意权变元框架（individual/organizational/contextual）统一调节插入点"
+      old_rule_excerpt_absent: false
+      validation:
+        quick_validate: true
+        regression: true
+        forward_test: true
+      date: '2026-08-23'
+      note: corpus writeback per ff2720c；EMERGING 单源转 resolved
+    lifecycle: resolved
     first_seen: '2026-08-23'
     last_seen: '2026-08-23'
     auto_action:
-      eligibility: optional_variant_only
-      reason: Corpus changes do not alter core routing.
+      eligibility: no_action
+      reason: Validated writeback applied on 2026-08-23.

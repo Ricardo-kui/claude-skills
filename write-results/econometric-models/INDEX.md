@@ -4,7 +4,7 @@ description: Results 填空骨架变体库，按结果类型组织。由 distill
 organization: by_result_type
 result_types_count: 21
 created: 2026-05-18
-updated: 2026-08-13
+updated: 2026-08-23
 ---
 
 # Results Econometric Models Corpus
@@ -28,7 +28,7 @@ updated: 2026-08-13
 | [OLS-FE](OLS-FE.md) | OLS-FE | 62 | 2026-08-20 |
 | [Logit-Probit-Ordered-Probit](Logit-Probit-Ordered-Probit.md) | Logit-Probit-Ordered-Probit | 23 | 2026-08-13 |
 | [生存分析](生存分析.md) | 生存分析 | 19 | 2026-08-01 |
-| [DiD](DiD.md) | DiD | 10 | 2026-08-05 |
+| [DiD](DiD.md) | DiD | 17 | 2026-08-23 |
 | [计数模型](计数模型.md) | 计数模型 | 21 | 2026-08-12 |
 | [实验](实验.md) | 实验 | 5 | 2026-08-03 |
 | [多研究](多研究.md) | 多研究 | 8 | 2026-08-02 |
