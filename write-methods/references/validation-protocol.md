@@ -32,7 +32,7 @@ Run these gates after revising Methods.
 - Completed procedures use active past tense; definitions and general properties use present tense.
 - Terminology matches the current paper and does not revive removed umbrella constructs.
 - Limitations and scope conditions are stated directly, without defensive or self-congratulatory wrappers.
-- Source-paper sentence architecture is not copied when similarity risk has been identified.
+- Corpus sentence architecture may be used directly; source-specific content (proper names, numbers, coefficients, table numbers) is replaced.
 
 ## Gate 6 — Feedback regression
 
