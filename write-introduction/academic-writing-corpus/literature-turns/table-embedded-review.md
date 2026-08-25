@@ -62,7 +62,7 @@ Prior work on [broad relationship] has primarily examined [dominant proxy/actor/
 - 在表内保留 “This study” 行，让读者横向比较本文与前人，而不是让表格停留在综述功能。
 - 正文先给主缺口，表格负责证据化；表后再把空白收窄到研究问题与结果组合。
 
-**语料锚定**：Kashmiri, Nicol, and Arora (2017, JAMS), Introduction Table 1；短语锚点：”black box problem”。
+**语料锚定**：Kashmiri, Nicol, and Arora (2017, JAMS), Introduction Table 1；短语锚点：“black box problem”。
 
 **原文锚定**:
 > “However, as highlighted in Table 1, researchers investigating the influence of executives' characteristics have focused mainly on the impact of demographic variables such as age, social class, functional background, education, and tenure, even though such variables tend to be noisy, incomplete, and imprecise proxies of executives' attitudes and values. This focus on executives' demographic characteristics has also resulted in a “black box problem”, where we know little about the real psychological processes that drive executive choices.”
