@@ -27,6 +27,7 @@ Return R scripts, environment/package versions, logs, diagnostics, estimates, an
   - [Step 3: Choose and Run Robust Estimators](#step-3-choose-and-run-robust-estimators)
   - [Step 4: Power Analysis for Pre-Trends](#step-4-power-analysis-for-pre-trends)
   - [Step 5: Sensitivity Analysis (HonestDiD) and Inference](#step-5-sensitivity-analysis-honestdid-and-inference)
+- [Interpretation Gate and Severity Flags](#interpretation-gate-and-severity-flags)
 - [Personalized Method Selection Advice](#personalized-method-selection-advice)
   - [By Treatment Pattern](#by-treatment-pattern)
   - [By Sample Size](#by-sample-size)
