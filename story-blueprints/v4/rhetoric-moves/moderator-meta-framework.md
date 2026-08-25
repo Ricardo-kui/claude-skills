@@ -36,11 +36,13 @@ expansion_note: "≥3 distinct papers（moon2026 JM / Desai 2012 AMJ / kalaignan
 - **条件裁决**：it is important to determine the conditions under which… / [W] determines which response prevails / there is a cost/benefit trade-off involved in…
 - **收束**：Taken together, we expect that each of these factors shapes… / (a)… and (b)…
 
-## 改写指引（如何用自己的话说）
+## 改写指引（用你的对象改编语料句式）
+
+**语料优先改编**：以本文件的结构蓝图/信号词/参照句/改写演示的语料句式为底本，尽量使用语料库的句式表达来改编——替换来源特异性内容到你的对象上；仅当与你的对象/语气/篇幅明显不匹配时才换句式。
 
 1. **先确认真有多元结构**：≥3 个调节才配用元框架；1-2 个调节直接独立成段（见 `write-theory` E_moderation "嵌入型边界条件用于 1-2 个 moderator → 独立 T5 更合适"）。为了显富硬加调节 = 反模式。
 2. **选组织方案要理论驱动**：个体/组织/环境分层（moon2026，注意力透镜）、平行小节（kalaignanam2017，四维度并列）、两考量（Desai，fieldwide 组织回应）。你的调节变量属于哪类，框架就照哪类搭。
-3. **换透镜词**：moon2026 用"scarce resource + attention"；换到你的领域要换透镜（如 "Because reputational capital is scarce, firms allocate monitoring attention across market, regulatory, and stakeholder domains"）。
+3. **透镜词替换来源专指部分**：moon2026 的 "scarce resource + attention" 若与你的领域同构可保留；换到不同领域时替换来源专指名词（如 "Because reputational capital is scarce, firms allocate monitoring attention across market, regulatory, and stakeholder domains"）。
 4. **小节必须对称**：每个因子段用同一模板（定义→机制→预测），长度相近——审稿人把"长短悬殊"读成"某调节论证不足"。
 5. **收束句把 N 合回一句**："each of these factors shapes the degree to which…"——别让读者自己数。
 

@@ -25,7 +25,7 @@ Full Theory generation requires a valid story contract. Theory is rising action:
    **完成判据**：变体已选；EMERGING 已标注。
 2. 用 `references/phase-2-architecture.md` 定构念顺序、机制深度、假设结构与叙事弧。
    **完成判据**：构念顺序 + 机制深度已定。
-3. 先执行 conditionality gate（稳定无条件效应是否有理论依据？）；再按 `references/phase-3-hypothesis-derivation.md`（含 8 项语料调用清单）通过完整 why-chain 推导每个假设；只 load 所选变体 `corpus/variants/[variant_filename]` 与必要的 sentence-pattern 文件；**D 型（过程理论）必须额外加载 `corpus/subprotocols/process_transition_operators.md`**（stage-boundary 与 feedback-transport 两个结构推理算子）。
+3. 先执行 conditionality gate（稳定无条件效应是否有理论依据？）；再按 `references/phase-3-hypothesis-derivation.md`（含 8 项语料调用清单）通过完整 why-chain 推导每个假设；只 load 所选变体 `corpus/variants/[variant_filename]` 与必要的 sentence-pattern 文件；**语料优先改编**：变体确定后，以所选变体与 sentence-pattern 文件的语料句式为改编底本——尽量使用语料库的句式表达来改编（替换来源特异性内容、填充占位）；无锚点旧变体按骨架生成，表达仍尽量贴合语料句法；**D 型（过程理论）必须额外加载 `corpus/subprotocols/process_transition_operators.md`**（stage-boundary 与 feedback-transport 两个结构推理算子）。
    **完成判据**：每个假设有完整 why-chain + storyline_id；硬约束 #1–#16 逐条过。
    修辞表达：机制双链（双链汇一）、调节元框架等理论动作的句子级执行 → `../story-blueprints/v4/rhetoric-moves/_index.md`（动作自动匹配草稿修辞功能，无需用户点名；如 mechanism-two-chain / moderator-meta-framework）；润色走其 `_polish-protocol.md` 流畅性门。
 4. 用 `references/phase-4-qc-alignment.md` 审计构念一致性、替代机制、假设可检验性、段落架构与跨节承诺；对每个 hypothesis/proposition 执行 argument graph（construct → premise → why-chain → boundary/level/time → prediction）：E 型 boundary state 为前置作用域节点，禁止出现 X → boundary state 的有向边；D 型逐阶段记录 current actor/action → transition condition → pre-next-stage marker → next actor/state → failed branch（细则见 `corpus/subprotocols/process_transition_operators.md`）。

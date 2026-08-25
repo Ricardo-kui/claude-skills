@@ -42,18 +42,20 @@ expansion_note: "≥3 distinct papers（moon2026 JM / kundro_rothbard AMJ / du_t
 - **裁定转入**：This is unlikely to be the case because / In fact, / Importantly, / Crucially, / The key, however, is that / This contradiction reflects competing assumptions about
 - **落地**：Therefore, we expect… / Formally: / We thus predict:
 
-## 改写指引（如何用自己的话说）
+## 改写指引（用你的对象改编语料句式）
+
+**语料优先改编**：以本文件的结构蓝图/信号词/参照句/改写演示的语料句式为底本，尽量使用语料库的句式表达来改编——替换来源特异性内容到你的对象上；仅当与你的对象/语气/篇幅明显不匹配时才换句式。
 
 1. **先选执行方式**：你的贡献是"同 IV 双通道"（→ moon2026 型）、"群体不对称未检验"（→ kundro_rothbard 型）、还是"预期被现实证伪"（→ du_tsolmon2024 型）？三种是三种骨架，先定再写。
-2. **换对象**：把原例的"商业秘密法→广告"换成你自己的制度→行动。
-3. **换因果链**：两条预测各自的机制词不许照搬（"competitive pressure"→"share erosion"、"capital-market expectations"→"growth bar set by investors"）。
-4. **换句式骨架**：原例是 "On the one hand… On the other hand…"。至少换一种：
+2. **替换来源特异性内容**：把原例的"商业秘密法→广告"换成你自己的制度→行动（专名/对象/数字/表号必须替换）。
+3. **机制词尽量保留语料表达**："competitive pressure" / "capital-market expectations" 等通道词可直接采用；仅当与你的机制明显不符时再换（如 "share erosion" / "growth bar set by investors"）。
+4. **句式骨架尽量保留**：原例 "On the one hand… On the other hand…" 双通道骨架可直接采用（语料优先改编）。变体是可选项，仅当与你的节奏/篇幅/语气不匹配时再考虑：
    - 主宾视角反转（"制度降低压力" → "制度是否解除竞争约束的疑问"）
    - 预测乙前置为问句，预测甲作为反方
    - 两条预测拆成两段，各自带文献，再合
 5. **裁定句必须带机制**："我们认为乙对"不够；要写出"为什么期望通道压过压力通道"（如：期望是显性、被高频监控的信号；压力是隐性、间接的）。
 6. **du_tsolmon 型的收敛纪律**：两阵营**各自只给一句机制**（克制、不展开），然后立刻把矛盾归因到理论假设层面，再落到资源属性升级 stakes——不拖沓。
-7. **信号词可以换**：不是非用 "On the one hand"。用 "A first reading… / Weighing against this…" 同样执行该动作，且表面离原文更远。
+7. **信号词可换（可选）**：不一定非用 "On the one hand"，用 "A first reading… / Weighing against this…" 同样执行该动作——更换是为贴合你的语气，不是为躲重复。
 
 ## 参照句（可直接采用或改造；替换来源特异性内容）
 

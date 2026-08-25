@@ -98,7 +98,9 @@ whenToUse: "Use when 用户要新写、修订或重写管理学顶刊论文的 R
 
 ## 渲染与措辞
 
-1. **假设-结果承诺兑现框架（生成前必建）**：`references/hypothesis-fulfillment-map.md`——分别记录 baseline verdict 与跨检验后的 overall evidence，避免把“基准支持”写成“证据一致”。
+**语料优先改编（段落确定后）**：每个段落一旦确定证据功能，以对应 slot 骨架 + 结果类型变体的语料句式为改编底本——尽量使用语料库的句式表达来改编（替换来源特异性内容），而非自拟；无对应变体时按骨架生成。已核实事实与用户裁定优先于语料句式（见路由 Step 3）。
+
+1. **假设-结果承诺兑现框架（生成前必建）**：`references/hypothesis-fulfillment-map.md`——分别记录 baseline verdict 与跨检验后的 overall evidence，避免把”基准支持”写成”证据一致”。
 2. **段落证据链（revision 默认执行）**：按 `references/draft-revision-protocol.md` 构建精确小标题、问题路径、诊断逻辑、证据和限定结论；“One concern is ...”若未说明问题如何发生及影响哪个推断，视为未完成。
 3. **句法微模板（按需）**：从 `../write-methods/econometric-models/micro-templates/` 选读 causal-hedging、interquartile-economic-significance、subsample-grouping、transitions；只借用逻辑连接方式，不移植 Methods 语态或整句。
 4. **措辞变化库**：数值与趋势 → `../write-introduction/academic-writing-corpus/phrasebank/quantities-trends.md`；hedging → `hedging-strength.md`；五病 → `../pollock-qc/references/prose-pathology.md`。优先保证句间推理关系，不为变化而更换已经准确的术语。

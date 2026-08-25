@@ -48,10 +48,12 @@ expansion_note: "verbatim 4 源（Cui-Yang-Vertinsky SMJ / Desai AMJ / Lee-Wu-Be
 - **符号反转**：not only weakens the positive association, but also reverses the relationship from positive to negative at high levels of [W]
 - **裁决回扣**：the interaction supports the contingency but Hypothesis [x] receives only partial/no support as stated / marginal reversal must not be written as equivalent to a p < .05 reversal
 
-## 改写指引（如何用自己的话说）
+## 改写指引（用你的对象改编语料句式）
+
+**语料优先改编**：以本文件的结构蓝图/信号词/参照句/改写演示的语料句式为底本，尽量使用语料库的句式表达来改编——替换来源特异性内容到你的对象上；仅当与你的对象/语气/篇幅明显不匹配时才换句式。
 
 1. **先选形态**：你的 W 是"双端方向相反"（→ Lee/Wu/Bednar 型）、"双回应谁占优"（→ Desai 型）、"压平曲线"（→ Cui 型）、还是"高 W 处反转"（→ Lun 型）？形态定支付句的骨架。
-2. **换对象、换 W、换机制**：Lee/Wu/Bednar 的"newspaper coverage"→ 换你的调节变量；Cui 的 "transaction-oriented vs relation-oriented partnership"→ 换成你的两个 (a)(b) 机制；Lun 的 "COO power"→ 换成你的边界条件。
+2. **替换来源特异性内容（对象/W/机制）**：Lee/Wu/Bednar 的"newspaper coverage"→ 换你的调节变量；Cui 的 "transaction-oriented vs relation-oriented partnership"→ 换成你的两个 (a)(b) 机制；Lun 的 "COO power"→ 换成你的边界条件。句式骨架保留语料的，只换里面的来源对象。
 3. **反转是顶点，用得克制**：只有你的理论允许支付翻符号时才写反转；只是衰减就写衰减，把反转留成"额外发现"。写了反转必须给阈值或高 W 范围，否则读者无法定位。
 4. **双端必须逐端兑现**：如果假设预测两端都显著，report 两端；如果只有一端兑现，另一端明确说"not as predicted"，并给 post-hoc 解释（标号）。
 5. **裁决句收在假设上**：条件支付句之后必须回扣假设——是完整支持、部分支持、还是反例？审稿人需要你替他们做这个裁决。

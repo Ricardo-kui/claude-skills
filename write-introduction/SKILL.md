@@ -75,6 +75,8 @@ description: >-
 | Differentiation | `differentiation/01-prior-work-boundary-clarification.md`（仅存在极易混淆的 prior work 时） |
 | 修辞动作/语言表达升级 | `../story-blueprints/v4/rhetoric-moves/_index.md`（动作自动匹配草稿修辞功能，无需用户点名；intro 默认=bidirectional-staging；润色走其 `_polish-protocol.md` 流畅性门） |
 
+**语料优先改编**：模块确定后，以上表该模块 corpus 指针的语料句式为改编底本——尽量使用语料库的句式表达来改编（替换来源特异性内容、填槽位、按需微调）；corpus 无对应句式时再自拟（自拟句与语料句式同构）。已核实事实与用户裁定优先于语料句式。
+
 槽位：按需读 `references/introduction-slot-contracts.md`，只填已知信息，不确定的槽位保留占位（不编造引文/数字/发现方向）。
 
 变体选择：按适用场景/证据状态/研究情境/期刊选主推变体（不默认 A）；仅实质改变故事路径时给 1 个备选。优先级：corpus 变体级约束 > 研究情境 > 路由表推荐 > story_frame 调制。

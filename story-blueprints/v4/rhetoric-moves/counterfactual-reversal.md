@@ -42,10 +42,12 @@ R7 识别确证动作：不满足于"效应存在"，而是**把处理逻辑反�
 - **结果回指**：neither the direct impact nor any interaction is significant / has a significant [opposite-sign] effect / we do not find empirical support for the alternative argument
 - **识别结论**：These results are consistent with the direction we propose / the reversal corroborates the causal reading / the contrast provides evidence that
 
-## 改写指引（如何用自己的话说）
+## 改写指引（用你的对象改编语料句式）
+
+**语料优先改编**：以本文件的结构蓝图/信号词/参照句/改写演示的语料句式为底本，尽量使用语料库的句式表达来改编——替换来源特异性内容到你的对象上；仅当与你的对象/语气/篇幅明显不匹配时才换句式。
 
 1. **先选镜像类型**：你的识别威胁是什么？时间错置 → 假处理安慰剂；撤销样本 → 处理撤销反事实；替代解释 → 替代结局安慰剂。一种威胁对应一种镜像，别混搭。
-2. **换对象、换机制、换句式**：Castellaneta 的"pretending that the change occurs ±k"→ 换到你的处理时点（"as if the reform had landed [m] years earlier than it did"）；moon2026 的"rejection is expected to have the opposite effect"→ 换到你的撤销事件。
+2. **替换来源特异性内容**：Castellaneta 的"pretending that the change occurs ±k"→ 换到你的处理时点（"as if the reform had landed [m] years earlier than it did"）；moon2026 的"rejection is expected to have the opposite effect"→ 换到你的撤销事件。句式骨架保留语料的，只换里面的来源对象。
 3. **预期与结果分离写**：先一句"应该怎样"，再一句"实际怎样"；两句话之间用结果证据隔开，别压缩成一个"结果如预期"。
 4. **识别结论要敢说**：反事实通过后，明说"这支持 [X]→[Y] 的因果方向而非 [替代解释]"——这是本动作的交付物。
 5. **对照 zhang-idd 拒稿教训**：该稿的失败是"正文写着 results remain robust，附录却系统性复现负主效应"——反证若出现，必须**在正文显式叙述**，而不是让附录替你打脸。

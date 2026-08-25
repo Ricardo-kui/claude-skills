@@ -43,12 +43,14 @@ expansion_note: "≥3 distinct papers（moon2026 JM / kundro_rothbard AMJ / Weng
 - **理由二**：Second, / Internally, / On the supply side, / From the inside out,
 - **收敛**：Taken together, / Both channels converge on / Either pathway suffices / Jointly, these imply
 
-## 改写指引（如何用自己的话说）
+## 改写指引（用你的对象改编语料句式）
+
+**语料优先改编**：以本文件的结构蓝图/信号词/参照句/改写演示的语料句式为底本，尽量使用语料库的句式表达来改编——替换来源特异性内容到你的对象上；仅当与你的对象/语气/篇幅明显不匹配时才换句式。
 
 1. **先确认你要哪种双理由**：双链（两条链都驱动效果）、机制遴选（淘汰竞品）、还是主效应双理由（两条并列逻辑解释同一关系）。三种骨架不同，别混。
 2. **双链必须真可分离**：一链=外部期望/监督（谁在看、期望什么），一链=内部资源/注意力（什么被释放、腾给谁）。只有一条就写一条，硬凑两条是论文病。
 3. **两链动词不要同源**："expectations drive…" 与 "attention redirects…" 是两种动作；若两条都写 "expectations cause…" 就是伪装的双链。
-4. **换通道词汇**：外部链可写 "the bar set by investors" / "credibility pressure" / "visibility demands"；内部链可写 "cognitive bandwidth" / "freed capacity" / "relief from defense duties"。避免照搬原例的 "capital market expectations" 与 "managerial attention"。
+4. **通道词尽量保留语料表达**："expectations from capital markets" / "managerial attention" 可直接采用；替换的是来源专指部分（制度名/对象名）。需要变化时可用 "the bar set by investors" / "credibility pressure" / "visibility demands"（外部链）、"cognitive bandwidth" / "freed capacity" / "relief from defense duties"（内部链）——更换是为贴合你的对象，不是为躲重复。
 5. **机制遴选的纪律**：先展示被淘汰机制"真的可假设"（各给一句文献依据），再宣告聚焦；理由一/理由二必须对应**不同维度**的筛选标准（如"与理论更直接挂钩" vs "在观察情境中更 salient"）。
 6. **收敛句给读者复核**：明确说"两条通道都作用于同一结果"，别让读者自己去合。
 

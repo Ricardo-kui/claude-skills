@@ -42,10 +42,12 @@ expansion_note: "verbatim 2 源（Lee-Wu-Bednar OS 假设探测 / Darby2026 JOM 
 - **裁决句**：is consistent with the visibility premise / consistent empirical support for our thesis / but not with higher [outcome] / the null for [mediator C] suggests that
 - **收束句**：we conducted [N] checks to validate our findings / Taken together, these analyses illustrate the robustness of our results / These analyses corroborate selected premises but do not identify the causal mechanism
 
-## 改写指引（如何用自己的话说）
+## 改写指引（用你的对象改编语料句式）
+
+**语料优先改编**：以本文件的结构蓝图/信号词/参照句/改写演示的语料句式为底本，尽量使用语料库的句式表达来改编——替换来源特异性内容到你的对象上；仅当与你的对象/语气/篇幅明显不匹配时才换句式。
 
 1. **先问"这个补充分析绑定哪个前提"**：没有可观察前提/威胁可绑 → 不要嵌入，那是凑数。有 → 动机句一句话点破。
-2. **换测度、换样本、换威胁清单**：Lee/Wu/Bednar 的"national newspaper coverage"→ 换你的传播/追踪结局；moon2026 的"alternative policy adoption"→ 换你的替代冲击；Darby 的"19 checks + threat list"→ 换成你的威胁类别清单（选配变量、遗漏、反向因果、测量、策略）。
+2. **替换来源特异性内容（测度/样本/威胁清单）**：Lee/Wu/Bednar 的"national newspaper coverage"→ 换你的传播/追踪结局；moon2026 的"alternative policy adoption"→ 换你的替代冲击；Darby 的"19 checks + threat list"→ 换成你的威胁类别清单（选配变量、遗漏、反向因果、测量、策略）。句式骨架保留语料的，只换里面的来源对象。
 3. **裁决句要诚实分级**：一致的中介用 "consistent with"；出现 null 的中介用 "suggests that this actor may operate through…"，把理论范围收窄——这是审稿人最看重的信号。
 4. **嵌入不等于堆砌**：一段一节、每节一裁决；超过 3 个嵌入点就退回附录汇总表 + 正文一收束句。
 5. **衔接句必须存在**：补充分析结束要一行转回主结果，否则读者在附录式细节里迷路。
