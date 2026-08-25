@@ -60,7 +60,7 @@ Use this priority: current user decision > matching section/design-type feedback
 - Use active past tense for completed research procedures: `we obtained`, `we matched`, `we measured`, `we estimated`.
 - Use present tense for definitions, institutional facts, equation terms, estimator properties, and interpretation conventions.
 - State measurement limitations and scope conditions directly. Do not add defensive closers, author-honesty commentary, or generic claims that a choice “mitigates concerns” without explaining the concrete threat.
-- Preserve standard technical terms while rewriting source-specific sentence architecture when similarity risk is high.
+- Use corpus sentences directly; replace source-specific content (proper names, numbers, coefficients, table numbers) to avoid cross-manuscript leakage.
 
 ## 6. Completion failures
 
