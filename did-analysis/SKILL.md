@@ -266,6 +266,62 @@ honest_results <- createSensitivityResults_relativeMagnitudes(
 - When treated clusters < 10, consider aggregating to the treatment level before estimation
 - Report both point estimates and HonestDiD sensitivity intervals
 
+## Interpretation Gate and Severity Flags
+
+Adapted from the `causal-did` identification-defense protocol (RobsonTigre/everyday-causal-skills). Keep this vocabulary distinct from Step 2's SEVERE/MODERATE/MILD/MINIMAL bands — those quantify TWFE bias magnitude; FATAL/SERIOUS govern whether you may make causal claims at all. Use exactly two tiers, round up when in doubt, and reuse the same labels in `check-methodology` so in-flight gating and post-hoc review speak one language.
+
+### Verification Gate
+
+Before writing any interpretation, confirm ALL of the following from actual code output — never from a remembered figure or prior conversation:
+
+- [ ] Main estimation ran without errors
+- [ ] You can quote the point estimate from the output
+- [ ] You can quote the standard error and 95% CI from the output
+- [ ] At least one robustness/falsification check ran and its result can be compared with the main estimate
+- [ ] Assumption diagnostics produced output (not just discussion)
+
+If any box is unchecked, flag it to the user, offer to run the missing step before interpreting, and carry the gap forward as a caveat if they choose to continue. Watch for premature conclusions — “The results suggest…” or “Based on the analysis…” before the gate passes. Quote actual output instead.
+
+### FATAL — stop causal language
+
+Emit this verdict block immediately after the diagnostic that reveals the violation:
+
+> **FATAL: <violation name>**
+> <one sentence: what the data show>
+> This analysis should not proceed without addressing this issue. Results produced under this violation are not trustworthy as causal claims.
+
+FATAL conditions:
+
+- Pre-treatment coefficients show a clear trend (visual ramp in the event study or a joint pre-test rejection) — the core identifying assumption is violated.
+- Treatment timing correlates with outcome shocks (selection into treatment).
+
+If you cannot yet confirm the violation because the user has not run the diagnostic, use **CONDITIONAL FATAL**: same format, with the consequence line replaced by “If <specific diagnostic condition>, this analysis should not proceed. Run the diagnostic and report the result before continuing.” Do not generate a full interpretation before a fatal-level diagnostic is resolved. If the user insists on continuing, repeat the verdict verbatim in the interpretation.
+
+### SERIOUS — acknowledge prominently
+
+> **SERIOUS: <limitation name>**
+> <one sentence: what was found>
+> Proceeding is possible, but the interpretation must prominently acknowledge this limitation and its consequences.
+
+SERIOUS conditions: only 1–2 pre-periods (parallel trends untestable), large compositional change around treatment, treated clusters < 30 (cluster-robust SEs unreliable), or treated clusters < 10 (aggregate to the treatment level before estimation).
+
+### Reading pre-treatment coefficients
+
+- Any individually significant pre-treatment coefficient: flag it — a clear trend suggests the groups were already diverging, which undermines parallel trends.
+- Joint test rejects (p < 0.05): the estimate absorbs a pre-existing difference; the core assumption fails.
+- p > 0.05: the test has low power with few pre-periods (Roth 2022). The event-study plot matters as much as the p-value — do not write “parallel trends holds”.
+
+### Rationalization shortcuts
+
+| Shortcut | Reality |
+|----------|---------|
+| “Pre-trends are n.s., so parallel trends holds” | Roth (2022): low power; n.s. ≠ established. |
+| “We don't need robustness — the main result is strong” | Strong results without robustness are more suspicious, not less. |
+| “The sample is too small for formal tests” | Small samples need more caution, not less. |
+| “Parallel trends look close enough” | “Close” isn't a statistical concept; run the formal pre-test. |
+| “Only 2 pre-periods, so we can't test trends” | Then parallel trends is untestable — say so, don't skip it. |
+| “TWFE is fine for staggered rollout” | Biased under heterogeneous effects; use a robust estimator. |
+
 ## Personalized Method Selection Advice
 
 ### By Treatment Pattern
