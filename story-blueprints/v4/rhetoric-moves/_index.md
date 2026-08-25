@@ -2,9 +2,9 @@
 type: meta
 title: "修辞动作语料库（Rhetoric Moves）—— 语言表达层"
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-25
 status: seed
-tags: [修辞, 语言表达, 润色, 查重安全]
+tags: [修辞, 语言表达, 润色]
 related: ["[[story-blueprints/v4/blueprints]]"]
 ---
 
@@ -12,15 +12,15 @@ related: ["[[story-blueprints/v4/blueprints]]"]
 
 story-blueprints 的语言表达层：blueprint 卡教**故事结构**（五幕/张力/人物），本层教**修辞动作**（一个动作怎么用语言执行）。两者配套——结构告诉你"用什么手法"，本层告诉你"这个手法在句子上怎么做、怎么用自己的话说"。
 
-## 设计原则（2026-08-24 用户裁决）
+## 设计原则（2026-08-25 用户裁决）
 
-> **学的是修辞机制，产出的是你自己的句子。禁止照抄。**
+> **学的是修辞机制，产出直接采用语料语句，替换来源特异性内容。**
 
-本层是"学习引擎 + 润色引擎"，**不是抄写库**。理由：照抄顶刊句子会触发查重。因此：
+本层是"学习引擎 + 润色引擎"，语料语句**可直接复用**。理由：查重护栏已删除（2026-08-25 用户裁决），重复率不再是闸门，唯一闸门是**流畅性门**。因此：
 
-1. **可自由复用的资产**：结构蓝图（逻辑槽位）、信号词表（通用功能词）、改写指引（变换操作）、改写演示（展示"怎么转成自己的话"，演示本身就是原创改写，与原文无 n-gram 重叠）。
-2. **只读参照（禁止照抄）**：每条 move 附 1 句原文，仅用于**阅读内化**修辞机制，标注 `⚠️ 只读参照，禁止照抄`。润色输出经查重护栏（见 `_polish-protocol.md`）强制**整体（所有参照并集）重合度 ≤40%**、**单句单篇 ≤50%**、**引号整句直接引用豁免**；低于 10%（软目标）提示离骨架太远、超过 40% 用跨源合成压低。查重是**安全护栏，不是质量目标**——质量目标永远是通顺、符合学术表达、句子不过长。
-3. **任何产出（润色变体、写作建议）都不得携带原文长句**；允许出现的只是信号词（on the one hand / however 等通用功能词，不触发查重）。
+1. **可直接复用的资产**：结构蓝图（逻辑槽位）、信号词表（通用功能词）、改写指引（变换操作）、改写演示（示范"怎么把语料语句接到自己的草稿上"）、参照句（move 附的原句，可直接采用或改造）。
+2. **必须替换来源特异性内容**：来源论文的专名、数字、系数、表号、样本/年份——替换它们以防串稿。除此之外语料语句可原样使用；质量闸门见 `_polish-protocol.md` 的**流畅性门**（通顺、符合学术表达、句子不过长）——**不设重复率/相似度闸门**。
+3. **任何产出都替换来源特异性内容**；信号词（on the one hand / however 等通用功能词）本就自由使用。
 
 ## 动作分类（2026-08-24 P2 填充完成）
 
@@ -39,11 +39,11 @@ story-blueprints 的语言表达层：blueprint 卡教**故事结构**（五幕/
 
 ## 路由
 
-- **润色请求**（用户/agent 给出自己草稿，要升级语言表达）→ 读 `_polish-protocol.md` → **自动匹配动作**（按草稿修辞功能打分，见 `SKILL.md` 匹配表；用户无需点名动作）→ 取对应 move 文件 → 生成变体 → 过护栏。
-- **写作辅导**（agent 教某动作怎么写）→ 直接读对应 move 文件，用"结构蓝图 + 信号词 + 改写演示"教学，**不**引用只读参照句作为可复用文本。
+- **润色请求**（用户/agent 给出自己草稿，要升级语言表达）→ 读 `_polish-protocol.md` → **自动匹配动作**（按草稿修辞功能打分，见 `SKILL.md` 匹配表；用户无需点名动作）→ 取对应 move 文件 → 生成变体 → 过流畅性门。
+- **写作辅导**（agent 教某动作怎么写）→ 直接读对应 move 文件，用"结构蓝图 + 信号词 + 改写演示"教学，参照句可直接作为可复用文本（替换来源特异性内容）。
 - **蒸馏管线**（distill-*-exemplar）→ 新论文蒸馏时，若发现既有 move 未覆盖的动作，按本格式新增文件；已有 move 则补充信号词与改写演示（跨论文积累）。
-- **write-\* skill（已接线 2026-08-24）**：各分节 SKILL.md 已含路由指针——write-introduction→bidirectional-staging；write-theory→mechanism-two-chain（含调节元框架）；write-methods/write-results→通用润色护栏（其锚点纪律已与 `_polish-protocol.md` 查重护栏衔接）。写作时如需修辞升级，先读本文件动作表再取对应 move。
+- **write-\* skill（已接线 2026-08-24）**：各分节 SKILL.md 已含路由指针——write-introduction→bidirectional-staging；write-theory→mechanism-two-chain（含调节元框架）；write-methods/write-results→通用流畅性门（其锚点纪律已与 `_polish-protocol.md` 衔接）。写作时如需修辞升级，先读本文件动作表再取对应 move。
 
 ## 文件规范
 
-每个 move 文件 frontmatter 必备：`type: rhetoric_move`、`canonical_id`、`name_zh`、`cross_paper`（VERIFIED=≥2 篇 verbatim 验证 / single=单 verbatim）、`created`、`updated`、`expansion_state`（saturated / open）、`pattern_count`、`distinct_sources`、`expansion_note`。正文结构固定为七段：动作定义 → 结构蓝图 → 信号词表 → 改写指引 → 只读参照 → 改写演示 → 自查勾子。新 move 创建走同格式（见上「路由」蒸馏管线）。
+每个 move 文件 frontmatter 必备：`type: rhetoric_move`、`canonical_id`、`name_zh`、`cross_paper`（VERIFIED=≥2 篇 verbatim 验证 / single=单 verbatim）、`created`、`updated`、`expansion_state`（saturated / open）、`pattern_count`、`distinct_sources`、`expansion_note`。正文结构固定为七段：动作定义 → 结构蓝图 → 信号词表 → 改写指引 → 参照句 → 改写演示 → 自查勾子。新 move 创建走同格式（见上「路由」蒸馏管线）。

@@ -4,7 +4,7 @@ canonical_id: "mechanism-two-chain"
 name_zh: "双链汇一"
 cross_paper: VERIFIED
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-25
 expansion_state: saturated
 pattern_count: 6
 distinct_sources: 3
@@ -52,7 +52,7 @@ expansion_note: "≥3 distinct papers（moon2026 JM / kundro_rothbard AMJ / Weng
 5. **机制遴选的纪律**：先展示被淘汰机制"真的可假设"（各给一句文献依据），再宣告聚焦；理由一/理由二必须对应**不同维度**的筛选标准（如"与理论更直接挂钩" vs "在观察情境中更 salient"）。
 6. **收敛句给读者复核**：明确说"两条通道都作用于同一结果"，别让读者自己去合。
 
-## 只读参照 ⚠️（学习用，禁止照抄；润色输出会过护栏）
+## 参照句（可直接采用或改造；替换来源特异性内容）
 
 **参照 1 —— moon2026（JM）¶19（纯双链）**：
 > "Our central thesis is that the recognition of IDD in a state increases advertising spending by firms headquartered in that state because the stronger protection of trade secrets may lead managers to pay more attention to leveraging their trade secrets. Higher managerial attention towards leveraging trade secrets following IDD recognition in a state is likely to occur for two key reasons. First, IDD recognition is likely to lead to expectations of higher growth from capital markets because investors and analysts expect firms to be able to translate the enhanced protection of trade secrets into growth (see Chen, Gao, and Ma 2021). Second, senior managers are more likely to pay attention to the capital market expectations for growth because by protecting against trade secrets leakage due to employee mobility (Nguyen, Pham, and Qiu 2023), IDD recognition may shift managerial attention previously devoted to the protection of trade secrets."
@@ -65,22 +65,22 @@ expansion_note: "≥3 distinct papers（moon2026 JM / kundro_rothbard AMJ / Weng
 
 **跨源对照**：参照 1 的"两链"彼此因果独立且**均驱动同一结果**；参照 2 的"两理由"是**筛掉竞品机制**（淘汰而非并列驱动）；参照 3 的"两理由"是**同向并列解释主效应**（awareness + openness，都是自由派特质的表现）。写作时按你想达到的论证功能选骨架——审稿人想看的是"为什么信你"，三种都是把单一"because"拆成可复核的两块。
 
-## 改写演示（整体重合 ≤40% 即过、10% 为软目标；重点是通顺与句长适中）
+## 改写演示（重点是通顺、符合学术表达规范、句长适中）
 
-**演示 A（moon2026 纯双链骨架：主题句 + "for two key reasons" + 外部期望链 + 内部注意力链；实测整体 0.23 / 单句单篇 ≤0.44）**：
+**演示 A（moon2026 纯双链骨架：主题句 + "for two key reasons" + 外部期望链 + 内部注意力链）**：
 > "Our central thesis is that stiffer secrecy law increases how much executives invest in commercializing proprietary know-how, because stronger protection redirects management's attention from guarding assets to deploying them. This shift should arise for two key reasons. First, stronger protection is likely to lead to expectations of higher growth from capital markets, and analysts translate the enhanced protection into a steeper growth forecast. Second, managers are more likely to pay attention to the growth expectations that markets hold once relief from poaching risk frees the attention they spent guarding secrets."
 
-**演示 B（机制前置 + 枚举 + 双链分置，moon2026 骨架换词；实测整体 0.16 / 单句单篇 ≤0.25）**：
+**演示 B（机制前置 + 枚举 + 双链分置，moon2026 骨架换词）**：
 > "What makes stronger trade-secret protection consequential is its effect on where managers aim their effort. This reallocation should arise for two key reasons. First, the protection raises the growth targets that capital markets attach to the firm, and investors and analysts expect firms to meet them. Second, it releases managerial attention previously spent on guarding the firm's secrets, and that relief leads managers to pay more attention to leveraging their trade secrets for visible market outcomes."
 
-**演示 C（机制遴选骨架 kundro_rothbard 型，换对象到审计领域；实测整体 0.25 / 单句单篇 ≤0.42）**：
+**演示 C（机制遴选骨架 kundro_rothbard 型，换对象到审计领域）**：
 > "While we propose that client relationships are a primary mechanism that explains auditor leniency, it is important to consider other potential mechanisms. Fee dependence and social affinity are both plausible, but we focus on relationship length as our key mechanism for two reasons. First, relationship length has been more directly linked with the theory of independence erosion in prior work. Second, unlike fee dependence, it is considered particularly relevant by outsiders, which increases its salience over the other attributes."
 
-**护栏自查**：演示 A/B 借 moon2026 的双链骨架——主题句（"Our central thesis is that"）、枚举（"for two key reasons"）、外部期望链（"is likely to lead to expectations of higher growth from capital markets"）、内部注意力链（"pay more attention to leveraging their trade secrets"）；演示 C 借 kundro_rothbard 的机制遴选骨架（"it is important to consider other potential mechanisms / focus on [M] as our key mechanism for two reasons"）。共享 4-gram 落在骨架句，对象与通道词（stiffer secrecy law / proprietary know-how / poaching risk / auditor leniency / fee dependence）全部异词。实测整体 A=0.23 / B=0.16 / C=0.25（∈[10%,40%]），各句单篇 ≤0.44（<50%）——骨架保底、通顺优先，10% 是保底不是目标。
+**流畅性自查**：演示 A/B 借 moon2026 的双链骨架——主题句（"Our central thesis is that"）、枚举（"for two key reasons"）、外部期望链（"is likely to lead to expectations of higher growth from capital markets"）、内部注意力链（"pay more attention to leveraging their trade secrets"）；演示 C 借 kundro_rothbard 的机制遴选骨架（"it is important to consider other potential mechanisms / focus on [M] as our key mechanism for two reasons"）。共享句集中在骨架句，直接采用即可；对象与通道词（stiffer secrecy law / proprietary know-how / poaching risk / auditor leniency / fee dependence）须按你的对象替换来源特异性内容。过流畅性门（通顺、句长适中、主谓宾可识别）即交付。
 
 ## 自查勾子
 
-- 输出与参照集的**整体重合度 <10% 或 >40%** → <10% 说明没借到该 move 的骨架信号句式（回写保留更多"主题句/枚举/两链/收敛"句式），>40% 说明逼近查重风险（把句式片段拆到多个来源跨源合成，见 `_polish-protocol.md`）；落在 [10%, 40%] 即够——10% 是软目标（低于只提示不拦截）、40% 是查重硬线，别为更低的数字牺牲通顺。单句单篇建议 ≤50%；整句带引号直接引用一篇论文（强调用，学术惯例）豁免。
+- **不设重复率闸门**（2026-08-25 用户裁决）：语料语句可直接采用，只需替换来源特异性内容（专名/数字/系数/表号）；质量闸门是流畅性门（通顺、符合学术表达、句子不过长），见 `_polish-protocol.md`。
 - 两条链若存在"一条依赖一条"的因果（如"期望↑→所以注意力转向"），则不是双链而是单链拆分——回结构蓝图第 5 步修正。
 - 收敛句必须把两链合到**同一结果变量**，而不是各自接不同结果。
 - 机制遴选型若被淘汰机制无文献依据 → 是稻草人，回信号词表"机制遴选入口"纪律。

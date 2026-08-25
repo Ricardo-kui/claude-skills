@@ -73,7 +73,7 @@ description: >-
 | Contribution | `contributions/_index.md` |
 | Transitions | `transitions/[canonical_id].md`（按需） |
 | Differentiation | `differentiation/01-prior-work-boundary-clarification.md`（仅存在极易混淆的 prior work 时） |
-| 修辞动作/语言表达升级 | `../story-blueprints/v4/rhetoric-moves/_index.md`（动作自动匹配草稿修辞功能，无需用户点名；intro 默认=bidirectional-staging；润色走 `_polish-protocol.md` 查重护栏，护栏脚本 `../story-blueprints/v4/rhetoric-moves/scripts/guard.py`，整体 ≤40%） |
+| 修辞动作/语言表达升级 | `../story-blueprints/v4/rhetoric-moves/_index.md`（动作自动匹配草稿修辞功能，无需用户点名；intro 默认=bidirectional-staging；润色走其 `_polish-protocol.md` 流畅性门） |
 
 槽位：按需读 `references/introduction-slot-contracts.md`，只填已知信息，不确定的槽位保留占位（不编造引文/数字/发现方向）。
 
@@ -98,7 +98,7 @@ description: >-
 
 ## 纪律
 
-- 原文锚定：句式骨架跟锚点、词语全换（替换专有名词、数字、机制词）；产出段落对所用锚点来源跑 `../story-blueprints/v4/rhetoric-moves/scripts/guard.py`，整体 4-gram 重合落在 [10%,40%] 才算过（<10% 软提示离骨架太远，>40% 查重风险），否则重写或跨源合成；首要保证通顺、符合学术表达、句子不过长。润色协议见 `_polish-protocol.md`。
+- 原文锚定：语料语句可直接采用，仅替换来源特异性内容（专名/数字/系数/表号）防串稿；不设重复率闸门，首要保证通顺、符合学术表达、句子不过长。润色协议见 `_polish-protocol.md`。
 - 批评登记：用户不满时登记到 `academic-writing-corpus/_evidence_registry.yaml` 的 `critique.per_file`（revise/reject +1、reasons 去重首插最多 8 条）；不登记流程抱怨与风格偏好。
 - 演化：规则层反例更新 `_skill_design_feedback.yaml`（见 `../distill-introduction-exemplar/references/phase-4-validation-writeback.md`）；单篇论文不得建立普遍规则。
 - 注册表缺失时回退 `_routing_tables.yaml` 静态推荐，不中断输出；但**必须在输出末尾附加降级声明**："⚠ registry 缺失，语料验证状态（EMERGING/VERIFIED/ROBUST）未经核验，本次按静态路由表推荐"——回退不得静默。

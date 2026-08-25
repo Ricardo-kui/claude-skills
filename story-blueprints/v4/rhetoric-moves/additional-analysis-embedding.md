@@ -4,7 +4,7 @@ canonical_id: "additional-analysis-embedding"
 name_zh: "嵌入型补充分析"
 cross_paper: VERIFIED
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-25
 expansion_state: saturated
 pattern_count: 4
 distinct_sources: 3
@@ -50,7 +50,7 @@ expansion_note: "verbatim 2 源（Lee-Wu-Bednar OS 假设探测 / Darby2026 JOM 
 4. **嵌入不等于堆砌**：一段一节、每节一裁决；超过 3 个嵌入点就退回附录汇总表 + 正文一收束句。
 5. **衔接句必须存在**：补充分析结束要一行转回主结果，否则读者在附录式细节里迷路。
 
-## 只读参照 ⚠️（学习用，禁止照抄；润色输出会过护栏）
+## 参照句（可直接采用或改造；替换来源特异性内容）
 
 **参照 1 —— Lee, Wu & Bednar（*Organization Science*；前提探测嵌入，原文直引）**：
 > "To empirically assess this assumption, we regress national newspaper coverage, analyst coverage, and credit rating coverage on firms' CSR engagement … higher CSR engagement is indeed associated with increased national newspaper coverage and greater analyst attention, but not with higher credit rating coverage."
@@ -61,19 +61,19 @@ expansion_note: "verbatim 2 源（Lee-Wu-Bednar OS 假设探测 / Darby2026 JOM 
 **参照 3 —— moon2026（*Journal of Marketing*；替代冲击复现嵌入，模板重建）**：
 > "In addition, we also test if our conclusions are robust in an alternative empirical setting that uses [related but distinct policy adoption] as an alternative shock. … We estimate the simple diff-in-diff models on these alternative treated and control groups and find consistent empirical support for our thesis (see [appendix table] for more details)."
 
-## 改写演示（整体重合 ≤40% 即过、10% 为软目标；重点是通顺与句长适中）
+## 改写演示（重点是通顺、符合学术表达规范、句长适中）
 
-**演示 A（前提探测嵌入，换对象到召回机制；实测整体 0.26 / 单句单篇 ≤0.30）**：
+**演示 A（前提探测嵌入，换对象到召回机制）**：
 > "To empirically assess this assumption, we regress media queries, agency inquiry speed, and insurer renewals on firms' recall events. Higher recall activity is indeed associated with increased media coverage and greater analyst attention, but not with higher renewal premiums; the null for renewals marks the boundary of the mechanism."
 
-**演示 B（稳健性收束嵌入，换威胁清单到召回设计；实测整体 0.22 / 单句单篇 ≤0.38）**：
+**演示 B（稳健性收束嵌入，换威胁清单到召回设计）**：
 > "Reviewers typically worry that our estimates ride on design choices rather than the underlying pattern. We conducted a battery of robustness checks to validate our findings and address concerns surrounding the selection of matched controls, the exposure window, and the coding of severe versus minor events. Taken together, these analyses illustrate the robustness of our results and reinforce support for our hypotheses, with the full battery reported in the appendix."
 
-**护栏自查**：演示 A/B 与参照共享的是**可迁移骨架**——Lee/Wu/Bednar 的 "To empirically assess this assumption" + "两个一致一个 null" 三段结构、Darby 的 "We conducted [N] checks … to validate our findings and address concerns surrounding" + "Taken together, these analyses illustrate the robustness of our results"。共享 4-gram 全部落在骨架句上；对象与威胁清单（media queries / agency inquiry speed / renewal premiums / matched controls / exposure window）全部异词。实测整体重合 A=0.26 / B=0.22（∈[10%,40%]），各句单篇 ≤0.38（<50%）——骨架保底、通顺优先，10% 是保底不是目标。
+**流畅性自查**：演示 A/B 与参照共享的是**可迁移骨架**——Lee/Wu/Bednar 的 "To empirically assess this assumption" + "两个一致一个 null" 三段结构、Darby 的 "We conducted [N] checks … to validate our findings and address concerns surrounding" + "Taken together, these analyses illustrate the robustness of our results"。共享句全部落在骨架句上，直接采用即可；对象与威胁清单（media queries / agency inquiry speed / renewal premiums / matched controls / exposure window）须按你的对象替换来源特异性内容。过流畅性门（通顺、句长适中、主谓宾可识别）即交付。
 
 ## 自查勾子
 
-- 输出与参照集的**整体重合度 <10% 或 >40%** → <10% 说明没借到该 move 的骨架信号句式（回写保留更多"动机/操作/裁决/衔接"句式），>40% 说明逼近查重风险（把句式片段拆到多个来源跨源合成，见 `_polish-protocol.md`）；落在 [10%, 40%] 即够——10% 是软目标（低于只提示不拦截）、40% 是查重硬线，别为更低的数字牺牲通顺。单句单篇建议 ≤50%；整句带引号直接引用一篇论文（强调用，学术惯例）豁免。
+- **不设重复率闸门**（2026-08-25 用户裁决）：语料语句可直接采用，只需替换来源特异性内容（专名/数字/系数/表号）；质量闸门是流畅性门（通顺、符合学术表达、句子不过长），见 `_polish-protocol.md`。
 - 补充分析若**绑定不了明确前提/威胁** → 回改写指引第 1 条，改做附录汇总而非嵌入。
 - 出现领域特定 null 却写"总体大致一致" → 回信号词表"裁决句"纪律，必须收窄范围。
 - 嵌入点 ≥3 而无收束 → 读者迷路；退回"附录汇总表 + 一段收束"。

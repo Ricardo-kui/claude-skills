@@ -4,7 +4,7 @@ canonical_id: "moderator-meta-framework"
 name_zh: "调节元框架"
 cross_paper: VERIFIED
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-25
 expansion_state: saturated
 pattern_count: 5
 distinct_sources: 4
@@ -44,7 +44,7 @@ expansion_note: "≥3 distinct papers（moon2026 JM / Desai 2012 AMJ / kalaignan
 4. **小节必须对称**：每个因子段用同一模板（定义→机制→预测），长度相近——审稿人把"长短悬殊"读成"某调节论证不足"。
 5. **收束句把 N 合回一句**："each of these factors shapes the degree to which…"——别让读者自己数。
 
-## 只读参照 ⚠️（学习用，禁止照抄；润色输出会过护栏）
+## 参照句（可直接采用或改造；替换来源特异性内容）
 
 **参照 1 —— moon2026（JM，T5_moderator_metaframework_trilevel；模板重建，非原文直引）**：
 > "Research on [lens] argues that because [scarce resource], the degree to which [actor] pays attention to [change] may depend on individual, organizational, and contextual factors. Accordingly, we examine [N] key factors: [W1], [W2], and [W3]. At the individual level, [W1 rationale]. At the organizational level, [W2 rationale]. At the environmental level, [W3 rationale]. Taken together, we expect that each of these factors shapes the degree to which [actor] [response]."
@@ -59,19 +59,19 @@ expansion_note: "≥3 distinct papers（moon2026 JM / Desai 2012 AMJ / kalaignan
 
 **结构参照（无 verbatim，供对称小节骨架）**：kalaignanam2017（JM）——4 个 moderator（technological complexity、NPD capability×2、PLAF），**每个一个小节、结构完全平行**（定义→机制→假设），假设编号连续（H1a…H1b…）。见 `write-theory/corpus/variants/E_moderation.md` E3。
 
-## 改写演示（整体重合 ≤40% 即过、10% 为软目标；重点是通顺与句长适中）
+## 改写演示（重点是通顺、符合学术表达规范、句长适中）
 
-**演示 A（三层级归类骨架 moon2026 型，换透镜到召回领域；实测整体 0.21 / 单句单篇 ≤0.44）**：
+**演示 A（三层级归类骨架 moon2026 型，换透镜到召回领域）**：
 > "Research on reputation argues that because reputation is a scarce resource, the degree to which a firm pays attention to recall risk may depend on individual, organizational, and contextual factors. Accordingly, we examine three key factors: CEO-level, board-level, and regulator-level factors. At the individual level, a CEO's prior recall experience sharpens routines for catching defects early. At the organizational level, safety-oriented board members lower the tolerance threshold for shipping a risky batch. At the environmental level, regulatory stringency raises the expected cost of being caught late. Taken together, we expect that each of these factors shapes the degree to which a firm converts hazard signals into prompt recall action, rather than letting them accumulate."
 
-**演示 B（两回应裁决骨架 Desai 型，换对象到召回场景；实测整体 0.19 / 单句单篇 ≤0.36）**：
+**演示 B（两回应裁决骨架 Desai 型，换对象到召回场景）**：
 > "Institutional theory can be adapted to suggest at least two responses in this situation: absorb the reputational hit quietly, or preempt it with voluntary disclosure. Because the two responses carry different expected costs, it is important to determine the conditions under which a firm picks one response over the other. We propose that shareholder salience decides: when activists and index funds hold large stakes, firms lean toward preemptive disclosure; when ownership is dispersed and passive, quiet absorption dominates."
 
-**护栏自查**：演示 A 借 moon2026 三层级模板的完整骨架（"the degree to which a firm pays attention … may depend on individual, organizational, and contextual factors"、"Accordingly, we examine three key factors"、"At the individual/organizational/environmental level"、"Taken together, we expect that each of these factors shapes"），透镜换成 reputation 稀缺 + 召回风险；演示 B 借 Desai 的 "Institutional theory can be adapted to suggest at least two … responses in this situation" + "it is important to determine the conditions under which"。共享 4-gram 落在骨架句，对象（CEO-level / regulator-level / tolerance threshold / shareholder salience / quiet absorption）全部异词。实测整体 A=0.21 / B=0.19（∈[10%,40%]），各句单篇 ≤0.44（<50%）——骨架保底、通顺优先，10% 是保底不是目标。
+**流畅性自查**：演示 A 借 moon2026 三层级模板的完整骨架（"the degree to which a firm pays attention … may depend on individual, organizational, and contextual factors"、"Accordingly, we examine three key factors"、"At the individual/organizational/environmental level"、"Taken together, we expect that each of these factors shapes"），透镜换成 reputation 稀缺 + 召回风险；演示 B 借 Desai 的 "Institutional theory can be adapted to suggest at least two … responses in this situation" + "it is important to determine the conditions under which"。共享句集中在骨架句，直接采用即可；对象（CEO-level / regulator-level / tolerance threshold / shareholder salience / quiet absorption）须按你的对象替换来源特异性内容。过流畅性门（通顺、句长适中、主谓宾可识别）即交付。
 
 ## 自查勾子
 
-- 输出与参照集的**整体重合度 <10% 或 >40%** → <10% 说明没借到该 move 的骨架信号句式（回写保留更多"元框架声明/枚举/层级展开/收束"句式），>40% 说明逼近查重风险（把句式片段拆到多个来源跨源合成，见 `_polish-protocol.md`）；落在 [10%, 40%] 即够——10% 是软目标（低于只提示不拦截）、40% 是查重硬线，别为更低的数字牺牲通顺。单句单篇建议 ≤50%；整句带引号直接引用一篇论文（强调用，学术惯例）豁免。
+- **不设重复率闸门**（2026-08-25 用户裁决）：语料语句可直接采用，只需替换来源特异性内容（专名/数字/系数/表号）；质量闸门是流畅性门（通顺、符合学术表达、句子不过长），见 `_polish-protocol.md`。
 - 组织方案若**不是理论驱动**（只为排版整齐）→ 回结构蓝图"关键纪律"。
 - N 个调节若小节长短悬殊或结构不对称 → 审稿人会读成选择性论证，回改写指引第 4 条。
 - 只有 1-2 个调节却套元框架 → 过设计；独立成段更稳（见 `write-theory` 反模式表）。

@@ -3,16 +3,16 @@
     {
       "category": "corpus_fit",
       "count": 1,
-      "evidence": "Seven high-similarity sentences were rewritten without replacing technical terms such as time-to-recall, AFT, Weibull, frailty, and robust standard errors.",
+      "evidence": "Seven high-similarity sentences were rewritten without replacing technical terms such as time-to-recall, AFT, Weibull, frailty, and robust standard errors. Relaxed 2026-08-25: user removed the repetition-rate guard; similarity gate deleted.",
       "first_seen": "2026-08-15",
       "id": "wmf_9b2425ceb7218258",
-      "last_seen": "2026-08-15",
+      "last_seen": "2026-08-25",
       "project": "共同所有权 × 产品召回",
-      "reason": "Several definitions and estimator sentences were too close to recall exemplars, creating similarity risk.",
-      "rule": "Use exemplar passages to choose paragraph function, sequence, and cadence while rewriting source-specific sentence architecture and preserving standard technical terms.",
+      "reason": "Several definitions and estimator sentences were too close to recall exemplars, creating similarity risk. 2026-08-25 user decision: stop gating repetition; reuse corpus sentences directly.",
+      "rule": "Use corpus sentences directly; replace source-specific content (proper names, numbers, coefficients, table numbers) to avoid cross-manuscript leakage.",
       "scope": "project",
-      "severity": "reject",
-      "source": "Methods revision record 31, 2026-08-14",
+      "severity": "revise",
+      "source": "Methods revision record 31, 2026-08-14; relaxed by user decision 2026-08-25",
       "status": "active"
     },
     {
@@ -146,5 +146,5 @@
     }
   ],
   "schema_version": "1.0.0",
-  "updated": "2026-08-24"
+  "updated": "2026-08-25"
 }

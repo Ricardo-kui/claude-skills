@@ -4,7 +4,7 @@ canonical_id: "counterfactual-reversal"
 name_zh: "反向证伪"
 cross_paper: single
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-25
 expansion_state: open
 pattern_count: 3
 distinct_sources: 2
@@ -50,7 +50,7 @@ R7 识别确证动作：不满足于"效应存在"，而是**把处理逻辑反�
 4. **识别结论要敢说**：反事实通过后，明说"这支持 [X]→[Y] 的因果方向而非 [替代解释]"——这是本动作的交付物。
 5. **对照 zhang-idd 拒稿教训**：该稿的失败是"正文写着 results remain robust，附录却系统性复现负主效应"——反证若出现，必须**在正文显式叙述**，而不是让附录替你打脸。
 
-## 只读参照 ⚠️（学习用，禁止照抄；润色输出会过护栏）
+## 参照句（可直接采用或改造；替换来源特异性内容）
 
 **参照 1 —— Castellaneta, Conti & Kacperczyk（2017, *Strategic Management Journal*；假处理安慰剂，原文直引）**：
 > "We expect the fake treatment to have a weaker (or even null) effect on the dependent variable when compared with the actual treatment. Consistent with this idea, we find that neither the direct impact of our 'placebo treatment' nor any interaction is significant; results are shown in Table S3."
@@ -63,19 +63,19 @@ R7 识别确证动作：不满足于"效应存在"，而是**把处理逻辑反�
 
 **反向案例（zhang-idd-advertising-rejected，2026-08-23 复盘）**：用户稿件 "Beyond Employee Retention…"（SMJ/JAMS 两轮拒稿）对照 moon2026 的失败模式——① 调节全模型中处理主效应由正转负（−0.101, p=.008），正文仍写 "results remain robust"；② 附录表系统性复现负主效应仍无叙述；③ 用被处理影响过的变量当交互预测下游结果宣称 "confirms the mechanism"（bad-controls，两轮评审当场抓获）。**本 move 的正确用法与失败稿相反**：主动构造反事实去预期反转，且反转出现时在正文显式讨论。见 `story-blueprints/v4/blueprints/zhang-idd-advertising-rejected.md`。
 
-## 改写演示（整体重合 ≤40% 即过、10% 为软目标；重点是通顺与句长适中）
+## 改写演示（重点是通顺、符合学术表达规范、句长适中）
 
-**演示 A（假处理时点安慰剂，Castellaneta 骨架保留预期声明 + 结果回指；实测整体 0.26 / 单句单篇 ≤0.41）**：
+**演示 A（假处理时点安慰剂，Castellaneta 骨架保留预期声明 + 结果回指）**：
 > "We expect the fake treatment to have a weaker effect than the actual treatment, so we reassigned the reform to a window two years earlier than the true roll-out, a timing shift that carries no legal force. Consistent with this idea, we find that neither the direct impact of the mis-timed reform nor any interaction is significant — the misplaced shock leaves recall activity indistinguishable from zero."
 
-**演示 B（处理撤销反事实，moon2026 骨架保留 "natural empirical setting for counterfactual analysis / rejection is expected to have the opposite effect / consistent with our expectations"；实测整体 0.18 / 单句单篇 ≤0.33）**：
+**演示 B（处理撤销反事实，moon2026 骨架保留 "natural empirical setting for counterfactual analysis / rejection is expected to have the opposite effect / consistent with our expectations"）**：
 > "The repeal rulings, which we read as a natural empirical setting for counterfactual analysis, give us a built-in reversal experiment. If mandatory disclosure increases recall initiation among covered firms, its rejection is expected to have the opposite effect on recall timing. Comparing firms in repeal states against firms whose mandate never lapsed, we find that repeal has a significant negative effect on recall speed, consistent with our expectations."
 
-**护栏自查**：演示 A 借 Castellaneta 的 "We expect the fake treatment to have a weaker (or even null) effect" + "Consistent with this idea … neither the direct impact … nor any interaction is significant"；演示 B 借 moon2026 模板的 "natural empirical setting for counterfactual analysis"、"rejection is expected to have the opposite effect"、"consistent with our expectations"。镜像构造与对象（reassigned the reform / mis-timed reform / repeal rulings / mandate never lapsed）全部异词。实测整体 A=0.26 / B=0.18（∈[10%,40%]），各句单篇 ≤0.41（<50%）——骨架保底、通顺优先，10% 是保底不是目标。
+**流畅性自查**：演示 A 借 Castellaneta 的 "We expect the fake treatment to have a weaker (or even null) effect" + "Consistent with this idea … neither the direct impact … nor any interaction is significant"；演示 B 借 moon2026 模板的 "natural empirical setting for counterfactual analysis"、"rejection is expected to have the opposite effect"、"consistent with our expectations"。共享句集中在骨架句，直接采用即可；镜像构造与对象（reassigned the reform / mis-timed reform / repeal rulings / mandate never lapsed）须按你的对象替换来源特异性内容。过流畅性门（通顺、句长适中、主谓宾可识别）即交付。
 
 ## 自查勾子
 
-- 输出与参照集的**整体重合度 <10% 或 >40%** → <10% 说明没借到该 move 的骨架信号句式（回写保留更多"威胁点名/镜像构造/预期声明/结果回指/识别结论"句式），>40% 说明逼近查重风险（把句式片段拆到多个来源跨源合成，见 `_polish-protocol.md`）；落在 [10%, 40%] 即够——10% 是软目标（低于只提示不拦截）、40% 是查重硬线，别为更低的数字牺牲通顺。单句单篇建议 ≤50%；整句带引号直接引用一篇论文（强调用，学术惯例）豁免。
+- **不设重复率闸门**（2026-08-25 用户裁决）：语料语句可直接采用，只需替换来源特异性内容（专名/数字/系数/表号）；质量闸门是流畅性门（通顺、符合学术表达、句子不过长），见 `_polish-protocol.md`。
 - 预期 null 若**未预先声明**就写"结果如预期"→ 是事后合理化，回信号词表"预期声明"纪律。
 - 反事实若得到**非预期显著结果**却沉默 → 复制 zhang-idd 拒稿模式；必须当 identification threat 报告。
 - 把交互当机制确证（bad-controls）→ 对照反向案例第三条。

@@ -4,7 +4,7 @@ canonical_id: "bidirectional-staging"
 name_zh: "双向预测先行"
 cross_paper: VERIFIED
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-25
 expansion_state: saturated
 pattern_count: 6
 distinct_sources: 3
@@ -34,7 +34,7 @@ expansion_note: "≥3 distinct papers（moon2026 JM / kundro_rothbard AMJ / du_t
 
 **两条预测必须都真实**：各有真文献支撑、机制上各自成立。为对称而编造对立面 = 修辞破产。
 
-## 信号词表（通用功能词，自由使用，不触发查重）
+## 信号词表（通用功能词，自由使用）
 
 - **预测甲入口**：On the one hand / A first reading is that / One could argue that / A competing account holds that / At first glance / Some scholars argue that
 - **预测乙入口**：On the other hand / Yet / Against this / Weighing against this / The opposing view is that / Conversely / [theory camp] emphasize
@@ -55,7 +55,7 @@ expansion_note: "≥3 distinct papers（moon2026 JM / kundro_rothbard AMJ / du_t
 6. **du_tsolmon 型的收敛纪律**：两阵营**各自只给一句机制**（克制、不展开），然后立刻把矛盾归因到理论假设层面，再落到资源属性升级 stakes——不拖沓。
 7. **信号词可以换**：不是非用 "On the one hand"。用 "A first reading… / Weighing against this…" 同样执行该动作，且表面离原文更远。
 
-## 只读参照 ⚠️（学习用，禁止照抄；润色输出会过护栏）
+## 参照句（可直接采用或改造；替换来源特异性内容）
 
 **参照 1 —— moon2026（JM）¶4（同 IV 双通道型）**：
 > "On the one hand, enhanced trade secret protection can lower the competitive pressure faced by firms and lead to a decline in their advertising spending (e.g., Klasa et al. 2018). On the other hand, stronger trade secret protection also means that stakeholders from financial markets, i.e., investors and financial analysts, expect firms to increase their sales growth, and therefore can increase managers' attention to leveraging trade secrets and advertising for brand building."
@@ -68,22 +68,22 @@ expansion_note: "≥3 distinct papers（moon2026 JM / kundro_rothbard AMJ / du_t
 
 **跨源对照**：参照 1 的两条预测由**同一机制通道**（期望）倒推两个方向；参照 2 由**未检验的不对称**（A 群体是否得保护）立题；参照 3 由**理性预期与现实的落差**立题。三者"预测甲/预测乙"的句式都可以互换骨架，但立题方式不可混用。
 
-## 改写演示（整体重合 ≤40% 即过、10% 为软目标；重点是通顺与句长适中）
+## 改写演示（重点是通顺、符合学术表达规范、句长适中）
 
-**演示 A（保留 "On the one hand… On the other hand…" 双通道骨架 + 换因果链，moon2026 型；实测整体 0.16 / 单句单篇 ≤0.35）**：
+**演示 A（保留 "On the one hand… On the other hand…" 双通道骨架 + 换因果链，moon2026 型）**：
 > "On the one hand, stiffer trade secrecy can lower the competitive pressure faced by firms and prompt them to cut back promotion outlays. On the other hand, the same protection signals to investors and financial analysts that the firm will raise its sales growth, and that expectation shifts managers' attention from guarding assets to building visible market outcomes."
 
-**演示 B（预期证伪开场，du_tsolmon 型节奏 + moon2026 期望通道；实测整体 0.18 / 单句单篇 ≤0.27）**：
+**演示 B（预期证伪开场，du_tsolmon 型节奏 + moon2026 期望通道）**：
 > "We may expect stronger protection to calm rivalry and, with it, firms' need to advertise. Yet studies still find the opposite: investors and financial analysts expect firms to increase their sales growth after protection rises, and that expectation turns advertising from a discretionary cost into a strategic necessity."
 
-**演示 C（预期证伪骨架，du_tsolmon 型，换对象到召回场景；实测整体 0.21 / 单句单篇 ≤0.31）**：
+**演示 C（预期证伪骨架，du_tsolmon 型，换对象到召回场景）**：
 > "A fundamental tension exists in the literature: although a fresh recall is typically viewed as detrimental to launch credibility, we may expect firms to slow their pipeline, yet studies still find undiminished product introductions after a recall. Some scholars argue that managers read a recall as a hard lesson worth heeding; conversely, the resource-based view holds that the affected capability is already sunk, so the pace of launches should not slow. This contradiction reflects competing assumptions about the value of target managers in this context, with some treating recall history as a lesson and others as a cost already sunk."
 
-**护栏自查**：演示 A/B/C 与参照共享的是**动作骨架**——moon2026 的 "On the one hand … On the other hand" + "investors and financial analysts expect firms to increase their sales growth" 期望通道、du_tsolmon 的 "A fundamental tension exists in the literature" + "This contradiction reflects competing assumptions"。共享 4-gram 集中在骨架句；机制词（competitive pressure / promotion outlays / guarding assets / discretionary cost / cost already sunk）全部异词。实测整体 A=0.16 / B=0.18 / C=0.21（∈[10%,40%]），各句单篇 ≤0.35（<50%）——骨架保底、通顺优先，10% 是保底不是目标。
+**流畅性自查**：演示 A/B/C 与参照共享的是**动作骨架**——moon2026 的 "On the one hand … On the other hand" + "investors and financial analysts expect firms to increase their sales growth" 期望通道、du_tsolmon 的 "A fundamental tension exists in the literature" + "This contradiction reflects competing assumptions"。共享句集中在骨架句，直接采用即可；机制词（competitive pressure / promotion outlays / guarding assets / discretionary cost / cost already sunk）须按你的对象替换来源特异性内容。过流畅性门（通顺、句长适中、主谓宾可识别）即交付。
 
 ## 自查勾子
 
-- 输出与参照集的**整体重合度 <10% 或 >40%** → <10% 说明没借到该 move 的骨架信号句式（回写保留更多"预测甲/预测乙/裁定"句式），>40% 说明逼近查重风险（把句式片段拆到多个来源跨源合成降重合，见 `_polish-protocol.md`）；落在 [10%, 40%] 即够——10% 是软目标（低于只提示不拦截）、40% 是查重硬线，别为更低的数字牺牲通顺。单句单篇建议 ≤50%；整句带引号直接引用一篇论文（强调用，学术惯例）豁免。
+- **不设重复率闸门**（2026-08-25 用户裁决）：语料语句可直接采用，只需替换来源特异性内容（专名/数字/系数/表号）；质量闸门是流畅性门（通顺、符合学术表达、句子不过长），见 `_polish-protocol.md`。
 - 跨源合成时句式来源 ≤3；超过 → 拼贴风险，流畅性门会拦截。
-- 两预测的机制词若与某参照句同义词群（competitive pressure / advertising spending / sales growth）→ 提示换词（同义词不触发 4-gram 护栏，但风格上应拉开）。
+- 两预测的机制词若与某参照句同义词群（competitive pressure / advertising spending / sales growth）→ 提示换词（风格上应拉开，避免读起来像同一来源）。
 - **扩源暂停（saturated）**：本 move 已达 3 篇不同论文的 verbatim 参照，暂停继续加锚点；仅当用户点名、真实写作发现缺"裁定后收束"等子动作、或出现新执行方式时恢复扩源。

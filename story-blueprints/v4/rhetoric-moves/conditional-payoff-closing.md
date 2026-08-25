@@ -4,7 +4,7 @@ canonical_id: "conditional-payoff-closing"
 name_zh: "条件支付收束"
 cross_paper: VERIFIED
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-25
 expansion_state: saturated
 pattern_count: 5
 distinct_sources: 4
@@ -56,7 +56,7 @@ expansion_note: "verbatim 4 源（Cui-Yang-Vertinsky SMJ / Desai AMJ / Lee-Wu-Be
 4. **双端必须逐端兑现**：如果假设预测两端都显著，report 两端；如果只有一端兑现，另一端明确说"not as predicted"，并给 post-hoc 解释（标号）。
 5. **裁决句收在假设上**：条件支付句之后必须回扣假设——是完整支持、部分支持、还是反例？审稿人需要你替他们做这个裁决。
 
-## 只读参照 ⚠️（学习用，禁止照抄；润色输出会过护栏）
+## 参照句（可直接采用或改造；替换来源特异性内容）
 
 **参照 1 —— Lee, Wu & Bednar（*Organization Science*；双端条件效应，原文直引）**：
 > "When national newspaper coverage is higher, the decline of local newspapers appears to have a positive relationship with CSR engagement. In contrast, when national newspaper coverage is lower, the decline of local newspapers has a slightly negative relationship with CSR engagement."
@@ -73,19 +73,19 @@ expansion_note: "verbatim 4 源（Cui-Yang-Vertinsky SMJ / Desai AMJ / Lee-Wu-Be
 
 **结构参照（无 verbatim）**：Castellaneta 2017（SMJ）——"more positive / more negative" 陈述增强/阻碍刃，见 `write-theory/corpus/sentences/moderation.md` 异号增强/阻碍调节句。
 
-## 改写演示（整体重合 ≤40% 即过、10% 为软目标；重点是通顺与句长适中）
+## 改写演示（重点是通顺、符合学术表达规范、句长适中）
 
-**演示 A（双端条件效应，Lee/Wu/Bednar 骨架换对象到董事会特征；实测整体 0.13 / 单句单篇 ≤0.27）**：
+**演示 A（双端条件效应，Lee/Wu/Bednar 骨架换对象到董事会特征）**：
 > "When independent directors dominate the board, a delayed recall appears to have a positive relationship with trading volume. In contrast, when the board is stacked with insiders, the same delay has a slightly negative relationship with trading volume. Two forces produce this asymmetry: (a) an independent board lowers the firm's incentive to rush a fix when the delay is observable, and (b) a compliant board increases the cost of scrutiny when investors are attentive."
 
-**演示 B（符号反转，Lun 骨架保留 "not only weakens … but also reverses the relationship from positive to negative"，换对象 + 定阈值；实测整体 0.21 / 单句单篇 ≤0.33）**：
+**演示 B（符号反转，Lun 骨架保留 "not only weakens … but also reverses the relationship from positive to negative"，换对象 + 定阈值）**：
 > "Interestingly, media scrutiny not only weakens the positive association between coverage and corrective action, but also reverses the relationship from positive to negative once scrutiny saturates, as firms shift from responding to stonewalling. Investors read this flip as a governance signal, and press attention itself becomes a moderator to track."
 
-**护栏自查**：演示 A 借 Lee/Wu/Bednar 的 "When W is higher … In contrast, when W is lower … positive relationship / slightly negative relationship" 骨架，并用 (a)(b) 双机制（Cui 型）收束；演示 B 借 Lun 的 "Interestingly … not only weakens … but also reverses the relationship from positive to negative at high levels of W" 完整反转模板，把 W 换成媒体关注度并定阈值（"once scrutiny saturates"）。共享 4-gram 落在骨架句上，对象（independent directors / trading volume / stonewalling）全部异词。实测整体 A=0.13 / B=0.21（∈[10%,40%]），各句单篇 ≤0.33（<50%）——骨架保底、通顺优先，10% 是保底不是目标。
+**流畅性自查**：演示 A 借 Lee/Wu/Bednar 的 "When W is higher … In contrast, when W is lower … positive relationship / slightly negative relationship" 骨架，并用 (a)(b) 双机制（Cui 型）收束；演示 B 借 Lun 的 "Interestingly … not only weakens … but also reverses the relationship from positive to negative at high levels of W" 完整反转模板，把 W 换成媒体关注度并定阈值（"once scrutiny saturates"）。共享句集中在骨架句上，直接采用即可；对象（independent directors / trading volume / stonewalling）须按你的对象替换来源特异性内容。过流畅性门（通顺、句长适中、主谓宾可识别）即交付。
 
 ## 自查勾子
 
-- 输出与参照集的**整体重合度 <10% 或 >40%** → <10% 说明没借到该 move 的骨架信号句式（回写保留更多"交互报告/条件拆解/方向陈述/机制回填/裁决回扣"句式），>40% 说明逼近查重风险（把句式片段拆到多个来源跨源合成，见 `_polish-protocol.md`）；落在 [10%, 40%] 即够——10% 是软目标（低于只提示不拦截）、40% 是查重硬线，别为更低的数字牺牲通顺。单句单篇建议 ≤50%；整句带引号直接引用一篇论文（强调用，学术惯例）豁免。
+- **不设重复率闸门**（2026-08-25 用户裁决）：语料语句可直接采用，只需替换来源特异性内容（专名/数字/系数/表号）；质量闸门是流畅性门（通顺、符合学术表达、句子不过长），见 `_polish-protocol.md`。
 - 写了反转却**无阈值/范围** → 读者无法定位反转点，回改写指引第 3 条。
 - H 只预测 weaken，反转却写成 p<.05 同等结论 → 回信号词表"符号反转"纪律，标 Interestingly + 降格。
 - 双端只有一端兑现却写"假设获支持" → 回结构蓝图"关键纪律"第三条，逐端兑现。
