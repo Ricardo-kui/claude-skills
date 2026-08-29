@@ -1,7 +1,7 @@
 ---
 type: canonical_transition
 canonical_id: "13-multi-actor-upper-echelons-funnel"
-status: 🟡 EMERGING
+status: EMERGING
 function: "从 CEO 层 → CMO/TMT 层 → Board 层逐步聚焦的多行为者 upper-echelons 漏斗"
 cross_paper: EMERGING (1p)
 generativity: GENERATIVE

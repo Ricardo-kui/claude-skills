@@ -1,6 +1,6 @@
 ---
 result_type: "匹配DiD"
-status: 🧪 EMERGING
+status: EMERGING
 source_papers:
   - castellaneta_conti_kacperczyk_2017_smj (Strategic Management Journal; DOI 10.1002/smj.2533)
 variants_count: 1

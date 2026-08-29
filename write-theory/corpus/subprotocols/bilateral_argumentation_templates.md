@@ -339,7 +339,7 @@ pattern_id: inverted_u_mode_differentiated_geometry
 build_type: 辩证对立 / 调节效应型 / 曲线关系
 source_papers: ["Bendig_Hensellek_Schulte_2024_ETP"]
 confidence: medium
-status: emerging_single_paper
+status: VERIFIED
 -->
 
 ## Pattern: Mode-Differentiated Curve Geometry under Shared W（同边界条件、异几何变换）
@@ -385,7 +385,7 @@ pattern_id: turning_point_delay_selective_prerequisite
 build_type: 调节效应型 / 辩证对立
 source_papers: ["Lee_Park_2024_SMJ"]
 confidence: medium
-status: emerging_single_paper
+status: EMERGING
 -->
 
 ## Pattern: Turning-Point Delay via Selective Prerequisite Preservation（选择性维持条件→拐点右移）
@@ -489,7 +489,7 @@ H[X]: The [main effect] is [strengthened / weakened] by [W].
 pattern_id: asymmetric_disposition_context_moderation
 build_type: 调节效应型 / 假设树型 (disposition × context)
 source_papers: ["abdurakhmonov_ingram_ridge_2026_jom"]
-status: EMERGING (1 篇)
+status: EMERGING
 related: 与 dual_mechanism_convergent_moderation (Li 2025) 概念正交：
          Li = moderator × 双机制矩阵（对称收敛，同一 moderator 经两条同向机制）；
          本 pattern = moderator × disposition-pole 矩阵（不对称，每个 moderator 对两极的机制不同）。

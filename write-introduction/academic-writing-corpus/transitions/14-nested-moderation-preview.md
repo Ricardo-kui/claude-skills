@@ -1,7 +1,7 @@
 ---
 type: canonical_transition
 canonical_id: "14-nested-moderation-preview"
-status: 🟡 EMERGING
+status: EMERGING
 function: "在 Introduction 末尾预览从 two-way 到 three-way 的嵌套调节结构"
 cross_paper: EMERGING (1p)
 generativity: GENERATIVE

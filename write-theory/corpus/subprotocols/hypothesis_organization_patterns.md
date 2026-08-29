@@ -591,7 +591,7 @@ pattern_id: dual_role_iv_then_shared_logic_compressed_t5
 build_type: 机制推演型 + 调节效应型
 source_papers: ["Liu_Liu_Luo_2016_JM"]
 confidence: medium
-status: emerging
+status: EMERGING
 -->
 
 ## Pattern: Dual-Role IV → Shared-Logic Compressed T5

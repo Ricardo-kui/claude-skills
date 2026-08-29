@@ -1,6 +1,6 @@
 ---
 design_type: "VARX-PVAR"
-status: 🟢 EMERGING
+status: EMERGING
 source_papers:
   - "borah_tellis_2016 (JMR): VARX framework with Granger causality exogeneity tests, multi-level temporal aggregation (daily VARX + monthly PVAR + brand-level stock VARX), third-party NLP data with RA validation (86%/80%), online chatter as text construct, 3-reason VARX framework justification, impulse response cumulative effects"
 variants_count: 8
@@ -194,5 +194,5 @@ VARX/VAR/PVAR 是**多内生变量动态系统**的估计框架，核心识别�
 *Created: 2026-07-15*  
 *Source Paper: Borah & Tellis (2016) "Halo (Spillover) Effects in Social Media", Journal of Marketing Research*  
 *Design Type: VARX-PVAR (Vector Autoregressive with Exogenous Variables, Panel VAR)*  
-*Status: 🟢 EMERGING — 8 variants（单篇 Borah & Tellis 2016 入库，待第二篇时间序列论文交叉验证）*
+*Status: EMERGING — 8 variants（单篇 Borah & Tellis 2016 入库，待第二篇时间序列论文交叉验证）*
 *Next Review: After second time-series paper distilled*  

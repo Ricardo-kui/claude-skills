@@ -1,7 +1,7 @@
 ---
 type: canonical_hook
 canonical_id: "18-theory-contradiction-empirical-paradox"
-status: 🔬 EXPERIMENTAL
+status: EMERGING
 gap_strength: 高
 gap_type: Incommensurability
 cross_paper: SINGLE-INSTANCE

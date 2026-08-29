@@ -1,6 +1,6 @@
 ---
 design_type: "结构需求-state-space"
-status: 🟢 EMERGING
+status: VERIFIED
 source_papers:
   - liu_shankar2015 (Management Science): BLP random-coefficient demand + Kalman-filter state-space for latent brand preference/advertising effectiveness/recall response; GMM; product-harm crises in U.S. auto
 variants_count: 6

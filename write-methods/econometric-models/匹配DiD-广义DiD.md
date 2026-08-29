@@ -1,6 +1,6 @@
 ---
 design_type: "匹配DiD-广义DiD"
-status: 🧪 EMERGING
+status: EMERGING
 source_papers:
   - Castellaneta_Conti_Kacperczyk_2017_SMJ (SMJ; CEM on ex-ante size + industry uncertainty as staggered-law DiD robustness)
 variants_count: 1

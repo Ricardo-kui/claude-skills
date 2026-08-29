@@ -1,7 +1,7 @@
 ---
 type: canonical_hook
 canonical_id: "17-classic-debate-constraint"
-status: 🔬 EXPERIMENTAL
+status: EMERGING
 gap_strength: 中/高
 gap_type: Incommensurability
 cross_paper: SINGLE-INSTANCE

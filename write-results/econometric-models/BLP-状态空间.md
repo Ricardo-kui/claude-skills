@@ -1,6 +1,6 @@
 ---
 result_type: "BLP-状态空间"
-status: 🧪 EMERGING
+status: VERIFIED
 source_papers:
   - liu_shankar2015 (Management Science; product-harm crisis × brand preference × advertising effectiveness)
 variants_count: 5

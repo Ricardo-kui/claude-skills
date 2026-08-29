@@ -1,7 +1,7 @@
 ---
 type: canonical_hook
 canonical_id: "19-forward-looking-shift"
-status: 🔬 EXPERIMENTAL
+status: EMERGING
 gap_strength: 中
 gap_type: Inadequacy
 cross_paper: SINGLE-INSTANCE

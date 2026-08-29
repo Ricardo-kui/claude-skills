@@ -1,7 +1,7 @@
 ---
 type: canonical_tension
 canonical_id: "20-opposite-predictions-positive-trait"
-status: 🟡 EMERGING
+status: EMERGING
 gap_type: Inadequacy
 cross_paper: EMERGING (1p)
 generativity: GENERATIVE

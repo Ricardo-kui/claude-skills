@@ -108,7 +108,7 @@ pattern_id: dichotomize_strategy_menu_by_fundamental_cut
 build_type: 机制推演型（辅：策略菜单二分，非构念辨析贡献）
 source_papers: ["Liu_Liu_Luo_2016_JM"]
 confidence: medium
-status: emerging
+status: EMERGING
 -->
 
 ## Pattern: Dichotomize Strategy Menu by Fundamental Cut

@@ -1,7 +1,7 @@
 ---
 type: canonical_stakes
 canonical_id: "06-two-reason-enumerated"
-status: ⚠ EMERGING
+status: VERIFIED
 gap_type: Incompleteness
 cross_paper: VERIFIED
 generativity: GENERATIVE

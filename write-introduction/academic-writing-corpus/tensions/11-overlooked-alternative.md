@@ -1,7 +1,7 @@
 ---
 type: canonical_reference
 canonical_id: "11-overlooked-alternative"
-status: 🔬 EXPERIMENTAL
+status: EMERGING
 gap_type: Inadequacy
 cross_paper: SINGLE-INSTANCE
 generativity: ADAPTABLE

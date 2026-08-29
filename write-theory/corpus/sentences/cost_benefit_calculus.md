@@ -4,7 +4,7 @@ function: mechanism voice
 type: sentence corpus
 source_exemplar: chung_low_rust_2022_jams
 confidence: medium
-status: emerging (2p)
+status: EMERGING
 -->
 
 # 成本-收益计算机制句语料库

@@ -1,7 +1,7 @@
 ---
 type: canonical_hook
 canonical_id: "24-positive-trait-dark-side"
-status: 🟡 EMERGING
+status: EMERGING
 gap_strength: 中
 gap_type: Inadequacy / Incomensurability
 cross_paper: EMERGING (1p)

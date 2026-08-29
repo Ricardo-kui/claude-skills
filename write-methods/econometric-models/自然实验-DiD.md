@@ -1,6 +1,6 @@
 ---
 design_type: "自然实验-DiD"
-status: 🧪 EMERGING
+status: EMERGING
 source_papers:
   - lee_wu_bednar_orsc_18968 (Organization Science; DOI 10.1287/orsc.2024.18968)
   - hoffmann_cheong_phan_zurbruegg2024_jm (Journal of Marketing; staggered UD-law DiD + conditional logit + binary recall)

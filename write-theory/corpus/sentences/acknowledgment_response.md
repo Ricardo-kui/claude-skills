@@ -4,7 +4,7 @@ function: objection handling voice
 type: sentence corpus
 source: Booth et al. 2024 The Craft of Research Ch9 (Acknowledgments and Responses); §5 Rogerian 四步源自 Greene & Lidinsky 2017 Ch04
 confidence: high (句式逐字源自 Booth；Rogerian 序列源自 G&L；管理实证适配为本库添加)
-status: emerging
+status: EMERGING
 -->
 
 # 承认与回应句语料库（Acknowledgment & Response）
@@ -168,13 +168,13 @@ function: foil→focal audience switch
 source: chenganesanliu2009
 source_papers: ["Chen_Ganesan_Liu_2009_JM"]
 confidence: medium
-status: EMERGING
+status: VERIFIED
 note: VERIFIED（expert_audit_override 2026-08-29 召回主题单源裁决，chenganesanliu2009 = 召回策略→财务价值）；配套架构见 ../subprotocols/argumentation_patterns.md → audience_foil_then_focal_signal_single_H
 -->
 
 **适用**: 文献默认受众 A 对行动 X 正向；论文 DV 由受众 B 定价。一句完成 **foil → focal** 受众切换，随后进入 B 侧信号机制——**不成对写出 Audience A/B 假设**（那是变体 G）。
 
-**验证状态**: EMERGING（单源 `chenganesanliu2009`；待第二篇验证）
+**验证状态**: VERIFIED（召回主题单源裁决，chenganesanliu2009）
 
 **模板**:
 ```

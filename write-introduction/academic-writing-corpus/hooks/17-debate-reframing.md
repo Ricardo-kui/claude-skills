@@ -1,7 +1,7 @@
 ---
 type: canonical_reference
 canonical_id: "17-debate-reframing"
-status: EXPERIMENTAL
+status: EMERGING
 hook_type: Debate (Reframing)
 cross_paper: EMERGING (2 papers)
 generativity: ADAPTABLE

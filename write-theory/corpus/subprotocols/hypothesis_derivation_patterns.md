@@ -941,7 +941,7 @@ pattern_id: curvilinear_relationship_two_phase_argumentation
 build_type: 机制推演型 / 调节效应型
 source_papers: ["Cui_Yang_Vertinsky_SMJ", "Bendig_Hensellek_Schulte_2024_ETP", "Anderson_Reeb_2004_ASQ"]
 confidence: high
-status: verified_three_paper
+status: VERIFIED
 -->
 
 ## Pattern: Curvilinear Relationship — Two-Phase Argumentation
@@ -1051,7 +1051,7 @@ pattern_id: opposing_joint_prerequisites_bottleneck_switch
 build_type: 辩证对立 / 机制推演型 / 曲线关系
 source_papers: ["Lee_Park_2024_SMJ"]
 confidence: medium
-status: emerging_single_paper
+status: EMERGING
 -->
 
 ## Pattern: Opposing Joint Prerequisites → Bottleneck Switch（共同必要条件反向变化—短板切换）
@@ -1095,7 +1095,7 @@ pattern_id: sequential_nested_moderation
 build_type: 调节效应型 / 假设树型
 source_papers: ["Chung_Low_Rust_2022_JAMS", "lunetal2026_ETP"]
 confidence: medium
-status: emerging (2p)
+status: EMERGING
 -->
 
 ## Pattern: Sequential Nested Moderation（序列嵌套调节）

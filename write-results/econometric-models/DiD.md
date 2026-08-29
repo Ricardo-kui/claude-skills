@@ -1,6 +1,6 @@
 ---
 result_type: "DiD"
-status: 🧪 EMERGING
+status: EMERGING
 source_papers:
   - lee_wu_bednar_orsc_18968 (Organization Science; DOI 10.1287/orsc.2024.18968)
   - hoffmann_cheong_phan_zurbruegg2024 (Journal of Marketing; DOI 10.1177/00222429241231236)

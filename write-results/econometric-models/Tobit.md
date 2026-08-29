@@ -1,6 +1,6 @@
 ---
 result_type: "Tobit"
-status: 🟢 EMERGING
+status: EMERGING
 source_papers:
   - "ridge_et_al_2024_amj (Academy of Management Journal): Tobit left-censored conditional-magnitude four-beat + practical-importance anchor; dual-DV dual-estimator (Tobit + Negative Binomial) design"
 variants_count: 1

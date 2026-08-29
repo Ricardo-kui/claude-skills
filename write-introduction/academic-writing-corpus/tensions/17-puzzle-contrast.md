@@ -1,7 +1,7 @@
 ---
 type: canonical_tension
 canonical_id: "17-puzzle-contrast"
-status: ⚠ EMERGING
+status: EMERGING
 gap_type: Incompleteness (主) + Inadequacy (辅)
 cross_paper: EMERGING
 generativity: GENERATIVE

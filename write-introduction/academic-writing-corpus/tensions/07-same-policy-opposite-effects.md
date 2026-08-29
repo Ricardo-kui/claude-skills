@@ -1,7 +1,7 @@
 ---
 type: canonical_reference
 canonical_id: "07-same-policy-opposite-effects"
-status: 🔬 EXPERIMENTAL
+status: EMERGING
 gap_type: Incommensurability
 cross_paper: SINGLE-INSTANCE
 generativity: ADAPTABLE

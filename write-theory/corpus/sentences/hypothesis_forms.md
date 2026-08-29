@@ -96,7 +96,7 @@
 | **Difference (不同IV同DV)** | "[X1] will have a [greater/lesser] effect on [Y] than [X2] will have on [Y]." | 多 IV 竞争比较 |
 | **Comparative main effect (策略/极点对)** | "[Strategy A] is more [negatively/positively] related to [DV] than [Strategy B]." | 同一 continuum 两端（或两类策略）对**同一 DV** 的相对方向；非相对零的简单主效应 |
 
-### Comparative Main Effect（比较型主效应；EMERGING）
+### Comparative Main Effect（比较型主效应；VERIFIED）
 
 <!--
 pattern_id: comparative_main_effect_hypothesis_form
@@ -104,13 +104,13 @@ build_type: 机制推演型 / 纯主效应
 source: chenganesanliu2009
 source_papers: ["Chen_Ganesan_Liu_2009_JM"]
 confidence: medium
-status: EMERGING
+status: VERIFIED
 note: VERIFIED（expert_audit_override 2026-08-29 召回主题单源裁决，chenganesanliu2009 = 召回策略→财务价值）；配套架构 audience_foil_then_focal_signal_single_H
 -->
 
 **适用**: IV 是两类策略/响应极点的比较（非连续量相对零点）；理论预测是 **A 相对 B 更负/更正**，而非 "A is negatively related to Y" 的简单方向句。
 
-**验证状态**: EMERGING（单源 `chenganesanliu2009`；待第二篇验证）
+**验证状态**: VERIFIED（召回主题单源裁决，chenganesanliu2009）
 
 **模板**:
 ```

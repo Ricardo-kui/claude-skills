@@ -1,7 +1,7 @@
 ---
 type: canonical_stakes
 canonical_id: "09-myopic-management-long-term-loss"
-status: 🟡 EMERGING
+status: EMERGING
 gap_type: Incompleteness / Inadequacy
 cross_paper: EMERGING (1p)
 generativity: ADAPTABLE

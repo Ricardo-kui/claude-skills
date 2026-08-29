@@ -1,7 +1,7 @@
 ---
 type: canonical_reference
 canonical_id: "12-forward-vs-backward-looking"
-status: 🔬 EXPERIMENTAL
+status: VERIFIED
 gap_type: Incompleteness
 cross_paper: SINGLE-INSTANCE
 generativity: ADAPTABLE

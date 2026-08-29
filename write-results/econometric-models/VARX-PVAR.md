@@ -1,6 +1,6 @@
 ---
 result_type: "VARX-PVAR"
-status: 🟢 EMERGING
+status: EMERGING
 source_papers:
   - "borah_tellis_2016_jmr (Journal of Marketing Research): GIRF-based halo metric (percentage of significant cross-effects), basis-points→dollars translation, FEVD relative importance, Venn diagram visualization, graded support language, dynamics (wear-in/wear-out), elasticity table"
 variants_count: 7

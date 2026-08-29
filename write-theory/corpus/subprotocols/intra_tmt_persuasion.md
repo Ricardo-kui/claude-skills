@@ -4,7 +4,7 @@ build_type: 调节效应型 / 假设树型
 source_papers: ["Chung_Low_Rust_2022_JAMS"]
 source_exemplar: chung_low_rust_2022_jams
 confidence: medium
-status: emerging (1p)
+status: EMERGING
 -->
 
 # Intra-TMT Persuasion: Lower-Level Actor Influences Higher-Level Actor

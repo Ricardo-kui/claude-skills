@@ -394,7 +394,7 @@ build_type: 机制推演型（反直觉主效应）
 source_papers: ["Chen_Ganesan_Liu_2009_JM"]
 source: chenganesanliu2009
 confidence: medium
-status: EMERGING
+status: VERIFIED
 story_fidelity: section_variant
 note: VERIFIED（expert_audit_override 2026-08-29 召回主题单源裁决，chenganesanliu2009 = 召回策略→财务价值）；勿升格为完整 G（成对受众假设）
 -->
@@ -403,7 +403,7 @@ note: VERIFIED（expert_audit_override 2026-08-29 召回主题单源裁决，che
 
 **适用场景**: 文献默认受众 A 对行动 X 给**正评价**，但论文的 DV 由受众 B 定价；需要用 A 的正面解读作 **foil/concession**，再转折到 B 的负面信号链，收敛为**单一比较主效应**（非 Audience A/B 成对假设）。
 
-**验证状态**: EMERGING（单源 `chenganesanliu2009`；待第二篇异领域交叉验证）
+**验证状态**: VERIFIED（召回主题单源裁决，chenganesanliu2009）
 
 **微观动作序列**: Prior-work foil (audience A positive) → However pivot (audience B reads X differently) → Focal signal mechanism (+ loss aversion / ambiguity warrants) → Optional rarity/scrutiny amplifier → Therefore + single comparative H
 

@@ -174,7 +174,7 @@ source: Extracted from MVP30 narrative_analysis + darby2026 distill; re-distille
 
 ---
 
-### 变体 G：公开承诺-私下行为虚伪揭示型（abdurakhmonov2026 型） 🔬 EMERGING（1 篇范文）
+### 变体 G：公开承诺-私下行为虚伪揭示型（abdurakhmonov2026 型） EMERGING（1 篇范文）
 
 **模板**:
 > On [date], [media source] reported that [named firms] had committed to [a publicly valued progressive / social commitment] ([citation]). However, behind the scenes, [a trade association / lobbying group / third-party body] representing these firms was working to [a private action that contradicts or weakens the public commitment] ([citation]). This discrepancy between [actors]' [public stance] and [private behavior] underscores a critical tension in [domain]: [actors] often engage in [covert / hidden practice] while outwardly signaling support for [stated values]. These actions are enabled by [an institutional or legal structure] that permits [the covert activity] to go [undisclosed / unchecked] ([citations]).
@@ -196,7 +196,7 @@ source: Extracted from MVP30 narrative_analysis + darby2026 distill; re-distille
 
 ---
 
-### 变体 H：从业者合唱构念落地型（ridge2024 型） 🔬 EMERGING（1 篇范文）
+### 变体 H：从业者合唱构念落地型（ridge2024 型） EMERGING（1 篇范文）
 
 **模板**:
 > "[Practitioner voice 1] — [Speaker 1], [role]. [Practitioner voice 2] — [Speaker 2], [role]. As these voices imply, [actors] may view [targets] through a prism of [construct], defined as '[academic definition]' ([citation]). Indeed, [exemplar actor 1] has often been cited for [construct-related principle], which is said to have shaped [his/her] choice to [behavior]. Similarly, [exemplar actor 2], whose guiding motto was '[motto]', was quoted as saying that [he/she] [construct-related behavior]."
