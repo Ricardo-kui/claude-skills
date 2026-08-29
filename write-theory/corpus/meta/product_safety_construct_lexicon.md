@@ -91,3 +91,19 @@
 - 不把 firm-year 的“至少一次召回”称为单个产品的失败概率；分析单位和风险窗口不同。
 - 不把监管 Class I/II 严重性筛选写成连续 severity measure；它只界定纳入边界。
 - 不把召回发生等同于产品缺陷发生。召回同时包含缺陷、发现、报告与纠正行为，需按研究问题限定推断。
+
+
+## 条目：召回计数的裁量重标（count-as-discretion relabeling）
+
+**来源**: Wowak, Mannor, Wowak & Bu (2020, M&SOM)。VERIFIED（expert_audit_override 2026-08-28：产品召回为主研究领域，单源足矣）。
+
+**边界**: 低严重度（class 3）召回计数测的是**管理裁量下的守规行为**（"stricter, more risk-averse rule-following"），不是产品质量本身的升降，也不是高严重度缺陷的代理。低严重度缺陷可被隐藏不召回，因此计数上升=更守规的召回决策，而非更多缺陷。
+
+**可用表达**:
+- `we treat [class-N recall counts] as a measurement of [managerial discretion in product quality decisions] and not as a measure of [product quality] per se`
+- `[regulator] views an increase in [low-severity recalls] as stricter, more risk-averse rule-following in recall decisions and not necessarily as a degradation of [quality]`
+- 高严重度侧：`little discretion in whether they are initiated, but nonetheless contain discretion in regard to when`（time-to-recall 的起点须为 defect awareness，本文由 Methods 承接）
+
+**不可自动推出**: 低严重度召回计数 ↑ ≠ 质量恶化；≠ 高严重度召回风险变化；class 分级不能替代严重度连续测量（呼应 recall severity 条目）。
+
+**原文锚点**: "we treat class 3 recall counts as a measurement of managerial discretion in product quality decisions and not as a measure of product quality per se"

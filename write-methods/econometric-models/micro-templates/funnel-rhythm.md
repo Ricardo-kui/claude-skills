@@ -32,6 +32,12 @@ updated: 2026-05-22
 | `The intersection of these datasets resulted in a sample of [N] [phenomenon] across [N] firms from [year_start] to [year_end].` | 需注意 | 多源匹配（缺少起始 N） |
 | `No authoritative database exists for [object], so we constructed the dataset from [trace/source].` | 安全 | 实证对象构建 |
 
+
+**补充句式（westphal_bednar2005 型）：样本框三理由枚举辩护**
+> We chose this sample frame for three reasons: (1) to exploit [a large database of unit-level information] provided by [source], which covers [population feature]; (2) to improve [the response rate], which would likely be lower for [alternative population]; and (3) to enhance our knowledge of [phenomenon] among an understudied population of [units].
+- 三理由的标准组合：数据可得性 / 数据收集可行性（响应率）/ 研究缺口（understudied population 的贡献声明）——第三点把抽样决策升格为对外部效度的正面论证
+- "for three reasons: (1)...(2)...(3)..." 枚举结构可直接迁移到任何一手数据设计的样本框辩护段
+
 ## 微模板：匹配/合并
 
 | 句式 | 风险 | 适用情境 |

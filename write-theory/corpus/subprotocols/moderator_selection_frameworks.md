@@ -303,3 +303,83 @@ status: ready_for_corpus
 > "Research on [lens] argues that because [scarce resource], the degree to which [actor] pays attention to [change] may depend on individual, organizational, and contextual factors. Accordingly, we examine [N] key factors: [W1], [W2], and [W3]. At the individual level, [W1 rationale]. At the organizational level, [W2 rationale]. At the environmental level, [W3 rationale]. Taken together, we expect that each of these factors shapes the degree to which [actor] [response]."
 
 来源：Moon et al. (2026, Journal of Marketing)。
+
+
+
+### 框架 B：意愿×机会双路径调节论证（westphal_bednar2005 型）
+
+**模板**:
+> "[Moderator W] should lower the perceived risk of [voicing]: [justification 1] ([citations]). Accordingly, when [W is high], [actors] should be less hesitant to [voice] before others have done so. Moreover, [W] increases the frequency of [informal communication] ([citations]). As a result, [actors] should not only be less reluctant to [voice], but they should also have more frequent opportunities to do so. Therefore, [W] should facilitate the discovery of [shared concerns], thus reducing [construct]."
+
+**来源**: westphal_bednar2005 (ASQ), Theory P11-P12（friendship ties 与 demographic homogeneity 两个 moderator 内部复现）
+
+**原文锚定**:
+> "outside directors who are connected by personal friendship ties should not only be less reluctant to express their concerns about corporate strategy to each other, but they should also have more frequent opportunities to do so"
+
+**关键特征**:
+- 每个 moderator 沿同一条双路径论证：意愿路径（降低表达风险的感知）+ 机会路径（增加非正式沟通频率），"not only... but they should also..." 收束句显式并置两路径
+- moderator 不是外生挑选，而是从主机制的两个薄弱环节（不敢说 / 没机会发现共识）反推出来的——调节逻辑直接焊在主机制前提上
+- 双路径最后收敛到同一构念动词："facilitate the discovery of shared concerns, thus reducing [construct]"，保证 moderator 与 DV 的构念链条闭合
+- 论文内部两 moderator 复现同一框架（friendship ties / demographic homogeneity 各写一遍），形成天然平行结构
+
+**适用**: 主机制可分解为"表达意愿+表达机会"两个环节的调节假设；含行为表达中介（voicing）的抑制类构念（misperception、沉默、误判）
+
+**禁忌**: 双路径必须都能独立成立且都指向同一中介行为，若机会路径与意愿路径冲突（如沟通更频繁反而暴露分歧）需另行处理；moderator 与主机制前提无对应关系时不得硬套此框架
+
+## Framework B: Newcomer Voice-Integration Axis（新声音整合轴，what_changes_after_women_enter_top_manage_2020 型）
+
+**验证状态**: VERIFIED (expert_audit_override 2026-08-29: 用户点名喜爱本篇，单源足矣)
+
+**适用场景**: 主效应是"某类新进入者/新成员携独特视角进入集体决策体并改变其认知/输出"；恰好两个调节变量，均可由**单一整合机制**（新声音能否被听见、纳入集体思维）统一证成；两个 moderators 同时调节 X→M 的多条机制路径。moderator 在此承担 new voice integration 功能，而非泛泛边界条件。
+
+**与近邻框架区分**:
+- vs Willing-and-Able（DesJardine 2025）：那是攻击方的动机/能力双轴；本轴是**接收方对新声音的整合能力与整合难度**
+- vs Information-Asymmetry（Darby 2026）：同属"核心概念统一多 moderator"家族，但核心概念是整合而非信息不对称，且本轴 moderators 可同时作用于多条中介路径
+- vs UET Situation–Characteristic Nested（Lun 2026）：那是 W2 条件化 W1 的嵌套结构；本轴两 moderators 平行但共享同一整合机制证成
+
+**框架结构**:
+```
+[选择理由句——单一机制统一证成]
+We further theorize that the relationships between [X] and subsequent shifts
+in [M1/M2] are moderated by [W1] ..., and by [W2] .... We select these
+moderators as they affect [single integration mechanism] and such integration
+is central to the ability of [new actors] to influence the [collective]
+([citations]).
+
+[W1: 接收端整合经验——双理由]
+理由1: 集体已有整合同类差异成员的经验与技巧，刻板印象随暴露衰减.
+理由2: 内群体归类——新成员被视为相似者，其（可能非传统的）观点更快被纳入集体决策
+([social identity / newcomer socialization / minority voice citations]).
+→ 对 M1 与 M2 的位移同时放大 (H[W1]a / H[W1]b 同构配对).
+
+[可选阈值衰减]
+W1 的放大效应在超过表示性阈值后边际递减，理由: (a) 集体已内化开放性，整合不再
+依赖同类成员协助; (b) 认知已被先前的同类成员改变，新任命收益递减 (H 衰减型).
+
+[W2: 整合难度——双理由]
+理由1: 高 newcomer/incumbent 比例引发资源竞争与权力斗争，阻碍整合.
+理由2: 同时进入者形成亚群（subgroup），hampering 整合.
+→ 新声音整合受阻，M1/M2 位移被稀释 (H[W2]a / H[W2]b).
+```
+
+**原文锚定**: "We select these moderators as they affect the integration of new
+appointees into the TMT and such integration is central to the ability of new
+executives to influence the TMT."
+
+**为什么有效**:
+- 选择理由句本身是模板：一句话回答"为什么是这两个 moderator"——满足 write-theory 硬约束（≥2 moderators 必须有理论驱动的选择理由），且证成轴（整合）直接来自主效应机制（新成员须经整合才能影响集体）
+- 两个 moderators 分别锚定整合的**能力侧**（接收端经验/内群体归类）与**难度侧**（竞争/亚群）——轴内对称、轴间互补，避免堆砌感
+- 同时调节多条中介路径（H[W]a/H[W]b 同构配对），使调节假设族与双中介架构同构，假设体系整体对称
+- 阈值衰减变体把"more is always better"的线性外推截断，预防审稿人"表示性饱和"质疑
+
+**适用条件**:
+- 主效应机制天然包含"新成员影响须经集体整合"环节（TMT/董事会/团队进入、少数群体发声类研究）
+- moderators 可干净归入整合能力侧 vs 整合难度侧
+- 框架须在引入第一个 moderator 之前说出选择理由句
+
+**注意事项**:
+- 整合机制须有独立文献锚（social identity / newcomer socialization / minority voice），不可自造
+- 衰减阈值需要大样本支撑——样本受限时降级为讨论段建议而非正式假设
+- 两个 moderators 的假设句式应同构（"...leads to a greater subsequent (a) increase in [M1] and (b) decrease in [M2]"），保持配对节律
+
+**反模式**: 只有两个调节变量也硬造双轴（本轴恰配 2 个）；moderators 实际作用于 M→Y 第二阶段却写成 X→M 第一阶段；把"female incumbency"类接收端变量写成泛化情境强度而不指明其整合功能；无选择理由句直接并排引入两个调节。

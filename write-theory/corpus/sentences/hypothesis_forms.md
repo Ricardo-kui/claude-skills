@@ -15,6 +15,30 @@
 | 连续/类别 | 连续/二分 | 跨组差异 | **Difference** | "[X] will have a [greater/lesser] effect on [Y] for [A] than for [B]." | 用主效应形式掩盖跨组比较 |
 | 多 IV | 同一 DV | 相对影响 | **Relative comparison** | "[X1] will have a [greater/lesser] effect on [Y] than [X2]." | 分别陈述 H1、H2 但不比较 |
 
+
+### 变体 B：实施权变从句假设形式（westphal_zajac_1998_symbolic_management 型）
+
+**模板**:
+> "[X] will [engender positive Y], whether or not [the substantive practice] is implemented."
+> "[Comparative form:] [X] with [A] will engender more positive [Y] than [X] without [A], whether or not [the substantive practice] is implemented."
+
+**来源**: westphal_zajac_1998_symbolic_management (ASQ), H1（§2.1 末）与 H2（§2.2 末）；全节 6/6 假设复用同尾从句
+
+**原文锚定**:
+> "LTIP adoption will engender positive stock market reactions, whether or not the plan is implemented."
+> "LTIP adoption with an agency explanation will engender more positive stock market reactions than LTIP adoption without an agency explanation, whether or not the plan is implemented."
+
+**关键特征**:
+- "whether or not [it] is implemented" 尾从句把核心构念（decoupling）写进假设语法本身：每个假设同时是主预测 + decoupling 判别检验的复合声明，理论-构念-设计三位一体
+- 从句方向不变（主效应在实施与否两种条件下均成立）——正是"符号行动独立于实质实践起效"这一理论命题的形式化，假设语法即理论主张
+- 比较式变体（H2: with X than without X）在同一尾从句上叠加符号形式的对照，扩展假设族而不破坏统一语法
+
+**适用**: 核心构念是"形式与实质分离"（decoupling/ceremony/window dressing）的研究；任何需要在假设层面内置处理-不处理对照的符号机制论文
+
+**禁忌**: 尾从句必须在 Methods 有对应分组检验（采纳未实施子样本），否则是空转修辞；若理论不承诺符号机制独立于实施起效，从句方向应随理论改为条件式
+
+**验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
+
 ### 2. 调节效应形式决策表
 
 | IV 尺度 | Moderator 尺度 | 理论含义 | 形式 | 假设中应突出的概念 | 假设模板 |
@@ -81,7 +105,7 @@ source: chenganesanliu2009
 source_papers: ["Chen_Ganesan_Liu_2009_JM"]
 confidence: medium
 status: EMERGING
-note: 待第二篇交叉验证；配套架构 audience_foil_then_focal_signal_single_H
+note: VERIFIED（expert_audit_override 2026-08-29 召回主题单源裁决，chenganesanliu2009 = 召回策略→财务价值）；配套架构 audience_foil_then_focal_signal_single_H
 -->
 
 **适用**: IV 是两类策略/响应极点的比较（非连续量相对零点）；理论预测是 **A 相对 B 更负/更正**，而非 "A is negatively related to Y" 的简单方向句。
@@ -125,12 +149,118 @@ negatively when [A] than when [B].
 ---
 
 
+
+
+### 句式 D：双部分调节+中介假设句（westphal_bednar2005 型）
+
+**模板**:
+> "Hypothesis N: (a) When [baseline], the greater [W], the less [actors] will [misconceive]; (b) this relationship will be mediated by [a greater tendency for actors to M]."
+> "Hypothesis N: (a) The relationship between [X] and [Y] will be negatively moderated by the extent to which [W]; (b) this interaction will be mediated by a reduced tendency for [actors] to [M]."
+
+**来源**: westphal_bednar2005 (ASQ), H3/H4（mediated moderation）与 H5（moderated mediation）
+
+**原文锚定**:
+> "(b) this relationship will be mediated by a greater tendency for outside directors to express their concerns about corporate strategy."
+> "(b) this interaction will be mediated by a reduced tendency for outside directors to express concern about corporate strategy in board meetings."
+
+**关键特征**:
+- (a) 陈述关联（调节/交互），(b) 用固定句式 "this relationship/interaction will be mediated by..." 把中介钉进同一条假设——调节与中介的统计检验对象在假设文本中一一对应
+- H3/H4（被中介的调节）与 H5（被调节的中介）共用 (a)+(b) 句法但中介对象不同（relationship vs interaction），句法同一而统计结构有别，读者靠 (a) 句型即可分辨
+- "negatively moderated by the extent to which..." 把调节方向压进假设措辞，交互项方向无需读者回查机制段
+
+**适用**: 同时含调节与中介的混合假设结构（mediated moderation / moderated mediation）；需要单个假设编号覆盖两条统计路径的论文
+
+**禁忌**: (b) 的中介变量必须是前文已独立论证的行为/状态，不得在假设句首次引入；主循环若只检验 (a) 不检验 (b)，假设应拆分而非合并
+
+### 句式 E：行为缺失→误判强化的比较假设句（westphal_bednar2005 型）
+
+**模板**:
+> "Hypothesis N: When [baseline condition], the less [actors] have [expressed their concerns], the greater the tendency for [actors] to [underestimate shared concerns]."
+
+**来源**: westphal_bednar2005 (ASQ), H2
+
+**原文锚定**:
+> "the less outside directors have expressed their concerns about the current corporate strategy, the greater the tendency for directors to underestimate the extent to which fellow directors share their concerns"
+
+**关键特征**:
+- "the less... the greater..." 比较级对偶句把"行为的缺失量"直接映射到"误判的强度"，中介机制（不表达→误读）在假设句法内部显形，无需额外中介假设
+- 保留 "When [baseline condition]" 前置条件，使机制假设（H2）寄生在主效应情境（H1）之内，形成假设间的层级依赖
+- DV 用 "tendency to underestimate" 而非二元事件，保证与 H1 的 DV 完全同构，两个假设可在同一模型中检验
+
+**适用**: 机制中介假设（表达缺失强化误判）；DV 为连续程度型构念且自变量为行为频率/缺失的论文
+
+**禁忌**: 比较级假设要求两个构念都可连续测量，类别变量不适用；"the less... the greater" 内嵌方向，机制段推理方向必须与之一致，不得假设句反向于推理
+
 ### 变体 A：T4_did_contrast_hypothesis（moon2026）
 
 **模板/骨架**:
 > "We expect that [treatment event] in [unit] is likely to lead to [directional change in outcome] of [treated units], as compared to [control units]. Formally: H[N]: [A unit exposed to treatment X increases its Y following X]."
 
 来源：Moon et al. (2026, Journal of Marketing)。
+
+
+## 变体 C：时间分阶增量假设（t-Staged Delta Hypothesis，what_changes_after_women_enter_top_manage_2020 型）
+
+**验证状态**: VERIFIED (expert_audit_override 2026-08-29: 用户点名喜爱本篇，单源足矣)
+
+**模板**（三位一体）:
+```
+[全模型时间戳句]
+from [period] to [period], the nature of [X] causes changes in [M] that,
+later, alter [Y].
+
+[中介主效应增量假设]
+Hypothesis [N]. When [X events] occur within [unit], following [X-typed]
+(but not [baseline-typed]) [X events], there is a subsequent increase/decrease
+in the [unit]'s [M].
+
+[第二阶增量配对假设]
+Hypothesis [N+1]. Following [X events], the greater the increase/decrease
+in [M], the greater the subsequent increase/decrease in [Y].
+```
+
+**Figure 配套**: 总模型图以时间戳编码各段增量——[ΔX: t1–t0] / [ΔM: t2–t1] / [ΔY: t3–t2]，假设编号锚定在对应时间箭头上。
+
+**原文锚定**: "Hypothesis 6. Following female TMT appointments, the greater the
+increase in TMT change orientation, the greater the subsequent increase in
+R&D." / "from year to year, the nature of new TMT appointees (their gender)
+causes changes in TMT cognitions that, later, alter the pathway to strategic
+renewal" / Figure 1: "CHANGE IN TMT GENDER COMPOSITION (t1–t0) | CHANGE IN TMT
+COGNITION (t2–t1) | CHANGE IN RENEWAL STRATEGY (t3–t2)"
+
+**为什么有效**:
+- 把中介假设写成**变化量假设**（Δ-form）而非水平假设：中介的合法性来自"认知真的动了"，与面板年度增量设计直接咬合
+- "the greater the change in M, the greater the subsequent change in Y" 同时是中介与强度预测——一句话完成 mediation 与 dose-response 双重主张
+- 时间戳 (t1→t2→t3) 使因果排序显式化：反向因果（ΔY→ΔX）被设计排除，且静态悖论（两种相反认知共存）转为"先后作用于不同路径"的动态消解——时间排序承担 reconciliation 的因果化功能
+- "(but not baseline-typed)" 内嵌对照：假设句自身携带安慰剂对照预测
+
+**适用条件**:
+- 面板/分阶数据可得（各变量可在不同时点测量变化）——非分阶设计不可套用 Δ-form
+- IV 是离散事件（任命/冲击/政策）且事件类型可分对照（typed events）
+- 适合 Incommensurability R3 消解型模型：时间分阶+路径匹配共同承担悖论消解
+
+**禁忌**: Δ-form 要求正文真的测量变化量——若只有水平数据，退回普通中介句式，不可伪装增量；"subsequent" 一词依赖时间分阶真实成立，时点重叠时不可用；typed 对照（but not X）须在实证中真的检验，否则为空头对照。
+
+
+### 句式 F：假设推导内嵌前提声明句（westphal_bednar2005 型）
+
+**模板**:
+> "Here, we assume a [non-linear] relationship between [X] and [private concern], such that [Y] will be generally low when [X above threshold] and generally high when [X below threshold]. This assumption is consistent with theory and research on [topic], which suggests that [substantive claim] ([citation]; see also [citations])."
+
+**来源**: westphal_bednar2005 (ASQ), Theory P8（H1 推导内）
+
+**原文锚定**:
+> "Here, we assume a non-linear relationship between firm performance and directors' private concern about strategy"
+> "This assumption is consistent with theory and research on aspiration levels, which suggests that managers are 'boundedly rational decision makers'"
+
+**关键特征**:
+- 前提不藏进脚注：在假设推导的节骨眼上用 "Here, we assume..." 显式声明关键前提（绩效→关切的非线性/阈值关系），随即用独立文献传统（aspiration levels）担保
+- "such that [low when above] and [high when below]" 用对称双向陈述把阈值行为说满，防止 reviewer 追问中间区间
+- 前提声明与其文献担保绑定出现（"This assumption is consistent with..."），声明与引证零距离
+
+**适用**: 假设依赖未经假设化的前提（阈值、非线性、单调性）时的推导内声明；aspiration/threshold 类行为假设
+
+**禁忌**: 内嵌前提的文献担保必须是成熟理论传统，临时拼凑的担保会被视为补丁堆叠；一篇 Theory 内嵌声明至多一两处，多处使用说明前提应升级为独立假设
 
 ## 配对假设 (Paired Hypotheses a/b Format)
 
@@ -243,6 +373,20 @@ negatively when [A] than when [B].
 > "H2. The spillover effect of activist investor stock ownership on time-to-recall will differ for design-related defects and manufacturing-related defects, such that the recall-quickening effect is stronger for design-related defects relative to manufacturing-related defects." ... "H3. The spillover effect of activist investor stock ownership on time-to-recall will differ for high-severity and low-severity recalls, such that the recall-quickening effect is stronger for high-severity recalls relative to low-severity recalls."
 
 ---
+
+
+### 边际内嵌 DV 假设句式（wowak_2020_female_directors_recalls）
+
+**验证状态**: VERIFIED（expert_audit_override 2026-08-28：产品召回为主研究领域，单源足矣）
+
+假设句的 DV 措辞直接编码决策边际：whether 边际用 `count of [low-severity recalls]`，when 边际用 `the time-to-recall for [high-severity recalls]`。读者无需回到机制段即可分辨两个不可互换的决策窗口，且防止把结果误读为"召回总体增加/普遍更快"。
+
+```
+H1: An increase in [X] is positively associated with the count of [low-stakes acts].
+H2: An increase in [X] is negatively associated with the time-to-[act] for [high-stakes acts].
+```
+
+**原文锚点**: "An increase in female board representation is negatively associated with the time-to-recall for high-severity recalls."
 
 ## 竞争假设
 

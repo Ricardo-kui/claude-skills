@@ -5,10 +5,10 @@
 meta:
   schema_version: 1.1.0
   registry_type: estimator-slot-skeleton
-  last_updated: '2026-08-23'
-  last_batch_id: batch_32_chenganesanliu2009
-  batches_processed: 32
-  total_papers_indexed: 33
+  last_updated: '2026-08-29'
+  last_batch_id: batch_37_westphalbednar2005
+  batches_processed: 37
+  total_papers_indexed: 38
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
     granularity: per estimator（对应 econometric-models/[结果类型].md 文件）
@@ -208,6 +208,31 @@ estimators:
           - contextual_pattern
           notes: 15/28 篇 MVP30 范文使用
           corpus_path: econometric-models/OLS-FE.md
+        - id: r1_dual_path_premise_descriptives
+          skeleton: We identified [N] [treatment events], of which [n] ([value]%) were [focal treatment]. The majority of
+            observations in our sample ([value]%) are [unit] observations with zero [moderator]. In our sample, a "[small
+            condition]" corresponds to [definition] and a "[large condition]" means [definition]. As we theorized, change
+            in [mediator_A] and change in [mediator_B] are not significantly correlated ([value], p = [value]), and neither
+            are change in [outcome_A] and [outcome_B] ([value], p = [value]). Table [1] provides all descriptive statistics
+            and pairwise correlations, which are mostly low to moderate. The mean variance inflation factor for the variables
+            used in the estimation ([value]) is below the commonly used threshold of [threshold] ([citation]).
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-08-29: 用户点名喜爱本篇，单源足矣)'
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - post_2022_women_tmt_strategic_renewal
+          transferability: high
+          paradigm_exclusivity: 双中介/双路径设计的 R1 前提预检（理论预言零相关 + 分样本条件交底）
+          rhythm_tags:
+          - theorized_zero_correlation
+          - moderator_distribution
+          - condition_definition_inline
+          - routine_diagnostics
+          notes: 'EXTEND r1_ols_standard（corpus OLS-FE.md 变体67）：在常规描述统计+VIF 之上新增"理论预言零相关"区分效度前提句
+            与 moderator 经验分布/分样本条件定义前置——为后续双路径与分样本检验预检样本构成'
+          corpus_path: econometric-models/OLS-FE.md
       R2:
         description: 模型序列 / 表格导航
         skeleton_variants:
@@ -348,6 +373,55 @@ estimators:
           - economic_significance
           - alternative_sample
           corpus_path: econometric-models/OLS-FE.md
+        - id: r3_olsfe_only_column_significant_log_time_dv
+          skeleton: 'We now move to our model that examines [DV_time]. In Table [y], we present the results of the [OLS FE]
+            model that uses the natural log of the number of [time units] from [awareness event] to [action initiation] as
+            the dependent variable. Once again, we include control variables in column (1) and then the [predictor] for all
+            [events] (column (2)) and each [subclass] (columns (3)-(5)). The only column in which [predictor] has a significant
+            relationship with [DV_time] is for [high-severity subclass] in column (3) (β = [value], p < [threshold]). Increasing
+            [predictor] is associated with a faster [outcome] for the most [severe], [stakes descriptor] events needing [action].
+            This finding provides support for Hypothesis [N]. Interpreting similarly, a one standard deviation increase in
+            [predictor] is associated with a [N]-[unit] acceleration in [DV_time] for the most severe [subclass].'
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - wowak_2020_female_directors_recalls
+          transferability: high
+          paradigm_exclusivity: OLS/FE 专用，ln(时长) DV + 跨列选择性显著 + 天数回译幅度（R3/R5 群）
+          rhythm_tags:
+          - only_column_disclosure
+          - log_time_backtranslation
+          - interpreting_similarly_anchor
+          notes: '"The only column in which ..." 明示跨列选择性显著；ln(时长) 系数回译为自然单位天数幅度拍，"Interpreting similarly" 锚定前表解读协议（corpus 变体63）'
+          corpus_path: econometric-models/OLS-FE.md
+        - id: r3_dual_treatment_contrast_four_beat_wald
+          skeleton: Supporting Hypothesis [H_a], results in Table [X] (Model [N]) show that [treatment_A] [increases/decreases]
+            [outcome_A] (b = [value], p = [value]), while [treatment_B] does not (b = [value], p = [value]). Wald test results
+            indicate that the difference between these coefficients would likely not have arisen if the effects were the
+            same (p = [value]). Supporting Hypothesis [H_b], the [treatment_A] coefficient is significant (b = [value], p
+            = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value]) in the [outcome_B] model (Table
+            [X], Model [M]). The estimated coefficients imply that [treatment_A], on average, [decreases/increases] [outcome_B]
+            by [value]% and [increases/decreases] [outcome_A] by [value]%.
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-08-29: 用户点名喜爱本篇，单源足矣)'
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - post_2022_women_tmt_strategic_renewal
+          transferability: high
+          paradigm_exclusivity: 双处理并排对照（focal vs placebo treatment）的双假设四拍
+          rhythm_tags:
+          - dual_treatment_contrast
+          - wald_coefficient_difference
+          - merged_cross_dv_magnitude
+          - foil_stays_unexplained
+          notes: 'EXTEND r3_ols_four_beat_standard（corpus OLS-FE.md 变体64）：单一处理四拍升级为双处理并排对照——每假设后跟
+            Wald 系数差检验（防"星号对比"质疑），幅度拍合并为一句跨 DV 百分比翻译，对照处理全程只报 does not/is not'
+          corpus_path: econometric-models/OLS-FE.md
       R4:
         description: 交互效应 / 条件效应
         skeleton_variants:
@@ -411,6 +485,34 @@ estimators:
           - boundary_heterogeneity
           - honest_reversal_language
           corpus_path: econometric-models/OLS-FE.md
+        - id: r4_subsample_mirror_null_significant_pair_wald_chow
+          skeleton: To test Hypothesis [H], we estimated [outcome] models separately for the [moderator_absent] and the
+            [moderator_present] subsamples. When [moderator] is [absent] (Table [X], Model [N]), the coefficient for [treatment_A]
+            is [marginally significant/insignificant] (b = [value], p = [value]), while the effect of [treatment_B] is insignificant
+            (b = [value], p = [value]), and the difference in the two estimated coefficients is not significant. Conversely,
+            when [moderator] is [present] (Table [X], Model [M]), the [treatment_A] effect gains in size and significance
+            (b = [value], p = [value]), whereas the [treatment_B] coefficient does not (b = [value], p = [value]), and the
+            difference in the two estimated coefficients becomes significant (p = [value]). This pattern of findings is consistent
+            with Hypothesis [H], although a Chow test comparing the effect sizes of the [treatment_A] across Models [N] and
+            [M] reveals that the difference is not significant (p = [value]).
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-08-29: 用户点名喜爱本篇，单源足矣)'
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - post_2022_women_tmt_strategic_renewal
+          transferability: high
+          paradigm_exclusivity: 链式中介设计中的理论状态分样本调节（零/正 incumbency 型）+ 组内 Wald + 跨组 Chow 诚实降级
+          rhythm_tags:
+          - subsample_mirror_rhythm
+          - within_subsample_wald
+          - chow_honest_downgrade
+          - magnitude_only_when_significant
+          notes: 'EXTEND r4_ols_threshold_group_coefficient_difference（corpus OLS-FE.md 变体65）：外部阈值分组升级为理论状态
+            分组（零/正）+ 组内 Wald（focal vs 对照 treatment）+ Chow 不显著时的降级句式（"consistent with ... although ...
+            not significant"）三件套；亦服务 R6 诚实降级'
+          corpus_path: econometric-models/OLS-FE.md
       R5:
         description: 经济 / 实质显著性
         skeleton_variants:
@@ -452,7 +554,29 @@ estimators:
           corpus_path: econometric-models/OLS-FE.md
       R6:
         description: 非显著 / 混合 / 意外发现
-        skeleton_variants: []
+        skeleton_variants:
+        - id: r6_chow_honest_downgrade_after_pattern_support
+          skeleton: This pattern of findings is consistent with Hypothesis [H], although a Chow test comparing the effect
+            sizes of the [treatment] across Models [N] and [M] reveals that the difference is not significant (p = [value]).
+            [Null-subsample sentence — when [moderator] is [absent], the coefficient for [treatment_A] is [insignificant]
+            (b = [value], p = [value]), while [treatment_B] does not [move] (b = [value], p = [value]).]
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-08-29: 用户点名喜爱本篇，单源足矣)'
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - post_2022_women_tmt_strategic_renewal
+          transferability: high
+          paradigm_exclusivity: 分样本调节中"方向证据与统计裁决分离"的诚实降级句式
+          rhythm_tags:
+          - pattern_support_then_chow
+          - honest_downgrade
+          - null_group_reported_neutrally
+          notes: 'EXTEND r4_ols_threshold_group_coefficient_difference（组间差异裁决；corpus OLS-FE.md 变体65，槽位标注
+            R4 亦服务 R6）：把"哪组显著"的镜像节奏与 Chow 不显著时的降级句式一并沉淀——先给 consistent with 再报 Chow 不显著，
+            支持判断留给读者；null 组只报 does not/is not，不硬造幅度'
+          corpus_path: econometric-models/OLS-FE.md
       R7:
         description: 稳健性 / 效度 / 敏感性检验
         skeleton_variants:
@@ -577,6 +701,34 @@ estimators:
           - front_loaded
           notes: 区别于变体15（RIR+Oster+CEM 三件套五威胁）——RIR 量化替换计数 + naive-vs-cure 双轨 + 前置到主结果之前
           corpus_path: econometric-models/OLS-FE.md
+        - id: r7_three_threat_sectional_robustness
+          skeleton: Our first robustness check addressed the possibility that [threat_1 (endogeneity or selectivity)] affected
+            our results. [Treatment] may be conditional on [selection mechanism] ([citations]). To address this possibility,
+            we re-estimated our models on the subsample of our data when [condition occurs]. Overall, the results do not
+            suggest that [threat_1] biased our results (see Online Appendix [X]). Our second robustness check assessed the
+            indirect paths from [treatment] to [outcomes] using [SEM/GSEM commands]. The [alternative] model differs from
+            our [baseline] approach in that it allows for correlations among the error terms of our [equations]. The [alternative]
+            results are largely similar to our reported results. Finally, to further investigate the construct validity of
+            our [construct] variables, we re-estimated the models substituting the focal dependent variables with [alternative
+            DV 1] and [alternative DV 2], respectively. As expected, we find that [treatment] significantly [affects] [alternative
+            DV 1], especially when [moderator condition].
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-08-29: 用户点名喜爱本篇，单源足矣)'
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - post_2022_women_tmt_strategic_renewal
+          transferability: high
+          paradigm_exclusivity: 独立 Robustness Checks 小节（falling action）的三威胁小节化组织
+          rhythm_tags:
+          - threat_sectioning
+          - selectivity_subsample
+          - sem_alternative_estimator
+          - alternative_dv_construct_validity
+          notes: 'EXTEND r7_ols_threat_based（corpus OLS-FE.md 变体66）：按威胁逐小节推进（选择性/内生性→替代估计 SEM→构念效度
+            替代 DV），每威胁以"结果不变"句收口；稳健性独立成节而非机械罗列 Table 3/4/5'
+          corpus_path: econometric-models/OLS-FE.md
       R8:
         description: 补充 / 事后 / 机制分析
         skeleton_variants:
@@ -624,7 +776,8 @@ estimators:
             estimated indirect effect and confidence interval, and hypothesis verdict. Preserve unsupported branches and narrow
             the mechanism claim to the outcomes for which the interval excludes zero.
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -654,7 +807,8 @@ estimators:
             strategies completely mediate the influences of firm characteristics on abnormal returns.
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -670,6 +824,40 @@ estimators:
           - signal_interpretation
           notes: 'LEGACY: 不得将 Baron–Kenny 条件计数升级为现代间接效应证据；须补 indirect-effect interval 或显式标 legacy。Kashmiri 诚实边界继续有效。'
           corpus_path: econometric-models/OLS-FE.md
+        - id: r8_two_step_predicted_mediator_dual_path_convergence
+          skeleton: Hypothesis [H6] anticipated that, following [treatment], [outcome_A] would [grow] via an [increase]
+            in [mediator_A]. Supporting Hypothesis [H6] (Table [X], Model [N]), the estimated coefficient for the predicted
+            shift in [mediator_A] (obtained from Model [M] in Table [Y]) is statistically significant (b = [value], p = [value]).
+            To assess whether the shifts in [mediators] in fact mediate the relationships between [treatment] and [outcomes],
+            we use the procedure described in [Preacher, Rucker, and Hayes (2007)]. Because we have moderated mediations,
+            we use the predicted change in [mediator_A] and [mediator_B] from Models [M1] and [M2] for the [moderator_1]
+            moderator (and from Models [M3] and [M4] for the [moderator_2] moderator) in the [outcome] models. Using bias-corrected
+            confidence intervals for the two indirect effects, we find that the indirect effects of [treatment] (a) on [outcome_A],
+            via a [rise] in [mediator_A], and (b) on [outcome_B], via a [drop] in [mediator_B], are statistically significant
+            (z = [value], p = [value]; z = [value], p = [value], respectively) when [moderator condition]. Given the difficulties,
+            statistically, in detecting moderated mediation in analyses relying on coarse-grained, secondary data, we interpret
+            our pattern of findings as consistent with our theory that [treatment] affects [outcome], at least partially,
+            via shifts in [mediators], conditional on [moderator_1] and [moderator_2].
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-08-29: 用户点名喜爱本篇，单源足矣)'
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - post_2022_women_tmt_strategic_renewal
+          transferability: high
+          paradigm_exclusivity: 面板 FD-OLS 两步预测中介（generated regressor）+ 双 moderator 条件间接效应 + 双路径汇合收束
+          rhythm_tags:
+          - path_bearing_attribution
+          - predicted_value_traceability
+          - moderator_model_mapping
+          - dual_indirect_effect_ci
+          - calibrated_claim_close
+          notes: 'corpus SEM-moderated-mediation.md 变体8（ADD，承接 R3/R4 双路径铺垫、收敛全篇双路径回答）：区别于 r8_shared_mediator_outcome_branch_ledger
+            （变体7，SEM 同时估计 + 共享 a-path 分支审计）——本变体中介由第一阶段模型拟合值操作化（两步法），双 moderator 条件间接效应
+            以 Preacher-Hayes bias-corrected CI 并行报告，粗粒度二手数据功效受限时以"at least partially ... conditional on
+            ..."校准收束；generated-regressor SE 须带诚实边界'
+          corpus_path: econometric-models/SEM-moderated-mediation.md
       R9:
         description: Results→Discussion 过渡
         skeleton_variants: []
@@ -804,7 +992,8 @@ estimators:
             display; no link-scale probability reading].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             entrepreneurship_strategy: 1
           sources:
@@ -867,7 +1056,8 @@ estimators:
             [Magnitude interpretation via probability change]. [Support judgment].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             strategy: 1
           sources:
@@ -883,7 +1073,8 @@ estimators:
             in [Figure X].
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             strategy: 1
           sources:
@@ -898,7 +1089,8 @@ estimators:
             probability of [DV] from [base]% to [new]%.
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             strategy: 1
           sources:
@@ -913,7 +1105,8 @@ estimators:
             = [threshold]).
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             strategy: 1
           sources:
@@ -953,6 +1146,27 @@ estimators:
           rhythm_tags: []
           notes: ''
           corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
+        - id: r3_dual_dv_convergence_symbolic_substitution_label
+          skeleton: Taken together, these results suggest that there is not only a [substantive] substitution effect between
+            [mechanism A] and [mechanism B], but also a [symbolic] substitution effect, whereby even a [decoupled form of A]
+            can forestall [the outcome].
+          skeleton_level: paragraph
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-08-28: 单源足矣)'
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - westphal_zajac_1998_symbolic_management
+          transferability: high
+          paradigm_exclusivity: 双 DV（同一机制的两类后果）主结果段末收敛；标签现造须两 DV 证据同向且与既有概念对偶衔接
+          rhythm_tags:
+          - taken_together
+          - dual_dv_convergence
+          - label_coinage
+          - boundary_embedded
+          notes: corpus Logit 变体R（Tables 3-4 P1 段末收束）；substantive→symbolic substitution 对偶命名，whereby 从句内嵌标签适用条件
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
       R5:
         skeleton_variants:
         - id: r5_probability_cost_activity_value_benchmark
@@ -962,7 +1176,8 @@ estimators:
             loss].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             entrepreneurship_strategy: 1
           sources:
@@ -1006,7 +1221,8 @@ estimators:
             stability]. [Disclose any p-value weakening rather than claiming full invariance].'
           skeleton_level: section
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             entrepreneurship_strategy: 1
           sources:
@@ -1027,7 +1243,8 @@ estimators:
             / consistency statement]. [Conclusion reducing threat concern].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             strategy: 1
           sources:
@@ -1042,7 +1259,8 @@ estimators:
             possibility of reverse causality, omitted variable bias, or both, leading to potential endogeneity in our study.
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             strategy: 1
           sources:
@@ -1057,7 +1275,8 @@ estimators:
             the second-stage regression models produced results consistent with those of Models [Y] and [Z].
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             strategy: 1
           sources:
@@ -1101,6 +1320,28 @@ estimators:
           rhythm_tags: []
           notes: ''
           corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
+        - id: r7_lag_structure_bracket_sensitivity
+          skeleton: In separate analyses, we examined whether the results were sensitive to this particular lag structure by
+            examining the effect of [the predictor] over a more recent, [N]-year period ([t-2] to [t-1]) and over a [N+2]-year
+            period ([t-4] to [t-1]). The results presented below were substantively unchanged, suggesting that our findings
+            are not sensitive to the particular lag structure used in the models.
+          skeleton_level: paragraph
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-08-28: 单源足矣)'
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - westphal_zajac_1998_symbolic_management
+          transferability: high
+          paradigm_exclusivity: 时变预测变量滞后窗任意性的双向夹逼敏感性（面板/事件史设计）
+          rhythm_tags:
+          - lag_structure
+          - bracket_sensitivity
+          - substantively_unchanged
+          - purpose_restated
+          notes: corpus Logit 变体S（Analysis §Board Control P1 末）；主窗向短/长两侧外推成对称证据；结论句显式复述检验目的
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
       R2:
         description: ''
         skeleton_variants:
@@ -1124,6 +1365,30 @@ estimators:
           rhythm_tags: []
           notes: ''
           corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
+        - id: r2_first_event_modeling_scope_dual_track_defense
+          skeleton: We modeled only the likelihood of the first event during the time period, removing the [unit] from the
+            risk set following [the change], because we assume that [the change] reflects a relatively fundamental and long-lasting
+            change in [the underlying expectations] ([citation]). Consistent with this assumption, there were only [N] reversals
+            in [the state] during the period of study, representing less than [X] percent of all changes. In effect, this model
+            examines the role of [the predictor] in forestalling a lasting shift in [the orientation].
+          skeleton_level: paragraph
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-08-28: 单源足矣)'
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - westphal_zajac_1998_symbolic_management
+          transferability: high
+          paradigm_exclusivity: 离散时间事件史/重复事件面板中"只建模首事件"的建模范围声明
+          rhythm_tags:
+          - first_event_only
+          - risk_set_exit
+          - theory_plus_empirical_defense
+          - reversal_disclosure
+          notes: corpus Logit 变体O（Analysis §Board Control P3）；理论轨（fundamental and long-lasting change）+ 经验轨（反转占比 <X%）
+            双轨辩护；"In effect" 把技术选择翻译回理论任务
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
       R4:
         description: ''
         skeleton_variants:
@@ -1134,7 +1399,8 @@ estimators:
             [Support judgment].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             entrepreneurship_strategy: 1
           sources:
@@ -1158,7 +1424,8 @@ estimators:
             benchmarks with external average event cost].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             entrepreneurship_strategy: 1
           sources:
@@ -1225,7 +1492,8 @@ estimators:
             effect significance region description]. [Support judgment with caveat if partial].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             strategy: 1
           sources:
@@ -1240,7 +1508,8 @@ estimators:
             for [DV] (b = [value], p = [threshold]).
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             strategy: 1
           sources:
@@ -1256,7 +1525,8 @@ estimators:
             Hypothesis [x] is partially supported.
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             strategy: 1
           sources:
@@ -1301,6 +1571,54 @@ estimators:
           rhythm_tags: []
           notes: ''
           corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
+        - id: r4_four_cell_wald_formal_confirmation
+          skeleton: We also used the Wald test to confirm that coefficients for [category with W] were significantly greater
+            than coefficients for [category without W] (e.g., chi-square = [value] and p ≤ [threshold] for [group A] with vs.
+            without [the moderator] in predicting [DV1]; F = [value], p ≤ [threshold], for the same comparison in models predicting
+            [DV2]) ([citation]). Thus, [the moderator] decreased the likelihood of [the outcome], irrespective of whether [the
+            implementation condition].
+          skeleton_level: paragraph
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-08-28: 单源足矣)'
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - westphal_zajac_1998_symbolic_management
+          transferability: high
+          paradigm_exclusivity: 四格哑变量/分组系数设计的调节效应正式确认；同一假设跨估计器（logit 事件史 + 面板 GLS）复现
+          rhythm_tags:
+          - wald_confirmation
+          - four_cell_design
+          - dual_dv_dual_statistic
+          - e_g_reporting
+          notes: corpus Logit 变体Q（Tables 3-4 P2）；目视排序后追加正式差异检验升级证据；"e.g." 只举关键对比，省略对比须方向一致
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
+        - id: r4_four_cell_null_cell_confirmatory_report
+          skeleton: Model [2] of table [x] shows a strongly significant negative effect of [the predictor] on [the outcome],
+            for both [category A] and [category B], when [the moderator] is present. Similarly, model [2] of table [y] shows
+            that [category A] with [the moderator] and [category B] with [the moderator] are both strongly and negatively related
+            to [the outcome]. In contrast, model [2] of tables [x] and [y] indicates that both [category A] and [category B]
+            without [the moderator] are generally not significantly related to [the outcomes]. Thus, [the moderator] decreased
+            the likelihood of [the outcome], irrespective of whether [the implementation condition].
+          skeleton_level: paragraph
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-08-28: 单源足矣)'
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - westphal_zajac_1998_symbolic_management
+          transferability: high
+          paradigm_exclusivity: 四格设计（处理×披露拆分）中 null 格承担确认功能的调节报告
+          rhythm_tags:
+          - null_as_confirmation
+          - in_contrast_pivot
+          - dual_table_navigation
+          - summary_hedging
+          notes: corpus Logit 变体P（Tables 3-4 P2）；null 格确认逻辑须由 Methods 侧前置判定标准授权，不得 Results 事后追认；"generally"
+            汇总不得掩盖方向反转系数
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
       R6:
         description: ''
         skeleton_variants:
@@ -1309,7 +1627,8 @@ estimators:
             support judgment].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             strategy: 1
           sources:
@@ -1344,6 +1663,26 @@ estimators:
           - corroboration
           - causal_boundary
           notes: Qualitative agreement and a null squared term are corroborative, not mediation evidence.
+          corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
+        - id: r8_widespread_belief_reversal_coda
+          skeleton: Overall, the results suggest that despite the widespread belief that [actors] are driving [substantive
+            changes] in [the domain] to [increase capacity], [symbolic actions] can forestall such pressures.
+          skeleton_level: paragraph
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-08-28: 单源足矣)'
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - westphal_zajac_1998_symbolic_management
+          transferability: high
+          paradigm_exclusivity: Results 末段对领域共识的让步式反转收束（结果挑战流行叙事的论文）
+          rhythm_tags:
+          - overall_coda
+          - despite_widespread_belief
+          - mechanism_level_claim
+          - suggest_hedging
+          notes: corpus Logit 变体T（Tables 3-4 P3 末段）；"widespread belief" 须有 Intro/Theory 文献铺垫；结论动词 suggest 不越权进 Discussion
           corpus_path: econometric-models/Logit-Probit-Ordered-Probit.md
     cross_slot_patterns:
     - id: csp_Logit_Probit_Ordered_Probit_R2_9f484872
@@ -1449,7 +1788,8 @@ estimators:
         - id: r1_hazard_descriptive_vif
           skeleton: '[R1] 先报告描述性统计与相关性矩阵，随后检查方差膨胀因子（VIF），确认无严重多重共线性，再引入主模型结果。 该骨架适用于 hazard / 计数 / 非线性模型中需要在进入系数表前完成数据质量声明的场景。'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1464,7 +1804,8 @@ estimators:
             conclusion].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1480,7 +1821,8 @@ estimators:
             in our regressions.
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1496,7 +1838,8 @@ estimators:
           skeleton: '[R2] 主效应结果：先展示仅含控制变量的基线模型，再展示加入核心自变量后的完整模型。 对 hazard 模型系数采用 exp(β)−1 的方式转化为百分比解释（如“hazard 提高 77%”），并同时报告
             β 与 p 值。 需明确说明参照组（如 middle tertile），并给出方向性结论以支持 H1。'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1511,7 +1854,8 @@ estimators:
             model introduction].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1526,7 +1870,8 @@ estimators:
             with the hazard of [DV], while [control_k] and [control_l] are negatively associated with the hazard of [DV].
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1581,7 +1926,8 @@ estimators:
           skeleton: '[R3] 调节效应（机制检验）结果：引入交互项后，先复制主效应模型作为对照列，再报告含交互项的模型。 对交互项系数进行符号与显著性解读，判断调节方向是否支持假设中的机制解释（如“前任 CEO 被强制解职时，早期
             tenure 的 recall hazard 更高”）。 若交互项出现非假设预期方向，需额外说明。'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1596,7 +1942,8 @@ estimators:
             [Exponential transformation / magnitude interpretation]. [Support judgment].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1611,7 +1958,8 @@ estimators:
             (β = [value], p < [threshold]) in comparison to [reference category].
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1628,7 +1976,8 @@ estimators:
             category].
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1643,7 +1992,8 @@ estimators:
             afterward.
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1659,7 +2009,8 @@ estimators:
           skeleton: '[R4] 子群分析结果：按调节变量（如 discretion 高低）拆分样本分别回归， 通过 Wald chi-square 检验比较子群间核心系数差异， 并指出某一子群中主效应消失（系数不显著），从而支持机制解释（如“low
             discretion recalls 与 CEO tenure 无关”）。'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1674,7 +2025,8 @@ estimators:
             + significance]. [Directional interpretation of moderation]. [Additional observation on unexpected term].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1690,7 +2042,8 @@ estimators:
             lending support to Hypothesis [N].
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1706,7 +2059,8 @@ estimators:
             conclusion: effect fully explained by subgroup].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1721,7 +2075,8 @@ estimators:
             [DV] (column [N], β = [value], p > [threshold]).
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1736,7 +2091,8 @@ estimators:
             p < [threshold]) on the hazard of [DV].
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1751,7 +2107,8 @@ estimators:
             magnitude than the [IV] coefficient in column [M] of [Table X] (Wald chi-square test p < [threshold]).
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1767,7 +2124,8 @@ estimators:
             in [IV], lending support to Hypothesis [N].
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1783,7 +2141,8 @@ estimators:
           skeleton: '[R7] 测量敏感性稳健性：对核心自变量的分类方式（tertiles / quartiles / linear-log）进行替换， 报告不同设定下系数方向与显著性的一致性， 并以图形展示多种设定下的 hazard
             趋势，排除结果受测量方式驱动的可能。'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1798,7 +2157,8 @@ estimators:
             coefficient reference]. [Conclusion: confidence building].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1812,7 +2172,8 @@ estimators:
           skeleton: One concern is that our findings depend on [specific threat].
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1826,7 +2187,8 @@ estimators:
           skeleton: To address this concern, we re-estimate our models using [alternative method].
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1841,7 +2203,8 @@ estimators:
             (p < [threshold]) and the [IV] β = [value] (p < [threshold]).
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1856,7 +2219,8 @@ estimators:
             modeling strategy is robust to alternative methodological choices.
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1872,7 +2236,8 @@ estimators:
             [Conclusion: artifact exclusion].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1888,7 +2253,8 @@ estimators:
             be an artifact of using [original measure] to measure [IV].
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1903,7 +2269,8 @@ estimators:
             details]. [ATE results for treatment conditions]. [Conclusion: selection bias control confirmation].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1918,7 +2285,8 @@ estimators:
             Treatment Effect (ATE) = [value], p < [threshold]) on the likelihood of [DV].
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1933,7 +2301,8 @@ estimators:
             [Key IV coefficient null result]. [Conclusion: reverse causality unlikely].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1947,7 +2316,8 @@ estimators:
           skeleton: These results indicate that reverse causality is unlikely to be creating significant bias in our study.
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1962,7 +2332,8 @@ estimators:
             [Results: main effects persist, interactions null]. [Reasonable confirmation statement with hedging].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1978,7 +2349,8 @@ estimators:
             out in a study such as ours.
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -1995,7 +2367,8 @@ estimators:
           skeleton: '[R5] 图形化呈现：将回归系数以柱状图形式可视化，分别对应 H1/H2/H3 的实证模式， 使读者直观对比 early/late tenure 在不同条件下的 hazard 差异。 适用于 hazard
             / Logit / 计数模型中系数方向对比强烈的场景。'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -2009,7 +2382,8 @@ estimators:
           skeleton: '[Figure navigation]. [Panel-by-panel coefficient pattern description]. [Cross-condition comparison].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -2024,7 +2398,8 @@ estimators:
             [IV condition 2].
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -2040,7 +2415,8 @@ estimators:
         - id: r6_robust_model_selection
           skeleton: '[R6] 模型选择稳健性：针对主模型设定（如时间累积 vs. 重置、分布假设）， 报告替代模型（reset-time hazard、logistic regression）的结果， 确认核心自变量系数方向与显著性保持一致，从而增强对识别策略的信心。'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -2057,7 +2433,8 @@ estimators:
           skeleton: '[R8] 样本选择稳健性（CEM 匹配）：采用 Coarsened Exact Matching (CEM) 对处理组（early/late tenure）进行一对一匹配， 报告平均处理效应（ATE）及其显著性，验证在控制可观测选择偏差后核心结论仍然成立。
             适用于观察性研究中对样本自选择担忧较强的场景。'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -2074,7 +2451,8 @@ estimators:
           skeleton: '[R9] 反向因果与替代解释： (a) 反向因果检验——以过去 recall 率预测未来 forced CEO turnover，若系数不显著则排除反向因果； (b) 替代理论解释——引入 operational
             performance 交互项（如 COGS 变化、运营改善文本、CEO 运营背景）， 若 tenure 主效应仍显著且交互项不显著，则排除替代解释。'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             om: 1
           sources:
@@ -2501,6 +2879,54 @@ estimators:
           - curve_geometry
           notes: 二次项显著不是倒U充分证据；须端点斜率+转折点区间+支持范围（corpus 变体13）
           corpus_path: econometric-models/计数模型.md
+        - id: r3_main_effect_fe_re_parallel_replication
+          skeleton: 'Hypothesis [N] predicted that [predictor] would be [positive/negative] related to [outcome]. We first incorporate
+            control variables (column [c]) and find that [key_control_a] and [key_control_b] are [direction] associated with
+            [outcome], while [key_control_c] is [direction] associated with [outcome]. We then enter [predictor] (column [c])
+            and find that it is [direction] associated with [outcome] (β = [value], p < [threshold]), providing support for
+            Hypothesis [N]. We then retested these relationships using a [random effects] model, which includes all observations
+            and tests both within- and across-firm effects in the same regression ([citation]). The results (Table [z], columns
+            [c1] through [c2]) are essentially the same as the [fixed effects] model presented above. The coefficient for
+            [predictor] remains [direction] and significant (β = [value], p < [threshold]; Table [z], column [c]).'
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - ball_2018_product_competition_managerial_discretion_and_manu
+          transferability: high
+          paradigm_exclusivity: 计数模型专用，主效应四拍 + FE/RE 双模型平行复现
+          rhythm_tags:
+          - control_first
+          - main_effect_four_beat
+          - fe_re_parallel_replication
+          - within_across_effects
+          notes: 控制列→预测变量列四拍 + RE 全样本复现，"essentially the same" 收束（corpus 变体22）
+          corpus_path: econometric-models/计数模型.md
+        - id: r3_aggregate_severity_class_localization
+          skeleton: 'In Hypothesis [N], we posited that [predictor] is [positive/negative] associated with the count of [outcome].
+            As shown in Table [z], column [c_all], [predictor] is a [positive/negative] and significant predictor of [all outcome]
+            (β = [value], p < [threshold]), but this effect is completely explained by [low-discretion subclass], as seen by
+            the significance of [predictor] in column [c_sub] of Table [z] (β = [value], p < [threshold]) and the lack of
+            significance of [predictor] in columns [c_sub2] and [c_sub3]. In other words, an increase in [predictor] is associated
+            with more [subclass outcome] initiated by the [unit] in the following [period]. This provides support for Hypothesis
+            [N].'
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - wowak_2020_female_directors_recalls
+          transferability: high
+          paradigm_exclusivity: 计数模型专用，聚合列显著→严重度子类承载归因
+          rhythm_tags:
+          - cross_column_attribution
+          - subclass_significance_contrast
+          - dual_dv_decision_window_navigation
+          notes: 聚合列显著先行，子类显著/不显著对照句 "completely explained by ..." 归属承载类；双 DV 按决策窗口顺序导航（corpus 变体26）
+          corpus_path: econometric-models/计数模型.md
       R4:
         skeleton_variants:
         - id: r4_count_moderation_translation
@@ -2578,6 +3004,33 @@ estimators:
           - explicit_exception
           notes: 曲线调节须对 IV 全范围验证显著性轮廓，显式报例外（corpus 变体18）
           corpus_path: econometric-models/计数模型.md
+        - id: r4_dv_split_moderation_cross_column_comparison
+          skeleton: In columns [c_a] and [c_b] of Table [z], we test Hypotheses [N-a] and [N-b] by dividing our dependent
+            variable into [split A] (column [c_a]) and [split B] (column [c_b]). For Hypothesis [N-a], we predicted that the
+            [direction] relationship between [predictor] and [outcome] would be [stronger] for [split A, characterized by low
+            discretion / high severity]. This is evident as β = [value] (p < [threshold]) from column [c_a] of Table [z] is
+            statistically different and larger than β = [value] (p < [threshold]) from column [c_0] of Table [z], providing
+            support for Hypothesis [N-a]. For Hypothesis [N-b], we predicted that the relationship would be [weaker] for [split
+            B, characterized by high discretion / low severity]. In fact, what we observe is that the relationship is weakened
+            to the point of becoming a [reversed-direction] relationship, but still retaining statistical significance. In
+            other words, [predictor] is [direction] associated with [split B outcome] (β = [value], p < [threshold]; Table
+            [z], column [c_b]), providing support for Hypothesis [N-b].
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - ball_2018_product_competition_managerial_discretion_and_manu
+          transferability: high
+          paradigm_exclusivity: 计数模型专用，DV 拆分调节 + 跨列系数对比（无交互项）
+          rhythm_tags:
+          - dv_split
+          - cross_column_comparison
+          - sign_reversal_support
+          - no_interaction_term
+          notes: 不用交互项，用 DV 官方严重度拆分列 + 跨列系数大小对比裁决调节；弱侧允许符号反转仍显著（corpus 变体23）
+          corpus_path: econometric-models/计数模型.md
       R5:
         skeleton_variants:
         - id: r5_count_moderation_translation
@@ -2598,6 +3051,34 @@ estimators:
           - min_max_contrast
           - penalty_reduction
           notes: 负二项交互项不能解释为 count difference，必须用 predicted counts
+          corpus_path: econometric-models/计数模型.md
+        - id: r5_multiplicative_sd_percent_count_translation
+          skeleton: 'To provide further insight into our results, we interpret the beta coefficients from the [model retaining
+            all observations], as that model is inclusive of all [units] in the study and does not drop any observations.
+            Beta coefficients for [count model] models are interpreted multiplicatively after exponentiation ([citation]).
+            Thus, the [direction] beta coefficient for [predictor] in column [c] can be interpreted as the following: a one
+            standard deviation increase in [predictor] is associated with a [X]% [increase/decrease] in [outcome] in a [unit]-[period],
+            which corresponds to approximately [N] [additional/fewer] [outcome] per [unit] across the [T]-[period] panel.
+            Similarly, we can interpret the [direction] coefficient in column [c] as a one standard deviation increase in
+            [predictor] is associated with a [Y]% [reduction/increase], or approximately [M] [fewer/more] [outcome] across
+            the panel. Collectively, using both [model A] and [model B], these results indicate robust support for Hypotheses
+            [N1, N2, and N3]. More precisely, the relationships persist when analyzing only [within-unit effects in model
+            A], or when pooling [within- and across-unit effects in model B].'
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - ball_2018_product_competition_managerial_discretion_and_manu
+          transferability: high
+          paradigm_exclusivity: 计数模型专用，exp(β) 乘法解释独立段
+          rhythm_tags:
+          - exp_beta
+          - one_sd_percent
+          - absolute_count_translation
+          - full_sample_rationale
+          notes: 独立经济显著性段——exp(β)→one-SD→百分比→绝对计数四步，并说明为何用全样本模型（corpus 变体24）
           corpus_path: econometric-models/计数模型.md
       R6:
         description: 非显著 / 混合 / 意外发现
@@ -2776,6 +3257,43 @@ estimators:
           - cross_measure_correlation
           notes: 换连续 DV + system GMM + 内生性分类 + AR/Hansen；区别于 OLS-FE 变体39（3SLS）（corpus 变体21）
           corpus_path: econometric-models/计数模型.md
+        - id: r7_four_threat_battery_mediation_psm_placebo_reverse
+          skeleton: We conduct [N] additional analyses to more comprehensively explore our hypothesized relationships. These
+            include a [mediation] test, a [sample selection] test, a regression using [placebo outcome] as the dependent variable,
+            and a [reverse causality] test. First, we delve deeper into the mechanisms that may underlie the [predictor]-[outcome]
+            relationship. [Mechanism A] would imply that [mediator A] mediates this relationship; however, this is not the
+            case as [mediator A] is not a significant predictor of [outcome]. Next, we explore the alternative mechanism and
+            test whether [mediator B] mediates the relationship... Taken together, this provides evidence that [mediator B]
+            mediates the relationship between [predictor] and [outcome]. Our next robustness check addresses possible [sample
+            selection bias] that may confound our analysis. To explore this possibility, we provide results of a [propensity
+            score matching] model (Table [z]). The results show that the average treatment effect of [treatment] is [direction]
+            and significant on [outcome A] and [outcome B], though the treatment effect is not significant at the p < [threshold]
+            level for [outcome C]. These results help alleviate [sample selection bias] concerns related to the conclusions
+            of our study. To ensure that our results are not contingent on our [dependent variable operationalization], we
+            test our hypotheses using [placebo outcome] as the dependent variable. Because [structural constraint], there should
+            be no reason to expect a significant relationship between [predictor] and [placebo outcome]. As expected, [predictor]
+            does not have a significant relationship with [placebo outcome]. This provides support for our contention that
+            [the focal mechanism is channel-specific]. In column [c] of Table [z], we report results of a regression analysis
+            conducted to test reverse causality, as it is possible that [units] adjust their level of [predictor] after experiencing
+            [outcome]. We use the subsequent period's [predictor] as the dependent variable and find no support for reverse
+            causality, as [outcome experience] is not associated with future [predictor].
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - ball_2018_product_competition_managerial_discretion_and_manu
+          transferability: high
+          paradigm_exclusivity: 计数模型专用，四威胁前瞻式电池
+          rhythm_tags:
+          - forward_enumeration
+          - mediation_test
+          - psm
+          - placebo_outcome
+          - reverse_causality
+          notes: 前瞻式总起先列威胁清单，逐 threat 以收束句关闭（"help alleviate concerns" / "provides support for our contention"）（corpus 变体25）
+          corpus_path: econometric-models/计数模型.md
       R8:
         description: 补充 / 事后 / 机制
         skeleton_variants:
@@ -2826,6 +3344,36 @@ estimators:
           - boundary_qualifier
           - explanatory_sequential
           notes: 访谈只 corroborate 机制解释不识别效应；显式标探索性（corpus 变体20）
+          corpus_path: econometric-models/计数模型.md
+        - id: r8_alternative_operationalization_tipping_point_dose_response
+          skeleton: 'Next, we repeat the dichotomous analysis in Table [x], but this time we use the actual counts of [predictor]
+            as predictor variables, and we use Wald χ² tests to explore coefficient differences. We create indicator variables
+            for [one], [two], and [three or more] [predictor units], and treat [zero] as the reference category. We group the
+            categories of [high categories] into the same statistical category because of the low number of observations in
+            each of these groups. We include this additional model because research indicates that having just one [unit] may
+            not be sufficient to change decision-making, but that a tipping point may be reached when multiple [units] are
+            added ([citations]). Identifying such a tipping point is not practical using the [continuous] measure; hence, we
+            use the discrete counts of [predictor] in this model. As shown in Table [y], we observe consistent results for
+            [outcome A] in column [c], and the effect of [predictor] increases as each [unit] is added. Specifically, the coefficient
+            for [one] (β = [value], p < [threshold]) is statistically different from and less than the coefficient for [two]
+            (β = [value], p < [threshold]) and for [three or more] (β = [value], p < [threshold]). This suggests that it takes
+            at least [two] [units] to influence [outcome B] and that adding a [third] moves such decisions along even faster.
+            We explore possible reasons for this result in the discussion section.'
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - wowak_2020_female_directors_recalls
+          transferability: high
+          paradigm_exclusivity: 计数模型专用，二值化复制→剂量化指示变量→Wald χ² 阈值发现
+          rhythm_tags:
+          - dose_response_indicators
+          - wald_chi2_coefficient_difference
+          - tipping_point_theory_refinement
+          - category_collapsing_disclosure
+          notes: 先二值化复制主结果再剂量化揭示阈值；阈值显式声明为连续测度做不到；低观测类合并须交代观测数依据；阈值只作理论精化不作主检验（corpus 变体27）
           corpus_path: econometric-models/计数模型.md
       R2:
         description: ''
@@ -2927,7 +3475,8 @@ estimators:
           skeleton: '[R2-IV] 在报告第二阶段主效应之前，先以独立段落报告第一阶段结果：列出工具变量对内生变量的估计系数、F统计量以拒绝弱工具变量原假设，并报告Wu-Hausman内生性检验和Sargan-Hansen过度识别检验结果。该段落同时承担table
             navigation功能，明确说明Table X的Panel A/B分别对应voluntary/mandatory recalls的第一阶段与第二阶段。'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -2946,7 +3495,8 @@ estimators:
             is highly relevant for predicting [event]. Therefore, the instrument is both conceptually valid and statistically
             significant for isolating the selection effect.
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             strategy: 1
           sources:
@@ -2980,7 +3530,8 @@ estimators:
             [threshold]).
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -2995,7 +3546,8 @@ estimators:
             suggesting that [estimator] is appropriate.
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -3010,7 +3562,8 @@ estimators:
             = [value], n.s.), supporting their validity.
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -3062,7 +3615,8 @@ estimators:
             = −2.473, p < .05）；(3)幅度：在Discussion中以经济显著性补充（如每增加04,367 lobbying减少一次voluntary recall）；(4)支持判断：Thus, Hypothesis
             X is supported。控制变量中显著项（如deaths、complaints）附带一句话实质解释。'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -3081,7 +3635,8 @@ estimators:
             thus supporting Hypothesis [H]. A one-standard-deviation increase in [predictor] from the mean value ([from] to
             [to]) [increased/decreased] the probability of [outcome] from [base]% to [new]%.
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             strategy: 1
           sources:
@@ -3113,7 +3668,8 @@ estimators:
             key covariate directions]. [Support judgment for hypothesis].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -3128,7 +3684,8 @@ estimators:
             and statistically significant (β = [value], p < [threshold]).
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -3143,7 +3700,8 @@ estimators:
             [interpretation clause].'
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -3239,7 +3797,8 @@ estimators:
             Equation System——以GMM同时估计firm与regulator方程，允许误差相关并修正异方差/自相关；(3) Exogenous Event——以外生冲击（如Flint水危机）作为自然实验，用DiD验证GM相对其他企业的lobbying与recall双重差异；(4)
             Nonlinear Specification——以ordered probit + conditional mixed process处理离散有序因变量。每子节遵循[威胁定位]→[检验动作]→[结果unchanged]→[结论降低担忧]四拍。'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -3263,7 +3822,8 @@ estimators:
             are exogenous (Hansen’s J chi2([df]) = [value], p = [threshold]). Furthermore, the second-stage regression models
             produced results consistent with those of the main models.'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             strategy: 1
           sources:
@@ -3368,7 +3928,8 @@ estimators:
             discrete ordered nature of outcome]. [Test: ordered probit with endogeneity correction]. [Result: consistent].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -3382,7 +3943,8 @@ estimators:
           skeleton: One concern is that our findings depend on [specific threat].
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -3396,7 +3958,8 @@ estimators:
           skeleton: To address this concern, we re-estimate our models using [method].
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -3411,7 +3974,8 @@ estimators:
             drives the findings.
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -3426,7 +3990,8 @@ estimators:
             correcting for endogeneity using [estimator].
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -3441,7 +4006,8 @@ estimators:
             for the endogenous variable [IV].
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -3535,6 +4101,88 @@ estimators:
           rhythm_tags: []
           notes: ''
           corpus_path: econometric-models/IV-2SLS.md
+        - id: r7_iv_exclusion_quantified_exposure_share
+          skeleton: 'Although the exclusion criteria cannot be explicitly tested, we propose that [instrument] is unlikely
+            to be directly correlated with our dependent variables. First, [instrument] has been used in prior [predictor]
+            studies that predict similar dependent variables ([citations]). Second, a direct correlation between [instrument]
+            and [outcome] is less likely due to the characteristics of the [source channels] that [generate the instrument].
+            More specifically, the argument for nonexclusivity would be that [channel mechanism] not only influences [first-stage
+            channel], but also influences how [actors] set [decision tone] and thereby predicts our [outcome] measures. Although
+            we cannot completely rule out this possibility, we believe the risk of this is low based upon the small percentage
+            of [source channels] that are [outcome-relevant domain]. In particular, there are [N_total] [source channels] across
+            the time period of our panel. Of those, only [N_exposed] are [outcome-relevant entities], which is only [share]%
+            of them. In other words, well over [100-share]% of the [source channels] are from [unrelated domains] in which
+            [outcome] decisions as examined in our study are very uncommon.'
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - wowak_2020_female_directors_recalls
+          transferability: high
+          paradigm_exclusivity: IV/2SLS 专用，排他性三层辩护（先例复用→机制反驳→量化暴露占比）
+          rhythm_tags:
+          - exclusion_prior_reuse
+          - nonexclusivity_mechanism_rebuttal
+          - quantified_exposure_share
+          - honest_concession
+          notes: 先例复用+机制反驳后落到可数暴露占比把辩护转为算术；占比仅当可从数据直接清点时使用，不得写成排他性已被检验（corpus 变体11）
+          corpus_path: econometric-models/IV-2SLS.md
+        - id: r7_iv_weak_id_stock_yogo_critical_value
+          skeleton: 'A commonly used means to examine IV relevance is to report a Cragg-Donald Wald F-statistic ([citations]),
+            which is a weak identification test statistic, and compare it to the 10% critical value of Stock and Yogo (2005).
+            The critical value we are required to use is [value], which comes from [table reference] as we have [one IV for
+            one potentially exogenous regressor]. This means that, to have no more than 10% of the bias of the regression estimate
+            come from our main [FE] analyses in Tables [x] and [y], our Cragg-Donald Wald F-statistic needs to be larger than
+            [value]. The Cragg-Donald Wald F-statistic for the IV analysis is [value], which indicates that our IV is relevant
+            and unlikely to be weak, at least from a statistical standpoint, similar to previous studies that have used this
+            instrument ([citations]).'
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - wowak_2020_female_directors_recalls
+          transferability: high
+          paradigm_exclusivity: IV/2SLS 专用，Cragg-Donald F vs Stock-Yogo 10% 临界值三拍协议
+          rhythm_tags:
+          - critical_value_provenance
+          - bias_bound_interpretation
+          - statistical_standalone_qualifier
+          - prior_instrument_calibration
+          notes: 临界值出处+适用识别结构→偏差上界含义→实测 F+"at least from a statistical standpoint" 限度语；只报 F 不报临界值出处为禁忌（corpus 变体12）
+          corpus_path: econometric-models/IV-2SLS.md
+        - id: r7_linear_2sls_nonlinear_main_model
+          skeleton: 'Although Equation ([main]), which is used to examine support for Hypothesis [N], is a nonlinear [count
+            model] regression, we use linear 2SLS for our IV analysis. We do so because nonlinear IV modeling approaches are
+            nonstandardized and there is significantly less consistency in how to implement such models ([citation]) compared
+            with linear 2SLS analyses. However, the linear 2SLS analysis leads to highly consistent results for both our [DV1]
+            and [DV2] analyses, as described below. In column (1) of Table [z], we report how our control variables and [instrument]
+            predict [endogenous predictor]. [Instrument] is highly predictive of [endogenous predictor], as shown not only
+            by the significant coefficient for [instrument] (β = [value], p < [threshold]) predicting [endogenous predictor],
+            but also due to the large [weak-id statistic] in column (1). In each of the next [six] columns of Table [z], we
+            use the instrumented [endogenous predictor] in the second stage of the 2SLS regression as a predictor variable
+            in our [DV1] and [DV2] analyses. We find nearly identical results when comparing columns [c2]-[c7] of Table [z]
+            with columns [c3]-[c5] of Table [x] and columns [c3]-[c4] of Table [y]. The results in Table [z] indicate that
+            [time-variant omitted variable bias] is unlikely creating significant endogeneity problems in our analysis.'
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - wowak_2020_female_directors_recalls
+          transferability: high
+          paradigm_exclusivity: IV/2SLS 专用，非线性主模型+线性 2SLS 稳健性轨适配性辩护
+          rhythm_tags:
+          - nonlinear_iv_defense
+          - shared_table_layout
+          - cross_table_column_mapping
+          - threat_named_closure
+          notes: 主模型非线性的线性化须给方法论引证（Wooldridge 2010）；跨表精确列映射替代含糊 "results robust"；不得与非线性主系数直接比大小（corpus 变体13）
+          corpus_path: econometric-models/IV-2SLS.md
       R4:
         description: ''
         skeleton_variants:
@@ -3543,7 +4191,8 @@ estimators:
             Lobbying × Media）的系数与显著性；再报告加入中介交互项（Lobbying × Media）后原交互项（Lobbying × Deaths）是否变得不显著（β=0, n.s.）。若原交互项不显著且新交互项显著，则判定为full
             indirect moderation，支持H4。若原交互项仍显著但幅度下降，则支持partial indirect moderation（Model A）。需在正文中明确引用Equation编号以引导读者。'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -3559,7 +4208,8 @@ estimators:
             significant at the conventional p = 0.05 threshold, Figure [Z] indicates that the marginal effect of [predictor]
             is significant for [moderator] levels below [value]. Thus, Hypothesis [H] is partially supported.
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             strategy: 1
           sources:
@@ -3595,7 +4245,8 @@ estimators:
             moderation test: mediator carries the moderation of moderator 1].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -3610,7 +4261,8 @@ estimators:
             X], [interpretation of direction].'
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -3625,7 +4277,8 @@ estimators:
             the interaction between [mediator] and [IV] mediates the moderating effect of [moderator].
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -3705,7 +4358,8 @@ estimators:
           skeleton: '[R5-经济显著性] 经济显著性不嵌入R3主效应段落，而是在Discussion中以back-of-the-envelope calculation独立呈现：将系数转化为具体金额（如04,367 lobbying
             → 1 fewer voluntary recall），并结合平均recall规模（235,638 vehicles）与单位成本假设（0/vehicle）估算总节省金额（~2 million）。适用于IV/计数模型中系数为计数单位、需要额外换算为市场/政策含义的场景。'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -3719,7 +4373,8 @@ estimators:
           skeleton: A one-standard-deviation increase in [predictor] from the mean value ([from] to [to]) [increased/decreased]
             the probability of [outcome] from [base]% to [new]%.
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             strategy: 1
           sources:
@@ -3749,7 +4404,8 @@ estimators:
             or impact].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -3764,7 +4420,8 @@ estimators:
             of [unit].
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -3779,7 +4436,8 @@ estimators:
             $[value] in savings.
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -3811,7 +4469,8 @@ estimators:
             significant indirect moderation effect in [outcome]. All models account for unobserved heterogeneity with [fixed
             effects]. 该句式将非显著发现嵌入同一表格报告段落，避免独立R6槽位，保持叙事连贯性。'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -3826,7 +4485,8 @@ estimators:
             Figure [Z] indicates that the marginal effect of [predictor] is significant for [moderator] levels below [value].
             Thus, Hypothesis [H] is partially supported.
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             strategy: 1
           sources:
@@ -3858,7 +4518,8 @@ estimators:
           skeleton: '[R8-外生事件] 将外生事件（如Flint水危机）作为补充分析而非主识别策略：描述事件如何影响处理企业（GM）的lobbying但不影响recall，构建pre/post相对其他企业的双重差分，报告mean
             values变化与DiD结果，并明确标注该分析为relative assessment，结果consistent with previous results。适用于IV设计中寻求外部效度增强的场景。'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -3876,7 +4537,8 @@ estimators:
             these additional analyses suggest that, while [tactic1] and [tactic2] are both relevant, [tactic1] is likely to
             be primary and more active than [tactic2].
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             strategy: 1
           sources:
@@ -3946,7 +4608,8 @@ estimators:
             Additionally, a variance inflation factor analysis was conducted and produced values within the acceptable limit
             of [threshold], suggesting that multicollinearity was not a significant issue.
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             strategy: 1
           sources:
@@ -3971,7 +4634,8 @@ estimators:
       from_slot: R5
       to_slot: ''
       paper_count: 1
-      status: EMERGING
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
       note: 这是一种R5后置策略，适用于系数单位为计数、需要额外假设才能转化为经济含义的设计（IV/计数模型）。
     - id: csp_IV_2SLS_R7_93f6f742
       pattern: IV论文的稳健性检验采用了罕见的exogenous event + DiD组合：以Flint水危机作为外生冲击，验证GM的lobbying增加与recall下降的双重差异。这不是主识别策略，而是作为external
@@ -3979,7 +4643,8 @@ estimators:
       from_slot: R7
       to_slot: ''
       paper_count: 1
-      status: EMERGING
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
       note: 为IV设计提供了除GMM/非线性之外的外部效度检验新范式，可作为R8或R7的补充块。
     - id: csp_IV_2SLS_R2-R3_e317a29d
       pattern: Results部分以Table 4（IV 2SLS主效应）和Table 5（Moderation）两张表完成全部假设检验，无模型序列递增（Model 1→2→3）。导航语句极简：[Table X contains
@@ -4059,7 +4724,8 @@ estimators:
       from_slot: R4
       to_slot: ''
       paper_count: 1
-      status: EMERGING
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)"
       note: Currently rare in corpus; adds a three-part R4 structure for IV papers with mediated moderation.
     - id: csp_IV_2SLS_R7_2e0be584
       pattern: Robustness organized by multiple distinct threats (carryover, simultaneity, exogenous event, nonlinear specification)
@@ -4703,7 +5369,8 @@ estimators:
         - id: r2_gmm_nested_mmsc_aic
           skeleton: Nested GMM model comparison using MMSC-AIC; stepwise Model 1→2→3 tied to incremental mechanisms
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -4720,7 +5387,8 @@ estimators:
         - id: r3_state_space_initial_sigma_path
           skeleton: 'RQ-driven reporting: initial λ₀ + σ diagnostic → recovered path inference → theory-linked interpretation'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -4735,7 +5403,8 @@ estimators:
         - id: r3_dual_level_indirect_heterogeneity
           skeleton: Nameplate vs parent indirect channels + strong/weak brand carryover heterogeneity + endogeneity confirmation
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -4751,7 +5420,8 @@ estimators:
         - id: r8_counterfactual_decomposition
           skeleton: With/without shock counterfactual fit + short/long-term loss + four-channel decomposition
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -4766,7 +5436,8 @@ estimators:
         - id: r8_policy_simulation_non_optimal
           skeleton: Non-optimality framing + scenario ladder reallocation simulation on validation sample
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -4943,6 +5614,61 @@ estimators:
       R7: 稳健性机械罗列而非按 threat 组织
       R9: 缺 climax 后 stakeholder 收束
     slots:
+      R2:
+        description: ''
+        skeleton_variants:
+        - id: r2_eventstudy_test_statistic_triple_endorsement
+          skeleton: 'To assess the significance of [excess returns] for each group, we used the following test statistic suggested
+            by [author] ([year]): [formula], where [A_t] is the average cumulated [return measure] over the relevant observation
+            period, and [S(A_t)] is the time-series standard deviation of [excess returns] over a [N]-day estimation period.
+            When [assumptions hold], this statistic has a [distribution] under the null hypothesis. Moreover, simulation studies
+            suggest that this test statistic is well-specified for samples of [N] or more and for observation periods of various
+            lengths ([citations]). This estimation approach is used in most of the prior event studies of [the event] and has
+            become a standard event methodology in the [field] literature ([citations]).'
+          verbatim_anchor: Moreover, simulation studies suggest that this test statistic is well-specified for samples of 50
+            or more and for observation periods of various lengths (Dodd and Warner, 1983; Brown and Warner, 1985).
+          skeleton_level: paragraph
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-08-28: 单源足矣)'
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - westphal_zajac_1998_symbolic_management
+          transferability: high
+          paradigm_exclusivity: 事件研究分组 AR/CAR 显著性检验统计量的方法选择声明
+          rhythm_tags:
+          - test_statistic_formula
+          - triple_endorsement
+          - simulation_well_specified
+          - convention_precedent
+          notes: corpus 事件研究法 变体9（Analysis §Stock Market Reactions）；原始出处→模拟证据适用域→惯例先例三重背书，公式逐符号给实质定义
+          corpus_path: econometric-models/事件研究法.md
+        - id: r2_grouped_car_column_navigation_adjudication
+          skeleton: The results in column [1] indicate significantly positive [excess returns] for all [adopting units] across
+            all [N] time intervals, providing consistent evidence for [a favorable market reaction] to [the event], but the
+            results reported in columns [2] and [3] of table [x] support H[x], which predicted that [units] would experience
+            [a positive reaction] to [the event], whether or not [the implementation condition]. [Excess returns] are significantly
+            positive for [group A] and for [group B] across all [N] intervals examined.
+          verbatim_anchor: Excess returns are significantly positive for substantive adopters and for symbolic adopters across
+            all four intervals examined.
+          skeleton_level: paragraph
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-08-28: 单源足矣)'
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - westphal_zajac_1998_symbolic_management
+          transferability: high
+          paradigm_exclusivity: 分组均值 CAR（非回归系数）为主检验的事件研究表格导航→假设裁决
+          rhythm_tags:
+          - column_navigation
+          - baseline_vs_groups
+          - hypothesis_adjudication
+          - all_window_consistency
+          notes: corpus 事件研究法 变体10（Results Table 2 P1）；column 1 是铺垫不是主检验；假设复述自带理论尾从句（whether or not implemented）
+          corpus_path: econometric-models/事件研究法.md
       R3:
         description: ''
         skeleton_variants:
@@ -4961,7 +5687,8 @@ estimators:
             proactive product-recall strategy as a signal of severe financial losses.
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -4977,6 +5704,64 @@ estimators:
           - support
           - signal_interpretation
           notes: 填补 Patell+分组 CAR 主检验缺口；对照策略 null 正面报告；百分点幅度嵌入 R3
+          corpus_path: econometric-models/事件研究法.md
+      R4:
+        description: ''
+        skeleton_variants:
+        - id: r4_moderation_group_comparison_ttest_adjudication
+          skeleton: '[H#] predicted that when [the event] is accompanied by [the moderator], it would engender a more favorable
+            [response], irrespective of [the implementation condition]. Results on [the outcome] for cases of [the event] with
+            and without [the moderator] provide strong and consistent evidence for H#: [events] providing [the moderator] elicit
+            more positive [responses] than [events] without [the moderator], and this holds true for both [category A] and [category
+            B]. T-tests indicated highly significant differences between [category A] with [the moderator] and [category A]
+            without [the moderator] for each of the [N] [windows]; values ranged from [t1] to [t2].'
+          verbatim_anchor: T-tests indicated highly significant differences between symbolic adoption with an agency explanation
+            and symbolic adoption without an agency explanation for each of the four time windows; values ranged from 8.69 to
+            11.98.
+          skeleton_level: paragraph
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-08-28: 单源足矣)'
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - westphal_zajac_1998_symbolic_management
+          transferability: high
+          paradigm_exclusivity: 二分调节×二分处理的分组均值对比裁决（四格拆分的 Results 侧兑现）
+          rhythm_tags:
+          - direction_then_test
+          - group_ttest
+          - per_window_replication
+          - range_reporting
+          notes: corpus 事件研究法 变体11（Results Table 2 P2）；组间 t 检验须在 Methods 声明配套设计；区间式报告仅适用同向同显著多窗结果
+          corpus_path: econometric-models/事件研究法.md
+        - id: r4_main_effect_protection_after_interaction
+          skeleton: 'The fact that [events] without [the moderator] show weaker positive [responses] should not be interpreted
+            as suggesting that [the moderator] is more important than [the event] itself. [The event], whether [form A or form
+            B], is a prerequisite to providing [the moderator], since [the moderator] points specifically to [the event] in
+            claiming that [the theoretical claim]. Also, as [methodologist] ([year]: [pages]) noted in their discussion of main
+            effects and interaction effects, knowing that a positive relationship between [X] and [Y] is greater in the presence
+            of [W] does not ''diminish the utility of the information'' that there is an average main effect. The results show
+            that [the event] leads to [the response] (H[x]) and that the presence of [the moderator] is a powerful moderator
+            of that positive relationship.'
+          verbatim_anchor: The fact that LTIP adoptions without an agency explanation show weaker positive excess returns should
+            not be interpreted as suggesting that verbal explanations are more important than LTIP adoption.
+          skeleton_level: paragraph
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-08-28: 单源足矣)'
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - westphal_zajac_1998_symbolic_management
+          transferability: high
+          paradigm_exclusivity: 调节变量与主效应逻辑绑定（披露依附于事件）的交互设计；预判"交互贬损主效应"误读的保护段
+          rhythm_tags:
+          - misreading_preempt
+          - prerequisite_logic
+          - methodologist_backing
+          - dual_verdict_close
+          notes: corpus 事件研究法 变体12（Results Table 2 P2 段内转折）；保护段仅在主效应构念定义性先于调节变量时合法，纯统计 main effect 不得借用
           corpus_path: econometric-models/事件研究法.md
       R7:
         description: ''
@@ -4996,7 +5781,8 @@ estimators:
             parameters βλ1 and βλ0 are not significantly different from zero for the proactive subsample and the passive subsample.
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -5012,6 +5798,35 @@ estimators:
           - unbiased_confirmation
           notes: null λ 不能证明无内生性；因果语言优先 associated with
           corpus_path: econometric-models/事件研究法.md
+      R8:
+        description: ''
+        skeleton_variants:
+        - id: r8_out_of_scope_pattern_strongest_test
+          skeleton: Although our hypotheses were limited to [the focal condition], this pattern of results also applies to [the
+            broader condition], which is also as we would expect. Our prediction is not that [the focal condition] will have
+            a larger impact on [the outcome] than [the broader condition] but, rather, that they too can have a significant effect
+            on [the outcome]. While the results show that [the moderator] also accentuates the market''s response to [the broader
+            condition], the significant hypothesized effect of [the moderator] for [the hardest case]—[adopted but not implemented]—provides
+            a particularly strong test of the consequences of [the focal claim].
+          verbatim_anchor: the significant hypothesized effect of agency explanations for decoupled LTIPs—adopted but not implemented—provides
+            a particularly strong test of the consequences of symbolic management.
+          skeleton_level: paragraph
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-08-28: 单源足矣)'
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - westphal_zajac_1998_symbolic_management
+          transferability: high
+          paradigm_exclusivity: 假设范围外对照组（恰为焦点主张最难情形）也显著时的"最强检验"框架
+          rhythm_tags:
+          - out_of_scope_extension
+          - prediction_boundary_restated
+          - hardest_case_test
+          - concessive_structure
+          notes: corpus 事件研究法 变体13（Results Table 2 P3 假设范围外延伸段）；范围外结果与理论冲突时须如实报告为边界发现，不得包装为强检验
+          corpus_path: econometric-models/事件研究法.md
       R9:
         description: ''
         skeleton_variants:
@@ -5025,7 +5840,8 @@ estimators:
             from a consumer's perspective ... it may be interpreted by the stock market negatively.
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
           subfield_distribution:
             marketing: 1
           sources:
@@ -5275,3 +6091,24 @@ batch_history:
   novel_patterns_count: 0
   notes: 'Gate① writeback: 事件研究法 +3 (R3 subgroup AR multitest; R7 Heckman null-λ; R9 stakeholder coda); OLS-FE +1 (R8 legacy
     Kenny complete mediation + signal). First registry entry for 事件研究法. No SKILL/PDM change.'
+- batch_id: batch_34_wowak2020
+  timestamp: '2026-08-28'
+  estimator_family: 计数模型 / OLS_FE / IV_2SLS
+  source_paper: wowak_2020_female_directors_recalls
+  source_subfield: strategy
+  slot_updates_count: 6
+  novel_patterns_count: 6
+  notes: 'wowak2020 (M&SOM, female directors -> product recalls): 计数模型 R3+R8, OLS-FE R3, IV-2SLS R7 x3; all VERIFIED
+    via expert_audit_override (用户 2026-08-28: 产品召回为主研究领域，单源足矣). Slot rows were SKIPPED by corpus_writeback.py
+    schema mismatch and manually backfilled/verified. No SKILL/PDM change.'
+- batch_id: batch_37_westphalbednar2005
+  timestamp: '2026-08-29'
+  estimator_family: OLS_FE
+  source_paper: westphal_j_d_and_bednar_m_k_2005_pluralistic_ignorance_in_co
+  source_subfield: strategy
+  slot_updates_count: 3
+  novel_patterns_count: 3
+  notes: 'Westphal & Bednar 2005 (ASQ, pluralistic ignorance), 轻量蒸馏（用户裁决 2005 年老论文 results 简化）。Gate① writeback:
+    OLS-FE ADD 变体68 interaction_channel_decomposition (R4 交互经由差值DV分量分解) + 变体69 premise_empirical_validation (R8
+    样本内前提检验+Heckman交底) + 变体70 a_priori_decision_rule_statement (R2 先验支持判据句); all EMERGING 单源 (用户点名 Westphal
+    为最喜爱学者——学习优先级提升，证据等级按规则保持 EMERGING). Slot skeleton rows 未逐条 bump（变体为文件级新增），待后续同范式蒸馏时归位。'

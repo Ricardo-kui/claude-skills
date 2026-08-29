@@ -28,6 +28,7 @@ analysis_focus:
 classification:
   theoretical_problem_form: [mechanism-paradox, dynamic-process-gap]
   narrative_dynamics: [parallel-process-reconciliation, sequential-pathway-redirection, mechanism-as-rising-action, integration-as-boundary]
+  retrieval_signals: [title-echo-preview, tension-relay-two-layer, misbelief-stakes, contribution-tension-mirror, time-staged-promise]
   confidence: reviewed
 section_learning:
   introduction:
@@ -36,6 +37,8 @@ section_learning:
     learn:
       - "State why two apparently contradictory mechanism claims can coexist before treating them as rival answers: here greater change orientation and lower risk taking jointly imply a shift in how renewal is pursued."
       - "Give the reader a higher-order outcome that makes the two paths consequential together—redirecting renewal from buying capabilities to building them—rather than merely announcing two dependent variables."
+      - "Answer the title's question word-for-word in the preview sentence—pairing the process (cognition shifts) with the content (R&D, M&A) of renewal—so the title-to-promise loop closes inside the introduction while promising scope, not result direction: here 'what changes after women enter TMTs, and why' is echoed verbatim."
+      - "Relay the tensions instead of stacking them—let the dynamic-mechanism gap (descriptive versus explanatory) set the ground for the deeper assumption paradox, weld stakes to that gap as a named decision-maker misbelief (believing that mere presence on a TMT causes favorable outcomes) rather than a standalone stakes paragraph, and spend the middle contribution slot on resolving exactly the paradox the tension section pinned."
     caveat:
       - "Transfer only when the mechanisms are genuinely tension-producing and each has a theoretically distinct downstream pathway that bears on one coherent strategic change."
       - "Do not use demographic categories, gendered claims, or a pair of outcomes as a shortcut to manufacture a paradox; the paradox must pre-exist the proposed narrative and be addressed with evidence."

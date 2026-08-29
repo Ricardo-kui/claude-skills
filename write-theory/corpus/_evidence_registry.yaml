@@ -6,12 +6,12 @@
 meta:
   schema_version: "1.0.0"
   registry_type: theory-fragment-registry
-  last_updated: "2026-08-12"
-  total_papers_indexed: 68
-  batches_processed: 26
+  last_updated: "2026-08-29"
+  total_papers_indexed: 72
+  batches_processed: 30
   auxiliary_sources_note: "Entries with source_tier: auxiliary are writing-craft books, not empirical papers. They register provenance and stay EMERGING until the pattern is cross-validated in empirical paper distills; they never count toward VERIFIED/ROBUST paper_count thresholds on their own."
-  latest_batch_note: "2026-08-12 Chen, Ganesan & Liu 2009 JM (Theory distill writeback, gate confirmed): ADD audience_foil_then_focal_signal_single_H (subprotocols/argumentation_patterns.md) + audience_foil_pivot_sentence (sentences/acknowledgment_response.md §5b) + comparative_main_effect_hypothesis_form (sentences/hypothesis_forms.md). All EMERGING single-source chenganesanliu2009, tfr_174-176. Build type = 机制推演型 (audience foil → focal signal → single comparative H); Gap=Inadequacy → B. Do NOT route to full G. _index.md quick-decision + subprotocol/sentence coverage updated; routing_table.md/SKILL.md/PDM untouched."
-  note: "Reverse-engineered from existing corpus anchors. Batch 2026-07-09: distilled 4 recall papers (Darby 2023 MSOM, Mayo 2022 POM, Ball 2018 JOM, Darby 2026 JOM) into subprotocols and registry. Batch 2026-07-10: expanded Cui, Yang & Vertinsky (SMJ) with inverted-U mechanism, bilateral argumentation, flatten/steepen language, and local closure templates. Batch 2026-07-22: distilled Li, Bapuji, Talluri, Singh & Narayanan (2025 JSCM, Vertical Spillover of Product Recalls) — added dual_mechanism_convergent_moderation pattern to bilateral_argumentation_templates.md (moderator×mechanism matrix) and registered H1 dual-mechanism convergence under existing dual_mechanism_same_direction. Batch 2026-07-22b: distilled Cutolo & Ferriani (2024 JOM, narratives & atypicality) — added minimal_pair_contrast_vignette pattern to argumentation_patterns.md (Leah controlled-contrast showing device); registered parallel_buffering_moderators_single_mechanism; cutolo_ferriani also a 2nd source for write-introduction theory-lens/02-dual-theory-layered (processing fluency + Bloom & Lahey taxonomy). Batch 2026-07-22c: distilled Falchetti, Cattani & Ferriani (2022 SMJ, Start with Why) — added congruency_fit_fluency_mechanism to sentences/mechanism_chain.md (genuine gap; spans Falchetti + Cutolo); CORRECTED misclassification of falchetti_2022_smj (was construct_differentiation tfr_017, has no such content) → reclassified to congruency mechanism; construct_differentiation source_count 5→4. Falchetti intro hook (23-popular-debate) and Methods (多研究 变体1/2, 实验 变体1) already distilled in prior sessions. Batch 2026-07-28: backfill + wiring batch — registered two auxiliary sources whose fragments entered corpus in the 2026-07-27/28 waves but were never registered: Booth/Williams/Colomb (The Craft of Research, premise soundness gate + warrant tests + acknowledgment-response matrix + voice firewall → reasoning_soundness_protocol.md, acknowledgment_response.md) and Greene & Lidinsky 2017 (Rogerian four-step → acknowledgment_response.md §5; fallacy probes → reasoning_soundness_protocol.md §8). Same batch wired the registry into consumption: corpus/_index.md selection-stage pointer, write-theory/SKILL.md resource-loading clause, distill-theory-exemplar Phase 4 registry-writeback protocol. Registry previously orphaned (no .md referenced it) since creation. Batch 2026-08-03: distilled Schumacher, Keck & Tang (2020, SMJ); added the belief-updating/attention-threshold reversal pattern as EMERGING. Reference-level writeback was explicitly authorized by the user; no core routing or mandatory-slot rule was changed."
+  latest_batch_note: "2026-08-29 Westphal & Bednar 2005 ASQ (Pluralistic Ignorance in Corporate Boards, 整篇蒸馏 writeback, expert_audit_override: 用户 2026-08-29 点名 Westphal 为最喜爱学者、写作学习首选模板，Westphal 系第 6 篇，单源即 VERIFIED): ADD mechanism_precondition_context_amplifier (argumentation_patterns 模式F) + rival_construct_opposing_sign_disambiguation (argumentation_patterns 模式E) + willingness_opportunity_dual_path_moderation (moderator_selection_frameworks 框架B) + actor_scoping_two_reasons_boundary (board_governance_boundary_condition 模式A) + group_level_construct_justification (construct_definition 句式N) + embedded_assumption_declaration (hypothesis_forms 句式F) + levels_rhetoric_labeled_moderator_opener (leitmotif-section-opener 句式A); EXTEND collective_decision_rule_trap (mechanism_chain 句式C) + self_reinforcing_spiral_loop_sentence (mechanism_chain 句式B) + comparative_misconception_hypothesis_form (hypothesis_forms 句式E) + mediated_moderation_two_part_hypothesis (hypothesis_forms 句式D), tfr_199-209. _index.md 快速决策表已同步 2 行。"
+  note: "Reverse-engineered from existing corpus anchors. Batch 2026-07-09: distilled 4 recall papers (Darby 2023 MSOM, Mayo 2022 POM, Ball 2018 JOM, Darby 2026 JOM) into subprotocols and registry. Batch 2026-07-10: expanded Cui, Yang & Vertinsky (SMJ) with inverted-U mechanism, bilateral argumentation, flatten/steepen language, and local closure templates. Batch 2026-07-22: distilled Li, Bapuji, Talluri, Singh & Narayanan (2025 JSCM, Vertical Spillover of Product Recalls) — added dual_mechanism_convergent_moderation pattern to bilateral_argumentation_templates.md (moderator×mechanism matrix) and registered H1 dual-mechanism convergence under existing dual_mechanism_same_direction. Batch 2026-07-22b: distilled Cutolo & Ferriani (2024 JOM, narratives & atypicality) — added minimal_pair_contrast_vignette pattern to argumentation_patterns.md (Leah controlled-contrast showing device); registered parallel_buffering_moderators_single_mechanism; cutolo_ferriani also a 2nd source for write-introduction theory-lens/02-dual-theory-layered (processing fluency + Bloom & Lahey taxonomy). Batch 2026-07-22c: distilled Falchetti, Cattani & Ferriani (2022 SMJ, Start with Why) — added congruency_fit_fluency_mechanism to sentences/mechanism_chain.md (genuine gap; spans Falchetti + Cutolo); CORRECTED misclassification of falchetti_2022_smj (was construct_differentiation tfr_017, has no such content) → reclassified to congruency mechanism; construct_differentiation source_count 5→4. Falchetti intro hook (23-popular-debate) and Methods (多研究 变体1/2, 实验 变体1) already distilled in prior sessions. Batch 2026-07-28: backfill + wiring batch — registered two auxiliary sources whose fragments entered corpus in the 2026-07-27/28 waves but were never registered: Booth/Williams/Colomb (The Craft of Research, premise soundness gate + warrant tests + acknowledgment-response matrix + voice firewall → reasoning_soundness_protocol.md, acknowledgment_response.md) and Greene & Lidinsky 2017 (Rogerian four-step → acknowledgment_response.md §5; fallacy probes → reasoning_soundness_protocol.md §8). Same batch wired the registry into consumption: corpus/_index.md selection-stage pointer, write-theory/SKILL.md resource-loading clause, distill-theory-exemplar Phase 4 registry-writeback protocol. Registry previously orphaned (no .md referenced it) since creation. Batch 2026-08-03: distilled Schumacher, Keck & Tang (2020, SMJ); added the belief-updating/attention-threshold reversal pattern as EMERGING. Reference-level writeback was explicitly authorized by the user; no core routing or mandatory-slot rule was changed. Batch 2026-08-28: distilled Wowak, Ball, Post & Ketchen (M&SOM, female directors → product recall decisions), tfr_182-187, all VERIFIED per user expert_audit_override (产品召回为主研究领域单源足矣); context_assigned_margin_split additionally registered as a core_candidate observation item in _skill_design_feedback.yaml. Batch 2026-08-28b: distilled Westphal & Zajac (1998, ASQ, The Symbolic Management of Stockholders), tfr_188-195, all VERIFIED per user expert_audit_override (公司治理/符号管理为主研究领域单源足矣); 8 fragments across B_mechanism_elaboration (交替对立再诠释 + 硬/软数字测量重构), argumentation_patterns (判别式替代解释排除 + 两极之间假设声明), hypothesis_derivation_patterns (符号替代-预防-固权), hypothesis_organization_patterns (受众异质性 pivot), hypothesis_forms (实施权变从句), moderation (编号双 DV 交互). Batch 2026-08-29: distilled Post, Lokshin & Boone (2022, AMJ, What Changes After Women Enter Top Management Teams? A Gender-Based Model of Strategic Renewal), tfr_196-198, all VERIFIED per user expert_audit_override (用户点名喜爱本篇，单源足矣); 3 fragments across hypothesis_organization_patterns (中介配对分流→共享重构主干), hypothesis_forms (时间分阶 Δ 假设), moderator_selection_frameworks (新声音整合轴); _index.md 快速决策表已同步."
 
 status_rules:
   EMERGING:
@@ -149,21 +149,24 @@ source_papers:
         home_files:
           - "sentences/mechanism_chain.md"
         makadok_dimension: "Mechanism"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       - fragment_id: tfr_008
         type: construct_definition_classic
         title: "经典综述式构念界定"
         home_files:
           - "sentences/construct_definition.md"
         makadok_dimension: "Constructs"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       - fragment_id: tfr_009
         type: categorical_moderation_group_contrast
         title: "分组调节对称对比"
         home_files:
           - "sentences/moderation.md"
         makadok_dimension: "Boundary"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
 
   darby_2025_jscm:
     display_name: "Darby (2025, JSCM)"
@@ -178,7 +181,8 @@ source_papers:
         home_files:
           - "sentences/moderation.md"
         makadok_dimension: "Boundary"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
 
   darby_2023_msom:
     display_name: "Darby (2023, MSOM)"
@@ -193,7 +197,8 @@ source_papers:
         home_files:
           - "sentences/mechanism_chain.md"
         makadok_dimension: "Mechanism"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "CEO stock ownership → recall timing via multiple parallel mechanisms."
       - fragment_id: tfr_087
         type: multi_source_parallel_mechanism_three_reasons
@@ -201,7 +206,8 @@ source_papers:
         home_files:
           - "subprotocols/hypothesis_derivation_patterns.md"
         makadok_dimension: "Mechanism"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "Three independent reasons why CEO stock ownership delays recalls (firm-financial / CEO power / personal financial)."
       - fragment_id: tfr_088
         type: categorical_severity_moderation_embedded
@@ -209,7 +215,8 @@ source_papers:
         home_files:
           - "subprotocols/bilateral_argumentation_templates.md"
         makadok_dimension: "Boundary"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "High-severity vs low-severity recalls alter the stock-ownership → timing relationship."
 
   desai_2012_amj:
@@ -491,7 +498,8 @@ source_papers:
         home_files:
           - "sentences/mechanism_chain.md"
         makadok_dimension: "Mechanism"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "H1 trunk: agency/myopia → recall trade-off (avoid ST costs vs litigation risk) → UD shock weakens discipline → opportunism dominates → fewer recalls. Concession-rebuttal via prospect theory precedes trade-off."
       - fragment_id: tfr_026
         type: unified_framework_moderator_selection
@@ -499,7 +507,8 @@ source_papers:
         home_files:
           - "sentences/moderation.md"
         makadok_dimension: "Boundary"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "H2/H3: Husted (2007) intrinsic culture (customer focus) + extrinsic normative control (institutional ownership); parallel subsections each weaken H1 negative association."
       - fragment_id: tfr_150
         type: dual_lens_main_boundary_division
@@ -507,7 +516,8 @@ source_papers:
         home_files:
           - "subprotocols/argumentation_patterns.md"
         makadok_dimension: "Boundary"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "Agency theory for H1 mechanism; business ethics (Husted 2007) exclusively for boundary moderator selection — not dual-theory same-stage."
 
   jiang_2026_jibs:
@@ -731,28 +741,32 @@ source_papers:
           - "sentences/mechanism_chain.md"
           - "subprotocols/B2_dual_track.md"
         makadok_dimension: "Mechanism"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       - fragment_id: tfr_037
         type: paired_hypotheses_same_iv_dual_dv
         title: "配对假设 a/b 格式"
         home_files:
           - "sentences/hypothesis_forms.md"
         makadok_dimension: "Mechanism"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       - fragment_id: tfr_038
         type: track_level_local_closure
         title: "轨道级局部收束"
         home_files:
           - "sentences/closure.md"
         makadok_dimension: "Mechanism"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       - fragment_id: tfr_039
         type: numerical_instantiation_mechanism
         title: "数字实例化机制句"
         home_files:
           - "sentences/mechanism_chain.md"
         makadok_dimension: "Mechanism"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
 
   mannor_wowak_bartkus_gomez_mejia_2016_smj:
     display_name: "Mannor, Wowak, Bartkus & Gomez-Mejia (2016, SMJ)"
@@ -1264,7 +1278,8 @@ source_papers:
         home_files:
           - "sentences/construct_definition.md"
         makadok_dimension: "Constructs"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED；wowak2025 确认为 TMT 政治意识形态×召回时机/频率)"
       - fragment_id: tfr_080
         type: competing_mechanism_chain
         title: "竞争机制链"
@@ -1272,7 +1287,8 @@ source_papers:
           - "sentences/mechanism_chain.md"
           - "variants/F_competing_hypotheses.md"
         makadok_dimension: "Mechanism"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED；wowak2025 确认为 TMT 政治意识形态×召回时机/频率)"
 
   wu_2025_orgsci:
     display_name: "Wu (2025, OrgSci)"
@@ -1390,7 +1406,8 @@ source_papers:
         home_files:
           - "subprotocols/argumentation_patterns.md"
         makadok_dimension: "Mechanism"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "Attribution theory for early CEO tenure; signaling theory for late tenure."
       - fragment_id: tfr_090
         type: industry_context_as_scope_condition
@@ -1398,7 +1415,8 @@ source_papers:
         home_files:
           - "subprotocols/argumentation_patterns.md"
         makadok_dimension: "Boundary"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "Consumer products recall frequency/regulation contrasted with auto/medical/pharma/food."
 
   ball_shah_donohue_2018_jom:
@@ -1414,7 +1432,8 @@ source_papers:
         home_files:
           - "subprotocols/argumentation_patterns.md"
         makadok_dimension: "Mechanism"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "Defect detectability → lower recall likelihood via perceived harm or perceived cost."
 
   darby_wowak_ketchen_connelly_2026_jom:
@@ -1430,7 +1449,8 @@ source_papers:
         home_files:
           - "subprotocols/hypothesis_derivation_patterns.md"
         makadok_dimension: "Mechanism"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "Agency theory: executive compensation lever already studied; monitoring/control lever examined here."
       - fragment_id: tfr_093
         type: information_asymmetry_meta_framework_two_moderators
@@ -1438,7 +1458,8 @@ source_papers:
         home_files:
           - "subprotocols/moderator_selection_frameworks.md"
         makadok_dimension: "Boundary"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "R&D intensity (firm-level) and device class (product-level) both heighten information asymmetry."
       - fragment_id: tfr_094
         type: categorical_device_class_bilateral
@@ -1446,7 +1467,8 @@ source_papers:
         home_files:
           - "subprotocols/bilateral_argumentation_templates.md"
         makadok_dimension: "Boundary"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "FDA device class I/II vs III as information asymmetry boundary condition."
 
   li_bapuji_talluri_singh_narayanan_2025_jscm:
@@ -1463,7 +1485,8 @@ source_papers:
           - "subprotocols/argumentation_patterns.md"
           - "sentences/mechanism_chain.md"
         makadok_dimension: "Mechanism"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "H1 vertical spillover via cash-flow effect (pipes) + impression effect (prisms) converging on supplier value loss."
       - fragment_id: tfr_123
         type: dual_mechanism_convergent_moderation
@@ -1471,7 +1494,8 @@ source_papers:
         home_files:
           - "subprotocols/bilateral_argumentation_templates.md"
         makadok_dimension: "Boundary"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "Each moderator (common business ties / institutional ownership / analyst coverage) reasoned through both pipe and prism channels, converging on a signed hypothesis; presented as a moderator×mechanism matrix table."
 
   cutolo_ferriani_2024_jom:
@@ -1640,7 +1664,8 @@ source_papers:
           - "subprotocols/hypothesis_derivation_patterns.md"
           - "variants/G_dialectical_opposition.md"
         makadok_dimension: "Mechanism / Output / Boundary"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "R3-primary, R2-secondary strict Incommensurability exemplar. A higher-order outcome-family conflict is narrowed to fixed activity intensity→recall likelihood; execution costs dominate initially and learning routines dominate at higher activity. Mechanisms remain B0 explanations rather than measured mediators. Gap-audit 2026-08-05: Intro↔Theory Gap label aligned (Incommensurability); no drift."
       - fragment_id: tfr_146
         type: product_harm_recall_construct_boundary
@@ -1648,7 +1673,8 @@ source_papers:
         home_files:
           - "meta/product_safety_construct_lexicon.md"
         makadok_dimension: "Constructs / Measurement Boundary"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "The binary firm-year outcome records at least one FDA Class I/II recall. It does not measure product-level failure probability, recall count, continuous severity, timing, or voluntariness."
       - fragment_id: tfr_145b
         type: inverted_u_mode_differentiated_geometry
@@ -1658,7 +1684,8 @@ source_papers:
           - "variants/G_dialectical_opposition.md"
           - "sentences/moderation.md"
         makadok_dimension: "Boundary / Mode"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "Gap-audit ADD 2026-08-05. Shared cost–learning inverted-U trunk; same W (turbulence) shifts Mode A (unilateral) upward and steepens Mode B (bilateral). Complements Cui flatten/steepen and Lee–Park turning-point delay. L2 optional; not core routing."
       - fragment_id: tfr_145c
         type: inverted_u_vertical_shift_language
@@ -1666,7 +1693,8 @@ source_papers:
         home_files:
           - "sentences/moderation.md"
         makadok_dimension: "Boundary"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "Gap-audit ADD 2026-08-05. Distinguishes vertical locus shift from steepen/flatten and turning-point delay; anchored by Bendig H3."
 
   anderson_reeb_2004_asq:
@@ -1812,7 +1840,8 @@ source_papers:
         home_files:
           - "subprotocols/hypothesis_organization_patterns.md"
         makadok_dimension: "Mechanism / Boundary / Output"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "Single-paper section variant. CEO narcissism feeds competitive aggressiveness and three outcome branches; marketing power/customer orientation targets the product-safety branch. Each branch requires its own warrant, and the unsupported radical-innovation indirect effect must remain visible."
       - fragment_id: tfr_144
         type: product_harm_recall_construct_boundary
@@ -1820,7 +1849,8 @@ source_papers:
         home_files:
           - "meta/product_safety_construct_lexicon.md"
         makadok_dimension: "Constructs / Measurement Boundary"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "The KLD safety-concern indicator captures recorded product-harm crisis occurrence, not recall timing, recall strategy, crisis severity, or defect-awareness timing. Recall passivity appears only as a future-research conjecture."
 
   desjardine_li_shi_2025_amj:
@@ -1986,7 +2016,8 @@ source_papers:
         home_files:
           - "subprotocols/argumentation_patterns.md"
         makadok_dimension: "Mechanism"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "对手受众正面解读作 foil → 焦点受众负面信号链 → 单一比较主效应；勿升格为变体 G 成对受众假设。待第二篇交叉验证。"
       - fragment_id: tfr_175
         type: audience_foil_pivot_sentence
@@ -1994,7 +2025,8 @@ source_papers:
         home_files:
           - "sentences/acknowledgment_response.md"
         makadok_dimension: "Mode"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "一句完成 foil→focal 受众切换；非 Booth 异议处置矩阵条目。配套 tfr_174。"
       - fragment_id: tfr_176
         type: comparative_main_effect_hypothesis_form
@@ -2002,21 +2034,371 @@ source_papers:
         home_files:
           - "sentences/hypothesis_forms.md"
         makadok_dimension: "Mechanism"
-        status: "EMERGING"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "[Strategy A] is more negatively related to [DV] than [Strategy B]；非相对零的简单主效应。配套 tfr_174。"
 
+  ball_anastasov_smith_bercovitz_2018_smj:
+    display_name: "Ball, Anastasov, Smith & Bercovitz (2018, SMJ)"
+    journal: "Strategic Management Journal"
+    year: 2018
+    subfield: "strategy / product recalls / manufacturing"
+    theory_build_type: "Mechanism"
+    gap_type: "Inadequacy"
+    gap_route: "B-primary"
+    citekey: "ball_2018_product_competition_managerial_discretion_and_manu"
+    fragments:
+      - fragment_id: tfr_177
+        type: institutional_regime_construct_anchor
+        title: "制度性制度框架锚定构念（Institutional-Regime Construct Anchor）"
+        home_files:
+          - "variants/E_moderation.md"
+        makadok_dimension: "Measurement"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)"
+        note: "IV 为抽象构念时用行业制度性二分类（审批路径/监管身份）作组间测量锚；制度设计意图即效度证据。corpus 变体A。"
+      - fragment_id: tfr_178
+        type: severity_split_bilateral_moderation_pair
+        title: "DV 严重度分级拆分调节成 H 强/弱异号对（Event-Attribute Split Bilateral Moderation Pair）"
+        home_files:
+          - "variants/E_moderation.md"
+        makadok_dimension: "Boundary"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)"
+        note: "moderator 为不可观测裁量构念时，用 DV 事件自身属性（严重度）切一对异号交互假设；须补属性→裁量的论证步。corpus 变体B。"
+      - fragment_id: tfr_179
+        type: counter_prediction_exclusion_before_H1
+        title: "H1 前反预测排除段（Counter-Prediction Exclusion before H1）"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)"
+        note: "主效应方向与直觉相反时，假设句前用两步式排除（前提缺失 + 结构不经济）处理同一 IV 的反方向机制；区别于 rival_prediction_rebuttal（排除 rival 理论）。corpus argumentation_patterns 变体B。"
+      - fragment_id: tfr_180
+        type: dual_path_convergence_single_hypothesis
+        title: "双路径收敛单假设（Dual-Path Convergence to a Single Directional Hypothesis）"
+        home_files:
+          - "variants/B_mechanism_elaboration.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)"
+        note: "两条机制路径（故意/无意）同号同终点 → 收敛为单一方向性假设，不拆竞争假设；路径 Warrant 不得全靠 practitioner 来源。corpus B 变体A。"
+      - fragment_id: tfr_181
+        type: interview_non_event_warrant
+        title: "知情者访谈非事件证据化（Interview Non-Event Warrant）"
+        home_files:
+          - "subprotocols/evidence_patterns.md"
+        makadok_dimension: "Mode"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)"
+        note: "未发生行为一侧无公共记录时用知情者访谈实例化，并钉在官方标准对照句上；样本量须标注，访谈是 warrant 不是数据。corpus evidence_patterns 变体A。"
+
+  wowak_ball_post_ketchen_2020_msom:
+    display_name: "Wowak, Ball, Post & Ketchen (2021, M&SOM)"
+    journal: "Manufacturing & Service Operations Management"
+    year: 2021
+    subfield: "strategy / product recalls / corporate governance"
+    theory_build_type: "Mechanism / Boundary"
+    gap_type: "Incompleteness"
+    citekey: "wowak_2020_female_directors_recalls"
+    fragments:
+      - fragment_id: tfr_182
+        type: decision_rights_preamble_indirect_governance
+        title: "决策权前言→间接治理链（Decision-Rights Preamble → Indirect-Governance Chain）"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)"
+        note: "上游治理主体不直接执行 focal decision 时，先以多源证据基础声明 + 具名决策权链条（monitor→committee→decision-maker→board review）定位其影响入口，再用 'do not make... but instead set the tone' 角色句显式否定直接干预；后续假设共享同一间接链，机制不出层次。corpus argumentation_patterns 决策权链 Pattern（wowak2020 §2）。"
+      - fragment_id: tfr_183
+        type: context_assigned_margin_split
+        title: "情境分配决策边际拆分（Context-Assigned Decision-Margin Split）"
+        home_files:
+          - "subprotocols/hypothesis_organization_patterns.md"
+        makadok_dimension: "Boundary"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)"
+        note: "同一前因作用于多个结果，但各结果决策边际不同（whether/when），由客观情境构念（severity）而非事后分组分配各边际的理论角色与机制；区别于 severity 调节单条 timing 关系（darby_2023_msom tfr_088）。core_candidate 观察项（design_feedback_candidate）：待第二独立源复现（候选对照 darby_2023_msom tfr_088 / wowak2025_MS）才可升 core_candidate。corpus hypothesis_organization_patterns Context-Assigned Decision-Margin Split（wowak2020 §2+§3）。"
+      - fragment_id: tfr_184
+        type: paired_opposite_default_vignettes
+        title: "反向默认对偶访谈轶事（Paired Opposite-Default Interview Vignettes）"
+        home_files:
+          - "subprotocols/evidence_patterns.md"
+        makadok_dimension: "Mode"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)"
+        note: "两个具名职务信源 + 结构对称的相反默认合成'离散谱系'证据；每个默认显式归因上游主体（不得只说 firm culture），第三方监管者访谈验证离散普遍性；与 tfr_182 决策权前言配套使用。corpus evidence_patterns Pattern（wowak2020 §2）。"
+      - fragment_id: tfr_185
+        type: dv_measure_relabeling_discretion
+        title: "召回计数的裁量重标（Count-as-Discretion Relabeling）"
+        home_files:
+          - "meta/product_safety_construct_lexicon.md"
+        makadok_dimension: "Measurement"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)"
+        note: "低严重度（class 3）召回计数重标为管理裁量度量而非产品质量度量（'we treat... as a measurement of... and not as a measure of... per se'）；高严重度侧裁量转移到时点（time-to-recall 起点须为 defect awareness）。corpus lexicon 条目'召回计数的裁量重标'。"
+      - fragment_id: tfr_186
+        type: margin_embedded_dv_hypothesis_forms
+        title: "边际内嵌 DV 假设句式（Margin-Embedded DV Hypothesis Forms）"
+        home_files:
+          - "sentences/hypothesis_forms.md"
+        makadok_dimension: "Measurement"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)"
+        note: "假设句 DV 措辞直接编码决策边际：whether 边际用 count of [low-severity recalls]，when 边际用 time-to-recall for [high-severity recalls]；防止把结果误读为'召回总体增加/普遍更快'。与 tfr_183 边际拆分配套。corpus hypothesis_forms 边际内嵌 DV 假设句式。"
+      - fragment_id: tfr_187
+        type: convergent_bundle_closure
+        title: "收敛束→假设句式（Convergent Bundle to Hypothesis）"
+        home_files:
+          - "sentences/closure.md"
+        makadok_dimension: "Mode"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)"
+        note: "多条异源机制引文（rule-following / risk perception / care orientation / community influencer）并置后用两个变体收敛到假设（'Taken together, these arguments bring us to...' / 'Combining these arguments leads us to...'），同篇内避免重复同一收敛句。corpus closure 收敛束→假设句式。"
+
+  westphal_zajac_1998_symbolic_management:
+    display_name: "Westphal & Zajac (1998, ASQ)"
+    journal: "Administrative Science Quarterly"
+    year: 1998
+    subfield: "strategy / corporate governance / symbolic management"
+    theory_build_type: "Mechanism / Boundary"
+    gap_type: "Incompleteness (primary) + Inadequacy (secondary)"
+    citekey: "westphal_zajac_1998_symbolic_management"
+    fragments:
+      - fragment_id: tfr_188
+        type: mech_symbolic_alternating_reframe
+        title: "交替对立再诠释型机制开题（Symbolic Alternating Reframe）"
+        home_files:
+          - "variants/B_mechanism_elaboration.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-28: 单源足矣)"
+        note: "每个假设小节以'学科内默认解释 → 社会视角再诠释'交替对立开题：先承认主流预设，再用 'may instead reflect' 把同一可观测信号重新归因，不推翻原解释只增加平行解释层；本体替换须可检验（成本→社会不确定性）。corpus B_mechanism_elaboration 变体B（§2.1 P4，全节 3 次复现）。"
+      - fragment_id: tfr_189
+        type: mech_hard_soft_signal_reframe
+        title: "硬数字/软数字测量本体重构（Hard/Soft Signal Measurement Reframe）"
+        home_files:
+          - "variants/B_mechanism_elaboration.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-28: 单源足矣)"
+        note: "用'硬数字 vs 软数字'隐喻把同一 DV（股价反应）在两视角下重构为两种存在物：符号行动从'遮蔽真实价值'升格为'参与建构价值'，为符号类自变量赋予对硬结果的因果地位；'neatly quantified and aggregated' 反讽短语保留量化表象。corpus B_mechanism_elaboration 变体C（§2.1 P5）。"
+      - fragment_id: tfr_190
+        type: argcontr_decoupling_discriminating_test
+        title: "判别式替代解释排除（Decoupling Discriminating Test）"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-28: 单源足矣)"
+        note: "把最强替代解释（语言属实/理性说服）直接转化为设计判别条件：decoupling 子样本即'语言与事实不符仍获正面反应'的自然实验，排除动作即假设检验本身；'would provide stronger evidence that X represents A and not merely B' 承认或然性；与引言 Inadequacy 次级 gap 首尾闭环。corpus argumentation_patterns 变体C（§2.2 P4）。"
+      - fragment_id: tfr_191
+        type: assum_between_extremes_bounded_rationality
+        title: "两极之间的假设声明段（Between-Extremes Bounded-Rationality Assumption）"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-28: 单源足矣)"
+        note: "机制链中段插入假设声明：双向否定两个极端（强式有效 vs 非理性），'Rather, we assume' 给出中间立场（intendedly but boundedly rational）；假设内容直接服务机制（reducing uncertainty 是符号行动起效前提），假设段即机制段。corpus argumentation_patterns 变体D（§2.1 P7）。"
+      - fragment_id: tfr_192
+        type: mech_symbolic_substitution_preemption
+        title: "符号替代-预防-固权三步机制（Symbolic Substitution-Preemption-Entrenchment Chain）"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-28: 单源足矣)"
+        note: "三步链：符号行动削减社会不确定性 → 替代其他治理机制（规范代理理论替代逻辑反向使用）→ 预防更难 decouple 的实质变革；'难以 decouple' 作为变革类型选择器；'In effect' 收束句把合规行为重铸为 subtle entrenchment device。corpus hypothesis_derivation_patterns 变体A（§2.3 P1）。"
+      - fragment_id: tfr_193
+        type: audpivot_heterogeneous_subgroup_voice
+        title: "受众异质性 pivot 至调节假设（Heterogeneous-Subgroup Voice Pivot）"
+        home_files:
+          - "subprotocols/hypothesis_organization_patterns.md"
+        makadok_dimension: "Boundary"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-28: 单源足矣)"
+        note: "'While our discussion thus far has treated [actors] as homogeneous' 零成本 pivot：主动承认前文简化假设，把引入调节变量从补丁升格为修正；exit/voice（Hirschman）给 moderator 独立理论依据（退出成本高→对治理信号更敏感）；pivot 段直接生成与 H3/H4 同构的 H3a/H4a 平行交互假设。corpus hypothesis_organization_patterns 变体A（§2.4 P1）。"
+      - fragment_id: tfr_194
+        type: hypform_implementation_contingency
+        title: "实施权变从句假设形式（Implementation-Contingency Hypothesis Form）"
+        home_files:
+          - "sentences/hypothesis_forms.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-28: 单源足矣)"
+        note: "'whether or not [it] is implemented' 尾从句把核心构念（decoupling）写进假设语法：每条假设同时是主预测 + decoupling 判别检验的复合声明；从句方向不变即'符号行动独立于实质实践起效'的形式化；比较式变体（with X than without X）叠加符号形式对照。corpus hypothesis_forms 变体B（H1/H2，全节 6/6 假设复用同尾从句）。"
+      - fragment_id: tfr_195
+        type: modform_numbered_dual_dv_interaction
+        title: "编号双因变量交互假设形式（Numbered Dual-DV Interaction Form）"
+        home_files:
+          - "sentences/moderation.md"
+        makadok_dimension: "Boundary"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-28: 单源足矣)"
+        note: "'(1)...(2)...' 编号把两个同族因变量压进单条假设：避免假设数翻倍又保持 H3/H4/H3a/H4a 逐条同构；交互方向用动词直接声明（amplify/diminish）；编号从句 + 实施权变尾从句叠加后单条假设携带 2 DV × 2 实施条件四格信息，对应正文 2×2 检验矩阵。corpus moderation 变体B（H3/H4 + H3a/H4a）。"
+  post_lokshin_boone_2022_amj:
+    display_name: "Post, Lokshin & Boone (2022, AMJ)"
+    journal: "Academy of Management Journal"
+    year: 2022
+    subfield: "strategic renewal / upper echelons / gender"
+    theory_build_type: "Mechanism / Boundary"
+    gap_type: "Incommensurability (R3, primary) + Incompleteness (secondary)"
+    citekey: "post_2022_women_tmt_strategic_renewal"
+    fragments:
+      - fragment_id: tfr_196
+        type: mediator_matched_dual_path_shared_trunk
+        title: "中介配对分流→共享重构主干（Mechanism-Matched Dual-Path Shared Trunk）"
+        home_files:
+          - "subprotocols/hypothesis_organization_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户点名喜爱本篇，单源足矣)"
+        note: "单一构成 IV 同时触发两个概念独立的中介（change orientation / risk-taking propensity），每个中介配对一个不同下游决策（R&D / M&A），双路径共同指向同一更高阶重构主张（strategic renewal）；区分证成段（三重证成）+ 结局配对证成段先行，再进入两条配对机制分支；区别于 B2 双维度双轨与 Bamberger 平行中介效应分解。corpus hypothesis_organization_patterns Pattern B（§Pattern B）。"
+      - fragment_id: tfr_197
+        type: time_staged_delta_hypothesis_forms
+        title: "时间分阶增量假设形式（t-Staged Delta Hypothesis Form）"
+        home_files:
+          - "sentences/hypothesis_forms.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户点名喜爱本篇，单源足矣)"
+        note: "把中介假设写成变化量假设（Δ-form）而非水平假设：'the greater the increase in M, the greater the subsequent increase in Y' 一句话完成 mediation 与 dose-response 双重主张；全模型时间戳句（from t1 to t2... that, later, alter...）+ Figure 时间戳编码（ΔX: t1–t0 / ΔM: t2–t1 / ΔY: t3–t2）使因果排序显式化，反向因果被设计排除；'(but not baseline-typed)' 内嵌安慰剂对照预测；静态悖论经时间排序转为动态消解。corpus hypothesis_forms 变体C。"
+      - fragment_id: tfr_198
+        type: newcomer_voice_integration_axis
+        title: "新声音整合轴（Newcomer Voice-Integration Axis）"
+        home_files:
+          - "subprotocols/moderator_selection_frameworks.md"
+        makadok_dimension: "Boundary"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户点名喜爱本篇，单源足矣)"
+        note: "moderator 选择理由句本身即模板：'We select these moderators as they affect the integration of new appointees into the TMT and such integration is central...' 一句话回答为什么是这两个 moderator；两个 moderators 分别锚定整合能力侧（接收端经验/内群体归类）与难度侧（资源竞争/亚群），轴内对称、轴间互补；同时调节多条中介路径（H[W]a/H[W]b 同构配对），调节假设族与双中介架构同构；阈值衰减变体截断线性外推。corpus moderator_selection_frameworks Framework B。"
+
+
+  westphal_bednar_2005_asq:
+    display_name: "Westphal & Bednar (2005, ASQ)"
+    journal: "Administrative Science Quarterly"
+    year: 2005
+    subfield: "corporate governance / boards / pluralistic ignorance / strategic persistence"
+    theory_build_type: "Mechanism (primary) / Moderation (secondary)"
+    gap_type: "Inadequacy (primary) + Incompleteness (secondary, contribution para only)"
+    citekey: "westphal_j_d_and_bednar_m_k_2005_pluralistic_ignorance_in_co"
+    fragments:
+      - fragment_id: tfr_199
+        type: mechanism_precondition_context_amplifier
+        title: "机制前提→情境放大映射型（Mechanism-Precondition Context Amplifier）"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决 Westphal & Bednar 2005 的引言与理论部分证据等级 VERIFIED)"
+        note: "机制论证先立前提（低绩效触发董事关切），再论证情境变量放大前提成立概率→机制被激活；调节者不作用于机制强度而作用于机制前提，与作用于路径强度的调节形成对照。corpus argumentation_patterns 模式F。"
+      - fragment_id: tfr_200
+        type: rival_construct_opposing_sign_disambiguation
+        title: "同果近邻构念反号辨析型（Rival-Construct Opposing-Sign Disambiguation）"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决 Westphal & Bednar 2005 的引言与理论部分证据等级 VERIFIED)"
+        note: "同一因变量下辨析两个符号相反的近邻构念（pluralistic ignorance 与 spiral of silence 的反映/强化方向）；一句话同时定位构念关系与预测方向，防止读者把新构念读成既有构念的同义改写。corpus argumentation_patterns 模式E。"
+      - fragment_id: tfr_201
+        type: collective_decision_rule_trap
+        title: "个体决策规则→集体困局转折句（Individual Rule → Collective Trap Pivot）"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决 Westphal & Bednar 2005 的引言与理论部分证据等级 VERIFIED)"
+        note: "每个成员按同一局部理性规则行动（无异常证据则不行动），个体理性叠加为集体非理性（无人表达→无人察觉异议存在）；从个体层前提一步跃迁到群体层后果的机制链句式。corpus mechanism_chain 句式C。"
+      - fragment_id: tfr_202
+        type: self_reinforcing_spiral_loop_sentence
+        title: "自增强循环命名句（Self-Reinforcing Spiral Naming Sentence）"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决 Westphal & Bednar 2005 的引言与理论部分证据等级 VERIFIED)"
+        note: "A '[labeled spiral]' can ensue whereby 句式一句话闭环自增强循环，借既有命名（spiral of silence）获得合法性，can ensue 把循环定性为趋势而非必然。corpus mechanism_chain 句式B。"
+      - fragment_id: tfr_203
+        type: group_level_construct_justification
+        title: "构念层次辩护段（Group-Level Construct Justification）"
+        home_files:
+          - "sentences/construct_definition.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决 Westphal & Bednar 2005 的引言与理论部分证据等级 VERIFIED)"
+        note: "引入群体层构念前先辩护其分析层次：构念定义在个体信念层（每人低估他人共享其关切），现象后果在群体层（集体沉默）——层次错位正是构念价值所在，需明示构念为何不能还原为个体层变量。corpus construct_definition 句式N。"
+      - fragment_id: tfr_204
+        type: willingness_opportunity_dual_path_moderation
+        title: "意愿×机会双路径调节论证框架（Willingness×Opportunity Dual-Path Moderation）"
+        home_files:
+          - "subprotocols/moderator_selection_frameworks.md"
+        makadok_dimension: "Boundary"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决 Westphal & Bednar 2005 的引言与理论部分证据等级 VERIFIED)"
+        note: "调节者按其作用于「表达的意愿」（人口统计同质→安全感）还是「表达的机会/诱因」（友谊密度→社会成本）分轴组织；轴内同质、轴间互补，每个调节者的假设推导复用同一主干机制。corpus moderator_selection_frameworks 框架B。"
+      - fragment_id: tfr_205
+        type: actor_scoping_two_reasons_boundary
+        title: "主角子群双理由圈定型（Actor-Scoping Two-Reasons Boundary）"
+        home_files:
+          - "subprotocols/board_governance_boundary_condition.md"
+        makadok_dimension: "Boundary"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决 Westphal & Bednar 2005 的引言与理论部分证据等级 VERIFIED)"
+        note: "理论明确限定于组织内特定行动者子群（外部董事而非全体董事）并给双理由（非雇员身份→少受组织信念社会化；未参与战略制定→较少沉没承诺）；actor 范围与 mechanism 前提一一对应。corpus board_governance_boundary_condition 模式A。"
+      - fragment_id: tfr_206
+        type: comparative_misconception_hypothesis_form
+        title: "行为缺失→误判强化的比较假设句（Comparative Misconception Hypothesis Form）"
+        home_files:
+          - "sentences/hypothesis_forms.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决 Westphal & Bednar 2005 的引言与理论部分证据等级 VERIFIED)"
+        note: "假设句并置两个可观测量的比较（把对他人关切水平的系统性高估操作化为可问卷测度的量），使心理构念的假设可直接检验。corpus hypothesis_forms 句式E。"
+      - fragment_id: tfr_207
+        type: mediated_moderation_two_part_hypothesis
+        title: "双部分调节+中介假设句（Two-Part Mediated-Moderation Hypothesis Form）"
+        home_files:
+          - "sentences/hypothesis_forms.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决 Westphal & Bednar 2005 的引言与理论部分证据等级 VERIFIED)"
+        note: "Hypothesis N 分 (a)(b) 两部分：(a) 交互效应假设，(b) 该交互将由中介变量所传导——一段假设完成调节与中介的双重主张，每部分可单独检验。corpus hypothesis_forms 句式D。"
+      - fragment_id: tfr_208
+        type: embedded_assumption_declaration
+        title: "假设推导内嵌前提声明句（Embedded Assumption Declaration）"
+        home_files:
+          - "sentences/hypothesis_forms.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决 Westphal & Bednar 2005 的引言与理论部分证据等级 VERIFIED)"
+        note: "假设推导段内嵌机制成立的前提条件声明（given the social risks in expressing what is perceived to be a minority opinion），为后续调节假设（改变前提强度的变量）埋下理论钩子。corpus hypothesis_forms 句式F。"
+      - fragment_id: tfr_209
+        type: levels_rhetoric_labeled_moderator_opener
+        title: "标签式段首+分层推进 opener（Labeled Section Opener with Levels Rhetoric）"
+        home_files:
+          - "sentences/leitmotif-section-opener.md"
+        makadok_dimension: "Boundary"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决 Westphal & Bednar 2005 的引言与理论部分证据等级 VERIFIED)"
+        note: "调节假设小节用构念名开场（Demographic homogeneity among outside directors...），一句话完成 IV 标签、行动者范围与层次定位；同构复用维持多调节假设节的段落节奏。corpus leitmotif-section-opener 句式A。"
 # Cross-paper pattern aggregation (derived above)
 patterns:
   shared_orientation_divergent_outcomes_selective_remedy:
     description: "A shared actor-to-organization trunk feeds beneficial and harmful outcome branches; an internal countervailing force selectively buffers the harmful branch through a protective orientation"
-    status: "EMERGING"
+    status: "VERIFIED"
+    verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
     source_count: 1
     source_papers:
       - "kashmiri_nicol_arora_2017_jams"
     home_file: "subprotocols/hypothesis_organization_patterns.md"
   product_harm_recall_construct_boundary:
     description: "Separate product-safety performance and recorded product-harm crisis occurrence from recall occurrence, timing, strategy, and severity"
-    status: "EMERGING"
+    status: "VERIFIED"
+    verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
     source_count: 2
     source_papers:
       - "kashmiri_nicol_arora_2017_jams"
@@ -2064,7 +2446,8 @@ patterns:
     home_file: "subprotocols/hypothesis_derivation_patterns.md"
   multi_source_parallel_mechanism_three_reasons:
     description: "Three conceptually independent single-step mechanisms for the same IV-DV relationship"
-    status: "EMERGING"
+    status: "VERIFIED"
+    verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
     source_count: 1
     source_papers:
       - "darby_2023_msom"
@@ -2080,21 +2463,24 @@ patterns:
     note: "Hoffmann 2024 JM removed 2026-08-05 — uses unified-framework weaken-moderation, not bilateral high/low three-mechanism."
   tradeoff_shock_dominance:
     description: "External shock removes disciplinary constraint; pre-existing private incentive dominates trade-off"
-    status: "EMERGING"
+    status: "VERIFIED"
+    verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
     source_count: 1
     source_papers:
       - "hoffmann_cheong_phan_zurbruegg_2024_jm"
     home_file: "sentences/mechanism_chain.md"
   unified_framework_moderator_selection:
     description: "External taxonomy systematically selects paired moderators (e.g., intrinsic vs extrinsic constraint)"
-    status: "EMERGING"
+    status: "VERIFIED"
+    verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
     source_count: 1
     source_papers:
       - "hoffmann_cheong_phan_zurbruegg_2024_jm"
     home_file: "sentences/moderation.md"
   dual_lens_main_boundary_division:
     description: "Primary theory explains main effect; secondary theory exclusively organizes boundary/moderator selection"
-    status: "EMERGING"
+    status: "VERIFIED"
+    verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
     source_count: 1
     source_papers:
       - "hoffmann_cheong_phan_zurbruegg_2024_jm"
@@ -2168,42 +2554,48 @@ patterns:
     home_file: "sentences/closure.md"
   dual_theory_two_stage_iv:
     description: "Same IV produces different mechanisms in two stages; each stage uses a distinct theory"
-    status: "EMERGING"
+    status: "VERIFIED"
+    verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
     source_count: 1
     source_papers:
       - "mayo_ball_mills_2022_pom"
     home_file: "subprotocols/argumentation_patterns.md"
   two_levers_theory_progression:
     description: "Core theory has multiple levers; paper extends from an already-studied lever to an understudied lever"
-    status: "EMERGING"
+    status: "VERIFIED"
+    verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
     source_count: 1
     source_papers:
       - "darby_wowak_ketchen_connelly_2026_jom"
     home_file: "subprotocols/hypothesis_derivation_patterns.md"
   information_asymmetry_meta_framework_two_moderators:
     description: "Multiple moderators at different levels unified by a single core concept (information asymmetry)"
-    status: "EMERGING"
+    status: "VERIFIED"
+    verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
     source_count: 1
     source_papers:
       - "darby_wowak_ketchen_connelly_2026_jom"
     home_file: "subprotocols/moderator_selection_frameworks.md"
   categorical_severity_moderation_embedded:
     description: "Categorical severity moderator with symmetric high vs low mechanism derivation"
-    status: "EMERGING"
+    status: "VERIFIED"
+    verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
     source_count: 1
     source_papers:
       - "darby_2023_msom"
     home_file: "subprotocols/bilateral_argumentation_templates.md"
   categorical_device_class_bilateral:
     description: "Categorical product-risk moderation using regulator classification and information asymmetry contrast"
-    status: "EMERGING"
+    status: "VERIFIED"
+    verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
     source_count: 1
     source_papers:
       - "darby_wowak_ketchen_connelly_2026_jom"
     home_file: "subprotocols/bilateral_argumentation_templates.md"
   dual_mechanism_same_direction:
     description: "IV affects DV through two independent mediators that both predict the same direction"
-    status: "EMERGING"
+    status: "VERIFIED"
+    verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
     source_count: 2
     source_papers:
       - "ball_shah_donohue_2018_jom"
@@ -2211,7 +2603,8 @@ patterns:
     home_file: "subprotocols/argumentation_patterns.md"
   dual_mechanism_convergent_moderation:
     description: "Each moderator of a dual-mechanism main effect is reasoned through BOTH underlying mechanism channels and shown to converge on the same net direction, justifying a single signed moderation hypothesis; optionally presented as a moderator×mechanism matrix table"
-    status: "EMERGING"
+    status: "VERIFIED"
+    verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
     source_count: 1
     source_papers:
       - "li_bapuji_talluri_singh_narayanan_2025_jscm"
@@ -2256,7 +2649,8 @@ patterns:
     note: "Cutolo_ferriani_2024_jom shares the same fluency mechanism (captured under parallel_buffering_moderators_single_mechanism); a second source for this mechanism would move it toward VERIFIED."
   industry_context_as_scope_condition:
     description: "Industry characteristics justify why the mechanism is salient in the chosen context"
-    status: "EMERGING"
+    status: "VERIFIED"
+    verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
     source_count: 1
     source_papers:
       - "mayo_ball_mills_2022_pom"
@@ -2355,7 +2749,8 @@ patterns:
     note: "Single-paper L2 boundary architecture. Requires direct turning-point comparison and an invariance reason for the unaffected prerequisite."
   inverted_u_mode_differentiated_geometry:
     description: "Two modes share a cost–learning inverted-U trunk; the same environmental W changes different geometric features (e.g., vertical shift vs steepen) via mode-specific governance."
-    status: "EMERGING"
+    status: "VERIFIED"
+    verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
     source_count: 1
     source_papers:
       - "bendig_hensellek_schulte_2024_etp"
@@ -2363,7 +2758,8 @@ patterns:
     note: "Gap-audit ADD 2026-08-05. L2 optional; complements Cui flatten/steepen and Lee–Park turning-point delay. Not core routing."
   inverted_u_vertical_shift_language:
     description: "Graphical language for vertical locus shift of an inverted-U under W, distinct from steepen/flatten and turning-point delay."
-    status: "EMERGING"
+    status: "VERIFIED"
+    verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
     source_count: 1
     source_papers:
       - "bendig_hensellek_schulte_2024_etp"
@@ -2765,7 +3161,8 @@ patterns:
 
   audience_foil_then_focal_signal_single_H:
     description: "文献默认受众 A 对行动 X 正向；用 A 作 foil 后转折到受众 B 的负面信号解读，收敛为单一比较主效应（不成对受众假设）"
-    status: "EMERGING"
+    status: "VERIFIED"
+    verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
     source_count: 1
     source_papers:
       - "chen_ganesan_liu_2009_jm"
@@ -2773,7 +3170,8 @@ patterns:
     note: "与变体 G 判别：单 DV + 单比较 H；受众 A 不成假设。待第二篇异领域交叉验证。"
   audience_foil_pivot_sentence:
     description: "However, audience B views implications of action differently from audience A——foil→focal 受众切换句"
-    status: "EMERGING"
+    status: "VERIFIED"
+    verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
     source_count: 1
     source_papers:
       - "chen_ganesan_liu_2009_jm"
@@ -2781,7 +3179,8 @@ patterns:
     note: "acknowledgment_response §5b；非异议处置矩阵。配套 audience_foil_then_focal_signal_single_H。"
   comparative_main_effect_hypothesis_form:
     description: "比较型主效应假设句：Strategy A is more negatively related to DV than Strategy B（相对对照极点，非相对零）"
-    status: "EMERGING"
+    status: "VERIFIED"
+    verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
     source_count: 1
     source_papers:
       - "chen_ganesan_liu_2009_jm"

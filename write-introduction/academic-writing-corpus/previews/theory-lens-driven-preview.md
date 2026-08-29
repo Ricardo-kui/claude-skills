@@ -88,6 +88,16 @@ P5-P6 的变体：不是按照"主效应→调节→机制"的通用结构预览
 
 ---
 
+
+### 变体 Q：误读防御型权变预告（wowak2020 型）
+[功能标签]: Preview/Theory Lens — 把调节结构预告与反向误读防御合并
+[骨架]: "we a priori contend that this relationship is fully contingent upon [moderator]... we do not theorize that [X] should influence [all Y] equivalently; doing so might lead to the false implication that [harmful reading]. Instead, we theorize that [X] affects [Y] contingent upon [moderator]."
+[关键特征]: "a priori contend" 预先签署理论承诺合同；显式命名并否定一个有害误读（false implication that...）而非仅陈述边界；用调节变量分类学（class 1/2/3）把权变结构转译为两支异号预测
+[适用]: 前因效价敏感/社会争议议题（多样性、安全、ESG），需要预防"反向规范解读"的 Boundary 贡献
+[禁忌]: 被否定的误读必须真实存在于读者推断路径中，勿树稻草人
+**原文锚定**: "we do not theorize that adding female directors should influence all types of recalls equivalently; doing so might lead to the false implication that adding female directors worsens product quality."
+**来源**: wowak_2020_female_directors_recalls (M&SOM), P4
+
 ## 组装规则
 
 ### 必须配对

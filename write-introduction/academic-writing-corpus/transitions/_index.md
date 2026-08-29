@@ -19,7 +19,7 @@
 
 | 文件 | canonical_id | 核心特征 | 验证状态 | 代表范文 |
 |------|-------------|---------|---------|---------|
-| `10-literature-to-gap.md` | `10-literature-to-gap` | 从文献综述转向研究缺口 | VERIFIED | 多篇顶刊 |
+| `10-literature-to-gap.md` | `10-literature-to-gap` | 从文献综述转向研究缺口 | VERIFIED | 多篇顶刊；变体 E：零文献+轶事证据桥接过渡型，wowak_2020_female_directors_recalls，VERIFIED (expert_audit_override 2026-08-28) |
 | `03-unified-moderator-framework.md` | `03-unified-moderator-framework` | 用统一调节框架整合分散文献 | VERIFIED | — |
 
 ## 聚焦/收窄

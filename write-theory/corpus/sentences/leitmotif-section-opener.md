@@ -71,3 +71,24 @@ moderating / main effect of the current hypothesis's specific variable]."
 - 与 `corpus/sentences/moderation.md`（调节机制修改句）互补：本文件管"段落怎么开头回扣理论"，moderation.md 管"回扣之后机制怎么论证"。
 - 与 `corpus/subprotocols/moderator_selection_frameworks.md` 的 "information_asymmetry_meta_framework" 模式协同：后者提供"多 moderator 共享一个构念"的*选择理由*，本句式提供该结构在*写作层面*的段首实现。
 - 路由：Theory 章节含 ≥2 个调节假设、且调节均锚定同一核心理论构念时，write-theory 可建议在每个 H 段首套用本 leitmotif。
+
+
+### 句式 A：标签式段首+分层推进 opener（westphal_bednar2005 型）
+
+**模板**:
+> "[Moderator label]. On one level, [W] between [actors] should [lower] the perceived risk of [voicing]. [Justification] ([citations]). Accordingly, when [W is high], [actors] should be less hesitant to [voice]. Moreover, [second path]. Therefore, [convergence to construct]."
+
+**来源**: westphal_bednar2005 (ASQ), Theory P11/P12 段首；P6 "On one level"/"At the same time"
+
+**原文锚定**:
+> "Personal friendship ties. On one level, personal friendship ties between group members should lower the perceived risk of voicing a minority opinion."
+> "On one level, there are social risks from expressing a minority opinion on corporate boards."
+
+**关键特征**:
+- 段首用两三个词的裸标签（"Personal friendship ties."）命名本段 moderator，充当小标题功能而不必设正式小节
+- 标签后立即接 "On one level, ..." 给出可检验的方向判断，标签与判断句加起来不足 25 词完成 Topic 拍
+- "On one level... At the same time... Moreover..." 的分层递进词族贯穿全节，标记"表层判断→补充机制→反顾情境"的推理层级，是全文的节奏指纹
+
+**适用**: 多 moderator 平行结构（每段一个 moderator）的假设推导段首；需要在不设 subsection 的前提下给段落视觉锚点的 Theory
+
+**禁忌**: 裸标签必须是构念名本身（名词短语），不得用完整句子；"On one level" 词族在单篇使用三到五次即达饱和，逐段滥用会变成口头禅

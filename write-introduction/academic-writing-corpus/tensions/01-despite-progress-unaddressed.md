@@ -67,7 +67,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 ## 变体速查表
 
-> 检索辅助（2026-08-09 P0 补建）。状态列空白 = 正文未标注验证状态（旧变体）。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架、适用条件与诚实边界见下方变体正文。
+> 检索辅助（2026-08-09 P0 补建）。状态列空白 = 正文未标注验证状态（旧变体）。状态词表（2026-08-29 统一，与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀）；LEGACY-DIAGNOSTIC 保留（工具诊断类）；召回主题条目按用户 2026-08-29 裁决单源 VERIFIED。完整骨架、适用条件与诚实边界见下方变体正文。
 
 | # | 变体 | 家族 | 适用场景 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -505,6 +505,15 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 ---
 
+
+### 变体 AK：政策工具未验后果型（ball_2018 型）
+**模板**: "[Policy instrument] was designed to [intended benefit], and evidence confirms it has ([citations]). However, the impact of this [instrument] on [adjacent outcome], specifically [target outcome], has to the best of our knowledge not been examined. While [benefit] is critical to [stakeholder], [unexamined cost] can be very harmful. Thus, [objective] is to examine whether [X] influences [Y]."
+**原文锚定**: "However, the impact of this increased [competition] on [product quality], specifically [product recalls], has to the best of our knowledge not been examined. While lower [prices] are critical to [consumer welfare], lower [product quality] can be very harmful."
+**来源**: ball_2018 (JOM/SMJ family), P4-P5
+**关键特征**: 用政策工具的成功证据反衬其副作用未被检验，gap 由制度事实而非文献遗漏承载；谦逊限定语 "to the best of our knowledge" 软化 Incompleteness 宣称；一句话双向 stakes（收益确认 + 未验危害）紧贴 gap。
+**适用**: 有具体监管/政策冲击且其意外后果构成研究问题的实证场景；Incompleteness × Boundary/Mechanism 组合；政策评估类Operations/Strategy论文。
+**禁忌**: 政策意图与副作用须有文献或制度证据支撑，不得凭空断言"从未被检验"；谦逊限定语不能替代文献回顾。
+
 ### 变体 Q：外部批评授权型（hoffmann2024 型）
 
 **模板**:
@@ -726,6 +735,28 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 **禁忌**: 必须证明外部受众确实会接触并解读该构念信号；不能简单假设"外部也应该研究"。
 
 ---
+
+
+### 变体 AM：前因止步+双问悬置型（westphal_zajac_1998_symbolic_management 型）
+
+**模板**:
+> "Prior [perspective] research (including [authors' own prior work]) has focused on [the antecedents of X], however, and thus did not examine either [the targeted audience] or [the likely consequences] of [X]. An unanswered question is: [Do X have any real and measurable impact], and [who are the stakeholders whose opinions are to be considered]?"
+
+**来源**: westphal_zajac_1998_symbolic_management (ASQ), P4
+
+**原文锚定**:
+> "Their research focused on the antecedents of symbolic action, however, and thus did not examine either the targeted audience or the likely consequences of such alleged symbolic actions. An unanswered question is: Do symbolic actions in the corporate governance domain have any real and measurable impact, and who are the stakeholders whose opinions are to be considered?"
+
+**关键特征**:
+- 用作者**自引前作**作 gap 载体——"我们的前研究止步于前因"，既谦逊又把研究边界划得极精确，天然免疫"稻草人"质疑
+- 双通道 gap：受众（who hears the signal）× 后果（does it work），一次定位两项独立贡献，后续 Contribution 段按此双通道逐项兑现
+- "An unanswered question is:" 把 gap 转成**两问并置**的显式 RQ；对现象本身保留 hedge（"alleged symbolic actions"），维持经验开放性
+
+**适用**: 前作（尤其是自己的）已建立某现象的前因侧、本文推向后果侧/受众侧的"接力式"研究；Incompleteness × Mechanism 组合首选
+
+**禁忌**: 自引划界必须真实准确——前作确实没做后果/受众，否则审稿人可当场反驳；"unanswered question" 问句不能多于两问，多问会稀释贡献焦点
+
+**验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
 
 ### 变体 Z：可见-不可见域缺口 + 监督驱动地下化（DesJardine2023 隐形之手型）
 
@@ -983,6 +1014,16 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 - 单篇来源 → 仅作 optional `section_variant`
 
 ---
+
+
+### 变体 AL：邻域盲区+合理外推桥接型（wowak2020 型）
+[功能标签]: Tension — Incompleteness（邻域文献覆盖但目标决策缺席）
+[骨架]: "Research on [X] has explored [adjacent A] and [adjacent B] ([citations]) but has not addressed, as we do here, [target decision], some of which [stakes clause]. However, it is reasonable to expect that if [X] affects [established family], it may also influence [target decision]."
+[关键特征]: 缺口落在"邻域已覆盖/目标域未覆盖"的交界处而非泛泛 few studies；用合理性桥接句（reasonable to expect）为跨域外推预授权，堵住"凭什么迁移"的审稿质疑；"as we do here" 原位自标记
+[适用]: 前因构念研究从金融/战略结果外推到运营结果；需要 justification bridge 的跨域 Incompleteness
+[禁忌]: 桥接句必须给出可检验的机制暗示，不能只是 "may also influence" 空转
+**原文锚定**: "Research on how women on boards might affect a firm's operational decisions has explored employee layoffs and financial operating performance ... but has not addressed, as we do here, operational decisions related to product quality problems."
+**来源**: wowak_2020_female_directors_recalls (M&SOM), P1
 
 ## 组装规则
 

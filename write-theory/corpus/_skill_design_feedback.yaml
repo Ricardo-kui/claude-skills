@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
-  last_updated: '2026-08-25'
-  observations_processed: 15
+  last_updated: '2026-08-29'
+  observations_processed: 27
   description: Evidence ledger for write-theory design defects inferred from Theory exemplar distillation.
 defects:
   e-family-missing-dual-edged-signed-contingency-variant:
@@ -823,7 +823,8 @@ defects:
       modified_targets:
       - write-theory/corpus/sentences/hypothesis_forms.md（变体 A：T4_did_contrast_hypothesis，moon2026）
       - write-theory/corpus/_skill_design_feedback.yaml
-      rule_excerpt_after: "### 变体 A：T4_did_contrast_hypothesis（moon2026）—— DiD 处理-对照对比内嵌假设陈述（'as compared to' 对比句 + Formally: H[N]）"
+      rule_excerpt_after: '### 变体 A：T4_did_contrast_hypothesis（moon2026）—— DiD 处理-对照对比内嵌假设陈述（''as compared to'' 对比句 + Formally:
+        H[N]）'
       old_rule_excerpt_absent: false
       validation:
         quick_validate: true
@@ -882,7 +883,7 @@ defects:
       modified_targets:
       - write-theory/corpus/subprotocols/moderator_selection_frameworks.md（变体 A：T5_moderator_metaframework_trilevel，moon2026）
       - write-theory/corpus/_skill_design_feedback.yaml
-      rule_excerpt_after: "### 变体 A：T5_moderator_metaframework_trilevel（moon2026）—— ABV 三层注意权变元框架（individual/organizational/contextual）统一调节插入点"
+      rule_excerpt_after: '### 变体 A：T5_moderator_metaframework_trilevel（moon2026）—— ABV 三层注意权变元框架（individual/organizational/contextual）统一调节插入点'
       old_rule_excerpt_absent: false
       validation:
         quick_validate: true
@@ -896,3 +897,603 @@ defects:
     auto_action:
       eligibility: no_action
       reason: Validated writeback applied on 2026-08-23.
+  theory-mech-symbolic-alternating-reframe:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: variants/B_mechanism_elaboration.md 现有变体覆盖标准两步/三步因果链组织，但无'默认学科解释→社会视角再诠释 (may instead reflect) 平行归因'的交替对立开题变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/variants/B_mechanism_elaboration.md
+    diagnosis: 对成熟理性选择理论做制度/符号再诠释时, 每个小节需要可复用的对比-再诠释开题装置; 现有 B 变体无此子型, 属语料缺口而非规则缺陷
+    proposed_change:
+      action: add_variant
+      summary: 追加变体'交替对立再诠释型机制开题'（writeback plan mech_symbolic_alternating_reframe, ADD）
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: westphal_zajac_1998_symbolic_management
+      journal: ASQ
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: '§2.1 P4: ''conventional agency perspectives assume... a social perspective on agency suggests a different
+        interpretation: market reactions may instead reflect social benefits... reduce uncertainty about managerial motives'''
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-28'
+    last_seen: '2026-08-28'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  theory-mech-hard-soft-signal-reframe:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: variants/B_mechanism_elaboration.md 无'硬数字/软数字测量本体重构'变体（同一因变量在两个视角下的本体二分）
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/variants/B_mechanism_elaboration.md
+    diagnosis: 为符号/感知类自变量赋予对'硬'结果变量的因果地位需要隐喻式测量重构; 'soft' numbers... neatly quantified and aggregated 的反讽式保留量化表象手法在语料中缺失
+    proposed_change:
+      action: add_variant
+      summary: 追加变体'硬/软数字测量本体重构'（writeback plan mech_hard_soft_signal_reframe, ADD）
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: westphal_zajac_1998_symbolic_management
+      journal: ASQ
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: '§2.1 P5: ''Market reactions thus should perhaps be viewed more in terms of "soft" numbers that reflect
+        the subjective perceptions of a heterogeneous audience, neatly quantified and aggregated'''
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-28'
+    last_seen: '2026-08-28'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  theory-argcontr-decoupling-discriminating-test:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: subprotocols/argumentation_patterns.md 现有替代解释排除模式为理论不一致/范围条件/经验反例/机制不可通约四类，无'把替代解释转为 decoupling 子样本判别检验'的设计级排除变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/subprotocols/argumentation_patterns.md
+    diagnosis: Inadequacy 型 gap（无法排除语言属实替代）的设计级兑现——'Observing X even when decoupled would provide stronger evidence... and
+      not merely rational persuasion'——是第五类排除策略, 语料缺口
+    proposed_change:
+      action: add_variant
+      summary: 追加变体'判别式替代解释排除'（writeback plan argcontr_decoupling_discriminating_test, ADD）
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: westphal_zajac_1998_symbolic_management
+      journal: ASQ
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: '§2.2 P4: ''Observing a positive market reaction to agency explanations even when LTIP adoption is
+        decoupled from actual implementation would provide stronger evidence that verbal enhancement... represents symbolic
+        management and not merely rational communication or persuasion'''
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-28'
+    last_seen: '2026-08-28'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  theory-assum-between-extremes-bounded-rationality:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: subprotocols/argumentation_patterns.md 无'两极之间假设声明段'变体（双向否定极端 + 中间立场假设直接服务于机制）
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/subprotocols/argumentation_patterns.md
+    diagnosis: 中段假设声明段（非文首 scope condition）同时化解双向审稿质疑并供能机制（'interested in reducing uncertainty' 即符号行动起效前提）——假设段即机制段的写法缺失
+    proposed_change:
+      action: add_variant
+      summary: 追加变体'两极之间假设声明段'（writeback plan assum_between_extremes_bounded_rationality, ADD）
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: westphal_zajac_1998_symbolic_management
+      journal: ASQ
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: '§2.1 P7: ''While we do not assume strong-form market efficiency, we also do not assume that markets
+        are irrational. Rather, we assume that investors are intendedly but boundedly rational information processors who
+        are interested in reducing uncertainty'''
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-28'
+    last_seen: '2026-08-28'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  theory-mech-symbolic-substitution-preemption:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: subprotocols/hypothesis_derivation_patterns.md 现有模式覆盖中介链与条件分叉，无'替代-预防-固权三步链'变体（decouple 难度作变革类型选择器 + In
+      effect 权力重铸收束）
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md
+    diagnosis: 从外部反应理论延伸内部权力后果第二假设族需要替代机制推演模板；'less easily decoupled' 作为预防对象选择器的推理操作是新增论证动作
+    proposed_change:
+      action: add_variant
+      summary: 追加变体'符号替代-预防-固权三步机制'（writeback plan mech_symbolic_substitution_preemption, ADD）
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: westphal_zajac_1998_symbolic_management
+      journal: ASQ
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: '§2.3 P1: ''By formally adopting "institutionally correct procedures" indicative of CEO accountability,
+        top managers may effectively preempt or forestall alternative changes in board structure that are less easily decoupled...
+        In effect, symbolic CEO incentive alignment may represent an important and subtle entrenchment device'''
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-28'
+    last_seen: '2026-08-28'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  theory-audpivot-heterogeneous-subgroup-voice:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: subprotocols/hypothesis_organization_patterns.md 现有组织模式（common trunk→dual branch 等）不含'受众异质性 pivot 至平行交互假设族'变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/subprotocols/hypothesis_organization_patterns.md
+    diagnosis: '''While our discussion thus far has treated [actors] as homogeneous'' 自认简化 + exit/voice 独立调节依据 + 与 H3/H4 同构的平行交互假设（H3a/H4a）——受众类
+      moderator 的 pivot 组织模式缺失；功能上与 C18 元框架等价（选择理由=位置特性）'
+    proposed_change:
+      action: add_variant
+      summary: 追加变体'受众异质性 pivot 至调节假设'（writeback plan audpivot_heterogeneous_subgroup_voice, ADD）
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: westphal_zajac_1998_symbolic_management
+      journal: ASQ
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: '§2.4 P1: ''One important implication of holding such large equity stakes is that for dissatisfied
+        institutional investors, the option of "exit"... is somewhat more difficult and costly, hence leading to the greater
+        exercise of "voice"'''
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-28'
+    last_seen: '2026-08-28'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  theory-hypform-implementation-contingency:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: sentences/hypothesis_forms.md 现有假设句式（if-then/continuous/curvilinear/difference）无'实施权变尾从句'（whether or not
+      [it] is implemented, 6/6 假设复用）及'with X than without X'比较式变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/sentences/hypothesis_forms.md
+    diagnosis: decoupling 检验内嵌假设语法——假设同时是主预测与判别检验的复合声明——为 hypothesis_forms 决策矩阵缺失的形式类别；设计-构念-假设三位一体的句法签名
+    proposed_change:
+      action: add_variant
+      summary: EXTEND hypothesis_forms：追加'实施权变从句 + 比较式变体'（writeback plan hypform_implementation_contingency）
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: westphal_zajac_1998_symbolic_management
+      journal: ASQ
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: 'H1/H2: ''LTIP adoption will engender positive stock market reactions, whether or not the plan is implemented''
+        / ''...with an agency explanation will engender more positive stock market reactions than LTIP adoption without...'''
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-28'
+    last_seen: '2026-08-28'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  theory-modform-numbered-dual-dv-interaction:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: sentences/moderation.md 现有调节句式以单 DV 的 when high/low 双边论证为主，无'编号双 DV 交互假设'形式（(1)...(2)... 同族 DV 压缩 + amplify/diminish
+      方向动词）
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/sentences/moderation.md
+    diagnosis: 同族多 DV 假设族需保持语法同构以对应正文检验矩阵；(1)(2) 编号 + 方向动词（C10 明确性）+ 实施权变尾从句三层叠加是缺失的句式形式；注意：该形式天然单边（无 low 条件论证），EXTEND 时须标注不可作
+      C20 双边模板
+    proposed_change:
+      action: add_variant
+      summary: EXTEND moderation：追加'编号双 DV 交互假设形式'（writeback plan modform_numbered_dual_dv_interaction）
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: westphal_zajac_1998_symbolic_management
+      journal: ASQ
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: 'H3/H3a: ''LTIP adoption will be negatively related to (1) subsequent separation of the CEO and board
+        chair positions and (2) increases in the ratio of outside to inside directors, whether or not the plan is implemented''
+        / ''LTIP adoption will interact with ownership by institutional investors to diminish the likelihood of...'''
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-28'
+    last_seen: '2026-08-28'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  core-candidate-context-assigned-margin-split:
+    classification: design_feedback_candidate
+    status: EMERGING
+    risk: low
+    current_rule: write-theory 核心架构/路由未包含"情境分配决策边际拆分"——同一前因作用于多个结果、各结果决策边际不同（whether/when），由客观情境构念（severity）分配各边际的理论角色与机制，而非作为调节变量。
+    rule_excerpt: 'Pattern: Context-Assigned Decision-Margin Split（wowak2020 §2+§3，与 decision_rights_preamble 配套使用）'
+    rule_locator: write-theory/corpus/subprotocols/hypothesis_organization_patterns.md（Context-Assigned Decision-Margin Split
+      Pattern）
+    target: write-theory/corpus/subprotocols/hypothesis_organization_patterns.md
+    diagnosis: Wowak, Ball, Post & Ketchen (2021 M&SOM) 把同一前因（女性董事）的两种结果（是否召回 H1 / 多快召回 H2）按 severity 情境分级拆成两个决策窗口，各配独立机制（rule-following
+      vs stakeholder responsiveness），DV 措辞内嵌边际（count=whether / time-to-recall=when）；该组织方式与现有调节类（E1/E4）、中介类（B）架构均不同，且 darby_2023_msom
+      tfr_088（severity 调节单条 timing 关系）构成显式对照。作为 pattern 已 VERIFIED 入 registry（tfr_183），是否升 core_candidate 仍需跨源证据。
+    proposed_change:
+      action: register_observation
+      summary: 登记 core_candidate 观察项（context_assigned_margin_split, tfr_183）；不改核心路由与 SKILL 规则，仅跟踪跨源复现。
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 机制推演型
+      - 假设树型
+      hypothesis_families:
+      - margin_split_dual_dv
+      - context_assigned_decision_margins
+      journals: []
+      boundary: 仅当同一前因的多个结果对应不同决策边际（是否行动 vs 多快行动）、边际由理论化在先的客观情境构念分配、且各边际配独立机制时适用；情境构念写成 moderation 却保留双 DV 则不适用。
+    adoption_status: design_feedback_candidate
+    cross_paper_evidence:
+      papers_showing_same_deviation: 1
+      candidate_second_sources:
+      - darby_2023_msom tfr_088（severity 调节单条 timing 关系——本 pattern 的显式对照点）
+      - wowak2025_MS
+    threshold_to_adopt: 获第二篇独立复现且通过 design-feedback-loop 门槛才可升 core_candidate，并需显式人工审核记录
+    papers:
+    - id: wowak_ball_post_ketchen_2020_msom
+      journal: M&SOM
+      build_type: 机制推演型
+      hypothesis_family: margin_split_dual_dv
+      evidence_anchor: 'Theory §2+§3: severity 分配 whether（class-3 recall count = rule-following 裁量度量, H1）与 when（time-to-recall,
+        H2）两个决策窗口，各配独立机制（board rule-following vs stakeholder responsiveness），severity 不调节任何单一关系。'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - M&SOM
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - M&SOM
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-28'
+    last_seen: '2026-08-28'
+    auto_action:
+      eligibility: no_action
+      reason: 观察项登记（gate ① 用户 2026-08-28 确认）；不改核心路由，升格须第二独立源复现 + design-feedback-loop 门槛。
+  mechanism-precondition-context-amplifier-gap:
+    classification: corpus_gap
+    status: EMERGING
+    risk: medium
+    current_rule: argumentation_patterns 覆盖 Anchor→Prediction 微观动作、最小对对比、Audience-Foil 等模式；无'构念普遍性让步→机制前提逐项映射到情境特征→放大论证'的情境适配段模板
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/subprotocols/argumentation_patterns.md
+    diagnosis: 机制推演型论文导入外来构念后普遍需要一段证明'该构念在本情境特别可能发生'——不是给情境贴标签而是证明情境满足机制全部前提；缺模板时写作者会退化为情境罗列，机制与情境脱节
+    proposed_change:
+      action: add_variant
+      summary: 追加'机制前提→情境放大映射型'变体（westphal_bednar2005 型），EMERGING 1 源
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: westphal_bednar2005
+      journal: ASQ
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: 'P6: ''Though pluralistic ignorance has been observed in a variety of contexts, it may be particularly
+        likely to occur among outside directors''——社会风险/低凝聚力/高可观察性逐项映射'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-29'
+    last_seen: '2026-08-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  dual-path-willingness-opportunity-moderator-framework-gap:
+    classification: corpus_gap
+    status: EMERGING
+    risk: medium
+    current_rule: moderator_selection_frameworks 有 trilevel 元框架（moon2026）与 Newcomer Voice-Integration Axis（what_changes_after_women）等框架；无'意愿×机会双路径'框架——每个
+      moderator 沿'降低表达风险感知+增加非正式沟通机会'两条路径论证并 not only...but also 收束
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/subprotocols/moderator_selection_frameworks.md
+    diagnosis: 含行为表达中介的抑制类构念（缄默/误判/隐藏）的 moderator 论证有稳定双路径结构；且本框架的 moderator 从主机制薄弱环节反推，与外生挑选式元框架属不同论证动作
+    proposed_change:
+      action: add_variant
+      summary: 追加'意愿×机会双路径调节论证'框架（westphal_bednar2005 型，篇内 2 moderator 复现），EMERGING 1 源
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: westphal_bednar2005
+      journal: ASQ
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: 'P11-P12: ''should not only be less reluctant to express their concerns..., but they should also have
+        more frequent opportunities to do so''（friendship ties 与 demographic homogeneity 双实例复现）'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-29'
+    last_seen: '2026-08-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  rival-construct-opposing-sign-disambiguation-gap:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: argumentation_patterns 有最小对对比与 Audience-Foil 对比；无'同果近邻构念辨析——共享调节变量在两构念中反号'模式
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/subprotocols/argumentation_patterns.md
+    diagnosis: 引入的构念与更知名近邻构念共享结果变量时，最有效的区分证明是同一调节变量方向相反（凝聚力加剧 groupthink/削弱 PI）；现有对比模式不覆盖'反号即区分度'这一说服动作
+    proposed_change:
+      action: add_variant
+      summary: 追加'同果近邻构念反号辨析型'模式（westphal_bednar2005 型），EMERGING 1 源
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: westphal_bednar2005
+      journal: ASQ
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: 'P13: ''Social cohesion ... is thought to exacerbate the presence of groupthink, but our theoretical
+        perspective suggests that social cohesion ... actually attenuates pluralistic ignorance'''
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-29'
+    last_seen: '2026-08-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  mediated-moderation-two-part-hypothesis-form-gap:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: hypothesis_forms 的 Comparative Main Effect 条目为 EMERGING 单源；无 (a) 调节/交互 + (b) 'this relationship/interaction
+      will be mediated by' 双部分假设句（mediated moderation 与 moderated mediation 共形异构）
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/sentences/hypothesis_forms.md
+    diagnosis: 混合假设结构（中介+调节）论文需要单条假设覆盖两条统计路径的固定句法；(b) 部分的 relationship vs interaction 措辞区分是统计结构可读性的关键，现语料无法生成
+    proposed_change:
+      action: add_variant
+      summary: 向 hypothesis_forms 追加'双部分调节+中介假设句'（H3/H4/H5 三实例同篇复现），并为 Comparative 条目追加第二源（本篇 H2）
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: westphal_bednar2005
+      journal: ASQ
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: 'H3b/H4b: ''this relationship will be mediated by a greater tendency...''; H5b: ''this interaction
+        will be mediated by a reduced tendency...'''
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-29'
+    last_seen: '2026-08-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.

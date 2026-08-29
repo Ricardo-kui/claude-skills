@@ -1,11 +1,13 @@
 meta:
-  last_updated: '2026-08-12'
-  total_mvp30_papers_indexed: 59
-  batches_processed: 30
-  latest_batch_note: '2026-08-09 DesJardine, Li & Shi 2025 AMJ (Introduction): EXTEND lit-turn 01-O (近邻研究静态观批评→动态化 bridge,
-    theory-first + fulcrum 句 + 领域标准惊讶), tension 01-AE (as-clause 前提 + 惊讶单句 overlooked), previews/findings-preview Q (术语转译锚定
-    targets/attackers), contributions R (主贡献分离 + several-other-streams 多流对比). Gap=Incompleteness 主 + Inadequacy 次 (static
-    view 批评). All new variants EMERGING, section_variant. No core routing change.'
+  last_updated: '2026-08-28'
+  total_mvp30_papers_indexed: 60
+  batches_processed: 31
+  latest_batch_note: '2026-08-28 Wowak, Ball, Post & Ketchen 2021 M&SOM (The Influence of Female Directors on Product Recall Decisions;
+    citekey wowak_2020_female_directors_recalls): ADD hook 11-institutional-anecdote 变体 (legislative-mandate escalation 事实开场),
+    tension 01-AL (邻域盲区+合理外推桥接), transitions/10 变体 E (零文献+轶事证据桥接过渡), previews/theory-lens-driven-preview 变体 Q (误读防御型权变预告),
+    previews/robustness-preview 变体 I (三重识别+竞争层级排除预览). Gap=Incompleteness. 全部 VERIFIED per expert_audit_override (用户 2026-08-28:
+    产品召回为主研究领域，单源足矣). transitions 与 theory-lens-driven-preview 无 registry 分区行（语料级 _index.md 已同步）；transitions/10 与
+    theory-lens-driven-preview 的 registry 行不存在，未强建. No core routing change.'
   source: mvp30_index + 9_distill_files + path_B_confirmation + cui_yang_vertinsky_smj_distill + paruchuri_andrus_sullivan2026_amj_distill
     + li2025_jscm_distill + li2026_pom_distill + du_tsolmon2024_orsc_distill + lee_wu_bednar_orsc_18968_distill + reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc_distill
     + vidal_mitchell2015_orsc_distill + moon_tuli_mukherjee2023_jm_distill + schumacher_keck_tang2020_smj_distill + kashmiri_nicol_arora2017_jams_distill
@@ -141,7 +143,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     05-literature-consensus-blindspot:
-      paper_count: 10
+      paper_count: 11
       papers:
       - gamache2020 (SMJ)
       - han2020 (AMJ)
@@ -153,9 +155,10 @@ evidence:
       - ahmadi2017 (JMS)
       - qiao2026 (SMJ)
       - kashmiri_nicol_arora2017 (JAMS)
+      - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
       gap_distribution:
         Incompleteness: 4
-        Inadequacy: 6
+        Inadequacy: 7
         Incommensurability: 0
       status: ROBUST
       generativity: GENERATIVE
@@ -217,7 +220,8 @@ evidence:
         Incompleteness: 3
         Inadequacy: 0
         Incommensurability: 0
-      status: EMERGING
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       generativity: ADAPTABLE
       exclusivity: LOW
       common_failures: []
@@ -289,15 +293,17 @@ evidence:
         reject: 0
         common_revise_reasons: []
     11-institutional-anecdote:
-      paper_count: 2
+      paper_count: 3
       papers:
       - desai2012 (AMJ)
       - lehman2014 (MS)
+      - wowak_2020_female_directors_recalls (Manufacturing & Service Operations Management)
       gap_distribution:
-        Incompleteness: 2
+        Incompleteness: 3
         Inadequacy: 0
         Incommensurability: 0
-      status: EMERGING
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       generativity: ADAPTABLE
       exclusivity: MEDIUM
       common_failures:
@@ -556,7 +562,8 @@ evidence:
         Incompleteness: 1
         Inadequacy: 0
         Incommensurability: 0
-      status: EMERGING
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       generativity: ADAPTABLE
       exclusivity: LOW
       common_failures: []
@@ -622,7 +629,7 @@ evidence:
         common_revise_reasons: []
   tensions:
     01-despite-progress-unaddressed:
-      paper_count: 33
+      paper_count: 34
       papers:
       - ahmadi2017 (JMS)
       - cancellieri2023 (SMJ)
@@ -657,8 +664,9 @@ evidence:
       - wu2025 (SMJ)
       - westphalzajac1995 (AMJ)
       - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
+      - wowak_2020_female_directors_recalls (Manufacturing & Service Operations Management)
       gap_distribution:
-        Incompleteness: 24
+        Incompleteness: 25
         Inadequacy: 0
         Incommensurability: 0
       status: ROBUST
@@ -906,7 +914,8 @@ evidence:
         Incompleteness: 1
         Inadequacy: 0
         Incommensurability: 0
-      status: EMERGING
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       generativity: ADAPTABLE
       exclusivity: MEDIUM
       common_failures: []
@@ -935,17 +944,18 @@ evidence:
         reject: 0
         common_revise_reasons: []
     14-debate-unresolved:
-      paper_count: 5
+      paper_count: 6
       papers:
       - kundro_rothbard (AMJ)
       - eilert2017 (JM)
       - wowak2025 (MS)
       - du_tsolmon2024 (ORSC)
       - lee_wu_bednar_orsc_18968 (Organization Science)
+      - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
       gap_distribution:
         Incompleteness: 0
         Inadequacy: 5
-        Incommensurability: 0
+        Incommensurability: 1
       status: VERIFIED
       generativity: GENERATIVE
       exclusivity: MEDIUM
@@ -1039,7 +1049,8 @@ evidence:
         Incompleteness: 0
         Inadequacy: 1
         Incommensurability: 0
-      status: EMERGING
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       generativity: GENERATIVE
       exclusivity: HIGH
       common_failures: []
@@ -1166,7 +1177,8 @@ evidence:
         Incompleteness: 2
         Inadequacy: 0
         Incommensurability: 0
-      status: EMERGING
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       generativity: ADAPTABLE
       exclusivity: MEDIUM
       common_failures: []
@@ -1223,15 +1235,17 @@ evidence:
         reject: 0
         common_revise_reasons: []
     06-two-reason-enumerated:
-      paper_count: 2
+      paper_count: 3
       papers:
       - malik_wang_martin_gomezmejia2025 (JM)
       - pollock2015 (ASQ)
+      - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
       gap_distribution:
-        Incompleteness: 2
+        Incompleteness: 3
         Inadequacy: 0
         Incommensurability: 0
-      status: EMERGING
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       generativity: GENERATIVE
       exclusivity: LOW
       common_failures: []
@@ -1250,7 +1264,8 @@ evidence:
         Incompleteness: 1
         Inadequacy: 0
         Incommensurability: 0
-      status: EMERGING
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       generativity: GENERATIVE
       exclusivity: MEDIUM
       common_failures: []
@@ -1385,7 +1400,7 @@ evidence:
         common_revise_reasons: []
   previews:
     mechanism-preview:
-      paper_count: 19
+      paper_count: 21
       papers:
       - bamberger_homburg_wielgos2021 (JM)
       - castellaneta_conti_kacperczyk2017 (SMJ)
@@ -1406,6 +1421,8 @@ evidence:
       - schumacher_keck_tang2020 (SMJ)
       - zhou2017 (ASQ)
       - fini_jourdan_perkmann_2017 (AMJ)
+      - ball_2018_product_competition_managerial_discretion_and_manu (Strategic Management Journal)
+      - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: LOW
@@ -1417,9 +1434,9 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 6
+        Incompleteness: 7
         Inadequacy: 2
-        Incommensurability: 2
+        Incommensurability: 3
     findings-preview:
       paper_count: 46
       papers:
@@ -1484,10 +1501,12 @@ evidence:
         Inadequacy: 20
         Incommensurability: 2
     robustness-preview:
-      paper_count: 1
+      paper_count: 2
       papers:
       - darby2026 (JOM)
-      status: EMERGING
+      - wowak_2020_female_directors_recalls (Manufacturing & Service Operations Management)
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       generativity: ADAPTABLE
       exclusivity: LOW
       common_failures: []
@@ -1592,12 +1611,16 @@ evidence:
         Inadequacy: 20
         Incommensurability: 2
     three-layer-contribution:
-      paper_count: 3
+      paper_count: 6
       papers:
       - haunschild2015 (OS)
       - hoffmann_cheong_phan_zurbruegg2024 (JM)
       - fini_jourdan_perkmann_2017 (AMJ)
-      status: EMERGING
+      - westphal_zajac_1998_symbolic_management (Administrative Science Quarterly)
+      - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
+      - westphal_j_d_and_bednar_m_k_2005_pluralistic_ignorance_in_co (ASQ)
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       generativity: ADAPTABLE
       exclusivity: LOW
       common_failures: []
@@ -1608,9 +1631,9 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 3
-        Inadequacy: 0
-        Incommensurability: 0
+        Incompleteness: 4
+        Inadequacy: 1
+        Incommensurability: 1
   research_questions:
     01-three-questions-counterintuitive:
       paper_count: 1
@@ -1739,7 +1762,8 @@ evidence:
         Incompleteness: 1
         Inadequacy: 0
         Incommensurability: 0
-      status: EMERGING
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       generativity: GENERATIVE
       exclusivity: HIGH
       common_failures: []
@@ -1767,16 +1791,37 @@ evidence:
         revise: 0
         reject: 0
         common_revise_reasons: []
+    10-cross-discipline-construct-import:
+      paper_count: 1
+      papers:
+      - westphal_j_d_and_bednar_m_k_2005_pluralistic_ignorance_in_co (ASQ)
+      gap_distribution:
+        Incompleteness: 0
+        Inadequacy: 1
+        Incommensurability: 0
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决 Westphal 蒸馏的引言与理论部分证据等级 VERIFIED)"
+      generativity: GENERATIVE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
     02-dual-theory-layered:
-      paper_count: 2
+      paper_count: 3
       papers:
       - hoffmann_cheong_phan_zurbruegg2024 (JM)
       - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
+      - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
       gap_distribution:
         Incompleteness: 2
         Inadequacy: 0
-        Incommensurability: 0
-      status: EMERGING
+        Incommensurability: 1
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       generativity: ADAPTABLE
       exclusivity: MEDIUM
       common_failures: []
@@ -1787,6 +1832,30 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_type: Incompleteness
+      note: '变体 D（解决装置开路型）VERIFIED — expert_audit_override (user 2026-08-29: 用户点名喜爱本篇，单源足矣)；corpus
+        文件 2026-08-29 新增'
+    01-agency-theory-standard:
+      paper_count: 3
+      papers:
+      - darby2025 (JSCM)
+      - darby2026 (JOM)
+      - westphal_zajac_1998_symbolic_management (Administrative Science Quarterly)
+      gap_distribution:
+        Incompleteness: 3
+        Inadequacy: 0
+        Incommensurability: 0
+      status: VERIFIED
+      generativity: GENERATIVE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+      note: '变体 C（代理问题社会重构型）VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)；corpus
+        文件 2026-08-28 新增'
 phrasebank:
   layer: auxiliary
   source: Morley, J. (2021). Academic Phrasebank (3rd ed.). University of Manchester.
@@ -1849,6 +1918,7 @@ paper_index:
   pfarrer2010: Inadequacy
   vadakkepatt2022: Incompleteness
   wowak2025: Incompleteness
+  wowak_2020_female_directors_recalls: Incompleteness
   gomulya2019: Inadequacy
   employee_free_speech2024: Inadequacy
   haunschild2015: Incompleteness

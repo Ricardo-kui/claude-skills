@@ -31,13 +31,13 @@ updated: 2026-08-13
 
 ## 变体速查表
 
-> 检索辅助（2026-08-08 推广）。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架与诚实边界见下方变体正文。
+> 检索辅助（2026-08-08 推广）。状态词表（与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀）；LEGACY-DIAGNOSTIC 保留（工具诊断类）；召回主题条目按用户 2026-08-29 裁决单源 VERIFIED。完整骨架与诚实边界见下方变体正文。
 
 ### 导航规则
 
 1. 先定槽位（R1–R9，`write-results/SKILL.md` 叙事槽位目录）
-2. 查对应槽位组；组内按状态优先：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待交叉 > 可选变体
-3. 槽位分不开的看「易混决策对」；单篇待交叉变体仅在情境精确匹配时选用
+2. 查对应槽位组；组内按状态优先：ROBUST > VERIFIED > EMERGING（含（可选）后缀）；LEGACY-DIAGNOSTIC 保留（工具诊断类）；召回主题条目按用户 2026-08-29 裁决单源 VERIFIED
+3. 槽位分不开的看「易混决策对」；单篇 EMERGING 变体仅在情境精确匹配时选用
 4. 多槽位变体归入首槽位组，副槽位在适用场景列标注
 
 ### 槽位分布总览
@@ -58,103 +58,103 @@ updated: 2026-08-13
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 20 | 多项式/交互模型诊断 | 多项式或交互模型估计前的诊断段 | mean-centering+VIF+condition number+非中心化复制；与变体19 配套 | 通过（单篇） | Cui SMJ |
+| 20 | 多项式/交互模型诊断 | 多项式或交互模型估计前的诊断段 | mean-centering+VIF+condition number+非中心化复制；与变体19 配套 | EMERGING | Cui SMJ |
 
 ### R2 模型序列与表导航（5）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 16 | 7 模型层次表导航 | 主效应→双向→三向递进的表导航 | vs 变体19 多项式版本；vs 变体28 双阶段修正 | 待交叉 | Ahmadi 2017 JMS |
-| 19 | 多项式+多曲线调节序列导航 | 多项式主效应+多个曲线调节的序列导航 | vs 变体16 线性层次版；配套变体20 诊断 | 通过（单篇） | Cui SMJ |
-| 22 | 无模型证据开场 | 四分位均值/中位数单调性作结果开场 | vs 变体34 2×2 类型学（分类变量版，见决策对3） | 待交叉 | Chung 2022 JAMS |
-| 24 | Heckman 两阶段表导航 | 第一阶段表→第二阶段列的表导航 | vs 变体28 双修正导航 vs 变体29 三步防御（决策对7） | 待交叉 | Chung 2022 JAMS |
-| 28 | 双阶段修正表导航 | 截面二元内生+样本选择的 CF+Heckman 表导航 | vs 变体24 仅选择修正 | 待交叉 | Pupovac 2026 POM |
-| 53 | 逐调节引入→成对→全模型导航 | 4+ 两向交互按理论 family 成对聚合后全模型 | vs 变体16（三向递进）：两两成对聚合+共线吸收预告 | 待交叉 | DesJardine 2025 AMJ |
-| 56 | Direct/Indirect/Total 路径表架构 | 中介 climax 做成 Direct vs Total 系数对照 | vs 16/53 层次列；vs 24/28 Heckman 两阶段 | 待交叉 | Kalaignanam 2013 JM |
+| 16 | 7 模型层次表导航 | 主效应→双向→三向递进的表导航 | vs 变体19 多项式版本；vs 变体28 双阶段修正 | EMERGING | Ahmadi 2017 JMS |
+| 19 | 多项式+多曲线调节序列导航 | 多项式主效应+多个曲线调节的序列导航 | vs 变体16 线性层次版；配套变体20 诊断 | EMERGING | Cui SMJ |
+| 22 | 无模型证据开场 | 四分位均值/中位数单调性作结果开场 | vs 变体34 2×2 类型学（分类变量版，见决策对3） | EMERGING | Chung 2022 JAMS |
+| 24 | Heckman 两阶段表导航 | 第一阶段表→第二阶段列的表导航 | vs 变体28 双修正导航 vs 变体29 三步防御（决策对7） | EMERGING | Chung 2022 JAMS |
+| 28 | 双阶段修正表导航 | 截面二元内生+样本选择的 CF+Heckman 表导航 | vs 变体24 仅选择修正 | EMERGING | Pupovac 2026 POM |
+| 53 | 逐调节引入→成对→全模型导航 | 4+ 两向交互按理论 family 成对聚合后全模型 | vs 变体16（三向递进）：两两成对聚合+共线吸收预告 | EMERGING | DesJardine 2025 AMJ |
+| 56 | Direct/Indirect/Total 路径表架构 | 中介 climax 做成 Direct vs Total 系数对照 | vs 16/53 层次列；vs 24/28 Heckman 两阶段 | VERIFIED | Kalaignanam 2013 JM |
 
 ### R3 主假设检验（10）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 8 | 主效应 null+调节显著 | 主效应不显著但交互显著的条件化再定位 | vs 变体45 亚组吸收 vs 变体27 跨阶段衰减（决策对1） | 待交叉 | Mannor 2016 SMJ |
-| 11 | 边际显著 90% CI 双区间 | p≈.10 结果的透明双区间报告（副槽位 R8） | 与反模式「p=.052 称显著」对照；常与变体8 配套 | 待交叉 | Bamberger 2021 JM |
-| 17 | Lind-Mehlum 三步倒 U | 倒 U 主效应完整验证（三步+转折点 CI+Cohen's d） | vs 变体18 倒 U **被调节**（决策对2） | 通过（单篇） | Cui SMJ |
-| 23 | P25→P75 四分位距翻译 | 主效应行文经济显著性（副槽位 R5） | vs 变体3 表格版；vs 变体13 交互联合（决策对5） | 待交叉 | Chung 2022 JAMS |
-| 27 | 多阶段管道衰减 profile | 同 IV 跨序贯决策阶段的方向/显著性对比+跨阶段对比句（副槽位 R9 收束） | 单研究管道 vs 多研究 cross-study；配套 Methods 多研究变体6 | 待交叉 | Kim & Lee 2026 SMJ |
-| 34 | 2×2 类型学对角比较 | 回归前非参数类型对比作开场 | vs 变体22 四分位单调性（连续版，决策对3） | 待交叉 | Du & Tsolmon 2024 OS |
-| 35 | ρ 持久性百分比解释 | 动态面板 ρ→「% persists in t」+跨构念对比（副槽位 R5） | 动态面板-GMM 专用；vs 变体23 截面四分位 | 待交叉 | Pollock 2015 ASQ |
-| 36 | 分样本 Wald χ² + partial support | 跨阈值 χ²(1) 系数相等性+诚实判定 H 支持（副槽位 R6） | vs 变体43 组间差异裁决（决策对6）；vs 变体8 交互条件化 | 待交叉 | Pollock 2015 ASQ |
-| 41 | 三条件中介+非对称支持 | 跨方程系数乘积+Sobel 三条件中介（同时方程系统） | vs 变体5 MCMC 中介（决策对4）；失败根因定位到条件 | 通过（单篇） | Malshe 2015 JM |
-| 48 | 共线吸收解释 | 全模型交互显著性下降归因调节间高相关（Cortina） | vs 变体16 序列导航（只描述不解释）；配套变体53 | 待交叉 | DesJardine 2025 AMJ |
-| 57 | 测量覆盖范围 warrant「学习」 | a-path 显著后用测量覆盖范围主张学习而非仅修复 | vs 变体41 检验中介是否成立 | 待交叉 | Kalaignanam 2013 JM |
-| 58 | 衰减+χ²+Sobel+bootstrap 堆叠确认 | confirmatory 部分中介 | vs 变体41 SUR 非对称；vs 变体5 post-hoc MCMC | 待交叉 | Kalaignanam 2013 JM |
+| 8 | 主效应 null+调节显著 | 主效应不显著但交互显著的条件化再定位 | vs 变体45 亚组吸收 vs 变体27 跨阶段衰减（决策对1） | EMERGING | Mannor 2016 SMJ |
+| 11 | 边际显著 90% CI 双区间 | p≈.10 结果的透明双区间报告（副槽位 R8） | 与反模式「p=.052 称显著」对照；常与变体8 配套 | EMERGING | Bamberger 2021 JM |
+| 17 | Lind-Mehlum 三步倒 U | 倒 U 主效应完整验证（三步+转折点 CI+Cohen's d） | vs 变体18 倒 U **被调节**（决策对2） | EMERGING | Cui SMJ |
+| 23 | P25→P75 四分位距翻译 | 主效应行文经济显著性（副槽位 R5） | vs 变体3 表格版；vs 变体13 交互联合（决策对5） | EMERGING | Chung 2022 JAMS |
+| 27 | 多阶段管道衰减 profile | 同 IV 跨序贯决策阶段的方向/显著性对比+跨阶段对比句（副槽位 R9 收束） | 单研究管道 vs 多研究 cross-study；配套 Methods 多研究变体6 | EMERGING | Kim & Lee 2026 SMJ |
+| 34 | 2×2 类型学对角比较 | 回归前非参数类型对比作开场 | vs 变体22 四分位单调性（连续版，决策对3） | EMERGING | Du & Tsolmon 2024 OS |
+| 35 | ρ 持久性百分比解释 | 动态面板 ρ→「% persists in t」+跨构念对比（副槽位 R5） | 动态面板-GMM 专用；vs 变体23 截面四分位 | EMERGING | Pollock 2015 ASQ |
+| 36 | 分样本 Wald χ² + partial support | 跨阈值 χ²(1) 系数相等性+诚实判定 H 支持（副槽位 R6） | vs 变体43 组间差异裁决（决策对6）；vs 变体8 交互条件化 | EMERGING | Pollock 2015 ASQ |
+| 41 | 三条件中介+非对称支持 | 跨方程系数乘积+Sobel 三条件中介（同时方程系统） | vs 变体5 MCMC 中介（决策对4）；失败根因定位到条件 | EMERGING | Malshe 2015 JM |
+| 48 | 共线吸收解释 | 全模型交互显著性下降归因调节间高相关（Cortina） | vs 变体16 序列导航（只描述不解释）；配套变体53 | EMERGING | DesJardine 2025 AMJ |
+| 57 | 测量覆盖范围 warrant「学习」 | a-path 显著后用测量覆盖范围主张学习而非仅修复 | vs 变体41 检验中介是否成立 | VERIFIED | Kalaignanam 2013 JM |
+| 58 | 衰减+χ²+Sobel+bootstrap 堆叠确认 | confirmatory 部分中介 | vs 变体41 SUR 非对称；vs 变体5 post-hoc MCMC | VERIFIED | Kalaignanam 2013 JM |
 
 ### R4 交互/调节/阈值（8）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 9 | 单侧边际效应报告 | ±1SD 条件边际、不显著侧诚实报告 | vs 变体43 组间裁决；vs 变体14 低基础率直方图 | 待交叉 | Mannor 2016 SMJ |
-| 14 | 低基础率直方图 | 调节变量低基础率时替代 ±1SD 线图 | vs 变体9 条件边际线图；vs 变体32 外部基准阈值 | 待交叉 | Li 2026 JOM |
-| 18 | 曲线调节 flatten/steepen | 二阶交互符号+图形语言解释曲线被调节 | vs 变体17 主效应版（决策对2）；vs 变体40 floodlight | 通过（单篇） | Cui SMJ |
-| 32 | 外部基准阈值分割 | 权威基准（如 Census）阈值分割+边际效应图双向验证 | vs 变体40 floodlight 数据驱动转折点；vs 变体14 直方图 | 待交叉 | Du & Tsolmon 2024 OS |
-| 40 | Floodlight 双转折点 | 线性交互符号反转：零交叉+显著性交叉+90% CI 带（副槽位 R5） | vs 变体17/18 曲线；vs 变体32 外部阈值；vs 变体9 ±1SD | 通过（单篇） | Malshe 2015 JM |
-| 43 | 组内切换→组间裁决 | 组内方向切换但不显著→直接组间系数差异检验（副槽位 R6） | vs 变体9 单侧边际；vs 变体36 分样本 Wald（决策对6） | 通过（单篇） | Schumacher 2020 SMJ |
-| 45 | 亚组吸收+阶段熄灭 | baseline≈0+交互显著→亚组吸收全部优势+中后段熄灭 | vs 变体8 单期条件化 vs 变体27 无亚组版（决策对1） | 待交叉 | Kim & Lee 2026 SMJ |
-| 47 | min/mean/max 三值边际效应表 | 连续/二元调节的三值边际效应表+斜率方向语言 | vs 变体9 单侧；vs 变体40 floodlight 转折点 | 待交叉 | DesJardine 2025 AMJ |
-| 59 | spotlight ±1SD + Δslope + region | 一侧显著一侧不显著时的 region 主张（含无方向变体） | vs 变体9 无 Δslope；vs 变体40 floodlight 变号 | 待交叉 | Kalaignanam 2013 JM |
+| 9 | 单侧边际效应报告 | ±1SD 条件边际、不显著侧诚实报告 | vs 变体43 组间裁决；vs 变体14 低基础率直方图 | EMERGING | Mannor 2016 SMJ |
+| 14 | 低基础率直方图 | 调节变量低基础率时替代 ±1SD 线图 | vs 变体9 条件边际线图；vs 变体32 外部基准阈值 | EMERGING | Li 2026 JOM |
+| 18 | 曲线调节 flatten/steepen | 二阶交互符号+图形语言解释曲线被调节 | vs 变体17 主效应版（决策对2）；vs 变体40 floodlight | EMERGING | Cui SMJ |
+| 32 | 外部基准阈值分割 | 权威基准（如 Census）阈值分割+边际效应图双向验证 | vs 变体40 floodlight 数据驱动转折点；vs 变体14 直方图 | EMERGING | Du & Tsolmon 2024 OS |
+| 40 | Floodlight 双转折点 | 线性交互符号反转：零交叉+显著性交叉+90% CI 带（副槽位 R5） | vs 变体17/18 曲线；vs 变体32 外部阈值；vs 变体9 ±1SD | EMERGING | Malshe 2015 JM |
+| 43 | 组内切换→组间裁决 | 组内方向切换但不显著→直接组间系数差异检验（副槽位 R6） | vs 变体9 单侧边际；vs 变体36 分样本 Wald（决策对6） | EMERGING | Schumacher 2020 SMJ |
+| 45 | 亚组吸收+阶段熄灭 | baseline≈0+交互显著→亚组吸收全部优势+中后段熄灭 | vs 变体8 单期条件化 vs 变体27 无亚组版（决策对1） | EMERGING | Kim & Lee 2026 SMJ |
+| 47 | min/mean/max 三值边际效应表 | 连续/二元调节的三值边际效应表+斜率方向语言 | vs 变体9 单侧；vs 变体40 floodlight 转折点 | EMERGING | DesJardine 2025 AMJ |
+| 59 | spotlight ±1SD + Δslope + region | 一侧显著一侧不显著时的 region 主张（含无方向变体） | vs 变体9 无 Δslope；vs 变体40 floodlight 变号 | VERIFIED | Kalaignanam 2013 JM |
 
 ### R5 经济显著性（3）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 3 | Quartile Penalty 表 | 主效应经济显著性表格化（四分位罚金） | vs 变体23 行文版 vs 变体10 条件边际（决策对5） | 可选 | Darby2023 MSOM |
-| 10 | ΔR²+条件边际经济显著性 | 增量方差+条件百分比联合论证（调节的条件分解） | vs 变体13 交互联合变化；vs 变体23 四分位距（决策对5） | 待交叉 | Mannor 2016 SMJ |
-| 13 | 交互联合百分比经济显著性 | IV×M 同时变化 1% 的联合幅度翻译（LIWC 等百分比单位变量适配） | vs 变体10 条件分解；vs 变体23 主效应四分位（决策对5） | 待交叉 | Li 2026 JOM |
-| 55 | 外部证据实际重要性辩护拍 | 幅度翻译后用外部文献证明微小变化净显著收益 → "likely to be particularly important in practice" | vs 变体13 联合翻译——本变体追加拍5 实际重要性辩护；vs 生存分析变体15 "every day counts" 同拍跨场景 | 待交叉 | Ridge et al. 2024 AMJ |
+| 3 | Quartile Penalty 表 | 主效应经济显著性表格化（四分位罚金） | vs 变体23 行文版 vs 变体10 条件边际（决策对5） | VERIFIED | Darby2023 MSOM |
+| 10 | ΔR²+条件边际经济显著性 | 增量方差+条件百分比联合论证（调节的条件分解） | vs 变体13 交互联合变化；vs 变体23 四分位距（决策对5） | EMERGING | Mannor 2016 SMJ |
+| 13 | 交互联合百分比经济显著性 | IV×M 同时变化 1% 的联合幅度翻译（LIWC 等百分比单位变量适配） | vs 变体10 条件分解；vs 变体23 主效应四分位（决策对5） | EMERGING | Li 2026 JOM |
+| 55 | 外部证据实际重要性辩护拍 | 幅度翻译后用外部文献证明微小变化净显著收益 → "likely to be particularly important in practice" | vs 变体13 联合翻译——本变体追加拍5 实际重要性辩护；vs 生存分析变体15 "every day counts" 同拍跨场景 | EMERGING | Ridge et al. 2024 AMJ |
 
 ### R6 非显著/反转/Null（5）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 4 | 小样本/非显著诚实声明 | 任何非显著结果的通用收尾 | 通用兜底 vs 变体37 功效量化（理论关键 null 专用） | 可选 | Darby2023 MSOM |
-| 6 | 符号反转+当场理论解释 | 同 IV 跨条件/阶段方向相反，定位为 boundary condition | **当场解释** vs 变体42 **延迟解释**；补变体4 未覆盖的反转报告 | 通过（单篇） | Zhao/Ding/Gaba OS |
-| 30 | 预测性 null 作机制证据 | 理论预测的 null 排除替代解释（副槽位 R8） | vs 变体37 功效分析；vs 变体25 证伪 | 待交叉 | Du & Tsolmon 2024 OS |
-| 37 | Monte Carlo 功效分析 | 理论关键 null 交互的功效量化（排除 Type II） | vs 变体4 通用诚实声明；vs 变体30 预测性 null | 待交叉 | Pollock 2015 ASQ |
-| 42 | 反直觉反转+延迟 Discussion | 预测方向反转当场承认+推迟事后解释 | vs 变体6 当场解释；vs 变体30 预测性 null | 通过（单篇） | Malshe 2015 JM |
-| 60 | 调节变量主效应 null 驳斥 rival conjecture | 非假设 null 的可审计写法 | vs 变体30 预测性机制 null | 待交叉 | Kalaignanam 2013 JM |
+| 4 | 小样本/非显著诚实声明 | 任何非显著结果的通用收尾 | 通用兜底 vs 变体37 功效量化（理论关键 null 专用） | VERIFIED | Darby2023 MSOM |
+| 6 | 符号反转+当场理论解释 | 同 IV 跨条件/阶段方向相反，定位为 boundary condition | **当场解释** vs 变体42 **延迟解释**；补变体4 未覆盖的反转报告 | EMERGING | Zhao/Ding/Gaba OS |
+| 30 | 预测性 null 作机制证据 | 理论预测的 null 排除替代解释（副槽位 R8） | vs 变体37 功效分析；vs 变体25 证伪 | EMERGING | Du & Tsolmon 2024 OS |
+| 37 | Monte Carlo 功效分析 | 理论关键 null 交互的功效量化（排除 Type II） | vs 变体4 通用诚实声明；vs 变体30 预测性 null | EMERGING | Pollock 2015 ASQ |
+| 42 | 反直觉反转+延迟 Discussion | 预测方向反转当场承认+推迟事后解释 | vs 变体6 当场解释；vs 变体30 预测性 null | EMERGING | Malshe 2015 JM |
+| 60 | 调节变量主效应 null 驳斥 rival conjecture | 非假设 null 的可审计写法 | vs 变体30 预测性机制 null | VERIFIED | Kalaignanam 2013 JM |
 
 ### R7 稳健性与威胁处理（11）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 1 | 稳健性矩阵（Table 9 模板） | 稳健性检验数量多时以矩阵总览 | 表格式 vs 变体2 叙述式 | 通过（单篇） | Darby2026 JOM |
-| 2 | 叙事型逐 Threat 组织 | 稳健性正文逐威胁叙述（**默认首选**） | 4/5 复现，最强的通用基础版；变体15 是其五威胁升级 | 通过（4/5 复现） | Eilert/Darby×3/Wowak |
-| 7 | 替代 DV 作机制验证 | 替代 DV 同向复制确认机制（副槽位 R8） | vs 变体25 替代 DV **预期 null** 证伪（镜像功能） | 可选 | Zhao/Ding/Gaba OS |
-| 12 | R7 补充作跨样本复制 | 补充分析作为跨样本稳健性复制 | vs 变体21 枚举清单；vs 变体33 下游绩效完整展演 | 待交叉 | Mannor 2016 SMJ |
-| 15 | 五威胁标签化序列（RIR+Oster+CEM） | 遗漏变量+选择偏误组合电池（金融/会计 gold standard） | vs 变体46 Cinelli–Hazlett 单点敏感性；vs 变体2 基础四威胁；需报 Oster 参数 | 待交叉 | Li 2026 JOM |
-| 25 | 替代 DV 证伪段落 | 领域外结果的**预期不显著**作证伪 | vs 变体7 同向复制确认（镜像功能）；vs 变体30 预测性 null | 待交叉 | Chung 2022 JAMS |
-| 26 | 内生性 threat-by-threat 表叙事 | DWH+copula 等内生性检验表汇总叙事 | vs 变体15 五威胁（遗漏变量为主）；vs 变体29 选择偏误防御 | 待交叉 | Chung 2022 JAMS |
-| 29 | 选择偏误三步防御 | 描述性→CEM→Heckman 递进防御+关联收尾 | 递进深度 vs 变体24 导航 vs 变体26 内生性表（决策对7） | 待交叉 | Du & Tsolmon 2024 OS |
-| 31 | 替代解释三连驳斥 | 多个替代解释逐一排除+异质性模式裁决收束 | vs 变体25 单一 DV 证伪；vs 变体44 构念效度三角 | 待交叉 | Du & Tsolmon 2024 OS |
-| 39 | 替代估计器+LDV 偏误警示 | 3SLS 稳健性+用替代估计器失败**反向佐证**主估计器 | 反向佐证 vs 变体2/15 正向稳健性 | 待交叉 | Pollock 2015 ASQ |
-| 46 | Cinelli–Hazlett 敏感性 | 强观测协变量倍数基准的 confounder 强度论证 | vs 变体15 RIR+Oster（参数化）；corpus 首命中 Cinelli | 待交叉 | Kim & Lee 2026 SMJ |
-| 49 | ITCV 省略变量阈值 | 双重相关阈值+impact 阈值+最强控制对比（Frank 2000） | vs 变体46 Cinelli 倍数基准；vs 变体15 RIR+Oster | 待交叉 | DesJardine 2025 AMJ |
-| 50 | 双基准化偏离检验 | 构造"评级−外部基准"差变量，前门基准无关+后门差变量被影响 | vs 变体25 替代 DV 证伪（单 DV）；vs 变体7 同向复制 | 待交叉 | DesJardine 2025 AMJ |
-| 51 | 收购准自然实验 | 影响通道开关（私有→公开所有权切换）+ 收购前不显著 | vs 变体29 选择偏误防御（无通道切换）；vs 变体26 内生性表 | 待交叉 | DesJardine 2025 AMJ |
-| 54 | 前端识别防御（RIR 替换计数 + naive-vs-cure 2SRI 配对） | 内生性作为组织威胁且需前置到主结果之前：威胁定位→RIR 替换计数→naive vs 2SRI cure 配对→"consistent across approaches" | vs 变体15 五威胁标签化序列（RIR+Oster+CEM 三件套）——本变体是 RIR 量化替换 + naive-vs-cure 双轨节奏 + 前置；vs 变体2 基础四威胁 | 待交叉 | Ridge et al. 2024 AMJ |
-| 61 | 面板 GLS 四威胁电池 | 测量/替代估计器/分析单元上卷/滞后 BIC | vs 变体2 通用威胁；滞后 BIC 是规格辩护不是系数稳健性 | 待交叉 | Kalaignanam 2013 JM |
+| 1 | 稳健性矩阵（Table 9 模板） | 稳健性检验数量多时以矩阵总览 | 表格式 vs 变体2 叙述式 | VERIFIED | Darby2026 JOM |
+| 2 | 叙事型逐 Threat 组织 | 稳健性正文逐威胁叙述（**默认首选**） | 4/5 复现，最强的通用基础版；变体15 是其五威胁升级 | VERIFIED | Eilert/Darby×3/Wowak |
+| 7 | 替代 DV 作机制验证 | 替代 DV 同向复制确认机制（副槽位 R8） | vs 变体25 替代 DV **预期 null** 证伪（镜像功能） | EMERGING（可选） | Zhao/Ding/Gaba OS |
+| 12 | R7 补充作跨样本复制 | 补充分析作为跨样本稳健性复制 | vs 变体21 枚举清单；vs 变体33 下游绩效完整展演 | EMERGING | Mannor 2016 SMJ |
+| 15 | 五威胁标签化序列（RIR+Oster+CEM） | 遗漏变量+选择偏误组合电池（金融/会计 gold standard） | vs 变体46 Cinelli–Hazlett 单点敏感性；vs 变体2 基础四威胁；需报 Oster 参数 | EMERGING | Li 2026 JOM |
+| 25 | 替代 DV 证伪段落 | 领域外结果的**预期不显著**作证伪 | vs 变体7 同向复制确认（镜像功能）；vs 变体30 预测性 null | EMERGING | Chung 2022 JAMS |
+| 26 | 内生性 threat-by-threat 表叙事 | DWH+copula 等内生性检验表汇总叙事 | vs 变体15 五威胁（遗漏变量为主）；vs 变体29 选择偏误防御 | EMERGING | Chung 2022 JAMS |
+| 29 | 选择偏误三步防御 | 描述性→CEM→Heckman 递进防御+关联收尾 | 递进深度 vs 变体24 导航 vs 变体26 内生性表（决策对7） | EMERGING | Du & Tsolmon 2024 OS |
+| 31 | 替代解释三连驳斥 | 多个替代解释逐一排除+异质性模式裁决收束 | vs 变体25 单一 DV 证伪；vs 变体44 构念效度三角 | EMERGING | Du & Tsolmon 2024 OS |
+| 39 | 替代估计器+LDV 偏误警示 | 3SLS 稳健性+用替代估计器失败**反向佐证**主估计器 | 反向佐证 vs 变体2/15 正向稳健性 | EMERGING | Pollock 2015 ASQ |
+| 46 | Cinelli–Hazlett 敏感性 | 强观测协变量倍数基准的 confounder 强度论证 | vs 变体15 RIR+Oster（参数化）；corpus 首命中 Cinelli | EMERGING | Kim & Lee 2026 SMJ |
+| 49 | ITCV 省略变量阈值 | 双重相关阈值+impact 阈值+最强控制对比（Frank 2000） | vs 变体46 Cinelli 倍数基准；vs 变体15 RIR+Oster | EMERGING | DesJardine 2025 AMJ |
+| 50 | 双基准化偏离检验 | 构造"评级−外部基准"差变量，前门基准无关+后门差变量被影响 | vs 变体25 替代 DV 证伪（单 DV）；vs 变体7 同向复制 | EMERGING | DesJardine 2025 AMJ |
+| 51 | 收购准自然实验 | 影响通道开关（私有→公开所有权切换）+ 收购前不显著 | vs 变体29 选择偏误防御（无通道切换）；vs 变体26 内生性表 | EMERGING | DesJardine 2025 AMJ |
+| 54 | 前端识别防御（RIR 替换计数 + naive-vs-cure 2SRI 配对） | 内生性作为组织威胁且需前置到主结果之前：威胁定位→RIR 替换计数→naive vs 2SRI cure 配对→"consistent across approaches" | vs 变体15 五威胁标签化序列（RIR+Oster+CEM 三件套）——本变体是 RIR 量化替换 + naive-vs-cure 双轨节奏 + 前置；vs 变体2 基础四威胁 | EMERGING | Ridge et al. 2024 AMJ |
+| 61 | 面板 GLS 四威胁电池 | 测量/替代估计器/分析单元上卷/滞后 BIC | vs 变体2 通用威胁；滞后 BIC 是规格辩护不是系数稳健性 | VERIFIED | Kalaignanam 2013 JM |
 
 ### R8 补充/事后/机制（7）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 5 | MCMC 显式中介 | 中介机制的显式贝叶斯检验 | vs 变体41 同时方程三条件中介（决策对4）；vs 变体7/25 DV 证伪 | 可选 | Darby2023 MSOM |
-| 21 | post-hoc 枚举清单 | 事后分析清单化+附录引用 | vs 变体33 完整展演；vs 变体12 跨样本复制 | 可选 | Cui SMJ |
-| 33 | 下游绩效 post hoc | 时间增长+多指标收敛+提示性收尾 | vs 变体21 清单；vs 变体12 复制；vs 变体5 MCMC | 待交叉 | Du & Tsolmon 2024 OS |
-| 38 | post-hoc spline 重解释 | 意外负效应用 spline+递减理论重解释（明标 post-hoc） | vs 变体42 延迟到 Discussion；vs 变体6 当场解释 | 待交叉 | Pollock 2015 ASQ |
-| 44 | 构念效度威胁三角验证 | 按 rival interpretation 组织三类效度威胁（nomological+跨情境+时序） | vs 变体31 替代解释；vs 变体15 稳健性电池 | 通过（单篇） | Schumacher 2020 SMJ |
-| 52 | 机制异质性分解（Bushee 类型） | 既有分类把动机/能力操作化为亚型+系数对比+Wald 检验 | vs 变体44 效度三角（多指标收敛）；vs 变体31 替代解释 | 待交叉 | DesJardine 2025 AMJ |
-| 56 | 二元策略完全中介 + 市场信号（legacy Kenny） | firm chars→策略选择 probit + 策略→AR 显著 + firm→AR 直接路径消失 → complete mediation + 信号收束 | vs 变体41 Sobel/乘积；vs 变体5 MCMC；**必须标 legacy**（决策对4） | 待交叉 | Chen, Ganesan & Liu 2009 (JM); source=chenganesanliu2009 |
+| 5 | MCMC 显式中介 | 中介机制的显式贝叶斯检验 | vs 变体41 同时方程三条件中介（决策对4）；vs 变体7/25 DV 证伪 | VERIFIED | Darby2023 MSOM |
+| 21 | post-hoc 枚举清单 | 事后分析清单化+附录引用 | vs 变体33 完整展演；vs 变体12 跨样本复制 | EMERGING（可选） | Cui SMJ |
+| 33 | 下游绩效 post hoc | 时间增长+多指标收敛+提示性收尾 | vs 变体21 清单；vs 变体12 复制；vs 变体5 MCMC | EMERGING | Du & Tsolmon 2024 OS |
+| 38 | post-hoc spline 重解释 | 意外负效应用 spline+递减理论重解释（明标 post-hoc） | vs 变体42 延迟到 Discussion；vs 变体6 当场解释 | EMERGING | Pollock 2015 ASQ |
+| 44 | 构念效度威胁三角验证 | 按 rival interpretation 组织三类效度威胁（nomological+跨情境+时序） | vs 变体31 替代解释；vs 变体15 稳健性电池 | EMERGING | Schumacher 2020 SMJ |
+| 52 | 机制异质性分解（Bushee 类型） | 既有分类把动机/能力操作化为亚型+系数对比+Wald 检验 | vs 变体44 效度三角（多指标收敛）；vs 变体31 替代解释 | EMERGING | DesJardine 2025 AMJ |
+| 56 | 二元策略完全中介 + 市场信号（legacy Kenny） | firm chars→策略选择 probit + 策略→AR 显著 + firm→AR 直接路径消失 → complete mediation + 信号收束 | vs 变体41 Sobel/乘积；vs 变体5 MCMC；**必须标 legacy**（决策对4） | VERIFIED | Chen, Ganesan & Liu 2009 (JM); source=chenganesanliu2009 |
 
 ## 易混决策对（跨槽位附录——槽位分不开时查这里）
 
@@ -177,7 +177,7 @@ updated: 2026-08-13
 ### 变体 1: 按 Threat 分类的稳健性检验汇总矩阵 (Table 9 模板)
 **来源论文**: Darby2026 JOM
 **原始句锚点**: "We conducted 19 robustness checks to validate our findings and address potential concerns surrounding the selection of matching covariates and matching method, omitted variables, simultaneity and reverse causality, measurement error, multicollinearity and outliers, and empirical strategy. Taken together, these analyses illustrate the robustness of our results and provide additional support for all three hypotheses."
-**验证状态**: 通过 (1/5，但生成力极高)
+**验证状态**: VERIFIED（1/5，但生成力极高）
 **写入日期**: 2026-05-20
 **槽位**: R7
 **骨架**:
@@ -187,7 +187,7 @@ updated: 2026-08-13
 ### 变体 2: 叙事型稳健性检验 — 逐 Threat 组织 (4/5 复现)
 **来源论文**: Eilert2017 JM / Darby2025 JSCM / Darby2023 MSOM / Wowak2025 MS
 **原始句锚点**: "Although our empirical analyses accounted for manufacturer- or firm-specific heterogeneity by using clustered standard errors, one could wonder whether there are significant differences between U.S.-, Europe-, and Asia-based manufacturers with respect to how they respond to safety investigations. To test this possibility, we included dummy variables for the manufacturer headquarters and reestimated the recall timing model."
-**验证状态**: 通过
+**验证状态**: VERIFIED
 **写入日期**: 2026-05-20
 **槽位**: R7
 **骨架**:
@@ -203,7 +203,7 @@ updated: 2026-08-13
 ### 变体 3: 经济显著性的 Quartile Penalty Table (1/5 复现)
 **来源论文**: Darby2023 MSOM
 **原始句锚点**: "To further understand the practical implications, we examined how these market penalties change across quartiles of the Time-to-Recall measure for the smallest and largest significant effect sizes. For example, Table 5 indicates that moving from the first quartile (10 days) to the second quartile (33 days)—an approximately three-week delay in time-to-recall—is associated with an increase in the stock market penalty ranging from 82% to 124%."
-**验证状态**: 可选变体 (高价值)
+**验证状态**: VERIFIED（高价值）
 **写入日期**: 2026-05-20
 **槽位**: R5
 **骨架**:
@@ -213,7 +213,7 @@ updated: 2026-08-13
 ### 变体 4: 小样本/非显著结果的诚实声明 (1/5 复现)
 **来源论文**: Darby2023 MSOM
 **原始句锚点**: "Although our theorizing supports the notion that CEOs may care less about low-severity recalls given their limited ramifications, we note that the nonsignificant effect for low-severity recalls could also simply be an artifact of the small sample size for low-severity recalls."
-**验证状态**: 可选变体 (所有研究都该用)
+**验证状态**: VERIFIED（所有研究都该用）
 **写入日期**: 2026-05-20
 **槽位**: R6
 **骨架**:
@@ -223,7 +223,7 @@ updated: 2026-08-13
 ### 变体 5: Post Hoc — MCMC 显式中介分析 (1/5 复现)
 **来源论文**: Darby2023 MSOM
 **原始句锚点**: "To conduct this analysis, we used a Markov Chain Monte Carlo (MCMC) simulation method with 20,000 draws. The results indicate that time-to-recall partially mediates the relationship between CEO stock ownership and stock market returns for event windows CAR(−1,0), CAR(−1,1), and CAR(−1,5) for all recalls."
-**验证状态**: 可选变体
+**验证状态**: VERIFIED
 **写入日期**: 2026-05-20
 **槽位**: R8
 **骨架**:
@@ -233,7 +233,7 @@ updated: 2026-08-13
 ### 变体 6: 符号反转跨条件的诚实报告 — Sign Reversal Across Conditions with Theoretical Explanation (1/6 复现)
 **来源论文**: Zhao/Ding/Gaba 2023 (Organization Science)
 **原始句锚点**: "Instead, in Model 2, overall dissatisfaction has a negative and significant effect (p = 0.002) and evaluation heterogeneity has a positive and significant effect (p = 0.02). The magnitudes are notably smaller, roughly one-half to one-third of those for initial positioning."
-**验证状态**: 通过（单篇入库；corpus 此前仅有 null-finding 变体4，方向反转报告为真实空白，待第二篇交叉验证）
+**验证状态**: EMERGING（单篇入库；corpus 此前仅有 null-finding 变体4，方向反转报告为真实空白）
 **写入日期**: 2026-06-17
 **槽位**: R6
 **骨架**:
@@ -245,7 +245,7 @@ updated: 2026-08-13
 ### 变体 7: 替代 DV 作机制验证 — Alternative DV as Theoretical Validation (1/6 复现)
 **来源论文**: Zhao/Ding/Gaba 2023 (Organization Science)
 **原始句锚点**: "To examine this, we introduce an alternative dependent variable, peripheral distance to the core, which captures how far an app's peripheral functions are from its core function in the semantic space. … This provides additional evidence that dissatisfaction is associated with novelty seeking not only through differentiation from successful competitors but also through the selection of peripheral functions that are less tightly coupled to the core."
-**验证状态**: 可选变体（中价值，扩展 R7 的理论功能）
+**验证状态**: EMERGING（可选；中价值，扩展 R7 的理论功能）
 **写入日期**: 2026-06-17
 **槽位**: R7 / R8
 **骨架**:
@@ -255,7 +255,7 @@ updated: 2026-08-13
 ### 变体 8: 主效应不显著但调节显著 — 条件化再定位 (1篇高价值)
 **来源论文**: Mannor, Wowak, Bartkus & Gomez-Mejia 2016 (Strategic Management Journal)
 **原始句锚点**: "Although the coefficient was in the expected positive direction, Model 2 shows that job anxiety was not a significant predictor of social buffering (β = 0.24, n.s.). Hypothesis 1 was thus not supported. … The significant negative coefficient on the interaction term in Model 3 (β = −0.38, p < 0.01) lends support to Hypothesis 3."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-07
 **槽位**: R3+R4
 **骨架**:
@@ -265,7 +265,7 @@ updated: 2026-08-13
 ### 变体 9: 调节效应边际效应的单侧显著报告 (1篇高价值)
 **来源论文**: Mannor, Wowak, Bartkus & Gomez-Mejia 2016 (Strategic Management Journal)
 **原始句锚点**: "We found a significant negative marginal effect of job anxiety in gain contexts (dy/dx = −1.16, p < 0.01) but no significant effect in loss contexts (dy/dx = −0.29, n.s.)."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-07
 **槽位**: R4
 **骨架**:
@@ -274,7 +274,7 @@ updated: 2026-08-13
 
 ### 变体 10: ΔR² + 条件边际效应嵌入经济显著性 (1篇高价值)
 **来源论文**: Mannor, Wowak, Bartkus & Gomez-Mejia 2016 (Strategic Management Journal)
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-07
 **槽位**: R5
 **骨架**:
@@ -284,7 +284,7 @@ updated: 2026-08-13
 ### 变体 11: 边际显著 90% CI 双区间透明报告 (1篇高价值)
 **来源论文**: Bamberger, Homburg & Wielgos 2021 (Journal of Marketing)
 **原始句锚点**: "As in Study 1, the total effect of wage inequality on short-term profitability is positive but reaches only marginal statistical significance (Est. = .21, p < .10, 95% CI: [−.01, .49], 90% CI: [.04, .44])."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-07
 **槽位**: R3/R8
 **骨架**:
@@ -294,7 +294,7 @@ updated: 2026-08-13
 ### 变体 12: R7 补充分析作为跨样本稳健性复制 (1篇高价值)
 **来源论文**: Mannor, Wowak, Bartkus & Gomez-Mejia 2016 (Strategic Management Journal)
 **原始句锚点**: "We performed a supplementary analysis to investigate whether our strategic risk taking results were robust to alternative study contexts and measurement techniques. To do so, we constructed a sample of public company CEOs listed in the Execucomp database who began their tenures in 2008 and remained in their positions for at least four years."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-07
 **槽位**: R7
 **骨架**:
@@ -304,7 +304,7 @@ updated: 2026-08-13
 ### 变体 13: R5 交互效应百分比经济显著性 — 联合变化的幅度解释 (1篇高价值)
 **来源论文**: Li, Chiu, Kong, Cropanzano & Ho 2026 (Journal of Management)
 **原始句锚点**: "A 1% increase in CEO achievement expression and mortality salience was associated with a 3.17% increase in ATV around the call. A 1% increase in CEO achievement expression and mortality salience was associated with a decrease of 5.17 units in investor negative sentiment."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-07
 **槽位**: R5
 **骨架**:
@@ -315,7 +315,7 @@ updated: 2026-08-13
 ### 变体 14: R4 低基础率调节变量的边际效应直方图 — 替代传统 ±1SD 线图 (1篇高价值)
 **来源论文**: Li, Chiu, Kong, Cropanzano & Ho 2026 (Journal of Management)
 **原始句锚点**: "We further plotted the marginal effects using histograms. Given that CEOs' use of death-related communication during the calls has a low base rate, for easier interpretation, we display different levels of mortality salience based on the actual counts of death-related words (0, 1, 3, and 5 words)."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-07
 **槽位**: R4
 **骨架**:
@@ -326,7 +326,7 @@ updated: 2026-08-13
 ### 变体 15: R7 五威胁标签化稳健性序列 — RIR+Oster+CEM组合 (1篇高价值)
 **来源论文**: Li, Chiu, Kong, Cropanzano & Ho 2026 (Journal of Management)
 **原始句锚点**: "We conducted a series of supplementary analyses to determine the robustness of our findings. First, to rule out the possibility of omitted variable bias, we performed the robustness of inference to replacement (RIR) test and Oster's delta test."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-07
 **槽位**: R7
 **骨架**:
@@ -334,10 +334,51 @@ updated: 2026-08-13
 **与原骨架差异**: 现有变体2（叙事型逐威胁组织）提供了标准四威胁模板（omitted variables + reverse causality + measurement error + alternative estimator）。Li et al. 升级为**五威胁+两稀有检验组合**：(1) RIR + Oster's delta 联合处理遗漏变量——这是 recent 顶刊（特别是金融/会计领域）的 gold standard，替代传统的"add more controls"；(2) 死亡类型分析——将 moderator 分解为 literal vs pseudo 子类型并检验是否调节主交互，创建"null interaction on interaction"的 meta-robustness；(3) 制药企业排除——针对特定行业的混淆检验（pharma firms 可能更频繁使用死亡相关语言）；(4) 替代测量替换——独立董事死亡替代 CEO 死亡词（construct-level replication）；(5) CEM 匹配处理低基础率选择偏误——匹配后的 moderator 比率从 3.61% 升至 11.33%。最后以 "A summary of our results is available online in Appendix [N]" 收尾。
 **诚实边界**: RIR + Oster 组合需要在 Methods 或 Appendix 中解释两个检验的选择参数（如 RIR 的 replacement threshold、Oster 的 δ 和 Rmax）。仅说 "results are robust to omitted variable bias" 而不报告参数 → 审稿人会要求补充。
 
+
+### 变体 66: R7 — 三威胁小节化稳健性：选择性/内生性 → 替代估计 → 构念效度（post_2022_women_tmt_strategic_renewal 型）
+
+**来源论文**: Post, Lokshin & Boone 2022 (AMJ)
+**验证状态**: VERIFIED（expert_audit_override, user 2026-08-29）
+**槽位**: R7（独立 "Robustness Checks" 小节，falling action）
+
+#### 报告骨架
+
+```text
+Our first robustness check addressed the possibility that [threat_1: endogeneity or
+selectivity] affected our results. [treatment] may be conditional on [selection
+mechanism] ([citations]). To address this possibility, we re-estimated our models on the
+subsample of our data when [condition occurs]. Overall, the results do not suggest that
+[threat_1] biased our results (see Online Appendix [X]). Our second robustness check
+assessed the indirect paths from [treatment] to [outcomes] using [SEM/GSEM commands].
+The [alternative] model differs from our [baseline] approach in that it allows for
+correlations among the error terms of our [equations]. The [alternative] results are
+largely similar to our reported results. Finally, to further investigate the construct
+validity of our [construct] variables, we re-estimated the models substituting the focal
+dependent variables with [alternative DV 1] and [alternative DV 2], respectively. As
+expected, we find that [treatment] significantly [affects] [alternative DV 1],
+especially when [moderator condition].
+```
+
+#### 关键技术点
+
+| 步骤 | 操作 | 理由 |
+|------|------|------|
+| 1. 序数威胁命名 | "Our first/second ... robustness check addressed the possibility that ..." | threat-based 而非按表格罗列 |
+| 2. 每威胁一句机制引证 | 选择机制引 Zhang & Rajagopalan 式文献 | threat 不是假想敌 |
+| 3. 替代估计须说清差异 | "differs ... in that it allows for correlations among the error terms" | 告诉读者替代估计多检验了什么 |
+| 4. 构念效度用替代 DV 且方向预期 | "As expected, we find ..." | 替代 DV 是收敛证据不是安慰剂 |
+| 5. 细节外包 Online Appendix | 正文一句结论 + 附录指引 | 主文节奏不被稳健性淹没 |
+
+#### 原文锚定
+- "Our first robustness check addressed the possibility that endogeneity or selectivity affected our results."（results.md Robustness Checks 节）
+
+#### 与最近变体的区别
+- 区别于 r7_ols_threat_based / 变体 15（五威胁标签化序列）：本变体是"选择性/内生性 → 替代估计器（SEM 递归）→ 构念效度替代 DV"三威胁小节化组织，且第三威胁以替代 DV 的方向性预期收尾。
+
 ### 变体 16: R2 7模型层次回归表导航 — 主效应→双向→三向递进 (1篇高价值)
 **来源论文**: Ahmadi, Khanagha, Berchicci & Jansen 2017 (Journal of Management Studies)
 **原始句锚点**: "Model 1 includes the main effects, the traits, and manipulations, to test hypotheses 1a and 1b. … Model 5 shows the results of the three-way interaction between complexity, promotion-focused context, and promotion focus trait."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-07
 **槽位**: R2
 **骨架**:
@@ -349,10 +390,49 @@ updated: 2026-08-13
 **与原骨架差异**: 本骨架是**实验层次回归的完整表导航模板**，适用于拥有多个特质IV、多个操纵调节变量、两向和三向交互的实验设计。Ahmadi et al. 使用7模型递进结构：(1) M1主效应（trait IV + manipulated variables）；(2) M2-M4两向交互（逐个添加交互项，Higgins et al. 2003范式）；(3) M5-M7三向交互（逐个添加三向项）。关键策略：(a) 将控制变量的显著发现也纳入叙事——"complexity has a direct and positive effect... this suggests that..."——即使不是假设的一部分，也为后续交互提供了情境锚定；(b) 逐个假设报告而非一次性报告所有模型——每段对应一个假设/一组假设，M1→H1a+b, M2-M4→H2a+b, M5-M7→H3a+b；(c) 三向交互的条件分解——在主效应中测试"在哪个调节水平上两向交互显著"，再用t-test比较跨条件的简单斜率差异。适用于任何含多个trait IV + 多个manipulated moderator的2×2实验设计。
 **诚实边界**: 7模型表可能过于密集——必须在表注中明确每个模型包含哪些变量。若某些交互项的加入导致其他系数符号反转或显著性变化（如promotion focus从Model 1显著到Model 2不显著），必须在正文中讨论而非沉默。
 
+
+### 变体 65: R4 — 分样本 null→significant 对 + 组内 Wald + 跨子样本 Chow 诚实降级（post_2022_women_tmt_strategic_renewal 型）
+
+**来源论文**: Post, Lokshin & Boone 2022 (AMJ)
+**验证状态**: VERIFIED（expert_audit_override, user 2026-08-29）
+**槽位**: R4（亦服务 R6 诚实降级）
+
+#### 报告骨架
+
+```text
+To test Hypothesis [H], we estimated [outcome] models separately for the
+[moderator_absent] and the [moderator_present] subsamples. When [moderator] is [absent]
+(Table [X], Model [N]), the coefficient for [treatment_A] is [marginally
+significant/insignificant] (b = [value], p = [value]), while the effect of [treatment_B]
+is insignificant (b = [value], p = [value]), and the difference in the two estimated
+coefficients is not significant. Conversely, when [moderator] is [present] (Table [X],
+Model [M]), the [treatment_A] effect gains in size and significance (b = [value],
+p = [value]), whereas the [treatment_B] coefficient does not (b = [value], p = [value]),
+and the difference in the two estimated coefficients becomes significant (p = [value]).
+This pattern of findings is consistent with Hypothesis [H], although a Chow test comparing
+the effect sizes of the [treatment_A] across Models [N] and [M] reveals that the
+difference is not significant (p = [value]).
+```
+
+#### 关键技术点
+
+| 步骤 | 操作 | 理由 |
+|------|------|------|
+| 1. 双子样本镜像句式 | absent 组报 null → present 组报 "gains in size and significance" | 调节证据由对称对照承载，不靠交互项 |
+| 2. 组内 Wald（focal vs 对照 treatment） | 每个子样本内报系数差 p | 子样本内部也维持双处理对照纪律 |
+| 3. 跨子样本 Chow 诚实降级 | Chow 不显著时写 "consistent with ... although ... not significant" | 方向证据与统计裁决分离，支持判断留给读者 |
+| 4. 幅度翻译随显著组出现 | 仅 present 组后给百分比幅度 | null 组不硬造幅度 |
+
+#### 原文锚定
+- "This pattern of findings is consistent with Hypothesis 3a, although a Chow test comparing the effect sizes of the female appointments across Models 5 and 6 reveals that the difference is not significant (p = .60)."（results.md Table 3 段）
+
+#### 与最近变体的区别
+- 区别于 r4_ols_threshold_group_coefficient_difference（外部阈值分组）：本变体是理论状态分组（零/正 incumbency）+ 组内 Wald + 跨组 Chow 诚实降级三件套；区别于变体 43（组间系数差异裁决）：本变体把"哪组显著"的镜像节奏与 Chow 不显著时的降级句式一并沉淀。
+
 ### 变体 17: R3 主假设检验 — 倒 U 型关系（Lind-Mehlum 三步 + 转折点 CI + Cohen's d）(1篇高价值)
 **来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
 **原始句锚点**: "In Model 2 of Table 2, we tested Hypothesis 1 by introducing both the linear and quadratic terms of relative exploration. The result shows that competitive aggressiveness first increases significantly with relative exploration (b = 1.508, p = 8E−08), then decreases significantly as relative exploration continues to increase (b = −1.439, p = 1E−07). This result indicates a curvilinear relationship (inverted U-shape) between relative exploration and competitive aggressiveness, with a medium effect size (Cohen's d = 0.428). … Using the 'margins' command in Stata 12, we confirmed that when relative exploration = 0, the slope dy/dx = 1.701 (p = 4E−05), and when relative exploration = 1, the slope dy/dx = −1.561 (p = 3E−05). Third, we tested whether or not the turning point is located within the data range of relative exploration. We confirmed this using the 'nlcom' command in Stata 12 by showing that the inverted U-shape turns when relative exploration = 0.522 and that the 95% confidence interval for the turning point [0.504, 0.539] is within the value range of relative exploration."
-**验证状态**: 通过（单篇入库，待第二篇交叉验证）
+**验证状态**: EMERGING（单篇入库）
 **写入日期**: 2026-07-08
 **槽位**: R3
 **骨架**:
@@ -365,7 +445,7 @@ updated: 2026-08-13
 ### 变体 18: R4 曲线调节效应 — 倒 U 型被调节（二阶交互项符号 + Cohen's d + flatten/steepen 图形解释）(1篇高价值)
 **来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
 **原始句锚点**: "In Model 3, the interaction terms between repeated alliance ties (relational embeddedness) and both the linear and quadratic terms of relative exploration are introduced in order to test Hypothesis 2: whether repeated alliance ties negatively moderates the inverted U-shaped relationship. This moderation effect is supported if the second-order interaction term is significantly positive (Hanns et al., 2016). As confirmed by our results, the second-order interaction term is indeed positive (b = 0.692, p = 6E−06), with a small-to-medium effect size (Cohen's d = 0.364). Figure 2 illustrates this moderation effect, showing that the inverted U-shape is flattened when the value of repeated alliance ties is higher, supporting Hypothesis 2."
-**验证状态**: 通过（单篇入库，待第二篇交叉验证）
+**验证状态**: EMERGING（单篇入库）
 **写入日期**: 2026-07-08
 **槽位**: R4
 **骨架**:
@@ -378,7 +458,7 @@ updated: 2026-08-13
 ### 变体 19: R2 模型序列 — 多项式主效应 + 多个曲线调节 (1篇高价值)
 **来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
 **原始句锚点**: "We ran fixed-effects models following a hierarchical approach: Model 1 includes only the control variables, while Models 2 through 5 add the independent and interaction variables. Model 6 is the full model, including all independent and interaction variables. Variance inflation factor (VIF) scores were calculated for all models; none of the maximum VIFs exceed the value of 2.5, which is substantially lower than the rule-of-thumb cut-off of 10 (Ryan, 1997). We then used the 'coldiag' procedure in Stata to conduct the Belsley, Kuh, and Welsch (1980) multicollinearity diagnostic test, which showed that the condition number for our complete model is 7.53, well below the threshold of 30. We also ran the fixed-effects models using non-centered data; the results are consistent. Since centered estimations can make interpretation of the results less straightforward (Echambadi & Hess, 2007), we report estimations using the original variable values in Table 2."
-**验证状态**: 通过（单篇入库，待第二篇交叉验证）
+**验证状态**: EMERGING（单篇入库）
 **写入日期**: 2026-07-08
 **槽位**: R2
 **骨架**:
@@ -388,7 +468,7 @@ updated: 2026-08-13
 ### 变体 20: R1 描述性统计与诊断 — 多项式/交互模型 (1篇高价值)
 **来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
 **原始句锚点**: "Table 1 reports descriptive statistics and correlations for all variables, including the quadratic and interaction terms. We mean-centered the variables before creating quadratic and interaction terms in order to reduce non-essential ill-conditioning between independent variables and their higher-order terms (Aiken & West, 1991). The dependent and independent variables show considerable variance, and the correlation coefficients are consistent with our expectations."
-**验证状态**: 通过（单篇入库，待第二篇交叉验证）
+**验证状态**: EMERGING（单篇入库）
 **写入日期**: 2026-07-08
 **槽位**: R1
 **骨架**:
@@ -397,10 +477,46 @@ updated: 2026-08-13
 > We ran [estimator] models following a hierarchical approach: Model 1 includes only the control variables, while Models 2 through [N-1] add the independent and interaction variables. Model [N] is the full model, including all independent and interaction variables. Variance inflation factor (VIF) scores were calculated for all models; none of the maximum VIFs exceed [value], which is substantially lower than the rule-of-thumb cut-off of 10 ([citation]). We then used [procedure] in [software] to conduct the [citation] multicollinearity diagnostic test, which showed that the condition number for our complete model is [value], well below the threshold of [threshold]. We also ran the [estimator] models using non-centered data; the results are consistent. Since centered estimations can make interpretation of the results less straightforward ([citation]), we report estimations using the original variable values in Table [z].
 **与原骨架差异**: write-results SKILL.md 的 R1 通用段落未覆盖多项式/交互模型特有的 mean-centering、condition number 和非中心复制三重诊断。本文提供了完整且简洁的整合范例：诊断不是为了例行公事，而是为了说明"高阶项和交互项没有造成多重共线性问题"，并解释为何最终报告非中心化系数（便于解释）。
 
+
+### 变体 67: R1 — 双路径前提描述统计：理论预言零相关 + moderator 分布与条件定义（post_2022_women_tmt_strategic_renewal 型）
+
+**来源论文**: Post, Lokshin & Boone 2022 (AMJ)
+**验证状态**: VERIFIED（expert_audit_override, user 2026-08-29）
+**槽位**: R1
+
+#### 报告骨架
+
+```text
+We identified [N] [treatment events], of which [n] ([value]%) were [focal treatment].
+The majority of observations in our sample ([value]%) are [unit] observations with zero
+[moderator]. In our sample, a (relatively) "[small condition]" corresponds to [definition]
+and a "[large condition]" means [definition]. As we theorized, change in [mediator_A] and
+change in [mediator_B] are not significantly correlated ([value], p = [value]), and
+neither are change in [outcome_A] and [outcome_B] ([value], p = [value]). Table [1]
+provides all descriptive statistics and pairwise correlations, which are mostly low to
+moderate. The mean variance inflation factor for the variables used in the estimation
+([value]) is below the commonly used threshold of [threshold] ([citation]).
+```
+
+#### 关键技术点
+
+| 步骤 | 操作 | 理由 |
+|------|------|------|
+| 1. 理论预言零相关前提 | "As we theorized, ... are not significantly correlated" | 双中介路径的区分效度前提在 R1 预检，后续双路径叙事才站得住 |
+| 2. moderator 经验分布先行 | 零值占比、计数分布 | 为分样本/阈值检验的样本构成提前交底 |
+| 3. 条件操作化定义内嵌 | small/large cohort 的取值定义在 R1 给出 | R4/R5 分样本读者不用回翻 Methods |
+| 4. 常规诊断收尾 | 相关矩阵 + mean VIF < 阈值 | 诊断不缺位但不喧宾夺主 |
+
+#### 原文锚定
+- "As we theorized, change in TMT risk-taking propensity and change in TMT change orientation are not significantly correlated (.03, p = .16), and neither are change in M&A and R&D growth (.01, p = .64)."（results.md 第1段）
+
+#### 与最近变体的区别
+- 区别于 r1_ols_standard（描述统计+VIF 常规款）：本变体新增"理论预言零相关"区分效度前提句 + moderator 分布/分样本条件定义前置。
+
 ### 变体 21: R8 补充/事后分析 — 枚举清单 + 附录引用 (1篇高价值)
 **来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
 **原始句锚点**: "We conducted six additional analyses, either as robustness checks or to gain additional insights into the primary relationships. These analyses investigated (a) whether the results are robust to alternative measures for relative exploration; (b) which firm in a dyad is more likely to initiate competitive actions; (c) what factors determine a firm's response to its partner's actions; (d) the extent to which the technological know-how acquired in one area and knowledge of a partner's managerial system can be applied to competition against the same partner in different technological areas; (e) whether the results are robust to different paradigms of competition; and (f) the potential moderating effects of network density and multiparty. Details of these analyses are available in the Appendix S1."
-**验证状态**: 可选变体（中价值）
+**验证状态**: EMERGING（可选；中价值）
 **写入日期**: 2026-07-08
 **槽位**: R8
 **骨架**:
@@ -411,7 +527,7 @@ updated: 2026-08-13
 ### 变体 22: R2 无模型证据开场 — 四分位均值/中位数单调性 (1篇高价值)
 **来源论文**: Chung, Low & Rust 2022 (Journal of the Academy of Marketing Science)
 **原始句锚点**: "We first present model-free evidence regarding the relationship between CEO confidence and myopic marketing management. Consistent with H1, there is a monotonic increase in MMM from the first quartile where CEOs have the lowest level of confidence to the fourth quartile where CEOs are the most confident."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-08
 **槽位**: R2
 **骨架**:
@@ -423,7 +539,7 @@ updated: 2026-08-13
 ### 变体 23: R5 四分位距经济显著性 — 从 P25 到 P75 的幅度翻译 (1篇高价值)
 **来源论文**: Chung, Low & Rust 2022 (Journal of the Academy of Marketing Science)
 **原始句锚点**: "Table 4 Column 1 shows that H1 is supported: CEO confidence significantly and positively predicts MMM with δ1 = 0.287, indicating that an interquartile move in CEO confidence from the 25th percentile to the 75th percentile is associated with a 0.29 percentage point increase in MMM. In untabulated tests, we test for H1 using all firms, without restricting to those with CMOs, and continue to find support for H1 with similar economic significance."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-08
 **槽位**: R3/R5
 **骨架**:
@@ -432,10 +548,20 @@ updated: 2026-08-13
 **诚实边界**: P25–P75 的解释隐含了 IV 在其分布中段的比较；若 IV 呈高度偏态或存在大量零值，应报告实际对应值（如 P25 = [value], P75 = [value]）而非仅说"interquartile"。
 **跨 skill 对齐**: `../write-methods/econometric-models/micro-templates/interquartile-economic-significance.md`（M7/M8/M10 预告）；Results 在此兑现 Methods 中预告的经济显著性解释口径。
 
+
+### 变体 63：R3/R5 ln(时长) DV 的跨列选择性显著 + 天数回译幅度拍（wowak2020 型）
+[功能标签]: R3 主假设检验（时长 DV 变体）+ R5 幅度嵌入
+[骨架]: "We now move to our model that examines [DV_time]. In Table [y], we present the results of the [OLS FE] model that uses the natural log of the number of [time units] from [awareness event] to [action initiation] as the dependent variable. Once again, we include control variables in column (1) and then the [predictor] for all [events] (column (2)) and each [subclass] (columns (3)–(5)). The only column in which [predictor] has a significant relationship with [DV_time] is for [high-severity subclass] in column (3) (β = [value], p < [threshold]). Increasing [predictor] is associated with a faster [outcome] for the most [severe], [stakes descriptor] events needing [action]. This finding provides support for Hypothesis [N]. Interpreting similarly, a one standard deviation increase in [predictor] is associated with a [N]-[unit] acceleration in [DV_time] for the most severe [subclass]."
+[关键特征]: 并行列结构中诚实报告选择性显著（"The only column in which ..."）而非逐列罗列；ln(时长) 系数不留在对数尺度，直接回译为自然单位天数（one-SD → [N]-unit acceleration）作幅度拍；"Interpreting similarly" 把幅度解释锚定到前表的解读协议
+[适用]: ln(时间间隔) DV 的 OLS/FE 平行分列设计；与计数 DV 表共享分列结构（严重度分组）的双 DV 论文
+[禁忌]: 跨列选择性显著不得隐藏——用 "the only column" 明示；回译幅度需给出自然单位而非只报对数点
+**原文锚定**: "The only column in which FBR has a significant relationship with time-to-recall is for high-severity class 1 recalls in column (3) (β = −0.22, p < 0.05). ... Interpreting similarly, a one standard deviation increase in FBR is associated with a 16-day acceleration in time-to-recall for the most severe class 1 recalls."
+**来源**: wowak_2020_female_directors_recalls (M&SOM), §5 Table 4 段
+
 ### 变体 24: R2 Heckman 两阶段表格导航 — 第一阶段 Table 3 → 第二阶段 Columns 1-4 (1篇高价值)
 **来源论文**: Chung, Low & Rust 2022 (Journal of the Academy of Marketing Science)
 **原始句锚点**: "Table 3 shows the results of the first-stage selection equation with our exclusion restriction, Peer CMO presence, significantly and positively predicting the likelihood of a firm having a CMO. … Column 2 includes the two-way moderating relationships, and we find support for both H2 and H4."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-08
 **槽位**: R2
 **骨架**:
@@ -447,7 +573,7 @@ updated: 2026-08-13
 ### 变体 25: R7 替代 DV 证伪段落 — 领域外结果的预期不显著 (1篇高价值)
 **来源论文**: Chung, Low & Rust 2022 (Journal of the Academy of Marketing Science)
 **原始句锚点**: "An alternative way to establish causality is to provide a falsification test where we examine how AEM—an outcome variable that is not within the decision-making domain of the CMO—is affected by the interaction among CEO confidence, CMO confidence, and Board independence. We use the Heckman selection specification in Table 4 column 3, except that we replace the dependent variable with the level of discretionary accrual the firm has, a measure of the level of AEM (Kothari et al., 2005)."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-08
 **槽位**: R7
 **骨架**:
@@ -459,7 +585,7 @@ updated: 2026-08-13
 ### 变体 26: R7 内生性稳健性表叙事 — threat-by-threat Table 7 汇总 (1篇高价值)
 **来源论文**: Chung, Low & Rust 2022 (Journal of the Academy of Marketing Science)
 **原始句锚点**: "To complement these general endogeneity tests, we next look at specific sources of endogeneity and design tests to rule them out. We tabulate these tests in Table 7 and relegate the details to the web appendix for reasons of space. … The supporting evidence from all these complementary tests confirms the results of the DWH test that there is little reason to believe that endogeneity issues are solely driving the results we observe."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-08
 **槽位**: R7
 **骨架**:
@@ -473,7 +599,7 @@ updated: 2026-08-13
 ### 变体 27: 多阶段同 IV 管道衰减 profile — 同一 IV 跨序贯决策阶段的方向/显著性对比 (1篇高价值)
 **来源论文**: Kim & Lee 2026 (Strategic Management Journal)
 **原始句锚点**: "In summary, we fail to find compelling evidence of an association between SRO and voluntary turnover. This lack of association contrasts with the advantages that SRO companies appear to enjoy in the attraction and selection stages, and is consistent with the previously discussed possibility that SRO advantages operate primarily through signaling mechanisms that attenuate as employees gain direct experience with their employer."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-22
 **槽位**: R3+R9
 **骨架**:
@@ -490,7 +616,7 @@ updated: 2026-08-13
 ### 变体 28: R2 — 截面 OLS/FE 中二元内生变量 + 样本选择的双阶段修正表导航 (1篇高价值)
 **来源论文**: Pupovac, Astvansh, Carrillat & Legoux 2026 (Production and Operations Management)
 **原始句锚点**: "Table 1's Column I reports the estimates from the regression that assumes the supplier's customer information disclosure is exogenous. Columns II and III present estimates from the control function method, which controls for the disclosure's potential endogeneity."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-21
 **槽位**: R2
 **骨架**:
@@ -501,7 +627,7 @@ updated: 2026-08-13
 ### 变体 29: R7 — 选择偏误三步防御：描述性模式 → CEM → Heckman + 关联非因果收尾 (1篇高价值)
 **来源论文**: Du & Tsolmon 2024 (Organization Science)
 **原始句锚点**: "To more rigorously examine potential selection on observables, we employ a coarsened exact matching (CEM) strategy. … Accordingly, we interpret our results as associational, consistent with the proposed theoretical mechanisms, but not as definitive causal evidence."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-25
 **槽位**: R7
 **骨架**:
@@ -512,7 +638,7 @@ updated: 2026-08-13
 ### 变体 30: R6/R8 — 预测性零结果作为机制证据：排除替代解释的 null-finding 反转 (1篇高价值)
 **来源论文**: Du & Tsolmon 2024 (Organization Science)
 **原始句锚点**: "Interestingly, we find no statistically significant market reaction to structural similarity at the time of deal announcements (see Cumulative Abnormal Returns (CAR) analyses in Online Appendix Table A18). This null finding suggests that the observed associations with improved performance likely reflect integration-related dynamics rather than selection at the time of the deal."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-25
 **槽位**: R6（零结果）/ R8（补充分析）
 **骨架**:
@@ -523,7 +649,7 @@ updated: 2026-08-13
 ### 变体 31: R7 — 替代解释三连驳斥 + 异质性模式作为机制裁决收束 (1篇高价值)
 **来源论文**: Du & Tsolmon 2024 (Organization Science)
 **原始句锚点**: "Our CEM analyses partially address this concern by matching deals on industry, firm size, and public status, characteristics often associated with organizational culture. The persistence of our findings in the matched sample suggests that cultural similarity alone may not explain our results."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-25
 **槽位**: R7
 **骨架**:
@@ -534,7 +660,7 @@ updated: 2026-08-13
 ### 变体 32: R4 — 外部基准阈值分割 + 边际效应图阈值发现：连续调节的三层验证 (1篇高价值)
 **来源论文**: Du & Tsolmon 2024 (Organization Science)
 **原始句锚点**: "We split the sample by the threshold of 166 miles, which corresponds to the definition of mega-commuting distance by the U.S. Census Bureau. … The marginal effects plot using the full regression model (column 4) shows that the threshold at which distance starts to matter is around 54.6 miles, which corresponds to the "long-distance commuting" distance of 50 or more miles by the U.S. Census Bureau (Online Appendix Figure C)."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-25
 **槽位**: R4
 **骨架**:
@@ -545,7 +671,7 @@ updated: 2026-08-13
 ### 变体 33: R8 — 下游绩效事后分析：时间增长 + 多指标收敛 + 提示性收尾 (1篇高价值)
 **来源论文**: Du & Tsolmon 2024 (Organization Science)
 **原始句锚点**: "Results show that structural similarity is positively associated with ΔROA in related acquisitions (Online Appendix Table A15). The positive relationship grows over time, with a one-standard-deviation increase in similarity linked to a 76.3% rise in ROA relative to the sample average by year 6."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-25
 **槽位**: R8
 **骨架**:
@@ -556,7 +682,7 @@ updated: 2026-08-13
 ### 变体 34: R3 — 2×2 类型学交叉对角描述性比较：回归前的非参数类型对比 (1篇高价值)
 **来源论文**: Du & Tsolmon 2024 (Organization Science)
 **原始句锚点**: "Mirroring our main results, structural matches have the highest retention rates. In the cross-diagonals, 49.9% of target managers are retained by MM acquirers from LM targets compared with 42.2% of target managers retained by LM acquirers from MM targets (the difference is significant at a 5% level)."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-25
 **槽位**: R3
 **骨架**:
@@ -567,7 +693,7 @@ updated: 2026-08-13
 ### 变体 35: R3/R5 — 动态面板 ρ 持久性百分比解释 + 跨构念持久性对比 (1篇高价值)
 **来源论文**: Pollock, Lee, Jin & Lashley (2015, Administrative Science Quarterly)
 **原始句锚点**: "Thus the results in models 3 and 4 indicate that 62.3 percent of status and 50.3 percent of reputation in year t–1 persist in year t, holding other factors fixed, suggesting the evolutionary process of status exhibits a greater persistence (or path dependence) than that of reputation. The coefficient for the interaction between age and prior status suggests that the effect of prior status decreases by 5.4 percent each year as the VC firm ages."
-**验证状态**: 待第二篇交叉验证（动态面板-GMM / 共演设计）
+**验证状态**: EMERGING（动态面板-GMM / 共演设计）
 **写入日期**: 2026-07-30
 **槽位**: R3/R5
 **骨架**:
@@ -579,7 +705,7 @@ updated: 2026-08-13
 ### 变体 36: R3/R6 — 分样本 Wald χ² 系数比较 + partial support 诚实叙事 (1篇高价值)
 **来源论文**: Pollock, Lee, Jin & Lashley (2015, Administrative Science Quarterly)
 **原始句锚点**: "Although reputation has a larger coefficient in all models and status is not statistically significant in some models predicting reputation, the difference in coefficient size is statistically significant only for firms 11 or more years old. Thus H1a is partially supported and H1b is not supported."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-30
 **槽位**: R3/R6
 **骨架**:
@@ -589,7 +715,7 @@ updated: 2026-08-13
 ### 变体 37: R6 — GMM 零结果交互的 Monte Carlo 功效分析 (1篇高价值)
 **来源论文**: Pollock, Lee, Jin & Lashley (2015, Administrative Science Quarterly)
 **原始句锚点**: "We conducted a set of power analyses to ensure that the non-significant interaction between age and prior reputation was not due to low statistical power. … Thus we can safely conclude that the non-significant finding from our model estimates does not come from a type II error but from a negligible interaction effect."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-30
 **槽位**: R6
 **骨架**:
@@ -599,7 +725,7 @@ updated: 2026-08-13
 ### 变体 38: R8 — post-hoc spline 重解释意外负效应（diminishing returns / 信息递减）(1篇高价值)
 **来源论文**: Pollock, Lee, Jin & Lashley (2015, Administrative Science Quarterly)
 **原始句锚点**: "Our post-hoc analysis, however, indicated that what we might instead be observing is a non-linear relationship between blockbuster deals and VC status. It may be that once a firm has had more than two blockbuster deals, thereby verifying that the first blockbuster deal was not a fluke, additional blockbuster deals are less surprising, provide little new information, and do not add to a firm's cognitive centrality."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-30
 **槽位**: R8
 **骨架**:
@@ -611,7 +737,7 @@ updated: 2026-08-13
 ### 变体 39: R7 — 替代估计器稳健性（3SLS）+ LDV 偏误诚实警示反向佐证主估计器 (1篇高价值)
 **来源论文**: Pollock, Lee, Jin & Lashley (2015, Administrative Science Quarterly)
 **原始句锚点**: "One possible benefit of using 3SLS instead of the AB estimator is a potential efficiency gain. This comes at a substantial cost, however, because 3SLS cannot address the bias stemming from the lagged dependent variables. … The pattern of results was the same as reported here, but the coefficients of the lagged dependent variables were quite inflated when compared with our AB results, and the model R2s were excessively high (approximately .97)."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-30
 **槽位**: R7
 **骨架**:
@@ -621,7 +747,7 @@ updated: 2026-08-13
 ### 变体 40: R4/R5 — Floodlight（Johnson-Neyman）分析符号反转线性交互：双转折点 + 90% CI 带 (1篇高价值)
 **来源论文**: Malshe & Agarwal (2015, Journal of Marketing)
 **原始句锚点**: "To explore this moderation in more detail, we followed Spiller et al. (2013) and performed a floodlight analysis using the method described in Mohr, Lichtenstein, and Janiszewski (2012). … When leverage is at approximately 65%, customer satisfaction has no impact on Tobin's q. However, it remains statistically nonsignificant until leverage reaches approximately 95%."
-**验证状态**: 通过（单篇入库，待第二篇交叉验证）
+**验证状态**: EMERGING（单篇入库）
 **写入日期**: 2026-07-30
 **槽位**: R4/R5
 **骨架**:
@@ -634,7 +760,7 @@ updated: 2026-08-13
 ### 变体 41: R3 — 同时方程系统中的三条件中介检验（跨方程系数乘积 + Sobel）+ 非对称支持叙事 (1篇高价值)
 **来源论文**: Malshe & Agarwal (2015, Journal of Marketing)
 **原始句锚点**: "Sobel's test on the product of the two coefficients (b = −.341 = −.119 × 2.862) shows a statistically significant result (t = −2.19, p ≤ .05), in support of the mediating role of advertising in the leverage–customer satisfaction link. As a result, Sobel's test suggests that R&D does not mediate the negative impact of leverage on customer satisfaction. Thus, the results support H1a but not H1b."
-**验证状态**: 通过（单篇入库，待第二篇交叉验证）
+**验证状态**: EMERGING（单篇入库）
 **写入日期**: 2026-07-30
 **槽位**: R3
 **骨架**:
@@ -648,7 +774,7 @@ updated: 2026-08-13
 ### 变体 42: R6 — 反直觉反向结果的诚实报告 + 延迟到 Discussion 的事后解释 (1篇高价值)
 **来源论文**: Malshe & Agarwal (2015, Journal of Marketing)
 **原始句锚点**: "However, in contrast to H2c, we find that the interaction between leverage and one-year sales growth is negative (b = −5.376, p ≤ .01), indicating that leverage reduces customer satisfaction more severely for high-sales-growth firms. We elaborate on this counterintuitive result in the "Discussion" section and provide guidance for further research."
-**验证状态**: 通过（单篇入库，待第二篇交叉验证）
+**验证状态**: EMERGING（单篇入库）
 **写入日期**: 2026-07-30
 **槽位**: R6
 **骨架**:
@@ -661,7 +787,7 @@ updated: 2026-08-13
 ### 变体 43: R4/R6 — 组内方向切换但不显著 → 直接组间系数差异裁决 (1篇高价值)
 **来源论文**: Schumacher, Keck & Tang (2020, Strategic Management Journal)
 **原始句锚点**: "We find that for firms close to bankruptcy our interaction term is insignificant for firms threatened by bankruptcy and consistent with our prediction switches signs. Specifically, for the interaction term between negative distance from aspiration level and the media-based overconfidence measure we now have β = 34.71, p = .36, CI95% [−40.56, 110.01], and for the interaction with the option-based measure we now have β = 1.58, p = 0.67, CI95% [−5.81, 8.98]. Supporting Hypothesis, we next employed a Chow test to analyze the difference in the interaction term coefficients between the two samples, and find significant differences for our media-based (χ2 = 5.84, p = .014) and option-based (χ2 = 4.74, p = .018) overconfidence measures."
-**验证状态**: 通过（单篇入库，待第二篇交叉验证）
+**验证状态**: EMERGING（单篇入库）
 **写入日期**: 2026-08-03
 **槽位**: R4 / R6
 **骨架**:
@@ -674,7 +800,7 @@ updated: 2026-08-13
 ### 变体 44: R8 — 三类构念效度威胁的定向三角验证 (1篇高价值)
 **来源论文**: Schumacher, Keck & Tang (2020, Strategic Management Journal)
 **原始句锚点**: "One alternative interpretation of our results is that our overconfidence measures reflect at least to some extent CEOs' accurate perception of their own high ability rather than biased self-perceptions. … following Chatterjee and Hambrick (2007), we identified in our sample those CEOs who had already served as CEO in another public company included in our sample. This yielded 33 CEOs; we then computed the correlation between their overconfidence-media scores for their tenures in both companies. We find that the scores are highly and significantly correlated (r = .77, p = .000) showing a high degree of consistency for each CEO across successive CEO positions."
-**验证状态**: 通过（单篇入库，待第二篇交叉验证）
+**验证状态**: EMERGING（单篇入库）
 **写入日期**: 2026-08-03
 **槽位**: R8
 **骨架**:
@@ -687,7 +813,7 @@ updated: 2026-08-13
 ### 变体 45: R4 — 管道阶段集中异质性：亚组吸收全部前端优势后下游熄灭 (1篇高价值)
 **来源论文**: Kim & Lee 2026 (Strategic Management Journal)
 **原始句锚点**: "By contrast, the baseline coefficient on SRO across Models 1–3 is close to zero (p = 0.66, p = 0.90, and p = 0.87), suggesting that males are equally attracted to SRO and non-SRO companies. These results suggest that while female candidates are less likely than males to express interest overall, they are disproportionately more likely to express interest in SRO employers, and account for all of the estimated advantage enjoyed by SRO employers in the initial attraction stage (see Figure 2a)."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-08-05
 **槽位**: R4（可嵌入多阶段管道的 falling action）
 **骨架**:
@@ -695,10 +821,46 @@ updated: 2026-08-13
 **与原骨架差异**: 区别于变体8（主效应 null + 交互显著的条件化再定位）与变体27（跨阶段主效应衰减、无亚组分解）——本变体的核心是**组成性裁决 + 阶段熄灭**：(1) 用接近零的 baseline [IV] 证明非焦点亚组无关联，从而把已显著的前端主效应重写为"几乎全部由焦点亚组驱动"；(2) 在同一决策管道的中后段报告交互熄灭，把异质性本身做成管道衰减故事的一部分。适用于 multi-stage recruitment / funnel / ASA 设计中人口或偏好异质性只在信息稀薄的前端成立的叙事。
 **诚实边界**: "accounts for all" 须有 baseline ≈ 0 的统计支撑，不可仅因交互显著就宣称；下游交互 null 受 post-treatment selection 约束（见 slot-R6 Slough）；关联语言优先（associated with / advantages），不可升级为因果异质性效应。配套管道主叙事见变体27。
 
+
+### 变体 64: R3 — 双处理对照四拍 + Wald 系数差检验（post_2022_women_tmt_strategic_renewal 型）
+
+**来源论文**: Post, Lokshin & Boone 2022 (AMJ)
+**验证状态**: VERIFIED（expert_audit_override, user 2026-08-29）
+**槽位**: R3
+
+#### 报告骨架
+
+```text
+Supporting Hypothesis [H_a], results in Table [X] (Model [N]) show that [treatment_A]
+[increase/decrease] [outcome_A] (b = [value], p = [value]), while [treatment_B] does not
+(b = [value], p = [value]). Wald test results indicate that the difference between these
+coefficients would likely not have arisen if the effects were the same (p = [value]).
+Supporting Hypothesis [H_b], the [treatment_A] coefficient is significant (b = [value],
+p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value]) in the
+[outcome_B] model (Table [X], Model [M]). The estimated coefficients imply that
+[treatment_A], on average, [decrease/increase] [outcome_B] by [value]% and
+[increase/decrease] [outcome_A] by [value]%.
+```
+
+#### 关键技术点
+
+| 步骤 | 操作 | 理由 |
+|------|------|------|
+| 1. 双假设共用一张对照表 | 两个 DV 各占一列，focal 与对照 treatment 并排 | 读者一眼看到"谁动了、谁没动" |
+| 2. 每假设后跟 Wald 差分检验 | 把"星号对比"升级为系数差检验 | 防止审稿人质疑 t vs t+1 星号差异 |
+| 3. 幅度拍合并为一句跨 DV 百分比翻译 | 由系数换算，不逐列重复 | 两个假设一段收尾，节奏紧凑 |
+| 4. 对照处理全程只报"does not / is not" | 不解释不显著对照的幅度 | 保持对照的陪衬角色 |
+
+#### 原文锚定
+- "Supporting Hypothesis 1, results in Table 2 (Model 3) show that female TMT appointments increase TMT change orientation (b = 0.051, p = .018), while male TMT appointments do not (b = -0.003, p = .479)."（results.md Table 2 段）
+
+#### 与最近变体的区别
+- 区别于 r3_ols_four_beat_standard（单一处理四拍）：本变体是双处理并排对照 + Wald 系数差检验 + 跨 DV 合并幅度句。
+
 ### 变体 46: R7 — Cinelli–Hazlett 敏感性：以强观测协变量为倍数基准 (1篇高价值)
 **来源论文**: Kim & Lee 2026 (Strategic Management Journal)
 **原始句锚点**: "We conduct a sensitivity analysis that estimates how strong potential unobserved confounders would need to be to fully explain away the observed associations, following the procedure developed by Cinelli and Hazlett (2020). For interpretability, we compare estimates with Log Distance—the natural log of miles between the employer and candidate—a variable that is observed to strongly predict both attraction and selection."
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-08-05
 **槽位**: R7
 **骨架**:
@@ -712,7 +874,7 @@ updated: 2026-08-13
 
 **来源论文**: DesJardine, Li & Shi (2025, AMJ)
 **原始句锚点**: "Following prior literature (Busenbark, Graffin, et al., 2022; Gamache, Devers, Klein & Hannigan, 2023; Wiersema & Bowen, 2009), we calculated the marginal effect of rival–MSCI CIO on MSCI ESG rating when the moderators assume different values (see Table 3). ... when rival ESG media controversies takes its minimum value, the negative marginal effect of rival-MSCI CIO on MSCI ESG rating is relatively weak (β = -0.166, p = .020); by comparison, when rival ESG media controversies takes its maximum value, the negative marginal effect of rival-MSCI CIO on MSCI ESG rating is much stronger (β = -0.344, p = .003)."
-**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**验证状态**: EMERGING（单篇）
 **写入日期**: 2026-08-09
 **槽位**: R4
 **骨架**:
@@ -729,7 +891,7 @@ updated: 2026-08-13
 
 **来源论文**: DesJardine, Li & Shi (2025, AMJ)
 **原始句锚点**: "Model 8 includes both sets of moderating effects, with four moderators in total. The decrease in statistical significance observed in certain interaction terms might stem from the high correlation between media controversies and ESG awards (up to 0.60), which could absorb each other's moderating effect (Cortina, Markell-Goldstein, Green & Chang, 2021)."
-**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**验证状态**: EMERGING（单篇）
 **写入日期**: 2026-08-09
 **槽位**: R3
 **骨架**:
@@ -746,7 +908,7 @@ updated: 2026-08-13
 
 **来源论文**: DesJardine, Li & Shi (2025, AMJ)
 **原始句锚点**: "Based on Model 1 of Table 2, ITCV results show that an omitted variable would need to be correlated at 0.137 (-0.137) with rival-MSCI CIO and at -0.137 (0.137) with MSCI ESG rating to invalidate the focal inference. Correspondingly, the impact of an omitted variable must be -0.019 (= -0.137 × 0.137) to invalidate our inference. Among our controls, the variable with the strongest impact is rival ESG regulatory enforcements, which equals -0.005, far from the -0.019 threshold."
-**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**验证状态**: EMERGING（单篇）
 **写入日期**: 2026-08-09
 **槽位**: R7
 **骨架**:
@@ -763,7 +925,7 @@ updated: 2026-08-13
 
 **来源论文**: DesJardine, Li & Shi (2025, AMJ)
 **原始句锚点**: "To address the possibility that common ownership in an ESG rating agency and a target firm's rivals is associated with actual ESG performance, we examined the extent to which MSCI's ESG rating deviates from the reasonable ESG benchmarks. We constructed a new dependent variable, MSCI-incident difference, by using the media coverage of the target firm's ESG risk incidents as a benchmark... Higher values indicate that MSCI ESG ratings deviated more from ESG incidents covered in the media."
-**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**验证状态**: EMERGING（单篇）
 **写入日期**: 2026-08-09
 **槽位**: R7
 **骨架**:
@@ -780,7 +942,7 @@ updated: 2026-08-13
 
 **来源论文**: DesJardine, Li & Shi (2025, AMJ)
 **原始句锚点**: "Prior to the acquisition by MSCI, KLD was privately owned, meaning the common owners of a target firm's rivals and MSCI would have been unable to influence the firm's ESG assessment by KLD; however, according to our theory, a negative relationship should exist after MSCI became the owner of KLD because common owners (of MSCI and other firms) could then influence KLD's ESG ratings. ... The coefficient for this interaction is -0.746 (p < .1, two-tailed test), indicating that the association between rival-MSCI CIO and KLD score became more negative after MSCI became the owner of KLD, also consistent with our theory."
-**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**验证状态**: EMERGING（单篇）
 **写入日期**: 2026-08-09
 **槽位**: R7
 **骨架**:
@@ -797,7 +959,7 @@ updated: 2026-08-13
 
 **来源论文**: DesJardine, Li & Shi (2025, AMJ)
 **原始句锚点**: "Following Bushee (1998), numerous studies have distinguished dedicated institutional investors, which have long investment horizons and concentrated portfolio holdings, from transient institutional investors, which have short investment horizons and diversified portfolio holdings. ... As such, if our theory is accurate, we should observe that our main effect is stronger for dedicated institutional investors than for transient institutional investors. ... Model 1 of Table 11 shows that the coefficient for rival-MSCI CIO (dedicated) is -0.931 (p < .01) and the coefficient for rival-MSCI CIO (transient) is -0.249 (p < .05). A Wald test shows that the coefficients significantly differ (p = .039, one-tailed test)."
-**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**验证状态**: EMERGING（单篇）
 **写入日期**: 2026-08-09
 **槽位**: R8
 **骨架**:
@@ -814,7 +976,7 @@ updated: 2026-08-13
 
 **来源论文**: DesJardine, Li & Shi (2025, AMJ)
 **原始句锚点**: "Model 6 includes both reputational threat moderators, and the results continue to support Hypothesis 1, Hypothesis 2a, and Hypothesis 2b. Likewise, Model 7 includes both reputational opportunity moderators and the results continue to support Hypothesis 1, Hypothesis 3a, and Hypothesis 3b. Model 8 includes both sets of moderating effects, with four moderators in total."
-**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**验证状态**: EMERGING（单篇）
 **写入日期**: 2026-08-09
 **槽位**: R2
 **骨架**:
@@ -831,7 +993,7 @@ updated: 2026-08-13
 
 **来源论文**: Ridge, Kim, Ingram & Lee 2024 (Academy of Management Journal)
 **原始句锚点**: "RIR results suggest that to alter our inferences for lobbying breadth, 675 observations would have to be replaced with observations for which there is an effect of zero, and for competitive actions, 1,793 observations would have to be replaced... we follow best practices to diagnose potential endogeneity and assess robustness across analyses."
-**验证状态**: 待第二篇交叉验证（EMERGING / 单篇 section_variant）
+**验证状态**: EMERGING（单篇 section_variant）
 **写入日期**: 2026-08-12
 **槽位**: R7
 **骨架**:
@@ -847,7 +1009,7 @@ updated: 2026-08-13
 
 **来源论文**: Ridge, Kim, Ingram & Lee 2024 (Academy of Management Journal)
 **原始句锚点**: "Evidence suggests that even small changes in lobbying can net significant benefits such as tax rate savings... meaning the 7% decrease we observe is likely to be particularly important in practice."
-**验证状态**: 待第二篇交叉验证（EMERGING / 单篇 section_variant）
+**验证状态**: EMERGING（单篇 section_variant）
 **写入日期**: 2026-08-12
 **槽位**: R5
 **骨架**:
@@ -866,7 +1028,7 @@ updated: 2026-08-13
 
 **原始句锚点**: "We compare the coefficients for the impact of changes in recall magnitude in the direct-effects model (see Table 4) and the total-effects model (see Table 5)."
 
-**验证状态**: 待第二篇交叉验证
+**验证状态**: VERIFIED
 
 **写入日期**: 2026-08-13
 
@@ -886,7 +1048,7 @@ updated: 2026-08-13
 
 **原始句锚点**: "We interpret this finding as indicative of learning because the reliability measure ... is aggregated across all new models of the make in the following year (i.e., including models not affected by the recall)."
 
-**验证状态**: 待第二篇交叉验证
+**验证状态**: VERIFIED
 
 **写入日期**: 2026-08-13
 
@@ -906,7 +1068,7 @@ updated: 2026-08-13
 
 **原始句锚点**: "Collectively, we find support for our hypotheses that product reliability partially mediates the relationship between recall magnitude and future injuries (H2b) and future recall frequency (H2c)."
 
-**验证状态**: 待第二篇交叉验证
+**验证状态**: VERIFIED
 
 **写入日期**: 2026-08-13
 
@@ -926,7 +1088,7 @@ updated: 2026-08-13
 
 **原始句锚点**: "This spotlight analysis again provides evidence to support H3 and highlights the region in which this interaction effect manifests."
 
-**验证状态**: 待第二篇交叉验证
+**验证状态**: VERIFIED
 
 **写入日期**: 2026-08-13
 
@@ -946,7 +1108,7 @@ updated: 2026-08-13
 
 **原始句锚点**: "We do not find the direct impact of shared product assets on reliability to be statistically significant (p > .10). Thus, there is no evidence to support conjectures that sharing of product assets adversely affects reliability."
 
-**验证状态**: 待第二篇交叉验证
+**验证状态**: VERIFIED
 
 **写入日期**: 2026-08-13
 
@@ -966,7 +1128,7 @@ updated: 2026-08-13
 
 **原始句锚点**: "The results with firm as the unit of analysis are consistent with those reported for the make unit of analysis, though, as might be expected, the statistical significance for some of the findings is at marginally higher levels."
 
-**验证状态**: 待第二篇交叉验证
+**验证状态**: VERIFIED
 
 **写入日期**: 2026-08-13
 
@@ -985,7 +1147,7 @@ updated: 2026-08-13
 **source**: chenganesanliu2009
 **skeleton_id**: `r8_ols_strategy_complete_mediation_kenny_signal`
 **原始句锚点**: Based on the steps that Kenny, Kashy, and Bolger (1998) outline, these effects indicate that product-recall strategies completely mediate the influences of firm characteristics on abnormal returns.
-**验证状态**: 待第二篇交叉验证（EMERGING / 单篇 section_variant；**LEGACY**）
+**验证状态**: VERIFIED（单篇 section_variant；**LEGACY**）
 **写入日期**: 2026-08-12
 **槽位**: R8
 **骨架**:
@@ -996,6 +1158,42 @@ updated: 2026-08-13
 **适用**: 截面 AR/CAR + 二元策略选择；firm/product characteristics 直接影响消失、策略路径显著；仅作历史范式参考或显式 legacy 报告。
 
 ---
+
+
+### 变体 68: R4 交互通道分解句 — 调节效应经差值 DV 的哪个分量起作用（westphal_bednar2005 型）
+**来源论文**: Westphal & Bednar (Administrative Science Quarterly)
+**原始句锚点**: "friendship ties reduce the difference between reported concern about strategy and the perception of others' concern by increasing the latter (i.e., the perceived concern of other board members) rather than by decreasing the former..."
+**验证状态**: EMERGING（单篇入库）
+**写入日期**: 2026-08-29
+**槽位**: R4
+**骨架**:
+> Moreover, the data also indicated that [moderator] reduces [the difference between component_A and component_B] by increasing the latter (i.e., [component_B]) rather than by decreasing the former (i.e., [component_A]); although [moderator] was strongly and positively associated with [component_B] at [sample condition], it was not significantly related to [component_A].
+**与原骨架差异**: 交互主报告后追加通道归属句：说明调节效应经由差值/合成 DV 的哪个分量传导——同模型内双分量证据（一分量显著、另一分量不显著）。适用于 DV 为两分量差值或合成的设计（self-report vs 对他人感知、自评 vs 他评等）。
+**诚实边界**: 通道主张须由同模型内双分量系数直接佐证，不得仅凭总效应推断；分量高度相关时通道归属可能不稳定，宜补分量系数差检验或明示其为解释性证据。
+
+
+### 变体 69: R8 理论前提实证验证双通道 — 样本内前提检验 + 样本外前提问卷（westphal_bednar2005 型）
+**来源论文**: Westphal & Bednar (Administrative Science Quarterly)
+**原始句锚点**: "A premise of our theoretical argument is that directors tend to perceive some risk to their social esteem in expressing concerns about the viability of the current corporate strategy when those concerns are not shared by others... We assessed the validity of this premise empirically..."
+**验证状态**: EMERGING（单篇入库）
+**写入日期**: 2026-08-29
+**槽位**: R8（副槽位 R7）
+**骨架**:
+> A premise of our theoretical argument is that [premise]. This assumption was strongly supported by the data: when [condition below threshold], the mean level of [DV] is significantly greater than when [condition above threshold] (t = [value], p < [.001]), and [DV] was not significantly correlated with [variable] within either [subsample]. Thus we tested the hypotheses for [restricted subsample]; we used the [Heckman model] to correct for sample selection bias, which allows us to generalize the results to the full sample. We also assessed the validity of this premise empirically by collecting additional survey data for [units] in our sample frame: of the [N] respondents ([rate] percent), a large majority ([share] percent) [endorsed premise items], which supports our premise that [restated premise] ([K-S] tests indicated no significant differences between the survey sample and the larger sample frame).
+**与原骨架差异**: 双通道验证理论前提——(a) 样本内：阈值两侧均值对比（t 值）+ 侧内相关不显著，证明样本切割前提成立，随即以 Heckman 选择模型交底切割后果并宣称可推广回全样本；(b) 样本外：为前提命题追加独立问卷，报响应率、逐题支持百分比 + K-S 代表性收口。把"假设的前提"升格为"被检验的前提"。
+**诚实边界**: 样本外前提问卷为验证性非假设检验，逐题百分比不作推断统计（当代做法：一句结论 + 在线附录，题项全文入正文属年代特征）；Heckman 的 generalization 主张限于选择方程设定正确。
+
+
+### 变体 70: R2 先验支持判据声明 — 差值/合成检验的判定规则先行（westphal_bednar2005 型）
+**来源论文**: Westphal & Bednar (Administrative Science Quarterly)
+**原始句锚点**: "We regressed this measure on a dummy variable set equal to 1 for directors' concern about strategy and 0 for directors' perception that others were concerned...; a positive and significant coefficient for the dummy variable would provide support for hypothesis 1."
+**验证状态**: EMERGING（单篇入库）
+**写入日期**: 2026-08-29
+**槽位**: R2（副槽位 R3）
+**骨架**:
+> We [created a dataset with two records per unit / constructed a test variable], set equal to [1] for [focal component] and [0] for [benchmark component]. We regressed this measure on [test variable(s)] together with the control variables; a [positive/negative] and significant coefficient for [test variable] would provide support for hypothesis [N]. To test hypotheses [N1–N3], we interacted [test variable] with our measures of [moderator_1], [moderator_2], and [moderator_3].
+**与原骨架差异**: 在报告任何系数之前显式声明判定规则——"a [direction] and significant coefficient for [test statistic] would provide support for hypothesis [N]"——把"什么算支持"先于结果交代；同时交代检验变量的编码方式（dummy 1=[self-report] vs 0=[benchmark]）。适用于差值/合成/配对检验设计；与当代开放科学的预注册式判定规则精神兼容，语料其余 R3 四拍变体均从"Hypothesis [x] predicted..."复述开始，无此拍。
+**诚实边界**: 判定规则一经声明须严格执行（含方向），不得事后改判单/双侧或显著性档位；当代报告仍须补幅度拍与 CI，本句不替代四拍。
 
 ## 反模式
 

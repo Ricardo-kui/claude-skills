@@ -36,7 +36,7 @@ source: Extracted from MVP30 narrative_analysis files + grewal2025 + paruchuri_a
 
 ## 变体速查表
 
-> 检索辅助（2026-08-09 P0 补建）。状态列空白 = 正文未标注验证状态（旧变体）。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架、适用条件与诚实边界见下方变体正文。
+> 检索辅助（2026-08-09 P0 补建）。状态列空白 = 正文未标注验证状态（旧变体）。状态词表（2026-08-29 统一，与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀）；LEGACY-DIAGNOSTIC 保留（工具诊断类）；召回主题条目按用户 2026-08-29 裁决单源 VERIFIED。完整骨架、适用条件与诚实边界见下方变体正文。
 
 | # | 变体 | 适用场景 | 状态 | 来源 |
 |---|---|---|---|---|
@@ -156,6 +156,27 @@ P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者
 
 ---
 
+
+### 变体 U：双句转轴预告型（westphal_bednar2005 型）
+
+**模板**:
+> "In the present study we suggest how and why [mechanism] can occur in [setting] and examine the consequences for [focal outcome]. Drawing from theory and research on [source discipline], we consider why [setting characteristics] may make [actors] prone to [mechanism] and suggest specific factors that may moderate the extent to which [mechanism] occurs."
+
+**来源**: westphal_bednar2005 (ASQ), P5
+
+**原文锚定**:
+> "In the present study we suggest how and why pluralistic ignorance can occur on corporate boards and examine the consequences for strategic persistence in response to poor firm performance."
+
+**关键特征**:
+- 整段仅两句（约 75 词），紧跟长 Theory Lens 段之后作呼吸拍——用极简段落标记"概念介绍结束、研究行动开始"的节奏转折
+- 第一句 how-and-why + consequences 承诺机制；第二句拆成 "why prone"（主效应）+ "specific factors that may moderate"（调节）——与后文假设结构一一对应
+- 只预告理论动作不预告数据/发现（2005 年 ASQ 惯例），无 overclaiming
+- 与已有机制预告变体的区别：多数变体在预告中嵌入文献定位或方法栈，本变体零文献、零方法，纯动作预告
+
+**适用**: 长构念导入段之后的紧凑转轴；假设结构为主效应+调节因子的论文；ASQ/AMJ 等接受短 Preview 的期刊
+
+**禁忌**: 调节因子在 Preview 中命名的数量必须与 Theory 章假设数量一致，不得预告未检验的因子；若期刊偏好发现预告（当代趋势），此变体需补一句结果预告
+
 ## 附加技巧：概念跨层次迁移
 
 当研究借用已有概念但将其应用到新的分析层次时（如从组织层面到领域层面，从个体层面到团队层面），使用此句式明确标注迁移并给出新层次的定义。
@@ -232,7 +253,7 @@ P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者
 
 ### 变体 H：双缺口嵌套 → 机制簇 → 净效应分解 → 研究分工（Bamberger 2021 型）
 
-**验证状态**: EMERGING（单篇来源，待第二篇交叉验证）
+**验证状态**: EMERGING（单源）
 
 **模板**:
 > "We address two related limitations in prior research. First, existing work documents the relationship between [IV] and [downstream outcome] but leaves the intervening [stakeholder/behavioral] mechanisms underspecified. Drawing on [theory], we distinguish [mechanism 1], [mechanism 2], and [mechanism 3] as parallel routes through which [IV] is associated with [proximal outcome]. Second, prior findings on [performance outcome] remain ambiguous because direct and stakeholder-mediated paths have not been estimated jointly. We therefore separate the [short-term direct benefit] from the [indirect relational cost] and examine whether their relative importance changes over [time horizon]. Study [1] observes the internal mechanisms in [setting A], whereas Study [2] uses [external/longitudinal data] to replicate the focal pathway and extend it to [setting B / longer-term outcome]."
@@ -419,6 +440,15 @@ P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者
 
 ---
 
+
+### 变体 S：编号双目标+调节预告型（ball_2018 型）
+**模板**: "Thus, one of the primary objectives of this study is to examine whether [X] influences [Y]. Our second objective is to examine if the [X]-[Y] relationship is contingent on [moderator] ([citation])."
+**原文锚定**: "Thus, one of the primary objectives of this study is to examine whether [X] influences [quality] ... Our second objective is to examine if the relationship ... is affected by [managerial discretion]."
+**来源**: ball_2018 (JOM/SMJ family), P5
+**关键特征**: 用编号目标（primary/second objective）显式列出主效应+调节两个承诺；调节变量在引言内即给出操作性代理（严重度反向代理自主权），preview 兼做操作化预告。
+**适用**: 主效应+边界条件双贡献设计；需在引言解释调节变量可操作化的场景。
+**禁忌**: 目标数勿超过三个；操作化预告必须与 Methods 一致。
+
 ### 变体 P：无 Theory 章节 — RQ 枚举 + 动态方法栈 + 结构需求整合预览型（liu_shankar2015 型）
 
 **验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
@@ -442,6 +472,22 @@ P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者
 **禁忌**: 不要在没有动态或结构需求必要性的 OLS/FE 设计中堆叠 state-space 修辞；RQ 数量须与前文 gap 枚举一一对应；若 Intro 已预告具体系数符号，避免与本变体的方向性 findings 段重复过度承诺。
 
 ---
+
+
+### 变体 T：过程-内容双词标题回声型（what_changes_after_women_enter_top_manage_2020 型）
+
+**模板**: To address this, we propose a [限定语] model of [结局], linking [X] with the process ([认知/机制]) and content ([具体战略选择]) of [变化类型] ([cite]), that explains what changes after [事件], and why.
+
+**原文锚定**: "we propose a gender-based model of strategic renewal, linking executive gender with the process (cognition shifts) and content (R&D, M&A) of incremental strategic renewal, that explains what changes after women enter TMTs, and why"
+
+**关键特征**:
+- process/content 双词直接挂载在既有概念对（Agarwal & Helfat 2009）上——预告句同时完成模型定位与文献锚定
+- 预告句逐字回答标题问句（title echo）：what/why 双疑问词收束，读者在引言内即完成"标题→承诺"闭环
+- 只承诺解释范围、不预告结果方向——机制词（cognition shifts）与选择词（R&D, M&A）均为可操作化构念，Overclaiming 风险低
+
+**适用**: 标题为疑问句且模型含"机制+内容"双构件的动态/过程研究；配合时间序假设结构（t1 任命→t2 认知→t3 选择）效果最佳。
+
+**禁忌**: title echo 要求标题本身是 what/why 疑问句；process/content 括号内必须是正文真的测量的构念，不可预告未操作的构件。
 
 ### 变体 Q：内生性挑战 → 交错制度采纳 → 重复交易可观测设定（Castellaneta–Conti–Kacperczyk 型）
 

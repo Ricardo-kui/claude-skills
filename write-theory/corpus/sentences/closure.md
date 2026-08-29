@@ -188,6 +188,13 @@ work]. We test these predictions using [brief empirical strategy reference]."
 
 ---
 
+
+### 收敛束→假设句式（wowak_2020_female_directors_recalls）
+
+多条异源机制引文（rule-following / risk perception / care orientation / community influencer）并置后，用两个变体收敛到假设："Taken together, these arguments bring us to the following hypothesis:"（H1）与 "Combining these arguments leads us to our second hypothesis:"（H2）——同一篇内避免重复同一收敛句，保持平行小节的收束节律又不机械。
+
+**原文锚点**: "Taken together, these arguments bring us to the following hypothesis:"
+
 ## 按架构类型的整合建议（非强制）
 
 > **管理学惯例**: 不要求独立 Closure 段。以下为按推理架构的**可选整合策略**——当假设间逻辑关系不够自明时，可在最后假设段末尾嵌入最短必要的框架总结，而非添加独立段落。

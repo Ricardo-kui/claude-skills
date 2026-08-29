@@ -150,3 +150,24 @@ consider such negative assessments to be unjustifiable, and seek to avoid them."
 - 用 "董事会也短视" 作为 folk explanation → 必须用股东压力/薪酬契约/解雇威胁等机制化语言
 - 三向交互中 [lower_actor] 直接阻止董事会 → 除非有理论说明 lower actor 能影响董事会决策，否则过度赋权
 - 结论泛化为 "所有治理机制都有害" → 必须限定于 [short-term_metric] 驱动的 [myopic_action] 情境
+
+
+### 模式 A：主角子群双理由圈定型（westphal_bednar2005 型）
+
+**模板**:
+> "We focus on [subgroup A] rather than [subgroup B] for two reasons. First, [A] should tend to be more [objective] about [focal object] because [reasons] ([citations]). Accordingly, [bias processes] should be less pronounced among [A]. Second, [A] can be considered a group unto themselves, in that they have a different role from [B] ([citations]). Whereas [B] tend to [role 1], the latter are expected to [role 2] ([citations]). Unless otherwise stated, our use of the term '[term]' refers to [A]."
+
+**来源**: westphal_bednar2005 (ASQ), Theory P7
+
+**原文锚定**:
+> "We focus on pluralistic ignorance among outside rather than inside directors for two reasons."
+> "Second, outside directors can be considered a group unto themselves, in that they have a different role from inside directors in board discussions"
+
+**关键特征**:
+- 理由一给实质辩护（子群更少偏见/更少利益攸关→机制更纯净），理由二给测量/角色辩护（子群自成群体→构念在其内部定义有意义）；实质理由+测量理由各司其职
+- "Accordingly, [bias] should be less pronounced among [A]" 把辩护落到机制参数上：选子群是为了让机制更可能成立，而非方便取样
+- "Unless otherwise stated..." 术语约定收尾句一次性锁定全文指称，消除后文歧义
+
+**适用**: 构念落在组织的某个子群（外部董事/独立董事/非家族高管）而非全体成员时的范围圈定段；board/ TMT 类研究
+
+**禁忌**: 两个理由必须独立（一个关于机制强度、一个关于群体边界），合并成同义反复会被质疑；圈定后全文必须遵守术语约定，混用即失信

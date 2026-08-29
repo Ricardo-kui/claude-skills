@@ -30,10 +30,10 @@
 | Hook | canonical_id | 核心特征 | 验证状态 | 代表范文 |
 |------|-------------|---------|---------|---------|
 | **数据冲击 Hook** | `03-data-shock` | 具体数字 → scale → "yet little is known"（含变体 H：逃逸注意力的极端结构普及，EMERGING） | ROBUST | eilert2017 (JM), vadakkepatt2022 (JM), zorn2017 (SMJ) |
-| **文献共识盲点 Hook** | `05-literature-consensus-blindspot` | "While important... considers... broadly" | ROBUST (≥5 papers) | gamache2020 (SMJ), shipilov2020 (SMJ), shen2022 (JOM) |
-| **范式挑战 Hook** | `06-paradigm-challenge` | "According to conventional view... In reality, however..." | ROBUST (≥6 papers) | zhou2017 (ASQ), hahl2017 (ASR), gamache2023 (SMJ) |
+| **文献共识盲点 Hook** | `05-literature-consensus-blindspot` | "While important... considers... broadly"（含变体 F：元分析效力枢转型，what_changes_after_women_enter_top_manage_2020 — "just a fraction of variance" 定量缺口枢转至近端结局三元组，EMERGING） | ROBUST (≥5 papers) | gamache2020 (SMJ), shipilov2020 (SMJ), shen2022 (JOM), post2022 (AMJ) |
+| **范式挑战 Hook** | `06-paradigm-challenge` | "According to conventional view... In reality, however..."（含变体 F：常识共识+理论暧昧型 ball_2018 — 共识来自民间/原理层信念，颠覆武器是同理论两派预测对立而非单一反例，VERIFIED / expert_audit_override） | ROBUST (≥6 papers) | zhou2017 (ASQ), hahl2017 (ASR), gamache2023 (SMJ), ball2018 (SMJ) |
 | **跨学科类比 Hook** | `01-cross-disciplinary-analogy` | 领域A概念 → 领域B类似问题 | VERIFIED (≥2 papers) | pollock2015 (ASQ), malshe2015 (JM) |
-| **后果清单 Hook** | `08-consequence-cascade` | 负面事件递进式后果清单（含变体D：定义→频次→品牌级联→具名市值灾难多段型，chen2009，EMERGING） | VERIFIED | mayo2021 (POM), wu2025 (SMJ), chenganesanliu2009 (JM) |
+| **后果清单 Hook** | `08-consequence-cascade` | 负面事件递进式后果清单（含变体D：定义→频次→品牌级联→具名市值灾难多段型，chen2009，VERIFIED） | VERIFIED | mayo2021 (POM), wu2025 (SMJ), chenganesanliu2009 (JM) |
 | **"Contrary to Belief" Hook** | `12-contrary-to-belief` | 打破普遍认知的制度事实（含变体C：直觉反转保留共识型 habel2016 — "despite its intuitive appeal, this logic may be misleading"） | VERIFIED | eilert2017 (JM), darby2023 (MSOM), habel2016 (JM) |
 | **正向特质阴暗面 Hook** | `24-positive-trait-dark-side` | 正向 CEO 特质 → 反直觉负面组织后果 | EMERGING (1p) | chung_low_rust_2022_jams (JAMS) |
 
@@ -46,7 +46,7 @@
 | Hook | canonical_id | 核心特征 | 验证状态 | 代表范文 |
 |------|-------------|---------|---------|---------|
 | **沉浸式故事 Hook** | `10-immersive-narrative` | 五幕结构叙事（时间精确、人物有名） | VERIFIED (≥2 papers) | desai2012 (AMJ), lashley_pollock2020 (ASQ) |
-| **制度轶事 Hook** | `11-institutional-anecdote` | 客观制度叙事 → "unremarkable"理论常态化 | VERIFIED | lehman2014 (MS) |
+| **制度轶事 Hook** | `11-institutional-anecdote` | 客观制度叙事 → "unremarkable"理论常态化；变体 C：立法授权递进事实开场型（双辖区立法事实递进、无数字冲击低能量开场，wowak_2020 — VERIFIED / expert_audit_override 2026-08-28） | VERIFIED (≥3 papers) | desai2012 (AMJ), lehman2014 (MS), wowak_2020 (M&SOM) |
 | **心理构念直觉 Hook** | `09-psychological-construct-hook` | 压力共识 → 案例落地 → 因果链 → 学术空白 | VERIFIED | mannor2016 (SMJ) |
 | **成本收益张力 Hook** | `07-cost-benefit-tension` | 决策两难：行动成本 vs 延迟成本 | VERIFIED | eilert2017 (JM) |
 | **实践困境 Hook** | `10-practical-puzzle` | 从业者面临的具体困境 | VERIFIED (≥3 papers) | ceo_regulatory_focus_ijrm (IJRM), desjardine2023 (OS), kalaignanam2017 (JM) |

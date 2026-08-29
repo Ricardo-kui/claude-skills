@@ -624,6 +624,27 @@ indices for ability and identity conformance are no longer aligned.
 
 ---
 
+
+### 句式 N：构念层次辩护段（westphal_bednar2005 型）
+
+**模板**:
+> "[Construct] is typically defined at the [group] level as the extent to which [members] [share a misperception] ([citations]), in part because [individual biases] are interdependent. They should only persist to the extent that they are shared by others. If others are less biased, then they will [act], thus lessening the focal person's bias. Moreover, known antecedents and consequences of [construct] are [group]-level factors."
+
+**来源**: westphal_bednar2005 (ASQ), Theory P5
+
+**原文锚定**:
+> "Pluralistic ignorance is typically defined at the group level as the extent to which group members (plural) underestimate the degree to which others share their concerns"
+> "in part because the biases of individual group members are interdependent"
+
+**关键特征**:
+- 三重层次论证：机制互相依赖（别人不偏则己偏被稀释）→ 前因后果均为群体层因素 → 研究结果本身是群体层现象；比常见的"我们声明分析层次"强一个量级
+- 用一个反事实条件句（"If other group members are less biased..., then they will..., thus lessening..."）证明个体偏差无法独立存活——层次选择被论证为机制的必然而非便利
+- "in part because" 让步式开头：先承认定义是惯例（typically defined），再给自己的独立理由，避免显得武断重定义
+
+**适用**: 引入的构念存在个体/群体两层歧义时的层次锁定段；跨层次或集体现象构念（氛围、错觉、规范）的 T1 定义补强
+
+**禁忌**: 层次辩护必须真的给出"个体层面不成立"的机制理由，只声明"group level"无辩护会被 reviewer 要求降到个体层；interdependence 论证要求构念确有稀释/传染机制，纯加总构念不适用
+
 ## 双信号信息读法嵌入句（Fini 2017 型，T1/T3 过渡）
 
 **适用**: 已经定义了主信号后，快速嵌入"该信号携带两类信息、且对齐取决于来源"的句子，直接为倒 U 机制铺垫。

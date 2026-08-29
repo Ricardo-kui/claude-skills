@@ -25,7 +25,10 @@ source_papers:
   - desjardine_li_shi_2025_amj (AMJ, 2025): "Primary contribution separated + 'several other streams' multi-stream contrast — most-prior-However-we-show per stream + call response embedded"
   - fini_jourdan_perkmann_2017 (AMJ, 2017): "Canonical-effect-offset — conditional negative flip offsetting the well-documented 'Matthew effect' + audience-specific nature of past appreciation indices (变体 E in three-layer-contribution.md)"
   - chenganesanliu2009 / Chen_Ganesan_Liu_2009_JM (JM, 2009): "Audience-reinterpretation dark side — consumer benefit wisdom → investor hazard signal (变体T)"
-updated: 2026-08-12
+  - westphal_zajac_1998_symbolic_management (ASQ, 1998): "变体 F：双形式×双后果矩阵 Contribution（decoupling 操作化进贡献句 + 双域 uniqueness 替代 Stakes），VERIFIED (expert_audit_override 2026-08-28) — (变体 F in three-layer-contribution.md)"
+  - post_2022_women_tmt_strategic_renewal (AMJ, 2022): "变体 G：悖论消解中槽型 — 三段式贡献中段专设 'resolves the seemingly contradictory ways' 槽化解前文悖论，贡献序列与 Tension 序列镜像；第三贡献 not only...also 合并主效应确认与边界条件，VERIFIED (expert_audit_override 2026-08-29) — (变体 G in three-layer-contribution.md)"
+  - westphal_bednar2005 (ASQ, 2005): "变体 H：机制贡献+缺口填补+首例声明三联型 — 给主文献的机制贡献（一句）→ 借他人之口立 gap（'as many authors have noted'）→ 源学科迁移贡献的 首例声明（'perhaps the first systematic field study'带对冲+限定域），VERIFIED (expert_audit_override 2026-08-29: 用户裁决 Westphal 蒸馏的引言与理论部分证据等级 VERIFIED) — (变体 H in three-layer-contribution.md)"
+updated: 2026-08-29
 created: 2026-05-19
 source: Extracted from MVP30 narrative_analysis files + SKILL.md Makadok table + kim_lee2026 + chenganesanliu2009
 ---
@@ -476,7 +479,7 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 
 ### 变体 P：去拟人化纠偏 → 机制黑箱 → 可控制衡（Kashmiri–Nicol–Arora 2017 型）
 
-**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+**验证状态**: VERIFIED (expert_audit_override user 2026-08-29)（单篇来源；仅作 `section_variant`）
 
 **模板**:
 > "First, we restore [powerful actor] to accounts that have treated [firm process] as largely actorless, showing that [actor attribute] is associated with [outcome portfolio]. Second, we open the mechanism black box by identifying [organizational orientation/process] as a partial pathway to both [productive branch] and [harmful branch], thereby revealing a previously neglected downside of that orientation. Third, we identify a controllable source of internal tension: [countervailing actor/resource] promotes [protective orientation] and attenuates [harmful relationship]."
@@ -581,7 +584,7 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 
 ### 变体 T：受众重解读型暗面（chen2009 型）
 
-**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+**验证状态**: VERIFIED (expert_audit_override user 2026-08-29)（单篇来源；仅作 `section_variant`）
 
 **功能节拍**: 反直觉主发现 → 对照 audience A 文献智慧 → audience B 信号解读机制 → 缓冲证据一致性 → 管理含义（对市场受众解读敏感）
 

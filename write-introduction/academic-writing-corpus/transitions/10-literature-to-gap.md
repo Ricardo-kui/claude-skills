@@ -132,6 +132,16 @@ source: Migrated from global corpus + MVP30 validation
 
 ---
 
+
+### 变体 E：零文献+轶事证据桥接过渡型（wowak2020 型）
+[功能标签]: Transition/Literature Turn 后 — 承认文献空白同时用具名个案维持 plausibility
+[骨架]: "Although no academic studies, to our knowledge, have investigated whether or how [body] influences [decision], anecdotal examples indicate that they may. [Firm]'s [decision], though it cost [loss], was heavily influenced by [body], who established clear expectations regarding [criteria]."
+[关键特征]: "no academic studies... to our knowledge" 与 "anecdotal examples indicate" 并置——空白陈述不坠入真空；个案带可量化代价+决策者归因引语，把轶事升级为准证据；为间接治理链（body 定调→manager 行使）提供第一处机制暗示
+[适用]: 治理/上层梯队研究，正式文献缺失但存在高管访谈/公开归因材料时
+[禁忌]: 轶事必须有具名来源与归因细节；单案例不得承载假设检验功能
+**原文锚定**: "Although no academic studies, to our knowledge, have investigated whether or how boards influence recall decisions, anecdotal examples indicate that they may."
+**来源**: wowak_2020_female_directors_recalls (M&SOM), P2
+
 ## 组装规则
 
 ### 必须配对

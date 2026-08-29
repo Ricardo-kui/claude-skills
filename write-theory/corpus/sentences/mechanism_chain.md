@@ -1890,6 +1890,47 @@ therefore, unlikely to [directional action]."
 
 ---
 
+
+
+### 句式 B：自增强循环命名句（westphal_bednar2005 型）
+
+**模板**:
+> "A '[labeled spiral]' can ensue ([citation]) whereby [actors] who [hold private concern] tend to [infer from others' inaction] that they are in the minority, making them less likely to [act], which then makes others less likely to [act], and so forth."
+
+**来源**: westphal_bednar2005 (ASQ), Theory P4
+
+**原文锚定**:
+> "a 'spiral of silence' can ensue (Noelle-Neumann, 1993: 1) whereby individuals who have private concerns about a group practice tend to assume from the lack of expressed concern by others that they are in the minority"
+
+**关键特征**:
+- 一句话闭环整个自增强循环：whereby 从句给出起点状态 → "making them less likely to..." 第一圈 → "which then makes others less likely to..." 第二圈 → "and so forth" 标记循环无限延续
+- 给循环冠以既有命名（'spiral of silence'）借力经典概念，作者不必自造术语即获得理论合法性
+- "can ensue" 的情态动词把循环定性为趋势而非必然，与假设的概率化语气一致
+
+**适用**: 正反馈/自我强化机制的理论化收束句；机制推演型论文在引入既有循环概念（spiral, trap, cascade, lock-in）时
+
+**禁忌**: 循环句最多两圈就得用 "and so forth" 收手，三圈以上句子不可读；引用的既有命名必须真实存在于被引文献，不得把自造循环伪装成经典概念
+
+### 句式 C：个体决策规则→集体困局转折句（westphal_bednar2005 型）
+
+**模板**:
+> "[Individuals] will tend to [withhold the action] until at least some other [group members] [have acted] ([citations]). If other [group members] follow the same decision rule, however, then no one will [act]."
+
+**来源**: westphal_bednar2005 (ASQ), Theory P3
+
+**原文锚定**:
+> "before voicing their opinion they will tend to look for evidence from the statements of other group members that their opinion is shared"
+> "If other group members follow the same decision rule, however, then no one will express their concerns about the practice or strategy in question."
+
+**关键特征**:
+- 两句完成"个体理性→集体失败"的推理转折：第一句陈述个体决策规则（等别人先动），第二句用 "If others follow the same decision rule, however, then no one will..." 揭示规则相加后的集体死锁
+- "however" 放在条件从句内部（"If ..., however, then ..."），转折落在推理内部而非段落边界，密度极高
+- 该句式是机制链的"相变点"：之前的每步都是个体层面，此句一步跳到群体层面，无需额外层次论证
+
+**适用**: 任何"人人都在等别人"的集体行动/信息隐藏/协调失灵机制（沉默螺旋、知识隐藏、集体不作为）；机制推演型两步链的收尾跳层句
+
+**禁忌**: "same decision rule" 必须与前句陈述的规则逐字对应，否则跳层无据；该句式只用于真正的同质决策规则情境，异质成员间不成立
+
 ## 成本-收益计算机制链（Cost-Benefit Calculus Mechanism，Chung/Low/Rust 2022 型）
 
 **功能**: 当研究的理论机制可以归结为"行为者面对 [short-term benefit] 与 [long-term cost] 的权衡，而 [IV] 通过改变对收益/成本的感知来影响行动概率"时使用。提供完整的 why chain：建立权衡 → 论证感知高收益 → 论证感知低成本 → 收敛到主效应。

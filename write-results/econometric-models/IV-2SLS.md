@@ -14,7 +14,7 @@ updated: 2026-08-05
 
 ## 变体速查表
 
-> 检索辅助。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架与诚实边界见下方变体正文。
+> 检索辅助。状态词表（与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀）；LEGACY-DIAGNOSTIC 保留（工具诊断类）；召回主题条目按用户 2026-08-29 裁决单源 VERIFIED。完整骨架与诚实边界见下方变体正文。
 
 槽位分布：
 
@@ -32,46 +32,46 @@ updated: 2026-08-05
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 2 | Model-Free Evidence 预览 | 正式回归前用均值分组比较建立初步直觉，降低读者对"完全依赖复杂计量技术"的疑虑（副槽位 R3） | 区别于直接进入 IV 报告——先给模型无关证据预览 | 可选 | Wowak 2025 MS |
+| 2 | Model-Free Evidence 预览 | 正式回归前用均值分组比较建立初步直觉，降低读者对"完全依赖复杂计量技术"的疑虑（副槽位 R3） | 区别于直接进入 IV 报告——先给模型无关证据预览 | VERIFIED | Wowak 2025 MS |
 
 ### R2（2）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 3 | IV 第一阶段诊断嵌入 R3 | 因果识别研究：partial F / Sargan / Pagan-Hall / Breusch-Pagan 嵌入结果正文而非脚注（副槽位 R3） | 区别于诊断放脚注/Methods——让读者读结果时同步看到识别有效性 | 可选 | Wowak 2025 MS |
-| 4 | 非线性估计器下 IV：控制函数残差作 DWH | 生存/Probit/Tobit 主模型的内生性检验：一阶段残差入二阶段方程作 DWH 非线性类比 + 有限样本偏误诚实提示（副槽位 R3） | 区别于线性 DWH——非线性模型下标准 DWH 无效；须加系数被放大 caveat | 通过（单篇） | Qiao, Hiatt & Sine 2026 SMJ |
+| 3 | IV 第一阶段诊断嵌入 R3 | 因果识别研究：partial F / Sargan / Pagan-Hall / Breusch-Pagan 嵌入结果正文而非脚注（副槽位 R3） | 区别于诊断放脚注/Methods——让读者读结果时同步看到识别有效性 | VERIFIED | Wowak 2025 MS |
+| 4 | 非线性估计器下 IV：控制函数残差作 DWH | 生存/Probit/Tobit 主模型的内生性检验：一阶段残差入二阶段方程作 DWH 非线性类比 + 有限样本偏误诚实提示（副槽位 R3） | 区别于线性 DWH——非线性模型下标准 DWH 无效；须加系数被放大 caveat | EMERGING | Qiao, Hiatt & Sine 2026 SMJ |
 
 ### R3（2）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 1 | 竞争假设的赢家报告模式 | 并列双可能性假设（H1a vs H1b）在 R3 同时报告两方向解释，用显著性决定"赢家" | 区别于单方向假设——"A positive… whereas a negative…"→"imply the former/latter" | 通过（1/5 复现） | Wowak 2025 MS |
-| 8 | 多 DV 平行 climax | 同一内生结构的多结果家族（薪酬/违规/绩效）：按假设逐 DV 平行四拍，幅度翻译按估计器匹配（%/货币/OR），诊断嵌入表注 | 区别于变体 1（竞争赢家）——多 DV 平行；因果动词按估计器分级，货币翻译锚定样本均值 | 通过（单篇） | Zorn et al. 2017 SMJ |
+| 1 | 竞争假设的赢家报告模式 | 并列双可能性假设（H1a vs H1b）在 R3 同时报告两方向解释，用显著性决定"赢家" | 区别于单方向假设——"A positive… whereas a negative…"→"imply the former/latter" | VERIFIED | Wowak 2025 MS |
+| 8 | 多 DV 平行 climax | 同一内生结构的多结果家族（薪酬/违规/绩效）：按假设逐 DV 平行四拍，幅度翻译按估计器匹配（%/货币/OR），诊断嵌入表注 | 区别于变体 1（竞争赢家）——多 DV 平行；因果动词按估计器分级，货币翻译锚定样本均值 | EMERGING | Zorn et al. 2017 SMJ |
 
 ### R4（1）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 9 | 调节衰减：mean/±1SD 条件斜率 + 跨 DV 选择性 null | IV 主效应后双外部治理调节：交互项+条件斜率+图+"marginal support"措辞，选择性 null 提升为理论边界（副槽位 R6） | 区别于 OLS-FE 单侧边际效应变体——IV 场景强制全套条件斜率；不得把 p≈.06–.08 升级为 full support | 通过（单篇） | Zorn et al. 2017 SMJ |
+| 9 | 调节衰减：mean/±1SD 条件斜率 + 跨 DV 选择性 null | IV 主效应后双外部治理调节：交互项+条件斜率+图+"marginal support"措辞，选择性 null 提升为理论边界（副槽位 R6） | 区别于 OLS-FE 单侧边际效应变体——IV 场景强制全套条件斜率；不得把 p≈.06–.08 升级为 full support | EMERGING | Zorn et al. 2017 SMJ |
 
 ### R6（1）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 7 | 稳健性例外账本 | 替代测量/工具族/分类下把稳健性分三层报告：stable headline / 形式敏感 / 脆弱边界（副槽位 R7） | 区别于"results remain unchanged"抹平差异——分层的证据权重更新，符号反转须升级为 substantive inconsistency | 待交叉 | Moon, Tuli & Mukherjee 2023 JM |
+| 7 | 稳健性例外账本 | 替代测量/工具族/分类下把稳健性分三层报告：stable headline / 形式敏感 / 脆弱边界（副槽位 R7） | 区别于"results remain unchanged"抹平差异——分层的证据权重更新，符号反转须升级为 substantive inconsistency | EMERGING | Moon, Tuli & Mukherjee 2023 JM |
 
 ### R7（2）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 5 | "去 IV" 稳健性（非工具变量估计示偏误低） | 移除 IV 重跑，用 IV 与非 IV 估计一致反向论证内生性偏误低（识别策略的 meta-robustness，配合 abundance of caution 叙事） | 区别于"加 IV 防御"——移除识别策略反向证明；IV 与非 IV 差异大时禁止使用 | 通过（单篇） | Wowak 2025 MS |
-| 10 | kind-vs-degree 构念电池 | 二元"极端结构"须证明不可还原为连续梯度：dual-category 反转/连续独立性子样本/Chow 跳跃检验 | 区别于按估计器/样本/测量威胁组织的常见 R7——构念操作化威胁专用电池 | 通过（单篇） | Zorn et al. 2017 SMJ |
+| 5 | "去 IV" 稳健性（非工具变量估计示偏误低） | 移除 IV 重跑，用 IV 与非 IV 估计一致反向论证内生性偏误低（识别策略的 meta-robustness，配合 abundance of caution 叙事） | 区别于"加 IV 防御"——移除识别策略反向证明；IV 与非 IV 差异大时禁止使用 | VERIFIED | Wowak 2025 MS |
+| 10 | kind-vs-degree 构念电池 | 二元"极端结构"须证明不可还原为连续梯度：dual-category 反转/连续独立性子样本/Chow 跳跃检验 | 区别于按估计器/样本/测量威胁组织的常见 R7——构念操作化威胁专用电池 | EMERGING | Zorn et al. 2017 SMJ |
 
 ### R8（1）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 6 | 离散度 post hoc（best of both 调和） | 主结果两对立群体各赢一个维度时，用群体内离散度（CV）作可操作干预的调和型事后分析 | 区别于 mediation post hoc（解释"为什么"）——焦点从均值转向离散度，"best of both"框架回答"该怎么办" | 通过（单篇） | Wowak 2025 MS |
+| 6 | 离散度 post hoc（best of both 调和） | 主结果两对立群体各赢一个维度时，用群体内离散度（CV）作可操作干预的调和型事后分析 | 区别于 mediation post hoc（解释"为什么"）——焦点从均值转向离散度，"best of both"框架回答"该怎么办" | VERIFIED | Wowak 2025 MS |
 
 
 ## 主骨架
@@ -90,7 +90,7 @@ updated: 2026-08-05
 ### 变体 1: 竞争假设的赢家报告模式 (1/5 复现)
 **来源论文**: Wowak2025 MS
 **原始句锚点**: The results in column (IV) imply the former (β = 0.453; p < 0.01), such that firms with more liberal TMTs are slower to initiate recalls than firms with more conservative TMTs.
-**验证状态**: 通过 (竞争假设设计的标准模板)
+**验证状态**: VERIFIED（竞争假设设计的标准模板）
 **写入日期**: 2026-05-20
 **槽位**: R3
 **骨架**:
@@ -104,7 +104,7 @@ updated: 2026-08-05
 ### 变体 2: Model-Free Evidence 预览 (1/5 复现)
 **来源论文**: Wowak2025 MS
 **原始句锚点**: Before discussing regression results, we first explore model-free support for our hypotheses. The mean number of recalls for firms with more liberal TMTs is 3.78, whereas it is 5.73 for firms with more conservative TMTs, suggesting that firms with more liberal TMTs tend to issue fewer recalls in any given year.
-**验证状态**: 可选变体
+**验证状态**: VERIFIED
 **写入日期**: 2026-05-20
 **槽位**: R1/R3 (在正式回归之前)
 **骨架**:
@@ -114,7 +114,7 @@ updated: 2026-08-05
 ### 变体 3: IV 第一阶段诊断嵌入 R3 (1/5 复现)
 **来源论文**: Wowak2025 MS
 **原始句锚点**: Indeed, the partial F-statistic exceeds the thresholds that scholars suggest represent relevance (partial F-stat = 59.534; p < 0.001), and the two-step identification test from Andrews (2018) does not contain zero [-15.390, -3.943], reflecting relevant instruments (Stock et al. 2002).
-**验证状态**: 可选变体 (IV 研究的最佳实践)
+**验证状态**: VERIFIED（IV 研究的最佳实践）
 **写入日期**: 2026-05-20
 **槽位**: R2/R3
 **骨架**:
@@ -124,17 +124,27 @@ updated: 2026-08-05
 ### 变体 4: 非线性估计器下的 IV — 控制函数残差作 DWH 检验 + 有限样本偏误诚实提示 (1篇高价值)
 **来源论文**: Qiao, Hiatt & Sine 2026 (SMJ)
 **原始句锚点**: Further, because standard Durbin–Wu–Hausman tests rely on linear-model assumptions and are not valid for nonlinear survival models, we adopted a control-function approach in which the first-stage residual is included in the hazard equation and the examination of whether the residual is statistically significant constitutes the nonlinear analogue of a Durbin–Wu–Hausman test for endogeneity (Terza et al., 2008; Wooldridge, 2010, 2015).
-**验证状态**: 通过 (单篇高价值，生存/有限因变量模型下内生性检验的标准做法 + 罕见的诚实提示)
+**验证状态**: EMERGING（单篇高价值，生存/有限因变量模型下内生性检验的标准做法 + 罕见的诚实提示）
 **写入日期**: 2026-06-16
 **槽位**: R2/R3
 **骨架**:
 > [Table, Column] shows that the instrument, [instrument], is [direction] related to [the endogenous regressor] (β = [value], p < [threshold]), and the first-stage F-statistic of [value] exceeds the cutoff for 10% maximal bias ([cutoff]) according to Stock and Yogo ([2005]). Because standard Durbin–Wu–Hausman tests rely on linear-model assumptions and are not valid for [nonlinear survival / limited-DV] models, we adopted a control-function approach in which the first-stage residual is included in the [second-stage hazard / outcome] equation; whether this residual is statistically distinguishable from zero constitutes the nonlinear analogue of a Durbin–Wu–Hausman test for endogeneity ([Terza et al., 2008]; [Wooldridge, 2010, 2015]). The residual term is significant (β = [value], p = [threshold]), indicating that [the un-instrumented specification] is subject to the endogeneity concerns Shaver ([2005]) raised. [Next column] then shows that the instrumented [treatment] is [direction] related to [outcome] (β = [value], p < [threshold]). This method, however, is sensitive to finite-sample bias, often inflating the coefficient on the instrumented variable, and should be interpreted with caution ([citation]).
 **与原骨架差异**: 解决一个被普遍回避的问题——**非线性估计器（生存/Probit/Tobit）下如何检验内生性**。标准 DWH 假设线性，不能直接用于生存模型；本变体用 **control-function**：把第一阶段残差放入第二阶段风险方程，残差显著即内生性存在的非线性等价检验（Terza et al. 2008; Wooldridge）。关键诚实提示（**不可省略**）：control-function 对有限样本敏感，常**放大**工具变量系数，故 IV 系数应解读为方向性证据而非点估计。适用于任何非线性主模型 + IV 设计（生存分析、Probit、Tobit）。配合 `../write-methods/econometric-models/IV-2SLS.md` 变体 4（外部自然事件 IV）使用。
 
+
+### 变体 12：R7 弱识别检验的临界值协议报告（Cragg-Donald vs Stock-Yogo 10%）（wowak2020 型）
+[功能标签]: R7/R2 — IV 相关性（relevance）的临界值对照式报告
+[骨架]: "A commonly used means to examine IV relevance is to report a Cragg-Donald Wald F-statistic ([citations]), which is a 'weak identification' test statistic, and compare it to the 10% critical value of Stock and Yogo (2005). The critical value we are required to use is [value], which comes from [table reference] as we have [one IV for one potentially exogenous regressor]. This means that, to have no more than 10% of the bias of the regression estimate come from our main [FE] analyses in Tables [x] and [y], our Cragg-Donald Wald F-statistic needs to be larger than [value]. The Cragg-Donald Wald F-statistic for the IV analysis is [value], which indicates that our IV is relevant and unlikely to be weak, at least from a statistical standpoint, similar to previous studies that have used this instrument ([citations])."
+[关键特征]: 三拍临界值协议——先报要用的临界值及其出处与适用条件（"as we have [identification structure]"），再解释该临界值控制什么偏差（"to have no more than 10% of the bias ... come from our main analyses"），最后报实测 F 并加 "at least from a statistical standpoint" 限度语；以同工具先例研究收尾交叉校准
+[适用]: 单工具/少工具 IV 的弱识别报告；须说明临界值对应的识别结构与偏差上界
+[禁忌]: 只报 F 值不报临界值出处与含义；用强 F 声称识别完备（排他性不由此保证）
+**原文锚定**: "The critical value we are required to use is 16.38, which comes from table 5.2 in Stock and Yogo (2005) as we have one IV for one potentially exogenous regressor. ... The Cragg-Donald Wald F-statistic for the IV analysis is 378.163, which indicates that our IV is relevant and unlikely to be weak, at least from a statistical standpoint."
+**来源**: wowak_2020_female_directors_recalls (M&SOM), §5.1.1
+
 ### 变体 5: R7 "去 IV" 稳健性 — 用非工具变量估计展示内生性偏误低 (1篇高价值)
 **来源论文**: Wowak2025 MS
 **原始句锚点**: Although we employed IVs that met the relevance and exclusion criteria in our main analysis, the consistency of our results from the noninstrumented approach indicates that bias from endogeneity may be relatively low in our setting.
-**验证状态**: 通过（单篇高价值；corpus 此前无"移除识别策略以反向论证偏误低"的元稳健性变体）
+**验证状态**: VERIFIED（单篇高价值；corpus 此前无"移除识别策略以反向论证偏误低"的元稳健性变体）
 **写入日期**: 2026-07-25
 **槽位**: R7
 **骨架**:
@@ -146,7 +156,7 @@ updated: 2026-08-05
 ### 变体 6: R8 离散度 post hoc — "best of both" 调和型事后分析 (1篇高价值)
 **来源论文**: Wowak2025 MS
 **原始句锚点**: A logical conclusion from our research is that firms may seek to diversify their TMTs politically in the hopes of having both fewer recalls and faster ones.
-**验证状态**: 通过（单篇高价值；corpus 此前无"焦点构念从均值转向离散度、并框架为调和两极张力"的 post hoc 变体）
+**验证状态**: VERIFIED（单篇高价值；corpus 此前无"焦点构念从均值转向离散度、并框架为调和两极张力"的 post hoc 变体）
 **写入日期**: 2026-07-25
 **槽位**: R8
 **骨架**:
@@ -161,7 +171,7 @@ updated: 2026-08-05
 
 **来源论文**: Moon, Tuli & Mukherjee (2023, *Journal of Marketing*)
 **原始句锚点**: Considering Models 10a–10c, we find that analyst uncertainty completely mediates the effect of disclosure of advertising spending on idiosyncratic risk.
-**验证状态**: 单篇高价值 reference-level 变体，待跨论文验证
+**验证状态**: EMERGING（单篇高价值 reference-level 变体）
 **写入日期**: 2026-08-03
 **槽位**: R6/R7
 **骨架**:
@@ -177,7 +187,7 @@ updated: 2026-08-05
 
 **来源论文**: Zorn, Shropshire, Martin, Combs & Ketchen (2017, SMJ)
 **原始句锚点**: Lone-insider CEOs received roughly 82% greater pay than their non-lone-insider peers. Practically speaking, given the mean value of total pay in our sample of $5.7 million, results suggest that lone-insider CEOs receive $4.7 million in excess pay.
-**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**验证状态**: EMERGING（单篇）
 **写入日期**: 2026-08-05
 **槽位**: R3
 **骨架**:
@@ -193,7 +203,7 @@ updated: 2026-08-05
 
 **来源论文**: Zorn, Shropshire, Martin, Combs & Ketchen (2017, SMJ)
 **原始句锚点**: Next, we examine whether the conditional effect of lone-insider boards is different from zero depending on the amount of analyst coverage. The slope of the relationship between lone-insider boards and excess pay at the mean value of analyst coverage (approximately 12 analysts) is marginal (b = 5.59, p =.08).
-**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**验证状态**: EMERGING（单篇）
 **写入日期**: 2026-08-05
 **槽位**: R4 / R6
 **骨架**:
@@ -209,7 +219,7 @@ updated: 2026-08-05
 
 **来源论文**: Zorn, Shropshire, Martin, Combs & Ketchen (2017, SMJ)
 **原始句锚点**: Taken together, these results support our theorizing that having at least one non-CEO insider represents a change in kind rather than degree.
-**验证状态**: 通过（单篇 EMERGING；待第二篇交叉验证）
+**验证状态**: EMERGING（单篇）
 **写入日期**: 2026-08-05
 **槽位**: R7
 **骨架**:
@@ -218,3 +228,23 @@ updated: 2026-08-05
 **与原骨架差异**: 常见 R7 按估计器/样本/测量威胁组织；本变体是**构念操作化威胁**专用电池——证明二元「极端结构」不可还原为 continuous majority-independence / count。诚实边界：dual-category 模型须报告自身 first-stage 诊断（不可借用主模型 F）；Chow / 子样本检验是构念辩护而非主假设的额外支持；若连续测量在非焦点子样本仍显著且无跳跃，应削弱 kind 主张。
 
 **适用**: Methods 已声明 kind ≠ degree 的离散治理/组织结构研究（见 write-methods 面板数据-OLS 变体 32）。
+
+
+### 变体 11：R7 排他性约束的量化暴露占比辩护（wowak2020 型）
+[功能标签]: R7 稳健性 — IV 排他性约束的三层辩护（先例复用→机制反驳→量化暴露占比）
+[骨架]: "Although the exclusion criteria cannot be explicitly tested, we propose that [instrument] is unlikely to be directly correlated with our dependent variables. First, [instrument] has been used in prior [predictor] studies that predict similar dependent variables ([citations]). Second, a direct correlation between [instrument] and [outcome] is less likely due to the characteristics of the [source channels] that [generate the instrument]. More specifically, the argument for nonexclusivity would be that [channel mechanism] not only influences [first-stage channel], but also influences how [actors] set [decision tone] and thereby predicts our [outcome] measures. Although we cannot completely rule out this possibility, we believe the risk of this is low based upon the small percentage of [source channels] that are [outcome-relevant domain]. In particular, there are [N_total] [source channels] across the time period of our panel. Of those, only [N_exposed] are [outcome-relevant entities], which is only [share]% of them. In other words, well over [100−share]% of the [source channels] are from [unrelated domains] in which [outcome] decisions as examined in our study are very uncommon."
+[关键特征]: 排他性不可检验时先用先例复用（prior studies）与机制反驳（命名非排他性通路再逐项拆解），最后落到可数的暴露占比（"only [N] are [relevant], which is only [share]%"）把辩护从口头转为算术；"Although we cannot completely rule out this possibility" 保留诚实让步再压低风险
+[适用]: 工具变量经第三方网络/渠道生成的排他性辩护；有可数暴露面（外部关联实体行业构成）的 IV 设计
+[禁忌]: 暴露占比仅当可从数据直接清点时使用；不得把占比辩护写成排他性已被检验
+**原文锚定**: "Of those, only 50 are medical products firms, which is only 8.6% of them. In other words, well over 90% of the 'other boards' are from nonmedical product industries in which recall decisions as examined in our study are very uncommon."
+**来源**: wowak_2020_female_directors_recalls (M&SOM), §5.1.1
+
+
+### 变体 13：R7 非线性主模型下的线性 2SLS 稳健性轨（wowak2020 型）
+[功能标签]: R7 稳健性 — 非线性主估计器（负二项 FE）+ 线性 2SLS 内生性检验轨的适配性辩护
+[骨架]: "Although Equation ([main]), which is used to examine support for Hypothesis [N], is a nonlinear [count model] regression, we use linear 2SLS for our IV analysis. We do so because nonlinear IV modeling approaches are nonstandardized and there is significantly less consistency in how to implement such models ([citation]) compared with linear 2SLS analyses. However, the linear 2SLS analysis leads to highly consistent results for both our [DV1] and [DV2] analyses, as described below. ... In column (1) of Table [z], we report how our control variables and [instrument] predict [endogenous predictor]. [Instrument] is highly predictive of [endogenous predictor], as shown not only by the significant coefficient for [instrument] (β = [value], p < [threshold]) predicting [endogenous predictor], but also due to the large [weak-id statistic] in column (1). In each of the next [six] columns of Table [z], we use the instrumented [endogenous predictor] in the second stage of the 2SLS regression as a predictor variable in our [DV1] and [DV2] analyses. We find nearly identical results when comparing columns [c2]–[c7] of Table [z] with columns [c3]–[c5] of Table [x] and columns [c3]–[c4] of Table [y]. ... The results in Table [z] indicate that [time-variant omitted variable bias] is unlikely creating significant endogeneity problems in our analysis."
+[关键特征]: 主模型非线性而 IV 轨线性的适配性辩护（"nonlinear IV ... nonstandardized ... less consistency"，引 Wooldridge 2010）；第一阶段与第二阶段列布局共享一张表；跨表精确映射（"comparing columns ... of Table [z] with columns ... of Tables [x] and [y]"）替代含糊的 "results robust"；收束句把 threat（time-variant omitted variables）显式点名
+[适用]: 计数/非线性主模型 + 线性 2SLS 内生性稳健性的组合；双 DV 主结果表的 IV 复制
+[禁忌]: 不得把线性 2SLS 系数与非线性主系数直接比大小；线性化须给方法论引证而非默认
+**原文锚定**: "Although Equation (1), which is used to examine support for Hypothesis 1, is a nonlinear negative binomial regression, we use linear 2SLS for our IV analysis. We do so because nonlinear IV modeling approaches are nonstandardized and there is significantly less consistency in how to implement such models (Wooldridge 2010) compared with linear 2SLS analyses."
+**来源**: wowak_2020_female_directors_recalls (M&SOM), §5.1.1

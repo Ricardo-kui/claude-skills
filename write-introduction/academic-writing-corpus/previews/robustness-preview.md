@@ -47,6 +47,16 @@ source: Extracted from MVP30 narrative_analysis files
 
 ---
 
+
+### 变体 I：三重识别+竞争层级排除预览型（wowak2020 型）
+[功能标签]: Preview — 识别策略预告与竞争性解释排除（实质显著 null 作为证据）
+[骨架]: "We address identification issues in robustness checks in [N] ways: [IV], [selection model], [reverse causality]... We test whether [rival actor] predicts [outcome] and serves as a mediator... we find no such evidence, substantiating our contention that [protagonist level], not [rival level], [drive outcome]."
+[关键特征]: 稳健性预告不止防御（IV/selection/reverse causality 三联），还主动纳入一个竞争理论层级检验；把"竞争变量不显著"本身叙述为支持主角层级的实质性证据（substantiating our contention）；连接既有 board-level 文献收束
+[适用]: 多层级治理研究（board vs TMT vs 职能高管），识别工具包成熟的 FE 设定
+[禁忌]: 竞争变量需有真实理论对立资格；null 排除句必须回扣主角层级主张
+**原文锚定**: "We test if the gender of the VP of quality predicts recall decisions and if it serves as a mediator in our model... We find no such evidence... substantiating our contention that the board of directors, and not managers, set the tone for recall decision-making."
+**来源**: wowak_2020_female_directors_recalls (M&SOM), P7
+
 ## 组装规则
 
 ### 反模式提醒

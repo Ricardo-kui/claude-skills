@@ -29,17 +29,17 @@ updated: 2026-08-03
 | 分类 | 文件 | 功能 | 对应槽位 |
 |------|------|------|---------|
 | [段首锚定短语](opening-anchors.md) | 告诉读者"本段做什么" | M1–M10 所有段首 |
-| [because 从句架构](because-clauses.md) | 论证控制变量、样本排除、构念效度的理由 | M2, M3, M4, M6 |
+| [because 从句架构](because-clauses.md) | 论证控制变量、样本排除、构念效度的理由 | M2, M3, M4, M6；微模板 A：理论驱动观察窗 because 从句（窗口=构念活跃期证据 + 数据窗/事件窗 lag 结构分离），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28) |
 | [因果动词梯度](causal-hedging.md) | 根据设计强度选择因果声称力度 | M3, M4, M7 |
 | [过渡衔接短语](transitions.md) | 段落内部的逻辑推进标记 | M1–M10 任意多句段落 |
-| [样本漏斗节奏](funnel-rhythm.md) | 数字叙事的句法序列 | M2 |
+| [样本漏斗节奏](funnel-rhythm.md) | 数字叙事的句法序列 | M2；起始总体补充：样本框三理由枚举辩护（数据可得性/响应率/研究缺口），westphal_bednar2005，EMERGING |
 | [识别策略预告](identification-foreshadowing.md) | 在 Methods 中预告 Results 的诊断检验 | M8 |
 | [变量操作化句式](variable-operationalization.md) | 构念→测量→来源→方向的表述方式 | M3, M4, M5 |
-| [稳健性检验预告](robustness-foreshadowing.md) | Methods 中预告 Results 的稳健性检验 | M8, M10 |
+| [稳健性检验预告](robustness-foreshadowing.md) | Methods 中预告 Results 的稳健性检验 | M8, M10；样本选择补充：问卷非应答 K-S+Heckman 双重防御链，westphal_bednar2005，EMERGING |
 | [模型选择比较](model-selection-comparison.md) | 分布/连接函数/规格比较时的叙事单元 | M7 |
 | [识别策略外生性](identification-exogeneity.md) | IV 排他性约束、自然实验外生性来源、控制函数识别变量的理论论证 | M4, M7, M8 |
 | [多源数据匹配](multi-source-matching.md) | 多个独立数据源交叉合并的叙述 | M2 |
-| [手工编码与效度检验](manual-coding-validation.md) | 从原始文本/痕迹提取构念并进行编码效度验证 | M3, M4 |
+| [手工编码与效度检验](manual-coding-validation.md) | 从原始文本/痕迹提取构念并进行编码效度验证 | M3, M4；微模板 A：反规则手册编码协议（规则书推高信度牺牲效度的预辩 + recording unit 声明 + pre-negotiation 信度三件套），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28) |
 | [子样本分组与平行方程](subsample-grouping.md) | 样本分组估计、多方程并行呈现的结构说明 | M4, M5, M7 |
 | [CMB 预防论证](common-method-bias-prevention.md) | 问卷数据 CMB 预防的设计+统计论证 | M8 |
 | [高管信心/人格特质操作化](executive-confidence-operationalization.md) | 期权 moneyness、媒体描述、显著性—薪酬复合代理、双代理收敛、继任者对照与构念形成窗—结果观察窗分离 | M2, M4, M8 |

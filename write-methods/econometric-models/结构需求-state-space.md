@@ -11,7 +11,7 @@ updated: 2026-08-05
 
 ## 变体速查表
 
-> 检索辅助。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架与诚实边界见下方变体正文。
+> 检索辅助。状态词表（与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀）；LEGACY-DIAGNOSTIC 保留（工具诊断类）；召回主题条目按用户 2026-08-29 裁决单源 VERIFIED。完整骨架与诚实边界见下方变体正文。
 
 ### 槽位分布
 
@@ -25,22 +25,22 @@ updated: 2026-08-05
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 1 | 约化式预备分析 → 结构模型动机桥（副槽位 M7） | "先 log-linear 探路、再 structural 正式估计"的设计，需把预备分析写成数据模式证明 + 结构模型必要性双步时 | — | 待交叉 | Liu & Shankar 2015 Management Science |
+| 1 | 约化式预备分析 → 结构模型动机桥（副槽位 M7） | "先 log-linear 探路、再 structural 正式估计"的设计，需把预备分析写成数据模式证明 + 结构模型必要性双步时 | — | VERIFIED | Liu & Shankar 2015 Management Science |
 
 ### M7（2）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 2 | 三层动态架构 — 品牌偏好累积 + 时变系数 transfer function + 事件特异 random walk | BLP/Kalman 设计需在同一段完成"偏好 stock→direct/indirect 通道→事件异质性→嵌入离散选择"架构导航时 | 首个在同一 M7 段完成三层架构导航的变体，避免只堆公式 | 待交叉 | Liu & Shankar 2015 Management Science |
-| 3 | 估计栈 — contraction mapping + Kalman 转移/观测方程 + GMM | 需把 contraction→KF→GMM 三拍写成可读估计栈、并交代初始条件与归一化时 | 区别于 `动态面板-GMM` 的 moment conditions 叙述 | 待交叉 | Liu & Shankar 2015 Management Science |
+| 2 | 三层动态架构 — 品牌偏好累积 + 时变系数 transfer function + 事件特异 random walk | BLP/Kalman 设计需在同一段完成"偏好 stock→direct/indirect 通道→事件异质性→嵌入离散选择"架构导航时 | 首个在同一 M7 段完成三层架构导航的变体，避免只堆公式 | VERIFIED | Liu & Shankar 2015 Management Science |
+| 3 | 估计栈 — contraction mapping + Kalman 转移/观测方程 + GMM | 需把 contraction→KF→GMM 三拍写成可读估计栈、并交代初始条件与归一化时 | 区别于 `动态面板-GMM` 的 moment conditions 叙述 | VERIFIED | Liu & Shankar 2015 Management Science |
 
 ### M8（3）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 4 | 直接 vs 间接效应识别 — 约化式交互类比 | 结构式中 direct/indirect/spillover/特征调节四类识别逻辑需显式映射到预备回归交互时 | 区别于"黑箱结构"写法，识别逻辑与约化式交互一一对应降低不信任 | 待交叉 | Liu & Shankar 2015 Management Science |
-| 5 | 监管强制召回外生性 — 法定披露窗口论证 | 强制召回情境（NHTSA/CPSC 法定披露窗口）需论证 recall 外生于管理裁量时 | 区别于 Hoffmann 裁量权子样本与 IV/DiD 识别，补强制召回 regulatory exogeneity 通道 | 待交叉 | Liu & Shankar 2015 Management Science |
-| 6 | State-space 可观测等价排除 — 附录解析证明 + 模拟恢复 | 需排除 state-space 可观测等价系统、证明参数识别（构造等价系统→约束→文献先例→模拟）时 | 区别于 VARX 的 Granger 与 IV 的 exclusion restriction，是 state-space 专属识别论证 | 待交叉 | Liu & Shankar 2015 Management Science |
+| 4 | 直接 vs 间接效应识别 — 约化式交互类比 | 结构式中 direct/indirect/spillover/特征调节四类识别逻辑需显式映射到预备回归交互时 | 区别于"黑箱结构"写法，识别逻辑与约化式交互一一对应降低不信任 | VERIFIED | Liu & Shankar 2015 Management Science |
+| 5 | 监管强制召回外生性 — 法定披露窗口论证 | 强制召回情境（NHTSA/CPSC 法定披露窗口）需论证 recall 外生于管理裁量时 | 区别于 Hoffmann 裁量权子样本与 IV/DiD 识别，补强制召回 regulatory exogeneity 通道 | VERIFIED | Liu & Shankar 2015 Management Science |
+| 6 | State-space 可观测等价排除 — 附录解析证明 + 模拟恢复 | 需排除 state-space 可观测等价系统、证明参数识别（构造等价系统→约束→文献先例→模拟）时 | 区别于 VARX 的 Granger 与 IV 的 exclusion restriction，是 state-space 专属识别论证 | VERIFIED | Liu & Shankar 2015 Management Science |
 
 
 ## 主骨架
@@ -63,7 +63,7 @@ updated: 2026-08-05
 **来源论文**: Liu & Shankar 2015 (Management Science)
 **原始句锚点**: Although the preliminary analysis suggests that we indeed observe decreases in sales and advertising effectiveness during a product-harm crisis in the automobile industry, it does not capture the richness of the processes or mechanisms by which product recalls affect demand.
 
-**验证状态**: EMERGING（单篇；待第二篇交叉验证）
+**验证状态**: VERIFIED（单篇）
 
 **槽位**: M3 / M7
 
@@ -83,7 +83,7 @@ updated: 2026-08-05
 **来源论文**: Liu & Shankar 2015 (Management Science)
 **原始句锚点**: Brand preference is an unobserved stock variable captured as a state space model based on Kalman filtering (KF). We then integrate this KF process with a random coefficient demand model based on BLP (1995).
 
-**验证状态**: EMERGING（单篇；待第二篇交叉验证）
+**验证状态**: VERIFIED（单篇）
 
 **槽位**: M7
 
@@ -101,7 +101,7 @@ updated: 2026-08-05
 **来源论文**: Liu & Shankar 2015 (Management Science)
 **原始句锚点**: By minimizing a quadratic form of these error terms, we obtain the model parameters with a GMM procedure similar to BLP (1995).
 
-**验证状态**: EMERGING（单篇；待第二篇交叉验证）
+**验证状态**: VERIFIED（单篇）
 
 **槽位**: M7
 
@@ -119,7 +119,7 @@ updated: 2026-08-05
 **来源论文**: Liu & Shankar 2015 (Management Science)
 **原始句锚点**: The identification of the direct and indirect effects (through advertising effectiveness) of product recall on preference is analogous to the identification of the main effect of product recall and the interaction effect of product recall and advertising in the simple regression model discussed in §3.
 
-**验证状态**: EMERGING（单篇；待第二篇交叉验证）
+**验证状态**: VERIFIED（单篇）
 
 **槽位**: M8
 
@@ -137,7 +137,7 @@ updated: 2026-08-05
 **来源论文**: Liu & Shankar 2015 (Management Science)
 **原始句锚点**: According to the National Traffic and Motor Vehicle Safety Act of 1966, an automaker has five business days to inform the NHTSA after it discovers a problem. … Therefore, product recall is outside management control and is therefore treated as an exogenous variable in this study.
 
-**验证状态**: EMERGING（单篇；与 Hoffmann 裁量权子样本形成对照）
+**验证状态**: VERIFIED（单篇；与 Hoffmann 裁量权子样本形成对照）
 
 **槽位**: M8
 
@@ -155,7 +155,7 @@ updated: 2026-08-05
 **来源论文**: Liu & Shankar 2015 (Management Science)
 **原始句锚点**: The mean utility parameters are identified if there exists no other system observationally equivalent to the one specified in Equations (11b) and (12b) (Harvey 1991, Bass et al. 2007).
 
-**验证状态**: EMERGING（单篇；待第二篇交叉验证）
+**验证状态**: VERIFIED（单篇）
 
 **槽位**: M8
 

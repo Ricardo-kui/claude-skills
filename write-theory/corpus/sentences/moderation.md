@@ -324,6 +324,31 @@ on [organizational mechanisms that mitigate such conflicts / the secondary frame
 
 ---
 
+
+### 变体 B：编号双因变量交互假设形式（westphal_zajac_1998_symbolic_management 型）
+
+**模板**:
+> "[主效应:] [X] will be [negatively] related to (1) [DV1] and (2) [DV2], whether or not [the substantive practice] is implemented."
+> "[增强交互:] [X] with [A] will amplify the [negative] relationship between [X] and (1) [DV1] and (2) [DV2], whether or not..."
+> "[受众交互:] [X] will interact with [W] to diminish the likelihood of (1) [DV1] and (2) [DV2], whether or not..."
+
+**来源**: westphal_zajac_1998_symbolic_management (ASQ), H3/H4（§2.3）与 H3a/H4a（§2.4）
+
+**原文锚定**:
+> "LTIP adoption will be negatively related to (1) subsequent separation of the CEO and board chair positions and (2) increases in the ratio of outside to inside directors, whether or not the plan is implemented."
+> "LTIP adoption will interact with ownership by institutional investors to diminish the likelihood of (1) subsequent separation of the CEO and board chair positions and (2) increases in the ratio of outside to inside directors, whether or not the plan is implemented."
+
+**关键特征**:
+- "(1)...(2)..." 编号把两个同族因变量（两类董事会结构变革）压进单条假设：避免假设数翻倍，又使 H3/H4/H3a/H4a 四条假设保持逐条同构——假设族矩阵的语法基础
+- 交互方向用动词直接声明（amplify / diminish），交互模式类型（enhancing/buffering）不言自明，满足 C10 的明确性要求
+- 编号从句与尾从句（whether or not implemented）叠加后，单条假设携带 2 DV × 2 实施条件共四格信息——对应正文 2×2 检验矩阵
+
+**适用**: 同一机制作用于多个可并列检验的结果变量、且假设需与处理×条件设计矩阵对齐的研究；需要保持假设族语法同构以便 Results 逐条对应
+
+**禁忌**: 并列 DV 必须同机制同预测（本篇两类董事会变革均由"控制增强"逻辑统一），异质 DV 应拆分假设；编号式在 DV 超过 2-3 个时失去可读性
+
+**验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
+
 ## 董事会放大型边界条件（Board Monitoring as Amplifying Boundary Condition，Chung/Low/Rust 2022 型）
 
 **功能**: 当研究中的公司治理机制（尤其是董事会/独立董事/机构监督）不是抑制而是**放大**管理层机会主义/短视行为时使用。核心逻辑：董事会的监督压力通过股东短期绩效要求传导到高管，反而加剧其短视倾向。

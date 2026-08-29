@@ -1,7 +1,8 @@
 meta:
-  last_updated: '2026-08-23'
+  last_updated: '2026-08-29'
   total_design_types: 22
-  batches_processed: 20
+  batches_processed: 21
+  last_batch: batch_36_post2022
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
     granularity: per design_type（对应 econometric-models/[设计类型].md 文件）
@@ -26,9 +27,20 @@ meta:
     + reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc_distill + moon_tuli_mukherjee_2023_jm + schumacher_keck_tang_2020_smj
     + kashmiri_nicol_arora_2017_jams + bendig_hensellek_schulte_2024_etp + lee_park_2024_smj + hoffmann_cheong_phan_zurbruegg2024_jm_redistill
     + desjardine_li_shi_2025_amj_distill + ridge_hill_ingram_kolomeitsev_worrell_2024_amj_distill     + fini_jourdan_perkmann_2017_amj_distill
-    + chen_ganesan_liu_2009_jm_distill
+    + chen_ganesan_liu_2009_jm_distill + post_lokshin_boone_2022_amj_distill
 evidence:
   by_source_paper:
+    westphal_bednar_2005_asq:
+      journal: Administrative Science Quarterly
+      title: Pluralistic Ignorance in Corporate Boards and Firms' Strategic Persistence in Response to Low Firm Performance
+      status: EMERGING
+      verification_basis: "user_designation (2026-08-29: 用户点名 Westphal 为最喜爱学者——提升学习优先级；轻量蒸馏，证据等级保持 EMERGING)"
+      design_types:
+      - 调查-组级聚合
+      slots_covered:
+      - M1
+      - M8
+      note: "浅层蒸馏（用户裁决 2005 年老论文 methods 简化）。3 个微模板写回：组级聚合辩护（r_wg/ICC+consensus composition → 多行为者设计 变体2）、非应答 K-S+Heckman 辩护链（robustness-foreshadowing 样本选择节）、样本框三理由枚举（funnel-rhythm 起始总体节）。2005 年代特有写法（alpha-only、available-from-authors、75%阈值无敏感性）已标 era_flags 不迁移。"
     lee_park_2024_smj:
       journal: Strategic Management Journal
       title: Giving up learning from failures? An examination of learning from one's own failures in the context of heart
@@ -54,7 +66,8 @@ evidence:
     bendig_hensellek_schulte_2024_etp:
       journal: Entrepreneurship Theory and Practice
       title: Beneficial, Harmful, or Both? Effects of Corporate Venture Capital and Alliance Activity on Product Recalls
-      status: EMERGING (1p)
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       design_types:
       - 面板数据-OLS
       - 非线性模型
@@ -74,7 +87,8 @@ evidence:
       journal: Journal of the Academy of Marketing Science
       title: 'Me, myself, and I: influence of CEO narcissism on firms'' innovation strategy and the likelihood of product-harm
         crises'
-      status: EMERGING (1p)
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       design_types:
       - 面板数据-OLS
       - 非线性模型
@@ -151,8 +165,8 @@ evidence:
       journal: Journal of Marketing
       title: So, Sue Me…If You Can! How Legal Changes Diminishing Managers' Risk of Being Held Liable by Shareholders Affect
         Firms' Likelihood to Recall Products
-      status: EMERGING (1p)
-      verification_basis: distill-methods-exemplar_redistill_2026-08-05
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       design_types:
       - 自然实验-DiD
       - 非线性模型
@@ -174,8 +188,8 @@ evidence:
     liu_shankar2015:
       journal: Management Science
       title: The Dynamic Impact of Product-Harm Crises on Brand Preference and Advertising Effectiveness
-      status: EMERGING (1p)
-      verification_basis: distill-methods-exemplar_2026-08-05
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       design_types:
       - 结构需求-state-space
       - 面板数据-OLS
@@ -254,6 +268,31 @@ evidence:
       - M8
       - M10
       note: 待第二篇 exemplar 提升为 ROBUST；DWH + Gaussian copula 内生性叙事需与传统 IV 研究进一步交叉验证
+    westphal_zajac_1998_symbolic_management:
+      journal: Administrative Science Quarterly
+      title: 'The Symbolic Management of Stockholders: Corporate Governance Reforms and Institutional Investor Assessments
+        of CEO Legitimacy and Influence'
+      status: VERIFIED
+      verification_basis: 'expert_audit_override (user 2026-08-28: 单源足矣)'
+      design_types:
+      - 面板数据-OLS
+      - 事件历史+事件研究
+      - 文本构念测量
+      micro_templates:
+      - m1_theory_driven_time_frame
+      - m4_no_rulebook_coding_protocol
+      slots_covered:
+      - M1
+      - M2
+      - M3
+      - M4
+      - M6
+      - M7
+      story_fidelity: section_variant
+      note: '2026-08-28 整篇蒸馏 writeback 补登记两条 SKIPPED micro-template：m1_theory_driven_time_frame（micro-templates/because-clauses.md
+        变体A/B 理论驱动观察窗 because 从句：窗口=构念活跃期证据 + 数据窗/事件窗 lag 结构分离；M2/M6）与 m4_no_rulebook_coding_protocol（micro-templates/manual-coding-validation.md
+        变体A/B 反规则手册编码协议：规则书推高信度牺牲效度的预辩 + recording unit 声明 + pre-negotiation 信度三件套；M3/M4）。micro-templates
+        文件层无独立 registry 条目结构，按邻近 by_source_paper.micro_templates 格式登记。'
     ridge_hill_ingram_kolomeitsev_worrell_2024_amj:
       journal: Academy of Management Journal
       title: 'Avoidance and Aggression in Stakeholder Engagement: The Impact of CEO Paranoia and Paranoia-Relevant Cues'
@@ -303,8 +342,8 @@ evidence:
       journal: Journal of Marketing
       title: Does a Firm's Product-Recall Strategy Affect Its Financial Value? An Examination of Monitoring Versus Initiating
         Recalls
-      status: EMERGING (1p)
-      verification_basis: distill-methods-exemplar_2026-08-12
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       design_types:
       - 事件历史+事件研究
       - 两阶段模型
@@ -320,9 +359,38 @@ evidence:
         AR); Heckman strategy-switching with no-a-priori+main-table exclusion restrictions (λ=0 validates main cross-section).
         SKIP market-model formula and basic CAR cross-section. Anti-patterns: funnel without step Ns; Heckman/mediation only
         in Results.'
+    post_2022_women_tmt_strategic_renewal:
+      journal: Academy of Management Journal
+      title: 'What Changes After Women Enter Top Management Teams? A Gender-Based Model of Strategic Renewal'
+      status: VERIFIED
+      verification_basis: 'expert_audit_override (user 2026-08-29: 用户点名喜爱本篇，单源足矣)'
+      design_types:
+      - 文本构念测量
+      - 面板数据-OLS
+      - IV-2SLS
+      micro_templates:
+      - m3_preemptive_validity_defense_chain
+      - m6_first_difference_control_declaration
+      - m7_fd_dynamic_alignment_partial_adjustment
+      - m8_subsample_split_moderation_chow
+      - m8_fitted_value_mediation_chain
+      slots_covered:
+      - M3
+      - M6
+      - M7
+      - M8
+      story_fidelity: section_variant
+      note: '2026-08-29 整篇蒸馏 writeback 补登记 5 条变体（面板数据-OLS 已在 by_design_type 列表、此处补 by_source_paper）：
+        m3_preemptive_validity_defense_chain（文本构念测量.md 变体M3 「预辩-判据-区分-face validity」四段效度辩护链：valid-albeit-imprecise
+        预辩 + 外部判据/区分效度双向数字 + 非相关对照；M3）；m6_first_difference_control_declaration（面板数据-OLS.md 变体M6 EXTEND：
+        全一阶差分控制声明 + 供给侧候选池控制，挂在变体1分层 because 之上；M6）；m7_fd_dynamic_alignment_partial_adjustment（面板数据-OLS.md
+        变体M7：DV/协变量全差分 + 解释变量滞后一期 + 滞后 DV 部分调整，"truly dynamic" 一句话立识别主张；M7）；m8_subsample_split_moderation_chow
+        （面板数据-OLS.md 变体M8：链式设计子样本分割替代乘法交互 + 「不限制其他协变量系数」辩护 + Chow/threshold 收口；M8）；
+        m8_fitted_value_mediation_chain（IV-2SLS.md 变体M8 EXTEND：中介内生时以第一阶段拟合值作中介操作化的 sequential IV，SEM 稳健性；
+        诚实边界：generated-regressor SE 修正须带警告行；M8）。'
   by_design_type:
     面板数据-OLS:
-      paper_count: 12
+      paper_count: 16
       papers:
       - lee_park_2024_smj (SMJ)
       - bendig_hensellek_schulte_2024_etp (ETP)
@@ -336,6 +404,10 @@ evidence:
       - desjardine_li_shi_2025_amj (AMJ)
       - ridge_hill_ingram_kolomeitsev_worrell_2024_amj (AMJ)
       - fini_jourdan_perkmann_2017_amj (AMJ)
+      - ball_2018_product_competition_managerial_discretion_and_manu (Strategic Management Journal)
+      - wowak_2020_female_directors_recalls (Manufacturing & Service Operations Management)
+      - westphal_zajac_1998_symbolic_management (Administrative Science Quarterly)
+      - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
       status: VERIFIED
       slots_covered:
       - M1
@@ -586,11 +658,12 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     IV-2SLS:
-      paper_count: 3
+      paper_count: 4
       papers:
       - wowak2025 (MS)
       - chung_low_rust_2022_jams (JAMS)
       - moon_tuli_mukherjee_2023_jm (JM)
+      - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
       status: VERIFIED
       slots_covered:
       - M4
@@ -637,12 +710,14 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     文本构念测量:
-      paper_count: 3
+      paper_count: 4
       papers:
       - cutolo2024 (JM)
       - kashmiri_nicol_arora_2017_jams (JAMS)
       - ridge_hill_ingram_kolomeitsev_worrell_2024_amj (AMJ)
-      status: EMERGING
+      - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       slots_covered:
       - M2
       - M3
@@ -666,7 +741,8 @@ evidence:
       - pfarrer2010 (AMJ)
       - mayo2021 (POMS)
       - fini_jourdan_perkmann_2017_amj (AMJ)
-      status: EMERGING
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       slots_covered:
       - M2
       - M7

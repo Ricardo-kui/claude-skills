@@ -71,6 +71,60 @@ that has dominated prior research. Thus:"
 
 ---
 
+
+### 变体 A：互补双路径收敛型假设（Dual-Path Convergence to a Single Directional Hypothesis，ball_2018 型）
+**band**: 薄弱（single_source_verified；用户裁决单源可写）
+**适用场景**: 两条机制路径（一故意/一无意，或个体/组织层面）共同指向同一方向的同一结果，但不想拆成竞争假设或多个假设时。
+**骨架**:
+[IV] will be associated with [DV] in [N] alternative ways; one [deliberate path: cost-shaving / effort-withholding behaviors], the other [inadvertent path: attentiveness decay under destabilizing forces]. Whether the response is [path 1] or [path 2], either may lead to [DV]. Thus, we hypothesize: [single directional hypothesis].
+**与竞争假设的分界**: 两条路径预测**同号同终点**→收敛单假设；预测不同终点或互斥→才用竞争假设架构（F 型）。
+**原文锚点**: "in two alternative ways; one purposeful and intentional, the other inadvertent and less deliberate"
+**风险**: 单步主效应靠路径数量补深度——故意路径的 warrant 不得全依赖 practitioner 来源（ball_2018 的弱点，模仿时避免）。
+
+
+### 变体 B：交替对立再诠释型机制开题（westphal_zajac_1998_symbolic_management 型）
+
+**模板**:
+> "Thus, while conventional [dominant-discipline] perspectives assume that [observable market signal] reflects [material benefit from reduced costs], a [social] perspective on [the theory] suggests a different interpretation: [the signal] may instead reflect [social benefit] resulting from [symbolic actions] that reduce [social uncertainty about motives]."
+
+**来源**: westphal_zajac_1998_symbolic_management (ASQ), §2.1 P4（全节 3 次复现的同型 pivot）
+
+**原文锚定**:
+> "Thus, while conventional agency perspectives assume that stock market reactions to LTIP adoption reflect economic benefits from reduced agency costs, a social perspective on agency suggests a different interpretation: market reactions may instead reflect social benefits resulting from symbolic actions that reduce uncertainty about managerial motives."
+
+**关键特征**:
+- 每个小节的机制推演都以"学科内默认解释 → 社会视角再诠释"的交替对立开题：先承认主流文献的预设成立，再用 "may instead reflect" 把同一可观测信号重新归因——不推翻原解释，只增加平行解释层
+- "suggests a different interpretation:" 冒号后直接给出新机制的一句话浓缩，读者无需跳回文献即可获得 why chain 起点
+- 机制核心从"削减成本"替换为"削减社会不确定性"——本篇全部下游假设（市场反应/改革替代/受众调节）均由此一句生根
+
+**适用**: 对成熟经济学/理性选择理论做制度或符号再诠释的机制推演型论文；每个假设小节需要独立重申 lens 对立时（小节循环式组织的开题句）
+
+**禁忌**: 再诠释必须替换可检验的本体（成本→不确定性），不能只是修辞性对立；若下游假设无法回溯到这句的新机制，对比即成装饰
+
+**验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
+
+
+### 变体 C：硬数字/软数字测量本体重构（westphal_zajac_1998_symbolic_management 型）
+
+**模板**:
+> "While [market signals] are viewed in the [quantitative] literature as providing hard numbers that reflect the true underlying value of a firm, from a [symbolic] perspective, [actors] can also influence [signals] and thus change [the underlying value] through the use of [symbolic action]. [Signals] thus should perhaps be viewed more in terms of 'soft' numbers that reflect the subjective perceptions of a heterogeneous audience, neatly quantified and aggregated, reacting to changes in [formal policy] that may be independent of [substantive practices]."
+
+**来源**: westphal_zajac_1998_symbolic_management (ASQ), §2.1 P5
+
+**原文锚定**:
+> "Market reactions thus should perhaps be viewed more in terms of 'soft' numbers that reflect the subjective perceptions of a heterogeneous audience, neatly quantified and aggregated (Beatty and Zajac, 1987), reacting to changes in formal policy that may be independent of substantive practices."
+
+**关键特征**:
+- 用"硬数字 vs 软数字"的隐喻完成测量本体重构：同一个因变量（股价反应）在两个视角下是两种存在物——量化精确性不再等于本体实在性
+- "can also influence [signals] and thus change [the underlying value]" 一句把符号行动从"遮蔽真实价值"升格为"参与建构价值"，为自变量赋予独立因果地位（Unobserved Dysfunction 逻辑的机制化）
+- "neatly quantified and aggregated" 反讽式短语保留量化表象，消除"符号视角=否认数据"的误读，双读者群各取所需
+
+**适用**: 需要为符号/感知类自变量赋予对"硬"结果变量（股价、评分、排名）的因果地位的研究；引言已作本体替换承诺、正文需兑现测量重构时
+
+**禁忌**: 隐喻重构须有可检验含义（本篇：decoupling 条件下的正反应），否则沦为修辞；"should perhaps be viewed" 的试探语气不适用于已有多重证据支撑的主张
+
+**验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
+
 ## 假设陈述格式
 
 | 类型 | 模板 |

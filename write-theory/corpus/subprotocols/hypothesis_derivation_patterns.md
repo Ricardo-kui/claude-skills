@@ -28,7 +28,7 @@ status: ready_for_corpus
 
 ## 变体速查表
 
-> 检索辅助（2026-08-09 P0 补建）。状态列空白 = 正文未标注验证状态（旧 Pattern）。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架、适用条件与诚实边界见下方变体正文。
+> 检索辅助（2026-08-09 P0 补建）。状态列空白 = 正文未标注验证状态（旧 Pattern）。状态词表（2026-08-29 统一，与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀）；LEGACY-DIAGNOSTIC 保留（工具诊断类）；召回主题条目按用户 2026-08-29 裁决单源 VERIFIED。完整骨架、适用条件与诚实边界见下方变体正文。
 
 | # | 变体 | 家族 | 适用场景 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -1639,3 +1639,25 @@ related: dual_mechanism_same_direction (argumentation_patterns.md) — 后者收
 - Retention 对比段只限定可外推边界，不自动推出“无 retention 效应”假设。
 
 **反模式**: 无机制双通道却写成长文献综述；把活动参与文献直接当作雇主属性预测；为通过模板伪造编号假设；把 signaling 衰减写成已验证中介消失；把 stakes 关切标成 Inadequacy-primary。
+
+
+### 变体 A：符号替代-预防-固权三步机制（westphal_zajac_1998_symbolic_management 型）
+
+**模板**:
+> "By using [symbolic action] to reduce [social uncertainty] regarding [the divergence of interests], such symbolic action substitutes for other [control mechanisms]. [Prior research] suggests that [mechanism A] and [mechanism B] represent alternative solutions to [the core problem], such that [demands for B] decline as [A] increases. By formally adopting [institutionally legitimate procedures] indicative of [accountability], [agents] may effectively preempt or forestall [substantive alternative changes] that are less easily decoupled from [substantive arrangements]. In effect, [symbolic compliance] may represent an important and subtle [entrenchment] device, perpetuating [the agent's dominance over the monitoring body]."
+
+**来源**: westphal_zajac_1998_symbolic_management (ASQ), §2.3 P1
+
+**原文锚定**:
+> "By formally adopting 'institutionally "correct" procedures' (Walsh and Seward, 1990: 431) indicative of CEO accountability, top managers may effectively preempt or forestall alternative changes in board structure that are less easily decoupled from substantive arrangements. In effect, symbolic CEO incentive alignment may represent an important and subtle entrenchment device, perpetuating the CEO's dominance over the board."
+
+**关键特征**:
+- 三步链完整：符号行动削减社会不确定性 → 替代其他治理机制（借规范代理理论的替代逻辑 Holmstrom 反向使用）→ 预防更难 decouple 的实质变革——每步各有一条独立理论脉络
+- 关键洞察是把"难以 decouple"作为变革类型的选择器：正式采纳可被 decouple、董事会结构变动不能，故符号合规恰好选中最能自保的预防对象
+- "In effect" 收束句把温和的合规行为重铸为 subtle entrenchment device——权力后果作为机制链的终点而非起点，符合 Unobserved Dysfunction 的渐进揭示节奏
+
+**适用**: 同一核心问题存在多种可替代解决机制、且部分机制可被表面化而部分不能的研究；需从"外部反应"理论延伸出"内部权力后果"第二假设族
+
+**禁忌**: 替代逻辑需要文献中已确立的 A-B 替代关系（本篇: 激励 vs 监督），不能凭空宣称替代；entrenchment 结论若无可信的反向排除（真心改革的公司），需在 Results/Discussion 预留处置
+
+**验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)

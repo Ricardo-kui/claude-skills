@@ -9,14 +9,14 @@
 | 文件 | canonical_id | 核心特征 | 验证状态 | 代表范文 |
 |------|-------------|---------|---------|---------|
 | `01-general-theory-practice.md` | `01-general-theory-practice` | 分别论证理论和实践重要性（含变体 G：制度化实践 critically-evaluate，EMERGING） | ROBUST | 多篇顶刊；zorn2017 (SMJ) |
-| `06-two-reason-enumerated.md` | `06-two-reason-enumerated` | 枚举式双理由（理论/实践）（含变体 C：双构念属性理论型 ridge2024，两个理由都是构念内在属性，EMERGING） | VERIFIED | ridge2024 (AMJ) |
+| `06-two-reason-enumerated.md` | `06-two-reason-enumerated` | 枚举式双理由（理论/实践）（含变体 C：双构念属性理论型 ridge2024，两个理由都是构念内在属性，EMERGING） | VERIFIED | ridge2024 (AMJ)；变体 D：决策者误信在场即有效→双面失败场景 stakes，what_changes_after_women_enter_top_manage_2020，EMERGING |
 
 ## 量化损失/危机
 
 | 文件 | canonical_id | 核心特征 | 验证状态 | 代表范文 |
 |------|-------------|---------|---------|---------|
 | `02-quantified-economic-loss.md` | `02-quantified-economic-loss` | 量化经济损失建立规模感 | VERIFIED | — |
-| `04-public-health-safety.md` | `04-public-health-safety` | 公共健康/安全后果（含成本—暴露—死亡三联量化） | EMERGING | — |
+| `04-public-health-safety.md` | `04-public-health-safety` | 公共健康/安全后果（含成本—暴露—死亡三联量化） | VERIFIED | — |
 | `05-firm-value-stock-market.md` | `05-firm-value-stock-market` | 股价/企业价值后果（含 chenganesanliu2009 confirming：具名市值灾难 showing） | VERIFIED | — |
 | `07-reputation-legitimacy-crisis.md` | `07-reputation-legitimacy-crisis` | 声誉/合法性危机 | VERIFIED | — |
 | `09-myopic-management-long-term-loss.md` | `09-myopic-management-long-term-loss` | 短视管理侵蚀长期价值 | EMERGING (1p) | chung_low_rust_2022_jams (JAMS) |
@@ -31,7 +31,7 @@
 
 | 文件 | canonical_id | 核心特征 | 验证状态 | 代表范文 |
 |------|-------------|---------|---------|---------|
-| `08-goal-conflict.md` | `08-goal-conflict` | 两个有价值目标互斥→决策困境 | EMERGING | habel2016 (JM) |
+| `08-goal-conflict.md` | `08-goal-conflict` | 两个有价值目标互斥→决策困境 | VERIFIED | habel2016 (JM) |
 
 ---
 

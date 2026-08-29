@@ -11,7 +11,7 @@ updated: 2026-07-07
 
 ## 变体速查表
 
-> 检索辅助。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架与诚实边界见下方变体正文。
+> 检索辅助。状态词表（与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀）；LEGACY-DIAGNOSTIC 保留（工具诊断类）；召回主题条目按用户 2026-08-29 裁决单源 VERIFIED。完整骨架与诚实边界见下方变体正文。
 
 ### 槽位分布
 
@@ -25,20 +25,20 @@ updated: 2026-07-07
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 1 | 联立方程 SEM + 工具变量 + 相关误差 | 多方程误差相关需联合估计（mediation/moderated mediation） | 首变体：解释为何联合估计（效率 + 共同遗漏变量偏误） | 待交叉 | Vadakkepatt et al. 2022 (JM) |
-| 3 | 残差中心化处理交互项多重共线性 | 连续×连续交互项与主效应高相关 | 区别于 mean-centering：残差中心化是升级方案 | 待交叉 | Vadakkepatt et al. 2022 (JM) |
+| 1 | 联立方程 SEM + 工具变量 + 相关误差 | 多方程误差相关需联合估计（mediation/moderated mediation） | 首变体：解释为何联合估计（效率 + 共同遗漏变量偏误） | EMERGING | Vadakkepatt et al. 2022 (JM) |
+| 3 | 残差中心化处理交互项多重共线性 | 连续×连续交互项与主效应高相关 | 区别于 mean-centering：残差中心化是升级方案 | EMERGING | Vadakkepatt et al. 2022 (JM) |
 
 ### M8（1）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 2 | 面板 Granger 因果检验 + 平稳性检验前置诊断 | 时序方向性（X→Y vs Y→X）与变量进入形式（水平/差分）决策 | 两步都放 Methods（模型设定依据），非 Results | 待交叉 | Vadakkepatt et al. 2022 (JM) |
+| 2 | 面板 Granger 因果检验 + 平稳性检验前置诊断 | 时序方向性（X→Y vs Y→X）与变量进入形式（水平/差分）决策 | 两步都放 Methods（模型设定依据），非 Results | EMERGING | Vadakkepatt et al. 2022 (JM) |
 
 ### M3（1）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 4 | 表格式变量文档 | 变量 10+ 个、逐段描述冗长的论文（副槽位 M4） | 标准变量表格化（Construct/Notation/Description/Citations/Source），正文只展开特殊变量 | 待交叉 | Vadakkepatt et al. 2022 (JM) |
+| 4 | 表格式变量文档 | 变量 10+ 个、逐段描述冗长的论文（副槽位 M4） | 标准变量表格化（Construct/Notation/Description/Citations/Source），正文只展开特殊变量 | EMERGING | Vadakkepatt et al. 2022 (JM) |
 
 
 ## 主骨架
@@ -54,7 +54,7 @@ updated: 2026-07-07
 ### 变体 1: M7 联立方程 SEM + 工具变量 + 相关误差 (1篇高价值)
 **来源论文**: Vadakkepatt, Arora, Martin & Paharia 2022 (Journal of Marketing)
 **原始句锚点**: We have multiple equations in which the errors across them can be correlated, so we estimate the equations jointly using a structural equation model approach with correlated errors.
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-07
 **槽位**: M7
 **骨架**:
@@ -64,7 +64,7 @@ updated: 2026-07-07
 ### 变体 2: M8 面板 Granger 因果检验 + 平稳性检验作为前置诊断 (1篇高价值)
 **来源论文**: Vadakkepatt, Arora, Martin & Paharia 2022 (Journal of Marketing)
 **原始句锚点**: Prior to specifying our models, we conducted panel Granger causality tests to examine whether lobbying Granger-causes customer satisfaction or vice versa. They reveal that lobbying Granger-causes customer satisfaction (χ² = 5.04, p < .10) and not the reverse.
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-07
 **槽位**: M8
 **骨架**:
@@ -74,7 +74,7 @@ updated: 2026-07-07
 ### 变体 3: M7 残差中心化处理交互项多重共线性 (1篇高价值)
 **来源论文**: Vadakkepatt, Arora, Martin & Paharia 2022 (Journal of Marketing)
 **原始句锚点**: In addition, to rule out multicollinearity concerns for the interaction terms (with r > .70), we residual-centered the interaction of lobbying with product market lobbying.
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-07
 **槽位**: M7
 **骨架**:
@@ -84,7 +84,7 @@ updated: 2026-07-07
 ### 变体 4: M3/M4 表格式变量文档 (1篇高价值)
 **来源论文**: Vadakkepatt, Arora, Martin & Paharia 2022 (Journal of Marketing)
 **原始句锚点**: Customer satisfaction, advertising spend, and R&D spend are widely used variables, so we do not detail their construction here, beyond the information provided in Table 2. Instead, we focus on the variables that require additional explanation or coding or are unique to our research.
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 **写入日期**: 2026-07-07
 **槽位**: M3/M4
 **骨架**:

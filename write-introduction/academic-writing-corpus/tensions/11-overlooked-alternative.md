@@ -53,6 +53,28 @@ source: Extracted from MVP30 narrative_analysis files
 
 ---
 
+
+### 变体 C：既存解释实证反驳型（westphal_bednar2005 型）
+
+**模板**:
+> "[Dominant theory] suggests that [actors] are well positioned to [remedial action] ([citations]). [Actor subgroup], in particular, should be less likely than [other actors] to [biased behavior], because [reason 1] and [reason 2] ([citations]). Yet there is considerable [qualitative/anecdotal] evidence that [remedial action] often fails, regardless of [conventional remedy's presence] ([citations]). One explanation for this failure is that [rival mechanism] ([review citation]). Empirical evidence does not consistently support this explanation, however: although [weakly supporting evidence domain], there is less evidence that [rival mechanism] affects [focal outcome]; moreover, [direct field/survey evidence against]. In this study, we offer a different explanation for why [puzzle]: [new mechanism]."
+
+**来源**: westphal_bednar2005 (ASQ), P2-P4
+
+**原文锚定**:
+> "Empirical evidence from the corporate governance literature does not consistently support this explanation, however."
+> "In this study, we offer a different explanation for why boards may often fail to prevent strategic persistence in the face of poor performance."
+
+**关键特征**:
+- 与变体 A 的区别：不是"文献忽视了替代解释"（overlooked），而是替代解释已在场、被公平陈述后用证据反驳——说服动作是"反驳既存解释"而非"揭示盲区"
+- 双层证据反驳结构：先承认部分支持证据（"Although there is some evidence that..."），再指出核心结果上证据缺失（"there is less evidence that..."），最后补直接反向证据（"moreover, survey research suggests..."）
+- 先 steelman 后反驳：rival explanation 以 "One explanation ... is that" 中性句式引出，避免稻草人化
+- "a different explanation" 单句转轴把攻击对象限定在解释力而非文献整体，过渡零摩擦
+
+**适用**: Inadequacy × Mechanism；现象存在主导理论预期 + 一个现成但证据不充分（mixed/inconsistent）的解释；适用于"监督者/纠偏者失灵"类谜题（董事会、监管者、审查者未能纠正偏差行为）的研究场景
+
+**禁忌**: 反驳必须分层给证据（间接证据弱 + 直接证据反向），只引一处不支持的研究会被质疑选择性引用；rival explanation 必须以其最强形式陈述，不得弱化后再反驳；"different explanation" 之后必须立即给出新机制名称，不能只说"我们换个角度"
+
 ## 组装规则
 
 ### 必须配对

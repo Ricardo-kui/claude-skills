@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
-  last_updated: '2026-08-23'
-  observations_processed: 16
+  last_updated: '2026-08-29'
+  observations_processed: 35
   description: Evidence ledger for design defects inferred from Introduction exemplar distillation.
 defects:
   incompleteness-embedded-opposing-claims-vs-incommensurability:
@@ -639,6 +639,542 @@ defects:
     lifecycle: open
     first_seen: '2026-08-23'
     last_seen: '2026-08-23'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  ball2018-policy-unexamined-consequence-tension-variant:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: tensions/01-despite-progress-unaddressed.md 已有变体V（政策意外后果型，hoffmann2024），但未见'政策成功证据反衬副作用未验+谦逊限定语+一句话双向stakes'的组合变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/tensions/01-despite-progress-unaddressed.md
+    diagnosis: 监管/政策冲击驱动的 Incompleteness 张力缺少'制度事实承载 gap（非文献遗漏）'的细粒度变体；write-introduction 引导语料在该情境下检索命中率低（corpus_query 'regulation'/'政策'
+      零命中索引行）
+    proposed_change:
+      action: append_variant
+      summary: 向 01-despite-progress-unaddressed.md 追加'政策工具未验后果型（ball_2018型）'变体，EMERGING；gate ① 先与变体V（hoffmann2024型）核对去重
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: ball_2018_product_competition_managerial_discretion_and_manu
+      journal: SMJ
+      evidence_anchor: However, the impact of this increased product competition on product quality, specifically product
+        recalls, has to the best of our knowledge not been examined. (P4)
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - SMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - SMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-28'
+    last_seen: '2026-08-28'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  intro-tension-antecedent-only-two-part-question:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: tensions/01-despite-progress-unaddressed.md 现有变体覆盖递进缺口、受众边界延伸（variant Y）等，但无'前作（含自引）止步于前因→受众×后果双问悬置'变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/tensions/01-despite-progress-unaddressed.md
+    diagnosis: variant Y（paruchuri2026）覆盖外部受众遗漏但缺自引划界载体与后果通道；westphal_zajac_1998 的自引 gap + 'An unanswered question is:' 双问
+      RQ 是可迁移的新变体，属语料缺口而非规则缺陷
+    proposed_change:
+      action: add_variant
+      summary: 追加变体'前因止步+双问悬置型'（见 writeback plan tension_antecedent_only_two_part_question, EXTEND）
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: westphal_zajac_1998_symbolic_management
+      journal: ASQ
+      evidence_anchor: 'Introduction P4: 前因止步自引划界 + unanswered question 双问 RQ'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-28'
+    last_seen: '2026-08-28'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  intro-litturn-dual-stream-opposition-convergence:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: literature-turns/02-synthesized-coherence.md 现有变体以'交叉沉默'（variant D）覆盖双流盲区，无'双流公开对立→行动者偏好收敛'变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/literature-turns/02-synthesized-coherence.md
+    diagnosis: 经济流与行为流对同一改革持相反预测、双方引用对称，盲区在'行动者可表面顺从'——与交叉沉默说服动作不同，属语料缺口
+    proposed_change:
+      action: add_variant
+      summary: 追加变体'双流对置行动者偏好收敛型'（writeback plan litturn_dual_stream_opposition_convergence, ADD）
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: westphal_zajac_1998_symbolic_management
+      journal: ASQ
+      evidence_anchor: 'Introduction P1-P3: 双流对置 + ''Both literatures suggest... ceteris paribus'' 收敛句'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-28'
+    last_seen: '2026-08-28'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  intro-hook-converging-concern-cold-start:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: hooks/16-evolving-social-issue.md 现有变体均为事件/政策趋势驱动，无零数据多受众汇流担忧冷启动变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/hooks/16-evolving-social-issue.md
+    diagnosis: 机构+媒体+学术三源独立担忧汇流、'decried the apparent absence of' 规范缺位语言——不依赖任何具体事件或数据，是 Trend Hook 的缺失子型
+    proposed_change:
+      action: add_variant
+      summary: 追加变体'多受众汇流担忧型'（writeback plan hook_converging_concern_trend, ADD）
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: westphal_zajac_1998_symbolic_management
+      journal: ASQ
+      evidence_anchor: 'Introduction P1: 三受众汇流担忧 + ''This concern has been reinforced by extensive academic research'''
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-28'
+    last_seen: '2026-08-28'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  intro-theorylens-agency-social-reinterpretation:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: theory-lens/01-agency-theory-standard.md 现有变体仅 Impression Management（A）与 Information Asymmetry（B），无'本体替换式社会重构'变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/theory-lens/01-agency-theory-standard.md
+    diagnosis: 保留 agency problem 名词但把本体从代理成本削减替换为 social uncertainty 削减、机制从 substantive 替换为 symbolic——Makadok reframing 型
+      lens 缺失
+    proposed_change:
+      action: add_variant
+      summary: 追加变体'代理问题社会重构型'（writeback plan theorylens_agency_social_reinterpretation, ADD）
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: westphal_zajac_1998_symbolic_management
+      journal: ASQ
+      evidence_anchor: 'Introduction P6: ''we conceive the agency problem as one of reducing social uncertainty... symbolic
+        rather than substantive control mechanisms'''
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-28'
+    last_seen: '2026-08-28'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  intro-contribution-two-forms-dual-consequences:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: contributions/three-layer-contribution.md 现有变体均为递进/列表式，无'双形式×双后果矩阵 + decoupling 操作化进贡献句'变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/contributions/three-layer-contribution.md
+    diagnosis: 2×2 对称矩阵（两种符号行动×外部/内部后果）+'even if not implemented' 构念操作化 + 双文献域 uniqueness 替代 generic Stakes——递进式三层的正交补
+    proposed_change:
+      action: add_variant
+      summary: 追加变体'双形式×双后果矩阵型'（writeback plan contribution_two_forms_dual_consequences_matrix, ADD）
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: westphal_zajac_1998_symbolic_management
+      journal: ASQ
+      evidence_anchor: 'Introduction P5: 双形式双后果矩阵 + ''unique to both'' uniqueness 主张'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-28'
+    last_seen: '2026-08-28'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  corpus-gap-tension-paradoxical-assumptions-juxtaposition:
+    classification: corpus_gap
+    status: EMERGING
+    risk: medium
+    current_rule: tensions 族覆盖 '对立发现缺整合框架'（14-debate-unresolved）与 'despite-progress-unaddressed' 各变体，但缺少'两条机制假设并置+修辞问句钉死+选择性引用代价'的
+      Incommensurability R3 变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/tensions/14-debate-unresolved.md
+    diagnosis: 假设层矛盾（能否共存）比发现层矛盾（对立结果）更深一层，且问句即 Gap 陈述、代价=selective theorizing——现有变体无一覆盖此说服动作；precheck jaccard 最高 0.067
+    proposed_change:
+      action: append_variant
+      summary: 新增'悖论假设并置型（what_changes_after_women_enter_top_manage_2020 型）'；precheck 锚到 16-threefold-gap.md，建议 gate ① 以 file_override
+        改判 14-debate-unresolved.md
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: what_changes_after_women_enter_top_manage_2020
+      journal: Academy of Management Journal
+      evidence_anchor: 'These arguments seem to rest on paradoxical assumptions: how can women simultaneously be more open
+        to change and also risk averse?'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Academy of Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Academy of Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-29'
+    last_seen: '2026-08-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  corpus-gap-hook-metaanalytic-efficacy-pivot:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: hooks/05-literature-consensus-blindspot (ROBUST ≥5 papers) 覆盖共识盲点钩，但无'元分析解释力定量缺口（fraction of variance）→近端结局三元组'枢转变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/hooks/05-literature-consensus-blindspot.md
+    diagnosis: 现有变体以理论定义/跨域共识建立盲点；本变体以方差解释量缺口为枢转轴并用三元组呈现群体运动——说服动作不同（证据背书的降阶 vs 视角盲点）；jaccard 0.034
+    proposed_change:
+      action: append_variant
+      summary: 新增'元分析效力枢转型（what_changes_after_women_enter_top_manage_2020 型）'
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: what_changes_after_women_enter_top_manage_2020
+      journal: Academy of Management Journal
+      evidence_anchor: Yet, these studies indicate that TMT composition explains just a fraction of variance in firm performance,
+        prompting scholars to theorize linkages ... with more proximal organizational outcomes
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Academy of Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Academy of Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-29'
+    last_seen: '2026-08-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  corpus-gap-stakes-misbelief-failure-scene:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: stakes 族（01-09）覆盖理论/量化损失/安全/声誉等类型，但无'决策者误信在场即有效→双面失败场景'变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/stakes/01-general-theory-practice.md
+    diagnosis: 把知识缺口代价写成 mere-presence 因果谬误的具体误信，误信者含受益群体（双面失败）；现有变体无此说服动作；jaccard 0.029
+    proposed_change:
+      action: append_variant
+      summary: 新增'误信在场即有效型（what_changes_after_women_enter_top_manage_2020 型）'
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: what_changes_after_women_enter_top_manage_2020
+      journal: Academy of Management Journal
+      evidence_anchor: may set firms and female executives up for failure, if CEOs, executives, and board members believe
+        that merely having women on a TMT causes favorable outcomes
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Academy of Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Academy of Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-29'
+    last_seen: '2026-08-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  corpus-gap-theory-lens-resolution-opening-typology:
+    classification: corpus_gap
+    status: EMERGING
+    risk: medium
+    current_rule: theory-lens 族覆盖分层双理论/筛选/语境桥接等，但无'Lens 段首显式标记为前文张力解决装置 + Definition→Typology→Model 三级术语供给'变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/theory-lens/02-dual-theory-layered.md
+    diagnosis: '''presents an opening for resolving these theoretical gaps and inconsistencies'' 使 Lens 回应度段首拉满；单文献同时修复 gap+供给双路径类型学词汇；jaccard
+      0.033'
+    proposed_change:
+      action: append_variant
+      summary: 新增'解决装置开路型（what_changes_after_women_enter_top_manage_2020 型）'；禁忌：resolving 为强承诺，正文必须兑现
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: what_changes_after_women_enter_top_manage_2020
+      journal: Academy of Management Journal
+      evidence_anchor: 'The strategic renewal literature ... presents an opening for resolving these theoretical gaps and
+        inconsistencies. ''Strategic renewal'' refers to ... one of two pathways: capability buying ... or capability building'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Academy of Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Academy of Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-29'
+    last_seen: '2026-08-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  corpus-gap-preview-process-content-title-echo-temporal:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: previews/mechanism-preview 已有多变体（含 liu_shankar2015 P、grewal2025 E），但无'process/content 双词挂载既有概念对 + 标题问句逐字回声
+      + 时间序承诺（t1→t2→t3）'变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/previews/mechanism-preview.md
+    diagnosis: title echo 与时间序承诺是动态/过程类论文 preview 的可复用维度；precheck 判 EXTEND（best_match 变体 P, containment 0.405）
+    proposed_change:
+      action: append_variant
+      summary: 向 mechanism-preview 追加'过程-内容双词标题回声型（what_changes_after_women_enter_top_manage_2020 型）'
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: what_changes_after_women_enter_top_manage_2020
+      journal: Academy of Management Journal
+      evidence_anchor: we propose a gender-based model of strategic renewal, linking executive gender with the process (cognition
+        shifts) and content (R&D, M&A) of incremental strategic renewal, that explains what changes after women enter TMTs,
+        and why
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Academy of Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Academy of Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-29'
+    last_seen: '2026-08-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  corpus-gap-contribution-paradox-resolution-middle-slot:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: contributions/three-layer-contribution 覆盖条件发现/矩阵/前因后果等三段式，但无'中段=悖论消解槽（与 tension 序列镜像）+ not only...also 合并边界条件'变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/contributions/three-layer-contribution.md
+    diagnosis: 贡献序列镜像张力序列是 Incommensurability 收束的可复用结构；jaccard 0.05
+    proposed_change:
+      action: append_variant
+      summary: 新增'悖论消解中槽型（what_changes_after_women_enter_top_manage_2020 型）'
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: what_changes_after_women_enter_top_manage_2020
+      journal: Academy of Management Journal
+      evidence_anchor: Second, our model resolves the seemingly contradictory ways in which gender differences in change orientation
+        and risk taking may affect organizational outcomes
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Academy of Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Academy of Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-29'
+    last_seen: '2026-08-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  rival-explanation-rebuttal-tension-variant-gap:
+    classification: corpus_gap
+    status: EMERGING
+    risk: medium
+    current_rule: tensions 模块 Inadequacy 类覆盖 '被忽视的替代解释'（overlooked-alternative，单篇 zhao_ding2022）等说服动作；无'既存解释在场但实证支持不一致→反驳后转向新解释'变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/tensions/11-overlooked-alternative.md
+    diagnosis: Inadequacy 张力的高频实际动作是对已在本场的竞争解释做证据反驳（steelman→双层反驳→'a different explanation' 转轴），与 'overlooked'（揭示盲区）是不同说服动作；现有单一实例无法覆盖，写作时会被迫套用视角转换模板导致攻击对象错位
+    proposed_change:
+      action: add_variant
+      summary: 向 11-overlooked-alternative 追加'既存解释实证反驳型'变体（westphal_bednar2005 型），保持 EMERGING 单篇状态
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: westphal_bednar2005
+      journal: ASQ
+      evidence_anchor: 'P3-P4: 独立性解释被公平陈述后以双层证据反驳，''we offer a different explanation'' 完成转轴'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-29'
+    last_seen: '2026-08-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  cross-discipline-construct-import-theory-lens-gap:
+    classification: corpus_gap
+    status: EMERGING
+    risk: medium
+    current_rule: theory-lens 模块有 agency-theory/dual-layer/socio-cognitive/construct-contrast 等模板；无'读者不熟悉的外来构念教学式导入（轶事→引语定义→触发桥接）'模板
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/theory-lens/
+    diagnosis: 跨学科构念移植是顶刊常见理论动作，但现有构念类模板（09-construct-contrast-introduction）依赖同家族旧构念对照，不适用于目标读者完全不认识的新构念；缺模板时写作易把构念悬在源学科（无
+      trigger 桥接）
+    proposed_change:
+      action: create_new_file
+      summary: 新建 theory-lens/10-cross-discipline-construct-import.md（EMERGING，1 源）
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: westphal_bednar2005
+      journal: ASQ
+      evidence_anchor: 'P4: Abilene 轶事→引语定义→attitude-behavior disjunction→''negative performance feedback in particular can
+        trigger'' 桥接'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-29'
+    last_seen: '2026-08-29'
     auto_action:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.

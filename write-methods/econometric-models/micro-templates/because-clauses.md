@@ -112,3 +112,25 @@ because 从句是 Methods 中**最密集的说服单元**。一个 because 从�
 | `We excluded missing values.` | 无排除理由 | `We excluded observations with missing [variable] because [reason for missingness threatening validity].` |
 | `This measure is good because it is reliable.` | 循环论证 | `This measure captures [construct] because [theoretical link], validated by [external benchmark].` |
 | `Because the data say so.` | 无理论机制 | `Because [theory] predicts that [mechanism] links [IV] to [DV].` |
+
+
+### 变体 A：理论驱动观察窗 because 从句（westphal_zajac_1998_symbolic_management 型）
+
+**模板**:
+> "Data were collected for [years X to Y], and [focal events] are observed from [X'] to [Y'], inclusive, because the [model's] lag structure requires collecting data for the earlier and later time periods. We chose this time frame because [the theoretical process] has exerted increased [pressure] for [the focal outcome] during this period ([citation])."
+
+**来源**: westphal_zajac_1998_symbolic_management (ASQ), Method §Sample and Data Collection（P1 末）
+
+**原文锚定**:
+> "We chose this time frame because institutional investors have exerted increased pressure for greater management accountability to shareholders during this period (Davis and Thompson, 1994)."
+
+**关键特征**:
+- 观察窗选择自带理论 because：不是"数据可得"而是"该理论过程在此期间加剧"——窗口本身成为构念活跃期的证据，样本期即研究设计的一部分
+- 双窗分离句式（数据收集窗 vs 事件观察窗）用 lag structure 因果从句衔接——技术性理由（滞后需要缓冲）与理论性理由（过程活跃期）各归其位
+- 现在进行时 "have exerted" 把窗口论证锚定在过程的持续性而非一次性时点，暗示现象在窗内充分展开
+
+**适用**: 事件观察窗短于数据收集窗的面板/事件史设计；观察期起点由理论过程（监管压力、制度变迁、技术浪潮）界定而非数据可得性决定的研究
+
+**禁忌**: 理论 because 需有可引的过程性证据（文献综述或制度化事实），不能拿"我们认为这段重要"充数；窗口选择若同时受数据可得性约束，诚实做法是双理由并列
+
+**验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)

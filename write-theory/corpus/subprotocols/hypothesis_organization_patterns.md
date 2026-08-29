@@ -15,7 +15,7 @@ status: ready_for_corpus
 
 ## 变体速查表
 
-> 检索辅助（2026-08-09 P0 补建）。状态列空白 = 正文未标注验证状态（旧 Pattern）。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架、适用条件与诚实边界见下方变体正文。
+> 检索辅助（2026-08-09 P0 补建）。状态列空白 = 正文未标注验证状态（旧 Pattern）。状态词表（2026-08-29 统一，与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀）；LEGACY-DIAGNOSTIC 保留（工具诊断类）；召回主题条目按用户 2026-08-29 裁决单源 VERIFIED。完整骨架、适用条件与诚实边界见下方变体正文。
 
 | # | 变体 | 适用场景 | 状态 | 来源 |
 |---|---|---|---|---|
@@ -119,7 +119,7 @@ status: needs_validation
 
 ## Pattern: Common Trunk → Role-Separated Parallel Mediators → Effect Decomposition → Horizon Test
 
-**验证状态**: EMERGING（单篇来源，待第二篇交叉验证）
+**验证状态**: EMERGING（单源）
 
 **适用场景**: 同一结构性自变量通过多个可区分的组织行为/文化路径影响近端利益相关者结果，并且还可能存在方向相反的直接绩效路径；研究进一步比较短期与长期绩效。
 
@@ -631,3 +631,146 @@ Based on similar theoretical reasoning, we now explore how the [k] [actor] chara
 - 把成本与伤害写成不可通约的对立理论。
 
 **原文锚点**: "We then discuss how the CEO's personal interests may influence a company's remedy decision, both directly and indirectly through interactions with remedy cost and consumer harm."
+
+
+## Pattern: Context-Assigned Decision-Margin Split（情境分配决策边际拆分）
+
+**验证状态**: VERIFIED（expert_audit_override 2026-08-28：产品召回为主研究领域，单源足矣）
+
+**适用场景**: 同一前因（X）理论上影响多个结果，但各结果的**决策边际不同**（是否行动 vs 多快行动），且由一个**情境构念**（severity / urgency / reversibility 等客观分级）——而非事后 subgrouping——分配各边际。X 在各边际被赋予**不同理论角色与不同机制**，预测方向可以对齐。
+
+**与近邻模式区分**（关键：不是调节）:
+- vs categorical_severity_moderation_embedded（Darby 2023 MSOM, tfr_088）：那是严重度调节**同一条** X→timing 关系的强度；本模式中情境构念**不调节任何单一关系**，而是把结果空间切成两个决策窗口，各配独立 DV 与独立机制
+- vs shared_orientation_divergent_outcomes（Kashmiri 2017）：后者 trait→orientation→多结果共用一个中介主干；本模式无中介主干假设，机制按边际分配（rule-following vs stakeholder responsiveness）
+- vs per_stakeholder_paired（Ridge 2024）：后者按 stakeholder 配对 main+cue 切换；本模式按决策边际（whether/when）分配角色
+- vs 2×2 Symmetric Matrix：本模式只有一个 IV 与一个情境分级，不构成 IV 维度×DV 类型矩阵
+
+**微观动作序列**: 开篇边际划分声明（"Recalls differ in severity, which leads to variation in if and when..."）→ 边际 1 小节（确立该边际存在裁量空间→配对案例证明→边际专属机制→H1）→ 边际 2 小节（转折语 "We now transition to... little discretion in whether, but nonetheless contain discretion in when"→案例→专属机制→H2）
+
+**决策链→边际分配实录（wowak2020 §2+§3，与 decision_rights_preamble 配套使用）**:
+- 同一条间接治理链（工程师→召回委员会→VP of quality→董事会周期评审反馈）承载两个假设；董事会设定的默认期望不落在"是否召回"本身，而落在管理层于各边际行使的裁量上
+- **低严重度边际 = 是否发起**：class 3 缺陷可隐藏不召回（ Boston Scientific 照章召回说明书缺失 vs 匿名企业标注错误仅修后续批次），故 class-3 计数被重标为裁量度量而非质量度量；董事会 rule-following 期望（女性董事更"go by the book"，且少数地位+高不确定性下该差异放大）→ H1: 计数上升
+- **高严重度边际 = 多快发起**：class 1 缺陷危及生命（St. Jude 电池故障除颤器 / Pfizer 玻璃微粒注射液），召回几乎不可避免；但企业常先于 FDA 与客户发现缺陷，裁量转移到时点——立即行动暴露最大财务与客户忠诚代价，形成两难；董事会 stakeholder responsiveness 期望（女性董事 community influencer / 慈善经验 / care orientation / 对延迟后果概率判断更高）→ H2: time-to-recall 缩短
+- 两机制的层次一致（均在 board-tone 层），内容不同；DV 措辞内嵌边际（count=whether / time-to-recall=when）
+
+**骨架**:
+```
+[Margin partition opener]
+[Outcomes] differ in [contextual construct], which leads to variation in [if] and [when]
+[actors] act. This distinction underlies our hypotheses, as we contend that [X] will have
+a varying influence on [decisions] contingent upon [context].
+
+[Margin 1: discretion over whether]
+We begin with [low-stakes class of outcomes]. This type can be [hidden/not acted upon]
+if the firm opts for such an approach. Consequently, we treat [DV 1 count] as a measurement
+of [decision discretion] and not as [surface construct] per se.
+[Paired examples proving discretion space exists: one acted + one not acted].
+We theorize that [X] will be more likely to [act] for these [low-stakes] issues.
+[Margin-specific mechanism bundle]. Taken together, these arguments bring us to:
+H1: [X] is positively associated with [count of margin-1 acts].
+
+[Margin 2: discretion over when]
+We now transition to [high-stakes class] that have little discretion in [whether],
+but nonetheless contain discretion in [when]. [Example(s) where stakes force action].
+In both cases, the firm's decision is less about if and more about how quickly.
+[Margin-specific mechanism bundle]. Combining these arguments leads us to:
+H2: [X] is negatively associated with [time-to-act] for [high-stakes class].
+```
+
+**为什么有效**: DV 的措辞直接编码决策边际（count=whether；time=when），读者在假设句层面就看到两个不可互换的决策窗口；机制不出层次（都通过 board-set expectations），避免"同一机制万能化"与"多结果凑显著"两种指控。
+
+**注意事项**:
+- 情境构念必须在理论化之前（最好有制度/监管依据）确立"边际不同"——不能事后按结果分组编故事
+- 每个边际必须证明裁量空间真实存在（本文用 paired 案例：一例照章召回、一例应召未召）
+- 两个机制的层次必须一致（都在 board-tone 层），只是内容不同
+- DV 操作化必须与边际对应（count 对 whether、awareness-to-initiation 时长对 when），否则边际拆分沦为修辞
+
+**反模式**: 情境变量写成 moderation（"severity strengthens the effect"）却保留两个 DV；或两个边际共用同一段机制只换 DV 名。
+
+**原文锚点**: "This distinction underlies our hypotheses, as we contend that adding female directors will have a varying influence on recall decisions contingent upon the severity of product defects."
+
+
+### 变体 A：受众异质性 pivot 至调节假设（westphal_zajac_1998_symbolic_management 型）
+
+**模板**:
+> "While our discussion thus far has treated [stakeholders] as having homogeneous [preferences], [subgroup] represent an important [subset] of [stakeholders] who typically [hold systematically larger stakes]. One important implication of [their position] is that for dissatisfied [subgroup members], the option of 'exit' is somewhat more difficult and costly, hence leading to the greater exercise of 'voice'. [Given that constrained exit makes reform salient to them], it is not surprising that much of [the pressure for reform] has been generated by [subgroup]... this tendency should be diminished to the extent that [symbolic substitutes] are provided."
+
+**来源**: westphal_zajac_1998_symbolic_management (ASQ), §2.4 P1
+
+**原文锚定**:
+> "One important implication of holding such large equity stakes is that for dissatisfied institutional investors, the option of 'exit' (i.e., selling the stock) is somewhat more difficult and costly, hence leading to the greater exercise of 'voice' (Hirschman, 1970; Jensen, 1989; Kim and Ocasio, 1995)."
+
+**关键特征**:
+- "While our discussion thus far has treated [actors] as homogeneous" 是零成本 pivot 句：主动承认前文简化假设，把"引入调节变量"从补丁升格为修正——与 C18 元框架功能等价（选择该 moderator 的理由即其位置特性）
+- 用 exit/voice（Hirschman）给 moderator 提供独立理论依据：机构投资者因退出成本高而对治理信号更敏感——调节方向的预测力来自位置而非常识
+- pivot 段直接生成一对平行交互假设（H3a/H4a 与 H3/H4 同构），保持假设族的 2×2 对称结构不因扩展而破碎
+
+**适用**: 假设族需按受众/行动者异质性扩展的研究；调节变量是"谁在看"而非"什么条件"的受众类 moderator；系列假设需保持矩阵对称
+
+**禁忌**: pivot 的异质性必须产生可论证的机制差异（退出成本→敏感性），只说"他们不同"不够；subgroup 的行为偏好需有文献锚定，不能按需要假设
+
+**验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
+
+
+## Pattern B: Mechanism-Matched Dual-Path → Shared Renewal Trunk（中介配对分流→共享重构主干，what_changes_after_women_enter_top_manage_2020 型）
+
+**验证状态**: VERIFIED (expert_audit_override 2026-08-29: 用户点名喜爱本篇，单源足矣)
+
+**适用场景**: 单一事件/构成 IV 理论上触发两个概念独立的中介机制，且两个机制各自通向一个不同的下游决策/结局（mediator–DV 配对），双路径共同指向同一更高阶重构主张。区别于"同一结局的多机制分解"与"同一构念双维度双轨"。
+
+**与近邻模式区分**:
+- vs `B2_dual_track`（Malik 2025）：B2 的双轨是**同一构念的两个维度**各自经不同机制产生行为效应；本模式双中介是**两个独立构念**，由单一 IV 同时触发
+- vs `parallel_mediators_effect_decomposition_horizon`（Bamberger 2021）：后者平行中介汇于**同一近端结果**再做 direct/indirect 分解；本模式每个中介配对一个**不同 DV**，不做效应分解
+- vs `shared_orientation_divergent_outcomes`（Kashmiri 2017）：后者是 trait→orientation→多结果的**单中介主干**；本模式无统一 orientation，两机制分立发展
+- vs `2×2 Symmetric Matrix`：两 DV 风险-能见度画像不同质、不构成对称矩阵时用本模式
+
+**骨架**:
+```
+[区分证成段]
+Because [M1] and [M2] are conceptually distinct, we argue that they have
+distinctive effects on [domain]. [区分三重证成: 定义维度对比 + 心理构成清单互斥
++ 已有文献同时检验两构念的差异化效应].
+
+[结局配对证成段]
+We focus concurrently on changes in [Y1] and changes in [Y2] as indicators
+of shifts in [higher-order domain], for two reasons. [理由1: 双结局代表两种
+不同战略决策且风险/能见度画像不同]. [理由2: 文献显示结局相对投入随前因认知而变].
+These foundational insights lead us to theorize distinct dynamic trajectories
+from [X] to [Y1] and [Y2], via shifts in [M2] and in [M1], respectively.
+
+[配对机制分支 1]
+[X] → [M1 位移] (H1/H2 各配 ≥2 条独立理由). [M1 的理论属性 ↔ Y1 的属性匹配论证]
+→ [Y1 位移] (H6 型: the greater the change in [M1], the greater the subsequent
+change in [Y1]).
+
+[配对机制分支 2]
+[X] → [M2 反向位移]. [M2 属性 ↔ Y2 属性匹配论证] → [Y2 反向位移] (H7 型).
+
+[共享重构]
+双路径共同指向 [更高阶重构主张: 从 A 途径转向 B 途径]——由总模型段+Figure 前置锁定.
+```
+
+**原文锚定**: "Because TMT change orientation and TMT risk-taking propensity are
+conceptually distinct, we argue that they have distinctive effects on strategic
+renewal. ... We focus concurrently on changes in M&A and changes in R&D as
+indicators of shifts in renewal strategies ... These foundational insights lead
+us to theorize distinct dynamic trajectories of strategic renewal from female
+TMT appointment to changes in M&A and R&D, via shifts in TMT risk-taking
+propensity and in TMT change orientation, respectively."
+
+**为什么有效**:
+- 'conceptually distinct → distinctive effects' 一句话完成双中介的合法性证成与分流的必要性——读者不会问 "why two mediators"
+- 区分证成用外部文献互斥清单（某综述明示构念 A 不在构念 B 的心理属性清单内）+ 同文献差异化效应证据，比自说自话的界定更硬
+- mediator–DV 配对论证让每个中介的属性（长期取向/保障需求）与对应结局的属性（可逆性/财务风险）逐项咬合，避免"同一中介万能化"与"多结局凑显著"两种指控
+- 双路径汇于同一更高阶重构，使两条相反方向的预测（Y1↑, Y2↓）成为同一故事的证据组合而非论证不一致
+
+**注意事项**:
+- 两中介的概念区分必须在假设推导之前完成，且要有至少一条外部文献证据（互斥清单或同检验文献）
+- 每个分支的 M→Y 论证必须重建 branch-specific why-chain——共享 antecedent 不等于共享机制
+- 配对方向必须可证伪： ideally 每个中介对其"非配对"结局无预测（交叉零约束），实证章节应能检验
+- 双路径的汇合点（更高阶重构）要在总模型段显式命名，不能只靠读者自行归纳
+
+**反模式**:
+- 为了假设编号对称让同一中介机械解释两个结局
+- 双中介区分段缺失，直接并排推 H1/H2
+- 两 DV 仅因数据可得而配对，无属性匹配论证

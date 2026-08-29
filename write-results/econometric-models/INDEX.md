@@ -18,22 +18,22 @@ updated: 2026-08-23
 ## 选择优先（变体速查表）
 
 > 每个结果类型文件顶部现已有「变体速查表」（2026-08-08 推广）：按槽位（R1–R9）分组 + 六列表（变体 | 适用场景 | 区别 | 状态 | 来源），是类型内变体选择的唯一入口。
-> **状态词表已统一（五档）**：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。旧词表映射：EMERGING→待第二篇交叉验证；VERIFIED / 框架级（双源）→通过（双篇/专家审计）；部分验证→待交叉；EXPERIMENTAL（slot 文件用语）→待第二篇交叉验证（其「保守替代」提示随槽位骨架保留）；LEGACY-DIAGNOSTIC 保留（工具诊断类）。
+> **状态词表已统一（三档，2026-08-29 用户裁决，与 _evidence_registry.yaml 一致）**：ROBUST（≥5 论文跨子领域复现）> VERIFIED（≥3 论文复现，或专家审计单源）> EMERGING（1–2 论文单源/双源；含「EMERGING（可选）」）。LEGACY-DIAGNOSTIC 保留（工具诊断类）；召回主题条目按用户 2026-08-29 裁决单源 VERIFIED。旧五档词废弃，映射关系保留一句：待交叉/待第二篇交叉验证/部分验证/EXPERIMENTAL/通过（单篇）→ EMERGING；可选变体 → EMERGING（可选）；通过（双篇/专家审计）/通过（专家审计单源）/框架级（双源）→ VERIFIED；通过（N/5 复现）→ ROBUST（registry 非 ROBUST 则 VERIFIED）。
 > 检索流程：SKILL 路由确定结果类型 → 打开类型文件读速查表 → 按槽位+状态定位候选 → 精读变体正文（骨架/诚实边界/跨 skill 对齐）。
 
 ## 结果类型索引
 
 | 文件 | 结果类型 | 变体数 | 最后更新 |
 |------|---------|--------|---------|
-| [OLS-FE](OLS-FE.md) | OLS-FE | 62 | 2026-08-20 |
-| [Logit-Probit-Ordered-Probit](Logit-Probit-Ordered-Probit.md) | Logit-Probit-Ordered-Probit | 23 | 2026-08-13 |
+| [OLS-FE](OLS-FE.md) | OLS-FE | 62 | 2026-08-20；变体 63：R3/R5 ln(时长) DV 跨列选择性显著 + 天数回译幅度拍，wowak_2020_female_directors_recalls，VERIFIED (expert_audit_override 2026-08-28 产品召回主研究领域单源足矣)；变体 64：R3 双处理对照四拍 + Wald 系数差检验 + 跨 DV 合并幅度，post_2022_women_tmt_strategic_renewal，通过（专家审计单源；变体 65：R4 分样本镜像对照 + 组内 Wald + Chow 诚实降级，post_2022_women_tmt_strategic_renewal，通过（专家审计单源）；变体 66：R7 三威胁小节化稳健性（选择性→替代估计→构念效度），post_2022_women_tmt_strategic_renewal，通过（专家审计单源）；变体 67：R1 双路径前提描述统计（理论预言零相关 + moderator 分布/条件定义），post_2022_women_tmt_strategic_renewal，通过（专家审计单源）；变体 68：R4 交互通道分解句（调节经差值 DV 哪个分量起作用+双分量佐证），westphal_bednar2005，EMERGING；变体 69：R8 理论前提实证验证双通道（样本内切割检验+Heckman 交底；样本外前提问卷+K-S），westphal_bednar2005，EMERGING；变体 70：R2 先验支持判据声明（判定规则先于结果交代+检验变量编码），westphal_bednar2005，EMERGING） |
+| [Logit-Probit-Ordered-Probit](Logit-Probit-Ordered-Probit.md) | Logit-Probit-Ordered-Probit | 23 | 2026-08-13；变体 O：首事件建模范围辩护（理论假设+反转占比经验双轨 + In effect 理论任务收束句），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28)；变体 P：四格 null 格确认性报告（In contrast 正面报告 null + generally 汇总措辞 + 双 DV 并轨导航），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28)；变体 Q：四格系数 Wald 正式确认（to confirm 升级排序证据 + 双 DV 双统计量并列 + e.g. 代表例），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28)；变体 R：双 DV 收敛现造理论标签（Taken together + not only/but also 递进 + whereby 边界从句），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28)；变体 S：滞后结构括弧敏感性（短/长双向夹逼 + 前向结果定位 + 不敏感性结论复述），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28)；变体 T：普遍信念反转收束段（despite widespread belief 让步对撞 + suggest 克制强度 + 机制级命题聚合），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28) |
 | [生存分析](生存分析.md) | 生存分析 | 19 | 2026-08-01 |
 | [DiD](DiD.md) | DiD | 17 | 2026-08-23 |
-| [计数模型](计数模型.md) | 计数模型 | 21 | 2026-08-12 |
+| [计数模型](计数模型.md) | 计数模型 | 21 | 2026-08-12；变体 22：计数模型主效应四拍 + FE/RE 双模型平行复现，ball_2018，gap HIGH；变体 23：DV-split 调节 + 跨列系数对比（无交互项），ball_2018，gap HIGH；变体 24：exp(β) 乘法解释批量幅度翻译独立段（正负系数各演一遍），ball_2018，gap HIGH；变体 25：四 threat 前瞻式总起 + 逐 threat 收束句（中介甄别/PSM/安慰剂DV/反向因果），ball_2018，gap HIGH；变体 26：R3 聚合列显著→严重度分列定位承载类，wowak_2020_female_directors_recalls，VERIFIED (expert_audit_override 2026-08-28 产品召回主研究领域单源足矣)；变体 27：R8 剂量—反应阈值发现（Wald χ² → tipping point），wowak_2020_female_directors_recalls，VERIFIED (expert_audit_override 2026-08-28 产品召回主研究领域单源足矣) |
 | [实验](实验.md) | 实验 | 5 | 2026-08-03 |
 | [多研究](多研究.md) | 多研究 | 8 | 2026-08-02 |
 | [定性过程研究](定性过程研究.md) | 定性过程研究 | 4 | 2026-07-07 |
-| [IV-2SLS](IV-2SLS.md) | IV-2SLS | 10 | 2026-08-05 |
+| [IV-2SLS](IV-2SLS.md) | IV-2SLS | 10 | 2026-08-05；变体 11：R7 排他性约束量化暴露占比辩护，wowak_2020_female_directors_recalls，VERIFIED (expert_audit_override 2026-08-28 产品召回主研究领域单源足矣)；变体 12：R7 弱识别临界值协议报告（Cragg-Donald vs Stock-Yogo），wowak_2020_female_directors_recalls，VERIFIED (expert_audit_override 2026-08-28 产品召回主研究领域单源足矣)；变体 13：R7 非线性主模型下线性 2SLS 稳健性轨，wowak_2020_female_directors_recalls，VERIFIED (expert_audit_override 2026-08-28 产品召回主研究领域单源足矣) |
 | [匹配DiD](匹配DiD.md) | 匹配DiD | 1 | 2026-08-05 |
 | [Tobit](Tobit.md) | Tobit | 1 | 2026-08-12 |
 | [堆叠扩散Logit](堆叠扩散Logit.md) | 堆叠扩散Logit | 0 | 2026-05-18 |
@@ -42,8 +42,8 @@ updated: 2026-08-23
 | [跨受众构念对比](跨受众构念对比.md) | 跨受众构念对比 | 1 | 2026-07-30 |
 | [三向交互](三向交互.md) | 三向交互 | 4 | 2026-08-13 |
 | [构造暴露分解](构造暴露分解.md) | 构造暴露分解 | 0 | 2026-05-18 |
-| [SEM-moderated-mediation](SEM-moderated-mediation.md) | SEM/调节中介 | 7 | 2026-08-03 |
-| [事件研究法](事件研究法.md) | 事件研究法 | 8 | 2026-08-12 |
+| [SEM-moderated-mediation](SEM-moderated-mediation.md) | SEM/调节中介 | 7 | 2026-08-03；变体 8：两步预测中介双路径汇合 + 双 moderator 条件间接效应 + 校准收束，post_2022_women_tmt_strategic_renewal，通过（专家审计单源） |
+| [事件研究法](事件研究法.md) | 事件研究法 | 8 | 2026-08-12；变体 9：检验统计量三重背书（原始出处→模拟适用域→领域惯例先例 + 逐符号公式说明），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28)；变体 10：分组 CAR 假设裁决（列导航基线→分组裁决 + 理论尾从句回响 + 全窗一致性判断），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28)；变体 11：分组对比 t 检验调节裁决（方向→正式检验→区间值 + 逐窗复现声明 + 证据强度前置），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28)；变体 12：交互后主效应保护段（误读拦截 + prerequisite 层级逻辑 + 方法论权威背书双判决句），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28)；变体 13：范围外模式最强检验框架（预测限定句 + 让步结构 + decoupled 最难情形收束），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28) |
 | [VARX-PVAR](VARX-PVAR.md) | VARX-PVAR | 7 | 2026-07-15 |
 | [BLP-状态空间](BLP-状态空间.md) | BLP + Kalman/GMM 结构需求 | 5 | 2026-08-05 |
 

@@ -140,6 +140,22 @@ source: Distilled from Kundro & Rothbard (AMJ), Eilert et al. (JM), Wowak et al.
 
 ---
 
+
+### 变体 F：悖论假设并置型（what_changes_after_women_enter_top_manage_2020 型）
+
+**模板**: Further, a theoretical tension surrounds the mechanisms that scholars invoke to explain [关系]. Some researchers conjecture [机制A] could explain [关联1] ([cites]). Other scholars speculate [机制B] might explain [关联2] ([cites]). These arguments seem to rest on paradoxical assumptions: how can [X] simultaneously [A] and also [B]? As long as this theoretical tension remains unaddressed, researchers will selectively draw from either [A] or [B], obscuring [完整图景] ([cite]).
+
+**原文锚定**: "These arguments seem to rest on paradoxical assumptions: how can women simultaneously be more open to change and also risk averse? As long as this theoretical tension remains unaddressed, researchers will selectively draw from either theoretical arguments, obscuring the full picture"
+
+**关键特征**:
+- 并置的两条机制主张各自成立、各有引用、各自解释不同关联——矛盾不在发现层面，而在"假设能否共存"层面（比对立发现更深一层）
+- 用一句修辞性问句把矛盾钉死（"how can X simultaneously A and also B?"），问句本身就是 Gap 陈述
+- 张力的代价不是"知识缺口"而是"选择性引用"（selective theorizing）——只取其一忽略其二的建模偏误，为双机制整合模型直接铺路
+
+**适用**: Incommensurability R3（对立机制）×Mechanism 组合的标志型 Tension；两条机制均有文献支撑且论文将同时建模两者时；适合紧随 Incompleteness 型 gap 段作为第二重张力。
+
+**禁忌**: 两条机制必须真的同指一个自变量且方向相反，不可为制造张力硬凑；问句钉死后正文必须真的同时处理两者，否则沦为空头悖论。
+
 ## 组装规则
 
 ### 必须配对

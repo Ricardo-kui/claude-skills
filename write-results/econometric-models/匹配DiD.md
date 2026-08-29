@@ -11,11 +11,11 @@ updated: 2026-08-05
 
 ## 变体速查表
 
-> 检索辅助。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架与诚实边界见下方变体正文。
+> 检索辅助。状态词表（与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀）；LEGACY-DIAGNOSTIC 保留（工具诊断类）；召回主题条目按用户 2026-08-29 裁决单源 VERIFIED。完整骨架与诚实边界见下方变体正文。
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 1 | CEM 匹配作准实验事前对称威胁回应 | DiD/准实验把 CEM 作事前组间不对称威胁的稳健性回应：威胁句→匹配变量理论代理→CEM 引用→附录平衡表指针→remain robust（槽位 R7） | 首次填充匹配DiD——matching-as-robustness（主估计仍为 DiD-equivalent OLS），非 matched DiD 作唯一主规格；只处理可观测选择 | 待交叉 | Castellaneta, Conti & Kacperczyk 2017 (SMJ) |
+| 1 | CEM 匹配作准实验事前对称威胁回应 | DiD/准实验把 CEM 作事前组间不对称威胁的稳健性回应：威胁句→匹配变量理论代理→CEM 引用→附录平衡表指针→remain robust（槽位 R7） | 首次填充匹配DiD——matching-as-robustness（主估计仍为 DiD-equivalent OLS），非 matched DiD 作唯一主规格；只处理可观测选择 | EMERGING | Castellaneta, Conti & Kacperczyk 2017 (SMJ) |
 
 
 ## 主骨架

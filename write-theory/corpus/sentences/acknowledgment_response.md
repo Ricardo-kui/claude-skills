@@ -169,7 +169,7 @@ source: chenganesanliu2009
 source_papers: ["Chen_Ganesan_Liu_2009_JM"]
 confidence: medium
 status: EMERGING
-note: 待第二篇交叉验证；配套架构见 ../subprotocols/argumentation_patterns.md → audience_foil_then_focal_signal_single_H
+note: VERIFIED（expert_audit_override 2026-08-29 召回主题单源裁决，chenganesanliu2009 = 召回策略→财务价值）；配套架构见 ../subprotocols/argumentation_patterns.md → audience_foil_then_focal_signal_single_H
 -->
 
 **适用**: 文献默认受众 A 对行动 X 正向；论文 DV 由受众 B 定价。一句完成 **foil → focal** 受众切换，随后进入 B 侧信号机制——**不成对写出 Audience A/B 假设**（那是变体 G）。

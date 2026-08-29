@@ -188,6 +188,28 @@ P2-P3 的功能：连接多个文献流，展示它们共享一个盲区——�
 
 ---
 
+
+### 变体 G：双流对置行动者偏好收敛型（westphal_zajac_1998_symbolic_management 型）
+
+**模板**:
+> "While [economic stream] suggests that [mechanisms] represent the primary mechanisms by which [interest conflict] is minimized ([citations]), a large body of empirical research suggests that [neither mechanism is used sufficiently] ([citations]). [Reform advocates] have pointed to [evidence that reforms are rewarded] ([citations]). [Behavioral stream], however, emphasizes that [agents] would prefer to avoid or even resist [such reforms] ([citations]). Both the [economic] and [behavioral] literatures suggest that, ceteris paribus, [agents] will prefer [a contrary package]."
+
+**来源**: westphal_zajac_1998_symbolic_management (ASQ), P1–P3
+
+**原文锚定**:
+> "Both the economic and behavioral literatures on executive compensation suggest that, ceteris paribus, chief executive officers will prefer a pay package with a small pay-for-performance component."
+
+**关键特征**:
+- 两条文献流对同一改革持**相反预测**（经济流：改革有益且被市场奖励；行为流：行动者会回避抵制），各流内部先用"理论预测 vs 实证失效"自耗再加码，双方都有实质引用、不稻草人化
+- 收束句 "Both literatures suggest that, ceteris paribus, [agents] will prefer [X]" 把对立双流收敛到同一行动者偏好上——集体盲区不在"没人研究交叉点"，而在"没人考虑行动者可以表面顺从"
+- 三段长 Literature Turn（P1 机制失效→P2 改革合法化→P3 行为抵抗）为 Synthesized Coherence 铺设完整辩证结构，每段段首用 "This stream / Other studies, however" 显式过渡
+
+**适用**: 双文献流公开对立（而非互不知晓）且对立可以在"行动者真实偏好 vs 表面行为"层面被新视角消解的研究；适合 Incompleteness(前因止步) × Mechanism 组合
+
+**禁忌**: 两流必须被对称地公平呈现且各有 ≥2 条独立引用；"ceteris paribus"式收敛句需要真有两侧文献共同支持的行动者偏好证据，否则退回 variant D 的"交叉沉默"框架
+
+**验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
+
 ## 组装规则
 
 ### 默认配对（对角线，能量匹配）

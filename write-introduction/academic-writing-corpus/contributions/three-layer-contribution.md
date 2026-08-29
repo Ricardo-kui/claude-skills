@@ -189,3 +189,62 @@ source: Distilled from Haunschild, Polidoro & Chandler (2015), Organization Scie
 **适用**: Incompleteness × Mechanism（可含 theory-level Inadequacy 次层）；多受众评价/社会评价研究；文献中有明确被庆祝的正向机制（Matthew effect、累积优势、herding）可作为对照对象；论文贡献维度含 Mechanism（主）+ Constructs/Boundary（次）。
 
 **禁忌**: 翻转必须条件化（"under certain conditions"），不得写为外部认可普遍有害；被抵消的经典正效应必须真实存在且可被文献引用支撑（不能 strawman）；次级贡献（audience-specific nature）必须由后文 Theory/Discussion 兑现；不要与过度承诺同用（"first to" / "revolutionize" 会破坏 offset 措辞的精确性）。
+
+### 变体 F：双形式×双后果矩阵型（westphal_zajac_1998_symbolic_management 型）
+
+**模板**:
+> "First, we extend [domain literature] by identifying [the audience] for [two forms of symbolic action] and by measuring [two important consequences]. We examine how and why [external market] is likely to react positively to [formal adoption], even if [it is not implemented], and how and why [socially legitimate verbal explanations] may also favorably affect [the response]. We then consider whether such [actions] also have internal consequences by [diminishing the likelihood of other reforms]. ... Such a study, we believe, is unique to both [domain literature] and [the more general literature]."
+
+**来源**: westphal_zajac_1998_symbolic_management (ASQ), P5
+
+**原文锚定**:
+> "First, we extend the corporate governance literature by identifying the audience for two forms of symbolic actions relating to corporate governance and by measuring two important consequences. We examine how and why the stock market is likely to react positively to the adoption of new long-term incentive plans for top management, even if the plans are not implemented."
+
+**关键特征**:
+- 贡献声明自带 2×2 矩阵：两种符号行动（不实施的采纳 decoupling + 合法性语言）× 两类后果（外部市场合法性反应 + 内部改革/权力后果）——用结构对称性代替层层递进
+- "even if [it is] not implemented" 把 decoupling 直接操作化进贡献句，贡献与核心构念零距离、可被 Discussion 逐格兑现
+- "Such a study, we believe, is unique to both A and B" 用双文献域 uniqueness 主张替代 generic Stakes；附带 Inadequacy 批评（"such studies have not been able to rule out the possibility that [alternative explanation]"）从方法缺陷侧二次加固贡献
+
+**适用**: 一个现象有两种可分离的形式且各有外部/内部双重后果的研究；Incompleteness × Mechanism + 次级 Inadequacy（无法排除替代解释）组合
+
+**禁忌**: 2×2 的每一格都必须在正文有对应检验，声明超出检验格数即 overclaiming；"unique to both" 主张前要先完成对两侧文献的差异化交代（本篇用 Meyer & Rowan/Scott vs Clapham & Schwenk）
+
+**验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
+
+
+### 变体 G：悖论消解中槽型（what_changes_after_women_enter_top_manage_2020 型）
+
+**模板**: Our [模型] contributes to [对话1], to [理论], as well as to [对话2] in three major ways. First, it establishes [机制] as a mechanism dynamically linking [X] with [Y]. Second, our model resolves the seemingly contradictory ways in which [差异A] and [差异B] may affect [结局]. Finally, our model extends [理论]: not only does it answer whether [既有问题] ([cites]), it also identifies [条件] as a boundary condition to this effect.
+
+**原文锚定**: "Second, our model resolves the seemingly contradictory ways in which gender differences in change orientation and risk taking may affect organizational outcomes. Finally, our model extends UET ... it also identifies integration into the TMT as a boundary condition to this effect"
+
+**关键特征**:
+- 三段式贡献的中段专设"悖论消解"槽：第二贡献不是新增发现而是化解前文钉死的悖论——贡献序列与 Tension 序列镜像对应
+- 每条贡献一句话完成：机制命名（cognitions as mechanism）+ 动态词（dynamically linking, from one year to the next）
+- 第三贡献用 not only...also 结构把主效应确认与边界条件合并在一句内——Boundary 贡献不单开一段
+
+**适用**: Incommensurability×Mechanism 组合收束段；前文有显式悖论且模型同时给出机制与边界条件时；AMJ 风格三段式贡献。
+
+**禁忌**: "resolves" 槽必须是前文真实建立的悖论；第三贡献的 not only 部分要有既有文献背书（whether 问题须被前人提出过）。
+
+
+### 变体 H：机制贡献+缺口填补+首例声明三联型（westphal_bednar2005 型）
+
+**模板**:
+> "Our study contributes to research on [focal literature] by suggesting why [actors] may often fail to [action] in response to [trigger]. At the same time, our study fills a critical gap in [second literature]: as many authors have noted, [specific gap statement] ([citations]). This research begins to fill that gap by showing how and when [construct] can occur in [setting]. Moreover, while there is a growing body of theory and research on [construct] in [source discipline], our study is perhaps the first systematic [study type] of [construct] in [new domain]."
+
+**来源**: westphal_bednar2005 (ASQ), P6
+
+**原文锚定**:
+> "This research begins to fill that gap in the literature by showing how and when a particular group decision-making bias can occur on boards."
+> "our study is perhaps the first systematic field study of pluralistic ignorance in business organizations"
+
+**关键特征**:
+- 三联结构：给主文献的机制贡献（一句）→ 给第二文献的缺口填补（"as many authors have noted" 借他人之口立 gap）→ 给源学科的迁移贡献（首例声明）
+- 缺口陈述不自称而是引共识（"as many authors have noted, very few large-sample studies..."）——把 gap 语言外包给文献共同体，降低自夸感
+- 首例声明带对冲副词（"perhaps the first systematic"）+ 限定域（field study / business organizations），防审稿人举反例
+- "begins to fill" 弱化动词承认增量性，与激进的首例声明形成诚实平衡
+
+**适用**: Mechanism × Phenomenon 双维度贡献；跨学科移植研究；需要同时向两个以上文献流声明贡献时的紧凑单段写法
+
+**禁忌**: "first" 类声明必须限定域（first systematic field study of X in Y），否则一处反例即失守；三个贡献必须有明确的文献对象，不得写"contributes to literature"而无专名；缺口引用必须真实存在（as many authors have noted 后要给出处）

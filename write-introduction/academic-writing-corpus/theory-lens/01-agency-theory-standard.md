@@ -54,6 +54,28 @@ source: Extracted from darby2025 JSCM + darby2026 JOM Introduction distillations
 **原文锚定**:
 > "Agency theory suggests that a firm's shareholders might be one possibility to encourage more timely recalls. As principals, shareholders play an important monitoring role wherein they try to ensure that their agents (executives) make good decisions, which, in turn, helps protect the value of their investments."
 
+
+### 变体 C：代理问题社会重构型（westphal_zajac_1998_symbolic_management 型）
+
+**模板**:
+> "Finally, our study extends [agency perspectives] by offering a [social] interpretation of [the core problem]. While conventional [economic] perspectives focus on [cost reduction resulting from introducing substantive control mechanisms to resolve the conflicting interests of agents and principals], we conceive [the core problem] as one of reducing [social uncertainty] about [the alignment of interests] through the introduction of [symbolic] rather than [substantive] control mechanisms."
+
+**来源**: westphal_zajac_1998_symbolic_management (ASQ), P6
+
+**原文锚定**:
+> "While conventional economic perspectives focus on the cost reduction resulting from introducing substantive control mechanisms to resolve the conflicting interests of agents and principals, we conceive the agency problem as one of reducing social uncertainty about the alignment of managerial and shareholder interests through the introduction of symbolic rather than substantive control mechanisms."
+
+**关键特征**:
+- 保留主导理论的**名词**（agency problem）但替换其**本体**（代理成本削减 → 社会不确定性削减）——Makadok 式 reframing：不推翻理论，改写其问题定义
+- "symbolic rather than substantive control mechanisms" 的二分对照构成本文全部构念（decoupling / 合法性语言）的原点，理论与贡献零距离
+- 以 "Finally, our study extends..." 嵌在贡献段收尾而非独立理论段——ASQ 经典紧凑式理论承诺，理论预告留给正文第二节
+
+**适用**: 用制度/符号视角重新诠释成熟经济学理论核心问题的研究；需要正文有对应理论节兑现"social uncertainty"重构（本篇 §2）
+
+**禁忌**: 重构必须替换可检验的本体（成本→不确定性），不能只是修辞性改名；若正文理论节没有兑现重构，Introduction 承诺即成空头支票
+
+**验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
+
 ## 组装规则
 
 ### 必须配对

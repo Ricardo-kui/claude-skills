@@ -133,6 +133,22 @@ source: Extracted from Malik_etal_2025_JM distill-introduction-exemplar + ridge2
 
 ---
 
+
+### 变体 D：误信在场即有效型（what_changes_after_women_enter_top_manage_2020 型）
+
+**模板**: This [描述性] understanding of [关系] may set [决策者群体] up for failure, if [决策者] believe that merely [在场/拥有 X] causes [合意结果] ([cite]) and are unaware of the [展开中的过程动态] after [事件].
+
+**原文锚定**: "This descriptive understanding of the female TMT–firm outcome linkage may set firms and female executives up for failure, if CEOs, executives, and board members believe that merely having women on a TMT causes favorable outcomes and are unaware of the unfolding TMT dynamics"
+
+**关键特征**:
+- 把知识缺口的代价写成决策者的具体误信（mere presence → favorable outcomes），而非抽象的"理论不完整"
+- 决策者群具名（CEOs, executives, and board members），Stakes 有人脸；误信者同时含受益群体（female executives）——双面失败场景
+- 嵌入 Incompleteness gap 段末尾，与前句 "remains descriptive ... needs to be explanatory" 的 gap 语言直接焊接，Stakes 即 gap 的下游
+
+**适用**: Incompleteness×Mechanism 中"描述性关联已被建立但机制未知"的研究；实践者可能据相关性做因果决策的场景；嵌入 tension 段末使用。
+
+**禁忌**: 误信主张需有文献锚点（可引用"呼吁警惕"类论文）；不要泛化为"所有决策者都会误判"，点名具体决策角色。
+
 ## 期刊适配
 
 | 期刊 | 适配度 | 注意事项 |

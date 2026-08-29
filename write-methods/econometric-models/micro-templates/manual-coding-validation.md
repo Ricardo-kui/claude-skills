@@ -96,3 +96,26 @@ updated: 2026-05-22
 | `We coded the variable manually.` | 未说明编码标准、编码者、一致性 | `Two coders independently reviewed flagged press releases using predefined criteria; differences (<1%) were resolved by consensus.` |
 | `The measure is reliable.` | 无证据 | `Inter-coder agreement was 98.5% (Cohen's kappa = 0.94), indicating near-perfect reliability.` |
 | `We searched the 10-Ks.` | 未说明搜索关键词和匹配逻辑 | `We searched for "recall" in each 10-K and matched mentions against our recall dataset to classify discretion.` |
+
+
+### 变体 A：反规则手册编码协议（westphal_zajac_1998_symbolic_management 型）
+
+**模板**:
+> "We decided not to furnish coders with an exhaustive rule book dictating the categorization of every possible phrase or combination of phrases; [methodologist] ([year]) noted that such coding strategies can artificially inflate reliabilities while sacrificing the content validity of the coding scheme. Accordingly, we simply provided coders with a summary description of [the theory], including a short list of key concepts characterizing the theory, and specific coding instructions. The coders included [coder descriptions]. We asked coders to determine whether [the construct] was present anywhere in [the document]. Thus, the ''recording unit'' (i.e., the unit of analysis) is the entire [document]. Pre-negotiation intercoder reliabilities were very high, with [coefficients] ranging from [.X] to [.X] and an agreement rate of [X] percent, suggesting minimal ambiguity in the coding scheme. [X] percent of [the documents] included [the coded construct]."
+
+**来源**: westphal_zajac_1998_symbolic_management (ASQ), Method §Independent Variables / Agency Explanations
+
+**原文锚定**:
+> "We decided not to furnish coders with an exhaustive rule book dictating the categorization of every possible phrase or combination of phrases; Holsti (1968) noted that such coding strategies can artificially inflate reliabilities while sacrificing the content validity of the coding scheme."
+
+**关键特征**:
+- 把"没有穷尽式编码规则书"从潜在弱点预辩成方法论美德：引方法论权威（Holsti）论证规则书会人为推高信度而牺牲内容效度——预判审稿人"你的编码标准在哪"的质疑并提前化解
+- 显式声明 recording unit（=整份文档）并补一句全文档扫查的 diligence 声明（"we nevertheless carefully checked the entire [section]"）——单元选择与遗漏风险一次封口
+- 信度报告三件套：编码者构成（学生背景如实披露）+ pre-negotiation 相关系数区间与一致率 + "suggesting minimal ambiguity" 的解释性收尾，再接编码占比作为 prevalence 描述
+
+**适用**: 理论构念（而非关键词匹配）的人工编码研究；预期审稿人质疑编码标准主观性时；用"低结构化+高信度"论证编码方案内容效度的场景
+
+**禁忌**: 反规则手册策略必须以高 pre-negotiation 信度兑现（本篇 .903-.972/95%），否则等于承认方案模糊；引证的反对规则书的方法论权威必须真实存在且语境相符
+
+**验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
+

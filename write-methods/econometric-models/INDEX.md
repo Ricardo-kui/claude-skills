@@ -20,15 +20,15 @@ updated: 2026-08-23
 ## 选择优先（变体速查表）
 
 > 每个设计类型文件顶部现已有「变体速查表」（2026-08-08 推广）：按槽位（M1–M10）分组 + 六列表（变体 | 适用场景 | 区别 | 状态 | 来源），是类型内变体选择的唯一入口。
-> **状态词表已统一（五档）**：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。旧词表映射：EMERGING→待第二篇交叉验证；VERIFIED / 框架级（双源）→通过（双篇/专家审计）；部分验证→待交叉；EXPERIMENTAL（slot 文件用语）→待第二篇交叉验证（其「保守替代」提示随槽位骨架保留）；LEGACY-DIAGNOSTIC 保留（工具诊断类）。
+> **状态词表（三档，2026-08-29 用户裁决统一，与 _evidence_registry.yaml 一致）**：ROBUST（≥5 论文跨子领域复现）> VERIFIED（≥3 论文复现，或用户专家审计单源）> EMERGING（1–2 论文单源/双源；原「可选变体」统一记作 EMERGING（可选））。LEGACY-DIAGNOSTIC 保留（工具诊断类）。召回/产品伤害危机主题论文（Darby 2023–2026、Mayo/Ball/Mills 2022 POMS、Ball 2018、Wowak 2020/2021 M&SOM、Wowak 2025 MS、Li/Bapuji 2025/2026 JSCM、Chen/Ganesan/Liu 2009 JM、Kashmiri 2017 JAMS、Liu & Shankar、Bendig、Hoffmann、Malik 2025 JOM、Eilert 2017 JM，及其他来源文本含 recall/召回/product-harm 的论文）的全部蒸馏成果，按用户 2026-08-29 裁决记单源 VERIFIED。旧五档状态词已废弃，速查表/legend/状态字段不再使用；下方 dated changelog 保留历史原词，不改写。
 > 检索流程：SKILL 路由确定设计类型 → 打开类型文件读速查表 → 按槽位+状态定位候选 → 精读变体正文（骨架/诚实边界/跨 skill 对齐）。
 
 ## 设计类型索引
 
 | 文件 | 设计类型 | 变体数 | 最后更新 |
 |------|---------|--------|---------|
-| [面板数据-OLS](面板数据-OLS.md) | 面板数据-OLS | 49 | 2026-08-13 |
-| [自然实验-DiD](自然实验-DiD.md) | 自然实验-DiD | 15 | 2026-08-23 |
+| [面板数据-OLS](面板数据-OLS.md) | 面板数据-OLS | 44 | 2026-08-13；变体 51：M1 制度冲击型三重理由 setting 论证（变异源/降噪/利害分工），ball_2018，gap HIGH；变体 52：M3 构念边界排除（排除替代结果类别+falsification DV 预告），ball_2018，gap HIGH；变体 53：M3/M5 severity-split DV 配对假设（无交互项调节实现），ball_2018，gap HIGH；变体 54：M2 lead-DV 滞后对齐+理论驱动双理由排除，ball_2018，gap HIGH；变体 55：M4 新颖测量 provenance 链（缺口→补全→能力声明），ball_2018，gap HIGH；变体 56：M1 监管在场但裁量权在厂商的设置辩护（wowak2020；变体 57：M2 同一现象双边际分渠道取数 + 多库交集报最终 N（wowak2020）；变体 58：M3 DV 观察窗对齐治理决策钟（wowak2020）；变体 59：M3/M7 证据架构服从决策拆分 — DV 按严重度分组 + 假设→符号方向预登记（wowak2020）；变体 60：M2.5 预测变量组内变异预展示为 FE 设计发证（wowak2020）；变体 61：M7 FE 去均值选择 + 时不变因素按设计吸收 + 组内系数解读协议（wowak2020）；变体 62：M6 求而不得的控制变量 — 因变异不足主动弃用并声明（wowak2020）；变体 63：二分交互四格哑变量拆分（乘积项不可用宣告 + base case 逻辑 + 判定标准前置），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28)；变体 64：风险集排他型控制剔除（定义性互斥指标的反向剔除 + 风险集 because 从句），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28)；变体 65：时间括弧控制+反向相关保守性声明（t/t+1/t–t+1 三窗封同期解释 + 控制负相关=偏误不利于假设），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28)；变体 66：先前状态构念 PCA 合成控制（eigenvalue+scree 双判据 + cf. 惯例清单 + 分量分别入模稳健），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28)；变体 67：完备性准则漏斗+总体代表性 t 检验（统一完备准则导出 N + 对未入样总体的双维 t 检验），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28)） |
+| [自然实验-DiD](自然实验-DiD.md) | 自然实验-DiD | 15 | 2026-08-23；变体 O（M8_judicial_shock_two_assumption，moon2026）、变体 P（M2_staggered_did_always_treated_hygiene，moon2026） |
 | [非线性模型](非线性模型.md) | 非线性模型 | 16 | 2026-08-12 |
 | [生存分析](生存分析.md) | 生存分析 | 22 | 2026-08-01 |
 | [SEM](SEM.md) | SEM | 4 | 2026-05-18 |
@@ -37,16 +37,16 @@ updated: 2026-08-23
 | [定性过程研究](定性过程研究.md) | 定性过程研究 | 6 | 2026-07-07 |
 | [稀有结果](稀有结果.md) | 稀有结果 | 3 | 2026-08-13 |
 | [实证对象构建](实证对象构建.md) | 实证对象构建 | 5 | 2026-07-30 |
-| [事件历史+事件研究](事件历史+事件研究.md) | 事件历史+事件研究 | 15 | 2026-08-12 |
+| [事件历史+事件研究](事件历史+事件研究.md) | 事件历史+事件研究 | 13 | 2026-08-12；变体 16：多窗口三角化（长短窗两难显式化 + 对披露假设的窗口无关性声明 + 长窗永久性检验），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28)；变体 17：污染效应规避型事件日选择（已文档化污染效应反向证明所选日期洁净 + 惯例页码声明 + 备择日期让步式稳健），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28) |
 | [同时方程](同时方程.md) | 同时方程 | 5 | 2026-08-13 |
 | [IV-2SLS](IV-2SLS.md) | IV-2SLS | 14 | 2026-08-13 |
 | [动态面板-GMM](动态面板-GMM.md) | 动态面板-GMM | 5 | 2026-08-13 |
 | [匹配DiD-广义DiD](匹配DiD-广义DiD.md) | 匹配DiD-广义DiD | 1 | 2026-08-05 |
 | [同伴效应-网络效应](同伴效应-网络效应.md) | 同伴效应-网络效应 | 4 | 2026-07-30 |
-| [文本构念测量](文本构念测量.md) | 文本构念测量 | 17 | 2026-08-13 |
+| [文本构念测量](文本构念测量.md) | 文本构念测量 | 16 | 2026-08-13；变体 18：形式/实质二分解耦验证链（构念定义即编码规则 + 三重行为验证 + 排除规则自带 because），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28) |
 | [PSM匹配面板](PSM匹配面板.md) | PSM匹配面板 | 4 | 2026-08-12 |
 | [堆叠扩散Logit](堆叠扩散Logit.md) | 堆叠扩散Logit | 0 | 2026-05-18 |
-| [多行为者设计](多行为者设计.md) | 多行为者设计 | 1 | 2026-07-08 |
+| [多行为者设计](多行为者设计.md) | 多行为者设计 | 1 | 2026-07-08；变体 2：M8 个体→组级聚合辩护链（构念层次理论化→r_wg/ICC 双判据→聚合收口），westphal_bednar2005，EMERGING |
 | [推断二元结果](推断二元结果.md) | 推断二元结果 | 1 | 2026-08-05 |
 | [两阶段模型](两阶段模型.md) | 两阶段模型 | 11 | 2026-08-23 |
 | [VARX-PVAR](VARX-PVAR.md) | VARX-PVAR | 8 | 2026-07-15 |

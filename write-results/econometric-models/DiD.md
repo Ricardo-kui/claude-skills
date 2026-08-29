@@ -14,7 +14,7 @@ updated: 2026-08-23
 
 ## 变体速查表
 
-> 检索辅助。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架与诚实边界见下方变体正文。
+> 检索辅助。状态词表（与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀）；LEGACY-DIAGNOSTIC 保留（工具诊断类）；召回主题条目按用户 2026-08-29 裁决单源 VERIFIED。完整骨架与诚实边界见下方变体正文。
 
 槽位分布：
 
@@ -30,43 +30,43 @@ updated: 2026-08-23
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 3 | DiD+Logit 分步入表 + 规格稳健 | DiD+Logit 稀有结果：无/有控制分步列表 + OR→相对概率经济显著性 + 低基准率诚实（副槽位 R3） | 把 table navigation 与 logit 经济显著性绑定，平行趋势/安慰剂留 Methods、用附录指针作 falling action | 待交叉 | Hoffmann et al. 2024 JM |
-| 7 | 平均净效应开场 + 正负权变预告 | 对立机制/双向权变理论：先兑现平均净效应 climax，再括号预告"正负并存"引向交互段（副槽位 R3） | 区别于变体 3 标准主效应开场——平均净效应须来自交互规格均值处边际效应，非独立主假设 | 待交叉 | Castellaneta et al. 2017 SMJ |
-| 11 | 原始描述性证据开场（r2_did_raw_descriptive_preview） | 结果开篇先用裸数据报 control/treated 处理前后均值时序差异，再进入模型 | 区别于直接进模型（变体 3/7）——把处理前后趋势先立起来 | 待交叉 | Moon et al. 2026 JM |
-| 12 | 第一阶段选择回归内嵌（r2_did_selection_firststage_inline） | 结果段内嵌 disclosure/selection 第一阶段 probit（排他限制显著 + Wald 不弱工具），再进主效应 | 区别于压附录——第一阶段关键统计在正文给出 | 待交叉 | Moon et al. 2026 JM |
+| 3 | DiD+Logit 分步入表 + 规格稳健 | DiD+Logit 稀有结果：无/有控制分步列表 + OR→相对概率经济显著性 + 低基准率诚实（副槽位 R3） | 把 table navigation 与 logit 经济显著性绑定，平行趋势/安慰剂留 Methods、用附录指针作 falling action | VERIFIED | Hoffmann et al. 2024 JM |
+| 7 | 平均净效应开场 + 正负权变预告 | 对立机制/双向权变理论：先兑现平均净效应 climax，再括号预告"正负并存"引向交互段（副槽位 R3） | 区别于变体 3 标准主效应开场——平均净效应须来自交互规格均值处边际效应，非独立主假设 | EMERGING | Castellaneta et al. 2017 SMJ |
+| 11 | 原始描述性证据开场（r2_did_raw_descriptive_preview） | 结果开篇先用裸数据报 control/treated 处理前后均值时序差异，再进入模型 | 区别于直接进模型（变体 3/7）——把处理前后趋势先立起来 | EMERGING | Moon et al. 2026 JM |
+| 12 | 第一阶段选择回归内嵌（r2_did_selection_firststage_inline） | 结果段内嵌 disclosure/selection 第一阶段 probit（排他限制显著 + Wald 不弱工具），再进主效应 | 区别于压附录——第一阶段关键统计在正文给出 | EMERGING | Moon et al. 2026 JM |
 
 ### R3（1）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 8 | 交互假设完整四拍（1-SD 幅度，无交互图） | 主表分列交互、理论预测调节方向/幅度而非符号反转时：方向→交互显著→one-SD%→支持判断（副槽位 R4+R5） | 区别于变体 1（双端图+逐端核对）与变体 4（衰减%）——无图四拍；p=.062 须标 marginal | 待交叉 | Castellaneta et al. 2017 SMJ |
+| 8 | 交互假设完整四拍（1-SD 幅度，无交互图） | 主表分列交互、理论预测调节方向/幅度而非符号反转时：方向→交互显著→one-SD%→支持判断（副槽位 R4+R5） | 区别于变体 1（双端图+逐端核对）与变体 4（衰减%）——无图四拍；p=.062 须标 marginal | EMERGING | Castellaneta et al. 2017 SMJ |
 
 ### R4（2）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 1 | 交互项→幅度→双端条件效应→假设逐端核对 | 假设预测两端方向时必须逐端兑现：交互显著≠两端符号全兑现，意外端标 post hoc（副槽位 R5+R6） | 区别于变体 8 单侧四拍——含两端方向的假设必须逐端核对 | 待交叉 | Lee, Wu & Bednar, OS |
-| 4 | 双 moderator 衰减 + 90th 联合 switch-off | 三向交互：25th→75th 衰减百分比 + 双 90th 联合中和，须报 concurrent-cutoff 样本占比（副槽位 R5） | 区别于变体 1（双端符号核对）——强调 attenuation % 与文本式高百分位中和 | 待交叉 | Hoffmann et al. 2024 JM |
+| 1 | 交互项→幅度→双端条件效应→假设逐端核对 | 假设预测两端方向时必须逐端兑现：交互显著≠两端符号全兑现，意外端标 post hoc（副槽位 R5+R6） | 区别于变体 8 单侧四拍——含两端方向的假设必须逐端核对 | EMERGING | Lee, Wu & Bednar, OS |
+| 4 | 双 moderator 衰减 + 90th 联合 switch-off | 三向交互：25th→75th 衰减百分比 + 双 90th 联合中和，须报 concurrent-cutoff 样本占比（副槽位 R5） | 区别于变体 1（双端符号核对）——强调 attenuation % 与文本式高百分位中和 | VERIFIED | Hoffmann et al. 2024 JM |
 
 ### R7（9）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 5 | 替代解释两步排除（need vs willingness） | 排除替代机制：先控制 rival proxy，再交互检验，收束句强制 need vs willingness 语义区分 | 区别于泛化替代解释段——强制两步结构 + 语义区分收束 | 待交叉 | Hoffmann et al. 2024 JM |
-| 6 | Top-firm 排除 + 联合调节边际不显著诚实 | 少数 firm 集中结果担忧 + 联合模型一边际显著时，用 qualified robustness 作标准 falling action | 区别于"all results hold"笼统收束——禁止笼统声明 | 待交叉 | Hoffmann et al. 2024 JM |
-| 9 | 准实验识别威胁分节电池 | staggered policy/准自然实验正文分节识别电池：Matching→政治经济→供需→Placebo→Early/Late→替代测量，每节标题即威胁标签 | 区别于单威胁段落（placebo 单点等）——正文分节的完整识别电池，各节须对应真实威胁 | 待交叉 | Castellaneta et al. 2017 SMJ |
-| 10 | Null placebo（±k 期伪处理）识别确证 | ±k 期伪政策时点+预期 null：主效应与交互同时不显著，null 框定为识别确证而非假设检验 | 区别于注册表泛化 placebo 模板——固定 ±k 期 + 双 null + 识别确证定位 | 待交叉 | Castellaneta et al. 2017 SMJ |
-| 13 | 替代冲击复制（r7_did_alternative_shock_replication） | 用相关但不同的政策采纳作替代外生冲击，重估简单 DiD | 区别于换测量/换结局——换的是识别来源本身 | 待交叉 | Moon et al. 2026 JM |
-| 14 | Leave-one-out 处理单位排除（r7_did_leave_one_out_treated_unit） | 逐州/单位排除重估，排除结论被个别单位驱动 | 区别于 top-firm 排除（变体 6）——逐单位而非按规模 | 待交叉 | Moon et al. 2026 JM |
-| 15 | Stacked staggered DiD 稳健性（r7_did_stacked_staggered_robustness） | 交错处理下用 stacked cohort 设计作稳健主表 | 区别于 TWFE 诊断——现代化估计量进主表 | 待交叉 | Moon et al. 2026 JM |
-| 16 | 处理撤销反事实（r7_did_treatment_reversal_counterfactual） | 先采纳后撤销的州作反事实，预期反向效应 | 区别于 placebo（变体 10）——撤销是真实事件而非伪处理 | 待交叉 | Moon et al. 2026 JM |
-| 17 | 替代结局 placebo（r7_did_alternative_outcome_placebo） | 用无关替代 DV 排除"效应只是泛化成本上升"的替代解释 | 区别于 null placebo（变体 10）——换结局而非换时点 | 待交叉 | Moon et al. 2026 JM |
+| 5 | 替代解释两步排除（need vs willingness） | 排除替代机制：先控制 rival proxy，再交互检验，收束句强制 need vs willingness 语义区分 | 区别于泛化替代解释段——强制两步结构 + 语义区分收束 | VERIFIED | Hoffmann et al. 2024 JM |
+| 6 | Top-firm 排除 + 联合调节边际不显著诚实 | 少数 firm 集中结果担忧 + 联合模型一边际显著时，用 qualified robustness 作标准 falling action | 区别于"all results hold"笼统收束——禁止笼统声明 | VERIFIED | Hoffmann et al. 2024 JM |
+| 9 | 准实验识别威胁分节电池 | staggered policy/准自然实验正文分节识别电池：Matching→政治经济→供需→Placebo→Early/Late→替代测量，每节标题即威胁标签 | 区别于单威胁段落（placebo 单点等）——正文分节的完整识别电池，各节须对应真实威胁 | EMERGING | Castellaneta et al. 2017 SMJ |
+| 10 | Null placebo（±k 期伪处理）识别确证 | ±k 期伪政策时点+预期 null：主效应与交互同时不显著，null 框定为识别确证而非假设检验 | 区别于注册表泛化 placebo 模板——固定 ±k 期 + 双 null + 识别确证定位 | EMERGING | Castellaneta et al. 2017 SMJ |
+| 13 | 替代冲击复制（r7_did_alternative_shock_replication） | 用相关但不同的政策采纳作替代外生冲击，重估简单 DiD | 区别于换测量/换结局——换的是识别来源本身 | EMERGING | Moon et al. 2026 JM |
+| 14 | Leave-one-out 处理单位排除（r7_did_leave_one_out_treated_unit） | 逐州/单位排除重估，排除结论被个别单位驱动 | 区别于 top-firm 排除（变体 6）——逐单位而非按规模 | EMERGING | Moon et al. 2026 JM |
+| 15 | Stacked staggered DiD 稳健性（r7_did_stacked_staggered_robustness） | 交错处理下用 stacked cohort 设计作稳健主表 | 区别于 TWFE 诊断——现代化估计量进主表 | EMERGING | Moon et al. 2026 JM |
+| 16 | 处理撤销反事实（r7_did_treatment_reversal_counterfactual） | 先采纳后撤销的州作反事实，预期反向效应 | 区别于 placebo（变体 10）——撤销是真实事件而非伪处理 | EMERGING | Moon et al. 2026 JM |
+| 17 | 替代结局 placebo（r7_did_alternative_outcome_placebo） | 用无关替代 DV 排除"效应只是泛化成本上升"的替代解释 | 区别于 null placebo（变体 10）——换结局而非换时点 | EMERGING | Moon et al. 2026 JM |
 
 ### R8（1）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 2 | 理论前提探测式补充证据链 | 机制补充分析逐项对应可观察理论前提（行为+沟通容量+中介关注），允许领域特定 null | 区别于罗列额外 DV——每个分析对应一个前提，domain-specific null 缩窄理论适用范围 | 待交叉 | Lee, Wu & Bednar, OS |
+| 2 | 理论前提探测式补充证据链 | 机制补充分析逐项对应可观察理论前提（行为+沟通容量+中介关注），允许领域特定 null | 区别于罗列额外 DV——每个分析对应一个前提，domain-specific null 缩窄理论适用范围 | EMERGING | Lee, Wu & Bednar, OS |
 
 
 ## 主骨架

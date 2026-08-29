@@ -165,6 +165,100 @@
       "overall_role": "partial_exemplar"
     },
     {
+      "id": "ball2018",
+      "path": "v4/blueprints/ball2018-product-competition-recalls.md",
+      "paper_type": "empirical",
+      "outlet": "Strategic Management Journal",
+      "publication_status": "published",
+      "coverage": "complete",
+      "theoretical_problem_form": [
+        "policy-induced-competition-shock",
+        "quality-opaqueness",
+        "discretion-conditioned-consequence"
+      ],
+      "narrative_dynamics": [
+        "paradigm-challenge-hook",
+        "dual-path-convergence",
+        "bilateral-moderation-pair",
+        "placebo-by-construction",
+        "unintended-consequence-ending"
+      ],
+      "retrieval_signals": [
+        "anda-generic-competition",
+        "manufacturing-recalls",
+        "recall-severity-class-split",
+        "managerial-discretion-moderation",
+        "cga compliance-decay"
+      ],
+      "section_learning": {
+        "introduction": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Open by challenging a widely shared common sense (competition is good) with an economic-theory nuance (the competition-quality link is contingent on price setting), then pin the abstraction to a concrete regulation (Hatch-Waxman/ANDA) so the quality question becomes unavoidable.",
+            "Preview results in one compact paragraph that states both the main effect and the sign-flipping moderation, so a hetero-signed finding is promised before the reader meets any table."
+          ],
+          "caveat": [
+            "The introduction never states an explicit contribution paragraph and the stakes for consumers are asserted rather than dramatized; copying this hook without adding a contribution turn yields a quiet, under-powered opening. The gap is Incompleteness (first empirical test in this industry), which carries less narrative force than a contested-prediction gap."
+          ]
+        },
+        "theory": {
+          "suitable": "yes",
+          "requires": [
+            "moderator_is_outcome_intrinsic",
+            "outcome_cannot_improve_by_choice_or_is_excludable"
+          ],
+          "learn": [
+            "Before hypothesizing a negative main effect, run an explicit counter-prediction exclusion: explain why firms cannot or will not compete on quality here (bioequivalence makes quality indistinguishable; cost competition makes quality costly), so the negative sign is argued rather than assumed.",
+            "Build a bilateral moderation pair around a single severity split: high-severity recalls are argued to be objective (low discretion, stronger positive link), low-severity recalls subjective (high discretion, weaker/offset link), yielding H2a and H2b with opposite signs from one underlying logic rather than two theories."
+          ],
+          "caveat": [
+            "The dual-path mechanism (deliberate corner-cutting vs inadvertent quality decay) is deliberately left converged at H1 and only separated in robustness; transferring this requires a setting where an observable proxy can later adjudicate the paths, otherwise the convergence reads as unfinished theory. The severity-discretion mapping is asserted from one prior paper and two interviews, not a validated discretion measure."
+          ]
+        },
+        "methods": {
+          "suitable": "partial",
+          "requires": [
+            "regulator_publishes_outcome_severity_classes",
+            "outcome_class_content_ties_to_moderator_logic"
+          ],
+          "learn": [
+            "Operationalize a continuous-sounding moderator by splitting the dependent variable along an official regulator's own severity taxonomy (FDA Class 1&2 vs Class 3), converting a measurement problem into an institutional fact.",
+            "Design a by-construction placebo alongside the main test: because ANDA products cannot be redesigned, design-related recalls should show no competition link — a null result that strengthens the story's premise."
+          ],
+          "caveat": [
+            "This requires a regulator that itself classifies outcomes by the dimension of your moderator; without such official classes the DV-split collapses into arbitrary truncation. The product-competition measure depends on non-standard data (30 years of Orange Books via FOIA) that most settings will not have."
+          ]
+        },
+        "results": {
+          "suitable": "yes",
+          "requires": [
+            "count_outcome_overdispersed",
+            "parallel_estimator_family_available"
+          ],
+          "learn": [
+            "Report FE and RE versions of the same negative binomial panel in parallel columns, then use the RE model for magnitude translation (multiplicative SD-to-percent plus recall counts), so robustness and interpretability each get their own home.",
+            "Stage the moderation as a cross-column DV-split comparison (H2a column vs main-effect column vs H2b column), then back it with a four-threat battery: mediation (mechanism), PSM (selection), design-recall DV placebo (premise), and reverse causality — each addressing a distinct reader objection."
+          ],
+          "caveat": [
+            "Comparing coefficients across non-nested count models is a weaker moderation test than a formal interaction term with a statistical difference test; the paper leans on footnote-reported differences. Copying the cross-column staging requires a defensible coefficient-comparison procedure."
+          ]
+        },
+        "discussion": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Close the knot by explaining the surprising sign against prior literature: three setting-specific boundary characteristics (quality opaqueness, buyer-user separation, regulated generic competition) are offered as the reason this industry inverts the positive competition-quality findings found elsewhere.",
+            "Let the mediation result do double duty in the ending: the OAI finding becomes both a theoretical verdict (inattention, not cost-cutting) and a concrete regulatory recommendation (more inspections for ANDA-heavy firms), fusing contribution and practice."
+          ],
+          "caveat": [
+            "The three boundary explanations are post hoc interpretive claims, not tested moderators; presenting them as explanations rather than hypotheses is honest but means the ending opens a new question it does not answer."
+          ]
+        }
+      },
+      "overall_role": "partial_exemplar"
+    },
+    {
       "id": "bendig2024",
       "path": "v4/blueprints/bendig2024-cvc-alliance-recalls.md",
       "paper_type": "quantitative",
@@ -3463,7 +3557,13 @@
         "mechanism-as-rising-action",
         "integration-as-boundary"
       ],
-      "retrieval_signals": [],
+      "retrieval_signals": [
+        "title-echo-preview",
+        "tension-relay-two-layer",
+        "misbelief-stakes",
+        "contribution-tension-mirror",
+        "time-staged-promise"
+      ],
       "section_learning": {
         "introduction": {
           "suitable": "yes",
@@ -3473,7 +3573,9 @@
           ],
           "learn": [
             "State why two apparently contradictory mechanism claims can coexist before treating them as rival answers: here greater change orientation and lower risk taking jointly imply a shift in how renewal is pursued.",
-            "Give the reader a higher-order outcome that makes the two paths consequential together—redirecting renewal from buying capabilities to building them—rather than merely announcing two dependent variables."
+            "Give the reader a higher-order outcome that makes the two paths consequential together—redirecting renewal from buying capabilities to building them—rather than merely announcing two dependent variables.",
+            "Answer the title's question word-for-word in the preview sentence—pairing the process (cognition shifts) with the content (R&D, M&A) of renewal—so the title-to-promise loop closes inside the introduction while promising scope, not result direction: here 'what changes after women enter TMTs, and why' is echoed verbatim.",
+            "Relay the tensions instead of stacking them—let the dynamic-mechanism gap (descriptive versus explanatory) set the ground for the deeper assumption paradox, weld stakes to that gap as a named decision-maker misbelief (believing that mere presence on a TMT causes favorable outcomes) rather than a standalone stakes paragraph, and spend the middle contribution slot on resolving exactly the paradox the tension section pinned."
           ],
           "caveat": [
             "Transfer only when the mechanisms are genuinely tension-producing and each has a theoretically distinct downstream pathway that bears on one coherent strategic change.",
@@ -4113,6 +4215,159 @@
         }
       },
       "overall_role": "partial_exemplar"
+    },
+    {
+      "id": "westphal1998",
+      "path": "v4/blueprints/westphal1998-symbolic-management-stockholders.md",
+      "paper_type": "quantitative",
+      "outlet": "Administrative Science Quarterly",
+      "publication_status": "published",
+      "coverage": "complete",
+      "theoretical_problem_form": [],
+      "narrative_dynamics": [],
+      "retrieval_signals": [],
+      "section_learning": {
+        "introduction": {
+          "suitable": "yes",
+          "requires": [
+            "an existing own prior study (or stream) whose scope boundary can be named precisely as the gap"
+          ],
+          "learn": [
+            "Self-inheriting gap: name your own prior work as the antecedent-only stopping point ('did not examine either the targeted audience or the likely consequences'), then convert that boundary into a two-part question — real, measurable impact, and who the audience is — so the gap and the study design are the same object.",
+            "Preview hypotheses as a contribution matrix: two forms of symbolic action crossed with two consequences (external market reward; internal power consequences), each cell announced in one sentence in the contribution paragraph and later cashed out as one hypothesis."
+          ],
+          "caveat": [
+            "Depends on already owning the antecedents study; without that stream, the same move reads as incremental self-citation rather than a earned gap. Also era-typical: no explicit stakes/magnitude preview for the reader."
+          ]
+        },
+        "theory": {
+          "suitable": "yes",
+          "requires": [
+            "an archival or observable behavioral split that can separate appearance from substance in the focal event"
+          ],
+          "learn": [
+            "Alternating reframe mechanism: take the rival tradition's key evidence (positive market reactions to adoption) and re-read it under a different ontology — 'hard numbers' reflecting agency-cost reduction become 'soft numbers' aggregating a boundedly rational audience's uncertainty reduction — so the same datum motivates opposite hypotheses.",
+            "Decoupling as built-in discriminating test: write each hypothesis with a 'whether or not the plan is implemented' clause so that a positive reaction to unimplemented plans is, by construction, evidence the rival (rational-communication) reading cannot accommodate; the null cells (adoption without agency explanation) then serve as confirmation rather than embarrassment."
+          ],
+          "caveat": [
+            "The mechanism (uncertainty reduction in investors' minds) is asserted, not measured; modern versions should add a perceptual or heterogeneity probe. The move also requires a setting where decoupling is reliably codable — it does not transfer to events where appearance and substance cannot be separately observed."
+          ]
+        },
+        "methods": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Design-to-story alignment: the measurement chapter exists to make the narrative's adjudication possible — adoption/implementation coding, content-analyzed agency explanation, and four-category dummies (rather than product terms) are all chosen so the symbolic/substantive contrast is estimable; state the rival reading's design implication (annual-meeting-date contamination, non-agency explanations) and defuse it inside Methods."
+          ],
+          "caveat": [
+            "Era methods: no economic-magnitude or AME reporting; Analysis and Results are separate sections; the coding-validity chain (no exhaustive rulebook, pre-negotiation reliability) would face stronger modern demands. Borrow the alignment logic, not the estimator presentation."
+          ]
+        },
+        "results": {
+          "suitable": "yes",
+          "requires": [
+            "a design whose hypothesis set includes a contrast the rival reading predicts should not hold"
+          ],
+          "learn": [
+            "Stage the climax on the appearance-only cell: report the substantive baseline first, then let the symbolic-adopter column (significant positive excess returns with zero implementation) land as the headline — the strongest test is the pattern the rival reading treats as impossible.",
+            "Double-confirm the moderation claim: subgroup t-tests (t = 8.69–11.98) for the four-cell contrast plus Wald tests on coefficient differences, and treat null cells (no-explanation adoptions) as part of the confirmation narrative rather than footnotes."
+          ],
+          "caveat": [
+            "No AME or economic-significance interpretation, and causal verbs ('leads to', 'elicits') outrun the design by modern standards; a contemporary version needs a magnitude beat and disciplined causal language."
+          ]
+        },
+        "discussion": {
+          "suitable": "yes",
+          "requires": [
+            "a neighboring empirical literature whose surprising finding your mechanism can reinterpret"
+          ],
+          "learn": [
+            "Outward reinterpretation ending: use your mechanism to explain someone else's puzzle — institutional investors' weak observed influence on board decisions becomes a prediction of symbolic preemption — turning the discussion into new evidence for the theory rather than a summary.",
+            "Close by transforming the opening question: the final paragraph reframes the agency problem as possibly 'resolved in the domain of social beliefs yet perpetuated... in the domain of substantive policy', elevating the intro's question into a research program (social theory of agency)."
+          ],
+          "caveat": [
+            "The rival reading (combined CEO/chair roles carrying their own symbolic value) is deflected in a single author-judgment paragraph; the move needs a genuine reason why the alternative symbolizes something different, which is easier to assert in 1998 than to defend today."
+          ]
+        }
+      },
+      "overall_role": "exemplar"
+    },
+    {
+      "id": "westphal2005",
+      "path": "v4/blueprints/westphal2005-pluralistic-ignorance-boards.md",
+      "paper_type": "quantitative (primary multi-wave survey + archival supplements)",
+      "outlet": "Administrative Science Quarterly",
+      "publication_status": "published",
+      "coverage": "complete",
+      "theoretical_problem_form": [],
+      "narrative_dynamics": [],
+      "retrieval_signals": [],
+      "section_learning": {
+        "introduction": {
+          "suitable": "yes",
+          "requires": [
+            "a rival explanation that already owns part of the evidence but fails on the focal outcome"
+          ],
+          "learn": [
+            "Steelman-then-double-rebut tension: state the rival explanation neutrally, concede its partial support in adjacent domains (compensation, golden parachutes), then rebut on the focal outcome twice — absence of supporting evidence and direct contrary survey evidence — before pivoting in one sentence ('In this study, we offer a different explanation...').",
+            "Cross-discipline construct teaching: introduce the imported construct through a four-step lesson — a vivid anecdote (the Abilene family trip), a quoted technical definition, a named consequence ('attitude-behavior disjunction'), and a trigger bridge linking the general phenomenon to the paper's specific condition (negative performance feedback)."
+          ],
+          "caveat": [
+            "Era artifacts (narrative_risk_ledger R1–R4): stakes are generic ('fills a critical gap'), P1 runs ~270 words and P4 carries 106-word quoted sentences, and the hook names no concrete actor or case. A modern imitation needs a compressed opening, a specific theoretical-cost stakes sentence, and split quotations — the tension architecture transfers, the prose budget does not."
+          ]
+        },
+        "theory": {
+          "suitable": "yes",
+          "requires": [
+            "a source-discipline mechanism whose preconditions the focal setting demonstrably satisfies"
+          ],
+          "learn": [
+            "Common-trunk, parallel-branch, consequence-extension architecture: build the group-dynamics engine once (social risk of minority opinions → mutual-observation decision rule → self-other attribution asymmetry → spiral of silence), then branch it into the main effect (H1–H2), two moderators (H3–H4), and one consequence extension (H5) — each hypothesis reuses the same trunk rather than a new argument.",
+            "Rival-construct opposing-sign disambiguation: explicitly contrast with groupthink, where the identical moderator (social cohesion) carries the opposite sign — cohesion exacerbates groupthink but attenuates pluralistic ignorance — so the same design element adjudicates between the two failure modes."
+          ],
+          "caveat": [
+            "The trunk's attribution step rests on cited social psychology plus a personal communication for the group-level definition; the group-level aggregation claim (biases are interdependent) is argued before it is validated in Methods (rwg/ICC). A modern version should validate the level claim where it is made. The non-linear aspiration-level premise is declared as an assumption, not derived."
+          ]
+        },
+        "methods": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Premise validation inside the design: the theory's behavioral premise (directors perceive social risk in voicing unshared concerns) is tested with a separate 500-director survey (88–94% affirm the risk), so a foundational assumption becomes data rather than assertion.",
+            "Construct-definition-to-aggregation alignment: because pluralistic ignorance is defined at the group level, Methods justifies aggregation exactly where the theory located the construct (rwg = .93–.94, significant ICC), making the level of analysis part of the story rather than a technical afterthought."
+          ],
+          "caveat": [
+            "Own concern and perceived others' concern come from the same respondents on the same instrument — the self–other gap is the story, but that design choice invites common-method skepticism that 2005-era presentation does not fully answer (interrater kappas and individual-level bootstrapped SEs are the only guards). Do not copy the measurement entanglement without a separation strategy."
+          ]
+        },
+        "results": {
+          "suitable": "yes",
+          "requires": [
+            "a construct that can be operationalized as a directly measurable gap or difference"
+          ],
+          "learn": [
+            "Stage the climax on the misperception gap itself: the headline result is not a behavioral effect but a perceptual one — directors report concern 6.80 but perceive others' concern 4.77 (dummy coefficient 1.848, p < .001) — letting the construct's defining number land before any moderator or consequence.",
+            "Nested-mediation choreography: each hypothesis is confirmed twice — the interaction dies when the mediator enters (Baron–Kenny pattern), Sobel tests quantify the mediation (z = 2.15–2.43), and instrumental-variable models replicate the consequence chain — with the premise check (non-linear concern below aspiration levels, t = 8.35) placed before the main tests."
+          ],
+          "caveat": [
+            "Era presentation: one-tailed tests for hypothesized effects, no AME or economic-magnitude interpretation, and outcome sweep limited to diversification change; causal verbs outrun the survey design by modern standards. Borrow the staging logic, not the inference language."
+          ]
+        },
+        "discussion": {
+          "suitable": "yes",
+          "requires": [
+            "findings that bear on a live policy or reform debate the reader already knows"
+          ],
+          "learn": [
+            "Policy-inversion ending: return to the opening governance puzzle and invert the era's reform prescription — Sarbanes-Oxley and NYSE reforms push independence, but the findings imply process reform (social cohesion, devil's-advocate aids, simply informing groups about pluralistic ignorance) — so the ending changes what the reader should do, not just what to believe.",
+            "Counterintuitive corollary disclosed: the celebrated value of board diversity gets a side-effect warning (homogeneity attenuates pluralistic ignorance), and the mechanism is offered for external puzzles (Enron-era boards failing to speak up), turning the discussion into new evidence for the theory."
+          ],
+          "caveat": [
+            "The insider-director comparison (insiders report less concern; denser ties) is descriptive, post hoc, and reported from a separate survey — a modern version would pre-register it or cut it. The future-research list is long by 2005 convention; keep only the branches that transform the opening question."
+          ]
+        }
+      },
+      "overall_role": "exemplar"
     },
     {
       "id": "wowak2015",

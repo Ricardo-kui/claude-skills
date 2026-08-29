@@ -104,6 +104,28 @@ Traditionally, [Group A] supported [position X] and [Group B] supported [positio
 
 ---
 
+
+### 变体 D：多受众汇流担忧型（westphal_zajac_1998_symbolic_management 型）
+
+**模板**:
+> "In recent years, scholarly and popular concern about [domain arrangement] has increased in intensity. [Institutional actor group] and [the popular press] have decried the apparent absence of [adequate mechanism] that adequately [normative outcome]. This concern has been reinforced by extensive academic research on [the effectiveness of existing arrangements]."
+
+**来源**: westphal_zajac_1998_symbolic_management (ASQ), P1
+
+**原文锚定**:
+> "In recent years, scholarly and popular concern about corporate governance arrangements in large corporations has increased in intensity. Institutional investors and the popular business press have decried the apparent absence in many corporations of strong governance mechanisms that adequately promote managerial accountability to stockholders."
+
+**关键特征**:
+- 三类受众（实务机构/大众媒体/学术研究）各自独立发声并汇流，用共识强度而非数据冲击建立现象重要性——能量中等、零数据依赖的冷启动
+- "decried the apparent absence of [mechanism]" 以"应有机制缺位"的规范语言锚定 puzzle，为后续 Inadequacy 文献批评直接供能
+- 末句 "This concern has been reinforced by extensive academic research" 把实务担忧升级为学术合法议题，与 Literature Turn 无缝衔接
+
+**适用**: 存在制度化改革浪潮/公开争论、且学术界已有大量呼应实证的成熟领域；适合 ASQ 风格的冷启动 + 中等能量 Hook + 双流文献铺垫的组合
+
+**禁忌**: 三方声音必须都能独立引用（机构/媒体/学术缺一不可），不能伪造汇流；Hook 中不要提前剧透本文的解释视角，把转折留给 Tension 段
+
+**验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
+
 ## 组装规则
 
 ### 必须配对

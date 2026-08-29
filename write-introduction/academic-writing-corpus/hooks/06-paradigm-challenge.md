@@ -141,6 +141,15 @@ source: Manually curated from MVP30 narrative_analysis files
 
 ---
 
+
+### 变体 F：常识共识+理论暧昧型（ball_2018 型）
+**模板**: "A fundamental principle of [domain] rests on the widely held notion that [X] is [unambiguously good] ([citations]). [Theory], however, suggests a more nuanced view. ... [stream A] showed that [prediction 1] while [stream B] found the opposite result."
+**原文锚定**: "A fundamental principle of [capitalism] rests on the widely held notion that [competition] is predominately good ... [Economic theory], however, suggests a more nuanced view."
+**来源**: ball_2018 (JOM/SMJ family), P1
+**关键特征**: 共识来自民间/原理层信念而非文献内共识，颠覆武器是理论内部预测相互矛盾（同理论两派对立结果）而非单一反例；能量中——不宣告共识错，只宣告"不确定"；理论对立为后续调节设计铺垫。
+**适用**: 现象层共识强但理论预测分裂的研究；中能量 Hook；为 Incompleteness gap 提供模糊性前提。
+**禁忌**: 需真实存在对立理论预测（两派文献都要可引用）；不得把单纯"研究少"包装成理论对立。
+
 ## 组装规则
 
 ### 必须配对

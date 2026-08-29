@@ -148,7 +148,7 @@ def update_registry(registry: Path, stem: str, paper: str, journal: str,
                     gap: str, new_text: dict) -> str:
     """Surgical text edit of one entry. Returns status message."""
     text = registry.read_text(encoding="utf-8")
-    section, key = None, None
+    section, key, m = None, None, None
     if stem in REGISTRY_ALIASES:
         section, key = REGISTRY_ALIASES[stem]
     else:
@@ -157,7 +157,7 @@ def update_registry(registry: Path, stem: str, paper: str, journal: str,
         m = pat.search(text)
         if m:
             key = stem
-    if key is None and section is not None:
+    if m is None and key is not None:
         pat = re.compile(r"^( +)%s:\n( +)paper_count: (\d+)" % re.escape(key), re.M)
         m = pat.search(text)
     if key is None or not m:

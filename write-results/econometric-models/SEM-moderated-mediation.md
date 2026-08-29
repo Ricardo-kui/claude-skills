@@ -20,7 +20,7 @@ source: Distilled from Habel et al. (2016, JM) by distill-methods-exemplar
 
 ## 变体速查表
 
-> 检索辅助。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架与诚实边界见下方变体正文。
+> 检索辅助。状态词表（与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀）；LEGACY-DIAGNOSTIC 保留（工具诊断类）；召回主题条目按用户 2026-08-29 裁决单源 VERIFIED。完整骨架与诚实边界见下方变体正文。
 
 ### 槽位分布
 
@@ -35,28 +35,28 @@ source: Distilled from Habel et al. (2016, JM) by distill-methods-exemplar
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 3 | 联立方程 SEM + IV 诊断前置 | 联立方程含内生性处理：主检验前报 Hansen's J + Kleibergen-Paap + 多列表格逐列导航 | 区别于变体 1（无内生性版本）：IV 诊断前置 + 多列表格 | 通过（单篇） | Vadakkepatt et al. 2022 JM |
+| 3 | 联立方程 SEM + IV 诊断前置 | 联立方程含内生性处理：主检验前报 Hansen's J + Kleibergen-Paap + 多列表格逐列导航 | 区别于变体 1（无内生性版本）：IV 诊断前置 + 多列表格 | EMERGING | Vadakkepatt et al. 2022 JM |
 
 ### R3（3）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 1 | SEM 基本报告模板（Preacher & Hayes 同时估计） | 标准 moderated mediation：拟合指标+路径系数表+条件间接效应解读+直接效应声明 | 基础模板，变体 2–7 均为其扩展 | 通过（单篇） | Habel et al. 2016 JM |
-| 2 | 不一致中介 → 抑制变量报告 | direct 与 indirect 方向相反且含 mediator 后 direct 增强 | 区别于变体 1 常规报告：升华为 suppressor 叙事（MacKinnon et al. 2000 背书） | 通过（单篇） | Bamberger et al. 2021 JM |
-| 7 | 共享中介跨分支证据账本 | 一中介连多 outcome（不同估计器/量纲）：a-path 报一次逐分支判定 | 区别于变体 2 单分支抑制叙事：分支账本 + 失败分支保留为机制边界 | 待交叉 | Kashmiri et al. 2017 JAMS |
+| 1 | SEM 基本报告模板（Preacher & Hayes 同时估计） | 标准 moderated mediation：拟合指标+路径系数表+条件间接效应解读+直接效应声明 | 基础模板，变体 2–7 均为其扩展 | EMERGING | Habel et al. 2016 JM |
+| 2 | 不一致中介 → 抑制变量报告 | direct 与 indirect 方向相反且含 mediator 后 direct 增强 | 区别于变体 1 常规报告：升华为 suppressor 叙事（MacKinnon et al. 2000 背书） | EMERGING | Bamberger et al. 2021 JM |
+| 7 | 共享中介跨分支证据账本 | 一中介连多 outcome（不同估计器/量纲）：a-path 报一次逐分支判定 | 区别于变体 2 单分支抑制叙事：分支账本 + 失败分支保留为机制边界 | VERIFIED | Kashmiri et al. 2017 JAMS |
 
 ### R4（2）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 4 | Reverse-Code + Wald 持续性比较 | H3 型 differential-persistence：两通道方向相反、比较时间动态 | 区别于变体 5（顺序问题）：比较两条通道**持续性**（reverse-code 后 Wald χ²） | 通过（单篇） | Qiao, Hiatt & Sine 2026 SMJ |
-| 6 | 事件条件间接效应分层报告 | X×event→M→Y 且直接交互不一致：事件前/后 bootstrap CI 分层报 | 区别于变体 1（连续 moderator 条件）：事件条件性 + 直接交互不复制声明 | 待交叉 | Reinwald et al. 2026 ORSC |
+| 4 | Reverse-Code + Wald 持续性比较 | H3 型 differential-persistence：两通道方向相反、比较时间动态 | 区别于变体 5（顺序问题）：比较两条通道**持续性**（reverse-code 后 Wald χ²） | EMERGING | Qiao, Hiatt & Sine 2026 SMJ |
+| 6 | 事件条件间接效应分层报告 | X×event→M→Y 且直接交互不一致：事件前/后 bootstrap CI 分层报 | 区别于变体 1（连续 moderator 条件）：事件条件性 + 直接交互不复制声明 | EMERGING | Reinwald et al. 2026 ORSC |
 
 ### R6（1）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 5 | Reverse-Order 中介顺序敏感性 | 序列中介竞争排序检查：反转 M1/M2 重测 | 区别于变体 4（方向问题）：**顺序问题**，CI 含零≠排除、不确认因果序 | 待交叉 | Ilicic & Brennan 2026 JM |
+| 5 | Reverse-Order 中介顺序敏感性 | 序列中介竞争排序检查：反转 M1/M2 重测 | 区别于变体 4（方向问题）：**顺序问题**，CI 含零≠排除、不确认因果序 | EMERGING | Ilicic & Brennan 2026 JM |
 
 ## 功能描述
 
@@ -90,7 +90,7 @@ source: Distilled from Habel et al. (2016, JM) by distill-methods-exemplar
 ### 变体 1: SEM 基本报告模板（Preacher & Hayes 同时估计 + 条件间接效应解读）
 
 **来源论文**: Habel et al. 2016 (JM) Studies 2–3
-**验证状态**: 通过（单篇）（EMERGING 1 paper；canonical 模板持续使用）
+**验证状态**: EMERGING（1 paper；canonical 模板持续使用）
 **写入日期**: 2026-06-03
 **槽位**: R3
 **跨论文复现**: EMERGING (1 paper): habel2016 (JM) — Studies 2, 3
@@ -180,7 +180,7 @@ interaction effects.
 ### 变体 2: 不一致中介 → 抑制变量报告
 
 **来源论文**: Bamberger, Homburg & Wielgos 2021 (Journal of Marketing)
-**验证状态**: 通过（单篇）
+**验证状态**: EMERGING
 **写入日期**: 2026-07-07
 **槽位**: R3
 
@@ -221,7 +221,7 @@ may have reached ambiguous conclusions.
 ### 变体 3: 联立方程 SEM 结果报告 + IV 诊断前置
 
 **来源论文**: Vadakkepatt, Arora, Martin & Paharia 2022 (Journal of Marketing)
-**验证状态**: 通过（单篇）
+**验证状态**: EMERGING
 **槽位**: R2/R3
 
 #### 功能描述
@@ -266,7 +266,7 @@ supporting Hypothesis [N+1].
 ### 变体 4: Reverse-Code + Wald Test 对立通道持续性比较（differential persistence）
 
 **来源论文**: Qiao, Hiatt & Sine 2026 (SMJ)
-**验证状态**: 通过（单篇）
+**验证状态**: EMERGING
 **写入日期**: 2026-06-16
 **槽位**: R4/R6
 
@@ -319,7 +319,7 @@ distinguishable temporal dynamics.
 ### 变体 5: Reverse-Order Mediation Sensitivity Test（竞争排序敏感性检查）
 
 **来源论文**: Ilicic & Brennan 2026 (Journal of Marketing) Study 4
-**验证状态**: 待交叉
+**验证状态**: EMERGING
 **写入日期**: 2026-07-22
 **槽位**: R6/R7
 
@@ -372,7 +372,7 @@ establish temporal or causal order.
 ### 变体 6: 事件条件间接效应分层报告（直接交互不一致时）
 
 **来源论文**: Reinwald, Kanitz, Bamberger, Backmann & Hoegl 2026 (Organization Science)
-**验证状态**: 待交叉
+**验证状态**: EMERGING
 **槽位**: R4
 
 #### 验证状态说明
@@ -406,9 +406,71 @@ The [X × event] interaction on [mediator] was [coefficient and CI/p], indicatin
 ### 变体 7: 共享中介跨异质结果分支的证据账本
 
 **来源论文**: Kashmiri, Nicol & Arora 2017 (Journal of the Academy of Marketing Science)
-**验证状态**: 待交叉
+**验证状态**: VERIFIED
 **写入日期**: 2026-08-03
 **槽位**: R3
+
+
+### 变体 8: 两步预测中介 + 双 moderator 条件间接效应 + 双路径汇合（post_2022_women_tmt_strategic_renewal 型）
+
+**来源论文**: Post, Lokshin & Boone 2022 (AMJ)
+**验证状态**: VERIFIED（expert_audit_override, user 2026-08-29）
+**槽位**: R8（承接 R3/R4 双路径铺垫；收敛全篇双路径回答）
+
+#### 适用场景
+
+- 面板 OLS/一阶差分设计：中介由第一阶段模型生成预测值（fitted/predicted shift），代入第二阶段 outcome 模型——区别于变体 1 的 SEM 同时估计
+- 理论含两条并行机制路径（X→M1→Y1 与 X→M2→Y2），各配一个 moderator
+- 粗粒度二手数据 + moderated mediation，统计功效受限时的校准主张
+
+#### 报告骨架
+
+```text
+Hypothesis [H6] anticipated that, following [treatment], [outcome_A] would [grow] via an
+[increase] in [mediator_A]. Supporting Hypothesis [H6] (Table [X], Model [N]), the
+estimated coefficient for the predicted shift in [mediator_A] (obtained from Model [M] in
+Table [Y]) is statistically significant (b = [value], p = [value]). That is, our model
+predicts that a large shift (one standard deviation increase) in [mediator_A]
+[increases/decreases] [outcome_A] by [value]%.
+[H7 段镜像：另一条路径 → 另一 outcome，指明"via a drop in [mediator_B]"]
+To assess whether the shifts in [mediators] in fact mediate the relationships between
+[treatment] and [outcomes], we use the procedure described in [Preacher, Rucker, and
+Hayes (2007)]. Because we have moderated mediations, we use the predicted change in
+[mediator_A] and [mediator_B] from Models [M1] and [M2] for the [moderator_1] moderator
+(and from Models [M3] and [M4] for the [moderator_2] moderator) in the [outcome] models.
+Using bias-corrected confidence intervals for the two indirect effects, we find that the
+indirect effects of [treatment] (a) on [outcome_A], via a [rise] in [mediator_A], and
+(b) on [outcome_B], via a [drop] in [mediator_B], are statistically significant
+(z = [value], p = [value]; z = [value], p = [value], respectively) when [moderator
+condition].
+Given the difficulties, statistically, in detecting moderated mediation in analyses
+relying on coarse-grained, secondary data, we interpret our pattern of findings as
+consistent with our theory that [treatment] affects [outcome], at least partially, via
+shifts in [mediators], conditional on [moderator_1] and [moderator_2].
+```
+
+#### 关键技术点
+
+| 步骤 | 操作 | 理由 |
+|------|------|------|
+| 1. 路径承载归因句 | "H6 anticipated that ... would grow **via an increase in [M1]**" | 明示哪条路径承载哪个结果，双路径汇合不被误读 |
+| 2. 预测值溯源 | "(obtained from Model [M] in Table [Y])" | 两步法生成的 regressor 必须可溯源 |
+| 3. moderator×模型映射 | 指明条件间接效应用哪组模型生成的预测值 | 双 moderator 设计时审计链不断裂 |
+| 4. 双间接效应并行报 CI | (a)/(b) 编号并行，z 与 p 成对 | 两条路径一次汇合，避免叙事偏倚 |
+| 5. 校准收束句 | "consistent with ... at least partially ... conditional on ..." | 以功效限制为由把主张压到"部分、条件性" |
+
+#### 诚实边界
+
+- 两步预测中介存在 generated-regressor 问题：第二阶段 SE 未反映第一阶段不确定性，主张强度须与该校准匹配（本篇以"at least partially"收束即为例范）。
+- SEM 稳健性检验允许残差相关时，不得把"多数残差相关不显著"写成识别有效性的确证（本篇"confirming the validity of our approach"表述偏乐观，仅作节奏参照不作结论模板）。
+- 间接效应仅在 moderator 条件成立时显著（本篇 incumbency>0 显著、小 cohort 边缘显著）——须按条件分层报告，不得汇总为主效应中介。
+
+#### 原文锚定
+- "Because we have moderated mediations, we use the predicted change in TMT risk-taking propensity and TMT change orientation from Models 6 and 8 for the incumbency moderator (and from Models 11 and 13 for the cohort size moderator) in the M&A and R&D models."（results.md 中介段）
+- "Given the difficulties, statistically, in detecting moderated mediation in analyses relying on coarse-grained, secondary data, we interpret our pattern of findings as consistent with our theory that female TMT appointments affect strategic renewal, at least partially, via shifts in TMT cognition, conditional on TMT female incumbency and on the (small) size of the incoming TMT cohort."（results.md 收束段）
+
+#### 与最近变体的区别
+- 区别于变体 1（Preacher & Hayes 同时估计 SEM）：本变体是两步预测中介的面板 OLS 版本 + 双 moderator 条件间接效应分层 + "路径承载归因 → 双路径汇合 → 校准收束"的跨槽位节奏；区别于变体 7（共享中介跨分支账本）：本变体两条路径各配独立中介与 outcome，按承诺顺序汇合。
 
 #### 验证状态说明
 

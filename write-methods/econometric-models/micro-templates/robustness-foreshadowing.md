@@ -52,6 +52,12 @@ updated: 2026-05-22
 | `We restrict the sample to [subsample criteria] to ensure [robustness condition].` | 子样本 |
 | `We compare [attrition analysis] to assess whether sample loss is systematic.` |  attrition |
 
+
+**补充变体（westphal_bednar2005 型）：问卷非应答双重防御链（K-S + Heckman）**
+> To assess the representativeness of the sample, we compared [units] in the final sample with those excluded due to [non-response/missing data], using the [Kolmogorov-Smirnov two-sample test], which determines whether the distribution of a given variable is different for [units] in the final sample versus others in the sample frame (i.e., including differences in kurtosis, skewness, and other features of the distribution, as well as differences in central tendency). There were no significant differences with respect to [variables examined in the study]; p-values ranged from [X] to [Y]. In separate analyses, we also tested for sample selection bias with a multivariate approach, using the [Heckman sample selection model]; the selection equations included [archival variables], as well as [features of the data-collection process itself (e.g., survey wave)]. The results were very similar to those presented below, and the selection parameter was not significant.
+- 双层防御：分布形状级单变量检验（K-S，强调峰度/偏度等分布特征而非仅均值，报 p 值区间）→ 多变量 Heckman 选择模型（选择方程含档案变量 + 调查设计特征）；双收口 = 结果与主模型一致 + 选择参数不显著
+- 与 heckman-peer-prevalence-exclusion.md 互补：彼处 Heckman 服务于同行 prevalence 排除限制识别；本链服务于调查非应答/缺失数据的样本选择防御
+
 ### 反向因果（Reverse Causality）
 
 | 微模板 | 适用情境 |

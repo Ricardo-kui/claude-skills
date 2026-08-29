@@ -83,6 +83,16 @@ source: Extracted from lehman2014 distill-introduction-exemplar
 
 ---
 
+
+### 变体 C：立法授权递进事实开场型（wowak2020 型）
+[功能标签]: Hook — 无数据冲击的制度事实递进（低能量，Incompleteness 适配）
+[骨架]: "[Jurisdiction 1] became the first to require [mandate]; [Jurisdiction 2] goes further by mandating [stronger threshold]. [Community] has long been curious about [X]'s impact on [outcomes], centering on [dominant family]; research has explored [adjacent outcomes] but has not addressed, as we do here, [target decision]."
+[关键特征]: 双辖区立法事实递进制造趋势能量但不引用任何统计数字；用 "has long been curious" 将学界好奇心与政策合法性捆绑；"as we do here" 自标记 departure point
+[适用]: 监管/立法冲击引出的治理构念研究；Incompleteness×Boundary 组合；M&SOM/OS 类运营期刊低能量开场
+[禁忌]: 无数字冲击类事实不足以支撑高能量 Gap；勿用于 Incommensurability
+**原文锚定**: "On September 30, 2018, California became the first state to require all public companies headquartered in the state to have at least one female director on their board... The European Commission goes further by mandating that European companies have at least 40% of their corporate board members be female."
+**来源**: wowak_2020_female_directors_recalls (M&SOM), P1
+
 ## 组装规则
 
 ### 必须配对

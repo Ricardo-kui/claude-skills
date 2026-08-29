@@ -197,3 +197,53 @@ The researchers note, '[quote establishing importance]' and caution that
 - 最佳用法是与一个学术案例并置（如 McKinsey 报告 + Haspeslagh & Jemison 钢铁案例），形成 practitioner+academic 双源 warrant
 
 **反模式**: 用 practitioner 引语代替机制推演（"McKinsey says integration is hard. Therefore H1."）；或引用无样本规模的单一专家观点。
+
+
+### 变体 A：非事件访谈证据（Interview Non-Event Warrant，ball_2018 型）
+**band**: quiet偏薄弱（single_source_verified；用户裁决单源可写）
+**适用场景**: 双边论证中"未发生行为"的一侧无公共记录（召回未发生、违规未披露、退出未执行），无法用档案案例实例化。
+**骨架**:
+Identifying actual examples of [high-discretion non-events] is more challenging, as these events are not in the public domain because [they did not occur]. As such, we spoke with a [role] at a [firm type]. The manager chronicled several [non-event] scenarios that [did not occur although guidelines required action]. We describe two such examples. In one instance, [concrete violation detail]... [decision makers] jointly opted to [not act] because [mitigating detail].
+**配套动作**: 访谈实例后接一条"按官方标准本应行动"的对照句（"the FDA clearly stipulates a recall in both of these situations"），把非事件钉在客观标准上，再抛出研究问题（"why would management not recall?"）作为调节机制的入口。
+**原文锚点**: "As such, we spoke with a manufacturing manager at a large, publicly traded, FDA regulated firm. The manager chronicled several product problem scenarios that did not result in recalls"
+**诚实边界**: 标注样本量（n=1 访谈）；访谈实例是 warrant 不是数据，不得在 Results 中当证据用。
+
+
+## Pattern: Paired Opposite-Default Interview Vignettes（反向默认对偶访谈轶事）
+
+**验证状态**: VERIFIED（expert_audit_override 2026-08-28：产品召回为主研究领域，单源足矣）
+
+**适用场景**: 需要用一手证据证明 (a) 决策裁量空间真实存在 且 (b) 上游主体确实通过默认期望塑造下游决策——但无法观测全部决策过程时。两个具名职务的访谈人 + 两个相反默认，合成"离散谱系"证据。
+
+**结构**: Informant A（决策聚焦客户伤害 + 3 天举证期 + 默认召回）→ 归因上游（"This expectation... was established by the firm's board"）→ Informant B（Conversely；举证责任反转 + cost-benefit 优先）→ 归因上游（"driven by the board"）→ 具体激励轶事（board-approved bonus tied to no-recall objective）→ 第三方监管者访谈验证离散普遍性
+
+**骨架**:
+```
+The [role A] mentioned that, at [her] firm, the [decision] focuses keenly on [stake].
+[Committee] are only allowed [N days] to prove that [action] is not warranted...
+The default at this firm is to [act] and to do so quickly. This expectation... was
+established by the firm's [upstream actor]. In fact, it is [focal attribute members]
+... who are particularly concerned with [stake]... This line of questioning sets the
+tone for how [decisions] are made at this firm.
+
+Conversely, the [role B] we spoke with indicated that, at his firm, the default is
+the opposite. There, [committee] have the burden of proving that [action] is absolutely
+necessary... This [alternative prioritization] is driven by the [upstream actor].
+[Concrete incentive anecdote]. In other words, the tone set by this [upstream actor]
+is to [opposite behavior].
+
+Finally, our interview with [third-party validator] validated that divergence... is
+very common. [Institutional reasons why discretion persists].
+```
+
+**为什么有效**: 反向默认构成自然最小对照：同一制度框架下两个极端默认并存，既证明裁量真实，又把默认的成因精确归因到上游主体；第三方监管者访谈把"离散普遍"从轶事升格为结构性事实。
+
+**注意事项**:
+- 两个 vignette 的结构必须对称（举证责任、时间窗、优先级逐项相反）
+- 每个默认都要显式归因上游（不能只说"firm culture"）
+- 需要第三个独立信源验证离散不是特例
+- 引述须可追溯（职务+行业+匿名化声明），不得虚构
+
+**反模式**: 只用一个正面案例（无对照即无离散证明）；轶事与后续假设的机制层次脱钩。
+
+**原文锚点**: "The default at this firm is to recall and to do so quickly. This expectation for quick and deliberate action prioritizing customer safety was established by the firm's board."

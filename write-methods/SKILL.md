@@ -99,7 +99,7 @@ whenToUse: "Use when 用户要写管理学顶刊论文的 Methods 部分，包�
 | M9 | `references/slot-M9.md` | 仅多研究设计 | 非多研究 |
 | M10 | `references/slot-M10.md` | 通常省略（顶刊 <10%） | 默认跳过 |
 
-3. **设计类型变体（飞轮积累，勿漏读）**：确定 design type 后先查 `econometric-models/INDEX.md` 的「设计类型索引表」确认变体数；变体数 >0 → **必须加载 `econometric-models/[设计类型].md`**（先读顶部「变体速查表」——按槽位+验证状态定位候选：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体，再精读对应变体正文）。变体数 = 0 的类型仅用 slot 主骨架。
+3. **设计类型变体（飞轮积累，勿漏读）**：确定 design type 后先查 `econometric-models/INDEX.md` 的「设计类型索引表」确认变体数；变体数 >0 → **必须加载 `econometric-models/[设计类型].md`**（先读顶部「变体速查表」——按槽位+验证状态定位候选（2026-08-29 统一三档词表，与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀；召回主题条目按用户裁决单源 VERIFIED），再精读对应变体正文）。变体数 = 0 的类型仅用 slot 主骨架。
 
 **完成判据**：设计类型 + 槽位序列已定（含分支调整理由）；slot 与设计类型变体已加载。
 

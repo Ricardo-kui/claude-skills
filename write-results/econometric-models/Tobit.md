@@ -12,7 +12,7 @@ updated: 2026-08-12
 
 ## 变体速查表
 
-> 检索辅助。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架与诚实边界见下方变体正文。
+> 检索辅助。状态词表（与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀）；LEGACY-DIAGNOSTIC 保留（工具诊断类）；召回主题条目按用户 2026-08-29 裁决单源 VERIFIED。完整骨架与诚实边界见下方变体正文。
 
 ### 槽位分布
 
@@ -24,7 +24,7 @@ updated: 2026-08-12
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 1 | Tobit 左删失 DV 条件幅度四拍 + 实际重要性拍5 | 左删失连续 DV（corner-solution）主效应：方向→系数+p→条件幅度（among units that engage in at least some activity）→支持 + 外部文献锚定实际重要性 | 与计数 IRR+AME 双轨、OLS 标准四拍的区别——拍3 必须限定删失条件期望（conditional on participation），拍5 用外部证据证明小变化重要 | 待交叉 | Ridge et al. 2024 AMJ |
+| 1 | Tobit 左删失 DV 条件幅度四拍 + 实际重要性拍5 | 左删失连续 DV（corner-solution）主效应：方向→系数+p→条件幅度（among units that engage in at least some activity）→支持 + 外部文献锚定实际重要性 | 与计数 IRR+AME 双轨、OLS 标准四拍的区别——拍3 必须限定删失条件期望（conditional on participation），拍5 用外部证据证明小变化重要 | EMERGING | Ridge et al. 2024 AMJ |
 
 ## 主骨架
 
@@ -42,7 +42,7 @@ updated: 2026-08-12
 ### 变体 1: Tobit 左删失 DV 条件幅度四拍 — 条件幅度 + 实际重要性拍5 (1篇高价值)
 **来源论文**: Ridge, Kim, Ingram & Lee 2024 (Academy of Management Journal)
 **原始句锚点**: "Lobbying breadth is left-censored since not all firms engage in lobbying activity, and thus we use a Tobit analysis for this dependent variable. ... as CEO paranoia increases from the mean to one standard deviation (i.e., +1 SD) above the mean, the firm exhibits approximately a 7% decrease in lobbying breadth among firms that engage in at least some lobbying activity."
-**验证状态**: 待第二篇交叉验证（EMERGING / 单篇 section_variant）
+**验证状态**: EMERGING（单篇 section_variant）
 **写入日期**: 2026-08-12
 **槽位**: R3
 **骨架**:

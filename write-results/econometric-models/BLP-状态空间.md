@@ -11,7 +11,7 @@ updated: 2026-08-05
 
 ## 变体速查表
 
-> 检索辅助。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架与诚实边界见下方变体正文。
+> 检索辅助。状态词表（与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀）；LEGACY-DIAGNOSTIC 保留（工具诊断类）；召回主题条目按用户 2026-08-29 裁决单源 VERIFIED。完整骨架与诚实边界见下方变体正文。
 
 ### 槽位分布
 
@@ -25,21 +25,21 @@ updated: 2026-08-05
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 1 | GMM 嵌套模型比较（MMSC-AIC 逐步升级） | BLP/GMM 结构模型以嵌套模型逐步比较 + GMM 专用信息准则证立各机制通道必要性 | 区别于 OLS "加控制变量"式表导航——每步比较对应一个理论机制 | 待交叉 | Liu & Shankar 2015 (MS) |
+| 1 | GMM 嵌套模型比较（MMSC-AIC 逐步升级） | BLP/GMM 结构模型以嵌套模型逐步比较 + GMM 专用信息准则证立各机制通道必要性 | 区别于 OLS "加控制变量"式表导航——每步比较对应一个理论机制 | VERIFIED | Liu & Shankar 2015 (MS) |
 
 ### R3（2）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 2 | 研究问题驱动的状态空间参数解读（initial + σ → recovered path → 理论） | Kalman/状态空间 recovered 参数按研究问题分块解读：方程提醒→initial 显著性→σ 诊断→分特征实质解读→通道级结论 | 区别于静态 β 解读四拍——结构专用五拍，用 σ 诊断决定路径是否时变 | 待交叉 | Liu & Shankar 2015 (MS) |
-| 3 | 双层级间接通道与品牌强度异质性（nameplate vs parent; strong vs weak） | 时变有效性间接通道的层级对比（nameplate vs parent）+ 品牌强度异质性 + 内生性诊断同块完成（槽位 R3 续：间接/溢出块） | 区别于变体 2 的直接通道解读——同块完成层级+异质性+内生性确认，避免拆成多个假设段落 | 待交叉 | Liu & Shankar 2015 (MS) |
+| 2 | 研究问题驱动的状态空间参数解读（initial + σ → recovered path → 理论） | Kalman/状态空间 recovered 参数按研究问题分块解读：方程提醒→initial 显著性→σ 诊断→分特征实质解读→通道级结论 | 区别于静态 β 解读四拍——结构专用五拍，用 σ 诊断决定路径是否时变 | VERIFIED | Liu & Shankar 2015 (MS) |
+| 3 | 双层级间接通道与品牌强度异质性（nameplate vs parent; strong vs weak） | 时变有效性间接通道的层级对比（nameplate vs parent）+ 品牌强度异质性 + 内生性诊断同块完成（槽位 R3 续：间接/溢出块） | 区别于变体 2 的直接通道解读——同块完成层级+异质性+内生性确认，避免拆成多个假设段落 | VERIFIED | Liu & Shankar 2015 (MS) |
 
 ### R8（2）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 4 | 反事实拟合验证 + 多通道长期损失分解 | 结构反事实模拟（with vs without shock）在估计/验证双样本拟合 + short vs long-term 损失四通道分解 | 区别于 SEM 式 direct/indirect 分解——结构反事实模拟分解，强制双样本与跨案例交叉叙事 | 待交叉 | Liu & Shankar 2015 (MS) |
-| 5 | 非最优性政策模拟（scenario ladder + 验证期 what-if） | 管理含义政策模拟：非最优性声明（区别 BLP 供给面）+ 预算再分配 scenario ladder + 验证期应用 + 幅度翻译 | 区别于变体 4 的反事实拟合验证——以估计参数做 what-if 模拟，明确非均衡反事实边界 | 待交叉 | Liu & Shankar 2015 (MS) |
+| 4 | 反事实拟合验证 + 多通道长期损失分解 | 结构反事实模拟（with vs without shock）在估计/验证双样本拟合 + short vs long-term 损失四通道分解 | 区别于 SEM 式 direct/indirect 分解——结构反事实模拟分解，强制双样本与跨案例交叉叙事 | VERIFIED | Liu & Shankar 2015 (MS) |
+| 5 | 非最优性政策模拟（scenario ladder + 验证期 what-if） | 管理含义政策模拟：非最优性声明（区别 BLP 供给面）+ 预算再分配 scenario ladder + 验证期应用 + 幅度翻译 | 区别于变体 4 的反事实拟合验证——以估计参数做 what-if 模拟，明确非均衡反事实边界 | VERIFIED | Liu & Shankar 2015 (MS) |
 
 
 ## 主骨架

@@ -14,14 +14,14 @@ updated: 2026-08-12
 
 ## 变体速查表
 
-> 检索辅助。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架与诚实边界见下方变体正文。
+> 检索辅助。状态词表（与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀）；LEGACY-DIAGNOSTIC 保留（工具诊断类）；召回主题条目按用户 2026-08-29 裁决单源 VERIFIED。完整骨架与诚实边界见下方变体正文。
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 1 | CEM 五步论证链（主分析版本） | 匹配作为主识别流程、需完整五步论证（目标与威胁→方法原理→协变量选择→匹配结果→平衡检验）时（槽位 M8/M2） | — | 通过（2/4 复现） | Darby2026 JOM / Darby2023 MSOM |
-| 2 | CEM 作为外生冲击的稳健性验证 | 匹配作为稳健性检验、处理变量是外生冲击（如 CEO 变更）而非内生变量本身时（槽位 M8） | 与变体 1 的关键区别：处理变量是外生冲击；关键时点规则确保 treatment exposure 完整；CEM 出现在稳健性而非主分析 | 可选 | Darby2023 MSOM |
-| 3 | Entropy Balancing (EBM) — 重加权、保留全部观测 | 处理组样本稀少需保留全部观测（CEM/PSM 丢弃后效力不足）、或需维持生存分析事件历史结构时（槽位 M8） | 与变体 1（CEM 五步链）区别：不丢观测，对控制组重加权使其协变量矩匹配处理组 | 通过（单篇） | Qiao, Hiatt & Sine 2026 SMJ |
-| 4 | CEM 确认性复制 — 内生焦点变量自身作处理，匹配后重估同估计器 | 主估计器已用工具变量处理内生性，CEM 作为匹配后重估的确认性敏感性分析（槽位 M8） | 与变体 1/2 区别：处理=内生焦点变量本身（非外生冲击），且匹配后重估**同一估计器**；属确认性分析而非主识别 | 待交叉 | Fini et al. 2017 (AMJ) |
+| 1 | CEM 五步论证链（主分析版本） | 匹配作为主识别流程、需完整五步论证（目标与威胁→方法原理→协变量选择→匹配结果→平衡检验）时（槽位 M8/M2） | — | VERIFIED | Darby2026 JOM / Darby2023 MSOM |
+| 2 | CEM 作为外生冲击的稳健性验证 | 匹配作为稳健性检验、处理变量是外生冲击（如 CEO 变更）而非内生变量本身时（槽位 M8） | 与变体 1 的关键区别：处理变量是外生冲击；关键时点规则确保 treatment exposure 完整；CEM 出现在稳健性而非主分析 | VERIFIED | Darby2023 MSOM |
+| 3 | Entropy Balancing (EBM) — 重加权、保留全部观测 | 处理组样本稀少需保留全部观测（CEM/PSM 丢弃后效力不足）、或需维持生存分析事件历史结构时（槽位 M8） | 与变体 1（CEM 五步链）区别：不丢观测，对控制组重加权使其协变量矩匹配处理组 | EMERGING | Qiao, Hiatt & Sine 2026 SMJ |
+| 4 | CEM 确认性复制 — 内生焦点变量自身作处理，匹配后重估同估计器 | 主估计器已用工具变量处理内生性，CEM 作为匹配后重估的确认性敏感性分析（槽位 M8） | 与变体 1/2 区别：处理=内生焦点变量本身（非外生冲击），且匹配后重估**同一估计器**；属确认性分析而非主识别 | EMERGING | Fini et al. 2017 (AMJ) |
 
 
 ## 主骨架
@@ -41,7 +41,7 @@ updated: 2026-08-12
 ### 变体 1: CEM 五步论证链 (主分析版本)
 **来源论文**: Darby2026 JOM / Darby2023 MSOM
 **原始句锚点**: While AFT models account for the fact that the likelihood of an event (i.e., a recall) changes with the passage of time due to underlying factors (Bhattacharjee et al. 2007), they may not account for characteristics that influence a firm’s ownership stakes and the time-to-recall. To address concerns related to selection on observable characteristics, we first processed our data using CEM (Yılmaz et al. 2024).
-**验证状态**: 通过 (2/4 复现)
+**验证状态**: VERIFIED（2/4 复现）
 **写入日期**: 2026-05-19
 **更新日期**: 2026-05-20 (新增 Darby2023 MSOM 复现)
 **槽位**: M8 / M2
@@ -60,7 +60,7 @@ updated: 2026-08-12
 ### 变体 2: CEM 作为外生冲击的稳健性验证
 **来源论文**: Darby2023 MSOM
 **原始句锚点**: We address this endogeneity concern by exploiting an exogenous shock in our data—a change in a firm’s CEO. A change in the CEO is an exogenous shock to the amount of stock owned by a CEO, contingent upon one key criterion: Past recalls should not predict the likelihood of the previous CEO’s departure.
-**验证状态**: 可选变体 (1/4，将CEM置于稳健性检验的新位置)
+**验证状态**: VERIFIED (1/4，将CEM置于稳健性检验的新位置)
 **写入日期**: 2026-05-20
 **槽位**: M8
 **骨架**:
@@ -74,7 +74,7 @@ updated: 2026-08-12
 ### 变体 3: Entropy Balancing (EBM) — 重加权、保留全部观测 (1篇高价值)
 **来源论文**: Qiao, Hiatt & Sine 2026 (SMJ)
 **原始句锚点**: Table S2 shows the covariate balancing results after EBM: after matching, the differences of all control variables, in terms of their means, between the treatment and control groups become negligible. These results suggest that the treatment we have can be seen as random to the extent that we have ruled out selection on these observable variables.
-**验证状态**: 通过 (单篇高价值，EBM 区别于 CEM/PSM 的关键卖点论证清晰)
+**验证状态**: EMERGING（单篇高价值，EBM 区别于 CEM/PSM 的关键卖点论证清晰）
 **写入日期**: 2026-06-16
 **槽位**: M8
 **骨架**:
@@ -87,7 +87,7 @@ updated: 2026-08-12
 
 **原始句锚点**: "In order to further rule out alternative explanations, such as variations in peer evaluation as a result of scientists' unobserved abilities and interests rather than changes in their industry evaluation, we resort to a matching procedure... We then re-estimate Poisson models using the same specifications employed for the full sample analysis."
 
-**验证状态**: 待第二篇交叉验证
+**验证状态**: EMERGING
 
 **写入日期**: 2026-08-12
 

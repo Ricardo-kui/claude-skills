@@ -49,11 +49,11 @@
 
 ## 变体速查表
 
-> 检索辅助（2026-08-09 P0 补建）。状态词表：通过（N/5 复现）> 通过（双篇/专家审计）> 通过（单篇）> 待第二篇交叉验证 > 可选变体。完整骨架、适用条件与诚实边界见下方变体正文。
+> 检索辅助（2026-08-09 P0 补建）。状态词表（2026-08-29 统一，与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀）；LEGACY-DIAGNOSTIC 保留（工具诊断类）；召回主题条目按用户 2026-08-29 裁决单源 VERIFIED。完整骨架、适用条件与诚实边界见下方变体正文。
 
 | # | 变体 | 家族 | 适用场景 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| E1 | 同层调节（7 步协议） | 基础协议 | 核心贡献是识别 boundary condition、qualify 已有关系；X→Y 基线机制+moderator 理论选择+机制修改推演 | 通过（双篇/专家审计） | Andersson et al. 2014 JIBS; Pollock 2025 Ch06 |
+| E1 | 同层调节（7 步协议） | 基础协议 | 核心贡献是识别 boundary condition、qualify 已有关系；X→Y 基线机制+moderator 理论选择+机制修改推演 | VERIFIED | Andersson et al. 2014 JIBS; Pollock 2025 Ch06 |
 | E2 | 跨层调节 (Cross-Level Moderation) — 9 步协议 | 基础协议 | focal unit 嵌套声明+跨层机制推演+排除反向交互 |  |  |
 | E3 | 嵌入型边界条件（Embedded Boundary Conditions，kalai |  | moderator 数量较多（≥3 个）且每个 moderator 有独立理论依据，独立 T |  |  |
 | E4 | 竞争基线 → 调节裁决（Competing Baseline → Moderatio |  | 同一理论框架预测了两个（或多个）相反/竞争的响应，研究贡献是用 moderator 决定"何 |  |  |
@@ -689,6 +689,16 @@ H2b. The negative relationship between [IV] and [DV] is weaker when the [target]
 
 ---
 
+
+### 变体 A：制度身份锚定型 IV 测量（Institutional-Regime Construct Anchor，ball_2018 型）
+**band**: 薄弱（single_source_verified；用户裁决单源可写）
+**适用场景**: IV 是抽象构念（如竞争强度、监管压力），但行业存在制度性二分类（审批路径/监管身份/牌照类型）可作为构念的组间测量锚。
+**骨架**:
+This study rests on the premise that [regime A] faces less [IV] than [regime B]. This is reasonable because [regulatory fact about regime A]... In contrast, [regime B] must [requirement], which implies [direct exposure]. This is precisely the reason why [approval pathway] was developed: to enhance [IV]. Thus, the more [regime B exposure] a firm holds, the greater [IV] the firm faces.
+**机制步骤**: ①制度事实建立两类身份的暴露差异 → ②指出制度设计意图本身即构念的效度证据 → ③汇总到可测代理（组合占比）。
+**原文锚点**: "This is precisely the reason why the ANDA product approval method was developed: to enhance product competition in the marketplace."
+**风险**: 需在 Methods 中说明制度分类与构念的对应；不得用制度标签替代构念定义本身。
+
 ## E10. 跨学科分类框架驱动的 N 平行缓解调节（Taxonomy-Driven N-Parallel Penalty-Mitigation Moderators，Cutolo–Ferriani 2024 型）
 
 **验证状态**: EMERGING（单篇来源；仅作 `section_variant`）。story_fidelity: section_role=rising_action; knot_relation=tie（H1 文献基线把惩罚 knot 钉死，H2-H4 是解药机制）; character_effect=supports（三调节=配角群，统一框架让配角成建制登场）; pacing_effect=improves（三小节平行结构 + 最小对比对给机制以具体形象）; classification=section_variant。
@@ -802,3 +812,13 @@ H2: There will be a [positive/negative] interaction effect of [trait] and [cue] 
 - `corpus/sentences/mechanism_chain.md`（Threat-Processing Cascade：扫描→归因→安全行为 的认知链）
 - `corpus/subprotocols/bilateral_argumentation_templates.md`（cue/activation 条件化 carve-out：双边覆盖由主效应基线 + high 态满足）
 - 上游联动: `write-introduction/academic-writing-corpus/theory-lens/`（upper echelons 透镜在 Intro 预告特质→行为，Theory 兑现默认表现型→cue 切换）
+
+
+### 变体 B：事件属性切分的双边调节对（Event-Attribute Split Bilateral Moderation Pair，ball_2018 型）
+**band**: quiet偏薄弱（single_source_verified；用户裁决单源可写）
+**适用场景**: moderator 是决策自由裁量类构念，而自由裁量不可直接观测——用 DV 事件自身的属性（严重度/明显性/客观性）作为其代理，切成一对异号交互假设。
+**骨架**:
+[Moderator] is operationalized via [attribute of the DV event itself]: [high-attribute events] are [low-discretion] because [severity forces the decision], so [H_a: the X–Y relationship is stronger for this stratum]; [low-attribute events] are [high-discretion] because [concealment is viable and the IV magnifies penalties for acting], so [H_b: the relationship is weaker for this stratum].
+**前置铺垫**: 先用真实极端案例实例化低裁量侧，再用访谈非事件实例化高裁量侧（配合"非事件访谈证据"变体），两侧证据类型不对称但功能对称。
+**原文锚点**: "the relationship should be even stronger for low discretion, high severity recalls"
+**风险**: 属性→裁量的等同必须给论证（严重度高→外部压力强制行动），否则审稿人质疑 moderator 与 DV 的概念循环（ball_2018 自身弱点：仅断言未论证，模仿时补上推导步）。

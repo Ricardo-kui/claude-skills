@@ -396,7 +396,7 @@ source: chenganesanliu2009
 confidence: medium
 status: EMERGING
 story_fidelity: section_variant
-note: 待第二篇交叉验证；勿升格为完整 G（成对受众假设）
+note: VERIFIED（expert_audit_override 2026-08-29 召回主题单源裁决，chenganesanliu2009 = 召回策略→财务价值）；勿升格为完整 G（成对受众假设）
 -->
 
 ## Pattern: Audience-Foil then Focal-Signal (Single Comparative H)
@@ -458,3 +458,148 @@ and is interpreted as a signal of [severe downside], so [DV_B] is affected more 
 > "However, it can be argued that [treatment] is likely to [opposite-signed prediction] because [rival mechanism]. Consistent with this logic, research finds that [supporting evidence for rival]. However, this is unlikely to be the case because [superordinate premise / salience hierarchy]. In fact, research consistently finds that [evidence for superordinate premise]. Therefore, we expect [directional main-effect prediction]."
 
 来源：Moon et al. (2026, Journal of Marketing)。
+
+
+### 变体 B：反预测排除段（Counter-Prediction Exclusion before H1，ball_2018 型）
+**band**: 薄弱（single_source_verified；用户裁决单源可写）
+**适用场景**: 主效应方向与直觉相反（或文献中存在相反预测）时，在假设句之前用专门段落排除反方向。
+**骨架**:
+One potential response to [IV] may be [opposite-direction mechanism]. However, we believe that this is less likely in our setting for two reasons. First, [prerequisite for the opposite mechanism is absent, with evidence]. Second, [cost/structural reason the opposite is suboptimal]. We therefore posit that instead of [opposite outcome], [IV] will be associated with [predicted direction].
+**论证功能**: 把"为什么不是直觉方向"变成两步式排除（前提缺失 + 结构不经济），而非简单断言；与 rival_prediction_rebuttal 的差异在于它排除的是"同一 IV 的反方向机制"，而非 rival 理论。
+**原文锚点**: "One potential response to heightened product competition may be to manufacture higher quality products. However, we believe that this is less likely in our setting for two reasons."
+**配套证据型**: 排除理由需至少一条有实证 citation 支撑，不得全靠断言。
+
+
+## Pattern: Decision-Rights Preamble → Indirect-Governance Chain（决策权前言→间接治理链）
+
+**适用场景**: 上游治理主体（董事会/投资者/监管者）不直接执行 focal decision，而是通过周期性评审、反馈与默认期望影响下游决策者。在理论化上游主体属性之前，必须先用制度过程描述定位其影响入口——否则读者会把 X→Y 误读为直接干预。适用于间接治理、tone-setting、委托链条研究。
+
+**结构**: 四源证据基础声明（文献+监管文件+业界访谈+监管者访谈）→ 决策权链条（谁监测→谁审议→谁建议→谁决定→谁评审）→ 上游主体角色定位（"不决定，但设定基调"）→ 反向默认对照的访谈轶事（见 paired_opposite_default_vignettes）→ 链条与后续两假设边际的对接
+
+**完整决策链实录（wowak2020 §2，写作时按此粒度写足）**:
+1. **监测**：product quality engineers 持续监测质量问题信号——内部（product testing / inspection results）+ 外部（customer / regulator complaints）
+2. **召集**：系统性问题确认后，product quality manager 召集 managerial recall committee（manufacturing, R&D, quality, legal, clinical, regulatory 六职能 senior directors/managers）
+3. **建议**：委员会讨论"是否需要召回"，向相应 VP 提出建议——通常由 VP of quality 做出最终召回决策
+4. **评审**：VP of quality 周期性地把**已发起与未发起**的召回决策一并呈报董事会评审，董事会提供反馈与校准（feedback and calibration）
+5. **角色定位**："boards do not make the recall decisions, but instead they set the tone and expectations for how managers are to make these decisions"——董事会不决定个案，管理层在董事会设定的默认期望下行使裁量
+6. **默认期望的两端实证**（firm A）：3 天举证期内证明"无需召回"否则强制召回，默认=快而果断、客户安全优先，该期望由董事会确立，女性董事尤其追问客户伤害程度、其质询定调决策方式
+7. **反向默认实证**（firm B）：举证责任反转（委员会须证明"召回绝对必要"否则不召回）、cost-benefit 优先于客户安全、该优先级由董事会驱动、男性董事追问"谁会被开除多快"、有经理的 board-approved 年度奖金（上限 $30,000 ≈ 年薪 25%）与"零召回"目标挂钩
+8. **第三方验证**：FDA 高级主任确认此类离散普遍存在——FDA 人力资源有限 + 缺乏企业专有产品级失效数据，只能依赖企业自行决定召回时机与方式
+9. **对接假设**：rule-following 期望作用于低严重度边际（是否发起，H1 计数）；stakeholder responsiveness 期望作用于高严重度边际（多快发起，H2 时长）——同一链条、两个决策窗口
+
+**骨架**:
+```
+To articulate our hypothesized relationships, we first explain how [decision] is made.
+[Evidence base: (1) literature; (2) regulator documents; (3) practitioner interviews; (4) regulator interview.]
+
+[Decision-rights chain]
+[Front-line actor] continuously monitors [signal sources]. When [trigger], [convening actor] convenes
+[committee], tasked with discussing whether [action] is needed and making a recommendation to
+[ultimate decision-maker]. On a recurring basis, [decision-maker] reviews [initiated and uninitiated
+cases] with [upstream governor] so the board can provide feedback and calibration.
+
+[Upstream role locution]
+In other words, [upstream governor] does not make the [decision], but instead they set the tone
+and expectations for how [downstream actors] are to make these decisions.
+```
+
+**为什么有效**: 在任何假设之前把"谁能决定什么"说清楚，使 X（上游主体属性）的作用点落在"期望设定"而非"直接命令"上；后续两个假设共享同一条间接链，机制不出层次。
+
+**注意事项**:
+- 必须有可核验的多源证据基础（本文用 4 源），否则制度过程描述会被视为臆测
+- 决策权链条每一步都要有具名行动者（monitor→committee→VP→board）
+- 上游角色句必须显式否定直接干预（"do not make... but instead..."）
+
+**反模式**: 制度前言写成行业背景流水账；上游主体被默认写成直接决策者。
+
+**与近邻模式区分**: vs minimal_pair_contrast_vignette（Cutolo & Ferriani）——那是 controlled-contrast 案例装置；本模式是决策权架构描述，案例对照由其后的轶事对完成。
+
+**原文锚点**: "In other words, boards do not make the recall decisions, but instead they set the tone and expectations for how managers are to make these decisions."
+
+
+### 变体 C：判别式替代解释排除（westphal_zajac_1998_symbolic_management 型）
+
+**模板**:
+> "We test whether [audience reactions] to [verbal accounts] reflect [actual organizational practices] by examining [reactions] when [X] is announced and implemented and when [X] is announced but not implemented. Observing [the predicted reaction] even when [adoption] is decoupled from [implementation] would provide stronger evidence that [the communication] represents [symbolic management] and not merely [rational communication or persuasion] (cf. [prior account])."
+
+**来源**: westphal_zajac_1998_symbolic_management (ASQ), §2.2 P4
+
+**原文锚定**:
+> "Observing a positive market reaction to agency explanations even when LTIP adoption is decoupled from actual implementation would provide stronger evidence that verbal enhancement in proxy statements represents symbolic management and not merely rational communication or persuasion (cf. Porter, Allen, and Angle, 1981)."
+
+**关键特征**:
+- 把最强替代解释（语言属实/理性说服）直接转化为设计的判别条件：decoupling 子样本即"语言与事实不符仍获正面反应"的自然实验——排除动作不是脚注而是假设检验本身
+- "would provide stronger evidence that X represents A and not merely B" 的"更强证据"措辞承认解释的或然性，比"proves"式排除更诚实且更难被攻击
+- 与引言的 Inadequacy 次级 gap（"have not been able to rule out the possibility that language enhancements may actually fit the facts"）首尾闭环：Introduction 承认的排除不能，正文以设计兑现
+
+**适用**: 符号/沟通/印象管理类自变量与"事实是否相符"存在天然混淆的研究；Inadequacy 型 gap（无法排除替代解释）承诺的正文兑现
+
+**禁忌**: 判别条件必须在 Methods 真正可实现（本篇: 采纳未实施子样本），不能只作修辞假设；"not merely" 后的替代解释必须是文献中最强而非最弱的版本
+
+**验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
+
+
+### 变体 D：两极之间的假设声明段（westphal_zajac_1998_symbolic_management 型）
+
+**模板**:
+> "While we do not assume [strong-form extreme assumption], we also do not assume that [the system] is [irrational]. Rather, we assume that [audience members] are [intendedly but boundedly rational processors] who are interested in reducing [uncertainty] and therefore value [socially legitimate indications] that [the core problem] is being addressed."
+
+**来源**: westphal_zajac_1998_symbolic_management (ASQ), §2.1 P7
+
+**原文锚定**:
+> "While we do not assume strong-form market efficiency, we also do not assume that markets are irrational. Rather, we assume that investors are intendedly but boundedly rational information processors who are interested in reducing uncertainty and therefore value socially legitimate indications that agency problems are being addressed."
+
+**关键特征**:
+- 在机制链中段（非文首）插入假设声明：双向否定两个极端（强式有效 vs 非理性），再用 "Rather, we assume" 给出中间立场——一次化解"你不信市场有效?"的双向审稿质疑
+- 假设内容直接服务于机制（"interested in reducing uncertainty" 正是符号行动起效的心理前提），假设段即机制段而非免责声明
+- "intendedly but boundedly" 的让步式限定把有限理性与 March/Simon 传统对齐，借用行为学派权威为符号机制供合法性
+
+**适用**: 机制依赖"受众有限理性/信息处理约束"的理论；预测与主流有效市场或完全理性预设冲突、需中间立场假设的研究
+
+**禁忌**: 两个被否定的极端必须真实对应文献中的对立阵营，不能立稻草人；假设声明应位于首次被需要的机制步骤之前，过晚则机制已带漏洞运行
+
+**验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
+
+
+
+### 模式 E：同果近邻构念反号辨析型（westphal_bednar2005 型）
+
+**模板**:
+> "The literature ... clearly distinguishes [focal construct] from [rival construct], a mode of [shared failure] that has received more attention in the [home] literature. Though both may lead to [shared outcome], the determinants of each are distinct. [Shared factor W] is thought to exacerbate [rival], but our theoretical perspective suggests that [W] actually attenuates [focal construct]. With [rival], [actors] fail because [mechanism A]. With [focal construct], [actors] fail because [mechanism B], and these [biases] are enhanced by [low W]."
+
+**来源**: westphal_bednar2005 (ASQ), Theory P13（小节收束段）
+
+**原文锚定**:
+> "Social cohesion among group members is thought to exacerbate the presence of groupthink, but our theoretical perspective suggests that social cohesion from friendship ties and demographic homogeneity actually attenuates pluralistic ignorance."
+> "With groupthink, groups persist with failing strategies because ... With pluralistic ignorance, groups persist ... because individual members misperceive each other's beliefs"
+
+**关键特征**:
+- 辨析的不是定义而是"同一结局、不同机制、同一调节变量反号"——W（凝聚力）加剧 groupthink 但削弱 PI，反号本身就是区分度的证明
+- "a mode of [failure] that has received more attention" 承认对手更知名，把自己定位为更精确的机制而非更大名气，姿态克制
+- "With [rival], ... because A. With [focal], ... because B." 平行句式让两个机制逐步对照，最后半句用反号条件（enhanced by low W）钉死区分
+- 放在小节末尾作收束：先讲完自己的假设再与近邻构念切割，避免开场就陷入概念辩护
+
+**适用**: 引入的构念与某个更知名构念共享结果变量（决策失败、绩效下滑）时的辨析段；调节变量在两个构念中方向相反的对照性研究
+
+**禁忌**: 反号主张必须与前文对 W 的论证一致（本篇前文确实论证了凝聚力降低 PI），临时反转会自相矛盾；对手机制必须以其最强形式陈述，不得偷换成稻草人
+
+### 模式 F：机制前提→情境放大映射型（westphal_bednar2005 型）
+
+**模板**:
+> "Though [construct] has been observed in a variety of contexts ([citations]), it may be particularly likely to occur among [focal actors] in [setting]. On one level, [precondition 1: dissent的社会风险] exists because [setting feature] ([citations]). Thus [focal actors] are hesitant to [voice]. [In particular], [precondition 2: 难以发现共同关切] because [setting feature]. At the same time, [precondition 3: 相互可观察性] is high because [setting feature]. [Observing others' inaction] leads to the biased pattern of attributions noted above, resulting in [construct]."
+
+**来源**: westphal_bednar2005 (ASQ), Theory P6
+
+**原文锚定**:
+> "Though pluralistic ignorance has been observed in a variety of contexts, it may be particularly likely to occur among outside directors on corporate boards."
+> "At the same time, the traditional board-room configuration results in a high level of mutual observability."
+
+**关键特征**:
+- 把机制的每个成立前提逐项映射到情境特征（风险前提→声誉约束与低凝聚力；发现前提→会外互动少；归因前提→会议室高可观察性），完成"一般构念→本情境必然发生"的焊接
+- "On one level... In particular... At the same time..." 分层标记词让三条前提各自独立成拍，读者可逐项核对
+- 结尾句回指前文已建立的归因机制（"the biased pattern of attributions noted above"），情境段不另起机制，只做接线
+- 与一般"context applies theory"段落的区别：不是给情境贴标签，而是证明情境恰好满足了机制的全部前提——每一项前提缺失都会削弱结论
+
+**适用**: 机制推演型论文在导入外来构念后、假设推导前的"情境适配段"；构念的成立前提可分解为 2-3 项可观察条件时
+
+**禁忌**: 前提映射必须穷尽机制的关键前提，只映射有利项会被质疑选择性适配；回指句必须真实回指前文机制，不得在情境段偷偷引入新机制

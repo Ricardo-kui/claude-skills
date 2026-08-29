@@ -119,6 +119,22 @@ source: Distilled by distill-introduction-exemplar from Hoffmann et al. 2024 JM;
 
 **禁忌**: 不要在没有"注意力从何处释放出来"的制度逻辑时单独使用 ABV——仅有"注意力稀缺"断言而无重定向来源会退化为装饰性理论引用
 
+
+### 变体 D：解决装置开路型（what_changes_after_women_enter_top_manage_2020 型）
+
+**模板**: The [邻近文献], which links [新任命] with [组织内变化] ([cites]), presents an opening for resolving these theoretical gaps and inconsistencies. "[核心构念]" refers to [定义] ([cites]). It is typically realized through one of two pathways: [路径A] (e.g., [实例]) or [路径B] (e.g., [实例]) ([cite]).
+
+**原文锚定**: "The strategic renewal literature, which links new executive TMT appointments with within-firm strategic change, presents an opening for resolving these theoretical gaps and inconsistencies. 'Strategic renewal' refers to the partial or full transformation of a firm's strategic capabilities ... It is typically realized through one of two pathways: capability buying ... or capability building"
+
+**关键特征**:
+- 用"presents an opening for resolving"把理论透镜显式标记为前文全部张力的解决装置——Lens 回应度在段首第一句即拉满
+- 构念定义后立刻接类型学（two pathways），让后续双路径模型在 Lens 段就获得自己的词汇；Definition→Typology→Model 三级供给
+- 一条邻近文献同时承担两个功能：修复 gap（解决装置）+ 供给术语（定义与路径），Lens 段即模型段
+
+**适用**: 前文已堆叠两重以上张力（open question + paradox）后引入整合性透镜；论文核心模型直接建在该文献的类型学（如 buying/building）之上时。
+
+**禁忌**: "resolving" 是强承诺——正文必须真的解决前文点名的每一重张力；类型学须是该文献内生的，不可拼贴外来二分。
+
 ## 组装规则
 
 ### 必须配对

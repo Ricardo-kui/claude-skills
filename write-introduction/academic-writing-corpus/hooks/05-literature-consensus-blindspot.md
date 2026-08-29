@@ -140,6 +140,22 @@ source: Manually curated from MVP30 narrative_analysis files
 
 ---
 
+
+### 变体 F：元分析效力枢转型（what_changes_after_women_enter_top_manage_2020 型）
+
+**模板**: [理论阵营] argue [共识主张] ([citations]). Supporting these ideas, meta-analyses reveal [正向关联—最显著的远端结局] ([meta-analyses]). Yet, these studies indicate that [核心自变量] explains just a fraction of variance in [远端结局] ([cite]), prompting scholars to theorize linkages between [X] and more proximal outcomes, such as [近端结局1] ([cite]), [近端结局2] ([cite]), or [近端结局3] ([cite]).
+
+**原文锚定**: "Supporting these ideas, meta-analyses reveal positive associations between female TMT representation and firm-level outcomes—most notably, firm financial performance ... Yet, these studies indicate that TMT composition explains just a fraction of variance in firm performance, prompting scholars to theorize linkages ... with more proximal organizational outcomes"
+
+**关键特征**:
+- 枢转依据是解释力的定量缺口（"just a fraction of variance"）而非修辞转折——用元分析证据为"降阶到近端结局"的合法性背书
+- 枢转后立刻给出"近端结局范例三元组"（各带引用），把新方向呈现为学界已在进行的群体运动，而非作者个人提议
+- 能量保持中档：不制造反例丑闻，靠"共识成立但解释力不够"推进；Hook 与 Literature Turn 融合在单段内完成
+
+**适用**: 领域已有元分析级共识但因变量远端（firm performance 类）时；Gap 主张在后续段落展开的 Incommensurability/Incompleteness 组合；AMJ/SMJ 风格。
+
+**禁忌**: 元分析引用须真实存在且确有解释力缺口，不可虚构"fraction of variance"；近端结局三元组必须是已发表研究。
+
 ## 组装规则
 
 ### 必须配对
