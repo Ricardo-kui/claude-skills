@@ -27,8 +27,8 @@ def load_config() -> dict:
 
 
 CONFIG = load_config()
-ZOTERO_DB = Path(CONFIG.get("zotero_db", r"C:\Users\admin\Zotero\zotero.sqlite"))
-ZOTERO_STORAGE = Path(CONFIG.get("zotero_storage", r"C:\Users\admin\Zotero\storage"))
+ZOTERO_DB = Path(CONFIG.get("zotero_db", r"D:\同步文件\文献库\zotero.sqlite"))
+ZOTERO_STORAGE = Path(CONFIG.get("zotero_storage", r"D:\同步文件\文献库\storage"))
 
 
 def source_mtime() -> float:

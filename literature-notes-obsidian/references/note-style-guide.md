@@ -1,14 +1,16 @@
 # Note Style Guide
 
-Use this reference to keep the note readable inside Obsidian.
+Use this reference to fill the evidence card (天堂模版). Section order is fixed: Quick View + §0–§9. AMJ Canvas questions live *inside* those sections; do not write a parallel seven-module body.
 
 ## Core Principle
 
-Prefer paragraphs over bullet dumps. Metadata can live in bullets or frontmatter, but the substance of the note should explain the paper's logic in prose.
+天堂模版提供结构（项目手递、识别库存、假设链编号）。AMJ Canvas 提供判断（puzzle 真伪、conversation、WHAT/HOW/WHY、earned contribution）。同一篇笔记里两者都要有，但只有一套 heading。
+
+Use the template's lists where it specifies lists. Use short analytical prose for Quick View, §3a, and each §3c causal chain.
 
 ## Language Strategy
 
-- Preserve original English terms for constructs, hypotheses, measures, and especially sharp quoted phrases.
+- Preserve original English terms for constructs, hypotheses, measures, and sharp quoted phrases.
 - Write the analytical explanation and judgment in Chinese unless the user asks otherwise.
 - Keep terminology accurate even when the surrounding analysis is bilingual.
 
@@ -16,37 +18,59 @@ Prefer paragraphs over bullet dumps. Metadata can live in bullets or frontmatter
 
 ### Quick View
 
-Start with judgment, not with a recycled abstract. State what the paper is saying, whether it is worth deeper reading, and what the strongest evidence or biggest weakness is.
+Start with the puzzle and the finding, not a recycled abstract. Include named framework, main-effect coefficient + direction + significance (or the core proposition), key mechanism or heterogeneity, and one project-relevance sentence. Target 150–250 words.
 
-### Research Purpose and Gap (引言)
+### §0 Reading Scope
 
-用自然段落叙述引言的核心内容，回答三个问题：(1) 为什么这个问题重要？(2) 已有文献知道什么、不知道什么、缺口为什么重要？(3) 本文要告诉我们什么？
+State paper type and project stance. Be explicit about what *not* to copy (wrong DV, wrong timing, wrong identification).
 
-不要逐段翻译引言。用自己的话概括文献对话的逻辑和作者如何推出研究缺口。
+### §1 Puzzle, RQ, Gap
 
-### Theory and Hypotheses (理论与假设)
+Distinguish a genuine puzzle from a manufactured gap. Split why-care into practical and theoretical. Name the gap type. The one-sentence RQ must be citable. Record the intuitive answer and why it is not enough; then the literature move (not "another setting").
 
-说明本文基于什么理论视角，该理论的核心观点是什么，作者如何用这个理论推导出假设。
+### §2 Conversation
 
-**假设推导概述**是笔记中允许充分展开的部分。如果论文在 Theory 部分用了大量篇幅铺陈机制，笔记也应相应展开，不能压缩成一两句话。关键是把作者"从前提到结论"的推理链条讲清楚：理论前提是什么？中间经过了哪些机制或条件？最终如何收敛到假设。
+Name the scholarly conversation before listing strands. Each strand is: what they did → what they missed → how this paper moves.
 
-对每条假设，附上推导逻辑。如果论文本身对某条假设的论证很充分（如分几步引用不同文献支撑），笔记也应保留这种层次，而不是压缩成一句空话。可以分组列出假设（如按理论视角分组、按主效应/调节效应分组）。
+### §3 WHAT / HOW / WHY
 
-### Methods and Results (方法与结果)
+- **3a**: name the lens; run the work test (mechanism vs labels/citations). Do not invent a theory the paper does not use.
+- **3b**: construct ≠ proxy; mark origin; state relationship form (HOW).
+- **3c**: every hypothesis needs a ≥3-step chain with logic types. `X → Y` is not enough.
+- **3d**: one row per tested claim, including unsupported hypotheses.
 
-简要概括：样本/数据、核心变量测量方式、分析方法、主要发现。突出与假设检验直接相关的关键设计即可。
+### §4 Setting and Design
 
-### Measures and Identification
+Say why this setting can answer the RQ. Separate construct from proxy and association from leverage. Name identifying variation, FE/cluster, assumptions, and the slippage between the ideal test and the actual design.
 
-Separate construct from proxy and association from leverage. Describe what source of variation is doing the work.
+For empirical papers, fill the Endogeneity block: what the threat is, whether it was addressed (`yes / partial / no / not claimed`), and how. If the paper uses IV or a control function, record the instrument or excluded variable itself—name, construction, relevance, exclusion argument—not just the method label. Residual threats cap the interpretive weight in §5. FE plus controls is not an IV.
 
-### Contribution and Judgment
+### §5 Findings
 
-Say exactly what the paper contributes, what would be missing without it, and what is reusable for the user's own project.
+Report coefficients with SE or t and N. Then judge statistical vs substantive meaning, and how much interpretive weight the design can support. Do not treat a correlational design as if it earned a causal claim.
+
+### §6 Contribution
+
+Run the absence test: what would be missing without this paper. Separate earned from claimed/expected contribution. Say what the user's project must *not* cite it for.
+
+### §7 Codex-Required Sections
+
+Default `N/A` unless a replication/Stata translation is actually needed.
+
+### §8 Project Handoff
+
+Action section. With an active project, include at least two directed uses or mis-use warnings.
+
+### §9 Metadata Notes
+
+Record the real reading source and verification method. Path-style wiki links for files outside `literature/`.
 
 ## What to Avoid
 
+- A second AMJ seven-module note alongside the card
 - Paragraph-by-paragraph paraphrase
 - Unqualified praise such as "important" or "interesting"
-- Bullet-only notes with no analytical prose
+- Leaving §3c as a restatement of H1/H2 without a mechanism chain
 - Treating weak proxies or correlational designs as if they earned stronger claims
+- Inventing a theoretical framework that the paper does not name or use
+- Calling a setting change a theoretical contribution

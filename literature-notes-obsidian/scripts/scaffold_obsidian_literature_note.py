@@ -12,15 +12,27 @@ from datetime import date
 from pathlib import Path
 
 
-COMMON_NOTE_DIRS = [
-    "literature",
-    "literature_notes",
-    "papers",
-    "reading",
-]
+SCRIPT_DIR = Path(__file__).resolve().parent
+SKILL_DIR = SCRIPT_DIR.parent
+CONFIG_PATH = SKILL_DIR / "config.json"
 
-DEFAULT_VAULT_ROOT = Path(r"D:\Onedrive\Obsidian Vault")
-DEFAULT_ZOTERO_DB = Path(r"C:\Users\admin\Zotero\zotero.sqlite")
+
+def load_config() -> dict:
+    if CONFIG_PATH.exists():
+        return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
+    return {}
+
+
+CONFIG = load_config()
+
+COMMON_NOTE_DIRS = CONFIG.get(
+    "notes_dir_candidates",
+    ["literature", "literature_notes", "papers", "reading"],
+)
+
+DEFAULT_VAULT_ROOT = Path(CONFIG.get("vault_root", r"D:\Onedrive\Obsidian Vault"))
+DEFAULT_ZOTERO_DB = Path(CONFIG.get("zotero_db", r"D:\同步文件\文献库\zotero.sqlite"))
+DEFAULT_TAGS = ",".join(CONFIG.get("default_tags", ["source", "literature-note"]))
 
 
 def to_ascii_token(text: str) -> str:
@@ -430,13 +442,25 @@ def build_frontmatter(
     reading_stage: str,
     status: str,
     tags: list[str],
+    paper_kind: str,
+    evidence_grade: str,
+    reuse_level: str,
+    confidence: str,
+    verified: str,
+    template: str,
 ) -> str:
-    lines = ["---", f"title: {quote(title)}"]
+    lines = [
+        "---",
+        'note_type: literature-note',
+        f"title: {quote(title)}",
+    ]
 
     if aliases:
         lines.extend(["aliases:", yaml_list(aliases, indent=2)])
     else:
         lines.append("aliases: []")
+
+    lines.append(f"citekey: {quote(citekey)}")
 
     if authors:
         lines.extend(["authors:", yaml_list(authors, indent=2)])
@@ -449,7 +473,6 @@ def build_frontmatter(
             f"journal: {quote(journal)}",
             f"doi: {quote(doi)}",
             f"url: {quote(url)}",
-            f"citekey: {quote(citekey)}",
             f"citation_key: {quote(citation_key)}",
             f"citation_key_source: {quote(citation_key_source)}",
             f"pandoc_cite: {quote(pandoc_cite)}",
@@ -457,13 +480,18 @@ def build_frontmatter(
             f"zotero_attachment_key: {quote(zotero_attachment_key)}",
             f"zotero_select_uri: {quote(zotero_select_uri)}",
             f"zotero_pdf_uri: {quote(zotero_pdf_uri)}",
-            'note_type: "literature-note"',
-            f"reading_mode: {quote(reading_mode)}",
-            f"source_type: {quote(source_type)}",
+            f"paper_kind: {quote(paper_kind)}",
             f"reading_stage: {quote(reading_stage)}",
+            f"evidence_grade: {quote(evidence_grade)}",
+            f"reuse_level: {quote(reuse_level)}",
+            "project_relevance:",
+            '  - "{project-slug}"',
+            "archive_only: false",
             f"status: {quote(status)}",
             f"created: {quote(str(date.today()))}",
             f"updated: {quote(str(date.today()))}",
+            f"reading_mode: {quote(reading_mode)}",
+            f"source_type: {quote(source_type)}",
         ]
     )
 
@@ -472,7 +500,16 @@ def build_frontmatter(
     else:
         lines.append("tags: []")
 
-    lines.extend(["projects:", "  - \"{project-slug-1}\"", "  - \"{project-slug-2}\""])
+    lines.extend(
+        [
+            "projects:",
+            '  - "{project-slug}"',
+            "related: []",
+            f"confidence: {quote(confidence)}",
+            f"verified: {quote(verified)}",
+            f"template: {quote(template)}",
+        ]
+    )
 
     lines.append("---")
     return "\n".join(lines)
@@ -489,91 +526,191 @@ def build_researcher_body(
     zotero_attachment_key: str,
     zotero_select_uri: str,
     zotero_pdf_uri: str,
+    doi: str,
 ) -> str:
     zotero_item_link = markdown_link("Open Zotero Item", zotero_select_uri)
     zotero_pdf_link = markdown_link("Open Zotero PDF", zotero_pdf_uri)
     return f"""# {title}
 
-## 概述
+## Quick View
 
-{{一段话交代：本文研究什么问题，基于什么核心视角，得到什么主要发现。不用复述摘要，而是用你自己的判断概述论文的”骨骼”。}}
+核验后写 150–250 词：puzzle 一句；核心发现；框架/机制名；主效应系数 + 方向 + 显著性；关键异质性或机制；对活跃项目的 1 句 relevance。不要复述摘要。
 
----
-
-## 1. 引言
-
-{{用自然段落叙述，不要逐段翻译。核心是回答三个问题：}}
-
-### (1) Who cares? 为什么这个问题值得关心？
-
-{{这个现象或问题为什么对理论界或实践界重要？作者如何建立问题的重要性——是通过现象冲击、理论悖论、还是实践困境？}}
-
-### (2) What do we know, what don't we know, and so what?
-
-{{已有文献做了什么？核心共识或主要流派是什么？作者指出文献的盲区、不足或矛盾在哪里？为什么这个缺口重要（so what）——是缺了关键机制、缺了边界条件、还是理论视角单一？}}
-
-### (3) What will we learn? 本文要告诉我们什么？
-
-{{作者采用什么新的理论视角或方法？核心研究问题是什么？预期贡献是什么？}}
+原文：[[path-style-wikilink-to-fulltext]]。
 
 ---
 
-## 2. 理论与假设
+## §0. Reading Scope and Paper Type
 
-### 基于的理论视角
-
-{{本文基于什么理论？如果是具体理论（如资源基础观、制度理论、代理理论、调节定向理论等），简要介绍该理论的核心观点。如果是多个理论的组合，说明它们如何被整合。}}
-
-{{按假设分组展开，不要区分”概述”和”具体假设”两个子标题。每条假设先给出声明，然后用自然段落详细叙述其推导逻辑。这是论文最核心的部分，允许充分展开——关键是把作者如何从理论前提一步步推到该假设的逻辑讲清楚。涉及多个子机制时，分别说明。可以引用关键的理论依据和中间推理步骤。}}
-
----
-
-## 3. 研究方法
-
-{{简要说明：样本/数据来源、核心变量如何测量、分析方法。不用面面俱到，突出与假设检验直接相关的关键设计即可。}}
+- Paper type: empirical / theoretical / review / meta-analysis
+- Reading stance: core / supporting / background
+- Keep:
+- Do not copy:
+- Must add:
 
 ---
 
-## 4. 主要发现
+## §1. Research Question, Purpose, and Gap
 
-{{用自然段落概括核心发现：哪些假设得到支持？哪些没有？最值得关注的结果模式是什么？}}
-
----
-
-## 5. 核心贡献与局限
-
-{{本文的核心贡献是什么（理论、实证或方法层面）？最突出的局限或未来方向是什么？}}
-
----
-
-## 6. 与本人研究的关联
-
-{{这篇论文对我的研究有什么启发？可借鉴的理论逻辑、方法设计、或写作技巧？}}
+- One-sentence RQ:
+- Constructs in the RQ:
+- Purpose type: explanatory / exploratory / descriptive
+- Core puzzle: 真实现象或未解经验模式；若是 manufactured gap，在此点破
+- Why care — practical:
+- Why care — theoretical:
+- Intuitive answer, and why it is not enough:
+- Gap type: mechanism / boundary / comparison / measurement / identification
+- Gap:
+- Literature move: 如何推进这场对话，而不是再加一个 setting
 
 ---
 
-## 跨文献连接
+## §2. Prior Research on This Question
 
-{{列出与 Vault 中已有文献的关联：
-- 直接引用或对话的文献：[[note_id]]
-- 相似机制或方法：[[note_id]]
-- 可对比或补充的发现：[[note_id]]
-- 专题/项目关联：[[项目作战室]]}}
+- Conversation:
+- Prior consensus:
+- Unresolved: mechanism / boundary / comparison / measurement / identification
+- **Strand 1 — [标签]**: 前人做了什么 → 缺了什么 → 本文如何填补
+- **Strand 2 — [标签]**:
 
 ---
 
-## Metadata Notes
+## §3. Theory, Constructs, and Claims
+
+### 3a. Theoretical framework
+
+理论框架名称 + 核心逻辑 + 为什么这个框架适合这个 RQ。不要发明论文未使用的理论标签。
+
+Work test: 机制是否做了真实的因果/行为工作，还是主要靠理论标签和引用？
+
+### 3b. Core constructs
+
+- **Construct**:
+  - Definition:
+  - Origin: inherited / sharpened / newly introduced
+  - Operationalization:
+  - Role: IV / DV / mediator / moderator
+- Relationship form: linear / moderated / mediated / sequential / recursive / comparative
+
+### 3c. Hypothesis Logic
+
+**H_main (标签): 一句话预测**
+
+- 理论前提:
+- 因果机制: A → B → C → Y（每步标注逻辑类型：signal / incentive / constraint / belief update / resource allocation / attention）
+- 实证预测:
+- 竞争性解释排除:
+- 边界:
+
+### 3d. Key claims (summary table)
+
+| H | 预测 | 系数 | 显著性 | 逻辑链关键词 |
+|---|------|------|--------|------------|
+| H_main |  |  |  |  |
+
+---
+
+## §4. Research Design, Data, Measures, and Ethics
+
+- Why this setting:
+- Design:
+- Sample:
+- Comparison structure:
+- DVs:
+- Key IVs:
+- Controls:
+- Fixed effects / SE clustering:
+- Identifying assumptions:
+- Slippage (ideal test vs actual design):
+- Key identification features:
+
+Endogeneity（实证必填；概念文写 N/A（非实证））
+
+- Threat: simultaneity / omitted variable / measurement error / selection / reverse causality
+- Addressed?: yes / partial / no / not claimed
+- Strategy: OLS+controls / FE / matching / DiD / RDD / IV / control function / other
+- Residual threat:
+
+若 IV：
+
+- Endogenous regressor:
+- Instrument(s): 名称、构造、variation 层级
+- Why this instrument:
+- Relevance（一阶段 F / KP 等）:
+- Exclusion（作者论证 + 笔记是否买账）:
+- Diagnostics:
+
+若 control function：
+
+- Endogenous regressor:
+- CF source / excluded variable: 名称 + 构造（不得只写“用了 CF”）
+- First stage / CF construction:
+- Why this source:
+- Diagnostics:
+
+---
+
+## §5. Findings, Validity, and Interpretation
+
+- 主效应:
+- 异质性/调节:
+- 渠道/中介:
+- 稳健性:
+- Statistical vs substantive:
+- Interpretive weight: association / conditional association / causal（不得高于 §4 Endogeneity 的 Addressed?）
+- 内部效度:
+- 外部效度:
+
+---
+
+## §6. Contribution, Critique, and Reuse
+
+- Theoretical contribution:
+- Empirical / methodological contribution:
+- Earned vs claimed:
+- Absence test: 若没有这篇，文献会少什么
+- Boundary:
+- My critique for <project>:
+- Key citations to retain:
+
+---
+
+## §7. Codex-Required Sections
+
+N/A（无需 Stata/复制层）
+
+---
+
+## §8. Project Handoff and Evidence Check
+
+- Motivation / gap use:
+- Theory / hypothesis use:
+- Variables / measures:
+- Reviewer defense use:
+- Related / similar / opposing papers:
+- My critique:
+- Should create or update concept page:
+- Should create or update argument card:
+- Atomic deep-evidence page needed: yes / no
+
+---
+
+## §9. Metadata Notes
+
 - Citation key: {citekey}
 - Resolved citation key: {citation_key}
 - Citation key source: {citation_key_source}
 - Pandoc cite token: {pandoc_cite}
-- Source file or link: {source_ref}
+- DOI: {doi}
+- Canonical source: [[{citekey}]]
+- Source PDF / Markdown: {source_ref}
 - Zotero item key: {zotero_item_key}
 - Zotero attachment key: {zotero_attachment_key}
 - Zotero item link: {zotero_item_link}
 - Zotero PDF link: {zotero_pdf_link}
-- Reading date:
-- Related notes:
+- Reading status: verified-from-fulltext-markdown / verified-from-pdf / stub
+- Confidence:
+- Key corrections from stub:
 """
 
 
@@ -709,6 +846,7 @@ def build_body(
     zotero_select_uri: str,
     zotero_pdf_uri: str,
     reading_mode: str,
+    doi: str = "",
 ) -> str:
     if reading_mode == "writer":
         return build_writer_body(
@@ -735,6 +873,7 @@ def build_body(
         zotero_attachment_key=zotero_attachment_key,
         zotero_select_uri=zotero_select_uri,
         zotero_pdf_uri=zotero_pdf_uri,
+        doi=doi,
     )
 
 
@@ -765,9 +904,9 @@ def main() -> int:
     )
     parser.add_argument(
         "--reading-stage",
-        default="purposeful",
-        choices=["triage", "purposeful", "constructive"],
-        help="Reading depth represented by the note",
+        default=CONFIG.get("default_reading_stage", "close-read"),
+        choices=["to-read", "browsed", "close-read"],
+        help="Vault evidence-card reading_stage",
     )
     parser.add_argument(
         "--reading-mode",
@@ -776,12 +915,41 @@ def main() -> int:
         help="Perspective represented by the note",
     )
     parser.add_argument(
-        "--status",
-        default="reading",
-        choices=["to-read", "reading", "done"],
-        help="Note status",
+        "--paper-kind",
+        default="empirical",
+        choices=["theoretical", "empirical", "review", "methods", "mixed"],
+        help="Paper kind for evidence-card frontmatter",
     )
-    parser.add_argument("--tags", default="literature-note,paper", help="Comma-separated tags")
+    parser.add_argument(
+        "--evidence-grade",
+        default="medium",
+        choices=["low", "medium", "high"],
+        help="Evidence grade",
+    )
+    parser.add_argument(
+        "--reuse-level",
+        default="medium",
+        choices=["low", "medium", "high"],
+        help="Reuse level for the user's project",
+    )
+    parser.add_argument(
+        "--confidence",
+        default="medium",
+        choices=["seed", "low", "medium", "high"],
+        help="Note confidence",
+    )
+    parser.add_argument(
+        "--verified",
+        default="",
+        help="Verification stamp, e.g. '2026-08-29 — OvisOCR2 全文 Markdown'",
+    )
+    parser.add_argument(
+        "--status",
+        default=CONFIG.get("default_status", "developing"),
+        choices=["triage", "developing", "citation_ready", "stub"],
+        help="Evidence-card status",
+    )
+    parser.add_argument("--tags", default=DEFAULT_TAGS, help="Comma-separated tags")
     parser.add_argument("--vault-root", help="Obsidian vault root")
     parser.add_argument("--notes-dir", help="Explicit notes directory")
     parser.add_argument("--force", action="store_true", help="Overwrite an existing file")
@@ -807,6 +975,7 @@ def main() -> int:
     filename = build_filename(args.title, authors, args.year, citekey)
     output_path = notes_dir / filename
 
+    template = "writer-note" if args.reading_mode == "writer" else "evidence-card"
     frontmatter = build_frontmatter(
         title=args.title,
         aliases=aliases,
@@ -828,9 +997,15 @@ def main() -> int:
         reading_stage=args.reading_stage,
         status=args.status,
         tags=tags,
+        paper_kind=args.paper_kind,
+        evidence_grade=args.evidence_grade,
+        reuse_level=args.reuse_level,
+        confidence=args.confidence,
+        verified=args.verified,
+        template=template,
     )
     source_ref = args.markdown_path or args.pdf_path or args.url or args.doi
-    content = f"{frontmatter}\n\n{build_body(args.title, citekey, citation_key, citation_key_source, pandoc_cite, source_ref, zotero['item_key'], zotero['attachment_key'], zotero['select_uri'], zotero['pdf_uri'], args.reading_mode)}"
+    content = f"{frontmatter}\n\n{build_body(args.title, citekey, citation_key, citation_key_source, pandoc_cite, source_ref, zotero['item_key'], zotero['attachment_key'], zotero['select_uri'], zotero['pdf_uri'], args.reading_mode, doi=args.doi)}"
 
     if args.dry_run:
         print(output_path)

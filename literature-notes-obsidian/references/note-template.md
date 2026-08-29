@@ -1,140 +1,86 @@
-# Obsidian Note Template
+# Evidence Card Template（天堂模版）
 
-Use this as the default `researcher`-mode note structure. It keeps the note decision-oriented, paragraph-first, and reusable inside Obsidian.
+Authoritative copy lives in the vault:
 
-When the user wants:
+`D:\Onedrive\Obsidian Vault\00 工作台\evidence-card-template.md`
 
-- a stricter AMJ canvas note, also read [amj-canvas-questions.md](references/amj-canvas-questions.md) and optionally consult `assets/note_template_researcher.md`
-- a writing-only note, use `assets/note_template_writer.md` together with [nelson-reading-guide.md](references/nelson-reading-guide.md)
-- explicit writing transfer into the three named writing skills, layer on [writing-deconstruction.md](references/writing-deconstruction.md)
+This file is the skill's operational copy. If they diverge, **the vault file wins**.
 
-## Preferred Structure
+`literature/` formal notes use this structure only. Heading order stays Quick View + §0–§9. AMJ Canvas (Dorobantu et al. 2024) is **folded into those sections**, not a second note body.
 
-```markdown
----
-title: "{{title}}"
-aliases:
-  - "{{citekey}}"
-authors:
-  - "{{author_1}}"
-year: "{{year}}"
-journal: "{{journal}}"
-doi: "{{doi}}"
-url: "{{url}}"
-citekey: "{{citekey}}"
-citation_key: "{{citation_key}}"
-citation_key_source: "{{citation_key_source}}"
-pandoc_cite: "{{pandoc_cite}}"
-zotero_item_key: "{{zotero_item_key}}"
-zotero_attachment_key: "{{zotero_attachment_key}}"
-zotero_select_uri: "{{zotero_select_uri}}"
-zotero_pdf_uri: "{{zotero_pdf_uri}}"
-note_type: "literature-note"
-reading_mode: "researcher"
-source_type: "pdf"
-reading_stage: "purposeful"
-status: "reading"
-created: "YYYY-MM-DD"
-updated: "YYYY-MM-DD"
-tags:
-  - "literature-note"
-  - "paper"
-projects:
-  - "{project-slug-1}"
-  - "{project-slug-2}"
----
+| AMJ module | Lands in |
+|------------|----------|
+| M1 Puzzle | §1 Core puzzle, Why care, genuine vs manufactured |
+| M2 Audience | §2 Conversation, prior consensus, unresolved type, strands |
+| M3 Research Question | §1 RQ, constructs in RQ, intuition, literature move |
+| M4 WHAT / HOW / WHY | §3a lens + work test; §3b constructs + relationship form; §3c chains |
+| M5 Setting and Design | §4 why-setting, comparison, assumptions, slippage, **endogeneity / IV-CF instruments** |
+| M6 Findings | §5 coefficients + statistical vs substantive + interpretive weight |
+| M7 Contribution | §6 earned vs claimed, absence test, boundary |
 
-# {{title}}
+天堂-only sections: §0 scope, §3c numbering, §7 replication, §8 project handoff, §9 metadata.
 
-## 概述
+Writer-mode notes use `assets/note_template_writer.md` and are not `literature/` formal notes.
 
-{一段话交代：本文研究什么问题，基于什么核心视角，得到什么主要发现。不用复述摘要，而是用你自己的判断概述论文的"骨骼"。}
+Existing cards (pre-2026-08-29) do not need a rewrite. New ingest and upgrades fill the added slots.
 
----
+## Frontmatter Schema
 
-## 1. 引言
+Required: `note_type`, `title`, `citekey`, `authors`, `year`, `journal`, `paper_kind`, `reading_stage`, `evidence_grade`, `status`, `created`, `updated`, `tags`, `template: evidence-card`.
 
-{用自然段落叙述，不要逐段翻译。核心是回答三个问题：}
+Fill after verification: `confidence`, `verified`, `doi`, `projects`, `project_relevance`, `related`. Keep Zotero extras when resolved.
 
-### (1) Who cares? 为什么这个问题值得关心？
+## 段落结构
 
-{这个现象或问题为什么对理论界或实践界重要？作者如何建立问题的重要性——是通过现象冲击、理论悖论、还是实践困境？}
+### Quick View
 
-### (2) What do we know, what don't we know, and so what?
+150–250 词。Puzzle 一句；核心发现；框架/机制名；主效应系数+方向+显著性；异质性或机制；项目 relevance 一句。不要复述摘要。
 
-{已有文献做了什么？核心共识或主要流派是什么？作者指出文献的盲区、不足或矛盾在哪里？为什么这个缺口重要（so what）——是缺了关键机制、缺了边界条件、还是理论视角单一？}
+### §0. Reading Scope and Paper Type
 
-### (3) What will we learn? 本文要告诉我们什么？
+Paper type; reading stance; Keep / Do not copy / Must add.
 
-{作者采用什么新的理论视角或方法？核心研究问题是什么？预期贡献是什么？}
+### §1. Research Question, Purpose, and Gap
 
----
+One-sentence RQ; constructs in the RQ; purpose type; core puzzle (genuine vs manufactured); why care practical + theoretical; intuitive answer and why not enough; gap type (`mechanism|boundary|comparison|measurement|identification`); gap 1–2 sentences; literature move (not another setting).
 
-## 2. 理论与假设
+### §2. Prior Research on This Question
 
-### 基于的理论视角
+Conversation (scholars, assumptions, theories); prior consensus; unresolved type; then 2–4 strands: 前人做了什么 → 缺了什么 → 本文如何填补.
 
-{本文基于什么理论？如果是具体理论（如资源基础观、制度理论、代理理论、调节定向理论等），简要介绍该理论的核心观点。如果是多个理论的组合，说明它们如何被整合。}
+### §3. Theory, Constructs, and Claims
 
-{按假设分组展开，不要区分"概述"和"具体假设"两个子标题。每条假设先给出声明，然后用自然段落详细叙述其推导逻辑。这是论文最核心的部分，允许充分展开——关键是把作者如何从理论前提一步步推到该假设的逻辑讲清楚。涉及多个子机制时，分别说明。可以引用关键的理论依据和中间推理步骤。}
+- **3a** lens + why it fits + work test (real causal/behavioral work vs labels/citations)
+- **3b** each construct: definition, origin (`inherited|sharpened|new`), operationalization, role; plus relationship form (`linear|moderated|mediated|sequential|recursive|comparative`)
+- **3c** each H: 理论前提 / ≥3-step 因果机制 with logic types / 实证预测 / rival / 边界
+- **3d** claims table with 逻辑链关键词
 
----
+### §4. Research Design, Data, Measures, and Ethics
 
-## 3. 研究方法
+Why this setting; design; sample; comparison structure; DVs; IVs; controls; FE/cluster; identifying assumptions; slippage; extra ID features.
 
-{简要说明：样本/数据来源、核心变量如何测量、分析方法。不用面面俱到，突出与假设检验直接相关的关键设计即可。}
+Empirical papers must fill **Endogeneity**: threat; Addressed? (`yes|partial|no|not claimed`); strategy; residual threat. IV requires instrument name, construction, relevance, exclusion, diagnostics. Control function requires the excluded variable / CF source (name + construction), first-stage/CF construction, and diagnostics. Do not write only “used IV/CF”. Interpretive weight in §5 cannot exceed this verdict. Conceptual papers: `N/A（非实证）`.
 
----
+### §5. Findings, Validity, and Interpretation
 
-## 4. 主要发现
+Main effects; hetero/channels; robustness; statistical vs substantive; interpretive weight (association / conditional association / causal); internal/external validity.
 
-{用自然段落概括核心发现：哪些假设得到支持？哪些没有？最值得关注的结果模式是什么？}
+### §6. Contribution, Critique, and Reuse
 
----
+Theoretical; empirical/method; earned vs claimed; absence test; boundary; project critique; key citations to retain.
 
-## 5. 核心贡献与局限
+### §7. Codex-Required Sections
 
-{本文的核心贡献是什么（理论、实证或方法层面）？最突出的局限或未来方向是什么？}
+`N/A（<原因>）` unless a Stata/replication layer is needed.
 
----
+### §8. Project Handoff and Evidence Check
 
-## 6. 与本人研究的关联
+Motivation/gap use; theory/hypothesis use; measures; reviewer defense; related papers; mis-use warning; concept/argument-card follow-ups. At least two project-specific uses or warnings when a project is in scope.
 
-{这篇论文对我的研究有什么启发？可借鉴的理论逻辑、方法设计、或写作技巧？}
+### §9. Metadata Notes
 
----
+Citekey, DOI, canonical source, full-text path, Zotero, reading status, confidence, stub corrections.
 
-## 跨文献连接
+## 质量检查清单
 
-{列出与 Vault 中已有文献的关联：
-- 直接引用或对话的文献：[[note_id]]
-- 相似机制或方法：[[note_id]]
-- 可对比或补充的发现：[[note_id]]
-- 专题/项目关联：[[项目作战室]]}
-
----
-
-## Metadata Notes
-- Citation key: {CiteKey}
-- Resolved citation key: {CitationKey}
-- Citation key source: {CitationKeySource}
-- Pandoc cite token: [@{CitationKey}]
-- Source file or link: {Source}
-- Zotero item key: {ZOTERO_ITEM_KEY}
-- Zotero attachment key: {ZOTERO_ATTACHMENT_KEY}
-- Zotero item link: [Open Zotero Item](zotero://select/library/items/{ZOTERO_ITEM_KEY})
-- Zotero PDF link: [Open Zotero PDF](zotero://open-pdf/library/items/{ZOTERO_ATTACHMENT_KEY})
-- Reading date: {YYYY-MM-DD}
-- Related notes:
-```
-
-## Writing Rules
-
-- Make `概述` a short paragraph, not a checklist.
-- Keep `1. 引言` paragraph-heavy. This is the note's center of gravity.
-- Use `2. 理论与假设` to reconstruct the mechanism chain, not to paraphrase the theory section.
-- Distinguish theory labels from actual explanation.
-- Distinguish constructs from proxies and associations from causal leverage.
-- If the note is abstract-based, say so explicitly in `概述` and `Metadata Notes`.
-- If the paper is weak, say exactly where it is weak.
-- If the paper is useful, say exactly what is reusable.
+见 vault 模版。最低限度：`template: evidence-card`；§1 puzzle/gap type；§3c 三层链；实证 §4 内生性（IV/CF 记录工具变量）；§6 absence test；§8 项目手递；没有另写 AMJ 七模块正文。

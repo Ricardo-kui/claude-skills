@@ -2,7 +2,17 @@
 
 Source: Dorobantu, S., Gruber, M., Ravasi, D., and Wellman, N. (2024). "From the Editors: The AMJ Management Research Canvas." *Academy of Management Journal*, 67(5), 1163-1174.
 
-Use this reference when the user wants a researcher-facing note that surfaces puzzle, audience, theoretical move, design credibility, and contribution in AMJ-style logic.
+These questions are **already folded into the evidence card (天堂模版)**. Do not emit a separate AMJ seven-module note as the `literature/` formal note. Use this file as the question bank when filling §1–§6, or when upgrading an old AMJ-canvas note onto the card.
+
+| Module | Fill in |
+|--------|---------|
+| 1 Puzzle | §1 Core puzzle, Why care, genuine vs manufactured |
+| 2 Audience | §2 Conversation, prior consensus, unresolved type, strands |
+| 3 Research Question | §1 RQ, constructs in RQ, intuition, literature move |
+| 4 Constructs and Relationships | §3a–3c (WHAT / HOW / WHY) |
+| 5 Setting and Design | §4 why-setting, comparison, assumptions, slippage |
+| 6 Findings | §5 statistical vs substantive, interpretive weight |
+| 7 Contributions | §6 earned vs claimed, absence test |
 
 ## Module 1: The Puzzle
 
@@ -48,6 +58,7 @@ Use this reference when the user wants a researcher-facing note that surfaces pu
 - What data, sample, and comparison structure does the paper use?
 - How are the focal constructs operationalized?
 - What identifying variation or inferential leverage does the design rely on?
+- Was endogeneity addressed? How? If IV or control function, which instrument / excluded variable was chosen, and why?
 - What assumptions must hold for the authors' strongest claims to be credible?
 - Where is the slippage between the ideal test and the actual design?
 

@@ -7,21 +7,25 @@
     "papers",
     "reading"
   ],
-  "zotero_db": "C:/Users/admin/Zotero/zotero.sqlite",
-  "zotero_storage": "C:/Users/admin/Zotero/storage",
+  "evidence_card_template": "D:/Onedrive/Obsidian Vault/00 工作台/evidence-card-template.md",
+  "default_note_template": "evidence-card",
+  "zotero_db": "D:/同步文件/文献库/zotero.sqlite",
+  "zotero_storage": "D:/同步文件/文献库/storage",
   "default_tags": [
-    "literature-note",
-    "paper"
+    "source",
+    "literature-note"
   ],
   "note_language": "zh-en",
   "default_reading_mode": "researcher",
-  "default_reading_stage": "purposeful",
+  "default_reading_stage": "close-read",
+  "default_status": "developing",
   "backup_on_overwrite": true,
   "note_logging": {
     "enabled": true,
     "memory_log": "memory/notes_log.md"
   },
   "pdf_extraction": {
+    "preferred_engine": "ovisocr2",
     "min_content_length": 200,
     "primary_engine": "opendataloader-pdf",
     "hybrid_engine": "opendataloader-pdf --hybrid docling-fast --hybrid-mode full",

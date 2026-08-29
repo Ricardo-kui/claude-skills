@@ -68,7 +68,7 @@ def format_log_entry(filename: str, output_path: Path, metadata: dict) -> str:
     if len(authors) > 4:
         authors_str += " et al."
 
-    generic_tags = {"literature-note", "paper", "tool-note", "research-methodology", "writing-guide"}
+    generic_tags = {"literature-note", "paper", "source", "tool-note", "research-methodology", "writing-guide"}
     tags = metadata.get("tags", [])
     topics = [tag for tag in tags if tag.lower() not in generic_tags]
     topics_str = ", ".join(topics) if topics else "—"

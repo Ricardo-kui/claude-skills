@@ -1,5 +1,11 @@
 # Literature Notes Log
 
+## 2026-08-29 — Evidence Card 测试升级：Anand & Mukherjee (2024) 失败学习
+
+- **升级** `anandmukherjee2024-slipups-knowledge-gaps-recall-learning.md`：以 `Reference for Recalls` 下 OvisOCR2 全文为权威源，按整合后的天堂模版（AMJ 槽位 + §4 Endogeneity）重写。核验 H1b `b = −0.19`（p < .001）支持、H1a/H3a 不支持；R&D IV 工具为 capital reserves and surplus / revenue，主文无一阶段 F，Addressed? = partial。项目用途仍限于 H1 count 的失败类型—学习能力边界，不是共同所有权或 time-to-recall。
+- **path**: `D:/Onedrive/Obsidian Vault/literature/anandmukherjee2024-slipups-knowledge-gaps-recall-learning.md`
+- **source**: `D:/Onedrive/Obsidian Vault/00 工作台/项目/Reference for Recalls/anand-mukherjee-2024-learning-from-failures-di-OvisOCR2-20260811-161426.md`
+
 ## 2026-08-12 — Evidence Card 升级：共同所有者的信息优势与坏消息误传染
 
 - **升级** `liniyeungyin2025-common-owner-information-advantage-crash-risk-spillover.md`：由 abstract/二手整理重建为全文 Markdown 天堂模版卡。核验 US 1980–2017、94,490 firm-year，37 起机构并购 DiD `Post×Treat=−.154`（`t=−2.022`）及同行负 earnings-announcement contagion 交互 `−.031`（`t=−4.558`）。回流共同所有权×产品召回时仅作为“同行信号需区分 firm-specific 与 industry-wide”的信息边界；不外推为管理者危害信息、召回速度或安全结果。
@@ -687,3 +693,11 @@ When creating a new note, check this file first for likely duplicates and relate
 - scope: full-text Evidence Card; supplier-customer CIO, relationship-specific innovation, institution-merger DiD
 - project_backflow: 文献证据包 - 共同所有权 × 产品召回; records horizontal-versus-vertical topology boundary, no recall-timing inference or Decision Register change
 - created: 2026-08-12
+
+### JeonBallSouza2026 · 2026-08-29
+- **title**: Safety Defects and Fuel Efficiency in the Automotive Industry
+- **authors**: Donggyu Jeon, George P. Ball, Gilvan C. Souza
+- **year**: 2026 · **journal**: Production and Operations Management
+- **topics**: product-recall, automotive, product-safety, fuel-efficiency, technology-bundling, regulation
+- **file**: `jeonballsouza2026-safety-defects-fuel-efficiency.md`
+- **path**: D:/Onedrive/Obsidian Vault/literature/jeonballsouza2026-safety-defects-fuel-efficiency.md

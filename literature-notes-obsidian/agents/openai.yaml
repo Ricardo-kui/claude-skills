@@ -1,4 +1,4 @@
 interface:
   display_name: "Literature Notes for Obsidian"
-  short_description: "Read papers into reusable Obsidian notes in researcher or writer mode."
-  default_prompt: "Use $literature-notes-obsidian to read this paper into an Obsidian literature note, or deconstruct how it is written."
+  short_description: "Read papers into Obsidian evidence-card notes (天堂模版 + AMJ Canvas)."
+  default_prompt: "Use $literature-notes-obsidian to read this paper into an Obsidian evidence-card literature note (天堂模版, AMJ judgment slots folded in), or deconstruct how it is written."

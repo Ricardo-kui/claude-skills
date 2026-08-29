@@ -19,7 +19,7 @@ The reference PDF also frames good researchers as their own "imagined opponent."
 
 ### Researcher mode
 
-This is the default. Use [amj-canvas-questions.md](references/amj-canvas-questions.md) together with this file when the user wants to know whether the paper's logic, measurement, and design are persuasive.
+This is the default. Read with the AMJ Canvas questions (puzzle, conversation, WHAT/HOW/WHY, earned contribution), then write a single evidence card (天堂模版: Quick View + §0–§9). The question bank is [amj-canvas-questions.md](references/amj-canvas-questions.md). Do not emit a second AMJ seven-module note.
 
 ### Writer mode
 
@@ -105,23 +105,20 @@ Before creating a new note file, check `memory/notes_log.md` for duplicate cover
 
 ## Extraction Checklist
 
-Every full note should capture the paper's core content:
+Every full note should capture the paper's core content and land it on the evidence card:
 
-- bibliographic metadata
-- one-sentence core message (概述)
-- **Introduction**: 
-  - (1) Who cares — why is this topic important?
-  - (2) What do we know / what don't we know / so what — the gap and why it matters
-  - (3) What will we learn — the paper's theoretical lens and expected contribution
-- **Theory and Hypotheses**:
-  - Which theory or theoretical perspective is used?
-  - Brief theory overview (if it is a specific named theory)
-  - Core hypothesis logic — how the author derives the predictions
-  - Specific hypotheses (H1, H2, etc.) with brief reasoning
-- **Methods**: Sample, key measures, and analytical approach (brief)
-- **Findings**: Which hypotheses are supported? Key patterns
-- **Contribution and Limitations**: What does the paper add? What are its main weaknesses or boundaries?
-- **Reuse value**: What is useful for my own research?
+- bibliographic metadata (`template: evidence-card` plus required frontmatter)
+- **Quick View**: puzzle 一句, named framework, main-effect coefficient + direction + significance, project relevance
+- **§0**: paper type, reading stance, keep / do not copy / must add
+- **§1**: RQ, constructs in RQ, genuine vs manufactured puzzle, why-care practical/theoretical, intuition, gap type, literature move
+- **§2**: conversation, prior consensus, unresolved type, 2–4 strands
+- **§3**: lens + work test; constructs (origin) + relationship form; hypothesis logic (≥3-step chains); claims table
+- **§4**: why-setting, design, sample, comparison, DV/IV, FE/cluster, assumptions, slippage; empirical Endogeneity (threat, Addressed?, strategy, residual threat; IV/CF must name the instrument/excluded variable)
+- **§5**: main results, statistical vs substantive, interpretive weight, validity
+- **§6**: earned vs claimed contribution, absence test, project critique
+- **§7**: replication/Stata layer or `N/A`
+- **§8**: project handoff and mis-use warnings
+- **§9**: citation key, source path, Zotero, verification method
 
 ## What To Avoid
 
@@ -133,20 +130,19 @@ Every full note should capture the paper's core content:
 
 ## Research Canvas Lens
 
-The later sections of the source PDF imply a stable canvas for reading management and social-science papers. Use it when turning a paper into notes:
+Use Dorobantu et al. (2024) AMJ Canvas as the judgment lens, already mapped onto the evidence card:
 
-1. `Research motivation and practical/theoretical importance`
-2. `Research gap and exact paper move`
-3. `Research question`
-4. `Core constructs`
-5. `Theoretical relationships and hypothesis logic`
-6. `Variable measurement`
-7. `Setting`
-8. `Research design and causal identification`
-9. `Findings and contribution`
-10. `Boundary conditions and limitations`
+1. Puzzle and why-care → §1
+2. Audience / conversation → §2
+3. Research question and literature move → §1
+4. Constructs (WHAT) and relationship form (HOW) → §3b
+5. Mechanism and lens (WHY) → §3a / §3c
+6. Setting, measures, identification, slippage → §4
+7. Findings and interpretive weight → §5
+8. Earned contribution, absence test, boundaries → §6
+9. Project reuse → §8
 
-This lens prevents the note from collapsing into a loose summary. It forces a paper-shaped explanation.
+This lens prevents the note from collapsing into a loose summary. It forces a paper-shaped explanation *inside one template*.
 
 ## Management / Social-Science Reading Bias
 
@@ -174,16 +170,10 @@ When the paper is from management, strategy, organization theory, IB, sociology,
     - correlational regression
     - stronger identification strategy
   - Note the key identifying assumptions and the most serious threats.
+  - For empirical papers, record whether endogeneity was addressed and how. If IV or control function: name the instrument / excluded variable, why it was chosen, relevance, and exclusion. Do not treat FE + controls as equivalent to IV.
 
-## Paragraph-First Note Writing
+## Evidence-Card Note Writing
 
-When writing the final note, prefer sections built from 1-3 compact paragraphs rather than stacked prompts or one-line bullets.
+Write the final note in the 天堂模版 skeleton, with AMJ judgment slots filled in §1–§6. Use the template's lists for scoped sections. Use compact prose for Quick View, §3a, and each §3c causal chain.
 
-Best use of prose:
-
-- research purpose and gap
-- theoretical logic
-- measurement and identification judgment
-- contribution and limitations
-
-Use bullets only for metadata, named hypotheses, or small comparison sets.
+Do not emit a separate AMJ seven-module body or an 「概述 / 1. 引言 / 2. 理论与假设」body as the `literature/` formal note.
