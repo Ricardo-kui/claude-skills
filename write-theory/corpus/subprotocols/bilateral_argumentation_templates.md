@@ -583,6 +583,40 @@ H[X+2]: [W3] weakens the positive relationship between [disposition] and [outcom
 
 ---
 
+
+### 变体 A：支内双可能 Conversely 调和（superficial vs noncodified）
+
+<!--
+pattern_id: superficial_vs_noncodified_conversely_reconciliation
+build_type: 跨类型（调节假设支内双边论证）
+source_papers: ["anand_mukherjee_2024_org_science"]
+confidence: medium（单篇，产品召回主题 expert_audit_override 2026-08-29 升 VERIFIED）
+-->
+
+**适用场景**: 单个调节假设的推导内部存在"moderator 可能无用"的反可能时，支内先自陈反可能、再给出挽救机制，收敛到同向预测——双边论证的支内迷你版。
+
+**骨架**:
+```
+[Typed learning] may, at times, generate [superficial, response-only learning]
+such as [expedited reaction example] instead of [genuine in-depth analysis]
+([citation]). Such learning would not be impacted much by [the moderator's
+deeper searches].
+Conversely, [typed learning] may lead to the generation of [noncodified,
+distributed knowledge], which is absorbed through [interactions among actors];
+[capability facet] similarly includes [assimilation of such knowledge]
+([citations]). [Complementarity citation] also supports the pairing.
+Based on these associations, we hypothesize the enhancing effect of [moderator]
+on learning from [typed outcome]. → H
+```
+
+**为什么有效**: 把审稿人最可能的"其实不需要 moderator"异议写成句子并当场化解，调节预测从"主张"升级为"排除反可能后的结论"。
+**注意事项**: 两个可能必须都出自文献而非稻草人；挽救机制要与 moderator 的操作化对得上（非编码知识↔R&D 吸收）。
+**反模式**: 反可能只提一句随即无视（未给出为何正可能胜出的机制）。
+
+**原文锚点**: "Process-related recalls may, at times, generate superficial learning and expedited reactions such as greater reliance on inspections to detect quality problems instead of eliminating such problems through genuine in-depth root cause analyses."（§3.2.2）
+
+<!-- wb:anand_mukherjee_2024_learning_from_failures_di:superficial_vs_noncodified_conversely_reconciliation -->
+
 ## 条件化 carve-out：cue/activation moderator（硬约束 #11 例外）
 
 > **适用范围**：硬约束 #11（"调节论证双边完整（high AND low）"）**不机械适用**于 cue-triggered / trait-activation moderation。当 moderator 是一个**特质相关 cue**、且 **low（cue 缺失）条件即特质默认表现型、已在主效应中作为基线论证过**时，双边覆盖可由以下两条满足，**不强制写冗余的 low 态段落**：

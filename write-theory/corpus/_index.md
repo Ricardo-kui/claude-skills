@@ -87,7 +87,7 @@
 | [`C_hypothesis_tree.md`](variants/C_hypothesis_tree.md) | 假设树型 | 条件化分叉、树状展开、 moderator 引入时机 | 主效应 + 多调节 |
 | [`D_process_theory.md`](variants/D_process_theory.md) | 质性过程理论型 | 阶段序列、过渡条件、时间标记 | Proposition 为主 |
 | [`E_moderation.md`](variants/E_moderation.md) | 调节效应型 | E1-E9 协议：同层/跨层调节、嵌入边界、竞争裁决、曲线多调节、序列嵌套调节、宏观事件激活与持续性、双刃剑异号增强/阻碍权变、**双侧镜像调节（同一构念 rival/target 侧镜像预测，DesJardine 2025，EMERGING）**、**E11 特质激活双表现型 cue 切换（trait→默认表现型主效应 + cue 激活对立表现型，Ridge 2024，EMERGING）** | 主效应 + 调节（含复杂交互、条件间接效应、无主效应异号权变、双侧镜像调节对、cue 切换缓解交互） |
-| [`F_competing_hypotheses.md`](variants/F_competing_hypotheses.md) | 竞争假设型 | 对立预测呈现、非传统收敛信号、 net effect 论证 | 竞争假设对 |
+| [`F_competing_hypotheses.md`](variants/F_competing_hypotheses.md) | 竞争假设型 | 对立预测呈现、非传统收敛信号、 net effect 论证、**技巧 3：解释支配代理桥接 + 三向 cancel-out 收束（fang2025 POM；无正式 H 竞争分支，EMERGING 待第二篇）** | 竞争假设对 |
 | [`G_dialectical_opposition.md`](variants/G_dialectical_opposition.md) | 辩证对立型 | 双受众对称机制、dialectical turn 标记、theory-based reconciliation | 对立预测（方向反转） |
 
 ---
@@ -104,7 +104,7 @@
 | [`reasoning_soundness_protocol.md`](subprotocols/reasoning_soundness_protocol.md) | 跨类型 | 论证可靠性（soundness）协议：前提三分法 [D]/[S]/[E] + 最弱环节防守（含 Booth warrant 五测试）+ 机制必要性门控（三问）+ 反例压力测试（六类 warrant 攻击面 + 第四种处置"承认但不回应"）+ warrant 明言/隐去表达纪律（Booth Ch8）；hypothesis_derivation_patterns 的 soundness 镜像，Phase 3 成稿后与 Phase 4 审计 4 使用 |
 | [`arrangement_patterns.md`](subprotocols/arrangement_patterns.md) | 跨类型 | 论点-论据安排模式（Warrant-Embedded / Evidence-Contrast / Cumulative / Parallel） |
 | [`evidence_patterns.md`](subprotocols/evidence_patterns.md) | 跨类型 | 证据类型、证据功能、文献引用三要素句式 |
-| [`hypothesis_organization_patterns.md`](subprotocols/hypothesis_organization_patterns.md) | 跨类型 | 复杂假设体系的段落级组织（common trunk / dual branch / baseline→moderation / 2×2 对称矩阵 / 角色分离并行中介→效应分解→时间检验 / **机制丧失→多结果树→外部部分替代** / **Per-Stakeholder Paired (Main + Cue-Moderation) Parallel**，EMERGING） |
+| [`hypothesis_organization_patterns.md`](subprotocols/hypothesis_organization_patterns.md) | 跨类型 | 复杂假设体系的段落级组织（common trunk / dual branch / baseline→moderation / 2×2 对称矩阵 / 角色分离并行中介→效应分解→时间检验 / **机制丧失→多结果树→外部部分替代** / **Per-Stakeholder Paired (Main + Cue-Moderation) Parallel**，EMERGING / **Pattern B: Response-Portfolio Decomposition——聚合行动 = 对立组件组合（fang2025 POM，EMERGING 单篇）**） |
 | [`bilateral_argumentation_templates.md`](subprotocols/bilateral_argumentation_templates.md) | E 调节效应型 | 调节假设的 high/low 双边论证句法；**Cue-Activation Carve-Out（硬约束 #11 例外：cue/activation moderator 的 low 态=主效应默认基线时，双边覆盖由主效应基线 + high 态机制论证满足）** |
 | [`moderator_selection_frameworks.md`](subprotocols/moderator_selection_frameworks.md) | E 调节效应型 / C 假设树型 | 多 moderator 选择元框架 |
 | [`intra_tmt_persuasion.md`](subprotocols/intra_tmt_persuasion.md) | E 调节效应型 / C 假设树型 | 下级高管如何通过信心启发式劝说上级决策者（含权力放大→三向交互） |
@@ -117,7 +117,7 @@
 
 | 文件 | 功能 | 覆盖骨架 |
 |------|------|---------|
-| [`construct_definition.md`](sentences/construct_definition.md) | 构念界定 | 定义策略、scope conditions、lineage、adjacent construct 区分、辩论并置型构念界定 |
+| [`construct_definition.md`](sentences/construct_definition.md) | 构念界定 | 定义策略、scope conditions、lineage、adjacent construct 区分、辩论并置型构念界定、**句式 N：quintessential response variable——DV/构念选择的 topic 正当化句（fang2025 POM，EMERGING 待第二篇）** |
 | [`mechanism_chain.md`](sentences/mechanism_chain.md) | 机制推演 | why chain 连接词、单步/两步/双轨/竞争/多理论/OM三三制/双刃剑/双中介并行/双DV并行/多层收窄型/替代机制排除/Ability-Motivation 框架/Iron Triangle三边机制/双视角对比框架整合/三层嵌套理论演进/Rhetorical-Question Pivot/联合必要性门控逻辑/**辩证对立双路径(habel2016)/Focus Group定性嵌入(habel2016，含多角色访谈三角化)/成本-收益计算机制链(chung2022)/威胁处理级联(ridge2024)** |
 | [`cost_benefit_calculus.md`](sentences/cost_benefit_calculus.md) | 成本-收益机制 voice | 感知高收益 + 感知低成本 + 综合收敛 + 上下级激励差异对比 |
 | [`moderation.md`](sentences/moderation.md) | 调节机制 | 机制修改论证、假设模板、修辞问句开场、Ability-Motivation 双路径调节、共享调节器反向调节、多调节器同向设计、双边论证调节推演、注意力基础观调节论证、不对称调节、**董事会放大型边界条件(chung2022)**、**Mitigation via Manifestation-Switch 缓解交互(ridge2024)** |

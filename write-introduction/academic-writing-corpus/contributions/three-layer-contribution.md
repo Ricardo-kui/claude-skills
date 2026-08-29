@@ -248,3 +248,26 @@ source: Distilled from Haunschild, Polidoro & Chandler (2015), Organization Scie
 **适用**: Mechanism × Phenomenon 双维度贡献；跨学科移植研究；需要同时向两个以上文献流声明贡献时的紧凑单段写法
 
 **禁忌**: "first" 类声明必须限定域（first systematic field study of X in Y），否则一处反例即失守；三个贡献必须有明确的文献对象，不得写"contributes to literature"而无专名；缺口引用必须真实存在（as many authors have noted 后要给出处）
+
+
+### 变体 I：编号三贡献平铺块（anand_mukherjee_2024型）
+
+**模板**:
+> "Overall, we make three contributions from this research. First, we develop [typology/categorization] and study the impacts on [DV] in the context of each type. Second, we provide evidence of [the connection between DV and moderator]. Third, we generate implications for [broader practice/theory area]. This reinforces the importance of [adjacent theoretical theme] ([citations])."
+
+**来源**: anand_mukherjee_2024_learning_from_failures_di (Organization Science), P10
+
+**原文锚定**:
+> "Overall, we make three contributions from this research. First, we develop a two-way categorization of failures and study the impacts on learning in the context of each type."
+
+**关键特征**:
+- 三贡献按"构念→证据→含义"梯度排列，无幅度数字、无机制证据内嵌——与 findings-preview 型编号块（头条幅度+机制证据）形成有意对照的朴素版
+- 第三贡献从实践含义回扣理论（organizational culture / dual focus），把 implications 收进 contribution 块而非另开段落
+- 置于结果预告与理论视角段之后、roadmap 之前，作全引言收束位
+- 语言零修饰（"we make three contributions"直陈），能量与全篇冷开场一致
+
+**适用**: 分类学论文的收束贡献块；不追求头条幅度冲击、贡献在类型学本身的研究；与共识细化宣言型开场呼应（全篇低调一致）
+
+**禁忌**: 若 Results 有强效应量，朴素版会浪费弹药——改用内嵌幅度变体；三贡献若实为两贡献+凑数会被审稿人点破
+
+<!-- wb:anand_mukherjee_2024_learning_from_failures_di:numbered-triple-contribution-block -->

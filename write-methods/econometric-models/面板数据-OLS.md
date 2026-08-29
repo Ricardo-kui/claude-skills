@@ -1174,6 +1174,34 @@ To create this novel [construct] measure, we used data from [source]... However,
 - **原文锚定**："A subsample approach generates the most straightforward insights into the chain of effects from female appointments to strategic renewal, because it puts no restrictions on the coefficients of the other covariates and allows the influence of all variables to differ across different integration settings."（post_2022_women_tmt_strategic_renewal, AMJ 2022, Analytical Strategy 节）
 - **区别于**：变体 42（moderator-dummy 外部效度链）是把连续调节变量二分化做外部效度；本变体是在动态中介链中为「系数全自由度」辩护——两种二分化动机不同（外部效度 vs 链式可解释性），且本变体附 Chow 检验 + threshold interaction 的收口
 
+
+### 变体 68：M2 排除阈值的双向代价论证 + 放宽阈值补充分析回环（anand_mukherjee_2024 型）
+- **出处**: Anand & Mukherjee 2024 (Organization Science)，医疗设备/制药召回面板
+- **槽位**: M2 数据来源与样本漏斗
+- **可迁移性**: 高（任何需要最小观测窗/最小事件数阈值的面板设计）
+- **区别于**: 变体 54（lead-DV 滞后对齐 + 理论驱动双理由排除）— 变体 54 用双理由论证"排除什么"；本变体论证"为什么阈值本身合理"：先摆双向代价（含进去→噪声与偏差；排出去→损失样本与信息），再用放宽阈值的补充分析闭合循环
+- **原始句锚点**（Anand & Mukherjee 2024 原文）: "On the one hand, including firms with insufficient observation periods is likely to provide noisy and biased estimates of learning. ... On the other hand, excluding these firms reduces the sample size and potentially eliminates information on some firms, which otherwise could have impacted the results."
+- **验证状态**: VERIFIED (expert_audit_override, user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+- **写入日期**: 2026-08-29
+[骨架]:
+From these, we removed [units] that did not exist [with at least threshold observations] within the observation period because of [attrition mechanism]. [Mechanism] are frequent occurrences in [the industry]. Therefore, identifying an observation unit over the entire sample observation period is complex. [The mechanism being studied] occurs over time and based on experience, so [units] with insufficient observation periods do not leave enough observations to estimate it. On the one hand, including [units] with insufficient observation periods is likely to provide noisy and biased estimates of [the estimand]. On the other hand, excluding these [units] reduces the sample size and potentially eliminates information on some [units], which otherwise could have impacted the results. Therefore, for the main analysis, we do not include [units] with less than [threshold] of observations. However, a supplementary analysis with all [units] using an unbalanced panel data set gives comparable results to those for our main analyses.
+
+<!-- wb:anand_mukherjee_2024_learning_from_failures_di:m2_threshold_exclusion_two_sided_robustness -->
+
+
+### 变体 69：M7 三步渐进模型设定的复制式中步叙事（anand_mukherjee_2024 型）
+- **出处**: Anand & Mukherjee 2024 (Organization Science)，医疗设备/制药召回面板
+- **槽位**: M7 模型规格与估计方法
+- **可迁移性**: 高（controls→基线主效应→交互的渐进设定通用）
+- **区别于**: 既有 M7 变体多为单一模型的设定与诊断叙事 — 本变体组织的是多步模型族的叙事：每步目的显式命名，且把"非假设的复制步"辩护为对既有研究的对齐复制，预防"基线模型为何要估"的质疑
+- **原始句锚点**（Anand & Mukherjee 2024 原文）: "Although the main effect of learning from accumulated recalls is not a hypothesized relationship in our research, this step replicates the relationship analyzed in previous studies (Haunschild and Rhee 2004, Thirumalai and Sinha 2011)."
+- **验证状态**: VERIFIED (expert_audit_override, user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+- **写入日期**: 2026-08-29
+[骨架]:
+Our analysis of [outcome] consists of three progressive steps. In Step 1, we include the effects of the control variables, [controls], on [DV]. We include the explanatory variables, [IVs], in Step 2 to assess the main effect of [the base relationship]. Although the main effect is not a hypothesized relationship in our research, this step replicates the relationship analyzed in previous studies ([citations]). In Step 3, we test the moderation effects posited in [Hypotheses] by incorporating relevant interaction terms. The complete model is shown here, with subscripts for [i] representing [unit], [j] representing [group], and [t] representing [time].
+
+<!-- wb:anand_mukherjee_2024_learning_from_failures_di:m7_progressive_three_step_narrative -->
+
 ## 反模式
 
 | 反模式 | 表现 | 应做 |

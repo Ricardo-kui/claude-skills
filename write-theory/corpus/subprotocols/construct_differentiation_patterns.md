@@ -131,6 +131,40 @@ The distinction between [complete option] and [partial option] is fundamental an
 
 ---
 
+
+### 变体 A：认识论不对称双类型构念辨析（cause-ambiguity typology）
+
+<!--
+pattern_id: failure_typology_cause_ambiguity_contrast
+build_type: 假设树型内嵌 T1 构念辨析
+source_papers: ["anand_mukherjee_2024_org_science"]
+confidence: medium（单篇，产品召回主题 expert_audit_override 2026-08-29 升 VERIFIED）
+-->
+
+**适用场景**: 需要为后续分叉假设奠定构念基础的二分类；区分维度不是现象特征而是**认识论属性**（归因模糊度/可观察性），使类型差异直接预载差异化学习机制。
+**模块**: T1 Construct Definition（服务于假设树的辨析，非独立贡献型辨析）。
+
+**骨架**:
+```
+We characterize [phenomenon] as two types:
+(1) those related to [execution of prescribed established rules] that we label
+    [label A], and
+(2) those related to [missing functionalities / incomplete knowledge] that we
+    call [label B] ([typology citations]).
+Whereas [A] are caused by [inappropriate application of established rules],
+[B] are caused by [nonexistence of complete rules] owing to [incomplete models
+or novel contexts] ([citation]).
+There is less [epistemic ambiguity] about the causes of [A] than about [B].
+```
+
+**为什么有效**: 收尾的模糊度对比句是"分工装置"——类型 A 走低模糊机制（规则更新/培训），类型 B 走高模糊机制（内外搜索/知识重组），后文每个分叉假设只需援引所属类型的位置。
+**注意事项**: 标签（label A/B）需在后文反复以专名回用（如"slip-up failures"），否则辨析与假设脱钩；模糊度主张需有文献锚点。
+**反模式**: 区分维度与后续机制无关的纯分类学辨析（辨析做了分类却没做推导工作）。
+
+**原文锚点**: "We characterize product failures as two types: (1) those related to the execution of prescribed established processes that we label slip-up failures, and (2) those related to missing functionalities or malfunctions that we call knowledge gap failures"（§2.1）
+
+<!-- wb:anand_mukherjee_2024_learning_from_failures_di:failure_typology_cause_ambiguity_contrast -->
+
 ## 与相邻语料文件的关系
 
 - [`../sentences/construct_definition.md`](../sentences/construct_definition.md)：微观句式模板（如 "We define X as..."）

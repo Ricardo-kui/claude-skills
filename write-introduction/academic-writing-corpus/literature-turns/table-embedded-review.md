@@ -126,3 +126,47 @@ Theoretically, we further our understanding of the antecedents of [phenomenon] i
 **适用**: 文献体量大（15+ 核心研究）、跨多领域且共享单一主导机制的 Incompleteness 论文；extended-intro 结构；需要让"已有文献的机制单一性"一目了然的场景
 
 **禁忌**: 文献量小（<10 篇核心）或机制高度异质时不要上表——表格会夸大 synthesis 的完备性；Current Study 行的发现/机制必须与 Results 兑现严格一致
+
+
+### 变体 F：三问勾叉定位矩阵型（fang2025 型） EMERGING（1 篇范文）
+
+**模板**:
+> "Our findings contribute to the [focal literature] ([Table X] positions our manuscript relative to the relevant literature). [Table: rows = each prior study + 'This article'; columns = [N] yes/no capability questions that mirror the contribution claims, e.g., 'Did prior work study [the actor]'s strategic response?', 'Does the response vary by [lever component]?', '... [the downstream outcome]?'; prior studies score cross marks where the paper fills.] Note: We include all studies that have examined [the defined scope]."
+
+**来源**: fang_et_al_2025_rival_recall_ad_spend (Production and Operations Management), P13, P15
+
+**原文锚定**:
+> "(Table 1 positions our manuscript relative to the relevant literature)."
+
+**关键特征**:
+- **列=能力问句而非属性**：三列均为 yes/no 问句（研究了替代方策略回应吗？回应按类型变化吗？估计了对销售的影响吗？）——勾叉计分让"前人全没做、本文全做了"一眼可审计
+- **This article 行是唯一满勾行**：departure point 由矩阵结构本身呈现，无需正文逐篇批判
+- **范围注脚限定可比集**：表下 Note 明确纳入标准（"all studies that have examined..."），防止 cherry-picking 质疑
+- **与变体 C/D/E 的判别**：C 比较描述性维度、D 做前因-后果对照定位、E 按领域×机制组织大文献；本变体面向小文献（≤12 篇）+贡献可拆为 N 个离散问句的场景
+
+**适用**: 贡献主张可拆成 2-4 个离散能力问句的文献领域（如召回/危机溢出的回应研究）；目标期刊接受表内符号计分（POM/MSOM/JM）；Incompleteness × Phenomenon/Mechanism
+
+**禁忌**: 列必须与正文贡献声明逐字对应（每列一个 claim）；文献 >12 篇时改用变体 E 的领域分组；✓ 行不能靠放宽标准凑出——同列判分标准须一致
+
+
+### 变体 G：构念重定向应用型（anand_mukherjee_2024型）
+
+**模板**:
+> "Although most research on [established construct] focuses on [conventional application domain] ([3-5 citations across source types]), we apply the [construct] perspective to [new phenomenon], [operating on knowledge from the focal unit's own activities rather than external sources] ([anchor citation])."
+
+**来源**: anand_mukherjee_2024_learning_from_failures_di (Organization Science), P2
+
+**原文锚定**:
+> "Although most research on absorptive capacity focuses on absorbing knowledge from external sources such as alliance partners, acquired firms, external researchers, suppliers, and information technology providers, we apply the absorptive capacity perspective to learning from product failures."
+
+**关键特征**:
+- 转折不指向文献缺陷而指向应用边界：文献没错，只是"方向"单一（外部来源）——把缺口表述为构念使用方向的未开发象限
+- [conventional domain] 槽位用 5 个并列具体来源构成枚举强度，让"新方向"的偏离显得刻意而非疏漏
+- 一句话同时完成 Literature Turn（构念文献回顾）与 Departure Point（we apply... to...），两功能压缩在同句
+- Gap 类型中性：可服务 Incompleteness（新情境未检）也可服务 Boundary（构念边界外推）
+
+**适用**: 把成熟构念移植到新信息源/新情境的论文；主理论非自创而是重定向时；与"构念能力/存量"类调节变量研究天然匹配
+
+**禁忌**: 枚举的传统应用域必须真实覆盖文献主流（3-5 个引用要扎实），否则审稿人会指出已有内部来源研究；不要声称构念"忽视"了新方向（那是 Inadequacy 语言）
+
+<!-- wb:anand_mukherjee_2024_learning_from_failures_di:construct-reapplication-turn -->

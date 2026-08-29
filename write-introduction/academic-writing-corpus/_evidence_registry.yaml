@@ -59,7 +59,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     02-epigraph-quote-pivot:
-      paper_count: 10
+      paper_count: 11
       papers:
       - abdurakhmonov2026 (JOM)
       - darby2026 (JOM)
@@ -71,8 +71,9 @@ evidence:
       - shi2021 (JMR)
       - singh2023 (JMR)
       - wowak2025 (MS)
+      - fang_et_al_2025_rival_recall_ad_spend (Production and Operations Management)
       gap_distribution:
-        Incompleteness: 5
+        Incompleteness: 6
         Inadequacy: 4
         Incommensurability: 0
       status: ROBUST
@@ -143,7 +144,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     05-literature-consensus-blindspot:
-      paper_count: 11
+      paper_count: 12
       papers:
       - gamache2020 (SMJ)
       - han2020 (AMJ)
@@ -156,8 +157,9 @@ evidence:
       - qiao2026 (SMJ)
       - kashmiri_nicol_arora2017 (JAMS)
       - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
+      - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
       gap_distribution:
-        Incompleteness: 4
+        Incompleteness: 5
         Inadequacy: 7
         Incommensurability: 0
       status: ROBUST
@@ -1398,6 +1400,26 @@ evidence:
         revise: 0
         reject: 0
         common_revise_reasons: []
+    table-embedded-review:
+      paper_count: 2
+      papers:
+      - fang_et_al_2025_rival_recall_ad_spend (Production and Operations Management)
+      - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
+      gap_distribution:
+        Incompleteness: 2
+        Inadequacy: 0
+        Incommensurability: 0
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
+      generativity: ADAPTABLE
+      exclusivity: LOW
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
   previews:
     mechanism-preview:
       paper_count: 21
@@ -1438,7 +1460,7 @@ evidence:
         Inadequacy: 2
         Incommensurability: 3
     findings-preview:
-      paper_count: 46
+      paper_count: 48
       papers:
       - castellaneta_conti_kacperczyk2017 (SMJ)
       - ceo_regulatory_focus_ijrm (IJRM)
@@ -1486,6 +1508,8 @@ evidence:
       - zhao_ding2022 (OS)
       - zhou2017 (ASQ)
       - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
+      - fang_et_al_2025_rival_recall_ad_spend (Production and Operations Management)
+      - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: LOW
@@ -1494,17 +1518,17 @@ evidence:
         total_runs: 0
         validated: 0
         revise: 0
-        reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 24
+        Incompleteness: 26
         Inadequacy: 20
         Incommensurability: 2
     robustness-preview:
-      paper_count: 2
+      paper_count: 3
       papers:
       - darby2026 (JOM)
       - wowak_2020_female_directors_recalls (Manufacturing & Service Operations Management)
+      - fang_et_al_2025_rival_recall_ad_spend (Production and Operations Management)
       status: VERIFIED
       verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       generativity: ADAPTABLE
@@ -1611,7 +1635,7 @@ evidence:
         Inadequacy: 20
         Incommensurability: 2
     three-layer-contribution:
-      paper_count: 6
+      paper_count: 7
       papers:
       - haunschild2015 (OS)
       - hoffmann_cheong_phan_zurbruegg2024 (JM)
@@ -1619,6 +1643,7 @@ evidence:
       - westphal_zajac_1998_symbolic_management (Administrative Science Quarterly)
       - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
       - westphal_j_d_and_bednar_m_k_2005_pluralistic_ignorance_in_co (ASQ)
+      - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
       status: VERIFIED
       verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       generativity: ADAPTABLE
@@ -1631,7 +1656,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 4
+        Incompleteness: 5
         Inadequacy: 1
         Incommensurability: 1
   research_questions:
@@ -1654,14 +1679,15 @@ evidence:
         reject: 0
         common_revise_reasons: []
     02-explicit-dual-question-narrowing:
-      paper_count: 4
+      paper_count: 5
       papers:
       - weng_yang (JMS)
       - cui_yang_vertinsky (SMJ)
       - hoffmann_cheong_phan_zurbruegg2024 (JM)
       - fini_jourdan_perkmann_2017 (AMJ)
+      - fang_et_al_2025_rival_recall_ad_spend (Production and Operations Management)
       gap_distribution:
-        Incompleteness: 3
+        Incompleteness: 4
         Inadequacy: 1
         Incommensurability: 0
       status: VERIFIED

@@ -2,6 +2,91 @@
   "schema_version": "4.0-lite-catalog",
   "cards": [
     {
+      "id": "anand2024-slipups-knowledge-gaps",
+      "path": "v4/blueprints/anand2024-slipups-knowledge-gaps.md",
+      "paper_type": "quantitative",
+      "outlet": "Organization Science",
+      "publication_status": "published",
+      "coverage": "complete",
+      "theoretical_problem_form": [
+        "incompleteness-typology-gap",
+        "contingency-reconciliation"
+      ],
+      "narrative_dynamics": [
+        "paired-type-fork",
+        "asymmetric-support-resolution",
+        "capability-enhancement-arc",
+        "quick-decay-versus-slow-persistence"
+      ],
+      "retrieval_signals": [
+        "learning-from-failure",
+        "failure-typology",
+        "product-recall-counts",
+        "absorptive-capacity-moderator",
+        "negative-binomial-panel",
+        "memory-decay-post-hoc"
+      ],
+      "section_learning": {
+        "introduction": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Pair a qualitative vignette with an archival timeline as a two-example bridge placed after the theory preview and before the empirical setting: the interview narrative shows the complete failure-to-investigation-to-redesign loop (the how), while the da Vinci Figure 1 plot shows the same mechanism quantitatively over 18 years (the whether), and each example closes by naming its construct lesson.",
+            "State the two-way categorization and the three-part result preview in the introduction itself, so the reader meets the typology before the theory section elaborates it."
+          ],
+          "caveat": [
+            "The paired-example bridge is expensive (an interview narrative plus an 18-year single-firm figure) and earns its place only because the two failure types are new and easily confused; do not import it as decoration for familiar constructs."
+          ]
+        },
+        "theory": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Open the hypotheses by staging the two opposing views (failure activates search vs. firms are myopic and uncertain) and reconcile them through the contingency view, which pre-positions the moderators as arbiters of when learning happens.",
+            "Carry a large hypothesis tree (8 hypotheses) on one spine by arguing the main-effect fork once (attention to search to implementation) and letting each typed cell add only its type-specific repair steps, then pairing each moderator as stock (accumulated patents) and flow (lagged R&D intensity) facets of one capability lens."
+          ],
+          "caveat": [
+            "The regulator-procedure scaffolding (Figure 3 step coordinates, five practitioner interviews, a 34-year FDA expert) is high-investment phenomenon anchoring that fits FDA-regulated recalls; it is not a portable default module.",
+            "Moderator arguments are single-sided (enhancing high side only) and legitimate here only because capability is argued as monotone; a non-monotone moderator in a new paper needs full bilateral argumentation."
+          ]
+        },
+        "methods": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Align measurement windows with the story's time logic: both accumulated recalls and accumulated patents use the same 10-year window so that their interaction is interpretable, and the post hoc analysis re-estimates 1-4 year windows precisely to test the decay claim the ending depends on."
+          ],
+          "caveat": [
+            "The sample funnel (firms with at least 10 years of observations and at least 30 recalls) selects high-recall, long-lived firms; the learning story is estimated on exactly the firms with the most failure experience, and robustness supplements do not erase that design-for-story choice.",
+            "The process/design recall classification comes from the authors' own text analysis (95% match with firm self-classification on a subset), so the typology that drives the whole plot is a constructed measure, not an independent fact."
+          ]
+        },
+        "results": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Report the baseline learning effect as an explicitly unhypothesized 'baseline premise in lieu of Hypothesis 1' that replicates extant work, so the hypothesis tree carries only the genuinely new forks (H1a/H1b, H2/H3 families).",
+            "Let honest nulls become the plot: H1a (process learning) and H3a are reported as unsupported in the same tables and tone as the supported hypotheses, then the post hoc window analysis converts the asymmetry into the paper's signature finding — process learning accrues quickly but decays, design learning accrues slowly but persists and is codified."
+          ],
+          "caveat": [
+            "No economic significance is reported anywhere (L2 C4): magnitudes exist only as standardized NB coefficients, so the reader cannot judge how much learning matters; this is a real gap in the exemplar, useful as a cautionary signal, not a move to copy.",
+            "Positive main effects of patents and R&D intensity on subsequent recalls coexist with negative interactions; the paper reads this as innovation-pro firms issuing more recalls, a interpretive choice a writer cannot reuse without the same institutional argument."
+          ]
+        },
+        "discussion": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Return to the opening question with a transformed answer: the discussion does not merely restate that firms learn, it splits the mechanism into cultural mechanisms (compliance, for slip-ups) versus structural mechanisms (codified design knowledge, for knowledge gaps) and uses the post hoc decay cycles to explain why the slip-up storyline stalled."
+          ],
+          "caveat": [
+            "The practical section generalizes the typology to unregulated software platforms and other industries beyond the evidence; the generalization is framed as implication, not demonstrated transfer."
+          ]
+        }
+      },
+      "overall_role": "partial_exemplar"
+    },
+    {
       "id": "anton2025",
       "path": "v4/blueprints/anton2025-common-ownership-innovation.md",
       "paper_type": "quantitative",
@@ -1818,18 +1903,20 @@
           "suitable": "partial",
           "requires": [],
           "learn": [
-            "When a discrete rival event changes the decision environment abruptly, define the pre- and post-event windows and complement the main discontinuity design with a second event, falsification, and alternate media traces."
+            "When a discrete rival event changes the decision environment abruptly, define the pre- and post-event windows (here 16 + 15 weeks around the Monday after the Friday announcement) and defend a no-control-group RDiT by stating the identification assumption and pre-empting local-nature objections with named reasons.",
+            "Ground a vendor-algorithm construct (BERT-classified price/quality/brand ads) in a three-layer validity chain: classifier benchmark performance, double human-coder reliability, and human-machine agreement."
           ],
           "caveat": [
-            "The Sagitar RDiT design, Chinese prefecture-week advertising data, single-event timing assumption, and new-ad-firm instrument are setting-specific and do not establish general competitive strategy effects."
+            "The Sagitar RDiT design, Chinese prefecture-week print-advertising data (62 models from 33 manufacturers, 308 prefectures, 591,976 records), single-event timing assumption, and New-Ad-Firms instrument are setting-specific and do not establish general competitive strategy effects.",
+            "The 2SLS/IV identification stack is not previewed in Methods (it first appears in Results Equations 3-4), and the standard-error clustering level is never reported."
           ]
         },
         "results": {
           "suitable": "yes",
           "requires": [],
           "learn": [
-            "Reveal the aggregate response first, then decompose it into components that expose the mixed strategy hidden by the net decrease.",
-            "Let the performance analysis close the same strategic puzzle by testing whether the action portfolio strengthens or weakens the recall's sales spillover, and report which component drives that result."
+            "Reveal the aggregate response first, then decompose it into components that expose the mixed strategy hidden by the net decrease; translate each coefficient into an explicit percent of the prerecall base (-50%, +25%, -71%, brand null).",
+            "Let the performance analysis close the same strategic puzzle by testing whether the action portfolio strengthens or weakens the recall's sales spillover (35.3% sales lift; each RMB 10,000 of ad spending weakens it by 23.1%, driven by quality advertising), and narrate nulls as evidence of strategy absence."
           ],
           "caveat": [
             "A 50% average decline in total spending and its association with sales do not prove that lowering visibility caused consumer comparisons to change; the study's behavioral and interpretive layers remain distinct."

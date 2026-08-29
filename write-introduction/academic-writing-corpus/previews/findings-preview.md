@@ -109,6 +109,28 @@ P5-P6 的下半段功能：向读者预告实证结果。这是 Introduction 中
 
 ---
 
+
+### 变体 U：编号平铺三发现预告（anand_mukherjee_2024型）
+
+**模板**:
+> "Our results indicate that (1) [learning/outcome is greater for A than for B], (2) [moderator] enhance[s] [the focal process], and (3) [the enhancement] is greater for A than for B."
+
+**来源**: anand_mukherjee_2024_learning_from_failures_di (Organization Science), P7
+
+**原文锚定**:
+> "Our results indicate that (1) firms learn more from design-related than from process-related recalls, (2) innovation capabilities, that is, accumulated patents and lagged R&D intensity, enhance learning from recalls, and (3) the enhancement in learning supported by innovation capabilities is greater for design-related than for process-related recalls."
+
+**关键特征**:
+- 三发现一句编号枚举完成，无幅度、无机制解释、无稳健性预告——与稳健性密集型/幅度内嵌型预告形成极简对照
+- 发现(3)复用(2)的构念做方向性收束（增强效应对哪类更强），三句间有隐含递进：主差异→主效应→交互差异
+- 预告与贡献块（First/Second/Third）严格一一对应，形成双编号呼应结构
+
+**适用**: 假设结构为"主差异+调节+被调节差异"的设计；需要极简发现预告、把篇幅让给后置工作例的长引言
+
+**禁忌**: 幅度信息对读者决策重要时不适用；三项发现必须与贡献块编号对齐，不对齐时读者会迷失
+
+<!-- wb:anand_mukherjee_2024_learning_from_failures_di:numbered-flat-findings-preview -->
+
 ### 变体 K：紧凑四段式（vadakkepatt2022 型）
 
 **模板**:
@@ -312,6 +334,27 @@ P5-P6 的下半段功能：向读者预告实证结果。这是 Introduction 中
 **适用**: 主效应+多调节+机制证据齐全的准实验论文；JM/JMR 风格；当贡献点之间需要各自配发现证据时才用融合块
 
 **禁忌**: 贡献声明中的每个量化幅度必须能被 Results 精确兑现；调节幅度区间需注明是低/高水平组间差；不要让编号超过 3 条
+
+
+### 变体 T：三方裁决+null即策略缺位型（fang2025 型） EMERGING（1 篇范文）
+
+**模板**:
+> "Our [estimator] analysis reveals three key findings. (1) On average, [actors] respond by [aggregate direction with headline magnitude], suggesting that [interpretation]. (2) We [decompose the aggregate lever] by [component type]: [actors] boost [component 1] by [magnitude]. This finding is consistent with [strategy 1]. Next, [actors] curb [component 2] by [magnitude], indicating that [underlying fear/mechanism]. The adjustment to [component 3] is insignificant, indicating the absence of [strategy 3]. (3) A supplementary analysis reveals that [the observed response strategy] pays off. Specifically, [outcome changed by magnitude]; the theoretical insight is that [mechanism statement]."
+
+**来源**: fang_et_al_2025_rival_recall_ad_spend (Production and Operations Management), P11
+
+**原文锚定**:
+> "The adjustment to brand ad spending is insignificant, indicating the absence of a harm-avoidance strategy."
+
+**关键特征**:
+- **发现即裁决书**：每个编号发现的幅度同时(a)回答 RQ 的一个选项、(b)命名一个策略——发现段与三择一符号问句逐条锁定，preview 与贡献零漂移
+- **null 即策略缺位**：不显著被叙述为"某策略缺位"的实质性证据（而非失败）——与变体 I（竞争层级排除）和 R（平行靶标 null）判别：此处的 null 裁决的是理论三连中的第三支
+- **补充分析自带 theoretical insight 句**：第(3)条不是稳健性而是策略回报检验（回应策略对结果变量的削弱/强化），并以 "The theoretical insight is that..." 收出机制陈述
+- **与变体 S 的判别**：S 把编号发现融合进贡献块；本变体保持发现段独立、以裁决 RQ 为组织原则，贡献段另起
+
+**适用**: 多机制对冲 + 杠杆可分解（总效应+成分分解）的准实验/事件研究；RQ 为三择一符号问的论文（与 rq 三择一变体配对）；POM/JM/M&SOM 适配
+
+**禁忌**: 每个幅度必须能被 Results 精确兑现；null 必须真为 null 且有"策略缺位"的理论含义，不能把不显著一律包装成证据；编号不超过 3 条；不报系数/p 值
 
 ## 组装规则
 

@@ -306,6 +306,39 @@ status: ready_for_corpus
 
 
 
+
+### 变体 B：存量/流量双面向 moderator 元框架（stock–flow facet pairing）
+
+<!--
+pattern_id: stock_flow_capability_moderator_pairing
+build_type: 假设树型/调节效应型（多 moderator 元框架）
+source_papers: ["anand_mukherjee_2024_org_science"]
+confidence: medium（单篇，产品召回主题 expert_audit_override 2026-08-29 升 VERIFIED）
+-->
+
+**适用场景**: 同一能力构念提供两个操作化（存量 measure + 流量 measure）时，用存量/流量分解作元框架，使双 moderator 读作刻意拆解而非控制变量堆放（满足 C18）。
+
+**骨架**:
+```
+[Capability] stocks and [capability] efforts represent two integral aspects of
+[capability] ([foundation citation, e.g., absorptive capacity]).
+[Stock facet] represents a firm's capabilities to [identify / discern value of /
+assimilate] relevant new knowledge ([accumulated measure]).
+[Flow facet] is an indication of its prevailing [innovation culture and
+infrastructure] that support [ongoing search and identification] ([recent
+effort measure]).
+These two facets can have different impacts on [the differentiated mechanisms
+across outcome types].
+```
+
+**为什么有效**: 存量面向"过去积累给了什么资源"、流量面向"当下投入维持什么状态"——两面各自映射到不同学习机制，为 2×2 单元格假设提供独立的理论依据来源。
+**注意事项**: 两个 measure 必须真分属存量/流量（累计存量 vs 当期强度）；若两者高度相关需在 Methods 处理共线。
+**反模式**: 同一构念的两个代理变量轮流试错式检验（无元框架，审稿人问"why these two"）。
+
+**原文锚点**: "Firms' stocks of innovations and their innovation efforts represent two integral aspects of the innovation capabilities of firms."（§3.2）
+
+<!-- wb:anand_mukherjee_2024_learning_from_failures_di:stock_flow_capability_moderator_pairing -->
+
 ### 框架 B：意愿×机会双路径调节论证（westphal_bednar2005 型）
 
 **模板**:

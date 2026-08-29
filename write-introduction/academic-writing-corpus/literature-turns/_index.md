@@ -150,7 +150,7 @@ literature-turns/
 
 ## 新增 Literature Turn（待分类）
 
-- table-embedded-review.md — Systematic literature table embedded in Introduction；含跨领域机制回顾、本领域结构性空白和“本文”对照行三种变体
+- table-embedded-review.md — Systematic literature table embedded in Introduction；含跨领域机制回顾、本领域结构性空白和“本文”对照行三种变体；变体 F:三问勾叉定位矩阵型——列=贡献主张派生 yes/no 能力问句,勾叉计分使 gap 可审计(fang2025 POM, EMERGING)
 
 ---
 

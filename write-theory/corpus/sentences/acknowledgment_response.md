@@ -216,3 +216,36 @@ However, [audience B] may view the same [action] differently from [audience A]:
   - 词典定义当论证（§2.4 禁令）
   - 承认句贬损异议者（ethos 损伤，§3.1 警告）
   - **套路化承认**：每段一个 Granted/Admittedly 形成防御性节律——本语料有**频次预算**：仅用于 soundness protocol §4 锁定的最弱前提步骤与反直觉步骤，一篇 Theory section 通常 0–2 处；零使用是合法且常见的正确答案（形式完美的推导段不需要承认句）。防御性技术说明文风的完整防火墙见 `../subprotocols/reasoning_soundness_protocol.md` §7
+
+
+### 变体 A：对立观点→权变调和式调节开场（contingency reconciliation opener）
+
+<!--
+pattern_id: contingency_reconciliation_opener
+build_type: 跨类型（调节/假设树开场句式）
+source_papers: ["anand_mukherjee_2024_org_science"]
+confidence: medium（单篇，产品召回主题 expert_audit_override 2026-08-29 升 VERIFIED）
+-->
+
+**适用场景**: 文献对"经验是否产生学习/绩效"存在正反两派时，把僵局转化为调节假设的论证许可证——调和句先于任何 moderator 引入即命名"条件"这一调节类属。
+**句位**: 假设发展开篇（T3 机制推演之前的立场铺垫段）。
+
+**骨架**:
+```
+One perspective applying [theory] to [phenomenon] is that [experience] experiences
+are more effective at generating [outcome] because they activate [attention
+mechanism] and result in more focused [search] ([citations]).
+The opposite view is that [actors] do not [learn] because their reactions are
+[myopic objection], [uncertainty/complexity objection], and [non-persistence
+objection] ([citations]).
+The contingency view of [phenomenon] reconciles these opposing views by focusing
+on conditions under which [experience] may or may not lead to [outcome].
+```
+
+**为什么有效**: 正反两派各有 citation 支撑后被"conditions under which"一句收编——后续每个调节假设都自动成为对该僵局的回答，moderator 不再是控制项而是裁决项。
+**注意事项**: 调和句必须真正命名条件维度，且后续 moderator 需逐一兑现"条件"承诺；只摆两派不调和则是空洞平衡。
+**反模式**: 用此句式包装实则单边论证（只驳反方不吸收其洞察）。
+
+**原文锚点**: "The opposite view is that firms do not learn from failure experiences because their reactions are myopic in only focusing on the recent failure, there is too much uncertainty and complexity to be able to pinpoint underlying causes"（§3.1 首段）
+
+<!-- wb:anand_mukherjee_2024_learning_from_failures_di:contingency_reconciliation_opener -->

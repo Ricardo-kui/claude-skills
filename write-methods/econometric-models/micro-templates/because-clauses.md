@@ -134,3 +134,17 @@ because 从句是 Methods 中**最密集的说服单元**。一个 because 从�
 **禁忌**: 理论 because 需有可引的过程性证据（文献综述或制度化事实），不能拿"我们认为这段重要"充数；窗口选择若同时受数据可得性约束，诚实做法是双理由并列
 
 **验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
+
+
+### 变体 B：测量窗对齐 because 从句 — 为交互项估计统一累积窗（anand_mukherjee_2024 型）
+- **出处**: Anand & Mukherjee 2024 (Organization Science)，医疗设备/制药召回面板
+- **槽位**: M4 自变量操作化
+- **可迁移性**: 高（任何多个解释变量各带滞后/累积窗、又要两两进交互的设定）
+- **区别于**: 变体 A（理论驱动观察窗）— 变体 A 的窗口由构念活跃期证据决定；本变体的窗口由估计设计决定：与另一解释变量的累积窗对齐，使交互项可估，且以 post hoc 换窗检验兜底
+- **原始句锚点**（Anand & Mukherjee 2024 原文）: "By accumulating prior patent counts for 10 years, we also achieve congruence with our other count variables of accumulated recalls, which is helpful as we estimate interactions of pairs of independent variables."
+- **验证状态**: VERIFIED (expert_audit_override, user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+- **写入日期**: 2026-08-29
+[骨架]:
+[Accumulated IV] of a [unit] for a specific year t is the cumulative count of [events] issued by the [unit] until the prior year (t - 1). To achieve homogeneity and consistency of this measure, we accumulate [events] over an equal number of years, [k], for each year in the main models. We use time periods other than [k] years for [the measure] for a post hoc test. By accumulating [second measure] for [k] years, we also achieve congruence with our other count variables, which is helpful as we estimate interactions of pairs of independent variables for testing [Hypothesis].
+
+<!-- wb:anand_mukherjee_2024_learning_from_failures_di:m4_window_congruence_for_interactions -->

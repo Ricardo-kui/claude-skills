@@ -12,7 +12,6 @@ confidence: medium
 status: ready_for_corpus
 -->
 
-
 ## 变体速查表
 
 > 检索辅助（2026-08-09 P0 补建）。状态列空白 = 正文未标注验证状态（旧 Pattern）。状态词表（2026-08-29 统一，与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀）；LEGACY-DIAGNOSTIC 保留（工具诊断类）；召回主题条目按用户 2026-08-29 裁决单源 VERIFIED。完整骨架、适用条件与诚实边界见下方变体正文。
@@ -632,7 +631,6 @@ Based on similar theoretical reasoning, we now explore how the [k] [actor] chara
 
 **原文锚点**: "We then discuss how the CEO's personal interests may influence a company's remedy decision, both directly and indirectly through interactions with remedy cost and consumer harm."
 
-
 ## Pattern: Context-Assigned Decision-Margin Split（情境分配决策边际拆分）
 
 **验证状态**: VERIFIED（expert_audit_override 2026-08-28：产品召回为主研究领域，单源足矣）
@@ -689,7 +687,6 @@ H2: [X] is negatively associated with [time-to-act] for [high-stakes class].
 
 **原文锚点**: "This distinction underlies our hypotheses, as we contend that adding female directors will have a varying influence on recall decisions contingent upon the severity of product defects."
 
-
 ### 变体 A：受众异质性 pivot 至调节假设（westphal_zajac_1998_symbolic_management 型）
 
 **模板**:
@@ -710,7 +707,6 @@ H2: [X] is negatively associated with [time-to-act] for [high-stakes class].
 **禁忌**: pivot 的异质性必须产生可论证的机制差异（退出成本→敏感性），只说"他们不同"不够；subgroup 的行为偏好需有文献锚定，不能按需要假设
 
 **验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
-
 
 ## Pattern B: Mechanism-Matched Dual-Path → Shared Renewal Trunk（中介配对分流→共享重构主干，what_changes_after_women_enter_top_manage_2020 型）
 
@@ -774,3 +770,81 @@ propensity and in TMT change orientation, respectively."
 - 为了假设编号对称让同一中介机械解释两个结局
 - 双中介区分段缺失，直接并排推 H1/H2
 - 两 DV 仅因数据可得而配对，无属性匹配论证
+
+## Pattern: Response-Portfolio Decomposition（聚合行动 = 对立组件组合）
+
+**适用场景**: 行动者的响应是一个**聚合行动变量**（如总广告支出、总研发投入、总沟通支出），但其组件在战略上服务**相反的目的**（抢占 vs 规避；扩张 vs 防御）；Theory 内先预告"组合"逻辑，为实证章节"先聚合后分解"的揭示叙事埋线。源自 Fang et al. (2025, POM)。
+
+**微观动作序列**: Aggregate action named → component 1 (opportunity-serving, direction +) → component 2 (threat-avoiding, direction −) → component 3 (ambiguous/neutral) → embedded closure: portfolio statement → observable-construct concession → empirical bridge (moderation question)
+
+**骨架**:
+```
+[组件1—机会服务] Increasing [component 1] can [enhance/maintain the outcome], preempting
+the [actor]'s opportunity to capture [the trigger's lost ground].
+
+[组件2—威胁规避] Conversely, [lowering component 2] can mitigate [the evaluative discount]
+triggered by [the event].
+
+[嵌入边界] However, the magnitude may depend on [actor characteristics]; [component]
+by an [actor type A] may elicit [weaker reaction] than [actor type B].
+
+[嵌入式收束 + 实证桥] In summary, [actor] can create a portfolio of [component 1],
+[component 2], and [component 3] to influence [outcome]. Although we cannot directly
+observe [deep construct], we empirically examine whether the [aggregate action]
+moderates [outcome] in the periods following [trigger].
+```
+
+**原文锚点**:
+> "the substitute brand can create a portfolio of spending on price advertising, quality advertising, and brand advertising to influence buyers' purchasing decisions"（2.3 P2）
+> "Although we cannot directly observe buyers' utility function, we empirically examine whether the substitute's adjustments to its ad spending (hereafter, ad adjustments) moderate its sales"（2.3 P2）
+
+**为什么有效**: 在 Theory 内声明"聚合行动的组件无需同向移动"，读者随后看到聚合系数时不会被误导，Results 的分解成为理论必然而非事后挖掘；"Although we cannot directly observe..." 的让步 + 实验桥把不可观测深层构念与可测调节问题隔开，机制保持诚实。
+
+**注意事项**:
+- 每个组件必须映射到**不同的**战略目的；若组件同向同目的，聚合即可、无需组合叙事
+- 组件方向可以相反（+ / − / 0），Theory 只需给出方向可能性，不承诺幅度
+- 嵌入式收束即可（管理学惯例，不设独立 Closure 段）；实证桥用调节问题形式承接
+
+**反模式**: 不得把任意聚合变量强行称为"组合"——需要组件战略含义真实对立的证据；不得在 Theory 内直接断言组件净效应方向（那是 Results 的裁决对象）。
+
+
+
+### 变体 B：类型化双结果假设树×能力增强交叉（typed tree × capability grid）
+
+<!--
+pattern_id: typed_outcome_hypothesis_tree_with_capability_enhancement
+build_type: 假设树型（主效应+调节，双结果配对）
+source_papers: ["anand_mukherjee_2024_org_science"]
+confidence: medium（单篇，产品召回主题 expert_audit_override 2026-08-29 升 VERIFIED）
+-->
+
+**适用场景**: 一个学习/适应主干要派生"两类结果各自的主效应 + 两个 moderator 各自对两类的调节"共 8+ 假设时，用主干一次立论、单元格只补差异化步骤的组织法。
+
+**骨架**:
+```
+[Common trunk] [Learning event] activates attention ([attention theory]) and
+focuses search for solutions ([citation]), followed by implementation
+([citation]); accumulated [X] should reduce subsequent [X].
+
+[Typed branch A] When the underlying failure is [type A: rule misapplication],
+remediation runs through [procedure updating + training steps], so accumulated
+[observable A] reduces subsequent [observable A]. → H[1a]
+
+[Typed branch B] When the underlying failure is [type B: knowledge gap],
+remediation requires [internal/external search + recombination + approval
+steps], so accumulated [observable B] reduces subsequent [observable B]. → H[1b]
+
+[Capability enhancement] [Capability] decomposes into [stock facet] and
+[flow facet]; each facet supplies a distinct learning resource ([causal
+identification / wider search / assimilation]), strengthening each [X→Y]
+association. Per facet: overall H, then typed pair H[a]/H[b] with
+facet-outcome-specific mechanisms.
+```
+
+**为什么有效**: 主干只推导一次注意力-搜索-实施链；此后每个假设的增量论证成本仅是"该单元格的修复步骤/资源有何不同"，8 个假设不显重复。
+**注意事项**: 每个调节假设必须说明 moderator 作用于该结果类型的**哪条**机制（如 stock→因果识别、flow→非编码知识吸收）；禁止只复制主干加一句"stronger"。
+**反模式**: 单元格机制与主干机制完全同质（假设树退化成同一条论证的换词复读）。
+
+**原文锚点**: "These two aspects of innovation capabilities can have different impacts on the two sets of mechanisms that differentiate learning from slip-up failures and learning from knowledge gap failures."（§3.2）
+
+<!-- wb:anand_mukherjee_2024_learning_from_failures_di:typed_outcome_hypothesis_tree_with_capability_enhancement -->

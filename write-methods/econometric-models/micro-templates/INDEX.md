@@ -29,7 +29,7 @@ updated: 2026-08-03
 | 分类 | 文件 | 功能 | 对应槽位 |
 |------|------|------|---------|
 | [段首锚定短语](opening-anchors.md) | 告诉读者"本段做什么" | M1–M10 所有段首 |
-| [because 从句架构](because-clauses.md) | 论证控制变量、样本排除、构念效度的理由 | M2, M3, M4, M6；微模板 A：理论驱动观察窗 because 从句（窗口=构念活跃期证据 + 数据窗/事件窗 lag 结构分离），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28) |
+| [because 从句架构](because-clauses.md) | 论证控制变量、样本排除、构念效度的理由 | M2, M3, M4, M6；微模板 A：理论驱动观察窗 because 从句（窗口=构念活跃期证据 + 数据窗/事件窗 lag 结构分离），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28)；变体 B：M4 测量窗对齐 because 从句 — 累积窗与另一解释变量统一以使交互项可估（窗口由估计设计而非构念证据决定），anand_mukherjee_2024 |
 | [因果动词梯度](causal-hedging.md) | 根据设计强度选择因果声称力度 | M3, M4, M7 |
 | [过渡衔接短语](transitions.md) | 段落内部的逻辑推进标记 | M1–M10 任意多句段落 |
 | [样本漏斗节奏](funnel-rhythm.md) | 数字叙事的句法序列 | M2；起始总体补充：样本框三理由枚举辩护（数据可得性/响应率/研究缺口），westphal_bednar2005，EMERGING |

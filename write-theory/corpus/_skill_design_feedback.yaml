@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
   last_updated: '2026-08-29'
-  observations_processed: 27
+  observations_processed: 28
   description: Evidence ledger for write-theory design defects inferred from Theory exemplar distillation.
 defects:
   e-family-missing-dual-edged-signed-contingency-variant:
@@ -1497,3 +1497,63 @@ defects:
     auto_action:
       eligibility: optional_variant_only
       reason: Corpus changes do not alter core routing.
+  competing-hypotheses-missing-no-formal-h-branch:
+    classification: routing_defect
+    status: EMERGING
+    risk: low
+    current_rule: 变体 F 的段落功能地图把'竞争假设形式化（H1a / H1b）'设为必须段（✅），竞争预测默认收敛为正式编号假设对；无正式 H、以开放实证问题收束的竞争预测框架（POM/OM 概念框架惯例）没有路由分支。
+    rule_excerpt: '| P5 | 竞争假设形式化（H1a / H1b） | 各 30-60 | ✅ |'
+    rule_locator: write-theory/corpus/variants/F_competing_hypotheses.md §段落功能地图 P5 行
+    target: write-theory/corpus/variants/F_competing_hypotheses.md
+    diagnosis: Fang et al. (2025, POM) 全文 Theory（full_text_verified）展示合法竞争预测形态：机会/威胁解释支配关系经行动方向代理桥接产生三向预测（增/减/零净效应），0 编号假设，以概念框架图
+      + 开放实证问题收束。按现行 F 段落地图，该形态会被判缺 P5（must），误拒合法 OM 期刊理论结构。属路由缺分支（add_branch），非 corpus gap——语料已有该篇的两个 reference 候选，但变体 F
+      的'必须形式化'规则本身需要条件化。
+    proposed_change:
+      action: add_branch
+      summary: 在 F 变体段落功能地图为 P5 增加条件分支：期刊惯例/设计允许无编号假设时，竞争收敛可改为'解释支配关系→行动方向三向预测（含零净效应组合规则）+ 概念框架图 + 开放实证问题'，不判缺 P5；跨论文达 VERIFIED
+        前仅登记，不自动改规则。
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 机制推演型（辩证对立）
+      - 竞争假设型
+      hypothesis_families:
+      - competing_predictions_implicit
+      - no_formal_hypotheses
+      journals: []
+      boundary: 仅适用于期刊/设计明确允许无编号假设的竞争预测框架（POM/OM 概念框架、描述性 pipeline 文）；不改变 AMJ/SMJ 式正式 H 的默认要求
+    papers:
+    - id: fang_et_al_2025
+      journal: Production and Operations Management
+      build_type: 机制推演型（辩证对立竞争机制 + 代理桥接，无正式 H）
+      hypothesis_family: ''
+      evidence_anchor: Theory 2.2 P3：不可观测解释→行动方向代理→三向预测（preemption/signaling/harm avoidance + cancel-out 零净效应）；全节 0 编号假设，Figure
+        1 + 开放实证问题收束
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Production and Operations Management
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Production and Operations Management
+    verified_journal_count: 1
+    regression_cases:
+      positive:
+      - prompt: 为一篇 OM 期刊的概念框架式论文写 Theory：竞争来自管理者对同一触发事件的机会/威胁解释，期刊允许无编号假设。
+        expected_invariants:
+        - 允许竞争预测以三向方向预测 + 开放实证问题收束而不强制 H1a/H1b
+        - 解释→行动方向的对应规则仍必须显式论证
+      preservation:
+      - prompt: 为一篇 AMJ 论文写理论：两个独立理论对同一 X→Y 给出对立预测，期刊要求正式假设。
+        expected_invariants:
+        - 仍输出 H1a/H1b 竞争假设对与 'Given these competing arguments' 式收敛
+        - 不因新分支而放行无形式 H 的默认写法
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-29'
+    last_seen: '2026-08-29'
+    auto_action:
+      eligibility: log_only
+      reason: Insufficient evidence for core revision.

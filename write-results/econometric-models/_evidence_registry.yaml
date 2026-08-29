@@ -294,6 +294,15 @@ estimators:
       R3:
         description: 主假设检验（四拍节奏）
         skeleton_variants:
+        - id: r3_division_arithmetic_magnitude_fang2025
+          skeleton: "The [direction] and statistically significant coefficient ([coefficient], p < [threshold]) in Column [I] suggests that [treated units] responded to [event] by [direction phrase] their [outcome]. Specifically, in each [unit_1] and each [unit_2] following [event], [treated units] [outcome]—on average—[coefficient] × [unit scale] = [amount] (or [USD equivalent]) [more/less] than what they spent in a pre[event] [unit_1-unit_2], on average. This number amounts to a [X]% [drop/increase] ([amount] ÷ [base])."
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            om: 1
+          sources:
+          - fang_et_al_2025_rival_recall_ad_spend (POM)
+          corpus_path: econometric-models/OLS-FE.md
         - id: r3_ols_four_beat_standard
           skeleton: Hypothesis [x] predicted that [predictor] would be [positive/negative] related to [outcome]. Model [y]
             of Table [z] shows that the coefficient for [predictor] is [positive/negative] and statistically significant (β
@@ -555,6 +564,15 @@ estimators:
       R6:
         description: 非显著 / 混合 / 意外发现
         skeleton_variants:
+        - id: r6_null_as_strategy_adjudication_fang2025
+          skeleton: "Column [IV] of Table [X] shows that [event] did not impact [outcome] (β [value], p > [threshold]). ... This finding corroborates the theoretical insight we drew from Column [II]. ... The evidence thus supports the [strategy_A], while supporting neither the [strategy_B] nor the [strategy_C]."
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            om: 1
+          sources:
+          - fang_et_al_2025_rival_recall_ad_spend (POM)
+          corpus_path: econometric-models/OLS-FE.md
         - id: r6_chow_honest_downgrade_after_pattern_support
           skeleton: This pattern of findings is consistent with Hypothesis [H], although a Chow test comparing the effect
             sizes of the [treatment] across Models [N] and [M] reveals that the difference is not significant (p = [value]).
@@ -2516,6 +2534,15 @@ estimators:
     slots:
       R2:
         skeleton_variants:
+        - id: r2_rditer_prepost_modelfree_event_figure_fang2025
+          skeleton: "Figure [X] presents the model-free evidence of [outcome] for [treated units] before and after [event]. The [axis] covers the [N]-[period] observational window from [start] to [end]. The [panel] reveals a noticeable [increase/decrease] (p < [threshold]) in [total outcome] for [treated units] after [event]. A decomposition of [outcome] by [component dimension] indicates an [increase] (p < [threshold]) in [component_A] following [event], but a [decrease] (p < [threshold]) in [component_B]. However, we observe an insignificant change (p > [threshold]) in [component_C]. Table [Y] in the [online supplemental materials] provides the t-statistic for the model-free evidence. ... Next, we present the estimates from the [estimator] analysis"
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            om: 1
+          sources:
+          - fang_et_al_2025_rival_recall_ad_spend (POM)
+          corpus_path: econometric-models/DiD.md
         - id: r2_did_parallel_trend_first
           skeleton: Before turning to the main results, Figure [x] shows the event-study estimates, which provide a test of
             the parallel trends assumption. The pre-treatment coefficients are small and statistically indistinguishable from
@@ -2680,6 +2707,15 @@ estimators:
           corpus_path: econometric-models/DiD.md
       R8:
         skeleton_variants:
+        - id: r8_cross_event_replication_generalization_fang2025
+          skeleton: "We next test the generalizability of our findings beyond [event A]. Specifically, we collect an additional data set on [event B] initiated by [actor] in [market] during [year]. ... Using this newly created balanced sample, we estimate Equation ([N]). Table [Y] presents the results, similar to those reported in Table [X]. The consistent results suggest that the observed relations between [treatment] and [outcome] are likely limited to neither [event A] nor [category A]. Instead, these effects may be generalized to other [events] and [categories]."
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            om: 1
+          sources:
+          - fang_et_al_2025_rival_recall_ad_spend (POM)
+          corpus_path: econometric-models/DiD.md
         - id: r8_did_theoretical_premise_probe_chain
           skeleton: We probe observable implications of the proposed mechanism by examining [communication outcome], [communication
             capacity as a condition], and whether [core behavior] is associated with attention from each proposed intermediary.
@@ -3121,6 +3157,26 @@ estimators:
           - deferred_to_discussion
           notes: null 不跳过；符号反转只作推测框架（'suggesting that... may manifest in a different manner'）不声称支持
           corpus_path: econometric-models/计数模型.md
+        - id: r6_count_marginal_only_in_full_model_not_supported
+          skeleton: 'From column [2], we observe that the parameter estimate for [predictor] is [direction] but only marginally
+            significant (b = [value], p < [0.10]). The main effect of [predictor] is significant (b = [value], p < [0.05])
+            only when the interaction terms are included (Table [x], column [3]). Thus, we do not find support for [the hypothesized
+            association] (Hypothesis [N]).'
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
+          subfield_distribution:
+            om: 1
+          sources:
+          - anand_mukherjee_2024_learning_from_failures_di
+          transferability: high
+          paradigm_exclusivity: 计数模型专用，主效应仅全模型显著边缘情形的保守裁决
+          rhythm_tags:
+          - marginal_significance
+          - full_model_only_significance
+          - conservative_verdict
+          notes: 主效应仅在加入交互项的全模型中才显著仍判不支持——不借全模型显著性翻案，与变体12/14/15 的 mixed 情形均不同（corpus 变体30）
+          corpus_path: econometric-models/计数模型.md
       R9:
         description: Results 证据收束
         skeleton_variants:
@@ -3142,6 +3198,29 @@ estimators:
           - stakeholder_differentiation
           - discussion_handoff
           notes: 把 null/small 结果与支持结果并置综合进 headline answer；显式 Discussion 交接
+          corpus_path: econometric-models/计数模型.md
+        - id: r9_count_hypothesis_construct_summary_table
+          skeleton: 'We summarize our results in Table [5], connecting the measurement variables used in the hypotheses back
+            to the underlying constructs used in our conceptualization of the relationships. Each row lists the [hypothesis
+            or baseline premise], the [association (all [direction]) and underlying constructs], the [result table], and the
+            support verdict. The interaction-effects results support our assertion that [capability stock] and [capability
+            effort] enhance [the focal mechanism] and reduce [the DV]. Although the main effects strongly support [mechanism]
+            for [construct A], they do not support it for [construct B]. Altogether, we find support for the intuition of
+            considering the differential effects of [the two source types] separately.'
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
+          subfield_distribution:
+            om: 1
+          sources:
+          - anand_mukherjee_2024_learning_from_failures_di
+          transferability: high
+          paradigm_exclusivity: 计数模型专用，假设-构念映射汇总表收束
+          rhythm_tags:
+          - hypothesis_construct_mapping_table
+          - headline_answer
+          - verdict_column
+          notes: 假设→测量变量→底层构念→结果表号→支持判定五列映射的节中小结表，把构念级差异模式（A 类支持、B 类不支持、调节跨类一致）变成可扫读 headline answer，与变体16 散文式综合不同（corpus 变体34）
           corpus_path: econometric-models/计数模型.md
       R7:
         skeleton_variants:
@@ -3294,6 +3373,33 @@ estimators:
           - reverse_causality
           notes: 前瞻式总起先列威胁清单，逐 threat 以收束句关闭（"help alleviate concerns" / "provides support for our contention"）（corpus 变体25）
           corpus_path: econometric-models/计数模型.md
+        - id: r7_count_iv_gee_endogeneity_noniid
+          skeleton: 'We perform supplementary analyses to check the robustness of our results against (i) endogeneity of [an
+            explanatory variable] and (ii) the nonindependent and identically distributed (non-IID) nature of observations
+            within [units]. [The lagged predictor], although lagged, may be endogenous through a reverse causal relationship
+            due to the forward-looking behavior of [units]: identifying a potential [failure] may motivate preemptive investment,
+            biasing the estimates. A good IV is required to be associated with the endogenous variable; however, it should
+            not be correlated with the response variable except through the endogenous variable. [Instrument] provides [units]
+            with the financial ability to invest in [the predictor], but is not likely to be associated with [the DV]; we
+            therefore use [instrument normalized by a size base]. We also estimate a [generalized estimating equation (GEE)]
+            with an [exchangeable] correlation structure within [units], which is particularly useful for [long panel] data.
+            Both results (Table [E.x], Online Appendix [E]) confirm the robustness of the original results in Table [2].'
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
+          subfield_distribution:
+            om: 1
+          sources:
+          - anand_mukherjee_2024_learning_from_failures_di
+          transferability: high
+          paradigm_exclusivity: 计数模型专用，计数主模型双威胁配对（IV 排他性散文 + GEE 面板相关）
+          rhythm_tags:
+          - dual_threat_pairing
+          - iv_exclusion_prose
+          - gee_exchangeable
+          - appendix_confirmation
+          notes: 反向因果威胁→IV 相关性+排他性双条件散文论证；面板内非 IID→GEE exchangeable 结构；结果在附录表、正文以单句 confirm-the-robustness 收束，与变体21/25 的组织方式均不同（corpus 变体31）
+          corpus_path: econometric-models/计数模型.md
       R8:
         description: 补充 / 事后 / 机制
         skeleton_variants:
@@ -3375,6 +3481,62 @@ estimators:
           - category_collapsing_disclosure
           notes: 先二值化复制主结果再剂量化揭示阈值；阈值显式声明为连续测度做不到；低观测类合并须交代观测数依据；阈值只作理论精化不作主检验（corpus 变体27）
           corpus_path: econometric-models/计数模型.md
+        - id: r8_count_alternative_events_mechanism_battery
+          skeleton: 'Although secondary data do not lead to direct explanations of the causal mechanisms, two ways of getting
+            at potential mechanisms are developing theoretical arguments, and testing supplementary models with variables
+            related to the same mechanisms. Whereas [focal failure events] focus organizational attention on [performance
+            shortfalls], other events can also provoke such attention. We explore three: [public litigation] (binary, from
+            [regulatory filings and legal databases]), [serious vs. non-serious operational incident reports], and [regulator
+            warning letters]. [Serious incidents] have a positive significant association with [subsequent DV] (b = [value],
+            p < [threshold]) and interact with [capability stock] (b = [value], p < [threshold]); [non-serious incidents],
+            albeit the dominant number in the data, are neither significantly associated with [the DV] nor do they interact
+            with [capability stocks]. [Regulator warnings] also improve subsequent performance (b = [value], p < [threshold]),
+            contrary to the suggestion that [volition] is important for such learning ([citation]). Altogether, these results
+            provide supporting evidence for the [attention-focusing] mechanism. To address whether learning is driven by [past
+            failure experience] or by [innate unit capabilities], we estimate models of cross-learnings, examining whether
+            [experience type A] predicts [DV type B] and vice versa. [Experience type A] has a marginally significant cross-learning
+            effect on [DV type B] (b = [value], p < [0.10]); the reverse is not significant—perhaps because [theoretical sequencing,
+            e.g., design precedes process]. Overall, this indicates that [failure experience] improves subsequent performance,
+            while [capabilities] remain a crucial factor.'
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
+          subfield_distribution:
+            om: 1
+          sources:
+          - anand_mukherjee_2024_learning_from_failures_di
+          transferability: high
+          paradigm_exclusivity: 计数模型专用，替代注意事件同机制三角验证 + 跨 DV 交叉学习
+          rhythm_tags:
+          - alternative_attention_events
+          - natural_null_control
+          - cross_learning_discount
+          notes: 三类替代注意事件三角验证同一机制（含数量占多数但不显著的非严重事件作天然 null 对照），并用跨 DV 交叉学习的不对称显著性折扣"固有能力"竞争解释——机制证据而非稳健性（corpus 变体32）
+          corpus_path: econometric-models/计数模型.md
+        - id: r8_count_posthoc_memory_decay_windows
+          skeleton: 'As, over time, organizations tend to forget the lessons they learn from [failures] ([citation]), we conduct
+            a post hoc analysis that considers different periods for accumulating past [experience]: [one, two, three, and
+            four] prior years of [experience and moderators] (results in Online Appendix [F]: Tables [F.1] and [F.2]), and
+            repeat the main models. Although learning from [experience type A] appears to take more time to accrue, the lessons
+            appear to persist (Table [F.2])—plausibly because it gets codified to a greater extent ([citations]) in [repositories
+            such as design documents]. In contrast, learning from [experience type B] may accrue more quickly through [tacit
+            knowledge] but can deteriorate (Table [F.1]), as [conformance, ongoing monitoring, and managerial attention] weaken
+            with the passage of time ([citations]).'
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
+          subfield_distribution:
+            om: 1
+          sources:
+          - anand_mukherjee_2024_learning_from_failures_di
+          transferability: high
+          paradigm_exclusivity: 计数模型专用，post hoc 记忆衰退时窗 × 编码化解释绑定
+          rhythm_tags:
+          - posthoc_decay_windows
+          - codified_vs_tacit_binding
+          - attention_weakening
+          notes: 不同经验类型的衰退速度差异（快起快衰 vs 慢起持久）与编码化/默会知识理论解释绑定，衰减归因于注意力随时间弱化——post hoc 结果回接理论构念而非停在描述（corpus 变体33）
+          corpus_path: econometric-models/计数模型.md
       R2:
         description: ''
         skeleton_variants:
@@ -3392,6 +3554,33 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
+          corpus_path: econometric-models/计数模型.md
+        - id: r2_count_stepwise_architecture_estimator_chain
+          skeleton: 'Our analysis consists of three progressive steps. In Step 1, we include the effects of the control variables
+            on [the count DV]. In Step 2, we include the explanatory variables—[failure experience], [capability stock], and
+            [capability effort]—to assess the main effect of learning; although this main effect is not a hypothesized relationship,
+            this step replicates the relationship analyzed in previous studies ([citations]). In Step 3, we test the moderation
+            effects by incorporating the relevant interaction terms. The complete model is shown as [an equation with unit/industry/year
+            subscripts]. We estimate [negative binomial] models because our dependent variable in each case is [an event count].
+            Although count data can also be modeled using [Poisson] models, they require the mean and the dispersion to be
+            equal; in our data the count DVs are overdispersed, so [negative binomial] models are well suited. We check for
+            serial correlation using [Breusch-Godfrey and Durbin-Watson tests]; the results are significant, indicating unobserved
+            unit- and period-level heterogeneity, so we perform all estimations with [correction for serial correlation].
+            Based on a significant [Hausman test] rejecting the consistency of [random effects], we use [unit fixed effects].'
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
+          subfield_distribution:
+            om: 1
+          sources:
+          - anand_mukherjee_2024_learning_from_failures_di
+          transferability: high
+          paradigm_exclusivity: 计数模型专用，三步递进架构声明 + 检验驱动的估计器正当化链
+          rhythm_tags:
+          - three_step_architecture
+          - nonhypothesized_replication_step
+          - test_driven_estimator_justification
+          notes: 三步架构声明 + 基线步显式降级为非假设的复现基线；过离散→NB、序列相关检验→修正估计、Hausman→FE，每步估计器选择由具名检验触发（corpus 变体29）
           corpus_path: econometric-models/计数模型.md
       R1:
         description: ''
@@ -3414,6 +3603,28 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
+          corpus_path: econometric-models/计数模型.md
+        - id: r1_count_descriptives_hypothesis_keyed
+          skeleton: 'Table [1] presents the descriptive statistics and pairwise correlations for the [count DV], the [accumulated
+            failure-experience predictors], and the [capability stock/effort moderators] and controls. [DV] is negatively correlated
+            with [accumulated failure experience], and positively correlated with [capability stock] and [capability effort],
+            previewing the direction of the main tests. All models report the [overdispersion parameter] and the [model F statistic];
+            the table notes state that all continuous independent variables have been centered and scaled and all VIFs are
+            below [five].'
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
+          subfield_distribution:
+            om: 1
+          sources:
+          - anand_mukherjee_2024_learning_from_failures_di
+          transferability: high
+          paradigm_exclusivity: 计数模型专用，假设键控描述统计（相关符号预载假设方向 + 诊断内嵌表注）
+          rhythm_tags:
+          - hypothesis_keyed_correlations
+          - direction_preview
+          - inline_table_note_diagnostics
+          notes: 假设键控描述统计叙述：DV↔失败经验负相关、DV↔能力正相关预载主检验方向；VIF/过离散/F 统计量以内嵌表注交付而非正文段落（corpus 变体28）
           corpus_path: econometric-models/计数模型.md
     cross_slot_patterns:
     - id: csp_计数模型_R7_05be4c05
@@ -3776,6 +3987,24 @@ estimators:
           corpus_path: econometric-models/IV-2SLS.md
       R7:
         skeleton_variants:
+        - id: r7_iv_exclusion_placebo_regression_fang2025
+          skeleton: "The instrumental variable (IV) must meet the relevance criterion and exclusion restriction ([citations]). That is, the instrument should correlate with [endogenous variable] but should not directly influence [outcome]. ... Empirically, we provide evidence showing that our instrument is not directly related to [proxy for local economic conditions], which could affect [outcome]. ... The insignificant effect suggests that our IV variable likely meets the exclusion restriction ([citations])."
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            om: 1
+          sources:
+          - fang_et_al_2025_rival_recall_ad_spend (POM)
+          corpus_path: econometric-models/IV-2SLS.md
+        - id: r7_control_endogeneity_three_step_fang2025
+          skeleton: "One may be concerned that our control variables (e.g., [control]) are endogenous. We address this concern with the following three steps. First, we estimate a regression that excludes [controls]. The estimates (Table [C1]) are consistent with our main analyses (Table [X]). Second, prior literature ([citation]) has suggested that it is common for control variables to also function as dependent variables. ... The insight is that including the controls leads to conservative estimates. Third, following prior literature ([citations]), we used these controls' one-period-lagged values as instruments. The estimates (Table [C2]) were consistent with the results, further reducing the endogenous concern."
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            om: 1
+          sources:
+          - fang_et_al_2025_rival_recall_ad_spend (POM)
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r7_iv_exclusion_restriction
           skeleton: One concern is that [instrument] may affect [outcome] through channels other than [endogenous_variable].
             To address this exclusion restriction concern, we [test / discuss]. [Results / Discussion].
@@ -4186,6 +4415,15 @@ estimators:
       R4:
         description: ''
         skeleton_variants:
+        - id: r4_iv_fitted_value_moderation_fang2025
+          skeleton: "Because the [moderator] is likely endogenous to [outcome], we estimate a two-stage least squares (2SLS) regression to correct for the endogeneity of [moderator] ([citation]). ... We interact the fitted value of [moderator] with [treatment] to test whether [moderator] moderates the effect of [treatment] on [outcome] ([citation]). ... Column [II] reports that an increase in [moderator] [weakens/strengthens] the [positive/negative] [treatment] effect (β [value], p < [threshold]). On average, a one-unit (in [unit scale]) increase in [moderator] [changes] [outcome] by [X]% ([value] ÷ [base])."
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            om: 1
+          sources:
+          - fang_et_al_2025_rival_recall_ad_spend (POM)
+          corpus_path: econometric-models/IV-2SLS.md
         - id: r4_indirect_moderation_full_vs_partial
           skeleton: '[R4-间接调节] 报告交互效应时，区分full indirect moderation与partial indirect moderation：先报告简单交互项（Lobbying × Deaths,
             Lobbying × Media）的系数与显著性；再报告加入中介交互项（Lobbying × Media）后原交互项（Lobbying × Deaths）是否变得不显著（β=0, n.s.）。若原交互项不显著且新交互项显著，则判定为full

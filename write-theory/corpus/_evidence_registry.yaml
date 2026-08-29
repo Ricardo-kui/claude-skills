@@ -136,6 +136,41 @@ source_papers:
         status: "EMERGING"
         note: "Taken together ... at both sides of the inverted U-shape ... slope/peak."
 
+  fang_et_al_2025_rival_recall_ad_spend:
+    display_name: "Fang, Astvansh, Tong, Lee & Guo (2025, POM)"
+    journal: "Production and Operations Management"
+    year: 2025
+    subfield: "marketing/OM"
+    theory_build_type: "Mechanism"
+    fragments:
+      - fragment_id: tfr_210
+        type: competing_interpretation_proxy_bridging
+        title: "解释支配代理桥接 + 三向 cancel-out 收束（变体 F 技巧 3）"
+        home_files:
+          - "variants/F_competing_hypotheses.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
+        note: "不可观测解释（机会 vs 威胁）经行动方向变量代理桥接；增/减/零净效应三向预测与机制标签一一对应；无正式编号假设的竞争分支。"
+      - fragment_id: tfr_211
+        type: response_portfolio_decomposition
+        title: "Response-Portfolio Decomposition：聚合行动 = 对立组件组合（Pattern B）"
+        home_files:
+          - "subprotocols/hypothesis_organization_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
+        note: "聚合行动变量组件战略含义对立（抢占 vs 规避），Theory 预告组合逻辑为 Results 先聚合后分解埋线；让步句 + 调节问句作实证桥。"
+      - fragment_id: tfr_212
+        type: quintessential_response_variable_topic
+        title: "Quintessential-Response-Variable 正当化 topic 句（句式 N）"
+        home_files:
+          - "sentences/construct_definition.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
+        note: "Because 子句把 DV 锚定在 trigger 核心利害上并用 quintessential 标记代表性选择，为构念/DV 选择段段首论点句。"
+
   darby_2024_msom:
     display_name: "Darby (2024, MSOM)"
     journal: "Manufacturing & Service Operations Management"
@@ -2385,6 +2420,70 @@ source_papers:
         status: "VERIFIED"
         verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决 Westphal & Bednar 2005 的引言与理论部分证据等级 VERIFIED)"
         note: "调节假设小节用构念名开场（Demographic homogeneity among outside directors...），一句话完成 IV 标签、行动者范围与层次定位；同构复用维持多调节假设节的段落节奏。corpus leitmotif-section-opener 句式A。"
+
+  anand_mukherjee_2024_learning_from_failures_di:
+    display_name: "Anand & Mukherjee (2024, Organization Science)"
+    journal: "Organization Science"
+    year: 2024
+    subfield: "operations management"
+    theory_build_type: "假设树型（类型化双结果 + 能力调节）"
+    citekey: "anand_mukherjee_2024_learning_from_failures_di"
+    fragments:
+      - fragment_id: tfr_213
+        type: contingency_reconciliation_opener
+        title: "对立观点→权变调和式调节开场（contingency reconciliation opener）"
+        home_files:
+          - "sentences/acknowledgment_response.md"
+        makadok_dimension: "Boundary"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
+        note: "正反两派各带 citation 后用 The contingency view ... reconciles 一句收编为条件问题——调和句先于任何 moderator 命名调节类属，后续调节假设逐一兑现条件承诺。corpus acknowledgment_response.md 变体A。"
+      - fragment_id: tfr_214
+        type: failure_typology_cause_ambiguity_contrast
+        title: "认识论不对称双类型构念辨析（cause-ambiguity typology）"
+        home_files:
+          - "subprotocols/construct_differentiation_patterns.md"
+        makadok_dimension: "Constructs"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
+        note: "二分类的区分维度是归因模糊度等认识论属性而非现象特征；收尾模糊度对比句作分工装置——类型A走低模糊机制（规则更新/培训）、类型B走高模糊机制（内外搜索/知识重组），为分叉假设预载构念基础。corpus construct_differentiation_patterns.md 变体A。"
+      - fragment_id: tfr_215
+        type: theory_type_to_empirical_context_bridging
+        title: "理论构念→经验情境显式桥接（fit-well bridging）"
+        home_files:
+          - "subprotocols/evidence_patterns.md"
+        makadok_dimension: "Constructs"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
+        note: "fit-well 映射句 + the phenomena that we observe and examine 授权句 + derive implications for the larger context 双向 scope 句——三步显式桥接预先挡掉 DV 不是构念 的攻击，档案研究尤适。corpus evidence_patterns.md 变体B。"
+      - fragment_id: tfr_216
+        type: typed_outcome_hypothesis_tree_with_capability_enhancement
+        title: "类型化双结果假设树×能力增强交叉（typed tree × capability grid）"
+        home_files:
+          - "subprotocols/hypothesis_organization_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
+        note: "共享学习主干（注意→搜索→实施）一次立论，类型化双结果分支（H1a/H1b）+ 存量/流量能力对两类的调节单元格只补差异化步骤——一个主干派生 8+ 假设的组织法。corpus hypothesis_organization_patterns.md 变体B。"
+      - fragment_id: tfr_217
+        type: stock_flow_capability_moderator_pairing
+        title: "存量/流量双面向 moderator 元框架（stock–flow facet pairing）"
+        home_files:
+          - "subprotocols/moderator_selection_frameworks.md"
+        makadok_dimension: "Boundary"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
+        note: "同一能力构念的存量 measure 与流量 effort measure 分解为元框架——存量面向过去积累的资源、流量面向当下投入维持的状态，两面各自映射不同学习机制，使双 moderator 读作刻意拆解而非代理变量堆放（满足 C18）。corpus moderator_selection_frameworks.md 变体B。"
+      - fragment_id: tfr_218
+        type: superficial_vs_noncodified_conversely_reconciliation
+        title: "支内双可能 Conversely 调和（superficial vs noncodified）"
+        home_files:
+          - "subprotocols/bilateral_argumentation_templates.md"
+        makadok_dimension: "Boundary"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
+        note: "单个调节假设推导支内先自陈 moderator 可能无用 的反可能（superficial response-only learning），再以非编码知识↔能力吸收的互补性挽救，收敛到同向预测——双边论证的支内迷你版。corpus bilateral_argumentation_templates.md 变体A。"
+
 # Cross-paper pattern aggregation (derived above)
 patterns:
   shared_orientation_divergent_outcomes_selective_remedy:

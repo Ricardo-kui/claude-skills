@@ -293,6 +293,28 @@ evidence:
         变体A/B 理论驱动观察窗 because 从句：窗口=构念活跃期证据 + 数据窗/事件窗 lag 结构分离；M2/M6）与 m4_no_rulebook_coding_protocol（micro-templates/manual-coding-validation.md
         变体A/B 反规则手册编码协议：规则书推高信度牺牲效度的预辩 + recording unit 声明 + pre-negotiation 信度三件套；M3/M4）。micro-templates
         文件层无独立 registry 条目结构，按邻近 by_source_paper.micro_templates 格式登记。'
+    anand_mukherjee_2024_learning_from_failures_di:
+      journal: Organization Science
+      title: 'Learning from Failures: Differentiating Between Slip-ups and Knowledge Gaps'
+      status: VERIFIED
+      verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
+      design_types:
+      - 面板数据-OLS
+      - 非线性模型
+      - 文本构念测量
+      micro_templates:
+      - m4_window_congruence_for_interactions
+      slots_covered:
+      - M2
+      - M3
+      - M4
+      - M6
+      - M7
+      story_fidelity: section_variant
+      note: '2026-08-29 整篇蒸馏 writeback 补登记 because-clauses micro-template：m4_window_congruence_for_interactions（micro-templates/because-clauses.md
+        变体B，M4 测量窗对齐 because 从句——累积窗与另一解释变量的窗统一以使交互项可估，窗口由估计设计而非构念证据决定；M4）。design_types
+        对应 INDEX 已登记变体：面板数据-OLS 变体68/69、非线性模型 变体20、文本构念测量 变体19。micro-templates 文件层无独立 registry
+        条目结构，按邻近 by_source_paper.micro_templates 格式登记。'
     ridge_hill_ingram_kolomeitsev_worrell_2024_amj:
       journal: Academy of Management Journal
       title: 'Avoidance and Aggression in Stakeholder Engagement: The Impact of CEO Paranoia and Paranoia-Relevant Cues'
@@ -390,7 +412,7 @@ evidence:
         诚实边界：generated-regressor SE 修正须带警告行；M8）。'
   by_design_type:
     面板数据-OLS:
-      paper_count: 16
+      paper_count: 17
       papers:
       - lee_park_2024_smj (SMJ)
       - bendig_hensellek_schulte_2024_etp (ETP)
@@ -408,6 +430,7 @@ evidence:
       - wowak_2020_female_directors_recalls (Manufacturing & Service Operations Management)
       - westphal_zajac_1998_symbolic_management (Administrative Science Quarterly)
       - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
+      - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
       status: VERIFIED
       slots_covered:
       - M1
@@ -429,10 +452,11 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     自然实验-DiD:
-      paper_count: 2
+      paper_count: 3
       papers:
       - lee_wu_bednar_orsc_18968 (Organization Science)
       - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
+      - fang_et_al_2025_rival_recall_ad_spend (Production and Operations Management)
       status: EMERGING
       slots_covered:
       - M2
@@ -454,13 +478,14 @@ evidence:
         - SMJ R1#8、R2#7 与 JAMS AE、R1（两轮四评审+编辑）一致要求 heterogeneity-robust 估计量（Sun-Abraham/Callaway-Sant'Anna/stacked/BJS）作主分析、TWFE
           降级为基准，且调节效应也须在 robust 设计内重估；仅附录图示无系数表被判不足（moon2026 对照：stacked DiD 进主表 Model 7）
     非线性模型:
-      paper_count: 5
+      paper_count: 6
       papers:
       - lee_park_2024_smj (SMJ)
       - bendig_hensellek_schulte_2024_etp (ETP)
       - cutolo2024 (JM)
       - kashmiri_nicol_arora_2017_jams (JAMS)
       - fini_jourdan_perkmann_2017_amj (AMJ)
+      - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
       status: VERIFIED
       slots_covered:
       - M1
@@ -710,12 +735,14 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     文本构念测量:
-      paper_count: 4
+      paper_count: 6
       papers:
       - cutolo2024 (JM)
       - kashmiri_nicol_arora_2017_jams (JAMS)
       - ridge_hill_ingram_kolomeitsev_worrell_2024_amj (AMJ)
       - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
+      - fang_et_al_2025_rival_recall_ad_spend (Production and Operations Management)
+      - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
       status: VERIFIED
       verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       slots_covered:

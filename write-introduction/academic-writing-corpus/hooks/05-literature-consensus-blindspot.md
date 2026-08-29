@@ -156,6 +156,29 @@ source: Manually curated from MVP30 narrative_analysis files
 
 **禁忌**: 元分析引用须真实存在且确有解释力缺口，不可虚构"fraction of variance"；近端结局三元组必须是已发表研究。
 
+
+### 变体 G：共识细化宣言型（anand_mukherjee_2024型）
+
+**模板**:
+> "[Established theory] suggests that [phenomenon] can [activate beneficial process] and result in [improvement] ([foundational citations]). We define [core construct] as [one-line definition]. We add nuance to [this perspective] by [differentiating the phenomenon into N types based on their characteristics] and by studying whether [core process] occurs for both types ([citations])."
+
+**来源**: anand_mukherjee_2024_learning_from_failures_di (Organization Science), P1
+
+**原文锚定**:
+> "Organizational learning theory suggests that failures can activate searches for solutions and result in improvements. We add nuance to the perspective of learning from failures by dividing product failures into two types based on their characteristics."
+
+**关键特征**:
+- 冷开场：不设独立 Hook 段，理论共识首句即开场，能量级低，Hook 与 Literature Turn 完全融合
+- 差异化动作不攻击共识（无 however/overlooks/conflated），而是在共识内部宣布"细化"（"We add nuance"），第二句即亮出全文分类轴
+- 内嵌单句构念定义（"We define [X] as..."），把核心构念定义前置到第一段
+- OS 偏好 Anecdote Hook 的反例：钩子功能由后置配对实例桥补偿
+
+**适用**: Incompleteness × Constructs 组合；分类/类型学论文；贡献是"区分而非颠覆"时，避免过度制造张力；与后置配对实例桥搭配使用效果最佳
+
+**禁忌**: 不要与 Inadequacy/Incommensurability 骨架混用（无批评语言是本变体特征而非缺陷）；若前 3 段无具象元素必须后置工作例，否则有平淡风险
+
+<!-- wb:anand_mukherjee_2024_learning_from_failures_di:hook-consensus-nuance-declaration -->
+
 ## 组装规则
 
 ### 必须配对

@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
   last_updated: '2026-08-29'
-  observations_processed: 35
+  observations_processed: 42
   description: Evidence ledger for design defects inferred from Introduction exemplar distillation.
 defects:
   incompleteness-embedded-opposing-claims-vs-incommensurability:
@@ -1167,6 +1167,282 @@ defects:
     verified_paper_count: 1
     verified_journals:
     - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-29'
+    last_seen: '2026-08-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  quote-hook-callback-device-absent:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: hooks/02-epigraph-quote-pivot 覆盖引语开场（A-H 变体），但所有变体的引语均为一次性合法性装置，无引语在理论论证段被显式召回（callback）或与引语者自身行为构成可查证反讽的变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/hooks/02-epigraph-quote-pivot.md
+    diagnosis: 范文用 rival 高管原语开场，两段后以引语者自身产品含同一缺陷部件的反讽制造符号歧义，并在解释段以 'As the opening quote suggests' 显式回扣——'引语→反讽→回扣'三拍与变体 G（公开/私下事实并列、无引语无回扣）功能不同，corpus
+      无对应变体
+    proposed_change:
+      action: add_variant
+      summary: 向 02-epigraph-quote-pivot 追加'引语反讽回扣型（fang2025 型）'变体：block quote + 自伤反讽 + 显式 callback
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: fang_et_al_2025_rival_recall_ad_spend
+      journal: Production and Operations Management
+      evidence_anchor: Introduction P1 引语开场，P3 反讽（被引企业广告产品使用同一缺陷部件），P4 'As the opening quote suggests' 回扣进入解释论证
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Production and Operations Management
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Production and Operations Management
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-29'
+    last_seen: '2026-08-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  three-way-sign-rq-decomposition-absent:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: research-questions/02-explicit-dual-question-narrowing 的 A-C 变体均为'主效应问+调节问'层次；无'三择一符号问句（选项即解释标签）+ 二阶分解递进（RQ2
+      分解 RQ1 而非加调节）'变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/research-questions/02-explicit-dual-question-narrowing.md
+    diagnosis: 范文在双机制对冲（机会 vs 威胁，净效应可能抵消）下提出 increase/decrease/unchanged 三择一问句，每个选项括号内标注理论解释；第二问把同一符号问下探到杠杆成分层面——'分解型递进'是
+      corpus 未建模的 RQ 递进方向
+    proposed_change:
+      action: add_variant
+      summary: 追加'三择一符号问+二阶分解递进型（fang2025 型）'变体
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: fang_et_al_2025_rival_recall_ad_spend
+      journal: Production and Operations Management
+      evidence_anchor: Introduction P7 三择一 RQ（选项即 opportunity/threat/抵消标签）；P9 'second-order question' 分解为三类广告支出
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Production and Operations Management
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Production and Operations Management
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-29'
+    last_seen: '2026-08-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  findings-as-adjudication-null-as-strategy-absence:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: previews/findings-preview 变体 J/S 等已覆盖编号量化发现，但无'编号发现逐条裁决 RQ 各选项 + 显式 null 叙述为策略缺位证据 + 补充分析自带 theoretical
+      insight 句'的组织结构
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/previews/findings-preview.md
+    diagnosis: 范文发现段 (1)(2)(3) 每条幅度同时回答 RQ 一个选项并命名一个策略，brand advertising 的不显著被叙述为 harm-avoidance 策略缺位——null 的理论裁决用法与变体 I/R
+      的排除/平行靶标 null 判别；与 S 判别在保持发现段独立、不融合贡献块
+    proposed_change:
+      action: add_variant
+      summary: 追加'三方裁决+null即策略缺位型（fang2025 型）'变体
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: fang_et_al_2025_rival_recall_ad_spend
+      journal: Production and Operations Management
+      evidence_anchor: Introduction P11：编号三发现，50%/25%/71% 幅度各映射一个策略，brand advertising insignificant = 策略缺位；(3) 补充分析收 'The
+        theoretical insight is that...'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Production and Operations Management
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Production and Operations Management
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-29'
+    last_seen: '2026-08-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  checkmark-capability-positioning-matrix-absent:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: literature-turns/table-embedded-review 变体 B-E 覆盖主题回顾表、维度比较表、前因-后果定位表、领域×机制综合表；无'列=贡献主张派生 yes/no 能力问句、勾叉计分、This
+      article 行唯一满勾'的定位矩阵变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/literature-turns/table-embedded-review.md
+    diagnosis: 范文 Table 1 以三个 yes/no 能力问句为列、11 篇前研究+本文为行，勾叉计分使 contribution gap 一眼可审计，并配范围注脚（'all studies that have examined...'）防
+      cherry-picking——小文献+离散贡献主张场景下与 C/D/E 功能不同
+    proposed_change:
+      action: add_variant
+      summary: 追加'三问勾叉定位矩阵型（fang2025 型）'变体
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: fang_et_al_2025_rival_recall_ad_spend
+      journal: Production and Operations Management
+      evidence_anchor: Introduction P13 Table 1（三 ✓/✕ 能力列 × 12 行）+ P15 '(Table 1 positions our manuscript relative to the
+        relevant literature)'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Production and Operations Management
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Production and Operations Management
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-29'
+    last_seen: '2026-08-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  cross-event-replication-generalizability-preview-absent:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: previews/robustness-preview 变体 H/I 以识别防御（逐项 to address X / 竞争层级排除）收尾，无'单句枚举检验 + 同市场跨事件复制作为泛化装置'变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/previews/robustness-preview.md
+    diagnosis: 范文一句枚举五项检验后，以 'aiming to boost the generalizability... replicate with another [same-type event] in the same
+      market and obtain consistent results' 把可信度论证从稳健升级为可迁移——跨事件复制装置在 corpus 中缺位
+    proposed_change:
+      action: add_variant
+      summary: 追加'单句枚举+同市场跨事件复制预览型（fang2025 型）'变体（禁忌栏记录与文件既有反模式'不要只罗列方法名称'的张力）
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: fang_et_al_2025_rival_recall_ad_spend
+      journal: Production and Operations Management
+      evidence_anchor: Introduction P14：五项检验单句枚举 + 跨事件复制收尾句
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Production and Operations Management
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Production and Operations Management
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-29'
+    last_seen: '2026-08-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  worked-example-pair-device-missing:
+    classification: corpus_gap
+    status: EMERGING
+    risk: medium
+    current_rule: transitions 模块现有 canonical（actor-funnel/extend-key-study/gap-to-contribution/literature-to-gap/nested-moderation-preview
+      等）均不覆盖'Preview 后、实证 setting 前插入配对工作例以具象化构念'的过渡装置
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/transitions/_index.md
+    diagnosis: 中英多轮索引查询（example/vignette/worked/two examples）零命中；OS 2024 范文用双工作例（访谈叙事+档案数据）完成构念操作化预演与一手可信度建立，是现有 transitions/previews
+      canonical 无法表达的合法叙事功能——属语料缺口而非路由/验证器缺陷
+    proposed_change:
+      action: add_variant
+      summary: 在 transitions（或新建 worked-example-pair canonical）追加'配对实例具象桥'变体；已入 writeback plan item worked-example-pair
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: anand_mukherjee_2024_learning_from_failures_di
+      journal: Organization Science
+      evidence_anchor: 'Introduction P4-P5: 双工作例段——访谈叙事例收尾回扣 ''design-related recall''，档案数据例（Figure 1）收尾回扣 ''learning effect
+        of recalls supported by innovations''；功能为把 P3 预告的构念落到可观察对象'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Organization Science
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Organization Science
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-29'
+    last_seen: '2026-08-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  construct-reapplication-turn-missing:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: literature-turns 现有变体均为'文献共识→缺口揭露'方向；缺少'Although most research on [construct] focuses on [conventional domain],
+      we apply [construct] to [new phenomenon]'式构念重定向/应用边界 departure 变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/academic-writing-corpus/literature-turns/_index.md
+    diagnosis: 索引查询 apply/reapplication/absorbing 零命中；该骨架把缺口表述为构念使用方向的未开发象限而非文献缺陷，Gap 语言中性（Incompleteness/Boundary 通用），现有
+      canonical 均要求缺口指向文献盲点——属语料缺口
+    proposed_change:
+      action: add_variant
+      summary: 在 literature-turns 追加'构念重定向应用型'变体；已入 writeback plan item construct-reapplication-turn
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: anand_mukherjee_2024_learning_from_failures_di
+      journal: Organization Science
+      evidence_anchor: 'Introduction P2: ''Although most research on absorptive capacity focuses on absorbing knowledge from
+        external sources..., we apply the absorptive capacity perspective to learning from product failures''——单句完成 Lit Turn
+        + Departure'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Organization Science
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Organization Science
     verified_journal_count: 1
     regression_cases:
       positive: []

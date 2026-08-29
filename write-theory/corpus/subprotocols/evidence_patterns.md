@@ -247,3 +247,33 @@ very common. [Institutional reasons why discretion persists].
 **反模式**: 只用一个正面案例（无对照即无离散证明）；轶事与后续假设的机制层次脱钩。
 
 **原文锚点**: "The default at this firm is to recall and to do so quickly. This expectation for quick and deliberate action prioritizing customer safety was established by the firm's board."
+
+
+### 变体 B：理论构念→经验情境显式桥接（fit-well bridging）
+
+<!--
+pattern_id: theory_type_to_empirical_context_bridging
+build_type: 跨类型（构念-操作化桥接，经验曲线/档案研究尤适）
+source_papers: ["anand_mukherjee_2024_org_science"]
+confidence: medium（单篇，产品召回主题 expert_audit_override 2026-08-29 升 VERIFIED）
+-->
+
+**适用场景**: 理论构念（如 failure 类型）与档案可观察物（如 recall 类别）存在映射 leaps 时，用三步桥接句显式授权操作化并预先框定外推范围。
+
+**骨架**:
+```
+[Theoretical type A] and [theoretical type B] fit well into the descriptions of
+[observable category A'] and [observable category B'] ([mapping citations]).
+As such, we develop our hypotheses using the empirical context of [observable
+phenomenon], which are the phenomena that we observe and examine.
+Subsequently, based on our results, we derive implications for the larger
+context of [theoretical construct].
+```
+
+**为什么有效**: "fit well into" 完成映射、"the phenomena that we observe and examine" 完成授权、"derive implications for the larger context" 完成双向 scope 声明——一句话挡掉"你的 DV 不是你的构念"的攻击。
+**注意事项**: 映射需有文献或制度依据（如召回公告的归因分类）；若映射不完美应如实声明 caveat（本篇以自愿召回为主即是一例）。
+**反模式**: 无映射论证直接换词（把构念名悄悄替换成测量名）。
+
+**原文锚点**: "As such, we develop our hypotheses using the empirical context of product recalls, which are the phenomena that we observe and examine."（§2.2 末段）
+
+<!-- wb:anand_mukherjee_2024_learning_from_failures_di:theory_type_to_empirical_context_bridging -->
