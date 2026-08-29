@@ -46,6 +46,17 @@ skill 管 HOW（L0-L4、PDM、gate、写回）**。提示词只填 4 个槽位�
 约束：每篇先 --dry-run 出分发计划，我确认后再跑
 ```
 
+## 模板 D — 查漏补缺重蒸馏（2026-08-29 起）
+
+同一篇论文已有旧蒸馏痕迹（story 卡、语料条目），要补齐遗漏而非重造：
+
+```
+重新蒸馏这篇论文，对之前的蒸馏查漏补缺，优化 write-* 语料和 story 卡：
+路径：<粘贴 .md 绝对路径>
+既有蒸馏痕迹（可省略，主循环自动盘点）：<story 卡路径 / 已知语料条目>
+约束（可省略）：已授权按 precheck plan 直写、事后呈审计报告（协议缺省）
+```
+
 ## 纪律清单（继承到所有提示词，不写进提示词本身）
 
 1. **提炼 HOW not WHAT**——学"怎么论证"，不抄"说了什么"（防抄写纪律；gate ①/② 人审不绕过）。
@@ -61,6 +72,13 @@ skill 管 HOW（L0-L4、PDM、gate、写回）**。提示词只填 4 个槽位�
 6. **`.raw/` 与全文 MD 只读**；PDM 及子文件是唯一写入物。
 7. **子代理模型**：`CLAUDE_CODE_SUBAGENT_MODEL` 须为 `deepseek-v4-flash`（改完需重启会话
    生效；设错则所有 Agent 子任务 400）。
+8. **子代理写回纪律（2026-08-29 固化）**：plan 条目必须执行器 v2 schema
+   （`items:` + block_text 全文内嵌 + index_note），子代理**禁止运行
+   `corpus_writeback.py`**——写回权收归主循环，残项同步 pass 同样禁止
+   （防"手补代理重跑写回 → 重复插入"事故复发）。
+9. **写回终验强制（2026-08-29 固化）**：全部子代理退出后跑
+   `scripts/verify_writeback.py`（块正文唯一性 / registry 无双计 / YAML / INDEX 残项
+   → `writeback_residuals.yaml`），FAIL 未处理不得进入 story 卡与清理。
 
 ## 反模式
 

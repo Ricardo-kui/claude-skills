@@ -17,6 +17,17 @@ Output layout (PDM workdir):
 
   --unlock removes the LOCK; --clean removes the whole workdir (run at L4).
 
+  --sweep (2026-08-29 v2, L4 final step, no source_md needed) removes the
+  *cross-run* intermediates that per-paper --clean cannot reach:
+    - every `__pycache__/` dir and `*.pyc` under the skills tree (bytecode
+      regenerates on next import; keeps the skill tree clean)
+    - leftover PDM workdirs that are fully consumed: a `<citekey>.pdm/` whose
+      root yaml says `status: integrated`, or an orphan workdir (no root yaml)
+      whose LOCK is older than 12h
+  NEVER touched: `<citekey>.pdm.yaml` state records, the sentences archive,
+  story-blueprints, and any workdir whose LOCK is fresh (< 12h — may be an
+  active single-window run).
+
   --keep-sentences writes a durable sentence inventory to
     story-blueprints/v4/rhetoric-moves/sources/<citekey>.sentences.md
     (cross-source synthesis raw material for P2 move enrichment; NOT deleted
@@ -25,6 +36,13 @@ Output layout (PDM workdir):
 The raw source MD is NEVER modified and must never be read by distill agents.
 Section detection is heading-based and conservative: anything uncertain is
 reported as "unknown" so the orchestrator can fall back to manual slicing.
+
+SLICE-CHECK FALLBACK (2026-08-29, Layer 3): when detection comes back empty
+or suspicious (any slice < 300 words, heading-level breaks), the full
+`#`/`##`/`###` heading tree with 1-based line numbers and a ready-to-edit
+slice_suggestions.yaml are printed/written in one pass — the orchestrator
+confirms once and reruns with `--slices <suggestions.yaml>`; no per-section
+sed surgery. Explicit `--slices` overrides replace auto-detection entirely.
 """
 from __future__ import annotations
 
@@ -59,6 +77,7 @@ IMG_DATA_URI_MD = re.compile(r"!\[([^\]]*)\]\(\s*data:image/[^)\s]+[^)]*\)")
 IMG_DATA_URI_HTML = re.compile(r'<img\b[^>]*\bsrc="data:image/[^"]*"[^>]*/?>', re.I)
 HEADING = re.compile(r"^(#{1,3})\s+(.+?)\s*#*\s*$")
 SENTENCE_SPLIT = re.compile(r"(?<=[.!?])\s+(?=[A-Z\"'(])")
+MIN_SLICE_WORDS = 300
 
 SKILLS_ROOT = Path(__file__).resolve().parent.parent.parent
 DEFAULT_SOURCES_DIR = (
@@ -161,6 +180,111 @@ def _strip_num(t: str) -> str:
     return re.sub(r"^\d+(\.\d+)*[.\s]+", "", t.strip().lower())
 
 
+def apply_manual_slices(path: Path, lines: list[str], auto: dict) -> dict:
+    """Apply orchestrator-confirmed slice overrides: {bucket: {start, end}}
+    (1-based inclusive, same convention as the manifest) or {bucket: [start, end]}.
+    Replaces auto-detection wholesale; validation errors exit 2."""
+    import yaml
+
+    spec = yaml.safe_load(path.read_text(encoding="utf-8"))
+    if not isinstance(spec, dict) or not spec:
+        print(f"ERROR: --slices {path} 不是非空映射（bucket: {{start, end}}）", file=sys.stderr)
+        sys.exit(2)
+    errs = []
+    spans: dict[str, dict] = {}
+    for bucket, rng in spec.items():
+        if bucket not in BUCKET_ORDER:
+            errs.append(f"未知 bucket {bucket!r}（应为 {', '.join(BUCKET_ORDER)}）")
+            continue
+        if isinstance(rng, dict):
+            start, end = rng.get("start"), rng.get("end")
+        elif isinstance(rng, (list, tuple)) and len(rng) == 2:
+            start, end = rng
+        else:
+            errs.append(f"{bucket}: 区间格式不识别 {rng!r}")
+            continue
+        if not (isinstance(start, int) and isinstance(end, int)):
+            errs.append(f"{bucket}: start/end 必须是整数行号（got {start!r}, {end!r}）")
+            continue
+        if not (1 <= start <= end <= len(lines)):
+            errs.append(f"{bucket}: 区间越界 {start}-{end}（全文共 {len(lines)} 行）")
+            continue
+        spans[bucket] = {"start": start, "end": end,
+                         "heading": f"(manual slices {start}-{end})"}
+    if errs:
+        print("ERROR: --slices 校验失败:\n  " + "\n  ".join(errs), file=sys.stderr)
+        sys.exit(2)
+    return spans
+
+
+def heading_level_breaks(lines: list[str]) -> list[str]:
+    """Consecutive-heading level jumps of >=2 (e.g. `#` straight to `###`) —
+    typical OCR/转换 noise that makes heading-based slicing unreliable."""
+    breaks, prev = [], None
+    for i, ln in enumerate(lines):
+        m = HEADING.match(ln)
+        if not m:
+            continue
+        lv = len(m.group(1))
+        if prev is not None and lv - prev >= 2:
+            breaks.append(f"L{prev}->L{lv}@行{i + 1}:{m.group(2)[:40]!r}")
+        prev = lv
+    return breaks
+
+
+def slice_check(spans: dict, lines: list[str]) -> list[str]:
+    """Suspicion reasons for the detected slices. Non-empty => print the full
+    heading tree + write slice_suggestions.yaml for one-pass confirmation."""
+    reasons: list[str] = []
+    unknown = [b for b in BUCKET_ORDER if b not in spans]
+    if unknown:
+        reasons.append("未检出节: " + ", ".join(unknown))
+    for bucket in BUCKET_ORDER:
+        sp = spans.get(bucket)
+        if not sp:
+            continue
+        words = len("\n".join(lines[sp["start"] - 1: sp["end"]]).split())
+        if words < MIN_SLICE_WORDS:
+            reasons.append(f"{bucket} 切片仅 {words} 词 (<{MIN_SLICE_WORDS})——可能误切/漏切")
+    breaks = heading_level_breaks(lines)
+    if breaks:
+        reasons.append("标题层级断裂: " + "; ".join(breaks[:3])
+                       + (f" 等{len(breaks)}处" if len(breaks) > 3 else ""))
+    return reasons
+
+
+def heading_tree(lines: list[str], spans: dict) -> list[str]:
+    """Every #-level heading with 1-based line number, annotated with its
+    auto-detected bucket — the confirmation surface for manual slicing."""
+    out = []
+    for i, ln in enumerate(lines):
+        m = HEADING.match(ln)
+        if m:
+            b = classify_heading(m.group(2))
+            out.append(f"  {i + 1:>5}: {'#' * len(m.group(1))} {m.group(2)}"
+                       + (f"  [->{b}]" if b else ""))
+    return out
+
+
+def slice_suggestions_yaml(spans: dict) -> str:
+    """Ready-to-edit --slices input: detected spans as defaults, undetected
+    buckets as TODO comments."""
+    parts = [
+        "# L0 slice suggestions — 编辑 start/end（1-based 闭区间），删掉不需要的 bucket，",
+        "# 然后重跑: python preprocess_l0.py <全文MD> --citekey <ck> --slices <本文件>",
+        "# 各标题所在行号见运行时打印的 heading tree。",
+        "",
+    ]
+    for bucket in BUCKET_ORDER:
+        sp = spans.get(bucket)
+        if sp:
+            parts.append(f'{bucket}: {{start: {sp["start"]}, end: {sp["end"]}}}'
+                         f'  # {sp["heading"][:60]}')
+        else:
+            parts.append(f"# {bucket}: 未检出——从标题树选定起止行后取消本行注释并填行号")
+    return "\n".join(parts) + "\n"
+
+
 def derive_citekey(path: Path) -> str:
     stem = re.sub(r"-(OvisOCR2|MinerU)-\d{8}-\d{6}$", "", path.stem)
     stem = re.sub(r"[^A-Za-z0-9]+", "_", stem).strip("_").lower()
@@ -245,14 +369,70 @@ def write_sentences_archive(citekey: str, src: Path, spans: dict,
     return archive
 
 
+def sweep(work_root_dir: Path, skills_root: Path) -> int:
+    """Cross-run intermediate cleanup (L4 final step). Deterministic, no LLM.
+
+    Returns process exit code. Never touches state records, the sentences
+    archive, story-blueprints, or workdirs with a fresh (<12h) LOCK."""
+    import time
+    import yaml
+
+    removed = kept = 0
+    # 1. bytecode caches anywhere in the skills tree
+    for cache in skills_root.rglob("__pycache__"):
+        shutil.rmtree(cache, ignore_errors=True)
+        removed += 1
+    for pyc in skills_root.rglob("*.pyc"):
+        pyc.unlink(missing_ok=True)
+        removed += 1
+
+    # 2. fully-consumed / orphaned PDM workdirs
+    for wd in sorted(work_root_dir.glob("*.pdm")):
+        if not wd.is_dir():
+            continue
+        root_yaml = work_root_dir / (wd.name + ".yaml")
+        lock = wd / "LOCK"
+        fresh_lock = lock.is_file() and (time.time() - lock.stat().st_mtime) / 3600 < 12
+        if fresh_lock:
+            kept += 1
+            print(f"KEEP (fresh LOCK, active run?): {wd.name}")
+            continue
+        status = None
+        if root_yaml.is_file():
+            try:
+                status = (yaml.safe_load(root_yaml.read_text(encoding="utf-8"))
+                          or {}).get("status")
+            except yaml.YAMLError:
+                status = None
+        if status == "integrated" or not root_yaml.is_file():
+            age_h = ((time.time() - lock.stat().st_mtime) / 3600) if lock.is_file() else None
+            tag = "integrated" if status == "integrated" else f"orphan (no root yaml, lock {age_h:.1f}h)" if age_h else "orphan (no root yaml, no lock)"
+            shutil.rmtree(wd, ignore_errors=True)
+            removed += 1
+            print(f"RM ({tag}): {wd.name}")
+        else:
+            kept += 1
+            print(f"KEEP (status: {status}): {wd.name}")
+
+    print(f"sweep done: {removed} item(s) removed, {kept} workdir(s) kept, "
+          f"state records & sentences archive untouched")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="L0 preprocess: strip base64 + materialize section slices")
-    ap.add_argument("source_md", help="path to paper-import full-text MD (read-only)")
+    ap.add_argument("source_md", nargs="?", default=None,
+                    help="path to paper-import full-text MD (read-only); "
+                         "optional when --sweep")
     ap.add_argument("--citekey", default=None, help="PDM citekey (default: derived from filename)")
     ap.add_argument("--outdir", default=None,
                     help="PDM workdir (default: <DISTILL_WORK_ROOT or ~/.claude/distill-work>/<citekey>.pdm/"
                          " — outside the vault; use --outdir to keep it next to the paper)")
     ap.add_argument("--force", action="store_true", help="override a fresh PDM LOCK")
+    ap.add_argument("--slices", default=None, metavar="SLICES_YAML",
+                    help="explicit slice overrides {bucket: {start, end}} (1-based "
+                         "inclusive) — replaces auto-detection; use the generated "
+                         "slice_suggestions.yaml after one-pass confirmation")
     ap.add_argument("--unlock", action="store_true", help="remove the PDM LOCK and exit")
     ap.add_argument("--clean", action="store_true",
                     help="remove the whole PDM workdir (implies --unlock) and exit")
@@ -260,15 +440,25 @@ def main() -> int:
                     help="write a durable sentence inventory to "
                          "story-blueprints/v4/rhetoric-moves/sources/<citekey>.sentences.md "
                          "(NOT deleted by --clean)")
+    ap.add_argument("--sweep", action="store_true",
+                    help="L4 final step: remove cross-run intermediates "
+                         "(__pycache__ under the skills tree, fully-consumed/"
+                         "orphaned PDM workdirs). No source_md needed; never "
+                         "touches state records, sentences archive, or fresh-"
+                         "LOCK workdirs")
     ap.add_argument("--sources-dir", default=None,
                     help="override the sentence-inventory root (default: "
                          "skills/story-blueprints/v4/rhetoric-moves/sources)")
     args = ap.parse_args()
 
-    src = Path(args.source_md)
-    citekey = args.citekey or (derive_citekey(src) if src.is_file() else None)
-    if not citekey:
-        print(f"ERROR: not a file: {src}", file=sys.stderr)
+    if args.sweep:
+        return sweep(work_root(), SKILLS_ROOT)
+
+    src = Path(args.source_md) if args.source_md else None
+    citekey = args.citekey or (derive_citekey(src) if src and src.is_file() else None)
+    if not citekey or src is None:
+        print("ERROR: --sweep 不需要 source_md；其他模式必须提供论文 MD 路径",
+              file=sys.stderr)
         return 2
     outdir = Path(args.outdir) if args.outdir else work_root() / f"{citekey}.pdm"
 
@@ -313,6 +503,10 @@ def main() -> int:
     text_only.write_text(text, encoding="utf-8")
 
     spans = slice_sections(lines)
+    slice_source = "auto-detect"
+    if args.slices:
+        spans = apply_manual_slices(Path(args.slices), lines, spans)
+        slice_source = "manual-slices"
 
     # structure classification (2026-08-20): not every paper is classic IMRaD.
     # econ/finance style often runs a long introduction (lit review + theory +
@@ -367,6 +561,20 @@ def main() -> int:
         manifest["sentences_archive"] = str(
             write_sentences_archive(citekey, src, spans, lines, sources_dir)
         )
+
+    check_reasons = slice_check(spans, lines)
+    manifest["slice_source"] = slice_source
+    manifest["slice_check"] = {"suspicious": bool(check_reasons),
+                               "min_words": MIN_SLICE_WORDS,
+                               "reasons": check_reasons}
+    if check_reasons and slice_source == "auto-detect":
+        sug = outdir / "slice_suggestions.yaml"
+        sug.write_text(slice_suggestions_yaml(spans), encoding="utf-8")
+        manifest["slice_check"]["suggestions"] = str(sug)
+        print("SLICE-CHECK: SUSPICIOUS — " + "; ".join(check_reasons))
+        print("Heading tree（行号: 标题 [->自动判定节]）:")
+        print("\n".join(heading_tree(lines, spans)))
+        print(f"切片建议已写入 {sug} —— 一次确认后重跑: --slices {sug}")
 
     (outdir / "l0_manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"

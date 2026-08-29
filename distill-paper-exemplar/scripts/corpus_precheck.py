@@ -12,6 +12,14 @@ Usage:
   python corpus_precheck.py --section results --citekey kalaignanametal2013 \
       --candidates candidates.yaml [--out writeback_plan.results.yaml]
 
+FAIL-FAST (2026-08-29, Layer 3): input/plan defects that previously surfaced
+only as all-SKIP writeback runs (missing block_text, candidates:/items: schema
+confusion, unresolvable anchor/override files) are now rejected here, before
+gate ① — the distill agent reworks on the spot instead of a 5-10 min
+writeback round-trip. Exit code 4 = fail-fast, plan still written with a
+fail_fast: error list for diagnosis. Validate a (possibly hand-written) plan
+with --check-plan <plan.yaml> without touching candidates.
+
 candidates.yaml:
   candidates:
     - name: r8_ols_strategy_complete_mediation_kenny_signal
@@ -162,13 +170,91 @@ def find_registry(corpus_root: Path) -> Path | None:
     return None
 
 
+def plan_item_errors(item: dict, corpus_root: Path) -> list[str]:
+    """Writeback-executor contract checks for one plan item (mirror of
+    corpus_writeback.resolve_target / block_text requirements)."""
+    errs = []
+    name = item.get("name", "<unnamed>")
+    verdict = (item.get("dedup") or {}).get("verdict")
+    if verdict not in ("ADD", "EXTEND", "SKIP"):
+        errs.append(f"[{name}] dedup.verdict 缺失或非法（{verdict!r}）——应为 ADD/EXTEND/SKIP")
+        return errs
+    if verdict == "SKIP":
+        return errs
+    if not (item.get("block_text") or "").strip():
+        errs.append(f"[{name}] verdict={verdict} 但缺 block_text —— 写回必全 SKIP，"
+                    "请在 candidates.yaml 补 block_text 后重跑 precheck")
+    override = item.get("file_override")
+    anchor_file = (item.get("anchor") or {}).get("file")
+    target = None
+    if override:
+        p = corpus_root / override
+        if p.is_file():
+            target = p
+        else:
+            hits = list(corpus_root.rglob(override))
+            if hits:
+                target = hits[0]
+    elif anchor_file and anchor_file != "None":
+        p = Path(anchor_file)
+        target = p if p.is_file() else None
+    if target is None:
+        errs.append(f"[{name}] 目标文件不可解析（file_override={override!r}, "
+                    f"anchor.file={anchor_file!r}）——写回会因无锚点 SKIPPED")
+    return errs
+
+
+def check_plan(plan_path: Path) -> int:
+    """Validate an existing writeback plan against the executor contract.
+    Catches the 2026-08-29 methods/results failure mode: a subagent-authored
+    plan using the candidates.yaml schema (top-level candidates:) instead of
+    the plan schema (top-level items:) — the executor silently looped zero
+    items and reported success."""
+    try:
+        plan = yaml.safe_load(plan_path.read_text(encoding="utf-8"))
+    except (OSError, yaml.YAMLError) as e:
+        print(json.dumps({"check": "FAIL", "errors": [f"plan 无法读取/解析: {e}"]},
+                         ensure_ascii=False, indent=2))
+        return 4
+    errs: list[str] = []
+    if not isinstance(plan, dict):
+        errs.append("plan 不是 YAML 映射")
+    else:
+        if "items" not in plan and "candidates" in plan:
+            errs.append("schema 错误：顶层键是 candidates: —— 这是 candidates.yaml 的 schema；"
+                        "writeback plan 顶层必须为 items:（用 corpus_precheck.py 重新生成）")
+        elif not plan.get("items"):
+            errs.append("plan 无 items 列表（或为空）")
+        corpus_root = Path(plan.get("corpus_root") or ".")
+        if not corpus_root.is_dir():
+            errs.append(f"corpus_root 不存在: {corpus_root}")
+        registry = plan.get("registry")
+        if registry and not Path(registry).is_file():
+            errs.append(f"registry 文件不存在: {registry}")
+        for item in plan.get("items") or []:
+            if not isinstance(item, dict):
+                errs.append(f"item 不是映射: {item!r}")
+                continue
+            errs += plan_item_errors(item, corpus_root)
+    print(json.dumps({"plan": str(plan_path), "check": "FAIL" if errs else "OK",
+                      "errors": errs}, ensure_ascii=False, indent=2))
+    return 4 if errs else 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="Corpus precheck -> writeback plan")
-    ap.add_argument("--section", required=True, choices=sorted(CORPUS_ROOTS))
-    ap.add_argument("--citekey", required=True)
-    ap.add_argument("--candidates", required=True, help="candidates YAML from the distill agent")
+    ap.add_argument("--section", choices=sorted(CORPUS_ROOTS))
+    ap.add_argument("--citekey", default=None)
+    ap.add_argument("--candidates", default=None, help="candidates YAML from the distill agent")
     ap.add_argument("--out", default=None, help="plan output path (default: <candidates>.plan.yaml)")
+    ap.add_argument("--check-plan", dest="check_plan", default=None, metavar="PLAN_YAML",
+                    help="validate an existing writeback plan and exit (no precheck run)")
     args = ap.parse_args()
+
+    if args.check_plan:
+        return check_plan(Path(args.check_plan))
+    if not args.section or not args.citekey or not args.candidates:
+        ap.error("--section/--citekey/--candidates are required (unless --check-plan)")
 
     corpus_root = CORPUS_ROOTS[args.section]
     if not corpus_root.is_dir():
@@ -176,7 +262,22 @@ def main() -> int:
         return 2
     cand_path = Path(args.candidates)
     spec = yaml.safe_load(cand_path.read_text(encoding="utf-8"))
-    candidates = spec.get("candidates", []) if isinstance(spec, dict) else []
+    fail_fast: list[str] = []
+    candidates: list = []
+    if isinstance(spec, dict) and "candidates" not in spec and spec.get("items") is not None:
+        fail_fast.append("candidates.yaml schema 错误：顶层键是 items: —— 应为 candidates: "
+                         "（items: 是 writeback plan 的 schema，两者写反会让查重/写回全空转）")
+    elif not isinstance(spec, dict) or not spec.get("candidates"):
+        fail_fast.append("candidates.yaml 为空或缺 candidates: 列表——无条目可 precheck")
+    else:
+        candidates = spec["candidates"]
+        for i, cand in enumerate(candidates):
+            if not isinstance(cand, dict):
+                fail_fast.append(f"candidates[{i}] 不是映射: {str(cand)[:80]!r}")
+            elif not (cand.get("skeleton_text") or cand.get("block_text") or "").strip():
+                fail_fast.append(f"candidates[{i}] ({cand.get('name', 'unnamed')}) 缺 "
+                                 "skeleton_text 与 block_text——查重将退化为按 name 分词，结果不可信")
+        candidates = [c for c in candidates if isinstance(c, dict)]
     registry = find_registry(corpus_root)
 
     plan_items = []
@@ -290,17 +391,25 @@ def main() -> int:
                     "无原文锚点来源（source_anchor+source_locator 字段或 block_text 内 原文锚定 行均缺）"
                     "——gate ① 请确认该变体是否应带原文锚点")
         plan_items.append(plan_item)
+        fail_fast += plan_item_errors(plan_item, corpus_root)
 
     plan = {"section": args.section, "citekey": args.citekey,
             "corpus_root": str(corpus_root),
             "registry": str(registry) if registry else None,
             "items": plan_items}
+    if fail_fast:
+        plan["fail_fast"] = fail_fast
     out = Path(args.out) if args.out else cand_path.with_suffix(".plan.yaml")
     out.write_text(yaml.safe_dump(plan, allow_unicode=True, sort_keys=False),
                    encoding="utf-8")
     print(json.dumps({"plan": str(out), "items": len(plan_items),
-                      "verdicts": {i["name"]: i["dedup"]["verdict"] for i in plan_items}},
+                      "verdicts": {i["name"]: i["dedup"]["verdict"] for i in plan_items},
+                      "fail_fast": fail_fast},
                      ensure_ascii=False, indent=2))
+    if fail_fast:
+        print("FAIL-FAST: " + str(len(fail_fast)) + " 处硬伤（见 fail_fast 列表）——"
+              "分发给蒸馏代理当场返工，勿进 gate ①/写回", file=sys.stderr)
+        return 4
     return 0
 
 
