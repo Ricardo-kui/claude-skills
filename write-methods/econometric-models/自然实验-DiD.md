@@ -78,7 +78,6 @@ updated: 2026-08-23
 |---|---|---|---|---|---|
 | 11 | entry/exit 年 FE + 多维 FE + 冲击层级聚类 | 每单位一次观测的持有窗截面（副槽位 M7） | 区别于标准 unit FE + year FE：entry×exit 年 FE 吸收时长与两端冲击 | EMERGING | Castellaneta et al. 2017 (SMJ) |
 
-
 ## 主骨架
 
 参见 `write-methods/SKILL.md` → 槽位骨架加载 → 本类型适用的 `references/slot-M*.md`（各 slot 文件内含 `自然实验-DiD` 专用变体）。
@@ -338,7 +337,6 @@ updated: 2026-08-23
 - ±k 的选择须事前或按惯例说明；k 太小会与真处理窗重叠。
 - 安慰剂应在 Methods 预告位置（M8/M10）；仅塞进 Results 附录会削弱"设计内建"印象。
 
-
 ### 变体 14：M8_judicial_shock_two_assumption（moon2026）
 
 **槽位**: M8
@@ -348,7 +346,6 @@ updated: 2026-08-23
 
 来源：Moon et al. (2026, Journal of Marketing)。
 
-
 ### 变体 15：M2_staggered_did_always_treated_hygiene（moon2026）
 
 **槽位**: M2
@@ -357,6 +354,46 @@ updated: 2026-08-23
 > "Recent research on staggered difference-in-differences (DiD) notes that always-treated units are a potential source of bias in identifying the treatment effect ([citation]). In this context, the DiD estimate is a variance-weighted average of the constituent 2x2 DiD estimates in the data, and one of the comparisons includes always-treated units as effective controls. As always-treated units reflect the treatment effect in the outcomes, the treatment effect estimated from the staggered DiD in this case may potentially introduce a negative weight and bias the estimate ([citation]). To address this concern, we exclude [units treated before the sample period]. In addition, we do not include [units with only posttreatment observations]. To allow for variation before the treatment, we consider [events] that provide at least [N] years of pretreatment periods for the treated [units]. Using this approach, our sample consists of [final N] ([treated N] in the treatment group; [control N] in the control group)."
 
 来源：Moon et al. (2026, Journal of Marketing)。
+
+### 变体：RDiT 识别策略选择论证（为什么用时间断点而非 DiD）
+
+[功能标签]: 识别策略选择论证——无对照组设计的合法性
+[适用槽位]: M8（识别策略/效度）
+[骨架]: Following prior literature on the causal impact of an unexpected trigger ([cite]), we use the [RDiT] method to measure the impact of [event] on [outcome] ([technical reference]). [Event] serves as the temporal discontinuity in treatment. Based on a narrow time window before the event, [RDiT] allows us to estimate the counterfactual—that is, [outcome] in the absence of [event]. Unlike other identification strategies, such as difference-in-differences, the [RDiT] approach does not require a control group that is empirically similar to the treatment group ([cite]). Because all [units] in the same [class] are exposed simultaneously to the [event], identifying a valid control group is infeasible.
+[原始句锚点]: "Unlike other identification strategies, such as difference-in-differences, the RDiT approach does not require a control group that is empirically similar to the treatment group (Hausman and Rapson, 2018)."
+[范式排他性]: RDiT 专属——论证核心是"所有同类单元同时暴露于事件→对照组不可行"，仅适用于时间断点设计
+[设计变体]: 标准 RDD 版本将 "temporal discontinuity" 替换为 "running variable crosses the cutoff"；事件研究版本替换为 "we compare pre- and post-event trends"
+[可迁移性]: 中 — 单篇证据，RDiT 语料首例
+
+### 变体：局部断点设计的外部效度预抗辩（两理由）
+
+[功能标签]: 外部效度预抗辩——先承认 generalizability 限制再两理由化解
+[适用槽位]: M8（识别策略/效度）
+[骨架]: In general, [the design] serves as a localized experiment at the cutoff point, and its generalizability beyond the [bandwidth] might be limited ([cite]). However, we reason that the local nature of [design] is not a significant concern in our empirical setting for two reasons. First, [setting property that shortens adjustment lags]. Second, in choosing our observational period, we follow prior research that examines [comparable responses to negative news], which used a [N]-[period] window ([cite]). Therefore, while [design] generally possesses a local nature, it is well suited to our sample.
+[原始句锚点]: "However, we reason that the local nature of RDiT is not a significant concern in our empirical setting for two reasons. ... Therefore, while RDiT generally possesses a local nature, it is well suited to our sample."
+[范式排他性]: RDiT/局部设计专属——引用法（Hausman and Rapson, 2018）明确指出 "localized experiment" 是 RDiT 固有属性
+[设计变体]: 标准 RDD 版本可将 "local nature" 替换为 "extrapolation beyond the bandwidth"；窄窗口 DiD 可复用同一承认-化解节奏
+[可迁移性]: 中 — 单篇证据，"先引权威承认局限→两理由化解→ Therefore 收束" 的预抗辩节奏可跨设计
+
+### 变体：控制变量按竞争性解释编号分组引入
+
+[功能标签]: 抗辩性——控制变量不是罗列而是逐一对标竞争性解释
+[适用槽位]: M6（控制变量与竞争性解释）
+[骨架]: We collect data on [auxiliary channels] to control for alternative explanations of [DV adjustment]. These explanations include (1) [news coverage about the unit], (2) [buyers' interest in the unit], (3) [producer-generated social content and followers' engagement], and (4) [the unit's spending on other channels]. Next, we elaborate on each control variable. First, we used [news database] to count [measure] ([cite]). Second, we control for [buyer interest] by including [search-volume index] ([cite]).
+[原始句锚点]: "We collect data on social media and news media coverage to control for alternative explanations of a substitute's adjustment of ad spending."
+[范式排他性]: 通用——任何处理冲击后的 DV 调整都可能被媒体/关注度/自有社媒/其他渠道混淆
+[设计变体]: DiD 版本在编号清单后补一句 "These controls also absorb differential pre-trend drivers"
+[可迁移性]: 高 — "编号竞争性解释清单 → Next, we elaborate on each" 结构跨设计通用
+
+### 变体：受影响单元（替代品）的两步消费者决策抽样论证
+
+[功能标签]: 可审计性——用消费者选择理论为样本边界背书
+[适用槽位]: M2（数据来源与样本漏斗）
+[骨架]: [Buyers] determine their consideration set in two steps. First, they decide [the type]; second, they decide [the tier] within the chosen [type], leading to a consideration set that focuses on a specific [class] ([cite]). This method is consistent with [consumer choice literature], which demonstrates that customers select values of attributes in sequential order ([cite]). Following the above method, we sample all [units] that are substitutes for [focal unit]—that is, [units] that [share the defining attribute] ([cite]). This sampling leads us to [N] [units] from [M] [producers] sold in [market] as of [year].
+[原始句锚点]: "Following the above method, we sample all models that manufacture cars that are substitutes for cars sold by the recalling model Sagitar—that is, car models that are A-class sedans like Sagitar."
+[范式排他性]: 半通用——适用于任何需要定义"受事件影响的同类单元"的设计（召回、退出、进入）
+[设计变体]: 无理论替代品定义时，退化为 "we sample all units in the same [classification] as [focal unit]"
+[可迁移性]: 中 — 依赖领域内有公认的消费者分类层级（segment→tier→class）
 
 ## 反模式（Castellaneta 蒸馏补充）
 

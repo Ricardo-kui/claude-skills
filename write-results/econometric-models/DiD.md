@@ -68,7 +68,6 @@ updated: 2026-08-23
 |---|---|---|---|---|---|
 | 2 | 理论前提探测式补充证据链 | 机制补充分析逐项对应可观察理论前提（行为+沟通容量+中介关注），允许领域特定 null | 区别于罗列额外 DV——每个分析对应一个前提，domain-specific null 缩窄理论适用范围 | EMERGING | Lee, Wu & Bednar, OS |
 
-
 ## 主骨架
 
 参见 `write-results/SKILL.md` → 槽位骨架加载 → 本类型适用的 `references/slot-R*.md`（各 slot 文件内含 `DiD` 专用变体）。
@@ -285,6 +284,13 @@ updated: 2026-08-23
 - 若设计本应报告 event-study / 平行趋势而仅用本电池替代，须在 Methods/局限中说明为何适用（例如非经典单位×时间面板），不得暗示已完成平行趋势检验。
 - Appendix-only 结果须在正文保留一句结论，不能只写“see appendix”。
 
+[功能标签]: R8 补充分析 — 跨事件复制作为双重偶然性排除
+[骨架]: "We next test the generalizability of our findings beyond [event A]. Specifically, we collect an additional data set on [event B] initiated by [actor] in [market] during [year]. ... [新样本构建简述：替代品定义、前后窗宽]. Using this newly created balanced sample, we estimate Equation ([N]). Table [Y] presents the results, similar to those reported in Table [X]. The consistent results suggest that the observed relations between [treatment] and [outcome] are likely limited to neither [event A] nor [category A]. Instead, these effects may be generalized to other [events] and [categories]."
+[关键特征]: 复制不是又一个稳健性检验而是独立的 Empirical Extension 小节；收束句显式排除**两个**偶然性来源（单一事件 + 单一品类），把外部效度主张写成 'limited to neither [A] nor [B] ... may be generalized to other [events] and [categories]' 的双变量限定式
+[适用]: 单一事件研究被质疑外部效度时；有第二个可比事件可复制完整设计的场景
+[节奏标记]: [外推宣言][第二事件样本构建][同方程重估][双偶然性排除收束]
+**原始句锚点**: "The consistent results suggest that the observed relations between a recall and its substitutes' ad spending are likely limited to neither the Sagitar recall nor the category of sedan cars."
+**来源**: fang_et_al_2025_rival_recall_ad_spend (POM), Empirical Extension
 
 ### 变体 10：Null placebo（±k 期伪处理）作为识别确证（2026-08-05）
 
@@ -307,7 +313,6 @@ updated: 2026-08-23
 - Placebo null ≠ 假设得到支持；只能降低“结果纯属偶然/时点错置”的顾虑。
 - 必须预先声明期望（weaker/null）；若 placebo 显著，不得沉默，应报告为 identification threat。
 
-
 ### 变体 11：r2_did_raw_descriptive_preview（moon2026）
 
 **槽位**: R2
@@ -316,7 +321,6 @@ updated: 2026-08-23
 > "Before discussing the results of the DiD models, it is important to explore the descriptive evidence with raw data to assess the impact of [treatment] on [outcome] ([citation]). Accordingly, we first examine the average [outcome] of the control and treated [units] [k] years before and after [treatment]. Figure [x] shows that the average [outcome] of the control [units] remains largely unchanged before and after [treatment], but that of the treated [units] [increases/decreases] following [treatment] (see Figure [x])."
 
 来源：Moon et al. (2026, Journal of Marketing)。
-
 
 ### 变体 12：r2_did_selection_firststage_inline（moon2026）
 
@@ -327,7 +331,6 @@ updated: 2026-08-23
 
 来源：Moon et al. (2026, Journal of Marketing)。
 
-
 ### 变体 13：r7_did_alternative_shock_replication（moon2026）
 
 **槽位**: R7
@@ -336,7 +339,6 @@ updated: 2026-08-23
 > "In addition, we also test if our conclusions are robust in an alternative empirical setting that uses [related but distinct policy adoption] as an alternative shock. To this end, we identify [N] observations of [n] [units] headquartered in [state] that adopted [alternative policy] in [year] as the treated group and [N] observations of [n] [units] headquartered in [states] as the control groups that never adopted [alternative policy]. We estimate the simple diff-in-diff models on these alternative treated and control groups and find consistent empirical support for our thesis (see [appendix table] for more details)."
 
 来源：Moon et al. (2026, Journal of Marketing)。
-
 
 ### 变体 14：r7_did_leave_one_out_treated_unit（moon2026）
 
@@ -347,7 +349,6 @@ updated: 2026-08-23
 
 来源：Moon et al. (2026, Journal of Marketing)。
 
-
 ### 变体 15：r7_did_stacked_staggered_robustness（moon2026）
 
 **槽位**: R7
@@ -356,7 +357,6 @@ updated: 2026-08-23
 > "Stacked diff-in-diff. In examining the impact of treatments that are staggered across time, a potential alternative estimation strategy would be to employ a stacked DiD model ([citation]). To this end, we construct an event specific sample with [units] in one [treatment state] as treated groups and those that never [receive treatment] as control groups, which forms a cohort, and stack all cohorts to construct the stacked dataset. The stacked DiD model incorporates the cohort-specific [unit] and [time] fixed effects and enables us to use relative time dummies, which allows for potentially cleaner comparison between the treated and control groups and alleviates the potential concern about the staggered treatment design ([citation]). As Model [x] in Table [y] shows, we consistently find support for the [positive/negative] effect of [treatment] on [outcome] in the stacked DiD models."
 
 来源：Moon et al. (2026, Journal of Marketing)。
-
 
 ### 变体 16：r7_did_treatment_reversal_counterfactual（moon2026）
 
@@ -367,7 +367,6 @@ updated: 2026-08-23
 
 来源：Moon et al. (2026, Journal of Marketing)。
 
-
 ### 变体 17：r7_did_alternative_outcome_placebo（moon2026）
 
 **槽位**: R7
@@ -377,6 +376,13 @@ updated: 2026-08-23
 
 来源：Moon et al. (2026, Journal of Marketing)。
 
+[功能标签]: R2 模型无关证据 — 事件前后时间序列图开篇（RDiT/事件研究语境）
+[骨架]: "Figure [X] presents the model-free evidence of [outcome] for [treated units] before and after [event]. The [axis] covers the [N]-[period] observational window from [start] to [end]. The [panel] reveals a noticeable [increase/decrease] (p < [threshold]) in [total outcome] for [treated units] after [event]. A decomposition of [outcome] by [component dimension] indicates an [increase] (p < [threshold]) in [component_A] following [event], but a [decrease] (p < [threshold]) in [component_B]. However, we observe an insignificant change (p > [threshold]) in [component_C]. Table [Y] in the [online supplemental materials] provides the t-statistic for the model-free evidence. ... Next, we present the estimates from the [estimator] analysis"
+[关键特征]: 在任何模型估计前先展示事件前后时间序列面板图（可多面板按成分分解），显著性直接标注在图解读句中（p < [threshold] / p > [threshold]）；精确 t 值下放附录（'provides the t-statistic for the model-free evidence'）；null 成分与显著成分并列呈现不做挑选；段末以 'Next, we present the estimates from the [estimator] analysis' 一句过渡到正式估计——model-free 图为 climax 铺垫而非替代
+[适用]: RDiT/单事件前后设计、政策冲击窗口研究；成分分解故事（总量 = A↑ + B↓ + C不变）尤其适用
+[节奏标记]: [图导览][总量方向+显著性][成分分解][null 成分诚实并列][附录 t 值指针][过渡到估计]
+**原始句锚点**: "The top left figure reveals a noticeable decrease (p < 0.01) in total ad spending for substitute models after the recall. ... However, we observe an insignificant change (p > 0.1) in Brand Ad."
+**来源**: fang_et_al_2025_rival_recall_ad_spend (POM), §4.1
 
 ## 反模式（zhang-idd-advertising-rejected 拒稿案例补充，2026-08-23）
 

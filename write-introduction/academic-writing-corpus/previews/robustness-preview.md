@@ -38,6 +38,26 @@ source: Extracted from MVP30 narrative_analysis files
 
 ---
 
+
+### 变体 J：单句枚举+同市场跨事件复制预览型（fang2025 型） EMERGING（1 篇范文）
+
+**模板**:
+> "We report [N] robustness tests using [an alternate estimation window], [an augmented estimation strategy], [an alternate estimator], [a falsification test], and [alternative measures of the lever]. Last, aiming to boost the generalizability of our findings, we replicate the identified effects with [another same-type event in the same market] and obtain consistent results."
+
+**来源**: fang_et_al_2025_rival_recall_ad_spend (Production and Operations Management), P14
+
+**原文锚定**:
+> "Last, aiming to boost the generalizability of our findings, we replicate the identified effects with another car recall event in the same market and obtain consistent results."
+
+**关键特征**:
+- **单句枚举极限压缩**：五项检验用 "using A, B, C, D, and E" 一句带过，不给逐项威胁说明——与变体 H（逐项 to address X）相反的压缩极
+- **跨事件复制作为泛化装置**：句子的重心不在稳健性而在 generalizability——用同市场内另一同类事件复制效应，把"结果稳健"升级为"规律可迁移"；既有变体 H/I 均以识别防御收尾，无复制装置
+- **"Last, ..." 收束位**：复制句置于 preview 链最末、贡献段之前，作为可信度的最终一击
+
+**适用**: 单一事件研究且同市场存在可比第二事件的准实验论文；篇幅受限、检验自明的场景；POM/MSOM/JM 事件研究
+
+**禁忌**: 单句枚举仅当各检验名称自明（alternate estimator / falsification test）时可用，否则按文件反模式补 "to address [threat]"；复制事件必须与主事件同市场、同机制、不同标识，否则复制句不成立；复制结果须在正文/附录真实兑现
+
 ## 变体 H-紧凑版
 
 **模板**:

@@ -363,6 +363,27 @@ First, they infer [inference 1], which shapes [DV dimension 1]. Second, they ass
 
 ---
 
+### Quintessential-Response-Variable 正当化 Topic 句
+
+**句位**: topic（构念/DV 选择段的段首论点句——在理论透镜与响应机制之间，为"为什么选这个行动变量作为焦点"给出一句正当化）。
+
+**句式骨架**:
+```
+Because a [trigger] relates to [core stake], we view [adjustment to X] as
+the quintessential response variable.
+```
+
+**原文锚点**:
+> "Because a recall relates to consumer safety and product quality, we view adjustment to ad spending as the quintessential response variable."（2.2 P2）
+
+**为什么有效**: 一个 because 子句同时完成两件事：把 DV 锚定在 trigger 的核心利害（safety/quality → 广告）上，并用 "quintessential" 标记这是代表性而非任意选择；避免"我们选择研究 X"式的无依据声明。
+
+**注意事项**:
+- 前提子句必须真实成立（trigger 与所选 DV 之间有公认的理论纽带），否则 quintessential 会被读成过度声明
+- 适用于"多候选响应变量中选一个焦点"的场景；若 DV 无争议则无需此句
+
+**反模式**: 无纽带支撑时不用 "quintessential"；不要在同节内为多个 DV 重复使用该句式（会稀释代表性声明）。
+
 ## 变体 I：Framework-Anchored 双构念区分（han_pollock_paruchuri 型）
 
 **适用**: 两个构念被领域 conflated，先建立上位维度框架（如 rational/emotional/moral），再将两个构念分别锚定到不同维度。
@@ -623,7 +644,6 @@ indices for ability and identity conformance are no longer aligned.
 - 未与后续双通道曲线机制连接 → T1 构念设置悬空。
 
 ---
-
 
 ### 句式 N：构念层次辩护段（westphal_bednar2005 型）
 

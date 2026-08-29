@@ -6,7 +6,8 @@
 schema_version: "4.0-lite"
 id: fang2025
 paper:
-  citekey: null
+  citekey: fang_et_al_2025
+  authors: "Sihan Fang, Vivek Astvansh, Siliang (Jack) Tong, Hsiao-Hui Lee, Yue Guo"
   title: "How Do Brands Change Their Advertising Spending in Response to a Rival's Product Recall?"
   outlet: "Production and Operations Management"
   year: 2025
@@ -18,7 +19,9 @@ reading_scope:
   sections_read: [introduction, theory, methods, results, discussion]
   coverage: complete
   source_records:
-    - "Fang-et-al-2025-rival-recall-ad-spend.md"
+    - "fang_et_al_2025_rival_recall_ad_spend.pdm/fulltext.text-only.md"
+    - "fang_et_al_2025_rival_recall_ad_spend.pdm/sections/{introduction.json, theory.yaml + theory.report.md, methods.json, results.json} (verified four-section distillations)"
+  verification_note: "2026-08-29 gap-filling re-distill: all magnitudes, design facts, and robustness labels re-verified against the full text; no field relies on OCR-readback guesses"
 analysis_focus:
   primary: [introduction, theory]
   supporting: [results, discussion]
@@ -29,6 +32,9 @@ classification:
   narrative_dynamics: [opportunity-versus-threat-interpretation, decomposed-action-reversal, response-then-payoff, similarity-heterogeneity]
   retrieval_signals: [mixed-opportunity-threat, strategic-response-to-rival-event, action-decomposition, horizontal-spillover]
   confidence: reviewed
+mechanism_evidence:
+  status: partly_probed
+  basis: "The unobservable opportunity/threat interpretation is proxied by the direction of ad-spending adjustment; the action decomposition (total −50%: price +25%, quality −71%, brand null) is estimated by RDiT, and the sales payoff (recall lifts substitute sales 35.3%; each RMB 10,000 unit of ad spending weakens that spillover by 23.1%, driven by quality advertising) is estimated via 2SLS with a New-Ad-Firms instrument (first-stage F 102.75–260.44 across columns). Managerial belief and buyer comparison are never directly observed."
 section_learning:
   introduction:
     suitable: "yes"
@@ -50,15 +56,17 @@ section_learning:
     suitable: "partial"
     requires: []
     learn:
-      - "When a discrete rival event changes the decision environment abruptly, define the pre- and post-event windows and complement the main discontinuity design with a second event, falsification, and alternate media traces."
+      - "When a discrete rival event changes the decision environment abruptly, define the pre- and post-event windows (here 16 + 15 weeks around the Monday after the Friday announcement) and defend a no-control-group RDiT by stating the identification assumption and pre-empting local-nature objections with named reasons."
+      - "Ground a vendor-algorithm construct (BERT-classified price/quality/brand ads) in a three-layer validity chain: classifier benchmark performance, double human-coder reliability, and human-machine agreement."
     caveat:
-      - "The Sagitar RDiT design, Chinese prefecture-week advertising data, single-event timing assumption, and new-ad-firm instrument are setting-specific and do not establish general competitive strategy effects."
+      - "The Sagitar RDiT design, Chinese prefecture-week print-advertising data (62 models from 33 manufacturers, 308 prefectures, 591,976 records), single-event timing assumption, and New-Ad-Firms instrument are setting-specific and do not establish general competitive strategy effects."
+      - "The 2SLS/IV identification stack is not previewed in Methods (it first appears in Results Equations 3-4), and the standard-error clustering level is never reported."
   results:
     suitable: "yes"
     requires: []
     learn:
-      - "Reveal the aggregate response first, then decompose it into components that expose the mixed strategy hidden by the net decrease."
-      - "Let the performance analysis close the same strategic puzzle by testing whether the action portfolio strengthens or weakens the recall's sales spillover, and report which component drives that result."
+      - "Reveal the aggregate response first, then decompose it into components that expose the mixed strategy hidden by the net decrease; translate each coefficient into an explicit percent of the prerecall base (-50%, +25%, -71%, brand null)."
+      - "Let the performance analysis close the same strategic puzzle by testing whether the action portfolio strengthens or weakens the recall's sales spillover (35.3% sales lift; each RMB 10,000 of ad spending weakens it by 23.1%, driven by quality advertising), and narrate nulls as evidence of strategy absence."
     caveat:
       - "A 50% average decline in total spending and its association with sales do not prove that lowering visibility caused consumer comparisons to change; the study's behavioral and interpretive layers remain distinct."
   discussion:
@@ -81,7 +89,7 @@ When a rival brand issues a product recall, do substitute brands treat the event
 
 ### Whole-story synopsis
 
-The paper opens with GM's aggressive response to Toyota's recall and immediately makes the apparent opportunity unstable: some heavily advertised GM models used the same accelerator pedal, so visibility could invite rather than avoid quality comparison. This moves the focal actor from the recalling brand to an observing substitute brand. Spillover theory offers two opposed interpretations: a recall can free sales for substitutes or contaminate evaluations of related products. Advertising becomes the observable response, but the paper refuses to treat it as one action. Price advertising can preempt sales, quality advertising can signal superiority or trigger an unfavorable comparison, and brand advertising can manage broader image exposure. The Sagitar recall supplies a time discontinuity for 62 substitute models across Chinese prefectures. Total advertising falls by half, suggesting threat dominates in the aggregate, but decomposition reveals a portfolio: price advertising rises, quality advertising falls sharply, and brand advertising does not change. A sales analysis then shows positive competitive spillover from the recall, while more total advertising weakens that sales lift; the weakening is driven by quality advertising. Similarity changes the response: direct substitutes cut price and quality advertising further, whereas sibling substitutes raise quality advertising. Robustness and a Cadillac recall replication support the pattern. The Discussion returns to the opening irony: visible quality promotion can undermine a substitute's effort to benefit from a rival's recall.
+The paper opens with GM's aggressive response to Toyota's recall and immediately makes the apparent opportunity unstable: some heavily advertised GM models used the same accelerator pedal, so visibility could invite rather than avoid quality comparison. This moves the focal actor from the recalling brand to an observing substitute brand. Spillover theory offers two opposed interpretations: a recall can free sales for substitutes or contaminate evaluations of related products. Advertising becomes the observable response, but the paper refuses to treat it as one action. Price advertising can preempt sales, quality advertising can signal superiority or trigger an unfavorable comparison, and brand advertising can manage broader image exposure. The Sagitar recall supplies a time discontinuity: Volkswagen's October 17, 2014 recall of 563,605 New Sagitar cars (China's largest auto recall of 2014, about 11.3% of all cars recalled that year) is observed through 62 substitute A-class models from 33 manufacturers across 308 Chinese prefectures over 31 weeks — 591,976 model-week-prefecture print-ad records. Total advertising falls by half, suggesting threat dominates in the aggregate, but decomposition reveals a portfolio: price advertising rises, quality advertising falls sharply, and brand advertising does not change. A sales analysis then shows positive competitive spillover from the recall (substitute sales lift of 35.3%), while more total advertising weakens that sales lift (each RMB 10,000 unit weakens the main effect by 23.1%); the weakening is driven by quality advertising. Similarity changes the response: direct substitutes cut price and quality advertising further, whereas sibling substitutes raise quality advertising. Five robustness tests (alternate prerecall window, augmented local linear, negative-binomial alternate estimator, falsification, alternate media traces) and a Cadillac SRX recall replication in the same market support the pattern. The Discussion returns to the opening irony: visible quality promotion can undermine a substitute's effort to benefit from a rival's recall.
 
 ### Characters and storylines
 
@@ -99,7 +107,7 @@ The paper opens with GM's aggressive response to Toyota's recall and immediately
 - **Exposition:** GM's response to Toyota shows why a rival recall may create both an invitation to compete and a danger of shared-quality association.
 - **Rising action:** Spillover theory frames opportunity, threat, and their cancellation; price, quality, and brand advertising convert the possible interpretations into separable response actions.
 - **Climax:** Following Sagitar's recall, substitutes reduce total advertising by 50%, indicating a net threat-oriented response.
-- **Falling action:** The aggregate decline decomposes into higher price advertising, sharply lower quality advertising, and unchanged brand advertising. Sales rise after the recall, but advertising—especially quality advertising—weakens that positive spillover; direct and sibling substitutes show different portfolios.
+- **Falling action:** The aggregate decline decomposes into higher price advertising (+25%), sharply lower quality advertising (−71%), and unchanged brand advertising. Sales rise after the recall (+35.3%), but advertising weakens that positive spillover (−23.1% per RMB 10,000, driven by quality advertising); direct and sibling substitutes show different portfolios.
 - **Denouement:** The paper returns to the opening practice and recasts aggressive advertising as potentially counterproductive when it makes a substitute more visibly comparable to the recalled product.
 
 ### Tension
@@ -119,6 +127,10 @@ The paper opens with GM's aggressive response to Toyota's recall and immediately
 - **Plot emergence:** `works` — the action decomposition and sales moderation arise naturally from the claim that competing interpretations can coexist in one response.
 - **Tie–unravel alignment:** `partly_works` — the evidence supports the stated advertising and sales patterns, but manager interpretation, buyer comparison, and the causal effect of advertising on sales remain inferred rather than directly observed.
 - **Ending quality:** `works` — the ending clearly transforms the GM opening: more advertising may weaken, not capture, competitive benefit when quality comparison is salient.
+- **Imperfect-paper signals (cross-section consistency check, 2026-08-29):** learning signals from the paper's own seams, not narrative errors to delete.
+    - **C1 — informal predictions:** the Theory section carries zero numbered hypotheses; the H1-H3-style predictions are three-way response directions (raise/lower/hold) produced by a proxy-bridging argument and a conceptual-framework figure. Competing predictions can be adjudicated without formal Hs, but this is a POM convention, not a transferable rule for AMJ/SMJ submissions.
+    - **C2 — identification stack deferred:** the IV/2SLS endogenous-moderator identification is not previewed in Methods; it first appears in Results (Equations 3-4), with weak-instrument F-statistics (102.75-260.44) embedded per column of Table 4. The story stays readable, but the design's IV layer is revealed only mid-Results.
+    - **C4 — undiscussed robustness contradiction:** the narrative treats brand advertising as unchanged (null as evidence of no harm-avoidance strategy), yet Table 8's augmented-local-linear robustness shows Brand Ad significantly positive (coefficient 0.000***, SE 4.62e-07), undiscussed. A robustness table can silently undercut a narratively load-bearing null; writers should reconcile or flag such conflicts rather than inherit them.
 - **Boundary:** This evaluates storytelling only; it is not a judgment about the RDiT design, advertising causal effects, or research quality.
 
 ## Learning Affordances

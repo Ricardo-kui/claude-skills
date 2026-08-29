@@ -73,7 +73,6 @@ updated: 2026-08-05
 |---|---|---|---|---|---|
 | 6 | 离散度 post hoc（best of both 调和） | 主结果两对立群体各赢一个维度时，用群体内离散度（CV）作可操作干预的调和型事后分析 | 区别于 mediation post hoc（解释"为什么"）——焦点从均值转向离散度，"best of both"框架回答"该怎么办" | VERIFIED | Wowak 2025 MS |
 
-
 ## 主骨架
 
 参见 `write-results/SKILL.md` → 槽位骨架加载 → 本类型适用的 `references/slot-R*.md`（各 slot 文件内含 `IV-2SLS` 专用变体）。
@@ -131,6 +130,13 @@ updated: 2026-08-05
 > [Table, Column] shows that the instrument, [instrument], is [direction] related to [the endogenous regressor] (β = [value], p < [threshold]), and the first-stage F-statistic of [value] exceeds the cutoff for 10% maximal bias ([cutoff]) according to Stock and Yogo ([2005]). Because standard Durbin–Wu–Hausman tests rely on linear-model assumptions and are not valid for [nonlinear survival / limited-DV] models, we adopted a control-function approach in which the first-stage residual is included in the [second-stage hazard / outcome] equation; whether this residual is statistically distinguishable from zero constitutes the nonlinear analogue of a Durbin–Wu–Hausman test for endogeneity ([Terza et al., 2008]; [Wooldridge, 2010, 2015]). The residual term is significant (β = [value], p = [threshold]), indicating that [the un-instrumented specification] is subject to the endogeneity concerns Shaver ([2005]) raised. [Next column] then shows that the instrumented [treatment] is [direction] related to [outcome] (β = [value], p < [threshold]). This method, however, is sensitive to finite-sample bias, often inflating the coefficient on the instrumented variable, and should be interpreted with caution ([citation]).
 **与原骨架差异**: 解决一个被普遍回避的问题——**非线性估计器（生存/Probit/Tobit）下如何检验内生性**。标准 DWH 假设线性，不能直接用于生存模型；本变体用 **control-function**：把第一阶段残差放入第二阶段风险方程，残差显著即内生性存在的非线性等价检验（Terza et al. 2008; Wooldridge）。关键诚实提示（**不可省略**）：control-function 对有限样本敏感，常**放大**工具变量系数，故 IV 系数应解读为方向性证据而非点估计。适用于任何非线性主模型 + IV 设计（生存分析、Probit、Tobit）。配合 `../write-methods/econometric-models/IV-2SLS.md` 变体 4（外部自然事件 IV）使用。
 
+[功能标签]: R4 调节效应 — 内生调节变量的 2SLS fitted-value 交互
+[骨架]: "Because the [moderator] is likely endogenous to [outcome], we estimate a two-stage least squares (2SLS) regression to correct for the endogeneity of [moderator] ([citation]). ... We interact the fitted value of [moderator] with [treatment] to test whether [moderator] moderates the effect of [treatment] on [outcome] ([citation]). ... Column [II] reports that an increase in [moderator] [weakens/strengthens] the [positive/negative] [treatment] effect (β [value], p < [threshold]). On average, a one-unit (in [unit scale]) increase in [moderator] [changes] [outcome] by [X]% ([value] ÷ [base])."
+[关键特征]: 调节变量内生时不直接用原始测量交互，而是第一阶段方程拟合值进入交互项（两方程编号连续呈现）；弱工具 F-stat 作为表内专行逐列报告；交互解释保持 ÷base 百分比口径；机制直觉句（'Such unfavorable comparisons boost contagion'）+ 管理启示回扣主结果（'Our previous result suggests that managers are indeed making the right decision'）
+[适用]: 调节变量与结果互为因果（广告支出↔销量、投资↔绩效类）的调节设计；处理效应×策略强度交互
+[节奏标记]: [内生性定位][2SLS 两阶段方程][fitted-value 交互][交互系数+显著性][÷base % 翻译][机制直觉][回扣主结果]
+**原始句锚点**: "Column II reports that an increase in the substitute's total spending on advertising weakens the positive spillover effect (β −4.685, p < 0.01)."
+**来源**: fang_et_al_2025_rival_recall_ad_spend (POM), §4.3
 
 ### 变体 12：R7 弱识别检验的临界值协议报告（Cragg-Donald vs Stock-Yogo 10%）（wowak2020 型）
 [功能标签]: R7/R2 — IV 相关性（relevance）的临界值对照式报告
@@ -229,7 +235,6 @@ updated: 2026-08-05
 
 **适用**: Methods 已声明 kind ≠ degree 的离散治理/组织结构研究（见 write-methods 面板数据-OLS 变体 32）。
 
-
 ### 变体 11：R7 排他性约束的量化暴露占比辩护（wowak2020 型）
 [功能标签]: R7 稳健性 — IV 排他性约束的三层辩护（先例复用→机制反驳→量化暴露占比）
 [骨架]: "Although the exclusion criteria cannot be explicitly tested, we propose that [instrument] is unlikely to be directly correlated with our dependent variables. First, [instrument] has been used in prior [predictor] studies that predict similar dependent variables ([citations]). Second, a direct correlation between [instrument] and [outcome] is less likely due to the characteristics of the [source channels] that [generate the instrument]. More specifically, the argument for nonexclusivity would be that [channel mechanism] not only influences [first-stage channel], but also influences how [actors] set [decision tone] and thereby predicts our [outcome] measures. Although we cannot completely rule out this possibility, we believe the risk of this is low based upon the small percentage of [source channels] that are [outcome-relevant domain]. In particular, there are [N_total] [source channels] across the time period of our panel. Of those, only [N_exposed] are [outcome-relevant entities], which is only [share]% of them. In other words, well over [100−share]% of the [source channels] are from [unrelated domains] in which [outcome] decisions as examined in our study are very uncommon."
@@ -239,6 +244,13 @@ updated: 2026-08-05
 **原文锚定**: "Of those, only 50 are medical products firms, which is only 8.6% of them. In other words, well over 90% of the 'other boards' are from nonmedical product industries in which recall decisions as examined in our study are very uncommon."
 **来源**: wowak_2020_female_directors_recalls (M&SOM), §5.1.1
 
+[功能标签]: R7 稳健性 — 排他性约束的理论论证 + 安慰剂回归双重辩护
+[骨架]: "The instrumental variable (IV) must meet the relevance criterion and exclusion restriction ([citations]). That is, the instrument should correlate with [endogenous variable] but should not directly influence [outcome]. ... [理论论证两段：机制 A 降低接入成本/强化竞争 → 支出↑；机制 B 排他与本地经济状况的直接关联，引城市文化—经济二分文献]. Empirically, we provide evidence showing that our instrument is not directly related to [proxy for local economic conditions], which could affect [outcome]. ... The insignificant effect suggests that our IV variable likely meets the exclusion restriction ([citations])."
+[关键特征]: 与变体 11 的量化暴露占比辩护不同，本变体在理论论证之外**追加一张安慰剂回归表**：工具变量对'本地经济代理变量'（全部新注册企业数）回归，以不显著作为排他性的经验证据；辩护结构为 relevance 预期方向声明 → 排他性理论论证 → 排他性安慰剂检验三层递进
+[适用]: 工具为地方供给面变量（新企业进入、设施密度）而结果为需求面结果的设计；审稿人质疑排他性时
+[节奏标记]: [IV 双准则声明][相关性理论论证][排他性理论论证][排他性安慰剂回归][不显著即合格]
+**原始句锚点**: "The insignificant effect suggests that our IV variable likely meets the exclusion restriction (Liu et al., 2017; Narang and Shankar, 2019)."
+**来源**: fang_et_al_2025_rival_recall_ad_spend (POM), §4.3
 
 ### 变体 13：R7 非线性主模型下的线性 2SLS 稳健性轨（wowak2020 型）
 [功能标签]: R7 稳健性 — 非线性主估计器（负二项 FE）+ 线性 2SLS 内生性检验轨的适配性辩护
@@ -248,3 +260,12 @@ updated: 2026-08-05
 [禁忌]: 不得把线性 2SLS 系数与非线性主系数直接比大小；线性化须给方法论引证而非默认
 **原文锚定**: "Although Equation (1), which is used to examine support for Hypothesis 1, is a nonlinear negative binomial regression, we use linear 2SLS for our IV analysis. We do so because nonlinear IV modeling approaches are nonstandardized and there is significantly less consistency in how to implement such models (Wooldridge 2010) compared with linear 2SLS analyses."
 **来源**: wowak_2020_female_directors_recalls (M&SOM), §5.1.1
+
+[功能标签]: R7 稳健性 — 控制变量内生性的三步递进辩护
+[骨架]: "One may be concerned that our control variables (e.g., [control]) are endogenous. We address this concern with the following three steps. First, we estimate a regression that excludes [controls]. The estimates (Table [C1]) are consistent with our main analyses (Table [X]). Second, prior literature ([citation]) has suggested that it is common for control variables to also function as dependent variables. ... the inclusion of additional variables produces estimates that are lower than or equal to the estimates produced after their inclusion. The insight is that including the controls leads to conservative estimates. Third, following prior literature ([citations]), we used these controls' one-period-lagged values as instruments. The estimates (Table [C2]) were consistent with the results, further reducing the endogenous concern."
+[关键特征]: 针对 'bad controls' 质疑的三步梯度：(1) 剔除可疑控制的复制；(2) Cinelli 式保守性论证——含控制估计 ≤ 不含控制估计，故结论方向不受威胁；(3) 滞后一期值作工具的复制；每步各有独立表格指针且收束句强度递增（consistent → conservative → further reducing）
+[适用]: 控制变量与 DV 同源或同期决定（媒体支出、研发、人力资本类）的面板设计；审稿人质疑 bad controls 时
+[节奏标记]: [威胁定位][第一步剔除复制][第二步保守性论证][第三步滞后 IV 复制][递进收束]
+**原始句锚点**: "One may be concerned that our control variables (e.g., Internet Ad) are endogenous. We address this concern with the following three steps."
+**来源**: fang_et_al_2025_rival_recall_ad_spend (POM), §4.2
+

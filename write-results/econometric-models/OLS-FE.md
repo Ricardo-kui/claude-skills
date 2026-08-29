@@ -334,7 +334,6 @@ updated: 2026-08-13
 **与原骨架差异**: 现有变体2（叙事型逐威胁组织）提供了标准四威胁模板（omitted variables + reverse causality + measurement error + alternative estimator）。Li et al. 升级为**五威胁+两稀有检验组合**：(1) RIR + Oster's delta 联合处理遗漏变量——这是 recent 顶刊（特别是金融/会计领域）的 gold standard，替代传统的"add more controls"；(2) 死亡类型分析——将 moderator 分解为 literal vs pseudo 子类型并检验是否调节主交互，创建"null interaction on interaction"的 meta-robustness；(3) 制药企业排除——针对特定行业的混淆检验（pharma firms 可能更频繁使用死亡相关语言）；(4) 替代测量替换——独立董事死亡替代 CEO 死亡词（construct-level replication）；(5) CEM 匹配处理低基础率选择偏误——匹配后的 moderator 比率从 3.61% 升至 11.33%。最后以 "A summary of our results is available online in Appendix [N]" 收尾。
 **诚实边界**: RIR + Oster 组合需要在 Methods 或 Appendix 中解释两个检验的选择参数（如 RIR 的 replacement threshold、Oster 的 δ 和 Rmax）。仅说 "results are robust to omitted variable bias" 而不报告参数 → 审稿人会要求补充。
 
-
 ### 变体 66: R7 — 三威胁小节化稳健性：选择性/内生性 → 替代估计 → 构念效度（post_2022_women_tmt_strategic_renewal 型）
 
 **来源论文**: Post, Lokshin & Boone 2022 (AMJ)
@@ -390,6 +389,13 @@ especially when [moderator condition].
 **与原骨架差异**: 本骨架是**实验层次回归的完整表导航模板**，适用于拥有多个特质IV、多个操纵调节变量、两向和三向交互的实验设计。Ahmadi et al. 使用7模型递进结构：(1) M1主效应（trait IV + manipulated variables）；(2) M2-M4两向交互（逐个添加交互项，Higgins et al. 2003范式）；(3) M5-M7三向交互（逐个添加三向项）。关键策略：(a) 将控制变量的显著发现也纳入叙事——"complexity has a direct and positive effect... this suggests that..."——即使不是假设的一部分，也为后续交互提供了情境锚定；(b) 逐个假设报告而非一次性报告所有模型——每段对应一个假设/一组假设，M1→H1a+b, M2-M4→H2a+b, M5-M7→H3a+b；(c) 三向交互的条件分解——在主效应中测试"在哪个调节水平上两向交互显著"，再用t-test比较跨条件的简单斜率差异。适用于任何含多个trait IV + 多个manipulated moderator的2×2实验设计。
 **诚实边界**: 7模型表可能过于密集——必须在表注中明确每个模型包含哪些变量。若某些交互项的加入导致其他系数符号反转或显著性变化（如promotion focus从Model 1显著到Model 2不显著），必须在正文中讨论而非沉默。
 
+[功能标签]: R6 非显著结果 — null 作为竞争策略裁决的证据
+[骨架]: "Column [IV] of Table [X] shows that [event] did not impact [outcome] (β [value], p > [threshold]). ... [在异质性/分解处回收 null:] This finding corroborates the theoretical insight we drew from Column [II]. ... The evidence thus supports the [strategy_A], while supporting neither the [strategy_B] nor the [strategy_C]."
+[关键特征]: 变量级 null（Brand Ad 不变、Recall×Price Ad 不显著）不被跳过也不降级为'部分支持'，而是被用作**裁决竞争性策略解释**的排除证据——null 排除 harm-avoidance/sales-preemption，显著项独占 quality-signaling；裁决句式 'supports [A], while supporting neither [B] nor [C]' 一次收束三个解释
+[适用]: 无编号假设、以竞争策略/机制解释组织的 Results；分解设计中对不显著成分的策略性使用
+[节奏标记]: [null 系数+显著性][null 实质命名（'did not impact'）][跨列回收][三策略一次裁决]
+**原始句锚点**: "The evidence thus supports the quality-signaling strategy, while supporting neither the sales-preemption strategy nor the harm-avoidance strategy."
+**来源**: fang_et_al_2025_rival_recall_ad_spend (POM), §5.2
 
 ### 变体 65: R4 — 分样本 null→significant 对 + 组内 Wald + 跨子样本 Chow 诚实降级（post_2022_women_tmt_strategic_renewal 型）
 
@@ -477,7 +483,6 @@ difference is not significant (p = [value]).
 > We ran [estimator] models following a hierarchical approach: Model 1 includes only the control variables, while Models 2 through [N-1] add the independent and interaction variables. Model [N] is the full model, including all independent and interaction variables. Variance inflation factor (VIF) scores were calculated for all models; none of the maximum VIFs exceed [value], which is substantially lower than the rule-of-thumb cut-off of 10 ([citation]). We then used [procedure] in [software] to conduct the [citation] multicollinearity diagnostic test, which showed that the condition number for our complete model is [value], well below the threshold of [threshold]. We also ran the [estimator] models using non-centered data; the results are consistent. Since centered estimations can make interpretation of the results less straightforward ([citation]), we report estimations using the original variable values in Table [z].
 **与原骨架差异**: write-results SKILL.md 的 R1 通用段落未覆盖多项式/交互模型特有的 mean-centering、condition number 和非中心复制三重诊断。本文提供了完整且简洁的整合范例：诊断不是为了例行公事，而是为了说明"高阶项和交互项没有造成多重共线性问题"，并解释为何最终报告非中心化系数（便于解释）。
 
-
 ### 变体 67: R1 — 双路径前提描述统计：理论预言零相关 + moderator 分布与条件定义（post_2022_women_tmt_strategic_renewal 型）
 
 **来源论文**: Post, Lokshin & Boone 2022 (AMJ)
@@ -547,7 +552,6 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **与原骨架差异**: 现有经济显著性变体多用 "one-SD change → X%"，而本变体使用 **P25–P75 四分位距移动**作为幅度基准。这适用于 IV 分布偏斜、理论意义更对应"从中等偏低到中等偏高"情境的研究。关键：报告具体单位（如 0.29 percentage points）并在括号中说明是 percentage point 还是 percent，避免审稿人误解。
 **诚实边界**: P25–P75 的解释隐含了 IV 在其分布中段的比较；若 IV 呈高度偏态或存在大量零值，应报告实际对应值（如 P25 = [value], P75 = [value]）而非仅说"interquartile"。
 **跨 skill 对齐**: `../write-methods/econometric-models/micro-templates/interquartile-economic-significance.md`（M7/M8/M10 预告）；Results 在此兑现 Methods 中预告的经济显著性解释口径。
-
 
 ### 变体 63：R3/R5 ln(时长) DV 的跨列选择性显著 + 天数回译幅度拍（wowak2020 型）
 [功能标签]: R3 主假设检验（时长 DV 变体）+ R5 幅度嵌入
@@ -821,7 +825,6 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **与原骨架差异**: 区别于变体8（主效应 null + 交互显著的条件化再定位）与变体27（跨阶段主效应衰减、无亚组分解）——本变体的核心是**组成性裁决 + 阶段熄灭**：(1) 用接近零的 baseline [IV] 证明非焦点亚组无关联，从而把已显著的前端主效应重写为"几乎全部由焦点亚组驱动"；(2) 在同一决策管道的中后段报告交互熄灭，把异质性本身做成管道衰减故事的一部分。适用于 multi-stage recruitment / funnel / ASA 设计中人口或偏好异质性只在信息稀薄的前端成立的叙事。
 **诚实边界**: "accounts for all" 须有 baseline ≈ 0 的统计支撑，不可仅因交互显著就宣称；下游交互 null 受 post-treatment selection 约束（见 slot-R6 Slough）；关联语言优先（associated with / advantages），不可升级为因果异质性效应。配套管道主叙事见变体27。
 
-
 ### 变体 64: R3 — 双处理对照四拍 + Wald 系数差检验（post_2022_women_tmt_strategic_renewal 型）
 
 **来源论文**: Post, Lokshin & Boone 2022 (AMJ)
@@ -1021,7 +1024,6 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 
 ---
 
-
 ### 变体 56: R2 Direct/Indirect/Total 路径表架构 (2026-08-13)
 
 **来源论文**: Kalaignanam, Kushwaha & Eilert 2013 (*Journal of Marketing*)
@@ -1040,7 +1042,6 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 **与原骨架差异**: 区别变体 16/53（层次列递增）与变体 24/28（Heckman 两阶段）——本变体是 Direct/Indirect/Total 路径表架构，把中介 climax 做成表上的系数对照。
 
 **诚实边界**: 因果语言降为 association；比较系数不等于中介成立，须接衰减/Sobel/bootstrap。
-
 
 ### 变体 57: R3 测量覆盖范围 warrant「学习」而非仅修复 (2026-08-13)
 
@@ -1061,7 +1062,6 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 
 **诚实边界**: 写 indicative of 而非 causes learning；覆盖范围必须是测量事实，不能事后发明。
 
-
 ### 变体 58: R3 Direct-vs-Total 衰减 + 嵌套χ² + Sobel + bootstrap 堆叠确认 (2026-08-13)
 
 **来源论文**: Kalaignanam, Kushwaha & Eilert 2013 (*Journal of Marketing*)
@@ -1080,7 +1080,6 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 **与原骨架差异**: 区别变体 41（SUR 非对称失败）与变体 5（post-hoc MCMC）——本变体是 confirmatory 部分中介的堆叠确认。BK 不替代区间。
 
 **诚实边界**: partial 不得升级 full；Sobel 单尾必须标明；一阶差分+IGLS 不得写 lead to / have an effect。
-
 
 ### 变体 59: R4 spotlight ±1SD + Δslope + region of manifestation（含无方向假设变体） (2026-08-13)
 
@@ -1101,7 +1100,6 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 
 **诚实边界**: 无交互图仍可写；无方向调节的符号解读是竞争预测裁决，不是预先定向假设的支持。
 
-
 ### 变体 60: R6 调节变量主效应 null 驳斥 rival conjecture (2026-08-13)
 
 **来源论文**: Kalaignanam, Kushwaha & Eilert 2013 (*Journal of Marketing*)
@@ -1120,7 +1118,6 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 **与原骨架差异**: 区别变体 30（预测性机制 null）——本变体是调节变量主效应 null 驳斥有害猜想，不是假设支持。
 
 **诚实边界**: null 不升级为 H 支持；conjectures 措辞可保留。
-
 
 ### 变体 61: R7 面板 GLS 四威胁电池（测量 / IGLS vs PCSE / 单元上卷 / 滞后 BIC） (2026-08-13)
 
@@ -1159,7 +1156,6 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 
 ---
 
-
 ### 变体 68: R4 交互通道分解句 — 调节效应经差值 DV 的哪个分量起作用（westphal_bednar2005 型）
 **来源论文**: Westphal & Bednar (Administrative Science Quarterly)
 **原始句锚点**: "friendship ties reduce the difference between reported concern about strategy and the perception of others' concern by increasing the latter (i.e., the perceived concern of other board members) rather than by decreasing the former..."
@@ -1170,7 +1166,6 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 > Moreover, the data also indicated that [moderator] reduces [the difference between component_A and component_B] by increasing the latter (i.e., [component_B]) rather than by decreasing the former (i.e., [component_A]); although [moderator] was strongly and positively associated with [component_B] at [sample condition], it was not significantly related to [component_A].
 **与原骨架差异**: 交互主报告后追加通道归属句：说明调节效应经由差值/合成 DV 的哪个分量传导——同模型内双分量证据（一分量显著、另一分量不显著）。适用于 DV 为两分量差值或合成的设计（self-report vs 对他人感知、自评 vs 他评等）。
 **诚实边界**: 通道主张须由同模型内双分量系数直接佐证，不得仅凭总效应推断；分量高度相关时通道归属可能不稳定，宜补分量系数差检验或明示其为解释性证据。
-
 
 ### 变体 69: R8 理论前提实证验证双通道 — 样本内前提检验 + 样本外前提问卷（westphal_bednar2005 型）
 **来源论文**: Westphal & Bednar (Administrative Science Quarterly)
@@ -1183,7 +1178,6 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 **与原骨架差异**: 双通道验证理论前提——(a) 样本内：阈值两侧均值对比（t 值）+ 侧内相关不显著，证明样本切割前提成立，随即以 Heckman 选择模型交底切割后果并宣称可推广回全样本；(b) 样本外：为前提命题追加独立问卷，报响应率、逐题支持百分比 + K-S 代表性收口。把"假设的前提"升格为"被检验的前提"。
 **诚实边界**: 样本外前提问卷为验证性非假设检验，逐题百分比不作推断统计（当代做法：一句结论 + 在线附录，题项全文入正文属年代特征）；Heckman 的 generalization 主张限于选择方程设定正确。
 
-
 ### 变体 70: R2 先验支持判据声明 — 差值/合成检验的判定规则先行（westphal_bednar2005 型）
 **来源论文**: Westphal & Bednar (Administrative Science Quarterly)
 **原始句锚点**: "We regressed this measure on a dummy variable set equal to 1 for directors' concern about strategy and 0 for directors' perception that others were concerned...; a positive and significant coefficient for the dummy variable would provide support for hypothesis 1."
@@ -1194,6 +1188,14 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 > We [created a dataset with two records per unit / constructed a test variable], set equal to [1] for [focal component] and [0] for [benchmark component]. We regressed this measure on [test variable(s)] together with the control variables; a [positive/negative] and significant coefficient for [test variable] would provide support for hypothesis [N]. To test hypotheses [N1–N3], we interacted [test variable] with our measures of [moderator_1], [moderator_2], and [moderator_3].
 **与原骨架差异**: 在报告任何系数之前显式声明判定规则——"a [direction] and significant coefficient for [test statistic] would provide support for hypothesis [N]"——把"什么算支持"先于结果交代；同时交代检验变量的编码方式（dummy 1=[self-report] vs 0=[benchmark]）。适用于差值/合成/配对检验设计；与当代开放科学的预注册式判定规则精神兼容，语料其余 R3 四拍变体均从"Hypothesis [x] predicted..."复述开始，无此拍。
 **诚实边界**: 判定规则一经声明须严格执行（含方向），不得事后改判单/双侧或显著性档位；当代报告仍须补幅度拍与 CI，本句不替代四拍。
+
+[功能标签]: R3 幅度拍 — 显式算术除法翻译（系数→货币→占基数百分比）
+[骨架]: "The [direction] and statistically significant coefficient ([coefficient], p < [threshold]) in Column [I] suggests that [treated units] responded to [event] by [direction phrase] their [outcome]. Specifically, in each [unit_1] and each [unit_2] following [event], [treated units] [outcome]—on average—[coefficient] × [unit scale] = [amount] (or [USD equivalent]) [more/less] than what they spent in a pre[event] [unit_1-unit_2], on average. This number amounts to a [X]% [drop/increase] ([amount] ÷ [base])."
+[关键特征]: 拍3 不满足于 'a Y-unit change'，而是展示完整算术链：β × 度量单位 = 本币金额（括号给美元换算）→ 金额 ÷ 事件前均值基数 = 百分比；基数在括号内显式出现使读者可复算；同一基数（prerecall 均值）贯穿全部成分列，保证跨列百分比可比
+[适用]: 系数度量单位与原始金额单位不同（万元、千元）需要显式换算的面板设计；多成分分解故事的幅度统一换算
+[节奏标记]: [方向+显著性][换算句 β×unit=amount][除法句 amount÷base=%]
+**原始句锚点**: "Specifically, in each week and each prefecture following the recall, Sagitar's substitutes spent on advertising—on average—RMB 140 (or US$19) less than what they spent in a prerecall week-prefecture, on average."
+**来源**: fang_et_al_2025_rival_recall_ad_spend (POM), §4.2
 
 ## 反模式
 

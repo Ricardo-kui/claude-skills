@@ -218,6 +218,27 @@ source: Extracted from MVP30 narrative_analysis + darby2026 distill; re-distille
 
 ---
 
+
+### 变体 I：引语反讽回扣型（fang2025 型） EMERGING（1 篇范文）
+
+**模板**:
+> "[Practitioner's public rationale for courting customers of a rival in crisis], [speaker], [role] ([emphasis flag on the construct-laden phrase]). [Exemplar episode 1: after a defective-product event, a substitute brand responds aggressively to seize the loss of sales.] [Exemplar episode 2 + ironic undercut: the responding firm's own heavily advertised products used the very component at fault.] [Later callback:] As the opening quote suggests, [the quoted rationale re-enters the argument when interpreting the observed response]."
+
+**来源**: fang_et_al_2025_rival_recall_ad_spend (Production and Operations Management), P1, P3-P4
+
+**原文锚定**:
+> "Ironically, some of GM's brands that were heavily advertised in the wake of Toyota's recall used the same accelerator pedal that Toyota used." / "As the opening quote suggests, GM's chief marketing officer positioned these incentives as GM's way to meet car buyers' needs for high-quality transportation and peace of mind."
+
+**关键特征**:
+- **引语+自伤反讽+回扣三拍结构**：不满足于用引语建立合法性——引语者自身的公开行为（大做广告的产品用同一缺陷部件）在两段后反噬引语的合理性，把"替代品牌该如何回应"的符号歧义戏剧化
+- **显式 callback 装置**："As the opening quote suggests" 把开场引语召回进理论论证——02 家族 A-H 此前均无引语回扣，引语是一次性合法性装置
+- **emphasis flag 内嵌**：引语中直接用斜体标出构念性措辞（"peace of mind"），提示读者该短语即核心构念的从业者语汇
+- **与变体 G 的判别**：G（abdurakhmonov2026）并列两个公开事实、无 block quote、无回扣；本变体以 block quote 开场、反讽来自引语者自身产品、且引语在理论段被显式回收
+
+**适用**: 竞争回应/溢出研究，对手危机中替代方的公开说辞可与其自身产品对照出反讽；需要 Hook 与后文解释段建立长程呼应的事件型论文；POM/JM/JOM 事件研究适配
+
+**禁忌**: 反讽必须是可公开查证的事实，不能靠拼接制造虚伪感；callback 要求引语真正承担解释功能（回扣句必须推进论证而非装饰）；若无法回收，退回变体 A/B 的单次引语用法
+
 ## 期刊适配
 
 | 期刊 | 适配度 | 注意事项 |

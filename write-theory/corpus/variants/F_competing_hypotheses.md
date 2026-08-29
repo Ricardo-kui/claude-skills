@@ -172,3 +172,41 @@ is consistent with studies showing that [state] can result in [decision-making b
 - 第二个 DV 的机制必须**真正不同于**第一个 DV（time-to-recall 的 overconfidence 机制不适用于 recall count）——不能只换 DV 重复同样论证
 - 2×2 的四个机制都必须可独立引用支撑，不能为追求对称而凑数
 - 折叠后仍用 "Given the above competing arguments"（**非 Therefore**）收敛——竞争假设收敛信号不变（参见 write-theory C14）
+
+### 技巧 3：解释支配代理桥接 + 三向 cancel-out 收束（Competing Interpretations via Observable Direction Proxy）
+
+> **适用**: 核心判别构念（行动者对触发事件的解释：机会 vs 威胁）不可直接观测，但存在一个方向可编码的行动变量（增/减/不变）能代理解释的支配关系；竞争预测因此无需正式编号假设即可被数据裁决。源自 Fang et al. (2025, POM)——为变体 F 提供第二个来源与"第三向出口"扩展（Wowak et al. 2025, MS 的 H1a/H1b 二分之外增加零净效应组合规则）。
+
+**适用场景**: 竞争来自**同一行动者内部的两种解释**（而非两个独立理论），且每种解释映射到方向相反的行动含义；POM/OM 式无正式 H 的概念框架也适用（不强制 H1a/H1b 形式化）。
+
+**骨架**:
+```
+[不可观测声明] Whether [actor] interprets [trigger] as [interpretation A] and/or
+[interpretation B] is unobservable.
+
+[代理桥接] However, one can proxy the interpretation by the direction of their
+adjustment to [action variable].
+
+[解释A支配] Specifically, if [actor] [increases action], the increase suggests
+[interpretation A] dominates: [action] to (1) [strategy A1] and/or (2) [strategy A2].
+
+[解释B支配] In contrast, if [actor] [decreases action], the decrease indicates
+[interpretation B] dominates: [action] to (1) [strategy B1] and/or (2) [strategy B2].
+
+[组合规则/第三向] Last, the two interpretations may cancel each other out,
+leading to a zero net effect.
+```
+
+**原文锚点**:
+> "Whether the manager of a substitute brand interprets a recall as an opportunity and/or a threat is unobservable. However, one can proxy the manager's interpretation by the direction of their adjustment to ad spending."（2.2 P3）
+> "Last, we foresee that the two interpretations may cancel each other out, leading to a zero net effect."（2.2 P3）
+
+**为什么有效**: 一段之内完成"不可观测构念 → 行动方向 → 三向预测 → 机制标签"，把理论歧义转化为可编码的实证预测；"cancel-out"出口承认两种解释可共存，避免伪装成非此即彼的对立，也比二分竞争假设更诚实。
+
+**注意事项**:
+- 必须论证所选行动变量与解释之间的对应规则（为何"增"意味着机会支配），否则代理效度是审稿攻击面；Fang 用" Because a [trigger] relates to [core stake], we view [adjustment to X] as the quintessential response variable" 补 construct→DV 正当化（另见 sentences/construct_definition.md 新条目）
+- 无正式 H 时以概念框架图 + 开放实证问题收束，不得伪造编号假设迎合模板
+- 三个方向性预测（增/减/零）应与机制标签一一对应，避免只给两个方向
+
+**反模式**: 行动变量与解释之间无可辩驳的对应规则时，不得使用方向代理（应改为直接测量或情境识别）；两种解释无共存可能时，退回标准 H1a/H1b 对。
+

@@ -68,6 +68,27 @@ source: Distilled by distill-introduction-exemplar Phase 4.6
 
 ---
 
+
+### 变体 E：三择一符号问+二阶分解递进型（fang2025 型） EMERGING（1 篇范文）
+
+**模板**:
+> "In summary, how [actor] adjusts [lever] is a priori unclear, which motivates us to ask: In response to [shock], does [actor] increase [lever] (i.e., [interpretation 1]), decrease it (i.e., [interpretation 2]), or leave it unchanged (i.e., [interpretation 1 and 2 cancel each other out])? ... The theoretical rationale for [decomposition dimension] motivates a second-order question: In response to [shock], does [actor] increase, decrease, or leave unchanged its [lever] on [component 1], [component 2], and [component 3]?"
+
+**来源**: fang_et_al_2025_rival_recall_ad_spend (Production and Operations Management), P7, P9
+
+**原文锚定**:
+> "In summary, how the substitute brand's manager adjusts their brand's ad spending is a priori unclear, which motivates us to ask: In response to a brand's product recall, does a substitute brand in the same product category increase its ad spending (i.e., opportunity interpretation), decrease it (i.e., threat interpretation), or leave it unchanged...?"
+
+**关键特征**:
+- **三择一符号问句，选项即解释标签**：每个选项括号内标注其理论解释（opportunity / threat / 相互抵消）——问句本身完成"符号↔机制"映射，发现段可直接回填裁决
+- **二阶问题=分解而非调节**：RQ2 把同一个符号问句下探到杠杆的成分层面（按广告类型分解），而非追加 moderator 问句——与变体 A/B/C（主效应+调节）正交的递进方向
+- **"a priori unclear" 作为 Incompleteness 标志语**：不确定性来自双机制对冲（机会 vs 威胁），不是文献没研究——张力在前文已由解释框架建立，问句只负责收窄
+- **双问句各有 preamble**：RQ1 由 "In summary... motivates us to ask" 引出，RQ2 由 "The theoretical rationale for [X] motivates a second-order question" 引出——每个问句自带合法性来源
+
+**适用**: 竞争机制预测相反符号且净效应可能抵消的研究；核心杠杆可分解为若干成分且分解本身是贡献主轴；Incompleteness × Mechanism/Phenomenon；JM/JMR/POM 接受显式问句的期刊
+
+**禁忌**: 三个选项必须各有独立的机制论证（不能凑第三个选项）；分解维度必须在 Theory/Methods 中真实可操作；若 RQ2 只是加调节变量，改用变体 A/C，勿用本变体伪装
+
 ### 变体 B：直接双问句整合理论透镜型（cui_vertinsky 型）
 
 **模板**:
