@@ -2,7 +2,6 @@
 name: distill-theory-exemplar
 description: "Theory 范文蒸馏——输入范文 Theory，输出理论构建类型/why-chain 模式/构念关系组织提炼报告并反馈 write-theory 语料。Use when 蒸馏 theory 范文（学 HOW they explain why）。"
 when_to_use: "输入是已发表范文且目标是学写法时；写作用 write-theory，审查用 theory-review。"
-whenToUse: "Use when 用户要蒸馏已发表论文的 Theory 范文，提炼其理论构建类型、why-chain 模式与构念组织方式，并反馈 write-theory 语料缺口。Trigger words: 蒸馏理论部分, 蒸馏 theory 范文, 学习这篇理论怎么推导, exemplar distillation, 范文提炼"
 ---
 
 # Distill Theory Exemplar
@@ -11,7 +10,7 @@ Distill the architecture and reasoning of a published Theory section into reusab
 
 ## Workflow
 
-先确认请求性质：范文蒸馏走本 skill；草稿审查 → `theory-review`；用户只说"分析/蒸馏这篇论文"未指定 section 时，先询问蒸馏哪个 section（Introduction/Theory/Methods/Results），不默认本 skill。
+先确认请求性质：范文蒸馏走本 skill；草稿审查 → `theory-review`；section 未消歧的整篇请求 → `distill-paper-exemplar`，仅明确 Theory 时本 skill 接管。
 
 1. Read `references/intake-and-classification.md`; identify theory-building type, hypothesis structure, evidence boundaries, and story-fidelity classification. For Incommensurability, also read `../write-theory/references/incommensurability-resolution-routes.md` and produce its L0–L3 full-text profile before extracting hypothesis skeletons.
 2. Load only the phase required:
@@ -30,7 +29,7 @@ Distill the architecture and reasoning of a published Theory section into reusab
 
 ## 选材 Gate（轻量版：读 routing 表与验证状态）
 
-蒸馏选材时，运行 `python ../distill-paper-exemplar/scripts/corpus_query.py routing --section theory --query "<gap/贡献杠杆关键词>"`（确定性脚本，只输出命中块，默认 ≤50 行；**关键词中/英各查一轮**）查 routing 表（Gap × 贡献杠杆 → 首选变体），再按命中打开**目标变体文件**读其验证状态做三带判定；**禁止整读 `routing_table.md`**：
+蒸馏选材时，运行 `py ../distill-paper-exemplar/scripts/corpus_query.py routing --section theory --query "<gap/贡献杠杆关键词>"`（确定性脚本，只输出命中块，默认 ≤50 行；**关键词中/英各查一轮**；先查后开——routing 表单份 54–257KB）查 routing 表（Gap × 贡献杠杆 → 首选变体），再按命中打开**目标变体文件**读其验证状态做三带判定：
 
 | 带 | 判定条件 | 处理 |
 |----|---------|------|
@@ -39,6 +38,7 @@ Distill the architecture and reasoning of a published Theory section into reusab
 | **quiet** | 目标变体多篇验证 | MEDIUM：正常蒸馏（除非论文带来明确新维度） |
 
 批量模式按带排序优先处理 HIGH 档。单篇论文（用户明确指定）不拒绝，但输出带判定。
+带词表跨节对齐：`薄弱`=状态驱动（EMERGING/单源）；methods/results 的 `critique_heavy`=批评驱动（revise+reject≥2）；band 汇报统一用 {gap, 薄弱, critique_heavy, quiet}。
 
 ## 原文锚点提取规则（语料锚点层）
 
@@ -55,4 +55,4 @@ Return the theory-building classification, functional module map, why-chain, con
 
 ## Context discipline
 
-Do not preload the full write-theory corpus. Finish paper-first extraction, then inspect only the exact rule targets and corpus files needed for comparison, persistence, or writeback. Routing 查询经 `python ../distill-paper-exemplar/scripts/corpus_query.py routing --section theory --query "<关键词>"`（确定性，命中行默认 ≤50），不整读 routing_table.md。
+Do not preload the full write-theory corpus. Finish paper-first extraction, then inspect only the exact rule targets and corpus files needed for comparison, persistence, or writeback. Routing 查询经 `py ../distill-paper-exemplar/scripts/corpus_query.py routing --section theory --query "<关键词>"`（确定性，命中行默认 ≤50）——先查后开、命中即开，routing 表正文不进上下文。

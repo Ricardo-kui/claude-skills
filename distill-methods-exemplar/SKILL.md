@@ -2,7 +2,6 @@
 name: distill-methods-exemplar
 description: "Methods 范文蒸馏——输入范文 Methods，输出设计分类/M1-M10 槽位映射/表达骨架提炼报告并反馈 write-methods 语料。Use when 蒸馏 methods 范文（学 HOW they argue）。"
 when_to_use: "输入是已发表范文且目标是学写法时；写作用 write-methods，审查用 methods-review。"
-whenToUse: "Use when 用户要蒸馏已发表论文的 Methods 范文，提炼其论证结构、设计分类、M1-M10 槽位映射与表达骨架并写回 write-methods 语料。Trigger words: 蒸馏方法部分, 蒸馏 methods 范文, 学习这篇方法怎么写, exemplar distillation, 范文提炼"
 ---
 
 # Distill Methods Exemplar
@@ -25,7 +24,7 @@ Distill how a published Methods section argues—not what it says—into reusabl
 
 - `<输入路径或文本>`（必填）：论文文件路径、PDF 路径、粘贴文本、或包含多篇论文材料的目录；省略时进入交互式询问。
 - `--batch`：批量处理模式，输出跨论文模式聚合报告；`--design-filter`：只处理特定设计类型；`--output-format`：默认 markdown，可选 json 供脚本消费。
-- **消歧**：用户只说"分析/蒸馏这篇论文"未指定 section 时，先询问蒸馏哪个 section（Introduction/Theory/Methods/Results），不默认本 skill。`write-methods` 检测到蒸馏请求时路由到本 skill。
+- **消歧**：section 未消歧的整篇请求 → `distill-paper-exemplar`，仅明确 Methods 时本 skill 接管；`write-methods` 检测到蒸馏请求时路由到本 skill。
 
 ## Phase 0 — 论文类型与设计分类
 
@@ -35,7 +34,7 @@ Distill how a published Methods section argues—not what it says—into reusabl
 
 ## Phase 0.75 — 选材 Gate（批评驱动）
 
-运行 `python ../distill-paper-exemplar/scripts/corpus_query.py registry --section methods --query "<设计类型关键词>"`（确定性脚本，只输出命中块，默认 ≤50 行；**关键词中/英各查一轮**），用命中块的 `validation_history` 判定本文值不值得深蒸馏；**禁止整读 `_evidence_registry.yaml`**：
+运行 `py ../distill-paper-exemplar/scripts/corpus_query.py registry --section methods --query "<设计类型关键词>"`（确定性脚本，只输出命中块，默认 ≤50 行；**关键词中/英各查一轮**；先查后开——registry 单份 54–257KB），用命中块的 `validation_history` 判定本文值不值得深蒸馏：
 
 | 带 | 判定条件 | 处理 |
 |----|---------|------|
@@ -44,6 +43,7 @@ Distill how a published Methods section argues—not what it says—into reusabl
 | **quiet** | 其余 | MEDIUM：正常蒸馏 |
 
 单篇不拒绝但必须输出带判定；批量按带排序。频繁使用且好用的变体提升路由权重，语料不因使用频率淘汰（registry `non_signals`）。
+带词表跨节对齐：`critique_heavy`=批评驱动（revise+reject≥2）；intro/theory 的 `薄弱`=状态驱动（EMERGING/单源）；band 汇报统一用 {gap, 薄弱, critique_heavy, quiet}。
 
 输出 yaml、执行规则、重复闸门（jaccard ≥ 0.33 → SKIP）与趋同批评聚合检查：读 `references/selection-gate.md`。
 
@@ -108,7 +108,7 @@ Distill how a published Methods section argues—not what it says—into reusabl
 
 ## Context discipline
 
-按需加载单个 phase reference，不预读全部；先经 `python ../distill-paper-exemplar/scripts/corpus_query.py index --section methods --query "<槽位/设计类型关键词>"` 与 `... registry --section methods --query "<关键词>"` 查命中行（确定性，默认 ≤50 行），再打开具体语料文件对比或写回——**整读 INDEX.md / _evidence_registry.yaml 已废止**。
+按需加载单个 phase reference，不预读全部；先经 `py ../distill-paper-exemplar/scripts/corpus_query.py index --section methods --query "<槽位/设计类型关键词>"` 与 `... registry --section methods --query "<关键词>"` 查命中行（确定性，默认 ≤50 行），再打开具体语料文件对比或写回——先查后开、命中即开，索引正文不进上下文。
 
 ---
 *基于 Pollock 2025 Ch07、MVP30 范文语料库构建。版本 1.9.0（2026-08-10 writing-for-agents 结构优化：Phase 0–5 模板/表格/示例迁移至 references/ 八文件，SKILL.md 548→约 100 行；description 压缩；保留 Phase 0.75 批评驱动选材 + 写入预览-确认两段式 + distinct_from 速查表维护 + 原文锚定规则）。*

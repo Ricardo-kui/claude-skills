@@ -2,7 +2,6 @@
 name: distill-story-exemplar
 description: "Distill a published paper as an integrated academic story into the story-blueprints learning corpus. Use when studying how a whole exemplar tells its story or comparing whole-paper narratives. Not for drafting."
 when_to_use: "整篇故事层学习卡；在四节蒸馏完成后，或用户要研究整篇叙事结构时使用。"
-whenToUse: "Use when 用户要把一篇已发表论文作为完整学术故事来学习，重建其问题、构念、证据与结局并生成 story-blueprints 学习卡。Trigger words: 蒸馏整篇故事, story blueprint, 学习这篇论文的叙事, 整篇故事学习卡, 论文故事蒸馏"
 ---
 
 # Distill Story Exemplar
@@ -43,12 +42,12 @@ Prefer the complete paper plus any verified section distillations. **When the pa
 
 ## Workflow
 
-1. **Register scope.** Record paper identity, publication status, paper type, source version, sections read, and why this paper enters the learning corpus. Do not guess missing metadata.
-2. **Descriptive reading.** Start with the Introduction and Theory slices, then read the Results, Discussion, and Methods slices as payoff and alignment checks. Write the theme question, a continuous whole-story synopsis, main/supporting characters with role reasons, storylines, five acts, and—only when useful—the source and construction of tension. Do not score quality at this point.
-3. **Section learning check.** For each section actually read, decide `yes`, `partial`, or `no` as a learning object. State one or two learnable structural moves and at least one caveat. A paper may be useful for Results but not for Introduction.
-4. **Assessment.** Apply the rubric only to distinguish effective, partial, cautionary, and descriptive learning roles. Assess storytelling only; do not infer research quality, causal credibility, or journal value from the story assessment.
-5. **Comparison.** Add an alternative reading only when it is documented in the literature, signaled by the authors, or clearly labelled as an analyst counterfactual. Add a cross-paper comparison only when it gives a concrete reading question.
-6. **Write and validate.** Show the completed card to the user before writeback unless the user explicitly authorizes batch work. Run `python ../story-blueprints/scripts/validate_blueprints_v4.py` and `python ../story-blueprints/scripts/build_catalog_v4.py` after each approved write.
+1. **Register scope.** Record paper identity, publication status, paper type, source version, sections read, and why this paper enters the learning corpus. Do not guess missing metadata.（判据：identity/source_version/sections_read 无猜测字段，缺失处显式标注）
+2. **Descriptive reading.** Start with the Introduction and Theory slices, then read the Results, Discussion, and Methods slices as payoff and alignment checks. Write the theme question, a continuous whole-story synopsis, main/supporting characters with role reasons, storylines, five acts, and—only when useful—the source and construction of tension. Do not score quality at this point.（判据：theme/synopsis/characters/storylines/five acts 已成文且零质量评分）
+3. **Section learning check.** For each section actually read, decide `yes`, `partial`, or `no` as a learning object. State one or two learnable structural moves and at least one caveat. A paper may be useful for Results but not for Introduction.（判据：每个已读 section 有 yes/partial/no + 1–2 个结构手法 + ≥1 条 caveat）
+4. **Assessment.** Apply the rubric only to distinguish effective, partial, cautionary, and descriptive learning roles. Assess storytelling only; do not infer research quality, causal credibility, or journal value from the story assessment.（判据：overall_role 已定且仅基于叙事评估）
+5. **Comparison.** Add an alternative reading only when it is documented in the literature, signaled by the authors, or clearly labelled as an analyst counterfactual. Add a cross-paper comparison only when it gives a concrete reading question.（判据：alternative reading 注明来源三类之一；cross-paper 比较附具体阅读问题，无则不写）
+6. **Write and validate.** Show the completed card to the user before writeback unless the user explicitly authorizes batch work. Run `py ../story-blueprints/scripts/validate_blueprints_v4.py` and `py ../story-blueprints/scripts/build_catalog_v4.py` after each approved write.（判据：两脚本零报错通过；gate ② 确认或既有批量授权已记录）
 
 ## Output
 

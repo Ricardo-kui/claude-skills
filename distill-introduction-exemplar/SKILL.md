@@ -2,7 +2,6 @@
 name: distill-introduction-exemplar
 description: "Introduction 范文蒸馏——输入范文 Introduction，输出功能模块/叙事结构/修辞策略提炼报告并反馈 write-introduction 语料。Use when 蒸馏 introduction 范文（学 HOW，不是 WHAT）。"
 when_to_use: "输入是已发表范文且目标是学写法时；用户说蒸馏/学习这篇 introduction。写作用 write-introduction，审查用 intro-review。"
-whenToUse: "Use when 用户要蒸馏已发表论文的 Introduction 范文，提炼其叙事结构、功能模块与修辞策略而非内容，并反馈 write-introduction 语料缺口。Trigger words: 蒸馏引言, 蒸馏 introduction 范文, 学习这篇引言怎么写, exemplar distillation, 范文提炼"
 ---
 
 # Distill Introduction Exemplar
@@ -11,7 +10,7 @@ Distill how a published Introduction works—not what it says—into reusable, e
 
 ## Workflow
 
-1. Confirm whether the request is exemplar distillation or validation of a drafted Introduction；用户只说"分析/蒸馏这篇论文"未指定 section 时，先询问蒸馏哪个 section（Introduction/Theory/Methods/Results），不默认本 skill。
+1. Confirm whether the request is exemplar distillation or validation of a drafted Introduction；section 未消歧的整篇请求 → `distill-paper-exemplar`，仅明确 Introduction 时本 skill 接管。
 2. Read `references/intake-and-classification.md`, classify Gap × Contribution, and apply the shared story-fidelity gate before extracting or adopting patterns. For Incommensurability, also read `../write-introduction/references/incommensurability-introduction-routing.md`; produce its L0–L3 full-text distillation profile before extracting skeletons.
 3. Load only the phase reference needed for the current step:
    - module mapping: `references/phase-1-module-map.md`
@@ -26,11 +25,11 @@ Distill how a published Introduction works—not what it says—into reusable, e
 6. In Phase 4, compare observed practice with current `write-introduction` rules and emit `skill_design_feedback`. Persist every candidate with `_update_design_feedback.py`; distinguish corpus gaps from routing, validator, output-contract, schema, and stage-gate defects.
 7. Auto-write reference variants. Apply bounded core corrections only when the evidence and authorization gates in `references/phase-4-validation-writeback.md` pass; always review schema or stage-gate changes explicitly.
 
-**完成判据**：①请求性质已确认（蒸馏 vs 校验；section 已消歧）；②Gap × Contribution 分类 + story-fidelity 判定已输出（Incommensurability 时含 L0–L3 profile 与 route confidence）；③所用 phase 的输出件按请求深度齐全（module map / coverage / skeletons / DNA / QC）；④每个写入变体附带原文锚定字段；⑤`skill_design_feedback` 已用 `_update_design_feedback.py` 持久化；⑥core 修正仅经 phase-4 证据与授权门禁。
+**完成判据**：①请求性质已确认（蒸馏 vs 校验；section 已消歧）；②Gap × Contribution 分类 + story-fidelity 判定已输出（Incommensurability 时含 L0–L3 profile 与 route confidence）；③所用 phase 的输出件按请求深度齐全（module map / coverage / skeletons / DNA / QC）；④每个写入变体附带原文锚点（verbatim_anchor）字段；⑤`skill_design_feedback` 已用 `_update_design_feedback.py` 持久化；⑥core 修正仅经 phase-4 证据与授权门禁。
 
 ## 选材 Gate（轻量版：脚本查 _index 验证状态）
 
-蒸馏选材时，运行 `python ../distill-paper-exemplar/scripts/corpus_query.py index --section introduction --query "<变体/模块关键词>"`（确定性脚本，只输出命中行，默认 ≤50 行；**关键词中/英各查一轮，可含 canonical_id 前缀**），读命中行的验证状态列（ROBUST/VERIFIED/EMERGING）做三带判定；**禁止整读 `_index.md` 或 `_routing_tables.yaml`**：
+蒸馏选材时，运行 `py ../distill-paper-exemplar/scripts/corpus_query.py index --section introduction --query "<变体/模块关键词>"`（确定性脚本，只输出命中行，默认 ≤50 行；**关键词中/英各查一轮，可含 canonical_id 前缀**；先查后开——索引单份 54–257KB），读命中行的验证状态列（ROBUST/VERIFIED/EMERGING）做三带判定：
 
 | 带 | 判定条件 | 处理 |
 |----|---------|------|
@@ -39,10 +38,11 @@ Distill how a published Introduction works—not what it says—into reusable, e
 | **quiet** | 目标变体 ROBUST/VERIFIED | MEDIUM：正常蒸馏（除非论文带来明确新维度） |
 
 批量模式按带排序优先处理 HIGH 档。单篇论文（用户明确指定）不拒绝，但输出带判定。
+带词表跨节对齐：`薄弱`=状态驱动（EMERGING/单源）；methods/results 的 `critique_heavy`=批评驱动（revise+reject≥2）；band 汇报统一用 {gap, 薄弱, critique_heavy, quiet}。
 
 ## 原文锚定提取规则（语料锚点层）
 
-每个待写入变体必须附带 `**原文锚定**` 字段——来源论文 1-2 句 verbatim 原句（15-50 tokens），风格参照用：
+每个待写入变体必须附带 `verbatim_anchor`（原文锚点）字段——来源论文 1-2 句 verbatim 原句（15-50 tokens），风格参照用：
 
 - **选句标准**：最能代表该变体叙事手法的句子（如 Hook 的数据冲击句、Tension 的 however 对比句、Stakes 的重要性论证句），不是信息量最大的句子
 - **提取来源**：优先本次蒸馏论文原文；缺失时按知识库检索（mvp30 / Clippings / 论文导入 / 写作指导 四源，见各 corpus 文件惯例）
@@ -55,4 +55,4 @@ Return the requested depth level, the functional module map, transferable expres
 
 ## Context discipline
 
-Do not preload every phase or the full writing corpus. Index/registry 查询一律经 `python ../distill-paper-exemplar/scripts/corpus_query.py index|registry --section introduction --query "<关键词>"`（确定性，命中行默认 ≤50），然后只打开被命中的文件用于对比或写回。**整读 `_index.md` / `_evidence_registry.yaml` / `_routing_tables.yaml` 已废止**——这些文件 54–257KB/个，是蒸馏 token 的头号成本。
+Do not preload every phase or the full writing corpus. Index/registry 查询一律经 `py ../distill-paper-exemplar/scripts/corpus_query.py index|registry --section introduction --query "<关键词>"`（确定性，命中行默认 ≤50），然后只打开被命中的文件用于对比或写回——先查后开、命中即开，索引正文不进上下文（单份 54–257KB，曾是蒸馏 token 的头号成本）。
