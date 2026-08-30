@@ -27,6 +27,8 @@
 !distill-paper-exemplar/**
 !humanizer/
 !humanizer/**
+!polish/
+!polish/**
 !intro-review/
 !intro-review/**
 !methods-review/
