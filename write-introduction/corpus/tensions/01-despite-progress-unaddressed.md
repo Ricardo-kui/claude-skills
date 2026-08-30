@@ -394,6 +394,28 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 ---
 
+
+### 变体 AN：宽缺口+具体问句双层叠加型（carpenter_westphal_2001 型）
+
+**模板**:
+> "A number of empirical studies have examined [studied_predictor] ([domain]), but very little research represents an attempt to identify [determinants_of_neglected_capability]. Moreover, research has not addressed the specific question of [focal_question]."
+
+**来源**: carpenter_westphal_2001 (AMJ), P6
+
+**原文锚定**:
+> "Very little research represents an attempt to identify factors that determine whether boards have adequate knowledge and information to make meaningful contributions to strategic decision making. Moreover, research has not addressed the specific question of how multiple board appointments affect directors' ability to contribute to strategy."
+
+**关键特征**:
+- 两句式缺口叠加：第一句给宽缺口（整体研究传统忽视了能力决定因素，Incompleteness 层），第二句用 "has not addressed the specific question of" 钉死本文焦点问题
+- 第二句直接把前文 Lit Turn 建立的具体争议（multiple appointments 的效应方向）转为研究问题——缺口与 hook 争议首尾咬合
+- 双层结构衔接 Inadequacy 张力（解释变量证据失衡）与 Incompleteness 缺口（具体问题无人问），允许 primary Inadequacy + secondary Incompleteness 的组合落地
+
+**适用**: Inadequacy×Mechanism 引言收口段；前文已建立具体争议且需要从宽缺口滑到焦点 RQ 时使用
+
+**禁忌**: 宽缺口所指的研究传统必须已在前文综述铺陈，不可突兀引入新传统；第二句的 specific question 须与 Preview 的理论视角严格对应
+
+<!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:gap_stack_broad_gap_plus_specific_question -->
+
 ### 变体 M：Inadequacy加深Incompleteness型（desai2012 型）
 
 **模板**:
@@ -989,6 +1011,33 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 - 单篇来源 → 仅作 optional `section_variant`
 
 ---
+
+
+### 变体 AO：跨场域过程迁移桥接型（zajacwestphal2004 型）
+
+**验证状态**: VERIFIED / expert_audit_override（Westphal 系裁决：用户点名最爱学者，引言单源足矣；仅作 `section_variant`）。**gap 分类**：两层结构——primary Incompleteness（"little research has examined whether..."）+ theory-level Inadequacy（对手框架不认识历史信念变迁的作用）；与变体 G（fini2017）同属两层 gap 例外，可跨文件与 `02-implicit-assumption-wrong` 的对手推论变体配对。
+
+**模板**:
+> "[Stream A literature] has thus demonstrated that [process P] can influence [outcome class O1] in [domain D1]. Yet, little research has examined whether and how [P] also extends to [domain D2], and ultimately determines [DV that Stream B routinely measures but Stream A never theorizes]."
+
+**来源**: Zajac and Westphal (2004), *American Sociological Review*, Introduction, P3（Tension 首二句）+ P6（"how processes of institutionalization that occur in industrial markets also occur in capital markets"）。
+
+**原文锚定**:
+> "Yet, little research has examined whether and how these processes influence the perceptions of actors in financial markets and ultimately determine the market value of corporate policies."
+
+**关键特征**:
+1. 每条文献流先在自己的主场充分展演（各配 1-2 个范式研究，动词用 showed/demonstrated/found），再点名交叉带——gap 不是"没人研究过某话题"，而是两条成熟文献流的无人认领交叉带。
+2. DV 借自 B 流（对方有测度、无过程理论），过程 P 借自 A 流（本方有理论、无该测度）——两半合起来才构成完整因果句。
+3. 交叉问句用跨场域迁移句式收束："processes of [P] that occur in [D1] also occur in [D2]"（P6 回收），把缺口升格为层次/场域贡献。
+4. 与"对手框架推论自证型"（02 文件）配对锐化：先立交叉带，再让对手框架自推一个可检验推论。
+
+**适用**: 两条成熟文献流各拥有同一现象的一半、且交叉带真实无人认领时；Inadequacy（两层）×Mechanism/Level 贡献；社会学与金融/经济对话类论文（ASR/OS/ASQ register）。
+
+**禁忌**: 若两流交叉带已有综述或桥接文献占据，此变体读作强行综合；"little research has examined" 只是表层语言，必须靠双主场展演 + 跨场域迁移问句兑现缺口的具体性，单独抄这句会被判 generic gap language。
+
+---
+
+<!-- wb:zajac_westphal_the_social_construction_of_market_value:tension_bridge_as_gap_cross_domain_transfer -->
 
 ### 变体 AI：可信性让步 + 证据/理论双缺口枚举型（westphalzajac1995 型）
 

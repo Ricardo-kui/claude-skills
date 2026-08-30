@@ -242,6 +242,47 @@ COGNITION (t2–t1) | CHANGE IN RENEWAL STRATEGY (t3–t2)"
 **禁忌**: Δ-form 要求正文真的测量变化量——若只有水平数据，退回普通中介句式，不可伪装增量；"subsequent" 一词依赖时间分阶真实成立，时点重叠时不可用；typed 对照（but not X）须在实证中真的检验，否则为空头对照。
 
 
+
+### 分离编号回指竞争对（Anaphoric Disjoint-Numbered Competing Pair，zajac_westphal_2004 型）
+
+<!--
+pattern_id: hypothesis_sign_flip_anaphoric_pair_sentence
+build_type: 竞争假设型
+source_papers: ["zajac_westphal_2004_asr"]
+confidence: medium
+status: VERIFIED
+verification_basis: "expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)"
+-->
+
+**适用**: 两个竞争假设各有整节独立推演（非相邻段落）时，用独立编号 H[N] / H[N]a + 回指收敛短语显式绑定；两个假设陈述句逐字相同、仅方向词相反——"同一可观测量、反号预测"的公平配对。
+
+**模板**:
+```
+Hypothesis [N]. The number of [firms] that have [adopted, but not implemented, X] is negatively associated with [Y] at the focal firm.
+...
+Hypothesis [N]a. The number of [firms] that have [adopted, but not implemented, X] is positively associated with [Y] at the focal firm.
+```
+
+**收敛信号（回指式，非 Therefore）**:
+```
+"Thus, in opposition to Hypothesis [N], [rival B perspective] leads to the following hypothesis:"
+"This suggests the following alternative to Hypothesis [N]:"
+```
+
+**原文锚点** (Zajac & Westphal 2004, ASR):
+> "The number of firms that have adopted, but not implemented, stock repurchase plans is negatively associated with the stock market reaction to repurchase plan adoption at the focal firm."（H2；H2a 同句仅 negatively→positively）
+
+**与相邻 a/b 竞争对（Wowak 型）的区分**:
+| | 相邻编号 H[N]a/H[N]b | 分离编号 H[N]/H[N]a |
+|---|---|---|
+| 推导布局 | 两方机制相邻段落对称展开 | 每方各自整节（或多段）推演 |
+| 绑定方式 | 编号即绑定 | 回指短语（in opposition to / alternative to） |
+| 适用 | 轻量竞争（各一段） | 重量级竞争（各一节） |
+
+**禁忌**: 回指短语不可省略；两陈述句除方向词外必须逐字对称，任何一方加料都会破坏公平配对；方向词必须真正反号（negatively/positively）——"减弱/增强"不构成竞争对（应路由 E 调节）。
+
+<!-- wb:zajac_westphal_the_social_construction_of_market_value:hypothesis_sign_flip_anaphoric_pair_sentence -->
+
 ### 句式 F：假设推导内嵌前提声明句（westphal_bednar2005 型）
 
 **模板**:

@@ -50,6 +50,28 @@
 
 ---
 
+
+## 变体 D：多源评价者分离 + Kappa 一致性链（carpenterwestphal2001 型）
+
+**适用场景**: [DV] 与 [IV] 可从不同受访者/数据源获取时，用"来源分离"从设计上阻断共同方法偏差，再用一致性统计证明两个来源评价可比、可互换。
+
+**骨架**:
+```
+[数据源分离] Data for our [DV constructs] were gathered through [respondent A] surveys, whereas [IV constructs] were obtained from [respondent B / archival sources].
+[一致性检验] Further analyses were conducted to assess the interrater reliability of these measures: specifically, we compared [respondent A] and [respondent B] responses by calculating [kappa] coefficients for the [shared items].
+[判读标准] Values exceeding [.75] are typically thought to indicate [excellent agreement beyond chance], and values between [.40] and [.75] are considered indicative of [fair to good agreement] ([citations]).
+[子样本披露] The sample for this analysis included [units] with [both respondent types] (n = [188]).
+[换源稳健收口] Given these high levels of interrater reliability, it is perhaps not surprising that the hypothesized effects presented below were substantively unchanged when [DV] was measured with [respondent B] responses rather than [respondent A] responses, or vice-versa.
+```
+**要点**:
+- 五拍：分离声明 → 一致性系数 → 文献阈值判读 → 子样本 N 披露 → 换源互换稳健收口；第四拍把测量可靠性直接接到"结果稳健"，使测量效度论证与假设检验衔接
+- "it is perhaps not surprising that..." 是效度证据→结果可信的优雅过渡句式，可直接迁移
+- [kappa] 判读区间（Fleiss, 1981; Landis & Koch, 1977）照引文献，不空口断言
+**诚实边界**: kappa 适用于条目级/分类一致性；连续量表换用 ICC 或组内相关，不要误贴统计量标签。
+**范文锚点**: "Further analyses were conducted to assess the interrater reliability of these measures. Specifically, we compared CEO and outside director responses by calculating kappa coefficients for the monitoring and advice items. ... the hypothesized effects presented below were substantively unchanged when monitoring and advice interactions were measured with director responses rather than CEO responses, or vice-versa."
+
+<!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:m3_multirater_kappa_separate_source_chain -->
+
 ## 组装规则
 
 ### 优先级

@@ -788,6 +788,21 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **与原骨架差异**: 区别于变体6（符号反转跨条件 + **当场**理论解释）与变体30（预测性零结果作机制证据）——本变体处理**单一调节变量上预测方向反转**，且采用**两段式诚实叙事**：(1) Results 段**当场承认反转**（"in contrast to H_c"）+ **明确推迟解释到 Discussion**（不在 Results 强行编造机制）；(2) Discussion 段给出**事后（post-hoc）机制猜想** + **数据局限声明**（"do not allow us to explore... further research can resolve"）。这种"诚实承认 + 延迟解释 + 标注 post-hoc 与局限"的三段式，比在 Results 当场硬解释更审稿人友好（避免过度解读），也比隐瞒反转更诚信。适用于调节假设方向与数据相反、且机制需推测的研究。
 **诚实边界**: 须在 Results 当场标明 "in contrast to H"（不可只在 Discussion 轻描淡写）；Discussion 的事后解释必须标注为推测（post-hoc / a potential explanation）而非确证；须承认数据局限并指向 future research；不可把反转重新包装为"部分支持"。
 
+
+### 变体 74: R6 — 跨情境镜像 null 收束句（opposite-pattern summary；carpenterwestphal2001 型）
+
+**来源论文**: Carpenter & Westphal 2001 (AMJ)
+**skeleton_id**: `r6_cross_context_mirror_pattern_summary`
+**原始句锚点**: "Thus, the results consistently show that the strategic relatedness of board ties increases director involvement in stable environments but does not do so in unstable environments. The opposite pattern emerges in unstable environments."
+**验证状态**: EMERGING（单篇入库）
+**槽位**: R6
+**骨架**:
+> Thus, the results consistently show that [IV variant A] increases [DV] in [context A] but does not do so in [context B]. The opposite pattern emerges in [context B]: [IV variant B] [direction] [DV], while [IV variant A] is [unrelated/negative].
+**与原骨架差异**: 区别于变体 60（R6 调节变量主效应 null 驳斥 rival conjecture）与 R6 现有"方向证据与统计裁决分离"降级句式——本变体是**跨情境镜像 null 的段落级收束**：把"情境 B 中主效应变量失效"这一 null 从失败复述转化为调节假设的确认证据（null 本身就是理论预测的一半），再以 "The opposite pattern emerges" 一句钉死方向反转。适用于分样本/情境劈叉设计中 null 侧承载理论确证的场景。
+**诚实边界**: "consistently show" 须有逐情境结果全部一致支撑；镜像句的两侧陈述必须与表格逐列对应，不得以总结句掩盖单侧个别指标的方向例外（本文 foreign market relatedness 不显著侧例外已在假设段显式交代）。
+
+<!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:r6_cross_context_mirror_pattern_summary -->
+
 ### 变体 43: R4/R6 — 组内方向切换但不显著 → 直接组间系数差异裁决 (1篇高价值)
 **来源论文**: Schumacher, Keck & Tang (2020, Strategic Management Journal)
 **原始句锚点**: "We find that for firms close to bankruptcy our interaction term is insignificant for firms threatened by bankruptcy and consistent with our prediction switches signs. Specifically, for the interaction term between negative distance from aspiration level and the media-based overconfidence measure we now have β = 34.71, p = .36, CI95% [−40.56, 110.01], and for the interaction with the option-based measure we now have β = 1.58, p = 0.67, CI95% [−5.81, 8.98]. Supporting Hypothesis, we next employed a Chow test to analyze the difference in the interaction term coefficients between the two samples, and find significant differences for our media-based (χ2 = 5.84, p = .014) and option-based (χ2 = 4.74, p = .018) overconfidence measures."
@@ -1167,6 +1182,21 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 **与原骨架差异**: 交互主报告后追加通道归属句：说明调节效应经由差值/合成 DV 的哪个分量传导——同模型内双分量证据（一分量显著、另一分量不显著）。适用于 DV 为两分量差值或合成的设计（self-report vs 对他人感知、自评 vs 他评等）。
 **诚实边界**: 通道主张须由同模型内双分量系数直接佐证，不得仅凭总效应推断；分量高度相关时通道归属可能不稳定，宜补分量系数差检验或明示其为解释性证据。
 
+
+### 变体 73: R4 — 分样本主检验 + 交互项复核收口（split-sample primary, product-term corroboration；carpenterwestphal2001 型）
+
+**来源论文**: Carpenter & Westphal 2001 (AMJ)
+**skeleton_id**: `r4_split_sample_primary_product_term_corroboration`
+**原始句锚点**: "Complementarity in strategic relatedness is positively related to directors' perceived ability to contribute for all four dimensions of corporate strategy, supporting Hypothesis 2a. ... We also conducted separate analyses using the product term approach to test interactions between environmental stability and the independent variables, and the interactions were significant, consistent with the split-sample findings."
+**验证状态**: EMERGING（单篇入库）
+**槽位**: R4
+**骨架**:
+> [Context-B pattern sentence: "[Moderator-conditioned IV form] is positively related to [DV] for all [N] dimensions of [IV], supporting Hypothesis [N] ([Table Y])."] At the same time, the results show that [simple-effect form] does not predict [DV] [in context B]. [Null mirror sentence for context A: "In contrast, [simple-effect form] was significant in [context A] (Table X), while [moderator-conditioned form] was consistently unrelated to [DV]."] We also conducted separate analyses using the product-term approach to test interactions between [moderator] and the independent variables, and the interactions were significant, consistent with the split-sample findings.
+**与原骨架差异**: 区别于变体 65（R4 分样本镜像对照 + 组内 Wald + Chow 诚实降级）与变体 3（连续调节三向交互）——本变体是**方向反转式分样本调节的收口节奏**：主检验由分样本承载后，不显著侧的"主效应 rival"被写成确认性 null（does not predict），末句用 product-term 交互复核把分样本发现升级为正式交互证据。适用于情境假设（scope-conditioned hypotheses）+ 分样本主检验、交互项只作复核而非主检验的设计。
+**诚实边界**: 交互复核只报方向与显著性（significant, consistent with the split-sample findings），不解读交互系数大小；分样本裁决未经系数差检验时不得宣称"significantly stronger in B than A"——宜补组间系数差检验或按变体 65 诚实降级。
+
+<!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:r4_split_sample_primary_product_term_corroboration -->
+
 ### 变体 69: R8 理论前提实证验证双通道 — 样本内前提检验 + 样本外前提问卷（westphal_bednar2005 型）
 **来源论文**: Westphal & Bednar (Administrative Science Quarterly)
 **原始句锚点**: "A premise of our theoretical argument is that directors tend to perceive some risk to their social esteem in expressing concerns about the viability of the current corporate strategy when those concerns are not shared by others... We assessed the validity of this premise empirically..."
@@ -1177,6 +1207,21 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 > A premise of our theoretical argument is that [premise]. This assumption was strongly supported by the data: when [condition below threshold], the mean level of [DV] is significantly greater than when [condition above threshold] (t = [value], p < [.001]), and [DV] was not significantly correlated with [variable] within either [subsample]. Thus we tested the hypotheses for [restricted subsample]; we used the [Heckman model] to correct for sample selection bias, which allows us to generalize the results to the full sample. We also assessed the validity of this premise empirically by collecting additional survey data for [units] in our sample frame: of the [N] respondents ([rate] percent), a large majority ([share] percent) [endorsed premise items], which supports our premise that [restated premise] ([K-S] tests indicated no significant differences between the survey sample and the larger sample frame).
 **与原骨架差异**: 双通道验证理论前提——(a) 样本内：阈值两侧均值对比（t 值）+ 侧内相关不显著，证明样本切割前提成立，随即以 Heckman 选择模型交底切割后果并宣称可推广回全样本；(b) 样本外：为前提命题追加独立问卷，报响应率、逐题支持百分比 + K-S 代表性收口。把"假设的前提"升格为"被检验的前提"。
 **诚实边界**: 样本外前提问卷为验证性非假设检验，逐题百分比不作推断统计（当代做法：一句结论 + 在线附录，题项全文入正文属年代特征）；Heckman 的 generalization 主张限于选择方程设定正确。
+
+
+### 变体 75: R8 — 连续 DV legacy Baron–Kenny 中介句（separate-analysis 包装；carpenterwestphal2001 型）
+
+**来源论文**: Carpenter & Westphal 2001 (AMJ)
+**skeleton_id**: `r8_baron_kenny_continuous_mediation_separate_analysis`
+**原始句锚点**: "A separate analysis provided evidence that directors' perceived ability to contribute effectively mediated these relationships: when ability to contribute is added to models of monitoring and advice interactions, the effects of the relatedness variables become nonsignificant, and the coefficient for ability to contribute is strongly and positively significant in both models (Baron & Kenny, 1986)."
+**验证状态**: EMERGING（单篇入库；**LEGACY**）
+**槽位**: R8
+**骨架**:
+> A separate analysis provided evidence that [mediator] mediated these relationships: when [mediator] is added to models of [DV1] and [DV2], the effects of the [IV] variables become nonsignificant, and the coefficient for [mediator] is strongly and positively significant in both models ([mediation citation]).
+**与原骨架差异**: 区别于变体 62（二元策略 probit 选择方程的 legacy Kenny 完全中介 + 市场信号收束）与变体 5（MCMC 显式间接效应 CI）——本变体是**连续 DV 双结果模型的 legacy Kenny 条件计数**：主检验段内以 "A separate analysis provided evidence that ..." 一句带出，三步条件（IV→M 显著、M→Y 显著、加入 M 后 IV→Y 消失）压缩进单个冒号句，服务于两个单元层假设 (H1b/c) 的机制收口。定位为机制佐证（separate analysis），非主假设四拍。
+**诚实边界（强制 · LEGACY）**: 同变体 62 边界——不得将 Baron–Kenny 条件计数升级为现代间接效应证据；写入时必须要求补充 indirect-effect interval（bootstrap/PROCESS/Sobel）**或**显式标注 legacy complete/partial-mediation claim；"mediated these relationships" 措辞须降为关联读法（mediate the influences / are consistent with mediation）。
+
+<!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:r8_baron_kenny_continuous_mediation_separate_analysis -->
 
 ### 变体 70: R2 先验支持判据声明 — 差值/合成检验的判定规则先行（westphal_bednar2005 型）
 **来源论文**: Westphal & Bednar (Administrative Science Quarterly)
@@ -1196,6 +1241,37 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 [节奏标记]: [方向+显著性][换算句 β×unit=amount][除法句 amount÷base=%]
 **原始句锚点**: "Specifically, in each week and each prefecture following the recall, Sagitar's substitutes spent on advertising—on average—RMB 140 (or US$19) less than what they spent in a prerecall week-prefecture, on average."
 **来源**: fang_et_al_2025_rival_recall_ad_spend (POM), §4.2
+
+
+### 变体 71: R2 — 估计策略宣告 + 分样本设计导航段（carpenterwestphal2001 型）
+
+**来源论文**: Carpenter & Westphal 2001 (AMJ)
+**skeleton_id**: `r2_ols_estimation_strategy_split_sample`
+**原始句锚点**: "Given that all our dependent variables were continuous and that the independent variables were continuous or categorical, multiple ordinary least squares (OLS) regression analysis was the primary statistical technique employed. ... The entire sample was dichotomized at the median of the environmental stability measure..."
+**验证状态**: EMERGING（单篇入库）
+**槽位**: R2
+**骨架**:
+> Given that all our dependent variables were [continuous scale] and that the independent variables were [continuous] or [categorical], [estimator] was the primary statistical technique employed. The entire sample was dichotomized at the median of the [moderator] measure, with those units falling below the median classified as [context A] and those falling above it classified as [context B]. Thus, we ran separate sets of regressions for each subsample ([context A] and [context B]) and another set using the product-term approach to test interaction effects. Tables [X] and [Y] present regression results.
+**与原骨架差异**: 区别于标准 R2 模型序列导航（Model 1→2 增量逻辑）——本变体是**调节检验设计导航**：一句由 DV/IV 测量层级正当化估计器选择，一句宣告分样本切分规则（median dichotomization 的 A/B 命名），一句预告"分样本回归 + product-term 复核"双通道设计，末句表格导航。适用于调节变量为类目型/可切分、假设以情境前缀形式写出（scope-conditioned）的设计。
+**诚实边界**: 分样本切分规则必须在 Methods/本段可复现（本文用 median of environmental stability）；product-term 复核句只宣告"will test"，不得在本槽位预告结果方向。
+
+<!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:r2_ols_estimation_strategy_split_sample -->
+
+
+### 变体 72: R3 — 多指标假设裁决四拍（3 显著 + 1 方向分，carpenterwestphal2001 型）
+
+**来源论文**: Carpenter & Westphal 2001 (AMJ)
+**skeleton_id**: `r3_multi_indicator_hypothesis_adjudication`
+**原始句锚点**: "For example, the coefficients for product-market, diversification, and internationalization relatedness were all positive and significant. ... although the coefficient for foreign market relatedness was not significant, it was positive, as hypothesized."
+**验证状态**: EMERGING（单篇入库）
+**槽位**: R3
+**骨架**:
+> Results of the [regression] testing Hypothesis [N] support the prediction that [IV family] will be positively associated with [DV] in [context] ([Table X], Model [Y]). For example, the coefficients for [indicator_1], [indicator_2], and [indicator_3] were all positive and significant; although the coefficient for [indicator_4] was not significant, it was positive, as hypothesized. [Converse sentence for the reverse-predicting rival: "Conversely, having more [IV variant B] was negatively associated with [DV]."] These results held after we controlled for [rival predictor], which is consistently unrelated to [DV] in [context].
+**与原骨架差异**: 区别于 r3_ols_four_beat_standard（单系数四拍：方向→显著性→幅度→支持判断）——本变体是**假设级裁决**：一个假设由一组同构指标系数共同承载，裁决拍放在段首（support the prediction），指标拍以 "For example" 列举，不显著指标不触发 R6 降级而以"方向正确"从句并入支持证据，收口句用 "held after we controlled for [rival]" 内联排除替代解释。适用于 IV 为多维度指标族（relatedness/heterogeneity 类型变量族）、假设对指标族整体作预测的设计。
+**诚实边界**: 方向分只适用于"不显著但方向与假设一致"的少数指标且多数指标已显著；不得把方向分当显著性证据（不得写 "largely significant"）；one-tailed 检验属 2001 年惯例，当代写作建议 two-tailed 并明示。
+**反模式警示**: 本变体无幅度拍（未把 unstandardized 系数翻译为实质变化）——按 write-results R3 强制要求，填入时必须补幅度拍（"a [one-SD] increase in [predictor] is associated with [Y-unit] change"），不得照抄原文缺拍。
+
+<!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:r3_multi_indicator_hypothesis_adjudication -->
 
 ## 反模式
 

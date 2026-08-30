@@ -1,6 +1,6 @@
 meta:
   schema_version: 1
-  last_updated: '2026-08-29'
+  last_updated: '2026-08-30'
   observations_processed: 28
   description: Evidence ledger for write-theory design defects inferred from Theory exemplar distillation.
 defects:

@@ -277,3 +277,41 @@ context of [theoretical construct].
 **原文锚点**: "As such, we develop our hypotheses using the empirical context of product recalls, which are the phenomena that we observe and examine."（§2.2 末段）
 
 <!-- wb:anand_mukherjee_2024_learning_from_failures_di:theory_type_to_empirical_context_bridging -->
+
+
+## Pattern: Rival Readings of the Same Measure（同一测量的对立读法，zajac_westphal_2004 型）
+
+<!--
+pattern_id: rival_readings_same_measure
+build_type: 跨类型（竞争假设裁决面）
+source_papers: ["zajac_westphal_2004_asr"]
+confidence: medium
+status: VERIFIED
+verification_basis: "expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)"
+-->
+
+**适用场景**: 竞争假设设计（变体 F）中，同一因变量数据被两套理论赋予不同认识论身份——对手阵营视之为 [客观效率信号]，本方视之为 [主观符号价值的社会量化]。把"测量的含义"本身作为裁决对象之一，使实证检验同时检验预测符号与测量解释。与 `../variants/B_mechanism_elaboration.md` 的 westphal_zajac_1998 硬/软数字测量重构为姊妹模式：彼处重构单方测量的硬软属性，此处并置双读法交由数据裁决。
+
+**骨架**:
+```
+[对手读法] From a [rival discipline] perspective, [Y data] provide objective data that
+reflect [expected efficiency gains] from [policy implementation].
+[本方读法] From a [home] perspective, we view such reactions as subjective data that
+reflect the [symbolic value at issue], quantified and aggregated.
+[裁决声明] Through examining change in [Y] as [X] accumulates, we are able to directly
+assess [which reading holds].
+```
+
+**原文锚点** (Zajac & Westphal 2004, ASR):
+> "we view such reactions as subjective data that reflect the symbolic value of adoption, neatly quantified and aggregated"
+
+**为什么有效**: 把测量争议从审稿人的暗箭变成理论贡献的明面——"数据支持谁"与"数据是什么"被合并为同一个可检验问题；为 Discussion 的理论裁决段落（解释为何一方读法成立）预先铺设语义基础。
+
+**注意事项**:
+- 两个读法都必须被 steelman（对手读法引用对手文献的解释）
+- 裁决面必须有可操作判据（系数符号/变化方向），不能停留"数据可以有两种读法"的相对主义
+- 若两读法在测量构造上不可区分（同一统计量、同一解释），此模式退化为装饰
+
+**反模式**: 只声称"我们的解释更合理"而不把两种读法绑到可判别的预测上。
+
+<!-- wb:zajac_westphal_the_social_construction_of_market_value:rival_readings_same_measure -->

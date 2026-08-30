@@ -156,6 +156,28 @@ P2-P3 的功能：连接多个文献流，展示它们共享一个盲区——�
 
 ---
 
+
+### 变体 H：双职能并置型（carpenter_westphal_2001 型）
+
+**模板**:
+> "[Stream1_theorists] emphasize [role_A] ([citations]). In addition, the broader literature on [domain] suggests a second possible role for [actor]: specifically, in some cases they may [role_B] ([citations]). This view was advanced by [seminal_work], who identified [component_1] and [component_2] as two primary components of [function]."
+
+**来源**: carpenter_westphal_2001 (AMJ), P1-P2
+
+**原文锚定**:
+> "In addition, although agency theorists emphasize the board's role as an independent control mechanism, the broader literature on boards suggests a second possible role for directors; specifically, in some cases they may provide ongoing advice to top managers on possible strategic changes or the implementation of existing strategies."
+
+**关键特征**:
+- 以 "In addition" 增量并置第二条文献流——不对立、不揭盲区，与"对立双流消解于盲区"型（westphal_zajac_1998 型）形成互补
+- 用经典综合（Pfeffer & Salancik）把两条流收拢为同一职能的两个组成部分，完成 common ground 建构
+- 并置结果直接定义因变量空间（control vs advice），为后文双重结果（monitoring/advice）与缺口收窄铺垫
+
+**适用**: 因变量本身具双职能/双结果结构的研究；需先建宽共同 ground 再收窄缺口的 Inadequacy 引言；Lit Turn 跨 P1-P2 双段展开
+
+**禁忌**: 两条流须真能收拢为同一上层框架的两个组成部分；若两流预测本质冲突，应改用 debate-unresolved 而非增量并置
+
+<!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:literature_turn_additive_two_role_synthesis -->
+
 ### 变体 F：策略连续统地图→双学科顺序批判→交叉沉默（chen2009 型）
 
 **验证状态**: EMERGING（单篇来源；仅作 `section_variant`）

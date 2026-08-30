@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
-  last_updated: '2026-08-29'
-  observations_processed: 42
+  last_updated: '2026-08-30'
+  observations_processed: 48
   description: Evidence ledger for design defects inferred from Introduction exemplar distillation.
 defects:
   incompleteness-embedded-opposing-claims-vs-incommensurability:
@@ -1451,6 +1451,280 @@ defects:
     lifecycle: open
     first_seen: '2026-08-29'
     last_seen: '2026-08-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  corpus-gap-inadequacy-dominant-explanation-evidence-gap:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: tensions/02-implicit-assumption-wrong 覆盖隐性假设错误、去情境化批判、自标 Inadequacy 等变体，但无'借权威综述宣告主流解释变量证据系统性不一致'变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/tensions/02-implicit-assumption-wrong.md
+    diagnosis: Inadequacy 张力的高频开场——以领域内综述背书宣告既有解释证据失衡、为替换解释变量铺路——corpus 无对应变体；carpenter_westphal_2001 P3 提供完整样板（precheck 最佳匹配
+      containment 0.406 / jaccard 0.03，EXTEND 非覆盖）
+    proposed_change:
+      action: append_variant
+      summary: '新增''主导解释证据失衡型（carpenter_westphal_2001 型）''变体；writeback plan item=tension_dominant_explanation_evidence_gap；status
+        按 Westphal 系裁决 VERIFIED (expert_audit_override: 用户点名最爱学者，引言/理论单源足矣)'
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: carpenter_westphal_2001
+      journal: AMJ
+      evidence_anchor: 'However, as Westphal''s (1998: 530) recent review of the literature suggests, there is little consistent
+        evidence that board independence or ''structural power'' increases board involvement in strategic decision making.'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - AMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - AMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-30'
+    last_seen: '2026-08-30'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  corpus-gap-literature-turn-additive-two-role-synthesis:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: literature-turns/02-synthesized-coherence 已有对立双流消解于盲区型（westphal_zajac_1998 型）与双学科交叉沉默型（chen2009 型），但无'增量并置双职能并以经典综合收拢为共同
+      ground'变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/literature-turns/02-synthesized-coherence.md
+    diagnosis: 并置型 Lit Turn 的'非冲突子类'（In addition 增量并置、两流收拢为同一职能的两个组成部分、直接定义因变量空间）未被现有变体覆盖——现有变体均以揭盲区/交叉沉默收束；carpenter_westphal_2001
+      P1-P2 提供样板
+    proposed_change:
+      action: append_variant
+      summary: 新增'双职能并置型（carpenter_westphal_2001 型）'变体；writeback plan item=literature_turn_additive_two_role_synthesis；status
+        按 Westphal 系裁决 VERIFIED (expert_audit_override)
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: carpenter_westphal_2001
+      journal: AMJ
+      evidence_anchor: In addition, although agency theorists emphasize the board's role as an independent control mechanism,
+        the broader literature on boards suggests a second possible role for directors; specifically, in some cases they may
+        provide ongoing advice to top managers.
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - AMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - AMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-30'
+    last_seen: '2026-08-30'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  corpus-gap-tension-gap-stack-specific-question:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: tensions/01-despite-progress-unaddressed 已有双重证据缺口（变体P）、三层递进（变体N）等，但无'宽缺口+has not addressed the specific
+      question of 钉死焦点 RQ'的两句式叠加变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/tensions/01-despite-progress-unaddressed.md
+    diagnosis: 缺口收口段常见手法——第一句宽缺口（Incompleteness 层）+第二句把前文具体争议转为焦点研究问题——未被覆盖；该变体同时演示 primary Inadequacy + secondary Incompleteness
+      组合的落地方式（precheck 最佳匹配 jaccard 0.031，EXTEND）
+    proposed_change:
+      action: append_variant
+      summary: 新增'宽缺口+具体问句双层叠加型（carpenter_westphal_2001 型）'变体；writeback plan item=gap_stack_broad_gap_plus_specific_question；status
+        按 Westphal 系裁决 VERIFIED (expert_audit_override)
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: carpenter_westphal_2001
+      journal: AMJ
+      evidence_anchor: Moreover, research has not addressed the specific question of how multiple board appointments affect
+        directors' ability to contribute to strategy.
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - AMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - AMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-30'
+    last_seen: '2026-08-30'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  dv-as-protagonist-staging-skeleton-missing:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: storytelling/character-map.md 已有『DV 为主角』的判定规则（主角=核心 DV 或研究焦点构念）与出场时机表，但没有任何可执行 staging 骨架说明如何在文本层面让 DV 成为全文裁决轴。
+    rule_excerpt: 『DV 为主角』：如果研究核心解释“什么影响了 Y” → Y 是主角（例：Mishina et al. 2010 中，illegal actions 是主角）
+    rule_locator: character-map.md §主角判定规则
+    target: write-introduction/corpus/storytelling/character-map.md
+    diagnosis: Zajac & Westphal 2004 (ASR) 展示了 DV-as-protagonist 的完整文本实现：给 DV 测度两个互斥的角色化描述（对手版 'a reliable, historically invariant
+      indicator of efficiency' vs 己方版 'socially constructed'），全文每个模块都回收这一测度之争——重构的是『这个数在测什么』而非『这个数是多少』。现有 character-map 只有角色指派与出场时机，缺这一
+      staging 句式；两轮中英关键词查询（protagonist 主角 / dependent variable contestable measure）索引零命中。候选变体已入 writeback plan（dv_as_protagonist_contestable_measure_staging）。
+    proposed_change:
+      action: append_variant
+      summary: 在 character-map.md 追加『DV-as-protagonist 竞争性测度 staging』模式块（含模板/关键特征/适用/禁忌/原文锚定），与既有『DV 为主角』判定规则衔接。
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: zajacwestphal2004
+      journal: American Sociological Review
+      evidence_anchor: Theories of capital markets are dominated by a financial economics perspective in which the stock market's
+        reaction to a policy adoption is conceived as a reliable, historically invariant indicator of the efficiency benefits
+        gained from adopting the policy.
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - American Sociological Review
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - American Sociological Review
+    verified_journal_count: 1
+    regression_cases:
+      positive:
+      - prompt: 写一篇以聚合性市场测度（如信用评级、分析师共识）为 DV 的引言，其解释权在两套理论间有争夺
+        expected_invariants:
+        - 引言给出 DV 测度的对手版与己方版两个互斥角色化描述
+        - 对手版先出且满强度挂引用
+        - 后续 tension/theory lens/contribution 至少一次回收测度之争
+      preservation:
+      - prompt: 写一篇普通操作化变量（如 R&D 强度）为 DV 的引言
+        expected_invariants:
+        - 不强制套用竞争性测度 staging
+        - 不出现无理论支撑的 constructed 口号
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-30'
+    last_seen: '2026-08-30'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  bridge-as-gap-cross-domain-transfer-variant:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: tensions/01-despite-progress-unaddressed.md 变体 AH（chen2009 型）已覆盖『双流互为遗漏交叉点』（Stream A 缺财务 DV、Stream B 缺策略
+      IV），但无跨场域过程迁移问句式与对手推论配对锐化。
+    rule_excerpt: 变体 AH：双流互为遗漏交叉点——Stream A 缺财务 DV、Stream B 缺策略 IV，chen2009，VERIFIED
+    rule_locator: 01-despite-progress-unaddressed.md 变体 AH（line 964）
+    target: write-introduction/corpus/tensions/01-despite-progress-unaddressed.md
+    diagnosis: Zajac & Westphal 2004 的 bridge-as-gap 在 AH 基础上增加两个可执行维度：(1) 缺口用跨场域迁移问句收束（'processes of institutionalization
+      that occur in industrial markets also occur in capital markets'），把缺口升格为 Level/场域贡献；(2) 双主场展演先行（每条文献流各配范式研究），且与 02 文件的对手推论句配对锐化。EXTEND
+      而非新建文件——AH 是概念最近邻。
+    proposed_change:
+      action: append_variant
+      summary: 在 01 文件追加变体『跨场域过程迁移桥接型（zajacwestphal2004 型）』，锚点在变体 AH 块尾；标注与变体 G 同属两层 gap（primary Incompleteness + theory-level
+        Inadequacy）例外。
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: zajacwestphal2004
+      journal: American Sociological Review
+      evidence_anchor: Yet, little research has examined whether and how these processes influence the perceptions of actors
+        in financial markets and ultimately determine the market value of corporate policies.
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - American Sociological Review
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - American Sociological Review
+    verified_journal_count: 1
+    regression_cases:
+      positive:
+      - prompt: 两条成熟文献流各拥有同一现象一半（如 ESG 文献拥有过程、公司金融拥有市场测度）时写 tension 段
+        expected_invariants:
+        - gap 句落在两流无人认领的交叉带而非单一流内部
+        - 含跨场域迁移问句（processes that occur in D1 also occur in D2）
+        - 双流各自先有主场展演句
+      preservation:
+      - prompt: 单条文献流内部遗漏一个调节变量的常规 Incompleteness tension
+        expected_invariants:
+        - 不强行拆成双流桥接结构
+        - 不出现迁移问句
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-30'
+    last_seen: '2026-08-30'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  rival-corollary-falsifiable-prediction-variant:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: tensions/02-implicit-assumption-wrong.md 变体 A-G 均为作者评述式假设批评（双重解构/构念混淆/去情境化批判/挑战机械因果链等），无『让对手框架自推可检验推论』的句式。
+    rule_excerpt: 反模式提醒：不要制造稻草人假设——不能声称一个文献没有的假设。必须引用具体的、被广泛引用的文献来证明假设确实存在
+    rule_locator: 02-implicit-assumption-wrong.md §反模式提醒
+    target: write-introduction/corpus/tensions/02-implicit-assumption-wrong.md
+    diagnosis: Zajac & Westphal 2004 P3 末句提供该反模式的最强正面实现：不由作者评述对手弱点，而是从对手自己的内核前提（市场有效性）演绎出可检验推论（'if firms adopt but do not
+      implement, the stock market should discount the value'），让对手满强度出场、由数据裁决。该句式为后文 paired rival hypotheses 与 falsification
+      rhythm 铺路，A-G 变体均无此机制。
+    proposed_change:
+      action: append_variant
+      summary: 在 02 文件追加变体『对手框架推论自证型（zajacwestphal2004 型）』；禁忌栏强制接驳既有稻草人反模式（推论必须是框架前提的忠实演绎且数据可检验）。
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: zajacwestphal2004
+      journal: American Sociological Review
+      evidence_anchor: Moreover, from this perspective, if there is evidence that firms often adopt, but do not implement
+        a corporate policy (i.e., efficiency benefits are not realized), then the stock market should incorporate this evidence
+        and discount the value of the policy.
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - American Sociological Review
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - American Sociological Review
+    verified_journal_count: 1
+    regression_cases:
+      positive:
+      - prompt: 对手是拥有清晰内核前提的主导框架（如信号理论、理性学习）且设计能检验其推论时写 tension 收束句
+        expected_invariants:
+        - 推论由对手前提演绎并挂对手文献
+        - 句式 from this perspective, if...then...should...
+        - 推论在后文设计/结果中可被检验
+      preservation:
+      - prompt: 对手前提模糊或设计无法检验推论时
+        expected_invariants:
+        - 不使用推论自证句式
+        - 退回评述式批评变体（A-C）
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-08-30'
+    last_seen: '2026-08-30'
     auto_action:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.

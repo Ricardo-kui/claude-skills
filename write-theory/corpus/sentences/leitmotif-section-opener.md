@@ -92,3 +92,38 @@ moderating / main effect of the current hypothesis's specific variable]."
 **适用**: 多 moderator 平行结构（每段一个 moderator）的假设推导段首；需要在不设 subsection 的前提下给段落视觉锚点的 Theory
 
 **禁忌**: 裸标签必须是构念名本身（名词短语），不得用完整句子；"On one level" 词族在单篇使用三到五次即达饱和，逐段滥用会变成口头禅
+
+
+### 句式 B：机制枢纽修辞性问句（"How then might ... ?" Pivot）
+
+<!--
+pattern_id: rhetorical_question_mechanism_pivot
+build_type: 跨类型（句式级）
+source_papers: ["carpenterwestphal2001_AMJ"]
+confidence: high
+status: VERIFIED — expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)
+sentence_position: topic_sentence
+-->
+
+**句位**: 段首 Topic 句位——在理论透镜已立、即将进入具体机制推导的分支起点，用自问句把"框架"切换为"推导"。
+
+**句式骨架**:
+```
+How then might [IV] [direction verb] [actor]'s ability to [outcome] in
+[context]? We suggest that [core claim of this branch].
+```
+
+**变体**（同句位措辞候选）:
+- "How then might [IV] [verb] [outcome] in [context]?" — 标准形式；"then" 承接前文理论铺垫
+- "How, though, does [IV] translate into [outcome]?" — 强调转换而非增强
+- "Why should [IV] [verb] [outcome] when [condition]?" — 问"为什么"而非"如何"，适配 warrant 密集段
+
+**为什么有效**: 把读者刚建立的被动理解（"有道理"）主动转化为求知状态（"怎么发生的？"），问句本身即宣布本段任务是机制推导而非框架重复；"then" 标记这是从透镜到推导的**推进**，段落分工清晰。
+**注意事项**: 一条 why chain 至多使用一次（本文仅在两个情境分支起点各用一次）；问句后必须紧跟 "We suggest that ..." 给出分支核心判断，不能问完就铺文献；问句内容必须真能被本段回答。
+**反模式**: 连续多段用问句开头（变成口头禅）；问句只修辞性装点、下一段并不回答它；用问句掩盖核心判断缺位（段首无方向性主张）。
+
+**原文锚定**:
+> "How then might directors' ties to other boards enhance their ability to monitor and advise management on the implementation of existing strategies in a stable environment?"
+> "We suggest that directors will be better able to contribute to strategy in such an environment when their other board ties are strategically related to the focal firm."
+
+<!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:sentence_rhetorical_question_mechanism_pivot -->

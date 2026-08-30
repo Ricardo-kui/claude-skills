@@ -503,6 +503,83 @@
       "overall_role": "partial_exemplar"
     },
     {
+      "id": "carpenterwestphal2001",
+      "path": "v4/blueprints/carpenterwestphal2001-external-network-ties.md",
+      "paper_type": "quantitative",
+      "outlet": "Academy of Management Journal",
+      "publication_status": "published",
+      "coverage": "complete",
+      "theoretical_problem_form": [],
+      "narrative_dynamics": [],
+      "retrieval_signals": [],
+      "section_learning": {
+        "introduction": {
+          "suitable": "yes",
+          "requires": [
+            "a dominant explanatory variable in the conversation whose supporting evidence can be shown to be inconsistent via an authoritative review"
+          ],
+          "learn": [
+            "Two-step tension ladder: first an evidence-imbalance verdict on the dominant predictor (power/independence) backed by a recent review, then a capability question that survives 'regardless of their power to do so' — together these swap the explanatory variable from power to knowledge without ever attacking the prior literature directly.",
+            "Gap-to-question bite: the contested issue raised in the tension paragraphs (how multiple board appointments affect contribution) is restated verbatim as the specific research question in the closing paragraph, so gap and study are the same object."
+          ],
+          "caveat": [
+            "Cold-start trend hook ('Increased research attention...') carries no data and depends on the conversation genuinely heating up in 2001; the closing paragraph packs gap + lens + preview + contribution into one paragraph — a density a modern introduction should split."
+          ]
+        },
+        "theory": {
+          "suitable": "yes",
+          "requires": [
+            "a mechanism whose input (tie portfolio) varies categorically with a context variable, and DVs observable at two levels"
+          ],
+          "learn": [
+            "Counter-assumption refutation opening: state the rival position, expose its hidden premise ('Such an argument assumes that the knowledge gained on other boards is largely irrelevant'), then show the premise fails — no concession sentence in the entire section; refutation is done by assumption exposure, not by 'However' (concessive connectors = 0).",
+            "One-trunk context-split architecture: a single sociocognitive mechanism (ties → experience/information → knowledge structures → perceived ability → behavior) carries all six hypotheses; the categorical context (stable vs unstable) only changes which tie portfolio feeds the trunk, yielding two mirrored hypothesis sets (H1a-c / H2a-c, each declared to 'parallel' the other) with the mediation share stated honestly ('concerns one portion of this mediated relationship')."
+          ],
+          "caveat": [
+            "Reverse causality (poor performance driving related appointments) is left to Methods controls, not handled in Theory; the TMT-diversity/task-conflict literature block (P13-15) is a borrowed second literature stream bridged with a single 'consistent with the view' — copying the density without the bridge risks a storyline detour."
+          ]
+        },
+        "methods": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Dual-actor credibility infrastructure for elite samples: response-rate engineering chain (pretest, institutional endorsement, follow-up with new questionnaire) → Kolmogorov-Smirnov dual-layer representativeness defense → CEO/director kappa agreement with source-swap robustness — turning common-method concerns into a design feature rather than a statistical afterthought.",
+            "Operationalization by toy counterexample: the two-board normalization example ('Failing to normalize these measures would give each board a comparable relatedness score, when in fact B's directors have more related experience') defends a composite weighted measure more vividly than a formula."
+          ],
+          "caveat": [
+            "The estimator declaration (OLS, median split, product term) lives in the first paragraph of Results, not Methods, and no standard-error clustering is reported despite directors nested in firms — the credibility narrative is strong on data collection and weak on statistical reporting; borrow the former, not the latter."
+          ]
+        },
+        "results": {
+          "suitable": "yes",
+          "requires": [
+            "scope-conditioned hypotheses paired with a split-sample primary test"
+          ],
+          "learn": [
+            "Mirror-pattern reveal: stage the context-B results as the climax ('Hypothesis 2a is the first test of our theoretical framework in unstable competitive environments'), let simple relatedness fail there as confirmation, then pin the answer with a mirror closing sentence ('The opposite pattern emerges') — the null is the theory's evidence, not an embarrassment.",
+            "Hypothesis-form/test-design pairing: scope-conditioned hypotheses get split-sample regressions as the primary test with the product-term interaction only as corroboration — the reverse of the modern default, and correct for the assumption form actually written."
+          ],
+          "caveat": [
+            "No magnitude or economic-significance beat anywhere; no formal coefficient-difference test across subsamples (no Chow/Wald); one-tailed tests for hypothesized effects — a contemporary staging must add a magnitude beat, a formal split test, and two-tailed discipline."
+          ]
+        },
+        "discussion": {
+          "suitable": "yes",
+          "requires": [
+            "a named field call ('substantive context' of ties) that the findings can now answer, and a policy debate connected to the displaced predictor"
+          ],
+          "learn": [
+            "Claim the moderator twist at the ending: the network literature's own predictor (social structural context) is shown to be 'moderated by its strategic context' — the discussion does not summarize, it upgrades the contribution relative to the conversation named in the intro (Nohria/Pettigrew/Stinchcombe calls).",
+            "Coin the portable concept at the payoff: 'sociocognitive externalities' and economies/diseconomies of monitoring convert the mechanism into vocabulary other researchers can use, then turn it against the intro's reform consensus (legislated appointment limits may backfire) and into hiring advice (select for strategic relevance, not seat counts)."
+          ],
+          "caveat": [
+            "The ending honestly routes the unmeasured cognition to future research (content-analytic measures of director cognitions), but the practical force of the mediation claim rests on that unmeasured interior; a modern version should either measure the cognition or soften the mechanism language in the policy turn."
+          ]
+        }
+      },
+      "overall_role": "exemplar"
+    },
+    {
       "id": "che2023",
       "path": "v4/blueprints/che2023-brand-internal-wtp-spillover.md",
       "paper_type": "quantitative",

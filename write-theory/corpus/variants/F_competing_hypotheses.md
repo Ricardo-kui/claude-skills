@@ -210,3 +210,52 @@ leading to a zero net effect.
 
 **反模式**: 行动变量与解释之间无可辩驳的对应规则时，不得使用方向代理（应改为直接测量或情境识别）；两种解释无共存可能时，退回标准 H1a/H1b 对。
 
+
+
+### 技巧 4：分离编号回指竞争对 + 期界基线 + 跨政策推广（Zajac & Westphal 2004, ASR）
+
+<!--
+pattern_id: F_anaphoric_sign_flip_pair_cross_policy
+build_type: 竞争假设型（变体 F）
+source_papers: ["zajac_westphal_2004_asr"]
+confidence: medium（F 变体第 3 源，常规规则即升 VERIFIED）
+status: VERIFIED
+verification_basis: "expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)"
+-->
+
+> 源自 Zajac & Westphal (2004, ASR)——变体 F 第 3 源。把 Wowak 的相邻编号对（H1a/H1b）扩展为"分离编号 + 回指收敛"形态，并给竞争对补上期界舞台与跨预测元推广。与 Wowak 的多 DV 递进（每 DV 机制空间加深）互补：本篇是**多 X 推广**（机制 trunk 不变，预测元家族扩容）。
+
+**核心 1：分离编号回指竞争对（Disjoint-Numbered Anaphoric Pair）**。两个竞争假设不用 H[N]a/H[N]b 相邻编号，而是各自整节独立推演后用回指短语显式绑定。两个假设的陈述句逐字相同、仅方向词相反，使"同一可观测量、反号预测"的公平配对在假设语法层面完全对称。
+
+**句式**:
+```
+[Rival A 完整机制链 + 其推论 corollary] ... Thus we have the following hypothesis:
+Hypothesis [N]. The number of [firms] that have [adopted but not implemented X] is negatively associated with [Y] at the focal firm.
+
+[Rival B 机制链：先以专段回答 "How could [B] hold despite [A's evidence]?" 的微观机制] ...
+Thus, in opposition to Hypothesis [N], [rival B perspective] leads to the following hypothesis:
+Hypothesis [N]a. The number of [firms] that have [adopted but not implemented X] is positively associated with [Y] at the focal firm.
+```
+
+**核心 2：期界基线（Period-Baseline Sign Flip）**。在竞争对之前先用一个非竞争假设确立"可观测量本身随制度语境翻号"（采纳反应从负变正），为竞争对提供时间舞台——单一符号事实从此无法反驳任何一方。
+
+**核心 3：跨政策推广（Cross-Predictor Generalization）**。同一竞争对在共享同一正当化逻辑（[shared rationale]）的政策家族内重跑：第二个预测元（[policy family B] 的采纳未实施累积数）与第一个同属"宣称 [same objective] 的政策"，两条 rival 链各推一个反号对，检验竞争裁决不是单政策特异。
+
+**核心 4：同一测量的对立读法作为裁决面（Rival Readings of the Same Measure）**。显式声明同一因变量数据在两套理论下认识论身份不同——[rival literature] 视之为反映 [期望效率收益] 的客观数据；[home perspective] 视之为反映 [符号价值] 的主观数据（被量化并加总）——竞争检验裁决的不只是预测符号，还有测量本身的含义（另见 `../subprotocols/evidence_patterns.md` 同名 Pattern）。
+
+**原文锚点**:
+> "We develop competing hypotheses regarding the effects of prior instances of adopting, but not implementing, stock repurchase plans on the market reaction to these plans."（Nonimplementation 节末）
+> "This suggests the following alternative to Hypothesis 3:"（H3a 推导段）
+
+**为什么有效**:
+- 分离编号 + 回指短语让竞争对在多节长推导后仍可被读者瞬时配对，比相邻 a/b 编号更适合"每方一整节论证"的重量级竞争
+- 陈述句逐字对称（只差方向词）把"公平配对"做到语法与篇幅配比层面——裁决结果天然可信
+- 期界基线 + 跨政策推广证明竞争裁决既有历史舞台又有家族稳健性
+
+**禁忌**:
+- 分离编号必须配显式回指短语（"in opposition to Hypothesis N" / "alternative to Hypothesis N"）——隐式分离会让读者漏配
+- 跨政策推广的政策家族必须共享同一正当化逻辑；逻辑不共享时两条链各自独立，不得伪装同 trunk
+- "How could B hold despite A?" 的微观机制必须独立论证（如社会参照/信心逻辑），不能只断言符号价值存在
+- 原文 H2a 推导句存在视角误标笔误（写成 rival A 的标签），模仿时写对视角名，勿复制病句
+
+<!-- wb:zajac_westphal_the_social_construction_of_market_value:F_anaphoric_sign_flip_pair_cross_policy -->

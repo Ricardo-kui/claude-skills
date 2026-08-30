@@ -63,7 +63,7 @@
 | 需要组织多个并行调节假设 | [`subprotocols/hypothesis_organization_patterns.md`](subprotocols/hypothesis_organization_patterns.md) | [`subprotocols/arrangement_patterns.md`](subprotocols/arrangement_patterns.md) |
 | 需要论证假设段落内部如何摆证据 | [`subprotocols/evidence_patterns.md`](subprotocols/evidence_patterns.md) | [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md) |
 | 需要组织段落内部的论点-论据-总结布局（Topic→Reasoning→Tokens→Wrap + 文献/理论/案例三类论据决策） | [`subprotocols/paragraph_layout.md`](subprotocols/paragraph_layout.md) | [`subprotocols/evidence_patterns.md`](subprotocols/evidence_patterns.md), [`sentences/mechanism_chain.md`](sentences/mechanism_chain.md)（段内逻辑布局原则） |
-| 核心贡献是裁决两种对立理论的竞争预测 | [`variants/F_competing_hypotheses.md`](variants/F_competing_hypotheses.md) | [`sentences/hypothesis_forms.md`](sentences/hypothesis_forms.md) |
+| 核心贡献是裁决两种对立理论的竞争预测 | [`variants/F_competing_hypotheses.md`](variants/F_competing_hypotheses.md)（**3 源 VERIFIED**：wowak2025 / fang2025 / zajac_westphal_2004；含技巧 4 分离编号回指竞争对——每方各自整节推演时用独立编号 + 回指短语绑定，替代相邻 a/b 编号） | [`sentences/hypothesis_forms.md`](sentences/hypothesis_forms.md)（分离编号回指竞争对假设句，VERIFIED / `zajac_westphal_2004`） |
 | 调节假设的 moderator 由 DV 官方严重度分级实现（裁量不可观测，事件属性作代理，H 强/弱异号对） | [`variants/E_moderation.md`](variants/E_moderation.md)（Event-Attribute Split Bilateral Moderation Pair 变体B；VERIFIED / `ball_2018`） | [`subprotocols/evidence_patterns.md`](subprotocols/evidence_patterns.md)（Interview Non-Event Warrant 配套实例化） |
 | IV 是抽象构念但行业有制度性二分类（审批路径/监管身份）可作组间测量锚 | [`variants/E_moderation.md`](variants/E_moderation.md)（Institutional-Regime Construct Anchor 变体A；VERIFIED / `ball_2018`） | — |
 | H1 前需先排除相邻反预测（同一 IV 的反方向机制，两步式：前提缺失 + 结构不经济） | [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md)（Counter-Prediction Exclusion before H1 变体B；VERIFIED / `ball_2018`） | — |
@@ -86,8 +86,8 @@
 | [`B_mechanism_elaboration.md`](variants/B_mechanism_elaboration.md) | 机制推演型 | B0 理论过程解释 / B1 正式中介；why chain 与测量分离 | B0 可仅主效应；B1 才要求中介 |
 | [`C_hypothesis_tree.md`](variants/C_hypothesis_tree.md) | 假设树型 | 条件化分叉、树状展开、 moderator 引入时机 | 主效应 + 多调节 |
 | [`D_process_theory.md`](variants/D_process_theory.md) | 质性过程理论型 | 阶段序列、过渡条件、时间标记 | Proposition 为主 |
-| [`E_moderation.md`](variants/E_moderation.md) | 调节效应型 | E1-E9 协议：同层/跨层调节、嵌入边界、竞争裁决、曲线多调节、序列嵌套调节、宏观事件激活与持续性、双刃剑异号增强/阻碍权变、**双侧镜像调节（同一构念 rival/target 侧镜像预测，DesJardine 2025，EMERGING）**、**E11 特质激活双表现型 cue 切换（trait→默认表现型主效应 + cue 激活对立表现型，Ridge 2024，EMERGING）** | 主效应 + 调节（含复杂交互、条件间接效应、无主效应异号权变、双侧镜像调节对、cue 切换缓解交互） |
-| [`F_competing_hypotheses.md`](variants/F_competing_hypotheses.md) | 竞争假设型 | 对立预测呈现、非传统收敛信号、 net effect 论证、**技巧 3：解释支配代理桥接 + 三向 cancel-out 收束（fang2025 POM；无正式 H 竞争分支，EMERGING 待第二篇）** | 竞争假设对 |
+| [`E_moderation.md`](variants/E_moderation.md) | 调节效应型 | E1-E11 协议：同层/跨层调节、嵌入边界、竞争裁决、曲线多调节、序列嵌套调节、宏观事件激活与持续性、双刃剑异号增强/阻碍权变、**双侧镜像调节（同一构念 rival/target 侧镜像预测，DesJardine 2025，EMERGING）**、**E11 特质激活双表现型 cue 切换（trait→默认表现型主效应 + cue 激活对立表现型，Ridge 2024，EMERGING）**、**情境劈叉共同机制干（类目型情境作 scope condition 劈叉为成对平行假设集，carpenterwestphal2001，VERIFIED）** | 主效应 + 调节（含复杂交互、条件间接效应、无主效应异号权变、双侧镜像调节对、cue 切换缓解交互、情境劈叉假设集） |
+| [`F_competing_hypotheses.md`](variants/F_competing_hypotheses.md) | 竞争假设型 | 对立预测呈现、非传统收敛信号、 net effect 论证、**技巧 3：解释支配代理桥接 + 三向 cancel-out 收束（fang2025 POM；无正式 H 竞争分支）**、**技巧 4：分离编号回指竞争对 + 期界基线 + 跨政策推广（zajac_westphal_2004 ASR；每方整节独立推演 + in opposition to / alternative to 回指绑定；F 变体第 3 源，VERIFIED）** | 竞争假设对 |
 | [`G_dialectical_opposition.md`](variants/G_dialectical_opposition.md) | 辩证对立型 | 双受众对称机制、dialectical turn 标记、theory-based reconciliation | 对立预测（方向反转） |
 
 ---
@@ -102,10 +102,10 @@
 | [`argumentation_patterns.md`](subprotocols/argumentation_patterns.md) | 跨类型 | **T2→T3 过渡段/非常规论证动作**：竞争解释管理（Preemptive Competing Account Management）、Extension Logic、双理论两阶段机制、行业情境限定、双机制汇聚、最小对对比 vignette、**Audience-Foil then Focal-Signal 单比较 H（chenganesanliu2009，VERIFIED；勿升格为 G）**。段落级假设推导骨架（Anchor→Mechanism→Warrant→Prediction）已归 `hypothesis_derivation_patterns.md`，间接调节论证亦在该文件 |
 | [`hypothesis_derivation_patterns.md`](subprotocols/hypothesis_derivation_patterns.md) | 跨类型 | 假设推导段落的心脏模板：Anchor→Mechanism→Warrant→Prediction 完整序列，含宽度型并行机制、对称反向双轨、曲线关系双阶段论证、默认机制替换的方向反转、机制靶向干预递进 |
 | [`reasoning_soundness_protocol.md`](subprotocols/reasoning_soundness_protocol.md) | 跨类型 | 论证可靠性（soundness）协议：前提三分法 [D]/[S]/[E] + 最弱环节防守（含 Booth warrant 五测试）+ 机制必要性门控（三问）+ 反例压力测试（六类 warrant 攻击面 + 第四种处置"承认但不回应"）+ warrant 明言/隐去表达纪律（Booth Ch8）；hypothesis_derivation_patterns 的 soundness 镜像，Phase 3 成稿后与 Phase 4 审计 4 使用 |
-| [`arrangement_patterns.md`](subprotocols/arrangement_patterns.md) | 跨类型 | 论点-论据安排模式（Warrant-Embedded / Evidence-Contrast / Cumulative / Parallel） |
-| [`evidence_patterns.md`](subprotocols/evidence_patterns.md) | 跨类型 | 证据类型、证据功能、文献引用三要素句式 |
-| [`hypothesis_organization_patterns.md`](subprotocols/hypothesis_organization_patterns.md) | 跨类型 | 复杂假设体系的段落级组织（common trunk / dual branch / baseline→moderation / 2×2 对称矩阵 / 角色分离并行中介→效应分解→时间检验 / **机制丧失→多结果树→外部部分替代** / **Per-Stakeholder Paired (Main + Cue-Moderation) Parallel**，EMERGING / **Pattern B: Response-Portfolio Decomposition——聚合行动 = 对立组件组合（fang2025 POM，EMERGING 单篇）**） |
-| [`bilateral_argumentation_templates.md`](subprotocols/bilateral_argumentation_templates.md) | E 调节效应型 | 调节假设的 high/low 双边论证句法；**Cue-Activation Carve-Out（硬约束 #11 例外：cue/activation moderator 的 low 态=主效应默认基线时，双边覆盖由主效应基线 + high 态机制论证满足）** |
+| [`arrangement_patterns.md`](subprotocols/arrangement_patterns.md) | 跨类型 | 论点-论据安排模式（Warrant-Embedded / Evidence-Contrast / Cumulative / Parallel）；**变体 A：反假设驳斥式开场——一边倒共识降格为隐含假设再机制性反转（carpenterwestphal2001，VERIFIED）** |
+| [`evidence_patterns.md`](subprotocols/evidence_patterns.md) | 跨类型 | 证据类型、证据功能、文献引用三要素句式；**Pattern: Rival Readings of the Same Measure——同一测量的对立读法作为竞争裁决面（zajac_westphal_2004，VERIFIED；与 B 变体硬/软测量重构为姊妹模式）** |
+| [`hypothesis_organization_patterns.md`](subprotocols/hypothesis_organization_patterns.md) | 跨类型 | 复杂假设体系的段落级组织（common trunk / dual branch / baseline→moderation / 2×2 对称矩阵 / 角色分离并行中介→效应分解→时间检验 / **机制丧失→多结果树→外部部分替代** / **Per-Stakeholder Paired (Main + Cue-Moderation) Parallel**，EMERGING / **Pattern B: Response-Portfolio Decomposition——聚合行动 = 对立组件组合（fang2025 POM，EMERGING 单篇）** / **变体 C：个体-单元双层平行假设集 + 中介份额声明（concerns one portion of this mediated relationship；carpenterwestphal2001，VERIFIED）**） |
+| [`bilateral_argumentation_templates.md`](subprotocols/bilateral_argumentation_templates.md) | E 调节效应型 | 调节假设的 high/low 双边论证句法；**Cue-Activation Carve-Out（硬约束 #11 例外：cue/activation moderator 的 low 态=主效应默认基线时，双边覆盖由主效应基线 + high 态机制论证满足）**；**变体 B：互补组合型双边论证——两侧各自收益+机制性失效，预测收敛于异质互补组合（carpenterwestphal2001，VERIFIED）** |
 | [`moderator_selection_frameworks.md`](subprotocols/moderator_selection_frameworks.md) | E 调节效应型 / C 假设树型 | 多 moderator 选择元框架 |
 | [`intra_tmt_persuasion.md`](subprotocols/intra_tmt_persuasion.md) | E 调节效应型 / C 假设树型 | 下级高管如何通过信心启发式劝说上级决策者（含权力放大→三向交互） |
 | [`board_governance_boundary_condition.md`](subprotocols/board_governance_boundary_condition.md) | E 调节效应型 | 董事会治理作为**放大型**边界条件（perverse pressure logic） |
@@ -121,10 +121,10 @@
 | [`mechanism_chain.md`](sentences/mechanism_chain.md) | 机制推演 | why chain 连接词、单步/两步/双轨/竞争/多理论/OM三三制/双刃剑/双中介并行/双DV并行/多层收窄型/替代机制排除/Ability-Motivation 框架/Iron Triangle三边机制/双视角对比框架整合/三层嵌套理论演进/Rhetorical-Question Pivot/联合必要性门控逻辑/**辩证对立双路径(habel2016)/Focus Group定性嵌入(habel2016，含多角色访谈三角化)/成本-收益计算机制链(chung2022)/威胁处理级联(ridge2024)** |
 | [`cost_benefit_calculus.md`](sentences/cost_benefit_calculus.md) | 成本-收益机制 voice | 感知高收益 + 感知低成本 + 综合收敛 + 上下级激励差异对比 |
 | [`moderation.md`](sentences/moderation.md) | 调节机制 | 机制修改论证、假设模板、修辞问句开场、Ability-Motivation 双路径调节、共享调节器反向调节、多调节器同向设计、双边论证调节推演、注意力基础观调节论证、不对称调节、**董事会放大型边界条件(chung2022)**、**Mitigation via Manifestation-Switch 缓解交互(ridge2024)** |
-| [`hypothesis_forms.md`](sentences/hypothesis_forms.md) | 假设形式 | 各类假设的标准句法（主效应、**比较型主效应 A more negatively related than B（chenganesanliu2009，VERIFIED）**、中介、调节、三向交互、有中介的调节、配对假设a/b格式、条件假设Given格式） |
-| [`acknowledgment_response.md`](sentences/acknowledgment_response.md) | 异议处置 voice | 承认与回应句式（Booth Ch9）：四类异议（替代解释/反例/证据局限/定义分歧）× 承认/回应标记词权重表 + 回应强度三级 + 承认但不回应三姿态；§5 Rogerian 四步对话结构（G&L 2017，高威胁异议的段落级降防御序列）；**§5b Audience-Foil Pivot 异质受众切换句（chenganesanliu2009，VERIFIED）**；与 reasoning_soundness_protocol §4 配套 |
+| [`hypothesis_forms.md`](sentences/hypothesis_forms.md) | 假设形式 | 各类假设的标准句法（主效应、**比较型主效应 A more negatively related than B（chenganesanliu2009，VERIFIED）**、中介、调节、三向交互、有中介的调节、配对假设a/b格式、条件假设Given格式、**分离编号回指竞争对——独立编号 H[N]/H[N]a + 回指短语绑定的逐字反号陈述对（zajac_westphal_2004，VERIFIED）**） |
+| [`acknowledgment_response.md`](sentences/acknowledgment_response.md) | 异议处置 voice | 承认与回应句式（Booth Ch9）：四类异议（替代解释/反例/证据局限/定义分歧）× 承认/回应标记词权重表 + 回应强度三级 + 承认但不回应三姿态；§5 Rogerian 四步对话结构（G&L 2017，高威胁异议的段落级降防御序列）；**§5b Audience-Foil Pivot 异质受众切换句（chenganesanliu2009，VERIFIED）**；**变体 C：竞争维度 carve-out 句——in part because 部分承认 + 把争点收窄到对手够不着的维度（zajac_westphal_2004，VERIFIED）**；与 reasoning_soundness_protocol §4 配套 |
 | [`closure.md`](sentences/closure.md) | 收束/过渡 | **注意：管理学不要求独立 Closure 段。** 局部收束信号（"Therefore, we hypothesize:"）、段落收束→假设过渡（按论证类型）、**H1 收敛信号强制提醒** |
-| [`leitmotif-section-opener.md`](sentences/leitmotif-section-opener.md) | 段首回扣句 | 多假设共享同一核心构念时的段首回扣句（leitmotif）；SKILL.md 措辞润色表"主导动机串联"句位查此文件 |
+| [`leitmotif-section-opener.md`](sentences/leitmotif-section-opener.md) | 段首回扣句 | 多假设共享同一核心构念时的段首回扣句（leitmotif）；**句式 B：机制枢纽修辞性问句——How then might ... ? 透镜→推导切换自问句 + We suggest that 分支判断（carpenterwestphal2001，VERIFIED）**；SKILL.md 措辞润色表"主导动机串联"句位查此文件 |
 
 ---
 

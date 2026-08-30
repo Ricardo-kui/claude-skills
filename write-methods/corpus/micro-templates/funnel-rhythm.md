@@ -102,3 +102,17 @@ from 1,247 unique firms.
 | `The final sample is large.` | 无起始 N，无法审计 | 提供完整的起始→最终 N 链条 |
 | `Data come from multiple sources.` | 无匹配逻辑 | `We matched [source A] to [source B] using [key], yielding [N].` |
 | 只有最终 N，无中间步骤 | 无法判断数据损失是否合理 | 至少报告主要排除步骤的数字 |
+
+
+## 微模板：响应率工程链（carpenterwestphal2001 型）
+
+| 步骤 | 句式 | 抗辩点 |
+|------|------|--------|
+| 反差定位 | `Although surveys have been used frequently to measure [behavioral processes] at [lower levels], surveys of [elite respondents] have often suffered from low response rates (less than [25] percent).` | 用先例反差预设威胁（基层常用 vs 精英低响应） |
+| 承诺句 | `To ensure the highest possible response in this case, we took the following steps ([methodology citations]):` | 承诺 + 方法论文献背书 |
+| 编号步骤 | `(1) [an in-depth pretest was used to streamline the survey, making it easier and more appealing to complete]; (2) [requests for participation linked the current study with an ongoing series of surveys ... to which hundreds of these respondents' peers had responded]; and (3) [about N days after the initial mailing, nonrespondents were sent a second letter with a new questionnaire]` | 每步自带 because：减负 / 机构背书借同行先例 / 催复附新问卷 |
+| 对标收口 | `These response rates are high in comparison to those of other [elite] surveys (cf. [citation]).` | 报数字 + 与同类调查对标，闭合链条 |
+- 适用：top-management / 精英样本问卷；普通消费者样本不需要此链
+- 收口后必须衔接漏斗下一步（数据缺失排除 → 最终 N），使响应率工程成为漏斗叙事的一部分而非孤立抗辩
+
+<!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:m2_response_rate_engineering_chain -->

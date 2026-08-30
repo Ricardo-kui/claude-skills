@@ -96,3 +96,13 @@ we address this issue in supplemental analyses using [test].
 | 完全不提及稳健性 | 审稿人质疑是否做过 | 至少预告 2–3 类稳健性检验 |
 | `We did many robustness checks.` | 模糊 | 具体列出检验类别和方法 |
 | 稳健性检验与主分析设计不一致 | 逻辑断裂 | 确保稳健性检验针对的是主分析的同一个识别关切 |
+
+
+**补充句式（carpenterwestphal2001 型）：非应答 K-S + 双层代表性检验**
+
+> To check for nonresponse bias, we collected archival data for [units] in the larger sample frame. ... we examined whether respondents and nonrespondents differed significantly on several different variables derived from archival sources using the [Kolmogorov-Smirnov two-sample test] ([citation]). ... The results of this test provide consistent evidence across multiple variables that respondents and nonrespondents come from the same population. Moreover, separate analyses also showed that [respondents] were representative of [all units in the frame] with respect to (1) the independent variables ([examples]), and (2) [characteristics] included as control variables in the study ([examples]). Thus, it appears that sample selection bias was not present in the data.
+- 三层结构：单变量分布检验（K-S）→ 跨变量一致证据 → 双层代表性（IV + 控制变量分别声明）；比单报 K-S 更厚，直接封堵"应答者在关键变量上有偏"的质疑
+- 收口句 "Thus, it appears that sample selection bias was not present in the data" 用限定语（it appears）立无偏主张，不过度声明
+- 与 westphal_bednar2005 的 K-S+Heckman 双统计链互补：本链无 Heckman 修正，靠第二层代表性声明加厚
+
+<!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:m2_nonresponse_dual_representativeness -->

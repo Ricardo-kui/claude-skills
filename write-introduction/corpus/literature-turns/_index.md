@@ -37,7 +37,7 @@ Literature Turn（P2-P3）的核心功能是将 Hook 建立的注意力转化为
 | 策略 | 文件 | 默认 Gap 配对 | 能量 | 核心逻辑 | 文献诊断 |
 |------|------|---------|------|---------|---------|
 | **Progressive Coherence** | `01-progressive-coherence.md` | Incompleteness | 低–中 | "已有进展，但遗漏了 C"（含变体 N：采纳已答/近端后果未清的文献分工；变体 O：近邻研究静态观批评→动态化 bridge，desjardine2025 型，EMERGING） | 单一传统充分发展，自然留下空白 |
-| **Synthesized Coherence** | `02-synthesized-coherence.md` | Inadequacy | 中 | "多个传统各自合理，但在交汇处集体盲区"（含变体F：连续统地图→双学科顺序批判→交叉沉默，chen2009，VERIFIED；非对角 Synthesized×Incompleteness） | 多个传统各自正确，但互不知晓；变体 G：双流对置+行动者偏好收敛 Lit Turn（对立双流消解于'表面顺从'盲区），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28) |
+| **Synthesized Coherence** | `02-synthesized-coherence.md` | Inadequacy | 中 | "多个传统各自合理，但在交汇处集体盲区"（含变体F：连续统地图→双学科顺序批判→交叉沉默，chen2009，VERIFIED；非对角 Synthesized×Incompleteness） | 多个传统各自正确，但互不知晓；变体 G：双流对置+行动者偏好收敛 Lit Turn（对立双流消解于'表面顺从'盲区），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28)；变体 H：双职能并置型——In addition 增量并置双职能并以经典综合收拢为共同 ground，carpenter_westphal_2001，VERIFIED (expert_audit_override Westphal 系裁决) |
 | **Non-Coherence** | `03-non-coherence.md` | Incommensurability | 高 | "两个理论不能同时正确——除非重新理解" | 两个理论都有证据，但预测相反 |
 
 ---

@@ -644,13 +644,14 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     事件历史+事件研究:
-      paper_count: 5
+      paper_count: 6
       papers:
       - chen_ganesan_liu_2009_jm (JM)
       - pontikes2012 (ASQ)
       - reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science)
       - shi2021 (JMR)
       - zhou2017 (ASQ)
+      - zajac_westphal_the_social_construction_of_market_value (American Sociological Review)
       status: ROBUST
       slots_covered:
       - M2
@@ -735,7 +736,7 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     文本构念测量:
-      paper_count: 6
+      paper_count: 7
       papers:
       - cutolo2024 (JM)
       - kashmiri_nicol_arora_2017_jams (JAMS)
@@ -743,6 +744,7 @@ evidence:
       - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
       - fang_et_al_2025_rival_recall_ad_spend (Production and Operations Management)
       - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
+      - zajac_westphal_the_social_construction_of_market_value (American Sociological Review)
       status: VERIFIED
       verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       slots_covered:

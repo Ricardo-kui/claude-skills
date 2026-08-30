@@ -139,3 +139,38 @@ Therefore, H4: The interaction of [IV] and [W2] mediates the moderating effect o
 - H4 的 Warrant 需要实质性理论，避免过度依赖方法论文献
 
 **反模式**: 如果 H4 只是三向交互（three-way interaction）而非 mediated moderation，不要用此模式。
+
+
+### 变体 A：反假设驳斥式开场（Counter-Assumption Refutation Opening）
+
+<!--
+pattern_id: counter_assumption_refutation_opening
+build_type: 跨类型（机制推演型/调节效应型的开场段）
+source_papers: ["carpenterwestphal2001_AMJ"]
+confidence: high
+status: VERIFIED — expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)
+-->
+
+**适用场景**: 现有文献对 [IV]→[DV] 存在一边倒的方向性共识（通常是负面预测），而本文要反转或条件化该共识——用"暴露共识的隐含假设"开门，比直接宣称相反结论更有说服力。
+**排列模式**: Evidence-Contrast（反方观点 → 隐含假设暴露 → 己方机制反转）
+**范文来源**: Carpenter & Westphal (2001, AMJ)
+
+**骨架**:
+```
+[文献共识] [Field] critics have typically argued that [IV] reduces [DV] ([citations]).
+[假设暴露] Such an argument assumes that [hidden_assumption underlying the consensus].
+[视角反转] In contrast, our [perspective_name] indicates how [IV] can enhance or
+diminish [DV], by [reframing mechanism that turns the hidden assumption into
+an empirical question].
+[路径预告] [可选 1 句：预告后文将引入的条件/情境，把"是否"转化为"何时"。]
+```
+
+**为什么有效**: 不正面否定共识，而是把共识降格为"一个未经验证的假设"，使反转成为逻辑必然而非立场之争；"can enhance or diminish" 的双向措辞把争论从方向之争转向条件之争，为后文情境化假设集铺路。
+**注意事项**: 隐含假设必须真实存在于被引文献的论证中且可被自己的视角证伪，否则是稻草人；反转句必须给出机制性理由（本文是知识结构/图式机制），不能只靠 "In contrast" 完成转折。
+**反模式**: 夸大对方观点以制造靶子；只宣布"我们发现相反结果"而无机制解释；把隐含假设暴露写成长段文献批判（1-2 句即可）。
+
+**原文锚定**:
+> "Such an argument assumes that the knowledge and perspective gained on other boards are largely irrelevant to decision making at the focal firm."
+> "In contrast, our sociocognitive perspective indicates how experience on other boards can enhance or diminish directors' ability to contribute to strategy"
+
+<!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:theory_counter_assumption_refutation_opening -->

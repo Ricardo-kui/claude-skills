@@ -409,6 +409,46 @@ high, at lower levels when low.
 
 ---
 
+
+### 变体 C：情境劈叉共同机制干（Context-Split Common Trunk, Paired Conditional Hypothesis Sets）
+
+<!--
+pattern_id: context_split_common_trunk_paired_hypothesis_sets
+build_type: 机制推演型 + 调节效应型（E 路由；情境为类目型 scope condition 而非连续交互项）
+source_papers: ["carpenterwestphal2001_AMJ"]
+confidence: high
+status: VERIFIED — expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)
+-->
+
+**适用场景**: 同一机制干解释 [IV]→[DV]，但机制在两类互斥情境下指向**不同的最优 [IV] 形态**；情境（环境类型/制度状态/生命周期阶段）是类目型条件，不需要（或无法测量）连续交互项。用"劈叉"替代 moderated regression 式调节假设。
+**排列模式**: Common Trunk → Context Split → Paired Hypothesis Sets
+**范文来源**: Carpenter & Westphal (2001, AMJ)
+
+**骨架**:
+```
+[共同机制干] Our [perspective] suggests that [IV] affects [DV] through [mechanism]:
+[IV] provides [experience/information] that shapes [knowledge structures], which
+determine [actor]'s ability to [outcome] ([citations]).
+[情境定义 + 分裂逻辑] [Context] refers to [definition]. In [context A], the key task is
+[task A], so [IV variant A] best equips the actor. In [context B], the task shifts to
+[task B], so [IV variant A alone] hinders [task B] because [mechanism-based reason].
+[劈叉句] How then might [IV] enhance [outcome] in [context A]? We suggest that [claim A].
+[假设集 A] Thus, [H-A1: In context A, IV-A will increase mediator at individual level.]
+[H-A2/A3: In context A, IV-A will increase board-level behavior 1 / behavior 2.]
+[假设集 B（镜像）] Therefore, in [context B], [H-B1/B2/B3: mirrored predictions for
+the complementary IV variant]. [每条假设以情境状语开头，前后集逐条平行。]
+```
+
+**为什么有效**: 一个机制干承担全部解释成本，两个情境只改变"哪种 [IV] 形态喂饱机制"——读者不需学习两套理论；类目型情境用 scope-condition 式假设（"In a stable environment, ..."）比强行构造连续交互项更诚实，也天然适合分组/子样本检验。
+**注意事项**: 机制干必须在情境劈叉**之前**完整建立（本文 P2-P4 先立图式机制，P5 起才引入环境）；两个假设集必须逐条平行（个体中介假设 + 两个董事会层行为假设），否则劈叉变成两个 mini-theory；情境劈叉后仍要说明机制为何在 B 情境下对 variant A 失效（本文用图式窄化 + 社会化承诺两个理由），不能只说情境不同。
+**反模式**: 无共同机制干、两个情境各讲一套理论（读者负荷翻倍）；把类目情境硬写成连续调节交互假设；情境劈叉却不解释失效机制，退化为两 组无关联的预测。
+
+**原文锚定**:
+> "In a stable environment, the appointment of a director to the boards of other firms that are strategically related to the focal firm will increase the level of board monitoring of strategic decision making."
+> "in unstable environments, an optimal portfolio of outsider board appointments may include a heterogeneous mix of ties to strategically similar and dissimilar firms"
+
+<!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:theory_context_split_common_trunk_paired_hypothesis_sets -->
+
 ## E6. 序列嵌套调节（Sequential Nested Moderation，Chung/Low/Rust 2022 型）
 
 **适用**: 研究包含**两层边界条件**：第一层调节变量（W1）直接影响 X→Y 关系；第二层调节变量（W2）调节 W1 的调节效应，形成三向交互（X × W1 × W2）。机制族至少两条：(a) 劝说×相对权力（Chung 2022：下级劝说上级被权力放大）；(b) 注意治理×任务负荷（Lun et al. 2026：功能高管权力缓冲主效应，组合阶段的注意负荷再调节该缓冲）。

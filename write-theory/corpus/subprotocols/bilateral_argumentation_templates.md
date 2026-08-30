@@ -617,6 +617,46 @@ on learning from [typed outcome]. → H
 
 <!-- wb:anand_mukherjee_2024_learning_from_failures_di:superficial_vs_noncodified_conversely_reconciliation -->
 
+
+### 变体 B：互补组合型双边论证（Complementary-Portfolio Dual-Knowledge Mix）
+
+<!--
+pattern_id: complementary_portfolio_dual_knowledge_mix
+build_type: 调节效应型 / 假设树型（预测落在组合构成而非单调交互方向）
+source_papers: ["carpenterwestphal2001_AMJ"]
+confidence: high
+status: VERIFIED — expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)
+-->
+
+**适用场景**: 调节/情境化论证中，两个对立的 [IV] 形态各自携带**不可互相替代的知识收益**，也各有**机制性失效条件**——预测收敛于"互补组合"而非"越多越好"或倒 U。区别于双边论证只比较 high/low 方向：这里 high 和 low 都被论证为不完整。
+**排列模式**: 双侧各自立益 → 双侧各自证伪 → 组合收敛
+**范文来源**: Carpenter & Westphal (2001, AMJ)
+
+**骨架**:
+```
+[A 的收益] [IV variant A] provides [knowledge benefit 1] that equips [actor] to
+[task 1] ([citations]); [mechanism: how benefit 1 accrues].
+[A 的失效] However, concentration in [variant A] narrows [knowledge structures]
+([mechanism 1: schema focus]) and [socializes/institutionalizes commitment to
+current approach] ([mechanism 2: social influence via ties]) ([citations]).
+[B 的收益与失效] [IV variant B] provides [knowledge benefit 2: alternatives,
+counteracting force] ([citations]); yet [variant B alone] means the [actor] may
+lack sufficient [benefit 1] to [task 1] or [assess implications of change].
+[组合收敛] Therefore, in [context], an optimal [portfolio] may include a
+heterogeneous mix of [variant A] and [variant B]—wedding [benefit 1] with
+[benefit 2] ([citations]).
+```
+
+**为什么有效**: 把"调节方向"问题升级为"组合构成"问题：两侧机制都被完整论证（收益+失效），使"组合最优"成为唯一能同时保住两种收益的解；预测自动生成非线性/构成型检验设计，且不易被单方向证伪。
+**注意事项**: 两种收益必须在机制层面不可互替（本文：实施当前战略的专长 vs. 识别替代方案的视野）；每个失效论证要有独立机制（本文用图式窄化与关系性社会化承诺两条）；若两种收益可由同一 [IV] 形态同时提供，组合预测失去必要性——先做这个必要性检查。
+**反模式**: 只论证一侧收益、另一侧只提一句（退化为普通主效应）；把"组合"写成"倒 U"却无两侧失效机制；两种收益实际同源却硬拆成 mix。
+
+**原文锚定**:
+> "when director appointments are concentrated among strategically dissimilar firms, with very few board ties to firms following similar strategies, a board may lack sufficient expertise to monitor the firm's current strategy"
+> "Such heterogeneity is likely to wed the knowledge and expertise requisite to monitor ongoing implementation of the current strategy with information and advice about possible strategic alternatives"
+
+<!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:theory_complementary_portfolio_dual_knowledge_mix -->
+
 ## 条件化 carve-out：cue/activation moderator（硬约束 #11 例外）
 
 > **适用范围**：硬约束 #11（"调节论证双边完整（high AND low）"）**不机械适用**于 cue-triggered / trait-activation moderation。当 moderator 是一个**特质相关 cue**、且 **low（cue 缺失）条件即特质默认表现型、已在主效应中作为基线论证过**时，双边覆盖可由以下两条满足，**不强制写冗余的 low 态段落**：

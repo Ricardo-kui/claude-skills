@@ -249,3 +249,40 @@ on conditions under which [experience] may or may not lead to [outcome].
 **原文锚点**: "The opposite view is that firms do not learn from failure experiences because their reactions are myopic in only focusing on the recent failure, there is too much uncertainty and complexity to be able to pinpoint underlying causes"（§3.1 首段）
 
 <!-- wb:anand_mukherjee_2024_learning_from_failures_di:contingency_reconciliation_opener -->
+
+
+### 变体 C：竞争维度 carve-out 句（static-vs-dynamic scope carve-out，zajac_westphal_2004 型）
+
+<!--
+pattern_id: rival_dimension_carveout_sentence
+build_type: 跨类型（竞争假设/反直觉预测的清场动作）
+source_papers: ["zajac_westphal_2004_asr"]
+confidence: medium
+status: VERIFIED
+verification_basis: "expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)"
+-->
+
+**适用**: 对手解释能覆盖因变量的**水平**却覆盖不了其**变化维度**（over time / across contexts / sign flip）——承认对手对既有事实的解释份额，把争点收窄到对手结构上无法解释的维度，而该维度正是本文理论焦点。变体 F（竞争假设）推导前的关键清场动作：先证明对手"够不着"争点，竞争假设才不是伪对立。
+
+**骨架**:
+```
+[部分承认对手解释力] Some [researchers] have suggested that [audience] react [direction]
+to [X] in part because [rival mechanism] ([citations]).
+[Carve-out] However, this perspective does not address the potential for [the dimension
+of variation at issue], which is the focus of our theory.
+```
+
+**原文锚点** (Zajac & Westphal 2004, ASR, H1 推导段):
+> "However, this perspective does not address the potential for market reactions to change from negative to positive over time, which is the focus of our theory."
+
+**与邻近语料的分工**:
+| 本句 | §3.2 "ignores/irrelevant" 回应标记 | Audience-Foil Pivot（§5b） |
+|---|---|---|
+| 承认部分解释力（in part because）+ 按维度收窄 | 直接判对手无关（无部分承认） | 切换评价受众 |
+| 后接竞争假设对（变体 F） | 后接文明指正 | 后接 focal 受众信号链 |
+
+**为什么有效**: "in part because" 先给对手应得的解释份额（避免稻草人），"does not address... which is the focus of our theory" 把维度差异（水平 vs 变化）说成结构性的——对手不是错了，而是根本没进入这个争点；竞争假设的对立性由此从"两派吵架"升级为"只有本文理论触及真问题"。
+
+**反模式**: 对手其实解释了该维度时不得使用（会被一句话反驳）；carve-out 后必须真的有假设/理论回应被 carve 的维度；每段都用会形成防御性节律（频次预算仍适用）。
+
+<!-- wb:zajac_westphal_the_social_construction_of_market_value:rival_dimension_carveout_sentence -->

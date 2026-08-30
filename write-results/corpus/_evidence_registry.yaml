@@ -5,10 +5,10 @@
 meta:
   schema_version: 1.1.0
   registry_type: estimator-slot-skeleton
-  last_updated: '2026-08-29'
-  last_batch_id: batch_37_westphalbednar2005
-  batches_processed: 37
-  total_papers_indexed: 38
+  last_updated: '2026-08-30'
+  last_batch_id: batch_38_westphal_residual_sync
+  batches_processed: 38
+  total_papers_indexed: 40
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
     granularity: per estimator（对应 corpus/[结果类型].md 文件）
@@ -291,6 +291,16 @@ estimators:
           - column_navigation
           - selection_correction
           corpus_path: corpus/OLS-FE.md
+        - id: r2_ols_estimation_strategy_split_sample
+          skeleton: "Given that all our dependent variables were [continuous scale] and that the independent variables were [continuous] or [categorical], [estimator] was the primary statistical technique employed. The entire sample was dichotomized at the median of the [moderator] measure, with those units falling below the median classified as [context A] and those falling above it classified as [context B]. Thus, we ran separate sets of regressions for each subsample ([context A] and [context B]) and another set using the product-term approach to test interaction effects. Tables [X] and [Y] present regression results."
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            om: 1
+          sources:
+          - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
+          notes: 'corpus OLS-FE.md 变体71：估计策略宣告 + median 分样本切分规则交底 + 分样本回归/product-term 复核双通道设计导航——调节变量类目型、假设 scope-conditioned 的设计'
+          corpus_path: corpus/OLS-FE.md
       R3:
         description: 主假设检验（四拍节奏）
         skeleton_variants:
@@ -431,6 +441,16 @@ estimators:
           notes: 'EXTEND r3_ols_four_beat_standard（corpus OLS-FE.md 变体64）：单一处理四拍升级为双处理并排对照——每假设后跟
             Wald 系数差检验（防"星号对比"质疑），幅度拍合并为一句跨 DV 百分比翻译，对照处理全程只报 does not/is not'
           corpus_path: corpus/OLS-FE.md
+        - id: r3_multi_indicator_hypothesis_adjudication
+          skeleton: "Results of the [regression] testing Hypothesis [N] support the prediction that [IV family] will be positively associated with [DV] in [context] ([Table X], Model [Y]). For example, the coefficients for [indicator_1], [indicator_2], and [indicator_3] were all positive and significant; although the coefficient for [indicator_4] was not significant, it was positive, as hypothesized. [Converse sentence for the reverse-predicting rival: \"Conversely, having more [IV variant B] was negatively associated with [DV].\"] These results held after we controlled for [rival predictor], which is consistently unrelated to [DV] in [context]."
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            om: 1
+          sources:
+          - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
+          notes: 'corpus OLS-FE.md 变体72：假设级多指标裁决——裁决拍前置（support the prediction），指标拍 For example 列举，不显著指标以方向正确从句并入支持证据，收口 held after we controlled for 内联排除 rival；填入时必须补幅度拍（原文无）'
+          corpus_path: corpus/OLS-FE.md
       R4:
         description: 交互效应 / 条件效应
         skeleton_variants:
@@ -522,6 +542,16 @@ estimators:
             分组（零/正）+ 组内 Wald（focal vs 对照 treatment）+ Chow 不显著时的降级句式（"consistent with ... although ...
             not significant"）三件套；亦服务 R6 诚实降级'
           corpus_path: corpus/OLS-FE.md
+        - id: r4_split_sample_primary_product_term_corroboration
+          skeleton: "[Context-B pattern sentence: \"[Moderator-conditioned IV form] is positively related to [DV] for all [N] dimensions of [IV], supporting Hypothesis [N] ([Table Y]).\"] At the same time, the results show that [simple-effect form] does not predict [DV] [in context B]. [Null mirror sentence for context A: \"In contrast, [simple-effect form] was significant in [context A] (Table X), while [moderator-conditioned form] was consistently unrelated to [DV].\"] We also conducted separate analyses using the product-term approach to test interactions between [moderator] and the independent variables, and the interactions were significant, consistent with the split-sample findings."
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            om: 1
+          sources:
+          - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
+          notes: 'corpus OLS-FE.md 变体73：分样本主检验 + 不显著侧写为确认性 null（does not predict）+ 末句 product-term 交互复核升级为正式交互证据——情境假设 scope-conditioned + 分样本主检验设计'
+          corpus_path: corpus/OLS-FE.md
       R5:
         description: 经济 / 实质显著性
         skeleton_variants:
@@ -594,6 +624,16 @@ estimators:
           notes: 'EXTEND r4_ols_threshold_group_coefficient_difference（组间差异裁决；corpus OLS-FE.md 变体65，槽位标注
             R4 亦服务 R6）：把"哪组显著"的镜像节奏与 Chow 不显著时的降级句式一并沉淀——先给 consistent with 再报 Chow 不显著，
             支持判断留给读者；null 组只报 does not/is not，不硬造幅度'
+          corpus_path: corpus/OLS-FE.md
+        - id: r6_cross_context_mirror_pattern_summary
+          skeleton: "Thus, the results consistently show that [IV variant A] increases [DV] in [context A] but does not do so in [context B]. The opposite pattern emerges in [context B]: [IV variant B] [direction] [DV], while [IV variant A] is [unrelated/negative]."
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            om: 1
+          sources:
+          - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
+          notes: 'corpus OLS-FE.md 变体74：跨情境镜像 null 的段落级收束——情境 B 中主效应变量失效的 null 本身是调节预测的一半，The opposite pattern emerges 钉死方向反转；分样本/情境劈叉设计 null 侧承载理论确证'
           corpus_path: corpus/OLS-FE.md
       R7:
         description: 稳健性 / 效度 / 敏感性检验
@@ -876,6 +916,16 @@ estimators:
             以 Preacher-Hayes bias-corrected CI 并行报告，粗粒度二手数据功效受限时以"at least partially ... conditional on
             ..."校准收束；generated-regressor SE 须带诚实边界'
           corpus_path: corpus/SEM-moderated-mediation.md
+        - id: r8_baron_kenny_continuous_mediation_separate_analysis
+          skeleton: "A separate analysis provided evidence that [mediator] mediated these relationships: when [mediator] is added to models of [DV1] and [DV2], the effects of the [IV] variables become nonsignificant, and the coefficient for [mediator] is strongly and positively significant in both models ([mediation citation])."
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            om: 1
+          sources:
+          - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
+          notes: 'corpus OLS-FE.md 变体75：LEGACY——连续 DV 双结果模型的 legacy Kenny 三步条件压缩进单个冒号句（separate analysis 包装）；写入时必须补 indirect-effect interval 或显式标 legacy，mediated 措辞降为关联读法'
+          corpus_path: corpus/OLS-FE.md
       R9:
         description: Results→Discussion 过渡
         skeleton_variants: []
@@ -5943,6 +5993,16 @@ estimators:
           - signal_interpretation
           notes: 填补 Patell+分组 CAR 主检验缺口；对照策略 null 正面报告；百分点幅度嵌入 R3
           corpus_path: corpus/事件研究法.md
+        - id: r3_eventstudy_figure_first_signflip_climax
+          skeleton: "Hypothesis [N] is tested in an event study analysis of [the focal events]. The results are displayed in Figure [X]. We assess the significance of [excess returns] using [the standard test statistic] ([citation]). As shown in Figure [X], [market reactions] were significantly positive in the [later period], consistent with results from the prior event study literature. However, the results also clearly show that [the response] became more positive over time and were significantly negative in the [early years of the time period]. These [negative responses] are significantly different from the [positive responses] in the later period, consistent with Hypothesis [N] (the difference in [test statistics] between the beginning and the end of the study period is significant at the [p <= .01] level). This [shift] in [the response] from [negative] to [positive] occurred even as [the countervailing evidence] was growing over the same period, as shown in Figure [Y]."
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - zajac_westphal_the_social_construction_of_market_value (American Sociological Review)
+          notes: 'corpus 事件研究法.md 变体14：图形先导时序符号反转高潮——figure-first 主检验载体是图不是表，期初 vs 期末 t 统计量差异检验替代系数解读，even as 悖论交叉引用把解释权交给 Discussion；跨期差异检验必须真实报告'
+          corpus_path: corpus/事件研究法.md
       R4:
         description: ''
         skeleton_variants:
@@ -6001,6 +6061,19 @@ estimators:
           - dual_verdict_close
           notes: corpus 事件研究法 变体12（Results Table 2 P2 段内转折）；保护段仅在主效应构念定义性先于调节变量时合法，纯统计 main effect 不得借用
           corpus_path: corpus/事件研究法.md
+      R6:
+        description: 非显著 / 竞争假设 null 裁决
+        skeleton_variants:
+        - id: r6_rival_hypothesis_null_adjudication_punchline
+          skeleton: "The results in Table [Z] consistently support Hypothesis [N]a: [the predictor] is [positively] associated with [the outcome], for all [three] event periods. Conversely, Hypothesis [N], the [rival-label] hypothesis, which argued that [rival mechanism], is not supported. Note that [the co-predictor] is also associated with [more positive outcome]. In effect, [the predictor family] predicts [the outcome] regardless of whether [the rival-relevant condition holds]. The results in Table [Z] also show support for Hypothesis [M]a. In particular, after controlling for [context controls], [the predictor] is [positively] associated with [the outcome]. This result, which holds for all [three] event periods, is consistent with our contention that [theoretical contention]. Accordingly, [the rival-label] hypothesis (Hypothesis [M]) is not supported."
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - zajac_westphal_the_social_construction_of_market_value (American Sociological Review)
+          notes: 'corpus 事件研究法.md 变体15：竞争假设配对裁决——支持—Conversely 反证连珠（null 是裁决的另一半），对手 null 句内嵌 rival 标签与机制复述，In effect 实质收束升维为预测元家族判断，跨窗一致性拍替代逐窗罗列；null 只裁决理论胜负，不得改写为机制不存在'
+          corpus_path: corpus/事件研究法.md
       R7:
         description: ''
         skeleton_variants:
@@ -6036,6 +6109,16 @@ estimators:
           - unbiased_confirmation
           notes: null λ 不能证明无内生性；因果语言优先 associated with
           corpus_path: corpus/事件研究法.md
+        - id: r7_design_parameter_dual_justification
+          skeleton: "[Prior literature] often [uses subgroup analyses]. Several authors have advocated [the regression approach] instead, in order to control for possible third variables ([citation]). Given that [the data structure], [threat] could occur ([citation]). We use [primary correction] to correct for [the threat]. In separate analyses we use [alternative correction], and the results are very similar ([citation]). ... To ensure that our results are not sensitive to this research design, we conducted two sets of additional analyses [with alternative parameter choices], and the results were consistent with those we report below. A relatively short [window] seems justified, given that [units] typically have no obvious [economic] reason for [the delayed behavior], and [the relevant audience] would not expect such a delay. And from an empirical standpoint, [units] that [comply] typically do so shortly after [adoption] ([quantified empirical detail])."
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - zajac_westphal_the_social_construction_of_market_value (American Sociological Review)
+          notes: 'corpus 事件研究法.md 变体17：前置 Analysis 段设计参数双重正当化——估计器/序列相关/样本窗辩护在 Results 前一次交代，设计参数用经济逻辑 + 量化经验证据双轨正当化，主备修正配对 + 替代参数预算式声明；经验佐证必须来自真实计算'
+          corpus_path: corpus/事件研究法.md
       R8:
         description: ''
         skeleton_variants:
@@ -6064,6 +6147,16 @@ estimators:
           - hardest_case_test
           - concessive_structure
           notes: corpus 事件研究法 变体13（Results Table 2 P3 假设范围外延伸段）；范围外结果与理论冲突时须如实报告为边界发现，不得包装为强检验
+          corpus_path: corpus/事件研究法.md
+        - id: r8_rival_mechanism_falsification_battery
+          skeleton: "It might be suggested that [the headline finding] obtains despite [the countervailing evidence] because (1) [alternative explanation A], or (2) [alternative explanation B]. To examine these possibilities, we conducted supplementary analyses of [the rival mechanism]. We used [data] for a random sample of [N] [units] from [frame] from [period]. We estimated [two measures of the rival outcome] using [panel estimator], but results were robust to the [alternative estimator]. As shown in Table [W] of the Appendix, [the focal intervention] does not have a significant effect on either measure of [the rival outcome]. The interaction of [intervention] and [time] is also not significant: [the rival effect] does not increase or decrease over time. This result was robust to the specification of [alternative lag structures]. Thus, our findings regarding [the headline outcome] are not an artifact of [the rival mechanism] or of the change in such [benefits] over time."
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - zajac_westphal_the_social_construction_of_market_value (American Sociological Review)
+          notes: 'corpus 事件研究法.md 变体16：对手最佳反驳封堵段——It might be suggested that 替怀疑者把话说完，编号 fork 一一对应三重 null 载荷（水平 null / 时间交互 null / 滞后稳健），not an artifact of 判决句把检验性 null 升级为对 headline 的保护；null 只封堵已陈述的解释版本'
           corpus_path: corpus/事件研究法.md
       R9:
         description: ''

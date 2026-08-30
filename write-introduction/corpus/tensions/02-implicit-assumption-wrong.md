@@ -161,6 +161,28 @@ Inadequacy 问题化的核心 Tension：不是"文献遗漏了东西"，而是"�
 
 ---
 
+
+### 变体 H：主导解释证据失衡型（carpenter_westphal_2001 型）
+
+**模板**:
+> "Prior empirical studies have focused primarily on [dominant_explanatory_factor] as an explanation for [limited_outcome] ([citations]). However, as [recent_review]'s review of the literature suggests, there is little consistent evidence that [dominant_explanatory_factor] increases [outcome]."
+
+**来源**: carpenter_westphal_2001 (AMJ), P3
+
+**原文锚定**:
+> "However, as Westphal's (1998: 530) recent review of the literature suggests, there is little consistent evidence that board independence or 'structural power' increases board involvement in strategic decision making."
+
+**关键特征**:
+- 借领域内权威综述（而非作者自陈对立发现）宣告主流解释证据薄弱——用综述的合法性压低既有解释变量
+- 反证指向"证据不一致"（little consistent evidence），是系统性证据薄弱而非单点反例
+- 缺口从主流解释变量（power/independence）整体转向被忽视的替代维度（knowledge/capability），为替换解释变量铺路
+
+**适用**: Inadequacy × Mechanism；主流解释变量实证虽多但结果相互矛盾时，用综述背书宣告证据失衡，再引入新解释变量或新视角
+
+**禁忌**: "little consistent evidence" 必须有真实存在的综述/元分析支撑；不可凭单篇 null 结果宣称证据系统性不一致
+
+<!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:tension_dominant_explanation_evidence_gap -->
+
 ### 变体 F：混合发现 → 暴露稳定效应假设 → 宏观事件激活型（Reinwald et al. 2026 型）
 
 **验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
@@ -209,6 +231,33 @@ Inadequacy 问题化的核心 Tension：不是"文献遗漏了东西"，而是"�
 - “事件后斜率不显著”只能写为观察窗内未检测到衰减，不能写成永久效应。
 
 ---
+
+
+### 变体 I：对手框架推论自证型（zajacwestphal2004 型）
+
+**验证状态**: VERIFIED / expert_audit_override（Westphal 系裁决：用户点名最爱学者，引言单源足矣；仅作 `section_variant`）。**gap 分类**：纯 Inadequacy（对手框架的内核前提推出可被数据反转的推论）。
+
+**模板**:
+> "Moreover, from this perspective, if [observable evidence E existed], then [the dominant framework's own logic] implies that [actors] should [prediction R]. [The study then treats R as the rival's falsifiable prediction and lets the data reverse it.]"
+
+**来源**: Zajac and Westphal (2004), *American Sociological Review*, Introduction, P3 末句。
+
+**原文锚定**:
+> "Moreover, from this perspective, if there is evidence that firms often adopt, but do not implement a corporate policy (i.e., efficiency benefits are not realized), then the stock market should incorporate this evidence and discount the value of the policy."
+
+**关键特征**:
+1. 不由作者评述对手弱点，而是让对手框架从自己的前提推出一个可检验推论——对手以最强形式出场。
+2. 句式锚点 "from this perspective, if [evidence], then [actor] should [R]"：推论 R 必须是该框架内核前提（如市场有效性/理性学习）的直接后果，不是外挂稻草人。
+3. 为 Theory 的 paired rival hypotheses（对手假设在前、满强度陈述）与 Results 的 falsification rhythm 铺路——intro 里立的推论，后文由数据裁决。
+4. 与跨场域过程迁移桥接型（01 文件）配对使用：桥接句立缺口，推论句锐化缺口。
+
+**适用**: 对手是主导框架且拥有清晰内核前提（效率市场、理性学习、信号传递等）的研究；Inadequacy × Mechanism 贡献；后续设计能实际检验推论 R 时。
+
+**禁忌**: 推论必须是框架前提的忠实演绎——若对方学者会拒绝该推论，即为稻草人（违反本文件"不要制造稻草人假设"反模式）；数据不能检验 R 时不要使用，否则 intro 承诺悬空。
+
+---
+
+<!-- wb:zajac_westphal_the_social_construction_of_market_value:tension_rival_corollary_falsifiable_prediction -->
 
 ## 组装规则
 

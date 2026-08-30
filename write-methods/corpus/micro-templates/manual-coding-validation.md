@@ -119,3 +119,26 @@ updated: 2026-05-22
 
 **验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
 
+
+
+### 变体 B：问卷量表开发效度链（carpenterwestphal2001 型）
+
+**模式**: 预测试 → 题项依据 → 反偏差设计 → 信度 → 因子效度 → 因子计分，六环相扣，每环配方法论文献。
+
+```
+[预测试] To enhance the construct validity of the survey measures, we conducted a pretest involving in-depth pilot interviews with [N] [target respondents] ([methodology citation]).
+[题项依据] The wording of each question was developed from available [qualitative research] ([citations]) suggesting how [respondents] describe [the construct domain]; in addition, we used feedback from the pilot interviews to further improve the clarity and face validity of each question.
+[反偏差设计] Multiple response formats were used to reduce response bias, and items measuring each construct were scattered throughout the survey ([citation]); moreover, we carefully worded questions to minimize the likelihood of [social desirability] bias.
+[信度] Cronbach's alpha for this scale was [.88], suggesting acceptable interitem reliability ([citation]).
+[因子效度] After a factor analysis was applied to the survey items using the [iterated principal factors] method, a scree test indicated [k] common factor(s), and [promax] rotation verified that all items loaded on the same factor as expected, with loadings for each item greater than [.5].
+[区分效度双界] [Rotation] indicated that the [construct A] and [construct B] items loaded on different factors as expected, with loadings for each item greater than [.5] on one factor and less than [.2] on the other.
+[计分收口] Thus, we estimated [factor scores] using the [Bartlett] method ([citation]).
+```
+**要点**:
+- 区分效度用"双界载荷"判据（目标因子 >.5 且竞争因子 <.2）——比单报告载荷更有判别力，可直接迁移
+- 每个程序名（scree test / promax / Bartlett）照写并配文献，不解释教科书内容
+- 题项"依据链"（质性文献 → 预测试反馈 → face validity）把测量扎根于既有质性研究，是问卷构念效度的正面论证
+**诚实边界**: 本链是 1990s-2000s AMJ 惯例链；当代投稿通常还需 CFA 拟合指数与 HTMT，不要照抄当作充分条件。
+**范文锚点**: "To enhance the construct validity of the survey measures, we conducted a pretest involving in-depth pilot interviews with 22 top managers and board members (cf. Fowler, 1993: 102). ... we carefully worded questions to minimize the likelihood of social desirability bias."
+
+<!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:m3_survey_scale_development_validity_chain -->

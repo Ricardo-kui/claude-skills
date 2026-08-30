@@ -593,6 +593,47 @@ confidence: medium
 status: EMERGING
 -->
 
+
+### 变体 C：个体-单元双层平行假设集 + 中介份额声明（Multilevel Parallel Sets with Mediator-Portion Split）
+
+<!--
+pattern_id: multilevel_parallel_hypothesis_sets_mediator_portion
+build_type: 机制推演型（跨层假设组织；机制推演/调节效应型通用）
+source_papers: ["carpenterwestphal2001_AMJ"]
+confidence: high
+status: VERIFIED — expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)
+-->
+
+**适用场景**: 机制链跨层（个体心理状态 → 单元集体行为），数据在两层都可观测；需要把一条中介链拆成两条可各自检验的假设路径，同时保持读者看到的是**一个**中介论证而非两个断裂的假设。
+**排列模式**: Mediator-Portion Split → Unit-Level Extension → Cross-Set Parallelism
+**范文来源**: Carpenter & Westphal (2001, AMJ)
+
+**骨架**:
+```
+[中介链声明] In effect, [actor]'s [perceived ability M] is expected to mediate the
+effect of [IV] on [behavior Y] ([mechanism recap, 1 句]).
+[份额声明] The first hypothesis, which predicts that [IV] will increase [M],
+concerns one portion of this mediated relationship.
+[单元层扩展] Two additional hypotheses address the overall, [unit]-level relationship
+between [aggregate IV] and actual [unit behavior Y1/Y2] ([mechanism: why aggregate
+individual states become unit behavior, 1-2 句]).
+[H set a/b/c] [H_a: IV → M at individual level.] [H_b: IV → Y1 at unit level.]
+[H_c: IV → Y2 at unit level.]
+[跨集平行] The next [context] set: Hypothesis [N]a, which parallels Hypothesis [M]a,
+addresses [mirrored claim]. [Two additional hypotheses, [N]b and [N]c, which parallel
+Hypotheses [M]b and [M]c, address ...]
+```
+
+**为什么有效**: "concerns one portion of this mediated relationship" 一句话把 [H_a] 定位为中介链的可见片段，读者自动补全未假设的 [M]→[Y] 段，避免被迫假设跨层 [M]→[Y]（该段常无个体层数据）；"parallels Hypothesis [M]a" 让第二个假设集零成本继承第一个集的全部结构，读者只需追踪情境差异。
+**注意事项**: 份额声明必须在 H_a 之前先完整陈述中介逻辑（不能先假设后补中介）；单元层扩展需 1-2 句组合机制（个体状态如何聚合为单元行为），否则跨层跳跃；平行声明只复制结构不复制内容——新集的机制差异必须重新论证。
+**反模式**: 把 H_a/H_b/H_c 写成三个独立假设而无中介链声明；跨层假设不说明聚合机制；平行集中重复整段相同论证（应只论证情境差异）。
+
+**原文锚定**:
+> "In effect, a director's perceived ability to contribute to decision making is expected to mediate the effect of appointments to other boards on involvement in monitoring and advice interactions."
+> "The first hypothesis, which predicts that strategically related board appointments will increase a director's perceived ability to contribute to decision making, concerns one portion of this mediated relationship."
+
+<!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:theory_multilevel_parallel_hypothesis_sets_mediator_portion -->
+
 ## Pattern: Dual-Role IV → Shared-Logic Compressed T5
 
 **适用场景**: 两条对立力量构成 trunk；同一组行动者特征既有独立主效应，又调节 trunk 上的每条力量；交互数量多（≥4）且共享同一短/长期逻辑，不宜每条交互独立成节。

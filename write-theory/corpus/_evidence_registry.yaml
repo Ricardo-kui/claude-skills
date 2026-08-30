@@ -6,11 +6,11 @@
 meta:
   schema_version: "1.0.0"
   registry_type: theory-fragment-registry
-  last_updated: "2026-08-29"
-  total_papers_indexed: 72
-  batches_processed: 30
+  last_updated: "2026-08-30"
+  total_papers_indexed: 74
+  batches_processed: 31
   auxiliary_sources_note: "Entries with source_tier: auxiliary are writing-craft books, not empirical papers. They register provenance and stay EMERGING until the pattern is cross-validated in empirical paper distills; they never count toward VERIFIED/ROBUST paper_count thresholds on their own."
-  latest_batch_note: "2026-08-29 Westphal & Bednar 2005 ASQ (Pluralistic Ignorance in Corporate Boards, 整篇蒸馏 writeback, expert_audit_override: 用户 2026-08-29 点名 Westphal 为最喜爱学者、写作学习首选模板，Westphal 系第 6 篇，单源即 VERIFIED): ADD mechanism_precondition_context_amplifier (argumentation_patterns 模式F) + rival_construct_opposing_sign_disambiguation (argumentation_patterns 模式E) + willingness_opportunity_dual_path_moderation (moderator_selection_frameworks 框架B) + actor_scoping_two_reasons_boundary (board_governance_boundary_condition 模式A) + group_level_construct_justification (construct_definition 句式N) + embedded_assumption_declaration (hypothesis_forms 句式F) + levels_rhetoric_labeled_moderator_opener (leitmotif-section-opener 句式A); EXTEND collective_decision_rule_trap (mechanism_chain 句式C) + self_reinforcing_spiral_loop_sentence (mechanism_chain 句式B) + comparative_misconception_hypothesis_form (hypothesis_forms 句式E) + mediated_moderation_two_part_hypothesis (hypothesis_forms 句式D), tfr_199-209. _index.md 快速决策表已同步 2 行。"
+  latest_batch_note: "2026-08-30 Westphal 系双篇 residual 补登记（Carpenter & Westphal 2001 AMJ + Zajac & Westphal 2004 ASR，变体块已由主循环写回，本批仅 registry/index 元数据同步，全部 VERIFIED per expert_audit_override: 用户点名 Westphal 为最喜爱学者，引言/理论单源足矣）: ADD carpenterwestphal2001 tfr_219-223（反假设驳斥式开场 arrangement_patterns 变体A / 情境劈叉共同机制干 E_moderation 变体C / 互补组合型双边论证 bilateral_argumentation_templates 变体B / 个体-单元双层平行假设集+中介份额声明 hypothesis_organization_patterns 变体C / How-then-might 机制枢纽问句 leitmotif-section-opener 句式B）与 zajac_westphal_2004 tfr_224-227（F 技巧4 分离编号回指竞争对+期界基线+跨政策推广 → F 源数 2→3 升 VERIFIED，next_batch_targets.competing_hypotheses 已同步 / 假设句分离编号回指竞争对 hypothesis_forms / 竞争维度 carve-out 句 acknowledgment_response 变体C / 同一测量的对立读法 evidence_patterns）。_index.md 行注已同步。"
   note: "Reverse-engineered from existing corpus anchors. Batch 2026-07-09: distilled 4 recall papers (Darby 2023 MSOM, Mayo 2022 POM, Ball 2018 JOM, Darby 2026 JOM) into subprotocols and registry. Batch 2026-07-10: expanded Cui, Yang & Vertinsky (SMJ) with inverted-U mechanism, bilateral argumentation, flatten/steepen language, and local closure templates. Batch 2026-07-22: distilled Li, Bapuji, Talluri, Singh & Narayanan (2025 JSCM, Vertical Spillover of Product Recalls) — added dual_mechanism_convergent_moderation pattern to bilateral_argumentation_templates.md (moderator×mechanism matrix) and registered H1 dual-mechanism convergence under existing dual_mechanism_same_direction. Batch 2026-07-22b: distilled Cutolo & Ferriani (2024 JOM, narratives & atypicality) — added minimal_pair_contrast_vignette pattern to argumentation_patterns.md (Leah controlled-contrast showing device); registered parallel_buffering_moderators_single_mechanism; cutolo_ferriani also a 2nd source for write-introduction theory-lens/02-dual-theory-layered (processing fluency + Bloom & Lahey taxonomy). Batch 2026-07-22c: distilled Falchetti, Cattani & Ferriani (2022 SMJ, Start with Why) — added congruency_fit_fluency_mechanism to sentences/mechanism_chain.md (genuine gap; spans Falchetti + Cutolo); CORRECTED misclassification of falchetti_2022_smj (was construct_differentiation tfr_017, has no such content) → reclassified to congruency mechanism; construct_differentiation source_count 5→4. Falchetti intro hook (23-popular-debate) and Methods (多研究 变体1/2, 实验 变体1) already distilled in prior sessions. Batch 2026-07-28: backfill + wiring batch — registered two auxiliary sources whose fragments entered corpus in the 2026-07-27/28 waves but were never registered: Booth/Williams/Colomb (The Craft of Research, premise soundness gate + warrant tests + acknowledgment-response matrix + voice firewall → reasoning_soundness_protocol.md, acknowledgment_response.md) and Greene & Lidinsky 2017 (Rogerian four-step → acknowledgment_response.md §5; fallacy probes → reasoning_soundness_protocol.md §8). Same batch wired the registry into consumption: corpus/_index.md selection-stage pointer, write-theory/SKILL.md resource-loading clause, distill-theory-exemplar Phase 4 registry-writeback protocol. Registry previously orphaned (no .md referenced it) since creation. Batch 2026-08-03: distilled Schumacher, Keck & Tang (2020, SMJ); added the belief-updating/attention-threshold reversal pattern as EMERGING. Reference-level writeback was explicitly authorized by the user; no core routing or mandatory-slot rule was changed. Batch 2026-08-28: distilled Wowak, Ball, Post & Ketchen (M&SOM, female directors → product recall decisions), tfr_182-187, all VERIFIED per user expert_audit_override (产品召回为主研究领域单源足矣); context_assigned_margin_split additionally registered as a core_candidate observation item in _skill_design_feedback.yaml. Batch 2026-08-28b: distilled Westphal & Zajac (1998, ASQ, The Symbolic Management of Stockholders), tfr_188-195, all VERIFIED per user expert_audit_override (公司治理/符号管理为主研究领域单源足矣); 8 fragments across B_mechanism_elaboration (交替对立再诠释 + 硬/软数字测量重构), argumentation_patterns (判别式替代解释排除 + 两极之间假设声明), hypothesis_derivation_patterns (符号替代-预防-固权), hypothesis_organization_patterns (受众异质性 pivot), hypothesis_forms (实施权变从句), moderation (编号双 DV 交互). Batch 2026-08-29: distilled Post, Lokshin & Boone (2022, AMJ, What Changes After Women Enter Top Management Teams? A Gender-Based Model of Strategic Renewal), tfr_196-198, all VERIFIED per user expert_audit_override (用户点名喜爱本篇，单源足矣); 3 fragments across hypothesis_organization_patterns (中介配对分流→共享重构主干), hypothesis_forms (时间分阶 Δ 假设), moderator_selection_frameworks (新声音整合轴); _index.md 快速决策表已同步."
 
 status_rules:
@@ -2484,6 +2484,105 @@ source_papers:
         verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: "单个调节假设推导支内先自陈 moderator 可能无用 的反可能（superficial response-only learning），再以非编码知识↔能力吸收的互补性挽救，收敛到同向预测——双边论证的支内迷你版。corpus bilateral_argumentation_templates.md 变体A。"
 
+  carpenter_westphal_2001_strategic_context_of_external_ne:
+    display_name: "Carpenter & Westphal (2001, AMJ)"
+    journal: "Academy of Management Journal"
+    year: 2001
+    subfield: "strategy"
+    theory_build_type: "机制推演型（主）+ 调节效应型（E 路由情境劈叉）"
+    citekey: "carpenterwestphal2001"
+    fragments:
+      - fragment_id: tfr_219
+        type: counter_assumption_refutation_opening
+        title: "反假设驳斥式开场（Counter-Assumption Refutation Opening）"
+        home_files:
+          - "subprotocols/arrangement_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)"
+        note: "一边倒方向共识降格为隐含假设，再以机制性理由反转（Evidence-Contrast 排列）；can enhance or diminish 双向措辞把方向之争转为条件之争，为情境化假设集铺路。corpus arrangement_patterns.md 变体A。"
+      - fragment_id: tfr_220
+        type: context_split_common_trunk_paired_hypothesis_sets
+        title: "情境劈叉共同机制干 + 成对条件化假设集（Context-Split Common Trunk, Paired Hypothesis Sets）"
+        home_files:
+          - "variants/E_moderation.md"
+        makadok_dimension: "Boundary"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)"
+        note: "同一机制干解释 X→Y，类目型情境作 scope condition 劈叉为两组逐条平行的条件前置假设集（替代连续交互项调节）。corpus E_moderation.md 变体C（E5 之后，情境劈叉共同机制干）。"
+      - fragment_id: tfr_221
+        type: complementary_portfolio_dual_knowledge_mix
+        title: "互补组合型双边论证（Complementary-Portfolio Dual-Knowledge Mix）"
+        home_files:
+          - "subprotocols/bilateral_argumentation_templates.md"
+        makadok_dimension: "Boundary"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)"
+        note: "两个对立 IV 形态各自携带不可互替的知识收益 + 各有机制性失效条件，预测收敛于异质互补组合而非单调方向或倒 U。corpus bilateral_argumentation_templates.md 变体B。"
+      - fragment_id: tfr_222
+        type: multilevel_parallel_hypothesis_sets_mediator_portion
+        title: "个体-单元双层平行假设集 + 中介份额声明（Multilevel Parallel Sets with Mediator-Portion Split）"
+        home_files:
+          - "subprotocols/hypothesis_organization_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)"
+        note: "concerns one portion of this mediated relationship 份额声明把 H_a 定位为中介链可见片段（免于跨层 M→Y 假设），parallels Hypothesis N 跨集平行声明让新假设集继承结构。corpus hypothesis_organization_patterns.md 变体C。"
+      - fragment_id: tfr_223
+        type: rhetorical_question_mechanism_pivot
+        title: "机制枢纽修辞性问句（How-then-might Pivot）"
+        home_files:
+          - "sentences/leitmotif-section-opener.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)"
+        note: "How then might ... ? 自问句把读者从框架理解切换到机制推导，问句后必须紧跟 We suggest that 分支判断。corpus leitmotif-section-opener.md 句式B。"
+
+  zajac_westphal_the_social_construction_of_market_value:
+    display_name: "Zajac & Westphal (2004, ASR)"
+    journal: "American Sociological Review"
+    year: 2004
+    subfield: "strategy"
+    theory_build_type: "竞争假设型（F 路由 R3 签号翻转）"
+    citekey: "zajac_westphal_the_social_construction_of_market_value"
+    fragments:
+      - fragment_id: tfr_224
+        type: F_anaphoric_sign_flip_pair_cross_policy
+        title: "分离编号回指竞争对 + 期界基线 + 跨政策推广（Zajac & Westphal 2004 技巧块）"
+        home_files:
+          - "variants/F_competing_hypotheses.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)"
+        note: "变体 F 第 3 源（wowak2025 → fang2025 → zajac_westphal_2004，达 VERIFIED 阈值）：分离编号 H[N]/H[N]a + 回指短语绑定的重量级竞争对，期界基线为签号翻转提供时间舞台，跨政策推广验证裁决非单政策特异。corpus F_competing_hypotheses.md 技巧 4。"
+      - fragment_id: tfr_225
+        type: hypothesis_sign_flip_anaphoric_pair_sentence
+        title: "分离编号回指竞争对假设句（Anaphoric Disjoint-Numbered Competing Pair）"
+        home_files:
+          - "sentences/hypothesis_forms.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)"
+        note: "两竞争假设陈述句逐字相同仅方向词相反，独立编号 + in opposition to / alternative to 回指收敛短语绑定。corpus hypothesis_forms.md 分离编号回指竞争对（zajac_westphal_2004 型）。"
+      - fragment_id: tfr_226
+        type: rival_dimension_carveout_sentence
+        title: "竞争维度 carve-out 句（static-vs-dynamic scope carve-out）"
+        home_files:
+          - "sentences/acknowledgment_response.md"
+        makadok_dimension: "Boundary"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)"
+        note: "in part because 部分承认对手对水平的解释力，does not address ... which is the focus of our theory 把争点收窄到对手结构上够不着的维度（over time 符号翻转）。corpus acknowledgment_response.md 变体C。"
+      - fragment_id: tfr_227
+        type: rival_readings_same_measure
+        title: "同一测量的对立读法作为竞争裁决面（Rival Readings of the Same Measure）"
+        home_files:
+          - "subprotocols/evidence_patterns.md"
+        makadok_dimension: "Constructs"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)"
+        note: "同一 DV 数据在两套理论下认识论身份不同（客观效率信号 vs 符号价值的社会量化），竞争检验同时裁决预测符号与测量解释；与 westphal_zajac_1998 硬/软数字测量重构为姊妹模式。corpus evidence_patterns.md 同名 Pattern。"
+
 # Cross-paper pattern aggregation (derived above)
 patterns:
   shared_orientation_divergent_outcomes_selective_remedy:
@@ -3357,10 +3456,12 @@ next_batch_targets:
       - "pontikes_2012_asq"
     note: "Add second pure qualitative process study to validate D variant."
   - pattern: "competing_hypotheses"
-    papers_needed: 2
+    papers_needed: 0
     current_sources:
       - "wowak_2025_ms"
-    note: "Add F variant exemplars from AMJ/ASQ/OS."
+      - "fang_et_al_2025_rival_recall_ad_spend"
+      - "zajac_westphal_the_social_construction_of_market_value"
+    note: "F 变体源数 2→3（新增 Zajac & Westphal 2004 ASR 技巧 4），达 VERIFIED 阈值（3+ 论文），从待补目标移出。"
   - pattern: "dual_edged_signed_enhancing_hindering_contingencies"
     papers_needed: 2
     current_sources:

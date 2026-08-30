@@ -631,7 +631,7 @@ evidence:
         common_revise_reasons: []
   tensions:
     01-despite-progress-unaddressed:
-      paper_count: 34
+      paper_count: 36
       papers:
       - ahmadi2017 (JMS)
       - cancellieri2023 (SMJ)
@@ -667,8 +667,10 @@ evidence:
       - westphalzajac1995 (AMJ)
       - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
       - wowak_2020_female_directors_recalls (Manufacturing & Service Operations Management)
+      - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
+      - zajac_westphal_the_social_construction_of_market_value (American Sociological Review)
       gap_distribution:
-        Incompleteness: 25
+        Incompleteness: 27
         Inadequacy: 0
         Incommensurability: 0
       status: ROBUST
@@ -684,7 +686,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     02-implicit-assumption-wrong:
-      paper_count: 15
+      paper_count: 17
       papers:
       - ceo_regulatory_focus_ijrm (IJRM)
       - employee_free_speech (OS)
@@ -701,8 +703,10 @@ evidence:
       - zhao_ding2022 (OS)
       - reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science)
       - fini_jourdan_perkmann_2017 (AMJ)
+      - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
+      - zajac_westphal_the_social_construction_of_market_value (American Sociological Review)
       gap_distribution:
-        Incompleteness: 1
+        Incompleteness: 3
         Inadequacy: 14
         Incommensurability: 0
       status: ROBUST
@@ -1345,7 +1349,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     02-synthesized-coherence:
-      paper_count: 9
+      paper_count: 10
       papers:
       - employee_free_speech (OS)
       - gamache2020 (SMJ)
@@ -1356,8 +1360,9 @@ evidence:
       - shipilov2020 (SMJ)
       - singh2023 (JMR)
       - zhao_ding2022 (OS)
+      - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
       gap_distribution:
-        Incompleteness: 2
+        Incompleteness: 3
         Inadequacy: 7
         Incommensurability: 0
       status: ROBUST

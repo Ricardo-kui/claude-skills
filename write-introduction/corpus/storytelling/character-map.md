@@ -104,3 +104,30 @@ dependencies: []
 | 群演越级 | Introduction 中讨论控制变量 | 删除或移至 Methods |
 | 主角缺席 | 前 3 段没有明确的核心构念 | 在 Hook 中暗示主角 |
 | 角色混淆 | 同一个构念在不同段落扮演不同角色 | 统一角色定位，必要时拆分构念 |
+
+
+### 模式 A：DV-as-protagonist 竞争性测度 staging（zajacwestphal2004 型）
+
+**验证状态**: VERIFIED / expert_audit_override（Westphal 系裁决：用户点名最爱学者，引言单源足矣；仅作 `section_variant`）。**适用层**：story architecture——不绑定单一 Gap 类型。
+
+**模板**:
+> "[Dominant framework] conceives [DV-measure M] as [a reliable, historically invariant indicator of quality Q] ([citations]). We develop [alternative framework] under which M is [constructed data] that reflect [what the aggregate certifies: S], not [Q itself]."
+
+**来源**: Zajac and Westphal (2004), *American Sociological Review*, Introduction, P3（对手角色化句）+ P6（己方角色化句 "stock market reactions to corporate policies are socially constructed"）。
+
+**原文锚定**:
+> "Theories of capital markets are dominated by a financial economics perspective in which the stock market's reaction to a policy adoption is conceived as a reliable, historically invariant indicator of the efficiency benefits gained from adopting the policy."
+
+**关键特征**:
+1. 给 DV（或其测度）两个互斥的角色化描述：对手版（"a reliable, historically invariant indicator of Q"）vs 己方版（"socially constructed aggregate"）——全文读作对"这个测度到底是什么"的裁决。
+2. 己方版重构的是"这个数在测什么"，不是"这个数是多少"——不争符号方向，争测度的本体地位（objective data → subjective, socially constructed data）。
+3. 对手版先给满强度并挂权威引用，己方版随后相邻段给出；后续每个模块（tension/theory lens/preview/contribution）都回收这一测度之争。
+4. 与本文件"DV 为主角"判定规则衔接：主角不是 DV 的数值，而是"测度的含义"——主角自带着一个待裁决的问题出场。
+
+**适用**: DV 是聚合性市场/社会测度（股价反应、评级、声誉分、指数等），其解释权在两套理论间存在真实争夺时；与 bridge-as-gap 桥接张力、对手推论变体天然配套。
+
+**禁忌**: 测度的"constructed"读法必须有理论支撑（构念+机制），否则沦为修辞口号；若 DV 只是普通操作化变量、无解释权争夺，套用此模式会显得夸大。
+
+---
+
+<!-- wb:zajac_westphal_the_social_construction_of_market_value:dv_as_protagonist_contestable_measure_staging -->

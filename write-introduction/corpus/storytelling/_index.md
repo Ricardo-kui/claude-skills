@@ -18,7 +18,7 @@ dependencies: []
 |------|------|-------------|------|
 | `central-knot-diagnostic.md` | Central Knot 诊断流程 | Ch02 | write-introduction |
 | `central-knot-throughout-check.md` | Central Knot 贯穿检查（输出后） | Ch02 | write-introduction |
-| `character-map.md` | 构念到叙事角色的映射 | Ch02 | write-introduction |
+| `character-map.md` | 构念到叙事角色的映射 | Ch02 | write-introduction；模式 A：DV-as-protagonist 竞争性测度 staging（DV 两个互斥角色化描述，全文裁决测度含义），zajacwestphal2004，VERIFIED / expert_audit_override（Westphal 系裁决） |
 | `reader-conversion-sequence.md` | Title→Abstract→Introduction 漏斗一致性 | Ch05 | write-introduction |
 | `daviss-index.md` | Davis's Index of the Interesting（26 种有趣性） | Ch05 | write-introduction |
 | `tension-escalation-protocol.md` | 模块能量级定义与断裂检测 | Ch02 | write-introduction |
