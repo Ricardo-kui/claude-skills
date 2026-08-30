@@ -48,7 +48,7 @@ def load_benchmark(path: Path = BENCHMARK_PATH) -> dict:
 
 def snapshot(path: Path = BENCHMARK_PATH) -> dict:
     data = load_benchmark(path)
-    corpus = SKILL_ROOT / "academic-writing-corpus"
+    corpus = SKILL_ROOT / "corpus"
     digest = hashlib.sha256()
     for item in sorted(corpus.rglob("*")):
         if item.is_file() and item.suffix in {".md", ".yaml"}:

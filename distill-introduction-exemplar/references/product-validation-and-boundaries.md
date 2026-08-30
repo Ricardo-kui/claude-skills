@@ -42,8 +42,8 @@
 ## 外部资产位置
 
 - **外置协议文件**: `../protocols/`（quick_reference.md、batch_mode.md、story_architecture_fields.md、profile_template.md、phase4_output_blocks.md、corpus_file_templates.md、product_validation.md、json_output_schema.md）
-- **write-introduction 语料库**: `../../write-introduction/academic-writing-corpus/`（hooks/, tensions/, stakes/, literature-turns/, previews/, transitions/）
-- **共享证据注册表**: `../../write-introduction/academic-writing-corpus/_evidence_registry.yaml`（distill 写入，write-introduction 消费）
+- **write-introduction 语料库**: `../../write-introduction/corpus/`（hooks/, tensions/, stakes/, literature-turns/, previews/, transitions/）
+- **共享证据注册表**: `../../write-introduction/corpus/_evidence_registry.yaml`（distill 写入，write-introduction 消费）
 - **现有语料库索引（本机路径，不随 repo 同步）**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/introduction/mvp30/_mvp30_introduction_index.md`（待创建）
 - **蒸馏产出存放（本机路径，不随 repo 同步）**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/introduction/mvp30/fine_grained/batch_*/[paper]_distilled_introduction.md`
 - **成品验证报告存放（本机路径，不随 repo 同步）**: `D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/introduction/mvp30/fine_grained/validation_runs/[date]_validation_report.md`

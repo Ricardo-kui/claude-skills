@@ -6,10 +6,10 @@
 
 ## 批量模式上下文管理（Incremental Batch Strategy）
 
-> **路径基准**：本文件中 `academic-writing-corpus/...` 路径指**兄弟技能** `write-introduction` 的语料库，即 `../write-introduction/academic-writing-corpus/...`（与 `_update_registry.py` 的路径解析一致）；`protocols/...` 等相对路径以本 SKILL.md 所在目录为基准。
+> **路径基准**：本文件中 `corpus/...` 路径指**兄弟技能** `write-introduction` 的语料库，即 `../write-introduction/corpus/...`（与 `_update_registry.py` 的路径解析一致）；`protocols/...` 等相对路径以本 SKILL.md 所在目录为基准。
 
 > **问题**：30 篇论文 × 每篇 7 个模块的骨架 → 上下文窗口无法同时持有。Phase 4 跨论文聚合不能依赖内存中的数据。
-> **方案**：每篇论文蒸馏完成后，将其**轻量摘要**持久化到 `academic-writing-corpus/_batch_state.yaml`。Phase 4 只读取这个摘要文件做聚合，不依赖上下文中的原始蒸馏数据。
+> **方案**：每篇论文蒸馏完成后，将其**轻量摘要**持久化到 `corpus/_batch_state.yaml`。Phase 4 只读取这个摘要文件做聚合，不依赖上下文中的原始蒸馏数据。
 
 ### 批量工作流
 
@@ -68,7 +68,7 @@ papers:
     design_observations:
       - defect_id: "conversation-gap-coupling"
         classification: "routing_defect"
-        target: "write-introduction/academic-writing-corpus/_routing_tables.yaml"
+        target: "write-introduction/corpus/_routing_tables.yaml"
         evidence_anchor: "Introduction P2-P3: non-diagonal Conversation×Gap combination"
         evidence_quality: "full_text_verified"
     vault_profile_path: "D:/OneDrive/.../darby2024_distilled_introduction.md"
@@ -89,13 +89,13 @@ design_feedback_accumulator:
     classification: "routing_defect"
     paper_ids: ["darby2024", "paper_b"]
     journals: ["AMJ", "ASQ"]
-    targets: ["write-introduction/academic-writing-corpus/_routing_tables.yaml"]
+    targets: ["write-introduction/corpus/_routing_tables.yaml"]
 ```
 
 ### 操作规则
 
 **开始批量处理时**：
-1. 检查 `academic-writing-corpus/_batch_state.yaml` 是否存在
+1. 检查 `corpus/_batch_state.yaml` 是否存在
    - 存在且 `status = in_progress` → 询问用户：继续未完成的批量任务还是开始新批次？
    - 不存在或 `status = completed` → 创建新 `_batch_state.yaml`，`batch_id` 使用当前日期
 2. 如果用户用 `--combo-filter` 缩小范围，在 `_batch_state.yaml` 中记录过滤条件

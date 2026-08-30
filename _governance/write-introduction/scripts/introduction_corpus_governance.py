@@ -277,10 +277,10 @@ def _stage_and_validate(
     staged_files: dict[Path, str],
     registry: dict,
 ) -> tuple[dict[Path, str], int, int]:
-    corpus = skill_root / "academic-writing-corpus"
+    corpus = skill_root / "corpus"
     registry_path = corpus / "_evidence_registry.yaml"
     with tempfile.TemporaryDirectory(prefix="introduction-governance-") as tmp:
-        staged_root = Path(tmp) / "academic-writing-corpus"
+        staged_root = Path(tmp) / "corpus"
         shutil.copytree(corpus, staged_root)
         for source, text in staged_files.items():
             target = staged_root / source.relative_to(corpus)
@@ -303,7 +303,7 @@ def _stage_and_validate(
 
 
 def apply_plan(skill_root: Path, plan_path: Path, dry_run: bool = False) -> dict:
-    corpus = skill_root / "academic-writing-corpus"
+    corpus = skill_root / "corpus"
     registry_path = corpus / "_evidence_registry.yaml"
     registry = catalog._load_registry(registry_path)
     governance = registry["asset_governance"]
@@ -391,8 +391,8 @@ def main() -> int:
     try:
         if args.command == "validate":
             parents, variants, _ = catalog.load_catalog(
-                args.skill_root / "academic-writing-corpus",
-                args.skill_root / "academic-writing-corpus" / "_evidence_registry.yaml",
+                args.skill_root / "corpus",
+                args.skill_root / "corpus" / "_evidence_registry.yaml",
             )
             print(
                 yaml.safe_dump(

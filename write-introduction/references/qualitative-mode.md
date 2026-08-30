@@ -61,7 +61,7 @@
 
 - **Gap 类型**：定性常是 **Inadequacy**（现有理论不充分——无法解释该过程，或理论间矛盾需归纳整合），而非 Incompleteness（缺一个变量）。也可是 Incommensurability（不同理论对该现象预测矛盾，需归纳裁决）。
 - **贡献维度**：定性常是 **Mechanism / Process**（揭示新过程机制）或 **Constructs**（从数据归纳新构念/类型学）。
-- **路由**：Gap 类型仍决定 Tension 的标志性语言与能量级（见 `../academic-writing-corpus/tensions/_index.md`）；贡献维度仍决定 Preview 暗示的理论形态。本模式**不替代**组合分类，只为定性提供**统一的段落骨架 + predict→foreshadow 转向**。
+- **路由**：Gap 类型仍决定 Tension 的标志性语言与能量级（见 `../corpus/tensions/_index.md`）；贡献维度仍决定 Preview 暗示的理论形态。本模式**不替代**组合分类，只为定性提供**统一的段落骨架 + predict→foreshadow 转向**。
 
 ## 与理论论文 AMR 模式的区分
 

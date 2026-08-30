@@ -4,7 +4,7 @@
 
 ## Phase 1 — Introduction 功能模块映射与粗粒度解构
 
-读取 Introduction 全文，按**功能模块**进行粗粒度标注。模块名称与 `write-introduction` 的 `../../write-introduction/academic-writing-corpus/` 目录结构对齐。标注时只定位模块功能边界，不做深入分析。
+读取 Introduction 全文，按**功能模块**进行粗粒度标注。模块名称与 `write-introduction` 的 `../../write-introduction/corpus/` 目录结构对齐。标注时只定位模块功能边界，不做深入分析。
 
 ### 前置步骤：Rhetorical 定位（读范文前的快速语境化）
 

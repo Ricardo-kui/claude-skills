@@ -148,7 +148,7 @@ Phase 4 审计 4 复核所有卡片的处置列是否兑现。
 
 判断标准（读 aloud 测试）：把推导段朗读出来，如果听起来像**作者在回答想象中的审稿人**而不是**作者在向同行讲一个理论故事**，就是防火墙被击穿。
 
-**与 §5.7 的分工**：本节管协议层泄漏；一般性防御措辞（负向自我设限 "This paper does not claim..."、hedge 堆叠、caveat 散射到高影响位置）的识别与转换句式库见 [`../../../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md`](../../../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md) §5.7——其"保留防守实质、删除防御姿态"原则与本节铁律 2 是同一校准。
+**与 §5.7 的分工**：本节管协议层泄漏；一般性防御措辞（负向自我设限 "This paper does not claim..."、hedge 堆叠、caveat 散射到高影响位置）的识别与转换句式库见 [`../../../write-introduction/corpus/storytelling/prose-craft-checklist.md`](../../../write-introduction/corpus/storytelling/prose-craft-checklist.md) §5.7——其"保留防守实质、删除防御姿态"原则与本节铁律 2 是同一校准。
 
 ---
 

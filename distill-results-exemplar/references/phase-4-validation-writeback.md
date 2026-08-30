@@ -30,7 +30,7 @@
 > `../../distill-introduction-exemplar/references/phase-4-validation-writeback.md` 头部。
 
 本阶段生成**受治理的 adoption instructions**，回答三个问题：
-1. **改哪个文件** → 精确到 `write-results/econometric-models/[结果类型].md`
+1. **改哪个文件** → 精确到 `write-results/corpus/[结果类型].md`
 2. **怎么改** → ADD / EXTEND / REPLACE / SKIP，含具体骨架和插入位置
 3. **为什么** → 与当前 corpus 的差异 + 对 write-results skill 的提升
 

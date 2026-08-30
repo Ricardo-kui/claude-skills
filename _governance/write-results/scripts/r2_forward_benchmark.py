@@ -26,7 +26,7 @@ LIVE_SKILL_ROOT = Path(os.environ.get(
 ))
 PROMPTS_PATH = SKILL_ROOT / "tests" / "r2_forward_prompts.yaml"
 GOLD_PATH = SKILL_ROOT / "tests" / "r2_forward_gold.yaml"
-INDEX_PATH = SKILL_ROOT / "econometric-models" / "_pilot_r2_index.yaml"
+INDEX_PATH = SKILL_ROOT / "corpus" / "_pilot_r2_index.yaml"
 ROUTING_RE = re.compile(r"^ROUTING_JSON:\s*(\{.*\})\s*$", re.MULTILINE)
 OUTPUT_MARKER = "R2_OUTPUT:"
 

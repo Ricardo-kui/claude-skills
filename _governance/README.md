@@ -21,10 +21,10 @@ write-* 技能的日常写作运行；写作技能的运行期纪律由各自的
 
 三个语料目录是指向 live 技能的 junction，治理工具读到的始终是当前语料：
 
-- `write-introduction/academic-writing-corpus` → `../../write-introduction/academic-writing-corpus`
+- `write-introduction/corpus` → `../../write-introduction/corpus`
 - `write-theory/corpus` → `../../write-theory/corpus`
-- `write-results/econometric-models` → `../../write-results/econometric-models`
-  （`_pilot_r2_index.yaml` 因此放回了 live write-results 的 econometric-models/ 下）
+- `write-results/corpus` → `../../write-results/corpus`
+  （`_pilot_r2_index.yaml` 因此放回了 live write-results 的 corpus/ 下）
 
 ## 触发时机
 

@@ -62,7 +62,7 @@ whenToUse: Use when the user has received reviewer comments or a decision letter
 
 ## 审稿信号回流（critique-driven，路线图交付后的收尾步骤）
 
-R&R 产出后,把**审稿人反复质疑的方法/写作论点**登记回 write-* 批评 registry(`econometric-models/_evidence_registry.yaml`)。审稿人是比日常用户批评更高权重的信号源(editor 背书 + 跨轮次重复出现);登记后直接进入下一轮蒸馏的 critique_heavy 判定(revise + reject ≥ 2 → REPLACE/EXTEND 优先),与 Phase 0.75 选材闭环。
+R&R 产出后,把**审稿人反复质疑的方法/写作论点**登记回 write-* 批评 registry(`corpus/_evidence_registry.yaml`)。审稿人是比日常用户批评更高权重的信号源(editor 背书 + 跨轮次重复出现);登记后直接进入下一轮蒸馏的 critique_heavy 判定(revise + reject ≥ 2 → REPLACE/EXTEND 优先),与 Phase 0.75 选材闭环。
 
 **登记条件**(只登写作可改进点,避免噪音登记):
 - 同一方法/写作论点**跨审稿人或跨轮次(R1/R2)反复出现**;或

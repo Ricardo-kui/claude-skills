@@ -6,7 +6,7 @@ when_to_use: "输入是已发表范文且目标是学写法时；写作用 write
 
 # Distill Results Exemplar
 
-Distill how a published Results section stages evidence—not what it found—into reusable, evidence-traceable writing assets for `write-results/econometric-models/`。
+Distill how a published Results section stages evidence—not what it found—into reusable, evidence-traceable writing assets for `write-results/corpus/`。
 
 三层递进：学习顶刊证据展演手法（Phase 0–2）→ 量化与跨论文对比（Phase 3–4）→ 沉淀到 corpus（Phase 4–5）。核心原则：How > What；节奏 > 数字（"方向→显著性→幅度→支持判断"四拍 + 稳健性按 threat 组织）；范式排他性（只提取该类估计器特别需要的报告方式）。
 

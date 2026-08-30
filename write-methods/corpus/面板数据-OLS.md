@@ -510,7 +510,7 @@ updated: 2026-08-13
 > We estimate the following model: [DV] = β₀ + β₁[IV] + β₂[IV]×[W1] + β₃[IV]×[W1]×[W2] + β₄[IV]×[W2] + β₅[W1]×[W2] + β₆[W1] + β₇[W2] + Controls + ε. For ease of interpretation of the interaction coefficients, we mean-center [IV], [W1], and [W2] before including them in the regressions ([citation]). We include all two-way interactions and the constituent terms to avoid omitted-variable bias in the three-way interaction coefficient ([citation]). We cluster the standard errors at the [firm] level to account for heteroskedasticity and within-[firm] correlation ([citation]).
 **与原骨架差异**: 三向交互的标准 Methods 写法。关键要素：(1) 完整模型方程（含所有 lower-order terms）；(2) mean-centering 声明；(3) 聚类 SE 层级。适用于 X × W1 × W2 设计。
 **诚实边界**: 必须包含所有 lower-order terms；mean-centering 不影响系数解释但影响常数项；若 W1/W2 偏态，±1 SD 切割需改用实际分位数。
-**跨 skill 对齐**: `write-theory/corpus/variants/E_moderation.md` E6（序列嵌套调节理论推导）；`../write-results/econometric-models/三向交互.md` 变体2（连续调节变量三向交互边际效应表）。
+**跨 skill 对齐**: `write-theory/corpus/variants/E_moderation.md` E6（序列嵌套调节理论推导）；`../write-results/corpus/三向交互.md` 变体2（连续调节变量三向交互边际效应表）。
 
 ### 变体 22: M7 GEE + AR(1) working correlation — 时不变焦点 IV 的估计量选择论证 (1篇高价值)
 **来源论文**: Abdurakhmonov, Ingram & Ridge (2026, JOM)
@@ -523,7 +523,7 @@ updated: 2026-08-13
 **与原骨架差异**: 与变体 10（Hausman FE vs RE）和变体 13（RE 三重辩护 theory+Hausman+ICC）互补而非重叠——两者基于 Hausman / ICC 选择 FE / RE；本变体基于 **焦点 IV 的时不变性** 选择 GEE。当核心 IV 是时不变稳定特质（CEO 政治意识形态、人格、创始人身份、性别、教育背景等）时，firm FE 会吸收或丢弃该变量使主效应无法识别。GEE 提供第三条路径：(1) AR(1) working correlation 建模序列相关；(2) robust SE 校正规范误；(3) year / industry FE（而非 firm FE）吸收时间 / 行业冲击而保留 focal IV。关键三要素：① 显式说明"因 focal IV 时不变，firm FE 不适用"；② working correlation structure 选择依据（AR1 = 时间相邻期相关；exchangeable = 同单元任意两期等相关）；③ FE 声明（year / industry 而非 firm——因 firm FE 再次吸收时不变 IV）。
 **诚实边界**: 必须显式声明不使用 firm FE 的理由（"because [focal_IV] is time-invariant, firm FE would absorb it"），不能默默省略；working correlation structure 选择应说明依据，不能默认 AR1；GEE 是 population-average 估计器，与 RE（subject-specific）在系数解释上有重要区别，应说明是 marginal effect 而非 unit-specific effect；firm FE 不可用时应在 M8 / Limitations 诚实说明残余威胁（time-varying unobservables 仍可能混淆），并通过 IV / Heckman / matching 补强。
 **适用**: 焦点预测变量为时不变稳定特质（政治意识形态、人格、性别、出生地、教育背景、创始人身份）的 panel 研究；任何 firm FE 会"杀死"主效应的情境。
-**跨 skill 对齐**: `../write-results/econometric-models/OLS-FE.md`（稳健性中可用 LPM + firm FE 作方向性对照，但主模型用 GEE 保留时不变 IV）。
+**跨 skill 对齐**: `../write-results/corpus/OLS-FE.md`（稳健性中可用 LPM + firm FE 作方向性对照，但主模型用 GEE 保留时不变 IV）。
 
 ### 变体 23: M1 行业统计 + 先例对齐的设置辩护 (1篇高价值)
 **来源论文**: Pupovac, Astvansh, Carrillat & Legoux 2026 (POM)
@@ -611,7 +611,7 @@ updated: 2026-08-13
 - Fieller 区间或 turning point 落入样本范围只确认函数形态，不确认理论机制。
 - 若极端 X 区间样本稀疏，应报告支持范围、观测密度并进行敏感性分析。
 
-**跨 skill 对齐**: `../write-results/econometric-models/Logit-Probit-Ordered-Probit.md` 变体9–11（正式 U-test、条件曲线概率图与经济成本换算）；`../write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md`（two-phase curvilinear argumentation）。
+**跨 skill 对齐**: `../write-results/corpus/Logit-Probit-Ordered-Probit.md` 变体9–11（正式 U-test、条件曲线概率图与经济成本换算）；`../write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md`（two-phase curvilinear argumentation）。
 
 
 

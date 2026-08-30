@@ -75,4 +75,4 @@
 
 ## 与 Gap×Contribution 组合的关系
 
-理论论文仍有 Gap 类型（Incompleteness / Inadequacy / Incommensurability）和贡献维度（Constructs / Mechanism / Boundary / …）。Barney 框架**不替代**组合分类，而是为理论论文提供**统一的段落骨架**。Gap 类型仍决定 P2 的标志性语言与能量级（problematization 模板见 `../academic-writing-corpus/tensions/_index.md` 与 `_routing_tables.yaml` 的 exemplar anchoring），贡献维度仍决定 P3 答案的理论形态。
+理论论文仍有 Gap 类型（Incompleteness / Inadequacy / Incommensurability）和贡献维度（Constructs / Mechanism / Boundary / …）。Barney 框架**不替代**组合分类，而是为理论论文提供**统一的段落骨架**。Gap 类型仍决定 P2 的标志性语言与能量级（problematization 模板见 `../corpus/tensions/_index.md` 与 `_routing_tables.yaml` 的 exemplar anchoring），贡献维度仍决定 P3 答案的理论形态。

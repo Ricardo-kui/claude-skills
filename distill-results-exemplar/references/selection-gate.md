@@ -1,6 +1,6 @@
 # Phase 0.75 — 选材 Gate（批评驱动，Skill-SP 启发）
 
-在进入 Phase 1 深读前，用 `write-results/econometric-models/_evidence_registry.yaml` 中该估计器的 `usage_stats` 判断**这篇论文值不值得深蒸馏、优先级多高**。批评由 Claude 在 write-results 会话中自动登记，也可用 `_update_registry.py --record-critique` 批量补登（见 `phase-4-validation-writeback.md` 批评登记）。
+在进入 Phase 1 深读前，用 `write-results/corpus/_evidence_registry.yaml` 中该估计器的 `usage_stats` 判断**这篇论文值不值得深蒸馏、优先级多高**。批评由 Claude 在 write-results 会话中自动登记，也可用 `_update_registry.py --record-critique` 批量补登（见 `phase-4-validation-writeback.md` 批评登记）。
 
 ## 三带判定（依据 registry meta.usage_stats_schema）
 

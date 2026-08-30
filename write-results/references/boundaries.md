@@ -1,6 +1,6 @@
 # Boundaries — 诚实边界与输出约束（从 SKILL.md 下沉，v0.1）
 
-> 由 write-results 在涉及能力边界 / 设计排他性 / 披露纪律时**读取**。本 skill 的骨架与变体提炼自 MVP30 范文语料库（截至 2025 年，持续蒸馏扩充中；各变体的来源论文在 `econometric-models/INDEX.md` 按日期登记）。
+> 由 write-results 在涉及能力边界 / 设计排他性 / 披露纪律时**读取**。本 skill 的骨架与变体提炼自 MVP30 范文语料库（截至 2025 年，持续蒸馏扩充中；各变体的来源论文在 `corpus/INDEX.md` 按日期登记）。
 
 ## 诚实边界
 

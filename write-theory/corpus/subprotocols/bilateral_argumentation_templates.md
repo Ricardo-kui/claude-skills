@@ -426,7 +426,7 @@ build_type: 机制推演型 + 调节边界（双机制主效应）
 source_papers: ["Li_Bapuji_Talluri_Singh_Narayanan_2025_JSCM"]
 confidence: high
 status: ready_for_corpus
-related_intro_lens: write-introduction/academic-writing-corpus/theory-lens/08-dual-metaphor-stream-reconciliation.md
+related_intro_lens: write-introduction/corpus/theory-lens/08-dual-metaphor-stream-reconciliation.md
 -->
 
 ## Pattern: Dual-Mechanism Convergent Moderation (with moderator×mechanism matrix)

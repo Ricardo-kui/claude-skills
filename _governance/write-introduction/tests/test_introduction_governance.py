@@ -41,7 +41,7 @@ class IntroductionGovernanceTests(unittest.TestCase):
         return path
 
     def _registry(self) -> dict:
-        path = self.root / "academic-writing-corpus" / "_evidence_registry.yaml"
+        path = self.root / "corpus" / "_evidence_registry.yaml"
         return yaml.safe_load(path.read_text(encoding="utf-8"))
 
     def test_inventory_and_duplicate_heading_ids_are_stable(self):
@@ -99,7 +99,7 @@ class IntroductionGovernanceTests(unittest.TestCase):
         with redirect_stdout(output):
             catalog.command_render(args)
         rendered = output.getvalue()
-        full = (SKILL_ROOT / "academic-writing-corpus" / "hooks" / "03-data-shock.md").read_text(
+        full = (SKILL_ROOT / "corpus" / "hooks" / "03-data-shock.md").read_text(
             encoding="utf-8"
         )
         self.assertNotIn("### 变体", rendered)
@@ -107,7 +107,7 @@ class IntroductionGovernanceTests(unittest.TestCase):
 
     def test_gap_and_conversation_axes_remain_independent(self):
         routing_text = (
-            SKILL_ROOT / "academic-writing-corpus" / "_routing_tables.yaml"
+            SKILL_ROOT / "corpus" / "_routing_tables.yaml"
         ).read_text(encoding="utf-8")
         routing = yaml.safe_load(routing_text)
         self.assertEqual(
@@ -171,8 +171,8 @@ class IntroductionGovernanceTests(unittest.TestCase):
         record = self._registry()["asset_governance"]["parent_overrides"]["hooks:03-data-shock"]
         self.assertEqual(1, len(record["validation_history_additions"]))
         parents, _, _ = catalog.load_catalog(
-            self.root / "academic-writing-corpus",
-            self.root / "academic-writing-corpus" / "_evidence_registry.yaml",
+            self.root / "corpus",
+            self.root / "corpus" / "_evidence_registry.yaml",
         )
         by_id = {item.asset_id: item for item in parents}
         self.assertEqual("generative_strategy", by_id["hooks:03-data-shock"].role)
@@ -198,8 +198,8 @@ class IntroductionGovernanceTests(unittest.TestCase):
         )
         governance.apply_plan(self.root, plan)
         parents, _, _ = catalog.load_catalog(
-            self.root / "academic-writing-corpus",
-            self.root / "academic-writing-corpus" / "_evidence_registry.yaml",
+            self.root / "corpus",
+            self.root / "corpus" / "_evidence_registry.yaml",
         )
         asset = next(item for item in parents if item.asset_id == "hooks:03-data-shock")
         self.assertEqual("CAUTION", asset.health)
@@ -222,8 +222,8 @@ class IntroductionGovernanceTests(unittest.TestCase):
         )
         governance.apply_plan(self.root, plan)
         parents, variants, _ = catalog.load_catalog(
-            self.root / "academic-writing-corpus",
-            self.root / "academic-writing-corpus" / "_evidence_registry.yaml",
+            self.root / "corpus",
+            self.root / "corpus" / "_evidence_registry.yaml",
         )
         resolved, notices = catalog._resolve_assets(
             parents, variants, ["tensions:01-despite-progress-unaddressed:vAF"]
@@ -285,8 +285,8 @@ class IntroductionGovernanceTests(unittest.TestCase):
 
     def test_batch_01_findings_preview_merge_keeps_the_legacy_alias_resolvable(self):
         parents, variants, _ = catalog.load_catalog(
-            self.root / "academic-writing-corpus",
-            self.root / "academic-writing-corpus" / "_evidence_registry.yaml",
+            self.root / "corpus",
+            self.root / "corpus" / "_evidence_registry.yaml",
         )
         resolved, notices = catalog._resolve_assets(
             parents, variants, ["previews:findings-preview:vS"]
@@ -340,18 +340,18 @@ class IntroductionGovernanceTests(unittest.TestCase):
         self.assertEqual(346, result["variant_assets"])
         self.assertEqual(["hooks:03-data-shock:vL"], result["added_ids"])
         parents, variants, _ = catalog.load_catalog(
-            self.root / "academic-writing-corpus",
-            self.root / "academic-writing-corpus" / "_evidence_registry.yaml",
+            self.root / "corpus",
+            self.root / "corpus" / "_evidence_registry.yaml",
         )
         self.assertEqual(94, len(parents))
         self.assertEqual(346, len(variants))
-        text = (self.root / "academic-writing-corpus" / "hooks" / "03-data-shock.md").read_text(
+        text = (self.root / "corpus" / "hooks" / "03-data-shock.md").read_text(
             encoding="utf-8"
         )
         self.assertIn("### 变体 L：治理测试参考型", text)
 
     def test_invalid_promotion_does_not_mutate(self):
-        registry_path = self.root / "academic-writing-corpus" / "_evidence_registry.yaml"
+        registry_path = self.root / "corpus" / "_evidence_registry.yaml"
         before = registry_path.read_text(encoding="utf-8")
         plan = self._plan(
             [{
@@ -368,7 +368,7 @@ class IntroductionGovernanceTests(unittest.TestCase):
         self.assertEqual(before, registry_path.read_text(encoding="utf-8"))
 
     def test_routed_parent_cannot_be_deprecated_without_routing_change(self):
-        registry_path = self.root / "academic-writing-corpus" / "_evidence_registry.yaml"
+        registry_path = self.root / "corpus" / "_evidence_registry.yaml"
         before = registry_path.read_text(encoding="utf-8")
         plan = self._plan(
             [{
@@ -382,7 +382,7 @@ class IntroductionGovernanceTests(unittest.TestCase):
         self.assertEqual(before, registry_path.read_text(encoding="utf-8"))
 
     def test_dry_run_validates_without_writing(self):
-        registry_path = self.root / "academic-writing-corpus" / "_evidence_registry.yaml"
+        registry_path = self.root / "corpus" / "_evidence_registry.yaml"
         before = registry_path.read_text(encoding="utf-8")
         plan = self._plan(
             [{
@@ -437,8 +437,8 @@ class IntroductionGovernanceTests(unittest.TestCase):
         governance.apply_plan(self.root, plan, dry_run=True)
         governance.apply_plan(self.root, plan)
         parents, variants, _ = catalog.load_catalog(
-            self.root / "academic-writing-corpus",
-            self.root / "academic-writing-corpus" / "_evidence_registry.yaml",
+            self.root / "corpus",
+            self.root / "corpus" / "_evidence_registry.yaml",
         )
         self.assertIn("hooks:03-data-shock:vL", {item.asset_id for item in variants})
         asset = next(item for item in parents if item.asset_id == "hooks:03-data-shock")

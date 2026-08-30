@@ -163,7 +163,7 @@ class ResultsVariantCatalogTests(unittest.TestCase):
             MODULE._validate_registry_snapshot(registry, self.variants, self.texts)
 
     def test_index_counts_match_live_catalog(self):
-        index = (ROOT / "econometric-models" / "INDEX.md").read_text(encoding="utf-8")
+        index = (ROOT / "corpus" / "INDEX.md").read_text(encoding="utf-8")
         counts = [
             int(value)
             for value in re.findall(r"^\| \[[^]]+\]\([^)]+\) \|[^|]+\|\s*(\d+)\s*\|", index, re.M)

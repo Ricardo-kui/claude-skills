@@ -190,7 +190,7 @@ phase_0_combo_profile:
 
 #### 步骤
 
-**1. 读证据注册表**：读取 `../../write-introduction/academic-writing-corpus/_evidence_registry.yaml`，获取：
+**1. 读证据注册表**：读取 `../../write-introduction/corpus/_evidence_registry.yaml`，获取：
 - 所有模板的 canonical_id 清单（按 module 分组：hooks/tensions/stakes/literature_turns/previews/contributions/theory_lens）
 - 每个模板的 `paper_count`、`status`、`gap_distribution`
 - 每个模板的 `common_failures`（供 Phase 1.5 和 Phase 2.4 交叉验证）
@@ -199,12 +199,12 @@ phase_0_combo_profile:
 
 | Phase 0 判定 | 必须读的索引 | 可选读的索引 |
 |-------------|------------|------------|
-| 任意组合 | `../../write-introduction/academic-writing-corpus/hooks/_index.md` | — |
-| Gap = Inadequacy 或 Incommensurability | `../../write-introduction/academic-writing-corpus/literature-turns/literature-turn-templates.md` | — |
+| 任意组合 | `../../write-introduction/corpus/hooks/_index.md` | — |
+| Gap = Inadequacy 或 Incommensurability | `../../write-introduction/corpus/literature-turns/literature-turn-templates.md` | — |
 | Gap = Incommensurability | `../../write-introduction/references/incommensurability-introduction-routing.md` | 只加载与 primary/secondary route 匹配的 Tension、Theory Lens 与 Transition 文件 |
-| Contribution = Constructs | `../../write-introduction/academic-writing-corpus/contributions/_index.md` | — |
-| Preview 需方法防御 | `../../write-introduction/academic-writing-corpus/previews/_index.md` | — |
-| Theory Lens 需框架选择 | `../../write-introduction/academic-writing-corpus/theory-lens/_index.md` | — |
+| Contribution = Constructs | `../../write-introduction/corpus/contributions/_index.md` | — |
+| Preview 需方法防御 | `../../write-introduction/corpus/previews/_index.md` | — |
+| Theory Lens 需框架选择 | `../../write-introduction/corpus/theory-lens/_index.md` | — |
 
 **3. 建立"语料库基线"**：读完上述文件后，在内部建立以下认知：
 

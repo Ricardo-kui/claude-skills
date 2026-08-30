@@ -22,7 +22,7 @@ class ResultsCorpusGovernanceTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.skill_root = Path(self.temp.name) / "write-results"
-        shutil.copytree(ROOT / "econometric-models", self.skill_root / "econometric-models")
+        shutil.copytree(ROOT / "corpus", self.skill_root / "corpus")
 
     def tearDown(self):
         self.temp.cleanup()
@@ -34,8 +34,8 @@ class ResultsCorpusGovernanceTests(unittest.TestCase):
 
     def load_catalog(self):
         return MODULE.catalog.load_catalog(
-            self.skill_root / "econometric-models",
-            self.skill_root / "econometric-models" / "_evidence_registry.yaml",
+            self.skill_root / "corpus",
+            self.skill_root / "corpus" / "_evidence_registry.yaml",
         )
 
     def test_all_assets_materialize_lifecycle_records(self):
@@ -125,11 +125,11 @@ class ResultsCorpusGovernanceTests(unittest.TestCase):
         added = next(item for item in variants if item.asset_id == "OLS-FE:v47")
         self.assertEqual("reference_exemplar", added.role)
         self.assertEqual(("fixture_2026",), added.evidence_additions)
-        index = (self.skill_root / "econometric-models" / "INDEX.md").read_text(encoding="utf-8")
+        index = (self.skill_root / "corpus" / "INDEX.md").read_text(encoding="utf-8")
         self.assertIn("| [OLS-FE](OLS-FE.md) | OLS-FE | 47 |", index)
 
     def test_invalid_plan_is_non_mutating(self):
-        registry = self.skill_root / "econometric-models" / "_evidence_registry.yaml"
+        registry = self.skill_root / "corpus" / "_evidence_registry.yaml"
         before = registry.read_text(encoding="utf-8")
         plan = self.write_plan(
             [
@@ -146,7 +146,7 @@ class ResultsCorpusGovernanceTests(unittest.TestCase):
         self.assertEqual(before, registry.read_text(encoding="utf-8"))
 
     def test_dry_run_validates_without_writing(self):
-        registry = self.skill_root / "econometric-models" / "_evidence_registry.yaml"
+        registry = self.skill_root / "corpus" / "_evidence_registry.yaml"
         before = registry.read_text(encoding="utf-8")
         plan = self.write_plan(
             [

@@ -33,7 +33,7 @@ REQUIRED_FILES = (
 FORBIDDEN_SKILL_TEXT = (
     "distill-results-exemplar --validate",
     "references/output-metadata-template.md",
-    "`econometric-models/micro-templates/`",
+    "`corpus/micro-templates/`",
 )
 REQUIRED_SKILL_TEXT = (
     "Phase -1",

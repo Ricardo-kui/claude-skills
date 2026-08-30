@@ -49,7 +49,7 @@
 - [ ] **经济显著性嵌入**：1 SD → N unit change / N% / N-day，不只报 β 和 p
 - [ ] **非显著诚实**：所有假设可追溯到明确声明，无跳过
 - [ ] **因果语言自律**：OLS→"associated with", DiD→"effect of", 实验→"caused"
-- [ ] **段落体裁适配**：Results 段落遵循审计体裁约定——前两句提供假设或问题锚点，句法不机械同构；支持判断只出现一次。通用段落规则（长度、coherence、体裁分型）见 `../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md` §0.0/§0.2/§0.5；§0.1 PEEL/§0.3 claim-first/§0.6 Dunleavy 反模式为说服体裁专用，不适用于本 section
+- [ ] **段落体裁适配**：Results 段落遵循审计体裁约定——前两句提供假设或问题锚点，句法不机械同构；支持判断只出现一次。通用段落规则（长度、coherence、体裁分型）见 `../write-introduction/corpus/storytelling/prose-craft-checklist.md` §0.0/§0.2/§0.5；§0.1 PEEL/§0.3 claim-first/§0.6 Dunleavy 反模式为说服体裁专用，不适用于本 section
 - [ ] **反馈回归**：`feedback-registry.json` 中与 skill/project/section/estimator 匹配的 active rules 已逐条通过
 
 ## 独立审查（可选但建议）

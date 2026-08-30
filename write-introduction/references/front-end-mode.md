@@ -2,7 +2,7 @@
 
 Use this reference only for `--mode=front-end` or `--mode=align`.
 
-First load `../academic-writing-corpus/storytelling/reader-conversion-sequence.md`. Treat Title, Abstract, and Introduction as progressively expanded versions of one promise:
+First load `../corpus/storytelling/reader-conversion-sequence.md`. Treat Title, Abstract, and Introduction as progressively expanded versions of one promise:
 
 1. Title names the phenomenon, relationship, or tension without claiming unsupported findings.
 2. Abstract states the problem, approach, evidence status, headline answer or placeholder, and contribution.

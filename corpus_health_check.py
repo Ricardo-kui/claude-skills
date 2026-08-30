@@ -86,7 +86,7 @@ def collect(side: str) -> list:
     """返回 [{type, file, variants, revise, reject, last_critique, reasons}]
     side: methods / results（registry validation_history/usage_stats）或 intro / theory（critique.per_file）。"""
     if side in ("methods", "results"):
-        corpus = SKILLS / f"write-{side}" / "econometric-models"
+        corpus = SKILLS / f"write-{side}" / "corpus"
         usage = load_usage(corpus / "_evidence_registry.yaml")
         rows = []
         for f in sorted(corpus.glob("*.md")):
@@ -108,7 +108,7 @@ def collect(side: str) -> list:
 
     # intro / theory：遍历子目录 canonical 文件，读 critique.per_file
     if side == "intro":
-        corpus = SKILLS / "write-introduction" / "academic-writing-corpus"
+        corpus = SKILLS / "write-introduction" / "corpus"
         registry = corpus / "_evidence_registry.yaml"
     else:  # theory
         corpus = SKILLS / "write-theory" / "corpus"

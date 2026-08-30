@@ -15,7 +15,7 @@ import yaml
 
 
 SKILL_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_INDEX = SKILL_ROOT / "econometric-models" / "_pilot_r2_index.yaml"
+DEFAULT_INDEX = SKILL_ROOT / "corpus" / "_pilot_r2_index.yaml"
 STATUS_RANK = {"ROBUST": 3, "VERIFIED": 2, "EMERGING": 1}
 
 

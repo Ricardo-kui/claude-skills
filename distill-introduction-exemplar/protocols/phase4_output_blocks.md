@@ -19,7 +19,7 @@ corpus_enrichment:
     author_year2: "Inadequacy"
 
   evidence_updates:
-    - target: "academic-writing-corpus/tensions/01-despite-progress-unaddressed.md"
+    - target: "corpus/tensions/01-despite-progress-unaddressed.md"
       canonical_id: "01-despite-progress-unaddressed"
       module: "tensions"
       action: "append_papers"
@@ -27,7 +27,7 @@ corpus_enrichment:
       updated_paper_count: N
       new_status: "ROBUST / VERIFIED / EMERGING"
 
-    - target: "academic-writing-corpus/hooks/03-data-shock.md"
+    - target: "corpus/hooks/03-data-shock.md"
       canonical_id: "03-data-shock"
       module: "hooks"
       action: "update_status"
@@ -35,7 +35,7 @@ corpus_enrichment:
       new_status: "ROBUST"
       reason: "paper_count 从 3 升至 6，跨 ≥3 journals"
 
-    - target: "academic-writing-corpus/tensions/XX-new-template.md"
+    - target: "corpus/tensions/XX-new-template.md"
       canonical_id: "XX-new-template"
       module: "tensions"
       action: "create_new"
@@ -184,7 +184,7 @@ skill_design_feedback:
       current_rule: "[逐字或可精确定位的现行规则]"
       rule_excerpt: "[从目标文件逐字复制的最小规则片段]"
       rule_locator: "[section heading 或行号，仅作提示]"
-      target: "write-introduction/academic-writing-corpus/_routing_tables.yaml"
+      target: "write-introduction/corpus/_routing_tables.yaml"
       diagnosis: "[观察为何表明这是技能设计问题，而非仅缺少一个模板]"
       absolute_rule: false
       decisive_falsifier: false

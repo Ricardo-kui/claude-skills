@@ -5,7 +5,7 @@ meta:
   last_batch: batch_36_post2022
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
-    granularity: per design_type（对应 econometric-models/[设计类型].md 文件）
+    granularity: per design_type（对应 corpus/[设计类型].md 文件）
     rationale: 仅汇总指向具体设计类型变体的 corpus 质量信号；详细用户反馈、项目规则与旧建议覆盖关系以 references/feedback-registry.json 为准
     fields:
       revise: 用户对该设计类型产出的不满/需大改的批评次数（Claude 在 write-methods 会话中自动登记）

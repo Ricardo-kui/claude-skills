@@ -21,7 +21,7 @@ created: 2026-08-01
 > 2. 每个位置最多取 **2–3 个候选**；同一段落不连续堆叠两个以上 hedge（否则触发 §5.7 defensive prose）。
 > 3. **必须替换占位符**并具体化（构念、机制、数据）。
 > 4. **Specificity gate**：替换后的句子若可不加修改放进任何论文 → 不合格。
-> 5. **因果上限**：涉及因果的 hedge 同时受 `write-methods/econometric-models/micro-templates/causal-hedging.md` 设计家族词汇表约束——强度档位不得突破设计允许的因果语言上限。
+> 5. **因果上限**：涉及因果的 hedge 同时受 `write-methods/corpus/micro-templates/causal-hedging.md` 设计家族词汇表约束——强度档位不得突破设计允许的因果语言上限。
 >
 > **退役规则**：某强度档位一旦被顶刊蒸馏语料覆盖（经 distill-* 验证），对应条目从本文件删除。本文件不计入 MVP30 paper_count。
 

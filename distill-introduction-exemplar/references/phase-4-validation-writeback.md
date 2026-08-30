@@ -66,7 +66,7 @@
 
 ### 数据来源（批量模式）
 
-> **Phase 4 聚合不从上下文读取原始蒸馏数据。** 唯一数据源是 `../../write-introduction/academic-writing-corpus/_batch_state.yaml`。
+> **Phase 4 聚合不从上下文读取原始蒸馏数据。** 唯一数据源是 `../../write-introduction/corpus/_batch_state.yaml`。
 
 **执行前检查**：
 1. Read `_batch_state.yaml`，确认 `papers_processed ≥ 2`（至少有 2 篇论文才有聚合意义）
@@ -138,7 +138,7 @@ phase_4_corpus_reference:
         skeleton: "..."
         source_papers: ["作者_年份", "作者_年份"]
         vault_path: "fine_grained/batch_N/intro_skeletons/"
-        note: "供写作者参考，可作为 ../../write-introduction/academic-writing-corpus/tensions/ 新增 canonical 模板的候选"
+        note: "供写作者参考，可作为 ../../write-introduction/corpus/tensions/ 新增 canonical 模板的候选"
     patterns_to_note:
       - module: "hook"
         gap_type: "Incommensurability"
@@ -166,7 +166,7 @@ phase_4_corpus_reference:
 
 ### Phase 4.5 — 证据注册表更新逻辑
 
-Phase 4 完成后，根据 `corpus_enrichment` 块更新 `../../write-introduction/academic-writing-corpus/_evidence_registry.yaml`：
+Phase 4 完成后，根据 `corpus_enrichment` 块更新 `../../write-introduction/corpus/_evidence_registry.yaml`：
 
 **状态自动判定规则**：
 
@@ -268,7 +268,7 @@ Phase 4 完成后，根据 `corpus_enrichment` 块更新 `../../write-introducti
 python _update_design_feedback.py skill_design_feedback.yaml
 ```
 
-脚本写入 `../../write-introduction/academic-writing-corpus/_skill_design_feedback.yaml`，负责去重、累计论文和期刊、计算状态与行动资格；脚本本身不修改核心技能。
+脚本写入 `../../write-introduction/corpus/_skill_design_feedback.yaml`，负责去重、累计论文和期刊、计算状态与行动资格；脚本本身不修改核心技能。
 
 #### 自动修订门控
 

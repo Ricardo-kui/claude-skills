@@ -23,7 +23,7 @@
 2. 每个位置最多取 **2–3 个候选**；同一段落不连续堆叠两个以上 phrasebank 句式。
 3. **必须替换占位符**并具体化（构念、数据源、程序细节、具体研究）。
 4. **Specificity gate**：替换后的句子若仍可不加修改放进任何论文 → 不合格，加入具体 actor / construct / context。
-5. claim strength 列是语气上限；涉及因果的遵守 `../../../write-methods/econometric-models/micro-templates/causal-hedging.md` 设计家族词汇表。
+5. claim strength 列是语气上限；涉及因果的遵守 `../../../write-methods/corpus/micro-templates/causal-hedging.md` 设计家族词汇表。
 6. **退役规则**：某功能一旦被顶刊蒸馏语料覆盖（经 distill-* 验证），对应条目从本目录删除。本目录不计入 MVP30 paper_count。
 
 ---
@@ -34,8 +34,8 @@ phrasebank 是 **auxiliary 措辞层**，与以下资产分工：
 
 | 资产 | 层级 | 职责 | 位置 |
 |------|------|------|------|
-| **顶刊 slot 骨架** | 主结构 | 决定每段说什么（hook/tension/四拍等） | 各 write skill 的 `references/slot-*.md` + `econometric-models/` |
-| **micro-templates** | 句法层 | 关键句位的句式变体（because 从句、漏斗节奏等） | `../../write-methods/econometric-models/micro-templates/` |
+| **顶刊 slot 骨架** | 主结构 | 决定每段说什么（hook/tension/四拍等） | 各 write skill 的 `references/slot-*.md` + `corpus/` |
+| **micro-templates** | 句法层 | 关键句位的句式变体（because 从句、漏斗节奏等） | `../../write-methods/corpus/micro-templates/` |
 | **phrasebank（本目录）** | 措辞层 | 同一功能的换说法 + 强度校准 | 本目录 |
 | **prose-pathology** | 病理层 | 五病诊断 + 修复（fat suit 等） | `../../../pollock-qc/references/prose-pathology.md` |
 | **hedging 判别** | 校验层 | 过度/不足声明的判别规则（§5.6/§5.7） | `../storytelling/prose-craft-checklist.md` |

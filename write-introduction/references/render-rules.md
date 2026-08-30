@@ -1,7 +1,7 @@
 # Render Rules — 模块渲染强制检查（从 SKILL.md Phase 3 下沉，v0.1）
 
 > 由 write-introduction Phase 3 渲染时**必读**：对所选模块逐条过检查。规则按模块分节；🔴 = 硬性（不满足则叙事断裂），🟡 = 强推荐。
-> 路径基准：`academic-writing-corpus/...` 以 write-introduction/ 为基准；语料内部 `hooks/...` 等引用以 `academic-writing-corpus/` 为基准。
+> 路径基准：`corpus/...` 以 write-introduction/ 为基准；语料内部 `hooks/...` 等引用以 `corpus/` 为基准。
 
 ## Hook
 
@@ -63,7 +63,7 @@
 2. 🟡 **聚焦 2-3 个充分展开的贡献**（实证论文默认）；5+ 个贡献各一行 = 散弹。理论论文走 AMR 单核自明（见 `references/theory-paper-amr-mode.md`）。
 3. 🟡 **每个贡献锚定不同文献流或不同 Makadok 维度**——第二贡献只是第一的 "also" = 实质是同一件事。
 4. 🟡 **contrast with prior 说清 prior 具体说了什么**——"不同于 X" 太弱；用 "In contrast with prior studies suggesting [dominant view], we contend that..."。
-5. 🔴 **用 Davis's Index 判断 "What will we learn"**——加载 `academic-writing-corpus/storytelling/daviss-index.md`（26 类 interestingness：Order from Chaos / What seems bad is really good / DV is IV / What seems stable is really changing 等）。**这是拒稿首要原因**——贡献必须回答"读者的理解会怎样改变"，用 Davis 类型提供改变的语言（"What seems X is really Y"）。
+5. 🔴 **用 Davis's Index 判断 "What will we learn"**——加载 `corpus/storytelling/daviss-index.md`（26 类 interestingness：Order from Chaos / What seems bad is really good / DV is IV / What seems stable is really changing 等）。**这是拒稿首要原因**——贡献必须回答"读者的理解会怎样改变"，用 Davis 类型提供改变的语言（"What seems X is really Y"）。
 6. 🟡 **区分 consensus shifting vs creation**（Hollenbeck 对 Davis 的延伸）——shifting = 挑战公认假设（"Contrary to extant theory... we show..."）；creation = 澄清文献中并存的分歧线（"two clear lines of discrepant thought... we clarify/resolve"）。两种路径措辞不同，选错会让贡献声明与证据不匹配。
 7. 🟡 **回馈 Literature 2**——贡献主要回到 Literature 1，但末段说明对 Literature 2 的反馈：adapt / extend / challenge。
 8. 🟡 **区分 contribution output 类型**（Makadok 2018）——explanation / prediction / prescription 是三种不同 output。贡献声明明确本文产出哪种：能否说出 "theory can now explain/predict/prescribe Y that it could not before"？说不出 = 贡献声明太模糊。

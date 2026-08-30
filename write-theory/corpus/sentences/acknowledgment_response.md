@@ -154,7 +154,7 @@ status: EMERGING
 
 **范式例**（G&L 引 Radcliffe）：先让步 *"To be sure, 'deliberative democracy' is an ideal to which existing democratic systems only roughly approximate"*，再收回 *"Nevertheless, the concept provides a plausible standard for evaluating democracies."*——让步具体、收回有据。
 
-**与 §2 矩阵的分工**：§2 处置读者**可能想到**的异议（防御侧）；Rogerian 处置论文**主动挑战**的阵营（建设侧）——它同时是 thesis 修正模型（[`../../../write-introduction/academic-writing-corpus/micro-templates/thesis-models.md`](../../../write-introduction/academic-writing-corpus/micro-templates/thesis-models.md) 模型 3）的段落级展开：共同地基 = 步骤 3，extend/refine/limit = 步骤 4。
+**与 §2 矩阵的分工**：§2 处置读者**可能想到**的异议（防御侧）；Rogerian 处置论文**主动挑战**的阵营（建设侧）——它同时是 thesis 修正模型（[`../../../write-introduction/corpus/micro-templates/thesis-models.md`](../../../write-introduction/corpus/micro-templates/thesis-models.md) 模型 3）的段落级展开：共同地基 = 步骤 3，extend/refine/limit = 步骤 4。
 
 **频次预算**：一篇 Theory section 最多 1 个 Rogerian 段落（用于最核心的对话对象）；其余异议走 §2 句子级矩阵。滥用会形成讨好型节律，触发 soundness protocol §7 防火墙。（注：此"最多1段"频次上限为 **skill 操作化建议**，G&L 原书只说 Rogerian 适用于 high-threat 异议、目标是降防御，未限定频次。）
 

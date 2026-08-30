@@ -50,7 +50,7 @@ Story Architecture Layer（叙事层）
     │   ├── reader-conversion-sequence.md  → 决定前端一致性
     │   ├── daviss-index.md                → 决定有趣性
     │   └── prose-craft-checklist.md       → 决定 prose 质量
-    └── academic-writing-corpus/（功能层）
+    └── corpus/（功能层）
         ├── hooks/     → 被 storytelling 引用，标注叙事功能
         ├── tensions/  → 被 storytelling 引用，标注叙事功能
         ├── stakes/    → 被 storytelling 引用，标注叙事功能

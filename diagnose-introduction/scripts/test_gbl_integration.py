@@ -87,10 +87,10 @@ def main() -> int:
         "diagnose-introduction/references/intertextual-construction-playbook.md"
     )
     lit_index = read(
-        "write-introduction/academic-writing-corpus/literature-turns/_index.md"
+        "write-introduction/corpus/literature-turns/_index.md"
     )
     tension = read(
-        "write-introduction/academic-writing-corpus/storytelling/"
+        "write-introduction/corpus/storytelling/"
         "tension-escalation-protocol.md"
     )
 
@@ -193,13 +193,13 @@ def main() -> int:
     )
 
     twin = read(
-        "write-introduction/academic-writing-corpus/hooks/22-twin-complication.md"
+        "write-introduction/corpus/hooks/22-twin-complication.md"
     )
     hooks_index = read(
-        "write-introduction/academic-writing-corpus/hooks/_index.md"
+        "write-introduction/corpus/hooks/_index.md"
     )
     registry = read(
-        "write-introduction/academic-writing-corpus/_evidence_registry.yaml"
+        "write-introduction/corpus/_evidence_registry.yaml"
     )
 
     require(
@@ -318,15 +318,15 @@ def main() -> int:
     )
 
     keyline = read(
-        "write-introduction/academic-writing-corpus/micro-templates/"
+        "write-introduction/corpus/micro-templates/"
         "key-line-patterns.md"
     )
     prose = read(
-        "write-introduction/academic-writing-corpus/storytelling/"
+        "write-introduction/corpus/storytelling/"
         "prose-craft-checklist.md"
     )
     transitions_index = read(
-        "write-introduction/academic-writing-corpus/transitions/_index.md"
+        "write-introduction/corpus/transitions/_index.md"
     )
 
     require(
@@ -512,7 +512,7 @@ def main() -> int:
     elevated = read("write-discussion/references/limitations-elevated-plane.md")
     discussion_review = read("discussion-review/SKILL.md")
     stakes_index = read(
-        "write-introduction/academic-writing-corpus/stakes/_index.md"
+        "write-introduction/corpus/stakes/_index.md"
     )
 
     require(
@@ -609,13 +609,13 @@ def main() -> int:
     )
 
     pb_methods = read(
-        "write-introduction/academic-writing-corpus/phrasebank/methods-process.md"
+        "write-introduction/corpus/phrasebank/methods-process.md"
     )
     pb_quant = read(
-        "write-introduction/academic-writing-corpus/phrasebank/quantities-trends.md"
+        "write-introduction/corpus/phrasebank/quantities-trends.md"
     )
     methods_skill = read("write-methods/SKILL.md")
-    event_study = read("write-results/econometric-models/事件研究法.md")
+    event_study = read("write-results/corpus/事件研究法.md")
 
     require(
         "phrasebank files carry the auxiliary-tier metadata",
@@ -657,11 +657,11 @@ def main() -> int:
 
     # --- Greene & Lidinsky 2017 (From Inquiry to Academic Writing) wave ---
     thesis_models = read(
-        "write-introduction/academic-writing-corpus/micro-templates/thesis-models.md"
+        "write-introduction/corpus/micro-templates/thesis-models.md"
     )
     gap_diag = read("research-gap-diagnosis/SKILL.md")
     lit_turns_index = read(
-        "write-introduction/academic-writing-corpus/literature-turns/_index.md"
+        "write-introduction/corpus/literature-turns/_index.md"
     )
     rebuttal = read("revision-coach/references/rebuttal-audit-protocol.md")
     pollock_qc = read("pollock-qc/SKILL.md")

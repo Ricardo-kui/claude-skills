@@ -95,7 +95,7 @@ When applicable records contain `prohibited_patterns`, run `../scripts/lint_meth
 
 ## 6. Relationship to the corpus evidence registry
 
-`feedback-registry.json` is the canonical store for user decisions. `econometric-models/_evidence_registry.yaml` remains a secondary corpus-routing asset:
+`feedback-registry.json` is the canonical store for user decisions. `corpus/_evidence_registry.yaml` remains a secondary corpus-routing asset:
 
 - detailed criticism, wording decisions, and project constraints belong in the JSON registry;
 - aggregate design-type revise/reject counts may be synchronized later for corpus maintenance;

@@ -49,7 +49,7 @@ description: >-
 
 ## Phase 2: 路由
 
-1. 读 `academic-writing-corpus/_routing_tables.yaml` + `_evidence_registry.yaml`（按 gap_distribution 过滤）：主 Gap 决定结构复杂度（4-9 段）、Hook/Tension 候选与能量级。
+1. 读 `corpus/_routing_tables.yaml` + `_evidence_registry.yaml`（按 gap_distribution 过滤）：主 Gap 决定结构复杂度（4-9 段）、Hook/Tension 候选与能量级。
 2. Incommensurability：先读 `references/incommensurability-introduction-routing.md`（真实性门控 + L0-L3 抽象 + R1-R4），再按冲突位置（X/Y/机制/情境）选路线；同一 route 写入 P3 诊断、Theory Lens、Preview、Contribution 与 paper-state.yaml。
 3. 证据分档：EMERGING（单源）不作默认推荐；采用时必须标注"单篇来源"并给 VERIFIED/ROBUST 替代。
 4. **开篇功能合同**（先定功能，再编号）：前三单元内完成——①有后果的张力（说明问题给理论/决策制造什么 trouble）；②可识别的学术对话（受众已知什么、现有解释预测什么）；③诊断性 problematization（遗漏/误置如何损害预测与边界 + 回应方向）。单元可合并/换序，进入 Theory Lens 前不得缺项。合并时一个段落只有一个**主导修辞功能**，段内仍 Point → Support/Warrant → Link（模块合并不等于句子拼接）。
@@ -88,7 +88,7 @@ description: >-
 1. 质量门（生成后必过）：`references/quality-gates.md`——GBL Four-Move 对齐（共享规则见 `../diagnose-introduction/references/golden-biddle-locke-four-moves.md`）+ JTBD 六模块完整性 + claim_fit + 首尾句测试；不合格项入"提醒"段。
 2. 反模式自查：`references/anti-patterns.md`（22 项逐条扫描）+ 拒稿信号 `references/rejection-signals.md`。
 3. 期刊适配：用户提目标期刊时读 `references/journal-fit.md`（期刊差异优先于通用规则）。
-4. 措辞润色（默认执行，preparing 跳过）：按句位查语料库——Hook/human face → `storytelling/prose-craft-checklist.md` §0/§5；批判措辞 → `phrasebank/critique-phrases.md`；hedging → `phrasebank/hedging-strength.md`；过渡 → `transitions/` + `micro-templates/transition-signals.md`；中心论点定位 → `micro-templates/thesis-models.md`；五病 → `../pollock-qc/references/prose-pathology.md`；人设 → `storytelling/authorial-persona.md`；因果声明 → `../write-methods/econometric-models/micro-templates/causal-hedging.md`。纪律：不改骨架占位；其余共用纪律（每句位 ≤2-3 候选、specificity gate、`### 措辞润色建议` 附末不覆盖骨架）见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律。
+4. 措辞润色（默认执行，preparing 跳过）：按句位查语料库——Hook/human face → `storytelling/prose-craft-checklist.md` §0/§5；批判措辞 → `phrasebank/critique-phrases.md`；hedging → `phrasebank/hedging-strength.md`；过渡 → `transitions/` + `micro-templates/transition-signals.md`；中心论点定位 → `micro-templates/thesis-models.md`；五病 → `../pollock-qc/references/prose-pathology.md`；人设 → `storytelling/authorial-persona.md`；因果声明 → `../write-methods/corpus/micro-templates/causal-hedging.md`。纪律：不改骨架占位；其余共用纪律（每句位 ≤2-3 候选、specificity gate、`### 措辞润色建议` 附末不覆盖骨架）见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律。
 
 **完成判据**：质量门全过；润色纪律满足；无未修复的 🔴/🟡 标记。
 
@@ -101,6 +101,6 @@ description: >-
 ## 纪律
 
 - 原文锚定与润色纪律（共用版）：见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律——语料语句可直接采用，仅替换来源特异性内容（专名/数字/系数/表号）防串稿；润色协议见 `_polish-protocol.md`。
-- 批评登记：用户不满时登记到 `academic-writing-corpus/_evidence_registry.yaml` 的 `critique.per_file`（revise/reject +1、reasons 去重首插最多 8 条）；不登记流程抱怨与风格偏好。
+- 批评登记：用户不满时登记到 `corpus/_evidence_registry.yaml` 的 `critique.per_file`（revise/reject +1、reasons 去重首插最多 8 条）；不登记流程抱怨与风格偏好。
 - 演化：规则层反例更新 `_skill_design_feedback.yaml`（见 `../distill-introduction-exemplar/references/phase-4-validation-writeback.md`）；单篇论文不得建立普遍规则。
 - 注册表缺失时回退 `_routing_tables.yaml` 静态推荐，不中断输出；但**必须在输出末尾附加降级声明**："⚠ registry 缺失，语料验证状态（EMERGING/VERIFIED/ROBUST）未经核验，本次按静态路由表推荐"——回退不得静默。

@@ -200,7 +200,7 @@ updated: 2026-08-23
 >   - OLS-FE 变体33：**下游绩效事后分析**（时间增长 + 多指标收敛 + 提示性收尾）
 >   - OLS-FE 变体34：**2×2 类型学交叉对角描述性比较**（回归前非参数类型对比）
 >   - 反模式新增 2 条：显著性语言不一致（p=0.052 称 significant vs p=0.071/0.075 称 marginal）；split-sample 系数对比无 Wald 检验
->   - 注：Methods 配套新增（自创连续相似度指标 + 多数据库漏斗）见 `../write-methods/econometric-models/`
+>   - 注：Methods 配套新增（自创连续相似度指标 + 多数据库漏斗）见 `../write-methods/corpus/`
 >
 > ✅ **2026-07-22 更新（slot-R7 六维框架扩展）**: 基于 Yuan et al. (2026, JOM) 对 1,706 篇文献的系统性审查，`references/slot-R7.md` 新增 7 个子变体段落骨架 + 1 个现有变体重命名：
 >   - **Preprocessing Variation (4)**: 缺失数据处理 / 离群值-错误观测处理 / 数据转换策略 / 粗心回答筛查（均 🔬 EXPERIMENTAL，保守替代为现有 threat 段落 + 说明）
@@ -211,7 +211,7 @@ updated: 2026-08-23
 >   - 来源: Yuan, Den Hartog, Liu, De Hoogh, Sun, Zhao, Riisla & Belschak (2026) *Journal of Management* — 六维稳健性分析框架
 >
 > ✅ **2026-07-23 更新（sync from local backup）**: 从 pre-sync 备份补回两批本地蒸馏成果：
->   - **VARX-PVAR 结果类型接入**（Borah & Tellis 2016, JMR）：7 个 Results 变体（GIRF-based halo metric、graded support language、basis-points→dollars、FEVD relative importance、Venn diagram visualization、elasticity table、wear-in/wear-out dynamics）。配套 `../write-methods/econometric-models/VARX-PVAR.md`。
+>   - **VARX-PVAR 结果类型接入**（Borah & Tellis 2016, JMR）：7 个 Results 变体（GIRF-based halo metric、graded support language、basis-points→dollars、FEVD relative importance、Venn diagram visualization、elasticity table、wear-in/wear-out dynamics）。配套 `../write-methods/corpus/VARX-PVAR.md`。
 >   - **Pupovac, Astvansh, Carrillat & Legoux (2026, POM) 蒸馏**：补回 5 个 Results 变体——事件研究法 变体 2/3/4/5、OLS-FE 变体 28（Control Function + Heckman 双阶段修正表导航）。
 >   - 注：OLS-FE 变体编号因远程 86f478d 已占用 27（Kim & Lee 2026 SMJ 管道衰减），本地原 27 续编为 28。
 >
@@ -221,7 +221,7 @@ updated: 2026-08-23
 >   - OLS-FE 变体37：**GMM 零结果交互的 Monte Carlo 功效分析**（OLS 功效程序不适用 → 1000 次迭代模拟，平均功效 .91，排除 Type II error——把理论关键的零结果转为确证证据）
 >   - OLS-FE 变体38：**post-hoc spline 重解释意外负效应**（首/次/三例分段 + 平方项 + 信息递减理论 → diminishing returns 重解释，标 post-hoc）
 >   - OLS-FE 变体39：**替代估计器 3SLS 稳健性 + LDV 偏误诚实警示**（主动报告 3SLS 的 LDV 系数膨胀/R²≈.97 缺陷症状，用替代估计器失败反向佐证 AB 选择）
->   - 配套 write-methods：动态面板-GMM（4 变体，首次填充）+ 同时方程（2 变体，首次填充）见 `../write-methods/econometric-models/`
+>   - 配套 write-methods：动态面板-GMM（4 变体，首次填充）+ 同时方程（2 变体，首次填充）见 `../write-methods/corpus/`
 >   - 配套 write-theory：developmental reversal of reciprocal-causation asymmetry (H1a/H1b) + differential persistence / lagged-DV moderation (H2)
 >
 > **总变体数**: 102 (分布于 18 个结果类型文件；累计 pollock +5 / malshe +3 / zhou +2 / pontikes +1)
@@ -230,7 +230,7 @@ updated: 2026-08-23
 >   - OLS-FE 变体40：**Floodlight（Johnson-Neyman）符号反转线性交互**——全调节变量范围边际效应 + 90% CI 带，报告**双转折点**（零交叉点 ~65% leverage + 显著性交叉点 ~95% leverage，中间为"净负但未显著"灰色带）；区别变体17/18（Lind-Mehlum 曲线）与变体32（外部基准阈值）
 >   - OLS-FE 变体41：**同时方程系统三条件中介 + 非对称支持**（跨方程系数乘积 + Sobel/Zhao-Lynch-Chen；advertising 中介成立 H1a、R&D 不成立 H1b——失败根因精确定位到条件2 IV→M 不显著）
 >   - OLS-FE 变体42：**反直觉反向结果诚实报告 + 延迟到 Discussion**（H2c 预测低增长更敏感、实为高增长；Results 当场 "in contrast to H_c" + 推迟解释，Discussion 给 post-hoc 机制 + 数据局限）；区别变体6（当场解释）与变体30（预测性零结果）
->   - 配套 write-methods：同时方程 +2（辅助反向因果方程、DWH SUR-vs-3SLS）+ 面板数据-OLS +1（跨库手工匹配）见 `../write-methods/econometric-models/`
+>   - 配套 write-methods：同时方程 +2（辅助反向因果方程、DWH SUR-vs-3SLS）+ 面板数据-OLS +1（跨库手工匹配）见 `../write-methods/corpus/`
 >
 > ✅ **2026-07-30 更新（zhou2017 蒸馏）**: 基于 Zhou, Gao & Zhao (2017, *ASQ*) "State Ownership and Firm Innovation in China"——双研究 Results。+2 变体（均单篇、待第二篇交叉验证）：
 >   - 多研究 变体6：**同一模型跨 facet-DV 双研究：核心收敛 + 边缘发散 + 发散由样本/情境差异解释**（H1b/H1c/H3 两 study 收敛；H1a/H2 在 Study 2 上市企业发散 → 解释为"上市企业靠市场融资→state ownership 资源分配作用失效"的 study-level 边界）；区别变体4（跨研究差异讨论）

@@ -4,7 +4,7 @@ Results Evidence Registry Updater
 =================================
 
 消费 distill-results-exemplar Phase 4 输出的 corpus_enrichment YAML 块，
-自动更新 write-results/econometric-models/_evidence_registry.yaml 中的定量证据。
+自动更新 write-results/corpus/_evidence_registry.yaml 中的定量证据。
 
 不负责：
 - 修改 corpus .md 文件中的定性内容（骨架句法、反模式提醒等）
@@ -62,7 +62,7 @@ if sys.platform == "win32":
 # 配置
 # ============================================================
 
-REGISTRY_PATH = Path.home() / ".claude" / "skills" / "write-results" / "econometric-models" / "_evidence_registry.yaml"
+REGISTRY_PATH = Path.home() / ".claude" / "skills" / "write-results" / "corpus" / "_evidence_registry.yaml"
 
 STATUS_RULES = {
     "EMERGING": {"paper_count_max": 2},
@@ -104,7 +104,7 @@ def estimator_to_corpus_path(estimator_family):
     else:
         # 默认规则：下划线替换为连字符
         filename = estimator_family.replace("_", "-") + ".md"
-    return f"econometric-models/{filename}"
+    return f"corpus/{filename}"
 
 # 头部注释（每次保存时保留）
 REGISTRY_HEADER_LINES = [
@@ -470,7 +470,7 @@ def main():
 
     if not REGISTRY_PATH.exists():
         print(f"❌ Registry 文件不存在: {REGISTRY_PATH}")
-        print("   请确认 write-results/econometric-models/_evidence_registry.yaml 已创建")
+        print("   请确认 write-results/corpus/_evidence_registry.yaml 已创建")
         sys.exit(1)
 
     # 备份（dry-run 时也备份，以便对比）

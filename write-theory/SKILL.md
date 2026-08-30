@@ -105,8 +105,8 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 | 句位 | 查的语料库 | 动作 |
 |------|-----------|------|
 | 构念定义 / why-chain / 假设句 / 让步反论 / 主导动机串联 | 按句位选择 `corpus/sentences/` 中一个匹配文件（`construct_definition` / `mechanism_chain` / `moderation` / `hypothesis_forms` / `acknowledgment_response` / `leitmotif-section-opener` / `closure`） | 为关键句位提供 2–3 个措辞变体；不预载整个目录 |
-| 假设推导的 hedging 强度 | `../write-introduction/academic-writing-corpus/phrasebank/hedging-strength.md` | 对尚待检验的方向和机制使用与证据匹配的弱档 hedge；构念定义、已确立前提和逻辑关系可用明确陈述，不机械给每句加 hedge |
-| 处理竞争机制/竞争理论的批判措辞 | `../write-introduction/academic-writing-corpus/phrasebank/critique-phrases.md`（先读同目录 `_index.md`） | 为 "prior theory fails to account for..." 类句提供变体（**必须配具体理论+局限**） |
+| 假设推导的 hedging 强度 | `../write-introduction/corpus/phrasebank/hedging-strength.md` | 对尚待检验的方向和机制使用与证据匹配的弱档 hedge；构念定义、已确立前提和逻辑关系可用明确陈述，不机械给每句加 hedge |
+| 处理竞争机制/竞争理论的批判措辞 | `../write-introduction/corpus/phrasebank/critique-phrases.md`（先读同目录 `_index.md`） | 为 "prior theory fails to account for..." 类句提供变体（**必须配具体理论+局限**） |
 | 角色 ordering 决策 | `corpus/subprotocols/character_ordering.md` | 多 IV/多 DV 时校验主角配角出场顺序 |
 | 五病速查 | `../pollock-qc/references/prose-pathology.md` | 扫一遍五病，标 △ 处给改写建议 |
 

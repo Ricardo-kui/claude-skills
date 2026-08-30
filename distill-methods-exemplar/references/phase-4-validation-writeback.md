@@ -30,7 +30,7 @@
 > `../../distill-introduction-exemplar/references/phase-4-validation-writeback.md` 头部。
 
 本阶段生成**受治理的 adoption instructions**。输出回答三个问题：
-1. **改哪个文件** → 精确到 `write-methods/econometric-models/[设计类型].md`
+1. **改哪个文件** → 精确到 `write-methods/corpus/[设计类型].md`
 2. **怎么改** → ADD / EXTEND / REPLACE / SKIP，含具体骨架和插入位置
 3. **为什么** → 与当前 corpus 的差异 + 对 write-methods skill 的提升
 
@@ -40,7 +40,7 @@
 phase_4_skill_update_instructions:
   - action: "ADD"           # ADD / EXTEND / REPLACE / SKIP
     story_fidelity_classification: "section_variant"
-    target_file: "生存分析.md"  # write-methods/econometric-models/ 下的文件名
+    target_file: "生存分析.md"  # write-methods/corpus/ 下的文件名
     target_slot: "M7"
     insert_after: "变体 6（piecewise exponential）"  # 语义定位——描述该插入在哪个已有变体之后，不硬编码数字
     distinct_from: "变体 6（piecewise exponential）— 本变体是 Cox-type 参数风险模型（continuous-time），变体 6 是 AFT 框架（piecewise）"  # ADD/EXTEND 必填：与最近变体的一句差异，写入速查表「区别」列

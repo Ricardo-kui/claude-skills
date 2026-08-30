@@ -367,7 +367,7 @@ establish temporal or causal order.
 
 #### 语料锚定
 
-- ilicic_brennan_2026_jm (Journal of Marketing) — Study 4：political ideology -> sense of agency (M1) -> perceived product danger (M2) -> gambling severity。正向间接效应 CI [.01, .02]；反转顺序后 CI [-.01, .01] 含零。该结果支持"提议排序更符合数据"的有限表述，但不能确认 agency->danger 的因果顺序；主文中 gambling severity 还先于两个中介测量。配 measurement-of-process 设计（见 `../write-methods/econometric-models/实验.md` 变体6）。
+- ilicic_brennan_2026_jm (Journal of Marketing) — Study 4：political ideology -> sense of agency (M1) -> perceived product danger (M2) -> gambling severity。正向间接效应 CI [.01, .02]；反转顺序后 CI [-.01, .01] 含零。该结果支持"提议排序更符合数据"的有限表述，但不能确认 agency->danger 的因果顺序；主文中 gambling severity 还先于两个中介测量。配 measurement-of-process 设计（见 `../write-methods/corpus/实验.md` 变体6）。
 
 ### 变体 6: 事件条件间接效应分层报告（直接交互不一致时）
 

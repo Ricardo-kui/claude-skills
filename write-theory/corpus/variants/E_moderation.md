@@ -494,9 +494,9 @@ and [DV] is [stronger/weaker] when [W2] is high than when [W2] is low."
 - `corpus/sentences/moderation.md`（机制修改论证）
 - `corpus/sentences/cost_benefit_calculus.md`（成本-收益计算机制 voice）
 - `corpus/subprotocols/hypothesis_derivation_patterns.md`（Sequential Nested Moderation 模式）
-- `../write-methods/econometric-models/面板数据-OLS.md` 变体21（M7 三向交互模型设定：mean-centering + 完整 lower-order terms）
-- `../write-results/econometric-models/三向交互.md` 变体2（连续调节变量三向交互 — 边际效应表）
-- `../write-introduction/academic-writing-corpus/transitions/14-nested-moderation-preview.md`（Introduction 末尾预览嵌套调节结构）
+- `../write-methods/corpus/面板数据-OLS.md` 变体21（M7 三向交互模型设定：mean-centering + 完整 lower-order terms）
+- `../write-results/corpus/三向交互.md` 变体2（连续调节变量三向交互 — 边际效应表）
+- `../write-introduction/corpus/transitions/14-nested-moderation-preview.md`（Introduction 末尾预览嵌套调节结构）
 
 ---
 
@@ -745,7 +745,7 @@ H2. The [penalty] decreases as the [feature 1] of [actor]'s [carrier] increases.
 **调用语料**:
 - `corpus/sentences/mechanism_chain.md`（每调节小节的学科证据→机制→应用链）
 - `corpus/subprotocols/hypothesis_derivation_patterns.md`（调节推导句式）
-- 上游联动: `write-introduction/academic-writing-corpus/theory-lens/02-dual-theory-layered.md` 变体B（同论文：lens 的 N:1 映射在 Theory 兑现为 N 个调节小节）——taxonomy 在 lens 预告、在 theory 兑现，两处 1:1 对齐是强一致信号
+- 上游联动: `write-introduction/corpus/theory-lens/02-dual-theory-layered.md` 变体B（同论文：lens 的 N:1 映射在 Theory 兑现为 N 个调节小节）——taxonomy 在 lens 预告、在 theory 兑现，两处 1:1 对齐是强一致信号
 
 ---
 
@@ -811,7 +811,7 @@ H2: There will be a [positive/negative] interaction effect of [trait] and [cue] 
 - `corpus/sentences/moderation.md`（Mitigation via Manifestation-Switch 假设句式；与 Buffering 判别）
 - `corpus/sentences/mechanism_chain.md`（Threat-Processing Cascade：扫描→归因→安全行为 的认知链）
 - `corpus/subprotocols/bilateral_argumentation_templates.md`（cue/activation 条件化 carve-out：双边覆盖由主效应基线 + high 态满足）
-- 上游联动: `write-introduction/academic-writing-corpus/theory-lens/`（upper echelons 透镜在 Intro 预告特质→行为，Theory 兑现默认表现型→cue 切换）
+- 上游联动: `write-introduction/corpus/theory-lens/`（upper echelons 透镜在 Intro 预告特质→行为，Theory 兑现默认表现型→cue 切换）
 
 
 ### 变体 B：事件属性切分的双边调节对（Event-Attribute Split Bilateral Moderation Pair，ball_2018 型）

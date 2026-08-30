@@ -74,7 +74,7 @@
 
 **步骤**：
 
-1. **确定文件路径**：`academic-writing-corpus/[module]/[canonical_id].md`
+1. **确定文件路径**：`corpus/[module]/[canonical_id].md`
 2. **确认不重复**：Phase 4.5 已在注册表中创建条目，确认该 canonical_id 在注册表中 `status = EMERGING` 且 `paper_count = 1`
 3. **创建文件**，使用以下完整骨架：
 
@@ -236,7 +236,7 @@ source: Distilled by distill-introduction-exemplar Phase 4.6
 
 当前 `per_combo_styles` 的输出去向：
 - Phase 4 末尾的 `style_profile_enrichment` YAML 块中**仍然生成**（保留在对话输出中，供人工查阅）
-- **不再回写**到 `academic-writing-corpus/` 下的任何文件
+- **不再回写**到 `corpus/` 下的任何文件
 - write-introduction 的"风格提示"块目前仅依赖 corpus 文件的 `## 风格画像` 章节（单模板层），不依赖组合层数据
 
 #### 安全规则

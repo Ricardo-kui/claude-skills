@@ -15,9 +15,9 @@ vault_reports:
   methods_results: "narrative_analysis/methods_results/mvp30/fine_grained/batch_2026-05-18/pfarrer_2010_amj.md（仅 Methods）+ **全文：文献笔记库/01 导入/论文导入/Pfarrer, Pollock, and Rindova 2010.md**（2026-08-09 Results/Discussion 回读补实——此前 `_parsed_texts/` 穷尽检索无此文，实际存于文献笔记库）"
   story_arc: null
 corpus_links:
-  write-introduction: "academic-writing-corpus/tensions/05-construct-confusion.md 变体A（双层构念混淆，来源）+ 变体C（操作化错配，adapted）；无 Hook 冷启动（与 gamache2020 同型）"
+  write-introduction: "corpus/tensions/05-construct-confusion.md 变体A（双层构念混淆，来源）+ 变体C（操作化错配，adapted）；无 Hook 冷启动（与 gamache2020 同型）"
   write-theory: "pattern 候选（construct_differentiation_dual_lens / formation_mechanism_contrast / positive_negative_boundary_embedded）——theory 报告建议入库，路径待验证"
-  write-methods: "econometric-models/事件历史+事件研究.md 变体5（事件窗口+市场模型+EVENTUS 声明，待交叉）；memory 记录：sample-justification 模板H/I、model-selection 模板G、endogeneity-defense 模板F（路径待验证）"
+  write-methods: "corpus/事件历史+事件研究.md 变体5（事件窗口+市场模型+EVENTUS 声明，待交叉）；memory 记录：sample-justification 模板H/I、model-selection 模板G、endogeneity-defense 模板F（路径待验证）"
   write-results: null
 ```
 

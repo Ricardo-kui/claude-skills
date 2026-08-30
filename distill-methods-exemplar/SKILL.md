@@ -6,7 +6,7 @@ when_to_use: "输入是已发表范文且目标是学写法时；写作用 write
 
 # Distill Methods Exemplar
 
-Distill how a published Methods section argues—not what it says—into reusable, evidence-traceable writing assets for `write-methods/econometric-models/`。
+Distill how a published Methods section argues—not what it says—into reusable, evidence-traceable writing assets for `write-methods/corpus/`。
 
 三层递进：学习顶刊叙述手法（Phase 0–2）→ 量化与跨论文对比（Phase 3–4）→ 沉淀到 corpus（Phase 4–5）。核心原则：How > What；范式排他性（只提取该类设计特别需要的组织方式）；每个骨架必须能直接指导新论文写出段落（可生成性）。
 

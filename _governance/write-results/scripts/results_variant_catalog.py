@@ -18,7 +18,7 @@ from pathlib import Path
 import yaml
 
 
-CORPUS_DIR = Path(__file__).resolve().parents[1] / "econometric-models"
+CORPUS_DIR = Path(__file__).resolve().parents[1] / "corpus"
 REGISTRY_PATH = CORPUS_DIR / "_evidence_registry.yaml"
 STANDARD_HEADING = re.compile(
     r"^###\s+变体\s*(\d+)\s*[:：]\s*(.+?)\s*$", re.MULTILINE

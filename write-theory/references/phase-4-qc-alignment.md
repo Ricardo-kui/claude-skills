@@ -20,7 +20,7 @@
 | Diagrams as theory | 是否有模型图但每条路径无文字解释？→ 补 verbal theory |
 | Hypotheses as theory | 假设是否描述了 what 但没解释 why？→ 每个假设前必须有 why chain |
 | Passive voice dumping | 是否有 "It is argued that" / "It is hypothesized that"？→ 改为 "We argue that" / "We hypothesize that" |
-| Inflated symbolism | 是否有 "paradigm shift" / "fundamentally transforms"？→ 降级为具体贡献描述（"extend", "refine", "challenge"）；mechanism 推理句是否含绝对化词（all / always / never / every / no one）超出论证支撑？→ hedge 词库与限定条件句式见 `../../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md` §5.6 |
+| Inflated symbolism | 是否有 "paradigm shift" / "fundamentally transforms"？→ 降级为具体贡献描述（"extend", "refine", "challenge"）；mechanism 推理句是否含绝对化词（all / always / never / every / no one）超出论证支撑？→ hedge 词库与限定条件句式见 `../../write-introduction/corpus/storytelling/prose-craft-checklist.md` §5.6 |
 | Burying the lead | 最小必要背景后仍未出现核心判断？→ 尽早重写为"主语+主动动词+方向/机制" |
 | Sentence stuffing | 一句承担多个独立 claim、插入语遮蔽主干，或一段混入多个主导任务？→ 按理论动作拆分，不按固定词数机械切分 |
 | Read my mind | why chain 是否从 A 直接跳到 C，缺少 B 的中间步骤或 transition？→ 补充每个因果步骤，添加 explicit transition |

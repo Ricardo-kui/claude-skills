@@ -98,7 +98,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 | M9 | `references/slot-M9.md` | 仅多研究设计 | 非多研究 |
 | M10 | `references/slot-M10.md` | 通常省略（顶刊 <10%） | 默认跳过 |
 
-3. **设计类型变体（飞轮积累，勿漏读）**：确定 design type 后先查 `econometric-models/INDEX.md` 的「设计类型索引表」确认变体数；变体数 >0 → **必须加载 `econometric-models/[设计类型].md`**（先读顶部「变体速查表」——按槽位+验证状态定位候选（2026-08-29 统一三档词表，与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀；召回主题条目按用户裁决单源 VERIFIED），再精读对应变体正文）。变体数 = 0 的类型仅用 slot 主骨架。
+3. **设计类型变体（飞轮积累，勿漏读）**：确定 design type 后先查 `corpus/INDEX.md` 的「设计类型索引表」确认变体数；变体数 >0 → **必须加载 `corpus/[设计类型].md`**（先读顶部「变体速查表」——按槽位+验证状态定位候选（2026-08-29 统一三档词表，与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀；召回主题条目按用户裁决单源 VERIFIED），再精读对应变体正文）。变体数 = 0 的类型仅用 slot 主骨架。
 
 **完成判据**：设计类型 + 槽位序列已定（含分支调整理由）；slot 与设计类型变体已加载。
 
@@ -116,8 +116,8 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 
 **语料优先改编（模块确定后）**：slot 骨架 + 设计类型变体的语料句式即改编底本——槽位与设计类型确定后，尽量使用对应 slot 通用段落与设计类型变体的句式表达来改编（替换来源特异性内容、填充 [placeholder]），而非脱离语料自拟；变体数=0 或标注"待补"时按骨架生成，表达仍尽量贴合语料句法。
 
-1. **句法微模板（默认执行）**：按 `econometric-models/micro-templates/INDEX.md` 分类索引选读 1–3 个对应微模板（causal-hedging / transitions / because-clauses / funnel-rhythm / variable-operationalization / identification-exogeneity 等），为关键句位提供 2–3 个备选措辞。高风险微模板（强因果动词）只能在对应设计强度的骨架中使用。
-2. **措辞变化库**：过程描述 → `../write-introduction/academic-writing-corpus/phrasebank/methods-process.md`；数值与趋势 → `quantities-trends.md`；hedging → `hedging-strength.md`（识别论证/局限辩护用）；试探性因果 → `causal-hedging.md`（Discussion 机制解释专用）；五病 → `../pollock-qc/references/prose-pathology.md`。
+1. **句法微模板（默认执行）**：按 `corpus/micro-templates/INDEX.md` 分类索引选读 1–3 个对应微模板（causal-hedging / transitions / because-clauses / funnel-rhythm / variable-operationalization / identification-exogeneity 等），为关键句位提供 2–3 个备选措辞。高风险微模板（强因果动词）只能在对应设计强度的骨架中使用。
+2. **措辞变化库**：过程描述 → `../write-introduction/corpus/phrasebank/methods-process.md`；数值与趋势 → `quantities-trends.md`；hedging → `hedging-strength.md`（识别论证/局限辩护用）；试探性因果 → `causal-hedging.md`（Discussion 机制解释专用）；五病 → `../pollock-qc/references/prose-pathology.md`。
 3. **润色纪律**：骨架优先，变化库只提供措辞变体不替代结构；共用纪律（每句位 ≤2-3 候选、specificity gate、`### 措辞润色建议` 附末、锚点使用）见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律。
 4. **锚点使用纪律（verbatim anchor）**：设计类型变体的 `原始句锚点` 是来源论文原句的风格参照——使用规则见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律；旧变体无锚点（标注"待补"）时按骨架直接生成。修辞动作级升级（把某段按某动作做得更讲究）路由 `../story-blueprints/v4/rhetoric-moves/_index.md`，润色走其 `_polish-protocol.md` 流畅性门。
 5. **revision 约束优先**：corpus、phrasebank 与“措辞润色建议”不得覆盖 active feedback 或恢复 `supersedes` 指向的旧建议；语料语句可直接使用，仅替换来源特异性内容（专名/数字/系数/表号）防串稿。
@@ -159,7 +159,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 
 1. 先修正文稿，不以"已登记"代替改写；
 2. 将本轮批评及现稿修订记录中的明确裁定规范化为可执行规则，按 `skill | project | section | design_type` 登记到 `references/feedback-registry.json`；新裁定覆盖旧建议时记录 `supersedes`（语态基准、失效建议、确定性禁用表达分别写入 `benchmark`/`supersedes`/`prohibited_patterns`）；
-3. 下一次 revision 在生成前加载匹配的 active rules；项目规则不得污染其他论文；`econometric-models/_evidence_registry.yaml` 只保留语料/设计类型的聚合质量信号。
+3. 下一次 revision 在生成前加载匹配的 active rules；项目规则不得污染其他论文；`corpus/_evidence_registry.yaml` 只保留语料/设计类型的聚合质量信号。
 
 ## 下游接口
 
@@ -174,9 +174,9 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 
 **反馈登记**：用 `scripts/record_feedback.py` 维护 `references/feedback-registry.json`，每条反馈保留 scope、category、rule、reason、source 和 evidence；不得只累计 revise/reject 次数。语料聚合只在批评确实指向某一设计类型变体时汇总；单项目批评不自动修改 corpus，精炼由 `distill-methods-exemplar` 驱动。
 
-**语料质量统计**：`econometric-models/_evidence_registry.yaml` 是次级 corpus 路由资产；只在反馈确实指向某一设计类型变体时汇总 revise/reject。单项目批评不自动修改 corpus，精炼仍由 `distill-methods-exemplar` 驱动。
+**语料质量统计**：`corpus/_evidence_registry.yaml` 是次级 corpus 路由资产；只在反馈确实指向某一设计类型变体时汇总 revise/reject。单项目批评不自动修改 corpus，精炼仍由 `distill-methods-exemplar` 驱动。
 
-**语料与变体**：设计类型具体变体见 `econometric-models/[设计类型].md`；新论文蒸馏结果经 `distill-methods-exemplar` → Phase 4 自动写入（同步更新 INDEX.md 变体数）。
+**语料与变体**：设计类型具体变体见 `corpus/[设计类型].md`；新论文蒸馏结果经 `distill-methods-exemplar` → Phase 4 自动写入（同步更新 INDEX.md 变体数）。
 
 ---
 *基于 34 篇 MVP30 范文语料库、Pollock 2025 Ch07 构建；版本历史见 git log。*

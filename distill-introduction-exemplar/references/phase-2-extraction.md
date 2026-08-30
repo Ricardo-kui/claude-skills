@@ -38,7 +38,7 @@
   - Inadequacy 版本: "While prior research has treated [X] as [assumption], this view overlooks [specific limitation] because [reason]."
   - Incommensurability 版本: "A consensus is building that [dominant view] ([citations]). Yet [counter-evidence], suggesting that [alternative view] may be [more accurate / incomplete]."
 [问题对应]: Dorobantu Q — "What is missing in prior research? What are its limitations?"
-[对应语料库]: ../../write-introduction/academic-writing-corpus/tensions/01-despite-progress-unaddressed.md
+[对应语料库]: ../../write-introduction/corpus/tensions/01-despite-progress-unaddressed.md
 [入库动作]: none / append_variant / create_new_file
 [变体类型名]: "[如入库动作为 append_variant，给新变体起一个描述性名称，如'制度冲突型（lehman2014型）']"
 [原文锚定句]: "[如入库动作非 none，提取原文中能代表该变体的 1-2 个关键句，供 Phase 4.6 写入 corpus 文件]"
@@ -117,7 +117,7 @@
 - 范式排他性（该骨架是否只为某类 Gap 所需）
 - Gap 变体（同类骨架在不同 Gap 类型中的改写模式）
 - **问题对应**：该骨架回答 Dorobantu et al. (2024) 研究设计问题链中的哪个问题
-- **对应语料库**：如该骨架与 `../../write-introduction/academic-writing-corpus/` 中的 canonical 模板对应，标注路径
+- **对应语料库**：如该骨架与 `../../write-introduction/corpus/` 中的 canonical 模板对应，标注路径
 - **入库动作**：
   - `none` = 该骨架已被已有变体覆盖，无需入库（默认值）
   - `append_variant` = 该骨架是已有 canonical_id 的新变体，Phase 4.6 将追加到对应 .md 文件
@@ -152,7 +152,7 @@ phase_2_distillation:
         paradigm_exclusivity: "Incompleteness 专用"
         gap_variants: ["Inadequacy 版本", "Incommensurability 版本"]
         dorobantu_question: "Why is this puzzle important?"
-        corpus_path: "../../write-introduction/academic-writing-corpus/hooks/06-paradigm-challenge.md"
+        corpus_path: "../../write-introduction/corpus/hooks/06-paradigm-challenge.md"
         enrichment_action: "none / append_variant / create_new_file"
         variant_name: "[如 append_variant: '监管冲击型（darby2024型）']"
         original_anchor: "[如 append_variant: '原文关键句...']"
@@ -226,7 +226,7 @@ phase_2_4_skeleton_critic:
 
 **执行时机**：Phase 2.4 完成后、Phase 3 开始前（此时骨架已验证，数据最可靠）。
 
-**写入内容**：从 Phase 0-2.4 输出中提取以下字段，追加到 `../../write-introduction/academic-writing-corpus/_batch_state.yaml`：
+**写入内容**：从 Phase 0-2.4 输出中提取以下字段，追加到 `../../write-introduction/corpus/_batch_state.yaml`：
 
 ```yaml
 - paper_id: "[从 Phase 0 paper_id 提取]"

@@ -14,7 +14,7 @@
 
 | 资产层 | 归属 | 产出 |
 |--------|------|------|
-| Section 级语料 | `write-introduction/academic-writing-corpus`、`write-theory/corpus`、`write-methods/econometric-models`、`write-results/econometric-models` | 模块骨架、表达 DNA、slot 模板 |
+| Section 级语料 | `write-introduction/corpus`、`write-theory/corpus`、`write-methods/corpus`、`write-results/corpus` | 模块骨架、表达 DNA、slot 模板 |
 | **Legacy Evidence Layer** | `story-blueprints/blueprints/` + `legacy/legacy-manifest.json` | 历史阅读证据、发现与复读候选；`runtime_eligibility: no` |
 | **v0.4 Learning Layer** | `story-blueprints/v4/blueprints/` | 重建、评价、分节学习动作分离后的可检索学习卡 |
 | **讲法汇编（历史）** | `story-blueprints/tellings/alternative-tellings-compilation.md` | 旧资产的研究线索；不得直接成为项目故事或写作模板 |

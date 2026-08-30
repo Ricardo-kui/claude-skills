@@ -252,23 +252,23 @@ def _atomic_write(path: Path, text: str) -> None:
 def _validate_staged(skill_root: Path, files: dict[Path, str]) -> None:
     with tempfile.TemporaryDirectory(prefix="results-governance-") as tmp:
         staged_root = Path(tmp)
-        staged_corpus = staged_root / "econometric-models"
+        staged_corpus = staged_root / "corpus"
         staged_corpus.mkdir()
-        for source in (skill_root / "econometric-models").glob("*.md"):
+        for source in (skill_root / "corpus").glob("*.md"):
             target = staged_corpus / source.name
             target.write_text(files.get(source, source.read_text(encoding="utf-8")), encoding="utf-8")
-        registry_source = skill_root / "econometric-models" / "_evidence_registry.yaml"
+        registry_source = skill_root / "corpus" / "_evidence_registry.yaml"
         staged_registry = staged_corpus / registry_source.name
         staged_registry.write_text(files.get(registry_source, registry_source.read_text(encoding="utf-8")), encoding="utf-8")
         catalog.load_catalog(staged_corpus, staged_registry)
 
 
 def apply_plan(skill_root: Path, plan_path: Path, dry_run: bool = False) -> dict:
-    registry_path = skill_root / "econometric-models" / "_evidence_registry.yaml"
-    index_path = skill_root / "econometric-models" / "INDEX.md"
+    registry_path = skill_root / "corpus" / "_evidence_registry.yaml"
+    index_path = skill_root / "corpus" / "INDEX.md"
     registry_text = registry_path.read_text(encoding="utf-8")
     registry = catalog._load_registry(registry_path)
-    variants, _ = catalog.load_catalog(skill_root / "econometric-models", registry_path)
+    variants, _ = catalog.load_catalog(skill_root / "corpus", registry_path)
     known_ids = {item.asset_id for item in variants}
     type_counts = Counter(item.result_type for item in variants)
     governance = registry["asset_governance"]
@@ -285,7 +285,7 @@ def apply_plan(skill_root: Path, plan_path: Path, dry_run: bool = False) -> dict
             target_name += ".md"
         if Path(target_name).name != target_name:
             raise GovernanceError("ADD_REFERENCE target_file must be a corpus filename, not a path")
-        target_path = skill_root / "econometric-models" / target_name
+        target_path = skill_root / "corpus" / target_name
         result_type = target_path.stem
         if result_type not in type_counts or type_counts[result_type] == 0:
             raise GovernanceError("ADD_REFERENCE currently requires an already-filled result type")
@@ -350,8 +350,8 @@ def main() -> int:
     try:
         if args.command == "validate":
             variants, _ = catalog.load_catalog(
-                args.skill_root / "econometric-models",
-                args.skill_root / "econometric-models" / "_evidence_registry.yaml",
+                args.skill_root / "corpus",
+                args.skill_root / "corpus" / "_evidence_registry.yaml",
             )
             print(yaml.safe_dump({"valid": True, "asset_records": len(variants)}, sort_keys=False).strip())
             return 0

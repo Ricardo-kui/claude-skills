@@ -7,7 +7,7 @@
 
 正向链路：`distill-*-exemplar` 把顶刊论文的 Methods/Results 蒸馏成结构化 JSON（M1–M10 / R1–R9 槽位映射），验证通过的变体写回 `write-*` 语料。
 
-本工具做**反向验证**：把蒸馏 JSON 再喂回来，检查 `write-methods` / `write-results` 的 SKILL.md 槽位模板 + `econometric-models/` 语料（经 `config/design_type_map.json` 的设计类型→变体映射）是否真的能覆盖这篇论文的每一项——即"语料声称覆盖的设计，能否反向生成原范文的蒸馏结构"。产物是 Gap 报告与跨技能一致性报告。
+本工具做**反向验证**：把蒸馏 JSON 再喂回来，检查 `write-methods` / `write-results` 的 SKILL.md 槽位模板 + `corpus/` 语料（经 `config/design_type_map.json` 的设计类型→变体映射）是否真的能覆盖这篇论文的每一项——即"语料声称覆盖的设计，能否反向生成原范文的蒸馏结构"。产物是 Gap 报告与跨技能一致性报告。
 
 > 一句话：**蒸馏回答"范文里有什么"，反向验证回答"我们的语料写不写得出来"。**
 

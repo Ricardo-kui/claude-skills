@@ -60,10 +60,10 @@ import yaml
 SKILLS_ROOT = Path(__file__).resolve().parent.parent.parent
 
 CORPUS_ROOTS = {
-    "introduction": SKILLS_ROOT / "write-introduction" / "academic-writing-corpus",
+    "introduction": SKILLS_ROOT / "write-introduction" / "corpus",
     "theory": SKILLS_ROOT / "write-theory" / "corpus",
-    "methods": SKILLS_ROOT / "write-methods" / "econometric-models",
-    "results": SKILLS_ROOT / "write-results" / "econometric-models",
+    "methods": SKILLS_ROOT / "write-methods" / "corpus",
+    "results": SKILLS_ROOT / "write-results" / "corpus",
 }
 
 # file stem -> (evidence section, entry key) for registry entries that are NOT

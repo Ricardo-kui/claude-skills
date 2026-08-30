@@ -243,7 +243,7 @@ promise_fulfillment:
    - REVISE → 模板部分生效，有修正建议
    - REJECT → 模板在此次使用中失效
 
-2. **更新注册表**：使用 Read 工具读取 `academic-writing-corpus/_evidence_registry.yaml`，定位到每个被评估模板的 `validation_history` 块，使用 Edit 工具做以下增量更新：
+2. **更新注册表**：使用 Read 工具读取 `corpus/_evidence_registry.yaml`，定位到每个被评估模板的 `validation_history` 块，使用 Edit 工具做以下增量更新：
    - `total_runs: N` → `total_runs: N+1`
    - `validated: N` → `validated: N+1`（VALIDATED）/ `revise: N` → `revise: N+1`（REVISE）/ `reject: N` → `reject: N+1`（REJECT）
    - 如果 verdict = REVISE 或 REJECT：在 `common_revise_reasons` 列表中追加新的修正建议字符串

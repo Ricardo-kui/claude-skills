@@ -27,9 +27,9 @@ dependencies: []
 
 | 文件 | 路径 | 引用位置 |
 |------|------|---------|
-| `prose-craft-checklist.md` | `../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md` | Phase 1.4 |
-| `central-knot-diagnostic.md` | `../write-introduction/academic-writing-corpus/storytelling/central-knot-diagnostic.md` | 间接（通过 theory_hints） |
-| `character-map.md` | `../write-introduction/academic-writing-corpus/storytelling/character-map.md` | 间接 |
+| `prose-craft-checklist.md` | `../write-introduction/corpus/storytelling/prose-craft-checklist.md` | Phase 1.4 |
+| `central-knot-diagnostic.md` | `../write-introduction/corpus/storytelling/central-knot-diagnostic.md` | 间接（通过 theory_hints） |
+| `character-map.md` | `../write-introduction/corpus/storytelling/character-map.md` | 间接 |
 
 ## 使用方式
 

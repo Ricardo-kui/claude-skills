@@ -111,9 +111,9 @@ Theory & Hypotheses 在整篇论文的 Five-Act 结构中属于 **Rising Action*
 **1.4 Prose Craft 定位**（Pollock 2025 Ch03；以下三个工具与 Phase 2-5 并行执行）
 
 Theory section 的 Rising Action 不仅需要功能推进，还需要 prose 层面的可读性。
-按任务读取 `../../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md` 的相关节：段落架构用 §0，例证需求用 §2，声音用 §3，节奏用 §4，过度/不足声明用 §5.6–5.7。不要为一般 Theory 任务加载整份清单。
+按任务读取 `../../write-introduction/corpus/storytelling/prose-craft-checklist.md` 的相关节：段落架构用 §0，例证需求用 §2，声音用 §3，节奏用 §4，过度/不足声明用 §5.6–5.7。不要为一般 Theory 任务加载整份清单。
 
-**新增**：段落级 architecture 检查（PEEL/PEAL、paragraph length、topic sentence placement、coherence）参见 `../../write-introduction/academic-writing-corpus/storytelling/prose-craft-checklist.md` §0；句子级 transition 信号词参见 `../../write-introduction/academic-writing-corpus/micro-templates/transition-signals.md`。
+**新增**：段落级 architecture 检查（PEEL/PEAL、paragraph length、topic sentence placement、coherence）参见 `../../write-introduction/corpus/storytelling/prose-craft-checklist.md` §0；句子级 transition 信号词参见 `../../write-introduction/corpus/micro-templates/transition-signals.md`。
 
 #### Human Face in Theory（按需使用）
 - **Knot Inheritance**：当 knot 抽象或跨域时，可用 1 句具体场景说明"这个问题在现实世界中长什么样"

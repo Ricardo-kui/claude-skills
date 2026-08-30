@@ -20,7 +20,7 @@ import yaml
 
 
 SKILL_ROOT = Path(__file__).resolve().parents[1]
-CORPUS_DIR = SKILL_ROOT / "academic-writing-corpus"
+CORPUS_DIR = SKILL_ROOT / "corpus"
 REGISTRY_PATH = CORPUS_DIR / "_evidence_registry.yaml"
 VARIANT_HEADING = re.compile(
     r"^#{2,4}\s+(?:变体|Variant)\s+([^：:\n]+?)(?:\s*[：:]\s*(.+))?$",

@@ -68,10 +68,10 @@ import corpus_writeback as cw  # noqa: E402  (REGISTRY_ALIASES, resolve_target,
 # wins). Drives V3b expectations; runtime detection stays as fallback for
 # unlisted corpora (2026-08-29 v2 plan item D).
 CORPUS_SCHEMA = {
-    "write-introduction/academic-writing-corpus": "papers-list",
+    "write-introduction/corpus": "papers-list",
     "write-theory/corpus": "paper-level",
-    "write-methods/econometric-models": "papers-list",
-    "write-results/econometric-models": "slot-schema",
+    "write-methods/corpus": "papers-list",
+    "write-results/corpus": "slot-schema",
 }
 
 

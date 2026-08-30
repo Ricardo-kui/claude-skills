@@ -1,6 +1,6 @@
 # Example Skeleton — OLS/FE + 交互效应 示例（从 SKILL.md 下沉，v0.1）
 
-> 由 write-results 生成 OLS/FE + 交互效应骨架时**对照参考**（直接复制替换方括号）。其余结果类型见 `econometric-models/[结果类型].md`。
+> 由 write-results 生成 OLS/FE + 交互效应骨架时**对照参考**（直接复制替换方括号）。其余结果类型见 `corpus/[结果类型].md`。
 
 **输入**：`/write-results OLS/FE --hypotheses="H1: DT -> Routine updating (+); H2: Routine updating -> Innovation (+); H3: DT × AC -> Innovation" --has-interactions`
 

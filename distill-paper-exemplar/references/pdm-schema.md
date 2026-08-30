@@ -67,7 +67,7 @@ distill_track:                        # 每节一个条目，key 为 section 名
       gap_type: ""
       contribution_dimension: ""
     writeback:
-      target: "write-introduction/academic-writing-corpus/<dir>/"
+      target: "write-introduction/corpus/<dir>/"
       gate: awaiting_confirm | confirmed | written
       items: []                       # 该节写回条目计数/概览
   theory:
@@ -89,7 +89,7 @@ distill_track:                        # 每节一个条目，key 为 section 名
     identity:
       design_family: ""
     writeback:
-      target: "write-methods/econometric-models/"
+      target: "write-methods/corpus/"
       gate: awaiting_confirm | confirmed | written
   results:
     skill: distill-results-exemplar
@@ -99,7 +99,7 @@ distill_track:                        # 每节一个条目，key 为 section 名
     identity:
       estimator_family: ""
     writeback:
-      target: "write-results/econometric-models/"
+      target: "write-results/corpus/"
       gate: awaiting_confirm | confirmed | written
 
 cross_section_identity:               # L2 填充，单节模式标 unknown
@@ -155,7 +155,7 @@ distill_track:
     section_json: "sections/introduction.json"
     feedback: "feedback/introduction.feedback.yaml"
     identity: {gap_type: Inadequacy, contribution_dimension: Method}
-    writeback: {target: "write-introduction/academic-writing-corpus/tensions/", gate: written, items: 2}
+    writeback: {target: "write-introduction/corpus/tensions/", gate: written, items: 2}
   theory:
     status: distilled
     writeback: {gate: awaiting_confirm}

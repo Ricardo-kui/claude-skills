@@ -7,8 +7,8 @@
 # Track user's custom skill directories
 !revision-coach/
 !revision-coach/**
-!academic-writing-corpus/
-!academic-writing-corpus/**
+!corpus/
+!corpus/**
 !diagnose-introduction/
 !diagnose-introduction/**
 !discussion-review/

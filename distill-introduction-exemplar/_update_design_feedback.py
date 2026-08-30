@@ -26,7 +26,7 @@ import yaml
 DEFAULT_REGISTRY = (
     Path(__file__).parent.parent
     / "write-introduction"
-    / "academic-writing-corpus"
+    / "corpus"
     / "_skill_design_feedback.yaml"
 )
 
@@ -385,7 +385,7 @@ def self_test() -> None:
                 "classification": "routing_defect",
                 "current_rule": "Gap type determines Conversation.",
                 "rule_excerpt": "Gap type determines Conversation.",
-                "target": "write-introduction/academic-writing-corpus/_routing_tables.yaml",
+                "target": "write-introduction/corpus/_routing_tables.yaml",
                 "diagnosis": "The axes are independent.",
                 "risk": "medium",
                 "regression_cases": regressions,
@@ -434,7 +434,7 @@ def self_test() -> None:
 
     with tempfile.TemporaryDirectory() as temp_dir:
         skills_root = Path(temp_dir)
-        routing = skills_root / "write-introduction" / "academic-writing-corpus" / "_routing_tables.yaml"
+        routing = skills_root / "write-introduction" / "corpus" / "_routing_tables.yaml"
         routing.parent.mkdir(parents=True)
         routing.write_text("Gap type determines Conversation.\n", encoding="utf-8")
         skill = skills_root / "write-introduction" / "SKILL.md"
@@ -445,7 +445,7 @@ def self_test() -> None:
             "defect_id": "conversation-gap-coupling",
             "resolution": {
                 "status": "applied",
-                "modified_targets": ["write-introduction/academic-writing-corpus/_routing_tables.yaml"],
+                "modified_targets": ["write-introduction/corpus/_routing_tables.yaml"],
                 "rule_excerpt_after": "Conversation is routed independently from Gap type.",
                 "old_rule_excerpt_absent": True,
                 "validation": {"quick_validate": True, "regression": True, "forward_test": True},

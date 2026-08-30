@@ -8,11 +8,11 @@ description: >-
 
 sources:
   legacy_corpus:
-    file: econometric-models/OLS-FE.md
+    file: corpus/OLS-FE.md
     sha256: 3b372d78cac2e824a20441a5c784e81d38f5c13edba5fef6b6e077334eae54ae
     expected_variant_headings: 46
   evidence_registry:
-    file: econometric-models/_evidence_registry.yaml
+    file: corpus/_evidence_registry.yaml
 
 selection_policy:
   hard_filter: requires_all
@@ -61,7 +61,7 @@ assets:
       - table_navigation
     locator:
       type: registry_skeleton
-      file: econometric-models/_evidence_registry.yaml
+      file: corpus/_evidence_registry.yaml
       estimator: OLS_FE
       slot: R2
       variant_id: r2_ols_model_sequence
@@ -82,7 +82,7 @@ assets:
       - simple_slope_comparison
     locator:
       type: markdown_heading
-      file: econometric-models/OLS-FE.md
+      file: corpus/OLS-FE.md
       legacy_variant: 16
       heading: "### 变体 16: R2 7模型层次回归表导航 — 主效应→双向→三向递进 (1篇高价值)"
 
@@ -101,7 +101,7 @@ assets:
       - panel_data
     locator:
       type: markdown_heading
-      file: econometric-models/OLS-FE.md
+      file: corpus/OLS-FE.md
       legacy_variant: 19
       heading: "### 变体 19: R2 模型序列 — 多项式主效应 + 多个曲线调节 (1篇高价值)"
 
@@ -120,7 +120,7 @@ assets:
       - continuous_predictor
     locator:
       type: markdown_heading
-      file: econometric-models/OLS-FE.md
+      file: corpus/OLS-FE.md
       legacy_variant: 22
       heading: "### 变体 22: R2 无模型证据开场 — 四分位均值/中位数单调性 (1篇高价值)"
 
@@ -142,7 +142,7 @@ assets:
       - Describe a firm-fixed-effects column as an alternative specification unless the prior fixed-effects structure is supplied.
     locator:
       type: markdown_heading
-      file: econometric-models/OLS-FE.md
+      file: corpus/OLS-FE.md
       legacy_variant: 24
       heading: "### 变体 24: R2 Heckman 两阶段表格导航 — 第一阶段 Table 3 → 第二阶段 Columns 1-4 (1篇高价值)"
 
@@ -162,6 +162,6 @@ assets:
       - residual_inclusion
     locator:
       type: markdown_heading
-      file: econometric-models/OLS-FE.md
+      file: corpus/OLS-FE.md
       legacy_variant: 28
       heading: "### 变体 28: R2 — 截面 OLS/FE 中二元内生变量 + 样本选择的双阶段修正表导航 (1篇高价值)"

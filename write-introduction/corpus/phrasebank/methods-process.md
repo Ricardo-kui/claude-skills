@@ -12,7 +12,7 @@ created: 2026-07-27
 
 # Phrasebank: Methods 过程描述（Morley 03 章收割）
 
-> **层级定位**：auxiliary 语言实现层。顶刊蒸馏模板与 `write-methods/econometric-models/micro-templates/` 决定**说什么**；本文件只在其措辞反复使用时提供**怎么换个说法**。
+> **层级定位**：auxiliary 语言实现层。顶刊蒸馏模板与 `write-methods/corpus/micro-templates/` 决定**说什么**；本文件只在其措辞反复使用时提供**怎么换个说法**。
 >
 > **使用规则**（每次调用必读）：
 > 1. **调用顺序**：顶刊模板/微模板 → 本文件变化库 → claim-strength QC。骨架空白处优先用顶刊模板，本文件不填补结构缺口。

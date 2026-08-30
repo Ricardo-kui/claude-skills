@@ -20,7 +20,7 @@ import yaml
 from pathlib import Path
 from collections import Counter
 
-REGISTRY_PATH = Path(__file__).parent.parent / "write-introduction" / "academic-writing-corpus" / "_evidence_registry.yaml"
+REGISTRY_PATH = Path(__file__).parent.parent / "write-introduction" / "corpus" / "_evidence_registry.yaml"
 
 # Bootstrap-only paper-to-gap mapping.
 # Once the registry contains a `paper_index` block this dict is *only* a fallback

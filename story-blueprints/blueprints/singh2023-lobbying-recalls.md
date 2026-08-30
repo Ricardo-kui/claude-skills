@@ -15,10 +15,10 @@ vault_reports:
   methods_results: "narrative_analysis/methods_results/mvp30/fine_grained/batch_04_singh2023_park2025/singh2023_lobbying_product_recalls_fine_methods_results.md + deep_distillation/papers/singh2023_lobbying_product_recalls_methods_results_deep_profile.md + methods/ + results/ singh2023_..._narrative.md"
   story_arc: null
 corpus_links:
-  write-introduction: "academic-writing-corpus/tensions/17-puzzle-contrast.md 变体A（理论零假设 vs 现象矛盾型——singh_grewal2023 型）；hooks/04-puzzle-paradox.md、03-data-shock.md（Policy 丑闻 Hook 相关）"
+  write-introduction: "corpus/tensions/17-puzzle-contrast.md 变体A（理论零假设 vs 现象矛盾型——singh_grewal2023 型）；hooks/04-puzzle-paradox.md、03-data-shock.md（Policy 丑闻 Hook 相关）"
   write-theory: "corpus/sentences/mechanism_chain.md（Efficiency vs Legitimacy 双视角 + Iron Triangle 三边论证）；corpus/sentences/closure.md（T6 缺失锚定）；corpus/subprotocols/argumentation_patterns.md、arrangement_patterns.md、evidence_patterns.md"
-  write-methods: "econometric-models/micro-templates/identification-exogeneity.md、multi-source-matching.md、subsample-grouping.md；事件历史+事件研究.md（singh 来源）"
-  write-results: "econometric-models/_evidence_registry.yaml（Singh_Grewal_2023_JMR 条目 ×5，2026-08-09 核实）"
+  write-methods: "corpus/micro-templates/identification-exogeneity.md、multi-source-matching.md、subsample-grouping.md；事件历史+事件研究.md（singh 来源）"
+  write-results: "corpus/_evidence_registry.yaml（Singh_Grewal_2023_JMR 条目 ×5，2026-08-09 核实）"
 ```
 
 ## Story

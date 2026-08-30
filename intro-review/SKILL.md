@@ -85,7 +85,7 @@ metadata:
 | 贡献声明是否可被全文兑现（Claim fit） | | | |
 | 作者人设（GBL 2007 Ch04）——institutional scientist（文献掌握/方法纪律）与 human scientist（现象在场/共情/第一人称）是否双面可见、且与全文一致 | | | |
 
-**Conversation 三子项判定规则**：①②③ 任一不满足，母项最高只能打 △；发现错挂（引文研究对象不属于其所在句命题范畴）母项打 ✗ 并列为高优先级修复。子项③的判定必须引用原文或用户知识库中的 source note，不得凭印象。修复句式参照 `write-introduction/academic-writing-corpus/literature-turns/literature-turn-templates.md` 变体 D（发现锚定综合型）。
+**Conversation 三子项判定规则**：①②③ 任一不满足，母项最高只能打 △；发现错挂（引文研究对象不属于其所在句命题范畴）母项打 ✗ 并列为高优先级修复。子项③的判定必须引用原文或用户知识库中的 source note，不得凭印象。修复句式参照 `write-introduction/corpus/literature-turns/literature-turn-templates.md` 变体 D（发现锚定综合型）。
 
 ### Step 3: 识别最需改写的段落
 

@@ -90,7 +90,7 @@ when_to_use: "起草或深度修订 Results 段落时使用；只审查不改写
 | R8 补充/事后/机制 | `references/slot-R8.md` | 约 2/3 论文包含 | — |
 | R9 Results 证据收束 | `references/slot-R9.md` | 需要总结复杂或混合证据时 | 默认跳过 |
 
-3. **结果类型变体（段落级检索）**：先查 `econometric-models/INDEX.md`，再加载实际涉及的 `econometric-models/[结果类型].md`。每个段落按证据功能选择 2–4 个最接近的变体比较节奏和句法；不得用一个骨架批量覆盖整节，也不得因 corpus 句式牺牲现稿事实或用户裁定。
+3. **结果类型变体（段落级检索）**：先查 `corpus/INDEX.md`，再加载实际涉及的 `corpus/[结果类型].md`。每个段落按证据功能选择 2–4 个最接近的变体比较节奏和句法；不得用一个骨架批量覆盖整节，也不得因 corpus 句式牺牲现稿事实或用户裁定。
 4. **稳健性计划**：`methods.robustness_plan` 缺失时执行 `references/robustness-diagnosis.md`（Yuan 六维三步诊断 → 输出计划 → 只生成 mandatory/recommended 维度的 R7 段落）。
 
 **完成判据**：结果类型 + 槽位序列已定（含分支理由）；稳健性计划已定（诊断或引用既有计划）。
@@ -111,8 +111,8 @@ when_to_use: "起草或深度修订 Results 段落时使用；只审查不改写
 
 1. **假设-结果承诺兑现框架（生成前必建）**：`references/hypothesis-fulfillment-map.md`——分别记录 baseline verdict 与跨检验后的 overall evidence，避免把“基准支持”写成“证据一致”。
 2. **段落证据链（revision 默认执行）**：按 `references/draft-revision-protocol.md` 构建精确小标题、问题路径、诊断逻辑、证据和限定结论；“One concern is ...”若未说明问题如何发生及影响哪个推断，视为未完成。
-3. **句法微模板（按需）**：从 `../write-methods/econometric-models/micro-templates/` 选读 causal-hedging、interquartile-economic-significance、subsample-grouping、transitions；只借用逻辑连接方式，不移植 Methods 语态或整句。
-4. **措辞变化库**：数值与趋势 → `../write-introduction/academic-writing-corpus/phrasebank/quantities-trends.md`；hedging → `hedging-strength.md`；五病 → `../pollock-qc/references/prose-pathology.md`。优先保证句间推理关系，不为变化而更换已经准确的术语。
+3. **句法微模板（按需）**：从 `../write-methods/corpus/micro-templates/` 选读 causal-hedging、interquartile-economic-significance、subsample-grouping、transitions；只借用逻辑连接方式，不移植 Methods 语态或整句。
+4. **措辞变化库**：数值与趋势 → `../write-introduction/corpus/phrasebank/quantities-trends.md`；hedging → `hedging-strength.md`；五病 → `../pollock-qc/references/prose-pathology.md`。优先保证句间推理关系，不为变化而更换已经准确的术语。
 5. **锚点使用纪律（verbatim anchor）**：结构跟证据功能；使用规则见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律。修辞动作级升级（反向反事实等）路由 `../story-blueprints/v4/rhetoric-moves/_index.md`，润色走其 `_polish-protocol.md` 流畅性门。
 6. **事实直陈默认语态**：先直接报告方向、显著性/不确定性和幅度；只保留一句完成必要解释，再把 verdict 绑定到假设或理论。不要用“我们诚实披露”“为了透明”“我们并不把它表述为”等自我评价式 wrapper 代替限制本身。
 7. **语言锁定**：主动读取用户禁用词和现稿术语表；默认不把 `model/modeled/modelled/modeling/modelling` 用作动词，改用 `estimate`、`re-estimate`、`analyze`、`specify` 或直接说明 unit of analysis。不得重新发明 Methods 已删除的上位构念。
@@ -156,7 +156,7 @@ when_to_use: "起草或深度修订 Results 段落时使用；只审查不改写
 
 **反馈登记**：用 `scripts/record_feedback.py` 维护 `references/feedback-registry.json`，反馈可跨估计器；必须记录 scope、category、rule、source 和 evidence；不得只累计次数而丢失可执行约束。
 
-**语料与变体**：结果类型具体变体见 `econometric-models/[结果类型].md`；新蒸馏结果经 `distill-results-exemplar` → Phase 4 自动写入（同步更新 INDEX.md 变体数）。
+**语料与变体**：结果类型具体变体见 `corpus/[结果类型].md`；新蒸馏结果经 `distill-results-exemplar` → Phase 4 自动写入（同步更新 INDEX.md 变体数）。
 
 ---
 *基于 34 篇 MVP30 范文语料库、Pollock 2025 Ch07、Yuan et al. (2026) JOM 六维稳健性框架构建；版本历史见 git log。*

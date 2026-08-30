@@ -8,8 +8,8 @@ Usage:
     python methods_results_quality_check.py --input paper_distilled.json --type methods
     python methods_results_quality_check.py --input paper_distilled.json --type results
     python methods_results_quality_check.py --input paper_distilled.json --type results --output report.json
-    python methods_results_quality_check.py --corpus-check write-methods/econometric-models
-    python methods_results_quality_check.py --corpus-check write-results/econometric-models
+    python methods_results_quality_check.py --corpus-check write-methods/corpus
+    python methods_results_quality_check.py --corpus-check write-results/corpus
 
 Exit codes:
     0 = PASS

@@ -95,14 +95,14 @@ updated: 2026-08-23
 >   - **IV-2SLS** 变体12–13：industry leave-out 均值 IV（CEO 推动采纳内生性）+ 连续 DV 用 2SLS/FE、稀有二元放弃 FE 改聚类 Logit（IV-Probit 稳健性预告）
 >   - **面板数据-OLS** 变体32：结构二元「kind rather than degree」相对 majority-independence 的构念辩护
 >   - **稀有结果** 变体1（**首填**）：低事件率 → FE 丢样本 → 年份虚拟+单元聚类 Logit
->   均为单篇 EMERGING；未改 SKILL.md 核心路由。配套 Results：`../write-results/econometric-models/IV-2SLS.md` 变体8–10。
+>   均为单篇 EMERGING；未改 SKILL.md 核心路由。配套 Results：`../write-results/corpus/IV-2SLS.md` 变体8–10。
 
 > ✅ **2026-08-05 更新（Castellaneta–Conti–Kacperczyk 2017 SMJ 蒸馏）**: 交错 UTSA + PE buyout 持有窗截面。新增：
 >   - **自然实验-DiD** 变体8–13：dual-sale setting、持有窗处理+staggered 示例、IRR/ΔV≈DiD 一阶差分等价、entry/exit 年 FE 栈、政治经济外生性电池、±k 年日历安慰剂
 >   - **匹配DiD-广义DiD** 变体1（**首填**）：CEM 匹配 ex-ante 价值+风险代理作为准实验稳健性
 >   均为单篇 EMERGING；不将 IRR≈DiD 提升为现代面板 staggered-DiD 默认路由；未改 SKILL.md 核心。
 
-> ✅ **2026-08-05 gap audit（Kim & Lee 2026 SMJ）**: Methods **无需新增**（多研究变体6 / 非线性变体10 / 文本构念变体12 已覆盖）；配套 Results 缺口补写见 `../write-results/econometric-models/`（OLS-FE 变体45–46）。
+> ✅ **2026-08-05 gap audit（Kim & Lee 2026 SMJ）**: Methods **无需新增**（多研究变体6 / 非线性变体10 / 文本构念变体12 已覆盖）；配套 Results 缺口补写见 `../write-results/corpus/`（OLS-FE 变体45–46）。
 
 > ✅ **2026-08-05 更新（Liu & Shankar 2015 MS 蒸馏）**: **首次填充**设计类型 `结构需求-state-space`（BLP + Kalman + GMM，product-harm crises 需求侧动态）变体1–6；扩展 `面板数据-OLS` 变体29–31（severity 理论分类、媒体 relevancy 阈值、异频月聚合）、`两阶段模型` 变体7（价格 BLP-IV + 广告双端 CF + 跨品类媒体 IV）。均为单篇 EMERGING；与 survival/time-to-recall 召回家族分工，不修改核心路由。
 
@@ -248,7 +248,7 @@ updated: 2026-08-23
 > ✅ **2026-08-04 更新（Bendig, Hensellek & Schulte 2024 ETP 蒸馏）**: 面板数据-OLS 变体28新增 **binary-panel GEE + all-zero panel retention + formal U-test chain**。该变体与既有 GEE 变体22构成“同估计器、不同选择理由”的对照：变体22服务于时不变 IV；变体28服务于保留始终无事件但焦点活动有变异的企业，并预先要求二次项、两端斜率、拐点与 Fieller 区间共同支持曲线。
 >
 > ✅ **2026-07-23 更新（sync from local backup）**: 从 pre-sync 备份补回两批本地蒸馏成果：
->   - **VARX-PVAR 设计类型接入**（Borah & Tellis 2016, JMR）：8 个 Methods 变体（行业情境 4-reason 辩护、品牌选择 + quasi-experiment、第三方 NLP 数据 + 人工匹配、算法准确率双重验证、VARX 框架 3-reason 辩护、Granger causality 外生性论证、VARX 方程规格、VARX 估计细节）。配套 `../write-results/econometric-models/VARX-PVAR.md`（7 个 Results 变体）。
+>   - **VARX-PVAR 设计类型接入**（Borah & Tellis 2016, JMR）：8 个 Methods 变体（行业情境 4-reason 辩护、品牌选择 + quasi-experiment、第三方 NLP 数据 + 人工匹配、算法准确率双重验证、VARX 框架 3-reason 辩护、Granger causality 外生性论证、VARX 方程规格、VARX 估计细节）。配套 `../write-results/corpus/VARX-PVAR.md`（7 个 Results 变体）。
 >   - **Pupovac, Astvansh, Carrillat & Legoux (2026, POM) "Product Recall Contagion in the Supply Chain" 蒸馏**：补回 7 个 Methods 变体——事件历史+事件研究 变体 8/9/10、两阶段模型 变体 4/5、面板数据-OLS 变体 23/24；含 2 个新反模式（事件-企业多源匹配无每步 N 审计、控制变量全部外包至附录）。
 >   - 注：面板数据-OLS 变体编号因远程 86f478d 已占用 22（GEE，Abdurakhmonov et al. 2026 JOM），本地原 22/23 续编为 23/24。
 >
@@ -257,7 +257,7 @@ updated: 2026-08-23
 >   - **面板数据-OLS** 变体25：**DV 文献基准锚定**（retention rate 54.8% vs Hambrick & Cannella 55% / Krug & Hegarty 59.4%——均值与前人文献对比建立跨样本可比性）
 >   - **面板数据-OLS** 变体16 EXTEND：**三层异质数据库漏斗 + 附录审计**（交易库→人员库→结构库 576K→15,773→2,941 + 附录 match rate + 初始vs最终样本变量对比）
 >   - 可改进警示（反哺反模式）：0.1 平滑常数无 because/敏感性检验；相似度公式对称性未讨论
->   - 配套 Results 新增 6 变体见 `../write-results/econometric-models/OLS-FE.md` 变体 29-34
+>   - 配套 Results 新增 6 变体见 `../write-results/corpus/OLS-FE.md` 变体 29-34
 
 > ✅ **2026-07-30 更新（pollock2015 蒸馏）**: 基于 Pollock, Lee, Jin & Lashley (2015, *ASQ*) "(Un)Tangled"——新创 VC 企业 status↔reputation 共演，动态同时方程面板 + AB difference GMM。**首次填充 2 个设计类型** + 扩展 2 个，共 +8 变体（均单篇、待第二篇交叉验证）：
 >   - **动态面板-GMM**（首次填充）变体1–4：**AB difference GMM 三源内生性统一处理**（LDV/同时性/异质性逐一列举→AB 作统一解）、**difference vs system GMM 选择**（young firms 远未稳态→放弃效率选一致性）、**工具变量滞后结构 per-sample 经验精调**（外生性类别定起始阶→Hansen J/diff-Sargan/AR(2) 三诊断逐变量精调，分样本各自精调）、**发展性调节无理论断点→多阈值分样本检验**（跨多个 age 阈值展示效应梯度）

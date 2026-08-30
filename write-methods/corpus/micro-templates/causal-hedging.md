@@ -146,6 +146,6 @@ updated: 2026-05-22
 
 ### 与 hedging-strength 的配合
 
-本节的 "appears to / may / some evidence" 对应 `write-introduction/academic-writing-corpus/phrasebank/hedging-strength.md` 的**极弱/弱档**。Discussion 解释机制时：先用本节选试探性因果动词 → 再用 hedging-strength 选匹配强度的认识论句式 → 最后用 `prose-craft-checklist.md` §5.6/§5.7 校验未越级也未过度堆叠。
+本节的 "appears to / may / some evidence" 对应 `write-introduction/corpus/phrasebank/hedging-strength.md` 的**极弱/弱档**。Discussion 解释机制时：先用本节选试探性因果动词 → 再用 hedging-strength 选匹配强度的认识论句式 → 最后用 `prose-craft-checklist.md` §5.6/§5.7 校验未越级也未过度堆叠。
 
 **禁忌**：试探性表达不得用于掩盖设计缺陷——若某替代解释威胁严重，应做稳健性检验而非用 "may be due to" 推给未来研究（见 `write-methods/SKILL.md` three-horned dilemma 自我定位）。
