@@ -25,6 +25,8 @@
 !distill-story-exemplar/**
 !distill-paper-exemplar/
 !distill-paper-exemplar/**
+!humanizer/
+!humanizer/**
 !intro-review/
 !intro-review/**
 !methods-review/
