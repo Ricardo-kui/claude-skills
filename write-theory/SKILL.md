@@ -16,7 +16,7 @@ Collect the core constructs, theoretical lens, intended contribution, level of a
 
 Full Theory generation requires a valid story contract. Theory is rising action: every construct and why-chain must deepen the central knot, every hypothesis must include a `storyline_id`, and new main characters require a contract update. Preparing-stage work is diagnosis only; refining and finishing require a confirmed contract. A local hypothesis may bypass the full gate only with an explicit local-only notice and no paper-state update.
 
-**故事完整性检查（非门禁）**：生成假设前，读取 canonical `story.integrity` 与各 storyline 的 promised resolution。检查每个理论动作是否服务于项目已确认的 knot、角色与证据承诺；任何未经确认的冲突、反转、双轨或曲线承诺都必须标为 unsupported，而不得由范文类型或旧 `story_frame` 推断。必要的范文学习由本次 Theory 调用的独立即时检索承担，不写回项目状态。
+**故事完整性检查（非门禁）**：生成假设前，读取 canonical `story.integrity` 与各 storyline 的 promised resolution。检查每个理论动作是否服务于项目已确认的 knot、角色与证据承诺；任何未经确认的冲突、反转、双轨或曲线承诺都必须标为 unsupported，而不得由范文类型或旧 `story_frame` 推断。必要的范文学习由本次 Theory 调用的即时检索承担（见下方「即时范文学习对象」），不写回项目状态。
 
 ## Workflow
 
@@ -31,6 +31,16 @@ Full Theory generation requires a valid story contract. Theory is rising action:
    **完成判据**：四维审计无未修复项；E/D 型 argument graph 记录完整。
 5. 产出骨架 + storyline 链接假设 + 段落功能图 + 证据缺口 + QC 结果 + `paper-state.yaml` theory 字段；格式按 `references/output-format.md`。
    **完成判据**：输出合同全项（含 paper-state 片段、机制与条件性审计）。
+
+## 即时范文学习对象（按需，与 write-introduction Phase 1.5 同构）
+
+完整 Theory 生成且 story gate 为 PASS/PROVISIONAL 时执行；单假设、local-only 或显式 `--exemplars=off` 跳过。本次调用私有，不写项目文件、不改 canonical `story`。
+
+1. 生成临时 request：`section="theory"`、paper_type、当前 story needs 与 `retrieval_signals`（如 why-chain 形状、构念辨析、假设树组织、调节元框架）；`validated_conditions` 仅在本次 story gate 已证实时填入，不确定留空。
+2. 运行 `py ../story-blueprints/scripts/retrieve_exemplars.py --request <临时 JSON>`；结果非空则只读 1–2 张 v0.4-lite 卡的 `section_learning.theory` learning block，不加载整库。
+3. 推荐只回答"学什么、为何适配、不能照搬什么、应比较什么"；无匹配则明确报告"当前 v0.4-lite 库无适合的 Theory 学习对象"并继续，不得凑数。
+
+**完成判据**：推荐已显示或已明确无匹配；推荐不改变构建类型诊断与 story 契约的权威地位。
 
 ## Selection rules
 

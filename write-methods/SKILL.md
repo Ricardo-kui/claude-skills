@@ -102,6 +102,16 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 
 **完成判据**：设计类型 + 槽位序列已定（含分支调整理由）；slot 与设计类型变体已加载。
 
+## 即时范文学习对象（按需，与 write-introduction Phase 1.5 同构）
+
+完整 Methods 生成且 story gate 为 PASS/PROVISIONAL 时执行；单槽位、local_rewrite 或显式 `--exemplars=off` 跳过。本次调用私有，不写项目文件。
+
+1. 生成临时 request：`section="methods"`、paper_type、当前 story needs 与 `retrieval_signals`（如 M2.5 model-free evidence、M8 识别策略辩护、M6 竞争性解释组织）；`validated_conditions` 仅在本次 story gate 已证实时填入，不确定留空。
+2. 运行 `py ../story-blueprints/scripts/retrieve_exemplars.py --request <临时 JSON>`；结果非空则只读 1–2 张 v0.4-lite 卡的 `section_learning.methods` learning block，不加载整库。
+3. 推荐只回答"学什么、为何适配、不能照搬什么、应比较什么"；无匹配则明确报告"当前 v0.4-lite 库无适合的 Methods 学习对象"并继续，不得凑数。
+
+**完成判据**：推荐已显示或已明确无匹配；推荐不改变设计诊断与 story 契约的权威地位。
+
 ## 渲染与措辞
 
 **语料优先改编（模块确定后）**：slot 骨架 + 设计类型变体的语料句式即改编底本——槽位与设计类型确定后，尽量使用对应 slot 通用段落与设计类型变体的句式表达来改编（替换来源特异性内容、填充 [placeholder]），而非脱离语料自拟；变体数=0 或标注"待补"时按骨架生成，表达仍尽量贴合语料句法。

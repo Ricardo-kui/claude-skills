@@ -95,6 +95,16 @@ when_to_use: "起草或深度修订 Results 段落时使用；只审查不改写
 
 **完成判据**：结果类型 + 槽位序列已定（含分支理由）；稳健性计划已定（诊断或引用既有计划）。
 
+## 即时范文学习对象（按需，与 write-introduction Phase 1.5 同构）
+
+完整 Results 生成且 story gate 为 PASS/PROVISIONAL（或 evidence intake 模式已声明）时执行；单系数解释、表格导航、local-only 或显式 `--exemplars=off` 跳过。本次调用私有，不写项目文件。
+
+1. 生成临时 request：`section="results"`、paper_type、当前 story needs 与 `retrieval_signals`（如四拍节奏、threat 组织的稳健性段、mixed/null 的诚实披露、claim 层级校准）；`validated_conditions` 仅在本次 story gate 已证实时填入，不确定留空。
+2. 运行 `py ../story-blueprints/scripts/retrieve_exemplars.py --request <临时 JSON>`；结果非空则只读 1–2 张 v0.4-lite 卡的 `section_learning.results` learning block，不加载整库。
+3. 推荐只回答"学什么、为何适配、不能照搬什么、应比较什么"；无匹配则明确报告"当前 v0.4-lite 库无适合的 Results 学习对象"并继续，不得凑数。
+
+**完成判据**：推荐已显示或已明确无匹配；推荐不改变证据判决与 story 契约的权威地位。
+
 ## 渲染与措辞
 
 **语料优先改编（段落确定后）**：每个段落一旦确定证据功能，以对应 slot 骨架 + 结果类型变体的语料句式为改编底本——尽量使用语料库的句式表达来改编（替换来源特异性内容），而非自拟；无对应变体时按骨架生成。已核实事实与用户裁定优先于语料句式（见路由 Step 3）。
