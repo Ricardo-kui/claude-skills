@@ -1,8 +1,7 @@
 ---
 name: write-theory
-description: "Theory & Hypotheses 写作引擎——诊断理论构建问题、选架构、生成假设骨架（7 变体：构念辨析/机制推演/假设树/过程理论/调节/竞争假设/辩证对立）。Use when 写理论或假设。"
+description: "Theory & Hypotheses 写作引擎——诊断理论构建问题、选架构、生成假设骨架（7 变体：构念辨析/机制推演/假设树/过程理论/调节/竞争假设/辩证对立）。Use when 写理论或假设；触发词：写理论、写假设、机制推导、调节效应、竞争假设。Not for: 审查→theory-review；蒸馏→distill-theory-exemplar。"
 when_to_use: "起草 Theory/Hypotheses 或选择理论架构时使用；识别策略理论论证属本 skill，实现细节归 write-methods。"
-whenToUse: "Use when 用户要为管理学顶刊论文写 Theory 与 Hypotheses 部分，需要构念辨析、机制推演、假设树或调节效应等理论骨架。Trigger words: 写理论, 写假设, theory 部分, hypotheses, 机制推导, 调节效应, 竞争假设, why chain, 理论框架"
 ---
 
 # Write Theory and Hypotheses
@@ -101,7 +100,7 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 | 角色 ordering 决策 | `corpus/subprotocols/character_ordering.md` | 多 IV/多 DV 时校验主角配角出场顺序 |
 | 五病速查 | `../pollock-qc/references/prose-pathology.md` | 扫一遍五病，标 △ 处给改写建议 |
 
-**润色纪律**：骨架优先，语料库只提供措辞变体不替代论证结构；每句位 ≤2-3 候选；specificity gate 强制具体化；hedging 强度不得突破 causal-hedging 设计家族上限。结果以 `### 措辞润色建议` 块附骨架末尾，不覆盖原文。
+**润色纪律**：骨架优先，语料库只提供措辞变体不替代论证结构；共用纪律（每句位 ≤2-3 候选、specificity gate、`### 措辞润色建议` 附末、锚点/语料使用）见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律；hedging 强度不得突破 causal-hedging 设计家族上限。结果以 `### 措辞润色建议` 块附骨架末尾，不覆盖原文。
 
 ## Downstream interfaces（供其他 Skill 消费）
 
@@ -112,7 +111,7 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 
 ## 原文锚点使用纪律（verbatim anchor）
 
-语料变体/句式模板的 `**原文锚点**` 字段是来源论文原句的风格参照（由 distill-theory-exemplar 提取）。生成段落时：**语料语句可直接采用**，仅替换来源特异性内容（专名/数字/系数/表号）防串稿；不设重复率闸门，首要保证通顺、符合学术表达、句子不过长。无锚点的旧变体（标注"待补"）按骨架直接生成。选材时参照"选材 Gate"（distill-theory-exemplar）的 routing 表 + 验证状态三带判定。
+语料变体/句式模板的 `**原文锚点**` 字段是来源论文原句的风格参照（由 distill-theory-exemplar 提取）。使用规则见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律：语料语句可直接采用，仅替换来源特异性内容防串稿；无锚点的旧变体（标注"待补"）按骨架直接生成。选材时参照"选材 Gate"（distill-theory-exemplar）的 routing 表 + 验证状态三带判定。
 
 ## 批评登记（critique-driven stats）
 

@@ -1,8 +1,7 @@
 ---
 name: write-results
-description: "顶刊 Results 写作与深度修订——按假设顺序组织 Results，生成段落/小标题/幅度解释/诚实支持判断；也可从零输出 R1-R9 骨架（19 种结果类型）。Use when 写、改或重排 Results。触发词：写结果、修改 Results、重写 Results、结果部分、汇报回归结果、假设检验汇报、稳健性检验、平行趋势、系数解读、经济显著性、交互效应、机制检验、异质性。Not for: 只审查不改写（→ results-review）；蒸馏范文（→ distill-results-exemplar）。"
+description: "顶刊 Results 写作与深度修订——按假设顺序组织证据（R1-R9 槽位、幅度解释、诚实支持判断、claim 层级校准）。Use when 写/改/重排 Results；触发词：写结果、修改 Results、系数解读、稳健性检验、经济显著性。Not for: 只审查→results-review；蒸馏→distill-results-exemplar。"
 when_to_use: "起草或深度修订 Results 段落时使用；只审查不改写用 results-review。"
-whenToUse: "Use when 用户要新写、修订或重写管理学顶刊论文的 Results 部分，按假设组织证据、解读系数幅度与稳健性检验。Trigger words: 写结果, 修改 Results, 重写 Results, 结果部分, 稳健性检验, 系数解读, 假设检验汇报, 平行趋势, 异质性, 机制检验, 经济显著性"
 ---
 
 # Role
@@ -104,7 +103,7 @@ whenToUse: "Use when 用户要新写、修订或重写管理学顶刊论文的 R
 2. **段落证据链（revision 默认执行）**：按 `references/draft-revision-protocol.md` 构建精确小标题、问题路径、诊断逻辑、证据和限定结论；“One concern is ...”若未说明问题如何发生及影响哪个推断，视为未完成。
 3. **句法微模板（按需）**：从 `../write-methods/econometric-models/micro-templates/` 选读 causal-hedging、interquartile-economic-significance、subsample-grouping、transitions；只借用逻辑连接方式，不移植 Methods 语态或整句。
 4. **措辞变化库**：数值与趋势 → `../write-introduction/academic-writing-corpus/phrasebank/quantities-trends.md`；hedging → `hedging-strength.md`；五病 → `../pollock-qc/references/prose-pathology.md`。优先保证句间推理关系，不为变化而更换已经准确的术语。
-5. **锚点使用纪律（verbatim anchor）**：结构跟证据功能，语料语句可直接采用，仅替换来源特异性内容（专名/数字/系数/表号）防串稿；不设重复率闸门，首要保证通顺、符合学术表达、句子不过长。修辞动作级升级（反向反事实等）路由 `../story-blueprints/v4/rhetoric-moves/_index.md`，润色走其 `_polish-protocol.md` 流畅性门。
+5. **锚点使用纪律（verbatim anchor）**：结构跟证据功能；使用规则见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律。修辞动作级升级（反向反事实等）路由 `../story-blueprints/v4/rhetoric-moves/_index.md`，润色走其 `_polish-protocol.md` 流畅性门。
 6. **事实直陈默认语态**：先直接报告方向、显著性/不确定性和幅度；只保留一句完成必要解释，再把 verdict 绑定到假设或理论。不要用“我们诚实披露”“为了透明”“我们并不把它表述为”等自我评价式 wrapper 代替限制本身。
 7. **语言锁定**：主动读取用户禁用词和现稿术语表；默认不把 `model/modeled/modelled/modeling/modelling` 用作动词，改用 `estimate`、`re-estimate`、`analyze`、`specify` 或直接说明 unit of analysis。不得重新发明 Methods 已删除的上位构念。
 8. **因果语言强制词汇表**（按设计家族，与 write-methods 同表）：面板 OLS→"associated with"（禁 causes/leads to）；DiD→"effect of"（平行趋势支持后）；IV→"effect"（识别 preview 后，避免 causes）；非线性→边际效应/概率转述；生存分析→"changes the hazard of"；实验→"caused"。
@@ -129,13 +128,11 @@ whenToUse: "Use when 用户要新写、修订或重写管理学顶刊论文的 R
 
 ## 使用反馈闭环
 
-用户对产出提出明确批评、禁用词、结构纠正或事实纠正时，读取 `references/feedback-protocol.md`：
+用户对产出提出明确批评、禁用词、结构纠正或事实纠正时，读取 `references/feedback-protocol.md`（完整协议）：
 
-1. 先修正文稿，不以“已登记”替代当前任务；
-2. 将本轮批评及修订记录中明确的用户裁定规范化为可执行规则，并按 `skill | project | section | estimator` 范围登记到 `references/feedback-registry.json`；
-3. 新裁定若宣布旧建议作废，记录 `supersedes` 并在下一次生成时排除被覆盖规则；历史记录保留，但不再生效；
-4. 下一次 revision 在生成前加载匹配的 active rules；项目规则不得无条件推广为全局规则；
-5. 批评不自动修改 corpus。相同规则跨案例重复或累计达到阈值后，才进入 `distill-results-exemplar` 的 ADD/EXTEND/REPLACE 候选。
+1. 先修正文稿，不以"已登记"替代当前任务；
+2. 将本轮批评及修订记录中明确的用户裁定规范化为可执行规则，按 `skill | project | section | estimator` 登记到 `references/feedback-registry.json`；新裁定宣布旧建议作废时记录 `supersedes`（语态基准、失效旧建议、确定性禁用表达分别写入 `benchmark`/`supersedes`/`prohibited_patterns`）；
+3. 下一次 revision 在生成前加载匹配的 active rules；项目规则不得无条件推广为全局规则；相同规则跨案例重复或累计达到阈值后，才进入 `distill-results-exemplar` 的 ADD/EXTEND/REPLACE 候选。
 
 ## 下游接口
 
@@ -147,9 +144,9 @@ whenToUse: "Use when 用户要新写、修订或重写管理学顶刊论文的 R
 
 **诚实边界（完整版见 `references/boundaries.md`）**：① 不虚构任何数字（系数/p 值/置信区间由用户填）；② 设计排他性不可违反（非 DiD 不用平行趋势语言、非 IV 不要求第一阶段、非匹配不要求重叠支撑）；③ 非显著假设必须在 Results 报告（inline 可接受），不得跳过；④ 稳健性检验不包装成因果识别；非线性模型不直接比较 raw 系数。
 
-**反馈登记**：使用 `scripts/record_feedback.py` 维护 `references/feedback-registry.json`。反馈可跨估计器；必须记录 scope、category、rule、source 和 evidence；语态基准、失效旧建议和确定性禁用表达分别写入 `benchmark`、`supersedes` 和 `prohibited_patterns`。不得只累计次数而丢失可执行约束。
+**反馈登记**：用 `scripts/record_feedback.py` 维护 `references/feedback-registry.json`，反馈可跨估计器；必须记录 scope、category、rule、source 和 evidence；不得只累计次数而丢失可执行约束。
 
 **语料与变体**：结果类型具体变体见 `econometric-models/[结果类型].md`；新蒸馏结果经 `distill-results-exemplar` → Phase 4 自动写入（同步更新 INDEX.md 变体数）。
 
 ---
-*基于 34 篇 MVP30 范文语料库、Pollock 2025 Ch07、Yuan et al. (2026) JOM 六维稳健性框架构建。v4.1.0（2026-08-15：反馈闭环新增语态基准、旧建议覆盖和可执行语言扫描）。*
+*基于 34 篇 MVP30 范文语料库、Pollock 2025 Ch07、Yuan et al. (2026) JOM 六维稳健性框架构建；版本历史见 git log。*

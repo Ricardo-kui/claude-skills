@@ -1,7 +1,7 @@
 ---
 name: write-introduction
 description: >-
-  顶刊论文 Introduction 段落骨架生成器（Hook/Tension/Stakes/Literature Turn/Theory Lens/Preview/Contribution + GBL Four-Move 对齐 + paper-state 片段）。Use when writing or planning an introduction for a management-journal paper。触发词：写引言、写 introduction、intro 模板、hook 怎么写、gap 怎么写、贡献声明、problematization。Not for: 蒸馏范文（→ distill-introduction-exemplar）；审查草稿（→ intro-review）；写前深度诊断（→ diagnose-introduction）。
+  顶刊论文 Introduction 段落骨架生成器（Hook→Tension→Stakes→…→Contribution 七模块 + GBL 对齐 + paper-state 片段）。Use when 写或规划引言；触发词：写引言、hook 怎么写、gap 怎么写、贡献声明、problematization。Not for: 蒸馏→distill-introduction-exemplar；审查→intro-review；诊断→diagnose-introduction。
 ---
 
 # Write Introduction（引言写作顾问）
@@ -41,7 +41,7 @@ description: >-
 仅在完整 Introduction / front-end 重构请求中执行，且 project-owned integrity gate 为 PASS 或 PROVISIONAL；单模块、句子润色、标题或显式 `--exemplars=off` 请求跳过。本阶段只服务本次调用，绝不把推荐写入项目文件或改写 canonical `story`。
 
 1. 依据当前输入生成临时 request：`section=introduction`、论文类型、当前 story needs（如 `clarify-theme`、`establish-genuine-tension`、`introduce-main-characters`）及已确认的理论问题形式。只有在本次 story gate 已证实的情况下才填入 `validated_conditions`；不确定时留空，宁可不推荐也不放宽范文的适用前提。
-2. 运行 `python ../story-blueprints/scripts/retrieve_exemplars.py --request <临时 JSON>`；如果结果非空，只读取被选中的 1–2 张 v0.4-lite 卡的 Introduction learning block，不加载整库。
+2. 运行 `py ../story-blueprints/scripts/retrieve_exemplars.py --request <临时 JSON>`；如果结果非空，只读取被选中的 1–2 张 v0.4-lite 卡的 Introduction learning block，不加载整库。
 3. 推荐只回答“学什么、为什么适配、不能照搬什么、应比较什么”；不得将范文类型改写成用户项目的强制 story frame，或凭范文生成贡献、机制与结果。
 4. 无可靠匹配时明确报告“当前 v0.4-lite 库无适合的 Introduction 学习对象”，继续正常写作；不得凑数或回退到未经评估的 v0.3 蓝图。
 
@@ -88,7 +88,7 @@ description: >-
 1. 质量门（生成后必过）：`references/quality-gates.md`——GBL Four-Move 对齐（共享规则见 `../diagnose-introduction/references/golden-biddle-locke-four-moves.md`）+ JTBD 六模块完整性 + claim_fit + 首尾句测试；不合格项入"提醒"段。
 2. 反模式自查：`references/anti-patterns.md`（22 项逐条扫描）+ 拒稿信号 `references/rejection-signals.md`。
 3. 期刊适配：用户提目标期刊时读 `references/journal-fit.md`（期刊差异优先于通用规则）。
-4. 措辞润色（默认执行，preparing 跳过）：按句位查语料库——Hook/human face → `storytelling/prose-craft-checklist.md` §0/§5；批判措辞 → `phrasebank/critique-phrases.md`；hedging → `phrasebank/hedging-strength.md`；过渡 → `transitions/` + `micro-templates/transition-signals.md`；中心论点定位 → `micro-templates/thesis-models.md`；五病 → `../pollock-qc/references/prose-pathology.md`；人设 → `storytelling/authorial-persona.md`；因果声明 → `../write-methods/econometric-models/micro-templates/causal-hedging.md`。纪律：不改骨架占位、每句位 ≤2-3 候选、specificity gate（替换后可放进任何论文 = 不合格）、润色结果以 `### 措辞润色建议` 附末（不覆盖骨架原文）。
+4. 措辞润色（默认执行，preparing 跳过）：按句位查语料库——Hook/human face → `storytelling/prose-craft-checklist.md` §0/§5；批判措辞 → `phrasebank/critique-phrases.md`；hedging → `phrasebank/hedging-strength.md`；过渡 → `transitions/` + `micro-templates/transition-signals.md`；中心论点定位 → `micro-templates/thesis-models.md`；五病 → `../pollock-qc/references/prose-pathology.md`；人设 → `storytelling/authorial-persona.md`；因果声明 → `../write-methods/econometric-models/micro-templates/causal-hedging.md`。纪律：不改骨架占位；其余共用纪律（每句位 ≤2-3 候选、specificity gate、`### 措辞润色建议` 附末不覆盖骨架）见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律。
 
 **完成判据**：质量门全过；润色纪律满足；无未修复的 🔴/🟡 标记。
 
@@ -100,7 +100,7 @@ description: >-
 
 ## 纪律
 
-- 原文锚定：语料语句可直接采用，仅替换来源特异性内容（专名/数字/系数/表号）防串稿；不设重复率闸门，首要保证通顺、符合学术表达、句子不过长。润色协议见 `_polish-protocol.md`。
+- 原文锚定与润色纪律（共用版）：见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律——语料语句可直接采用，仅替换来源特异性内容（专名/数字/系数/表号）防串稿；润色协议见 `_polish-protocol.md`。
 - 批评登记：用户不满时登记到 `academic-writing-corpus/_evidence_registry.yaml` 的 `critique.per_file`（revise/reject +1、reasons 去重首插最多 8 条）；不登记流程抱怨与风格偏好。
 - 演化：规则层反例更新 `_skill_design_feedback.yaml`（见 `../distill-introduction-exemplar/references/phase-4-validation-writeback.md`）；单篇论文不得建立普遍规则。
 - 注册表缺失时回退 `_routing_tables.yaml` 静态推荐，不中断输出；但**必须在输出末尾附加降级声明**："⚠ registry 缺失，语料验证状态（EMERGING/VERIFIED/ROBUST）未经核验，本次按静态路由表推荐"——回退不得静默。
