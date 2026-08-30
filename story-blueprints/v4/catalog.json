@@ -4808,6 +4808,82 @@
       "overall_role": "partial_exemplar"
     },
     {
+      "id": "zajacwestphal2004-social-construction-market-value",
+      "path": "v4/blueprints/zajacwestphal2004-social-construction-market-value.md",
+      "paper_type": "quantitative (archival event study + market-level time-series regressions)",
+      "outlet": "American Sociological Review",
+      "publication_status": "published",
+      "coverage": "complete",
+      "theoretical_problem_form": [],
+      "narrative_dynamics": [],
+      "retrieval_signals": [],
+      "section_learning": {
+        "introduction": {
+          "suitable": "yes",
+          "requires": [
+            "two mature literatures each owning half of one phenomenon, with a genuine unowned intersection between them"
+          ],
+          "learn": [
+            "Bridge-as-gap: show each literature's home turf (neoinstitutional: adoption and decoupling in industrial markets; financial economics: market reactions in capital markets), then name the intersection nobody owns — whether institutionalization processes reach capital markets — so the gap is a missing bridge between established camps, not a missing topic. Sharpen it by deriving the rival's own corollary as a falsifiable prediction ('if firms adopt but do not implement, the market should discount the policy').",
+            "Make the dependent variable the protagonist: stage the whole intro around one contestable claim about 'market value' — a 'reliable, historically invariant indicator of efficiency' versus a 'socially constructed' aggregate — so the reader knows the adjudication axis before any hypothesis appears."
+          ],
+          "caveat": [
+            "Requires two developed literatures with real overlap territory; without them the bridge reads as forced synthesis. The prose is citation-dense and presumes neoinstitutional vocabulary (logics, decoupling, taken-for-grantedness) — a writer without that shared language must first build it, and 2004-era intros carry no explicit stakes/magnitude preview."
+          ]
+        },
+        "theory": {
+          "suitable": "yes",
+          "requires": [
+            "a historical or contextual boundary at which the meaning of the same practice plausibly changed, and a rival perspective strong enough to generate its own numbered hypotheses"
+          ],
+          "learn": [
+            "Sign-flip table: use a two-column institutional-logic comparison (Table 1: agency logic vs. corporate logic) to establish that the identical practice carries opposite meanings under different logics — buyback as free-cash-flow discipline vs. buyback as evidence of exhausted prospects — then cash the flip directly into H1. Historical contingency is demonstrated structurally before it is claimed rhetorically.",
+            "Competing-hypothesis pairing: number rival and own predictions as adjacent pairs (H2 vs. H2a; H3 vs. H3a), state the rival first and at full strength — including its robustness clause ('this would be true even if other motives for non-implementation were sometimes also involved') — so the data adjudicate a fair fight and the rival's null lands as a finding, not a straw man."
+          ],
+          "caveat": [
+            "The mechanism (sociohistorical estimation by investors) is asserted, never measured; a modern version needs perceptual, trader-level, or heterogeneity evidence. The design also requires an observable pre-period in which the rival reading already fails — without a negative-early-reactions era, H1 has no discriminating power."
+          ]
+        },
+        "methods": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Sample-frame as story equipment: the 1980-1994 window is chosen so the pre-shift and post-shift eras are both observable; the three-year implementation window, the 2/11/31-day event-window triangulation, and Heckman selection models each answer a named rival-reading objection (slow adjustment, adoption-selection into returns) inside the design chapter rather than after results."
+          ],
+          "caveat": [
+            "Era presentation: Analysis/Results split, one-tailed tests, thin economic-magnitude interpretation. The market-level count variables (prior nonimplemented vs. implemented plans) are the theoretical operationalization but correlate at r = .53 — a modern version must defend multicollinearity and identification of the learning-vs-institutionalization contrast more explicitly; borrowing the alignment logic, not the estimator presentation."
+          ]
+        },
+        "results": {
+          "suitable": "yes",
+          "requires": [
+            "a rival prediction that can be narrated as null, and a figure or pattern that shows the adjudication before the controls"
+          ],
+          "learn": [
+            "Figure-first reversal: stage the climax on Figure 2 — the raw sign flip with t-statistics and the p <= .01 difference-in-t test — before any regression appears, so the reader has seen the story before the controls; the regression table then confirms rather than reveals.",
+            "Falsification rhythm: (1) narrate the rival's null as the headline ('Hypothesis 2, the market-learning hypothesis... is not supported') inside the paragraph confirming your own; (2) convert the implemented-count coefficient into a symmetry argument ('predicts market reactions regardless of whether those plans were implemented'); (3) meet the reader's best remaining objection in a named paragraph ('It might be suggested that...') and close it with supplementary profitability analyses showing implementation never paid — the last rational-learning exit is sealed."
+          ],
+          "caveat": [
+            "One-tailed tests and minimal magnitude interpretation are era artifacts; the aggregate time-series design cannot show any investor actually referencing anything — claim discipline at the mechanism level is the writer's responsibility in a modern staging."
+          ]
+        },
+        "discussion": {
+          "suitable": "yes",
+          "requires": [
+            "a rival community whose own assumptions your null finding implicates, and two classic theses your story can connect"
+          ],
+          "learn": [
+            "Paradox ending: convert the rival's null into a paradox about the rival community itself — markets proved 'teachable' (they reversed on the agency logic), yet the teaching profession (financial economists, business schools, media) was 'too successful' at certifying buyback rationality, foreclosing the market's opportunity to learn about decoupling. The discussion thereby adds a second theoretical contribution instead of recapping results.",
+            "Thesis-integration close: explicitly announce that the study 'integrates Meyer and Rowan's decoupling thesis with Zucker's institutionalization thesis,' and name the micro-process (social referencing under imperfect communication) that does the connecting — turning a single empirical setting into a bridge between two theory classics, plus boundary-setting against behavioral finance that names the difference (macro ideology vs. individual bias) while offering a bridge (confirmation bias)."
+          ],
+          "caveat": [
+            "The paradox rests on reading aggregate coefficients as market-level learning failure; the Enron/Worldcom speculative paragraph dated quickly (a caution against anchoring future-research paragraphs to current scandals); the undervaluation-signal disconfirmation is brief and would face stronger demands today."
+          ]
+        }
+      },
+      "overall_role": "exemplar"
+    },
+    {
       "id": "zhang-idd-advertising-rejected",
       "path": "v4/blueprints/zhang-idd-advertising-rejected.md",
       "paper_type": "quantitative",
