@@ -87,6 +87,7 @@ related: ["[[story-blueprints/v4/rhetoric-moves/_index]]", "[[humanizer/SKILL]]"
 | 10 | 限定语堆叠 | could potentially / might arguably / to be fair | 证据支持的限定语保留一个，其余删 |
 | 11 | 假装揭示真相 | The real question is / at its core / fundamentally | 删壳，直陈那个主张 |
 | 12 | 假深度格言 | X is the Y of Z / the currency of | 换成带细节的具体主张 |
+| 13 | 冒号/分号构造长句 | 一句内 "A: B; C" 链式拼接 | 一句内冒号+分号 ≥2 处 = 拼装信号：拆成独立句或改主从结构；冒号只留真正引入列举/解释的那一处，分号改句号 |
 
 **误报护栏（不可无脑套用）**：正式学术词 ≠ AI 腔（§5 只针对成群高频词）；单个 however/additionally 不是信号；有来源的限定语、真实的 scope statement 保留；引用/题名内的短语不改。判 AI 腔看**多信号同段聚集**，单条证据不定罪。
 
