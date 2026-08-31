@@ -1,0 +1,4 @@
+interface:
+  display_name: "Empirical Pipeline - Python"
+  short_description: "Execute a locked empirical design in Python"
+  default_prompt: "Use $empirical-pipeline-python to execute this locked Analysis Manifest in Python and return reproducible run artifacts."

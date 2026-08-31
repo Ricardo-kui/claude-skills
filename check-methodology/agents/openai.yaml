@@ -1,0 +1,5 @@
+interface:
+  display_name: "Check Methodology"
+  short_description: "Audit identification, inference, and causal claim limits"
+  default_prompt: "Use $check-methodology to audit an executed empirical design and produce the methodological Verification Report."
+

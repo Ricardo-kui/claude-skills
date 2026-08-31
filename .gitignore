@@ -65,6 +65,22 @@
 !write-results/**
 !write-theory/
 !write-theory/**
+!toc-review/
+!toc-review/**
+!tod-debate/
+!tod-debate/**
+!check-methodology/
+!check-methodology/**
+!rhetoric-moves/
+!rhetoric-moves/**
+!human-writing/
+!human-writing/**
+!ai-disclosure/
+!ai-disclosure/**
+!proofread/
+!proofread/**
+!latex-tables/
+!latex-tables/**
 
 # Stata / Python / statistical-method skills
 !stata/
@@ -87,6 +103,10 @@
 !empirical-pipeline-stata/**
 !empirical-writeup/
 !empirical-writeup/**
+!empirical-pipeline-python/
+!empirical-pipeline-python/**
+!run-empirical-research/
+!run-empirical-research/**
 !exploratory-data-analysis/
 !exploratory-data-analysis/**
 !ml-analysis/

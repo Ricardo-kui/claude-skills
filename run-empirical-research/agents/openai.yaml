@@ -1,0 +1,7 @@
+interface:
+  display_name: "Empirical Research Pipeline"
+  short_description: "Route empirical work from intake to evidence"
+  default_prompt: "Use $run-empirical-research to coordinate an empirical project from intake through verified evidence and writing handoff."
+
+policy:
+  allow_implicit_invocation: true

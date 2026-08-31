@@ -1,0 +1,4 @@
+interface:
+  display_name: AI Disclosure
+  short_description: Generate a venue-specific AI-usage disclosure statement for management journal submission, anchored to the venue's real policy.
+  default_prompt: Use $ai-disclosure to draft a venue-specific AI-usage disclosure statement (AOM/AMJ/AMR, ASQ, Organization Science, SMJ) with required phrasing and placement, anchored to the journal's current policy.
