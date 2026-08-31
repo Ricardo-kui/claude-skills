@@ -117,6 +117,43 @@
       "status": "active"
     },
     {
+      "category": "terminology",
+      "count": 1,
+      "design_type": "",
+      "evidence": "不要创新词，the risk universe，risk set。这些都不是专业词汇；尽量用简单的陈述句。",
+      "first_seen": "2026-08-28",
+      "id": "wmf_d37bd5a432d07bee",
+      "last_seen": "2026-08-28",
+      "project": "共同所有权 × 产品召回",
+      "reason": "The H1 justification should state the observation rule and estimator property directly.",
+      "rule": "Explain sample selection with standard terms tied to observed and missing outcome data; do not introduce undefined labels such as risk universe or risk set.",
+      "scope": "section",
+      "section": "sample selection",
+      "severity": "revise",
+      "source": "user feedback, 2026-08-28",
+      "status": "active"
+    },
+    {
+      "category": "voice_tone",
+      "count": 1,
+      "design_type": "",
+      "evidence": "第一段每一句都是we开头，有点机械。",
+      "first_seen": "2026-08-26",
+      "id": "wmf_1d3682c7fe279153",
+      "last_seen": "2026-08-26",
+      "prohibited_patterns": [
+        "(?:^|[.!?]\\s+)We\\s+[^.!?]+[.!?]\\s+We\\s+"
+      ],
+      "project": "共同所有权 × 产品召回",
+      "reason": "Repeated sentence-initial We creates a mechanical cadence even when the underlying information and sequence are correct.",
+      "rule": "In data-source paragraphs, retain a procedure-first opening but vary grammatical subjects across subsequent sentences; avoid consecutive sentences beginning with We by using records, source databases, institutional actors, or prepositional transitions as sentence anchors.",
+      "scope": "section",
+      "section": "Data and Sample",
+      "severity": "revise",
+      "source": "conversation",
+      "status": "active"
+    },
+    {
       "category": "source_intake",
       "count": 1,
       "evidence": "Methods revisions repeatedly changed section ownership, terminology, measurement definitions, and tense; the latest decision must govern.",
@@ -146,5 +183,5 @@
     }
   ],
   "schema_version": "1.0.0",
-  "updated": "2026-08-25"
+  "updated": "2026-08-28"
 }
