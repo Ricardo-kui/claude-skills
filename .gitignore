@@ -109,6 +109,8 @@
 !grill-the-claim/**
 !handoff/
 !handoff/**
+!literature-notes-obsidian/
+!literature-notes-obsidian/**
 
 # Book-to-skill distilled routers (Miles 2012 / Huntington-Klein 2025 / Wooldridge 2020)
 !miles-management-organization-theories/
