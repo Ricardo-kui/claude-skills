@@ -2,7 +2,7 @@
 name: notebooklm-pipeline
 description: "学术文献 NotebookLM 流水线——批量推送 PDF/Obsidian 笔记/网页到 NotebookLM，执行综述/理论框架/方法-结果语料三类蒸馏并落库 Obsidian。"
 when_to_use: "触发词：notebooklm 流水线、文献蒸馏、批量跑 notebooklm、理论框架提取。"
-whenToUse: Use when batch-pushing PDFs, Obsidian notes, or web pages into NotebookLM for literature distillation and writing structured results back to Obsidian. Trigger words: notebooklm 流水线, 文献蒸馏, 批量跑 notebooklm, 把 PDF 丢给 notebooklm, 理论框架提取, 文献综述自动化
+whenToUse: "Use when batch-pushing PDFs, Obsidian notes, or web pages into NotebookLM for literature distillation and writing structured results back to Obsidian. Trigger words: notebooklm 流水线, 文献蒸馏, 批量跑 notebooklm, 把 PDF 丢给 notebooklm, 理论框架提取, 文献综述自动化"
 version: 0.1.0
 ---
 

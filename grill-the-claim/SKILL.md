@@ -2,7 +2,7 @@
 name: grill-the-claim
 description: "贡献主张/研究设计的压力测试访谈——claim tree 展开 + frontier 轮次追问，直到没有隐含假设未被检视。Use when 压力测试一个贡献主张、设计或理论故事。Not for 快速分诊（→empirical-intake）。"
 when_to_use: "写之前的对抗性检验；触发词：烤一下、压力测试、站得住吗、帮我挑刺、这个 gap 是真的吗。"
-whenToUse: Use when the user wants to stress-test a contribution claim, research design, or theoretical story through interview rounds before any writing starts. Trigger words: 烤一下, 压力测试, 挑刺, grill, 这个贡献站得住吗, 这个 gap 是真的吗
+whenToUse: "Use when the user wants to stress-test a contribution claim, research design, or theoretical story through interview rounds before any writing starts. Trigger words: 烤一下, 压力测试, 挑刺, grill, 这个贡献站得住吗, 这个 gap 是真的吗"
 ---
 
 # Grill the Claim — 学术压力测试访谈

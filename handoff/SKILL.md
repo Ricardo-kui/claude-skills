@@ -2,7 +2,7 @@
 name: handoff
 description: 把当前会话压缩成交接文档，让新会话或另一个 agent 无缝继续。Use when the user asks to hand off, wrap up a session, or continue the work in a new session。触发词：「交接」「handoff」「写个交接文档」「新会话继续」「换个窗口接着做」。
 when_to_use: "触发词：交接、handoff、写交接文档、新会话继续、换个窗口接着做。"
-whenToUse: Use when wrapping up the current session into a handoff document so a fresh session or another agent can continue seamlessly. Trigger words: 交接, handoff, 写个交接文档, 新会话继续, 换个窗口接着做
+whenToUse: "Use when wrapping up the current session into a handoff document so a fresh session or another agent can continue seamlessly. Trigger words: 交接, handoff, 写个交接文档, 新会话继续, 换个窗口接着做"
 ---
 
 # Handoff — 会话交接

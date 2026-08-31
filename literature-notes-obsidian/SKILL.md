@@ -2,7 +2,7 @@
 name: literature-notes-obsidian
 description: "Read a paper (PDF/DOI/URL/title/abstract) into an Obsidian evidence-card note (天堂模版, with AMJ Canvas judgment slots); resolves Zotero metadata and logs into the vault."
 when_to_use: "读文献做笔记、升级已有笔记、或对比 2-5 篇论文并落库 Obsidian 时使用。"
-whenToUse: Use when reading a paper PDF, DOI, URL, or abstract into an Obsidian literature note, upgrading an existing note, or comparing a small paper set. Trigger words: 做文献笔记, 读论文, 阅读笔记, literature note, 笔记这篇, 写笔记, evidence card, 天堂模版
+whenToUse: "Use when reading a paper PDF, DOI, URL, or abstract into an Obsidian literature note, upgrading an existing note, or comparing a small paper set. Trigger words: 做文献笔记, 读论文, 阅读笔记, literature note, 笔记这篇, 写笔记, evidence card, 天堂模版"
 ---
 
 # Literature Notes for Obsidian
