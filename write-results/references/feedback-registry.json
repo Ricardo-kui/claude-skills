@@ -1,6 +1,63 @@
 {
   "records": [
     {
+      "benchmark": "Wowak et al. 2025 MS（操作性定义句式）",
+      "category": "corpus_fit",
+      "count": 1,
+      "estimator": "",
+      "evidence": "不要为了追求与 Wowak 句级零重合，而导致当前句子很不符合学术规范。请以学术语言的规范和习惯表达优先，可以允许适度的重复",
+      "first_seen": "2026-08-31",
+      "id": "wrf_0b3d574831c1d539",
+      "last_seen": "2026-08-31",
+      "project": "co-ownership-recall",
+      "reason": "Model 3 叙述上一版为规避重合把定义句和引表句拧成非常规表达，用户指出学术规范优先、允许适度重复",
+      "rule": "防重合以学术规范和惯用表达优先：操作性定义句、引表句式等规范性表述可沿用范文标准写法（允许适度重复）；不得为追求句级零重合而扭曲学术惯用语或自造替代说法（如 record-free recalls、拧装的定义句）。禁抄的仍是范文独有的论证逻辑（如 Wowak 的 DV 有效性论证）与成段句式",
+      "scope": "project",
+      "section": "R8-mechanism",
+      "severity": "revise",
+      "source": "conversation 2026-08-31 Table 7B Model 3 叙述第三稿",
+      "status": "active",
+      "supersedes": [
+        "wrf_df62cc7b8d34defe"
+      ]
+    },
+    {
+      "benchmark": "Hoffmann, Cheong, Phan & Zurbruegg 2024 JM（词汇层）；Wowak et al. 2025 MS（underlying product quality）；本文 ¶179（the competitive penalty for waiting）",
+      "category": "corpus_fit",
+      "count": 1,
+      "estimator": "",
+      "evidence": "我希望使用我的中文骨架，但是参考Hoffmann et al. (2024) 以及其他文献的专业词汇，去润色",
+      "first_seen": "2026-08-31",
+      "id": "wrf_5d27cfde955ee112",
+      "last_seen": "2026-08-31",
+      "project": "co-ownership-recall",
+      "reason": "v3.1 首段沿用了 Hoffmann ours-vs-rival 弧线，用户要求保留其中文骨架（两机制并列框架），仅参考范文词汇润色",
+      "rule": "机制段开篇按用户提供的骨架组织段落顺序与弧线（如 need/willingness 两机制并列、后接正式检验宣告）；Hoffmann 等范文只借专业词汇与经典句式（a lower need for recalls / a lower willingness of managers to recall / underlying product quality / formally test following the approach of），不得用范文弧线（先立我方机制再引 rival）覆盖用户骨架",
+      "scope": "project",
+      "section": "R8-mechanism",
+      "severity": "revise",
+      "source": "conversation 2026-08-31 Methods_and_Results_JM.docx Testing the Quality Mechanism 首段 v3.2 修订",
+      "status": "active"
+    },
+    {
+      "benchmark": "Wowak et al. 2025 MS §6.2.1（术语层）；本文 Table 9 段（内部一致性）",
+      "category": "corpus_fit",
+      "count": 1,
+      "estimator": "",
+      "evidence": "也不能完全照抄……不要与Wowak出现超过50%的重复，请尽可能使用与文献保持一致的专业词汇，不要去创新词",
+      "first_seen": "2026-08-31",
+      "id": "wrf_df62cc7b8d34defe",
+      "last_seen": "2026-08-31",
+      "project": "co-ownership-recall",
+      "reason": "§4.3 数据段按 Wowak 改写时须防抄袭，且现稿曾漏掉 expedited 字段与匹配机制，说明方法描述必须回到管线代码核实",
+      "rule": "移植范文（如 Wowak 2025）的数据与方法描述时，句式一律重构，与原文只保留专业术语级重合（目标远低于 50% 句级重复）；术语只用文献既有词汇不自造；描述须与管线实现核实（nb14/nb15 字段与口径），不得凭范文反推本项目操作化",
+      "scope": "project",
+      "section": "R8-mechanism",
+      "severity": "revise",
+      "source": "conversation 2026-08-31 Methods_and_Results_JM.docx §4.3 数据段（paraId=4D55AF56）重写",
+      "status": "active"
+    },
+    {
       "category": "hypothesis_order",
       "count": 1,
       "evidence": "The story may emphasize H2, but Results should still present H1 before H2.",
@@ -168,6 +225,23 @@
       "status": "active"
     },
     {
+      "category": "language_lock",
+      "count": 1,
+      "estimator": "",
+      "evidence": "Testing the Quality Mechanism 小节润色稿中出现 'a quality improvement mechanism: as...'、'...association—a pattern consistent with partial mediation'、'excluding zero; the bias-corrected ... ; and the Sobel test ...' 等链式拼接",
+      "first_seen": "2026-08-31",
+      "id": "wrf_21c390f20dfebf7f",
+      "last_seen": "2026-08-31",
+      "project": "",
+      "reason": "用户指出破折号/冒号/分号拼合长句有强 AI 痕迹，要求查看并遵守 write-results 语言纪律",
+      "rule": "Results 段落中尽量少用破折号、冒号、分号构造长句：冒号只保留真正引入列举或解释的一处；分号改为句号拆成独立句；破折号插入语拆为独立句或改为主从结构（依据 polish-protocol AI 腔速查表第13条与 Pollock sentence-stuffing 纪律，用户 2026-08-31 裁定从严执行）",
+      "scope": "skill",
+      "section": "",
+      "severity": "revise",
+      "source": "user_turn_2026-08-31",
+      "status": "active"
+    },
+    {
       "category": "mixed_evidence",
       "count": 1,
       "evidence": "Do not close with results are uniformly robust; preserve sign reversals and mixed evidence.",
@@ -211,5 +285,5 @@
     }
   ],
   "schema_version": "1.1.0",
-  "updated": "2026-08-28"
+  "updated": "2026-08-31"
 }
