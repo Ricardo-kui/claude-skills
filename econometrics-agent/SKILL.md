@@ -1,4 +1,6 @@
 ---
+
+> **⚠ 休眠状态（2026-09-01）**：底层 CLI `~/Econometrics-Agent` 在本机未安装（PATH 无、目录不存在）。本 skill 仍保留在 causal-analysis/empirical-intake 的路由体系中；触发时会提示 CLI 缺失，安装后再启用。
 name: econometrics-agent
 description: "Run the local econometrics-agent CLI (~/Econometrics-Agent) on csv/dta/parquet/xlsx — OLS, FE, IV, DiD, event-study, PSM, IPW, RDD, balance/coef tables, spec sweeps. Use only when this specific CLI is wanted."
 when_to_use: "Trigger on explicit mentions of econometrics-agent 或本地计量 agent；不用于纯方法论咨询。"
