@@ -5,10 +5,10 @@
 meta:
   schema_version: 1.1.0
   registry_type: estimator-slot-skeleton
-  last_updated: '2026-09-06d'
-  last_batch_id: batch_42_expert_audit_override_pollock_westphal_gulati
-  batches_processed: 45
-  total_papers_indexed: 45
+  last_updated: '2026-09-06h'
+  last_batch_id: batch_44_residual_sync_gulati_lavie_singh_partnering
+  batches_processed: 47
+  total_papers_indexed: 47
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
     granularity: per estimator（对应 corpus/[结果类型].md 文件）
@@ -335,6 +335,38 @@ estimators:
           - risk_set_disclosure
           notes: 'corpus OLS-FE.md 变体76：威胁类比（样本自选择）+ 两阶段程序前置交底 + 风险集/SE 修正披露；技术细节留给 Methods'
           corpus_path: corpus/OLS-FE.md
+        - id: r2_saturated_model_survival_check
+          skeleton: 'In Model [V] of Table [X], we included all of the interaction terms. The results supporting Hypotheses [N1] and [N2] remained significant and in the directions predicted.'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_higgins_2003_which_ties_matter
+          transferability: high
+          paradigm_exclusivity: OLS/FE 专用，逐假设检验后的全交互饱和模型统一复核拍（副槽位 R4）
+          rhythm_tags:
+          - all_interactions_saturated_model
+          - remained_significant_survival
+          - setting_specificity_response
+          notes: 'corpus OLS-FE.md 变体88：全交互饱和模型存活复核——逐假设各自估计后用含全部交互项的饱和模型统一复核，"remained significant and in the directions predicted" 一句同时回应单假设模型设定特异性与多交互互相吸收两类质疑；只声明存活不得升级支持强度，失活假设须显式报告（对位变体48 吸收 caveat 的正面用法）'
+          corpus_path: corpus/OLS-FE.md
+        - id: r2_control_null_prior_anchored_opening
+          skeleton: 'The reported results (Models [1]–[K]) reveal that the control variables produced mostly insignificant effects on [outcome]. This is consistent with some prior research that found no support for the effects of [control 1] ([citation]), [control 2] ([citation]), and [control 3] ([citations]) on [outcome].'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_lavie_singh_2009_partnering_experience
+          transferability: high
+          paradigm_exclusivity: OLS/FE Results 首段控制块集体系数性 null 的导航+定位开场拍（不替代控制系数表格报告）
+          rhythm_tags:
+          - control_block_null_summary
+          - prior_null_anchoring
+          - model_range_navigation
+          notes: 'corpus OLS-FE.md 变体94：控制块 null 的先例锚定开场——Results 首段一句报控制变量 mostly insignificant 总况 + 一句引先前文献同向 null 锚定，把控制不显著从模型缺陷重读为与文献一致；mostly 必须属实、部分显著须逐个报告；文献锚定只能引确实发现 null 的研究；控制变量显著时不适用'
+          corpus_path: corpus/OLS-FE.md
       R3:
         description: 主假设检验（四拍节奏）
         skeleton_variants:
@@ -554,6 +586,71 @@ estimators:
           - dual_track_significance
           - column_subset_navigation
           notes: 'corpus OLS-FE.md 变体80：跨分样本系数比较的推断基础设施声明 + 括号双轨显著标记 + 逐假设列子集导航'
+        - id: r3_verdict_first_hypothesis_paragraph
+          skeleton: 'The results also support Hypothesis [N]. Hypothesis [N] was that [predictor] would be [positively/negatively] related to [outcome], particularly when [condition]. As shown in Model [M] of Table [X], the interaction term between [moderator] and [predictor] was [positive/negative] and significant, as predicted.'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_higgins_2003_which_ties_matter
+          transferability: high
+          paradigm_exclusivity: 多假设连续汇报的 verdict-first 段（与变体77 链式判决互为排序对）
+          rhythm_tags:
+          - verdict_first_topic_sentence
+          - hypothesis_restated_second
+          - as_predicted_close
+          notes: 'corpus OLS-FE.md 变体87：判决先行假设段——判决提到段落主题句位（verdict-first），复述降为第二句，证据拍以 as predicted 收口，多假设连报时段间形成胜负节奏表；仅适用于结果干净的假设，混合/null 仍须重述先行（变体77 链式）；判决先行不免除幅度拍'
+          corpus_path: corpus/OLS-FE.md
+        - id: r3_paired_contrast_verdict_rhythm
+          skeleton: 'Model [N] reveals an insignificant contribution of [rival construct] to [outcome], which persisted in subsequent models. In contrast, Model [M] shows that the coefficient for [focal construct] is [direction] and [marginally] significant (β = [value], p < [threshold]). Therefore, Hypothesis [n], which predicted [prediction], received [moderate/full] support. These results suggest that [focal construct] rather than [rival construct] contributes to [outcome].'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_lavie_singh_2009_partnering_experience
+          transferability: high
+          paradigm_exclusivity: 构念辨析型对照假设设计的 R3 主检验段——对手构念 null 是对照判决的构成性一半（副槽位 R4 交互侧可配 r4_dual_side_interaction_null_as_confirmation）
+          rhythm_tags:
+          - rival_null_first
+          - in_contrast_pivot
+          - moderate_support_calibration
+          - rather_than_coda
+          notes: 'corpus OLS-FE.md 变体90：对照假设成对判决节奏——对手构念 null 先行开场（persisted in subsequent models 预告跨模型稳定），In contrast 转折引入焦点侧，marginal 显著（p < 0.1）校准为 moderate support 不虚报，收束句 A rather than B 压缩对照判决；null 侧须真是对照假设的预测半边，不得把无关变量不显著包装成对照证据；原文 effect 语言为 2009 惯例，现行 hb_causal_language_ols 下采用时降级为 association 语言，并按 R3 主骨架补幅度拍'
+          corpus_path: corpus/OLS-FE.md
+        - id: r3_relative_order_within_model_f_test
+          skeleton: 'Hypothesis [n] was tested with a [one-/two-]sided F-test, comparing the standardized coefficients of [predictor A] and [predictor B] while holding the other variables at their mean values. In support of Hypothesis [n], we found that β_[A] > β_[B] (F_[1, df] = [value], p < [threshold]).'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_lavie_singh_2009_partnering_experience
+          transferability: high
+          paradigm_exclusivity: 构念辨析型论文的相对排序假设（H2 类，A > B 型）专属检验拍
+          rhythm_tags:
+          - within_model_coefficient_f_test
+          - inequality_verdict
+          - standardized_comparison
+          notes: 'corpus OLS-FE.md 变体91：相对排序假设 within-model 系数比较 F 检验——同一模型内两标准化系数的不等式检验（β_[A] > β_[B]），排序本身是检验对象，不得以两系数各自显著性目测裁决；须报正式 F 检验与 df，系数可比性前提（同模型标准化）在 Methods 交代，one-sided 须与假设方向事先一致；区别于变体80 跨分样本 SUR 联合协方差'
+          corpus_path: corpus/OLS-FE.md
+        - id: r3_main_effect_absorbed_by_own_interaction
+          skeleton: 'Still, the main effect of [predictor] became insignificant in this model because of the high correlation between the main effect of [predictor] and the interaction term [predictor] × [moderator] (r = [value], p < [threshold]). The lower F values in Models [n] and [m] can be ascribed to the reduced degrees of freedom.'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_lavie_singh_2009_partnering_experience
+          transferability: high
+          paradigm_exclusivity: 含交互项的层次回归中主效应失活的诚实归因拍（对位变体48 交互侧显著性下降归因，两拍可同篇并用各管一侧）
+          rhythm_tags:
+          - main_effect_absorption_honesty
+          - collinearity_disclosure
+          - df_fit_attribution
+          notes: 'corpus OLS-FE.md 变体92：主效应被自身交互项共线吸收的诚实归因——Still ... became insignificant because of the high correlation（须报实际 r 值），第二拍把 lower F values 归因 reduced degrees of freedom；吸收解释要求相关确实极高（r > 0.8 量级）且隐含交互项才是假设检验对象；can be ascribed to 只用于 df 机械性下降的 fit 解释，不得用于解释系数大小变化'
+          corpus_path: corpus/OLS-FE.md
       R4:
         description: 交互效应 / 条件效应
         skeleton_variants:
@@ -671,6 +768,38 @@ estimators:
           - slope_direction_reading
           notes: '2026-09-05 登记缺口补登（语料 变体47，2026-08-09 写入）：连续调节 min/mean/max 三值边际效应表 + 斜率方向解读'
           corpus_path: corpus/OLS-FE.md
+        - id: r4_continuous_moderator_sign_criterion
+          skeleton: 'Hypothesis [N] predicted that [focal tie] would be particularly beneficial to [outcome] when [market/context condition]. Model [M] in Table [X] tests this hypothesis. Since we operationalized [moderator] as a continuous measure ranging from [pole A] to [pole B], support for Hypothesis [N] would be indicated if our results showed a significant and [negative/positive] interaction effect between [moderator index] and [focal tie]. Our findings reveal a significant and [negative/positive] interaction, which supports Hypothesis [N].'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_higgins_2003_which_ties_matter
+          transferability: high
+          paradigm_exclusivity: 连续调节变量的交互符号先验判据（R3 复述→R4 判据→判决三拍；副槽位 R3）
+          rhythm_tags:
+          - prior_sign_criterion
+          - continuous_pole_mapping
+          - sign_readout_support
+          notes: 'corpus OLS-FE.md 变体86：连续调节极点→交互符号先验判据——把连续指数两端映射为交互项预测符号，读者无需简单斜率即可从符号直接读出支持判断；区别于变体70（dummy 编码判定规则，R2 前置）；判据一经声明须严格执行符号方向，当代采用须补简单斜率/边际效应或交互图（变体47/59 可承接）'
+          corpus_path: corpus/OLS-FE.md
+        - id: r4_dual_side_interaction_null_as_confirmation
+          skeleton: 'In support of Hypothesis [n], the interaction term was insignificant for [rival construct] but [direction] and significant for [focal construct] (β = [value], p < [threshold]). ... The insignificant interaction of [rival construct] and [moderator] is consistent with our conjecture about the superiority of [focal construct] over [rival construct].'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_lavie_singh_2009_partnering_experience
+          transferability: high
+          paradigm_exclusivity: 构念辨析型论文的调节段——双构念同表并存同规格交互且假设预设非对称时的双侧判决（R3 主检验配 r3_paired_contrast_verdict_rhythm）
+          rhythm_tags:
+          - dual_side_interaction_verdict
+          - rival_null_recovered_as_consistency
+          - superiority_conjecture_echo
+          notes: 'corpus OLS-FE.md 变体93：双侧对照交互判决 + 对手侧 null 回收——一句并报对手侧 insignificant 与焦点侧 significant，把两侧交互显著性差异本身作为调节假设证据；后续再把对手侧 null 交互回收为 consistent with our conjecture（只述一致性不升级支持，不得写成 confirming）；对手侧交互显著时禁用本节奏；同一调节假设可在连续模型中重复兑现判决（原文 H4 经 Model 4/5 两次判决，前置/后置语序交替）'
+          corpus_path: corpus/OLS-FE.md
       R5:
         description: 经济 / 实质显著性
         skeleton_variants:
@@ -725,6 +854,22 @@ estimators:
           - cross_specification_ranking
           - attenuation_interpretation
           notes: 2026-09-05 re-distill——四分位差幅度翻译 + 跨规格排位 "lies between" + 缩水解释句；区别于 r5_ols_embedded_magnitude（单点 one-SD）与外部证据变体。
+          corpus_path: corpus/OLS-FE.md
+        - id: r5_low_r2_literature_benchmark_defense
+          skeleton: 'The explanatory power of our [outcome] models ranged between R² = [low] percent and [high] percent. This result is typical in studies employing [DV family], especially when testing [interactions and subtle focal variables]. For example, [benchmark study] report[s] R² = [value] percent [in a comparable setting]. The objective of the analysis in these cases is to evaluate the contribution of [focal construct] to [outcome] rather than to explain the overall variance in [outcome].'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_lavie_singh_2009_partnering_experience
+          transferability: high
+          paradigm_exclusivity: CAR/事件研究、行为微变量等结构性低 R² 设计的解释力防御拍（原文置于脚注，可上移正文）
+          rhythm_tags:
+          - low_r2_disclosure
+          - dv_family_benchmark
+          - analysis_purpose_reframe
+          notes: 'corpus OLS-FE.md 变体96：低 R² 的文献基准防御 + 分析目的重定位——报解释力区间→引同 DV 族文献更低 R² 基准（原文引 Anand and Khanna 2000 的 R² = 1.1 percent）→把分析目的从解释总方差重定位为评估焦点构念贡献，三步把统计学弱点转化为研究定位声明；基准文献须同 DV 族且口径可比，不得挑极端低值；重定位句只辩护解释力、不辩护系数显著性；区别于变体10（ΔR² 作为经济显著性证据）'
           corpus_path: corpus/OLS-FE.md
       R6:
         description: 非显著 / 混合 / 意外发现
@@ -805,6 +950,22 @@ estimators:
           - dual_verdict
           - sign_asymmetry_disclosure
           notes: 'corpus OLS-FE.md：H1a/H1b 反号对的诚实双判决（一支持一驳回），显式披露不对称（null 判决族第二源）'
+        - id: r6_unexpected_sign_hedged_rereading
+          skeleton: 'The main effect of [non-focal predictor] was [direction] and significant (β = [value], p < [threshold]). This result may suggest that [alternative-theory reading].'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_lavie_singh_2009_partnering_experience
+          transferability: high
+          paradigm_exclusivity: 调节设计中调节变量主效应等非焦点反号发现的原位 hedge 重读拍（假设对象是交互项而非主效应）
+          rhythm_tags:
+          - unexpected_sign_report
+          - may_suggest_hedge
+          - insitu_alternative_reading
+          notes: 'corpus OLS-FE.md 变体95：意外反号主效应的原位 hedge 重读——非焦点变量的意外反号显著在报告当段立即给出替代理论解读，只加 may suggest 一个 hedge（语气上限，不得写成 suggests/indicates），不启动补充分析、深入解释责任留给 Discussion；替代解读须与反号方向兼容且 Discussion 可承接；若反号变量是假设焦点本身须走 R6 完整意外发现处理；区别于变体38（post-hoc spline 专门补充分析的重解释装置）；原文 effect 语言为 2009 惯例，现行 hb_causal_language_ols 下采用 association 语言'
+          corpus_path: corpus/OLS-FE.md
       R7:
         description: 稳健性 / 效度 / 敏感性检验
         skeleton_variants:
@@ -1209,7 +1370,23 @@ estimators:
           notes: 'corpus OLS-FE.md 变体82：在联立系统内做 BK 三步中介并逐假设挂钩；标 LEGACY，现代采用须补 bootstrap CI（BK 族第二源）'
       R9:
         description: Results→Discussion 过渡
-        skeleton_variants: []
+        skeleton_variants:
+        - id: r9_tandem_dual_dimension_coda
+          skeleton: 'These latter results, when considered in tandem with the effects found for our interaction terms, provide strong evidence for the importance of considering both [what kinds of] and [when] [focal relations] benefit [units].'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_higgins_2003_which_ties_matter
+          transferability: high
+          paradigm_exclusivity: OLS/FE 主效应×交互混合故事的收束拍（副槽位 R3/R4）
+          rhythm_tags:
+          - tandem_main_interaction
+          - title_question_echo
+          - dual_dimension_coda
+          notes: 'corpus OLS-FE.md 变体89：主效应×交互 tandem 双维收束——in tandem with 把主效应打包为交互证据的辅助拍而非独立立论（正面规避 ap_interaction_main_effect_independent），标题问句 what×when 回环锁定双维框架；"strong evidence" 强度须与证据匹配，不得引入 Results 未报告的机制或泛化'
+          corpus_path: corpus/OLS-FE.md
     cross_slot_patterns:
     - id: csp_r3_to_r4_transition
       pattern: Having established the main effects, we next examine...

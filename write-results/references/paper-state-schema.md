@@ -1,6 +1,7 @@
 # Paper-State Schema — Results 输出片段（从 SKILL.md 下沉，v0.1）
 
 > 由 write-results 输出末尾**对照使用**：附加 `### paper-state.yaml 片段` 块，供 paper-review 和 results-review 消费。
+> 字段与 `../paper-state-protocol/references/schema.md` 权威 schema 对齐；本文件只定义 results 节的特有片段模板，协议层通用字段语义以 protocol 为准。
 
 ```yaml
 # --- paper-state.yaml 片段 (copy to your paper-state.yaml) ---

@@ -1266,6 +1266,24 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 
 ---
 
+
+### 变体 92: R3 — 主效应被自身交互项共线吸收的解释 + df 对 fit 的次要归因 (1篇高价值)
+
+<!-- pattern_id: main_effect_absorbed_by_own_interaction; slot: R3; source_papers: ["Gulati_Lavie_Singh_2009_SMJ"]; confidence: low -->
+
+**来源论文**: Gulati, Lavie & Singh (2009, SMJ)
+**原始句锚点**: "Still, the main effect of PSE became insignificant in this model because of the high correlation between the main effect of PSE and the interaction term PSE X TFR (r = 0.894, p < 0.001)."
+**验证状态**: EMERGING（单篇）
+**槽位**: R3
+**骨架**:
+> Still, the main effect of [predictor] became insignificant in this model because of the high correlation between the main effect of [predictor] and the interaction term [predictor] × [moderator] (r = [value], p < [threshold]). The lower F values in Models [n] and [m] can be ascribed to the reduced degrees of freedom.
+
+**与原骨架差异**: 区别于变体 48（全模型**交互项**显著性下降归因调节变量间高相关，Cortina et al. 背书）——本变体方向相反：**主效应**在自己交互项入模后被吸收（"Still, ... became insignificant because of the high correlation ..."），并附第二拍把 fit 下降（lower F values）归因于 reduced degrees of freedom。两拍均为"诚实归因而非掩盖"，可与变体 48 在同一论文并用（交互侧/主效应侧各管一处）。
+**诚实边界**: 必须报告实际相关值（r = [value]）；吸收解释要求相关确实极高（r > 0.8 量级）且隐含"交互项才是假设检验对象"的提醒；"can be ascribed to" 只用于 df 机械性下降的 fit 解释，不得用于解释系数大小变化。
+**适用**: 含交互项的层次回归中主效应失活的诚实报告。
+
+<!-- wb:gulati_lavie_singh_2009_partnering_experience:main_effect_absorbed_by_own_interaction -->
+
 ### 变体 49: R7 — ITCV 省略变量阈值解释（Frank 2000）(1篇高价值)
 
 **来源论文**: DesJardine, Li & Shi (2025, AMJ)
@@ -1718,6 +1736,168 @@ level of significance, indicating nearly full mediation.
 <!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:r8_in_system_baron_kenny_hypothesis_linked_mediation -->
 
 <!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:r8_in_system_baron_kenny_hypothesis_linked_mediation_gulati_sytch2007 -->
+
+
+### 变体 86: R4 — 连续调节极点→交互符号先验判据（gulati_higgins2003smj 型）
+**来源论文**: Gulati & Higgins (2003), *Strategic Management Journal*
+**原始句锚点**: "Since we operationalized equity market uncertainty as a continuous measure ranging from cold to hot, then support for Hypothesis 1 would be indicated if our results showed a significant and negative interaction effect between the equity market index and VC prominence."
+**验证状态**: EMERGING 单源（gate ① 可按 Pollock/Westphal/Gulati 系单源 override 规则升级）
+**槽位**: R4（副槽位 R3）
+**骨架**:
+> Hypothesis [N] predicted that [focal tie] would be particularly beneficial to [outcome] when [market/context condition]. Model [M] in Table [X] tests this hypothesis. Since we operationalized [moderator] as a continuous measure ranging from [pole A] to [pole B], support for Hypothesis [N] would be indicated if our results showed a significant and [negative/positive] interaction effect between [moderator index] and [focal tie]. Our findings reveal a significant and [negative/positive] interaction, which supports Hypothesis [N].
+**与原骨架差异**: 先验判据变体70（westphal_bednar2005 型）管差值/合成检验变量的 dummy 编码判定规则且置于 R2 前置；本变体管连续调节变量——把连续指数两端（[pole A]→[pole B]）映射为交互项的**预测符号**（"support ... would be indicated if ... significant and [negative] interaction"），读者无需简单斜率即可从符号直接读出支持判断；判据拍内嵌于假设检验段（R3 复述→R4 判据→判决三拍）。区别于变体77（假设判决链）：判决链无判据拍，交互符号与支持判断之间缺"为什么这个符号算支持"的桥。
+**诚实边界**: 判据一经声明须严格执行符号方向，不得事后改判；仅报交互符号属最小报告——当代采用须补简单斜率/边际效应或交互图（语料变体47/59 可承接）；主效应与显著交互并存时不得据主效应独立立论（global_anti_patterns[2]）。
+
+<!-- wb:gulati_higgins_2003_which_ties_matter:r4_continuous_moderator_sign_criterion -->
+
+
+### 变体 87: R3 — 判决先行假设段（verdict-first topic sentence；gulati_higgins2003smj 型）
+**来源论文**: Gulati & Higgins (2003), *Strategic Management Journal*
+**原始句锚点**: "The results also support Hypothesis 2. Hypothesis 2 was that underwriter prestige would be positively related to IPO success, particularly when the equity markets are relatively hot for new issues."
+**验证状态**: EMERGING 单源（gate ① 可按 Pollock/Westphal/Gulati 系单源 override 规则升级）
+**槽位**: R3
+**骨架**:
+> The results also support Hypothesis [N]. Hypothesis [N] was that [predictor] would be [positively/negatively] related to [outcome], particularly when [condition]. As shown in Model [M] of Table [X], the interaction term between [moderator] and [predictor] was [positive/negative] and significant, as predicted.
+**与原骨架差异**: 变体77（假设判决链，范文来源为姊妹篇 Higgins & Gulati 2003 *Organization Science*，注意与本篇 Gulati 一作 SMJ 篇区分）以假设重述开头、判决收尾（重述→定位→判决）；本变体把判决提到段落主题句位（verdict-first），复述降为第二句，证据拍以 "as predicted" 收口——多假设连续汇报时读者第一句即知胜负，段间形成"胜负节奏表"。同团队两篇并置即为该节奏族两种排序的证据。
+**诚实边界**: 判决先行仅适用于结果干净（方向+显著性均符合预测）的假设；混合/null 假设仍须重述先行（变体77 链式）；判决句不得在证据拍之后二次出现（防循环论证观感）；判决先行不免除幅度拍——当代采用仍须补经济显著性。
+
+<!-- wb:gulati_higgins_2003_which_ties_matter:r3_verdict_first_hypothesis_paragraph -->
+
+
+### 变体 88: R2 — 全交互饱和模型存活复核句（gulati_higgins2003smj 型）
+**来源论文**: Gulati & Higgins (2003), *Strategic Management Journal*
+**原始句锚点**: "In Model V of Table 2, we included all of the interaction terms. The results supporting Hypotheses 1 and 2 remained significant and in the directions predicted."
+**验证状态**: EMERGING 单源（gate ① 可按 Pollock/Westphal/Gulati 系单源 override 规则升级）
+**槽位**: R2（副槽位 R4）
+**骨架**:
+> In Model [V] of Table [X], we included all of the interaction terms. The results supporting Hypotheses [N1] and [N2] remained significant and in the directions predicted.
+**与原骨架差异**: 变体53 管"逐调节引入→成对→全模型"的 8 模型导航全程；本变体是其尾半程的紧凑独立拍——逐假设各自估计后，用一个含全部交互项的饱和模型统一复核，"remained significant and in the directions predicted" 一句同时回应两类质疑：单假设模型的设定特异性、多交互并存的互相吸收（对位变体48 吸收 caveat 的正面用法）。两句话即可挂接在任意多假设表格导航尾部，不要求全程 8 模型结构。
+**诚实边界**: 饱和模型复核只声明"存活"，不得顺带升级支持强度（如 marginal→significant）；某假设在饱和模型中失活必须显式报告并解释（高相关调节互相吸收，参照变体48 与 Cortina et al. 背书），不得静默省略。
+
+<!-- wb:gulati_higgins_2003_which_ties_matter:r2_saturated_model_survival_check -->
+
+
+### 变体 89: R3+R9 — 主效应×交互 tandem 收束句（标题问句回环；gulati_higgins2003smj 型）
+**来源论文**: Gulati & Higgins (2003), *Strategic Management Journal*
+**原始句锚点**: "These latter results, when considered in tandem with the effects found for our interaction terms, provide strong evidence for the importance of considering both what types and when interorganizational ties benefit firms."
+**验证状态**: EMERGING 单源（gate ① 可按 Pollock/Westphal/Gulati 系单源 override 规则升级）
+**槽位**: R9（副槽位 R3/R4）
+**骨架**:
+> These latter results, when considered in tandem with the effects found for our interaction terms, provide strong evidence for the importance of considering both [what kinds of] and [when] [focal relations] benefit [units].
+**与原骨架差异**: OLS-FE 现 R9 收束仅变体27（多阶段管道衰减 profile 的跨阶段对比收束）；本变体是单研究双维收束——把控制/主效应汇总段与交互证据打包进标题问句（what types × when），一个 "in tandem with" 同时完成主效应与交互的合法并置：主效应被明确降为 tandem 中的辅助证据而非独立立论，正面规避"交互显著后仍独立解释主效应"反模式（global_anti_patterns[2]），适合主效应+交互混合故事的 Results 收尾。
+**诚实边界**: "strong evidence" 强度须与证据匹配（本篇即含一个边缘显著主效应）；tandem 句不新增证据，不得引入 Results 未报告的机制或泛化；标题回环措辞可换，双维（what×when）结构不可丢。
+
+<!-- wb:gulati_higgins_2003_which_ties_matter:r9_tandem_dual_dimension_coda -->
+
+
+### 变体 90: R3 — 对照假设成对判决节奏（rival null 先行 + "A rather than B" 收束） (1篇高价值)
+
+<!-- pattern_id: paired_contrast_verdict_rhythm; slot: R3; source_papers: ["Gulati_Lavie_Singh_2009_SMJ"]; confidence: low -->
+
+**来源论文**: Gulati, Lavie & Singh (2009, SMJ)
+**原始句锚点**: "Model 1 reveals insignificant contribution of GPE to firm CAR, which persisted in subsequent models. In contrast, Model 2 shows that PSE produces a marginally significant positive effect on CAR (β = 0.059, p < 0.1)."
+**验证状态**: EMERGING（单篇）
+**槽位**: R3
+**骨架**:
+> Model [N] reveals an insignificant contribution of [rival construct] to [outcome], which persisted in subsequent models. In contrast, Model [M] shows that the coefficient for [focal construct] is [direction] and [marginally] significant (β = [value], p < [threshold]). Therefore, Hypothesis [n], which predicted [prediction], received [moderate/full] support. These results suggest that [focal construct] rather than [rival construct] contributes to [outcome].
+
+**与原骨架差异**: 区别于变体 72（rival 作为控制变量在收尾句内联排除）与变体 79（R8 事后两层次 A/B 裁决）——本变体是 R3 主假设层面的**对照构念成对判决**：对手构念 null 先行开场（"which persisted in subsequent models" 预告跨模型稳定）、"In contrast" 转折引入焦点侧、marginal 显著（p < 0.1）校准为 "received moderate support"（不虚报全支持），收束句 "A rather than B" 把对照判决压缩成可引用结论。对手侧 null 是对照假设的构成性一半——null 本身即证据，一次判决同时结算两个构念。
+**判决语序**: 支持侧判决前置（"In support of Hypothesis [n], ..."）与后置（"..., lending support to Hypothesis [n]"）在同节交替使用避免重复（原文 Model 3/4 用前置、Model 5 用后置）。
+**诚实边界**: "moderate support" 仅用于 p < 0.1 边际显著，p < 0.05 及更强直接 "supported"；null 侧必须真是对照假设的预测半边，不得把无关变量不显著包装成对照证据；原文用 effect 语言（2009 SMJ 惯例），现行 hb_causal_language_ols 边界下采用时降级为 association 语言。
+**幅度提醒**: 原文此段无幅度翻译拍（系数即解释，年代局限）——采用时按 R3 主骨架补幅度拍。
+**适用**: 对照假设（竞争构念/相对优势）设计的主假设检验段。
+
+<!-- wb:gulati_lavie_singh_2009_partnering_experience:paired_contrast_verdict_rhythm -->
+
+
+### 变体 91: R3 — 相对排序假设的 within-model 系数比较 F 检验 (1篇高价值)
+
+<!-- pattern_id: relative_order_within_model_f_test; slot: R3; source_papers: ["Gulati_Lavie_Singh_2009_SMJ"]; confidence: low -->
+
+**来源论文**: Gulati, Lavie & Singh (2009, SMJ)
+**原始句锚点**: "Hypothesis 2 was tested with a one-sided F-test, comparing the standardized coefficients of GPE and PSE while holding the other variables at their mean values. In support of Hypothesis 2, we found that β_PSE > β_GPE (F_{1,1039} = 2.83, p < 0.05)."
+**验证状态**: EMERGING（单篇）
+**槽位**: R3
+**骨架**:
+> Hypothesis [n] was tested with a [one-/two-]sided F-test, comparing the standardized coefficients of [predictor A] and [predictor B] while holding the other variables at their mean values. In support of Hypothesis [n], we found that β_[A] > β_[B] (F_[1, df] = [value], p < [threshold]).
+
+**与原骨架差异**: 区别于变体 80（跨分样本系数比较的 SUR 联合协方差基础设施声明）——本变体是**同一模型内**两个标准化系数的相对排序检验（"A > B" 型假设）：推断工具是 within-model one-sided F 检验，无跨样本基础设施声明；判决句以不等式 β_[A] > β_[B] 直接呈现，把"排序"本身作为检验对象，而非两个独立显著性各自判决。
+**诚实边界**: 相对排序假设不得以"两系数各自显著/不显著"目测裁决——须报告正式 F 检验并给 df；系数可比性前提（同模型标准化）须在 Methods 交代；one-sided 须与假设方向事先一致，不得事后择向。
+**适用**: 构念辨析型论文的"贡献排序"假设（H2 类）。
+
+<!-- wb:gulati_lavie_singh_2009_partnering_experience:relative_order_within_model_f_test -->
+
+
+### 变体 93: R4 — 双侧对照交互判决 + 对手侧 null 回收为确证 (1篇高价值)
+
+<!-- pattern_id: dual_side_interaction_null_as_confirmation; slot: R4; source_papers: ["Gulati_Lavie_Singh_2009_SMJ"]; confidence: low -->
+
+**来源论文**: Gulati, Lavie & Singh (2009, SMJ)
+**原始句锚点**: "In support of Hypothesis 4, the interaction term was insignificant for GPE but positive and significant for PSE (β = 0.190, p < 0.05)." ... "The insignificant interaction of GPE and FSU is consistent with our conjecture about the superiority of PSE over GPE."（两句取自同节不同段，拼接处已标注）
+**验证状态**: EMERGING（单篇）
+**槽位**: R4
+**骨架**:
+> In support of Hypothesis [n], the interaction term was insignificant for [rival construct] but [direction] and significant for [focal construct] (β = [value], p < [threshold]). ... The insignificant interaction of [rival construct] and [moderator] is consistent with our conjecture about the superiority of [focal construct] over [rival construct].
+
+**与原骨架差异**: 区别于 Logit 侧变体 25（主效应成立但对应交互当场 do not support 的失败判决）——本变体是**成功侧**双侧对照交互判决：一句话同时报告对手侧 insignificant 与焦点侧 significant，把两侧交互显著性差异本身作为调节假设的证据；后续再把对手侧 null 交互回收为 superiority 猜想的一致性证据（"consistent with our conjecture"），null 不被静默丢弃而是复用为对照证据。同一调节假设可在连续模型中重复兑现判决（原文 H4 经 Model 4/5 两次判决，前置/后置语序交替）。
+**诚实边界**: "consistent with our conjecture" 只陈述一致性、不升级为支持——对手侧 null 是弱证据，不得写成 "confirming"；双侧判决要求表中确实并存两构念的同规格交互且假设预设非对称；对手侧交互显著时禁用本节奏。
+**适用**: 构念辨析型论文的调节段（对手构念交互与焦点构念交互同表并存）。
+
+<!-- wb:gulati_lavie_singh_2009_partnering_experience:dual_side_interaction_null_as_confirmation -->
+
+
+### 变体 94: R2 — 控制块 null 的先例锚定开场 (1篇高价值)
+
+<!-- pattern_id: control_null_prior_anchored_opening; slot: R2; source_papers: ["Gulati_Lavie_Singh_2009_SMJ"]; confidence: low -->
+
+**来源论文**: Gulati, Lavie & Singh (2009, SMJ)
+**原始句锚点**: "The reported results (Models 1–6) reveal that the control variables produced mostly insignificant effects on CAR. This is consistent with some prior research that found no support for the effects of firm size (Anand and Khanna, 2000) ..."（原句继续列举其余控制变量及其文献，截断处已标注）
+**验证状态**: EMERGING（单篇）
+**槽位**: R2
+**骨架**:
+> The reported results (Models [1]–[K]) reveal that the control variables produced mostly insignificant effects on [outcome]. This is consistent with some prior research that found no support for the effects of [control 1] ([citation]), [control 2] ([citation]), and [control 3] ([citations]) on [outcome].
+
+**与原骨架差异**: 区别于 R6 的假设级 null 处理——本变体管**控制块**集体系数性 null 的 Results 开场：一句报总况（"mostly insignificant"）+ 一句以先前文献的同向 null 锚定，把控制变量不显著从"模型缺陷"重读为"与文献一致的正常现象"，同时完成 Results 第一段的模型导航（Models [1]–[K] 总起）。
+**诚实边界**: "mostly" 必须属实，部分控制显著须如实逐个报告；文献锚定只能引确实发现 null 的研究；本开场是导航+定位拍，不替代控制系数的表格报告。
+**适用**: 控制块整体 null 且先前文献确有同向 null 的场景；控制变量显著时不适用。
+
+<!-- wb:gulati_lavie_singh_2009_partnering_experience:control_null_prior_anchored_opening -->
+
+
+### 变体 95: R6 — 意外反号主效应的原位 hedge 重读 (1篇高价值)
+
+<!-- pattern_id: unexpected_sign_hedged_rereading; slot: R6; source_papers: ["Gulati_Lavie_Singh_2009_SMJ"]; confidence: low -->
+
+**来源论文**: Gulati, Lavie & Singh (2009, SMJ)
+**原始句锚点**: "The main effect of FFR produced a negative effect on CAR (β = -0.113, p < 0.05). This result may suggest that financially distressed firms benefit more from alliance formation."
+**验证状态**: EMERGING（单篇）
+**槽位**: R6
+**骨架**:
+> The main effect of [non-focal predictor] was [direction] and significant (β = [value], p < [threshold]). This result may suggest that [alternative-theory reading].
+
+**与原骨架差异**: 区别于变体 38（post-hoc spline + 递减理论的重解释装置，R8 专门补充分析）——本变体是**原位一句话 hedge 重读**：非焦点变量的意外反号显著在报告当段立即给出替代理论解读，只加 "may suggest" 一个 hedge，不启动补充分析、不升级为机制主张，把深入解释责任留给 Discussion。
+**诚实边界**: "may suggest" 是语气上限——不得写成 "suggests"/"indicates"；替代解读必须与反号方向兼容且 Discussion 可承接；若反号变量是假设焦点本身，须走 R6 完整意外发现处理而非一句话带过；原文 effect 语言为 2009 惯例，现行边界下采用 association 语言。
+**适用**: 调节假设中调节变量主效应的意外反号（假设对象是交互项而非主效应）等非焦点反号发现。
+
+<!-- wb:gulati_lavie_singh_2009_partnering_experience:unexpected_sign_hedged_rereading -->
+
+
+### 变体 96: R5 — 低解释力的文献基准防御 + 分析目的重定位 (1篇高价值)
+
+<!-- pattern_id: low_r2_literature_benchmark_defense; slot: R5; source_papers: ["Gulati_Lavie_Singh_2009_SMJ"]; confidence: low -->
+
+**来源论文**: Gulati, Lavie & Singh (2009, SMJ)
+**原始句锚点**: "This result is typical in studies employing CAR as a dependent variable, especially when testing the impact of interactions and subtle variables ... The objective of the analysis in these cases is to evaluate the contribution of partnering experience to value creation rather than to explain the overall variance in abnormal market returns following alliance announcements."（同段中例证句被截，截断处已标注）
+**验证状态**: EMERGING（单篇）
+**槽位**: R5
+**骨架**:
+> The explanatory power of our [outcome] models ranged between R² = [low] percent and [high] percent. This result is typical in studies employing [DV family], especially when testing [interactions and subtle focal variables]. For example, [benchmark study] report[s] R² = [value] percent [in a comparable setting]. The objective of the analysis in these cases is to evaluate the contribution of [focal construct] to [outcome] rather than to explain the overall variance in [outcome].
+
+**与原骨架差异**: 区别于变体 10（ΔR² 作为经济显著性证据）——本变体是**低 R² 的可信度防御**：报解释力区间→引同 DV 文献更低 R² 作基准（原文引 Anand and Khanna 2000 的 R² = 1.1 percent）→把分析目的从"解释总方差"重定位为"评估焦点构念贡献"，三步把统计学弱点转化为研究定位声明。原文置于脚注12，CAR/事件研究类低解释力设计可上移正文或保留脚注。
+**诚实边界**: 基准文献必须同 DV 族且口径可比，不得挑极端低值；R² 区间须如实报告；重定位句只辩护解释力、不辩护系数显著性。
+**适用**: CAR/事件研究、行为微变量等结构性低 R² 设计。
+
+<!-- wb:gulati_lavie_singh_2009_partnering_experience:low_r2_literature_benchmark_defense -->
 
 ## 反模式
 

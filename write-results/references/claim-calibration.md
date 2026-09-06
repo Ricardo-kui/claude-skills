@@ -1,6 +1,6 @@
 # Claim Calibration（主张层级校准）
 
-> 来源：抽取改写自 good-story (Rimagination) `references/overclaim-calibration.md`，管理实证情境化。与 Booth 证据五问（`evidence-standards.md`）、soundness 层证据标准、`../SKILL.md` 因果语言强制词汇表同向；本文件管**主张层级（范围与强度）**，词汇表按**设计家族**管动词，两者互补。
+> 来源：抽取改写自 good-story (Rimagination) `references/overclaim-calibration.md`，管理实证情境化。与 Booth 证据五问（`evidence-standards.md`）、soundness 层证据标准、`../../write-methods/corpus/micro-templates/causal-hedging.md` 因果语言词汇表同向；本文件管**主张层级（范围与强度）**，词汇表按**设计家族**管动词，两者互补。
 > 适用：R3 主假设 claim 句、R5 经济显著性、Discussion 面向的 implication 句。生成前校准"主张层级 ≤ 证据层级"。
 
 ## Claim Ladder（7 级）
@@ -22,7 +22,7 @@
 | 诱惑性写法 | 风险 | 更稳写法 |
 |---|---|---|
 | proves / demonstrates conclusively | 通常过强 | supports / is consistent with / provides evidence for |
-| drives / causes / leads to | 暗示因果 | 按 `../SKILL.md` 因果语言强制词汇表（面板→"associated with"；DiD→"effect of"） |
+| drives / causes / leads to | 暗示因果 | 按 `../../write-methods/corpus/micro-templates/causal-hedging.md` 词汇表（按设计家族取动词档位） |
 | mechanism / pathway（作为已证） | 暗示过程证据 | possible mechanism / candidate pathway / consistent with |
 | universal / general（无边界） | 暗示普适 | 明确 tested contexts 与样本范围 |
 | transformative / paradigm-shifting | 无领域后果支撑的 hype | 具体说明读者能做什么、能推断什么 |

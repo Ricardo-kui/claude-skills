@@ -18,7 +18,7 @@ when_to_use: "起草或深度修订 Results 段落时使用；只审查不改写
 
 - 在制定计划或生成文字前，读取当前 Results 正文、相关修订记录/Decision Register、当前 Methods 与实际结果表；不得凭旧版本或对话摘要替代现稿。
 - 从修订记录中提取明确的不满意、禁用语、改写裁定和“旧建议作废”声明；这些属于 feedback，不是仅供回顾的日志。
-- 使用优先级：用户本轮明确裁定 > 当前草稿的语言锁定与修订记录 > 当前 Methods 和表格证据 > paper-state > 明确仍有效的 Theory > corpus 默认骨架。标记为 stale/obsolete 的文件不得约束输出。
+- 使用优先级阶梯与 stale/obsolete 处理见 `references/draft-revision-protocol.md` §1（用户本轮明确裁定最高；标记 stale/obsolete 的文件不得约束输出）。
 - 生成 `revision_constraints`：保留项、禁用项、章节顺序、假设顺序、术语、表号、混合证据和待解决问题。后续每轮修改前重新加载。
 - 局部改写只改变授权段落；除非为解决明确冲突，不扩写到其他章节。
 
@@ -42,13 +42,7 @@ when_to_use: "起草或深度修订 Results 段落时使用；只审查不改写
 /write-results <模型类型> [--hypotheses="..."] [--journal=AMJ] [--has-interactions] [--has-mediator] [--paper-state=<path>] [--skip-robustness-diagnostic]
 ```
 
-`<模型类型>`（必填，19 种）：OLS/FE | Logit/Probit/Ordered Probit | 生存分析 | DiD | 计数模型 | 实验 | 多研究 | IV/2SLS | 匹配DiD | 堆叠扩散Logit | 同伴效应/网络效应 | 推断二元结果 | 定性过程研究/定性发现 | VARX-PVAR 等。省略模型类型 → 交互式询问。
-
-## 前置检查
-
-- [ ] revision 模式已读取当前草稿、修订记录和当前证据；new_draft 模式已明确结果类型
-- [ ] 假设列表与展示顺序已锁定（默认按 H1→H2→H3）
-- [ ] 已区分实际数字写作与 `[placeholder]` 骨架，不混用两种输出
+`<模型类型>`（必填，19 种；全表见 `references/design-branches.md` 分支表）：OLS/FE | Logit/Probit | 生存分析 | DiD | 计数模型 | 实验 | IV/2SLS | 多研究 | 定性过程研究 等。省略模型类型 → 交互式询问。
 
 ## 输入接口
 
@@ -58,50 +52,34 @@ when_to_use: "起草或深度修订 Results 段落时使用；只审查不改写
 
 **完成判据**：输入来源已确定；假设-结果映射可用。
 
-## 叙事槽位目录（R1–R9）
+## 叙事槽位目录与加载（R1–R9）
 
-| 槽位 | 名称 | 输出形式 |
-|------|------|----------|
-| R1 | 描述性统计 / 诊断导向 | 1 段填空 |
-| R2 | 模型序列 / 表格导航 | 1 段填空 |
-| R3 | 主假设检验（四项证据功能） | 每假设 1 段；句数不固定 |
-| R4 | 交互效应 / 条件效应 | 每交互假设 1–2 段填空 |
-| R5 | 经济 / 实质显著性 | 嵌入 R3 或独立 1 段 |
-| R6 | 非显著 / 混合 / 意外发现（若无非显著假设则跳过） | **Inline 报告可接受（顶刊常态），独立段落非必需** |
-| R7 | 稳健性 / 效度 / 敏感性检验 | 每威胁 1 段填空 |
-| R8 | 补充 / 事后 / 机制分析 | 每补充分析 1 段填空；约 2/3 论文包含 |
-| R9 | Results 证据收束（可选） | 1 段填空；只概括已报告的答案与未解决问题，不预写 Discussion |
+R1–R9 是证据功能，不是强制章节顺序。按需加载 slot 骨架（`references/slot-<R编号>.md`，**不要一次全读**）：
 
-## 路由与加载
+| 槽位 | 名称 | 文件 | 何时加载 | 何时跳过 |
+|---|---|---|---|---|
+| R1 | 描述性统计 / 诊断导向 | `references/slot-R1.md` | 总是；1 段填空 | 质性发现 |
+| R1.5 | Model-Free Evidence | `references/slot-R1.md`（§Model-Free Evidence 变体） | IV/DiD/匹配/复杂识别设计 | 纯 OLS/FE、质性发现 |
+| R2 | 模型序列 / 表格导航 | `references/slot-R2.md` | 总是；1 段填空 | 质性发现 |
+| R3 | 主假设检验（四项证据功能） | `references/slot-R3.md` | 每假设一段（最大文件；句数不固定） | 质性发现 |
+| R4 | 交互效应 / 条件效应 | `references/slot-R4.md` | 含交互假设时；每交互假设 1–2 段 | 无交互 |
+| R5 | 经济 / 实质显著性 | `references/slot-R5.md` | 嵌入 R3 或独立 1 段 | — |
+| R6 | 非显著 / 混合 / 意外发现 | `references/slot-R6.md` | 有非显著/混合假设时；**inline 报告可接受（顶刊常态），独立段落非必需** | 全部显著 |
+| R7 | 稳健性 / 效度 / 敏感性检验 | `references/slot-R7.md` | 按威胁组织，每威胁一段 | 质性发现 |
+| R8 | 补充 / 事后 / 机制分析 | `references/slot-R8.md` | 每补充分析 1 段；约 2/3 论文包含 | — |
+| R9 | Results 证据收束 | `references/slot-R9.md` | 需要总结复杂或混合证据时；只概括已报告的答案与未解决问题，不预写 Discussion | 默认跳过 |
 
-1. **结果类型与证据阶段分支**：确定类型后读 `references/design-branches.md`。R1–R9 是证据功能，不是强制章节顺序；观察性研究优先按“描述→基准假设→样本选择→按来源区分的内生性→机制/替代解释→异质性→其他稳健性”组织。
-2. **槽位骨架加载**：按槽位读 `references/slot-<R编号>.md`（**按需加载，不要一次全读**）：
+**分支与组织顺序**：确定结果类型后读 `references/design-branches.md`；观察性研究优先按"描述→基准假设→样本选择→按来源区分的内生性→机制/替代解释→异质性→其他稳健性"组织。
 
-| 槽位 | 文件 | 何时加载 | 何时跳过 |
-|---|---|---|---|
-| R1 描述性统计/诊断 | `references/slot-R1.md` | 总是 | 质性发现 |
-| R1.5 Model-Free Evidence | `references/slot-R1.md`（§Model-Free Evidence 变体） | IV/DiD/匹配/复杂识别设计 | 纯 OLS/FE、质性发现 |
-| R2 模型序列/表格导航 | `references/slot-R2.md` | 总是 | 质性发现 |
-| R3 主假设检验（证据功能） | `references/slot-R3.md` | 每假设一段（最大文件） | 质性发现 |
-| R4 交互/条件效应 | `references/slot-R4.md` | 含交互假设时 | 无交互 |
-| R5 经济/实质显著性 | `references/slot-R5.md` | 嵌入 R3 或独立成段 | — |
-| R6 非显著/混合/意外 | `references/slot-R6.md` | 有非显著/混合假设时 | 全部显著 |
-| R7 稳健性/效度/敏感 | `references/slot-R7.md` | 按威胁组织，每威胁一段 | 质性发现 |
-| R8 补充/事后/机制 | `references/slot-R8.md` | 约 2/3 论文包含 | — |
-| R9 Results 证据收束 | `references/slot-R9.md` | 需要总结复杂或混合证据时 | 默认跳过 |
+**结果类型变体（段落级检索）**：先查 `corpus/INDEX.md`，再加载实际涉及的 `corpus/[结果类型].md`。每个段落按证据功能选择 2–4 个最接近的变体比较节奏和句法；不得用一个骨架批量覆盖整节，也不得因 corpus 句式牺牲现稿事实或用户裁定。
 
-3. **结果类型变体（段落级检索）**：先查 `corpus/INDEX.md`，再加载实际涉及的 `corpus/[结果类型].md`。每个段落按证据功能选择 2–4 个最接近的变体比较节奏和句法；不得用一个骨架批量覆盖整节，也不得因 corpus 句式牺牲现稿事实或用户裁定。
-4. **稳健性计划**：`methods.robustness_plan` 缺失时执行 `references/robustness-diagnosis.md`（Yuan 六维三步诊断 → 输出计划 → 只生成 mandatory/recommended 维度的 R7 段落）。
+**稳健性计划**：`methods.robustness_plan` 缺失时执行 `references/robustness-diagnosis.md`（Yuan 六维三步诊断 → 输出计划 → 只生成 mandatory/recommended 维度的 R7 段落）。
 
 **完成判据**：结果类型 + 槽位序列已定（含分支理由）；稳健性计划已定（诊断或引用既有计划）。
 
-## 即时范文学习对象（按需，与 write-introduction Phase 1.5 同构）
+## 即时范文学习对象（按需）
 
-完整 Results 生成且 story gate 为 PASS/PROVISIONAL（或 evidence intake 模式已声明）时执行；单系数解释、表格导航、local-only 或显式 `--exemplars=off` 跳过。本次调用私有，不写项目文件。
-
-1. 生成临时 request：`section="results"`、paper_type、当前 story needs 与 `retrieval_signals`（如四拍节奏、threat 组织的稳健性段、mixed/null 的诚实披露、claim 层级校准）；`validated_conditions` 仅在本次 story gate 已证实时填入，不确定留空。
-2. 运行 `py ../story-blueprints/scripts/retrieve_exemplars.py --request <临时 JSON>`；结果非空则只读 1–2 张 v0.4-lite 卡的 `section_learning.results` learning block，不加载整库。
-3. 推荐只回答"学什么、为何适配、不能照搬什么、应比较什么"；无匹配则明确报告"当前 v0.4-lite 库无适合的 Results 学习对象"并继续，不得凑数。
+完整 Results 生成且 story gate 为 PASS/PROVISIONAL（或 evidence intake 模式已声明）时执行；单系数解释、表格导航、local-only 或显式 `--exemplars=off` 跳过。共用协议（request 生成 / retrieve_exemplars.py / 四问推荐 / 无匹配明示 / 不写回项目文件）见 `../story-blueprints/v4/rhetoric-moves/_immediate-exemplar-protocol.md`——本节差异：`section="results"`，读 v0.4-lite 卡的 `section_learning.results` block；retrieval_signals 例：四拍节奏、threat 组织的稳健性段、mixed/null 的诚实披露、claim 层级校准。
 
 **完成判据**：推荐已显示或已明确无匹配；推荐不改变证据判决与 story 契约的权威地位。
 
@@ -116,7 +94,7 @@ when_to_use: "起草或深度修订 Results 段落时使用；只审查不改写
 5. **锚点使用纪律（verbatim anchor）**：结构跟证据功能；使用规则见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律。修辞动作级升级（反向反事实等）路由 `../story-blueprints/v4/rhetoric-moves/_index.md`，润色走其 `_polish-protocol.md` 流畅性门。
 6. **事实直陈默认语态**：先直接报告方向、显著性/不确定性和幅度；只保留一句完成必要解释，再把 verdict 绑定到假设或理论。不要用“我们诚实披露”“为了透明”“我们并不把它表述为”等自我评价式 wrapper 代替限制本身。
 7. **语言锁定**：主动读取用户禁用词和现稿术语表；默认不把 `model/modeled/modelled/modeling/modelling` 用作动词，改用 `estimate`、`re-estimate`、`analyze`、`specify` 或直接说明 unit of analysis。不得重新发明 Methods 已删除的上位构念。
-8. **因果语言强制词汇表**（按设计家族，与 write-methods 同表）：面板 OLS→"associated with"（禁 causes/leads to）；DiD→"effect of"（平行趋势支持后）；IV→"effect"（识别 preview 后，避免 causes）；非线性→边际效应/概率转述；生存分析→"changes the hazard of"；实验→"caused"。
+8. **因果语言强制词汇表**（按设计家族，无越级）：动词档位唯一源 `../write-methods/corpus/micro-templates/causal-hedging.md`——面板 OLS→"associated with"（禁 causes/leads to）；DiD→平行趋势支持后 "effect of"；IV→识别 preview 后 "effect"、避免 "causes"；非线性→边际效应/概率转述；生存分析→"changes the hazard of"；实验→"caused"。与第 9 条互补：本条按设计家族管动词，claim-calibration 按主张层级管范围。
 9. **主张层级校准**（claim level ≤ evidence level）：写 R3 claim 句 / R5 经济显著性 / Discussion 面向的 implication 句前读 `references/claim-calibration.md`——7 级 claim ladder（L1 观察 → L2 关联 → L3 预测 → L4 因果效应 → L5 机制 → L6 普适 → L7 应用）、过度声明动词表与强主张四件套句式（`Strong claim + scope + evidence basis + remaining uncertainty`）。与第 8 条互补：第 8 条按设计家族管动词，本条按主张层级管范围与强度；设计只支持 L2 就不得写 L5/L6 语句。
 
 **完成判据**：兑现映射五检查点全过；因果语言与估计器匹配；四项证据功能完整且包含幅度；claim 层级未越过证据层级（claim-calibration L 层匹配）。
@@ -132,7 +110,7 @@ when_to_use: "起草或深度修订 Results 段落时使用；只审查不改写
 
 ## 输出合同
 
-按 `references/paper-state-schema.md`：骨架输出末尾自动附加 `### paper-state.yaml 片段` 块（`results.estimator_family` / `hypothesis_results` / `story_resolution` / `key_findings` / `unexpected_findings` / `robustness_plan`），供 paper-review 和 results-review 消费。OLS/FE + 交互效应的完整示例骨架见 `references/example-skeleton.md`。
+按 `references/paper-state-schema.md`：骨架输出末尾自动附加 `### paper-state.yaml 片段` 块（`results.estimator_family` / `hypothesis_results` / `story_resolution` / `key_findings` / `unexpected_findings` / `robustness_plan`），供 paper-review 和 results-review 消费。段落骨架以 `references/slot-R*.md` 为正典。
 
 **完成判据**：paper-state 片段全字段；非显著假设均有对应段落。
 
@@ -152,9 +130,9 @@ when_to_use: "起草或深度修订 Results 段落时使用；只审查不改写
 
 ## 纪律
 
-**诚实边界（完整版见 `references/boundaries.md`）**：① 不虚构任何数字（系数/p 值/置信区间由用户填）；② 设计排他性不可违反（非 DiD 不用平行趋势语言、非 IV 不要求第一阶段、非匹配不要求重叠支撑）；③ 非显著假设必须在 Results 报告（inline 可接受），不得跳过；④ 稳健性检验不包装成因果识别；非线性模型不直接比较 raw 系数。
+**诚实边界（完整 12 条见 `references/boundaries.md`）**：① 不虚构任何数字；② 设计排他性不可违反；③ 非显著假设必须在 Results 报告（inline 可接受），不得跳过；④ 稳健性检验不包装成因果识别、非线性模型不直接比较 raw 系数。
 
-**反馈登记**：用 `scripts/record_feedback.py` 维护 `references/feedback-registry.json`，反馈可跨估计器；必须记录 scope、category、rule、source 和 evidence；不得只累计次数而丢失可执行约束。
+**反馈登记（双 registry 分工）**：`references/feedback-registry.json` = 可执行修订规则（本节，用 `scripts/record_feedback.py` 维护，记录 scope/category/rule/source/evidence，不得只累计次数）；`corpus/_evidence_registry.yaml` 的 `critique.per_file` = 语料精炼信号（批评登记，供 `distill-results-exemplar` selection-gate 消费）——两者不互相替代。
 
 **语料与变体**：结果类型具体变体见 `corpus/[结果类型].md`；新蒸馏结果经 `distill-results-exemplar` → Phase 4 自动写入（同步更新 INDEX.md 变体数）。
 
