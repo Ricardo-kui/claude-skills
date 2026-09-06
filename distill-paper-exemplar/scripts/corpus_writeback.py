@@ -135,10 +135,16 @@ def next_variant_label(lines: list[str]) -> str:
 
 def body_similarity_pattern(block_text: str) -> re.Pattern:
     """Regex matching an already-inserted copy of block_text, tolerant of the
-    run-varying label substituted for each {NEXT} slot (labels are short and
-    never span lines). Used for idempotency hardening and post-hoc audits."""
+    run-varying label substituted for each {NEXT} slot. Labels are short and
+    usually same-line, but plans occasionally place {NEXT} at end-of-line
+    (e.g. a trailing `wb 批次 {NEXT}` frontmatter line), so the gap may span
+    the substituted label PLUS the following line breaks — hence a bounded
+    `.{0,80}?` with re.S instead of the old same-line-only `[^\n]{0,40}?`
+    (2026-09-05 user-approved fix; segments themselves are long and
+    distinctive, so the widened gap does not loosen duplicate detection in
+    practice). Used for idempotency hardening and post-hoc audits."""
     segs = [re.escape(s.strip("\n")) for s in block_text.split("{NEXT}")]
-    return re.compile(r"[^\n]{0,40}?".join(segs), re.S)
+    return re.compile(r".{0,80}?".join(segs), re.S)
 
 
 def _norm_head(s: str) -> str:

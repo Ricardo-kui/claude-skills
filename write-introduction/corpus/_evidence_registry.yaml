@@ -1,13 +1,13 @@
 meta:
-  last_updated: '2026-09-06'
+  last_updated: '2026-09-06c'
   total_mvp30_papers_indexed: 62
-  batches_processed: 33
-  latest_batch_note: '2026-08-28 Wowak, Ball, Post & Ketchen 2021 M&SOM (The Influence of Female Directors on Product Recall Decisions;
+  batches_processed: 35
+  latest_batch_note: '2026-09-06b Gulati 1999 (AJS, Where Do Interorganizational Networks Come From?; citekey gulati_1999_where_do_interorganizational_networks) 残项同步：新建 contributions/metatheory-anchored-contribution（经典二重性接驳贡献声明）registry 行（模块文件与 _index 已由写回器落盘），gap=Inadequacy，VERIFIED per expert_audit_override（Gulati 系单源即 VERIFIED）；另有 hooks/05 ADD、tensions/01 ADD、previews/mechanism-preview ADD 已由写回器自动同步，2 SKIP 手工改判。前批：2026-09-06 Gulati & Westphal 1999 (ASQ, Cooperative or Controlling; citekey gulati_westphal_1999_cooperative_or_controlling) 残项同步：新建 hooks/27-theory-testbed-arena（理论试验场致意 Hook）与 stakes/10-irreversible-commitment-stakes（不可逆承诺放大 Stakes）registry 行（模块文件与 _index 已由写回器落盘），gap=Inadequacy，全 VERIFIED per expert_audit_override（Gulati 系单源即 VERIFIED）；另有 tensions/01 EXTEND 与 previews/mechanism-preview EXTEND 已由写回器自动同步。前批：2026-08-28 Wowak, Ball, Post & Ketchen 2021 M&SOM (The Influence of Female Directors on Product Recall Decisions;
     citekey wowak_2020_female_directors_recalls): ADD hook 11-institutional-anecdote 变体 (legislative-mandate escalation 事实开场),
     tension 01-AL (邻域盲区+合理外推桥接), transitions/10 变体 E (零文献+轶事证据桥接过渡), previews/theory-lens-driven-preview 变体 Q (误读防御型权变预告),
     previews/robustness-preview 变体 I (三重识别+竞争层级排除预览). Gap=Incompleteness. 全部 VERIFIED per expert_audit_override (用户 2026-08-28:
     产品召回为主研究领域，单源足矣). transitions 与 theory-lens-driven-preview 无 registry 分区行（语料级 _index.md 已同步）；transitions/10 与
-    theory-lens-driven-preview 的 registry 行不存在，未强建. No core routing change. 2026-09-06 Higgins & Gulati 2003 OS (Getting Off to a Good Start; citekey higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe): residual sync - contributions/contribution-statements +higgins_gulati2003 (变体U 谱系完成式+二阶延伸型, EMERGING 单源); tension 变体AP 已由写回器登记. Gap=Incompleteness.'
+    theory-lens-driven-preview 的 registry 行不存在，未强建. No core routing change. 2026-09-06 Higgins & Gulati 2003 OS (Getting Off to a Good Start; citekey higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe): residual sync - contributions/contribution-statements +higgins_gulati2003 (变体U 谱系完成式+二阶延伸型, EMERGING 单源); tension 变体AU 已由写回器登记. Gap=Incompleteness.'
   source: mvp30_index + 9_distill_files + path_B_confirmation + cui_yang_vertinsky_smj_distill + paruchuri_andrus_sullivan2026_amj_distill
     + li2025_jscm_distill + li2026_pom_distill + du_tsolmon2024_orsc_distill + lee_wu_bednar_orsc_18968_distill + reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc_distill
     + vidal_mitchell2015_orsc_distill + moon_tuli_mukherjee2023_jm_distill + schumacher_keck_tang2020_smj_distill + kashmiri_nicol_arora2017_jams_distill
@@ -144,7 +144,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     05-literature-consensus-blindspot:
-      paper_count: 13
+      paper_count: 15
       papers:
       - gamache2020 (SMJ)
       - han2020 (AMJ)
@@ -158,10 +158,12 @@ evidence:
       - kashmiri_nicol_arora2017 (JAMS)
       - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
       - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
+      - desjardine_2025_information_based_competition_the_case_of_ri (Academy of Management Journal)
+      - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
       - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int (Administrative Science Quarterly)
       gap_distribution:
-        Incompleteness: 5
-        Inadequacy: 8
+        Incompleteness: 6
+        Inadequacy: 9
         Incommensurability: 0
       status: ROBUST
       generativity: GENERATIVE
@@ -174,7 +176,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     06-paradigm-challenge:
-      paper_count: 6
+      paper_count: 7
       papers:
       - gamache2023 (SMJ)
       - hahl2017 (ASR)
@@ -182,8 +184,9 @@ evidence:
       - kundro2023 (AMJ)
       - pontikes2012 (ASQ)
       - zhou2017 (ASQ)
+      - fini_2017_social_valuation_across_multiple_audiences_the_int (Academy of Management Journal)
       gap_distribution:
-        Incompleteness: 0
+        Incompleteness: 1
         Inadequacy: 4
         Incommensurability: 2
       status: ROBUST
@@ -630,9 +633,27 @@ evidence:
         revise: 0
         reject: 0
         common_revise_reasons: []
+    27-theory-testbed-arena:
+      paper_count: 1
+      papers:
+      - gulati_westphal_1999_cooperative_or_controlling (Administrative Science Quarterly)
+      gap_distribution:
+        Incompleteness: 0
+        Inadequacy: 1
+        Incommensurability: 0
+      status: VERIFIED
+      generativity: ADAPTABLE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
   tensions:
     01-despite-progress-unaddressed:
-      paper_count: 38
+      paper_count: 42
       papers:
       - ahmadi2017 (JMS)
       - cancellieri2023 (SMJ)
@@ -670,11 +691,15 @@ evidence:
       - wowak_2020_female_directors_recalls (Manufacturing & Service Operations Management)
       - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
       - zajac_westphal_the_social_construction_of_market_value (American Sociological Review)
+      - gulati_1998_alliances_and_networks (Strategic Management Journal)
+      - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
+      - gulati_westphal_1999_cooperative_or_controlling (Administrative Science Quarterly)
+      - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
       - higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe (Organization Science)
       - gulati2005-adaptation-vertical (Strategic Management Journal)
       gap_distribution:
-        Incompleteness: 29
-        Inadequacy: 0
+        Incompleteness: 30
+        Inadequacy: 3
         Incommensurability: 0
       status: ROBUST
       generativity: GENERATIVE
@@ -1111,7 +1136,7 @@ evidence:
       gap_type: Inadequacy
   stakes:
     01-general-theory-practice:
-      paper_count: 10
+      paper_count: 11
       papers:
       - Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ (SMJ)
       - hahl2017 (ASR)
@@ -1123,8 +1148,9 @@ evidence:
       - pollock2015 (ASQ)
       - pontikes2012 (ASQ)
       - zhou2017 (ASQ)
+      - fini_2017_social_valuation_across_multiple_audiences_the_int (Academy of Management Journal)
       gap_distribution:
-        Incompleteness: 3
+        Incompleteness: 4
         Inadequacy: 5
         Incommensurability: 2
       status: ROBUST
@@ -1303,9 +1329,27 @@ evidence:
         revise: 0
         reject: 0
         common_revise_reasons: []
+    10-irreversible-commitment-stakes:
+      paper_count: 1
+      papers:
+      - gulati_westphal_1999_cooperative_or_controlling (Administrative Science Quarterly)
+      gap_distribution:
+        Incompleteness: 0
+        Inadequacy: 1
+        Incommensurability: 0
+      status: VERIFIED
+      generativity: ADAPTABLE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
   literature_turns:
     01-progressive-coherence:
-      paper_count: 31
+      paper_count: 32
       papers:
       - Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ (SMJ)
       - castellaneta_conti_kacperczyk2017 (SMJ)
@@ -1338,8 +1382,9 @@ evidence:
       - vadakkepatt2022 (JM)
       - wowak2025 (MS)
       - wu2025 (SMJ)
+      - fini_2017_social_valuation_across_multiple_audiences_the_int (Academy of Management Journal)
       gap_distribution:
-        Incompleteness: 20
+        Incompleteness: 21
         Inadequacy: 7
         Incommensurability: 0
       status: ROBUST
@@ -1431,7 +1476,7 @@ evidence:
         common_revise_reasons: []
   previews:
     mechanism-preview:
-      paper_count: 21
+      paper_count: 26
       papers:
       - bamberger_homburg_wielgos2021 (JM)
       - castellaneta_conti_kacperczyk2017 (SMJ)
@@ -1454,6 +1499,11 @@ evidence:
       - fini_jourdan_perkmann_2017 (AMJ)
       - ball_2018_product_competition_managerial_discretion_and_manu (Strategic Management Journal)
       - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
+      - castellaneta_2017_smj_how_does_trade_secret_legal_protection (Strategic Management Journal)
+      - desjardine_2025_information_based_competition_the_case_of_ri (Academy of Management Journal)
+      - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
+      - gulati_westphal_1999_cooperative_or_controlling (Administrative Science Quarterly)
+      - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: LOW
@@ -1465,8 +1515,8 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 7
-        Inadequacy: 2
+        Incompleteness: 9
+        Inadequacy: 5
         Incommensurability: 3
     findings-preview:
       paper_count: 49
@@ -1645,7 +1695,7 @@ evidence:
         Inadequacy: 20
         Incommensurability: 2
     three-layer-contribution:
-      paper_count: 7
+      paper_count: 8
       papers:
       - haunschild2015 (OS)
       - hoffmann_cheong_phan_zurbruegg2024 (JM)
@@ -1654,6 +1704,7 @@ evidence:
       - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
       - westphal_j_d_and_bednar_m_k_2005_pluralistic_ignorance_in_co (ASQ)
       - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
+      - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
       status: VERIFIED
       verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       generativity: ADAPTABLE
@@ -1667,13 +1718,32 @@ evidence:
         common_revise_reasons: []
       gap_distribution:
         Incompleteness: 5
-        Inadequacy: 1
+        Inadequacy: 2
         Incommensurability: 1
+    metatheory-anchored-contribution:
+      paper_count: 1
+      papers:
+      - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
+      gap_distribution:
+        Incompleteness: 0
+        Inadequacy: 1
+        Incommensurability: 0
+      status: VERIFIED
+      generativity: ADAPTABLE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
   transitions:
     10-literature-to-gap:
       paper_count: 1
       papers:
       - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int (ASQ)
+
 
   research_questions:
     01-three-questions-counterintuitive:
@@ -1718,7 +1788,7 @@ evidence:
         common_revise_reasons: []
   theory_lens:
     theory-lens-templates:
-      paper_count: 44
+      paper_count: 46
       papers:
       - anderson_reeb2004 (ASQ)
       - ceo_regulatory_focus_ijrm (IJRM)
@@ -1764,6 +1834,8 @@ evidence:
       - zhao_ding2022 (OS)
       - zhou2017 (ASQ)
       - westphalzajac1995 (AMJ)
+      - pfarrer_pollock_and_rindova_2010 (Academy of Management Journal)
+      - gulati_1998_alliances_and_networks (Strategic Management Journal)
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: LOW
@@ -1775,8 +1847,8 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 20
-        Inadequacy: 20
+        Incompleteness: 21
+        Inadequacy: 21
         Incommensurability: 3
     07-socio-cognitive-frame:
       paper_count: 1
@@ -1816,11 +1888,12 @@ evidence:
         reject: 0
         common_revise_reasons: []
     09-construct-contrast-introduction:
-      paper_count: 1
+      paper_count: 2
       papers:
       - du_tsolmon2024 (ORSC)
+      - pfarrer_pollock_and_rindova_2010 (Academy of Management Journal)
       gap_distribution:
-        Incompleteness: 0
+        Incompleteness: 1
         Inadequacy: 1
         Incommensurability: 0
       status: EMERGING
@@ -1833,13 +1906,34 @@ evidence:
         revise: 0
         reject: 0
         common_revise_reasons: []
-    10-cross-discipline-construct-import:
+    11-dual-character-construct-setup:
       paper_count: 1
       papers:
-      - westphal_j_d_and_bednar_m_k_2005_pluralistic_ignorance_in_co (ASQ)
+      - desjardine_2025_information_based_competition_the_case_of_ri (Academy of Management Journal)
       gap_distribution:
-        Incompleteness: 0
-        Inadequacy: 1
+        Incompleteness: 1
+        Inadequacy: 0
+        Incommensurability: 0
+      status: EMERGING
+      generativity: GENERATIVE
+      exclusivity: HIGH
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+      note: '2026-09-05 gate ① create_new_file 改判执行（用户批准）：原作为 09 变体 B 写入，升格为独立 canonical 模块 theory-lens/11-dual-character-construct-setup.md（构念双面性装置引入型：权威面+利益面合取→raising-the-possibility 桥接），变体迁移为 11 变体 A；09 回退为 du_tsolmon2024 单源。'
+    10-cross-discipline-construct-import:
+      paper_count: 3
+      papers:
+      - westphal_j_d_and_bednar_m_k_2005_pluralistic_ignorance_in_co (ASQ)
+      - gulati_1998_alliances_and_networks (Strategic Management Journal)
+      - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 2
         Incommensurability: 0
       status: VERIFIED
       verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决 Westphal 蒸馏的引言与理论部分证据等级 VERIFIED)"

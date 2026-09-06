@@ -5,10 +5,10 @@
 meta:
   schema_version: 1.1.0
   registry_type: estimator-slot-skeleton
-  last_updated: '2026-09-06'
-  last_batch_id: batch_41_gulati2007_residual_sync
-  batches_processed: 41
-  total_papers_indexed: 43
+  last_updated: '2026-09-06c'
+  last_batch_id: batch_41_gulati_ajs1999 + batch_41_gulati2007_residual_sync
+  batches_processed: 44
+  total_papers_indexed: 45
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
     granularity: per estimator（对应 corpus/[结果类型].md 文件）
@@ -301,6 +301,22 @@ estimators:
           - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
           notes: 'corpus OLS-FE.md 变体71：估计策略宣告 + median 分样本切分规则交底 + 分样本回归/product-term 复核双通道设计导航——调节变量类目型、假设 scope-conditioned 的设计'
           corpus_path: corpus/OLS-FE.md
+        - id: r2_moderator_stepwise_model_navigation
+          skeleton: 'Model [a] includes [moderator set 1], and the results continue to support [H1/H2a/H2b]. Likewise, Model [b] includes [moderator set 2] and the results continue to support [H1/H3a/H3b]. Model [c] includes both sets of moderating effects, with [N] moderators in total.'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - desjardine_li_shi_2025_amj
+          transferability: high
+          paradigm_exclusivity: OLS/FE 专用
+          rhythm_tags:
+          - stepwise_moderator_entry
+          - pairwise_then_full
+          - hypothesis_continuity_echo
+          notes: '2026-09-05 登记缺口补登（语料 变体53，2026-08-09 写入）：逐调节引入→成对→全模型 8 模型导航，每步复述假设连续支持'
+          corpus_path: corpus/OLS-FE.md
         - id: r2_heckman_selection_preflight_rationale
           skeleton: 'For each set of analyses, we used Heckman selection models to guard against the possibility of sample selection bias (Heckman [year]). The first stage models [selection_process] on [N = value] [risk-set] observations; the second-stage regressions are estimated on the [N = value] selected [firm-event] observations, with standard errors corrected for [selection].'
           paper_count: 1
@@ -467,6 +483,21 @@ estimators:
           - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
           notes: 'corpus OLS-FE.md 变体72：假设级多指标裁决——裁决拍前置（support the prediction），指标拍 For example 列举，不显著指标以方向正确从句并入支持证据，收口 held after we controlled for 内联排除 rival；填入时必须补幅度拍（原文无）'
           corpus_path: corpus/OLS-FE.md
+        - id: r3_interaction_significance_drop_collinearity_absorption
+          skeleton: 'The decrease in statistical significance observed in certain interaction terms might stem from the high correlation between [moderator_A] and [moderator_B] (up to [r]), which could absorb each other''s moderating effect ([Cortina et al.] citation).'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - desjardine_li_shi_2025_amj
+          transferability: high
+          paradigm_exclusivity: OLS/FE 专用
+          rhythm_tags:
+          - collinearity_absorption
+          - cortina_interaction_correction
+          notes: '2026-09-05 登记缺口补登（语料 变体48，2026-08-09 写入）：全模型交互显著性下降归因于调节变量间高相关相互吸收，引 Cortina et al. 方法论背书'
+          corpus_path: corpus/OLS-FE.md
         - id: r3_bk_sobel_partial_mediation_cross_dv_replay
           skeleton: 'To test for partial mediation, we followed procedures outlined in [Baron and Kenny (year)] and [Sobel (year)]. The results suggest evidence of mediation since (a) ... (b) ... (c) ... Further, we tested the significance of the indirect effects ... suggesting that [mediator] did partially mediate the relationships between [IV] and [DV], as hypothesis [H] predicted.'
           paper_count: 1
@@ -618,6 +649,21 @@ estimators:
           - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
           notes: 'corpus OLS-FE.md 变体73：分样本主检验 + 不显著侧写为确认性 null（does not predict）+ 末句 product-term 交互复核升级为正式交互证据——情境假设 scope-conditioned + 分样本主检验设计'
           corpus_path: corpus/OLS-FE.md
+        - id: r4_ame_minmax_contrast
+          skeleton: 'When [moderator] takes its minimum value, the [direction] marginal effect of [predictor] on [outcome] is relatively weak (β = [b1], p = [p1]); by comparison, when [moderator] takes its maximum value, the marginal effect is much stronger (β = [b2], p = [p2]).'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - desjardine_li_shi_2025_amj
+          transferability: high
+          paradigm_exclusivity: OLS/FE 专用
+          rhythm_tags:
+          - minmax_marginal_effect_table
+          - slope_direction_reading
+          notes: '2026-09-05 登记缺口补登（语料 变体47，2026-08-09 写入）：连续调节 min/mean/max 三值边际效应表 + 斜率方向解读'
+          corpus_path: corpus/OLS-FE.md
       R5:
         description: 经济 / 实质显著性
         skeleton_variants:
@@ -656,6 +702,22 @@ estimators:
           - external_evidence
           - practical_importance
           notes: 先给幅度再追加拍5 实际重要性辩护；外部证据须已发表且场景对应
+          corpus_path: corpus/OLS-FE.md
+        - id: r5_percentile_magnitude_crossspec_benchmark
+          skeleton: In economic terms, moving [predictor] from its [25th] to its [75th] percentile corresponds to a [value]% [direction] in [outcome]. This [direction] is [larger/smaller] than the [benchmark]% associated with [comparison coefficient] in the same specification, and lies between the [lower]% and [upper]% estimates obtained when [alternative specification]. The attenuation under [stricter spec] suggests the [full-sample] estimate is [conservative/upper-bound].
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - desjardine_li_shi_2025_amj
+          transferability: high
+          paradigm_exclusivity: OLS/FE 专用
+          rhythm_tags:
+          - percentile_swing
+          - cross_specification_ranking
+          - attenuation_interpretation
+          notes: 2026-09-05 re-distill——四分位差幅度翻译 + 跨规格排位 "lies between" + 缩水解释句；区别于 r5_ols_embedded_magnitude（单点 one-SD）与外部证据变体。
           corpus_path: corpus/OLS-FE.md
       R6:
         description: 非显著 / 混合 / 意外发现
@@ -885,6 +947,67 @@ estimators:
           notes: 'EXTEND r7_ols_threat_based（corpus OLS-FE.md 变体66）：按威胁逐小节推进（选择性/内生性→替代估计 SEM→构念效度
             替代 DV），每威胁以"结果不变"句收口；稳健性独立成节而非机械罗列 Table 3/4/5'
           corpus_path: corpus/OLS-FE.md
+        - id: r7_heckman_selection_exclusion_restrictions
+          skeleton: 'Because [treatment/selection] is not random, we estimate a two-stage model. In the first stage, we model the [selection equation] using [variables] that predict [selection] but should not directly affect [outcome]: [exclusion restriction 1], [exclusion restriction 2]. The inverse Mills ratio from this first stage enters the second stage; it is [significant/insignificant], [interpretation], and the coefficient on [focal predictor] remains [direction/status].'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - desjardine_li_shi_2025_amj
+          transferability: high
+          paradigm_exclusivity: OLS/FE 专用
+          rhythm_tags:
+          - coverage_disclosure
+          - named_exclusion_restrictions
+          - inverse_mills_coda
+          notes: 2026-09-05 re-distill——覆盖来源交底→命名 exclusion restrictions→inverse Mills 收口；与变体15系（通用 Heckman）区分：本变体显式命名排除性约束变量并逐个交代覆盖来源。
+          corpus_path: corpus/OLS-FE.md
+        - id: r7_itcv_omitted_variable_threshold
+          skeleton: 'ITCV results show that an omitted variable would need to be correlated at [r] with [predictor] and at [-r] with [outcome] to invalidate the focal inference. Among our controls, the variable with the strongest impact is [control], which equals [x], far from the [threshold] threshold.'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - desjardine_li_shi_2025_amj
+          transferability: high
+          paradigm_exclusivity: OLS/FE 专用
+          rhythm_tags:
+          - itcv_threshold
+          - strongest_control_comparison
+          notes: '2026-09-05 登记缺口补登（语料 变体49，2026-08-09 写入）：ITCV 省略变量阈值解释（Frank 2000），阈值与最强控制变量对比'
+          corpus_path: corpus/OLS-FE.md
+        - id: r7_benchmarkdv_null_vs_difference_dv
+          skeleton: 'To address the possibility that [rival explanation], we examined the extent to which [assessor] deviates from [reasonable benchmark]. We constructed a new dependent variable, [assessor-benchmark difference], by using [external coverage] as a benchmark... Higher values indicate that [assessor] deviated more from [benchmark].'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - desjardine_li_shi_2025_amj
+          transferability: high
+          paradigm_exclusivity: OLS/FE 专用
+          rhythm_tags:
+          - benchmark_dv_construction
+          - rival_exclusion
+          notes: '2026-09-05 登记缺口补登（语料 变体50，2026-08-09 写入）：双基准化检验——构造评估者偏离合理基准的新 DV 排除「真实表现」竞争解释'
+          corpus_path: corpus/OLS-FE.md
+        - id: r7_quasinatural_prepost_acquisition
+          skeleton: 'Prior to [acquisition/event], [assessor] was [private/uninfluenced], meaning common owners would have been unable to influence [assessment]; however, according to our theory, a [direction] relationship should exist after [acquisition] because common owners could then influence [assessment]. ... The coefficient for this interaction is [b] (p = [p]), indicating that the association became more [direction] after [event], consistent with our theory.'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - desjardine_li_shi_2025_amj
+          transferability: high
+          paradigm_exclusivity: OLS/FE 专用
+          rhythm_tags:
+          - prepost_influence_channel_switch
+          - theory_aligned_direction_prediction
+          notes: '2026-09-05 登记缺口补登（语料 变体51，2026-08-09 写入）：收购准自然实验——影响通道开关前后对照，方向预测由理论先行给出'
+          corpus_path: corpus/OLS-FE.md
       R8:
         description: 补充 / 事后 / 机制分析
         skeleton_variants:
@@ -1024,6 +1147,22 @@ estimators:
           - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
           notes: 'corpus OLS-FE.md 变体75：LEGACY——连续 DV 双结果模型的 legacy Kenny 三步条件压缩进单个冒号句（separate analysis 包装）；写入时必须补 indirect-effect interval 或显式标 legacy，mediated 措辞降为关联读法'
           corpus_path: corpus/OLS-FE.md
+        - id: r8_investortype_decomposition_wald
+          skeleton: 'Following [Bushee 1998], we distinguish [dedicated] institutional investors, which have [long horizon/concentrated holdings], from [transient] institutional investors, which have [short horizon/diversified holdings]. ... If our theory is accurate, we should observe that our main effect is stronger for [dedicated] investors. ... The coefficient for [predictor] ([dedicated]) is [b1] (p = [p1]) and for ([transient]) is [b2] (p = [p2]). A Wald test shows that the coefficients significantly differ (p = [p]).'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - desjardine_li_shi_2025_amj
+          transferability: high
+          paradigm_exclusivity: OLS/FE 专用
+          rhythm_tags:
+          - investor_type_decomposition
+          - theory_ordered_magnitude_prediction
+          - wald_coefficient_difference
+          notes: '2026-09-05 登记缺口补登（语料 变体52，2026-08-09 写入）：投资类型分解 + 动机/能力异质性 + Wald 系数差检验'
+          corpus_path: corpus/OLS-FE.md
         - id: r8_theory_motivated_additional_analyses
           skeleton: 'Since our claims centered on [theoretical mechanism], we tested whether our effects were especially strong during [theory-specified condition]. [Result sentence.] [Second paragraph: construct-level adjudication or boundary condition.]'
           paper_count: 1
@@ -1054,7 +1193,7 @@ estimators:
           - in_system_mediation
           - hypothesis_linked
           - legacy_flag
-          notes: 'corpus OLS-FE.md：在联立系统内做 BK 三步中介并逐假设挂钩；标 LEGACY，现代采用须补 bootstrap CI（BK 族第二源）'
+          notes: 'corpus OLS-FE.md 变体82：在联立系统内做 BK 三步中介并逐假设挂钩；标 LEGACY，现代采用须补 bootstrap CI（BK 族第二源）'
       R9:
         description: Results→Discussion 过渡
         skeleton_variants: []
@@ -1364,6 +1503,36 @@ estimators:
           - boundary_embedded
           notes: corpus Logit 变体R（Tables 3-4 P1 段末收束）；substantive→symbolic substitution 对偶命名，whereby 从句内嵌标签适用条件
           corpus_path: corpus/Logit-Probit-Ordered-Probit.md
+        - id: r3_dual_estimator_coprimary_confirmation
+          skeleton: 'Table [X] provides the results of the [primary estimator] analysis of [DV], and Table [Y] gives the [parallel estimator] results. Model [2] tests Hypotheses [2] and [3]. [Hypothesis verdicts on the primary estimator.] The hypothesized effects of [predictor1] and [predictor2] were also supported in [parallel estimator] models of [DV], as shown in Model [k] of Table [Y].'
+          skeleton_level: paragraph
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_westphal_1999_cooperative_or_controlling (Administrative Science Quarterly)
+          transferability: high
+          paradigm_exclusivity: ''
+          rhythm_tags: []
+          notes: 'corpus Logit-Probit-Ordered-Probit.md 变体 AF：双估计器并列共证——双表导航（logit 与 Heckman selection 并列主估计）+ 逐假设一行跨估计器确认拍'
+          corpus_path: corpus/Logit-Probit-Ordered-Probit.md
+        - id: r3_construct_validity_congruence_coda
+          skeleton: 'As predicted in Hypothesis [N], [units with condition] were more likely to [outcome]. This result is congruent with research on [related literature stream] and helps enhance the construct validity of our indicator. Our alternative measure for [construct], using [alternative operationalization], yielded similar results.'
+          skeleton_level: paragraph
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
+          transferability: high
+          paradigm_exclusivity: ''
+          rhythm_tags: []
+          notes: 'corpus Logit-Probit-Ordered-Probit.md 变体（R3 EXTEND）：四拍判决后追加两小拍收尾——(1) congruent 同调拍：一句"与 interdependence 文献同调"引文献支撑同方向发现 (2) 替代测量一行复证拍'
+          corpus_path: corpus/Logit-Probit-Ordered-Probit.md
       R5:
         skeleton_variants:
         - id: r5_probability_cost_activity_value_benchmark
@@ -1539,6 +1708,49 @@ estimators:
           - purpose_restated
           notes: corpus Logit 变体S（Analysis §Board Control P1 末）；主窗向短/长两侧外推成对称证据；结论句显式复述检验目的
           corpus_path: corpus/Logit-Probit-Ordered-Probit.md
+        - id: r7_random_effects_variance_share
+          skeleton: 'The [random_effects_estimator] used generates a coefficient [Rho / variance_share_statistic], which indicates the extent to which unobserved heterogeneity was found and corrected for by the model. The [direction] and significant coefficient for [Rho] across all models suggests that unobserved factors that could influence [DV] were accounted for by the statistical model. [Optional companion: I later tested the robustness of my findings with a [alternative_within_unit_estimator] and found consistent results.]'
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
+          transferability: high
+          paradigm_exclusivity: ''
+          rhythm_tags: []
+          notes: 'corpus Logit-Probit-Ordered-Probit.md 变体AA：随机效应面板专属的"设计内生自证"——用估计器自带的方差份额统计量（Rho）把"未观测异质性被纠正"从 methods 设定声明升级为 Results 内的经验证据（跨模型显著→纠正生效），置于 Results 收尾位；可搭配跨估计器一致性句（FE 复检 found consistent results）。区别于变体 4/26——那些是外部诊断电池（GEE/Heckman、IV 诊断），本变体是估计器自带统计量的威胁回应。'
+          corpus_path: corpus/Logit-Probit-Ordered-Probit.md
+        - id: r7_dummy_significance_vs_slope_homogeneity
+          skeleton: 'While the relative significance of the [group_dummies] indicates whether there may be intrinsic differences across the [groups] in the likelihood that [DV] will [occur], it does not tell us whether the main effects hypothesized in this paper differ across the [groups]. Rather, they simply suggest that the constant terms for each of the [groups] may differ. To assess the [group] differences further, I estimated unrestricted models for each of the [groups] (results not presented here). By examining each of the [groups] independently, no restrictions were imposed on the slope coefficients. The signs of the coefficients indicated that the postulated directionality of the main effects observed in the pooled sample do indeed hold true in each of the [groups]. I also conducted a similar test for [alternative_partition]. The results suggested that the main effects were consistent across [alternative_partition].'
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
+          transferability: high
+          paradigm_exclusivity: ''
+          rhythm_tags: []
+          notes: 'corpus Logit-Probit-Ordered-Probit.md 变体AB：先做概念区分拍（虚拟变量显著只证截距差异，不证斜率异质性——"Rather, they simply suggest that the constant terms... may differ"），再上无约束分组模型动作拍（no restrictions were imposed on the slope coefficients），以主效应方向一致性判定收束，最后以第二分区（如国籍）重复——把 pooled 主效应的可推广性从默认假设变成被检验对象。范式通用（不限似然模型）。'
+          corpus_path: corpus/Logit-Probit-Ordered-Probit.md
+        - id: r7_curvilinear_footnote_parsimony_retention
+          skeleton: 'We also tested [polynomial transformations] of the [focal predictors] to account for nonlinear effects. The results suggest that the relationship between [predictor 1] and [DV] is best described as an [inverted U-shape] relationship, captured by a [second-order polynomial] function. The effect, however, is [exponential] for [predictor 2]: as [predictor 2] increases, the likelihood of [DV] increases disproportionately. The inclusion of the [functional form] transformations does not affect the results obtained with the [baseline form]. We report the results of the [baseline form] for the sake of parsimony.'
+          skeleton_level: paragraph
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
+          transferability: high
+          paradigm_exclusivity: ''
+          rhythm_tags: []
+          notes: 'corpus Logit-Probit-Ordered-Probit.md 变体 AL：曲线形式脚注稳健性——差异化发现+线性不受影响+简约保留裁决'
+          corpus_path: corpus/Logit-Probit-Ordered-Probit.md
       R2:
         description: ''
         skeleton_variants:
@@ -1586,6 +1798,69 @@ estimators:
           notes: corpus Logit 变体O（Analysis §Board Control P3）；理论轨（fundamental and long-lasting change）+ 经验轨（反转占比 <X%）
             双轨辩护；"In effect" 把技术选择翻译回理论任务
           corpus_path: corpus/Logit-Probit-Ordered-Probit.md
+        - id: r2_dv_family_pivot_heading
+          skeleton: '[Unnumbered subsection heading naming the construct pair and outcome:] Effects of [asset_A] and [asset_B]
+            on [outcome_family_B]. [Block opener restating the full hypothesis set:] Hypotheses [X]a-[X]c and [Y]a-[Y]c predict
+            the effects of [asset_A] and [asset_B] on [outcome_family_B].'
+          skeleton_level: paragraph
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - pfarrer_pollock_and_rindova_2010
+          transferability: high
+          paradigm_exclusivity: 多 DV 家族 Results 的换场装置：不带编号、构念命名的子小节标题重开证据流 + 首句整组重述待检假设
+          rhythm_tags:
+          - dv_family_pivot
+          - subsection_heading_device
+          - hypothesis_set_restatement
+          notes: corpus Logit 变体W（P4）；标题本身预告新 DV 与构念对，与 r2_binary_outcome_hypothesis_pair_table 互补（同族镜像导航
+            vs 跨族结构换场）；适用于多 DV/多结果族 Results（incidence+severity、adoption+performance 等）
+          corpus_path: corpus/Logit-Probit-Ordered-Probit.md
+        - id: r2_alternative_measure_bracketing_probit
+          skeleton: 'Table [X] presents the correlations and descriptive statistics for the variables included in the analysis. The two variables that assess [construct], [measure_A] and [measure_B], were relatively highly correlated ([r]) and were examined separately in the statistical analysis. I assessed the hypotheses sequentially in a series of [estimator] models, presented in Table [Y]. The first model is the base model, which includes the control variables and examines the effects of [control_block]. Models [2] and [3] provide two alternative tests for Hypothesis [1]: Model [2] tests the additional effect of [construct] as measured by [measure_A] on [DV]; Model [3] is identical to Model [2] except that it uses an alternative measure of [construct]—[measure_B]. The two measures of [construct] are correlated and thus are introduced in separate models. Models [4] and [5] introduce [predictor_2] while retaining the two measures for [construct] separately in each model. All five models were significant overall, as indicated by the [fit_test] using their [fit_statistic] values, and the significant improvement in the [fit_test] statistic suggests a better-fitting model once the measures of [construct] are included.'
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
+          transferability: high
+          paradigm_exclusivity: ''
+          rhythm_tags: []
+          notes: 'corpus Logit-Probit-Ordered-Probit.md 变体X：R1 高相关门不止安抚（对比 VIF 式"多重共线性不担忧"），而是当场预告分析后果（examined separately）并在 R2 兑现；R2 用 "two alternative tests for Hypothesis [N]" 把同一构念的替代操作化升格为并列主检验（各进独立模型），再以 2×2 网格并入第二焦点预测子；结尾用整体拟合+嵌套增量拟合（卡方/对数似然）作非线性模型的 ΔR² 类比证据拍。适用于似然/非线性模型下同一构念多操作化；线性模型可平移（卡方增量→ΔR²）。'
+          corpus_path: corpus/Logit-Probit-Ordered-Probit.md
+        - id: r2_control_attenuation_explaining_away
+          skeleton: 'In Model [1], [control] has a [direction] and significant coefficient ([coef], p < [threshold]), suggesting that [naive_temporal_or_compositional_reading]. In Models [2] and [3], which include the [focal_construct] variables, however, [control] is insignificant, suggesting that these [control] effects are interpreted by the [focal_construct] variables included in these models. In other words, [control] was capturing differences in [focal_construct]. [Optional robustness coda: The inclusion of a [functional_form] term for [control] did not alter these results; its coefficient was also insignificant. The main effects for the key variables did not change when I included [alternative_specification].]'
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
+          transferability: high
+          paradigm_exclusivity: ''
+          rhythm_tags: []
+          notes: 'corpus Logit-Probit-Ordered-Probit.md 变体Y：把控制变量跨嵌套模型的显著性衰减正向重读为理论证据——"was capturing differences in [focal_construct]" 一句完成解释消去，控制变量叙事因此服务焦点构念的解释力主张而非默默消失；可选收束拍补功能性形式/替代设定的不变性。区别于 OLS-FE 两处近似：交互家族互相吸收的 caveat（absorb each other''s moderating effect，事后辩解衰减）与 Cinelli-Hazlett（explain away 指混淆强度足以解释关联）——本变体是嵌套序列内的正向重读。'
+          corpus_path: corpus/Logit-Probit-Ordered-Probit.md
+        - id: r2_hypothesis_riskset_narrowing_dyads
+          skeleton: 'Because Hypothesis [1] concerns whether [focal predictor] affects [DV] at all, the risk set for this analysis includes all possible [dyad] combinations between [focal units] and the [full sampling frame] ([N_all] [dyads]). Because Hypotheses [2-4] assume that [prior condition] exists—[treatment] only occurs when [prior condition] holds—the risk set narrows to only those [dyads] for which [prior condition] was present ([N_narrow]). Model [1] in Table [X] tests Hypothesis [1] on the full risk set; Model [2] tests Hypotheses [2-3] on the narrowed risk set of [N_narrow] [dyads].'
+          skeleton_level: paragraph
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_westphal_1999_cooperative_or_controlling (Administrative Science Quarterly)
+          transferability: high
+          paradigm_exclusivity: ''
+          rhythm_tags: []
+          notes: 'corpus Logit-Probit-Ordered-Probit.md 变体 AC：假设级风险集递进导航——dyad 设计每条假设各配可估样本，风险集随假设前提逐级收窄（全样本 dyad→存在 interlock 的 dyad→有 JV 潜力配对），R2 导航拍把"谁的样本"讲成假设可估性论证'
+          corpus_path: corpus/Logit-Probit-Ordered-Probit.md
         - id: switching_reg_first_stage_intermediate_navigation
           skeleton: 'We used a [two-stage estimator] that attempts to account for possibly endogenous choices of [treatment category]. This model is estimated in two stages. First, a [multinomial choice model] is used to explain [treatment category]. Second, we estimate separate [outcome] regressions for subsamples of observations on each [category], in which we include the [non-selection correction] as a control variable.'
           paper_count: 1
@@ -1603,7 +1878,7 @@ estimators:
           - baseline_category_rule
           - sample_attrition_note
           - aside_segregation
-          notes: 'corpus Logit-Probit-Ordered-Probit.md：第一阶段 mlogit 导航交底 + IV 排他声明 + 基线类规则 + 分阶段样本损耗 + 自有价值旁注区隔'
+          notes: 'corpus Logit-Probit-Ordered-Probit.md 变体AN：第一阶段 mlogit 导航交底 + IV 排他声明 + 基线类规则 + 分阶段样本损耗 + 自有价值旁注区隔'
       R4:
         description: ''
         skeleton_variants:
@@ -1834,6 +2109,82 @@ estimators:
           notes: corpus Logit 变体P（Tables 3-4 P2）；null 格确认逻辑须由 Methods 侧前置判定标准授权，不得 Results 事后追认；"generally"
             汇总不得掩盖方向反转系数
           corpus_path: corpus/Logit-Probit-Ordered-Probit.md
+        - id: r4_nonparametric_equivalence_adjudication
+          skeleton: 'Both [group_A] and [group_B] firms had slightly [positive] average [outcome] ([mean_A] and [mean_B], respectively),
+            whereas firms in the [baseline] category had a significant, [negative] mean [outcome] ([mean_C]). The [nonparametric
+            tests] indicated that the [outcome] for [groups A and B] were not significantly different from their predicted values,
+            but the [outcome] for firms in the [baseline] category were significantly different. The [t-tests] showed that the mean
+            [outcome] for [group A] and [group B] were significantly different from the [baseline] category''s mean [outcome] and
+            that the [outcome] for [group A] and [group B] were not significantly different from one another. Thus, Hypotheses [X]a
+            and [X]b were supported, and Hypothesis [X]c was not.'
+          skeleton_level: paragraph
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - pfarrer_pollock_and_rindova_2010
+          transferability: high
+          paradigm_exclusivity: 非参数检验（Patell Z / generalized sign）与参数 t 检验的三角裁决：处理组≈预测值（等价）vs 基线显著偏离预测
+          rhythm_tags:
+          - nonparametric_adjudication
+          - equivalence_vs_deviation
+          - whereas_sign_contrast
+          - split_verdict
+          notes: corpus Logit 变体U（P2）；非参数检验第二用法——裁决段内部的等价性论证，与 r3_eventstudy_nonparametric_validation（主比较前
+            sanity check）分层互补；段首 whereas 符号对比铺垫，段尾拆分裁决自然带出 Hc 不支持
+          corpus_path: corpus/Logit-Probit-Ordered-Probit.md
+        - id: r4_worked_arithmetic_difference_footnote
+          skeleton: '[Table note:] The difference between the mean [outcome] in each category is shown (e.g., [mean_A]% -
+            [mean_B]% = [difference]%). Significance was determined by a [t-test] of [unequal variances]. The [baseline] category
+            contains [units] labeled [0] on [both classification dimensions].'
+          skeleton_level: paragraph
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - pfarrer_pollock_and_rindova_2010
+          transferability: high
+          paradigm_exclusivity: 分组均值比较表 Difference 列的 worked-example 脚注自释装置
+          rhythm_tags:
+          - worked_arithmetic_example
+          - table_note_self_explanation
+          - difference_column_disambiguation
+          - baseline_operationalization
+          notes: corpus Logit 变体V（P2 表注）；Difference 列易被误读为检验统计量——worked example（2.30%−1.74%=0.56%）一眼教会算法；脚注打包三件套（算法示例+检验类型+基线类目操作化），与
+            r4_subgroup_mean_comparison_ttest 分层互补（正文裁决 vs 表注自释）
+          corpus_path: corpus/Logit-Probit-Ordered-Probit.md
+        - id: r4_symmetric_amplification_mirror_verdicts
+          skeleton: 'The interaction effects in Model [3] of Table [X] support Hypothesis [4]. Consistent with Hypothesis [4a], the results show that as [moderator] increases, the negative relationship between [predictor1] and the likelihood of [DV] becomes stronger. The results also support Hypothesis [4b]: as [moderator] increases, the positive relationship between [predictor2] and the likelihood of [DV] also becomes stronger. [Optional close: The hypothesized interaction effects were also supported in [parallel estimator] models, as shown in Model [k] of Table [Y].]'
+          skeleton_level: paragraph
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_westphal_1999_cooperative_or_controlling (Administrative Science Quarterly)
+          transferability: high
+          paradigm_exclusivity: ''
+          rhythm_tags: []
+          notes: 'corpus Logit-Probit-Ordered-Probit.md 变体 AE：对称放大调节镜像判决句——单 moderator 同向放大异号双主效应（互斥关系均被放大），两句镜像判决'
+          corpus_path: corpus/Logit-Probit-Ordered-Probit.md
+        - id: r4_interaction_sign_translation_separate_models
+          skeleton: 'Models [a], [b], and [c] assess the moderating influence of [moderator] on both [driver family 1] and [driver family 2] of [DV]. We had predicted that [moderator] would moderate the influence of [driver 1] on [DV] (Hypothesis [x]). This prediction should translate into a significant and [direction] coefficient for the interaction between [driver 1] and [moderator]. But we also predicted that the effect of [driver 2] on [DV] would [diminish/increase] with [moderator] (Hypothesis [y]). This effect should yield a significant and [direction] coefficient for the interaction between [driver 2] and [moderator]. We tested these models separately because of concerns of multicollinearity across the interaction terms. Model [a] introduces an interaction term between [driver 2] and [moderator]. The [direction] coefficient for the interaction term supports Hypothesis [y] and suggests that [attenuation/amplification reading]. However, [driver 2] on its own has a [direction] impact on [DV] across all models. Thus, while [driver 2] does influence [DV], [the growing moderator] [mitigates/amplifies] the effects of [driver 2] on [DV].'
+          skeleton_level: paragraph
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
+          transferability: high
+          paradigm_exclusivity: ''
+          rhythm_tags: []
+          notes: 'corpus Logit-Probit-Ordered-Probit.md 变体 AJ：预期符号翻译+共线性分模型声明+主效应存活综合'
+          corpus_path: corpus/Logit-Probit-Ordered-Probit.md
       R6:
         description: ''
         skeleton_variants:
@@ -1852,6 +2203,80 @@ estimators:
           paradigm_exclusivity: ''
           rhythm_tags: []
           notes: ''
+          corpus_path: corpus/Logit-Probit-Ordered-Probit.md
+        - id: r6_construct_family_mixed_evidence
+          skeleton: 'The results for the influence of [construct_family] on [DV] show mixed results. As Table [X] suggests, [core_measure], which measured the effects of [core_dimension] on [DV], was [direction] and significant in both Models [a] and [b]. This indicates that [substantive_reading_of_core_measure]. It is important to highlight that [estimator_credibility_sentence_reinforcing_estimate_quality]. While [core_measure] was significant, no significant results were obtained from [k] additional measures of [construct_family] that assessed [alternative_dimension_1] and [alternative_dimension_2] (results not reported here). [Alternative_specification_1] were insignificant. Furthermore, [alternative_specification_2] of [dimension] were also not significant (results not reported here).'
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
+          transferability: high
+          paradigm_exclusivity: ''
+          rhythm_tags: []
+          notes: 'corpus Logit-Probit-Ordered-Probit.md 变体Z：构念家族层面的混合证据框架——mixed 标题拍先行定调，核心操作化走完整四拍（方向→显著性→实质解读→估计器可信度强化），辅助操作化逐项 null 且全部显式披露（results not reported here 标注而非静默省略）。区别于变体 25（spillover-null：主效应成立但对应交互当场 do not support）——本变体管同构念多操作化的证据分裂，不管调节溢出。'
+          corpus_path: corpus/Logit-Probit-Ordered-Probit.md
+        - id: r6_null_main_effect_contingency_synthesis
+          skeleton: 'The results in Model [1] do not support Hypothesis [1]: after controlling for [covariate family], [focal predictor] is not significantly related to [DV]. [Supported hypotheses follow in parallel models on the conditional sample.] In summary, the first set of results indicates that the mere presence of [focal predictor] does not predict [DV]; instead, [focal predictor] may either increase or decrease the likelihood of [DV], depending on [relational content / boundary attribute].'
+          skeleton_level: paragraph
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_westphal_1999_cooperative_or_controlling (Administrative Science Quarterly)
+          transferability: high
+          paradigm_exclusivity: ''
+          rhythm_tags: []
+          notes: 'corpus Logit-Probit-Ordered-Probit.md 变体 AD：null 主假设前置 pivot——判决先行冒号句（H1 不支持：）开场，段尾 In summary 权变化收束（把 null 转化为边界条件陈述）'
+          corpus_path: corpus/Logit-Probit-Ordered-Probit.md
+        - id: r6_null_component_significant_interaction_candor
+          skeleton: 'Although [component measure] was not a significant predictor of [DV], the interaction between this variable and [moderator] is statistically significant. This suggests that, with [the growth of moderator], [units] may become increasingly [sensitive] to [component dimension] when [choosing/acting], although this tendency is not strong enough to make [component measure] statistically significant during the period of observation. [Optional speculative mechanism: The more [structural condition] becomes apparent, the more difficult it may become for [disadvantaged units] to [outcome]. Although this does not mean that such [outcomes] will not occur, it does suggest that [disadvantaged units] may need to possess some unique attributes that can enhance their attractiveness in order to [outcome].]'
+          skeleton_level: paragraph
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
+          transferability: high
+          paradigm_exclusivity: ''
+          rhythm_tags: []
+          notes: 'corpus Logit-Probit-Ordered-Probit.md 变体 AK：null 分量+显著交互坦白段——让步从句+弱证据边界+双向 hedge'
+          corpus_path: corpus/Logit-Probit-Ordered-Probit.md
+        - id: r6_null_main_conditional_reestimation_rescoping
+          skeleton: 'The evidence for Hypothesis [N], which predicts [predicted relation], is less conclusive. The results indicate that [focal measure] does not have a statistically significant influence on [DV]. In separate estimations, however, we found that [alternative operationalization] was [direction] and significant if [co-test variable] was excluded from the model. To interpret this result, it is worth noting that [geometric or substantive property of the measure]. Thus, the [tendency] implicit in Hypothesis [N] only applies to [subpopulation]. Once [co-test variable] is controlled for, the effect of [focal measure] is no longer significant. Viewed in this light, these results are consistent with [prior distinction citation], which suggests that [construct boundary between subpopulations].'
+          skeleton_level: paragraph
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
+          transferability: high
+          paradigm_exclusivity: ''
+          rhythm_tags: []
+          notes: 'corpus Logit-Probit-Ordered-Probit.md 变体 AI：null 主效应条件重估与构念域重划——less conclusive 降级判决+按条件分离重估+子域收束'
+          corpus_path: corpus/Logit-Probit-Ordered-Probit.md
+        - id: r6_rival_mechanism_adjudication_nested_attenuation
+          skeleton: 'In Model [1], [rival_mechanism_variable] has a [direction] and significant coefficient, suggesting that [rival_theory_reading]. Introducing [focal_construct] in Model [k] leads to a significant improvement in the fit of the model, as measured by the [fit_test] statistics. Moreover, the effect of [rival_mechanism_variable] became non-significant at the [.01] level once we introduced [focal_construct] into this model. This suggests that the [systemic effects] captured by [rival_mechanism_variable] may actually be mediated by [focal_construct]. Although Hypothesis [N] was not formulated as an alternative for a [rival_theory] process, the statistical insignificance of [rival_mechanism_variable] in Model [k] suggests that [outcome] is perhaps best explained by [focal_mechanism], rather than a consequence of [rival_mechanism] driven by [rival_process]. Thus, the [observed trend] may be prompted by [focal_mechanism], rather than [rival_mechanism].'
+          skeleton_level: paragraph
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
+          transferability: high
+          paradigm_exclusivity: ''
+          rhythm_tags: []
+          notes: 'corpus Logit-Probit-Ordered-Probit.md 变体 AH：竞争机制衰减裁决——基线设伏（rival 变量显著入模）+拟合增量+非独立供给+趋势重排，Model 3 后 rival 衰减而焦点构念稳显著'
           corpus_path: corpus/Logit-Probit-Ordered-Probit.md
       R8:
         description: Mechanism-discriminating supplemental evidence
@@ -1899,6 +2324,22 @@ estimators:
           - suggest_hedging
           notes: corpus Logit 变体T（Tables 3-4 P3 末段）；"widespread belief" 须有 Intro/Theory 文献铺垫；结论动词 suggest 不越权进 Discussion
           corpus_path: corpus/Logit-Probit-Ordered-Probit.md
+        - id: r8_exploratory_mediator_competing_mechanism_battery
+          skeleton: 'While our theoretical argument suggests that [mediator] can explain how [X] affects [Y], our primary analyses did not explicitly model the mediating effect of [mediator]. Thus, one might question whether other, related social processes mediate these relationships. To assess the relative importance of these different social processes, we conducted further exploratory analyses using [measures of the mediator and rival mechanisms]. As shown in Models [3] and [4] of Table [X], [mediator] has a strong and [direction] relationship with [DV], while the effects of [rival mechanism 1] and [rival mechanism 2] are nonsignificant. In addition, when [mediator] is added to the models, the effects of [X] become nonsignificant, suggesting that [mediator] mediates the effects of [X] on [DV] ([mediation citation]). The results are not consistent with the view that [reverse causal ordering]; the findings suggest that [mediator] mediates the effects of [X], and not the reverse.'
+          skeleton_level: paragraph
+          paper_count: 1
+          status: VERIFIED
+          verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_westphal_1999_cooperative_or_controlling (Administrative Science Quarterly)
+          transferability: high
+          paradigm_exclusivity: ''
+          rhythm_tags: []
+          notes: 'corpus Logit-Probit-Ordered-Probit.md 变体 AG：探索性中介五拍弧——供认（exploratory 标签）→竞争机制电池→系数衰减判定→反向因果反驳'
+          corpus_path: corpus/Logit-Probit-Ordered-Probit.md
+
     cross_slot_patterns:
     - id: csp_Logit_Probit_Ordered_Probit_R2_9f484872
       pattern: Binary-outcome hypotheses are tested using random-effects logit with matched-sample panel data, and results
@@ -2729,6 +3170,24 @@ estimators:
       R2: 缺平行趋势检验（event-study / 图形）
       R7: 缺安慰剂检验 / 置换检验 / event-study
     slots:
+      R1:
+        skeleton_variants:
+        - id: r1_did_treatment_prevalence_descriptives
+          skeleton: Before examining our hypotheses, we describe the prevalence and distribution of [treatment]. Overall, [N/percentage summary] of firm-year observations fall in the treated window ([exposure window description]). Treated observations are spread across [geography/industry coverage], with [distribution note] ([cross-tab reference]).
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Castellaneta_Conti_Kacperczyk_2017_SMJ
+          transferability: high
+          paradigm_exclusivity: DiD 专用
+          rhythm_tags:
+          - descriptives_first
+          - treatment_prevalence
+          - exposure_window
+          notes: 2026-09-05 re-distill 首填 R1——DV 分布叙事 + 处理组占比/暴露窗 + 地理行业分布，先让读者看到处理发生率再进假设检验。
+          corpus_path: corpus/DiD.md
       R2:
         skeleton_variants:
         - id: r2_rditer_prepost_modelfree_event_figure_fang2025
@@ -2901,6 +3360,22 @@ estimators:
           - expected_null
           - identification_corroboration
           notes: Null placebo corroborates identification; it does not support substantive hypotheses.
+          corpus_path: corpus/DiD.md
+        - id: r7_did_moderator_measure_endogeneity_defense
+          skeleton: A concern is that our [moderator] measure itself responds to [treatment]. We address this in four steps. First, we separate [levels of analysis], measuring [moderator] at the [higher level] rather than the treated unit level. Second, we construct [moderator] from [pre-shock data] predating [treatment]. Third, the measure is [time-invariant property] over the window, so it cannot adjust to treatment. Fourth, we control for [rival explanation] and its interaction with [treatment]; results hold.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Castellaneta_Conti_Kacperczyk_2017_SMJ
+          transferability: high
+          paradigm_exclusivity: DiD 专用
+          rhythm_tags:
+          - moderator_endogeneity
+          - four_step_defense
+          - pre_shock_construction
+          notes: 2026-09-05 re-distill——调节变量测量内生性四步防御（层次分离→pre-shock 构造外生→时间不变测量→rival 交互控制）；与变体9 识别威胁电池互补，moon2026 Table 6 三段式的姊妹正面模板。
           corpus_path: corpus/DiD.md
       R8:
         skeleton_variants:
@@ -3532,6 +4007,22 @@ estimators:
           - ar_hansen_diagnostics
           - cross_measure_correlation
           notes: 换连续 DV + system GMM + 内生性分类 + AR/Hansen；区别于 OLS-FE 变体39（3SLS）（corpus 变体21）
+          corpus_path: corpus/计数模型.md
+        - id: r7_count_cem_matched_sample_full_battery_confirmation
+          skeleton: For robustness, we create a number of additional matched pair samples, trading the number of matched individuals against the coarseness of our matching intervals. Regressions conducted on these samples are in line with the above results. In all, the coarsened exact matching analysis confirms the results of the full sample panel dataset analysis, adding confidence to our findings.
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - Fini_Jourdan_Perkmann_2017_AMJ
+          transferability: high
+          paradigm_exclusivity: 计数模型专用，CEM 全假设电池匹配复制
+          rhythm_tags:
+          - cem_matched_replication
+          - count_vs_granularity_tradeoff
+          - independent_confirmation_subsection
+          notes: 2026-09-05 re-distill——CEM 匹配样本确认子节：全假设电池匹配复制 + 匹配数/粒度权衡 + 独立确认子节；区别于生存分析 r8_cem_matching_ate（单一 ATE 报告）。corpus 变体{NEXT} 锚于变体34 后、## 诚实边界 前。
           corpus_path: corpus/计数模型.md
         - id: r7_four_threat_battery_mediation_psm_placebo_reverse
           skeleton: We conduct [N] additional analyses to more comprehensively explore our hypothesized relationships. These
@@ -6675,3 +7166,11 @@ batch_history:
     OLS-FE ADD 变体68 interaction_channel_decomposition (R4 交互经由差值DV分量分解) + 变体69 premise_empirical_validation (R8
     样本内前提检验+Heckman交底) + 变体70 a_priori_decision_rule_statement (R2 先验支持判据句); all EMERGING 单源 (用户点名 Westphal
     为最喜爱学者——学习优先级提升，证据等级按规则保持 EMERGING). Slot skeleton rows 未逐条 bump（变体为文件级新增），待后续同范式蒸馏时归位。'
+- batch_id: batch_39_gulati1999
+  timestamp: '2026-09-05'
+  estimator_family: Logit_Probit_Ordered_Probit
+  source_paper: gulati_1999_network_location_and_learning_the_influence_of_n
+  source_subfield: strategy
+  slot_updates_count: 5
+  novel_patterns_count: 5
+  notes: 'Gulati 1999 (SMJ, Network Location and Learning) 首次蒸馏 gate① writeback: Logit-Probit-Ordered-Probit.md ADD 变体X/Y/Z/AA/AB（R2×2 替代测量括弧/控制衰减重读 + R6 构念家族 mixed 证据 + R7×2 Rho 方差份额自证/截距≠斜率异质性）, all VERIFIED per expert_audit_override (Gulati 单源即 VERIFIED)。Slot skeleton rows 未逐条 bump（变体为文件级新增），registry 由本批残项同步补登（写回器按连字符文件名未命中下划线 registry 键）。'

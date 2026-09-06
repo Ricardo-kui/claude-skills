@@ -150,6 +150,29 @@ source: Manually curated from MVP30 narrative_analysis files
 **适用**: 现象层共识强但理论预测分裂的研究；中能量 Hook；为 Incompleteness gap 提供模糊性前提。
 **禁忌**: 需真实存在对立理论预测（两派文献都要可引用）；不得把单纯"研究少"包装成理论对立。
 
+
+### 变体 G：理论前提—构念落地 Hook（fini2017 型）
+
+**模板**:
+> "[组织生存] depend on the judgment of [多元裁决者]——[焦点构念]——that control the [关键资源] they need to [成长/生存]；[焦点构念] exert their scrutiny by forming a valuation of candidates with whom they may engage；随后按资源类型枚举评价情境（出资前评估、购买前评估、职业晋升评审、面向外部评审提交）"
+
+**来源**: fini_jourdan_perkmann_2017 (Academy of Management Journal), P1
+
+**原文锚定**:
+> "Organizations depend on the judgment of a variety of stakeholders and constituencies—audiences—that control the critical resources they need to grow and survive"
+
+**关键特征**:
+- 纯理论前提冷启动：不靠数据/引语/轶事，而以一条资源依赖式理论前提开场，能量低但直接服务 puzzle
+- 同位语构念落地：前提句内用同位语（"——audiences——"）一次性钉死焦点构念，不单独立定义段
+- 情境枚举收束：第二、三句用投资者/顾客/个人评审/外部评审四类评价情境把构念铺成现象面，为 multiple audiences 的 gap 预埋复数感
+- 与 hooks 现有 27 个 canonical 均不同：既有冷启动条目只有 cold-start-cost-cascade（成本递进型），无"理论前提→构念同位落地→情境枚举"型
+
+**适用**: 构念本身即研究对象的 Incompleteness×Mechanism 研究；当焦点构念（如 audiences、valuation）在文献中有成熟理论根基但跨受众维度未被打开时，用前提冷启动而非数据冲击
+
+**禁忌**: 前提句若无理论 citation 支撑会显得断言化；构念同位语只允许出现一次，重复同位会退化为定义段
+
+<!-- wb:fini_2017_social_valuation_across_multiple_audiences_the_int:hook-theoretical-premise-construct-grounding -->
+
 ## 组装规则
 
 ### 必须配对

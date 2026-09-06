@@ -63,3 +63,4 @@
 | 冲突对 | 原因 |
 |--------|------|
 | `02-quantified-economic-loss` + `08-goal-conflict` | 量化损失是单向 stakes，goal conflict 是双向张力——逻辑不同 |
+| `10-irreversible-commitment-stakes.md` | `10-irreversible-commitment-stakes` | 变体 A：不可逆承诺放大 Stakes——enduring/irreversible commitments 放大前因重要性+信息源缝合句，嵌入 DV 定义段，gulati_westphal1999，VERIFIED (单源 Gulati 裁定) |

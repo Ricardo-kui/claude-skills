@@ -152,6 +152,40 @@ negatively when [A] than when [B].
 
 
 
+### 变体 C：假设序列角色标签引导句（Baseline/Additional Hypothesis Labeling，Gulati_Westphal_1999 型）
+
+<!--
+pattern_id: hypothesis_sequence_role_labeling
+build_type: 跨类型（句式级）
+source_papers: ["gulati_westphal_1999_cooperative_or_controlling (ASQ)"]
+confidence: high
+status: VERIFIED — expert_audit_override (Gulati/Westphal 系单源裁定 2026-09-06, paper_count=1)
+sentence_position: hypothesis_lead_in
+-->
+
+**句位**: 假设陈述的引导句位——机制链推演收束后、H 冒号之前，用一句话给假设在序列中的角色贴标签。
+
+**句式骨架**:
+```
+[基线假设] This suggests an initial, baseline hypothesis on the effect of
+[X] on [Y]:
+[扩展假设] This suggests additional hypotheses, predicting that [W] will
+tend to amplify the relationship between [X-kind] and [Y]:
+```
+
+**变体**（同句位措辞候选）:
+- "This suggests an initial, baseline hypothesis on..." — 显式把 H1 定位为后续细化的基线，为假设揭示转折预留接口
+- "This suggests additional hypotheses, predicting that..." — 把多个扩展假设打包引入（一个冒号引出 H4/4a/4b 三连）
+- "Applying [lens] to [context], we expect that...:" — 透镜应用句兼作引导句（分支小节首假设）
+
+**为什么有效**: 假设不只是被编号，还被赋予序列角色（baseline / additional / amplify）——读者提前知道该假设与后文的结构关系（会被细化、会被放大），假设序列成为有方向的论证弧而非清单。
+**注意事项**: 角色标签必须与实际结构一致（baseline 之后真有细化；additional 真是同族扩展）；"This suggests" 前句应是机制链的收敛句，避免从文献直接跳到引导句。
+**反模式**: 每个假设都贴标签（标签通胀）；给相互竞争的假设用 "additional"（掩盖竞争关系）。
+**原文锚点**:
+> "This suggests an initial, baseline hypothesis on the effect of interlock ties on alliance formation:" / "This suggests additional hypotheses, predicting that indirect ties between CEOs and outside directors through third-party directors in the interlock network will tend to amplify the relationship between each kind of CEO-board tie and the likelihood of alliance formation:"
+
+
+<!-- wb:gulati_westphal_1999_cooperative_or_controlling:sentence_hypothesis_sequence_role_labeling -->
 <!--
 pattern_id: a_priori_partial_mediation_weakening_pair
 build_type: 跨类型（句式级；任何"主效应+中介延伸"双 DV 设计）
@@ -354,6 +388,38 @@ COGNITION (t2–t1) | CHANGE IN RENEWAL STRATEGY (t3–t2)"
 
 
 
+
+
+### 句式 G：dyadic 事件概率单调主效应句（Dyadic Event-Probability Monotonic Form，Gulati_1999_AJS 型）
+
+<!--
+pattern_id: dyadic_event_probability_monotonic_form
+build_type: 机制推演型/网络研究（句式级；sentence_position: hypothesis）
+source_papers: ["gulati_1999_where_do_interorganizational_networks (AJS)"]
+verification_status: VERIFIED — expert_audit_override (Gulati 系单源裁定 2026-09-06, paper_count=1)
+story_fidelity: section_variant
+sentence_position: hypothesis
+-->
+
+**句位**: 假设句位——DV 是两个行动者之间的离散事件（tie formation、交易缔结、并购发生）时的主效应假设。
+
+**句式骨架**:
+```
+H[n]: The probability of a new [tie/event] between [actor A] and [actor B] increases with [X].
+```
+
+**为什么有效**: 统一模板让 H1-Hk 共享同一句法骨架，读者把注意力全部花在 X 的机制差异上而非句式切换；"probability ... increases with" 与事件史/概率模型的被解释变量直接对齐（DV 是事件发生概率而非强度）；dyadic 措辞把分析单元（配对）钉进假设句本身，层次错位在句法层面即被排除。
+
+**注意事项**: 全假设组保持同一模板；方向词只有 increases/decreases；X 必须是配对层面可测的量（dyad 内属性或双方属性的组合，如共同第三方数、中心度相似性）；DV 为离散事件时才用概率式，连续 DV 应改用属性-属性单调式。
+
+**反模式**: 中途切换句式（"firms with higher X are more likely to..."）；把组织层面变量直接填入 dyadic 模板（层次错位）；事件强度与事件概率混用。
+
+**与 Continuous 形式的判别**: "The greater the [X], the greater the [Y]" 是属性-属性单调式；本句式是属性/关系-事件概率式，专配 dyadic 事件设计（网络形成、缔约、离职对等）。
+
+**原文锚点** (Gulati 1999, AJS):
+> "The probability of a new alliance between two organizations increases with the level of interdependence between those organizations."
+
+<!-- wb:gulati_1999_where_do_interorganizational_networks:c10_dyadic_event_probability_monotonic_form -->
 
 ### 变体 G：镜像极点配对假设（同 DV 反号 a/b 对，gulati_2007 型）
 

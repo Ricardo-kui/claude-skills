@@ -271,3 +271,30 @@ source: Distilled from Haunschild, Polidoro & Chandler (2015), Organization Scie
 **禁忌**: 若 Results 有强效应量，朴素版会浪费弹药——改用内嵌幅度变体；三贡献若实为两贡献+凑数会被审稿人点破
 
 <!-- wb:anand_mukherjee_2024_learning_from_failures_di:numbered-triple-contribution-block -->
+
+
+### 变体 J：构念创造+机制一句链型（gulati1999 型）
+
+**验证状态**: VERIFIED (expert_audit_override 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)；单篇来源，仅作 section_variant
+
+**功能节拍**: RQ 段内构念创造声明（I introduce the notion of X）→ 来源句（accrue from Y）→ 后果句（influence Z）→ 透镜推进包装（advances the perspective）→ 轻量 salience stakes
+
+**模板**:
+> "I introduce the notion of [focal construct] and propose that [units] accrue such [resources] from the [source structure] in which they are located. Such resources, in turn, influence [outcome]. By introducing [focal construct] as important for [phenomenon], this study advances the perspective that [actions/outcomes] are influenced by the [broader context] ([context citations]). Such resources are becoming more salient as [units] are increasingly situated in [structural condition] that can provide them with [information/benefit], which can be particularly valuable in [setting]."
+
+**来源**: gulati_1999_network_location_and_learning_the_influence_of_n (SMJ), P5–P6
+
+**原文锚定**:
+> "I introduce the notion of firm network resources and propose that firms accrue such resources from the interfirm networks in which they are located."
+
+**关键特征**:
+- "I introduce the notion of X" 构念创造声明 + "accrue from Y" 来源句 + "influence Z" 后果句——构念、来源、后果一句链完成 Makadok Constructs 贡献立项
+- 贡献以"透镜推进"（advances the perspective that...）而非缺口填补措辞包装，引语境文献给 perspective 站台
+- 随后一句 salience 论证（multiplex networks / global setting）充当轻量 stakes——把构念的时代必要性钉在结构趋势上
+- 与变体 H（机制贡献+缺口填补+首例声明）的区别：那里补缺口+首例；这里造新构念并声明其来源与后果，构念本身即贡献
+
+**适用**: 构念是论文主要贡献（Makadok Constructs）且构念源自透镜移植时；与经典框架半分再分型 Tension 配对（构念接管被忽视的 B 面）；第一人称单数期刊风格
+
+**禁忌**: "I introduce the notion of" 是强声明——构念须确属首次命名，近义构念已存在会被审稿人点名（需改 extend/refine）；salience 句若过于宏大在当代审稿下需更具体的后果支撑
+
+<!-- wb:gulati_1999_network_location_and_learning_the_influence_of_n:contribution_construct_coinage_chain -->

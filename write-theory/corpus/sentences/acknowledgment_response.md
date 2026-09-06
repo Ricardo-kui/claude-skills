@@ -286,3 +286,34 @@ of variation at issue], which is the focus of our theory.
 **反模式**: 对手其实解释了该维度时不得使用（会被一句话反驳）；carve-out 后必须真的有假设/理论回应被 carve 的维度；每段都用会形成防御性节律（频次预算仍适用）。
 
 <!-- wb:zajac_westphal_the_social_construction_of_market_value:rival_dimension_carveout_sentence -->
+
+
+### 句式 D：竞争推测预承认与核心论点回收（Competing-Speculation Acknowledgment + Numbered Core-Argument Recap）
+
+<!-- pattern_id: competing_speculation_resolution; build_type: 跨类型（句式级）; source_papers: ["Pfarrer_Pollock_Rindova_2010_AMJ"]; confidence: medium; sentence_position: 让步-回应 -->
+
+**句位**: 假设推导段 Topic 拍之后、机制推演之前——当理论空间中两个方向的预测都讲得通时，先承认再锚定。
+
+**句式骨架**:
+```
+[承认双向推测] Whereas [general effects] are well understood, how they may be influenced
+by [focal constructs/frames] has not been studied. In fact, plausible speculations can
+be advanced that [A and B] either [direction 1] or [direction 2] [outcome].
+
+[编号回收核心论点] We base our predictions on our core theoretical arguments that:
+(1) [core argument 1 established earlier]; and (2) [core argument 2 established
+earlier]. We predict that [prediction].
+```
+
+**变体**:
+- "In fact, plausible speculations can be advanced that [X] either [direction 1] or [direction 2] [outcome]." — 承认双向都讲得通
+- "different expectations again appear plausible. First, to the degree that ..., one could argue that [competing ordering]. However, as discussed earlier, [established argument tips the balance]." — 承认竞争排序后用前文论点裁决
+- "We base our predictions on our core theoretical arguments that: (1)...; and (2)..." — 编号回收，把裁决锚定在已建立的核心论证上
+
+**为什么有效**: 在预测空间真正模糊的段落，诚实承认双向推测反而增强可信度；编号回收把裁决责任交给已建立的核心论证，避免"新段重新辩论"。
+**注意事项**: 回收的核心论点必须在此前文中真实建立过；承认之后必须给出裁决，不能停在"两边都有道理"。
+**反模式**: 用此句式伪装无争议的预测（明明单边显然还假装模糊）；或承认后引入全新的第三方机制来裁决。
+**原文锚点** (Pfarrer et al. 2010, AMJ):
+> "In fact, plausible speculations can be advanced that high reputation and celebrity either exacerbate or attenuate investors' negative responses to negative surprises."
+
+<!-- wb:pfarrer_pollock_and_rindova_2010:competing_speculation_resolution -->

@@ -142,3 +142,19 @@ updated: 2026-05-22
 **范文锚点**: "To enhance the construct validity of the survey measures, we conducted a pretest involving in-depth pilot interviews with 22 top managers and board members (cf. Fowler, 1993: 102). ... we carefully worded questions to minimize the likelihood of social desirability bias."
 
 <!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:m3_survey_scale_development_validity_chain -->
+
+
+### 变体 C：跨源构念效度三角化 — 独立评定者 kappa + 档案收敛/区分交叉矩阵（gulati_westphal1999 型）
+
+**来源论文**: Gulati & Westphal 1999 (Administrative Science Quarterly, 44(3), 473-506)
+**原始句锚点**: "The archival measure of control was significantly correlated with the survey measure of control (r = .42), while the archival measure of cooperation was significantly correlated with the survey measure of cooperation (r = .34). Moreover, the survey measure of cooperation was not significantly correlated with the archival measure of control, while the survey measure of control was not associated with the archival measure of cooperation."
+**验证状态**: EMERGING（单源；Gulati 系单源即 VERIFIED，expert_audit_override 2026-09-06）
+**写入日期**: 2026-09-06
+**槽位**: M3/M4（关键自报构念的效度验证层）
+**骨架**:
+> [多源效度总起] We also conducted tests of [convergent] validity for our [survey] measures of [construct A] and [construct B]. [独立评定者层] We also assessed [interrater] reliability by comparing [primary respondents'] and [qualified independent respondents'] responses on the [construct] items, using [chance-corrected agreement statistic], which corrects for the level of [agreement] that would be expected by chance; values exceeding [threshold] typically indicate [excellent] agreement ([citations]). [档案复合测量层] First, we developed [archival] measures of each construct from [structural indicators] that are thought to [facilitate the construct's behavioral expression], combined into a [composite] using [standard scaling procedure] ([citations]). [收敛格×2] The [archival] measure of [construct A] was significantly correlated with the [survey] measure of [construct A] ([r = X]), while the [archival] measure of [construct B] was significantly correlated with the [survey] measure of [construct B] ([r = Y]). [区分格×2] Moreover, the [survey] measure of [construct B] was not significantly correlated with the [archival] measure of [construct A], while the [survey] measure of [construct A] was not associated with the [archival] measure of [construct B]. [交叉矩阵收口] This analysis provides further evidence for the construct validity of the [survey] measures. [相邻构念三角校验（可选第三层）] We also examined the correlation between [the archival measures] and a [survey] measure of [adjacent construct]; this measure showed high [interrater] reliability ([kappa]), and is [positively] associated with [construct A] ([r]) and [negatively] correlated with [construct B] ([r]). This further supports the [convergent] validity of the [survey] measures.
+**与原骨架差异**: 变体 B（carpenterwestphal2001）是**问卷内部**量表开发六环链（预测试→题项依据→反偏差→信度→双界因子→计分）；本变体是**跨源三角化**——自报构念经三层独立证据验证：(1) 角色分离的独立评定者一致性（chance-corrected kappa，报告判定阈值）；(2) 档案复合测量的 2×2 收敛/区分交叉矩阵（各自收敛显著 + 交叉两格零相关——区分效度由**零相关格**承担而非单向高相关）；(3) 相邻构念符号模式校验（正/负号与理论方向一致）。区别于 post_2022 文本构念链（算法标注 vs 主体自分类）：此处两源均为传统测量（survey vs archival），关键手法是交叉矩阵的完整四格报告。
+**诚实边界**: era_flags——LISREL CFA + Bartlett vs regression 因子估计法之辩（1999 年测量学惯用段）与 kappa 对连续题项按四分位离散化均不迁移。交叉矩阵要求四个相关格都报告（含零格）；只报两个收敛格会退化为普通 convergent 声明。档案复合测量本身的理论关联（为何这些结构指标是该构念的表现）需各配一句 because，否则收敛相关无解释力。
+
+
+<!-- wb:gulati_westphal_1999_cooperative_or_controlling:m4_multisource_construct_validity_triangulation -->

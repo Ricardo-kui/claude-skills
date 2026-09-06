@@ -1075,7 +1075,134 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 **来源**: wowak_2020_female_directors_recalls (M&SOM), P1
 
 
-### 变体 AP：后果止步→前因接力型（higgins_gulati2003 型）
+### 变体 AP：综述转向声明型（gulati1998 型）
+
+**模板**：
+[Phenomenon] 已催生 a growing stream of research，其考察 mostly at the [主导层级]。In this article I don't intend to review this vast and burgeoning field of research (for a review, see [综述来源]). Instead, I will develop a [视角] on [核心议题], going beyond the [主导层级] to the [更大嵌入框架] in which [分析单元] are embedded. ... This discussion admittedly reflects my own biases and research preferences, and there is a large amount of research on this topic that will not fall under my purview.
+
+**关键特征**：
+- 以“否定综述体裁 + instead 视角替代”完成 departure——不指控既有文献有错，只声明自己不做 X、做 Y（Incompleteness 的综述文变体：层级覆盖缺口语义，无 pain 语言）
+- “going beyond [主导层级] to [更大框架]”一句同时完成层级转移与张力设定
+- 收尾配 bias confession（“admittedly reflects my own biases”）——用诚直范围声明管理审稿预期，替代实证文的标准 hedge
+- 全程第一人称单数元话语（“I don't intend... I will develop...”）
+
+**原文锚定**：In this article I don't intend to review this vast and burgeoning field of research (for a review, see Auster, 1994). Instead, I will develop a social network perspective... going beyond the dyadic level to the larger network in which alliances are embedded.
+**来源**：gulati_1998_alliances_and_networks (SMJ), Introduction P1
+**适用**：综述文/perspective article 的 Incompleteness 组合；贡献是引入新视角（Mode）而非填补单点缺口时；与综述议程组织型 preview 配对使用
+**禁忌**：实证论文勿模仿“我不打算综述”句式——会被读作规避文献责任；bias confession 仅限综述体裁，实证论文改用标准 limitation hedge
+
+<!-- wb:gulati_1998_alliances_and_networks:review_scope_pivot_tension_gulati1998 -->
+
+
+
+### 变体 AR：文献流致意+三缺口枚举型（gulati1999 型）
+
+**验证状态**: VERIFIED (expert_audit_override 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)；单篇来源，仅作 section_variant
+
+**功能节拍**: 对第二条（较新）文献流先集体致意（"All these accounts have advanced..."）→ "They have, however" 转折 → 枚举三类缺口：动态模型（时间）、机制细节（过程）、证据基础（田野）
+
+**模板**:
+> "Recently, scholars have brought [lens] to the study of [phenomenon] ([stream citations, 5–8 works]). [One clause per study: what each linked]. All these accounts have advanced our understanding of [phenomenon] and extended [lens], previously applied to [original level], to [new level]. They have, however, paid less attention to [gap 1: dynamic/temporal model], or to [gap 2: detailed assessment of the mechanisms underlying the effect]. There have also been few accounts that have drawn on [alternative evidence base] to inform our understanding of [phenomenon]."
+
+**来源**: gulati_1999_network_location_and_learning_the_influence_of_n (SMJ), P4
+
+**原文锚定**:
+> "They have, however, paid less attention to building a dynamic model that takes into account the influence of evolving networks on the proclivity of firms to enter into new alliances over time or to providing a detailed assessment of the mechanisms underlying the effect of networks on firms."
+
+**关键特征**:
+- 致意对象是"文献流的集体贡献"（advance understanding + extend lens to new level），不是单篇观点让步——先给整条流记功再挑缺口，读作公允而非稻草人
+- 三缺口跨越三类维度：理论（缺动态模型）、机制（缺过程细节）、证据（缺田野根基）——比 westphalzajac1995 双缺口让步型（证据+理论）多出"证据基础"维
+- 缺口枚举不指向具体论文，指向整条流的盲区，为本文"三合一"回应（面板动态+机制+田野）铺路
+- 文献流回顾用"每研究一句"平行结构压缩 5–8 篇，避免罗列
+
+**适用**: 本文要同时补理论/机制/证据三维缺口时；第二条较新文献流需被"承认但推进"的场合；与经典框架半分再分型连用构成双层 gap（旧流 Inadequacy + 新流 Incompleteness）
+
+**禁忌**: 三缺口必须都能被本文兑现，否则枚举变成自我控罪；致意句不能空泛——要点名该流把什么扩展到了什么层次；与 AI 变体（单观点双缺口让步）的区别在致意对象是整条流，勿混用
+
+<!-- wb:gulati_1999_network_location_and_learning_the_influence_of_n:tension_stream_credit_then_triple_gap -->
+
+### 变体 AQ：经典框架半分再分型（gulati1999 型）
+
+**验证状态**: VERIFIED (expert_audit_override 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)；单篇来源，仅作 section_variant
+
+**功能节拍**: 引入经典理论框架的二分（A 面 × B 面）→ 承认既有文献对 A 面的进展 → 用"经典标尺"重划覆盖边界：文献只研究了 A 面，B 面（机会可得性/情境侧）被系统性搁置 → 紧接一句隐含假设批评把缺口升级
+
+**模板**:
+> "In [classic author]'s ([year]) terms, [dominant stream] has focused primarily on the [element A] side of the conditions that propel [strategic action] and not so much on the conditions that determine the [element B] [actors] may perceive. [Element B] resulting from [broader context] can be influential in altering the [element B set] perceived by [actors]. By neglecting such factors, prior accounts implicitly consider [actors] as [atomized image] ([context citation])."
+
+**来源**: gulati_1999_network_location_and_learning_the_influence_of_n (SMJ), P2–P3
+
+**原文锚定**:
+> "Thus, in Andrews' terms, they have focused primarily on the competence side of the conditions that propel strategic actions and not so much on the conditions that determine the opportunity set firms may perceive."
+
+**关键特征**:
+- 用一部经典著作的二元框架作"标尺"重划文献覆盖边界——缺口不是"没人研究 B 面"，而是"文献只研究了二元中的 A 半"
+- "In [classic author]'s terms" 把重划合法性外包给经典权威，避免自创二分被质疑 ad hoc
+- 紧跟隐含假设批评（"implicitly consider firms as atomistic actors"），把覆盖缺口升级为视角缺陷指控——两层 gap 的第一层（Inadequacy）
+- 二分的 B 面必须随后被新透镜接管（本文：嵌入性→opportunity set→network resources），否则半分再分悬空
+
+**适用**: Inadequacy（两层 gap 的旧流侧）× Constructs/Mechanism；文献沿单一维度（资源/能力侧）积累成熟、而经典框架本含被遗忘的另一维（机会/情境侧）时；经典框架需真的提供现成二分词汇
+
+**禁忌**: 经典二分必须与本研究的构念系统对接，不能只为修辞借用；若文献已实质研究 B 面（只是量少），此变体会被读作稻草人——应改用纯覆盖缺口变体
+
+<!-- wb:gulati_1999_network_location_and_learning_the_influence_of_n:tension_classic_dichotomy_half_split -->
+
+
+### 变体 AS：外部关切升级+实证反常双限诊断型（gulati_westphal1999 型）
+
+**验证状态**: VERIFIED (expert_audit_override 2026-09-06: 用户点名 Gulati 为最喜爱学者，其论文蒸馏单源即 VERIFIED)；单篇来源，仅作 section_variant
+
+**功能节拍**: 让步承认领域进展 → 外部关切升级（领域效应质疑挂接元理论层担忧）→ 实证反常作症状（weak or inconsistent findings）→ 归因两项共同设定局限 → First / Another concern 跨段顺序展开，各配既有证据与修复预告
+
+**模板**:
+> "While [field] research has advanced our understanding of [contribution domain], significant concerns have also been raised that reflect more general concerns about [the parent theory's broader application] ([meta-citation]). Several authors have expressed concern about the [consistency and magnitude] of [theory] effects ([citations]). Weak or inconsistent findings may result from [N] limitations common to most prior studies. First, prior [field] research has not adequately specified [limitation 1: a specification dimension] ([citations]). [Evidence the field ignores: recent adjacent research suggests X may differ...] This ignores [heterogeneity dimension] that may exist among [units]. Another concern with [field] research is its primary focus on [dominant lens A] to the exclusion of [complementary lens B] ([framework citation]). [Evidence that B conditions A...] Thus, it may be possible to uncover stronger [field] effects by [modeling fix] and examining how [complementary factor] conditions [focal effect]."
+
+**来源**: gulati_westphal_1999_cooperative_or_controlling (ASQ), P2–P3
+
+**原文锚定**:
+> "While interlock research has advanced our understanding of the consequences of interlocks for firms, significant concerns have also been raised that reflect more general concerns about the application of network theory to interorganizational relations (Mizruchi, 1996)." / "Weak or inconsistent findings may result from two limitations common to most prior studies."
+
+**关键特征**:
+- 批评外包双升级：领域具体关切（consistency/magnitude of network effects）被明确挂接到元理论层担忧（network theory 应用的普适疑虑），缺口从作者意见升为理论层危机
+- 实证反常作诊断症状：以 "weak or inconsistent findings" 开诊断，两局限是病因归因（specification failures common to most prior studies）——回答"为什么已有发现弱/不稳"，而非罗列"没研究什么"
+- 两局限跨段顺序展开（First... / Another concern...），各配"修复后可得更强效应"的既有证据（governance 文献、indirect ties 研究），P3 尾句 "Thus, it may be possible..." 完成修复预告闭环
+- 与变体 T 的区别：缺口由外部批评+反常归因驱动而非作者自列；与变体 L 的区别：批评来源是外部权威、病根是理论设定而非识别策略；与变体 Q 的区别：授权之外多了反常诊断与双限结构
+
+**适用**: Inadequacy × Boundary/Mechanism；领域存在已被权威点名的效应强度/一致性质疑，且本文贡献恰是"重新设定"（specify content/lens）而非换问题；ASQ 式两段诊断结构
+
+**禁忌**: "weak or inconsistent findings" 必须有真实文献批评支撑，不能自造反常；两局限必须都能被本文设计修复，否则诊断变自我控罪；两局限之间要有分工（如"内容未指定"+"透镜单一"），同型缺陷应合并
+
+<!-- wb:gulati_westphal_1999_cooperative_or_controlling:tension_external_concern_anomaly_dual_limit_diagnosis -->
+
+
+### 变体 AT：问题二分解有效让步型（gulati1999networks AJS 型）
+
+**验证状态**: VERIFIED (expert_audit_override 2026-09-06: 用户点名 Gulati 为最喜爱学者，其论文蒸馏单源即 VERIFIED)；单篇来源，仅作 section_variant
+
+**功能节拍**: 让步承认旧观在自己的问题上完全有效 → 问题二分解划出盲区（Q1 whether/进入倾向 vs Q2 whom/伙伴选择）→ 用案例自身属性放大 Q2 痛感（新颖合作形式+持久承诺→伙伴信息不完全→搜寻成本+机会主义风险）→ 双问 RQ 收束分解
+
+**模板**:
+> "The [dominant approach] provides a good explanation of [Q1: whether/propensity facet] ([citations]), but it overlooks [Q2: the distinct decision problem] . This [Q2 difficulty], which results from [information/coordination challenge] ([citations]), is especially vivid in the case of [case]. [Case] is [defining property 1] that involve [property 2], and thus result in [commitment consequence]. While [case] can [serve old purpose], there is also considerable [uncertainty type] associated with [Q2 action]. [Imperfect information] raises [cost 1] and the risk of [cost 2] ([citations]). Thus, while [old approach] may suffice to determine [Q1], they may not provide enough cues to decide [Q2]. Where do [actors] find [the missing input]? And how do [that input] shape [structure formation]?"
+
+**来源**: gulati_1999_where_do_interorganizational_networks (AJS), P2
+
+**原文锚定**:
+> "The exogenous approach to tie formation provides a good explanation of the factors that influence the propensity of organizations to enter ties, but it overlooks the difficulty they may face in determining with whom to enter such ties."
+
+**关键特征**:
+- 有效让步而非稻草人：明说旧观 "provides a good explanation of Q1"，缺口不在旧观答案的对错，而在它从未试图回答的另一个决策问题——旧观被收编为答案的一半而非被推翻（与 AI 的 "seems plausible" 单点让步、AS 的外部批评授权均不同）
+- 问题二分解承载缺口：把现象拆成 Q1（whether）× Q2（whom）两个性质不同的子决策，缺口=旧观对 Q2 沉默；与 AM（前因止步+双问悬置）的区别：AM 是同一现象两个未检 facet 的非覆盖（Incompleteness），本变体是"旧观在 Q1 上成功 + Q2 是不同性质的问题"（Inadequacy），且 Q2 随后由新机制接管
+- 案例属性放大痛感：痛感由对象自身属性推出（联盟=新颖合作形式+重大交换/共享/共开发→持久承诺→伙伴信息不完全→搜寻成本+机会主义暴露），不是断言"很重要"
+- 双问 RQ 是分解的压缩回收："Where do [actors] find those cues? And how do the cues they use shape [formation]?"——资源问在前、结构问在后，两问分别由后续模型的两个驱动回答
+
+**适用**: Inadequacy × Mechanism；旧观在自己的问题上确实站得住（有成熟文献背书）、本文贡献是接管其盲区的另一半问题时；后续将做外生+内生双驱动合成预告（问题分解需先埋好）的长引言
+
+**禁忌**: Q1 必须真的被旧观解决得好，否则让步读作讽刺；Q2 不能是 Q1 的子集或同义改写——必须是性质不同的决策问题；双问 RQ 后必须紧跟答案预告（下一拍），问题悬而不答会读作综述文
+
+<!-- wb:gulati_1999_where_do_interorganizational_networks:tension_question_decomposition_concession_gulati1999networks -->
+
+
+### 变体 AU：后果止步→前因接力型（higgins_gulati2003 型）
 
 **模板**:
 > "But while [consequence-side research on the focal relation] has received increasing attention ([citations]), scholars have paid less attention to [the origins/antecedents of such relations], particularly in [adjacent research stream], since theory rests on [a structural precondition that makes origins non-trivial] ([citation]). Although scholars have begun to examine [the consequences of the focal relation], [its antecedents] to this important form of [matching] have not yet been studied."
@@ -1100,7 +1227,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 <!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:tension_consequences_to_antecedents_relay -->
 
 
-### 变体 AQ：创始人自证缺口型（gulati2005型）
+### 变体 AV：创始人自证缺口型（gulati2005型）
 
 **模板**:
 > "The most influential statements of [dominant theory] recognize [broader class of problem] — e.g., [founder] notes that [phenomenon] may arise even absent [dominant mechanism] ([cite1], [cite2]). Yet this theoretical recognition finds scant recognition in most prior research motivated by [the theory] ([review cites]). Our goal is to broaden the conceptualization of [focal construct] beyond [dominant mechanism] to include [additional constraint classes]."

@@ -41,6 +41,14 @@
 
 ---
 
+## 从 Gap 到贡献
+
+| 文件 | canonical_id | 核心特征 | 验证状态 | 代表范文 |
+|------|-------------|---------|---------|---------|
+| `gap-to-contribution.md` | `gap-to-contribution` | 把 Gap 的批评能量转化为建设性贡献声明（P4 末/P5 初） | VERIFIED (cross_paper) | 变体 G：设问承接·谦逊启动（these questions 回指 + "begin to address" 谦逊校准 + 双结果域拆分），pfarrer2010 (AMJ)，EMERGING |
+
+---
+
 ## 配对规则
 
 | Transition | 推荐前置元素 | 推荐后置元素 | 说明 |

@@ -315,3 +315,125 @@ assess [which reading holds].
 **反模式**: 只声称"我们的解释更合理"而不把两种读法绑到可判别的预测上。
 
 <!-- wb:zajac_westphal_the_social_construction_of_market_value:rival_readings_same_measure -->
+
+
+## Pattern: Counterfactual Case Replay Warrant（失败案例反事实回放，Castellaneta 2017 型）
+
+**适用场景**: 机制步骤断言"缺少某信息/能力会导致误判"时，用具名失败案例先复盘实际损失，再用反事实句把损失显式归因到缺失的机制环节，最后升华为一般命题。与 Case-as-Warrant 原子型的差异：原子型展示机制如何正向运作，本子型展示机制缺失的代价，并让反事实推理承担归因。
+
+**骨架**:
+```
+[机制步骤] [Assessment task] requires [information/capability] because [reason] ([citation]).
+[失败案例引入] [Company A]'s [year] [transaction] of [Target] ([context detail]) illustrates the consequences of [mechanism failure].
+[损失量化] [Time later], [Company A] was forced to [unwind action] for [fraction of price], after [trigger event] ([source]).
+[反事实回放] This significant loss might have been avoided had [Company A] collected better information about [missing mechanism input].
+[一般化回收] This example implies that [assessment task] requires [information/capability]. Thus, even if [strongest counterfactual], [actor] would still be less able to [task] when [condition].
+```
+
+**关键特征**:
+- **损失量化锚点**: 具名购入价与退出价对比使误判代价可感知、可记忆
+- **"might have been avoided had..."**: 显式承认案例非证据，归因由反事实推理承担，保持诚实边界
+- **双重回收**: 先案例→命题（This example implies...），再命题→最强反方情形（even if... would still...），可与 Even-If Fallback Refutation 衔接
+
+**原文锚点** (Castellaneta, Conti & Kacperczyk 2017, SMJ):
+> "Two years after the purchase, Quaker Oats was forced to resell Snapple for just $300 million, after its brewing technique had been reverse-engineered (and so copied) by several competitors... This significant loss might have been avoided had Quaker Oats collected better information about the intangible assets of Snapple's competitors."
+
+**诚实边界**: 失败案例只能作 warrant/说明，不能作效应大小或因果方向的证据；反事实归因必须与机制步骤一一对应，不得用案例倒推机制方向。
+
+**注意事项**: 案例须广为人知或可溯源（新闻报道/案例研究）；单一匿名或不可溯源失败不适用本子型。
+
+<!-- wb:castellaneta_2017_smj_how_does_trade_secret_legal_protection:counterfactual_case_replay_warrant -->
+
+
+### Pattern: Pre-Study Interview Premise Warrant（自有预备访谈承重理论前提，Fini 2017 型）
+
+**适用场景**: Theory 中某机制前提（如"评价者 ex-ante 面临不确定性，故判断重人不重案"）文献支撑不足或属领域常识缺位时，用作者为本项目自采预备访谈的逐字引语承重前提，声明句显式标记证据来源与功能。与 Interview Non-Event Warrant（ball_2018：知情者访谈证明未发生行为）与 Paired Opposite-Default Interview Vignettes（wowak_2020：成对反向默认轶事展示裁量）判别：本子型引语来自**作者自己的预备访谈**、功能是**承重理论前提**而非证据化事件或展示裁量空间。
+
+**骨架**:
+```
+[前提断言] [Evaluator] faces [daunting task] in [ex-ante decision context]: [uncertainty features 1-3].
+[自有访谈证据引入] Evidence from the interviews that we conducted for this project supports this conjecture.
+[逐字引语] Echoing others, a [role/field] stated: "[premise-supporting quote]".
+[回扣机制] The [uncertainty] surrounding [promised future outputs] makes [mechanism: inference about the actor] more salient, compared to [alternative ex-post valuation setting].
+```
+
+**关键特征**:
+- **来源声明句**: "the interviews that we conducted for this project" 显式声明引语来自本文自采预备访谈——premise warrant 的证据等级介于文献与数据之间，来源声明防止审稿人误读为实证结果前置
+- **引语承担前提而非预测**: 引语支撑机制前提（评价者重人轻案），不预演假设方向；假设仍由文献推导收敛
+- **对照设置收尾**: 与另一评价场景（如双盲 ex-post 评审）对照，凸显前提为何在该情境下更成立，为机制的情境特异性铺垫
+
+**原文锚点** (Fini, Jourdan & Perkmann 2017, AMJ):
+> "Evidence from the interviews that we conducted for this project supports this conjecture. Echoing others, a professor specializing in infection, stated: 'When I review grant proposals, I evaluate more the person than the grant [proposal] itself.'"
+
+**诚实边界**: 预备访谈引语只能承重前提/机制合理性，不能当效应存在或方向的证据；不得用访谈引语替代假设推导中的文献 warrant；引语须来自可声明的自采样本，不得混入二手引语而不声明。
+
+**反模式**: 把预备访谈引语放在假设收敛处替代 "Therefore" 推导；或全文多处理人访谈引语造成 Theory 叙事证据化。
+
+<!-- wb:fini_jourdan_perkmann_2017_amj:pre_study_interview_premise_warrant -->
+
+<!-- wb:fini_2017_social_valuation_across_multiple_audiences_the_int:pre_study_interview_premise_warrant -->
+
+
+### 变体 C：田野引语证据质感三段式（Gulati_1998 综述文型）
+
+**模板**:
+> [抽象机制主张] [关于行动者如何依赖某机制的理论主张].
+> [引语框架句] As the typical comments by [某类线人] I interviewed indicate, [主张改写为行动者语言]:
+> [逐字块引] '[线人原话，保留口语质感]' ([访谈出处：作者 年份：页码]).
+> [uptake 吸收句] Such comments suggest that [一句话理论收束，接续论证].
+
+**来源**: Gulati_1998_SMJ, Theory P63-P67（formation）、P87-P89（governance）、P93-P95（referral/trust）
+
+**原文锚点**:
+> "As the typical comments by a manager I interviewed indicate, firm managers embed their new ties by relying extensively on their partners from past alliances for information..." "Such comments suggest that firms are influenced in their ability to enter new partnerships by the social network of their past alliances."
+
+**关键特征**:
+- 引语是部署性证据而非装饰：只出现在理论主张需要过程性 ground-truth 的位置（机制如何在实际决策者口中运作）
+- 框架句预告引语要证明什么，uptake 句把行动者语言翻译回理论语言——三段式闭环防止引语"漂"
+- 每条引语带访谈出处（作者 年份：页码），质性材料获得与文献引用同等的可追溯性
+- 框架句标注线人类型（manager / executive specializing in alliances），暗示引语代表性而非孤例
+**适用**: 理论综述文/概念文需要证据质感时；纯理论论证中的关键机制步
+**禁忌**: 每个机制主张至多 1 条引语，密集堆放会滑向民族志（与体裁不符）；引语必须与出处可核对；uptake 句不得引出新机制（只回收已主张的机制）
+
+<!-- wb:gulati_1998_alliances_and_networks:field_quote_evidence_texture -->
+
+
+### 变体 D：田野引语三段式的假设推导内部署（Gulati_1999 实证理论节型）
+
+<!--
+pattern_id: field_quote_evidence_texture_empirical_derivation_deployment
+build_type: 跨类型（证据部署变体；构念辨析/机制推演型理论节）
+source_papers: ["gulati_1999_network_location_and_learning_the_influence_of_n"]
+verification_status: VERIFIED — expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)
+story_fidelity: section_variant
+-->
+
+**适用场景**: 大样本实证论文的 Theory 节把作者自采访谈的逐字引语部署为**机制分支的 warrant**——与 Gulati_1998 综述文的"证据质感"三段式同构，但部署位置与密度不同：每个机制分支（如信息收益的三分法）各配 1-2 条引语，引语紧贴假设收敛处，使"机制在实践者口中真实运作"先于假设被看见。前提：引言或方法已声明访谈设计（本文：153 访谈/11 企业/2 年，"I draw on selective quotes from some of the managers I interviewed wherever relevant"），Theory 的引语使用即兑现该承诺。
+
+**骨架**（每个机制分支一次）:
+```
+[机制分支命名] [Benefit name] refers to / entails [分支定义] ([canonical citation]).
+[机制主张] [分支层面的理论主张：来源如何产生该收益].
+[引语框架句] This is vividly illustrated by / Another [role] I interviewed [said/highlighted]:  — 预告引语要证明什么并标注线人类型
+[逐字引语] '[practitioner verbatim quote]'
+[uptake 回收句] Thus, it seems that / Such comments suggest that [把行动者语言翻译回理论语言] — 只回收已主张的机制，不引出新机制
+```
+
+**与综述文型（Gulati_1998）的部署差异**:
+- 综述文：引语为概念论证提供质感，位置自由；实证理论节：引语锚定在**机制分支内部、假设收敛之前**，承担"机制可行性 warrant"
+- 每条机制分支至多 1-2 条引语，全部服务于同一个小节假设；引语内容与分支定义一一对应（如 access→信息可得性、timing→及时性、referrals→第三方背书）
+- 大样本设计下访谈引语只作机制说明不作效应证据——假设的证据责任由后续大样本检验承担
+
+**为什么有效**: 框架句+引语+回收句的三拍闭环让每条引语"不漂"；实践者原声把抽象收益分类变成可感知场景，框架句标注线人类型暗示代表性而非孤例，访谈出处维持与文献引用同级的可追溯性。
+
+**注意事项**: 引语来源与采样须在引言/方法交代；uptake 句不得引入分支定义之外的新机制；保留口语质感但不得把引语复制进模板。
+
+**反模式**: 每段都塞引语（滑向民族志）；引语放在假设句之后（证据应先于预测）；引语与机制分支无对应关系。
+
+**原文锚点** (Gulati 1999, SMJ):
+> "This is vividly illustrated by the comments of an alliance manager I interviewed: 'Our network of [prior alliance] partners is an active source of information for us about new deals [alliances].'"
+
+**原文锚点**（uptake 回收句）:
+> "Thus, it seems that firm managers actively seek information about new alliances from their prior alliance partners, both with the previous partner and with other firms."
+
+<!-- wb:gulati_1999_network_location_and_learning_the_influence_of_n:field_quote_evidence_texture_empirical_derivation_deployment -->

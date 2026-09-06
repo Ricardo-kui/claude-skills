@@ -728,6 +728,35 @@ H2: [X] is negatively associated with [time-to-act] for [high-stakes class].
 
 **原文锚点**: "This distinction underlies our hypotheses, as we contend that adding female directors will have a varying influence on recall decisions contingent upon the severity of product defects."
 
+
+### 模式 D：镜像配对比较假设组（Mirrored Comparative Battery）
+
+<!-- pattern_id: mirrored_comparative_battery; build_type: 构念辨析型; source_papers: ["Pfarrer_Pollock_Rindova_2010_AMJ"]; confidence: medium -->
+
+**适用场景**: 构念辨析后对两个构念分别立假设（各自 vs 无此资产的基线），预测方向镜像相反（A 更少 / B 更可能），且按结果效价（正/负）成对展开。
+**范文来源**: Pfarrer, Pollock, and Rindova (2010), AMJ — H1a/H1b vs H2a/H2b
+
+**骨架**:
+```
+[双分支局部收束] In sum, both the [mechanism elements of A] of [A]-firms are [less] likely
+to [outcome] than firms that do not possess this asset; and both the [mechanism elements
+of B] of [B]-firms are [more] likely to [outcome] ... Stated more formally:
+
+[镜像假设组] [H A-valence1]: Firms with [A] are [less] likely to [outcome-valence1] than
+firms that do not possess this asset.
+[H A-valence2]: Firms with [A] are [less] likely to [outcome-valence2] than ...
+[H B-valence1]: Firms with [B] are [more] likely to [outcome-valence1] than ...
+[H B-valence2]: Firms with [B] are [more] likely to [outcome-valence2] than ...
+```
+
+**为什么有效**: "In sum" 先把两条比较分支各自的机制要素并置收束，再 "Stated more formally" 固化为 2×2 镜像假设——方向相反的预测共享同一辨析基础，读者无需重复推理。
+**注意事项**: 每支假设的机制要素必须回指各自的 formation 段；若 A、B 预测方向不镜像，不要硬套镜像结构，改为各自的差异主效应假设。
+**反模式**: 假设只比较 A vs B 相对强弱、缺各自 vs 基线的假设（或反之）——比较基准不一致会让实证检验难以对齐。
+**原文锚点** (Pfarrer et al. 2010, AMJ):
+> "In sum, both the underlying capabilities and incentives of high-reputation firms are less likely to lead them to announce earnings surprises than firms that do not possess this asset; and both the actions and incentives of celebrity firms are more likely to lead them to announce earnings surprises, as they may experience larger and more unpredictable swings in performance. Stated more formally:"
+
+<!-- wb:pfarrer_pollock_and_rindova_2010:mirrored_comparative_battery -->
+
 ### 变体 A：受众异质性 pivot 至调节假设（westphal_zajac_1998_symbolic_management 型）
 
 **模板**:
@@ -891,6 +920,119 @@ facet-outcome-specific mechanisms.
 <!-- wb:anand_mukherjee_2024_learning_from_failures_di:typed_outcome_hypothesis_tree_with_capability_enhancement -->
 
 
+### 变体 D：同一现象双产物→双驱动收敛（Gulati_1999 型）
+
+<!--
+pattern_id: dual_outcome_two_driver_convergence
+build_type: 跨类型（双 IV 构念 × 单 DV 的收敛网组织）
+source_papers: ["gulati_1999_network_location_and_learning_the_influence_of_n"]
+verification_status: VERIFIED — expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)
+-->
+
+**适用场景**: 两个 IV 构念都源自同一底层现象（如"参与联盟网络"），但性质不同（一关系性/外部位，一内部/学习型），各自独立推导对同一行为的主效应假设。用"另一产物"桥接句把第二个小节锚定到同一现象上，避免两小节读起来像两篇独立论文。
+
+**骨架**:
+```
+[小节 1：产物 A] [Phenomenon participation] → [construct A: relational/informational] → [behavior]. [小节内自足：T1 辨析→T3 机制→H1].
+[小节 2 开头：桥接句] [Membership in the phenomenon] requires [actors] to have entered [it] in the past. By [participating], [actors] can [develop construct B] that accrue as a result of [historical process] ([citations]). Thus, another outcome for [actors] resulting from [their membership] is that they can [develop construct B] associated with [the behavior].
+[小节 2：产物 B] [construct B] → [behavior], via [own literature: learning/routines]. [T1 边界声明→T3 机制→H2].
+```
+
+**关键特征**:
+- 两个 IV 共享一个现象锚（network membership），但分属两条文献谱系（网络/信息 vs 学习/惯例）——谱系独立性保证 H1/H2 不是同一机制的两次贴标签
+- 桥接句 "another outcome for … resulting from …" 用现象复用替代机械并列：第二构念作为同一现象的**第二产物**出场，两小节形成"一枚硬币两面"结构
+- 每个小节内部自足（定义含辨析→机制→假设），小节间靠桥接句而非 "Furthermore" 硬接
+
+**与相邻架构的判别**:
+| | 本模式 | 宽度型三理由 | 双理论分别解释不同 DV |
+|---|---|---|---|
+| 结构 | 2 构念 × 2 小节 × 2 假设 × 1 DV | 3 理由并行 → 1 假设 | 2 理论 × 2 DV |
+| 构念关系 | 两驱动同源不同谱系 | 同一 IV 的不同属性 | 理论各自负责一个 DV |
+
+**为什么有效**: 双驱动收敛把理论贡献从"又一个预测因子"升级为"行为的两条互补来源"（机会集 vs 执行能力）；现象锚保证两驱动同框不散架；桥接句让读者在 H2 开头即知两小节的关系。
+
+**注意事项**: 两构念必须概念独立且最好在文中显式区分（本文小节 2 T1：concern is not with… but with…）；若两构念同源于同一机制，应合并或改用双路径架构。
+
+**反模式**: 现象锚缺失（两小节各自直接开讲）；第二构念靠"此外"硬接（无 another-outcome 桥接）。
+
+**原文锚点** (Gulati 1999, SMJ):
+> "Thus, another outcome for firms resulting from their membership in alliance networks is that they can develop managerial capabilities associated with forming new alliances."
+
+<!-- wb:gulati_1999_network_location_and_learning_the_influence_of_n:dual_outcome_two_driver_convergence -->
+
+
+### 变体 E：基线假设揭示转折（Assumption-Revealing Content-Pole Pivot，Gulati_Westphal_1999 型）
+
+<!--
+pattern_id: baseline_assumption_content_pole_pivot
+build_type: 机制推演型（主效应+调节）
+source_papers: ["gulati_westphal_1999_cooperative_or_controlling (ASQ)"]
+confidence: high
+status: VERIFIED — expert_audit_override (Gulati/Westphal 系单源裁定 2026-09-06, paper_count=1)
+-->
+
+**适用场景**: 已在简化假设下导出基线主效应假设（H1），需在不推翻 H1 的前提下引入核心前因的内部异质性，展开两极反向主效应假设（H2/H3）。
+**结构**: H1（基线）→ 假设揭示转折段 → 每极一个子小节（透镜→机制→假设）
+
+**骨架**:
+```
+[H1 基线] [X] will [direction] [Y]（由简化假设导出）.
+
+[假设揭示转折段]
+The discussion thus far has assumed that [simplifying assumption about X].
+[Researcher]s have generally recognized, however, that there is considerable
+variation in [X 的内容维度], though the consequences of this heterogeneity
+have yet to be systematically examined.
+[X] can range from [极 A] to [极 B], with very different consequences for [Y].
+
+[每极子小节] 小节标题 = 极名 + [DV]；透镜引入 → 后果机制链 → H2/H3（方向相反的主效应）
+```
+
+**为什么有效**: 转折段把 H1 的简化假设原文复述并升格为理论缺口（"assumed"→"yet to be systematically examined"），H1 不被推翻而是被细化——假设序列呈"基线→内容分极"的升级而非并列拼盘；"can range from [A] to [B]" 一句同时完成异质性维度命名与两极预告。
+**注意事项**: 基线假设必须真的依赖该简化假设导出，转折才有杠杆；两极需各自配备理论透镜（本文：代理理论+群体关系论 / Simmel 信任）；转折段放在 H1 之后、第一个极小节之前，不与 H1 同段。
+**反模式**: 把转折写成对 H1 的否定或竞争假设；异质性维度只说不分极（无 "range from...to..." 两极命名）。
+**与近亲变体的区分**: 与"受众异质性 pivot 至调节假设（westphal_zajac_1998 型）"同属"承认前文简化假设"家族，但该变体 pivot 到受众类 moderator 并保持交互假设矩阵；本变体 pivot 到核心前因自身的内容两极，产出反向主效应（非交互），且两极各占独立小节。
+**原文锚点**:
+> "The discussion thus far has assumed that interlock ties indicate positive social contact between top managers and outside directors of the focal firm." / "...there is considerable variation in the nature of management-board relationships, though the consequences of this heterogeneity have yet to be systematically examined."
+
+
+<!-- wb:gulati_westphal_1999_cooperative_or_controlling:hypothesis_org_baseline_assumption_content_pole_pivot -->
+
+
+### 变体 F：双驱动收敛×阶段主导权再分配（Stage Reallocation of Driver Weights，Gulati_1999_AJS 型）
+
+<!--
+pattern_id: stage_reallocation_of_driver_weights
+build_type: 机制推演型 + 调节效应型（动态收敛网）
+source_papers: ["gulati_1999_where_do_interorganizational_networks (AJS)"]
+verification_status: VERIFIED — expert_audit_override (Gulati 系单源裁定 2026-09-06, paper_count=1)
+story_fidelity: section_variant
+-->
+
+**适用场景**: 多驱动（外生压力族 + 网络/嵌入机制族）已各自推导主效应并收敛于同一 DV 后，引入一个系统水平构念（结构成熟度类 emergent property），让它同时承担两种假设角色——直接信息效应 + 各驱动假设的权重再分配器（早阶段外生主导→晚阶段嵌入主导）。
+
+**骨架**:
+```
+[收敛基线] H1-Hk：外生驱动 + 各嵌入机制 → [DV]（各自主效应，见机制-假设耦合三元组）。
+[系统构念引入] We define [系统构念] as an emergent systemic property that captures [结构特征]. [其信息价值论证 + 两极 caveat（非线性保留）]。
+[直接效应] H[k+1]: The probability of [DV 事件] increases with [系统构念水平].
+[权重再分配·资格论证] Given the shared focus of these factors on [共同理论轴：信息可得性], we expect [系统构念] to moderate the relative influence of [驱动族] on [DV].
+[阶段叙事] In early periods, when [系统构念低] and thus likely to contain limited [信息], [外生驱动] are likely to be the primary driver. As [系统构念] increases, [外生驱动] have a diminishing influence. H[k+2]: The effect of [外生驱动] on [DV] decreases with [系统构念].
+[选择性豁免] We also expect [系统构念] to moderate [机制族], although not all [机制] are likely to be moderated. [豁免机制级理由：其信息不依赖整体结构]。H[k+3]: The effect of [被绑定机制] on [DV] increases with [系统构念].
+```
+
+**为什么有效**: 同一 moderator 被赋予两种角色（直接效应 + 权重再分配），用一个"共同理论轴"（信息可得性贯穿系统与组织两层）证明其调节资格，避免"为什么是它在调节"的追问；阶段叙事把交互假设写成理论动态而非统计需要——早/晚两端都论证（功能等价于 high/low 双边）；显式豁免防止调节声明过度概括，并为"哪些交互应该显著、哪些不应"给出可检验的区分。
+
+**注意事项**: 系统构念必须有独立构念地位（emergent property 定义+与近邻构念的区分），不能只是时间的代理；豁免论证要给机制级理由（信息是否依赖整体网络）而非"未检验"；阶段叙事两端都要覆盖；豁免+绑定共用同一理论轴。
+
+**反模式**: moderator 无独立构念地位；调节所有机制而不作选择性豁免；阶段主导权声明无假设形式化；系统构念定义与 legitimating 效应（近邻流行解释）不作区分。
+
+**与近亲变体的区分**: 变体 D（同一现象双产物→双驱动收敛）是静态收敛（两小节桥接）；变体 E（基线假设揭示转折）是 IV 内部异质性分极；本变体在收敛**完成后**引入第三个系统水平构念作为权重再分配器，产出"驱动的调节"而非新主效应或反向主效应。
+
+**原文锚点** (Gulati 1999, AJS):
+> "In early periods, when a network is relatively undifferentiated and thus likely to contain limited information about potential partners, organizations may still be prompted to cooperate by exogenous pressures that influence their interests. Consequently, exogenous factors are likely to be the primary driver of tie formation in the early stages of a network."
+
+<!-- wb:gulati_1999_where_do_interorganizational_networks:c4_stage_reallocation_of_driver_weights -->
 <!--
 pattern_id: typology_decomposed_parallel_signal_hypotheses_coverage
 build_type: 机制推演型（构念分解组织）；跨类型（任何"一构念分N类→每类一主效应"设计）
@@ -898,7 +1040,7 @@ source_papers: ["higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"]
 confidence: low-medium（单篇来源，EMERGING 待第二篇交叉验证）
 -->
 
-### 变体 D：类型学分解 → 并行信号假设 → 覆盖范围假设（Typology-Decomposed Parallel Signal Hypotheses → Coverage Hypothesis）
+### 变体 G：类型学分解 → 并行信号假设 → 覆盖范围假设（Typology-Decomposed Parallel Signal Hypotheses → Coverage Hypothesis）
 
 **适用场景**: 一个 focal 构念可按稳定理论维度分解为 N 个类型（各类型对应被评价质量的不同侧面，如按市场关系位置分上游/同业/下游），每个类型用同构机制独立推演出一个并行主效应假设，最后以"跨类型覆盖/互补"假设收束——多类型并存优于任一单一类型。
 **排列模式**: Typology Setup → [Type-k Branch → H_k] × N → Coverage Branch → H_{N+1}

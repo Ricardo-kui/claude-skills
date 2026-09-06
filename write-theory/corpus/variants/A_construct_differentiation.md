@@ -142,6 +142,80 @@ These differences set up our inquiry into how [A] and [B] coevolve.
 > **范文**: Habel et al. 2016 (JM), T1 段落
 > **与标准构念辨析型的区别**: 标准型区分两个 IV 构念并推导不同效应；本变体区分多个候选 DV 并论证为何选择 focal DV
 
+
+### 变体 A：形成过程辨析（Formation-Process Differentiation）
+
+<!-- pattern_id: formation_process_differentiation; build_type: 构念辨析型; source_papers: ["Pfarrer_Pollock_Rindova_2010_AMJ"]; confidence: medium -->
+
+**适用场景**: 两个易混淆构念不仅内容维度不同，且"怎么来的"不同——需要用形成过程差异解释为何两构念带来不同行为倾向/后续结果。
+**排列模式**: Warrant-Embedded（每个形成过程段嵌入文献 + 样本实例）
+**范文来源**: Pfarrer, Pollock, and Rindova (2010), AMJ — reputation vs celebrity
+
+**骨架**:
+```
+[核心论点句] A core argument we advance in this article is that the different types of
+[asset quality] associated with [Construct A] and [Construct B] reflect differences in
+the processes through which they are built.
+
+[A 的形成过程] Prior research has suggested that firms develop [A] by [process A:
+consistent behaviors resulting in outcomes recognized and valued by audiences]
+([citations]). [实例: examples of high-[A] firms in our sample include ...]. The public
+knowledge ... can reduce uncertainty ..., thereby resulting in [behavioral consequence
+of A's process].
+
+[B 的形成过程] In contrast to [A], [B] is created when [process B: actors cast firms as
+protagonists in dramatic narratives of nonconforming actions] ([citations]). [实例:
+examples of high-[B] firms include ...].
+
+[辨析→预测过渡] Extending the preceding arguments about the differences in the behaviors
+and outcomes through which [A] and [B] are gained leads us to expect possession of these
+assets to be associated with different propensities to [focal behavior].
+
+[双要素收敛] In sum, both the [capabilities] and [incentives] of [A]-firms are less
+likely to lead them to [behavior] than firms without this asset; and both the [actions]
+and [incentives] of [B]-firms are more likely to lead them to [behavior]. Stated more
+formally: [镜像配对假设组].
+```
+
+**为什么有效**: 过程差异先于结果差异被建立——读者先接受"两构念生成机制不同"，后续方向相反的预测就显得必然；"capabilities + incentives / actions + incentives" 双要素收敛让预测不是单因素断言。
+**注意事项**: 过程差异必须真的映射到结果差异（每个过程要素都要在预测段有承接）；样本实例段承担具象化功能，沿用骨架时不可整体省略。
+**反模式**: 只罗列两构念定义差异、不追溯形成过程，就把行为倾向差异归因于构念本身——读者会问"差异从哪来"。
+**原文锚点** (Pfarrer et al. 2010, AMJ):
+> "A core argument we advance in this article is that the different types of social approval associated with a high level of reputation (high reputation) and celebrity reflect differences in the processes through which they are built." ... "Extending the preceding arguments about the differences in the behaviors and outcomes through which reputation and celebrity are gained leads us to expect possession of these assets to be associated with different propensities to surprise the market."
+
+<!-- wb:pfarrer_pollock_and_rindova_2010:formation_process_differentiation -->
+
+
+### 变体 B：相对排序跨情境反转（Context-Dependent Ordering Reversal of A vs B）
+
+<!-- pattern_id: relative_ordering_reversal; build_type: 构念辨析型; source_papers: ["Pfarrer_Pollock_Rindova_2010_AMJ"]; confidence: medium -->
+
+**适用场景**: 构念辨析型论文在两个结果情境中比较 A 与 B 的相对效应，且理论推导表明相对排序随情境翻转（情境1: B>A；情境2: A>B）——辨析不止"谁更强"，而是"何时换位"。
+**范文来源**: Pfarrer, Pollock, and Rindova (2010), AMJ — H3c（正意外中 celebrity 反应强于 reputation）vs H4c（负意外中 reputation 缓冲强于 celebrity）
+
+**骨架**:
+```
+[情境1 排序假设] [H]: [B]-firms experience [stronger outcome] than [A]-firms, because
+[B 的机制要素] converge to strengthen [effect], whereas [A 的机制要素] weaken it.
+
+[情境2 排序假设引入] With regard to the relative effects of [A] and [B] on [outcome2],
+different expectations again appear plausible. First, to the degree that ..., one could
+argue that [same ordering as context 1]. However, [A 的机制要素] is more likely to
+[buffer mechanism]; further, [B 的机制要素] may compete with [processing tendency],
+weakening the overall effect of [B].
+
+[排序反转收敛] Therefore, [research/theory] provides evidence to support the argument
+that [A] is a stronger [buffer/driver] in the case of [outcome2] than [B] is.
+```
+
+**为什么有效**: 相对排序反转把辨析从"静态强弱"升级为"条件化强弱"，直接兑现辨析的理论增量（差异产生可检验的换位预测）；先承认 "one could argue 同序" 再推翻，预先化解最明显的竞争直觉。
+**注意事项**: 反转必须由两构念的机制差异驱动（而非事后解释）；两个情境复用同一套辨析维度，否则反转像拼凑。
+**反模式**: 两个情境各自引入新机制解释排序却不回扣核心辨析维度——变成两个独立 mini-theory。
+**原文锚点** (Pfarrer et al. 2010, AMJ):
+> "Therefore, psychological research provides evidence to support the argument that high reputation is a stronger buffer in the case of negative events than celebrity is."
+
+<!-- wb:pfarrer_pollock_and_rindova_2010:relative_ordering_reversal -->
+
 ### 段落功能地图
 
 | 段落 | 功能 | 推荐词数 | 必须度 |

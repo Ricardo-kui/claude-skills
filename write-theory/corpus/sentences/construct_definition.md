@@ -363,6 +363,111 @@ First, they infer [inference 1], which shapes [DV dimension 1]. Second, they ass
 
 ---
 
+
+
+
+### 变体 N：关系构念三方角色例示定义（A-B-C Worked-Example Definition，Gulati_Westphal_1999 型）
+
+<!--
+pattern_id: relational_construct_worked_example
+build_type: 跨类型（句式级）
+source_papers: ["gulati_westphal_1999_cooperative_or_controlling (ASQ)"]
+confidence: high
+status: VERIFIED — expert_audit_override (Gulati/Westphal 系单源裁定 2026-09-06, paper_count=1)
+sentence_position: construct_definition
+-->
+
+**句位**: T1/构念界定段——定义抽象关系构念（间接关系、第三方结构、桥接位置）时，用命名角色的三方工作示例替代纯抽象定义。
+
+**句式骨架**:
+```
+[抽象定义句] An [relational construct] or [synonym] could provide [actors]
+with [function].
+[例示句] For example, [actor A] is exposed to [second-hand 信息/资源] about
+[actor B] when [A] has [共同关联] with [third actor C], who [与 B 的关系].
+```
+
+**为什么有效**: 关系构念的抽象定义（"通过第三方的间接连接"）读三遍也难形成心智模型，A-B-C 命名角色示例一次就固定了结构；示例同时预埋了后文机制推演的主角（本文 P18 的 gossip 推演直接复用同一 A/C/B）。
+**注意事项**: 角色字母要全篇沿用（后文机制推演复用同一 A/B/C，不得换字母）；示例选构念的原型情形（单一直接第三方），不涵盖多重路径时不宣称穷尽。
+**反模式**: 用真实公司/人名做示例（示例应可迁移）；示例与后文机制推演的角色脱节。
+**与近亲变体的区分**: 变体 A-E2 是定义来源策略（采纳/分歧综合/权威引用/对称界定/透镜表格/维度独立性）；本变体处理"抽象关系结构如何被一次性看懂"，是例示设备而非定义来源策略，可与任一来源变体叠加使用。
+**原文锚点**:
+> "For example, a top manager A is exposed to second-hand information about outside director B on his or her board when A has a common appointment on another board with a third director C, who sits on B's board."
+
+
+<!-- wb:gulati_westphal_1999_cooperative_or_controlling:sentence_relational_construct_worked_example -->
+
+### 句式 N：综述合成采纳定义 + 操作化对齐（Adopt-from-Review Definition with Operationalization Alignment）
+
+<!-- pattern_id: definition_adoption_operationalization; build_type: 跨类型（句式级）; source_papers: ["Pfarrer_Pollock_Rindova_2010_AMJ"]; confidence: medium; sentence_position: topic/definition -->
+
+**句位**: T1 构念定义拍——有争议构念不另造新定义，而是从综述文献合成定义并声明采纳理由。
+
+**句式骨架**:
+```
+[视角分歧呈现] [Construct] research has been conducted from a variety of theoretical
+perspectives, which has led to different definitions ... [perspective 1] use the term
+to refer to [perception type 1]. In contrast, [perspective 2] use the term to refer to
+[perception type 2].
+
+[综述合成] A [recent review] ([citation]) found [synthesis finding]. This review
+suggested that [construct] may be best understood as [synthesized definition]
+([citations]).
+
+[采纳声明 + 操作化对齐] This is the definition we adopt in this study, as it also
+reflects most [field] research, which has operationalized [construct] using [dominant
+operationalization class] ([citations]).
+
+[对照构念引入] In contrast to [Construct A], the concept of [Construct B] has been
+developed recently to capture [combined defining features] ([citation]).
+```
+
+**变体**:
+- "This is the definition we adopt in this study, as it also reflects most [empirical] research, which has operationalized [construct] using [operationalization class]" — 采纳理由 = 与主流操作化对齐
+- "the combination of [feature 1] and [feature 2] gives [B] its distinctive properties and effects" — 用要素组合声明构念独特性
+- "Given these definitions, several clarifications about the distinctions between the two [constructs] are important. First, ... Second, ..." — 定义后的编号辨析启动句
+
+**为什么有效**: "不另造新定义"声明 + 操作化对齐，把定义选择从品味问题变成与研究惯例的可辩护决策；"In contrast to A, the concept of B has been developed recently" 一句同时完成 B 的定位（新近、互补）与 A/B 衔接。
+**注意事项**: 采纳的定义要素要能支撑后续 First/Second 辨析维度；若本文贡献正在于重定义构念，不要用此骨架（那是修正型定义）。
+**反模式**: 把视角分歧写成文献综述清单而不收敛到"我们采纳哪个"；或采纳声明与实际操作化脱节。
+**原文锚点** (Pfarrer et al. 2010, AMJ):
+> "This is the definition we adopt in this study, as it also reflects most empirical management research, which has operationalized reputation using various rankings that capture the recognition that a set of firms have received in a given organizational field on a variety of attributes."
+
+<!-- wb:pfarrer_pollock_and_rindova_2010:definition_adoption_operationalization -->
+
+### 术语表命名段（Local Terminology Convention，Fini 2017 型）
+
+**句位**: 语境建制段末（T1/T2 交界），机制推演开始前的命名检查点。
+
+**适用场景**: 当机制涉及多个角色与多来源信号、且后文需高频回指时，用单段术语表一次性完成"角色→术语"赋值（candidates / peer audience / external audience / endogenous-exogenous indices），使后续机制段零成本复用术语。与标准 "We define X as..." 构念定义判别：本句式不引入新理论构念，而是给**情境角色与信号类别**起本地名字——定义的是语词而非构念。
+
+**句式骨架**:
+```
+[基线情境声明] Our baseline scenario is that [actors] are evaluated for [purpose] by [evaluators] who judge them, inter alia, on the basis of [prior evaluations].
+[术语赋值] We use the following terminology that defines [actors] as "[term 1]", who are evaluated by [evaluator group] which we refer to as "[term 2]".
+[第三术语] Furthermore, [candidates] have observable previous evaluations conferred by [external group], which constitutes an "[term 3]".
+```
+
+**变体**:
+- "We use the following terminology that defines ..." — 显式术语表声明（全量赋值）
+- "Throughout, we refer to [A] as '[term]' and to [B] as '[term]'." — 紧凑双赋值变体
+
+**原文锚点** (Fini, Jourdan & Perkmann 2017, AMJ):
+> "We use the following terminology that defines academic scientists who apply for research grants as 'candidates', who are evaluated by their scientific peers which we refer to as 'peer audience'."
+
+**为什么有效**: 多角色多信号的机制推演最怕指代漂移（scientist/applicant/candidate 混用）；术语表段把命名一次性前置，后续 "endogenous indices" "exogenous indices" 等复合术语直接搭建在赋值结果上，机制段可保持零重定义密度。
+
+**注意事项**:
+- 术语赋值不替代理论构念定义——构念仍需在 T1 定义（本句式只管角色命名）
+- 术语数量应与机制角色数匹配（每角色一术语），不要为修辞加术语
+- 术语一经赋值全文不得换称
+
+**反模式**: 在机制段中途重新命名角色；或术语表与假设表述中的称谓不一致。
+
+<!-- wb:fini_jourdan_perkmann_2017_amj:local_terminology_convention_paragraph -->
+
+<!-- wb:fini_2017_social_valuation_across_multiple_audiences_the_int:local_terminology_convention_paragraph -->
+
 ### Quintessential-Response-Variable 正当化 Topic 句
 
 **句位**: topic（构念/DV 选择段的段首论点句——在理论透镜与响应机制之间，为"为什么选这个行动变量作为焦点"给出一句正当化）。

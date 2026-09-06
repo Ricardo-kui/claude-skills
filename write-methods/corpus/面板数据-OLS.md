@@ -525,6 +525,24 @@ updated: 2026-08-13
 **适用**: 焦点预测变量为时不变稳定特质（政治意识形态、人格、性别、出生地、教育背景、创始人身份）的 panel 研究；任何 firm FE 会"杀死"主效应的情境。
 **跨 skill 对齐**: `../write-results/corpus/OLS-FE.md`（稳健性中可用 LPM + firm FE 作方向性对照，但主模型用 GEE 保留时不变 IV）。
 
+
+### 变体 72: M6 同构替代目标控制 — 同一构念对同类目标重算以封堵"普遍信念"替代解释 (1篇高价值)
+
+**来源论文**: DesJardine, Li & Shi (2025, AMJ)
+**原始句锚点**: As the relation between rival– (target firm–)MSCI CIO and MSCI ESG rating might be driven by investors' beliefs in the value of ESG, we controlled for rival–other agency CIO ... to capture common ownership in other publicly traded ESG rating agencies.
+**验证状态**: EMERGING（单篇）
+**写入日期**: 2026-09-05
+**槽位**: M6
+**骨架**:
+> As the relation between [IV] and [DV] might be driven by [actors'] [general beliefs/preferences] in the value of [DV domain], we controlled for [unit]–[other target] [construct] and [focal unit]–[other target] [construct] to capture [the same construct] with respect to [other publicly traded members of the same target class].[^n（脚注枚举替代目标名单）]
+
+**与原骨架差异**: 区别于变体 37（rival 镜像控制——同一变量聚合到对手侧、同一目标）与变体 40（双面 because）——本变体是**同构（isomorphic）而非镜像（mirror）**：把 focal 构念原式重算到**同类替代目标**上入模。说服逻辑：若效应来自"行为者对该机构类别的普遍信念/偏好"（omitted variable），同构控制应吸收之；focal 构念在控制后仍有解释力，则支持理论化的**特定目标**机制。一句话完成（点名替代机制 + 同构重算 + 脚注列名单），把本应放 robustness 的 placebo 式检验前置为 baseline 控制。
+**诚实边界**: 前提是存在可测同一构念的同类替代目标（其他上市评级机构/媒体/认证方）——目标类稀缺时不可用；同构控制吸收的是"类别层面普遍信念"，若替代解释是"对某替代目标本身的特定偏好"则需对该目标逐一控制；控制入模后 focal 系数解释变为"net of 类别信念"效应，Results 须相应措辞。
+
+**适用**: 第三方中介/评估者设计（评级、认证、媒体、审计、分析师）中"行为者对整个机构类别有普遍偏好"类替代解释的封堵；亦可推广为 sibling-target placebo 控制。
+
+<!-- wb:desjardine_2025_information_based_competition_the_case_of_ri:isomorphic_alternative_target_control -->
+
 ### 变体 23: M1 行业统计 + 先例对齐的设置辩护 (1篇高价值)
 **来源论文**: Pupovac, Astvansh, Carrillat & Legoux 2026 (POM)
 **原始句锚点**: Measuring recalls' contagion from a manufacturer-customer to a supplier requires an empirical setting in which manufacturers and suppliers are interdependent in the product market (Cho et al., 2021). The automotive industry meets this requirement because suppliers produce 70% of an automobile, on average (McGee, 2017), suggesting high interdependence.
@@ -784,6 +802,24 @@ updated: 2026-08-13
 **适用**: common ownership、共同持股、双角色重叠、跨侧乘积构念的研究。
 
 ---
+
+
+### 变体 73: M5 共有制子集镜像调节 — 聚合域限定为理论激活的传导子集 (1篇高价值)
+
+**来源论文**: DesJardine, Li & Shi (2025, AMJ)
+**原始句锚点**: We measured rival ESG media controversies as the average value of ESG media controversies among rivals with common institutional ownership with MSCI.
+**验证状态**: EMERGING（单篇）
+**写入日期**: 2026-09-05
+**槽位**: M5（镜像调节对：H2a/H2b、H3a/H3b 双侧）
+**骨架**:
+> For [H2a] and [H2b], our moderators are [rival-side construct] and [target-side construct], respectively, which capture [the reputational force] faced by [portfolio firms] and [target firms] based on their [domain activities]. Following existing studies ([citation]), we used [database] to construct these variables. [Database] screens [N] [sources] to detect [issue types] ... We used this coding to measure [target-side construct] as [operationalization] in each [unit-year]. We measured [rival-side construct] as the average value of [the construct] among [rivals with common institutional ownership with the intermediary].
+
+**与原骨架差异**: 区别于变体 37（镜像控制——聚合于全部 FIC-100 对手、用于 M6 控制）——本变体用于 M5 调节，且**聚合域限定为共有制子集**（rivals with common ownership with the intermediary，非全部对手）：只有与中介机构有共同所有权的对手才在传导链上，聚合域本身携带理论。与变体 42（调节 dummy 效度链）的区别：本变体调节变量是连续/百分比聚合量，效度由数据库编码能力（severity×reach 加权）承担。同一构念 target 侧与 rival 侧操作化可不对称（ln 加权计数 vs 子集均值百分比）。
+**诚实边界**: 子集镜像使调节变量与 IV 共享同一对手集合，共线风险升高（子集大时趋近全对手均值）；须报告子集镜像与全对手镜像的相关或并报全对手版本稳健性；双侧操作化不对称（计数变换 vs dummy）时交互解释须注明量纲。
+
+**适用**: 多行为者中介设计（共同所有权、银团、连锁董事、分析师覆盖）中调节经由"特定连接子集"传导的研究。
+
+<!-- wb:desjardine_2025_information_based_competition_the_case_of_ri:common_owner_subset_moderator_mirror -->
 
 ### 变体 37: M6 rival 镜像控制变量惯例 — 引用前例 + 命名规则 + 聚合方式 (1篇高价值)
 
@@ -1203,7 +1239,134 @@ Our analysis of [outcome] consists of three progressive steps. In Step 1, we inc
 <!-- wb:anand_mukherjee_2024_learning_from_failures_di:m7_progressive_three_step_narrative -->
 
 
-### 变体 70：M2 源清单生存者条件化修复 — 回收消亡事件单元 + 风险集合并（higgins_2003_OS 型）
+### 变体 70：M2 自维护档案 vs 第三方收割库的比较性数据质量辩护（fini_jourdan_perkmann_2017 型）
+
+**来源论文**: Fini, Jourdan & Perkmann 2017 (*Academy of Management Journal*)
+**原始句锚点**: "This means that our publication records are author-approved, and hence more accurate than records downloaded from bibliographic databases which frequently suffer from name disambiguation issues (Azoulay, Stellman, & Zivin, 2006)."
+**验证状态**: EMERGING（单篇；`section_variant`）
+**槽位**: M2（数据来源与样本漏斗）
+**骨架**:
+> We extracted [construct] data from a system that mandates [actors] to edit their [records] as harvested from [upstream databases], and publish them as an edited, approved list on [an official channel]. This means that our records are [approved by the actors themselves], and hence more accurate than records downloaded from [third-party harvested databases], which frequently suffer from [named quality failure mode — e.g., entity name disambiguation] ([citation]).
+**与原骨架差异**: 变体41 辩护"为什么必须自建档案"（数据可得性），变体55 的 provenance 链是"缺口→补全→能力声明"；本变体辩护"自维护档案为什么比第三方收割库更准"——把数据质量写成**比较性主张**：制度化强制自维护机制（收割后必须人工核订）→ 官方渠道发布 → 点名第三方库的失效模式（name disambiguation）→ 权威 citation 锚。适用于有 actor 自维护记录制度的档案情境（大学人事/发布系统、投稿系统、监管申报库）。
+**诚实边界**: 比较性主张以制度化编辑机制为前提——没有强制核验环节就退化为普通来源声明，不得套用 "more accurate" 措辞；点名失效模式须有 citation 支撑，不得凭空指控第三方库。
+
+<!-- wb:fini_2017_social_valuation_across_multiple_audiences_the_int:m2_author_curated_records_data_quality_defense -->
+
+
+### 变体 71：M1 设置含义调查佐证链 — 预先封存"活动被污名化"替代解读（fini_jourdan_perkmann_2017 型）
+
+**来源论文**: Fini, Jourdan & Perkmann 2017 (*Academy of Management Journal*)
+**原始句锚点**: "Results from a 2013 survey among the Minerva faculty suggest that while collaboration with industrial partners is seen as mission-critical ... it is perceived as serving the ultimate purpose of advancing the frontiers of science, rather than as a goal in itself."
+**验证状态**: EMERGING（单篇；`section_variant`）
+**槽位**: M1（研究情境设置）
+**骨架**:
+> [Setting institution] combines [tension_1 — e.g., scientific-excellence logic] and [tension_2 — e.g., commercialization mandate], making it an ideal context to observe [multi-audience evaluation]. Results from a [year] survey among [site actors] suggest that while [focal cross-audience activity] is seen as mission-critical both in terms of [its resource contribution] and [its effect on the primary mission], it is perceived as serving [the primary mission], rather than as a goal in itself.
+**与原骨架差异**: 变体41 的 Setting rationale 槽位只用一句陈述双制度张力；本变体补上**证据链**——用设置内部的调查数据证实 actor 自己如何理解该活动的含义（服务于主使命而非目标本身），预先封存"跨受众活动被成员视为污名/怨恨"的替代解读：若科学家普遍抵触产业合作，identity proximity 的调节解释将失效。适用于任何"跨边界活动可能被成员负面解读"的单一组织情境。
+**诚实边界**: 调查须为设置内真实施测并注明年份；一句话概括感知分布即可，不得把调查结果写成外部效度主张（单组织调查不支撑跨组织推广）。
+
+<!-- wb:fini_2017_social_valuation_across_multiple_audiences_the_int:m1_setting_dual_tension_survey_corroboration -->
+
+
+### 变体 74: M2 可得性损耗对比 + 范围限制保守检验声明 (pfarrer2010 型)
+**来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
+**原始句锚点**: "Availability of analysts' estimates ... reduced the 4,365 firm-year full sample to 3,107 firm-year observations. ... These characteristics suggested our sample provided a conservative test of our hypotheses since they result in some restriction of range to primarily large and well-performing firms."
+**验证状态**: EMERGING
+**写入日期**: 2026-09-05
+**槽位**: M2
+**骨架**:
+> Availability of [analyst-forecast data] for each year reduced the [starting_N] full sample to [final_N] firm-year observations. T-tests comparing the full and reduced samples showed that the firms with [data] available had significantly more [attribute_1] ([mean_A] vs. [mean_B], p < [.05]), greater [attribute_2] ([mean_A] vs. [mean_B], p < [.01]), and higher [attribute_3] ([mean_A] vs. [mean_B], p < [.001]) than firms with missing [data]. These characteristics suggested our sample provided a conservative test of our hypotheses since they result in some restriction of range to primarily [restricted_population].
+**与原骨架差异**: 漏斗收尾只报「降到 N」是常态——Pfarrer 多两拍：(1) **损耗方向量化**——全样本 vs 缩减样本三属性 t 检验，数字齐全，把数据可得性损耗的选择效应写透明；(2) **保守检验 reframe**——不辩护代表性（与变体 67 的「无显著差异→安心」相反），而是承认缩减样本偏大偏好，并把 restriction of range 重构为使假设更难获支持的 conservative test。与变体 65（控制相关方向保守性）同属「偏误对我不利」家族，但作用于样本层而非控制层。适用于任何因数据可得性收缩样本的档案面板。
+
+<!-- wb:pfarrer_pollock_and_rindova_2010:m2_attrition_conservative_test -->
+
+
+### 变体 75: M6 1/n 衰减加权历史自控制 + 权重窗稳健性 (pfarrer2010 型)
+**来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
+**原始句锚点**: "Drawing from organizational research on learning and contagion (...), we generated a weighted sum that assigned a weight of 1/n for each year prior to a focal year ... We constructed 15-, 10-, 5-, and 3-year summed variables, utilizing the 1/n 'decay' rates for each of the variables, and obtained the same results for each alternative."
+**验证状态**: EMERGING
+**写入日期**: 2026-09-05
+**槽位**: M6
+**骨架**:
+> We used several variables to control for multiple aspects of [units'] histories that could affect our relationships of interest. Drawing from organizational research on [learning and contagion] ([cites]), we generated a weighted sum that assigned a weight of 1/n for each year prior to a focal year for [past outcome] (to control for a [halo] effect), prior [focal behavior A and B] (to control for "[habitual actors]"), prior [related behavior] (to control for [mechanism]), and prior [focal assets] (to control for the historical levels of these assets), with n designating the number of years prior to the focal year. We constructed [15-, 10-, 5-, and 3-year] summed variables, utilizing the 1/n "decay" rates for each of the variables, and obtained the same results for each alternative.
+**与原骨架差异**: 控制变量的 because 密度 corpus 已充分（变体 1 分层 because / 变体 40 双面 because / 变体 14 全谱系）——本变体的新 HOW 是**历史自控制的功能形式**：(1) 理论出口（learning and contagion 文献）直接正当化 1/n 递减权重——近因权重大、远因衰减，与习惯形成/传染的机制时间结构对齐；(2) 每个 prior 项括号内命名被堵的机制（halo effect / "habitual surprisers" / earnings guidance / 历史资产水平），控制即抗辩；(3) 把 focal 资产自身的 prior 水平也作控制，防「资产惯性」替代解释；(4) 权重窗（15/10/5/3 年）本身做稳健性并一句收口。适用于事件可重复发生（surprise、召回、违规、融资）的面板——「是否惯犯」需历史加权聚合而非单年滞后。
+
+<!-- wb:pfarrer_pollock_and_rindova_2010:m6_decay_weighted_prior_behavior_controls -->
+
+
+### 变体 76: M2 双名单合并 + 重叠率验证 (pfarrer2010 型)
+**来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
+**原始句锚点**: "We combined information from the two lists because Fortune only listed the top 10 firms in an industry between 1997 and 1998, and only the top 20 firms between 1999 and 2005. Of the 25 different firms listed in Fortune's top 10/top 20 list between 1999 and 2005, 22 were also named in the Wall Street Journal (WSJ)/Harris top 25, showing strong overlap between the two lists and validating our choice to combine the information from them."
+**验证状态**: EMERGING
+**写入日期**: 2026-09-05
+**槽位**: M2/M4
+**骨架**:
+> Following past research, we obtained data on [unit status] using the rankings in [list A] ([cites]), as well as [list B] ([cite]), and coded a [unit] as [high status] if it appeared among the [top N] firms on either list in a given year. We combined information from the two lists because [list A] [coverage drift: only listed the top 10 in some years and the top 20 in others]. Of the [N_A] [units] listed in [list A] in the comparable period, [N_overlap] were also named in [list B], showing strong overlap between the two lists and validating our choice to combine the information from them.
+**与原骨架差异**: 区别于变体 16（多源合并求全 + 防 double-counting）——本变体合并的动因是**单源覆盖口径随年份漂移**（list A 某些年只发 top 10、另一些年 top 20，单源构成时变缺口），并用**重叠率（22/25）作合并决策的经验验证**而非仅引惯例；编码规则是「任一名单达标即编码」的并集，重叠证据在合并句之后收口。三拍结构：并集规则→漂移动因→重叠验证。适用于榜单/评级/名录类构念的多源年份数据。
+
+<!-- wb:pfarrer_pollock_and_rindova_2010:m2_dual_list_overlap_validation -->
+
+
+### 变体 77: M8 操作化定义稳健性 — 未列表替代阈值段 (pfarrer2010 型)
+**来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
+**原始句锚点**: "To ensure that our definition of material surprises did not drive results, in analyses not reported here we also tested definitions based on top and bottom percentile cutoffs of 20, 30, and 40 percent ... The results were substantively the same as those reported here."
+**验证状态**: EMERGING
+**写入日期**: 2026-09-05
+**槽位**: M8
+**骨架**:
+> The final sample included [N1 material positive X], [N2 material negative X], [N3 exact threshold], and [N4 sub-threshold X]. To ensure that our definition of [material X] did not drive results, in analyses not reported here we also tested definitions based on [alternative_1: percentile cutoffs of 20, 30, and 40 percent] (cf. [cites]), as well as [alternative_2: an absolute threshold on X] (cf. [cites]). The results were substantively the same as those reported here.
+**与原骨架差异**: micro-templates/robustness-foreshadowing 只有一句预告；非线性模型 变体 8 是 Results 层的稳健性三角组织——本变体是 **Methods 内 DV 定义层的完整执行段**：(1) 被检对象明确是操作化定义本身（our definition of X did not drive results），与估计器/样本稳健性分开声明；(2) in analyses not reported here 诚实标注未列表地位，不假装是正文表格；(3) 每个替代定义带 cf. 引用，锚定到 field 惯例（这些 cutoff 别人也用过）；(4) substantively the same 收口（非 statistically identical）。前置可加四类构成计数（N1–N4）让阈值后果可审计。适用于任何依赖 materiality/cutoff 定义的二分 DV。
+
+<!-- wb:pfarrer_pollock_and_rindova_2010:m8_definition_robustness_untabulated -->
+
+
+### 变体 78: M6 冲突证据→无假设控制声明 + 池化样本行业中位数归一（gulati1999 型）
+
+**来源论文**: Gulati 1999 (Strategic Management Journal, 20(5), 397-420)
+**原始句锚点**: "Given the conflicting claims about the role of material resource considerations for alliances, I did not put forth specific hypotheses for them. Following prior research, however, I included several commonly considered material-resource-based considerations"（同段）
+**验证状态**: VERIFIED（单源；expert_audit_override 2026-09-05）
+**写入日期**: 2026-09-05
+**槽位**: M6
+**骨架**:
+> [文献综述定位] While the primary focus of this study is [focal construct family], there may also be [alternative consideration family] that could affect [DV]. [冲突证据归纳] Evidence on the effects of [these factors] is mixed and in many instances conflicting: [some conclude direction A] ([citations]), [others have observed direction B] ([citations]), still others suggest [the relationship may be nonlinear] ([citations]). [无假设声明] Given the conflicting claims about [the alternative family], we did not put forth specific hypotheses for them. Following prior research, however, we included several commonly considered [considerations] ... [归一化 because] We used [measure], defined as [formula] ... This was normalized to the [industry median] because the sample was pooled across [multiple industries].
+**与原骨架差异**: 常规 M6 变体给每个控制变量配 because（堵特定替代解释）；本变体处理**证据冲突族**——当一类前置因素文献结论互相矛盾、无法给出方向性预测时：不回避（完整综述冲突史，含正/反/非线性三方位引用）、不硬编假设（显式说 did not put forth specific hypotheses）、但声明"遵循先行研究"全部纳入，并用预测符号表中 NP（no prediction）列把"无方向"状态显式登记给审稿人。配套句：跨行业池化时把财务控制按行业中位数归一，because 从句直接绑定池化设计本身（而非变量语义）。区别于变体 59（假设→符号方向预登记）：变体 59 登记的是**有**假设变量的方向；本变体登记的是**无**假设控制的 NP 状态。
+**诚实边界**: "无假设"不等于"无方向预期"——Results 不得对 NP 控制做选择性解读，否则声明失去一致性；NP 控制系数只在审稿人问及时讨论。冲突综述本身不消除混淆，只说明为何不将其升格为假设。
+
+<!-- wb:gulati_1999_network_location_and_learning_the_influence_of_n:m6_no_hypothesis_controls_conflicting_evidence -->
+
+
+### 变体 79：备择解释具名→控制变量化→可检验判据+边界让步（Named-Alternative-as-Control，Gulati_1999_AJS 型）
+
+<!--
+pattern_id: named_alternative_as_control
+build_type: 面板/事件设计通用（M6 控制变量段——备择解释排除拍）
+source_papers: ["gulati_1999_where_do_interorganizational_networks (AJS)"]
+verification_status: VERIFIED — expert_audit_override (Gulati 系单源裁定 2026-09-06, paper_count=1)
+story_fidelity: section_variant
+-->
+
+**适用场景**: 某个 rival 理论对该领域同一条经验规律有现成的竞争解读（如"网络效应"vs"合法性跟随"、"能力"vs"声望"），且 rival 机制有公认代理变量可买——控制变量段最有力的一拍。
+
+**骨架**:
+```
+[备择机制陈述] An alternative interpretation for [the focal dynamic] is [rival theory] linking [X] to [rival mechanism]. [Rival theory] claims that [mechanism in one sentence, with canonical citation]. Applied to this context, it would suggest that [rival reading of the very pattern the paper explains].
+[利害句] If this were the case, [focal construct] might simply be capturing [rival process], rather than [the effects proposed in our model].
+[控制变量化+判据预声明] To account for this alternative explanation, we included [a named control], defined as [operationalization]. If the effect of [focal construct] is only capturing [rival process], the inclusion of [control] should make the effect of [focal construct] insignificant, thus bringing into question the validity of our claims.
+[边界让步] The [focal] model, however, does not preclude [a rival effect], because [rival process] and [focal process] effects need not be mutually exclusive.
+```
+
+**为什么有效**: rival 解读被赋予最大善意——机制陈述、情境翻译、利害推演三步完整，然后才被控制变量化；判据预声明（"inclusion should make it insignificant ... bringing into question"）把显著性检验变成预登记的裁决规则，读者知道结果无论何向都有解读位；边界让步句是点睛之笔——承认两机制不互斥，既堵住"你只是没测出 rival"的反攻，又为 Results 侧两系数并存的格局预留理论空间。
+
+**注意事项**: 判据句是双向保险（rival 显著+焦点不显著=质疑自己；两者并存=模型声明不互斥）——写作时须与 Results 实际格局核对；rival 机制须有公认代理（无代理时改用设计排除）；"need not be mutually exclusive" 只用于真可共存的机制对，不得用来豁免一切不一致。
+
+**反模式**: rival 解读只用半句稻草人带过；控制变量入了名但无判据（"we control for X"）；让步句写成对 rival 的全面投降；判据预声明与 Results 报告格局矛盾。
+
+**与近亲变体的区分**: 家族 M6 既有条目管 because 逻辑与一阶差分控制声明；本变体是"整段以一个具名 rival 理论为组织轴"的 M6 排除拍——控制变量的 because 从变量功能升级为理论裁决，直接回应 registry common_failure「控制变量无 because 逻辑——仅列举变量名」的高阶形态。
+
+**原文锚点** (Gulati & Gargiulo 1999, AJS):
+> "If the effect of structural differentiation is only capturing density-driven legitimacy, the inclusion of alliance density should make the effect of structural differentiation insignificant, thus bringing into question the validity of our claims."
+
+<!-- wb:gulati_1999_where_do_interorganizational_networks:c4_m6_named_alternative_as_control -->
+### 变体 80：M2 源清单生存者条件化修复 — 回收消亡事件单元 + 风险集合并（higgins_2003_OS 型）
 
 **来源论文**: Higgins & Gulati 2003 (Organization Science)
 **原始句锚点**: "Further, to guard against sample selection bias associated with this listing, we collected information on firms that went public in the same time frame as our sample but that did not survive in their original form by 1996."
@@ -1219,7 +1382,7 @@ Our analysis of [outcome] consists of three progressive steps. In Step 1, we inc
 <!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:m2_survivorship_repair_sample_frame -->
 
 
-### 变体 71：M4 第三方榜单阈值化突出名单 → 生涯纽带计数 → 团队规模标准化（higgins_2003_OS 型）
+### 变体 81：M4 第三方榜单阈值化突出名单 → 生涯纽带计数 → 团队规模标准化（higgins_2003_OS 型）
 
 **来源论文**: Higgins & Gulati 2003 (Organization Science)
 **原始句锚点**: "Since the number of ties covaries with the size of the upper echelon, we divided upstream, horizontal, and downstream tie measures by upper echelon size, consistent with recent research (Geletkanycz and Hambrick 1997)."
@@ -1235,7 +1398,7 @@ Our analysis of [outcome] consists of three progressive steps. In Step 1, we inc
 <!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:m4_prominence_list_threshold_tie_normalization -->
 
 
-### 变体 72：M3 采纳标准指数 DV 的出处—通行度—缺失—替代基准四拍链（higgins_2003_OS 型）
+### 变体 82：M3 采纳标准指数 DV 的出处—通行度—缺失—替代基准四拍链（higgins_2003_OS 型）
 
 **来源论文**: Higgins & Gulati 2003 (Organization Science)
 **原始句锚点**: "Carter and Dark's (1992) analyses suggest that these measures provide a finer-grained evaluation than a simpler market share alternative (e.g., Megginson and Weiss 1991)."
@@ -1251,7 +1414,7 @@ Our analysis of [outcome] consists of three progressive steps. In Step 1, we inc
 <!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:m3_adopted_index_provenance_chain -->
 
 
-### 变体 73：M4 有界异质性指数双测量 + 零锚定 + 工作例翻译（higgins_2003_OS 型）
+### 变体 83：M4 有界异质性指数双测量 + 零锚定 + 工作例翻译（higgins_2003_OS 型）
 
 **来源论文**: Higgins & Gulati 2003 (Organization Science)
 **原始句锚点**: "For example, a firm with an upper echelon with 10 members, two of whom had ties to prominent pharmaceutical organizations, would receive a score of 1, while a firm with the same-sized upper echelon that included ... would receive a score of 2."（同段连续原文，删节处省略）
@@ -1267,7 +1430,7 @@ Our analysis of [outcome] consists of three progressive steps. In Step 1, we inc
 <!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:m4_heterogeneity_index_worked_example -->
 
 
-### 变体 74：M2 档案研究中的田野佐证组件 — 过程复杂度访谈 + 常驻专家通报人（higgins_2003_OS 型）
+### 变体 84：M2 档案研究中的田野佐证组件 — 过程复杂度访谈 + 常驻专家通报人（higgins_2003_OS 型）
 
 **来源论文**: Higgins & Gulati 2003 (Organization Science)
 **原始句锚点**: "The individuals to whom we spoke at the service organizations were all intimately involved in various IPO deals in the biotechnology industry during the period of our study and provided extremely helpful information to us about the complexities involved in taking a firm public."
@@ -1283,7 +1446,7 @@ Our analysis of [outcome] consists of three progressive steps. In Step 1, we inc
 <!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:m2_archival_fieldwork_triangulation -->
 
 
-### 变体 75：M1/M2 问卷前置田野与抽样框-受访者双核验（gulati_2007 型）
+### 变体 85：M1/M2 问卷前置田野与抽样框-受访者双核验（gulati_2007 型）
 
 **来源论文**: Gulati & Sytch 2007 (Administrative Science Quarterly)
 **原始句锚点**: "We verified the comprehensiveness of this list with several executives in the industry and also by comparing it with component lists used by the firms to monitor the quality of their own parts."
@@ -1292,7 +1455,7 @@ Our analysis of [outcome] consists of three progressive steps. In Step 1, we inc
 **骨架**:
 > The analysis presented in this paper is based on fieldwork, followed by a survey of [respondent role] at [Organization A] and at [Organization B]. Prior to launching the survey, we conducted a total of [N] interviews ([n1] at [A] and [n2] at [B]). The initial interviews were exploratory and open ended and were intended to clarify the nature of [the focal phenomenon]. In later interviews, we sought clarification on our central constructs of [C1], [C2], [C3], and [C4]. The unit of analysis for the survey instrument is the [unit], with each survey respondent providing data on [focal content], as well as data on [partner content]. This sampling approach is akin to one used by [seminal study] in their study of [the industry]. Drawing on previous studies of [the industry] and discussions with informants, we used a list of [N_frame] [units]. We verified the comprehensiveness of this list with several [industry experts] and also by comparing it with [lists] used by the firms themselves. For each [unit], [senior managers] supplied the names of [respondents] with oversight for [the activity]; the [independent office] in each company verified the expert status of each survey respondent.
 
-**与原骨架差异**: 变体 74（档案研究田野佐证组件）的访谈对象**不进估计样本**、服务于过程复杂度通报与测量接地；本变体是问卷前置田野的**生产性使用**：(1) 两阶段访谈（探索性开放→构念澄清）直接产出测量工具；(2) 抽样框以"外部专家核验 + 企业内部清单比对"双路验证完备性；(3) 受访者以"高管提名 + 独立办公室（如 controller's office）资格核验"双环把关。与变体 6（多通道精英招募）的分界：彼处招募的是估计样本本身，本变体核验的是**抽样框与受访者资格**。近亲 实证对象构建 变体7（专家报告人资格核验三环链，EMERGING 文件）为资格核验拍的家族成员。
+**与原骨架差异**: 变体 84（档案研究田野佐证组件）的访谈对象**不进估计样本**、服务于过程复杂度通报与测量接地；本变体是问卷前置田野的**生产性使用**：(1) 两阶段访谈（探索性开放→构念澄清）直接产出测量工具；(2) 抽样框以"外部专家核验 + 企业内部清单比对"双路验证完备性；(3) 受访者以"高管提名 + 独立办公室（如 controller's office）资格核验"双环把关。与变体 6（多通道精英招募）的分界：彼处招募的是估计样本本身，本变体核验的是**抽样框与受访者资格**。近亲 实证对象构建 变体7（专家报告人资格核验三环链，EMERGING 文件）为资格核验拍的家族成员。
 
 **诚实边界**: "akin to [seminal study]" 的先例锚定须真实可引；清单核验的两个判据（外部专家+内部清单）缺一会削弱完备性主张；独立资格核验需真实存在的组织内第三方，不能由提名者自证。
 
@@ -1301,7 +1464,7 @@ Our analysis of [outcome] consists of three progressive steps. In Step 1, we inc
 <!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:m2_fieldwork_frame_and_respondent_verification -->
 
 
-### 变体 76：M2 问卷响应率-非应答 K-S-范围排除段级全链（gulati_2007 型）
+### 变体 86：M2 问卷响应率-非应答 K-S-范围排除段级全链（gulati_2007 型）
 
 **来源论文**: Gulati & Sytch 2007 (Administrative Science Quarterly)
 **原始句锚点**: "We examined the nonresponse bias by comparing the characteristics of the components for which responses were received against those for which no response was received ... using the Kolmogorov-Smirnov test (Siegel and Castellan, 1988)."
@@ -1319,7 +1482,7 @@ Our analysis of [outcome] consists of three progressive steps. In Step 1, we inc
 <!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:m2_survey_response_nonresponse_funnel -->
 
 
-### 变体 77：M3/M4 量表双构念区分+旋转交叉验证+低 α 保守反驳链（gulati_2007 型）
+### 变体 87：M3/M4 量表双构念区分+旋转交叉验证+低 α 保守反驳链（gulati_2007 型）
 
 **来源论文**: Gulati & Sytch 2007 (Administrative Science Quarterly)
 **原始句锚点**: "Although these reliabilities fall short of the frequently used threshold of .70 (Nunnally, 1978), ... this should not be considered a benchmark every scale has to pass."
@@ -1337,7 +1500,7 @@ Our analysis of [outcome] consists of three progressive steps. In Step 1, we inc
 <!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:m3_scale_discrimination_and_low_alpha_defense -->
 
 
-### 变体 78：M4 复合构念替代规格三段防御+spline 分解（gulati_2007 型）
+### 变体 88：M4 复合构念替代规格三段防御+spline 分解（gulati_2007 型）
 
 **来源论文**: Gulati & Sytch 2007 (Administrative Science Quarterly)
 **原始句锚点**: "Given that we had two distinct categories of actors, we opted for the precision of spline estimation, which allowed us to explore the possible variations ... that would not be uncovered in a single variable approach."
@@ -1346,7 +1509,7 @@ Our analysis of [outcome] consists of three progressive steps. In Step 1, we inc
 **骨架**:
 > The [additive] specification of [composite construct] is directly in line with [the original theoretical proposition] ([canon]) and was the choice of other research on similar issues ([citations]). An alternative specification is the [product] of the two components. Because we focus on [ongoing exchange relationships], we have no [zero-dependence cases] and thus run no risk of misrepresenting [the composite] in the instances of [the degenerate case]. More generally, while the [additive] score may be more accurate than the [product] score in some situations ([numeric pair 1]), it could be less accurate in others ([numeric pair 2]). We hence verified our results using a [product] score, and they remained similar. [The stronger alternative] would have to apply at the level of [predictor] and [outcome] given [design constraint], the latter of which is unattainable. We used a [spline] specification to measure the direction of [asymmetry] and differentiate between [side A]'s and [side B]'s [advantage] ([citation]); a single variable would needlessly constrain [one side], eliminating the flexibility and the precision of [spline] estimation ([citation]). Following this decomposition, our sample returned [n1] [dyads] in which [side A] held an [advantage] and [n2] in which [side B] did.
 
-**与原骨架差异**: 变体 73 并置双测量解决**指数可读性**（同构念两个读法+工作例）；文本构念测量 变体 4 用"高相关+统计性质 because"做**多选一**辩护。本变体是复合构念**替代规格的三段防御**：(1) 先例+理论锚定所选规格（原始命题出处+同领域先例清单，"directly in line with ... was the choice of other research"）；(2) 替代规格偏误场景分析——先排除断点退化情形（零依赖），再用具体数值对（如 9–1 vs 3–3 / 1–9 vs 5–5）展示两种规格各自更准的场景，然后以"用替代规格重跑、结果相似"稳健收口（"We hence verified our results using ..., and they remained similar"）；(3) **不可行性边界声明**（语料零覆盖拍）——承认更强技术（如 Edwards polynomial 分解）在本设计下因约束（构念互为 DV/IV、同时性偏误）不可达，以边界诚实替代技术堆叠。spline 变奏：方向性非对称构念用 spline 而非单变量，因为单变量法 "needlessly constrain" 一侧、损失估计灵活性与精度；并报告两侧各占样本量，证明两侧均有变异可估。
+**与原骨架差异**: 变体 83 并置双测量解决**指数可读性**（同构念两个读法+工作例）；文本构念测量 变体 4 用"高相关+统计性质 because"做**多选一**辩护。本变体是复合构念**替代规格的三段防御**：(1) 先例+理论锚定所选规格（原始命题出处+同领域先例清单，"directly in line with ... was the choice of other research"）；(2) 替代规格偏误场景分析——先排除断点退化情形（零依赖），再用具体数值对（如 9–1 vs 3–3 / 1–9 vs 5–5）展示两种规格各自更准的场景，然后以"用替代规格重跑、结果相似"稳健收口（"We hence verified our results using ..., and they remained similar"）；(3) **不可行性边界声明**（语料零覆盖拍）——承认更强技术（如 Edwards polynomial 分解）在本设计下因约束（构念互为 DV/IV、同时性偏误）不可达，以边界诚实替代技术堆叠。spline 变奏：方向性非对称构念用 spline 而非单变量，因为单变量法 "needlessly constrain" 一侧、损失估计灵活性与精度；并报告两侧各占样本量，证明两侧均有变异可估。
 
 **诚实边界**: 不可行性声明须真实——polynomial 不可达的前提（同时性偏误+构念互为 DV/IV）要写明，否则读作偷懒；"results remained similar" 应指向 Results 的具体稳健性表；spline 两侧样本量若严重失衡（如 90/10）须讨论一侧系数的脆弱性。
 

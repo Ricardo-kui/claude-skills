@@ -497,3 +497,60 @@ with an ambiguous label] (label-level)."
 - [ ] Reconciliation 收束是否为 theory-based（不只是 "both perspectives are valid"）？
 - [ ] T7 是否清晰说明了为什么该行业同时存在两类受众？
 - [ ] H1 和 H2 是否对称（每侧都有 label-level 和 org-level，或都有 parallel 假设对）？
+
+
+### 变体 A：必要不充分·互补性整合（Gulati_1998 综述文型）
+
+**模板**:
+> [不推翻声明] The [透镜] explanation offered by the reported studies [does not contradict] the [在位理论] motivations for [现象].
+> [实在论让步] [行动者] don't [采纳X] as symbolic [社会确认] but, rather, base [X] on concrete [实质互补性]...
+> [必要不充分升级] It does suggest that [在位理论的成立条件] are necessary but not sufficient conditions for [结果]. While [在位理论的考虑] are relevant, it is [透镜因子] that helps [行动者] [做在位理论解释不了的事：识别机会/选择伙伴].
+
+**来源**: Gulati_1998_SMJ, Theory P77（formation 议题收束段；同族句式复现于 governance/evolution 议题收束）
+
+**原文锚点**:
+> "The social explanation offered by the reported studies that highlight the role of embeddedness does not contradict the economic motivations for alliances." ... "it is a firm's social connections that help it identify new alliance opportunities and choose specific partners..."
+
+**关键特征**:
+- 综述文引新视角的最大阻力是范式战争预期；此句式先声明互补，再用必要不充分逻辑重新分配解释分工——在位理论解释"为什么值得"，透镜解释"如何看见并抓住"
+- 与 G 型方向反转 reconciliation 的区别：不做对称机制对照，而是把两个理论映射到同一因果链的不同段（动机段 vs 机会识别段），非竞争性收束
+- "necessary but not sufficient" 是可复用的升级算子：承认对方必要性（让步）同时钉死自己增量（不充分）
+- 摆在议题收束位（循环拍5），每个议题各自完成一次分工划定
+**适用**: 新透镜与在位理论是互补而非互斥关系时的整合位；跨范式综述的议题收束句
+**禁忌**: 只适用于真互补关系——若透镜与在位理论对同一结果给出冲突预测，应路由到 F 竞争假设或 G 辩证对立；必要不充分升级必须能指认"不充分"的具体缺口（本篇=机会识别与伙伴选择），空喊不充分即空洞
+
+<!-- wb:gulati_1998_alliances_and_networks:necessary_not_sufficient_complementarity_resolution -->
+
+
+### 变体 B：必要不充分·机制交棒转场（Necessary-Not-Sufficient Driver Handoff，Gulati_1999_AJS 型）
+
+<!--
+pattern_id: necessary_not_sufficient_driver_handoff
+build_type: 机制推演型（多机制中段转场）
+source_papers: ["gulati_1999_where_do_interorganizational_networks (AJS)"]
+verification_status: VERIFIED — expert_audit_override (Gulati 系单源裁定 2026-09-06, paper_count=1)
+story_fidelity: section_variant
+-->
+
+**适用场景**: 多机制理论中，第一机制（在位解释）已推导出主效应假设，但其对"具体配对/具体对象层面"的结果解释力不足——需要交棒给第二机制。交棒同时完成理论问题改写（why cooperate → with whom）。
+
+**骨架**:
+```
+[让步承认] [在位机制] may be a necessary condition for [结果].
+[不充分转折] In most cases, however, [在位机制] may not be sufficient to account for [结果在配对/具体层面的发生]. [聚合层兼容说明：这不给聚合层研究造成困难，但……]
+[前提暴露] most [在位机制] research implicitly assumes that [决策者已能识别机会来源与目标对象]——该假设在聚合层站得住，在配对层面难以成立。
+[问题改写] [行动者] now faces another type of [不确定性] resulting from [新问题维度]. While [在位机制] may help [行动者] orient [搜索方向], it cannot offer sufficient cues to determine [新问题：与谁/在何时].
+```
+
+**为什么有效**: 必要不充分算子在中段使用时是"交棒"而非"裁决"：先让在位机制保住必要性（已推导的 H1 不被推翻），再暴露其在具体层面无法回答的问题维度，最后把问题从 why 改写为 whom——第二机制以"补足线索"身份出场，两条机制形成解释分工而非竞争；聚合层兼容说明避免误伤在位文献，转场显得慷慨而非掠夺。
+
+**注意事项**: 交棒只在两机制回答不同问题维度时成立（why vs whom）；聚合层兼容说明不可省略；改写后的问题必须正好是第二机制的强项，否则转场后机制接不住。
+
+**反模式**: 写成对在位机制的否定或竞争假设；不暴露前提直接断言"不够"；交棒后仍用旧问题语言推导新机制。
+
+**与近亲变体的区分**: 变体 A（必要不充分·互补性整合，Gulati_1998 综述文型）在议题收束处用同一算子完成透镜与在位理论的分工整合——是**收束算子**（辩证收尾、无假设序列）；本变体在实证理论**中段**把 H1 之后的空间让渡给新机制并改写问题——是**转场算子**（无对立整合任务，服务假设序列推进）。
+
+**原文锚点** (Gulati 1999, AJS):
+> "Interdependence may be a necessary condition for organizations to enter alliances. In most cases, however, interdependence may not be sufficient to account for the formation of an alliance between two specific firms."
+
+<!-- wb:gulati_1999_where_do_interorganizational_networks:c2_necessary_not_sufficient_driver_handoff -->

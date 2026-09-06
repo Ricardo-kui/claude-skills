@@ -187,6 +187,29 @@ source: Extracted from MVP30 narrative_analysis files + zorn2017 distill
 
 ---
 
+
+### 变体 H：收益—风险双面化实践 Stakes（fini2017 型）
+
+**模板**:
+> "Overall, this research has implications for [行动者] [偏离核心受众的扩张动作]。For [目标组织]，our findings underline the benefits of [该动作]；yet, the findings also indicate the possible risks of doing so，particularly for those in [边界条件1] and with [边界条件2]。"
+
+**来源**: fini_jourdan_perkmann_2017 (Academy of Management Journal), P8
+
+**原文锚定**:
+> "our findings underline the benefits for scientists to target other audiences beyond their peers for research resources; yet, the findings also indicate the possible risks of doing so"
+
+**关键特征**:
+- 双面化（benefits yet risks）：同一动作同时给出收益面与风险面，而非单侧"重要性"论证——与 01-general-theory-practice 既有变体（分别论证理论/实践重要性）不同
+- 边界条件量化风险面：风险不泛言，而是精确挂到论文的两个 moderator（身份距离远近、内生产量记录强弱）上，让 stakes 直接复述边界贡献
+- 后置位置：该变体出现在 Contribution 段之后作收束段（hooks→…→contribution→stakes 倒置），把实践含义当"最后印象"用
+- 主体具体化：行动者（个体+组织双层）与目标组织点名，不做"managerial implications are discussed"式空转
+
+**适用**: 结论方向为"非单调/有条件"（倒U、双刃剑）的研究——收益与风险各有成立区间时，双面化 stakes 比单侧重要性论证更诚实且预告 Discussion
+
+**禁忌**: 单调正向结论的研究禁用（无风险面可写）；两个边界条件若与假设不一一对应会显得 stakes 造假
+
+<!-- wb:fini_2017_social_valuation_across_multiple_audiences_the_int:stakes-two-sided-noncore-diversification -->
+
 ## 插入位置指南
 
 | 布局类型 | 推荐插入位置 | 形式 | 长度 |

@@ -180,7 +180,55 @@ source: Manually curated from MVP30 narrative_analysis files
 <!-- wb:anand_mukherjee_2024_learning_from_failures_di:hook-consensus-nuance-declaration -->
 
 
-### 变体 H：经典概念谱系回溯型（gulati_sytch2007 型）
+### 变体 H：文献流三源汇聚现象 Hook（desjardine_li_shi_2025_amj 型）
+
+**模板**:
+> "Organizational scholars have long been interested in [established competitive behavior], including [instance 1] and [instance 2] ([citations]). With [broad force] being central to [domain], [actors] have also been found to [adjacent behavior] with the goal of [own advantage]. [Firm], for instance, has been [brief rivalry anecdote] ([citation]). In this spirit, [recent study] recently documented [systematic tendency], in what they deemed '[scholarly label].' This stream of literature and related anecdotes reveal how [actors] [generalized behavior]."
+
+**来源**: desjardine_li_shi_2025_amj (AMJ), P1
+
+**原文锚定**:
+> "With information being central to competition, competing businesses have also been found to disclose adverse information about each other with the goal of elevating their own competitive positions."
+
+**关键特征**:
+- 三源汇聚合法化：既有文献流（established stream）→ 单企业 rivalry 轶事（"for instance"）→ 近期系统研究（"In this spirit, [study] recently documented"），三类异质证据在同一现象上会合，再由综合句（"This stream of literature and related anecdotes reveal..."）收束为统一行为命题
+- 学术命名引语（scholarly label）借他人论文原话为新兴现象贴标签（"an emerging corporate strategy"），不用数字也能把"正在出现"客观化——与 03-data-shock 的规模冲击路线互补
+- 现象先立"直接形态"，为后文"间接形态"（经由信息中介）留出枢纽位：Hook 只说 firms 直接互相抹黑，中介渠道留给 Tension 段揭示
+- 与本文件变体 A-G 的区别：不在此段做 consensus→blindspot 枢转——Hook 只负责现象合法化，盲点句留给 Tension 段（P2 "it is surprising that ... mostly overlooked"）
+
+**适用**: 论文现象是与既有文献流相邻的新兴实践，无规模数据可用、但存在（a）知名 rivalry 轶事与（b）近期系统研究双重背书时；Incompleteness × Constructs；中能量开场
+
+**禁忌**: 轶事与近期研究必须指向同一现象，否则三源汇聚退化为并列罗列；学术命名引语必须出自已发表研究并带出处，不得自造标签；若 Hook 段内已含盲点句则与本变体互斥（改用变体 A-G）
+
+<!-- wb:desjardine_2025_information_based_competition_the_case_of_ri:hook_lit_stream_trisource_convergence_desjardine2025 -->
+
+
+### 变体 I：解释装置反身缺口型（gulati1999networks AJS 型）
+
+**验证状态**: VERIFIED (expert_audit_override 2026-09-06: 用户点名 Gulati 为最喜爱学者，其论文蒸馏单源即 VERIFIED)；单篇来源，仅作 section_variant
+
+**模板**:
+> "[Field] scholars have made considerable progress in explaining [outcome domain] in terms of [celebrated explanatory concept] ([citations]). Yet, these scholars have seldom examined the origin of [those very structures/concepts]. With few exceptions, largely limited to [adjacent exception stream 1] (e.g., [citations]), or to [exception stream 2] ([citations]), [the field] has typically viewed [the concept's genesis] as driven by [default exogenous factors] ([citations]). In this view, [actors] [act] to [manage constraint]; consequently, they [default formation logic]."
+
+**来源**: gulati_1999_where_do_interorganizational_networks (AJS), P1
+
+**原文锚定**:
+> "Sociologists have made considerable progress in explaining the behavior of organizations in terms of their embeddedness in social networks (Granovetter 1985, 1992). Yet, these scholars have seldom examined the origin of those networks."
+
+**关键特征**:
+- 反身缺口：盲点不在概念的某个维度/层次/方向，而在概念自身的发生史——领域用网络解释一切组织行为，却很少问"这些网络从哪来"；解释装置同时成为待解释对象（与 A-G 的维度盲点、H 的现象汇聚均不同）
+- "With few exceptions, largely limited to..." 先枚举相邻例外流（互锁董事会研究、个案史）再落缺口句——在审稿人证伪缺口主张前自行划界，免疫"不是有人研究过吗"
+- 缺口后不直接跳 RQ，而是补出领域默认填补项（外生资源依赖观）——把盲点具体化为"没研究起源时默认用了什么替代解释"，为下一段的有效让步转折递刀
+- Hook 与 Literature Turn 融合单段交付，能量保持温和（致意式开场），但缺口比维度盲点更根本
+
+**适用**: Inadequacy × Mechanism/Phenomenon；论文解释的正是该领域旗舰概念自身的形成/演化时（用 X 解释一切→问 X 从哪来）；AJS/ASR 长引言式 Hook+Literature Turn 融合单段交付
+
+**禁忌**: "解释装置"与"研究对象"必须是同一物（用网络解释行为→问网络起源），错配即退化为普通盲点 Hook；例外枚举必须真实且确属邻域，不得为划界贬低例外流；默认替代观须有引用背书且下一段要接得住对它的让步式批评
+
+<!-- wb:gulati_1999_where_do_interorganizational_networks:hook_reflexive_origin_blindspot_gulati1999networks -->
+
+
+### 变体 J：经典概念谱系回溯型（gulati_sytch2007 型）
 
 **模板**:
 > "The concept of [core construct] has received considerable attention from scholars studying [domain]. Much of the early research considered [construct] to be [dominant limiting reading] ([citations]) because [theoretical rationale]. [Canonical author] ([year]), however, distinguished between [facet A], or [definition A], and [facet B], or [definition B]. [He/She] labeled these constructs '[in-world label A]' and '[in-world label B]' [1-2 sentences unpacking the distinction's mechanics]."

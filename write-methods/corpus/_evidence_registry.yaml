@@ -1,8 +1,8 @@
 meta:
-  last_updated: '2026-09-06'
+  last_updated: '2026-09-06c'
   total_design_types: 23
-  batches_processed: 22
-  last_batch: batch_37_gulati2007_residual_sync
+  batches_processed: 24
+  last_batch: batch_41_gulati_ajs1999 + batch_37_gulati2007_residual_sync
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
     granularity: per design_type（对应 corpus/[设计类型].md 文件）
@@ -359,7 +359,10 @@ evidence:
         interviews. Writes M1 data-availability setting (面板数据-OLS 变体41), M5 moderator-dummy external validity chain via Tijssen
         U-I intensity (面板数据-OLS 变体42), M8 CEM confirmatory replication (PSM匹配面板 变体4), M9 explanatory sequential roadmap (多研究
         变体10); core GMM narrative registered under 非线性模型 变体16. Anti-patterns recorded: CEM strata without balance stats, three-threats
-        merged statement, squared-term exclusion not separately argued.'
+        merged statement, squared-term exclusion not separately argued.
+        2026-09-05 re-distill writeback 补登记：M2 自维护档案 vs 第三方收割库比较性数据质量辩护（面板数据-OLS）、M3 计数测量=逐次评价事件归因
+        because 链（micro-templates/because-clauses.md，registry 无 because-clauses 独立条目故在此 paper-level note 登记）、M1 设置含义调查
+        佐证链（双制度张力+设置内调查证 actor 感知，面板数据-OLS）。另 M3 because-clauses 变体同步见于 because-clauses.md {NEXT} 槽位。'
     chen_ganesan_liu_2009_jm:
       journal: Journal of Marketing
       title: Does a Firm's Product-Recall Strategy Affect Its Financial Value? An Examination of Monitoring Versus Initiating
@@ -410,9 +413,22 @@ evidence:
         （面板数据-OLS.md 变体M8：链式设计子样本分割替代乘法交互 + 「不限制其他协变量系数」辩护 + Chow/threshold 收口；M8）；
         m8_fitted_value_mediation_chain（IV-2SLS.md 变体M8 EXTEND：中介内生时以第一阶段拟合值作中介操作化的 sequential IV，SEM 稳健性；
         诚实边界：generated-regressor SE 修正须带警告行；M8）。'
+    gulati_westphal_1999_cooperative_or_controlling:
+      journal: Administrative Science Quarterly
+      title: Cooperative or Controlling? The Effects of CEO-Board Relations and the Content of Interlocks on the Formation of Joint Ventures
+      status: EMERGING
+      verification_basis: "user_designation (2026-09-06: 用户点名 Gulati 为最喜爱学者——Gulati 系单源升 VERIFIED；methods 带按库惯例记录于此，槽位证据等级随 design_type 行)"
+      design_types:
+      - 非线性模型
+      - 同伴效应-网络效应
+      slots_covered:
+      - M3
+      - M4
+      - M8
+      note: "整篇蒸馏 4 条写回：非线性模型 M8 风险集-假设映射+Heckman 泛化（EXTEND 变体21 后）；micro-templates/manual-coding-validation M3/M4 多源构念效度三角化（双问卷/多行为者，EXTEND 变体B 后）；同伴效应-网络效应 M4 间接关系长度/分离/分层控制 + M4 操作化谱系 PCA 合成（ADD×2，该族第 2 源）。SKIP：非应答 K-S+Heckman 辩护链（carpenterwestphal2001 + westphal_bednar2005 既有链已覆盖）。era flags：LISREL/Bartlett、kappa 四分位离散化、Heckman 无排除限制、response-rate 步骤 ritual_only。"
   by_design_type:
     面板数据-OLS:
-      paper_count: 19
+      paper_count: 24
       papers:
       - lee_park_2024_smj (SMJ)
       - bendig_hensellek_schulte_2024_etp (ETP)
@@ -431,6 +447,11 @@ evidence:
       - westphal_zajac_1998_symbolic_management (Administrative Science Quarterly)
       - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
       - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
+      - fini_2017_social_valuation_across_multiple_audiences_the_int (Academy of Management Journal)
+      - desjardine_2025_information_based_competition_the_case_of_ri (Academy of Management Journal)
+      - pfarrer_pollock_and_rindova_2010 (Academy of Management Journal)
+      - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
+      - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
       - higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe (Organization Science)
       - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int (Administrative Science Quarterly)
       status: VERIFIED
@@ -454,11 +475,12 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     自然实验-DiD:
-      paper_count: 3
+      paper_count: 4
       papers:
       - lee_wu_bednar_orsc_18968 (Organization Science)
       - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
       - fang_et_al_2025_rival_recall_ad_spend (Production and Operations Management)
+      - castellaneta_2017_smj_how_does_trade_secret_legal_protection (Strategic Management Journal)
       status: EMERGING
       slots_covered:
       - M2
@@ -480,7 +502,7 @@ evidence:
         - SMJ R1#8、R2#7 与 JAMS AE、R1（两轮四评审+编辑）一致要求 heterogeneity-robust 估计量（Sun-Abraham/Callaway-Sant'Anna/stacked/BJS）作主分析、TWFE
           降级为基准，且调节效应也须在 robust 设计内重估；仅附录图示无系数表被判不足（moon2026 对照：stacked DiD 进主表 Model 7）
     非线性模型:
-      paper_count: 6
+      paper_count: 8
       papers:
       - lee_park_2024_smj (SMJ)
       - bendig_hensellek_schulte_2024_etp (ETP)
@@ -488,6 +510,8 @@ evidence:
       - kashmiri_nicol_arora_2017_jams (JAMS)
       - fini_jourdan_perkmann_2017_amj (AMJ)
       - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
+      - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
+      - gulati_westphal_1999_cooperative_or_controlling (Administrative Science Quarterly)
       status: VERIFIED
       slots_covered:
       - M1
@@ -727,10 +751,15 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     同伴效应-网络效应:
-      paper_count: 0
-      papers: []
-      status: EMERGING
-      slots_covered: []
+      paper_count: 3
+      papers:
+      - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
+      - gulati_westphal_1999_cooperative_or_controlling (Administrative Science Quarterly)
+      - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
+      status: VERIFIED
+      verification_basis: "paper_count_min 3 达成（2026-09-06 第 3 源 gulati_1999_where_do_interorganizational_networks）+ expert_audit_override（Gulati 系单源即 VERIFIED）"
+      slots_covered:
+      - M4
       common_failures: []
       validation_history:
         revise: 0
@@ -738,7 +767,7 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     文本构念测量:
-      paper_count: 7
+      paper_count: 8
       papers:
       - cutolo2024 (JM)
       - kashmiri_nicol_arora_2017_jams (JAMS)
@@ -747,6 +776,7 @@ evidence:
       - fang_et_al_2025_rival_recall_ad_spend (Production and Operations Management)
       - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
       - zajac_westphal_the_social_construction_of_market_value (American Sociological Review)
+      - pfarrer_pollock_and_rindova_2010 (Academy of Management Journal)
       status: VERIFIED
       verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       slots_covered:

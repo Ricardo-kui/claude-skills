@@ -540,6 +540,189 @@ P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者
 
 ---
 
+
+### 变体 V：双刃剑权变假设前置预告 + 发现段镜像复现（Castellaneta–Conti–Kacperczyk 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`；与 findings-preview 变体 O 配对使用）
+
+**功能节拍**: 镜像声明（效应方向取决于边界属性）→ 增强条件方向 + 一句话机制依据 → 阻碍条件方向 + 一句话机制依据 →（发现段逐条件复现同一句架，承诺—兑现）
+
+**模板**:
+> "To explore these seemingly contradictory arguments, we examine how the effect of [X] on [Y] might depend on [boundary attribute]. First, [X] may [raise Y] when [W_enhance], because [one-line mechanism] ([citation]). Second, [X] may [lower Y] when [W_hinder], because [one-line mechanism] ([citation])."
+
+**来源**: Castellaneta, Conti & Kacperczyk (2017, SMJ), P4（镜像复现对应 P7）
+
+**原文锚定**:
+> P4 权变方向预告：每条件一句 because + 引用；P7 发现段以同一 On-one-hand/On-the-other-hand 句架逐条件复现，条件顺序不变。
+
+**关键特征**:
+- **承诺—兑现镜像**：预告段与发现段共享同一权变句架与条件顺序，读者在 Results 前已握有核对清单；这是既有"内生性→设计预告"变体 Q 与"符号反转发现"变体 O 均未记录的跨段架构特征。
+- **每条件一句话机制依据**：方向预告不是裸断言——每个条件后立即跟 because + 引用。
+- **位置特殊**：出现在识别/设计预告之前——先解决"方向为何不确定"，再谈"如何干净识别"。
+
+**适用**: Incompleteness × Boundary；双通道对立已在 Tension 建立（如 cost-vs-benefit 双刃剑变体）；随后有识别/设计预告的实证论文；SMJ。
+
+**禁忌**: 与发现预览（findings-preview 变体 O）配对时不得改变条件顺序或措辞框架；同向调节或单机制论文禁用（会产生虚假权变承诺）；本段不报告效应量。
+
+<!-- wb:castellaneta_2017_smj_how_does_trade_secret_legal_protection:intro-mirror-contingency-hypothesis-preview -->
+
+
+### 变体 W：内生性挑战独立段 + 识别中心性 warrant（Castellaneta–Conti–Kacperczyk 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`；与既有"内生性挑战→交错制度采纳→重复交易可观测设定"变体配套使用，管前一段不重复其内容）
+
+**功能节拍**: 挑战命名（X 对 Y 可能内生）→ 内生性来源例示一（政策回应）→ 内生性来源例示二（利益方游说）→ 中心性 warrant（干净的因果设计对该问题至关重要）
+
+**模板**:
+> "Assessing the impact of [X] on [Y] is empirically challenging because [X] might be endogenous with respect to [Y]. For example, [authority] might enact [change] to improve [local conditions]—which would affect [Y]—or [the change] might result from [affected parties'] lobbying efforts. Hence, a research design that facilitates a clean causal estimate is central to understanding the impact of [X] on [Y]."
+
+**来源**: Castellaneta, Conti & Kacperczyk (2017, SMJ), P5
+
+**原文锚定**:
+> 内生性挑战独立成段：立法回应经济状况 / 企业游说两条来源例示；以 "Hence, … is central to understanding" 收束，将识别提升为半贡献主张。
+
+**关键特征**:
+- **独立成段**：内生性威胁在识别策略预告之前单独成段，把"识别"升格为与理论权变并列的贡献契约。
+- **来源例示具体化**：两条内生性来源各给一个具体通道（权威机构政策回应 / 受影响方游说），不是抽象 omitted-variables 清单。
+- **中心性 warrant**：以 "Hence, … is central to understanding" 收束，为后文准实验设计在 Methods 中占据的篇幅预先正当化。
+
+**适用**: 因果识别是核心卖点、后接准实验/自然实验设计预告的实证论文；SMJ/AMJ。
+
+**禁忌**: 与"内生性→交错制度采纳"设计预告变体连用时避免重复同一例示；若识别不是论文贡献主张，降级为从句，不独立成段。
+
+<!-- wb:castellaneta_2017_smj_how_does_trade_secret_legal_protection:intro-identification-centrality-warrant -->
+
+
+### 变体 X：动态理论双态序列+双能力预告型（desjardine_li_shi_2025_amj 型）
+
+**模板**:
+> "To develop a dynamic theory of [competition form], we examine how [contextual states] impact [actors'] motives to [leverage action]. Noting that [outcome dimension] is an important dimension on which firms compete, and that changes to [dimension] can drastically alter a firm's economic prospects ([citation]), we first look at [state 1] [focal actors] and their [rivals] experience, followed by [state 2], and how each impacts the [capacity 1] and [capacity 2] of [actors] to undertake [action]. We argue that the [behavior] these [actors] bring to [instruments] hinges on [contingent conditions] firms experience."
+
+**来源**: desjardine_li_shi_2025_amj (AMJ), P7
+
+**原文锚定**:
+> "we first look at the reputational threats target firms and their rivals experience, followed by reputational opportunities, and how each impacts the willingness and ability of common owners to undertake information-based competition."
+
+**关键特征**:
+- 双态序列预告：理论按"威胁态 → 机会态"的自然顺序展开并逐态预告（"we first look at ... followed by ..."），预告顺序即 Theory 章节顺序，读者可据此排布预期
+- 双能力配对（willingness + ability）：每态同时打动机与能力两个开关——动态性来自"同一行动者的意愿与能力随情境状态分别变化"，而非来自新行动者入场
+- 嵌入式 mini-stakes：用一句（[dimension] "can drastically alter a firm's economic prospects"）替代独立 Stakes 段，为权变维度的重要性背书——适合 stakes 薄但权变结构强的论文
+- 收束句把权变论点压成一句（"hinges on [contingent conditions]"），与 findings-preview 术语转译变体（P6）分工：P6 预告结果，P7 预告理论组织
+
+**适用**: 动态化理论（回应近邻研究"静态观"批评）且权变状态有自然先后顺序的研究；动机与能力双路径并存；Incompleteness × Constructs/Mechanism
+
+**禁忌**: 两态必须真正对偶（威胁/机会、收益/损失），若只是同一机制的两个例证则退化为普通枚举；"willingness/ability"式双能力需在 Theory 章各有假设承接，否则预告过度承诺；不要在此段提前披露结果方向
+
+<!-- wb:desjardine_2025_information_based_competition_the_case_of_ri:preview_dynamic_two_state_dual_capacity_desjardine2025 -->
+
+
+### 变体 Y：田野先行奠基预告型（gulati1999 型）
+
+**验证状态**: VERIFIED (expert_audit_override 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)；单篇来源，仅作 section_variant
+
+**功能节拍**: 大样本研究前有田野前传 → 数量三联给规模颗粒度 → 访谈漏斗（开放式→聚焦）→ 构念从田野中浮现（先于大样本）→ 预告质性引语贯穿正文
+
+**模板**:
+> "The large-sample empirical study reported here was preceded by [extensive fieldwork]: [N] [interviews] were conducted at [M] [sites] over a [k]-[unit] period. The questions asked were initially [open-ended] and became increasingly focused, once the primary factors had been identified. The importance of [focal construct] was uncovered during this fieldwork, prior to the large-sample study. The fieldwork provides grounding for claims about [construct's role] and [what flows through it]. I draw on selective quotes from [informants] wherever relevant in the paper."
+
+**来源**: gulati_1999_network_location_and_learning_the_influence_of_n (SMJ), P8
+
+**原文锚定**:
+> "The importance of the interfirm network of prior alliances was uncovered during this fieldwork, prior to the large-sample study."
+
+**关键特征**:
+- 预告的不是设计细节而是"构念的归纳发现史"：田野先于大样本、构念从田野浮现——为"为什么研究这个变量"提供归纳合法性
+- 明示访谈漏斗（开放式→聚焦），并预告质性证据将以引语形式贯穿正文（"selective quotes wherever relevant"），给全文质性引用预授权
+- 数量三联（N 访谈 / M 企业 / k 年）给田野规模以可核查的颗粒度，服务可信度而非方法细节
+- 与"定性扎根→条件化机制→准实验"多方法变体的区别：这里田野不是方法链一环，而是构念发现与主张担保的独立前传
+
+**适用**: 大样本研究前有真实田野/访谈阶段、且构念源自归纳发现的研究；主效应主张需要经验接地时；质性引语将在正文反复出现的论文
+
+**禁忌**: 无真实田野不得虚构；田野发现必须与后续大样本构念一致（不能田野说 A 数据测 B）；此预告不替代 Methods 细节，访谈方案仍需在方法节交代
+
+<!-- wb:gulati_1999_network_location_and_learning_the_influence_of_n:preview_fieldwork_first_grounding -->
+
+
+### 变体 Z：结构—行动互馈动态预告型（gulati1999 型）
+
+**验证状态**: VERIFIED (expert_audit_override 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)；单篇来源，仅作 section_variant
+
+**功能节拍**: 可操作时间结构（每期网络=累积既往事件）→ 更新机制（新事件并入）→ 递归句点题（新行动改变塑造它的同一结构）→ 理论命名（endogenous dynamic）
+
+**模板**:
+> "In this study, I examine the [time-varying] influence of [focal construct] on [behavior] of a panel of [units] over a [k]-[period] window. [Focal construct] accrue from [structure source]: for each period, this [structure] includes all [prior events] until the previous period. This [structure] updates each period to incorporate [new events], and the updated structure influences [behavior] for subsequent periods. Thus, when observed over time, [new action] in each period alters the very same [structure] that influenced [the action]. The temporal element is key here and results in an [endogenous dynamic] between [embedded action] and the [structure] that guides but is also transformed by that action ([citation])."
+
+**来源**: gulati_1999_network_location_and_learning_the_influence_of_n (SMJ), P7
+
+**原文锚定**:
+> "Thus, when observed over time, the formation of new ties in each period alters the very same network that influenced the new ties."
+
+**关键特征**:
+- 把内生性从"识别威胁"反转为"现象本身"：结构塑造行动、行动再重塑结构——互馈是研究对象而非待清理的混淆
+- 递归同句法（new ties alters the same network that influenced the new ties）把互馈压进单句，读者无需图示即可复述
+- 先给可操作的时间结构（逐期累积更新），再给理论点题句——预告与设计严丝合缝
+- 与 Castellaneta 内生性变体的区别：那里内生性是需识别策略处理的威胁（交错采纳/重复交易），这里互馈是要刻画的动态本体
+
+**适用**: 面板/累积结构数据中行动与结构互为因果的研究；Mechanism/Mode 贡献；需预置"内生是卖点不是缺陷"的预期管理时
+
+**禁忌**: 互馈主张必须有对应动态设计（滞后结构、逐期更新）支撑，否则读作无法识别；不要把互馈句与因果识别主张混写——若同时做因果推断需另行说明处理策略
+
+<!-- wb:gulati_1999_network_location_and_learning_the_influence_of_n:preview_structure_action_reciprocity -->
+
+
+### 变体 AA：双刃剑紧凑命名收束型（gulati_westphal1999 型）
+
+**验证状态**: VERIFIED (expert_audit_override 2026-09-06: 用户点名 Gulati 为最喜爱学者，其论文蒸馏单源即 VERIFIED)；单篇来源，仅作 section_variant；双刃剑家族第二篇独立范文（与变体 V 同族）
+
+**功能节拍**: present-study 句点出异质前因+调节因子 → 双向权变一句打包（Some promote / others reduce, depending on）→ 理论层命名收束（bright and dark sides to [母理论]）
+
+**模板**:
+> "The present study examines the influence of [heterogeneous focal factor] and the [moderating effects] of [second factor] on [outcome]. Some [units] may [promote the outcome], while others could actually [reduce its likelihood], depending on [boundary attribute]. As a result, there may be both [bright] and [dark] sides to [parent theory/phenomenon]."
+
+**来源**: gulati_westphal_1999_cooperative_or_controlling (ASQ), P4
+
+**原文锚定**:
+> "Some ties may promote the creation of a new alliance, while others could actually reduce its likelihood, depending on the behavioral content of the tie. As a result, there may be both bright and dark sides to embeddedness in interorganizational relationships."
+
+**关键特征**:
+- 双向一句打包：正负方向共用一个 "Some X may..., while others could actually..., depending on [attribute]" 句架——不用 First/Second 编号、不逐条件给 because 机制，权变细节留给 Theory 兑现
+- 理论层命名收束：紧接 "bright and dark sides to [theory]" 把权变预告升格为对母理论的双面性重命名——预览同时完成概念重铸
+- 嵌入 present-study 定义段：与研究对象定义、术语收窄同段交付，不设独立预告段（ASQ 四段紧凑引言）
+- 与变体 V（Castellaneta）的同族差异：V 以"矛盾论点"起手、逐条件假设化并要求发现段镜像复现；本变体由设定批评自然导出双向性、不承诺发现镜像
+
+**适用**: Inadequacy × Boundary；权变方向来自"既有研究把 X 一律当正面"的设定批评而非两派矛盾发现；需要研究定义段同时完成定义收窄+权变预告的紧凑引言
+
+**禁忌**: bright/dark 命名必须有 Theory 节双向机制兑现；权变条件多于两个或需逐条件预告时改用变体 V 的编号句架；没有设定批评铺垫时不要直接抛双向句——会读作未论证的骑墙
+
+<!-- wb:gulati_westphal_1999_cooperative_or_controlling:preview_double_edged_compact_coinage -->
+
+
+### 变体 AB：外生+内生双驱动合成预告型（gulati1999networks AJS 型）
+
+**验证状态**: VERIFIED (expert_audit_override 2026-09-06: 用户点名 Gulati 为最喜爱学者，其论文蒸馏单源即 VERIFIED)；单篇来源，仅作 section_variant
+
+**功能节拍**: 过程迭代链（嵌入关系累积→网络成信息库→组织求助于网络→新联盟再嵌入→信息价值递增）→ "Thus, we model" 双驱动合成句点题（外生驱动答 Q1，内生机制答 Q2）→（可选）递归收束句
+
+**模板**:
+> "[Embedded relationships] accumulate into a [structure] that becomes a growing repository of [information] on [what actors need to know] ([citations]). The more the [structure] internalizes [information], the more [actors] resort to it for [cues on future decisions], which are thus more likely to be [embedded]; these [new actions], in turn, further increase the [informational value] of the [structure], enhancing its effect on [subsequent action]. Thus, we model [the emergence of phenomenon] as a dynamic process driven by [old exogenous driver — answers Q1] and by [new endogenous mechanism — answers Q2]."
+
+**来源**: gulati_1999_where_do_interorganizational_networks (AJS), P3
+
+**原文锚定**:
+> "Thus, we model the emergence of alliance networks as a dynamic process driven by exogenous interdependencies that prompt organizations to seek cooperation and by endogenous network embeddedness mechanisms that help them determine with whom to build partnerships."
+
+**关键特征**:
+- 收编式合成而非颠覆：旧外生观被保留为驱动之一（prompt organizations to seek cooperation，答 Q1 whether），新内生机制接管 Q2（with whom）——单句把 Tension 的问题分解映射成双驱动分工，向外生观阵营递橄榄枝
+- 过程迭代链先于合成句：累积→信息库→求助→再嵌入→信息价值递增，四步自增强循环把 "endogenous dynamic" 从标签变成可复述的过程
+- 答案前置（AJS 式）：理论章节之前在引言交付完整模型答案，Preview 同时承担 Theory Lens 功能——与 AMJ 式"引言只提问不给答案"的分工作风相反
+- 与变体 Z（结构—行动互馈动态预告）的区别：Z 的核心是互馈的时间结构与"内生是卖点不是威胁"的预期管理；本变体的核心是新旧理论的收编合成与双驱动-双问题映射；本篇 P3 末递归句与 Z 同构，属 Z 的功能范围，不另立
+
+**适用**: Inadequacy × Mechanism 且 Tension 已做问题二分解的论文；要向"旧观仍对"的成熟领域引入内生机制时（收编降低抵抗）；AJS/ASR 长引言 + 独立 Theory 章节结构
+
+**禁忌**: 双驱动合成句要求旧驱动与新机制理论正交（一个答 Q1 一个答 Q2），否则合成句读作理论拼盘；答案前置仅适用于引言后有完整 Theory 章承接的长文——短引言期刊照搬会掏空理论节；迭代链每一步都要在后文有假设/机制兑现，否则预告过度承诺
+
+<!-- wb:gulati_1999_where_do_interorganizational_networks:preview_exo_endo_dual_driver_synthesis_gulati1999networks -->
+
 ## 组装规则
 
 ### 必须配对

@@ -563,6 +563,318 @@ and expectations for how [downstream actors] are to make these decisions.
 
 
 
+### Pattern: Dual-Regime Context Comparison with Suitability Bridge（双体制语境对照 + 情境适配桥，Fini 2017 型）
+
+**模块**: Theory 内的语境建制段（Institutional Background 作为可选前置模块的功能化用法），位于 Gap 提问之后、机制推演之前。
+
+**适用场景**: 研究问题依赖**两类评价/交易体制的可比性**时，在 Theory 内先做对称的制度刻画（谁授予、判据、流程、交付物、匿名性/前瞻性），再点出关键的交叉信息可得性特征，把情境特征显式桥接为研究问题的适配性声明。与 Background-as-Theory 双通道（kim_lee_2026：同向双 B0 通道 + 阶段/信息衰减、无编号假设）判别：本模式双体制**判据相反**（贡献知识 vs 服务 R&D 议程）、且桥接的是**信息跨受众可得**这一方法学前提而非机制衰减；与单纯 Institutional Background 段判别：本模式以适配桥收束，背景段落承担理论前提功能。
+
+**骨架**:
+```
+[体制A刻画] [Resource A] is almost always provided in the form of [instrument A], awarded by [audience A] with the purpose of [cognitive goal]; [process features: no formal deliverables, flexible focus], because [system rationale] ([citation]).
+[体制A评审安排] [Audience A] have delegated allocation to [process A]; [anonymity/identity feature] ([citation]).
+[体制B刻画] Conversely, [Resource B] is commissioned by [user organizations] because they require [applied purpose rather than frontier knowledge]; [process features: specific deliverables, applied] ([citation]).
+[体制B评审安排] [Process B] differs markedly: [evaluation by internal experts, forward-looking, non-anonymous]; the main criterion is [B's yardstick]. This differs from the yardstick applied to [A], which prioritises [A's yardstick].
+[对称收束] Overall, [A and B] are awarded by two distinct audiences, each using their own process and criteria to [value the candidate].
+[适配桥] Crucially, [key context feature: information on previous evaluations by one audience is available to the other]. This feature makes this empirical context suitable to address our research question.
+```
+
+**关键特征**:
+- **逐维对称刻画**: 两体制按同一维度序列（授予者/目的/判据/流程/身份可得性）对照，而非各自成段孤立描述——可比性由结构保证
+- **判据句对撞**: "This differs from the yardstick applied to [A], which prioritises..." 一句显式对撞两类判据，为后续"同一信号在两类受众下读法不同"埋设前提
+- **适配桥收束**: 用 "Crucially, ... This feature makes this empirical context suitable to address our research question" 把背景段钉回研究问题，防止背景漂浮
+
+**原文锚点** (Fini, Jourdan & Perkmann 2017, AMJ):
+> "Crucially, information on previous evaluations made by one audience is likely to be available to the other audience for evaluation decisions. ... This feature makes this empirical context suitable to address our research question."
+
+**注意事项**:
+- 双体制刻画必须每一维都有文献/数据支撑，不得仅凭直觉对比
+- 适配桥点出的情境特征必须正是机制（跨受众信息推理）赖以成立的特征，否则桥接失效
+- 若两类体制判据并无实质差异，本模式退化为冗长背景
+
+**反模式**: 把体制刻画写成文献综述（无判据对撞、无适配桥）；或在 Results 前才补体制差异说明。
+
+<!-- wb:fini_jourdan_perkmann_2017_amj:dual_regime_context_comparison_suitability_bridge -->
+
+<!-- wb:fini_2017_social_valuation_across_multiple_audiences_the_int:dual_regime_context_comparison_suitability_bridge -->
+
+
+## Pattern: Prior-Limitation Departure Bridge（前作局限出发桥：静态→动态理论增益，DesJardine–Li–Shi 2025 型）
+
+**适用场景**: 理论核心建立在作者（或邻近团队）的一篇具体前作之上，且前作的"局限"被显式命名为本文理论的出发点——不绕开前作，而是"承接种性 + 修复静态性"：指出前作的静态/单次观与现象动态性之间的 misalignment，导出"潜在影响 + 触发窗口"的时序化理论，并为后续成对调节假设提供共同理论伞。
+
+**微观动作序列**: 承认前作贡献（"Providing some evidence of this possibility, [prior study] found..."）→ 局限命名（"Yet, their study offers a notable limitation, which we use as a departure point to enrich a theory of..."）→ misalignment 论证（"this static view does not fully align with research showing that..."）→ 必要性声明（"For models of ... to be accurate, it is imperative to account for..."）→ 时序化重述（"our theory ... accounts for how shifts ... trigger ..."）
+
+**范文来源**: DesJardine, Li & Shi (2025), *Academy of Management Journal*（自引 DesJardine, Shi & Cheng 2023 的静态观 → 触发窗口式信息竞争理论）
+
+**原文锚点**:
+> "Yet, their study offers a notable limitation, which we use as a departure point to enrich a theory of information-based competition."
+>
+> "By not examining the changes in competitive dynamics that firms are so frequently subjected to, DesJardine, Shi, and Cheng (2023) offered a static view of information-based competition. However, this static view does not fully align with research showing that competitive threats and opportunities regularly evolve in ways that shape an actor's motivation and capability to initiate competitive moves."
+
+**骨架**:
+```
+[承接] Providing some evidence of this possibility, [prior study] found that [prior finding] ([self-citation]).
+
+[局限命名] Yet, their study offers a notable limitation, which we use as a departure point to enrich a theory of [focal phenomenon].
+
+[misalignment] By not examining [the dynamic aspect] that [actors] are so frequently subjected to, [prior study] offered a static view of [the phenomenon]. However, this static view does not fully align with research showing that [threats and opportunities] regularly evolve in ways that shape [an actor's motivation and capability] to act ([citation]).
+
+[必要性声明] For models of [the phenomenon] to be accurate, it is imperative to account for [its temporal nature].
+
+[时序化重述] Thus, our theory of [the phenomenon] accounts for how shifts in [the landscape] ([via threats or opportunities]) trigger [actors] to exert [their latent influence].
+
+[伞式下传] 该触发逻辑为后续成对调节假设提供共同伞：[threat → motivation] 与 [opportunity → ability] 各自落到一条 moderator 轴上（可与 willing-and-able 双轴框架衔接）。
+```
+
+**为什么有效**:
+- **局限即出发点**：把前作局限显式命名为 "departure point"，既化解"自我重复"质疑，又把前作从竞争文献变成承重结构——静态→动态的升级路径一眼可见
+- **misalignment 句式**："static view does not fully align with research showing..."——用文献共识界定前作的适用域缺口，而非指责前作错误；对自引前作口吻可以直接，对他人前作需更中立
+- **潜在影响 + 触发窗口**：把"是否有影响"改写为"何时行使影响"——主效应保持不变，而全部调节假设获得统一理论根（不再是并列附录）；回答"为什么现在需要调节"而非"又多了一个调节"
+- **与 willing_able_dual_axis 的分工**：桥给出"为什么需要调节"（现象的时序性）；双轴框架给出"调节怎么选轴"（威胁→动机 / 机会→能力）
+
+**反模式**: 局限写成泛泛的 "more research is needed"（无具体 misalignment 内容）；修复后触发逻辑没有下传到 moderator 选取（桥与调节假设脱钩）；对非自引前作用"notable limitation"式直白口吻（他人前作局限需文献共识背书）。
+
+<!--
+pattern_id: prior_limitation_departure_bridge
+build_type: 机制推演型（论证组织）
+source_papers: ["desjardine_li_shi_2025_amj"]
+confidence: high
+status: EMERGING — 单篇来源；wb 批次 E
+-->
+
+<!-- wb:desjardine_2025_information_based_competition_the_case_of_ri:prior_limitation_departure_bridge -->
+
+
+
+### 变体 E：共享盲区批判开场（Gulati_1998 综述文型）
+
+**模板**:
+> [让步开场] Prior research on [领域] has led to valuable insights on [它做对了什么].
+> [共享倾向清点] [N] related themes run across these prior efforts. First, [共享倾向1：分析单位选择]. A second and related theme has been [共享倾向2：语境被非社会化处理]. Finally, [共享倾向3：因子集截断——focused primarily on [A侧] and not on [B侧]].
+> [盲区命名] The focus on [倾向1] and [倾向2] has typically assumed [共享的隐含假设]. Viewed from this standpoint, much of the research on [领域] represents an [现成标签] account of [行动者] behavior.
+> [空间转化] In recent years there has been a growing interest in [被忽略的语境]... my focus in this paper will be on [透镜的一个切面]——完成边界划定。
+
+**来源**: Gulati_1998_SMJ, Theory P1-P5（"A Brief Critique of Prior Research on Alliances"）
+
+**原文锚点**:
+> "Three related themes run across these prior efforts." ... "Viewed from this standpoint, much of the research on strategic alliances represents an undersocialized account of firm behavior."
+
+**关键特征**:
+- 批判对象不是单项研究而是跨文献的共享假设，三条倾向逐条举证（每条后跟 exemplar 引文）后一次性收束命名
+- 命名借用透镜文献的现成标签（undersocialized，出自 Granovetter 传统）——外部权威替代自创术语，批判自带理论合法性
+- 批判段先于透镜出场：读者先感到缺口再见到工具，视角引入获得结构性空间
+- 倾向3 的句式是"聚焦了 A 侧而非 B 侧"（competence side vs opportunity side），比"没研究 X"更精确地指认盲区形状
+**适用**: 综述文/视角文的_critique_and_lens_前置段；为引入与在位文献不同范式的新视角造空间
+**禁忌**: 三条倾向必须真是"跨文献共享"（各有多个文献家族佐证），不得为凑三而拆分单一文献的缺陷；现成标签必须真出自透镜文献，不得自造标签冒充
+
+<!-- wb:gulati_1998_alliances_and_networks:review_essay_blind_spot_critique_opener -->
+
+
+### 变体 F：透镜-议程六拍循环（Gulati_1998 综述文型）
+
+**模板**:
+> [路标句] The section is organized around the [N] key questions... For each question, I first discuss [在位层次上的既有研究], followed by an examination of how introducing a [透镜] perspective opens up an additional set of issues.
+> [议题循环 × N，每循环六拍]
+> 拍1 已知盘点：[按理论家族组织的既有研究走到哪里]
+> 拍2 内在盲区：[点破共享隐含假设——"Implicit in such accounts is the assumption that..." / "An important shortcoming... has been their implicit treatment of..."]
+> 拍3 情境激活：[透镜变得切题的具体处境——机会主义、appropriation、协调成本]
+> 拍4 视角重析+证据：[透镜重解该议题；prior studies + own studies + 田野引语三班证据]
+> 拍5 互补整合：[新解释不推翻旧解释——必要不充分式收束]
+> 拍6 开放议程：["has yet to be examined" / "remains an open question" / "Two natural extensions..."]
+
+**来源**: Gulati_1998_SMJ, Theory P39-P157（"Key Issues in Alliances" 五议题：形成/治理/演化/联盟绩效/企业绩效）
+
+**原文锚点**:
+> "For each question, I first discuss some of the current research and debates at the firm and dyadic levels, followed by an examination of how introducing a social network perspective opens up an additional set of issues that can be considered."
+
+**关键特征**:
+- 把抽象视角转成可操作研究议程的机制 = 固定六拍循环：每次先付"已知"的诚意，再点破隐含假设制造缺口，用透镜填补，最后把"视角暗示但没人做过"的问题显式列表
+- 路标句提前宣布节奏，N 次循环形成阅读预期，每次只需增量理解
+- 拍2 的盲区句式有固定语法：implicit treatment / implicit assumption——指认"假设"而非"错误"，为拍5 互补整合留后路
+- 拍6 的开放问题都带具体扩展方向（换网络类型/换层次/加时间维度），不是泛泛的"未来可研究"
+**适用**: 综述文/视角文主体架构；领域有多个成熟子议题且每个都能被同一透镜重析时
+**禁忌**: 议题间必须有真差异（不同因变量/层次），否则循环沦为重复；拍1 综述必须 generous（对手最强形式），稻草人式盘点会被审稿人反噬；五循环中拍5 句式需措辞换装，防公式化
+
+<!-- wb:gulati_1998_alliances_and_networks:lens_agenda_six_beat_cycle -->
+
+
+### 变体 G：前提分解→瓶颈命名 setup（Gulati_1999 型）
+
+<!--
+pattern_id: precondition_decomposition_hurdle_setup
+build_type: 跨类型（机制 setup 微动作；T3 开篇、主效应假设前置）
+source_papers: ["gulati_1999_network_location_and_learning_the_influence_of_n"]
+verification_status: VERIFIED — expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)
+-->
+
+**适用场景**: 主效应假设的 IV 是某种"降低门槛的资源/能力"时，在机制推演开篇先分解行为发生的**双边前提**（双方各自需要什么信息/资源），再把瓶颈统一命名为一个 hurdle 构念——使 IV（恰好降低该瓶颈者）与 DV 的联系变成分析必然而非断言。
+
+**微观动作序列**: 双边前提列举（first/second + Simultaneously 对方侧）→ 风险具体化（moral hazard 的失败模式）→ 瓶颈命名（"All these conditions create a significant [X] hurdle"）→ IV 引入（access to [IV] can lower [hurdle]）。
+
+**骨架**:
+```
+[双边前提] For [actors] to [focal behavior] that [meets needs] while minimizing [risk], they must first [precondition 1] and, second, [precondition 2] ([citation]). Simultaneously, [counterparty] must also have [mirror precondition on the focal actor].
+[风险具体化] [Actors] face considerable [risk type] concerns because of [sources of unpredictability]... A [counterparty] may either [failure mode 1: free-ride] or simply [failure mode 2: opportunism]. Such concerns are further compounded by [aggravator].
+[瓶颈命名] All these conditions create a significant [named hurdle] for [the behavior].
+[IV 引入] Given the [uncertainty], access to [IV resource] can lower [search costs] and alleviate some of the [risks], making [actors] more likely to [behavior].
+```
+
+**为什么有效**: 前提分解把行为发生写成清单（哪一方缺什么都不行），瓶颈命名把清单压缩成一个可命名的构念，IV 随即以"瓶颈解除者"身份出场——why chain 的第一步不再需要断言，IV 与 DV 的关系已由前提结构注定；对方侧镜像前提（"Simultaneously, those potential partners must also…"）还预先覆盖了"被选中方"的机制方向。
+
+**注意事项**: 前提必须真是双边/多维（单侧前提直接单步机制即可）；瓶颈命名构念应与 IV 的理论属性同纲（信息瓶颈↔信息资源；成本瓶颈↔成本优势）；风险具体化要给出失败模式，不能只说 risky。
+
+**反模式**: 前提清单与 IV 属性不同纲（成本瓶颈用信息资源解除）；命名后弃用（后续机制不回扣 hurdle）。
+
+**原文锚点** (Gulati 1999, SMJ):
+> "For firms to build alliances that effectively address their needs while minimizing the risks posed by moral hazard concerns, they must first be aware of the existence of potential partners and have an idea of their needs and requirements and, second, have information about the reliability of those partners."
+
+**原文锚点**（瓶颈命名句）:
+> "All these conditions create a significant informational hurdle for the creation of alliances."
+
+<!-- wb:gulati_1999_network_location_and_learning_the_influence_of_n:precondition_decomposition_hurdle_setup -->
+
+
+### 变体 H：单透镜双极镜像机制链（One-Lens Bipolar Mirror Chains，Gulati_Westphal_1999 型）
+
+<!--
+pattern_id: one_lens_bipolar_mirror_chains
+build_type: 机制推演型（两极反向主效应）
+source_papers: ["gulati_westphal_1999_cooperative_or_controlling (ASQ)"]
+confidence: high
+status: VERIFIED — expert_audit_override (Gulati/Westphal 系单源裁定 2026-09-06, paper_count=1)
+-->
+
+**适用场景**: 核心前因有两个相反极（如控制型 vs 合作型关系内容），两极各自推导反向 DV 效应，且同一理论透镜可以双向运行时。
+**结构**: 极 A 小节：透镜 L → [极 A 构型] → [机制 M−] → [DV 反向]；极 B 小节：显式复用 L → [极 B 构型] → [机制 M+] → [DV 正向]；镜像句收束对称性
+
+**骨架**:
+```
+[极 A 小节] Applying [lens L] to [context], we expect that [极 A configuration]
+→ [M−: 分化/消耗型中介] → [DV 反向].
+
+[极 B 小节]
+[透镜复用句] The connection between [极 B] and [中介] can also be understood
+by considering [同一透镜 L 的证据].
+[镜像句] In effect, just as [M−] is a basic and powerful human response,
+[极 B] can engender [M+], leading to [DV 正向].
+```
+
+**为什么有效**: 第二极不重新进口理论，只"换向运行"第一极的透镜——理论装置减半、两极对称性本身成为论证（读者用第一极的认知惯性理解第二极）；镜像句 "just as..., ... can engender..." 把对称性明示为理论主张而非巧合。
+**注意事项**: 前提是透镜 L 真能双向运行（L 对两极给出对称机制，而非只解释一极）；第二极仍需补足 L 之外的新步骤（本文极 B 补 Simmel 互动-信任步）；两极的中介要同构（同一信任构念反向）才能镜像。
+**反模式**: 两极各找一个不同理论硬凑（透镜拼贴，对称性消失）；把镜像句写成机械对仗但机制不同构。
+**与近亲变体的区分**: "镜像配对比较假设组（Pfarrer 2010 型）"镜像的是假设陈述组（构念辨析后的成对 H），本变体镜像的是机制推导链（透镜复用发生在论证层，假设仍逐条独立陈述）；"同果近邻构念反号辨析（westphal_bednar2005 型）"辨析的是两个构念+同一调节变量反号，本变体是同一构念的内容两极+同一透镜换向。
+**原文锚点**:
+> "The connection between cooperative interactions in CEO-board relationships and the extent of trust between managers can also be understood by considering some of the evidence from research on intergroup relations." / "In effect, just as negative affect and distrust toward an independent, controlling group is a basic and powerful human response, cooperation between group members can engender in-group biases that lead to positive affect."
+
+
+<!-- wb:gulati_westphal_1999_cooperative_or_controlling:argumentation_one_lens_bipolar_mirror_chains -->
+
+
+### 变体 I：默认透镜资格审查-更替（Lens Scope Disqualification & Replacement，Gulati_Westphal_1999 型）
+
+<!--
+pattern_id: lens_scope_disqualification_replacement
+build_type: 机制推演型 / 调节效应型（moderator 透镜选择段）
+source_papers: ["gulati_westphal_1999_cooperative_or_controlling (ASQ)"]
+confidence: high
+status: VERIFIED — expert_audit_override (Gulati/Westphal 系单源裁定 2026-09-06, paper_count=1)
+-->
+
+**适用场景**: 为边界/调节机制选择理论透镜时，读者对"默认透镜应当如何预测"有强先见（如第三方关系→声誉强制→更多信任），而 focal 情境恰好不满足默认透镜的范围前提。
+**微观动作序列**: 默认预测 → 前提显性化 → 情境失配 → 失效结论 → "more germane perspective" 更替 → 新透镜机制
+
+**骨架**:
+```
+[默认预测] It is typically supposed that [默认透镜] will [预测 X]
+by [默认机制] ([citations]).
+[前提显性化] The claim that [默认机制] assumes that [范围前提 P].
+[情境失配] In [focal context], however, [P 不成立/规范模糊],
+because [情境条件]. Accordingly, [默认透镜] may not necessarily
+[预测 X] in this setting.
+[更替] While traditional perspectives on [X] may not apply to [context],
+recent research suggests a more germane perspective: [新透镜] ([citations]).
+[新机制] [新透镜] proposes [机制 M]，据此推出调节预测.
+```
+
+**为什么有效**: 先把默认透镜的隐含范围前提拎出来逐一对照情境，失效是"论证出来"的而非宣布的——透镜更替显得是情境逼出来的必然选择，预先解除审稿人"标准理论明明说…"的质疑。
+**注意事项**: 前提 P 必须是默认透镜自身的核心假设（可引原文），不能偷换成稻草人；失配论证要有情境证据（本文引规范模糊 + 董事选任实证证据）；更替透镜需能覆盖默认透镜解释不了的那部分变异。
+**反模式**: 不给默认透镜出场机会直接换透镜；或失配论证只靠 "however" 无前提对照。
+**与近亲变体的区分**: "Preemptive Competing Account Management"管理的是竞争预测（预测层，用拒绝或 moderator 裁决收场）；"Neglected Lens via Dominant-View Contrast"是 T2 开场的视角选择（两条透镜共存）；本变体在调节段对单一默认透镜做范围前提审查后更替（透镜层、前提失效驱动），三者层次不同。
+**原文锚点**:
+> "The claim that third-party ties enforce cooperation through reputational effects assumes that noncooperative behavior is illegitimate or non-normative." / "While traditional perspectives on indirect network ties may not apply to board interlocks, recent research on the effects of third-party ties suggests a more germane perspective."
+
+
+<!-- wb:gulati_westphal_1999_cooperative_or_controlling:argumentation_lens_scope_disqualification_replacement -->
+
+
+### 变体 J：增长谜题→双问句架构预告（Growth-Puzzle Double-Question Forecast，Gulati_1999_AJS 型）
+
+<!--
+pattern_id: growth_puzzle_double_question_forecast
+build_type: 跨类型（理论章开场宏观架构动作）
+source_papers: ["gulati_1999_where_do_interorganizational_networks (AJS)"]
+verification_status: VERIFIED — expert_audit_override (Gulati 系单源裁定 2026-09-06, paper_count=1)
+story_fidelity: section_variant
+-->
+
+**适用场景**: 理论章开场（现象定义与风险铺垫之后、任何假设之前），用"反常增长"制造谜题，再以两个问句分别预告论文的两大部分——机制问题与后果/动态问题。
+
+**骨架**:
+```
+[现象与障碍] [现象] 的爆发式增长发生在 [显著障碍/风险] 之下……
+[障碍命名] The paucity of [关键要素] create a significant [hurdle] for [actors] that consider [行为].（可复用变体 G 的瓶颈命名句）
+[谜题句] Yet, the explosive growth of [现象] suggests that [actors] are able to overcome such hurdles.
+[双问句预告] How do they do it? And what consequences does their behavior have for [更大的系统/context]?
+```
+
+**为什么有效**: 双问句是全文架构合同：第一问由形成理论回答（机制），第二问由动态理论回答（行动对结构的反馈）——读者在读到任何假设前已持有两大部分的分工地图；谜题句把"障碍与增长并存"的反常转成求知张力，比直线式 gap 陈述推进力更强；第二问（后果）为论文后半的动态/反馈理论拿到入场券，静态机制论文常缺这一问。
+
+**注意事项**: 两问必须真的对应后文两大部分且顺序一致；第二问不可省略——它把理论从静态推向动态；障碍命名与变体 G 同源时可只用其命名句，落点仍是问句而非 IV 引入。
+
+**反模式**: 问句只装饰不兑现（后文无对应部分）；只问机制不问后果（理论停在静态）；问句前无反常铺垫（谜题感不足）。
+
+**与近亲变体的区分**: 变体 G（前提分解→瓶颈命名）是 T3 机制 setup 微动作，落点=IV 以瓶颈解除者身份出场；句式 B（How then might...）是单段推导起点的机制枢纽问句；本变体是理论章宏观架构动作，落点=双问句合同，瓶颈命名可作其内部垫段。
+
+**原文锚点** (Gulati 1999, AJS):
+> "Yet, the explosive growth of strategic alliances suggests that organizations are able to overcome such hurdles and enter alliances. How do they do it? And what consequences does their behavior have for the social context in which new strategic alliances take place?"
+
+<!-- wb:gulati_1999_where_do_interorganizational_networks:c3_growth_puzzle_double_question_forecast -->
+
+### 模式 G：现象先行定位模块（Research-Setting Staging before Constructs）
+
+<!-- pattern_id: setting_first_materiality_staging; build_type: 跨类型; source_papers: ["Pfarrer_Pollock_Rindova_2010_AMJ"]; confidence: medium -->
+
+**适用场景**: 结果域（DV 现象）本身需要论证"为什么值得理论化"（反常、有后果梯度、触发理论机制）时，在构念定义前安排一个研究情境模块为结果域设 stakes。
+**句位/位置**: Theory 开篇、T1 之前的前置模块
+**范文来源**: Pfarrer, Pollock, and Rindova (2010), AMJ
+
+**骨架**:
+```
+[常态锚定] [Outcome] is the norm: actors strive to avoid [outcome] because [why the
+norm matters for market/field efficiency] ([citations]).
+
+[反常引入] Yet [outcomes] do happen. They occur for [reasons: actor actions and events
+beyond control], e.g., [1-2 vivid instances].
+
+[梯度界定] [Outcomes] also differ in the extent to which they [deviate/vary]. Larger
+deviations—[operational threshold class]—are considered "[term]" and are more
+consequential for both [actors] ([citations]). [Term] [outcomes], given their rarer
+occurrence and greater salience, therefore have greater potential to [engage the
+theorized mechanism].
+
+[过渡桥接] In the next section we discuss [how the focal constructs arise] in order to
+develop the theoretical foundation for our hypotheses predicting their effects on
+[outcome domains].
+```
+
+**为什么有效**: 把 DV 的理论重要性（反常性、后果梯度、机制触发潜力）在 X 出场前建立，后续"构念→行为倾向"假设的意义空间先被撑开；过渡句显式宣告 setting→构念→假设的分工，避免读者把情境段当文献综述。
+**注意事项**: 情境段必须落在"为什么该结果域对理论机制重要"，不是行业背景科普；梯度界定段（何为 material）同时为实证操作化铺垫。
+**反模式**: 情境段写成现象描述堆砌（只列举发生原因的例子），不回收"这为何激发本文的理论机制"。
+**原文锚点** (Pfarrer et al. 2010, AMJ):
+> "Material earnings surprises, given their rarer occurrence and greater salience, therefore have greater potential than smaller surprises to engage investors in active sensemaking and reevaluation of a firm." ... "In the next section we discuss how reputation and celebrity are gained in order to develop the theoretical foundation for our hypotheses predicting their effects on firms' propensities to announce surprises and on investors' reactions to these surprises."
+
+<!-- wb:pfarrer_pollock_and_rindova_2010:setting_first_materiality_staging -->
 <!--
 pattern_id: transfer_plus_sorting_dual_warrant_signal
 build_type: 机制推演型（信号/背书/声望类假设通用）
@@ -570,7 +882,7 @@ source_papers: ["higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"]
 confidence: low-medium（单篇来源，EMERGING 待第二篇交叉验证）
 -->
 
-### 变体 E：传递 + 自选择双 warrant 信号推演（Transfer + Sorting Dual-Warrant Signal Derivation）
+### 变体 K：传递 + 自选择双 warrant 信号推演（Transfer + Sorting Dual-Warrant Signal Derivation）
 
 **适用场景**: 假设核心推理是"X 的某属性向第三方传递 Y 的质量信息"。单一传递论证（"他们在名组织习得了有价值的东西"）易被读作纯光环效应；叠加自选择论证（"有声誉的成员只挑有前景的企业加入"）后，该属性同时成为成员对企业质量的独立投票。
 **适用模块**: T3 Mechanism Chain（每个类型分支的第二 warrant；与"类型学分解"架构模式配套使用亦可独立使用）

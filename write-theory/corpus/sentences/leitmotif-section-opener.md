@@ -127,3 +127,109 @@ How then might [IV] [direction verb] [actor]'s ability to [outcome] in
 > "We suggest that directors will be better able to contribute to strategy in such an environment when their other board ties are strategically related to the focal firm."
 
 <!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:sentence_rhetorical_question_mechanism_pivot -->
+
+
+### 变体 C：绩效文献→行为变量改指 pivot（Gulati_1999 型）
+
+<!--
+pattern_id: performance_to_behavior_repurposing_pivot
+build_type: 跨类型（句式级；Topic 句位）
+source_papers: ["gulati_1999_network_location_and_learning_the_influence_of_n"]
+verification_status: VERIFIED — expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)
+sentence_position: topic
+-->
+
+**句位**: 小节 Topic（引入 IV 构念的小节首段——把既有文献的默认 DV（绩效差异）改指向本文的行为 DV）
+
+**句式骨架**:
+```
+[文献默认用途承认] While [scholars in the parent literature] have primarily applied [theoretical apparatus] to explain [default outcome: sustained performance differences], [variation in the construct] can also be the basis for [focal strategic behavior] ([citation]).
+[本文焦点声明] In this instance, my/our concern is not with [adjacent construct type] but with [focal construct type] that enable [actors] to [focal behavior] with greater ease.
+```
+
+**变体**（同句位措辞候选）:
+- "not so much for [default outcome] but, rather, as [focal function: an important enabling condition for future cooperation]" — 后果焦点改指（DV 从绩效改为行为可能性，可放在小节后部回收）
+- "variation in [construct] can also be the basis for [behavior]" — 同一构念变量的新 DV 用途声明
+
+**为什么有效**: 一句话同时完成三件事：承认借用文献的合法性（不需要新理论）、声明 DV 改指（绩效→行为）、划清与邻接构念类型的边界（not with A but with B）；预先回答"这个绩效文献传统凭什么适用于本文的行为 DV"。
+
+**注意事项**: 默认用途承认必须准确（该文献确实以绩效为主 DV）；改指后的 DV 要有理论接口（enabling condition → 行为倾向），不能只换词；若借用涉及机制差异，需衔接"Recognize X but Leverage Y"类论证。
+
+**反模式**: 无默认用途承认直接挪用文献（审稿人问"这不是绩效文献吗"）；改指后机制不跟（构念为绩效而生却硬套行为 DV）。
+
+**原文锚点** (Gulati 1999, SMJ):
+> "While strategy scholars have primarily applied various capabilities-based arguments to explain sustained performance differences across firms, variation in capabilities can also be the basis for strategic behavior."
+
+**原文锚点**（后果焦点改指变体）:
+> "In this context, I consider the implications of network resources not so much for the performance of firms but, rather, as an important enabling condition for future cooperation."
+
+<!-- wb:gulati_1999_network_location_and_learning_the_influence_of_n:performance_to_behavior_repurposing_pivot -->
+
+
+### 变体 C：阶段路标段首（"The consequences for [DV]." Stage Signpost，Gulati_Westphal_1999 型）
+
+<!--
+pattern_id: consequence_stage_signpost
+build_type: 跨类型（句式级）
+source_papers: ["gulati_westphal_1999_cooperative_or_controlling (ASQ)"]
+confidence: high
+status: VERIFIED — expert_audit_override (Gulati/Westphal 系单源裁定 2026-09-06, paper_count=1)
+sentence_position: topic_sentence
+-->
+
+**句位**: 小节内段首 Topic 位——透镜/前提铺垫段之后、后果推导段起点，用一个独立短句宣布论证进入"后果"阶段。
+
+**句式骨架**:
+```
+[透镜/前提铺垫段(s)]...
+The consequences for [DV]. [首句展开] There are several possible consequences
+of [X] on the prospects of [DV]... On one level, ...
+```
+
+**变体**（同句位措辞候选）:
+- "The consequences for [DV]." — 裸路标（本文在两个极小节中逐字复用，形成节奏指纹）
+- "[构念] and [DV]." — 构念对路标（变通形式）
+- "The implications for [DV] are twofold." — 带预告的路标
+
+**为什么有效**: 两段式小节（先透镜铺垫、后后果推导）用同一路标切换阶段，读者在每个小节的同一位置获得同样的结构信号；路标逐字复用让平行小节的对称性可见。
+**注意事项**: 路标后首句要立即给出后果的具体展开方向（不能路标后再铺垫）；同节内复用需真平行（两小节结构同构）才形成指纹，否则是噪音。
+**反模式**: 每段都加路标（段落碎成目录）；路标句后紧跟新透镜引入（阶段切换语义混乱）。
+**与近亲变体的区分**: "标签式段首（westphal_bednar2005 型）"的裸标签是构念/moderator 名，功能是给平行 moderator 段做视觉锚点；本变体的路标命名的是论证阶段（consequences），功能是小节内从"铺垫"切到"推导"。
+**原文锚点**:
+> "The consequences for alliance formation. There are several possible consequences of independent board control on the prospects of alliance formation between the focal firm and manager-directors' home companies."
+
+
+<!-- wb:gulati_westphal_1999_cooperative_or_controlling:sentence_consequence_stage_signpost -->
+
+
+### 句式 D：未决不足桥接问句段首（If-X-Alone-Cannot Question Bridge，Gulati_1999_AJS 型）
+
+<!--
+pattern_id: if_alone_cannot_question_bridge
+build_type: 跨类型（句式级；机制小节边界 Topic 位）
+source_papers: ["gulati_1999_where_do_interorganizational_networks (AJS)"]
+verification_status: VERIFIED — expert_audit_override (Gulati 系单源裁定 2026-09-06, paper_count=1)
+story_fidelity: section_variant
+sentence_position: topic_sentence
+-->
+
+**句位**: 机制小节开头的 Topic 位——上一机制的不足已在其小节末暴露（常配"必要不充分交棒"），本小节以问句承接并宣布本节任务。
+
+**句式骨架**:
+```
+If [在位机制] alone cannot offer sufficient cues for [行动者] to [行为], how do they decide [新问题维度]?
+Building on [文献综述锚点] and on [自有证据：our own fieldwork], we shall argue that [本节核心主张].
+```
+
+**为什么有效**: 问句把上一节留下的缺口复述为悬念；"alone" 一词精确地把不足归因于机制覆盖面而非机制错误（不推翻已推导的 H）；"Building on... and on our own fieldwork" 双重授权句随即接住问句——问-答间距仅一句，悬念不悬置；we shall argue 保持作者责任声。
+
+**注意事项**: 每个机制小节至多一次；问句的"新问题维度"必须与上节末的问题改写一致（呼应交棒转场的 whom 问题）；问句后必须紧跟主张句（We shall argue / We propose），不能问完就铺文献。
+
+**反模式**: 连续多节用问句开场（变成口头禅）；问句后先铺文献再给主张（悬置过久）；"alone" 语义滑向"机制错误"（应为覆盖面不足）。
+
+**与句式 B 的区分**: 句式 B（How then might...?）在理论透镜已立后的分支起点切换"框架→推导"，问句不含让步从句；本句式在机制小节边界处承接上一机制的**覆盖面不足**并携带 "If X alone cannot..." 让步从句，问句本身即复述了缺口。
+
+**原文锚点** (Gulati 1999, AJS):
+> "If interdependence alone cannot offer sufficient cues for organizations to cooperate with one another, how do they decide with whom to build strategic alliances? Building on a growing body of research ... and on our own fieldwork, we shall argue that organizations address the potential hazards ... by relying on information provided by existing interorganizational networks."
+
+<!-- wb:gulati_1999_where_do_interorganizational_networks:c7_if_alone_cannot_question_bridge -->

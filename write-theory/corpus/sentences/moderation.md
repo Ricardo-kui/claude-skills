@@ -325,6 +325,43 @@ on [organizational mechanisms that mitigate such conflicts / the secondary frame
 ---
 
 
+
+### 句式 D：连续调节单调斜率句（Continuous-Moderator Slope Form，Gulati_1999_AJS 型）
+
+<!--
+pattern_id: continuous_moderator_slope_form
+build_type: 调节效应型（句式级；sentence_position: hypothesis）
+source_papers: ["gulati_1999_where_do_interorganizational_networks (AJS)"]
+verification_status: VERIFIED — expert_audit_override (Gulati 系单源裁定 2026-09-06, paper_count=1)
+story_fidelity: section_variant
+sentence_position: hypothesis
+-->
+
+**句位**: 假设句位——moderator 为连续水平/阶段变量（网络成熟度、市场发展程度、结构分化水平）时的交互假设陈述。
+
+**句式骨架**:
+```
+H[n]: The effect of [X] on [DV] [increases/decreases] with the [level/degree] of [W].
+```
+
+**变体**（同句位措辞候选）:
+- "The effect of [X] on [DV] decreases with the level of [W]." — 削弱型（buffering 的连续等价式）
+- "The effect of [X] on [DV] increases with the level of [W]." — 增强型（enhancing 的连续等价式）
+- "The [positive/negative] effect of [X] on [DV] [weakens/strengthens] as [W] [grows/increases]." — 过程叙事变体
+
+**为什么有效**: 当 W 的理论意义是"阶段/水平"而非可操纵状态时，high/low 条件对仗会暗示可分组的两态并引来"阈值在哪"的伪问题；斜率式把调节写成连续单调函数，与 event-history/panel 设计的操作化直接对齐，也让机制段的阶段叙事（early periods / as W increases）与假设句形式严格同构。
+
+**注意事项**: 只用于真连续/阶段 moderator；方向词必须与机制论证的阶段叙事一致；若 W 的效应理论上有转折点则不适用（改曲线/倒 U 形式）；正文推导需覆盖阶段两端（等价于双边论证）。
+
+**反模式**: 把二分类 moderator 硬写成斜率式；斜率式假设与机制段的 high/low 叙事不一致；用斜率式掩盖非单调预期。
+
+**与调节效应决策表现有形式的判别**: enhancing/buffering 型用 "stronger/weaker when W is high than when W is low"（条件对仗、二态比较）；本句式是其连续阶段 moderator 等价式——单调斜率陈述，无态比较。
+
+**原文锚点** (Gulati 1999, AJS):
+> "The effect of interdependence on the formation of new alliances between organizations decreases with the level of structural differentiation of the interorganizational network."
+
+<!-- wb:gulati_1999_where_do_interorganizational_networks:c9_continuous_moderator_slope_form -->
+
 ### 变体 B：编号双因变量交互假设形式（westphal_zajac_1998_symbolic_management 型）
 
 **模板**:
@@ -425,6 +462,81 @@ board's scrutiny to [functional_domain] ([citations]). This may lead the board t
 > "The salience of [action] as an instrument to [goal] is significantly higher for [units in condition W-high]. According to [lens], managers pay closer attention to [signals] that are salient and persistent in the external environment. Therefore, [units in W-high] are more likely to [response] in response to [shock]."
 
 来源：Moon et al. (2026, Journal of Marketing)。
+
+
+### 变体 C：对称放大型调节假设（Symmetric Amplifier Moderation——Intensity, Not Direction，Gulati_Westphal_1999 型）
+
+<!--
+pattern_id: symmetric_amplifier_moderation
+build_type: 调节效应型（句式级+假设对）
+source_papers: ["gulati_westphal_1999_cooperative_or_controlling (ASQ)"]
+confidence: high
+status: VERIFIED — expert_audit_override (Gulati/Westphal 系单源裁定 2026-09-06, paper_count=1)
+sentence_position: moderation_hypothesis
+-->
+
+**功能**: 同一调节变量 W 放大两个异号主效应（一负一正）时，用"强度而非方向"的机制语言 + 成对方向化假设表达。
+
+**机制语言**:
+```
+[W] influence the intensity but not the direction of [中介状态] in
+[关系]；that is, [W] make [actors] more certain of their [trust/distrust]
+in [other].
+```
+
+**假设对**:
+```
+H(w): The more [W] there is between [actors], the stronger the negative
+relationship between [X1] and [Y].
+H(w+1): The more [W] there is between [actors], the stronger the positive
+relationship between [X2] and [Y].
+```
+
+**为什么有效**: "intensity but not direction" 一句同时给出交互的理论形状（纯放大、无交叉）与可检验含义（同号增强）；成对假设把放大机制落实到每个主效应的符号上，避免"加强/减弱"歧义；一般性 H 与方向化子假设分层陈述（H4 → 4a/4b）保持家族对称。
+**注意事项**: 必须先有两个已建立的异号主效应（本文 H2/H3），放大假设才有锚；机制上要说明 W 为何不偏袒任一方向（本文：第三方 gossip 的再确认动力学对既有倾向对称）；异号放大需排除"反向交互"歧义（放大≠翻转）。
+**反模式**: 只写一个方向的放大假设而让另一方向隐没；用 "stronger relationship" 却不说明对哪个已陈述的主效应放大；把放大写成方向反转。
+**与近亲变体的区分**: "异号增强/阻碍调节句（Castellaneta 型）"是双刃剑前因配两个不同 moderator（每刃一个 W）；"董事会放大型边界条件（Chung/Low/Rust 2022 型）"是单一 perverse 放大 + 特质交互；本变体是单一 W 对两个异号主效应的对称放大（amplify both, reverse neither）。
+**原文锚点**:
+> "third-party ties influence the intensity but not the direction of trust in managerial relationships; that is, indirect ties make managers more certain of their trust (or distrust) in another." / "The more indirect interlock ties there are..., the stronger the negative relationship between board control over the CEO and the likelihood of subsequent alliance formation..."
+
+
+<!-- wb:gulati_westphal_1999_cooperative_or_controlling:sentence_symmetric_amplifier_moderation -->
+
+
+### 句式 D：机制级选择性调节划界（Mechanism-Level Selective Moderation Scope，Gulati_1999_AJS 型）
+
+<!--
+pattern_id: mechanism_level_selective_moderation_scope
+build_type: 机制推演型 + 调节效应型（句式级 sentence_position: moderation_mechanism）
+source_papers: ["gulati_1999_where_do_interorganizational_networks (AJS)", "Fini_Jourdan_Perkmann_2017_AMJ（选择性组件不变性家族近亲）"]
+verification_status: VERIFIED — expert_audit_override (Gulati 系单源裁定 2026-09-06, paper_count=1)
+story_fidelity: section_variant
+sentence_position: moderation_mechanism
+-->
+
+**句位**: 多机制模型共用一个系统水平 moderator 时，调节假设组之间的范围管理段（被绑定机制的调节假设之前）。
+
+**句式骨架**:
+```
+[范围前置] We also expect [W] to moderate the influence of [机制族] on [DV], although not all [机制] are likely to be moderated by [W].
+[豁免理由] The information [机制i] provides is readily available to [决策者], and thus it is not necessarily dependent on [W 所刻画的整体结构]... [机制级属性：该通道不随整体发展阶段变化]。
+[零调节不变声明] Therefore, the impact of [Mi] and [Mj] mechanisms is not necessarily contingent on [W].
+[被绑定机制] While [Mi/Mj 的信息] is immediately available, this is not the case with [Mk 的信息]. The effectiveness of [Mk] as a signal depends on [整体结构的发展程度]... Consequently, we expect the effect of [Mk] on [DV] to increase with [W].
+[伪相关防线（脚注）] 承认 [W 的相关项，如密度增长] 可能制造 [豁免机制] 的可观察关联，但该关联 is likely to be spurious from the standpoint of our model。
+```
+
+**为什么有效**: "not all... are likely to be moderated" 把调节范围声明前置；零调节给的是机制级理由（信息可得性是否依赖整体结构），把"不调节"从实证空缺升级为理论承诺；被绑定机制的绑定理由与豁免理由共用同一理论轴（信息依赖性），挑选感消失；配套脚注预答"密度相关导致的伪调节"质疑——审稿人最顺手的攻击已被封堵。
+
+**注意事项**: 不变声明是理论范围声明而非交互不显著的统计预测；绑定与豁免必须共用同一判据轴；脚注防线应明确承认可观察关联的存在再消解其解释地位。
+
+**反模式**: 只声明被绑定机制不声明豁免；把不变声明写成统计预测；声明不变后又让豁免机制驱动任何预测（自相矛盾）；W 与豁免机制间留有未处理的伪相关通道。
+
+**与近亲判别**: 选择性组件不变性声明（Fini 2017）在**单条倒 U 假设的分量间**作选择性绑定；本句式在**多条机制假设间**作选择性绑定并跨假设管理调节范围——同一"选择性不变声明"家族的机制级形态，互为第二源。
+
+**原文锚点** (Gulati 1999, AJS):
+> "Therefore, the impact of relational and structural embeddedness mechanisms is not necessarily contingent on the level of structural differentiation in the overall network."
+
+<!-- wb:gulati_1999_where_do_interorganizational_networks:c5_mechanism_level_selective_moderation_scope -->
 
 ## 异号增强/阻碍调节句（more positive / more negative，Castellaneta 型）
 

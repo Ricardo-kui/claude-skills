@@ -6,9 +6,9 @@ source_papers:
   - hoffmann_cheong_phan_zurbruegg2024 (Journal of Marketing; DOI 10.1177/00222429241231236)
   - castellaneta_conti_kacperczyk_2017_smj (Strategic Management Journal; DOI 10.1002/smj.2533)
   - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
-variants_count: 17
+variants_count: 19
 created: 2026-05-18
-updated: 2026-08-23
+updated: 2026-09-05
 ---
 # DiD — Results 骨架
 
@@ -20,10 +20,11 @@ updated: 2026-08-23
 
 | 槽位 | 变体数 | 变体编号 |
 |---|---|---|
+| R1 | 1 | O |
 | R2 | 4 | 3, 7, 11, 12 |
 | R3 | 1 | 8 |
 | R4 | 2 | 1, 4 |
-| R7 | 9 | 5, 6, 9, 10, 13, 14, 15, 16, 17 |
+| R7 | 10 | 5, 6, 9, 10, 13, 14, 15, 16, 17, P |
 | R8 | 1 | 2 |
 
 ### R2（4）
@@ -292,6 +293,35 @@ updated: 2026-08-23
 **原始句锚点**: "The consistent results suggest that the observed relations between a recall and its substitutes' ad spending are likely limited to neither the Sagitar recall nor the category of sedan cars."
 **来源**: fang_et_al_2025_rival_recall_ad_spend (POM), Empirical Extension
 
+
+### 变体 P：调节变量测量内生性四步防御（层次分离→pre-shock 构造外生→时间不变测量→rival 交互控制，Castellaneta–Conti–Kacperczyk 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`；与变体9 识别威胁分节电池互补——变体9 防处理分配内生，本变体防调节测量内生）
+
+**槽位**: R7
+
+**功能节拍**: 威胁命名（调节测量可能被处理反向驱动，给两个具体理由）→ 第一步层次分离（测量层次≠处理层次，"effectively mitigates"）→ 第二步 pre-shock 限制样本重算（只用未采纳单元/处理前期间计算，构造性外生）→ 第三步时间不变层次测量（方法论先例引用，by construction 与处理无关）→ 第四步 rival 交互混淆排除（加入处理×竞争调节项）→ 稳健收束
+
+**模板**:
+> "Our measure of [moderator] might raise endogeneity concerns, for two reasons. First, a stronger [treatment] might reduce [mechanism], eventually [changing moderator]. The measures of [moderator] and [treatment] we use pertain to different levels of analyses: [level A] and [level B] respectively, which effectively mitigates the concern that [moderator] may be driven by [treatment]. Yet, to better address this issue, we re-estimate the baseline specification but compute an alternative [moderator] measure, based on only those [units/periods] where [treatment] has not yet occurred; this measure considers only those [units] that did not [adopt the policy] and so is likely exogenous to the change in [treatment] in the focal [unit]. We also consider a time-invariant [level A]-level measure of [moderator], following [methodological citation]; by construction, our measure is unrelated to [treatment] in any single [unit]. Our findings remain robust ([appendix table]). A second concern pertains to [confound]: the interaction with [treatment] might partially capture any interaction effect between [treatment] and [rival moderator]. To rule out this possibility, we [include treatment × rival moderator as a regressor] ([appendix columns])."
+
+**关键特征**:
+- **让步两理由开局**：先承认测量内生性有两条具体通道（反向行为通道 / 混淆交互通道），不是泛泛 "may be endogenous"
+- **层次分离作第一道防线**：行业层次测量 vs 州层次政策——跨层次构造性削弱反向通道，但只声称 mitigates 不声称消除
+- **pre-shock 重算 = 构造性外生**：只用未采纳州/处理前期间的事件计算调节测量，"likely exogenous to the change in [treatment] in the focal [unit]"——测量层面的 placebo 式防御
+- **rival 交互控制**：加入 [treatment × rival moderator]（如专利强度）证明焦点交互不被混淆——交互稳健性中少见的"对照交互"手法
+
+**原文锚定** (Castellaneta, Conti & Kacperczyk 2017, SMJ):
+> "The measures of mobility and trade secret protection we use pertain to different levels of analyses: industry and state respectively, which effectively mitigates the concern that industry mobility may be driven by state trade secret protection." ... "In any year, this measure considers only those states that did not pass the UTSA and so is likely exogenous to the change in trade secret protection in the focal state."
+
+**与 DiD 变体9（识别威胁分节电池）的区分**: 变体9 的 Alternative measures 小节仅泛化一句"替代测量不变"，防御对象是处理分配；本变体专注**调节变量测量**，给出四步可迁移句架（层次分离 / pre-shock 重算 / 时间不变测量 / rival 交互控制），防御 treatment→moderator 反向通道与混淆交互。
+
+**适用**: 调节变量为行业/市场层次聚合测量、处理为州/单元层次政策的交互设计；pre-shock 重算要求存在足够未处理单元/期间。
+
+**禁忌**: "different levels of analyses" 只作缓解不作消除，须接续 pre-shock 等更强证据；rival 交互控制不能只报 "remains robust"，须给出附录列号；无未处理单元/期间时 pre-shock 重算不可用，直接跳到时间不变测量。
+
+<!-- wb:castellaneta_2017_smj_how_does_trade_secret_legal_protection:r7_did_moderator_measure_endogeneity_defense -->
+
 ### 变体 10：Null placebo（±k 期伪处理）作为识别确证（2026-08-05）
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
@@ -383,6 +413,34 @@ updated: 2026-08-23
 [节奏标记]: [图导览][总量方向+显著性][成分分解][null 成分诚实并列][附录 t 值指针][过渡到估计]
 **原始句锚点**: "The top left figure reveals a noticeable decrease (p < 0.01) in total ad spending for substitute models after the recall. ... However, we observe an insignificant change (p > 0.1) in Brand Ad."
 **来源**: fang_et_al_2025_rival_recall_ad_spend (POM), §4.1
+
+
+### 变体 O：DiD 描述统计叙述 — DV 分布解读 + 处理组占比 + 样本构成（Castellaneta–Conti–Kacperczyk 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`；首次填充 DiD 结果类型 R1 槽位——registry DiD slots 原仅 R2/R3/R7）
+
+**槽位**: R1
+
+**功能节拍**: DV 定义回顾 + 分布叙事（均值方向实质解读 + SD 异质性为权变假设埋线）→ 政策时间背景（多数州已采纳 / 多数观测在前期）→ 处理组占比 + 暴露窗定义 → 跨州/跨行业分布披露
+
+**模板**:
+> "Our dependent variable is [outcome], which is [definition]. Even after [outlier treatment], the mean of [outcome] (about [X]%) is [direction], suggesting that ([substantive interpretation])—although [heterogeneity hint], as suggested by a high standard deviation. Most [units] in our sample [experienced the policy] before [year], and [N]% of our observations were initiated before [year]. Overall, about [M]% of [units] in our sample were subject to treatment—[treatment definition] during the [exposure window between unit entry and exit]. The [units] are evenly distributed across [geography], with the highest concentrations in [place A] ([x]%) and [place B] ([y]%). Moreover, roughly [K]% of [units] are in [industry block]."
+
+**关键特征**:
+- **DV 分布叙事而非流水账**：均值方向 + SD 各给一句实质解读（"profits unevenly distributed, as suggested by a high standard deviation"），为后续交互/异质性假设预埋线索
+- **处理组占比 + 暴露窗一句三事**："about [M]% of units were subject to treatment—[definition]—during [window]" 同时交代处理强度、处理定义与暴露时间窗——DiD 读者最先核对的三个量
+- **地理/行业集中度披露**：预防"结果由少数州/行业驱动"的质疑，与 R7 分节威胁电池呼应
+
+**原文锚定** (Castellaneta, Conti & Kacperczyk 2017, SMJ):
+> "Even after the censoring of outliers, the mean of the IRR (about 48.1%) is positive, suggesting that ... their profits were unevenly distributed across buyouts, as suggested by a high standard deviation." ... "Overall, about 10 percent of firms in our sample were subject to treatment—the enactment of more stringent trade secret protection based on the UTSA during the period between their initial acquisition by the PE firm and their final sale."
+
+**与 OLS-FE 变体67（R1 双路径前提描述统计）的区分**: 变体67 服务分样本/双路径前提（理论预言零相关 + moderator 分布 + VIF）；本变体服务 DiD 处理结构交代（暴露窗、处理占比、政策时间背景、地理行业分布），无 VIF/零相关前提句。
+
+**适用**: 处理为"单元持有期内遭遇政策"的准实验/DiD-equivalent 设计；处理占比低（<10%）时尤应保留本段以正当化功效。
+
+**禁忌**: 本段不得替代平行趋势/event-study 展示；处理占比与时间窗数字必须与描述统计表一致；不得在交互显著后仍把 DV 均值当独立主结果解读。
+
+<!-- wb:castellaneta_2017_smj_how_does_trade_secret_legal_protection:r1_did_treatment_prevalence_descriptives -->
 
 ## 反模式（zhang-idd-advertising-rejected 拒稿案例补充，2026-08-23）
 

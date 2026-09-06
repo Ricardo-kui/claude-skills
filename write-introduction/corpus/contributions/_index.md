@@ -377,6 +377,7 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 | Theory Lens 处理 | 独立段落 | 嵌入 Tension/Contribution |
 | 适用期刊 | AMJ, ASQ, OS | JM, JOM, SMJ |
 | 风险等级 | 低 | 中（需要充分文献支撑）|
+| `metatheory-anchored-contribution.md` | `metatheory-anchored-contribution` | 变体 A：经典二重性接驳型——In-theoretical-terms-akin-to 把主题级贡献接驳到学科经典二重性一侧机制，gulati1999networks，VERIFIED (单源 Gulati 裁定) |
 
 ---
 

@@ -438,6 +438,28 @@ P2-P3 的功能：承认文献已有实质进展，但精确指出被遗漏的�
 
 ---
 
+
+### 变体 Q：机制命名—同位定义 Lit Turn（fini2017 型）
+
+**模板**:
+> "Existing research highlights the [内在属性] nature of [焦点构念]。Because [价值/质量] is often not directly observable, [评价者] turn to available indices from [他人先前的评价] to complete their assessment, a process known as [机制名]；[评价者] tend to be partial to [已获正面评价者]，resulting in [效应名] that provide disproportionate advantages to [已受青睐者]。"
+
+**来源**: fini_jourdan_perkmann_2017 (Academy of Management Journal), P2
+
+**原文锚定**:
+> "Because the worth of candidates is often not directly observable, evaluators turn to available indices from evaluations previously made by others to complete their assessment, a process known as socially endogenous inferences"
+
+**关键特征**:
+- 两句建完机制词汇表：第一句同位语给机制下定义（"a process known as X"），第二句给效应命名并说明其分配后果——Literature Turn 不只综述，还在为后文 gap 供货
+- 缺口使能结构：所建词汇（indices、partiality、advantage）正是第三段张力句"well known for homogenous audiences, little about multiple audiences"直接征用的构件——turn 与 tension 咬合
+- 引文密集但功能化：8 处 citation 全部挂在机制链条的环节上而非作者罗列，Progressive Coherence 的机制版
+
+**适用**: Incompleteness 研究中 gap 依赖一个文献内已有命名机制、但该机制在新情境下行为未知的场合；先两步建机制词汇，再让 tension 句反用"well known"制造缺口
+
+**禁忌**: 机制若在文献中尚无稳定命名，不可伪造 "known as" 定义；效应名与机制名并存时须是同一链条两环，否则退化为名词堆砌
+
+<!-- wb:fini_2017_social_valuation_across_multiple_audiences_the_int:litturn-mechanism-coinage-definitional-apposition -->
+
 ## 组装规则
 
 ### 默认配对（对角线，能量匹配）

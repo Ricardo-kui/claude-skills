@@ -1661,3 +1661,111 @@ related: dual_mechanism_same_direction (argumentation_patterns.md) — 后者收
 **禁忌**: 替代逻辑需要文献中已确立的 A-B 替代关系（本篇: 激励 vs 监督），不能凭空宣称替代；entrenchment 结论若无可信的反向排除（真心改革的公司），需在 Results/Discussion 预留处置
 
 **验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
+
+
+## Pattern: Corollary-Form Moderator Derivation（机制推论式调节假设，Castellaneta 2017 型）
+
+**适用场景**: 纯调节论文中，调节假设不引入新机制，而是作为已论证基线机制的"直接推论"导出：先声明 corollary 关系，再用邻域文献经验规律作 plausibility 旁证，最后切换到决策者视角论证信息/能力在何种行业条件下更有价值，收敛为交互假设。适用于 moderator 是"基线不确定性的放大器"而非新机制的场景。
+
+**骨架**:
+```
+[推论声明] A direct corollary of our argument is the prediction that [treatment] will have particularly [direction] effects on [DV] in [contexts] where [baseline uncertainty] is [high].
+[邻域旁证] Indeed, studies on [adjacent decision context] find that [empirical pattern consistent with the corollary] ([citations]).
+[决策者视角切换] From the [decision maker]'s perspective, [information/capability] becomes especially useful when [moderator condition].
+[常规线索失效] In such [context], [conventional cue] is an unreliable indicator of [outcome]: not only [reason 1], but also [reason 2] ([citations]).
+[信息补救] However, if [decision maker] can glean [information], [moderator condition] will pose a lesser challenge to [assessment task].
+[收敛] Hence, we expect [treatment]—by [limiting mechanism]—to [erode/degrade] [assessment ability], especially when [moderator condition]. Accordingly, we hypothesize:
+```
+
+**关键特征**:
+- **Corollary 关系显式声明**: 调节假设 = 基线机制在行业条件上的逻辑推论，不需新理论透镜，降低假设数膨胀
+- **旁证非证据**: 邻域文献（如"私有企业并购概率在难估值行业更低"）只作 plausibility check，不承担因果论证
+- **"especially when" 连续调节**: 假设句用 especially 而非 only/when...only，保持连续 moderator 而非分类边界
+
+**原文锚点** (Castellaneta, Conti & Kacperczyk 2017, SMJ):
+> "A direct corollary of our argument is the prediction that trade secret protection will have particularly deleterious effects on firm market value in industries where resources' value is already quite uncertain and therefore difficult to estimate without proper information."
+
+**与 Sign-Flipping Boundary Condition 的区分**: 那里 moderator 使效应反号且需论证反转机制；这里 moderator 只放大张力中已预设方向的分支效应，符号由上游 tension 框架（双刃剑机制）给出。
+
+<!-- wb:castellaneta_2017_smj_how_does_trade_secret_legal_protection:corollary_moderator_derivation -->
+
+
+## Pattern: Measurement-Process Discretion Walk（量表构建逐环节裁量遍历→可操纵性 affordance，DesJardine–Li–Shi 2025 型）
+
+**适用场景**: 主效应声称"第三方可以影响中介方的评估产出"，但"可影响"不能只靠断言——需要从**评估工具本身的构建流程**推导可行性：逐环节遍历评估的组装步骤（定义构念→筛选输入→评分加权→汇总），每步指出一个裁量点，再用机构间分歧（inter-rater divergence）作为"裁量真实存在"的经验旁证，收束为影响理论的可行性前提（affordance）。
+
+**微观动作序列**: 地位声明（"Despite the ... significance ..., the multistep process ... gives ... extensive latitude"）→ 逐环节裁量遍历（first... Next... then... Finally...，每环节一个 discretion point + 引文）→ 规制真空三连（not standardized, formalized, or regulated → limits transparency）→ 分歧旁证（widespread divergence between agencies = 裁量的可观察痕迹）→ affordance 收束（latitude affords opportunities for influence → 接双通道/影响机制推导）
+
+**范文来源**: DesJardine, Li & Shi (2025), *Academy of Management Journal*（ESG 评级四步组装流程 → 评级机构自由裁量 → 影响可行性）
+
+**原文锚点**:
+> "Despite the reputational and financial significance of ESG ratings, the multistep process by which these ratings are assembled gives rating agencies extensive latitude, such that ESG ratings exhibit widespread divergence between different agencies."
+>
+> "However, because this multistep process is not standardized, formalized, or regulated, it limits rating transparency."
+
+**骨架**:
+```
+[地位声明] Despite the [reputational and financial] significance of [the assessment], the multistep process by which [it] is assembled gives [intermediaries] extensive latitude.
+
+[逐环节裁量遍历] [Intermediaries] must first [define the focal construct], an inherently broad construct that grants [them] leeway in their own interpretations ([citation]). Next, based on their chosen definition, they must determine [which inputs to include] in their eventual assessment—what [counts as X] by some might be viewed as [mere compliance] by others ([citation]). [They] must then decide [how to evaluate each input], including [a scoring mechanism], as well as [how each input is weighted], creating additional room for discretion and divergence ([citation]). Finally, [they] must decide how to aggregate [all scores] across [the multiple dimensions] into a final [assessment] to be sent and sold to markets.
+
+[裁量存在性的经验旁证] However, because this multistep process is not standardized, formalized, or regulated, it limits [transparency] ([practitioner/regulator citation]). [Inter-assessor] divergence ([citation]) is the observable trace of this discretion—[assessors] evaluating the same [targets] reach [widespread divergence], which is only possible if [discretion] is real.
+
+[affordance 收束] The latitude that [intermediaries] have in assembling [their assessments] could afford opportunities for [powerful actors] to influence [them] to undertake [the theorized behavior].
+```
+
+**为什么有效**:
+- **把"可被影响"从断言变成推导**：可行性不靠直觉断言，而是从评估工具的构建流程逐步导出——每环节一个裁量点，读者跟着流程走完就接受了"有操作空间"
+- **分歧作裁量旁证**：机构间分歧（inter-rater divergence）是公认实证事实，用它为理论前提（latitude 存在）作 warrant——把实证文献变成理论推力的证据支点
+- **规制真空三连**："not standardized, formalized, or regulated" 三重否定一次性封堵"监管会约束裁量"的反驳
+- **affordance 是影响理论的承重前提**：为 dual-channel 类影响机制提供第三环（可行性）的推导基础——本模式供给可行性，双通道模式消费它，可串联
+
+**判别**:
+- vs **Dual-Channel Convergence**（同文件）：那里回答"影响如何流动"（push/pull 通道 + 不透明性保护环，不透明性被**断言**为可行性条件）；本模式回答"评估工具为何天然可操纵"（构建流程**推导**裁量）——一个供可行性前提，一个用可行性前提，正交可串联
+- vs **E 系调节变体**：本模式是主效应的可行性 warrant，不产出调节假设
+- vs **Count-as-Discretion Relabeling**（meta/product_safety_construct_lexicon）：那里是把 DV 计数重标为裁量度量（测量辩护）；本模式是从构建流程推导第三方影响可行性（机制辩护）
+
+**反模式**: 逐环节遍历写成流程说明书（无裁量点标注、无"leeway/discretion/divergence"语言）；只有裁量推导没有分歧旁证（裁量存在性缺经验支点）；把 affordance 写成泛泛的"ratings are subjective"而不接后续影响机制。
+
+<!--
+pattern_id: measurement_process_discretion_walk
+build_type: 机制推演型
+source_papers: ["desjardine_li_shi_2025_amj"]
+confidence: high
+status: EMERGING — 单篇来源；wb 批次 B
+-->
+
+<!-- wb:desjardine_2025_information_based_competition_the_case_of_ri:measurement_process_discretion_walk -->
+
+
+### 模式 B：两波推导——辨析后再统一透镜（Two-Wave Derivation with Mid-Section Lens Integration）
+
+<!-- pattern_id: two_wave_lens_reintegration; build_type: 跨类型; source_papers: ["Pfarrer_Pollock_Rindova_2010_AMJ"]; confidence: medium -->
+
+**适用场景**: Theory 对两个结果域立假设：第一波可由构念形成过程/内容差异直接推导；第二波需要更高阶共同机制语言——先辨析，再于节中后段引入统一透镜把两构念重新整合为"同一机制的两个变体"。
+**范文来源**: Pfarrer, Pollock, and Rindova (2010), AMJ — 第一波（announcement 倾向，formation 逻辑）→ 节中引入 interpretive frames / 双加工透镜 → 第二波（investor reactions）
+
+**骨架**:
+```
+[第一波] 用 [formation/content differentiation] 直接推导 [outcome domain 1] 的比较假设
+（无需命名透镜）。
+
+[透镜引入] Second, these [constructs] ... differ in their [sociocognitive bases]. [A]
+serves as a [relatively rational, analytical] interpretive frame ...; [B] is derived
+from, and stimulates, more [affective] [processing mode] ([citations]).
+
+[文献支撑 + 层次桥接] Research on [the lens literature] supports this distinction ...
+Whereas these [processing modes] have been theorized primarily at the individual level
+of analysis, we argue that they can be used to characterize [stakeholder-level
+sensemaking] using [A] and [B] as two different types of interpretative frames.
+
+[第二波] 以"同一透镜的两个变体"推导 [outcome domain 2] 的比较假设（含 A vs B 排序）。
+```
+
+**为什么有效**: 避免用单一透镜硬套全部假设：第一波贴现象（过程差异），第二波借机制语言（加工模式）；层次桥接句显式承认"透镜原为个体层"，把层次跨越变成论证动作而非默认假设。
+**注意事项**: 透镜引入位置在两波之间（节中段），需一句"承上（差异）+启下（反应域）"过渡；透镜必须对两个构念给出可区分的变体（analytical vs affective），否则退化为单一透镜套用。
+**反模式**: 开篇就抛出大理论透镜再用两构念"填空"——透镜与第一波的过程逻辑脱节，读者找不到透镜与现象的接口。
+**原文锚点** (Pfarrer et al. 2010, AMJ):
+> "Whereas these different information processing modes have been theorized primarily at the individual level of analysis, we argue that they can be used to characterize stakeholder sensemaking using reputation and celebrity as two different types of interpretative frames."
+
+<!-- wb:pfarrer_pollock_and_rindova_2010:two_wave_lens_reintegration -->

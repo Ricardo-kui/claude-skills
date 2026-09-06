@@ -269,3 +269,38 @@ contingencies that matter for Group B]."
 **反模式**:
 - 用 "In sum, we have four hypotheses" 替代机制整合。
 - 收束句只重复假设内容，不总结假设间逻辑关系。
+
+
+### 句式 A：模型图读出式收束（Figure-Readout Closure，Gulati_1999_AJS 型）
+
+<!--
+pattern_id: figure_readout_closure
+build_type: 跨类型（复杂多机制+调节+反馈模型的嵌入式收束；sentence_position: closure）
+source_papers: ["gulati_1999_where_do_interorganizational_networks (AJS)"]
+verification_status: VERIFIED — expert_audit_override (Gulati 系单源裁定 2026-09-06, paper_count=1)
+story_fidelity: section_variant
+sentence_position: closure
+-->
+
+**句位**: 理论部分最后一段（最后一条假设之后），模型图已存在且图中箭头/符号携带因果语义。属"嵌入末段的框架总结"（管理学标准做法），非独立 Closure 段。
+
+**句式骨架**:
+```
+[图定位] Figure [N] summarizes our [理论名] model and highlights the empirically testable predictions of the model.
+[直接效应读出] The [实线箭头] represent the direct effects of [驱动清单] on [DV].
+[调节读出] The [虚线箭头] from [W] to the arrows for [被调节驱动] capture the moderation effect of [W] on the impact of [那些机制] on [DV].
+[符号约定] The [plus/minus] signs indicate a strengthening or weakening of influence in the direction of the arrows.
+[预期复述] Our expectation is that [核心预期：the greater [W], the stronger [机制a] effects, and the weaker [机制b] effects].
+[动态点题] Finally, the [第三类箭头] from [行动] to [结构] indicates the dynamic connection between these two variables, which captures the evolutionary link between [行动] and [结构].
+```
+
+**为什么有效**: 把收束任务外包给模型图的图形语法（箭头类型=因果类型、符号=方向），一段话同时完成框架锁定、调节角色复述与递归动态点题；读者以视觉方式重组全章假设，无需重复文字论证；末句 "captures the evolutionary link between [行动] and [结构]" 把全文 knot 最后拧紧——收束即点题。
+
+**注意事项**: 图必须真的区分箭头语义（如 solid/dotted/dashed）并在读出中逐一解码；读出顺序与假设顺序一致；收束停在图语义复述与预期重申，不引入新论证；无模型图的论文不可用本句式。
+
+**反模式**: 图与文字假设不同步（图中箭头在正文无对应假设）；读出退化为变量罗列无理论角色；用图收束掩盖假设间逻辑缺口；符号约定未定义。
+
+**原文锚点** (Gulati 1999, AJS):
+> "Figure 1 summarizes our dynamic model of network formation and highlights the empirically testable predictions of the model. ... the dashed arrow from network formation to structural differentiation indicates the dynamic connection between these two variables, which captures the evolutionary link between action and structure."
+
+<!-- wb:gulati_1999_where_do_interorganizational_networks:c6_figure_readout_closure -->

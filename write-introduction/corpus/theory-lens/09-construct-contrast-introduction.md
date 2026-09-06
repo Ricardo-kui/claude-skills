@@ -66,6 +66,33 @@ source: Distilled from Du & Tsolmon (ORSC) Introduction P3
 
 ---
 
+
+
+### 变体 B：镜像 whereas 配对定义 + 解释框架承接（pfarrer2010 型）
+
+**模板**:
+> "'[Construct A]' refers to [gloss A: accumulation of public recognition of the quality of a firm's capabilities and outputs] ([citations]), whereas '[Construct B]' refers to '[quoted gloss B1]' focused on a firm combined with '[quoted gloss B2]' ([citation]). We focus on [outcomes] that deviate from prior expectations because they require [stakeholder audiences] to make sense of these deviations, drawing on the interpretative frames that [the asset class] provides. [Construct A] and [Construct B] are '[shared ontological label]' that constitute distinct interpretative frames that are likely to influence [stakeholder behaviors] in different ways ([citations]). Further, we consider how their effects may vary under different conditions by considering both [valence 1] and [valence 2] deviations from expectations."
+
+**来源**: pfarrer2010 (AMJ), P3
+
+**原文锚定**:
+> "'High reputation' refers to the accumulation of high levels of public recognition of the quality of a firm's capabilities and outputs..., whereas 'celebrity' refers to 'a high level of public attention' focused on a firm combined with 'positive emotional responses from stakeholder audiences'.... Reputation and celebrity are 'social facts' that constitute distinct interpretative frames that are likely to influence stakeholder behaviors in different ways."
+
+**关键特征**:
+- 与变体 A（du_tsolmon2024 型）的差异：本变体在引言内**同时定义两个同家族对等构念**（非"新构念 vs 旧构念"单侧对照），whereas 镜像句让两个定义互为参照系，差异即刻可见
+- 定义后立即接**承接句回答"差异为什么重要"**：两构念共享一个存在论类别标签（'social facts' 式），但构成不同的 interpretative frames → 影响受众行为的方式不同——构念差异直接供货给后文方向相反的预测
+- 构念 B 的定义用**引语合成**（quoted gloss + 出处页码），不另造定义——适用于构念已有权威定义、本文贡献在辨析而非重定义的情境
+- 末句**条件拆分预告**（both [valence 1] and [valence 2] deviations）把 Boundary 维度提前写进定义段，为正负双情境假设组铺路
+
+**适用**: Inadequacy × Constructs（构念辨析）的 Introduction Theory Lens 拍；两构念地位对等、需在引言内完成"定义即辨析"的研究；与 `05-construct-confusion`（构念混淆 Tension）直接配对——混淆 Tension 的答案就是镜像配对定义
+
+**禁忌**:
+- 两构念必须真有理论差异且差异能映射到后文预测（否则 whereas 只是修辞对仗）
+- 引语合成定义需给出可核查出处；若本文贡献正在于提出新定义，改用变体 A 的单侧对照
+- 共享类别标签必须真实成立（两构念同属一个存在论/机制类别），不能为了对称硬造
+
+<!-- wb:pfarrer_pollock_and_rindova_2010:whereas_paired_definition_frame_bridge -->
+
 ## 与其他 Theory Lens 的区别
 
 | 对比对象 | 区别 |

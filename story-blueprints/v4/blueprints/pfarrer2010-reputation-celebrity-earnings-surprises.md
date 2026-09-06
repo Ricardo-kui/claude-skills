@@ -21,6 +21,12 @@ reading_scope:
   vault_reports:
     - "narrative_analysis/mvp30/pfarrer2010_tale_of_two_assets_distill-introduction-exemplar.md"
     - "narrative_analysis/methods_results/mvp30/fine_grained/batch_2026-05-18/pfarrer_2010_amj.md"
+  pdm_inputs:
+    root: "pfarrer_pollock_and_rindova_2010.pdm.yaml"
+    slices: [introduction, theory, methods, results, discussion]
+    verified_profiles: [introduction, theory, methods, results]
+    l2_cross_section: "coherence=ok; C1-C4 same-family confirmations (C1 Inadequacy gap -> construct-distinction theory; C2 matched-panel+event-study design -> RE-logit/CAR estimator family; C3 two-wave theory -> two-track design; C4 intro two-domain promise -> propensity/CAR evidence families in sequence); C5 (knot->discussion) unverified by the four-section distillation scope, though the discussion slice read in this story pass is consistent with knot closure (visibility-only and affect-only counterfactual checks; explicit black-box concession)"
+  second_read: "2026-09-05 re-distillation refresh: all five PDM slices re-read; verified section profiles and L2 cross-section flags used as assessment reference inputs only; learning moves refreshed from profile-confirmed structural features (two-wave theory derivation, conservative-test reframe in methods, component-decomposition ending)"
 analysis_focus:
   primary: [introduction, theory]
   supporting: [results, discussion]
@@ -28,7 +34,7 @@ analysis_focus:
   departure_note: "Results receive added attention because several non-supported negative-surprise predictions determine whether the promised difference between reputation and celebrity actually survives the empirical payoff."
 mechanism_evidence:
   status: not_directly_tested
-  basis: "The study observes asset classifications, surprise outcomes, and market reactions, but does not observe the proposed firm-level behavioral tendencies or investors' analytical versus affective interpretation of a surprise."
+  basis: "The study observes asset classifications, surprise outcomes, and market reactions, but does not observe the proposed firm-level behavioral tendencies or investors' analytical versus affective interpretation of a surprise. The authors concede this themselves: their data 'did not allow us to directly assess' whether reputation and celebrity provide investors with the theorized collective interpretive frames."
 classification:
   theoretical_problem_form: [construct-distinction-with-divergent-consequences, stakeholder-interpretive-frames]
   narrative_dynamics: [capability-recognition-versus-emotional-resonance, predictable-versus-dramatic-outcomes, positive-negative-expectancy-violation]
@@ -48,34 +54,37 @@ section_learning:
     requires: []
     learn:
       - "Give each construct two linked jobs: its formation process predicts the type of outcomes the firm is prone to generate, while its interpretive frame predicts how an audience reads the same outcome."
-      - "Use positive and negative versions of one event to test whether the two frames differ in expectancy, diagnosticity, and affect rather than treating valence as a decorative moderator."
+      - "Derive the battery in two waves: formation-process arguments first for surprise propensity, introducing the analytical/affective interpretive lens mid-section only when the reaction hypotheses need it, and close each branch of the mirrored hypothesis battery with a two-part 'In sum' summary; let the constructs' relative ordering itself be a prediction that reverses across conditions—celebrity above reputation for positive surprises, no advantage for negative ones."
     caveat:
-      - "The analytical/affective distinction is a theoretical account of stakeholder sensemaking here, not direct evidence that all investors use one processing mode."
+      - "The analytical/affective distinction is a theoretical account of stakeholder sensemaking here, not direct evidence that all investors use one processing mode (the authors footnote that both modes coexist and speak of a dominant mode)."
+      - "The 'framed versus non-framed' baseline comparisons (H3a/H4a) lean on an implicit warrant that any positive frame beats no frame, and celebrity's surprise propensity (H2a versus H2b) receives no valence-differentiated derivation; a transfer should repair both joints explicitly."
   methods:
     suitable: "partial"
     requires: []
     learn:
-      - "Make a construct comparison empirically legible by operationalizing both defining components of the less familiar asset and testing outcomes, event reactions, and event valence in a coordinated design."
+      - "Make a construct comparison empirically legible: dichotomize both assets as ideal types built from their defining components, verify the two measures are empirically separable, and run one coordinated design that covers outcomes, event reactions, and event valence."
+      - "Reframe sample restriction as an evidential asset: report the attrition contrast and the significant matching differences openly, then argue that the resulting large, well-performing sample makes the test conservative rather than concealing the selection."
     caveat:
       - "Top rankings, BusinessWeek coverage, ideal-type cutoffs, and a three-day CAR are setting-specific proxies; they cannot themselves verify the proposed collective frames."
   results:
     suitable: "yes"
     requires: []
     learn:
-      - "Reveal first whether the assets predict different propensities to generate the event, then stage investor reactions by positive and negative surprise so the construct distinction pays off as patterned, not merely categorical, difference."
+      - "Reveal first whether the assets predict different propensities to generate the event, then pivot to investor reactions with a construct-named heading plus a restatement of the whole hypothesis group, so a new evidence family opens without making readers page back and the front end's two-domain promise is paid off in sequence."
       - "Keep unsupported symmetric predictions visible: the null effects for negative surprises delimit the claim instead of disappearing behind the stronger positive-surprise results."
     caveat:
       - "A matrix of construct-by-valence hypotheses only works when the same event genuinely has distinct positive and negative interpretive stakes."
+      - "The reporting package is 2010-era: odds ratios without average marginal effects or confidence intervals and no declared clustering level for the random-effects logit; do not copy the package as if it were current practice."
   discussion:
     suitable: "partial"
     requires: []
     learn:
-      - "Close construct clarification by returning to which elements of social approval are consequential, including the finding that visibility alone is neither reputation nor celebrity."
+      - "Close construct clarification by decomposing the conflated category into components and reporting untabulated counterfactual categories—visibility-only and affect-only firms that underperform the compound asset in both valences—so the ending settles the opening knot with evidence rather than assertion."
     caveat:
       - "Do not use a construct-distinction ending to imply that the proposed cognitive process was observed when the study only establishes outcome patterns."
 story_assessment:
   overall_role: partial_exemplar
-  mode: single_read
+  mode: second_read_reviewed
 ```
 
 ## Story Reading
@@ -104,7 +113,7 @@ The paper begins with a mature intangible-assets literature whose labels and mea
 - **Rising action:** Reputation and celebrity are defined by different formation processes and then recast as analytical versus affective frames for interpreting unexpected outcomes.
 - **Climax:** Reputation predicts fewer and celebrity predicts more positive material surprises; both assets produce more favorable market reactions, with celebrity receiving the largest reward for positive news.
 - **Falling action:** The negative-surprise tests show buffering by both assets but do not support the predicted differences in surprise propensity or reputation's stronger buffer.
-- **Denouement:** The paper concludes that researchers and managers must distinguish social approval assets and their components instead of equating either with visibility.
+- **Denouement:** The paper concludes that researchers and managers must distinguish social approval assets and their components instead of equating either with visibility, supporting this with untabulated checks in which visibility-only and affect-only firms underperform celebrity in both valences, and warning that absent recognition of ability or positive emotional resonance, visibility alone may not be beneficial.
 
 ### Tension
 
@@ -123,7 +132,7 @@ The paper begins with a mature intangible-assets literature whose labels and mea
 - **Knot integrity:** `works` — the documented labels/proxy confusion has a clear cost for theory and prediction.
 - **Plot emergence:** `works` — the event choice and valence-specific hypotheses emerge from the proposed frames.
 - **Tie–unravel alignment:** `partly_works` — the central positive-surprise contrast pays off, but multiple negative-surprise predictions do not.
-- **Ending quality:** `works` — the ending returns to the initial distinction and makes visibility a concrete non-equivalent alternative.
+- **Ending quality:** `works` — the ending returns to the initial distinction, makes visibility a concrete non-equivalent alternative through visibility-only and affect-only counterfactual categories, and concedes that the interpretive-frame process itself was not observed.
 - **Boundary:** This evaluates storytelling only; it is not a judgment about causal identification or research quality.
 
 ## Learning Affordances
@@ -138,4 +147,4 @@ The results provide a useful model of retaining nulls that limit a symmetric pre
 
 ## Comparison prompt
 
-Is the focal collective perception an interpretive frame that changes how an audience reads an event (this paper), or an information channel that carries one firm's event to another target? What must be observed for that distinction to be credible?
+Paired with `borah2016-perverse-social-halo` (reading pair: `pfarrer2010-borah2016-interpretive-frame-versus-information-propagation`): does the proposed collective perception alter how an audience interprets evidence about the focal organization itself (this paper's ability frame and affective frame), or does it carry concern from one organization's event to an otherwise uninvolved target (Borah and Tellis's similarity-driven propagation)? What source, receiving target, and inferential bridge would each claim need to be observed for the distinction to be credible?

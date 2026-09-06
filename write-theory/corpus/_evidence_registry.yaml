@@ -6,11 +6,11 @@
 meta:
   schema_version: "1.0.0"
   registry_type: theory-fragment-registry
-  last_updated: "2026-09-06"
+  last_updated: "2026-09-06c"
   total_papers_indexed: 77
   batches_processed: 34
   auxiliary_sources_note: "Entries with source_tier: auxiliary are writing-craft books, not empirical papers. They register provenance and stay EMERGING until the pattern is cross-validated in empirical paper distills; they never count toward VERIFIED/ROBUST paper_count thresholds on their own."
-  latest_batch_note: "2026-08-30 Westphal 系双篇 residual 补登记（Carpenter & Westphal 2001 AMJ + Zajac & Westphal 2004 ASR，变体块已由主循环写回，本批仅 registry/index 元数据同步，全部 VERIFIED per expert_audit_override: 用户点名 Westphal 为最喜爱学者，引言/理论单源足矣）: ADD carpenterwestphal2001 tfr_219-223（反假设驳斥式开场 arrangement_patterns 变体A / 情境劈叉共同机制干 E_moderation 变体C / 互补组合型双边论证 bilateral_argumentation_templates 变体B / 个体-单元双层平行假设集+中介份额声明 hypothesis_organization_patterns 变体C / How-then-might 机制枢纽问句 leitmotif-section-opener 句式B）与 zajac_westphal_2004 tfr_224-227（F 技巧4 分离编号回指竞争对+期界基线+跨政策推广 → F 源数 2→3 升 VERIFIED，next_batch_targets.competing_hypotheses 已同步 / 假设句分离编号回指竞争对 hypothesis_forms / 竞争维度 carve-out 句 acknowledgment_response 变体C / 同一测量的对立读法 evidence_patterns）。_index.md 行注已同步。"
+  latest_batch_note: "2026-09-06b Gulati 1999 (AJS, Where Do Interorganizational Networks Come From?) 整篇蒸馏残项补登记：ADD gulati_1999_where_do_interorganizational_networks tfr_265-273 全 VERIFIED（expert_audit_override：Gulati 系单源即 VERIFIED。机制推演型主+调节效应型次；变体块已由写回器落盘，本批为 registry 首登记残项同步）：construct_differentiation 母构念三机制分列 / G_dialectical 机制交棒转场 / argumentation 增长谜题双问句预告 / hypothesis_organization 双驱动收敛×阶段主导权 / moderation 机制级选择性调节+连续斜率句 / closure 模型图读出式收束（closure 首个图形语义变体）/ leitmotif If-X-Alone-Cannot 问句桥 / hypothesis_forms dyadic 单调主效应句。write-theory 9 条；intro 6（含新建 contributions/metatheory-anchored-contribution registry 行）/ methods 7 / results 6（Logit 族槽位补登记）。前批：2026-09-06 Gulati & Westphal 1999 (ASQ, Cooperative or Controlling) 整篇蒸馏残项补登记：ADD gulati_westphal_1999_cooperative_or_controlling tfr_258-264 全 VERIFIED（expert_audit_override：Gulati 系单源即 VERIFIED。机制推演型主+调节效应型次；变体块已由写回器落盘，本批为 registry 首登记残项同步）：hypothesis_organization_patterns 变体E 基线假设揭示转折 / argumentation_patterns 变体H 单透镜双极镜像机制链 + 变体I 默认透镜资格审查-更替 / hypothesis_forms 句式（假设序列角色标签引导） / moderation 句式（对称放大型调节，intensity not direction） / leitmotif-section-opener 句式（阶段路标段首） / construct_definition 句式（关系构念 A-B-C 例示定义）。write-theory 7 条；intro 4（含新建 hooks/27、stakes/10 registry 行）/ methods 4（micro-template 记 by_source_paper note）/ results 5（Logit 族槽位补登记）。前批：2026-09-05c Gulati 1999 (SMJ, Network Location and Learning) 整篇蒸馏残项补登记：ADD gulati_1999_network_location_and_learning_the_influence_of_n tfr_252-257 全 VERIFIED（expert_audit_override：用户点名 Gulati 为最喜爱学者之一，单源即 VERIFIED。构念辨析型主+机制推演 B0 辅；变体块已由写回器落盘，本批为 registry 首登记残项同步）：construct_differentiation_patterns 变体C 母构念锚定型新构念散文合法化（network resources 位置重归因+社会资本类比+邻接排除） / evidence_patterns 变体D 田野引语三段式的假设推导内部署（tfr_250 第二源部署） / leitmotif-section-opener 句式C 绩效→行为变量改指 pivot / argumentation_patterns 模式G 前提分解→瓶颈命名 setup / hypothesis_organization_patterns 模式D 同一现象双产物→双驱动收敛（双IV×单DV） / mechanism_chain 句式C 双刃限定范围诚实句。write-theory 6 条；intro 6 / methods 4 / results 5 已由写回器自动同步。前批：2026-09-05b Gulati 1998 (SMJ, Alliances and Networks) 整篇蒸馏残项补登记：ADD gulati_1998_alliances_and_networks tfr_247-251，初登 EMERGING/auxiliary，同日经 expert_audit_override 全部升 VERIFIED（user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即权威；综述文为正式 SMJ 论文，撤销 auxiliary 分级回归标准论文条目。review-essay perspective-building 型；变体块已由写回器落盘，本批为 registry 首登记残项同步）：argumentation_patterns 变体E 共享盲区批判开场（undersocialized 命名式） + 变体F 透镜-议程六拍循环（已知→盲区→激活→重析+证据→整合→议程） / construct_differentiation_patterns 变体B 伞构念三层分层·双机制二分（social capital→information/control→relational/structural） / evidence_patterns 变体C 田野引语证据质感三段式 / G_dialectical_opposition 变体A 必要不充分互补性整合收束（G 首个非对称亚型）。综述文首次入 corpus：write-theory 5 条 + write-introduction 同批 3 条（tensions AP/previews S/theory-lens B，后者 registry/INDEX 已由写回器自动同步）。前批：2026-09-05 Pfarrer, Pollock & Rindova 2010 (AMJ, A Tale of Two Assets) 重蒸馏残项补登记：ADD pfarrer_pollock_and_rindova_2010 tfr_239-246 全 EMERGING（构念辨析型；变体块已由写回器落盘，本批为 registry 首登记残项同步）：A_construct_differentiation 变体A 形成过程辨析 + 变体B 相对排序跨情境反转 / argumentation_patterns 模式E 现象先行定位 / hypothesis_organization_patterns 模式D 镜像配对比较假设组（EXTEND 第2源）/ hypothesis_derivation_patterns 模式B 两波推导统一透镜 / acknowledgment_response 句式D 竞争推测预承认回收 / mechanism_chain 句式D 透镜解码混合信号（EXTEND 第2源）/ construct_definition 句式N 综述合成采纳定义。前批：2026-08-30 Westphal 系双篇 residual 补登记（Carpenter & Westphal 2001 AMJ + Zajac & Westphal 2004 ASR，变体块已由主循环写回，本批仅 registry/index 元数据同步，全部 VERIFIED per expert_audit_override: 用户点名 Westphal 为最喜爱学者，引言/理论单源足矣）: ADD carpenterwestphal2001 tfr_219-223（反假设驳斥式开场 arrangement_patterns 变体A / 情境劈叉共同机制干 E_moderation 变体C / 互补组合型双边论证 bilateral_argumentation_templates 变体B / 个体-单元双层平行假设集+中介份额声明 hypothesis_organization_patterns 变体C / How-then-might 机制枢纽问句 leitmotif-section-opener 句式B）与 zajac_westphal_2004 tfr_224-227（F 技巧4 分离编号回指竞争对+期界基线+跨政策推广 → F 源数 2→3 升 VERIFIED，next_batch_targets.competing_hypotheses 已同步 / 假设句分离编号回指竞争对 hypothesis_forms / 竞争维度 carve-out 句 acknowledgment_response 变体C / 同一测量的对立读法 evidence_patterns）。_index.md 行注已同步。"
   note: "Reverse-engineered from existing corpus anchors. Batch 2026-07-09: distilled 4 recall papers (Darby 2023 MSOM, Mayo 2022 POM, Ball 2018 JOM, Darby 2026 JOM) into subprotocols and registry. Batch 2026-07-10: expanded Cui, Yang & Vertinsky (SMJ) with inverted-U mechanism, bilateral argumentation, flatten/steepen language, and local closure templates. Batch 2026-07-22: distilled Li, Bapuji, Talluri, Singh & Narayanan (2025 JSCM, Vertical Spillover of Product Recalls) — added dual_mechanism_convergent_moderation pattern to bilateral_argumentation_templates.md (moderator×mechanism matrix) and registered H1 dual-mechanism convergence under existing dual_mechanism_same_direction. Batch 2026-07-22b: distilled Cutolo & Ferriani (2024 JOM, narratives & atypicality) — added minimal_pair_contrast_vignette pattern to argumentation_patterns.md (Leah controlled-contrast showing device); registered parallel_buffering_moderators_single_mechanism; cutolo_ferriani also a 2nd source for write-introduction theory-lens/02-dual-theory-layered (processing fluency + Bloom & Lahey taxonomy). Batch 2026-07-22c: distilled Falchetti, Cattani & Ferriani (2022 SMJ, Start with Why) — added congruency_fit_fluency_mechanism to sentences/mechanism_chain.md (genuine gap; spans Falchetti + Cutolo); CORRECTED misclassification of falchetti_2022_smj (was construct_differentiation tfr_017, has no such content) → reclassified to congruency mechanism; construct_differentiation source_count 5→4. Falchetti intro hook (23-popular-debate) and Methods (多研究 变体1/2, 实验 变体1) already distilled in prior sessions. Batch 2026-07-28: backfill + wiring batch — registered two auxiliary sources whose fragments entered corpus in the 2026-07-27/28 waves but were never registered: Booth/Williams/Colomb (The Craft of Research, premise soundness gate + warrant tests + acknowledgment-response matrix + voice firewall → reasoning_soundness_protocol.md, acknowledgment_response.md) and Greene & Lidinsky 2017 (Rogerian four-step → acknowledgment_response.md §5; fallacy probes → reasoning_soundness_protocol.md §8). Same batch wired the registry into consumption: corpus/_index.md selection-stage pointer, write-theory/SKILL.md resource-loading clause, distill-theory-exemplar Phase 4 registry-writeback protocol. Registry previously orphaned (no .md referenced it) since creation. Batch 2026-08-03: distilled Schumacher, Keck & Tang (2020, SMJ); added the belief-updating/attention-threshold reversal pattern as EMERGING. Reference-level writeback was explicitly authorized by the user; no core routing or mandatory-slot rule was changed. Batch 2026-08-28: distilled Wowak, Ball, Post & Ketchen (M&SOM, female directors → product recall decisions), tfr_182-187, all VERIFIED per user expert_audit_override (产品召回为主研究领域单源足矣); context_assigned_margin_split additionally registered as a core_candidate observation item in _skill_design_feedback.yaml. Batch 2026-08-28b: distilled Westphal & Zajac (1998, ASQ, The Symbolic Management of Stockholders), tfr_188-195, all VERIFIED per user expert_audit_override (公司治理/符号管理为主研究领域单源足矣); 8 fragments across B_mechanism_elaboration (交替对立再诠释 + 硬/软数字测量重构), argumentation_patterns (判别式替代解释排除 + 两极之间假设声明), hypothesis_derivation_patterns (符号替代-预防-固权), hypothesis_organization_patterns (受众异质性 pivot), hypothesis_forms (实施权变从句), moderation (编号双 DV 交互). Batch 2026-08-29: distilled Post, Lokshin & Boone (2022, AMJ, What Changes After Women Enter Top Management Teams? A Gender-Based Model of Strategic Renewal), tfr_196-198, all VERIFIED per user expert_audit_override (用户点名喜爱本篇，单源足矣); 3 fragments across hypothesis_organization_patterns (中介配对分流→共享重构主干), hypothesis_forms (时间分阶 Δ 假设), moderator_selection_frameworks (新声音整合轴); _index.md 快速决策表已同步."
 
 status_rules:
@@ -76,7 +76,7 @@ source_papers:
     fragments:
       - fragment_id: tfr_231
         type: e1_categorical_fit_adverse_effects_from_capacity_shortfall
-        title: "类别模式能力短板×情境压力的相对不利效应推导（E_moderation 变体 D）"
+        title: "类别模式能力短板×情境压力的相对不利效应推导（E_moderation 变体 E）"
         home_files:
           - "variants/E_moderation.md"
         makadok_dimension: "Boundary"
@@ -92,7 +92,7 @@ source_papers:
         note: "task interdependence × transaction instability 超加性交互推高适应需求，均衡（混合）构型因双通道机制而相对占优。"
       - fragment_id: tfr_233
         type: a_umbrella_decomposition_platform_for_categorical_ordering
-        title: "伞构念按问题根因解构，作为跨类别模式排序的解析平台（construct_differentiation 变体 B）"
+        title: "伞构念按问题根因解构，作为跨类别模式排序的解析平台（construct_differentiation 变体 E）"
         home_files:
           - "subprotocols/construct_differentiation_patterns.md"
         makadok_dimension: "Constructs"
@@ -433,6 +433,30 @@ source_papers:
         makadok_dimension: "Boundary"
         status: "EMERGING"
         note: "Hypothesis language that encodes interaction sign without presupposing an unconditional main-effect direction."
+      - fragment_id: tfr_228
+        type: even_if_fallback_refutation
+        title: "quantity→quality 维度切换 even-if 让步反驳句"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "2026-09-05 re-distill: concedes a countervailing effect on one dimension then shows the focal mechanism survives on a higher-order dimension (quantity→quality); fallback-refutation sentence variant."
+      - fragment_id: tfr_229
+        type: corollary_moderator_derivation
+        title: "『A direct corollary…』推论式调节假设导出"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "2026-09-05 re-distill: derives the moderation hypothesis as a corollary of the dual-blade trunk rather than a fresh premise chain; companion to E8 derivation style."
+      - fragment_id: tfr_230
+        type: counterfactual_case_replay_warrant
+        title: "失败案例反事实回放 warrant（Quaker Oats/Snapple）"
+        home_files:
+          - "subprotocols/evidence_patterns.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "2026-09-05 re-distill: warrants the contingency by replaying a counterfactual case where the enhancing condition was absent and the hindering outcome materialized."
 
   kim_lee_2026_smj:
     display_name: "Kim & Lee (2026, SMJ)"
@@ -2047,6 +2071,30 @@ source_papers:
         makadok_dimension: "Boundary / Mechanism"
         status: "EMERGING"
         note: "H1 后两理由（检测风险 + 相对效应）解释为何不预测攻击方自己的组合企业。与 E1 Step 6（排除反向交互）判别见文件内 note。"
+      - fragment_id: tfr_236
+        type: measurement_process_discretion_walk
+        title: "量表构建逐环节裁量遍历→可操纵性 affordance"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "2026-09-05 re-distill（wb 批次 B）: 从评估工具组装流程（定义构念→筛选输入→评分加权→汇总）逐环节遍历裁量点，用机构间分歧作裁量真实存在的经验旁证，收束为第三方影响可行性前提。与 Dual-Channel（回答影响如何流动）判别：本模式回答评估工具为何天然可操纵，正交可串联。"
+      - fragment_id: tfr_237
+        type: receptivity_displacement_moderator
+        title: "受众接收度位移调节（Receptivity-Displacement）"
+        home_files:
+          - "variants/E_moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "2026-09-05 re-distill（wb 批次 D）: 调节效应不在 DV 而在传导渠道——通道接收度被占据时效应位移至替代渠道而非消失，位移后仍导出方向化交互预测。与 spillover 消散（DV 侧镜像）与 Indirect/Mediated Moderation（统计结构）判别。"
+      - fragment_id: tfr_238
+        type: prior_limitation_departure_bridge
+        title: "前作局限出发桥（静态→动态）"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "2026-09-05 re-distill（wb 批次 E）: 以作者前作的局限为出发桥构建新理论（前作静态观 → 本文动态信息竞争），局限自陈而非他批——同作者续接型论文的 gap 建制写法。"
 
   ridge_hill_ingram_kolomeitsev_worrell_2024_amj:
     display_name: "Ridge, Hill, Ingram, Kolomeitsev & Worrell (2024, AMJ)"
@@ -2153,6 +2201,46 @@ source_papers:
         makadok_dimension: "Constructs"
         status: "EMERGING"
         note: "同一可观察信号携带 ability + identity conformance 两类信息；对齐取决于信号来源（endogenous 对齐 / exogenous 不对齐）——机制的前提 taxonomoy。与机制链句级模板判别：T1 构念 vs T3 机制。"
+      - fragment_id: tfr_231
+        type: pre_study_interview_premise_warrant
+        title: "自采预备访谈引语承重理论前提 warrant"
+        home_files:
+          - "subprotocols/evidence_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "2026-09-05 re-distill: 机制的前提（scientist 如何感知两类受众评判）由作者自采 pre-study 访谈引语承重，理论段内引原始语——theory 段合法引入一手证据的微动作。"
+      - fragment_id: tfr_232
+        type: umbrella_term_subsumption_criterion
+        title: "indices vs Spence signals 上位类收编判据"
+        home_files:
+          - "subprotocols/construct_differentiation_patterns.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+        note: "2026-09-05 re-distill: 用上位类（信息性信号）收编两个既有术语家族，再按可操纵性/成本结构切分——术语消歧的收编式写法。"
+      - fragment_id: tfr_233
+        type: dual_regime_context_comparison_suitability_bridge
+        title: "grants/contracts 双体制对称刻画 + 跨受众信息可得性适配桥"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "2026-09-05 re-distill: 两种资助体制对称刻画后，用『哪类受众能观察到什么』把 context 与 mechanism 适配起来——双情境比较桥。"
+      - fragment_id: tfr_234
+        type: absent_index_counterfactual_disambiguation
+        title: "指标正向截断零值语义两场景消歧句"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "2026-09-05 re-distill: 反事实移除指标后，计数归零可指两种不同机制状态（无活动 vs 无认可）——用两场景消歧守护机制链语义。"
+      - fragment_id: tfr_235
+        type: local_terminology_convention_paragraph
+        title: "角色→术语表命名段（本文术语约定段）"
+        home_files:
+          - "sentences/construct_definition.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+        note: "2026-09-05 re-distill: 按行文中承担的角色给既有术语家族分配本文专用名，段尾声明约定——local terminology convention 建制段。"
 
 
   chen_ganesan_liu_2009_jm:
@@ -2702,6 +2790,352 @@ source_papers:
         status: "VERIFIED"
         verification_basis: "expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)"
         note: "同一 DV 数据在两套理论下认识论身份不同（客观效率信号 vs 符号价值的社会量化），竞争检验同时裁决预测符号与测量解释；与 westphal_zajac_1998 硬/软数字测量重构为姊妹模式。corpus evidence_patterns.md 同名 Pattern。"
+
+  pfarrer_pollock_and_rindova_2010:
+    display_name: "Pfarrer, Pollock & Rindova (2010, AMJ)"
+    journal: "Academy of Management Journal"
+    year: 2010
+    subfield: "strategy"
+    theory_build_type: "Constructs"
+    fragments:
+      - fragment_id: tfr_239
+        type: formation_process_differentiation
+        title: "形成过程辨析（Formation-Process Differentiation）"
+        home_files:
+          - "variants/A_construct_differentiation.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+        note: "corpus A_construct_differentiation 变体A：以两构念的形成时间过程差异为辨析主轴——reputation 是长期积累的稳态资产、celebrity 是短期唤醒的注意力资产，从 formation 过程推出可分离的预测差异。"
+      - fragment_id: tfr_240
+        type: setting_first_materiality_staging
+        title: "现象先行定位模块（Research-Setting Staging before Constructs）"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+        note: "corpus argumentation_patterns 模式E：先以 materiality（盈余意外的重要性/罕见性）搭建现象舞台，再引入构念透镜，缓解构念密集开场的理解负荷。"
+      - fragment_id: tfr_241
+        type: mirrored_comparative_battery
+        title: "镜像配对比较假设组（Mirrored Comparative Battery）"
+        home_files:
+          - "subprotocols/hypothesis_organization_patterns.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+        note: "corpus hypothesis_organization_patterns 模式D（EXTEND 第2源）：H3a-c 与 H4a-c 镜像配对——同一 DV 家族内两构念三档比较假设平行同构，读者可跨对迁移裁决逻辑。"
+      - fragment_id: tfr_242
+        type: relative_ordering_reversal
+        title: "相对排序跨情境反转（Context-Dependent Ordering Reversal）"
+        home_files:
+          - "variants/A_construct_differentiation.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+        note: "corpus A_construct_differentiation 变体B：两构念在不同 DV 家族（surprise 发生 vs 投资者反应）上的相对排序反转（H3c↔H4c），用跨情境排序翻转证明构念非冗余。"
+      - fragment_id: tfr_243
+        type: two_wave_lens_reintegration
+        title: "两波推导——辨析后再统一透镜（Two-Wave Derivation with Mid-Section Lens Integration）"
+        home_files:
+          - "subprotocols/hypothesis_derivation_patterns.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+        note: "corpus hypothesis_derivation_patterns 模式B：第一节两构念分别推导（信息处理两模式），第二节用统一透镜回收两波结论再推交互假设，节中完成分-合转换。"
+      - fragment_id: tfr_244
+        type: competing_speculation_resolution
+        title: "竞争推测预承认与核心论点回收（Competing-Speculation Acknowledgment + Numbered Recap）"
+        home_files:
+          - "sentences/acknowledgment_response.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+        note: "corpus acknowledgment_response 句式D：plausible speculations can be advanced that... 预承认竞争推测，再以编号核心论点回收裁决，竞争面不被隐藏而是被收编。"
+      - fragment_id: tfr_245
+        type: frame_decoding_mixed_signal
+        title: "透镜解码混合信号与诊断性衰减（Frame Decoding of a Mixed Signal + Diagnosticity Dampening）"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+        note: "corpus mechanism_chain 句式D（EXTEND 第2源）：同一意外事件经不同构念透镜解码出相反信号，透镜诊断性随构念强度衰减，机制链自带解码-衰减两拍。"
+      - fragment_id: tfr_246
+        type: definition_adoption_operationalization
+        title: "综述合成采纳定义 + 操作化对齐（Adopt-from-Review Definition with Operationalization Alignment）"
+        home_files:
+          - "sentences/construct_definition.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+        note: "corpus construct_definition.md 句式N：综述后以 This is the definition we adopt in this study... 显式采纳合成定义，并当场对齐后续操作化维度，定义-操作化无缝衔接。"
+
+  gulati_1998_alliances_and_networks:
+    display_name: "Gulati (1998, SMJ)"
+    journal: "Strategic Management Journal"
+    year: 1998
+    subfield: "strategy"
+    theory_build_type: "Review-essay perspective-building"
+    fragments:
+      - fragment_id: tfr_247
+        type: shared_blind_spot_critique_opener
+        title: "共享盲区批判开场（Shared Blind-Spot Naming Opener）"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Mode"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus argumentation_patterns 变体E：不逐篇批评前人，而是借透镜文献（economic sociology/Granovetter）给整个文献族命名一个共享盲区（undersocialized account），批判面升维为视角引入的空间。综述文专用，假设推导论文慎用。"
+      - fragment_id: tfr_248
+        type: umbrella_construct_layering_two_mechanism_split
+        title: "伞构念三层分层·双机制二分（Umbrella-Construct Layering with Two-Mechanism Split）"
+        home_files:
+          - "subprotocols/construct_differentiation_patterns.md"
+        makadok_dimension: "Constructs"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus construct_differentiation_patterns 变体B：伞构念（social capital/embeddedness）→收益二分（information vs control）→各收益下机制二分（relational vs structural embeddedness）的三层递降，抽象视角落地为可操作构念组。"
+      - fragment_id: tfr_249
+        type: lens_agenda_six_beat_cycle
+        title: "透镜-议程六拍循环（Lens-Agenda Six-Beat Cycle）"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Question"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus argumentation_patterns 变体F（综述宏架构）：每议题按 已知（dyad层）→盲区→透镜激活→重析+证据→整合→议程 六拍推进，五议题循环复用形成全文骨架；透镜价值在逐题重析中自证。"
+      - fragment_id: tfr_250
+        type: field_quote_evidence_texture
+        title: "田野引语证据质感三段式（Field-Quote Evidence Texture）"
+        home_files:
+          - "subprotocols/evidence_patterns.md"
+        makadok_dimension: "Mode"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus evidence_patterns 变体C：框架句→带出处的块引（访谈经理原话+citekey:页码）→uptake 回收论点，无实证数据的综述文以此获得证据质感。注意 own-studies 班底依赖作者地位（模仿风险已记 profile）。"
+      - fragment_id: tfr_251
+        type: necessary_not_sufficient_complementarity_resolution
+        title: "必要不充分·互补性整合收束（Necessary-Not-Sufficient Complementarity Resolution）"
+        home_files:
+          - "variants/G_dialectical_opposition.md"
+        makadok_dimension: "Mode"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus G_dialectical_opposition 变体A（G 首个非对称亚型）：经济动机与嵌入性不构成对立而是'必要但不充分'——社会连接决定谁能看见并抓住互补性机会，辩证收束为分工整合而非胜负裁决。"
+
+  gulati_1999_network_location_and_learning_the_influence_of_n:
+    display_name: "Gulati (1999, SMJ)"
+    journal: "Strategic Management Journal"
+    year: 1999
+    subfield: "strategy"
+    theory_build_type: "构念辨析型（主）+ 机制推演 B0（辅）"
+    fragments:
+      - fragment_id: tfr_252
+        type: parent_anchored_new_construct_legitimation
+        title: "母构念锚定型新构念散文合法化（Parent-Anchored New-Construct Legitimation）"
+        home_files:
+          - "subprotocols/construct_differentiation_patterns.md"
+        makadok_dimension: "Constructs"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus construct_differentiation_patterns 变体C：T1 位置重归因定义新构念（inhere not so much within the firm but in the interfirm networks）→母构念 firm resources 锚定→社会资本跨层类比→Langlois external capabilities 邻接排除；单新构念 vs 多邻接的不对称辨析，与 Fini 型上位类收编互补。"
+      - fragment_id: tfr_253
+        type: field_quote_evidence_texture_empirical_derivation_deployment
+        title: "田野引语三段式的假设推导内部署（Field-Quote Texture inside Hypothesis Derivation）"
+        home_files:
+          - "subprotocols/evidence_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus evidence_patterns 变体D：tfr_250 综述型田野引语三段式的第二源部署——在实证假设推导节用高管 verbatim 为 access/timing/referrals 微观机制提供现象级证据质感。"
+      - fragment_id: tfr_254
+        type: performance_to_behavior_repurposing_pivot
+        title: "绩效文献→行为变量改指 pivot（Performance-to-Behavior Repurposing Pivot）"
+        home_files:
+          - "sentences/leitmotif-section-opener.md"
+        makadok_dimension: "Constructs"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus leitmotif-section-opener 句式C：小节 Topic 句用 my concern is not with X but with Y 边界声明把能力文献谱系从技术/物质资源改指为联盟形成的组织能力，为构念操作化铺路。"
+      - fragment_id: tfr_255
+        type: precondition_decomposition_hurdle_setup
+        title: "前提分解→瓶颈命名 setup（Precondition Decomposition with Hurdle Naming）"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Question"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus argumentation_patterns 模式G：机制开篇把 strategic action 前提分解为 competence/opportunity 两侧，指认既有文献集中于前者并命名本文承接的瓶颈侧（opportunity）。"
+      - fragment_id: tfr_256
+        type: dual_outcome_two_driver_convergence
+        title: "同一现象双产物→双驱动收敛（Dual-Outcome Two-Driver Convergence）"
+        home_files:
+          - "subprotocols/hypothesis_organization_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus hypothesis_organization_patterns 模式D：把 firm entry into alliances 拆为机会集合×行为倾向双产物，network resources 与 alliance formation capabilities 两条独立文献谱系各承一驱、收敛于同一 DV（双 IV×单 DV 组织）。"
+      - fragment_id: tfr_257
+        type: dual_edge_scope_qualification
+        title: "双刃限定→主效应前的范围诚实句（Dual-Edge Scope Qualification）"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Boundary"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus mechanism_chain 句式C：主效应假设前承认网络位置双刃性（信息优势 vs 约束冗余），随即用范围限定句把假设严格限定在信息收益侧——承认双刃→限定范围，不引入反向假设。"
+  gulati_westphal_1999_cooperative_or_controlling:
+    display_name: "Gulati & Westphal (1999, ASQ)"
+    journal: "Administrative Science Quarterly"
+    year: 1999
+    subfield: "strategy"
+    theory_build_type: "机制推演型（主）+ 调节效应型（次）；Makadok=Mechanism 主/Constructs·Boundary 次"
+    fragments:
+      - fragment_id: tfr_258
+        type: assumption_revealing_content_pole_pivot
+        title: "基线假设揭示转折（Assumption-Revealing Content-Pole Pivot）"
+        home_files:
+          - "subprotocols/hypothesis_organization_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus hypothesis_organization_patterns 变体E：H1 先以既有视角默认假设为基线（control 型 tie 应促进联盟），再揭示其内容前提并把假设主语换到内容极——基线假设由「揭示前提」而非「另起炉灶」完成转折，为后续双极镜像链铺轨。"
+      - fragment_id: tfr_259
+        type: one_lens_bipolar_mirror_chains
+        title: "单透镜双极镜像机制链（One-Lens Bipolar Mirror Chains）"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus argumentation_patterns 变体H：同一理论透镜（agency 视角下董事会角色）沿 control/cooperation 双极各推一条机制链，两条链结构互为镜像、方向相反，收束于同一 DV——单透镜高对称假设组的骨架写法。"
+      - fragment_id: tfr_260
+        type: lens_scope_disqualification_replacement
+        title: "默认透镜资格审查-更替（Lens Scope Disqualification & Replacement）"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus argumentation_patterns 变体I：先论证默认透镜（agency/控制观）在本文情境的适用性边界（其核心假定不成立），再以更替透镜重推同一关系——透镜更替本身构成理论贡献的论证装置。"
+      - fragment_id: tfr_261
+        type: hypothesis_sequence_role_labeling
+        title: "假设序列角色标签引导句（Hypothesis-Sequence Role Labeling）"
+        home_files:
+          - "sentences/hypothesis_forms.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus hypothesis_forms 句式：假设句前用角色标签引导语（基线/反向/放大）为序列中每条假设的论证角色命名，读者可预载结构后读推导。"
+      - fragment_id: tfr_262
+        type: symmetric_amplifier_moderation
+        title: "对称放大型调节假设（Symmetric-Amplifier Moderation，intensity not direction）"
+        home_files:
+          - "sentences/moderation.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus moderation 句式：调节假设声明调节变量改变主效应强度而非方向（one negative and one positive, both amplified），H4a/H4b 对称成对书写。"
+      - fragment_id: tfr_263
+        type: consequence_stage_signpost
+        title: "阶段路标段首（Consequence-Stage Signpost）"
+        home_files:
+          - "sentences/leitmotif-section-opener.md"
+        makadok_dimension: "Mode"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus leitmotif-section-opener 句式：以论证阶段路标开段（Having established... We now turn to...），标示假设序列的阶段推进而非重复前文。"
+      - fragment_id: tfr_264
+        type: relational_construct_worked_example
+        title: "关系构念 A-B-C 例示定义（Relational Construct A-B-C Worked Example）"
+        home_files:
+          - "sentences/construct_definition.md"
+        makadok_dimension: "Constructs"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus construct_definition 句式：抽象关系构念用 A-B-C 三方角色工作示例落地定义（A 与 B 的 tie 携带 A-C 关系信息），角色词沿用至后续机制推演。"
+
+  gulati_1999_where_do_interorganizational_networks:
+    display_name: "Gulati (1999, AJS)"
+    journal: "American Journal of Sociology"
+    year: 1999
+    subfield: "strategy"
+    theory_build_type: "机制推演型（主）+调节效应型（次，§4 H7/H8）；Makadok=Mechanism 主+Level/Mode 次；H1-H6 统一模板主效应+H7/H8 连续斜率调节；8 假设收敛网+行动→结构反馈环"
+    fragments:
+      - fragment_id: tfr_265
+        type: mother_construct_three_mechanism_hypothesis_coupling
+        title: "母构念三机制分列·机制-假设一一耦合（Mother-Construct Three-Mechanism Coupling）"
+        home_files:
+          - "subprotocols/construct_differentiation_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus construct_differentiation_patterns.md：变体 {NEXT}：母构念三机制分列·机制-假设一一耦合（Gulati_1999_AJS 型）——信息来源类型学命名句切分三机制，每机制独立文献谱系+一条假设收尾。（plan index_note 摘录）"
+      - fragment_id: tfr_266
+        type: necessary_not_sufficient_mechanism_handoff
+        title: "必要不充分·机制交棒转场（Necessary-Not-Sufficient Mechanism Handoff）"
+        home_files:
+          - "variants/G_dialectical_opposition.md"
+        makadok_dimension: "Mode"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus G_dialectical_opposition.md：变体 {NEXT}：必要不充分·机制交棒转场（Necessary-Not-Sufficient Driver Handoff，Gulati_1999_AJS 型）——中段把假设空间让渡给新机制并改写理论问题 why→whom。（plan index_note 摘录）"
+      - fragment_id: tfr_267
+        type: growth_puzzle_double_question_forecast
+        title: "增长谜题→双问句架构预告（Growth-Puzzle Double-Question Forecast）"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Question"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus argumentation_patterns.md：变体 {NEXT}：增长谜题→双问句架构预告（Growth-Puzzle Double-Question Forecast，Gulati_1999_AJS 型）——两问分别合同化论文两大部分（形成机制/内生动态）。（plan index_note 摘录）"
+      - fragment_id: tfr_268
+        type: stage_reallocation_dual_driver_convergence
+        title: "双驱动收敛×阶段主导权再分配（Stage Reallocation of Driver Weights）"
+        home_files:
+          - "subprotocols/hypothesis_organization_patterns.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus hypothesis_organization_patterns.md：变体 {NEXT}：双驱动收敛×阶段主导权再分配（Stage Reallocation of Driver Weights，Gulati_1999_AJS 型）——系统水平构念兼任直接效应与驱动权重调节器，含显式零调节豁免。（plan index_note 摘录）"
+      - fragment_id: tfr_269
+        type: mechanism_level_selective_moderation_scope
+        title: "机制级选择性调节划界（Mechanism-Level Selective Moderation Scope）"
+        home_files:
+          - "sentences/moderation.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus moderation.md：句式 {NEXT}：机制级选择性调节划界（Mechanism-Level Selective Moderation Scope，Gulati_1999_AJS 型）——多机制间选择性绑定+零调节不变声明+伪相关脚注防线；选择性组件不变性声明（Fini 2017）的第二源、机制级形态。（plan index_note 摘录）"
+      - fragment_id: tfr_270
+        type: figure_readout_closure
+        title: "模型图读出式收束（Figure-Readout Closure）"
+        home_files:
+          - "sentences/closure.md"
+        makadok_dimension: "Mode"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus closure.md：句式 {NEXT}：模型图读出式收束（Figure-Readout Closure，Gulati_1999_AJS 型）——箭头类型=因果类型的图形语义读出，嵌入末段完成框架锁定+动态点题。（plan index_note 摘录）"
+      - fragment_id: tfr_271
+        type: if_alone_cannot_question_bridge
+        title: "If-X-Alone-Cannot 问句桥（If-X-Alone-Cannot Question Bridge）"
+        home_files:
+          - "sentences/leitmotif-section-opener.md"
+        makadok_dimension: "Mode"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus leitmotif-section-opener.md：句式 {NEXT}：未决不足桥接问句段首（If-X-Alone-Cannot Question Bridge，Gulati_1999_AJS 型）——机制小节边界承接上一机制覆盖面不足，问-答间距仅一句。（plan index_note 摘录）"
+      - fragment_id: tfr_272
+        type: continuous_moderator_slope_form
+        title: "连续调节单调斜率句（Continuous-Moderator Monotonic Slope Form）"
+        home_files:
+          - "sentences/moderation.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus moderation.md：句式 {NEXT}：连续调节单调斜率句（Continuous-Moderator Slope Form，Gulati_1999_AJS 型）——阶段/水平 moderator 的交互假设写成单调斜率陈述，与 event-history 操作化对齐。（plan index_note 摘录）"
+      - fragment_id: tfr_273
+        type: dyadic_event_probability_monotonic_form
+        title: "dyadic 事件概率单调主效应句（Dyadic Event-Probability Monotonic Main-Effect Form）"
+        home_files:
+          - "sentences/hypothesis_forms.md"
+        makadok_dimension: "Mechanism"
+        status: "VERIFIED"
+        verification_basis: "expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)"
+        note: "corpus hypothesis_forms.md：句式 {NEXT}：dyadic 事件概率单调主效应句（Dyadic Event-Probability Monotonic Form，Gulati_1999_AJS 型）——H1-H6 共享同一句法骨架，注意力集中于 X 的机制差异。（plan index_note 摘录）"
 
 # Cross-paper pattern aggregation (derived above)
 patterns:
@@ -3593,26 +4027,26 @@ patterns:
 # Status summary by Makadok dimension
 summary_by_dimension:
   Constructs:
-    total_fragments: 16
-    source_papers: 12
+    total_fragments: 19
+    source_papers: 14
     verified_patterns: 1
   Mechanism:
-    total_fragments: 63
-    source_papers: 33
+    total_fragments: 65
+    source_papers: 34
     verified_patterns: 5
   Boundary:
-    total_fragments: 36
-    source_papers: 25
+    total_fragments: 37
+    source_papers: 26
     verified_patterns: 3
   Level:
     total_fragments: 0
     source_papers: 0
   Mode:
-    total_fragments: 3
-    source_papers: 3
+    total_fragments: 6
+    source_papers: 4
   Question:
-    total_fragments: 0
-    source_papers: 0
+    total_fragments: 2
+    source_papers: 2
   Output:
     total_fragments: 3
     source_papers: 2
@@ -3757,7 +4191,7 @@ unattributed_corpus:
 
 critique:
   schema: "critique-driven usage stats（2026-08-09 闭环补丁：与 distill-methods/results registry 语义同构）"
-  rationale: "用户对 write-* 产出的批评与审稿回流（revision-coach）登记于此；revise+reject >= 2 触发 critique_heavy，供下一轮蒸馏选材 Gate 读取 2026-09-06 Higgins & Gulati 2003 OS（Getting Off to a Good Start, upper echelon affiliations → underwriter prestige/IPO success）residual 补登记：ADD higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe tfr_228-230（类型学分解→并行信号假设→覆盖范围 hypothesis_organization_patterns 变体D / 传递+自选择双 warrant 信号推演 argumentation_patterns 变体E / 先验部分中介预期+效应减弱比较静态配对 hypothesis_forms 变体D），全部 EMERGING 单源待第二篇交叉验证；patterns 区同步 3 条；_index.md 快速决策表已同步。 2026-09-06b Gulati, Lawrence & Puranam 2005 SMJ（Adaptation in Vertical Relationships: Beyond Incentive Conflict, make/buy/ally 三分治理 × 内生切换回归）residual 补登记：ADD gulati2005-adaptation-vertical tfr_231-235（E1 类别 fit 相对不利效应推导 E_moderation 变体D / 联合压力超加性→均衡构型 E_moderation / 伞构念解构排序平台 construct_differentiation_patterns 变体B / 组间比较相对不利效应句式 hypothesis_forms 变体E / 机制可得性对比句式 mechanism_chain 变体D），全部 EMERGING 单源待第二篇交叉验证；patterns 区同步 5 条；_index.md 快速决策表 +3 行。 2026-09-06c Gulati & Sytch 2007 ASQ（Dependence Asymmetry and Joint Dependence，双逻辑 power vs embeddedness + 三机制部分中介）residual 补登记：ADD gulati_2007_dependence_asymmetry_and_joint_dependence_in_int tfr_236-239（中介集合先验部分中介声明 hypothesis_forms / 镜像极点配对假设 a/b hypothesis_forms / 并行多中介逐项部分中介链 B_mechanism_elaboration / 逻辑对照枢转句 mechanism_chain），全部 EMERGING 单源待交叉验证——其中中介集合声明与镜像配对为 higgins_2003 a_priori 部分中介近族的第二源，待第三次蒸馏可议升 VERIFIED；patterns 区同步 4 条；_index.md +3 行。"
+  rationale: "用户对 write-* 产出的批评与审稿回流（revision-coach）登记于此；revise+reject >= 2 触发 critique_heavy，供下一轮蒸馏选材 Gate 读取 2026-09-06 Higgins & Gulati 2003 OS（Getting Off to a Good Start, upper echelon affiliations → underwriter prestige/IPO success）residual 补登记：ADD higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe tfr_228-230（类型学分解→并行信号假设→覆盖范围 hypothesis_organization_patterns 变体D / 传递+自选择双 warrant 信号推演 argumentation_patterns 变体E / 先验部分中介预期+效应减弱比较静态配对 hypothesis_forms 变体D），全部 EMERGING 单源待第二篇交叉验证；patterns 区同步 3 条；_index.md 快速决策表已同步。 2026-09-06b Gulati, Lawrence & Puranam 2005 SMJ（Adaptation in Vertical Relationships: Beyond Incentive Conflict, make/buy/ally 三分治理 × 内生切换回归）residual 补登记：ADD gulati2005-adaptation-vertical tfr_231-235（E1 类别 fit 相对不利效应推导 E_moderation 变体E / 联合压力超加性→均衡构型 E_moderation / 伞构念解构排序平台 construct_differentiation_patterns 变体E / 组间比较相对不利效应句式 hypothesis_forms 变体E / 机制可得性对比句式 mechanism_chain 变体D），全部 EMERGING 单源待第二篇交叉验证；patterns 区同步 5 条；_index.md 快速决策表 +3 行。 2026-09-06c Gulati & Sytch 2007 ASQ（Dependence Asymmetry and Joint Dependence，双逻辑 power vs embeddedness + 三机制部分中介）residual 补登记：ADD gulati_2007_dependence_asymmetry_and_joint_dependence_in_int tfr_236-239（中介集合先验部分中介声明 hypothesis_forms / 镜像极点配对假设 a/b hypothesis_forms / 并行多中介逐项部分中介链 B_mechanism_elaboration / 逻辑对照枢转句 mechanism_chain），全部 EMERGING 单源待交叉验证——其中中介集合声明与镜像配对为 higgins_2003 a_priori 部分中介近族的第二源，待第三次蒸馏可议升 VERIFIED；patterns 区同步 4 条；_index.md +3 行。"
   per_file:
     # 键 = corpus 文件相对路径（如 hooks/03-data-shock.md）
     # 示例（登记时按此结构新增/更新）:

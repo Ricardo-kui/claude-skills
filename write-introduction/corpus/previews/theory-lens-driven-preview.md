@@ -98,6 +98,50 @@ P5-P6 的变体：不是按照"主效应→调节→机制"的通用结构预览
 **原文锚定**: "we do not theorize that adding female directors should influence all types of recalls equivalently; doing so might lead to the false implication that adding female directors worsens product quality."
 **来源**: wowak_2020_female_directors_recalls (M&SOM), P4
 
+
+### 变体 R：双理论包分工预告型（two-package numbered division-of-labor preview，pfarrer2010 型）
+
+**模板**:
+> "Two sets of theoretical arguments provide the foundation for our empirical investigation. First, we draw on [home-domain literature] on [Construct A] and [Construct B] to articulate how the differences in the actions and behaviors involved in building these [constructs] may affect a firm's propensity to [outcome domain 1]. Second, we draw on research in [adjacent-discipline literature] to theorize how these different actions and behaviors may generate different types of [shared construct class] having different effects under [condition 1] and [condition 2]."
+
+**来源**: pfarrer2010 (AMJ), P4
+
+**原文锚定**:
+> "Two sets of theoretical arguments provide the foundation for our empirical investigation. First, we draw on strategy and organizational research on firm reputation and celebrity to articulate how the differences in the actions and behaviors involved in building these assets may affect a firm's propensity to generate unexpected outcomes. Second, we draw on research in psychology to theorize how these different actions and behaviors may generate different types of social approval having different effects under positive and negative conditions."
+
+**关键特征**:
+- 与变体 N/O（受众/来源分解 + 发现方向预告）不同：本变体预览的不是 findings，而是**理论节本身的论证结构**——数字开头（"Two sets"）宣告理论包数量，与读者签下可追踪的阅读合同
+- **分工而非整合**：每个理论包服务一个结果域（本域文献 → 形成过程差异 → 行为倾向；邻近学科 → 差异化社会认同 → 条件化反应），区别于 mechanism-preview 变体 D 的 "we integrate perspectives" 整合句式
+- 第二包末尾内嵌**条件拆分**（"different effects under [condition 1] and [condition 2]"），把 Boundary 预告并入理论地图，无需独立边界预告段
+- 位置在响应段（构念定义）之后、DV 段之前，两句约 60 词的迷你段——紧凑型论文的理论地图
+
+**适用**: 构念辨析型论文（两个结果域各自由不同理论包驱动）；需在引言内预告"为什么需要两套论证"的多文献研究；Inadequacy × Constructs 组合
+
+**禁忌**:
+- 两个理论包必须在后文 Theory 节真实分工（各自驱动一支假设波），不能只是引用并置
+- 数量词（Two sets）必须与实际理论包数量一致；理论包 ≥3 时改用 enumerate 式路线图段
+
+<!-- wb:pfarrer_pollock_and_rindova_2010:two_package_division_preview -->
+
+
+### 变体 S：综述议程组织型（gulati1998 型）
+
+**模板**：
+[决策/事件序列] 构成 [现象] 中的关键行为议题。Mirroring this sequence are the following research questions: (1) [问题1]? and (2) [问题2]? and (3) [问题3]? A second important issue is [第二议题维度]: (N) [问题N]? In this paper I will discuss these [N] critical questions for the study of [现象] and, for each, I will discuss current research efforts at both [已有层级] and [新层级] levels and highlight some of the insights that result from a [透镜] perspective.
+
+**关键特征**：
+- 用编号研究问题（而非假设或发现）作为全文组织脊——综述文的 preview 单位是“问题”而非“贡献”
+- 问题从现象内的决策/事件序列派生（先给 sequence 再说 “Mirroring this sequence...”），使议程显得内生而非任意
+- 议程承诺句明确双层级覆盖（“at both the dyadic and network levels”），预告对比式综述结构
+- 以 some of / may influence 类限定词防过度承诺
+
+**原文锚定**：Mirroring this sequence are the following research questions: (1) Which firms enter alliances and whom do they choose as partners? ... In this paper I will discuss these five critical questions for the study of strategic alliances...
+**来源**：gulati_1998_alliances_and_networks (SMJ), Introduction P2-P4
+**适用**：综述文/perspective article；需要把庞杂文献组织成清晰研究议程时；贡献是视角引入（Mode）而非实证发现
+**禁忌**：实证论文勿用——编号议程替代不了假设预告；问题数量克制（3-5 个），每个问题必须被正文真实回答
+
+<!-- wb:gulati_1998_alliances_and_networks:review_agenda_organizer_preview_gulati1998 -->
+
 ## 组装规则
 
 ### 必须配对

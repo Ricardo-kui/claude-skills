@@ -148,3 +148,17 @@ because 从句是 Methods 中**最密集的说服单元**。一个 because 从�
 [Accumulated IV] of a [unit] for a specific year t is the cumulative count of [events] issued by the [unit] until the prior year (t - 1). To achieve homogeneity and consistency of this measure, we accumulate [events] over an equal number of years, [k], for each year in the main models. We use time periods other than [k] years for [the measure] for a post hoc test. By accumulating [second measure] for [k] years, we also achieve congruence with our other count variables, which is helpful as we estimate interactions of pairs of independent variables for testing [Hypothesis].
 
 <!-- wb:anand_mukherjee_2024_learning_from_failures_di:m4_window_congruence_for_interactions -->
+
+
+### 变体 C：M3 计数测量=逐次评价事件归因 because 链（fini_jourdan_perkmann_2017 型）
+
+**来源论文**: Fini, Jourdan & Perkmann 2017 (*Academy of Management Journal*)
+**原始句锚点**: "The number of grants is an appropriate measure of peer evaluation because each additional grant is based on an additional attribution of value to the researcher by a panel of peer reviewers."
+**验证状态**: EMERGING（单篇；`section_variant`）
+**槽位**: M3（因变量操作化 — 构念效度 because 型扩展）
+**骨架**:
+> The [count measure] is an appropriate measure of [social-evaluation construct] because each additional [count unit] is based on an additional [attribution of value] to the [candidate] by a [panel of evaluators].
+**与原骨架差异**: 现有构念效度 because 微模板为通用单句（"This measure captures [construct] because [logic]"）；本变体专门处理"计数测量承载评价/认可类构念"的情形——把计数分解为**逐次评价事件**（each additional unit = one more attribution by an evaluator panel），使 count 与构念（audience valuation）之间的对应关系显式化。适用于 grant 数、得票数、奖项数、采纳数等"评审性行为计数"作 DV 的设计。
+**诚实边界**: 只适用于计数单位本身构成一次独立评价行为的测量；纯产出类计数（专利数、发文量）不承载评价者归因，套用此链会构成构念跳跃。
+
+<!-- wb:fini_2017_social_valuation_across_multiple_audiences_the_int:m3_count_dv_repeated_evaluation_attribution_chain -->

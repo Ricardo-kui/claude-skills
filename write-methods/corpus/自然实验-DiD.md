@@ -264,6 +264,30 @@ updated: 2026-08-23
 - Assignment jurisdiction（incorporation vs HQ vs operations）必须有制度理由；错配会污染处理。
 - 教学示例不能替代平行趋势/异质性稳健估计的正式讨论（若数据允许 unit-time 面板）。
 
+
+### 变体 P：处理×条件交互的行业级调节变量操作化链（2026-09-05）
+
+**来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+**原始句锚点**: "To test H1, we estimated the joint effect of UTSA enactment and industry mobility. ... Our final measure is computed as the proportion of inventors moving to rivals (i.e., the number of inventors moving to rivals over the overall number of inventors in that year and that industry)."
+
+**验证状态**: EMERGING（单篇；`section_variant`）
+
+**槽位**: M5（Moderator operationalization for interaction designs）
+
+**骨架**:
+> "To test [hypothesis], we estimated the joint effect of [the shock/law enactment] and [industry-level condition]. [Condition] is defined as the [rate/proportion] at year [t_sell] in the industry in which the [unit] operates. [Database] allows us not only to measure [condition] over an extensive period of time but also to identify [the micro events underlying the rate] ([citations]). [Category] represents an important category of [the theoretical population], and [its movement/variation] has been shown to [theoretical stakes] ([citation]). To measure [condition], we followed a well-established methodology ([citations]) and [operationalization steps]. Our final measure is computed as the proportion of [events] over the overall number of [exposed units] in that year and that industry."
+
+**设计变体（第二实例）**: 不确定型调节用残差法——"we used a [industry profit forecasting] equation, computing the residuals of that equation (which represents the unpredictable component) and then computing the standard deviation of such residuals in the past [k] years of [t_sell]"，预测方程形式跟随既有文献（如 Ghosal & Loungani 式）。
+
+**与原骨架差异**: corpus 现有调节测量变体（面板数据-OLS 变体42 外部效度链、变体55 provenance 链）都不是 **准实验交互设计** 的行业级条件变量。本变体的节奏是：假设→joint effect 宣告→定义+时点（t_sell 与处理窗对齐）→数据库能力双承诺（长时段 + 微观事件可识别）→理论利害一句→既定方法锚→比例型最终测度。与 moon2026 批评修正方向一致：调节变量与 DV 无会计重叠、行业级外部测度、时点固定于处理窗末端。
+
+**边界**:
+- "well-established methodology" 必须落到具体引文与可复现步骤，不可只挂名。
+- 行业级调节与单位层处理的交互要求调节在行业层有变异；若行业数过少须说明聚类后果。
+- 时变调节（如 t_sell 测度）不是 pre-treatment 固定测度——若审稿人按 pre-treatment 标准质疑，须以固定 t_entry 窗重测作稳健。
+
+<!-- wb:castellaneta_2017_smj_how_does_trade_secret_legal_protection:m5_joint_effect_moderator_industry_operationalization -->
+
 ### 变体 10：ΔV/IRR 作为一阶差分 → 截面估计等价于 DiD 的识别叙事（2026-08-05）
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
@@ -394,6 +418,50 @@ updated: 2026-08-23
 [范式排他性]: 半通用——适用于任何需要定义"受事件影响的同类单元"的设计（召回、退出、进入）
 [设计变体]: 无理论替代品定义时，退化为 "we sample all units in the same [classification] as [focal unit]"
 [可迁移性]: 中 — 依赖领域内有公认的消费者分类层级（segment→tier→class）
+
+
+### 变体 O：监管冲击强度→二元编码辩护 + 连续指数稳健收口（2026-09-05）
+
+**来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+**原始句锚点**: "Based on previous research (e.g., Bertrand and Mullainathan, 2003; Chava et al., 2013) we coded any change in trade secret protection determined by the UTSA enactment as 1, regardless of the intensity of the change."
+
+**验证状态**: EMERGING（单篇；`section_variant`）
+
+**槽位**: M4（Treatment coding / 强度度量决策）
+
+**骨架**:
+> "In using an indicator variable to code [the increase in protection/regulatory change], we follow a long line of research that tends to code any regulatory change as 1, regardless of the intensity of the change ([precedent citations]). The limitation of this approach is that it fails to capture any potential heterogeneity in the strength of change across [jurisdictions]. Hence, an alternative approach would be to choose dimensions along which to measure the strength of [protection], make appropriate assumptions about the relative importance of such dimensions, and, finally, measure how the change in [regulation] has affected those dimensions. As a robustness check, we used the [continuous protection index] elaborated by [citation]; the results remain substantially the same."
+
+**与原骨架差异**: 变体9 解决持有窗处理赋值与 staggered 教学示例；本变体解决 **冲击强度的度量决策**——先例引用合法化二元编码 → 自认强度异质性局限 → 描述替代性连续指数构造 → 稳健性收口，一次性预答"为何不度量强度"的必然质疑。
+
+**边界**:
+- 二元编码先例须是同域高被引文献；新政策域无先例时不能默认 binary。
+- "results remain substantially the same" 须有表号/附录位置支撑；仅口头声称不可审计。
+- 若强度变异本身是理论对象（而非噪声），binary 会抹掉待检验变异——此时应反转：连续指数为主、binary 作稳健。
+
+<!-- wb:castellaneta_2017_smj_how_does_trade_secret_legal_protection:m4_regulatory_intensity_binary_coding_with_continuous_index_robustness -->
+
+
+### 变体 Q：专有核心库 + 按构念补外部源 + 合并后最终样本（2026-09-05）
+
+**来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
+**原始句锚点**: "In order to retrieve all the information needed to test our hypotheses, we complemented our proprietary database with data from other sources (see Table S1). ... After we merged all the data, our final sample was comprised of 1,890 companies bought and resold by 132 PE firms between 1975 and 2008 in 61 industries, as defined by SIC at the two-digit level."
+
+**验证状态**: EMERGING（单篇；`section_variant`）
+
+**槽位**: M2（Data sources / multi-source assembly）
+
+**骨架**:
+> "The data were assembled through the collection of [proprietary transaction documents], which contain [details] of all [units'] previous [transactions]. Unlike commercially available data, where [outcome] is measured at the [aggregate] level only, our dataset allows us to measure [outcome] of each single [unit] independent of [peer/portfolio] performance ([citation]). We excluded [units] for which key pieces of information ([examples]) were missing, as well as those whose [locations] we could not confirm; our analysis focuses on [units] located in [jurisdiction] because we account for longitudinal changes in [jurisdiction]'s regulation of [domain]. In order to retrieve all the information needed to test our hypotheses, we complemented our proprietary database with data from other sources: [database A] to compute [measure 1], as well as [database B], coupled with [database C] and [concordance file], to compute [measure 2]. After we merged all the data, our final sample was comprised of [N units] by [N actors] between [years] in [N industries], as defined by [industry classification]."
+
+**与原骨架差异**: 变体8 把 buyout 双重交易写成理论检验前提（M1 setting 论证）；本变体是 **M2 数据装配叙事**——专有核心库的相对测量优势（单单元 vs 组合层面）→ 缺信息/不可确认位置/制度追踪范围三重排除 → 每个待测构念映射到一个外部数据库（含 concordance 文件）→ 合并后多维最终 N（单元数 × 行动者数 × 年份跨度 × 行业数）。区别于面板数据-OLS 变体57 的"同一现象双边际分渠道取数 + 多库交集"：本变体是 **专有 DV 核心 + 按构念外挂调节测度**，不是交集漏斗。
+
+**边界**:
+- 每个外部数据库必须写明"供给哪个构念"；多个构念共用一库时写明分工。
+- concordance/跨库匹配文件须给引文；自建匹配须报匹配率。
+- 地理/制度范围收缩（如仅一国内）必须有理由句（纵向追踪该国制度变化），否则像便利抽样。
+
+<!-- wb:castellaneta_2017_smj_how_does_trade_secret_legal_protection:m2_proprietary_core_per_construct_complement_funnel -->
 
 ## 反模式（Castellaneta 蒸馏补充）
 

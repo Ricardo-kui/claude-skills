@@ -864,6 +864,50 @@ H2: There will be a [positive/negative] interaction effect of [trait] and [cue] 
 **风险**: 属性→裁量的等同必须给论证（严重度高→外部压力强制行动），否则审稿人质疑 moderator 与 DV 的概念循环（ball_2018 自身弱点：仅断言未论证，模仿时补上推导步）。
 
 
+### 变体 D：受众接收度位移调节（Receptivity-Displacement Moderation，DesJardine–Li–Shi 2025 型）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）。story_fidelity: section_role=rising_action; knot_relation=tie（把调节机制的传导位置钉在影响渠道的人员接收度上，深化"信息竞争经由中介方人员起效"的 central knot）; character_effect=supports（评级高管/分析师是配角，其接收度是机制传导件）; pacing_effect=improves（"先否认直接路径→再给位移机制"的两步节拍，防读者把 moderator 误当 DV 前因）; classification=section_variant。
+
+**适用**: moderator 并不直接进入 DV 的测量或直接改变 DV 水平，而是改变**影响渠道中人类行为者对施动方信息的接收度**——先显式否认直接路径（"not directly affected by..."），再把调节机制位移到渠道人员的 openness 与 justification 感上。典型场景：第三方奖项/认证/荣誉改变中介方人员对 biased information 的反应度。
+
+**来源**: DesJardine, Li & Shi (2025), *Academy of Management Journal*（H3a/H3b：ESG 奖项经由评级人员的接收度调节 rating bias）
+
+**原文锚点**:
+> "since most ESG rating agencies do not directly adjust their ratings based on a firm's ESG awards (an achievement not included in most ratings methodologies), ESG ratings are not directly affected by the awards. Rather, given their publicity, such awards independently shape stakeholders' perceptions about the firm's ESG performance."
+>
+> "It could also make those rating executives and analysts feel more justified in assigning higher ratings to the award-winning firm and lower ratings to the firm's less-decorated peers, ultimately making them more responsive to the biased information provided by a common owner."
+
+**骨架**:
+```
+[否认直接路径] [The moderator] does not [directly move the assessment]: most [intermediaries] do not directly adjust [assessments] based on [it] ([an achievement not included in most methodologies]), so [the assessment] is not directly affected by [the moderator].
+
+[位移声明] Rather, given [its publicity], [the moderator] independently shapes [third-party perceptions about the actor], and thereby [changes the information context in which the influence channel operates].
+
+[接收度机制] [Intermediary] personnel should become more receptive not only to positive information about [the rewarded actor], but also to negative information about [its less-decorated peers]. [The moderator] provides yet another talking point that [the attacker] could leverage to make [the rewarded actor] appear better than its peers in the minds of [intermediary] executives and analysts. It could also make them feel more justified in assigning [favorable assessments] to [the rewarded actor] and [unfavorable ones] to [its less-decorated peers], ultimately making them more responsive to the biased information provided by [the attacker].
+
+[假设（增强侧）] Accordingly, we expect: The [negative] relationship between [IV] and [DV] is stronger when [the attacker-side actor] has won [more of the moderator].
+
+[镜像（减弱侧）] Likewise, when [the target actor] wins [the moderator], [intermediary] personnel likely are not as receptive to negative news about [it]; even if [the attacker] communicates negative information, it should be less openly received in light of competing information about [its] positive record. Thus: The [negative] relationship ... is weaker when [the target-side actor] has won [the moderator].
+```
+
+**关键特征**:
+- **否认→位移两步签名节拍**: 必须先显式否认 moderator 直接进入测量（"not directly affected"），位移声明才合法——否则读者会把 moderator 当作 DV 的直接前因，调节与主效应机制纠缠
+- **机制落点=渠道人员接收度**: 调节经影响渠道中人类行为者（分析师/高管）对信息的 openness 起效；moral licensing 语言（"feel more justified in assigning..."）是签名句
+- **talking point 杠杆**: moderator 给施动方提供新说服筹码——不是改变施动方激励，而是改变说服材料与说服对象的心理状态
+- **与 E9（双侧镜像）正交可组合**: E9 管同一调节构念在 rival/target 侧的方向镜像；本变体管调节机制的**传导位置**（渠道接收度而非 DV）——本变体的 H3a/H3b 同时用了两者
+- **与 Indirect/Mediated Moderation 判别**: 那里 W2 中介 W1 的调节效应（统计结构，需 Model A/B）；本变体是理论传导位置声明，无第二个可测 moderator
+
+**反模式**: moderator 实际直接进入测量却假装"位移"（会被 Methods 的测量拆穿）；只有位移声明没有接收度机制（黑箱位移）；把"不直接调节"写成效应消失而非渠道减弱（位移后仍须导出方向化交互预测）。
+
+<!--
+pattern_id: receptivity_displacement_moderator
+build_type: 调节效应型
+source_papers: ["desjardine_li_shi_2025_amj"]
+confidence: high
+status: EMERGING — 单篇来源；wb 批次 D
+-->
+
+<!-- wb:desjardine_2025_information_based_competition_the_case_of_ri:receptivity_displacement_moderator -->
 <!--
 pattern_id: e1_categorical_fit_adverse_effects_from_capacity_shortfall
 build_type: 调节效应型（类别调节 E1 / fit 匹配型）
@@ -871,7 +915,7 @@ source_papers: ["gulati2005-adaptation-vertical"]
 confidence: EMERGING（单篇，待第二篇交叉验证）
 -->
 
-### 变体 D：类别模式的"能力短板×情境压力"相对不利效应推导（Categorical Adverse-Effect Fit）
+### 变体 E：类别模式的"能力短板×情境压力"相对不利效应推导（Categorical Adverse-Effect Fit）
 
 **适用场景**: 比较对象是类别化的组织模式（如 make/buy/ally 或三种治理形式），理论核心预测是"哪种情境压力对哪类模式绩效最不利"的纯条件比较——不承诺模式的无条件绩效主效应；理论贡献在 fit/匹配逻辑（绩效取决于 adaptive capacity 与 adaptation pressures 的匹配）。
 
@@ -914,7 +958,7 @@ source_papers: ["gulati2005-adaptation-vertical"]
 confidence: EMERGING（单篇，待第二篇交叉验证）
 -->
 
-### 变体 E：双压力超加性 → 双能力互补 → 均衡构型优势（Joint-Pressure Superadditivity）
+### 变体 F：双压力超加性 → 双能力互补 → 均衡构型优势（Joint-Pressure Superadditivity）
 
 **适用场景**: 两种情境压力同时出现并相互放大（超加性），而组织的两种适应能力分别应对其中一种；此时在两种能力上"均衡"的中间构型获得条件性优势——常用于解释中间/混合组织形态为何在最苛刻的双重压力情境下胜出。
 

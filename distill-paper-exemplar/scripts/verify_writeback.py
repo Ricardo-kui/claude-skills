@@ -83,6 +83,44 @@ def corpus_schema(corpus_root: Path) -> str | None:
     return None
 
 
+_PAPER_KEY_STOPWORDS = {
+    "smj", "amj", "asq", "os", "orsc", "jm", "msom", "poms", "jom", "jcr", "jams",
+    "jme", "et", "al", "how", "does", "do", "the", "a", "an", "of", "and", "in",
+    "to", "for", "on", "at", "by", "with", "from", "across", "multiple", "new",
+    "what", "why", "when", "which", "their", "its", "evidence", "study", "case",
+    "firm", "firms", "paper", "value", "market", "effect", "effects", "impact",
+}
+
+
+def find_canonical_paper_alias(rtext: str, paper: str, stem: str):
+    """Locate the canonical (hand-made) paper-level registry key for `paper`
+    when the registry is keyed by a different citekey than the wb citekey
+    (e.g. registry `fini_jourdan_perkmann_2017_amj` vs wb
+    `fini_2017_social_valuation_...`). An alias must (a) share the year token
+    and >=1 distinctive token with the wb citekey, and (b) reference the
+    target stem in at least one fragment's home_files inside the entry block.
+    Returns the alias key, or None. (2026-09-05 user-approved fix for the
+    permanent registry_no_entry residual class on paper-level corpora.)"""
+    toks = {t for t in re.split(r"[^a-z0-9]+", paper.lower()) if t}
+    years = {t for t in toks if t.isdigit() and len(t) == 4}
+    if not years:
+        return None
+    core = toks - years - _PAPER_KEY_STOPWORDS
+    if not core:
+        return None
+    for m in re.finditer(r"^  ([A-Za-z0-9_\-]+):\s*$", rtext, re.M):
+        key = m.group(1)
+        ktoks = set(re.split(r"[^a-z0-9]+", key.lower()))
+        if not (years & ktoks) or not (core & ktoks):
+            continue
+        nxt = re.search(r"^  [A-Za-z0-9_\-]+:\s*$", rtext[m.end():], re.M)
+        block = rtext[m.end(): m.end() + nxt.start()] if nxt else rtext[m.end():]
+        stem_variants = (stem, stem.replace("-", "_"), stem.replace("_", "-"))
+        if any(s in block for s in stem_variants):
+            return key
+    return None
+
+
 def find_registry_entry(text: str, stem: str):
     """Locate an entry for stem (read-only mirror of update_registry's lookup,
     plus dash->underscore fallback). Returns (key, paper_count, entry_text)
@@ -181,10 +219,16 @@ def main() -> int:
                         add("INFO", "V3b",
                             f"{section}:{target.stem} paper-level entry for {paper} present")
                     else:
-                        residuals.append({
-                            "type": "registry_no_entry", "section": section,
-                            "stem": target.stem, "item": name,
-                            "hint": "sync pass: add paper-level entry with fragments"})
+                        alias = find_canonical_paper_alias(rtext, paper, target.stem)
+                        if alias:
+                            add("INFO", "V3b",
+                                f"{section}:{target.stem} paper-level tracking via canonical "
+                                f"key '{alias}' (wb citekey {paper} is an alias)")
+                        else:
+                            residuals.append({
+                                "type": "registry_no_entry", "section": section,
+                                "stem": target.stem, "item": name,
+                                "hint": "sync pass: add paper-level entry with fragments"})
                     _skip_stem_lookup = True
                 else:
                     _skip_stem_lookup = False
@@ -197,10 +241,16 @@ def main() -> int:
                             f"{section}:{target.stem} no stem entry; paper-level entry for "
                             f"{paper} present (schema-consistent)")
                     else:
-                        residuals.append({
-                            "type": "registry_no_entry", "section": section,
-                            "stem": target.stem, "item": name,
-                            "hint": "sync pass: add entry or extend REGISTRY_ALIASES"})
+                        alias = find_canonical_paper_alias(rtext, paper, target.stem)
+                        if alias:
+                            add("INFO", "V3b",
+                                f"{section}:{target.stem} no stem entry; tracking via canonical "
+                                f"key '{alias}' (wb citekey {paper} is an alias)")
+                        else:
+                            residuals.append({
+                                "type": "registry_no_entry", "section": section,
+                                "stem": target.stem, "item": name,
+                                "hint": "sync pass: add entry or extend REGISTRY_ALIASES"})
                 else:
                     key, _count, entry = found
                     if _count is None:

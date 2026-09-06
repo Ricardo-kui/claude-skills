@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
-  last_updated: '2026-09-06'
-  observations_processed: 29
+  last_updated: '2026-09-06c'
+  observations_processed: 42
   description: Evidence ledger for write-theory design defects inferred from Theory exemplar distillation.
 defects:
   e-family-missing-dual-edged-signed-contingency-variant:
@@ -1557,6 +1557,630 @@ defects:
     auto_action:
       eligibility: log_only
       reason: Insufficient evidence for core revision.
+
+  theory_corpus_multi_audience_context_micro_moves:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: write-theory corpus 已覆盖 Fini 2017 的跨受众双信号曲线机制区（tfr_169-173：句级机制链 / 架构级倒U / 配对几何假设 / 不变性声明 / 双信号构念设置），但其
+      Theory 的语境建制与术语消歧微动作区（自有预备访谈承重前提、缺席指标反事实消歧、上位类收编判据、双体制对照+情境适配桥、术语表命名段）在 corpus 无对应模式
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/subprotocols/argumentation_patterns.md
+    diagnosis: 单篇蒸馏（Fini, Jourdan & Perkmann 2017 AMJ theory，full_text_verified）发现 5 个未覆盖微动作，已产出 writeback 候选（3 ADD / 2 EXTEND，plan
+      即停待主循环 gate ①）；均为 reference 级句式/微动作候选，非 core 规则修正，不改变曲线路由
+    proposed_change: {}
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: fini_jourdan_perkmann_2017_amj
+      journal: Academy of Management Journal
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: Evidence from the interviews that we conducted for this project supports this conjecture. ... I evaluate
+        more the person than the grant [proposal] itself. || The counterfactual is an absence of positive indices—implying
+        that the candidate has either not applied for valuation in the past, or has applied but has been rejected. || While
+        indices might not all be signals as per Spence's (1973) definition (i.e., costly to produce and manipulable by the
+        candidate) || Crucially, information on previous evaluations made by one audience is likely to be available to the
+        other audience. This feature makes this empirical context suitable to address our research question. || We use the
+        following terminology that defines academic scientists who apply for research grants as 'candidates'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Academy of Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Academy of Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-05'
+    last_seen: '2026-09-05'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  theory-corpus-lacks-review-essay-perspective-building-assets:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: write-theory 语料（variants A-G、subprotocols、sentences）与 Phase 0 分类五类型全部面向假设推导型 Theory；模块映射以 T4 Hypothesis
+      Derivation 为心脏，无任何分支支持无假设的综述文（review essay）理论节——其理论工作形式是：共享盲区批判造空间 → 透镜构念定义与分层 → 抽象视角转可操作研究议程。
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/subprotocols/argumentation_patterns.md
+    diagnosis: '规则本身无误（假设推导论文确为主体），属于 corpus_gap：缺少综述文视角构建的可迁移骨架/证据模式/收束句式。当用户目标恰是学习综述文叙事（如 Gulati 1998 ''Alliances and Networks''）时，write-theory
+      无法提供任何对应模板。本轮以 5 个 reference 级候选（EMERGING, source_tier: auxiliary）填补：盲区批判开场、伞构念三层分层、六拍议程循环、田野引语证据质感、必要不充分互补整合。routing
+      表 4 轮（EN/CN 各 2）查询零命中，确认非重复提炼。'
+    proposed_change:
+      action: add_branch
+      summary: corpus 层新增综述文视角构建骨架/证据模式（reference 级 EMERGING 候选，随本轮 writeback plan 走 gate ① 人审）；routing 表可在候选入库后考虑增设 review-essay
+        分支，本轮不动核心
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - review-essay perspective-building
+      hypothesis_families:
+      - none（无假设文体）
+      journals: []
+      boundary: 仅适用于无假设综述/视角文的理论节；不改变假设推导型的任何现有路由或核心规则
+    papers:
+    - id: Gulati_1998_SMJ
+      journal: Strategic Management Journal
+      build_type: review-essay perspective-building
+      hypothesis_family: ''
+      evidence_anchor: Theory P1-P3 以三条共享倾向清点前人研究并以透镜文献现成标签（undersocialized account）命名盲区；P13-P37 将嵌入性分层为 relational/structural
+        两机制；P40 路标句后五议题各按『已知盘点→内在盲区→情境激活→视角重析+三班证据→互补整合→开放议程』六拍循环收束于研究议程
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Strategic Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Strategic Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-05'
+    last_seen: '2026-09-05'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  theory-construct-diff-parent-anchored-legitimation:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: construct_differentiation_patterns 现有不对称辨析类仅有 Umbrella-Term Subsumption 判据声明（Fini 2017 型，上位类收编既有构念，containment
+      0.338）；无'母构念锚定型新构念散文合法化'变体（T1 位置重归因定义+母构念类比+邻接排除的完整铸造链）
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/（construct_differentiation_patterns.md）
+    diagnosis: Gulati 1999 T1 以 inhere not so much within the firm but in the interfirm networks 位置重归因定义新构念 network resources，锚定母构念
+      firm resources，再经 Langlois external capabilities 邻接排除与社会资本跨层类比完成散文合法化——与 Fini 型收编既有构念功能不同，本型是铸造新构念
+    proposed_change:
+      action: 'append/extend_variant (writeback_plan.theory.yaml: parent_anchored_new_construct_legitimation)'
+      summary: 增补'母构念锚定型新构念散文合法化（Gulati_1999 型）'；禁忌=母构念须已有成熟文献谱系，否则锚定反而稀释新构念
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: gulati_1999_network_location_and_learning_the_influence_of_n
+      journal: Strategic Management Journal
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: Network resources inhere not so much within the firm but in the interfirm networks in which firms are
+        located. They are a specific form of firm resources that can be considered to be 'strengths that firms can use to
+        conceive of and implement their strategies'.
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Strategic Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Strategic Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-05'
+    last_seen: '2026-09-05'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  theory-evidence-fieldquote-second-deployment:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: evidence_patterns 变体 C'田野引语证据质感三段式'目前单源（Gulati_1998 综述文型）；该功能的部署语境绑定综述 fieldwork lens，无'实证论文假设推导节内部署田野引语'的第二源记录
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/（evidence_patterns.md）
+    diagnosis: Gulati 1999 在假设推导（非综述）语境使用田野引语三段式：以高管 verbatim 表述为 access/timing/referrals 微观机制提供现象级证据质感——同一功能的第二部署语境
+    proposed_change:
+      action: 'append/extend_variant (writeback_plan.theory.yaml: field_quote_evidence_texture_empirical_derivation_deployment)'
+      summary: EXTEND：变体 C 加第二源（实证假设推导部署型），source_papers 追加
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: gulati_1999_network_location_and_learning_the_influence_of_n
+      journal: Strategic Management Journal
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: 'This is vividly illustrated by the comments of an alliance manager I interviewed: ''Our network of
+        [prior alliance] partners is an active source of information for us about new deals [alliances].'' ... Thus, it seems
+        that firm managers actively seek information'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Strategic Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Strategic Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-05'
+    last_seen: '2026-09-05'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  theory-opener-performance-to-behavior-pivot:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: leitmotif-section-opener 现有变体为单理论多假设段首主导动机（Darby 2025 型，同理论贯穿）；无'绩效文献→行为变量改指 pivot'类小节 Topic 句变体（containment
+      0.273，功能不同）
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/（leitmotif-section-opener.md）
+    diagnosis: Gulati 1999 小节 2 Topic 句用 my concern is not with technological or material resource-based capabilities but
+      with organizational capabilities that enable firms to form alliances 边界声明完成文献谱系改道，为能力构念操作化铺路
+    proposed_change:
+      action: 'append/extend_variant (writeback_plan.theory.yaml: performance_to_behavior_repurposing_pivot)'
+      summary: 增补'文献→行为变量改指 pivot（Gulati_1999 型）'——小节 Topic 句位；禁忌=改指须有谱系依据，非凭空重定义
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: gulati_1999_network_location_and_learning_the_influence_of_n
+      journal: Strategic Management Journal
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: While strategy scholars have primarily applied various capabilities-based arguments to explain sustained
+        performance differences across firms, variation in capabilities can also be the basis for strategic behavior.
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Strategic Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Strategic Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-05'
+    last_seen: '2026-09-05'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  theory-argumentation-precondition-decomposition:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: argumentation_patterns 现有模式 G 为现象先行定位（Research-Setting Staging，containment 0.26）；无'前提分解→瓶颈命名'类机制开篇微动作
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/（argumentation_patterns.md）
+    diagnosis: Gulati 1999 机制开篇把 strategic action 前提分解为 competence 侧与 opportunity 侧，指出既有文献集中前者、后者理论化不足，命名本文聚焦的瓶颈侧——分解前提→命名缺口侧→承接三步
+      setup
+    proposed_change:
+      action: 'append/extend_variant (writeback_plan.theory.yaml: precondition_decomposition_hurdle_setup)'
+      summary: 增补'前提分解→瓶颈命名 setup（Gulati_1999 型）'——主效应机制开篇微动作；禁忌=分解维度须与后文假设一一对应
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: gulati_1999_network_location_and_learning_the_influence_of_n
+      journal: Strategic Management Journal
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: For firms to build alliances that effectively address their needs while minimizing the risks posed
+        by moral hazard concerns, they must first be aware of the existence of potential partners and have an idea of their
+        needs and requirements and, second, have info
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Strategic Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Strategic Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-05'
+    last_seen: '2026-09-05'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  theory-hyporg-dual-outcome-convergence:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: hypothesis_organization_patterns 现有 Pattern B 为中介配对分流→共享重构主干（containment 0.252）；无'同一现象双产物→双驱动收敛'组织变体（双 IV
+      各承独立文献谱系、收敛于同一 DV）
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/（hypothesis_organization_patterns.md）
+    diagnosis: Gulati 1999 把 firm entry into alliances 拆为双产物（机会集合×行为倾向），分别由 network resources 与 alliance formation capabilities
+      两条独立文献谱系驱动收敛于同一 DV——双 IV × 单 DV 收敛式组织
+    proposed_change:
+      action: 'append/extend_variant (writeback_plan.theory.yaml: dual_outcome_two_driver_convergence)'
+      summary: 增补'同一现象双产物→双驱动收敛（Gulati_1999 型）'；禁忌=双驱动须各自带独立文献谱系，否则退化为普通多 IV
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: gulati_1999_network_location_and_learning_the_influence_of_n
+      journal: Strategic Management Journal
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: Thus, another outcome for firms resulting from their membership in alliance networks is that they can
+        develop managerial capabilities associated with forming new alliances.
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Strategic Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Strategic Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-05'
+    last_seen: '2026-09-05'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  theory-mechchain-dual-edge-scope-qualification:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: mechanism_chain 现有'对称反向双轨机制链'呈现正反机制对冲（containment 0.37）；无'双刃限定→主效应前范围诚实句'变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/（mechanism_chain.md）
+    diagnosis: Gulati 1999 主效应假设前承认网络位置双刃性（信息优势 vs 约束冗余），随后用范围限定句把假设严格限定在信息收益侧——承认双刃→限定范围，不引入反向假设只划边界，与对称对冲不同
+    proposed_change:
+      action: 'append/extend_variant (writeback_plan.theory.yaml: dual_edge_scope_qualification)'
+      summary: 增补'双刃限定→主效应前的范围诚实句（Gulati_1999 型）'——Reasoning 句位；禁忌=双刃承认后必须真正限定，不得只提不收
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: gulati_1999_network_location_and_learning_the_influence_of_n
+      journal: Strategic Management Journal
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: The embeddedness of firms in networks that serve as a basis of their network resources can both restrict
+        and enlarge the opportunity set of alliances available to them. ... But networks may also constrain a firm's set of
+        choices for alliances by limiting the c
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Strategic Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Strategic Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-05'
+    last_seen: '2026-09-05'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  corpus_gap_moderation_symmetric_amplifier:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: sentences/moderation.md 已有缓冲/增强/拮抗/异号增强（Castellaneta 型：双刃剑前因×两个不同 W）/董事会 perverse 放大（Chung 型：单一关系+特质交互）等变体，但缺'单一
+      W 对两个已建立的异号主效应做对称强度放大（intensity not direction）'的机制语言与方向化假设对
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/sentences/moderation.md
+    diagnosis: routing 'moderation moderation design amplification' 仅命中 E11 trait-activation cue-switch（cue 激活对立表现型，功能不同）；中文轮零命中；precheck
+      对 External Partial-Substitute Attenuation 块 containment=0.352、无同功能块。对称放大型是'基线主效应+放大器'设计的标准假设形式，属语料缺口而非规则缺陷
+    proposed_change:
+      action: add_branch
+      summary: '补对称放大型调节变体（writeback plan: sentence_symmetric_amplifier_moderation）'
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 机制推演型+调节
+      - 调节效应型
+      hypothesis_families:
+      - main_effects_plus_symmetric_amplifier_moderation
+      journals: []
+      boundary: 仅适用于已建立两个异号主效应、单一 W 双向放大的设计
+    papers:
+    - id: gulati_westphal_1999
+      journal: ASQ
+      build_type: 机制推演型（主效应+调节）
+      hypothesis_family: ''
+      evidence_anchor: H4/4a/4b：'influence the intensity but not the direction of trust' + 'the stronger the negative/positive
+        relationship between...' 成对放大假设
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  corpus_gap_argumentation_single_lens_bipolar_mirror:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: subprotocols/argumentation_patterns.md 有镜像配对比较假设组（Pfarrer 2010：假设陈述层镜像）、同果近邻构念反号辨析（westphal_bednar2005：构念对+调节反号）、Dual-Lens
+      Main/Boundary Division，但缺'同一透镜在两极小节换向复用 + just-as 镜像句'的机制推导层镜像模式
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/subprotocols/argumentation_patterns.md
+    diagnosis: 两极反向主效应设计（2×2 的机制半区）普遍需要；precheck 最佳匹配 Minimal-Pair Contrast Vignette containment=0.328 为不同功能（受控对比小场景）。现有镜像条目均在陈述层或辨析层，属语料缺口
+    proposed_change:
+      action: add_branch
+      summary: '补单透镜双极镜像机制链变体（writeback plan: argumentation_one_lens_bipolar_mirror_chains）'
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 机制推演型
+      hypothesis_families:
+      - opposite_sign_main_effect_pairs
+      journals: []
+      boundary: 要求透镜可双向运行且两极中介同构
+    papers:
+    - id: gulati_westphal_1999
+      journal: ASQ
+      build_type: 机制推演型（主效应+调节）
+      hypothesis_family: ''
+      evidence_anchor: P14：'The connection... can also be understood by considering [同一透镜]' + 'In effect, just as [M−]...,
+        [极B] can engender [M+]'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  corpus_gap_argumentation_lens_scope_disqualification:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: subprotocols/argumentation_patterns.md 的 Preemptive Competing Account Management 管理预测层竞争（拒绝/调节裁决），Neglected
+      Lens via Dominant-View Contrast 管 T2 视角选择（两透镜共存），但缺'调节段对单一默认透镜做范围前提审查→前提失效→more germane perspective 更替'的透镜层模式
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/subprotocols/argumentation_patterns.md
+    diagnosis: 为 moderator 选透镜时读者常有强默认先见；现有条目无一处以'透镜自身范围前提在情境中失效'驱动更替。precheck 最佳匹配 Prior-Limitation Departure Bridge containment=0.295
+      为不同功能（前作局限出发桥）。属语料缺口
+    proposed_change:
+      action: add_branch
+      summary: '补默认透镜资格审查-更替变体（writeback plan: argumentation_lens_scope_disqualification_replacement）'
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 机制推演型+调节
+      - 调节效应型
+      hypothesis_families:
+      - moderator_lens_selection
+      journals: []
+      boundary: 默认透镜必须真有可显性化的范围前提，不得稻草人化
+    papers:
+    - id: gulati_westphal_1999
+      journal: ASQ
+      build_type: 机制推演型（主效应+调节）
+      hypothesis_family: ''
+      evidence_anchor: P16-P17：'The claim that... assumes that...' → '...may not necessarily...' → 'suggests a more germane
+        perspective'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  corpus_gap_hypothesis_org_baseline_assumption_content_pole_pivot:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: subprotocols/hypothesis_organization_patterns.md 已有'受众异质性 pivot 至调节假设'（westphal_zajac_1998 型：pivot 到受众 moderator、保持交互假设矩阵）与
+      Baseline Mechanism → Dual Path → Contingency Branches（moderator 链式升级），但缺'基线主效应的简化假设被显式揭示→核心前因内容分极→两极反向主效应（非交互）各占小节'的组织模式
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/subprotocols/hypothesis_organization_patterns.md
+    diagnosis: '''承认前文简化假设''是已验证家族，但其两个已知种都通向交互假设；通向内容两极反向主效应的种缺席。precheck 最佳匹配 Per-Stakeholder Paired containment=0.321 为不同功能。属语料缺口（同族新种，非重复块）'
+    proposed_change:
+      action: add_branch
+      summary: '补基线假设揭示转折（content-pole pivot）变体（writeback plan: hypothesis_org_baseline_assumption_content_pole_pivot）'
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 机制推演型
+      hypothesis_families:
+      - baseline_plus_content_pole_split
+      journals: []
+      boundary: 要求基线假设确由简化假设导出，两极有独立透镜
+    papers:
+    - id: gulati_westphal_1999
+      journal: ASQ
+      build_type: 机制推演型（主效应+调节）
+      hypothesis_family: ''
+      evidence_anchor: P4：'The discussion thus far has assumed that...' → '...can range from [极A] to [极B], with very different
+        consequences for [DV]' → H2/H3 反向主效应
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  corpus_gap_dynamic_convergence_driver_weight_reallocation:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: write-theory 语料的收敛架构均为静态形态（双驱动收敛=变体D、共同主干并行分支、镜像配对电池、基线揭示转折=变体E），调节语料的选择性不变声明（Fini 2017）停留在单条倒U假设的分量级——不存在'系统水平
+      emergent 构念兼任直接效应与多驱动权重再分配器（含显式零调节豁免）'的动态收敛组织模式。
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/subprotocols/hypothesis_organization_patterns.md
+    diagnosis: 规则与路由均正确（Incompleteness×Mechanism→机制推演 B 命中），属纯 corpus_gap 而非设计缺陷：写作引擎遇到'同一系统水平 moderator 既直接降低 DV 概率、又按发展阶段重分配各驱动假设解释力，并对部分机制显式豁免'的理论结构时，现有变体速查表无对应组织模式，只能退化为并列主效应+孤立交互假设。以本批
+      c4（阶段主导权再分配）与 c5（机制级选择性调节划界，Fini 家族第二源）补齐；不改动核心路由、约束与 stage gate。
+    proposed_change:
+      action: add_branch
+      summary: hypothesis_organization_patterns 增加'双驱动收敛×阶段主导权再分配'变体（c4），moderation.md 增加机制级选择性调节划界句式（c5）——均走 reference 回写通道（writeback_plan.theory.yaml
+        已产出，待 gate ①）
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 机制推演型
+      - 调节效应型
+      hypothesis_families:
+      - main_effects_plus_moderation
+      journals: []
+      boundary: 仅适用于存在系统水平 moderator 参与多驱动收敛的多机制理论；不改变既有静态收敛变体的适用范围
+    papers:
+    - id: gulati_1999_where_do_interorganizational_networks
+      journal: American Journal of Sociology
+      build_type: 机制推演型（主）+ 调节效应型（次）
+      hypothesis_family: ''
+      evidence_anchor: §4：structural differentiation（We define... as an emergent systemic property）同时承担 H6 直接效应与 H7/H8 对 interdependence（削弱）与
+        positional embeddedness（增强）的权重再分配；relational/structural 显式零调节豁免（脚注 4 伪相关防线）；H7/H8 用连续斜率句式
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - American Journal of Sociology
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - American Journal of Sociology
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+
   e1-fit-typology-theory-route-coverage:
     classification: routing_defect
     status: EMERGING

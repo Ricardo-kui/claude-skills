@@ -12,6 +12,7 @@ source_papers:
   - eilert2017 (JM, 2017): "The article makes two contributions... First, to date, no study to our knowledge has examined..."
   - gamache2020 (SMJ, 2020): "We make several key contributions..."
   - desjardine2023 (OS, 2023): "We propose an alternative but overlooked strategy:..."
+  - pfarrer2010 (AMJ, 2010): "In this study, we begin to address these questions by first theorizing about... (变体 G)"
 created: 2026-05-18
 source: Manually curated from MVP30 narrative_analysis files
 ---
@@ -154,6 +155,32 @@ source: Manually curated from MVP30 narrative_analysis files
 - 适合 ASQ/ASR 理论论文（不一定要用列表式贡献声明）
 
 ---
+
+
+### 变体 G：设问承接·谦逊启动型（anaphoric question pickup + calibrated response move，pfarrer2010 型）
+
+**模板**:
+> "In this study, we begin to address these questions by first theorizing about the effects of [Construct A] and [Construct B]—two types of [shared asset/construct class]—on [actors]' propensities to [outcome domain 1], and on [stakeholders]' responses to these [outcomes]."
+
+**来源**: pfarrer2010 (AMJ), P3
+
+**原文锚定**:
+> "In this study, we begin to address these questions by first theorizing about the effects of two types of social approval assets—reputation and celebrity—on firms' propensities to generate unexpected outcomes, and on stakeholders' responses to these outcomes."
+
+**关键特征**:
+- **设问回指（anaphora）**："these questions" 直接承接 Tension 段留下的两个问题（不同资产的具体效应是否变异？标签与构念如何对应？），不重述问题——衔接零损耗，但要求前段确实以可指认的问题收尾
+- **谦逊校准动词**："begin to address" 主动下调贡献幅度（本文是首个理论化步骤而非终局答案），与构念辨析的"中间贡献"定位一致，预先化解贡献过度声明的质疑
+- **双结果域拆分**：一句内并列 [actors 的行为倾向] 与 [stakeholders 的反应] 两个结果域，与后文两波假设一一对应——过渡句兼任研究设计结构图
+- 破折号插入构念类归属（"two types of [asset class]"），把 P1 铸造的类术语回收为构念定位语
+
+**适用**: Inadequacy × Constructs 组合的 Gap→Study 过渡；Tension 段以明确设问收尾、且研究设计可拆成两个结果域的论文；AMJ/ASQ 谦逊风格
+
+**禁忌**:
+- "these questions" 必须真有先行问句（前段以问题收尾），否则回指悬空
+- "begin to" 只适用于确实分步走的研究（先理论化后检验）；完整闭环研究不要自降幅度
+- 两个结果域必须各自由后文独立假设波承接，不能只拆不接
+
+<!-- wb:pfarrer_pollock_and_rindova_2010:anaphoric_question_pickup_response -->
 
 ## 过渡链位置
 

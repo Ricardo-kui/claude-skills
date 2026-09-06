@@ -103,7 +103,7 @@ updated: 2026-08-13
 | 47 | min/mean/max 三值边际效应表 | 连续/二元调节的三值边际效应表+斜率方向语言 | vs 变体9 单侧；vs 变体40 floodlight 转折点 | EMERGING | DesJardine 2025 AMJ |
 | 59 | spotlight ±1SD + Δslope + region | 一侧显著一侧不显著时的 region 主张（含无方向变体） | vs 变体9 无 Δslope；vs 变体40 floodlight 变号 | VERIFIED | Kalaignanam 2013 JM |
 
-### R5 经济显著性（3）
+### R5 经济显著性（4）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -111,6 +111,7 @@ updated: 2026-08-13
 | 10 | ΔR²+条件边际经济显著性 | 增量方差+条件百分比联合论证（调节的条件分解） | vs 变体13 交互联合变化；vs 变体23 四分位距（决策对5） | EMERGING | Mannor 2016 SMJ |
 | 13 | 交互联合百分比经济显著性 | IV×M 同时变化 1% 的联合幅度翻译（LIWC 等百分比单位变量适配） | vs 变体10 条件分解；vs 变体23 主效应四分位（决策对5） | EMERGING | Li 2026 JOM |
 | 55 | 外部证据实际重要性辩护拍 | 幅度翻译后用外部文献证明微小变化净显著收益 → "likely to be particularly important in practice" | vs 变体13 联合翻译——本变体追加拍5 实际重要性辩护；vs 生存分析变体15 "every day counts" 同拍跨场景 | EMERGING | Ridge et al. 2024 AMJ |
+| 84 | 四分位差幅度翻译+跨规格幅度基准排位 | 25th→75th percentile swing 翻译成 SD% + 跨规格排位 "lies between" + 缩水解释句 | vs 变体3 表格版 vs 变体13 联合翻译——本变体带跨规格幅度排序与保守性解读 | EMERGING | DesJardine, Li & Shi 2025 AMJ |
 
 ### R6 非显著/反转/Null（5）
 
@@ -399,6 +400,18 @@ fine-grained estimates.
 **原文锚点**: "For each set of analyses, we used Heckman selection models to guard against the possibility of sample selection bias (Heckman 1979)."（Analysis 第1段）
 
 <!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:heckman_selection_preflight_rationale -->
+### 变体 85: R7 Heckman 选择偏倚交底 — DV 覆盖选择性 + 排他约束命名报告（desjardine2025 型）
+**来源论文**: DesJardine, Li & Shi 2025 (Academy of Management Journal)
+**skeleton_id**: `r7_heckman_selection_exclusion_restrictions`
+**原始句锚点**: "From the first-stage probit regression, Model 1 of Table 4 shows the coefficient for MSA coverage ratio is 2.361 (p < .001) and the coefficient for length of trading is 0.051 (p < .001), indicating that both variables can predict MSCI coverage."
+**验证状态**: EMERGING（单篇入库）
+**槽位**: R7
+**骨架**:
+> In our main analyses, our dependent variable is available only for firms covered by [data source]. [Source]'s coverage is based on [coverage rule]; thus ... As unobservable heterogeneity could simultaneously drive whether a firm is [covered/selected] and the [outcome] for the firm ..., there is potential for selection bias in our sample, which we addressed with Heckman models. In the first-stage probit regression, we estimated the likelihood of a firm being [covered]. ... Following [Certo et al. 2016], we included two exclusion restrictions: [restriction_1] and [restriction_2]. From the first-stage probit regression, Model [N] of Table [X] shows the coefficient for [restriction_1] is [value] (p < [threshold]) and the coefficient for [restriction_2] is [value] (p < [threshold]), indicating that both variables can predict [selection outcome]. We then calculated the inverse Mills ratio from the first-stage probit regression and controlled for it in the second-stage regressions. As shown in Models [M1–M9], our findings are largely consistent with those reported in Table [main].
+**与原骨架差异**: 选择性问题从 DV 的数据覆盖来源交底（coverage rule 一句讲清谁进样本），选择方程以 DV 可得性为被解释变量，两条 exclusion restrictions 命名报告第一阶段系数，第二阶段以 inverse Mills 不显著 + "findings largely consistent" 收口。与 OLS-FE R2 的 Heckman 表格导航变体（r2_ols_heckman_two_stage_table_navigation）分工：本变体是 R7 threat 定位段的论证结构（选择性来源 → 排他约束 → 一致性收口），不是多假设表格导航。
+**诚实边界**: 排他约束须引方法论依据（Certo et al. 2016 型）且在 Methods 预告；inverse Mills 不显著是弱证据，不得写成"排除了选择偏倚"；"largely consistent" 措辞保留限定（若有交互项掉档位须如实报）。
+
+<!-- wb:desjardine_2025_information_based_competition_the_case_of_ri:r7_heckman_selection_exclusion_restrictions -->
 
 ### 变体 66: R7 — 三威胁小节化稳健性：选择性/内生性 → 替代估计 → 构念效度（post_2022_women_tmt_strategic_renewal 型）
 
@@ -715,6 +728,18 @@ Substantively, a [one-SD] increase in [predictor] is associated with a
 **原文锚点**: "As shown in model 3, we did not find support for hypothesis 1. However, hypothesis 2, that upper echelon affiliations with prominent horizontal organizations would be positively related to investment bank prestige, was supported, as shown in models 4 and 5."（Results, Table 3 判决段）
 
 <!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:hypothesis_verdict_chain_null_concession -->
+### 变体 84: R5 四分位差幅度翻译 + 跨规格幅度基准排位（desjardine2025 型）
+**来源论文**: DesJardine, Li & Shi 2025 (Academy of Management Journal)
+**skeleton_id**: `r5_percentile_magnitude_crossspec_benchmark`
+**原始句锚点**: "When rival–MSCI CIO increases from a low value (25th percentile) to a high value (75th percentile), the value of MSCI ESG rating decreases by 0.82, which is approximately 67% of its standard deviation."
+**验证状态**: EMERGING（单篇入库）
+**槽位**: R5（副槽位 R7）
+**骨架**:
+> When [predictor] increases from a low value ([25]th percentile) to a high value ([75]th percentile), the value of [outcome] [decreases/increases] by [amount], which is approximately [X]% of its standard deviation. [稳健性节复用：] Benchmarking against Model [M] of Table [Y], when [predictor] increases from a low value ([25]th percentile) to a high value ([75]th percentile), the value of [outcome] [decreases/increases] by [amount2], which lies between the magnitude from the [stricter specification] regression ([amount1]) and the magnitude from our main analyses ([amount0]).
+**与原骨架差异**: 幅度拍用四分位差（25th→75th percentile）而非 ±1 SD，翻译目标是"outcome 变动 [X]% 个标准差"；独有的第二步：在稳健性节（firm FE / random effects）对同一解释重算同一百分位幅度，并把新幅度与主分析幅度显式排位比较（"lies between the magnitude from ... and the magnitude from ..."），把规格变化的信息代价翻译成可比数字而非只说"still significant"。语料现有 R5 变体以 ±1 SD 或算术除法链（β×unit=amount→÷base=%）为主，无跨规格幅度排位句。
+**诚实边界**: 幅度缩水必须如实报告并给出实质解释句（原文："This makes sense, given the stability of firms' ESG ratings."），不得只报显著性存活；跨规格排位仅适用于同一 DV 同一解释的规格族，不同 DV 之间禁用。
+
+<!-- wb:desjardine_2025_information_based_competition_the_case_of_ri:r5_percentile_magnitude_crossspec_benchmark -->
 
 ### 变体 65: R4 — 分样本 null→significant 对 + 组内 Wald + 跨子样本 Chow 诚实降级（post_2022_women_tmt_strategic_renewal 型）
 

@@ -152,6 +152,19 @@ updated: 2026-08-13
 > Initial nonparametric tests ([test names]) indicated that [market/audience] viewed [positive outcome] favorably (p < [threshold]) and perceived [negative outcome] as bad news (p < [threshold]). This pattern is consistent with previous studies. [Table Y] presents the size of each subsample category, the mean [outcome] for [condition A], [condition B], and [reference], the pairwise differences between means, and the significance of these differences based on paired t-tests of unequal variances. The [outcome]s for [condition A] ([value]) and [condition B] ([value]) were significantly [larger/smaller] than the [outcome] for [reference] ([value]). Thus, Hypotheses [X] and [Y] were supported.
 **与原骨架差异**: 当理论预测离散类别间的序位差异（high/medium/low）而非连续交互时，分组均值比较+paired t-test 是有效替代——不需要回归交互项。先做非参数验证（Patell Z + generalized sign）确认事件研究指标行为正常，再做子组 t 检验。
 
+
+### 变体 V: R4 差值列 worked-arithmetic 脚注 (pfarrer2010 型)
+**来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
+**原始句锚点**: "The difference between the mean CAR in each category is shown (e.g., 2.30% - 1.74% = 0.56%). Significance was determined by a t-test of unequal variances."
+**验证状态**: EMERGING
+**写入日期**: 2026-09-05
+**槽位**: R4
+**骨架**:
+> [Table note:] The difference between the mean [outcome] in each category is shown (e.g., [mean_A]% - [mean_B]% = [difference]%). Significance was determined by a [t-test] of [unequal variances]. The [baseline] category contains [units] labeled [0] on [both classification dimensions].
+**与原骨架差异**: 分组比较表的『Difference』列易被误读为检验统计量——Pfarrer 在脚注里做一个 worked example（2.30%−1.74%=0.56%），一眼教会算法；同脚注打包三件套：差值算法示例 + 显著性检验类型（unequal variances t-test）+ 基线类目操作化定义（none = 在两个分类维度上均标 0）。与正文裁决节奏变体（r4_subgroup_mean_comparison_ttest）分层互补：一个管正文怎么裁，一个管表格脚注怎么自释。适用于任何带组间差值列的均值比较表（CAR 差异表、分组均值表）。
+
+<!-- wb:pfarrer_pollock_and_rindova_2010:r4_worked_arithmetic_difference_footnote -->
+
 ### 变体 4: R7 GEE 补充回归 + Heckman 两阶段内生性纠正 (1篇高价值)
 **来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
 **原始句锚点**: "Because our tests did not allow us to control for other factors that can affect the size of a CAR, we ran GEE regressions that predicted the magnitude of the three-day CARs while controlling for a variety of other factors (Wade et al., 2006). … Using Bascle's (2008) criteria to select the appropriate estimation approach, we employed a Heckman correction model (Hamilton & Nickerson, 2003; Heckman, 1979). We included predictor variables in the first-stage models that were significantly associated with the likelihood of positive and negative surprises, but not with the CARs. The first-stage models were highly significant in predicting the likelihood of positive and negative surprises, but the selection correction instrument was not significant when entered into the second-stage models. Thus, endogeneity did not appear to be a significant problem in our study (Bascle, 2008; Mesquita & Brush, 2008; Tong, Reuer, & Peng, 2008)."
@@ -167,6 +180,19 @@ updated: 2026-08-13
 
 
 
+
+
+### 变体 U: R4 非参数等价裁决 + 基线符号对比段节奏 (pfarrer2010 型)
+**来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
+**原始句锚点**: "The nonparametric tests indicated that the CARs for reputation and celebrity were not significantly different from their predicted values, but the CARs for firms in the 'none' category were significantly different."
+**验证状态**: EMERGING
+**写入日期**: 2026-09-05
+**槽位**: R4
+**骨架**:
+> Both [group_A] and [group_B] firms had slightly [positive] average [outcome] ([mean_A] and [mean_B], respectively), whereas firms in the [baseline] category had a significant, [negative] mean [outcome] ([mean_C]). The [nonparametric tests] indicated that the [outcome] for [groups A and B] were not significantly different from their predicted values, but the [outcome] for firms in the [baseline] category were significantly different. The [t-tests] showed that the mean [outcome] for [group A] and [group B] were significantly different from the [baseline] category's mean [outcome] and that the [outcome] for [group A] and [group B] were not significantly different from one another. Thus, Hypotheses [X]a and [X]b were supported, and Hypothesis [X]c was not.
+**与原骨架差异**: 非参数检验（Patell Z / generalized sign）在语料中只收了主比较前的行为 sanity check 用法（r3_eventstudy_nonparametric_validation）——本变体是第二用法：在假设裁决段内部，用非参数检验把『处理组结果≈预测值（等价）』与『基线组显著偏离预测』分开陈述，再接参数 t 检验的组间差异，两个检验家族三角互证。段首另有一拍 whereas 符号对比（处理组微正 vs 基线显著负）为裁决铺垫；段尾拆分裁决自然带出 Hc 的不支持（两组彼此无差异）。适用于任何『处理组 vs 基线』分组比较的裁决段，尤其是『处理组表现符合预期、基线偏离』的等价性论证。
+
+<!-- wb:pfarrer_pollock_and_rindova_2010:r4_nonparametric_equivalence_adjudication -->
 
 ### 变体 S：滞后结构括弧敏感性（westphal_zajac_1998_symbolic_management 型）
 
@@ -563,6 +589,262 @@ updated: 2026-08-13
 **验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
 
 
+### 变体 W: R2 DV 家族换场小节标题 (pfarrer2010 型)
+**来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
+**原始句锚点**: "Hypotheses 3a-3c and 4a-4c predict the effects of firm reputation and celebrity on investors' reactions to earnings surprises."
+**验证状态**: EMERGING
+**写入日期**: 2026-09-05
+**槽位**: R2
+**骨架**:
+> [Unnumbered subsection heading naming the construct pair and outcome:] Effects of [asset_A] and [asset_B] on [outcome_family_B]. [Block opener restating the full hypothesis set:] Hypotheses [X]a-[X]c and [Y]a-[Y]c predict the effects of [asset_A] and [asset_B] on [outcome_family_B].
+**与原骨架差异**: Results 覆盖两个 DV 家族（surprise 发生概率 / 投资者反应 CAR）时需要换场装置——Pfarrer 用不带编号、构念命名的子小节标题（Effects of Reputation and Celebrity on Investors' Reactions to Surprises）重开证据流，标题本身预告新 DV 与构念对；随后首句整组重述全部待检假设（Hypotheses 3a-3c and 4a-4c predict the effects of...），让新小节自足可读。与 r2_binary_outcome_hypothesis_pair_table 互补：该变体管同 DV 家族内 H1a/1b 双表镜像导航，本变体管 DV 家族之间的结构换场。适用于多 DV/多结果族 Results（incidence + severity、adoption + performance 等）。
+
+<!-- wb:pfarrer_pollock_and_rindova_2010:r2_dv_family_pivot_heading -->
+
+
+### 变体 X: R2 相关替代测量分模型括弧 — 似然模型嵌套序列 (gulati1999 型)
+**来源论文**: Gulati 1999 (Strategic Management Journal, 20(5), 397-420)
+**原始句锚点**: "The two variables that assess the level of network resources of firms, Cliques and Closeness, were relatively highly correlated (0.66) and were examined separately in the statistical analysis. ... Models 2 and 3 provide two alternative tests for Hypothesis 1."（跨 R1/R2 段拼接，省略号标注）
+**验证状态**: VERIFIED — expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED; paper_count=1)
+**写入日期**: 2026-09-05
+**槽位**: R2
+**骨架**:
+> Table [X] presents the correlations and descriptive statistics for the variables included in the analysis. The two variables that assess [construct], [measure_A] and [measure_B], were relatively highly correlated ([r]) and were examined separately in the statistical analysis. I assessed the hypotheses sequentially in a series of [estimator] models, presented in Table [Y]. The first model is the base model, which includes the control variables and examines the effects of [control_block]. Models [2] and [3] provide two alternative tests for Hypothesis [1]: Model [2] tests the additional effect of [construct] as measured by [measure_A] on [DV]; Model [3] is identical to Model [2] except that it uses an alternative measure of [construct]—[measure_B]. The two measures of [construct] are correlated and thus are introduced in separate models. Models [4] and [5] introduce [predictor_2] while retaining the two measures for [construct] separately in each model. All five models were significant overall, as indicated by the [fit_test] using their [fit_statistic] values, and the significant improvement in the [fit_test] statistic suggests a better-fitting model once the measures of [construct] are included.
+**与原骨架差异**: R1 高相关门不止安抚（对比 VIF 式"多重共线性不担忧"），而是当场预告分析后果（examined separately）并在 R2 兑现；R2 用 "two alternative tests for Hypothesis [N]" 把同一构念的替代操作化升格为并列主检验（各进独立模型），再以 2×2 网格并入第二焦点预测子；结尾用整体拟合+嵌套增量拟合（卡方/对数似然）作非线性模型的 ΔR² 类比证据拍。适用于似然/非线性模型下同一构念多操作化；线性模型可平移（卡方增量→ΔR²）。
+**区别于**: 变体 24——那是 hit rate/PCC 分类准确度导航，本变体是替代测量括弧主检验架构。
+
+<!-- wb:gulati_1999_network_location_and_learning_the_influence_of_n:r2_alternative_measure_bracketing_probit -->
+
+
+
+### 变体 AH: R6 竞争机制衰减裁决 — 基线设伏+拟合增量+非对立供认+趋势重读 (gulati_ajs1999 型)
+**来源论文**: Gulati 1999 (American Journal of Sociology, 104(5), 1439-1493)
+**原始句锚点**: "Moreover, the effect of density became non-significant at the .01 level once we introduced structural differentiation into this model. This suggests that the systemic effects on tie formation captured by density may actually be mediated by the structural differentiation of the network."
+**验证状态**: VERIFIED — expert_audit_override (user 2026-09-06: Gulati 系论文蒸馏单源即 VERIFIED; paper_count=1)
+**写入日期**: 2026-09-06
+**槽位**: R6
+**骨架**:
+> In Model [1], [rival_mechanism_variable] has a [direction] and significant coefficient, suggesting that [rival_theory_reading]. Introducing [focal_construct] in Model [k] leads to a significant improvement in the fit of the model, as measured by the [fit_test] statistics. Moreover, the effect of [rival_mechanism_variable] became non-significant at the [.01] level once we introduced [focal_construct] into this model. This suggests that the [systemic effects] captured by [rival_mechanism_variable] may actually be mediated by [focal_construct]. Although Hypothesis [N] was not formulated as an alternative for a [rival_theory] process, the statistical insignificance of [rival_mechanism_variable] in Model [k] suggests that [outcome] is perhaps best explained by [focal_mechanism], rather than a consequence of [rival_mechanism] driven by [rival_process]. Thus, the [observed trend] may be prompted by [focal_mechanism], rather than [rival_mechanism].
+**与原骨架差异**: 竞争机制不是另测的中介代理，而是 rival 理论自带的系统层变量（如 legitimization 之于 density）：先在基线模型给它显著性并配 rival 理论解读（设伏拍），焦点构念进入后用拟合增量拍（[fit_test] 显著改善）+该变量衰减至非显著完成裁决；"Although Hypothesis [N] was not formulated as an alternative" 供认拍显式标注裁决相对假设陈述的事后性（post hoc 标注合规）；收束拍把时期趋势（[observed trend]）重读为焦点机制驱动而非 rival 机制。四层节奏：设伏→衰减→供认→趋势重读。
+**禁忌**: 衰减方向必须与理论预期一致（rival 变量衰减、焦点构念稳定显著）才可作裁决；焦点构念与 rival 变量同时衰减时不得挪用此句式；"mediated by" 是叙事性中介语言，不得包装成正式中介检验结论。
+**区别于**: 变体 Y（R2 控制变量解释消去——单一控制变量代理焦点构念的正向重读）；变体 AG（机制电池另测竞争机制）；变体 16（rival 两步排除）——本变体不另测机制，让 rival 理论关键变量在基线设伏、在焦点模型处被吸收，升级为两套实质理论的整体裁决。
+
+<!-- wb:gulati_1999_where_do_interorganizational_networks:r6_rival_mechanism_adjudication_nested_attenuation -->
+
+### 变体 Y: R2 控制变量解释消去 — 跨嵌套模型衰减的理论重读 (gulati1999 型)
+**来源论文**: Gulati 1999 (Strategic Management Journal, 20(5), 397-420)
+**原始句锚点**: "In Models 2 and 3, which include the network resources variables, however, Time is insignificant, suggesting that these temporal effects are interpreted by the network resource variables included in these models. In other words, Time was capturing differences in network resources over time."
+**验证状态**: VERIFIED — expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED; paper_count=1)
+**写入日期**: 2026-09-05
+**槽位**: R2
+**骨架**:
+> In Model [1], [control] has a [direction] and significant coefficient ([coef], p < [threshold]), suggesting that [naive_temporal_or_compositional_reading]. In Models [2] and [3], which include the [focal_construct] variables, however, [control] is insignificant, suggesting that these [control] effects are interpreted by the [focal_construct] variables included in these models. In other words, [control] was capturing differences in [focal_construct]. [Optional robustness coda: The inclusion of a [functional_form] term for [control] did not alter these results; its coefficient was also insignificant. The main effects for the key variables did not change when I included [alternative_specification].]
+**与原骨架差异**: 把控制变量跨嵌套模型的显著性衰减正向重读为理论证据——"was capturing differences in [focal_construct]" 一句完成解释消去，控制变量叙事因此服务焦点构念的解释力主张而非默默消失；可选收束拍补功能性形式/替代设定的不变性。区别于 OLS-FE 两处近似：交互家族互相吸收的 caveat（absorb each other's moderating effect，事后辩解衰减）与 Cinelli-Hazlett（explain away 指混淆强度足以解释关联）——本变体是嵌套序列内的正向重读。
+**禁忌**: 只有衰减方向与理论一致（控制变量衰减、焦点变量稳定显著）时可用；焦点变量同时衰减是坏消息，不得反向挪用此句式。
+**区别于**: 变体 24 与 OLS-FE 吸收 caveat——本变体是控制变量衰减→代理焦点构念的正向理论重读。
+
+<!-- wb:gulati_1999_network_location_and_learning_the_influence_of_n:r2_control_attenuation_explaining_away -->
+
+
+### 变体 Z: R6 构念家族混合证据 — mixed 标题拍+核心显著+辅助 null 全披露 (gulati1999 型)
+**来源论文**: Gulati 1999 (Strategic Management Journal, 20(5), 397-420)
+**原始句锚点**: "The results for the influence of alliance formation capabilities on subsequent alliances show mixed results. ... While past experience with alliances was significant, no significant results were obtained from three additional measures of alliance capabilities that assessed the diversity of alliances each firm had previously entered and the time duration since it last entered an alliance (results not reported here)."（跨段拼接，省略号标注）
+**验证状态**: VERIFIED — expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED; paper_count=1)
+**写入日期**: 2026-09-05
+**槽位**: R6
+**骨架**:
+> The results for the influence of [construct_family] on [DV] show mixed results. As Table [X] suggests, [core_measure], which measured the effects of [core_dimension] on [DV], was [direction] and significant in both Models [a] and [b]. This indicates that [substantive_reading_of_core_measure]. It is important to highlight that [estimator_credibility_sentence_reinforcing_estimate_quality]. While [core_measure] was significant, no significant results were obtained from [k] additional measures of [construct_family] that assessed [alternative_dimension_1] and [alternative_dimension_2] (results not reported here). [Alternative_specification_1] were insignificant. Furthermore, [alternative_specification_2] of [dimension] were also not significant (results not reported here).
+**与原骨架差异**: 构念家族层面的混合证据框架——mixed 标题拍先行定调，核心操作化走完整四拍（方向→显著性→实质解读→估计器可信度强化），辅助操作化逐项 null 且全部显式披露（results not reported here 标注而非静默省略）。区别于变体 25（spillover-null：主效应成立但对应交互当场 do not support）——本变体管同构念多操作化的证据分裂，不管调节溢出。
+**禁忌**: mixed 必须指家族内分裂（核心显著+辅助 null）；核心测量本身不稳定时不得用 mixed 弱化。null 项须逐项披露，不得只报幸存的显著操作化。
+**区别于**: 变体 25——那是调节交互不溢出的当场 do-not-support；本变体是构念操作化家族的 mixed 标题+核心/辅助分层披露。
+
+<!-- wb:gulati_1999_network_location_and_learning_the_influence_of_n:r6_construct_family_mixed_evidence -->
+
+
+
+### 变体 AM: R3 判决后构念效度同调拍 — congruent 同调句+替代测量一行复证 (gulati_ajs1999 型)
+**来源论文**: Gulati 1999 (American Journal of Sociology, 104(5), 1439-1493)
+**原始句锚点**: "This result is congruent with research on the role of interdependence in alliance formation and helps enhance the construct validity of our indicator. Our alternative measure for interdependence, using membership in the clusters corroborated by industry experts, yielded similar results."
+**验证状态**: VERIFIED — expert_audit_override (user 2026-09-06: Gulati 系论文蒸馏单源即 VERIFIED; paper_count=1)
+**写入日期**: 2026-09-06
+**槽位**: R3
+**骨架**:
+> As predicted in Hypothesis [N], [units with condition] were more likely to [outcome]. This result is congruent with research on [related literature stream] and helps enhance the construct validity of our indicator. Our alternative measure for [construct], using [alternative operationalization], yielded similar results.
+**与原骨架差异**: 四拍判决后追加两小拍收尾弧——(1) 同调拍：以 "congruent with research on [stream]" 把结果与先行文献对齐，并直接升格为构念效度证据（"helps enhance the construct validity of our indicator"——显著结果反哺测量质量主张），(2) 替代测量一行复证拍：替代操作化 "yielded similar results" 一行带过，不另开模型叙事——把测量稳健性压缩进假设块而不膨胀结构。
+**禁忌**: 同调句引用的文献须真实支撑同方向发现，不得把任何相关文献都说成 congruent；替代测量复证只报相似与否，不得重跑四拍；构念效度升格仅在结果方向与文献一致时成立，方向相悖时须改报 divergence。
+**区别于**: 变体 X（R2 相关替代测量分模型括弧——事先声明的各进独立模型架构）；变体 Z 的估计器可信度强化拍（估计质量自证）——本变体是判决后的测量构念效度外部同调证词+替代测量一行复证 coda。
+
+<!-- wb:gulati_1999_where_do_interorganizational_networks:r3_construct_validity_congruence_coda -->
+
+### 变体 AA: R7 随机效应方差份额自证 — Rho 作为纠正生效证据 (gulati1999 型)
+**来源论文**: Gulati 1999 (Strategic Management Journal, 20(5), 397-420)
+**原始句锚点**: "The random-effects model used generates a coefficient Rho, which indicates the extent to which unobserved heterogeneity was found and corrected for by the model. The positive and significant coefficient for Rho across all models suggests that unobserved factors that could influence the alliance behavior of firms were accounted for by the statistical model."
+**验证状态**: VERIFIED — expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED; paper_count=1)
+**写入日期**: 2026-09-05
+**槽位**: R7
+**骨架**:
+> The [random_effects_estimator] used generates a coefficient [Rho / variance_share_statistic], which indicates the extent to which unobserved heterogeneity was found and corrected for by the model. The [direction] and significant coefficient for [Rho] across all models suggests that unobserved factors that could influence [DV] were accounted for by the statistical model. [Optional companion: I later tested the robustness of my findings with a [alternative_within_unit_estimator] and found consistent results.]
+**与原骨架差异**: 随机效应面板专属的"设计内生自证"——用估计器自带的方差份额统计量（Rho）把"未观测异质性被纠正"从 methods 设定声明升级为 Results 内的经验证据（跨模型显著→纠正生效），置于 Results 收尾位；可搭配跨估计器一致性句（FE 复检 found consistent results）。区别于变体 4/26——那些是外部诊断电池（GEE/Heckman、IV 诊断），本变体是估计器自带统计量的威胁回应。
+**适用**: 随机效应面板（RE probit/logit/linear）；固定效应无此统计量。
+**禁忌**: Rho 不显著时不得伪造"纠正生效"叙事，应如实报告异质性有限。
+**区别于**: 变体 4/26——外部诊断电池 vs 本变体的估计器自带方差份额自证。
+
+<!-- wb:gulati_1999_network_location_and_learning_the_influence_of_n:r7_random_effects_variance_share -->
+
+
+### 变体 AB: R7 虚拟变量显著≠斜率异质性 — 无约束分组模型检验主效应同质性 (gulati1999 型)
+**来源论文**: Gulati 1999 (Strategic Management Journal, 20(5), 397-420)
+**原始句锚点**: "While the relative significance of the sector dummies indicates whether there may be intrinsic differences across the three industries in the likelihood that alliances will be used, it does not tell us whether the main effects hypothesized in this paper differ across the three industries. Rather, they simply suggest that the constant terms for each of the industries may differ."
+**验证状态**: VERIFIED — expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED; paper_count=1)
+**写入日期**: 2026-09-05
+**槽位**: R7
+**骨架**:
+> While the relative significance of the [group_dummies] indicates whether there may be intrinsic differences across the [groups] in the likelihood that [DV] will [occur], it does not tell us whether the main effects hypothesized in this paper differ across the [groups]. Rather, they simply suggest that the constant terms for each of the [groups] may differ. To assess the [group] differences further, I estimated unrestricted models for each of the [groups] (results not presented here). By examining each of the [groups] independently, no restrictions were imposed on the slope coefficients. The signs of the coefficients indicated that the postulated directionality of the main effects observed in the pooled sample do indeed hold true in each of the [groups]. I also conducted a similar test for [alternative_partition]. The results suggested that the main effects were consistent across [alternative_partition].
+**与原骨架差异**: 先做概念区分拍（虚拟变量显著只证截距差异，不证斜率异质性——"Rather, they simply suggest that the constant terms... may differ"），再上无约束分组模型动作拍（no restrictions were imposed on the slope coefficients），以主效应方向一致性判定收束，最后以第二分区（如国籍）重复——把 pooled 主效应的可推广性从默认假设变成被检验对象。范式通用（不限似然模型）。
+**禁忌**: 分组须理论驱动（行业/国籍是理论边界），不得事后切样本找一致性；分组后主效应方向不稳时须如实报告，不得归入附录掩盖。
+**区别于**: 变体 11（六威胁梯）与变体 16（rival 排除）——本变体防御 pooled 主效应的跨组同质性，不是外部威胁或替代解释。
+
+<!-- wb:gulati_1999_network_location_and_learning_the_influence_of_n:r7_dummy_significance_vs_slope_homogeneity -->
+
+
+### 变体 AC: R2 假设级风险集递进导航 — 每假设各配可估样本 (gulati_westphal_1999 型)
+**来源论文**: Gulati & Westphal 1999 (Administrative Science Quarterly, 44(3), 473-506)
+**原始句锚点**: "Since hypotheses 2-4 assume that an interlock tie exists, ..., the risk set narrows here from all possible dyads to only those dyads for which there was an interlock tie between the two firms."
+**验证状态**: VERIFIED — expert_audit_override (user 2026-09-06: Gulati 系论文蒸馏单源即 VERIFIED; paper_count=1)
+**写入日期**: 2026-09-06
+**槽位**: R2
+**骨架**:
+> Because Hypothesis [1] concerns whether [focal predictor] affects [DV] at all, the risk set for this analysis includes all possible [dyad] combinations between [focal units] and the [full sampling frame] ([N_all] [dyads]). Because Hypotheses [2-4] assume that [prior condition] exists—[treatment] only occurs when [prior condition] holds—the risk set narrows to only those [dyads] for which [prior condition] was present ([N_narrow]). Model [1] in Table [X] tests Hypothesis [1] on the full risk set; Model [2] tests Hypotheses [2-3] on the narrowed risk set of [N_narrow] [dyads].
+**与原骨架差异**: dyad/网络设计的风险集随假设前提逐级收窄（全体可能 dyad → 存在 prior condition 的 dyad → 个体层子样本），导航句把"哪条假设在哪个可估样本上检验"写成显式逻辑（前提不成立则 treatment 无定义），表格 N 行与正文导航一一对应——风险集从 methods 设定声明升级为 Results 导航结构。
+**适用**: dyad/网络二元结果设计；每条假设的可估样本不同（风险集随假设前提收窄）；堆叠扩散 Logit 等"风险集未解释"高风险场景可直接借用。
+**禁忌**: 风险集收窄必须由假设前提逻辑驱动（treatment 在前提缺失时无定义），不得为提显著性事后切样本；收窄产生的选择效应须另行交底（本文用 Heckman 选择模型，见变体 5 与 R3 双估计器共证变体）。
+**区别于**: 变体 X（相关替代测量分模型括弧——同一风险集内的测量变体嵌套）；变体 5（Heckman 第一阶段导航——选择纠正修辞）；本变体是"假设前提→可估样本"的导航层。registry 现存唯一"风险集"条目仅是堆叠扩散Logit 的 high_risk_missing 警示，无骨架。
+
+<!-- wb:gulati_westphal_1999_cooperative_or_controlling:r2_hypothesis_riskset_narrowing_dyads -->
+
+
+### 变体 AD: R6 null 主假设前置 pivot — 判决先行冒号句 + In summary 权变化收束 (gulati_westphal_1999 型)
+**来源论文**: Gulati & Westphal 1999 (Administrative Science Quarterly, 44(3), 473-506)
+**原始句锚点**: "The results in model 1 do not support this hypothesis: after controlling for the extent of market constraint ... the existence of an interlock tie is not significantly related to subsequent alliance formation. ... In summary, the first set of results indicates that the mere presence of a board interlock tie ... does not predict the formation of strategic alliances between firms; instead, such ties may either increase or decrease the likelihood of alliance formation, depending on the nature of the CEO-director relationship that underlies the tie."（跨段拼接，省略号标注）
+**验证状态**: VERIFIED — expert_audit_override (user 2026-09-06: Gulati 系论文蒸馏单源即 VERIFIED; paper_count=1)
+**写入日期**: 2026-09-06
+**槽位**: R6
+**骨架**:
+> The results in Model [1] do not support Hypothesis [1]: after controlling for [covariate family], [focal predictor] is not significantly related to [DV]. [Supported hypotheses follow in parallel models on the conditional sample.] In summary, the first set of results indicates that the mere presence of [focal predictor] does not predict [DV]; instead, [focal predictor] may either increase or decrease the likelihood of [DV], depending on [relational content / boundary attribute].
+**与原骨架差异**: null 主假设不被埋位也不被道歉，而是置于假设序列首位并配"判决先行冒号句"（verdict → colon → scope condition → null 陈述，scope condition 同时暗示检验的保守性）；随后 In summary 段把"总效应 null + 两个异号条件效应"收束成权变论题——null 从遗憾变成核心答案的一半，为调节假设让台。
+**适用**: 理论核心是权变（X 的效应取决于 W/关系内容）且 X 主效应预期不显著的设计；主效应 null 首位呈现使后续条件效应成为"答案"而非"补救"。
+**禁忌**: 仅当权变论题真的把 null 变成可解释结果（存在已检验的异号条件效应）时使用；若主效应 null 只是失败且无条件效应兜底，不得借用此节奏包装；scope condition 从句必须与实际控制变量一致。
+**区别于**: 变体 Y（控制变量衰减的理论重读——跨嵌套模型解释消去）；变体 Z（构念家族 mixed 证据——mixed 标题拍）；变体 P（四格设计 null 格确认——组间比较）；本变体是主假设 null 的序列位置学（首位 pivot）+ 权变化收束。
+
+<!-- wb:gulati_westphal_1999_cooperative_or_controlling:r6_null_main_effect_contingency_synthesis -->
+
+
+### 变体 AE: R4 对称放大调节镜像判决句 — 单 moderator 同向放大异号双主效应 (gulati_westphal_1999 型)
+**来源论文**: Gulati & Westphal 1999 (Administrative Science Quarterly, 44(3), 473-506)
+**原始句锚点**: "Consistent with hypothesis 4a, the results show that as the number of third-party ties between the CEO and outside directors increases, the negative relationship between board control over the CEO and the likelihood of subsequent alliance formation ... becomes stronger."
+**验证状态**: VERIFIED — expert_audit_override (user 2026-09-06: Gulati 系论文蒸馏单源即 VERIFIED; paper_count=1)
+**写入日期**: 2026-09-06
+**槽位**: R4
+**骨架**:
+> The interaction effects in Model [3] of Table [X] support Hypothesis [4]. Consistent with Hypothesis [4a], the results show that as [moderator] increases, the negative relationship between [predictor1] and the likelihood of [DV] becomes stronger. The results also support Hypothesis [4b]: as [moderator] increases, the positive relationship between [predictor2] and the likelihood of [DV] also becomes stronger. [Optional close: The hypothesized interaction effects were also supported in [parallel estimator] models, as shown in Model [k] of Table [Y].]
+**与原骨架差异**: 单一 moderator 同时放大两个异号主效应（一负一正，强度放大而非方向改变）时，用镜像判决句法让对称性在句法层可见——同一 "becomes stronger" 在 H4a/H4b 两句中重复，Consistent with / also support 的衔接标记假设对的配对性；无图、无简单斜率、无 AME，纯句法对称承载理论对称（intensity not direction）。
+**适用**: 对称放大调节（symmetric amplification）假设对；两个交互项同表相邻列；调节的理论点恰是"同一机制放大两种关系内容"。
+**禁忌**: 两交互若非同向放大（一放大一衰减）禁用镜像句法；"becomes stronger" 不得写成方向反转（由负转正）；镜像句两侧的假设编号与系数符号必须与表格一致。
+**区别于**: 变体 18（同调节双模式几何对比——shift vs steepen 分图裁决，需交互图）；变体 20（AME 网格把 weaken 推进到符号反转）；本变体无图无 AME，靠句法镜像承载对称放大主张。
+
+<!-- wb:gulati_westphal_1999_cooperative_or_controlling:r4_symmetric_amplification_mirror_verdicts -->
+
+
+### 变体 AF: R3 双估计器并列共证 — 双表导航 + 逐假设一行跨估计器确认 (gulati_westphal_1999 型)
+**来源论文**: Gulati & Westphal 1999 (Administrative Science Quarterly, 44(3), 473-506)
+**原始句锚点**: "Table 4 provides the results of the logistic regression analysis of alliance formation, and table 5 gives the Heckman selection model results. ... The hypothesized effects of board control and cooperation were also supported in Heckman selection models of alliance formation, as shown in model 1 of table 5."（跨段拼接，省略号标注）
+**验证状态**: VERIFIED — expert_audit_override (user 2026-09-06: Gulati 系论文蒸馏单源即 VERIFIED; paper_count=1)
+**写入日期**: 2026-09-06
+**槽位**: R3
+**骨架**:
+> Table [X] provides the results of the [primary estimator] analysis of [DV], and Table [Y] gives the [parallel estimator] results. Model [2] tests Hypotheses [2] and [3]. [Hypothesis verdicts on the primary estimator.] The hypothesized effects of [predictor1] and [predictor2] were also supported in [parallel estimator] models of [DV], as shown in Model [k] of Table [Y].
+**与原骨架差异**: 平行估计器不是内生性补丁而是并列主估计——开场一句双表导航（主估计表 + 平行估计表并列），此后每个假设块尾随一行跨估计器确认句（"were also supported in [parallel estimator] models..., as shown in Model [k] of Table [Y]"）；主结论的证据等级由"单估计器+稳健性"升为"双估计器共证"，确认句只报支持与否、不重跑幅度叙事。
+**适用**: 二元 DV 同时担心选择效应的 dyad/panel 设计（logit + Heckman selection 并列）；两估计器共用同一假设编号体系与控制变量集。
+**禁忌**: 确认句逐假设块各一行即可，不得在第二估计器上重复完整四拍叙事；两估计器结论不一致时必须显式报告分歧，不得静默只引一致者；平行估计器的第一阶段细节不进 Results 正文导航。
+**区别于**: 变体 5（Heckman 第一阶段表格+逆米尔斯比率——选择纠正导航）；变体 4（GEE+Heckman 内生性稳健性——事后补丁位）；变体 AA 的 companion 句（FE 复检 found consistent results——RE 家族内部替代估计器一行带过）；本变体是双估计器全程并列共证的架构级节奏。
+
+<!-- wb:gulati_westphal_1999_cooperative_or_controlling:r3_dual_estimator_coprimary_confirmation -->
+
+
+### 变体 AG: R8 探索性中介五拍弧 — 供认→竞争机制电池→系数衰减判定→反向因果反驳 (gulati_westphal_1999 型)
+**来源论文**: Gulati & Westphal 1999 (Administrative Science Quarterly, 44(3), 473-506)
+**原始句锚点**: "While our theoretical argument suggests that trust in the CEO-board relationship can explain how control and cooperation affect alliance formation, our primary analyses did not explicitly model the mediating effect of trust. Thus, one ... might question whether other, related social processes mediate these relationships."（原文跨表 7 排版中断，省略号标注）
+**验证状态**: VERIFIED — expert_audit_override (user 2026-09-06: Gulati 系论文蒸馏单源即 VERIFIED; paper_count=1)
+**写入日期**: 2026-09-06
+**槽位**: R8
+**骨架**:
+> While our theoretical argument suggests that [mediator] can explain how [X] affects [Y], our primary analyses did not explicitly model the mediating effect of [mediator]. Thus, one might question whether other, related social processes mediate these relationships. To assess the relative importance of these different social processes, we conducted further exploratory analyses using [measures of the mediator and rival mechanisms]. As shown in Models [3] and [4] of Table [X], [mediator] has a strong and [direction] relationship with [DV], while the effects of [rival mechanism 1] and [rival mechanism 2] are nonsignificant. In addition, when [mediator] is added to the models, the effects of [X] become nonsignificant, suggesting that [mediator] mediates the effects of [X] on [DV] ([mediation citation]). The results are not consistent with the view that [reverse causal ordering]; the findings suggest that [mediator] mediates the effects of [X], and not the reverse.
+**与原骨架差异**: 事后中介分析的五拍诚实弧——(1) 供认主分析未建模中介（"did not explicitly model"）；(2) "Thus, one might question" 引出同族竞争机制；(3) 探索性标签 + 竞争机制实测并全数 null（ingratiation、board approval 在所有模型中不显著）；(4) 中介判定用系数衰减并引方法出处（Baron and Kenny, 1986）；(5) 反向因果反驳（"and not the reverse"）——把"为什么是 A 中介而不是 B 机制、不是反向因果"一次答完。
+**适用**: 理论机制（如信任）未在主分析直接建模、且有可实测的同族竞争机制（政治影响/认可）可排除的设计；主效应已确立后的机制补证。
+**禁忌**: exploratory 标签必须保留，post hoc 中介与稳健性检验分开标注，不得包装成确证性检验；中介判定须引方法出处；竞争机制须真实测量而非"不太可能"口头排除；反向反驳须有经验证据（如时序或替代测量复检）支撑。
+**区别于**: 变体 13（曲线机制选择性路径辨析——激活哪条机制）；变体 23（post-hoc 机制代理另 DV——限 aligns with）；变体 27（Heckman-on-CAR 管理相关性）；本变体是"供认→竞争电池→中介判定→反向反驳"完整弧，且含反向因果方向裁决。
+
+<!-- wb:gulati_westphal_1999_cooperative_or_controlling:r8_exploratory_mediator_competing_mechanism_battery -->
+
+
+### 变体 AI: R6 null 主效应条件重估与构念域重划 — less conclusive 降级判决+分离重估+子域收束 (gulati_ajs1999 型)
+**来源论文**: Gulati 1999 (American Journal of Sociology, 104(5), 1439-1493)
+**原始句锚点**: "The evidence for hypothesis 5, which predicts an increase in the probability of an alliance between organizations with similar centrality, is less conclusive. ... Thus, the homophily tendency implicit in hypothesis 5 only applies to central organizations."（跨段拼接，省略号标注）
+**验证状态**: VERIFIED — expert_audit_override (user 2026-09-06: Gulati 系论文蒸馏单源即 VERIFIED; paper_count=1)
+**写入日期**: 2026-09-06
+**槽位**: R6
+**骨架**:
+> The evidence for Hypothesis [N], which predicts [predicted relation], is less conclusive. The results indicate that [focal measure] does not have a statistically significant influence on [DV]. In separate estimations, however, we found that [alternative operationalization] was [direction] and significant if [co-test variable] was excluded from the model. To interpret this result, it is worth noting that [geometric or substantive property of the measure]. Thus, the [tendency] implicit in Hypothesis [N] only applies to [subpopulation]. Once [co-test variable] is controlled for, the effect of [focal measure] is no longer significant. Viewed in this light, these results are consistent with [prior distinction citation], which suggests that [construct boundary between subpopulations].
+**与原骨架差异**: null 假设不被 pivot 到序列首位也不被 family-mixed 定调，而是在原位降级判决（"less conclusive"——比 do not support 温和的诚实措辞）后当场披露分离重估（[alternative operationalization] 在排除 [co-test variable] 后才显著），再用测量的几何/实质性质注记把 null 重划为"机制只适用于子群"，并引 prior distinction 文献锚定构念边界——null 判决保持不变，被重划的是适用域；五步节奏：降级判决→null 陈述→分离重估披露→性质注记→子域收束+文献锚定。
+**禁忌**: 分离重估必须如实披露"排除共测变量后才显著"这一条件性，不得只报幸存设定；重划后的"只适用于子群"须有几何性质或文献证据支撑，不得纯口头挽救 null；"less conclusive" 只适用于证据分裂情形，单侧干净 null 应直接报告不支持。
+**区别于**: 变体 AD（null 主假设首位 pivot + In summary 权变化收束——null 是答案的一半）；变体 Z（构念家族 mixed 标题拍——家族内分裂）；变体 P（四格 null 格确认）——本变体是 null 原位降级判决 + 分离重估 + 适用域重划三步法，null 不翻案、只划界。
+
+<!-- wb:gulati_1999_where_do_interorganizational_networks:r6_null_main_conditional_reestimation_rescoping -->
+
+
+### 变体 AJ: R4 预期符号翻译+共线性分模型声明+主效应存活综合 (gulati_ajs1999 型)
+**来源论文**: Gulati 1999 (American Journal of Sociology, 104(5), 1439-1493)
+**原始句锚点**: "We tested these models separately because of concerns of multicollinearity across the interaction terms. ... However, interdependence on its own has a positive impact on alliance formation across all models."（跨段拼接，省略号标注）
+**验证状态**: VERIFIED — expert_audit_override (user 2026-09-06: Gulati 系论文蒸馏单源即 VERIFIED; paper_count=1)
+**写入日期**: 2026-09-06
+**槽位**: R4
+**骨架**:
+> Models [a], [b], and [c] assess the moderating influence of [moderator] on both [driver family 1] and [driver family 2] of [DV]. We had predicted that [moderator] would moderate the influence of [driver 1] on [DV] (Hypothesis [x]). This prediction should translate into a significant and [direction] coefficient for the interaction between [driver 1] and [moderator]. But we also predicted that the effect of [driver 2] on [DV] would [diminish/increase] with [moderator] (Hypothesis [y]). This effect should yield a significant and [direction] coefficient for the interaction between [driver 2] and [moderator]. We tested these models separately because of concerns of multicollinearity across the interaction terms. Model [a] introduces an interaction term between [driver 2] and [moderator]. The [direction] coefficient for the interaction term supports Hypothesis [y] and suggests that [attenuation/amplification reading]. However, [driver 2] on its own has a [direction] impact on [DV] across all models. Thus, while [driver 2] does influence [DV], [the growing moderator] [mitigates/amplifies] the effects of [driver 2] on [DV].
+**与原骨架差异**: 调节检验开场先把语言假设翻译成预期交互系数符号（"This prediction should translate into a significant and [direction] coefficient"——读者可先核对判定标准再看系数），再显式声明因交互项间多重共线性而分模型检验（"We tested these models separately because of concerns of multicollinearity"）；逐模型判决后补主效应存活句（"on its own has a [direction] impact across all models"）——交互不是取代主效应而是限定其边界，收束成双驱动综合（[driver family 1] 被缓解 / [driver family 2] 被放大）。四拍：符号翻译→分模型声明→判决+存活句→驱动综合。
+**禁忌**: 分模型必须由共线性或理论驱动并显式声明理由，不得为凑显著拆模型；存活句不得违反"交互后主效应独立解释"反模式——它限定主效应的边界条件而非重复宣称独立效应；预期符号必须与表内交互系数方向一致；衰减读法（mitigates）不得写成方向反转。
+**区别于**: 变体 AE（镜像判决句——单调节同向放大异号双主效应，靠句法对称）；变体 28（总效应带+两水平预测概率——需预测概率）；变体 18（双模式几何对比——需交互图）；本变体无图无 AME，靠"符号翻译→分模型声明→存活句→综合"四拍承载权变主张。
+
+<!-- wb:gulati_1999_where_do_interorganizational_networks:r4_interaction_sign_translation_separate_models -->
+
+
+### 变体 AK: R6 null 分量+显著交互坦白段 — 让步从句+弱证据边界+双向 hedge (gulati_ajs1999 型)
+**来源论文**: Gulati 1999 (American Journal of Sociology, 104(5), 1439-1493)
+**原始句锚点**: "Although similarity in centrality was not a significant predictor of alliance formation, the interaction between this variable and structural differentiation is statistically significant. ... although this tendency is not strong enough to make the difference in centrality statistically significant during the period of observation."（同段拼接，省略号标注）
+**验证状态**: VERIFIED — expert_audit_override (user 2026-09-06: Gulati 系论文蒸馏单源即 VERIFIED; paper_count=1)
+**写入日期**: 2026-09-06
+**槽位**: R6
+**骨架**:
+> Although [component measure] was not a significant predictor of [DV], the interaction between this variable and [moderator] is statistically significant. This suggests that, with [the growth of moderator], [units] may become increasingly [sensitive] to [component dimension] when [choosing/acting], although this tendency is not strong enough to make [component measure] statistically significant during the period of observation. [Optional speculative mechanism: The more [structural condition] becomes apparent, the more difficult it may become for [disadvantaged units] to [outcome]. Although this does not mean that such [outcomes] will not occur, it does suggest that [disadvantaged units] may need to possess some unique attributes that can enhance their attractiveness in order to [outcome].]
+**与原骨架差异**: 主效应 null 但交互显著的组件级坦白——让步从句开头承认 null 分量，随即指出交互显著并给出"随调节变量增长单元对该维度日益敏感"的机制解读，再用 "although this tendency is not strong enough... during the period of observation" 显式标注证据强度边界（观察期内不足以显著）；可选推测机制拍用 may 措辞并保留 "does not mean that such [outcomes] will not occur" 的双向 hedge——坦白与推测分层，不把弱证据包装成定论。
+**禁忌**: 只可用于交互假设本身获支持的情形；推测机制必须保留 may / does not mean 双向 hedge，不得引入未测量的新构念断言；不得把 null 分量写成"实际显著"；证据边界句（not strong enough during the period of observation）不得删除。
+**区别于**: 变体 AD（null 主假设是答案一半的首位 pivot——权变即核心结论）；变体 AB（虚拟变量显著≠斜率异质性的概念区分拍）；本变体处理已获支持的调节假设内部的 null 分量，功能是坦白+边界标注而非翻案或概念澄清。
+
+<!-- wb:gulati_1999_where_do_interorganizational_networks:r6_null_component_significant_interaction_candor -->
+
+
+### 变体 AL: R7 曲线形式脚注稳健性 — 差异化发现+线性不受影响+简约保留裁决 (gulati_ajs1999 型)
+**来源论文**: Gulati 1999 (American Journal of Sociology, 104(5), 1439-1493)
+**原始句锚点**: "The results suggest that the relationship between previous alliances and future alliances within the dyads is best described as an inverted U-shape relationship, captured by a second-order polynomial function. ... We report the results of the linear model for the sake of parsimony."（同脚注内拼接，省略号标注）
+**验证状态**: VERIFIED — expert_audit_override (user 2026-09-06: Gulati 系论文蒸馏单源即 VERIFIED; paper_count=1)
+**写入日期**: 2026-09-06
+**槽位**: R7
+**骨架**:
+> We also tested [polynomial transformations] of the [focal predictors] to account for nonlinear effects. The results suggest that the relationship between [predictor 1] and [DV] is best described as an [inverted U-shape] relationship, captured by a [second-order polynomial] function. The effect, however, is [exponential] for [predictor 2]: as [predictor 2] increases, the likelihood of [DV] increases disproportionately. The inclusion of the [functional form] transformations does not affect the results obtained with the [baseline form]. We report the results of the [baseline form] for the sake of parsimony.
+**与原骨架差异**: 功能形式威胁的脚注级三拍——(1) 检验动作（[polynomial transformations]）并对各焦点预测子给出差异化曲线发现（一个 [inverted U-shape]、一个 [exponential]/disproportionate，而非笼统"非线性"），(2) 不变性拍（"does not affect the results obtained with the [baseline form]"），(3) 简约保留裁决（"We report the results of the [baseline form] for the sake of parsimony"）——发现非线性但不切换主设定，把裁决与理由同时交给读者。
+**禁忌**: 曲线发现若实质改变解释（inverted U 意味着效应变号）不得只留脚注，应进正文并改主设定；简约保留裁决必须以不变性拍为前提；脚注披露须完整到可复现（测量定义/公式/指数形式），不得只报"不显著"；venue caveat：AJS 1999 把稳健性放脚注是期刊惯例，现代目标期刊应升级为专节——骨架可平移，容器需升级。
+**区别于**: 变体 9（Binary-GEE 曲线完整检验链——二次项→端点斜率→Fieller 区间作主分析）；变体 11（曲线六威胁稳健性梯）；本变体是把曲线检验降为脚注披露+简约保留裁决的紧凑型，适用于理论以线性为主、非线性仅作敏感性检查的设计。
+
+<!-- wb:gulati_1999_where_do_interorganizational_networks:r7_curvilinear_footnote_parsimony_retention -->
 <!--
 pattern_id: switching_reg_first_stage_intermediate_navigation
 estimator_family: switching regression / endogenous switching（mlogit 第一阶段 + 分组 OLS 第二阶段）
@@ -571,7 +853,7 @@ source_papers: ["gulati2005-adaptation-vertical"]
 confidence: EMERGING（单篇 full_text_verified，待第二篇交叉验证）
 -->
 
-### 变体 U：内生转换回归第一阶段选择模型——"中间步骤导航 + 自有价值旁注"报告节奏（Intermediate-Step Navigation with Own-Merit Aside）
+### 变体 AN：内生转换回归第一阶段选择模型——"中间步骤导航 + 自有价值旁注"报告节奏（Intermediate-Step Navigation with Own-Merit Aside）
 
 **适用场景**: 两阶段选择修正估计器（内生转换回归 / Heckman 型 / 控制函数）的第一阶段选择模型（mlogit/logit/probit）不直接检验假设，但读者需要一套交底规则才能读表：两步骤预告、IV 排他声明、基线类解释规则、IV 相关性与分阶段样本损耗——之后用"自有价值旁注"把第一阶段的有趣结构（往往是机制旁证）与主流程明确区隔。
 
