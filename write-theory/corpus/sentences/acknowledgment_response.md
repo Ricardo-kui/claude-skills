@@ -6,6 +6,7 @@ source: Booth et al. 2024 The Craft of Research Ch9 (Acknowledgments and Respons
 confidence: high (句式逐字源自 Booth；Rogerian 序列源自 G&L；管理实证适配为本库添加)
 status: EMERGING
 -->
+> 论证角色：**A&R**——承认与回应材料（何时承认由 reasoning_soundness_protocol §4 决定，本文件管怎么写）；填位规则见 `_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
 
 # 承认与回应句语料库（Acknowledgment & Response）
 

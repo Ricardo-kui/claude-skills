@@ -1,7 +1,7 @@
 ---
 type: canonical_hook
 canonical_id: "15-extreme-situation"
-status: EMERGING
+status: VERIFIED
 gap_strength: 中/高
 gap_type: Inadequacy / Incommensurability
 cross_paper: SINGLE-INSTANCE

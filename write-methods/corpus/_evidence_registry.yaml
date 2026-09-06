@@ -1,8 +1,9 @@
 meta:
-  last_updated: '2026-09-06c'
+  last_updated: '2026-09-06d'
   total_design_types: 23
   batches_processed: 24
   last_batch: batch_41_gulati_ajs1999 + batch_37_gulati2007_residual_sync
+  latest_batch_note: '2026-09-06f 残余复核：非线性模型 变体 5/6（Pfarrer, Pollock & Rindova 2010）正文验证状态 2 条翻转（速查表行已翻转）；定性过程研究.md 主骨架注记同步（变体 6 Haunschild 仍 EMERGING）。2026-09-06d 用户升级裁定（expert_audit_override 全量生效）：Pollock/Westphal/Gulati 系论文的methods 蒸馏单源即 VERIFIED。registry：by_source_paper westphal_bednar_2005_asq、gulati_westphal_1999 EMERGING→VERIFIED；by_design_type 定性过程研究 EMERGING→VERIFIED、common-method-bias-prevention 补 status: VERIFIED。语料 .md 随动（74 处）：INDEX.md 变体 6/7/8/12/13(gulati2005)、5/8/9(网络效应)、2/3(多行为者)、85-88(gulati_2007) 行；micro-templates/INDEX.md 变体 B/C/D/E 行；面板数据-OLS（Pfarrer 变体 11/74-77、Higgins&Gulati 变体 80-84、Gulati&Sytch 变体 85-88、ZW2004 交叉引用）；事件历史+事件研究（Gulati-Lavie-Singh 变体 6、Pfarrer 变体 5、zajac_westphal_2004 全部 7 个 pattern 块含 250 行旧注修正）；动态面板-GMM/同时方程（Pollock 2015 全部行+验证状态）；多行为者设计变体 2；定性过程研究变体 1-5（含交叉表与诚实边界注）；实证对象构建变体 1/4/7/8/10；文本构念测量变体 20/21；非线性模型变体 5/6/22；两阶段模型变体 12/13；同伴效应-网络效应变体 4/8/9 与 M3 表行；manual-coding-validation 变体 C。前批：batch_41_gulati_ajs1999 + batch_37_gulati2007_residual_sync'
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
     granularity: per design_type（对应 corpus/[设计类型].md 文件）
@@ -33,8 +34,8 @@ evidence:
     westphal_bednar_2005_asq:
       journal: Administrative Science Quarterly
       title: Pluralistic Ignorance in Corporate Boards and Firms' Strategic Persistence in Response to Low Firm Performance
-      status: EMERGING
-      verification_basis: "user_designation (2026-08-29: 用户点名 Westphal 为最喜爱学者——提升学习优先级；轻量蒸馏，证据等级保持 EMERGING)"
+      status: VERIFIED
+      verification_basis: "user_designation (2026-09-06: 用户升级裁定——Westphal 系单源即 VERIFIED；覆盖 2026-08-29 轻量蒸馏裁决，methods 槽位证据一并生效)"
       design_types:
       - 调查-组级聚合
       slots_covered:
@@ -416,7 +417,7 @@ evidence:
     gulati_westphal_1999_cooperative_or_controlling:
       journal: Administrative Science Quarterly
       title: Cooperative or Controlling? The Effects of CEO-Board Relations and the Content of Interlocks on the Formation of Joint Ventures
-      status: EMERGING
+      status: VERIFIED
       verification_basis: "user_designation (2026-09-06: 用户点名 Gulati 为最喜爱学者——Gulati 系单源升 VERIFIED；methods 带按库惯例记录于此，槽位证据等级随 design_type 行)"
       design_types:
       - 非线性模型
@@ -625,7 +626,7 @@ evidence:
       - keeves2017 (ASQ)
       papers:
       - lashley_pollock2020 (ASQ)
-      status: EMERGING
+      status: VERIFIED
       slots_covered:
       - Q1
       - Q2
@@ -851,6 +852,7 @@ evidence:
       paper_count: 1
       papers:
       - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int (ASQ)
+      status: VERIFIED
     两阶段模型:
       paper_count: 8
       papers:

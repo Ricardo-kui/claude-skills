@@ -1,8 +1,8 @@
 meta:
-  last_updated: '2026-09-06c'
+  last_updated: '2026-09-06d'
   total_mvp30_papers_indexed: 62
   batches_processed: 35
-  latest_batch_note: '2026-09-06b Gulati 1999 (AJS, Where Do Interorganizational Networks Come From?; citekey gulati_1999_where_do_interorganizational_networks) 残项同步：新建 contributions/metatheory-anchored-contribution（经典二重性接驳贡献声明）registry 行（模块文件与 _index 已由写回器落盘），gap=Inadequacy，VERIFIED per expert_audit_override（Gulati 系单源即 VERIFIED）；另有 hooks/05 ADD、tensions/01 ADD、previews/mechanism-preview ADD 已由写回器自动同步，2 SKIP 手工改判。前批：2026-09-06 Gulati & Westphal 1999 (ASQ, Cooperative or Controlling; citekey gulati_westphal_1999_cooperative_or_controlling) 残项同步：新建 hooks/27-theory-testbed-arena（理论试验场致意 Hook）与 stakes/10-irreversible-commitment-stakes（不可逆承诺放大 Stakes）registry 行（模块文件与 _index 已由写回器落盘），gap=Inadequacy，全 VERIFIED per expert_audit_override（Gulati 系单源即 VERIFIED）；另有 tensions/01 EXTEND 与 previews/mechanism-preview EXTEND 已由写回器自动同步。前批：2026-08-28 Wowak, Ball, Post & Ketchen 2021 M&SOM (The Influence of Female Directors on Product Recall Decisions;
+  latest_batch_note: '2026-09-06f 残余复核：theory-lens/_index.md 行注 1 条翻转（02-dual-theory-layered 变体 E gulati2005 EMERGING→VERIFIED）。2026-09-06e 补扫 _index.md 行注 10 条：findings-preview 变体V（gulati2005）/ theory-lens-driven-preview 变体R（pfarrer2010）+变体S（gulati1998）/ theory-lens/10 变体B（gulati1998）/ transitions/10 变体F（gulati_sytch2007）/ gap-to-contribution 变体G（pfarrer2010）/ tensions/01 变体AI（westphalzajac1995）+变体AP（gulati1998）+变体AU（higgins_gulati2003）+变体AV（gulati2005）EMERGING→VERIFIED（expert_audit_override 2026-09-06）。2026-09-06d 用户升级裁定（expert_audit_override 全量生效）：Pollock/Westphal/Gulati 系论文的蒸馏条目单源即 VERIFIED；本 registry evidence 区 7 条 EMERGING→VERIFIED（01-cross-disciplinary-analogy、13-rhetorical-question、15-extreme-situation、17-debate-reframing、20-counterintuitive-finding、dv-methodology-defense、09-construct-contrast-introduction）。前批：2026-09-06b Gulati 1999 (AJS, Where Do Interorganizational Networks Come From?; citekey gulati_1999_where_do_interorganizational_networks) 残项同步：新建 contributions/metatheory-anchored-contribution（经典二重性接驳贡献声明）registry 行（模块文件与 _index 已由写回器落盘），gap=Inadequacy，VERIFIED per expert_audit_override（Gulati 系单源即 VERIFIED）；另有 hooks/05 ADD、tensions/01 ADD、previews/mechanism-preview ADD 已由写回器自动同步，2 SKIP 手工改判。前批：2026-09-06 Gulati & Westphal 1999 (ASQ, Cooperative or Controlling; citekey gulati_westphal_1999_cooperative_or_controlling) 残项同步：新建 hooks/27-theory-testbed-arena（理论试验场致意 Hook）与 stakes/10-irreversible-commitment-stakes（不可逆承诺放大 Stakes）registry 行（模块文件与 _index 已由写回器落盘），gap=Inadequacy，全 VERIFIED per expert_audit_override（Gulati 系单源即 VERIFIED）；另有 tensions/01 EXTEND 与 previews/mechanism-preview EXTEND 已由写回器自动同步。前批：2026-08-28 Wowak, Ball, Post & Ketchen 2021 M&SOM (The Influence of Female Directors on Product Recall Decisions;
     citekey wowak_2020_female_directors_recalls): ADD hook 11-institutional-anecdote 变体 (legislative-mandate escalation 事实开场),
     tension 01-AL (邻域盲区+合理外推桥接), transitions/10 变体 E (零文献+轶事证据桥接过渡), previews/theory-lens-driven-preview 变体 Q (误读防御型权变预告),
     previews/robustness-preview 变体 I (三重识别+竞争层级排除预览). Gap=Incompleteness. 全部 VERIFIED per expert_audit_override (用户 2026-08-28:
@@ -48,7 +48,7 @@ evidence:
         Incompleteness: 3
         Inadequacy: 0
         Incommensurability: 0
-      status: EMERGING
+      status: VERIFIED
       generativity: ADAPTABLE
       exclusivity: MEDIUM
       common_failures: []
@@ -348,7 +348,7 @@ evidence:
         Incompleteness: 0
         Inadequacy: 2
         Incommensurability: 0
-      status: EMERGING
+      status: VERIFIED
       generativity: ADAPTABLE
       exclusivity: LOW
       common_failures: []
@@ -440,7 +440,7 @@ evidence:
         Incompleteness: 0
         Inadequacy: 1
         Incommensurability: 0
-      status: EMERGING
+      status: VERIFIED
       generativity: GENERATIVE
       exclusivity: HIGH
       common_failures: []
@@ -496,7 +496,7 @@ evidence:
         Incompleteness: 1
         Inadequacy: 0
         Incommensurability: 1
-      status: EMERGING
+      status: VERIFIED
       generativity: ADAPTABLE
       exclusivity: HIGH
       common_failures: []
@@ -550,7 +550,7 @@ evidence:
         Incompleteness: 0
         Inadequacy: 1
         Incommensurability: 0
-      status: EMERGING
+      status: VERIFIED
       generativity: GENERATIVE
       exclusivity: HIGH
       common_failures: []
@@ -1604,7 +1604,7 @@ evidence:
       paper_count: 1
       papers:
       - pfarrer2010 (AMJ)
-      status: EMERGING
+      status: VERIFIED
       generativity: ADAPTABLE
       exclusivity: MEDIUM
       common_failures: []
@@ -1896,7 +1896,7 @@ evidence:
         Incompleteness: 1
         Inadequacy: 1
         Incommensurability: 0
-      status: EMERGING
+      status: VERIFIED
       generativity: GENERATIVE
       exclusivity: HIGH
       common_failures: []

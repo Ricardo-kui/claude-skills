@@ -9,6 +9,7 @@ status: EMERGING
 risk_level: needs-context
 created: 2026-07-28
 ---
+> 论证角色：**Claim**——中心论点定位模型；填位规则见 `_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
 
 # Thesis Models：中心论点的四种定位模型（G&L Ch06 收割）
 

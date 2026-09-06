@@ -24,6 +24,7 @@
 | Burying the lead | 最小必要背景后仍未出现核心判断？→ 尽早重写为"主语+主动动词+方向/机制" |
 | Sentence stuffing | 一句承担多个独立 claim、插入语遮蔽主干，或一段混入多个主导任务？→ 按理论动作拆分，不按固定词数机械切分 |
 | Read my mind | why chain 是否从 A 直接跳到 C，缺少 B 的中间步骤或 transition？→ 补充每个因果步骤，添加 explicit transition |
+| Corpus mosaic（语料拼贴） | 段落是否由语料句式顺序堆成——五问（claim/reason/evidence/warrant/A&R）无句位可指认，或命中证据孤儿 / warrant 悬空 / 引用列队？→ 按论证角色序列重组（句子保留、骨架重排），判据见 `../../story-blueprints/v4/rhetoric-moves/_argument-grammar.md` |
 
 #### 审计 2: Construct Clarity（4 字段）
 

@@ -128,7 +128,7 @@ that has dominated prior research. Thus:"
 
 ### 变体 D：并行多中介逐项部分中介链（gulati_2007 型）
 
-**band**: 薄弱（本变体单源 EMERGING；近族 Bamberger 并行中介效应分解 EMERGING、Malshe 单 H 双中介为单源句式级——三族均待第二源）
+**band**: 常规（本变体单源，已按 expert_audit_override 升 VERIFIED — user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED；近族 Bamberger 并行中介效应分解 EMERGING、Malshe 单 H 双中介为单源句式级——后两族仍待第二源）
 
 **适用场景**: 单一 X 对 DV 有一个总主效应（先行假设化为 H_main），且 X 的效应经由 N 个（典型 2-4 个）概念独立、同向的并行中介传导；每个中介值得一条独立的部分中介假设，但不需要效应分解或时间窗比较。
 
@@ -169,7 +169,7 @@ H[k]: [Mk] will partially mediate the effects of [X] on [DV].
 
 **风险**: 每个中介小节的 X→M 与 M→Y 两段都必须有独立理论依据；任一中介的 M→Y 论证单薄会连累"为什么恰好这几个中介"的整体合法性（三中介的外部分类学锚定是本型的关键防御）。H_main 先行是协议映射的前提，不可省略。
 
-**验证状态**: EMERGING（单篇来源，待第二篇交叉验证）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 
 <!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:v_b_mechanism_per_mediator_partial_mediation_chain -->
 

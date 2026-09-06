@@ -18,6 +18,7 @@ created: 2026-05-18
 updated: 2026-08-03
 source: Extracted from MVP30 narrative_analysis files
 ---
+> 论证角色：**Evidence**——发现锚定从句模板（变体 D：finding with direction）；填位规则见 `_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
 
 # Literature Turn — 从 Hook 到学术对话的过渡句法
 

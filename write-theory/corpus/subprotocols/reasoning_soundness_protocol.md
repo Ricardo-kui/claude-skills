@@ -98,6 +98,8 @@
    - 虽无法全盘接受 claim，但论证提供了重要洞见与未来答案的线索
    **位置规则**：可修复的异议就地处置（Theory 内，句式见 `../sentences/acknowledgment_response.md`）；不可修复的承认放 Discussion limitations（该处语料归 write-discussion，本协议不展开）。承认不是削弱论证，是可信度建设——experienced researchers 的目标是推进社群对话，不是终结对话。
 
+**证据侧攻击向量（Booth Ch09 §9.2）**：上方六类 warrant 挑战模拟的是**推理侧**对手（"这一步推不出"）；对 [E] 前提密集的推导段，压力测试追加至少 1 条**证据侧**质问（八问见 §9）——它攻击的是前提本身站不站得住（"这个证据可信吗"）。
+
 **反模式**：
 - 把压力测试答出的条件**藏起来不写**——审稿人会替你发现，且以 "theory is under-specified" 的形式
 - 对每个步骤都补 scope condition → 推导变成条件清单，失去主线；只为**最弱前提所在的步骤**和**反直觉步骤**做测试即可
@@ -117,7 +119,7 @@
 
 **隐去纪律（反向）**：明言本该显而易见的 warrant 是居高临下，暴露你不是真专家（"What you don't say says who you are" — Booth）。面向本领域专家时，§1 标注出的 [S] 前提若读者会视同常识，**不在正文写出**——Soundness Card 上标注"隐去"即可。
 
-**硬证据规则（Booth Ch8 Quick Tip）**：**不能用 warrant + reason 单独支撑 claim of fact**（"In particular, you can't support a claim of fact with a warrant and reason alone."）。对应本协议：[E] 类前提的防守必须是**经验证据**，禁止用 [S] 类规定顶替——"X 是 Y 的主要原因"这类事实断言，写 "because [theoretical principle]" 不算防守，必须有数据/文献 finding。研究者对 hard evidence 的信任永远高于 elaborate warrant 推理。
+**硬证据规则（Booth Ch8 Quick Tip）**：**不能用 warrant + reason 单独支撑 claim of fact**（"In particular, you can't support a claim of fact with a warrant and reason alone."）。对应本协议：[E] 类前提的防守必须是**经验证据**，禁止用 [S] 类规定顶替——"X 是 Y 的主要原因"这类事实断言，写 "because [theoretical principle]" 不算防守，必须有数据/文献 finding。研究者对 hard evidence 的信任永远高于 elaborate warrant 推理。证据**质量本身**（不只匹配性）的五检验见 §9。
 
 ---
 
@@ -131,6 +133,7 @@ H[X] Soundness Card
 ├─ 最弱前提: [引用该句] → 防守句: [已写(过五测试) / 已降级 claim / 已转显式假设]
 ├─ 必要性门控: Q1 ✓/✗ · Q2 ✓/✗ · Q3 ✓/✗ → 处置: [保留 / 补可区分预测 / 删除]
 ├─ 反例测试: 步骤 [k] 条件 "[condition]" → 处置: [scope / 新假设 / 删除 / 承认不回应]
+├─ 证据五检验(§9): 承重 [E]×n → ✓/✗ 带处置 ；证据侧质问 ≥1: [补证据 / 降档 / 承认局限]
 └─ Warrant 表达: [隐去(读者视为常识) / 明言(场合①②③)] ；[E] 前提均有硬证据: ✓/✗
 ```
 
@@ -169,10 +172,30 @@ Phase 4 审计时的快速扫描清单。G&L 的 15 条 fallacy 中，大多数�
 
 ---
 
+## 9. 证据质量五检验（Evidence Quality Tests，Booth Ch07）
+
+§1 的 [E] 前提检查只管**证据-论点匹配**（情境/层次/测度对不对得上）；本节管**证据本身的质量**——审稿人常绕过匹配问题，直接问"这个证据可信吗"。对最弱环节标记（§2）为最弱/次弱的 [E] 前提，以及支撑关键机制推理的 [E] 前提，逐条过五检验：
+
+| # | 检验 | 判定要点 | 不合格信号 |
+|---|------|---------|-----------|
+| 1 | **Accurate** | 转述与原始发现一致、可复现 | 二手转述失真；多处数字对不上 |
+| 2 | **Appropriately precise** | 精确度达本领域容差 | some/most/many 类 fudge 词顶替效应方向/量级 |
+| 3 | **Sufficient & representative** | 证据量足且非挑选 | 单研究独撑强前提且未标注；cherry-picking——只引支持性发现、隐掉 mixed 证据。这是对诚实性的指控，**最致命** |
+| 4 | **Authoritative** | 由同行评议与共同体地位裁定 | 不相关领域或未经同行评议的来源承担关键前提 |
+| 5 | **Clear** | 呈现后必有解释句 | 引文/数据 self-speaking——摆出后无解释句（相关性问题由 §2 覆盖测试承担，不在此重复） |
+
+**不过检的处置（三选一）**：补更强证据（登记为证据缺口）/ 降档主张强度（措辞降到证据可支撑档）/ 显式承认局限（三姿态见 [`../sentences/acknowledgment_response.md`](../sentences/acknowledgment_response.md) §2.3）。含 mixed evidence 的 [E] 前提按 §1 规则转化为 puzzle，不得充当单向支撑。
+
+**证据侧对手模拟（并入 §4 压力测试）**：对 [E] 前提密集的推导段，压力测试追加至少 1 条证据侧质问（Booth Ch09 §9.2）：*证据类型不对我们的领域（要数字却给轶事，或反之）／证据过时／不准确／不精确（"many" 是多少？）／不充分或不具代表性（没覆盖 [组群]）／不权威／看不懂／这与本论证何干？* 处置同上三选一。
+
+**完成判据**：Soundness Card（§6）"证据五检验"行已填——承重 [E] 前提逐条 ✓/✗ 带处置；压力测试记录含 ≥1 条证据侧质问。
+
+---
+
 ## 与相邻文件的关系
 
 - [`hypothesis_derivation_patterns.md`](hypothesis_derivation_patterns.md)：validity 层（形式有效的动作序列），本文件是其 soundness 镜像
 - [`../sentences/mechanism_chain.md`](../sentences/mechanism_chain.md)：替代机制排除的**句法**（事后书写），本文件 §3 是门控（事前取舍）
 - [`../sentences/acknowledgment_response.md`](../sentences/acknowledgment_response.md)：本协议 §4 处置 4（承认但不回应；三姿态句式见该文件 §2.3）与就地回应异议的**句式库**——四类异议 × 承认/回应标记词 × 位置安排
-- [`evidence_patterns.md`](evidence_patterns.md)：Warrant 的证据类型与引用句式；本文件 §1 决定该前提**该不该用、用什么类型防守**
+- [`evidence_patterns.md`](evidence_patterns.md)：Warrant 的证据类型与引用句式；本文件 §1 决定该前提**该不该用、用什么类型防守**，§9 管证据质量本身过不过关
 - [`../../../diagnose-introduction/references/golden-biddle-locke-four-moves.md`](../../../diagnose-introduction/references/golden-biddle-locke-four-moves.md) §Outer Limits：攻击文献的诚实纪律；本文件 §3–4 是建设自己的同一纪律

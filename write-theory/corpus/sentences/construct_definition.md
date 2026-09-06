@@ -1,4 +1,5 @@
 # 构念界定句语料库
+> 论证角色：**[D] 定义前提**——构念界定材料（新构念五步：definition+scope+lineage+adjacent differentiation+justification）；填位规则见 `_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
 
 ## 变体 A：承认多元定义，明确采纳（最常用）
 

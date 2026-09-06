@@ -663,7 +663,7 @@ Based on similar theoretical reasoning, we now explore how the [k] [actor] chara
 
 **注意事项**:
 - 压缩过度时双边论证会变薄（C20）；每条交互至少要有方向句，不能只写"similar reasoning"然后列假设。
-- 单篇 EMERGING：未验证前不要作为 write-theory 默认路由。
+- 单篇，已按 expert_audit_override 升 VERIFIED（user 2026-09-06：Westphal 系单源即 VERIFIED）；可作为 write-theory 默认路由。
 
 **反模式**:
 - 把双角色写成假设树（每个 W 一个子树）。
@@ -1037,7 +1037,7 @@ story_fidelity: section_variant
 pattern_id: typology_decomposed_parallel_signal_hypotheses_coverage
 build_type: 机制推演型（构念分解组织）；跨类型（任何"一构念分N类→每类一主效应"设计）
 source_papers: ["higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"]
-confidence: low-medium（单篇来源，EMERGING 待第二篇交叉验证）
+confidence: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 -->
 
 ### 变体 G：类型学分解 → 并行信号假设 → 覆盖范围假设（Typology-Decomposed Parallel Signal Hypotheses → Coverage Hypothesis）

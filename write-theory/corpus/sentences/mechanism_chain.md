@@ -1,4 +1,5 @@
 # 机制推演句语料库
+> 论证角色：**Reason**——推理 move 材料（一个 move=一次可质疑的推理转换；引用是 move 的证据，不替代 move）；填位规则见 `_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
 
 > **导航 TOC**（本文件 1800+ 行 / 43 节，按需跳转，不要线性通读）。按机制结构类型分组；括注为锚定范文。
 
@@ -1091,7 +1092,7 @@ sentence_position: why_chain_reasoning
 pattern_id: s_mechanism_chain_availability_contrast_and_hybrid_approximation
 build_type: 跨类型（句式级，机制可得性对比）
 source_papers: ["gulati2005-adaptation-vertical"]
-confidence: EMERGING（单篇，待第二篇交叉验证）
+confidence: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 sentence_position: why_chain_transition / reasoning token
 -->
 
@@ -2082,7 +2083,7 @@ mechanism 3]... Taken together, [converging main-effect prediction].
 
 **原文锚点**: "The implications of joint dependence for the performance of a manufacturer's procurement relationships contrast significantly with those of the logic of power, which focuses exclusively on actors' abilities to appropriate value in exchange relationships."
 
-**验证状态**: EMERGING（单篇来源；近族"双视角对比+框架整合" singh_grewal2023 亦单源——但句位不同：本变体是块间枢转句，非 T2 开篇整合段）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED；近族"双视角对比+框架整合" singh_grewal2023 亦单源——但句位不同：本变体是块间枢转句，非 T2 开篇整合段）
 
 <!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:s_mechanism_chain_logic_contrast_pivot -->
 

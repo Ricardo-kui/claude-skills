@@ -82,8 +82,8 @@ updated: 2026-08-13
 | 23 | P25→P75 四分位距翻译 | 主效应行文经济显著性（副槽位 R5） | vs 变体3 表格版；vs 变体13 交互联合（决策对5） | EMERGING | Chung 2022 JAMS |
 | 27 | 多阶段管道衰减 profile | 同 IV 跨序贯决策阶段的方向/显著性对比+跨阶段对比句（副槽位 R9 收束） | 单研究管道 vs 多研究 cross-study；配套 Methods 多研究变体6 | EMERGING | Kim & Lee 2026 SMJ |
 | 34 | 2×2 类型学对角比较 | 回归前非参数类型对比作开场 | vs 变体22 四分位单调性（连续版，决策对3） | EMERGING | Du & Tsolmon 2024 OS |
-| 35 | ρ 持久性百分比解释 | 动态面板 ρ→「% persists in t」+跨构念对比（副槽位 R5） | 动态面板-GMM 专用；vs 变体23 截面四分位 | EMERGING | Pollock 2015 ASQ |
-| 36 | 分样本 Wald χ² + partial support | 跨阈值 χ²(1) 系数相等性+诚实判定 H 支持（副槽位 R6） | vs 变体43 组间差异裁决（决策对6）；vs 变体8 交互条件化 | EMERGING | Pollock 2015 ASQ |
+| 35 | ρ 持久性百分比解释 | 动态面板 ρ→「% persists in t」+跨构念对比（副槽位 R5） | 动态面板-GMM 专用；vs 变体23 截面四分位 | VERIFIED | Pollock 2015 ASQ |
+| 36 | 分样本 Wald χ² + partial support | 跨阈值 χ²(1) 系数相等性+诚实判定 H 支持（副槽位 R6） | vs 变体43 组间差异裁决（决策对6）；vs 变体8 交互条件化 | VERIFIED | Pollock 2015 ASQ |
 | 41 | 三条件中介+非对称支持 | 跨方程系数乘积+Sobel 三条件中介（同时方程系统） | vs 变体5 MCMC 中介（决策对4）；失败根因定位到条件 | EMERGING | Malshe 2015 JM |
 | 48 | 共线吸收解释 | 全模型交互显著性下降归因调节间高相关（Cortina） | vs 变体16 序列导航（只描述不解释）；配套变体53 | EMERGING | DesJardine 2025 AMJ |
 | 57 | 测量覆盖范围 warrant「学习」 | a-path 显著后用测量覆盖范围主张学习而非仅修复 | vs 变体41 检验中介是否成立 | VERIFIED | Kalaignanam 2013 JM |
@@ -120,7 +120,7 @@ updated: 2026-08-13
 | 4 | 小样本/非显著诚实声明 | 任何非显著结果的通用收尾 | 通用兜底 vs 变体37 功效量化（理论关键 null 专用） | VERIFIED | Darby2023 MSOM |
 | 6 | 符号反转+当场理论解释 | 同 IV 跨条件/阶段方向相反，定位为 boundary condition | **当场解释** vs 变体42 **延迟解释**；补变体4 未覆盖的反转报告 | EMERGING | Zhao/Ding/Gaba OS |
 | 30 | 预测性 null 作机制证据 | 理论预测的 null 排除替代解释（副槽位 R8） | vs 变体37 功效分析；vs 变体25 证伪 | EMERGING | Du & Tsolmon 2024 OS |
-| 37 | Monte Carlo 功效分析 | 理论关键 null 交互的功效量化（排除 Type II） | vs 变体4 通用诚实声明；vs 变体30 预测性 null | EMERGING | Pollock 2015 ASQ |
+| 37 | Monte Carlo 功效分析 | 理论关键 null 交互的功效量化（排除 Type II） | vs 变体4 通用诚实声明；vs 变体30 预测性 null | VERIFIED | Pollock 2015 ASQ |
 | 42 | 反直觉反转+延迟 Discussion | 预测方向反转当场承认+推迟事后解释 | vs 变体6 当场解释；vs 变体30 预测性 null | EMERGING | Malshe 2015 JM |
 | 60 | 调节变量主效应 null 驳斥 rival conjecture | 非假设 null 的可审计写法 | vs 变体30 预测性机制 null | VERIFIED | Kalaignanam 2013 JM |
 
@@ -137,7 +137,7 @@ updated: 2026-08-13
 | 26 | 内生性 threat-by-threat 表叙事 | DWH+copula 等内生性检验表汇总叙事 | vs 变体15 五威胁（遗漏变量为主）；vs 变体29 选择偏误防御 | EMERGING | Chung 2022 JAMS |
 | 29 | 选择偏误三步防御 | 描述性→CEM→Heckman 递进防御+关联收尾 | 递进深度 vs 变体24 导航 vs 变体26 内生性表（决策对7） | EMERGING | Du & Tsolmon 2024 OS |
 | 31 | 替代解释三连驳斥 | 多个替代解释逐一排除+异质性模式裁决收束 | vs 变体25 单一 DV 证伪；vs 变体44 构念效度三角 | EMERGING | Du & Tsolmon 2024 OS |
-| 39 | 替代估计器+LDV 偏误警示 | 3SLS 稳健性+用替代估计器失败**反向佐证**主估计器 | 反向佐证 vs 变体2/15 正向稳健性 | EMERGING | Pollock 2015 ASQ |
+| 39 | 替代估计器+LDV 偏误警示 | 3SLS 稳健性+用替代估计器失败**反向佐证**主估计器 | 反向佐证 vs 变体2/15 正向稳健性 | VERIFIED | Pollock 2015 ASQ |
 | 46 | Cinelli–Hazlett 敏感性 | 强观测协变量倍数基准的 confounder 强度论证 | vs 变体15 RIR+Oster（参数化）；corpus 首命中 Cinelli | EMERGING | Kim & Lee 2026 SMJ |
 | 49 | ITCV 省略变量阈值 | 双重相关阈值+impact 阈值+最强控制对比（Frank 2000） | vs 变体46 Cinelli 倍数基准；vs 变体15 RIR+Oster | EMERGING | DesJardine 2025 AMJ |
 | 50 | 双基准化偏离检验 | 构造"评级−外部基准"差变量，前门基准无关+后门差变量被影响 | vs 变体25 替代 DV 证伪（单 DV）；vs 变体7 同向复制 | EMERGING | DesJardine 2025 AMJ |
@@ -152,7 +152,7 @@ updated: 2026-08-13
 | 5 | MCMC 显式中介 | 中介机制的显式贝叶斯检验 | vs 变体41 同时方程三条件中介（决策对4）；vs 变体7/25 DV 证伪 | VERIFIED | Darby2023 MSOM |
 | 21 | post-hoc 枚举清单 | 事后分析清单化+附录引用 | vs 变体33 完整展演；vs 变体12 跨样本复制 | EMERGING（可选） | Cui SMJ |
 | 33 | 下游绩效 post hoc | 时间增长+多指标收敛+提示性收尾 | vs 变体21 清单；vs 变体12 复制；vs 变体5 MCMC | EMERGING | Du & Tsolmon 2024 OS |
-| 38 | post-hoc spline 重解释 | 意外负效应用 spline+递减理论重解释（明标 post-hoc） | vs 变体42 延迟到 Discussion；vs 变体6 当场解释 | EMERGING | Pollock 2015 ASQ |
+| 38 | post-hoc spline 重解释 | 意外负效应用 spline+递减理论重解释（明标 post-hoc） | vs 变体42 延迟到 Discussion；vs 变体6 当场解释 | VERIFIED | Pollock 2015 ASQ |
 | 44 | 构念效度威胁三角验证 | 按 rival interpretation 组织三类效度威胁（nomological+跨情境+时序） | vs 变体31 替代解释；vs 变体15 稳健性电池 | EMERGING | Schumacher 2020 SMJ |
 | 52 | 机制异质性分解（Bushee 类型） | 既有分类把动机/能力操作化为亚型+系数对比+Wald 检验 | vs 变体44 效度三角（多指标收敛）；vs 变体31 替代解释 | EMERGING | DesJardine 2025 AMJ |
 | 56 | 二元策略完全中介 + 市场信号（legacy Kenny） | firm chars→策略选择 probit + 策略→AR 显著 + firm→AR 直接路径消失 → complete mediation + 信号收束 | vs 变体41 Sobel/乘积；vs 变体5 MCMC；**必须标 legacy**（决策对4） | VERIFIED | Chen, Ganesan & Liu 2009 (JM); source=chenganesanliu2009 |
@@ -340,7 +340,7 @@ updated: 2026-08-13
 pattern_id: heckman_selection_preflight_rationale
 build_type: 估计器前置交底型（修正型估计器动机论证）；跨估计器（任何 selection/内生性修正作为主估计策略的设计）
 source_papers: ["higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"]
-confidence: low-medium（单篇来源，EMERGING 待第二篇交叉验证；结构模板锚定 R7-2 叙事 threat 四拍 VERIFIED）
+confidence: low-medium（单篇来源，VERIFIED — expert_audit_override 2026-09-06；结构模板锚定 R7-2 叙事 threat 四拍 VERIFIED）
 -->
 
 ### 变体 76：R2 Heckman 选择模型前置交底 — 威胁类比 + 两阶段程序 + 风险集/SE 修正披露 (1篇高价值)
@@ -481,7 +481,7 @@ especially when [moderator condition].
 pattern_id: hypothesis_verdict_chain_null_concession
 build_type: 假设判决导航型（逐假设段落组织）；跨估计器（层次回归/选择模型等多模型多假设设计通用）
 source_papers: ["higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"]
-confidence: low-medium（单篇来源，EMERGING 待第二篇交叉验证；结构模板锚定 R3 四拍主骨架——本变体管判决的段落编排，幅度拍须按主骨架补齐）
+confidence: low-medium（单篇来源，VERIFIED — expert_audit_override 2026-09-06；结构模板锚定 R3 四拍主骨架——本变体管判决的段落编排，幅度拍须按主骨架补齐）
 -->
 
 
@@ -489,7 +489,7 @@ confidence: low-medium（单篇来源，EMERGING 待第二篇交叉验证；结�
 pattern_id: bk_sobel_partial_mediation_cross_dv_replay
 build_type: 假设化中介展演型（中介是正式假设 H 的检验而非 post hoc 机制探索）；多 DV 复制设计
 source_papers: ["higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"]
-confidence: low-medium（单篇来源，EMERGING 待第二篇交叉验证；结构模板锚定变体 58 confirmatory 部分中介堆叠确认 VERIFIED）
+confidence: low-medium（单篇来源，VERIFIED — expert_audit_override 2026-09-06；结构模板锚定变体 58 confirmatory 部分中介堆叠确认 VERIFIED）
 -->
 
 
@@ -497,7 +497,7 @@ confidence: low-medium（单篇来源，EMERGING 待第二篇交叉验证；结�
 pattern_id: theory_motivated_additional_analyses
 build_type: 理论驱动补充分析组织型（非 threat 响应的 post hoc 分析编排）；跨估计器通用
 source_papers: ["higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"]
-confidence: low-medium（单篇来源，EMERGING 待第二篇交叉验证；结构模板锚定 R7-2 叙事四拍 VERIFIED——threat 定位拍替换为理论动机定位拍）
+confidence: low-medium（单篇来源，VERIFIED — expert_audit_override 2026-09-06；结构模板锚定 R7-2 叙事四拍 VERIFIED——threat 定位拍替换为理论动机定位拍）
 -->
 
 
@@ -506,7 +506,7 @@ pattern_id: r6_unsupported_verdict_with_pattern_restatement
 estimator_family: OLS/FE 及分组比较设计通用（R6 非显著处理）
 slot: R6（不支持裁决 + 以假设语言重述实际模式）
 source_papers: ["gulati2005-adaptation-vertical"]
-confidence: EMERGING（单篇 full_text_verified，待第二篇交叉验证）
+confidence: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 -->
 
 
@@ -528,13 +528,13 @@ relationship but found no evidence of it.
 
 **为什么有效**: 一句话同时交付两种失败模式（反号 vs null），判决密度极高；"Contrary to our expectations" 让反号发现的意外性成为信息而非尴尬；"Hence ... not supported" 把两个假设合并收束，避免逐假设重复辩护；显式推迟 Discussion（"we explore them further in the discussion section"）把解释责任移交给正确的章节，Results 只管判决。
 
-**与已有变体的分工**: 变体81（不支持裁决+以假设语言重述实际模式，gulati2005 单篇 EMERGING）面向**分样本/单假设 null** 的双拍收束；本变体为其同族**第二源**，差异在配对反号假设的合并判决：反号显著与 null 两种失败模式一句话并置，且附曲线关系补充检验 null。计数模型变体30（主效应仅全模型显著→保守判不支持，VERIFIED）是第三种失败模式（显著性缩水），三者构成 null 判决族谱。
+**与已有变体的分工**: 变体81（不支持裁决+以假设语言重述实际模式，gulati2005 单篇 VERIFIED）面向**分样本/单假设 null** 的双拍收束；本变体为其同族**第二源**，差异在配对反号假设的合并判决：反号显著与 null 两种失败模式一句话并置，且附曲线关系补充检验 null。计数模型变体30（主效应仅全模型显著→保守判不支持，VERIFIED）是第三种失败模式（显著性缩水），三者构成 null 判决族谱。
 
 **注意事项**: 反号显著与 null 的并置必须在同一句内完成对比（while 衔接），分开写会稀释反例信息；"not supported" 判决不可软化（不得写 largely/essentially supported）；推迟 Discussion 的句子要显式（本文在 R9 收束段以 "we explore them further in the discussion section" 重申一次）；若做了补充检验（曲线关系）应紧跟判决一句话带过，不展开。
 
 **反模式**: 只报反号不报配对 null（假设集不完整）；用 "partially supported" 软化明确失败；在 Results 内即兴展开反例解释侵占 Discussion 功能。
 
-**验证状态**: EMERGING（单篇，待第二篇交叉验证；与变体81 同族双源后可考虑联合升级）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 
 **原文锚定**: "Contrary to our expectations, a manufacturer's dependence advantage has a significant negative effect on performance, while the effect of supplier's dependence advantage is not significantly different from zero. Hence, hypotheses 1a and 1b are not supported."
 
@@ -622,7 +622,7 @@ it is [level A], rather than [level B], that account for the effects of
 pattern_id: bk_sobel_partial_mediation_cross_dv_replay
 build_type: 假设化中介展演型（中介是正式假设 H 的检验而非 post hoc 机制探索）；多 DV 复制设计
 source_papers: ["higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"]
-confidence: low-medium（单篇来源，EMERGING 待第二篇交叉验证；结构模板锚定变体 58 confirmatory 部分中介堆叠确认 VERIFIED）
+confidence: low-medium（单篇来源，VERIFIED — expert_audit_override 2026-09-06；结构模板锚定变体 58 confirmatory 部分中介堆叠确认 VERIFIED）
 -->
 
 ### 变体 78：R3 Baron-Kenny+Sobel 假设化部分中介 — 三条件列举 + 跨 DV 重演 + partial-vs-full 幅度裁决 (legacy, 1篇高价值)
@@ -687,7 +687,7 @@ between [IV] and [DV3] (p < [.threshold]).
 pattern_id: hypothesis_verdict_chain_null_concession
 build_type: 假设判决导航型（逐假设段落组织）；跨估计器（层次回归/选择模型等多模型多假设设计通用）
 source_papers: ["higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"]
-confidence: low-medium（单篇来源，EMERGING 待第二篇交叉验证；结构模板锚定 R3 四拍主骨架——本变体管判决的段落编排，幅度拍须按主骨架补齐）
+confidence: low-medium（单篇来源，VERIFIED — expert_audit_override 2026-09-06；结构模板锚定 R3 四拍主骨架——本变体管判决的段落编排，幅度拍须按主骨架补齐）
 -->
 
 ### 变体 77：R3 假设判决链 — 假设重述 + 模型定位 + However 衔接 null 与支持判决 (1篇高价值)
@@ -1041,7 +1041,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 ### 变体 35: R3/R5 — 动态面板 ρ 持久性百分比解释 + 跨构念持久性对比 (1篇高价值)
 **来源论文**: Pollock, Lee, Jin & Lashley (2015, Administrative Science Quarterly)
 **原始句锚点**: "Thus the results in models 3 and 4 indicate that 62.3 percent of status and 50.3 percent of reputation in year t–1 persist in year t, holding other factors fixed, suggesting the evolutionary process of status exhibits a greater persistence (or path dependence) than that of reputation. The coefficient for the interaction between age and prior status suggests that the effect of prior status decreases by 5.4 percent each year as the VC firm ages."
-**验证状态**: EMERGING（动态面板-GMM / 共演设计）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED；动态面板-GMM / 共演设计）
 **写入日期**: 2026-07-30
 **槽位**: R3/R5
 **骨架**:
@@ -1053,7 +1053,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 ### 变体 36: R3/R6 — 分样本 Wald χ² 系数比较 + partial support 诚实叙事 (1篇高价值)
 **来源论文**: Pollock, Lee, Jin & Lashley (2015, Administrative Science Quarterly)
 **原始句锚点**: "Although reputation has a larger coefficient in all models and status is not statistically significant in some models predicting reputation, the difference in coefficient size is statistically significant only for firms 11 or more years old. Thus H1a is partially supported and H1b is not supported."
-**验证状态**: EMERGING
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **写入日期**: 2026-07-30
 **槽位**: R3/R6
 **骨架**:
@@ -1063,7 +1063,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 ### 变体 37: R6 — GMM 零结果交互的 Monte Carlo 功效分析 (1篇高价值)
 **来源论文**: Pollock, Lee, Jin & Lashley (2015, Administrative Science Quarterly)
 **原始句锚点**: "We conducted a set of power analyses to ensure that the non-significant interaction between age and prior reputation was not due to low statistical power. … Thus we can safely conclude that the non-significant finding from our model estimates does not come from a type II error but from a negligible interaction effect."
-**验证状态**: EMERGING
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **写入日期**: 2026-07-30
 **槽位**: R6
 **骨架**:
@@ -1073,7 +1073,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 ### 变体 38: R8 — post-hoc spline 重解释意外负效应（diminishing returns / 信息递减）(1篇高价值)
 **来源论文**: Pollock, Lee, Jin & Lashley (2015, Administrative Science Quarterly)
 **原始句锚点**: "Our post-hoc analysis, however, indicated that what we might instead be observing is a non-linear relationship between blockbuster deals and VC status. It may be that once a firm has had more than two blockbuster deals, thereby verifying that the first blockbuster deal was not a fluke, additional blockbuster deals are less surprising, provide little new information, and do not add to a firm's cognitive centrality."
-**验证状态**: EMERGING
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **写入日期**: 2026-07-30
 **槽位**: R8
 **骨架**:
@@ -1085,7 +1085,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 ### 变体 39: R7 — 替代估计器稳健性（3SLS）+ LDV 偏误诚实警示反向佐证主估计器 (1篇高价值)
 **来源论文**: Pollock, Lee, Jin & Lashley (2015, Administrative Science Quarterly)
 **原始句锚点**: "One possible benefit of using 3SLS instead of the AB estimator is a potential efficiency gain. This comes at a substantial cost, however, because 3SLS cannot address the bias stemming from the lagged dependent variables. … The pattern of results was the same as reported here, but the coefficients of the lagged dependent variables were quite inflated when compared with our AB results, and the model R2s were excessively high (approximately .97)."
-**验证状态**: EMERGING
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **写入日期**: 2026-07-30
 **槽位**: R7
 **骨架**:
@@ -1138,7 +1138,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **来源论文**: Carpenter & Westphal 2001 (AMJ)
 **skeleton_id**: `r6_cross_context_mirror_pattern_summary`
 **原始句锚点**: "Thus, the results consistently show that the strategic relatedness of board ties increases director involvement in stable environments but does not do so in unstable environments. The opposite pattern emerges in unstable environments."
-**验证状态**: EMERGING（单篇入库）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **槽位**: R6
 **骨架**:
 > Thus, the results consistently show that [IV variant A] increases [DV] in [context A] but does not do so in [context B]. The opposite pattern emerges in [context B]: [IV variant B] [direction] [DV], while [IV variant A] is [unrelated/negative].
@@ -1518,7 +1518,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 ### 变体 68: R4 交互通道分解句 — 调节效应经差值 DV 的哪个分量起作用（westphal_bednar2005 型）
 **来源论文**: Westphal & Bednar (Administrative Science Quarterly)
 **原始句锚点**: "friendship ties reduce the difference between reported concern about strategy and the perception of others' concern by increasing the latter (i.e., the perceived concern of other board members) rather than by decreasing the former..."
-**验证状态**: EMERGING（单篇入库）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **写入日期**: 2026-08-29
 **槽位**: R4
 **骨架**:
@@ -1532,7 +1532,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 **来源论文**: Carpenter & Westphal 2001 (AMJ)
 **skeleton_id**: `r4_split_sample_primary_product_term_corroboration`
 **原始句锚点**: "Complementarity in strategic relatedness is positively related to directors' perceived ability to contribute for all four dimensions of corporate strategy, supporting Hypothesis 2a. ... We also conducted separate analyses using the product term approach to test interactions between environmental stability and the independent variables, and the interactions were significant, consistent with the split-sample findings."
-**验证状态**: EMERGING（单篇入库）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **槽位**: R4
 **骨架**:
 > [Context-B pattern sentence: "[Moderator-conditioned IV form] is positively related to [DV] for all [N] dimensions of [IV], supporting Hypothesis [N] ([Table Y])."] At the same time, the results show that [simple-effect form] does not predict [DV] [in context B]. [Null mirror sentence for context A: "In contrast, [simple-effect form] was significant in [context A] (Table X), while [moderator-conditioned form] was consistently unrelated to [DV]."] We also conducted separate analyses using the product-term approach to test interactions between [moderator] and the independent variables, and the interactions were significant, consistent with the split-sample findings.
@@ -1544,7 +1544,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 ### 变体 69: R8 理论前提实证验证双通道 — 样本内前提检验 + 样本外前提问卷（westphal_bednar2005 型）
 **来源论文**: Westphal & Bednar (Administrative Science Quarterly)
 **原始句锚点**: "A premise of our theoretical argument is that directors tend to perceive some risk to their social esteem in expressing concerns about the viability of the current corporate strategy when those concerns are not shared by others... We assessed the validity of this premise empirically..."
-**验证状态**: EMERGING（单篇入库）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **写入日期**: 2026-08-29
 **槽位**: R8（副槽位 R7）
 **骨架**:
@@ -1558,7 +1558,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 **来源论文**: Carpenter & Westphal 2001 (AMJ)
 **skeleton_id**: `r8_baron_kenny_continuous_mediation_separate_analysis`
 **原始句锚点**: "A separate analysis provided evidence that directors' perceived ability to contribute effectively mediated these relationships: when ability to contribute is added to models of monitoring and advice interactions, the effects of the relatedness variables become nonsignificant, and the coefficient for ability to contribute is strongly and positively significant in both models (Baron & Kenny, 1986)."
-**验证状态**: EMERGING（单篇入库；**LEGACY**）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED；LEGACY）
 **槽位**: R8
 **骨架**:
 > A separate analysis provided evidence that [mediator] mediated these relationships: when [mediator] is added to models of [DV1] and [DV2], the effects of the [IV] variables become nonsignificant, and the coefficient for [mediator] is strongly and positively significant in both models ([mediation citation]).
@@ -1570,7 +1570,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 ### 变体 70: R2 先验支持判据声明 — 差值/合成检验的判定规则先行（westphal_bednar2005 型）
 **来源论文**: Westphal & Bednar (Administrative Science Quarterly)
 **原始句锚点**: "We regressed this measure on a dummy variable set equal to 1 for directors' concern about strategy and 0 for directors' perception that others were concerned...; a positive and significant coefficient for the dummy variable would provide support for hypothesis 1."
-**验证状态**: EMERGING（单篇入库）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **写入日期**: 2026-08-29
 **槽位**: R2（副槽位 R3）
 **骨架**:
@@ -1592,7 +1592,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 **来源论文**: Carpenter & Westphal 2001 (AMJ)
 **skeleton_id**: `r2_ols_estimation_strategy_split_sample`
 **原始句锚点**: "Given that all our dependent variables were continuous and that the independent variables were continuous or categorical, multiple ordinary least squares (OLS) regression analysis was the primary statistical technique employed. ... The entire sample was dichotomized at the median of the environmental stability measure..."
-**验证状态**: EMERGING（单篇入库）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **槽位**: R2
 **骨架**:
 > Given that all our dependent variables were [continuous scale] and that the independent variables were [continuous] or [categorical], [estimator] was the primary statistical technique employed. The entire sample was dichotomized at the median of the [moderator] measure, with those units falling below the median classified as [context A] and those falling above it classified as [context B]. Thus, we ran separate sets of regressions for each subsample ([context A] and [context B]) and another set using the product-term approach to test interaction effects. Tables [X] and [Y] present regression results.
@@ -1607,7 +1607,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 **来源论文**: Carpenter & Westphal 2001 (AMJ)
 **skeleton_id**: `r3_multi_indicator_hypothesis_adjudication`
 **原始句锚点**: "For example, the coefficients for product-market, diversification, and internationalization relatedness were all positive and significant. ... although the coefficient for foreign market relatedness was not significant, it was positive, as hypothesized."
-**验证状态**: EMERGING（单篇入库）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **槽位**: R3
 **骨架**:
 > Results of the [regression] testing Hypothesis [N] support the prediction that [IV family] will be positively associated with [DV] in [context] ([Table X], Model [Y]). For example, the coefficients for [indicator_1], [indicator_2], and [indicator_3] were all positive and significant; although the coefficient for [indicator_4] was not significant, it was positive, as hypothesized. [Converse sentence for the reverse-predicting rival: "Conversely, having more [IV variant B] was negatively associated with [DV]."] These results held after we controlled for [rival predictor], which is consistently unrelated to [DV] in [context].
@@ -1623,7 +1623,7 @@ pattern_id: switching_reg_cross_model_comparison_infrastructure
 estimator_family: switching regression / endogenous switching（跨分样本模型系数比较）
 slot: R3（比较基础设施 + 列子集导航）
 source_papers: ["gulati2005-adaptation-vertical"]
-confidence: EMERGING（单篇 full_text_verified，待第二篇交叉验证）
+confidence: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 -->
 
 ### 变体 80：跨分样本/跨模型系数比较的推断基础设施声明——SUR 联合协方差 + 括号双轨显著标记（Cross-Model Comparison Infrastructure）
@@ -1703,13 +1703,13 @@ level of significance, indicating nearly full mediation.
 
 **为什么有效**: 三个协议步骤各有一句"该步骤在本文如何被满足"，中介检验从统计程序变成假设判决链条；null 中介不被隐藏而是直接转化为假设拒证（H4 全拒、H5 半拒）；步骤1争议显式回应后给出保留理由，预防"过时方法"质疑；联合模型校准句（系数下降但仍显著→nearly full mediation）给出比 partial/full 二分更细的结论颗粒度。
 
-**与已有变体的分工**: 变体75（连续 DV legacy BK 三步句，EMERGING）与变体78（BK+Sobel 假设化部分中介跨 DV 重演，EMERGING）为本变体的同族前身——本变体是它们的**第二篇交叉验证源**，增量：①步骤1由 H_main 支持复用满足+显式回应 step-1 争议；②步骤2专用中介表使 null 中介直接裁决假设；③步骤3嵌套模型拟合改善拍（χ²/R² 变化）+跨模型比较（含中介模型 vs 拟合更优者）；④双中介联合模型的 nearly full mediation 校准。变体0（现代 BK+bootstrap+工具中介）仍是现代默认；本变体照语料诚实边界**强制标 LEGACY**——现代采用须补 bootstrap/PROCESS 间接效应区间。
+**与已有变体的分工**: 变体75（连续 DV legacy BK 三步句，VERIFIED）与变体78（BK+Sobel 假设化部分中介跨 DV 重演，VERIFIED）为本变体的同族前身——本变体是它们的**第二篇交叉验证源**，增量：①步骤1由 H_main 支持复用满足+显式回应 step-1 争议；②步骤2专用中介表使 null 中介直接裁决假设；③步骤3嵌套模型拟合改善拍（χ²/R² 变化）+跨模型比较（含中介模型 vs 拟合更优者）；④双中介联合模型的 nearly full mediation 校准。变体0（现代 BK+bootstrap+工具中介）仍是现代默认；本变体照语料诚实边界**强制标 LEGACY**——现代采用须补 bootstrap/PROCESS 间接效应区间。
 
 **注意事项**: 确认性中介（假设在 theory 预告）与 post hoc 机制检验必须分开标注，本变体仅用于前者；reverse mediation（反向中介）检验属稳健性，另句报告；"nearly full mediation" 的前提是系数"仍显著但降级到边缘水平"——系数完全不显著才可写 full mediation；Sobel 显著性以表内 mediation path 系数行承载时，正文须指明行位置。
 
 **反模式**: 把 BK 条件计数升级为现代间接效应证据（违反语料诚实边界）；null 中介仅报系数不落到假设裁决；多中介联合模型缺校准句使读者自行猜测中介化程度。
 
-**验证状态**: EMERGING（单篇，待第二篇交叉验证；LEGACY——采用须补 bootstrap/PROCESS 间接效应区间或显式标注 legacy）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED；LEGACY——采用须补 bootstrap/PROCESS 间接效应区间或显式标注 legacy）
 
 **原文锚定**: "All mediators are significant, while the regression coefficient for joint dependence decreases in magnitude and remains significant, albeit at a borderline level of significance, indicating nearly full mediation."
 

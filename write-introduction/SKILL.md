@@ -54,8 +54,9 @@ description: >-
 3. 证据分档：EMERGING（单源）不作默认推荐；采用时必须标注"单篇来源"并给 VERIFIED/ROBUST 替代。
 4. **开篇功能合同**（先定功能，再编号）：前三单元内完成——①有后果的张力（说明问题给理论/决策制造什么 trouble）；②可识别的学术对话（受众已知什么、现有解释预测什么）；③诊断性 problematization（遗漏/误置如何损害预测与边界 + 回应方向）。单元可合并/换序，进入 Theory Lens 前不得缺项。合并时一个段落只有一个**主导修辞功能**，段内仍 Point → Support/Warrant → Link（模块合并不等于句子拼接）。
 5. 能量阶梯：Hook 能量 ≤ Gap 能量 ≤ Stakes 能量（高开低走 = 叙事倒退）。
+6. 异议预判清单（Booth Ch09 §9.1，渲染前生成）：对 problem 级三类质疑——问题真实性、问题定义、方案可信度——各列 ≥1 条最强审稿异议；Phase 4 Gate 4 核销处置（细则见 `references/quality-gates.md` §4）。
 
-**完成判据**：功能序列 4-9 段已定；能量一致性已标注。
+**完成判据**：功能序列 4-9 段已定；能量一致性已标注；异议预判清单已生成（三类各 ≥1 条）。
 
 ## Phase 3: 渲染
 
@@ -75,7 +76,7 @@ description: >-
 | Differentiation | `differentiation/01-prior-work-boundary-clarification.md`（仅存在极易混淆的 prior work 时） |
 | 修辞动作/语言表达升级 | `../story-blueprints/v4/rhetoric-moves/_index.md`（动作自动匹配草稿修辞功能，无需用户点名；intro 默认=bidirectional-staging；润色走其 `_polish-protocol.md` 流畅性门） |
 
-**语料优先改编**：模块确定后，以上表该模块 corpus 指针的语料句式为改编底本——尽量使用语料库的句式表达来改编（替换来源特异性内容、填槽位、按需微调）；corpus 无对应句式时再自拟（自拟句与语料句式同构）。已核实事实与用户裁定优先于语料句式。
+**语料优先改编**：模块确定后，以上表该模块 corpus 指针的语料句式为改编底本——尽量使用语料库的句式表达来改编（替换来源特异性内容、填槽位、按需微调）；corpus 无对应句式时再自拟（自拟句与语料句式同构）。已核实事实与用户裁定优先于语料句式。**角色先于风格（先骨架后句子）**：论证型模块（Tension/Stakes/Theory Lens/Contribution）按论证单元组装——先定角色序列（claim→reason+evidence→warrant→A&R）再按角色从语料取句；段落组装文法与拼贴判据见 `../story-blueprints/v4/rhetoric-moves/_argument-grammar.md`，intro 侧角色接线见 `references/render-rules.md` §段落论证文法；Hook/Preview/Transitions 为 framing 豁免。语料句子顺序不决定段落顺序。
 
 槽位：按需读 `references/introduction-slot-contracts.md`，只填已知信息，不确定的槽位保留占位（不编造引文/数字/发现方向）。
 
@@ -85,8 +86,8 @@ description: >-
 
 ## Phase 4: 检查与润色
 
-1. 质量门（生成后必过）：`references/quality-gates.md`——GBL Four-Move 对齐（共享规则见 `../diagnose-introduction/references/golden-biddle-locke-four-moves.md`）+ JTBD 六模块完整性 + claim_fit + 首尾句测试；不合格项入"提醒"段。
-2. 反模式自查：`references/anti-patterns.md`（22 项逐条扫描）+ 拒稿信号 `references/rejection-signals.md`。
+1. 质量门（生成后必过）：`references/quality-gates.md`——GBL Four-Move 对齐（共享规则见 `../diagnose-introduction/references/golden-biddle-locke-four-moves.md`）+ JTBD 六模块完整性 + claim_fit（含贡献主张质量：contestability/specificity/hedge）+ 首尾句测试 + 异议预判（Gate 4）+ 段落论证文法（Gate 5：五问/拼贴）；不合格项入"提醒"段。
+2. 反模式自查：`references/anti-patterns.md`（21 项逐条扫描）+ 拒稿信号 `references/rejection-signals.md`。
 3. 期刊适配：用户提目标期刊时读 `references/journal-fit.md`（期刊差异优先于通用规则）。
 4. 措辞润色（默认执行，preparing 跳过）：按句位查语料库——Hook/human face → `storytelling/prose-craft-checklist.md` §0/§5；批判措辞 → `phrasebank/critique-phrases.md`；hedging → `phrasebank/hedging-strength.md`；过渡 → `transitions/` + `micro-templates/transition-signals.md`；中心论点定位 → `micro-templates/thesis-models.md`；五病 → `../pollock-qc/references/prose-pathology.md`；人设 → `storytelling/authorial-persona.md`；因果声明 → `../write-methods/corpus/micro-templates/causal-hedging.md`。纪律：不改骨架占位；其余共用纪律（每句位 ≤2-3 候选、specificity gate、`### 措辞润色建议` 附末不覆盖骨架）见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律。
 

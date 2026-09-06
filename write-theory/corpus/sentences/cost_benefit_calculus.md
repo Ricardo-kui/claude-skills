@@ -6,6 +6,7 @@ source_exemplar: chung_low_rust_2022_jams
 confidence: medium
 status: EMERGING
 -->
+> 论证角色：**Reason**——成本收益类推理 move 材料；填位规则见 `_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
 
 # 成本-收益计算机制句语料库
 

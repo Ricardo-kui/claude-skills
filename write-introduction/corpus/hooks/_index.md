@@ -1,4 +1,5 @@
 # Hooks 索引 — Pollock 2025 分类体系
+> 论证角色：**Framing**（Hook 开场；其核心判断句为 claim 性质，须与 Tension 配对）——intro 角色接线见 render-rules §段落论证文法；填位规则见 `_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
 
 本索引按照 Pollock (2025) 的四种 Hook 类型（Quote / Trend / Anecdote / Rhetorical question）组织所有 hooks，并标注其 Gap 强度、验证状态和期刊适配度。
 
@@ -54,7 +55,7 @@
 | **成对灾难 Hook** | `14-paired-disasters` | 两次时间跨度大的相似灾难，建立"历史重演"谜题 | VERIFIED | haunschild2015 (OS) |
 | **双重张力交织 Hook** | `22-twin-complication` | 田野张力 × 理论张力交织互构，双 resolution 合同（Turner 1976 原型，GBL Ch3） | EMERGING (2p) | turner1976 (ASQ), haunschild2015 (OS, 隐式) |
 | **二元关系传染 Hook** | `26-dyadic-contagion` | 关系双面性 → 负面事件 → 跨组织溢出 | EMERGING (1p) | pupovac2026 (POM) |
-| **辩论重构 Hook** | `17-debate-reframing` | 经典辩论 → "rather than settling" 实证重构（含变体 A：多文献中央问题型 westphalzajac1995，EMERGING） | EMERGING (2p) | park_lange_jeon (SMJ), westphalzajac1995 (AMJ) |
+| **辩论重构 Hook** | `17-debate-reframing` | 经典辩论 → "rather than settling" 实证重构（含变体 A：多文献中央问题型 westphalzajac1995，VERIFIED） | VERIFIED (2p) | park_lange_jeon (SMJ), westphalzajac1995 (AMJ) |
 
 *Anecdote 类型有 9 个 hooks，覆盖从完整叙事到精简案例的多种长度。注意：`04-puzzle-paradox` 同时包含 Trend 元素（反直觉数据）和 Anecdote 元素（第二人称推理），但因其核心功能是叙事性 puzzle，归入 Anecdote。`22-twin-complication` 是跨类型架构（P1 可用轶事或趋势开场），因其田野张力以行动者叙事承载，归入 Anecdote。*
 

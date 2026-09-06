@@ -25,21 +25,21 @@ updated: 2026-08-13
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 1 | AB difference GMM 三源内生性统一处理 | LDV + 同时性 + 未观测异质性三源内生性并存（副槽位 M8） | 首变体：逐一列举三源内生性及其方向，再以 AB 作统一解 | EMERGING | Pollock et al. 2015 (ASQ) |
-| 2 | difference GMM vs system GMM 选择（稳态/平稳性论证） | 样本处于发展早期、远离稳态（young firms）时 | 在效率（system GMM）与一致性（difference GMM）间做有理论依据的权衡 | EMERGING | Pollock et al. 2015 (ASQ) |
+| 1 | AB difference GMM 三源内生性统一处理 | LDV + 同时性 + 未观测异质性三源内生性并存（副槽位 M8） | 首变体：逐一列举三源内生性及其方向，再以 AB 作统一解 | VERIFIED | Pollock et al. 2015 (ASQ) |
+| 2 | difference GMM vs system GMM 选择（稳态/平稳性论证） | 样本处于发展早期、远离稳态（young firms）时 | 在效率（system GMM）与一致性（difference GMM）间做有理论依据的权衡 | VERIFIED | Pollock et al. 2015 (ASQ) |
 | 5 | FD 后 t-2 工具化 LDV（Anderson–Hsiao） | FD+LDV 的 Nickell/差分内生，不必上 AB-GMM | 区别于变体1：只工具化 LDV，不处理同时性 | VERIFIED | Kalaignanam et al. 2013 JM |
 
 ### M8（1）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 3 | 工具变量滞后结构 per-sample 经验精调程序 | AB-GMM 工具选择需按样本精调滞后结构 | 先按变量外生性类别定起始滞后，再用 Hansen/diff-Sargan/AR(2) 逐变量精调 | EMERGING | Pollock et al. 2015 (ASQ) |
+| 3 | 工具变量滞后结构 per-sample 经验精调程序 | AB-GMM 工具选择需按样本精调滞后结构 | 先按变量外生性类别定起始滞后，再用 Hansen/diff-Sargan/AR(2) 逐变量精调 | VERIFIED | Pollock et al. 2015 (ASQ) |
 
 ### M4（1）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 4 | 发展性调节无理论断点 → 多阈值分样本检验 | 发展性调节（age/stage）无理论断点时（副槽位 M8） | 区别于单一交互/单一切点：跨多阈值重复检验展示效应梯度 | EMERGING | Pollock et al. 2015 (ASQ) |
+| 4 | 发展性调节无理论断点 → 多阈值分样本检验 | 发展性调节（age/stage）无理论断点时（副槽位 M8） | 区别于单一交互/单一切点：跨多阈值重复检验展示效应梯度 | VERIFIED | Pollock et al. 2015 (ASQ) |
 
 
 ## 主骨架
@@ -55,7 +55,7 @@ updated: 2026-08-13
 ## 累积变体
 
 ### 变体 1: Pollock et al. 2015 (ASQ) — AB difference GMM 三源内生性统一处理 (2026-07-30)
-**验证状态**: EMERGING（单篇）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **槽位**: M7/M8
 **原始句锚点**: Although this model specification incorporating path dependence, simultaneity, and unobserved heterogeneity allowed us to test our theoretical arguments, each of these features introduced different kinds of endogeneity to the models. We addressed this issue by employing the Arellano–Bond (AB) estimator (Arellano and Bond, 1991) using the xtabond2 command (Roodman, 2009) in STATA 11.
 **骨架**:
@@ -63,7 +63,7 @@ updated: 2026-08-13
 **与原骨架差异**: 首个动态面板-GMM 变体。核心手法：先**逐一列举三源内生性及其方向**（LDV 与误差项相关；同时性高估双方参数；异质性），声明"难以同时处理"，再以 AB 估计器作为**统一解**收束——把估计器选择包装为对识别威胁的系统性回应，而非技术默认。to address... we employed... Taken together 句式可原样保留。
 
 ### 变体 2: Pollock et al. 2015 (ASQ) — difference GMM vs system GMM 选择（稳态/平稳性论证）(2026-07-30)
-**验证状态**: EMERGING（单篇）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **槽位**: M7
 **原始句锚点**: Although the system GMM estimator generates more efficient estimates (Blundell and Bond, 1998), we employed the AB difference GMM estimator because system GMM requires stationarity, or a steady state, for consistent estimation (Arellano, 2003).
 **骨架**:
@@ -71,7 +71,7 @@ updated: 2026-08-13
 **与原骨架差异**: 在效率（system GMM 更有效）与一致性（difference GMM 不需稳态）之间做**有理论依据的权衡**——用样本的发展阶段（young firms 远未达稳态）作为选择 difference GMM 的理由。把"为何不用更有效的估计器"这一审稿人必问问题前置回答。
 
 ### 变体 3: Pollock et al. 2015 (ASQ) — 工具变量滞后结构 per-sample 经验精调程序 (2026-07-30)
-**验证状态**: EMERGING（单篇）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **槽位**: M8
 **原始句锚点**: We followed the procedures recommended by Roodman (2009) to select the instruments for our models. Any predictor-variable value can theoretically be used as an instrument, but to correctly specify the lag structure it is important to consider whether a focal variable is strictly exogenous, predetermined, or endogenous (Arellano, 2003).
 **骨架**:
@@ -79,7 +79,7 @@ updated: 2026-08-13
 **与原骨架差异**: 把工具选择呈现为**经验驱动的迭代精调**而非机械规则：先按变量外生性类别（strictly exogenous / predetermined / endogenous）确定起始滞后阶数，再用 Hansen *J* + difference-in-Sargan + AR(2) 三诊断逐变量精调。关键诚实点："Valid lag structures are empirically determined based on the sample" + 分样本各自精调——避免一刀切滞后结构在不同子样本失效。
 
 ### 变体 4: Pollock et al. 2015 (ASQ) — 发展性调节无理论断点 → 多阈值分样本检验 (2026-07-30)
-**验证状态**: EMERGING（单篇）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **槽位**: M4/M8
 **原始句锚点**: To test these hypotheses we ran a series of regressions splitting the sample into subsamples based on different age increments, presented in table 2. Because there is no theoretical reason to determine a specific break point, we tested this hypothesis using the results in table 2, which presents the relationships over a range of years.
 **骨架**:

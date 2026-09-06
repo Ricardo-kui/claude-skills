@@ -1,4 +1,5 @@
 # Stakes 索引
+> 论证角色：**Evidence**（consequence/代价锚点；Q1→Q2 知识链纪律见 render-rules Stakes 节）；填位规则见 `_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
 
 本索引收录所有 Stakes 变体，按核心论证逻辑分组。
 

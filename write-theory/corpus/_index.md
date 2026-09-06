@@ -1,4 +1,5 @@
 # write-theory 语料库索引
+> 论证角色标注：各语料文件头部标有论证角色（Claim/Reason/Evidence/Warrant/[D]/A&R/Framing）；角色定义与段落填位规则见 `../../story-blueprints/v4/rhetoric-moves/_argument-grammar.md`；语料顺序≠段落顺序。
 
 本索引提供 `write-theory` skill 语料文件的快速导航和决策入口。
 
@@ -74,15 +75,15 @@
 | 对成熟经济学/理性选择理论做符号/制度再诠释，每个假设小节需以"默认解释→社会视角再诠释"交替对立开题 | [`variants/B_mechanism_elaboration.md`](variants/B_mechanism_elaboration.md)（Symbolic Alternating Reframe 变体B；VERIFIED / `westphal_zajac_1998`） | [`variants/B_mechanism_elaboration.md`](variants/B_mechanism_elaboration.md)（Hard/Soft Signal Measurement Reframe 变体C，配套测量本体重构） |
 | 最强替代解释（语言属实/理性说服）需在假设层内判别排除：decoupling 子样本即"形式与事实不符仍获反应"的自然实验 | [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md)（Decoupling Discriminating Test 变体C；VERIFIED / `westphal_zajac_1998`） | [`sentences/hypothesis_forms.md`](sentences/hypothesis_forms.md)（Implementation-Contingency 从句假设形式，VERIFIED / `westphal_zajac_1998`；配套 [`sentences/moderation.md`](sentences/moderation.md) Numbered Dual-DV Interaction） |
 | 需用访谈证据证明裁量空间真实存在、且默认由上游主体设定（反向默认对偶轶事） | [`subprotocols/evidence_patterns.md`](subprotocols/evidence_patterns.md)（Paired Opposite-Default Interview Vignettes；VERIFIED / `wowak_2020`） | [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md)（决策权前言配套） |
-| 一构念分 N 类型、每类型各自向外部评委信号一个质量侧面（类型学分解信号） | [`subprotocols/hypothesis_organization_patterns.md`](subprotocols/hypothesis_organization_patterns.md)（类型学分解→并行信号假设→覆盖范围假设；EMERGING / `higgins_2003`） | [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md)（传递+自选择双 warrant；EMERGING） |
-| 质量信号需同时封堵资源可得与逆向选择两类质疑 | [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md)（传递+自选择双 warrant 信号推演；EMERGING / `higgins_2003`） | [`sentences/hypothesis_forms.md`](sentences/hypothesis_forms.md)（先验部分中介预期+减弱比较静态；EMERGING） |
-| 中介形式作为可证伪预测先验声明（not a strong form of mediation） | [`sentences/hypothesis_forms.md`](sentences/hypothesis_forms.md)（先验部分中介预期+效应减弱 a/b 配对；EMERGING / `higgins_2003`） | [`subprotocols/hypothesis_organization_patterns.md`](subprotocols/hypothesis_organization_patterns.md) |
-| 类别化治理/组织模式在情境压力下的相对不利效应比较（fit 匹配，不承诺主效应） | [`variants/E_moderation.md`](variants/E_moderation.md)（类别模式不利效应 fit 推导 变体 E；EMERGING / `gulati2005`） | [`sentences/hypothesis_forms.md`](sentences/hypothesis_forms.md)（组间比较/相对不利效应句式 变体 E；EMERGING） |
-| 伞构念涵盖两类根因问题、需按模式清点机制可得性做跨类别排序 | [`subprotocols/construct_differentiation_patterns.md`](subprotocols/construct_differentiation_patterns.md)（伞构念解构排序平台 变体 E；EMERGING / `gulati2005`） | [`sentences/mechanism_chain.md`](sentences/mechanism_chain.md)（机制可得性对比句式 变体 D；EMERGING） |
-| 两种压力联合作用（超加性）预测均衡/混合构型相对最优 | [`variants/E_moderation.md`](variants/E_moderation.md)（联合压力超加性→均衡构型；EMERGING / `gulati2005`） | — |
-| 同一 DV 由一组并行中介各自传导部分效应 | [`variants/B_mechanism_elaboration.md`](variants/B_mechanism_elaboration.md)（并行多中介逐项部分中介链；EMERGING / `gulati_2007`） | [`sentences/hypothesis_forms.md`](sentences/hypothesis_forms.md)（中介集合先验部分中介声明；EMERGING） |
-| 双逻辑对立（power vs embeddedness）预测同 DV 反号结果 | [`sentences/hypothesis_forms.md`](sentences/hypothesis_forms.md)（镜像极点配对假设 a/b；EMERGING / `gulati_2007`） | [`sentences/mechanism_chain.md`](sentences/mechanism_chain.md)（逻辑对照枢转句；EMERGING） |
-| 理论论证需从一种逻辑换轨到另一种逻辑 | [`sentences/mechanism_chain.md`](sentences/mechanism_chain.md)（Logic-Contrast Pivot；EMERGING / `gulati_2007`） | — |
+| 一构念分 N 类型、每类型各自向外部评委信号一个质量侧面（类型学分解信号） | [`subprotocols/hypothesis_organization_patterns.md`](subprotocols/hypothesis_organization_patterns.md)（类型学分解→并行信号假设→覆盖范围假设；VERIFIED / `higgins_2003`） | [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md)（传递+自选择双 warrant；VERIFIED (expert_audit_override 2026-09-06)） |
+| 质量信号需同时封堵资源可得与逆向选择两类质疑 | [`subprotocols/argumentation_patterns.md`](subprotocols/argumentation_patterns.md)（传递+自选择双 warrant 信号推演；VERIFIED / `higgins_2003`） | [`sentences/hypothesis_forms.md`](sentences/hypothesis_forms.md)（先验部分中介预期+减弱比较静态；VERIFIED） |
+| 中介形式作为可证伪预测先验声明（not a strong form of mediation） | [`sentences/hypothesis_forms.md`](sentences/hypothesis_forms.md)（先验部分中介预期+效应减弱 a/b 配对；VERIFIED / `higgins_2003`） | [`subprotocols/hypothesis_organization_patterns.md`](subprotocols/hypothesis_organization_patterns.md) |
+| 类别化治理/组织模式在情境压力下的相对不利效应比较（fit 匹配，不承诺主效应） | [`variants/E_moderation.md`](variants/E_moderation.md)（类别模式不利效应 fit 推导 变体 E；VERIFIED / `gulati2005`） | [`sentences/hypothesis_forms.md`](sentences/hypothesis_forms.md)（组间比较/相对不利效应句式 变体 E；VERIFIED） |
+| 伞构念涵盖两类根因问题、需按模式清点机制可得性做跨类别排序 | [`subprotocols/construct_differentiation_patterns.md`](subprotocols/construct_differentiation_patterns.md)（伞构念解构排序平台 变体 E；VERIFIED / `gulati2005`） | [`sentences/mechanism_chain.md`](sentences/mechanism_chain.md)（机制可得性对比句式 变体 D；VERIFIED） |
+| 两种压力联合作用（超加性）预测均衡/混合构型相对最优 | [`variants/E_moderation.md`](variants/E_moderation.md)（联合压力超加性→均衡构型；VERIFIED / `gulati2005`） | — |
+| 同一 DV 由一组并行中介各自传导部分效应 | [`variants/B_mechanism_elaboration.md`](variants/B_mechanism_elaboration.md)（并行多中介逐项部分中介链；VERIFIED / `gulati_2007`） | [`sentences/hypothesis_forms.md`](sentences/hypothesis_forms.md)（中介集合先验部分中介声明；VERIFIED） |
+| 双逻辑对立（power vs embeddedness）预测同 DV 反号结果 | [`sentences/hypothesis_forms.md`](sentences/hypothesis_forms.md)（镜像极点配对假设 a/b；VERIFIED / `gulati_2007`） | [`sentences/mechanism_chain.md`](sentences/mechanism_chain.md)（逻辑对照枢转句；VERIFIED） |
+| 理论论证需从一种逻辑换轨到另一种逻辑 | [`sentences/mechanism_chain.md`](sentences/mechanism_chain.md)（Logic-Contrast Pivot；VERIFIED / `gulati_2007`） | — |
 | 低严重度行为计数须重标为裁量度量而非结果质量度量（count-as-discretion relabeling） | [`meta/product_safety_construct_lexicon.md`](meta/product_safety_construct_lexicon.md)（召回计数的裁量重标；VERIFIED / `wowak_2020`） | [`sentences/hypothesis_forms.md`](sentences/hypothesis_forms.md)（边际内嵌 DV 假设句式） |
 
 ---

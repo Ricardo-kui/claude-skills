@@ -912,7 +912,7 @@ status: EMERGING — 单篇来源；wb 批次 D
 pattern_id: e1_categorical_fit_adverse_effects_from_capacity_shortfall
 build_type: 调节效应型（类别调节 E1 / fit 匹配型）
 source_papers: ["gulati2005-adaptation-vertical"]
-confidence: EMERGING（单篇，待第二篇交叉验证）
+confidence: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 -->
 
 ### 变体 E：类别模式的"能力短板×情境压力"相对不利效应推导（Categorical Adverse-Effect Fit）
@@ -955,7 +955,7 @@ performance of [modes A and B].
 pattern_id: e_moderation_joint_pressure_superadditivity_balanced_configuration
 build_type: E 调节效应型（双压力联合调节 / 均衡构型）
 source_papers: ["gulati2005-adaptation-vertical"]
-confidence: EMERGING（单篇，待第二篇交叉验证）
+confidence: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 -->
 
 ### 变体 F：双压力超加性 → 双能力互补 → 均衡构型优势（Joint-Pressure Superadditivity）

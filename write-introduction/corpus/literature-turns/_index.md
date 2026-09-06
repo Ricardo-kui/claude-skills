@@ -5,6 +5,7 @@ status: ✓ STANDARD
 created: 2026-05-20
 description: Literature Turn 三种策略的路由图、速查表和跨 skill 接口说明
 ---
+> 论证角色：**Evidence**——conversation 发现锚定（每条引文锚定可还原的支持内容）；填位规则见 `_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
 
 # Literature Turns 索引 — 从 Hook 到学术对话的过渡策略
 

@@ -1,4 +1,5 @@
 # 收束/过渡句语料库
+> 论证角色：**Framing**（收束/过渡；豁免五问）；填位规则见 `_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
 
 ## 全局收束骨架（⚠️ 管理学非标准——不推荐使用）
 

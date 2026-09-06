@@ -148,7 +148,7 @@ updated: 2026-05-22
 
 **来源论文**: Gulati & Westphal 1999 (Administrative Science Quarterly, 44(3), 473-506)
 **原始句锚点**: "The archival measure of control was significantly correlated with the survey measure of control (r = .42), while the archival measure of cooperation was significantly correlated with the survey measure of cooperation (r = .34). Moreover, the survey measure of cooperation was not significantly correlated with the archival measure of control, while the survey measure of control was not associated with the archival measure of cooperation."
-**验证状态**: EMERGING（单源；Gulati 系单源即 VERIFIED，expert_audit_override 2026-09-06）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **写入日期**: 2026-09-06
 **槽位**: M3/M4（关键自报构念的效度验证层）
 **骨架**:

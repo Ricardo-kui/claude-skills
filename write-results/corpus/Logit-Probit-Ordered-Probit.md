@@ -37,7 +37,7 @@ updated: 2026-08-13
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 1 | R1 四合一密集开场（描述统计+诊断+估计器+报告惯例） | 篇幅受限时把描述统计、共线性诊断、估计器声明、OR 报告惯例压成一段开场 | AMJ 风格高密度压缩——替代标准分节式 R1 | EMERGING | Pfarrer et al. 2010 AMJ |
+| 1 | R1 四合一密集开场（描述统计+诊断+估计器+报告惯例） | 篇幅受限时把描述统计、共线性诊断、估计器声明、OR 报告惯例压成一段开场 | AMJ 风格高密度压缩——替代标准分节式 R1 | VERIFIED | Pfarrer et al. 2010 AMJ |
 
 ### R2（1）
 
@@ -62,7 +62,7 @@ updated: 2026-08-13
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 3 | R4 事件研究 CAR 分组比较（非参数验证+t检验替代回归交互） | 理论预测离散类别序位差异时：分组均值比较+paired t 检验替代回归交互 | 先非参数验证 CAR 行为正常再做子组 t 检验——无需交互项 | EMERGING | Pfarrer et al. 2010 AMJ |
+| 3 | R4 事件研究 CAR 分组比较（非参数验证+t检验替代回归交互） | 理论预测离散类别序位差异时：分组均值比较+paired t 检验替代回归交互 | 先非参数验证 CAR 行为正常再做子组 t 检验——无需交互项 | VERIFIED | Pfarrer et al. 2010 AMJ |
 | 10 | R4/R5 条件曲线几何翻译 + 概率—成本—价值 benchmark | 单 IV 条件曲线：几何词汇（上移/变陡/拐点移动）+外部成本 benchmark 转管理后果（副槽位 R5） | 与变体12 的区别——一般几何翻译 vs 转折点位置型强制差异检验 | VERIFIED | Bendig et al. 2024 ETP |
 | 12 | R4 转折点位置型调节（条件顶点 + 直接差异检验） | 理论明确预测拐点位置移动：报双顶点+差值+直接检验作主句 | 与变体10 互补——强制顶点差与直接检验而非只报交互显著 | VERIFIED | Lee & Park 2024 SMJ |
 | 18 | R4 同调节双模式几何对比（shift vs steepen 分图裁决） | 同一调节对两 IV 预测不同几何（shift/steepen）时分图裁决+"同调节异几何"收束（副槽位 R5） | 与变体10 的区别——单 IV 几何 vs 双 IV 几何对比；交互同号不裁决几何 | VERIFIED | Bendig et al. 2024 ETP |
@@ -86,7 +86,7 @@ updated: 2026-08-13
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 4 | R7 GEE 补充回归 + Heckman 两阶段内生性纠正 | R7 补充回归+Heckman 两阶段报告，两段均保留诚实声明 | 与变体16 的区别——GEE/Heckman 结构 vs 理论 rival 两步排除 | EMERGING | Pfarrer et al. 2010 AMJ |
+| 4 | R7 GEE 补充回归 + Heckman 两阶段内生性纠正 | R7 补充回归+Heckman 两阶段报告，两段均保留诚实声明 | 与变体16 的区别——GEE/Heckman 结构 vs 理论 rival 两步排除 | VERIFIED | Pfarrer et al. 2010 AMJ |
 | 11 | R7 曲线关系的六威胁稳健性梯 | 曲线结果稳健性按六类威胁映射（lag/DV/估计器/测量/样本/内生性） | 与逐表罗列的区别——按威胁组织；5%→10% 降档如实报告 | VERIFIED | Bendig et al. 2024 ETP |
 | 16 | R7 替代解释 — CONTROL + INTERACT 两步 + need/willingness 收束 | DiD/Logit 设计区分 observable need vs latent willingness 的 rival 排除 | 与变体4 的区别——理论 rival 两步排除 vs Heckman/GEE 结构 | VERIFIED | Hoffmann et al. 2024 JM |
 | 21 | R7 行业内置换连续 IV 的抽样威胁 null 图 | 保持数据结构、行业内重分配连续 IV，生成 null 分布对照实际系数 | 区别于 DiD 置换处理时点 | EMERGING | Lun et al. 2026 ETP |
@@ -125,7 +125,7 @@ updated: 2026-08-13
 ### 变体 1: R1 四合一密集开场 — 描述统计+诊断+估计器+报告惯例 (1篇高价值)
 **来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
 **原始句锚点**: "Table 1 presents descriptive statistics and a correlation matrix for the variables used in testing our hypotheses. The means and standard deviations reflect values for raw rather than transformed measures. All variance inflation factors were below five, with an average of 2.4. Thus, multicollinearity is not a concern (Chatterjee & Price, 1991; Pedhazur, 1997). … We report odds ratios to allow easier interpretation of the magnitude of effects. An odds ratio greater than one indicates the likelihood that an event will occur increases with a one-unit increase in the independent variable."
-**验证状态**: EMERGING
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **写入日期**: 2026-07-07
 **槽位**: R1
 **骨架**:
@@ -145,7 +145,7 @@ updated: 2026-08-13
 ### 变体 3: R4 事件研究 CAR 分组比较 — 非参数验证+t检验替代回归交互 (1篇高价值)
 **来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
 **原始句锚点**: "Initial nonparametric tests (Patell Z and generalized sign) indicated that the market viewed positive earnings surprises favorably (p < .05) and perceived negative earnings surprises as 'bad news' (p < .05). … The CARs for the high-reputation (2.30 percent) and celebrity categories (3.32 percent) were significantly larger than the CAR for the 'none' category (1.74 percent), and the CAR for celebrity was significantly larger than the CAR for high reputation (p < .05)."
-**验证状态**: EMERGING
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **写入日期**: 2026-07-07
 **槽位**: R4
 **骨架**:
@@ -156,7 +156,7 @@ updated: 2026-08-13
 ### 变体 V: R4 差值列 worked-arithmetic 脚注 (pfarrer2010 型)
 **来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
 **原始句锚点**: "The difference between the mean CAR in each category is shown (e.g., 2.30% - 1.74% = 0.56%). Significance was determined by a t-test of unequal variances."
-**验证状态**: EMERGING
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **写入日期**: 2026-09-05
 **槽位**: R4
 **骨架**:
@@ -168,7 +168,7 @@ updated: 2026-08-13
 ### 变体 4: R7 GEE 补充回归 + Heckman 两阶段内生性纠正 (1篇高价值)
 **来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
 **原始句锚点**: "Because our tests did not allow us to control for other factors that can affect the size of a CAR, we ran GEE regressions that predicted the magnitude of the three-day CARs while controlling for a variety of other factors (Wade et al., 2006). … Using Bascle's (2008) criteria to select the appropriate estimation approach, we employed a Heckman correction model (Hamilton & Nickerson, 2003; Heckman, 1979). We included predictor variables in the first-stage models that were significantly associated with the likelihood of positive and negative surprises, but not with the CARs. The first-stage models were highly significant in predicting the likelihood of positive and negative surprises, but the selection correction instrument was not significant when entered into the second-stage models. Thus, endogeneity did not appear to be a significant problem in our study (Bascle, 2008; Mesquita & Brush, 2008; Tong, Reuer, & Peng, 2008)."
-**验证状态**: EMERGING
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **写入日期**: 2026-07-07
 **槽位**: R7
 **骨架**:
@@ -185,7 +185,7 @@ updated: 2026-08-13
 ### 变体 U: R4 非参数等价裁决 + 基线符号对比段节奏 (pfarrer2010 型)
 **来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
 **原始句锚点**: "The nonparametric tests indicated that the CARs for reputation and celebrity were not significantly different from their predicted values, but the CARs for firms in the 'none' category were significantly different."
-**验证状态**: EMERGING
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **写入日期**: 2026-09-05
 **槽位**: R4
 **骨架**:
@@ -592,7 +592,7 @@ updated: 2026-08-13
 ### 变体 W: R2 DV 家族换场小节标题 (pfarrer2010 型)
 **来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
 **原始句锚点**: "Hypotheses 3a-3c and 4a-4c predict the effects of firm reputation and celebrity on investors' reactions to earnings surprises."
-**验证状态**: EMERGING
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **写入日期**: 2026-09-05
 **槽位**: R2
 **骨架**:
@@ -850,7 +850,7 @@ pattern_id: switching_reg_first_stage_intermediate_navigation
 estimator_family: switching regression / endogenous switching（mlogit 第一阶段 + 分组 OLS 第二阶段）
 slot: R2（第一阶段导航）/ R8（自有价值旁注，显式标记探索性）
 source_papers: ["gulati2005-adaptation-vertical"]
-confidence: EMERGING（单篇 full_text_verified，待第二篇交叉验证）
+confidence: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 -->
 
 ### 变体 AN：内生转换回归第一阶段选择模型——"中间步骤导航 + 自有价值旁注"报告节奏（Intermediate-Step Navigation with Own-Merit Aside）

@@ -1,4 +1,5 @@
 # 段首主导动机串联句语料库（Leitmotif Section Opener）
+> 论证角色：**Framing**（跨假设缝合；豁免五问）；填位规则见 `_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
 
 **功能**: 当 Theory 章节包含多个假设（H1, H2, H3...）且它们共享同一个底层理论构念时，在每个假设段落（或小节）开头使用**结构重复的引导句**作为 leitmotif（主导动机），把分散的假设缝合成一个连贯的理论论证。读者每读到新假设，先被"带回"核心理论锚点，再展开该假设特有的边界逻辑。
 

@@ -62,7 +62,7 @@ updated: 2026-08-13
 | 2 | 样本交集漏斗 | 多库合并后报告起始N到最终N的逐层排除审计 | — | VERIFIED | Darby2026/2025/2023 |
 | 6 | 多通道精英/关键行为人招募 | 难以接触的研究对象（高管/董事/精英决策者）多通道招募 | — | EMERGING | Mannor et al. 2016 SMJ |
 | 9 | 制度断点样本辩护 | 单行业面板：制度事件定起始、数据可得定终止、单行业理论理由 | 区别于变体15（M1 设置辩护）：M2 样本边界三重正当性 | EMERGING | Desai 2011 AMJ |
-| 11 | 匹配样本层次回退 + 匹配平衡保守检验 | 匹配质量与样本量存在 trade-off 的匹配样本设计 | — | EMERGING | Pfarrer et al. 2010 AMJ |
+| 11 | 匹配样本层次回退 + 匹配平衡保守检验 | 匹配质量与样本量存在 trade-off 的匹配样本设计 | — | VERIFIED | Pfarrer et al. 2010 AMJ |
 | 12 | 单行业面板 + SIC 边界意识 + 限制样本稳健性 | 单行业样本受少数非核心行业企业驱动的担忧 | 区别于变体9（制度断点定边界）：行业分类模糊性+限制样本稳健性 | VERIFIED | Darby et al. 2026 JOM |
 | 16 | 多源 alliance 数据库合并与交叉验证 | 多数据库互补合并，防重复计数、防 announced-but-not-realized | 在变体2（交集漏斗）基础上扩展为完整段落：多源互补+人工 due diligence | EMERGING | Cui, Yang & Vertinsky SMJ |
 | 26 | 跨库手工匹配（无共同标识符）+ 多源漏斗 | 两核心库无共同标识符（如 ACSI↔Compustat）须手工匹配 | 区别于变体16（自动交叉验证）与变体2（逐步交集）：手工匹配明示+五库漏斗 | EMERGING | Malshe & Agarwal 2015 JM |
@@ -274,7 +274,7 @@ updated: 2026-08-13
 ### 变体 11: M2 匹配样本层次回退 + 匹配平衡保守检验 (1篇高价值)
 **来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
 **原始句锚点**: "We then matched each high-reputation firm with three firms from the same four-digit SIC code that were similar in assets, revenues, and return on assets (ROA) (Combs & Skill, 2003; Porac, Wade, & Pollock, 1999). Where appropriate matches were not found at the four-digit level, we looked at three-digit and two-digit SIC codes for similar firms (Combs & Skill, 2003). … A t-test comparing differences in firm size (total assets) revealed no significant differences between the 80 high-reputation and 211 matched companies (t = −0.35, n.s.); however, in keeping with the predictions of prior reputation research (Roberts & Dowling, 2002), there were significant differences in revenues and ROA ($35.1 vs. $16.8 billion, p < .001; and 8.97 percent vs. 4.28 percent, p < .001, respectively)."
-**验证状态**: EMERGING
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **写入日期**: 2026-07-07
 **槽位**: M2
 **骨架**:
@@ -1270,7 +1270,7 @@ Our analysis of [outcome] consists of three progressive steps. In Step 1, we inc
 ### 变体 74: M2 可得性损耗对比 + 范围限制保守检验声明 (pfarrer2010 型)
 **来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
 **原始句锚点**: "Availability of analysts' estimates ... reduced the 4,365 firm-year full sample to 3,107 firm-year observations. ... These characteristics suggested our sample provided a conservative test of our hypotheses since they result in some restriction of range to primarily large and well-performing firms."
-**验证状态**: EMERGING
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **写入日期**: 2026-09-05
 **槽位**: M2
 **骨架**:
@@ -1283,7 +1283,7 @@ Our analysis of [outcome] consists of three progressive steps. In Step 1, we inc
 ### 变体 75: M6 1/n 衰减加权历史自控制 + 权重窗稳健性 (pfarrer2010 型)
 **来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
 **原始句锚点**: "Drawing from organizational research on learning and contagion (...), we generated a weighted sum that assigned a weight of 1/n for each year prior to a focal year ... We constructed 15-, 10-, 5-, and 3-year summed variables, utilizing the 1/n 'decay' rates for each of the variables, and obtained the same results for each alternative."
-**验证状态**: EMERGING
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **写入日期**: 2026-09-05
 **槽位**: M6
 **骨架**:
@@ -1296,7 +1296,7 @@ Our analysis of [outcome] consists of three progressive steps. In Step 1, we inc
 ### 变体 76: M2 双名单合并 + 重叠率验证 (pfarrer2010 型)
 **来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
 **原始句锚点**: "We combined information from the two lists because Fortune only listed the top 10 firms in an industry between 1997 and 1998, and only the top 20 firms between 1999 and 2005. Of the 25 different firms listed in Fortune's top 10/top 20 list between 1999 and 2005, 22 were also named in the Wall Street Journal (WSJ)/Harris top 25, showing strong overlap between the two lists and validating our choice to combine the information from them."
-**验证状态**: EMERGING
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **写入日期**: 2026-09-05
 **槽位**: M2/M4
 **骨架**:
@@ -1309,7 +1309,7 @@ Our analysis of [outcome] consists of three progressive steps. In Step 1, we inc
 ### 变体 77: M8 操作化定义稳健性 — 未列表替代阈值段 (pfarrer2010 型)
 **来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
 **原始句锚点**: "To ensure that our definition of material surprises did not drive results, in analyses not reported here we also tested definitions based on top and bottom percentile cutoffs of 20, 30, and 40 percent ... The results were substantively the same as those reported here."
-**验证状态**: EMERGING
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **写入日期**: 2026-09-05
 **槽位**: M8
 **骨架**:
@@ -1370,7 +1370,7 @@ story_fidelity: section_variant
 
 **来源论文**: Higgins & Gulati 2003 (Organization Science)
 **原始句锚点**: "Further, to guard against sample selection bias associated with this listing, we collected information on firms that went public in the same time frame as our sample but that did not survive in their original form by 1996."
-**验证状态**: EMERGING（单篇）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **槽位**: M2
 **骨架**:
 > Our primary list of [units] was obtained from [industry listing] ([n]). Unlike other sources, this listing does not include [tangentially participating corporations]; hence, ours is a narrower definition of [domain] than that employed by other researchers (e.g., [prior studies]) and is in line with more recent research on the industry (e.g., [recent studies]). Further, to guard against sample selection bias associated with this listing, we collected information on [units] that [underwent the focal event] in the same time frame as our sample but that did not survive in their original form by [list year]. From these sources, we identified an additional [n] [units] that had experienced [name changes / mergers / acquisitions]. Combining these [recovered event units] with [the complementary non-event units] yielded a final combined sample size of [N].
@@ -1386,7 +1386,7 @@ story_fidelity: section_variant
 
 **来源论文**: Higgins & Gulati 2003 (Organization Science)
 **原始句锚点**: "Since the number of ties covaries with the size of the upper echelon, we divided upstream, horizontal, and downstream tie measures by upper echelon size, consistent with recent research (Geletkanycz and Hambrick 1997)."
-**验证状态**: EMERGING（单篇）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **槽位**: M4
 **骨架**:
 > [Focal construct] was assessed by identifying and manually coding [the observable carrier, e.g., the last five years of employment and board memberships], as listed in [artifact source]. We assessed the number of ties each individual had to prominent [category A/B/C] organizations. To gauge whether particular affiliations were with prominent institutions, we used [third-party ranking basis] as the criterion for prominence: we [generated the list] from [ranking source, editions/years], coding any [institution] that appeared [top-N in relevant categories / anywhere on the listing] at any time during [window] as prominent (n = [count]). We supplemented this list with [notable institutions not captured by the ranking, e.g., private or foreign organizations with comparable scale] (n = [k]). Since the number of ties covaries with the size of the [team], we divided the [category] tie measures by [team size], consistent with recent research ([citation]). [Per-category base rate: the [teams] in our sample generally had [k] members with at least one tie to a prominent [category] organization.]
@@ -1402,7 +1402,7 @@ story_fidelity: section_variant
 
 **来源论文**: Higgins & Gulati 2003 (Organization Science)
 **原始句锚点**: "Carter and Dark's (1992) analyses suggest that these measures provide a finer-grained evaluation than a simpler market share alternative (e.g., Megginson and Weiss 1991)."
-**验证状态**: EMERGING（单篇）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **槽位**: M3
 **骨架**:
 > [DV] was measured using an index developed by [author, year] and then updated by [author, year]. The measures are based on [observable artifact] and have been cited widely in both [field A] and [field B] research ([citations]); this information was available for all but [n] of the [units] in our dataset ([accounting for m firms]). Scores may assume a value ranging from [floor, indicating lowest level], to [ceiling, indicating highest level]; in our data set, the mean score was [x]. [Author]'s ([year]) analyses suggest that these measures provide a [finer-grained] evaluation than a simpler [alternative] measure ([citation]). We obtained [the measure inputs] from [artifact source].
@@ -1418,7 +1418,7 @@ story_fidelity: section_variant
 
 **来源论文**: Higgins & Gulati 2003 (Organization Science)
 **原始句锚点**: "For example, a firm with an upper echelon with 10 members, two of whom had ties to prominent pharmaceutical organizations, would receive a score of 1, while a firm with the same-sized upper echelon that included ... would receive a score of 2."（同段连续原文，删节处省略）
-**验证状态**: EMERGING（单篇）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **槽位**: M4
 **骨架**:
 > We measured [range/heterogeneity of the construct] two ways. First, we used a variation of the [Herfindahl-Hirschman index], H = 1 − Σ p_i², in which H is the measure of heterogeneity or range and p is the percentage of [members] who [have property in category i]. This variable was set to equal zero when the [team] had no relevant [properties]. This measure is equivalent to [Blau's (1977)] index of heterogeneity. Second, we measured [range] as the count, 0 to [K], of the number of [categories] covered. For example, a [team] with [N] members, [k] of whom [property of one category], would receive a score of [1], while a [team] with the same-sized [team] that included [members spanning two categories] would receive a score of [2].
@@ -1434,7 +1434,7 @@ story_fidelity: section_variant
 
 **来源论文**: Higgins & Gulati 2003 (Organization Science)
 **原始句锚点**: "The individuals to whom we spoke at the service organizations were all intimately involved in various IPO deals in the biotechnology industry during the period of our study and provided extremely helpful information to us about the complexities involved in taking a firm public."
-**验证状态**: EMERGING（单篇）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **槽位**: M2
 **骨架**:
 > Finally, we conducted field and ethnographic analysis at [n] [focal organizations], [k] [service organizations], and [m] [complementary organizations]. The individuals to whom we spoke at the [service organizations] were all intimately involved in [the focal process] during the period of our study and provided [helpful] information to us about the complexities involved in [the focal process]. Among the [focal organizations], we completed [n] formal interviews, ranging in length from [x] to [y] hours each. [Interviewee composition: n1 in business-related positions, n2 in technical/senior research positions.] In addition, we solicited ongoing input from one expert informant who [has worked at multiple organizations and was centrally involved in the focal process].
@@ -1450,12 +1450,12 @@ story_fidelity: section_variant
 
 **来源论文**: Gulati & Sytch 2007 (Administrative Science Quarterly)
 **原始句锚点**: "We verified the comprehensiveness of this list with several executives in the industry and also by comparing it with component lists used by the firms to monitor the quality of their own parts."
-**验证状态**: EMERGING（单篇）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **槽位**: M1/M2
 **骨架**:
 > The analysis presented in this paper is based on fieldwork, followed by a survey of [respondent role] at [Organization A] and at [Organization B]. Prior to launching the survey, we conducted a total of [N] interviews ([n1] at [A] and [n2] at [B]). The initial interviews were exploratory and open ended and were intended to clarify the nature of [the focal phenomenon]. In later interviews, we sought clarification on our central constructs of [C1], [C2], [C3], and [C4]. The unit of analysis for the survey instrument is the [unit], with each survey respondent providing data on [focal content], as well as data on [partner content]. This sampling approach is akin to one used by [seminal study] in their study of [the industry]. Drawing on previous studies of [the industry] and discussions with informants, we used a list of [N_frame] [units]. We verified the comprehensiveness of this list with several [industry experts] and also by comparing it with [lists] used by the firms themselves. For each [unit], [senior managers] supplied the names of [respondents] with oversight for [the activity]; the [independent office] in each company verified the expert status of each survey respondent.
 
-**与原骨架差异**: 变体 84（档案研究田野佐证组件）的访谈对象**不进估计样本**、服务于过程复杂度通报与测量接地；本变体是问卷前置田野的**生产性使用**：(1) 两阶段访谈（探索性开放→构念澄清）直接产出测量工具；(2) 抽样框以"外部专家核验 + 企业内部清单比对"双路验证完备性；(3) 受访者以"高管提名 + 独立办公室（如 controller's office）资格核验"双环把关。与变体 6（多通道精英招募）的分界：彼处招募的是估计样本本身，本变体核验的是**抽样框与受访者资格**。近亲 实证对象构建 变体7（专家报告人资格核验三环链，EMERGING 文件）为资格核验拍的家族成员。
+**与原骨架差异**: 变体 84（档案研究田野佐证组件）的访谈对象**不进估计样本**、服务于过程复杂度通报与测量接地；本变体是问卷前置田野的**生产性使用**：(1) 两阶段访谈（探索性开放→构念澄清）直接产出测量工具；(2) 抽样框以"外部专家核验 + 企业内部清单比对"双路验证完备性；(3) 受访者以"高管提名 + 独立办公室（如 controller's office）资格核验"双环把关。与变体 6（多通道精英招募）的分界：彼处招募的是估计样本本身，本变体核验的是**抽样框与受访者资格**。近亲 实证对象构建 变体7（专家报告人资格核验三环链，VERIFIED 文件）为资格核验拍的家族成员。
 
 **诚实边界**: "akin to [seminal study]" 的先例锚定须真实可引；清单核验的两个判据（外部专家+内部清单）缺一会削弱完备性主张；独立资格核验需真实存在的组织内第三方，不能由提名者自证。
 
@@ -1468,7 +1468,7 @@ story_fidelity: section_variant
 
 **来源论文**: Gulati & Sytch 2007 (Administrative Science Quarterly)
 **原始句锚点**: "We examined the nonresponse bias by comparing the characteristics of the components for which responses were received against those for which no response was received ... using the Kolmogorov-Smirnov test (Siegel and Castellan, 1988)."
-**验证状态**: EMERGING（单篇）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **槽位**: M2
 **骨架**:
 > We took several steps to ensure a good response rate for the survey ([method citation]), ranging from having [senior management] endorse the project to conducting multiple follow-ups with non-respondents. [n1] [respondents] responded from [Site A], and [n2] from [Site B], representing response rates of [p1] percent and [p2] percent, respectively, and a total response rate of [p] percent. We examined the nonresponse bias by comparing the characteristics of [units] for which responses were received against those for which no response was received for [k] key [unit] characteristics ([anchoring prior study]) using the [Kolmogorov-Smirnov] test ([citation]). We found no significant differences between the categories of respondents and non-respondents. The respondents provided information on [N_obs] [exchange relationships]. We eliminated [n1] observations with missing data and [n2] observations [outside the intended scope], leaving [N_final] observations for [relations] with [N_unique] unique [partners].
@@ -1486,7 +1486,7 @@ story_fidelity: section_variant
 
 **来源论文**: Gulati & Sytch 2007 (Administrative Science Quarterly)
 **原始句锚点**: "Although these reliabilities fall short of the frequently used threshold of .70 (Nunnally, 1978), ... this should not be considered a benchmark every scale has to pass."
-**验证状态**: EMERGING（单篇）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **槽位**: M3/M4
 **骨架**:
 > To ensure the reliability and discriminant validity of our constructs, we relied primarily on items used in prior research and subjected them to a thorough pretest; we eliminated items that were [unclear], [ambiguous], or led to perceived overlaps in constructs. [Exploratory factor analysis] yielded a [k]-factor solution, with factor 1 reflecting [construct A] and factor 2 reflecting [construct B]; taken together, the factors explained over [x] percent of the variance. [Items i], [item j], and [item k] could not differentiate between our two constructs, and we dropped them from scale construction. We adopted this factor structure because we (1) had at least three items loading on each factor, (2) eliminated items with high cross-factor loadings, and (3) retained factors with eigenvalues of at least 1.0 ([citations]). Here and throughout the paper, loadings resulting from the [orthogonal rotation] procedure were verified using the [oblique rotation] form ([citation]). Items were standardized to eliminate differences in variance due to scaling and averaged to construct the [construct A] (Cronbach's α = [.x1]) and [construct B] (α = [.x2]) scales. Although these reliabilities fall short of the frequently used threshold of [.70] ([citation]), [methodological authorities] have explicitly stated that this should not be considered a benchmark every scale has to pass; according to [classical test theory], losses in reliability of constructs only make it harder to capture significant relationships between constructs, hence making our analysis more conservative while leaving the likelihood of our making a type I error intact ([citations]).
@@ -1504,7 +1504,7 @@ story_fidelity: section_variant
 
 **来源论文**: Gulati & Sytch 2007 (Administrative Science Quarterly)
 **原始句锚点**: "Given that we had two distinct categories of actors, we opted for the precision of spline estimation, which allowed us to explore the possible variations ... that would not be uncovered in a single variable approach."
-**验证状态**: EMERGING（单篇）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **槽位**: M4
 **骨架**:
 > The [additive] specification of [composite construct] is directly in line with [the original theoretical proposition] ([canon]) and was the choice of other research on similar issues ([citations]). An alternative specification is the [product] of the two components. Because we focus on [ongoing exchange relationships], we have no [zero-dependence cases] and thus run no risk of misrepresenting [the composite] in the instances of [the degenerate case]. More generally, while the [additive] score may be more accurate than the [product] score in some situations ([numeric pair 1]), it could be less accurate in others ([numeric pair 2]). We hence verified our results using a [product] score, and they remained similar. [The stronger alternative] would have to apply at the level of [predictor] and [outcome] given [design constraint], the latter of which is unattainable. We used a [spline] specification to measure the direction of [asymmetry] and differentiate between [side A]'s and [side B]'s [advantage] ([citation]); a single variable would needlessly constrain [one side], eliminating the flexibility and the precision of [spline] estimation ([citation]). Following this decomposition, our sample returned [n1] [dyads] in which [side A] held an [advantage] and [n2] in which [side B] did.

@@ -1,4 +1,5 @@
 # Phrasebank 索引 — Morley 2021 措辞变化库（auxiliary 语言实现层）
+> 论证角色标注：critique-phrases=A&R 材料；hedging-strength=Claim 强度校准（Booth Ch06 hedge）；其余为跨角色措辞变体库；总文法见 填位规则见 `_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
 
 本索引组织 `phrasebank/` 下全部文件。**层级定位**：auxiliary——顶刊蒸馏模板与各 write skill 的 slot 骨架决定**说什么**；phrasebank 只在其措辞反复使用时提供**怎么换个说法**与**强度校准**。
 

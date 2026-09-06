@@ -3,7 +3,7 @@ type: canonical_theory_lens
 canonical_id: "10-cross-discipline-construct-import"
 status: VERIFIED
 gap_type: Inadequacy
-cross_paper: EMERGING (1 paper)  # status VERIFIED via expert_audit_override 2026-08-29 (user ruling: Westphal 蒸馏的引言/理论部分升 VERIFIED)
+cross_paper: VERIFIED (1 paper, override)  # status VERIFIED via expert_audit_override 2026-08-29；cross_paper 2026-09-06 同步（用户升级裁定：Westphal 系单源即 VERIFIED）
 generativity: GENERATIVE
 exclusivity: MEDIUM
 source_papers:
@@ -29,7 +29,7 @@ source: Distilled by distill-introduction-exemplar Phase 4.6 (整篇蒸馏, dist
 
 ### 跨论文复现
 
-- EMERGING（1 paper）：westphal_bednar2005 (ASQ, 2005)。单源模式——推荐时必须标注，不得写成默认做法。
+- VERIFIED — expert_audit_override（user 2026-09-06：Westphal 系单源即 VERIFIED）：westphal_bednar2005 (ASQ, 2005)。单源模式——推荐时仍标注单源来源。
 
 ### 变体 A：跨学科构念导入——轶事演绎+引语定义+触发桥接型（westphal_bednar2005 型）
 

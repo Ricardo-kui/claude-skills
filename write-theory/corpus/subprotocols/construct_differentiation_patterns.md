@@ -307,7 +307,7 @@ story_fidelity: section_variant
 pattern_id: a_umbrella_decomposition_platform_for_categorical_ordering
 build_type: 构念辨析型（工具性伞构念解构——辨析为比较服务）
 source_papers: ["gulati2005-adaptation-vertical"]
-confidence: EMERGING（单篇，待第二篇交叉验证）
+confidence: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 -->
 
 ### 变体 E：伞构念按问题根因解构，作为跨类别模式排序的解析平台（Umbrella Decomposition for Categorical Ordering）

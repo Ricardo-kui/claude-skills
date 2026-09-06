@@ -24,9 +24,11 @@
 
 ## Stakes
 
-1. 🔴 **So-what 测试**（§14.3.3 强制）：陈述读者无知/误解状态后自问 "So what?"——答不出具体后果则 stakes 不够，换更强的 stakes 类型。
+1. 🔴 **So-what 测试**（§14.3.3 强制）：陈述读者无知/误解状态后自问 "So what?"——答不出具体后果则 stakes 不够，换更强的 stakes 类型。**两轮迭代**：第一轮答出直接代价，第二轮答出不知道它还阻碍回答的更重要问题（Q2）；停点 = 受众改问 "What do we do about it?"，不是无话可说（Booth §14.3.3）。
 2. 🟡 **量化优先，narrative 兜底**：有政府统计/行业报告/上市公司数据则量化；无法量化用具体 narrative Stakes（公司/市场/决策情境）。无数字且无具体案例 = 退回 generic，不合格。
 3. 🟡 **who suffers 具体化**：落到具体 stakeholder 类型（哪类企业/决策者/群体），用 "firms"/"managers" 泛称不达标。
+4. 🔴 **Q1→Q2 知识链（conceptual consequence，Booth Ch02）**：理论端 stakes 必须落到知识链——不知道/误解 [Q1：本文回答的问题]，就无从回答 [Q2：更重要的邻接问题]；重要性靠 Q2 继承，不靠把 Q1 说得更响。只有 actor-side 后果（企业损失什么）不算理论 stakes，必须再追一层：这阻碍学界回答什么更根本的问题？每个 Stakes 骨架含显式 Q2 或等价的更重要问题回链。
+5. 🟡 **代价视角与代价/收益分工（Booth Ch14 §14.3）**：代价从**受众**视角陈述（they pay, not you pay——学界付出什么理解代价，而非作者觉得重要）；呈现 problem 用代价/后果，呈现 solution/Preview 时才转收益语态——读者被真实代价驱动甚于潜在收益。
 
 ## Literature Turn（对话编织纪律——防止"罗列而非对话"）
 
@@ -78,3 +80,12 @@
 
 - 按适用场景、证据状态、研究情境和期刊选**一个主推变体**（不默认变体 A）；仅当两个方案会实质改变故事路径时，额外给 **1 个**备选及切换条件——不为每个模块机械输出两个备选。
 - 优先级：corpus 文件的变体级约束（适用场景/范文锚定）> 用户研究情境匹配 > 路由表的模板级推荐。项目故事的具体组织只能由 canonical `story` 与 `story.integrity` 的已确认内容收窄；不得由故事类型、legacy blueprint 或 exemplar 身份调制。
+
+## 段落论证文法（argument unit——先骨架后句子）
+
+> 文法本体（五问、语料角色索引、拼贴判据、完成判据）见 `../story-blueprints/v4/rhetoric-moves/_argument-grammar.md`（单一事实源）；本节只写 Introduction 侧的角色接线。
+
+1. 🔴 **模块→论证角色映射**：Contribution=claim；Tension=problem claim + reason（为什么现有理解会 trouble）；Stakes=consequence 证据（代价锚点）；Literature Turn=conversation evidence（发现锚定）；Theory Lens=**warrant**（把 puzzle 连到预测的一般性理论原则——它是引言中心论证的授权环节，不是背景装饰）；Hook/Preview/Transitions=framing（豁免五问，但 Hook 的核心判断句仍是 claim 性质）。
+2. 🔴 **先骨架后句子**：渲染每个论证型模块前先写出该段角色序列，再从对应 corpus 文件按角色取句填位；语料句式只提供表达，不提供顺序（**语料优先改编**服从本条）。
+3. 🟡 **拼贴自查**：五问逐条指认句位；命中 `_argument-grammar.md` 任一拼贴判据（证据孤儿 / warrant 悬空 / 引用列队等）即按角色序列重组——句子保留，骨架重排。
+4. **完成判据**：四个论证型模块五问全部可指认；framing 模块已标注豁免。

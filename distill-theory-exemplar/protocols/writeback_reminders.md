@@ -32,6 +32,8 @@
 | **待审阅** | 仅 1 篇出现，或样本有偏 | 只入 Vault 注释，不入 skill |
 | **不采纳** | 与已验证的顶刊惯例明显冲突（如独立 T6 段落） | 不写入，仅记录为反模式 |
 
+> **论证角色标注（2026-09-06 起，段内论证文法配套）**：任何写入 `corpus/` 的新变体/句式块，块内容首行须带 `> 论证角色：<Claim|Reason|Evidence|Warrant|[D] 定义前提|A&R|Framing>（一句话功能）`（角色定义见 `../../../story-blueprints/v4/rhetoric-moves/_argument-grammar.md`）——执行器把 block_text 原样插块，标注随块落盘；gate ① 审查时把"新块缺论证角色标注"视为需修正项。
+
 #### 句式级回写落点（sentences/ 文件路由）
 
 句位级句式变体（Phase 2.2b 提炼）按句位路由到 write-theory 的 `corpus/sentences/` 对应文件：

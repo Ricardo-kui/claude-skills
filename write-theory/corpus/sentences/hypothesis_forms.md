@@ -1,4 +1,5 @@
 # 假设陈述句语料库
+> 论证角色：**Claim**——假设句=段落级 claim 的正式形式（形式-测量匹配见本文件决策矩阵）；填位规则见 `_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
 
 ## 假设形式决策矩阵（Form–Measurement Match）
 
@@ -190,7 +191,7 @@ tend to amplify the relationship between [X-kind] and [Y]:
 pattern_id: a_priori_partial_mediation_weakening_pair
 build_type: 跨类型（句式级；任何"主效应+中介延伸"双 DV 设计）
 source_papers: ["higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"]
-confidence: low-medium（单篇来源，EMERGING 待第二篇交叉验证）
+confidence: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 sentence_position: hypothesis_sentence（中介效应节扩展）
 -->
 
@@ -199,7 +200,7 @@ sentence_position: hypothesis_sentence（中介效应节扩展）
 pattern_id: s_hypothesis_forms_group_comparative_and_relative_adverse_effects
 build_type: 跨类型（句式级，E1 类别调节 / 比较型假设）
 source_papers: ["gulati2005-adaptation-vertical"]
-confidence: EMERGING（单篇，待第二篇交叉验证）
+confidence: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 sentence_position: hypothesis_sentence
 -->
 
@@ -292,7 +293,7 @@ prerequisite to establishing this relationship empirically.
 
 **原文锚点**: "Therefore, we expect each of these mechanisms to partially mediate the relationship between joint dependence and performance." ... "Our development of hypothesis 2 in effect constitutes the theoretical prerequisite to establishing this relationship empirically."
 
-**验证状态**: EMERGING→双源（higgins_2003 + gulati_2007 同族复现，应用形态不同：单中介 a/b 对 vs 多中介集合+协议映射）；待第 3 篇升 VERIFIED
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED；且本条目已是 higgins_2003 + gulati_2007 同族双源，应用形态不同：单中介 a/b 对 vs 多中介集合+协议映射）
 
 <!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:s_hypothesis_forms_mediator_set_partial_mediation_protocol_mapping -->
 
@@ -453,7 +454,7 @@ H[N]b: [Partner]'s [advantage construct] is negatively related to [focal actor]'
 
 **原文锚点**: "Hypothesis 1a: A manufacturer's dependence advantage is positively related to its performance in the procurement relationship." ... "Hypothesis 1b: A supplier's dependence advantage is negatively related to the manufacturer's performance in the procurement relationship."
 
-**验证状态**: EMERGING（单篇来源，待第二篇交叉验证）；"同 IV 双 DV"主格式及其反号规则不受影响
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）；"同 IV 双 DV"主格式及其反号规则不受影响
 
 <!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:s_hypothesis_forms_mirror_pole_paired_ab -->
 

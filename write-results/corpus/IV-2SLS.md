@@ -276,7 +276,7 @@ pattern_id: switching_reg_selection_diagnostics_null_hazard_positive_hausman
 estimator_family: switching regression / endogenous switching（选择修正诊断收束）
 slot: R7（自选择修正诊断，收尾型）
 source_papers: ["gulati2005-adaptation-vertical"]
-confidence: EMERGING（单篇 full_text_verified，待第二篇交叉验证）
+confidence: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 -->
 
 
@@ -320,7 +320,7 @@ restrictions ([citation]).
 
 **反模式**: 恰好识别时假装排他性"已被检验"；只报相关性不提排他性；用过度识别检验话术包装恰好识别系统。
 
-**验证状态**: EMERGING（单篇，待第二篇交叉验证）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 
 **原文锚定**: "Because our system is just identified (we have equal numbers of endogenous variables and instruments), we could not formally check for the absence of correlation between the instrumental variables and the structural errors by testing for overidentifying restrictions (Hausman, 1978)."
 
@@ -369,7 +369,7 @@ from the model.
 
 **反模式**: 把 3SLS 藏进稳健性小节而主表仍用 OLS（联立性偏误未被控制却宣称因果）；系统表只导航性能方程不提对应方程；省略基线例外句导致读者误读 Model 1。
 
-**验证状态**: EMERGING（单篇，待第二篇交叉验证）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 
 **原文锚定**: "The table reports systems of equations, where each system comprises two equations or models that are estimated simultaneously: the first one reflects performance as a function of joint dependence ... and the second one estimates joint dependence as a function of performance along with the set of exogenous variables."
 
@@ -439,7 +439,7 @@ repeated random samples equal to the number of clusters. ... Our estimates are b
 
 **反模式**: 3SLS 下直接照搬 OLS 的 cluster-robust SE 话术（该选项并不存在）；省略簇感知重抽细节使读者无法判断推断单位；把 bootstrap 结果写成 identical。
 
-**验证状态**: EMERGING（单篇，待第二篇交叉验证）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 
 **原文锚定**: "Because the direct adjustment of standard errors is not available in 3SLS Stata estimation, we used a nonparametric bootstrap method to extract the bias-corrected coefficient estimates and standard errors (Efron, 1981, 1982)."
 

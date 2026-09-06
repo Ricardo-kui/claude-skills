@@ -3,7 +3,7 @@ type: canonical_theory_lens
 canonical_id: "09-construct-contrast-introduction"
 status: ✓ STANDARD
 gap_type: Inadequacy / Incompleteness
-cross_paper: EMERGING (1 paper)
+cross_paper: VERIFIED (1 paper, expert_audit_override)
 generativity: GENERATIVE
 exclusivity: HIGH
 source_papers:
@@ -28,7 +28,7 @@ source: Distilled from Du & Tsolmon (ORSC) Introduction P3
 ## 验证状态
 
 ### 跨论文复现
-- **EMERGING** (1 paper): ORSC (du_tsolmon2024)
+- **VERIFIED — expert_audit_override**（user 2026-09-06：Pollock 系单源即 VERIFIED）：pfarrer_pollock_and_rindova_2010 (AMJ, 变体 B)；另有 du_tsolmon2024 (ORSC, 变体 A) 独立源。
 - 待后续蒸馏补充更多来源以升级 VERIFIED
 
 ### 生成力

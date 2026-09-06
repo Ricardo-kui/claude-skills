@@ -1222,7 +1222,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 **禁忌**: 双段不得重复同一措辞——第二段必须换锚（从文献景观换到现象特异性）并升级语气；若给不出前因非平凡的理论理由，退回单段变体，勿硬凑两段
 
-**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 
 <!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:tension_consequences_to_antecedents_relay -->
 

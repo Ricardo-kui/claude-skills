@@ -879,7 +879,7 @@ develop the theoretical foundation for our hypotheses predicting their effects o
 pattern_id: transfer_plus_sorting_dual_warrant_signal
 build_type: 机制推演型（信号/背书/声望类假设通用）
 source_papers: ["higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"]
-confidence: low-medium（单篇来源，EMERGING 待第二篇交叉验证）
+confidence: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 -->
 
 ### 变体 K：传递 + 自选择双 warrant 信号推演（Transfer + Sorting Dual-Warrant Signal Derivation）

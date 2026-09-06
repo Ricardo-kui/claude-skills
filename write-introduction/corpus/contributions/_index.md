@@ -28,10 +28,11 @@ source_papers:
   - westphal_zajac_1998_symbolic_management (ASQ, 1998): "变体 F：双形式×双后果矩阵 Contribution（decoupling 操作化进贡献句 + 双域 uniqueness 替代 Stakes），VERIFIED (expert_audit_override 2026-08-28) — (变体 F in three-layer-contribution.md)"
   - post_2022_women_tmt_strategic_renewal (AMJ, 2022): "变体 G：悖论消解中槽型 — 三段式贡献中段专设 'resolves the seemingly contradictory ways' 槽化解前文悖论，贡献序列与 Tension 序列镜像；第三贡献 not only...also 合并主效应确认与边界条件，VERIFIED (expert_audit_override 2026-08-29) — (变体 G in three-layer-contribution.md)"
   - westphal_bednar2005 (ASQ, 2005): "变体 H：机制贡献+缺口填补+首例声明三联型 — 给主文献的机制贡献（一句）→ 借他人之口立 gap（'as many authors have noted'）→ 源学科迁移贡献的 首例声明（'perhaps the first systematic field study'带对冲+限定域），VERIFIED (expert_audit_override 2026-08-29: 用户裁决 Westphal 蒸馏的引言与理论部分证据等级 VERIFIED) — (变体 H in three-layer-contribution.md)"
-  - higgins_gulati2003 (OS, 2003): "变体 U：谱系完成式+二阶延伸型 — 点名单篇前作补链 + direct→second-order 结果链外推（contributions/_index.md 变体 U；EMERGING 单源）"updated: 2026-09-06
+  - higgins_gulati2003 (OS, 2003): "变体 U：谱系完成式+二阶延伸型 — 点名单篇前作补链 + direct→second-order 结果链外推（contributions/_index.md 变体 U；VERIFIED — expert_audit_override 单源）"updated: 2026-09-06
 created: 2026-05-19
 source: Extracted from MVP30 narrative_analysis files + SKILL.md Makadok table + kim_lee2026 + chenganesanliu2009
 ---
+> 论证角色：**Claim**——贡献句=论文主 claim 的正式形式（contestability/specificity 校准见 quality-gates §2）；填位规则见 `_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
 
 # Contribution Statements — Introduction 贡献声明句法
 
@@ -633,7 +634,7 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 
 **禁忌**: 谱系锚定必须真实——canonical 前作确实没做本文补的环节；"second-order" 外推需在结果端可操作化（本文以机构投资者数量与质量落地），否则沦为修辞；谱系锚不要点多于一个，多点会退化为普通文献对话
 
-**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 
 <!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:contribution_lineage_completion_second_order -->
 

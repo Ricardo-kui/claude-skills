@@ -16,10 +16,13 @@
 >     keywords: ["<registry 匹配关键词，可选>"]
 >     block_text: |          # 变体块全文；{NEXT} 由执行器替换为分配的编号/字母
 >       ### 变体 {NEXT}：<名称>（<citekey> 型）
+>       > 论证角色：<Claim|Reason|Evidence|Warrant|[D] 定义前提|A&R|Framing>（一句话功能）
 >       ...
 >     index_note: "变体 {NEXT}：<一句话特征>，<citekey>，EMERGING"
 >     file_override: "<可选：gate ① 改判锚点文件时填，corpus 相对路径>"
 > ```
+>
+> **论证角色标注（2026-09-06 起，段内论证文法配套）**：每个新块 `block_text` 的首个内容行（`### 变体` 标题之后）必须是论证角色标注——`> 论证角色：<Claim|Reason|Evidence|Warrant|[D] 定义前提|A&R|Framing>（一句话功能）`，角色定义与语料角色索引见 `../../story-blueprints/v4/rhetoric-moves/_argument-grammar.md`。执行器把 block_text 原样插块，标注随块落盘；gate ① 审 plan/dry-run diff 时把"新块缺论证角色标注"视为需修正项。存量条目已于 2026-09-06 全部标注。
 >
 > **--auto-write**：默认仍需 gate ① 人审确认 plan 后写回；调用方显式传 `--auto-write`
 > （或批量模式用户预先授权）时，可按 plan 直接写回 ADD/EXTEND 项（**SKIP 项永不写回**），

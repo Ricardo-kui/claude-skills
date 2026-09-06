@@ -1,4 +1,5 @@
 # Evidence Patterns
+> 论证角色：**Evidence**——发现锚点材料（每类论据的句式骨架；论据须回扣到它支撑的具体推理步骤）；填位规则见 `_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
 
 本文件收集 Theory 中证据的类型、功能、摆放位置以及文献引用的三要素句式模板。
 

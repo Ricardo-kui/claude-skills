@@ -1,4 +1,5 @@
 # 调节机制修改句语料库
+> 论证角色：**Reason**——调节论证=带边界条件的推理 move（双边完整纪律见本文件与 moderator_selection_frameworks）；填位规则见 `_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
 
 ## 缓冲型 (Buffering)
 

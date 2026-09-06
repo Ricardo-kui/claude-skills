@@ -24,3 +24,4 @@
 | **孤儿引语**: epigraph/引语独立存在，后无 pivot 解读句 | 引语后必须接 "This quote captures..." 式 pivot；见 §0.6-3 |
 | **引文堆叠无锚点** (citation lumping): ≥2 引文的句子中无任何引文带独立发现从句，综合退化为"范畴断言+句末堆引" | 拆为发现锚定从句（"finding with direction ([cite]), whereas contrasting finding ([cite])"），或删去无法说明发现的引文；合格线：任取一个引文可还原其发现方向；句式见 `literature-turns/literature-turn-templates.md` 变体D |
 | **方向压平** (direction flattening): 把方向相反的发现概括进 "X 和 Y 都影响 Z" 式无方向类别句 | 恢复 whereas/but 对比结构，让每个发现的 valence 可见；Constructs / Mechanism distinction 类贡献强制检查——方向对比往往是贡献的立论前提 |
+| **未回应显见异议** (unanswered objection): 读者对问题/框架最可预期的质疑全文无一被承认——引言读起来像写给没有其他观点的受众（Booth Ch09：论证不仅是逻辑构造，还是社会互动） | Phase 2 生成异议预判清单（quality-gates §4 Gate 4），对最强异议三选一：正文回应（标记词库借 `../write-theory/corpus/sentences/acknowledgment_response.md` §3–4）、显式 park 到后文节、诚实让步 |

@@ -9,6 +9,7 @@ status: EMERGING
 risk_level: needs-context
 created: 2026-08-01
 ---
+> 论证角色：**A&R**——竞争理论/机制批判措辞（须配具体理论+局限；何时承认由推理协议管，本文件管怎么写）；填位规则见 `_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
 
 # Phrasebank: 批判性表达（Morley 08 章收割）
 

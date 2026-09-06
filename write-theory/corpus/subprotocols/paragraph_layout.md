@@ -1,4 +1,5 @@
 # Paragraph Layout — 段内论点-论据-总结句布局协议
+> 论证角色：**骨架文件**——四段位即角色槽（Topic=claim、Reasoning=reason、Tokens=evidence、Wrap=收束；warrant 场合见 reasoning_soundness_protocol §5）；总文法见 填位规则见 `_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
 
 本文件是**假设推导段落内部**的论证布局协议：一个假设推导段如何从论点句展开，如何选择并摆放论据（文献/理论/案例），如何收束。**职责边界**：
 - 本文件 = **段内**（一个假设推导段内部如何布局）

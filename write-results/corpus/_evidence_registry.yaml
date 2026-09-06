@@ -5,9 +5,9 @@
 meta:
   schema_version: 1.1.0
   registry_type: estimator-slot-skeleton
-  last_updated: '2026-09-06c'
-  last_batch_id: batch_41_gulati_ajs1999 + batch_41_gulati2007_residual_sync
-  batches_processed: 44
+  last_updated: '2026-09-06d'
+  last_batch_id: batch_42_expert_audit_override_pollock_westphal_gulati
+  batches_processed: 45
   total_papers_indexed: 45
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
@@ -294,7 +294,8 @@ estimators:
         - id: r2_ols_estimation_strategy_split_sample
           skeleton: "Given that all our dependent variables were [continuous scale] and that the independent variables were [continuous] or [categorical], [estimator] was the primary statistical technique employed. The entire sample was dichotomized at the median of the [moderator] measure, with those units falling below the median classified as [context A] and those falling above it classified as [context B]. Thus, we ran separate sets of regressions for each subsample ([context A] and [context B]) and another set using the product-term approach to test interaction effects. Tables [X] and [Y] present regression results."
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             om: 1
           sources:
@@ -320,7 +321,8 @@ estimators:
         - id: r2_heckman_selection_preflight_rationale
           skeleton: 'For each set of analyses, we used Heckman selection models to guard against the possibility of sample selection bias (Heckman [year]). The first stage models [selection_process] on [N = value] [risk-set] observations; the second-stage regressions are estimated on the [N = value] selected [firm-event] observations, with standard errors corrected for [selection].'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -476,7 +478,8 @@ estimators:
         - id: r3_multi_indicator_hypothesis_adjudication
           skeleton: "Results of the [regression] testing Hypothesis [N] support the prediction that [IV family] will be positively associated with [DV] in [context] ([Table X], Model [Y]). For example, the coefficients for [indicator_1], [indicator_2], and [indicator_3] were all positive and significant; although the coefficient for [indicator_4] was not significant, it was positive, as hypothesized. [Converse sentence for the reverse-predicting rival: \"Conversely, having more [IV variant B] was negatively associated with [DV].\"] These results held after we controlled for [rival predictor], which is consistently unrelated to [DV] in [context]."
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             om: 1
           sources:
@@ -501,7 +504,8 @@ estimators:
         - id: r3_bk_sobel_partial_mediation_cross_dv_replay
           skeleton: 'To test for partial mediation, we followed procedures outlined in [Baron and Kenny (year)] and [Sobel (year)]. The results suggest evidence of mediation since (a) ... (b) ... (c) ... Further, we tested the significance of the indirect effects ... suggesting that [mediator] did partially mediate the relationships between [IV] and [DV], as hypothesis [H] predicted.'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -518,7 +522,8 @@ estimators:
         - id: r3_hypothesis_verdict_chain_null_concession
           skeleton: 'Hypothesis [N] predicted that [predictor] would be [positively/negatively] related to [outcome]. As shown in model [M], we did not find support for hypothesis [N]. However, hypothesis [N+1] ... was supported, as shown in models [M2] and [M3].'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -534,7 +539,8 @@ estimators:
         - id: switching_reg_cross_model_comparison_infrastructure
           skeleton: 'Because the [category] models are estimated separately, cross-model differences in coefficients are scored using the [joint covariance matrix] from [seemingly unrelated estimation]. In Table [X], [standard errors] appear in parentheses; [bracketed values] report [cross-model joint significance]. We navigate to [column subsets] for each hypothesis.'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -642,7 +648,8 @@ estimators:
         - id: r4_split_sample_primary_product_term_corroboration
           skeleton: "[Context-B pattern sentence: \"[Moderator-conditioned IV form] is positively related to [DV] for all [N] dimensions of [IV], supporting Hypothesis [N] ([Table Y]).\"] At the same time, the results show that [simple-effect form] does not predict [DV] [in context B]. [Null mirror sentence for context A: \"In contrast, [simple-effect form] was significant in [context A] (Table X), while [moderator-conditioned form] was consistently unrelated to [DV].\"] We also conducted separate analyses using the product-term approach to test interactions between [moderator] and the independent variables, and the interactions were significant, consistent with the split-sample findings."
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             om: 1
           sources:
@@ -756,7 +763,8 @@ estimators:
         - id: r6_cross_context_mirror_pattern_summary
           skeleton: "Thus, the results consistently show that [IV variant A] increases [DV] in [context A] but does not do so in [context B]. The opposite pattern emerges in [context B]: [IV variant B] [direction] [DV], while [IV variant A] is [unrelated/negative]."
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             om: 1
           sources:
@@ -766,7 +774,8 @@ estimators:
         - id: r6_unsupported_verdict_with_pattern_restatement
           skeleton: 'Hypothesis [N] is not supported. The results do show [an interpretable pattern]: the [X]-[Y] relationship is [direction] for [stratum A] (p = [value]) but [opposite/null] for [stratum B]. We restate this observed pattern in the vocabulary of the hypothesis without upgrading it to support.'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -782,7 +791,8 @@ estimators:
         - id: r6_contrary_pair_sign_reversal_null_dual_verdict_gulati_sytch2007
           skeleton: 'Hypothesis [H1a] predicted a [positive] effect of [X-pole A] and Hypothesis [H1b] a [negative] effect of [X-pole B]. The estimates deliver a dual verdict: [H1a] is supported (b = [value], p < [threshold]) whereas [H1b] is [not supported]: the coefficient runs [opposite] and is [insignificant]. We state both verdicts and the asymmetry explicitly.'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -1140,7 +1150,8 @@ estimators:
         - id: r8_baron_kenny_continuous_mediation_separate_analysis
           skeleton: "A separate analysis provided evidence that [mediator] mediated these relationships: when [mediator] is added to models of [DV1] and [DV2], the effects of the [IV] variables become nonsignificant, and the coefficient for [mediator] is strongly and positively significant in both models ([mediation citation])."
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             om: 1
           sources:
@@ -1166,7 +1177,8 @@ estimators:
         - id: r8_theory_motivated_additional_analyses
           skeleton: 'Since our claims centered on [theoretical mechanism], we tested whether our effects were especially strong during [theory-specified condition]. [Result sentence.] [Second paragraph: construct-level adjudication or boundary condition.]'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -1181,7 +1193,8 @@ estimators:
         - id: r8_in_system_baron_kenny_hypothesis_linked_mediation_gulati_sytch2007
           skeleton: 'We test mediation for each mechanism within the [simultaneous system]: [X] affects [mediator] (Model [a]); [mediator] and [X] jointly predict [Y] (Model [b]); the [X] coefficient [weakens] once [mediator] enters, consistent with partial mediation predicted by Hypothesis [H]. LEGACY Baron-Kenny logic; modern use requires bootstrap CI.'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -1279,7 +1292,8 @@ estimators:
 
             '
           paper_count: 2
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 2
           sources:
@@ -1376,7 +1390,8 @@ estimators:
 
             '
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -1457,7 +1472,8 @@ estimators:
             likely to [DV] than [reference group].'
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -1472,7 +1488,8 @@ estimators:
             Hypothesis [x] was not supported.
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -1567,7 +1584,8 @@ estimators:
 
             '
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -1660,7 +1678,8 @@ estimators:
             be a significant problem in our study.
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -1676,7 +1695,8 @@ estimators:
             examined if [IV_1] and [IV_2] had direct relationships with the magnitude of [outcome].
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -1762,7 +1782,8 @@ estimators:
 
             '
           paper_count: 2
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 2
           sources:
@@ -1804,7 +1825,8 @@ estimators:
             the effects of [asset_A] and [asset_B] on [outcome_family_B].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -1864,7 +1886,8 @@ estimators:
         - id: switching_reg_first_stage_intermediate_navigation
           skeleton: 'We used a [two-stage estimator] that attempts to account for possibly endogenous choices of [treatment category]. This model is estimated in two stages. First, a [multinomial choice model] is used to explain [treatment category]. Second, we estimate separate [outcome] regressions for subsamples of observations on each [category], in which we include the [non-selection correction] as a control variable.'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -1965,7 +1988,8 @@ estimators:
 
             '
           paper_count: 2
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 2
           sources:
@@ -2032,7 +2056,8 @@ estimators:
             for [condition B] was significantly [larger/smaller] than the [outcome] for [condition A] (p [threshold]).
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -2051,7 +2076,8 @@ estimators:
             not.
           skeleton_level: sentence
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -2119,7 +2145,8 @@ estimators:
             and [X]b were supported, and Hypothesis [X]c was not.'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -2140,7 +2167,8 @@ estimators:
             contains [units] labeled [0] on [both classification dimensions].'
           skeleton_level: paragraph
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -4492,7 +4520,8 @@ estimators:
         - id: r2_reciprocal_3sls_system_navigation_gulati_sytch2007
           skeleton: 'Table [X] presents the [3SLS] estimates of the simultaneous system in which [performance] and [joint dependence] are mutually endogenous. Columns [1]-[2] report the [performance] equation; Columns [3]-[4] report the [joint dependence] equation. Each hypothesis is read from its own equation.'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -4508,7 +4537,8 @@ estimators:
         - id: r2_instrument_dual_condition_audit_just_identified_boundary_gulati_sytch2007
           skeleton: 'Identification rests on instruments that affect [outcomes] only through [the endogenous regressors]. [Instrument 1] is driven by [logic 1] and [Instrument 2] by [logic 2]; because both endogenous regressors enter both equations, the system is just identified, and each instrument must satisfy both exclusion conditions.'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -5135,7 +5165,8 @@ estimators:
         - id: switching_reg_selection_diagnostics_null_hazard_positive_hausman
           skeleton: 'Finally, the [non-selection hazard] does not have a statistically significant effect in any [category] model, suggesting that [selection on unobservables] is not driving [the estimated differences]. In addition, the [Hausman test statistic] is [positive and significant], supporting the [endogenous switching specification] over [pooled estimation].'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -5151,7 +5182,8 @@ estimators:
         - id: r7_3sls_cluster_bootstrap_inference_workaround_gulati_sytch2007
           skeleton: 'Because analytic standard errors in [3SLS] may be fragile under [non-normality], we re-derived inference with a [cluster bootstrap] over [supplier] clusters ([N] replications); bootstrap [p-values] are consistent with the analytic estimates.'
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -6476,7 +6508,7 @@ estimators:
     cross_validation_notes:
     - 当前仅有一篇纯定性过程研究来源（Lashley & Pollock 2020）
     - Park 2013 与 Keeves 2017 的 Results 均为量化分析，无法验证 F1-F6
-    - F1-F6 保持 EMERGING / 单来源，直到新增第二篇纯定性过程研究
+    - F1-F6 经 expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）升为 VERIFIED
     slots:
       F1:
         skeleton_variants:
@@ -6485,7 +6517,8 @@ estimators:
             lens] to understand how [collective actors] and [individual actors] pursue [competing goals] across different
             relational spaces.
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -6503,7 +6536,8 @@ estimators:
           skeleton: The [phase name] phase began around [time/event]. [Actors], motivated by [goal], responded by [action].
             This established [new agenda/prototype], which was visible on the front stage through [practices].
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -6521,7 +6555,8 @@ estimators:
             [front-stage action], individual organizations often [backstage action] to access [resource]. This created a tension
             between [collective goal] and [organizational survival need].
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -6539,7 +6574,8 @@ estimators:
           skeleton: These debates were side-stage because [why partially visible]. Public confrontations over [issue] revealed
             [fissures among actors], but they also allowed the collective to clarify [norm/expectation].
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -6560,7 +6596,8 @@ estimators:
             of reduced [stigma/evaluation] in [indicator]. With [audience B], [indicator] suggests [partial/limited change].
             [Audience C] remains [unchanged/resistant]. Thus [outcome] is audience-specific and incomplete.
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -6698,7 +6735,8 @@ estimators:
         - id: r3_eventstudy_figure_first_signflip_climax
           skeleton: "Hypothesis [N] is tested in an event study analysis of [the focal events]. The results are displayed in Figure [X]. We assess the significance of [excess returns] using [the standard test statistic] ([citation]). As shown in Figure [X], [market reactions] were significantly positive in the [later period], consistent with results from the prior event study literature. However, the results also clearly show that [the response] became more positive over time and were significantly negative in the [early years of the time period]. These [negative responses] are significantly different from the [positive responses] in the later period, consistent with Hypothesis [N] (the difference in [test statistics] between the beginning and the end of the study period is significant at the [p <= .01] level). This [shift] in [the response] from [negative] to [positive] occurred even as [the countervailing evidence] was growing over the same period, as shown in Figure [Y]."
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -6769,7 +6807,8 @@ estimators:
         - id: r6_rival_hypothesis_null_adjudication_punchline
           skeleton: "The results in Table [Z] consistently support Hypothesis [N]a: [the predictor] is [positively] associated with [the outcome], for all [three] event periods. Conversely, Hypothesis [N], the [rival-label] hypothesis, which argued that [rival mechanism], is not supported. Note that [the co-predictor] is also associated with [more positive outcome]. In effect, [the predictor family] predicts [the outcome] regardless of whether [the rival-relevant condition holds]. The results in Table [Z] also show support for Hypothesis [M]a. In particular, after controlling for [context controls], [the predictor] is [positively] associated with [the outcome]. This result, which holds for all [three] event periods, is consistent with our contention that [theoretical contention]. Accordingly, [the rival-label] hypothesis (Hypothesis [M]) is not supported."
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -6814,7 +6853,8 @@ estimators:
         - id: r7_design_parameter_dual_justification
           skeleton: "[Prior literature] often [uses subgroup analyses]. Several authors have advocated [the regression approach] instead, in order to control for possible third variables ([citation]). Given that [the data structure], [threat] could occur ([citation]). We use [primary correction] to correct for [the threat]. In separate analyses we use [alternative correction], and the results are very similar ([citation]). ... To ensure that our results are not sensitive to this research design, we conducted two sets of additional analyses [with alternative parameter choices], and the results were consistent with those we report below. A relatively short [window] seems justified, given that [units] typically have no obvious [economic] reason for [the delayed behavior], and [the relevant audience] would not expect such a delay. And from an empirical standpoint, [units] that [comply] typically do so shortly after [adoption] ([quantified empirical detail])."
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -6853,7 +6893,8 @@ estimators:
         - id: r8_rival_mechanism_falsification_battery
           skeleton: "It might be suggested that [the headline finding] obtains despite [the countervailing evidence] because (1) [alternative explanation A], or (2) [alternative explanation B]. To examine these possibilities, we conducted supplementary analyses of [the rival mechanism]. We used [data] for a random sample of [N] [units] from [frame] from [period]. We estimated [two measures of the rival outcome] using [panel estimator], but results were robust to the [alternative estimator]. As shown in Table [W] of the Appendix, [the focal intervention] does not have a significant effect on either measure of [the rival outcome]. The interaction of [intervention] and [time] is also not significant: [the rival effect] does not increase or decrease over time. This result was robust to the specification of [alternative lag structures]. Thus, our findings regarding [the headline outcome] are not an artifact of [the rival mechanism] or of the change in such [benefits] over time."
           paper_count: 1
-          status: EMERGING
+          status: VERIFIED
+          verification_basis: 'expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)'
           subfield_distribution:
             strategy: 1
           sources:
@@ -6915,6 +6956,14 @@ estimators:
       note: source=chenganesanliu2009
       violation_count: 0
 batch_history:
+- batch_id: batch_42_expert_audit_override_pollock_westphal_gulati
+  timestamp: '2026-09-06 23:30:00'
+  estimator_family: 全 estimator（OLS_FE / Logit / IV_2SLS / 事件研究法 / 定性过程研究）
+  source_paper: Pollock/Westphal/Gulati 系（用户升级裁定，全量生效）
+  source_subfield: strategy
+  slot_updates_count: 41
+  novel_patterns_count: 0
+  note: 'expert_audit_override (user 2026-09-06)：Pollock/Westphal/Gulati 系论文的 results 蒸馏单源即 VERIFIED。41 条 skeleton_variants status EMERGING→VERIFIED 并补 verification_basis；语料 .md 与 INDEX.md 随动（Pfarrer Logit 族、Pollock 2015 OLS 表行、higgins/gulati2005/gulati_sytch2007 补充分析族、carpenterwestphal/westphal_bednar 族、zajac_westphal_2004 事件研究 4 块、Lashley & Pollock 定性 F1-F6）。；2026-09-06f 残余复核：OLS-FE 变体 35–39（Pollock, Lee, Jin & Lashley 2015 ASQ）正文验证状态 5 条翻转（速查表行已于 batch_42 翻转）；定性过程研究.md 文件级 status EMERGING→VERIFIED，主骨架/交叉验证/诚实边界注记同步。'
 - batch_id: batch_41_gulati2007_residual_sync
   timestamp: '2026-09-06 04:40:00'
   estimator_family: IV/3SLS simultaneous system (reciprocal causation, just-identified)
