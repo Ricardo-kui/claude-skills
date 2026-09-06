@@ -993,3 +993,53 @@ adverse than that on other modes of [comparison set].
 **范文来源**: Gulati, Lawrence & Puranam (2005), *Strategic Management Journal* — H5 推导（Joint effects 节）。
 
 <!-- wb:gulati2005-adaptation-vertical:e_moderation_joint_pressure_superadditivity_balanced_configuration -->
+
+
+### 变体 G：信号方注意力对齐调节（Signal-Maker Attention-Alignment Contingency，Gulati_Higgins_2003_SMJ 型）
+
+> 论证角色：Framing（纯调节设计的组建框架：先把情境调节变量分解为评估者的双重错误担忧，再按"信号方注意力对齐"逐分支推导条件化信号价值）
+
+**适用**: 理论贡献全部在条件化（无独立主效应假设）；IV 是"某类信号/背书/伙伴关系"，moderator 是可两极化的情境状态（热/冷、宽松/紧缩）；机制载体是**信号发送方（signal-maker）的注意力时点与质量**——信号价值峰值出现在"信号方最认真评估"与"评估者某类错误担忧最显著"两种状态对齐之时
+
+**结构**（common trunk → 3 parallel branches，每支同构）:
+[Trunk] 情境变量两极 → 评估者两类错误担忧（错收 commission vs 错漏 omission）的显著性随两极切换
+[Branch k] 基线（既有文献：该类信号总体提升结果）→ 点名并质疑"效应恒定"假设 → 信号方在两极下的注意力/决策质量差异（行为证据）→ 评估者据此归因信号价值 → 让步式条件化假设（支 k 绑定一极）
+
+**骨架**:
+```
+[Trunk]
+We propose that [contextual uncertainty] entails two overarching types of concerns
+for [evaluator]: [commission concern] or [omission concern]. Although both of these
+concerns surround any [decision], [evaluator]'s attention shifts more toward one or
+the other, depending upon [contextual pole]. When [pole 1], [feature] makes
+[concern A] salient; when [pole 2], [feature] makes [concern B] salient.
+
+[Branch k]（每支重复同构模板，绑定一极）
+Prior research establishes that [tie] signals [quality] to [evaluator].
+The research summarized above assumes that this effect is uniform at all times;
+this may not always be the case: [contextual states] may alter this effect.
+[Signal-maker] attends most carefully to [market] when [pole k], because
+[behavioral evidence: e.g., overconfidence / information overload / selective entry].
+Therefore, while [tie] may, in general, signal [quality], we expect greater value
+associated with such ties during [pole k].
+H[k]: [Tie] should be particularly beneficial to [outcome] when [pole k].
+```
+
+**为什么有效**: ①moderator 获得独立理论身份（决策论式双错误担忧），纯调节设计无需主效应假设即站得住；②"信号方注意力对齐"给每个交互统一机制载体，读者学一次即可推三次；③每支"让步（in general）→条件化（during pole k）"收敛句把基线与边界压进一句，交互假设不与既有文献打架。
+
+**注意事项**:
+- 每支必须真的论证"信号方在该极更认真/更准确"，行为证据（过度自信、信息过载、选择性进入）是机制承重墙，不能只断言条件相关
+- 分支与担忧的映射必须一一对应（哪类信号缓解哪类错误担忧），错配即"变量清单"
+- 双边覆盖：每支对立极至少一个机制句（来源论文 H2 对立极偏薄是可改进点，非模板特征）
+- 单一 moderator 多 IV 用本变体；≥2 个 moderator 需另加选择元框架（见 moderator_selection_frameworks）
+
+**反模式**: 无双错误担忧分解，直接罗列"X 在条件 1 更有效、Y 在条件 2 更有效"——机制缺位，像变量矩阵而非理论；或把"注意力对齐"降级为一句"信号更可信"的套话。
+
+**验证状态**: EMERGING（单篇来源 Gulati & Higgins 2003 SMJ；篇内 3/3 分支同构复现；仅作 section_variant，待第二篇跨论文验证）
+
+**原文锚点**:
+- "We propose that [情境不确定性] entails two overarching types of concerns for [评估者]: investing in 'bad' firms or missing 'good' opportunities."（主干句）
+- "we expect that the signaling value of a tie to a particular partner will be greatest when that partner is most carefully attending to the [发行] market."（注意力对齐总纲句）
+- "Therefore, while the evaluation expertise of [伙伴] endorsements may, in general, signal firm quality to investors, we expect investors to perceive greater value associated with such ties during [冷] markets."（H1 收敛句）
+
+<!-- wb:gulati_higgins_2003_which_ties_matter:e13_signal_maker_attention_alignment_moderation -->

@@ -272,6 +272,33 @@ contingencies that matter for Group B]."
 - 收束句只重复假设内容，不总结假设间逻辑关系。
 
 
+
+### 句式 B：比较型配对假设局部收束（Gulati_Lavie_Singh_2009 型）
+> 论证角色：Claim（局部收束同时落两个假设：先单向预测再相对排序预测，收束句直接复述两条理由作预测依据）
+
+<!-- pattern_id: comparative_pair_local_convergence; build_type: 构念辨析型（句式级）; source_papers: ["Gulati_Lavie_Singh_2009_SMJ"]; confidence: low -->
+
+**句位**: 辨析+双理由论证段末的局部收束——一个收束段同时为 H1（单向）与 H2（相对排序）落点。
+
+**句式骨架**:
+```
+[单向预测] In sum, [Type-B] is likely to [directional prediction] on [outcome].
+
+[相对排序预测] In addition, due to [reason 1 recap] and [reason 2 recap], the
+impact of [Type-B] is predicted to exceed that of [Type-A].
+
+[假设落点] Hypothesis N: ... Hypothesis N+1: The contribution of [Type-B] to
+[outcome] will be greater than the contribution of [Type-A].
+```
+
+**为什么有效**: "In addition" 把两个假设串成一条推理线的两个落点而非两篇 mini-paper；"due to ..." 复述已论证的理由，让相对排序预测由前文恢复，而非新断言。
+**注意事项**: 只适用于辨析后确有共同结果变量的配对；理由 recap 必须对应前文实际论证过的 (a)+(b)，不得引入新理由。
+**反模式**: 用 "Therefore, H2: B > A" 一句带过——相对排序预测无理由支撑，像从天而降。
+**原文锚点** (Gulati, Lavie & Singh 2009, SMJ):
+> "In sum, PSE is likely to induce positive market reaction to announcements of recurrent alliances between the same partners. In addition, due to the broader range of benefits and the efficient learning process associated with its accumulation, the impact of PSE is predicted to exceed that of GPE."
+
+<!-- wb:gulati_lavie_singh_2009_partnering_experience:comparative_pair_local_convergence -->
+
 ### 句式 A：模型图读出式收束（Figure-Readout Closure，Gulati_1999_AJS 型）
 
 <!--
@@ -305,3 +332,30 @@ sentence_position: closure
 > "Figure 1 summarizes our dynamic model of network formation and highlights the empirically testable predictions of the model. ... the dashed arrow from network formation to structural differentiation indicates the dynamic connection between these two variables, which captures the evolutionary link between action and structure."
 
 <!-- wb:gulati_1999_where_do_interorganizational_networks:c6_figure_readout_closure -->
+
+
+### 句式 C：互补→扩展→机制延伸三步域收束（gulati_nohria_zaheer_2000 型）
+
+> 论证角色：Framing（域末三步局部收束：礼让互补→扩展理解→机制延伸，每步增量递强但不否认基线）
+
+**模板**:
+> "Overall, using [lens concepts] in this manner provides a valuable complement to explanations that simply focus on [baseline factors] ([citation]). They expand our understanding of [domain] by incorporating [lens contribution]. Furthermore, [lens concepts] extend the underlying mechanisms guiding such outcomes beyond conventional notions of [baseline mechanism]."
+
+**来源**: Gulati, Nohria & Zaheer 2000 (SMJ), Theory Industry Structure 节末段
+
+**原文锚定**:
+> "Overall, using network concepts in this manner provides a valuable complement to explanations that simply focus on concentration and market power in ascribing profitability differences at the industry level of analysis."
+
+**关键特征**:
+- 三步递进：complement（礼让基线为有价值补充）→ expand（纳入透镜扩展理解）→ extend mechanisms（机制清单延伸到基线机制之外）——不推翻基线的综述文收束终点
+- "Overall" 信号词标记域级局部收束（区别于段级 Thus/Therefore 收敛信号）
+- 收束对象逐句具体化（baseline factors→understanding→mechanisms 各点名），不是"provides a valuable complement"空转
+- 无假设体裁的收束终点是"理解增量三重宣告"而非假设重述——综述文 Wrap 句位形态
+
+**适用**: 综述文/透镜横切文的域末局部收束；实证文 Discussion 分主题整合段可降档使用。与 03x 局部收束信号表的管理学标准做法兼容（无独立 Closure 段）。
+
+**禁忌**: 三步对象必须具体（baseline factors/mechanism 点名），空转的 valuable complement 是废话骨架；不得用于实证 Theory 假设段末（那里用 Therefore 假设收敛）；透镜实际推翻了基线时改用 Evidence-Contrast 收束。
+
+**风格画像来源**: gulati_nohria_zaheer_2000 (SMJ)
+
+<!-- wb:gulati_nohria_zaheer_2000_strategic_networks:complement_expand_extend_closure -->

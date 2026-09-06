@@ -504,6 +504,137 @@ relationship between [X2] and [Y].
 <!-- wb:gulati_westphal_1999_cooperative_or_controlling:sentence_symmetric_amplifier_moderation -->
 
 
+
+### 变体 D：均匀效应假设质疑转折句（Uniform-Effect Assumption Pivot，Gulati_Higgins_2003_SMJ 型）
+
+> 论证角色：Claim（在既有主效应文献基线上公开点名其"效应恒定"隐含假设，一句话开启条件化推导）
+
+**句位**: 调节分支段 Topic 位——紧接基线文献段之后、条件化机制推演之前（从"既有结论"转向"何时不同"的枢纽）。
+
+**句式骨架**:
+```
+The research summarized above on [X→Y] assumes that [the effect] is uniform
+at all times. This may not always be the case: [contextual states] may alter
+this effect.
+```
+
+**变体**:
+- "...assumes that the effect is uniform at all times. This may not always be the case: ..." — 点名假设+直接质疑（标准版）
+- "While prior research has established that [X] can [baseline effect], we suggest that the value of [X] will be moderated in important and systematic ways by [W]." — 同功能的正式版（直接引出 moderator）
+- "Much of this research has focused on [scope A]; some recent work, however, has explored [scope B]." — 较弱邻近变体（scope 转移而非时点条件化，慎与前者混用）
+
+**为什么有效**: 先把既有文献压缩为一个"恒定效应"的靶子再当场质疑，使调节假设看起来是对文献的推进而非另起炉灶；比 "However, ..." 泛用转折更精确——它指出的是**隐含假设**而非结论。
+
+**注意事项**: 靶子必须公平——"uniform at all times" 须是既有文献真实默认（未检验条件差异），不能树稻草人；质疑后必须立即给出条件化机制，不能只破不立。
+
+**反模式**: 在既有文献本已讨论过边界条件时仍用此句宣称"从未被检验"。
+
+**验证状态**: 单篇新句式候选（Gulati & Higgins 2003 SMJ），待第二篇复现
+
+**原文锚定**: "The research summarized above on the effect of [伙伴] endorsement on [发行成功] assumes that the effect is uniform at all times. This may not always be the case: [市场起伏] may alter this effect."
+
+<!-- wb:gulati_higgins_2003_which_ties_matter:sent_moderation_uniform_assumption_pivot -->
+
+
+### 变体 E：让步式条件收敛句（Concessive Conditional Convergence，Gulati_Higgins_2003_SMJ 型）
+
+> 论证角色：Warrant（收敛前先让步承认基线信号价值，再给出条件化预测，使交互假设与既有文献兼容）
+
+**句位**: 调节分支段 Wrap 位——假设陈述前的最后一句（Therefore 收敛信号内嵌其中）。
+
+**句式骨架**:
+```
+Therefore, while [X] may, in general, [baseline signal function],
+we expect [evaluator] to perceive greater value associated with [X]
+during [condition].
+```
+
+**变体**:
+- "Therefore, while ... may, in general, ..., we expect ... during [condition]." — 标准版（Therefore + while 让步）
+- "Therefore, while, in general, a tie to [partner] may signal [quality], this should be particularly true when [signal-maker attention condition]." — 尾置强调版（条件落在句尾重音位，对齐机制总纲句）
+- "while ... in general ..., we expect ..." — 去 Therefore 版（前句已含收敛信号时用）
+
+**为什么有效**: "in general" 让步承认主效应文献的增量，"during [condition]" / "particularly true when" 把增量精确压到条件极上；一句同时完成双边表态（基线+条件）与假设的合法性辩护。
+
+**注意事项**: 让步部分必须与该分支开头引用的基线文献对应；条件极须与该分支绑定的错误担忧一致，不能为凑对仗而交换；三条同构分支可复用同一模板，非平行结构勿滥用（机械感）。
+
+**反模式**: 让步空转——"in general" 后的基线功能与前文基线段无关，或条件极与机制论证的极性相反。
+
+**验证状态**: 单篇新句式候选（Gulati & Higgins 2003 SMJ；同段家族内 3/3 分支复现），待跨论文复现
+
+**原文锚定**: "Therefore, while the evaluation expertise of [伙伴] endorsements may, in general, signal firm quality to investors, we expect investors to perceive greater value associated with such ties during [冷] markets."
+
+<!-- wb:gulati_higgins_2003_which_ties_matter:sent_moderation_concessive_conditional_convergence -->
+
+
+### 变体 F：双维权变框架句（Two-Way Contingency Framing，Gulati_Higgins_2003_SMJ 型）
+
+> 论证角色：Framing（章节枢纽句：把既有共识延伸为"沿两个维度同时变化"的权变主张，一次立起 which×when 双维分类框架）
+
+**句位**: Theory 首段末/枢纽位——承接 Gap 共识后、分维度展开前；亦可用于共享主干段的段首回扣。
+
+**句式骨架**:
+```
+Extending this central idea that [existing consensus], we propose that
+[the value of X] should vary not only across various types of [dimension A]
+but also depend upon the different types of [dimension B] [a firm/actor] faces.
+```
+
+**变体**:
+- "...should vary not only across various types of [A] but also depend upon [types of B]." — 标准双维版
+- "The value of [X] will be moderated in important and systematic ways by [W]." — 单维正式版（更直接但弱化分类预告）
+- 收束回收版："we consider two questions: which [A] matter ([dimension A]) and when [they] matter ([dimension B])."（结尾用疑问对仗回收首段双维框架，配 2×k 预测矩阵图）
+
+**为什么有效**: "not only across A but also depend upon B" 一句话把两个维度钉成权变矩阵，读者的分类框架先于分支展开就位；结尾 "which/when" 疑问对仗与矩阵图互证，框架锁定成本极低。
+
+**注意事项**: 两维必须是正交构念维度（类型×状态），不是同一变量的两种说法；双维主张需后文真的逐格推导，否则成为未兑现的预告。
+
+**反模式**: 维度 B 无独立理论依据（只是第二个控制变量）时，勿用双维框架句抬高读者预期。
+
+**验证状态**: 单篇新句式候选（Gulati & Higgins 2003 SMJ），待跨论文复现
+
+**原文锚定**: "Extending this central idea that [关系] to prominent actors mitigate uncertainty, we propose that the value of a young firm's [关系] should vary not only across various types of [关系] but also depend upon the different types of uncertainty a firm faces."
+
+<!-- wb:gulati_higgins_2003_which_ties_matter:sent_moderation_two_way_contingency_framing -->
+
+
+### 句式 G：信号贬值双边调节收束句（Gulati_Lavie_Singh_2009 型）
+> 论证角色：A&R（高强度下信号增值 + 低强度下信号被替代信息贬值——双边论证后条件收敛）
+
+<!-- pattern_id: signal_diminishing_bilateral_wrap; build_type: 调节效应型（句式级）; source_papers: ["Gulati_Lavie_Singh_2009_SMJ"]; confidence: low -->
+
+**句位**: 调节假设小节的收束段——机制段（信号/线索逻辑）之后、假设之前的 Wrap 位置。
+
+**句式骨架**:
+```
+[机制+条件化预告] [X] serves as a [signal] that [establishes confidence among
+assessors]; however, the impact of this signal varies with the level of
+[moderator].
+
+[高条件] Under conditions of high [moderator], where only limited [information]
+is available for assessing the likely [outcome], the [X] signal becomes highly
+valuable in [assessment].
+
+[低条件贬值] The influence of [X] diminishes, however, as [substitute
+information] becomes available ..., which makes [assessment] more reliable.
+
+[条件收敛] Consequently, the contribution of [X] to [Y] may intensify with the
+level of [moderator].
+```
+
+**变体**（同句位措辞候选）:
+- "The influence of [X] diminishes, however, as ..." — 低条件贬值句，与增强主句构成双边
+- "As the level of [moderator] increases, so does the value of [X]" — 单调增值中介句
+- "... may intensify with the level of [moderator]" — 增强型条件收敛（区别于反向交互）
+
+**为什么有效**: "diminishes, however" 一句同时完成 C20 双边论证的 low 侧与交互模式声明（enhancing，非反向）——读者看到高条件增值、低条件贬值的完整图景，假设方向才有唯一解释。
+**注意事项**: 贬值机制必须与增值机制同源（同一信号在信息充裕时被替代），不能另起炉灶；收敛句用 "intensify with" 而非 "is moderated by"，方向更明确。
+**反模式**: 只写 "Under high W, X matters more" 而不说明低 W 时信号为何失灵——单边增强论证。
+**原文锚点** (Gulati, Lavie & Singh 2009, SMJ):
+> "The influence of PSE diminishes, however, as supplementary information becomes available about the firm's operations ... Consequently, the contribution of PSE to value creation in new alliances may intensify with the level of firm-specific uncertainty."
+
+<!-- wb:gulati_lavie_singh_2009_partnering_experience:signal_diminishing_bilateral_wrap -->
+
 ### 句式 D：机制级选择性调节划界（Mechanism-Level Selective Moderation Scope，Gulati_1999_AJS 型）
 
 <!--

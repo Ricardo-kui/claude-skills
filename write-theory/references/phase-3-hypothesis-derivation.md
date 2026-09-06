@@ -117,23 +117,12 @@ Theory 写作的心脏环节：路由假设结构，为每个假设生成逻辑�
 
 #### 段落级 QC 检查表
 
-- [ ] 主题句精准度：是否同时包含话题+核心观点？
-- [ ] **Burying the lead**：最小必要背景后是否尽早说出核心判断，且段首不是无实质内容的元评论？
-- [ ] 推理链完整性：每个因果步骤是否都在文中明确写出？
-- [ ] **Read my mind**：每步因果推理间是否有 explicit transition？无"显然"/"不难发现"？
-- [ ] 引用嵌入度：每个引用是否都总结了其 argument/finding？
-- [ ] 术语一致性：同一构念在全段用的是否同一个术语？
-- [ ] 证据-论点匹配：每个引用是否直接支持它所在推理步骤？
-- [ ] **Sentence stuffing**：句子是否承担过多独立 claim、插入语遮蔽主干或迫使读者回读？长度只作为定位提示，不自动失败。
-- [ ] 收束句质量：是否总结了推理链而非简单重复 "we hypothesize"？
-- [ ] 段落独立性：单独阅读本段能否理解完整论证逻辑？
-- [ ] **作者名开头**：why-chain 段段首句主语是否为他人姓名（"Smith (2020) showed..."）？→ topic sentence 必须是自己的理论主张，引用移到证据位（见 prose-craft-checklist §0.6-1）
-- [ ] **段末 wrap**：段末句是否停在引用/证据上而无 "This suggests that..." 收束（abrupt stop）？→ 段末 1 句 wrap 回扣本段 claim；与"收束句质量"项互补——那项查收束是否简单重复 "we hypothesize"，本项查收束是否缺席（见 §0.6-5）；wrap 的正面语料（总结式 key line 标记词与骨架、前后夹击变体）见 `../../write-introduction/corpus/micro-templates/key-line-patterns.md` §3
-- [ ] **Caveat-first**：段首是否以 "Although prior work..." 让步开头，推迟核心 claim？→ claim 前置，caveat 移后（见 §0.6-4）
-- [ ] **前提最弱点**：每个 Anchor/Warrant 前提已标注 [D]/[S]/[E] 类型？最弱前提是否有单独一句防守（或已降级 claim / 转显式假设）？（见 `../corpus/subprotocols/reasoning_soundness_protocol.md` §1–2）
-- [ ] **机制必要性门控**：Q1 主流更简单机制推不出同一预测？Q2 本机制有可区分的额外预测？Q3 删掉本机制故事不照样成立？（见 §3）
-- [ ] **反例压力测试**：最弱前提所在步骤与反直觉步骤已回答"什么条件下这一步不成立"，处置（scope / 新假设 / 删除 / **承认但不回应**）已兑现？承认句与回应句从 `../corpus/sentences/acknowledgment_response.md` 取材（见 §4）
-- [ ] **Warrant 表达**：跨领域读者 / 推理原则有争议 / claim 会被抗拒——三场合的 warrant 是否已**明言**（场合③须先立 warrant 再摆 reason+claim）？显而易见的 warrant 是否未画蛇添足（居高临下信号）？[E] 类前提是否均有硬证据、未被 [S] 规定顶替（硬证据规则）？（见 `../corpus/subprotocols/reasoning_soundness_protocol.md` §5）
-- [ ] **防御性技术说明文风**（声音防火墙，见 `../corpus/subprotocols/reasoning_soundness_protocol.md` §7）：协议术语（[D]/[S]/[E]、门控、五测试）是否泄漏进正文？是否每段都有 "One might object.../Granted..." 式自辩形成防御节律？防守句是否多于推进句、claim 被 caveat 包围？→ 处置：防守转译为机制/证据叙述句或按隐去纪律删除；段落声音以 derivation patterns 与 `../corpus/sentences/` 范文句式为准，朗读测试——听起来应像"向同行讲理论故事"，不像"回答想象中的审稿人"；负向设限句与 hedge 堆叠的转换句式库见 `../../write-introduction/corpus/storytelling/prose-craft-checklist.md` §5.7
+段位与 coherence 十二项诊断（burying the lead / read my mind / 作者名开头 / 术语一致 / 段落长度 / token 膨胀 / 平行结构 / 过渡词显式 / Token 回扣等）按 `../corpus/subprotocols/paragraph_layout.md` §3 逐条过，不在本表复述。本表只留 paragraph_layout 未覆盖的项：
+
+- [ ] **段末 wrap**：段末句是否停在引用/证据上而无收束（abrupt stop）？→ 段末 1 句 wrap 回扣本段 claim；与"收束句质量"项互补——那项查收束是否简单重复 "we hypothesize"，本项查收束是否缺席；wrap 的正面语料（总结式 key line 标记词与骨架、前后夹击变体）见 `../../write-introduction/corpus/micro-templates/key-line-patterns.md` §3
+- [ ] **Caveat-first**：段首是否以 "Although prior work..." 让步开头，推迟核心 claim？→ claim 前置，caveat 移后（见 prose-craft-checklist §0.6-4）
+- [ ] **段落独立性**：单独阅读本段能否理解完整论证逻辑？
+
+**Soundness 五项**（前提最弱点 / 机制必要性门控 / 反例压力测试 / Warrant 表达三场合 / 声音防火墙）按 `../corpus/subprotocols/reasoning_soundness_protocol.md` §1–7 执行并在 Soundness Card 记录，本表不复述；Phase 4 审计 4 复核处置是否兑现。
 
 ---

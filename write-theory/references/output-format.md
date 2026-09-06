@@ -86,5 +86,5 @@ Theory section 的 Rising Action 结构（Knot Inheritance→Deepening→Tying�
 |------|-------------|---------|------|
 | [P3 why-chain step 2] | "[原句]" | ①…②… | [hedging 强度 / specificity gate 提示] |
 ```
-纪律：骨架优先，语料库只提供措辞变体不替代论证结构；hedging 不突破 causal-hedging 设计家族上限。
+纪律（骨架优先/句位候选上限/specificity gate）见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律；hedging 不突破 causal-hedging 设计家族上限。
 ```

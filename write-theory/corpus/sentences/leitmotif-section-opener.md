@@ -203,6 +203,37 @@ of [X] on the prospects of [DV]... On one level, ...
 <!-- wb:gulati_westphal_1999_cooperative_or_controlling:sentence_consequence_stage_signpost -->
 
 
+
+### 句式 E：基线礼让→精化提案域开题句（gulati_nohria_zaheer_2000 型）
+
+> 论证角色：Claim（段首两句完成域开题：基线学派礼让定位 + 透镜精化提案直出本域论点）
+
+**模板**:
+> "The [X] school, which has had a major impact on [field], began with [baseline model] and argued that [baseline claim] ([citation]). ... We propose that a consideration of [lens] allows a more refined understanding of [domain]—since [domain participants] can be seen as embedded in [lens elements]."
+
+**变体**（同句位的措辞候选）:
+- "We suggest that a [lens] perspective offers the potential for [novel mapping] in [domain]." — 更谦抑的提案强度（用于新颖性较弱的域）
+- "We propose that a consideration of [lens] allows a more refined understanding of [domain]" — 标准强度（refined 级：不推翻基线）
+
+**来源**: Gulati, Nohria & Zaheer 2000 (SMJ), Theory Industry Structure 节 P1-P2
+
+**原文锚定**:
+> "The industrial organization school, which has had a major impact on the field of strategy, began with models of perfect competition and argued that oligopoly, or greater concentration generally, led to increased profitability for the firms in an industry."
+
+**关键特征**:
+- 第一句以 "which has had a major impact on [field]" 给基线学派礼让定位（不贬低同行，综述文攻门强度校准）
+- 第二句直出域论点，破折号后 "since [participants] can be seen as embedded in..." 一句话给出透镜为何适用的机制把手
+- refined/novel 级词主张"更精细的理解"而非推翻——与 complement 类收束句（同论文）首尾呼应
+- 无 "Drawing on..." 式元评论开头，直接以学派为具体主语开段
+
+**适用**: 综述文/透镜横切文的域级 topic 句；实证文 T2→T3 过渡段（透镜定位段首句）可降档使用。
+
+**禁忌**: [baseline claim] 必须是该学派公认主张（可追溯引文）；since 从句的透镜适用理由不可省略，否则精化提案悬空；透镜已宣称推翻基线时不得用 refined 级措辞（攻门强度与贡献类型错配）。
+
+**风格画像来源**: gulati_nohria_zaheer_2000 (SMJ)
+
+<!-- wb:gulati_nohria_zaheer_2000_strategic_networks:baseline_school_lens_refine_opener -->
+
 ### 句式 D：未决不足桥接问句段首（If-X-Alone-Cannot Question Bridge，Gulati_1999_AJS 型）
 
 <!--

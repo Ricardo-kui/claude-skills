@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
-  last_updated: '2026-09-06c'
-  observations_processed: 42
+  last_updated: '2026-09-07'
+  observations_processed: 49
   description: Evidence ledger for write-theory design defects inferred from Theory exemplar distillation.
 defects:
   e-family-missing-dual-edged-signed-contingency-variant:
@@ -1557,7 +1557,6 @@ defects:
     auto_action:
       eligibility: log_only
       reason: Insufficient evidence for core revision.
-
   theory_corpus_multi_audience_context_micro_moves:
     classification: corpus_gap
     status: EMERGING
@@ -2180,7 +2179,6 @@ defects:
     auto_action:
       eligibility: optional_variant_only
       reason: Corpus changes do not alter core routing.
-
   e1-fit-typology-theory-route-coverage:
     classification: routing_defect
     status: EMERGING
@@ -2246,3 +2244,384 @@ defects:
     auto_action:
       eligibility: log_only
       reason: Insufficient evidence for core revision.
+  commentary-tribalism-cause-diagnosis-gap:
+    classification: corpus_gap
+    status: EMERGING
+    risk: medium
+    current_rule: write-theory/corpus/subprotocols/argumentation_patterns.md variants A-L cover hypothesis-facing moves (rival
+      rebuttal, counter-prediction exclusion, dual-track mechanism, lens-scanning review loops E/F/L); no variant stages a
+      field-level conflict cause diagnosis (heuristic labels -> two-layer tribal effect -> structural duality root -> covert
+      arbiter mechanism) as commentary stance defense
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/subprotocols/argumentation_patterns.md
+    diagnosis: 'Commentary theory cashes out a dissolution thesis with a numbered social-mechanism diagnosis (''(1)... (2)...
+      which in turn...'') plus a structural root (''inherent duality in business school researchers'') and a covert-arbiter
+      beat (''badge of honor or shame... masked as impartiality''); this 立场布防 dimension is absent from the corpus (keyword
+      sweep zero-hit: tribe/tribalism/立场布防/论战). ADD candidate in plan (band=薄弱 is the deterministic best-match-file status
+      reading; variant-type level is a gap)'
+    proposed_change:
+      action: append_variant
+      summary: 'add 部落冲突归因诊断段 variant (gulati_2007_tent_poles 型) with taboos: numbered mechanisms must each be checkable;
+        gatekeeper polemic must not slide into conspiracy rhetoric; empirical hypothesis papers excluded'
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: gulati_2007_tent_poles
+      journal: AMJ
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: 'Causes of Tribalism: ''I argue that the use of simple heuristics and stereotypes to define rigor has
+        resulted in (1) a broad conflict... and (2) subtribe paradigm clashes...'''
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - AMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - AMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  commentary-founder-exemplar-irony-gap:
+    classification: corpus_gap
+    status: EMERGING
+    risk: medium
+    current_rule: 'no corpus variant argues from a founder-exemplar roster: evidence_patterns and hypothesis_derivation_patterns
+      contain no ''greatest irony'' reversal that requisitions the opposing camp''s own disciplines'' founders as historical
+      evidence for a dissolution thesis'
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/subprotocols/argumentation_patterns.md
+    diagnosis: 'Commentary genre argues ''the dichotomy is constructed, not essential'' with a discipline-by-discipline parallel
+      exemplar roster (practice engagement -> theory feedback -> public practice influence per founder) closed by a reversal
+      (''lost touch with their roots'') and an identity diagnosis (''see themselves as both''); nearest corpus item (pontikes2012
+      irony resolution in hypothesis_derivation_patterns) resolves hypothesis-statement irony via temporal staging — a different
+      device at a different level. Keyword sweep zero-hit: irony/founder/典范反例 at architecture level. ADD candidate in plan'
+    proposed_change:
+      action: append_variant
+      summary: 'add 开山者典范反讽论证段 variant with taboos: exemplar selection must be verifiable; favorable-case-only sampling is
+        genre-excused (commentary) and flagged; not for hypothesis-bearing papers'
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: gulati_2007_tent_poles
+      journal: AMJ
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: 'Historical Exemplars: ''Perhaps the greatest irony of these multidimensional tribal wars is that the
+        theorists and schools of thought providing the foundations of modern management research represent strong bonds between
+        rigor and relevance'''
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - AMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - AMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  commentary-normative-program-architecture-gap:
+    classification: corpus_gap
+    status: EMERGING
+    risk: medium
+    current_rule: 'corpus has no architecture for delivering a Mode-type normative model: variants A-L and G_dialectical_opposition
+      all terminate in hypotheses/predictions; no variant converts a dissolution thesis into a numbered prescriptive program
+      (imperative -> exemplar citation -> qualification) with non-sequentiality and scope disclaimers'
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-theory/corpus/subprotocols/argumentation_patterns.md
+    diagnosis: 'The paper''s Mode contribution is cashed out as T6-closure-as-contribution: positive-sum reframe (''outcomes
+      to be simultaneously maximized''), metaphor package naming the program (big tent/umbrellas), 5-step numbered imperative
+      chain each with exemplar anecdote + qualifier, explicit ''one doesn''t have to follow them in this sequence'' + ''regardless
+      of the publishing outlets'' disclaimers, Weick quote endowing the rival camp with obligations (two-sided closure). Zero-hit
+      across routing (normative model/规范模型) and corpus. ADD candidate in plan'
+    proposed_change:
+      action: append_variant
+      summary: 'add 大帐篷正和重构+编号规范程序段 variant with taboos: every step needs an exemplar citation; non-sequentiality disclaimer
+        is load-bearing (else reads as pseudo-process model); Mode-contribution papers only, produces no testable predictions'
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: gulati_2007_tent_poles
+      journal: AMJ
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: 'Bridging: ''The solution... is to accept that rigor and relevance are not opposites after all.'' +
+        ''(I present discrete steps, but it is important to note that one doesn''t have to follow them in this sequence.)'''
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - AMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - AMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  gate5-closing-claim-marker-ambiguity:
+    classification: validator_defect
+    status: EMERGING
+    risk: low
+    current_rule: 五问#1：claim 于段首 topic sentence 或段末收束句可指认即合格（埋没段中且无收束才不合格）。但'收束句'无操作定义——是否需要 Thus/Therefore 类话语标记、段末什么位置算收束，未规定。
+    rule_excerpt: '| Corpus mosaic（语料拼贴） | 段落是否由语料句式顺序堆成——五问（claim/reason/evidence/warrant/A&R）无句位可指认，或命中证据孤儿 / warrant 悬空
+      / 引用列队？→ 按论证角色序列重组（句子保留、骨架重排），判据见 `../../story-blueprints/v4/rhetoric-moves/_argument-grammar.md` |'
+    rule_locator: 'write-theory/references/phase-4-qc-alignment.md 审计 1 Corpus mosaic 行；缺陷细则本体位于 story-blueprints/v4/rhetoric-moves/_argument-grammar.md
+      五问 #1 行（v1.1）——write-theory 审计经该行指针消费文法判据'
+    target: write-theory/references/phase-4-qc-alignment.md
+    diagnosis: '段落论证体检 C 电池 T2（删主题句变体）中双裁判段落级结论一致（不合格），但对''段末机制句可否追认为 claim''定位相反——''收束句''缺操作定义使 Gate 5 判定不稳定：无话语标记的合法收束立场句可能漏认，纯机制句可能误认。单一事实源修复位置是
+      _argument-grammar.md 五问 #1 行（story-blueprints 共用文法），write-theory 审计 1 与 write-introduction Gate 5 均经指针继承，故登记消费侧 target。'
+    proposed_change:
+      action: correct_validator
+      summary: '在 _argument-grammar.md 五问 #1 补收束句细则：段末 1–2 句内的实质立场句即可指认为收束 claim，话语标记（Thus/Therefore 等）非必需；纯机制/背景句不得追认为收束。就地修订并标注
+        v1.2。'
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 全 build type（段落级 Gate 5/审计 1 判定）
+      hypothesis_families: []
+      journals:
+      - AMJ
+      boundary: 仅段落级论证判定（审计 1 Corpus mosaic 行 / write-introduction Gate 5）；不触及节级质量门、假设路由与 build type 选择。
+    papers:
+    - id: Zhong_et_al_2020_AMJ
+      journal: AMJ
+      build_type: 段落论证体检
+      hypothesis_family: ''
+      evidence_anchor: C 电池 T2=P1 删主题句变体：双裁判段落级均判不合格，但一裁判把段末机制句追认为 claim（'收束句'是否需话语标记存分歧）；v1.1 A2 重跑 6 段均有真实收束句未复现该边界。
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - AMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - AMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive:
+      - prompt: 判定一个推导链段落的五问#1：段首为局部前提，倒数第二句为无任何话语标记的实质立场句（如 'Disproportionate allocation to X limits Y'），末句为证据回挂例证。
+        expected_invariants:
+        - 无话语标记的段末实质立场句可指认为收束 claim，#1 判 ✓
+        - 判定说理引用'段末 1–2 句'位置标准而非话语标记
+      preservation:
+      - prompt: 判定一个主题句被整体删除、段末仅剩机制描述句（无任何立场收束）的降级段落。
+        expected_invariants:
+        - '无实质立场收束时 #1 判 ✗ 或段落经其他问不合格'
+        - 纯机制句不被追认为 claim
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-07'
+    last_seen: '2026-09-07'
+    auto_action:
+      eligibility: log_only
+      reason: Insufficient evidence for core revision.
+  gate5-experiential-vs-analytic-bridge-boundary:
+    classification: validator_defect
+    status: EMERGING
+    risk: medium
+    current_rule: 五问#3（v1.1）：每个经验性承重 reason 配发现锚点；分析性/概念性桥接属 warrant 性质连接，不要求引文锚点。但'经验性承重'与'分析性桥接'的边界判据未给出——边界句上判定摆动。
+    rule_excerpt: '| Corpus mosaic（语料拼贴） | 段落是否由语料句式顺序堆成——五问（claim/reason/evidence/warrant/A&R）无句位可指认，或命中证据孤儿 / warrant 悬空
+      / 引用列队？→ 按论证角色序列重组（句子保留、骨架重排），判据见 `../../story-blueprints/v4/rhetoric-moves/_argument-grammar.md` |'
+    rule_locator: 'write-theory/references/phase-4-qc-alignment.md 审计 1 Corpus mosaic 行；缺陷细则本体位于 story-blueprints/v4/rhetoric-moves/_argument-grammar.md
+      五问 #3 行（v1.1）'
+    target: write-theory/references/phase-4-qc-alignment.md
+    diagnosis: 同一边界句在两轮独立电池上复现判定摆动：v1.1 A2 重跑双标注对 P3 S4 'Moreover, the greater a firm's customer concentration, the more critical
+      a few customers are, leading to more of the firm's organizational activities…being shaped by uncertainties' 一判经验性承重（无锚点→#3
+      ✗）、一判分析性桥接（免锚→✓）；C 电池 T6 双裁判对同句再现同款分歧。该句含活动域枚举（R&D/营销/生产/物流）与幅度断言（more of…being shaped），指向可观测分布，偏向经验性；但文法无判据条文，Gate
+      5 在此类句上不可重复。
+    proposed_change:
+      action: correct_validator
+      summary: '在五问 #3 增边界细则：含活动域枚举、幅度/频次断言（more of X being shaped、the greater…the more…）指向可观测分布者=经验性承重（需锚点或显式证据缺口标注）；纯概念连接（机制
+        A 到机制 B 的逻辑延伸，无可观测分布指向）=分析性桥接（免锚）。'
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 全 build type（段落级 Gate 5/审计 1 判定）
+      hypothesis_families: []
+      journals:
+      - AMJ
+      boundary: 仅五问#3 锚点要求的对象分类；不改变锚点本身的格式要求（方向/边界/量级+引文）。
+    papers:
+    - id: Zhong_et_al_2020_AMJ
+      journal: AMJ
+      build_type: 段落论证体检
+      hypothesis_family: ''
+      evidence_anchor: P3 S4：A2 双跑分歧（✗/✓）+ C 电池 T6 双裁判同句摆动——两轮独立电池在同一句上复现边界模糊，系 v1.2 候选中证据最强的一条。
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - AMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - AMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive:
+      - prompt: 判定五问#3：段落含一个纯概念桥接句（'Executive attention in turn may drive them to match their firms' capabilities with perceived
+          opportunities'），无引文，前后句均有锚点。
+        expected_invariants:
+        - '概念桥接句不要求锚点，该句不导致 #3 判 ✗'
+        - 判定说理区分'概念连接'与'经验断言'而非按有无引文一刀切
+      preservation:
+      - prompt: 判定五问#3：段落含一个无引文也无证据缺口标注的幅度断言句，枚举多个活动域并宣称更多组织活动被某因素塑造。
+        expected_invariants:
+        - '该句按经验性承重处理，缺锚点且无缺口标注时 #3 判 ✗'
+        - v1.0 时代发现的'桥接无锚点误报'不回潮：真经验断言仍被要求锚点
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-07'
+    last_seen: '2026-09-07'
+    auto_action:
+      eligibility: log_only
+      reason: Insufficient evidence for core revision.
+  gate5-cross-paragraph-premise-scope:
+    classification: validator_defect
+    status: EMERGING
+    risk: low
+    current_rule: 跨段论证条款：一个 reason 可独立成段，此时该段 claim 即这个 reason。但五问#2 判定时可否调用同节其他段的前提、claim 的直接机制须在多大范围内可指认，未规定。
+    rule_excerpt: '| Corpus mosaic（语料拼贴） | 段落是否由语料句式顺序堆成——五问（claim/reason/evidence/warrant/A&R）无句位可指认，或命中证据孤儿 / warrant 悬空
+      / 引用列队？→ 按论证角色序列重组（句子保留、骨架重排），判据见 `../../story-blueprints/v4/rhetoric-moves/_argument-grammar.md` |'
+    rule_locator: write-theory/references/phase-4-qc-alignment.md 审计 1 Corpus mosaic 行；缺陷细则本体位于 story-blueprints/v4/rhetoric-moves/_argument-grammar.md
+      跨段论证条（v1.1 推论第 3 条）
+    target: write-theory/references/phase-4-qc-alignment.md
+    diagnosis: C 电池 T6 判定中裁判2 允许调用同节其他段的背景（仍判断链），裁判1 按段内自足判定——两裁判五问#2 的前提池不同，导致说理路径不可比（段落级结论碰巧一致）。跨段论证条款已承认 reason 可跨段，但#2
+      的判定范围未与之对齐，审计执行时范围随机。
+    proposed_change:
+      action: correct_validator
+      summary: 明确：五问#2 允许调用紧邻段前提（与跨段论证条款对齐），但 claim 的直接机制必须在同段或紧邻段可指认；更远前提仅在显式标注跨段结构时计入。
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 全 build type（段落级 Gate 5/审计 1 判定）
+      hypothesis_families: []
+      journals:
+      - AMJ
+      boundary: 仅五问#2 前提范围与 claim 直接机制的可指认范围；不改变段内拼贴判据的适用。
+    papers:
+    - id: Zhong_et_al_2020_AMJ
+      journal: AMJ
+      build_type: 段落论证体检
+      hypothesis_family: ''
+      evidence_anchor: C 电池 T6：裁判1 段内自足 vs 裁判2 跨段补背景，前提范围分歧不影响段落级结论但破坏判定可重复性。
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - AMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - AMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive:
+      - prompt: 判定一个 reason 独立成段的跨段论证组合：本段 claim 引用的关键前提在本段出现，支撑链延伸到紧邻段的 reason 段。
+        expected_invariants:
+        - '本段 #2 判定时允许计入紧邻段前提，不因段内不完整误判 ✗'
+        - 判定说理显式说明调用了紧邻段哪个前提
+      preservation:
+      - prompt: 判定一个段落：其 claim 的直接机制在本段与紧邻段均不可指认，仅远处段落存在相关论述。
+        expected_invariants:
+        - '#2 判 ✗（直接机制超出同段+紧邻段范围）'
+        - 不因远处段落存在相关内容而放行
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-07'
+    last_seen: '2026-09-07'
+    auto_action:
+      eligibility: log_only
+      reason: Insufficient evidence for core revision.
+  grammar-role-table-missing-gap-move-entry:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: 语料角色索引表含 Claim/Reason/Evidence/Warrant/定义前提[D]/A&R/Framing 七类，无'gap 句'（缺口主张句）条目；framing 豁免只覆盖 Hook/Transitions/Previews。
+    rule_excerpt: '| **Framing**（豁免） | `sentences/leitmotif-section-opener`、`sentences/closure` | `hooks/`、`transitions/`、`previews/`
+      |'
+    rule_locator: story-blueprints/v4/rhetoric-moves/_argument-grammar.md 语料角色索引表 Framing 行
+    target: story-blueprints/v4/rhetoric-moves/_argument-grammar.md
+    diagnosis: 顶刊理论章节的 gap pivot 句（'However, this research fails to consider…' / 'Despite these developments, we still know
+      little…'）高频出现且承担实质论证功能，但角色表无对应条目：两轮标注均发生漂移——P5 S4 双跑一致归 Claim、P6 S4 一判 Reason 一判 Claim（两位标注员备注独立点名角色表缺项）。缺条目使句级角色标注不稳定，也使
+      gap 句在'语料角色索引'取句路径上无处落位。
+    proposed_change:
+      action: add_branch
+      summary: 语料角色索引表增'Gap 主张'行：gap pivot 句=对会话缺口的实质主张，默认承担段 claim（或为紧随其后的 We argue claim 的直接前件）；取句路径指向 write-introduction
+        tensions/literature-turns 与 write-theory 缺口句式。
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 全 build type（段落级角色标注）
+      hypothesis_families: []
+      journals:
+      - AMJ
+      boundary: 仅角色索引表与句级标注；不改变五问/拼贴判据本体。
+    papers:
+    - id: Zhong_et_al_2020_AMJ
+      journal: AMJ
+      build_type: 段落论证体检
+      hypothesis_family: ''
+      evidence_anchor: P5 S4（双跑同归 Claim 的 gap 句）与 P6 S4（一判 Reason 一判 Claim）——gap 句在 Reason/Claim 间漂移，两标注员备注均点名角色表缺条目。
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - AMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - AMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-07'
+    last_seen: '2026-09-07'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.

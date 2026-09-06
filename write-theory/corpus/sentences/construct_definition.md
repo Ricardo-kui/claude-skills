@@ -751,6 +751,39 @@ indices for ability and identity conformance are no longer aligned.
 
 ---
 
+
+### 句式 O：N 联框架定义电池+跨层复用声明（gulati_nohria_zaheer_2000 型）
+
+> 论证角色：定义前提 [D]（一次定义 N 联分析框架，声明其跨层不变性并显式复用）
+
+**模板**:
+> [电池引入] "In order to illustrate the implications of viewing [level] from a [lens] perspective, we consider [N] types of [frame family]: [A], [B], and [C] ([citation])."
+> [逐项定义] "[A] refers to [definition]. By [B] we mean [definition]. [C] is the set of [definition]."
+> [形态注记] "While these are sometimes spelled out in [formal form], most often they are simply [informal form] that evolve within [unit]."
+> [跨层复用] "In order to assess [implications], this time at the level of [other level], we can use the same conceptual frame as we have above—in terms of [A], [B], and [C]—and show how one might view each of these aspects as [theoretical role]."
+
+**来源**: Gulati, Nohria & Zaheer 2000 (SMJ), Theory Industry Structure 节 P3 + Inimitable Resources 节 P2
+
+**原文锚定**:
+> "In order to illustrate the implications of viewing the industry level of analysis from a network perspective, we consider three types of relational characteristics: network structure, network membership, and tie modality."
+
+**原文锚定**（跨层复用声明）:
+> "In order to assess the strategic implications of such networks, this time at the level of the firm, we can use the same conceptual frame as we have above—in terms of network structure, membership, and tie modality and show how one might view each of these aspects of a network as inimitable resources."
+
+**关键特征**:
+- N 联电池一次定义：三个平行维度各占一句，句式错开（refers to / By ... we mean / is the set of）避免模板感
+- 电池后立即给形态注记（formal vs informal 存在形态），防构念被读成纯形式变量
+- 跨层复用声明句是核心增量："this time at the level of..., the same conceptual frame as we have above"——显式宣告框架跨层不变性，读者自带地图进入下一层
+- 定义句零例证（定义即自明），例证预算省给域循环机制段
+
+**适用**: 综述文/多层次分析文的框架定义段；任何需要"一套维度、多层复用"的分析框架 T1。与变体 E（三层框架展开+表格对比）的区别：纯散文电池无表格，维度在后续层以复用声明而非表格回用。
+
+**禁忌**: 维度间判据必须互斥（structure=整体模式 / membership=节点构成 / modality=规则规范式）；复用声明必须真的在后续层兑现全部维度，不得只用其中一个；维度 ≤3，再多改表格。
+
+**风格画像来源**: gulati_nohria_zaheer_2000 (SMJ)
+
+<!-- wb:gulati_nohria_zaheer_2000_strategic_networks:tripartite_frame_battery_crosslevel_reuse -->
+
 ### 句式 N：构念层次辩护段（westphal_bednar2005 型）
 
 **模板**:

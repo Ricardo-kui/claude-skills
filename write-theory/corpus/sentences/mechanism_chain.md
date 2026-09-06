@@ -1118,6 +1118,33 @@ sentence_position: why_chain_transition / reasoning token
 
 <!-- wb:gulati2005-adaptation-vertical:s_mechanism_chain_availability_contrast_and_hybrid_approximation -->
 
+
+### 句式 E：机制对命名+例示性免责引入（gulati_nohria_zaheer_2000 型）
+
+> 论证角色：Reason（机制集引入：给机制贴专名标签并声明例示性边界，标签在后文反复回用）
+
+**模板**:
+> "These [dynamics] can have significant consequences for [outcome]. We discuss two ways in which [dynamics] can influence [outcome]. We label these (1) [M1] and (2) [M2]. These are simply two of the more common consequences of [dynamics] and are intended to be illustrative rather than comprehensive."
+
+**来源**: Gulati, Nohria & Zaheer 2000 (SMJ), Theory Network Dynamics 节 P4
+
+**原文锚定**:
+> "We label these (1) lock-in and lock-out effects and (2) learning races. These are simply two of the more common consequences of network dynamics and are intended to be illustrative rather than comprehensive."
+
+**关键特征**:
+- 机制命名句 "We label these (1)... and (2)..." 给机制贴专名标签，标签随后升级为段落主题（标签即小节标题），后文以专名回用
+- 例示性免责紧跟命名："simply two of the more common consequences... illustrative rather than comprehensive"——把选择性透明化，预防"清单不全"批评（综述文 humble disclaimer 句位）
+- 与假设推导文的 "We argue through [M]" 不同：无假设体裁的机制引入以"讨论路线图"形式给出，收敛终点是机制间对比而非假设
+- 前句 "These [dynamics] can have significant consequences for [outcome]" 先宣告机制集的后果重要性，再给路线图——后果先行排序
+
+**适用**: 综述文/概念文的机制集引入段；实证文 Discussion 机制罗列段可降档使用。
+
+**禁忌**: 标签必须被后文兑现（每标签至少一段机制推演）；"illustrative rather than comprehensive" 不得用于实证假设推导（机制须穷尽论证）；机制对之间需有概念区分，不是同一机制换标签。
+
+**风格画像来源**: gulati_nohria_zaheer_2000 (SMJ)
+
+<!-- wb:gulati_nohria_zaheer_2000_strategic_networks:labeled_mechanism_pair_disclaimer -->
+
 ## "双刃剑"理论框架骨架（Double-Edged Sword）
 
 **适用**：某一策略/构念既有明显好处又有隐性坏处，需要系统呈现理论视角下的两面性

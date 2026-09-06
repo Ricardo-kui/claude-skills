@@ -918,6 +918,114 @@ Therefore, H[k]: ...
 
 <!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:transfer_plus_sorting_dual_warrant_signal -->
 
+
+### 变体 L：轻攻门域循环·透镜横切框架复用型（gulati_nohria_zaheer_2000 综述文型）
+
+> 论证角色：Framing（以"基线域→透镜精化→框架电池复用→例证→互补收束"的域循环，把一个透镜横切到 N 个既有理论域并跨层复用同一分析框架）
+
+**模板**:
+> [域循环 × N，每循环五拍]
+> 拍1 基线礼让：The [X] school, which has had a major impact on [field], began with [baseline model] and argued that [baseline claim] ([citation]).
+> 拍2 精化提案：We propose that a consideration of [lens] allows a more refined understanding of [domain]—since [participants] can be seen as embedded in [lens flows].
+> 拍3 框架电池复用：we consider [N] types of [frame characteristics]: [A]... [B]... [C]...；跨层复用声明：this time at the level of [level], we can use the same conceptual frame as we have above—in terms of [A], [B], and [C].
+> 拍4 机制例证：[Frame dimension] can affect [outcome]. For instance, [mechanism] ([citation]). Research by [authors] shows how [finding]. Similarly, research by [authors] illustrates how [finding].
+> 拍5 互补三步收束：Overall, using [lens concepts] in this manner provides a valuable complement to explanations that simply focus on [baseline factors]. They expand... Furthermore, [lens] extends the underlying mechanisms beyond conventional notions of [baseline mechanism].
+
+**来源**: Gulati, Nohria & Zaheer 2000 (SMJ), Theory 五节循环（Industry Structure / Intra-Industry / Inimitable Resources / Contracting Costs / Network Dynamics）
+
+**原文锚定**:
+> "We propose that a consideration of strategic networks allows a more refined understanding of industry structure—since industry participants can be seen as embedded in networks of resources, information, and other flows."
+
+**关键特征**:
+- 轻攻门：域内不点破共享隐含假设（无 Gulati_1998 变体 F 六拍的"内在盲区/情境激活"拍），基线回顾以"精化提案"一句直转——适用于透镜合法性已由引言建立、正文只需展示横切收益的综述
+- 同一分析框架一次定义、跨层显式复用（industry→firm："this time at the level of the firm, we can use the same conceptual frame as we have above"）——框架即综述的章法骨架
+- 每域以互补三步收束（complement→expand→extend mechanisms），不推翻基线、不产开放议程（区别于变体 F 的拍5 互补整合+拍6 开放议程）
+- 例证链节奏：机制主张→For instance 机制例→"Research by X shows / Similarly, research by Y illustrates"双实证例证锚定
+- 例示性免责：机制对命名后接 "intended to be illustrative rather than comprehensive"，预防清单式综述批评
+
+**适用**: 综述文/概念界定文把一个透镜横切到 N≥3 个既有理论域、透镜合法性已在引言建立的正文组织。与同文件变体 F（Gulati_1998 透镜-议程六拍循环）的区别：变体 F 每议题先付"已知诚意"再点破隐含假设并以开放议程收尾；本变体跳过盲区/议程拍，以"精化提案+框架复用+互补收束"的更轻循环重复 N 次，并新增跨层框架复用声明。
+
+**禁忌**: 各域必须真的复用同一框架（至少一个维度跨域/跨层回用），否则域循环退化为五个独立小综述；透镜合法性未建立时先补盲区拍（用变体 F）；域收束对象必须具体（baseline factors/mechanism 点名），空转即废话骨架。
+
+**风格画像来源**: gulati_nohria_zaheer_2000 (SMJ)
+
+<!-- wb:gulati_nohria_zaheer_2000_strategic_networks:domain_loop_lens_frame_reuse -->
+
+
+### 变体 M：部落冲突归因诊断段（gulati_2007_tent_poles 型）
+
+> 论证角色：Reason（两层归因：启发式标签→(1)部落间冲突+(2)部落内范式战→结构双重身份根源，为消解立场供社会机制）
+
+**模板**:
+> "It is unfortunate how easily [field members] label each others' [research enterprises], often with little evidence. Sometimes [members] define [value A] as use of [the narrow paradigm of theories, methods, and analyses they themselves would use]. I argue that the use of [simple heuristics and stereotypes] to define [value A] has resulted in (1) [a broad conflict between field tribes labeled by the opposed values] and (2) [subtribe paradigm clashes within these groups] based on [members'] identifying with [specific paradigmatic commitments], which in turn [discourages boundary-crossing work]. At the roots of these [identity clashes] is an inherent duality in [field members]: most of us are [professional identity X] employed by [professional institutions Y]. [Institutional history] then hardened this duality into [tribal boundaries], and [covert arbiters] conferring [badges of honor or shame] on work regardless of its impact [mask tribal behavior as impartiality]."
+
+**来源**: gulati_2007_tent_poles (AMJ), Causes of Tribalism P1-P5
+
+**原文锚定**:
+> "I argue that the use of simple heuristics and stereotypes to define rigor has resulted in (1) a broad conflict between management researcher tribes labeled as rigorous and relevant and (2) subtribe paradigm clashes within these two groups, particularly in the rigor camp"
+
+**关键特征**:
+- 两层效应编号归因（(1) 部落间 + (2) 部落内），一句 "I argue that..." 同时完成立场布防与机制清单——产出的是可核查的社会机制主张，不是纯断言
+- 归因下探结构性根源（科学家受雇于专业学院的双重身份）+ 制度史（1960s 学科化进位）——把"谁、经什么机制建构了对立"落实为可指认的主体与历史
+- 第三拍隐蔽仲裁者机制（badge of honor or shame、"masked as impartiality"）预防"评审中立"反驳，把冲突从观点分歧改写为守门行为
+- 与实证文的假设推导相反：本段的"预测"是社会机制命题，证据地位是修辞-历史的（评论体立场布防签名动作）
+
+**适用**: 评论/论坛体理论文对领域级对立（rigor-relevance、quant-qual、micro-macro）做归因诊断；Incommensurability x Mode/Question 中"对立由谁建构"的正文兑现段；需要立场宣告但不流于断言的场景
+
+**禁忌**: 编号机制主张必须每层可核查（有历史事件或可点名观察者支撑），否则退化为立场断言；守门人类机制点名时避免滑向阴谋论修辞（原文 "invisible politburo" 为风格签名，慎仿）；实证假设论文勿用——无此论证任务
+
+<!-- wb:gulati_2007_tent_poles:tribalism_cause_diagnosis -->
+
+
+### 变体 N：开山者典范反讽论证段（gulati_2007_tent_poles 型）
+
+> 论证角色：Evidence（三学科开山者实践-理论键合实例链，以反讽句起、以"失落根源"反转句收，为消解立场供历史证据）
+
+**模板**:
+> "Perhaps the greatest irony of [the field's multidimensional conflicts] is that the [founders and schools of thought] providing the foundations of [the field] represent strong bonds between [value A] and [value B], between [theory] and [application]. Take the [value-A] side of the equation. In [discipline 1], [founder] [direct practice engagement], all of which [shaped his writings], which, in turn, [shaped public practice]. [Discipline 2] founders are also well represented among [theorist-practitioners]... Among [discipline 3 forefathers] the story is the same... So it would be safe to suggest that [those who take the either/or approach] have lost touch with their roots... [The founders] seemed to have no trouble crossing this divide to see themselves as both."
+
+**来源**: gulati_2007_tent_poles (AMJ), Historical Exemplars of Rigor and Relevance in the Social Sciences P1-P4
+
+**原文锚定**:
+> "Perhaps the greatest irony of these multidimensional tribal wars is that the theorists and schools of thought providing the foundations of modern management research represent strong bonds between rigor and relevance, between theory and application."
+
+**关键特征**:
+- 反讽总起（"Perhaps the greatest irony..."）：把对立营垒自称继承的学科开山者征用为本方证据——史实选择即论证
+- 三学科 × 每人一句"实践介入→反哺理论→影响公共实践"的微缩链；人名密度高但句式严格复用（parallel exemplar roster），阅读负荷被节奏抵消
+- 收束两拍：反转结论（"lost touch with their roots"——营垒立场与学科根源相悖）+ 身份诊断（开山者"see themselves as both"，对立是当代身份建构而非学科宿命）
+- 评论体特有"以史为证"：不用数据用谱系，为 Mode/Question 型贡献供正当性；本篇还引 Roethlisberger 自传作单点深化，防名单 flat
+
+**适用**: 评论/概念文为"对立是建构而非本质"类主张供历史证据；领域有公认开山者谱系且其实践介入可核查时；需要把身份诊断锚进学科史的场景
+
+**禁忌**: 典范选择必须可核查——全 favorable-case 选样在实证场域会被攻破（本篇为评论体豁免，模仿时注意体裁前提）；每人"实践介入→理论反哺"方向必须真实，不得把轶事拔高为因果；不用于假设推导文——证据地位是修辞性的，不承担 H 式承重
+
+<!-- wb:gulati_2007_tent_poles:founder_exemplar_irony_reversal -->
+
+
+### 变体 O：大帐篷正和重构+编号规范程序段（gulati_2007_tent_poles 型）
+
+> 论证角色：Warrant（把消解命题兑现为可执行规范程序：正和重构+隐喻包+编号步骤链，每步配典范引证与限定）
+
+**模板**:
+> "The more challenging question, then, is whether [the field] can [emerge from under small, private umbrellas to erect tall and thick poles to prop up a big tent shielding it from the charges of poor A, low B, and X deficits]. This will mean [existing in a new domain] that replaces '[either-or]' with '[and]'. The solution... is to accept that [value A] and [value B] are not opposites after all... If we can view [A and B] as [outcomes to be simultaneously maximized], we can pursue true synergy. Let me offer several [normative suggestions]... In the aggregate, [they] are a multistep process for [performing the conjunctive work]. (I present discrete steps, but it is important to note that one doesn't have to follow them in this sequence.) [Step N, imperative]: [action]. [Exemplar anecdote or citation]. [Qualification/boundary]."
+
+**来源**: gulati_2007_tent_poles (AMJ), Bridging Rigor and Relevance: A Big Tent View + Steps in an Integrative Process
+
+**原文锚定**:
+> "The solution, as I suggest below, is to accept that rigor and relevance are not opposites after all." ... "(I present discrete steps, but it is important to note that one doesn't have to follow them in this sequence.)"
+
+**关键特征**:
+- 消解命题→可执行程序的兑现拍：先宣言 "not opposites after all" + 正和重构（outcomes to be simultaneously maximized），再隐喻包（umbrella/big tent）给纲领命名——贡献即收束（T6 closure-as-contribution）
+- 编号祈使句步骤链，每步三拍：祈使动作→典范引证（Ghoshal "sizzle"、Siggelkow "talking pigs"、Doz 合作轶事）→限定语（"Discovery is interactive" / "need not go so far"）
+- 显式非顺序免责（"doesn't have to follow them in this sequence"）+ 适用范围免责（"regardless of the publishing outlets"）——防清单式规范被读成线性阶段模型
+- 步骤自带升级梯度（bilingual translators→co-create 知识共创），收束借对立营垒引语（Weick：practitioners 亦须担责）完成双边化，预防单向归责
+
+**适用**: Incommensurability x Mode 评论/概念文的贡献兑现段——把"对立消解"落为研究实践规范模型；以编号程序组织建议时；正文收束=贡献本身的场景
+
+**禁忌**: 编号步骤必须每步配引证或轶事，裸祈使句清单即废话骨架；非顺序免责不可省（否则暴露无过渡条件、被读作伪过程模型）；实证假设文勿用——此为 Mode 型贡献专用组织，不产生可检验预测
+
+<!-- wb:gulati_2007_tent_poles:normative_conjunctive_program -->
+
 ### 模式 E：同果近邻构念反号辨析型（westphal_bednar2005 型）
 
 **模板**:

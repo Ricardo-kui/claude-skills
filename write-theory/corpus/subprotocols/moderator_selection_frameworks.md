@@ -339,6 +339,38 @@ across outcome types].
 
 <!-- wb:anand_mukherjee_2024_learning_from_failures_di:stock_flow_capability_moderator_pairing -->
 
+
+### 变体 C：主效应后两类因子 Moderator 路线图（Gulati_Lavie_Singh_2009 型）
+> 论证角色：Framing（在主效应假设与调节分支之间插入一段元框架过渡——先声明"主效应已论证完毕"，再用两类因子给全部 moderator 定位并逐一预告）
+
+<!-- pattern_id: moderator_roadmap_twoclass_metaframework; build_type: 调节效应型/假设树型; source_papers: ["Gulati_Lavie_Singh_2009_SMJ"]; confidence: low -->
+
+**适用场景**: ≥2 个 moderator 并行调节同一主效应时，用一个两类因子元框架（如对手侧 vs 企业侧、环境 vs 组织）回答"为什么选这些 moderator"，并在分支展开前给出路线图。
+**排列模式**: 主效应完成信号 → 条件化转折 → 两类因子元框架 → First/Then/Finally 三分支预告
+**范文来源**: Gulati, Lavie, and Singh (2009), SMJ — partner distinctiveness（伙伴侧）vs firm resources & firm-specific uncertainty（企业侧）
+
+**骨架**:
+```
+[主效应完成信号] Thus far, we have considered the direct effect of [X] on [Y].
+
+[条件化转折] It is possible, however, that [X] effects may be contingent and vary
+systematically with [class-1]- and [class-2]-specific factors.
+
+[路线图预告] Next, we consider such moderating effects. First, we argue that [W1
+potential benefits] are likely to depend on [class-1 factor: extent to which
+novel opportunities arise]. We then propose that [W2] benefits may be contingent on
+[class-2 factor: focal actor's own capacities]. Finally, we examine how [W3
+perception factor] shapes the value of [X].
+```
+
+**为什么有效**: 一段话同时完成 C18 要求的 moderator 选择元框架（两类因子各管一侧）与分支地图，读者带着分类预期进入每个调节小节，不会把三个 moderator 当成随手堆砌。
+**注意事项**: 两个因子类必须与 moderators 一一对应且互斥（本篇：伙伴侧 1 个 + 企业侧 2 个）；每个 moderator 的预告只给一句逻辑，细节留给分支小节，避免重复论证。
+**反模式**: 无元框架逐个 "We also examine the moderating role of ..."——审稿人会问为什么是这几个 moderator。
+**原文锚点** (Gulati, Lavie & Singh 2009, SMJ):
+> "Thus far, we have considered the direct effect of PSE on value creation in alliances. It is possible, however, that PSE effects may be contingent and vary systematically with partner- and firm-specific factors."
+
+<!-- wb:gulati_lavie_singh_2009_partnering_experience:moderator_roadmap_twoclass_metaframework -->
+
 ### 框架 B：意愿×机会双路径调节论证（westphal_bednar2005 型）
 
 **模板**:

@@ -68,6 +68,66 @@ more precise predictions about their distinct effects on [outcome]."
 
 ---
 
+
+### 变体 C：构念拆分双理由差异预测（Gulati_Lavie_Singh_2009 型）
+> 论证角色：A&R（先立两类型定义与功能分工作定义前提，再以 (a)+(b) 双理由推相对排序预测——辨析直接兑现为差异假设）
+
+<!-- pattern_id: construct_decomposition_dual_reason_differential; build_type: 构念辨析型; source_papers: ["Gulati_Lavie_Singh_2009_SMJ"]; confidence: low -->
+
+**适用场景**: 单一上位构念被"打包"使用导致实证结果混乱时，把构念拆成两种类型并推导相对排序预测（不只辨析，还要回答"谁带来更多收益、为什么"）。
+**排列模式**: 定义分工 → 共同利益声明 → (a)+(b) 枚举双理由 → 比较收敛 → 配对假设
+**范文来源**: Gulati, Lavie, and Singh (2009), SMJ — general partnering experience vs partner-specific experience
+
+**骨架**:
+```
+[拆分开场] We unpack the [focal construct] by distinguishing between [Type-A] and
+[Type-B] ([source citation]).
+
+[A 定义] [Type-A] refers to the [definition: experience accumulated from any
+instance of the activity].
+
+[B 定义] In contrast, [Type-B] refers to the [definition: experience accumulated
+through repeated instances with the same counterpart]. Such experience is
+[level qualifier: dyadic] rather than [baseline level: firm-specific].
+
+[功能分工] Whereas [Type-A] serves as the foundation for [foundation function],
+[Type-B] assists in [counterpart-specific function].
+
+[文献定位] Most prior studies ... have focused on [Type-A] ... In the few studies
+that considered [Type-B] ..., the distinction ... has not been the focus of
+attention.
+
+[共同利益+差异预告] We next propose that while [shared benefits] accrue for both
+[Type-A] and [Type-B], the benefits of [Type-B] are greater because: (a) [reason 1:
+the process of benefiting from Type-B is more efficient], and (b) [reason 2: Type-B
+offers richer benefits].
+
+[理由1 段] First, [reason 1] because of [contextual specificity]. [理论依据 +
+3 个平行实证印证]. Extending these ideas, we suggest that [the advantage also holds
+in the focal setting]. Thus, ... provides a more consistent context. In turn, this
+enhances the potential contribution of [Type-B] relative to [Type-A].
+
+[理由2 段] A second advantage of [Type-B] over [Type-A] arises from [dimension:
+breadth of benefits]. Many benefits ... are inherently [counterpart-specific] in
+the sense that they cannot be applied in [other instances]. [案例印证]. For
+example, [trust/routines/mechanisms] with a given counterpart does not imply [the
+same] with another. Therefore, many benefits are available only in [Type-B
+situations], whereas [Type-A] ... tends to be homogenous.
+
+[比较收敛→配对假设] In sum, [Type-B] is likely to [directional prediction]. In
+addition, due to [reason recap], the impact of [Type-B] is predicted to exceed that
+of [Type-A]. → H1: [Type-B] → [outcome]; H2: contribution of [Type-B] > contribution
+of [Type-A].
+```
+
+**为什么有效**: 拆分不是终点——"whereas 功能分工"先让两类型在理论上有不同分工，(a)+(b) 枚举把"谁更强"落到可检验的两个独立理由上；H2 的相对排序预测直接把辨析转化为实证增量，避免"辨析完就结束"的空心化。
+**注意事项**: 两条理由必须概念独立（一条关于积累效率、一条关于收益宽度/可替代性）；理由段需各自带回一个平行实证印证，防止双理由沦为断言；H2 为相对排序假设，需在 Methods 中有对应的系数比较检验。
+**反模式**: 只给两类型下定义就宣布"因此效应不同"——没有 (a)+(b) 的独立理由，差异预测退化为标签差异。
+**原文锚点** (Gulati, Lavie & Singh 2009, SMJ):
+> "We unpack the benefits of partnering experience by distinguishing between general partnering experience (GPE) and partner-specific experience (PSE)." ... "Whereas GPE serves as the foundation for a firm's relational capability, PSE assists in building trust and facilitating coordination with certain partners." ... "We next propose that while all these benefits accrue for both PSE and GPE, the benefits of PSE are greater because: (a) the process of learning from PSE is more efficient than the learning from GPE ... and (b) PSE offers richer benefits than those available through GPE."
+
+<!-- wb:gulati_lavie_singh_2009_partnering_experience:construct_decomposition_dual_reason_differential -->
+
 ## 假设陈述格式
 
 | 类型 | 模板 | 示例 |
