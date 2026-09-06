@@ -13,14 +13,15 @@
 
 | # | 角色 | 五问 | 段内位置 |
 |---|------|------|---------|
-| 1 | **Claim** | What do you want me to believe? | Topic sentence（段首，主语+主动动词+方向） |
+| 1 | **Claim** | What do you want me to believe? | 段首 topic sentence **或段末收束句**可指认（推导链中段允许段首为局部前提、claim 落收束句；埋没段中且无收束才不合格）——v1.1 |
 | 2 | **Reason** | Why do you say that? | 推理 moves（1–3 个；一个 move = 一次可质疑的推理转换，非一句引用） |
-| 3 | **Evidence** | How do you know? | 每个**承重 reason** 配发现锚点（方向/边界/量级 + 引文） |
+| 3 | **Evidence** | How do you know? | 每个**经验性承重 reason** 配发现锚点（方向/边界/量级 + 引文）；分析性/概念性桥接属 warrant 性质连接，不要求引文锚点——v1.1 |
 | 4 | **Warrant** | How does that follow? | 连接 reason 与 claim 的一般性原则；仅三场合明言（跨域读者/原则有争议/claim 会被抗拒——见 write-theory `reasoning_soundness_protocol.md` §5） |
 | 5 | **Acknowledgment & Response** | But what about…? | 预判的最强异议；按频次预算（0–2/篇），0 处合法 |
 
 两个推论：
 - 引用是 move 的证据，不替代 move——"Prior research shows X" 是 evidence 句，必须挂在一个 reason 下，不能自己顶一个推理环节。
+- 引语锚定的归纳概括（v1.1）：概括有增量内容（个例→类别）即为归纳型 move，该引语就是它的锚点；仅复述引语内容则不是 move。
 - 跨段论证：一个 reason 可以独立成段（Booth storyboard 一卡一理由），此时该段的 claim 即这个 reason；每段仍自成一个论证单元。
 
 ## 语料角色索引（角色 ≠ 风格）
@@ -45,7 +46,7 @@
 2. **证据孤儿**：≥2 个 evidence 句无共同 reason——证据在等一个没被提出的理由。
 3. **Warrant 悬空**：warrant 句出现但段内无 reason→claim 对可连。
 4. **无主段落**：读完说不出本段让你信什么——claim 缺位或埋没。
-5. **引用列队**：相邻 2+ 句同层 evidence 顺序排列、句间无 because/however 关系（theory 审计 1 "References as theory" 的段落级形态；intro 侧即 anti-pattern ⑲引文堆叠的段内成因）。
+5. **引用列队**：相邻 2+ 句同层 evidence 顺序排列、句间无 because/however 关系（theory 审计 1 "References as theory" 的段落级形态；intro 侧即 anti-pattern ⑲引文堆叠的段内成因）。**例外（v1.1）**：同层例证共同挂靠一个已指认的 reason/claim、且各自带独立内容（如同一趋势的两个例子）→ 合法并列例证，不算列队。
 
 ## 完成判据
 
