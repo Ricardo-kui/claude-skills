@@ -1,13 +1,13 @@
 meta:
-  last_updated: '2026-08-28'
-  total_mvp30_papers_indexed: 60
-  batches_processed: 31
+  last_updated: '2026-09-06'
+  total_mvp30_papers_indexed: 62
+  batches_processed: 33
   latest_batch_note: '2026-08-28 Wowak, Ball, Post & Ketchen 2021 M&SOM (The Influence of Female Directors on Product Recall Decisions;
     citekey wowak_2020_female_directors_recalls): ADD hook 11-institutional-anecdote 变体 (legislative-mandate escalation 事实开场),
     tension 01-AL (邻域盲区+合理外推桥接), transitions/10 变体 E (零文献+轶事证据桥接过渡), previews/theory-lens-driven-preview 变体 Q (误读防御型权变预告),
     previews/robustness-preview 变体 I (三重识别+竞争层级排除预览). Gap=Incompleteness. 全部 VERIFIED per expert_audit_override (用户 2026-08-28:
     产品召回为主研究领域，单源足矣). transitions 与 theory-lens-driven-preview 无 registry 分区行（语料级 _index.md 已同步）；transitions/10 与
-    theory-lens-driven-preview 的 registry 行不存在，未强建. No core routing change.'
+    theory-lens-driven-preview 的 registry 行不存在，未强建. No core routing change. 2026-09-06 Higgins & Gulati 2003 OS (Getting Off to a Good Start; citekey higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe): residual sync - contributions/contribution-statements +higgins_gulati2003 (变体U 谱系完成式+二阶延伸型, EMERGING 单源); tension 变体AP 已由写回器登记. Gap=Incompleteness.'
   source: mvp30_index + 9_distill_files + path_B_confirmation + cui_yang_vertinsky_smj_distill + paruchuri_andrus_sullivan2026_amj_distill
     + li2025_jscm_distill + li2026_pom_distill + du_tsolmon2024_orsc_distill + lee_wu_bednar_orsc_18968_distill + reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc_distill
     + vidal_mitchell2015_orsc_distill + moon_tuli_mukherjee2023_jm_distill + schumacher_keck_tang2020_smj_distill + kashmiri_nicol_arora2017_jams_distill
@@ -144,7 +144,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     05-literature-consensus-blindspot:
-      paper_count: 12
+      paper_count: 13
       papers:
       - gamache2020 (SMJ)
       - han2020 (AMJ)
@@ -158,9 +158,10 @@ evidence:
       - kashmiri_nicol_arora2017 (JAMS)
       - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
       - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
+      - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int (Administrative Science Quarterly)
       gap_distribution:
         Incompleteness: 5
-        Inadequacy: 7
+        Inadequacy: 8
         Incommensurability: 0
       status: ROBUST
       generativity: GENERATIVE
@@ -631,7 +632,7 @@ evidence:
         common_revise_reasons: []
   tensions:
     01-despite-progress-unaddressed:
-      paper_count: 36
+      paper_count: 38
       papers:
       - ahmadi2017 (JMS)
       - cancellieri2023 (SMJ)
@@ -669,8 +670,10 @@ evidence:
       - wowak_2020_female_directors_recalls (Manufacturing & Service Operations Management)
       - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
       - zajac_westphal_the_social_construction_of_market_value (American Sociological Review)
+      - higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe (Organization Science)
+      - gulati2005-adaptation-vertical (Strategic Management Journal)
       gap_distribution:
-        Incompleteness: 27
+        Incompleteness: 29
         Inadequacy: 0
         Incommensurability: 0
       status: ROBUST
@@ -720,7 +723,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     03-structural-blindspot:
-      paper_count: 8
+      paper_count: 9
       papers:
       - employee_free_speech (OS)
       - gamache2020 (SMJ)
@@ -730,9 +733,10 @@ evidence:
       - shen2022 (JOM)
       - shipilov2020 (SMJ)
       - singh2023 (JMR)
+      - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int (Administrative Science Quarterly)
       gap_distribution:
         Incompleteness: 0
-        Inadequacy: 8
+        Inadequacy: 9
         Incommensurability: 0
       status: ROBUST
       generativity: GENERATIVE
@@ -1465,7 +1469,7 @@ evidence:
         Inadequacy: 2
         Incommensurability: 3
     findings-preview:
-      paper_count: 48
+      paper_count: 49
       papers:
       - castellaneta_conti_kacperczyk2017 (SMJ)
       - ceo_regulatory_focus_ijrm (IJRM)
@@ -1515,6 +1519,7 @@ evidence:
       - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
       - fang_et_al_2025_rival_recall_ad_spend (Production and Operations Management)
       - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
+      - gulati2005-adaptation-vertical (Strategic Management Journal)
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: LOW
@@ -1525,7 +1530,7 @@ evidence:
         revise: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 26
+        Incompleteness: 27
         Inadequacy: 20
         Incommensurability: 2
     robustness-preview:
@@ -1574,7 +1579,7 @@ evidence:
         common_revise_reasons: []
   contributions:
     contribution-statements:
-      paper_count: 49
+      paper_count: 50
       papers:
       - ahmadi2017 (JMS)
       - ceo_regulatory_focus_ijrm (IJRM)
@@ -1597,7 +1602,7 @@ evidence:
       - han2024 (AMP)
       - han2024 (SMJ)
       - haunschild2015 (OS)
-      - kashmiri_nicol_arora2017 (JAMS)
+      - higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe (Organization Science)      - kashmiri_nicol_arora2017 (JAMS)
       - keeves2017 (ASQ)
       - kim2022 (MS)
       - kim_lee2026 (SMJ)
@@ -1664,6 +1669,12 @@ evidence:
         Incompleteness: 5
         Inadequacy: 1
         Incommensurability: 1
+  transitions:
+    10-literature-to-gap:
+      paper_count: 1
+      papers:
+      - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int (ASQ)
+
   research_questions:
     01-three-questions-counterintuitive:
       paper_count: 1
@@ -1842,13 +1853,14 @@ evidence:
         reject: 0
         common_revise_reasons: []
     02-dual-theory-layered:
-      paper_count: 3
+      paper_count: 4
       papers:
       - hoffmann_cheong_phan_zurbruegg2024 (JM)
       - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
       - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
+      - gulati2005-adaptation-vertical (Strategic Management Journal)
       gap_distribution:
-        Incompleteness: 2
+        Incompleteness: 3
         Inadequacy: 0
         Incommensurability: 1
       status: VERIFIED

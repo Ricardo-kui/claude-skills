@@ -6,9 +6,9 @@
 meta:
   schema_version: "1.0.0"
   registry_type: theory-fragment-registry
-  last_updated: "2026-08-30"
-  total_papers_indexed: 74
-  batches_processed: 31
+  last_updated: "2026-09-06"
+  total_papers_indexed: 77
+  batches_processed: 34
   auxiliary_sources_note: "Entries with source_tier: auxiliary are writing-craft books, not empirical papers. They register provenance and stay EMERGING until the pattern is cross-validated in empirical paper distills; they never count toward VERIFIED/ROBUST paper_count thresholds on their own."
   latest_batch_note: "2026-08-30 Westphal 系双篇 residual 补登记（Carpenter & Westphal 2001 AMJ + Zajac & Westphal 2004 ASR，变体块已由主循环写回，本批仅 registry/index 元数据同步，全部 VERIFIED per expert_audit_override: 用户点名 Westphal 为最喜爱学者，引言/理论单源足矣）: ADD carpenterwestphal2001 tfr_219-223（反假设驳斥式开场 arrangement_patterns 变体A / 情境劈叉共同机制干 E_moderation 变体C / 互补组合型双边论证 bilateral_argumentation_templates 变体B / 个体-单元双层平行假设集+中介份额声明 hypothesis_organization_patterns 变体C / How-then-might 机制枢纽问句 leitmotif-section-opener 句式B）与 zajac_westphal_2004 tfr_224-227（F 技巧4 分离编号回指竞争对+期界基线+跨政策推广 → F 源数 2→3 升 VERIFIED，next_batch_targets.competing_hypotheses 已同步 / 假设句分离编号回指竞争对 hypothesis_forms / 竞争维度 carve-out 句 acknowledgment_response 变体C / 同一测量的对立读法 evidence_patterns）。_index.md 行注已同步。"
   note: "Reverse-engineered from existing corpus anchors. Batch 2026-07-09: distilled 4 recall papers (Darby 2023 MSOM, Mayo 2022 POM, Ball 2018 JOM, Darby 2026 JOM) into subprotocols and registry. Batch 2026-07-10: expanded Cui, Yang & Vertinsky (SMJ) with inverted-U mechanism, bilateral argumentation, flatten/steepen language, and local closure templates. Batch 2026-07-22: distilled Li, Bapuji, Talluri, Singh & Narayanan (2025 JSCM, Vertical Spillover of Product Recalls) — added dual_mechanism_convergent_moderation pattern to bilateral_argumentation_templates.md (moderator×mechanism matrix) and registered H1 dual-mechanism convergence under existing dual_mechanism_same_direction. Batch 2026-07-22b: distilled Cutolo & Ferriani (2024 JOM, narratives & atypicality) — added minimal_pair_contrast_vignette pattern to argumentation_patterns.md (Leah controlled-contrast showing device); registered parallel_buffering_moderators_single_mechanism; cutolo_ferriani also a 2nd source for write-introduction theory-lens/02-dual-theory-layered (processing fluency + Bloom & Lahey taxonomy). Batch 2026-07-22c: distilled Falchetti, Cattani & Ferriani (2022 SMJ, Start with Why) — added congruency_fit_fluency_mechanism to sentences/mechanism_chain.md (genuine gap; spans Falchetti + Cutolo); CORRECTED misclassification of falchetti_2022_smj (was construct_differentiation tfr_017, has no such content) → reclassified to congruency mechanism; construct_differentiation source_count 5→4. Falchetti intro hook (23-popular-debate) and Methods (多研究 变体1/2, 实验 变体1) already distilled in prior sessions. Batch 2026-07-28: backfill + wiring batch — registered two auxiliary sources whose fragments entered corpus in the 2026-07-27/28 waves but were never registered: Booth/Williams/Colomb (The Craft of Research, premise soundness gate + warrant tests + acknowledgment-response matrix + voice firewall → reasoning_soundness_protocol.md, acknowledgment_response.md) and Greene & Lidinsky 2017 (Rogerian four-step → acknowledgment_response.md §5; fallacy probes → reasoning_soundness_protocol.md §8). Same batch wired the registry into consumption: corpus/_index.md selection-stage pointer, write-theory/SKILL.md resource-loading clause, distill-theory-exemplar Phase 4 registry-writeback protocol. Registry previously orphaned (no .md referenced it) since creation. Batch 2026-08-03: distilled Schumacher, Keck & Tang (2020, SMJ); added the belief-updating/attention-threshold reversal pattern as EMERGING. Reference-level writeback was explicitly authorized by the user; no core routing or mandatory-slot rule was changed. Batch 2026-08-28: distilled Wowak, Ball, Post & Ketchen (M&SOM, female directors → product recall decisions), tfr_182-187, all VERIFIED per user expert_audit_override (产品召回为主研究领域单源足矣); context_assigned_margin_split additionally registered as a core_candidate observation item in _skill_design_feedback.yaml. Batch 2026-08-28b: distilled Westphal & Zajac (1998, ASQ, The Symbolic Management of Stockholders), tfr_188-195, all VERIFIED per user expert_audit_override (公司治理/符号管理为主研究领域单源足矣); 8 fragments across B_mechanism_elaboration (交替对立再诠释 + 硬/软数字测量重构), argumentation_patterns (判别式替代解释排除 + 两极之间假设声明), hypothesis_derivation_patterns (符号替代-预防-固权), hypothesis_organization_patterns (受众异质性 pivot), hypothesis_forms (实施权变从句), moderation (编号双 DV 交互). Batch 2026-08-29: distilled Post, Lokshin & Boone (2022, AMJ, What Changes After Women Enter Top Management Teams? A Gender-Based Model of Strategic Renewal), tfr_196-198, all VERIFIED per user expert_audit_override (用户点名喜爱本篇，单源足矣); 3 fragments across hypothesis_organization_patterns (中介配对分流→共享重构主干), hypothesis_forms (时间分阶 Δ 假设), moderator_selection_frameworks (新声音整合轴); _index.md 快速决策表已同步."
@@ -26,6 +26,126 @@ status_rules:
     description: Pattern replicated across 5+ papers and 2+ subfields; can be default recommendation
 
 source_papers:
+  gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:
+    display_name: "Gulati & Sytch (2007, Administrative Science Quarterly)"
+    journal: "Administrative Science Quarterly"
+    year: 2007
+    subfield: "strategy"
+    gap_type: "Incompleteness (provisional; intro mixes Inadequacy structural-blindspot)"
+    theory_build_type: "Mechanism deduction (formal mediation-dominant; dual-logic organization)"
+    fragments:
+      - fragment_id: tfr_236
+        type: s_hypothesis_forms_mediator_set_partial_mediation_protocol_mapping
+        title: "中介集合先验部分中介声明+检验协议前置映射"
+        home_files:
+          - "sentences/hypothesis_forms.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "先验声明各机制仅传导部分效应（非强中介），并前置映射后续检验协议；higgins_2003 近族第二源。"
+      - fragment_id: tfr_237
+        type: s_hypothesis_forms_mirror_pole_paired_ab
+        title: "镜像极点配对假设：同 DV 反号 a/b 对"
+        home_files:
+          - "sentences/hypothesis_forms.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "dependence asymmetry 双极点各自配一条反号假设（H1a/H1b），镜像结构使对立预测可分离检验。"
+      - fragment_id: tfr_238
+        type: v_b_mechanism_per_mediator_partial_mediation_chain
+        title: "并行多中介逐项部分中介链"
+        home_files:
+          - "variants/B_mechanism_elaboration.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "joint action / trust / information exchange 三并行中介逐项推导部分中介，主效应经多通道分流。"
+      - fragment_id: tfr_239
+        type: s_mechanism_chain_logic_contrast_pivot
+        title: "逻辑对照枢转句 Logic-Contrast Pivot"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Mechanism"
+        status: "EMERGING"
+        note: "power 逻辑与 embeddedness 逻辑之间的论证枢转句式：以对照标记理论换轨并预示反号预测。"
+  gulati2005-adaptation-vertical:
+    display_name: "Gulati, Lawrence & Puranam (2005, Strategic Management Journal)"
+    journal: "Strategic Management Journal"
+    year: 2005
+    subfield: "strategy"
+    gap_type: "Incompleteness"
+    theory_build_type: "Moderation (categorical fit / E1); ambiguous with mechanism deduction"
+    fragments:
+      - fragment_id: tfr_231
+        type: e1_categorical_fit_adverse_effects_from_capacity_shortfall
+        title: "类别模式能力短板×情境压力的相对不利效应推导（E_moderation 变体 D）"
+        home_files:
+          - "variants/E_moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "make/buy/ally 类别模式：绩效取决于 adaptive capacity 与 adaptation pressures 的 fit；推导哪种压力对哪种模式最不利，不承诺无条件主效应。"
+      - fragment_id: tfr_232
+        type: e_moderation_joint_pressure_superadditivity_balanced_configuration
+        title: "联合适应压力超加性→均衡/混合构型相对优势（E_moderation）"
+        home_files:
+          - "variants/E_moderation.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "task interdependence × transaction instability 超加性交互推高适应需求，均衡（混合）构型因双通道机制而相对占优。"
+      - fragment_id: tfr_233
+        type: a_umbrella_decomposition_platform_for_categorical_ordering
+        title: "伞构念按问题根因解构，作为跨类别模式排序的解析平台（construct_differentiation 变体 B）"
+        home_files:
+          - "subprotocols/construct_differentiation_patterns.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+        note: "把伞构念拆为动机问题与认知问题两类根因，逐治理模式清点两类解决机制的可得性，支撑跨类别排序。"
+      - fragment_id: tfr_234
+        type: s_hypothesis_forms_group_comparative_and_relative_adverse_effects
+        title: "组间比较假设与相对不利效应句式（hypothesis_forms 变体 E）"
+        home_files:
+          - "sentences/hypothesis_forms.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "假设句直接编码类别间相对比较（X 对模式 A 的不利效应强于模式 B），不写无条件主效应。"
+      - fragment_id: tfr_235
+        type: s_mechanism_chain_availability_contrast_and_hybrid_approximation
+        title: "机制可得性对比句式——unavailable in X 与 Y can approximate X（mechanism_chain 变体 D）"
+        home_files:
+          - "sentences/mechanism_chain.md"
+        makadok_dimension: "Boundary"
+        status: "EMERGING"
+        note: "T3 机制链跨模式清点：X 有、Y 缺、中间模式部分补足（hybrid approximation），三句一组完成对比。"
+  higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:
+    display_name: "Higgins & Gulati (2003, Organization Science)"
+    journal: "Organization Science"
+    year: 2003
+    subfield: "strategy"
+    gap_type: "Incompleteness"
+    theory_build_type: "Mechanism (construct decomposition)"
+    fragments:
+      - fragment_id: tfr_228
+        type: typology_decomposed_parallel_signal_hypotheses_coverage
+        title: "类型学分解→并行信号假设→覆盖范围假设"
+        home_files:
+          - "subprotocols/hypothesis_organization_patterns.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+        note: "upper echelon 三类 affiliation（downstream/horizontal/vertical prominence）各自信号一质量侧面，N 支同构主效应 + 覆盖假设收束。"
+      - fragment_id: tfr_229
+        type: transfer_plus_sorting_dual_warrant_signal
+        title: "传递+自选择双 warrant 信号推演"
+        home_files:
+          - "subprotocols/argumentation_patterns.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+        note: "transfer warrant 讲资源可得；sorting warrant 用反事实否定句式讲质量投票；双 warrant 独立成句封堵逆向选择质疑。"
+      - fragment_id: tfr_230
+        type: a_priori_partial_mediation_weakening_pair
+        title: "先验部分中介预期+效应减弱比较静态 a/b 配对"
+        home_files:
+          - "sentences/hypothesis_forms.md"
+        makadok_dimension: "Constructs"
+        status: "EMERGING"
+        note: "not a strong form of mediation 声明使中介形式可证伪；减弱依据=第二条独立可见通道。"
   andersson_cuervo_cazurra_nielsen_2014_jibs_editorial:
     display_name: "Andersson, Cuervo-Cazurra & Nielsen (2014, JIBS Editorial)"
     journal: "Journal of International Business Studies"
@@ -2585,6 +2705,90 @@ source_papers:
 
 # Cross-paper pattern aggregation (derived above)
 patterns:
+  e1_categorical_fit_adverse_effects_from_capacity_shortfall:
+    description: "For categorical organization modes, derive relative adverse-effect hypotheses from the fit between adaptive capacity (short board) and situational pressures; no unconditional mode main effect"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "gulati2005-adaptation-vertical"
+    home_file: "variants/E_moderation.md"
+  e_moderation_joint_pressure_superadditivity_balanced_configuration:
+    description: "Two adaptation pressures interact superadditively to raise the need for adaptation; the balanced/hybrid configuration wins relatively because it covers both pressure channels"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "gulati2005-adaptation-vertical"
+    home_file: "variants/E_moderation.md"
+  a_umbrella_decomposition_platform_for_categorical_ordering:
+    description: "Decompose an umbrella construct by problem root cause (motivation vs cognition), then inventory mechanism availability per categorical mode to rank modes without inventing new constructs"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "gulati2005-adaptation-vertical"
+    home_file: "subprotocols/construct_differentiation_patterns.md"
+  s_hypothesis_forms_group_comparative_and_relative_adverse_effects:
+    description: "Hypothesis sentence encoding group-comparative / relative adverse-effect predictions directly (stronger for mode A than mode B), no unconditional main effect"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "gulati2005-adaptation-vertical"
+    home_file: "sentences/hypothesis_forms.md"
+  s_mechanism_chain_availability_contrast_and_hybrid_approximation:
+    description: "Three-sentence mechanism availability contrast: X has it, Y lacks it, the intermediate mode approximates it partially"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "gulati2005-adaptation-vertical"
+    home_file: "sentences/mechanism_chain.md"
+  s_hypothesis_forms_mediator_set_partial_mediation_protocol_mapping:
+    description: "A-priori declaration that a mediator set transmits only part of the effect, with the downstream testing protocol mapped before results"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "gulati_2007_dependence_asymmetry_and_joint_dependence_in_int"
+    home_file: "sentences/hypothesis_forms.md"
+  s_hypothesis_forms_mirror_pole_paired_ab:
+    description: "Mirror-pole paired hypotheses: opposite-signed a/b predictions on the same DV from the two poles of one construct"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "gulati_2007_dependence_asymmetry_and_joint_dependence_in_int"
+    home_file: "sentences/hypothesis_forms.md"
+  v_b_mechanism_per_mediator_partial_mediation_chain:
+    description: "Parallel multiple mediators, each derived as a partial mediator in turn, splitting the main effect across channels"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "gulati_2007_dependence_asymmetry_and_joint_dependence_in_int"
+    home_file: "variants/B_mechanism_elaboration.md"
+  s_mechanism_chain_logic_contrast_pivot:
+    description: "Logic-contrast pivot sentence marking a theoretical gear-shift between competing logics (power vs embeddedness) that foreshadows opposite-signed predictions"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "gulati_2007_dependence_asymmetry_and_joint_dependence_in_int"
+    home_file: "sentences/mechanism_chain.md"
+  typology_decomposed_parallel_signal_hypotheses_coverage:
+    description: "Decompose one focal construct into N a-priori types; each type independently signals one facet of quality to external evaluators (N isomorphic main-effect hypotheses), closed by a complementarity coverage hypothesis"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"
+    home_file: "subprotocols/hypothesis_organization_patterns.md"
+  transfer_plus_sorting_dual_warrant_signal:
+    description: "Signal argument run on two independent warrants: transfer warrant (affiliation makes resources accessible) plus sorting warrant (counterfactual-negation phrasing: low-quality entities could not have acquired the affiliation), jointly foreclosing adverse-selection objections"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"
+    home_file: "subprotocols/argumentation_patterns.md"
+  a_priori_partial_mediation_weakening_pair:
+    description: "Mediation form declared a priori as a falsifiable prediction (not a strong form of mediation) with comparative-statics a/b pairing: the effect weakens because a second independent visible channel exists"
+    status: "EMERGING"
+    source_count: 1
+    source_papers:
+      - "higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"
+    home_file: "sentences/hypothesis_forms.md"
   shared_orientation_divergent_outcomes_selective_remedy:
     description: "A shared actor-to-organization trunk feeds beneficial and harmful outcome branches; an internal countervailing force selectively buffers the harmful branch through a protective orientation"
     status: "VERIFIED"
@@ -3553,7 +3757,7 @@ unattributed_corpus:
 
 critique:
   schema: "critique-driven usage stats（2026-08-09 闭环补丁：与 distill-methods/results registry 语义同构）"
-  rationale: "用户对 write-* 产出的批评与审稿回流（revision-coach）登记于此；revise+reject >= 2 触发 critique_heavy，供下一轮蒸馏选材 Gate 读取"
+  rationale: "用户对 write-* 产出的批评与审稿回流（revision-coach）登记于此；revise+reject >= 2 触发 critique_heavy，供下一轮蒸馏选材 Gate 读取 2026-09-06 Higgins & Gulati 2003 OS（Getting Off to a Good Start, upper echelon affiliations → underwriter prestige/IPO success）residual 补登记：ADD higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe tfr_228-230（类型学分解→并行信号假设→覆盖范围 hypothesis_organization_patterns 变体D / 传递+自选择双 warrant 信号推演 argumentation_patterns 变体E / 先验部分中介预期+效应减弱比较静态配对 hypothesis_forms 变体D），全部 EMERGING 单源待第二篇交叉验证；patterns 区同步 3 条；_index.md 快速决策表已同步。 2026-09-06b Gulati, Lawrence & Puranam 2005 SMJ（Adaptation in Vertical Relationships: Beyond Incentive Conflict, make/buy/ally 三分治理 × 内生切换回归）residual 补登记：ADD gulati2005-adaptation-vertical tfr_231-235（E1 类别 fit 相对不利效应推导 E_moderation 变体D / 联合压力超加性→均衡构型 E_moderation / 伞构念解构排序平台 construct_differentiation_patterns 变体B / 组间比较相对不利效应句式 hypothesis_forms 变体E / 机制可得性对比句式 mechanism_chain 变体D），全部 EMERGING 单源待第二篇交叉验证；patterns 区同步 5 条；_index.md 快速决策表 +3 行。 2026-09-06c Gulati & Sytch 2007 ASQ（Dependence Asymmetry and Joint Dependence，双逻辑 power vs embeddedness + 三机制部分中介）residual 补登记：ADD gulati_2007_dependence_asymmetry_and_joint_dependence_in_int tfr_236-239（中介集合先验部分中介声明 hypothesis_forms / 镜像极点配对假设 a/b hypothesis_forms / 并行多中介逐项部分中介链 B_mechanism_elaboration / 逻辑对照枢转句 mechanism_chain），全部 EMERGING 单源待交叉验证——其中中介集合声明与镜像配对为 higgins_2003 a_priori 部分中介近族的第二源，待第三次蒸馏可议升 VERIFIED；patterns 区同步 4 条；_index.md +3 行。"
   per_file:
     # 键 = corpus 文件相对路径（如 hooks/03-data-shock.md）
     # 示例（登记时按此结构新增/更新）:

@@ -165,6 +165,51 @@ There is less [epistemic ambiguity] about the causes of [A] than about [B].
 
 <!-- wb:anand_mukherjee_2024_learning_from_failures_di:failure_typology_cause_ambiguity_contrast -->
 
+
+<!--
+pattern_id: a_umbrella_decomposition_platform_for_categorical_ordering
+build_type: 构念辨析型（工具性伞构念解构——辨析为比较服务）
+source_papers: ["gulati2005-adaptation-vertical"]
+confidence: EMERGING（单篇，待第二篇交叉验证）
+-->
+
+### 变体 B：伞构念按问题根因解构，作为跨类别模式排序的解析平台（Umbrella Decomposition for Categorical Ordering）
+
+**适用场景**: 一个伞构念（integration / alignment / 协调合作类）同时涵盖两种不同根因的问题（动机 vs 认知），而比较对象（类别化模式）在这两类问题的解决机制上系统性不同——先拆解伞构念、再逐模式清点机制可得性，即可支撑跨类别（含中间/混合模式）排序，无需发明新构念。
+
+**骨架**:
+```
+[伞声明] [Umbrella] not only requires the alignment of [component 1: interests]
+([label A]), but also the alignment of [component 2: actions] ([label B]).
+[辨析缺口] The distinction between [label A] and [label B] is seldom maintained in
+[field] research.
+[根因1+解药] Problems of [label A] arise from [root cause 1 — motivation / self-interest].
+They are resolved by [formal mechanisms: contracts/ownership/monitoring/sanctions/
+future interactions] and [informal mechanisms: identification/embeddedness].
+[根因2+解药] In contrast, problems of [label B] arise from [root cause 2 — cognitive
+limits: unknown decision rules of others / unknowable interdependence]; they can persist
+even when [root cause 1] is resolved, because [incentives do not create knowledge].
+[示范证据] [Weakest-link / learning games or equivalents show coordination failure
+absent conflict.]
+[工具化说明] Therefore, the achievement of [umbrella] requires the resolution of both
+[label A] and [label B] problems.
+[平台声明] [Umbrella] between [unit pair] varies systematically across [categorical
+alternatives], as these alternatives differ in the mechanisms available to generate
+[label A] and [label B].
+```
+
+**为什么有效**: 辨析不是终点而是平台——按"问题根因"切开伞构念后，跨类别比较立刻获得可操作标准（各模式拥有哪类解药），排序假设的每一步都能指认机制，避免"模式 A 比 B 更 [umbrella]"的无机制断言；"seldom maintained"句交代为何值得费力拆解（回应审稿人"这不是常识吗"）。
+
+**注意事项**: 两个子构念的根因必须概念独立（动机 vs 认知/知识），否则审稿人会问 why not a single dimension；拆解后必须回伞构念层面收拢（如 integration 需同时解决两类问题），防止读者丢失主线；解构若对应测量，需给 Methods 接口（单一 scale 同时覆盖两成分亦可，如本范文）。
+
+**反模式**: 解构只做学术史综述而不用于比较对象排序；两个子构念边界重叠（同义反复）；拆解后无收拢句。
+
+**原文锚点**: "Integration not only requires the alignment of interests (cooperation), but also the alignment of actions (coordination). The distinction between cooperation and coordination is seldom maintained in organizational research."（Integration in vertical relationships 段）
+
+**范文来源**: Gulati, Lawrence & Puranam (2005), *Strategic Management Journal* — Integration 节（cooperation vs coordination 解构 + 三模式机制清点 → H2）。
+
+<!-- wb:gulati2005-adaptation-vertical:a_umbrella_decomposition_platform_for_categorical_ordering -->
+
 ## 与相邻语料文件的关系
 
 - [`../sentences/construct_definition.md`](../sentences/construct_definition.md)：微观句式模板（如 "We define X as..."）

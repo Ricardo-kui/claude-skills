@@ -1202,6 +1202,158 @@ Our analysis of [outcome] consists of three progressive steps. In Step 1, we inc
 
 <!-- wb:anand_mukherjee_2024_learning_from_failures_di:m7_progressive_three_step_narrative -->
 
+
+### 变体 70：M2 源清单生存者条件化修复 — 回收消亡事件单元 + 风险集合并（higgins_2003_OS 型）
+
+**来源论文**: Higgins & Gulati 2003 (Organization Science)
+**原始句锚点**: "Further, to guard against sample selection bias associated with this listing, we collected information on firms that went public in the same time frame as our sample but that did not survive in their original form by 1996."
+**验证状态**: EMERGING（单篇）
+**槽位**: M2
+**骨架**:
+> Our primary list of [units] was obtained from [industry listing] ([n]). Unlike other sources, this listing does not include [tangentially participating corporations]; hence, ours is a narrower definition of [domain] than that employed by other researchers (e.g., [prior studies]) and is in line with more recent research on the industry (e.g., [recent studies]). Further, to guard against sample selection bias associated with this listing, we collected information on [units] that [underwent the focal event] in the same time frame as our sample but that did not survive in their original form by [list year]. From these sources, we identified an additional [n] [units] that had experienced [name changes / mergers / acquisitions]. Combining these [recovered event units] with [the complementary non-event units] yielded a final combined sample size of [N].
+
+**与原骨架差异**: 变体 34（多源清单+覆盖边界定样本窗）以数据覆盖定样本窗、变体 67（完备性准则漏斗+代表性 t 检验）以数据完备准则导出 N——两者修的是"覆盖/完备"缺口；本变体修的是**生存者条件化**：行业清单以"存活至编表年"为隐含条件，事件单元若在编表年前消亡（改名/被并购/清算）即从清单消失，事件样本因此有选择性。修复动作是主动回收"同窗内经历事件但未存活到编表年"的单元并入事件样本，再与非事件单元合并成风险集（本文 281→+15 回收→+542 私有→838）。概念边界先例对齐（"narrower definition ... in line with recent research"）是配套微动作。
+**诚实边界**: 回收单元与存活单元的信息可得性不对称（消亡单元档案更薄），须说明数据来源如何覆盖消亡单元；回收判据（名称变更/并购/清算）应显式列出；若理论机制与"消亡"本身相关（如研究退出行为），回收并不能完全修复选择偏差，需在局限承接。
+**适用**: 以"编表年后视镜"型行业清单（year-t stock list）为抽样框、focal 事件发生在历史窗口内的档案研究（IPO/退市/召回/关厂）；事件单元存活状态与抽样框条件化相关的任何设计。
+
+<!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:m2_survivorship_repair_sample_frame -->
+
+
+### 变体 71：M4 第三方榜单阈值化突出名单 → 生涯纽带计数 → 团队规模标准化（higgins_2003_OS 型）
+
+**来源论文**: Higgins & Gulati 2003 (Organization Science)
+**原始句锚点**: "Since the number of ties covaries with the size of the upper echelon, we divided upstream, horizontal, and downstream tie measures by upper echelon size, consistent with recent research (Geletkanycz and Hambrick 1997)."
+**验证状态**: EMERGING（单篇）
+**槽位**: M4
+**骨架**:
+> [Focal construct] was assessed by identifying and manually coding [the observable carrier, e.g., the last five years of employment and board memberships], as listed in [artifact source]. We assessed the number of ties each individual had to prominent [category A/B/C] organizations. To gauge whether particular affiliations were with prominent institutions, we used [third-party ranking basis] as the criterion for prominence: we [generated the list] from [ranking source, editions/years], coding any [institution] that appeared [top-N in relevant categories / anywhere on the listing] at any time during [window] as prominent (n = [count]). We supplemented this list with [notable institutions not captured by the ranking, e.g., private or foreign organizations with comparable scale] (n = [k]). Since the number of ties covaries with the size of the [team], we divided the [category] tie measures by [team size], consistent with recent research ([citation]). [Per-category base rate: the [teams] in our sample generally had [k] members with at least one tie to a prominent [category] organization.]
+
+**与原骨架差异**: 变体 36（复合测量构念分步构建+阈值辩护+可行性论证）的阈值筛选的是"哪些 actors 进入构念计算"、构念为双侧重积型；本变体是**名单式突出性判定链**：(1) 第三方榜单+出现阈值（top-N 类别榜/任一年上榜）→构造"突出机构名单"并报名单量级与稳定性（"a total of N ... this was a relatively stable list"）；(2) 跨榜单时代接续——排名口径随数据可得性分段（前期仅美国、后期含国际），并补私有/外国同规模机构；(3) 对团队成员生涯纽带逐人计数并**按团队规模标准化**（引先例背书）；(4) 每类测量附样本内基率句（"generally had two people with at least one tie"）让审稿人看到构念实测变异。适配多类别（上游/同业/下游）网络/声望构念的测量叙述。
+**诚实边界**: 榜单阈值（top-10/top-30）须给依据或先例引用；跨时代口径拼接处（榜单覆盖起止年不同）应显式声明；除以团队规模改变解释单位，须与理论中"个体纽带 vs 团队禀赋"层次一致；基率句是描述性证据，不能替代构念效度论证。
+**适用**: 生涯史/履历档案中构造"与突出组织的纽带"类构念（声望、地位、endorsement 潜力）；任何以第三方榜单为突出性判据、以团队成员为单位计数并聚合到组织层的设计。
+
+<!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:m4_prominence_list_threshold_tie_normalization -->
+
+
+### 变体 72：M3 采纳标准指数 DV 的出处—通行度—缺失—替代基准四拍链（higgins_2003_OS 型）
+
+**来源论文**: Higgins & Gulati 2003 (Organization Science)
+**原始句锚点**: "Carter and Dark's (1992) analyses suggest that these measures provide a finer-grained evaluation than a simpler market share alternative (e.g., Megginson and Weiss 1991)."
+**验证状态**: EMERGING（单篇）
+**槽位**: M3
+**骨架**:
+> [DV] was measured using an index developed by [author, year] and then updated by [author, year]. The measures are based on [observable artifact] and have been cited widely in both [field A] and [field B] research ([citations]); this information was available for all but [n] of the [units] in our dataset ([accounting for m firms]). Scores may assume a value ranging from [floor, indicating lowest level], to [ceiling, indicating highest level]; in our data set, the mean score was [x]. [Author]'s ([year]) analyses suggest that these measures provide a [finer-grained] evaluation than a simpler [alternative] measure ([citation]). We obtained [the measure inputs] from [artifact source].
+
+**与原骨架差异**: 变体 25（DV 文献基准锚定）对比的是样本均值与前人均值（跨样本可比性）、面向自建比率/计数 DV；本变体面向**采纳他人标准指数**的场景，四拍顺序为：(1) 出处双拍——原始开发者+更新版本（测量随时间被维护）；(2) 通行度——"cited widely in both [field A] and [field B]" 跨领域引用列表；(3) 缺失计数——"available for all but n"（缺失落到多少个 unit，双口径：25 家承销商/55 家企业）；(4) 替代基准优越性——引第三方验证研究论证该指数比更简单的替代（如市场份额）**更细粒度**。末尾以量表端点+样本均值完成标定。适用于存在公认标准指数/评级的 DV。
+**诚实边界**: "cited widely" 须附真实跨领域引文（2+ 领域各至少 1 条）；缺失计数须同时给测量级与组织级口径；"finer-grained than alternative" 的依据必须来自第三方验证研究而非自评；若指数更新版本与原始版本口径有变，须声明采用哪个版本。
+**适用**: 采纳既定评级指数为 DV 或关键变量（承销商声望类 tombstone 指数、信用评级、榜单分数、期刊指数）；任何"不自建测量而采纳领域标准量表"的档案研究。
+
+<!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:m3_adopted_index_provenance_chain -->
+
+
+### 变体 73：M4 有界异质性指数双测量 + 零锚定 + 工作例翻译（higgins_2003_OS 型）
+
+**来源论文**: Higgins & Gulati 2003 (Organization Science)
+**原始句锚点**: "For example, a firm with an upper echelon with 10 members, two of whom had ties to prominent pharmaceutical organizations, would receive a score of 1, while a firm with the same-sized upper echelon that included ... would receive a score of 2."（同段连续原文，删节处省略）
+**验证状态**: EMERGING（单篇）
+**槽位**: M4
+**骨架**:
+> We measured [range/heterogeneity of the construct] two ways. First, we used a variation of the [Herfindahl-Hirschman index], H = 1 − Σ p_i², in which H is the measure of heterogeneity or range and p is the percentage of [members] who [have property in category i]. This variable was set to equal zero when the [team] had no relevant [properties]. This measure is equivalent to [Blau's (1977)] index of heterogeneity. Second, we measured [range] as the count, 0 to [K], of the number of [categories] covered. For example, a [team] with [N] members, [k] of whom [property of one category], would receive a score of [1], while a [team] with the same-sized [team] that included [members spanning two categories] would receive a score of [2].
+
+**与原骨架差异**: 变体 17（factor score）、变体 46（z 分复合调节）、变体 36（分步构建）讲"怎么算出"复合测量，均未处理**指数的可读性与解释单位**。本变体四要素：(1) 双测量并置——连续指数（H=1−Σp²）与有界计数（0..K）互为替身；(2) 零值锚定——显式声明"无相关属性时 H=0"，堵住"未连接团队如何编码"的疑问；(3) 谱系等价——"equivalent to Blau's index"把自定义公式挂到已知测量家族；(4) **工作例翻译**——两个具体团队（同规模、不同覆盖）演示打分差异，把抽象指数翻译成审稿人可复算的数字。
+**诚实边界**: 工作例数字须与公式严格一致（可复算）；零值锚定是编码决定而非数据事实，若"无纽带"与"纽带数据缺失"不可区分须声明处理；双测量若结果分歧须在 Results 承接而非只报有利者。
+**适用**: 团队/组合层面异质性、多样性、覆盖范围构念（职能异质性、affiliation 类别覆盖、组合多元化）；任何用 Herfindahl/Blau/Gini 型指数且审稿人需要"这个数怎么读"的研究。
+
+<!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:m4_heterogeneity_index_worked_example -->
+
+
+### 变体 74：M2 档案研究中的田野佐证组件 — 过程复杂度访谈 + 常驻专家通报人（higgins_2003_OS 型）
+
+**来源论文**: Higgins & Gulati 2003 (Organization Science)
+**原始句锚点**: "The individuals to whom we spoke at the service organizations were all intimately involved in various IPO deals in the biotechnology industry during the period of our study and provided extremely helpful information to us about the complexities involved in taking a firm public."
+**验证状态**: EMERGING（单篇）
+**槽位**: M2
+**骨架**:
+> Finally, we conducted field and ethnographic analysis at [n] [focal organizations], [k] [service organizations], and [m] [complementary organizations]. The individuals to whom we spoke at the [service organizations] were all intimately involved in [the focal process] during the period of our study and provided [helpful] information to us about the complexities involved in [the focal process]. Among the [focal organizations], we completed [n] formal interviews, ranging in length from [x] to [y] hours each. [Interviewee composition: n1 in business-related positions, n2 in technical/senior research positions.] In addition, we solicited ongoing input from one expert informant who [has worked at multiple organizations and was centrally involved in the focal process].
+
+**与原骨架差异**: 变体 6（多通道精英招募）招募的是**估计样本本身**（访谈对象即数据）；本变体的访谈对象**不进入估计**——田野组件服务于档案研究的两类可信度：(1) 过程复杂度通报（了解事件如何展开，校准手工编码与解释）；(2) 测量接地（semi-structured interviews 采集与档案测量同构的信息以交叉验证）。要素：多类场所枚举（focal firms + 服务机构 + 互补机构）、受访者与焦点过程的直接参与声明（"intimately involved in ... during the period of our study" 的时间与角色对齐）、访谈量与时长、商界/技术界受访者构成、常驻专家通报人。
+**诚实边界**: 田野访谈不进入估计样本须明确（避免被误读为混合方法设计）；访谈证据用于解释与编码校准而非假设检验；专家通报人的利益关联宜在伦理/局限处交代。
+**适用**: 档案数量研究嵌小规模田野（IPO/召回/危机响应等过程复杂、编码依赖行业知识的研究）；为手工编码的档案测量提供过程接地。
+
+<!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:m2_archival_fieldwork_triangulation -->
+
+
+### 变体 75：M1/M2 问卷前置田野与抽样框-受访者双核验（gulati_2007 型）
+
+**来源论文**: Gulati & Sytch 2007 (Administrative Science Quarterly)
+**原始句锚点**: "We verified the comprehensiveness of this list with several executives in the industry and also by comparing it with component lists used by the firms to monitor the quality of their own parts."
+**验证状态**: EMERGING（单篇）
+**槽位**: M1/M2
+**骨架**:
+> The analysis presented in this paper is based on fieldwork, followed by a survey of [respondent role] at [Organization A] and at [Organization B]. Prior to launching the survey, we conducted a total of [N] interviews ([n1] at [A] and [n2] at [B]). The initial interviews were exploratory and open ended and were intended to clarify the nature of [the focal phenomenon]. In later interviews, we sought clarification on our central constructs of [C1], [C2], [C3], and [C4]. The unit of analysis for the survey instrument is the [unit], with each survey respondent providing data on [focal content], as well as data on [partner content]. This sampling approach is akin to one used by [seminal study] in their study of [the industry]. Drawing on previous studies of [the industry] and discussions with informants, we used a list of [N_frame] [units]. We verified the comprehensiveness of this list with several [industry experts] and also by comparing it with [lists] used by the firms themselves. For each [unit], [senior managers] supplied the names of [respondents] with oversight for [the activity]; the [independent office] in each company verified the expert status of each survey respondent.
+
+**与原骨架差异**: 变体 74（档案研究田野佐证组件）的访谈对象**不进估计样本**、服务于过程复杂度通报与测量接地；本变体是问卷前置田野的**生产性使用**：(1) 两阶段访谈（探索性开放→构念澄清）直接产出测量工具；(2) 抽样框以"外部专家核验 + 企业内部清单比对"双路验证完备性；(3) 受访者以"高管提名 + 独立办公室（如 controller's office）资格核验"双环把关。与变体 6（多通道精英招募）的分界：彼处招募的是估计样本本身，本变体核验的是**抽样框与受访者资格**。近亲 实证对象构建 变体7（专家报告人资格核验三环链，EMERGING 文件）为资格核验拍的家族成员。
+
+**诚实边界**: "akin to [seminal study]" 的先例锚定须真实可引；清单核验的两个判据（外部专家+内部清单）缺一会削弱完备性主张；独立资格核验需真实存在的组织内第三方，不能由提名者自证。
+
+**适用**: 关键 informant 问卷、组织间 dyad 调查、需要抽样框完备性主张的调查设计；田野访谈服务于工具开发而非假设检验的研究。
+
+<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:m2_fieldwork_frame_and_respondent_verification -->
+
+
+### 变体 76：M2 问卷响应率-非应答 K-S-范围排除段级全链（gulati_2007 型）
+
+**来源论文**: Gulati & Sytch 2007 (Administrative Science Quarterly)
+**原始句锚点**: "We examined the nonresponse bias by comparing the characteristics of the components for which responses were received against those for which no response was received ... using the Kolmogorov-Smirnov test (Siegel and Castellan, 1988)."
+**验证状态**: EMERGING（单篇）
+**槽位**: M2
+**骨架**:
+> We took several steps to ensure a good response rate for the survey ([method citation]), ranging from having [senior management] endorse the project to conducting multiple follow-ups with non-respondents. [n1] [respondents] responded from [Site A], and [n2] from [Site B], representing response rates of [p1] percent and [p2] percent, respectively, and a total response rate of [p] percent. We examined the nonresponse bias by comparing the characteristics of [units] for which responses were received against those for which no response was received for [k] key [unit] characteristics ([anchoring prior study]) using the [Kolmogorov-Smirnov] test ([citation]). We found no significant differences between the categories of respondents and non-respondents. The respondents provided information on [N_obs] [exchange relationships]. We eliminated [n1] observations with missing data and [n2] observations [outside the intended scope], leaving [N_final] observations for [relations] with [N_unique] unique [partners].
+
+**与原骨架差异**: micro 层已有两条非应答 K-S 句式链（robustness-foreshadowing.md：westphal_bednar2005 K-S+Heckman 双统计；carpenterwestphal2001 K-S+双层代表性）——均为句式级。本变体是**段级全链**，三个增量拍：(1) 响应率工程句前置（高层背书→多轮跟进，方法程序带引用）；(2) **检验特征锚定先例研究**——把"哪些特征算关键"外包给领域经典（"for [k] key characteristics ([seminal study])"），免自选嫌疑；(3) 漏斗以范围性排除（内制/自供组件）+ 双口径收口（observations / unique partners）。与变体 67（完备性准则漏斗+总体代表性 t 检验）的分界：彼处对比对象是未入样总体（档案可得），本篇对比对象是**非响应者**（问卷专属），统计用 K-S（分布形状）而非 t（均值）。
+
+**诚实边界**: 非应答检验特征须真是先例研究中的关键特征且对非响应者可得；K-S 只查单变量分布差异——多变量选择威胁仍需 Heckman 或代表性声明补强（见 micro 两条链）；响应率分层口径须与发放口径一致。
+
+**适用**: 关键 informant 问卷、组织间 dyad 调查、任何需封 nonresponse bias 质疑的单波调查。
+
+<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:m2_survey_response_nonresponse_funnel -->
+
+
+### 变体 77：M3/M4 量表双构念区分+旋转交叉验证+低 α 保守反驳链（gulati_2007 型）
+
+**来源论文**: Gulati & Sytch 2007 (Administrative Science Quarterly)
+**原始句锚点**: "Although these reliabilities fall short of the frequently used threshold of .70 (Nunnally, 1978), ... this should not be considered a benchmark every scale has to pass."
+**验证状态**: EMERGING（单篇）
+**槽位**: M3/M4
+**骨架**:
+> To ensure the reliability and discriminant validity of our constructs, we relied primarily on items used in prior research and subjected them to a thorough pretest; we eliminated items that were [unclear], [ambiguous], or led to perceived overlaps in constructs. [Exploratory factor analysis] yielded a [k]-factor solution, with factor 1 reflecting [construct A] and factor 2 reflecting [construct B]; taken together, the factors explained over [x] percent of the variance. [Items i], [item j], and [item k] could not differentiate between our two constructs, and we dropped them from scale construction. We adopted this factor structure because we (1) had at least three items loading on each factor, (2) eliminated items with high cross-factor loadings, and (3) retained factors with eigenvalues of at least 1.0 ([citations]). Here and throughout the paper, loadings resulting from the [orthogonal rotation] procedure were verified using the [oblique rotation] form ([citation]). Items were standardized to eliminate differences in variance due to scaling and averaged to construct the [construct A] (Cronbach's α = [.x1]) and [construct B] (α = [.x2]) scales. Although these reliabilities fall short of the frequently used threshold of [.70] ([citation]), [methodological authorities] have explicitly stated that this should not be considered a benchmark every scale has to pass; according to [classical test theory], losses in reliability of constructs only make it harder to capture significant relationships between constructs, hence making our analysis more conservative while leaving the likelihood of our making a type I error intact ([citations]).
+
+**与原骨架差异**: 变体 66 是 PCA 把先前状态构念合成**控制变量**（eigenvalue+scree 双判据）；micro manual-coding-validation 变体 B 六环链（预测试→题项依据→反偏差→信度→因子效度→计分）为通用流程。本变体三个增量拍：(1) **双构念区分**——EFA 同时容纳两个焦点构念，跨构念不区分的题项点名剔除（区分效度成为剔除判据，而非仅看载荷高低）；(2) **旋转交叉验证**——正交旋转报告+斜交旋转核验双轨声明，"here and throughout the paper" 一句覆盖全文所有量表；(3) **低 α 保守检验反驳**——不辩"信度够高"，而辩"信度低只削弱检验力、不膨胀 type I error"，把合规短板反转成保守检验主张。与文本构念测量 变体 20（编码者异质程序性保守）同族异机制：彼处是程序设计压低信度仍高，本篇是信度低于阈值但衰减逻辑保护结论方向。
+
+**诚实边界**: 低 α 反驳的前提是构念概念化效度已有独立论证（否则沦为测量失败找补）；衰减论证只保护"检验力不足"方向（不易显著），不保护"虚假显著"方向；三题项下限+eigenvalue≥1.0 是最低标准而非充分标准，勿省略交叉载荷剔除拍。
+
+**适用**: 多题项感知量表、单波问卷多构念同时测量、α 低于 .70 但先例与理论支撑充分的量表。
+
+<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:m3_scale_discrimination_and_low_alpha_defense -->
+
+
+### 变体 78：M4 复合构念替代规格三段防御+spline 分解（gulati_2007 型）
+
+**来源论文**: Gulati & Sytch 2007 (Administrative Science Quarterly)
+**原始句锚点**: "Given that we had two distinct categories of actors, we opted for the precision of spline estimation, which allowed us to explore the possible variations ... that would not be uncovered in a single variable approach."
+**验证状态**: EMERGING（单篇）
+**槽位**: M4
+**骨架**:
+> The [additive] specification of [composite construct] is directly in line with [the original theoretical proposition] ([canon]) and was the choice of other research on similar issues ([citations]). An alternative specification is the [product] of the two components. Because we focus on [ongoing exchange relationships], we have no [zero-dependence cases] and thus run no risk of misrepresenting [the composite] in the instances of [the degenerate case]. More generally, while the [additive] score may be more accurate than the [product] score in some situations ([numeric pair 1]), it could be less accurate in others ([numeric pair 2]). We hence verified our results using a [product] score, and they remained similar. [The stronger alternative] would have to apply at the level of [predictor] and [outcome] given [design constraint], the latter of which is unattainable. We used a [spline] specification to measure the direction of [asymmetry] and differentiate between [side A]'s and [side B]'s [advantage] ([citation]); a single variable would needlessly constrain [one side], eliminating the flexibility and the precision of [spline] estimation ([citation]). Following this decomposition, our sample returned [n1] [dyads] in which [side A] held an [advantage] and [n2] in which [side B] did.
+
+**与原骨架差异**: 变体 73 并置双测量解决**指数可读性**（同构念两个读法+工作例）；文本构念测量 变体 4 用"高相关+统计性质 because"做**多选一**辩护。本变体是复合构念**替代规格的三段防御**：(1) 先例+理论锚定所选规格（原始命题出处+同领域先例清单，"directly in line with ... was the choice of other research"）；(2) 替代规格偏误场景分析——先排除断点退化情形（零依赖），再用具体数值对（如 9–1 vs 3–3 / 1–9 vs 5–5）展示两种规格各自更准的场景，然后以"用替代规格重跑、结果相似"稳健收口（"We hence verified our results using ..., and they remained similar"）；(3) **不可行性边界声明**（语料零覆盖拍）——承认更强技术（如 Edwards polynomial 分解）在本设计下因约束（构念互为 DV/IV、同时性偏误）不可达，以边界诚实替代技术堆叠。spline 变奏：方向性非对称构念用 spline 而非单变量，因为单变量法 "needlessly constrain" 一侧、损失估计灵活性与精度；并报告两侧各占样本量，证明两侧均有变异可估。
+
+**诚实边界**: 不可行性声明须真实——polynomial 不可达的前提（同时性偏误+构念互为 DV/IV）要写明，否则读作偷懒；"results remained similar" 应指向 Results 的具体稳健性表；spline 两侧样本量若严重失衡（如 90/10）须讨论一侧系数的脆弱性。
+
+**适用**: 双边依赖/非对称构念（spline 分解）、加总 vs 乘积复合构念、差值 score 面临 polynomial 质疑的截面与面板设计。
+
+<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:m4_spline_spec_alternative_defense -->
+
 ## 反模式
 
 | 反模式 | 表现 | 应做 |

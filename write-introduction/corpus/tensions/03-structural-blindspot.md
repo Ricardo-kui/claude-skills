@@ -89,6 +89,31 @@ Inadequacy 问题化的一个特定变体：不只是在某个具体假设上有
 
 ---
 
+
+### 变体 D：经典二分选择性继承型（gulati_sytch2007 型）
+
+**模板**:
+> "[Canonical author]('s) ([year]) [dichotomy] allows [phenomenon] to vary simultaneously across [facet A] and [facet B], treating [it] as a non-zero-sum [structure]. Given this early [framing] conceptualization of [phenomenon], it is puzzling that, with few exceptions, most subsequent research has been drawn only to [facet A] and its related [dynamics]. By grounding itself primarily in [logic L1], research on [domain] has omitted other possible logics that may also affect [action]. In particular, it has ignored [logic L2], which arises from [facet B] and which can also operate in [setting]."
+>
+> [结晶句，可后置到文献流收束处] "[Logic L2] underlying [facet B] was thus not fully separated from [logic L1] and, as a result, was much less fully explicated; moreover, this logic's implications for [outcome] have yet to be considered."
+
+**来源**: gulati_sytch2007 (ASQ), P2（结晶句在 P6）
+
+**原文锚定**:
+> "Given this early non-zero-sum conceptualization of interdependence, it is puzzling that, with few exceptions, most subsequent research has been drawn only to the implications of dependence asymmetry and its related power dynamics."
+
+**关键特征**:
+- 盲点证据来自正典自身：用"原作者已区分两维"对照"领域只继承一维"，缺口由学科史内部矛盾而非经验反例建立
+- "it is puzzling that, with few exceptions" 谜题旗标插在早期洞见与后续研究轨迹之间，把缺口呈现为领域的选择性记忆而非无人涉足
+- 结构性归因："By grounding itself primarily in [logic L1]" 把盲点延续解释为单一逻辑对注意分配的垄断——满足本模板"必须解释盲点为何系统性"的要求
+- 结晶句双缺口收束：概念分离缺口（not fully separated... much less fully explicated）+ 结果含义缺口（implications for [outcome] have yet to be considered），Incompleteness 层由此句承载
+
+**适用**: 研究构念在正典中本有双维/双逻辑区分、而后续文献单一继承的缺口场景；双维构念论文（两维各配一种行动逻辑）首选；需能引用正典原文标签（如 Emerson 的 "cohesion"/"power advantage"）；与 hooks/05 文献共识盲点 Hook 的谱系回溯变体天然成对
+
+**禁忌**: 正典区分必须真实且可引原文标签，不得伪造谱系；"with few exceptions" 的例外研究必须点名并说明为何不足以改变范式；不与经验反例型盲点（变体 C）混用——本变体的反常是学科史偏离而非实证矛盾
+
+<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:tension_canonical_dichotomy_selective_inheritance_gulati_sytch2007 -->
+
 ## 组装规则
 
 ### 必须配对

@@ -2267,6 +2267,317 @@
       "overall_role": "partial_exemplar"
     },
     {
+      "id": "gulati2005-adaptation-vertical",
+      "path": "v4/blueprints/gulati2005-adaptation-vertical.md",
+      "paper_type": "quantitative (cross-sectional survey of procurement relationships, three-way governance modes, endogenous switching regression)",
+      "outlet": "Strategic Management Journal",
+      "publication_status": "published",
+      "coverage": "complete",
+      "theoretical_problem_form": [],
+      "narrative_dynamics": [],
+      "retrieval_signals": [],
+      "section_learning": {
+        "introduction": {
+          "suitable": "yes",
+          "requires": [
+            "a dominant paradigm whose founder or canonical text contains a broad formulation narrower empirical work departed from, quotable verbatim",
+            "an adjacent in-discipline tradition whose constructs can both define the broadened construct and generate hypotheses"
+          ],
+          "learn": [
+            "Founder-licensed gap with two-turn problematization: quote the founder's own broad statement and the field's narrowed practice in one breath ('Yet, this theoretical recognition ... finds scant recognition in most prior research motivated by transaction cost economics'), so the broadening reads as a return rather than a rebellion — then narrow twice, from field practice (P1 Yet) to the specific proposition class omitted (P2 However), replacing the missing RQ sentence with a 'theoretical challenge' formulation.",
+            "Beyond/not-only ring: open with a beyond-goal sentence ('broaden the conceptualization of constraints to adaptation beyond incentive conflict') and close the preview with its mirror ('arise as a function of the match between adaptive capacity and adaptation requirements, and not only the match between governance form and transaction hazards') — one sentence at each end carrying goal, preview, and contribution contract, with no overclaimed coefficient."
+          ],
+          "caveat": [
+            "Zero human face and zero stakes concretization (L2 risk nl1): no actor, scene, or quantified loss anywhere; this economistic cold start was 2005 SMJ-native and survives only in TCE/economics-style outlets — a modern AMJ/ASQ version must add an actor and a so-what. No explicit RQ sentence (nl2): the theoretical-challenge statement substitutes; safer to append one. Presumes fluent TCE vocabulary."
+          ]
+        },
+        "theory": {
+          "suitable": "yes",
+          "requires": [
+            "a capacity dimension (portrait) that is itself measurable and testable before the conditional claims",
+            "a pressure space whose two demands map onto the two capacity shortfalls",
+            "or a mechanism inventory strong enough to carry the portrait if the fit claims stay conditional"
+          ],
+          "learn": [
+            "Same-era dual-lineage opening for construct transplant: 'around the time Ronald Coase was formulating his ideas ... Chester Barnard was emphasizing adjustment processes' — stage the import of differentiation/integration as reuniting two 1937 twin traditions (incentives vs information), complementary rather than combative, then declare the extension target explicitly ('We develop and extend this tradition ... to the inter-organizational context').",
+            "Anchor-then-branch hypothesis architecture: two comparative anchoring hypotheses (H1/H2) fix each mode's portrait on the two dimensions, a mid-section portrait summary plus Figure 1 locks the shared premise, then three pure categorical fit branches (H3/H4/H5) derive by referring back to the portraits — every performance claim conditional ('more adverse effects on X than on Y'), with a fit 总纲 sentence up front so no reader expects mode main effects."
+          ],
+          "caveat": [
+            "L2 learning-signal flag (fed): the theory is genuinely ambiguous between a mechanism-inventory paper and a categorical moderation/fit paper — roughly the first 45% is mechanism availability inventory (conformity pressures, programming/hierarchy/feedback, shadow of the future) that serves the ordering rather than standing as the contribution. A writer must decide which engine is the contribution before imitating. The anchor-branch structure is also fragile: if the anchoring portrait is challenged, the whole conditional tree moves with it (L2 imitation risk). And the cooperation-vs-coordination decomposition — the conceptual hinge — is asserted but not measured separately (blended integration scale), so a modern version must separate the two faces."
+          ]
+        },
+        "methods": {
+          "suitable": "partial",
+          "requires": [
+            "a genuinely categorical strategy/mode choice with three or more categories and a plausible exclusion restriction for first-stage variables"
+          ],
+          "learn": [
+            "Unit upgrade plus informant qualification chain: 'Unlike prior studies that aggregate ... our analysis is truly at the transaction level' with the sub-record structure delivered in the next sentence, and expert status verified through an interest-independent office (controller's office) with self-removal and replacement channels — sample-frame paragraphs that pre-empt audit questions inside the design chapter.",
+            "Switching-regression announcement with three-part causal language limiters: reject the naive model ('would not be appropriate'), introduce the correction ('attempts to account for'), state the hazard's semantics ('controls for unobservable features ... that might simultaneously affect') — and declare the exclusion restriction prospectively (volume variables 'do not appear in the second-stage models')."
+          ],
+          "caveat": [
+            "Era presentation throughout (L2 era flags): alpha + AGFI only with no loadings/CR/AVE, self-classified categories 'corroborated' without agreement statistics, single-informant design without modern CMV defenses, sample attrition 222 to 219 to 216 without a funnel, no M1 setting paragraph, exclusion restriction defended by one assumption sentence rather than a mechanism argument. Borrow the announcement rhythm, not the validity stack."
+          ]
+        },
+        "results": {
+          "suitable": "yes",
+          "requires": [
+            "a comparative/conditional hypothesis structure whose verdicts ride on groupwise coefficient patterns rather than single magnitudes",
+            "a profile-level hypothesis block that can stage before the performance adjudication"
+          ],
+          "learn": [
+            "Portrait-before-adjudicate sequencing with auditable cross-model comparison: stage the construct-level portraits (Table 3) before the performance verdicts (Tables 4-5), then make every cross-model claim checkable — precise column subsets named per hypothesis ('column a, main effects only'), SUR joint-covariance dual-track significance in brackets, per-hypothesis navigation instead of model-by-model marches.",
+            "Honest-null double beat plus diagnostics close: the unsupported verdict sentence carries no concession words ('Hypothesis 4 is not supported'), and only the following restatement sentence admits the pattern detail in hypothesis language; null coefficients serve as comparison anchors ('not different from zero for Ally and Buy, but significant and negative for Make'); the selection threat closes on a double signal (non-selection hazard null, Hausman test significant) narrated as 'operating ... and we have controlled for them, though we may have been unable to quantify them precisely'."
+          ],
+          "caveat": [
+            "No economic-magnitude translation anywhere; the H2 make-vs-ally 'statistically different' claim carries no test statistic; the make subsample is N=20 in Table 5 and never discussed for power; groupwise verdicts lean on bracketed significance instead of explicit Wald tests (L2 honesty-boundary flag). The verdict grammar transfers only with a formal between-model test added."
+          ]
+        },
+        "discussion": {
+          "suitable": "yes",
+          "requires": [
+            "a rival perspective whose constructs have genuine near-neighbors in your framework, so the differentiation can be argued dimension by dimension",
+            "a fit/match structure that converts into a small decision map"
+          ],
+          "learn": [
+            "Dimension-split boundary close: separate your constructs from the rival's nearest neighbors on defined dimensions with opposite signed predictions — instability is not hold-up's volume uncertainty (TCE predicts internal procurement advantaged under volume uncertainty; the adaptation perspective predicts it disadvantaged, H3), and task interdependence is not asset specificity (complementarities requiring information processing vs quasi-rents inviting appropriation). This converts 'is this just relabeled TCE?' into a testable dimension split.",
+            "Debate-reframing ending with decision map and confessed puzzle: upgrade the contribution from findings to debate level ('it may be time to move beyond debates about hold-up vs. other explanations to begin considering when certain explanations ... are more useful'), compress the fit logic into the 2x2 optimal-mode Table 6, and confess the uncomfortable residual ('why are not all external relationships organized as alliances?') with a labeled speculation (setup costs) rather than silence."
+          ],
+          "caveat": [
+            "The long limitations catalogue and the speculative setup-cost answer would draw heavier demands today; Table 6 rests on sign comparisons with no magnitude translation (the same R5 gap as the Results); the null-H4 handling in the Discussion ('small differences leveraged dramatically by complementarity') is a conjecture, flagged as such — a modern version should test or bound it."
+          ]
+        }
+      },
+      "overall_role": "exemplar"
+    },
+    {
+      "id": "gulati2007-dependence-asymmetry-joint-dependence",
+      "path": "v4/blueprints/gulati2007-dependence-asymmetry-joint-dependence.md",
+      "paper_type": "quantitative (cross-sectional fieldwork+survey of manufacturer-supplier procurement dyads, Ford/Chrysler, N=151 dyads / 113 suppliers; IV/3SLS simultaneous-equation system with OLS baseline)",
+      "outlet": "Administrative Science Quarterly 52(1): 32-69",
+      "publication_status": "published",
+      "coverage": "complete",
+      "theoretical_problem_form": [
+        "overlooked-alternative-knot",
+        "half-domain-gap-compound",
+        "canonical-dichotomy-selective-inheritance",
+        "two-logics-one-structure",
+        "construct-separation-supporting",
+        "mechanism-mediation-contribution",
+        "value-appropriation-vs-value-creation"
+      ],
+      "narrative_dynamics": [
+        "genealogy-cold-open",
+        "selective-inheritance-puzzle-flag",
+        "gap-triplet-variation",
+        "literature-stream-functional-reversal",
+        "dual-logic-block-theory",
+        "mirror-pole-hypotheses",
+        "protocol-mapped-mediation-preamble",
+        "verdict-against-own-prediction",
+        "null-mediator-adjudication",
+        "reciprocity-embraced-by-design",
+        "assumption-audit-ending",
+        "human-face-in-discussion-only"
+      ],
+      "retrieval_signals": [
+        "interorganizational-relationships",
+        "resource-dependence-theory",
+        "embeddedness",
+        "joint-dependence",
+        "dependence-asymmetry",
+        "power-and-coercion",
+        "buyer-supplier-procurement",
+        "automotive-supply-chain",
+        "ford-chrysler",
+        "trust-joint-action-information-exchange",
+        "social-exchange-theory",
+        "emerson-1962",
+        "mediation-baron-kenny",
+        "simultaneous-equations-3sls",
+        "instrumental-variables-just-identified"
+      ],
+      "section_learning": {
+        "introduction": {
+          "suitable": "yes",
+          "requires": [
+            "a canonical precedent that genuinely contains a two-facet distinction with verbatim in-world labels",
+            "a documented record of the field having cited only one facet's logic"
+          ],
+          "learn": [
+            "Canonical-dichotomy selective-inheritance gap: restore the canon's own distinction with its original labels, then flag the field's one-sided inheritance with a puzzle flag ('it is puzzling that, with few exceptions...') plus a single-logic attribution ('By grounding itself primarily in a logic of power...') — one sentence that both declares the gap and explains why the blindspot is systemic; the criticism lands on the inheritance trajectory, not on any scholar.",
+            "Gap-triplet variation with functional reversal: restate the same gap at three levels (logic omission, overlooked value creation, two-gap crystallizer), each bound to a different literature stream's close; then flip the industry stream's function — re-read the same power narratives (squeezing suppliers) as joint-dependence narratives (Japanese symbiotic coexistence) and cash the contribution as a restrained triplet ('take a step further by making systematic connections between [construct], [logic of action], [performance]')."
+          ],
+          "caveat": [
+            "Requires a real canonical precedent — fabricated or misquoted genealogy collapses under review (L2 risk ledger: genealogy-hook-fabrication), and named exceptions (here Casciaro & Piskorski 2005) must be honored and differentiated, not waved off by 'with few exceptions'.",
+            "Six of eight paragraphs have no human face and no data; the hook's energy is borrowed entirely from conceptual history — 2007 ASQ tolerated this, and the L2 profile flags that a modern submission likely needs an empirical shock earlier (weakest_aspect in the L2 intro distillation)."
+          ]
+        },
+        "theory": {
+          "suitable": "yes",
+          "requires": [
+            "a two-faceted focal construct whose facets attach to different action logics with non-competing predictions",
+            "a mediator set that already exists in an external construct taxonomy"
+          ],
+          "learn": [
+            "Dual-logic block organization: give each logic a complete lineage -> mechanism -> industry evidence -> hypothesis cycle (power block: value appropriation, mirror-pole H1a/H1b on the same DV; embeddedness block: value creation via convergence/reduced coercion/conflict decay, H2), joined by an explicit logic-contrast pivot ('The implications... contrast significantly with those of the logic of power') — the two logics are rival principles but not combatants, so no adjudication machinery is needed.",
+            "Mediator preamble triple-lock: source the mediator set from an existing taxonomy (Granovetter/Larson/Uzzi: joint action, trust, information transfer), declare partial mediation a priori at the set level, and map the Baron-Kenny protocol onto the hypothesis system so the main effect (H2) doubles as the mediation test's step 1 — the hypothesis block arrives as one testable machine rather than a list."
+          ],
+          "caveat": [
+            "The a priori partial-mediation claim lacks an independent second-channel warrant (L2 contradiction: 'relation-based covariates' is asserted in one sentence, unlike higgins_2003-style comparative statics); a modern imitator must argue why each mediator is only partial.",
+            "The trust block mixes a structural mechanism (opportunism costs fed back through dependence) with a perceptual mechanism (anxiety -> positive bias in trustworthiness assessments) without aligning their causal status (L2 flag) — and the data later refuse this mediator; pick one mechanism and own it.",
+            "No boundary/moderator discussion anywhere (T5 absent) — legal for a main-effect+mediation architecture but leaves the over-embeddedness downside entirely to the Discussion's post hoc handling."
+          ]
+        },
+        "methods": {
+          "suitable": "yes",
+          "requires": [
+            "constructs measured by multi-item scales from one side of a dyad",
+            "a composite or directional construct whose specification (additive/product/difference/spline) could be second-guessed"
+          ],
+          "learn": [
+            "Measurement-side construct-validity chain as story infrastructure: items sourced along theoretical dimensions with citation chains -> EFA with cross-construct discrimination (three non-discriminating items named and dropped) -> orthogonal rotation verified by oblique -> low-alpha reversal ('losses in reliability... make our analysis more conservative while leaving the likelihood of our making a type I error intact') -> 20% random-subsample archival benchmarking of self-reports (congruence > .90) — every standard doubt about perception-measured constructs is pre-empted inside the design chapter.",
+            "Specification defense as anticipated counterargument: anchor the chosen specification in the canon's own proposition (Emerson's additive mutual dependence), analyze the alternative's failure cases (product score degenerates at zero dependence; additive trades accuracy across asymmetric pairs), re-run the alternative for robustness, and rule out the stronger-but-infeasible technique (Edwards polynomial) by stating its infeasibility condition — boundary honesty instead of technology stacking; the spline decomposition of asymmetry mirrors the theory's two directions of advantage."
+          ],
+          "caveat": [
+            "Single-wave, same-source CMV defense is Harman-only, and dependence and performance are measured concurrently — the exact weak point the later 3SLS system has to repair (L2 honesty boundary: Harman passing does not dissolve the timing threat; a modern version needs temporal separation or marker variables).",
+            "The section contains no estimation narration (M7): the identification strategy lives in the results slice's Analysis subsection (L2 flag C2) — a modern parallel should keep the estimator announcement in Methods.",
+            "One-sided dyad data is acknowledged only as future research; the Firm-dummy default category is undisclosed on confidentiality grounds; control-variable paragraph opens with the ritual 'To ensure the robustness of our results' (L2 anti-pattern)."
+          ]
+        },
+        "results": {
+          "suitable": "yes",
+          "requires": [
+            "a headline X -> Y claim plausibly exposed to reverse causation",
+            "hypotheses that include mirror-pole or mediation forms whose verdicts can be stated in one sentence each"
+          ],
+          "learn": [
+            "Concessive endogeneity opening -> design answer: give the reverse-causation argument in the authors' own voice ('it is also plausible to argue that a manufacturer's satisfaction... will lead to... more business... hence increasing levels of joint dependence') before naming the bias, pretest it (Hausman p = .078), then let the design absorb it (3SLS system, two instruments, just-identified honesty: overidentification tests are unavailable and the paper says so) — the paper's most transferable rhythm.",
+            "Verdict-dense reporting with honest reversals: paired mirror hypotheses get one merged verdict sentence ('Contrary to our expectations, a manufacturer's dependence advantage has a significant negative effect... Hence, hypotheses 1a and 1b are not supported') with an explicit deferral to the Discussion; null mediators adjudicate hypotheses inside the protocol (trust's step-2 null rejects H4; scope's null rejects half of H5); a four-beat closing enumeration restates every verdict including the reversals and the reciprocity finding."
+          ],
+          "caveat": [
+            "No economic-magnitude translation anywhere in the results (R5 gap, recorded by the L2 distillation as rare-at-top-journals and improvable, not a standard to copy).",
+            "Legacy Baron-Kenny/Sobel mediation with no indirect-effect magnitudes or bootstrap CIs; instruments' exclusion restriction defended by 'no a priori theoretical reasons' plus a verified no-direct-effect check — a modern version needs a mechanism argument and modern inference.",
+            "Table 8 anchors carry OCR noise in this slice (asterisk/row-order/footnote splices, provenance flag) — quote from the published table, never from the slice."
+          ]
+        },
+        "discussion": {
+          "suitable": "yes",
+          "requires": [
+            "at least one hypothesis whose verdict reversed the prediction",
+            "field access or qualitative material that can voices the reassessment"
+          ],
+          "learn": [
+            "Assumption-audit ending for reversed findings: when a prediction reverses, do not defend the hypothesis — surface the buried assumptions of the underlying logic (that power use is unequivocally beneficial; that imbalance automatically translates into power use) and re-read the reversal as evidence about the assumptions (coercion shrinks the pie faster than it enlarges the manufacturer's slice; suppliers with structural advantage often neither want nor can afford to use it), giving the paper its only human voices here (fieldwork quotes: 'bullying the supplier does not pay in the long run').",
+            "Null-as-boundary conversion: the curvilinear over-embeddedness null becomes a statement about where the sample sits (American dyads at low joint dependence vs Japanese/Korean ties) — the theory's known downside (Uzzi's over-embeddedness) is honored, tested, and then located outside the sample's range rather than hidden."
+          ],
+          "caveat": [
+            "The assumption audit leans on qualitative color only fieldwork access provides; the explanations for the unconfirmed mediators (proximate search inhibited by narrow component focus; trust belonging to interaction history rather than joint dependence) are plausible but untested speculation — keep them labeled as such.",
+            "The five-contribution paragraph and the extensive future-research agenda are era padding; a modern version would compress both."
+          ]
+        }
+      },
+      "overall_role": "exemplar"
+    },
+    {
+      "id": "higgins2003",
+      "path": "v4/blueprints/higgins2003-upper-echelon-underwriter-prestige.md",
+      "paper_type": "quantitative",
+      "outlet": "Organization Science",
+      "publication_status": "published",
+      "coverage": "complete",
+      "theoretical_problem_form": [
+        "neglected-arena",
+        "half-domain-gap",
+        "typology-decomposed-signaling"
+      ],
+      "narrative_dynamics": [
+        "consequences-to-antecedents-relay",
+        "two-stage-gap-escalation",
+        "parallel-signal-hypotheses",
+        "coverage-capstone",
+        "declared-partial-mediation-loop",
+        "differential-verdict-with-null"
+      ],
+      "retrieval_signals": [
+        "endorsement-antecedents",
+        "underwriter-prestige",
+        "upper-echelon-affiliations",
+        "signaling-in-mediated-markets",
+        "ipo-success",
+        "career-history-archival",
+        "intermediaries-as-brokers"
+      ],
+      "section_learning": {
+        "introduction": {
+          "suitable": "yes",
+          "requires": [
+            "consequence-side-literature-accumulated"
+          ],
+          "learn": [
+            "Flip a mature consequence-side literature toward its antecedent half with a two-stage escalation: a broad 'paid less attention to the origins' in paragraph 1, then re-anchor the gap in the phenomenon's specific demands (young firms, mediated markets) and close with 'have not yet been studied', so the gap gains both literature breadth and phenomenon specificity.",
+            "Frame the contribution as lineage completion anchored to one canonical prior study ('we build on Stuart, Hoang, and Hybels, which demonstrated the payoff; our research highlights the social origins'), then extend the outcome chain one order further, from direct endorsement by banks to second-order endorsement by institutional investors."
+          ],
+          "caveat": [
+            "The closing gap sentence is an absolute, falsifiable claim ('have not yet been studied'); verify the literature before imitating, or downgrade to cite-and-differentiate.",
+            "The cold-start consensus opening (7+ citations in one paragraph, no anecdote, no explicit research question) is 2003-era craft; by current standards it reads flat without quantified stakes or institutional texture."
+          ]
+        },
+        "theory": {
+          "suitable": "yes",
+          "requires": [
+            "single-construct-decomposable-into-type-k-branches"
+          ],
+          "learn": [
+            "Decompose one focal construct into value-chain types (upstream, horizontal, downstream) and run parallel, isomorphic signal hypotheses, each mapping one affiliation type to one quality dimension evaluators cannot verify directly; cap the parallel set with a compositional coverage hypothesis (range across all three) justified by evaluators economizing under uncertainty.",
+            "Give each branch a dual warrant — transfer (capabilities carried from prominent organizations) plus sorting (prominent people join only promising firms, argued by counterfactual negation) — and declare the mediation form a priori: affiliations should act on success both directly and through the endorser, with weakening (partial), not strong-form, mediation."
+          ],
+          "caveat": [
+            "The typology's content (White-style market positions applied to biotech careers) is paper-specific; only the decomposition-plus-coverage architecture transfers.",
+            "Monotonic 'more is better' counting without diminishing returns, an asserted weakening prediction without relative-strength derivation, and two warrants never adjudicated are gaps a modern adapter must repair, not replicate."
+          ]
+        },
+        "methods": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Repair a known sampling-frame defect before it reaches the estimator: when the source listing contains only survivors, actively recover defunct event units (firms that went public but no longer existed in original form), fold them into the risk set, and declare the fix as bias prevention rather than apologizing later.",
+            "Externalize construct judgments to third-party lists (prominence = appearance on Gourman, COMPUSTAT, or industry top-30 thresholds), report list sizes and stability, then normalize per-person tie counts by team size."
+          ],
+          "caveat": [
+            "The field/ethnographic component never enters the estimation sample — it is credibility garnish (process grounding, coding calibration) and must not be imitated as if it were design evidence.",
+            "The funnel omits intermediate Ns (measurement attrition between 838 and 296 is unreported), and the estimation narrative itself lives in the Results section; both are era and genre traits, not transferable practice."
+          ]
+        },
+        "results": {
+          "suitable": "partial",
+          "requires": [
+            "multi-dv-hypothesis-family"
+          ],
+          "learn": [
+            "Preflight the estimator before any table: a dedicated Analysis passage motivates the Heckman selection correction with a lay analogy (labor-force participation), states the two-stage procedure over the 838-firm risk set, and discloses the SE correction to n=296 — making a correction-type estimator legible to non-method readers.",
+            "Keep the null inside the verdict chain ('we did not find support for hypothesis 1. However, hypothesis 2 ... was supported'), then replay the same hypothesized partial-mediation family across three success DVs with a magnitude-based adjudication when a coefficient collapses ('the drop in magnitude ... was not sufficient enough to suggest full mediation')."
+          ],
+          "caveat": [
+            "Learn the architecture, not the evidence claims: this preprint carries no tables, so no coefficient, significance level, or R-squared can be verified, and the paper reports no effect sizes anywhere.",
+            "The H1 null receives one sentence with no on-the-spot explanation, and 'significant and positive effect' language outruns a selection-corrected cross-sectional design — both are anti-patterns to study as contrast, not moves to copy."
+          ]
+        },
+        "discussion": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Return to the opening gap by naming what the field overlooked ('the origins of organizational endorsements have been overlooked'), then transform it twice: upward into a general claim about intermediaries as brokers in mediated markets, and across levels into a micro-to-macro link (individual career histories to team ties to firm-level interorganizational ties) inside the Matthew-effect tradition.",
+            "Handle the null construct in the ending — give the upstream result two candidate explanations (evaluators use alternative science information; prospectus underrepresentation) — and land the story in a practitioner's own words (a finance VP on how prominent affiliates 'help tell the story') so the signaling claim is re-enacted, not merely restated."
+          ],
+          "caveat": [
+            "The closing quote comes from this paper's own fieldwork, and the claimed qualitative-quantitative 'convergence' is asserted rather than demonstrated; the final sentence's 'affect its ability to' inherits the results' causal overreach."
+          ]
+        }
+      },
+      "overall_role": "partial_exemplar"
+    },
+    {
       "id": "hoffmann2024",
       "path": "v4/blueprints/hoffmann2024-legal-liability.md",
       "paper_type": "quantitative",

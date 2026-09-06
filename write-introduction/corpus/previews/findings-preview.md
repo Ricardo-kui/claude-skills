@@ -316,6 +316,29 @@ P5-P6 的下半段功能：向读者预告实证结果。这是 Introduction 中
 ---
 
 
+
+### 变体 V：not-only 对照收束型（gulati2005型）
+
+**模板**:
+> "Our results show that [differences in focal outcome] arise as a function of the match between [new construct] and [new requirement], and not only the match between [incumbent construct] and [incumbent hazard]."
+
+**来源**: gulati_lawrence_puranam_2005 (SMJ), P4
+
+**原文锚定**:
+> "Our results show that performance differences across modes of procurement arise as a function of the match between adaptive capacity and adaptation requirements associated with the exchange, and not only the match between governance form and transaction hazards."
+
+**关键特征**:
+- 预览句以 "and not only [在位逻辑]" 收束全文——贡献声明折进发现预告，引言无需独立 contribution 段
+- 与开篇目标句的 "beyond [X]" 首尾对称（beyond incentive conflict ↔ not only governance-form-and-hazard match），闭环感强
+- 结果预告明确否定/边界化在位匹配逻辑，而非只报正面发现
+- 无夸大承诺：预览措辞与检验口径一致（switching regression 中的匹配效应），只报"差异来自何种匹配"，不报系数
+
+**适用**: 概念拓宽型论文收束引言；结果以匹配/权变（fit/match）逻辑呈现时；不需要独立贡献段、希望发现预告兼作贡献声明时
+
+**禁忌**: "not only" 的否定对象必须是引言前文明确建立的在位逻辑，否则读者不知在反驳谁；结果必须确实支持该对照，否则构成 overclaim
+
+<!-- wb:gulati2005-adaptation-vertical:preview_not_only_contrast_close_gulati2005 -->
+
 ### 变体 S：编号贡献内嵌量化发现型（moon2026 型）
 
 **模板**:

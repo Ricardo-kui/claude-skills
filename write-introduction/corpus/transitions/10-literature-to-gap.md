@@ -142,6 +142,29 @@ source: Migrated from global corpus + MVP30 validation
 **原文锚定**: "Although no academic studies, to our knowledge, have investigated whether or how boards influence recall decisions, anecdotal examples indicate that they may."
 **来源**: wowak_2020_female_directors_recalls (M&SOM), P2
 
+
+### 变体 F：暗示性证据系统化过渡型（gulati_sytch2007 型）
+
+**模板**:
+> "In some studies, however, scholars have also hinted at [alternative reading of the phenomenon] ([citations]). [Qualitative/case accounts] provide compelling evidence of [benefit pattern] ([citations]). [Author 1] emphasized [feature]; similarly, [Author 2] showed how [mechanism] benefited [actor] ([citation]); [pattern] led some scholars to identify [trait] as a source of [advantage] ([citation]). Thus these prior accounts hint at [importance of X] and suggest some of the likely underlying [dynamics] that make this possible. Here, we take a step further by making systematic connections between [construct], the underlying [logic of action], and [actors' performance]."
+
+**来源**: gulati_sytch2007 (ASQ), P7
+
+**原文锚定**:
+> "Thus these prior accounts hint at the importance of joint dependence for the efficacy of procurement relationships and suggest some of the likely underlying behavioral dynamics that make this possible."
+
+**关键特征**:
+- 定性/行业文献被定位为"暗示性"（hinted at / compelling evidence）而非结论性证据——缺口是"系统化"而非"无人涉足"，与变体 E 的"零文献+轶事桥接"互补
+- 暗示性证据按理论递进列举（强调→机制→竞争优势）后用 "Thus these prior accounts hint at..." 一句收束，缺口在收束句后立即声明
+- 过渡句用比较级声明增量并前置贡献三元组："take a step further by making systematic connections between [构念], [行动逻辑], [绩效]"
+- 同一文献流功能翻转：行业文献先呈现为 power 叙事（挤占供应商），再以 "no longer... tugs-of-war; rather... symbiotic coexistence" 重读为替代叙事，缺口由重读自然涌现
+
+**适用**: 已有定性案例/行业证据暗示现象但无系统检验的研究；Constructs/Mechanism 贡献需从暗示性证据升级为系统连接时；可衔接 power-prism 批判或单一逻辑主导的文献流批判之后使用
+
+**禁忌**: 暗示性证据必须真实存在且逐条可引（人名+发现），不得虚构 "hint"；"take a step further" 之后必须立即兑现"系统化"的具体含义（数据/构念/机制），否则沦为空声明；不得把暗示性证据写成结论性证据——证据强度错配会被审稿人抓住
+
+<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:transition_hint_evidence_systematize_gulati_sytch2007 -->
+
 ## 组装规则
 
 ### 必须配对

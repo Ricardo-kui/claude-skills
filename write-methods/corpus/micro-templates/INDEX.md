@@ -41,7 +41,7 @@ updated: 2026-08-03
 | [多源数据匹配](multi-source-matching.md) | 多个独立数据源交叉合并的叙述 | M2 |
 | [手工编码与效度检验](manual-coding-validation.md) | 从原始文本/痕迹提取构念并进行编码效度验证 | M3, M4；微模板 A：反规则手册编码协议（规则书推高信度牺牲效度的预辩 + recording unit 声明 + pre-negotiation 信度三件套），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28)；变体 B：问卷量表开发六环效度链（预测试→题项依据→反偏差→信度→双界因子→计分），carpenterwestphal2001，EMERGING |
 | [子样本分组与平行方程](subsample-grouping.md) | 样本分组估计、多方程并行呈现的结构说明 | M4, M5, M7 |
-| [CMB 预防论证](common-method-bias-prevention.md) | 问卷数据 CMB 预防的设计+统计论证 | M8；变体 D：多源评价者分离+Kappa一致性链（五拍，换源互换收口），carpenterwestphal2001，EMERGING |
+| [CMB 预防论证](common-method-bias-prevention.md) | 问卷数据 CMB 预防的设计+统计论证 | M8；变体 D：多源评价者分离+Kappa一致性链（五拍，换源互换收口），carpenterwestphal2001，EMERGING；变体 E：单波截面 CMB 退路链——预试+Harman+验证子样本 congruence 审计（gulati_2007 ASQ；无时间分离退路+随机子样本档案基准比对 >.90；区别于变体 A/B 时间分离、变体 C 标记变量、变体 D 多源 Kappa），EMERGING |
 | [高管信心/人格特质操作化](executive-confidence-operationalization.md) | 期权 moneyness、媒体描述、显著性—薪酬复合代理、双代理收敛、继任者对照与构念形成窗—结果观察窗分离 | M2, M4, M8 |
 | [四分位距经济显著性](interquartile-economic-significance.md) | 用自变量 IQR（25th–75th）移动解释回归系数的经济显著性 | M7, M8, M10, Results |
 | [Heckman 同行 Prevalence 排他性限制](heckman-peer-prevalence-exclusion.md) | Heckman 选择模型中同行 prevalence 作为排除限制的理论论证与跨 segments 加权 | M7, M8 |

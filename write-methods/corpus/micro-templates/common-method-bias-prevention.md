@@ -72,6 +72,43 @@
 
 <!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:m3_multirater_kappa_separate_source_chain -->
 
+
+### 变体 E：单波截面退路链——预试+Harman+验证子样本 congruence 审计（gulati_2007 型）
+
+**适用场景**: 单波截面问卷、IV/DV 同源同测、无时间分离且无第二评价者来源时的 CMB 防御退路；关键构念存在企业内部档案对应指标时。
+
+**骨架**:
+```
+[程序性预防] To ensure the reliability and discriminant validity of our constructs, we relied
+primarily on items used in prior research and subjected them to a thorough pretest, eliminating
+items that were unclear, ambiguous, or led to perceived overlaps in constructs.
+[统计诊断] To control for the magnitude of the common-method variance problem characteristic of
+survey-based research designs, we conducted [Harman's single-factor test], which generated a
+clear multifactor solution with the most influential common factor explaining less than [20]
+percent of variation in the data, far below the recommended [50] percent threshold ([citation]).
+We thus concluded that common method variance was not a severe problem in our data.
+[congruence 审计] Whenever possible, we tried to validate the survey-based measures by checking
+their congruence with their objective underlying indicators: we drew a random subsample of
+[p] percent of completed surveys ([n]), and asked our contacts at each of the firms to compare
+survey responses with their internally collected archival measures of [focal constructs].
+[判读收口] The accuracy of classification ... and the correlation coefficient ... both exceeded
+[.90], suggesting the high reliability of our self-reported measures.
+[合法性收尾] Some scholars have advocated using such perceptual measures, given that actors'
+behaviors are ultimately driven by their definitions of the situation ([citations]).
+```
+
+**要点**:
+- 五拍：程序性预防（预试+题项纯化）→ Harman 阈值判断（首因子方差占比 vs 推荐阈值，带出处）→ 验证子样本（随机 p% 由企业内部联系人对照档案指标）→ congruence 数字判读（>.90）→ 感知测量合法性引文收尾
+- 与变体 A/B 的分界：无时间分离可依赖时的退路；与变体 C 的分界：不用标记变量，改用事后 congruence 审计；与变体 D 的分界：彼处双源同时采集+Kappa，本篇单源采集+事后随机子样本比对内部档案
+- "far below the recommended [50] percent threshold"——阈值判断句必须带推荐阈值出处，不空口断言
+- 验证子样本是本变体的差异拍：把"感知 vs 档案"的 congruence 从口头主张变成可审计数字（分类准确率/相关系数双口径）
+
+**诚实边界**: Harman 通过≠CMB 解除——单波同期测量的时序威胁仍在，应显式承认 simultaneity 并声明更强技术（如 polynomial 分解）的不可行条件；验证子样本依赖企业配合，比对项须逐项声明口径（分类项报准确率、连续项报相关系数，不可混报一个">.90"）；"internally collected archival measures" 的可比性由内部联系人背书而非独立审计。
+
+**范文锚点**: "We conducted Harman's (1967) single-factor test, which generated a clear multifactor solution with the most influential common factor explaining less than 20 percent of variation in the data, far below the recommended 50 percent threshold (Podsakoff and Organ, 1986)."（Measures 开篇段）〔跨段另锚，Joint dependence 段〕"we drew a random subsample of 20 percent of completed surveys (53 observations) and asking our contacts at each of the firms to compare survey responses with their internally collected archival measures of dependence."
+
+<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:m3_cmv_singlewave_and_validation_subsample -->
+
 ## 组装规则
 
 ### 优先级

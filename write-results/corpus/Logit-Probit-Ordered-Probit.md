@@ -562,6 +562,58 @@ updated: 2026-08-13
 
 **验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
 
+
+<!--
+pattern_id: switching_reg_first_stage_intermediate_navigation
+estimator_family: switching regression / endogenous switching（mlogit 第一阶段 + 分组 OLS 第二阶段）
+slot: R2（第一阶段导航）/ R8（自有价值旁注，显式标记探索性）
+source_papers: ["gulati2005-adaptation-vertical"]
+confidence: EMERGING（单篇 full_text_verified，待第二篇交叉验证）
+-->
+
+### 变体 U：内生转换回归第一阶段选择模型——"中间步骤导航 + 自有价值旁注"报告节奏（Intermediate-Step Navigation with Own-Merit Aside）
+
+**适用场景**: 两阶段选择修正估计器（内生转换回归 / Heckman 型 / 控制函数）的第一阶段选择模型（mlogit/logit/probit）不直接检验假设，但读者需要一套交底规则才能读表：两步骤预告、IV 排他声明、基线类解释规则、IV 相关性与分阶段样本损耗——之后用"自有价值旁注"把第一阶段的有趣结构（往往是机制旁证）与主流程明确区隔。
+
+**报告节奏**: [两步骤预告] → [排他声明] → [基线解释] → [IV 相关性与样本损耗] → [自有价值旁注(可选)] → [过渡回主流程]
+
+**骨架**:
+```
+[两步骤预告] We used a [two-stage estimator] that attempts to account for possibly endogenous
+choices of [treatment category]. This model is estimated in two stages. First, a [multinomial
+choice model] is used to explain [treatment category]. Second, we estimate separate [outcome]
+regressions for subsamples of observations on each [category], in which we include the
+[non-selection correction] as a control variable.
+[排他声明] [Instruments] function as instrumental variables in our model, and do not appear in
+the second-stage models predicting [outcome]. While they are expected to affect [treatment
+category], we assume that [instruments] do not directly affect [outcome] once we control for
+[covariates].
+[基线解释] The baseline category in [Table X] is [category C], so that the coefficients must
+be interpreted as affecting the odds of choosing [category A] or [category B], relative to the
+odds of choosing [category C].
+[IV 相关性与样本损耗] We note that our instrumental variables do affect [treatment category],
+as assumed: across all three categories they are jointly significant at the [p] level. Data
+limitations reduced the number of observations at the first and second stage of the analysis to
+[N1] and [N2] respectively.
+[自有价值旁注] While we use the results in [Table X] as an intermediate step in estimating a
+[two-stage estimator], these results are worth noting for their own merit: [interpretive reading
+of the choice coefficients; label any puzzle as non-focal]. While not the focus of our research,
+we believe that further analysis of [the puzzle] may prove fruitful.
+[过渡] We now turn to the second step in estimating the [two-stage estimator].
+```
+
+**为什么有效**: 读者在进入第二阶段前拿到全部"读表协议"（基线=联盟、系数即相对联盟的 odds、IV 仅进第一阶段），第二阶段的分组回归就不会被误读；样本损耗（[N1]/[N2]）在同一处透明交代，避免表后补漏。第一阶段选择结果与主假设无关却被给予"own merit"旁注——把探索性结构（如买卖双方资产专用性的不对称）显式标记为值得后续研究的旁证，而不是把它包装成 confirmatory 发现。
+
+**注意事项**: 旁注须自带非焦点标签（"not the focus of our research"）并将进一步分析 deferred；若第一阶段系数进入理论解读（如选择不对称的机制故事），需同时承认其推测性质。IV 排他声明是两阶段设计的识别命门——假设句必须完整落到"一旦控制 [协变量] 即无直接效应"的形式，不能只写"不出现在第二阶段"。
+
+**反模式**: 第一阶段只报显著性不报基线类与解释规则（读者无法还原系数含义）；把第一阶段选择结果当作假设证据（它只支持选择侧的机制旁证，不检验绩效假设）；或反之完全跳过第一阶段结果（后续机制主张失去落点）。
+
+**原文锚点**: "While we use the results in Table 4 as an intermediate step in estimating a switching regression model, these results are worth noting for their own merit."（Table 4 评论段首句；第二阶段交底句式见 Table 5 前段 "We now turn to the second step in estimating the switching regression model"）
+
+**范文来源**: Gulati, Lawrence & Puranam (2005), *Strategic Management Journal* — RESULTS 前三段（Table 4 第一/二阶段交底）。
+
+<!-- wb:gulati2005-adaptation-vertical:switching_reg_first_stage_intermediate_navigation -->
+
 ## 曲线结果写作反模式
 
 - **正式 U 检验后置**：在主结果只凭二次项宣称支持、再把端点斜率与转折点区间埋进 robustness，会让核心结论先于核心证据。正式形状检验应紧邻假设判断。

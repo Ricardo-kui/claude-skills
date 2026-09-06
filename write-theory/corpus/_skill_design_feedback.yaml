@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
-  last_updated: '2026-08-30'
-  observations_processed: 28
+  last_updated: '2026-09-06'
+  observations_processed: 29
   description: Evidence ledger for write-theory design defects inferred from Theory exemplar distillation.
 defects:
   e-family-missing-dual-edged-signed-contingency-variant:
@@ -1554,6 +1554,71 @@ defects:
     lifecycle: open
     first_seen: '2026-08-29'
     last_seen: '2026-08-29'
+    auto_action:
+      eligibility: log_only
+      reason: Insufficient evidence for core revision.
+  e1-fit-typology-theory-route-coverage:
+    classification: routing_defect
+    status: EMERGING
+    risk: low
+    current_rule: 一级路由按 Gap × 贡献杠杆 给变体；Gap=Incompleteness 且杠杆=Mode 时只给 D 过程理论（low，且限定'若遗漏的是阶段、顺序或演化方式'），无类别定位/类型学 fit 型理论（模式画像排序锚定
+      + 纯条件绩效预测、无模式绩效主效应）的路由格；分类字典亦无该假设结构格。
+    rule_excerpt: '| Incompleteness | Mode | 过程理论 | D | low | 若遗漏的是阶段、顺序或演化方式 |'
+    rule_locator: 一级路由表 Gap × 贡献杠杆，Incompleteness × Mode 行
+    target: write-theory/corpus/meta/routing_table.md
+    diagnosis: '范文（Gulati, Lawrence & Puranam 2005 SMJ, Theory 全节 full text）是 Incompleteness × (Mode/Constructs 混合杠杆) 的类别
+      fit 理论：H1/H2 为构念水平 跨模式比较锚定，H3–H5 为压力×模式的纯条件相对效应预测，无任何模式无条件绩效 主效应。在路由表一级无法定位：×Mode → D 需要"遗漏的是阶段/顺序"（不适用， 三模式是共时替代形态）；×Constructs
+      → A 要求构念辨析为贡献主体（本文辨析是 工具性平台）；唯一可落 ×Boundary → E（medium），但 E 默认连续边界/条件化话语， 未提示"排序锚定假设先行 + 组间纯条件预测 + 假设句内双侧比较"的 E1-fit
+      子型。 Phase 0 假设结构枚举（纯主效应/…/构念分解）也无"比较锚定 + 类别纯调节"格， 本篇被迫标 unclassified combination。风险：合法 E1-fit 型论文被误路由为 A（构念辨析模板）或 D（过程模板），或按连续调节
+      E 模板写坏（被逼加主效应）。 证据等级：单篇 full_text_verified → EMERGING，仅登记；不修改任何规则。
+
+      '
+    proposed_change:
+      action: add_branch
+      summary: 为 E 行或 A/E 间补 E1-fit 子型诊断分支（判据：绩效预测全条件化+无模式主效应+排序锚定假设先行→路由 E1_categorical_moderation 而非 A/D/连续 E），并评估在 Phase
+        0 假设结构枚举中为'比较锚定+类别纯调节'开口。待第二篇同型论文出现升 VERIFIED 后再实施。
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - E 调节效应型（E1 类别调节 / fit 匹配）
+      hypothesis_families:
+      - pure_conditional_comparative_no_performance_main_effect
+      journals: []
+      boundary: 路由与分类覆盖扩展；不撤销任何既有行的适用性（D 行自身有条件限定，A/E 行仍正确）
+    papers:
+    - id: gulati2005-adaptation-vertical
+      journal: SMJ
+      build_type: E 调节效应型（类别调节/E1 fit）
+      hypothesis_family: ''
+      evidence_anchor: Theory 全节：H1/H2 双维模式排序锚定 + H3–H5 纯条件绩效预测（无模式主效应）；H5 双压力超加性+均衡构型；mode 为类别调节方
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - SMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - SMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive:
+      - prompt: 三种采购模式（内部/市场/联盟）在分化与整合维度上系统性不同，关系绩效取决于模式自适应能力与交易不稳定、任务互依压力的匹配
+        expected_invariants:
+        - 模式为类别调节方（E1 分组调节）
+        - 绩效预测全部条件化，无模式无条件绩效主效应
+        - 排序锚定假设（画像）先行，条件预测回指排序假设
+        - 不落入 A 构念辨析或 D 过程模板
+      preservation:
+      - prompt: 高管团队认知多样性通过信息处理机制影响战略决策质量，环境动态性调节该主效应
+        expected_invariants:
+        - 主效应假设存在并被调节
+        - 连续 moderator 双边（high/low）论证
+        - 既有 E 调节效应型默认路线不受影响
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
     auto_action:
       eligibility: log_only
       reason: Insufficient evidence for core revision.

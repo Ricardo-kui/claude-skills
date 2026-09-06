@@ -179,6 +179,29 @@ source: Manually curated from MVP30 narrative_analysis files
 
 <!-- wb:anand_mukherjee_2024_learning_from_failures_di:hook-consensus-nuance-declaration -->
 
+
+### 变体 H：经典概念谱系回溯型（gulati_sytch2007 型）
+
+**模板**:
+> "The concept of [core construct] has received considerable attention from scholars studying [domain]. Much of the early research considered [construct] to be [dominant limiting reading] ([citations]) because [theoretical rationale]. [Canonical author] ([year]), however, distinguished between [facet A], or [definition A], and [facet B], or [definition B]. [He/She] labeled these constructs '[in-world label A]' and '[in-world label B]' [1-2 sentences unpacking the distinction's mechanics]."
+
+**来源**: gulati_sytch2007 (ASQ), P1
+
+**原文锚定**:
+> "Emerson (1962), however, distinguished between joint dependence in a dyad, or the sum of actors' dependencies on each other, and dependence asymmetry, or the difference in actors' dependencies on each other."
+
+**关键特征**:
+- 冷开场纯文献驱动：无数据、无案例、无轶事，Hook 与 Literature Turn 融合——但共识的落点是正典作者的原始概念区分，而非领域共识本身
+- 谱系回溯建立规范基线：复原正典作者及其原初标签（如 "cohesion"/"power advantage"），使后文盲点可定义为"对正典的偏离"而非"共识内的漏斗收窄"
+- 转折词 however 位于正典内部（早期研究传统 vs 经典区分），把权威变成叙事枢纽而非被挑战对象
+- 开场即交付双维概念工具箱：后续 puzzle、gap、理论承诺全部复用这两个维度，适合双维构念论文
+
+**适用**: 双维/成对构念论文的 Inadequacy（兼容 Incompleteness 混合）缺口；领域有可引原文标签的正典先例时首选；与 tensions/03 结构性盲点 Tension 成对（满足本模板配对规则）；ASQ/SMJ 理论驱动风格——正典内部张力可补偿低能量冷开场
+
+**禁忌**: 正典标签必须原文可查，不得伪造或错引谱系；无正典先例勿用（会退化为普通文献综述开场）；本变体无人脸（无公司/案例），投 AMJ 需在后续段落补具象元素；批评延迟到 puzzle 句，开场不抛批评
+
+<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:hook_canonical_genealogy_cold_open_gulati_sytch2007 -->
+
 ## 组装规则
 
 ### 必须配对

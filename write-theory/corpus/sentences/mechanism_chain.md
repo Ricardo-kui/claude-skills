@@ -957,6 +957,37 @@ is [high/low] rather than [low/high]."
 
 来源：Moon et al. (2026, Journal of Marketing)。
 
+
+<!--
+pattern_id: s_mechanism_chain_availability_contrast_and_hybrid_approximation
+build_type: 跨类型（句式级，机制可得性对比）
+source_papers: ["gulati2005-adaptation-vertical"]
+confidence: EMERGING（单篇，待第二篇交叉验证）
+sentence_position: why_chain_transition / reasoning token
+-->
+
+### 变体 D：机制可得性对比句式——"unavailable in X"与"Y can approximate X"（Availability Contrast & Hybrid Approximation）
+
+**句位**: T3 机制链中跨模式机制清点的正反对比句（先说 X 有、再说 Y 缺、再说中间模式补到什么程度）。
+
+**变体**:
+- 缺位声明: "[Formal and informal] mechanisms that aid [coordination] are typically unavailable in [mode X — arm's-length relationships]."
+- 连带成本声明（拆除"无机会主义就无成本"反驳）: "Without [common ownership], the design and implementation of [coordination mechanisms] to link [unit A] and [unit B] can involve costly and time-consuming negotiations even in the absence of [opportunism]."
+- 混合模式近似声明: "[Hybrid mode Y] can approximate some of the features of [internal mode] in terms of [coordination and cooperation], because [relational mechanism — shadow of the future / trust / inter-firm routines]."
+- 让步收束（定位近似程度）: "While [relational mechanisms] may provide collaborative effects weaker than those in [ownership, which has the advantages of absolute authority and complete discretion to modify incentives], they may nonetheless be significant."
+
+**为什么有效**: 机制清点最忌流水账——"unavailable / can approximate / weaker but nonetheless significant"三段式把"极端模式缺什么、混合模式用什么补、补到什么程度"一次说清；每模式只写差异项，避免整套机制重复罗列；"even in the absence of opportunism"主动预拆交易成本式反驳。
+
+**注意事项**: 近似声明必须指认具体替代机制（不能是"ally 像 make"的隐喻）；让步收束句给出混合模式的准确定位（弱于所有权但显著），而非模糊的中间态；缺位句后应补一句为何其他模式装不上该机制（固定成本摊销/关系时长不足）。
+
+**反模式**: "can approximate"无机制指认（近似变隐喻）；缺位声明后无任何解释；让步句只有"weaker"无"nonetheless significant"（把中间模式写成失败者，毁掉 fit 理论后半程）。
+
+**原文锚点**: "Such formal and informal mechanisms that aid coordination are typically unavailable in arm's-length relationships characteristic of market procurement."（Integration in make, ally and buy 节）
+
+**范文来源**: Gulati, Lawrence & Puranam (2005), *Strategic Management Journal* — Integration in make, ally and buy 节。
+
+<!-- wb:gulati2005-adaptation-vertical:s_mechanism_chain_availability_contrast_and_hybrid_approximation -->
+
 ## "双刃剑"理论框架骨架（Double-Edged Sword）
 
 **适用**：某一策略/构念既有明显好处又有隐性坏处，需要系统呈现理论视角下的两面性
@@ -1891,6 +1922,40 @@ therefore, unlikely to [directional action]."
 ---
 
 
+
+
+### 逻辑对照枢转句（Logic-Contrast Pivot，gulati_2007 型）
+
+**句位**: 双逻辑论文中第二逻辑假设块内、机制枚举开题处——从逻辑 A 的假设块转入逻辑 B 的机制推演时，一句话划清两逻辑的理论分工（A 专注价值占用/分配侧，B 开启价值生成/创造侧），随后接枚举展开。
+
+**句式骨架**:
+```
+The implications of [X2] for [DV] contrast significantly with those of [logic A],
+which focuses exclusively on actors' abilities to [appropriate/distribute value].
+The logic of [B] that underlies [X2] suggests that [increased quality of interaction
+/ relational state] would enhance [the relationship's value-generating potential],
+subsequently driving [actors'] performance in it, for a variety of reasons.
+
+First, [value mechanism 1]... Second, [value mechanism 2]... Finally, [value
+mechanism 3]... Taken together, [converging main-effect prediction].
+```
+
+**变体要点**:
+- "contrast significantly with those of"——把对比钉在两逻辑对**同一 DV 的含义**上，而非宣告逻辑 A 错误；两逻辑可同时为真，只是作用于不同构念（本例：asymmetry→占用 vs joint level→创造）
+- "focuses exclusively on"——一步概括逻辑 A 的理论视野边界，为逻辑 B 的贡献留位
+- 枢转后接 "for a variety of reasons" + First/Second/Finally 枚举价值机制——对比句负责分工，枚举负责 B 逻辑的机制展开，二者合起来完成从对照到预测的过渡
+
+**为什么有效**: 双逻辑论文最大的结构风险是两块假设读起来互不相干；枢转句让逻辑 A 的假设块成为逻辑 B 的对照基线，读者带着"占用 vs 创造"的分工图进入第二块，全节张力（对抗预期 vs 合作预期）由此一句接住。
+
+**注意事项**: 对比必须落在两逻辑对同一 DV 的不同含义上；若两逻辑预测的是不同 DV，对比句会伪装对立。枢转句不承担对逻辑 A 的反驳——需要裁决孰对孰错时路由 F 竞争假设 / G 辩证对立，不用本句式。
+
+**反模式**: 只命名第二逻辑而不概括第一逻辑的视野边界（对比悬空）；对比句后直接跳假设、无机制枚举（对比成装饰）。
+
+**原文锚点**: "The implications of joint dependence for the performance of a manufacturer's procurement relationships contrast significantly with those of the logic of power, which focuses exclusively on actors' abilities to appropriate value in exchange relationships."
+
+**验证状态**: EMERGING（单篇来源；近族"双视角对比+框架整合" singh_grewal2023 亦单源——但句位不同：本变体是块间枢转句，非 T2 开篇整合段）
+
+<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:s_mechanism_chain_logic_contrast_pivot -->
 
 ### 句式 B：自增强循环命名句（westphal_bednar2005 型）
 

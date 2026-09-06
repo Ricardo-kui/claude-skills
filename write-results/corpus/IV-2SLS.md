@@ -269,3 +269,182 @@ updated: 2026-08-05
 **原始句锚点**: "One may be concerned that our control variables (e.g., Internet Ad) are endogenous. We address this concern with the following three steps."
 **来源**: fang_et_al_2025_rival_recall_ad_spend (POM), §4.2
 
+
+
+<!--
+pattern_id: switching_reg_selection_diagnostics_null_hazard_positive_hausman
+estimator_family: switching regression / endogenous switching（选择修正诊断收束）
+slot: R7（自选择修正诊断，收尾型）
+source_papers: ["gulati2005-adaptation-vertical"]
+confidence: EMERGING（单篇 full_text_verified，待第二篇交叉验证）
+-->
+
+
+
+### 变体 16：恰好识别系统下的工具双条件散文审计 + 不可检验项诚实边界（gulati_sytch2007 型）
+
+**适用场景**: 联立方程/IV 系统**恰好识别**（工具数 = 内生变量数）时的工具有效性报告。此时无自由度做 Cragg-Donald 弱识别统计量之外的过度识别检验（Sargan/Hansen），也无多余工具做排他性安慰剂回归——工具辩护只能走"相关性已验证 + 排他性理论预设+经验核查"的散文审计路线。
+
+**报告节奏**: [双工具引入+各自相关性机制预期] → [排他性预设：无 a priori 理由存在直接效应] → [相关性条件核验：跨全部模型规格保持显著→系统始终可识别] → [排他性条件核验：对非对应内生变量无直接效应（已验证）] → [诚实边界：恰好识别故过度识别检验不可行]
+
+**骨架**:
+```
+We used [two] instrumental variables to help uniquely identify the [outcome] and
+[predictor] models in the system of simultaneous equations. For the [predictor] model,
+we used [instrument_1]. We expected levels of [instrument_1] to lead to higher degrees
+of [predictor] due to [mechanism]. To uniquely identify the [outcome] equation, we
+[created/used] [instrument_2]. We expected [instrument_2] to be [positively] correlated
+with [outcome]. We had no a priori theoretical reasons to expect [instrument_1] to have
+a direct effect on [outcome] and [instrument_2] to have a direct effect on [predictor].
+
+It is essential to note that both of our instruments ([instrument_1] and [instrument_2])
+remain significant across all model specifications, which is a first essential
+requirement of instrumental variables and ensures that our system of equations remains
+identified at all times. We further empirically verified that our instruments met the
+second condition of instrumental variables and had no partial direct effect on their
+non-respective endogenous variables: thus, controlling for other variables in the
+system, [instrument_2] had no direct effect on [predictor], and [instrument_1] had no
+direct effect on [outcome] ([citation]).
+
+Because our system is just identified (we have equal numbers of endogenous variables
+and instruments), we could not formally check for the absence of correlation between
+the instrumental variables and the structural errors by testing for overidentifying
+restrictions ([citation]).
+```
+
+**为什么有效**: 在统计量最少的识别设定下，把工具辩护拆成两条可核查的命题（跨规格相关性 / 无非对应直接效应）并各自给出验证动作，使"工具有效"从断言变成审计记录；结尾的不可检验声明把"恰好识别"从技术细节升格为诚实边界，堵住"为何没有 Sargan/Hansen"的审稿疑问。
+
+**与已有变体的分工**: 变体11（量化暴露占比辩护，VERIFIED）与 Fang 2025 双重辩护变体面向**过度识别/有暴露面**的工具；变体12（Cragg-Donald vs Stock-Yogo 临界值协议，VERIFIED）依赖可报的弱识别统计量。本变体覆盖的是它们都无法服务的**恰好识别**设定：无过度识别自由度、排他性只能靠理论预设+经验核查。三者按识别结构互补而非替换。
+
+**注意事项**: "remain significant across all model specifications" 只在工具于每个规格中都报告时才可写；"no partial direct effect" 必须是实际估计核查的结论而非纯断言（本文引 Wooldridge [year: page] 支撑该核查逻辑）；诚实边界句不可删——它是整套散文审计的合法性来源。
+
+**反模式**: 恰好识别时假装排他性"已被检验"；只报相关性不提排他性；用过度识别检验话术包装恰好识别系统。
+
+**验证状态**: EMERGING（单篇，待第二篇交叉验证）
+
+**原文锚定**: "Because our system is just identified (we have equal numbers of endogenous variables and instruments), we could not formally check for the absence of correlation between the instrumental variables and the structural errors by testing for overidentifying restrictions (Hausman, 1978)."
+
+**范文来源**: Gulati & Sytch (2007), *Administrative Science Quarterly* 52(1) — Results 节工具有效性两段。
+
+<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:r2_instrument_dual_condition_audit_just_identified_boundary -->
+
+<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:r2_instrument_dual_condition_audit_just_identified_boundary_gulati_sytch2007 -->
+
+### 变体 15：互为因果双内生系统的 3SLS 主估计导航（gulati_sytch2007 型）
+
+**适用场景**: 理论上两个核心构念互为因果（X→Y 且 Y→X 均成立）的截面/关系数据设计。区别于单向内生修正（工具变量只救一个内生回归元）——此处 [predictor] 与 [outcome] 同时内生，必须以联立方程系统为主估计器，而非作为稳健性附录。
+
+**报告节奏**: [反向因果让步开框（先替对手把话说了）] → [联立性偏误命名] → [Hausman 预检实证确认] → [OLS 不适用论证] → [3SLS 系统陈述+估计三步程序] → [系统表导航（每表=两方程成对）+ OLS 基线例外]
+
+**骨架**:
+```
+Yet it is also plausible to argue that [outcome] will lead [partners] to allocate more
+[business] to each other, hence increasing levels of [predictor]. This potential
+reciprocally causal relationship resulted in a simultaneous-equation bias in our
+research design ([citation]). In line with the expectations of a simultaneous-equation
+bias, the [Hausman (year)] test did indicate the presence of endogeneity in the
+[predictor] measure (p = [value]). A simple ordinary least squares (OLS) estimator is
+inapplicable for a simultaneity bias because the endogenous variables are correlated
+with the disturbance term, hence rendering OLS estimates inconsistent. To account for
+the possible simultaneity between [predictor] and [outcome], we used a [three-stage
+least squares] variation of simultaneous equation modeling ([citation]), which allowed
+us to estimate [outcome] simultaneously as a function of [predictor] and [predictor]
+as a function of [outcome].
+
+[系统表导航段] The table reports systems of equations, where each system comprises two
+equations or models that are estimated simultaneously: the first one reflects [outcome]
+as a function of [predictor] and various exogenous predictors, and the second one
+estimates [predictor] as a function of [outcome] along with the set of exogenous
+variables. Model [1] in table [X] represents an exception, since we used a simple OLS
+model with robust standard errors to test the baseline [outcome] model. The
+simultaneity bias is not an issue here because the measure of [predictor] is excluded
+from the model.
+```
+
+**为什么有效**: 让步式开框把审稿人最可能的反向因果攻击变成作者自己的铺垫；随后每个动作（Hausman→弃 OLS→3SLS）都有明确的触发理由，读者无需自行补全识别逻辑。系统表导航句让双方程成对呈现的表格变得可读，OLS 基线例外句预先堵住"为什么第一列不是 3SLS"的疑问。
+
+**与已有变体的分工**: 变体3（IV 第一阶段诊断嵌入 R3，VERIFIED）与变体4（非线性主模型控制函数 DWH，EMERGING）均为**单向**内生修正——一个内生回归元、工具只为其服务；本变体的最小识别单元是**双内生方程组**，表格导航与基线例外句均系统级。互为因果设计优先本变体，再按需叠加变体3的诊断嵌入。
+
+**注意事项**: Hausman 预检 p 值须如实报告（本文 p = .078 为边缘显著，仍构成使用 3SLS 的依据——边缘性本身就是诚实信息）；反向因果让步段不可省略，它是系统级估计器（而非常规 IV）的正当性来源；估计三步程序（工具化→跨方程协方差→SUR 堆叠）可引 Greene ([year]: [page]) 而非全文复述。
+
+**反模式**: 把 3SLS 藏进稳健性小节而主表仍用 OLS（联立性偏误未被控制却宣称因果）；系统表只导航性能方程不提对应方程；省略基线例外句导致读者误读 Model 1。
+
+**验证状态**: EMERGING（单篇，待第二篇交叉验证）
+
+**原文锚定**: "The table reports systems of equations, where each system comprises two equations or models that are estimated simultaneously: the first one reflects performance as a function of joint dependence ... and the second one estimates joint dependence as a function of performance along with the set of exogenous variables."
+
+**范文来源**: Gulati & Sytch (2007), *Administrative Science Quarterly* 52(1) — Analysis 节 + Results Table 8 导航段。
+
+<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:r2_reciprocal_3sls_system_navigation -->
+
+<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:r2_reciprocal_3sls_system_navigation_gulati_sytch2007 -->
+
+### 变体 14：选择修正项不显著 + Hausman 显著的双信号诚实收束（Null Correction Term with Significant Hausman）
+
+**适用场景**: 选择修正/自选择担忧的收尾诊断。修正项（non-selection hazard）自身不显著——敏锐的读者会据此推断"无需修正"；但设定检验（Hausman 对比含/不含修正项的两组估计）显著。两信号并存时的报告节奏：既承认修正项 null，又不放弃选择存在性结论，同时对量化精度保持谦逊。
+
+**报告节奏**: [修正项 null 陈述] → [转折：Hausman 显著] → [存在性结论（已被控制）] → [精度谦逊 + 文献旁证]
+
+**骨架**:
+```
+[修正项 null 陈述] Finally, we note that the [correction term] is not significant in our
+models.
+[转折] However, a [Hausman] specification test indicates that the coefficients in the models
+change significantly on the inclusion of the [correction term].
+[存在性结论] This suggests that effects due to [self-selection] of [treatment category] are
+operating in our data (and we have controlled for them),
+[精度谦逊] though we may have been unable to quantify them precisely (see also [citation], for
+similar findings in the context of [domain]).
+```
+
+**为什么有效**: 这是自选择诊断最容易被写坏的地方——修正项不显著要么被藏起来，要么被用来宣称"没有自选择问题"。本文同时呈现两个信号并给出分层的结论（存在且受控，但不可精确量化），把"不能证明没有"与"不能精确度量"分开，是审稿人视角下最稳健的表述。
+
+**注意事项**: Hausman 显著性的方向解释必须与修正项 null 并置（否则读者只取其一）；"unable to quantify precisely"的谦逊句不可省略，它是两个信号并存时结论的合法性来源；文献旁证（如 Shaver 1998 同类发现）用于表明该信号组合在领域内已有先例。
+
+**反模式**: 修正项不显著即删去或宣称无选择问题（忽略 Hausman）；或只报 Hausman 显著不报修正项 null（选择证据被夸大）；把"已控制自选择"写成"已消除自选择"。
+
+**原文锚点**: "This suggests that effects due to self-selection of procurement modes are operating in our data (and we have controlled for them), though we may have been unable to quantify them precisely (see also Shaver, 1998, for similar findings in the context of international expansion)."
+
+**范文来源**: Gulati, Lawrence & Puranam (2005), *Strategic Management Journal* — RESULTS 收尾段（控制变量与自选择诊断）。
+
+<!-- wb:gulati2005-adaptation-vertical:switching_reg_selection_diagnostics_null_hazard_positive_hausman -->
+
+
+### 变体 17：3SLS 无稳健 SE 时的按簇 bootstrap 推断替代（gulati_sytch2007 型）
+
+**适用场景**: 主估计器为 3SLS/联立方程且软件不提供直接的异方差稳健/聚类 SE 调整，同时数据存在簇结构（同一供应商/企业多条关系）与异方差（Breusch-Pagan 拒绝同方差）。推断基础设施缺口必须以重抽样方法补齐时。
+
+**报告节奏**: [威胁定位：BP 检验拒绝同方差] → [成因诊断：观测非独立/簇结构] → [约束声明：3SLS 无直接 SE 调整] → [替代动作：非参数 bootstrap（偏差修正系数+SE）] → [簇感知设计：重抽样本规模=簇数] → [重复次数+不变结论]
+
+**骨架**:
+```
+The [Breusch-Pagan] test ([citation]) for heteroskedasticity led us to reject the null
+hypothesis of homoskedastic error variance ... One possible reason for this may be the
+non-independence of observations, as certain [clusters] in our sample [supply more than
+one unit] ... Similar to OLS, heteroskedasticity poses a problem in [3SLS] estimation
+because it can bias the standard errors of the estimated coefficients. Because the
+direct adjustment of standard errors is not available in [3SLS] [software] estimation,
+we used a nonparametric bootstrap method to extract the bias-corrected coefficient
+estimates and standard errors ([citations]). ... In implementing the bootstrap, we made
+provisions for the clustered structure of our data, subsequently setting the size of
+repeated random samples equal to the number of clusters. ... Our estimates are based on
+[1,000] random samples ([citation]). Results remained qualitatively unchanged.
+```
+
+**为什么有效**: 威胁（异方差）与成因（簇结构）分开诊断，使推断补救显得有的放矢而非仪式性；"direct adjustment ... not available" 的约束声明把 bootstrap 从偏好升级为必需；簇感知重抽细节（样本规模=簇数）让懂行的审稿人确认重抽单位正确；结论句只声称 qualitatively unchanged，不夸大为完全相同。
+
+**与已有变体的分工**: 目标文件 R7 现有变体均为识别/排他性辩护（变体5/10/11/12/13/14），无推断基础设施变体；registry 计数模型 R7 bootstrap_se（ball_2018）面向 generated regressor 的 SE 低效，本变体面向**估计器能力约束**（3SLS 无聚类稳健 SE 可调）——触发条件、实现细节（按簇等规模重抽）与措辞均不同。IV/联立方程族用本变体补推断层。
+
+**注意事项**: "bias-corrected" 须与所用 bootstrap 修偏程序一致；簇感知重抽（cluster bootstrap）与逐观测重抽不可混写；重复次数须报（本文 1,000）；结论强度限定在 qualitatively unchanged——若系数幅度有明显移动须如实说明。
+
+**反模式**: 3SLS 下直接照搬 OLS 的 cluster-robust SE 话术（该选项并不存在）；省略簇感知重抽细节使读者无法判断推断单位；把 bootstrap 结果写成 identical。
+
+**验证状态**: EMERGING（单篇，待第二篇交叉验证）
+
+**原文锚定**: "Because the direct adjustment of standard errors is not available in 3SLS Stata estimation, we used a nonparametric bootstrap method to extract the bias-corrected coefficient estimates and standard errors (Efron, 1981, 1982)."
+
+**范文来源**: Gulati & Sytch (2007), *Administrative Science Quarterly* 52(1) — Results 节推断基础设施段。
+
+<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:r7_3sls_cluster_bootstrap_inference_workaround -->
+
+<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:r7_3sls_cluster_bootstrap_inference_workaround_gulati_sytch2007 -->

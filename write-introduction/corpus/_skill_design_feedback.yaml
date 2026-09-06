@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
-  last_updated: '2026-08-30'
-  observations_processed: 48
+  last_updated: '2026-09-06'
+  observations_processed: 54
   description: Evidence ledger for design defects inferred from Introduction exemplar distillation.
 defects:
   incompleteness-embedded-opposing-claims-vs-incommensurability:
@@ -1728,3 +1728,255 @@ defects:
     auto_action:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
+  corpus-gap-tension-consequences-to-antecedents-relay:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: tensions/01-despite-progress-unaddressed.md 覆盖 Incompleteness '承认进展+点名遗漏' 家族，含 westphal_zajac_1998 型'前因止步+双问悬置'变体（AM,
+      VERIFIED），但无镜像方向（后果侧积累→前因侧接力）变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/tensions/01-despite-progress-unaddressed.md
+    diagnosis: Higgins & Gulati 2003 双段 gap 升级（P1 宽口径 'paid less attention to the origins' + P2 现象再锚定 'have not yet been studied'）与
+      AM 互为镜像且结构独立（双段升级为 AM 所无）；单篇证据按 Phase 4.7 协议只能 EMERGING append_variant，不得替换已有变体
+    proposed_change:
+      action: append_variant
+      summary: 追加'后果止步→前因接力型（higgins_gulati2003 型）'，已入 writeback_candidates.introduction.yaml item 1，precheck verdict=ADD（band
+        薄弱），锚 tensions/01-despite-progress-unaddressed.md
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe
+      journal: Organization Science
+      evidence_anchor: Although scholars have begun to examine the consequences of organizational endorsement, the antecedents
+        to this important form of matching have not yet been studied.
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Organization Science
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Organization Science
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  corpus-gap-contribution-lineage-completion-second-order:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: contributions/_index.md 变体 A-T 覆盖维度定位/文献对话/过程模型/列表/闭环等贡献写法，无'点名单篇 canonical 前作补链 + direct→second-order 结果链外推'的谱系完成式变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/contributions/_index.md
+    diagnosis: Higgins & Gulati 2003 贡献段以单篇前作（Stuart/Hoang/Hybels 1999）为谱系锚并外推二阶背书结果链（direct endorsement→second-order endorsement）；precheck
+      containment=0.0 证实零覆盖，属真缺口而非重复入库
+    proposed_change:
+      action: append_variant
+      summary: 追加'谱系完成式+二阶延伸型（higgins_gulati2003 型）'，已入 writeback_candidates.introduction.yaml item 2，precheck verdict=ADD（band
+        gap），锚 contributions/_index.md
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe
+      journal: Organization Science
+      evidence_anchor: By examining both the antecedents and consequences of organizational endorsements, we build on the
+        work of Stuart, Hoang, and Hybels (1999), which demonstrated the positive effect of ties to prominent others on firm
+        outcomes; our research highlights the social origins of some of those important relationships.
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Organization Science
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Organization Science
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  corpus-gap-tension-canonical-dichotomy-selective-inheritance:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: 'write-introduction/corpus/tensions/03-structural-blindspot.md（cross_paper: VERIFIED）现有变体 A-C（笼统对待型 gamache2020
+      / 视角补充型 shipilov2020 / 常规智慧片面型 shen2022）均以''领域共识+经验或视角证据''建立结构性盲点；无以正典自身区分被单一继承为证据的变体'
+    rule_excerpt: ''
+    rule_locator: 句法模板 变体 A-C
+    target: write-introduction/corpus/tensions/03-structural-blindspot.md
+    diagnosis: 'gulati_sytch2007 (ASQ) 的盲点证据来自正典内部矛盾：Emerson (1962) 已区分 joint dependence 与 dependence asymmetry，''it is puzzling
+      that, with few exceptions'' 旗标指出领域只继承后者，''By grounding itself primarily in a logic of power'' 归因盲点延续——与变体 C 说服动作同族（系统性盲点+结构性原因）但证据结构（学科史矛盾
+      vs 经验反例）与句法（puzzle 旗标 vs however-反例）不同，比对相似度约 55% < 70%，属可入库新变体。story_fidelity: section_variant（tie knot，clarifies protagonist，单篇不晋升
+      core）。writeback 候选已随本轮产出，待 gate ①'
+    proposed_change:
+      action: append_variant
+      summary: 追加'经典二分选择性继承型（gulati_sytch2007 型）'变体——正典谱系证据+puzzle 旗标+单一逻辑归因+P6 双缺口结晶句（概念分离缺口+结果含义缺口）
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
+      journal: ASQ
+      evidence_anchor: Given this early non-zero-sum conceptualization of interdependence, it is puzzling that, with few exceptions,
+        most subsequent research has been drawn only to the implications of dependence asymmetry and its related power dynamics.
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  corpus-gap-hook-canonical-genealogy-cold-open:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: 'write-introduction/corpus/hooks/05-literature-consensus-blindspot.md（cross_paper: ROBUST）现有变体 A-G 均以''领域共识''为盲点落点（While
+      important...considers broadly / 单向效应 / 层次混淆 / truism 漏斗 / 跨四领域共识 / 元分析效力枢转 / nuance 宣言）；无以正典作者原始概念区分（谱系回溯）为落点的冷开场变体'
+    rule_excerpt: ''
+    rule_locator: 句法模板 变体 A-G
+    target: write-introduction/corpus/hooks/05-literature-consensus-blindspot.md
+    diagnosis: 'gulati_sytch2007 P1 为纯文献驱动冷开场（与变体 D ahmadi2017 家族相邻），但共识落点是正典作者及其原初标签（''cohesion''/''power advantage''），使后文盲点可定义为''对正典的偏离''而非''共识内的漏斗收窄''；与变体
+      D 相似度约 55-65% < 70%。附带证据：05 文件期刊适配表注''ASQ 偏好更强烈 Incommensurability，盲点 Hook 可能偏温和''——本 ASQ 2007 范文表明该家族在 ASQ 可行，条件是正典内部张力补偿能量（建议随变体写入适用字段，非绝对规则故不作
+      FALSIFIER）。story_fidelity: section_variant。与 tension 候选成对（满足 05 配对规则：共识盲点 Hook × 结构性盲点 Tension，confirming evidence）'
+    proposed_change:
+      action: append_variant
+      summary: 追加'经典概念谱系回溯型（gulati_sytch2007 型）'变体 H——正典标签复原作规范基线，Hook 与 Literature Turn 融合，however 置于正典内部
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
+      journal: ASQ
+      evidence_anchor: Emerson (1962), however, distinguished between joint dependence in a dyad, or the sum of actors' dependencies
+        on each other, and dependence asymmetry, or the difference in actors' dependencies on each other.
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  corpus-gap-transition-hint-evidence-systematize:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: 'write-introduction/corpus/transitions/10-literature-to-gap.md（cross_paper: VERIFIED）现有变体 A-E：直接缺口/后果型/方法视角型/反直觉型/零文献+轶事桥接（wowak2020）；无''已有学术暗示性证据但未系统化''的过渡变体'
+    rule_excerpt: ''
+    rule_locator: 句法模板 变体 A-E
+    target: write-introduction/corpus/transitions/10-literature-to-gap.md
+    diagnosis: 'gulati_sytch2007 P7 把定性/行业文献定位为暗示性证据（hinted at / compelling evidence）按理论递进列举后一句收束（Thus these prior accounts
+      hint at...），再以''take a step further by making systematic connections between [构念], [行动逻辑], [绩效]''声明增量并前置贡献三元组；与变体 E
+      同族（非系统证据维持问题合法性）但 E 是零文献+个案，本变体是有学术暗示+重读翻转（power 叙事→joint dependence 叙事）+贡献三元组，相似度约 60% < 70%。story_fidelity: section_variant'
+    proposed_change:
+      action: append_variant
+      summary: 追加'暗示性证据系统化过渡型（gulati_sytch2007 型）'变体 F——hint 递进列举+收束句+step-further 系统化声明
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
+      journal: ASQ
+      evidence_anchor: Thus these prior accounts hint at the importance of joint dependence for the efficacy of procurement
+        relationships and suggest some of the likely underlying behavioral dynamics that make this possible.
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  routing-ref-hooks05-overlooked-alternative-id-mismatch:
+    classification: routing_defect
+    status: EMERGING
+    risk: low
+    current_rule: hooks/05-literature-consensus-blindspot.md 的'组装规则-必须配对'引用 tension 模板 id：`02-implicit-assumption-wrong` 或
+      `03-structural-blindspot` 或 `05-overlooked-alternative`
+    rule_excerpt: '- **与 Inadequacy 型 Tension 配对**: `02-implicit-assumption-wrong` 或 `03-structural-blindspot` 或 `05-overlooked-alternative`'
+    rule_locator: 组装规则 > 必须配对（检索 '05-overlooked-alternative'）
+    target: write-introduction/corpus/hooks/05-literature-consensus-blindspot.md
+    diagnosis: 规则存在性预检通过（rule_excerpt 已逐字核验）：`05-overlooked-alternative` 在 tensions 目录中的实际文件为 `11-overlooked-alternative.md`（tensions/_index.md
+      行 23），编号前缀不一致，疑为历史编号残留；按此 id 做文件定位或检索会失配。属低风险引用修正，不改路由逻辑
+    proposed_change:
+      action: correct_reference
+      summary: 将 05 文件组装规则中的 `05-overlooked-alternative` 更正为 `11-overlooked-alternative`（或核对该文件 frontmatter canonical_id 后统一）
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
+      journal: ASQ
+      evidence_anchor: （触发场景）本文 hook 与 tension 配对恰好走 05×03 路径，核对配对清单时发现 05 文件内的第三配对 id 不可解析
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - ASQ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - ASQ
+    verified_journal_count: 1
+    regression_cases:
+      positive:
+      - prompt: 为采用文献共识盲点 Hook 的 Inadequacy 引言检索可选 Tension 配对
+        expected_invariants:
+        - 返回 02-implicit-assumption-wrong / 03-structural-blindspot / 11-overlooked-alternative 三个可解析目标
+        - 不再出现不可解析 id 05-overlooked-alternative
+      preservation:
+      - prompt: 为文献共识盲点 Hook 选择结构性盲点 Tension（05×03 主配对）
+        expected_invariants:
+        - 05×03 配对行为不变
+        - 02 配对行为不变
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: log_only
+      reason: Evidence is insufficient for a core-skill change.

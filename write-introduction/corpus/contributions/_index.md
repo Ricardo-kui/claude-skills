@@ -28,7 +28,7 @@ source_papers:
   - westphal_zajac_1998_symbolic_management (ASQ, 1998): "变体 F：双形式×双后果矩阵 Contribution（decoupling 操作化进贡献句 + 双域 uniqueness 替代 Stakes），VERIFIED (expert_audit_override 2026-08-28) — (变体 F in three-layer-contribution.md)"
   - post_2022_women_tmt_strategic_renewal (AMJ, 2022): "变体 G：悖论消解中槽型 — 三段式贡献中段专设 'resolves the seemingly contradictory ways' 槽化解前文悖论，贡献序列与 Tension 序列镜像；第三贡献 not only...also 合并主效应确认与边界条件，VERIFIED (expert_audit_override 2026-08-29) — (变体 G in three-layer-contribution.md)"
   - westphal_bednar2005 (ASQ, 2005): "变体 H：机制贡献+缺口填补+首例声明三联型 — 给主文献的机制贡献（一句）→ 借他人之口立 gap（'as many authors have noted'）→ 源学科迁移贡献的 首例声明（'perhaps the first systematic field study'带对冲+限定域），VERIFIED (expert_audit_override 2026-08-29: 用户裁决 Westphal 蒸馏的引言与理论部分证据等级 VERIFIED) — (变体 H in three-layer-contribution.md)"
-updated: 2026-08-29
+  - higgins_gulati2003 (OS, 2003): "变体 U：谱系完成式+二阶延伸型 — 点名单篇前作补链 + direct→second-order 结果链外推（contributions/_index.md 变体 U；EMERGING 单源）"updated: 2026-09-06
 created: 2026-05-19
 source: Extracted from MVP30 narrative_analysis files + SKILL.md Makadok table + kim_lee2026 + chenganesanliu2009
 ---
@@ -610,6 +610,31 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 - 单篇来源 → 仅作 optional `section_variant`，不得升 core
 
 ---
+
+
+### 变体 U：谱系完成式+二阶延伸型（higgins_gulati2003 型）
+
+**模板**:
+> "By examining both [the antecedents] and [the consequences] of [focal relation], we build on the work of [canonical prior study], which demonstrated [the downstream effect]; our research highlights [the missing upstream link] of some of those important relationships. Looking beyond [first-order outcome indicators] to [second-order outcome indicators] can extend our understanding beyond [direct relations] to [second-order relations], such as [example]."
+
+**来源**: higgins_gulati2003 (Organization Science), P4
+
+**原文锚定**:
+> "By examining both the antecedents and consequences of organizational endorsements, we build on the work of Stuart, Hoang, and Hybels (1999), which demonstrated the positive effect of ties to prominent others on firm outcomes; our research highlights the social origins of some of those important relationships... Looking beyond financial indicators of IPO success to the types of investors that endorse a young firm can extend our understanding beyond the origins of direct endorsements, such as those from prestigious investment banks, to the origins of second-order endorsements, such as those from institutional investors."
+
+**关键特征**:
+- 点名单篇 canonical 前作作谱系锚——"build on [study], which demonstrated X; our research highlights the missing upstream link of X"——把贡献声明为对前作研究链条的补全（回填缺失环节），而非并列开启新对话
+- 双向链完成式：一句话同时声明"检验前因+后果"，将本文定位为关系链条的完整化者
+- 结果链外推一阶：direct endorsement→second-order endorsement，把第二结果变量论证为"延伸理解"而非重复检验——双结果设计由此获得递进合法性
+- 先以 "We continue in this research tradition" 自我归队（embeddedness 传统）再谈增量，降低 overclaim 风险
+
+**适用**: 明确站在某一 canonical 研究的延长线上（补前因/补机制/补下游）且带双结果设计的研究；Incompleteness × Phenomenon 组合；contribution 段走谱系完成式而非多流对话时选用（区别于 han2020 文献对话型）
+
+**禁忌**: 谱系锚定必须真实——canonical 前作确实没做本文补的环节；"second-order" 外推需在结果端可操作化（本文以机构投资者数量与质量落地），否则沦为修辞；谱系锚不要点多于一个，多点会退化为普通文献对话
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+<!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:contribution_lineage_completion_second_order -->
 
 ## 组装规则
 

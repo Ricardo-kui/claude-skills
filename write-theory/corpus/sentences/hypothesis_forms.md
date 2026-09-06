@@ -151,6 +151,117 @@ negatively when [A] than when [B].
 
 
 
+
+<!--
+pattern_id: a_priori_partial_mediation_weakening_pair
+build_type: 跨类型（句式级；任何"主效应+中介延伸"双 DV 设计）
+source_papers: ["higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"]
+confidence: low-medium（单篇来源，EMERGING 待第二篇交叉验证）
+sentence_position: hypothesis_sentence（中介效应节扩展）
+-->
+
+
+<!--
+pattern_id: s_hypothesis_forms_group_comparative_and_relative_adverse_effects
+build_type: 跨类型（句式级，E1 类别调节 / 比较型假设）
+source_papers: ["gulati2005-adaptation-vertical"]
+confidence: EMERGING（单篇，待第二篇交叉验证）
+sentence_position: hypothesis_sentence
+-->
+
+### 变体 E：组间比较假设与"相对不利效应"假设句式（Group-Comparative / Relative Adverse-Effect Forms）
+
+**句位**: Wrap——类别化模式比较型假设的收敛句（构念水平组间比较 H1/H2 型；绩效相对不利 H3–H5 型）。
+
+**变体**:
+- 构念水平组间比较（并列两组 vs 第三组）: "Supplying units will be more [differentiated] from [procuring units] in [modes A and B], than in [mode C]."
+- 压力-绩效相对不利比较: "[Pressure P] has more adverse effects on the performance of [mode C] than on the performance of [modes A and B]."
+- 联合压力相对不利（双压力主语、单比较组）: "The joint effects of [P1] and [P2] on the performance of [mode X] will be less adverse than that on other modes of [comparison set]."
+
+**为什么有效**: 把"哪组模式在哪个构念维度上更高"与"哪种压力对哪类模式损害更大"直接铸成比较形式——方向、受害组、比较组在同一句内完整，且不承诺任何模式的无条件优越性：句式本身承载 fit 逻辑的诚实边界。
+
+**注意事项**: 受害组须与排序锚定假设中的短板模式一致（比较顺序可核验）；并列比较组（"modes A and B"）内部在推导中必须同向，否则拆句。
+
+**反模式**: 组间比较句无排序锚定支撑（凭空断言模式间差异）；相对不利句被结果解读成无条件主效应结论（越界解读）。
+
+**原文锚点**: "Reciprocal task interdependence has more adverse effects on the performance of market procurement than on the performance of internal procurement or vertical alliances."（Hypothesis 4）
+
+**范文来源**: Gulati, Lawrence & Puranam (2005), *Strategic Management Journal* — H1/H2/H3/H4/H5 假设句。
+
+<!-- wb:gulati2005-adaptation-vertical:s_hypothesis_forms_group_comparative_and_relative_adverse_effects -->
+
+### 变体 D：先验部分中介预期 + 效应减弱比较静态（a/b 配对）
+
+**句位**: 中介延伸小节收束段——主效应假设（H_a）之后，用一句先验声明限定中介形式，再收敛为部分中介假设（H_b）。
+**与现有"中介效应"模板的差别**: 现有模板为裸陈述 "[M] mediates the [direction] relationship between [X] and [Y]"；本变体把中介强度（完全 vs 部分）本身变成先验理论预测，并附可证伪的比较静态（控制 M 后 X 系数减弱但不消失）。
+**范文来源**: Higgins & Gulati (2003), *Organization Science*
+
+**句式骨架**:
+```
+[Broker/mediator role 推演后；第二条直接通道论证先行]
+Therefore, while we expect to find that [M] mediates the relationships between [X]
+and [Y] due to [M's structural role, e.g., broker], we do not expect this to be a
+strong form of mediation. We expect that [X] will have a direct effect on [Y]
+before considering [M] and that, after considering [M], these effects should weaken,
+yielding the following predictions:
+
+H_a: The greater [X], the more [successful Y].（直接效应）
+H_b: [M] will partially mediate the relationship between [X] and [indicators of Y].
+```
+
+**变体要点**:
+- "not a strong form of mediation"——显式声明中介强度预期，给 Results 一个可证伪检验：控制 M 后 X 系数应减弱但保持显著
+- 减弱预期的依据必须先行给出：X→Y 存在第二条独立可见通道（本文：road show 直接向投资者展示高管背景）
+- a/b 编号绑定"同一 IV、同向预测、H_b 修饰 H_a 的预期模式"的配对关系（区别于现有"同 IV 双 DV"配对）
+**为什么有效**: 多数论文事后解释"为什么是不完全中介"；先验声明让 Results 的系数变化模式成为理论检验的一部分，而非稳健性注脚。
+**注意事项**: 若没有第二条独立通道的论证，不要声明部分中介——审稿人会问"为什么不预测完全中介"。
+**反模式**: 只写 "[M] mediates the relationship between [X] and [Y]" 而无强度限定；若 Results 显示直接效应仍显著，理论即输。
+**原文锚点**: "we do not expect this to be a strong form of mediation ... after considering investment bank prestige, these effects should weaken"（H5a/H5b 推导段）
+
+<!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:a_priori_partial_mediation_weakening_pair -->
+
+
+### 变体 F：中介集合的先验部分中介声明 + 检验协议前置映射（gulati_2007 型）
+
+**句位**: 主效应假设（H_main）之后、各中介小节之前的中介框架段——一次性为 N 个并行中介声明部分中介预期，并把假设集映射到中介检验协议的前提条件上。
+
+**与 变体 D（先验部分中介预期+效应减弱比较静态，higgins_2003 型）的分工**: 变体 D 面向**单一中介**的 a/b 假设对（附系数减弱比较静态）；本变体面向**中介集合**——用一句集合级声明（"we expect each of these mechanisms to partially mediate"）覆盖 N 个中介，免除逐对 a/b 编号，再借检验协议把"主效应假设=协议第三前提"显式钉住。同族两源（higgins_2003 单中介对 / gulati_2007 多中介集合），应用形态互补。
+
+**范文来源**: Gulati & Sytch (2007), *Administrative Science Quarterly*（H2-H5 前中介框架段）
+
+**句式骨架**:
+```
+[X] has been portrayed as a multifaceted construct comprising elements classified
+into [N] broad domains: [M1], [M2], and [M3] ([综合文献]). Each of these elements
+can serve as a critical pillar of [the orientation that emerges under high X].
+Therefore, we expect each of these mechanisms to partially mediate the relationship
+between [X] and [DV].
+
+Following [mediation-testing canon]'s recommendations for testing for mediation,
+we first establish the relationships between [X] and each of the [N] core mediating
+mechanisms and explicate how each affects [DV], thus mediating the [DV] effect of
+[X]. Our development of hypothesis [H_main] in effect constitutes the theoretical
+prerequisite to establishing this relationship empirically.
+```
+
+**变体要点**:
+- 集合级一次声明（"each of these mechanisms"）替代逐中介重复预告；各中介小节内仍以 "[Mk] will partially mediate..." 各自收束
+- 中介集合的合法性交给既有构念分类学（"N broad domains" 引综合文献），一步封堵 "why these mediators" 质疑
+- 检验协议前置映射：把中介检验协议（如 Baron-Kenny）的前提条件反向当作假设体系的组织图——X→M 假设、M→Y 论证、X→Y 主效应假设各就各位
+- "in effect constitutes the theoretical prerequisite"——一句把已有主效应假设重新定位为协议第三前提，零成本补齐协议要求
+
+**为什么有效**: 先验声明部分中介给 Results 留出可证伪预期（直接效应减弱但不消失），协议映射让读者在进 Methods 前就看到假设—检验一一对应；对 N≥2 并行中介设计，集合级声明比逐对 a/b 更省编号、更防拼凑质疑。
+
+**注意事项**: 协议映射要求 X→Y 主效应假设真实存在（否则协议前提缺一角）；部分中介强度声明的 warrant 可走两条路之一——higgins_2003 式"第二条独立直接通道"论证，或 gulati_2007 式"效应由关系协变量而非水平本身承载"论证；两者皆无时不要声明部分中介。
+
+**反模式**: 只在假设句写 "partially mediate" 却无前置强度声明与协议映射——部分中介沦为事后兜底；为凑协议临时拼凑中介集合（无分类学或独立定义支撑）。
+
+**原文锚点**: "Therefore, we expect each of these mechanisms to partially mediate the relationship between joint dependence and performance." ... "Our development of hypothesis 2 in effect constitutes the theoretical prerequisite to establishing this relationship empirically."
+
+**验证状态**: EMERGING→双源（higgins_2003 + gulati_2007 同族复现，应用形态不同：单中介 a/b 对 vs 多中介集合+协议映射）；待第 3 篇升 VERIFIED
+
+<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:s_hypothesis_forms_mediator_set_partial_mediation_protocol_mapping -->
+
 ### 句式 D：双部分调节+中介假设句（westphal_bednar2005 型）
 
 **模板**:
@@ -242,6 +353,43 @@ COGNITION (t2–t1) | CHANGE IN RENEWAL STRATEGY (t3–t2)"
 **禁忌**: Δ-form 要求正文真的测量变化量——若只有水平数据，退回普通中介句式，不可伪装增量；"subsequent" 一词依赖时间分阶真实成立，时点重叠时不可用；typed 对照（but not X）须在实证中真的检验，否则为空头对照。
 
 
+
+
+### 变体 G：镜像极点配对假设（同 DV 反号 a/b 对，gulati_2007 型）
+
+**句位**: 双极构念（同一维度从两个行动者视角各取一极）主效应块的收束——两个 a/b 假设共享同一 DV、方向相反、共享同一机制论证。
+
+**与上方"配对假设 a/b Format"主格式的区分**: 主格式为"同 IV 双 DV、同向预测"（malik2025 型）；本变体为"双构念单 DV、反号预测"——a/b 绑定的是**同一非对称维度在两个行动者上的镜像**（focal actor 优势极 / partner 优势极），而非两个不同 DV。上方"如果两个 DV 的预测方向相反，改用独立编号"规则**仍然成立**，其 scope 是双 DV 设计；单 DV 镜像极点设计中 a/b 配对反而更准确，因为两条预测共同操作化一个维度（[X 优势/非对称]），共享同一 warrant，任一极成立都印证同一维度级机制。
+
+**范文来源**: Gulati & Sytch (2007), *Administrative Science Quarterly*（H1a/H1b）
+
+**句式骨架**:
+```
+Taken together, our arguments suggest the following hypotheses:
+
+H[N]a: [Focal actor]'s [advantage construct] is positively related to [focal
+actor]'s [performance in the exchange relationship].
+
+H[N]b: [Partner]'s [advantage construct] is negatively related to [focal actor]'s
+[performance in the exchange relationship].
+```
+
+**变体要点**:
+- 两极陈述句法对称（"...'s [advantage construct] is [direction] related to [同一 DV]"），仅行动者与方向词不同——读者一眼识别为一个维度的两极
+- 反号方向直接压进 a/b 对，无需第三条比较句
+- 前置机制论证必须同时覆盖两极（advantage → decreased fear of retaliation → [coercive/adversarial tactics] → value capture 而非 creation）——两极共享同一 warrant 是配对的合法性来源
+
+**为什么有效**: a/b 编号告诉读者两条假设是同一理论维度的两面，检验时任一极支持都增强该维度机制的证伪力；若拆成独立 H1/H2，读者可能误读为两条互不相干的主效应，漏掉维度级机制（本例：价值占用逻辑）。
+
+**注意事项**: 仅当两极确实共享同一机制与同一 DV 时使用；若两条预测来自不同机制或需独立证伪，回归独立编号。审稿人若按主格式规则质疑反号 a/b，以"共同操作化一个维度"作答并回指共享 warrant 段。
+
+**反模式**: 双 DV 反号预测套用本变体（应改独立编号，从主格式规则）；a/b 对的共享机制从未论证（配对沦为排版习惯）；两极句法不对称导致读者看不出镜像关系。
+
+**原文锚点**: "Hypothesis 1a: A manufacturer's dependence advantage is positively related to its performance in the procurement relationship." ... "Hypothesis 1b: A supplier's dependence advantage is negatively related to the manufacturer's performance in the procurement relationship."
+
+**验证状态**: EMERGING（单篇来源，待第二篇交叉验证）；"同 IV 双 DV"主格式及其反号规则不受影响
+
+<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:s_hypothesis_forms_mirror_pole_paired_ab -->
 
 ### 分离编号回指竞争对（Anaphoric Disjoint-Numbered Competing Pair，zajac_westphal_2004 型）
 

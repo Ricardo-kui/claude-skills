@@ -1074,6 +1074,54 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 **原文锚定**: "Research on how women on boards might affect a firm's operational decisions has explored employee layoffs and financial operating performance ... but has not addressed, as we do here, operational decisions related to product quality problems."
 **来源**: wowak_2020_female_directors_recalls (M&SOM), P1
 
+
+### 变体 AP：后果止步→前因接力型（higgins_gulati2003 型）
+
+**模板**:
+> "But while [consequence-side research on the focal relation] has received increasing attention ([citations]), scholars have paid less attention to [the origins/antecedents of such relations], particularly in [adjacent research stream], since theory rests on [a structural precondition that makes origins non-trivial] ([citation]). Although scholars have begun to examine [the consequences of the focal relation], [its antecedents] to this important form of [matching] have not yet been studied."
+
+**来源**: higgins_gulati2003 (Organization Science), P1-P2
+
+**原文锚定**:
+> "But while the role of interorganizational relations in facilitating the growth of firms has received increasing attention (e.g., Zuckerman 1999; Rao 1994), scholars have paid less attention to the origins of such ties, particularly in social networks research... Although scholars have begun to examine the consequences of organizational endorsement, the antecedents to this important form of matching have not yet been studied."
+
+**关键特征**:
+- 与"前因止步+双问悬置型"（westphal_zajac_1998 型）互为镜像：prior work 占据后果侧，本文向前因侧（origins）接力，一次完成研究议程的方向翻转
+- 双段升级：第一段在宽口径文献景观内首次点名遗漏（"paid less attention to the origins"）并给出遗漏非平凡的理论理由（网络研究预设 pre-existing social structure）；第二段经现象特异性过滤（年轻企业+中介市场）后以更强的 "have not yet been studied" 收束
+- 承认现有进展（"received increasing attention" / "have begun to examine"），维持 Incompleteness 的谦逊姿态，不带 Inadequacy 式批评
+- 遗漏必须配"为什么前因侧此前难做/被忽略"的结构性理由，避免 generic gap 语言
+
+**适用**: 成熟文献已充分建立某关系的下游后果、本文补上游前因的"回溯式"研究；Incompleteness × Phenomenon/Mechanism 组合首选；两段式要求文献有清晰的"后果侧积累"可供承认
+
+**禁忌**: 双段不得重复同一措辞——第二段必须换锚（从文献景观换到现象特异性）并升级语气；若给不出前因非平凡的理论理由，退回单段变体，勿硬凑两段
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+
+<!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:tension_consequences_to_antecedents_relay -->
+
+
+### 变体 AQ：创始人自证缺口型（gulati2005型）
+
+**模板**:
+> "The most influential statements of [dominant theory] recognize [broader class of problem] — e.g., [founder] notes that [phenomenon] may arise even absent [dominant mechanism] ([cite1], [cite2]). Yet this theoretical recognition finds scant recognition in most prior research motivated by [the theory] ([review cites]). Our goal is to broaden the conceptualization of [focal construct] beyond [dominant mechanism] to include [additional constraint classes]."
+
+**来源**: gulati_lawrence_puranam_2005 (SMJ), P1–P2
+
+**原文锚定**:
+> "Yet, this theoretical recognition of adaptation problems that might persist even in the absence of incentive conflict finds scant recognition in most prior research motivated by transaction cost economics."
+
+**关键特征**:
+- 缺口授权来源是范式奠基人自己的理论表述（Williamson 1991a/b）——把 departure 包装成"回到奠基人更宽的构想"，而非攻击范式本身，降低成熟领域审稿人的防御
+- 两级问题化：P1 程序级缺口（实证研究把 TCE 适应观窄化为激励冲突）→ P2 命题级缺口（连最核心的 hold-up 命题也不完整：无激励冲突时协调失败仍会发生），"Yet"与"However"两个转折拍依次加深
+- 转折句用 "finds scant recognition"，避开 "few studies have examined" 套话；缺口定位在"理论之所写 vs 研究之所做"的不对称
+- 目标句紧贴第一转折句落地："our goal is to broaden the conceptualization of constraints to adaptation ... beyond incentive conflict to include ..."，引言前半即给出 construct 拓宽承诺
+
+**适用**: 在成熟主导范式内做概念拓宽（Incompleteness×Constructs）时；奠基人文本中有可逐字引用的更宽表述时；向 TCE/治理/经济学式实证风格期刊（SMJ、Org Science）投稿时
+
+**禁忌**: 奠基人引文必须逐字可核，且须证明实证文献确实系统性忽略该表述（有综述为证）；范式内已存在跟进研究时不可再称 "scant recognition"
+
+<!-- wb:gulati2005-adaptation-vertical:tension_founder_caveat_gap_license_gulati2005 -->
+
 ## 组装规则
 
 ### 反模式提醒

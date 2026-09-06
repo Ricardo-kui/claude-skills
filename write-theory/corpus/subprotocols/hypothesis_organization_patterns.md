@@ -889,3 +889,58 @@ facet-outcome-specific mechanisms.
 **原文锚点**: "These two aspects of innovation capabilities can have different impacts on the two sets of mechanisms that differentiate learning from slip-up failures and learning from knowledge gap failures."（§3.2）
 
 <!-- wb:anand_mukherjee_2024_learning_from_failures_di:typed_outcome_hypothesis_tree_with_capability_enhancement -->
+
+
+<!--
+pattern_id: typology_decomposed_parallel_signal_hypotheses_coverage
+build_type: 机制推演型（构念分解组织）；跨类型（任何"一构念分N类→每类一主效应"设计）
+source_papers: ["higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"]
+confidence: low-medium（单篇来源，EMERGING 待第二篇交叉验证）
+-->
+
+### 变体 D：类型学分解 → 并行信号假设 → 覆盖范围假设（Typology-Decomposed Parallel Signal Hypotheses → Coverage Hypothesis）
+
+**适用场景**: 一个 focal 构念可按稳定理论维度分解为 N 个类型（各类型对应被评价质量的不同侧面，如按市场关系位置分上游/同业/下游），每个类型用同构机制独立推演出一个并行主效应假设，最后以"跨类型覆盖/互补"假设收束——多类型并存优于任一单一类型。
+**排列模式**: Typology Setup → [Type-k Branch → H_k] × N → Coverage Branch → H_{N+1}
+**范文来源**: Higgins & Gulati (2003), *Organization Science*
+
+**骨架**:
+```
+[Typology Setup 段]
+Building upon prior research, we propose that [focal construct] can be classified into
+[N] types of [units]—[type A], [type B], and [type C]—representing different [positions]
+a firm can have with participants in its market. Here, this typology is used to classify
+[instances] that derive from [observable carrier, e.g., 可公开披露的成员履历].
+Different types of [focal construct] can signal different aspects of [evaluated quality]:
+[type A] signals [quality aspect A]; [type B] signals [aspect B]; [type C] signals [aspect C].
+
+[Type-k Branch ×N，同构]
+[Type k] affiliations derive from [carrier of type k]. During [evaluation episode],
+[evaluators] interact with [carriers]... [knowledge/experience] from [prominent
+type-k organizations] should bolster [evaluators'] confidence in the firm's
+[quality aspect k], because [transfer warrant: 有价值技能/资源 presumed acquired].
+Moreover, affiliations with prominent [type-k] institutions can signal [aspect k],
+since [sorting warrant: 此类成员预期只加入有前景的企业].
+Therefore, H[k]: The greater the number of [construct] affiliations with
+prominent [type-k] organizations, the greater the [endorsement outcome].
+
+[Coverage Branch]
+Although we have argued thus far that more of each of the [N] types is better, a firm
+must convince outsiders that it has, concurrently, [aspect A], [aspect B], and [aspect C].
+Signals of [the N aspects] complement one another; they are not perfect substitutes
+since they tap into different dimensions of [quality]. Facing uncertainty, [evaluators]
+economize on evaluation by looking for external referents that allay specific concerns;
+[the N types] collectively present a simplified story of the [endorsement] situation.
+Therefore, H[N+1]: The greater the range of prominent [type A/B/C affiliations],
+the greater the [endorsement outcome].
+```
+
+**为什么有效**: 类型学先给读者一张"哪类信号对应哪面质量"的地图，之后每个分支只需复用同构机制填充，认知负荷低；覆盖假设把 N 个并行主效应升华为"组合优势"主张，避免假设体系碎片化（正对 C 类反模式"假设独立无递进"）。
+**注意事项**:
+- 每个类型的机制推演必须有类型专属 warrant，不能只换名词（否则审稿人问"为什么不合并成一个计数变量"）
+- 覆盖假设需要独立的互补性论证（各类型信号不同评价关切、非完美替代），不能从 H1-H3 直接加总推出
+- 类型划分需有文献或理论锚（本文为 White 市场参与者位置分类），不得临时剪切
+**反模式**: 各类型信号同一质量侧面（非不同维度）时，覆盖假设的互补性论证不成立，应退回单一计数假设。
+**原文锚点**: "Signals of such skills and connections complement one another; they are not perfect substitutes since they tap into different dimensions of firm quality that are relevant to external evaluations of the firm's potential."（H4 推导段）
+
+<!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:typology_decomposed_parallel_signal_hypotheses_coverage -->

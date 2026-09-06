@@ -70,6 +70,8 @@ CORPUS_ROOTS = {
 # keyed by file stem (pooled/aliased entries; extend as discovered)
 REGISTRY_ALIASES = {
     "theory-lens-driven-preview": ("theory_lens", "theory-lens-templates"),
+    # write-introduction contributions/_index.md is itself the canonical variants file
+    "_index": ("contributions", "contribution-statements"),
 }
 
 BLOCK_HEAD = re.compile(r"^#{2,4}\s+.+$", re.M)

@@ -562,6 +562,50 @@ and expectations for how [downstream actors] are to make these decisions.
 
 
 
+
+<!--
+pattern_id: transfer_plus_sorting_dual_warrant_signal
+build_type: 机制推演型（信号/背书/声望类假设通用）
+source_papers: ["higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"]
+confidence: low-medium（单篇来源，EMERGING 待第二篇交叉验证）
+-->
+
+### 变体 E：传递 + 自选择双 warrant 信号推演（Transfer + Sorting Dual-Warrant Signal Derivation）
+
+**适用场景**: 假设核心推理是"X 的某属性向第三方传递 Y 的质量信息"。单一传递论证（"他们在名组织习得了有价值的东西"）易被读作纯光环效应；叠加自选择论证（"有声誉的成员只挑有前景的企业加入"）后，该属性同时成为成员对企业质量的独立投票。
+**适用模块**: T3 Mechanism Chain（每个类型分支的第二 warrant；与"类型学分解"架构模式配套使用亦可独立使用）
+**范文来源**: Higgins & Gulati (2003), *Organization Science*
+
+**骨架**:
+```
+[Transfer Warrant]
+Having [carriers] who [originated at prominent organizations of type k] signals to
+outsiders that [judgments/decisions/capabilities] are likely to be [appropriate/reliable],
+given the valuable skills and knowledge they presumably acquired while working
+for such firms.
+
+[Sorting Warrant]
+Moreover, [construct] affiliations with prominent [type-k] institutions can signal
+to others that [quality aspect] is sound, since one would expect [carriers] with such
+ties to join only firms that show [quality-aspect] promise. To assume otherwise would
+be to believe that [carriers] engage in relationships with firms that are other than
+reputation-enhancing.
+
+[Convergence]
+[Subject with many such ties] is likely to attract [endorsement outcome].
+Therefore, H[k]: ...
+```
+
+**为什么有效**: 双 warrant 相互独立——传递 warrant 讲"资源可得"，自选择 warrant 讲"信息可靠性"；后者以反事实否定句式（"否则等于相信成员会做有损声誉的关联"）提前封堵逆向选择质疑，使信号推断不依赖对成员真实动机的额外假设。
+**注意事项**:
+- sorting warrant 是排他性论证，须与 transfer warrant 分别成句，不可熔成一句
+- 反事实否定句式力量强，仅在确有理论前提（如声誉动机的一般假设）时使用
+- sorting 逻辑同时隐含排除"成员随机散落"的零假设——这是它区别于单纯背书论证的增量
+**反模式**: 把自选择逻辑写成"优秀的人都去好公司"式断言而无声誉动机前提——会被读作同义反复。
+**原文锚点**: "To assume otherwise would be to believe that individuals engage in relationships with firms that are other than reputation-enhancing."（H1 推导段 sorting warrant）
+
+<!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:transfer_plus_sorting_dual_warrant_signal -->
+
 ### 模式 E：同果近邻构念反号辨析型（westphal_bednar2005 型）
 
 **模板**:

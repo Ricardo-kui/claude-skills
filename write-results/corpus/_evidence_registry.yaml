@@ -5,10 +5,10 @@
 meta:
   schema_version: 1.1.0
   registry_type: estimator-slot-skeleton
-  last_updated: '2026-08-30'
-  last_batch_id: batch_38_westphal_residual_sync
-  batches_processed: 38
-  total_papers_indexed: 40
+  last_updated: '2026-09-06'
+  last_batch_id: batch_41_gulati2007_residual_sync
+  batches_processed: 41
+  total_papers_indexed: 43
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
     granularity: per estimator（对应 corpus/[结果类型].md 文件）
@@ -301,6 +301,22 @@ estimators:
           - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
           notes: 'corpus OLS-FE.md 变体71：估计策略宣告 + median 分样本切分规则交底 + 分样本回归/product-term 复核双通道设计导航——调节变量类目型、假设 scope-conditioned 的设计'
           corpus_path: corpus/OLS-FE.md
+        - id: r2_heckman_selection_preflight_rationale
+          skeleton: 'For each set of analyses, we used Heckman selection models to guard against the possibility of sample selection bias (Heckman [year]). The first stage models [selection_process] on [N = value] [risk-set] observations; the second-stage regressions are estimated on the [N = value] selected [firm-event] observations, with standard errors corrected for [selection].'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe
+          transferability: high
+          paradigm_exclusivity: 选择性进入样本的截面档案设计（underwriter 匹配 / 风险集）
+          rhythm_tags:
+          - selection_threat_preamble
+          - two_stage_procedure
+          - risk_set_disclosure
+          notes: 'corpus OLS-FE.md 变体76：威胁类比（样本自选择）+ 两阶段程序前置交底 + 风险集/SE 修正披露；技术细节留给 Methods'
+          corpus_path: corpus/OLS-FE.md
       R3:
         description: 主假设检验（四拍节奏）
         skeleton_variants:
@@ -451,6 +467,56 @@ estimators:
           - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
           notes: 'corpus OLS-FE.md 变体72：假设级多指标裁决——裁决拍前置（support the prediction），指标拍 For example 列举，不显著指标以方向正确从句并入支持证据，收口 held after we controlled for 内联排除 rival；填入时必须补幅度拍（原文无）'
           corpus_path: corpus/OLS-FE.md
+        - id: r3_bk_sobel_partial_mediation_cross_dv_replay
+          skeleton: 'To test for partial mediation, we followed procedures outlined in [Baron and Kenny (year)] and [Sobel (year)]. The results suggest evidence of mediation since (a) ... (b) ... (c) ... Further, we tested the significance of the indirect effects ... suggesting that [mediator] did partially mediate the relationships between [IV] and [DV], as hypothesis [H] predicted.'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe
+          transferability: high
+          paradigm_exclusivity: legacy Baron-Kenny 中介作为正式假设且跨 DV 重演（现代采用须补 bootstrap）
+          rhythm_tags:
+          - bk_three_conditions
+          - sobel_indirect_effect
+          - cross_dv_replay
+          - partial_vs_full_magnitude
+          notes: 'corpus OLS-FE.md 变体78：三条件列举 + Sobel 乘积系数 + 跨 DV 重演 + 效应消失时按系数下降幅度判 partial 而非 full；标 legacy'
+          corpus_path: corpus/OLS-FE.md
+        - id: r3_hypothesis_verdict_chain_null_concession
+          skeleton: 'Hypothesis [N] predicted that [predictor] would be [positively/negatively] related to [outcome]. As shown in model [M], we did not find support for hypothesis [N]. However, hypothesis [N+1] ... was supported, as shown in models [M2] and [M3].'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe
+          transferability: high
+          paradigm_exclusivity: 多平行假设混有 null 与支持判决的表格判决段
+          rhythm_tags:
+          - hypothesis_restated
+          - model_anchor
+          - however_null_concession
+          notes: 'corpus OLS-FE.md 变体77：假设判决链（重述→定位→判决），However 衔接 null 与相邻支持判决；null 一句带过系年代局限，现代采用须补诚实声明'
+          corpus_path: corpus/OLS-FE.md
+        - id: switching_reg_cross_model_comparison_infrastructure
+          skeleton: 'Because the [category] models are estimated separately, cross-model differences in coefficients are scored using the [joint covariance matrix] from [seemingly unrelated estimation]. In Table [X], [standard errors] appear in parentheses; [bracketed values] report [cross-model joint significance]. We navigate to [column subsets] for each hypothesis.'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati2005-adaptation-vertical
+          transferability: high
+          estimator_family_note: switching regression cross-model comparison
+          paradigm_exclusivity: 分别估计的分样本/跨模型系数比较（SUR 联合协方差 + 括号双轨）
+          rhythm_tags:
+          - separate_estimation_disclosure
+          - sur_joint_covariance
+          - dual_track_significance
+          - column_subset_navigation
+          notes: 'corpus OLS-FE.md 变体80：跨分样本系数比较的推断基础设施声明 + 括号双轨显著标记 + 逐假设列子集导航'
       R4:
         description: 交互效应 / 条件效应
         skeleton_variants:
@@ -635,6 +701,38 @@ estimators:
           - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
           notes: 'corpus OLS-FE.md 变体74：跨情境镜像 null 的段落级收束——情境 B 中主效应变量失效的 null 本身是调节预测的一半，The opposite pattern emerges 钉死方向反转；分样本/情境劈叉设计 null 侧承载理论确证'
           corpus_path: corpus/OLS-FE.md
+        - id: r6_unsupported_verdict_with_pattern_restatement
+          skeleton: 'Hypothesis [N] is not supported. The results do show [an interpretable pattern]: the [X]-[Y] relationship is [direction] for [stratum A] (p = [value]) but [opposite/null] for [stratum B]. We restate this observed pattern in the vocabulary of the hypothesis without upgrading it to support.'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati2005-adaptation-vertical
+          transferability: high
+          estimator_family_note: OLS/FE and grouped designs
+          paradigm_exclusivity: 不支持裁决 + 以假设语言重述实际模式的双拍诚实收束
+          rhythm_tags:
+          - explicit_unsupported_verdict
+          - hypothesis_vocabulary_restatement
+          - mixed_pattern_disclosure
+          notes: 'corpus OLS-FE.md 变体81：先给明确不支持裁决，再在假设自身词汇内重述数据实际模式（含边沿/反向信号），不升级为支持'
+        - id: r6_contrary_pair_sign_reversal_null_dual_verdict_gulati_sytch2007
+          skeleton: 'Hypothesis [H1a] predicted a [positive] effect of [X-pole A] and Hypothesis [H1b] a [negative] effect of [X-pole B]. The estimates deliver a dual verdict: [H1a] is supported (b = [value], p < [threshold]) whereas [H1b] is [not supported]: the coefficient runs [opposite] and is [insignificant]. We state both verdicts and the asymmetry explicitly.'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
+          transferability: high
+          estimator_family_note: OLS/FE and grouped designs
+          paradigm_exclusivity: 反号配对假设的相反判决双拍收束
+          rhythm_tags:
+          - contrary_pair
+          - dual_verdict
+          - sign_asymmetry_disclosure
+          notes: 'corpus OLS-FE.md：H1a/H1b 反号对的诚实双判决（一支持一驳回），显式披露不对称（null 判决族第二源）'
       R7:
         description: 稳健性 / 效度 / 敏感性检验
         skeleton_variants:
@@ -926,6 +1024,37 @@ estimators:
           - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
           notes: 'corpus OLS-FE.md 变体75：LEGACY——连续 DV 双结果模型的 legacy Kenny 三步条件压缩进单个冒号句（separate analysis 包装）；写入时必须补 indirect-effect interval 或显式标 legacy，mediated 措辞降为关联读法'
           corpus_path: corpus/OLS-FE.md
+        - id: r8_theory_motivated_additional_analyses
+          skeleton: 'Since our claims centered on [theoretical mechanism], we tested whether our effects were especially strong during [theory-specified condition]. [Result sentence.] [Second paragraph: construct-level adjudication or boundary condition.]'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe
+          transferability: high
+          paradigm_exclusivity: 理论动机补充分析（与 post hoc 稳健性分离）
+          rhythm_tags:
+          - theory_opening
+          - boundary_construct_adjudication
+          notes: 'corpus OLS-FE.md 变体79：理论开题补充分析双段式——第一段用理论条件定位检验，第二段做构念层次裁决；不与 threat 响应稳健性混同'
+          corpus_path: corpus/OLS-FE.md
+        - id: r8_in_system_baron_kenny_hypothesis_linked_mediation_gulati_sytch2007
+          skeleton: 'We test mediation for each mechanism within the [simultaneous system]: [X] affects [mediator] (Model [a]); [mediator] and [X] jointly predict [Y] (Model [b]); the [X] coefficient [weakens] once [mediator] enters, consistent with partial mediation predicted by Hypothesis [H]. LEGACY Baron-Kenny logic; modern use requires bootstrap CI.'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
+          transferability: high
+          estimator_family_note: OLS/FE (in-system mediation)
+          paradigm_exclusivity: 系统内 BK 假设化中介（LEGACY 第二源）
+          rhythm_tags:
+          - in_system_mediation
+          - hypothesis_linked
+          - legacy_flag
+          notes: 'corpus OLS-FE.md：在联立系统内做 BK 三步中介并逐假设挂钩；标 LEGACY，现代采用须补 bootstrap CI（BK 族第二源）'
       R9:
         description: Results→Discussion 过渡
         skeleton_variants: []
@@ -1457,6 +1586,24 @@ estimators:
           notes: corpus Logit 变体O（Analysis §Board Control P3）；理论轨（fundamental and long-lasting change）+ 经验轨（反转占比 <X%）
             双轨辩护；"In effect" 把技术选择翻译回理论任务
           corpus_path: corpus/Logit-Probit-Ordered-Probit.md
+        - id: switching_reg_first_stage_intermediate_navigation
+          skeleton: 'We used a [two-stage estimator] that attempts to account for possibly endogenous choices of [treatment category]. This model is estimated in two stages. First, a [multinomial choice model] is used to explain [treatment category]. Second, we estimate separate [outcome] regressions for subsamples of observations on each [category], in which we include the [non-selection correction] as a control variable.'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati2005-adaptation-vertical
+          transferability: high
+          estimator_family_note: switching regression first stage
+          paradigm_exclusivity: 两阶段选择修正估计器的第一阶段读表交底
+          rhythm_tags:
+          - two_step_preview
+          - exclusion_restriction
+          - baseline_category_rule
+          - sample_attrition_note
+          - aside_segregation
+          notes: 'corpus Logit-Probit-Ordered-Probit.md：第一阶段 mlogit 导航交底 + IV 排他声明 + 基线类规则 + 分阶段样本损耗 + 自有价值旁注区隔'
       R4:
         description: ''
         skeleton_variants:
@@ -3851,6 +3998,38 @@ estimators:
           rhythm_tags: []
           notes: ''
           corpus_path: corpus/IV-2SLS.md
+        - id: r2_reciprocal_3sls_system_navigation_gulati_sytch2007
+          skeleton: 'Table [X] presents the [3SLS] estimates of the simultaneous system in which [performance] and [joint dependence] are mutually endogenous. Columns [1]-[2] report the [performance] equation; Columns [3]-[4] report the [joint dependence] equation. Each hypothesis is read from its own equation.'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
+          transferability: high
+          estimator_family_note: IV/3SLS simultaneous system
+          paradigm_exclusivity: 互为因果双内生系统的 3SLS 主估计导航
+          rhythm_tags:
+          - system_setup
+          - column_per_equation
+          - cross_equation_reading
+          notes: 'corpus IV-2SLS.md 变体15：先交底互为内生系统，再逐方程导航读表'
+        - id: r2_instrument_dual_condition_audit_just_identified_boundary_gulati_sytch2007
+          skeleton: 'Identification rests on instruments that affect [outcomes] only through [the endogenous regressors]. [Instrument 1] is driven by [logic 1] and [Instrument 2] by [logic 2]; because both endogenous regressors enter both equations, the system is just identified, and each instrument must satisfy both exclusion conditions.'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
+          transferability: high
+          estimator_family_note: IV/3SLS simultaneous system
+          paradigm_exclusivity: 恰好识别系统的双条件工具审计交底
+          rhythm_tags:
+          - exclusion_restriction
+          - just_identified_boundary
+          - dual_condition_audit
+          notes: 'corpus IV-2SLS.md：恰好识别边界 + 每个工具须同时满足两个排除条件的审计声明'
       R3:
         skeleton_variants:
         - id: r3_iv_second_stage
@@ -4462,6 +4641,38 @@ estimators:
           - threat_named_closure
           notes: 主模型非线性的线性化须给方法论引证（Wooldridge 2010）；跨表精确列映射替代含糊 "results robust"；不得与非线性主系数直接比大小（corpus 变体13）
           corpus_path: corpus/IV-2SLS.md
+        - id: switching_reg_selection_diagnostics_null_hazard_positive_hausman
+          skeleton: 'Finally, the [non-selection hazard] does not have a statistically significant effect in any [category] model, suggesting that [selection on unobservables] is not driving [the estimated differences]. In addition, the [Hausman test statistic] is [positive and significant], supporting the [endogenous switching specification] over [pooled estimation].'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati2005-adaptation-vertical
+          transferability: high
+          estimator_family_note: switching regression diagnostics
+          paradigm_exclusivity: 内生切换回归的收尾自选择诊断（hazard null + 正 Hausman）
+          rhythm_tags:
+          - null_selection_hazard
+          - positive_hausman_statistic
+          - specification_support
+          notes: 'corpus IV-2SLS.md：RESULTS 收尾段——控制变量交底 + 自选择诊断收束（hazard 不显著 + 正 Hausman 支持切换设定）'
+        - id: r7_3sls_cluster_bootstrap_inference_workaround_gulati_sytch2007
+          skeleton: 'Because analytic standard errors in [3SLS] may be fragile under [non-normality], we re-derived inference with a [cluster bootstrap] over [supplier] clusters ([N] replications); bootstrap [p-values] are consistent with the analytic estimates.'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
+          transferability: high
+          estimator_family_note: IV/3SLS simultaneous system
+          paradigm_exclusivity: 3SLS 推断的 cluster bootstrap 替代方案
+          rhythm_tags:
+          - cluster_bootstrap
+          - inference_robustness
+          - replication_disclosure
+          notes: 'corpus IV-2SLS.md：解析标准误之外以 cluster bootstrap 复推 p 值并披露复制数'
       R4:
         description: ''
         skeleton_variants:
@@ -6213,6 +6424,27 @@ estimators:
       note: source=chenganesanliu2009
       violation_count: 0
 batch_history:
+- batch_id: batch_41_gulati2007_residual_sync
+  timestamp: '2026-09-06 04:40:00'
+  estimator_family: IV/3SLS simultaneous system (reciprocal causation, just-identified)
+  source_paper: gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
+  source_subfield: strategy
+  slot_updates_count: 5
+  novel_patterns_count: 5
+- batch_id: batch_40_gulati2005_residual_sync
+  timestamp: '2026-09-06 03:40:00'
+  estimator_family: endogenous switching regression (mlogit + group OLS with non-selection hazard + SUR)
+  source_paper: gulati2005-adaptation-vertical
+  source_subfield: strategy
+  slot_updates_count: 4
+  novel_patterns_count: 4
+- batch_id: batch_39_higgins2003_residual_sync
+  timestamp: '2026-09-06 03:05:00'
+  estimator_family: OLS / Fixed Effects (+ Heckman selection first stage)
+  source_paper: higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe
+  source_subfield: strategy
+  slot_updates_count: 4
+  novel_patterns_count: 4
 - batch_id: batch_2026-05-22_desai2011
   timestamp: '2026-05-22 18:53:33'
   estimator_family: 计数模型

@@ -334,6 +334,72 @@ updated: 2026-08-13
 **与原骨架差异**: 现有变体2（叙事型逐威胁组织）提供了标准四威胁模板（omitted variables + reverse causality + measurement error + alternative estimator）。Li et al. 升级为**五威胁+两稀有检验组合**：(1) RIR + Oster's delta 联合处理遗漏变量——这是 recent 顶刊（特别是金融/会计领域）的 gold standard，替代传统的"add more controls"；(2) 死亡类型分析——将 moderator 分解为 literal vs pseudo 子类型并检验是否调节主交互，创建"null interaction on interaction"的 meta-robustness；(3) 制药企业排除——针对特定行业的混淆检验（pharma firms 可能更频繁使用死亡相关语言）；(4) 替代测量替换——独立董事死亡替代 CEO 死亡词（construct-level replication）；(5) CEM 匹配处理低基础率选择偏误——匹配后的 moderator 比率从 3.61% 升至 11.33%。最后以 "A summary of our results is available online in Appendix [N]" 收尾。
 **诚实边界**: RIR + Oster 组合需要在 Methods 或 Appendix 中解释两个检验的选择参数（如 RIR 的 replacement threshold、Oster 的 δ 和 Rmax）。仅说 "results are robust to omitted variable bias" 而不报告参数 → 审稿人会要求补充。
 
+
+<!--
+pattern_id: heckman_selection_preflight_rationale
+build_type: 估计器前置交底型（修正型估计器动机论证）；跨估计器（任何 selection/内生性修正作为主估计策略的设计）
+source_papers: ["higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"]
+confidence: low-medium（单篇来源，EMERGING 待第二篇交叉验证；结构模板锚定 R7-2 叙事 threat 四拍 VERIFIED）
+-->
+
+### 变体 76：R2 Heckman 选择模型前置交底 — 威胁类比 + 两阶段程序 + 风险集/SE 修正披露 (1篇高价值)
+
+**适用场景**: selection/内生性修正（Heckman、CF、2SLS 等）是**主估计策略**而非稳健性附件时，在主结果之前用独立小节交底：为什么有选择问题（带类比论证）、估计器性质、两阶段程序、风险集与标准误修正。读者带着"修正了什么、代价是什么"的预期进主表。
+**排列模式**: 威胁定位+类比 → 估计器性质论证 → 两阶段程序 → 风险集/SE 修正交底 → 预处理交底
+**范文来源**: Higgins & Gulati (2003), *Organization Science*
+**结构锚定**: R7-2 叙事型逐 threat 四拍（VERIFIED）的威胁定位拍改造为前置动机拍
+
+**骨架**:
+```
+[威胁定位 + 类比论证]
+For each set of analyses, we used Heckman selection models to guard against
+the possibility of sample selection bias ([Heckman citation]). In general,
+sample selection can arise when the criteria for selecting observations are
+not independent of the outcome variables. As an example, [familiar analogous
+setting, e.g., earnings studies of workforce participation] can run the risk
+of sample selection bias if they do not account for factors that affect
+[the selection process].
+
+[映射到本文 + 估计器性质]
+Here, since we are studying [outcomes] that only occur when [selection event
+occurs], we want to guard against the possibility that there is some other
+factor, in addition to those we study, that accounts for the likelihood of
+[selection event] in the first instance. [Estimator]'s procedure generates
+consistent, asymptotically efficient estimates that can enable us to
+generalize to the larger population of [full risk set] ([citation]).
+
+[两阶段程序 + 风险集/SE 交底]
+In essence, the [estimator] model is a two-stage procedure that uses the
+larger risk set of [full sample description] (n = [N_risk]). [First-stage
+estimator] was used to estimate the likelihood of [selection event] during
+the first stage, and estimates of parameters from that model were then
+incorporated into a second-stage regression model to predict [DV] ([citation]).
+For the first stage models, we used the information we had available for our
+[full sample]—[selection predictors]—to predict likelihood of [selection event].
+In the second stage, though the sample includes all [N_risk] firms, the
+standard errors reported reflect the smaller sample of firms (n = [N_analytic]).
+
+[预处理交底]
+To account for the fact that we had [DV] information that spanned [time span],
+we transformed our [DV] estimates into [constant-dollar adjustment] and logged
+the estimates. And, in order to account for [time-varying conditions], we
+included the [market condition variable] described earlier in all of our
+analyses. The numbers we used were calibrated not just by the [year] but also
+by the [finer temporal unit] preceding the [event], which produces fairly
+fine-grained estimates.
+```
+
+**为什么有效**: 修正型估计器最大的读者障碍是"修正了什么、凭什么信"——前置小节用熟悉类比（如劳动力参与）把抽象 selection 问题翻译成直觉，再交底程序与 SE 修正的代价（第二阶段 SE 反映分析样本而非风险集），可信度论证先于结果出现；这与 Results 内表导航（变体 24/28）和事后防御（变体 29）功能互补不重叠。
+**注意事项**:
+- SE 修正交底是诚实亮点：明确第二阶段标准误反映分析样本（n=296）而非风险集（n=838），不可省略
+- 第一阶段选择方程的预测变量须交底；现代标准还要求排除限制论证（本文未满足，采用时应补 instrument 论证，参照 r2/r7 Heckman 权威骨架）
+- 估计器性质句（consistent, asymptotically efficient）保留原文表述强度，不升级为因果语言；结果段语言用 associated with
+- 因果语言校准：selection 修正 ≠ 因果识别，正文判决句不得用 effect of
+**反模式**: 把前置交底写成方法复述（公式推导/程序细节搬自教科书）——交底只回答"为什么需要修正+修正的代价"，技术细节留给 Methods。
+**原文锚点**: "For each set of analyses, we used Heckman selection models to guard against the possibility of sample selection bias (Heckman 1979)."（Analysis 第1段）
+
+<!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:heckman_selection_preflight_rationale -->
+
 ### 变体 66: R7 — 三威胁小节化稳健性：选择性/内生性 → 替代估计 → 构念效度（post_2022_women_tmt_strategic_renewal 型）
 
 **来源论文**: Post, Lokshin & Boone 2022 (AMJ)
@@ -396,6 +462,259 @@ especially when [moderator condition].
 [节奏标记]: [null 系数+显著性][null 实质命名（'did not impact'）][跨列回收][三策略一次裁决]
 **原始句锚点**: "The evidence thus supports the quality-signaling strategy, while supporting neither the sales-preemption strategy nor the harm-avoidance strategy."
 **来源**: fang_et_al_2025_rival_recall_ad_spend (POM), §5.2
+
+
+<!--
+pattern_id: hypothesis_verdict_chain_null_concession
+build_type: 假设判决导航型（逐假设段落组织）；跨估计器（层次回归/选择模型等多模型多假设设计通用）
+source_papers: ["higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"]
+confidence: low-medium（单篇来源，EMERGING 待第二篇交叉验证；结构模板锚定 R3 四拍主骨架——本变体管判决的段落编排，幅度拍须按主骨架补齐）
+-->
+
+
+<!--
+pattern_id: bk_sobel_partial_mediation_cross_dv_replay
+build_type: 假设化中介展演型（中介是正式假设 H 的检验而非 post hoc 机制探索）；多 DV 复制设计
+source_papers: ["higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"]
+confidence: low-medium（单篇来源，EMERGING 待第二篇交叉验证；结构模板锚定变体 58 confirmatory 部分中介堆叠确认 VERIFIED）
+-->
+
+
+<!--
+pattern_id: theory_motivated_additional_analyses
+build_type: 理论驱动补充分析组织型（非 threat 响应的 post hoc 分析编排）；跨估计器通用
+source_papers: ["higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"]
+confidence: low-medium（单篇来源，EMERGING 待第二篇交叉验证；结构模板锚定 R7-2 叙事四拍 VERIFIED——threat 定位拍替换为理论动机定位拍）
+-->
+
+
+<!--
+pattern_id: r6_unsupported_verdict_with_pattern_restatement
+estimator_family: OLS/FE 及分组比较设计通用（R6 非显著处理）
+slot: R6（不支持裁决 + 以假设语言重述实际模式）
+source_papers: ["gulati2005-adaptation-vertical"]
+confidence: EMERGING（单篇 full_text_verified，待第二篇交叉验证）
+-->
+
+
+### 变体 83：配对反号假设的反例合并判决（gulati_sytch2007 型）
+
+**适用场景**: 两个方向相反的配对假设（H_a 预测正向、H_b 预测负向）在检验中双双失败且失败方式不同——一个显著反号、一个 null。此时两个判决共享一句合并句，反例密度最高且不显混乱。
+
+**报告节奏**: [配对假设重述（方向相反）] → [Contrary to our expectations：反号显著判决] → [配对 null 判决] → [Hence：双假设合并不支持判决] → [显式推迟 Discussion]（可附：曲线关系 null 一句话）
+
+**骨架**:
+```
+Hypothesis [1a] predicted that [predictor_A] would [enhance] [outcome], while
+hypothesis [1b] postulated that [predictor_B] would [diminish] [outcome]. Contrary to
+our expectations, [predictor_A] has a significant [negative] effect on [outcome], while
+the effect of [predictor_B] is not significantly different from zero. Hence, hypotheses
+[1a] and [1b] are not supported. ... We also tested for a possible [curvilinear]
+relationship but found no evidence of it.
+```
+
+**为什么有效**: 一句话同时交付两种失败模式（反号 vs null），判决密度极高；"Contrary to our expectations" 让反号发现的意外性成为信息而非尴尬；"Hence ... not supported" 把两个假设合并收束，避免逐假设重复辩护；显式推迟 Discussion（"we explore them further in the discussion section"）把解释责任移交给正确的章节，Results 只管判决。
+
+**与已有变体的分工**: 变体81（不支持裁决+以假设语言重述实际模式，gulati2005 单篇 EMERGING）面向**分样本/单假设 null** 的双拍收束；本变体为其同族**第二源**，差异在配对反号假设的合并判决：反号显著与 null 两种失败模式一句话并置，且附曲线关系补充检验 null。计数模型变体30（主效应仅全模型显著→保守判不支持，VERIFIED）是第三种失败模式（显著性缩水），三者构成 null 判决族谱。
+
+**注意事项**: 反号显著与 null 的并置必须在同一句内完成对比（while 衔接），分开写会稀释反例信息；"not supported" 判决不可软化（不得写 largely/essentially supported）；推迟 Discussion 的句子要显式（本文在 R9 收束段以 "we explore them further in the discussion section" 重申一次）；若做了补充检验（曲线关系）应紧跟判决一句话带过，不展开。
+
+**反模式**: 只报反号不报配对 null（假设集不完整）；用 "partially supported" 软化明确失败；在 Results 内即兴展开反例解释侵占 Discussion 功能。
+
+**验证状态**: EMERGING（单篇，待第二篇交叉验证；与变体81 同族双源后可考虑联合升级）
+
+**原文锚定**: "Contrary to our expectations, a manufacturer's dependence advantage has a significant negative effect on performance, while the effect of supplier's dependence advantage is not significantly different from zero. Hence, hypotheses 1a and 1b are not supported."
+
+**范文来源**: Gulati & Sytch (2007), *Administrative Science Quarterly* 52(1) — Results 节 H1a/H1b 判决段。
+
+<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:r6_contrary_pair_sign_reversal_null_dual_verdict -->
+
+<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:r6_contrary_pair_sign_reversal_null_dual_verdict_gulati_sytch2007 -->
+
+### 变体 81：不支持裁决 + 以假设语言重述实际模式的双拍诚实收束（Unsupported Verdict with Pattern Restatement）
+
+**适用场景**: 假设不被支持、但数据呈现部分相关模式时（某组边沿显著、其余组为 null、且方向与预测相反）。先给明确的不支持裁决，再**在假设自身的词汇内**重述"数据实际显示什么"——既不让 null 隐身，也不把方向相反的部分模式包装成边界发现。
+
+**报告节奏**: [假设回指] → [各组模式证据（含边沿/相反信号）] → [明确不支持裁决] → [以假设词汇重述实际模式]
+
+**骨架**:
+```
+[假设回指] Hypothesis [N] predicts that [pressure X] affects [outcome of category C] more
+adversely than [outcome of categories A or B].
+[各组证据] Comparing the coefficient of [X] across [A], [B], and [C] (column '[a]'), we find
+that it has a marginally significant [positive] effect on the performance of [C], but has an
+effect indistinguishable from zero in [A] and [B].
+[明确不支持裁决] We therefore conclude that Hypothesis [N] is not supported,
+[模式重述] as [category A] does not do significantly worse than [category B] under conditions
+of [X] (though it does [marginally] worse than [category C]).
+```
+
+**为什么有效**: 部分支持的灰色地带最容易诱发两类失真——把不支持写成"部分支持"，或把边沿显著的相反信号藏进脚注。本节奏把裁决与证据分离：裁决句无让步词（"not supported"），模式重述句才容纳全部细节（哪个类别边沿显著、方向如何、与谁比较 marginally worse），读者可同时获得结论的明确性与证据的完整性。
+
+**注意事项**: 模式重述必须以假设中的比较对象为语法骨架（"A does not do significantly worse than B under X"），不能滑回系数叙述；边沿显著（+、p<0.10 单尾）须如实标注检验尾数；裁决后不再追加"仍需未来研究"式的软化句（软化由 Discussion 承担）。
+
+**反模式**: 以"部分支持"或"混合证据"替代明确裁决（审稿人会追问哪一半被支持）；只报 null 不报方向相反的边沿信号（选择性报告）；裁决句与重述句相互矛盾（如裁决不支持、重述却出现"consistent with"措辞）。
+
+**原文锚点**: "We therefore conclude that Hypothesis 4 is not supported, as external procurement does not do significantly worse than alliances under conditions of task interdependence (though it does marginally worse than internal procurement)."
+
+**范文来源**: Gulati, Lawrence & Puranam (2005), *Strategic Management Journal* — RESULTS H4 裁决段（明确不支持 + 模式重述双拍）。
+
+<!-- wb:gulati2005-adaptation-vertical:r6_unsupported_verdict_with_pattern_restatement -->
+
+### 变体 79：R8 理论动机补充分析双段式 — 理论开题 + 边界条件/构念层次裁决 (1篇高价值)
+
+**适用场景**: 主结果之后有一组非稳健性性质的补充分析（理论边界条件、构念加总层次、测量替代）时：用"two sets of additional analyses"总起，每段以理论动机开题（不是 threat 开题），以对主结果的强化或划界收尾。与 R7 threat 稳健性严格分离。
+**排列模式**: [总起句] → [第一组: 理论动机开题 → 检验动作 → 交互结果 → 边界条件结论] → [第二组: 动机开题 → 层次对比 → 裁决句]
+**范文来源**: Higgins & Gulati (2003), *Organization Science*
+
+**骨架**:
+```
+[总起句]
+We conducted two sets of additional analyses.
+
+[第一组：理论边界条件]
+First, since our claims centered on [theoretical mechanism], we tested
+whether our effects were especially strong during [theoretically-relevant
+condition]. In particular, we tested whether [IV] was especially valuable
+to [units] when [condition holds]. Results revealed significant and
+[direction] interaction effects between [moderator] and [IV variables]
+suggesting that [IV] are particularly helpful to [units] in [achieving
+outcome] when [condition holds]. Further, [IV] have a particularly
+beneficial effect on [outcome] when [condition holds]. The latter results
+held for [k] of our [N] measures of [outcome] and remained significant and
+in the direction expected, even after we accounted for [mediator/control].
+
+[第二组：构念加总层次裁决]
+Second, we investigated the effects of [construct aggregated at level A]
+versus [level B]. We found that [level A] was significantly and positively
+associated with [outcomes]. With respect to [level B], however, we found
+different results. Including a variable for [level B measure] did not have
+a significant effect on [outcomes]. Thus, we found evidence to suggest that
+it is [level A], rather than [level B], that account for the effects of
+[IV] on [outcomes].
+```
+
+**为什么有效**: "since our claims centered on X" 开题句把 post hoc 分析锚回理论主张，使补充分析读起来是理论深化而非钓鱼挖掘；同时保留 "Additional Analyses" 标题与 post hoc 地位（红线：post hoc 机制检验与稳健性检验分开标注的正面示范）；第二组"Thus, it is A rather than B that account for the effects"裁决句把测量层次对比压缩成可引用的结论。
+**注意事项**:
+- 补充分析的诚实标注不可省：标题明写 Additional Analyses（而非 Robustness），分析动机写"we investigated/we tested"而非"to address the concern"
+- 边界条件结果不齐时如实缩圈（"held for two of our three measures"），不得宣称全复制
+- 交互结果报告保持与 R4 主骨架一致的完整性要求（本范文无 simple slopes/图是年代局限，采用时按 R4 权威变体补）
+- 构念层次裁决须两个层次都实际检验过，不得只报胜者
+**反模式**: 把理论补充分析混入稳健性节（"To further validate our findings, we tested whether effects were stronger under uncertainty"）——混淆 threat 响应与理论深化，削弱两者的论证力。
+**原文锚点**: "since our claims centered on the signaling value of upper echelon affiliations, we tested whether our effects were especially strong during times of high uncertainty."（Additional Analyses 第1段）
+
+<!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:theory_motivated_additional_analyses -->
+
+<!--
+pattern_id: bk_sobel_partial_mediation_cross_dv_replay
+build_type: 假设化中介展演型（中介是正式假设 H 的检验而非 post hoc 机制探索）；多 DV 复制设计
+source_papers: ["higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"]
+confidence: low-medium（单篇来源，EMERGING 待第二篇交叉验证；结构模板锚定变体 58 confirmatory 部分中介堆叠确认 VERIFIED）
+-->
+
+### 变体 78：R3 Baron-Kenny+Sobel 假设化部分中介 — 三条件列举 + 跨 DV 重演 + partial-vs-full 幅度裁决 (legacy, 1篇高价值)
+
+**适用场景**: 中介本身是正式假设（H5b 类）且同一 IV→mediator→DV 链要在多个结果变量上检验时：每张 DV 表重演 direct 效应（H5a）与中介判决（H5b），最后用间接效应显著性 + 系数下降幅度裁决 partial vs full mediation。
+**排列模式**: [程序引用] → [(a)(b)(c) 三条件逐一列举] → [Sobel 乘积系数+公式+p 值] → [跨 DV 重演判决] → [效应消失时的幅度裁决]
+**范文来源**: Higgins & Gulati (2003), *Organization Science*
+**结构锚定**: 变体 58（衰减+χ²+Sobel+bootstrap 堆叠确认部分中介，VERIFIED）的 legacy 前身——必须标 legacy
+
+**骨架**:
+```
+[程序引用 + 三条件列举]
+To test for partial mediation, we followed procedures outlined in
+[Baron and Kenny (year)] and [Sobel (year)]. The results suggest evidence of
+mediation since (a) [IV variables] were positively associated with [mediator]
+and with [DV], (b) [mediator] was positively associated with [DV], and
+(c) when the [mediator] variable was entered into the analyses along with
+[IV variables], these effects on [DV] decreased both in magnitude and in
+significance level.
+
+[间接效应检验程序]
+Further, we tested the significance of the indirect effects of [IV] on [DV]
+via the mediator. Specifically, for each [IV] variable, we calculated the
+regression coefficient corresponding to the mediated path, which is the
+product of the coefficient from the first stage regression (predicting
+[mediator]) and the coefficient from the full second stage regression
+(predicting [DV]). The standard error for this combined coefficient is
+calculated using [Sobel's (year)] formula. [For each IV: p-value reporting,
+e.g., for [IV1], p = [.value]; for [IV2], p < [.threshold]], suggesting that
+[mediator] did partially mediate the relationships between [IV] and [DV],
+as hypothesis [H] predicted.
+
+[跨 DV 重演]（每个后续 DV 表重复：direct 判决 → mediator 进入 → 判决变化）
+Table [X] shows the results for [DV2]. These results also support
+hypothesis [H5a]: [IV] had a significant and positive effect on [DV2].
+We also found that the effect for [IV] weakened once we included [mediator],
+suggesting that [mediator] may partially mediate the effects observed.
+
+[效应消失时的幅度裁决——本变体的独门句]
+When we added [mediator] to our models (models [M6] and [M7]), the effect
+for [IV] on [DV3] disappeared but the significance level of the effect for
+[IV2] remained the same. Further analyses, using [Sobel's (year)] formula,
+suggested that while the effect of [IV] disappeared in model [M6] of
+Table [X], the drop in magnitude of the coefficient was not sufficient
+enough to suggest full mediation. Rather, we found additional support for
+hypothesis [H]—here, that [mediator] partially mediates the relationship
+between [IV] and [DV3] (p < [.threshold]).
+```
+
+**为什么有效**: 中介作为正式假设时，三条件 (a)(b)(c) 逐一列举把判定标准亮在明处；间接效应乘积系数+Sobel 公式给出可复算的程序；跨 DV 重演把单表中介升级为复制性证据；"效应消失但按幅度判 partial 而非 full"是诚实且精确的裁决——比二值化的"中介成立/不成立"信息量大。
+**注意事项**:
+- **legacy 标注强制**：Baron-Kenny 条件计数是 legacy 程序（对应诚实边界 hb_ols_legacy_kenny_complete_mediation 的 partial 版）；现代采用必须补 bootstrap 间接效应区间或显式标 legacy，参照变体 58 的现代堆叠确认
+- 中介判决语言用 associated with / partially mediate the relationship（相关链分解），不得写 mediator transmits causal effect
+- "not sufficient enough to suggest full mediation" 的裁决依据是系数下降幅度对比，采用时须报告前后系数值支撑该判断
+- 跨 DV 重演须显式声明呈现方式一致（"the results are presented in a similar fashion"），否则读者会怀疑选择性呈现
+**反模式**: 效应消失即宣称 full mediation（未比较系数下降幅度）——把"不显著"当"无效应"，混淆中介类型判定。
+**原文锚点**: "while the effect of upper echelon downstream ties disappeared in model 6 of Table 4c, the drop in magnitude of the coefficient was not sufficient enough to suggest full mediation."（Results, Table 4c 段）
+
+<!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:bk_sobel_partial_mediation_cross_dv_replay -->
+
+<!--
+pattern_id: hypothesis_verdict_chain_null_concession
+build_type: 假设判决导航型（逐假设段落组织）；跨估计器（层次回归/选择模型等多模型多假设设计通用）
+source_papers: ["higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"]
+confidence: low-medium（单篇来源，EMERGING 待第二篇交叉验证；结构模板锚定 R3 四拍主骨架——本变体管判决的段落编排，幅度拍须按主骨架补齐）
+-->
+
+### 变体 77：R3 假设判决链 — 假设重述 + 模型定位 + However 衔接 null 与支持判决 (1篇高价值)
+
+**适用场景**: 一张表连续检验多个平行假设（H1…H4），其中混有 null 与支持判决时，把每个假设写成"重述→定位→判决"微链，用 However 把 null 判决与相邻支持判决衔接成叙事段——null 不孤立成段，支持判决获得对照背景。
+**排列模式**: [H_k 重述 → model 定位 → 判决] → However → [H_{k+1} 重述 → models 定位 → 判决] →Moreover/We also found → …
+**范文来源**: Higgins & Gulati (2003), *Organization Science*
+
+**骨架**:
+```
+[null 判决微链]
+Hypothesis [N] predicted that [predictor] would be [positively/negatively]
+related to [outcome]. As shown in model [M], we did not find support for
+hypothesis [N].
+
+[However 衔接 → 支持判决微链]
+However, hypothesis [N+1], that [predictor2] would be [positively/negatively]
+related to [outcome], was supported, as shown in models [M2] and [M3].
+Moreover, we found support for hypothesis [N+2] with respect to [predictor3],
+as shown in model [M4]: [one-sentence substantive restatement of the
+direction of the finding].
+We also found [qualifier: substantial] support for hypothesis [N+3], as shown
+in model [M5] of Table [X]: [predictor4] had a significant and [positive/
+negative] effect on [outcome].
+
+[null 假设采用时的幅度拍补齐位]
+（采用本变体时按 R3 主骨架在每条支持判决微链内补幅度拍：
+Substantively, a [one-SD] increase in [predictor] is associated with a
+[Y-unit] [increase/decrease] in [outcome]——年代风格无此拍，不可仿效省略。）
+```
+
+**为什么有效**: 假设重述嵌入拍1使读者不用回翻 Theory 即可核对判决；However 把 null（H1）转化为支持判决（H2）的叙事铺垫而非孤立的失败；判决后追加一句实质性方向复述（"the greater X, the greater Y"）让判决落地为可引用的发现句。
+**注意事项**:
+- 判决动词分级可用：was supported / we found support / we found substantial support——程度词保留假设强度差异，但不得用强动词掩盖边缘 p 值
+- null 判决一句带过是本文年代局限：现代标准（R6 权威变体4）要求 null 后有诚实声明或解释后手，采用本变体时须补
+- 因果语言校准：骨架判决句用 related to / associated with，不用 effect of（估计器为选择修正截面回归）
+**反模式**: 把全部假设判决压成一段无定位的总结（"H1-H4 were tested with mixed results"）——丢失模型定位使读者无法核对证据链。
+**原文锚点**: "As shown in model 3, we did not find support for hypothesis 1. However, hypothesis 2, that upper echelon affiliations with prominent horizontal organizations would be positively related to investment bank prestige, was supported, as shown in models 4 and 5."（Results, Table 3 判决段）
+
+<!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:hypothesis_verdict_chain_null_concession -->
 
 ### 变体 65: R4 — 分样本 null→significant 对 + 组内 Wald + 跨子样本 Chow 诚实降级（post_2022_women_tmt_strategic_renewal 型）
 
@@ -1272,6 +1591,108 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 **反模式警示**: 本变体无幅度拍（未把 unstandardized 系数翻译为实质变化）——按 write-results R3 强制要求，填入时必须补幅度拍（"a [one-SD] increase in [predictor] is associated with [Y-unit] change"），不得照抄原文缺拍。
 
 <!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:r3_multi_indicator_hypothesis_adjudication -->
+
+
+<!--
+pattern_id: switching_reg_cross_model_comparison_infrastructure
+estimator_family: switching regression / endogenous switching（跨分样本模型系数比较）
+slot: R3（比较基础设施 + 列子集导航）
+source_papers: ["gulati2005-adaptation-vertical"]
+confidence: EMERGING（单篇 full_text_verified，待第二篇交叉验证）
+-->
+
+### 变体 80：跨分样本/跨模型系数比较的推断基础设施声明——SUR 联合协方差 + 括号双轨显著标记（Cross-Model Comparison Infrastructure）
+
+**适用场景**: 假设要求比较**分别估计的分样本/分组模型之间的系数**（make/buy/ally 分组回归、按类别分组的调节设计、或第二阶段逐组切换回归），而非单方程内的交互项检验。此时须先交底比较逻辑，再声明比较的基础设施（联合协方差矩阵），并给出括号双轨报告规则（表内普通稳健显著 + 括号跨模型联合协方差显著），随后逐假设导航到具体列子集。
+
+**报告节奏**: [比较逻辑预告] → [分别估计声明] → [比较基础设施(SUR 联合协方差)] → [括号双轨规则] → [列子集导航]
+
+**骨架**:
+```
+[比较逻辑预告] Hypotheses [N–M] require comparison of coefficients across these models, as we
+are interested in testing the differences between the [marginal] effects of [X], [Z], and their
+interaction across the [K categories].
+[分别估计声明] The [model] was estimated separately in each subsample of transactions, i.e.,
+for all transactions classified as '[category A],' '[category B],' and '[category C].'
+[比较基础设施] In addition to robust standard errors (reported below each coefficient), in
+order to facilitate intermodel comparison of coefficients, we calculated robust standard errors
+from a combined variance–covariance matrix using the [SUR] estimation algorithm in [software].
+[括号双轨规则] Significance marks and standard errors in parentheses are based on a common
+robust covariance matrix across models for all [K] categories; these results and the resulting
+significance levels are reported in brackets.
+[列子集导航] To test Hypothesis [N], we compare the coefficients of [X] across the column '[a]'
+models for [A], [B], and [C], which only includes the main effects for [X] and [Z].
+```
+
+**为什么有效**: "分组回归各自显著"无法回答组间差异问题——本文把跨模型比较的统计基础（SUR 联合协方差）当作一等公民声明，并用括号双轨制让单表同时承载"组内推断"与"组间推断"两套显著水平，读者无需翻附录即可分辨哪一轨支持跨组结论。比较逻辑预告句把 H3–H5 的检验方式与理论结构（边际效应差异）显式对齐。
+
+**注意事项**: 现代规范应进一步给出组间 Wald 统计量而非仅括号显著标记（2005 世代惯例，正文未报统计量）；若未做正式组间检验，裁决句应保持 pattern-based 措辞。括号双轨制的报告约定（哪套标准误在外、哪套在括号）必须在表注一次说清。
+
+**反模式**: 分组分别回归后直接按"系数大小肉眼排序"下结论（无联合协方差或 Wald 背书）；把组内显著性当成组间差异的证据；双轨制表注不完整导致读者无法解析括号含义。
+
+**原文锚点**: "In addition to robust standard errors (reported below each coefficient), in order to facilitate intermodel comparison of coefficients, we calculated robust standard errors from a combined variance–covariance matrix using the seemingly unrelated estimation algorithm in STATA 8.2."
+
+**范文来源**: Gulati, Lawrence & Puranam (2005), *Strategic Management Journal* — RESULTS Table 5 导航段（跨模式系数比较交底）。
+
+<!-- wb:gulati2005-adaptation-vertical:switching_reg_cross_model_comparison_infrastructure -->
+
+
+### 变体 82：假设判决驱动的系统内 Baron-Kenny 三步中介 + 联合模型校准（gulati_sytch2007 型；LEGACY）
+
+**适用场景**: 中介假设（H_mech）与主效应假设（H_main）同属确认性检验的设计；中介 b 路径嵌在主估计系统（如联立方程/3SLS 的结果方程）内，a 路径由独立中介回归表报告。多中介并行时，协议步骤同时充当假设判决机器。
+
+**报告节奏**: [协议声明+步骤1争议回应+保留理由] → [步骤1=H_main 判决复用] → [步骤2专用中介表：显著中介建立+null 中介直接拒证 H_mech] → [步骤3嵌套模型+拟合改善拍（χ²/R²）] → [Sobel mediation path 显著性拍] → [逐中介部分中介裁决+跨模型拟合比较] → [双中介联合模型→nearly full mediation 校准]
+
+**骨架**:
+```
+To test hypotheses [H3]–[H5], we followed the rules for mediation testing suggested by
+[Baron and Kenny (1986)]. The first step in testing for mediation requires us to
+establish a significant relationship between the independent variable and the dependent
+variable. While recent research on mediation testing ([citations]) suggests that this
+step is not required, as it represents an unnecessarily strong restriction in testing
+for mediation, we elected to incorporate it into our method because we predicted an
+analytically proximate relationship between [predictor] and [outcome]. ... this
+requirement was fulfilled with the support for hypothesis [H2].
+
+The second step mandates that the significant relationship between the independent
+variable and the mediator be established. Table [Y] reports the results of regressions
+analyzing the relationship between [predictor] and the proposed mediators. Significant
+relationships were established for [mediator_A] and [mediator_C], but no significant
+relationships were found for [mediator_B] and [mediator_D], thus refuting hypothesis
+[H4] and the part of hypothesis [H5] that focused on [mediator_D].
+
+In the final step of testing for mediation, the dependent variable was regressed on the
+independent variable and the mediator in models [3]–[5] in table [X]. [Mediator_A] has
+a significant positive effect on [outcome] ..., which leads to a substantial
+improvement of the overall fit of the model, as indicated by noticeable positive
+changes in the values of the chi-squared and R-squared statistics. More important,
+based on [Baron and Kenny's (1986)] more stringent specification of [Sobel's (1982)]
+test for the significance of mediation, the partial mediating effect of [mediator_A] is
+significant, as indicated by the mediation path coefficient in table [X]. ...
+
+In model [5] in table [X], we regressed [outcome] on both mediators along with
+[predictor]. All mediators are significant, while the regression coefficient for
+[predictor] decreases in magnitude and remains significant, albeit at a borderline
+level of significance, indicating nearly full mediation.
+```
+
+**为什么有效**: 三个协议步骤各有一句"该步骤在本文如何被满足"，中介检验从统计程序变成假设判决链条；null 中介不被隐藏而是直接转化为假设拒证（H4 全拒、H5 半拒）；步骤1争议显式回应后给出保留理由，预防"过时方法"质疑；联合模型校准句（系数下降但仍显著→nearly full mediation）给出比 partial/full 二分更细的结论颗粒度。
+
+**与已有变体的分工**: 变体75（连续 DV legacy BK 三步句，EMERGING）与变体78（BK+Sobel 假设化部分中介跨 DV 重演，EMERGING）为本变体的同族前身——本变体是它们的**第二篇交叉验证源**，增量：①步骤1由 H_main 支持复用满足+显式回应 step-1 争议；②步骤2专用中介表使 null 中介直接裁决假设；③步骤3嵌套模型拟合改善拍（χ²/R² 变化）+跨模型比较（含中介模型 vs 拟合更优者）；④双中介联合模型的 nearly full mediation 校准。变体0（现代 BK+bootstrap+工具中介）仍是现代默认；本变体照语料诚实边界**强制标 LEGACY**——现代采用须补 bootstrap/PROCESS 间接效应区间。
+
+**注意事项**: 确认性中介（假设在 theory 预告）与 post hoc 机制检验必须分开标注，本变体仅用于前者；reverse mediation（反向中介）检验属稳健性，另句报告；"nearly full mediation" 的前提是系数"仍显著但降级到边缘水平"——系数完全不显著才可写 full mediation；Sobel 显著性以表内 mediation path 系数行承载时，正文须指明行位置。
+
+**反模式**: 把 BK 条件计数升级为现代间接效应证据（违反语料诚实边界）；null 中介仅报系数不落到假设裁决；多中介联合模型缺校准句使读者自行猜测中介化程度。
+
+**验证状态**: EMERGING（单篇，待第二篇交叉验证；LEGACY——采用须补 bootstrap/PROCESS 间接效应区间或显式标注 legacy）
+
+**原文锚定**: "All mediators are significant, while the regression coefficient for joint dependence decreases in magnitude and remains significant, albeit at a borderline level of significance, indicating nearly full mediation."
+
+**范文来源**: Gulati & Sytch (2007), *Administrative Science Quarterly* 52(1) — Results 节中介三步（H3–H5）+ Table 8/9。
+
+<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:r8_in_system_baron_kenny_hypothesis_linked_mediation -->
+
+<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:r8_in_system_baron_kenny_hypothesis_linked_mediation_gulati_sytch2007 -->
 
 ## 反模式
 

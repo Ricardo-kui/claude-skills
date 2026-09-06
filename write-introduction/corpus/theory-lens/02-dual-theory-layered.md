@@ -100,6 +100,29 @@ source: Distilled by distill-introduction-exemplar from Hoffmann et al. 2024 JM;
 ---
 
 
+
+### 变体 E：相邻传统构念迁移 + 分析层级外推型（gulati2005型）
+
+**模板**:
+> "We draw upon some of the seminal research on [adjacent tradition within the same discipline] to analyze our broader conception of [focal construct]. In prior literature on [adjacent tradition], performance was argued to depend on [contingency logic: match between environmental contingencies and imported dimensions]. We extend this analytical approach to [focal domain] both between and within [boundaries]. We argue that [modes] differ in [imported dimensions] and therefore in [outcome of interest]."
+
+**来源**: gulati_lawrence_puranam_2005 (SMJ), P3–P4
+
+**原文锚定**:
+> "We draw upon some of the seminal research on organization design to analyze our broader conception of adaptation in procurement activities. ... In this tradition, organizational performance was argued to depend on the match between environmental contingencies and the extent of differentiation and integration across organizational subunits. We extend this analytical approach to vertical relationships both between and within firms."
+
+**关键特征**:
+- 导入源是学科内相邻传统（组织设计的 Lawrence & Lorsch 分化/整合构念），而非跨学科——不走 10-cross-discipline 的教学式导入
+- 导入构念（differentiation/integration）直接充当被拓宽构念（adaptive capacity）的分析装置，一个理论透镜同时服务构念界定与假设生成
+- 明确的层级/对象外推标记句："We extend this analytical approach to [X] both between and within [boundaries]."——把组织内设计逻辑平移去组织间关系
+- 相邻传统既有的权变逻辑原样成为本文假设的模板（performance depends on match between contingencies and D/I → match between mode adaptive capacity and adaptation needs）
+
+**适用**: 需要借用学科内相邻传统的构念分析被拓宽的构念时；导入构念能操作化落到样本（此处：make/buy/ally 模式差异）时
+
+**禁忌**: 导入必须给出可操作化路径，纯装饰性借用不可；若导入构念改变了语义层级（个体→组织→组织间），需显式处理构念同构问题
+
+<!-- wb:gulati2005-adaptation-vertical:theory_lens_adjacent_tradition_level_extension_gulati2005 -->
+
 ### 变体 C：注意力重定向型（moon2026 型）
 
 **模板**:

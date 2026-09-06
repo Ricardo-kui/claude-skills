@@ -125,6 +125,54 @@ that has dominated prior research. Thus:"
 
 **验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
 
+
+### 变体 D：并行多中介逐项部分中介链（gulati_2007 型）
+
+**band**: 薄弱（本变体单源 EMERGING；近族 Bamberger 并行中介效应分解 EMERGING、Malshe 单 H 双中介为单源句式级——三族均待第二源）
+
+**适用场景**: 单一 X 对 DV 有一个总主效应（先行假设化为 H_main），且 X 的效应经由 N 个（典型 2-4 个）概念独立、同向的并行中介传导；每个中介值得一条独立的部分中介假设，但不需要效应分解或时间窗比较。
+
+**结构**:
+```
+[主效应假设 H_main: X → DV]
+
+[中介框架段]
+This argument implies that it may not be [X] per se but, rather, its [relation-based
+covariates], engendered by the circumstances it creates, that lead to [DV]. [X 域]
+has been portrayed as a multifaceted construct comprising elements classified into
+[N] broad domains: [M1], [M2], and [M3] ([综合文献]). Therefore, we expect each of
+these mechanisms to partially mediate the relationship between [X] and [DV].
+
+[协议映射段]
+Following [mediation-testing canon]'s recommendations for testing for mediation, we
+first establish the relationships between [X] and each of the [N] core mediating
+mechanisms and explicate how each affects [DV]... [H_main] in effect constitutes
+the theoretical prerequisite to establishing this relationship empirically.
+
+[中介小节 × N，模板]
+### The Mediating Role of [Mk]
+[Mk 采纳式定义（"X can be defined as..."）]. It is likely that the effect of [X]
+on [DV] will be mediated by [Mk].
+[X→Mk 段: Because [X] facilitates [convergence/state], [actors] become predisposed
+to [Mk]...（2-3 个独立理由）]
+[Mk→DV 段: [Mk], in turn, should be related to [DV]..., mediating the effect of
+[X] on [DV].（2-3 个独立价值机制：成本降低/韧性/价值创造）]
+H[k]: [Mk] will partially mediate the effects of [X] on [DV].
+```
+
+**与近族的分界**:
+- vs 双中介并行机制链（Malshe & Agarwal，`sentences/mechanism_chain.md`）：后者一条 H 覆盖全部中介（"mediated by (a) M1 and (b) M2"）；本变体每中介一条独立 H，适合各中介需独立检验与稳健性证据的设计
+- vs Role-Separated Parallel Mediators → Effect Decomposition → Horizon Test（Bamberger，`subprotocols/hypothesis_organization_patterns.md`，EMERGING）：后者要求 direct/indirect 方向冲突 + 跨时间窗效应分解；本变体同向收敛、无分解
+- vs B3 宽度型并行机制：后者是并列理由支撑同一条主效应 H；本变体的并行项是可测量的独立构念且各自成 H
+
+**原文锚点**: "Therefore, we expect each of these mechanisms to partially mediate the relationship between joint dependence and performance." ... "Hypothesis 3: Joint action will partially mediate the effects of joint dependence on a manufacturer's performance in the procurement relationship."
+
+**风险**: 每个中介小节的 X→M 与 M→Y 两段都必须有独立理论依据；任一中介的 M→Y 论证单薄会连累"为什么恰好这几个中介"的整体合法性（三中介的外部分类学锚定是本型的关键防御）。H_main 先行是协议映射的前提，不可省略。
+
+**验证状态**: EMERGING（单篇来源，待第二篇交叉验证）
+
+<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:v_b_mechanism_per_mediator_partial_mediation_chain -->
+
 ## 假设陈述格式
 
 | 类型 | 模板 |

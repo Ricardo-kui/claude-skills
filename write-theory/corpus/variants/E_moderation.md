@@ -862,3 +862,90 @@ H2: There will be a [positive/negative] interaction effect of [trait] and [cue] 
 **前置铺垫**: 先用真实极端案例实例化低裁量侧，再用访谈非事件实例化高裁量侧（配合"非事件访谈证据"变体），两侧证据类型不对称但功能对称。
 **原文锚点**: "the relationship should be even stronger for low discretion, high severity recalls"
 **风险**: 属性→裁量的等同必须给论证（严重度高→外部压力强制行动），否则审稿人质疑 moderator 与 DV 的概念循环（ball_2018 自身弱点：仅断言未论证，模仿时补上推导步）。
+
+
+<!--
+pattern_id: e1_categorical_fit_adverse_effects_from_capacity_shortfall
+build_type: 调节效应型（类别调节 E1 / fit 匹配型）
+source_papers: ["gulati2005-adaptation-vertical"]
+confidence: EMERGING（单篇，待第二篇交叉验证）
+-->
+
+### 变体 D：类别模式的"能力短板×情境压力"相对不利效应推导（Categorical Adverse-Effect Fit）
+
+**适用场景**: 比较对象是类别化的组织模式（如 make/buy/ally 或三种治理形式），理论核心预测是"哪种情境压力对哪类模式绩效最不利"的纯条件比较——不承诺模式的无条件绩效主效应；理论贡献在 fit/匹配逻辑（绩效取决于 adaptive capacity 与 adaptation pressures 的匹配）。
+
+**推导节奏**: [锚定排序] → [压力定义] → [维度机制] → [短板映射] → [相对不利假设]
+
+**骨架**:
+```
+[锚定排序] Earlier arguments established that [mode C] offers the least scope for
+[capacity dimension D] between [unit pair] (Hypothesis X).
+[压力定义] The [environment category] refers to [definition of contingencies]. Adaptation
+pressures arise when [contingency] changes, and such changes must first be recognized,
+and then adapted to.
+[维度机制] [Dimension D] contributes to adaptive capacity under [pressure] by enhancing
+[function] in two ways: first, [mechanism 1 — requisite variety / receptor logic];
+second, [mechanism 2 — parallel search logic].
+[短板映射] Since [mode C] offers the least scope for [dimension D] (Hypothesis X), its
+performance should be significantly depressed relative to other modes of procurement
+under [pressure].
+[假设] [Pressure P] has more adverse effects on the performance of [mode C] than on the
+performance of [modes A and B].
+```
+
+**为什么有效**: 假设不承诺任何模式的无条件绩效排序，而是把"哪一种压力击中哪一模式的维度短板"显式映射——每个条件预测都回溯到先前排序假设（Hypothesis X 回指），形成跨假设依赖的可检验网络，读者不会被诱导向"某模式总是更好"的过度解读。
+
+**注意事项**: 排序锚定假设必须先建立——条件预测的识别力完全来自模式在维度上的排序；"短板映射"一步必须显式引用对应排序假设（如 H3 引用 H1、H4 引用 H2），不能默认读者记住。压力定义段给出可操作化边界（如 instability = 需求/技术变化的幅度与速率），为 Methods 测量留接口。
+
+**反模式**: 跳过排序锚定直接写"模式 A 在压力 P 下绩效差"（无机制解释为何是 A 而非 B）；或夹带模式无条件绩效主效应假设，破坏 fit 理论自洽性（审稿人会问：若无条件排序，压力条件何用？）。
+
+**原文锚点**: "Under the principle of 'fit' between the adaptive capacity of a vertical relationship and the pressures towards adaptation it faces, we expect that the performance of modes of procurement characterized by a low degree of differentiation between procuring and supplying units is likely to be most adversely affected by transaction instability."（Effects of adaptation pressures in transaction environment 段，H3 推导收敛句）
+
+**范文来源**: Gulati, Lawrence & Puranam (2005), *Strategic Management Journal* — H3/H4 推导段落。
+
+<!-- wb:gulati2005-adaptation-vertical:e1_categorical_fit_adverse_effects_from_capacity_shortfall -->
+
+
+<!--
+pattern_id: e_moderation_joint_pressure_superadditivity_balanced_configuration
+build_type: E 调节效应型（双压力联合调节 / 均衡构型）
+source_papers: ["gulati2005-adaptation-vertical"]
+confidence: EMERGING（单篇，待第二篇交叉验证）
+-->
+
+### 变体 E：双压力超加性 → 双能力互补 → 均衡构型优势（Joint-Pressure Superadditivity）
+
+**适用场景**: 两种情境压力同时出现并相互放大（超加性），而组织的两种适应能力分别应对其中一种；此时在两种能力上"均衡"的中间构型获得条件性优势——常用于解释中间/混合组织形态为何在最苛刻的双重压力情境下胜出。
+
+**骨架**:
+```
+[超加性声明] We expect that [P1] and [P2] have superadditive effects on the need for
+[response]: [P1] requires [search-based response], whereas [P2] constrains that search,
+because successful adoption of a new solution requires coordinated action; hence [P1]
+magnifies the demands of [P2], and vice versa.
+[基线刻度] In the absence of [P2], adaptation to [P1] is a unilateral affair; in the
+absence of [P1], mutual adjustment due to [P2] is a routine affair.
+[互补性] Modes that can adapt to some degree to both [P1] and [P2] suffer lower
+performance penalties from their joint effects than modes that specialize in adaptation
+to any one; neither [capacity D1] nor [capacity D2] alone provides adequate adaptive
+capacity — complementarities exist between [mechanisms enabling D1] and [mechanisms
+enabling D2].
+[均衡位置映射] Because [mode X] generates more [D1] than [mode Y] and more [D2] than
+[mode Z] (Hypotheses a and b), its adaptive capacity is evenly based on both dimensions,
+whereas [mode Y]'s is based primarily on [D2] and [mode Z]'s primarily on [D1].
+[假设] The joint effects of [P1] and [P2] on the performance of [mode X] will be less
+adverse than that on other modes of [comparison set].
+```
+
+**为什么有效**: 先建立压力的超加性（为何联合不等于相加——需要双向论证），再建立能力的互补性（为何单项能力不够），最后落到中间构型在二维空间中的"均衡位置"——把复杂的多向比较化解为逐句可核验的推理链，中间型模式的独特价值从前两步自动涌现而非断言。
+
+**注意事项**: 超加性需要双向放大论证；"基线刻度"句（absence 情形）把两个方向各自的基线说清，是支撑超加性的关键；互补性最好有独立文献锚（如并行搜索与搜索整合机制的仿真研究）；H5 式"less adverse than other modes"的比较组必须覆盖全部其他模式。
+
+**反模式**: 只论证"两个压力都重要"就断言中间构型最佳——缺超加性步骤时结论退化为常识；或把均衡构型优势写成无条件主效应（破坏 fit 逻辑）。
+
+**原文锚点**: "We expect that task interdependence and transaction instability have superadditive effects on the need for adaptation in vertical relationships—put differently, we expect interdependence to magnify the effect of instability on the need for adaptation and vice versa."（Joint effects of adaptation pressures 段，H5 推导开篇）
+
+**范文来源**: Gulati, Lawrence & Puranam (2005), *Strategic Management Journal* — H5 推导（Joint effects 节）。
+
+<!-- wb:gulati2005-adaptation-vertical:e_moderation_joint_pressure_superadditivity_balanced_configuration -->

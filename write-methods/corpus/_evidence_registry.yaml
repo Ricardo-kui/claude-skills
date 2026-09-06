@@ -1,8 +1,8 @@
 meta:
-  last_updated: '2026-08-29'
-  total_design_types: 22
-  batches_processed: 21
-  last_batch: batch_36_post2022
+  last_updated: '2026-09-06'
+  total_design_types: 23
+  batches_processed: 22
+  last_batch: batch_37_gulati2007_residual_sync
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
     granularity: per design_type（对应 corpus/[设计类型].md 文件）
@@ -412,7 +412,7 @@ evidence:
         诚实边界：generated-regressor SE 修正须带警告行；M8）。'
   by_design_type:
     面板数据-OLS:
-      paper_count: 17
+      paper_count: 19
       papers:
       - lee_park_2024_smj (SMJ)
       - bendig_hensellek_schulte_2024_etp (ETP)
@@ -431,6 +431,8 @@ evidence:
       - westphal_zajac_1998_symbolic_management (Administrative Science Quarterly)
       - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
       - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
+      - higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe (Organization Science)
+      - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int (Administrative Science Quarterly)
       status: VERIFIED
       slots_covered:
       - M1
@@ -815,8 +817,12 @@ evidence:
         reject: 0
         last_critique: null
         common_revise_reasons: []
+    common-method-bias-prevention:
+      paper_count: 1
+      papers:
+      - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int (ASQ)
     两阶段模型:
-      paper_count: 7
+      paper_count: 8
       papers:
       - chen_ganesan_liu_2009_jm (JM)
       - chung_low_rust_2022_jams (JAMS)
@@ -825,6 +831,7 @@ evidence:
       - ridge_hill_ingram_kolomeitsev_worrell_2024_amj (AMJ)
       - zhou2017 (ASQ)
       - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
+      - gulati2005-adaptation-vertical (Strategic Management Journal)
       status: ROBUST
       slots_covered:
       - M7
