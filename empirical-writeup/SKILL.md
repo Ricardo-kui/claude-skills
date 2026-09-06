@@ -15,7 +15,7 @@ Use this skill after execution is stabilized and verification is complete. It co
 
 - `latex-tables`: regression, balance, and summary-statistics tables
 - `econ-visualization`: event studies, coefficient plots, descriptive figures
-- `write-methods-and-results`: methods, results, robustness, and claim-evidence alignment
+- `write-methods` / `write-results`: methods, results, robustness, and claim-evidence alignment
 - `write-discussion-and-conclusion`: downstream implications after the empirical middle is stable
 - `review-code`: use when prose, tables, and scripts appear inconsistent
 
@@ -44,7 +44,7 @@ For direct entry with externally produced or user-asserted verified tables, cons
 2. Route the artifact creation:
    - tables -> `latex-tables`
    - figures -> `econ-visualization`
-   - prose -> `write-methods-and-results`
+   - prose -> `write-methods` / `write-results`
 
 3. Enforce claim discipline:
    - association language for associative designs

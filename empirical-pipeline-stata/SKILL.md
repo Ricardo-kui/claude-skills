@@ -76,7 +76,7 @@ whenToUse: "Use when a locked empirical design must be executed end to end in St
 - 只想查某条 Stata 命令的语法 → 用 `stata`。
 - 还没定识别策略、在 DiD/IV/RDD 之间选 → 先用 `huntington-klein-causal-design`,设计锁定后再用 `causal-analysis` 生成执行计划。
 - 要做正式的多元宇宙治理(multiverse、规格曲线、投稿级披露)→ 用 `xianzhu-skill`;pipeline 内的快速规格筛选用本 skill 的 Step −2。
-- 要写 Results/Discussion 文字 → 用 `empirical-writeup` 先建立 Evidence Packet,再交给 `write-methods-and-results` / `write-discussion-and-conclusion`。
+- 要写 Results/Discussion 文字 → 用 `empirical-writeup` 先建立 Evidence Packet,再交给 `write-methods` / `write-results`。
 
 ## 需要按需读取的参考文件
 - Step −1/0/2.5 预注册、样本契约、写方程与识别假设:`references/01-pipeline-discipline.md`

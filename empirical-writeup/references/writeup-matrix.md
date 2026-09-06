@@ -4,7 +4,7 @@
 
 - regression or balance table -> `latex-tables`
 - event-study or coefficient figure -> `econ-visualization`
-- methods or results subsection -> `write-methods-and-results`
+- methods subsection -> `write-methods`; results subsection -> `write-results`
 - discussion or implications -> `write-discussion-and-conclusion`
 - script-to-table reconciliation -> `review-code`
 
