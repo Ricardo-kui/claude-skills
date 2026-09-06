@@ -21,6 +21,8 @@
 
 ## 2. JTBD 交叉验证（Simsek & Li 2022——生成侧消费）
 
+> **审查归属**：JTBD 完整性的正式审计由 `../intro-review` Step 1（JTBD 6-Block 映射）与 deep 模式 L4 承接；本表是渲染侧自检对照，帮助骨架在生成时就补齐 utility 结构。
+
 骨架渲染完成后，对照 JTBD 六模块验证 utility 完整性（diagnose-introduction Step 6 的交叉验证在生成侧复现）：
 
 | JTBD Block | 验证问题 | 不合格信号 |

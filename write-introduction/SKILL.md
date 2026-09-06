@@ -17,9 +17,8 @@ description: >-
 
 ## Phase 0: 契约与模式
 
-1. 读 canonical `story`（`/paper-story-contract` 门控；旧字段按 `../paper-story-contract/references/schema.md` 迁移标 provisional），并读取 project-owned `story.integrity` ledger。忽略任何 legacy `story.story_frame`。
-2. 模式（`--mode=introduction|front-end|align`）：`introduction`（默认）｜`front-end`（标题+Abstract+promise 对齐，读 `references/front-end-mode.md`）｜`align`（只审查对齐）。
-3. 门控：`preparing` 只出骨架（跳过润色）；`refining/finishing` 要求 `story.status: confirmed`；stakes.theoretical 与 reader_shift 非空。`story.integrity` 有任一 `unsupported` 时停止在 Story Intake；`provisional` 仅能输出带假设标记的骨架。若无法同时陈述 theme question 与 central knot，停止在 Story Intake。单模块请求可 local-only bypass（标记"未经整篇故事契约验证"，不更新 paper state）。
+1. 模式（`--mode=introduction|front-end|align`）：`introduction`（默认）｜`front-end`（标题+Abstract+promise 对齐，读 `references/front-end-mode.md`）｜`align`（只审查对齐）。
+2. 契约与门控：读 canonical `story` 与 project-owned `story.integrity`，按四阶段词表执行——阶段行为、Intro 附加门与 local-only bypass 细则见 `references/intake-and-story-gate.md`（权威词表 = `../paper-story-contract/references/stage-gates.md`；`refining/finishing` 需 `story.status: confirmed` + stakes.theoretical 与 reader_shift 非空；`story.integrity` 有 `unsupported` 或无法陈述 theme question 与 central knot 时停止在 Story Intake）。
 
 **完成判据**：门控满足或显式记录跳过；项目自身 story integrity 已确认。
 
@@ -38,12 +37,7 @@ description: >-
 
 ## Phase 1.5: 即时范文学习对象（v0.4-lite 试点）
 
-仅在完整 Introduction / front-end 重构请求中执行，且 project-owned integrity gate 为 PASS 或 PROVISIONAL；单模块、句子润色、标题或显式 `--exemplars=off` 请求跳过。本阶段只服务本次调用，绝不把推荐写入项目文件或改写 canonical `story`。
-
-1. 依据当前输入生成临时 request：`section=introduction`、论文类型、当前 story needs（如 `clarify-theme`、`establish-genuine-tension`、`introduce-main-characters`）及已确认的理论问题形式。只有在本次 story gate 已证实的情况下才填入 `validated_conditions`；不确定时留空，宁可不推荐也不放宽范文的适用前提。
-2. 运行 `py ../story-blueprints/scripts/retrieve_exemplars.py --request <临时 JSON>`；如果结果非空，只读取被选中的 1–2 张 v0.4-lite 卡的 Introduction learning block，不加载整库。
-3. 推荐只回答“学什么、为什么适配、不能照搬什么、应比较什么”；不得将范文类型改写成用户项目的强制 story frame，或凭范文生成贡献、机制与结果。
-4. 无可靠匹配时明确报告“当前 v0.4-lite 库无适合的 Introduction 学习对象”，继续正常写作；不得凑数或回退到未经评估的 v0.3 蓝图。
+仅在完整 Introduction / front-end 重构请求中执行，且 project-owned integrity gate 为 PASS 或 PROVISIONAL；单模块、句子润色、标题或显式 `--exemplars=off` 请求跳过。共用协议（request 生成 / retrieve_exemplars.py / 四问推荐 / 无匹配明示 / 不写回项目文件）见 `../story-blueprints/v4/rhetoric-moves/_immediate-exemplar-protocol.md`——本节差异：`section="introduction"`，读 v0.4-lite 卡的 Introduction learning block；story needs 例：clarify-theme、establish-genuine-tension、introduce-main-characters。
 
 **完成判据**：推荐已显示或已明确无匹配；推荐不改变 Gap/贡献诊断与故事契约的权威地位。
 
@@ -54,7 +48,7 @@ description: >-
 3. 证据分档：EMERGING（单源）不作默认推荐；采用时必须标注"单篇来源"并给 VERIFIED/ROBUST 替代。
 4. **开篇功能合同**（先定功能，再编号）：前三单元内完成——①有后果的张力（说明问题给理论/决策制造什么 trouble）；②可识别的学术对话（受众已知什么、现有解释预测什么）；③诊断性 problematization（遗漏/误置如何损害预测与边界 + 回应方向）。单元可合并/换序，进入 Theory Lens 前不得缺项。合并时一个段落只有一个**主导修辞功能**，段内仍 Point → Support/Warrant → Link（模块合并不等于句子拼接）。
 5. 能量阶梯：Hook 能量 ≤ Gap 能量 ≤ Stakes 能量（高开低走 = 叙事倒退）。
-6. 异议预判清单（Booth Ch09 §9.1，渲染前生成）：对 problem 级三类质疑——问题真实性、问题定义、方案可信度——各列 ≥1 条最强审稿异议；Phase 4 Gate 4 核销处置（细则见 `references/quality-gates.md` §4）。
+6. 异议预判清单（渲染前生成）：problem 级三类质疑（真实性/定义/方案可信度）各列 ≥1 条最强审稿异议；核销细则见 `references/quality-gates.md` §4。
 
 **完成判据**：功能序列 4-9 段已定；能量一致性已标注；异议预判清单已生成（三类各 ≥1 条）。
 
@@ -76,7 +70,7 @@ description: >-
 | Differentiation | `differentiation/01-prior-work-boundary-clarification.md`（仅存在极易混淆的 prior work 时） |
 | 修辞动作/语言表达升级 | `../story-blueprints/v4/rhetoric-moves/_index.md`（动作自动匹配草稿修辞功能，无需用户点名；intro 默认=bidirectional-staging；润色走其 `_polish-protocol.md` 流畅性门） |
 
-**语料优先改编**：模块确定后，以上表该模块 corpus 指针的语料句式为改编底本——尽量使用语料库的句式表达来改编（替换来源特异性内容、填槽位、按需微调）；corpus 无对应句式时再自拟（自拟句与语料句式同构）。已核实事实与用户裁定优先于语料句式。**角色先于风格（先骨架后句子）**：论证型模块（Tension/Stakes/Theory Lens/Contribution）按论证单元组装——先定角色序列（claim→reason+evidence→warrant→A&R）再按角色从语料取句；段落组装文法与拼贴判据见 `../story-blueprints/v4/rhetoric-moves/_argument-grammar.md`，intro 侧角色接线见 `references/render-rules.md` §段落论证文法；Hook/Preview/Transitions 为 framing 豁免。语料句子顺序不决定段落顺序。
+**语料优先改编 · 角色先于风格**：语料句式为改编底本（替换来源特异性内容、填槽位；corpus 无对应句式时再自拟并保持同构），论证型模块按论证单元角色序列组装（先骨架后句子，语料顺序≠段落顺序）——纪律、拼贴判据与 intro 角色接线（render-rules §段落论证文法）见 `../story-blueprints/v4/rhetoric-moves/_argument-grammar.md` + `_polish-protocol.md` §write-*；Hook/Preview/Transitions 为 framing 豁免。已核实事实与用户裁定优先于语料句式。
 
 槽位：按需读 `references/introduction-slot-contracts.md`，只填已知信息，不确定的槽位保留占位（不编造引文/数字/发现方向）。
 
@@ -87,9 +81,9 @@ description: >-
 ## Phase 4: 检查与润色
 
 1. 质量门（生成后必过）：`references/quality-gates.md`——GBL Four-Move 对齐（共享规则见 `../diagnose-introduction/references/golden-biddle-locke-four-moves.md`）+ JTBD 六模块完整性 + claim_fit（含贡献主张质量：contestability/specificity/hedge）+ 首尾句测试 + 异议预判（Gate 4）+ 段落论证文法（Gate 5：五问/拼贴）；不合格项入"提醒"段。
-2. 反模式自查：`references/anti-patterns.md`（21 项逐条扫描）+ 拒稿信号 `references/rejection-signals.md`。
+2. 反模式自查：`references/anti-patterns.md` §1 高频 5 项逐条扫描（§2 长尾 16 项由 `intro-review` Step 2 承接，投稿前跑一次兜底）+ 拒稿信号 `references/rejection-signals.md`。
 3. 期刊适配：用户提目标期刊时读 `references/journal-fit.md`（期刊差异优先于通用规则）。
-4. 措辞润色（默认执行，preparing 跳过）：按句位查语料库——Hook/human face → `storytelling/prose-craft-checklist.md` §0/§5；批判措辞 → `phrasebank/critique-phrases.md`；hedging → `phrasebank/hedging-strength.md`；过渡 → `transitions/` + `micro-templates/transition-signals.md`；中心论点定位 → `micro-templates/thesis-models.md`；五病 → `../pollock-qc/references/prose-pathology.md`；人设 → `storytelling/authorial-persona.md`；因果声明 → `../write-methods/corpus/micro-templates/causal-hedging.md`。纪律：不改骨架占位；其余共用纪律（每句位 ≤2-3 候选、specificity gate、`### 措辞润色建议` 附末不覆盖骨架）见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律。
+4. 措辞润色（默认执行；blocking 只出骨架时跳过）：按句位查语料库——Hook/human face → `storytelling/prose-craft-checklist.md` §0/§5；批判措辞 → `phrasebank/critique-phrases.md`；hedging → `phrasebank/hedging-strength.md`；过渡 → `transitions/` + `micro-templates/transition-signals.md`；中心论点定位 → `micro-templates/thesis-models.md`；五病 → `../pollock-qc/references/prose-pathology.md`；人设 → `storytelling/authorial-persona.md`；因果声明 → `../write-methods/corpus/micro-templates/causal-hedging.md`。纪律：不改骨架占位；共用纪律见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-*。
 
 **完成判据**：质量门全过；润色纪律满足；无未修复的 🔴/🟡 标记。
 
@@ -101,7 +95,7 @@ description: >-
 
 ## 纪律
 
-- 原文锚定与润色纪律（共用版）：见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律——语料语句可直接采用，仅替换来源特异性内容（专名/数字/系数/表号）防串稿；润色协议见 `_polish-protocol.md`。
+- 原文锚定与润色纪律：见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律。
 - 批评登记：用户不满时登记到 `corpus/_evidence_registry.yaml` 的 `critique.per_file`（revise/reject +1、reasons 去重首插最多 8 条）；不登记流程抱怨与风格偏好。
 - 演化：规则层反例更新 `_skill_design_feedback.yaml`（见 `../distill-introduction-exemplar/references/phase-4-validation-writeback.md`）；单篇论文不得建立普遍规则。
 - 注册表缺失时回退 `_routing_tables.yaml` 静态推荐，不中断输出；但**必须在输出末尾附加降级声明**："⚠ registry 缺失，语料验证状态（EMERGING/VERIFIED/ROBUST）未经核验，本次按静态路由表推荐"——回退不得静默。

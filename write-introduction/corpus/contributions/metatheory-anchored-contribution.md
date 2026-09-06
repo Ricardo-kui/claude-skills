@@ -49,6 +49,31 @@ source: "corpus_writeback.py create_new_file（gate ① 裁决新建模块）"
 **禁忌**: 二重性必须真实对应模型的双向机制（A→B 与 B→A 都有机制承接），单向模型硬套会失衡；"akin to" 只是具体化不是解决——不得升格为"解决了经典问题"；经典出处必须是理论传统公认文本，不能引边缘文献充数
 
 
+
+### 变体 B：增量-重构阶梯型（gulati_nohria_zaheer_2000 型）
+> 论证角色：Claim（先降级增量贡献的合法性，再宣告解释模型重构——阶梯式贡献锁定）
+**模板**:
+> "It is important to emphasize that [adopting lens] does more than merely add additional explanatory power to [existing models]. Such an outcome may in and of itself be a worthwhile [endeavor]. However, as we aim to show in the sections that follow, adopting a [lens] changes [field]'s basic understanding of [core variance] from an [old model] to a [new model]—and therein lies its true power."
+
+**来源**: Gulati, Nohria & Zaheer 2000 (SMJ), P7
+
+**原文锚定**:
+> "It is important to emphasize that taking a network perspective to strategy research does more than merely add additional explanatory power to our existing models of strategy."
+
+**关键特征**:
+- "does more than merely" 让步递进：先承认增量贡献（加解释力）自身合法，再宣示更高阶贡献——避免贬低同行
+- 贡献对象是解释模型本身（从原子论模型到关系论模型），不是变量或机制——Makadok Constructs+Level 双维可见
+- 破折号收束句（and therein lies its true power）把贡献宣告变成节奏重音，收束全文
+- "as we aim to show in the sections that follow" 把贡献宣告与正文兑现绑定，预防 overclaiming
+
+**适用**: 综述/概念文收尾段；任何声称"不止于增量"的理论重构引言。区别于 metatheory-anchored 主变体：主变体以元理论锚定贡献来源，本变体以增量-重构阶梯组织贡献的修辞次序。
+
+**禁忌**: 重构宣告必须与正文兑现（本文五领域逐一展示重构）；不得空喊范式转换类 inflated symbolism。
+
+**风格画像来源**: gulati_nohria_zaheer_2000 (SMJ)
+
+<!-- wb:gulati_nohria_zaheer_2000_strategic_networks:contribution_increment_beyond_reframing -->
+
 ## 组装规则
 ### 互斥
 

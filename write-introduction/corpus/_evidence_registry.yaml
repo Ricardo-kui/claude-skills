@@ -488,14 +488,15 @@ evidence:
         reject: 0
         common_revise_reasons: []
     17-debate-reframing:
-      paper_count: 2
+      paper_count: 3
       papers:
       - park_lange_jeon (SMJ)
       - westphalzajac1995 (AMJ)
+      - gulati_2007_tent_poles (Academy of Management Journal)
       gap_distribution:
         Incompleteness: 1
         Inadequacy: 0
-        Incommensurability: 1
+        Incommensurability: 2
       status: VERIFIED
       generativity: ADAPTABLE
       exclusivity: HIGH
@@ -653,7 +654,7 @@ evidence:
         common_revise_reasons: []
   tensions:
     01-despite-progress-unaddressed:
-      paper_count: 42
+      paper_count: 43
       papers:
       - ahmadi2017 (JMS)
       - cancellieri2023 (SMJ)
@@ -697,8 +698,9 @@ evidence:
       - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
       - higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe (Organization Science)
       - gulati2005-adaptation-vertical (Strategic Management Journal)
+      - gulati_nohria_zaheer_2000_strategic_networks (Strategic Management Journal)
       gap_distribution:
-        Incompleteness: 30
+        Incompleteness: 31
         Inadequacy: 3
         Incommensurability: 0
       status: ROBUST
@@ -714,7 +716,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     02-implicit-assumption-wrong:
-      paper_count: 17
+      paper_count: 18
       papers:
       - ceo_regulatory_focus_ijrm (IJRM)
       - employee_free_speech (OS)
@@ -733,9 +735,10 @@ evidence:
       - fini_jourdan_perkmann_2017 (AMJ)
       - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
       - zajac_westphal_the_social_construction_of_market_value (American Sociological Review)
+      - gulati_lavie_singh_2009_partnering_experience (Strategic Management Journal)
       gap_distribution:
         Incompleteness: 3
-        Inadequacy: 14
+        Inadequacy: 15
         Incommensurability: 0
       status: ROBUST
       generativity: GENERATIVE
@@ -774,7 +777,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     04-reality-contradicts-consensus:
-      paper_count: 11
+      paper_count: 12
       papers:
       - anderson_reeb2004 (ASQ)
       - bendig_hensellek_schulte2024 (ETP)
@@ -787,10 +790,11 @@ evidence:
       - pontikes2012 (ASQ)
       - vidal_mitchell2015 (OS)
       - zhou2017 (ASQ)
+      - gulati_2007_tent_poles (Academy of Management Journal)
       gap_distribution:
         Incompleteness: 0
         Inadequacy: 5
-        Incommensurability: 6
+        Incommensurability: 7
       status: ROBUST
       generativity: GENERATIVE
       exclusivity: HIGH
@@ -1059,11 +1063,12 @@ evidence:
         reject: 0
         common_revise_reasons: []
     cross-domain-migration:
-      paper_count: 1
+      paper_count: 2
       papers:
       - gamache2020 (SMJ)
+      - gulati_higgins_2003_which_ties_matter (Strategic Management Journal)
       gap_distribution:
-        Incompleteness: 1
+        Incompleteness: 2
         Inadequacy: 0
         Incommensurability: 0
       status: EMERGING
@@ -1136,7 +1141,7 @@ evidence:
       gap_type: Inadequacy
   stakes:
     01-general-theory-practice:
-      paper_count: 11
+      paper_count: 12
       papers:
       - Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ (SMJ)
       - hahl2017 (ASR)
@@ -1149,8 +1154,9 @@ evidence:
       - pontikes2012 (ASQ)
       - zhou2017 (ASQ)
       - fini_2017_social_valuation_across_multiple_audiences_the_int (Academy of Management Journal)
+      - gulati_nohria_zaheer_2000_strategic_networks (Strategic Management Journal)
       gap_distribution:
-        Incompleteness: 4
+        Incompleteness: 5
         Inadequacy: 5
         Incommensurability: 2
       status: ROBUST
@@ -1247,7 +1253,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     07-reputation-legitimacy-crisis:
-      paper_count: 7
+      paper_count: 8
       papers:
       - desjardine2023 (OS)
       - gamache2023 (SMJ)
@@ -1256,10 +1262,11 @@ evidence:
       - lashley_pollock2020 (ASQ)
       - paruchuri2020 (SMJ)
       - singh2023 (JMR)
+      - gulati_2007_tent_poles (Academy of Management Journal)
       gap_distribution:
         Incompleteness: 1
         Inadequacy: 6
-        Incommensurability: 0
+        Incommensurability: 1
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: HIGH
@@ -1271,13 +1278,14 @@ evidence:
         reject: 0
         common_revise_reasons: []
     06-two-reason-enumerated:
-      paper_count: 3
+      paper_count: 4
       papers:
       - malik_wang_martin_gomezmejia2025 (JM)
       - pollock2015 (ASQ)
       - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
+      - gulati_higgins_2003_which_ties_matter (Strategic Management Journal)
       gap_distribution:
-        Incompleteness: 3
+        Incompleteness: 4
         Inadequacy: 0
         Incommensurability: 0
       status: VERIFIED
@@ -1398,7 +1406,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     02-synthesized-coherence:
-      paper_count: 10
+      paper_count: 11
       papers:
       - employee_free_speech (OS)
       - gamache2020 (SMJ)
@@ -1410,8 +1418,9 @@ evidence:
       - singh2023 (JMR)
       - zhao_ding2022 (OS)
       - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
+      - gulati_nohria_zaheer_2000_strategic_networks (Strategic Management Journal)
       gap_distribution:
-        Incompleteness: 3
+        Incompleteness: 4
         Inadequacy: 7
         Incommensurability: 0
       status: ROBUST
@@ -1476,7 +1485,7 @@ evidence:
         common_revise_reasons: []
   previews:
     mechanism-preview:
-      paper_count: 26
+      paper_count: 27
       papers:
       - bamberger_homburg_wielgos2021 (JM)
       - castellaneta_conti_kacperczyk2017 (SMJ)
@@ -1504,6 +1513,7 @@ evidence:
       - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
       - gulati_westphal_1999_cooperative_or_controlling (Administrative Science Quarterly)
       - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
+      - gulati_lavie_singh_2009_partnering_experience (Strategic Management Journal)
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: LOW
@@ -1516,7 +1526,7 @@ evidence:
         common_revise_reasons: []
       gap_distribution:
         Incompleteness: 9
-        Inadequacy: 5
+        Inadequacy: 6
         Incommensurability: 3
     findings-preview:
       paper_count: 49
@@ -1629,7 +1639,7 @@ evidence:
         common_revise_reasons: []
   contributions:
     contribution-statements:
-      paper_count: 50
+      paper_count: 51
       papers:
       - ahmadi2017 (JMS)
       - ceo_regulatory_focus_ijrm (IJRM)
@@ -1680,6 +1690,7 @@ evidence:
       - wu2025 (SMJ)
       - zhao_ding2022 (OS)
       - zhou2017 (ASQ)
+      - gulati_higgins_2003_which_ties_matter (Strategic Management Journal)
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: LOW
@@ -1691,11 +1702,11 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 22
+        Incompleteness: 23
         Inadequacy: 20
         Incommensurability: 2
     three-layer-contribution:
-      paper_count: 8
+      paper_count: 9
       papers:
       - haunschild2015 (OS)
       - hoffmann_cheong_phan_zurbruegg2024 (JM)
@@ -1705,6 +1716,7 @@ evidence:
       - westphal_j_d_and_bednar_m_k_2005_pluralistic_ignorance_in_co (ASQ)
       - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
       - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
+      - gulati_lavie_singh_2009_partnering_experience (Strategic Management Journal)
       status: VERIFIED
       verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       generativity: ADAPTABLE
@@ -1718,14 +1730,15 @@ evidence:
         common_revise_reasons: []
       gap_distribution:
         Incompleteness: 5
-        Inadequacy: 2
+        Inadequacy: 3
         Incommensurability: 1
     metatheory-anchored-contribution:
-      paper_count: 1
+      paper_count: 2
       papers:
       - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
+      - gulati_nohria_zaheer_2000_strategic_networks (Strategic Management Journal)
       gap_distribution:
-        Incompleteness: 0
+        Incompleteness: 1
         Inadequacy: 1
         Incommensurability: 0
       status: VERIFIED
@@ -1788,7 +1801,7 @@ evidence:
         common_revise_reasons: []
   theory_lens:
     theory-lens-templates:
-      paper_count: 46
+      paper_count: 47
       papers:
       - anderson_reeb2004 (ASQ)
       - ceo_regulatory_focus_ijrm (IJRM)
@@ -1836,6 +1849,7 @@ evidence:
       - westphalzajac1995 (AMJ)
       - pfarrer_pollock_and_rindova_2010 (Academy of Management Journal)
       - gulati_1998_alliances_and_networks (Strategic Management Journal)
+      - gulati_nohria_zaheer_2000_strategic_networks (Strategic Management Journal)
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: LOW
@@ -1847,7 +1861,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 21
+        Incompleteness: 22
         Inadequacy: 21
         Incommensurability: 3
     07-socio-cognitive-frame:
@@ -1947,14 +1961,15 @@ evidence:
         reject: 0
         common_revise_reasons: []
     02-dual-theory-layered:
-      paper_count: 4
+      paper_count: 5
       papers:
       - hoffmann_cheong_phan_zurbruegg2024 (JM)
       - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
       - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
       - gulati2005-adaptation-vertical (Strategic Management Journal)
+      - gulati_higgins_2003_which_ties_matter (Strategic Management Journal)
       gap_distribution:
-        Incompleteness: 3
+        Incompleteness: 4
         Inadequacy: 0
         Incommensurability: 1
       status: VERIFIED

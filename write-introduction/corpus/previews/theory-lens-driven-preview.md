@@ -142,6 +142,33 @@ P5-P6 的变体：不是按照"主效应→调节→机制"的通用结构预览
 
 <!-- wb:gulati_1998_alliances_and_networks:review_agenda_organizer_preview_gulati1998 -->
 
+
+### 变体 T：议程式枚举预览型（gulati_nohria_zaheer_2000 型）
+> 论证角色：Framing（枚举领域传统维度为综述正文供分析地图，scope 免责预防过度承诺）
+**模板**:
+> "We illustrate the importance of [lens] by considering [N] traditional sources of [outcome] in [field]. These are: 1) [area 1]; 2) [area 2]; 3) [area 3]; 4) [area 4]; and 5) [area 5]. For each of these [sources], we discuss how, by incorporating a [lens] perspective, we gain greater insights into [outcome]. This list is by no means comprehensive nor mutually exclusive but simply reflects [scoping statement]."
+
+**来源**: Gulati, Nohria & Zaheer 2000 (SMJ), P7
+
+**原文锚定**:
+> "This list is by no means comprehensive nor mutually exclusive but simply reflects some broadly defined areas in strategy research where we see some of the greatest potential from applying a network lens."
+
+**关键特征**:
+- 预览对象是"分析议程"而非方法或实证发现——综述体裁专属的 preview 类型
+- 枚举项全部取自领域既有理论维度（结构/定位/资源/成本/动态），透镜作为横切轴而非新增变量
+- humble disclaimer（not comprehensive nor mutually exclusive）把选择性透明化，预防"清单式综述"批评
+- 枚举与正文小节一一对应，预览即目录
+
+**适用**: 综述/special issue 引言组织多领域分析时；概念文需要预告"透镜将作用于哪些既有理论"时。区别于 mechanism-preview/findings-preview：不预告机制或结果，只预告分析范围。区别于同文件变体 S（gulati1998 问题序列派生议程）：变体 S 从现象的决策/事件序列派生编号研究问题（议程内生），本变体枚举领域既有理论维度、以透镜横切（议程外生映射），并必配 humble disclaimer。
+
+**禁忌**: 枚举维度必须在正文逐一兑现；实证论文不适用（预览对象不同）；枚举 ≤5-6 项，过多失去地图功能；透镜确为对既有维度的新横切轴时才可用——透镜本身即枚举项之一时禁用。
+
+**禁忌**: 枚举维度必须在正文逐一兑现；实证论文不适用（预览对象不同）；枚举 ≤5-6 项，过多失去地图功能。
+
+**风格画像来源**: gulati_nohria_zaheer_2000 (SMJ)
+
+<!-- wb:gulati_nohria_zaheer_2000_strategic_networks:preview_agenda_enumeration_disclaimer -->
+
 ## 组装规则
 
 ### 必须配对

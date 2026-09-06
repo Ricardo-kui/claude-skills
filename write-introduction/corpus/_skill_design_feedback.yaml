@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
   last_updated: '2026-09-06'
-  observations_processed: 78
+  observations_processed: 94
   description: Evidence ledger for design defects inferred from Introduction exemplar distillation.
 defects:
   incompleteness-embedded-opposing-claims-vs-incommensurability:
@@ -2920,6 +2920,552 @@ defects:
     verified_paper_count: 1
     verified_journals:
     - American Journal of Sociology
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  cross-domain-migration-legacy-format-only:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: 'tensions/cross-domain-migration.md 为外部领域文献迁移张力的 canonical 文件，但仅含一条 pre-variant 旧格式骨架（Mayo POMS 直接应用型），无
+      ### 变体 块/验证状态/frontmatter'
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/tensions/cross-domain-migration.md
+    diagnosis: '''邻近领域已起步→焦点领域滞后''的迁移张力与 ''if and when'' 条件化遗漏在语料中无执行器 v2 格式变体；本篇（gulati_higgins_2003_which_ties_matter）提供首个变体（writeback
+      plan 候选已产出），属语料缺口而非规则缺陷。与 01-despite-progress 变体 AH（chen2009 双流互为遗漏）说服动作不同：双盲交叉 vs 邻域滞后'
+    proposed_change:
+      action: append_variant
+      summary: 以'邻近领域滞后型（gulati_higgins_2003 型）'变体补齐该 canonical（经 writeback plan gate ① 执行）
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: gulati_higgins_2003_which_ties_matter
+      journal: Strategic Management Journal
+      evidence_anchor: Introduction P1 末句（邻近领域滞后：begun to examine ... less understanding of this possibility）+ P3 末句（if and
+        when 双重遗漏）——功能证据，详见 section JSON 锚点
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Strategic Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Strategic Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  stakes-fronted-arrangement-unrouted:
+    classification: routing_defect
+    status: EMERGING
+    risk: low
+    current_rule: write-introduction 三档 paragraph_structure 均将 Stakes 置于 Gap 之后，无 Stakes 前置合法分支
+    rule_excerpt: 'paragraph_structure: "标准型: Hook → Lit → Gap → Stakes/Theory → Preview → Contribution"'
+    rule_locator: corpus/_routing_tables.yaml paragraph_structure rows（三档：紧凑/标准/扩展，约 L14-30 与 L320-328）
+    target: write-introduction/corpus/_routing_tables.yaml
+    diagnosis: '范文将整段 Stakes（P2，undertaking 前置双受益论证）置于 RQ/完整 Gap 陈述（P3）之前，形成 Gap(轻)→Stakes→Gap(重) 三明治排列且节奏成立（story-fidelity:
+      improves）。现行三档段落结构均无此分支。单篇完整文本 → EMERGING/log_only，不触发核心修改；待 ≥3 篇跨刊复现后再议 add_branch'
+    proposed_change:
+      action: add_branch
+      summary: 登记为 EMERGING 观察；复现达标后在 paragraph_structure 增加 optional 'Stakes 前置型（undertaking-first）'分支，前提：缺口为条件未定型 + Stakes
+        段含可引反证
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: gulati_higgins_2003_which_ties_matter
+      journal: Strategic Management Journal
+      evidence_anchor: Introduction P2（stakes 段）位于 P1（轻 tension）与 P3（RQ+重 tension）之间——功能证据，详见 section JSON phase_1 module
+        map
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Strategic Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Strategic Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive:
+      - prompt: 写一篇 Incompleteness×Boundary 引言：缺口是'已有文献未考察某有益因素在何种条件下失效'，且有一篇可引用的副作用反证文献
+        expected_invariants:
+        - Stakes 段可合法置于 RQ 段之前
+        - 前置 Stakes 段必须含被引反证锚定，不能是空断言
+        - RQ 段仍须出现在 Stakes 段之后且完整给出缺口
+      preservation:
+      - prompt: 写一篇标准 Incompleteness×Mechanism 引言：缺口是'某中介机制未被考察'，无反证文献可用
+        expected_invariants:
+        - 默认仍走 Gap → Stakes 序（Stakes 不前置）
+        - 既有模块顺序推荐行为不变
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: log_only
+      reason: Evidence is insufficient for a core-skill change.
+  intro-tension-mixed-findings-question-cascade:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: tensions/02-implicit-assumption-wrong.md 中混合发现类仅有变体F（混合发现→稳定效应假设→宏观事件激活，Castellaneta 2017，EMERGING 单源）；索引中英复检（mixed
+      findings / mixed support / 混合发现 / question cascade / raise several questions）无四问级联型变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/tensions/02-implicit-assumption-wrong.md
+    diagnosis: gulati_lavie_singh_2009 展示混合发现的另一条出口：不激活宏观事件，而以四问级联（类型/条件/行为者/配对）把命题不一致转译为权变问题清单，并经 In addressing these questions
+      回指构成问-答契约。说服动作与变体F 不同（问题化 vs 事件激活），应为 02 新增变体。选材带判定：薄弱（变体F 单源 EMERGING）
+    proposed_change:
+      action: append_variant
+      summary: '02-implicit-assumption-wrong.md 追加''混合发现→四问级联型''变体（plan: tension_mixed_findings_question_cascade, ADD）'
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: gulati_lavie_singh_2009_partnering_experience
+      journal: Strategic Management Journal
+      evidence_anchor: 'While this argument has been widely accepted in strategic alliances research, studies that empirically
+        tested this proposition have revealed mixed or limited support. These mixed findings raise several questions: Are
+        there distinctive types of experience that differentially impact the gains from alliances?'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Strategic Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Strategic Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  intro-contribution-premise-reversal:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: contributions 语料对 Boundary 维度仅有单句 Makadok 行（'We show that [relationship] depends on [moderator], reconciling
+      conflicting findings.'），无 premise 质疑+部分翻案+reconcile 收束的完整段级变体；索引查询 premise / question the premise / boundary moderator
+      贡献 均无对应变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/contributions/three-layer-contribution.md
+    diagnosis: gulati_lavie_singh_2009 P3 的贡献动词阶梯（extend→question the premise→uncover boundary conditions→reconciles）、some
+      限定部分翻案与三类边界因素枚举（firm-/partner-/relation-specific）是可迁移的段级贡献模式；precheck 判 EXTEND。选材带判定：gap（零专属变体）
+    proposed_change:
+      action: append_variant
+      summary: 'three-layer-contribution.md 追加''前提质疑翻案型''变体（plan: contribution_premise_reversal_reconcile, EXTEND）'
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: gulati_lavie_singh_2009_partnering_experience
+      journal: Strategic Management Journal
+      evidence_anchor: We question the premise that partner-specific experience offers limited value by furnishing evidence
+        on some of its positive implications.
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Strategic Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Strategic Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  intro-preview-construct-pair-claim-ladder:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: previews/mechanism-preview.md 变体 A-R 覆盖理论整合/分层机制/条件化机制等，但无'镜像构念对定义→非互换性限定→不充分性→三调节条件化→方法合法性辩护'四层主张阶梯组合
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/previews/mechanism-preview.md
+    diagnosis: gulati_lavie_singh_2009 P4 将定义、主张（含理由 not fungible / relation-specific factors）、方法辩护（following a widely used
+      approach）压缩于单段且不剧透结果方向；precheck 判 ADD。选材带判定：gap。另注意 theory-lens/09 变体B（pfarrer2010 镜像 whereas 配对定义，VERIFIED）覆盖其中的定义子动作，但主张阶梯与方法辩护组合未被覆盖
+    proposed_change:
+      action: append_variant
+      summary: 'mechanism-preview.md 追加''构念对定义+主张阶梯预告型''变体（plan: preview_construct_pair_claim_ladder, ADD）'
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: gulati_lavie_singh_2009_partnering_experience
+      journal: Strategic Management Journal
+      evidence_anchor: We suggest that a firm's gains from general partnering experience are limited because some experience
+        benefits are not completely fungible across all alliances and entail relation-specific factors that emerge only in
+        recurrent alliances with specific partners.
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Strategic Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Strategic Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  intro-review-genre-dualstream-litturn-gap:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: literature-turns/02-synthesized-coherence.md 现有变体（A-E/H/F）均为批评导向：多传统交汇处集体盲区、构念混淆、交叉沉默；无'成长宣告+整合号召'型综述合流变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/literature-turns/02-synthesized-coherence.md
+    diagnosis: 综述/概念界定型引言的 Literature Turn 说服动作是'以领域成熟度证据宣告主题合法，并号召凝聚聚焦'，而非识别集体盲区——该说服动作在 corpus 无对应变体（index/registry 中英复检
+      review/综述/conceptual 零命中）
+    proposed_change:
+      action: append_variant
+      summary: 新增'综述双流合流型'变体（成长宣告+Concurrent-with 双流并置+coalescing 收束）；见 writeback plan item litturn_review_dualstream_convergence（EXTEND，锚点
+        02-synthesized-coherence.md 变体 E 后）
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: gulati_nohria_zaheer_2000_strategic_networks
+      journal: Strategic Management Journal
+      evidence_anchor: There is a growing body of research in strategy that is coming to terms with the economic consequences
+        of firms participating in strategic networks. ... highlights the need for coalescing and focusing the research in
+        this area. / Concurrent with the interest in interfirm relationships ... is a growing interest in understanding how
+        the social context ... influences their behavior and performance.
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Strategic Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Strategic Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  intro-review-genre-asymmetry-tension-gap:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: tensions/01-despite-progress-unaddressed.md 现有变体（含 gulati1998 AP、gulati2005 AV）无'形成侧 vs 后果侧写不对称 + 每个传统理论配一句漏推论示例'的组合
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/tensions/01-despite-progress-unaddressed.md
+    diagnosis: 综述文的层级覆盖缺口用'领域分工不对称'表述（formation 侧受关注 / strategic implications 侧被忽略），并以 However/Similarly 链给 ≥2 个成熟理论各配一个'从其前提漏掉的推论'（竞争模型→网络位置改变竞争强度；TCE→单笔关系
+      vs 全网络优化）——推论示例机制未被现有变体覆盖
+    proposed_change:
+      action: append_variant
+      summary: 新增'侧写不对称+理论推论示例型'变体；见 plan item tension_attention_asymmetry_theory_corollary（ADD，锚点 01-despite-progress-unaddressed.md
+        变体 AV 后）
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: gulati_nohria_zaheer_2000_strategic_networks
+      journal: Strategic Management Journal
+      evidence_anchor: While there has been growing attention paid to understanding the formation of interorganizational ties
+        ..., less attention has been paid to the strategic implications of such networks for the firms embedded in them. ...
+        However, the location of firms in interfirm networks is another important element of competition ...
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Strategic Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Strategic Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  intro-review-genre-proliferation-stakes-gap:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: stakes/01-general-theory-practice.md 现有变体 A-H 以理论整合/机制盲区/双面化等为主；无'现象扩散供压 + 单行业例证 + central-not-peripheral
+      中心性重定位'变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/stakes/01-general-theory-practice.md
+    diagnosis: 综述体裁合法的 Stakes 供压方式是现象扩散速度（rapid proliferation）+ 'without [lens] 分析失效'例证 + 'central, rather than a peripheral'
+      重定位收束——非量化损失的紧迫性论证路径缺失（本项 band=薄弱：该文件为 EMERGING 单源区）
+    proposed_change:
+      action: append_variant
+      summary: 新增'现象扩散+中心性重定位型'变体；见 plan item stakes_proliferation_centrality_reframe（ADD，锚点 01-general-theory-practice.md
+        变体 H 后）
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: gulati_nohria_zaheer_2000_strategic_networks
+      journal: Strategic Management Journal
+      evidence_anchor: Given the rapid proliferation of alliances and other forms of interfirm relationships in recent years,
+        neglecting the strategic networks ... can lead to an incomplete understanding ... becomes a central, rather than a
+        peripheral, exercise toward understanding firm strategy and performance.
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Strategic Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Strategic Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  intro-review-genre-agenda-preview-gap:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: previews/ 综述议程型预览仅有变体 S（gulati1998 问题序列派生，theory-lens-driven-preview.md）单源；无'枚举领域既有理论维度+透镜横切+humble disclaimer'变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/previews/_index.md
+    diagnosis: 综述议程式预览的第二种派生方式（外生映射：预览对象是领域传统理论维度，透镜为横切轴，预览即目录）未被覆盖；与变体 S（内生序列派生编号问题）构成互补对
+    proposed_change:
+      action: append_variant
+      summary: 新增'议程式枚举预览型'变体至 theory-lens-driven-preview.md 变体 S 之后；见 plan item preview_agenda_enumeration_disclaimer（ADD）
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: gulati_nohria_zaheer_2000_strategic_networks
+      journal: Strategic Management Journal
+      evidence_anchor: We illustrate the importance of network effects by considering five traditional sources of differential
+        returns to firms in strategy research. ... This list is by no means comprehensive nor mutually exclusive but simply
+        reflects some broadly defined areas ...
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Strategic Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Strategic Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  intro-review-genre-reframing-contribution-gap:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: contributions/metatheory-anchored-contribution.md 现有变体 A 以学科二重性接驳为贡献来源；无'增量-重构阶梯'（先承认增量贡献合法，再宣告解释模型重构）修辞次序变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/contributions/metatheory-anchored-contribution.md
+    diagnosis: '''does more than merely add explanatory power'' 让步递进 + ''changes our basic understanding ... from an atomistic
+      to a relational model'' 模型重构宣告 + 破折号节奏重音收束——贡献声明的阶梯式锁定机制缺失；Makadok Constructs+Level 双维可见'
+    proposed_change:
+      action: append_variant
+      summary: 新增'增量-重构阶梯型'变体；见 plan item contribution_increment_beyond_reframing（ADD，锚点 metatheory-anchored-contribution.md
+        变体 A 后）
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: gulati_nohria_zaheer_2000_strategic_networks
+      journal: Strategic Management Journal
+      evidence_anchor: It is important to emphasize that taking a network perspective to strategy research does more than
+        merely add additional explanatory power to our existing models of strategy. ... changes our basic understanding of
+        the sources of interfirm differences from an atomistic to a relational model—and therein lies its true power.
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Strategic Management Journal
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Strategic Management Journal
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  commentary-stance-dissolution-hook-gap:
+    classification: corpus_gap
+    status: EMERGING
+    risk: medium
+    current_rule: 'hooks/17-debate-reframing covers neutral moves only: main template pivots to empirical reframing (''Rather
+      than attempting to settle...''), 变体 A is a no-pivot multi-literature central question; no variant dissolves a classic
+      debate as socially constructed with a first-person stance declaration'
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/hooks/17-debate-reframing.md
+    diagnosis: AMJ commentary openings take a public stance (dissolve, not reframe) and fuse Hook+Tension+Thesis+Contribution
+      in one leadership paragraph; this persuasive action is absent from 17-debate-reframing, 23-popular-debate (popular-press
+      opposition), and 02-epigraph-quote-pivot (quote opening). EN+CN index double-round zero-hit. ADD candidate in plan (band=quiet
+      is the deterministic file-status reading; variant-type level is a gap)
+    proposed_change:
+      action: append_variant
+      summary: 'add 立场宣告消解型 variant (gulati_2007_tent_poles 型) with genre boundary note: neutrality anti-pattern (''不要偷偷偏袒'')
+        is intentionally overridden and the override must be cashed out by a delivered bridging program'
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: gulati_2007_tent_poles
+      journal: AMJ
+      evidence_anchor: 'P1: ''I argue that this debate is largely socially constructed by forces both internal and external
+        to business schools.'''
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - AMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - AMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  tension-artificial-dichotomy-unmasking-gap:
+    classification: corpus_gap
+    status: EMERGING
+    risk: medium
+    current_rule: tensions/04-reality-contradicts-consensus variants A-K are all evidence-type contradictions (inconsistent
+      findings, counterexamples, quantified facts, audience-perspective splits); none stages a definitional-compatibility
+      premise vs camp-behavior contradiction resolved as social construction
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/tensions/04-reality-contradicts-consensus.md
+    diagnosis: Field-level dichotomies claimed artificial (rigor-relevance class) locate the contradiction at definitional
+      premise vs field practice, with attribution to social forces/tribes rather than literature omission (Incompleteness),
+      theory flaw (Inadequacy), or selective inheritance of a canonical distinction (03-structural-blindspot 变体 D, gulati_sytch2007).
+      ADD candidate in plan
+    proposed_change:
+      action: append_variant
+      summary: 'add 定义兼容悖论消解型 variant to 04 with taboos: dictionary appeals read dated in 2020s empirical papers; unmasking
+        requires a downstream social-mechanism account (who constructs the divide, how)'
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: gulati_2007_tent_poles
+      journal: AMJ
+      evidence_anchor: 'P2: ''But the debate between seemingly separate camps of relevance and rigor suggests otherwise.'''
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - AMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - AMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-06'
+    last_seen: '2026-09-06'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  stakes-field-credibility-authority-chorus-gap:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: stakes/07-reputation-legitimacy-crisis variants A-D are firm-level reputation events (decontextualized consequences,
+      spillover misjudgment, undiversifiable systemic risk, asymmetric punishment); no field-of-research credibility/self-doubt
+      variant built from an authority chorus
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/stakes/07-reputation-legitimacy-crisis.md
+    diagnosis: Commentary genre evidences field-level stakes via a three-part authority chorus (elder statesman address +
+      peer echo + outside scorn quote) converging on collective self-doubt about the work's meaning; stakes corpus (files
+      01-10 verified via index) is quantified/firm-event oriented. ADD candidate in plan
+    proposed_change:
+      action: append_variant
+      summary: 'add 领域权威合唱型 variant with taboos: quotes must be verifiable; outside scorn must not slide into ad hominem;
+        degrade to two voices if no external source exists'
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: gulati_2007_tent_poles
+      journal: AMJ
+      evidence_anchor: 'P3: ''With rhetoric such as this, it is no surprise that we management scholars would begin to doubt
+        our work''s meaning.'''
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - AMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - AMJ
     verified_journal_count: 1
     regression_cases:
       positive: []

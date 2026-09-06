@@ -114,6 +114,24 @@ source: Manually curated from MVP30 narrative_analysis files
 
 ---
 
+
+### 变体 E：领域权威合唱型（gulati_2007_tent_poles 型）
+> 论证角色：Evidence（三方位权威引语作为领域可信度/意义受损的经验锚点，归拢句完成 stakes 升级）
+**模板**:
+> "[Field leaders]' [addresses/statements] concede the cost in their own words: '[self-critique quote]'. Other [insiders] echo the theme, proposing '[reconciliation formula]'. Even [outside observers] now join in: '[outside quote of scorn]'. With [such rhetoric] from inside and outside, it is no surprise that [members of the field] begin to doubt [the meaning of their collective work]."
+**来源**: gulati_2007_tent_poles (AMJ), P3
+**原文锚定**:
+> "With rhetoric such as this, it is no surprise that we management scholars would begin to doubt our work's meaning."
+**关键特征**:
+- 权威合唱三声部：领域元老（正式演讲）+ 同侪呼应（改写式转述）+ 业外观察者（原话嘲讽）——从内外两个方位同时证明危机，外部声音是合法性打击的加分项
+- Stakes 载体是集体意义怀疑（self-doubt about the work's meaning）而非量化损失——07 族 A-D 均为企业声誉事件，本变体是学科/领域层面的合法性危机
+- 引语保留原话修辞锋度，作者只做一句归拢（"With rhetoric such as this..."）——展示优先于陈述
+- 与 tension 的社会建构诊断形成证据闭环：合唱证明"危机是真的"，为"人工二分须拆除"供压
+**适用**: Incommensurability/Inadequacy 的评论体或理论文；领域存在可引的权威自省文本（主席演讲、社论、业外批评）时；需要 non-quantified stakes 的场景
+**禁忌**: 引语必须真实且可核查，外部嘲讽类引语避免滑向人身攻击；三声部缺一时（如无外部声音）改为双声部并弱化"even outside observers"的升级语气
+
+<!-- wb:gulati_2007_tent_poles:stakes_authority_chorus_field_credibility -->
+
 ## 插入位置指南
 
 | 布局类型 | 推荐插入位置 | 形式 | 示例 |

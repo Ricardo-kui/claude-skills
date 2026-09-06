@@ -169,6 +169,29 @@ source: Distilled from Haunschild, Polidoro & Chandler (2015), Organization Scie
 
 ---
 
+
+### 变体 K：前提质疑翻案型（gulati_lavie_singh_2009 型）
+
+**模板**:
+> "In addressing these questions concerning [the contested value of X], we extend prior research on [X→Y], thus advancing [field] and [theory] perspectives. Specifically, our framework extends recent research that has distinguished between [facet A] and [facet B] by theorizing on the relative contributions of these types of [X]. We question the premise that [facet B] offers limited value ([citations]) by furnishing evidence on some of its positive implications. We further advance [field] by uncovering boundary conditions under which [actors] can gain from [X], suggesting that [factor class 1], [factor class 2], and [factor class 3] affect [outcome]. Hence, our study elaborates on [the construct's facets] and reconciles some of the apparent contradictions in earlier empirical studies. It also contributes to [adjacent theory literature] by identifying [mechanism] as a key element of [theory's process chain]."
+
+**来源**: Gulati, Lavie & Singh (SMJ), P3
+
+**原文锚定**:
+> "We question the premise that partner-specific experience offers limited value by furnishing evidence on some of its positive implications. ... Hence, our study elaborates on the different facets of partnering experience and reconciles some of the apparent contradictions in earlier empirical studies."
+
+**关键特征**:
+- 翻案动作有具体靶子：点名"最近研究"的贬低性结论（premise that X offers limited value + 引文），翻案证据限定为 "some of its positive implications"——部分翻案而非全盘颠覆，对既有文献保持礼貌
+- 贡献动词阶梯：extend → question the premise → uncover boundary conditions → reconciles，语气从温和到尖锐递进，末位动词把贡献锚定为"调和矛盾"而非"推翻前人"
+- Makadok Boundary 维度在贡献句内直接可见：三组因素类别（firm- / partner- / relation-specific）枚举为权变空间，而非抽象的"情境因素"
+- 双文献流挂接各有具体机制：领域流（alliance research）+ 相邻理论流（organizational learning，"knowledge application as a key element of the learning chain"），第二贡献以机制表述避免空泛
+
+**适用**: Inadequacy×Boundary 组合；文献对某构念/机制的价值已形成"贬低性共识"而本文要部分翻案时；混合发现需要 reconcile 框架的研究；Inadequacy 张力以设问收尾后，本变体作问-答契约的应答段。
+
+**禁忌**: "question the premise" 必须有具体靶句与引文，不得攻击稻草人；翻案力度与证据强度匹配——"some of its positive implications" 式限定语不可省略，否则 overclaiming；reconcile 主张须能被 Discussion 的调和性解释兑现。
+
+<!-- wb:gulati_lavie_singh_2009_partnering_experience:contribution_premise_reversal_reconcile -->
+
 ### 变体 E：经典正效应抵消型（canonical-effect-offset，fini2017 型）
 
 **验证状态**: EMERGING（单篇来源；仅作 `section_variant`）

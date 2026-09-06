@@ -1249,6 +1249,31 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 <!-- wb:gulati2005-adaptation-vertical:tension_founder_caveat_gap_license_gulati2005 -->
 
+
+### 变体 AW：侧写不对称+理论推论示例型（gulati_nohria_zaheer_2000 型）
+> 论证角色：Claim（不对称缺口宣告，并给每个传统理论配一句"它漏掉了什么"的推论示例）
+**模板**:
+> "While there has been growing attention paid to [well-attended side], less attention has been paid to [neglected side]. In particular, [field] has generally not looked to [reframe core variance as arising from X]. For example, [dominant model A] have simply focused on [standard variables] to understand [outcome]. However, [lens element] is another important element of [outcome], since [mechanism]. Similarly, while [theory B] stresses [its benefit], a [lens] approach allows consideration of [extended benefit]."
+
+**来源**: Gulati, Nohria & Zaheer 2000 (SMJ), P5
+
+**原文锚定**:
+> "While there has been growing attention paid to understanding the formation of interorganizational ties ..., less attention has been paid to the strategic implications of such networks for the firms embedded in them."
+
+**关键特征**:
+- 缺口用"形成侧 vs 后果侧"的领域内分工表述，超越 few-studies 语言且与"层级覆盖缺口"身份对齐
+- 双理论推论示例：主导理论各配一句"从其前提漏掉的推论"（竞争模型→网络位置改变竞争强度；交易成本→单笔关系 vs 全网络优化），使缺口具体可感
+- "not merely X but Y" 式重构句把缺口从变量缺失升维到解释模型层面
+- However/Similarly 链式展开，每步一个理论，节奏均匀
+
+**适用**: 综述型/理论重构型引言；有 ≥2 个成熟理论可作为"被透镜延伸的对象"时。与已有 despite-progress 变体的区别：本变体的缺口是层级/侧写覆盖缺口（整层解释缺位），且必须携带理论推论示例。
+
+**禁忌**: 推论示例必须真的能从原理论前提推出，不可稻草人；无 ≥2 个可延伸理论时退回常规 despite-progress 变体。
+
+**风格画像来源**: gulati_nohria_zaheer_2000 (SMJ)
+
+<!-- wb:gulati_nohria_zaheer_2000_strategic_networks:tension_attention_asymmetry_theory_corollary -->
+
 ## 组装规则
 
 ### 反模式提醒

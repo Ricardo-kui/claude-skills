@@ -210,6 +210,31 @@ source: Extracted from MVP30 narrative_analysis files + zorn2017 distill
 
 <!-- wb:fini_2017_social_valuation_across_multiple_audiences_the_int:stakes-two-sided-noncore-diversification -->
 
+
+### 变体 I：现象扩散+中心性重定位型（gulati_nohria_zaheer_2000 型）
+> 论证角色：Evidence→Warrant（现象扩散为缺口供压，行业例证作 showing，中心性宣告收束）
+**模板**:
+> "Given the rapid proliferation of [phenomenon] in recent years, neglecting [lens] can lead to an incomplete understanding of [outcome]. The example of one [setting], [setting name], suggests how [field] can no longer be meaningfully analyzed without considering [lens]. In the current [context], therefore, a heightened awareness of [lens] becomes a central, rather than a peripheral, exercise toward understanding [outcome]."
+
+**来源**: Gulati, Nohria & Zaheer 2000 (SMJ), P6
+
+**原文锚定**:
+> "In the current business context, therefore, a heightened awareness of the strategic networks in which firms are situated becomes a central, rather than a peripheral, exercise toward understanding firm strategy and performance."
+
+**关键特征**:
+- 以现象扩散速度（rapid proliferation）而非量化损失建立紧迫性——综述体裁合法的 Stakes 供压方式
+- 单一行业例证作 "without [lens] 分析失效" 的 showing 证据（fewer suppliers / longer-term relationships / supplier involvement 三变化）
+- "central, rather than a peripheral" 插入式对比收束：把透镜从边缘分析工具重定位为核心装置
+- therefore 显式标记从证据到宣告的推理步
+
+**适用**: 概念/综述引言需要 Stakes 但无可量化损失时；现象（关系形态/技术/制度）正在快速扩散的研究。
+
+**禁忌**: 行业例证须真实可查且变化具体；无例证时中心性宣告空转，退回 01-general-theory-practice 常规变体。
+
+**风格画像来源**: gulati_nohria_zaheer_2000 (SMJ)
+
+<!-- wb:gulati_nohria_zaheer_2000_strategic_networks:stakes_proliferation_centrality_reframe -->
+
 ## 插入位置指南
 
 | 布局类型 | 推荐插入位置 | 形式 | 长度 |

@@ -301,6 +301,24 @@ source: Manually curated from MVP30 narrative_analysis files
 
 ---
 
+
+### 变体 L：定义兼容悖论消解型（gulati_2007_tent_poles 型）
+> 论证角色：[D] 定义前提（以词典定义的表面兼容性为前提，反推营垒行为的悖论，为"社会建构"诊断供压）
+**模板**:
+> "By [standard definition], [value B] is '[gloss: practical applicability]'; at first glance this is not antithetical to [value A] ('[gloss: exactness/precision]'). Indeed, most [members of the field] would prefer [work that is both]. But the very existence of [opposed camps] around [A] and [B] suggests otherwise: the divide is [an artifact of the field's own social dynamics] rather than [a genuine incompatibility between the two values]."
+**来源**: gulati_2007_tent_poles (AMJ), P2（诊断复述于 P4）
+**原文锚定**:
+> "Indeed, I would assume that most management researchers prefer research to be both applicable and exact, relevant and rigorous. But the debate between seemingly separate camps of relevance and rigor suggests otherwise."
+**关键特征**:
+- 矛盾载体是定义层前提与领域行为的反差（定义兼容 vs 营垒对立），不是实证发现与理论预测的矛盾——与 04 族 A-K 全部变体的证据型矛盾不同
+- "suggests otherwise" 单句 pivot 完成从定义层到社会事实层的跳转；随后把 divide 归因于社会建构（forces/tribes），而非文献遗漏（Incompleteness）或理论缺陷（Inadequacy）
+- 归因诊断可跨段复述收束（P4 "At the core of this doubt is our field's artificial polarization"）——ring 式再锚定
+- 天然配身份/制度类解释机制（tribes、closed loops、boundary spanners），为 Mode/Question 型贡献奠基
+**适用**: Incommensurability x Mode/Question；领域级二元对立（rigor-relevance、quant-qual、micro-macro）被主张为人为建构的评论文或概念文；P2-P3 有可引的领域权威声音时效果最佳
+**禁忌**: 词典定义诉求在 2020s 实证论文中显旧——用于概念史/评论场景，或改引领域权威用法；不要在没有后续社会机制解释（谁、如何建构了对立）的情况下使用本变体，否则消解只是断言
+
+<!-- wb:gulati_2007_tent_poles:tension_definitional_paradox_unmasking -->
+
 ## 组装规则
 
 ### 必须配对

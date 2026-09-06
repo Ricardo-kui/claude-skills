@@ -723,6 +723,29 @@ P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者
 
 <!-- wb:gulati_1999_where_do_interorganizational_networks:preview_exo_endo_dual_driver_synthesis_gulati1999networks -->
 
+
+### 变体 AC：构念对定义+主张阶梯预告型（gulati_lavie_singh_2009 型）
+
+**模板**:
+> "We proceed by analyzing the distinctive facets of [facet A] and [facet B]. The former refers to [definition A], which, in turn, may [mechanism A]. The latter encompasses [definition B], which may also [mechanism B]. We suggest that [gains from A] are limited because [non-fungibility reason]. We further claim that [X] sets an insufficient condition for [Y], and thus consider how the contribution of [B] is contingent on [moderator 1], [moderator 2], and [moderator 3]. To demonstrate [X] effects, we adopt [unit of analysis] as the unit of analysis, and following a widely used approach, we measure [DV operationalization] as an indication of [theoretical outcome]. We test our hypotheses with [sample scope]."
+
+**来源**: Gulati, Lavie & Singh (SMJ), P4
+
+**原文锚定**:
+> "We suggest that a firm's gains from general partnering experience are limited because some experience benefits are not completely fungible across all alliances and entail relation-specific factors that emerge only in recurrent alliances with specific partners."
+
+**关键特征**:
+- 预览段先以 The former/The latter 镜像句式给构念对"定义即辨析"，再走主张阶梯：构念 A 收益限定（limited because 非互换性）→ 构念 B 不充分性（insufficient condition）→ 三调节条件化，理论主张在引言内完整成形但不剧透结果方向
+- 主张理由嵌入预告：limited 的原因（benefits not fungible / relation-specific factors）直接预告 Theory 段的机制，而非只报"我们检验 X 对 Y"
+- 方法句自带合法性辩护：adopt [unit] + following a widely used approach + measure [DV] as an indication of [construct]，把操作化选择锚到领域惯例而非辩解性论证
+- 三个预告层次（定义/主张/方法）单段压缩完成，与 P3 贡献段的问-答契约对齐
+
+**适用**: 构念可分解为 A/B 两面且理论主张为"权变/非互换性"的研究；Inadequacy×Boundary 组合的 Preview 段；事件研究等借用成熟操作化的实证设计。
+
+**禁忌**: 构念对定义须与 Theory 段正式定义一致——引言版定义是预告不是正式定义；调节器列举须与假设结构一一对应；"widely used approach" 辩护仅适用于确有成熟惯例的操作化，新测量法不得借用。
+
+<!-- wb:gulati_lavie_singh_2009_partnering_experience:preview_construct_pair_claim_ladder -->
+
 ## 组装规则
 
 ### 必须配对

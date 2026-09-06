@@ -149,6 +149,31 @@ source: Extracted from Malik_etal_2025_JM distill-introduction-exemplar + ridge2
 
 **禁忌**: 误信主张需有文献锚点（可引用"呼吁警惕"类论文）；不要泛化为"所有决策者都会误判"，点名具体决策角色。
 
+
+### 变体 E：Undertaking 前置双受益型（gulati_higgins_2003 型）
+
+> 论证角色：Reason（重要性论证——在 RQ 完整落地前先论证"这项事业值得做"，反证锚定 + 双受益收束）
+
+**模板**:
+> "Understanding [whether, how, and what circumstances modify the effect of X on Y] is an important undertaking, considering [cited counter-evidence that the assumed-beneficial factor can backfire] ([citation]). Attempting to understand [the contingency] should help [scholars] and [practice actors] better [cope with varying conditions]. This also enriches [the parent theory] by specifying the conditions under which [core mechanism] affects [outcome]."
+
+**来源**: Gulati & Higgins (SMJ, 2003), P2
+
+**原文锚定**:
+> "Understanding whether, how, and what circumstances modify the effects of embeddedness in various kinds of networks for young firms is an important undertaking, considering recent scholarship that has indicated that ties can have deleterious effects on firm outcomes (e.g., Gargiulo and Benassi, 1999)."
+
+**关键特征**:
+- 位置前移：整段 Stakes 在 RQ/完整 Tension 之前，形成"undertaking 论证 → 下一段才给 RQ"的倒装节奏
+- 重要性锚在引用的反证上（"considering recent scholarship that has indicated that ties can have deleterious effects"）而非空断言
+- 双受益收束：前句实践受益（创业者应对市场条件），后句理论受益（enriches the network perspective by specifying conditions）
+- "whether, how, and what circumstances" 三连问把研究维度预先编码进重要性句
+
+**适用**: Incompleteness 论文中缺口来自"条件未定"而非"现象未见"时；适合把现象级反证（副作用/失效证据）作为重要性锚点的研究
+
+**禁忌**: 没有可引用的反证时不要用 "considering..." 句式——重要性感会塌成断言；前置 Stakes 后必须紧接明确的 RQ 段，否则读者失去靶点
+
+<!-- wb:gulati_higgins_2003_which_ties_matter:stakes_undertaking_fronted_dual_beneficiary -->
+
 ## 期刊适配
 
 | 期刊 | 适配度 | 注意事项 |

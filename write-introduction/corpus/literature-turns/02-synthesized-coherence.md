@@ -157,6 +157,31 @@ P2-P3 的功能：连接多个文献流，展示它们共享一个盲区——�
 ---
 
 
+
+### 变体 I：综述双流合流型（gulati_nohria_zaheer_2000 型）
+> 论证角色：Framing（以成长宣告+双流并置替代盲区批评，为综述的整合主张供货）
+**模板**:
+> "There is a growing body of research in [field] that is coming to terms with [phenomenon]. Research on [early stream] was among the first to [pioneer contribution]. More recently, research on [stream 2], [stream 3], and [stream 4] have examined [topic] from a variety of theoretical perspectives, levels of analysis, and outcomes. This considerable and growing research tradition attests to the importance of [topic] and highlights the need for coalescing and focusing the research in this area. Concurrent with the interest in [stream family A] is a growing interest in [stream family B]..."
+
+**来源**: Gulati, Nohria & Zaheer 2000 (SMJ), P3-P4
+
+**原文锚定**:
+> "There is a growing body of research in strategy that is coming to terms with the economic consequences of firms participating in strategic networks. ... This considerable and growing research tradition ... highlights the need for coalescing and focusing the research in this area."
+
+**关键特征**:
+- 说服动作是"合法性宣告+整合号召"而非"集体盲区批评"——缺口指向整合缺失而非既有文献错误
+- 双流并置：领域内生流（本节 P3）与邻近学科流（本节 P4）用 "Concurrent with the interest in [A] is a growing interest in [B]" 平行句式桥接
+- 以领域成熟度证据（growing / considerable / variety of perspectives）为综述体裁授权，收束于聚焦号召而非研究呼吁
+- 流清单按时间分层（among the first → more recently），每流挂 2-3 个锚点引用
+
+**适用**: 综述/概念界定型引言（special issue 引言文、术语界定综述文）；需要为整篇综述宣告"整合既有流"的议程时。与 02-synthesized-coherence 主变体的区别：主变体批评多传统在交汇处的集体盲区，本变体庆祝多传统的成长并号召凝聚。
+
+**禁忌**: 实证论文慎用——无缺口批评的合流号召会弱化 Tension；引用流必须真实存在且可追溯，不得为授权感虚构" growing tradition"。
+
+**风格画像来源**: gulati_nohria_zaheer_2000 (SMJ)
+
+<!-- wb:gulati_nohria_zaheer_2000_strategic_networks:litturn_review_dualstream_convergence -->
+
 ### 变体 H：双职能并置型（carpenter_westphal_2001 型）
 
 **模板**:

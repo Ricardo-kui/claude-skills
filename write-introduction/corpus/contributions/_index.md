@@ -378,7 +378,7 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 | Theory Lens 处理 | 独立段落 | 嵌入 Tension/Contribution |
 | 适用期刊 | AMJ, ASQ, OS | JM, JOM, SMJ |
 | 风险等级 | 低 | 中（需要充分文献支撑）|
-| `metatheory-anchored-contribution.md` | `metatheory-anchored-contribution` | 变体 A：经典二重性接驳型——In-theoretical-terms-akin-to 把主题级贡献接驳到学科经典二重性一侧机制，gulati1999networks，VERIFIED (单源 Gulati 裁定) |
+| `metatheory-anchored-contribution.md` | `metatheory-anchored-contribution` | 变体 A：经典二重性接驳型——In-theoretical-terms-akin-to 把主题级贡献接驳到学科经典二重性一侧机制，gulati1999networks，VERIFIED (单源 Gulati 裁定)；变体 B：增量-重构阶梯型——让步递进+解释模型重构宣告（atomistic→relational 式），gulati_nohria_zaheer_2000，EMERGING |
 
 ---
 
@@ -637,6 +637,31 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 **验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 
 <!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:contribution_lineage_completion_second_order -->
+
+
+### 变体 V：公理条件化型（gulati_higgins_2003 型）
+
+> 论证角色：Claim（贡献主张——不推翻共享公理，而是给出公理成立的条件，Boundary 型贡献）
+
+**模板**:
+> "Much of the research on [X] has revolved around the general axiom that more [X] is 'better'—that [axiom elaboration]. The present study challenges this basic assumption by examining the conditions under which more is indeed better for [focal actors] and which kinds of [X] are more beneficial than others. Thus, we contribute to research on [theory stream] by examining the contingent value of [X]."
+
+**来源**: Gulati & Higgins (SMJ, 2003), P5
+
+**原文锚定**:
+> "Much of the research on interorganizational relationships has revolved around the general axiom that more embeddedness is 'better'—that having ties to powerful and central actors is particularly beneficial. The present study challenges this basic assumption by examining the conditions under which more is indeed better for entrepreneurial firms and which kinds of specific ties are more beneficial than others."
+
+**关键特征**:
+- 公理用引号钉出（more [X] is 'better'），把共识变成可检对象而非稻草人
+- 条件化而非反驳："the conditions under which more is indeed better" 明确让步公理在某些条件下成立——挑战的武器是 when，不是 no
+- 双重挑战维度：既问条件（when），又问种类（which kinds）——Boundary 贡献天然带出分类学
+- "Thus, we contribute... by examining the contingent value" 一句把挑战折算成显式 Makadok Boundary 声明
+
+**适用**: Incompleteness（主导）+ 轻度 Inadequacy；论文贡献是给"越多越好"类单调公理画出非单调边界的研究；SMJ/AMJ 风格
+
+**禁忌**: 若论文实际推翻而非条件化公理，勿用（应改用 Challenge Implicit Assumption 型变体 J 的 we-show-that 反证句式）；公理必须在文献中真实存在且被广泛默认
+
+<!-- wb:gulati_higgins_2003_which_ties_matter:contribution_axiom_conditionalization -->
 
 ## 组装规则
 

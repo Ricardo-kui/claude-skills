@@ -84,6 +84,24 @@ to achieve a desired orientation toward [outcome]."
 
 ---
 
+
+### 变体 B：立场宣告消解型（gulati_2007_tent_poles 型）
+> 论证角色：Framing（经典辩论开场即第一人称消解为社会建构的人工二分，为规范模型立场宣告供架——与主模板/变体 A 的中立性相反）
+**模板**:
+> "[Long-standing debate] among [field] scholars concerns [value A] versus [value B] for [the field's work]. Over time this has hardened into an either/or argument in which [studies], [researchers], and even [institutions] are quickly sorted into [opposed camps]. I argue that this divide is largely socially constructed by [forces inside and outside the field's institutions], and that it is perpetuated by [identity-based groups] organized around each value, which [close off exchange] and dismiss outsiders by whether they include or exclude [the contested element]. I offer here a [normative model] with recommendations for bridging the artificial [A]-[B] divide through [a constructive alternative] grounded in [theory]."
+**来源**: gulati_2007_tent_poles (AMJ), P1
+**原文锚定**:
+> "A long-standing debate among management scholars concerns the rigor, or methodological soundness, of our research versus its relevance to managers. I argue that this debate is largely socially constructed by forces both internal and external to business schools."
+**关键特征**:
+- 开场即第一人称立场宣告（"I argue"）——不做中立摆渡，直接把辩论消解为"社会建构的人工二分"；与主模板 "Rather than attempting to settle..." 的中立实证重构、变体 A 的中性设问均为不同说服动作
+- 辩论双方不被当作理论视角而被当作身份群体（camp/silo/tribe/closed loop）——诊断层次从理论分歧移到领域社会实践
+- 首段即完成 Hook+Tension+Thesis+Contribution 四合一（leadership paragraph），并在收尾句预告规范模型——评论/论坛体的典型前置结构
+- 消解算子是规范性替代（both/and 的建构性研究纲领），不是 R1-R4 的任何一种裁决式解析
+**适用**: 评论/论坛体（commentary/essay）或以"领域辩论为社会建构"为核心主张的理论文；Gap=Incommensurability 且 resolution 是消解二元对立+规范模型，而非实证裁决时选用
+**禁忌**: 实证论文慎用——中立性是辩论 Hook 的常规保护（文件反模式"不要偷偷偏袒"），本变体例外成立的前提是贡献本身是规范性重构；立场宣告需全文兑现（正文须真的给出 bridging 方案）
+
+<!-- wb:gulati_2007_tent_poles:hook_debate_stance_dissolution -->
+
 ## 组装规则
 
 ### 必须配对

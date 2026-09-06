@@ -158,6 +158,31 @@ source: Distilled by distill-introduction-exemplar from Hoffmann et al. 2024 JM;
 
 **禁忌**: "resolving" 是强承诺——正文必须真的解决前文点名的每一重张力；类型学须是该文献内生的，不可拼贴外来二分。
 
+
+### 变体 F：受众错误关注切换型（gulati_higgins_2003 型）
+
+> 论证角色：Warrant（解释担保——用注意力基础观说明为何外生条件会改变信号的相对价值，为调节假设提供机制授权）
+
+**模板**:
+> "The theoretical underpinning for our claim is the proposition that [exogenous condition] focuses [external evaluators]' attention on different sets of [concerns]. [Evaluators] are generally concerned about making two types of errors: [error of commission] and [error of omission]. The extent to which [evaluators] attend to one or the other is likely to vary with [condition], and since [signals] provide important information about [quality], they become more or less important depending upon [which concern prevails]."
+
+**来源**: Gulati & Higgins (SMJ, 2003), P4 + P6
+
+**原文锚定**:
+> "The theoretical underpinning for our claim is the proposition that different types of market uncertainty focus investor attention on different sets of factors." / "We propose that investors are generally concerned about making two types of errors: investing in unworthy firms and missing good opportunities."
+
+**关键特征**:
+- ABV 的受众重定向：注意力从经典的管理者（Ocasio）转移到外部评价者（投资者），透镜移植而非透镜原创
+- 两类错误框架：commission error（投错坏企业）vs omission error（错过好机会）——用决策理论词汇把"市场情绪"操作化
+- 错误关注 ↔ 条件绑定：哪类错误占上风由外生条件（市场冷暖）切换，产生调节逻辑
+- 信号加权收束：注意力分配最终折算为"不同信号变得更重要或更不重要"，直接为"哪类关系何时有用"供能
+
+**适用**: Incompleteness × Boundary/Mechanism；外生环境状态切换外部评价者（投资人/评审/买家）两类决策错误显著性的研究；金融化情境（IPO/信贷/评级）尤其适配
+
+**禁忌**: "两类错误"必须互斥且覆盖评估者的真实决策空间，否则是假二分；透镜服务调节假设时必须显式说明注意力→信号加权的传导，不能只贴 ABV 标签
+
+<!-- wb:gulati_higgins_2003_which_ties_matter:theory_lens_abv_audience_error_switching -->
+
 ## 组装规则
 
 ### 必须配对

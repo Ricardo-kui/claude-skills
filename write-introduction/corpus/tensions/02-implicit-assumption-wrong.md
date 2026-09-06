@@ -259,6 +259,29 @@ Inadequacy 问题化的核心 Tension：不是"文献遗漏了东西"，而是"�
 
 <!-- wb:zajac_westphal_the_social_construction_of_market_value:tension_rival_corollary_falsifiable_prediction -->
 
+
+### 变体 J：混合发现→四问级联型（gulati_lavie_singh_2009 型）
+
+**模板**:
+> "Prior research has identified [X] as an important predictor of [Y], arguing that [X] contributes to [capability] ([citations]). While this argument has been widely accepted in [field], studies that empirically tested this proposition have revealed mixed or limited support ([citations]). These mixed findings raise several questions: [Q1 类型问：Are there distinctive types of ... that differentially impact ...?], [Q2 条件问：Are there certain conditions under which ...?], [Q3 行为者问：Which ... extract the most benefits ...?], [Q4 配对问：What types of ... are most desirable ...?]"
+
+**来源**: Gulati, Lavie & Singh (SMJ), P2
+
+**原文锚定**:
+> "While this argument has been widely accepted in strategic alliances research, studies that empirically tested this proposition have revealed mixed or limited support. These mixed findings raise several questions: Are there distinctive types of experience that differentially impact the gains from alliances?"
+
+**关键特征**:
+- 混合发现不推翻命题而是"分解"命题：四问级联按 类型→条件→行为者→配对 四个维度枚举，把单一主效应命题的实证不一致转译为可检验的权变问题清单
+- 问句语法从 Are there（存在问）滑向 Which/What（选择问），暗示答案是分类学+边界条件框架，而非简单的正负效应裁决
+- "widely accepted" 与 "mixed or limited support" 的对照完成 Inadequacy 定位：不缺研究数量，缺的是命题的精细化——回避了 "few studies" 式 Incompleteness 语言
+- 问-答契约：级联问句在 Tension 末抛出，Contribution 段逐一回收（extend 类型辨析 / uncover boundary conditions / 指定最受益者与配对条件），四问即全文假设地图
+
+**适用**: Inadequacy×Boundary/Mechanism 组合；已有广为接受的主效应命题但实证结果 mixed/limited 的领域；SMJ/AMJ 理论精细化型论文。共识尚未形成的新话题不适用。
+
+**禁忌**: 四问必须是论文实际回答的问题（问-答契约），不得堆砌修辞性问题；问句 3-4 个为限，过多稀释焦点；不得与 "few studies have examined" 混用——那是 Incompleteness 语言，与本变体的 Inadequacy 定位冲突。
+
+<!-- wb:gulati_lavie_singh_2009_partnering_experience:tension_mixed_findings_question_cascade -->
+
 ## 组装规则
 
 ### 必须配对
