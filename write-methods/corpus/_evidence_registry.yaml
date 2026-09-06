@@ -429,7 +429,7 @@ evidence:
       note: "整篇蒸馏 4 条写回：非线性模型 M8 风险集-假设映射+Heckman 泛化（EXTEND 变体21 后）；micro-templates/manual-coding-validation M3/M4 多源构念效度三角化（双问卷/多行为者，EXTEND 变体B 后）；同伴效应-网络效应 M4 间接关系长度/分离/分层控制 + M4 操作化谱系 PCA 合成（ADD×2，该族第 2 源）。SKIP：非应答 K-S+Heckman 辩护链（carpenterwestphal2001 + westphal_bednar2005 既有链已覆盖）。era flags：LISREL/Bartlett、kappa 四分位离散化、Heckman 无排除限制、response-rate 步骤 ritual_only。"
   by_design_type:
     面板数据-OLS:
-      paper_count: 24
+      paper_count: 26
       papers:
       - lee_park_2024_smj (SMJ)
       - bendig_hensellek_schulte_2024_etp (ETP)
@@ -455,6 +455,8 @@ evidence:
       - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
       - higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe (Organization Science)
       - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int (Administrative Science Quarterly)
+      - gulati_higgins_2003_which_ties_matter (Strategic Management Journal)
+      - gulati_lavie_singh_2009_partnering_experience (Strategic Management Journal)
       status: VERIFIED
       slots_covered:
       - M1
@@ -671,7 +673,7 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     事件历史+事件研究:
-      paper_count: 6
+      paper_count: 7
       papers:
       - chen_ganesan_liu_2009_jm (JM)
       - pontikes2012 (ASQ)
@@ -679,6 +681,7 @@ evidence:
       - shi2021 (JMR)
       - zhou2017 (ASQ)
       - zajac_westphal_the_social_construction_of_market_value (American Sociological Review)
+      - gulati_lavie_singh_2009_partnering_experience (Strategic Management Journal)
       status: ROBUST
       slots_covered:
       - M2
@@ -854,7 +857,7 @@ evidence:
       - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int (ASQ)
       status: VERIFIED
     两阶段模型:
-      paper_count: 8
+      paper_count: 9
       papers:
       - chen_ganesan_liu_2009_jm (JM)
       - chung_low_rust_2022_jams (JAMS)
@@ -864,6 +867,7 @@ evidence:
       - zhou2017 (ASQ)
       - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
       - gulati2005-adaptation-vertical (Strategic Management Journal)
+      - gulati_higgins_2003_which_ties_matter (Strategic Management Journal)
       status: ROBUST
       slots_covered:
       - M7

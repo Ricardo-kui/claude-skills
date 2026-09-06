@@ -1,6 +1,7 @@
 # Paper-State Schema — Methods 输出片段（从 SKILL.md 下沉，v0.1）
 
 > 由 write-methods 输出末尾**对照使用**：附加 `### paper-state.yaml 片段` 块，供 write-results Phase 0 自动消费。
+> 字段与 `../paper-state-protocol/references/schema.md` 权威 schema 对齐；本文件只定义 methods 节的特有片段模板，协议层通用字段语义以 protocol 为准。
 
 Methods 骨架输出末尾自动附加以下片段。用户复制到项目 `paper-state.yaml` 的 `methods:` 节下：
 

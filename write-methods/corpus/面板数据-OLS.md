@@ -360,6 +360,19 @@ updated: 2026-08-13
 
 
 
+
+### 变体 92: M5 对手 IV 平行交互项 — 调节归属隔离 (1篇高价值)
+**来源论文**: Gulati, Lavie & Singh 2009 (Strategic Management Journal)
+**原始句锚点**: "In Models 4–6 we also included interaction terms for GPE in order to isolate the unique moderated contribution of PSE."
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
+**槽位**: M5
+**骨架**:
+> [Moderator] was incorporated as an interaction effect with [focal IV] for testing [Hypothesis N]. In Models [a–c] we also included interaction terms for [rival core IV] in order to isolate the unique moderated contribution of [focal IV].
+**适用场景**: 两个核心 IV（如一般经验 vs 特定经验）共享同一批 moderator 时，只交互焦点 IV 会被质疑「交互效应其实属于基线 IV」——给对手 IV 也配一套同款 moderator 交互项作镜像控制，把「被调节的是谁」钉死在焦点 IV 上。
+**与原骨架差异**: 区别于变体 37（rival 镜像控制——同一构念在对手侧重算入模的主效应/控制）：本变体的镜像发生在**交互项层面**（给竞争 IV 配同款 moderator 交互），且目的不是吸收 omitted variable 而是隔离「unique moderated contribution」——调节归属声明。
+
+<!-- wb:gulati_lavie_singh_2009_partnering_experience:m5_rival_iv_parallel_interactions -->
+
 ### 变体 65：时间括弧控制 + 反向相关保守性声明（westphal_zajac_1998_symbolic_management 型）
 
 **模板**:
@@ -1516,6 +1529,49 @@ story_fidelity: section_variant
 **适用**: 双边依赖/非对称构念（spline 分解）、加总 vs 乘积复合构念、差值 score 面临 polynomial 质疑的截面与面板设计。
 
 <!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:m4_spline_spec_alternative_defense -->
+
+
+### 变体 89：M2 选择修正驱动的风险集工程 — 从未发生单元+消亡单元并入使第一阶段可估（gulati_higgins_2003 型）
+
+**来源论文**: Gulati & Higgins 2003 (Strategic Management Journal)
+**原始句锚点**: "We also collected information on biotechnology firms that were founded in the same time period as our sample but that did not go public by 1996 (n = 468) ... Combining these private firms with our sample of firms that did go public yielded a final combined sample size of 858 firms."（跨段拼接，删节已标注）
+**验证状态**: EMERGING（单源）
+**槽位**: M2
+**骨架**:
+> Because [outcome] is observable only for [units] that [undergo the focal event], we constructed the sample as a full risk set rather than a sample of [event] units alone. We gathered records for [never-event] units founded in the same period that had not [undergone the event] by [year] (n = [n1]) from [database source], and added [never-event] units listed as [defunct/merged/acquired] in [industry guide, editions] with a founding date in the same period (n = [n2]). The resulting risk set of [N] units allows the likelihood of [undergoing the event] to be modeled in a first-stage selection equation and corrected for in the second stage, using covariates observed for the full risk set ([covariate 1], [covariate 2], [covariate 3]).
+**与原骨架差异**: 变体 80（生存者条件化修复）修的是**清单覆盖选择**——回收"经历事件但未存活到编表年"的事件单元，理由是清单以存活为隐含条件；本变体修的是**结果可观测性选择**——从未发生事件（never-event）与已消亡的非事件单元被主动收集，理由是**选择修正本身需要事件发生率有变异**（第一阶段选择方程需要非事件单元），且第一阶段协变量受"全风险集可观测"约束。区别于非线性模型 m8_risk_set_hypothesis_mapping：彼处风险集因假设范围条件而**收窄**、再以选择校正补救；此处风险集为使选择校正**可估**而**扩张**。同一篇论文中两动作常先后出现（先回收消亡事件单元→再并入非事件单元）。
+**诚实边界**: 非事件单元的协变量可得性通常更薄——须声明第一阶段只能用双方都可观测的协变量（并接受排除限制论证受限，参见两阶段模型诚实边界）；风险集构成（事件/从未事件/消亡）须给逐项 N；消亡私有单元的并入判据（dead/merged/acquired 的记录来源）须可审计。
+**适用**: 结果仅对事件单元可观测（IPO 绩效、上市后表现、失败后行为）、计划用 Heckman/选择修正且需在数据采集阶段构造事件发生变异的截面档案研究。
+
+<!-- wb:gulati_higgins_2003_which_ties_matter:m2_selection_engineered_risk_set -->
+
+
+### 变体 90：M5 市场条件调节指数 — 领域专属优越性+惯例细粒度升级+事件时点对齐（gulati_higgins_2003 型）
+
+**来源论文**: Gulati & Higgins 2003 (Strategic Management Journal)
+**原始句锚点**: "The index included in our models is a finer-grained measure of market conditions than has been used recently in research on IPOs in the biotechnology industry (in which dummy variables for 'cold' market years were included)."
+**验证状态**: EMERGING（单源）
+**槽位**: M5（调节变量操作化；兼具 M4 色彩）
+**骨架**:
+> We employed a[n] [construct] index developed by [author, year] and widely cited and used in [field A] and [field B] literature ([citations]), which gauges [what the index captures] for [domain]. [Author]'s ([year]) findings imply that [a domain-specific index] is the preferred method of capturing [the construct], as [conditions] vary across [domains] and not always in complete conjunction with [the general measure]. The index included in our models is a finer-grained measure of [conditions] than has been used recently in research on [the setting] (in which [cruder operationalization, e.g., dummy variables for favorable periods] was included) ([citation]). We used the value of the index at the end of the [period] prior to the [focal event] date for each of our [units] as our indicator of [conditions] at the time of the [event]. The [measure] thus ranges from low to high or from [unfavorable] to [favorable].
+**与原骨架差异**: 变体 82（采纳标准指数 DV 的出处—通行度—缺失—替代基准四拍链）面向 **DV 侧评级指数**，替代基准是"更简单的竞争测量"（如市场份额），并含缺失计数与端点标定；本变体面向**调节/市场条件指数**：(1) 领域专属优越性论证——"[conditions] vary across [domains] and not always in complete conjunction with the general [measure]"，为不用总体市场指标辩护；(2) 细粒度升级的对象是**近期研究的粗糙惯例**（冷/热市场哑变量）而非竞争性测量，把升级点锚在文献实践上；(3) **事件时点对齐**——取"事件前一期末"的指数值（月度校准），使调节变量时点先于结果实现；(4) 端点方向口语化标定（"from low to high or from [unfavorable] to [favorable]"）。
+**诚实边界**: "finer-grained than recent practice" 须引用真实存在的粗糙惯例文献；指数读取时点须早于结果实现且口径一致（月度 vs 年度）；领域专属优越性若仅出自原开发者研究，须注明是转述而非独立验证；连续指数 vs 哑变量的选择差异应在稳健性中回应。
+**适用**: 以行业/领域专属市场行情指数（发行窗口、融资窗口、政策景气）作调节变量或关键控制、需论证为何不用总体市场指标或年度哑变量的档案研究。
+
+<!-- wb:gulati_higgins_2003_which_ties_matter:m5_market_condition_index_eventtime_alignment -->
+
+
+### 变体 91: M7 分块模型架构 — 满模型参照披露+VIF 归因 (1篇高价值)
+**来源论文**: Gulati, Lavie & Singh 2009 (Strategic Management Journal)
+**原始句锚点**: "We relied on these partial models (Models 2–6) for testing our hypotheses since the full model (Model 7, reported for reference only) suffered from multicollinearity (VIF = 34.145)"
+**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
+**槽位**: M7
+**骨架**:
+> [Model 1] was a baseline model that included the [controls] and the [core IV]. [Model 2] introduced the [second IV] in order to test [Hypotheses X and Y]. [Hypothesis Z] was tested with [Model 3], which included the interaction effect of [IV2] with [moderator]. To avoid potential multicollinearity and following prior research ([citations]), some of the interaction effects were introduced in separate models. Consequently, variance inflation factors (VIF) of the independent variables fell below the critical value of [threshold] ([citation]), thus mitigating concerns of multicollinearity. We relied on these partial models (Models [a–b]) for testing our hypotheses since the full model (Model [c], reported for reference only) suffered from multicollinearity (VIF = [value]) as a result of the simultaneous inclusion of [competing IVs] and multiple interactions ([number] permutations). Such multicollinearity may produce misleading results since it artificially inflates the p-values of the individual effects ([citation]).
+**适用场景**: 多交互项 OLS 设计中交互项无法同时入模（共线性爆炸）、需要交代「为什么主表是分块模型」时——基线→逐假设加块→分块入模的 VIF 依据→满模型仍披露但标注 reference only 并给出 VIF 数值与 p 值扭曲机制。
+**与原骨架差异**: 面板数据-OLS 此前无 VIF/共线性架构变体——本变体把「分块入模」从默认操作升格为可辩护决定：VIF 阈值引用（<10）+ 满模型 reported for reference only 仍披露具体 VIF（34.145）+ 一句机制解释（artificially inflates the p-values）+ 承诺以哪几个 partial models 检验假设。
+
+<!-- wb:gulati_lavie_singh_2009_partnering_experience:m7_partial_models_full_model_vif_disclosure -->
 
 ## 反模式
 

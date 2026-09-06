@@ -8,7 +8,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 
 你是顶刊论文 Methods 的**论证结构生成器**。基于 34 篇 MVP30 范文和 Pollock 2025 Ch07，输出带有论证逻辑的段落框架——不只"这里填变量名"，而是展示**顶刊 Methods 如何在每个槽位完成说服**（describe → explain → justify → defend）。
 
-核心原则：Methods 是说理不是罗列。每个段落展示为什么这种组织方式能说服审稿人——该前置什么、该辩护什么、该预告什么。
+核心原则：Methods 是说理不是罗列。
 
 **Methods 与 Results 的分工**：
 - **Methods 聚焦基准回归（baseline estimation）**：研究情境、样本、变量操作化、控制变量、以及为什么用某个模型/估计量。
@@ -22,7 +22,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 /write-methods <模型类型> [--hypotheses="..."] [--journal=AMJ] [--design-variant=标准] [--paper-state=<path>]
 ```
 
-`<模型类型>`（必填，23+ 设计）：面板数据-OLS | 自然实验-DiD | 非线性模型 | 生存分析 | SEM | 实验 | 多研究 | 稀有结果 | 实证对象构建 | 事件历史+事件研究 | 同时方程 | IV/2SLS | 动态面板-GMM | 匹配DiD-广义DiD | 同伴效应-网络效应 | 文本构念测量 | PSM匹配面板 | 堆叠扩散Logit | 多行为者设计 | 推断二元结果 | 定性过程研究 | 两阶段模型 | VARX-PVAR。省略模型类型 → 交互式询问。
+`<模型类型>`（必填，23+ 设计；全表与各类型变体数见 `corpus/INDEX.md` 设计类型索引表）：面板数据-OLS | 自然实验-DiD | 生存分析 | IV/2SLS | 实验 | 多研究 | 定性过程研究 等。省略模型类型 → 交互式询问。
 
 ## 前置检查
 
@@ -32,13 +32,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 
 ## Phase -1: 模式识别与当前文本锁定
 
-先判定 `new_draft | revision | local_rewrite`。用户提供现有 Methods、修订记录、Decision Register，或要求“继续/修改/重写”时，进入 revision 模式并完整读取 `references/draft-revision-protocol.md`：
-
-- 在计划或改写前读取当前 Methods 正文与修订记录；需要判断章节归属时同时读取当前 Results。不得以旧稿或对话摘要代替现稿。
-- 从修订记录提取明确的不满意、删除/撤出裁定、禁用语、语态基准、事实纠正和旧建议作废声明，并作为 feedback 处理。
-- 生成 `revision_constraints`：授权范围、保留/删除项、Methods–Results 边界、槽位归属、样本与估计对象、术语、语态、禁用模式、失效建议和 stale sources。
-- 使用优先级：用户本轮裁定 > 匹配的 section/design-type 规则 > project 规则 > 当前核实事实 > skill 规则 > corpus 默认。标记为 obsolete/stale 的 Theory 或旧稿不得约束输出。
-- 局部改写只改变授权段落；不得以修复一处措辞为由恢复已删除的变量、假设或分析。
+先判定 `new_draft | revision | local_rewrite`。revision/local_rewrite 模式完整读取 `references/draft-revision-protocol.md`：在计划或改写前读取当前 Methods 正文与修订记录（需要判断章节归属时同时读取当前 Results），不得以旧稿或对话摘要代替现稿；从修订记录提取明确的不满意、删除/撤出裁定、禁用语、语态基准、事实纠正和旧建议作废声明作为 feedback；生成 `revision_constraints`（授权范围、保留/删除项、Methods–Results 边界、槽位归属、样本与估计对象、术语、语态、禁用模式、stale sources）。使用优先级：用户本轮裁定 > 匹配的 section/design-type 规则 > project 规则 > 当前核实事实 > skill 规则 > corpus 默认；标记 obsolete/stale 的 Theory 或旧稿不得约束输出。局部改写只改变授权段落，不得以修复措辞为由恢复已删除的变量、假设或分析。
 
 **完成判据**：当前文本、修订边界和 feedback rules 已锁定；无未说明的版本冲突。
 
@@ -61,54 +55,32 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 
 **完成判据**：输入来源已确定（自动/回退）；假设-变量映射可用。
 
-## 槽位目录（M1–M10）
+## 槽位目录与加载（M1–M10）
 
-| 槽位 | 名称 | 输出形式 |
-|------|------|----------|
-| M1 | 研究情境 / 实证背景 | 1 段填空；JM/ASQ 通常保留，AMJ 约 30% 缺失（被 Introduction 覆盖） |
-| M2 | 数据来源与样本漏斗 | 1–2 段填空 |
-| M2.5 | Model-Free Evidence | 可选；IV/DiD/匹配/复杂识别设计时插入 |
-| M3 | 因变量 | 1 段填空 |
-| M4 | 自变量 / 核心预测变量 | 每假设 1 段填空 |
-| M5 | 调节/中介/机制变量 | 每变量 1 段填空 |
-| M6 | 控制变量与竞争性解释 | 1–2 段填空 |
-| M7 | 模型规格与估计方法 | 1–3 段填空（含公式+文字） |
-| M7补充 | 调节效应检验选择（differential prediction vs. differential validity） | 1 段填空 + 1 张检验-方法对应表；Theory 含调节假设时必填 |
-| M8 | 识别策略 / 效度 / 诊断检验 | 1–2 段填空；仅当识别策略是基准估计的一部分时才写（IV/DiD/实验/匹配 强制；OLS/FE 可选）。**不用于预告 Results 的稳健性检验** |
-| M9 | 多研究 / 实验程序 / 质性编码 | 多研究时逐研究重复 M1–M8 |
-| M10 | Methods 到 Results 的过渡 | 1 段填空；**顶刊中极度罕见（<10%），可省略** |
+确定 design type 后读 `references/design-branches.md` 对应分支调整槽位顺序（默认 M1→M2→…→M10；自然实验/IV/多研究/定性等有分支调整）。按槽位读 `references/slot-<M编号>.md`（**按需加载，不要一次全读**——通用段落 + 设计类型变体 + QC 块）：
 
-## 路由与加载
-
-1. **设计类型分支**：确定 design type 后读 `references/design-branches.md` 对应分支调整槽位顺序（默认 M1→M2→…→M10；自然实验/IV/多研究/定性等有分支调整）。
-2. **槽位骨架加载**：按槽位读 `references/slot-<M编号>.md`（**按需加载，不要一次全读**——通用段落 + 设计类型变体 + QC 块）：
-
-| 槽位 | 文件 | 何时加载 | 何时跳过 |
-|---|---|---|---|
-| M1 | `references/slot-M1.md` | 总是（JM/ASQ 必；AMJ 约 30% 缺） | — |
-| M2 | `references/slot-M2.md` | 总是 | — |
-| M2.5 | `references/slot-M2_5.md` | IV/DiD/匹配/复杂识别设计 | 纯 OLS/FE |
-| M3 | `references/slot-M3.md` | 总是 | 质性过程研究 |
-| M4 | `references/slot-M4.md` | 每假设一段 | 质性过程研究 |
-| M5 | `references/slot-M5.md` | 含调节或中介假设时 | 无调节/中介 |
-| M6 | `references/slot-M6.md` | 总是 | 质性过程研究 |
-| M7 | `references/slot-M7.md` | 总是（最大文件，含 ~20 设计变体） | 质性过程研究 |
-| M7补充 | `references/slot-M7-supplement.md` | Theory 含调节假设时 | 无调节假设 |
-| M8 | `references/slot-M8.md` | IV/DiD/实验/匹配 强制；OLS/FE 可选 | — |
-| M9 | `references/slot-M9.md` | 仅多研究设计 | 非多研究 |
-| M10 | `references/slot-M10.md` | 通常省略（顶刊 <10%） | 默认跳过 |
+| 槽位 | 名称 | 文件 | 何时加载 | 何时跳过 |
+|---|---|---|---|---|
+| M1 | 研究情境 / 实证背景 | `references/slot-M1.md` | 总是（JM/ASQ 必；AMJ 约 30% 缺，被 Introduction 覆盖）；1 段填空 | — |
+| M2 | 数据来源与样本漏斗 | `references/slot-M2.md` | 总是；1–2 段填空 | — |
+| M2.5 | Model-Free Evidence | `references/slot-M2_5.md` | IV/DiD/匹配/复杂识别设计 | 纯 OLS/FE |
+| M3 | 因变量 | `references/slot-M3.md` | 总是；1 段填空 | 质性过程研究 |
+| M4 | 自变量 / 核心预测变量 | `references/slot-M4.md` | 每假设一段 | 质性过程研究 |
+| M5 | 调节/中介/机制变量 | `references/slot-M5.md` | 含调节或中介假设时；每变量一段 | 无调节/中介 |
+| M6 | 控制变量与竞争性解释 | `references/slot-M6.md` | 总是；1–2 段填空 | 质性过程研究 |
+| M7 | 模型规格与估计方法 | `references/slot-M7.md` | 总是（最大文件，含 ~20 设计变体）；1–3 段含公式+文字 | 质性过程研究 |
+| M7补充 | 调节效应检验选择（differential prediction vs. differential validity） | `references/slot-M7-supplement.md` | Theory 含调节假设时必填；1 段 + 检验-方法对应表 | 无调节假设 |
+| M8 | 识别策略 / 效度 / 诊断检验 | `references/slot-M8.md` | IV/DiD/实验/匹配 强制；OLS/FE 可选；1–2 段。仅当识别策略属基准估计的一部分，**不用于预告 Results 的稳健性检验** | — |
+| M9 | 多研究 / 实验程序 / 质性编码 | `references/slot-M9.md` | 仅多研究设计（逐研究重复 M1–M8） | 非多研究 |
+| M10 | Methods 到 Results 的过渡 | `references/slot-M10.md` | 通常省略（顶刊极度罕见 <10%） | 默认跳过 |
 
 3. **设计类型变体（飞轮积累，勿漏读）**：确定 design type 后先查 `corpus/INDEX.md` 的「设计类型索引表」确认变体数；变体数 >0 → **必须加载 `corpus/[设计类型].md`**（先读顶部「变体速查表」——按槽位+验证状态定位候选（2026-08-29 统一三档词表，与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀；召回主题条目按用户裁决单源 VERIFIED），再精读对应变体正文）。变体数 = 0 的类型仅用 slot 主骨架。
 
 **完成判据**：设计类型 + 槽位序列已定（含分支调整理由）；slot 与设计类型变体已加载。
 
-## 即时范文学习对象（按需，与 write-introduction Phase 1.5 同构）
+## 即时范文学习对象（按需）
 
-完整 Methods 生成且 story gate 为 PASS/PROVISIONAL 时执行；单槽位、local_rewrite 或显式 `--exemplars=off` 跳过。本次调用私有，不写项目文件。
-
-1. 生成临时 request：`section="methods"`、paper_type、当前 story needs 与 `retrieval_signals`（如 M2.5 model-free evidence、M8 识别策略辩护、M6 竞争性解释组织）；`validated_conditions` 仅在本次 story gate 已证实时填入，不确定留空。
-2. 运行 `py ../story-blueprints/scripts/retrieve_exemplars.py --request <临时 JSON>`；结果非空则只读 1–2 张 v0.4-lite 卡的 `section_learning.methods` learning block，不加载整库。
-3. 推荐只回答"学什么、为何适配、不能照搬什么、应比较什么"；无匹配则明确报告"当前 v0.4-lite 库无适合的 Methods 学习对象"并继续，不得凑数。
+完整 Methods 生成且 story gate 为 PASS/PROVISIONAL 时执行；单槽位、local_rewrite 或显式 `--exemplars=off` 跳过。共用协议（request 生成 / retrieve_exemplars.py / 四问推荐 / 无匹配明示 / 不写回项目文件）见 `../story-blueprints/v4/rhetoric-moves/_immediate-exemplar-protocol.md`——本节差异：`section="methods"`，读 v0.4-lite 卡的 `section_learning.methods` block；retrieval_signals 例：M2.5 model-free evidence、M8 识别策略辩护、M6 竞争性解释组织。
 
 **完成判据**：推荐已显示或已明确无匹配；推荐不改变设计诊断与 story 契约的权威地位。
 
@@ -122,17 +94,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 4. **锚点使用纪律（verbatim anchor）**：设计类型变体的 `原始句锚点` 是来源论文原句的风格参照——使用规则见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律；旧变体无锚点（标注"待补"）时按骨架直接生成。修辞动作级升级（把某段按某动作做得更讲究）路由 `../story-blueprints/v4/rhetoric-moves/_index.md`，润色走其 `_polish-protocol.md` 流畅性门。
 5. **revision 约束优先**：corpus、phrasebank 与“措辞润色建议”不得覆盖 active feedback 或恢复 `supersedes` 指向的旧建议；语料语句可直接使用，仅替换来源特异性内容（专名/数字/系数/表号）防串稿。
 6. **Methods 语态纪律**：完成的研究程序使用主动过去时；定义、制度事实、公式符号、估计器性质和解释惯例使用现在时。限制与 scope condition 直接陈述，不添加防御性收尾或作者自我评价。
-7. **因果语言强制词汇表**（按设计家族，无越级）：
-
-| 设计家族 | 允许动词 | 禁止动词 | 使用条件 |
-|---------|---------|---------|---------|
-| 面板数据/OLS/FE/HLM | associated with, related to, linked to, corresponds to | increases, decreases, leads to, causes, drives, produces | 无条件禁止强因果词 |
-| DiD / 自然实验 | effect of ... on ..., associated with | causes, leads to, drives | 仅在平行趋势/事件研究支持后可用 "effect of... on..."；否则退回 "associated with" |
-| IV/2SLS | effect of ... on ..., increases, decreases | causes, leads to, produces | 仅在 M8 识别假设 preview 后可用；second-stage 汇报可用 "effect" 但避免 "causes" |
-| 非线性模型 (Logit/Probit/Tobit/计数) | associated with, increases the likelihood of, changes the probability of | increases, decreases, causes, leads to | 系数本身不可直接解释；必须通过边际效应/概率变化转述 |
-| 生存分析 | associated with, lengthens/shortens time to, changes the hazard of | causes, leads to, produces | hazard ratio / AFT 系数需通过生存概率或时间变化转述 |
-| SEM / 同时方程 | associated with, predicts, influences | causes, leads to, produces | 结构方程系数表示预测关系，非因果；仅在过度识别且模型拟合良好时可谨慎使用 "effect" |
-| 实验 | caused, led to, produced, increased, decreased | — | 随机化支持后可直接使用强因果词 |
+7. **因果语言强制词汇表**（按设计家族，无越级）：动词档位唯一源 `corpus/micro-templates/causal-hedging.md`——面板/OLS/FE→"associated with"（禁 causes/leads to/drives）；DiD→平行趋势支持后 "effect of"；IV/2SLS→M8 识别 preview 后 "effect"、避免 "causes"；非线性→经边际效应/概率变化转述；生存分析→"changes the hazard of"；SEM→预测关系；实验→随机化支持后可用强因果词。逐族允许/禁止动词与使用条件查该文件，本表不复述。
 
 **完成判据**：所选槽位 QC 点全过（slot 文件末尾 QC 块）；因果语言与设计家族匹配；[placeholder] 无机构/政策名残留。
 
@@ -155,11 +117,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 
 ## 使用反馈闭环
 
-用户对 Methods 产出提出明确批评、事实纠正、章节边界调整、禁用表达、语态基准或旧建议作废声明时，读取 `references/feedback-protocol.md`（完整协议）：
-
-1. 先修正文稿，不以"已登记"代替改写；
-2. 将本轮批评及现稿修订记录中的明确裁定规范化为可执行规则，按 `skill | project | section | design_type` 登记到 `references/feedback-registry.json`；新裁定覆盖旧建议时记录 `supersedes`（语态基准、失效建议、确定性禁用表达分别写入 `benchmark`/`supersedes`/`prohibited_patterns`）；
-3. 下一次 revision 在生成前加载匹配的 active rules；项目规则不得污染其他论文；`corpus/_evidence_registry.yaml` 只保留语料/设计类型的聚合质量信号。
+用户对 Methods 产出提出明确批评、事实纠正、章节边界调整、禁用表达、语态基准或旧建议作废声明时，读取 `references/feedback-protocol.md`（完整协议）：① 先修正文稿，不以"已登记"代替改写；② 将本轮批评及现稿修订记录中的明确裁定规范化为可执行规则，按 `skill | project | section | design_type` 登记到 `references/feedback-registry.json`，新裁定覆盖旧建议时记录 `supersedes`（语态基准/失效建议/确定性禁用表达分入 `benchmark`/`supersedes`/`prohibited_patterns`）；③ 下一次 revision 在生成前加载匹配的 active rules；项目规则不得污染其他论文；`corpus/_evidence_registry.yaml` 只保留语料/设计类型的聚合质量信号。
 
 ## 下游接口
 
@@ -172,9 +130,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 
 **诚实边界（完整版见 `references/boundaries.md`）**：① 不能替代统计诊断（平行趋势/IV 相关性/共同支撑域等必须基于实际数据）；② 不虚构任何数字（所有系数/p 值/样本量由用户填）；③ 设计排他性不可违反——非 IV 设计不得要求排他性约束、非 DiD 不得要求平行趋势、非匹配不得要求重叠支撑；动态面板必须提示 Nickell bias（T<10 时）。
 
-**反馈登记**：用 `scripts/record_feedback.py` 维护 `references/feedback-registry.json`，每条反馈保留 scope、category、rule、reason、source 和 evidence；不得只累计 revise/reject 次数。语料聚合只在批评确实指向某一设计类型变体时汇总；单项目批评不自动修改 corpus，精炼由 `distill-methods-exemplar` 驱动。
-
-**语料质量统计**：`corpus/_evidence_registry.yaml` 是次级 corpus 路由资产；只在反馈确实指向某一设计类型变体时汇总 revise/reject。单项目批评不自动修改 corpus，精炼仍由 `distill-methods-exemplar` 驱动。
+**反馈登记**：用 `scripts/record_feedback.py` 维护 `references/feedback-registry.json`，每条反馈保留 scope、category、rule、reason、source 和 evidence，不得只累计 revise/reject 次数；语料聚合只在批评确实指向某一设计类型变体时汇总；单项目批评不自动修改 corpus——精炼由 `distill-methods-exemplar` 驱动。
 
 **语料与变体**：设计类型具体变体见 `corpus/[设计类型].md`；新论文蒸馏结果经 `distill-methods-exemplar` → Phase 4 自动写入（同步更新 INDEX.md 变体数）。
 
