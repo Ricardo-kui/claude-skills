@@ -69,7 +69,7 @@
 
 文法与拼贴判据见 `../story-blueprints/v4/rhetoric-moves/_argument-grammar.md`（先骨架后句子：语料句式按论证角色填位，风格让位于角色）。抽查对象：四个论证型模块（Tension/Stakes/Theory Lens/Contribution）各取信息量最大的一段：
 
-- **五问**：claim（段首 topic sentence）、reason（可质疑的推理 moves）、evidence 锚点（承重 reason 各配）、warrant（需要时）、A&R（预算内）各有句位可指认；
+- **五问**：claim（段首 topic sentence 或段末收束句，细则见文法）、reason（可质疑的推理 moves）、evidence 锚点（承重 reason 各配）、warrant（需要时）、A&R（预算内）各有句位可指认；
 - **拼贴判据**逐条不命中：不承重 / 证据孤儿 / warrant 悬空 / 无主段落 / 引用列队。
 
 不合格处置 = 按角色序列重组该段（骨架重排，语料句子保留），并列入"提醒"段。与首尾句测试（§3）的分工：§3 查跨段叙事连贯，本门查段内论证形状。

@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
   last_updated: '2026-09-07'
-  observations_processed: 49
+  observations_processed: 53
   description: Evidence ledger for write-theory design defects inferred from Theory exemplar distillation.
 defects:
   e-family-missing-dual-edged-signed-contingency-variant:
@@ -2625,3 +2625,228 @@ defects:
     auto_action:
       eligibility: optional_variant_only
       reason: Corpus changes do not alter core routing.
+  gate5-embedded-warrant-anchor-attribution:
+    classification: validator_defect
+    status: EMERGING
+    risk: low
+    current_rule: 五问#3 未规定句内 because-从句陈述的一般性原则/共享前提的锚点归属——随相邻 reason 锚点计，还是按分析性桥接免锚，判定摆动。
+    rule_excerpt: '| Corpus mosaic（语料拼贴） | 段落是否由语料句式顺序堆成——五问（claim/reason/evidence/warrant/A&R）无句位可指认，或命中证据孤儿 / warrant 悬空
+      / 引用列队？→ 按论证角色序列重组（句子保留、骨架重排），判据见 `../../story-blueprints/v4/rhetoric-moves/_argument-grammar.md` |'
+    rule_locator: write-theory/references/phase-4-qc-alignment.md 审计 1 Corpus mosaic 行；缺陷细则本体位于 story-blueprints/v4/rhetoric-moves/_argument-grammar.md
+      推论条（v1.2 已增内嵌 warrant 条）
+    target: write-theory/references/phase-4-qc-alignment.md
+    diagnosis: D 电池 G2 S5 'because stakeholders treat ESG ratings as credible assessments'——经验性行为前提无独立引文，Alpha-D 判与 S4 共用锚点、Beta-D
+      判分析性豁免；两位标注员备注均点名规则模糊。判定结果相同（#3 ✓）但说理路径不可比。修复已随 v1.2 落地（内嵌 warrant 随所在 reason 锚点计；夹带独立承重经验断言时按#3 边界判据）。
+    proposed_change:
+      action: correct_validator
+      summary: 文法推论条增内嵌 warrant 规则（v1.2 已就地落地）：从句一般性原则随所在 reason 锚点计；独立承重经验断言需自身锚点或显式缺口标注。
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 全 build type（段落级 Gate 5/审计 1 判定）
+      hypothesis_families: []
+      journals:
+      - AMJ
+      boundary: 仅句内 because-从句的锚点归属；不改变承重 reason 本身的锚点要求。
+    papers:
+    - id: Desjardine_Li_Shi_2025_AMJ
+      journal: AMJ
+      build_type: D 生成对照
+      hypothesis_family: ''
+      evidence_anchor: G2 S5（生成段）：because-从句无独立引文，双跑归属判定分歧；存档 d-annotations-round3.md 备注。
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - AMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - AMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive:
+      - prompt: 判定五问#3：because-从句陈述一般性原则、无独立引文，其所在 reason 句带发现锚点。
+        expected_invariants:
+        - 从句随 reason 锚点计，不单独要求锚点，#3 判 ✓
+        - 判定说理引用'内嵌 warrant 随锚'而非'分析性豁免'
+      preservation:
+      - prompt: 判定五问#3：because-从句夹带独立承重的经验断言（指向可观测分布），全段仅一处引文且不覆盖该断言。
+        expected_invariants:
+        - 该断言按#3 边界判据需锚点或显式缺口标注，缺失时判 ✗
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-07'
+    last_seen: '2026-09-07'
+    auto_action:
+      eligibility: log_only
+      reason: Insufficient evidence for core revision.
+  gate5-boundary-clarification-vs-acr:
+    classification: validator_defect
+    status: EMERGING
+    risk: low
+    current_rule: 五问#5 A&R=预判的最强异议；与'机制边界澄清句'（限定适用范围/起作用通道）无操作界分。
+    rule_excerpt: '| Corpus mosaic（语料拼贴） | 段落是否由语料句式顺序堆成——五问（claim/reason/evidence/warrant/A&R）无句位可指认，或命中证据孤儿 / warrant 悬空
+      / 引用列队？→ 按论证角色序列重组（句子保留、骨架重排），判据见 `../../story-blueprints/v4/rhetoric-moves/_argument-grammar.md` |'
+    rule_locator: 'write-theory/references/phase-4-qc-alignment.md 审计 1 Corpus mosaic 行；缺陷细则本体位于 story-blueprints/v4/rhetoric-moves/_argument-grammar.md
+      五问 #5 行（v1.2 已增界分与删句测试）'
+    target: write-theory/references/phase-4-qc-alignment.md
+    diagnosis: D 电池 G3 S4 双重身份句：Alpha-D 判 A&R（预判'奖项不进公式'异议）、Beta-D 判定义前提[D]（机制边界），两人一致自评为最大不确定点；A&R 频次预算（0–2/篇）的计数随界分漂移，影响跨段合计。修复已随
+      v1.2 落地（对立预期承认+转折回应才是 A&R；删句测试：留下未回应异议=A&R）。
+    proposed_change:
+      action: correct_validator
+      summary: 五问#5 增界分（v1.2 已就地落地）：承认对立预期再转折回应=A&R；纯通道/范围限定=Warrant/边界；附删句操作测试。
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 全 build type（段落级 Gate 5/审计 1 判定）
+      hypothesis_families: []
+      journals:
+      - AMJ
+      boundary: 仅 A&R 与边界澄清的归类界分；不改变 A&R 预算数值本身。
+    papers:
+    - id: Desjardine_Li_Shi_2025_AMJ
+      journal: AMJ
+      build_type: D 生成对照
+      hypothesis_family: ''
+      evidence_anchor: G3 S4：双重身份句双跑归类分歧（A&R vs 定义前提），两位标注员自评不确定点收敛于此；存档 d-annotations-round3.md。
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - AMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - AMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive:
+      - prompt: 判定五问#5：段首 'One might expect X' 承认对立预期，随后 'Yet Y' 转折立论。
+        expected_invariants:
+        - 判为 1 处 A&R，计入 0–2/篇预算
+      preservation:
+      - prompt: 判定五问#5：一句纯机制通道限定（'因为评级方法不含奖项输入，奖项只能经由感知起作用'），无对立预期承认。
+        expected_invariants:
+        - 归 Warrant/边界澄清而非 A&R，不计预算
+        - 删句测试说理：删后仅机制说明不完整，无未回应异议
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-07'
+    last_seen: '2026-09-07'
+    auto_action:
+      eligibility: log_only
+      reason: Insufficient evidence for core revision.
+  grammar-connector-sentence-role:
+    classification: validator_defect
+    status: EMERGING
+    risk: low
+    current_rule: 单句衔接符（'Thus:' / 'That is,' 独立成句）的角色归类未规定——G2 S8 双跑一判 Claim 一判 Framing。
+    rule_excerpt: '| Corpus mosaic（语料拼贴） | 段落是否由语料句式顺序堆成——五问（claim/reason/evidence/warrant/A&R）无句位可指认，或命中证据孤儿 / warrant 悬空
+      / 引用列队？→ 按论证角色序列重组（句子保留、骨架重排），判据见 `../../story-blueprints/v4/rhetoric-moves/_argument-grammar.md` |'
+    rule_locator: write-theory/references/phase-4-qc-alignment.md 审计 1 Corpus mosaic 行；缺陷细则本体位于 story-blueprints/v4/rhetoric-moves/_argument-grammar.md
+      推论条（v1.2 已增单句衔接符条）
+    target: write-theory/references/phase-4-qc-alignment.md
+    diagnosis: D 电池 G2 S8 'Thus:' 独句：Alpha-D 归 Claim、Beta-D 归 Framing。衔接符无实质立场内容，独立占角色会虚增 claim 计数或污染 framing 豁免判定。修复已随 v1.2
+      落地（并入其引导的收束句或标 Framing，不影响五问判定）。
+    proposed_change:
+      action: correct_validator
+      summary: 文法推论条增单句衔接符规则（v1.2 已就地落地）：独句衔接并入其引导的收束句（或标 Framing），不独立占角色。
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 全 build type（段落级角色标注）
+      hypothesis_families: []
+      journals:
+      - AMJ
+      boundary: 仅独句衔接符的标注归属；不改变收束句判定标准。
+    papers:
+    - id: Desjardine_Li_Shi_2025_AMJ
+      journal: AMJ
+      build_type: D 生成对照
+      hypothesis_family: ''
+      evidence_anchor: G2 S8（'Thus:' 独句）双跑归类分歧；存档 d-annotations-round3.md。
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - AMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - AMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive:
+      - prompt: 标注一个以 'Thus:' 独句引导假设形式化句的推导段。
+        expected_invariants:
+        - '''Thus:'' 不独立占角色，并入收束句或标 Framing'
+        - '#1 判定只看实质立场句与假设句，不受衔接符影响'
+      preservation:
+      - prompt: 标注一个收束句仅为 'Thus:' 而无实质立场内容的退化段落。
+        expected_invariants:
+        - '#1 仍判 ✗（衔接符不替代立场句）'
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-07'
+    last_seen: '2026-09-07'
+    auto_action:
+      eligibility: log_only
+      reason: Insufficient evidence for core revision.
+  grammar-framing-exemption-vs-contribution-module:
+    classification: validator_defect
+    status: EMERGING
+    risk: medium
+    current_rule: framing 豁免条款含'预告性质'段落，但贡献列举段（First/Second/Third 型）形式上也是预告——豁免判定与 Contribution=Gate 5 必查论证模块的教义存在边界缺口。
+    rule_excerpt: '| Corpus mosaic（语料拼贴） | 段落是否由语料句式顺序堆成——五问（claim/reason/evidence/warrant/A&R）无句位可指认，或命中证据孤儿 / warrant 悬空
+      / 引用列队？→ 按论证角色序列重组（句子保留、骨架重排），判据见 `../../story-blueprints/v4/rhetoric-moves/_argument-grammar.md` |'
+    rule_locator: write-theory/references/phase-4-qc-alignment.md 审计 1 Corpus mosaic 行；缺陷细则本体位于 story-blueprints/v4/rhetoric-moves/_argument-grammar.md
+      推论条 framing 豁免（v1.2 补已加贡献列举段例外）；主要受影响面为 write-introduction Gate 5 的 Contribution 抽查
+    target: write-theory/references/phase-4-qc-alignment.md
+    diagnosis: intro 侧校准（Zhong 2020 引言 6 段双盲标注）：I6 贡献列举段双跑 framing 豁免判定分裂（一判论证型——各条贡献可质疑；一判预告性质豁免——实质论证在正文完成）。分裂直接动摇 Gate
+      5 的 Contriution 必查模块：若豁免读法成立，贡献段将逃过五问抽查。修复已随 v1.2 补丁落地：贡献列举段各条贡献=claim 子型，整段默认论证型，不因预告形式豁免。
+    proposed_change:
+      action: correct_validator
+      summary: 文法推论条 framing 豁免增贡献列举段例外（v1.2 补丁已就地落地）：各条贡献=claim 子型、整段默认论证型；render-rules 模块映射节同步注明'Gate 5 按实际论证功能判豁免，文法判据优先'。
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 全 build type（段落级 Gate 5/审计 1 判定）
+      hypothesis_families: []
+      journals:
+      - AMJ
+      boundary: 仅 framing 豁免与贡献列举段的边界；不改变纯 hook/过渡段的豁免。
+    papers:
+    - id: Zhong_et_al_2020_AMJ
+      journal: AMJ
+      build_type: intro 侧段落校准
+      hypothesis_family: ''
+      evidence_anchor: 引言 I6 贡献列举段双跑豁免判定分裂（论证型 vs framing），两位标注员各自给出融贯但相反的判法；存档 pilot-report-intro-zhong2020.md。
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - AMJ
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - AMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive:
+      - prompt: 判定一个 First/Second/Third 贡献列举段的五问资格：段首总起句 + 三条具体贡献主张，段内无证据展开。
+        expected_invariants:
+        - 整段判论证型不豁免
+        - 总起句=topic sentence，各条贡献=claim 子型可指认
+      preservation:
+      - prompt: 判定一个纯结果预告句加过渡段的 framing 资格（无可争议贡献主张）。
+        expected_invariants:
+        - 仍判 framing 豁免
+        - 贡献段例外不外溢到无主张的预告/过渡段
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-07'
+    last_seen: '2026-09-07'
+    auto_action:
+      eligibility: log_only
+      reason: Insufficient evidence for core revision.
