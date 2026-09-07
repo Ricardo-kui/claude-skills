@@ -2,6 +2,7 @@
 
 > 由 write-introduction Phase 3 渲染时**必读**：对所选模块逐条过检查。规则按模块分节；🔴 = 硬性（不满足则叙事断裂），🟡 = 强推荐。
 > 路径基准：`corpus/...` 以 write-introduction/ 为基准；语料内部 `hooks/...` 等引用以 `corpus/` 为基准。
+> 模块的**论证依据层**（模块范式 ↔ Booth Context–Problem–Response 与论证五要素的对应及细则）见 `module-booth-mapping.md`——Phase 2 规划与 Gate 5 抽查参照。
 
 ## Hook
 
@@ -9,6 +10,7 @@
 2. 🟡 **禁忌互斥**：所选 Hook 不与同用的其他 Hook 冲突（如 `24-positive-trait-dark-side` 不与 `06-paradigm-challenge` 同用——前者边界反转后者范式颠覆）。
 3. 🟡 **human face / 理论驱动例外**：现象或案例型 Hook 优先含 ≥1 个具体 actor、案例或情境，不用 "many firms" 类泛称；若故事契约与目标期刊支持文献共识、经典争论或理论命题直接开场（如部分 ASQ/SMJ 论文），可不强制 human face，但必须在紧邻单元给出可观察的现实后果或判别性问题。
 4. 🔴 **能量匹配**：Hook 能量 ≤ Gap 能量（见 SKILL.md Phase 2 能量阶梯）——Incommensurability 用中-高能量开场。
+5. 🟡 **Booth 开头细则**：开头三式（noteworthy fact / striking quotation——须预响全文关键术语 / relevant anecdote——须框住研究问题）；四俗套禁忌（词典定义 / "Throughout history" 式宏大断言 / 名家开场 / 作业语言复述）。细则与节奏-受众信号见 `module-booth-mapping.md` §Hook（Booth Ch14 §14.5–14.6）。
 
 ## Tension
 
@@ -85,7 +87,7 @@
 
 > 文法本体（五问、语料角色索引、拼贴判据、完成判据）见 `../story-blueprints/v4/rhetoric-moves/_argument-grammar.md`（单一事实源）；本节只写 Introduction 侧的角色接线。
 
-1. 🔴 **模块→论证角色映射**：Contribution=claim；Tension=problem claim + reason（为什么现有理解会 trouble）；Stakes=consequence 证据（代价锚点）；Literature Turn=conversation evidence（发现锚定）；Theory Lens=**warrant**（把 puzzle 连到预测的一般性理论原则——它是引言中心论证的授权环节，不是背景装饰）；Hook/Preview/Transitions=framing（豁免五问，但 Hook 的核心判断句仍是 claim 性质）。
+1. 🔴 **模块→论证角色映射**：Contribution=claim；Tension=problem claim + reason（为什么现有理解会 trouble）；Stakes=consequence 证据（代价锚点）；Literature Turn=conversation evidence（发现锚定）；Theory Lens=**warrant**（把 puzzle 连到预测的一般性理论原则——它是引言中心论证的授权环节，不是背景装饰）；Hook/Preview/Transitions=framing（豁免五问，但 Hook 的核心判断句仍是 claim 性质）。模块映射是生成期取句先验；Gate 5 按段落**实际论证功能**判豁免（文法判据优先，如无立场的两派综述段虽处 Literature Turn 位置仍属 framing）。
 2. 🔴 **先骨架后句子**：渲染每个论证型模块前先写出该段角色序列，再从对应 corpus 文件按角色取句填位；语料句式只提供表达，不提供顺序（**语料优先改编**服从本条）。
 3. 🟡 **拼贴自查**：五问逐条指认句位；命中 `_argument-grammar.md` 任一拼贴判据（证据孤儿 / warrant 悬空 / 引用列队等）即按角色序列重组——句子保留，骨架重排。
 4. **完成判据**：四个论证型模块五问全部可指认；framing 模块已标注豁免。
