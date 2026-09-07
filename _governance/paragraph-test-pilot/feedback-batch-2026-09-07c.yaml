@@ -1,0 +1,37 @@
+skill_design_feedback:
+  batch_id: "batch_2026-09-07c"
+  last_updated: "2026-09-07"
+  observations:
+    - defect_id: "grammar-framing-exemption-vs-contribution-module"
+      classification: "validator_defect"
+      current_rule: "framing 豁免条款含'预告性质'段落，但贡献列举段（First/Second/Third 型）形式上也是预告——豁免判定与 Contribution=Gate 5 必查论证模块的教义存在边界缺口。"
+      rule_excerpt: "| Corpus mosaic（语料拼贴） | 段落是否由语料句式顺序堆成——五问（claim/reason/evidence/warrant/A&R）无句位可指认，或命中证据孤儿 / warrant 悬空 / 引用列队？→ 按论证角色序列重组（句子保留、骨架重排），判据见 `../../story-blueprints/v4/rhetoric-moves/_argument-grammar.md` |"
+      rule_locator: "write-theory/references/phase-4-qc-alignment.md 审计 1 Corpus mosaic 行；缺陷细则本体位于 story-blueprints/v4/rhetoric-moves/_argument-grammar.md 推论条 framing 豁免（v1.2 补已加贡献列举段例外）；主要受影响面为 write-introduction Gate 5 的 Contribution 抽查"
+      target: "write-theory/references/phase-4-qc-alignment.md"
+      diagnosis: "intro 侧校准（Zhong 2020 引言 6 段双盲标注）：I6 贡献列举段双跑 framing 豁免判定分裂（一判论证型——各条贡献可质疑；一判预告性质豁免——实质论证在正文完成）。分裂直接动摇 Gate 5 的 Contriution 必查模块：若豁免读法成立，贡献段将逃过五问抽查。修复已随 v1.2 补丁落地：贡献列举段各条贡献=claim 子型，整段默认论证型，不因预告形式豁免。"
+      absolute_rule: false
+      decisive_falsifier: false
+      risk: "medium"
+      applicability:
+        build_types: ["全 build type（段落级 Gate 5/审计 1 判定）"]
+        hypothesis_families: []
+        journals: ["AMJ"]
+        boundary: "仅 framing 豁免与贡献列举段的边界；不改变纯 hook/过渡段的豁免。"
+      evidence:
+        papers:
+          - id: "Zhong_et_al_2020_AMJ"
+            journal: "AMJ"
+            build_type: "intro 侧段落校准"
+            evidence_anchor: "引言 I6 贡献列举段双跑豁免判定分裂（论证型 vs framing），两位标注员各自给出融贯但相反的判法；存档 pilot-report-intro-zhong2020.md。"
+            evidence_quality: "full_text_verified"
+      proposed_change:
+        action: "correct_validator"
+        summary: "文法推论条 framing 豁免增贡献列举段例外（v1.2 补丁已就地落地）：各条贡献=claim 子型、整段默认论证型；render-rules 模块映射节同步注明'Gate 5 按实际论证功能判豁免，文法判据优先'。"
+      regression_cases:
+        positive:
+          prompt: "判定一个 First/Second/Third 贡献列举段的五问资格：段首总起句 + 三条具体贡献主张，段内无证据展开。"
+          expected_invariants: ["整段判论证型不豁免", "总起句=topic sentence，各条贡献=claim 子型可指认"]
+        preservation:
+          prompt: "判定一个纯结果预告句加过渡段的 framing 资格（无可争议贡献主张）。"
+          expected_invariants: ["仍判 framing 豁免", "贡献段例外不外溢到无主张的预告/过渡段"]
+      resolution: null
