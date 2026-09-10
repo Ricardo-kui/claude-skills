@@ -5,6 +5,7 @@
 ```text
 Empirical Intake Packet
 
+Intake mode:
 Task type:
 Question:
 Estimand or prediction target:
@@ -20,6 +21,20 @@ Unresolved inputs:
 Recommended next skill:
 ```
 
+For `retrospective` mode, append:
+
+```text
+Field evidence:
+- Field: <name>
+  Status: <confirmed | pending_confirmation | conflict | unknown>
+  Source path: <path | null>
+  Source date: <date | null>
+  Freshness: <current | stale | undetermined>
+Design lock sign-off: <signer and confirmation date | pending_confirmation>
+```
+
+Repeat the field-evidence row for every intake field and retain separate rows for conflicting sources.
+
 ## One-Question Follow-Up Rule
 
 When the brief is incomplete, ask only one question from this priority order:
@@ -33,6 +48,7 @@ When the brief is incomplete, ask only one question from this priority order:
 
 Route onward when the memo contains:
 
+- intake mode
 - task type
 - target
 - data path
@@ -40,4 +56,4 @@ Route onward when the memo contains:
 - unresolved inputs are explicit
 - next-skill recommendation
 
-For a causal task, the next skill is normally `huntington-klein-causal-design`. Route to `causal-analysis` only after a Design Packet exists.
+For a causal task, the next skill is normally `huntington-klein-causal-design`. Route a retrospectively recovered design to `causal-analysis` only after a Design Packet exists and the user explicitly signs off its lock.

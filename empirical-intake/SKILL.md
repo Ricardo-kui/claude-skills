@@ -18,6 +18,21 @@ Use this skill to convert an underspecified empirical task into a compact handof
 - Do not guess variable names, treatment timing, target labels, or clustering levels.
 - Separate four task types early: `causal`, `ml`, `descriptive`, `writeup`.
 - Produce a handoff brief before deeper execution.
+- Use `prospective` mode for a new brief and `retrospective` mode when prior drafts, code, logs, or state already exist.
+
+## Retrospective Mode
+
+1. Inspect the supplied project artifacts; do not treat old prose as current intent.
+2. For every intake field, record:
+   - `status`: `confirmed`, `pending_confirmation`, `conflict`, or `unknown`
+   - `source_path`
+   - `source_date`
+   - `freshness`: current, stale, or undetermined as of the intake date
+3. Preserve conflicting values with their separate provenance. Ask the user to resolve material conflicts; do not merge them automatically.
+4. Treat any design lock recovered from prior artifacts as `pending_confirmation`. Never create or confirm a design lock from an old draft, script, result, or state file.
+5. Route an existing causal design to `causal-analysis` only after the user explicitly signs off the recovered lock. Otherwise route to `huntington-klein-causal-design` for confirmation or revision.
+
+Retrospective intake is complete when every field has a status and provenance, every conflict is visible, and the route reflects whether human sign-off exists.
 
 ## Minimal Intake Workflow
 
@@ -60,6 +75,7 @@ Use this skill to convert an underspecified empirical task into a compact handof
 
 Return a short memo with these fields:
 
+- `intake_mode`
 - `task_type`
 - `question`
 - `estimand_or_target`
@@ -71,6 +87,8 @@ Return a short memo with these fields:
 - `requested_outputs`
 - `unresolved_inputs`
 - `recommended_next_skill`
+- `field_evidence` in retrospective mode: one row per field with status, source path, source date, and freshness
+- `design_lock_signoff` in retrospective causal mode: signer/confirmation date or `pending_confirmation`
 
 ## Default Downstream Pairings
 

@@ -20,8 +20,9 @@ The gates below apply only after this coordinator is activated. For one Stata op
 2. Resume from the earliest incomplete or invalidated gate. Do not restart completed stages without recording why.
 3. Assign one primary skill to each stage. Secondary skills may support but may not redefine the primary output.
 4. Treat Stata as the default causal execution runtime. Use R only when the user explicitly requests it. Use Python when the project is Python-native or explicitly requests Python.
-5. Record every design or sample deviation. Never let an executor silently replace the estimand, comparison group, treatment timing, sample rule, or clustering rule.
+5. Record every design or sample deviation. Put the full rationale in the Decision Register and only its decision ID in `empirical-state.yaml`. Never let an executor silently replace the estimand, comparison group, treatment timing, sample rule, or clustering rule.
 6. Stop rather than optimize for significance when a gate fails.
+7. Write each fact only to the authority named in the state protocol. Treat `PROJECT_STATUS.md` as a read-only human index, never as pipeline state.
 
 ## Pipeline
 
@@ -62,17 +63,32 @@ Do not use it for:
 - already-verified outputs that only need prose -> `empirical-writeup`
 - one specification-search request -> `xianzhu-skill`, subject to its design-lock and anti-p-hacking boundary
 
-## Minimal Interaction Pattern
+## Session Protocol
 
-At each turn:
+For every substantive project session, inspect the two root pointers and authoritative artifacts, then replay exactly:
 
-1. State the current stage and gate status.
-2. Inspect existing artifacts before asking questions.
-   - If no project/data path is supplied and the current directory is a broad home or workspace root, ask for the project directory or primary data/code path; do not recursively search the entire root.
-3. Ask only for unresolved information that changes routing or validity.
-4. Invoke the primary skill for that stage.
-5. Validate its artifact against the state protocol.
-6. Update state and name the next stage.
+```text
+Stage: <current stage and gate status>
+Locked or Conflict: <lock status or named conflict>
+Next: <single proposed action>
+```
+
+Wait for user confirmation before invoking a specialist, running project code, or changing authoritative state. If no project/data path is supplied and the current directory is a broad home or workspace root, ask for the project directory or primary data/code path; do not recursively search the entire root.
+
+After confirmed work, validate the artifact, update only its owning authority, and close with exactly:
+
+```text
+Completed: <work completed this session>
+State changed: <authority and fields changed, or none>
+Unresolved: <remaining conflicts or unknowns>
+Re-entry: <root, artifact, and earliest gate for the next session>
+```
+
+## Bidirectional Re-entry
+
+- Empirical to writing: the Writing Handoff points to `empirical-state.yaml` and the verified Evidence Packet; writing metadata continues in `paper-state.yaml`.
+- Writing to empirical: when drafting or review exposes an evidence, design, or execution issue, re-enter at the earliest affected empirical gate and update the empirical authority. Keep prose workflow metadata in `paper-state.yaml`.
+- At either boundary, follow the root pointers and re-read the owning artifact. Do not copy one domain's state into the other.
 
 ## Completion Standard
 
