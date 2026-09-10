@@ -125,6 +125,10 @@
 !_reference/**
 !_governance/
 !_governance/**
+!_eval/
+!_eval/**
+!_pi-config/
+!_pi-config/**
 !grill-the-claim/
 !grill-the-claim/**
 !handoff/
