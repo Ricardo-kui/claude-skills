@@ -25,6 +25,10 @@
 !distill-story-exemplar/**
 !distill-paper-exemplar/
 !distill-paper-exemplar/**
+!distill-agents/
+!distill-agents/**
+!.claude-plugin/
+!.claude-plugin/**
 !humanizer/
 !humanizer/**
 !polish/

@@ -1,0 +1,6 @@
+{
+  "name": "distill-agents",
+  "version": "0.1.0",
+  "description": "distill-paper-exemplar L1 分节蒸馏子代理定义（专用 subagent 类型）",
+  "agents": "agents"
+}
