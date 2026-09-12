@@ -246,7 +246,7 @@ phase_4_corpus_reference:
 
 **索引/路由表同步（2026-08-09 闭环补丁）**：写入 corpus 文件后，必须同步：
 1. `write-theory/corpus/meta/routing_table.md`——若新增了理论构建变体类型或路由分支，更新路由表（Gap × 贡献杠杆 → 变体映射）；追加变体不改变路由时不强制
-2. `write-theory/corpus/_index.md`——新增/更新模式条目（变体类型、验证状态）。`_index` 与 routing_table 是选材 Gate 的读入源，不同步会导致下轮选材看不到新变体。
+2. `write-theory/corpus/_index.md`——新增/更新模式条目（变体类型、验证状态）。`_index` 与 routing_table 是选材 Gate 的读入源，不同步会导致下轮选材看不到新变体。索引行格式遵守 `../../distill-paper-exemplar/references/band-vocab.md` 路由行胶囊规范（只复述正文已有内容、要点 ≤4 条、压缩不得改变路由判断）。
 
 ## Phase 4.7 — Write-Theory 技能设计反馈
 

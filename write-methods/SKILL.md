@@ -74,7 +74,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 | M9 | 多研究 / 实验程序 / 质性编码 | `references/slot-M9.md` | 仅多研究设计（逐研究重复 M1–M8） | 非多研究 |
 | M10 | Methods 到 Results 的过渡 | `references/slot-M10.md` | 通常省略（顶刊极度罕见 <10%） | 默认跳过 |
 
-3. **设计类型变体（飞轮积累，勿漏读）**：确定 design type 后先查 `corpus/INDEX.md` 的「设计类型索引表」确认变体数；变体数 >0 → **必须加载 `corpus/[设计类型].md`**（先读顶部「变体速查表」——按槽位+验证状态定位候选（2026-08-29 统一三档词表，与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀；召回主题条目按用户裁决单源 VERIFIED），再精读对应变体正文）。变体数 = 0 的类型仅用 slot 主骨架。
+3. **设计类型变体（飞轮积累，勿漏读）**：确定 design type 后先查 `corpus/INDEX.md` 的「设计类型索引表」确认变体数；变体数 >0 → **必须加载 `corpus/[设计类型].md`**（先读顶部「变体速查表」——按槽位+验证状态定位候选（三档词表与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀；召回主题条目按用户裁决单源 VERIFIED），再精读对应变体正文）。变体数 = 0 的类型仅用 slot 主骨架。
 
 **完成判据**：设计类型 + 槽位序列已定（含分支调整理由）；slot 与设计类型变体已加载。
 
@@ -94,7 +94,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 4. **锚点使用纪律（verbatim anchor）**：设计类型变体的 `原始句锚点` 是来源论文原句的风格参照——使用规则见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律；旧变体无锚点（标注"待补"）时按骨架直接生成。修辞动作级升级（把某段按某动作做得更讲究）路由 `../story-blueprints/v4/rhetoric-moves/_index.md`，润色走其 `_polish-protocol.md` 流畅性门。
 5. **revision 约束优先**：corpus、phrasebank 与“措辞润色建议”不得覆盖 active feedback 或恢复 `supersedes` 指向的旧建议；语料语句可直接使用，仅替换来源特异性内容（专名/数字/系数/表号）防串稿。
 6. **Methods 语态纪律**：完成的研究程序使用主动过去时；定义、制度事实、公式符号、估计器性质和解释惯例使用现在时。限制与 scope condition 直接陈述，不添加防御性收尾或作者自我评价。
-7. **因果语言强制词汇表**（按设计家族，无越级）：动词档位唯一源 `corpus/micro-templates/causal-hedging.md`——面板/OLS/FE→"associated with"（禁 causes/leads to/drives）；DiD→平行趋势支持后 "effect of"；IV/2SLS→M8 识别 preview 后 "effect"、避免 "causes"；非线性→经边际效应/概率变化转述；生存分析→"changes the hazard of"；SEM→预测关系；实验→随机化支持后可用强因果词。逐族允许/禁止动词与使用条件查该文件，本表不复述。
+7. **因果语言强制词汇表**（按设计家族，无越级）：动词档位唯一源 `corpus/micro-templates/causal-hedging.md`——面板/OLS/FE→"associated with"（禁 causes/leads to/drives）；DiD→平行趋势支持后 "effect of"；IV/2SLS→M8 识别 preview 后 "effect"、避免 "causes"；非线性→经边际效应/概率变化转述；生存分析→"changes the hazard of"；SEM→预测关系；实验→随机化支持后可用强因果词。逐族允许/禁止动词与使用条件以该文件为准。
 
 **完成判据**：所选槽位 QC 点全过（slot 文件末尾 QC 块）；因果语言与设计家族匹配；[placeholder] 无机构/政策名残留。
 
@@ -117,7 +117,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 
 ## 使用反馈闭环
 
-用户对 Methods 产出提出明确批评、事实纠正、章节边界调整、禁用表达、语态基准或旧建议作废声明时，读取 `references/feedback-protocol.md`（完整协议）：① 先修正文稿，不以"已登记"代替改写；② 将本轮批评及现稿修订记录中的明确裁定规范化为可执行规则，按 `skill | project | section | design_type` 登记到 `references/feedback-registry.json`，新裁定覆盖旧建议时记录 `supersedes`（语态基准/失效建议/确定性禁用表达分入 `benchmark`/`supersedes`/`prohibited_patterns`）；③ 下一次 revision 在生成前加载匹配的 active rules；项目规则不得污染其他论文；`corpus/_evidence_registry.yaml` 只保留语料/设计类型的聚合质量信号。
+用户对 Methods 产出提出明确批评、事实纠正、章节边界调整、禁用表达、语态基准或旧建议作废声明时，读取 `references/feedback-protocol.md`（完整协议）；**先修正文稿，不以"已登记"代替改写**。双 registry 分工唯一源：`../story-blueprints/v4/rhetoric-moves/_feedback-registries.md`——本 skill 双轨全接：R1 经 `scripts/record_feedback.py` 将本轮批评及现稿修订记录中的明确裁定规范化为可执行规则（scope=`skill | project | section | design_type`，新裁定覆盖旧建议记 `supersedes`），下一次 revision 在生成前加载匹配的 active rules；R2 仅当批评确实指向某一设计类型变体时汇总聚合质量信号；项目规则不得污染其他论文。
 
 ## 下游接口
 
@@ -129,8 +129,6 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 ## 纪律
 
 **诚实边界（完整版见 `references/boundaries.md`）**：① 不能替代统计诊断（平行趋势/IV 相关性/共同支撑域等必须基于实际数据）；② 不虚构任何数字（所有系数/p 值/样本量由用户填）；③ 设计排他性不可违反——非 IV 设计不得要求排他性约束、非 DiD 不得要求平行趋势、非匹配不得要求重叠支撑；动态面板必须提示 Nickell bias（T<10 时）。
-
-**反馈登记**：用 `scripts/record_feedback.py` 维护 `references/feedback-registry.json`，每条反馈保留 scope、category、rule、reason、source 和 evidence，不得只累计 revise/reject 次数；语料聚合只在批评确实指向某一设计类型变体时汇总；单项目批评不自动修改 corpus——精炼由 `distill-methods-exemplar` 驱动。
 
 **语料与变体**：设计类型具体变体见 `corpus/[设计类型].md`；新论文蒸馏结果经 `distill-methods-exemplar` → Phase 4 自动写入（同步更新 INDEX.md 变体数）。
 

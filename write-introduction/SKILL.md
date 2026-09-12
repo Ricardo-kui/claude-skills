@@ -1,7 +1,7 @@
 ---
 name: write-introduction
-description: >-
-  顶刊论文 Introduction 段落骨架生成器（Hook→Tension→Stakes→…→Contribution 七模块 + GBL 对齐 + paper-state 片段）。Use when 写或规划引言；触发词：写引言、hook 怎么写、gap 怎么写、贡献声明、problematization。Not for: 蒸馏→distill-introduction-exemplar；审查→intro-review；诊断→diagnose-introduction。
+description: "顶刊论文 Introduction 段落骨架生成器——按 Gap 类型生成七模块（Hook→…→Contribution）骨架。触发词：写引言、hook/gap 怎么写、贡献声明、problematization。Not for: 蒸馏→distill-introduction-exemplar；审查→intro-review；诊断→diagnose-introduction。"
+when_to_use: "写、规划或重写引言时使用；标题+Abstract+promise 前端对齐（front-end 模式）同入口。"
 ---
 
 # Write Introduction（引言写作顾问）
@@ -96,6 +96,6 @@ description: >-
 ## 纪律
 
 - 原文锚定与润色纪律：见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律。
-- 批评登记：用户不满时登记到 `corpus/_evidence_registry.yaml` 的 `critique.per_file`（revise/reject +1、reasons 去重首插最多 8 条）；不登记流程抱怨与风格偏好。
+- 批评登记：双 registry 分工唯一源见 `../story-blueprints/v4/rhetoric-moves/_feedback-registries.md`；本 skill 当前仅接 R2 语料精炼通道（`corpus/_evidence_registry.yaml` 的 `critique.per_file`），R1 可执行规则通道未建设。
 - 演化：规则层反例更新 `_skill_design_feedback.yaml`（见 `../distill-introduction-exemplar/references/phase-4-validation-writeback.md`）；单篇论文不得建立普遍规则。
 - 注册表缺失时回退 `_routing_tables.yaml` 静态推荐，不中断输出；但**必须在输出末尾附加降级声明**："⚠ registry 缺失，语料验证状态（EMERGING/VERIFIED/ROBUST）未经核验，本次按静态路由表推荐"——回退不得静默。

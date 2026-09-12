@@ -23,7 +23,7 @@ Distill the architecture and reasoning of a published Theory section into reusab
 4. Compare against the sibling `write-theory/corpus/` only after the paper-first extraction is complete.
 5. Treat single-paper patterns as candidates, not stable corpus rules. For Incommensurability, use R1–R4 to compare reasoning, not to impose model form: L2 architectures remain optional and L3 model signatures never enter core routing. Reference-level variants may be written automatically; core candidates first enter the design registry and only bounded, eligible low/medium-risk corrections may auto-apply.
 6. In Phase 4, load `references/design-feedback-loop.md`, compare observed practice with current write-theory rules, and always emit `skill_design_feedback`（无缺陷时 `observations: []`）. Persist candidates with `_update_design_feedback.py`.
-7. Auto-write eligible reference variants. Apply bounded core corrections only when the evidence, authorization, risk, and dual-regression gates pass; schema/stage-gate/high-risk changes always require explicit review.
+7. Auto-write eligible reference variants; apply bounded core corrections only when the evidence, authorization, risk, and dual-regression gates pass; schema/stage-gate/high-risk changes always require explicit review.
 
 **完成判据**：①请求性质已确认（蒸馏 vs 审查；section 已消歧）；②理论构建类型 + 假设结构 + story-fidelity 分类已输出（Incommensurability 时含 L0–L3 profile、route confidence 与 distinguishing prediction）；③所用 phase 输出件按请求深度齐全（module map / why-chains / DNA / QC）；④每个写入变体/句式附带原文锚点字段；⑤`skill_design_feedback` 必发（无缺陷时 `observations: []`）并已持久化；⑥自动写回仅限 reference 级变体与有界低风险 core 修正。
 
@@ -38,16 +38,13 @@ Distill the architecture and reasoning of a published Theory section into reusab
 | **quiet** | 目标变体多篇验证 | MEDIUM：正常蒸馏（除非论文带来明确新维度） |
 
 批量模式按带排序优先处理 HIGH 档。单篇论文（用户明确指定）不拒绝，但输出带判定。
-带词表跨节对齐：`薄弱`=状态驱动（EMERGING/单源）；methods/results 的 `critique_heavy`=批评驱动（revise+reject≥2）；band 汇报统一用 {gap, 薄弱, critique_heavy, quiet}。
+带词表跨节对齐唯一源：`../distill-paper-exemplar/references/band-vocab.md`（统一带集 {gap, 薄弱, critique_heavy, quiet}；本节用状态驱动「薄弱」档）。
 
 ## 原文锚点提取规则（语料锚点层）
 
-每个待写入变体/句式模板必须附带 `**原文锚点**` 字段——来源论文 1-2 句 verbatim 原句（15-50 tokens），风格参照用：
+共用规则唯一源：`../distill-paper-exemplar/references/anchor-rules.md`（15–50 tokens、四源检索、拼接与泛化边界；字段名 `**原文锚点**` 沿用 `corpus/variants/` 既有锚点格式）。本节差异：
 
-- **选句标准**：最能代表该变体论证手法的句子（如构念辨析的定义区分句、机制链的推导句、调节的交互预期句、辩证对立的整合 resolution 句）
-- **提取来源**：优先本次蒸馏论文原文；缺失时按知识库检索（mvp30 / Clippings / 论文导入 / 写作指导 四源，见 `corpus/variants/` 既有锚点格式）
-- **检索不到原文**：锚点标"待补"，不阻塞写入
-- **边界**：锚点是风格参照不是复制源——不得保留专有名词/数字；citation 链接还原为纯文本；OCR 污染句优先选无污染句
+- **选句标准**：最能代表该变体论证手法的句子——如构念辨析的定义区分句、机制链的推导句、调节的交互预期句、辩证对立的整合 resolution 句
 
 ## Output contract
 

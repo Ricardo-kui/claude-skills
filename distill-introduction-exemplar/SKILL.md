@@ -23,13 +23,13 @@ Distill how a published Introduction works—not what it says—into reusable, e
 4. Load supporting protocols only when their output is required: `protocols/batch_mode.md`, `protocols/profile_template.md`, `protocols/story_architecture_fields.md`, `protocols/product_validation.md`, `protocols/phase4_output_blocks.md`, `protocols/corpus_file_templates.md`, and `protocols/json_output_schema.md`.
 5. Preserve evidence provenance. Do not promote a one-paper pattern to a stable corpus rule. Use fine-grained Incommensurability routes for retrieval and comparison, not as mandatory templates: L2 tactics remain optional variants and L3 paper signatures never enter core routing.
 6. In Phase 4, compare observed practice with current `write-introduction` rules and emit `skill_design_feedback`. Persist every candidate with `_update_design_feedback.py`; distinguish corpus gaps from routing, validator, output-contract, schema, and stage-gate defects.
-7. Auto-write reference variants. Apply bounded core corrections only when the evidence and authorization gates in `references/phase-4-validation-writeback.md` pass; always review schema or stage-gate changes explicitly.
+7. Auto-write reference variants; apply bounded core corrections only when the evidence and authorization gates in `references/phase-4-validation-writeback.md` pass; always review schema or stage-gate changes explicitly.
 
 **完成判据**：①请求性质已确认（蒸馏 vs 校验；section 已消歧）；②Gap × Contribution 分类 + story-fidelity 判定已输出（Incommensurability 时含 L0–L3 profile 与 route confidence）；③所用 phase 的输出件按请求深度齐全（module map / coverage / skeletons / DNA / QC）；④每个写入变体附带原文锚点（verbatim_anchor）字段；⑤`skill_design_feedback` 已用 `_update_design_feedback.py` 持久化；⑥core 修正仅经 phase-4 证据与授权门禁。
 
 ## 选材 Gate（轻量版：脚本查 _index 验证状态）
 
-蒸馏选材时，运行 `py ../distill-paper-exemplar/scripts/corpus_query.py index --section introduction --query "<变体/模块关键词>"`（确定性脚本，只输出命中行，默认 ≤50 行；**关键词中/英各查一轮，可含 canonical_id 前缀**；先查后开——索引单份 54–257KB），读命中行的验证状态列（ROBUST/VERIFIED/EMERGING）做三带判定：
+蒸馏选材时，运行 `py ../distill-paper-exemplar/scripts/corpus_query.py index --section introduction --query "<变体/模块关键词>"`（确定性脚本，只输出命中行，默认 ≤50 行；**关键词中/英各查一轮，可含 canonical_id 前缀**；先查后开），读命中行的验证状态列（ROBUST/VERIFIED/EMERGING）做三带判定：
 
 | 带 | 判定条件 | 处理 |
 |----|---------|------|
@@ -38,16 +38,13 @@ Distill how a published Introduction works—not what it says—into reusable, e
 | **quiet** | 目标变体 ROBUST/VERIFIED | MEDIUM：正常蒸馏（除非论文带来明确新维度） |
 
 批量模式按带排序优先处理 HIGH 档。单篇论文（用户明确指定）不拒绝，但输出带判定。
-带词表跨节对齐：`薄弱`=状态驱动（EMERGING/单源）；methods/results 的 `critique_heavy`=批评驱动（revise+reject≥2）；band 汇报统一用 {gap, 薄弱, critique_heavy, quiet}。
+带词表跨节对齐唯一源：`../distill-paper-exemplar/references/band-vocab.md`（统一带集 {gap, 薄弱, critique_heavy, quiet}；本节用状态驱动「薄弱」档）。
 
 ## 原文锚定提取规则（语料锚点层）
 
-每个待写入变体必须附带 `verbatim_anchor`（原文锚点）字段——来源论文 1-2 句 verbatim 原句（15-50 tokens），风格参照用：
+共用规则唯一源：`../distill-paper-exemplar/references/anchor-rules.md`（15–50 tokens、四源检索、拼接与泛化边界）。本节差异：
 
-- **选句标准**：最能代表该变体叙事手法的句子（如 Hook 的数据冲击句、Tension 的 however 对比句、Stakes 的重要性论证句），不是信息量最大的句子
-- **提取来源**：优先本次蒸馏论文原文；缺失时按知识库检索（mvp30 / Clippings / 论文导入 / 写作指导 四源，见各 corpus 文件惯例）
-- **检索不到原文**：锚定标"待补"，不阻塞写入
-- **边界**：锚定是风格参照不是复制源——不得保留专有名词/数字；citation 链接还原为纯文本
+- **选句标准**：最能代表该变体叙事手法的句子——如 Hook 的数据冲击句、Tension 的 however 对比句、Stakes 的重要性论证句
 
 ## Output contract
 

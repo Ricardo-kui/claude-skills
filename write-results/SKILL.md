@@ -116,11 +116,7 @@ R1–R9 是证据功能，不是强制章节顺序。按需加载 slot 骨架（
 
 ## 使用反馈闭环
 
-用户对产出提出明确批评、禁用词、结构纠正或事实纠正时，读取 `references/feedback-protocol.md`（完整协议）：
-
-1. 先修正文稿，不以"已登记"替代当前任务；
-2. 将本轮批评及修订记录中明确的用户裁定规范化为可执行规则，按 `skill | project | section | estimator` 登记到 `references/feedback-registry.json`；新裁定宣布旧建议作废时记录 `supersedes`（语态基准、失效旧建议、确定性禁用表达分别写入 `benchmark`/`supersedes`/`prohibited_patterns`）；
-3. 下一次 revision 在生成前加载匹配的 active rules；项目规则不得无条件推广为全局规则；相同规则跨案例重复或累计达到阈值后，才进入 `distill-results-exemplar` 的 ADD/EXTEND/REPLACE 候选。
+用户对产出提出明确批评、禁用词、结构纠正或事实纠正时，读取 `references/feedback-protocol.md`（完整协议）；**先修正文稿，不以"已登记"替代当前任务**。双 registry 分工唯一源：`../story-blueprints/v4/rhetoric-moves/_feedback-registries.md`——本 skill 双轨全接（参照实现）：R1 经 `scripts/record_feedback.py` 将批评及修订记录中明确的用户裁定规范化为可执行规则（scope=`skill | project | section | estimator`，新裁定宣布旧建议作废时记录 `supersedes`），下一次 revision 在生成前加载匹配的 active rules；R2 `critique.per_file` 供 `distill-results-exemplar` selection-gate 消费；相同规则跨案例重复或累计达到阈值后，才进入 ADD/EXTEND/REPLACE 候选。
 
 ## 下游接口
 
@@ -131,8 +127,6 @@ R1–R9 是证据功能，不是强制章节顺序。按需加载 slot 骨架（
 ## 纪律
 
 **诚实边界（完整 12 条见 `references/boundaries.md`）**：① 不虚构任何数字；② 设计排他性不可违反；③ 非显著假设必须在 Results 报告（inline 可接受），不得跳过；④ 稳健性检验不包装成因果识别、非线性模型不直接比较 raw 系数。
-
-**反馈登记（双 registry 分工）**：`references/feedback-registry.json` = 可执行修订规则（本节，用 `scripts/record_feedback.py` 维护，记录 scope/category/rule/source/evidence，不得只累计次数）；`corpus/_evidence_registry.yaml` 的 `critique.per_file` = 语料精炼信号（批评登记，供 `distill-results-exemplar` selection-gate 消费）——两者不互相替代。
 
 **语料与变体**：结果类型具体变体见 `corpus/[结果类型].md`；新蒸馏结果经 `distill-results-exemplar` → Phase 4 自动写入（同步更新 INDEX.md 变体数）。
 
