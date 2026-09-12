@@ -55,6 +55,7 @@ Pollock 不把四类效度当 checklist 逐条回答，而是嵌入 describe-exp
 - [ ] **审计链完整**：M2 起始 N → 每步排除（含理由+数字）→ 最终 N，全程可追踪
 - [ ] **时间逻辑清晰**：所有预测变量标注 t-1 / contemporaneous / event window
 - [ ] **段落体裁适配**：Methods 段落遵循审计体裁约定——procedure-first（M2 样本漏斗）/ construct-first（M3–M5 变量）/ justification-first（M7 模型）为合法段首；通用段落规则见 `../write-introduction/corpus/storytelling/prose-craft-checklist.md` §0.0/§0.2/§0.5；§0.1/§0.3/§0.6 为说服体裁专用，不适用
+- [ ] **辩护段论证形状（Booth Ch05 文法）**：justify/defend 型段落（M6 控制变量辩护、M7 模型选择、M8–M9 识别与内生性处理、M10 稳健性逻辑）按 `_argument-grammar.md`（`../story-blueprints/v4/rhetoric-moves/`）自查——辩护 claim 可指认、每个设计选择配 reason（#52 because 密度的段落级形态）、主要替代方案作为段落级 A&R 出现（预算内）；程序性报告段（M1–M2 样本与漏斗、M3–M5 变量定义）体裁豁免，不套五问。Methods 特有拼贴信号：设计选择罗列无 because 链（选择列队）、稳健性/内生性检验与所回应的威胁失配（证据孤儿变体）
 - [ ] **反馈回归**：`feedback-registry.json` 中与 skill/project/section/design_type 匹配的 active rules 均有 pass/fail 结果
 
 ## 反向审查（可选但建议）

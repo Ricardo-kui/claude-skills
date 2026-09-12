@@ -1,6 +1,6 @@
 # _argument-grammar.md — 段落论证文法（argument unit，write-* 共用）
 
-> 单一事实源：write-introduction / write-theory 渲染段内句子时共用本文法。分工：`_polish-protocol.md` 管**句子润色**（语料选用之后），本文法管**段落组装**（语料选用之前）——先有论证骨架，语料句式才上岗。
+> 单一事实源：write-introduction / write-theory 全量适用（intro Gate 5、theory 审计 1）；write-methods（辩护型段落）/ write-results（解读型段落）经各自接线节 scoped 适用（`write-methods/references/post-generation-checklist.md` §论证质量诊断、`write-results/references/evidence-standards.md` §段落论证文法接线——程序性报告段体裁豁免）。分工：`_polish-protocol.md` 管**句子润色**（语料选用之后），本文法管**段落组装**（语料选用之前）——先有论证骨架，语料句式才上岗。
 > 理论侧的段落级实现是 write-theory `corpus/subprotocols/paragraph_layout.md`（Topic→Reasoning→Tokens→Wrap 四段位 + 三类论据决策矩阵）；本文法把同一论证逻辑推广到全部 write-* 论证型段落，并把语料句式绑定到论证角色上。
 
 ## 病根与解法

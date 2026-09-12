@@ -34,3 +34,12 @@ Booth §7.5.1：
 
 - Booth 在 Ch8 补充第六标准 **relevance**——已由 soundness 层 warrant 五测试覆盖（`reasoning_soundness_protocol.md` §2），本文件不重复。
 - 精确度的"恰当"水平因领域而异（Booth §7.5.2: "What counts as appropriately precise differs by field"）——管理实证惯例：系数 2–3 位小数、p 值用阈值标记（* / ** / ***）或精确 p（两流派皆可，全表一致即可）。
+
+## 段落论证文法接线（Booth Ch05，`_argument-grammar.md` v1.2）
+
+> 五问审计管**证据内容**，本节管**证据的段落组织**。单一事实源 = `../../story-blueprints/v4/rhetoric-moves/_argument-grammar.md`；本节只写 Results 侧的范围划定与特有拼贴信号。
+
+- **范围划定**：解读型段落（finding claim + 系数/检验证据 + 幅度解释）是论证单元，按文法五问+拼贴自查；表格走读段（数字→表格的导航句群）为程序性报告，体裁豁免——对应 methods 侧的辩护段/程序段之分。
+- **角色映射**：finding 句=claim（段首可指认）；系数/检验统计量=证据；幅度解释（经济显著性换算、与既有效应比较）=reason 性质 move。证据不替代 move——"β=−0.12, p<0.01" 本身不构成解读（五问审计 #5：数字不 speak for themselves）。
+- **Results 特有拼贴信号**：**数值列队**（相邻句罗列系数、无 because/however 连接——拼贴#5 的 results 形态）；**无主 finding**（系数句不挂任何假设编号或 finding claim——#4/证据孤儿变体）；**稳健性错配**（稳健性检验与所回应的威胁失配——证据孤儿变体，联动 `robustness-diagnosis.md`）。
+- **稳健性组织 = 方法世界的制度化 A&R**（Booth Ch09）：每个稳健性检验应能指认它回应的替代解释或效度威胁——results 侧形态是"换度量/换样本/换估计器，结论不变"，且该不变性回应一个**被指认的**威胁，不是无目的的检验堆叠。
