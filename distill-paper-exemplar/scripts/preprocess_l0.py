@@ -84,6 +84,46 @@ DEFAULT_SOURCES_DIR = (
     SKILLS_ROOT / "story-blueprints" / "v4" / "rhetoric-moves" / "sources"
 )
 
+# files whose content defines distillation behavior; hashed into the manifest
+# fingerprint so a re-distillation can tell whether prior entries were
+# produced under the current protocol (T2-8, pi-prompt-diet DISTILLER_VERSION)
+DISTILLER_FILES = (
+    "distill-paper-exemplar/SKILL.md",
+    "distill-paper-exemplar/references/l1-subagent-protocol.md",
+    "distill-paper-exemplar/references/band-vocab.md",
+    "distill-paper-exemplar/references/anchor-rules.md",
+    "distill-paper-exemplar/scripts/corpus_query.py",
+    "distill-paper-exemplar/scripts/corpus_precheck.py",
+    "distill-paper-exemplar/scripts/corpus_writeback.py",
+    "distill-paper-exemplar/scripts/verify_writeback.py",
+    "distill-paper-exemplar/scripts/preprocess_l0.py",
+    "distill-agents/agents/distill-methods.md",
+    "distill-agents/agents/distill-introduction.md",
+    "distill-agents/agents/distill-theory.md",
+    "distill-agents/agents/distill-results.md",
+    "distill-introduction-exemplar/SKILL.md",
+    "distill-theory-exemplar/SKILL.md",
+    "distill-methods-exemplar/SKILL.md",
+    "distill-results-exemplar/SKILL.md",
+)
+
+
+def distiller_fingerprint() -> dict:
+    import hashlib
+
+    h = hashlib.sha256()
+    n = 0
+    for rel in DISTILLER_FILES:
+        p = SKILLS_ROOT / rel
+        if not p.is_file():
+            continue
+        h.update(rel.encode("utf-8"))
+        h.update(b"\0")
+        h.update(p.read_bytes())
+        h.update(b"\0")
+        n += 1
+    return {"version": h.hexdigest()[:12], "files": n}
+
 
 def strip_base64(text: str) -> tuple[str, int]:
     """Replace data-URI images with stable placeholder refs. Returns (text, n_images)."""
@@ -419,6 +459,44 @@ def sweep(work_root_dir: Path, skills_root: Path) -> int:
     return 0
 
 
+def prior_traces(citekey: str, source_text: str) -> dict:
+    """Gap-fill detection (2026-09-12). A pre-existing story card or registry
+    trace means the paper enters gap-fill semantics (auto-write default),
+    not first-time batch review. Matching is case-insensitive with hyphen /
+    no-separator citekey variants plus the frontmatter title prefix — the
+    ridge2013 card was missed by a case-sensitive grep (2026-09-12)."""
+    ck = citekey.lower()
+    variants = {ck, ck.replace("_", "-"), ck.replace("_", "")}
+    m = re.search(r'^title:\s*"?(.+?)"?\s*$', source_text, re.M | re.I)
+    title_norm = re.sub(r"[^a-z0-9 ]", "", m.group(1).lower())[:60] if m else None
+    out = {"story_cards": [], "registries": [], "corpus_wb_markers": 0}
+    bp = SKILLS_ROOT / "story-blueprints" / "v4" / "blueprints"
+    if bp.is_dir():
+        for f in bp.glob("*.md"):
+            t = f.read_text(encoding="utf-8", errors="ignore").lower()
+            if any(v in t for v in variants) or (title_norm and title_norm in t):
+                out["story_cards"].append(f.name)
+    for reg in ("write-introduction/corpus/_evidence_registry.yaml",
+                "write-theory/corpus/_evidence_registry.yaml",
+                "write-methods/corpus/_evidence_registry.yaml",
+                "write-results/corpus/_evidence_registry.yaml"):
+        p = SKILLS_ROOT / reg
+        if p.is_file():
+            t = p.read_text(encoding="utf-8", errors="ignore").lower()
+            flat = t.replace("_", "").replace("-", "")
+            if any(v.replace("_", "").replace("-", "") in flat for v in variants):
+                out["registries"].append(reg)
+    pat = re.compile(r"wb:[A-Za-z0-9_\-]*" + re.escape(ck.split("_")[0]), re.I)
+    for cdir in ("write-introduction/corpus", "write-theory/corpus",
+                 "write-methods/corpus", "write-results/corpus"):
+        d = SKILLS_ROOT / cdir
+        if d.is_dir():
+            for f in d.rglob("*.md"):
+                out["corpus_wb_markers"] += len(pat.findall(
+                    f.read_text(encoding="utf-8", errors="ignore")))
+    return out
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="L0 preprocess: strip base64 + materialize section slices")
     ap.add_argument("source_md", nargs="?", default=None,
@@ -449,6 +527,9 @@ def main() -> int:
     ap.add_argument("--sources-dir", default=None,
                     help="override the sentence-inventory root (default: "
                          "skills/story-blueprints/v4/rhetoric-moves/sources)")
+    ap.add_argument("--min-compression-ratio", type=float, default=1.5,
+                    help="overall raw/text-only byte ratio below which the "
+                         "conversion is reported as ineffective (default 1.5)")
     args = ap.parse_args()
 
     if args.sweep:
@@ -498,6 +579,11 @@ def main() -> int:
     raw_bytes = len(raw.encode("utf-8"))
     text, n_images = strip_base64(raw)
     lines = text.split("\n")
+    text_bytes_total = len(text.encode("utf-8"))
+    # per-slice compression stats need the pre-strip text; line spans only
+    # align when stripping removed no newlines (data URIs are single-line)
+    raw_lines = raw.split("\n")
+    lines_aligned = len(raw_lines) == len(lines)
 
     text_only = outdir / "fulltext.text-only.md"
     text_only.write_text(text, encoding="utf-8")
@@ -531,7 +617,7 @@ def main() -> int:
         "source_md": str(src),
         "text_only_md": str(text_only),
         "raw_bytes": raw_bytes,
-        "text_only_bytes": len(text.encode("utf-8")),
+        "text_only_bytes": text_bytes_total,
         "images_replaced": n_images,
         "structure_type": structure_type,
         "structure_note": (
@@ -547,13 +633,52 @@ def main() -> int:
         body = "\n".join(lines[sp["start"] - 1 : sp["end"]]).rstrip() + "\n"
         out = sections_dir / f"{bucket}.md"
         out.write_text(body, encoding="utf-8")
-        manifest["section_slices"][bucket] = {
+        entry = {
             "path": str(out),
             "start_line": sp["start"],
             "end_line": sp["end"],
             "words": len(body.split()),
             "heading": sp["heading"],
         }
+        if lines_aligned:
+            raw_slice = "\n".join(raw_lines[sp["start"] - 1 : sp["end"]])
+            raw_slice_bytes = len(raw_slice.encode("utf-8"))
+            body_bytes = len(body.encode("utf-8"))
+            entry["raw_bytes"] = raw_slice_bytes
+            entry["text_bytes"] = body_bytes
+            entry["compression_ratio"] = round(raw_slice_bytes / max(1, body_bytes), 2)
+        manifest["section_slices"][bucket] = entry
+
+    # compression savings observability (T2-6, 2026-09-12; pi-distill's
+    # ineffective-compression spirit): surface when the text-only conversion
+    # bought almost nothing instead of silently claiming savings.
+    overall_ratio = round(raw_bytes / max(1, text_bytes_total), 2)
+    savings_warning = overall_ratio < args.min_compression_ratio
+    manifest["compression"] = {
+        "ratio": overall_ratio,
+        "min_ratio": args.min_compression_ratio,
+        "savings_warning": savings_warning,
+        "per_slice_aligned": lines_aligned,
+    }
+    manifest["distiller_fingerprint"] = distiller_fingerprint()
+    manifest["prior_traces"] = prior_traces(citekey, raw)
+    if any(manifest["prior_traces"].get(k) for k in ("story_cards", "registries")) \
+            or manifest["prior_traces"]["corpus_wb_markers"]:
+        print("DEDUP: prior traces found — gap-fill semantics (auto-write default) "
+              "per protocol; NOT a first-time distill:")
+        for card in manifest["prior_traces"]["story_cards"]:
+            print(f"  story card: {card}")
+        for reg in manifest["prior_traces"]["registries"]:
+            print(f"  registry: {reg}")
+        print(f"  corpus wb markers: {manifest['prior_traces']['corpus_wb_markers']}")
+    if savings_warning:
+        print(
+            f"COMPRESSION: ineffective ({overall_ratio}x < "
+            f"{args.min_compression_ratio}x) — source carried little base64 "
+            "weight; text-only conversion bought almost nothing"
+        )
+    print(f"DISTILLER: {manifest['distiller_fingerprint']['version']} "
+          f"({manifest['distiller_fingerprint']['files']} files)")
 
     manifest["sentences_archive"] = None
     if args.keep_sentences:

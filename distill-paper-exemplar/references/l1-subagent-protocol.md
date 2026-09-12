@@ -43,12 +43,25 @@ cache_read 是 fresh input 的 3.5 倍）。
 ## 主循环纪律
 
 - 主循环**只读**：PDM 根文件、各节 `sections/<section>.json`、子代理的 ≤20 行摘要。
+- **验收以盘面为准（2026-09-12 固化）**：子代理是否完成只按盘面产物判定——`sections/<section>.json` 存在且非空、`identity` 字段齐、`feedback/<section>.feedback.yaml` 在（无该基础设施时见其注明）、写回候选停在 plan。≤20 行摘要只用于汇报与合并，**不作为完成依据**；摘要与盘面冲突时以盘面为准（runbook 教训：`_meta` 谎报 produced 不可信）。
+- **失败必须显式记录**：子代理死亡 / 超时 / 产物缺失一律视为该节未完成，在 PDM 注明根因一行并在最终报告呈报；主循环不得代其宣布 verified，也不得静默跳过（判定失败绝不当作可以停止）。
 - 读 `sections/<section>.json` 时校验 `identity` 字段非空；空或缺文件 → 该节视为未完成，只重发该节（不整链路重跑）。
 - 主循环**不得打开**：任何分节 skill 的 references/、protocols/、语料索引
   （_index / INDEX / _evidence_registry / routing 表）、论文切片——这些只在子代理里读。
 - 合并：每节完成后主循环把摘要中的 identity/band 写入 PDM 该节条目、更新 `status`；
   JSON 文件由子代理写入，主循环不代写。
 - 中断续跑：以 PDM 各节 `status` 为断点，只重发未完成节，不整链路重跑。
+
+## JSON 修复路径（不重发原文，2026-09-12）
+
+`sections/<section>.json` 存在但 `json.loads` 失败、或 identity 字段缺失/为空时，先走修复
+而非整节重发：派一个最小修复子代理，prompt 只含 (a) 损坏文件的完整原文（通常几十 KB，
+远小于切片），(b) 精确的解析/校验错误清单，(c) 指令——只修 JSON 语法与字段结构，不改任何
+蒸馏内容、不新增语义，**禁止重读切片/语料/参考文件**；修复后写回同一路径并回传 ≤5 行确认。
+修复子代理同样不得运行 corpus_writeback.py。仅当文件整体缺失或内容实质错误（identity 与
+盘面/切片明显矛盾）时才按重试上限整节重发。固化依据：pi-distill repairer 契约（修复只带
+坏响应+校验错误，不重发工具输出）——一次修复远省于整节重发（约 0.5–1.5M tokens），且不产生
+第二次蒸馏漂移。
 
 ## 节奏与限流
 
@@ -61,6 +74,8 @@ cache_read 是 fresh input 的 3.5 倍）。
   request failed` 等瞬态错误时——先等 20 秒查 PDM 盘面（防"后台实际完成"，见
   runbook 超时代理教训），确认无产物后**串行**逐个重发，不再并行重试（Anand 篇
   实测：2 并行双败、串行重发一次成功）。
+- **重试上限（2026-09-12 固化）**：同一节累计重发 ≤2 次（含瞬态降级重发）；达上限即
+  停止该节重发并在最终报告呈报根因与已有盘面（如有），由用户裁决是否续跑——不无限爬梯。
 - 子代理内仍按分节 skill 自己的 phase 纪律按需加载参考文件（不预读全部 phase）。
 - Windows 本机注意：脚本调用一律用 `py`，不用 `python`（WindowsApps 占位 stub）。
 
@@ -68,6 +83,20 @@ cache_read 是 fresh input 的 3.5 倍）。
 
 - ADD/EXTEND：`name` / `dedup.verdict` / `anchor.file` / `block_text`（全文内嵌，
   `{NEXT}` 占位）/ `index_note`（带 `{NEXT}`）。
+- **写回定锚纪律（2026-09-12）**：定锚前先跑
+  `py ../distill-paper-exemplar/scripts/corpus_query.py outline --section <section> --file <目标相对路径>`
+  取目标文件标题树（行号 + 全部层级标题）——`after_heading` 必须指向**主题匹配的既有标题**，
+  禁止默认文件尾；目标文件标题族与其主流不同（如 E_moderation 用 `## EN.` 家族）时，
+  block_text 标题与 index_note 直接写**显式已解析标号**（如 `## E13.`），不用 `{NEXT}`。
+- **block_text 禁止预嵌 `<!-- wb:... -->` 标记**——执行器在块尾自动追加溯源标记，
+  预嵌 = 同块双标记（verify V2 FAIL；2026-09-12 Ridge 跑 15 项全中，修复耗一轮主循环手术）。
+- **registry 自动同步（2026-09-12）**：theory plan 项必须带 `registry_dimension`
+  （Mechanism/Boundary/Constructs/Mode/Level/Question 之一）——执行器据此自动创建论文条目并追加
+  tfr 片段（缺该字段的项仍落残项，手工同步是退路不是默认）；theory plan 顶层建议带
+  `paper_meta: {title, year, theory_build_type}`（display_name/年份用，缺省回退 CLI
+  `--paper-title/--paper-year`）；results 由执行器按 `rN_` 前缀自动追加估计器槽位
+  skeleton_variants 与 batch_history；methods/intro 沿用 paper-append 路径（空壳条目现在会
+  自动创建 papers 列表与 slots_covered）。
 - **create_new_file**（gate ① 裁决新建 canonical 模块时）：上述字段 + `new_file`
   （相对 corpus_root 的新路径）/ `module_description`（1–2 句功能描述，进模块
   frontmatter 与功能描述节）/ `template_of`（可选，同语料 sibling 文件名，决定

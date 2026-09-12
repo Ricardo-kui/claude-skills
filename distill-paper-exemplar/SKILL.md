@@ -58,7 +58,12 @@ when_to_use: "用户给一篇完整论文要求整篇蒸馏/整篇学习时；�
    映射模块），**不再要求人工补切 theory**；`formal-model`（"Theoretical Model" 节）
    时 theory 蒸馏按模型类内容处理，不套假设发展模板；`classic-imrad` 为默认。
    登记 frontmatter/citekey（Zotero 为元数据源）。创建 PDM 骨架，把 manifest 的
-   切片路径写入 `source_provenance.section_slices`。
+   切片路径写入 `source_provenance.section_slices`，并把 `distiller_fingerprint`
+   落入 PDM 根——已有旧 PDM 根时对比指纹，不一致则在 PDM `note` 注明旧条目按旧
+   协议产出（供查漏补缺重蒸馏时判断）；`compression.savings_warning=true` 时在
+   分发前向用户知会一句（text-only 转换收益低，源已接近纯文本）；`prior_traces`
+   非空（story 卡/registry/wb 标记任一命中）时本篇按 gap-fill 语义执行——auto-write
+   默认，不再走首次批量呈审。
    **工作目录纪律（用户裁决）**：PDM 工作目录默认在
    `~/.claude/distill-work/<citekey>.pdm/`（`DISTILL_WORK_ROOT` 可改）——**Vault/OneDrive
    之外**，不向论文目录生成中间文件；全部产物可从源 MD 确定性重建，可随意删。

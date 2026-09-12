@@ -201,7 +201,7 @@ def resolve_target(corpus_root: Path, item: dict, override: str | None) -> Path 
 
 
 def update_registry(registry: Path, stem: str, paper: str, journal: str,
-                    gap: str, new_text: dict) -> str:
+                    gap: str, new_text: dict, slot_tag: str | None = None) -> str:
     """Surgical text edit of one entry. Returns status message."""
     # Accumulate on new_text — re-reading from disk here silently discarded
     # every earlier same-run item's edit (last item won). 2026-08-29 fix.
@@ -239,7 +239,24 @@ def update_registry(registry: Path, stem: str, paper: str, journal: str,
     papers_idx = next((i for i, l in enumerate(lines2)
                        if re.match(r"^\s*papers:\s*$", l)), None)
     if papers_idx is None:
-        return f"REGISTRY: entry '{key}' has no papers list — SKIPPED papers append"
+        # Empty-shell entry (paper_count present, papers list absent — e.g.
+        # 动态面板-GMM 2026-09-12): create the list inline instead of skipping.
+        # Kills the "registry-sync agent" class for methods corpora.
+        # papers/paper_count are SIBLINGS at the same indent; respect the
+        # file's EOL style (methods registry is CRLF).
+        eol = "\r\n" if "\r\n" in entry else "\n"
+        entry2 = entry.replace(
+            f"paper_count: {count}",
+            f"paper_count: {count + 1}{eol}{sub}papers:{eol}{sub}- {paper} ({journal})", 1)
+        if slot_tag:
+            sc = re.search(r"^(\s*)slots_covered:.*$", entry2, re.M)
+            if sc:
+                have = re.findall(r"M\d+", sc.group(0))
+                merged = " ".join(sorted(set(have) | {slot_tag}))
+                entry2 = entry2[:sc.start()] + f"{sc.group(1)}slots_covered: [{merged}]" + entry2[sc.end():]
+        new_text[str(registry)] = text[:start] + entry2 + text[end:]
+        return (f"REGISTRY: {key} papers list created, paper_count {count}->{count + 1}, "
+                f"+{paper} ({journal})" + (f", slots_covered+{slot_tag}" if slot_tag else ""))
     item_re = re.compile(r"^(\s*)- .+$")
     last = papers_idx
     for j in range(papers_idx + 1, len(lines2)):
@@ -254,6 +271,12 @@ def update_registry(registry: Path, stem: str, paper: str, journal: str,
     ind_item = item_re.match(lines2[last]).group(1)
     lines2.insert(last + 1, f"{ind_item}- {paper} ({journal})")
     entry2 = "\n".join(lines2)
+    if slot_tag:
+        sc = re.search(r"^(\s*)slots_covered:.*$", entry2, re.M)
+        if sc:
+            have = re.findall(r"M\d+", sc.group(0))
+            merged = " ".join(sorted(set(have) | {slot_tag}))
+            entry2 = entry2[:sc.start()] + f"{sc.group(1)}slots_covered: [{merged}]" + entry2[sc.end():]
     gm = re.search(r"^(\s+)%s: (\d+)$" % re.escape(gap), entry2, re.M)
     if gm:
         entry2 = (entry2[:gm.start()]
@@ -261,6 +284,233 @@ def update_registry(registry: Path, stem: str, paper: str, journal: str,
                   + entry2[gm.end():])
     new_text[str(registry)] = text[:start] + entry2 + text[end:]
     return f"REGISTRY: {key} paper_count {count}->{count + 1}, +{paper} ({journal}), {gap}+1"
+
+
+def _bump_last_updated(current: str, today: str) -> str:
+    """Registry last_updated is date-letter style (2026-09-12a): same day
+    increments the letter, a new day resets to `a`."""
+    m = re.match(r"^(\d{4}-\d{2}-\d{2})([a-z]?)$", (current or "").strip())
+    if m and m.group(1) == today:
+        return today + chr(ord(m.group(2) or "`") + 1)
+    return today + "a"
+
+
+def update_theory_registry(registry: Path, paper: str, journal: str, gap: str,
+                           applied: list, new_text: dict, title: str | None,
+                           year: str | None, tbt: str | None,
+                           timestamp: str) -> list[str]:
+    """Per-paper tfr-fragment sync for section == theory (2026-09-12).
+
+    Replaces the post-hoc registry-sync agent (~5M tokens/run): fragments are
+    appended under source_papers.<paper> (entry created when missing), meta and
+    summary_by_dimension counters follow. Items WITHOUT registry_dimension are
+    left as residuals on purpose — a guessed makadok_dimension costs more than
+    a manual sync. Both insertion paths are line-based (2026-09-13 rewrite:
+    the first cut-arithmetic version split the previous fragment's fields)."""
+    msgs = []
+    lines = (new_text.get(str(registry)) or registry.read_text(encoding="utf-8")).split("\n")
+    frags = []
+    for name, target, label, item in applied:
+        dim = item.get("registry_dimension")
+        if not dim:
+            msgs.append(f"[{name}] REGISTRY(theory): no registry_dimension — SKIPPED (manual sync)")
+            continue
+        heading = next((l for l in (item.get("block_text") or "").split("\n")
+                        if l.startswith("#")), name).lstrip("# ").strip()
+        try:
+            home = str(target.relative_to(registry.parent)).replace("\\", "/")
+        except ValueError:
+            home = target.name
+        frags.append({"type": name, "title": heading, "home_files": [home],
+                      "makadok_dimension": dim, "status": "EMERGING",
+                      "note": (item.get("index_note") or "").replace("{NEXT}", label)})
+    if not frags:
+        msgs.append("REGISTRY(theory): nothing to sync (no item carried registry_dimension)")
+        new_text[str(registry)] = "\n".join(lines)
+        return msgs
+    sp_i = next((i for i, l in enumerate(lines) if l.strip() == "source_papers:"), None)
+    if sp_i is None:
+        return msgs + ["REGISTRY(theory): source_papers section not found — SKIPPED (manual sync)"]
+    sp_end = next((i for i in range(sp_i + 1, len(lines))
+                   if lines[i] and not lines[i][0].isspace()), len(lines))
+    paper_new = not any(l.strip() == f"{paper}:" for l in lines[sp_i:sp_end])
+    next_id = max([int(x) for x in re.findall(r"tfr_(\d+)", "\n".join(lines))] or [0]) + 1
+
+    def fragment_lines():
+        out = []
+        for k, f in enumerate(frags):
+            fid = f"tfr_{next_id + k}"
+            out.append(f"      - fragment_id: {fid}")
+            out.append(f"        type: {f['type']}")
+            out.append(f'        title: "{f["title"]}"')
+            out.append("        home_files:")
+            for hf in f["home_files"]:
+                out.append(f"          - {hf}")
+            out.append(f"        makadok_dimension: {f['makadok_dimension']}")
+            out.append(f"        status: {f['status']}")
+            out.append(f'        note: "{f["note"]}"')
+        return out
+
+    if paper_new:
+        entry = [f"  {paper}:", f'    display_name: "{title or paper}"',
+                 f'    journal: "{journal}"']
+        if year:
+            entry.append(f'    year: "{year}"')
+        entry.append(f"    gap_type: {gap}")
+        if tbt:
+            entry.append(f'    theory_build_type: "{tbt}"')
+        entry.append("    fragments:")
+        entry += fragment_lines()
+        lines = lines[:sp_end] + entry + [""] + lines[sp_end:]
+        msgs.append(f"REGISTRY(theory): paper entry {paper} created with "
+                    f"{len(frags)} fragments (tfr_{next_id}-tfr_{next_id + len(frags) - 1})")
+    else:
+        e_i = next(i for i, l in enumerate(lines[sp_i:sp_end])
+                   if l.strip() == f"{paper}:") + sp_i
+        e_end = next((i for i in range(e_i + 1, sp_end)
+                      if lines[i] and not lines[i][0].isspace()), sp_end)
+        f_i = next((i for i in range(e_i + 1, e_end)
+                    if lines[i].strip() == "fragments:"), None)
+        if f_i is None:
+            return msgs + [f"REGISTRY(theory): {paper} has no fragments list — SKIPPED (manual sync)"]
+        item_is = [i for i in range(f_i + 1, e_end)
+                   if re.match(r"^\s*- fragment_id:", lines[i])]
+        if item_is:
+            item_ind = re.match(r"^(\s*)- fragment_id:", lines[item_is[0]]).group(1)
+            ins_at = item_is[-1] + 1
+            while ins_at < e_end and (lines[ins_at].strip() == "" or
+                                      len(lines[ins_at]) - len(lines[ins_at].lstrip()) > len(item_ind)):
+                ins_at += 1
+        else:
+            item_ind = re.match(r"^(\s*)fragments:", lines[f_i]).group(1) + "  "
+            ins_at = f_i + 1
+        lines = lines[:ins_at] + fragment_lines() + lines[ins_at:]
+        msgs.append(f"REGISTRY(theory): {len(frags)} fragments appended to {paper} "
+                    f"(tfr_{next_id}-tfr_{next_id + len(frags) - 1})")
+    text = "\n".join(lines)
+    # summary_by_dimension 计数（行级，逐维度）
+    for dim in {f["makadok_dimension"] for f in frags}:
+        n = sum(1 for f in frags if f["makadok_dimension"] == dim)
+        dm = next((i for i, l in enumerate(lines) if l.strip() == f"{dim}:"), None)
+        if dm is None:
+            msgs.append(f"REGISTRY(theory): WARN summary_by_dimension[{dim}] not found — counters not bumped")
+            continue
+        for j in range(dm + 1, min(dm + 5, len(lines))):
+            if "total_fragments:" in lines[j]:
+                v = int(re.search(r"(\d+)", lines[j].split(":", 1)[1]).group(1))
+                lines[j] = re.sub(r"(\d+)", str(v + n), lines[j], count=1)
+            if "source_papers:" in lines[j]:
+                v = int(re.search(r"(\d+)", lines[j].split(":", 1)[1]).group(1))
+                lines[j] = re.sub(r"(\d+)", str(v + (1 if paper_new else 0)), lines[j], count=1)
+    text = "\n".join(lines)
+    # meta 计数
+    for i, l in enumerate(lines):
+        if l.strip().startswith("total_papers_indexed:"):
+            v = int(l.split(":", 1)[1].strip())
+            lines[i] = re.sub(r"(\d+)", str(v + (1 if paper_new else 0)), l, count=1)
+        if l.strip().startswith("batches_processed:"):
+            v = int(l.split(":", 1)[1].strip())
+            lines[i] = re.sub(r"(\d+)", str(v + 1), l, count=1)
+        if l.strip().startswith("last_updated:"):
+            cur = l.split(":", 1)[1].strip()
+            lines[i] = re.sub(r"last_updated: \S+", f"last_updated: {_bump_last_updated(cur, timestamp)}", l, count=1)
+    text = "\n".join(lines)
+    new_text[str(registry)] = text
+    return msgs
+
+
+def update_results_registry(registry: Path, paper: str, applied: list,
+                            new_text: dict, timestamp: str) -> list[str]:
+    """Estimator slot-append sync for section == results (2026-09-12).
+
+    Slot = item-name prefix r<N>_; registry key = file stem with `-` → `_`
+    (registry keys are underscore-style; the executor previously missed
+    hyphen stems — Gulati-1999/ridge runs). Appends skeleton_variants items
+    plus batch_history and meta bumps."""
+    msgs = []
+    text = new_text.get(str(registry)) or registry.read_text(encoding="utf-8")
+    done = 0
+    for name, target, label, item in applied:
+        ms = re.match(r"r(\d+)_", name)
+        if not ms:
+            continue
+        slot, key = f"R{ms.group(1)}", target.stem.replace("-", "_")
+        ke = re.search(rf"^  {re.escape(key)}:\s*$", text, re.M)
+        if not ke:
+            msgs.append(f"[{name}] REGISTRY(results): estimator '{key}' not found — SKIPPED (manual sync)")
+            continue
+        nxt_e = re.search(r"^  \S", text[ke.end():], re.M)
+        e_end = ke.end() + (nxt_e.start() if nxt_e else len(text) - ke.end())
+        ktext = text[ke.end():e_end]
+        se = re.search(rf"^(\s+){slot}:\s*$", ktext, re.M)
+        if not se:
+            msgs.append(f"[{name}] REGISTRY(results): slot {slot} not found under {key} — SKIPPED (manual sync)")
+            continue
+        sv = re.search(r"^(\s+)skeleton_variants:.*$", ktext[se.end():], re.M)
+        if not sv:
+            msgs.append(f"[{name}] REGISTRY(results): skeleton_variants not found — SKIPPED (manual sync)")
+            continue
+        base = se.end() + sv.start()
+        ind_item = sv.group(1)  # 真实风格：列表项与 skeleton_variants 键同缩进
+        skeleton = " ".join(_block_field(item.get("block_text") or "", "骨架")) or "见语料块"
+        notes = " ".join(_block_field(item.get("block_text") or "", "与原骨架差异")) \
+            or (item.get("index_note") or "").replace("{NEXT}", label)
+        block = (f"{ind_item}- id: {name}\n"
+                 f"{ind_item}  skeleton: >-\n"
+                 + "".join(f"{ind_item}    {ln.strip()}\n" for ln in skeleton.split(". ") if ln.strip())
+                 + f"{ind_item}  notes: >-\n"
+                 + "".join(f"{ind_item}    {ln.strip()}\n" for ln in f"corpus {target.stem}.md {label}：{notes}".split("；") if ln.strip()))
+        ins_at = ke.end() + base + sv.end() + 1
+        # append at the END of the skeleton_variants list: next line at item indent or less
+        tail = ins_at
+        tl = text.split("\n")
+        # walk in line space for the list end
+        line_no = text[:ins_at].count("\n")
+        j = line_no
+        while j < len(tl) - 1 and (tl[j + 1].strip() == "" or tl[j + 1].startswith(ind_item) or tl[j + 1].startswith(sv.group(1) + "- ")):
+            j += 1
+        ins_at_line = j + 1
+        text = "\n".join(tl[:ins_at_line]) + "\n" + block.rstrip("\n") + "\n" + "\n".join(tl[ins_at_line:])
+        done += 1
+        msgs.append(f"[{name}] REGISTRY(results): {key}.slots.{slot}.skeleton_variants +1 (corpus {target.stem}.md {label})")
+    if done:
+        tl = text.split("\n")
+        paper_new = not any(l.strip().startswith(f"source_paper: {paper}") for l in tl)
+        n_batch = max([int(x) for x in re.findall(r"batch_(\d+)", text)] or [0]) + 1
+        bid = f"batch_{n_batch}_{paper}_writeback"
+        bh_i = next((i for i, l in enumerate(tl) if l.strip() == "batch_history:"), None)
+        if bh_i is None:
+            msgs.append("REGISTRY(results): WARN batch_history section not found — batch not recorded")
+        else:
+            list_indent = "  "
+            if bh_i + 1 < len(tl) and re.match(r"^\s*- ", tl[bh_i + 1]):
+                list_indent = re.match(r"^(\s*)- ", tl[bh_i + 1]).group(1)
+            j = bh_i + 1
+            while j < len(tl) and (tl[j].startswith(list_indent + "- ")
+                                   or tl[j].strip() == ""
+                                   or tl[j].startswith(list_indent + "  ")):
+                j += 1
+            entry_lines = [f"{list_indent}- batch_id: {bid}",
+                           f"{list_indent}  timestamp: {timestamp}",
+                           f"{list_indent}  source_paper: {paper}",
+                           f"{list_indent}  slot_updates_count: {done}",
+                           f"{list_indent}  novel_patterns_count: {done}"]
+            tl = tl[:j] + entry_lines + tl[j:]
+            text = "\n".join(tl)
+        text = re.sub(r"^(  batches_processed: )(\d+)",
+                      lambda mm: mm.group(1) + str(int(mm.group(2)) + 1), text, count=1, flags=re.M)
+        text = re.sub(r"^(  total_papers_indexed: )(\d+)",
+                      lambda mm: mm.group(1) + str(int(mm.group(2)) + (1 if paper_new else 0)),
+                      text, count=1, flags=re.M)
+        lb = re.search(r"^(  last_batch_id: )(\S+)", text, re.M)
+        if lb:
+            text = text[:lb.start()] + f"{lb.group(1)}{bid}" + text[lb.end():]
+        lu = re.search(r"^(  last_updated: )(\S+)", text, re.M)
+        if lu:
+            text = text[:lu.start()] + f"{lu.group(1)}{_bump_last_updated(lu.group(2), timestamp)}" + text[lu.end():]
+        msgs.append(f"REGISTRY(results): batch {bid} recorded ({done} slot updates)")
+    new_text[str(registry)] = text
+    return msgs
 
 
 def add_index_row(corpus_root: Path, target: Path, note: str,
@@ -409,6 +659,10 @@ def main() -> int:
     ap.add_argument("--journal", required=True)
     ap.add_argument("--gap", default="Incompleteness",
                     choices=["Incompleteness", "Inadequacy", "Incommensurability"])
+    ap.add_argument("--paper-title", default=None,
+                    help="paper title (theory registry display_name; plan paper_meta overrides)")
+    ap.add_argument("--paper-year", default=None,
+                    help="publication year (theory registry; plan paper_meta overrides)")
     ap.add_argument("--apply", action="store_true", help="write files (default: dry-run diffs)")
     args = ap.parse_args()
 
@@ -427,6 +681,8 @@ def main() -> int:
     new_text: dict[str, str] = {}
     messages: list[str] = []
     rc = 0
+    applied: list = []
+    section = str(plan.get("section") or "")
     for item in plan["items"]:
         name = item["name"]
         verdict = item["dedup"]["verdict"]
@@ -529,9 +785,25 @@ def main() -> int:
 
         note = index_note.replace("{NEXT}", label)
         messages.append(f"[{name}] " + update_index(corpus_root, target, note, new_text))
-        if registry:
+        slot_tag = (f"M{re.match(r'm(\d+)_', name).group(1)}"
+                    if re.match(r"m(\d+)_", name) else None)
+        if registry and section not in ("theory", "results"):
+            # theory/results 的 registry 同步由节级函数接管（apply 循环后统一执行）
             messages.append(f"[{name}] " + update_registry(
-                registry, target.stem, args.paper, args.journal, args.gap, new_text))
+                registry, target.stem, args.paper, args.journal, args.gap, new_text,
+                slot_tag=slot_tag))
+        applied.append((name, target, label, item))
+
+    if registry and section == "theory":
+        pm = plan.get("paper_meta") or {}
+        messages += update_theory_registry(
+            registry, args.paper, args.journal, args.gap, applied, new_text,
+            title=args.paper_title or pm.get("title"),
+            year=str(args.paper_year or pm.get("year") or "") or None,
+            tbt=pm.get("theory_build_type"), timestamp=date.today().isoformat())
+    elif registry and section == "results":
+        messages += update_results_registry(
+            registry, args.paper, applied, new_text, timestamp=date.today().isoformat())
 
     if not args.apply:
         for path, text in new_text.items():
