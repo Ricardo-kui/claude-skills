@@ -792,6 +792,66 @@ difference is not significant (p = [value]).
 **与原骨架差异**: OLS-FE.md 现有 16 个变体全部针对线性关系或线性交互，曲线关系报告完全空白。本骨架提供顶刊倒 U 型关系的标准协议：线性/二次系数 → 形状判断+效应量 → Lind-Mehlum 三步（二阶项符号、两端斜率、转折点在数据范围内）→ 转折点 95% CI → 图形 → 支持判断。**范式排他性**: 多项式 OLS/FE 专用；Logit/Probit 需替换为 predicted probability / odds ratio 解释。
 **诚实边界**: 曲线关系的 Cohen's d 计算应说明基准（如基于二次项或简单斜率差异），不可直接套用线性交互的 d 公式；须在 Methods 或附录说明效应量计算方式。
 
+
+
+
+### 变体 99: Ridge, Aime & White 2013 (SMJ) — 双机制分臂量化：调节强化 U 形两臂时逐臂报幅度 (2026-09-12)
+
+**验证状态**: EMERGING（单篇）
+
+**槽位**: R5（条件效应的经济显著性）
+
+**原始句锚点**: "Our results imply that the difference in social comparison effects between teams with high and low top management teams eligibility is practically relevant since it implies a nominal average difference in firm ROA of 1.40 percent (1.81, 0.16, and 2.23% respectively)."
+
+**骨架**:
+
+> "Our results imply that the difference in [mechanism A] effects between [units] with high and low [moderator] is practically relevant since it implies a nominal average difference in [outcome] of [X] percent ([x1], [x2], and [x3] percent for [W1], [W2], and [W3], respectively). Similarly, [mechanism B] effect differences between [units] with high and low [moderator] are practically relevant since they imply a nominal average difference in [outcome] of [Y] percent ([y1], [y2], and [y3] percent, respectively) when [predictor] goes from the mean to two standard deviations above the mean. Figure [5] (a-c) illustrates these curvilinear interactions and shows that the U-shaped relationship between [predictor] and [outcome] is stronger for [units] with high [moderator]."
+
+**与原骨架差异**: 区别于本文件 R4 变体 1（单调节 ±1 SD 两点式实用项）与 R5 百分位+基准对比变体——本变体处理**调节同时强化 U 形两臂**的幅度报告：左臂（低水平，机制 A：social comparison）与右臂（高水平，机制 B：tournament）各算一次账，且每个臂给跨多调节的均值 + 括号内逐调节分项值（"nominal average difference... of 1.40 percent (1.81, 0.16, and 2.23% respectively)"）——均值+分项并报在多调节共享一个假设时防止只展示最好的那个调节。
+
+**诚实边界**: "practically relevant" 判定落在均值上而分项可能悬殊（原文 tenure 臂仅 0.16%）——分项悬殊时应逐项判断而非以均值宣告实际相关性；机制 A 臂的量化若依赖线性×调节交互（本文该三个下阶交互全不显著），幅度翻译只是 nominal 外推，须保留 "nominal" 限定词、不得升格为显著机制差异；逐调节分项值与均值的口径（哪侧对比、几个 SD）须与本臂的机制解释一致。
+
+<!-- wb:ridge_aime_white_2013_smj:r5_dual_mechanism_arm_decomposition -->
+
+
+### 变体 98: Ridge, Aime & White 2013 (SMJ) — 曲线调节的机制判别式报告：X²×W 检验主效应臂机制 (2026-09-12)
+
+**验证状态**: EMERGING（单篇）
+
+**槽位**: R4
+
+**原始句锚点**: "This lends support to the logic of tournament effects as justification for the right arm of the U-shaped relationship in Hypothesis 1; in the absence of a tournament (when firms have an heir apparent), tournament-like effects are not noticeable."
+
+**骨架**:
+
+> "Hypothesis [2] addresses whether [moderator] will reduce the [increasing pattern of outcome] at high levels of [predictor], effectively testing whether the pattern observed in Hypothesis [1] is due to [mechanism B] taking over the relationship between [predictor] and [outcome] as [predictor] enlarges. As shown in Model [3], the interaction of the squared [predictor] term and [moderator] is statistically significant ([coefficient], p < [0.05]), providing strong support for Hypothesis [2] ([citations]). Our results indicate that for [units] without [moderator], there is a [mechanism B] effect that will increase predicted [outcome] by [X] percent when [predictor] moves two standard deviations above the mean in the sample. In contrast, predicted [outcome] for [units] in which [moderator] is present is lower when [predictor] moves two standard deviations above the mean, indicating the lack of a [mechanism B] effect in the presence of [moderator]. Figure [3] illustrates this curvilinear interaction and shows that, in the presence of [moderator], the relationship between [outcome] and [predictor] does not turn [positive] at high levels of [predictor]. This lends support to the logic of [mechanism B] as justification for the [right arm] of the U-shaped relationship in Hypothesis [1]."
+
+**与原骨架差异**: 区别于本文件 R4 线性调节变体（X×W 的 ±1 SD simple slopes 与递减 marginal effect 图）与 Logit-Probit-Ordered-Probit.md 的 r4 曲线调节变体（概率尺度 shift/steepen/turning point 几何判读）——本变体是连续 DV 上 **X²×W 机制判别式**，五拍结构：①假设重述句自带诊断目的（"effectively testing whether the pattern observed in Hypothesis [1] is due to..."——把交互定位为主假设机制的检验装置而非新增效应）；②X²×W 系数 + 支持判断；③无 W vs 有 W 对照幅度（无 W：机制效应 +X%；有 W：更低，"indicating the lack of a [mechanism] effect"）；④图形拍读形状变化（"does not turn positive at high levels"——调节的效果=右臂是否成形）；⑤收口句回锚主假设对应臂（"justification for the right arm of the U-shaped relationship in Hypothesis [1]"）。原文 H3 式多调节并置（两 W 同测一假设）时用一句并报两个系数（"both [W1] (−[c1], p < [0.01]) and [W2] (−[c2], p < [0.01])"）并以 attenuates/inhibits 动词统一解读、低/高 W 对照收尾——可作为本变体的多调节扩展拍。
+
+**诚实边界**: "indicating the lack of a [mechanism] effect" 是幅度对比+图形形状的定性判断，不是交互系数的显著性检验陈述——只有交互显著（机制被关掉）才可这样写，交互不显著时写 "does not differ"；机制判别逻辑的前提是"关掉机制的调节"在理论上只关掉该机制（排他性），否则只是相关性调节而非机制检验；支持判断后括号引 Cortina/George 属方法学引文错位（应引理论来源），写入时改引机制文献。
+
+<!-- wb:ridge_aime_white_2013_smj:r4_ushape_mechanism_discriminating_moderation -->
+
+
+### 变体 97: Ridge, Aime & White 2013 (SMJ) — U 形主效应四拍 + 双尾实用显著性（% → 美元翻译）(2026-09-12)
+
+**验证状态**: EMERGING（单篇）
+
+**槽位**: R3
+
+**原始句锚点**: "as pay disparity moves two standard deviations above the mean in the sample, firm ROA grows by 1.11 percent resulting an additional 274 million dollars in profit for the average firm in the sample"
+
+**骨架**:
+
+> "Hypothesis [1] posits that [outcome] will have a U-shaped relationship with [predictor]. As shown in Model [2], the results provide strong support for Hypothesis [1] with a [negative] linear coefficient and a [positive] squared term ([coefficient], p < [0.05]). As illustrated in Figure [2], [outcome] has a U-shaped relationship with [predictor]. These results are practically significant because they show that, as [predictor] moves two standard deviations above the mean in the sample, [outcome] improves by [X] percent, resulting in [an additional $N million] for the average firm in the sample, while, at two standard deviations below the mean, [outcome] improves by [Y] percent, resulting in [$M million additional] for the average firm in the sample. As [predictor] widens initially and consistent with [mechanism A] perspectives, we found that [outcome] suffers; but as [predictor] becomes meaningfully large, we observed [mechanism B]-type predictions for improved [outcome] taking over the relationship between [predictor] and [outcome]. In line with our theoretical development, [strong outcome] is found around meaningfully low or meaningfully high levels of [predictor]."
+
+**与原骨架差异**: EXTEND 本文件变体 17（R3 倒 U：Lind-Mehlum 三步 + 转折点 CI——那是曲线"形状裁决"拍，本变体补它缺的 "幅度展演"拍），并区别于 计数模型.md r3_count_poisson_gmm_inverted_u_chain 与本文件 IQR 单向经济显著性变体——本变体是 **U 形双尾 ±2 SD 实用显著性翻译**：上尾与下尾各给一次幅度（X% 与 Y%），并各自换算为平均公司的绝对美元额（"practically significant because" 领句）；随后以"机制 A 先起作用、机制 B 在高水平接管"的双机制重述句回锚理论，最后以 "In line with our theoretical development" 重复曲线形状收口。支持判断（strong support）在幅度拍之前给出——先结论后 magnitude 的倒装四拍。
+
+**诚实边界**: 仅凭线性+平方项系数符号与交互图宣告 U 形是 2013 年前的惯例——现代标准（lee_park 曲线支持契约、计数模型倒U链）要求补边际斜率双侧检验与转折点置信区间拍；双尾幅度翻译的前提是两端都在观测支持范围内；原文上尾句有语法瑕疵（"resulting an additional"）与正文未报线性系数具体值的省略，骨架已修正语法、系数值仍应从表补全。
+
+<!-- wb:ridge_aime_white_2013_smj:r3_ushape_dual_tail_dollar_translation -->
+
+
 ### 变体 18: R4 曲线调节效应 — 倒 U 型被调节（二阶交互项符号 + Cohen's d + flatten/steepen 图形解释）(1篇高价值)
 **来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
 **原始句锚点**: "In Model 3, the interaction terms between repeated alliance ties (relational embeddedness) and both the linear and quadratic terms of relative exploration are introduced in order to test Hypothesis 2: whether repeated alliance ties negatively moderates the inverted U-shaped relationship. This moderation effect is supported if the second-order interaction term is significantly positive (Hanns et al., 2016). As confirmed by our results, the second-order interaction term is indeed positive (b = 0.692, p = 6E−06), with a small-to-medium effect size (Cohen's d = 0.364). Figure 2 illustrates this moderation effect, showing that the inverted U-shape is flattened when the value of repeated alliance ties is higher, supporting Hypothesis 2."

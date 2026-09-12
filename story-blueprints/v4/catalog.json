@@ -5176,7 +5176,8 @@
             "State the integrative question before declaring a curvilinear answer, so the curve is presented as a theoretical resolution rather than an empirical surprise."
           ],
           "caveat": [
-            "Transfer only when the conflict is real and each theory contains a neglected scope condition; do not use an apparent literature split as a pretext for adding a quadratic term."
+            "Transfer only when the conflict is real and each theory contains a neglected scope condition; do not use an apparent literature split as a pretext for adding a quadratic term.",
+            "Keep promise vocabulary level with the design family: the original's “quasi-experimental tests” phrasing outruns what an internal-instrument dynamic-panel design can promise, and the wording–design tension propagates to the Methods."
           ]
         },
         "theory": {
@@ -5204,7 +5205,8 @@
             "Use moderators that selectively disable or strengthen the proposed mechanism, so the empirical design tests the explanation for the curve rather than only its shape."
           ],
           "caveat": [
-            "The Fortune 500 panel, Arellano-Bond estimator, lag structure, measures, and instrument diagnostics are design-specific and are not reusable story instructions."
+            "The Fortune 500 panel, Arellano-Bond estimator, lag structure, measures, and instrument diagnostics are design-specific and are not reusable story instructions.",
+            "Do not copy the diagnostics or bookkeeping prose: the original states the AR(2) null hypothesis backwards, and n = 599 is never reconciled with the 227-firm panel while the text claims a balanced matrix."
           ]
         },
         "results": {
@@ -5217,7 +5219,8 @@
             "After revealing the U-shaped focal pattern, use mechanism-targeted moderators to show why its high-end turn should disappear or strengthen under theoretically predicted conditions."
           ],
           "caveat": [
-            "A significant quadratic term is not a story climax by itself; the mechanism-checking evidence must be substantively tied to the claimed transition."
+            "A significant quadratic term is not a story climax by itself; the mechanism-checking evidence must be substantively tied to the claimed transition.",
+            "Cautionary pattern: the “practically relevant” framing for H4 is computed from linear × eligibility interactions that are themselves non-significant, and the section stages no robustness or turning-point-uncertainty beats—magnitude talk cannot rescue an arm that failed significance, and a single specification chain leaves the climax without a stress-test beat."
           ]
         },
         "discussion": {
@@ -5230,7 +5233,8 @@
             "Close by explaining how both theories remain internally valid within different ranges, rather than declaring one theory wrong."
           ],
           "caveat": [
-            "Do not turn a range-conditioned account into universal managerial advice; the relevant thresholds and contexts must remain bounded."
+            "Do not turn a range-conditioned account into universal managerial advice; the relevant thresholds and contexts must remain bounded.",
+            "The ending's compensation counsel (e.g., eligible-TMT firms benefiting from small pay increases) leans on the steepest-inference moderator; bound advice to the ranges and mechanisms the evidence actually staged."
           ]
         }
       },

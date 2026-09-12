@@ -5,10 +5,10 @@
 meta:
   schema_version: 1.1.0
   registry_type: estimator-slot-skeleton
-  last_updated: '2026-09-06h'
-  last_batch_id: batch_44_residual_sync_gulati_lavie_singh_partnering
-  batches_processed: 47
-  total_papers_indexed: 47
+  last_updated: '2026-09-12a'
+  last_batch_id: batch_48_ridge_aime_white_2013_residual_sync
+  batches_processed: 48
+  total_papers_indexed: 48
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
     granularity: per estimator（对应 corpus/[结果类型].md 文件）
@@ -651,6 +651,22 @@ estimators:
           - df_fit_attribution
           notes: 'corpus OLS-FE.md 变体92：主效应被自身交互项共线吸收的诚实归因——Still ... became insignificant because of the high correlation（须报实际 r 值），第二拍把 lower F values 归因 reduced degrees of freedom；吸收解释要求相关确实极高（r > 0.8 量级）且隐含交互项才是假设检验对象；can be ascribed to 只用于 df 机械性下降的 fit 解释，不得用于解释系数大小变化'
           corpus_path: corpus/OLS-FE.md
+        - id: r3_ushape_dual_tail_dollar_translation
+          skeleton: 'Hypothesis [1] posits that [outcome] will have a U-shaped relationship with [predictor]. As shown in Model [2], the results provide strong support for Hypothesis [1] with a [negative] linear coefficient and a [positive] squared term ([coefficient], p < [0.05]). As illustrated in Figure [2], [outcome] has a U-shaped relationship with [predictor]. These results are practically significant because they show that, as [predictor] moves two standard deviations above the mean in the sample, [outcome] improves by [X] percent, resulting in [an additional $N million] for the average firm in the sample, while, at two standard deviations below the mean, [outcome] improves by [Y] percent, resulting in [$M million additional] for the average firm in the sample. As [predictor] widens initially and consistent with [mechanism A] perspectives, we found that [outcome] suffers; but as [predictor] becomes meaningfully large, we observed [mechanism B]-type predictions for improved [outcome] taking over the relationship between [predictor] and [outcome]. In line with our theoretical development, [strong outcome] is found around meaningfully low or meaningfully high levels of [predictor].'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - ridge_aime_white_2013_smj
+          transferability: high
+          paradigm_exclusivity: U 形主效应的幅度展演拍（先结论后 magnitude 倒装四拍）——双尾 ±2 SD 实用显著性+绝对美元额翻译；曲线形状裁决（Lind-Mehlum 三步+转折点 CI）由变体 17 承担
+          rhythm_tags:
+          - dual_tail_practical_significance
+          - percent_to_dollar_translation
+          - mechanism_takeover_restatement
+          notes: 'corpus OLS-FE.md 变体97：EXTEND 本文件变体 17（R3 倒U：Lind-Mehlum 三步+转折点 CI——那是曲线形状裁决拍，本变体补它缺的幅度展演拍），并区别于 计数模型.md r3_count_poisson_gmm_inverted_u_chain 与本文件 IQR 单向经济显著性变体——本变体是 U 形双尾 ±2 SD 实用显著性翻译：上尾与下尾各给一次幅度（X% 与 Y%），并各自换算为平均公司的绝对美元额（practically significant because 领句）；随后以机制 A 先起作用、机制 B 在高水平接管的双机制重述句回锚理论，最后以 In line with our theoretical development 重复曲线形状收口。支持判断（strong support）在幅度拍之前给出——先结论后 magnitude 的倒装四拍'
+          corpus_path: corpus/OLS-FE.md
       R4:
         description: 交互效应 / 条件效应
         skeleton_variants:
@@ -800,6 +816,23 @@ estimators:
           - superiority_conjecture_echo
           notes: 'corpus OLS-FE.md 变体93：双侧对照交互判决 + 对手侧 null 回收——一句并报对手侧 insignificant 与焦点侧 significant，把两侧交互显著性差异本身作为调节假设证据；后续再把对手侧 null 交互回收为 consistent with our conjecture（只述一致性不升级支持，不得写成 confirming）；对手侧交互显著时禁用本节奏；同一调节假设可在连续模型中重复兑现判决（原文 H4 经 Model 4/5 两次判决，前置/后置语序交替）'
           corpus_path: corpus/OLS-FE.md
+        - id: r4_ushape_mechanism_discriminating_moderation
+          skeleton: 'Hypothesis [2] addresses whether [moderator] will reduce the [increasing pattern of outcome] at high levels of [predictor], effectively testing whether the pattern observed in Hypothesis [1] is due to [mechanism B] taking over the relationship between [predictor] and [outcome] as [predictor] enlarges. As shown in Model [3], the interaction of the squared [predictor] term and [moderator] is statistically significant ([coefficient], p < [0.05]), providing strong support for Hypothesis [2] ([citations]). Our results indicate that for [units] without [moderator], there is a [mechanism B] effect that will increase predicted [outcome] by [X] percent when [predictor] moves two standard deviations above the mean in the sample. In contrast, predicted [outcome] for [units] in which [moderator] is present is lower when [predictor] moves two standard deviations above the mean, indicating the lack of a [mechanism B] effect in the presence of [moderator]. Figure [3] illustrates this curvilinear interaction and shows that, in the presence of [moderator], the relationship between [outcome] and [predictor] does not turn [positive] at high levels of [predictor]. This lends support to the logic of [mechanism B] as justification for the [right arm] of the U-shaped relationship in Hypothesis [1].'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - ridge_aime_white_2013_smj
+          transferability: high
+          paradigm_exclusivity: 连续 DV 上 X²×W 机制判别式——交互定位为主假设机制的检验装置（机制被关掉→右臂不再成形），区别于线性调节 simple slopes 拍与概率尺度曲线调节几何判读
+          rhythm_tags:
+          - hypothesis_restated_as_diagnostic
+          - squared_interaction_mechanism_verdict
+          - presence_absence_magnitude_contrast
+          - arm_reanchoring_closure
+          notes: 'corpus OLS-FE.md 变体98：区别于本文件 R4 线性调节变体（X×W 的 ±1 SD simple slopes 与递减 marginal effect 图）与 Logit-Probit-Ordered-Probit.md 的 r4 曲线调节变体（概率尺度 shift/steepen/turning point 几何判读）——本变体是连续 DV 上 X²×W 机制判别式，五拍结构：①假设重述句自带诊断目的（"effectively testing whether the pattern observed in Hypothesis [1] is due to..."——把交互定位为主假设机制的检验装置而非新增效应）；②X²×W 系数+支持判断；③无 W vs 有 W 对照幅度（无 W：机制效应 +X%；有 W：更低，"indicating the lack of a [mechanism] effect"）；④图形拍读形状变化（"does not turn positive at high levels"——调节的效果=右臂是否成形）；⑤收口句回锚主假设对应臂（"justification for the right arm of the U-shaped relationship in Hypothesis [1]"）。原文 H3 式多调节并置（两 W 同测一假设）时用一句并报两个系数（"both [W1] (−[c1], p < [0.01]) and [W2] (−[c2], p < [0.01])"）并以 attenuates/inhibits 动词统一解读、低/高 W 对照收尾——可作为本变体的多调节扩展拍'
+          corpus_path: corpus/OLS-FE.md
       R5:
         description: 经济 / 实质显著性
         skeleton_variants:
@@ -870,6 +903,22 @@ estimators:
           - dv_family_benchmark
           - analysis_purpose_reframe
           notes: 'corpus OLS-FE.md 变体96：低 R² 的文献基准防御 + 分析目的重定位——报解释力区间→引同 DV 族文献更低 R² 基准（原文引 Anand and Khanna 2000 的 R² = 1.1 percent）→把分析目的从解释总方差重定位为评估焦点构念贡献，三步把统计学弱点转化为研究定位声明；基准文献须同 DV 族且口径可比，不得挑极端低值；重定位句只辩护解释力、不辩护系数显著性；区别于变体10（ΔR² 作为经济显著性证据）'
+          corpus_path: corpus/OLS-FE.md
+        - id: r5_dual_mechanism_arm_decomposition
+          skeleton: 'Our results imply that the difference in [mechanism A] effects between [units] with high and low [moderator] is practically relevant since it implies a nominal average difference in [outcome] of [X] percent ([x1], [x2], and [x3] percent for [W1], [W2], and [W3], respectively). Similarly, [mechanism B] effect differences between [units] with high and low [moderator] are practically relevant since they imply a nominal average difference in [outcome] of [Y] percent ([y1], [y2], and [y3] percent, respectively) when [predictor] goes from the mean to two standard deviations above the mean. Figure [5] (a-c) illustrates these curvilinear interactions and shows that the U-shaped relationship between [predictor] and [outcome] is stronger for [units] with high [moderator].'
+          paper_count: 1
+          status: EMERGING
+          subfield_distribution:
+            strategy: 1
+          sources:
+          - ridge_aime_white_2013_smj
+          transferability: high
+          paradigm_exclusivity: 调节同时强化 U 形两臂时的逐臂幅度翻译（左臂机制A/右臂机制B 各算一次账），均值+括号内逐调节分项并报防 best-arm 展示偏倚
+          rhythm_tags:
+          - per_arm_magnitude_translation
+          - mean_plus_per_moderator_detail
+          - curvilinear_interaction_figure_readout
+          notes: 'corpus OLS-FE.md 变体99：区别于本文件 R4 变体 1（单调节 ±1 SD 两点式实用项）与 R5 百分位+基准对比变体——本变体处理调节同时强化 U 形两臂的幅度报告：左臂（低水平，机制 A：social comparison）与右臂（高水平，机制 B：tournament）各算一次账，且每个臂给跨多调节的均值+括号内逐调节分项值（"nominal average difference... of 1.40 percent (1.81, 0.16, and 2.23% respectively)"）——均值+分项并报在多调节共享一个假设时防止只展示最好的那个调节'
           corpus_path: corpus/OLS-FE.md
       R6:
         description: 非显著 / 混合 / 意外发现
@@ -7400,3 +7449,11 @@ batch_history:
   slot_updates_count: 5
   novel_patterns_count: 5
   notes: 'Gulati 1999 (SMJ, Network Location and Learning) 首次蒸馏 gate① writeback: Logit-Probit-Ordered-Probit.md ADD 变体X/Y/Z/AA/AB（R2×2 替代测量括弧/控制衰减重读 + R6 构念家族 mixed 证据 + R7×2 Rho 方差份额自证/截距≠斜率异质性）, all VERIFIED per expert_audit_override (Gulati 单源即 VERIFIED)。Slot skeleton rows 未逐条 bump（变体为文件级新增），registry 由本批残项同步补登（写回器按连字符文件名未命中下划线 registry 键）。'
+- batch_id: batch_48_ridge_aime_white_2013_residual_sync
+  timestamp: '2026-09-12'
+  estimator_family: OLS_FE
+  source_paper: ridge_aime_white_2013_smj
+  source_subfield: strategy
+  slot_updates_count: 3
+  novel_patterns_count: 3
+  notes: 'Ridge, Aime & White 2013 (SMJ, pay disparity U-shape, social comparison vs tournament theory) 手工残项同步（写回器按连字符文件名 OLS-FE 未命中下划线 registry 键 OLS_FE）：OLS-FE.md ADD 变体97 r3_ushape_dual_tail_dollar_translation（R3 U 形双尾 ±2 SD 实用显著性+美元翻译倒装四拍）+ 变体98 r4_ushape_mechanism_discriminating_moderation（R4 X²×W 机制判别式五拍）+ 变体99 r5_dual_mechanism_arm_decomposition（R5 调节强化两臂逐臂幅度翻译），all EMERGING 单源。skeleton 取自落盘块 **骨架** 引用段、notes 取自 **与原骨架差异**，三行 skeleton_variants 由本批补挂至 OLS_FE slots R3/R4/R5 尾（镜像 batch_44 gulati_lavie_singh 变体91/92/93/96 先例）；meta batches_processed 47→48、total_papers_indexed 47→48。'

@@ -31,7 +31,7 @@
 
 | 文件 | 核心特征 |
 |------|---------|
-| `04-reality-contradicts-consensus.md` | 现实与共识矛盾；变体 L：定义兼容悖论消解型——定义兼容前提 vs 营垒对立行为反差+社会建构归因（非实证矛盾型），gulati_2007_tent_poles，EMERGING |
+| `04-reality-contradicts-consensus.md` | 现实与共识矛盾；变体 L：定义兼容悖论消解型——定义兼容前提 vs 营垒对立行为反差+社会建构归因（非实证矛盾型），gulati_2007_tent_poles，EMERGING；变体 M：同一关系正负证据→廉价消解双出口预先封堵型（'either not meaningful or contingent'先让步后封堵→未处理的核心命题→整合必然性），ridge_aime_white_2013_smj，EMERGING——区别变体 K（直进共存问句）：多封堵节拍；contingency 读法须有引文簇 |
 | `06-theoretical-imbalance.md` | 理论不平衡 |
 
 ## Phenomenon-specific

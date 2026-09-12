@@ -429,7 +429,7 @@ evidence:
       note: "整篇蒸馏 4 条写回：非线性模型 M8 风险集-假设映射+Heckman 泛化（EXTEND 变体21 后）；micro-templates/manual-coding-validation M3/M4 多源构念效度三角化（双问卷/多行为者，EXTEND 变体B 后）；同伴效应-网络效应 M4 间接关系长度/分离/分层控制 + M4 操作化谱系 PCA 合成（ADD×2，该族第 2 源）。SKIP：非应答 K-S+Heckman 辩护链（carpenterwestphal2001 + westphal_bednar2005 既有链已覆盖）。era flags：LISREL/Bartlett、kappa 四分位离散化、Heckman 无排除限制、response-rate 步骤 ritual_only。"
   by_design_type:
     面板数据-OLS:
-      paper_count: 26
+      paper_count: 27
       papers:
       - lee_park_2024_smj (SMJ)
       - bendig_hensellek_schulte_2024_etp (ETP)
@@ -457,6 +457,7 @@ evidence:
       - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int (Administrative Science Quarterly)
       - gulati_higgins_2003_which_ties_matter (Strategic Management Journal)
       - gulati_lavie_singh_2009_partnering_experience (Strategic Management Journal)
+      - ridge_aime_white_2013_smj (Strategic Management Journal)
       status: VERIFIED
       slots_covered:
       - M1
@@ -732,12 +733,16 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     动态面板-GMM:
-      paper_count: 0
-      papers: []
+      paper_count: 1
+      papers:
+      - ridge_aime_white_2013_smj (Strategic Management Journal)
       status: EMERGING
-      slots_covered: []
+      slots_covered:
+      - M7
+      - M8
       common_failures:
       - 短面板推荐 FE 而不提示 Nickell bias
+      note: "2026-09-12a 残项同步：ridge_aime_white_2013_smj 首次入账（M7 短面板适用性+估计器优势正面枚举 / M8 AB-GMM 诊断对报告链 AR(2)+Hansen 零假设→违例含义→判定；M7/M8 曲线调节设定块走 面板数据-OLS）。历史遗留：本设计类型语料既有变体 1-5（Pollock et al. 2015，2026-07-30 蒸馏、2026-09-06d expert_audit_override 语料侧已升 VERIFIED）从未入账——本条目 paper_count/slots 口径只计 ridge 论文，Pollock 历史账待考古补登，不计入本条目 status 判定。"
       validation_history:
         revise: 0
         reject: 0

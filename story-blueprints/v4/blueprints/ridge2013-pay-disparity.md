@@ -6,7 +6,7 @@
 schema_version: "4.0-lite"
 id: ridge2013
 paper:
-  citekey: null
+  citekey: ridge_aime_white_2013_smj
   title: "When Much More of a Difference Makes a Difference: Social Comparison and Tournaments in the CEO's Top Team"
   outlet: "Strategic Management Journal"
   year: 2013
@@ -18,12 +18,16 @@ reading_scope:
   sections_read: [introduction, theory, methods, results, discussion]
   coverage: complete
   source_records:
-    - "When much more of a difference makes a difference Social comparison and tournaments in the fcCEOfc's top team.md"
+    - "PDM slices (verified): sections/introduction.md, sections/theory.md, sections/results.md, sections/discussion.md, sections/methods.md under ridge_aime_white_2013_smj.pdm"
+    - "Prior full-clipping pass (2026-08-22) on 'When much more of a difference makes a difference Social comparison and tournaments in the fcCEOfc's top team.md'"
 analysis_focus:
   primary: [introduction, theory]
   supporting: [results, discussion]
   audit: [methods]
-  departure_note: "The full-text clipping preserves the article's complete section sequence, but table layout is HTML-derived; methods are assessed only for story-to-evidence alignment."
+  departure_note: "Read via PDM section slices in attention order (intro+theory primary; results+discussion payoff checks; methods audited only for story-to-evidence alignment); table layout in the source is HTML-derived and carries no story signal."
+mechanism_evidence:
+  status: partly_probed
+  basis: "Heir-apparent and CEO-power curvilinear interactions selectively disable the tournament arm, but the social-comparison arm is inferred from curve shape and eligibility steepness rather than measured."
 classification:
   theoretical_problem_form: [competing-explanations, mixed-evidence]
   narrative_dynamics: [recover-theory-primitives, theory-domain-shift, nonlinear-resolution, mechanism-checking-moderators]
@@ -37,6 +41,7 @@ section_learning:
       - "State the integrative question before declaring a curvilinear answer, so the curve is presented as a theoretical resolution rather than an empirical surprise."
     caveat:
       - "Transfer only when the conflict is real and each theory contains a neglected scope condition; do not use an apparent literature split as a pretext for adding a quadratic term."
+      - "Keep promise vocabulary level with the design family: the original's “quasi-experimental tests” phrasing outruns what an internal-instrument dynamic-panel design can promise, and the wording–design tension propagates to the Methods."
   theory:
     suitable: "yes"
     requires: [genuine-theory-conflict, theory-domain-shift]
@@ -53,6 +58,7 @@ section_learning:
       - "Use moderators that selectively disable or strengthen the proposed mechanism, so the empirical design tests the explanation for the curve rather than only its shape."
     caveat:
       - "The Fortune 500 panel, Arellano-Bond estimator, lag structure, measures, and instrument diagnostics are design-specific and are not reusable story instructions."
+      - "Do not copy the diagnostics or bookkeeping prose: the original states the AR(2) null hypothesis backwards, and n = 599 is never reconciled with the 227-firm panel while the text claims a balanced matrix."
   results:
     suitable: "partial"
     requires: [genuine-theory-conflict, theory-domain-shift]
@@ -60,6 +66,7 @@ section_learning:
       - "After revealing the U-shaped focal pattern, use mechanism-targeted moderators to show why its high-end turn should disappear or strengthen under theoretically predicted conditions."
     caveat:
       - "A significant quadratic term is not a story climax by itself; the mechanism-checking evidence must be substantively tied to the claimed transition."
+      - "Cautionary pattern: the “practically relevant” framing for H4 is computed from linear × eligibility interactions that are themselves non-significant, and the section stages no robustness or turning-point-uncertainty beats—magnitude talk cannot rescue an arm that failed significance, and a single specification chain leaves the climax without a stress-test beat."
   discussion:
     suitable: "partial"
     requires: [genuine-theory-conflict, theory-domain-shift]
@@ -67,6 +74,7 @@ section_learning:
       - "Close by explaining how both theories remain internally valid within different ranges, rather than declaring one theory wrong."
     caveat:
       - "Do not turn a range-conditioned account into universal managerial advice; the relevant thresholds and contexts must remain bounded."
+      - "The ending's compensation counsel (e.g., eligible-TMT firms benefiting from small pay increases) leans on the steepest-inference moderator; bound advice to the ranges and mechanisms the evidence actually staged."
 story_assessment:
   overall_role: partial_exemplar
   mode: single_read
@@ -115,18 +123,19 @@ The paper begins from a genuine conflict: economics and finance work associates 
 - **Knot integrity:** `works` — both conflicting theories and mixed findings are established before the paper offers its integration.
 - **Plot emergence:** `works` — the U-shape follows from recovered scope conditions, not from an unexplained preference for a nonlinear result.
 - **Tie–unravel alignment:** `works` — the main curve and the moderator patterns jointly answer the domain-shift account promised in the front end.
-- **Ending quality:** `partly_works` — it returns cleanly to theoretical complementarity, though its managerial discussion extends beyond the central reader shift.
+- **Ending quality:** `partly_works` — it returns cleanly to theoretical complementarity, but the managerial counsel extends beyond the central reader shift and, for the eligibility case, converts the steepest-inference moderator into compensation strategy advice that the staged evidence does not carry.
+- **Mechanism evidence check:** `partly_probed` — heir-apparent and CEO-power interactions selectively disable the tournament arm, but the comparison arm is inferred from curve shape and eligibility steepness rather than measured; this calibrates evidence claims only and does not downgrade the mechanism's role in the theory story.
 - **Boundary:** This evaluates storytelling only; it is not a judgment about the article's empirical identification or publication value.
 
 ## Learning Affordances
 
 ### Introduction and Theory
 
-Ridge is useful when a paper needs to ask whether apparently rival theories are globally misapplied, not when it simply needs a nonlinear prediction. The transferable action is recovering what makes each theory operative and then determining whether changes in the focal X alter that applicability.
+Ridge is useful when a paper needs to ask whether apparently rival theories are globally misapplied, not when it simply needs a nonlinear prediction. The transferable action is recovering what makes each theory operative and then determining whether changes in the focal X alter that applicability. One wording discipline travels with it: the front end's promise language must stay level with the design family actually deployed.
 
 ### Methods and Results
 
-The paper's strongest evidence move is to select moderators that interrogate the claimed mechanism switch. The curve alone would not establish its story.
+The paper's strongest evidence move is to select moderators that interrogate the claimed mechanism switch. The curve alone would not establish its story. The cautionary counterpart is equally instructive: practical-magnitude framing is attached here to an interaction arm that never reached significance, and the climax runs on a single specification chain with no robustness beat, so later papers should stage stress tests and report arm-level uncertainty before drawing managerial counsel.
 
 ### Discussion
 

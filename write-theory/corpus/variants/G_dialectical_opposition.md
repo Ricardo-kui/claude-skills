@@ -373,6 +373,61 @@ The curve form may be shared, but mode-specific governance determines the mechan
 
 **适用**: 同一 X–Y 关系存在方向相反的过程解释，且 Y 需要两个条件共同充足；X 累积时一个条件改善、另一个条件恶化，W 只维持后者。
 
+
+## Ridge–Aime–White 2013 型：对立机制前提自限域 + 阈值激活 U 形整合
+
+**状态**: EMERGING section variant（单篇架构）
+
+**适用**: 两套理论对同一 X→Y 给出恒定反向预测（Incommensurability, R3），且各自的**核心前提只在 X 的不同区间成立**——把每套理论"自己的"核心前提读回其应用（in-situ premise retrieval），推出各自的沉默区间；两个激活域不重叠（负机制主导低区、正机制在高区才被激活）时产生 U 形。区别于 Zhou 2017 型（双逻辑同时作用于不同 facet → 倒 U）、Bendig 2024 型（同一活动的成本与学习在时间/后果严重度上先后占优）、Lee–Park 2024 型（共同必要条件 + 短板切换）：本型的不对称性来自**前提的成立域**而非作用 facet 或时间先后。
+
+> 论证角色：Reason（对立理论如何被整合为一条曲线的推导骨架——对称并置、前提自限域、阈值激活整合）
+
+### 对称对立机制并置（T3a/T3b）
+
+```
+Both [Theory A] and [Theory B] speak directly to [X] and [Y] ([citations]).
+
+According to [Theory A approaches] ([citations]), [actors] [premise A] and [experience mechanism state A] when they perceive that they [fare worse than similar others], particularly [those in higher ranks] ([citations]). Because of [a scope fact that makes the comparison salient], such comparisons are likely to exist ([citations]). When such comparisons exist, large [X] [reduces commitment, cohesiveness, satisfaction, information processing, coordination, and collaboration], leading to lower [Y] ([citations]). Therefore, according to theory and evidence on the [Theory A] tradition, large [X] [diminishes] [Y].
+
+On the contrary, in [Theory B] approaches, [the high-[X] position] is seen as [the prize of a contest] to which [actors] have a claim. Because [large prizes] are inherently motivating ([citations]), higher [X] will result in [greater effort, less shirking, better alignment] ([citations]). Therefore, according to theory and evidence in the [Theory B] tradition, large [X] [increases] [Y].
+```
+
+**原文锚点**:
+> "Therefore, according to theory and evidence on the social comparison tradition, large pay gaps between the CEO and the TMT diminish firm performance."
+> "Therefore, according to theory and evidence in the tournament theory tradition, large pay gaps between the CEO and the TMT increase firm performance."
+
+### 前提自限域（in-situ premise retrieval）
+
+```
+We argue that research based on these theories can benefit from addressing some previously overlooked fundamental theoretical aspects that suggest they have complementary rather than opposing theoretical predictions for the relationship between [X] and [Y]. First, the core proposition in [Founder]'s ([year]) [Theory A] is that [individuals compare themselves with similar others]. This "[named proposition]" is not acknowledged by applications of [Theory A] to the relationship between [X] and [Y]. [The focal X] will dramatically affect perceptions of [the premise condition]: [X] is [a visible cue] about [power, status, and inherent performance differences] ... A [winner] who is rewarded with very large [X] may be [interpretation 1] or [interpretation 2], that makes that [winner] inherently different ... and therefore less relevant as a choice for [the premise activity]. Therefore, [Theory A] and [related theories] have limited predictive ability about the effects of [X] on [Y] when the levels of [X] are high enough to [break the premise condition].
+
+Second, [Theory B] was developed to "[quote its design domain]". By looking at a consistent effect of [X] on [Y], researchers fail to address the fact that the theory only applies to [the design domain]. Therefore, [Theory B] makes limited if any predictions for [the region where its premise is absent].
+```
+
+**原文锚点**:
+> "This \"similarity hypothesis\" is not acknowledged by applications of social comparison theory to the relationship between pay disparity and firm performance."
+> "Therefore, tournament theory makes limited if any predictions for medium to low levels of pay disparity."
+
+### 阈值激活整合 → U（H1）
+
+```
+Consistent with these arguments, we see [Theory B] as a complement to [Theory A] approaches at high levels of [X]. As [X] becomes large, [mechanism B] will rule over [mechanism A effects] in these [actors] who have been shown to be [dispositions that respond to the prize] ([citation]). We, therefore, combine the [Theory A] predictions of a [negative relationship] between [X] and [Y] at low to medium levels of [X] with the [Theory B] predictions of a [positive relationship] at high levels of [X]. Consistently we expect [Y decreasing] as [X] increases from small to moderate and [Y increasing] when [X] increases from moderate to high and [mechanism B] effects become active. This will result in [high Y] at both low and high levels of [X] and [low Y] at moderate levels of [X], where [mechanism A] has negatively affected [Y] and [mechanism B] effects are yet not relevant.
+[Figure: panel (a) the opposing linear predictions; panel (b) the complementary predictions plus the combined curvilinear relationship]
+H1: [Y] will have a U-shaped relationship with [X].
+```
+
+**原文锚点**:
+> "Consistent with these arguments, we see tournament theory as a complement to social comparison approaches at high levels of pay disparity."
+
+**关键原则**:
+- 每套理论的沉默区间必须从该理论**自己的核心前提**推出（premise retrieval），不得外加假设——这是"互补而非对立"重读的合法性来源，也是 null preservation 的完成方式
+- 两条对立预测必须对称推导、同构收尾（isomorphic prediction anchor："Therefore, according to theory and evidence in the [X] tradition..."），使不相容性可见而不必明说
+- U 形只能从"激活域不重叠/阈值激活"的组合规则推出，并逐区间口译（small→moderate / moderate→high）；二次项系数不是理论本身
+- 后续调节假设是核心前提的实证检验（mechanism-participation conditions，见 E_moderation 变体与 moderator_selection_frameworks 机制参与框架），不是事后补丁
+
+<!-- wb:ridge_aime_white_2013_smj:t_g_premise_self_restriction_threshold_u -->
+
+
 ### 对称建立两个可信过程（R3）
 
 ```text
@@ -417,6 +472,7 @@ H2: The turning point occurs at a higher X under higher W.
 - 若 A/B 未被直接测量，只能说结果与机制一致，并用机制靶向的补充分析或定性证据加厚，不能声称中介成立。
 
 ---
+
 
 ## 假设陈述格式
 

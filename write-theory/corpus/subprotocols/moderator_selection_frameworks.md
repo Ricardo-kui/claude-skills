@@ -371,6 +371,62 @@ perception factor] shapes the value of [X].
 
 <!-- wb:gulati_lavie_singh_2009_partnering_experience:moderator_roadmap_twoclass_metaframework -->
 
+
+## Framework: Mechanism-Participation Conditions（机制参与条件三槽位，Ridge, Aime & White 2013 型）
+
+<!--
+pattern_id: mechanism_participation_conditions_metaframework
+build_type: 跨类型（调节效应型/假设树型的 moderator 元框架）
+source_papers: ["Ridge_Aime_White_2013_SMJ"]
+confidence: emerging
+status: needs_cross_paper_validation
+story_fidelity: section_variant
+-->
+
+> 论证角色：Framing（多 moderator 的选择元框架：每个 moderator 是整合模型中某一机制"参与条件"的槽位，兼具核心前提实证检验的认识论角色）
+
+**适用**: 论文的基线关系由两个（或多个）机制的组合规则驱动（如阈值激活、支配切换），需要 ≥2 个 moderators 时不按"情境清单"罗列，而是从**机制的参与条件**派生槽位：机制是否存在、是否受约束、行动者是否自认有资格参与。每个 moderator 因此直接绑定整合模型的一个前提，回应"为什么选这些 moderator"的审稿人问题（write-theory C18）。
+
+**微观动作序列**: 元框架宣言（假设可由"参与条件"进一步探索和检验）→ 三槽位各绑定一个 moderator（存在/约束/资格）→ 认识论收口（moderators 是核心前提的实证检验）。
+
+**骨架**:
+```
+[Meta-warrant] Our hypothesis—that [Mechanism B]-type incentives take over the relationship
+between [X] and [Y] as [X] becomes large—can be further explored and tested by studying the
+conditions that may affect [actors'] participation in [the contest] and their effect on [Y].
+
+[Slot 1: Existence] To the extent that [the contest] may cease to exist as, for example, in the
+presence of [W1], then we should not expect to see [Mechanism B]-like incentives take over ...
+
+[Slot 2: Constraint] To the extent that [winning] is constrained or postponed for [actors]—as
+when [W2] concentrates [control]—the incentives predicted by [Mechanism B] will be lessened or
+invalidated ...
+
+[Slot 3: Eligibility] To the extent that [actors] can see themselves as more likely to be elected,
+as for example when they share the characteristics of [the winner] at the time of [the
+appointment], then we would expect [Mechanism B]-like effects to be stronger and at lower levels
+of [X] ...
+
+[Epistemic closure] These moderators are fundamental ... not only because they extend our
+understanding of the main hypothesized relationship, but also because they serve as empirical
+tests of the core assumptions of our theorizing ([methodological citation, e.g. Miller & Tsang 2011]).
+```
+
+**原文锚点**:
+> "Our hypothesis ... can be further explored and tested by studying the conditions that may affect TMT members' participation in succession tournaments and their effect on performance"
+
+**关键特征**:
+- **槽位从组合规则派生，不从情境清单派生**：三槽位（存在/约束/资格）穷尽了"机制为何不触发或更强触发"的逻辑空间，moderators 之间因此有理论联系而非并列拼贴
+- **认识论角色可显式声明**：moderators = 核心前提的实证检验（internal support to the mechanisms），使调节假设获得超出边界条件地位的理论地位
+- 与 E_moderation 机制移除型/双支增强型配套：存在/约束槽位 → 移除型假设；资格槽位 → 双支增强型假设
+
+**反模式**: moderators 与机制前提无映射关系（拼贴感）；三槽位只用其一却宣称穷尽参与条件；把 epistemic 角色写成空话（声称检验前提却无前提可检验）。
+
+**诚实边界**: 单篇 EMERGING（Ridge, Aime & White 2013 SMJ），待第二篇跨论文验证；槽位数量（3）是范文的具体化，可迁移的是"参与条件派生槽位"的生成规则，不是三槽位本身。
+
+<!-- wb:ridge_aime_white_2013_smj:t_sub_moderators_as_mechanism_participation_tests -->
+
+
 ### 框架 B：意愿×机会双路径调节论证（westphal_bednar2005 型）
 
 **模板**:

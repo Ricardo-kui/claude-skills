@@ -1427,6 +1427,18 @@ story_fidelity: section_variant
 <!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:m3_adopted_index_provenance_chain -->
 
 
+
+### 变体 95: Ridge, Aime & White 2013 (SMJ) — DV 双判据辩护：机制贴合 + 测量族独立 (2026-09-12)
+**验证状态**: EMERGING（单篇）
+**槽位**: M3
+**原始句锚点**: "We used ROA as the performance measure in our study because it captures the dimension of performance that is more closely related to top management team functioning—namely, whether management has effectively deployed firm assets—and is independent of market preferences like market-based measures or financial efficiency considerations like equity-based measures"
+**骨架**:
+> "[Outcome] was measured as [the measure] in [year t+1]. [The measure] is a common measure of [the outcome family] that reflects [the relevant facet] and was especially relevant to our study for two reasons. We used [the measure] because it captures the dimension of [the outcome] that is more closely related to [the focal actors' functioning]—namely, [the mechanism-relevant facet]—and is independent of [alternative measure families] like [family A] or [family B] ([citations]). Therefore, [the measure] is relevant to the hypothesized effects suggested by both [theory A] and [theory B] theorizing and has been utilized in some recent studies that, like ours, look at [the same unit of analysis] ([citations])."
+**与原骨架差异**: 区别变体 82（指数 DV 四拍出处链——测量的谱系与粒度）、变体 52（构念边界排除 + falsification DV 预告）、事件历史 变体 27/28（DV 可观察性辩护）——本变体的结构是**双判据**：判据一"机制贴合"（捕捉与焦点行为者功能最相关的维度，以同位语 namely 展开该维度是什么），判据二"测量族独立"（独立于市场偏好类/权益效率类替代测量族），再以"对两个理论都相关 + 同单位先行研究"双锚收口。适用于同 DV 上存在多个测量族竞争（会计 vs 市场 vs 权益）的绩效类研究。
+**诚实边界**: "two reasons" 框架要求两条判据实质独立且都成立，不可凑数；"independent of" 主张须准确（ROA 仍受行业与会计政策影响，独立的是市场估值与权益杠杆维度而非一切混杂）；原文该段有重复表述（ROA is a common measure... 出现两次语义），骨架已压缩。
+<!-- wb:ridge_aime_white_2013_smj:m3_dv_dual_criterion_justification -->
+
+
 ### 变体 83：M4 有界异质性指数双测量 + 零锚定 + 工作例翻译（higgins_2003_OS 型）
 
 **来源论文**: Higgins & Gulati 2003 (Organization Science)
@@ -1531,6 +1543,18 @@ story_fidelity: section_variant
 <!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:m4_spline_spec_alternative_defense -->
 
 
+
+### 变体 94: Ridge, Aime & White 2013 (SMJ) — 测量边界预辩：逐字引用方法先例的量化论断收口 (2026-09-12)
+**验证状态**: EMERGING（单篇）
+**槽位**: M4
+**原始句锚点**: "However, this should not present a serious problem because as Henderson and Fredrickson (2001: 103) point out the sample firms were large, meaning that \"the difference in pay between a firm's CEO and the next highest-ranking executive is typically quite large\""
+**骨架**:
+> "[This mode of identification of team members] may either omit [members] or include persons who are not part of the [team]. However, this should not present a serious problem because as [Author (Year): page] point out [the relevant property of the sample], meaning that \"[quantified reassurance quoted verbatim from the methodological precedent]\" ([citation]). Consequently, [the units studied here may have had other members], but [including them] would likely have had little impact on [the calculated measure]."
+**与原骨架差异**: 区别变体 55（新颖测量 provenance 链）、变体 83（有界异质性指数双测量）、变体 88（复合构念替代规格三段防御）、同伴效应-网络效应 变体 5（数值反例辩护）——本变体的辩护工具是**逐字引用方法学先例的量化论断（带页码）**：先自认识别规则的双向误差（may either omit or include），再引先例原文说明在样本条件（如 firm size）下该误差可忽略，最后以 "would likely have had little impact on the calculated measure" 收口。适用于依赖强制披露规则的档案测量（薪酬差距、团队构成等 top-team 识别）。
+**诚实边界**: 引用的先例量化论证必须确实覆盖本文样本的边界条件；引用是论证借力不替代在本文样本上的复核；若识别规则的误差方向是系统性的（非随机），此辩护不成立，须改用替代测量稳健性（变体 88 路线）。
+<!-- wb:ridge_aime_white_2013_smj:m4_measurement_limitation_defense_precedent_quote -->
+
+
 ### 变体 89：M2 选择修正驱动的风险集工程 — 从未发生单元+消亡单元并入使第一阶段可估（gulati_higgins_2003 型）
 
 **来源论文**: Gulati & Higgins 2003 (Strategic Management Journal)
@@ -1572,6 +1596,18 @@ story_fidelity: section_variant
 **与原骨架差异**: 面板数据-OLS 此前无 VIF/共线性架构变体——本变体把「分块入模」从默认操作升格为可辩护决定：VIF 阈值引用（<10）+ 满模型 reported for reference only 仍披露具体 VIF（34.145）+ 一句机制解释（artificially inflates the p-values）+ 承诺以哪几个 partial models 检验假设。
 
 <!-- wb:gulati_lavie_singh_2009_partnering_experience:m7_partial_models_full_model_vif_disclosure -->
+
+
+### 变体 93: Ridge, Aime & White 2013 (SMJ) — 曲线调节设定块：平方项×调节变量 + residual centering (2026-09-12)
+**验证状态**: EMERGING（单篇）
+**槽位**: M7/M8（交互项构造声明）
+**原始句锚点**: "We focused on the moderation of the squared terms because they prevent misinterpretation of effect resulting from additivity and linearity in correlated variables (Cortina, 1993; George, 2005)."
+**骨架**:
+> "To test the curvilinear interactions of [Hypotheses 2-4], we included product terms of our moderators of interest for the linear as well as the squared [focal predictor] terms ([Cohen and Cohen, 1983]). We focused on the moderation of the squared terms because they prevent misinterpretation of effect resulting from additivity and linearity in correlated variables ([Cortina, 1993]). Since multicollinearity was a potential problem, we followed [Aiken and West (1991)] and mean-centered each of the variables prior to the creation of interaction terms. We further applied the residual centering procedure because some of our models included multiple two-way interaction terms and a [three-way] interaction term, to minimize multicollinearity between the interaction term (e.g., [X1]X[2]) and its constituent parts ([citations]). To do so, we first regressed each interaction term on its components and then saved the residuals for use in our data analyses ([citations])."
+**与原骨架差异**: 区别变体 21（线性三向交互 + mean-centering，无平方项、无 residual centering）与 lee_park 曲线支持契约变体（单个 U 的端点斜率+拐点检验契约，属解释/检验侧）——本变体补齐**曲线调节的估计侧设定**：线性项与平方项都乘以调节变量（Cohen & Cohen），给出"为何调节平方项"的 Cortina 理由句，再以 mean-centering（Aiken & West）+ residual centering（每个交互项对其构成部分回归取残差）双重共线性处理收口。适用于 U 形主效应 + 多调节（两两交互与三重交互并存）的设计。
+**诚实边界**: residual centering 正交化交互项，其系数与未残差化规格不全同义，须说明程序（regressed on components, saved residuals）；mean-centering 不改变交互系数只改常数项；本文未报 VIF（仅宣称 multicollinearity was a potential problem——已登记信息贫困），写入时建议补 VIF 或等价证据；曲线形状与拐点的实质结论仍需曲线支持契约（lee_park 变体）在 Results 侧承接。
+<!-- wb:ridge_aime_white_2013_smj:m7_curvilinear_moderation_residual_centering -->
+
 
 ## 反模式
 

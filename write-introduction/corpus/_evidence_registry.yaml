@@ -777,7 +777,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     04-reality-contradicts-consensus:
-      paper_count: 12
+      paper_count: 13
       papers:
       - anderson_reeb2004 (ASQ)
       - bendig_hensellek_schulte2024 (ETP)
@@ -791,10 +791,11 @@ evidence:
       - vidal_mitchell2015 (OS)
       - zhou2017 (ASQ)
       - gulati_2007_tent_poles (Academy of Management Journal)
+      - ridge_aime_white_2013_smj (Strategic Management Journal)
       gap_distribution:
         Incompleteness: 0
         Inadequacy: 5
-        Incommensurability: 7
+        Incommensurability: 8
       status: ROBUST
       generativity: GENERATIVE
       exclusivity: HIGH
@@ -1485,7 +1486,7 @@ evidence:
         common_revise_reasons: []
   previews:
     mechanism-preview:
-      paper_count: 27
+      paper_count: 28
       papers:
       - bamberger_homburg_wielgos2021 (JM)
       - castellaneta_conti_kacperczyk2017 (SMJ)
@@ -1514,6 +1515,7 @@ evidence:
       - gulati_westphal_1999_cooperative_or_controlling (Administrative Science Quarterly)
       - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
       - gulati_lavie_singh_2009_partnering_experience (Strategic Management Journal)
+      - ridge_aime_white_2013_smj (Strategic Management Journal)
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: LOW
@@ -1527,7 +1529,7 @@ evidence:
       gap_distribution:
         Incompleteness: 9
         Inadequacy: 6
-        Incommensurability: 3
+        Incommensurability: 4
     findings-preview:
       paper_count: 49
       papers:
