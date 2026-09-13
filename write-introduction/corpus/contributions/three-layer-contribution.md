@@ -321,3 +321,51 @@ source: Distilled from Haunschild, Polidoro & Chandler (2015), Organization Scie
 **禁忌**: "I introduce the notion of" 是强声明——构念须确属首次命名，近义构念已存在会被审稿人点名（需改 extend/refine）；salience 句若过于宏大在当代审稿下需更具体的后果支撑
 
 <!-- wb:gulati_1999_network_location_and_learning_the_influence_of_n:contribution_construct_coinage_chain -->
+
+
+### 变体 L：效应文献对比+首创方法宣告贡献段（mao_dong_lee_2022_msom 型）
+> 论证角色：Claim（把贡献锁定为决策过程解释权：既有文献只测后果，本文首创带时间戳的决策过程模型）
+
+**模板**:
+> "本文对 [现象] 文献的贡献主要有二。First，本研究帮助解释 [主体] 如何做出 [决策1] 与 [决策2]。既有文献强调 [现象] 的 [后果]：对 [结果1]（[引用]）、[结果2]（[引用]）、[结果3]（[引用]）；为降低风险可采取 [事前策略]（[引用]）；[危机] 发生后决定 [时点] 需考虑 [因素]，如 [引用] finds [调节发现]。Our [理论方法] is the first to [建模特征]，which not only [揭示影响] but also [揭示决策过程]。"
+
+**来源**: Mao, Dong & Lee 2022 (MSOM), P7
+
+**原文锚定**:
+> "Our theoretical method is the first to depict a product cycle that embodies time stamps in a recall process, which not only reveals the impacts of a recall on a firm's sales performance but also unveils a firm's decision-making process with respect to the product recall."
+
+**关键特征**:
+- 贡献段内嵌 Literature Turn：先以三个结果域（企业价值/需求/营销效力）列后果类文献，再以 "first to + 建模特征" 完成 departure 宣告
+- "not only...but also" 双收束把方法首创与实质解释绑定，避免纯方法学声明
+- "mainly in two aspects" 双贡献分段 signpost，本段 First、次段 Second 承接
+
+**适用**: 形式模型论文对以实证后果研究为主的文献流宣示机制/过程贡献；Incompleteness × Mechanism 组合
+
+**禁忌**: "first to" 必须落在可防守的建模特征上（时间戳/决策结构），不得滑向话题级首创；后果文献列举须覆盖三个以上结果域才能支撑"文献只看后果"的对比
+
+<!-- wb:mao_dong_lee_2022_msom:intro_contribution_effects_contrast_first_method -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
+
+### 变体 M：政策设计三联建议贡献段（mao_dong_lee_2022_msom 型）
+> 论证角色：Claim（第二贡献锁定为政策面：监管工具设计、检查对象选择与信息披露的三联建议权）
+
+**模板**:
+> "Second，本文提供政策含义贡献：帮助 [监管方] 更好设计 [工具]，以减少 [有害行为] 及其伴生伤害。[监管] 文献此前聚焦 [责任规则]（[引用]）；晚近 [引用] 考察 [宣告效应]，就 [规则设计] 提出建议。However, our paper focuses on [主体特征] 与 [对象特征]。We offer policymakers suggestions on [检查对象]、on how to design [惩罚] to deter [行为]、and on which types of [信息] to disclose。"
+
+**来源**: Mao, Dong & Lee 2022 (MSOM), P8
+
+**原文锚定**:
+> "We offer policymakers suggestions on which products should be carefully investigated/supervised, on how to design penalties to deter long-delayed recalls and/or manipulation in investigations, and on which types of information should be disclosed."
+
+**关键特征**:
+- 政策贡献段自带微型文献流（责任规则→调查宣告效应），再以 "However, our paper focuses on" 转到企业/缺陷特征层
+- 收尾用三个并列 "on..." 短语把政策建议压缩为可勾选清单（检查对象/惩罚设计/信息披露）
+- 与预览段的政策分析呼应，贡献契约可被模型政策结果直接兑现
+
+**适用**: 含政府/监管分析层的形式模型或实证论文；需独立于理论贡献单独宣示政策贡献时
+
+**禁忌**: 三联建议必须各有一条模型结果背书，禁止罗列模型未分析的政策工具；监管文献对比至少两条文献，不得单引
+
+<!-- wb:mao_dong_lee_2022_msom:intro_contribution_policy_triple_suggestion -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->

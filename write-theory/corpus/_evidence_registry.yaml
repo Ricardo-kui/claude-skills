@@ -7,9 +7,9 @@
 meta:
   schema_version: "1.0.0"
   registry_type: theory-fragment-registry
-  last_updated: 2026-09-13a
-  total_papers_indexed: 83
-  batches_processed: 40
+  last_updated: 2026-09-13b
+  total_papers_indexed: 84
+  batches_processed: 41
   auxiliary_sources_note: "Entries with source_tier: auxiliary are writing-craft books, not empirical papers. They register provenance and stay EMERGING until the pattern is cross-validated in empirical paper distills; they never count toward VERIFIED/ROBUST paper_count thresholds on their own."
   latest_batch_note: "2026-09-12a 手工残项同步：ADD ridge_aime_white_2013_smj tfr_290-293 全 EMERGING（SMJ 2013 单源（CEO-TMT 薪酬差距×企业绩效 U 形，social comparison theory vs tournament theory），gap=Incommensurability（与 intro registry 同账）；辩证对立整合型主+调节效应型次；变体块已由写回器落盘（G_dialectical_opposition.md 新型 / E_moderation.md E13+E14 / subprotocols/moderator_selection_frameworks.md 新框架），本批为 registry 首登记残项同步，status 沿 2026-09-06g/h/i/j 先例初登 EMERGING）：G_dialectical_opposition Ridge–Aime–White 2013 型对立机制前提自限域+阈值激活 U 整合（第 5 种对立整合亚型，不对称性来自前提成立域而非作用 facet 或时间先后） / E_moderation E13 机制移除型曲线退化调节（U→幸存支单调，non-effect claim 为许可条件） / E14 双支增强型曲线锐化调节（双支独立子机制同强→more pronounced，E13 的镜像几何） / moderator_selection_frameworks 机制参与条件三槽位（存在/约束/资格，moderators=核心前提的实证检验，ADD）。4 个 registry_no_entry 残项（8 行）随 paper-level entry 建立核销；G_dialectical_opposition / E_moderation / moderator_selection_frameworks 三 stem 在本 registry 无 paper_count 型 pooled entry，REGISTRY_ALIASES 无可映射条目、无需扩展；write-theory _index.md 路由表残项属 2026-08-30 用户裁定 schema-gap 预期永久类、未动；results 侧 OLS_FE 三残项同批手工消账（见 write-results registry batch_48）；intro 侧写回器已自动同步、无残项；summary_by_dimension 联动：Mechanism 67→68、Boundary 37→40；meta total_papers 81→82、batches 38→39。前批：2026-09-06j 手工残项同步：ADD gulati_2007_tent_poles tfr_287-289 全 EMERGING（AMJ 2007 单源评论/论坛文（rigor-relevance 辩论），gap=Incommensurability（route unclassified，与 intro 同型：伪二分消解为社会建构）；辩证对立整合型（评论体规范模型，五型之外）；变体块已由写回器落盘（3×ADD 同锚 argumentation_patterns.md 变体 L 后按序堆叠 M/N/O），本批为 registry 首登记残项同步，status 沿 2026-09-06g/h/i 先例初登 EMERGING）：argumentation_patterns 变体 M 部落冲突归因诊断段（两层效应编号归因+双重身份根源+隐蔽仲裁者） / 变体 N 开山者典范反讽论证段（三学科键合实例链+失落根源反转） / 变体 O 大帐篷正和重构+编号规范程序段（消解宣言+隐喻包+编号祈使步骤链）；3 个 index_no_row 残项属 write-theory 路由表 schema-gap 预期永久类；intro 侧 3 项已由写回器自动同步（17-debate-reframing 变体 B / 04-reality-contradicts 变体 L / 07-reputation-legitimacy 变体 E），intro registry gap_distribution 曾因 CLI --gap 默认误记 Incompleteness、已同日手工移账 Incommensurability；summary_by_dimension 联动：Mechanism 66→67、Mode 9→11；meta total_papers 80→81。前批：2026-09-06i 手工残项同步：ADD gulati_nohria_zaheer_2000_strategic_networks tfr_282-286 全 EMERGING（SMJ 2000 单源概念/综述文（special issue 引言文），gap=Incompleteness（综述文变体：层级覆盖缺口）；review-essay perspective-building 型（近缘构念辨析×机制推演，无假设属体裁）；变体块已由写回器落盘，本批为 registry 首登记残项同步，status 沿 2026-09-06g/h 先例初登 EMERGING）：argumentation_patterns 变体 L 轻攻门域循环·透镜横切框架复用（五拍域循环×N+三维电池跨层复用+互补三步收束） / leitmotif 句式 E 基线礼让→精化提案域开题 / closure 句式 C complement-expand-extend 三步域收束 / construct_definition 句式 O N 联框架定义电池+跨层复用声明 / mechanism_chain 句式 E 机制对命名+例示性免责引入。本批 5 个 stem 的 INDEX 残项（no unique row）属 write-theory _index 路由表 schema-gap（路由表改动 2026-08-30 用户裁定单独呈批，未动），与 registry 论文条目同批核销为预期永久类；summary_by_dimension 联动：Mode 6→9、Level 0→1（首粒）、Mechanism 65→66；meta total_papers 79→80。前批：2026-09-06h 手工残项同步：ADD gulati_lavie_singh_2009_partnering_experience tfr_278-281 全 EMERGING(SMJ 2009 单源，gap=Inadequacy；构念辨析型主+调节效应型次；变体块已由写回器落盘，本批为 registry 首登记残项同步，status 沿 2026-09-06g 先例初登 EMERGING 未单独触发 expert_audit_override)：A_construct_differentiation 变体C 构念拆分双理由差异预测（GPE/PSE whereas 功能分工 + (a) 学习效率 (b) 收益宽度双枚举 + H2 相对排序假设） / moderator_selection_frameworks 变体C 主效应后两类因子 moderator 路线图（伙伴侧 vs 企业侧元框架 + First/Then/Finally 三分支预告） / moderation 句式G 信号贬值双边调节收束句（高条件增值 + diminishes, however 低条件贬值 + intensify with 条件收敛） / closure 句式B 比较型配对假设局部收束（In sum 单向 + In addition 相对排序同段落双假设）；A_construct_differentiation / moderator_selection_frameworks / moderation / closure 四 stem 在本 registry 无 paper_count 型 pooled entry，REGISTRY_ALIASES 无可映射条目、无需扩展。前批：2026-09-06g 手工残项同步：ADD gulati_higgins_2003_which_ties_matter tfr_274-277 全 EMERGING（SMJ 2003 单源，gap=Incompleteness；纯调节设计型：理论贡献全在条件化、无独立主效应假设。E_moderation 变体G 信号方注意力对齐调节 common trunk→3 parallel branches + moderation 变体D 均匀效应假设质疑转折 / 变体E 让步式条件收敛 / 变体F 双维权变框架句；变体块已由写回器落盘，本批为 registry 首登记残项同步；E_moderation 与 moderation 两 stem 在本 registry 无 paper_count 型 pooled entry，REGISTRY_ALIASES 无可映射条目、无需扩展）。前批：2026-09-06f 残余复核：_index.md argumentation_patterns 行注 1 条翻转（变体 K 传递+自选择双 warrant，Higgins & Gulati 2003 / westphal_bednar2005，EMERGING→VERIFIED）；registry EMERGING 条目全量复核 0 条涉内（paruchuri_2020 单作除外）。2026-09-06e 补扫：_index.md 行注 1 条翻转（hypothesis_organization_patterns 类型学分解 higgins_2003 EMERGING→VERIFIED）；next_batch_targets.qualitative_process_theory 注记同步。2026-09-06d 用户升级裁定全仓扫描（expert_audit_override 全量生效）：Pollock / Westphal / Gulati 系论文蒸馏产出全部 EMERGING→VERIFIED（user 2026-09-06: 用户点名三位为最喜爱学者、论文叙事主要模仿对象，即使研究方向非产品召回，其论文蒸馏单源即 VERIFIED）。本仓：fragments 41 条升 VERIFIED（gulati_2007×4 / gulati2005×5 / higgins_2003×3 / han_pollock_paruchuri×2 / keeves_2017×5 / lashley_pollock_2020×5 / paruchuri_pollock_kumar_2019×3 / pollock_2015×6 / pfarrer_pollock_rindova_2010×8）＋ patterns 区 12 条（gulati2005×5 / gulati_2007×4 / higgins_2003×3）同升。前批：2026-09-06b Gulati 1999 (AJS, Where Do Interorganizational Networks Come From?) 整篇蒸馏残项补登记：ADD gulati_1999_where_do_interorganizational_networks tfr_265-273 全 VERIFIED（expert_audit_override：Gulati 系单源即 VERIFIED。机制推演型主+调节效应型次；变体块已由写回器落盘，本批为 registry 首登记残项同步）：construct_differentiation 母构念三机制分列 / G_dialectical 机制交棒转场 / argumentation 增长谜题双问句预告 / hypothesis_organization 双驱动收敛×阶段主导权 / moderation 机制级选择性调节+连续斜率句 / closure 模型图读出式收束（closure 首个图形语义变体）/ leitmotif If-X-Alone-Cannot 问句桥 / hypothesis_forms dyadic 单调主效应句。write-theory 9 条；intro 6（含新建 contributions/metatheory-anchored-contribution registry 行）/ methods 7 / results 6（Logit 族槽位补登记）。前批：2026-09-06 Gulati & Westphal 1999 (ASQ, Cooperative or Controlling) 整篇蒸馏残项补登记：ADD gulati_westphal_1999_cooperative_or_controlling tfr_258-264 全 VERIFIED（expert_audit_override：Gulati 系单源即 VERIFIED。机制推演型主+调节效应型次；变体块已由写回器落盘，本批为 registry 首登记残项同步）：hypothesis_organization_patterns 变体E 基线假设揭示转折 / argumentation_patterns 变体H 单透镜双极镜像机制链 + 变体I 默认透镜资格审查-更替 / hypothesis_forms 句式（假设序列角色标签引导） / moderation 句式（对称放大型调节，intensity not direction） / leitmotif-section-opener 句式（阶段路标段首） / construct_definition 句式（关系构念 A-B-C 例示定义）。write-theory 7 条；intro 4（含新建 hooks/27、stakes/10 registry 行）/ methods 4（micro-template 记 by_source_paper note）/ results 5（Logit 族槽位补登记）。前批：2026-09-05c Gulati 1999 (SMJ, Network Location and Learning) 整篇蒸馏残项补登记：ADD gulati_1999_network_location_and_learning_the_influence_of_n tfr_252-257 全 VERIFIED（expert_audit_override：用户点名 Gulati 为最喜爱学者之一，单源即 VERIFIED。构念辨析型主+机制推演 B0 辅；变体块已由写回器落盘，本批为 registry 首登记残项同步）：construct_differentiation_patterns 变体C 母构念锚定型新构念散文合法化（network resources 位置重归因+社会资本类比+邻接排除） / evidence_patterns 变体D 田野引语三段式的假设推导内部署（tfr_250 第二源部署） / leitmotif-section-opener 句式C 绩效→行为变量改指 pivot / argumentation_patterns 模式G 前提分解→瓶颈命名 setup / hypothesis_organization_patterns 模式D 同一现象双产物→双驱动收敛（双IV×单DV） / mechanism_chain 句式C 双刃限定范围诚实句。write-theory 6 条；intro 6 / methods 4 / results 5 已由写回器自动同步。前批：2026-09-05b Gulati 1998 (SMJ, Alliances and Networks) 整篇蒸馏残项补登记：ADD gulati_1998_alliances_and_networks tfr_247-251，初登 EMERGING/auxiliary，同日经 expert_audit_override 全部升 VERIFIED（user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即权威；综述文为正式 SMJ 论文，撤销 auxiliary 分级回归标准论文条目。review-essay perspective-building 型；变体块已由写回器落盘，本批为 registry 首登记残项同步）：argumentation_patterns 变体E 共享盲区批判开场（undersocialized 命名式） + 变体F 透镜-议程六拍循环（已知→盲区→激活→重析+证据→整合→议程） / construct_differentiation_patterns 变体B 伞构念三层分层·双机制二分（social capital→information/control→relational/structural） / evidence_patterns 变体C 田野引语证据质感三段式 / G_dialectical_opposition 变体A 必要不充分互补性整合收束（G 首个非对称亚型）。综述文首次入 corpus：write-theory 5 条 + write-introduction 同批 3 条（tensions AP/previews S/theory-lens B，后者 registry/INDEX 已由写回器自动同步）。前批：2026-09-05 Pfarrer, Pollock & Rindova 2010 (AMJ, A Tale of Two Assets) 重蒸馏残项补登记：ADD pfarrer_pollock_and_rindova_2010 tfr_239-246 全 EMERGING（构念辨析型；变体块已由写回器落盘，本批为 registry 首登记残项同步）：A_construct_differentiation 变体A 形成过程辨析 + 变体B 相对排序跨情境反转 / argumentation_patterns 模式E 现象先行定位 / hypothesis_organization_patterns 模式D 镜像配对比较假设组（EXTEND 第2源）/ hypothesis_derivation_patterns 模式B 两波推导统一透镜 / acknowledgment_response 句式D 竞争推测预承认回收 / mechanism_chain 句式D 透镜解码混合信号（EXTEND 第2源）/ construct_definition 句式N 综述合成采纳定义。前批：2026-08-30 Westphal 系双篇 residual 补登记（Carpenter & Westphal 2001 AMJ + Zajac & Westphal 2004 ASR，变体块已由主循环写回，本批仅 registry/index 元数据同步，全部 VERIFIED per expert_audit_override: 用户点名 Westphal 为最喜爱学者，引言/理论单源足矣）: ADD carpenterwestphal2001 tfr_219-223（反假设驳斥式开场 arrangement_patterns 变体A / 情境劈叉共同机制干 E_moderation 变体C / 互补组合型双边论证 bilateral_argumentation_templates 变体B / 个体-单元双层平行假设集+中介份额声明 hypothesis_organization_patterns 变体C / How-then-might 机制枢纽问句 leitmotif-section-opener 句式B）与 zajac_westphal_2004 tfr_224-227（F 技巧4 分离编号回指竞争对+期界基线+跨政策推广 → F 源数 2→3 升 VERIFIED，next_batch_targets.competing_hypotheses 已同步 / 假设句分离编号回指竞争对 hypothesis_forms / 竞争维度 carve-out 句 acknowledgment_response 变体C / 同一测量的对立读法 evidence_patterns）。_index.md 行注已同步。"
   note: "Reverse-engineered from existing corpus anchors. Batch 2026-07-09: distilled 4 recall papers (Darby 2023 MSOM, Mayo 2022 POM, Ball 2018 JOM, Darby 2026 JOM) into subprotocols and registry. Batch 2026-07-10: expanded Cui, Yang & Vertinsky (SMJ) with inverted-U mechanism, bilateral argumentation, flatten/steepen language, and local closure templates. Batch 2026-07-22: distilled Li, Bapuji, Talluri, Singh & Narayanan (2025 JSCM, Vertical Spillover of Product Recalls) — added dual_mechanism_convergent_moderation pattern to bilateral_argumentation_templates.md (moderator×mechanism matrix) and registered H1 dual-mechanism convergence under existing dual_mechanism_same_direction. Batch 2026-07-22b: distilled Cutolo & Ferriani (2024 JOM, narratives & atypicality) — added minimal_pair_contrast_vignette pattern to argumentation_patterns.md (Leah controlled-contrast showing device); registered parallel_buffering_moderators_single_mechanism; cutolo_ferriani also a 2nd source for write-introduction theory-lens/02-dual-theory-layered (processing fluency + Bloom & Lahey taxonomy). Batch 2026-07-22c: distilled Falchetti, Cattani & Ferriani (2022 SMJ, Start with Why) — added congruency_fit_fluency_mechanism to sentences/mechanism_chain.md (genuine gap; spans Falchetti + Cutolo); CORRECTED misclassification of falchetti_2022_smj (was construct_differentiation tfr_017, has no such content) → reclassified to congruency mechanism; construct_differentiation source_count 5→4. Falchetti intro hook (23-popular-debate) and Methods (多研究 变体1/2, 实验 变体1) already distilled in prior sessions. Batch 2026-07-28: backfill + wiring batch — registered two auxiliary sources whose fragments entered corpus in the 2026-07-27/28 waves but were never registered: Booth/Williams/Colomb (The Craft of Research, premise soundness gate + warrant tests + acknowledgment-response matrix + voice firewall → reasoning_soundness_protocol.md, acknowledgment_response.md) and Greene & Lidinsky 2017 (Rogerian four-step → acknowledgment_response.md §5; fallacy probes → reasoning_soundness_protocol.md §8). Same batch wired the registry into consumption: corpus/_index.md selection-stage pointer, write-theory/SKILL.md resource-loading clause, distill-theory-exemplar Phase 4 registry-writeback protocol. Registry previously orphaned (no .md referenced it) since creation. Batch 2026-08-03: distilled Schumacher, Keck & Tang (2020, SMJ); added the belief-updating/attention-threshold reversal pattern as EMERGING. Reference-level writeback was explicitly authorized by the user; no core routing or mandatory-slot rule was changed. Batch 2026-08-28: distilled Wowak, Ball, Post & Ketchen (M&SOM, female directors → product recall decisions), tfr_182-187, all VERIFIED per user expert_audit_override (产品召回为主研究领域单源足矣); context_assigned_margin_split additionally registered as a core_candidate observation item in _skill_design_feedback.yaml. Batch 2026-08-28b: distilled Westphal & Zajac (1998, ASQ, The Symbolic Management of Stockholders), tfr_188-195, all VERIFIED per user expert_audit_override (公司治理/符号管理为主研究领域单源足矣); 8 fragments across B_mechanism_elaboration (交替对立再诠释 + 硬/软数字测量重构), argumentation_patterns (判别式替代解释排除 + 两极之间假设声明), hypothesis_derivation_patterns (符号替代-预防-固权), hypothesis_organization_patterns (受众异质性 pivot), hypothesis_forms (实施权变从句), moderation (编号双 DV 交互). Batch 2026-08-29: distilled Post, Lokshin & Boone (2022, AMJ, What Changes After Women Enter Top Management Teams? A Gender-Based Model of Strategic Renewal), tfr_196-198, all VERIFIED per user expert_audit_override (用户点名喜爱本篇，单源足矣); 3 fragments across hypothesis_organization_patterns (中介配对分流→共享重构主干), hypothesis_forms (时间分阶 Δ 假设), moderator_selection_frameworks (新声音整合轴); _index.md 快速决策表已同步."
@@ -3392,6 +3392,38 @@ source_papers:
         status: EMERGING
         note: "预埋调节+实证延后声明句（Lu et al. 2022 MS 型，EMERGING 单源）：worth noting 低姿态预埋 W + 替代方向情景论证 + 'empirically explore in the later section' 显式签约；W 不立正式假设，与理论嵌入型（wang2024）和标准调节引入分工。"
 
+  mao_dong_lee_2022_msom:
+    display_name: "Before It's Too Late: Product Recall Delays and Policy Design"
+    journal: "Manufacturing & Service Operations Management"
+    year: "2022"
+    gap_type: Incompleteness
+    theory_build_type: "机制推演型（formal-model 解析建模）"
+    fragments:
+      - fragment_id: tfr_299
+        type: formal_model_case_partitioned_propositions
+        title: "Pattern: Formal-Model Case-Partitioned Propositions（假设→优化→命题条件分区→逐案命名解读，mao_dong_lee_2022_msom 型）"
+        home_files:
+          - subprotocols/hypothesis_derivation_patterns.md
+        makadok_dimension: Mode
+        status: EMERGING
+        note: "Pattern B：Formal-Model Case-Partitioned Propositions（mao_dong_lee_2022_msom 型；formal-model 整节组织：假设→优化→命题条件分区→逐案命名解读；EMERGING，gate ① 裁决召回主题单源升级裁决适用性）"
+      - fragment_id: tfr_300
+        type: dual_channel_time_varying_hazard_mechanism
+        title: "Pattern: Dual-Channel Time-Varying Hazard Mechanism（外部/内部影响双渠道 + 事件时变冲击，mao_dong_lee_2022_msom 型）"
+        home_files:
+          - subprotocols/hypothesis_derivation_patterns.md
+        makadok_dimension: Mechanism
+        status: EMERGING
+        note: "Pattern B：Dual-Channel Time-Varying Hazard Mechanism（mao_dong_lee_2022_msom 型；双渠道家族第三形态：事件→渠道系数时变分段；EMERGING）"
+      - fragment_id: tfr_301
+        type: continuous_ratio_named_regime_partition
+        title: "Pattern: Continuous Ratio → Named Regime Partition（连续成本收益比的命名区间边界，mao_dong_lee_2022_msom 型）"
+        home_files:
+          - subprotocols/hypothesis_derivation_patterns.md
+        makadok_dimension: Boundary
+        status: EMERGING
+        note: "Pattern B：Continuous Ratio → Named Regime Partition（mao_dong_lee_2022_msom 型；连续权衡比经阈值函数分割为命名行为区间；EMERGING）"
+
 # Cross-paper pattern aggregation (derived above)
 patterns:
   e1_categorical_fit_adverse_effects_from_capacity_shortfall:
@@ -4287,21 +4319,21 @@ summary_by_dimension:
     source_papers: 15
     verified_patterns: 1
   Mechanism:
-    total_fragments: 69
-    source_papers: 38
+    total_fragments: 70
+    source_papers: 39
     verified_patterns: 5
   Boundary:
-    total_fragments: 43
-    source_papers: 28
+    total_fragments: 44
+    source_papers: 29
     verified_patterns: 3
   Level:
     total_fragments: 1
     source_papers: 1
   Mode:
-    total_fragments: 11
-    source_papers: 6
+    total_fragments: 12
+    source_papers: 7
   Question:
-    total_fragments: 2
+    total_fragments: 3
     source_papers: 2
   Output:
     total_fragments: 3

@@ -220,12 +220,13 @@ evidence:
         reject: 0
         common_revise_reasons: []
     08-consequence-cascade:
-      paper_count: 2
+      paper_count: 3
       papers:
       - mayo2021 (POM)
       - wu2025 (SMJ)
+      - mao_dong_lee_2022_msom (Manufacturing & Service Operations Management)
       gap_distribution:
-        Incompleteness: 3
+        Incompleteness: 4
         Inadequacy: 0
         Incommensurability: 0
       status: VERIFIED
@@ -1489,7 +1490,7 @@ evidence:
         common_revise_reasons: []
   previews:
     mechanism-preview:
-      paper_count: 29
+      paper_count: 30
       papers:
       - bamberger_homburg_wielgos2021 (JM)
       - castellaneta_conti_kacperczyk2017 (SMJ)
@@ -1520,6 +1521,7 @@ evidence:
       - gulati_lavie_singh_2009_partnering_experience (Strategic Management Journal)
       - ridge_aime_white_2013_smj (Strategic Management Journal)
       - lu_et_al_2022_frenemies_corporate_advertising (Management Science)
+      - mao_dong_lee_2022_msom (Manufacturing & Service Operations Management)
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: LOW
@@ -1531,7 +1533,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 10
+        Incompleteness: 11
         Inadequacy: 6
         Incommensurability: 4
     findings-preview:
@@ -1713,7 +1715,7 @@ evidence:
         Inadequacy: 20
         Incommensurability: 2
     three-layer-contribution:
-      paper_count: 9
+      paper_count: 10
       papers:
       - haunschild2015 (OS)
       - hoffmann_cheong_phan_zurbruegg2024 (JM)
@@ -1724,6 +1726,7 @@ evidence:
       - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
       - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
       - gulati_lavie_singh_2009_partnering_experience (Strategic Management Journal)
+      - mao_dong_lee_2022_msom (Manufacturing & Service Operations Management)
       status: VERIFIED
       verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       generativity: ADAPTABLE
@@ -1736,7 +1739,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 5
+        Incompleteness: 6
         Inadequacy: 3
         Incommensurability: 1
     metatheory-anchored-contribution:

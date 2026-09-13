@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
   last_updated: '2026-09-13'
-  observations_processed: 100
+  observations_processed: 103
   description: Evidence ledger for design defects inferred from Introduction exemplar distillation.
 defects:
   incompleteness-embedded-opposing-claims-vs-incommensurability:
@@ -3721,6 +3721,118 @@ defects:
     verified_paper_count: 1
     verified_journals:
     - Management Science
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-13'
+    last_seen: '2026-09-13'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  formal-model-rq-triad-preview-gap:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: previews/mechanism-preview.md ROBUST（29 篇），其中形式模型变体 K（正式模型→双侧反馈预测→阈值反转，Schumacher–Keck–Tang 2020 型）不覆盖'编号研究问题三元组开头+发现逐问偿还+政策问句入列'的预览装置
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/previews/mechanism-preview.md
+    diagnosis: '模块覆盖存在、规则正确，只缺该可迁移变体；precheck 判 gap（containment=0.186，threshold 0.33），已产出 ADD 候选（plan item: intro_preview_question_triad_formal_model）'
+    proposed_change:
+      action: append_variant
+      summary: 向 mechanism-preview.md 变体 K 块后追加'三问驱动形式模型预览'变体；见 plans/introduction.plan.yaml
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: mao_dong_lee_2022_msom
+      journal: MSOM
+      evidence_anchor: Introduction P3-P5：三问块（含政策第三问）→Bass 修改模型设定→决策规则+因素编号清单发现预告；功能描述，不复制原文
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - MSOM
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - MSOM
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-13'
+    last_seen: '2026-09-13'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  policy-contribution-variant-gap:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: contributions 语料有政策实践变体（变体 D，hoffmann2024 型）但无'监管微文献流（责任规则→调查宣告效应）→ However 特征层转向 → 三条并列 on... 政策建议清单（检查对象/惩罚设计/信息披露）'的政策贡献段句法
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/contributions/three-layer-contribution.md
+    diagnosis: '政策面贡献宣告缺独立可复用变体；precheck 判 薄弱（最佳匹配 EMERGING，containment=0.296），已产出 ADD 候选（plan item: intro_contribution_policy_triple_suggestion）'
+    proposed_change:
+      action: append_variant
+      summary: 向 three-layer-contribution.md 变体 D 块后追加'政策设计三联建议'变体；见 plans/introduction.plan.yaml
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: mao_dong_lee_2022_msom
+      journal: MSOM
+      evidence_anchor: Introduction P8：政策贡献段三联建议收束；功能描述，不复制原文
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - MSOM
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - MSOM
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-13'
+    last_seen: '2026-09-13'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  dual-mode-typology-hook-gap:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: 'hooks 有成对灾难（14）、后果清单（08，含具名市值灾难多段变体 D）与数据冲击成对实例化（03 变体 G），但无''两被动模式类型学宣告（in two ways: First/Second）+ 每模式一具名案例（机制+时间线+罚金）''的实例化装置'
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/hooks/08-consequence-cascade.md
+    diagnosis: '既有变体做规模/频次/后果展示（同一类事件放大），本装置做决策模式类型学实例化（不同机制各配一案）——说服动作不同；precheck 判 gap（containment=0.19），已产出 ADD 候选（plan
+      item: intro_hook_dual_mode_typology_instantiation）'
+    proposed_change:
+      action: append_variant
+      summary: 向 08-consequence-cascade.md 变体 D 块后追加'双模式类型学实例化'变体；见 plans/introduction.plan.yaml
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: mao_dong_lee_2022_msom
+      journal: MSOM
+      evidence_anchor: Introduction P1-P2：双边成本设定+两模式双案例（GM 无视调查结果 10 年 / Toyota 隐瞒缺陷）+US$900M/US$1.2B 罚金量化；功能描述，不复制原文
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - MSOM
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - MSOM
     verified_journal_count: 1
     regression_cases:
       positive: []

@@ -6,10 +6,10 @@
 meta:
   schema_version: 1.1.0
   registry_type: estimator-slot-skeleton
-  last_updated: 2026-09-13a
-  last_batch_id: batch_2027_lu_et_al_2022_frenemies_corporate_advertising_writeback
-  batches_processed: 49
-  total_papers_indexed: 49
+  last_updated: 2026-09-13b
+  last_batch_id: batch_2028_mao_dong_lee_2022_msom_writeback
+  batches_processed: 50
+  total_papers_indexed: 50
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
     granularity: per estimator（对应 corpus/[结果类型].md 文件）
@@ -1537,6 +1537,24 @@ estimators:
       R3:
         skeleton_variants:
         - id: r3_binary_gee_curvilinear_formal_utest_chain
+
+        - id: r3_case_group_contrast_loop
+
+          skeleton: >-
+
+            > We present our results of Equation ([N]) in Table ([X])
+
+            We observe that the coefficients of [Case A] and [Case B] are insignificantly negative, whereas the coefficients of [Case C] and [Case D] are significantly positive
+
+            When we combine these two sets of estimates, our result suggests that, compared with [the reference cases], [units] would be more likely to [outcome] if [the condition] is classified as either [Case C] or [Case D]
+
+            By using a [structural estimation] approach to [estimate the theoretical primitives], our empirical study provides supporting evidence that the guideline offered in our [decision framework] provides practical implications for understanding how [units] may behave when [focal circumstance].
+
+          notes: >-
+
+            corpus Logit-Probit-Ordered-Probit.md AP：无编号假设的 formal-model 检验不用"逐假设四拍"，而是把理论支路分两组读：先一句并报不显著组（方向如实交代），whereas 转显著组，再 "When we combine these two sets of estimates" 把组间对比升格为单一实质判决
+
+            收束句不另起 "Thus H# is supported"，而是回锚形式模型——"the guideline offered in our [decision framework] provides practical implications"，支持判断落在理论框架的实用价值上而非假设编号上
           skeleton: '[Hypothesis restatement for U/inverted-U in a binary outcome]. [Quadratic term sign and significance
             as first evidence]. [Formal U-test: significant slope at lower bound and significant opposite slope at upper bound].
             [Turning point and Fieller/bootstrap confidence interval within observed support]. [Predicted-probability figure].
@@ -1828,6 +1846,22 @@ estimators:
       R7:
         skeleton_variants:
         - id: r7_curvilinear_six_threat_robustness_ladder
+
+        - id: r7_threshold_def_columns
+
+          skeleton: >-
+
+            > We present our results of Equation ([N]) in Table ([X])
+
+            Columns ([1]), ([2]), and ([3]) present results in which we use [the first 1/2], [the first 1/3], and [the first 1/4] of [the relevant cycle], respectively, to identify [the threshold-defined condition]
+
+            Our results are largely consistent in all three columns: [the coefficients of focal cases] keep the same sign and significance pattern under all three definitions.
+
+          notes: >-
+
+            corpus Logit-Probit-Ordered-Probit.md AQ：研究者自由度最大的定义选择（"早期"窗宽）不做单独稳健性小节，而是把三档定义并排进主表三列——表导航句即敏感性预告（"Columns (1), (2), and (3) present results in which we use ..."），一致性判决用 "largely consistent" 的中等强度措辞（不夸张为 unchanged）
+
+            定义敏感性从附件级降为一张表的列结构，cherry-picking 质疑被表格设计预先吸收
           skeleton: '[Map each check to a threat: alternative lags/windows for timing; count DV for binary information loss;
             alternative panel estimator for estimator dependence; value proxy for focal-variable measurement; expanded regulator/industry
             sample for setting dependence; IV/control-function model for omitted-variable endogeneity]. [Summarize directional
@@ -2131,6 +2165,27 @@ estimators:
           - sample_attrition_note
           - aside_segregation
           notes: 'corpus Logit-Probit-Ordered-Probit.md 变体AN：第一阶段 mlogit 导航交底 + IV 排他声明 + 基线类规则 + 分阶段样本损耗 + 自有价值旁注区隔'
+        - id: r2_formal_tree_case_dummies
+          skeleton: >-
+            > Given our estimated [structural parameters], we next empirically test the [decision process/tree] shown in Figure [N]
+            We focus on [the subsample] and estimate the following [logit] model ([estimator citation]): [Equation N]
+            All [K] explanatory variables are binary
+            [Case A]_i = 1 reflects the observations satisfying the condition in case (A) ([branch label]) in Proposition [M]
+            For those observations that do not satisfy the condition, we have set [Case A]_i = 0 and then categorize these observations into one of the following [K-1] cases
+            First, [Case B]_i = 1 reflects case (B) ([branch label]), which satisfies [theoretical condition]; otherwise, [Case B]_i = 0
+            Second, [Case C]_i = 1 reflects case (C) ([branch label]) in Proposition [M], which satisfies that [Case A]_i = 0, [Case B]_i = 0, and [observable classification criterion]
+            In [X], we control for a set of variables that affects [the decision process], including [control domains].
+          notes: >-
+            corpus Logit-Probit-Ordered-Probit.md AO：formal-model 论文把"理论→可估对象"的翻译写成显式构词法：理论支路（Proposition 的 case 条件）逐支路变成二元回归元，定义句自带理论出处（in Proposition [M]）
+            不满足前置条件的观测不丢弃而是显式归池再分类（"we have set ... = 0 and then categorize these observations into one of the following ..."，互斥穷尽）
+            方程、支路定义、控制域三件事一段交底——把"回归元从哪来"从 methods 细节升格为 Results 可读性的前提
+        - id: r2_institutional_dv_proxy
+          skeleton: >-
+            > The dependent variable, [Delayed outcome]_i, is also a dummy variable that equals one if [the focal behavior is observed], which is defined as [institutional marker], and zero otherwise
+            In [the setting], [the outcome] can [occur via two routes], and the latter accounts for [P]% of [events] in our data
+            [Institutional mechanism: because of resource and information asymmetry, the institutional route is time-consuming, and focal units can preempt it at any time because they possess superior private information ([citation]).] Therefore, it is reasonable to assume that the presence of [institutional marker] indicates that [focal units] may behave passively toward [the focal condition] and [postpone the focal action].
+          notes: >-
+            corpus Logit-Probit-Ordered-Probit.md AR：二元 DV 不是直接测量而是机构行为代理（被动延迟→由监管机构 NHTSA 发起召回，占 14.7%）时，定义句后必须接一条制度机制链：两路线并存 + 代理类占比交底 + "为什么落在该类=被动行为"的因果推理（厂商信息优势使其能在监管调查中随时抢先自愿召回）+ 文献背书（Rupp and Taylor 2002）——把"代理是否测到构念"的构造效度质疑在 DV 定义段就地化解
       R4:
         description: ''
         skeleton_variants:
@@ -7539,11 +7594,32 @@ batch_history:
   source_paper: lu_et_al_2022_frenemies_corporate_advertising
   slot_updates_count: 6
   novel_patterns_count: 6
+- batch_id: batch_2028_mao_dong_lee_2022_msom_writeback
+  timestamp: 2026-09-13
+  source_paper: mao_dong_lee_2022_msom
+  slot_updates_count: 4
+  novel_patterns_count: 4
 status_overrides:
   schema: '1.0'
   note: >-
     用户裁定状态，显式越过 phase-4 ladder（1–2 来源 EMERGING / 3+ VERIFIED / 5+ 跨 2 子域 ROBUST；见 distill-theory-exemplar/references/phase-4-validation-writeback.md L232-238）。rebuild 派生 status = ladder ⊕ 本节（本节显式优先）；键为 registry 路径，value.status 为裁定档位，value.basis 为裁定凭据原文。本节属 AUTHORED——rebuild 透传不改。
   overrides:
+    estimators.Logit_Probit_Ordered_Probit.slots.R2.skeleton_variants.r2_formal_tree_case_dummies:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题单源即 VERIFIED; gate① 2026-09-13 确认适用 mao_dong_lee_2022_msom 召回延迟主效应)
+    estimators.Logit_Probit_Ordered_Probit.slots.R2.skeleton_variants.r2_institutional_dv_proxy:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题单源即 VERIFIED; gate① 2026-09-13 确认适用 mao_dong_lee_2022_msom 召回延迟主效应)
+    estimators.Logit_Probit_Ordered_Probit.slots.R3.skeleton_variants.r3_case_group_contrast_loop:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题单源即 VERIFIED; gate① 2026-09-13 确认适用 mao_dong_lee_2022_msom 召回延迟主效应)
+    estimators.Logit_Probit_Ordered_Probit.slots.R7.skeleton_variants.r7_threshold_def_columns:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题单源即 VERIFIED; gate① 2026-09-13 确认适用 mao_dong_lee_2022_msom 召回延迟主效应)
     estimators.BLP-状态空间.slots.R2.skeleton_variants.r2_gmm_nested_mmsc_aic:
       status: VERIFIED
       basis: >-

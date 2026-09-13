@@ -161,6 +161,39 @@ status: ready_for_corpus
 -->
 <!-- wb:Shi_Grewal_Sridhar_2021_JMR:legacy_hypothesis_derivation_patterns_PatternSignFlippingB -->
 
+
+## Pattern: Continuous Ratio → Named Regime Partition（连续成本收益比的命名区间边界，mao_dong_lee_2022_msom 型）
+
+> 论证角色：Warrant——用连续经济权衡比经阈值函数分割为命名行为区间，为条件化预测提供可比、可测的边界装置
+
+**band**: 薄弱（边界家族现有 Sign-Flipping 与三条件框架均非"连续比→命名区间"形态；单源 EMERGING，待第二篇交叉验证）
+**适用场景**: 理论预测依赖一个连续权衡比（收益/成本、边际/调整成本）且行为随比值区间质变时：把连续 moderator 转成互斥命名区间，并与状态变量（如周期阶段）交互细化
+**排列模式**: Ratio Definition → Threshold Function → Regime Partition → Regime-Specific Comparative Statics
+**范文来源**: Mao, Dong & Lee (2022), *Manufacturing & Service Operations Management*
+
+**骨架**:
+```
+[定义比] the [权衡比] = [收益分子]/[成本分母] captures [权衡的经济学含义]
+[阈值函数] let [h(·)] = [阈值表达式]，并定义其在 [状态变量范围] 内的 [上/下确界]
+[分区] (i) [比] ≤ [下阈]: [行为1 — 立即行动]; (ii) [下阈] < [比] ≤ [上阈]: [行为2 — 仅当状态早段才行动]; (iii) [比] > [上阈]: [行为3 — 总是行动]
+[区间比较静态] an earlier [前因] leads to [结果] within each regime, because [区间特有机制，如早段即时行动的损失更持久]
+```
+
+**与近族的分界**:
+- vs Sign-Flipping Boundary Condition：后者解释方向反转的机制；本变体不改方向，而是把连续 moderator 的区间质变命名成行为 regime
+- vs 三条件框架（Shi et al. 2021 JMR）：后者三条件逻辑独立且共同必要；本变体三分支互斥且由同一比值生成
+- vs Formal-Model Case-Partitioned Propositions（同篇姊妹块）：后者是整节组织架构；本变体是其中的单一边界装置，可独立迁移到非整节建模的论文
+**原文锚点**: "it is then beneficial for a firm to delay the recall only when the product defect is identified at an early stage of the cycle"
+**为什么有效**: 连续 moderator 的"高/低"两分法丢失中间区间的质变；阈值函数把"比值 × 状态变量"的交互压缩成命名区间，后续实证可直接用比值分组检验，理论-测量距离最短
+**注意事项**:
+- 每个区间必须有一个行为学命名（而非低/中/高），否则退化为普通交互项分组
+- 阈值函数的上下确界要在状态变量范围内定义，避免空区间
+- 区间边界处的连续性/跳跃要在解读中说明
+**反模式**: 用"high vs low"二分硬套三区间现象；阈值无经济学含义（纯统计分组）；区间命名与实证分组变量不一致
+
+<!-- wb:mao_dong_lee_2022_msom:continuous_ratio_named_regime_partition -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Boundary tbt="机制推演型（formal-model 解析建模）" -->
+
 ## Pattern: Three-Condition Framework for Information-Based Herding
 
 **适用场景**: 研究组织在不确定性决策中向同伴学习/模仿的现象；需要将经典信息级联理论转化为可检验的组织情境机制。
@@ -460,6 +493,43 @@ Third, [channel 3 — 信息通道 + 文献锚]。[1-2 句：类比机制在其�
 **反模式**: 通道枚举与后续调节无映射（审稿人问"哪条通道承载 benefit"）；为凑数列举同义通道。
 
 <!-- wb:lu_et_al_2022_frenemies_corporate_advertising:b_variant_e_mechanism_channel_instantiation_enumeration -->
+
+
+## Pattern: Formal-Model Case-Partitioned Propositions（假设→优化→命题条件分区→逐案命名解读，mao_dong_lee_2022_msom 型）
+
+> 论证角色：Claim——以基线模型→决策时间线→优化问题→命题的链条承当整节理论主线，把参数空间分割为互斥命名案例并逐案给出经济学解读；命题是分区声明而非假设的替身
+
+**band**: gap（形式化命题分区骨架 EN/CN routing 多轮查询零命中、语料无对应家族；单源 EMERGING，召回主题单源升级裁决（2026-08-29）是否适用由 gate ① 显式裁决）
+**适用场景**: 解析建模论文（MSOM/MS/POM 式 formal-model Theory 节）：以最优性条件而非编号假设承载理论贡献；需要把"什么条件下企业做什么"翻译成可引用、可实证检验的命名行为案例时使用。不适用于以 H 编号假设为主的管理学实证 Theory。
+**排列模式**: Baseline Model → Decision Timeline → Optimization Problem → Case-Partitioned Proposition → Verbal Interpretation → Numerical Illustration → Extensions → Policy Design
+**范文来源**: Mao, Dong & Lee (2022), *Manufacturing & Service Operations Management*
+
+**骨架**:
+```
+[基线] We start with [baseline process model] that mathematically describes [outcome dynamics]; [两条影响渠道] shape [hazard/growth].
+[时间线] [事件] is noticed at [t_C], its type identified at [t_I], and [行动] taken at [t_R]; define [关键区间] as the [决策] window.
+[优化] max_[决策变量] π = [收益项] − [单位行动成本]×[累计暴露量] − [惩罚函数]([延迟时长])
+[命题] Proposition N. (A) When [条件阈值1], [行为A — never act]. (B) … [may not act]. (C1) … [always act]. (C2) … [act only when t_I is early].
+[解读] We visualize the scenarios in Figure [k]. The [决策] depends on [N] sequential conditions: [维度1], [维度2], and [维度3]… case (C2), the "[命名]" case, because [一句经济学直觉].
+[比较静态] Corollary N. Given [固定项], a [类别1] firm always [单调结果] if [前因更早]; however, for a [类别2] firm, this can happen when [技术条件].
+[数值例示] we use a numerical example… showing that the main result applies to a wide range of [参数域].
+[扩展] three extensions: [放松假设1], [新增信息结构], [政策工具设计]
+```
+
+**与近族的分界**:
+- vs Lu et al. (2022) MS 通道枚举：后者在编号假设论文内具体化单一机制；本变体整节以命题结构组织，无 H 编号，分区即理论本体
+- vs B 方式三 条件化复杂化：后者的条件化附于单一假设之后；本变体条件分区覆盖全参数空间且互斥，每个区间是一个命名理论对象
+- vs 假设树型（变体 C）：树型每分支一条方向性 H；命题型每分支一个参数区间 + 最优行为描述，收敛信号是 "When…, a firm will…" 而非 Therefore
+**原文锚点**: "We visualize the scenarios shown in Proposition 1 in Figure 3." … "this is denoted as case (C2), the 'early-stage delay' case"
+**为什么有效**: 命名案例标签（never / may not / always / early-stage）让参数分区成为可引用、可跨节回指的理论对象，实证节可直接把企业分类进案例做检验；逐案解读段把最优性条件重新翻译回因果语言，非建模读者仍能跟随 why；命题后紧跟数值例示预先堵住"分区是否非空"的审稿质疑
+**注意事项**:
+- 每个案例必须同时给出：参数条件 + 命名标签 + 一句经济学直觉；只复述数学条件的解读段不合格
+- 分区条件维度要显式排序（本篇：缺陷 notice 时间 → 内部/外部影响增量 dominance → 边际-召回成本比），并在解读段用一句话复述该排序
+- 技术性排除条件（如避免拖延到周期末尾的非平凡性假设）单独括注处理，不进命题主句
+**反模式**: 命题后无解读段（读者被留在参数空间）；案例命名与实证测量脱节（后续节无法把观测分类进案例）；用命题伪装假设（命题是"若条件则行为"的推导结果，改写成 H1 式方向声明即失真）
+
+<!-- wb:mao_dong_lee_2022_msom:formal_model_case_partitioned_propositions -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Mode tbt="机制推演型（formal-model 解析建模）" -->
 
 ## Pattern: Bilateral Moderation Derivation（high/low 双边论证）
 
@@ -837,6 +907,39 @@ H1. The level of [IV] is negatively associated with [DV].
 **反模式**: 两条通道实际是同一机制的同义改写（一个说"投资者施加影响"一个说"高管接受影响"而无独立机制步）——必须是概念独立的两条通道；可行性条件写成无关的稳健性注释而非机制环节；把双通道写成 B2 双轨（预测不同）。
 
 ---
+
+
+## Pattern: Dual-Channel Time-Varying Hazard Mechanism（外部/内部影响双渠道 + 事件时变冲击，mao_dong_lee_2022_msom 型）
+
+> 论证角色：Reason——把结果过程的演化分解为外部与内部两条影响渠道，让冲击事件通过渠道系数的时变函数（而非直接进入结果水平）传播其负面效应
+
+**band**: 薄弱（双渠道家族已有 DesJardine–Li–Shi 2025 单源 EMERGING 与 B8 Background-as-Theory EMERGING；本变体为家族第三形态，待第二篇交叉验证）
+**适用场景**: 动态采纳/声誉/需求过程被事件（缺陷、危机、丑闻）冲击的机制建模：结果由两条异质渠道共同驱动（如外部媒体 × 口碑），事件不直接移动结果，而是按时间分段切换渠道系数
+**排列模式**: Baseline Hazard → Event Segmentation → Channel-Coefficient Time Variation → Channel-Asymmetry Interpretation
+**范文来源**: Mao, Dong & Lee (2022), *Manufacturing & Service Operations Management*
+
+**骨架**:
+```
+[基线] [结果过程] follows [baseline hazard]: [外部渠道系数] + [内部渠道系数]·[累计采纳量]
+[事件分段1] Once [事件] is noticed, it starts to affect [内部渠道] among [已采纳者]: [内部系数](l) < [内部系数]，且 ′<0、″≤0（加速恶化的学习过程）
+[事件分段2] after [企业行动] is announced, [未采纳者] receive the information via [外部渠道]: [外部系数](τ) < [外部系数]，′<0、″≤0
+[不对称解读] The difference between [情形A] and [情形B] lies in what occurs after [t_I]: [行动可拖延 → 内部渠道受损更久；行动公开 → 外部渠道承接受损]
+```
+
+**与近族的分界**:
+- vs Dual-Channel Convergence（DesJardine–Li–Shi 2025）：后者两渠道横截面各自收敛于同一 DV；本变体是同一纵贯过程的两个系数、按事件时间分段切换
+- vs Lu et al. (2022) MS 通道枚举：后者枚举同一机制的实现通道且通道不假设化；本变体两渠道是结果方程的组成部分，系数被事件时变冲击并直接供给命题分区条件
+- vs B8 Background-as-Theory：后者机制藏在文献背景段；本变体机制显式写成分段 hazard 方程
+**原文锚点**: "Once such a potential defect is noticed (and thus is effective), it starts to affect word of mouth among consumers who have already purchased the product, thus affecting the coefficient of internal influences."
+**为什么有效**: 冲击进系数而非进结果，天然生成"事件前/事件后"分段比较静态；两条渠道由不同主体承载（已采纳者口碑 vs 公众外部信息），使"拖延行动"与"公开行动"各自产生可分离的负外部性——这一不对称正是后续命题分区（内部增量 dominance vs 外部增量 dominance）的条件来源
+**注意事项**:
+- 两渠道必须由不同主体承载并有不同时间起点，否则分段机制坍缩为单渠道处理效应
+- 时变函数假设（单调下降、凹）需显式声明并给直觉（加速恶化的学习），不可只写数学
+- 每个分段切换点（t_C, t_I, t_R）对应一个可观测的制度事件，便于实证对齐
+**反模式**: 两渠道实为同一群体的两种说法；事件冲击直接加到结果水平上；渠道系数时变无行为主体解释（纯数学分段）
+
+<!-- wb:mao_dong_lee_2022_msom:dual_channel_time_varying_hazard_mechanism -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Mechanism tbt="机制推演型（formal-model 解析建模）" -->
 
 ## Pattern: Why-Not Reverse Boundary Declaration（"why not" 反向边界声明，DesJardine–Li–Shi 2025 型）
 

@@ -219,6 +219,23 @@ updated: 2026-08-13
 
 **验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
 
+
+### 变体 AQ: R7 阈值定义列敏感性 — 定义窗宽三档并排主表 + 一致性判决 (mao_dong_lee_2022_msom 型)
+**来源论文**: Mao, Dong & Lee 2022 (Manufacturing & Service Operations Management)
+**原始句锚点**: "Columns (1), (2), and (3) present results in which we use the first 1/2, 1/3, and 1/4 of a product cycle, respectively, to identify the early stage. Our results are largely consistent in all three columns."
+**验证状态**: VERIFIED — expert_audit_override (user 2026-08-29 召回主题单源裁决; paper_count=1)
+**写入日期**: 2026-09-13
+**槽位**: R7
+**骨架**:
+> We present our results of Equation ([N]) in Table ([X]). Columns ([1]), ([2]), and ([3]) present results in which we use [the first 1/2], [the first 1/3], and [the first 1/4] of [the relevant cycle], respectively, to identify [the threshold-defined condition]. Our results are largely consistent in all three columns: [the coefficients of focal cases] keep the same sign and significance pattern under all three definitions.
+**与原骨架差异**: 研究者自由度最大的定义选择（"早期"窗宽）不做单独稳健性小节，而是把三档定义并排进主表三列——表导航句即敏感性预告（"Columns (1), (2), and (3) present results in which we use ..."），一致性判决用 "largely consistent" 的中等强度措辞（不夸张为 unchanged）；定义敏感性从附件级降为一张表的列结构，cherry-picking 质疑被表格设计预先吸收
+**适用**: 关键条件/处理定义含连续阈值的二元结果设计（产品周期阶段、规模门槛、时长窗）；定义档位有自然刻度（1/2、1/3、1/4）可对称呈现；推断二元结果 R7 强制项（阈值敏感性）的最省版实现
+**禁忌**: 三档定义必须事先都合理、不能为"总有一档显著"而设（若仅中间档显著，"largely consistent" 即选择性报告反模式）；"largely consistent" 要求方向与显著性格局整体不变，个别档位幅度差异应在表注或正文如实交代；阈值档位有理论或制度依据时优先引用依据而非只报档位
+**区别于**: 变体 S（滞后结构括弧敏感性——同一窗内双侧外推，检验报告指向后文）；变体 29（水平 vs 比例测量——测量构造二选一）；本变体是阈值定义档位并排主表列，敏感性内嵌主表而非独立检验
+
+<!-- wb:mao_dong_lee_2022_msom:r7_threshold_def_columns -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
 ### 变体 R：双 DV 收敛 + 理论标签现造（westphal_zajac_1998_symbolic_management 型）
 
 **模板**:
@@ -281,6 +298,23 @@ updated: 2026-08-13
 **禁忌**: null 格确认逻辑必须由 Methods 侧前置的判定标准（"H# is thus supported if..."）授权，Results 不得事后把 null 追认为证据；"generally" 类汇总措辞若掩盖某一 DV 上方向反转的系数，属选择性报告反模式
 
 **验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
+
+
+### 变体 AP: R3 理论支路组间对比判读 — 显著组/不显著组分读 + 合并判决 + 决策树回锚 (mao_dong_lee_2022_msom 型)
+**来源论文**: Mao, Dong & Lee 2022 (Manufacturing & Service Operations Management)
+**原始句锚点**: "When we combine these two sets of estimates, our result suggests that, in cases that compare with CaseA and CaseB, a firm would be more likely to delay a recall if the defect is classified as either CaseC1 or CaseC2."
+**验证状态**: VERIFIED — expert_audit_override (user 2026-08-29 召回主题单源裁决; paper_count=1)
+**写入日期**: 2026-09-13
+**槽位**: R3
+**骨架**:
+> We present our results of Equation ([N]) in Table ([X]). We observe that the coefficients of [Case A] and [Case B] are insignificantly negative, whereas the coefficients of [Case C] and [Case D] are significantly positive. When we combine these two sets of estimates, our result suggests that, compared with [the reference cases], [units] would be more likely to [outcome] if [the condition] is classified as either [Case C] or [Case D]. By using a [structural estimation] approach to [estimate the theoretical primitives], our empirical study provides supporting evidence that the guideline offered in our [decision framework] provides practical implications for understanding how [units] may behave when [focal circumstance].
+**与原骨架差异**: 无编号假设的 formal-model 检验不用"逐假设四拍"，而是把理论支路分两组读：先一句并报不显著组（方向如实交代），whereas 转显著组，再 "When we combine these two sets of estimates" 把组间对比升格为单一实质判决；收束句不另起 "Thus H# is supported"，而是回锚形式模型——"the guideline offered in our [decision framework] provides practical implications"，支持判断落在理论框架的实用价值上而非假设编号上
+**适用**: 理论产出 case 分类/决策树而非单调主效应假设的论文；多条二元回归元在同一方程里按支路组检验；无编号假设时需要别的支持判断收束装置
+**禁忌**: 原文只报系数方向与显著性、无边际效应或概率翻译——按本文件诚实边界 hb_logit_coefficient_magnitude，复用时不得照抄"只读符号"，应补 AME 或概率幅度拍；不显著组并置为对照证据只有在组划分由理论前置驱动时才成立，不得事后按显著性分组
+**区别于**: 变体 P（四格 null 格确认——调节设计中 null 格逐格正面报告，null 即假设证据）；变体 AF（双估计器并列共证——跨表逐假设一行确认）；本变体是"支路组间对比 + 合并判决 + 理论回锚"三拍，判决对象是决策树指南而非假设编号
+
+<!-- wb:mao_dong_lee_2022_msom:r3_case_group_contrast_loop -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
 
 ### 变体 5: R2 Heckman 第一阶段表格 + 逆米尔斯比率进入第二阶段 (1篇高价值)
 **来源论文**: Malik, Wang, Martin & Gomez-Mejia 2025 (Journal of Management)
@@ -631,6 +665,23 @@ updated: 2026-08-13
 <!-- wb:pfarrer_pollock_and_rindova_2010:r2_dv_family_pivot_heading -->
 
 
+
+### 变体 AR: R2 二元 DV 的机构行为代理辩护 — 制度机制链 + 占比交底 (mao_dong_lee_2022_msom 型)
+**来源论文**: Mao, Dong & Lee 2022 (Manufacturing & Service Operations Management)
+**原始句锚点**: "The dependent variable, DelayedRecall_i, is also a dummy variable that equals one if it is a delayed recall, which is defined as a recall initiated by NHTSA, and zero otherwise."
+**验证状态**: VERIFIED — expert_audit_override (user 2026-08-29 召回主题单源裁决; paper_count=1)
+**写入日期**: 2026-09-13
+**槽位**: R2
+**骨架**:
+> The dependent variable, [Delayed outcome]_i, is also a dummy variable that equals one if [the focal behavior is observed], which is defined as [institutional marker], and zero otherwise. In [the setting], [the outcome] can [occur via two routes], and the latter accounts for [P]% of [events] in our data. [Institutional mechanism: because of resource and information asymmetry, the institutional route is time-consuming, and focal units can preempt it at any time because they possess superior private information ([citation]).] Therefore, it is reasonable to assume that the presence of [institutional marker] indicates that [focal units] may behave passively toward [the focal condition] and [postpone the focal action].
+**与原骨架差异**: 二元 DV 不是直接测量而是机构行为代理（被动延迟→由监管机构 NHTSA 发起召回，占 14.7%）时，定义句后必须接一条制度机制链：两路线并存 + 代理类占比交底 + "为什么落在该类=被动行为"的因果推理（厂商信息优势使其能在监管调查中随时抢先自愿召回）+ 文献背书（Rupp and Taylor 2002）——把"代理是否测到构念"的构造效度质疑在 DV 定义段就地化解
+**适用**: DV 是"未被观测的行为/决策"的代理标记（监管发起 vs 自愿披露、被动 vs 主动、违约 vs 展期）；代理标记有清晰制度边界且占比可报告
+**禁忌**: 机制链必须说明代理标记与构念同向的因果理由，不得只报定义不辩 Proxy 效度；代理占比过小或过大须讨论测量噪声；代理标记含行政时滞时须交底其对时机解释的影响
+**区别于**: 变体 24（hit rate vs PCC——DV 是预测精度的测量竞争）；变体 W（DV 家族换场——小节标题层的 DV 切换）；本变体是单一 DV 的制度代理辩护层，解决"哑变量测没测到理论行为"的构造效度
+
+<!-- wb:mao_dong_lee_2022_msom:r2_institutional_dv_proxy -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
 ### 变体 X: R2 相关替代测量分模型括弧 — 似然模型嵌套序列 (gulati1999 型)
 **来源论文**: Gulati 1999 (Strategic Management Journal, 20(5), 397-420)
 **原始句锚点**: "The two variables that assess the level of network resources of firms, Cliques and Closeness, were relatively highly correlated (0.66) and were examined separately in the statistical analysis. ... Models 2 and 3 provide two alternative tests for Hypothesis 1."（跨 R1/R2 段拼接，省略号标注）
@@ -751,6 +802,23 @@ updated: 2026-08-13
 
 <!-- wb:gulati_westphal_1999_cooperative_or_controlling:r2_hypothesis_riskset_narrowing_dyads -->
 
+
+
+### 变体 AO: R2 形式模型决策树→二元回归元构造 — 每支路一个 case dummy + 违约支路余集归池 (mao_dong_lee_2022_msom 型)
+**来源论文**: Mao, Dong & Lee 2022 (Manufacturing & Service Operations Management)
+**原始句锚点**: "CaseA_i = 1 reflects the observations satisfying the condition in case (A) (never delay) in Proposition 1."
+**验证状态**: VERIFIED — expert_audit_override (user 2026-08-29 召回主题单源裁决; paper_count=1)
+**写入日期**: 2026-09-13
+**槽位**: R2
+**骨架**:
+> Given our estimated [structural parameters], we next empirically test the [decision process/tree] shown in Figure [N]. We focus on [the subsample] and estimate the following [logit] model ([estimator citation]): [Equation N]. All [K] explanatory variables are binary. [Case A]_i = 1 reflects the observations satisfying the condition in case (A) ([branch label]) in Proposition [M]. For those observations that do not satisfy the condition, we have set [Case A]_i = 0 and then categorize these observations into one of the following [K-1] cases. First, [Case B]_i = 1 reflects case (B) ([branch label]), which satisfies [theoretical condition]; otherwise, [Case B]_i = 0. Second, [Case C]_i = 1 reflects case (C) ([branch label]) in Proposition [M], which satisfies that [Case A]_i = 0, [Case B]_i = 0, and [observable classification criterion]. In [X], we control for a set of variables that affects [the decision process], including [control domains].
+**与原骨架差异**: formal-model 论文把"理论→可估对象"的翻译写成显式构词法：理论支路（Proposition 的 case 条件）逐支路变成二元回归元，定义句自带理论出处（in Proposition [M]）；不满足前置条件的观测不丢弃而是显式归池再分类（"we have set ... = 0 and then categorize these observations into one of the following ..."，互斥穷尽）；方程、支路定义、控制域三件事一段交底——把"回归元从哪来"从 methods 细节升格为 Results 可读性的前提
+**适用**: formal-model/解析建模论文的实证检验节：理论给出门限条件或决策树支路、需检验"现实是否按理论分岔"；支路条件须可在数据上操作化（本文：边际-召回成本比档位取自 IHS luxury/exotic/premium 分类 + 产品周期早期阶段）
+**禁忌**: 支路条件必须来自理论命题而非数据驱动聚类；互斥穷尽性要显式声明（否则组间系数不可比）；支路定义含研究者自由度时（如"早期"窗宽）须在同一表内做定义敏感性（见 R7 阈值定义列敏感性变体）
+**区别于**: 变体 5（Heckman 第一阶段导航——回归元是估计出的逆米尔斯比率，选择纠正修辞）；变体 AC（假设级风险集递进——收窄的是样本不是回归元构造）；本变体是"理论支路→二元回归元"的构词层，理论模型本身充当测量工具
+
+<!-- wb:mao_dong_lee_2022_msom:r2_formal_tree_case_dummies -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
 
 ### 变体 AD: R6 null 主假设前置 pivot — 判决先行冒号句 + In summary 权变化收束 (gulati_westphal_1999 型)
 **来源论文**: Gulati & Westphal 1999 (Administrative Science Quarterly, 44(3), 473-506)

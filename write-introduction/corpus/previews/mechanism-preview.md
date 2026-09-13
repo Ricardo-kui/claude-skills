@@ -830,6 +830,30 @@ P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者
 
 <!-- wb:lu_et_al_2022_frenemies_corporate_advertising:intro_identification_event_induced_treatment_exogeneity -->
 
+
+### 变体 AG：三问驱动形式模型预览（mao_dong_lee_2022_msom 型）
+> 论证角色：Framing（编号研究问题三元组先行安装，模型段-发现段-稳健性-实证支持按同一顺序逐问偿还）
+
+**模板**:
+> "In this paper, we explicitly model [过程] for [情境] and ask the following N questions. First, [RQ1：是否会 X]？ Second, [RQ2：是否会 Y]？ Finally, [RQ3：监管方如何用工具遏制 Y]？ 模型段：We adopt [基线动态模型] and modify it by incorporating [事件]；we focus on [主体] 的 [事后] 决策——是否付出 [努力]、以及何时 [行动]；[及时行动] leads to [成本A]，whereas [拖延行动] leads to [成本B]；therefore [主体] trades off [A] against [B]。发现段：Using this [模型]，we determine [决策] using [求解法]：[决策1] relies upon (1) [因素1]，(2) [因素2]，(3) [因素3]；并非所有 [行动] 都会 [拖延]，但会 [拖延] 的主体具有 [特征三元组]；结果在 [扩展1]/[扩展2] 下基本不变，且得到 [行业] 数据的实证支持。"
+
+**来源**: Mao, Dong & Lee 2022 (MSOM), P3-P5
+
+**原文锚定**:
+> "In this paper, we explicitly model the defect investigation and recall process for products with long life cycles and ask the following three questions."
+
+**关键特征**:
+- 预览以编号研究问题三元组开头（第三问是政策问题），模型段与发现段按提问顺序逐问偿还，问题-预览一一映射
+- 发现预览用"决策规则+因素编号清单+特征三元组+单调比较静态"表述而非效果量，并显式包含稳健性扩展与实证支持指针
+- 模型段内嵌理论透镜功能（修改基线扩散模型+定义事后权衡），无独立 Theory Lens 段
+
+**适用**: formal-model OM/MS 论文（MSOM/POM/MS 风格）；模型有可解析比较静态且含政策分析层时
+
+**禁忌**: N 问必须与预览发现一一对应，不得预览不兑现的问题；发现句保留条件结构（如"会拖延者必须具有以下特征"），禁止压成无条件结论
+
+<!-- wb:mao_dong_lee_2022_msom:intro_preview_question_triad_formal_model -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
 ## 组装规则
 
 ### 必须配对

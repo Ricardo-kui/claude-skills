@@ -661,8 +661,9 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     实证对象构建:
-      paper_count: 0
-      papers: []
+      paper_count: 1
+      papers:
+      - mao_dong_lee_2022_msom (Manufacturing & Service Operations Management)
       status: EMERGING
       slots_covered: []
       common_failures: []
