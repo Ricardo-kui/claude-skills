@@ -50,7 +50,9 @@ from __future__ import annotations
 import argparse
 import difflib
 import json
+import os
 import re
+import subprocess
 import sys
 from datetime import date
 from pathlib import Path
@@ -203,29 +205,47 @@ def resolve_target(corpus_root: Path, item: dict, override: str | None) -> Path 
 def _merge_slots_covered(entry: str, slot_tag: str) -> str:
     """Merge slot_tag into an entry's slots_covered, tolerating BOTH the flow
     style (`slots_covered: [M8]`) and the block style (`slots_covered:` +
-    `- M8` item lines). The old flow-only rewrite replaced just the key line,
-    orphaning block items below it into invalid YAML (2026-09-13 Lu run,
-    自然实验-DiD: slots_covered: [M8] followed by stray `- M2/- M7/- M8`).
-    Output is always a comma-separated flow list — the legacy space-joined
-    form `[M2 M7 M8]` parsed as ONE string, a latent bug since inception."""
+    `- M8` item lines). Item collection accepts ANY single-token tag (e.g.
+    the legacy pseudo-slot `M2.5` in 面板数据-OLS) — an early break on a
+    non-canonical item used to split the block and leave stray `- M3` lines
+    below the rewritten flow list, producing INVALID YAML (caught by the S4
+    wbtest sandbox regression). Output is a comma-separated flow list:
+    canonical M#/R# tags sorted numerically first, non-canonical tags keep
+    their original relative order at the end. The old flow-only rewrite
+    replaced just the key line, orphaning block items below it (2026-09-13
+    Lu run), and the legacy space-joined form `[M2 M7 M8]` parsed as ONE
+    string — both latent bugs since inception."""
     eol = "\r\n" if "\r\n" in entry else "\n"
     lines = entry.split(eol)
-    item_re = re.compile(r"^(\s*)- (M\d+)\s*$")
+    item_re = re.compile(r"^(\s*)- (\S+)\s*$")
     for i, line in enumerate(lines):
         km = re.match(r"^(\s*)slots_covered:.*$", line)
         if not km:
             continue
         indent = km.group(1)
-        have = set(re.findall(r"M\d+", line))
+        collected: list[str] = []
         j = i + 1
         while j < len(lines):
             im = item_re.match(lines[j])
             if not im or im.group(1) != indent:
                 break
-            have.add(im.group(2))
+            collected.append(im.group(2))
             j += 1
-        have.add(slot_tag)
-        merged = ", ".join(sorted(have, key=lambda s: int(s[1:])))
+        seen: dict[str, int] = {}
+        for k, tag in enumerate(collected):
+            seen.setdefault(tag, k)
+        seen.setdefault(slot_tag, len(seen))
+
+        def keyf(tag: str):
+            m = re.fullmatch(r"M(\d+)", tag)
+            if m:
+                return (0, int(m.group(1)), seen.get(tag, 10 ** 6))
+            m = re.fullmatch(r"R(\d+)", tag)
+            if m:
+                return (1, int(m.group(1)), seen.get(tag, 10 ** 6))
+            return (2, 0, seen.get(tag, 10 ** 6))
+
+        merged = ", ".join(sorted(seen, key=keyf))
         lines[i:j] = [f"{indent}slots_covered: [{merged}]"]
         return eol.join(lines)
     return entry
@@ -682,6 +702,22 @@ def update_index(corpus_root: Path, target: Path, note: str,
     return f"INDEX: no unique row for '{target.stem}' — edit by hand: {note}"
 
 
+def build_wb_meta(gap: str, dim: str | None = None, tbt: str | None = None,
+                  status: str | None = "EMERGING") -> str:
+    """S4 wb-meta line (format contract: references/registry-derived-views.md
+    §4): single line, separate from the wb marker, compact KV, grep-able.
+    gap is always recorded (it is not derivable from blocks); dim/tbt are
+    theory-only payload; status starts at EMERGING per the ladder."""
+    parts = [f"gap={gap}"]
+    if status:
+        parts.append(f"status={status}")
+    if dim:
+        parts.append(f"dim={dim}")
+    if tbt:
+        parts.append(f'tbt="{tbt}"')
+    return "<!-- wb-meta: " + " ".join(parts) + " -->"
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="Execute a confirmed writeback plan")
     ap.add_argument("--plan", required=True)
@@ -715,6 +751,7 @@ def main() -> int:
     rc = 0
     applied: list = []
     section = str(plan.get("section") or "")
+    pm = plan.get("paper_meta") or {}
     for item in plan["items"]:
         name = item["name"]
         verdict = item["dedup"]["verdict"]
@@ -762,7 +799,9 @@ def main() -> int:
             body = block_text.replace("{NEXT}", label).strip("\n")
             note = (index_note or module_description).replace("{NEXT}", label)
             content = build_new_module(target, body, desc, note, template)
-            content += f"\n<!-- wb:{args.paper}:{name} -->\n"
+            content += (f"\n<!-- wb:{args.paper}:{name} -->\n"
+                        + build_wb_meta(args.gap, item.get("registry_dimension"),
+                                        pm.get("theory_build_type")) + "\n")
             new_text[str(target)] = content
             messages.append(f"[{name}] CREATE -> {target.name} (module scaffold, 变体 A)")
             messages.append(f"[{name}] " + add_index_row(corpus_root, target, note, new_text))
@@ -810,7 +849,9 @@ def main() -> int:
         at, anchor_warn = insertion_index(lines, item, target)
         if anchor_warn:
             messages.append(f"[{name}] WARN: {anchor_warn}")
-        lines[at:at] = ["", body + "\n\n" + marker, ""]
+        wb_meta = build_wb_meta(args.gap, item.get("registry_dimension"),
+                                pm.get("theory_build_type"))
+        lines[at:at] = ["", body + "\n\n" + marker + "\n" + wb_meta, ""]
         new_text[path] = "\n".join(lines)
         messages.append(f"[{name}] {verdict} -> {target.name} 变体 {label} "
                         f"(inserted after line {at})")
@@ -827,7 +868,6 @@ def main() -> int:
         applied.append((name, target, label, item))
 
     if registry and section == "theory":
-        pm = plan.get("paper_meta") or {}
         messages += update_theory_registry(
             registry, args.paper, args.journal, args.gap, applied, new_text,
             title=args.paper_title or pm.get("title"),
@@ -857,6 +897,26 @@ def main() -> int:
         except yaml.YAMLError as e:
             print(f"ERROR: registry YAML invalid after edit: {e}", file=sys.stderr)
             return 2
+    # S4 shadow double-run: the derived-view rebuilder re-derives from blocks
+    # and logs drift against the on-disk registries (READ-ONLY; the legacy
+    # counting path above stays authoritative until the S6 switch).
+    # WBTEST_SKIP_SHADOW=1 disables it inside sandbox regression runs.
+    if not os.environ.get("WBTEST_SKIP_SHADOW"):
+        try:
+            log_out = Path(args.plan).parent / "reconciliation_log.latest.yaml"
+            proc = subprocess.run(
+                [sys.executable, str(Path(__file__).resolve().parent / "rebuild_views.py"),
+                 "--check", "--quiet", "--out", str(log_out)],
+                capture_output=True, text=True)
+            tail = [ln for ln in (proc.stdout or "").strip().splitlines() if ln]
+            messages.append("RECONCILE(shadow): " +
+                            (tail[-1] if tail else f"exit={proc.returncode}"))
+            messages.append(f"RECONCILE(shadow): log -> {log_out}")
+            if proc.returncode != 0:
+                messages.append(f"RECONCILE(shadow) WARN exit={proc.returncode}: "
+                                f"{(proc.stderr or '')[:200]}")
+        except Exception as e:  # noqa: BLE001
+            messages.append(f"RECONCILE(shadow) WARN: {e}")
     print("\n".join(messages))
     print(json.dumps({"applied": sorted(new_text)}, ensure_ascii=False, indent=2))
     return rc
