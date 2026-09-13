@@ -884,3 +884,62 @@ evidence:
         reject: 0
         last_critique: null
         common_revise_reasons: []
+
+# === AUTHORED ===
+status_overrides:
+  schema: '1.0'
+  note: >-
+    用户裁定状态，显式越过 phase-4 ladder（1–2 来源 EMERGING / 3+ VERIFIED / 5+ 跨 2 子域 ROBUST；见 distill-theory-exemplar/references/phase-4-validation-writeback.md L232-238）。rebuild 派生 status = ladder ⊕ 本节（本节显式优先）；键为 registry 路径，value.status 为裁定档位，value.basis 为裁定凭据原文。本节属 AUTHORED——rebuild 透传不改。
+  overrides:
+    evidence.by_source_paper.anand_mukherjee_2024_learning_from_failures_di:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    evidence.by_source_paper.bendig_hensellek_schulte_2024_etp:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    evidence.by_source_paper.chen_ganesan_liu_2009_jm:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    evidence.by_source_paper.fini_jourdan_perkmann_2017_amj:
+      status: EMERGING (1p)
+      basis: >-
+        distill-methods-exemplar_2026-08-12
+    evidence.by_source_paper.gulati_westphal_1999_cooperative_or_controlling:
+      status: VERIFIED
+      basis: >-
+        user_designation (2026-09-06: 用户点名 Gulati 为最喜爱学者——Gulati 系单源升 VERIFIED；methods 带按库惯例记录于此，槽位证据等级随 design_type 行)
+    evidence.by_source_paper.hoffmann_cheong_phan_zurbruegg2024_jm:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    evidence.by_source_paper.kashmiri_nicol_arora_2017_jams:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    evidence.by_source_paper.lee_park_2024_smj:
+      status: VERIFIED
+      basis: >-
+        user_expert_audit
+    evidence.by_source_paper.liu_shankar2015:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    evidence.by_source_paper.post_2022_women_tmt_strategic_renewal:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户点名喜爱本篇，单源足矣)
+    evidence.by_source_paper.ridge_hill_ingram_kolomeitsev_worrell_2024_amj:
+      status: EMERGING (1p)
+      basis: >-
+        distill-methods-exemplar_2026-08-12
+    evidence.by_source_paper.westphal_bednar_2005_asq:
+      status: VERIFIED
+      basis: >-
+        user_designation (2026-09-06: 用户升级裁定——Westphal 系单源即 VERIFIED；覆盖 2026-08-29 轻量蒸馏裁决，methods 槽位证据一并生效)
+    evidence.by_source_paper.westphal_zajac_1998_symbolic_management:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-28: 单源足矣)

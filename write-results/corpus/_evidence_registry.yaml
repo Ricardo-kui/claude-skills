@@ -2,6 +2,7 @@
 # Schema: estimator-slot-skeleton v1.0.0
 # 设计说明见 INDEX.md
 
+# === DERIVED: rebuilt by rebuild_views.py — do not hand-edit ===
 meta:
   schema_version: 1.1.0
   registry_type: estimator-slot-skeleton
@@ -34,6 +35,7 @@ meta:
   - marketing
   - finance
   - accounting
+# === AUTHORED ===
 status_rules:
   EMERGING:
     paper_count_max: 2
@@ -164,6 +166,7 @@ global_honesty_boundaries:
   - all
   note: Yuan et al. 2026 JOM REC B3.4 — 预处理变异是最被低估但最容易实施的稳健性检验。
   violation_count: 0
+# === DERIVED: rebuilt by rebuild_views.py — do not hand-edit ===
 estimators:
   OLS_FE:
     display_name: OLS / Fixed Effects
@@ -7253,6 +7256,7 @@ estimators:
       - R7
       note: source=chenganesanliu2009
       violation_count: 0
+# === AUTHORED ===
 batch_history:
 - batch_id: batch_42_expert_audit_override_pollock_westphal_gulati
   timestamp: '2026-09-06 23:30:00'
@@ -7535,3 +7539,772 @@ batch_history:
   source_paper: lu_et_al_2022_frenemies_corporate_advertising
   slot_updates_count: 6
   novel_patterns_count: 6
+status_overrides:
+  schema: '1.0'
+  note: >-
+    用户裁定状态，显式越过 phase-4 ladder（1–2 来源 EMERGING / 3+ VERIFIED / 5+ 跨 2 子域 ROBUST；见 distill-theory-exemplar/references/phase-4-validation-writeback.md L232-238）。rebuild 派生 status = ladder ⊕ 本节（本节显式优先）；键为 registry 路径，value.status 为裁定档位，value.basis 为裁定凭据原文。本节属 AUTHORED——rebuild 透传不改。
+  overrides:
+    estimators.BLP-状态空间.slots.R2.skeleton_variants.r2_gmm_nested_mmsc_aic:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.BLP-状态空间.slots.R3.skeleton_variants.r3_dual_level_indirect_heterogeneity:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.BLP-状态空间.slots.R3.skeleton_variants.r3_state_space_initial_sigma_path:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.BLP-状态空间.slots.R8.skeleton_variants.r8_counterfactual_decomposition:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.BLP-状态空间.slots.R8.skeleton_variants.r8_policy_simulation_non_optimal:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.IV_2SLS.slots.R1.skeleton_variants.r1_heckman_vif_diagnostic:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.IV_2SLS.slots.R2.skeleton_variants.r2_heckman_first_stage_navigation:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.IV_2SLS.slots.R2.skeleton_variants.r2_instrument_dual_condition_audit_just_identified_boundary_gulati_sytch2007:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.IV_2SLS.slots.R2.skeleton_variants.r2_iv_first_stage_pre_reporting:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R2.skeleton_variants.r2_reciprocal_3sls_system_navigation_gulati_sytch2007:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.IV_2SLS.slots.R2.skeleton_variants.r2_sentence_iv_endogeneity_test:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R2.skeleton_variants.r2_sentence_iv_first_stage_significance:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R2.skeleton_variants.r2_sentence_iv_overidentification:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R3.skeleton_variants.r3_iv_main_effect_dual_outcome:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R3.skeleton_variants.r3_iv_main_effect_four_beat:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R3.skeleton_variants.r3_probit_marginal_effect_four_beat:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.IV_2SLS.slots.R3.skeleton_variants.r3_sentence_coefficient_significance_iv:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R3.skeleton_variants.r3_sentence_control_variable_direction:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R4.skeleton_variants.r4_indirect_moderation_full_vs_partial:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R4.skeleton_variants.r4_interaction_marginal_effect_region_plot:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.IV_2SLS.slots.R4.skeleton_variants.r4_iv_moderation_three_part:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R4.skeleton_variants.r4_sentence_indirect_moderation:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R4.skeleton_variants.r4_sentence_interaction_significance:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R5.skeleton_variants.r5_economic_significance_back_of_envelope:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R5.skeleton_variants.r5_economic_significance_embedded:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R5.skeleton_variants.r5_probabilistic_magnitude_one_sd:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.IV_2SLS.slots.R5.skeleton_variants.r5_sentence_back_of_envelope:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R5.skeleton_variants.r5_sentence_unit_translation:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R6.skeleton_variants.r6_nonsignificant_indirect_moderation_acknowledgment:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R6.skeleton_variants.r6_partial_support_null_boundary:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.IV_2SLS.slots.R7.skeleton_variants.r7_3sls_cluster_bootstrap_inference_workaround_gulati_sytch2007:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.IV_2SLS.slots.R7.skeleton_variants.r7_iv_exclusion_quantified_exposure_share:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)
+    estimators.IV_2SLS.slots.R7.skeleton_variants.r7_iv_robustness_threat_based_four_block:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R7.skeleton_variants.r7_iv_threat_based_robustness:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.IV_2SLS.slots.R7.skeleton_variants.r7_iv_weak_id_stock_yogo_critical_value:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)
+    estimators.IV_2SLS.slots.R7.skeleton_variants.r7_linear_2sls_nonlinear_main_model:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)
+    estimators.IV_2SLS.slots.R7.skeleton_variants.r7_sentence_nonlinear_endogeneity:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R7.skeleton_variants.r7_sentence_result_unchanged:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R7.skeleton_variants.r7_sentence_simultaneous_equation:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R7.skeleton_variants.r7_sentence_test_action:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R7.skeleton_variants.r7_sentence_threat_positioning:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R7.skeleton_variants.r7_threat_based_robustness_iv:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R7.skeleton_variants.switching_reg_selection_diagnostics_null_hazard_positive_hausman:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.IV_2SLS.slots.R8.skeleton_variants.r8_exogenous_event_natural_experiment:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
+    estimators.IV_2SLS.slots.R8.skeleton_variants.r8_post_hoc_tactic_differences:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R1.skeleton_variants.r1_descriptive_vif_relogit:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R2.skeleton_variants.r2_alternative_measure_bracketing_probit:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R2.skeleton_variants.r2_binary_outcome_hypothesis_pair_table:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R2.skeleton_variants.r2_control_attenuation_explaining_away:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R2.skeleton_variants.r2_dv_family_pivot_heading:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R2.skeleton_variants.r2_first_event_modeling_scope_dual_track_defense:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-28: 单源足矣)
+    estimators.Logit_Probit_Ordered_Probit.slots.R2.skeleton_variants.r2_hypothesis_riskset_narrowing_dyads:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R2.skeleton_variants.switching_reg_first_stage_intermediate_navigation:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R3.skeleton_variants.r3_binary_gee_curvilinear_formal_utest_chain:
+      status: VERIFIED
+      basis: >-
+        user_expert_audit
+    estimators.Logit_Probit_Ordered_Probit.slots.R3.skeleton_variants.r3_construct_validity_congruence_coda:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R3.skeleton_variants.r3_dual_dv_convergence_symbolic_substitution_label:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-28: 单源足矣)
+    estimators.Logit_Probit_Ordered_Probit.slots.R3.skeleton_variants.r3_dual_estimator_coprimary_confirmation:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R3.skeleton_variants.r3_dual_focal_iv_parallel_inverted_u_utest:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R3.skeleton_variants.r3_eventstudy_nonparametric_validation:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R3.skeleton_variants.r3_probit_four_beat_ame_embedded:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R3.skeleton_variants.r3_sentence_ame_justification_probit:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R3.skeleton_variants.r3_sentence_coefficient_significance_probit:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R3.skeleton_variants.r3_sentence_logit_odds_likelihood:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R3.skeleton_variants.r3_sentence_nonsignificant_inline:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R3.skeleton_variants.r3_sentence_probability_magnitude_probit:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R4.skeleton_variants.r4_curvilinear_moderation_geometric_probability_translation:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R4.skeleton_variants.r4_curvilinear_moderation_turning_point_shift_wald:
+      status: VERIFIED
+      basis: >-
+        user_expert_audit
+    estimators.Logit_Probit_Ordered_Probit.slots.R4.skeleton_variants.r4_dual_mode_shift_vs_steepen_figure_adjudication:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R4.skeleton_variants.r4_four_cell_null_cell_confirmatory_report:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-28: 单源足矣)
+    estimators.Logit_Probit_Ordered_Probit.slots.R4.skeleton_variants.r4_four_cell_wald_formal_confirmation:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-28: 单源足矣)
+    estimators.Logit_Probit_Ordered_Probit.slots.R4.skeleton_variants.r4_interaction_sign_translation_separate_models:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R4.skeleton_variants.r4_nonparametric_equivalence_adjudication:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R4.skeleton_variants.r4_probit_interaction_region_significance:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R4.skeleton_variants.r4_sentence_interaction_coefficient:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R4.skeleton_variants.r4_sentence_mixed_support_inline:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R4.skeleton_variants.r4_sentence_region_significance_partial:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R4.skeleton_variants.r4_sentence_subgroup_comparison_significance:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R4.skeleton_variants.r4_subgroup_mean_comparison_ttest:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R4.skeleton_variants.r4_symmetric_amplification_mirror_verdicts:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R4.skeleton_variants.r4_worked_arithmetic_difference_footnote:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R5.skeleton_variants.r5_probability_cost_activity_value_benchmark:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R5.skeleton_variants.r5_robustness_gee_heckman_endogeneity:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R6.skeleton_variants.r6_construct_family_mixed_evidence:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R6.skeleton_variants.r6_nonsignificant_region_significance_partial:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R6.skeleton_variants.r6_null_component_significant_interaction_candor:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R6.skeleton_variants.r6_null_main_conditional_reestimation_rescoping:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R6.skeleton_variants.r6_null_main_effect_contingency_synthesis:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R6.skeleton_variants.r6_rival_mechanism_adjudication_nested_attenuation:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R7.skeleton_variants.r7_curvilinear_footnote_parsimony_retention:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R7.skeleton_variants.r7_curvilinear_six_threat_robustness_ladder:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R7.skeleton_variants.r7_dummy_significance_vs_slope_homogeneity:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R7.skeleton_variants.r7_lag_structure_bracket_sensitivity:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-28: 单源足矣)
+    estimators.Logit_Probit_Ordered_Probit.slots.R7.skeleton_variants.r7_random_effects_variance_share:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-05: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R7.skeleton_variants.r7_sentence_heckman_two_stage:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R7.skeleton_variants.r7_sentence_iv_validity:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R7.skeleton_variants.r7_sentence_supplemental_regression_caveat:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R7.skeleton_variants.r7_sentence_threat_endogeneity:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R7.skeleton_variants.r7_threat_based_iv_heckman:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R8.skeleton_variants.r8_exploratory_mediator_competing_mechanism_battery:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)
+    estimators.Logit_Probit_Ordered_Probit.slots.R8.skeleton_variants.r8_widespread_belief_reversal_coda:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-28: 单源足矣)
+    estimators.OLS_FE.slots.R1.skeleton_variants.r1_dual_path_premise_descriptives:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户点名喜爱本篇，单源足矣)
+    estimators.OLS_FE.slots.R2.skeleton_variants.r2_heckman_selection_preflight_rationale:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.OLS_FE.slots.R2.skeleton_variants.r2_ols_estimation_strategy_split_sample:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.OLS_FE.slots.R3.skeleton_variants.r3_bk_sobel_partial_mediation_cross_dv_replay:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.OLS_FE.slots.R3.skeleton_variants.r3_dual_treatment_contrast_four_beat_wald:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户点名喜爱本篇，单源足矣)
+    estimators.OLS_FE.slots.R3.skeleton_variants.r3_hypothesis_verdict_chain_null_concession:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.OLS_FE.slots.R3.skeleton_variants.r3_multi_indicator_hypothesis_adjudication:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.OLS_FE.slots.R3.skeleton_variants.r3_olsfe_only_column_significant_log_time_dv:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)
+    estimators.OLS_FE.slots.R3.skeleton_variants.switching_reg_cross_model_comparison_infrastructure:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.OLS_FE.slots.R4.skeleton_variants.r4_split_sample_primary_product_term_corroboration:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.OLS_FE.slots.R4.skeleton_variants.r4_subsample_mirror_null_significant_pair_wald_chow:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户点名喜爱本篇，单源足矣)
+    estimators.OLS_FE.slots.R6.skeleton_variants.r6_chow_honest_downgrade_after_pattern_support:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户点名喜爱本篇，单源足矣)
+    estimators.OLS_FE.slots.R6.skeleton_variants.r6_contrary_pair_sign_reversal_null_dual_verdict_gulati_sytch2007:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.OLS_FE.slots.R6.skeleton_variants.r6_cross_context_mirror_pattern_summary:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.OLS_FE.slots.R6.skeleton_variants.r6_unsupported_verdict_with_pattern_restatement:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.OLS_FE.slots.R7.skeleton_variants.r7_three_threat_sectional_robustness:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户点名喜爱本篇，单源足矣)
+    estimators.OLS_FE.slots.R8.skeleton_variants.r8_baron_kenny_continuous_mediation_separate_analysis:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.OLS_FE.slots.R8.skeleton_variants.r8_in_system_baron_kenny_hypothesis_linked_mediation_gulati_sytch2007:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.OLS_FE.slots.R8.skeleton_variants.r8_ols_strategy_complete_mediation_kenny_signal:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.OLS_FE.slots.R8.skeleton_variants.r8_shared_mediator_outcome_branch_ledger:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.OLS_FE.slots.R8.skeleton_variants.r8_theory_motivated_additional_analyses:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.OLS_FE.slots.R8.skeleton_variants.r8_two_step_predicted_mediator_dual_path_convergence:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户点名喜爱本篇，单源足矣)
+    estimators.事件研究法.slots.R2.skeleton_variants.r2_eventstudy_test_statistic_triple_endorsement:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-28: 单源足矣)
+    estimators.事件研究法.slots.R2.skeleton_variants.r2_grouped_car_column_navigation_adjudication:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-28: 单源足矣)
+    estimators.事件研究法.slots.R3.skeleton_variants.r3_eventstudy_figure_first_signflip_climax:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.事件研究法.slots.R3.skeleton_variants.r3_eventstudy_subgroup_ar_multitest_contrast:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.事件研究法.slots.R4.skeleton_variants.r4_main_effect_protection_after_interaction:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-28: 单源足矣)
+    estimators.事件研究法.slots.R4.skeleton_variants.r4_moderation_group_comparison_ttest_adjudication:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-28: 单源足矣)
+    estimators.事件研究法.slots.R6.skeleton_variants.r6_rival_hypothesis_null_adjudication_punchline:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.事件研究法.slots.R7.skeleton_variants.r7_design_parameter_dual_justification:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.事件研究法.slots.R7.skeleton_variants.r7_eventstudy_heckman_null_lambda_unbiased_confirmation:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.事件研究法.slots.R8.skeleton_variants.r8_out_of_scope_pattern_strongest_test:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-28: 单源足矣)
+    estimators.事件研究法.slots.R8.skeleton_variants.r8_rival_mechanism_falsification_battery:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.事件研究法.slots.R9.skeleton_variants.r9_eventstudy_counterintuitive_stakeholder_coda:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.定性过程研究.slots.F1.skeleton_variants.f1_process_model_overview:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.定性过程研究.slots.F2.skeleton_variants.f2_phase_opening:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.定性过程研究.slots.F3.skeleton_variants.f3_front_stage_backstage_contrast:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.定性过程研究.slots.F4.skeleton_variants.f4_side_stage_negotiation:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.定性过程研究.slots.F6.skeleton_variants.f6_audience_specific_success:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
+    estimators.生存分析.slots.R1.skeleton_variants.r1_hazard_descriptive_vif:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R1.skeleton_variants.r1_paragraph_descriptive_vif:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R1.skeleton_variants.r1_sentence_vif_check:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R2.skeleton_variants.r2_main_hazard_exp_interpret:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R2.skeleton_variants.r2_paragraph_model_sequence_controls_first:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R2.skeleton_variants.r2_sentence_controls_direction:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R3.skeleton_variants.r3_interaction_forced_ceo:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R3.skeleton_variants.r3_paragraph_hazard_four_beat:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R3.skeleton_variants.r3_sentence_coefficient_significance_hazard:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R3.skeleton_variants.r3_sentence_exponential_magnitude:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R3.skeleton_variants.r3_sentence_support_judgment:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R4.skeleton_variants.r4_paragraph_interaction_replication:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R4.skeleton_variants.r4_paragraph_subgroup_wald:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R4.skeleton_variants.r4_sentence_full_explanation_mechanism:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R4.skeleton_variants.r4_sentence_interaction_significance:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R4.skeleton_variants.r4_sentence_subgroup_null:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R4.skeleton_variants.r4_sentence_subgroup_significant:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R4.skeleton_variants.r4_sentence_wald_comparison:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R4.skeleton_variants.r4_subgroup_wald_test:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R5.skeleton_variants.r5_figure_coefficient_plot:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R5.skeleton_variants.r5_paragraph_figure_coefficient_plot:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R5.skeleton_variants.r5_sentence_figure_panel_description:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R6.skeleton_variants.r6_robust_model_selection:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R7.skeleton_variants.r7_paragraph_alternative_exclusion:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R7.skeleton_variants.r7_paragraph_cem_matching:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R7.skeleton_variants.r7_paragraph_measure_sensitivity:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R7.skeleton_variants.r7_paragraph_reverse_causality:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R7.skeleton_variants.r7_paragraph_threat_based_robustness:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R7.skeleton_variants.r7_robust_measure_sensitivity:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R7.skeleton_variants.r7_sentence_aggregate_confidence:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R7.skeleton_variants.r7_sentence_alternative_exclusion:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R7.skeleton_variants.r7_sentence_cem_ate:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R7.skeleton_variants.r7_sentence_consistent_support:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R7.skeleton_variants.r7_sentence_measure_sensitivity_conclusion:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R7.skeleton_variants.r7_sentence_reverse_causality_conclusion:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R7.skeleton_variants.r7_sentence_test_action:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R7.skeleton_variants.r7_sentence_threat_positioning:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R8.skeleton_variants.r8_cem_matching_ate:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.生存分析.slots.R9.skeleton_variants.r9_reverse_causality_alternative:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.计数模型.slots.R1.skeleton_variants.r1_count_descriptives_hypothesis_keyed:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.计数模型.slots.R2.skeleton_variants.r2_count_stepwise_architecture_estimator_chain:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.计数模型.slots.R3.skeleton_variants.r3_aggregate_severity_class_localization:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)
+    estimators.计数模型.slots.R3.skeleton_variants.r3_main_effect_fe_re_parallel_replication:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)
+    estimators.计数模型.slots.R4.skeleton_variants.r4_dv_split_moderation_cross_column_comparison:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)
+    estimators.计数模型.slots.R5.skeleton_variants.r5_multiplicative_sd_percent_count_translation:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)
+    estimators.计数模型.slots.R6.skeleton_variants.r6_count_marginal_only_in_full_model_not_supported:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.计数模型.slots.R7.skeleton_variants.r7_count_iv_gee_endogeneity_noniid:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.计数模型.slots.R7.skeleton_variants.r7_four_threat_battery_mediation_psm_placebo_reverse:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)
+    estimators.计数模型.slots.R8.skeleton_variants.r8_alternative_operationalization_tipping_point_dose_response:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-28: 产品召回为主研究领域，单源足矣)
+    estimators.计数模型.slots.R8.skeleton_variants.r8_count_alternative_events_mechanism_battery:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.计数模型.slots.R8.skeleton_variants.r8_count_posthoc_memory_decay_windows:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    estimators.计数模型.slots.R9.skeleton_variants.r9_count_hypothesis_construct_summary_table:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
