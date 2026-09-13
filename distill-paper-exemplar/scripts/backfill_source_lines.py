@@ -53,27 +53,60 @@ JOURNAL_TOKENS = {  # prose -> registry key token
 
 
 def parse_citation(prose: str) -> dict:
-    """Prose citation -> {surnames, year, journal_token}."""
+    """Prose citation -> {surnames, year, journal, is_citation}.
+
+    is_citation gate: every author segment's leading word is Capitalized (or
+    the segment is a citekey-style token like `eilert2017`), and the line
+    carries a year or such a citekey. Prose quotes like `Of those, only 50
+    are...` fail the case/segment test and never reach KB matching."""
     s = prose.strip()
     year_m = YEAR_RE.search(s)
     year = year_m.group(1) if year_m else None
-    # journal: parenthesized text or trailing known token
     journal = None
     for token, key in JOURNAL_TOKENS.items():
         if token in s.lower():
             journal = key
             break
-    # surnames: first alpha word of each comma/&/and-separated segment,
-    # taken from the part before the year/journal
     head = s[:year_m.start()] if year_m else s
     head = re.split(r"\(", head)[0]
     segs = re.split(r"\s*(?:&|,| and | 与 )\s*", head)
-    surnames = []
+    surnames, is_citation = [], True
+    citekey_style = bool(re.search(r"[a-z]{2,}\d{4}|_[a-z]", s)) and " " not in \
+        s.split("(")[0].strip()[:40]
+    saw_name = False
     for seg in segs:
-        w = re.match(r"([A-Za-z][A-Za-z\-']+)", seg.strip())
-        if w and w.group(1).lower() not in ("et", "al", "the"):
-            surnames.append(w.group(1).lower())
-    return {"surnames": surnames, "year": year, "journal": journal}
+        seg = seg.strip()
+        if not seg:
+            continue
+        w = re.match(r"([A-Za-z][\w\-']*)", seg)
+        if not w:
+            is_citation = False
+            break
+        word = w.group(1)
+        lower = word.lower()
+        if re.search(r"\d", word) and len(seg.split()) == 1:
+            continue  # year-ish token segment
+        if lower in ("et", "al"):
+            continue
+        if word[0].isupper() and len(word) <= 20:
+            surnames.append(lower)
+            saw_name = True
+        elif re.fullmatch(r"[a-z]{2,}\d{4}[_\w]*", word):
+            surnames.append(lower)
+            citekey_style = True
+        elif not seg or not saw_name:
+            is_citation = False
+            break
+        else:
+            is_citation = False
+            break
+    if not surnames or (not year and not citekey_style):
+        is_citation = False
+    if citekey_style and not year:
+        ym = YEAR_IN_TOKEN_RE.search(s)
+        year = ym.group(1) if ym else None
+    return {"surnames": surnames, "year": year, "journal": journal,
+            "is_citation": is_citation}
 
 
 def registry_universe(corpus: str, doc: dict) -> dict[str, dict]:
@@ -81,9 +114,15 @@ def registry_universe(corpus: str, doc: dict) -> dict[str, dict]:
     uni: dict[str, dict] = {}
 
     def add(key: str, meta: dict | None = None):
-        years = set(YEAR_IN_TOKENS(key))
         toks = set(re.findall(r"[a-z0-9]+", key.lower()))
-        uni[key] = {"tokens": toks, "years": years,
+        # fused keys (malshe2015, kalaignanametal2013): also index the alpha
+        # prefix so surname prefix matching works against them
+        for t in list(toks):
+            m = re.match(r"([a-z]{3,})\d*", t)
+            if m:
+                toks.add(m.group(1))
+        uni[key] = {"tokens": toks,
+                    "years": set(YEAR_IN_TOKENS(key)),
                     "meta": meta or {}}
 
     def YEAR_IN_TOKENS(key):
@@ -129,18 +168,35 @@ def match_citation(cit: dict, uni: dict[str, dict]) -> list[str]:
     """Triple check (surnames + year + journal) -> matching registry keys.
     Surname PRECISION gate: hits must cover >=60% of the prose surnames —
     'Ridge, Kim, Ingram & Lee 2024' must not match the different paper
-    ridge_hill_ingram_kolomeitsev_worrell_2024_amj on the two shared names."""
+    ridge_hill_ingram_kolomeitsev_worrell_2024_amj on the two shared names.
+    Fused-key exception: when the citation's first surname forms a fused
+    author+year registry token (malshe2015, kalaignanametal2013) AND year AND
+    journal agree, a single surname hit suffices (author fusion hides the
+    co-authors, so the 60% gate would wrongly reject the real match)."""
     hits = []
     for key, info in uni.items():
         if cit["year"] and info["years"] and cit["year"] not in info["years"]:
             continue
+        fused = False
         if cit["surnames"]:
             hit = _surname_hits(cit["surnames"], info["tokens"])
             if hit < min(2, len(cit["surnames"])) and \
                     not (len(cit["surnames"]) == 1 and hit == 1):
-                continue
-            if hit / len(cit["surnames"]) < 0.6:
-                continue
+                fused = bool(
+                    cit["year"] and info["years"] and cit["journal"]
+                    and cit["journal"] in info["tokens"] and hit >= 1
+                    and any(re.search(rf"^{re.escape(cit['surnames'][0])}\d{{4}}", t)
+                            or "etal" in t for t in info["tokens"]))
+                if not fused:
+                    continue
+            elif not fused and hit / len(cit["surnames"]) < 0.6:
+                fused = bool(
+                    cit["year"] and info["years"] and cit["journal"]
+                    and cit["journal"] in info["tokens"]
+                    and any(re.search(rf"^{re.escape(cit['surnames'][0])}\d{{4}}", t)
+                            or "etal" in t for t in info["tokens"]))
+                if not fused:
+                    continue
         if cit["journal"] and cit["journal"] not in info["tokens"]:
             continue
         hits.append(key)
