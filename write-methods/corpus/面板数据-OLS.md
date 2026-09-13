@@ -344,7 +344,6 @@ updated: 2026-08-13
 **与原骨架差异**: 区别于变体 20（model-free evidence 预览结果模式）——本变体预览的不是 outcome 而是**预测变量的组内变异**：在 Methods 里用一张图先证明"组内有足够的变异可供 FE 识别"，把识别策略的可行性论证前置到测量节。
 
 **诚实边界**: 展示组内变异存在 ≠ 变异外生；不得把它当识别证据呈报；若变异集中于少数单元，应补充分布统计而非只给均值轨迹。
-<!-- wb:wowak_2020_female_directors_recalls:legacy_面板数据-OLS_60 -->
 
 ### 变体 14: M6 全谱系控制变量 — 高 because 密度 + RavenPack事件控制 + CEO人格特质 (1篇高价值)
 **来源论文**: Li, Chiu, Kong, Cropanzano & Ho 2026 (Journal of Management)
@@ -434,7 +433,6 @@ updated: 2026-08-13
 **与原骨架差异**: 区别于变体 54（lead-DV 泛化的一年滞后对齐 + 双理由子样本排除）——变体 54 把 DV 窗口锚到"IV 测量年的下一年"；本变体把窗口锚到**预测变量被决定的具体治理事件**（如年度股东大会重新选举董事会）并给出 because 解释，时间序论证从"滞后一年"细化到"治理决策钟"。亦区别于变体 35（DV 文献基准锚定）与变体 27（构念窗—结果窗分离）。
 
 **诚实边界**: 窗口必须与真实决策钟一致；若预测变量在年内发生临时变动（如董事辞职），固定窗会稀释归因，应报告替代窗稳健性。
-<!-- wb:wowak_2020_female_directors_recalls:legacy_面板数据-OLS_58 -->
 
 ### 变体 15: M1 单行业设置 — 双重现象共存辩护 (1篇高价值)
 **来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
@@ -474,7 +472,6 @@ updated: 2026-08-13
 **与原骨架差异**: 区别于变体 40（控制变量双面 because）与变体 50（共线控制残差化）——本变体处理的是**审稿人预期会问、但数据无法支撑的控制变量**：不静默删除，而是"we sought to"主动声明纳入意图 + 给出弃用的数据原因，抢在审稿人质询前完成交代。
 
 **诚实边界**: 弃用声明最好附一句被遗漏变量可能相关的方向判断；若该变量恰与核心预测变量相关（如女性 CEO 与女性董事比例），须在局限中承认残余混淆可能。
-<!-- wb:wowak_2020_female_directors_recalls:legacy_面板数据-OLS_62 -->
 
 ### 变体 17: M3 多维行为指标 → factor score → 平均值 (1篇高价值)
 **来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
@@ -670,7 +667,6 @@ updated: 2026-08-13
 **与原骨架差异**: 区别于变体 47（一阶差分）与变体 4（mixed within/between 机制分解）——本变体是**FE 去均值路线的三拍论证**：选择理由（重复测量→去均值消时不变 OVB）→"时不变因素按设计吸收故不纳入"的省略辩护→系数解读协议（显式把 coefficient 语言限制在 within-unit across-time 变化上），最后一句"In other words"把识别语义翻译回理论问题。
 
 **诚实边界**: FE 吸收全部组间变异，结论只覆盖组内变化的效应；不得升级为跨单元比较主张；非线性 FE（如 negative binomial FE）的条件估计在计量上有争议（Allison & Waterman 批评），应引用正当化来源并准备 PQR/线性概率替代检验。
-<!-- wb:wowak_2020_female_directors_recalls:legacy_面板数据-OLS_61 -->
 
 ### 变体 59: M3/M7 证据架构服从决策拆分 — DV 按严重度分组 + 假设→符号预登记 (VERIFIED)
 
@@ -687,7 +683,6 @@ updated: 2026-08-13
 **与原骨架差异**: 区别于变体 53（ball_2018 型 severity-split）——变体 53 在**同一 DV 类型内**按官方严重度分配子样本实现调节假设对（H2a/H2b）；本变体则让**不同决策边际换不同 DV 类型**（发起边际→前瞻计数；时机边际→知晓到发起区间）并配不同估计器，且追加"Support for Hypothesis X would be indicated by a [sign] and significant coefficient"的假设→符号预登记句，使 Results 的配对呈报不会被误读为"普遍多召回/普遍更快"。亦区别于变体 29（severity 作为单个 DV 的二元操作化）。
 
 **诚实边界**: 子群拆分必须映射到**理论上真实不同的决策边际**，不能从任意子群制造两个故事；拆分会缩小单元格数量，需报告子群样本量；"for completeness"的补充检验不承担假设检验功能。
-<!-- wb:wowak_2020_female_directors_recalls:legacy_面板数据-OLS_59 -->
 
 ### 变体 29: M4 召回严重度理论分类 — 后果类型二元操作化 (1篇高价值)
 
@@ -1160,7 +1155,6 @@ To create this novel [construct] measure, we used data from [source]... However,
 **与原骨架差异**: 区别于变体 15（单行业双重现象辩护）与变体 33（单一中介机构 a/b/c 辩护）——本变体处理的是**监管型 outcome** 的设置合法性：监管机构法律上有强制权但实践中极少行使，借此把 outcome 的裁量权留在厂商内部，为组织层面解释（而非监管执行）铺路。
 
 **诚实边界**: "seldom mandates" 是可核查的经验主张——若研究年份内监管机构确曾强制行动，该辩护失效；必须对研究窗口内核实。
-<!-- wb:wowak_2020_female_directors_recalls:legacy_面板数据-OLS_56 -->
 
 
 ### 变体 57: M2 同一现象双边际分渠道取数 + 多库交集报最终 N (VERIFIED)
@@ -1178,7 +1172,6 @@ To create this novel [construct] measure, we used data from [source]... However,
 **与原骨架差异**: 区别于变体 2（样本交集漏斗）与变体 16（多源数据库交叉验证）——那两类用多源验证**同一构念**；本变体因**没有任何单一来源同时提供计数的边际与时点的边际**，把同一现象的两个测量边际分别取自两个渠道，再与协变量库求交集、报最终 N 与全总体覆盖。
 
 **诚实边界**: 计数与时点来自不同渠道可能覆盖口径不一致；非正式渠道（如高管提供）需在附录给出provenance 辩护；交集漏斗仍应报告交集前后的 N 差异。
-<!-- wb:wowak_2020_female_directors_recalls:legacy_面板数据-OLS_57 -->
 
 
 ### 变体 63：二分变量交互的四格哑变量拆分 + 判定标准前置（westphal_zajac_1998_symbolic_management 型）

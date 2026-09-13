@@ -37,8 +37,18 @@ JOURNAL_TOKENS = {  # prose -> registry key token
     "journal of consumer research": "jcr", "journal of product innovation management": "jpim",
     "strategic organization": "so", "journal of operations management": "jom",
     "production and operations management": "pom", "journal of management": "jom2",
-    "msom": "msom", "amj": "amj", "smj": "smj", "asq": "asq", "os": "os",
-    "jm": "jm", "jmr": "jmr", "ms": "ms", "orsc": "orsc", "jams": "jams",
+    "manufacturing & service operations management": "msom",
+    "entrepreneurship theory and practice": "etp", "journal of business venturing": "jbv",
+    "journal of international business studies": "jibs", "academy of management review": "amr",
+    "journal of management studies": "jms", "journal of business ethics": "jbe",
+    "journal of the academy of marketing science": "jams",
+    "journal of retailing": "jret", "journal of advertising": "joa",
+    "global strategy journal": "gsj", "strategic entrepreneurship journal": "sej",
+    "journal of financial economics": "jfe", "review of accounting studies": "ras",
+    "contemporary accounting research": "car", "the accounting review": "tar",
+    "journal of applied psychology": "jap", "msom": "msom", "amj": "amj",
+    "smj": "smj", "asq": "asq", "os": "os", "jm": "jm", "jmr": "jmr",
+    "ms": "ms", "orsc": "orsc", "jams": "jams", "etp": "etp", "joms": "joms",
 }
 
 
@@ -116,7 +126,10 @@ def _surname_hits(surnames: list[str], toks: set) -> int:
 
 
 def match_citation(cit: dict, uni: dict[str, dict]) -> list[str]:
-    """Triple check (surnames + year + journal) -> matching registry keys."""
+    """Triple check (surnames + year + journal) -> matching registry keys.
+    Surname PRECISION gate: hits must cover >=60% of the prose surnames —
+    'Ridge, Kim, Ingram & Lee 2024' must not match the different paper
+    ridge_hill_ingram_kolomeitsev_worrell_2024_amj on the two shared names."""
     hits = []
     for key, info in uni.items():
         if cit["year"] and info["years"] and cit["year"] not in info["years"]:
@@ -125,6 +138,8 @@ def match_citation(cit: dict, uni: dict[str, dict]) -> list[str]:
             hit = _surname_hits(cit["surnames"], info["tokens"])
             if hit < min(2, len(cit["surnames"])) and \
                     not (len(cit["surnames"]) == 1 and hit == 1):
+                continue
+            if hit / len(cit["surnames"]) < 0.6:
                 continue
         if cit["journal"] and cit["journal"] not in info["tokens"]:
             continue
@@ -252,6 +267,49 @@ def mint_markers(report: dict) -> dict:
     return applied
 
 
+def remove_markers(report: dict, universe_cache: dict, cross: dict) -> tuple[list, dict]:
+    """Self-correction pass: re-validate every previously minted marker under
+    the CURRENT matcher and remove lines whose citation no longer resolves
+    (e.g. after the surname-precision gate). Returns (removed, surviving)."""
+    removed: list = []
+    surviving: dict = {}
+    prev = report.get("_applied") or {}
+    for filekey, mints in prev.items():
+        corpus, _, rel = filekey.partition("/")
+        if corpus not in ROOTS:
+            surviving[filekey] = mints
+            continue
+        uni = universe_cache[corpus]
+        path = ROOTS[corpus] / rel
+        raw = path.read_bytes().decode("utf-8")
+        keep = []
+        for mint in mints:
+            cit = parse_citation(mint.get("source_line") or "")
+            hits = match_citation(cit, uni) if cit else []
+            if not hits and cross:
+                for cu, cuni in cross.items():
+                    if cu != corpus and match_citation(cit, cuni):
+                        hits.append(f"{cu}:ok")
+                        break
+            if hits:
+                keep.append(mint)
+                continue
+            marker = f"<!-- wb:{mint['citekey']}:{mint['item']} -->"
+            if marker in raw:
+                raw = re.sub(re.escape(marker) + r"\r?\n?", "", raw, count=1)
+                removed.append({"file": filekey, "marker": marker,
+                                "source_line": mint.get("source_line", "")[:70]})
+        if removed and any(r["file"] == filekey for r in removed):
+            eol = "\r\n" if "\r\n" in raw else "\n"
+            if not raw.endswith(eol):
+                raw += eol
+            with open(path, "w", encoding="utf-8", newline="") as fh:
+                fh.write(raw)
+        if keep:
+            surviving[filekey] = keep
+    return removed, surviving
+
+
 def main() -> int:
     try:
         sys.stdout.reconfigure(encoding="utf-8")
@@ -259,6 +317,24 @@ def main() -> int:
         pass
     apply_mode = "--apply" in sys.argv
     cross = build_cross_universes()
+    universe_cache = {c: dict(cross[c]) for c in cross}
+    out = Path.home() / ".claude" / "distill-work" / "rebuild_views" / \
+        "backfill_source_lines_report.yaml"
+    surviving: dict = {}
+    prev_report: dict = {}
+    if out.exists():
+        try:
+            prev_report = yaml.safe_load(out.read_text(encoding="utf-8")) or {}
+        except yaml.YAMLError:
+            prev_report = {}
+    if prev_report.get("_applied"):
+        # self-correction: drop mints the CURRENT matcher no longer accepts
+        removed, surviving = remove_markers(prev_report, universe_cache, cross)
+        for r in removed:
+            print(f"UNMINTED {r['file']} <- {r['marker']} "
+                  f"(source: {r['source_line']})")
+        if not removed:
+            print("revalidation: all previous mints still hold")
     report = {}
     for corpus in ROOTS:
         report[corpus] = analyze(corpus, cross=cross)
@@ -268,9 +344,10 @@ def main() -> int:
         applied = mint_markers(report)
         n = sum(len(v) for v in applied.values())
         print(f"APPLIED minted markers: {n} across {len(applied)} files")
-        report["_applied"] = applied
-    out = Path.home() / ".claude" / "distill-work" / "rebuild_views" / \
-        "backfill_source_lines_report.yaml"
+        merged = dict(surviving)
+        for k, v in applied.items():
+            merged.setdefault(k, []).extend(v)
+        report["_applied"] = merged
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(yaml.safe_dump(report, allow_unicode=True, sort_keys=False,
                                   width=100), encoding="utf-8")

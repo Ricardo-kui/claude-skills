@@ -1450,7 +1450,6 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 **适用**: 非随机选择是主要内生性威胁的非实验研究；希望在主结果之前完成识别防御的结构；RIR 已有可报告的替换计数。
 
 ---
-<!-- wb:ridge_hill_ingram_kolomeitsev_worrell_2024_amj:legacy_OLS-FE_54 -->
 
 ### 变体 55: R5 外部证据实际重要性辩护拍 — "likely to be particularly important in practice" (1篇高价值)
 
