@@ -39,6 +39,7 @@ KB_ROOTS = [
     r"D:\OneDrive\Obsidian Vault\00 工作台\项目",
 ]
 OUT = Path.home() / ".claude" / "distill-work" / "rebuild_views" / "kb_adjudication.yaml"
+USER_RULINGS = Path.home() / ".claude" / "distill-work" / "rebuild_views" / "user_rulings.yaml"
 SKILLS = Path(__file__).resolve().parent.parent.parent
 TOKEN_CUT = re.compile(r"[^a-z0-9]+")
 
@@ -214,6 +215,16 @@ def harvest_low(root: Path, scan) -> list[dict]:
     return out
 
 
+def load_user_rulings() -> list[dict]:
+    """Human-verified mappings: {match: citation-substring, kb_file: path,
+    key: explicit-canonical-key}. They take precedence over KB filename
+    matching (the user read the originals; filenames can lack author names)."""
+    if not USER_RULINGS.is_file():
+        return []
+    doc = yaml.safe_load(USER_RULINGS.read_text(encoding="utf-8")) or {}
+    return doc.get("rulings") or []
+
+
 def resolve_all() -> dict:
     idx = build_kb_index()
     universes = {c: registry_universe(c, yaml.safe_load(
@@ -253,11 +264,26 @@ def resolve_all() -> dict:
             g["blocks"].append({"corpus": corpus, "rel": b.rel,
                                 "heading": b.heading})
     rulings = []
+    user_rulings = load_user_rulings()
     for line_key, g in sorted(groups.items()):
         cit = g["cit"]
         if not cit.get("is_citation", True):
             rule = {"citation": g["citation"][:90], "ruling": "prose_no_citation",
                     "note": "来源行是引文原文而非引用——不可归源",
+                    "n_blocks": len(g["blocks"]), "blocks": g["blocks"][:8]}
+            rulings.append(rule)
+            continue
+        # user-verified ruling overrides KB filename matching
+        ur = next((u for u in user_rulings
+                   if u.get("match", "").lower() in line_key), None)
+        if ur:
+            key = ur.get("key")
+            rule = {"citation": g["citation"][:90], "surnames": cit["surnames"],
+                    "year": cit["year"], "journal": cit["journal"],
+                    "ruling": "mint_existing_key" if ur.get("existing") else
+                    "mint_new_key", "key": key,
+                    "kb_file": ur.get("kb_file", "")[:130],
+                    "note": "user-verified ruling",
                     "n_blocks": len(g["blocks"]), "blocks": g["blocks"][:8]}
             rulings.append(rule)
             continue
