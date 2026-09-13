@@ -209,6 +209,7 @@ updated: 2026-08-23
 **边界**:
 - 仅适用于 ever-treated group × post indicator 的 state-law 设计。
 - cohort-specific event study 设计需改写此叙事。
+<!-- wb:hoffmann_cheong_phan_zurbruegg2024_jm:legacy_自然实验-DiD_6 -->
 
 ### 变体 7：裁量权子样本 + 行业/event 扩展漏斗（2026-08-05）
 
@@ -227,6 +228,7 @@ updated: 2026-08-23
 **边界**:
 - 子样本聚焦须在 Results 报告全样本/替代子样本稳健性。
 - incident-report 扩展假设报告可代理 latent defect need。
+<!-- wb:hoffmann_cheong_phan_zurbruegg2024_jm:legacy_自然实验-DiD_7 -->
 
 ### 变体 8：重复交易情境（buyout dual-sale）使制度冲击前后价值变化可观测（2026-08-05）
 
@@ -245,6 +247,7 @@ updated: 2026-08-23
 **边界**:
 - 仅当研究问题要求观察 **同一资产的价值变化**（而非水平）时适用。
 - Setting 优势不等于识别完成；仍需 jurisdiction assignment、外生性与对照构造。
+<!-- wb:Castellaneta_Conti_Kacperczyk_2017_SMJ:legacy_自然实验-DiD_8 -->
 
 ### 变体 9：持有窗内处理编码 + staggered 教学示例（treatment/control 随时间重组）（2026-08-05）
 
@@ -263,6 +266,7 @@ updated: 2026-08-23
 **边界**:
 - Assignment jurisdiction（incorporation vs HQ vs operations）必须有制度理由；错配会污染处理。
 - 教学示例不能替代平行趋势/异质性稳健估计的正式讨论（若数据允许 unit-time 面板）。
+<!-- wb:Castellaneta_Conti_Kacperczyk_2017_SMJ:legacy_自然实验-DiD_9 -->
 
 
 ### 变体 P：处理×条件交互的行业级调节变量操作化链（2026-09-05）
@@ -306,6 +310,7 @@ updated: 2026-08-23
 - 等价性依赖于 [ΔV] 确实度量市场价值变化；杠杆、中期现金流、费用分摊、异常值截尾可能破坏该映射，须在 appendix或稳健性中处理。
 - 此叙事 **不是** Callaway–Sant'Anna / Sun–Abraham 的替代品；当研究者拥有 unit-time 面板时，不应以此回避现代 staggered-DiD 估计器与平行趋势检验。
 - 可将强度编码（binary vs continuous protection index）作为稳健性，而非主识别的唯一形式。
+<!-- wb:Castellaneta_Conti_Kacperczyk_2017_SMJ:legacy_自然实验-DiD_10 -->
 
 
 ### 变体 Y：教学式→回归式等价桥 + 逐系数一义分配（2×2-to-Regression Equivalence Bridge with One-Meaning-per-Coefficient，Lu et al. 2022 MS 型）
@@ -368,6 +373,7 @@ and zero otherwise. The coefficient [beta_3] captures any time trend in
 **边界**:
 - Entry/exit FE 不能替代 jurisdiction 外生性论证。
 - 高维 FE 在小样本或稀有处理下可能过度吸收；须报告处理份额与有效自由度意识。
+<!-- wb:Castellaneta_Conti_Kacperczyk_2017_SMJ:legacy_自然实验-DiD_11 -->
 
 ### 变体 12：政治经济外生性电池 — 质性检索 + LPM/hazard 采纳时点 + 供需零相关（2026-08-05）
 
@@ -386,6 +392,7 @@ and zero otherwise. The coefficient [beta_3] captures any time trend in
 **边界**:
 - 采纳方程的 null 不是外生性证明，只是与可观测州特征不相关的证据。
 - 游说检索受媒体覆盖偏误限制；应与既有政治经济文献互证。
+<!-- wb:Castellaneta_Conti_Kacperczyk_2017_SMJ:legacy_自然实验-DiD_12 -->
 
 ### 变体 13：日历安慰剂 ±k 年（假处理弱于真处理）（2026-08-05）
 
@@ -404,6 +411,7 @@ and zero otherwise. The coefficient [beta_3] captures any time trend in
 **边界**:
 - ±k 的选择须事前或按惯例说明；k 太小会与真处理窗重叠。
 - 安慰剂应在 Methods 预告位置（M8/M10）；仅塞进 Results 附录会削弱"设计内建"印象。
+<!-- wb:Castellaneta_Conti_Kacperczyk_2017_SMJ:legacy_自然实验-DiD_13 -->
 
 ### 变体 14：M8_judicial_shock_two_assumption（moon2026）
 

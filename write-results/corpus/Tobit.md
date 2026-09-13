@@ -56,6 +56,7 @@ updated: 2026-08-12
 - 因果语言保持关联语气（"associated with" / "supports Hypothesis"），非实验设计不越级。
 
 ---
+<!-- wb:ridge_hill_ingram_kolomeitsev_worrell_2024_amj:legacy_Tobit_1 -->
 
 ## 反模式
 

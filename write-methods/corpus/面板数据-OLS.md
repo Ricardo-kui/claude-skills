@@ -260,6 +260,7 @@ updated: 2026-08-13
 **骨架**:
 > The sample period begins in [year_start] because [institutional_event: e.g., regulatory change / industry deregulation] fundamentally altered [key_process] in [industry]. Before [year_start], [condition_A]; after [year_start], [condition_B], making the post-[year_start] period uniquely suited to testing our theory. The sample ends in [year_end], the last year for which [data_source] was available. We focus on a single industry—[industry_name]—to hold constant [confounds: e.g., regulatory environment, technological trajectory, product characteristics] that vary across industries. This single-industry design maximizes internal validity at the expense of generalizability, a trade-off appropriate for theory testing.
 **与原骨架差异**: 单行业面板的样本辩护需要完成三重正当性：(1) 制度/法规事件作为起始边界（不早不晚）；(2) 数据可得性作为终止边界；(3) 单行业选择的理论理由（holding confounds constant → internal validity > generalizability）。与多行业面板的"we used all firms in Compustat"形成对比。
+<!-- wb:Desai_2011_AMJ:legacy_面板数据-OLS_9 -->
 
 ### 变体 10: M7 Hausman 检验 — FE vs RE 选择 (1篇高价值)
 **来源论文**: Bamberger, Homburg & Wielgos 2021 (Journal of Marketing)
@@ -270,6 +271,7 @@ updated: 2026-08-13
 **骨架**:
 > We used a [Hausman test] to determine whether [fixed effects] or [random effects] was more appropriate for our panel structure. The test strongly rejected the null hypothesis that the [unit]-specific effects are uncorrelated with the regressors (χ² = [value], p < [threshold]), indicating that [fixed effects] is the preferred specification. We therefore estimated [FE_estimator] with [SE_type] clustered by [cluster_level].
 **与原骨架差异**: 标准 FE/RE 选择段落。关键三步：(1) Hausman 检验结果（χ² + p-value）；(2) 解释拒绝意味着什么（"unit-specific effects correlated with regressors"）；(3) 据此选择估计器 + 标准误声明。
+<!-- wb:bamberger_homburg_wielgos_2021_wage_inequality_jm:legacy_面板数据-OLS_10 -->
 
 ### 变体 11: M2 匹配样本层次回退 + 匹配平衡保守检验 (1篇高价值)
 **来源论文**: Pfarrer, Pollock & Rindova 2010 (Academy of Management Journal)
@@ -280,6 +282,7 @@ updated: 2026-08-13
 **骨架**:
 > We used a matched sample design to construct a comparison group of [units] that did not experience [treatment] but were otherwise similar on [key dimensions]. Specifically, we matched each [treated_unit] to [N] [control_units] in the same [industry/sector] and [time_period] based on [matching_criteria: e.g., size, age, performance]. When a close match was unavailable at [strict_criteria], we relaxed the criteria to find the closest available match—a hierarchical fallback approach that prioritizes match quality while preserving sample size. To ensure that the matched groups are balanced, we compared [treated] and [control] groups on [N] characteristics using [t-tests / standardized differences]. No significant differences were found across any of the [N] dimensions (all p > [threshold]), suggesting that the matching procedure achieved adequate balance.
 **与原骨架差异**: 标准匹配样本段落仅报告"we matched on X"——Pfarrer 增加了两个关键要素：(1) **层次回退**——先在严格维度匹配，无匹配时放宽标准，透明化匹配的灵活边界；(2) **匹配平衡保守检验**——使用保守的 t-test（而非仅标准差异）验证处理组和对照组在所有匹配维度上的可比性。适用于匹配样本设计中匹配质量与样本量之间存在 trade-off 的场景。
+<!-- wb:Pfarrer_Pollock_Rindova_2010_AMJ:legacy_面板数据-OLS_11 -->
 
 
 
@@ -341,6 +344,7 @@ updated: 2026-08-13
 **与原骨架差异**: 区别于变体 20（model-free evidence 预览结果模式）——本变体预览的不是 outcome 而是**预测变量的组内变异**：在 Methods 里用一张图先证明"组内有足够的变异可供 FE 识别"，把识别策略的可行性论证前置到测量节。
 
 **诚实边界**: 展示组内变异存在 ≠ 变异外生；不得把它当识别证据呈报；若变异集中于少数单元，应补充分布统计而非只给均值轨迹。
+<!-- wb:wowak_2020_female_directors_recalls:legacy_面板数据-OLS_60 -->
 
 ### 变体 14: M6 全谱系控制变量 — 高 because 密度 + RavenPack事件控制 + CEO人格特质 (1篇高价值)
 **来源论文**: Li, Chiu, Kong, Cropanzano & Ho 2026 (Journal of Management)
@@ -430,6 +434,7 @@ updated: 2026-08-13
 **与原骨架差异**: 区别于变体 54（lead-DV 泛化的一年滞后对齐 + 双理由子样本排除）——变体 54 把 DV 窗口锚到"IV 测量年的下一年"；本变体把窗口锚到**预测变量被决定的具体治理事件**（如年度股东大会重新选举董事会）并给出 because 解释，时间序论证从"滞后一年"细化到"治理决策钟"。亦区别于变体 35（DV 文献基准锚定）与变体 27（构念窗—结果窗分离）。
 
 **诚实边界**: 窗口必须与真实决策钟一致；若预测变量在年内发生临时变动（如董事辞职），固定窗会稀释归因，应报告替代窗稳健性。
+<!-- wb:wowak_2020_female_directors_recalls:legacy_面板数据-OLS_58 -->
 
 ### 变体 15: M1 单行业设置 — 双重现象共存辩护 (1篇高价值)
 **来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
@@ -469,6 +474,7 @@ updated: 2026-08-13
 **与原骨架差异**: 区别于变体 40（控制变量双面 because）与变体 50（共线控制残差化）——本变体处理的是**审稿人预期会问、但数据无法支撑的控制变量**：不静默删除，而是"we sought to"主动声明纳入意图 + 给出弃用的数据原因，抢在审稿人质询前完成交代。
 
 **诚实边界**: 弃用声明最好附一句被遗漏变量可能相关的方向判断；若该变量恰与核心预测变量相关（如女性 CEO 与女性董事比例），须在局限中承认残余混淆可能。
+<!-- wb:wowak_2020_female_directors_recalls:legacy_面板数据-OLS_62 -->
 
 ### 变体 17: M3 多维行为指标 → factor score → 平均值 (1篇高价值)
 **来源论文**: Cui, Yang & Vertinsky (Strategic Management Journal)
@@ -537,6 +543,7 @@ updated: 2026-08-13
 **诚实边界**: 必须显式声明不使用 firm FE 的理由（"because [focal_IV] is time-invariant, firm FE would absorb it"），不能默默省略；working correlation structure 选择应说明依据，不能默认 AR1；GEE 是 population-average 估计器，与 RE（subject-specific）在系数解释上有重要区别，应说明是 marginal effect 而非 unit-specific effect；firm FE 不可用时应在 M8 / Limitations 诚实说明残余威胁（time-varying unobservables 仍可能混淆），并通过 IV / Heckman / matching 补强。
 **适用**: 焦点预测变量为时不变稳定特质（政治意识形态、人格、性别、出生地、教育背景、创始人身份）的 panel 研究；任何 firm FE 会"杀死"主效应的情境。
 **跨 skill 对齐**: `../write-results/corpus/OLS-FE.md`（稳健性中可用 LPM + firm FE 作方向性对照，但主模型用 GEE 保留时不变 IV）。
+<!-- wb:Abdurakhmonov_Ingram_Ridge_2026_JOM:legacy_面板数据-OLS_22 -->
 
 
 ### 变体 72: M6 同构替代目标控制 — 同一构念对同类目标重算以封堵"普遍信念"替代解释 (1篇高价值)
@@ -620,6 +627,7 @@ updated: 2026-08-13
 **诚实边界**: 非重叠时间窗仍不能排除早期企业环境的共同影响；双代理同向不证明代理纯度。必须逐一说明媒体、投资组合、文本或行为代理的替代解释。若 trait 在形成窗之后可能变化，需报告稳定性或短窗敏感性分析。
 
 **配套微模板**: `micro-templates/executive-confidence-operationalization.md` 选项4–5。
+<!-- wb:schumacher_keck_tang_2020_smj:legacy_面板数据-OLS_27 -->
 
 ### 变体 28: M7 Binary-panel GEE + 全零单元保留 + 正式曲线识别链 (1篇高价值)
 **来源论文**: Bendig, Hensellek & Schulte (2024, Entrepreneurship Theory and Practice)
@@ -643,6 +651,7 @@ updated: 2026-08-13
 - 若极端 X 区间样本稀疏，应报告支持范围、观测密度并进行敏感性分析。
 
 **跨 skill 对齐**: `../write-results/corpus/Logit-Probit-Ordered-Probit.md` 变体9–11（正式 U-test、条件曲线概率图与经济成本换算）；`../write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md`（two-phase curvilinear argumentation）。
+<!-- wb:bendig_hensellek_schulte_2024_etp:legacy_面板数据-OLS_28 -->
 
 
 
@@ -661,6 +670,7 @@ updated: 2026-08-13
 **与原骨架差异**: 区别于变体 47（一阶差分）与变体 4（mixed within/between 机制分解）——本变体是**FE 去均值路线的三拍论证**：选择理由（重复测量→去均值消时不变 OVB）→"时不变因素按设计吸收故不纳入"的省略辩护→系数解读协议（显式把 coefficient 语言限制在 within-unit across-time 变化上），最后一句"In other words"把识别语义翻译回理论问题。
 
 **诚实边界**: FE 吸收全部组间变异，结论只覆盖组内变化的效应；不得升级为跨单元比较主张；非线性 FE（如 negative binomial FE）的条件估计在计量上有争议（Allison & Waterman 批评），应引用正当化来源并准备 PQR/线性概率替代检验。
+<!-- wb:wowak_2020_female_directors_recalls:legacy_面板数据-OLS_61 -->
 
 ### 变体 59: M3/M7 证据架构服从决策拆分 — DV 按严重度分组 + 假设→符号预登记 (VERIFIED)
 
@@ -677,6 +687,7 @@ updated: 2026-08-13
 **与原骨架差异**: 区别于变体 53（ball_2018 型 severity-split）——变体 53 在**同一 DV 类型内**按官方严重度分配子样本实现调节假设对（H2a/H2b）；本变体则让**不同决策边际换不同 DV 类型**（发起边际→前瞻计数；时机边际→知晓到发起区间）并配不同估计器，且追加"Support for Hypothesis X would be indicated by a [sign] and significant coefficient"的假设→符号预登记句，使 Results 的配对呈报不会被误读为"普遍多召回/普遍更快"。亦区别于变体 29（severity 作为单个 DV 的二元操作化）。
 
 **诚实边界**: 子群拆分必须映射到**理论上真实不同的决策边际**，不能从任意子群制造两个故事；拆分会缩小单元格数量，需报告子群样本量；"for completeness"的补充检验不承担假设检验功能。
+<!-- wb:wowak_2020_female_directors_recalls:legacy_面板数据-OLS_59 -->
 
 ### 变体 29: M4 召回严重度理论分类 — 后果类型二元操作化 (1篇高价值)
 
@@ -879,6 +890,7 @@ updated: 2026-08-13
 > All the dependent variables are measured in year [t + 1], while all independent and control variables are measured in year [t] to establish temporal spacing.
 **与原骨架差异**: 区别变体 20（Model-Free Evidence 预览）与变体 27（构念形成窗—结果观察窗分离）——本变体是**单句时间间隔声明**（DV t+1 / IV t），把反向因果威胁在 Methods 层面预先化解，是 CEO 特质→结果类纵贯面板的高性价比 baseline 承诺。更通用：任何 lead-DV / lag-IV 面板都可复用。
 **诚实边界**: 时间间隔只缓解反向因果，不解决遗漏变量/选择偏差；若机制实际发生在同期（如投资者当期反应），须按 Bellemare 反向论证（见变体 38）说明为何不滞后。
+<!-- wb:ridge_hill_ingram_kolomeitsev_worrell_2024_amj:legacy_面板数据-OLS_39 -->
 
 ### 变体 40: M6 控制变量"双面 because" — 对 DV 一条理由 + 对 IV 共变一条理由（2026-08-12）
 
@@ -893,6 +905,7 @@ updated: 2026-08-13
 **诚实边界**: 对 IV 的共变理由必须指向真实机制（如"高特质者倾向回避关注"），不能泛泛而谈；若某控制对 IV 的共变理由无法给出，应质疑是否真的需要控制它。
 
 ---
+<!-- wb:ridge_hill_ingram_kolomeitsev_worrell_2024_amj:legacy_面板数据-OLS_40 -->
 
 ### 变体 41: M1 数据可得性挑战→独特档案数据集设置辩护 (1篇高价值) (2026-08-12)
 
@@ -914,6 +927,7 @@ updated: 2026-08-13
 **诚实边界**: 单组织情境的外推须留给 Discussion（跨组织一般化不是 Methods 声明）；censored/未披露的部分无法从档案验证，估计只对可观测子样本成立；数据可得性驱动必须与理论选择绑定——若只是"恰好有这家组织的数据"而非"这家的制度张力恰好检验理论"，本骨架不适用。
 
 ---
+<!-- wb:fini_jourdan_perkmann_2017_amj:legacy_面板数据-OLS_41 -->
 
 ### 变体 42: M5 调节 dummy 的外部效度链 — 外部连续学科测量 + 定性锚定 (1篇高价值) (2026-08-12)
 
@@ -935,6 +949,7 @@ updated: 2026-08-13
 **诚实边界**: 外部效度测量的数据窗口可能在样本窗之后（如 Tijssen 2009–2013 验证 2001–2012 样本）——须声明属事后锚定并说明为何仍相关；dummy 二分损失连续 proximity 的信息，稳健性应报告连续版或替代阈值；外部指标只佐证构念效度，不替代理论边界论证（"为什么正好是这两组"）。
 
 ---
+<!-- wb:fini_jourdan_perkmann_2017_amj:legacy_面板数据-OLS_42 -->
 
 
 ### 变体 43: M2.5 理论–测量–模型两步滞后链 + 年内再编码学习窗 (2026-08-13)
@@ -1145,6 +1160,7 @@ To create this novel [construct] measure, we used data from [source]... However,
 **与原骨架差异**: 区别于变体 15（单行业双重现象辩护）与变体 33（单一中介机构 a/b/c 辩护）——本变体处理的是**监管型 outcome** 的设置合法性：监管机构法律上有强制权但实践中极少行使，借此把 outcome 的裁量权留在厂商内部，为组织层面解释（而非监管执行）铺路。
 
 **诚实边界**: "seldom mandates" 是可核查的经验主张——若研究年份内监管机构确曾强制行动，该辩护失效；必须对研究窗口内核实。
+<!-- wb:wowak_2020_female_directors_recalls:legacy_面板数据-OLS_56 -->
 
 
 ### 变体 57: M2 同一现象双边际分渠道取数 + 多库交集报最终 N (VERIFIED)
@@ -1162,6 +1178,7 @@ To create this novel [construct] measure, we used data from [source]... However,
 **与原骨架差异**: 区别于变体 2（样本交集漏斗）与变体 16（多源数据库交叉验证）——那两类用多源验证**同一构念**；本变体因**没有任何单一来源同时提供计数的边际与时点的边际**，把同一现象的两个测量边际分别取自两个渠道，再与协变量库求交集、报最终 N 与全总体覆盖。
 
 **诚实边界**: 计数与时点来自不同渠道可能覆盖口径不一致；非正式渠道（如高管提供）需在附录给出provenance 辩护；交集漏斗仍应报告交集前后的 N 差异。
+<!-- wb:wowak_2020_female_directors_recalls:legacy_面板数据-OLS_57 -->
 
 
 ### 变体 63：二分变量交互的四格哑变量拆分 + 判定标准前置（westphal_zajac_1998_symbolic_management 型）

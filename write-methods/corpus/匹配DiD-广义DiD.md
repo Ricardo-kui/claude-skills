@@ -51,6 +51,7 @@ updated: 2026-08-05
 - 须报告匹配后 N / 平衡表；仅说"results remain robust"不可审计。
 - CEM 不解决不可观测混淆；应与政治经济外生性检验、安慰剂等并列，而非替代。
 - 若主识别已是随机实验，此抗辩冗余。
+<!-- wb:Castellaneta_Conti_Kacperczyk_2017_SMJ:legacy_匹配DiD-广义DiD_1 -->
 
 
 ### 变体 2：同冲击机构对照构造（Within-Shock Same-Institution Controls，Lu et al. 2022 MS 型）

@@ -170,6 +170,7 @@ updated: 2026-09-05
 > "Table [x] reports DiD regression results for [outcome] (H1–H3). Columns 1 and 2 show models without and with control variables. Across specifications, [treatment × post] is consistently [direction] and significant, supporting H1. For economic interpretation, the odds ratio is [OR]; firms in treatment states are [X]% [less/more] likely to [outcome]. While sizeable in relative terms, the absolute probability change is modest given the low base rate ([Y]%). However, given the serious consequences of [behavior], we document an important effect."
 
 **与原骨架差异**: 把 **table navigation（分步入模）** 与 **logit 经济显著性（OR→相对概率+低基准诚实）** 绑定；平行趋势/安慰剂留在 Methods，Results 用 appendix 指针作 falling action。
+<!-- wb:hoffmann_cheong_phan_zurbruegg2024_jm:legacy_DiD_3 -->
 
 
 ### 变体 R：r2_did_fe_absorption_navigation（lu2022）
@@ -204,6 +205,7 @@ updated: 2026-09-05
 **与原骨架差异**: Lee-Wu-Bednar 变体 1 要求双端条件核对；Hoffmann 变体强调 **attenuation %** 而非 simple-slope 符号，switch-off 为 **文本式高百分位中和 + 分布重叠 caveat**，非四场景图。
 
 **诚实边界**: 90th 联合阈值下的 null 不能升级为“moderator 普遍消除效应”；必须报告 concurrent-cutoff 样本占比。
+<!-- wb:hoffmann_cheong_phan_zurbruegg2024_jm:legacy_DiD_4 -->
 
 ### 变体 5：替代解释两步排除（need vs willingness）（2026-08-05）
 
@@ -219,6 +221,7 @@ updated: 2026-09-05
 > "A plausible alternative is that [rival mechanism: e.g., operational improvement → higher quality → lower need for recalls] rather than [theorized mechanism: lower willingness] drives the main effect. We rule this out in two steps. First, we CONTROL for [rival proxy]; [treatment × post] remains [direction] and significant with qualitatively similar magnitude. Second, we INTERACT [treatment × post] with [rival proxy]; the interaction is not significant, inconsistent with the rival account. Combined, it is unlikely that lower need rather than lower willingness explains the findings."
 
 **与原骨架差异**: 收束句强制 **need vs willingness** 语义区分；follows Mayo et al. (2022) measure citation pattern。
+<!-- wb:hoffmann_cheong_phan_zurbruegg2024_jm:legacy_DiD_5 -->
 
 ### 变体 6：Top-firm 集中度排除 + 联合调节边际不显著诚实报告（2026-08-05）
 
@@ -234,6 +237,7 @@ updated: 2026-09-05
 > "One might be concerned that a few firms account for a substantial share of [outcomes]. Excluding the top [N] firms ([X]% of [outcomes]) and re-estimating, baseline and separate-moderator results hold. In the full model, [moderator A] remains significant while [moderator B] only just fails conventional significance (z = [value]). We conclude results are generally robust."
 
 **与原骨架差异**: 把 **qualified robustness**（联合模型一边际显著）作为标准 falling action，禁止 "all results hold" 笼统收束。
+<!-- wb:hoffmann_cheong_phan_zurbruegg2024_jm:legacy_DiD_6 -->
 
 ### 变体 7：平均净效应开场 + 正负权变预告（2026-08-05）
 
@@ -255,6 +259,7 @@ updated: 2026-09-05
 **诚实边界**:
 - 平均净效应必须来自含交互的规格在均值处的边际效应，或明确标注为 unconditional average；不可在交互显著后仍把主效应项当作“独立平均效应”解释。
 - “positive outweighs negative” 是叙事预告，不是第三个假设；不得升级为未经检验的元假设。
+<!-- wb:Castellaneta_Conti_Kacperczyk_2017_SMJ:legacy_DiD_7 -->
 
 ### 变体 8：交互假设完整四拍（1-SD 百分比幅度，无交互图）（2026-08-05）
 
@@ -277,6 +282,7 @@ updated: 2026-09-05
 - 若 p 仅达 .10 惯例（如 p = .062），须标明 marginal / conventional .10，不得与 p < .05 的假设使用同等“provide support”强度而不加限定。
 - one-SD 翻译必须报告样本 SD；百分比须明确是 outcome 的相对变化还是百分点。
 - 显著交互 ≠ 已核对两端 simple effects；若假设含两端方向，改用变体1。
+<!-- wb:Castellaneta_Conti_Kacperczyk_2017_SMJ:legacy_DiD_8 -->
 
 
 ### 变体 S：r3_did_multimeasure_percent_translation（lu2022）
@@ -410,6 +416,7 @@ updated: 2026-09-05
 **诚实边界**:
 - Placebo null ≠ 假设得到支持；只能降低“结果纯属偶然/时点错置”的顾虑。
 - 必须预先声明期望（weaker/null）；若 placebo 显著，不得沉默，应报告为 identification threat。
+<!-- wb:Castellaneta_Conti_Kacperczyk_2017_SMJ:legacy_DiD_10 -->
 
 ### 变体 11：r2_did_raw_descriptive_preview（moon2026）
 
@@ -515,6 +522,7 @@ updated: 2026-09-05
 [节奏标记]: [图导览][总量方向+显著性][成分分解][null 成分诚实并列][附录 t 值指针][过渡到估计]
 **原始句锚点**: "The top left figure reveals a noticeable decrease (p < 0.01) in total ad spending for substitute models after the recall. ... However, we observe an insignificant change (p > 0.1) in Brand Ad."
 **来源**: fang_et_al_2025_rival_recall_ad_spend (POM), §4.1
+<!-- wb:fang_et_al_2025_rival_recall_ad_spend:legacy_DiD_17 -->
 
 
 ### 变体 O：DiD 描述统计叙述 — DV 分布解读 + 处理组占比 + 样本构成（Castellaneta–Conti–Kacperczyk 型）

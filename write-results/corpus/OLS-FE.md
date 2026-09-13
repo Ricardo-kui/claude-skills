@@ -184,6 +184,7 @@ updated: 2026-08-13
 **骨架**:
 > We conducted [N] robustness checks to validate our findings and address potential concerns surrounding [threat_1], [threat_2], [threat_3], [threat_4], and [threat_5]. The robustness checks are detailed in the [Appendix_location], and [Table_reference] provides a summary of each approach, appendix and table numbers, and results. Taken together, these analyses illustrate the robustness of our results and provide additional support for all [N] hypotheses.
 **与原骨架差异**: 当稳健性检验数量 ≥10 时，使用 Table 9 汇总矩阵按 threat 分类组织，每行包含：(1) 威胁类别；(2) 方法概述；(3) 附录位置；(4) 逐假设结果。这比逐段叙事更可审计。少量稳健性检验 (<5) 时使用叙事型更合适。
+<!-- wb:darby2026:legacy_OLS-FE_1 -->
 
 ### 变体 2: 叙事型稳健性检验 — 逐 Threat 组织 (4/5 复现)
 **来源论文**: Eilert2017 JM / Darby2025 JSCM / Darby2023 MSOM / Wowak2025 MS
@@ -291,6 +292,7 @@ updated: 2026-08-13
 **骨架**:
 > The total effect of [IV] on [DV] is [directional] but reaches only marginal statistical significance (Est. = [value], p < .10, 95% CI: [[lower], [upper]] crosses 0, 90% CI: [[lower], [upper]] does not cross 0). This suggests that [theoretical claim] receives weak but directionally consistent support.
 **与原骨架差异**: 与"p < .10"的简单声明相比——(1) 同时报告 95% 和 90% 两个 CI；(2) 明确指出哪个 CI crosses 0、哪个不跨；(3) "weak but directionally consistent support" 是标准措辞。诚实边界：p < .10 只能在有理论预测方向且与理论一致时使用；不能用于探索性分析。
+<!-- wb:Bamberger_Homburg_Wielgos_2021_JM:legacy_OLS-FE_11 -->
 
 ### 变体 12: R7 补充分析作为跨样本稳健性复制 (1篇高价值)
 **来源论文**: Mannor, Wowak, Bartkus & Gomez-Mejia 2016 (Strategic Management Journal)
@@ -508,6 +510,7 @@ slot: R6（不支持裁决 + 以假设语言重述实际模式）
 source_papers: ["gulati2005-adaptation-vertical"]
 confidence: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 -->
+<!-- wb:fang_et_al_2025_rival_recall_ad_spend:legacy_OLS-FE_16 -->
 
 
 ### 变体 83：配对反号假设的反例合并判决（gulati_sytch2007 型）
@@ -965,6 +968,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 [禁忌]: 跨列选择性显著不得隐藏——用 "the only column" 明示；回译幅度需给出自然单位而非只报对数点
 **原文锚定**: "The only column in which FBR has a significant relationship with time-to-recall is for high-severity class 1 recalls in column (3) (β = −0.22, p < 0.05). ... Interpreting similarly, a one standard deviation increase in FBR is associated with a 16-day acceleration in time-to-recall for the most severe class 1 recalls."
 **来源**: wowak_2020_female_directors_recalls (M&SOM), §5 Table 4 段
+<!-- wb:wowak_2020_female_directors_recalls:legacy_OLS-FE_63 -->
 
 ### 变体 24: R2 Heckman 两阶段表格导航 — 第一阶段 Table 3 → 第二阶段 Columns 1-4 (1篇高价值)
 **来源论文**: Chung, Low & Rust 2022 (Journal of the Academy of Marketing Science)
@@ -1219,6 +1223,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **与原骨架差异**: 变体36也报告分样本 Wald 比较，但聚焦两个动态方程的相对大小与 partial support；本变体处理**同一交互关系在外部阈值两侧的条件差异**。其关键价值是把三个统计命题分开：①组内方向是否改变；②组内斜率是否显著；③两组系数是否显著不同。理论边界主要由③裁决，不能由“一组显著、另一组不显著”替代。
 
 **诚实边界**: 组间差异显著只支持异质性；若边界组内 CI 跨零，不得声称该组的反转效应已确证。分组阈值必须事前有理论/外部依据，并报告阈值两侧 N 与不平衡程度。
+<!-- wb:Schumacher_Keck_Tang_2020_SMJ:legacy_OLS-FE_43 -->
 
 ### 变体 44: R8 — 三类构念效度威胁的定向三角验证 (1篇高价值)
 **来源论文**: Schumacher, Keck & Tang (2020, Strategic Management Journal)
@@ -1232,6 +1237,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **与原骨架差异**: 不是普通 robustness checklist。三项分析分别对应三个构念效度威胁：`真实能力或相邻特质`、`企业特定而非个人特质`、`trait 随反馈内生更新`。每项都由 rival interpretation 立项，再用最匹配的观测模式回应，形成 nomological + cross-context + temporal 三角验证。
 
 **诚实边界**: 人口特征对比依赖额外同质性假设；跨组织重复样本可能很小；短期稳定不等于永久不变；三角验证提升解释可信度但不能证明代理只测量一个潜在构念。
+<!-- wb:Schumacher_Keck_Tang_2020_SMJ:legacy_OLS-FE_44 -->
 
 ### 变体 45: R4 — 管道阶段集中异质性：亚组吸收全部前端优势后下游熄灭 (1篇高价值)
 **来源论文**: Kim & Lee 2026 (Strategic Management Journal)
@@ -1444,6 +1450,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 **适用**: 非随机选择是主要内生性威胁的非实验研究；希望在主结果之前完成识别防御的结构；RIR 已有可报告的替换计数。
 
 ---
+<!-- wb:ridge_hill_ingram_kolomeitsev_worrell_2024_amj:legacy_OLS-FE_54 -->
 
 ### 变体 55: R5 外部证据实际重要性辩护拍 — "likely to be particularly important in practice" (1篇高价值)
 
@@ -1603,6 +1610,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 > Moreover, the data also indicated that [moderator] reduces [the difference between component_A and component_B] by increasing the latter (i.e., [component_B]) rather than by decreasing the former (i.e., [component_A]); although [moderator] was strongly and positively associated with [component_B] at [sample condition], it was not significantly related to [component_A].
 **与原骨架差异**: 交互主报告后追加通道归属句：说明调节效应经由差值/合成 DV 的哪个分量传导——同模型内双分量证据（一分量显著、另一分量不显著）。适用于 DV 为两分量差值或合成的设计（self-report vs 对他人感知、自评 vs 他评等）。
 **诚实边界**: 通道主张须由同模型内双分量系数直接佐证，不得仅凭总效应推断；分量高度相关时通道归属可能不稳定，宜补分量系数差检验或明示其为解释性证据。
+<!-- wb:westphal_bednar_2005_asq:legacy_OLS-FE_68 -->
 
 
 ### 变体 73: R4 — 分样本主检验 + 交互项复核收口（split-sample primary, product-term corroboration；carpenterwestphal2001 型）
@@ -1629,6 +1637,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 > A premise of our theoretical argument is that [premise]. This assumption was strongly supported by the data: when [condition below threshold], the mean level of [DV] is significantly greater than when [condition above threshold] (t = [value], p < [.001]), and [DV] was not significantly correlated with [variable] within either [subsample]. Thus we tested the hypotheses for [restricted subsample]; we used the [Heckman model] to correct for sample selection bias, which allows us to generalize the results to the full sample. We also assessed the validity of this premise empirically by collecting additional survey data for [units] in our sample frame: of the [N] respondents ([rate] percent), a large majority ([share] percent) [endorsed premise items], which supports our premise that [restated premise] ([K-S] tests indicated no significant differences between the survey sample and the larger sample frame).
 **与原骨架差异**: 双通道验证理论前提——(a) 样本内：阈值两侧均值对比（t 值）+ 侧内相关不显著，证明样本切割前提成立，随即以 Heckman 选择模型交底切割后果并宣称可推广回全样本；(b) 样本外：为前提命题追加独立问卷，报响应率、逐题支持百分比 + K-S 代表性收口。把"假设的前提"升格为"被检验的前提"。
 **诚实边界**: 样本外前提问卷为验证性非假设检验，逐题百分比不作推断统计（当代做法：一句结论 + 在线附录，题项全文入正文属年代特征）；Heckman 的 generalization 主张限于选择方程设定正确。
+<!-- wb:westphal_bednar_2005_asq:legacy_OLS-FE_69 -->
 
 
 ### 变体 75: R8 — 连续 DV legacy Baron–Kenny 中介句（separate-analysis 包装；carpenterwestphal2001 型）

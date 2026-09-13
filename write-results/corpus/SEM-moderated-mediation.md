@@ -183,6 +183,7 @@ interaction effects.
 **验证状态**: EMERGING
 **写入日期**: 2026-07-07
 **槽位**: R3
+<!-- wb:Bamberger_Homburg_Wielgos_2021_JM:legacy_SEM-moderated-mediation_2 -->
 
 #### 功能描述
 
@@ -322,6 +323,7 @@ distinguishable temporal dynamics.
 **验证状态**: EMERGING
 **写入日期**: 2026-07-22
 **槽位**: R6/R7
+<!-- wb:Ilicic_Brennan_2026_JM:legacy_SEM-moderated-mediation_5 -->
 
 #### 功能描述
 

@@ -137,6 +137,7 @@ updated: 2026-08-05
 [节奏标记]: [内生性定位][2SLS 两阶段方程][fitted-value 交互][交互系数+显著性][÷base % 翻译][机制直觉][回扣主结果]
 **原始句锚点**: "Column II reports that an increase in the substitute's total spending on advertising weakens the positive spillover effect (β −4.685, p < 0.01)."
 **来源**: fang_et_al_2025_rival_recall_ad_spend (POM), §4.3
+<!-- wb:fang_et_al_2025_rival_recall_ad_spend:legacy_IV-2SLS_4 -->
 
 ### 变体 12：R7 弱识别检验的临界值协议报告（Cragg-Donald vs Stock-Yogo 10%）（wowak2020 型）
 [功能标签]: R7/R2 — IV 相关性（relevance）的临界值对照式报告
@@ -146,6 +147,7 @@ updated: 2026-08-05
 [禁忌]: 只报 F 值不报临界值出处与含义；用强 F 声称识别完备（排他性不由此保证）
 **原文锚定**: "The critical value we are required to use is 16.38, which comes from table 5.2 in Stock and Yogo (2005) as we have one IV for one potentially exogenous regressor. ... The Cragg-Donald Wald F-statistic for the IV analysis is 378.163, which indicates that our IV is relevant and unlikely to be weak, at least from a statistical standpoint."
 **来源**: wowak_2020_female_directors_recalls (M&SOM), §5.1.1
+<!-- wb:wowak_2020_female_directors_recalls:legacy_IV-2SLS_12 -->
 
 ### 变体 5: R7 "去 IV" 稳健性 — 用非工具变量估计展示内生性偏误低 (1篇高价值)
 **来源论文**: Wowak2025 MS
@@ -188,6 +190,7 @@ updated: 2026-08-05
 **诚实边界**: partial→complete mediation 不能简单称为“更强”，而应标记为机制分解的规格敏感性；基准模型仅边际显著、替代模型为 null 的假设不可继续写成普遍支持；若符号反转或核心主效应消失，应升级为 substantive inconsistency，而非 qualification。
 
 **适用**: IV/2SLS、control-function、mediation 或多 moderator 研究；替代工具、分类或测量可能改变路径形态但不必推翻全部 headline 的情境。
+<!-- wb:Moon_Tuli_Mukherjee_2023_JM:legacy_IV-2SLS_7 -->
 
 ### 变体 8: R3 多 DV 平行 climax — 同 IV、设计匹配幅度翻译（% / 货币 / OR）(EMERGING)
 
