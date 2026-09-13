@@ -44,16 +44,16 @@ DERIVED 段内并非全部字段可再生——rebuild 重生成段时，下列�
 
 | 段 | 派生（regenerate） | 透传（carry by key） |
 |---|---|---|
-| intro evidence.<module>.<entry> | paper_count, papers[], gap_distribution | status, generativity, exclusivity, common_failures, validation_history |
+| intro evidence.<module>.<entry> | paper_count, papers[], gap_distribution, **status（C 项 S3b 起派生：overrides ⊕ policy ⊕ ladder）** | generativity, exclusivity, common_failures, validation_history |
 | intro paper_index | citekey 键集 | gap 值（writeback --gap 不在块内） |
 | intro meta | —（整段 AUTHORED 携带） | — |
-| theory source_papers.<paper> | fragments 成员（type/title/home_files 由块派生） | display_name, journal, year, subfield, gap_type, theory_build_type, source_tier；fragment 内 makadok_dimension, note, status（S4 迁入块） |
-| theory patterns.<pid> | source_count, source_papers, home_file, status | description |
+| theory source_papers.<paper> | fragments 成员（type/title/home_files 由块派生）＋ **fragment status（C 项 S3a 起策略合成：disk/块面/policy 三信号取高，永不降级）** | display_name, journal, year, subfield, gap_type, theory_build_type, source_tier；fragment 内 makadok_dimension, note |
+| theory patterns.<pid> | source_count, source_papers, home_file, **status（C 项 S3a 起含 policy 层）** | description |
 | theory summary_by_dimension | 全量（fragments makadok_dimension 再聚合） | — |
-| methods evidence.by_design_type.<key> | papers[], paper_count, slots_covered | common_failures, validation_history, note |
-| methods evidence.by_source_paper.<paper> | design_types 反查 | journal, title, status, verification_basis, note |
+| methods evidence.by_design_type.<key> | papers[], paper_count, slots_covered, **status（C 项 S3b 起派生）** | common_failures, validation_history, note |
+| methods evidence.by_source_paper.<paper> | design_types 反查, **status（C 项 S3b 起派生，n=1）** | journal, title, verification_basis, note |
 | results meta | batches_processed=len(batch_history), total_papers_indexed=distinct sources | schema_version, registry_type, last_updated, last_batch_id, usage_stats_schema, subfields |
-| results estimators.<ek> | slots.*.skeleton_variants 成员 + id/corpus_path/sources/paper_count/status | display_name, usage_stats, forced_slots, high_risk_missing, cross_slot_patterns, anti_patterns, honesty_boundaries；variant 内 verification_basis, paradigm_exclusivity, transferability, rhythm_tags, notes, subfield_distribution |
+| results estimators.<ek> | slots.*.skeleton_variants 成员 + id/corpus_path/sources/paper_count/**status（C 项 S3a 起：变体级 override 查找＋policy 层＋statusless 补章，全库覆盖）** | display_name, usage_stats, forced_slots, high_risk_missing, cross_slot_patterns, anti_patterns, honesty_boundaries；variant 内 verification_basis, paradigm_exclusivity, transferability, rhythm_tags, notes, subfield_distribution |
 | results batch_history | —（整段 AUTHORED；append-only 账本） | — |
 
 不变量：tfr 编号永不重编（append-only id issuance 是执行器唯一保留的"新号分配权"，非计数累加）；batch_history / last_updated 的追加语义不动。
@@ -68,6 +68,21 @@ DERIVED 段内并非全部字段可再生——rebuild 重生成段时，下列�
 - 与 wb 标记**分立两行**（V2 校验不受影响）；单行、紧凑空格分隔 KV、值可双引号（含空格/中文）、grep 可命中（`wb-meta: dim=`）。
 - 键集（开放）：`dim`（makadok_dimension 七维）、`status`（ladder 词）、`gap`（Incompleteness/Inadequacy/Incommensurability）、`tbt`（theory_build_type）。
 - `rebuild_views.parse_wb_meta()` / `WB_META_RE` 已实现并有单测；扫描器已捕获 `Block.wb_meta`。
+- **status 语义（C 项 2026-09-13）**：写回时点由执行器按 `scripts/status_policy.yaml` **一次计算、三处同值盖章**——① wb-meta 行；② theory fragment 铸造行；③ results variant stub（C 项前 stub 不带 status 且 rebuild 合并跳过 None，形成路径依赖 limbo；S3a 已对存量 6 条补章）。无规则命中 → `status=EMERGING`（与 C 项前一致）。`--authors`（姓氏兜底键）与 `--source-tier auxiliary`（硬排除，恒 EMERGING）可调。**快照语义**：块面是写回时点快照，registry 是 rebuild 按当下 policy 重算的真值；policy 后续变更致块面滞后 → `expected_stale_block_status` 豁免类，不算漂移。
+
+## 4b. status_overrides_addenda（C 项：gate ① 逐条人工升级通道）
+
+写回 plan 可携带可选字段：
+
+```yaml
+status_overrides_addenda:
+  - path: patterns.<pid>          # registry 路径（与 status_overrides 键同规范）
+    status: EMERGING              # 任意 ladder 档（含降档豁免——override 显式优先于 policy）
+    basis: "user 2026-09-13: <理由>"
+```
+
+- 执行器原子追加进 registry 的 AUTHORED `status_overrides.overrides`；**幂等**：同键已存在即跳过（同 plan 重放零重复）。
+- gate ① 语义不变（确认=写回授权，不含证据等级）：只有主循环依据用户呈审裁定显式写入 addenda 的条目才改变 status。
 
 ## 5. 块解析规则（S1 实证定案）
 
