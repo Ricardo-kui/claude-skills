@@ -146,18 +146,22 @@ def _block_gaps(blocks) -> dict[str, str]:
     return gaps
 
 
-def _status_for(doc: dict, path: str, n_sources: int, current=None) -> str:
-    """ladder ⊕ status_overrides. Never DOWNGRADES below an on-disk
-    VERIFIED/ROBUST: a high status at low source count is either an override
-    (which wins anyway) or a pre-partition carried user ruling whose basis
-    lives in the carried verification_basis/note fields — rebuild destroying
-    it would silently repeal user rulings (S1 classified those drifts
-    'status_overrides owns this', i.e. resolved by adding override rows,
-    never by downgrade)."""
+def _status_for(doc: dict, path: str, n_sources: int, current=None,
+                paper_keys=None, auxiliary: bool = False) -> str:
+    """status_overrides ⊕ status_policy ⊕ ladder (C item). Never DOWNGRADES
+    below an on-disk VERIFIED/ROBUST: a high status at low source count is
+    either an override (which wins anyway), a policy author/domain rule hit
+    (scripts/status_policy.yaml), or a pre-partition carried user ruling
+    whose basis lives in the carried verification_basis/note fields — rebuild
+    destroying it would silently repeal user rulings (S1 classified those
+    drifts 'status_overrides owns this', i.e. resolved by adding override
+    rows, never by downgrade)."""
     ov = rv.status_override_for(doc, path)
     if ov and ov.get("status"):
         return str(ov["status"])
-    base = rv.ladder_status(n_sources)
+    pstat, _prule = rv.policy_status(paper_keys, n_sources, rv.cached_policy(),
+                                     auxiliary=auxiliary)
+    base = pstat or rv.ladder_status(n_sources)
     cur = rv.norm_status(str(current or ""))
     if cur in ("VERIFIED", "ROBUST") and base == "EMERGING":
         return cur
@@ -278,7 +282,10 @@ def plan_theory(objs: dict, doc: dict, scan, alias) -> list[str]:
                     "fragment_id": f"tfr_{next_tfr}", "type": df["type"],
                     "title": df["title"], "home_files": df["home_files"],
                     "makadok_dimension": df["dim"],
-                    "status": _status_for(doc, f"source_papers.{paper}", 1),
+                    "status": _status_for(doc, f"source_papers.{paper}", 1,
+                                          paper_keys=[paper],
+                                          auxiliary=rv.source_is_auxiliary(
+                                              doc, paper)),
                     "note": ""})
                 notes.append(f"source_papers.{paper}: fragment +{df['type']} "
                              f"(minted tfr_{next_tfr})")
@@ -288,15 +295,22 @@ def plan_theory(objs: dict, doc: dict, scan, alias) -> list[str]:
             changed = []
             if str(hit.get("type", "")) != df["type"]:
                 hit["type"] = df["type"]; changed.append("type")
-            # status: upgrade-if-block-higher (never downgrade). The corpus
-            # .md 验证状态 lines are user-ruling surfaces (e.g. 2026-09-06d
-            # Westphal/Pollock/Gulati 全量升级) — a block promoted above its
-            # registry fragment row means the row missed the ruling sweep.
+            # status: never-downgrade max over three signals — on-disk row,
+            # block 验证状态 surface (user rulings, e.g. 2026-09-06d sweeps),
+            # and the status policy (C item: author/domain rules surface the
+            # batch-flip-era debt mechanically). A block promoted above its
+            # registry row means the row missed a ruling sweep; a policy hit
+            # above both means the ruling was never swept here at all.
             st_r = rv.norm_status(str(hit.get("status") or ""))
             st_d = rv.norm_status(str(df.get("status") or ""))
-            if st_d in rv.LADDER and st_r in rv.LADDER and \
-               rv.LADDER.index(st_d) > rv.LADDER.index(st_r):
-                hit["status"] = df["status"]; changed.append("status")
+            st_p, _prule = rv.policy_status(
+                [paper], 1, rv.cached_policy(),
+                auxiliary=rv.source_is_auxiliary(doc, paper))
+            cand = [s for s in (st_r, st_d, st_p or "")
+                    if s in rv.LADDER]
+            st_new = max(cand, key=rv.LADDER.index) if cand else st_r
+            if st_new != st_r:
+                hit["status"] = st_new; changed.append("status")
             # title: carry-if-present. On-disk titles are curated summaries
             # written at distill time; the block heading is a cruder proxy.
             # Overwriting ~130 curated titles would destroy curation, so the
@@ -317,7 +331,10 @@ def plan_theory(objs: dict, doc: dict, scan, alias) -> list[str]:
                 {"fragment_id": f"tfr_{next_tfr + i}", "type": df["type"],
                  "title": df["title"], "home_files": df["home_files"],
                  "makadok_dimension": df["dim"],
-                 "status": _status_for(doc, f"source_papers.{paper}", 1),
+                 "status": _status_for(doc, f"source_papers.{paper}", 1,
+                                       paper_keys=[paper],
+                                       auxiliary=rv.source_is_auxiliary(
+                                           doc, paper)),
                  "note": ""}
                 for i, df in enumerate(frag_by_paper[paper])]}
         next_tfr += len(frag_by_paper[paper])
@@ -338,7 +355,10 @@ def plan_theory(objs: dict, doc: dict, scan, alias) -> list[str]:
                          for p in rv.theory_block_papers(b, alias)})
         patterns[pid] = {
             "description": "",
-            "status": _status_for(doc, f"patterns.{pid}", len(papers)),
+            "status": _status_for(doc, f"patterns.{pid}", len(papers),
+                                  paper_keys=list(papers),
+                                  auxiliary=any(rv.source_is_auxiliary(doc, p)
+                                                for p in papers)),
             "source_count": len(papers),
             "source_papers": papers,
             "home_file": sorted({b.rel for b in grp})}
@@ -356,7 +376,10 @@ def plan_theory(objs: dict, doc: dict, scan, alias) -> list[str]:
         hf_old = rv.flowlist(pent.get("home_file"))
         hf_new = sorted(set(hf_old) | {b.rel for b in grp})
         new_status = _status_for(doc, f"patterns.{pid}", len(merged),
-                                 current=pent.get("status"))
+                                 current=pent.get("status"),
+                                 paper_keys=merged,
+                                 auxiliary=any(rv.source_is_auxiliary(doc, p)
+                                               for p in merged))
         changed = []
         if merged != old_sp:
             pent["source_papers"] = merged; changed.append("source_papers")
@@ -520,7 +543,10 @@ def plan_results(objs: dict, doc: dict, scan, alias) -> list[str]:
                 if vid not in disk_by_id:
                     new_v = {"id": vid, "corpus_path": dv["corpus_path"],
                              "sources": [res], "paper_count": 1,
-                             "status": _status_for(doc, f"estimators.{ekey}", 1)}
+                             "status": _status_for(
+                                 doc, f"estimators.{ekey}.slots.{skey}"
+                                      f".skeleton_variants.{vid}", 1,
+                                 paper_keys=[res])}
                     if sk:
                         new_v["skeleton"] = sk
                     svs.append(new_v)
@@ -547,11 +573,18 @@ def plan_results(objs: dict, doc: dict, scan, alias) -> list[str]:
                    re.sub(r"\s+", "", str(v["skeleton"])) != \
                    re.sub(r"\s+", "", sk):
                     v["skeleton"] = sk; changed.append("skeleton")
-                if v.get("status") is not None:
-                    st = _status_for(doc, f"estimators.{ekey}",
-                                     len(v["sources"]), current=v.get("status"))
-                    if rv.norm_status(str(v["status"])) != rv.norm_status(st):
-                        v["status"] = st; changed.append("status")
+                # status: variant-level override path (the 196 partition-
+                # collected keys are variant-level; the pre-S3a estimator-
+                # level path never consumed them). A missing status (executor
+                # stub limbo) is filled here — same _status_for gate, never-
+                # downgrade preserved.
+                vpath = (f"estimators.{ekey}.slots.{skey}"
+                         f".skeleton_variants.{vid}")
+                st = _status_for(doc, vpath, len(v["sources"]),
+                                 current=v.get("status"),
+                                 paper_keys=v["sources"])
+                if rv.norm_status(str(v.get("status"))) != rv.norm_status(st):
+                    v["status"] = st; changed.append("status")
                 if changed:
                     notes.append(f"estimators.{ekey}.{skey}.{vid}: ~{changed}")
     if "batches_processed" in meta:

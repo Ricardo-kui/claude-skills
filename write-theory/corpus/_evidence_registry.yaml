@@ -15,17 +15,10 @@ meta:
   note: "Reverse-engineered from existing corpus anchors. Batch 2026-07-09: distilled 4 recall papers (Darby 2023 MSOM, Mayo 2022 POM, Ball 2018 JOM, Darby 2026 JOM) into subprotocols and registry. Batch 2026-07-10: expanded Cui, Yang & Vertinsky (SMJ) with inverted-U mechanism, bilateral argumentation, flatten/steepen language, and local closure templates. Batch 2026-07-22: distilled Li, Bapuji, Talluri, Singh & Narayanan (2025 JSCM, Vertical Spillover of Product Recalls) — added dual_mechanism_convergent_moderation pattern to bilateral_argumentation_templates.md (moderator×mechanism matrix) and registered H1 dual-mechanism convergence under existing dual_mechanism_same_direction. Batch 2026-07-22b: distilled Cutolo & Ferriani (2024 JOM, narratives & atypicality) — added minimal_pair_contrast_vignette pattern to argumentation_patterns.md (Leah controlled-contrast showing device); registered parallel_buffering_moderators_single_mechanism; cutolo_ferriani also a 2nd source for write-introduction theory-lens/02-dual-theory-layered (processing fluency + Bloom & Lahey taxonomy). Batch 2026-07-22c: distilled Falchetti, Cattani & Ferriani (2022 SMJ, Start with Why) — added congruency_fit_fluency_mechanism to sentences/mechanism_chain.md (genuine gap; spans Falchetti + Cutolo); CORRECTED misclassification of falchetti_2022_smj (was construct_differentiation tfr_017, has no such content) → reclassified to congruency mechanism; construct_differentiation source_count 5→4. Falchetti intro hook (23-popular-debate) and Methods (多研究 变体1/2, 实验 变体1) already distilled in prior sessions. Batch 2026-07-28: backfill + wiring batch — registered two auxiliary sources whose fragments entered corpus in the 2026-07-27/28 waves but were never registered: Booth/Williams/Colomb (The Craft of Research, premise soundness gate + warrant tests + acknowledgment-response matrix + voice firewall → reasoning_soundness_protocol.md, acknowledgment_response.md) and Greene & Lidinsky 2017 (Rogerian four-step → acknowledgment_response.md §5; fallacy probes → reasoning_soundness_protocol.md §8). Same batch wired the registry into consumption: corpus/_index.md selection-stage pointer, write-theory/SKILL.md resource-loading clause, distill-theory-exemplar Phase 4 registry-writeback protocol. Registry previously orphaned (no .md referenced it) since creation. Batch 2026-08-03: distilled Schumacher, Keck & Tang (2020, SMJ); added the belief-updating/attention-threshold reversal pattern as EMERGING. Reference-level writeback was explicitly authorized by the user; no core routing or mandatory-slot rule was changed. Batch 2026-08-28: distilled Wowak, Ball, Post & Ketchen (M&SOM, female directors → product recall decisions), tfr_182-187, all VERIFIED per user expert_audit_override (产品召回为主研究领域单源足矣); context_assigned_margin_split additionally registered as a core_candidate observation item in _skill_design_feedback.yaml. Batch 2026-08-28b: distilled Westphal & Zajac (1998, ASQ, The Symbolic Management of Stockholders), tfr_188-195, all VERIFIED per user expert_audit_override (公司治理/符号管理为主研究领域单源足矣); 8 fragments across B_mechanism_elaboration (交替对立再诠释 + 硬/软数字测量重构), argumentation_patterns (判别式替代解释排除 + 两极之间假设声明), hypothesis_derivation_patterns (符号替代-预防-固权), hypothesis_organization_patterns (受众异质性 pivot), hypothesis_forms (实施权变从句), moderation (编号双 DV 交互). Batch 2026-08-29: distilled Post, Lokshin & Boone (2022, AMJ, What Changes After Women Enter Top Management Teams? A Gender-Based Model of Strategic Renewal), tfr_196-198, all VERIFIED per user expert_audit_override (用户点名喜爱本篇，单源足矣); 3 fragments across hypothesis_organization_patterns (中介配对分流→共享重构主干), hypothesis_forms (时间分阶 Δ 假设), moderator_selection_frameworks (新声音整合轴); _index.md 快速决策表已同步."
 
 # === AUTHORED ===
-status_rules:
-  EMERGING:
-    paper_count_max: 2
-    description: Single or two-paper pattern; transferable but not yet cross-validated
-  VERIFIED:
-    paper_count_min: 3
-    description: Pattern replicated across 3+ papers within corpus
-  ROBUST:
-    paper_count_min: 5
-    cross_subfields_min: 2
-    description: Pattern replicated across 5+ papers and 2+ subfields; can be default recommendation
+# status_rules: MOVED to scripts/status_policy.yaml (C item 2026-09-13, single
+# source). Mirror of the thresholds (human-readable, non-authoritative):
+#   EMERGING <=2 sources; VERIFIED >=3; ROBUST >=5 across 2+ subfields
+#   (scan_derivable: false - override/passthrough only).
 
 # === DERIVED: rebuilt by rebuild_views.py — do not hand-edit ===
 source_papers:
@@ -1172,7 +1165,7 @@ source_papers:
         home_files:
           - subprotocols/hypothesis_derivation_patterns.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
       - fragment_id: tfr_313
         type: differential_persistence_lagged_dv_moderation
@@ -1180,7 +1173,7 @@ source_papers:
         home_files:
           - subprotocols/hypothesis_derivation_patterns.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
   pontikes_2012_asq:
     display_name: "Pontikes (2012, ASQ)"
@@ -1452,7 +1445,7 @@ source_papers:
         home_files:
           - subprotocols/hypothesis_derivation_patterns.md
         makadok_dimension: Boundary
-        status: EMERGING
+        status: VERIFIED
         note: "Status: needs_validation."
       - fragment_id: tfr_069
         type: track_level_local_closure
@@ -1467,7 +1460,7 @@ source_papers:
         home_files:
           - subprotocols/arrangement_patterns.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
       - fragment_id: tfr_321
         type: cumulative_indirect_moderation
@@ -1475,7 +1468,7 @@ source_papers:
         home_files:
           - subprotocols/arrangement_patterns.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
       - fragment_id: tfr_322
         type: theory_as_warrant_conceptual_argument
@@ -1483,7 +1476,7 @@ source_papers:
         home_files:
           - subprotocols/evidence_patterns.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
       - fragment_id: tfr_323
         type: evidence_function_contrast_pivot
@@ -1491,7 +1484,7 @@ source_papers:
         home_files:
           - subprotocols/evidence_patterns.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
       - fragment_id: tfr_324
         type: anchor_then_mechanism_then_prediction
@@ -1499,7 +1492,7 @@ source_papers:
         home_files:
           - subprotocols/hypothesis_derivation_patterns.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
       - fragment_id: tfr_325
         type: theory_driven_anchor_with_puzzle_turn
@@ -1507,7 +1500,7 @@ source_papers:
         home_files:
           - subprotocols/hypothesis_derivation_patterns.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
       - fragment_id: tfr_326
         type: cumulative_moderation_build_up
@@ -1515,7 +1508,7 @@ source_papers:
         home_files:
           - subprotocols/hypothesis_derivation_patterns.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
       - fragment_id: tfr_327
         type: baseline_dual_path_then_contingency_branches
@@ -1523,7 +1516,7 @@ source_papers:
         home_files:
           - subprotocols/hypothesis_organization_patterns.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
       - fragment_id: tfr_328
         type: information_attention_framework
@@ -1531,7 +1524,7 @@ source_papers:
         home_files:
           - subprotocols/moderator_selection_frameworks.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
   toh_pyun_smj:
     display_name: "Toh & Pyun (SMJ)"
@@ -2079,7 +2072,7 @@ source_papers:
           - subprotocols/hypothesis_derivation_patterns.md
           - variants/G_dialectical_opposition.md
         makadok_dimension: Mechanism / Mode
-        status: EMERGING
+        status: VERIFIED
         note: "Strict R3 primary exemplar. Learning requires both opportunity and motivation; accumulated failures increase the former but deplete the latter, so the binding constraint switches across low, moderate, and high exposure. The mechanisms are theoretical B0 processes, not directly estimated mediators."
       - fragment_id: tfr_149
         type: turning_point_delay_selective_prerequisite
@@ -2088,7 +2081,7 @@ source_papers:
           - subprotocols/bilateral_argumentation_templates.md
           - variants/G_dialectical_opposition.md
         makadok_dimension: Boundary
-        status: EMERGING
+        status: VERIFIED
         note: "R4 secondary section variant. Perceived ability raises the initial stock of motivation and slows its depletion without changing the opportunity path; the prediction is a later turning point, tested by direct inflection-point comparison rather than subgroup significance."
   moon_tuli_mukherjee_2023_jm:
     display_name: "Moon, Tuli & Mukherjee (2023, JM)"
@@ -3081,7 +3074,7 @@ source_papers:
         home_files:
           - subprotocols/argumentation_patterns.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
   gulati_1999_network_location_and_learning_the_influence_of_n:
     display_name: "Gulati (1999, SMJ)"
@@ -3324,7 +3317,7 @@ source_papers:
         home_files:
           - subprotocols/construct_differentiation_patterns.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
       - fragment_id: tfr_335
         type: stage_reallocation_of_driver_weights
@@ -3332,7 +3325,7 @@ source_papers:
         home_files:
           - subprotocols/hypothesis_organization_patterns.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
       - fragment_id: tfr_336
         type: necessary_not_sufficient_driver_handoff
@@ -3340,7 +3333,7 @@ source_papers:
         home_files:
           - variants/G_dialectical_opposition.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
   gulati_higgins_2003_which_ties_matter:
     display_name: "Gulati & Higgins (2003, Strategic Management Journal)"
@@ -3356,7 +3349,7 @@ source_papers:
         home_files:
           - variants/E_moderation.md
         makadok_dimension: Boundary
-        status: EMERGING
+        status: VERIFIED
         note: "corpus E_moderation.md：变体 G：纯调节设计的组建框架——情境变量两极分解为评估者双重错误担忧（错收 commission vs 错漏 omission），按'信号方注意力对齐'逐分支推导条件化信号价值，common trunk→3 parallel branches 每支同构（基线→点名恒定假设→信号方注意力行为证据→让步式条件化假设）；篇内 3/3 分支同构复现，单源待第二篇跨论文验证。"
       - fragment_id: tfr_275
         type: sent_moderation_uniform_assumption_pivot
@@ -3364,7 +3357,7 @@ source_papers:
         home_files:
           - sentences/moderation.md
         makadok_dimension: Boundary
-        status: EMERGING
+        status: VERIFIED
         note: "corpus moderation.md：变体 D：调节分支段 Topic 位——把既有主效应文献压缩为'效应恒定'隐含假设并当场质疑（assumes that the effect is uniform at all times. This may not always be the case），一句话开启条件化推导；靶子必须公平（不能树稻草人），质疑后须立即给出条件化机制。"
       - fragment_id: tfr_276
         type: sent_moderation_concessive_conditional_convergence
@@ -3372,7 +3365,7 @@ source_papers:
         home_files:
           - sentences/moderation.md
         makadok_dimension: Boundary
-        status: EMERGING
+        status: VERIFIED
         note: "corpus moderation.md：变体 E：调节分支段 Wrap 位——Therefore+while 让步承认基线信号价值（in general），during [condition] 把增量精确压到条件极，一句完成双边表态与交互假设合法性辩护；同段家族 3/3 分支复用同一模板。"
       - fragment_id: tfr_277
         type: sent_moderation_two_way_contingency_framing
@@ -3380,7 +3373,7 @@ source_papers:
         home_files:
           - sentences/moderation.md
         makadok_dimension: Boundary
-        status: EMERGING
+        status: VERIFIED
         note: "corpus moderation.md：变体 F：Theory 首段末/枢纽位——not only across various types of [A] but also depend upon [types of B] 一句把 which×when 两维钉成权变矩阵，结尾疑问对仗回收（配 2×k 预测矩阵图）；两维须正交构念维度（类型×状态）且后文逐格兑现。"
   gulati_lavie_singh_2009_partnering_experience:
     display_name: "Gulati, Lavie & Singh (2009, Strategic Management Journal)"
@@ -3396,7 +3389,7 @@ source_papers:
         home_files:
           - variants/A_construct_differentiation.md
         makadok_dimension: Constructs
-        status: EMERGING
+        status: VERIFIED
         note: "corpus A_construct_differentiation.md：变体 C：把经验构念按积累方式拆成两类型（any instance 一般型 vs repeated with same counterpart 对象特定型），whereas 功能分工先让两类型各有理论职责，(a) 学习过程更高效 + (b) 收益更丰富/不可转移两枚举把'谁更强'落到可检验的独立理由上，每条理由段带回平行实证印证；比较收敛段直接产出 H1 单向 + H2 相对排序配对假设（配 closure 句式 B 收束）；双理由须概念独立，H2 需 Methods 有系数比较检验对应。"
       - fragment_id: tfr_279
         type: moderator_roadmap_twoclass_metaframework
@@ -3404,7 +3397,7 @@ source_papers:
         home_files:
           - subprotocols/moderator_selection_frameworks.md
         makadok_dimension: Boundary
-        status: EMERGING
+        status: VERIFIED
         note: "corpus moderator_selection_frameworks.md：变体 C：Thus far 主效应完成信号 → It is possible, however 条件化转折 → 两类因子元框架（对手侧 vs 企业侧）→ First/Then/Finally 三分支逐 moderator 预告；一段同时完成 moderator 选择元框架与分支地图；两因子类须与 moderators 一一对应且互斥，每个预告只给一句逻辑、细节留分支小节。"
       - fragment_id: tfr_280
         type: signal_diminishing_bilateral_wrap
@@ -3412,7 +3405,7 @@ source_papers:
         home_files:
           - sentences/moderation.md
         makadok_dimension: Boundary
-        status: EMERGING
+        status: VERIFIED
         note: corpus moderation.md：句式 G：调节假设小节收束段——高条件信号增值 + however diminishes 低条件贬值（替代信息可得→评估更可靠）双边论证后 Consequently ... may intensify with 条件收敛，一句锁定 enhancing 交互方向；贬值机制须与增值机制同源（同一信号在信息充裕时被替代），收敛句用 intensify with 而非 is moderated by。
       - fragment_id: tfr_281
         type: comparative_pair_local_convergence
@@ -3420,7 +3413,7 @@ source_papers:
         home_files:
           - sentences/closure.md
         makadok_dimension: Constructs
-        status: EMERGING
+        status: VERIFIED
         note: "corpus closure.md：句式 B：辨析+双理由论证段末局部收束——In sum 单向预测 + In addition due to [理由 recap] 相对排序预测 + H1/H2 落点，一个收束段同时结算两个假设；理由 recap 必须对应前文实际论证的 (a)+(b)，只适用于辨析后确有共同结果变量的配对。"
   gulati_nohria_zaheer_2000_strategic_networks:
     display_name: "Gulati, Nohria & Zaheer (2000, Strategic Management Journal)"
@@ -3476,7 +3469,7 @@ source_papers:
         home_files:
           - sentences/closure.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
       - fragment_id: tfr_338
         type: tripartite_frame_battery_crosslevel_reuse
@@ -3484,7 +3477,7 @@ source_papers:
         home_files:
           - sentences/construct_definition.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
       - fragment_id: tfr_339
         type: baseline_school_lens_refine_opener
@@ -3492,7 +3485,7 @@ source_papers:
         home_files:
           - sentences/leitmotif-section-opener.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
       - fragment_id: tfr_340
         type: labeled_mechanism_pair_disclaimer
@@ -3500,7 +3493,7 @@ source_papers:
         home_files:
           - sentences/mechanism_chain.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
       - fragment_id: tfr_341
         type: domain_loop_lens_frame_reuse
@@ -3508,7 +3501,7 @@ source_papers:
         home_files:
           - subprotocols/argumentation_patterns.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
   gulati_2007_tent_poles:
     display_name: "Gulati (2007, Academy of Management Journal)"
@@ -3548,7 +3541,7 @@ source_papers:
         home_files:
           - subprotocols/argumentation_patterns.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
       - fragment_id: tfr_343
         type: founder_exemplar_irony_reversal
@@ -3556,7 +3549,7 @@ source_papers:
         home_files:
           - subprotocols/argumentation_patterns.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
       - fragment_id: tfr_344
         type: normative_conjunctive_program
@@ -3564,7 +3557,7 @@ source_papers:
         home_files:
           - subprotocols/argumentation_patterns.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
   ridge_aime_white_2013_smj:
     display_name: "Ridge, Aime & White (2013, Strategic Management Journal)"
@@ -3714,7 +3707,7 @@ source_papers:
         home_files:
           - subprotocols/hypothesis_derivation_patterns.md
         makadok_dimension: Mode
-        status: EMERGING
+        status: VERIFIED
         note: Pattern B：Formal-Model Case-Partitioned Propositions（mao_dong_lee_2022_msom 型；formal-model 整节组织：假设→优化→命题条件分区→逐案命名解读；EMERGING，gate ① 裁决召回主题单源升级裁决适用性）
       - fragment_id: tfr_300
         type: dual_channel_time_varying_hazard_mechanism
@@ -3722,7 +3715,7 @@ source_papers:
         home_files:
           - subprotocols/hypothesis_derivation_patterns.md
         makadok_dimension: Mechanism
-        status: EMERGING
+        status: VERIFIED
         note: Pattern B：Dual-Channel Time-Varying Hazard Mechanism（mao_dong_lee_2022_msom 型；双渠道家族第三形态：事件→渠道系数时变分段；EMERGING）
       - fragment_id: tfr_301
         type: continuous_ratio_named_regime_partition
@@ -3730,7 +3723,7 @@ source_papers:
         home_files:
           - subprotocols/hypothesis_derivation_patterns.md
         makadok_dimension: Boundary
-        status: EMERGING
+        status: VERIFIED
         note: Pattern B：Continuous Ratio → Named Regime Partition（mao_dong_lee_2022_msom 型；连续权衡比经阈值函数分割为命名行为区间；EMERGING）
   Ball_2018_JOM:
     display_name: Ball 2018 JOM
@@ -3743,7 +3736,7 @@ source_papers:
         home_files:
           - subprotocols/argumentation_patterns.md
         makadok_dimension: ""
-        status: EMERGING
+        status: VERIFIED
         note: ""
   Du_Tsolmon_2024_ORSC:
     display_name: Du Tsolmon 2024 ORSC
@@ -4361,7 +4354,7 @@ patterns:
     home_file: subprotocols/argumentation_patterns.md
   anchor_then_mechanism_then_prediction:
     description: Anchor Then Mechanism Then Prediction
-    status: EMERGING
+    status: VERIFIED
     source_count: 2
     source_papers:
       - singh_grewal_2023_jmr
@@ -4369,7 +4362,7 @@ patterns:
     home_file: subprotocols/hypothesis_derivation_patterns.md
   baseline_dual_path_then_contingency_branches:
     description: Baseline Dual Path Then Contingency Branches
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - singh_grewal_2023_jmr
@@ -4405,7 +4398,7 @@ patterns:
     home_file: subprotocols/evidence_patterns.md
   common_trunk_parallel_branches:
     description: Common Trunk Parallel Branches
-    status: EMERGING
+    status: VERIFIED
     source_count: 2
     source_papers:
       - shen_zhou_wang_zhang_2022_jom
@@ -4413,14 +4406,14 @@ patterns:
     home_file: subprotocols/hypothesis_organization_patterns.md
   cumulative_indirect_moderation:
     description: Cumulative Indirect Moderation
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - singh_grewal_2023_jmr
     home_file: subprotocols/arrangement_patterns.md
   cumulative_moderation_build_up:
     description: Cumulative Moderation Build Up
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - singh_grewal_2023_jmr
@@ -4437,7 +4430,7 @@ patterns:
     home_file: subprotocols/hypothesis_derivation_patterns.md
   opposing_joint_prerequisites_bottleneck_switch:
     description: "Two jointly necessary prerequisites move in opposite directions as cumulative X rises, shifting the binding constraint and producing a curvilinear Y pattern."
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - lee_park_2024_smj
@@ -4445,7 +4438,7 @@ patterns:
     note: Single-paper L2 architecture. Use only when joint necessity and non-compensation are theorized; do not generalize to ordinary benefit-cost netting.
   turning_point_delay_selective_prerequisite:
     description: "A moderator selectively preserves the declining prerequisite, delaying when it becomes binding and shifting the curve's turning point rather than merely flattening or steepening it."
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - lee_park_2024_smj
@@ -4478,14 +4471,14 @@ patterns:
     home_file: subprotocols/moderator_selection_frameworks.md
   evidence_contrast_then_warrant_embedded:
     description: Evidence Contrast Then Warrant Embedded
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - singh_grewal_2023_jmr
     home_file: subprotocols/arrangement_patterns.md
   evidence_function_contrast_pivot:
     description: Evidence Function Contrast Pivot
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - singh_grewal_2023_jmr
@@ -4499,7 +4492,7 @@ patterns:
     home_file: subprotocols/argumentation_patterns.md
   indirect_moderation_derivation:
     description: Indirect Moderation Derivation
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - singh_grewal_2023_jmr
@@ -4514,7 +4507,7 @@ patterns:
     note: "Alias of indirect_moderation_derivation（同篇 Singh & Grewal 2023）；home_file 已从 argumentation_patterns.md（已去重的 legacy 副本）重定向到权威 home。"
   information_attention_framework:
     description: Information Attention Framework
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - singh_grewal_2023_jmr
@@ -4559,7 +4552,7 @@ patterns:
     home_file: subprotocols/hypothesis_derivation_patterns.md
   theory_as_warrant_conceptual_argument:
     description: Theory As Warrant Conceptual Argument
-    status: EMERGING
+    status: VERIFIED
     source_count: 2
     source_papers:
       - singh_grewal_2023_jmr
@@ -4575,7 +4568,7 @@ patterns:
     note: "Alias of theory_driven_anchor_with_puzzle_turn（同篇 Singh & Grewal 2023）；home_file 已从 argumentation_patterns.md（已去重的 legacy 副本）重定向到权威 home。"
   theory_driven_anchor_with_puzzle_turn:
     description: Theory Driven Anchor With Puzzle Turn
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - singh_grewal_2023_jmr
@@ -4893,7 +4886,7 @@ patterns:
     note: 与 Difference（跨组效应强弱）/简单主效应判别见语料正文。待第二篇验证。
   F_anaphoric_sign_flip_pair_cross_policy:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 2
     source_papers:
       - zajac_westphal_2004_asr
@@ -4934,7 +4927,7 @@ patterns:
       - subprotocols/hypothesis_derivation_patterns.md
   baseline_school_lens_refine_opener:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_nohria_zaheer_2000_strategic_networks
@@ -5015,7 +5008,7 @@ patterns:
       - sentences/moderation.md
   comparative_pair_local_convergence:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_lavie_singh_2009_partnering_experience
@@ -5023,7 +5016,7 @@ patterns:
       - sentences/closure.md
   competing_speculation_resolution:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - pfarrer_pollock_and_rindova_2010
@@ -5031,7 +5024,7 @@ patterns:
       - sentences/acknowledgment_response.md
   complement_expand_extend_closure:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_nohria_zaheer_2000_strategic_networks
@@ -5039,7 +5032,7 @@ patterns:
       - sentences/closure.md
   construct_decomposition_dual_reason_differential:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_lavie_singh_2009_partnering_experience
@@ -5047,7 +5040,7 @@ patterns:
       - variants/A_construct_differentiation.md
   contingency_reconciliation_opener:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - anand_mukherjee_2024_learning_from_failures_di
@@ -5055,7 +5048,7 @@ patterns:
       - sentences/acknowledgment_response.md
   continuous_ratio_named_regime_partition:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - mao_dong_lee_2022_msom
@@ -5087,7 +5080,7 @@ patterns:
       - sentences/moderation.md
   definition_adoption_operationalization:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - pfarrer_pollock_and_rindova_2010
@@ -5095,7 +5088,7 @@ patterns:
       - sentences/construct_definition.md
   domain_loop_lens_frame_reuse:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_nohria_zaheer_2000_strategic_networks
@@ -5103,7 +5096,7 @@ patterns:
       - subprotocols/argumentation_patterns.md
   dual_channel_time_varying_hazard_mechanism:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - mao_dong_lee_2022_msom
@@ -5111,7 +5104,7 @@ patterns:
       - subprotocols/hypothesis_derivation_patterns.md
   dual_edge_scope_qualification:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_1999_network_location_and_learning_the_influence_of_n
@@ -5119,7 +5112,7 @@ patterns:
       - sentences/mechanism_chain.md
   dual_outcome_two_driver_convergence:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_1999_network_location_and_learning_the_influence_of_n
@@ -5135,7 +5128,7 @@ patterns:
       - subprotocols/argumentation_patterns.md
   e13_signal_maker_attention_alignment_moderation:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_higgins_2003_which_ties_matter
@@ -5159,7 +5152,7 @@ patterns:
       - sentences/mechanism_chain.md
   failure_typology_cause_ambiguity_contrast:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - anand_mukherjee_2024_learning_from_failures_di
@@ -5167,7 +5160,7 @@ patterns:
       - subprotocols/construct_differentiation_patterns.md
   field_quote_evidence_texture:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_1998_alliances_and_networks
@@ -5175,7 +5168,7 @@ patterns:
       - subprotocols/evidence_patterns.md
   field_quote_evidence_texture_empirical_derivation_deployment:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_1999_network_location_and_learning_the_influence_of_n
@@ -5183,7 +5176,7 @@ patterns:
       - subprotocols/evidence_patterns.md
   formal_model_case_partitioned_propositions:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - mao_dong_lee_2022_msom
@@ -5191,7 +5184,7 @@ patterns:
       - subprotocols/hypothesis_derivation_patterns.md
   formation_process_differentiation:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - pfarrer_pollock_and_rindova_2010
@@ -5199,7 +5192,7 @@ patterns:
       - variants/A_construct_differentiation.md
   founder_exemplar_irony_reversal:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_2007_tent_poles
@@ -5207,7 +5200,7 @@ patterns:
       - subprotocols/argumentation_patterns.md
   frame_decoding_mixed_signal:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - pfarrer_pollock_and_rindova_2010
@@ -5223,7 +5216,7 @@ patterns:
       - subprotocols/hypothesis_organization_patterns.md
   hypothesis_sign_flip_anaphoric_pair_sentence:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 2
     source_papers:
       - zajac_westphal_2004_asr
@@ -5232,7 +5225,7 @@ patterns:
       - sentences/hypothesis_forms.md
   labeled_mechanism_pair_disclaimer:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_nohria_zaheer_2000_strategic_networks
@@ -6051,7 +6044,7 @@ patterns:
       - subprotocols/moderator_selection_frameworks.md
   lens_agenda_six_beat_cycle:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_1998_alliances_and_networks
@@ -6083,7 +6076,7 @@ patterns:
       - subprotocols/hypothesis_derivation_patterns.md
   mirrored_comparative_battery:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - pfarrer_pollock_and_rindova_2010
@@ -6091,7 +6084,7 @@ patterns:
       - subprotocols/hypothesis_organization_patterns.md
   moderator_roadmap_twoclass_metaframework:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_lavie_singh_2009_partnering_experience
@@ -6099,7 +6092,7 @@ patterns:
       - subprotocols/moderator_selection_frameworks.md
   necessary_not_sufficient_complementarity_resolution:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_1998_alliances_and_networks
@@ -6107,7 +6100,7 @@ patterns:
       - variants/G_dialectical_opposition.md
   normative_conjunctive_program:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_2007_tent_poles
@@ -6115,7 +6108,7 @@ patterns:
       - subprotocols/argumentation_patterns.md
   parent_anchored_new_construct_legitimation:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_1999_network_location_and_learning_the_influence_of_n
@@ -6123,7 +6116,7 @@ patterns:
       - subprotocols/construct_differentiation_patterns.md
   performance_to_behavior_repurposing_pivot:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_1999_network_location_and_learning_the_influence_of_n
@@ -6139,7 +6132,7 @@ patterns:
       - subprotocols/evidence_patterns.md
   precondition_decomposition_hurdle_setup:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_1999_network_location_and_learning_the_influence_of_n
@@ -6163,7 +6156,7 @@ patterns:
       - variants/E_moderation.md
   relative_ordering_reversal:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - pfarrer_pollock_and_rindova_2010
@@ -6171,7 +6164,7 @@ patterns:
       - variants/A_construct_differentiation.md
   review_essay_blind_spot_critique_opener:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_1998_alliances_and_networks
@@ -6179,7 +6172,7 @@ patterns:
       - subprotocols/argumentation_patterns.md
   rival_dimension_carveout_sentence:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 2
     source_papers:
       - zajac_westphal_2004_asr
@@ -6188,7 +6181,7 @@ patterns:
       - sentences/acknowledgment_response.md
   rival_readings_same_measure:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 2
     source_papers:
       - zajac_westphal_2004_asr
@@ -6197,7 +6190,7 @@ patterns:
       - subprotocols/evidence_patterns.md
   sent_moderation_concessive_conditional_convergence:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_higgins_2003_which_ties_matter
@@ -6205,7 +6198,7 @@ patterns:
       - sentences/moderation.md
   sent_moderation_two_way_contingency_framing:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_higgins_2003_which_ties_matter
@@ -6213,7 +6206,7 @@ patterns:
       - sentences/moderation.md
   sent_moderation_uniform_assumption_pivot:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_higgins_2003_which_ties_matter
@@ -6263,7 +6256,7 @@ patterns:
       - sentences/moderation.md
   setting_first_materiality_staging:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - pfarrer_pollock_and_rindova_2010
@@ -6271,7 +6264,7 @@ patterns:
       - subprotocols/argumentation_patterns.md
   signal_diminishing_bilateral_wrap:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_lavie_singh_2009_partnering_experience
@@ -6279,7 +6272,7 @@ patterns:
       - sentences/moderation.md
   stock_flow_capability_moderator_pairing:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - anand_mukherjee_2024_learning_from_failures_di
@@ -6287,7 +6280,7 @@ patterns:
       - subprotocols/moderator_selection_frameworks.md
   superficial_vs_noncodified_conversely_reconciliation:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - anand_mukherjee_2024_learning_from_failures_di
@@ -6363,7 +6356,7 @@ patterns:
       - subprotocols/hypothesis_organization_patterns.md
   theory_type_to_empirical_context_bridging:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - anand_mukherjee_2024_learning_from_failures_di
@@ -6379,7 +6372,7 @@ patterns:
       - sentences/hypothesis_forms.md
   tribalism_cause_diagnosis:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_2007_tent_poles
@@ -6387,7 +6380,7 @@ patterns:
       - subprotocols/argumentation_patterns.md
   tripartite_frame_battery_crosslevel_reuse:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_nohria_zaheer_2000_strategic_networks
@@ -6395,7 +6388,7 @@ patterns:
       - sentences/construct_definition.md
   two_wave_lens_reintegration:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - pfarrer_pollock_and_rindova_2010
@@ -6403,7 +6396,7 @@ patterns:
       - subprotocols/hypothesis_derivation_patterns.md
   typed_outcome_hypothesis_tree_with_capability_enhancement:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - anand_mukherjee_2024_learning_from_failures_di
@@ -6411,7 +6404,7 @@ patterns:
       - subprotocols/hypothesis_organization_patterns.md
   umbrella_construct_layering_two_mechanism_split:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_1998_alliances_and_networks
@@ -6435,7 +6428,7 @@ patterns:
       - subprotocols/hypothesis_derivation_patterns.md
   baseline_assumption_content_pole_pivot:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_westphal_1999_cooperative_or_controlling
@@ -6467,7 +6460,7 @@ patterns:
       - subprotocols/bilateral_argumentation_templates.md
   complementary_portfolio_dual_knowledge_mix:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 2
     source_papers:
       - carpenter_westphal_2001_strategic_context_of_external_ne
@@ -6476,7 +6469,7 @@ patterns:
       - subprotocols/bilateral_argumentation_templates.md
   consequence_stage_signpost:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_westphal_1999_cooperative_or_controlling
@@ -6484,7 +6477,7 @@ patterns:
       - sentences/leitmotif-section-opener.md
   context_split_common_trunk_paired_hypothesis_sets:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 2
     source_papers:
       - carpenter_westphal_2001_strategic_context_of_external_ne
@@ -6493,7 +6486,7 @@ patterns:
       - variants/E_moderation.md
   continuous_moderator_slope_form:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_1999_where_do_interorganizational_networks
@@ -6501,7 +6494,7 @@ patterns:
       - sentences/moderation.md
   counter_assumption_refutation_opening:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 2
     source_papers:
       - carpenter_westphal_2001_strategic_context_of_external_ne
@@ -6526,7 +6519,7 @@ patterns:
       - sentences/moderation.md
   developmental_reversal_reciprocal_asymmetry:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - pollock_2015_asq
@@ -6542,7 +6535,7 @@ patterns:
       - subprotocols/construct_differentiation_patterns.md
   differential_persistence_lagged_dv_moderation:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - pollock_2015_asq
@@ -6566,7 +6559,7 @@ patterns:
       - subprotocols/hypothesis_organization_patterns.md
   dyadic_event_probability_monotonic_form:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_1999_where_do_interorganizational_networks
@@ -6591,7 +6584,7 @@ patterns:
       - subprotocols/hypothesis_derivation_patterns.md
   figure_readout_closure:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_1999_where_do_interorganizational_networks
@@ -6615,7 +6608,7 @@ patterns:
       - subprotocols/hypothesis_derivation_patterns.md
   growth_puzzle_double_question_forecast:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_1999_where_do_interorganizational_networks
@@ -6623,7 +6616,7 @@ patterns:
       - subprotocols/argumentation_patterns.md
   hypothesis_coupled_mechanism_triad:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_1999_where_do_interorganizational_networks
@@ -6631,7 +6624,7 @@ patterns:
       - subprotocols/construct_differentiation_patterns.md
   if_alone_cannot_question_bridge:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_1999_where_do_interorganizational_networks
@@ -6663,7 +6656,7 @@ patterns:
       - subprotocols/bilateral_argumentation_templates.md
   lens_scope_disqualification_replacement:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_westphal_1999_cooperative_or_controlling
@@ -6679,7 +6672,7 @@ patterns:
       - sentences/acknowledgment_response.md
   mechanism_level_selective_moderation_scope:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 2
     source_papers:
       - fini_jourdan_perkmann_2017_amj
@@ -6712,7 +6705,7 @@ patterns:
       - subprotocols/hypothesis_derivation_patterns.md
   multilevel_parallel_hypothesis_sets_mediator_portion:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 2
     source_papers:
       - carpenter_westphal_2001_strategic_context_of_external_ne
@@ -6721,7 +6714,7 @@ patterns:
       - subprotocols/hypothesis_organization_patterns.md
   necessary_not_sufficient_driver_handoff:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_1999_where_do_interorganizational_networks
@@ -6737,7 +6730,7 @@ patterns:
       - subprotocols/argumentation_patterns.md
   one_lens_bipolar_mirror_chains:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_westphal_1999_cooperative_or_controlling
@@ -6761,7 +6754,7 @@ patterns:
       - subprotocols/evidence_patterns.md
   relational_construct_worked_example:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_westphal_1999_cooperative_or_controlling
@@ -6769,7 +6762,7 @@ patterns:
       - sentences/construct_definition.md
   rhetorical_question_mechanism_pivot:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 2
     source_papers:
       - carpenter_westphal_2001_strategic_context_of_external_ne
@@ -6810,7 +6803,7 @@ patterns:
       - subprotocols/bilateral_argumentation_templates.md
   stage_reallocation_of_driver_weights:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_1999_where_do_interorganizational_networks
@@ -6818,7 +6811,7 @@ patterns:
       - subprotocols/hypothesis_organization_patterns.md
   symmetric_amplifier_moderation:
     description: ""
-    status: EMERGING
+    status: VERIFIED
     source_count: 1
     source_papers:
       - gulati_westphal_1999_cooperative_or_controlling
@@ -6892,15 +6885,15 @@ summary_by_dimension:
   Constructs:
     total_fragments: 46
     source_papers: 28
-    verified_patterns: 25
+    verified_patterns: 27
   Mechanism:
     total_fragments: 130
     source_papers: 62
-    verified_patterns: 64
+    verified_patterns: 65
   Boundary:
     total_fragments: 92
     source_papers: 51
-    verified_patterns: 34
+    verified_patterns: 43
   Level:
     total_fragments: 1
     source_papers: 1

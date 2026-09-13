@@ -36,18 +36,10 @@ meta:
     - accounting
 
 # === AUTHORED ===
-status_rules:
-  EMERGING:
-    paper_count_max: 2
-    description: 单篇或两篇论文中出现，尚未形成稳定模式
-  VERIFIED:
-    paper_count_min: 3
-    expert_audit_override: true
-    description: 至少3篇论文复现，或经用户专家审计确认为典型范文；可作为可靠备选，并须记录 verification_basis
-  ROBUST:
-    paper_count_min: 5
-    cross_subfields_min: 2
-    description: 至少5篇论文复现，且跨>=2个子领域，可作为默认骨架
+# status_rules: MOVED to scripts/status_policy.yaml（C 项 2026-09-13，单一策略源）。
+# 阈值镜像（人读、非权威）：EMERGING <=2 源；VERIFIED >=3 源或经用户专家审计
+# （expert_audit_override，须记录 verification_basis）；ROBUST >=5 源且跨 2 子域
+# （scan_derivable: false，仅 override/透传）。
 global_anti_patterns:
 - id: ap_r3_coefficient_only
   pattern: R3 只报系数和p值，不翻译实质含义
@@ -324,7 +316,7 @@ estimators:
           - id: r2_saturated_model_survival_check
             skeleton: "In Model [V] of Table [X], we included all of the interaction terms. The results supporting Hypotheses [N1] and [N2] remained significant and in the directions predicted."
             paper_count: 1
-            status: EMERGING
+            status: VERIFIED
             subfield_distribution:
               strategy: 1
             sources:
@@ -551,7 +543,7 @@ estimators:
           - id: r3_verdict_first_hypothesis_paragraph
             skeleton: "The results also support Hypothesis [N]. Hypothesis [N] was that [predictor] would be [positively/negatively] related to [outcome], particularly when [condition]. As shown in Model [M] of Table [X], the interaction term between [moderator] and [predictor] was [positive/negative] and significant, as predicted."
             paper_count: 1
-            status: EMERGING
+            status: VERIFIED
             subfield_distribution:
               strategy: 1
             sources:
@@ -726,7 +718,7 @@ estimators:
           - id: r4_continuous_moderator_sign_criterion
             skeleton: "Hypothesis [N] predicted that [focal tie] would be particularly beneficial to [outcome] when [market/context condition]. Model [M] in Table [X] tests this hypothesis. Since we operationalized [moderator] as a continuous measure ranging from [pole A] to [pole B], support for Hypothesis [N] would be indicated if our results showed a significant and [negative/positive] interaction effect between [moderator index] and [focal tie]. Our findings reveal a significant and [negative/positive] interaction, which supports Hypothesis [N]."
             paper_count: 1
-            status: EMERGING
+            status: VERIFIED
             subfield_distribution:
               strategy: 1
             sources:
@@ -951,7 +943,7 @@ estimators:
             sources:
               - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
             paper_count: 1
-            status: EMERGING
+            status: VERIFIED
             skeleton: "``` Hypothesis [1a] predicted that [predictor_A] would [enhance] [outcome], while hypothesis [1b] postulated that [predictor_B] would [diminish] [outcome]. Contrary to our expectations, [predictor_A] has a significant [negative] effect on [outcome], while the effect of [predictor_B] is not significantly different from zero. Hence, hypotheses [1a] and [1b] are not supported. ... We also tested for a possible [curvilinear] relationship but found no evidence of it. ```"
       R7:
         description: 稳健性 / 效度 / 敏感性检验
@@ -1294,7 +1286,7 @@ estimators:
             sources:
               - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
             paper_count: 1
-            status: EMERGING
+            status: VERIFIED
             skeleton: "``` To test hypotheses [H3]–[H5], we followed the rules for mediation testing suggested by [Baron and Kenny (1986)]. The first step in testing for mediation requires us to establish a significant relationship between the independent variable and the dependent variable. While recent research on mediation testing ([citations]) suggests that this step is not required, as it represents an unnecessarily strong restriction in testing for mediation, we elected to incorporate it into our method because we predicted an analytically proximate relationship between [predictor] and [outcome]. ... this requirement was fulfilled with the support for hypothesis [H2]."
       R9:
         description: Results→Discussion 过渡
@@ -1302,7 +1294,7 @@ estimators:
           - id: r9_tandem_dual_dimension_coda
             skeleton: "These latter results, when considered in tandem with the effects found for our interaction terms, provide strong evidence for the importance of considering both [what kinds of] and [when] [focal relations] benefit [units]."
             paper_count: 1
-            status: EMERGING
+            status: VERIFIED
             subfield_distribution:
               strategy: 1
             sources:
@@ -1940,11 +1932,13 @@ estimators:
             notes: "corpus Logit-Probit-Ordered-Probit.md AO：formal-model 论文把\"理论→可估对象\"的翻译写成显式构词法：理论支路（Proposition 的 case 条件）逐支路变成二元回归元，定义句自带理论出处（in Proposition [M]） 不满足前置条件的观测不丢弃而是显式归池再分类（\"we have set ... = 0 and then categorize these observations into one of the following ...\"，互斥穷尽） 方程、支路定义、控制域三件事一段交底——把\"回归元从哪来\"从 methods 细节升格为 Results 可读性的前提"
             sources:
               - mao_dong_lee_2022_msom
+            status: VERIFIED
           - id: r2_institutional_dv_proxy
             skeleton: "The dependent variable, [Delayed outcome]_i, is also a dummy variable that equals one if [the focal behavior is observed], which is defined as [institutional marker], and zero otherwise. In [the setting], [the outcome] can [occur via two routes], and the latter accounts for [P]% of [events] in our data. [Institutional mechanism: because of resource and information asymmetry, the institutional route is time-consuming, and focal units can preempt it at any time because they possess superior private information ([citation]).] Therefore, it is reasonable to assume that the presence of [institutional marker] indicates that [focal units] may behave passively toward [the focal condition] and [postpone the focal action]."
             notes: "corpus Logit-Probit-Ordered-Probit.md AR：二元 DV 不是直接测量而是机构行为代理（被动延迟→由监管机构 NHTSA 发起召回，占 14.7%）时，定义句后必须接一条制度机制链：两路线并存 + 代理类占比交底 + \"为什么落在该类=被动行为\"的因果推理（厂商信息优势使其能在监管调查中随时抢先自愿召回）+ 文献背书（Rupp and Taylor 2002）——把\"代理是否测到构念\"的构造效度质疑在 DV 定义段就地化解"
             sources:
               - mao_dong_lee_2022_msom
+            status: VERIFIED
       R4:
         description: ""
         skeleton_variants:
@@ -3147,11 +3141,12 @@ estimators:
             notes: "\ncorpus DiD.md R：变体 3 管分步入表与经济显著性绑定\n本变体是列间导航注记——主动解释\"某系数为何从该列消失\"（被高维 FE 吸收），防止审稿人把缺项误读为遗漏，再以 \"qualitatively the same\" 收束规格累进。"
             sources:
               - lu_et_al_2022_frenemies_corporate_advertising
+            status: EMERGING
           - id: r2_did_fig_pretrend_intuitive_preview
             skeleton: "Figure [X] presents the model-free evidence of [outcome] for [treated units] before and after [event]. The [axis] covers the [N]-[period] observational window from [start] to [end]. The [panel] reveals a noticeable [increase/decrease] (p < [threshold]) in [total outcome] for [treated units] after [event]. A decomposition of [outcome] by [component dimension] indicates an [increase] (p < [threshold]) in [component_A] following [event], but a [decrease] (p < [threshold]) in [component_B]. However, we observe an insignificant change (p > [threshold]) in [component_C]. Table [Y] in the [online supplemental materials] provides the t-statistic for the model-free evidence. ... Next, we present the estimates from the [estimator] analysis"
             notes: "\ncorpus DiD.md Q：变体 11 只立\"裸数据前后均值差异\"事实\n本变体把 parallel trend 措辞显式写进直觉证据段并用 \"consistent with our conjecture\" 桥接到机制——图形前置拍兼做识别假设的定性预演，随后紧接 \"Next, we use the Difference-in-Differences approach\" 进正式检验。"
             paper_count: 2
-            status: EMERGING
+            status: VERIFIED
             subfield_distribution:
               om: 1
             sources:
@@ -3260,6 +3255,7 @@ estimators:
             notes: "\ncorpus DiD.md V：变体 13 换的是识别来源本身（替代冲击）\n本变体保持冲击不变、只重构对照群——行业内非事件机构 block-held 单位作对照，专项回应\"对照组外部效度/机构特异不可观测\"威胁，并与另一替代口径（同事件机构组合内未变化持仓）双轨呈报。"
             sources:
               - lu_et_al_2022_frenemies_corporate_advertising
+            status: EMERGING
           - id: r7_did_preshock_partition_threat_test
             skeleton: "To further assess the robustness of our DiD estimates, we conduct [placebo tests / permutation tests / randomization inference]. The results, reported in Table [x], show that [description]. These findings reduce concerns that [specific threat]."
             notes: "\ncorpus DiD.md U：变体 9 电池含 Matching/Placebo/Early-Late 成员但无\"处理前污染分组检验\"\n本变体把混淆预言反向写成可证伪检验——若效应由事前特征驱动则高组显著低组不显著，两群组皆显著即反证混淆，收口句归因于事件诱导的处理。"
@@ -4237,14 +4233,14 @@ estimators:
             sources:
               - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
             paper_count: 1
-            status: EMERGING
+            status: VERIFIED
             skeleton: "``` We used [two] instrumental variables to help uniquely identify the [outcome] and [predictor] models in the system of simultaneous equations. For the [predictor] model, we used [instrument_1]. We expected levels of [instrument_1] to lead to higher degrees of [predictor] due to [mechanism]. To uniquely identify the [outcome] equation, we [created/used] [instrument_2]. We expected [instrument_2] to be [positively] correlated with [outcome]. We had no a priori theoretical reasons to expect [instrument_1] to have a direct effect on [outcome] and [instrument_2] to have a direct effect on [predictor]."
           - id: r2_reciprocal_3sls_system_navigation
             corpus_path: corpus/IV-2SLS.md
             sources:
               - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
             paper_count: 1
-            status: EMERGING
+            status: VERIFIED
             skeleton: "``` Yet it is also plausible to argue that [outcome] will lead [partners] to allocate more [business] to each other, hence increasing levels of [predictor]. This potential reciprocally causal relationship resulted in a simultaneous-equation bias in our research design ([citation]). In line with the expectations of a simultaneous-equation bias, the [Hausman (year)] test did indicate the presence of endogeneity in the [predictor] measure (p = [value]). A simple ordinary least squares (OLS) estimator is inapplicable for a simultaneity bias because the endogenous variables are correlated with the disturbance term, hence rendering OLS estimates inconsistent. To account for the possible simultaneity between [predictor] and [outcome], we used a [three-stage least squares] variation of simultaneous equation modeling ([citation]), which allowed us to estimate [outcome] simultaneously as a function of [predictor] and [predictor] as a function of [outcome]."
       R3:
         skeleton_variants:
@@ -4788,7 +4784,7 @@ estimators:
             sources:
               - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
             paper_count: 1
-            status: EMERGING
+            status: VERIFIED
             skeleton: "``` The [Breusch-Pagan] test ([citation]) for heteroskedasticity led us to reject the null hypothesis of homoskedastic error variance ... One possible reason for this may be the non-independence of observations, as certain [clusters] in our sample [supply more than one unit] ... Similar to OLS, heteroskedasticity poses a problem in [3SLS] estimation because it can bias the standard errors of the estimated coefficients. Because the direct adjustment of standard errors is not available in [3SLS] [software] estimation, we used a nonparametric bootstrap method to extract the bias-corrected coefficient estimates and standard errors ([citations]). ... In implementing the bootstrap, we made provisions for the clustered structure of our data, subsequently setting the size of repeated random samples equal to the number of clusters. ... Our estimates are based on [1,000] random samples ([citation]). Results remained qualitatively unchanged. ```"
       R4:
         description: ""

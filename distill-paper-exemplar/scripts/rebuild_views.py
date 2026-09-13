@@ -556,6 +556,18 @@ def load_policy(path=None) -> dict:
     return doc
 
 
+_POLICY_CACHE: dict | None = None
+
+
+def cached_policy() -> dict:
+    """Process-lazy policy load. Fail-fast semantics come from load_policy —
+    callers never fall back to ladder-only silently."""
+    global _POLICY_CACHE
+    if _POLICY_CACHE is None:
+        _POLICY_CACHE = load_policy()
+    return _POLICY_CACHE
+
+
 def policy_status(paper_keys, n_sources, policy: dict | None,
                   auxiliary: bool = False) -> tuple[str | None, str | None]:
     """Evaluate author/domain rules for an entry whose member papers are
@@ -830,9 +842,14 @@ def theory_rebuild(scan: CorpusScan, doc: dict, alias: AliasIndex) -> list[Check
                 d_hf.note = f"pattern spans {len(homes)} files: {homes}"
         checks.append(d_hf)
         n_status = max(len(papers), int(pentry.get("source_count") or 0))
+        pkeys = [strip_journal(str(p)) for p in papers]
+        paux = any(source_is_auxiliary(doc, k) for k in pkeys)
+        pstat, _pr = policy_status(pkeys, n_status, cached_policy(),
+                                   auxiliary=paux)
         checks.append(status_cmp_check(
             f"{base}.status", norm_status(pentry.get("status")),
-            ladder_status(n_status), n_status, doc=doc))
+            pstat or ladder_status(n_status), n_status, doc=doc,
+            policy=cached_policy(), paper_keys=pkeys, auxiliary=paux))
     for pid in sorted(set(blocks_by_pattern) - set(patterns)):
         grp = blocks_by_pattern[pid]
         papers = sorted({p for b in grp for p in theory_block_papers(b, alias)})
@@ -1264,9 +1281,13 @@ def results_rebuild(scan: CorpusScan, doc: dict, alias: AliasIndex) -> list[Chec
                 if v.get("status") is not None:
                     n_status = max(len(src_disk),
                                    int(v.get("paper_count") or 0))
+                    vkeys = [strip_journal(str(s)) for s in src_disk]
+                    vpstat, _pr = policy_status(vkeys, n_status,
+                                                cached_policy())
                     checks.append(status_cmp_check(
                         f"{vbase}.status", norm_status(v.get("status")),
-                        ladder_status(n_status), n_status, doc=doc))
+                        vpstat or ladder_status(n_status), n_status, doc=doc,
+                        policy=cached_policy(), paper_keys=vkeys))
                 # skeleton: re-derive from the block's **骨架** field; compare
                 # whitespace-insensitively (executor wrote '. '-split + >- fold)
                 if v.get("skeleton") is not None:
