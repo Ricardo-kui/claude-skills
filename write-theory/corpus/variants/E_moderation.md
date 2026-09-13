@@ -410,6 +410,7 @@ high, at lower levels when low.
 **诚实边界**: 单篇 EMERGING（Fini 2017 AMJ）；turning-point shift 作为概念仍为 EMERGING 单源（Lee-Park bottleneck-switch、Bendig vertical-shift 相近但不同），配对几何组织为单篇变体，待第二篇跨论文验证；不得据此改变 E 路由。
 
 ---
+<!-- wb:Fini_Jourdan_Perkmann_2017_AMJ_Social_Valuation:legacy_E_moderation_E5曲线关系多调节变量的联合论证Cuie -->
 
 
 

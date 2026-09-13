@@ -67,6 +67,7 @@ status: ready_for_corpus
 | 33 | Pattern: Belief Updating → Attention-Thres |  | 行动者根据相对参考点的反馈选择风险/保守行动；稳定偏差改变其对未来状态的信念；当预期状态接近 |  | Schumacher, Keck, and Tang (20 |
 | 34 | Pattern: Background-as-Theory Dual-Channel | 双通道/双轨 | 期刊/设计选择用 BACKGROUND（或同类 Literature/Conceptual |  | Kim & Lee (2026), *Strategic M |
 | 35 | Pattern: Additive Opposing Components → I | 曲线/拐点 | 同一信号携带两条同时单调、方向相反、斜率不同的信息推理，逐点相加得倒 U（非阶段主导切换）；两分量全程并存、可被不同调节分别绑定 | EMERGING（单篇；待第二篇 | Fini, Jourdan & Perkmann (2017), *Academy of Management Journal* |
+<!-- wb:Pontikes_2012_ASQ:legacy_hypothesis_derivation_patterns_变体速查表 -->
 
 ## Pattern: Audience-Role Dichotomy + Mirrored Hypotheses
 
@@ -118,6 +119,7 @@ source_papers: ["Pontikes_2012_ASQ"]
 confidence: medium
 status: ready_for_corpus
 -->
+<!-- wb:Pontikes_2012_ASQ:legacy_hypothesis_derivation_patterns_PatternAudienceRoleD -->
 
 ## Pattern: Sign-Flipping Boundary Condition
 
@@ -157,6 +159,7 @@ source_papers: ["Shi_Grewal_Sridhar_2021_JMR"]
 confidence: high
 status: ready_for_corpus
 -->
+<!-- wb:Shi_Grewal_Sridhar_2021_JMR:legacy_hypothesis_derivation_patterns_PatternSignFlippingB -->
 
 ## Pattern: Three-Condition Framework for Information-Based Herding
 
@@ -197,6 +200,7 @@ source_papers: ["Shi_Grewal_Sridhar_2021_JMR"]
 confidence: medium
 status: ready_for_corpus
 -->
+<!-- wb:Shi_Grewal_Sridhar_2021_JMR:legacy_hypothesis_derivation_patterns_PatternThreeConditio -->
 
 ## Pattern: Institutional Shock as Theory Hook
 
@@ -229,6 +233,7 @@ source_papers: ["Zhou_2017_ASQ"]
 confidence: high
 status: ready_for_corpus
 -->
+<!-- wb:Zhou_2017_ASQ:legacy_hypothesis_derivation_patterns_PatternInstitutional -->
 
 ## Pattern: Dual-Logic Integration — Input vs. Efficiency + Inverted U
 
@@ -284,6 +289,8 @@ build_type: 跨类型
 source_papers: ["Singh_Grewal_2023_JMR", "Shen_Zhou_Wang_Zhang_2022_JOM"]
 confidence: high
 -->
+<!-- wb:Singh_Grewal_2023_JMR:legacy_hypothesis_derivation_patterns_PatternDualLogicInte -->
+<!-- wb:Shen_Zhou_Wang_Zhang_2022_JOM:legacy_hypothesis_derivation_patterns_PatternDualLogicInte_2 -->
 
 ## Pattern: Anchor → Mechanism Move(s) → Warrant → Prediction
 
@@ -326,6 +333,7 @@ source_papers: ["Singh_Grewal_2023_JMR"]
 confidence: medium
 status: needs_validation
 -->
+<!-- wb:Singh_Grewal_2023_JMR:legacy_hypothesis_derivation_patterns_PatternAnchorMechani -->
 
 ## Pattern: Theory-Driven Anchor + Puzzle Turn
 
@@ -366,6 +374,7 @@ build_type: 机制推演型 + 调节效应型
 source_papers: ["Shen_Zhou_Wang_Zhang_2022_JOM"]
 confidence: high
 -->
+<!-- wb:Shen_Zhou_Wang_Zhang_2022_JOM:legacy_hypothesis_derivation_patterns_PatternTheoryDrivenA -->
 
 ## Pattern: Multi-Mechanism Trunk
 
@@ -414,6 +423,7 @@ build_type: 调节效应型 / 假设树型
 source_papers: ["Shen_Zhou_Wang_Zhang_2022_JOM"]
 confidence: high
 -->
+<!-- wb:Shen_Zhou_Wang_Zhang_2022_JOM:legacy_hypothesis_derivation_patterns_PatternMultiMechanis -->
 
 
 ## Pattern: Mechanism-Channel Instantiation Enumeration → Cost-Benefit Moderation（Lu et al. 2022 MS 型）
@@ -493,6 +503,7 @@ source_papers: ["Singh_Grewal_2023_JMR"]
 confidence: low
 status: needs_validation
 -->
+<!-- wb:Singh_Grewal_2023_JMR:legacy_hypothesis_derivation_patterns_PatternBilateralMode -->
 
 ## Pattern: Indirect Moderation / Mediated Moderation Derivation
 
@@ -532,6 +543,7 @@ source_papers: ["Singh_Grewal_2023_JMR"]
 confidence: medium
 status: needs_validation
 -->
+<!-- wb:Singh_Grewal_2023_JMR:legacy_hypothesis_derivation_patterns_PatternIndirectModer -->
 
 ## Pattern: Cumulative Moderation Build-Up
 
@@ -570,6 +582,7 @@ source_papers: ["Keeves_2017_ASQ"]
 confidence: high
 status: ready_for_corpus
 -->
+<!-- wb:Keeves_2017_ASQ:legacy_hypothesis_derivation_patterns_PatternCumulativeMod -->
 
 ## Pattern: Counterintuitive Anchor + Three Parallel Psychological Threats
 
@@ -608,6 +621,7 @@ source_papers: ["Keeves_2017_ASQ"]
 confidence: medium
 status: ready_for_corpus
 -->
+<!-- wb:Keeves_2017_ASQ:legacy_hypothesis_derivation_patterns_PatternCounterintuit -->
 
 ## Pattern: Parallel Dual-Source Antecedents (Self + Others) Converging on One Mediator
 
@@ -643,6 +657,7 @@ source_papers: ["Keeves_2017_ASQ"]
 confidence: medium
 status: ready_for_corpus
 -->
+<!-- wb:Keeves_2017_ASQ:legacy_hypothesis_derivation_patterns_PatternParallelDualS -->
 
 ## Pattern: Emotion Action Tendency → Interpersonal Harm
 
@@ -679,6 +694,7 @@ source_papers: ["Malshe_Agarwal_2015_JM"]
 confidence: high
 status: ready_for_corpus
 -->
+<!-- wb:Malshe_Agarwal_2015_JM:legacy_hypothesis_derivation_patterns_PatternEmotionAction -->
 
 ## Pattern: Cross-Disciplinary Theoretical Lens (Finance → Functional Outcome)
 
@@ -713,6 +729,7 @@ source_papers: ["Malshe_Agarwal_2015_JM"]
 confidence: high
 status: ready_for_corpus
 -->
+<!-- wb:Malshe_Agarwal_2015_JM:legacy_hypothesis_derivation_patterns_PatternCrossDiscipli -->
 
 ## Pattern: Four-Reason Parallel Mechanism Derivation
 
@@ -753,6 +770,7 @@ source_papers: ["Malshe_Agarwal_2015_JM"]
 confidence: high
 status: ready_for_corpus
 -->
+<!-- wb:Malshe_Agarwal_2015_JM:legacy_hypothesis_derivation_patterns_PatternFourReasonPar -->
 
 ## Pattern: Intangible Asset Real Options + Financial Constraint Distal Moderation
 
@@ -893,6 +911,8 @@ source_papers: ["Gamache_McNamara_Mannor_Johnson_2020_SMJ", "Cui_Yang_Vertinsky_
 confidence: high
 status: ready_for_corpus
 -->
+<!-- wb:Gamache_McNamara_Mannor_Johnson_2020_SMJ:legacy_hypothesis_derivation_patterns_与相邻语料文件的关系 -->
+<!-- wb:Cui_Yang_Vertinsky_SMJ:legacy_hypothesis_derivation_patterns_与相邻语料文件的关系_2 -->
 
 ## Pattern: Width-Type Parallel Mechanism
 
@@ -941,6 +961,7 @@ source_papers: ["Zhao-Ding_Gaba_ORSC"]
 confidence: medium
 status: needs_validation
 -->
+<!-- wb:Zhao-Ding_Gaba_ORSC:legacy_hypothesis_derivation_patterns_PatternWidthTypePara -->
 
 ## Pattern: Symmetric Opposing Dual-Track Mechanism
 
@@ -979,6 +1000,9 @@ source_papers: ["Cui_Yang_Vertinsky_SMJ", "Bendig_Hensellek_Schulte_2024_ETP", "
 confidence: high
 status: VERIFIED
 -->
+<!-- wb:Cui_Yang_Vertinsky_SMJ:legacy_hypothesis_derivation_patterns_PatternSymmetricOppo -->
+<!-- wb:Bendig_Hensellek_Schulte_2024_ETP:legacy_hypothesis_derivation_patterns_PatternSymmetricOppo_2 -->
+<!-- wb:Anderson_Reeb_2004_ASQ:legacy_hypothesis_derivation_patterns_PatternSymmetricOppo_3 -->
 
 ## Pattern: Curvilinear Relationship — Two-Phase Argumentation
 
@@ -1033,6 +1057,7 @@ confidence: emerging
 status: needs_cross_paper_validation
 story_fidelity: section_variant
 -->
+<!-- wb:Fini_Jourdan_Perkmann_2017_AMJ_Social_Valuation:legacy_hypothesis_derivation_patterns_PatternCurvilinearRe -->
 
 ## Pattern: Additive Opposing Components → Inverted U（双同时单调分量相抵）
 
@@ -1089,6 +1114,7 @@ source_papers: ["Lee_Park_2024_SMJ"]
 confidence: medium
 status: EMERGING
 -->
+<!-- wb:Lee_Park_2024_SMJ:legacy_hypothesis_derivation_patterns_PatternAdditiveOppos -->
 
 ## Pattern: Opposing Joint Prerequisites → Bottleneck Switch（共同必要条件反向变化—短板切换）
 
@@ -1133,6 +1159,8 @@ source_papers: ["Chung_Low_Rust_2022_JAMS", "lunetal2026_ETP"]
 confidence: medium
 status: EMERGING
 -->
+<!-- wb:Chung_Low_Rust_2022_JAMS:legacy_hypothesis_derivation_patterns_PatternOpposingJoint -->
+<!-- wb:lunetal2026_ETP:legacy_hypothesis_derivation_patterns_PatternOpposingJoint_2 -->
 
 ## Pattern: Sequential Nested Moderation（序列嵌套调节）
 
@@ -1199,6 +1227,7 @@ source_papers: ["Darby_2023_MSOM"]
 confidence: high
 status: ready_for_corpus
 -->
+<!-- wb:Darby_2023_MSOM:legacy_hypothesis_derivation_patterns_PatternSequentialNes -->
 
 ## Pattern: Three Parallel Single-Step Mechanisms
 
@@ -1235,6 +1264,7 @@ source_papers: ["Darby_2026_JOM"]
 confidence: high
 status: ready_for_corpus
 -->
+<!-- wb:Darby_2026_JOM:legacy_hypothesis_derivation_patterns_PatternThreeParallel -->
 
 ## Pattern: Two-Levers Theory Progression
 
@@ -1266,6 +1296,8 @@ source_papers: ["Grewal_Vana_Stephen_2025_JM", "Pupovac_Astvansh_Carrillat_Legou
 confidence: medium
 status: ready_for_corpus
 -->
+<!-- wb:Grewal_Vana_Stephen_2025_JM:legacy_hypothesis_derivation_patterns_PatternTwoLeversTheo -->
+<!-- wb:Pupovac_Astvansh_Carrillat_Legoux_2026_POM:legacy_hypothesis_derivation_patterns_PatternTwoLeversTheo_2 -->
 
 ## Pattern: Embedded Prose Predictions in Conceptual Framework
 
@@ -1316,6 +1348,7 @@ source_papers: ["Ilicic_Brennan_2026_JM"]
 confidence: medium
 status: needs_validation
 -->
+<!-- wb:Ilicic_Brennan_2026_JM:legacy_hypothesis_derivation_patterns_PatternEmbeddedProse -->
 
 ## Pattern: Counterintuitive Direction-Reversal via Mechanism Substitution
 
@@ -1353,6 +1386,7 @@ source_papers: ["Ilicic_Brennan_2026_JM"]
 confidence: medium
 status: needs_validation
 -->
+<!-- wb:Ilicic_Brennan_2026_JM:legacy_hypothesis_derivation_patterns_PatternCounterintuit -->
 
 ## Pattern: Mechanism-Targeted Intervention Escalation（机制靶向干预递进）
 
@@ -1393,6 +1427,7 @@ source_papers: ["Du_Tsolmon_2024_ORSC"]
 confidence: low
 status: needs_validation
 -->
+<!-- wb:Du_Tsolmon_2024_ORSC:legacy_hypothesis_derivation_patterns_PatternMechanismTarg -->
 
 ## Pattern: Mismatch Subtype Refinement Hypothesis (主效应后的 mismatch 子类型递进)
 
@@ -1440,6 +1475,7 @@ source_papers: ["Pollock_Lee_Jin_Lashley_2015_ASQ"]
 confidence: high
 status: ready_for_corpus
 -->
+<!-- wb:Pollock_Lee_Jin_Lashley_2015_ASQ:legacy_hypothesis_derivation_patterns_PatternMismatchSubty -->
 
 ## Pattern: Developmental Reversal of Reciprocal-Causation Asymmetry（pollock2015 H1a/H1b 型）
 
@@ -1508,6 +1544,7 @@ source_papers: ["Pollock_Lee_Jin_Lashley_2015_ASQ"]
 confidence: high
 status: ready_for_corpus
 -->
+<!-- wb:Pollock_Lee_Jin_Lashley_2015_ASQ:legacy_hypothesis_derivation_patterns_PatternDevelopmental -->
 
 ## Pattern: Differential Persistence / Lagged-DV Moderation（pollock2015 H2 型）
 
@@ -1562,6 +1599,7 @@ source_papers: ["Schumacher_Keck_Tang_2020_SMJ"]
 confidence: high
 status: needs_validation
 -->
+<!-- wb:Schumacher_Keck_Tang_2020_SMJ:legacy_hypothesis_derivation_patterns_PatternDifferentialP -->
 
 ## Pattern: Belief Updating → Attention-Threshold Reversal（Schumacher–Keck–Tang 2020 型）
 
@@ -1621,6 +1659,7 @@ status: EMERGING
 story_fidelity: section_variant
 related: dual_mechanism_same_direction (argumentation_patterns.md) — 后者收敛到正式 H；本模式允许无正式编号假设
 -->
+<!-- wb:Kim_Lee_2026_SMJ:legacy_hypothesis_derivation_patterns_PatternBeliefUpdatin -->
 
 ## Pattern: Background-as-Theory Dual-Channel + Stage Attenuation（无正式 H）
 

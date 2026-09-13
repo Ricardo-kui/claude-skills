@@ -750,6 +750,7 @@ indices for ability and identity conformance are no longer aligned.
 - 未与后续双通道曲线机制连接 → T1 构念设置悬空。
 
 ---
+<!-- wb:Fini_Jourdan_Perkmann_2017_AMJ_Social_Valuation:legacy_construct_definition_M -->
 
 
 ### 句式 O：N 联框架定义电池+跨层复用声明（gulati_nohria_zaheer_2000 型）

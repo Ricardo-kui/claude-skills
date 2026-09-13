@@ -29,6 +29,7 @@ status: EMERGING
 > **注意**: 本协议的核心贡献是**反转董事会的传统缓冲角色**。必须先承认 agency theory 的常规预测（独立董事抑制机会主义），再用 "perverse pressure" 逻辑解释为何在本情境中效果相反。
 
 ---
+<!-- wb:Chung_Low_Rust_2022_JAMS:legacy_board_governance_boundary_condition_段落功能地图 -->
 
 ## 核心骨架
 

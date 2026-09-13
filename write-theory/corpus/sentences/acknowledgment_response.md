@@ -206,6 +206,7 @@ However, [audience B] may view the same [action] differently from [audience A]:
 - 每段都做受众切换（频次：通常 0–1；仅反直觉单 DV 比较主效应需要）
 
 ---
+<!-- wb:Chen_Ganesan_Liu_2009_JM:legacy_acknowledgment_response_5bAudienceFoilPivot异 -->
 
 ## 6. 定量实证适配与分工
 

@@ -860,6 +860,7 @@ positive (ability-informed) effect of [signal] on [valuation]: in all [condition
 - 声明不变后又让该分量驱动任何几何预测 → 自相矛盾。
 
 ---
+<!-- wb:Fini_Jourdan_Perkmann_2017_AMJ_Social_Valuation:legacy_moderation_选择性组件不变性声明SelectiveC -->
 
 ## 外部部分替代衰减（External Partial-Substitute Attenuation）
 
@@ -920,6 +921,7 @@ confidence: emerging
 status: needs_cross_paper_validation
 story_fidelity: section_variant
 -->
+<!-- wb:Ridge_Hill_Ingram_Kolomeitsev_Worrell_2024_AMJ:legacy_moderation_外部部分替代衰减ExternalPart -->
 
 ## Mitigation via Manifestation-Switch（机制切换型缓解交互）
 

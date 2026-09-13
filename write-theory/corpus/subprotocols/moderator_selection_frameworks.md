@@ -54,6 +54,7 @@ source_papers: ["Singh_Grewal_2023_JMR"]
 confidence: low
 status: needs_validation
 -->
+<!-- wb:Singh_Grewal_2023_JMR:legacy_moderator_selection_frameworks_FrameworkEnvironment -->
 
 ## Framework: Information vs. Attention
 
@@ -91,6 +92,7 @@ source_papers: ["Darby_2026_JOM"]
 confidence: high
 status: ready_for_corpus
 -->
+<!-- wb:Darby_2026_JOM:legacy_moderator_selection_frameworks_FrameworkInformation -->
 
 ## Framework: Information Asymmetry Meta-Framework for Multi-Level Moderators
 
@@ -131,6 +133,7 @@ source_papers: ["Grewal_Vana_Stephen_2025_JM"]
 confidence: medium
 status: ready_for_corpus
 -->
+<!-- wb:Grewal_Vana_Stephen_2025_JM:legacy_moderator_selection_frameworks_FrameworkInformation -->
 
 ## Framework: Incident-Brand-Consumer Three-Level Moderator Framework
 
@@ -217,6 +220,7 @@ source_papers: ["kalaignanametal2013"]
 confidence: medium
 status: ready_for_corpus
 -->
+<!-- wb:kalaignanametal2013:legacy_moderator_selection_frameworks_FrameworkWillingandA -->
 
 ## Framework: Transfer vs Attention Enablers（能力转移 vs 动机注意，Kalaignanam et al. 2013 型）
 
@@ -260,6 +264,7 @@ source_papers: ["lunetal2026"]
 confidence: medium
 status: ready_for_corpus
 -->
+<!-- wb:lunetal2026:legacy_moderator_selection_frameworks_FrameworkTransfervsA -->
 
 ## Framework: UET Situation–Characteristic Nested Moderators（特征→情境嵌套，Lun et al. 2026 型）
 

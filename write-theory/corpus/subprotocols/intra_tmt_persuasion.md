@@ -30,6 +30,7 @@ status: EMERGING
 > **管理学惯例**: 本协议通常生成一个 **two-way interaction**（H2: [higher_actor_X] × [lower_actor_W]），如果存在权力不对称进一步放大，则继续生成 **three-way nested interaction**（H3: [higher_actor_X] × [lower_actor_W] × [lower_actor_power]）。
 
 ---
+<!-- wb:Chung_Low_Rust_2022_JAMS:legacy_intra_tmt_persuasion_段落功能地图 -->
 
 ## 核心骨架
 
