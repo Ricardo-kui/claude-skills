@@ -42,7 +42,12 @@ def check(name: str, cond: bool, detail: str = ""):
 
 
 def run_plan(plan_path: Path, second_run: bool = False):
-    env = dict(os.environ, WBTEST_SKIP_SHADOW="1")
+    # S6: the apply-end rebuild hook IS the registry derived-field writer —
+    # it must run here (sandbox targets flow through the plan's registry/
+    # corpus_root overrides). WBTEST_SKIP_SHADOW remains supported by the
+    # executor for emergency bypass only.
+    env = dict(os.environ)
+    env.pop("WBTEST_SKIP_SHADOW", None)
     proc = subprocess.run(
         [sys.executable, str(SCRIPTS / "corpus_writeback.py"),
          "--plan", str(plan_path), "--paper", PAPER, "--journal", "SMJ",
@@ -191,13 +196,20 @@ def main() -> int:
         check(f"registry EOL uniform[{c}]",
               sig[1] == eols[c][1] == 0 and sig[0] > 0, f"now={sig} pre={eols[c]}")
 
-    # 5. executor registry writes landed on partitioned files
+    # 5. registry state after the apply-end rebuild hook (S6 semantics):
+    # the executor defers derived fields; the rebuild union lands the paper
+    # with paper_count == len(papers)
     reg_m = yaml.safe_load((roots["methods"] / "corpus" / "_evidence_registry.yaml")
                            .read_text(encoding="utf-8"))
     e = reg_m["evidence"]["by_design_type"]["面板数据-OLS"]
-    check("methods registry bumped once",
-          any(PAPER in str(p) for p in e.get("papers", [])),
-          f"paper_count={e['paper_count']} slots={e.get('slots_covered')}")
+    papers = [str(p) for p in e.get("papers", [])]
+    check("methods rebuild union landed the paper",
+          any(PAPER in p for p in papers),
+          f"paper_count={e['paper_count']} len(papers)={len(papers)} "
+          f"slots={e.get('slots_covered')}")
+    check("methods paper_count==len(papers)",
+          e.get("paper_count") == len(papers),
+          f"paper_count={e['paper_count']} len(papers)={len(papers)}")
     check("methods non-canonical slot tag preserved",
           "M2.5" in str(e.get("slots_covered", "")),
           str(e.get("slots_covered")))

@@ -21,14 +21,15 @@ plus an adjudication (`裁决单`) grouping every non-match into classes:
   expected_stale_block_status  block frontmatter status older than registry
   novel                        needs human adjudication (real drift candidate)
 
-S1 is PURE READ-ONLY: --check never writes registries. --apply exists as the
-S6 switch but refuses to run until S2 partition markers
-(`# === DERIVED: ... ===` / `# === AUTHORED ===`) are present in the registry.
+S6 SWITCH (2026-09-13): --check stays PURE READ-ONLY. The derived-view
+WRITE path lives in rebuild_apply.py (segment-level regeneration with
+AUTHORED passthrough; see that module). The --apply stub here remains
+guarded/refusing so the old entry point can never half-write.
 
 Usage:
   python rebuild_views.py --check [--corpus all|introduction|theory|methods|results]
       [--out reconciliation_report.yaml] [--quiet]
-  python rebuild_views.py --apply ...     # S6; guarded, refuses pre-S2
+  python rebuild_apply.py [--corpus ...] [--apply]   # the S6 writer
   python rebuild_views.py --self-test     # built-in unit tests
 """
 from __future__ import annotations
@@ -1132,11 +1133,22 @@ def results_rebuild(scan: CorpusScan, doc: dict, alias: AliasIndex) -> list[Chec
                 src_disk = [alias.resolve(strip_journal(s)) or strip_journal(s)
                             for s in flowlist(v.get("sources"))]
                 src_der = [alias.resolve(d["sources"][0]) or d["sources"][0]]
-                src_chk = Check(f"{vbase}.sources", on_disk=src_disk,
-                                derived=src_der, cls="expected_derived_rebuild")
-                checks.append(cmp_scalar(src_chk,
-                    normalize=lambda x: sorted(str(s).lower().replace("-", "_")
-                                               for s in x) if isinstance(x, list) else x))
+                # on-disk sources ⊇ wb-attested = legacy multi-source carry
+                # (same semantics as the theory fragment home_files superset)
+                if set(x.lower() for x in src_der) <= \
+                   set(x.lower() for x in src_disk):
+                    checks.append(Check(
+                        f"{vbase}.sources", verdict="match",
+                        note="on-disk sources superset of wb-attested "
+                             "(legacy multi-source carry)"
+                        if len(src_disk) > len(src_der) else ""))
+                else:
+                    src_chk = Check(f"{vbase}.sources", on_disk=src_disk,
+                                    derived=src_der,
+                                    cls="expected_derived_rebuild")
+                    checks.append(cmp_scalar(src_chk,
+                        normalize=lambda x: sorted(str(s).lower().replace("-", "_")
+                                                   for s in x) if isinstance(x, list) else x))
                 if v.get("paper_count") is not None:
                     checks.append(cmp_scalar(Check(
                         f"{vbase}.paper_count==len(sources)",

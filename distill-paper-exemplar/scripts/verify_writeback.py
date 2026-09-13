@@ -241,7 +241,6 @@ def main() -> int:
                     _skip_stem_lookup = True
                 else:
                     _skip_stem_lookup = False
-                found = None if _skip_stem_lookup else find_registry_entry(rtext, target.stem)
                 found = find_registry_entry(rtext, target.stem)
                 if found is None:
                     # paper-level schema fallback (write-theory: entry keyed by citekey)
@@ -319,6 +318,35 @@ def main() -> int:
             add("PASS", "V4", f"registry YAML valid: {Path(rp).name}")
         except yaml.YAMLError as e:
             add("FAIL", "V4", f"registry YAML INVALID: {rp}: {e}")
+
+    # V3-drift (S6 convergence): the derived views must already be in sync —
+    # a rebuild_apply dry-run over each involved corpus must plan ZERO changes.
+    # The writeback apply hook runs the rebuild before verify, so a non-empty
+    # plan here means the views did not converge (or a later hand-edit drifted).
+    import rebuild_apply as ra
+    plan_targets: dict[str, tuple[str, str]] = {}
+    for _, plan in plans:
+        s = str(plan.get("section") or "")
+        if s in ra.SEGMENT_KEYS and s not in plan_targets:
+            plan_targets[s] = (str(plan.get("registry") or ""),
+                               str(plan.get("corpus_root") or ""))
+    for ck, (rp, cr) in plan_targets.items():
+        try:
+            notes = ra.apply_corpus(ck, dry_run=True,
+                                    registry_path=rp or None,
+                                    corpus_root=cr or None)
+        except Exception as e:  # noqa: BLE001
+            add("FAIL", "V3-drift", f"{ck}: rebuild dry-run crashed: {e}")
+            continue
+        if notes:
+            for n in notes:
+                residuals.append({"type": "view_drift", "section": ck,
+                                  "hint": str(n)})
+            add("FAIL", "V3-drift",
+                f"{ck}: {len(notes)} planned rebuild change(s) — views not "
+                f"converged (first: {notes[0]})")
+        else:
+            add("PASS", "V3-drift", f"{ck}: derived views converged (0 planned changes)")
 
     n_pass = sum(1 for s, _, _ in checks if s == "PASS")
     n_fail = sum(1 for s, _, _ in checks if s == "FAIL")

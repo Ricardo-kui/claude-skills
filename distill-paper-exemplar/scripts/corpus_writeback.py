@@ -253,115 +253,13 @@ def _merge_slots_covered(entry: str, slot_tag: str) -> str:
 
 def update_registry(registry: Path, stem: str, paper: str, journal: str,
                     gap: str, new_text: dict, slot_tag: str | None = None) -> str:
-    """Surgical text edit of one entry. Returns status message."""
-    # Accumulate on new_text — re-reading from disk here silently discarded
-    # every earlier same-run item's edit (last item won). 2026-08-29 fix.
-    text = new_text.get(str(registry)) or registry.read_text(encoding="utf-8")
-    section, key, m = None, None, None
-    if stem in REGISTRY_ALIASES:
-        section, key = REGISTRY_ALIASES[stem]
-    else:
-        # entry keyed by stem under any evidence subsection
-        pat = re.compile(r"^( +)%s:\n( +)paper_count: (\d+)" % re.escape(stem), re.M)
-        m = pat.search(text)
-        if m:
-            key = stem
-    if m is None and key is not None:
-        pat = re.compile(r"^( +)%s:\n( +)paper_count: (\d+)" % re.escape(key), re.M)
-        m = pat.search(text)
-    if key is None or not m:
-        return f"REGISTRY: no entry for '{stem}' — SKIPPED (update by hand)"
-    ind, sub = m.group(1), m.group(2)
-    count = int(m.group(3))
-    # entry span: from key line to next line indented <= ind
-    start = m.start()
-    nxt = re.search(r"^ {1,%d}\S" % len(ind), text[m.end():], re.M)
-    end = m.end() + nxt.start() if nxt else len(text)
-    entry = text[start:end]
-    # One paper = one papers-list line = one paper_count unit. When several
-    # variants of the SAME paper land on one entry in a single run, the later
-    # items are no-ops (accumulation fix would otherwise append duplicate
-    # paper lines and double-bump the count — 2026-08-29 Anand run).
-    if re.search(r"^\s*- %s \(" % re.escape(paper), entry, re.M):
-        # Paper already tracked, but this item may still introduce a NEW slot
-        # (2026-09-13 Lu run: items 2-9 carried M2/M7 tags that the early
-        # return silently dropped).
-        if slot_tag:
-            entry2 = _merge_slots_covered(entry, slot_tag)
-            if entry2 != entry:
-                new_text[str(registry)] = text[:start] + entry2 + text[end:]
-                return (f"REGISTRY: entry '{key}' already lists {paper} — "
-                        f"slots_covered+{slot_tag}")
-        return f"REGISTRY: entry '{key}' already lists {paper} — no change"
-    entry2 = entry.replace(f"paper_count: {count}", f"paper_count: {count + 1}", 1)
-    # locate the papers: list and append after its last consecutive item.
-    # text is LF in memory (read_text translates CRLF; write_text restores
-    # it on Windows) — never inject bare \r here.
-    lines2 = entry2.split("\n")
-    item_re = re.compile(r"^(\s*)- .+$")
-    papers_idx = next((i for i, l in enumerate(lines2)
-                       if re.match(r"^\s*papers:\s*$", l)), None)
-    flow_idx = next((i for i, l in enumerate(lines2)
-                     if re.match(r"^\s*papers:\s*\[\s*\]\s*$", l)), None)
-    if papers_idx is None and flow_idx is None:
-        # Empty-shell entry (paper_count present, papers list absent — e.g.
-        # 动态面板-GMM 2026-09-12): create the list inline instead of skipping.
-        # Kills the "registry-sync agent" class for methods corpora.
-        # papers/paper_count are SIBLINGS at the same indent.
-        eol = "\r\n" if "\r\n" in entry else "\n"
-        entry2 = entry.replace(
-            f"paper_count: {count}",
-            f"paper_count: {count + 1}{eol}{sub}papers:{eol}{sub}- {paper} ({journal})", 1)
-        if slot_tag:
-            entry2 = _merge_slots_covered(entry2, slot_tag)
-        new_text[str(registry)] = text[:start] + entry2 + text[end:]
-        return (f"REGISTRY: {key} papers list created, paper_count {count}->{count + 1}, "
-                f"+{paper} ({journal})" + (f", slots_covered+{slot_tag}" if slot_tag else ""))
-    if flow_idx is not None:
-        # flow-style empty list `papers: []`: convert IN PLACE to a block
-        # list. Injecting a second block-style papers key elsewhere would
-        # YAML-shadow this one (duplicate key, last wins → parsed back as
-        # []; 2026-09-13 Mao S5 run on 实证对象构建).
-        ind_f = re.match(r"^(\s*)papers:", lines2[flow_idx]).group(1)
-        lines2[flow_idx] = f"{ind_f}papers:"
-        lines2.insert(flow_idx + 1, f"{ind_f}- {paper} ({journal})")
-        entry2 = "\n".join(lines2)
-    else:
-        last = papers_idx
-        for j in range(papers_idx + 1, len(lines2)):
-            if item_re.match(lines2[j]):
-                last = j
-            elif lines2[j].strip() == "":
-                continue
-            else:
-                break
-        if last == papers_idx:
-            # block-style empty list: insert the first item under the key
-            # instead of skipping (a skipped append desyncs paper_count)
-            ind_k = re.match(r"^(\s*)papers:", lines2[papers_idx]).group(1)
-            lines2.insert(papers_idx + 1, f"{ind_k}- {paper} ({journal})")
-        else:
-            ind_item = item_re.match(lines2[last]).group(1)
-            lines2.insert(last + 1, f"{ind_item}- {paper} ({journal})")
-        entry2 = "\n".join(lines2)
-    if slot_tag:
-        entry2 = _merge_slots_covered(entry2, slot_tag)
-    gm = re.search(r"^(\s+)%s: (\d+)$" % re.escape(gap), entry2, re.M)
-    if gm:
-        entry2 = (entry2[:gm.start()]
-                  + f"{gm.group(1)}{gap}: {int(gm.group(2)) + 1}"
-                  + entry2[gm.end():])
-    new_text[str(registry)] = text[:start] + entry2 + text[end:]
-    return f"REGISTRY: {key} paper_count {count}->{count + 1}, +{paper} ({journal}), {gap}+1"
+    """S6 retired: papers[]/paper_count/gap_distribution are DERIVED fields —
+    the rebuild_apply pass at apply-end owns them (plan §7.4 removed the
+    read-count→+1→write path). The executor keeps blocks, wb-meta, INDEX rows,
+    tfr issuance and batch_history; registry derived fields converge through
+    the rebuild."""
 
-
-def _bump_last_updated(current: str, today: str) -> str:
-    """Registry last_updated is date-letter style (2026-09-12a): same day
-    increments the letter, a new day resets to `a`."""
-    m = re.match(r"^(\d{4}-\d{2}-\d{2})([a-z]?)$", (current or "").strip())
-    if m and m.group(1) == today:
-        return today + chr(ord(m.group(2) or "`") + 1)
-    return today + "a"
+    return f"REGISTRY: '{stem}' derived fields deferred to rebuild_apply (S6)"
 
 
 def update_theory_registry(registry: Path, paper: str, journal: str, gap: str,
@@ -457,33 +355,9 @@ def update_theory_registry(registry: Path, paper: str, journal: str, gap: str,
         msgs.append(f"REGISTRY(theory): {len(frags)} fragments appended to {paper} "
                     f"(tfr_{next_id}-tfr_{next_id + len(frags) - 1})")
     text = "\n".join(lines)
-    # summary_by_dimension 计数（行级，逐维度）
-    for dim in {f["makadok_dimension"] for f in frags}:
-        n = sum(1 for f in frags if f["makadok_dimension"] == dim)
-        dm = next((i for i, l in enumerate(lines) if l.strip() == f"{dim}:"), None)
-        if dm is None:
-            msgs.append(f"REGISTRY(theory): WARN summary_by_dimension[{dim}] not found — counters not bumped")
-            continue
-        for j in range(dm + 1, min(dm + 5, len(lines))):
-            if "total_fragments:" in lines[j]:
-                v = int(re.search(r"(\d+)", lines[j].split(":", 1)[1]).group(1))
-                lines[j] = re.sub(r"(\d+)", str(v + n), lines[j], count=1)
-            if "source_papers:" in lines[j]:
-                v = int(re.search(r"(\d+)", lines[j].split(":", 1)[1]).group(1))
-                lines[j] = re.sub(r"(\d+)", str(v + (1 if paper_new else 0)), lines[j], count=1)
-    text = "\n".join(lines)
-    # meta 计数
-    for i, l in enumerate(lines):
-        if l.strip().startswith("total_papers_indexed:"):
-            v = int(l.split(":", 1)[1].strip())
-            lines[i] = re.sub(r"(\d+)", str(v + (1 if paper_new else 0)), l, count=1)
-        if l.strip().startswith("batches_processed:"):
-            v = int(l.split(":", 1)[1].strip())
-            lines[i] = re.sub(r"(\d+)", str(v + 1), l, count=1)
-        if l.strip().startswith("last_updated:"):
-            cur = l.split(":", 1)[1].strip()
-            lines[i] = re.sub(r"last_updated: \S+", f"last_updated: {_bump_last_updated(cur, timestamp)}", l, count=1)
-    text = "\n".join(lines)
+    # S6: summary_by_dimension / meta counters are DERIVED fields owned by
+    # rebuild_apply (fragments append above stays — tfr issuance is this
+    # executor's retained append-only authority).
     new_text[str(registry)] = text
     return msgs
 
@@ -520,7 +394,13 @@ def update_results_registry(registry: Path, paper: str, applied: list,
             msgs.append(f"[{name}] REGISTRY(results): skeleton_variants not found — SKIPPED (manual sync)")
             continue
         base = se.end() + sv.start()
-        ind_item = sv.group(1)  # 真实风格：列表项与 skeleton_variants 键同缩进
+        key_ind = sv.group(1)
+        # item indent: mirror the FIRST existing list item (registries differ:
+        # real files use same-indent lists, fixtures use key+2); fall back to
+        # key+2 when the list is empty
+        after = ktext[se.end():][sv.end():]
+        mi = re.search(r"^(\s+)- ", after, re.M)
+        ind_item = mi.group(1) if mi else key_ind + "  "
         skeleton = " ".join(_block_field(item.get("block_text") or "", "骨架")) or "见语料块"
         notes = " ".join(_block_field(item.get("block_text") or "", "与原骨架差异")) \
             or (item.get("index_note") or "").replace("{NEXT}", label)
@@ -566,17 +446,10 @@ def update_results_registry(registry: Path, paper: str, applied: list,
                            f"{list_indent}  novel_patterns_count: {done}"]
             tl = tl[:j] + entry_lines + tl[j:]
             text = "\n".join(tl)
-        text = re.sub(r"^(  batches_processed: )(\d+)",
-                      lambda mm: mm.group(1) + str(int(mm.group(2)) + 1), text, count=1, flags=re.M)
-        text = re.sub(r"^(  total_papers_indexed: )(\d+)",
-                      lambda mm: mm.group(1) + str(int(mm.group(2)) + (1 if paper_new else 0)),
-                      text, count=1, flags=re.M)
-        lb = re.search(r"^(  last_batch_id: )(\S+)", text, re.M)
-        if lb:
-            text = text[:lb.start()] + f"{lb.group(1)}{bid}" + text[lb.end():]
-        lu = re.search(r"^(  last_updated: )(\S+)", text, re.M)
-        if lu:
-            text = text[:lu.start()] + f"{lu.group(1)}{_bump_last_updated(lu.group(2), timestamp)}" + text[lu.end():]
+        # S6: meta counters (batches_processed / total_papers_indexed /
+        # last_batch_id / last_updated) are DERIVED or frozen-audit fields —
+        # the rebuild_apply pass owns them; the executor only appends the
+        # batch_history row above (append-only ledger, kept).
         msgs.append(f"REGISTRY(results): batch {bid} recorded ({done} slot updates)")
     new_text[str(registry)] = text
     return msgs
@@ -921,14 +794,20 @@ def main() -> int:
     if not os.environ.get("WBTEST_SKIP_SHADOW"):
         try:
             log_out = Path(args.plan).parent / "reconciliation_log.latest.yaml"
+            plan_doc = yaml.safe_load(Path(args.plan).read_text(encoding="utf-8"))
+            corpus_key = str(plan_doc.get("section") or "")
             proc = subprocess.run(
-                [sys.executable, str(Path(__file__).resolve().parent / "rebuild_views.py"),
-                 "--check", "--quiet", "--out", str(log_out)],
+                [sys.executable,
+                 str(Path(__file__).resolve().parent / "rebuild_apply.py"),
+                 "--corpus", corpus_key, "--apply",
+                 "--registry", str(plan_doc.get("registry") or ""),
+                 "--corpus-root", str(plan_doc.get("corpus_root") or "")],
                 capture_output=True, text=True)
             tail = [ln for ln in (proc.stdout or "").strip().splitlines() if ln]
-            messages.append("RECONCILE(shadow): " +
+            messages.append(f"REBUILD(S6 derived views, corpus={corpus_key}): " +
                             (tail[-1] if tail else f"exit={proc.returncode}"))
-            messages.append(f"RECONCILE(shadow): log -> {log_out}")
+            log_out.write_text(proc.stdout or "", encoding="utf-8")
+            messages.append(f"REBUILD(S6): log -> {log_out}")
             if proc.returncode != 0:
                 messages.append(f"RECONCILE(shadow) WARN exit={proc.returncode}: "
                                 f"{(proc.stderr or '')[:200]}")
