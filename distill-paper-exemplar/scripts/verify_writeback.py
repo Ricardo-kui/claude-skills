@@ -347,6 +347,14 @@ def main() -> int:
                 f"converged (first: {notes[0]})")
         else:
             add("PASS", "V3-drift", f"{ck}: derived views converged (0 planned changes)")
+    # S5 observability: how the last dry-run planning pass attributed status
+    # decisions (override / policy / ladder / never-demote). Informational —
+    # the hard gate remains the zero-planned-change V3-drift check above.
+    try:
+        add("INFO", "V3-drift",
+            "status " + ra.attribution_line().replace("STATUS ATTRIBUTION: ", "attribution: "))
+    except Exception:  # noqa: BLE001 — attribution is best-effort observability
+        pass
 
     n_pass = sum(1 for s, _, _ in checks if s == "PASS")
     n_fail = sum(1 for s, _, _ in checks if s == "FAIL")

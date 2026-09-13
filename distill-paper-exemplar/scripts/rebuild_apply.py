@@ -146,6 +146,9 @@ def _block_gaps(blocks) -> dict[str, str]:
     return gaps
 
 
+_ATTRIBUTION: dict[str, int] = {}
+
+
 def _status_for(doc: dict, path: str, n_sources: int, current=None,
                 paper_keys=None, auxiliary: bool = False) -> str:
     """status_overrides ⊕ status_policy ⊕ ladder (C item). Never DOWNGRADES
@@ -155,9 +158,11 @@ def _status_for(doc: dict, path: str, n_sources: int, current=None,
     whose basis lives in the carried verification_basis/note fields — rebuild
     destroying it would silently repeal user rulings (S1 classified those
     drifts 'status_overrides owns this', i.e. resolved by adding override
-    rows, never by downgrade)."""
+    rows, never by downgrade). Decision attribution accumulates into
+    _ATTRIBUTION (S5 observability; reset per apply_corpus run)."""
     ov = rv.status_override_for(doc, path)
     if ov and ov.get("status"):
+        _ATTRIBUTION["override"] = _ATTRIBUTION.get("override", 0) + 1
         return str(ov["status"])
     pstat, _prule = rv.policy_status(paper_keys, n_sources, rv.cached_policy(),
                                      auxiliary=auxiliary)
@@ -170,7 +175,10 @@ def _status_for(doc: dict, path: str, n_sources: int, current=None,
     # 'expected_status_override'.)
     if cur in ("VERIFIED", "ROBUST") and base in rv.LADDER and \
             rv.LADDER.index(base) < rv.LADDER.index(cur):
+        _ATTRIBUTION["never-demote"] = _ATTRIBUTION.get("never-demote", 0) + 1
         return cur
+    _ATTRIBUTION["policy" if pstat else "ladder"] = \
+        _ATTRIBUTION.get("policy" if pstat else "ladder", 0) + 1
     return base
 
 
@@ -728,6 +736,7 @@ PLANNERS = {
 def apply_corpus(corpus: str, dry_run: bool = True,
                  registry_path: str | None = None,
                  corpus_root: str | None = None) -> list[str]:
+    _ATTRIBUTION.clear()        # S5: per-corpus status decision attribution
     reg = Path(registry_path) if registry_path else rv.registry_for(corpus)
     if not reg.is_file():
         raise RuntimeError(f"{corpus}: registry missing: {reg}")
@@ -800,6 +809,14 @@ def apply_corpus(corpus: str, dry_run: bool = True,
     return notes
 
 
+def attribution_line() -> str:
+    """S5: one-line status decision attribution (override / policy / ladder /
+    never-demote counts from the last apply_corpus planning pass)."""
+    parts = [f"{k} {_ATTRIBUTION.get(k, 0)}"
+             for k in ("override", "policy", "ladder", "never-demote")]
+    return "STATUS ATTRIBUTION: " + " / ".join(parts)
+
+
 def main() -> int:
     import argparse
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
@@ -813,12 +830,18 @@ def main() -> int:
     args = ap.parse_args()
     corpora = list(SEGMENT_KEYS) if args.corpus == "all" else [args.corpus]
     total = 0
+    attr_total: dict[str, int] = {}
     for ck in corpora:
         total += len(apply_corpus(ck, dry_run=not args.apply,
                                   registry_path=args.registry,
                                   corpus_root=args.corpus_root))
+        for k, v in _ATTRIBUTION.items():
+            attr_total[k] = attr_total.get(k, 0) + v
     print(f"\n{'APPLIED' if args.apply else 'DRY-RUN'}: {total} change(s) across "
           f"{len(corpora)} corpus/corpora")
+    print("STATUS ATTRIBUTION: "
+          + " / ".join(f"{k} {attr_total.get(k, 0)}"
+                       for k in ("override", "policy", "ladder", "never-demote")))
     return 0
 
 
