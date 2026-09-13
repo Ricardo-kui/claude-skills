@@ -62,6 +62,11 @@ CORPUS_KEYS = {
 }
 
 WB_RE = re.compile(r"<!--\s*wb:([^:>]+):([^>]+?)\s*-->")
+# S4 wb-meta format (finalized in S2): one line, separate from the wb marker,
+# compact space-separated KV, values optionally double-quoted, grep-able:
+#   <!-- wb-meta: dim=Boundary status=EMERGING gap=Incompleteness tbt="机制推演型" -->
+WB_META_RE = re.compile(r"<!--\s*wb-meta:\s*(.+?)\s*-->")
+WB_META_KV_RE = re.compile(r'(\w+)=("([^"]*)"|\S+)')
 HEAD_RE = re.compile(r"^(#{2,4})\s+(.+?)\s*$")
 FM_COMMENT_RE = re.compile(r"<!--\s*\n(.*?)\n\s*-->", re.S)
 SLOT_LINE_RE = re.compile(r"\*\*槽位\**\s*[:：]\s*(.+)$", re.M)
@@ -96,6 +101,7 @@ class Block:
     fm: dict | None = None        # theory HTML-comment frontmatter fields
     slots: set = field(default_factory=set)     # {'M2','R4'}
     status: str | None = None     # from **验证状态** line or fm.status
+    wb_meta: dict = field(default_factory=dict)  # S4 wb-meta KV payload
 
     def full_heading(self) -> str:
         return f"{self.level} {self.heading}"
@@ -146,6 +152,15 @@ def _parse_fm_comment(raw: str) -> dict | None:
     return out
 
 
+def parse_wb_meta(raw: str) -> dict:
+    """Parse one wb-meta comment line into a compact KV dict (S4 payload:
+    tfr makadok_dimension/note and gap attribution move into blocks)."""
+    out = {}
+    for m in WB_META_KV_RE.finditer(raw):
+        out[m.group(1)] = m.group(3) if m.group(3) is not None else m.group(2)
+    return out
+
+
 def _slot_tags_from_item(item: str) -> set:
     if re.match(r"^m(\d+)_", item):
         return {f"M{re.match(r'm(\d+)_', item).group(1)}"}
@@ -188,6 +203,8 @@ def scan_corpus(root: Path) -> CorpusScan:
             st = STATUS_LINE_RE.search(body)
             if st:
                 b.status = st.group(1)
+            for wm in WB_META_RE.finditer(body):
+                b.wb_meta.update(parse_wb_meta(wm.group(1)))
             for ck, item in b.wb:
                 b.slots |= _slot_tags_from_item(item)
 
@@ -404,16 +421,39 @@ def alias_failure(alias: AliasIndex, key: str) -> str | None:
     return None
 
 
-def status_cmp_check(path: str, on_disk: str, derived: str, n_sources: int) -> Check:
+def status_override_for(doc: dict, path: str) -> dict | None:
+    """status_overrides lookup: the override key is the check path minus its
+    trailing `.status` component (e.g. `patterns.p1` for `patterns.p1.status`)."""
+    so = (doc.get("status_overrides") or {}).get("overrides") or {}
+    key = path[:-len(".status")] if path.endswith(".status") else path
+    ov = so.get(key)
+    return ov if isinstance(ov, dict) else None
+
+
+def status_cmp_check(path: str, on_disk: str, derived: str, n_sources: int,
+                     doc: dict | None = None) -> Check:
     """Ladder-vs-registry status verdict with the override classes."""
     c = Check(path, on_disk=on_disk, derived=derived)
+    ov = status_override_for(doc or {}, path)
+    if ov is not None:
+        ov_st = norm_status(ov.get("status"))
+        if ov_st == on_disk:
+            c.verdict = "match"
+            c.note = ("status_overrides: "
+                      + str(ov.get("basis", ""))[:60])
+            return c
+        c.verdict = "drift"
+        c.cls = "novel"
+        c.note = (f"registry status disagrees with its own status_overrides "
+                  f"entry ({ov_st})")
+        return c
     if on_disk == derived:
         c.verdict = "match"
     elif on_disk in ("VERIFIED", "ROBUST") and derived == "EMERGING":
         if n_sources <= 2:
             c.verdict = "drift"
             c.cls = "expected_status_override"
-            c.note = "above ladder at 1-2 sources — S2 status_overrides owns this"
+            c.note = "above ladder at 1-2 sources — status_overrides owns this"
         else:
             c.verdict = "match"
             c.note = "3+ sources VERIFIED consistent with ladder (ROBUST needs subdomain evidence)"
@@ -439,40 +479,65 @@ class PartitionError(Exception):
     pass
 
 
-def split_partitions(text: str) -> tuple[str, str, str]:
-    """Split registry text into (authored_head, derived_region, authored_tail)
-    at the S2 comment markers. Canonical order: DERIVED_MARKER first, then
-    AUTHORED_MARKER — the DERIVED region is exactly the span between them;
-    everything before DERIVED_MARKER and from AUTHORED_MARKER on is AUTHORED
-    passthrough. Raises PartitionError when markers are absent or out of
-    order — the --apply refuses-to-run signal pre-S2."""
+def split_partitions(text: str) -> list[tuple[str, str]]:
+    """Split registry text into an ordered list of (kind, text) segments where
+    kind is 'authored' or 'derived'. A `# === DERIVED: ... ===` marker line
+    starts a derived segment; `# === AUTHORED ===` starts an authored segment;
+    text before the first marker is authored. Markers are NOT included in the
+    segment texts. Raises PartitionError when no markers are present (the
+    --apply refuses-to-run signal pre-S2)."""
     eol = "\r\n" if "\r\n" in text else "\n"
     lines = text.split(eol)
-    i_der = i_auth = None
-    for i, ln in enumerate(lines):
+    segs: list[tuple[str, str]] = []
+    kind = "authored"
+    buf: list[str] = []
+    for ln in lines:
         s = ln.strip()
-        if s == DERIVED_MARKER and i_der is None:
-            i_der = i
-        if s == AUTHORED_MARKER and i_auth is None:
-            i_auth = i
-    if i_der is None or i_auth is None:
+        if s in (DERIVED_MARKER, AUTHORED_MARKER):
+            segs.append((kind, eol.join(buf)))
+            buf = []
+            kind = "derived" if s == DERIVED_MARKER else "authored"
+            continue
+        buf.append(ln)
+    segs.append((kind, eol.join(buf)))
+    if not any(k == "derived" for k, _ in segs):
         raise PartitionError("registry lacks DERIVED/AUTHORED partition markers "
                              "(S2 not applied to this file)")
-    if i_auth < i_der:
-        raise PartitionError("partition markers out of canonical order "
-                             "(DERIVED must precede AUTHORED)")
-    return (eol.join(lines[:i_der]) + eol,
-            eol.join(lines[i_der + 1:i_auth]),
-            eol.join(lines[i_auth:]))
+    return segs
 
 
-def rebuild_registry_text(old_text: str, derived_region_text: str) -> str:
-    """Re-emit the registry with a new DERIVED region, byte-preserving the
-    AUTHORED parts and the file's EOL convention."""
+def derived_regions(text: str) -> list[str]:
+    """The derived-segment texts (in order)."""
+    return [t for k, t in split_partitions(text) if k == "derived"]
+
+
+def rebuild_registry_text(old_text: str, derived_region_texts: list[str] | str) -> str:
+    """Re-emit the registry with new DERIVED segment texts (list, one per
+    derived segment in order; a plain string replaces the FIRST derived
+    segment and keeps the rest). Byte-preserves AUTHORED segments and the
+    file's EOL convention; marker lines are re-inserted at segment bounds."""
     eol = "\r\n" if "\r\n" in old_text else "\n"
-    head, _old, tail = split_partitions(old_text)
-    region = derived_region_text.replace("\r\n", "\n").replace("\n", eol)
-    return head + DERIVED_MARKER + eol + region.rstrip(eol) + eol + tail
+    segs = split_partitions(old_text)
+    if isinstance(derived_region_texts, str):
+        new_map = {next(i for i, (k, _t) in enumerate(segs) if k == "derived"):
+                   derived_region_texts}
+    else:
+        der_idxs = [i for i, (k, _t) in enumerate(segs) if k == "derived"]
+        if len(derived_region_texts) != len(der_idxs):
+            raise PartitionError(f"expected {len(der_idxs)} derived segment "
+                                 f"texts, got {len(derived_region_texts)}")
+        new_map = dict(zip(der_idxs, derived_region_texts))
+    out: list[str] = []
+    for i, (kind, old_seg) in enumerate(segs):
+        out.append(DERIVED_MARKER if kind == "derived" else AUTHORED_MARKER)
+        seg = new_map.get(i, old_seg)
+        out.append(seg.replace("\r\n", "\n").replace("\n", eol))  # eol-normalize only
+    # drop a leading AUTHORED marker when the file does not start with one:
+    # segment 0 is authored-with-no-marker if the original had no marker there
+    first = segs[0][0]
+    if first == "authored" and not old_text.lstrip().startswith(AUTHORED_MARKER):
+        out = out[1:]  # omit the spurious leading AUTHORED marker
+    return eol.join(out)
 
 
 # --------------------------------------------------------------------------- #
@@ -642,9 +707,10 @@ def theory_rebuild(scan: CorpusScan, doc: dict, alias: AliasIndex) -> list[Check
             if len(homes) > 1:
                 d_hf.note = f"pattern spans {len(homes)} files: {homes}"
         checks.append(d_hf)
+        n_status = max(len(papers), int(pentry.get("source_count") or 0))
         checks.append(status_cmp_check(
             f"{base}.status", norm_status(pentry.get("status")),
-            ladder_status(len(papers)), len(papers)))
+            ladder_status(n_status), n_status, doc=doc))
     for pid in sorted(set(blocks_by_pattern) - set(patterns)):
         grp = blocks_by_pattern[pid]
         papers = sorted({p for b in grp for p in theory_block_papers(b, alias)})
@@ -1061,9 +1127,11 @@ def results_rebuild(scan: CorpusScan, doc: dict, alias: AliasIndex) -> list[Chec
                         f"{vbase}.corpus_path", on_disk=str(v["corpus_path"]),
                         derived=d["corpus_path"])))
                 if v.get("status") is not None:
+                    n_status = max(len(src_disk),
+                                   int(v.get("paper_count") or 0))
                     checks.append(status_cmp_check(
                         f"{vbase}.status", norm_status(v.get("status")),
-                        ladder_status(len(src_disk)), len(src_disk)))
+                        ladder_status(n_status), n_status, doc=doc))
                 # skeleton: re-derive from the block's **骨架** field; compare
                 # whitespace-insensitively (executor wrote '. '-split + >- fold)
                 if v.get("skeleton") is not None:
@@ -1415,15 +1483,40 @@ def run_self_tests() -> int:
                 "paper_count: 3\r\n"
                 f"{AUTHORED_MARKER}\r\n"
                 "note: 手写批评账\r\n")
-        head, region, tail = split_partitions(text)
+        segs = split_partitions(text)
+        assert [k for k, _ in segs] == ["authored", "derived", "authored"]
+        head, region, tail = (t for _k, t in segs)
         assert "meta: top" in head and "paper_count" in region and "手写批评账" in tail
         new = rebuild_registry_text(text, "paper_count: 5")
         assert new.count("\r\n") == new.count("\n")          # CRLF-only, no mixed EOL
-        head2, region2, tail2 = split_partitions(new)
-        assert head2 == head and tail2 == tail               # AUTHORED byte-preserved
-        assert "paper_count: 5" in region2
+        segs2 = split_partitions(new)
+        assert [t for k, t in segs2 if k == "authored"] == [head, tail]  # byte-preserved
+        assert "paper_count: 5" in [t for k, t in segs2 if k == "derived"][0]
         assert yaml.safe_load(new.replace(DERIVED_MARKER, "# d")
                               .replace(AUTHORED_MARKER, "# a")) is not None
+
+    @register
+    def test_partition_multi_segment():
+        """Markers may alternate; rebuild replaces each derived segment by
+        position and byte-preserves every authored segment."""
+        text = ("meta:\n  last_updated: x\n"
+                f"{DERIVED_MARKER}\n"
+                "counts:\n  a: 1\n"
+                f"{AUTHORED_MARKER}\n"
+                "status_rules: keep1\n"
+                f"{DERIVED_MARKER}\n"
+                "patterns:\n  p1: 2\n"
+                f"{AUTHORED_MARKER}\n"
+                "batch_history: keep2\n")
+        segs = split_partitions(text)
+        assert [k for k, _ in segs] == ["authored", "derived", "authored",
+                                        "derived", "authored"]
+        new = rebuild_registry_text(text, ["counts:\n  a: 9", "patterns:\n  p1: 9"])
+        assert "a: 9" in new and "p1: 9" in new
+        assert "keep1" in new and "keep2" in new and "last_updated: x" in new
+        assert "\r\n" not in new  # LF-only file stays LF-only
+        assert yaml.safe_load(new.replace(DERIVED_MARKER, "# d")
+                              .replace(AUTHORED_MARKER, "# a"))["patterns"]["p1"] == 9
 
     @register
     def test_partition_error_pre_s2():
@@ -1454,6 +1547,25 @@ def run_self_tests() -> int:
         assert fm["source_papers"] == ["a_2005_x", "b2010y"]
         assert fm["status_token"] == "EMERGING"
         assert _parse_fm_comment("just a note") is None
+
+    @register
+    def test_wb_meta_format():
+        d = parse_wb_meta('dim=Boundary status=EMERGING gap=Incompleteness '
+                          'tbt="机制推演型"')
+        assert d == {"dim": "Boundary", "status": "EMERGING",
+                     "gap": "Incompleteness", "tbt": "机制推演型"}, d
+        import tempfile
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            (root / "W.md").write_text(
+                "## 变体 A\n\nbody\n\n"
+                "<!-- wb:lu2022_frenemies:a1_x -->\n"
+                "<!-- wb-meta: dim=Boundary status=EMERGING -->\n",
+                encoding="utf-8", newline="")
+            scan = scan_corpus(root)
+            b = scan.files["W.md"]["blocks"][0]
+            assert b.wb_meta == {"dim": "Boundary", "status": "EMERGING"}
+            assert len(b.wb) == 1  # wb marker unaffected by wb-meta line
 
     @register
     def test_alias_engine():
@@ -1492,7 +1604,10 @@ def run_self_tests() -> int:
                 "  entry:\n    papers:\n      - a2010\n"
                 f"{AUTHORED_MARKER}\n"
                 "  deep:\n    kept: true\n")
-        head, region, tail = split_partitions(text)
+        segs = split_partitions(text)
+        head = segs[0][1]
+        region = next(t for k, t in segs if k == "derived")
+        tail = segs[-1][1]
         assert "  sub: 1" in head and "kept: true" in tail
         assert "      - a2010" in region
         new = rebuild_registry_text(text, region)
