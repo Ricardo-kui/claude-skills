@@ -57,6 +57,7 @@ updated: 2026-08-12
 
 ---
 
+<!-- wb:ridge_hill_ingram_kolomeitsev_worrell_2024_amj:legacy_Tobit_1 -->
 ## 反模式
 
 | 反模式 | 表现 | 应做 |

@@ -1501,6 +1501,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 
 ---
 
+<!-- wb:ridge_hill_ingram_kolomeitsev_worrell_2024_amj:legacy_OLS-FE_54 -->
 ### 变体 55: R5 外部证据实际重要性辩护拍 — "likely to be particularly important in practice" (1篇高价值)
 
 **来源论文**: Ridge, Kim, Ingram & Lee 2024 (Academy of Management Journal)
@@ -1517,6 +1518,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 
 ---
 
+<!-- wb:ridge_hill_ingram_kolomeitsev_worrell_2024_amj:legacy_OLS-FE_55 -->
 ### 变体 56: R2 Direct/Indirect/Total 路径表架构 (2026-08-13)
 
 <!-- wb:kalaignanam_2013_jm:legacy_OLS-FE_56 -->
