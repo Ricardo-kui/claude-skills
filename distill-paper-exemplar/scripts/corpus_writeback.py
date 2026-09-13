@@ -294,16 +294,20 @@ def update_registry(registry: Path, stem: str, paper: str, journal: str,
                         f"slots_covered+{slot_tag}")
         return f"REGISTRY: entry '{key}' already lists {paper} — no change"
     entry2 = entry.replace(f"paper_count: {count}", f"paper_count: {count + 1}", 1)
-    # locate the papers: list and append after its last consecutive item
+    # locate the papers: list and append after its last consecutive item.
+    # text is LF in memory (read_text translates CRLF; write_text restores
+    # it on Windows) — never inject bare \r here.
     lines2 = entry2.split("\n")
+    item_re = re.compile(r"^(\s*)- .+$")
     papers_idx = next((i for i, l in enumerate(lines2)
                        if re.match(r"^\s*papers:\s*$", l)), None)
-    if papers_idx is None:
+    flow_idx = next((i for i, l in enumerate(lines2)
+                     if re.match(r"^\s*papers:\s*\[\s*\]\s*$", l)), None)
+    if papers_idx is None and flow_idx is None:
         # Empty-shell entry (paper_count present, papers list absent — e.g.
         # 动态面板-GMM 2026-09-12): create the list inline instead of skipping.
         # Kills the "registry-sync agent" class for methods corpora.
-        # papers/paper_count are SIBLINGS at the same indent; respect the
-        # file's EOL style (methods registry is CRLF).
+        # papers/paper_count are SIBLINGS at the same indent.
         eol = "\r\n" if "\r\n" in entry else "\n"
         entry2 = entry.replace(
             f"paper_count: {count}",
@@ -313,20 +317,33 @@ def update_registry(registry: Path, stem: str, paper: str, journal: str,
         new_text[str(registry)] = text[:start] + entry2 + text[end:]
         return (f"REGISTRY: {key} papers list created, paper_count {count}->{count + 1}, "
                 f"+{paper} ({journal})" + (f", slots_covered+{slot_tag}" if slot_tag else ""))
-    item_re = re.compile(r"^(\s*)- .+$")
-    last = papers_idx
-    for j in range(papers_idx + 1, len(lines2)):
-        if item_re.match(lines2[j]):
-            last = j
-        elif lines2[j].strip() == "":
-            continue
+    if flow_idx is not None:
+        # flow-style empty list `papers: []`: convert IN PLACE to a block
+        # list. Injecting a second block-style papers key elsewhere would
+        # YAML-shadow this one (duplicate key, last wins → parsed back as
+        # []; 2026-09-13 Mao S5 run on 实证对象构建).
+        ind_f = re.match(r"^(\s*)papers:", lines2[flow_idx]).group(1)
+        lines2[flow_idx] = f"{ind_f}papers:"
+        lines2.insert(flow_idx + 1, f"{ind_f}- {paper} ({journal})")
+        entry2 = "\n".join(lines2)
+    else:
+        last = papers_idx
+        for j in range(papers_idx + 1, len(lines2)):
+            if item_re.match(lines2[j]):
+                last = j
+            elif lines2[j].strip() == "":
+                continue
+            else:
+                break
+        if last == papers_idx:
+            # block-style empty list: insert the first item under the key
+            # instead of skipping (a skipped append desyncs paper_count)
+            ind_k = re.match(r"^(\s*)papers:", lines2[papers_idx]).group(1)
+            lines2.insert(papers_idx + 1, f"{ind_k}- {paper} ({journal})")
         else:
-            break
-    if last == papers_idx:
-        return f"REGISTRY: entry '{key}' papers list empty — SKIPPED papers append"
-    ind_item = item_re.match(lines2[last]).group(1)
-    lines2.insert(last + 1, f"{ind_item}- {paper} ({journal})")
-    entry2 = "\n".join(lines2)
+            ind_item = item_re.match(lines2[last]).group(1)
+            lines2.insert(last + 1, f"{ind_item}- {paper} ({journal})")
+        entry2 = "\n".join(lines2)
     if slot_tag:
         entry2 = _merge_slots_covered(entry2, slot_tag)
     gm = re.search(r"^(\s+)%s: (\d+)$" % re.escape(gap), entry2, re.M)

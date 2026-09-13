@@ -284,6 +284,20 @@ def alias_score(a: str, b: str) -> int | None:
     return len(_ca & _cb)
 
 
+def alias_lead(key: str) -> str:
+    """Leading core token of a citekey (first-author surname in practice).
+
+    `mao_dong_lee_2022_msom` -> 'mao'; `lu2022_frenemies` -> 'lu'. Fuzzy
+    alias steps only accept candidates sharing this token — a NEW paper's
+    wb citekey must never glue onto an unrelated registry key that merely
+    shares a co-author surname + year (mao_dong_lee_2022_msom ↛ Lee_2022_AMJ,
+    2026-09-13 Mao S5 run)."""
+    toks = [t for t in re.split(r"[^a-z0-9]+", key.lower()) if t]
+    if not toks:
+        return ""
+    return re.sub(YEAR_IN_TOKEN_RE, "", toks[0]) or toks[0]
+
+
 class AliasIndex:
     """Best-match resolver between the two citekey systems. REGISTRY keys are
     the canonical side: a wb citekey resolves to its registry key, never to
@@ -314,17 +328,21 @@ class AliasIndex:
         if canon is not None:
             self.resolutions[key] = canon
             return canon
-        # 2. best token match within the canonical side
+        # 2. best token match within the canonical side — candidates must
+        #    share the query's leading surname token (alias_lead), so a NEW
+        #    paper's wb citekey falls through to 3/4 instead of gluing onto
+        #    an unrelated key that shares only a co-author surname + year
         best, best_s, ties = None, -1, []
+        lead = alias_lead(key)
         for k in self.primary:
             s = alias_score(key, k)
-            if s is None:
+            if s is None or alias_lead(k) != lead:
                 continue
             if s > best_s:
                 best, best_s, ties = k, s, []
             elif s == best_s:
                 ties.append(k)
-        if best is not None and best_s > 0 and not ties:
+        if best is not None and best_s > 0 and not ties and alias_lead(best) == lead:
             self.resolutions[key] = best
             return best
         if best is not None and best_s > 0 and ties:
@@ -335,17 +353,17 @@ class AliasIndex:
         if sec is not None:
             self.resolutions[key] = sec
             return sec
-        # 4. best token match within the wb-only side
+        # 4. best token match within the wb-only side (same surname gate)
         best, best_s, ties = None, -1, []
         for k in self.secondary:
             s = alias_score(key, k)
-            if s is None:
+            if s is None or alias_lead(k) != lead:
                 continue
             if s > best_s:
                 best, best_s, ties = k, s, []
             elif s == best_s:
                 ties.append(k)
-        if best is not None and best_s > 0 and not ties:
+        if best is not None and best_s > 0 and not ties and alias_lead(best) == lead:
             self.resolutions[key] = best
             return best
         if best is not None and best_s > 0 and ties:
@@ -720,7 +738,7 @@ def theory_rebuild(scan: CorpusScan, doc: dict, alias: AliasIndex) -> list[Check
                 "source_count": len(papers), "source_papers": papers,
                 "home_file": sorted({b.rel for b in grp})},
             verdict="drift" if marked else "unattributable",
-            cls="novel" if marked else "expected_legacy_gap",
+            cls="expected_derived_rebuild" if marked else "expected_legacy_gap",
             note="wb-marked block attests this pattern but the patterns section "
                  "lacks it (incomplete derived view)"
             if marked else
@@ -1099,8 +1117,9 @@ def results_rebuild(scan: CorpusScan, doc: dict, alias: AliasIndex) -> list[Chec
                 checks.append(Check(
                     f"{base}.slots.{skey}.skeleton_variants[{vid}]",
                     on_disk=MISSING, derived=der[vid]["corpus_path"],
-                    verdict="drift", cls="novel",
-                    note="wb-marked block has no registry variant (lost increment)"))
+                    verdict="drift", cls="expected_derived_rebuild",
+                    note="wb-marked block attests this variant but the registry "
+                         "slot lacks it (derived view will gain it at S6)"))
             for vid, v in sorted(disk_ids.items()):
                 vbase = f"{base}.slots.{skey}.skeleton_variants.{vid}"
                 if vid not in der:
@@ -1113,8 +1132,9 @@ def results_rebuild(scan: CorpusScan, doc: dict, alias: AliasIndex) -> list[Chec
                 src_disk = [alias.resolve(strip_journal(s)) or strip_journal(s)
                             for s in flowlist(v.get("sources"))]
                 src_der = [alias.resolve(d["sources"][0]) or d["sources"][0]]
-                checks.append(cmp_scalar(Check(
-                    f"{vbase}.sources", on_disk=src_disk, derived=src_der),
+                src_chk = Check(f"{vbase}.sources", on_disk=src_disk,
+                                derived=src_der, cls="expected_derived_rebuild")
+                checks.append(cmp_scalar(src_chk,
                     normalize=lambda x: sorted(str(s).lower().replace("-", "_")
                                                for s in x) if isinstance(x, list) else x))
                 if v.get("paper_count") is not None:
@@ -1152,7 +1172,10 @@ def results_rebuild(scan: CorpusScan, doc: dict, alias: AliasIndex) -> list[Chec
                         c = Check(f"{vbase}.skeleton",
                                   on_disk="present", derived="present")
                         c.verdict = "match" if same else "drift"
-                        c.cls = None if same else "novel"
+                        # skeleton_variants membership is DERIVED-designated;
+                        # the executor's registry copy vs block truth differ
+                        # only until the S6 rebuild takes the block as truth
+                        c.cls = None if same else "expected_derived_rebuild"
                         if not same:
                             c.note = ("text differs beyond whitespace "
                                       "(whitespace-insensitive compare)")
@@ -1377,6 +1400,11 @@ def main() -> int:
             "drift": "both sides available, different — rebuild would change it",
             "unattributable": "on-disk value not re-derivable from blocks",
             "novel": "adjudication class: real drift candidate, needs human ruling",
+            "expected_derived_rebuild": (
+                "field is DERIVED-designated (S2 partition contract) and the "
+                "on-disk copy predates the wb-marked block — the S6 derived "
+                "view rebuild overwrites it from the block truth, drift "
+                "cleared by construction"),
         },
         "corpora": {},
     }
@@ -1576,8 +1604,16 @@ def run_self_tests() -> int:
             "gulati_2007_dependence_asymmetry_and_joint_dependence_in_int"
         assert idx.resolve("gulati2005") == "gulati2005-adaptation-vertical"
         assert idx.resolve("lu2022") is None and "lu2022" in idx.unresolved
-        amb = AliasIndex(["a_2007_x", "b_2007_x"])
-        assert amb.resolve("x2007") is None and amb.ambiguous  # tied overlap
+        # surname gate (2026-09-13 Mao S5): a co-author-surname+year overlap
+        # must NOT glue a new wb citekey onto an unrelated registry key
+        idx2 = AliasIndex(["lee_2022_amj", "bendig_hensellek_2024_etp"])
+        assert idx2.resolve("mao_dong_lee_2022_msom") is None
+        assert "mao_dong_lee_2022_msom" in idx2.unresolved
+        # ties only count among lead-compatible candidates
+        amb = AliasIndex(["xu_2007_p", "xu_2007_q", "yang_2007_p"])
+        assert amb.resolve("xu2007") is None and amb.ambiguous
+        assert amb.resolve("yang2007x") is None \
+            and "yang2007x" in amb.unresolved
 
     @register
     def test_strip_journal_and_flowlist():

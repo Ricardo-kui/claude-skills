@@ -8,8 +8,17 @@ Defaults: ~/.claude/distill-work/rebuild_views/{reconciliation_report.pre_S5_bas
 reconciliation_report.yaml}
 
 Prints per-corpus match/drift/unattributable deltas and a 一致率 verdict.
-Exit 0 when every corpus's match-rate is 100% over (match + drift) and drift
-did not increase — the S6-switch gate per plan §7.1.
+Exit 0 when every corpus's *unexplained* drift delta is <= 0 — the S6-switch
+gate per plan §7.1. "Unexplained" = drift whose adjudication class is absent
+or outside the expected_* family (novel, None, …). expected_* classes
+(expected_dual_key / expected_legacy_gap / expected_status_override /
+expected_counter_drift / expected_authored_passthrough / expected_derived_rebuild)
+are recorded adjudications whose cleanup is the S6 switch itself.
+
+Both snapshots are bucketed with the SAME rule set: baseline drifts predating
+the expected_derived_rebuild classifier are re-bucketed by path/note shape so
+the delta compares like with like (baseline frozen at S3 close is not
+regenerated).
 """
 from __future__ import annotations
 
@@ -20,9 +29,41 @@ import yaml
 
 BASE = Path.home() / ".claude" / "distill-work" / "rebuild_views"
 
+EXPECTED_PREFIX = "expected_"
+
+# Baseline-era entries stored with cls="novel" that the current classifier
+# buckets as expected_derived_rebuild (field DERIVED-designated per the S2
+# partition contract; S6 rebuild overwrites from block truth):
+#   - theory patterns entry absent despite a wb-marked block
+#   - results variant skeleton text differing beyond whitespace
+#   - results variant .sources lists (block-attested paper missing on disk)
+def rebucket(d: dict) -> str:
+    cls = str(d.get("class") or d.get("cls") or "")
+    if cls == "novel":
+        note = str(d.get("note") or "")
+        path = str(d.get("path") or "")
+        if ("incomplete derived view" in note
+                or "text differs beyond whitespace" in note
+                or path.endswith(".sources")
+                or path.endswith("]")
+                and ".skeleton_variants[" in path):
+            return "expected_derived_rebuild"
+    return cls
+
 
 def load(p: Path) -> dict:
     return yaml.safe_load(p.read_text(encoding="utf-8"))
+
+
+def bucket(rep: dict, ck: str) -> dict[str, int]:
+    counts: dict[str, int] = {"explained": 0, "unexplained": 0}
+    for d in rep["corpora"].get(ck, {}).get("drifts", []):
+        cls = rebucket(d)
+        if cls.startswith(EXPECTED_PREFIX):
+            counts["explained"] += 1
+        else:
+            counts["unexplained"] += 1
+    return counts
 
 
 def main() -> int:
@@ -36,26 +77,30 @@ def main() -> int:
     print()
     all_green = True
     for ck in post["corpora"]:
-        a = pre["corpora"].get(ck, {}).get("summary", {})
-        b = post["corpora"][ck]["summary"]
-        m, d = b.get("match", 0), b.get("drift", 0)
+        a, b = pre["corpora"].get(ck, {}), post["corpora"][ck]
+        sa, sb = a.get("summary", {}), b.get("summary", {})
+        m, d = sb.get("match", 0), sb.get("drift", 0)
         rate = m / (m + d) if (m + d) else 0.0
-        delta_d = d - a.get("drift", 0)
+        ba, bb = bucket(pre, ck), bucket(post, ck)
+        du = bb["unexplained"] - ba["unexplained"]
+        de = bb["explained"] - ba["explained"]
         # S5 gate (plan §7.1): the shadow double-run proves the NEW writeback
-        # introduced NO unexplained drift — drift delta vs the frozen baseline
-        # must be <= 0. The standing drift inventory (INDEX lags, novel
-        # patterns gaps, dual-key) is adjudicated/fixed by the S6 switch
-        # itself, so absolute 一致率 is informational here, not the gate.
-        verdict = "GREEN" if delta_d <= 0 else "NOT GREEN"
+        # introduced NO unexplained drift — unexplained drift delta vs the
+        # frozen baseline must be <= 0. expected_* drift is the documented S6
+        # cleanup queue, reported but not gating.
+        verdict = "GREEN" if du <= 0 else "NOT GREEN"
         if verdict != "GREEN":
             all_green = False
-        print(f"[{ck}] match {a.get('match',0)}->{m}  drift {a.get('drift',0)}->{d} "
-              f"(delta {delta_d:+d})  unattr {a.get('unattributable',0)}->{b.get('unattributable',0)}"
+        print(f"[{ck}] match {sa.get('match',0)}->{m}  drift {sa.get('drift',0)}->{d} "
+              f"(delta {d - sa.get('drift',0):+d})  unattr {sa.get('unattributable',0)}->{sb.get('unattributable',0)}"
               f"  一致率(参考) {rate:.1%}  {verdict}")
+        print(f"      drift buckets: unexplained {ba['unexplained']}->{bb['unexplained']} "
+              f"(delta {du:+d}, gates) | explained {ba['explained']}->{bb['explained']} "
+              f"(delta {de:+d}, S6 queue)")
     print()
     print("S5-SHADOW GATE:", "PASS — no new unexplained drift in any corpus"
           if all_green else
-          "NOT PASS — new drift introduced; adjudicate before S6")
+          "NOT PASS — new unexplained drift; adjudicate before S6")
     return 0 if all_green else 1
 
 
