@@ -7,7 +7,7 @@
 | 带 | 定义 | 处理 | 使用节 |
 |---|---|---|---|
 | **gap** | 中/英复检后仍无命中（零命中≠缺口），或该设计类型/估计器的槽位覆盖存在缺口（静态） | **HIGH**：ADD 候选，优先深读 | 全部四节 |
-| **薄弱** | 状态驱动：目标变体 EMERGING（单篇来源）/ 验证状态低 /「待第二篇交叉验证」 | **HIGH**：EXTEND/REPLACE 候选 | intro / theory |
+| **薄弱** | 状态驱动：目标变体 EMERGING（单篇来源且不命中 status_policy 作者/域规则）/ 验证状态低 /「待第二篇交叉验证」 | **HIGH**：EXTEND/REPLACE 候选 | intro / theory |
 | **critique_heavy** | 批评驱动：registry `revise + reject ≥ 2`；`common_revise_reasons` 是精炼依据 | **HIGH**：REPLACE/EXTEND 候选 | methods / results |
 | **quiet** | 多篇验证 / 其余 | MEDIUM：正常蒸馏（除非论文带来明确新维度） | 全部四节 |
 

@@ -74,7 +74,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 | M9 | 多研究 / 实验程序 / 质性编码 | `references/slot-M9.md` | 仅多研究设计（逐研究重复 M1–M8） | 非多研究 |
 | M10 | Methods 到 Results 的过渡 | `references/slot-M10.md` | 通常省略（顶刊极度罕见 <10%） | 默认跳过 |
 
-3. **设计类型变体（飞轮积累，勿漏读）**：确定 design type 后先查 `corpus/INDEX.md` 的「设计类型索引表」确认变体数；变体数 >0 → **必须加载 `corpus/[设计类型].md`**（先读顶部「变体速查表」——按槽位+验证状态定位候选（三档词表与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀；召回主题条目按用户裁决单源 VERIFIED），再精读对应变体正文）。变体数 = 0 的类型仅用 slot 主骨架。
+3. **设计类型变体（飞轮积累，勿漏读）**：确定 design type 后先查 `corpus/INDEX.md` 的「设计类型索引表」确认变体数；变体数 >0 → **必须加载 `corpus/[设计类型].md`**（先读顶部「变体速查表」——按槽位+验证状态定位候选（三档词表与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀；作者/召回域单源 VERIFIED 由 `distill-paper-exemplar/scripts/status_policy.yaml` 派生，非手工标注），再精读对应变体正文）。变体数 = 0 的类型仅用 slot 主骨架。
 
 **完成判据**：设计类型 + 槽位序列已定（含分支调整理由）；slot 与设计类型变体已加载。
 

@@ -233,7 +233,7 @@ phase_4_corpus_reference:
 
 1. **登记来源**：在 `source_papers` 下添加论文条目（`作者_年份_期刊` 键），含 display_name / journal / year / subfield / theory_build_type。写作工艺书（非实证论文）额外标注 `source_tier: "auxiliary"`。
 2. **登记 fragment**：每个入库模式一个 `tfr_NNN`（沿用全表最大编号递增），含 type / title / home_files / makadok_dimension / status。
-3. **定状态**：按 `status_rules`——1–2 来源 = EMERGING，3+ = VERIFIED，5+ 且跨 2 子领域 = ROBUST。auxiliary 来源单独永远停在 EMERGING，只登记出处。
+3. **定状态**：由 `distill-paper-exemplar/scripts/status_policy.yaml`（C 项 2026-09-13 起为单一策略源）驱动——阶梯 1–2 来源 = EMERGING，3+ = VERIFIED，5+ 且跨 2 子领域 = ROBUST（ROBUST 不可扫描派生，仅 override/透传）；作者规则（Gulati/Westphal/Pollock 系）与召回域规则单源即 VERIFIED；auxiliary 来源单独永远停在 EMERGING，只登记出处。人工逐条升级走写回 plan 的 `status_overrides_addenda`。
 4. **更新 patterns 聚合**：若该模式已有 patterns 条目，追加 source_papers 并升级 status；没有则新建。
 5. **更新 meta**：`last_updated`、`total_papers_indexed`、`batches_processed`，并在 `note` 追加一行批次摘要（蒸馏了哪篇、加了什么模式、有无纠正误分类）。
 6. **检查 `next_batch_targets`**：若新论文命中某个目标模式，更新 current_sources/papers_needed；凑齐即在批次摘要中宣告状态升级。

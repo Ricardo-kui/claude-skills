@@ -179,6 +179,8 @@ Phase 4 完成后，根据 `corpus_enrichment` 块更新 `../../write-introducti
 | `paper_count >= 3` | **VERIFIED** |
 | `paper_count <= 2` | **EMERGING** |
 
+> 权威策略源（C 项 2026-09-13）：`distill-paper-exemplar/scripts/status_policy.yaml`——上表为镜像；作者规则（Gulati/Westphal/Pollock 系）与召回域规则单源即 VERIFIED；逐条人工升级走写回 plan 的 `status_overrides_addenda`。
+
 **更新步骤**：
 
 1. 将 Phase 4 输出的 `corpus_enrichment` YAML 块保存为临时文件（如 `/tmp/corpus_enrichment.yaml`）

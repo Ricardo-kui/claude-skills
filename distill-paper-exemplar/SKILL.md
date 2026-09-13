@@ -123,7 +123,7 @@ when_to_use: "用户给一篇完整论文要求整篇蒸馏/整篇学习时；�
    **S6 起的 registry 语义**：执行器只保留块插入 + wb-meta + tfr 分配 + batch_history
    append + INDEX 行；registry 的 papers/paper_count/gap_distribution/patterns/
    summary/skeleton_variants 计数等 DERIVED 字段由 apply 末尾的
-   `rebuild_apply.py --corpus <节>` 从 wb 块扫描重建（AUTHORED 段按键透传、永不降级
+   `rebuild_apply.py --corpus <节>` 从 wb 块扫描重建（AUTHORED 段按键透传；status 派生 = status_overrides ⊕ `scripts/status_policy.yaml`（作者/召回域规则）⊕ ladder；永不降级
    用户裁定状态）。verify 末尾的 **V3-drift** 终检 = 对涉事库跑 rebuild dry-run，
    计划变更非零即 FAIL（视图未收敛）。
    完成后运行 `preprocess_l0.py <MD> --clean` 清除整个工作目录（默认位置在 Vault 外，
