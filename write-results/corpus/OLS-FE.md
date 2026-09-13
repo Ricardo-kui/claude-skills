@@ -425,7 +425,6 @@ fine-grained estimates.
 ### 变体 66: R7 — 三威胁小节化稳健性：选择性/内生性 → 替代估计 → 构念效度（post_2022_women_tmt_strategic_renewal 型）
 
 **来源论文**: Post, Lokshin & Boone 2022 (AMJ)
-<!-- wb:post_du_2022_amj:legacy_OLS-FE_66 -->
 **验证状态**: VERIFIED（expert_audit_override, user 2026-08-29）
 **槽位**: R7（独立 "Robustness Checks" 小节，falling action）
 
@@ -754,7 +753,6 @@ Substantively, a [one-SD] increase in [predictor] is associated with a
 
 ### 变体 65: R4 — 分样本 null→significant 对 + 组内 Wald + 跨子样本 Chow 诚实降级（post_2022_women_tmt_strategic_renewal 型）
 
-<!-- wb:post_du_2022_amj:legacy_OLS-FE_65 -->
 **来源论文**: Post, Lokshin & Boone 2022 (AMJ)
 **验证状态**: VERIFIED（expert_audit_override, user 2026-08-29）
 **槽位**: R4（亦服务 R6 诚实降级）
@@ -900,7 +898,6 @@ difference is not significant (p = [value]).
 **与原骨架差异**: write-results SKILL.md 的 R1 通用段落未覆盖多项式/交互模型特有的 mean-centering、condition number 和非中心复制三重诊断。本文提供了完整且简洁的整合范例：诊断不是为了例行公事，而是为了说明"高阶项和交互项没有造成多重共线性问题"，并解释为何最终报告非中心化系数（便于解释）。
 
 ### 变体 67: R1 — 双路径前提描述统计：理论预言零相关 + moderator 分布与条件定义（post_2022_women_tmt_strategic_renewal 型）
-<!-- wb:post_du_2022_amj:legacy_OLS-FE_67 -->
 
 **来源论文**: Post, Lokshin & Boone 2022 (AMJ)
 **验证状态**: VERIFIED（expert_audit_override, user 2026-08-29）
@@ -958,6 +955,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **诚实边界**: 无模型证据不能替代模型检验，也不能用于因果推断；必须在后续段落中明确过渡到控制混淆变量后的模型结果。
 **跨 skill 对齐**: `../write-methods/corpus/面板数据-OLS.md` 变体20（M2.5 model-free evidence 预览）；`write-introduction/hooks/24-positive-trait-dark-side` 建立的读者预期在此得到实证承接。
 
+<!-- wb:chung_low_rust_2022_jams:legacy_OLS-FE_22 -->
 ### 变体 23: R5 四分位距经济显著性 — 从 P25 到 P75 的幅度翻译 (1篇高价值)
 **来源论文**: Chung, Low & Rust 2022 (Journal of the Academy of Marketing Science)
 **原始句锚点**: "Table 4 Column 1 shows that H1 is supported: CEO confidence significantly and positively predicts MMM with δ1 = 0.287, indicating that an interquartile move in CEO confidence from the 25th percentile to the 75th percentile is associated with a 0.29 percentage point increase in MMM. In untabulated tests, we test for H1 using all firms, without restricting to those with CMOs, and continue to find support for H1 with similar economic significance."
@@ -970,6 +968,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **诚实边界**: P25–P75 的解释隐含了 IV 在其分布中段的比较；若 IV 呈高度偏态或存在大量零值，应报告实际对应值（如 P25 = [value], P75 = [value]）而非仅说"interquartile"。
 **跨 skill 对齐**: `../write-methods/corpus/micro-templates/interquartile-economic-significance.md`（M7/M8/M10 预告）；Results 在此兑现 Methods 中预告的经济显著性解释口径。
 
+<!-- wb:chung_low_rust_2022_jams:legacy_OLS-FE_23 -->
 ### 变体 63：R3/R5 ln(时长) DV 的跨列选择性显著 + 天数回译幅度拍（wowak2020 型）
 [功能标签]: R3 主假设检验（时长 DV 变体）+ R5 幅度嵌入
 [骨架]: "We now move to our model that examines [DV_time]. In Table [y], we present the results of the [OLS FE] model that uses the natural log of the number of [time units] from [awareness event] to [action initiation] as the dependent variable. Once again, we include control variables in column (1) and then the [predictor] for all [events] (column (2)) and each [subclass] (columns (3)–(5)). The only column in which [predictor] has a significant relationship with [DV_time] is for [high-severity subclass] in column (3) (β = [value], p < [threshold]). Increasing [predictor] is associated with a faster [outcome] for the most [severe], [stakes descriptor] events needing [action]. This finding provides support for Hypothesis [N]. Interpreting similarly, a one standard deviation increase in [predictor] is associated with a [N]-[unit] acceleration in [DV_time] for the most severe [subclass]."
@@ -992,6 +991,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **诚实边界**: 若第一阶段工具变量不显著，不能进入第二阶段解释；必须报告逆米尔斯比（rho / lambda）的显著性，以判断选择偏误是否确实存在。
 **跨 skill 对齐**: `../write-methods/corpus/两阶段模型.md` 变体3（Heckman 同行 prevalence 排他性限制）；`../write-methods/corpus/micro-templates/heckman-peer-prevalence-exclusion.md`（跨 segments 加权论证）。
 
+<!-- wb:chung_low_rust_2022_jams:legacy_OLS-FE_24 -->
 ### 变体 25: R7 替代 DV 证伪段落 — 领域外结果的预期不显著 (1篇高价值)
 **来源论文**: Chung, Low & Rust 2022 (Journal of the Academy of Marketing Science)
 **原始句锚点**: "An alternative way to establish causality is to provide a falsification test where we examine how AEM—an outcome variable that is not within the decision-making domain of the CMO—is affected by the interaction among CEO confidence, CMO confidence, and Board independence. We use the Heckman selection specification in Table 4 column 3, except that we replace the dependent variable with the level of discretionary accrual the firm has, a measure of the level of AEM (Kothari et al., 2005)."
@@ -1004,6 +1004,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **诚实边界**: 替代 DV 必须与主 DV 有理论上的领域边界；不能事后挑选一个"不显著"的结果作为证伪。应在 Methods 或稳健性部分预先说明为何该 DV 是合适的 falsification 目标。
 **跨 skill 对齐**: `../write-methods/corpus/micro-templates/alternative-dv-falsification.md`（M8/M10 预告替代 DV 设计与替代/转换解释）。
 
+<!-- wb:chung_low_rust_2022_jams:legacy_OLS-FE_25 -->
 ### 变体 26: R7 内生性稳健性表叙事 — threat-by-threat Table 7 汇总 (1篇高价值)
 **来源论文**: Chung, Low & Rust 2022 (Journal of the Academy of Marketing Science)
 **原始句锚点**: "To complement these general endogeneity tests, we next look at specific sources of endogeneity and design tests to rule them out. We tabulate these tests in Table 7 and relegate the details to the web appendix for reasons of space. … The supporting evidence from all these complementary tests confirms the results of the DWH test that there is little reason to believe that endogeneity issues are solely driving the results we observe."
@@ -1018,6 +1019,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **诚实边界**: 若 DWH 或 copula 结果不一致，必须诚实报告并讨论可能原因；不能仅因为"多数稳健性通过"就宣称完全排除内生性。"solely driving" 是审慎措辞，不应升级为"完全排除"。
 **跨 skill 对齐**: `../write-methods/corpus/IV-2SLS.md` 变体5（DWH 检验 + Gaussian copula 内生性叙事）；`../write-methods/corpus/micro-templates/identification-exogeneity.md`（通用外生性论证）。
 
+<!-- wb:chung_low_rust_2022_jams:legacy_OLS-FE_26 -->
 ### 变体 27: 多阶段同 IV 管道衰减 profile — 同一 IV 跨序贯决策阶段的方向/显著性对比 (1篇高价值)
 **来源论文**: Kim & Lee 2026 (Strategic Management Journal)
 **原始句锚点**: "In summary, we fail to find compelling evidence of an association between SRO and voluntary turnover. This lack of association contrasts with the advantages that SRO companies appear to enjoy in the attraction and selection stages, and is consistent with the previously discussed possibility that SRO advantages operate primarily through signaling mechanisms that attenuate as employees gain direct experience with their employer."
@@ -1035,6 +1037,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **与原骨架差异**: 区别于 多研究.md 的 cross-study synthesis（多研究独立样本收敛）——本变体是 **single-study single-IV multi-stage**：同一 IV 跨序贯决策阶段的衰减 profile。核心叙事装置是**跨阶段对比句**（"This lack of association contrasts with the advantages... in the [earlier] stages"）——把"前置显著 + 后置 null"从孤立报告提升为机制发现（用 null 在管道中的位置裁决竞争机制：signaling 随经验衰减 vs enduring preference 持续）。配套 write-methods 见 多研究.md 变体6（管道设计）；配套 post-treatment caveat 见 slot-R6（Slough 2023）。
 **诚实边界**: post-treatment 样本递减让跨阶段估计量来自非随机子样本——后置 null 不可作"无效应"因果结论（见 slot-R6 Slough 变体）。机制裁决须诚实对冲（"cannot definitively adjudicate but full-pipeline evidence suggests"），不可过度断言。
 
+<!-- wb:kim_lee_2026_putting_a_price_on_mission_smj:legacy_OLS-FE_27 -->
 ### 变体 28: R2 — 截面 OLS/FE 中二元内生变量 + 样本选择的双阶段修正表导航 (1篇高价值)
 **来源论文**: Pupovac, Astvansh, Carrillat & Legoux 2026 (Production and Operations Management)
 **原始句锚点**: "Table 1's Column I reports the estimates from the regression that assumes the supplier's customer information disclosure is exogenous. Columns II and III present estimates from the control function method, which controls for the disclosure's potential endogeneity."
@@ -1057,6 +1060,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **与原骨架差异**: 区别于变体 24（Heckman 表格导航）与变体 26（一般性内生性 threat-by-threat）。本变体是 **selection-specific 的递进式防御**——model-free 描述性诊断（IV 不驱动选靶）→ CEM（可观测）→ Heckman（不可观测），每一步处理更深一层的选择来源，且以"associational not causal"诚实收尾。
 **诚实边界**: 三步必须递进（不能只做 CEM 就收尾）；CEM 需报告匹配变量与平衡改善位置；Heckman 必须明确报告工具变量与结果不相关；收尾必须降权为 associational。
 
+<!-- wb:du_tsolmon_2024_os:legacy_OLS-FE_29 -->
 ### 变体 30: R6/R8 — 预测性零结果作为机制证据：排除替代解释的 null-finding 反转 (1篇高价值)
 **来源论文**: Du & Tsolmon 2024 (Organization Science)
 **原始句锚点**: "Interestingly, we find no statistically significant market reaction to structural similarity at the time of deal announcements (see Cumulative Abnormal Returns (CAR) analyses in Online Appendix Table A18). This null finding suggests that the observed associations with improved performance likely reflect integration-related dynamics rather than selection at the time of the deal."
@@ -1068,6 +1072,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **与原骨架差异**: 零结果不是失败，而是**排除替代解释的证据**——若 selection-at-event-time 成立，事件窗反应应显著；反应不显著 → 长期关联来自机制动态而非时点选择。区别于一般 R6 非显著处理（报方向→不显著→不解释幅度→不支持），本变体**主动反转利用**零结果。
 **诚实边界**: 使用条件严格——零结果须被理论预测、替代解释须预测非零结果、零结果须嵌入在更大的显著结果模式中（不能孤立地用 null 论证机制）。
 
+<!-- wb:du_tsolmon_2024_os:legacy_OLS-FE_30 -->
 ### 变体 31: R7 — 替代解释三连驳斥 + 异质性模式作为机制裁决收束 (1篇高价值)
 **来源论文**: Du & Tsolmon 2024 (Organization Science)
 **原始句锚点**: "Our CEM analyses partially address this concern by matching deals on industry, firm size, and public status, characteristics often associated with organizational culture. The persistence of our findings in the matched sample suggests that cultural similarity alone may not explain our results."
@@ -1079,6 +1084,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **与原骨架差异**: 每个替代解释用 "our [method] partially addresses this" 部分回应（不夸大为完全排除），收束句用**异质性模式本身**裁决——H3-H5 的调节显著性被二次利用为替代解释驳斥工具。关键是比较级措辞（"aligns more closely... than"）而非绝对排除。
 **诚实边界**: 异质性裁决必须建立在已报告的调节显著性之上；"partially addresses" 的克制措辞不可省略；比较级收束（more closely than）不可替换为绝对断言（rules out）。
 
+<!-- wb:du_tsolmon_2024_os:legacy_OLS-FE_31 -->
 ### 变体 32: R4 — 外部基准阈值分割 + 边际效应图阈值发现：连续调节的三层验证 (1篇高价值)
 **来源论文**: Du & Tsolmon 2024 (Organization Science)
 **原始句锚点**: "We split the sample by the threshold of 166 miles, which corresponds to the definition of mega-commuting distance by the U.S. Census Bureau. … The marginal effects plot using the full regression model (column 4) shows that the threshold at which distance starts to matter is around 54.6 miles, which corresponds to the "long-distance commuting" distance of 50 or more miles by the U.S. Census Bureau (Online Appendix Figure C)."
@@ -1090,6 +1096,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **与原骨架差异**: 区别于变体 9（±1SD 条件边际效应）与变体 14（低基础率直方图）。本变体的核心是**阈值的外部锚定 + 数据发现的双向验证**——分割点来自权威基准（如 Census 定义）而非任意中位数，且边际效应图发现的阈值再用外部标签印证。
 **诚实边界**: 外部基准必须真实存在且可引用；边际效应图发现的阈值与外部基准不能完全等同（本文 54.6 miles vs 50 miles benchmark——需说明对应关系）；跨子样本系数对比宜配 Wald 检验（本文缺失，见反模式）。
 
+<!-- wb:du_tsolmon_2024_os:legacy_OLS-FE_32 -->
 ### 变体 33: R8 — 下游绩效事后分析：时间增长 + 多指标收敛 + 提示性收尾 (1篇高价值)
 **来源论文**: Du & Tsolmon 2024 (Organization Science)
 **原始句锚点**: "Results show that structural similarity is positively associated with ΔROA in related acquisitions (Online Appendix Table A15). The positive relationship grows over time, with a one-standard-deviation increase in similarity linked to a 76.3% rise in ROA relative to the sample average by year 6."
@@ -1101,6 +1108,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **与原骨架差异**: 区别于变体 5（MCMC 中介）与变体 21（枚举清单）。本变体展示**下游结果 post hoc 的完整展演**——时间动态（效应随时间增长）+ 多指标收敛（ROA/BHAR/Q/goodwill）+ 明确降权（indicative not conclusive）。
 **诚实边界**: 下游绩效分析必须标注子样本缩小；"grows over time" 需有跨年数据支撑；提示性收尾（suggestive but consistent）不可省略，不可把 post hoc 绩效当 confirmatory 证据。
 
+<!-- wb:du_tsolmon_2024_os:legacy_OLS-FE_33 -->
 ### 变体 34: R3 — 2×2 类型学交叉对角描述性比较：回归前的非参数类型对比 (1篇高价值)
 **来源论文**: Du & Tsolmon 2024 (Organization Science)
 **原始句锚点**: "Mirroring our main results, structural matches have the highest retention rates. In the cross-diagonals, 49.9% of target managers are retained by MM acquirers from LM targets compared with 42.2% of target managers retained by LM acquirers from MM targets (the difference is significant at a 5% level)."
@@ -1112,6 +1120,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **与原骨架差异**: 区别于变体 22（四分位单调性 model-free 开场）。本变体处理**类型学设计的非对称交叉对角**——理论载荷在"哪个错位方向更糟"（如 LM acquirer×MM target 比 MM acquirer×LM target 更差），用非参数单元格均值为回归交互提供直觉锚定。
 **诚实边界**: 交叉对角差异的检验方法必须指明（t-test 类型——本文未指明，见反模式）；2×2 单元格均值只是描述性锚定，结论须由回归交互确认；理论解读须回应"为何这个错位方向更糟"。
 
+<!-- wb:du_tsolmon_2024_os:legacy_OLS-FE_34 -->
 ### 变体 35: R3/R5 — 动态面板 ρ 持久性百分比解释 + 跨构念持久性对比 (1篇高价值)
 **来源论文**: Pollock, Lee, Jin & Lashley (2015, Administrative Science Quarterly)
 **原始句锚点**: "Thus the results in models 3 and 4 indicate that 62.3 percent of status and 50.3 percent of reputation in year t–1 persist in year t, holding other factors fixed, suggesting the evolutionary process of status exhibits a greater persistence (or path dependence) than that of reputation. The coefficient for the interaction between age and prior status suggests that the effect of prior status decreases by 5.4 percent each year as the VC firm ages."
@@ -1260,17 +1269,16 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **槽位**: R4（可嵌入多阶段管道的 falling action）
 **骨架**:
 > We next test whether associations between [IV] and [stage outcomes] differ by [demographic/subgroup moderator]. Table [X] extends the main [stage] models by adding [IV] × [Moderator]. At the [front-end stage], the baseline coefficient on [IV] is close to zero (p = [value]), while the interaction is [direction] and statistically significant (p [relation] [threshold]); the pattern is robust to [unit] fixed effects where feasible (p [relation] [threshold]). These estimates indicate that [non-focal subgroup] shows no detectable association with [IV], and that [focal subgroup] accounts for essentially all of the estimated [front-end] advantage. This pattern does not persist in the [mid-pipeline] and [back-end] stages: the most-specified models find [IV] × [Moderator] coefficients that are [direction] and statistically imprecise (p = [value]; p = [value]). [If using unit FE for the main pipeline:] Because within-[unit] fixed effects absorb time-invariant [Moderator], between-subgroup comparisons rely on models without [unit] FE (or on split-sample margins); do not claim within-[unit] gender/demographic contrasts from FE columns.
-<!-- wb:post_du_2022_amj:legacy_OLS-FE_64 -->
 **与原骨架差异**: 区别于变体8（主效应 null + 交互显著的条件化再定位）与变体27（跨阶段主效应衰减、无亚组分解）——本变体的核心是**组成性裁决 + 阶段熄灭**：(1) 用接近零的 baseline [IV] 证明非焦点亚组无关联，从而把已显著的前端主效应重写为"几乎全部由焦点亚组驱动"；(2) 在同一决策管道的中后段报告交互熄灭，把异质性本身做成管道衰减故事的一部分。适用于 multi-stage recruitment / funnel / ASA 设计中人口或偏好异质性只在信息稀薄的前端成立的叙事。
 **诚实边界**: "accounts for all" 须有 baseline ≈ 0 的统计支撑，不可仅因交互显著就宣称；下游交互 null 受 post-treatment selection 约束（见 slot-R6 Slough）；关联语言优先（associated with / advantages），不可升级为因果异质性效应。配套管道主叙事见变体27。
 
+<!-- wb:kim_lee_2026_putting_a_price_on_mission_smj:legacy_OLS-FE_45 -->
 ### 变体 64: R3 — 双处理对照四拍 + Wald 系数差检验（post_2022_women_tmt_strategic_renewal 型）
 
 **来源论文**: Post, Lokshin & Boone 2022 (AMJ)
 **验证状态**: VERIFIED（expert_audit_override, user 2026-08-29）
 **槽位**: R3
 
-<!-- wb:post_du_2022_amj:legacy_OLS-FE_64_2 -->
 #### 报告骨架
 
 ```text
@@ -1313,6 +1321,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 
 ---
 
+<!-- wb:kim_lee_2026_putting_a_price_on_mission_smj:legacy_OLS-FE_46 -->
 ### 变体 47: R4 — 连续调节的 min/mean/max 三值边际效应表 + 斜率方向解读 (1篇高价值)
 
 **来源论文**: DesJardine, Li & Shi (2025, AMJ)

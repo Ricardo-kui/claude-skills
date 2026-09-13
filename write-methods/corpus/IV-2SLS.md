@@ -127,6 +127,7 @@ updated: 2026-08-05
 **诚实边界**: DWH 检验的功效依赖于 IV 强度；若 IV 弱或 DWH 不显著，不能断言无内生性。Gaussian copula 对分布假设敏感，应在稳健性中报告敏感性分析。
 **跨 skill 对齐**: `../write-results/corpus/OLS-FE.md` 变体26（R7 内生性稳健性表叙事 — threat-by-threat Table 7 汇总）。
 
+<!-- wb:chung_low_rust_2022_jams:legacy_IV-2SLS_5 -->
 ### 变体 6: M8 早年传记性暴露作工具变量（政治社会化 / imprinting）+ 第二组织级工具变量 (1篇高价值)
 **来源论文**: Abdurakhmonov, Ingram & Ridge (2026, JOM)
 **原始句锚点**: "The political environment during a CEO's adolescence is likely to shape their long-term ideological orientation but is less likely to directly influence the firm's CPT (Jennings & Niemi, 2014; Malmendier & Nagel, 2011). Specifically, for each CEO, we calculated the average Democratic political exposure between the ages of 15 and 25—a period widely recognized as critical for the formation of durable political beliefs."

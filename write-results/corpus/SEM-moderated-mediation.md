@@ -419,7 +419,6 @@ The [X × event] interaction on [mediator] was [coefficient and CI/p], indicatin
 **来源论文**: Post, Lokshin & Boone 2022 (AMJ)
 **验证状态**: VERIFIED（expert_audit_override, user 2026-08-29）
 **槽位**: R8（承接 R3/R4 双路径铺垫；收敛全篇双路径回答）
-<!-- wb:post_du_2022_amj:legacy_SEM-moderated-mediation_8 -->
 
 #### 适用场景
 
