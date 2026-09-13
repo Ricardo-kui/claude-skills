@@ -438,7 +438,7 @@ evidence:
         - castellaneta_2017_smj_how_does_trade_secret_legal_protection (Strategic Management Journal)
         - lu_et_al_2022_frenemies_corporate_advertising (Management Science)
         - hoffmann_cheong_phan_zurbruegg2024_jm
-      status: EMERGING
+      status: VERIFIED
       slots_covered:
         - M2
         - M7
@@ -545,7 +545,7 @@ evidence:
         - ahmadi_2017_jms
         - ilicic_brennan_2026_jm
         - li_chiu_kong_cropanzano_ho_2026_jom
-      status: EMERGING
+      status: VERIFIED
       slots_covered:
         - M2
         - M3
@@ -651,7 +651,7 @@ evidence:
         - pollock_2015_asq
         - pontikes2012
         - zhao_ding_gaba_orsc
-      status: EMERGING
+      status: VERIFIED
       slots_covered:
         - M2
         - M3
@@ -857,7 +857,7 @@ evidence:
       papers:
         - carpenter_and_westphal_2001_strategic_context_of_external_ne
         - westphal_bednar_2005_asq
-      status: EMERGING
+      status: VERIFIED
       slots_covered:
         - M4
       common_failures: []
@@ -870,7 +870,7 @@ evidence:
       paper_count: 1
       papers:
         - hoffmann_cheong_phan_zurbruegg2024_jm
-      status: EMERGING
+      status: VERIFIED
       slots_covered: []
       common_failures: []
       validation_history:

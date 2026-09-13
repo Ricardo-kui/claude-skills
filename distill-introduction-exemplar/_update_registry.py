@@ -104,6 +104,11 @@ def get_gap(paper_str, paper_index=None):
     return _PAPER_GAPS_BOOTSTRAP.get(paper_short)
 
 
+# SUPERSEDED (C item 2026-09-13): corpus status is governed by
+# distill-paper-exemplar/scripts/status_policy.yaml and derived by
+# rebuild_apply._status_for (overrides ⊕ policy ⊕ ladder). Do not call
+# the recalc below; manual per-item upgrades go through the plan's
+# status_overrides_addenda channel (AUTHORED status_overrides).
 def recalc_entry(entry, paper_index=None):
     """Recalculate paper_count, gap_distribution, and status for a template entry."""
     papers = sorted(set(entry.get('papers', [])))

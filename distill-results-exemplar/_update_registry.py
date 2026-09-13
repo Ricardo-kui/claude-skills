@@ -171,6 +171,11 @@ def save_yaml(path, data, header_lines=None):
 # 状态计算
 # ============================================================
 
+# SUPERSEDED (C item 2026-09-13): corpus status is governed by
+# distill-paper-exemplar/scripts/status_policy.yaml and derived by
+# rebuild_apply._status_for (overrides ⊕ policy ⊕ ladder). Do not call
+# the recalc below; manual per-item upgrades go through the plan's
+# status_overrides_addenda channel (AUTHORED status_overrides).
 def compute_status(skeleton, status_rules):
     """
     根据 paper_count 和 subfield_distribution 计算 skeleton 的 status。
@@ -193,6 +198,11 @@ def compute_status(skeleton, status_rules):
         return "EMERGING"
 
 
+# SUPERSEDED (C item 2026-09-13): corpus status is governed by
+# distill-paper-exemplar/scripts/status_policy.yaml and derived by
+# rebuild_apply._status_for (overrides ⊕ policy ⊕ ladder). Do not call
+# the recalc below; manual per-item upgrades go through the plan's
+# status_overrides_addenda channel (AUTHORED status_overrides).
 def recompute_all_statuses(registry, status_rules):
     """重新计算 registry 中所有 skeleton 的 status。"""
     estimators = registry.get("estimators", {})

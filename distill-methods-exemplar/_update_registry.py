@@ -111,6 +111,11 @@ def get_journal(paper_str):
     return ''
 
 
+# SUPERSEDED (C item 2026-09-13): corpus status is governed by
+# distill-paper-exemplar/scripts/status_policy.yaml and derived by
+# rebuild_apply._status_for (overrides ⊕ policy ⊕ ladder). Do not call
+# the recalc below; manual per-item upgrades go through the plan's
+# status_overrides_addenda channel (AUTHORED status_overrides).
 def recalc_entry(entry):
     papers = sorted(set(entry.get('papers', [])))
     entry['papers'] = papers

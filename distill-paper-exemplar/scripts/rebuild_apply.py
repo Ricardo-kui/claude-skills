@@ -163,7 +163,13 @@ def _status_for(doc: dict, path: str, n_sources: int, current=None,
                                      auxiliary=auxiliary)
     base = pstat or rv.ladder_status(n_sources)
     cur = rv.norm_status(str(current or ""))
-    if cur in ("VERIFIED", "ROBUST") and base == "EMERGING":
+    # never-demote: any on-disk VERIFIED/ROBUST beats a lower derived base.
+    # (The ROBUST-vs-VERIFIED leg matters: ROBUST is not scan-derivable, so a
+    # 5-source curated ROBUST row must not be rewritten VERIFIED just because
+    # the ladder tops out there — the checker already treats that pair as
+    # 'expected_status_override'.)
+    if cur in ("VERIFIED", "ROBUST") and base in rv.LADDER and \
+            rv.LADDER.index(base) < rv.LADDER.index(cur):
         return cur
     return base
 
@@ -215,6 +221,20 @@ def plan_introduction(objs: dict, doc: dict, scan, alias) -> list[str]:
                     gd["Incompleteness"] = gd.get("Incompleteness", 0) + diff
                     notes.append(f"evidence.{module}.{entry}: gap_distribution "
                                  f"absorbed {diff:+d} into Incompleteness")
+            # status derivation (C item S3b): overrides ⊕ policy ⊕ ladder off
+            # the merged papers list — ends the intro passthrough island so
+            # verify covers intro status drift. Frozen blocks untouched: n
+            # comes from the registry papers list, not a block scan.
+            if "status" in ed:
+                keys = [rv.strip_journal(str(p)) for p in (ed.get("papers") or [])]
+                new_status = _status_for(doc, f"evidence.{module}.{entry}",
+                                         len(keys), current=ed.get("status"),
+                                         paper_keys=keys)
+                if rv.norm_status(str(ed.get("status"))) != \
+                        rv.norm_status(new_status):
+                    ed["status"] = new_status
+                    notes.append(f"evidence.{module}.{entry}: "
+                                 f"status ~{new_status}")
     paper_index = objs["paper_index"].get("paper_index") or {}
     attested: dict[str, str] = {}
     for b in scan.all_blocks():
@@ -462,6 +482,17 @@ def plan_methods(objs: dict, doc: dict, scan, alias) -> list[str]:
             notes.append(f"by_design_type.{key}: papers +{new_keys}")
         if dent.get("paper_count") is not None and dent.get("papers") is not None:
             dent["paper_count"] = len(dent["papers"])
+        # status derivation (C item S3b): overrides ⊕ policy ⊕ ladder; the
+        # passthrough era ended — verify now covers methods status drift.
+        if "status" in dent:
+            keys = [rv.strip_journal(str(p)) for p in (dent.get("papers") or [])]
+            new_status = _status_for(doc, f"evidence.by_design_type.{key}",
+                                     len(keys), current=dent.get("status"),
+                                     paper_keys=keys)
+            if rv.norm_status(str(dent.get("status"))) != \
+                    rv.norm_status(new_status):
+                dent["status"] = new_status
+                notes.append(f"by_design_type.{key}: status ~{new_status}")
         if "slots_covered" in dent:
             block_slots = {s for b in blocks for s in b.slots}
             old_slots = rv.flowlist(dent.get("slots_covered"))
@@ -484,6 +515,14 @@ def plan_methods(objs: dict, doc: dict, scan, alias) -> list[str]:
         if extra:
             pent["design_types"] = disk_dt + extra
             notes.append(f"by_source_paper.{paper}: design_types +{extra}")
+        if "status" in pent:
+            new_status = _status_for(doc, f"evidence.by_source_paper.{paper}",
+                                     1, current=pent.get("status"),
+                                     paper_keys=[paper])
+            if rv.norm_status(str(pent.get("status"))) != \
+                    rv.norm_status(new_status):
+                pent["status"] = new_status
+                notes.append(f"by_source_paper.{paper}: status ~{new_status}")
     if "total_design_types" in meta:
         meta["total_design_types"] = len(bdt)
     return notes
