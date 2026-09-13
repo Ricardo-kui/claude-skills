@@ -88,3 +88,16 @@ DERIVED 段内并非全部字段可再生——rebuild 重生成段时，下列�
 ## 8. S6 前的运行边界
 
 `rebuild_views.py --apply` 现阶段一律拒绝（exit 3）：S2 分区已就位，但派生段重生成 + 按键透传的写入路径属 S6 交付，写路径双跑（S4）前不得触碰 registry。
+
+---
+
+**S6 已切换（2026-09-13，提交 2c14217）**：本文 §3 透传契约由 `scripts/rebuild_apply.py`
+实现为唯一 registry DERIVED 写路径（执行器计数路径已按计划 §7.4 退役）。实现层裁定
+（都在代码注释与提交信息中留痕）：① fragment `title` 与 pattern `description` 按
+"绝不静默丢弃"改为 carry-if-present，仅新铸条目派生（避免 130 条人工中文标题被块标题
+覆盖）；② status 派生带永不降级守卫（ladder ⊕ overrides，disk VERIFIED/ROBUST 无
+override 时保留——S1 语义是补 override 而非降级）；③ papers/source_papers/slots 取
+legacy ∪ 块派生并集（legacy 无 wb 标记的历史不丢）；④ 新 fragment/pattern 由 rebuild
+铸造 tfr（续 max+1，append-only 与执行器同约定），description 留空待人工补；⑤ 连续
+DERIVED 段共享一个分区标记，段内多根键按 SEGMENT_KEYS 顺序解析；⑥ methods registry
+补前导 DERIVED 标记使文件自描述。

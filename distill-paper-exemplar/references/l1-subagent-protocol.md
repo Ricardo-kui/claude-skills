@@ -54,6 +54,11 @@ cache_read 是 fresh input 的 3.5 倍）。
   只调用**一次**，输出 `tee <plan>.apply.log` 后再检查——两次调用（一数数一抓错）曾把
   apply#1 的启动失败与 apply#2 的静默全量完成混成一个"计数 0 但盘面全对"的谜团；
   成败判定以盘面 + verify_writeback 为准，不以输出计数为准。
+- **S6 语义（2026-09-13）**：apply 末尾钩子已从只读 `rebuild_views --check` 影子双跑
+  升级为 `rebuild_apply --corpus <节> --apply`（registry DERIVED 字段的真正写者，经
+  plan 的 registry/corpus_root 定向）；theory plan 项的 `registry_dimension` 仍由执行器
+  消费（论文条目创建 + tfr 分配），但计数/summary/meta 全部改由 rebuild 从块扫描重建。
+  verify 末尾新增 V3-drift：dry-run 计划变更非零即 FAIL。
 - 中断续跑：以 PDM 各节 `status` 为断点，只重发未完成节，不整链路重跑。
 
 ## JSON 修复路径（不重发原文，2026-09-12）

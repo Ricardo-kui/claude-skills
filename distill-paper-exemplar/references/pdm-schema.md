@@ -192,12 +192,12 @@ PDM v1.0 在 ridgeetal2024（CEO Paranoia, AMJ 2024）全链路走查中暴露�
    `feedback_ledger.missing` 须区分两类根因：**能力缺口**（该 skill 无基础设施，
    非编排违约）与**运行缺失**（有基础设施但本次未落盘，需查原因）。L4 核验
    best-effort：缺 skill 的 feedback 不能作为节状态回退的理由。
-2. **PDM 脊柱强制力不足**。v1.0 假设四节 skill 会把 `sections/<section>.json` 与
-   `feedback/<section>.feedback.yaml` 写入 PDM 目录；实际 run 中分节 skill 自行写回
-   write-* 语料、未落 PDM 子文件，主循环因此无法在 L2 合并 identity、L3 无法把
-   L2 flags 喂给 story 卡（`story_track.fed_flags` 落 false）。**修正方向**：L1 分发
-   时强制子任务写 section 文件（无 JSON 契约的 theory 写 yaml profile），缺失即视为
-   该节未完成，L2 不启动。
+2. **PDM 脊柱强制力不足（已解决 2026-09-13）**。v1.0 假设四节 skill 会把
+   `sections/<section>.json` 与 `feedback/<section>.feedback.yaml` 写入 PDM 目录；早期
+   run 中分节 skill 自行写回 write-* 语料、未落 PDM 子文件。修正已落地：L1 分发契约
+   （references/l1-subagent-protocol.md）强制子任务写 section 文件，缺失视为该节未完成、
+   只重发该节；2026-09-13 Mao 2022 S5 整篇跑四节 JSON/feedback/plan 全部落盘，L2
+   identity 合并与 L3 喂卡均走协议内建路径。
 3. **identity 抽取时机**。`distill_track.*.identity` 应由主循环从 `sections/*.json`
    抽取；当子任务未落 section 文件时，只能从已写回 catalog/INDEX/feedback 反查
    （脆弱、非协议内建——2026-08-12 walkthrough 即走此回退路径）。**修正方向**：
