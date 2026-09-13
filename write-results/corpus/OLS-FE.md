@@ -202,6 +202,10 @@ updated: 2026-08-13
 > **[Threat 4 — Alternative Empirical Strategy]**: To ensure results are not dependent on [specific estimator], we replicated using [alternative_estimator_1] and [alternative_estimator_2]. The results are consistent with our primary findings.
 **与原骨架差异**: 标准叙事型稳健性检验模板，按威胁（而非按表格）组织。每个威胁一个段落。与变体1 (Table 9 矩阵) 互补——5-10 个检验时用叙事型，10+ 时用矩阵型。
 
+<!-- wb:eilert_2017_jm:legacy_OLS-FE_2 -->
+<!-- wb:darbyAgencyTheoryPerspective2025:legacy_OLS-FE_2_2 -->
+<!-- wb:darby_2023_msom:legacy_OLS-FE_2_3 -->
+<!-- wb:wowak_2025_ms:legacy_OLS-FE_2_4 -->
 ### 变体 3: 经济显著性的 Quartile Penalty Table (1/5 复现)
 **来源论文**: Darby2023 MSOM
 **原始句锚点**: "To further understand the practical implications, we examined how these market penalties change across quartiles of the Time-to-Recall measure for the smallest and largest significant effect sizes. For example, Table 5 indicates that moving from the first quartile (10 days) to the second quartile (33 days)—an approximately three-week delay in time-to-recall—is associated with an increase in the stock market penalty ranging from 82% to 124%."

@@ -172,6 +172,10 @@ updated: 2026-08-13
 **与原骨架差异**: 这是面板数据控制变量的**黄金标准结构**。关键要素：(1) 总起句锚定方法论引用(如Shang & Rönkkö 2022)；(2) 按分析层级递进呈现；(3) 每个变量有显式because逻辑；(4) 过渡句衔接各层级("We also...", "Beyond...", "Lastly...")。because密度目标：>=60%为优秀。4/4复现确认此为产品召回研究**必写模块**。
 
 
+<!-- wb:darby_2026:legacy_面板数据-OLS_1 -->
+<!-- wb:darbyAgencyTheoryPerspective2025:legacy_面板数据-OLS_1_2 -->
+<!-- wb:eilert_2017_jm:legacy_面板数据-OLS_1_3 -->
+<!-- wb:darby_2023_msom:legacy_面板数据-OLS_1_4 -->
 #### 变体：M6 动态模型的「全一阶差分」控制声明 + 分层 because 链（post_2022_women_tmt_strategic_renewal 型，EXTEND）
 - **功能标签**：在变体 1 的分层 because 结构之上，增加动态模型特有的控制变量处理声明（全差分）+ 供给侧（候选池）控制逻辑
 - **骨架**：Our analyses controlled for time-variant characteristics of [CEO], [TMT], [firms], and [countries], some of which were variables in studies published with subsets of our data (see [Table reference]). To estimate dynamic models, all control variables, unless noted otherwise, are in first differences (from year [t-1] to [t]), accounting for the change in these characteristics in all models. [Level] controls. We included [control], because [rival explanation]. Because [contextual/societal factor] may influence the strength of [relationship], we controlled for such disparities, with [measure]. We also controlled for [supply-side factor]—the availability of [candidates] in the [labor market]—by including [measure].
@@ -191,6 +195,9 @@ updated: 2026-08-13
 **与原骨架差异**: 产品召回论文的**常见缺陷**——缺少起始N到最终N的逐层排除audit trail。理想写法应补充："Of the [N] initial observations, [N] were excluded due to [reason_1], [N] due to [reason_2], resulting in a final sample of [N]."
 **诚实边界**: 若数据为FOIA请求获得的一手数据，起始N可能无法精确确定，需在Limitations中说明。
 
+<!-- wb:darby2026:legacy_面板数据-OLS_2 -->
+<!-- wb:darby2025:legacy_面板数据-OLS_2_2 -->
+<!-- wb:darby_msom_2023_msom:legacy_面板数据-OLS_2_3 -->
 ### 变体 3: IV 选择三层 because 论证链
 **来源论文**: Darby2023 MSOM
 **原始句锚点**: We used CEO Ownership as our primary measure because it is a broad, comprehensive measure that reflects the three related, but distinct, mechanisms we theorized about in Hypothesis 1—firm financial interests, CEO power, and CEO financial interests.

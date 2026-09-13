@@ -80,6 +80,7 @@ updated: 2026-08-05
 > To address this challenge [of finding valid external instruments], we use an IV approach that has emerged from the econometrics literature called the heteroskedastic identified instrument technique. This technique, which has recently been adopted in [domain] research ([citations]), is designed to accommodate a setting "when no external instruments or other such information are available" ([citation], [page]). This procedure allows us to generate valid instruments via three steps ([citations]). First, we use the potentially endogenous independent variable ([IV]) as the dependent variable in a first-stage equation that features all our controls as regressors. Just as [citation] theorized and [citation] emphasize, we include all of our control variables as the regressors in this first-stage equation because doing so is the preferred specification, unless including a subset of the controls better upholds the assumptions of the model. In the second step, the technique calculates the residuals associated with each of those control variable regressors and transforms the heteroskedasticity into potentially valid IVs, but only when the assumptions of the model that we detail next are exhibited ([citations]). Finally, we incorporate the valid generated instruments into the two-stage IV fixed effects estimators.
 **与原骨架差异**: 传统 IV-2SLS 要求研究者找到外部工具变量(如政策冲击、自然实验)，而 Lewbel 方法从第一阶段的**异方差残差**中内部生成有效IV。三步法核心：(1) 所有控制变量回归内生变量；(2) 残差异方差→有效IV；(3) 生成的IV纳入第二阶段。诚实边界：Lewbel 方法依赖于两个关键假设(见变体2)，若不满足则生成的IV无效。适用于"无外部IV可用"的情境。
 
+<!-- wb:wowak_2025_ms:legacy_IV-2SLS_1 -->
 ### 变体 2: IV 有效性诊断链完整报告 (Lewbel + 传统诊断)
 **来源论文**: Wowak2025 MS
 **原始句锚点**: "It is worth underscoring that our generated instruments also conform to the traditional diagnostic tests pertaining to relevance and exogeneity for any type of IV."
@@ -92,6 +93,7 @@ updated: 2026-08-05
 > It is worth underscoring that our generated instruments also conform to the traditional diagnostic tests pertaining to relevance and exogeneity for any type of IV. Indeed, the partial F-statistic exceeds the thresholds that scholars suggest represent relevance (partial F-stat = [value]; p < [threshold]), and the [identification_test] from [citation] does not contain zero [[lower], [upper]], reflecting relevant instruments ([citation]). Similarly, diagnostic tests for exogeneity suggest our instruments are unrelated to the structural error terms pertaining to [DV_1] (Sargan χ² = [value]; p = [threshold]) and [DV_2] (Sargan χ² = [value]; p = [threshold]), indicating that our instruments are not endogenous ([citation]). Taken together, our instruments appear to be properly identified and valid.
 **与原骨架差异**: 这是 IV-2SLS 的**完整诊断报告模板**。关键要素：(1) Lewbel 假设1: Pagan-Hall 不拒绝 homoskedasticity → 生成的IV与误差协方差无关；(2) Lewbel 假设2: Breusch-Pagan 拒绝 homoskedasticity → 生成的IV与内生变量相关；(3) 传统 relevance: partial F > 10；(4) 传统 identification: Andrews 区间不含0；(5) 传统 exogeneity: Sargan 不拒绝 → IV外生。适用于任何IV研究——传统IV替换前两个测试为 Wu-Hausman / Cragg-Donald。**诚实边界**: 若任何测试未通过，相应的IV无效，需重新选择工具变量。
 
+<!-- wb:wowak_2025_ms:legacy_IV-2SLS_2 -->
 ### 变体 3: 政治意识形态操作化 — 四步四指标聚合流程
 **来源论文**: Wowak2025 MS
 **原始句锚点**: "Following research precedence, we averaged the indicators to calculate each TMT member's political ideology (Briscoe and Joshi 2017, Chin and Semadeni 2017, Gupta and Wowak 2017). In line with this literature, we assign a score of 0.5 to individuals with no political donations, indicating that they are politically moderate (Chin et al. 2013, Gupta and Wowak 2017, Gupta et al. 2018)."
@@ -102,6 +104,7 @@ updated: 2026-08-05
 > [IV] is calculated as the [aggregation_method] [annual] [construct] across members of a firm's [group] ([citations]). To compute this measure, we carefully followed the procedure documented in [domain] research ([citations]). We first used [source] to identify the [group_members] in each organization ([citations]). Next, we identified each [member]'s [construct] by accessing [data_source] from [database]. Using the [data], we then calculated [N] indicators that have been shown to collectively reflect [construct] ([citations]): (1) [indicator_1]; (2) [indicator_2]; (3) [indicator_3]; and (4) [indicator_4]. Each indicator ranges from [min] to [max]; [max] represents [pure_form], [min] represents [opposite_form]. Following research precedence, we [aggregation] the indicators ([citations]), as they demonstrate high reliability and internal consistency (α=[value]). In line with this literature, we assign a score of [neutral_value] to individuals with no [data], indicating that they are [neutral_label] ([citations]). That said, in robustness checks we remove [missing_data_group] from our sample and demonstrate that assigning a value of [neutral_value] to them does not meaningfully influence our results.
 **与原骨架差异**: 政治意识形态的**标准操作化流程**——从 Chin et al. (2013) 确立的四个政治捐赠指标到均值聚合。关键要素：(1) 四指标全覆盖（捐赠数量比/金额比/候选人比/年份比）；(2) 高内部一致性引用 (α=0.95)；(3) 非捐赠者处理策略 (赋中性值0.5 + 排除稳健性检验)；(4) 每句都有方法论引用链。该骨架可迁移至任何使用 FEC/Open Secrets 政治捐赠数据的研究（CSR、公司创业、高管薪酬等）。
 
+<!-- wb:wowak_2025_ms:legacy_IV-2SLS_3 -->
 ### 变体 4: 外部自然事件作工具变量 + 三因排除限制论证 (1篇高价值)
 **来源论文**: Qiao, Hiatt & Sine 2026 (SMJ)
 **原始句锚点**: "We focused on natural disasters in the airline's home country as an instrumental variable. First, natural disasters are exogenous, reflecting "nature's fury" (Ballesteros et al., 2017; Dutta, 2017: 443), and are not affected by airlines' international expansion."
@@ -164,6 +167,7 @@ updated: 2026-08-05
 **适用**: 同一 IV 影响一个计数 DV 和一个连续/时长 DV 的研究（召回数量 + 召回时延、专利数量 + 研发时长、投诉数量 + 处理时长）；产品安全 / 质量管理 / 创新研究中"频率 + 速度"双 DV 设计。
 **跨 skill 对齐**: 与变体 1（Lewbel 三步法）配套——变体 1 生成工具变量，本变体说明工具变量如何进入两个不同估计器。
 
+<!-- wb:wowak_2025_ms:legacy_IV-2SLS_8 -->
 ### 变体 9: M8 simultaneity 先证伪后 IV 的 "abundance of caution" 叙事
 **来源论文**: Wowak2025 MS
 **原始句锚点**: "However, out of an abundance of caution, and to further ameliorate concerns related to endogeneity bias that may be caused by this type of simultaneity, or other sources of endogeneity, we use IV estimation."
@@ -177,6 +181,7 @@ updated: 2026-08-05
 **禁忌**: 不要用 "abundance of caution" 掩盖 IV 诊断的缺失；行为证据百分比必须来自本文样本而非外推；证伪理由若引用文献则必须是与本文 setting 同类的文献。
 **跨 skill 对齐**: 与变体 1（Lewbel 三步法）、变体 2（诊断链）配套——本变体是 IV 论证的**前置叙事**，变体 1–2 是 IV 的**技术与诊断**。三者共同构成完整 M8 IV 段落。
 
+<!-- wb:wowak_2025_ms:legacy_IV-2SLS_9 -->
 ### 变体 10: M8 地理外生性工具变量（geography-based IV，Frankel-Romer 型）(2026-07-30)
 **来源论文**: Zhou, Gao & Zhao (2017, Administrative Science Quarterly)
 **原始句锚点**: "Because regions' geographic location is exogenous and predetermined by nature (Frankel and Romer, 1999), we used the distance of each province to major seaports as the instrument for the index of institutional development (Wei and Wu, 2001). We calculated the shortest physical distance from the capital city of each province to one of the two major seaports—Hong Kong and Shanghai—using the Great Circle formula with the latitudes and longitudes of cities."

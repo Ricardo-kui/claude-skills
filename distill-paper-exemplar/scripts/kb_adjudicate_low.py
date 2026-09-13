@@ -181,8 +181,16 @@ def alias_dedupe(proposed: str, cit: dict, family_uni: dict, family_alias,
 def source_priority(path: str) -> int:
     for i, tag in enumerate(PRIORITY_TAGS):
         if tag in path:
-            return i
-    return len(PRIORITY_TAGS)
+            pri = i
+            break
+    else:
+        pri = len(PRIORITY_TAGS)
+    # reading notes / AI drafts lose to original full texts at the same root:
+    # a tie between 'So, Sue Me…If You Can!.md' and '深度阅读笔记 - X.md' must
+    # resolve to the former
+    if re.search(r"笔记|AI drafts|cards|90 AI", path):
+        pri += 0.5
+    return pri
 
 
 PRIORITY_TAGS = ("论文导入", "Clippings", "07 原文", "00 工作台")
@@ -225,6 +233,18 @@ def load_user_rulings() -> list[dict]:
     return doc.get("rulings") or []
 
 
+def _family_entry(key: str) -> dict:
+    """Registry-style universe entry for a family key: tokenized (with alpha
+    prefixes for fused keys like malshe2015) + year extraction."""
+    toks = set(re.findall(r"[a-z0-9]+", key.lower()))
+    for t in list(toks):
+        m = re.match(r"([a-z]{3,})\d*", t)
+        if m:
+            toks.add(m.group(1))
+    return {"tokens": toks, "years": set(rv.YEAR_IN_TOKEN_RE.findall(key)),
+            "meta": {}}
+
+
 def resolve_all() -> dict:
     idx = build_kb_index()
     universes = {c: registry_universe(c, yaml.safe_load(
@@ -244,14 +264,13 @@ def resolve_all() -> dict:
                 for ed in entries.values():
                     if isinstance(ed, dict):
                         for pkey in rv.flowlist(ed.get("papers")):
-                            family_uni.setdefault(rv.strip_journal(pkey), {"tokens": set(), "years": set(), "meta": {}})
-            family_uni.update({k: {"tokens": set(), "years": set(), "meta": {}}
-                               for k in (doc.get("paper_index") or {})
-                               if k not in family_uni})
+                            k2 = rv.strip_journal(pkey)
+                            family_uni.setdefault(k2, _family_entry(k2))
+            for k2 in (doc.get("paper_index") or {}):
+                family_uni.setdefault(k2, _family_entry(k2))
         else:
-            family_uni.update({k: {"tokens": set(), "years": set(), "meta": {}}
-                               for k in (doc.get("source_papers") or {})
-                               if k not in family_uni})
+            for k2 in (doc.get("source_papers") or {}):
+                family_uni.setdefault(k2, _family_entry(k2))
     family_alias = rv.AliasIndex(sorted(family_uni), [])
     groups: dict[str, dict] = {}
     for corpus in ROOTS:
@@ -287,12 +306,38 @@ def resolve_all() -> dict:
                     "n_blocks": len(g["blocks"]), "blocks": g["blocks"][:8]}
             rulings.append(rule)
             continue
-        # composite source line (multi-paper, '/'-separated): a single-key
-        # mint would falsify provenance — route to human adjudication
-        if len(re.split(r"\s*/\s*", g["citation"])) >= 2 and \
-                len(g["citation"]) > 20:
+        # composite source line: every '/'-segment parses as its own citation
+        # -> mint one marker PER PAPER; any unparseable segment means the '/'
+        # was prose structure (technique lists) -> normal single-citation path
+        seg_pairs = None
+        parts = [p.strip() for p in re.split(r"\s*/\s*", g["citation"]) if p.strip()]
+        if len(parts) >= 2 and len(g["citation"]) > 20:
+            sub_cits = [parse_citation(p) for p in parts]
+            if all(c.get("is_citation") for c in sub_cits):
+                seg_pairs = list(zip(parts, sub_cits))
+        if seg_pairs:
+            sub_keys, all_ok = [], True
+            for text, c in seg_pairs:
+                hits = match_citation(c, family_uni)
+                if len(hits) == 1:
+                    sub_keys.append({"cite": text[:60], "key": hits[0]})
+                    continue
+                kbf = kb_match(c, idx)
+                if len(kbf) == 1:
+                    m2 = file_metadata(kbf[0]["path"])
+                    sub_keys.append({"cite": text[:60],
+                                     "key": propose_key(c, m2, kbf[0]["name"])})
+                else:
+                    all_ok = False
+                    break
+            if all_ok:
+                rule = {"citation": g["citation"][:90],
+                        "ruling": "mint_composite_keys", "sub_keys": sub_keys,
+                        "n_blocks": len(g["blocks"]), "blocks": g["blocks"][:8]}
+                rulings.append(rule)
+                continue
             rule = {"citation": g["citation"][:90], "ruling": "composite_multi_paper",
-                    "note": "一条来源行引用多篇论文——需逐篇拆分铸造（人工）",
+                    "note": "复合行中部分论文无法归源——人工拆分",
                     "n_blocks": len(g["blocks"]), "blocks": g["blocks"][:8]}
             rulings.append(rule)
             continue
@@ -336,39 +381,49 @@ def resolve_all() -> dict:
 
 def mint_from_rulings(rulings: list[dict]) -> int:
     minted = 0
-    by_line = {}
+    by_line: dict[str, list[str]] = defaultdict(list)
     for r in rulings:
         if r["ruling"] in ("mint_existing_key", "mint_new_key") and r.get("key"):
-            by_line[norm_key(r["citation"])] = r["key"]
+            by_line[norm_key(r["citation"])].append(r["key"])
+        elif r["ruling"] == "mint_composite_keys":
+            for sk in r.get("sub_keys", []):
+                by_line[norm_key(r["citation"])].append(sk["key"])
     for corpus in ROOTS:
         root = ROOTS[corpus]
         scan = rv.scan_corpus(root)
+        # per-file plan; blocks processed in DESCENDING span order so earlier
+        # insertions never shift later blocks' line numbers
+        plan: dict[str, list] = defaultdict(list)
         for hb in harvest_low(root, scan):
-            key = by_line.get(hb["cite_line"])
-            if not key:
+            keys = by_line.get(hb["cite_line"])
+            if not keys or hb["block"].wb:
                 continue
             b = hb["block"]
-            if b.wb:
-                continue
             base = f"legacy_{Path(b.rel).stem}_{variant_label(b.heading)}"
-            taken = {it for bb in scan.files[b.rel]["blocks"]
-                     for _c, it in bb.wb}
-            item, n = base, 2
-            while item in taken:
-                item = f"{base}_{n}"
-                n += 1
-            marker = f"<!-- wb:{key}:{item} -->"
-            path = root / b.rel
+            plan[b.rel].append((b.end, base, keys))
+        for rel, entries in plan.items():
+            path = root / rel
             raw = path.read_bytes().decode("utf-8")
             eol = "\r\n" if "\r\n" in raw else "\n"
             lines = raw.split(eol)
-            lines.insert(min(b.end, len(lines)), marker)
+            taken = {it for bb in scan.files[rel]["blocks"] for _c, it in bb.wb}
+            for end, base, keys in sorted(entries, key=lambda x: -x[0]):
+                markers = []
+                for key in keys:
+                    item, n = base, 2
+                    while item in taken:
+                        item = f"{base}_{n}"
+                        n += 1
+                    taken.add(item)
+                    markers.append(f"<!-- wb:{key}:{item} -->")
+                lines[end:end] = markers
+                minted += len(markers)
             text = eol.join(lines)
             if not text.endswith(eol):
                 text += eol
             with open(path, "w", encoding="utf-8", newline="") as fh:
                 fh.write(text)
-            minted += 1
+    return minted
     return minted
 
 

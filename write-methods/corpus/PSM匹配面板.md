@@ -57,6 +57,8 @@ updated: 2026-08-12
 > Unlike other matching techniques (e.g., [alternative_method]), there is "[quote_about_method_property]" for [method] ([citation], [page]). However, [balance_measure] is often used to [purpose]. This measure is "[quote_about_interpretation]" ([citation], [page]). The overall [measure] [value_before] before matching to [value_after] after matching, which indicates [interpretation]. [Table_reference] presents the [details]. The [changes] suggest [conclusion] ([citations]).
 **与原骨架差异**: 这是CEM的**完整五步论证链**。关键要素：(1) 目标与威胁声明；(2) 方法原理；(3) 协变量选择与理论依据；(4) 匹配结果；(5) 平衡检验。Darby2026将此结构用于主分析（M2/M7），Darby2023将其简化为稳健性检验中的一段（M8）。PSM版本需替换为propensity score估计和common support检查。
 
+<!-- wb:darby2026:legacy_PSM匹配面板_1 -->
+<!-- wb:darby_msom_2023_msom:legacy_PSM匹配面板_1_2 -->
 ### 变体 2: CEM 作为外生冲击的稳健性验证
 **来源论文**: Darby2023 MSOM
 **原始句锚点**: We address this endogeneity concern by exploiting an exogenous shock in our data—a change in a firm’s CEO. A change in the CEO is an exogenous shock to the amount of stock owned by a CEO, contingent upon one key criterion: Past recalls should not predict the likelihood of the previous CEO’s departure.

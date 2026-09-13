@@ -425,6 +425,7 @@ updated: 2026-08-13
 **与原骨架差异**: 变体4 为 Heckman/GEE 结构；本变体专用于 **理论 rival 区分 observable need vs latent willingness** 的 DiD/Logit 设计。
 **诚实边界**: OPERATIONAL_IMPROVEMENT 类 rival 若主效应为正（更多 mention → 更多 recall），须在 Results 一句交代，避免读者混淆方向。
 
+<!-- wb:hoffmann_cheong_phan_zurbruegg2024_jm:legacy_Logit-Probit-Ordered-Probit_16 -->
 ### 变体 17: R3 双焦点 IV 平行倒 U — 分模型→联合模型→并列表 U-test（2026-08-05 gap audit）
 **来源论文**: Bendig, Hensellek & Schulte (2024, Entrepreneurship Theory and Practice)
 **原始句锚点**: Hypothesis 1 predicts an inverted U-shaped relationship between CVC activity and recall likelihood. We found a significant negative relationship between the squared CVC activity and product recall likelihood (Model 2: β = −.021, p < .05) which indicates the inverted U-shape relationship.

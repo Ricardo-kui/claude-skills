@@ -174,6 +174,7 @@ updated: 2026-08-23
 - jurisdiction 安慰剂须保持真实 adoption 时序结构，仅 shuffle assignment rule。
 - 入库的是叙事组织，非对 Sun–Abraham 估计器的推荐。
 
+<!-- wb:hoffmann_cheong_phan_zurbruegg2024_jm:legacy_自然实验-DiD_4 -->
 ### 变体 5：二元 rare outcome 下 year + industry FE，无法 firm FE（perfect collinearity）（2026-08-05）
 
 **来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (*Journal of Marketing*)
@@ -192,6 +193,7 @@ updated: 2026-08-23
 - 若样本中所有 unit 都有 outcome variation，此辩护不适用。
 - industry FE 不能替代 firm FE；不得写 "fully addresses unobserved heterogeneity"。
 
+<!-- wb:hoffmann_cheong_phan_zurbruegg2024_jm:legacy_自然实验-DiD_5 -->
 ### 变体 6：staggered adoption 下 POST 与 Treat×Post 共线性说明（2026-08-05）
 
 **来源论文**: Hoffmann, Cheong, Phan & Zurbruegg 2024 (*Journal of Marketing*)

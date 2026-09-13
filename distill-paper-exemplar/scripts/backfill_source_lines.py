@@ -55,10 +55,13 @@ JOURNAL_TOKENS = {  # prose -> registry key token
 def parse_citation(prose: str) -> dict:
     """Prose citation -> {surnames, year, journal, is_citation}.
 
-    is_citation gate: every author segment's leading word is Capitalized (or
-    the segment is a citekey-style token like `eilert2017`), and the line
-    carries a year or such a citekey. Prose quotes like `Of those, only 50
-    are...` fail the case/segment test and never reach KB matching."""
+    Three accepted forms:
+      prose     'Wowak, Mannor & Bu 2020 (MSOM)' — capitalized author segments
+      citekey   'eilert2017 (JM)' / 'darby2026 jom' — lowercase fused key
+                (+ optional journal abbr), possibly '/'-free
+      slash     'zhao/ding/gaba 2023 (organization science)' — '/'-separated
+                lowercase author names, all segments <=2 words, year+journal
+    Prose quotes ('Of those, only 50 are...') fail every branch."""
     s = prose.strip()
     year_m = YEAR_RE.search(s)
     year = year_m.group(1) if year_m else None
@@ -68,8 +71,22 @@ def parse_citation(prose: str) -> dict:
             journal = key
             break
     head = s[:year_m.start()] if year_m else s
-    head = re.split(r"\(", head)[0]
-    segs = re.split(r"\s*(?:&|,| and | 与 )\s*", head)
+    head = re.split(r"\(", head)[0].strip()
+
+    # branch 1: lowercase fused-key style ('darby2026 jom', 'eilert2017 (JM)')
+    head_all = re.split(r"\(", s)[0].strip()
+    if re.fullmatch(r"[a-z]{2,}\d{4}([ ]+[a-z]{2,4})*", head_all):
+        surnames = [m.group(1) for m in re.finditer(r"([a-z]{2,})\d{4}", head_all)]
+        if not surnames:
+            surnames = [head_all.split()[0]]
+        if not year:
+            ym = YEAR_IN_TOKEN_RE.search(head_all)
+            year = ym.group(1) if ym else None
+        return {"surnames": surnames, "year": year, "journal": journal,
+                "is_citation": True}
+
+    segs = re.split(r"\s*(?:&|,| and | 与 |/)\s*", head) if "/" in head else \
+        re.split(r"\s*(?:&|,| and | 与 )\s*", head)
     surnames, is_citation = [], True
     citekey_style = bool(re.search(r"[a-z]{2,}\d{4}|_[a-z]", s)) and " " not in \
         s.split("(")[0].strip()[:40]
@@ -94,9 +111,9 @@ def parse_citation(prose: str) -> dict:
         elif re.fullmatch(r"[a-z]{2,}\d{4}[_\w]*", word):
             surnames.append(lower)
             citekey_style = True
-        elif not seg or not saw_name:
-            is_citation = False
-            break
+        elif "/" in head and len(seg.split()) <= 2 and year and journal:
+            surnames.append(lower)  # slash-separated lowercase author names
+            saw_name = True
         else:
             is_citation = False
             break

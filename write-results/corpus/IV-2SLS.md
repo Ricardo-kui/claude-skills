@@ -100,6 +100,7 @@ updated: 2026-08-05
 > In [Column], we explore the effect of [IV] on [DV_2], which corresponds to the competing predictions in Hypotheses [competing_pair_2]. A positive coefficient indicates [interpretation_A], whereas a negative coefficient indicates [interpretation_B]. The results imply the [former/latter] (β = [value]; p < [threshold]), such that [interpretation_supporting_winner]. Our estimator predicts that [units] one SD more [IV_pole] than the mean [outcome_magnitude]. Thus, our results support Hypothesis [winner].
 **与原骨架差异**: 竞争假设 (如 H1a vs H1b) 需要在 R3 中同时报告两个方向的可能性，然后用显著性决定"赢家"。关键句式："A positive coefficient suggests... whereas a negative coefficient indicates..." → "The results imply the former/latter"。单一方向假设不需要此骨架。
 
+<!-- wb:wowak_2025_ms:legacy_IV-2SLS_1 -->
 ### 变体 2: Model-Free Evidence 预览 (1/5 复现)
 **来源论文**: Wowak2025 MS
 **原始句锚点**: Before discussing regression results, we first explore model-free support for our hypotheses. The mean number of recalls for firms with more liberal TMTs is 3.78, whereas it is 5.73 for firms with more conservative TMTs, suggesting that firms with more liberal TMTs tend to issue fewer recalls in any given year.
@@ -110,6 +111,7 @@ updated: 2026-08-05
 > Before discussing regression results, we first explore model-free support for our hypotheses. The mean [DV_1] for [group_A] is [value], whereas it is [value] for [group_B], suggesting that [preliminary_pattern]. By contrast, the mean [DV_2] for [group_A] is [value], but [group_B] tend to [different_pattern].
 **与原骨架差异**: 在 IV/2SLS 因果识别之前先用简单均值分组比较建立初步直觉。这降低了读者对"完全依赖复杂计量技术"的疑虑。适用于任何设计——尤其是因果识别设计——但仅在 Wowak2025 中出现。
 
+<!-- wb:wowak_2025_ms:legacy_IV-2SLS_2 -->
 ### 变体 3: IV 第一阶段诊断嵌入 R3 (1/5 复现)
 **来源论文**: Wowak2025 MS
 **原始句锚点**: Indeed, the partial F-statistic exceeds the thresholds that scholars suggest represent relevance (partial F-stat = 59.534; p < 0.001), and the two-step identification test from Andrews (2018) does not contain zero [-15.390, -3.943], reflecting relevant instruments (Stock et al. 2002).
@@ -120,6 +122,7 @@ updated: 2026-08-05
 > [Our instruments conform to diagnostic tests]. The partial F-statistic exceeds the relevance threshold (partial F-stat = [value]; p < [threshold]), and the [identification_test] does not contain zero [[lower], [upper]]. Diagnostic tests for exogeneity suggest our instruments are unrelated to the structural error terms (Sargan χ² = [value]; p = [threshold]). [For Lewbel: The Pagan-Hall diagnostic fails to reject the null (p > [threshold]), and Breusch-Pagan rejects homoskedasticity (p < [threshold]), upholding both Lewbel assumptions.]
 **与原骨架差异**: IV 诊断统计量（partial F, Sargan, Pagan-Hall, Breusch-Pagan）嵌入 R3 正文，而非 relegating 到脚注或 Methods 中。这是因果识别研究的最佳实践——让读者在阅读结果时同时看到识别策略的有效性。
 
+<!-- wb:wowak_2025_ms:legacy_IV-2SLS_3 -->
 ### 变体 4: 非线性估计器下的 IV — 控制函数残差作 DWH 检验 + 有限样本偏误诚实提示 (1篇高价值)
 **来源论文**: Qiao, Hiatt & Sine 2026 (SMJ)
 **原始句锚点**: Further, because standard Durbin–Wu–Hausman tests rely on linear-model assumptions and are not valid for nonlinear survival models, we adopted a control-function approach in which the first-stage residual is included in the hazard equation and the examination of whether the residual is statistically significant constitutes the nonlinear analogue of a Durbin–Wu–Hausman test for endogeneity (Terza et al., 2008; Wooldridge, 2010, 2015).
@@ -161,6 +164,7 @@ updated: 2026-08-05
 **适用**: IV/2SLS 主分析研究中，IV 估计与非 IV 估计方向/显著性可比时；展示方法选择（是否用 IV）不影响核心结论。配合 write-methods IV-2SLS 变体 9（"abundance of caution" 叙事）形成完整的 IV 防御闭环。
 **禁忌**: 若 IV 与非 IV 估计差异大，本稳健性会**暴露问题**——此时必须解释差异（如内生性真实存在 → IV 估计才是可信的），不能声称"偏误低"；本变性**不能**用作 IV 诊断缺失的借口——仍须报告完整 IV 诊断（变体 3）；"relatively low" 是谨慎措辞，不可升级为 "no endogeneity"。
 
+<!-- wb:wowak_2025_ms:legacy_IV-2SLS_5 -->
 ### 变体 6: R8 离散度 post hoc — "best of both" 调和型事后分析 (1篇高价值)
 **来源论文**: Wowak2025 MS
 **原始句锚点**: A logical conclusion from our research is that firms may seek to diversify their TMTs politically in the hopes of having both fewer recalls and faster ones.
@@ -175,6 +179,7 @@ updated: 2026-08-05
 **适用**: 主结果发现两个对立群体/条件各赢一个维度（如 liberal 更少召回 + conservative 更快召回；exploration 创新 + exploitation 效率）的研究；任何用群体内离散度/多样性作为可操作干预杠杆的 post hoc；需要 "actionable + tested" 管理含义、把"发现"转化为"干预"的研究。
 **禁忌**: 离散度必须是**可操作的管理干预**（如 TMT 构成、团队组合可调整）——不可操作的稳定特质不适用；"best of both" 框架要求主结果中两极**确实各赢一个维度**（若一极全胜则无 "both" 可言，应换框架）；CV 测量须引用离散度测量文献且报告低阶构成项；post hoc 须标注为探索性，不可包装成 confirmatory（见反模式"事后分析未标记"）。
 
+<!-- wb:wowak_2025_ms:legacy_IV-2SLS_6 -->
 ### 变体 7: R6/R7 稳健性例外账本——稳定结论、形态变化与脆弱边界分层报告
 
 **来源论文**: Moon, Tuli & Mukherjee (2023, *Journal of Marketing*)
