@@ -271,6 +271,7 @@ updated: 2026-08-13
 > Hypothesis [N] predicted a [positive/negative] relationship between [IV] and [DV]. In Model [X], the coefficient for [IV] was in the predicted direction but not statistically significant (β = [value], n.s.). Hypothesis [N] was thus not supported as a main effect. However, the interaction between [IV] and [moderator] in Model [Y] was [positive/negative] and significant (β = [value], p < [threshold]), lending support to Hypothesis [N+1]. Marginal effects at [±1 SD] of [moderator] revealed a significant effect of [IV] on [DV] under [low/high moderator] conditions (dy/dx = [value], p < [threshold]) but not under [opposite] conditions (dy/dx = [value], n.s.). This pattern suggests that [IV] does influence [DV], but primarily under [boundary condition].
 **与原骨架差异**: 当主效应假设被拒绝、但交互效应支撑条件关系时，本骨架将"失败"重新框定为理论条件化——方向正确但不显著→交互显著→条件分解→"does influence, but primarily under"。关键技巧：(1) 先诚实承认 H1 不被支持；(2) 迅速过渡到"However..."；(3) 报告边际效应的条件显著性；(4) 最后一句"does influence... but primarily under" 将叙事从失败转向边界发现。诚实边界：事后将不显著主效应重新框定为边界条件需要理论支持——如果交互没有事前假设，不能这样做。
 
+<!-- wb:mannor_wowak_bartkus_gomez_mejia_2016_smj:legacy_OLS-FE_8 -->
 ### 变体 9: 调节效应边际效应的单侧显著报告 (1篇高价值)
 **来源论文**: Mannor, Wowak, Bartkus & Gomez-Mejia 2016 (Strategic Management Journal)
 **原始句锚点**: "We found a significant negative marginal effect of job anxiety in gain contexts (dy/dx = −1.16, p < 0.01) but no significant effect in loss contexts (dy/dx = −0.29, n.s.)."
@@ -281,6 +282,7 @@ updated: 2026-08-13
 > To further explore the nature of this interaction, we examined the conditional marginal effects of [IV] on [DV] at [low] and [high] levels of [moderator] (typically [±1 SD] from the mean). When [moderator] was [low/high], [IV] had a [positive/negative] and significant effect on [DV] (dy/dx = [value], p < [threshold]). In contrast, when [moderator] was [opposite level], the effect was not statistically different from zero (dy/dx = [value], n.s.). [Figure X] illustrates this pattern.
 **与原骨架差异**: 标准交互报告通常报告两端的简单斜率，但当一侧显著、一侧不显著时，需要明确区分而非对称报告。本骨架使用"dy/dx"而非"simple slope"措辞（在 Stata 的 margins 框架下更自然），且明确将不显著侧标注为"not statistically different from zero"而非暗示有方向。
 
+<!-- wb:mannor_wowak_bartkus_gomez_mejia_2016_smj:legacy_OLS-FE_9 -->
 ### 变体 10: ΔR² + 条件边际效应嵌入经济显著性 (1篇高价值)
 **来源论文**: Mannor, Wowak, Bartkus & Gomez-Mejia 2016 (Strategic Management Journal)
 **验证状态**: EMERGING
@@ -290,6 +292,7 @@ updated: 2026-08-13
 > We assessed the economic significance of [IV]'s effect by examining the incremental variance explained (ΔR²) when [IV] and its interaction with [moderator] were added to the baseline model. The addition of [IV] and [moderator × IV] increased R² by [Δvalue] ([F_stat], p < [threshold]), indicating that the conditional relationship accounts for meaningful variation in [DV] beyond the control variables. Under [condition_A] ([moderator] at [level_A]), a [1-SD/unit] increase in [IV] is associated with a [N]% change in [DV] relative to its mean, representing a substantively important shift. Under [condition_B] ([moderator] at [level_B]), the marginal effect is negligible ([value], n.s.).
 **与原骨架差异**: 将 ΔR² 和条件边际效应百分比联合使用来论证经济显著性：(1) ΔR² 论证"模型改进显著"；(2) 条件分解论证"在特定条件下效应有实质意义"；(3) 不显著侧的 negligible 声明呼应变体9的单侧显著性。
 
+<!-- wb:mannor_wowak_bartkus_gomez_mejia_2016_smj:legacy_OLS-FE_10 -->
 ### 变体 11: 边际显著 90% CI 双区间透明报告 (1篇高价值)
 **来源论文**: Bamberger, Homburg & Wielgos 2021 (Journal of Marketing)
 **原始句锚点**: "As in Study 1, the total effect of wage inequality on short-term profitability is positive but reaches only marginal statistical significance (Est. = .21, p < .10, 95% CI: [−.01, .49], 90% CI: [.04, .44])."
@@ -311,6 +314,7 @@ updated: 2026-08-13
 > We conducted a supplementary analysis using an alternative sample to examine whether our findings generalize beyond [primary_sample]. Specifically, we replicated our core models using [alternative_sample: e.g., a sample of public firms from the same industry / external survey data / a different time period]. The results ([Appendix Table]) indicate that [key findings: e.g., the main effect of IV on DV remains significant (β = [value], p < [threshold]); the interaction between IV and moderator remains significant (β = [value], p < [threshold])]. These supplementary findings increase confidence that our results are not idiosyncratic to [primary_sample] and generalize to [broader context].
 **与原骨架差异**: 跨样本复制比替代测量复制更高级——不是同一数据的另一种测量方式，而是完全不同的数据源/样本。关键：(1) 明确标注为"supplementary"而非核心发现；(2) 声明目的（generalizability > robustness）；(3) 与主分析并行的 replica 结构（逐假设报告方向+显著性）。适用于主要分析受限于特定样本（如访谈/实验样本）的研究。
 
+<!-- wb:mannor_wowak_bartkus_gomez_mejia_2016_smj:legacy_OLS-FE_12 -->
 ### 变体 13: R5 交互效应百分比经济显著性 — 联合变化的幅度解释 (1篇高价值)
 **来源论文**: Li, Chiu, Kong, Cropanzano & Ho 2026 (Journal of Management)
 **原始句锚点**: "A 1% increase in CEO achievement expression and mortality salience was associated with a 3.17% increase in ATV around the call. A 1% increase in CEO achievement expression and mortality salience was associated with a decrease of 5.17 units in investor negative sentiment."
@@ -322,6 +326,7 @@ updated: 2026-08-13
 **与原骨架差异**: 现有变体3（Darby Quartile Penalty Table）、变体10（Mannor ΔR²+条件边际效应）的经济显著性均针对主效应或调节效应的条件分解。本骨架针对的是**交互效应本身的联合经济含义**——当 IV 和 moderator 同时变化时的幅度翻译。Li et al. 的独特策略：(1) 将交互效应的经济显著性从"simple slope at ±1SD"翻译为"1% joint increase → Y% change"；(2) 对于不同的 DV 使用不同的翻译单位——百分比（ATV: "% increase"）和绝对单位（sentiment: "decrease of N units"）；(3) 嵌入在 R3 假设检验段落后立即给出，而非独立段落。适用于连续×连续的交互效应（特别是 LIWC 文本变量，其自然单位就是百分比）。
 **诚实边界**: 联合变化的解释（"1% increase in X and M → Y% change in DV"）假设 IV 和 moderator 同时同方向变化，这在现实中可能不成立——应补充说明"when both increase by 1%"而非暗示它们总是共变。
 
+<!-- wb:li_chiu_kong_cropanzano_ho_2026_jom:legacy_OLS-FE_13 -->
 ### 变体 14: R4 低基础率调节变量的边际效应直方图 — 替代传统 ±1SD 线图 (1篇高价值)
 **来源论文**: Li, Chiu, Kong, Cropanzano & Ho 2026 (Journal of Management)
 **原始句锚点**: "We further plotted the marginal effects using histograms. Given that CEOs' use of death-related communication during the calls has a low base rate, for easier interpretation, we display different levels of mortality salience based on the actual counts of death-related words (0, 1, 3, and 5 words)."
@@ -333,6 +338,7 @@ updated: 2026-08-13
 **与原骨架差异**: 传统交互效应图使用 ±1SD 线图，但低基础率变量（如 CEO 死亡词使用率 3.61%）的 ±1SD 可能落入负值区域或无实际对应的观测值。Li et al. 的解决方案：(1) 使用**边际效应直方图**替代传统线图——X轴为 moderator 的实际离散值（0, 1, 3, 5 词），Y轴为 IV 的边际效应；(2) 在极端低基础率时（如仅 0 vs ≥1），退化为二分类比较图——"cases without death words vs cases with death words"；(3) 图中附置信区间条。关键策略：不假装低基础率变量是连续的，而是**按实际取值离散化展示**。适用于任何稀有文本特征、罕见事件计数、或高度偏态的调节变量。
 **诚实边界**: 边际效应直方图（或离散比较图）必须标注每个 bin 的观测数量——低基础率变量的某些 bin 可能仅包含极少数观测，此时边际效应估计不稳定。若某 bin N < 30，应在图中或注释中标记。
 
+<!-- wb:li_chiu_kong_cropanzano_ho_2026_jom:legacy_OLS-FE_14 -->
 ### 变体 15: R7 五威胁标签化稳健性序列 — RIR+Oster+CEM组合 (1篇高价值)
 **来源论文**: Li, Chiu, Kong, Cropanzano & Ho 2026 (Journal of Management)
 **原始句锚点**: "We conducted a series of supplementary analyses to determine the robustness of our findings. First, to rule out the possibility of omitted variable bias, we performed the robustness of inference to replacement (RIR) test and Oster's delta test."
@@ -352,6 +358,7 @@ source_papers: ["higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"]
 confidence: low-medium（单篇来源，VERIFIED — expert_audit_override 2026-09-06；结构模板锚定 R7-2 叙事 threat 四拍 VERIFIED）
 -->
 
+<!-- wb:li_chiu_kong_cropanzano_ho_2026_jom:legacy_OLS-FE_15 -->
 ### 变体 76：R2 Heckman 选择模型前置交底 — 威胁类比 + 两阶段程序 + 风险集/SE 修正披露 (1篇高价值)
 
 **适用场景**: selection/内生性修正（Heckman、CF、2SLS 等）是**主估计策略**而非稳健性附件时，在主结果之前用独立小节交底：为什么有选择问题（带类比论证）、估计器性质、两阶段程序、风险集与标准误修正。读者带着"修正了什么、代价是什么"的预期进主表。
@@ -428,6 +435,7 @@ fine-grained estimates.
 **验证状态**: VERIFIED（expert_audit_override, user 2026-08-29）
 **槽位**: R7（独立 "Robustness Checks" 小节，falling action）
 
+<!-- wb:post_lokshin_boone_2022_amj:legacy_OLS-FE_66 -->
 #### 报告骨架
 
 ```text
@@ -757,6 +765,7 @@ Substantively, a [one-SD] increase in [predictor] is associated with a
 **验证状态**: VERIFIED（expert_audit_override, user 2026-08-29）
 **槽位**: R4（亦服务 R6 诚实降级）
 
+<!-- wb:post_lokshin_boone_2022_amj:legacy_OLS-FE_65 -->
 #### 报告骨架
 
 ```text
@@ -903,6 +912,7 @@ difference is not significant (p = [value]).
 **验证状态**: VERIFIED（expert_audit_override, user 2026-08-29）
 **槽位**: R1
 
+<!-- wb:post_lokshin_boone_2022_amj:legacy_OLS-FE_67 -->
 #### 报告骨架
 
 ```text
@@ -1049,6 +1059,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **与原骨架差异**: 现有 OLS-FE 变体 24 是 Heckman 两阶段表格导航（第一阶段 Table 3 → 第二阶段 Columns 1-4）。本论文同时使用 **Control Function（处理二元内生自变量）和 Heckman（处理样本选择）**，且两种方法的第一阶段结果都嵌入同一张表。本骨架提炼跨方法的通用 R2 导航：先报无修正列，再报第一阶段工具变量/排除限制相关性，最后报第二阶段核心系数。适用于截面 OLS/FE 中同时存在内生解释变量和选择偏误的研究。
 **诚实边界**: 若第一阶段工具变量或排除限制不显著，不能进入第二阶段解释；必须报告控制函数残差项或逆米尔斯比的显著性，以判断内生性/选择偏误是否真实存在。
 
+<!-- wb:pupovac_astvansh_carrillat_legoux_2026_pom:legacy_OLS-FE_28 -->
 ### 变体 29: R7 — 选择偏误三步防御：描述性模式 → CEM → Heckman + 关联非因果收尾 (1篇高价值)
 **来源论文**: Du & Tsolmon 2024 (Organization Science)
 **原始句锚点**: "To more rigorously examine potential selection on observables, we employ a coarsened exact matching (CEM) strategy. … Accordingly, we interpret our results as associational, consistent with the proposed theoretical mechanisms, but not as definitive causal evidence."
@@ -1279,6 +1290,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **验证状态**: VERIFIED（expert_audit_override, user 2026-08-29）
 **槽位**: R3
 
+<!-- wb:post_lokshin_boone_2022_amj:legacy_OLS-FE_64 -->
 #### 报告骨架
 
 ```text
@@ -1637,6 +1649,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 
 ---
 
+<!-- wb:chen_ganesan_liu_2009_jm:legacy_OLS-FE_62 -->
 ### 变体 68: R4 交互通道分解句 — 调节效应经差值 DV 的哪个分量起作用（westphal_bednar2005 型）
 **来源论文**: Westphal & Bednar (Administrative Science Quarterly)
 **原始句锚点**: "friendship ties reduce the difference between reported concern about strategy and the perception of others' concern by increasing the latter (i.e., the perceived concern of other board members) rather than by decreasing the former..."

@@ -32,6 +32,7 @@
 
 ---
 
+<!-- wb:habel_etal_2016_jm:legacy_common-method-bias-prevention_A -->
 ## 变体 B：时间分离 + Harman 单因子检验
 
 **模板**:

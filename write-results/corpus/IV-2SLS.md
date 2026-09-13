@@ -213,6 +213,7 @@ updated: 2026-08-05
 
 **节奏标记**: [假设提醒][系数+精确p][设计匹配幅度][支持判断] × N 个 DV；诊断嵌入表注。
 
+<!-- wb:zorn_shropshire_martin_combs_ketchen_2017_smj:legacy_IV-2SLS_8 -->
 ### 变体 9: R4/R6 调节衰减 — 交互项 → mean/±1SD 条件斜率 → 边际支持诚实 → 跨 DV 选择性 null (EMERGING)
 
 **来源论文**: Zorn, Shropshire, Martin, Combs & Ketchen (2017, SMJ)
@@ -229,6 +230,7 @@ updated: 2026-08-05
 
 **节奏标记**: [交互][条件斜率 mean][±1SD+图][marginal/full/not supported][跨DV选择性收束]
 
+<!-- wb:zorn_shropshire_martin_combs_ketchen_2017_smj:legacy_IV-2SLS_9 -->
 ### 变体 10: R7 kind-vs-degree 构念电池 — dual-category 反转 / 连续独立性子样本 / Chow 跳跃检验 (EMERGING)
 
 **来源论文**: Zorn, Shropshire, Martin, Combs & Ketchen (2017, SMJ)
@@ -243,6 +245,7 @@ updated: 2026-08-05
 
 **适用**: Methods 已声明 kind ≠ degree 的离散治理/组织结构研究（见 write-methods 面板数据-OLS 变体 32）。
 
+<!-- wb:zorn_shropshire_martin_combs_ketchen_2017_smj:legacy_IV-2SLS_10 -->
 ### 变体 11：R7 排他性约束的量化暴露占比辩护（wowak2020 型）
 [功能标签]: R7 稳健性 — IV 排他性约束的三层辩护（先例复用→机制反驳→量化暴露占比）
 [骨架]: "Although the exclusion criteria cannot be explicitly tested, we propose that [instrument] is unlikely to be directly correlated with our dependent variables. First, [instrument] has been used in prior [predictor] studies that predict similar dependent variables ([citations]). Second, a direct correlation between [instrument] and [outcome] is less likely due to the characteristics of the [source channels] that [generate the instrument]. More specifically, the argument for nonexclusivity would be that [channel mechanism] not only influences [first-stage channel], but also influences how [actors] set [decision tone] and thereby predicts our [outcome] measures. Although we cannot completely rule out this possibility, we believe the risk of this is low based upon the small percentage of [source channels] that are [outcome-relevant domain]. In particular, there are [N_total] [source channels] across the time period of our panel. Of those, only [N_exposed] are [outcome-relevant entities], which is only [share]% of them. In other words, well over [100−share]% of the [source channels] are from [unrelated domains] in which [outcome] decisions as examined in our study are very uncommon."

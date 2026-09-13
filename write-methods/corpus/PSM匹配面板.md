@@ -84,6 +84,7 @@ updated: 2026-08-12
 > We employed the entropy balancing matching (EBM) approach ([citation]). Like propensity score matching (PSM) and coarsened exact matching (CEM), EBM matches [treated and control units] on covariates. However, whereas [PSM and CEM drop a significant portion of observations], EBM does not drop observations but reweights the control group so that the statistical moments (mean, standard deviation, skewness, and even kurtosis) of the covariates are similar between the treatment and control groups. [Table] shows the covariate balancing results after EBM: after matching, the differences of all control variables, in terms of their means, between the treatment and control groups become negligible. These results suggest that the treatment can be seen as random to the extent that we have ruled out selection on these observable variables.
 **与原骨架差异**: 与变体 1（CEM 五步链）的关键区别——EBM **不丢弃任何观测**，通过对控制组重加权使其协变量分布（均值/标准差/偏度/峰度）匹配处理组，而非分层后保留共同支持区。适用场景：(1) 处理组样本本就稀少（如创始军方关联的航空公司），CEM/PSM 丢弃后统计效力不足；(2) 需要保留全样本以维持生存分析的事件历史结构。诚实边界：EBM 仍只处理可观测选择偏差，不可观测混淆需配合 IV/RDD；重加权可能放大少数观测的影响，应在结果稳健性中检验。本论文将 EBM 与 time-based RDD（WWII 断点）+ 外生子样本（军方内部诞生的航空公司）并用，三重识别策略互补。
 
+<!-- wb:qiao_hiatt_sine_2026_smj:legacy_PSM匹配面板_3 -->
 ### 变体 4: M8 CEM 确认性复制 — 内生焦点变量自身作处理，匹配后重估同估计器 (2026-08-12)
 
 **来源论文**: Fini, Jourdan & Perkmann (2017, *Academy of Management Journal*)

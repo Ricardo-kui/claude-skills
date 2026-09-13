@@ -517,6 +517,7 @@ updated: 2026-08-13
 **与原骨架差异**: 变体 5 是 Heckman 第一阶段表。本变体是单方程二元模型的分类准确度导航。
 **诚实边界**: hit rate 超过 PCC 不是经济显著性；不得用 hit rate 替代 AME。
 
+<!-- wb:liu_liu_luo_2016_jm:legacy_Logit-Probit-Ordered-Probit_24 -->
 ### 变体 25: R6 spillover-null — 主效应成立但交互不溢出 (2026-08-13)
 **来源论文**: Liu, Liu & Luo 2016 (*Journal of Marketing*)
 **原始句锚点**: "Our results do not support H7 and H8. ... this adverse impact does not spill over into the likelihood of the company's actions according to either remedy cost or consumer harm."
@@ -527,6 +528,7 @@ updated: 2026-08-13
 **与原骨架差异**: 现有 R6 槽位为空。本变体把主效应显著、对应交互 null 当场收束为边界，禁止藏 null。
 **诚实边界**: 不得把 fail-to-reject 写成"证明无调节"；Discussion 若回收主效应须同时回收该 null。
 
+<!-- wb:liu_liu_luo_2016_jm:legacy_Logit-Probit-Ordered-Probit_25 -->
 ### 变体 26: R7 probit 外生确认电池 (2026-08-13)
 **来源论文**: Liu, Liu & Luo 2016 (*Journal of Marketing*)
 **原始句锚点**: "One major benefit of the control function approach is that one can directly test the presence of endogeneity through the statistical significance of residual terms. None of our control function residuals is significant."
@@ -537,6 +539,7 @@ updated: 2026-08-13
 **与原骨架差异**: 变体 22 是 GMM precaution；变体 4 是 Heckman 纠正。本变体是设计拆联立 + CLR/Hansen + Wald/CF 双路径外生确认、留守主估计。
 **诚实边界**: fail-to-reject 外生不是证明外生；行业均值工具的排除限制须单独论证。不得把观测 probit 改写成准实验。
 
+<!-- wb:liu_liu_luo_2016_jm:legacy_Logit-Probit-Ordered-Probit_26 -->
 ### 变体 27: R8 Heckman-on-CAR 管理相关性 (2026-08-13)
 **来源论文**: Liu, Liu & Luo 2016 (*Journal of Marketing*)
 **原始句锚点**: "Furthermore, the parameter estimate is negative—full remedy induces lower stock returns than partial remedy upon the announcement of recall. This presents an interesting contrast between investor and consumer behaviors."
@@ -547,6 +550,7 @@ updated: 2026-08-13
 **与原骨架差异**: 变体 23 是机制代理另 DV；变体 5 是 Heckman 作主识别。本变体是补充相关性（选择→估值），含负向市场反应对照。
 **诚实边界**: 须标 supplemental, not a hypothesis test。排他限制不能仅靠第二阶段 ns。骨架用 associated with，原文 induces 不得照搬。stepwise 删控制不入库。
 
+<!-- wb:liu_liu_luo_2016_jm:legacy_Logit-Probit-Ordered-Probit_27 -->
 ### 变体 28: R4 总效应带 + 两水平预测概率 (2026-08-13)
 **来源论文**: Liu, Liu & Luo 2016 (*Journal of Marketing*)
 **原始句锚点**: "Figure 2, Panel A, shows the total effect of remedy cost, which becomes more negative as CEOcash increases and less negative as CEOequity increases."
@@ -557,6 +561,7 @@ updated: 2026-08-13
 **与原骨架差异**: 不替代 Malik AME（变体 6/7）或 Lun 反转网格（变体 20）。无 AME 网格时的总效应带 + 两水平预测概率。
 **诚实边界**: 总效应带不是 1-SD AME；不得把交互模型上的主效应独立解释为无条件斜率。
 
+<!-- wb:liu_liu_luo_2016_jm:legacy_Logit-Probit-Ordered-Probit_28 -->
 ### 变体 29: R7 水平 vs 比例测量 (2026-08-13)
 **来源论文**: Liu, Liu & Luo 2016 (*Journal of Marketing*)
 **原始句锚点**: "Nevertheless, to check the potential impact of cash versus equity incentives when they are measured as proportions, we conducted a separate analysis and found fairly consistent results."
@@ -568,6 +573,7 @@ updated: 2026-08-13
 **诚实边界**: 比例由构造互为相反，不得把两边都写成独立发现。
 
 
+<!-- wb:liu_liu_luo_2016_jm:legacy_Logit-Probit-Ordered-Probit_29 -->
 ### 变体 O：首事件建模范围的理论+经验双轨辩护（westphal_zajac_1998_symbolic_management 型）
 
 **模板**:

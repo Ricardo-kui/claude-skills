@@ -78,6 +78,7 @@ updated: 2026-08-05
 
 ---
 
+<!-- wb:liu_shankar2015:legacy_结构需求-state-space_1 -->
 ### 变体 2: M7 三层动态架构 — 品牌偏好累积 + 时变系数 transfer function + 事件特异 random walk（1篇高价值）
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
@@ -96,6 +97,7 @@ updated: 2026-08-05
 
 ---
 
+<!-- wb:liu_shankar2015:legacy_结构需求-state-space_2 -->
 ### 变体 3: M7 估计栈 — contraction mapping + Kalman 转移/观测方程 + GMM（1篇高价值）
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
@@ -114,6 +116,7 @@ updated: 2026-08-05
 
 ---
 
+<!-- wb:liu_shankar2015:legacy_结构需求-state-space_3 -->
 ### 变体 4: M8 直接 vs 间接效应识别 — 约化式交互类比（1篇高价值）
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
@@ -132,6 +135,7 @@ updated: 2026-08-05
 
 ---
 
+<!-- wb:liu_shankar2015:legacy_结构需求-state-space_4 -->
 ### 变体 5: M8 监管强制召回外生性 — 法定披露窗口论证（1篇高价值）
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
@@ -150,6 +154,7 @@ updated: 2026-08-05
 
 ---
 
+<!-- wb:liu_shankar2015:legacy_结构需求-state-space_5 -->
 ### 变体 6: M8 State-space 可观测等价排除 — 附录解析证明 + 模拟恢复（1篇高价值）
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
@@ -166,6 +171,7 @@ updated: 2026-08-05
 
 **诚实边界**: 单篇模拟不能替代多初始值/多规格稳健性；`upon request` 应改为附录可审计摘要；若 Z 矩阵秩不足，须报告不可识别参数组合。
 
+<!-- wb:liu_shankar2015:legacy_结构需求-state-space_6 -->
 ## 反模式
 
 - **只有方程无架构导航**: 堆 Eq.(7)–(12) 但不解释 direct/indirect/spillover 三层分工 → 审稿人视为 IO 黑箱。

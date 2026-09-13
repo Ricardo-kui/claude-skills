@@ -115,6 +115,7 @@ updated: 2026-08-05
 > An important consideration is that [actors] might self-select whether they [form the focal tie / take the treatment], creating an endogeneity issue. Furthermore, comparing the reduced-form [DV] model with the [mediator-included] model, Shaver ([2005]) suggested the reduced form may be mis-specified due to an omitted [mediator/endogenous regressor], and recommended an instrumental variable analysis. We focused on [an exogenous external / natural event — e.g., natural disasters in the actor's home market] as an instrumental variable. First, [the event] is exogenous, reflecting "nature's fury" ([citations]), and is not affected by [the outcome]. Second, [the event] might expose limitations of formal institutions (e.g., written rules and regulations) for acquiring strategic resources from the state, requiring [actors] to seek informal means—such as [forming the focal tie] ([citations]). Third, the existing [outcome] literature suggests that [actors] typically base [the outcome] on [alternative determinants: e.g., distance, host-market institutions, demand, own capabilities]; [the event], hence, may predict [the treatment] but have a limited effect on [the outcome] directly ([citation]). So, the instrument may satisfy exclusion-restriction conditions. We obtained data on [the event] from [source] and used it as an instrument.
 **与原骨架差异**: 与变体 1–3（Lewbel 内部生成 IV）的根本区别——本变体用**外部自然/准自然事件**作 IV，且排除限制通过**三层论证**建立：(1) 事件外生性（"nature's fury"，不受结果影响）；(2) 事件→处理的渠道（制度缝隙逻辑：正式制度失效→寻求非正式关系）；(3) 事件→结果的直接渠道**缺失**（由结果文献的已知决定因素反推）。第（2）层是核心理论增量——IV 通过"挤压正式资源获取"间接推动处理。诚实边界：第（3）层"无直接渠道"是排除限制的关键假设，本质不可检验，必须用结果领域文献的既有发现支撑，不可断言。适用于 IV 通过"制度/资源缝隙"推动企业形成非正式关系（政治关联、军方关联、银企关系）的研究。配合 control-function 报告见 `../write-results/corpus/IV-2SLS.md` 变体 4。
 
+<!-- wb:qiao_hiatt_sine_2026_smj:legacy_IV-2SLS_4 -->
 ### 变体 5: M8 Durbin-Wu-Hausman (DWH) Test + Gaussian Copula 内生性叙事 (1篇高价值)
 **来源论文**: Chung, Low & Rust (2022, JAMS)
 **原始句锚点**: "Therefore, to further address endogeneity concerns, we conduct the Durbin-Wu-Hausman (DWH) test (Malshe & Agarwal, 2015; Whitler et al., 2018). To further substantiate the case of no endogeneity, we also use the instrument-free Gaussian copula joint estimation method (Park & Gupta, 2012) and reach similar conclusions."
@@ -228,6 +229,7 @@ updated: 2026-08-05
 **跨 skill 对齐**: Results 见 `../write-results/corpus/IV-2SLS.md` 变体 8–10；构念「kind vs degree」辩护见 `面板数据-OLS.md` 变体 32。
 
 
+<!-- wb:zorn_shropshire_martin_combs_ketchen_2017_smj:legacy_IV-2SLS_12 -->
 #### 变体：M8 拟合值中介链——第一阶段认知位移预测值进下游结果模型（post_2022_women_tmt_strategic_renewal 型，EXTEND）
 - **功能标签**：中介变量内生时的 sequential IV——用上游假设模型的拟合值作为中介的操作化，再测其对下游结果的效应；SEM 作稳健性
 - **骨架**：To test the mediating effects of [mediator] in [hypotheses], we followed a standard instrumental variable approach, because [mediator]—our focal explanatory variables in the [downstream] models—are endogenously determined. We did so by taking the predicted values of shifts in [mediator] obtained in the first stage in models testing [upstream hypotheses] (see [Table reference]), before testing their effects in the [downstream] models. Our results hold when using an SEM approach, as we detail in the [Robustness Checks] section below.
@@ -254,6 +256,7 @@ updated: 2026-08-05
 ---
 
 
+<!-- wb:zorn_shropshire_martin_combs_ketchen_2017_smj:legacy_IV-2SLS_13 -->
 ### 变体 14: M8 exclusion 两句式 + 预测值代入（非默认；带诚实边界） (2026-08-13)
 
 **来源论文**: Kalaignanam, Kushwaha & Eilert 2013 (*Journal of Marketing*)

@@ -95,6 +95,7 @@ source: Distilled from Habel et al. (2016, JM) by distill-methods-exemplar
 **槽位**: R3
 **跨论文复现**: EMERGING (1 paper): habel2016 (JM) — Studies 2, 3
 
+<!-- wb:habel_etal_2016_jm:legacy_SEM-moderated-mediation_1 -->
 #### 1. 模型拟合报告
 
 ```
@@ -272,6 +273,7 @@ supporting Hypothesis [N+1].
 **写入日期**: 2026-06-16
 **槽位**: R4/R6
 
+<!-- wb:qiao_hiatt_sine_2026_smj:legacy_SEM-moderated-mediation_4 -->
 #### 功能描述
 
 当 Theory 提出一个 **differential-persistence meta-hypothesis**（"通道 A 的效应比通道 B 的效应更持久"），而两条通道方向相反（一正一负）时，不能直接比较两个交互系数。本模板解决"如何统计检验两条对立通道的时间动态是否可区分"。
@@ -414,12 +416,14 @@ The [X × event] interaction on [mediator] was [coefficient and CI/p], indicatin
 **槽位**: R3
 
 
+<!-- wb:kashmiri_nicol_arora_2017_jams:legacy_SEM-moderated-mediation_7 -->
 ### 变体 8: 两步预测中介 + 双 moderator 条件间接效应 + 双路径汇合（post_2022_women_tmt_strategic_renewal 型）
 
 **来源论文**: Post, Lokshin & Boone 2022 (AMJ)
 **验证状态**: VERIFIED（expert_audit_override, user 2026-08-29）
 **槽位**: R8（承接 R3/R4 双路径铺垫；收敛全篇双路径回答）
 
+<!-- wb:post_lokshin_boone_2022_amj:legacy_SEM-moderated-mediation_8 -->
 #### 适用场景
 
 - 面板 OLS/一阶差分设计：中介由第一阶段模型生成预测值（fitted/predicted shift），代入第二阶段 outcome 模型——区别于变体 1 的 SEM 同时估计

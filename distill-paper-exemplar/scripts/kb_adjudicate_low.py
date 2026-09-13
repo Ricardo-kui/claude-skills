@@ -271,6 +271,13 @@ def resolve_all() -> dict:
         else:
             for k2 in (doc.get("source_papers") or {}):
                 family_uni.setdefault(k2, _family_entry(k2))
+    # case-insensitive merge: the same paper can be registered as
+    # 'Zorn_Shropshire_...' (intro) and 'zorn_shropshire_...' (theory);
+    # two family hits would wrongly route to kb_not_found
+    merged: dict[str, dict] = {}
+    for k, v in family_uni.items():
+        merged.setdefault(k.lower(), v)
+    family_uni = merged
     family_alias = rv.AliasIndex(sorted(family_uni), [])
     groups: dict[str, dict] = {}
     for corpus in ROOTS:
@@ -338,6 +345,18 @@ def resolve_all() -> dict:
                 continue
             rule = {"citation": g["citation"][:90], "ruling": "composite_multi_paper",
                     "note": "复合行中部分论文无法归源——人工拆分",
+                    "n_blocks": len(g["blocks"]), "blocks": g["blocks"][:8]}
+            rulings.append(rule)
+            continue
+        # family-first: a citation whose paper is ALREADY registered under a
+        # unique family key needs no KB file — mint straight onto that key
+        # (e.g. Zorn 2017 SMJ: theory registry has the entry, KB folders don't)
+        fam_hits = match_citation(cit, family_uni)
+        if len(fam_hits) == 1:
+            rule = {"citation": g["citation"][:90], "surnames": cit["surnames"],
+                    "year": cit["year"], "journal": cit["journal"],
+                    "ruling": "mint_existing_key", "key": fam_hits[0],
+                    "note": "family key already registered",
                     "n_blocks": len(g["blocks"]), "blocks": g["blocks"][:8]}
             rulings.append(rule)
             continue

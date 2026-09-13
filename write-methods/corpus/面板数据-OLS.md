@@ -241,6 +241,7 @@ updated: 2026-08-13
 > We recruited [actors] through [N] channels to maximize sample diversity and reduce selection bias. First, we partnered with [organization_type_A: e.g., board advocacy group] which provided access to [actor_pool_A]. Second, we worked with [organization_type_B: e.g., consulting firm] to identify [actor_pool_B]. Third, we contacted [organization_type_C: e.g., alumni office] for [actor_pool_C]. Finally, we used snowball sampling through [references] to reach additional participants. This multi-channel approach yielded [N_final] [actors] representing [N_firms/units] across [N_industries] industries.
 **与原骨架差异**: 针对难以接触的研究对象（高管、董事会成员、精英决策者），单一招募渠道会导致样本集中于某一类型——多通道招募通过制度多样性（advocacy groups vs consulting partners vs alumni networks）增加样本覆盖。关键要素：每个通道说明其提供哪类参与者，最终汇总样本的行业分布。
 
+<!-- wb:mannor_wowak_bartkus_gomez_mejia_2016_smj:legacy_面板数据-OLS_6 -->
 ### 变体 7: M7 嵌套横截面数据的聚类稳健标准误 (1篇高价值)
 **来源论文**: Mannor, Wowak, Bartkus & Gomez-Mejia 2016 (Strategic Management Journal)
 **原始句锚点**: To account for the nonindependence in our data (i.e., the multiple strategic decisions per executive), we specified Huber/White/sandwich standard errors using the “robust” option in Stata 12. Decisions were clustered by executive.
@@ -251,6 +252,7 @@ updated: 2026-08-13
 > Because our data involve [lower_unit] nested within [higher_unit] (e.g., decisions nested within executives), observations are not independent. We therefore estimated [models] with [SE_type] robust standard errors clustered by [cluster_level] to account for within-[cluster] correlation of the error terms ([citation]). This approach treats each [cluster] as an independent sampling unit while allowing [lower_units] within the same [cluster] to share unobserved characteristics.
 **与原骨架差异**: 当数据具有嵌套结构（如多个决策嵌套在同一高管/公司内）但不足以运行多层模型（样本量/top-level 单元数不足）时，聚类稳健SE是最小负担的解决方案。关键：明确说明嵌套层级和聚类层级，解释为什么这样聚类（共享不可观测特征）。
 
+<!-- wb:mannor_wowak_bartkus_gomez_mejia_2016_smj:legacy_面板数据-OLS_7 -->
 ### 变体 8: M8 回顾性偏差三角检验 (1篇高价值)
 **来源论文**: Mannor, Wowak, Bartkus & Gomez-Mejia 2016 (Strategic Management Journal)
 **原始句锚点**: We thus took steps to ensure that the lengthier time horizon for some of the decisions did not introduce retrospective bias into our study. First, and as we discuss later, we controlled for executives' self-ratings of decision quality and recent performance in all models.
@@ -261,6 +263,7 @@ updated: 2026-08-13
 > A potential concern with [retrospective/interview-based] data is that [actors]'s recollections may be colored by [outcome knowledge/hindsight]. We addressed this concern through a triangulation approach: First, we controlled for [affective/outcome variables: e.g., satisfaction with decision outcome] to partial out post-hoc rationalization. Second, we compared [qualitative/text patterns] with [quantitative/archival patterns] to check consistency. Third, we replicated our findings using [alternative measure/sample] that is less susceptible to retrospective bias. Results were consistent across all approaches.
 **与原骨架差异**: 适用于任何依赖事后自我报告的研究（访谈、问卷、回忆数据）。三管齐下：(1) 控制情感/结果变量（partial out halo）；(2) 定性-定量一致性检查；(3) 替代测量复制。
 
+<!-- wb:mannor_wowak_bartkus_gomez_mejia_2016_smj:legacy_面板数据-OLS_8 -->
 ### 变体 9: M2 制度断点样本辩护 — 行业收缩+时间边界双重正当性 (1篇高价值)
 **来源论文**: Desai 2011 (Academy of Management Journal)
 **原始句锚点**: I tested these hypotheses on a panel of all U.S. class I railroad firms operating between 1980 and 2003. The U.S. railroad industry was deregulated in 1980, making prior years incomparable with later ones (Smith & Grimm, 1987).
@@ -340,6 +343,7 @@ updated: 2026-08-13
 **诚实边界**: RE 选择的最低要求：(1) 理论理由（跨单元差异>单元内变化），(2) Hausman 检验结果，(3) 关键预测变量的 ICC 作为辅助证据。仅凭 "Hausman test was not significant (p > .05)" 不足以说服审稿人——需解释**为什么理论预期 RE 比 FE 更合适**。
 
 
+<!-- wb:li_chiu_kong_cropanzano_ho_2026_jom:legacy_面板数据-OLS_13 -->
 ### 变体 60: M2.5 预测变量组内变异预展示为 FE 设计发证 (VERIFIED)
 
 **来源论文**: Wowak, Mannor, Wowak & Bu 2020 (Manufacturing & Service Operations Management)
@@ -376,6 +380,7 @@ updated: 2026-08-13
 
 
 
+<!-- wb:li_chiu_kong_cropanzano_ho_2026_jom:legacy_面板数据-OLS_14 -->
 ### 变体 92: M5 对手 IV 平行交互项 — 调节归属隔离 (1篇高价值)
 **来源论文**: Gulati, Lavie & Singh 2009 (Strategic Management Journal)
 **原始句锚点**: "In Models 4–6 we also included interaction terms for GPE in order to isolate the unique moderated contribution of PSE."
@@ -590,6 +595,7 @@ updated: 2026-08-13
 **与原骨架差异**: 与 Desai 变体9 的"制度断点辩护"和 Cui 变体15 的"双重现象辩护"互补。本变体适用于**单行业事件研究**：(1) 用行业统计数字证明行为者间相互依赖；(2) 用"大事件"抽样标准平衡信号强度与样本量；(3) 明确对齐先例研究。关键：抽样阈值必须理论上合理（既能引发市场反应，又不过于罕见）。
 **诚实边界**: "大事件"标准可能导致选择偏差——大事件对应的公司/关系可能系统性地不同于小事件。需在M8报告放宽/收紧阈值的稳健性。
 
+<!-- wb:pupovac_astvansh_carrillat_legoux_2026_pom:legacy_面板数据-OLS_23 -->
 ### 变体 24: M4 法律强制披露阈值 → 自愿披露操作化 (1篇高价值)
 **来源论文**: Pupovac, Astvansh, Carrillat & Legoux 2026 (POM)
 **原始句锚点**: U.S. law requires a publicly traded supplier to disclose in its annual report (i.e., the Form 10-K the firm files with the SEC) the sales revenue it received from each "major" customer—that is, a customer from whom the supplier received at least 10% of its total sales revenue in the focal year.
@@ -603,6 +609,7 @@ updated: 2026-08-13
 **与原骨架差异**: 将**法律-会计准则张力**转化为构念操作化的核心论证。关键：(1) 强制披露阈值定义"major" vs "minor"；(2) 会计准则的"自愿"声明创造实证上的变异空间；(3) 用滞后一期披露避免同期内生性。适用于任何依赖强制/自愿披露边界的研究（客户披露、ESG披露、Segment报告等）。
 **诚实边界**: 必须验证 [regulator] 确实不强制执法；若样本中多数公司都披露，"自愿"变异的解释力会下降。滞后一期处理假设披露决策在 [event] 前已确定，否则需用CF/IV进一步处理内生性。
 
+<!-- wb:pupovac_astvansh_carrillat_legoux_2026_pom:legacy_面板数据-OLS_24 -->
 ### 变体 25: M3 DV 文献基准锚定 — 均值与前人文献对比 (1篇高价值)
 **来源论文**: Du & Tsolmon 2024 (Organization Science)
 **原始句锚点**: The mean TMT retention rate in our sample is 54.8%, which is comparable to the mean retention rates found in the two empirical studies on postacquisition turnover: 55% in Hambrick and Cannella (1993), who examined 109 acquisitions from 1980 to 1984, and 59.4% in Krug and Hegarty (1997), who examined 207 acquisitions of U.S. firms by domestic and foreign acquirers from 1986 to 1988.
@@ -723,6 +730,7 @@ updated: 2026-08-13
 
 ---
 
+<!-- wb:liu_shankar2015:legacy_面板数据-OLS_29 -->
 ### 变体 30: M4 媒体覆盖 — 双索引相关度阈值 + 互补数据源 (1篇高价值)
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
@@ -741,6 +749,7 @@ updated: 2026-08-13
 
 ---
 
+<!-- wb:liu_shankar2015:legacy_面板数据-OLS_30 -->
 ### 变体 31: M2/M4 异频数据时间对齐 — 事件聚合至结果频率 (1篇高价值)
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
@@ -757,6 +766,7 @@ updated: 2026-08-13
 
 **诚实边界**: 月内事件堆叠假设事件效应在月内可加；年度价格仅 CPI 月变会低估 within-year price variation——须 limitation 承认 MSRP 代理限制。
 
+<!-- wb:liu_shankar2015:legacy_面板数据-OLS_31 -->
 ### 变体 32: M4 结构二元特征操作化为「kind」而非「degree」— 相对 majority-independence 的 discrete construct (EMERGING)
 
 **来源论文**: Zorn, Shropshire, Martin, Combs & Ketchen (2017, SMJ)
@@ -775,6 +785,7 @@ updated: 2026-08-13
 
 ---
 
+<!-- wb:zorn_shropshire_martin_combs_ketchen_2017_smj:legacy_面板数据-OLS_32 -->
 ### 变体 33: M1 单一中介机构设置辩护 — a/b/c 三理由 + 单一机构一致性 (1篇高价值)
 
 **来源论文**: DesJardine, Li & Shi (2025, AMJ)
@@ -1125,6 +1136,7 @@ updated: 2026-08-13
 **诚实边界**: 残差化丢掉与 [collinear covariate] 共享的构念变异；不得把残差系数解释为原始构念的全效应。残差化不是识别策略。
 
 
+<!-- wb:liu_liu_luo_2016_jm:legacy_面板数据-OLS_50 -->
 ### 变体 51：M1 制度冲击型 setting 三重理由论证（ball_2018 型，gap HIGH）
 - **出处**: ball_2018 (SMJ)，产品召回面板，band=gap HIGH
 - **槽位**: M1 研究情境
