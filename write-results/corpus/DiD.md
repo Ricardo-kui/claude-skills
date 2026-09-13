@@ -352,6 +352,7 @@ updated: 2026-09-05
 
 
 
+<!-- wb:Castellaneta_Conti_Kacperczyk_2017_SMJ:legacy_DiD_9 -->
 ### 变体 U：r7_did_preshock_partition_threat_test（lu2022）
 
 **槽位**: R7

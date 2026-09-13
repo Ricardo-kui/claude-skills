@@ -151,6 +151,7 @@ updated: 2026-08-05
 **适用**: 焦点 IV 为 [unit] 层面的 inflow / salience / intensity 构念（移民、贸易、资本流动、技术扩散、人才流动）的研究；任何可构造"外生全球冲击 × 历史[unit]特定暴露"交互的研究。典型应用：移民 / 贸易 / 资本流入对[unit]（州 / 国家 / 地区 / 行业）结果的影响。
 **跨 skill 对齐**: 与变体 4（Qiao 自然事件 IV）互补——变体 4 用单一外部事件作 IV，本变体用两组件交互；与变体 6（Abdurakhmonov biographical IV）互补——变体 6 的"距离"来自时间，本变体的"距离"来自时间 + 空间双维度。
 
+<!-- wb:lee_wang_2026_jom2:legacy_IV-2SLS_7 -->
 ### 变体 8: M7 双估计器双层级两阶段 IV（同一 IV 对两个不同性质/层级 DV）
 **来源论文**: Wowak2025 MS
 **原始句锚点**: "We examine the influence of TMT political ideology on each of our dependent variables using similar forms of two-stage instrumental variable (IV) fixed effects regression. The level of analysis for the recall count model is the firm-year, and the level of analysis for the time-to-recall model is the individual recall."
@@ -265,6 +266,7 @@ updated: 2026-08-05
 **与原骨架差异**: 区别变体 4（三层 exclusion + 真正 2SLS）——本变体是两句 exclusion + 预测值代入（generated regressor）。**不是 2026 默认**；写入只为学会 exclusion 两句式。
 
 **诚实边界**: 必须报第一阶段 F / 偏 R²，并用 2SLS 或控制函数作为默认升级。预测值代入不处理 generated-regressor 推断。不得把 resolve endogeneity 写成已完成 2SLS。
+<!-- wb:kalaignanam_2013_jm:legacy_IV-2SLS_14 -->
 
 ## 反模式（IV 排除限制论证）
 

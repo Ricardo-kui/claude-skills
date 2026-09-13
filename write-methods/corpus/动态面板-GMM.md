@@ -119,6 +119,7 @@ updated: 2026-08-13
 
 
 
+<!-- wb:kalaignanam_2013_jm:legacy_动态面板-GMM_5 -->
 ### 变体 6: Ridge, Aime & White 2013 (SMJ) — 短面板适用性陈述 + 估计器优势枚举 (2026-09-12)
 **验证状态**: EMERGING（单篇）
 **槽位**: M7

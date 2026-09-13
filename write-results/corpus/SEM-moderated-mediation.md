@@ -225,6 +225,7 @@ may have reached ambiguous conclusions.
 **验证状态**: EMERGING
 **槽位**: R2/R3
 
+<!-- wb:vadakkepatt2022:legacy_SEM-moderated-mediation_3 -->
 #### 功能描述
 
 当论文使用联立方程 SEM 且含内生性处理时，Results 需要在主假设检验前报告 IV 诊断（Hansen's J + Kleibergen-Paap），并用多列表格呈现多个方程的估计结果。
@@ -418,6 +419,7 @@ The [X × event] interaction on [mediator] was [coefficient and CI/p], indicatin
 **来源论文**: Post, Lokshin & Boone 2022 (AMJ)
 **验证状态**: VERIFIED（expert_audit_override, user 2026-08-29）
 **槽位**: R8（承接 R3/R4 双路径铺垫；收敛全篇双路径回答）
+<!-- wb:post_du_2022_amj:legacy_SEM-moderated-mediation_8 -->
 
 #### 适用场景
 

@@ -71,6 +71,7 @@ updated: 2026-08-12
 > We matched each observation in the treatment group to those in the control group based on [N] pretreatment variables—[var_list]—that address [rationale] ([citations]). This process yielded [N] matched strata containing [N_treated] treated observations and [N_control] control observations for a total of [N_total] observations across [N] firms from [year_start] to [year_end]; [N_excluded] observations were not matched in any stratum and thus were excluded from the analysis.
 **与原骨架差异**: 与变体1(主分析CEM)的关键区别：(1) **处理变量是外生冲击**（如CEO变更）而非内生变量本身（如CEO持股）；(2) 关键时点规则确保treatment exposure完整（"CEO was in the role prior to defect awareness date, not recall initiation date"）；(3) CEM在稳健性检验而非主分析中出现，用于验证内生变量效应的稳健性。这为匹配方法创造了一种新的使用位置——不仅是建立可比样本，更是**外生冲击验证工具**。
 
+<!-- wb:darby_msom_2023_msom:legacy_PSM匹配面板_2 -->
 ### 变体 3: Entropy Balancing (EBM) — 重加权、保留全部观测 (1篇高价值)
 **来源论文**: Qiao, Hiatt & Sine 2026 (SMJ)
 **原始句锚点**: Table S2 shows the covariate balancing results after EBM: after matching, the differences of all control variables, in terms of their means, between the treatment and control groups become negligible. These results suggest that the treatment we have can be seen as random to the extent that we have ruled out selection on these observable variables.

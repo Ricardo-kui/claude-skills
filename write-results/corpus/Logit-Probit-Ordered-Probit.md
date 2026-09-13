@@ -292,6 +292,7 @@ updated: 2026-08-13
 > [Table X] presents the first-stage results, where the [instrument] variable exhibits a robust [positive/negative] coefficient (b = [value], p < [threshold]), confirming that [instrument] is highly relevant for predicting [selection event]. Therefore, the instrument is both conceptually valid and statistically significant for isolating the selection effect. Next, we included the predicted inverse Mills ratio in our regression models. Since our dependent variable is binary, we used [probit/logit] regressions. Following [citation], we employed a clustered correlation structure grouped by [cluster_level] and used robust standard errors.
 **与原骨架差异**: Heckman 作为主识别策略时，R2 必须完成三件事：(1) 第一阶段表格（含 instrument 系数+显著性）；(2) 确认 instrument relevance；(3) 声明逆米尔斯比率已纳入第二阶段。与 OLS/FE 的 R2（"Table X Model 1→2→3"）结构完全不同。
 
+<!-- wb:Malik_2025_JOM_Mixed_Gambles_in_Product_Recalls:legacy_Logit-Probit-Ordered-Probit_5 -->
 ### 变体 6: R3 Probit 边际效应 CI 检验 — "CI does not cross zero" 作为支持标准 (1篇高价值)
 **来源论文**: Malik, Wang, Martin & Gomez-Mejia 2025 (Journal of Management)
 **原始句锚点**: The average marginal effect is visualized in Figure 1. The confidence intervals (CIs) of the marginal effects do not cross zero, thus supporting Hypothesis 1a.
@@ -301,6 +302,7 @@ updated: 2026-08-13
 **骨架**:
 > Due to the difficulty in directly interpreting regression coefficients and significance levels in probability models ([citation]), and as hypotheses should not be tested solely by examining p-values ([citation]), the average marginal effect is visualized in [Figure X]. The confidence intervals (CIs) of the marginal effects do not cross zero, thus supporting Hypothesis [N]. A one-standard-deviation increase in [IV] from the mean value ([mean] to [mean+1SD] [units]) [increased/decreased] the probability of [DV] from [X]% to [Y]%.
 **与原骨架差异**: Malik 的证据展演有三个独特点：(1) 先引用 Busenbark et al. (2022) 和 Wiersema & Bowen (2009) 建立"probit 系数不可直接解释"的权威背书；(2) 将检验从 p-value 移到 AME 图的 CI——"the CIs do not cross zero, thus supporting H1"；(3) 经济显著性嵌入同一句：1-SD → X%→Y% 概率变化。
+<!-- wb:Malik_2025_JOM_Mixed_Gambles_in_Product_Recalls:legacy_Logit-Probit-Ordered-Probit_6 -->
 
 ### 变体 7: R5 Probit 经济显著性 — 1-SD → 概率百分点变化 (1篇高价值)
 **来源论文**: Malik, Wang, Martin & Gomez-Mejia 2025 (Journal of Management)
@@ -310,6 +312,7 @@ updated: 2026-08-13
 **槽位**: R5
 **骨架**:
 > A one-standard-deviation increase in [IV] from the mean value ([mean] to [mean+1SD] [units]) [increased/decreased] the probability of [DV] from [X]% to [Y]%.
+<!-- wb:Malik_2025_JOM_Mixed_Gambles_in_Product_Recalls:legacy_Logit-Probit-Ordered-Probit_7 -->
 **与原骨架差异**: 与 OLS 的 "1-SD → N unit change" 或计数的 "e^β−1 = N%" 不同——probit/logit 的经济显著性应翻译为**概率百分点变化**（从 X% 到 Y%），同时给出均值和均值+1SD 的绝对值以锚定读者。一句完成，不需要独立段落。
 
 ### 变体 8: R3 双 DV 平行对称报告 (1篇高价值)
@@ -319,6 +322,7 @@ updated: 2026-08-13
 **写入日期**: 2026-07-07
 **槽位**: R3
 **骨架**:
+<!-- wb:Malik_2025_JOM_Mixed_Gambles_in_Product_Recalls:legacy_Logit-Probit-Ordered-Probit_8 -->
 > As Model [N] ([Table Y]) reports, the coefficient for [IV_1] was [positive/negative] and significant (b = [value], p < [threshold]). [Figure X] plots the marginal effect, supporting Hypothesis [Na]. A one-SD increase... [changed probability from A% to B%]. Furthermore, the coefficient for [IV_2] was [opposite_sign] and significant (b = [value], p < [threshold]). [Figure Y] visualizes the marginal effect, supporting Hypothesis [Nb]. A one-SD increase... [changed probability from C% to D%].
 **与原骨架差异**: 当两个 IV 对同一 DV 有对称反向预测时，在同一段内平行报告——读者无需在表格间跳转。关键：对称的句法（"the coefficient for X was positive... the coefficient for Y was negative"），对称的经济显著性翻译，对称的图示引用。
 
@@ -451,6 +455,7 @@ updated: 2026-08-13
 **验证状态**: EMERGING
 **槽位**: R3
 **骨架**:
+<!-- wb:lun_zurbruegg_mount_2026_etp:legacy_Logit-Probit-Ordered-Probit_19 -->
 > To test H[N], we examine whether [IV] is associated with an increased likelihood of [rare binary DV] by estimating [conditional logit]. [Table X] Column [controls] includes only controls. In column [focal], we include [IV]. In support of H[N], we find that [IV] is positively and significantly associated with the likelihood of [DV] (β = [value], p < [threshold]). Following the method suggested by Kitazawa ([year]), we calculate the average semi-elasticity of [DV] likelihood with respect to a unit change in [IV] to determine effect size. Our results indicate that a one standard deviation increase in [IV] increases the probability of [DV] by [percent]%.
 **与原骨架差异**: 变体2 用 OR→likelihood；变体14 用 OR→相对概率+低基准诚实。本变体是条件Logit 的 Kitazawa 平均半弹性。
 **诚实边界**: 半弹性是幅度拍，不是因果效应；低基准时须另句说明绝对变化是否 modest。
@@ -460,6 +465,7 @@ updated: 2026-08-13
 **原始句锚点**: "Interestingly, the results suggest that COO power not only weakens the positive association between EO and product recalls, but also reverses the relationship from positive to negative at high levels of COO power."
 **验证状态**: EMERGING
 **槽位**: R4
+<!-- wb:lun_zurbruegg_mount_2026_etp:legacy_Logit-Probit-Ordered-Probit_20 -->
 **骨架**:
 > In H[N], we predicted that the positive relationship between [IV] and [DV] would be weakened by [moderator]. To test this hypothesis, we included an interaction term in Model [M] of [Table X]. In support of H[N], we find that [moderator] negatively moderates the positive [IV]–[DV] relationship (β = [value], p < [threshold]). We then estimated the marginal effects of [IV] on [DV] likelihood at different levels of [moderator]. We focus on values of [moderator] between [low] and [high], which represented approximately [coverage]% of observations. Interestingly, the results suggest that [moderator] not only weakens the positive association, but also reverses the relationship from positive to negative at high levels of [moderator]. Specifically, the valence switches from positive to negative and is marginally significant when [moderator] is approximately [threshold]. To ease interpretation, Figure [F] plots the average effect of [IV] at different values of [moderator]. Estimates above (below) the horizontal zero-line indicate a positive (negative) association.
 **与原骨架差异**: 变体15 是衰减%无反转。本变体是 AME 网格+零线图+超出 weaken 的 reversal。
@@ -469,6 +475,7 @@ updated: 2026-08-13
 **来源论文**: Lun, Zurbruegg, Mount & Cheong 2026 (Entrepreneurship Theory and Practice)
 **原始句锚点**: "This test examines whether our observed relationship between EO and recall likelihood could have emerged by chance or from industry-specific factors rather than firm-level EO."
 **验证状态**: EMERGING
+<!-- wb:lun_zurbruegg_mount_2026_etp:legacy_Logit-Probit-Ordered-Probit_21 -->
 **槽位**: R7
 **骨架**:
 > To address potential concerns about our sampling strategy, we conducted a permutation test ([citation]). This test examines whether our observed relationship between [IV] and [DV] likelihood could have emerged by chance or from industry-specific factors rather than firm-level [IV]. We maintained the structure of our data but disrupted the hypothesized mechanism by randomly reassigning each [unit]'s [IV] score to another [unit] within the same industry. We then re-estimated our baseline model with these permuted values and recorded the resulting coefficient. This process was repeated [N] times to generate a null distribution. Our actual coefficient ([value], from [Table X]) exceeds [all / nearly all] permuted coefficients, placing it at approximately the [percentile] of the distribution. The contrast provides evidence that the relationship is not an artifact of our sampling approach or industry-level confounds, but instead represents a firm-level association.
@@ -478,6 +485,7 @@ updated: 2026-08-13
 ### 变体 22: R7 同二元 DV 的 system GMM（交互项作内生） (2026-08-13)
 **来源论文**: Lun, Zurbruegg, Mount & Cheong 2026 (Entrepreneurship Theory and Practice)
 **原始句锚点**: "In our implementation, we treat EO, COO power, and life cycle, as well as their two- and three-way interaction terms, as potentially endogenous variables."
+<!-- wb:lun_zurbruegg_mount_2026_etp:legacy_Logit-Probit-Ordered-Probit_22 -->
 **验证状态**: EMERGING
 **槽位**: R7
 **骨架**:
@@ -487,6 +495,7 @@ updated: 2026-08-13
 
 ### 变体 23: R8 post-hoc 机制代理另 DV（限 aligns with） (2026-08-13)
 **来源论文**: Lun, Zurbruegg, Mount & Cheong 2026 (Entrepreneurship Theory and Practice)
+<!-- wb:lun_zurbruegg_mount_2026_etp:legacy_Logit-Probit-Ordered-Probit_23 -->
 **原始句锚点**: "Given that a firm's underlying approach to quality control is not directly observable, we use QMS certifications as a measurable indicator of formal quality control commitment."
 **验证状态**: EMERGING
 **槽位**: R8

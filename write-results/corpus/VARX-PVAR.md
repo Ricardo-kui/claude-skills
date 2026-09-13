@@ -60,6 +60,7 @@ VARX/PVAR Results 的叙事核心是**动态交叉效应的量化与可视化**�
 **范式排他性**: VARX/PVAR 专用。OLS/FE/Logit 不适用，因为它们不产生 GIRF 或 impulse response function。
 **诚实边界**: GIRF percentage 的显著性检验应明确报告标准（如 one-standard-error band）和置信水平（如 p < .05）。不同标准可能导致 percentage 差异较大。若正文未报告置信区间，应在附录或脚注中说明显著性检验方法。
 
+<!-- wb:borah_tellis_2016_jm:legacy_VARX-PVAR_1 -->
 ### 变体 2: R3 Graded Support Language — "Full/Moderate/Considerable Support" (1篇高价值)
 **来源论文**: Borah & Tellis 2016 (Journal of Marketing Research)
 **原始句锚点**: Thus, we find moderate support for H2, which states that perverse halo is stronger for brands from the same country.
@@ -75,6 +76,7 @@ VARX/PVAR Results 的叙事核心是**动态交叉效应的量化与可视化**�
   - Moderate support: 主要预测得到支持，但存在例外或反向符号
   - Considerable support: 方向性预测得到支持，但幅度或边界条件与理论不完全一致
 **诚实边界**: "moderate support" 不能用于事后挽救失败假设——必须有理论或数据支持为何 mixed findings 仍是边界条件下的证据。若假设完全被拒绝，应诚实报告"not supported"而非"moderate support"。
+<!-- wb:borah_tellis_2016_jm:legacy_VARX-PVAR_2 -->
 
 ### 变体 3: R5 Basis-Points→Dollars Translation (Event Study + VARX) (1篇高价值)
 **来源论文**: Borah & Tellis 2016 (Journal of Marketing Research)
@@ -91,6 +93,7 @@ VARX/PVAR Results 的叙事核心是**动态交叉效应的量化与可视化**�
   - 峰值效应（peak basis points on day N）
   - 跨品牌比较（focal vs rival）
   - 正负效应对比（loss vs gain）
+<!-- wb:borah_tellis_2016_jm:legacy_VARX-PVAR_3 -->
 **诚实边界**: 美元翻译的计算方法必须在脚注或附录中透明化——包括 average outstanding shares、average share price、时间窗口的选取。若不同年份的 shares 或 price 变化较大，应报告加权或分段计算。
 
 ### 变体 4: R5 FEVD Relative Importance — Partial-R² Analog for PVAR (1篇高价值)
@@ -106,6 +109,7 @@ VARX/PVAR Results 的叙事核心是**动态交叉效应的量化与可视化**�
 **设计变体**: 
   - 不同时间 horizon（10-day, 20-day, 30-day）
   - 跨变量比较（focal vs rival vs controls）
+<!-- wb:borah_tellis_2016_jm:legacy_VARX-PVAR_4 -->
   - 跨样本比较（Japanese brands vs Toyota-Chrysler）
 **诚实边界**: FEVD 依赖于 VARX 的变量排序（ordering of Cholesky decomposition）。不同的排序可能导致不同的 FEVD 值。应在 Methods 或附录中说明排序的理论依据（如"we order variables based on temporal precedence: recall → concerns → sales"）。
 
@@ -122,6 +126,7 @@ VARX/PVAR Results 的叙事核心是**动态交叉效应的量化与可视化**�
 **设计变体**: 
   - 三向 Venn（Figure 2A 风格）
   - 单向 halo（downward vs upward, Figure 2B/C 风格）
+<!-- wb:borah_tellis_2016_jm:legacy_VARX-PVAR_5 -->
   - 跨国家比较（Japanese brands vs Toyota-Chrysler）
   - 面积比例 Venn（area-proportional, 使用 Chow & Rodgers 2005 算法）
 **诚实边界**: Venn diagram 的区域面积应与实际 percentage 成正比（area-proportional）。若使用标准 Venn（面积不按比例），应在图注中说明。推荐使用 Matlab 的 Chow & Rodgers (2005) 算法生成面积比例 Venn diagram。
@@ -137,6 +142,7 @@ VARX/PVAR Results 的叙事核心是**动态交叉效应的量化与可视化**�
 **与原骨架差异**: 这是 **VARX/PVAR 设计下报告交叉效应弹性的标准方式**。Borah & Tellis 报告 symmetric two-way elasticities：Toyota-Honda 12.1%, Honda-Nissan 7.0%, Toyota-Nissan 7.1%, Toyota-Chrysler 5.9%。弹性比系数更易解释——1% increase in X → Y% increase in Y。这与 OLS 中的 elasticity 解释（β × SD(X)/SD(Y)）不同，VARX 的 elasticity 直接来自 GIRF 的累积效应。
 **范式排他性**: VARX/PVAR 专用。OLS/FE 的 elasticity 需要额外计算（mean-centering + SD rescaling），而 VARX 的 elasticity 直接由 GIRF 提供。
 **设计变体**: 
+<!-- wb:borah_tellis_2016_jm:legacy_VARX-PVAR_6 -->
   - 单向弹性（one-way perverse halo: Toyota→Honda 17.0%, Honda→Toyota 7.1%）
   - 对称两向弹性（symmetric two-way: Toyota-Honda 12.1%）
   - 跨国家比较（Japanese brands avg 8.73% vs Toyota-Chrysler 5.9%）
@@ -153,6 +159,7 @@ VARX/PVAR Results 的叙事核心是**动态交叉效应的量化与可视化**�
 **与原骨架差异**: 这是 **时间序列/脉冲响应分析的关键补充**。Borah & Tellis 报告 perverse halo 的 wear-in period 为 1 day，asymptote 为 6 days。这意味着负面溢出效应很快达到峰值，并在一周内趋于稳定。这比仅报告"显著效应"更有管理启示——firm 可以据此制定危机沟通的时间表（如"前 3 天是关键窗口"）。
 **范式排他性**: VARX/PVAR 专用。OLS/FE/Logit 无法捕捉时间动态（除非使用滞后项或 distributed lag models）。
 **设计变体**: 
+<!-- wb:borah_tellis_2016_jm:legacy_VARX-PVAR_7 -->
   - Wear-in period（从 0 到峰值的时间，如 1 day）
   - Wear-out period（从峰值衰减到 0 的时间，如 10 days）
   - 渐近时间（达到 90% 最终效应的时间，如 6 days）

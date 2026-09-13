@@ -212,6 +212,7 @@ updated: 2026-08-13
 > We interpret the practical implications using the smallest ([window_1]) and largest ([window_2]) significant effect sizes to provide a range of the potential [penalty/benefit]. A one-standard-deviation increase in [DV] is associated with a [outcome] ranging from [min]% to [max]%. To further understand the practical implications, we examined how these [penalties] change across quartiles of the [DV] measure. The range of [penalties] is presented in [Table], which illustrates meaningful increases across quartiles. For example, moving from the first quartile ([N] [units]) to the second quartile ([N] [units])—[practical_interpretation]—is associated with an increase in the [outcome] ranging from [min]% to [max]%.
 **与原骨架差异**: 将经济显著性从 "1 SD → X%" 升级为完整的 quartile-by-quartile 解释。Darby2023 的 Table 5 是标杆——从 Q1 (10 days) 到 Q4 (365 days) 的 penalty 递增清晰展示了非线性惩罚结构。
 
+<!-- wb:darby_msom_2023_msom:legacy_OLS-FE_3 -->
 ### 变体 4: 小样本/非显著结果的诚实声明 (1/5 复现)
 **来源论文**: Darby2023 MSOM
 **原始句锚点**: "Although our theorizing supports the notion that CEOs may care less about low-severity recalls given their limited ramifications, we note that the nonsignificant effect for low-severity recalls could also simply be an artifact of the small sample size for low-severity recalls."
@@ -221,6 +222,7 @@ updated: 2026-08-13
 **骨架**:
 > Although our theorizing supports [theoretical_explanation], we note that the [null/mixed] effect for [subset] could also simply be an artifact of the small sample size for [subset] ([N] observations).
 **与原骨架差异**: 这是**非显著结果诚实报告**的标杆句式。不将 null finding 过度理论化（"CEOs care less"），而是在理论解释后立即补充统计功效的替代解释（"could also simply be an artifact of the small sample size"）。适用于任何小样本分组出现非显著结果的情况。
+<!-- wb:darby_msom_2023_msom:legacy_OLS-FE_4 -->
 
 ### 变体 5: Post Hoc — MCMC 显式中介分析 (1/5 复现)
 **来源论文**: Darby2023 MSOM
@@ -230,6 +232,7 @@ updated: 2026-08-13
 **槽位**: R8
 **骨架**:
 > Our post hoc analysis addresses implied relationships—[IV] may influence [DV_2] through [DV_1]. To examine this, we used an explicit mediation approach that explores evidence of indirect effects ([citation]). The explicit mediation method simulates multiple draws of indirect effects that are the product of [coefficient_path_a] and [coefficient_path_b]. Evidence of mediation is identified by examining the 95% confidence interval for the mediation pathway. If the interval does not contain zero, mediation is supported. To conduct this analysis, we used a Markov Chain Monte Carlo (MCMC) simulation method with [N] draws ([citations]). The results indicate that [DV_1] partially mediates the relationship between [IV] and [DV_2] for [conditions]. Overall, as [IV] increases, [DV_1] increases, and this [change_in_DV_1] leads to greater [DV_2].
+<!-- wb:darby_msom_2023_msom:legacy_OLS-FE_5 -->
 **与原骨架差异**: MCMC 显式中介（如 Imai et al. 或 Beer & Qi 2024 方法）替代了传统的 Baron & Kenny 三步法或 bootstrapping。关键要素：(1) 方法引用；(2) 模拟次数 (20,000 draws)；(3) 95% CI 不含 0 → mediation 成立；(4) "partially mediates" 而非 "fully mediates"（学术诚实）。
 
 ### 变体 6: 符号反转跨条件的诚实报告 — Sign Reversal Across Conditions with Theoretical Explanation (1/6 复现)
@@ -418,6 +421,7 @@ fine-grained estimates.
 ### 变体 66: R7 — 三威胁小节化稳健性：选择性/内生性 → 替代估计 → 构念效度（post_2022_women_tmt_strategic_renewal 型）
 
 **来源论文**: Post, Lokshin & Boone 2022 (AMJ)
+<!-- wb:post_du_2022_amj:legacy_OLS-FE_66 -->
 **验证状态**: VERIFIED（expert_audit_override, user 2026-08-29）
 **槽位**: R7（独立 "Robustness Checks" 小节，falling action）
 
@@ -746,6 +750,7 @@ Substantively, a [one-SD] increase in [predictor] is associated with a
 
 ### 变体 65: R4 — 分样本 null→significant 对 + 组内 Wald + 跨子样本 Chow 诚实降级（post_2022_women_tmt_strategic_renewal 型）
 
+<!-- wb:post_du_2022_amj:legacy_OLS-FE_65 -->
 **来源论文**: Post, Lokshin & Boone 2022 (AMJ)
 **验证状态**: VERIFIED（expert_audit_override, user 2026-08-29）
 **槽位**: R4（亦服务 R6 诚实降级）
@@ -891,6 +896,7 @@ difference is not significant (p = [value]).
 **与原骨架差异**: write-results SKILL.md 的 R1 通用段落未覆盖多项式/交互模型特有的 mean-centering、condition number 和非中心复制三重诊断。本文提供了完整且简洁的整合范例：诊断不是为了例行公事，而是为了说明"高阶项和交互项没有造成多重共线性问题"，并解释为何最终报告非中心化系数（便于解释）。
 
 ### 变体 67: R1 — 双路径前提描述统计：理论预言零相关 + moderator 分布与条件定义（post_2022_women_tmt_strategic_renewal 型）
+<!-- wb:post_du_2022_amj:legacy_OLS-FE_67 -->
 
 **来源论文**: Post, Lokshin & Boone 2022 (AMJ)
 **验证状态**: VERIFIED（expert_audit_override, user 2026-08-29）
@@ -1163,6 +1169,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **写入日期**: 2026-07-30
 **槽位**: R4/R5
 **骨架**:
+<!-- wb:malshe_agarwal_2015_jm:legacy_OLS-FE_40 -->
 > "To explore this moderation in more detail, we followed [Spiller et al. (2013)] and performed a floodlight analysis using the method described by [Mohr, Lichtenstein, and Janiszewski (2012)]. Floodlight analysis involves plotting the [direct impact of the independent variable on the dependent variable] at numerous values of the [moderating variable]. Specifically, we began by fixing [moderator] at [0] and using increments of [.05] until [moderator] reached [1]. In all, we obtained [N] estimates of the [direct impact]. A plot of these estimates, along with the [90% confidence interval] band, is available in the [Web Appendix].
 >
 > We find that the impact of [IV] on [DV] [decreases linearly] at a rate of [−coefficient] for every unit increase in [moderator]. When [moderator] is at approximately [threshold_1], [IV] has [no impact] on [DV]. From this point onward, as [moderator] increases, [IV] has a [net negative] impact on [DV]. However, it remains [statistically nonsignificant] until [moderator] reaches approximately [threshold_2]. Beyond this point, [IV] has a [statistically significant negative] impact on [DV]. [Theoretical interpretation of the high-moderator region]."
@@ -1176,6 +1183,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **写入日期**: 2026-07-30
 **槽位**: R3
 **骨架**:
+<!-- wb:malshe_agarwal_2015_jm:legacy_OLS-FE_41 -->
 > "[H_a] and [H_b] posit that [mediator 1] and [mediator 2] mediate the [negative] impact of [IV] on [DV], respectively. To establish the mediation effect through [mediator j], we must satisfy the following three conditions: (1) the coefficient on [mediator j] in [Equation 1, the DV equation] must be [positive] and significant, (2) the coefficient of [IV] in [Equation j, the mediator equation] must be [negative] and significant, and (3) the product of the coefficient of [IV] in [Equation j] and the coefficient of [mediator j] in [Equation 1] must be [negative] and significant. To test the significance of the product term, we used [Sobel's test statistic using the formula given by Zhao, Lynch, and Chen (2010)].
 >
 > [Mediator 1]: [Condition 1 met: b = ..., p ≤ ...]. [Condition 2 met: b = ..., p ≤ ...]. [Sobel on the product: b = ... = (IV→M)×(M→DV), t = ..., p ≤ ...], in support of [H_a].
@@ -1189,6 +1197,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **验证状态**: EMERGING（单篇入库）
 **写入日期**: 2026-07-30
 **槽位**: R6
+<!-- wb:malshe_agarwal_2015_jm:legacy_OLS-FE_42 -->
 **骨架**:
 > "Finally, according to [H_c], [DV] of the [hypothesized-higher-sensitivity group] should exhibit [higher/lower] sensitivity to [IV]. However, **in contrast to [H_c]**, we find that the interaction between [IV] and [moderator] is [opposite-sign] (b = ..., p ≤ ...), indicating that [IV] [reduces/increases] [DV] more [severely] for the [hypothesized-LOWER-sensitivity] group. We **elaborate on this counterintuitive result in the "Discussion" section** and provide guidance for further research. In summary, we find empirical support for [H_a] and [H_b] but **not for [H_c]**."
 >
@@ -1247,6 +1256,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **槽位**: R4（可嵌入多阶段管道的 falling action）
 **骨架**:
 > We next test whether associations between [IV] and [stage outcomes] differ by [demographic/subgroup moderator]. Table [X] extends the main [stage] models by adding [IV] × [Moderator]. At the [front-end stage], the baseline coefficient on [IV] is close to zero (p = [value]), while the interaction is [direction] and statistically significant (p [relation] [threshold]); the pattern is robust to [unit] fixed effects where feasible (p [relation] [threshold]). These estimates indicate that [non-focal subgroup] shows no detectable association with [IV], and that [focal subgroup] accounts for essentially all of the estimated [front-end] advantage. This pattern does not persist in the [mid-pipeline] and [back-end] stages: the most-specified models find [IV] × [Moderator] coefficients that are [direction] and statistically imprecise (p = [value]; p = [value]). [If using unit FE for the main pipeline:] Because within-[unit] fixed effects absorb time-invariant [Moderator], between-subgroup comparisons rely on models without [unit] FE (or on split-sample margins); do not claim within-[unit] gender/demographic contrasts from FE columns.
+<!-- wb:post_du_2022_amj:legacy_OLS-FE_64 -->
 **与原骨架差异**: 区别于变体8（主效应 null + 交互显著的条件化再定位）与变体27（跨阶段主效应衰减、无亚组分解）——本变体的核心是**组成性裁决 + 阶段熄灭**：(1) 用接近零的 baseline [IV] 证明非焦点亚组无关联，从而把已显著的前端主效应重写为"几乎全部由焦点亚组驱动"；(2) 在同一决策管道的中后段报告交互熄灭，把异质性本身做成管道衰减故事的一部分。适用于 multi-stage recruitment / funnel / ASA 设计中人口或偏好异质性只在信息稀薄的前端成立的叙事。
 **诚实边界**: "accounts for all" 须有 baseline ≈ 0 的统计支撑，不可仅因交互显著就宣称；下游交互 null 受 post-treatment selection 约束（见 slot-R6 Slough）；关联语言优先（associated with / advantages），不可升级为因果异质性效应。配套管道主叙事见变体27。
 
@@ -1256,6 +1266,7 @@ moderate. The mean variance inflation factor for the variables used in the estim
 **验证状态**: VERIFIED（expert_audit_override, user 2026-08-29）
 **槽位**: R3
 
+<!-- wb:post_du_2022_amj:legacy_OLS-FE_64_2 -->
 #### 报告骨架
 
 ```text
@@ -1305,6 +1316,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 **验证状态**: EMERGING（单篇）
 **写入日期**: 2026-08-09
 **槽位**: R4
+<!-- wb:desjardine_2025_information_based_competition_the_case_of_ri:legacy_OLS-FE_47 -->
 **骨架**:
 > Following prior literature ([citations]), we calculated the marginal effect of [predictor] on [DV] when the moderators assume different values (see Table [N]). For Hypothesis [Na], when [moderator] takes its minimum value, the [sign] marginal effect of [predictor] on [DV] is relatively weak (β = [value], p = [threshold]); by comparison, when [moderator] takes its maximum value, the [sign] marginal effect is much stronger (β = [value], p = [threshold]). Plotted in Figure [N], the marginal effect of [predictor] is almost always [sign] and significant across different values of [moderator], and [moderator] strengthens the [sign] marginal effect, consistent with Hypothesis [Na]. [For the target-side hypothesis: ...weakens the [sign] marginal effect, as illustrated by the positive slope, which supports Hypothesis [Nb].]
 
@@ -1322,6 +1334,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 **验证状态**: EMERGING（单篇）
 **写入日期**: 2026-08-09
 **槽位**: R3
+<!-- wb:desjardine_2025_information_based_competition_the_case_of_ri:legacy_OLS-FE_48 -->
 **骨架**:
 > Model [N] includes both sets of moderating effects, with [K] moderators in total. The decrease in statistical significance observed in certain interaction terms might stem from the high correlation between [moderator family 1] and [moderator family 2] (up to [r]), which could absorb each other's moderating effect ([citation]).
 
@@ -1355,6 +1368,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 **来源论文**: DesJardine, Li & Shi (2025, AMJ)
 **原始句锚点**: "Based on Model 1 of Table 2, ITCV results show that an omitted variable would need to be correlated at 0.137 (-0.137) with rival-MSCI CIO and at -0.137 (0.137) with MSCI ESG rating to invalidate the focal inference. Correspondingly, the impact of an omitted variable must be -0.019 (= -0.137 × 0.137) to invalidate our inference. Among our controls, the variable with the strongest impact is rival ESG regulatory enforcements, which equals -0.005, far from the -0.019 threshold."
 **验证状态**: EMERGING（单篇）
+<!-- wb:desjardine_2025_information_based_competition_the_case_of_ri:legacy_OLS-FE_49 -->
 **写入日期**: 2026-08-09
 **槽位**: R7
 **骨架**:
@@ -1371,6 +1385,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 
 **来源论文**: DesJardine, Li & Shi (2025, AMJ)
 **原始句锚点**: "To address the possibility that common ownership in an ESG rating agency and a target firm's rivals is associated with actual ESG performance, we examined the extent to which MSCI's ESG rating deviates from the reasonable ESG benchmarks. We constructed a new dependent variable, MSCI-incident difference, by using the media coverage of the target firm's ESG risk incidents as a benchmark... Higher values indicate that MSCI ESG ratings deviated more from ESG incidents covered in the media."
+<!-- wb:desjardine_2025_information_based_competition_the_case_of_ri:legacy_OLS-FE_50 -->
 **验证状态**: EMERGING（单篇）
 **写入日期**: 2026-08-09
 **槽位**: R7
@@ -1387,6 +1402,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 ### 变体 51: R7 — 收购准自然实验：影响通道开关 (1篇高价值)
 
 **来源论文**: DesJardine, Li & Shi (2025, AMJ)
+<!-- wb:desjardine_2025_information_based_competition_the_case_of_ri:legacy_OLS-FE_51 -->
 **原始句锚点**: "Prior to the acquisition by MSCI, KLD was privately owned, meaning the common owners of a target firm's rivals and MSCI would have been unable to influence the firm's ESG assessment by KLD; however, according to our theory, a negative relationship should exist after MSCI became the owner of KLD because common owners (of MSCI and other firms) could then influence KLD's ESG ratings. ... The coefficient for this interaction is -0.746 (p < .1, two-tailed test), indicating that the association between rival-MSCI CIO and KLD score became more negative after MSCI became the owner of KLD, also consistent with our theory."
 **验证状态**: EMERGING（单篇）
 **写入日期**: 2026-08-09
@@ -1403,6 +1419,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 
 ### 变体 52: R8 — Bushee 投资者类型分解：动机/能力异质性 (1篇高价值)
 
+<!-- wb:desjardine_2025_information_based_competition_the_case_of_ri:legacy_OLS-FE_52 -->
 **来源论文**: DesJardine, Li & Shi (2025, AMJ)
 **原始句锚点**: "Following Bushee (1998), numerous studies have distinguished dedicated institutional investors, which have long investment horizons and concentrated portfolio holdings, from transient institutional investors, which have short investment horizons and diversified portfolio holdings. ... As such, if our theory is accurate, we should observe that our main effect is stronger for dedicated institutional investors than for transient institutional investors. ... Model 1 of Table 11 shows that the coefficient for rival-MSCI CIO (dedicated) is -0.931 (p < .01) and the coefficient for rival-MSCI CIO (transient) is -0.249 (p < .05). A Wald test shows that the coefficients significantly differ (p = .039, one-tailed test)."
 **验证状态**: EMERGING（单篇）
@@ -1419,6 +1436,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 ---
 
 ### 变体 53: R2 — 逐调节引入→成对→全模型的 8 模型导航 (1篇高价值)
+<!-- wb:desjardine_2025_information_based_competition_the_case_of_ri:legacy_OLS-FE_53 -->
 
 **来源论文**: DesJardine, Li & Shi (2025, AMJ)
 **原始句锚点**: "Model 6 includes both reputational threat moderators, and the results continue to support Hypothesis 1, Hypothesis 2a, and Hypothesis 2b. Likewise, Model 7 includes both reputational opportunity moderators and the results continue to support Hypothesis 1, Hypothesis 3a, and Hypothesis 3b. Model 8 includes both sets of moderating effects, with four moderators in total."
@@ -1469,6 +1487,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 
 ### 变体 56: R2 Direct/Indirect/Total 路径表架构 (2026-08-13)
 
+<!-- wb:kalaignanam_2013_jm:legacy_OLS-FE_56 -->
 **来源论文**: Kalaignanam, Kushwaha & Eilert 2013 (*Journal of Marketing*)
 
 **原始句锚点**: "We compare the coefficients for the impact of changes in recall magnitude in the direct-effects model (see Table 4) and the total-effects model (see Table 5)."
@@ -1487,6 +1506,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 **诚实边界**: 因果语言降为 association；比较系数不等于中介成立，须接衰减/Sobel/bootstrap。
 
 ### 变体 57: R3 测量覆盖范围 warrant「学习」而非仅修复 (2026-08-13)
+<!-- wb:kalaignanam_2013_jm:legacy_OLS-FE_57 -->
 
 **来源论文**: Kalaignanam, Kushwaha & Eilert 2013 (*Journal of Marketing*)
 
@@ -1505,6 +1525,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 
 **诚实边界**: 写 indicative of 而非 causes learning；覆盖范围必须是测量事实，不能事后发明。
 
+<!-- wb:kalaignanam_2013_jm:legacy_OLS-FE_58 -->
 ### 变体 58: R3 Direct-vs-Total 衰减 + 嵌套χ² + Sobel + bootstrap 堆叠确认 (2026-08-13)
 
 **来源论文**: Kalaignanam, Kushwaha & Eilert 2013 (*Journal of Marketing*)
@@ -1523,6 +1544,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 **与原骨架差异**: 区别变体 41（SUR 非对称失败）与变体 5（post-hoc MCMC）——本变体是 confirmatory 部分中介的堆叠确认。BK 不替代区间。
 
 **诚实边界**: partial 不得升级 full；Sobel 单尾必须标明；一阶差分+IGLS 不得写 lead to / have an effect。
+<!-- wb:kalaignanam_2013_jm:legacy_OLS-FE_59 -->
 
 ### 变体 59: R4 spotlight ±1SD + Δslope + region of manifestation（含无方向假设变体） (2026-08-13)
 
@@ -1541,6 +1563,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 
 **与原骨架差异**: 区别变体 9（无 Δslope）与变体 40（floodlight 变号）——一侧显著一侧不显著时，region 主张必须有 Δslope。无方向变体分开写。
 
+<!-- wb:kalaignanam_2013_jm:legacy_OLS-FE_60 -->
 **诚实边界**: 无交互图仍可写；无方向调节的符号解读是竞争预测裁决，不是预先定向假设的支持。
 
 ### 变体 60: R6 调节变量主效应 null 驳斥 rival conjecture (2026-08-13)
@@ -1559,6 +1582,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 > We do not find the direct association of [moderator] with [mediator] to be statistically significant (p > [threshold]). Thus, there is no evidence to support conjectures that [rival claim].
 
 **与原骨架差异**: 区别变体 30（预测性机制 null）——本变体是调节变量主效应 null 驳斥有害猜想，不是假设支持。
+<!-- wb:kalaignanam_2013_jm:legacy_OLS-FE_61 -->
 
 **诚实边界**: null 不升级为 H 支持；conjectures 措辞可保留。
 
@@ -1580,6 +1604,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 **与原骨架差异**: 区别变体 2（通用威胁）与变体 39（替代估计器失败反向佐证）——本变体是 IGLS/PCSE + 分析单元上卷 + 滞后 BIC。滞后 BIC 是规格辩护，不是系数稳健性。
 
 **诚实边界**: 分析单元上卷后须报告 marginally higher p，不得只写 consistent；滞后 BIC 不得写成结果不变。
+<!-- wb:kalaignanam_2013_jm:legacy_OLS-FE_61_2 -->
 
 ### 变体 62: R8 — 二元策略完全中介 firm characteristics + 市场信号收束（legacy Kenny）(1篇高价值)
 
