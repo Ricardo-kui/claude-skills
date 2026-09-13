@@ -117,6 +117,23 @@ updated: 2026-09-05
 - 经济幅度要说明基准范围；不能只把 β 换算为百分比而不说相对谁。
 - 意外一端的解释必须标为 post hoc，且不能回写成事前假设。
 
+
+### 变体 T：r4_did_median_partition_suest_difference（lu2022）
+
+**槽位**: R4
+
+**模板/骨架**:
+> "Using [DV] as the dependent variable, column ([1]) indicates that [treated] [units] with [high-moderator] on average [reduce/increase] [outcome] by [X]%, relative to [control] [units], after the [event]. The results in column ([2]) suggest that [treated] [units] with [low-moderator] [reduce/increase] [outcome] by [Y]% ..., and the effect is statistically insignificant. Additionally, the difference between [high] and [low] groups is statistically significant. These results support our conjecture that [moderation statement]."
+
+来源：Lu, Shen, Wang & Zhang (2022, Management Science)。
+
+**与原骨架差异**: 变体 1 双端核对靠条件效应图；本变体是无图版 predicted-pole null 报告——中位数分组 → 显著极 vs null 极并列 → SUEST 系数差异检验把"组间不同"形式化，null 组被解读为调节假设的支持证据（R6 元素并入 R4）。
+
+**原文锚定**:
+> "The results in column (2) suggest that treatment firms with low similarity scores reduce advertising expenditures by 3.70% relative to control firms in the postmerger period, and the effect is statistically insignificant."
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:r4_did_median_partition_suest_difference -->
+
 ### 变体 2：理论前提探测式补充证据链（2026-08-02）
 
 **来源论文**: Lee, Wu & Bednar, *Organization Science*, DOI 10.1287/orsc.2024.18968
@@ -153,6 +170,23 @@ updated: 2026-09-05
 > "Table [x] reports DiD regression results for [outcome] (H1–H3). Columns 1 and 2 show models without and with control variables. Across specifications, [treatment × post] is consistently [direction] and significant, supporting H1. For economic interpretation, the odds ratio is [OR]; firms in treatment states are [X]% [less/more] likely to [outcome]. While sizeable in relative terms, the absolute probability change is modest given the low base rate ([Y]%). However, given the serious consequences of [behavior], we document an important effect."
 
 **与原骨架差异**: 把 **table navigation（分步入模）** 与 **logit 经济显著性（OR→相对概率+低基准诚实）** 绑定；平行趋势/安慰剂留在 Methods，Results 用 appendix 指针作 falling action。
+
+
+### 变体 R：r2_did_fe_absorption_navigation（lu2022）
+
+**槽位**: R2
+
+**模板/骨架**:
+> "In column ([k]), we add [unit-group] fixed effects to account for unobservable [unit] characteristics and cluster standard errors at the [event] level. Because [unit-group] fixed effects would absorb the [level-specific dummy], we do not have [that dummy] in column ([k]). In column ([k+1]), we further include control variables that have been shown to affect [outcome] in the literature. The results are qualitatively the same with these additional controls and fixed effects."
+
+来源：Lu, Shen, Wang & Zhang (2022, Management Science)。
+
+**与原骨架差异**: 变体 3 管分步入表与经济显著性绑定；本变体是列间导航注记——主动解释"某系数为何从该列消失"（被高维 FE 吸收），防止审稿人把缺项误读为遗漏，再以 "qualitatively the same" 收束规格累进。
+
+**原文锚定**:
+> "Because firm-merger fixed effects would absorb the Treat dummy, we do not have the Treat in column (2)."
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:r2_did_fe_absorption_navigation -->
 
 ### 变体 4：双 moderator 25th→75th 处理效应衰减 + 90th 联合 switch-off（2026-08-05）
 
@@ -244,6 +278,23 @@ updated: 2026-09-05
 - one-SD 翻译必须报告样本 SD；百分比须明确是 outcome 的相对变化还是百分点。
 - 显著交互 ≠ 已核对两端 simple effects；若假设含两端方向，改用变体1。
 
+
+### 变体 S：r3_did_multimeasure_percent_translation（lu2022）
+
+**槽位**: R3
+
+**模板/骨架**:
+> "The impact of [treatment] on [outcome] is also economically significant. The results in column ([k]) for each measure of [outcome] indicate that, compared with [control] [units] during the same period, [treated] [units] on average [reduce/increase] [outcome] by [X]% in terms of [dollar/level volume], [Y]% in terms of the [scaled measure 1], and [Z]% in terms of the [scaled measure 2]."
+
+来源：Lu, Shen, Wang & Zhang (2022, Management Science)。
+
+**与原骨架差异**: R3 现仅变体 8（1-SD 交互四拍）；本变体把经济幅度翻译做成主效应后的独立收束段，且一次覆盖三口径（水平量 + 两个 scaled 比率）——多 DV 论文的幅度拍不必逐表重复，集中一段按口径并列翻译。
+
+**原文锚定**:
+> "compared with control firms during the same period, treatment firms on average reduce total advertising expenditure by 17.04% in terms of dollar volume"
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:r3_did_multimeasure_percent_translation -->
+
 ### 变体 9：准实验识别威胁分节电池（Matching→政治经济→供需→Placebo→Early/Late→替代测量）（2026-08-05）
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
@@ -293,6 +344,23 @@ updated: 2026-09-05
 **原始句锚点**: "The consistent results suggest that the observed relations between a recall and its substitutes' ad spending are likely limited to neither the Sagitar recall nor the category of sedan cars."
 **来源**: fang_et_al_2025_rival_recall_ad_spend (POM), Empirical Extension
 
+
+
+### 变体 U：r7_did_preshock_partition_threat_test（lu2022）
+
+**槽位**: R7
+
+**模板/骨架**:
+> "To address the concern that [the effect] could be confounded with [preshock characteristic], we partition the [treated] [units] based on the sample median of [preshock measure] one year before the [events] and run the [estimator] analysis. If our results were driven by [preshock characteristic], we should see a significant effect in the high group and an insignificant effect in the low group. We find that both high and low groups exhibit a significant [effect]. ... Overall, these results suggest that [the effect] is driven by [event-induced treatment] instead of [preshock characteristic]."
+
+来源：Lu, Shen, Wang & Zhang (2022, Management Science)。
+
+**与原骨架差异**: 变体 9 电池含 Matching/Placebo/Early-Late 成员但无"处理前污染分组检验"；本变体把混淆预言反向写成可证伪检验——若效应由事前特征驱动则高组显著低组不显著，两群组皆显著即反证混淆，收口句归因于事件诱导的处理。
+
+**原文锚定**:
+> "If our results are driven by preshock common ownership, we should see a significant effect in the high group and an insignificant effect in the low group."
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:r7_did_preshock_partition_threat_test -->
 
 ### 变体 P：调节变量测量内生性四步防御（层次分离→pre-shock 构造外生→时间不变测量→rival 交互控制，Castellaneta–Conti–Kacperczyk 型）
 
@@ -352,6 +420,23 @@ updated: 2026-09-05
 
 来源：Moon et al. (2026, Journal of Marketing)。
 
+
+### 变体 Q：r2_did_fig_pretrend_intuitive_preview（lu2022）
+
+**槽位**: R2
+
+**模板/骨架**:
+> "We start with intuitive evidence on the effect of [treatment] on [outcome]. In Figure [X], we plot the average time trend of [outcome] for [treated] and [control] [units] [k] years before and after the [event]. The [control] [units]' [outcome] is relatively stable throughout the time window. In contrast, the [treated] [units], while following a parallel trend with the control group before the [event], show a significant [decline/increase] after the [event] year. This pattern is consistent with our conjecture that [mechanism statement]."
+
+来源：Lu, Shen, Wang & Zhang (2022, Management Science)。
+
+**与原骨架差异**: 变体 11 只立"裸数据前后均值差异"事实；本变体把 parallel trend 措辞显式写进直觉证据段并用 "consistent with our conjecture" 桥接到机制——图形前置拍兼做识别假设的定性预演，随后紧接 "Next, we use the Difference-in-Differences approach" 进正式检验。
+
+**原文锚定**:
+> "In contrast, the treated firms, while following a parallel trend with the control group before the event year, show a significant decline in advertising expenditure after the event year."
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:r2_did_fig_pretrend_intuitive_preview -->
+
 ### 变体 12：r2_did_selection_firststage_inline（moon2026）
 
 **槽位**: R2
@@ -369,6 +454,23 @@ updated: 2026-09-05
 > "In addition, we also test if our conclusions are robust in an alternative empirical setting that uses [related but distinct policy adoption] as an alternative shock. To this end, we identify [N] observations of [n] [units] headquartered in [state] that adopted [alternative policy] in [year] as the treated group and [N] observations of [n] [units] headquartered in [states] as the control groups that never adopted [alternative policy]. We estimate the simple diff-in-diff models on these alternative treated and control groups and find consistent empirical support for our thesis (see [appendix table] for more details)."
 
 来源：Moon et al. (2026, Journal of Marketing)。
+
+
+### 变体 V：r7_did_alternative_control_construction（lu2022）
+
+**槽位**: R7
+
+**模板/骨架**:
+> "As a robustness check, we also construct an alternative control sample using [alternative population]. For every [treated] [unit], we define its control peers as [units] within the same [industry] that are not [treatment-eligible through the event] but [hold the relevant exposure] during the [pre-event period]. We employ the same approach to construct the [estimator] sample and run the same regressions. We find consistent evidence that [treated] [units] [reduce/increase] [outcome] compared with [control] [units] after the [events]."
+
+来源：Lu, Shen, Wang & Zhang (2022, Management Science)。
+
+**与原骨架差异**: 变体 13 换的是识别来源本身（替代冲击）；本变体保持冲击不变、只重构对照群——行业内非事件机构 block-held 单位作对照，专项回应"对照组外部效度/机构特异不可观测"威胁，并与另一替代口径（同事件机构组合内未变化持仓）双轨呈报。
+
+**原文锚定**:
+> "For every treatment firm, we define its control peers as firms within the same four-digit SIC industry that are not block held by the merging institutions but are block held by other nonmerging institutions during the quarter before the merger."
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:r7_did_alternative_control_construction -->
 
 ### 变体 14：r7_did_leave_one_out_treated_unit（moon2026）
 

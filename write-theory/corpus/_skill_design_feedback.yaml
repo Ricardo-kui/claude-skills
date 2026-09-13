@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
-  last_updated: '2026-09-07'
-  observations_processed: 53
+  last_updated: '2026-09-13'
+  observations_processed: 58
   description: Evidence ledger for write-theory design defects inferred from Theory exemplar distillation.
 defects:
   e-family-missing-dual-edged-signed-contingency-variant:
@@ -2850,3 +2850,235 @@ defects:
     auto_action:
       eligibility: log_only
       reason: Insufficient evidence for core revision.
+  theory-corpus-gap-one-calculus-opposite-signed-moderation-pair:
+    classification: corpus_gap
+    status: EMERGING
+    risk: medium
+    current_rule: variants/E_moderation.md 异号调节邻域仅 E8（双刃剑异号权变：不设 unconditional 主效应假设）与 E9（同构念双侧镜像调节）；无'先立基线主效应 H1，再由同一机制一次成本收益计算导出收益放大/成本阻碍异号调节对'变体
+    rule_excerpt: ''
+    rule_locator: E8 (L561) / E11 (L757) 邻域；E15 拟插于 E14 块尾（=文件尾），保持 E 编号连续
+    target: write-theory/corpus/variants/E_moderation.md
+    diagnosis: band 薄弱（最佳匹配变体 E11 单篇/EMERGING）：经济体例'基线主效应先行+单一成本收益计算导出异号调节对'推导骨架在语料零命中；plan item e15_one_calculus_cost_benefit_opposite_signed_moderation_pair
+      按 gap 新增 E15（EMERGING 单源，gate ① 裁决）
+    proposed_change:
+      action: append_variant
+      summary: 写回 E15 变体（block_text 已内嵌 plan，锚点 E14 块尾）；单源 EMERGING 仅作 section_variant，不改核心路由
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: lu_et_al_2022_frenemies_corporate_advertising
+      journal: Management Science
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: '§2.3: We argue that the cost and benefit of coordination would affect firms'' incentive to collaborate
+        on strategic decisions such as advertising. When the gain from coordination is larger... if the cost of coordination
+        is high...'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Management Science
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Management Science
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-13'
+    last_seen: '2026-09-13'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  theory-corpus-gap-mechanism-channel-enumeration-no-hypothesis:
+    classification: corpus_gap
+    status: EMERGING
+    risk: medium
+    current_rule: subprotocols/hypothesis_derivation_patterns.md Pattern 家族已有 Multi-Mechanism Trunk（并列因果路径共撑主效应）、Width-Type
+      Parallel（多理由各自支撑同一 H）、并行中介（每中介得一条 H）；'抽象机制枚举 2-4 条实现通道、通道不另立假设、服务后续调节推导'形态缺位；索引'核心贡献是解释 X 如何影响 Y 的因果机制'行仅指向单篇/EMERGING
+      语料
+    rule_excerpt: ''
+    rule_locator: Multi-Mechanism Trunk (L370 索引/L1739 块) 邻域；新 Pattern 拟插于 Trunk 块尾
+    target: write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md
+    diagnosis: band 薄弱（索引标单篇/EMERGING）：plan item b_variant_e_mechanism_channel_instantiation_enumeration 按 gap 新增'Mechanism-Channel
+      Instantiation Enumeration → Cost-Benefit Moderation'Pattern（precheck ADD 改标 EXTEND 家族内扩展，见 pipeline_design_observations）
+    proposed_change:
+      action: append_variant
+      summary: 写回通道枚举 Pattern（block_text 已内嵌 plan，主题锚 Multi-Mechanism Trunk 块尾）；单源 EMERGING，gate ① 裁决
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: lu_et_al_2022_frenemies_corporate_advertising
+      journal: Management Science
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: '§2.3 P1-P3: There are several coordination mechanisms by which common owners of firms in the same
+        industry could affect the firms'' policy. First... Second... Third...'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Management Science
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Management Science
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-13'
+    last_seen: '2026-09-13'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  theory-corpus-gap-treated-vs-similar-control-level-comparison-form:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: sentences/hypothesis_forms.md 比较类假设句已有 Difference（同一 IV 效应强弱跨组比较）与 Comparative Main Effect（两类 IV 极点对同一 DV，ROBUST/VERIFIED）；'处理组
+      vs 相似对照组'的 DV 水平比较句式缺位
+    rule_excerpt: ''
+    rule_locator: Comparative Main Effect (L100) 之后
+    target: write-theory/corpus/sentences/hypothesis_forms.md
+    diagnosis: band quiet（最佳匹配 Comparative Main Effect 标 ROBUST/VERIFIED）——非邻域单薄而是形态缺位：'similar [units] without [X] 内嵌假设句、水平而非效应比较、预承诺匹配对照设计'无对应变体；plan
+      item treated_vs_similar_control_level_comparison_hypothesis_form 新增
+    proposed_change:
+      action: append_variant
+      summary: 写回处理-对照水平比较假设句（block_text 已内嵌 plan，锚点 Comparative Main Effect 块尾）；EMERGING 单源，gate ① 裁决
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: lu_et_al_2022_frenemies_corporate_advertising
+      journal: Management Science
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: 'H1: The advertising spending of firms with common ownership would be less than that of similar firms
+        without common ownership.'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Management Science
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Management Science
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-13'
+    last_seen: '2026-09-13'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  theory-corpus-gap-majority-evidence-construct-level-scoping:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: sentences/acknowledgment_response.md 冲突证据处置已有变体 A（权变调和→产出调节假设）与变体 C（维度 carve-out→产出竞争假设对）；'多数裁定+构念层级划界、承诺多数派且冲突不产出新假设'变体缺位
+    rule_excerpt: ''
+    rule_locator: 2.2 反例 (L55) / 2.3 证据局限 (L72) / 2.4 定义分歧 (L90) 一带；拟插于 L55 块尾（gate ① 须核对 after_heading 与实际行号一致，见 pipeline_design_observations）
+    target: write-theory/corpus/sentences/acknowledgment_response.md
+    diagnosis: band quiet（最佳匹配 2.2 反例等标 ROBUST/VERIFIED）：'按证据权重+构念层级 scope 掉少数反证、有界承诺多数派'句式无对应变体；plan item majority_evidence_construct_level_scoping_sentence
+      新增
+    proposed_change:
+      action: append_variant
+      summary: 写回证据多数裁定+构念层级划界句（block_text 已内嵌 plan，锚点 L55 块尾，after_heading 待 gate ① 核对）；EMERGING 单源，gate ① 裁决
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: lu_et_al_2022_frenemies_corporate_advertising
+      journal: Management Science
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: '§2.2: Overall, it is more common and general to find a negative externality of advertising on rivals,
+        whereas the existence of positive spillovers depends on the specific definition of product substitutes... Therefore,
+        we take a combative view of advertising.'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Management Science
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Management Science
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-13'
+    last_seen: '2026-09-13'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  theory-corpus-gap-deferred-moderation-empirical-deferral:
+    classification: corpus_gap
+    status: EMERGING
+    risk: medium
+    current_rule: sentences/moderation.md 调节引入策略已有理论嵌入型（W 为核心理论子假设具体化、立假设，wang2024）与标准调节引入（立正式假设）；'W 不立假设、worth noting 预埋+替代方向情景+显式延后实证检验'变体缺位；索引'同一
+      IV 通过两条对立路径（benefit vs cost）影响同一 DV'行仅指向单篇/EMERGING 语料
+    rule_excerpt: ''
+    rule_locator: 能力放大+双边约束型 (L114) 之后（调节变量的理论嵌入策略小节前）
+    target: write-theory/corpus/sentences/moderation.md
+    diagnosis: band 薄弱（索引标单篇/EMERGING）：plan item deferred_moderation_empirical_deferral_sentence 新增 Deferred Moderation Flag
+      句式（理论节预埋不立假设的 moderator 并显式签约延后检验）
+    proposed_change:
+      action: append_variant
+      summary: 写回预埋调节+实证延后声明句（block_text 已内嵌 plan，锚点 L114 块尾）；EMERGING 单源，gate ① 裁决
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types: []
+      hypothesis_families: []
+      journals: []
+    papers:
+    - id: lu_et_al_2022_frenemies_corporate_advertising
+      journal: Management Science
+      build_type: ''
+      hypothesis_family: ''
+      evidence_anchor: '§2.2 尾段: Theoretically, it is also worth noting that the impact of common ownership on advertising
+        could be moderated by the competitiveness among the common-owned firms... We empirically explore such a moderating
+        effect... in the later section.'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Management Science
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Management Science
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-13'
+    last_seen: '2026-09-13'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.

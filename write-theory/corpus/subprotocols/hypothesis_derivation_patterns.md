@@ -415,6 +415,42 @@ source_papers: ["Shen_Zhou_Wang_Zhang_2022_JOM"]
 confidence: high
 -->
 
+
+## Pattern: Mechanism-Channel Instantiation Enumeration → Cost-Benefit Moderation（Lu et al. 2022 MS 型）
+
+> 论证角色：Reason——把抽象机制具体化为 2-4 条实现通道的枚举骨架，为可行性证明与后续成本收益调节推导提供载体；通道不另立假设
+
+**band**: gap（主题变体语料零命中，新增；单源 EMERGING，gate ① 裁决）
+**适用场景**: 机制推演型论文的机制 M 是一个抽象过程（如 coordination、integration、information transmission），需要 (a) 证明 M 可行/非空洞，(b) 为后续对 M 强度的调节推导提供具体载体——通过枚举 2-4 条实现通道完成。
+**排列模式**: Abstract Mechanism → Enumerated Channels（无独立假设）→ Cost-Benefit Moderation Derivation
+**范文来源**: Lu, Shen, Wang & Zhang (2022), *Management Science*
+
+**骨架**:
+```
+[抽象机制已由 H1 链条建立: X → M → Y]
+There are several [M] mechanisms by which [X holders] could affect [units'] policy.
+First, [channel 1 — 行为/治理通道 + 文献锚]。[1-2 句如何运作]。
+Second, [channel 2 — 制度/执行通道 + 文献锚]。[1-2 句：M 由此克服什么摩擦（如 incomplete contracting）]。
+Third, [channel 3 — 信息通道 + 文献锚]。[1-2 句：类比机制在其他情境已存在]。
+[转折到统一调节] We argue that the [benefit] and [cost] of [M] would affect
+[actors]' incentive to [act on M]。[由此导出对 M 强度的调节假设]
+```
+
+**与近族的分界**:
+- vs B3 宽度理由并行（Width Parallel）：后者多条独立理由各自支撑同一条主效应 H；本变体的通道不是理由而是 M 的实现方式，主效应已由 H1 承担，通道服务后续调节推导
+- vs Shen et al. 三机制 trunk（方式一）：后者每条机制是并列因果路径、共同支撑主效应；本变体的通道是同一机制的不同侧面，不与 DV 直接连线
+- vs 并行多中介（变体 D）：后者每个中介是可测构念且各得一条 H；本变体通道刻意不假设化，避免机制碎片化
+
+**原文锚点**: "There are several coordination mechanisms by which common owners of firms in the same industry could affect the firms' policy. First, common owners could engage with the explicit aim of influencing firms' policy by voice, incentives, and vote." ... "Second, common owners can serve as an enforcement mechanism for collaboration agreements among firms in the same industry." ... "Third, common owners can facilitate information transmission among firms in the same industry and foster profitable collaboration."
+
+**为什么有效**: 抽象机制（如"协调"）若无具体化，后续成本收益调节会悬空；枚举通道一步完成可行性证明与"为什么恰好这些 moderator"的铺垫（通道的运作摩擦即成本来源、通道的产出即收益来源），同时不增加假设数量——理论密度高而假设负担不增。
+**注意事项**:
+- 通道数量 2-4 条为宜，每条须有独立文献锚（本篇：voice/incentives/vote；incomplete contracting 下的执行担保；信息传递）；不得以通道枚举替代 why-chain 主推导
+- 通道若概念上可测且各有独立因果故事，应升格为并行中介（变体 D）而非停留在枚举
+**反模式**: 通道枚举与后续调节无映射（审稿人问"哪条通道承载 benefit"）；为凑数列举同义通道。
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:b_variant_e_mechanism_channel_instantiation_enumeration -->
+
 ## Pattern: Bilateral Moderation Derivation（high/low 双边论证）
 
 **适用场景**：调节效应型论文中，需要同时论证 moderator 高值和低值条件下的机制变化。

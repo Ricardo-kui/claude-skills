@@ -153,6 +153,50 @@ negatively when [A] than when [B].
 
 
 
+
+### 处理-对照水平比较假设句（Treated-vs-Similar-Control Level-Comparison Form，Lu et al. 2022 MS 型）
+
+> 论证角色：Claim——把处理组与"相似对照组"的水平比较直接写进假设句的陈述形式材料
+
+<!--
+pattern_id: treated_vs_similar_control_level_comparison_form
+build_type: 跨类型（假设陈述句式；DiD/事件研究体例）
+source_papers: ["lu_et_al_2022_frenemies_corporate_advertising"]
+confidence: medium
+status: EMERGING（单源，gate ① 裁决）
+-->
+
+**适用**: IV 是处理状态（有无 [X]）而非连续量或策略极点；设计为处理-对照比较（DiD/匹配/事件研究）；假设预测 DV 水平差异，而非效应量差异。
+
+**模板**:
+```
+H[N]. The [DV] of [units] with [X] would be [less/greater] than that of
+similar [units] without [X].
+```
+
+**关键特征**:
+- 比较类（"similar [units] without [X]"）内嵌在假设句里——理论陈述即预承诺了实证的匹配/对照逻辑，理论与识别设计在假设句上直接对齐
+- 比较的是水平（level），不是效应（effect on Y）——与 Difference（跨组效应比较）和 Comparative Main Effect（IV 极点比较）都不同
+- "similar" 把可比性维度留给实证节定义（本篇由匹配设计兑现），理论不越界定义相似性
+
+**原文锚点** (Lu, Shen, Wang & Zhang 2022, Management Science, H1):
+> "Hypothesis 1. The advertising spending of firms with common ownership would be less than that of similar firms without common ownership."
+
+**与邻近形式的判别**:
+
+| 本形式 | Difference（跨组效应） | Comparative Main Effect |
+|--------|----------------------|------------------------|
+| 同一 DV 的**水平**在处理 vs 相似对照间的比较 | 同一 IV 的**效应强弱**跨组/跨条件比较 | 两类**策略/IV 极点**对同一 DV 的相对方向 |
+| IV = 处理状态（有/无） | IV 连续、W 分组 | IV 为两极点 |
+
+**注意事项**:
+- 水平比较假设要求机制论证能落到水平含义（本篇：激励→支出削减→处理组支出低于对照组）；若机制只支持变化方向而设计检验水平差，需在推导中显式对齐时间性
+- 无对照设计（单组前后比较）不得套用——"similar ... without" 承诺了可比对照的存在
+
+**反模式**: 把水平比较误写成效应比较（"...has a smaller effect on Y for treated firms"——那是 Difference 形式）；对照组不可比时仍用 "similar"（会被质疑匹配有效性）。
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:treated_vs_similar_control_level_comparison_hypothesis_form -->
+
 ### 变体 C：假设序列角色标签引导句（Baseline/Additional Hypothesis Labeling，Gulati_Westphal_1999 型）
 
 <!--

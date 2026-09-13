@@ -479,17 +479,15 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     自然实验-DiD:
-      paper_count: 4
+      paper_count: 5
       papers:
       - lee_wu_bednar_orsc_18968 (Organization Science)
       - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
       - fang_et_al_2025_rival_recall_ad_spend (Production and Operations Management)
       - castellaneta_2017_smj_how_does_trade_secret_legal_protection (Strategic Management Journal)
+      - lu_et_al_2022_frenemies_corporate_advertising (Management Science)
       status: EMERGING
-      slots_covered:
-      - M2
-      - M7
-      - M8
+      slots_covered: [M2, M7, M8]
       common_failures:
       - 把 Bacon 分解当作对异质处理效应偏误的修复，而不是诊断
       - 仅凭处理前系数不显著声称平行趋势成立
@@ -749,10 +747,12 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     匹配DiD-广义DiD:
-      paper_count: 0
+      paper_count: 1
+      papers:
+      - lu_et_al_2022_frenemies_corporate_advertising (Management Science)
       papers: []
       status: EMERGING
-      slots_covered: []
+      slots_covered: [M2]
       common_failures: []
       validation_history:
         revise: 0

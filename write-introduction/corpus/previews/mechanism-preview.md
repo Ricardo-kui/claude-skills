@@ -802,6 +802,34 @@ P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者
 <!-- wb:ridge_aime_white_2013_smj:preview_moderators_as_core_assumption_tests -->
 
 
+
+### 变体 AF：第三方事件诱导处理组构造 + 事件外生性辩护型（Lu–Shen–Wang–Zhang 2022 MS 型）
+> 论证角色：Warrant——用第三方机构的合并事件构造准实验的处理组/控制组，并以事件的制度驱动因素独立辩护处理的外生性，为因果语言预先授权
+
+**验证状态**: EMERGING（单篇来源；仅作 section_variant，不改核心路由）
+
+**功能节拍**: 事件命名 → 处理机制（对手关联增加）→ 处理组定义 → 控制组定义（同一批事件机构组合内未变化单位）→ 外生性独立辩护段（制度驱动因素 + 引文背书）
+
+**模板**:
+> "To address these concerns, we exploit the quasinatural experiment of [institutional events among third parties] and use a [quasi-experimental estimator] to identify the effect. When two [third-party institutions] merge, [treated firms] are likely to experience an increase in [treatment construct] when [one of their rivals] is [held/linked] by the other merging institution before the merger. Thus, the treatment sample consists of [units whose treatment construct increases because of the event]. The control sample, on the other hand, consists of [other units in the same institutions' portfolios that do not experience the change]. The [event]-induced change is exogenous to [DV] because the [event] is unlikely to be driven by [DV-relevant prospects of specific holdings]: [institutional driver 1 with citation], and [institutional driver 2 with citation]."
+
+**来源**: Lu, Shen, Wang & Zhang 2022 (Management Science), P5–P6
+
+**原文锚定**:
+> "we exploit the quasinatural experiment of the mergers of financial institutions ... and use a Difference-in-Differences (DiD) approach to identify the effect" / "The merger-induced common-ownership change is exogenous to the advertising strategy because the merger of two financial institutions is unlikely to be driven by their holdings of some specific stocks."
+
+**关键特征**:
+- 处理由"第三方事件 × 既有竞争关系"交叉诱导，而非单位自身采纳决策——与 staggered adoption 类变体（Castellaneta 型 Q/W）的识别来源不同
+- 控制组取自同一批事件机构组合内的未变化持仓（intra-portfolio control），便于吸收机构层面固定差异
+- 外生性辩护独立成段：事件驱动因素（放松管制/规模经济）有 M&A 文献引文背书，不是作者断言
+- 与"内生性挑战独立段"变体（W）配套：前者管挑战命名与中心性 warrant，本变体管设计构造 + 事件外生性
+
+**适用**: 处理由第三方机构行为（合并、拆分、监管重组）诱导、且事件驱动因素可由制度史/M&A 文献支撑的准实验论文；因果识别是核心可信度卖点的 econ/MS 体例 Intro；配 DiD/PSM 类估计器。
+
+**禁忌**: 事件外生性必须有制度文献或监管史引文支撑，不得仅断言；若事件可能被持仓方选择或操纵，不得使用本变体；Intro 不展开全部稳健性细节（留给 robustness-preview）。
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:intro_identification_event_induced_treatment_exogeneity -->
+
 ## 组装规则
 
 ### 必须配对

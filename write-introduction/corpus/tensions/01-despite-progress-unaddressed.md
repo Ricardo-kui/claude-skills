@@ -395,6 +395,34 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 ---
 
 
+
+### 变体 AX：缺口持续双因归因型——现象新兴 + 识别困难（Lu–Shen–Wang–Zhang 2022 MS 型）
+> 论证角色：Reason——为"缺口为何至今无人填补"给出两个结构性原因，把缺口从对文献的控诉转化为对研究设计的预先要求
+
+**验证状态**: EMERGING（单篇来源；仅作 section_variant，不改核心路由）
+
+**功能节拍**: 缺口重申 → 原因一（现象近年才兴起）→ 原因二（因果识别困难）→ 内生性来源例示（选择效应 + 遗漏变量各一条）
+
+**模板**:
+> "There has been limited empirical research examining [consequences of X on Y]. One reason for this limited attention is that [X] has surged only in recent years. Another reason is the challenge in identifying the causal impact of [X] on [Y]. The concern is that [agents] do not [invest/adopt] randomly: [agents] may choose [X] for [units] with particular [outcome-relevant prospects]. Moreover, unobservable [unit characteristics], such as [example], may correlate with both [X] and [Y], leading to endogeneity concerns."
+
+**来源**: Lu, Shen, Wang & Zhang 2022 (Management Science), P4
+
+**原文锚定**:
+> "There has been limited empirical research examining the consequences of common ownership on firms' strategy." / "The concern is that institutional blockholders do not invest randomly. Institutions may choose to invest in firms with particular product market prospects."
+
+**关键特征**:
+- 缺口归因于"结构性难以研究"而非"文献错了"——现象新兴 + 识别困难，避免指责既有文献
+- 原因二直接展开内生性的两条具体来源（选择效应/遗漏变量），为后文准实验设计埋设需求
+- 与方法障碍型缺口（mannor2016 型 G：数据获取困难 + 代理变量批评）不同：本变体的障碍是因果识别而非测量
+- 位于理论预测段之后：先让理论承诺到位，再解释为何实证证据姗姗来迟
+
+**适用**: 现象近 20–30 年才兴起、且自选择/遗漏变量使简单回归不可信的因果问题；Incompleteness × Phenomenon/Mechanism；后接准实验/自然实验识别预告。
+
+**禁忌**: 两条原因必须真实成立——若现象早已被大量研究，"新兴"归因会被审稿人戳穿；内生性例示须与本文设定对应，不得套用通用模板清单。
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:intro_tension_gap_persistence_dual_reason -->
+
 ### 变体 AN：宽缺口+具体问句双层叠加型（carpenter_westphal_2001 型）
 
 **模板**:

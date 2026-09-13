@@ -307,6 +307,50 @@ updated: 2026-08-23
 - 此叙事 **不是** Callaway–Sant'Anna / Sun–Abraham 的替代品；当研究者拥有 unit-time 面板时，不应以此回避现代 staggered-DiD 估计器与平行趋势检验。
 - 可将强度编码（binary vs continuous protection index）作为稳健性，而非主识别的唯一形式。
 
+
+### 变体 Y：教学式→回归式等价桥 + 逐系数一义分配（2×2-to-Regression Equivalence Bridge with One-Meaning-per-Coefficient，Lu et al. 2022 MS 型）
+
+> 论证角色：可读性——把"教学用的均值差分式"与"正式回归式"焊在一句等价声明上，再给每个系数一个唯一解释
+
+**band**: critique_heavy + gap（同上；单源新增，gate ① 裁决）
+**验证状态**: EMERGING（单源 full_text_verified：Lu, Shen, Wang & Zhang 2022, Management Science）
+
+**适用**: DiD 论文采用"式(1) 均值差分教学 + 式(2) 回归实现"双呈现体例：等价桥句让式(1) 的直觉直接为式(2) 的估计服务。
+
+**结构**:
+```
+[主系数归位]
+The coefficient of primary interest is [beta_1], which captures the
+treatment effect identified from the change in [outcome] after the [event]
+for [units] that experienced a change in [treatment] relative to their
+controls.
+
+[等价桥句]
+This coefficient is econometrically equivalent to the [DiD expression] in
+Equation ([N]) with more control variables.
+
+[逐系数一义分配]
+The dummy variable, [Treat], is an indicator of whether [unit i]
+experienced an increase in [treatment] in [event j], and the coefficient
+[beta_2] captures any baseline difference in [outcome] between the
+treatment and the control group. [Post] is a dummy that equals one if ...
+and zero otherwise. The coefficient [beta_3] captures any time trend in
+[outcome] ... common to all the [units].
+```
+
+**为什么有效**: 等价桥句防止两类读者流失——只看式(1) 的人得到直觉、只看式(2) 的人得到估计；逐系数一义分配（β2=组间基线差、β3=共同时间趋势）消灭"这个控制项在干嘛"的歧义，是审稿人快速核验模型设定的最短路径。
+
+**原文锚点** (Lu, Shen, Wang & Zhang 2022, Management Science "Frenemies: Corporate Advertising Under Common Ownership", §3.2):
+> "This coefficient is econometrically equivalent to the DiD in Equation (1) with more control variables."
+
+**注意事项**:
+- 每个系数恰好一个解释，不得一个系数承担两种含义；等价声明只在控制变量不改变识别假设时严格成立，必要时应加一句条件
+- 现代标准提醒：staggered 处理下该等价性与 TWFE 权重问题见诚实边界（不写入骨架正文）
+
+**反模式**: 式(1) 与式(2) 各自孤立呈现（读者自己猜关系）；或把交互项解释成无条件平均处理效应（staggered 下的经典越界）。
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:m7_regression_did_equivalence_bridge -->
+
 ### 变体 11：entry/exit 年 FE + 多维 FE + 冲击层级聚类（持有窗截面）（2026-08-05）
 
 **来源论文**: Castellaneta, Conti & Kacperczyk 2017 (*Strategic Management Journal*)
@@ -369,6 +413,39 @@ updated: 2026-08-23
 > "To identify the effect of [policy/legal change] on [outcome], we use [court ruling/regulatory event] as an exogenous shock. Considering [event] as an exogenous shock in our context rests on two assumptions. First, [decision-makers] should be aware of [the precedent-setting event], which becomes [institutional form]. Reassuringly, prior research shows that [actors] are likely to be aware of [event] because [dissemination channel] ([citation]). Second, [changes in the event] are not influenced by individual [units]. Indeed, prior work shows that [event] depend[s] on [case-specific circumstances/institutional discretion] and [are] thus largely independent of [unit] actions or lobbying efforts ([citation]). Therefore, considering the findings of prior work, [event] can be viewed as an exogenous shock."
 
 来源：Moon et al. (2026, Journal of Marketing)。
+
+
+### 变体 W：无偏条件内联编号清单（Inline Numbered Unbiasedness Conditions，Lu et al. 2022 MS 型）
+
+> 论证角色：可信性——估计量有效性条件随公式就地编号列出，平行趋势以 "which we verify" 指针移交 Results
+
+**band**: critique_heavy（自然实验-DiD 桶 revise+reject=3≥2；EXTEND——相对变体 14 的增量为“均值差分式→回归式”教学序列定位与就地 verify 指针）
+**验证状态**: EMERGING（单源 full_text_verified：Lu, Shen, Wang & Zhang 2022, Management Science）
+
+**适用**: 2×2 DiD 教学式呈现（先均值差分式再回归式）的论文：在式(1) 后就地列出无偏所需条件。
+
+**结构**:
+```
+This estimator is unbiased under the condition that (1) the [shock] is not
+systematically related to other factors that affect the outcome variable.
+In other words, the [shock] should be exogenous to the [units'] [outcome]
+decisions in the context of our paper; (2) the treatment group and the
+control group have a parallel trend in [outcome] over time, which we
+verify.
+```
+
+**为什么有效**: 条件与估计量同段出现，读者不必跳转；"which we verify" 三词完成 Results 指针，Methods 不越权预支证据。
+
+**原文锚点** (Lu, Shen, Wang & Zhang 2022, Management Science "Frenemies: Corporate Advertising Under Common Ownership", §3.2):
+> "This estimator is unbiased under the condition that (1) the merger is not systematically related to other factors that affect the outcome variable. ... (2) the treatment group and the control group have a parallel trend in advertising expenditures over time, which we verify."
+
+**注意事项**:
+- 与变体 14（M8_judicial_shock_two_assumption）功能高度同型；仅当本变体在"均值差分式→回归式"教学序列中的位置有增量价值时保留
+- 现代标准下条件 (2) 应升级为事件研究系数图 + 异质稳健估计量（见诚实边界）
+
+**反模式**: 只列条件不给 verify 指针（条件悬空）；或以条件列举替代 pretrend 证据。
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:m8_did_unbiasedness_two_conditions_statement -->
 
 ### 变体 15：M2_staggered_did_always_treated_hygiene（moon2026）
 
@@ -462,6 +539,242 @@ updated: 2026-08-23
 - 地理/制度范围收缩（如仅一国内）必须有理由句（纵向追踪该国制度变化），否则像便利抽样。
 
 <!-- wb:castellaneta_2017_smj_how_does_trade_secret_legal_protection:m2_proprietary_core_per_construct_complement_funnel -->
+
+
+### 变体 R：内生性点名→冲击移交开篇（Endogeneity-Named Challenge → Shock Handoff，Lu et al. 2022 MS 型）
+
+> 论证角色：Credibility——Methods 首段先点名识别威胁的具体来源，再一句移交自然实验冲击；把"为什么需要外生冲击"写成开篇结论而非制度背景的附录
+
+**band**: critique_heavy + gap（自然实验-DiD 桶 revise+reject=3≥2 且 slots_covered 存在静态缺口；单源新增，gate ① 裁决）
+**验证状态**: EMERGING（单源 full_text_verified：Lu, Shen, Wang & Zhang 2022, Management Science）
+
+**适用**: 准实验因果论文的 Methods 首段——处理（[treatment]）由行为主体的选择内生决定，且不可观测 [unit] 特质同时驱动 [treatment] 与 [outcome]。三拍结构：点名挑战→拆解威胁来源（可观测的选择非随机 + 不可观测特质混淆）→一句移交冲击。
+
+**结构**:
+```
+The challenge of identifying the impact of [X] on [Y] is the potential
+endogeneity concern. [Actors] do not invest [in/treat] [units] randomly.
+[Actors] may choose [units] with certain [observable characteristics]. In
+addition, unobservable [unit] characteristics, such as [examples], may
+correlate with both [treatment assignment] and [outcome], leading to an
+endogeneity concern. To address this issue, we exploit [shock events] that
+generate plausibly exogenous variation in [treatment].
+```
+
+**为什么有效**: 威胁来源被拆成"可观测选择"与"不可观测特质"两支，各给一句机制；开篇不铺陈制度细节，第一段末句即交付识别方案——读者进入数据描述前已知"为什么这样设计"。因果语言匹配 DiD 体例（只声明 "plausibly exogenous variation"，不越级到 causal effect）。
+
+**原文锚点** (Lu, Shen, Wang & Zhang 2022, Management Science "Frenemies: Corporate Advertising Under Common Ownership", §3 首段):
+> "The challenge of identifying the impact of common ownership on firms' advertising spending is the potential endogeneity concern. Institutional blockholders do not invest randomly. ... To address this issue, we exploit financial institution mergers that generate plausibly exogenous variation in firms' common ownership."
+
+**注意事项**:
+- 开篇拆出的每一支威胁都应在后文识别论证中有对应的防御动作，否则首段承诺落空
+- 移交句只声明 "plausibly exogenous"，不在此处完成外生性论证（论证留给 M8 专段，如组合权重核查变体）
+
+**反模式**: 开篇先讲制度背景、段末才出现威胁（威胁前置失效）；或压成一句 "we address endogeneity"（无来源拆解，不可迁移）。
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:m8_endogeneity_first_shock_introduction -->
+
+
+### 变体 S：事前信息处理组定义 + 事后决策封口（Ex Ante Assignment Rule + Post-Shock Sorting Warrant，Lu et al. 2022 MS 型）
+
+> 论证角色：Credibility——处理分组规则只用冲击前可得信息，并用一句 warrant 显式封住"事后交易决策影响分组"的威胁
+
+**band**: critique_heavy + gap（同上；单源新增，gate ① 裁决）
+**验证状态**: EMERGING（单源 full_text_verified：Lu, Shen, Wang & Zhang 2022, Management Science）
+
+**适用**: 冲击后存在内生再平衡风险的准实验设计（如机构合并后合并实体可继续调仓）：处理资格由事件前 [quarter] 的持仓状态按编号条件判定，分组不受冲击后行为污染。
+
+**结构**:
+```
+[编号双条件定义，全部锚定事件前时点]
+Specifically, we define treatment [units] as follows. (1) The [unit] must be
+[held] by [one merging party] during the [quarter] immediately before the
+[event announcement]; and (2) [the other party] must not [hold] the [unit]
+but must [hold] at least one of its [industry peers] during the same
+[quarter] before the [event].
+
+[warrant 句——信息集纯净性]
+Importantly, the procedure to identify treated [units] uses only ex ante
+information available at the time of the [event]. This ex ante approach
+mitigates the concern that the assignment of treatment [units] is affected
+by subsequent [decisions of the combined entity], which might contain
+information about the prospects of [units] or their [policies].
+```
+
+**为什么有效**: 双条件把抽象的"处理"翻译成两个可核验的事前状态；warrant 叮把"为什么坚持事前信息"从隐含惯例升级为显式辩护——审稿人最常攻击的"分组可能被冲击后行为污染"被一句提前封口。
+
+**原文锚点** (Lu, Shen, Wang & Zhang 2022, Management Science "Frenemies: Corporate Advertising Under Common Ownership", §3.1):
+> "Importantly, the procedure to identify treated firms uses only ex ante information available at the time of the merger. This ex ante approach mitigates the concern that the assignment of treatment firms is affected by subsequent trading decisions of the merged entity..."
+
+**注意事项**:
+- 两个条件都必须可回指到事件前某一时点的可观测状态（时点要写死：如 "during the quarter immediately before the merger announcement date"）
+- warrant 句威胁要与设计真实对应：若冲击后不存在再平衡通道，该句是空转仪式，应省略
+
+**反模式**: 用结果期状态定义处理组却不声明信息集（留给审稿人发现"分组用了事后信息"）；或 warrant 句与条件定义脱节（条件里混入事后变量）。
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:m8_ex_ante_treatment_assignment_rule -->
+
+
+### 变体 T：具名事件分组走查 + 图示挂接（Named-Event Assignment Walkthrough with Figure，Lu et al. 2022 MS 型）
+
+> 论证角色：可审计性——把编号条件落到一个真实事件的逐单元判定上，让读者看着条件被"执行"一遍
+
+**band**: critique_heavy + gap（同上；单源新增，gate ① 裁决）
+**验证状态**: EMERGING（单源 full_text_verified：Lu, Shen, Wang & Zhang 2022, Management Science）
+
+**适用**: 处理/对照资格由多条件规则判定的设计（合并、联盟解散、监管重组等）：规则抽象性强时，用一个具名事件演示每个条件如何映射到具体单元的分组。
+
+**结构**:
+```
+[走查引入——具名事件 + 图挂接]
+We use the case in which [Acquirer] acquired [Target] in [YEAR] as an
+example to illustrate the data structure, as shown in Figure [N].
+
+[事件前状态枚举——单元 + 类别码]
+Before the [event], [Actor A] was a [holder] of [Unit 1] ([category code])
+and [Unit 2] ([category code]). [Actor B] was a [holder] of [Unit 3]
+([category code]), [Unit 4] ([category code]), ...
+
+[判定执行——逐单元落组]
+When [Actor A] and [Actor B] [merged], [Unit 1], [Unit 3], and [Unit 4]
+were suddenly commonly [held]. We define these [units] as treated [units].
+[Unit 2] is defined as a control [unit] because after the [event],
+[Actor B] did not [hold] any [units] sharing the same [category code].
+Following the same logic, [Unit 5] ... are control [units].
+```
+
+**为什么有效**: 三步走查（事件前状态→合并触发→逐单元落组）使分组规则可被人工复算；"suddenly commonly held" 一词把处理的时间性（事件触发、非渐达）压进判定叙述；图与文字共用同一套单元名，读者在图与正文间零成本切换。
+
+**原文锚点** (Lu, Shen, Wang & Zhang 2022, Management Science "Frenemies: Corporate Advertising Under Common Ownership", §3.1):
+> "We use the case in which BlackRock acquired Barclays in 2009 as an example to illustrate the data structure, as shown in Figure 2."
+
+**注意事项**:
+- 走查事件应同时展示两类落组（至少一个 treated 与一个 control 的判定理由都要给出），只演示处理组会漏掉对照条件的执行样例
+- 具名单元信息（类别码）在图中重复出现属正常冗余，但正文判定理由不得依赖图中不可见的信息
+
+**反模式**: 用虚构编号单元做演示（真实具名事件才带制度可信度）；或走查与图各说一套单元名（对不上即失效）。
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:m2_worked_example_assignment_walkthrough -->
+
+
+### 变体 U：冲击主体组合权重核查 + 归谬收口（Shock-Actor Portfolio-Weight Exogeneity Check，Lu et al. 2022 MS 型）
+
+> 论证角色：可信性——外生性声明不靠断言，靠"利益攸关度"的量化核查与一句归谬
+
+**band**: critique_heavy + gap（同上；单源新增，gate ① 裁决）
+**验证状态**: EMERGING（单源 full_text_verified：Lu, Shen, Wang & Zhang 2022, Management Science）
+
+**适用**: 冲击主体是组合型机构（基金、银行、集团）且处理单元仅占其组合极小份额的设计：用权重比证明冲击事件不可能"为处理单元而发起"。
+
+**结构**:
+```
+[制度性动机——冲击事件的真实驱动因素 + 引文支撑]
+The [shock event] is exogenous to [outcome strategy] because [the event] is
+unlikely to be driven by [their specific holdings of the affected units].
+Most [events] are driven by [industry-level force] ([citations]).
+
+[量化核查——权重定义 + 两组中位数]
+We further verify that the [events] are unlikely to be driven by [holdings
+of the treated units] by showing that the relative importance of treated
+and control [units] in the [actors'] portfolios is minimal. Specifically,
+we calculate the [weight] as the ratio of the [market value of certain
+units] to the [actors'] overall [portfolio value]. The median [weight] for
+the treated [units] is [small %], and that for control [units] is
+[smaller %].
+
+[归谬收口]
+Therefore, if an [actor] mainly wants to [obtain the treated exposure], it
+could achieve this easily by [transacting directly in the market] instead
+of [undertaking the shock event].
+```
+
+**为什么有效**: 三层递进——制度性驱动因素（质性）→ 权重中位数（量化、处理/对照分组报告）→ 归谬（若真想要该敞口有更便宜的路径）；外生性从"声明"升级为"被核查过的判断"，且核查量小到可在 Methods 一段内完成。
+
+**原文锚点** (Lu, Shen, Wang & Zhang 2022, Management Science "Frenemies: Corporate Advertising Under Common Ownership", §3.1):
+> "The median weight for the treated firms in the fund portfolio is 0.02%, and that for control firms is 0.01%. Therefore, if a bank or fund mainly wants to commonly own another stock, it could achieve this easily by buying the stock in the market instead of merging with another institution."
+
+**注意事项**:
+- 权重必须处理组与对照组分别报告（只报处理组会失去对照基线）
+- 归谬路径必须真实可行（市场上确实存在更便宜的替代获取方式），否则收口失效
+
+**反模式**: 只写"mergers are exogenous"不给核查（断言式外生性）；或权重算出偏大后仍强行收口（应改为披露并讨论局限）。
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:m8_shock_actor_portfolio_weight_exogeneity_check -->
+
+
+### 变体 V：多次冲击巧合性论证（Multiple-Shocks Coincidence Defense，Lu et al. 2022 MS 型）
+
+> 论证角色：可信性——把设计的多重性（multiple events at different times）本身转化为对混淆事件的防御
+
+**band**: critique_heavy + gap（同上；单源新增，gate ① 裁决）
+**验证状态**: EMERGING（单源 full_text_verified：Lu, Shen, Wang & Zhang 2022, Management Science）
+
+**适用**: 广义 DiD / 多事件准实验：各事件的处理组与对照组互不重叠时，用"巧合必须发生多次"的结构性论证预抗辩单事件混淆。
+
+**结构**:
+```
+[优势声明——多重性作为识别资产]
+An important advantage of our identification approach is that we examine
+multiple [shock events] that occurred at different times. In other words,
+the treated [units] in each [event] are different, and the corresponding
+control [units] are also different.
+
+[巧合性论证]
+The presence of multiple shocks mitigates the concern that confounding
+events around the [events] explain our results. It is unlikely that there
+exist persistent unobserved factors coinciding with multiple [event]
+events that lead to changes in treated [units'] [outcome] relative to
+those of the controls.
+
+[惯例收口——体例先例引文]
+The benefit of having multiple shocks is widely acknowledged in the
+literature ([citations to precedent multiple-shock designs]).
+```
+
+**为什么有效**: 三拍把"样本里有 N 个事件"重写为识别性质疑的答案——单事件周围的混淆要变成"与全部事件同时发生的持久因素"，可能性被结构性压低；末句的体例先例引文把该论证锚进已有方法惯例，降低审稿人的评估成本。
+
+**原文锚点** (Lu, Shen, Wang & Zhang 2022, Management Science "Frenemies: Corporate Advertising Under Common Ownership", §3.2):
+> "The presence of multiple shocks mitigates the concern that confounding events around the mergers explain our results. It is unlikely that there exist persistent unobserved factors coinciding with multiple merger events that lead to changes in treated firms' advertising expenditures relative to those of the controls."
+
+**注意事项**:
+- 前提是各事件的处理/对照集互不重叠——若同一单元被多次处理，巧合论证减弱，需改写为堆叠设计并另加诊断
+- 该论证不替代逐事件的安慰剂或事件研究诊断，只能作为预抗辩层
+
+**反模式**: 事件数不多时滥用（两三个事件撑不起巧合论证）；或把该论证写成对现代 staggered 诊断的替代（审稿人仍会要 event-study/异质稳健估计量）。
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:m8_multiple_shocks_confound_defense -->
+
+
+### 变体 X：测量门槛的监管规则锚定（Regulatory-Threshold Measurement Anchor，Lu et al. 2022 MS 型）
+
+> 论证角色：构造效度——把测量 cutoff 锚定到一条既有监管规则，门槛不再是作者偏好而是制度事实
+
+**band**: critique_heavy + gap（同上；单源新增，gate ① 裁决）
+**验证状态**: EMERGING（单源 full_text_verified：Lu, Shen, Wang & Zhang 2022, Management Science）
+
+**适用**: 测量阈值恰好对应监管申报/披露规则的设计（5% 持仓、重大合同披露线、上市规则阈值等）：先给构念理由（为何这类主体重要），再给制度出处（规则何时触发），最后给机制后果（这些主体能做什么）。
+
+**结构**:
+```
+We focus on [units above the threshold] because they are [substantively
+influential]. [Actors] must file [a regulatory form] with [the regulator]
+when their [holding] reaches [threshold] of a [unit's] [base]. These
+[actors] often can [influence the unit] with [the rights] awarded with
+their [holdings].
+```
+
+**为什么有效**: 三拍把一个可疑的整数门槛（为何 5% 不是 4%？）转写为"监管者已经替我们选定"的制度参数——构念理由（influential）+ 制度出处（filing rule）+ 行动后果（voting rights）使门槛同时具备理论面与制度面。
+
+**原文锚点** (Lu, Shen, Wang & Zhang 2022, Management Science "Frenemies: Corporate Advertising Under Common Ownership", §3.1):
+> "We focus on blockholders because they are influential shareholders. Shareholders must file a Form 13D with the Securities and Exchange Commission (SEC) when their ownership block reaches 5% of a company's outstanding shares."
+
+**注意事项**:
+- 门槛必须真有监管对应物；"5% 很常用所以用 5%" 不是论证
+- 监管规则的管辖区与样本期要匹配（规则变更时须说明截断或分段）
+
+**反模式**: 用文献流行度替代制度出处（"following prior work we use 5%"——那是惯例继承不是效度论证）；或监管规则与构念机制无关联地并列。
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:m2_regulatory_threshold_measurement_anchor -->
 
 ## 反模式（Castellaneta 蒸馏补充）
 

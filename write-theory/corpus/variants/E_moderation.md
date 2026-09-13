@@ -1174,3 +1174,54 @@ pronounced than under conditions of low [W].
 
 <!-- wb:ridge_aime_white_2013_smj:t_e_both_branch_amplification_steepening -->
 
+
+
+## E15. 单一成本收益计算→异号调节假设对（One-Calculus Cost-Benefit → Opposite-Signed Moderation Pair，Lu et al. 2022 MS 型）
+
+> 论证角色：Reason——从同一机制的成本收益计算导出一对异号调节假设的推导骨架；先立无条件基线主效应，再用收益/成本两个 moderator 反向精化机制强度
+
+**band**: gap（主题变体语料零命中，新增；单源 EMERGING，gate ① 裁决）
+**验证状态**: EMERGING（单源 full_text_verified：Lu, Shen, Wang & Zhang 2022, Management Science；仅作 section_variant，不改核心路由）
+
+**适用**: 机制推演型论文已有基线主效应假设（X 经机制 M 影响 Y），且 M 的强度可由一个统一的成本收益计算刻画——从同一次计算导出两条异号调节假设：收益侧 W_benefit 放大效应，成本侧 W_cost 阻碍效应。经济学/战略体例的比较静态写法（MS/JM/JMR 风格）。
+
+**结构**:
+```
+[基线主效应 H1: X → Y（经机制 M）]
+
+[机制具体化段：枚举 M 的实现通道，建立可行性；通道不另立假设（见 B 变体 E）]
+
+[成本收益推导段——一次计算，两个方向]
+We argue that the [benefit] and [cost] of [M] would affect [actors]' incentive
+to [act on M] when [making strategic decisions such as Y]. When the [gain] from
+[M] is larger, [actors] have more incentives to [act on M], and the [effect of
+X on Y] is likely to be larger. Alternatively, if the [cost] of [M] is high,
+[actors] are less likely to [shift strategy], and the [effect] is likely to be
+small. Based on these arguments, we propose the following two hypotheses.
+
+H2: The [effect/reduction] ... is greater when [units] have a higher [benefit of M].
+H3: The [effect/reduction] ... is smaller when [units] have a higher [cost of M].
+```
+
+**与邻近变体的区别**:
+
+| 维度 | E8（双刃剑异号权变） | E9（双侧镜像调节） | E15（本变体） |
+|------|--------------------|------------------|--------------|
+| 基线主效应 | 不设 unconditional 主效应假设 | 视范文而定 | 先立基线主效应 H1，再调节 |
+| 异号来源 | 同一构念的两条相反机制（升值刃 vs 贬值刃） | 同一构念的 rival/target 两侧 | 同一机制的收益与成本（一次计算的两个分量） |
+| moderator 组织 | 增强型 W 与阻碍型 W 分属不同刃 | 单一 W 镜像两侧 | 两个概念独立 W（benefit / cost），共用一个成本收益元框架 |
+| 双边论证位置 | 异号 W 分属不同刃 | 同一 W 镜像 | 每条假设单侧比较静态；两条异号假设合起来覆盖高低两侧 |
+
+**为什么有效**: 一个成本收益元框架同时回答 moderator 选择问题（两 W 是同一计算的两个分量，非事后罗列）与双边覆盖问题（高低两侧由一对异号假设分担）；机制通道枚举先行，使 benefit/cost 有具体载体，调节变量不显外部强加。
+
+**原文锚点** (Lu, Shen, Wang & Zhang 2022, Management Science "Frenemies: Corporate Advertising Under Common Ownership", §2.3):
+> "We argue that the cost and benefit of coordination would affect firms' incentive to collaborate on strategic decisions such as advertising. When the gain from coordination is larger, firms have more incentives to coordinate, and the decrease in advertising spending is likely to be larger. Alternatively, if the cost of coordination is high, firms are less likely to shift their strategy, and the impact of common ownership is likely to be small."
+
+**注意事项**:
+- 两条假设必须真异号且都能回溯到同一计算的不同分量；若两个 moderator 各需独立理论，改用 E3 嵌入型或条件化复杂化（B 方式三）
+- 每条假设的单侧论证依赖"另一条假设覆盖对侧"——写作时需向读者明示这一分工，否则双边完整性预期不满足
+- 通道枚举与 benefit/cost 的映射宜显式（哪条通道承载收益、哪条承载成本），否则审稿人会追问通道-调节映射
+
+**反模式**: 把成本与收益写成两套不可通约理论（退化为两个独立调节的拼盘）；或没有基线主效应就直接进入异号调节（那是 E8 的领地）。
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:e15_one_calculus_cost_benefit_opposite_signed_moderation_pair -->

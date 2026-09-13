@@ -5,10 +5,10 @@
 meta:
   schema_version: 1.1.0
   registry_type: estimator-slot-skeleton
-  last_updated: '2026-09-12a'
-  last_batch_id: batch_48_ridge_aime_white_2013_residual_sync
-  batches_processed: 48
-  total_papers_indexed: 48
+  last_updated: 2026-09-13a
+  last_batch_id: batch_2027_lu_et_al_2022_frenemies_corporate_advertising_writeback
+  batches_processed: 49
+  total_papers_indexed: 49
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
     granularity: per estimator（对应 corpus/[结果类型].md 文件）
@@ -3445,6 +3445,30 @@ estimators:
       R2:
         skeleton_variants:
         - id: r2_rditer_prepost_modelfree_event_figure_fang2025
+
+
+        - id: r2_did_fe_absorption_navigation
+
+          skeleton: >-
+
+            见语料块
+
+          notes: >-
+
+            corpus DiD.md R：变体 3 管分步入表与经济显著性绑定
+
+            本变体是列间导航注记——主动解释"某系数为何从该列消失"（被高维 FE 吸收），防止审稿人把缺项误读为遗漏，再以 "qualitatively the same" 收束规格累进。
+        - id: r2_did_fig_pretrend_intuitive_preview
+
+          skeleton: >-
+
+            见语料块
+
+          notes: >-
+
+            corpus DiD.md Q：变体 11 只立"裸数据前后均值差异"事实
+
+            本变体把 parallel trend 措辞显式写进直觉证据段并用 "consistent with our conjecture" 桥接到机制——图形前置拍兼做识别假设的定性预演，随后紧接 "Next, we use the Difference-in-Differences approach" 进正式检验。
           skeleton: "Figure [X] presents the model-free evidence of [outcome] for [treated units] before and after [event]. The [axis] covers the [N]-[period] observational window from [start] to [end]. The [panel] reveals a noticeable [increase/decrease] (p < [threshold]) in [total outcome] for [treated units] after [event]. A decomposition of [outcome] by [component dimension] indicates an [increase] (p < [threshold]) in [component_A] following [event], but a [decrease] (p < [threshold]) in [component_B]. However, we observe an insignificant change (p > [threshold]) in [component_C]. Table [Y] in the [online supplemental materials] provides the t-statistic for the model-free evidence. ... Next, we present the estimates from the [estimator] analysis"
           paper_count: 1
           status: EMERGING
@@ -3476,6 +3500,18 @@ estimators:
       R3:
         skeleton_variants:
         - id: r3_did_baseline_estimate
+
+        - id: r3_did_multimeasure_percent_translation
+
+          skeleton: >-
+
+            见语料块
+
+          notes: >-
+
+            corpus DiD.md S：R3 现仅变体 8（1-SD 交互四拍）
+
+            本变体把经济幅度翻译做成主效应后的独立收束段，且一次覆盖三口径（水平量 + 两个 scaled 比率）——多 DV 论文的幅度拍不必逐表重复，集中一段按口径并列翻译。
           skeleton: Model [y] provides the baseline DiD estimate. The coefficient on [treatment_dummy] is [positive/negative]
             and statistically significant (β = [value], p < [threshold], 95% CI [[lower], [upper]]), indicating that [treatment]
             [increases/decreases] [outcome] by approximately [value] [units/percent]. Thus, Hypothesis [x] is supported.
@@ -3535,6 +3571,18 @@ estimators:
       R4:
         skeleton_variants:
         - id: r4_did_interaction_two_pole_hypothesis_audit
+
+        - id: r4_did_median_partition_suest_difference
+
+          skeleton: >-
+
+            见语料块
+
+          notes: >-
+
+            corpus DiD.md T：变体 1 双端核对靠条件效应图
+
+            本变体是无图版 predicted-pole null 报告——中位数分组 → 显著极 vs null 极并列 → SUEST 系数差异检验把"组间不同"形式化，null 组被解读为调节假设的支持证据（R6 元素并入 R4）。
           skeleton: The [treatment] × [moderator] interaction is [direction] and significant. We translate its magnitude and
             plot the treatment effect at both theoretically relevant moderator values. The [high] condition matches the predicted
             [sign], whereas the [low] condition is [observed sign] rather than [predicted sign]. Thus, the contingency receives
@@ -3557,6 +3605,30 @@ estimators:
       R7:
         skeleton_variants:
         - id: r7_did_placebo_permutation
+
+
+        - id: r7_did_alternative_control_construction
+
+          skeleton: >-
+
+            见语料块
+
+          notes: >-
+
+            corpus DiD.md V：变体 13 换的是识别来源本身（替代冲击）
+
+            本变体保持冲击不变、只重构对照群——行业内非事件机构 block-held 单位作对照，专项回应"对照组外部效度/机构特异不可观测"威胁，并与另一替代口径（同事件机构组合内未变化持仓）双轨呈报。
+        - id: r7_did_preshock_partition_threat_test
+
+          skeleton: >-
+
+            见语料块
+
+          notes: >-
+
+            corpus DiD.md U：变体 9 电池含 Matching/Placebo/Early-Late 成员但无"处理前污染分组检验"
+
+            本变体把混淆预言反向写成可证伪检验——若效应由事前特征驱动则高组显著低组不显著，两群组皆显著即反证混淆，收口句归因于事件诱导的处理。
           skeleton: To further assess the robustness of our DiD estimates, we conduct [placebo tests / permutation tests /
             randomization inference]. The results, reported in Table [x], show that [description]. These findings reduce concerns
             that [specific threat].
@@ -7457,3 +7529,9 @@ batch_history:
   slot_updates_count: 3
   novel_patterns_count: 3
   notes: 'Ridge, Aime & White 2013 (SMJ, pay disparity U-shape, social comparison vs tournament theory) 手工残项同步（写回器按连字符文件名 OLS-FE 未命中下划线 registry 键 OLS_FE）：OLS-FE.md ADD 变体97 r3_ushape_dual_tail_dollar_translation（R3 U 形双尾 ±2 SD 实用显著性+美元翻译倒装四拍）+ 变体98 r4_ushape_mechanism_discriminating_moderation（R4 X²×W 机制判别式五拍）+ 变体99 r5_dual_mechanism_arm_decomposition（R5 调节强化两臂逐臂幅度翻译），all EMERGING 单源。skeleton 取自落盘块 **骨架** 引用段、notes 取自 **与原骨架差异**，三行 skeleton_variants 由本批补挂至 OLS_FE slots R3/R4/R5 尾（镜像 batch_44 gulati_lavie_singh 变体91/92/93/96 先例）；meta batches_processed 47→48、total_papers_indexed 47→48。'
+
+- batch_id: batch_2027_lu_et_al_2022_frenemies_corporate_advertising_writeback
+  timestamp: 2026-09-13
+  source_paper: lu_et_al_2022_frenemies_corporate_advertising
+  slot_updates_count: 6
+  novel_patterns_count: 6

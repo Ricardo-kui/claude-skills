@@ -51,3 +51,46 @@ updated: 2026-08-05
 - 须报告匹配后 N / 平衡表；仅说"results remain robust"不可审计。
 - CEM 不解决不可观测混淆；应与政治经济外生性检验、安慰剂等并列，而非替代。
 - 若主识别已是随机实验，此抗辩冗余。
+
+
+### 变体 2：同冲击机构对照构造（Within-Shock Same-Institution Controls，Lu et al. 2022 MS 型）
+
+> 论证角色：可审计性 + 抗辩性——对照组不是全市场池，而是同一冲击事件内部的结构化对照；机构层面的选择风格差异被构造性吸收
+
+**band**: gap（匹配DiD-广义DiD 桶此前零来源论文；单源新增，gate ① 裁决）
+**验证状态**: EMERGING（单源 full_text_verified：Lu, Shen, Wang & Zhang 2022, Management Science）
+
+**适用**: 冲击由两个主体合并产生的广义 DiD：对照单元从合并机构在事件前的其他持仓中抽取，使处理组与对照组共享同一批"选股者"，机构选择风格（investment and stock picking styles）不成为混淆。
+
+**结构**:
+```
+[动机句——点名被吸收的混淆源]
+To control for differences in the [selection styles] of the [shock actors],
+we construct the control group as the [units] that are simultaneously
+[held] by at least one of the [shock actors] but do not experience a change
+in [treatment].
+
+[编号双条件——锚定事件前时点]
+Specifically, to be included in the control sample, a [unit] must satisfy
+two conditions in the [quarter] before the [event announcement]. First, the
+[unit] must be [held] by the same [actor] that [holds] a treated [unit].
+Second, [the other actor] must not [hold] any [peer units] from the same
+[category].
+
+[warrant 收口]
+Thus, the [event] does not affect the [treatment status] of control [units],
+and yet, these [units] are [held] by the [combined actors].
+```
+
+**为什么有效**: 对照组的"可比性"不靠事后匹配算法而靠事件结构本身——同一批机构、同一时点、同一样本框，选择风格差异被设计消去而非统计校正；warrant 句同时声明对照组"被暴露于合并机构"（排除合并本身是对照未受处理的替代解释）。
+
+**原文锚点** (Lu, Shen, Wang & Zhang 2022, Management Science "Frenemies: Corporate Advertising Under Common Ownership", §3.1):
+> "To control for differences in the investment and stock picking styles of the merging institutions, we construct the control group as the firms that are simultaneously owned by at least one of the merging institutions but do not experience a change in common ownership."
+
+**注意事项**:
+- 需交代对照资格与处理资格的互斥关系（同一单元为何必然落入其中一组），否则两组划分可被质疑
+- 该构造的代价是对照仅覆盖"被冲击机构持有"的单元——外部效度边界应在写作中声明
+
+**反模式**: 把同机构对照与全市场对照混用却不分别陈述各自功能；或双条件中有一条实际依赖事后信息（与事前定义变体冲突）。
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:m2_within_shock_same_institution_controls -->
