@@ -332,7 +332,7 @@ estimators:
           - id: r2_control_null_prior_anchored_opening
             skeleton: "The reported results (Models [1]–[K]) reveal that the control variables produced mostly insignificant effects on [outcome]. This is consistent with some prior research that found no support for the effects of [control 1] ([citation]), [control 2] ([citation]), and [control 3] ([citations]) on [outcome]."
             paper_count: 1
-            status: EMERGING
+            status: VERIFIED
             subfield_distribution:
               strategy: 1
             sources:
@@ -351,7 +351,7 @@ estimators:
           - id: r3_division_arithmetic_magnitude_fang2025
             skeleton: "The [direction] and statistically significant coefficient ([coefficient], p < [threshold]) in Column [I] suggests that [treated units] responded to [event] by [direction phrase] their [outcome]. Specifically, in each [unit_1] and each [unit_2] following [event], [treated units] [outcome]—on average—[coefficient] × [unit scale] = [amount] (or [USD equivalent]) [more/less] than what they spent in a pre[event] [unit_1-unit_2], on average. This number amounts to a [X]% [drop/increase] ([amount] ÷ [base])."
             paper_count: 1
-            status: EMERGING
+            status: VERIFIED
             subfield_distribution:
               om: 1
             sources:
@@ -559,7 +559,7 @@ estimators:
           - id: r3_paired_contrast_verdict_rhythm
             skeleton: "Model [N] reveals an insignificant contribution of [rival construct] to [outcome], which persisted in subsequent models. In contrast, Model [M] shows that the coefficient for [focal construct] is [direction] and [marginally] significant (β = [value], p < [threshold]). Therefore, Hypothesis [n], which predicted [prediction], received [moderate/full] support. These results suggest that [focal construct] rather than [rival construct] contributes to [outcome]."
             paper_count: 1
-            status: EMERGING
+            status: VERIFIED
             subfield_distribution:
               strategy: 1
             sources:
@@ -576,7 +576,7 @@ estimators:
           - id: r3_relative_order_within_model_f_test
             skeleton: "Hypothesis [n] was tested with a [one-/two-]sided F-test, comparing the standardized coefficients of [predictor A] and [predictor B] while holding the other variables at their mean values. In support of Hypothesis [n], we found that β_[A] > β_[B] (F_[1, df] = [value], p < [threshold])."
             paper_count: 1
-            status: EMERGING
+            status: VERIFIED
             subfield_distribution:
               strategy: 1
             sources:
@@ -592,7 +592,7 @@ estimators:
           - id: r3_main_effect_absorbed_by_own_interaction
             skeleton: "Still, the main effect of [predictor] became insignificant in this model because of the high correlation between the main effect of [predictor] and the interaction term [predictor] × [moderator] (r = [value], p < [threshold]). The lower F values in Models [n] and [m] can be ascribed to the reduced degrees of freedom."
             paper_count: 1
-            status: EMERGING
+            status: VERIFIED
             subfield_distribution:
               strategy: 1
             sources:
@@ -734,7 +734,7 @@ estimators:
           - id: r4_dual_side_interaction_null_as_confirmation
             skeleton: "In support of Hypothesis [n], the interaction term was insignificant for [rival construct] but [direction] and significant for [focal construct] (β = [value], p < [threshold]). ... The insignificant interaction of [rival construct] and [moderator] is consistent with our conjecture about the superiority of [focal construct] over [rival construct]."
             paper_count: 1
-            status: EMERGING
+            status: VERIFIED
             subfield_distribution:
               strategy: 1
             sources:
@@ -819,7 +819,7 @@ estimators:
           - id: r5_low_r2_literature_benchmark_defense
             skeleton: "The explanatory power of our [outcome] models ranged between R² = [low] percent and [high] percent. This result is typical in studies employing [DV family], especially when testing [interactions and subtle focal variables]. For example, [benchmark study] report[s] R² = [value] percent [in a comparable setting]. The objective of the analysis in these cases is to evaluate the contribution of [focal construct] to [outcome] rather than to explain the overall variance in [outcome]."
             paper_count: 1
-            status: EMERGING
+            status: VERIFIED
             subfield_distribution:
               strategy: 1
             sources:
@@ -854,7 +854,7 @@ estimators:
           - id: r6_null_as_strategy_adjudication_fang2025
             skeleton: "Column [IV] of Table [X] shows that [event] did not impact [outcome] (β [value], p > [threshold]). ... This finding corroborates the theoretical insight we drew from Column [II]. ... The evidence thus supports the [strategy_A], while supporting neither the [strategy_B] nor the [strategy_C]."
             paper_count: 1
-            status: EMERGING
+            status: VERIFIED
             subfield_distribution:
               om: 1
             sources:
@@ -925,7 +925,7 @@ estimators:
           - id: r6_unexpected_sign_hedged_rereading
             skeleton: "The main effect of [non-focal predictor] was [direction] and significant (β = [value], p < [threshold]). This result may suggest that [alternative-theory reading]."
             paper_count: 1
-            status: EMERGING
+            status: VERIFIED
             subfield_distribution:
               strategy: 1
             sources:
@@ -1399,6 +1399,7 @@ estimators:
       R3:
         skeleton_variants:
           - id: r3_binary_gee_curvilinear_formal_utest_chain
+            status: VERIFIED
           - id: r3_case_group_contrast_loop
             skeleton: "We present our results of Equation ([N]) in Table ([X]). We observe that the coefficients of [Case A] and [Case B] are insignificantly negative, whereas the coefficients of [Case C] and [Case D] are significantly positive. When we combine these two sets of estimates, our result suggests that, compared with [the reference cases], [units] would be more likely to [outcome] if [the condition] is classified as either [Case C] or [Case D]. By using a [structural estimation] approach to [estimate the theoretical primitives], our empirical study provides supporting evidence that the guideline offered in our [decision framework] provides practical implications for understanding how [units] may behave when [focal circumstance]."
             notes: "Verified across Bendig 2024 and the user-audited Lee & Park 2024 exemplar. A quadratic coefficient alone is insufficient; curve shape is established by joint restrictions and then displayed on the probability/response scale. For adverse Y, the vertex is a maximum-risk intermediate zone, not a performance optimum."
@@ -1651,6 +1652,7 @@ estimators:
       R7:
         skeleton_variants:
           - id: r7_curvilinear_six_threat_robustness_ladder
+            status: VERIFIED
           - id: r7_threshold_def_columns
             skeleton: "We present our results of Equation ([N]) in Table ([X]). Columns ([1]), ([2]), and ([3]) present results in which we use [the first 1/2], [the first 1/3], and [the first 1/4] of [the relevant cycle], respectively, to identify [the threshold-defined condition]. Our results are largely consistent in all three columns: [the coefficients of focal cases] keep the same sign and significance pattern under all three definitions."
             notes: Untabulated IV results cannot carry decisive identification; significance attenuation must remain visible.
@@ -2297,7 +2299,7 @@ estimators:
             skeleton: "[Name the mechanisms assigned to the rising and declining portions]. [Introduce a comparison exposure expected to activate one mechanism without the other]. [Report the predicted linear pattern and null/nonmatching quadratic pattern]. [State that the contrast is consistent with mechanism separation]. [Explicitly deny mediation or causal-process identification when mechanisms are not directly measured]."
             skeleton_level: paragraph
             paper_count: 1
-            status: EMERGING
+            status: VERIFIED
             subfield_distribution:
               strategy: 1
             sources:
@@ -3136,6 +3138,7 @@ estimators:
       R2:
         skeleton_variants:
           - id: r2_rditer_prepost_modelfree_event_figure_fang2025
+            status: EMERGING
           - id: r2_did_fe_absorption_navigation
             skeleton: "\n见语料块"
             notes: "\ncorpus DiD.md R：变体 3 管分步入表与经济显著性绑定\n本变体是列间导航注记——主动解释\"某系数为何从该列消失\"（被高维 FE 吸收），防止审稿人把缺项误读为遗漏，再以 \"qualitatively the same\" 收束规格累进。"
@@ -3174,6 +3177,7 @@ estimators:
       R3:
         skeleton_variants:
           - id: r3_did_baseline_estimate
+            status: EMERGING
           - id: r3_did_multimeasure_percent_translation
             skeleton: "Model [y] provides the baseline DiD estimate. The coefficient on [treatment_dummy] is [positive/negative] and statistically significant (β = [value], p < [threshold], 95% CI [[lower], [upper]]), indicating that [treatment] [increases/decreases] [outcome] by approximately [value] [units/percent]. Thus, Hypothesis [x] is supported."
             notes: "\ncorpus DiD.md S：R3 现仅变体 8（1-SD 交互四拍）\n本变体把经济幅度翻译做成主效应后的独立收束段，且一次覆盖三口径（水平量 + 两个 scaled 比率）——多 DV 论文的幅度拍不必逐表重复，集中一段按口径并列翻译。"
@@ -3229,6 +3233,7 @@ estimators:
       R4:
         skeleton_variants:
           - id: r4_did_interaction_two_pole_hypothesis_audit
+            status: EMERGING
           - id: r4_did_median_partition_suest_difference
             skeleton: "The [treatment] × [moderator] interaction is [direction] and significant. We translate its magnitude and plot the treatment effect at both theoretically relevant moderator values. The [high] condition matches the predicted [sign], whereas the [low] condition is [observed sign] rather than [predicted sign]. Thus, the contingency receives support, but the sign-switch hypothesis is only [partially/not] supported as stated."
             notes: A significant interaction does not establish both predicted simple-effect signs.
@@ -3250,6 +3255,7 @@ estimators:
       R7:
         skeleton_variants:
           - id: r7_did_placebo_permutation
+            status: EMERGING
           - id: r7_did_alternative_control_construction
             skeleton: "\n见语料块"
             notes: "\ncorpus DiD.md V：变体 13 换的是识别来源本身（替代冲击）\n本变体保持冲击不变、只重构对照群——行业内非事件机构 block-held 单位作对照，专项回应\"对照组外部效度/机构特异不可观测\"威胁，并与另一替代口径（同事件机构组合内未变化持仓）双轨呈报。"
@@ -3332,7 +3338,7 @@ estimators:
           - id: r8_cross_event_replication_generalization_fang2025
             skeleton: "We next test the generalizability of our findings beyond [event A]. Specifically, we collect an additional data set on [event B] initiated by [actor] in [market] during [year]. ... Using this newly created balanced sample, we estimate Equation ([N]). Table [Y] presents the results, similar to those reported in Table [X]. The consistent results suggest that the observed relations between [treatment] and [outcome] are likely limited to neither [event A] nor [category A]. Instead, these effects may be generalized to other [events] and [categories]."
             paper_count: 1
-            status: EMERGING
+            status: VERIFIED
             subfield_distribution:
               om: 1
             sources:
@@ -4406,7 +4412,7 @@ estimators:
           - id: r7_iv_exclusion_placebo_regression_fang2025
             skeleton: "The instrumental variable (IV) must meet the relevance criterion and exclusion restriction ([citations]). That is, the instrument should correlate with [endogenous variable] but should not directly influence [outcome]. ... Empirically, we provide evidence showing that our instrument is not directly related to [proxy for local economic conditions], which could affect [outcome]. ... The insignificant effect suggests that our IV variable likely meets the exclusion restriction ([citations])."
             paper_count: 1
-            status: EMERGING
+            status: VERIFIED
             subfield_distribution:
               om: 1
             sources:
@@ -4415,7 +4421,7 @@ estimators:
           - id: r7_control_endogeneity_three_step_fang2025
             skeleton: "One may be concerned that our control variables (e.g., [control]) are endogenous. We address this concern with the following three steps. First, we estimate a regression that excludes [controls]. The estimates (Table [C1]) are consistent with our main analyses (Table [X]). Second, prior literature ([citation]) has suggested that it is common for control variables to also function as dependent variables. ... The insight is that including the controls leads to conservative estimates. Third, following prior literature ([citations]), we used these controls' one-period-lagged values as instruments. The estimates (Table [C2]) were consistent with the results, further reducing the endogenous concern."
             paper_count: 1
-            status: EMERGING
+            status: VERIFIED
             subfield_distribution:
               om: 1
             sources:
@@ -4792,7 +4798,7 @@ estimators:
           - id: r4_iv_fitted_value_moderation_fang2025
             skeleton: "Because the [moderator] is likely endogenous to [outcome], we estimate a two-stage least squares (2SLS) regression to correct for the endogeneity of [moderator] ([citation]). ... We interact the fitted value of [moderator] with [treatment] to test whether [moderator] moderates the effect of [treatment] on [outcome] ([citation]). ... Column [II] reports that an increase in [moderator] [weakens/strengthens] the [positive/negative] [treatment] effect (β [value], p < [threshold]). On average, a one-unit (in [unit scale]) increase in [moderator] [changes] [outcome] by [X]% ([value] ÷ [base])."
             paper_count: 1
-            status: EMERGING
+            status: VERIFIED
             subfield_distribution:
               om: 1
             sources:

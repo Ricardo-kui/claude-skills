@@ -360,6 +360,28 @@ def plan_theory(objs: dict, doc: dict, scan, alias) -> list[str]:
         next_tfr += len(frag_by_paper[paper])
         notes.append(f"source_papers +{paper} (minted; journal/year need "
                      f"human completion)")
+    # full-coverage status synthesis (C item): the block-driven merge above
+    # only visits fragments matched by block attestation — fragments of
+    # unattested papers, and unmatched fragments of attested papers, would
+    # silently never receive policy flips. Status depends only on the
+    # registry paper key, so synthesize for EVERY fragment row; idempotent
+    # max with the merge-loop signal, never-downgrade preserved.
+    for paper, pentry in source_papers.items():
+        if not isinstance(pentry, dict):
+            continue
+        st_p, _ = rv.policy_status([paper], 1, rv.cached_policy(),
+                                   auxiliary=rv.source_is_auxiliary(doc, paper))
+        if not st_p:
+            continue
+        for f in pentry.get("fragments") or []:
+            if not isinstance(f, dict):
+                continue
+            st_r = rv.norm_status(str(f.get("status") or ""))
+            if st_r in rv.LADDER and rv.LADDER.index(st_r) >= rv.LADDER.index(st_p):
+                continue
+            f["status"] = st_p
+            notes.append(f"source_papers.{paper}.{f.get('fragment_id')}: "
+                         f"~['status'] (policy)")
     if "total_papers_indexed" in meta:
         meta["total_papers_indexed"] = len(source_papers)
     # ---- patterns ----
@@ -412,6 +434,25 @@ def plan_theory(objs: dict, doc: dict, scan, alias) -> list[str]:
             pent["status"] = new_status; changed.append("status")
         if changed:
             notes.append(f"patterns.{pid}: ~{changed}")
+    # full-coverage pattern status synthesis (C item): the merge loop skips
+    # patterns without attesting blocks (`if not grp`), so policy flips would
+    # silently never land there. Never-downgrade preserved.
+    for pid, pent in patterns.items():
+        if not isinstance(pent, dict) or blocks_by_pattern.get(pid):
+            continue
+        pkeys = [rv.strip_journal(str(p))
+                 for p in rv.flowlist(pent.get("source_papers"))]
+        st_p, _ = rv.policy_status(
+            pkeys, max(len(pkeys), int(pent.get("source_count") or 0)),
+            rv.cached_policy(),
+            auxiliary=any(rv.source_is_auxiliary(doc, k) for k in pkeys))
+        if not st_p:
+            continue
+        st_r = rv.norm_status(str(pent.get("status") or ""))
+        if st_r in rv.LADDER and rv.LADDER.index(st_r) >= rv.LADDER.index(st_p):
+            continue
+        pent["status"] = st_p
+        notes.append(f"patterns.{pid}: ~['status'] (policy)")
     # ---- summary_by_dimension: re-aggregate from merged fragments ----
     agg: dict[str, dict] = {}
     for paper, pentry in source_papers.items():
@@ -626,6 +667,30 @@ def plan_results(objs: dict, doc: dict, scan, alias) -> list[str]:
                     v["status"] = st; changed.append("status")
                 if changed:
                     notes.append(f"estimators.{ekey}.{skey}.{vid}: ~{changed}")
+    # full-coverage status synthesis (C item): variants whose blocks are not
+    # attested in this scan are invisible to the block-driven loop above —
+    # policy flips and the statusless fill must reach them too. Idempotent
+    # with the in-loop synthesis (same _status_for, never-downgrade).
+    for ek, ee in estimators.items():
+        if not isinstance(ee, dict):
+            continue
+        for sk, sl in (ee.get("slots") or {}).items():
+            if not isinstance(sl, dict):
+                continue
+            for v in sl.get("skeleton_variants") or []:
+                if not isinstance(v, dict) or not v.get("id"):
+                    continue
+                vpath = (f"estimators.{ek}.slots.{sk}"
+                         f".skeleton_variants.{v['id']}")
+                keys = [rv.strip_journal(str(s))
+                        for s in rv.flowlist(v.get("sources"))]
+                st = _status_for(doc, vpath,
+                                 max(len(keys), int(v.get("paper_count") or 0)),
+                                 current=v.get("status"), paper_keys=keys)
+                if rv.norm_status(str(v.get("status"))) != rv.norm_status(st):
+                    v["status"] = st
+                    notes.append(f"estimators.{ek}.{sk}.{v['id']}: "
+                                 f"~['status'] (policy/fill)")
     if "batches_processed" in meta:
         bh = doc.get("batch_history")
         if isinstance(bh, list):
