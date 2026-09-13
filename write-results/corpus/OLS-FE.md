@@ -1487,7 +1487,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 
 ### 变体 54: R7 前端识别防御 — RIR 替换计数 + naive-vs-cure (2SRI) 配对 (1篇高价值)
 
-**来源论文**: Ridge, Kim, Ingram & Lee 2024 (Academy of Management Journal)
+**来源论文**: Ridge, Hill, Ingram, Kolomeitsev & Worrell 2024 (Academy of Management Journal)
 **原始句锚点**: "RIR results suggest that to alter our inferences for lobbying breadth, 675 observations would have to be replaced with observations for which there is an effect of zero, and for competitive actions, 1,793 observations would have to be replaced... we follow best practices to diagnose potential endogeneity and assess robustness across analyses."
 **验证状态**: EMERGING（单篇 section_variant）
 **写入日期**: 2026-08-12
@@ -1504,7 +1504,7 @@ p = [value]) and the [treatment_B] coefficient is not (b = [value], p = [value])
 <!-- wb:ridge_hill_ingram_kolomeitsev_worrell_2024_amj:legacy_OLS-FE_54 -->
 ### 变体 55: R5 外部证据实际重要性辩护拍 — "likely to be particularly important in practice" (1篇高价值)
 
-**来源论文**: Ridge, Kim, Ingram & Lee 2024 (Academy of Management Journal)
+**来源论文**: Ridge, Hill, Ingram, Kolomeitsev & Worrell 2024 (Academy of Management Journal)
 **原始句锚点**: "Evidence suggests that even small changes in lobbying can net significant benefits such as tax rate savings... meaning the 7% decrease we observe is likely to be particularly important in practice."
 **验证状态**: EMERGING（单篇 section_variant）
 **写入日期**: 2026-08-12
