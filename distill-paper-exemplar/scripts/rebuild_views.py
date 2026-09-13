@@ -450,10 +450,17 @@ def status_override_for(doc: dict, path: str) -> dict | None:
 
 
 def status_cmp_check(path: str, on_disk: str, derived: str, n_sources: int,
-                     doc: dict | None = None) -> Check:
-    """Ladder-vs-registry status verdict with the override classes."""
+                     doc: dict | None = None, policy: dict | None = None,
+                     paper_keys=None, auxiliary: bool = False) -> Check:
+    """Ladder-vs-registry status verdict with the override classes. When a
+    loaded status policy is passed (C item), an on-disk EMERGING below a
+    policy-fired VERIFIED is attributed to the firing rule, not the ladder."""
     c = Check(path, on_disk=on_disk, derived=derived)
     ov = status_override_for(doc or {}, path)
+    pstat = prule = None
+    if policy is not None and ov is None:
+        pstat, prule = policy_status(paper_keys, n_sources, policy,
+                                     auxiliary=auxiliary)
     if ov is not None:
         ov_st = norm_status(ov.get("status"))
         if ov_st == on_disk:
@@ -483,11 +490,107 @@ def status_cmp_check(path: str, on_disk: str, derived: str, n_sources: int,
     elif on_disk == "EMERGING" and derived == "VERIFIED":
         c.verdict = "drift"
         c.cls = "novel"
-        c.note = "ladder says promote (3+ sources); registry still EMERGING"
+        c.note = (f"policy promote: {prule}" if pstat == "VERIFIED" else
+                  "ladder says promote (3+ sources); registry still EMERGING")
+    elif on_disk == "EMERGING" and derived == "EMERGING" and pstat == "EMERGING":
+        c.verdict = "match"
+        c.note = f"policy hard-exclusion holds EMERGING: {prule}"
     else:
         c.verdict = "drift"
         c.cls = "novel"
     return c
+
+
+# --------------------------------------------------------------------------- #
+# status policy engine (C item): single source scripts/status_policy.yaml,
+# consumed at derivation (rebuild_apply/_status_for via these helpers) and at
+# write-back (corpus_writeback stamps wb-meta / theory fragment / results stub
+# with one shared policy_status computation). Fail-fast: a missing or invalid
+# policy must be loud — a silently skipped policy masquerades as "should have
+# been EMERGING", the exact failure mode this file exists to kill.
+# --------------------------------------------------------------------------- #
+
+class PolicyError(Exception):
+    pass
+
+
+POLICY_PATH = Path(__file__).with_name("status_policy.yaml")
+
+
+def load_policy(path=None) -> dict:
+    """Load + validate status_policy.yaml. Raises PolicyError on any problem."""
+    p = Path(path) if path else POLICY_PATH
+    if not p.is_file():
+        raise PolicyError(f"status policy missing: {p}")
+    try:
+        doc = yaml.safe_load(p.read_text(encoding="utf-8"))
+    except yaml.YAMLError as e:
+        raise PolicyError(f"status policy invalid YAML: {p}: {e}") from e
+    if not isinstance(doc, dict):
+        raise PolicyError(f"status policy must be a mapping: {p}")
+    if str(doc.get("schema_version")) != "1":
+        raise PolicyError(
+            f"unsupported policy schema_version {doc.get('schema_version')!r} "
+            f"in {p}")
+    for key in ("ladder", "hard_exclusions", "author_rules", "domain_rules",
+                "process_semantics", "precedence"):
+        if key not in doc:
+            raise PolicyError(f"status policy missing section: {key}")
+    compiled = []
+    for rule in list(doc["author_rules"]) + list(doc["domain_rules"]):
+        if not isinstance(rule, dict):
+            raise PolicyError(f"policy rule must be a mapping: {rule!r}")
+        for fld in ("name", "min_sources", "target_status"):
+            if fld not in rule:
+                raise PolicyError(f"policy rule missing {fld}: {rule.get('name')}")
+        if "citekey_regex" in rule:
+            try:
+                compiled.append((rule, re.compile(rule["citekey_regex"], re.IGNORECASE)))
+            except re.error as e:
+                raise PolicyError(
+                    f"policy rule {rule['name']}: bad citekey_regex: {e}") from e
+    doc["_compiled"] = compiled
+    doc["_domain_members"] = {
+        strip_journal(str(m)).lower()
+        for r in doc["domain_rules"] for m in (r.get("member_citekeys") or [])}
+    return doc
+
+
+def policy_status(paper_keys, n_sources, policy: dict | None,
+                  auxiliary: bool = False) -> tuple[str | None, str | None]:
+    """Evaluate author/domain rules for an entry whose member papers are
+    paper_keys (journal suffixes stripped, matched case-insensitively).
+    Returns (status, rule_name) or (None, None) when nothing fires — the
+    caller falls through to the ladder. auxiliary=True short-circuits to
+    (EMERGING, 'hard_exclusion:auxiliary_sources') regardless of any rule."""
+    if policy is None:
+        return None, None
+    if auxiliary:
+        return "EMERGING", "hard_exclusion:auxiliary_sources"
+    keys = [strip_journal(str(k)).lower() for k in (paper_keys or [])]
+    n = int(n_sources) if n_sources is not None else len(keys)
+    for rule, rx in policy["_compiled"]:
+        if n < int(rule["min_sources"]):
+            continue
+        if any(rx.search(k) for k in keys):
+            return str(rule["target_status"]), f"author_rule:{rule['name']}"
+    members = policy["_domain_members"]
+    for rule in policy["domain_rules"]:
+        if n < int(rule["min_sources"]):
+            continue
+        if any(k in members for k in keys):
+            return str(rule["target_status"]), f"domain_rule:{rule['name']}"
+    return None, None
+
+
+def source_is_auxiliary(doc: dict | None, paper_key) -> bool:
+    """source_tier == auxiliary for a theory source_papers entry; sections
+    without per-paper source_tier never report auxiliary here."""
+    sp = (doc or {}).get("source_papers") or {}
+    pe = sp.get(str(paper_key)) or sp.get(strip_journal(str(paper_key))) or {}
+    if not isinstance(pe, dict):
+        return False
+    return str(pe.get("source_tier") or "").strip().lower() == "auxiliary"
 
 
 # --------------------------------------------------------------------------- #
@@ -1381,6 +1484,338 @@ def _check_to_dict(c: Check) -> dict:
     return d
 
 
+# --------------------------------------------------------------------------- #
+# --policy-check (C item S2): authoritative overrides ⊕ policy ⊕ ladder
+# re-enumeration vs on-disk status, all four registries, with the CORRECT
+# override-path granularity (results = variant level) and the auxiliary
+# exclusion applied. Read-only; writes report + adjudication package under
+# ~/.claude/distill-work/status_policy/.
+# --------------------------------------------------------------------------- #
+
+def _policy_walker(ck: str, doc: dict):
+    """Yield (override_path, display_path, keys, n_sources, disk_status,
+    auxiliary) for every status-bearing entry of one registry."""
+    if ck == "introduction":
+        for m, mods in (doc.get("evidence") or {}).items():
+            if not isinstance(mods, dict):
+                continue
+            for e, ed in mods.items():
+                if not isinstance(ed, dict):
+                    continue
+                keys = [strip_journal(str(p)) for p in (ed.get("papers") or [])]
+                yield (f"evidence.{m}.{e}", f"evidence.{m}.{e}", keys,
+                       len(keys), norm_status(ed.get("status")), False)
+    elif ck == "theory":
+        sp = doc.get("source_papers") or {}
+        for paper, pe in sp.items():
+            if not isinstance(pe, dict):
+                continue
+            aux = source_is_auxiliary(doc, paper)
+            for f in pe.get("fragments") or []:
+                if not isinstance(f, dict):
+                    continue
+                # override lookup granularity matches rebuild_apply._status_for:
+                # paper-level (theory overrides today live at patterns.*)
+                yield (f"source_papers.{paper}",
+                       f"source_papers.{paper}.{f.get('fragment_id')}",
+                       [paper], 1, norm_status(f.get("status")), aux)
+        for pid, pe in (doc.get("patterns") or {}).items():
+            if not isinstance(pe, dict):
+                continue
+            keys = [strip_journal(str(p)) for p in (pe.get("source_papers") or [])]
+            n = max(len(keys), int(pe.get("source_count") or 0))
+            aux = any(source_is_auxiliary(doc, k) for k in keys)
+            yield (f"patterns.{pid}", f"patterns.{pid}", keys, n,
+                   norm_status(pe.get("status")), aux)
+    elif ck == "methods":
+        ev = doc.get("evidence") or {}
+        for k, e in (ev.get("by_design_type") or {}).items():
+            if not isinstance(e, dict):
+                continue
+            keys = [strip_journal(str(p)) for p in (e.get("papers") or [])]
+            yield (f"evidence.by_design_type.{k}",
+                   f"evidence.by_design_type.{k}", keys, len(keys),
+                   norm_status(e.get("status")), False)
+        for k, e in (ev.get("by_source_paper") or {}).items():
+            if not isinstance(e, dict):
+                continue
+            yield (f"evidence.by_source_paper.{k}",
+                   f"evidence.by_source_paper.{k}", [k], 1,
+                   norm_status(e.get("status")), False)
+    elif ck == "results":
+        for ek, ee in (doc.get("estimators") or {}).items():
+            if not isinstance(ee, dict):
+                continue
+            for sk, sl in (ee.get("slots") or {}).items():
+                if not isinstance(sl, dict):
+                    continue
+                for v in sl.get("skeleton_variants") or []:
+                    if not isinstance(v, dict):
+                        continue
+                    vid = str(v.get("id") or "")
+                    keys = [strip_journal(str(s)) for s in (v.get("sources") or [])]
+                    n = max(len(keys), int(v.get("paper_count") or 0))
+                    # override lookup granularity = variant level (matches the
+                    # 196 partition-collected keys; rebuild_apply._status_for
+                    # used an estimator-level path pre-S3a — dead lookups)
+                    vpath = f"estimators.{ek}.slots.{sk}.skeleton_variants.{vid}"
+                    yield (vpath, vpath, keys, n, norm_status(v.get("status")),
+                           False)
+
+
+def run_policy_check(policy_path=None, out_dir=None, quiet=False) -> int:
+    policy = load_policy(policy_path)
+    hub = Path(out_dir) if out_dir else (
+        Path.home() / ".claude" / "distill-work" / "status_policy")
+    hub.mkdir(parents=True, exist_ok=True)
+    per_corpus: dict[str, Counter] = {}
+    rows: dict[str, list[dict]] = {}
+    paper_count_gaps: list[dict] = []
+
+    def emit(ck, disp, keys, n, disk, how, note=""):
+        per_corpus.setdefault(ck, Counter())[how] += 1
+        rows.setdefault(how, []).append({
+            "registry": ck, "path": disp, "n_sources": n, "keys": keys[:4],
+            "on_disk": disk or "(none)", "note": note})
+
+    for ck in ("introduction", "theory", "methods", "results"):
+        doc = yaml.safe_load(registry_for(ck).read_text(encoding="utf-8"))
+        for opath, disp, keys, n, disk, aux in _policy_walker(ck, doc):
+            ov = status_override_for(doc, opath)
+            pstat, prule = policy_status(keys, n, policy, auxiliary=aux)
+            if ov and ov.get("status"):
+                ost = norm_status(ov.get("status"))
+                if pstat == ost:
+                    emit(ck, disp, keys, n, disk, "subsumed_by_policy",
+                         note=f"override==policy ({prule}); override basis: "
+                              f"{str(ov.get('basis', ''))[:60]}")
+                else:
+                    emit(ck, disp, keys, n, disk, "override_owned",
+                         note=f"override {ost}; policy={'-'}{prule or ''}")
+                continue
+            if pstat:
+                if disk == pstat:
+                    emit(ck, disp, keys, n, disk, "policy_match",
+                         note=f"{prule} (guard-carried, now policy-explained)")
+                elif disk in ("", "EMERGING"):
+                    emit(ck, disp, keys, n, disk, "policy_promote", note=prule)
+                else:  # disk ROBUST > policy VERIFIED
+                    emit(ck, disp, keys, n, disk, "guard_carried",
+                         note=f"disk {disk} > policy {pstat} ({prule})")
+                continue
+            base = ladder_status(n)
+            if disk == "":
+                emit(ck, disp, keys, n, disk, "statusless",
+                     note="no status on disk; S4 stamping path owns the fill")
+            elif disk == base:
+                emit(ck, disp, keys, n, disk, "match")
+            elif disk in ("VERIFIED", "ROBUST") and base == "EMERGING":
+                emit(ck, disp, keys, n, disk, "guard_carried",
+                     note="above ladder without override or policy")
+            elif disk == "EMERGING" and base == "VERIFIED":
+                emit(ck, disp, keys, n, disk, "ladder_promote",
+                     note="ladder says promote (3+ sources)")
+            elif disk == "ROBUST" and base == "VERIFIED":
+                emit(ck, disp, keys, n, disk, "guard_carried",
+                     note="ROBUST needs cross-subdomain evidence (not derivable)")
+            else:
+                emit(ck, disp, keys, n, disk, "other",
+                     note=f"disk={disk or '(none)'} base={base}")
+        if ck == "introduction":
+            for m, mods in (doc.get("evidence") or {}).items():
+                if not isinstance(mods, dict):
+                    continue
+                for e, ed in mods.items():
+                    if not isinstance(ed, dict):
+                        continue
+                    pc, lp = ed.get("paper_count"), len(ed.get("papers") or [])
+                    if pc is not None and int(pc) != lp:
+                        paper_count_gaps.append({
+                            "path": f"evidence.{m}.{e}",
+                            "paper_count": pc, "len_papers": lp})
+
+    # replay regression assertion: no replay citekey may fire any policy rule
+    replay_dir = (Path.home() / ".claude" / "distill-work" / "rebuild_views"
+                  / "replay")
+    replay_fail = []
+    replay_n = 0
+    if replay_dir.is_dir():
+        for f in sorted(replay_dir.glob("replay_plan.*.yaml")):
+            parts = f.stem.split(".")
+            if len(parts) < 3:      # aggregate replay_plan.<section>.yaml
+                continue
+            ck_ = parts[1]
+            citekey = ".".join(parts[2:])
+            if ck_ not in ("introduction", "theory", "methods", "results"):
+                continue
+            replay_n += 1
+            pstat, prule = policy_status([citekey], 1, policy)
+            if pstat is not None:
+                replay_fail.append({"file": f.name, "fires": prule})
+
+    report = {
+        "generated": datetime.now().isoformat(timespec="seconds"),
+        "tool": "rebuild_views.py --policy-check (C item S2)",
+        "policy": str(POLICY_PATH if policy_path is None else policy_path),
+        "per_corpus": {k: dict(v) for k, v in per_corpus.items()},
+        "totals": dict(sum(per_corpus.values(), Counter())),
+        "paper_count_recompute_candidates": paper_count_gaps,
+        "replay_assertion": {"checked": replay_n, "failures": replay_fail},
+        "lists": {k: rows.get(k, []) for k in
+                  ("policy_promote", "ladder_promote", "statusless",
+                   "subsumed_by_policy", "override_owned", "guard_carried",
+                   "other")},
+    }
+    out = hub / "policy_check_report.yaml"
+    out.write_text(yaml.safe_dump(report, allow_unicode=True, sort_keys=False,
+                                  width=110), encoding="utf-8")
+
+    # adjudication package (呈审包): flips grouped by rule for the user gate
+    lines = [
+        "# S2 呈审包：status 策略切换裁决单（C 项）",
+        "",
+        f"生成：{report['generated']}　工具：rebuild_views --policy-check　"
+        f"策略：{report['policy']}",
+        "",
+        "## 裁决项 A：策略翻转清单（S3 切换将兑现的存量欠账）",
+        "",
+        "这些都是既有裁定（作者单源 VERIFIED／召回域单源 VERIFIED／3 源梯）",
+        "覆盖之内、但批量翻转时代漏掉的条目。默认处置：随 S3 切换翻为 VERIFIED。",
+        "如需豁免个别条目，请在下方登记 override。",
+        "",
+    ]
+    by_rule: dict[str, list[dict]] = {}
+    for r in report["lists"]["policy_promote"]:
+        by_rule.setdefault(r["note"], []).append(r)
+    for rule, items in sorted(by_rule.items()):
+        lines.append(f"### {rule} — {len(items)} 条")
+        for reg in ("theory", "results", "methods", "introduction"):
+            sub = [r for r in items if r["registry"] == reg]
+            if not sub:
+                continue
+            lines.append(f"- {reg}: {len(sub)} 条，例："
+                         + "；".join(r["path"] for r in sub[:3])
+                         + ("…" if len(sub) > 3 else ""))
+    lines += ["", "## 裁决项 B：阶梯翻转（与策略无关的 3+ 源欠账）", ""]
+    for r in report["lists"]["ladder_promote"]:
+        lines.append(f"- {r['registry']}: {r['path']} (n={r['n_sources']})")
+    lines += ["", "## 裁决项 C：statusless 变体（S4 盖章路径补章）", ""]
+    for r in report["lists"]["statusless"]:
+        lines.append(f"- {r['registry']}: {r['path']}")
+    lines += [
+        "",
+        "## 无需裁决（信息项）",
+        "",
+        f"- overrides 归因：subsumed_by_policy={report['totals'].get('subsumed_by_policy', 0)}"
+        f"（与策略同值，留档不删）；override_owned={report['totals'].get('override_owned', 0)}"
+        f"（策略不覆盖的用户裁定，含全部 ROBUST）。",
+        f"- policy_match={report['totals'].get('policy_match', 0)}"
+        f"（守卫携带、策略落地后转为策略可解释，零行为变化）。",
+        f"- guard_carried={report['totals'].get('guard_carried', 0)}"
+        f"（无 override 无策略的高位携带，保持不变）。",
+        f"- intro paper_count 重算候选：{len(paper_count_gaps)} 条（无 → 该裁决项消解）。",
+        f"- replay 回归断言：{replay_n} 份 citekey 全部不命中策略（failures={len(replay_fail)}）。",
+        "",
+        "## 豁免登记（如需）",
+        "",
+        "```yaml",
+        "# status_overrides 追加（例）：",
+        "#   <registry 路径>:",
+        "#     status: EMERGING",
+        "#     basis: \"user 2026-09-13: 豁免 <理由>\"",
+        "```",
+        "",
+    ]
+    pkg = hub / "ADJUDICATION-PACKAGE.md"
+    pkg.write_text("\n".join(lines), encoding="utf-8")
+    if not quiet:
+        t = report["totals"]
+        print(f"policy-check report -> {out}")
+        print(f"  policy_promote={t.get('policy_promote', 0)} "
+              f"ladder_promote={t.get('ladder_promote', 0)} "
+              f"statusless={t.get('statusless', 0)} "
+              f"subsumed={t.get('subsumed_by_policy', 0)} "
+              f"override_owned={t.get('override_owned', 0)} "
+              f"guard_carried={t.get('guard_carried', 0)} "
+              f"match={t.get('match', 0)} "
+              f"policy_match={t.get('policy_match', 0)} "
+              f"other={t.get('other', 0)}")
+        print(f"  replay assertion: {replay_n} checked, {len(replay_fail)} failures")
+        print(f"  intro paper_count recompute candidates: {len(paper_count_gaps)}")
+        print(f"  adjudication package -> {pkg}")
+    return 1 if replay_fail else 0
+
+
+def run_policy_self_tests() -> int:
+    """C item S2 unit coverage: load/validate, regex edges, exclusions,
+    precedence inputs, fail-fast."""
+    fails: list[str] = []
+
+    def check(name, cond):
+        if not cond:
+            fails.append(name)
+        print(f"[{'PASS' if cond else 'FAIL'}] policy: {name}")
+
+    pol = load_policy()
+    check("default policy loads", pol.get("schema_version") == 1)
+    check("three author rules", len(pol["author_rules"]) == 3)
+    # 27 raw keys collapse to 25 case-insensitive members (Bendig/Kashmiri
+    # casing pairs merge; mayo POMS vs POM are genuinely distinct variants)
+    check("25 domain members (case-collapsed)", len(pol["_domain_members"]) == 25)
+    # digit-adjacency and case edges
+    pos = ["gulati1998", "gulati_higgins_2003", "Gulati_1998_SMJ",
+           "westphal_zajac_1998", "carpenter_westphal_2003", "POLLOCK_2015",
+           "paruchuri_pollock_kumar_2019_smj"]
+    neg = ["magulati2010", "zajac_1998", "ridge_aime_white_2013_smj",
+           "lu_et_al_2022_frenemies_corporate_advertising"]
+    for k in pos:
+        st, rule = policy_status([k], 1, pol)
+        check(f"author rule hits {k}", st == "VERIFIED" and rule)
+    for k in neg:
+        st, rule = policy_status([k], 1, pol)
+        check(f"no false hit {k}", st is None and rule is None)
+    # domain membership (journal suffix + case insensitivity)
+    st, rule = policy_status(["fang_et_al_2025_rival_recall_ad_spend (POM)"],
+                             1, pol)
+    check("domain member with journal suffix", st == "VERIFIED"
+          and rule == "domain_rule:recall_product_harm")
+    st, _ = policy_status(["MAO_Dong_Lee_2022_MSOM"], 1, pol)
+    check("domain member case-insensitive", st == "VERIFIED")
+    # author rule wins over domain (evaluation order)
+    st, rule = policy_status(["gulati_westphal_1999_cooperative_or_controlling"],
+                             1, pol)
+    check("author rule precedence", rule == "author_rule:gulati_favorite_scholar")
+    # auxiliary short-circuit beats everything
+    st, rule = policy_status(["gulati1998"], 1, pol, auxiliary=True)
+    check("auxiliary exclusion", st == "EMERGING"
+          and rule == "hard_exclusion:auxiliary_sources")
+    # n_sources gate: min_sources respected
+    st, _ = policy_status([], 0, pol)
+    check("zero sources no fire", st is None)
+    # fail-fast
+    try:
+        load_policy(path=__file__ + ".definitely-missing.yaml")
+        check("missing policy raises", False)
+    except PolicyError:
+        check("missing policy raises", True)
+    try:
+        load_policy(path=__file__)          # valid YAML, wrong shape
+        check("wrong-shape policy raises", False)
+    except PolicyError:
+        check("wrong-shape policy raises", True)
+    # source_tier lookup
+    check("auxiliary lookup true",
+          source_is_auxiliary({"source_papers": {"x": {"source_tier": "Auxiliary"}}}, "x"))
+    check("auxiliary lookup false", not source_is_auxiliary({}, "x"))
+    # status_cmp_check policy attribution
+    c = status_cmp_check("patterns.p1.status", "EMERGING", "VERIFIED", 1,
+                         doc={}, policy=pol, paper_keys=["gulati1998"])
+    check("cmp note attributes policy", c.note.startswith("policy promote:")
+          and "gulati" in c.note)
+    print(f"policy self-tests: {'ALL GREEN' if not fails else fails}")
+    return 0 if not fails else 1
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="Registry derived-view rebuilder")
     ap.add_argument("--check", action="store_true")
@@ -1393,10 +1828,19 @@ def main() -> int:
                          "reconciliation_report.yaml)")
     ap.add_argument("--quiet", action="store_true")
     ap.add_argument("--self-test", action="store_true")
+    ap.add_argument("--policy-check", action="store_true",
+                    help="C item S2: authoritative overrides⊕policy⊕ladder "
+                         "re-enumeration (read-only) + adjudication package")
+    ap.add_argument("--policy", default=None,
+                    help="status_policy.yaml path override (default: "
+                         "scripts/status_policy.yaml)")
     args = ap.parse_args()
 
     if args.self_test:
-        return run_self_tests()
+        rc = run_self_tests()
+        return rc + run_policy_self_tests()
+    if args.policy_check:
+        return run_policy_check(policy_path=args.policy, quiet=args.quiet)
     if args.apply:
         print("REFUSED: --apply requires S2 partition markers in the registries "
               "(S1 is read-only). Run --check instead.", file=sys.stderr)
