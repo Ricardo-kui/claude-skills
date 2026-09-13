@@ -380,6 +380,7 @@ establish temporal or causal order.
 **验证状态**: EMERGING
 **槽位**: R4
 
+<!-- wb:reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc:legacy_SEM-moderated-mediation_6 -->
 #### 验证状态说明
 
 EMERGING（单篇来源；仅作 `section_variant`）。适用于回归/path model/多层模型中的 moderated mediation，不要求估计器一定是 SEM。

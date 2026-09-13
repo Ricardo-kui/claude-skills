@@ -303,6 +303,13 @@ def resolve_all() -> dict:
         ur = next((u for u in user_rulings
                    if u.get("match", "").lower() in line_key), None)
         if ur:
+            if ur.get("abandon"):
+                rule = {"citation": g["citation"][:90],
+                        "ruling": "abandoned_craft",
+                        "note": "用户裁定放弃归源（写作技法类）",
+                        "n_blocks": len(g["blocks"]), "blocks": g["blocks"][:8]}
+                rulings.append(rule)
+                continue
             key = ur.get("key")
             rule = {"citation": g["citation"][:90], "surnames": cit["surnames"],
                     "year": cit["year"], "journal": cit["journal"],

@@ -214,7 +214,11 @@ def match_citation(cit: dict, uni: dict[str, dict]) -> list[str]:
                             or "etal" in t for t in info["tokens"]))
                 if not fused:
                     continue
-        if cit["journal"] and cit["journal"] not in info["tokens"]:
+        # journal gate: only rejects when the surname match is PARTIAL. A full
+        # surname hit tolerates abbreviation variants (os vs orsc = Organization
+        # Science; jmr vs jm editorial slips) — the author set is the identity.
+        if cit["journal"] and cit["journal"] not in info["tokens"] and \
+                cit["surnames"] and hit < len(cit["surnames"]):
             continue
         hits.append(key)
     return hits
