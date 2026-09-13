@@ -67,7 +67,12 @@ SECTION_PATTERNS = {
         r"research design", r"empirical (setting|context|strategy|model)",
         r"^identification\b", r"materials and methods", r"^methodology\b",
     ],
-    "results": [r"^results?\b", r"^findings?\b", r"^analys(e|i)s\b", r"empirical results"],
+    # `\bresults\b` catches mixed titles like Ball's "Empirical approach and
+    # results"; `^empirical analysis`/`^empirics`/`^cross-sectional variations`
+    # cover the MS/econ section-name family (Lu 2022 §4/§5 trap, 5th instance
+    # of the missed-results class as of 2026-09-13).
+    "results": [r"^results?\b", r"^findings?\b", r"^analys(e|i)s\b", r"\bresults\b",
+                r"^empirical analysis", r"^empirics\b", r"^cross-sectional variations"],
     "discussion": [r"^discussion\b", r"^conclusions?\b", r"discussion and conclusion",
                    r"discussion\b", r"^extensions?\b", r"^concluding"],
 }
@@ -486,7 +491,20 @@ def prior_traces(citekey: str, source_text: str) -> dict:
             flat = t.replace("_", "").replace("-", "")
             if any(v.replace("_", "").replace("-", "") in flat for v in variants):
                 out["registries"].append(reg)
-    pat = re.compile(r"wb:[A-Za-z0-9_\-]*" + re.escape(ck.split("_")[0]), re.I)
+    # Marker format is `<!-- wb:<paper>:<item> -->` — anchor at the paper:item
+    # colon. The old pattern (wb: + citekey first segment anywhere) matched
+    # "lu" INSIDE other papers' citekeys (fai**lu**re / inf**lu**ence /
+    # va**l**ue) and reported 74 bogus traces on the 2026-09-13 Lu run, which
+    # would have misrouted a first-time distill into gap-fill auto-write.
+    # Precision-over-recall ruling (2026-09-13): legacy short-key markers
+    # (e.g. `wb:gulati2005-adaptation-vertical:` for an underscore citekey)
+    # are NOT matched — a false NEGATIVE merely routes a re-distill through
+    # batch review (safe; story-card/registry checks still cover it), while a
+    # false POSITIVE silently skips gate ① (dangerous).
+    ck_variants = sorted({ck, ck.replace("_", "-"), ck.replace("_", "")},
+                         key=len, reverse=True)
+    pat = re.compile("wb:(?:" + "|".join(re.escape(v) for v in ck_variants) + "):",
+                     re.I)
     for cdir in ("write-introduction/corpus", "write-theory/corpus",
                  "write-methods/corpus", "write-results/corpus"):
         d = SKILLS_ROOT / cdir
@@ -495,6 +513,149 @@ def prior_traces(citekey: str, source_text: str) -> dict:
                 out["corpus_wb_markers"] += len(pat.findall(
                     f.read_text(encoding="utf-8", errors="ignore")))
     return out
+
+
+def parse_frontmatter(src: Path) -> dict:
+    """Light frontmatter extraction from the paper-import MD (title/Author/
+    Journal/Year/parser). YAML-first, regex fallback — L0 must not fail on
+    frontmatter quirks."""
+    try:
+        text = src.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return {}
+    m = re.match(r"\A---\s*\n(.*?)\n---\s*\n", text, re.S)
+    if not m:
+        return {}
+    block = m.group(1)
+    try:
+        import yaml  # PyYAML is a dependency of the corpus scripts already
+        data = yaml.safe_load(block)
+        if isinstance(data, dict):
+            return data
+    except Exception:
+        pass
+    out = {}
+    for key in ("title", "Journal", "journal", "Year", "year", "parser"):
+        km = re.search(rf"^{key}:\s*\"?([^\"\n]+)\"?\s*$", block, re.M | re.I)
+        if km:
+            out[key.lower()] = km.group(1).strip()
+    authors = re.findall(r"^\s*-\s+(.+)$", block, re.M)
+    if authors:
+        out["authors"] = [a.strip() for a in authors]
+    return out
+
+
+def scaffold_pdm_root(citekey: str, src: Path, manifest: dict,
+                      outdir: Path) -> Path:
+    """Create the PDM root yaml (`<citekey>.pdm.yaml`) next to the workdir.
+
+    The schema (pdm-schema.md) previously had to be hand-written by the main
+    loop on every run — 4th repetition during the 2026-09-13 Lu run. This
+    scaffolds the same skeleton deterministically from the L0 manifest +
+    source frontmatter. Create-if-missing only: an existing root is NEVER
+    touched (main loop owns the state record after creation; re-slice runs
+    keep their merged status/identity)."""
+    root = outdir.parent / f"{citekey}.pdm.yaml"
+    if root.is_file():
+        existing = root.read_text(encoding="utf-8", errors="replace")
+        st = re.search(r"^status:\s*(\S+)", existing, re.M)
+        print(f"PDM-ROOT: exists ({st.group(1) if st else 'unknown status'}) "
+              f"— left untouched: {root}")
+        return root
+    fm = parse_frontmatter(src)
+    title = fm.get("title") or ""
+    journal = fm.get("journal") or fm.get("Journal") or ""
+    authors = fm.get("authors") or fm.get("Author") or fm.get("Authors") or []
+    year = fm.get("year") or fm.get("Year")
+    ingestion = f"paper-import ({fm.get('parser') or 'parser-unrecorded'})"
+    slices = manifest["section_slices"]
+    slices_yaml = "\n".join(
+        f'    {b}: "{citekey}.pdm/sections/{b}.md"' for b in BUCKET_ORDER
+        if b in slices)
+    fp = manifest["distiller_fingerprint"]
+
+    def q(s: str) -> str:
+        # JSON string escapes are valid YAML double-quoted scalars
+        return json.dumps(s, ensure_ascii=False)
+
+    content = f"""# PDM root — auto-scaffolded by preprocess_l0.py (create-if-missing;
+# main loop owns this file afterwards: identity/status/writeback merges).
+pdm_version: 1.0
+paper_id: {q(citekey)}
+title: {q(title)}
+authors: {json.dumps([str(a) for a in authors], ensure_ascii=False)}
+year: {year if isinstance(year, int) else q(str(year)) if year else 'null'}
+journal: {q(journal)}
+
+source_provenance:
+  fulltext_md: {q(str(src))}
+  text_only_md: {q(f"{citekey}.pdm/fulltext.text-only.md")}
+  zotero_ref: ""
+  ingestion: {q(ingestion)}
+  structure_type: {q(manifest.get("structure_type", "unknown"))}
+  section_slices:
+{slices_yaml}
+
+status: manifest
+
+distill_track:
+  introduction:
+    skill: distill-introduction-exemplar
+    status: pending
+    section_json: "sections/introduction.json"
+    feedback: "feedback/introduction.feedback.yaml"
+    identity: {{gap_type: "", contribution_dimension: ""}}
+    writeback: {{target: "write-introduction/corpus/", gate: awaiting_confirm, items: []}}
+  theory:
+    skill: distill-theory-exemplar
+    status: pending
+    section_json: "sections/theory.json"
+    feedback: "feedback/theory.feedback.yaml"
+    identity: {{theory_building_type: ""}}
+    writeback: {{target: "write-theory/corpus/", gate: awaiting_confirm, items: []}}
+  methods:
+    skill: distill-methods-exemplar
+    status: pending
+    section_json: "sections/methods.json"
+    feedback: "feedback/methods.feedback.yaml"
+    identity: {{design_family: ""}}
+    writeback: {{target: "write-methods/corpus/", gate: awaiting_confirm, items: []}}
+  results:
+    skill: distill-results-exemplar
+    status: pending
+    section_json: "sections/results.json"
+    feedback: "feedback/results.feedback.yaml"
+    identity: {{estimator_family: ""}}
+    writeback: {{target: "write-results/corpus/", gate: awaiting_confirm, items: []}}
+
+cross_section_identity:
+  gap_type: ""
+  theory_building_type: ""
+  design_family: ""
+  estimator_family: ""
+  coherence: ""
+  flags: []
+
+story_track:
+  skill: distill-story-exemplar
+  status: pending
+  card_path: ""
+  validated: false
+  catalog_rebuilt: false
+  fed_flags: false
+
+feedback_ledger:
+  persisted: []
+  missing: []
+  note: ""
+
+distiller_fingerprint:
+  version: {q(fp["version"])}
+  files: {fp["files"]}
+"""
+    root.write_text(content, encoding="utf-8")
+    print(f"PDM-ROOT: scaffolded {root}")
+    return root
 
 
 def main() -> int:
@@ -704,6 +865,7 @@ def main() -> int:
     (outdir / "l0_manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"
     )
+    scaffold_pdm_root(citekey, src, manifest, outdir)
     print(json.dumps(manifest, ensure_ascii=False, indent=2))
     if manifest["sections_unknown"]:
         print(

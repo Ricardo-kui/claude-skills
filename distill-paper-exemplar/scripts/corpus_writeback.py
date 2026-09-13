@@ -200,6 +200,37 @@ def resolve_target(corpus_root: Path, item: dict, override: str | None) -> Path 
     return None
 
 
+def _merge_slots_covered(entry: str, slot_tag: str) -> str:
+    """Merge slot_tag into an entry's slots_covered, tolerating BOTH the flow
+    style (`slots_covered: [M8]`) and the block style (`slots_covered:` +
+    `- M8` item lines). The old flow-only rewrite replaced just the key line,
+    orphaning block items below it into invalid YAML (2026-09-13 Lu run,
+    自然实验-DiD: slots_covered: [M8] followed by stray `- M2/- M7/- M8`).
+    Output is always a comma-separated flow list — the legacy space-joined
+    form `[M2 M7 M8]` parsed as ONE string, a latent bug since inception."""
+    eol = "\r\n" if "\r\n" in entry else "\n"
+    lines = entry.split(eol)
+    item_re = re.compile(r"^(\s*)- (M\d+)\s*$")
+    for i, line in enumerate(lines):
+        km = re.match(r"^(\s*)slots_covered:.*$", line)
+        if not km:
+            continue
+        indent = km.group(1)
+        have = set(re.findall(r"M\d+", line))
+        j = i + 1
+        while j < len(lines):
+            im = item_re.match(lines[j])
+            if not im or im.group(1) != indent:
+                break
+            have.add(im.group(2))
+            j += 1
+        have.add(slot_tag)
+        merged = ", ".join(sorted(have, key=lambda s: int(s[1:])))
+        lines[i:j] = [f"{indent}slots_covered: [{merged}]"]
+        return eol.join(lines)
+    return entry
+
+
 def update_registry(registry: Path, stem: str, paper: str, journal: str,
                     gap: str, new_text: dict, slot_tag: str | None = None) -> str:
     """Surgical text edit of one entry. Returns status message."""
@@ -232,6 +263,15 @@ def update_registry(registry: Path, stem: str, paper: str, journal: str,
     # items are no-ops (accumulation fix would otherwise append duplicate
     # paper lines and double-bump the count — 2026-08-29 Anand run).
     if re.search(r"^\s*- %s \(" % re.escape(paper), entry, re.M):
+        # Paper already tracked, but this item may still introduce a NEW slot
+        # (2026-09-13 Lu run: items 2-9 carried M2/M7 tags that the early
+        # return silently dropped).
+        if slot_tag:
+            entry2 = _merge_slots_covered(entry, slot_tag)
+            if entry2 != entry:
+                new_text[str(registry)] = text[:start] + entry2 + text[end:]
+                return (f"REGISTRY: entry '{key}' already lists {paper} — "
+                        f"slots_covered+{slot_tag}")
         return f"REGISTRY: entry '{key}' already lists {paper} — no change"
     entry2 = entry.replace(f"paper_count: {count}", f"paper_count: {count + 1}", 1)
     # locate the papers: list and append after its last consecutive item
@@ -249,11 +289,7 @@ def update_registry(registry: Path, stem: str, paper: str, journal: str,
             f"paper_count: {count}",
             f"paper_count: {count + 1}{eol}{sub}papers:{eol}{sub}- {paper} ({journal})", 1)
         if slot_tag:
-            sc = re.search(r"^(\s*)slots_covered:.*$", entry2, re.M)
-            if sc:
-                have = re.findall(r"M\d+", sc.group(0))
-                merged = " ".join(sorted(set(have) | {slot_tag}))
-                entry2 = entry2[:sc.start()] + f"{sc.group(1)}slots_covered: [{merged}]" + entry2[sc.end():]
+            entry2 = _merge_slots_covered(entry2, slot_tag)
         new_text[str(registry)] = text[:start] + entry2 + text[end:]
         return (f"REGISTRY: {key} papers list created, paper_count {count}->{count + 1}, "
                 f"+{paper} ({journal})" + (f", slots_covered+{slot_tag}" if slot_tag else ""))
@@ -272,11 +308,7 @@ def update_registry(registry: Path, stem: str, paper: str, journal: str,
     lines2.insert(last + 1, f"{ind_item}- {paper} ({journal})")
     entry2 = "\n".join(lines2)
     if slot_tag:
-        sc = re.search(r"^(\s*)slots_covered:.*$", entry2, re.M)
-        if sc:
-            have = re.findall(r"M\d+", sc.group(0))
-            merged = " ".join(sorted(set(have) | {slot_tag}))
-            entry2 = entry2[:sc.start()] + f"{sc.group(1)}slots_covered: [{merged}]" + entry2[sc.end():]
+        entry2 = _merge_slots_covered(entry2, slot_tag)
     gm = re.search(r"^(\s+)%s: (\d+)$" % re.escape(gap), entry2, re.M)
     if gm:
         entry2 = (entry2[:gm.start()]

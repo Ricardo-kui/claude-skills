@@ -50,6 +50,10 @@ cache_read 是 fresh input 的 3.5 倍）。
   （_index / INDEX / _evidence_registry / routing 表）、论文切片——这些只在子代理里读。
 - 合并：每节完成后主循环把摘要中的 identity/band 写入 PDM 该节条目、更新 `status`；
   JSON 文件由子代理写入，主循环不代写。
+- **写回执行输出纪律（2026-09-13，Lu 跑）**：`corpus_writeback.py --apply` 每份 plan
+  只调用**一次**，输出 `tee <plan>.apply.log` 后再检查——两次调用（一数数一抓错）曾把
+  apply#1 的启动失败与 apply#2 的静默全量完成混成一个"计数 0 但盘面全对"的谜团；
+  成败判定以盘面 + verify_writeback 为准，不以输出计数为准。
 - 中断续跑：以 PDM 各节 `status` 为断点，只重发未完成节，不整链路重跑。
 
 ## JSON 修复路径（不重发原文，2026-09-12）
@@ -65,6 +69,11 @@ cache_read 是 fresh input 的 3.5 倍）。
 
 ## 节奏与限流
 
+- **发射金丝雀（2026-09-13，Lu 跑后固化）**：任一波次并行发射前，先发射一个微型探针
+  代理（prompt 仅"回复 OK 两字"）验证发射通道健康；探针失败（captcha verify failed /
+  Model request failed 等瞬态家族）→ 当天该篇全程串行，不烧大发射（Lu 跑：首波 4M 级
+  并行双败于发射层，浪费 ~25 分钟 + ~2M token + 一次用户体感故障；同日串行四连发零失败）。
+  探针成功则按 2+2 正常并行。
 - 默认 **2+2 波次并行**（2026-08-29 起，Fang 五连跑验证）：第一波 intro+theory
   （短切片）同时分发，完成后再发第二波 methods+results（长切片）。实测零限流，
   L1 总耗时 ~11 min（串行 ~25 min）。`--serial` 显式回退串行；**4 个全并行仍然禁止**

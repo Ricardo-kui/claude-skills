@@ -57,7 +57,10 @@ when_to_use: "用户给一篇完整论文要求整篇蒸馏/整篇学习时；�
    蒸馏路由到 `sections/introduction.md`（标注 `embedded: true`，由 intro 蒸馏按功能
    映射模块），**不再要求人工补切 theory**；`formal-model`（"Theoretical Model" 节）
    时 theory 蒸馏按模型类内容处理，不套假设发展模板；`classic-imrad` 为默认。
-   登记 frontmatter/citekey（Zotero 为元数据源）。创建 PDM 骨架，把 manifest 的
+   登记 frontmatter/citekey（Zotero 为元数据源）。创建 PDM 骨架（2026-09-13 起
+   preprocess_l0.py 自动生成 `<citekey>.pdm.yaml` 根骨架——frontmatter 元数据、
+   切片路径、`distiller_fingerprint` 一次落盘；已存在则不覆盖，主循环只做
+   identity/status 合并），把 manifest 的
    切片路径写入 `source_provenance.section_slices`，并把 `distiller_fingerprint`
    落入 PDM 根——已有旧 PDM 根时对比指纹，不一致则在 PDM `note` 注明旧条目按旧
    协议产出（供查漏补缺重蒸馏时判断）；`compression.savings_warning=true` 时在
@@ -77,6 +80,7 @@ when_to_use: "用户给一篇完整论文要求整篇蒸馏/整篇学习时；�
    此 flag，L4 不清理该归档。
 2. **L1 分节蒸馏分发（子代理）**。按用户范围（默认 4 节全跑）以 **2+2 波次并行**分发
    （第一波 intro+theory，完成后再发 methods+results；实测零限流；
+   发射前先跑金丝雀探针——见 `references/l1-subagent-protocol.md` 节奏与限流；
    `--serial` 回退串行，4 个全并行仍禁止）。分发机制与提示词模板见
    `references/l1-subagent-protocol.md`：Claude Code 用 `Task` 工具（general-purpose），
    Codex/Kimi Code 用各节 `agents/openai.yaml` 子代理，Cursor/Zcode 按其子代理机制。

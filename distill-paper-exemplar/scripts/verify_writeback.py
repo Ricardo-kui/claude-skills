@@ -184,6 +184,15 @@ def main() -> int:
         schema = corpus_schema(corpus_root)
         for item in plan.get("items", []):
             name = item["name"]
+            # SKIP-verdict items are REFUSED by the executor by design (dedup
+            # gate: the corpus already covers them) — they have block_text and
+            # a target but must never be applied, so V1/V2/V3b/residuals do
+            # not apply either. (2026-09-13 Lu run: the residual generator
+            # treated a refused SKIP as "body MISSING" and hinted a sync pass
+            # that would have violated the dedup gate.)
+            if (item.get("dedup") or {}).get("verdict", "") == "SKIP":
+                add("SKIP", "V1", f"{section}:{name} — dedup verdict SKIP; never applied")
+                continue
             block_text = item.get("block_text")
             target = cw.resolve_target(corpus_root, item,
                                        item.get("file_override"))
