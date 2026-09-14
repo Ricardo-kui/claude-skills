@@ -663,7 +663,7 @@ def _header(family: dict[str, str], nv: int, nt: int, note: str = "") -> list[st
     out = [
         f"# {family['slug']} — 二级骨架清单（{family['name']}）",
         "",
-        "> 本目录由脚本重建，手改会被覆盖；重建命令 = `python scripts/build_indices.py`（在 `write-methods/` 目录下）。",
+        "> 本目录由脚本重建，手改会被覆盖；重建命令 = `python scripts/build_indices.py`（路径基准：以本 skill 目录（SKILL.md 所在目录）为基准）。",
         "> **抽取规则（先定后抽）**：verbatim = 卡片 `**原始句锚点**` / `[原始句锚点]` / `- **原始句锚点**（…）` 内带引号/缩进的完整英文原句（有明确来源论文，逐字保留、含 `…` 不回填）+ `**原文锚定**`/`**原文锚点**`（含 `- **原文锚定**` 子弹式）下 `- \"...\"` 英文句（id 后缀 .a/.b）；模板 = `**骨架**` / `**模板**` / `**模板/骨架**` / `**结构**` / `[骨架]` 块、代码围栏或紧随裸英文段内带 `[槽位]` 的填槽骨架。",
         "> **citekey** 优先取卡片尾部 `<!-- wb:... -->` 标记，无则回退 `**来源论文**`/`**来源**`/裸 `来源：`/`- **出处**` 原文；EXTEND 子变体回退 `- **原文锚定**` 尾部 `（citekey, …）` 标注；皆无标 `未标注`（不编造）。**适配槽位** 取 `**槽位**`/`[适用槽位]` 字段内 M1–M10（含 M2.5）与 Q1–Q8（去重排序）；无字段或含 `M?` 标 `通用`。",
         "> **锚点** = `corpus/<文件名>#变体-<变体号>`（脚本自定义片段，指向 `### 变体 <N>` 标题；不编号/EXTEND 变体指向其真实 `### 变体：`/`#### 变体：` 标题；`--verify` 断言标题存在）。",
@@ -723,7 +723,7 @@ def render_sub_route(slug: str, name: str, groups: list[tuple[str, str, list[Ent
     out = [
         f"# {slug} — 二级骨架清单（{name}，按槽位拆分）",
         "",
-        "> 本目录由脚本重建，手改会被覆盖；重建命令 = `python scripts/build_indices.py`（在 `write-methods/` 目录下）。",
+        "> 本目录由脚本重建，手改会被覆盖；重建命令 = `python scripts/build_indices.py`（路径基准：以本 skill 目录（SKILL.md 所在目录）为基准）。",
         "> 本设计类型条目超 400 行，按 M/Q 槽位拆成子清单；先读本表定位槽位，再整份读入对应子清单。",
         "",
         "| 槽位 | 子清单 | verbatim | 模板 |",
@@ -742,7 +742,7 @@ def render_route(stats: list[tuple[dict[str, str], int, int, int, str]], nv_tota
     out = [
         "# write-methods 骨架索引路由（两级）",
         "",
-        "> **本目录由脚本重建，手改会被覆盖；重建命令 = `python scripts/build_indices.py`（在 `write-methods/` 目录下；`--check` 干跑、`--verify` 回源校验）。**",
+        "> **本目录由脚本重建，手改会被覆盖；重建命令 = `python scripts/build_indices.py`（路径基准：以本 skill 目录（SKILL.md 所在目录）为基准；`--check` 干跑、`--verify` 回源校验）。**",
         "> **两层结构**：本路由 + 每设计类型一份二级清单（或槽位拆分子清单）。先读「何时读它」定位设计类型，再整份读入对应二级清单。",
         "> **一级轴 = 设计类型**；**二级槽位维度 = M1–M10（含 M2.5）与 Q1–Q8（定性）**（见各二级清单「适配槽位」列）。",
         "> 状态列：`verbatim` = 逐字原句（无槽位、与源卡片逐字一致）；`模板` = 含 `[槽位]` 的填槽骨架。抽取规则全文见各二级清单头部。",
@@ -752,7 +752,7 @@ def render_route(stats: list[tuple[dict[str, str], int, int, int, str]], nv_tota
     ]
     for family, nvar, nv, nt, target in stats:
         out.append(
-            f"| [`{family['slug']}`]({target}) | `{family['file']}` | {nvar} | {family['trigger']} |")
+            f"| [`{family['slug']}`]({target}) | `corpus/{family['file']}` | {nvar} | {family['trigger']} |")
     out.append("")
     out.append(f"合计：{len(stats)} 设计类型 / {sum(s[1] for s in stats)} 编号变体 / verbatim {nv_total} 条 / 模板 {nt_total} 条。")
     if n_unnum or n_extend:

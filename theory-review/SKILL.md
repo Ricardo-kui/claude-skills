@@ -104,6 +104,10 @@ Step 2 查 why chain 的**形式**（完整/深度/断裂）；本步查论证�
 
 **完成判据**：每条假设过 why chain（形式）与 soundness 审查五项（可靠性）双查；Hypothesis Form 全行评分（含 Contestability 反命题测试）；最弱机制段唯一并附英文改写模板。
 
+### 语言层/契约承接
+
+PASS 输出按 `../_shared/pass-contract.md` 六字段产出，本文件不另定义字段。节别增量：**why-chain 是否兑现 central knot**（每条假设的机制链与故事 knot 对齐）。
+
 ## Output Format
 
 → 报告模板：`references/output-format.md`

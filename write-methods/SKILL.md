@@ -32,7 +32,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 
 先判定 `new_draft | revision | local_rewrite`。revision/local_rewrite 模式完整读取 `references/draft-revision-protocol.md`：在计划或改写前读取当前 Methods 正文与修订记录（需要判断章节归属时同时读取当前 Results），不得以旧稿或对话摘要代替现稿；从修订记录提取明确的不满意、删除/撤出裁定、禁用语、语态基准、事实纠正和旧建议作废声明作为 feedback；生成 `revision_constraints`（授权范围、保留/删除项、Methods–Results 边界、槽位归属、样本与估计对象、术语、语态、禁用模式、stale sources）。使用优先级：用户本轮裁定 > 匹配的 section/design-type 规则 > project 规则 > 当前核实事实 > skill 规则 > corpus 默认；标记 obsolete/stale 的 Theory 或旧稿不得约束输出。局部改写只改变授权段落，不得以修复措辞为由恢复已删除的变量、假设或分析。
 
-**完成判据**：当前文本、修订边界和 feedback rules 已锁定；无未说明的版本冲突。
+**完成判据（是/否）**：revision 模式是否已读取现稿正文与修订记录？`revision_constraints` 的 `authorized_scope/preserve/remove` 是否已填？未解决的版本冲突是否已列入 `unresolved_conflicts`（无未记录冲突）？
 
 ## Phase 0: 故事契约与可检验性门控
 
@@ -43,7 +43,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 - `preparing` 只输出设计需求清单；`blocking` 可输出带占位符的粗骨架；`refining` / `finishing` 要求 `story.status: confirmed`。
 - 局部变量定义、模型设定句或样本说明可使用 local-only bypass（标明未经跨章节验证，不更新 paper state）。详细映射格式见 `references/story-alignment.md`。
 
-**完成判据**：storyline→变量映射已构建（或显式回退）；门控阶段判定已记录。
+**完成判据（是/否）**：每条 storyline 是否已映射到构念、变量与模型/步骤（或已显式回退）？story gate 判定（preparing/blocking/refining/finishing）是否已记录？未兑现的 storyline 是否已列出所需设计修复？
 
 ## 输入接口
 
@@ -51,7 +51,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 2. **paper-state.yaml 自动消费（new draft 推荐）**：按 `--paper-state=<path>` → 当前目录 → 项目根目录查找；检测到后验证 canonical `story`，读取 `theory.constructs` 和 `theory.hypotheses`，自动生成 storyline–hypothesis–variable mapping。paper-state 与现稿冲突时标记冲突，不静默覆盖现稿。
 3. **write-theory 输出文本消费（回退）**：仅消费确认仍有效的 `假设列表` 与 `核心构念`；用户标记为 stale/obsolete 的 Theory 不得使用。
 
-**完成判据**：输入来源已确定（自动/回退）；假设-变量映射可用。
+**完成判据（是/否）**：输入来源是否已确定（paper-state 自动 / 现稿消费 / write-theory 回退）？假设-变量映射是否已生成？
 
 ## 槽位目录与加载（M1–M10）
 
@@ -74,13 +74,22 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 
 3. **设计类型变体（飞轮积累，勿漏读）**：确定 design type 后先查 `corpus/INDEX.md` 的「设计类型索引表」确认变体数；变体数 >0 → **必须加载 `corpus/[设计类型].md`**（先读顶部「变体速查表」——按槽位+验证状态定位候选（三档词表与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀；作者/召回域单源 VERIFIED 由 `distill-paper-exemplar/scripts/status_policy.yaml` 派生，非手工标注），再精读对应变体正文）。变体数 = 0 的类型仅用 slot 主骨架。
 
-**完成判据**：设计类型 + 槽位序列已定（含分支调整理由）；slot 与设计类型变体已加载。
+**完成判据（是/否）**：设计类型是否已确定？槽位序列是否已按 `references/design-branches.md` 定序并记录分支调整理由？slot 文件与设计类型变体是否已加载？
+
+## 段级大纲与借句表（outline → generation）
+
+槽位序列确定后，先建大纲、再建借句表，最后进入渲染。
+
+1. **大纲（outline）**：读 `references/outline-protocol.md`——在 `references/design-branches.md` 的「设计类型→槽位顺序」之上为每段填**来源列**（二级底本 id / `self-drafted` / `framing-exempt`）；程序性槽位豁免清单见该协议 §六。
+2. **借句表（generation）**：读 `references/generation-protocol.md`——G1 借句表（段 → 底本 id 清单）→ G2 渲染 → 完成判据；coverage = 有底本 id 的论证型槽位占比，豁免不进分母。
+
+**完成判据（是/否）**：大纲表每段来源列是否非空且取值合法？借句表是否已产出且每段底本 id 可定位到 `corpus/_skeleton/<设计类型>.md`？coverage 是否已计算？（详细判据以两份协议为准，本处不复制。）
 
 ## 即时范文学习对象（按需）
 
 完整 Methods 生成且 story gate 为 PASS/PROVISIONAL 时执行；单槽位、local_rewrite 或显式 `--exemplars=off` 跳过。共用协议（request 生成 / retrieve_exemplars.py / 四问推荐 / 无匹配明示 / 不写回项目文件）见 `../story-blueprints/v4/rhetoric-moves/_immediate-exemplar-protocol.md`——本节差异：`section="methods"`，读 v0.4-lite 卡的 `section_learning.methods` block；retrieval_signals 例：M2.5 model-free evidence、M8 识别策略辩护、M6 竞争性解释组织。
 
-**完成判据**：推荐已显示或已明确无匹配；推荐不改变设计诊断与 story 契约的权威地位。
+**完成判据（是/否）**：推荐是否已显示或已明确无匹配？推荐是否仅作修辞参照、未覆盖设计诊断与 story 契约？
 
 ## 渲染与措辞
 
@@ -105,7 +114,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 - **确定性语言扫描**：匹配的 active feedback 含 `prohibited_patterns` 时执行 `scripts/lint_methods_language.py <Methods路径> --project <项目名>`；默认在日期化修订记录或“生成后自检记录”前停止，避免将历史反例误报为正文。
 - **回归验证**：执行 `references/validation-protocol.md`；skill 结构变更后运行 `scripts/validate_write_methods.py`。
 
-**完成判据**：对齐检查 1/2 无未修复偏离；自检清单逐条全过；反模式零命中。
+**完成判据（是/否）**：对齐检查 1/2 是否有未修复偏离（无）？自检清单是否逐项勾选（是）？反模式 13 项是否有命中（无）？
 
 ## 输出合同
 
@@ -115,7 +124,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 
 ## 使用反馈闭环
 
-用户对 Methods 产出提出明确批评、事实纠正、章节边界调整、禁用表达、语态基准或旧建议作废声明时，读取 `references/feedback-protocol.md`（完整协议）；**先修正文稿，不以"已登记"代替改写**。双 registry 分工唯一源：`../story-blueprints/v4/rhetoric-moves/_feedback-registries.md`——本 skill 双轨全接：R1 经 `scripts/record_feedback.py` 将本轮批评及现稿修订记录中的明确裁定规范化为可执行规则（scope=`skill | project | section | design_type`，新裁定覆盖旧建议记 `supersedes`），下一次 revision 在生成前加载匹配的 active rules；R2 仅当批评确实指向某一设计类型变体时汇总聚合质量信号；项目规则不得污染其他论文。
+用户对 Methods 产出提出明确批评、事实纠正、章节边界调整、禁用表达、语态基准或旧建议作废声明时，读取 `references/feedback-protocol.md`（完整协议）；**先修正文稿，不以"已登记"代替改写**。双 registry 分工唯一源：`../story-blueprints/v4/rhetoric-moves/_feedback-registries.md`——本 skill 双轨全接：R1 经 `scripts/record_feedback.py` 将本轮批评及现稿修订记录中的明确裁定规范化为可执行规则（scope=`skill | project | section | design_type`，新裁定覆盖旧建议记 `supersedes`），下一次 revision 在生成前加载匹配的 active rules；R2 聚合质量信号的共享通道由 `../_shared/feedback/` 提供（另行接线）；当前变体级批评仍以 `references/feedback-registry.json` 中 `scope=design_type` 的记录承载，不跨 skill 汇总；项目规则不得污染其他论文。
 
 每次成文（含无批评的常规交付）另做**消耗登记**（best-effort，失败不阻塞交付）：`py ../distill-paper-exemplar/scripts/fitness_ledger.py log-consumption`（stdin JSON：`{"skill": "write-methods", "section": "methods", "project": "<项目>", "corpus_files": […], "variants": ["<!-- wb:citekey:item -->"], "blueprint_cards": […], "note": ""}`）——fitness 台账策展数据面；漏登可接受，不重登。
 

@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "source": "write-introduction/references/water-level-gate.md §三 元语言表（与水位门 meta_language 字段同源）",
+  "patterns": [
+    {
+      "id": "meta.estimand",
+      "pattern": "(?i)\\bestimands?\\b",
+      "hint": "论文语言：association / diagnostic test / the direction of the association"
+    },
+    {
+      "id": "meta.adjudication",
+      "pattern": "(?i)\\badjudicat[a-z]*\\b",
+      "hint": "论文语言：supplementary evidence / diagnostic evidence"
+    },
+    {
+      "id": "meta.locked",
+      "pattern": "(?i)\\blocked\\b(?![- ]in\\b)",
+      "hint": "论文语言：the scope we commit to（避开 locked-in effects 的正当用法）"
+    },
+    {
+      "id": "meta.contribution_boundary",
+      "pattern": "(?i)\\bcontribution boundaries?\\b",
+      "hint": "论文语言：the bounds of the claim"
+    },
+    {
+      "id": "meta.bounded_scope_conditions",
+      "pattern": "(?i)\\bbounded scope conditions?\\b",
+      "hint": "论文语言：scope conditions / conditions under which the relationship has more force"
+    }
+  ]
+}

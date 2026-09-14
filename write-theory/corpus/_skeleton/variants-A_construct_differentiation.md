@@ -1,8 +1,8 @@
-# variants-A_construct_differentiation — 骨架试点清单（① variants（变体/技巧块））
+# variants-A_construct_differentiation — 骨架清单（A（构念辨析型））
 
-> 本目录由脚本重建，手改会被覆盖；重建命令 = `python scripts/build_indices.py`（在 `write-theory/` 目录下）。
-> **统一 entry schema（7 字段，三套一致）**：`id` | `func`（段落功能位）| `citekey` | `status` | `kind`（verbatim/模板）| `text` | `anchor`。
-> **verbatim** = `**原文锚点**`/`**原文锚定**` 下引号内英文原句（逐字，含 `…` 不回填）；**模板** = `**骨架**`/`**模板**`/`**句式骨架**` 等后的代码围栏或 `>` 引用块（含 `[槽位]`）。
+> 本目录由脚本重建，手改会被覆盖；重建命令 = `python scripts/build_indices.py`（路径基准：以本 skill 目录（SKILL.md 所在目录）为基准）。
+> **统一 entry schema（7 字段）**：`id` | `func`（段落功能位）| `citekey` | `status` | `kind`（verbatim/模板）| `text` | `anchor`。
+> **verbatim** = `**原文锚点**`/`**原文锚定**` 下引号内英文原句（逐字，含 `…` 不回填）；**模板** = `**骨架**`/`**模板**`/`**句式**` 等后的代码围栏或 `>` 引用块（含 `[槽位]`）。
 > **citekey** 取 source_papers 首个 → wb 注释 → 来源字段，无则「未标注」；**status** 查 `_evidence_registry.yaml`（ROBUST>VERIFIED>EMERGING），未命中「未标注」。
 > **来源文件**：`corpus/variants/A_construct_differentiation.md`。
 

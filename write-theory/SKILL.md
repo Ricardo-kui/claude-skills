@@ -23,24 +23,25 @@ Full Theory generation requires a valid story contract. Theory is rising action:
 ## Workflow
 
 1. 诊断构建类型：读 `references/phase-1-diagnosis.md` + `corpus/meta/routing_table.md`。主 Gap = Incommensurability 时先读 `references/incommensurability-resolution-routes.md`（L0 稳定推理内核 + R1–R4），再把 A–G 视为候选架构（route 只给候选、不规定 H 数量/模型形式——边界唯一陈述见 `corpus/meta/routing_table.md`；低置信时保留 L0 并报告两个候选路线）。冲突定位由理论对象与预测分歧裁定；Makadok 维度只校验贡献方向。路由后查 `corpus/_index.md` 快速决策表（variant→文件名映射 + 应配 subprotocols/sentences）；推荐任何 pattern 前按「Resource loading」节查证据状态。
-   **完成判据**：变体已选；EMERGING 已标注。
-2. 用 `references/phase-2-architecture.md` 定构念顺序、机制深度、假设结构与叙事弧。
-   **完成判据**：构念顺序 + 机制深度已定。
+   **完成判据（是/否）**：变体族已选？EMERGING 已标单/双源？
+2. 用 `references/phase-2-architecture.md` 定构念顺序、机制深度、假设结构与叙事弧；再按 `references/outline-protocol.md` 产大纲表（段号/主导功能/承载信息/来源四列），每段来源列填 `_skeleton` 二级 id 或 `self-drafted`。
+   **完成判据（是/否）**：构念顺序已定？机制深度已定？大纲表四列齐全且每段来源非空可核？
 3. 假设推导（`references/phase-3-hypothesis-derivation.md`）：
    - 先执行 conditionality gate（稳定无条件效应是否有理论依据？），再按其语料调用清单（7 行 8 文件）通过完整 why-chain 推导每个假设；只 load 所选变体 `corpus/variants/[variant_filename]` 与必要的 sentence-pattern 文件；**D 型（过程理论）必须额外加载 `corpus/subprotocols/process_transition_operators.md`**（stage-boundary 与 feedback-transport 两个结构推理算子）。
+   - **先落借句表再渲染**：每段先按 `references/generation-protocol.md` G1 落借句表行（底本 id + 替换清单 + 保留节奏 + 出处核对），再渲染该段正文；底本 id 只取自 `corpus/_skeleton/` 22 子清单。
    - **语料优先改编与角色填位**：语料句式为改编底本（替换来源特异性内容、填充占位；无锚点旧变体按骨架生成），段落按论证角色序列组装（先骨架后句子，语料顺序≠段落顺序）——纪律与拼贴判据见 `../story-blueprints/v4/rhetoric-moves/_argument-grammar.md` + `_polish-protocol.md` §write-*；理论段骨架实现 = `corpus/subprotocols/paragraph_layout.md` 四段位。
    - **修辞表达**：机制双链（双链汇一）、调节元框架等理论动作的句子级执行 → `../story-blueprints/v4/rhetoric-moves/_index.md`（动作自动匹配草稿修辞功能，无需用户点名；如 mechanism-two-chain / moderator-meta-framework）；润色走其 `_polish-protocol.md` 流畅性门。
-   **完成判据**：每个假设有完整 why-chain + storyline_id；硬约束 #1–#16 逐条过。
+   **完成判据（是/否）**：借句表已先于正文渲染落定？每个假设有完整 why-chain + storyline_id？硬约束 #1–#16 逐条过？coverage 已计算且豁免口径已标注（`references/generation-protocol.md` G3）？
 4. 用 `references/phase-4-qc-alignment.md` 审计构念一致性、替代机制、假设可检验性、段落架构与跨节承诺；对每个 hypothesis/proposition 执行 argument graph（construct → premise → why-chain → boundary/level/time → prediction）：E 型 boundary state 为前置作用域节点，禁止出现 X → boundary state 的有向边；D 型逐阶段记录 current actor/action → transition condition → pre-next-stage marker → next actor/state → failed branch（细则见 `corpus/subprotocols/process_transition_operators.md`）。
-   **完成判据**：审计 1–4 无未修复项 + 4.3 对齐块已输出；E/D 型 argument graph 记录完整。
+   **完成判据（是/否）**：审计 1 无未修复项？审计 2 无未修复项？审计 3 无未修复项？审计 4 无未修复项？4.3 对齐块已输出？E/D 型 argument graph 记录完整？
 5. 产出骨架 + storyline 链接假设 + 段落功能图 + 证据缺口 + QC 结果 + `paper-state.yaml` theory 字段；格式按 `references/output-format.md`。
-   **完成判据**：输出合同全项（含 paper-state 片段、机制与条件性审计）。
+   **完成判据（是/否）**：输出合同全项已交付（含 paper-state 片段、机制与条件性审计）？
 
 ## 即时范文学习对象（按需）
 
 完整 Theory 生成且 story gate 为 PASS/PROVISIONAL 时执行；单假设、local-only 或显式 `--exemplars=off` 跳过。共用协议（request 生成 / retrieve_exemplars.py / 四问推荐 / 无匹配明示 / 不写回项目文件）见 `../story-blueprints/v4/rhetoric-moves/_immediate-exemplar-protocol.md`——本节差异：`section="theory"`，读 v0.4-lite 卡的 `section_learning.theory` block；retrieval_signals 例：why-chain 形状、构念辨析、假设树组织、调节元框架。
 
-**完成判据**：推荐已显示或已明确无匹配；推荐不改变构建类型诊断与 story 契约的权威地位。
+**完成判据（是/否）**：推荐已显示或已明确无匹配？推荐未改变构建类型诊断与 story 契约的权威地位？
 
 ## Selection rules
 

@@ -52,7 +52,7 @@ when_to_use: "用户提供现稿与修订记录/审稿意见、要求深度修�
 2. **paper-state.yaml 自动消费**：按 `--paper-state=<path>` → 当前目录 → 项目根目录查找；读取 `methods.*`、仍有效的 `theory.hypotheses` 与既有 `results.*`，完成估计器、假设—结果和 story 映射。paper-state 与现稿冲突时标记冲突，不静默覆盖现稿。
 3. **章节与证据消费**：当前 Methods 决定术语、样本和估计口径；实际表格/日志决定数字与 verdict；Theory 只在确认未过期时提供假设预测。
 
-**完成判据**：输入来源已确定；假设-结果映射可用。
+**完成判据（是/否）**：输入来源是否已确定（当前文本消费 / paper-state 自动 / 章节与证据消费）？假设-结果映射是否已生成？
 
 ## 叙事槽位目录与加载（R1–R9）
 
@@ -83,7 +83,16 @@ R1–R9 是证据功能，不是强制章节顺序。按需加载 slot 骨架（
 
 完整 Results 生成且 story gate 为 PASS/PROVISIONAL（或 evidence intake 模式已声明）时执行；单系数解释、表格导航、local-only 或显式 `--exemplars=off` 跳过。共用协议（request 生成 / retrieve_exemplars.py / 四问推荐 / 无匹配明示 / 不写回项目文件）见 `../story-blueprints/v4/rhetoric-moves/_immediate-exemplar-protocol.md`——本节差异：`section="results"`，读 v0.4-lite 卡的 `section_learning.results` block；retrieval_signals 例：四拍节奏、threat 组织的稳健性段、mixed/null 的诚实披露、claim 层级校准。
 
-**完成判据**：推荐已显示或已明确无匹配；推荐不改变证据判决与 story 契约的权威地位。
+**完成判据（是/否）**：推荐是否已显示或已明确无匹配？推荐是否仅作修辞参照、未覆盖证据判决与 story 契约？
+
+## 段级大纲与借句表（outline → generation）
+
+结果类型与槽位序列确定后，先建大纲、再建借句表，最后进入渲染。
+
+1. **大纲（outline）**：读 `references/outline-protocol.md`——在 R1–R9 顺序与 `references/hypothesis-fulfillment-map.md` 之上为每段填**来源列**（二级底本 id / `self-drafted` / `framing-exempt`）；程序性内容豁免清单见该协议 §六。
+2. **借句表（generation）**：读 `references/generation-protocol.md`——G1 借句表（段 → 底本 id 清单）→ G2 渲染 → 完成判据；coverage = 有底本 id 的论证型槽位占比，豁免不进分母。
+
+**完成判据（是/否）**：大纲表每段来源列是否非空且取值合法？借句表是否已产出且每段底本 id 可定位到 `corpus/_skeleton/<模型族>.md`？coverage 是否已计算？（详细判据以两份协议为准，本处不复制。）
 
 ## 渲染与措辞
 
@@ -99,7 +108,7 @@ R1–R9 是证据功能，不是强制章节顺序。按需加载 slot 骨架（
 8. **因果语言强制词汇表**（按设计家族，无越级）：动词档位唯一源 `../write-methods/corpus/micro-templates/causal-hedging.md`——面板 OLS→"associated with"（禁 causes/leads to）；DiD→平行趋势支持后 "effect of"；IV→识别 preview 后 "effect"、避免 "causes"；非线性→边际效应/概率转述；生存分析→"changes the hazard of"；实验→"caused"。与第 9 条互补：本条按设计家族管动词，claim-calibration 按主张层级管范围。
 9. **主张层级校准**（claim level ≤ evidence level）：写 R3 claim 句 / R5 经济显著性 / Discussion 面向的 implication 句前读 `references/claim-calibration.md`——7 级 claim ladder（L1 观察 → L2 关联 → L3 预测 → L4 因果效应 → L5 机制 → L6 普适 → L7 应用）、过度声明动词表与强主张四件套句式（`Strong claim + scope + evidence basis + remaining uncertainty`）。与第 8 条互补：第 8 条按设计家族管动词，本条按主张层级管范围与强度；设计只支持 L2 就不得写 L5/L6 语句。
 
-**完成判据**：兑现映射全部检查点（6 项）全过；因果语言与估计器匹配；四项证据功能完整且包含幅度；claim 层级未越过证据层级（claim-calibration L 层匹配）。
+**完成判据（是/否）**：兑现映射 6 项检查点是否逐项通过？四项证据功能是否齐全（方向→显著性→幅度→支持判断）？claim 层级是否未越过证据层级？借句表是否已按 `generation-protocol.md` 产出且 coverage 已计算？
 
 ## 生成后检查
 
@@ -108,7 +117,7 @@ R1–R9 是证据功能，不是强制章节顺序。按需加载 slot 骨架（
 - **确定性语言扫描**：匹配的 active feedback 含 `prohibited_patterns` 时，执行 `scripts/lint_results_language.py <Results路径> --project <项目名>`；默认只扫描正文，并在“生成后自检记录”前停止，避免把修订日志中的反例误判为正文。
 - **回归验证**：执行 `references/validation-protocol.md`；已有草稿的独立审查交给 `/results-review <Results路径>`，范文蒸馏命令不承担草稿验证。
 
-**完成判据**：自检清单逐条全过；反模式零命中。
+**完成判据（是/否）**：自检清单是否逐项勾选（是）？反模式是否有命中（无）？
 
 ## 输出合同
 

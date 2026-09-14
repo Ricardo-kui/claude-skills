@@ -89,11 +89,11 @@ when_to_use: "写、规划、重写或改稿引言时使用（含不够像范文
 2. 反模式自查：`references/anti-patterns.md` §1 高频 5 项逐条扫描（§2 长尾 16 项由 `intro-review` Step 2 承接，投稿前跑一次兜底）+ 拒稿信号 `references/rejection-signals.md`。
 3. 期刊适配：用户提目标期刊时读 `references/journal-fit.md`（期刊差异优先于通用规则）。
 4. 措辞润色（默认执行；blocking 只出骨架时跳过）：按句位查语料库——Hook/human face → `storytelling/prose-craft-checklist.md` §0/§5；批判措辞 → `phrasebank/critique-phrases.md`；hedging → `phrasebank/hedging-strength.md`；过渡 → `transitions/` + `micro-templates/transition-signals.md`；段内/段际 key line（三分法与连接式双要素句法）→ `micro-templates/key-line-patterns.md`；中心论点定位 → `micro-templates/thesis-models.md`；五病 → `../pollock-qc/references/prose-pathology.md`；人设 → `storytelling/authorial-persona.md`；因果声明 → `../write-methods/corpus/micro-templates/causal-hedging.md`。纪律：不改骨架占位；共用纪律见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-*。
-5. **水位门（生成后必过，与质量门并列）**：读 `references/water-level-gate.md`（姿态 / 预算 / 元语言 / 底本覆盖率与重写门）；审查输出字段与举证要求以 `references/pass-contract.md` 为准。质量门与水位门两层都 PASS 才算通过。
+5. **水位门（生成后必过，与质量门并列）**：读 `references/water-level-gate.md`（姿态 / 预算 / 元语言 / 底本覆盖率与重写门）；审查输出字段与举证要求以 `../_shared/pass-contract.md` 为准。质量门与水位门两层都 PASS 才算通过。
 
 6. 消耗登记（best-effort，失败不阻塞交付）：成文后调 `py ../distill-paper-exemplar/scripts/fitness_ledger.py log-consumption`（stdin JSON：`{"skill": "write-introduction", "section": "introduction", "project": "<项目>", "corpus_files": ["<实际读过的 corpus 文件>"], "variants": ["<!-- wb:citekey:item -->"], "blueprint_cards": ["<实际采用的蓝图卡 id>"], "note": ""}`）——fitness 台账策展数据面（检索命中率、从未被检索变体），漏登可接受，不重登。
 
-**完成判据**：质量门（`references/quality-gates.md`）全过；水位门按 `references/pass-contract.md` 产出且满足其完成判据；底本覆盖率已计算并触发重写/修补分支；无未修复的 🔴/🟡 标记。
+**完成判据**：质量门（`references/quality-gates.md`）全过；水位门按 `../_shared/pass-contract.md` 产出且满足其完成判据；底本覆盖率已计算并触发重写/修补分支；无未修复的 🔴/🟡 标记。
 
 ## 输出合同
 
@@ -104,6 +104,8 @@ when_to_use: "写、规划、重写或改稿引言时使用（含不够像范文
 ## 纪律
 
 - 原文锚定与润色纪律：见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律。
-- 批评登记（现状如实陈述）：本 skill 的语料精炼通道（`corpus/_evidence_registry.yaml` 的 `critique.per_file`）当前为零数据（该键为 null）；可执行规则通道在 skills 树内不存在。唯一可行的登记路径是 `corpus/_skill_design_feedback.yaml`——每条 defect 以 `channel` 字段路由到目标文件：`corpus_variant`（目标是一张语料卡缺变体/模板）、`rule`（目标是某个 reference 文件里的规则句）、`obsolete`（所指规则已不存在或被取代）。不再宣称不存在的通道。
+- 批评登记（现状如实陈述）：本 skill 现有两条登记通道，分工如下。
+  - 可执行规则通道（修订规则 + 确定性语言锁，现已存在）：`scripts/lint_introduction_language.py` 用共享引擎 `../_shared/feedback/lint_language.py` + 本词表 `references/prohibited_patterns.json`（元语言词表，与 `references/water-level-gate.md` §三同源）扫描正文；`scripts/record_feedback.py`（共享引擎 `../_shared/feedback/record_feedback.py`）把带 fingerprint 去重 + supersedes 的修订规则写入 `references/feedback-registry.json`（结构随 `../_shared/feedback/schema.json` 1.1.0，records 初始为空——如实状态，不为凑数预填）。
+  - 语料变体登记路径：`corpus/_skill_design_feedback.yaml` 仍是语料缺变体/模板与 reference 规则句缺陷的登记路径——每条 defect 以 `channel` 字段路由：`corpus_variant`（目标是一张语料卡缺变体/模板）、`rule`（目标是某个 reference 文件里的规则句）、`obsolete`（所指规则已不存在或被取代）。语料变体需求不写入 feedback-registry.json。
 - 提升路径（promotion）：同一 defect 在 ≥2 篇论文复现且带 regression_case 时，提升为对应 reference 文件里的规则句（不新建文件），并回写 `rule_locator` 与 `status: VERIFIED`；单篇未复现者留在 `_skill_design_feedback.yaml` 账本并记录其 `channel`。
 - 注册表缺失时回退 `_routing_tables.yaml` 静态推荐，不中断输出；但**必须在输出末尾附加降级声明**："⚠ registry 缺失，语料验证状态（EMERGING/VERIFIED/ROBUST）未经核验，本次按静态路由表推荐"——回退时显式声明。

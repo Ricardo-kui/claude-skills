@@ -7,8 +7,10 @@
 **通用填空段落**：
 
 ```text
-To address concerns about [threat], we [design feature/test]. This check assesses whether [assumption] is plausible. We report the results in [Results/Table/Appendix]. Although [assumption] cannot be directly tested, the evidence below helps reduce concerns about [threat].
+To address [specific threat]—that [concrete failure mode] would bias [estimate]—we [design feature/test]. This check assesses whether [assumption] is plausible. We report the results in [Results/Table/Appendix]. Name the specific threat before mitigation: [evidence] reduces the concern that [specific threat] biases [estimate] because [concrete reason].
 ```
+
+> **M8 语态纪律（对齐 `draft-revision-protocol.md` §5）**：先点名具体威胁（何种偏误、作用于哪个估计量）再给缓解句；禁止无具体威胁的 "Although [assumption] cannot be directly tested… helps reduce concerns" 免责骨架。
 
 **自然实验/DiD 变体**：
 ```text

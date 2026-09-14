@@ -508,7 +508,7 @@ def _header(family: dict[str, str], nv: int, nt: int, note: str = "") -> list[st
     out = [
         f"# {family['slug']} — 二级骨架清单（{family['name']}）",
         "",
-        "> 本目录由脚本重建，手改会被覆盖；重建命令 = `python scripts/build_indices.py`（在 `write-results/` 目录下）。",
+        "> 本目录由脚本重建，手改会被覆盖；重建命令 = `python scripts/build_indices.py`（路径基准：以本 skill 目录（SKILL.md 所在目录）为基准）。",
         "> **抽取规则（先定后抽）**：verbatim = 卡片 `**原始句锚点**` 内带引号/缩进的完整英文原句（有明确来源论文，逐字保留、含 `…` 不回填）+ `#### 原文锚定` 下 `- \"...\"` 英文句（id 后缀 .a/.b）；模板 = 卡片 `**骨架**` / `**骨架/框架**` 块或代码围栏内带 `[槽位]` 的填槽骨架。",
         "> **citekey** 优先取卡片尾部 `<!-- wb:... -->` 标记，无则回退 `**来源论文**` 原文，两者皆无标 `未标注`（不编造）。**适配槽位** 取 `**槽位**:` 字段内 R1–R9（去重排序）；无字段时回退文件内「槽位分布」表；仍判断不了或含 F 槽位标 `通用`。",
         "> **锚点** = `corpus/<文件名>#变体-<变体号>`（脚本自定义片段，指向 `### 变体 <N>` 标题；`--verify` 断言该标题存在）。",
@@ -573,7 +573,7 @@ def render_sub_route(slug: str, name: str, groups: list[tuple[str, str, list[Ent
     out = [
         f"# {slug} — 二级骨架清单（{name}，按槽位拆分）",
         "",
-        "> 本目录由脚本重建，手改会被覆盖；重建命令 = `python scripts/build_indices.py`（在 `write-results/` 目录下）。",
+        "> 本目录由脚本重建，手改会被覆盖；重建命令 = `python scripts/build_indices.py`（路径基准：以本 skill 目录（SKILL.md 所在目录）为基准）。",
         "> 本模型族条目超 400 行，按 R1–R9 槽位拆成子清单；先读本表定位槽位，再整份读入对应子清单。",
         "",
         "| 槽位 | 子清单 | verbatim | 模板 |",
@@ -592,7 +592,7 @@ def render_route(stats: list[tuple[dict[str, str], int, int, int, str]], nv_tota
     out = [
         "# write-results 骨架索引路由（两级）",
         "",
-        "> **本目录由脚本重建，手改会被覆盖；重建命令 = `python scripts/build_indices.py`（在 `write-results/` 目录下；`--check` 干跑、`--verify` 回源校验）。**",
+        "> **本目录由脚本重建，手改会被覆盖；重建命令 = `python scripts/build_indices.py`（路径基准：以本 skill 目录（SKILL.md 所在目录）为基准；`--check` 干跑、`--verify` 回源校验）。**",
         "> **两层结构**：本路由 + 每模型族一份二级清单（或槽位拆分子清单）。先读「何时读它」定位模型族，再整份读入对应二级清单。",
         "> **一级轴 = 模型族**；**二级槽位维度 = R1–R9**（见各二级清单「适配槽位」列）。",
         "> 状态列：`verbatim` = 逐字原句（无槽位、与源卡片逐字一致）；`模板` = 含 `[槽位]` 的填槽骨架。抽取规则全文见各二级清单头部。",
@@ -602,7 +602,7 @@ def render_route(stats: list[tuple[dict[str, str], int, int, int, str]], nv_tota
     ]
     for family, nvar, nv, nt, target in stats:
         out.append(
-            f"| [`{family['slug']}`]({target}) | `{family['file']}` | {nvar} | {family['trigger']} |")
+            f"| [`{family['slug']}`]({target}) | `corpus/{family['file']}` | {nvar} | {family['trigger']} |")
     out.append("")
     out.append(f"合计：{len(stats)} 模型族 / verbatim {nv_total} 条 / 模板 {nt_total} 条。")
     out.append("")

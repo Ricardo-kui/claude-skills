@@ -1,54 +1,25 @@
 #!/usr/bin/env python3
-"""write-theory 骨架索引解析试点（Batch 2）：三套块结构统一 schema 验证。
+"""write-theory 骨架索引全量建（Batch 2）：统一 entry schema 覆盖三来源全部可抽文件。
 
 范围
 ----
-只解析 3 个样本文件（每套块结构各一），验证 variants / subprotocols / sentences
-三套块结构能否统一为一种 entry schema，验证通过后即停，不全量。
+- variants/ 全部 7 族（A–G）：A/B/E/G 走分支①（`### 变体 N`/`### 技巧 N` 块）；
+  C/D/F 走分支④（段落功能地图 + `### 技巧 N`/命名小节切块，fenced [槽位] 模板）。
+- subprotocols/ 7 个 pattern 库：`## Pattern:`/`## Framework:` 顶层块 + `### 变体/子变体/
+  子型/模式/Micro-Move/框架/句式` 子块；pattern_id 注释按「就近 + DEPRECATED 过滤 +
+  同 token wb 就近回绑 + legacy_ 前缀过滤 + 跳过含 band/wb-meta 的 gap 块」绑定。
+- sentences/ 全部 8 文件：变体/句式块 + 决策矩阵内嵌模板句。
 
-- 分支① variants：corpus/variants/A_construct_differentiation.md
-- 分支② subprotocols：corpus/subprotocols/hypothesis_derivation_patterns.md
-- 分支③ sentences：corpus/sentences/hypothesis_forms.md
-
-统一 entry schema（7 字段，三套字段名完全一致）
+统一 entry schema（7 字段，三来源字段名完全一致）
 ------------------------------------------------
-  id       pattern_id（有则用）/ 变体名 / 句式名（verbatim 段加 .a/.b，模板加 .t1/.t2）
-  func     段落功能位：variants=P 表 token；subprotocols=微观动作序列/排列模式；
+  id       pattern_id（有则用）/ 变体名 / 句式名 / 技巧号（verbatim 加 .a/.b，模板加 .t1/.t2）
+  func     段落功能位：variants=P 表 token/小节标题；subprotocols=微观动作序列/排列模式；
            sentences=句位/论证角色
   citekey  source_papers 首个 citekey → wb 注释 → 来源字段 →「未标注」（不编造）
   status   ROBUST/VERIFIED/EMERGING（查 _evidence_registry.yaml）→「未标注」
   kind     verbatim | 模板
   text     verbatim 原文锚点（逐字）或填槽模板（含 [槽位]）
   anchor   corpus/<文件名>#<锚点>（变体号 / pattern_id / 标题）
-
-抽取规则（先定后抽）
---------------------
-verbatim  = ``**原文锚点**``/``**原文锚定**`` 下的引号内英文原句，逐字保留（含 ``…``
-            省略号，不回填）；一行多引号拆成 .a/.b 多条，每条独立回源。
-模板      = ``**骨架**``/``**模板**``/``**句式骨架**``/``**模板/骨架**``/``**结构**``
-            后的代码围栏或 ``>`` 引用块（含 ``[槽位]`` 占位符的填槽骨架）。
-锚点      = variants/subprotocols 指向真实标题（``### 变体 N`` / ``## Pattern: X``）；
-            sentences 指向 ``### 标题``；``--verify`` 断言标题行存在。
-citekey   = 优先 ``<!-- pattern_id: ...; source_papers:[...] -->`` 注释内的
-            source_papers 首个值；无则 ``<!-- wb:<citekey>:... -->``；再无则
-            ``**来源**`` 字段的 citekey 形 token；皆无标「未标注」。
-status    = 查 _evidence_registry.yaml 的 patterns:/source_papers: 两节，
-            按 pattern_id（含 sentence_/s_ 前缀变体）与 wb 注释 pattern token 匹配；
-            命中即取 ROBUST>VERIFIED>EMERGING，未命中标「未标注」。
-
-决策矩阵内嵌模板句（分支③ 特有）
---------------------------------
-sentences 文件里带「模板/模板句」列的表，单元格内 ``"..."`` 引号且含 ``[槽位]``
-的句子按模板收录（func=该节标题，citekey=未标注——它们是来源无关的形式模板）；
-引号边界模糊（无 [槽位] 或无引号）的进 _unparsed。
-
-Output
-------
-- corpus/_skeleton/_index.md   三套试点路由（<= 60 行）
-- corpus/_skeleton/variants-A_construct_differentiation.md
-- corpus/_skeleton/subprotocols-hypothesis_derivation_patterns.md
-- corpus/_skeleton/sentences-hypothesis_forms.md
-- corpus/_skeleton/_unparsed.md
 
 CLI
 ---
@@ -61,6 +32,7 @@ CLI
 from __future__ import annotations
 
 import argparse
+import hashlib
 import re
 import sys
 from dataclasses import dataclass, field
@@ -71,11 +43,43 @@ SKILL_ROOT = SCRIPT_DIR.parent
 CORPUS = SKILL_ROOT / "corpus"
 SKELETON = CORPUS / "_skeleton"
 
-# 三个样本文件（每套结构各一；相对 corpus/ 的路径）
-SAMPLES = {
-    "variants": "variants/A_construct_differentiation.md",
-    "subprotocols": "subprotocols/hypothesis_derivation_patterns.md",
-    "sentences": "sentences/hypothesis_forms.md",
+# ---------------------------------------------------------------- 文件清单 ----
+
+# variants：族 -> (相对路径, 分支)  分支①=变体块；分支④=段落功能地图+小节
+VARIANT_FILES: dict[str, tuple[str, str]] = {
+    "A": ("variants/A_construct_differentiation.md", "branch1"),
+    "B": ("variants/B_mechanism_elaboration.md", "branch1"),
+    "C": ("variants/C_hypothesis_tree.md", "branch4"),
+    "D": ("variants/D_process_theory.md", "branch4"),
+    "E": ("variants/E_moderation.md", "branch1"),
+    "F": ("variants/F_competing_hypotheses.md", "branch4"),
+    "G": ("variants/G_dialectical_opposition.md", "branch1"),
+}
+
+SUBPROTOCOL_FILES: list[str] = [
+    "subprotocols/hypothesis_derivation_patterns.md",
+    "subprotocols/argumentation_patterns.md",
+    "subprotocols/hypothesis_organization_patterns.md",
+    "subprotocols/evidence_patterns.md",
+    "subprotocols/construct_differentiation_patterns.md",
+    "subprotocols/moderator_selection_frameworks.md",
+    "subprotocols/bilateral_argumentation_templates.md",
+]
+
+SENTENCE_FILES: list[str] = [
+    "sentences/acknowledgment_response.md",
+    "sentences/closure.md",
+    "sentences/construct_definition.md",
+    "sentences/cost_benefit_calculus.md",
+    "sentences/hypothesis_forms.md",
+    "sentences/leitmotif-section-opener.md",
+    "sentences/mechanism_chain.md",
+    "sentences/moderation.md",
+]
+
+VARIANT_NAMES = {
+    "A": "构念辨析型", "B": "机制推演型", "C": "假设树型", "D": "质性/过程理论型",
+    "E": "调节效应型", "F": "竞争假设型", "G": "辩证对立型",
 }
 
 # ---------------------------------------------------------------- 基础工具 ----
@@ -177,7 +181,9 @@ WB_RE = re.compile(r"<!--\s*wb:([^:\s>]+)(?::([^\s>]+))?")
 def parse_comment(text: str) -> dict:
     """Extract pattern_id / source_papers / status / confidence from a comment."""
     out: dict = {"pattern_id": None, "source_papers": [], "status": None,
-                 "confidence": None}
+                 "confidence": None, "deprecated": False}
+    if "DEPRECATED" in text:
+        out["deprecated"] = True
     m = PATTERN_ID_RE.search(text)
     if m:
         out["pattern_id"] = m.group(1)
@@ -223,7 +229,6 @@ def load_status_registry() -> dict[str, str]:
             result[key] = status
 
     lines = path.read_text(encoding="utf-8").splitlines()
-    # 第一遍：patterns: 节（key -> status）
     section = None
     cur_key = None
     for raw in lines:
@@ -244,7 +249,6 @@ def load_status_registry() -> dict[str, str]:
             m = re.match(r"^status:\s*([^\s#]+)", s)
             if m and cur_key:
                 add(cur_key, m.group(1))
-    # 第二遍：source_papers: 节（fragment type -> 其后紧跟的 status）
     section = None
     last_type = None
     for raw in lines:
@@ -321,7 +325,7 @@ class Block:
     templates: list[str] = field(default_factory=list)
 
 
-def finalize_block(b: Block, branch: str, slug: str, relpath: str,
+def finalize_block(b: Block, branch: str, relpath: str,
                    registry: dict[str, str]) -> tuple[list[Entry], list[Unparsed]]:
     entries: list[Entry] = []
     unparsed: list[Unparsed] = []
@@ -359,6 +363,8 @@ def finalize_block(b: Block, branch: str, slug: str, relpath: str,
 def _anchor_for(b: Block, branch: str) -> str:
     if branch == "subprotocols":
         return b.pattern_id or f"Pattern: {b.title}"
+    if branch == "variants4":
+        return b.vid
     return b.vid
 
 
@@ -369,17 +375,58 @@ def _citekey_from_src(src: str | None) -> str | None:
     return m.group(1) if m else None
 
 
-# ---------------------------------------------------------------- 分支① -----
+def _slug(title: str) -> str:
+    s = re.sub(r"[^A-Za-z0-9]+", "-", title).strip("-").lower()
+    s = s[:40]
+    if not s:
+        s = "cjk-" + hashlib.sha1(title.encode("utf-8")).hexdigest()[:8]
+    elif re.search(r"[\u4e00-\u9fff]", title):
+        # CJK 标题：ASCII 部分可能碰撞，附 hash 兜底
+        s = (s[:28] + "-" + hashlib.sha1(title.encode("utf-8")).hexdigest()[:6]).strip("-")
+    return s
+
+
+def _block_vid(title: str) -> str:
+    """标题 → 稳定 vid（sentences 分支用）。"""
+    m = re.search(r"变体\s+([A-Z0-9]+)", title)
+    if m:
+        return f"变体-{m.group(1)}"
+    m = re.search(r"句式\s+([A-Z0-9]+)", title)
+    if m:
+        return f"句式-{m.group(1)}"
+    return _slug(title)
+
+
+def _branch4_vid(title: str) -> str:
+    """标题 → 稳定 vid（variants 分支④用）。"""
+    t = title.strip()
+    m = re.search(r"技巧\s*(\d+)", t)
+    if m:
+        return f"技巧-{m.group(1)}"
+    m = re.search(r"变体\s+([A-Za-z0-9]+)", t)
+    if m:
+        return f"变体-{m.group(1)}"
+    m = re.search(r"句式\s+([A-Za-z0-9]+)", t)
+    if m:
+        return f"句式-{m.group(1)}"
+    core = re.split(r"[：:（(]", t)[0].strip()
+    return _slug(core)
+
+
+# ---------------------------------------------------------------- 字段正则 --
 
 VARIANT_HDR_RE = re.compile(r"^###\s+(?:变体|技巧)\s+([^：:\s（(]+)")
 SKELETON_FIELD_RE = re.compile(
-    r"^\*\*(?:骨架|模板(?:/骨架)?|句式骨架|结构)\*\*\s*(?:[（(][^）)]*[）)])?\s*[:：]?\s*(.*)$")
+    r"^\*\*([^*\n]*(?:骨架|模板|句式|结构)[^*\n]*)\*\*\s*"
+    r"(?:[（(][^）)]*[）)])?\s*[:：]?\s*(.*)$")
 VERBATIM_FIELD_RE = re.compile(
     r"^\*\*原文锚[点定]\*\*\s*(?:[（(][^）)]*[）)])?\s*[:：]\s*(.*)$")
 SRC_FIELD_RE = re.compile(r"^\*\*(?:范文来源|来源|出处)\*\*\s*[:：]\s*(.*)$")
 STATUS_FIELD_RE = re.compile(
     r"^\*\*(?:验证状态|状态)\*\*\s*[:：]\s*(VERIFIED|ROBUST|EMERGING)")
 
+
+# ---------------------------------------------------------------- 分支① -----
 
 def _p_table_tokens(lines: list[str]) -> str:
     """首个「段落功能地图」表的 P token（如 P1 P2 P3 P4-P7 ...）。"""
@@ -395,21 +442,215 @@ def _p_table_tokens(lines: list[str]) -> str:
                     tokens.append(tok)
                 started = True
                 continue
-        # 首个 P 表之后的非表格行即停止
         if started:
             break
     return " ".join(tokens)
 
 
-def parse_variants(relpath: str, registry: dict[str, str]) -> tuple[list[Entry], list[Unparsed]]:
+def _markdown_headers(lines: list[str]) -> list[tuple[int, str]]:
+    """(line, stripped_text) for ##/### 标题（跳过代码围栏内伪标题）。"""
+    out: list[tuple[int, str]] = []
+    in_fence = False
+    for j, raw in enumerate(lines):
+        s = raw.strip()
+        if s.startswith("```"):
+            in_fence = not in_fence
+            continue
+        if in_fence:
+            continue
+        if s.startswith("##"):
+            out.append((j, s))
+    return out
+
+
+def _bind_variant_ids(lines: list[str], block_starts: list[int],
+                      all_headers: list[int], pcomments: list[dict],
+                      wb_lines: list[dict]) -> dict[int, dict]:
+    """pattern_id 注释绑定到 `### 变体`/`### 技巧` 块。
+
+    - 同 token wb 紧随其后（到下一标题/文末）→ 后置约定，绑到最近前一个块。
+    - 否则为前置约定，绑到紧随其后的块标题（若下一标题是块标题）。
+    - 其余（`##` 级注释）→ 不绑（孤儿）。
+    """
+    bound: dict[int, dict] = {}
+    for pc in pcomments:
+        idx = pc["idx"]
+        next_hdr = next((h for h in all_headers if h > idx), len(lines))
+        post = None
+        for w in wb_lines:
+            if idx < w["idx"] < next_hdr and _same_token(w["pattern"], pc["pid"]):
+                post = w
+                break
+        if post is not None:
+            prev = [b for b in block_starts if b < idx]
+            if prev:
+                bound[prev[-1]] = pc
+        else:
+            if next_hdr in block_starts:
+                bound[next_hdr] = pc
+    return bound
+
+
+def parse_variants(relpath: str, registry: dict[str, str],
+                   slug: str) -> tuple[list[Entry], list[Unparsed]]:
     path = SKILL_ROOT / relpath
     lines = [ln.rstrip("\r") for ln in path.read_text(encoding="utf-8").splitlines()]
     p_tokens = _p_table_tokens(lines)
-    slug = "variants-A"
+    entries: list[Entry] = []
+    unparsed: list[Unparsed] = []
+
+    # --- 阶段一：收集注释 / wb / 块边界 ---
+    pcomments: list[dict] = []
+    wb_lines: list[dict] = []
+    i = 0
+    while i < len(lines):
+        s = lines[i].strip()
+        if s.startswith("<!--"):
+            cmt = _collect_comment(lines, i)
+            meta = parse_comment(cmt["text"])
+            if meta["pattern_id"] and not meta["deprecated"]:
+                pcomments.append({"idx": i, "pid": meta["pattern_id"], "meta": meta})
+            wm = WB_RE.search(cmt["text"])
+            if wm:
+                wb_lines.append({"idx": i, "citekey": wm.group(1),
+                                 "pattern": wm.group(2)})
+            i = cmt["end"] + 1
+        else:
+            i += 1
+
+    block_starts: list[int] = []
+    block_meta: dict[int, tuple[str, str]] = {}
+    headers = _markdown_headers(lines)
+    all_headers = [j for j, _ in headers]
+    for j, s in headers:
+        m = VARIANT_HDR_RE.match(s)
+        if m:
+            block_starts.append(j)
+            block_meta[j] = (m.group(1), s)
+
+    bound = _bind_variant_ids(lines, block_starts, all_headers, pcomments, wb_lines)
+    block_ranges: list[tuple[int, int]] = []
+
+    # --- 阶段二：逐块解析 ---
+    for start in block_starts:
+        end = next((h for h in all_headers if h > start), len(lines))
+        vid, heading = block_meta[start]
+        pc = bound.get(start)
+        pid = pc["pid"] if pc else None
+        src_papers = pc["meta"]["source_papers"] if pc else []
+        inline_status = pc["meta"]["status"] if pc else None
+        cur = Block(vid=vid, title=heading, heading=heading, pattern_id=pid,
+                    source_papers=src_papers, inline_status=inline_status,
+                    func=p_tokens)
+        block_ranges.append((start, end - 1))
+        j = start + 1
+        while j < end:
+            s = lines[j].strip()
+            if s.startswith("<!--"):
+                cmt = _collect_comment(lines, j)
+                j = cmt["end"] + 1
+                wm = WB_RE.search(cmt["text"])
+                if wm and not cur.wb_citekey and \
+                        (not wm.group(2) or not wm.group(2).startswith("legacy_")):
+                    cur.wb_citekey = wm.group(1)
+                    cur.wb_pattern = wm.group(2)
+                continue
+            fm = SRC_FIELD_RE.match(s)
+            if fm:
+                if not cur.src_field:
+                    cur.src_field = fm.group(1).strip()
+                j += 1
+                continue
+            fm = VERBATIM_FIELD_RE.match(s)
+            if fm:
+                inline = fm.group(1).strip()
+                if inline:
+                    qs, j = _extract_verbatim_inline(lines, j, inline, end)
+                    cur.verbatim += qs
+                elif j + 1 < end and lines[j + 1].strip().startswith(">"):
+                    bq = _read_blockquote(lines, j + 1)
+                    for q in extract_quotes(bq["text"]):
+                        cur.verbatim.append(q)
+                    j = bq["end"] + 1
+                    continue
+                j += 1
+                continue
+            fm = SKELETON_FIELD_RE.match(s)
+            if fm:
+                inline = fm.group(2).strip()
+                if inline:
+                    cur.templates.append(normalize(strip_outer_quotes(inline)))
+                elif j + 1 < end and lines[j + 1].strip().startswith("```"):
+                    fence = _read_fence(lines, j + 1)
+                    if fence["text"]:
+                        cur.templates.append(fence["text"])
+                    j = fence["end"] + 1
+                    continue
+                elif j + 1 < end and lines[j + 1].strip().startswith(">"):
+                    bq = _read_blockquote(lines, j + 1)
+                    if bq["text"]:
+                        cur.templates.append(normalize(strip_outer_quotes(bq["text"])))
+                    j = bq["end"] + 1
+                    continue
+                else:
+                    parts: list[str] = []
+                    k = j + 1
+                    while k < end:
+                        ns = lines[k].strip()
+                        if not ns or ns.startswith(("**", "#", "<!--", "|", "```", "---")):
+                            break
+                        parts.append(ns)
+                        k += 1
+                    if parts:
+                        cur.templates.append(normalize(" ".join(parts)))
+                        j = k - 1
+                j += 1
+                continue
+            j += 1
+        e, u = finalize_block(cur, "variants", relpath, registry)
+        entries += e
+        unparsed += u
+
+    # 非变体/技巧块内的原文锚点 → _unparsed
+    for j, raw in enumerate(lines):
+        if any(a <= j <= b for a, b in block_ranges):
+            continue
+        vm = VERBATIM_FIELD_RE.match(raw.strip())
+        if vm:
+            snippet = vm.group(1) or ""
+            if not snippet and j + 1 < len(lines) and \
+                    lines[j + 1].strip().startswith(">"):
+                bq = _read_blockquote(lines, j + 1)
+                qs = extract_quotes(bq["text"])
+                snippet = qs[0] if qs else bq["text"][:160]
+            unparsed.append(Unparsed(
+                card="(非变体块)", path=relpath, where="关键句式模板/小节级 原文锚点",
+                text=snippet[:160],
+                reason="非 `### 变体`/`### 技巧` 块内锚点：无块级变体号/pattern_id 可绑定，"
+                       "citekey/status 无法稳定回源，故不进主清单（待人工判定归属）。"))
+    return entries, unparsed
+
+
+# ---------------------------------------------------------------- 分支④ -----
+
+SENT_BLOCK_HDR_RE = re.compile(r"^#{2,3}\s+(.*)$")
+
+
+def parse_variants_branch4(relpath: str, registry: dict[str, str],
+                           slug: str) -> tuple[list[Entry], list[Unparsed]]:
+    """C/D/F：段落功能地图 P 表 + `### 技巧 N`/命名小节切块。
+
+    - 块边界 = 任意 `##`/`###` 标题（标题行即 anchor 指向的真实标题）。
+    - func = 该块标题（段落功能位）。
+    - verbatim = `**原文锚点**`/`**原文锚定**` 下引号内英文原句（逐字）。
+    - 模板 = 任意 ``` fenced 块且含 `[槽位]`（骨架/句式/过程模型/命题模板统一走此）。
+    - pattern_id/citekey = 块内 `<!-- pattern_id ... -->` + `<!-- wb:... -->` 注释。
+    """
+    path = SKILL_ROOT / relpath
+    lines = [ln.rstrip("\r") for ln in path.read_text(encoding="utf-8").splitlines()]
     entries: list[Entry] = []
     unparsed: list[Unparsed] = []
     cur: Block | None = None
-    block_ranges: list[tuple[int, int]] = []
     i = 0
     while i < len(lines):
         s = lines[i].strip()
@@ -423,39 +664,22 @@ def parse_variants(relpath: str, registry: dict[str, str]) -> tuple[list[Entry],
                     cur.pattern_id = meta["pattern_id"]
                 if meta["source_papers"] and not cur.source_papers:
                     cur.source_papers = meta["source_papers"]
-                if wm and not cur.wb_citekey and                         (not wm.group(2) or not wm.group(2).startswith("legacy_")):
+                if wm and not cur.wb_citekey and \
+                        (not wm.group(2) or not wm.group(2).startswith("legacy_")):
                     cur.wb_citekey = wm.group(1)
                     cur.wb_pattern = wm.group(2)
             continue
-        m = VARIANT_HDR_RE.match(s)
+        m = SENT_BLOCK_HDR_RE.match(s)
         if m:
             if cur is not None:
-                block_ranges.append((cur_range_start, i - 1))
-                e, u = finalize_block(cur, "variants", slug, relpath, registry)
+                e, u = finalize_block(cur, "variants4", relpath, registry)
                 entries += e
                 unparsed += u
-            cur = Block(vid=m.group(1), title=s, heading=s, func=p_tokens)
-            cur_range_start = i
-            i += 1
-            continue
-        # 章节边界（## 或非变体/技巧的 ###）关闭当前块
-        if s.startswith("##") or (s.startswith("###") and not VARIANT_HDR_RE.match(s)):
-            if cur is not None:
-                block_ranges.append((cur_range_start, i - 1))
-                e, u = finalize_block(cur, "variants", slug, relpath, registry)
-                entries += e
-                unparsed += u
-                cur = None
+            title = m.group(1).strip()
+            cur = Block(vid=_branch4_vid(title), title=title, heading=s, func=title)
             i += 1
             continue
         if cur is None:
-            i += 1
-            continue
-        # --- 块内字段 ---
-        fm = SRC_FIELD_RE.match(s)
-        if fm:
-            if not cur.src_field:
-                cur.src_field = fm.group(1).strip()
             i += 1
             continue
         fm = VERBATIM_FIELD_RE.match(s)
@@ -466,124 +690,133 @@ def parse_variants(relpath: str, registry: dict[str, str]) -> tuple[list[Entry],
                 cur.verbatim += qs
             elif i + 1 < len(lines) and lines[i + 1].strip().startswith(">"):
                 bq = _read_blockquote(lines, i + 1)
-                for q in extract_quotes(bq["text"]):
-                    cur.verbatim.append(q)
+                cur.verbatim += extract_quotes(bq["text"])
                 i = bq["end"] + 1
                 continue
             i += 1
             continue
-        fm = SKELETON_FIELD_RE.match(s)
-        if fm:
-            inline = fm.group(1).strip()
-            if inline:
-                cur.templates.append(normalize(strip_outer_quotes(inline)))
-            elif i + 1 < len(lines) and lines[i + 1].strip().startswith("```"):
-                fence = _read_fence(lines, i + 1)
-                if fence["text"]:
-                    cur.templates.append(fence["text"])
-                i = fence["end"] + 1
-                continue
-            elif i + 1 < len(lines) and lines[i + 1].strip().startswith(">"):
-                bq = _read_blockquote(lines, i + 1)
-                if bq["text"]:
-                    cur.templates.append(normalize(strip_outer_quotes(bq["text"])))
-                i = bq["end"] + 1
-                continue
-            i += 1
+        if s.startswith("```"):
+            fence = _read_fence(lines, i)
+            if fence["text"] and "[" in fence["text"] and "]" in fence["text"]:
+                cur.templates.append(fence["text"])
+            i = fence["end"] + 1
             continue
         i += 1
     if cur is not None:
-        block_ranges.append((cur_range_start, len(lines) - 1))
-        e, u = finalize_block(cur, "variants", slug, relpath, registry)
+        e, u = finalize_block(cur, "variants4", relpath, registry)
         entries += e
         unparsed += u
-    # 非变体/技巧块内的原文锚点 → _unparsed（分支① 未覆盖）
-    for j, raw in enumerate(lines):
-        if any(a <= j <= b for a, b in block_ranges):
-            continue
-        vm = VERBATIM_FIELD_RE.match(raw.strip())
-        if vm:
-            snippet = vm.group(1) or ""
-            if not snippet and j + 1 < len(lines) and \
-                    lines[j + 1].strip().startswith(">"):
-                bq = _read_blockquote(lines, j + 1)
-                qs = extract_quotes(bq["text"])
-                snippet = qs[0] if qs else bq["text"][:160]
-            unparsed.append(Unparsed(card="(非变体块)", path=relpath,
-                                     where="关键句式模板/小节级 原文锚点",
-                                     text=snippet[:160],
-                                     reason="非 `### 变体`/`### 技巧` 块内锚点"))
     return entries, unparsed
 
 
 # ---------------------------------------------------------------- 分支② -----
 
-PATTERN_HDR_RE = re.compile(r"^##\s+Pattern:\s*(.*)$")
+PATTERN_HDR_RE = re.compile(
+    r"^##\s+(?:Pattern|Framework)(?:\s+[A-Za-z])?\s*[:：]\s*(.*)$")
+SUB_HDR_RE = re.compile(
+    r"^###\s+(?:变体|子变体|子型|模式|Micro-Move|框架|句式|Pattern)\s*[:：]?\s*(.*)$")
 MICROSEQ_RE = re.compile(r"^\*\*微观动作序列\*\*\s*[:：]\s*(.*)$")
 ARRANGE_RE = re.compile(r"^\*\*排列模式\*\*\s*[:：]\s*(.*)$")
 
 
-def parse_subprotocols(relpath: str, registry: dict[str, str]) -> tuple[list[Entry], list[Unparsed]]:
+def _same_token(wb_pattern: str | None, pid: str | None) -> bool:
+    if not wb_pattern or not pid:
+        return False
+    if wb_pattern.startswith("legacy_"):
+        return False
+    return wb_pattern == pid or wb_pattern.endswith(pid)
+
+
+def parse_subprotocols(relpath: str, registry: dict[str, str],
+                       slug: str) -> tuple[list[Entry], list[Unparsed]]:
     path = SKILL_ROOT / relpath
     lines = [ln.rstrip("\r") for ln in path.read_text(encoding="utf-8").splitlines()]
-    slug = "subprotocols-hypothesis-derivation"
     entries: list[Entry] = []
     unparsed: list[Unparsed] = []
 
-    # --- 阶段一：收集 pattern_id 注释（含行号）与各 pattern 块的 wb citekey ---
+    # --- 阶段一：收集 pattern_id 注释（过滤 DEPRECATED 指针）与全部块边界 ---
     pcomments: list[dict] = []
+    wb_lines: list[dict] = []      # {idx, citekey, pattern}
     i = 0
     while i < len(lines):
         s = lines[i].strip()
         if s.startswith("<!--"):
             cmt = _collect_comment(lines, i)
             meta = parse_comment(cmt["text"])
-            if meta["pattern_id"]:
-                pcomments.append({"idx": i, "meta": meta, "used": False})
+            if meta["pattern_id"] and not meta["deprecated"]:
+                pcomments.append({"idx": i, "pid": meta["pattern_id"],
+                                  "meta": meta})
+            wm = WB_RE.search(cmt["text"])
+            if wm:
+                wb_lines.append({"idx": i, "citekey": wm.group(1),
+                                 "pattern": wm.group(2)})
             i = cmt["end"] + 1
         else:
             i += 1
 
-    # 块边界
-    block_starts: list[int] = []
-    for j, raw in enumerate(lines):
-        if PATTERN_HDR_RE.match(raw.strip()):
-            block_starts.append(j)
+    block_starts: list[tuple[int, str, str]] = []  # (line, title, level)
+    headers = _markdown_headers(lines)
+    all_headers = [j for j, _ in headers]
+    for j, s in headers:
+        m = PATTERN_HDR_RE.match(s)
+        if m:
+            block_starts.append((j, m.group(1).strip(), "##"))
+            continue
+        m = SUB_HDR_RE.match(s)
+        if m:
+            block_starts.append((j, m.group(1).strip(), "###"))
 
-    def is_gap_block(start: int, end: int) -> bool:
+    def block_content_has_gap(start: int, end: int) -> bool:
         for j in range(start, end):
             s = lines[j]
             if "wb-meta:" in s or s.strip().startswith("**band**"):
                 return True
         return False
 
-    # --- 阶段二：逐块解析；pattern_id 按「就近 + 跳过 gap 块」指针绑定 ---
-    pc_idx = 0
-    for bi, start in enumerate(block_starts):
-        end = block_starts[bi + 1] if bi + 1 < len(block_starts) else len(lines)
+    # --- 阶段二：pattern_id 注释绑定到块 ---
+    # 规则：
+    #   1) 若注释后（到下一块边界/文末）出现同 token 的 wb 注释 → 后置约定，绑到
+    #      最近的前一个块（注释所在块）。
+    #   2) 否则为前置约定，绑到最近的下一个非 gap 块。
+    bound: dict[int, dict] = {}   # block_start_line -> pcomment
+    starts = [s[0] for s in block_starts]
+    for pc in pcomments:
+        idx = pc["idx"]
+        # 找注释后的下一个 wb（同 token 判定）是否在下一块边界之前
+        next_block = next((s for s in starts if s > idx), len(lines))
+        post_anchor = None
+        for w in wb_lines:
+            if idx < w["idx"] < next_block and _same_token(w["pattern"], pc["pid"]):
+                post_anchor = w
+                break
+        if post_anchor is not None:
+            # 绑到最近前一个块
+            prev = [s for s in starts if s < idx]
+            if prev:
+                target = prev[-1]
+                bound[target] = pc
+        else:
+            # 绑到最近下一个非 gap 块
+            for k, s0 in enumerate(starts):
+                if s0 <= idx:
+                    continue
+                end = next((h for h in all_headers if h > s0), len(lines))
+                if block_content_has_gap(s0, end):
+                    continue
+                bound[s0] = pc
+                break
+
+    # --- 阶段三：逐块解析 ---
+    for bi, (start, title, level) in enumerate(block_starts):
+        end = next((h for h in all_headers if h > start), len(lines))
         heading = lines[start].strip()
-        title = PATTERN_HDR_RE.match(heading).group(1)
-
-        # 消费本块起始前的 pattern_id 注释；最后一个为候选
-        candidate = None
-        while pc_idx < len(pcomments) and pcomments[pc_idx]["idx"] < start:
-            candidate = pcomments[pc_idx]
-            pc_idx += 1
-        pid = None
-        src_papers: list[str] = []
-        inline_status = None
-        if is_gap_block(start, end):
-            if candidate is not None:
-                pc_idx -= 1  # 还给下一个非 gap 块
-        elif candidate is not None:
-            pid = candidate["meta"]["pattern_id"]
-            src_papers = candidate["meta"]["source_papers"]
-            inline_status = candidate["meta"]["status"]
-
+        pc = bound.get(start)
+        pid = pc["pid"] if pc else None
+        src_papers = pc["meta"]["source_papers"] if pc else []
+        inline_status = pc["meta"]["status"] if pc else None
         cur = Block(vid=pid or _slug(title), title=title, heading=heading,
                     pattern_id=pid, source_papers=src_papers,
                     inline_status=inline_status)
-        # 块内字段
         j = start + 1
         while j < end:
             s = lines[j].strip()
@@ -591,7 +824,8 @@ def parse_subprotocols(relpath: str, registry: dict[str, str]) -> tuple[list[Ent
                 cmt = _collect_comment(lines, j)
                 j = cmt["end"] + 1
                 wm = WB_RE.search(cmt["text"])
-                if wm and not cur.wb_citekey and                         (not wm.group(2) or not wm.group(2).startswith("legacy_")):
+                if wm and not cur.wb_citekey and \
+                        (not wm.group(2) or not wm.group(2).startswith("legacy_")):
                     cur.wb_citekey = wm.group(1)
                     cur.wb_pattern = wm.group(2)
                 continue
@@ -622,7 +856,7 @@ def parse_subprotocols(relpath: str, registry: dict[str, str]) -> tuple[list[Ent
                 continue
             fm = SKELETON_FIELD_RE.match(s)
             if fm:
-                inline = fm.group(1).strip()
+                inline = fm.group(2).strip()
                 if inline:
                     cur.templates.append(normalize(strip_outer_quotes(inline)))
                 elif j + 1 < end and lines[j + 1].strip().startswith("```"):
@@ -631,45 +865,44 @@ def parse_subprotocols(relpath: str, registry: dict[str, str]) -> tuple[list[Ent
                         cur.templates.append(fence["text"])
                     j = fence["end"] + 1
                     continue
+                elif j + 1 < end and lines[j + 1].strip().startswith(">"):
+                    bq = _read_blockquote(lines, j + 1)
+                    if bq["text"]:
+                        cur.templates.append(normalize(strip_outer_quotes(bq["text"])))
+                    j = bq["end"] + 1
+                    continue
+                else:
+                    # 骨架/模板后的纯文本续行（inline 模板）
+                    parts: list[str] = []
+                    k = j + 1
+                    while k < end:
+                        ns = lines[k].strip()
+                        if not ns or ns.startswith(("**", "#", "<!--", "|", "```", "---")):
+                            break
+                        parts.append(ns)
+                        k += 1
+                    if parts:
+                        cur.templates.append(normalize(" ".join(parts)))
+                        j = k - 1
                 j += 1
                 continue
             j += 1
-        e, u = finalize_block(cur, "subprotocols", slug, relpath, registry)
+        e, u = finalize_block(cur, "subprotocols", relpath, registry)
         entries += e
         unparsed += u
     return entries, unparsed
 
 
-def _slug(title: str) -> str:
-    s = re.sub(r"[^A-Za-z0-9]+", "-", title).strip("-").lower()
-    s = s[:40]
-    if not s:
-        import hashlib
-        s = "cjk-" + hashlib.sha1(title.encode("utf-8")).hexdigest()[:8]
-    return s
-
-
 # ---------------------------------------------------------------- 分支③ -----
 
-SENT_BLOCK_HDR_RE = re.compile(r"^#{2,3}\s+(.*)$")
 SENTPOS_RE = re.compile(r"^\*\*句位\*\*\s*[:：]\s*(.*)$")
 ARG_ROLE_RE = re.compile(r"^>\s*论证角色\s*[:：]?\s*(.*)$")
 
 
-def _block_vid(title: str) -> str:
-    m = re.search(r"变体\s+([A-Z0-9]+)", title)
-    if m:
-        return f"变体-{m.group(1)}"
-    m = re.search(r"句式\s+([A-Z0-9]+)", title)
-    if m:
-        return f"句式-{m.group(1)}"
-    return _slug(title)
-
-
-def parse_sentences(relpath: str, registry: dict[str, str]) -> tuple[list[Entry], list[Unparsed]]:
+def parse_sentences(relpath: str, registry: dict[str, str],
+                    slug: str) -> tuple[list[Entry], list[Unparsed]]:
     path = SKILL_ROOT / relpath
     lines = [ln.rstrip("\r") for ln in path.read_text(encoding="utf-8").splitlines()]
-    slug = "sentences-hypothesis-forms"
     entries: list[Entry] = []
     unparsed: list[Unparsed] = []
     arg_role = ""
@@ -693,14 +926,15 @@ def parse_sentences(relpath: str, registry: dict[str, str]) -> tuple[list[Entry]
                     cur.pattern_id = meta["pattern_id"]
                 if meta["source_papers"] and not cur.source_papers:
                     cur.source_papers = meta["source_papers"]
-                if wm and not cur.wb_citekey and                         (not wm.group(2) or not wm.group(2).startswith("legacy_")):
+                if wm and not cur.wb_citekey and \
+                        (not wm.group(2) or not wm.group(2).startswith("legacy_")):
                     cur.wb_citekey = wm.group(1)
                     cur.wb_pattern = wm.group(2)
             continue
         m = SENT_BLOCK_HDR_RE.match(s)
         if m:
             if cur is not None:
-                e, u = finalize_block(cur, "sentences", slug, relpath, registry)
+                e, u = finalize_block(cur, "sentences", relpath, registry)
                 entries += e
                 unparsed += u
             cur = Block(vid=_block_vid(m.group(1)), title=m.group(1),
@@ -708,6 +942,11 @@ def parse_sentences(relpath: str, registry: dict[str, str]) -> tuple[list[Entry]
             i += 1
             continue
         if cur is None:
+            i += 1
+            continue
+        fm = ARG_ROLE_RE.match(s)
+        if fm:
+            cur.func = fm.group(1).strip()
             i += 1
             continue
         fm = SENTPOS_RE.match(s)
@@ -741,7 +980,7 @@ def parse_sentences(relpath: str, registry: dict[str, str]) -> tuple[list[Entry]
             continue
         fm = SKELETON_FIELD_RE.match(s)
         if fm:
-            inline = fm.group(1).strip()
+            inline = fm.group(2).strip()
             if inline:
                 cur.templates.append(normalize(strip_outer_quotes(inline)))
             elif i + 1 < len(lines) and lines[i + 1].strip().startswith("```"):
@@ -756,15 +995,26 @@ def parse_sentences(relpath: str, registry: dict[str, str]) -> tuple[list[Entry]
                     cur.templates.append(normalize(strip_outer_quotes(bq["text"])))
                 i = bq["end"] + 1
                 continue
+            else:
+                parts: list[str] = []
+                k = i + 1
+                while k < len(lines):
+                    ns = lines[k].strip()
+                    if not ns or ns.startswith(("**", "#", "<!--", "|", "```", "---")):
+                        break
+                    parts.append(ns)
+                    k += 1
+                if parts:
+                    cur.templates.append(normalize(" ".join(parts)))
+                    i = k - 1
             i += 1
             continue
         i += 1
     if cur is not None:
-        e, u = finalize_block(cur, "sentences", slug, relpath, registry)
+        e, u = finalize_block(cur, "sentences", relpath, registry)
         entries += e
         unparsed += u
 
-    # --- 决策矩阵内嵌模板句 ---
     entries += _matrix_templates(lines, relpath, arg_role)
     return entries, unparsed
 
@@ -812,11 +1062,11 @@ def render_branch(slug: str, name: str, branch: str, relpath: str,
     nv = sum(1 for e in entries if e.kind == "verbatim")
     nt = sum(1 for e in entries if e.kind == "模板")
     out = [
-        f"# {slug} — 骨架试点清单（{name}）",
+        f"# {slug} — 骨架清单（{name}）",
         "",
-        "> 本目录由脚本重建，手改会被覆盖；重建命令 = `python scripts/build_indices.py`（在 `write-theory/` 目录下）。",
-        "> **统一 entry schema（7 字段，三套一致）**：`id` | `func`（段落功能位）| `citekey` | `status` | `kind`（verbatim/模板）| `text` | `anchor`。",
-        "> **verbatim** = `**原文锚点**`/`**原文锚定**` 下引号内英文原句（逐字，含 `…` 不回填）；**模板** = `**骨架**`/`**模板**`/`**句式骨架**` 等后的代码围栏或 `>` 引用块（含 `[槽位]`）。",
+        "> 本目录由脚本重建，手改会被覆盖；重建命令 = `python scripts/build_indices.py`（路径基准：以本 skill 目录（SKILL.md 所在目录）为基准）。",
+        "> **统一 entry schema（7 字段）**：`id` | `func`（段落功能位）| `citekey` | `status` | `kind`（verbatim/模板）| `text` | `anchor`。",
+        "> **verbatim** = `**原文锚点**`/`**原文锚定**` 下引号内英文原句（逐字，含 `…` 不回填）；**模板** = `**骨架**`/`**模板**`/`**句式**` 等后的代码围栏或 `>` 引用块（含 `[槽位]`）。",
         "> **citekey** 取 source_papers 首个 → wb 注释 → 来源字段，无则「未标注」；**status** 查 `_evidence_registry.yaml`（ROBUST>VERIFIED>EMERGING），未命中「未标注」。",
         f"> **来源文件**：`{relpath}`。",
         "",
@@ -833,42 +1083,70 @@ def render_branch(slug: str, name: str, branch: str, relpath: str,
     return "\n".join(out)
 
 
-def render_index(stats: list[tuple[str, str, str, int, int]], unparsed_count: int) -> str:
+def render_index(routes: list[dict], unparsed_count: int) -> str:
     out = [
-        "# write-theory 骨架索引解析试点（Batch 2，三套块结构）",
+        "# write-theory 骨架索引（Batch 2 全量）",
         "",
         "> 本目录由脚本重建；重建命令 = `python scripts/build_indices.py`（`--check` 干跑、`--verify` 回源校验）。",
-        "> 本试点只解析 3 个样本文件，验证 variants / subprotocols / sentences 三套块结构可统一为一种 entry schema；验证通过后即停，不全量。",
-        "> **统一 schema**：`id | func | citekey | status | kind | text | anchor`（7 字段，三套字段名完全一致）。",
+        "> **统一 schema**：`id | func | citekey | status | kind | text | anchor`（7 字段，三来源字段名完全一致）。",
+        "> **verbatim** 逐字回源；**锚点** 指向真实标题/变体号/pattern_id；**citekey** 不编造（无机器可读 token 标「未标注」）。",
         "",
-        "| 分支 | 来源文件 | 子清单 | verbatim | 模板 |",
+        "## 一级路由：变体族 A–G",
+        "",
+        "| 族 | 来源文件 | 子清单 | verbatim | 模板 |",
         "|---|---|---|---|---|",
     ]
-    for name, relpath, target, nv, nt in stats:
-        out.append(f"| {name} | `{relpath}` | [`{target}`]({target}) | {nv} | {nt} |")
+    for r in routes:
+        if r["group"] != "variants":
+            continue
+        out.append(
+            f"| {r['label']} | `{r['relpath']}` | [`{r['target']}`]({r['target']}) "
+            f"| {r['nv']} | {r['nt']} |")
     out.append("")
-    nv_total = sum(s[3] for s in stats)
-    nt_total = sum(s[4] for s in stats)
-    out.append(f"合计：{len(stats)} 分支 / verbatim {nv_total} 条 / 模板 {nt_total} 条。")
+    out.append("## 来源子清单：subprotocols pattern 库")
+    out.append("")
+    out.append("| 库 | 来源文件 | 子清单 | verbatim | 模板 |")
+    out.append("|---|---|---|---|---|")
+    for r in routes:
+        if r["group"] != "subprotocols":
+            continue
+        out.append(
+            f"| {r['label']} | `{r['relpath']}` | [`{r['target']}`]({r['target']}) "
+            f"| {r['nv']} | {r['nt']} |")
+    out.append("")
+    out.append("## 来源子清单：sentences 句式库")
+    out.append("")
+    out.append("| 文件 | 子清单 | verbatim | 模板 |")
+    out.append("|---|---|---|---|")
+    for r in routes:
+        if r["group"] != "sentences":
+            continue
+        out.append(
+            f"| {r['label']} | [`{r['target']}`]({r['target']}) "
+            f"| {r['nv']} | {r['nt']} |")
+    out.append("")
+    nv_total = sum(r["nv"] for r in routes)
+    nt_total = sum(r["nt"] for r in routes)
+    out.append(f"合计：{len(routes)} 个子清单 / verbatim {nv_total} 条 / 模板 {nt_total} 条。")
     out.append("")
     out.append("## 待补录")
     out.append("")
-    out.append(f"- [`_unparsed.md`](_unparsed.md)：{unparsed_count} 条（非块内锚点/边界模糊矩阵句等，待人工判定）。")
+    out.append(f"- [`_unparsed.md`](_unparsed.md)：{unparsed_count} 条（每条附「为什么进不了主清单」）。")
     out.append("")
     return "\n".join(out)
 
 
 def render_unparsed(items: list[Unparsed]) -> str:
     out = [
-        "# Skeleton Index — 待补录 / 未命中（试点）",
+        "# Skeleton Index — 待补录 / 未命中",
         "",
-        "> 脚本未能自动判定为 verbatim/模板或结构不规整的条目集中在此。",
+        "> 脚本未能自动判定为 verbatim/模板或结构不规整、无法绑定 citekey/status 的条目集中在此；每条附「为什么进不了主清单」。",
         "",
     ]
     if not items:
         out.append("（无）")
     else:
-        out.append("| 卡片 | 路径 | 位置 | 原文摘录 | 原因 |")
+        out.append("| 卡片 | 路径 | 位置 | 原文摘录 | 为什么进不了主清单 |")
         out.append("|---|---|---|---|---|")
         for u in items:
             snip = escape_cell(u.text[:140] + ("…" if len(u.text) > 140 else ""))
@@ -879,6 +1157,13 @@ def render_unparsed(items: list[Unparsed]) -> str:
 
 # ---------------------------------------------------------------- main -----
 
+def _target_name(relpath: str, branch: str) -> str:
+    stem = Path(relpath).stem
+    prefix = {"variants": "variants", "variants4": "variants",
+              "subprotocols": "subprotocols", "sentences": "sentences"}[branch]
+    return f"{prefix}-{stem}.md"
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--check", action="store_true")
@@ -887,34 +1172,52 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--quiet", action="store_true")
     args = ap.parse_args(argv)
 
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
     registry = load_status_registry()
     all_entries: list[Entry] = []
     all_unparsed: list[Unparsed] = []
-    stats: list[tuple[str, str, str, int, int]] = []
+    routes: list[dict] = []
     rendered: dict[str, str] = {}
 
-    for branch, name, target in [
-        ("variants", "① variants（变体/技巧块）",
-         "variants-A_construct_differentiation.md"),
-        ("subprotocols", "② subprotocols（pattern 库）",
-         "subprotocols-hypothesis_derivation_patterns.md"),
-        ("sentences", "③ sentences（变体块+决策矩阵）",
-         "sentences-hypothesis_forms.md"),
-    ]:
-        relpath = "corpus/" + SAMPLES[branch]
-        if branch == "variants":
-            entries, unparsed = parse_variants(relpath, registry)
-        elif branch == "subprotocols":
-            entries, unparsed = parse_subprotocols(relpath, registry)
+    # ---- variants ----
+    for fam, (rel, branch) in VARIANT_FILES.items():
+        rpath = "corpus/" + rel
+        slug = f"variants-{Path(rel).stem}"
+        if branch == "branch1":
+            entries, unparsed = parse_variants(rpath, registry, slug)
         else:
-            entries, unparsed = parse_sentences(relpath, registry)
+            entries, unparsed = parse_variants_branch4(rpath, registry, slug)
         all_entries += entries
         all_unparsed += unparsed
-        nv = sum(1 for e in entries if e.kind == "verbatim")
-        nt = sum(1 for e in entries if e.kind == "模板")
-        rendered[target] = render_branch(target.replace(".md", ""), name, branch,
-                                         relpath, entries)
-        stats.append((name, relpath, target, nv, nt))
+        target = _target_name(rel, "variants4" if branch == "branch4" else "variants")
+        _emit(rendered, routes, target, entries, unparsed, rpath,
+              f"{fam}（{VARIANT_NAMES.get(fam, '')}）", "variants")
+
+    # ---- subprotocols ----
+    for rel in SUBPROTOCOL_FILES:
+        rpath = "corpus/" + rel
+        slug = f"subprotocols-{Path(rel).stem}"
+        entries, unparsed = parse_subprotocols(rpath, registry, slug)
+        all_entries += entries
+        all_unparsed += unparsed
+        target = _target_name(rel, "subprotocols")
+        _emit(rendered, routes, target, entries, unparsed, rpath,
+              Path(rel).stem, "subprotocols")
+
+    # ---- sentences ----
+    for rel in SENTENCE_FILES:
+        rpath = "corpus/" + rel
+        slug = f"sentences-{Path(rel).stem}"
+        entries, unparsed = parse_sentences(rpath, registry, slug)
+        all_entries += entries
+        all_unparsed += unparsed
+        target = _target_name(rel, "sentences")
+        _emit(rendered, routes, target, entries, unparsed, rpath,
+              Path(rel).stem, "sentences")
 
     nv_total = sum(1 for e in all_entries if e.kind == "verbatim")
     nt_total = sum(1 for e in all_entries if e.kind == "模板")
@@ -933,7 +1236,7 @@ def main(argv: list[str] | None = None) -> int:
             if normalize(e.text) not in src:
                 mismatch.append(e)
         print(f"verbatim 回源校验: {nv_total - len(mismatch)}/{nv_total} 命中源文件")
-        for e in mismatch:
+        for e in mismatch[:20]:
             print(f"  MISMATCH {e.id} ({e.file}): {e.text[:80]}")
 
         anchor_miss: list[Entry] = []
@@ -949,8 +1252,20 @@ def main(argv: list[str] | None = None) -> int:
         with_heading = sum(1 for e in all_entries if e.heading)
         print(f"锚点标题存在校验: {with_heading - len(anchor_miss)}/{with_heading} "
               f"锚点指向的标题存在")
-        for e in anchor_miss:
+        for e in anchor_miss[:20]:
             print(f"  ANCHOR-MISS {e.id} ({e.file}#{e.heading[:50]})")
+
+        # 分来源汇总表
+        print("\n分来源汇总：")
+        print(f"{'来源':<16}{'verbatim':>10}{'模板':>10}{'未标注(条)':>12}")
+        for grp, label in [("variants", "variants"), ("subprotocols", "subprotocols"),
+                           ("sentences", "sentences")]:
+            grp_entries = [e for e in all_entries
+                           if e.file.split("/")[1] == grp]
+            gnv = sum(1 for e in grp_entries if e.kind == "verbatim")
+            gnt = sum(1 for e in grp_entries if e.kind == "模板")
+            gna = sum(1 for e in grp_entries if e.status == "未标注")
+            print(f"{label:<16}{gnv:>10}{gnt:>10}{gna:>12}")
 
         if args.sample > 0:
             verbatim = [e for e in all_entries if e.kind == "verbatim"]
@@ -968,10 +1283,10 @@ def main(argv: list[str] | None = None) -> int:
                 print(f"  {'OK ' if hit else 'MISS'} {e.id}: {e.text[:70]}…")
 
     if not args.quiet:
-        print("branch                      verbatim  templates")
-        for name, relpath, target, nv, nt in stats:
-            print(f"{name:<27} {nv:>8} {nt:>10}")
-        print(f"{'TOTAL':<27} {nv_total:>8} {nt_total:>10}")
+        print("source                     verbatim  templates")
+        for r in routes:
+            print(f"{r['target']:<28} {r['nv']:>8} {r['nt']:>10}")
+        print(f"{'TOTAL':<28} {nv_total:>8} {nt_total:>10}")
         print(f"unparsed items: {len(all_unparsed)}")
         print(f"registry pattern keys: {len(registry)}")
 
@@ -981,11 +1296,39 @@ def main(argv: list[str] | None = None) -> int:
     SKELETON.mkdir(parents=True, exist_ok=True)
     for fname, text in rendered.items():
         (SKELETON / fname).write_text(text, encoding="utf-8", newline="\n")
-    (SKELETON / "_index.md").write_text(render_index(stats, len(all_unparsed)),
+    (SKELETON / "_index.md").write_text(render_index(routes, len(all_unparsed)),
                                         encoding="utf-8", newline="\n")
     (SKELETON / "_unparsed.md").write_text(render_unparsed(all_unparsed),
                                            encoding="utf-8", newline="\n")
     return 0
+
+
+def _emit(rendered: dict[str, str], routes: list[dict], target: str,
+          entries: list[Entry], unparsed: list[Unparsed], relpath: str,
+          label: str, group: str) -> None:
+    """Render a sublist; if > 400 行, split by func."""
+    nv = sum(1 for e in entries if e.kind == "verbatim")
+    nt = sum(1 for e in entries if e.kind == "模板")
+    text = render_branch(target.replace(".md", ""), label, group, relpath, entries)
+    if len(text.splitlines()) <= 400 or not entries:
+        rendered[target] = text
+        routes.append({"group": group, "label": label, "relpath": relpath,
+                       "target": target, "nv": nv, "nt": nt})
+        return
+    # 按 func 拆分
+    by_func: dict[str, list[Entry]] = {}
+    for e in entries:
+        by_func.setdefault(e.func, []).append(e)
+    base = target[:-3]
+    for k, (func, grp) in enumerate(sorted(by_func.items(), key=lambda x: -len(x[1]))):
+        fslug = _slug(func) or f"g{k}"
+        t = f"{base}-{fslug}.md"
+        rendered[t] = render_branch(t.replace(".md", ""), f"{label}｜{func}", group,
+                                    relpath, grp)
+        gnv = sum(1 for e in grp if e.kind == "verbatim")
+        gnt = sum(1 for e in grp if e.kind == "模板")
+        routes.append({"group": group, "label": f"{label}｜{func}", "relpath": relpath,
+                       "target": t, "nv": gnv, "nt": gnt})
 
 
 if __name__ == "__main__":

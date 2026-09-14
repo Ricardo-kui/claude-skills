@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "write-* feedback registry schema",
+  "description": "Canonical schema for the write-methods / write-results / write-introduction feedback registries. Canonical baseline is write-results 1.1.0; write-methods 1.0.0 data is read via an in-memory migration (never written back to the data file).",
+  "canonical_version": "1.1.0",
+  "registry": {
+    "type": "object",
+    "required": ["schema_version", "updated", "records"],
+    "properties": {
+      "schema_version": {"const": "1.1.0"},
+      "updated": {"type": ["string", "null"], "format": "date"},
+      "records": {"type": "array", "items": {"$ref": "#/$defs/record"}}
+    }
+  },
+  "$defs": {
+    "record": {
+      "type": "object",
+      "required": [
+        "id", "scope", "category", "severity", "rule", "reason",
+        "evidence", "source", "status", "count", "first_seen", "last_seen"
+      ],
+      "properties": {
+        "id": {"type": "string", "pattern": "^(wrf|wmf|wif)_[0-9a-f]{16}$"},
+        "scope": {"enum": ["skill", "project", "section", "estimator"]},
+        "scope_discriminator": {
+          "description": "Optional 4th scope slot (canonical name 'estimator'). Empty string unless scope requires it (scope=estimator => estimator required)."
+        },
+        "project": {"type": "string"},
+        "section": {"type": "string"},
+        "estimator": {"type": "string"},
+        "category": {"type": "string"},
+        "severity": {"enum": ["revise", "reject"]},
+        "rule": {"type": "string"},
+        "reason": {"type": "string"},
+        "evidence": {"type": "string"},
+        "source": {"type": "string"},
+        "status": {"enum": ["active", "retired"]},
+        "count": {"type": "integer", "minimum": 1},
+        "first_seen": {"type": "string", "format": "date"},
+        "last_seen": {"type": "string", "format": "date"},
+        "benchmark": {"type": "string"},
+        "supersedes": {"type": "array", "items": {"type": "string"}},
+        "prohibited_patterns": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  },
+  "migrations": {
+    "1.0.0_to_1.1.0": {
+      "applies_to": "write-methods/references/feedback-registry.json",
+      "trigger": "registry.schema_version == '1.0.0'",
+      "read_time_only": true,
+      "steps": [
+        {"rename_field": {"from": "design_type", "to": "estimator"}, "value_preserved": true},
+        {"rename_scope_value": {"from": "design_type", "to": "estimator"}},
+        {"set": {"schema_version": "1.1.0"}}
+      ],
+      "semantic_equivalence": "design_type is the 4th scope discriminator slot in 1.0.0; estimator is the same slot in 1.1.0. Only the slot name changes; the value (and therefore the fingerprint input) is byte-identical, so record ids are preserved.",
+      "write_back": "Symmetric: when a legacy skill writes, estimator -> design_type and schema_version -> 1.0.0 so its on-disk shape (and its validator) stays green."
+    }
+  }
+}
