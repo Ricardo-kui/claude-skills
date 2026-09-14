@@ -81,9 +81,12 @@ when_to_use: "用户给一篇完整论文要求整篇蒸馏/整篇学习时；�
 2. **L1 分节蒸馏分发（子代理）**。按用户范围（默认 4 节全跑）以 **2+2 波次并行**分发
    （第一波 intro+theory，完成后再发 methods+results；实测零限流；
    发射前先跑金丝雀探针——见 `references/l1-subagent-protocol.md` 节奏与限流；
-   `--serial` 回退串行，4 个全并行仍禁止）。分发机制与提示词模板见
-   `references/l1-subagent-protocol.md`：Claude Code 用 `Task` 工具（general-purpose），
-   Codex/Kimi Code 用各节 `agents/openai.yaml` 子代理，Cursor/Zcode 按其子代理机制。
+   `--serial` 回退串行，4 个全并行仍禁止）。**分发前跑契约源自检**
+   （`py scripts/check_contract_source.py`，exit≠0 修复后再分发），分发消息落盘
+   `<pdm>/dispatch/<section>.prompt.txt`。分发消息（WHAT 5 行）与分发机制见
+   `references/l1-subagent-protocol.md`：ZCode/Claude Code 用真类型子代理
+   `distill-agents:distill-<section>`（不可用时降级 general-purpose + 一行指针），
+   Codex/Kimi Code 用各节 `agents/openai.yaml` 子代理。
    每个子代理完成后：写自己的 section 文件与 feedback 文件 → 回传 ≤20 行摘要 →
    主循环把 identity/band 合并进 PDM → 更新该节 `status`。**主循环不打开 phase 参考
    文件、语料索引或切片**（这些只在子代理上下文里读，约省 60% 主上下文 fresh input）。

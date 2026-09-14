@@ -63,7 +63,10 @@ skill 管 HOW（L0-L4、PDM、gate、写回）**。提示词只填 4 个槽位�
 2. **SKILL.md 硬约束（#N 规则）改动必须先人审**——C11 教训：随蒸馏 commit 溜入未确认的
    carve-out。
 3. **强制落 `sections/<section>.json`**——PDM 脊柱依赖它，缺失则 L2/L3 无法协调
-   （见 `pdm-schema.md` 已知摩擦②）。无 JSON 契约的节写 yaml profile。
+   （见 `pdm-schema.md` 已知摩擦②）。无 JSON 契约的节写 yaml profile。子代理输出
+   契约（identity 顶层字段 / plan v2 / ≤20 行摘要）唯一源 =
+   `distill-paper-exemplar/references/l1-subagent-protocol.md`「子代理输出契约」节，
+   不在提示词或本文重述（2026-09-14 B 项固化）。
 4. **feedback 是 best-effort**——仅 intro/theory 蒸馏 skill 有 `_update_design_feedback.py`；
    methods/results 缺基础设施，`feedback_ledger.missing` 注明根因，不阻塞 integrated
    （已知摩擦①）。
@@ -72,13 +75,12 @@ skill 管 HOW（L0-L4、PDM、gate、写回）**。提示词只填 4 个槽位�
 6. **`.raw/` 与全文 MD 只读**；PDM 及子文件是唯一写入物。
 7. **子代理模型**：`CLAUDE_CODE_SUBAGENT_MODEL` 须为 `deepseek-v4-flash`（改完需重启会话
    生效；设错则所有 Agent 子任务 400）。
-8. **子代理写回纪律（2026-08-29 固化）**：plan 条目必须执行器 v2 schema
-   （`items:` + block_text 全文内嵌 + index_note），子代理**禁止运行
-   `corpus_writeback.py`**——写回权收归主循环，残项同步 pass 同样禁止
-   （防"手补代理重跑写回 → 重复插入"事故复发）。
+8. **子代理写回纪律（2026-08-29 固化）**——细则见上条唯一源与各节 skill phase-4
+   头部「写回执行权」块；要点一句：写回权收归主循环，子代理与任何手补 pass 均
+   禁止运行写回器。
 9. **写回终验强制（2026-08-29 固化）**：全部子代理退出后跑
-   `scripts/verify_writeback.py`（块正文唯一性 / registry 无双计 / YAML / INDEX 残项
-   → `writeback_residuals.yaml`），FAIL 未处理不得进入 story 卡与清理。
+   `scripts/verify_writeback.py`，FAIL 未处理不得进入 story 卡与清理（细则见
+   SKILL.md L4 步骤，不在本文重述）。
 
 ## 反模式
 

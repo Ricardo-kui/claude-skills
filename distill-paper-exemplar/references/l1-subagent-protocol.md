@@ -5,20 +5,37 @@ L1 的四个分节蒸馏在**子代理**里跑，主循环只收紧凑摘要。�
 PDM + 各节摘要，实测可降主上下文 fresh input 约 60%（此前四节全部载荷累积在同一窗口，
 cache_read 是 fresh input 的 3.5 倍）。
 
-## 子代理提示词模板
+## 分发消息（WHAT 槽位，2026-09-14 B 项瘦身起）
+
+分发消息只填任务参数，**不重述输出契约**——契约由真类型 agent 定义 spawn 时自举加载
+（见下节「子代理输出契约」）。缺省 5 行：
 
 ```
-<skill 名> <切片路径> --output-format=json --pdm <pdm路径>
-按该 skill 的 phase 流程蒸馏。输出契约：
-1. 把 section JSON 写入 <pdm>/sections/<section>.json，feedback 写入
-   <pdm>/feedback/<section>.feedback.yaml（skill 无该基础设施时注明缺失）。
+<section：introduction|theory|methods|results>
+切片：<sections/<section>.md 绝对路径；extended-intro 时注明 embedded:true；多切片逗号分隔>
+PDM：<根 yaml 绝对路径>
+论文语境：<citekey> / <期刊 年 卷期> / 首次蒸馏|gap-fill（gap-fill 注明：查既有变体，优先 EXTEND）
+学习焦点与约束（可选）：<用户指定的范围/深度/n-a 节>
+```
+
+降级分发（真类型不可用时）：subagent_type 用 general-purpose，消息首行加一句
+「先 Read `<agent 定义绝对路径>`，将其作为你的系统提示词完整执行」——其余不变。
+**分发 tee**：每次分发消息落盘 `<pdm>/dispatch/<section>.prompt.txt`（事后审计与
+契约漂移检查的样本，`--clean` 随工作目录清理）。
+
+## 子代理输出契约（HOW · 经 agent 定义自举加载，分发消息不再重述）
+
+> 本节由 `distill-agents` 插件四个 agent 定义 spawn 时 Read 加载。**改契约只改本节，
+> 禁止把条款回填进分发消息模板**（2026-09-14 固化：分发消息只填 WHAT）。
+
+1. 把 section JSON 写入 `<pdm>/sections/<section>.json`，feedback 写入
+   `<pdm>/feedback/<section>.feedback.yaml`（skill 无该基础设施时注明缺失）。
    section JSON 必须含顶层 `identity: {...}`（intro=gap_type+contribution_dimension、
    theory=theory_building_type、methods=design_family、results=estimator_family）——
    这是盘面验收字段，只在摘要里报 identity 而不落 json = 该节未完成
-2. 写回候选停在 writeback plan 产出。plan 条目必须是执行器 v2 schema：
-   items: 下每项含 name / dedup.verdict / anchor.file / block_text（全文内嵌，
-   {NEXT} 作变体号占位）/ index_note（带 {NEXT}）。缺 block_text 或 index_note
-   的条目在子代理内自查补齐后再返回——主循环不返工。
+2. 写回候选停在 writeback plan 产出；plan 字段结构以本文末尾
+   「plan 条目字段契约（执行器 v2）」为唯一权威，不在此重述。缺 block_text 或
+   index_note 的条目在子代理内自查补齐后再返回——主循环不返工。
    **子代理一律不得运行 corpus_writeback.py**（写回权收归主循环；gate ① 批量
    呈审或已授权的 --auto-write 直写均由主循环执行）
 3. 最终回复只允许 ≤20 行紧凑摘要：
@@ -28,7 +45,6 @@ cache_read 是 fresh input 的 3.5 倍）。
    - feedback_path / section_json_path
    - 任何 flag
 不得把 phase 报告全文、DNA profile 或语料文件内容贴进回复。
-```
 
 固化依据（2026-08-29 五连跑教训）：discipline 2 的前半句根治
 "plan 到达主循环才发现无 block_text → 全 SKIP → SendMessage 重发"的返工环
@@ -39,13 +55,17 @@ cache_read 是 fresh input 的 3.5 倍）。
 
 | 工具 | 分发机制 |
 |---|---|
-| Claude Code | `Task` 工具（subagent_type: general-purpose），prompt 用上方模板 |
+| Claude Code / ZCode | 真类型子代理 `distill-agents:distill-<section>`（本地插件 0.1.1+，定义自读本协议与分节 SKILL.md）；真类型不可用按降级分发处理 |
 | Codex / Kimi Code | 各节 `agents/openai.yaml` 定义的子代理（default_prompt 已含 PDM 输出契约） |
-| Cursor / Zcode | 按其各自的子代理/task 机制，prompt 用上方模板 |
+| Cursor | 按其子代理/task 机制；无 agent 定义时按降级分发处理 |
 
 ## 主循环纪律
 
 - 主循环**只读**：PDM 根文件、各节 `sections/<section>.json`、子代理的 ≤20 行摘要。
+- **契约源自检（2026-09-14 起）**：本篇首次分发前跑
+  `py scripts/check_contract_source.py`——exit≠0（契约源漂移/缺失/冲突）先修复再
+  分发，带病分发 = 协议违约；分发消息 tee 落盘后用
+  `py scripts/check_contract_source.py --check-dispatch <pdm根yaml或目录>` 扫描。
 - **PDM 根变更唯一入口 = `scripts/pdm_tool.py`（2026-09-14，问题 1 落地）**：
   合并 identity/band = `merge-section`；gate 与状态迁移 = `set-gate`/`set-paper`/
   `set-story`；L2 交叉 = `merge-cross`；失败记录 = `fail-section`；续跑断点 = `show`；
