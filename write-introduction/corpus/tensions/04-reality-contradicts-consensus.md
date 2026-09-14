@@ -319,6 +319,34 @@ source: Manually curated from MVP30 narrative_analysis files
 
 <!-- wb:gulati_2007_tent_poles:tension_definitional_paradox_unmasking -->
 
+
+### 变体 M: 同一关系正负证据 + 廉价消解双出口预先封堵型（ridge_aime_white_2013 型）
+
+> 论证角色：Framing（在两传统对立呈现后、整合宣告前，替读者说出并封堵"关系无意义/纯情境权变"两种保守读法，为整合路线清场）
+
+**验证状态**: EMERGING（单篇来源；仅作 section_variant）
+
+**模板**:
+> "Research on [focal relation] supports two opposing conclusions. Some studies, particularly within [tradition A], find that [X] is [positively] related to [Y] ([citations]). However, [X] is also found to have a [negative] effect on [Y] by research primarily within [tradition B] ([citations]). Given this inconsistency in findings, it could be concluded that [the link between X and Y] is either not meaningful or is contingent on [context] ([citations for the deflationary camp]). While these views seem plausible, the question still raises several theoretical and empirical issues that require additional research attention. First, [evidence-base issue, e.g., scarce large-sample evidence]. Second, researchers do not seem to have addressed [core propositions of the underlying theories] that point to an integrative rather than competitive utilization of [theory A] and [theory B]."
+
+**来源**: Ridge, Aime & White (2013), *Strategic Management Journal*, Introduction, P1–P2.
+
+**原文锚定**:
+> "Given this inconsistency in findings, it could be concluded that the overall link between executive pay disparity and firm performance is either not meaningful or is contingent on the organizational context (…). While these views seem plausible, the question of the general relationship between pay disparity and firm performance still raises several theoretical and empirical issues that require additional research attention."
+
+**关键特征**:
+- 对立发现按学科传统标签对称呈现（economics and finance vs organizational theory and management）后，不直接跳整合：先替读者说出该领域两种默认廉价消解——"关系无意义（nil）"与"纯情境权变（contingency）"
+- "While these views seem plausible" 让步句是封堵的礼貌外壳：承认两种读法合理，随即以"仍有未处理的理论与经验议题"转向——避免 polemical 也避免被保守读法收编
+- 第二重缺口落在"底层理论的核心命题（similarity hypothesis、size of the prize）尚未被使用"——把整合定性为理论内在要求而非折中立场
+- 区别变体 K（正负证据→共存问句直进）：多一个"预先封堵廉价出口"节拍；区别 14-debate-unresolved 变体 B（两文献流竞争预测）：封堵的是"读者 conclusions"而非又一组竞争预测
+
+**适用**: R3 对立机制 × Mechanism；两传统对立且该领域存在"算了/权变化"两种默认退路时；先封退路再上整合，防止研究被读成又一篇权变研究
+
+**禁忌**: 两种廉价消解必须真实存在且最好有引文簇支撑（本文为 contingency 读法引 5 篇：Bloom & Michel 2002; Henderson & Fredrickson 2001; Pfeffer & Langton 1993; Siegel & Hambrick 2005; Wright et al. 2005）；让步句不可省略——直接否定两种读法会显得 polemical；封堵后必须真的交付整合，否则沦为空头预设
+
+<!-- wb:ridge_aime_white_2013_smj:tension_deflationary_exit_preemption -->
+
+
 ## 组装规则
 
 ### 必须配对

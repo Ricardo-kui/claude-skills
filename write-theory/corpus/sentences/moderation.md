@@ -228,6 +228,49 @@ characteristics might moderate the impact of the [event] characteristics on [cho
 
 ---
 
+
+### 预埋调节+实证延后声明句（Deferred Moderation Flag，Lu et al. 2022 MS 型）
+
+> 论证角色：Framing——理论节预埋一个不立正式假设的调节变量并显式把检验延后到实证节的定位句式
+
+<!--
+pattern_id: deferred_moderation_empirical_deferral
+build_type: 跨类型（调节引入策略）
+source_papers: ["lu_et_al_2022_frenemies_corporate_advertising"]
+confidence: medium
+status: EMERGING（单源，gate ① 裁决）
+-->
+
+**适用**: 存在一个理论上讲得通、但作者不宜给出正式方向假设的 moderator（证据不足、方向依赖情境、或作为横截面变化留给实证）——用一小段预埋：调节直觉 + 替代方向情景 + 显式延后声明。
+
+**骨架**:
+```
+Theoretically, it is also worth noting that the impact of [X] on [Y] could be
+moderated by [W]. If [scenario where W reverses/weakens the baseline], the
+[focal actors] might not [baseline behavior] or may even [alternative behavior].
+We empirically explore such a moderating effect of [W] in the later section.
+```
+
+**功能**: 三步——① "it is also worth noting" 低姿态引入（非 "We also examine"，避免事后添加感）；② 用一个具体情景论证 W 为何可能改变方向（给出替代预测而非仅说 "may moderate"）；③ "empirically explore ... in the later section" 显式签约——读者知道该判断将在实证节被检验。
+
+**原文锚点** (Lu, Shen, Wang & Zhang 2022, Management Science, §2.2 尾段):
+> "Theoretically, it is also worth noting that the impact of common ownership on advertising could be moderated by the competitiveness among the common-owned firms in the industry. ... We empirically explore such a moderating effect of between-firm competitiveness on advertising reduction in the later section."
+
+**与邻近策略的分工**:
+
+| 本句式 | 理论嵌入型（wang2024，上文小节） | 标准调节引入 |
+|--------|---------------------------|-------------|
+| W 不立假设，延后实证检验 | W 是核心理论子假设的具体化，立假设 | W 立正式调节假设 |
+| 适用：方向不定/证据不足 | 适用：理论有内在次级结构 | 适用：证据充分、方向明确 |
+
+**注意事项**:
+- 一篇论文至多一个 deferred moderation；多个会显得理论不完整（该假设化的就该假设化）
+- 延后承诺必须兑现（Results/Discussion 要有对应检验），否则成为 dangling flag
+- 替代方向情景要具体（本篇：A、B 均为小份额时可能联合对抗大对手），不能只说 "may vary"
+**反模式**: 用此句式包装本应正式假设化的核心边界条件（审稿人会要求补假设）。
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:deferred_moderation_empirical_deferral_sentence -->
+
 ## 跨层调节前置声明
 
 ```
@@ -817,6 +860,7 @@ positive (ability-informed) effect of [signal] on [valuation]: in all [condition
 - 声明不变后又让该分量驱动任何几何预测 → 自相矛盾。
 
 ---
+<!-- wb:Fini_Jourdan_Perkmann_2017_AMJ_Social_Valuation:legacy_moderation_选择性组件不变性声明SelectiveC -->
 
 ## 外部部分替代衰减（External Partial-Substitute Attenuation）
 
@@ -877,6 +921,7 @@ confidence: emerging
 status: needs_cross_paper_validation
 story_fidelity: section_variant
 -->
+<!-- wb:Ridge_Hill_Ingram_Kolomeitsev_Worrell_2024_AMJ:legacy_moderation_外部部分替代衰减ExternalPart -->
 
 ## Mitigation via Manifestation-Switch（机制切换型缓解交互）
 

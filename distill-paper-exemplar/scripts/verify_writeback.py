@@ -184,6 +184,15 @@ def main() -> int:
         schema = corpus_schema(corpus_root)
         for item in plan.get("items", []):
             name = item["name"]
+            # SKIP-verdict items are REFUSED by the executor by design (dedup
+            # gate: the corpus already covers them) — they have block_text and
+            # a target but must never be applied, so V1/V2/V3b/residuals do
+            # not apply either. (2026-09-13 Lu run: the residual generator
+            # treated a refused SKIP as "body MISSING" and hinted a sync pass
+            # that would have violated the dedup gate.)
+            if (item.get("dedup") or {}).get("verdict", "") == "SKIP":
+                add("SKIP", "V1", f"{section}:{name} — dedup verdict SKIP; never applied")
+                continue
             block_text = item.get("block_text")
             target = cw.resolve_target(corpus_root, item,
                                        item.get("file_override"))
@@ -232,7 +241,6 @@ def main() -> int:
                     _skip_stem_lookup = True
                 else:
                     _skip_stem_lookup = False
-                found = None if _skip_stem_lookup else find_registry_entry(rtext, target.stem)
                 found = find_registry_entry(rtext, target.stem)
                 if found is None:
                     # paper-level schema fallback (write-theory: entry keyed by citekey)
@@ -310,6 +318,43 @@ def main() -> int:
             add("PASS", "V4", f"registry YAML valid: {Path(rp).name}")
         except yaml.YAMLError as e:
             add("FAIL", "V4", f"registry YAML INVALID: {rp}: {e}")
+
+    # V3-drift (S6 convergence): the derived views must already be in sync —
+    # a rebuild_apply dry-run over each involved corpus must plan ZERO changes.
+    # The writeback apply hook runs the rebuild before verify, so a non-empty
+    # plan here means the views did not converge (or a later hand-edit drifted).
+    import rebuild_apply as ra
+    plan_targets: dict[str, tuple[str, str]] = {}
+    for _, plan in plans:
+        s = str(plan.get("section") or "")
+        if s in ra.SEGMENT_KEYS and s not in plan_targets:
+            plan_targets[s] = (str(plan.get("registry") or ""),
+                               str(plan.get("corpus_root") or ""))
+    for ck, (rp, cr) in plan_targets.items():
+        try:
+            notes = ra.apply_corpus(ck, dry_run=True,
+                                    registry_path=rp or None,
+                                    corpus_root=cr or None)
+        except Exception as e:  # noqa: BLE001
+            add("FAIL", "V3-drift", f"{ck}: rebuild dry-run crashed: {e}")
+            continue
+        if notes:
+            for n in notes:
+                residuals.append({"type": "view_drift", "section": ck,
+                                  "hint": str(n)})
+            add("FAIL", "V3-drift",
+                f"{ck}: {len(notes)} planned rebuild change(s) — views not "
+                f"converged (first: {notes[0]})")
+        else:
+            add("PASS", "V3-drift", f"{ck}: derived views converged (0 planned changes)")
+    # S5 observability: how the last dry-run planning pass attributed status
+    # decisions (override / policy / ladder / never-demote). Informational —
+    # the hard gate remains the zero-planned-change V3-drift check above.
+    try:
+        add("INFO", "V3-drift",
+            "status " + ra.attribution_line().replace("STATUS ATTRIBUTION: ", "attribution: "))
+    except Exception:  # noqa: BLE001 — attribution is best-effort observability
+        pass
 
     n_pass = sum(1 for s, _, _ in checks if s == "PASS")
     n_fail = sum(1 for s, _, _ in checks if s == "FAIL")

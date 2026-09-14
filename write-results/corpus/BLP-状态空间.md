@@ -73,6 +73,7 @@ updated: 2026-08-05
 
 ---
 
+<!-- wb:liu_shankar2015:legacy_BLP-状态空间_1 -->
 ### 变体 2: R3 — 研究问题驱动的状态空间参数解读（initial + σ → recovered path → 理论）
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
@@ -91,6 +92,7 @@ updated: 2026-08-05
 
 ---
 
+<!-- wb:liu_shankar2015:legacy_BLP-状态空间_2 -->
 ### 变体 3: R3 — 双层级间接通道与品牌强度异质性（nameplate vs parent; strong vs weak）
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
@@ -107,6 +109,7 @@ updated: 2026-08-05
 
 ---
 
+<!-- wb:liu_shankar2015:legacy_BLP-状态空间_3 -->
 ### 变体 4: R8 — 反事实拟合验证 + 多通道长期损失分解
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
@@ -125,6 +128,7 @@ updated: 2026-08-05
 
 ---
 
+<!-- wb:liu_shankar2015:legacy_BLP-状态空间_4 -->
 ### 变体 5: R8 — 非最优性政策模拟（scenario ladder + 验证期 what-if）
 
 **来源论文**: Liu & Shankar 2015 (Management Science)
@@ -143,6 +147,7 @@ updated: 2026-08-05
 
 ---
 
+<!-- wb:liu_shankar2015:legacy_BLP-状态空间_5 -->
 ## 反模式（本篇排查）
 
 | 反模式 | 本篇表现 | 处理 |

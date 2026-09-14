@@ -1,12 +1,14 @@
+
+# === DERIVED: rebuilt by rebuild_views.py — do not hand-edit ===
 meta:
-  last_updated: '2026-09-06d'
+  last_updated: 2026-09-06d
   total_design_types: 23
   batches_processed: 24
   last_batch: batch_41_gulati_ajs1999 + batch_37_gulati2007_residual_sync
-  latest_batch_note: '2026-09-06f 残余复核：非线性模型 变体 5/6（Pfarrer, Pollock & Rindova 2010）正文验证状态 2 条翻转（速查表行已翻转）；定性过程研究.md 主骨架注记同步（变体 6 Haunschild 仍 EMERGING）。2026-09-06d 用户升级裁定（expert_audit_override 全量生效）：Pollock/Westphal/Gulati 系论文的methods 蒸馏单源即 VERIFIED。registry：by_source_paper westphal_bednar_2005_asq、gulati_westphal_1999 EMERGING→VERIFIED；by_design_type 定性过程研究 EMERGING→VERIFIED、common-method-bias-prevention 补 status: VERIFIED。语料 .md 随动（74 处）：INDEX.md 变体 6/7/8/12/13(gulati2005)、5/8/9(网络效应)、2/3(多行为者)、85-88(gulati_2007) 行；micro-templates/INDEX.md 变体 B/C/D/E 行；面板数据-OLS（Pfarrer 变体 11/74-77、Higgins&Gulati 变体 80-84、Gulati&Sytch 变体 85-88、ZW2004 交叉引用）；事件历史+事件研究（Gulati-Lavie-Singh 变体 6、Pfarrer 变体 5、zajac_westphal_2004 全部 7 个 pattern 块含 250 行旧注修正）；动态面板-GMM/同时方程（Pollock 2015 全部行+验证状态）；多行为者设计变体 2；定性过程研究变体 1-5（含交叉表与诚实边界注）；实证对象构建变体 1/4/7/8/10；文本构念测量变体 20/21；非线性模型变体 5/6/22；两阶段模型变体 12/13；同伴效应-网络效应变体 4/8/9 与 M3 表行；manual-coding-validation 变体 C。前批：batch_41_gulati_ajs1999 + batch_37_gulati2007_residual_sync'
+  latest_batch_note: "2026-09-06f 残余复核：非线性模型 变体 5/6（Pfarrer, Pollock & Rindova 2010）正文验证状态 2 条翻转（速查表行已翻转）；定性过程研究.md 主骨架注记同步（变体 6 Haunschild 仍 EMERGING）。2026-09-06d 用户升级裁定（expert_audit_override 全量生效）：Pollock/Westphal/Gulati 系论文的methods 蒸馏单源即 VERIFIED。registry：by_source_paper westphal_bednar_2005_asq、gulati_westphal_1999 EMERGING→VERIFIED；by_design_type 定性过程研究 EMERGING→VERIFIED、common-method-bias-prevention 补 status: VERIFIED。语料 .md 随动（74 处）：INDEX.md 变体 6/7/8/12/13(gulati2005)、5/8/9(网络效应)、2/3(多行为者)、85-88(gulati_2007) 行；micro-templates/INDEX.md 变体 B/C/D/E 行；面板数据-OLS（Pfarrer 变体 11/74-77、Higgins&Gulati 变体 80-84、Gulati&Sytch 变体 85-88、ZW2004 交叉引用）；事件历史+事件研究（Gulati-Lavie-Singh 变体 6、Pfarrer 变体 5、zajac_westphal_2004 全部 7 个 pattern 块含 250 行旧注修正）；动态面板-GMM/同时方程（Pollock 2015 全部行+验证状态）；多行为者设计变体 2；定性过程研究变体 1-5（含交叉表与诚实边界注）；实证对象构建变体 1/4/7/8/10；文本构念测量变体 20/21；非线性模型变体 5/6/22；两阶段模型变体 12/13；同伴效应-网络效应变体 4/8/9 与 M3 表行；manual-coding-validation 变体 C。前批：batch_41_gulati_ajs1999 + batch_37_gulati2007_residual_sync"
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
-    granularity: per design_type（对应 corpus/[设计类型].md 文件）
+    granularity: "per design_type（对应 corpus/[设计类型].md 文件）"
     rationale: 仅汇总指向具体设计类型变体的 corpus 质量信号；详细用户反馈、项目规则与旧建议覆盖关系以 references/feedback-registry.json 为准
     fields:
       revise: 用户对该设计类型产出的不满/需大改的批评次数（Claude 在 write-methods 会话中自动登记）
@@ -15,554 +17,518 @@ meta:
       common_revise_reasons: 最近批评要点（去重，最多 8 条——精炼时的直接依据）
     signals:
       gap: slots_covered 缺口（静态，不依赖登记）→ 蒸馏优先（ADD 候选）
-      critique_heavy: revise + reject >= 2 → 变体产出不可用，精炼优先（REPLACE/EXTEND 候选）
+      critique_heavy: "revise + reject >= 2 → 变体产出不可用，精炼优先（REPLACE/EXTEND 候选）"
       quiet: revise + reject == 0 → 正常蒸馏，无额外优先级
     non_signals:
-    - 不登记 accepted/validated（用户不报告满意，登记必然为零）
-    - 不设 too_easy/淘汰（变体是长期资产；频繁使用且好用应提升路由权重，而非降级）
+      - 不登记 accepted/validated（用户不报告满意，登记必然为零）
+      - 不设 too_easy/淘汰（变体是长期资产；频繁使用且好用应提升路由权重，而非降级）
     canonical_feedback: references/feedback-registry.json
     record_path: 先按 references/feedback-protocol.md 登记详细反馈；只有明确指向某设计类型变体时，才由 distill-methods-exemplar 后续同步 revise/reject 聚合计数
-  source: corpus INDEX.md + product_recall_cross_validation + cutolo2024_jm_text_count + falchetti2022_smj_experiment + lashley_pollock2020_asq_qualitative_process
-    + chung_low_rust_2022_jams_executive_confidence_myopia + ilicic_brennan_2026_jm_political_ideology_addictive_products
-    + kim_lee_2026_putting_a_price_on_mission_smj + bamberger_homburg_wielgos_2021_jm_backfill + lee_wu_bednar_orsc_18968_distill
-    + reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc_distill + moon_tuli_mukherjee_2023_jm + schumacher_keck_tang_2020_smj
-    + kashmiri_nicol_arora_2017_jams + bendig_hensellek_schulte_2024_etp + lee_park_2024_smj + hoffmann_cheong_phan_zurbruegg2024_jm_redistill
-    + desjardine_li_shi_2025_amj_distill + ridge_hill_ingram_kolomeitsev_worrell_2024_amj_distill     + fini_jourdan_perkmann_2017_amj_distill
-    + chen_ganesan_liu_2009_jm_distill + post_lokshin_boone_2022_amj_distill
+  source: "corpus INDEX.md + product_recall_cross_validation + cutolo2024_jm_text_count + falchetti2022_smj_experiment + lashley_pollock2020_asq_qualitative_process + chung_low_rust_2022_jams_executive_confidence_myopia + ilicic_brennan_2026_jm_political_ideology_addictive_products + kim_lee_2026_putting_a_price_on_mission_smj + bamberger_homburg_wielgos_2021_jm_backfill + lee_wu_bednar_orsc_18968_distill + reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc_distill + moon_tuli_mukherjee_2023_jm + schumacher_keck_tang_2020_smj + kashmiri_nicol_arora_2017_jams + bendig_hensellek_schulte_2024_etp + lee_park_2024_smj + hoffmann_cheong_phan_zurbruegg2024_jm_redistill + desjardine_li_shi_2025_amj_distill + ridge_hill_ingram_kolomeitsev_worrell_2024_amj_distill     + fini_jourdan_perkmann_2017_amj_distill + chen_ganesan_liu_2009_jm_distill + post_lokshin_boone_2022_amj_distill"
 evidence:
   by_source_paper:
     westphal_bednar_2005_asq:
       journal: Administrative Science Quarterly
-      title: Pluralistic Ignorance in Corporate Boards and Firms' Strategic Persistence in Response to Low Firm Performance
+      title: "Pluralistic Ignorance in Corporate Boards and Firms' Strategic Persistence in Response to Low Firm Performance"
       status: VERIFIED
       verification_basis: "user_designation (2026-09-06: 用户升级裁定——Westphal 系单源即 VERIFIED；覆盖 2026-08-29 轻量蒸馏裁决，methods 槽位证据一并生效)"
       design_types:
-      - 调查-组级聚合
+        - 调查-组级聚合
+        - 多行为者设计
       slots_covered:
-      - M1
-      - M8
+        - M1
+        - M8
       note: "浅层蒸馏（用户裁决 2005 年老论文 methods 简化）。3 个微模板写回：组级聚合辩护（r_wg/ICC+consensus composition → 多行为者设计 变体2）、非应答 K-S+Heckman 辩护链（robustness-foreshadowing 样本选择节）、样本框三理由枚举（funnel-rhythm 起始总体节）。2005 年代特有写法（alpha-only、available-from-authors、75%阈值无敏感性）已标 era_flags 不迁移。"
     lee_park_2024_smj:
       journal: Strategic Management Journal
-      title: Giving up learning from failures? An examination of learning from one's own failures in the context of heart
-        surgeons
+      title: "Giving up learning from failures? An examination of learning from one's own failures in the context of heart surgeons"
       status: VERIFIED
       verification_basis: user_expert_audit
       design_types:
-      - 面板数据-OLS
-      - 非线性模型
+        - 面板数据-OLS
+        - 非线性模型
       slots_covered:
-      - M1
-      - M2
-      - M3
-      - M4
-      - M5
-      - M6
-      - M7
-      - M8
-      note: User-audited canonical exemplar for U/inverted-U Methods writing. Bounded outcome motivates fractional logit;
-        the curve-support contract predeclares endpoint slopes plus an interior turning point, and turning-point-location
-        moderation is adjudicated by condition-specific vertices and a direct Wald equality test. The formulas define the
-        narrative estimand rather than create a software tutorial. Use turning point/vertex, not inflection point.
+        - M1
+        - M2
+        - M3
+        - M4
+        - M5
+        - M6
+        - M7
+        - M8
+      note: "User-audited canonical exemplar for U/inverted-U Methods writing. Bounded outcome motivates fractional logit; the curve-support contract predeclares endpoint slopes plus an interior turning point, and turning-point-location moderation is adjudicated by condition-specific vertices and a direct Wald equality test. The formulas define the narrative estimand rather than create a software tutorial. Use turning point/vertex, not inflection point."
     bendig_hensellek_schulte_2024_etp:
       journal: Entrepreneurship Theory and Practice
-      title: Beneficial, Harmful, or Both? Effects of Corporate Venture Capital and Alliance Activity on Product Recalls
+      title: "Beneficial, Harmful, or Both? Effects of Corporate Venture Capital and Alliance Activity on Product Recalls"
       status: VERIFIED
       verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       design_types:
-      - 面板数据-OLS
-      - 非线性模型
+        - 面板数据-OLS
+        - 非线性模型
       slots_covered:
-      - M1
-      - M2
-      - M3
-      - M4
-      - M5
-      - M7
-      - M8
-      - M9
-      note: Binomial-logit GEE with exchangeable correlation and robust SE is justified by within-firm correlation, retention
-        of all-zero panels, and heteroskedasticity. The curve test requires quadratic sign, opposite endpoint slopes, turning
-        point, and Fieller CI. Lagging and untabulated industry-IV checks mitigate but do not resolve endogeneity.
+        - M1
+        - M2
+        - M3
+        - M4
+        - M5
+        - M7
+        - M8
+        - M9
+      note: "Binomial-logit GEE with exchangeable correlation and robust SE is justified by within-firm correlation, retention of all-zero panels, and heteroskedasticity. The curve test requires quadratic sign, opposite endpoint slopes, turning point, and Fieller CI. Lagging and untabulated industry-IV checks mitigate but do not resolve endogeneity."
     kashmiri_nicol_arora_2017_jams:
       journal: Journal of the Academy of Marketing Science
-      title: 'Me, myself, and I: influence of CEO narcissism on firms'' innovation strategy and the likelihood of product-harm
-        crises'
+      title: "Me, myself, and I: influence of CEO narcissism on firms' innovation strategy and the likelihood of product-harm crises"
       status: VERIFIED
       verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       design_types:
-      - 面板数据-OLS
-      - 非线性模型
-      - 文本构念测量
+        - 面板数据-OLS
+        - 非线性模型
+        - 文本构念测量
       micro_templates:
-      - executive-confidence-operationalization
-      - model-selection-comparison
+        - executive-confidence-operationalization
+        - model-selection-comparison
       slots_covered:
-      - M2
-      - M3
-      - M4
-      - M7
-      - M8
-      note: Four-indicator archival CEO-narcissism composite with succession-year exclusion; regulatory product-harm indicator
-        explicitly bounded away from recall timing/strategy/severity; one theory uses outcome-specific pooled OLS, RE negative
-        binomial, fractional logit, and RE logit. Long-tenure sample restriction creates survivorship/tenure-selection risk,
-        and null predictor regressions do not establish exogeneity.
+        - M2
+        - M3
+        - M4
+        - M7
+        - M8
+      note: "Four-indicator archival CEO-narcissism composite with succession-year exclusion; regulatory product-harm indicator explicitly bounded away from recall timing/strategy/severity; one theory uses outcome-specific pooled OLS, RE negative binomial, fractional logit, and RE logit. Long-tenure sample restriction creates survivorship/tenure-selection risk, and null predictor regressions do not establish exogeneity."
     schumacher_keck_tang_2020_smj:
       journal: Strategic Management Journal
-      title: 'Biased interpretation of performance feedback: The role of CEO overconfidence'
+      title: "Biased interpretation of performance feedback: The role of CEO overconfidence"
       status: EMERGING (1p)
       design_types:
-      - 面板数据-OLS
+        - 面板数据-OLS
       micro_templates:
-      - executive-confidence-operationalization
+        - executive-confidence-operationalization
       slots_covered:
-      - M2
-      - M4
-      - M8
-      note: Nonoverlapping first-three-year trait formation window and subsequent outcome window; media and option proxies
-        provide method-heterogeneous convergence but do not establish construct purity or exogeneity.
+        - M2
+        - M4
+        - M8
+      note: Nonoverlapping first-three-year trait formation window and subsequent outcome window; media and option proxies provide method-heterogeneous convergence but do not establish construct purity or exogeneity.
     moon_tuli_mukherjee_2023_jm:
       journal: Journal of Marketing
       title: Does Disclosure of Advertising Spending Help Investors and Analysts?
       status: EMERGING (1p)
       design_types:
-      - IV-2SLS
-      - 两阶段模型
+        - IV-2SLS
+        - 两阶段模型
       slots_covered:
-      - M7
-      - M8
-      note: peer-IV proximity gradient + multi-endogeneity correction ledger (binary choice, continuous spending, mediator,
-        coverage selection)
+        - M7
+        - M8
+      note: "peer-IV proximity gradient + multi-endogeneity correction ledger (binary choice, continuous spending, mediator, coverage selection)"
     reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc:
       journal: Organization Science
-      title: 'The Elephant and Donkey in the Room: Time-Varying Effects of Political Dissimilarity on Social Interactions
-        at Work During U.S. Elections'
+      title: "The Elephant and Donkey in the Room: Time-Varying Effects of Political Dissimilarity on Social Interactions at Work During U.S. Elections"
       status: EMERGING (1p)
       design_types:
-      - 多研究
-      - 事件历史+事件研究
+        - 多研究
+        - 事件历史+事件研究
       slots_covered:
-      - M2
-      - M7
-      - M8
-      - M9
-      note: Three-study constructive replication; event-centered DGCM separates pretrend, election transition, and postevent
-        trend. Study 2 randomizes political dissimilarity but not election timing; Study 3 has one preevent observation and
-        therefore cannot estimate a pretrend.
+        - M2
+        - M7
+        - M8
+        - M9
+      note: "Three-study constructive replication; event-centered DGCM separates pretrend, election transition, and postevent trend. Study 2 randomizes political dissimilarity but not election timing; Study 3 has one preevent observation and therefore cannot estimate a pretrend."
     lee_wu_bednar_orsc_18968:
       journal: Organization Science
-      title: 'When the Headlines Fade, the Story Goes On: Investigating How Local Newspaper Decline Affects Firm CSR Engagement'
+      title: "When the Headlines Fade, the Story Goes On: Investigating How Local Newspaper Decline Affects Firm CSR Engagement"
       status: EMERGING (1p)
       design_types:
-      - 自然实验-DiD
+        - 自然实验-DiD
       slots_covered:
-      - M2
-      - M7
-      - M8
-      note: County-level staggered newspaper declines mapped to headquartered firms; signed CSR strengths-minus-concerns motivates
-        linear FE. TWFE+Bacon retained only as a legacy diagnostic, with modern staggered-DiD and HonestDiD requirements added
-        as boundaries.
+        - M2
+        - M7
+        - M8
+      note: "County-level staggered newspaper declines mapped to headquartered firms; signed CSR strengths-minus-concerns motivates linear FE. TWFE+Bacon retained only as a legacy diagnostic, with modern staggered-DiD and HonestDiD requirements added as boundaries."
     hoffmann_cheong_phan_zurbruegg2024_jm:
       journal: Journal of Marketing
-      title: So, Sue Me…If You Can! How Legal Changes Diminishing Managers' Risk of Being Held Liable by Shareholders Affect
-        Firms' Likelihood to Recall Products
+      title: "So, Sue Me…If You Can! How Legal Changes Diminishing Managers' Risk of Being Held Liable by Shareholders Affect Firms' Likelihood to Recall Products"
       status: VERIFIED
       verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       design_types:
-      - 自然实验-DiD
-      - 非线性模型
-      - 文本构念测量
-      - 推断二元结果
+        - 自然实验-DiD
+        - 非线性模型
+        - 文本构念测量
+        - 推断二元结果
       slots_covered:
-      - M1
-      - M2
-      - M3
-      - M5
-      - M6
-      - M7
-      - M8
+        - M1
+        - M2
+        - M3
+        - M5
+        - M6
+        - M7
+        - M8
       story_fidelity: section_variant
-      note: 'Staggered UD-law DiD + conditional logit with year/industry FE (not firm FE; collinearity from always-zero recall
-        firms). Identification stack: model-free means, external manipulation check, Pre(-3/-2/-1) pretrends, 1000x state-reassignment
-        placebo. Discretion subsample excludes injury/death recalls. Text moderator via Zachary et al. dictionary on 10-K.
-        Prior slot variants incorrectly cited firm FE and incidental parameters — corrected in redistill.'
+      note: "Staggered UD-law DiD + conditional logit with year/industry FE (not firm FE; collinearity from always-zero recall firms). Identification stack: model-free means, external manipulation check, Pre(-3/-2/-1) pretrends, 1000x state-reassignment placebo. Discretion subsample excludes injury/death recalls. Text moderator via Zachary et al. dictionary on 10-K. Prior slot variants incorrectly cited firm FE and incidental parameters — corrected in redistill."
     liu_shankar2015:
       journal: Management Science
       title: The Dynamic Impact of Product-Harm Crises on Brand Preference and Advertising Effectiveness
       status: VERIFIED
       verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       design_types:
-      - 结构需求-state-space
-      - 面板数据-OLS
-      - 两阶段模型
+        - 结构需求-state-space
+        - 面板数据-OLS
+        - 两阶段模型
       slots_covered:
-      - M2
-      - M3
-      - M4
-      - M7
-      - M8
+        - M2
+        - M3
+        - M4
+        - M7
+        - M8
       story_fidelity: section_variant
-      note: BLP random-coefficient demand + Kalman state-space for latent brand preference and time-varying ad/recall coefficients;
-        GMM. Preliminary reduced-form bridges to structural model. Recall exogeneity via NHTSA mandate; price BLP-IV, advertising
-        intercept/slope CF, cross-category media CF. Complements survival/time-to-recall recall corpus on demand-side dynamics.
+      note: "BLP random-coefficient demand + Kalman state-space for latent brand preference and time-varying ad/recall coefficients; GMM. Preliminary reduced-form bridges to structural model. Recall exogeneity via NHTSA mandate; price BLP-IV, advertising intercept/slope CF, cross-category media CF. Complements survival/time-to-recall recall corpus on demand-side dynamics."
     bamberger_homburg_wielgos_2021_wage_inequality_jm:
       journal: Journal of Marketing
-      title: 'Wage Inequality: Its Impact on Customer Satisfaction and Firm Performance'
+      title: "Wage Inequality: Its Impact on Customer Satisfaction and Firm Performance"
       status: EMERGING (1p)
       design_types:
-      - 多研究
-      - SEM
-      - 面板数据-OLS
+        - 多研究
+        - SEM
+        - 面板数据-OLS
       slots_covered:
-      - M2
-      - M7
-      - M8
-      - M9
-      note: B2B key-informant SEM + B2C external panel FE; Study 2 forms a limitation→repair chain for measurement independence,
-        contextual breadth, and time horizon.
+        - M2
+        - M7
+        - M8
+        - M9
+      note: "B2B key-informant SEM + B2C external panel FE; Study 2 forms a limitation→repair chain for measurement independence, contextual breadth, and time horizon."
     kim_lee_2026_putting_a_price_on_mission_smj:
       journal: Strategic Management Journal
-      title: 'Putting a price on mission: Social responsibility orientation and startup employment'
+      title: "Putting a price on mission: Social responsibility orientation and startup employment"
       status: EMERGING (1p)
       design_types:
-      - 多研究
-      - 非线性模型
-      - 文本构念测量
+        - 多研究
+        - 非线性模型
+        - 文本构念测量
       slots_covered:
-      - M2
-      - M4
-      - M7
-      - M9
-      note: empirical strategy / strategic human capital；多阶段决策管道(attraction/selection/attrition)+revealed-preference WTP+embedded/peripheral
-        CSR手工编码；2026-08-05 gap audit：Methods 无新增；Results 补 stage-concentrated hetero + Cinelli-Hazlett（见 write-results OLS-FE
-        变体45–46）；待第二篇交叉验证
+        - M2
+        - M4
+        - M7
+        - M9
+      note: empirical strategy / strategic human capital；多阶段决策管道(attraction/selection/attrition)+revealed-preference WTP+embedded/peripheral CSR手工编码；2026-08-05 gap audit：Methods 无新增；Results 补 stage-concentrated hetero + Cinelli-Hazlett（见 write-results OLS-FE 变体45–46）；待第二篇交叉验证
     ilicic_brennan_2026_jm:
       journal: Journal of Marketing
       title: Political Ideology Shapes Consumer Responses to Addictive Products
       status: EMERGING (1p)
       design_types:
-      - 实验
-      - 多研究
+        - 实验
+        - 多研究
       slots_covered:
-      - M5
-      - M8
-      - M9
-      note: consumer psychology 机制证据组合（measurement of process + rival accounts battery；补充研究以 moderation of process 操纵 agency）。主文
-        Study 4 为横截面测量且结果变量先于中介，反转中介顺序仅是竞争排序敏感性检查，不能确认时间或因果顺序；补充研究正文不可见，故因果收敛主张需保留审计边界。
+        - M5
+        - M8
+        - M9
+      note: consumer psychology 机制证据组合（measurement of process + rival accounts battery；补充研究以 moderation of process 操纵 agency）。主文 Study 4 为横截面测量且结果变量先于中介，反转中介顺序仅是竞争排序敏感性检查，不能确认时间或因果顺序；补充研究正文不可见，故因果收敛主张需保留审计边界。
     chung_low_rust_2022_jams:
       journal: Journal of the Academy of Marketing Science
       title: Executive confidence and myopic marketing management
       status: EMERGING (1p)
       design_types:
-      - 面板数据-OLS
-      - 两阶段模型
-      - IV-2SLS
+        - 面板数据-OLS
+        - 两阶段模型
+        - IV-2SLS
       micro_templates:
-      - executive-confidence-operationalization
-      - interquartile-economic-significance
-      - heckman-peer-prevalence-exclusion
-      - alternative-dv-falsification
+        - executive-confidence-operationalization
+        - interquartile-economic-significance
+        - heckman-peer-prevalence-exclusion
+        - alternative-dv-falsification
       slots_covered:
-      - M2.5
-      - M4
-      - M7
-      - M8
-      - M10
+        - M2.5
+        - M4
+        - M7
+        - M8
+        - M10
       note: 待第二篇 exemplar 提升为 ROBUST；DWH + Gaussian copula 内生性叙事需与传统 IV 研究进一步交叉验证
     westphal_zajac_1998_symbolic_management:
       journal: Administrative Science Quarterly
-      title: 'The Symbolic Management of Stockholders: Corporate Governance Reforms and Institutional Investor Assessments
-        of CEO Legitimacy and Influence'
+      title: "The Symbolic Management of Stockholders: Corporate Governance Reforms and Institutional Investor Assessments of CEO Legitimacy and Influence"
       status: VERIFIED
-      verification_basis: 'expert_audit_override (user 2026-08-28: 单源足矣)'
+      verification_basis: "expert_audit_override (user 2026-08-28: 单源足矣)"
       design_types:
-      - 面板数据-OLS
-      - 事件历史+事件研究
-      - 文本构念测量
+        - 面板数据-OLS
+        - 事件历史+事件研究
+        - 文本构念测量
       micro_templates:
-      - m1_theory_driven_time_frame
-      - m4_no_rulebook_coding_protocol
+        - m1_theory_driven_time_frame
+        - m4_no_rulebook_coding_protocol
       slots_covered:
-      - M1
-      - M2
-      - M3
-      - M4
-      - M6
-      - M7
+        - M1
+        - M2
+        - M3
+        - M4
+        - M6
+        - M7
       story_fidelity: section_variant
-      note: '2026-08-28 整篇蒸馏 writeback 补登记两条 SKIPPED micro-template：m1_theory_driven_time_frame（micro-templates/because-clauses.md
-        变体A/B 理论驱动观察窗 because 从句：窗口=构念活跃期证据 + 数据窗/事件窗 lag 结构分离；M2/M6）与 m4_no_rulebook_coding_protocol（micro-templates/manual-coding-validation.md
-        变体A/B 反规则手册编码协议：规则书推高信度牺牲效度的预辩 + recording unit 声明 + pre-negotiation 信度三件套；M3/M4）。micro-templates
-        文件层无独立 registry 条目结构，按邻近 by_source_paper.micro_templates 格式登记。'
+      note: 2026-08-28 整篇蒸馏 writeback 补登记两条 SKIPPED micro-template：m1_theory_driven_time_frame（micro-templates/because-clauses.md 变体A/B 理论驱动观察窗 because 从句：窗口=构念活跃期证据 + 数据窗/事件窗 lag 结构分离；M2/M6）与 m4_no_rulebook_coding_protocol（micro-templates/manual-coding-validation.md 变体A/B 反规则手册编码协议：规则书推高信度牺牲效度的预辩 + recording unit 声明 + pre-negotiation 信度三件套；M3/M4）。micro-templates 文件层无独立 registry 条目结构，按邻近 by_source_paper.micro_templates 格式登记。
     anand_mukherjee_2024_learning_from_failures_di:
       journal: Organization Science
-      title: 'Learning from Failures: Differentiating Between Slip-ups and Knowledge Gaps'
+      title: "Learning from Failures: Differentiating Between Slip-ups and Knowledge Gaps"
       status: VERIFIED
       verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       design_types:
-      - 面板数据-OLS
-      - 非线性模型
-      - 文本构念测量
+        - 面板数据-OLS
+        - 非线性模型
+        - 文本构念测量
       micro_templates:
-      - m4_window_congruence_for_interactions
+        - m4_window_congruence_for_interactions
       slots_covered:
-      - M2
-      - M3
-      - M4
-      - M6
-      - M7
+        - M2
+        - M3
+        - M4
+        - M6
+        - M7
       story_fidelity: section_variant
-      note: '2026-08-29 整篇蒸馏 writeback 补登记 because-clauses micro-template：m4_window_congruence_for_interactions（micro-templates/because-clauses.md
-        变体B，M4 测量窗对齐 because 从句——累积窗与另一解释变量的窗统一以使交互项可估，窗口由估计设计而非构念证据决定；M4）。design_types
-        对应 INDEX 已登记变体：面板数据-OLS 变体68/69、非线性模型 变体20、文本构念测量 变体19。micro-templates 文件层无独立 registry
-        条目结构，按邻近 by_source_paper.micro_templates 格式登记。'
+      note: 2026-08-29 整篇蒸馏 writeback 补登记 because-clauses micro-template：m4_window_congruence_for_interactions（micro-templates/because-clauses.md 变体B，M4 测量窗对齐 because 从句——累积窗与另一解释变量的窗统一以使交互项可估，窗口由估计设计而非构念证据决定；M4）。design_types 对应 INDEX 已登记变体：面板数据-OLS 变体68/69、非线性模型 变体20、文本构念测量 变体19。micro-templates 文件层无独立 registry 条目结构，按邻近 by_source_paper.micro_templates 格式登记。
     ridge_hill_ingram_kolomeitsev_worrell_2024_amj:
       journal: Academy of Management Journal
-      title: 'Avoidance and Aggression in Stakeholder Engagement: The Impact of CEO Paranoia and Paranoia-Relevant Cues'
+      title: "Avoidance and Aggression in Stakeholder Engagement: The Impact of CEO Paranoia and Paranoia-Relevant Cues"
       status: EMERGING (1p)
       verification_basis: distill-methods-exemplar_2026-08-12
       design_types:
-      - 面板数据-OLS
-      - 两阶段模型
-      - 文本构念测量
+        - 面板数据-OLS
+        - 两阶段模型
+        - 文本构念测量
       slots_covered:
-      - M2
-      - M4
-      - M6
-      - M8
+        - M2
+        - M4
+        - M6
+        - M8
       story_fidelity: section_variant
-      note: From-scratch custom dictionary + nine-step validity chain (component→expert sort→deductive dictionary→student
-        sort→PFA→nomological→stability) and earnings-call speaker-attribution pipeline (M2/M4). Endogeneity 'balancing act'
-        diagnose-first narrative (RIR N-to-overturn → cure second → naïve/cured pairing) and 2SRI with validation-measures
-        reused as instruments (M8). Temporal-spacing one-liner and dual-sided because controls (M2.5/M6). No firm FE (SIC/year
-        dummies) under-defended and 2SRI exclusion only implicit — recorded as anti-pattern warnings.
+      note: "From-scratch custom dictionary + nine-step validity chain (component→expert sort→deductive dictionary→student sort→PFA→nomological→stability) and earnings-call speaker-attribution pipeline (M2/M4). Endogeneity 'balancing act' diagnose-first narrative (RIR N-to-overturn → cure second → naïve/cured pairing) and 2SRI with validation-measures reused as instruments (M8). Temporal-spacing one-liner and dual-sided because controls (M2.5/M6). No firm FE (SIC/year dummies) under-defended and 2SRI exclusion only implicit — recorded as anti-pattern warnings."
     fini_jourdan_perkmann_2017_amj:
       journal: Academy of Management Journal
-      title: 'Social Valuation across Multiple Audiences: The Interplay of Ability and Identity Judgments'
+      title: "Social Valuation across Multiple Audiences: The Interplay of Ability and Identity Judgments"
       status: EMERGING (1p)
       verification_basis: distill-methods-exemplar_2026-08-12
       design_types:
-      - 面板数据-OLS
-      - 非线性模型
-      - PSM匹配面板
-      - 多研究
+        - 面板数据-OLS
+        - 非线性模型
+        - PSM匹配面板
+        - 多研究
       slots_covered:
-      - M1
-      - M5
-      - M7
-      - M8
-      - M9
+        - M1
+        - M5
+        - M7
+        - M8
+        - M9
       story_fidelity: section_variant
-      note: 'Single-organization (Minerva) scientist panel 2001-2012; DV = peer grant award count (0-23); IV = cumulative
-        industry contracts with squared term for inverted U; moderators = audience identity proximity + publication record.
-        Identification stack: probit+IMR selection -> iterative Poisson GMM instrumenting three endogenous terms (peer eval,
-        industry eval, industry eval^2) with 3 instruments + Hansen J -> CEM confirmatory replication -> explanatory sequential
-        interviews. Writes M1 data-availability setting (面板数据-OLS 变体41), M5 moderator-dummy external validity chain via Tijssen
-        U-I intensity (面板数据-OLS 变体42), M8 CEM confirmatory replication (PSM匹配面板 变体4), M9 explanatory sequential roadmap (多研究
-        变体10); core GMM narrative registered under 非线性模型 变体16. Anti-patterns recorded: CEM strata without balance stats, three-threats
-        merged statement, squared-term exclusion not separately argued.
-        2026-09-05 re-distill writeback 补登记：M2 自维护档案 vs 第三方收割库比较性数据质量辩护（面板数据-OLS）、M3 计数测量=逐次评价事件归因
-        because 链（micro-templates/because-clauses.md，registry 无 because-clauses 独立条目故在此 paper-level note 登记）、M1 设置含义调查
-        佐证链（双制度张力+设置内调查证 actor 感知，面板数据-OLS）。另 M3 because-clauses 变体同步见于 because-clauses.md {NEXT} 槽位。'
+      note: "Single-organization (Minerva) scientist panel 2001-2012; DV = peer grant award count (0-23); IV = cumulative industry contracts with squared term for inverted U; moderators = audience identity proximity + publication record. Identification stack: probit+IMR selection -> iterative Poisson GMM instrumenting three endogenous terms (peer eval, industry eval, industry eval^2) with 3 instruments + Hansen J -> CEM confirmatory replication -> explanatory sequential interviews. Writes M1 data-availability setting (面板数据-OLS 变体41), M5 moderator-dummy external validity chain via Tijssen U-I intensity (面板数据-OLS 变体42), M8 CEM confirmatory replication (PSM匹配面板 变体4), M9 explanatory sequential roadmap (多研究 变体10); core GMM narrative registered under 非线性模型 变体16. Anti-patterns recorded: CEM strata without balance stats, three-threats merged statement, squared-term exclusion not separately argued. 2026-09-05 re-distill writeback 补登记：M2 自维护档案 vs 第三方收割库比较性数据质量辩护（面板数据-OLS）、M3 计数测量=逐次评价事件归因 because 链（micro-templates/because-clauses.md，registry 无 because-clauses 独立条目故在此 paper-level note 登记）、M1 设置含义调查 佐证链（双制度张力+设置内调查证 actor 感知，面板数据-OLS）。另 M3 because-clauses 变体同步见于 because-clauses.md {NEXT} 槽位。"
     chen_ganesan_liu_2009_jm:
       journal: Journal of Marketing
-      title: Does a Firm's Product-Recall Strategy Affect Its Financial Value? An Examination of Monitoring Versus Initiating
-        Recalls
+      title: "Does a Firm's Product-Recall Strategy Affect Its Financial Value? An Examination of Monitoring Versus Initiating Recalls"
       status: VERIFIED
       verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       design_types:
-      - 事件历史+事件研究
-      - 两阶段模型
+        - 事件历史+事件研究
+        - 两阶段模型
       slots_covered:
-      - M1
-      - M2
-      - M4
-      - M5
-      - M8
+        - M1
+        - M2
+        - M4
+        - M5
+        - M8
       story_fidelity: section_variant
-      note: 'Multi-stage CPSC event-study stack: regulator multi-reason M1 legitimacy; threat-triad prescreen (confound/leakage+AE
-        ruling/classification ambiguity); zero-incident=proactive archival strategy dichotomy; Kenny mediation (probit+cross-section
-        AR); Heckman strategy-switching with no-a-priori+main-table exclusion restrictions (λ=0 validates main cross-section).
-        SKIP market-model formula and basic CAR cross-section. Anti-patterns: funnel without step Ns; Heckman/mediation only
-        in Results.'
+      note: "Multi-stage CPSC event-study stack: regulator multi-reason M1 legitimacy; threat-triad prescreen (confound/leakage+AE ruling/classification ambiguity); zero-incident=proactive archival strategy dichotomy; Kenny mediation (probit+cross-section AR); Heckman strategy-switching with no-a-priori+main-table exclusion restrictions (λ=0 validates main cross-section). SKIP market-model formula and basic CAR cross-section. Anti-patterns: funnel without step Ns; Heckman/mediation only in Results."
     post_2022_women_tmt_strategic_renewal:
       journal: Academy of Management Journal
-      title: 'What Changes After Women Enter Top Management Teams? A Gender-Based Model of Strategic Renewal'
+      title: What Changes After Women Enter Top Management Teams? A Gender-Based Model of Strategic Renewal
       status: VERIFIED
-      verification_basis: 'expert_audit_override (user 2026-08-29: 用户点名喜爱本篇，单源足矣)'
+      verification_basis: "expert_audit_override (user 2026-08-29: 用户点名喜爱本篇，单源足矣)"
       design_types:
-      - 文本构念测量
-      - 面板数据-OLS
-      - IV-2SLS
+        - 文本构念测量
+        - 面板数据-OLS
+        - IV-2SLS
       micro_templates:
-      - m3_preemptive_validity_defense_chain
-      - m6_first_difference_control_declaration
-      - m7_fd_dynamic_alignment_partial_adjustment
-      - m8_subsample_split_moderation_chow
-      - m8_fitted_value_mediation_chain
+        - m3_preemptive_validity_defense_chain
+        - m6_first_difference_control_declaration
+        - m7_fd_dynamic_alignment_partial_adjustment
+        - m8_subsample_split_moderation_chow
+        - m8_fitted_value_mediation_chain
       slots_covered:
-      - M3
-      - M6
-      - M7
-      - M8
+        - M3
+        - M6
+        - M7
+        - M8
       story_fidelity: section_variant
-      note: '2026-08-29 整篇蒸馏 writeback 补登记 5 条变体（面板数据-OLS 已在 by_design_type 列表、此处补 by_source_paper）：
-        m3_preemptive_validity_defense_chain（文本构念测量.md 变体M3 「预辩-判据-区分-face validity」四段效度辩护链：valid-albeit-imprecise
-        预辩 + 外部判据/区分效度双向数字 + 非相关对照；M3）；m6_first_difference_control_declaration（面板数据-OLS.md 变体M6 EXTEND：
-        全一阶差分控制声明 + 供给侧候选池控制，挂在变体1分层 because 之上；M6）；m7_fd_dynamic_alignment_partial_adjustment（面板数据-OLS.md
-        变体M7：DV/协变量全差分 + 解释变量滞后一期 + 滞后 DV 部分调整，"truly dynamic" 一句话立识别主张；M7）；m8_subsample_split_moderation_chow
-        （面板数据-OLS.md 变体M8：链式设计子样本分割替代乘法交互 + 「不限制其他协变量系数」辩护 + Chow/threshold 收口；M8）；
-        m8_fitted_value_mediation_chain（IV-2SLS.md 变体M8 EXTEND：中介内生时以第一阶段拟合值作中介操作化的 sequential IV，SEM 稳健性；
-        诚实边界：generated-regressor SE 修正须带警告行；M8）。'
+      note: "2026-08-29 整篇蒸馏 writeback 补登记 5 条变体（面板数据-OLS 已在 by_design_type 列表、此处补 by_source_paper）： m3_preemptive_validity_defense_chain（文本构念测量.md 变体M3 「预辩-判据-区分-face validity」四段效度辩护链：valid-albeit-imprecise 预辩 + 外部判据/区分效度双向数字 + 非相关对照；M3）；m6_first_difference_control_declaration（面板数据-OLS.md 变体M6 EXTEND： 全一阶差分控制声明 + 供给侧候选池控制，挂在变体1分层 because 之上；M6）；m7_fd_dynamic_alignment_partial_adjustment（面板数据-OLS.md 变体M7：DV/协变量全差分 + 解释变量滞后一期 + 滞后 DV 部分调整，\"truly dynamic\" 一句话立识别主张；M7）；m8_subsample_split_moderation_chow （面板数据-OLS.md 变体M8：链式设计子样本分割替代乘法交互 + 「不限制其他协变量系数」辩护 + Chow/threshold 收口；M8）； m8_fitted_value_mediation_chain（IV-2SLS.md 变体M8 EXTEND：中介内生时以第一阶段拟合值作中介操作化的 sequential IV，SEM 稳健性； 诚实边界：generated-regressor SE 修正须带警告行；M8）。"
     gulati_westphal_1999_cooperative_or_controlling:
       journal: Administrative Science Quarterly
       title: Cooperative or Controlling? The Effects of CEO-Board Relations and the Content of Interlocks on the Formation of Joint Ventures
       status: VERIFIED
       verification_basis: "user_designation (2026-09-06: 用户点名 Gulati 为最喜爱学者——Gulati 系单源升 VERIFIED；methods 带按库惯例记录于此，槽位证据等级随 design_type 行)"
       design_types:
-      - 非线性模型
-      - 同伴效应-网络效应
+        - 非线性模型
+        - 同伴效应-网络效应
       slots_covered:
-      - M3
-      - M4
-      - M8
-      note: "整篇蒸馏 4 条写回：非线性模型 M8 风险集-假设映射+Heckman 泛化（EXTEND 变体21 后）；micro-templates/manual-coding-validation M3/M4 多源构念效度三角化（双问卷/多行为者，EXTEND 变体B 后）；同伴效应-网络效应 M4 间接关系长度/分离/分层控制 + M4 操作化谱系 PCA 合成（ADD×2，该族第 2 源）。SKIP：非应答 K-S+Heckman 辩护链（carpenterwestphal2001 + westphal_bednar2005 既有链已覆盖）。era flags：LISREL/Bartlett、kappa 四分位离散化、Heckman 无排除限制、response-rate 步骤 ritual_only。"
+        - M3
+        - M4
+        - M8
+      note: 整篇蒸馏 4 条写回：非线性模型 M8 风险集-假设映射+Heckman 泛化（EXTEND 变体21 后）；micro-templates/manual-coding-validation M3/M4 多源构念效度三角化（双问卷/多行为者，EXTEND 变体B 后）；同伴效应-网络效应 M4 间接关系长度/分离/分层控制 + M4 操作化谱系 PCA 合成（ADD×2，该族第 2 源）。SKIP：非应答 K-S+Heckman 辩护链（carpenterwestphal2001 + westphal_bednar2005 既有链已覆盖）。era flags：LISREL/Bartlett、kappa 四分位离散化、Heckman 无排除限制、response-rate 步骤 ritual_only。
   by_design_type:
     面板数据-OLS:
-      paper_count: 26
+      paper_count: 41
       papers:
-      - lee_park_2024_smj (SMJ)
-      - bendig_hensellek_schulte_2024_etp (ETP)
-      - darby2023 (MSOM)
-      - darby2025 (JSCM)
-      - darby2026 (JOM)
-      - eilert2017 (JM)
-      - chung_low_rust_2022_jams (JAMS)
-      - schumacher_keck_tang_2020_smj (SMJ)
-      - kashmiri_nicol_arora_2017_jams (JAMS)
-      - desjardine_li_shi_2025_amj (AMJ)
-      - ridge_hill_ingram_kolomeitsev_worrell_2024_amj (AMJ)
-      - fini_jourdan_perkmann_2017_amj (AMJ)
-      - ball_2018_product_competition_managerial_discretion_and_manu (Strategic Management Journal)
-      - wowak_2020_female_directors_recalls (Manufacturing & Service Operations Management)
-      - westphal_zajac_1998_symbolic_management (Administrative Science Quarterly)
-      - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
-      - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
-      - fini_2017_social_valuation_across_multiple_audiences_the_int (Academy of Management Journal)
-      - desjardine_2025_information_based_competition_the_case_of_ri (Academy of Management Journal)
-      - pfarrer_pollock_and_rindova_2010 (Academy of Management Journal)
-      - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
-      - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
-      - higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe (Organization Science)
-      - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int (Administrative Science Quarterly)
-      - gulati_higgins_2003_which_ties_matter (Strategic Management Journal)
-      - gulati_lavie_singh_2009_partnering_experience (Strategic Management Journal)
+        - lee_park_2024_smj (SMJ)
+        - bendig_hensellek_schulte_2024_etp (ETP)
+        - darby2023 (MSOM)
+        - darby2025 (JSCM)
+        - darby2026 (JOM)
+        - eilert2017 (JM)
+        - chung_low_rust_2022_jams (JAMS)
+        - schumacher_keck_tang_2020_smj (SMJ)
+        - kashmiri_nicol_arora_2017_jams (JAMS)
+        - desjardine_li_shi_2025_amj (AMJ)
+        - ridge_hill_ingram_kolomeitsev_worrell_2024_amj (AMJ)
+        - fini_jourdan_perkmann_2017_amj (AMJ)
+        - ball_2018_product_competition_managerial_discretion_and_manu (Strategic Management Journal)
+        - "wowak_2020_female_directors_recalls (Manufacturing & Service Operations Management)"
+        - westphal_zajac_1998_symbolic_management (Administrative Science Quarterly)
+        - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
+        - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
+        - fini_2017_social_valuation_across_multiple_audiences_the_int (Academy of Management Journal)
+        - desjardine_2025_information_based_competition_the_case_of_ri (Academy of Management Journal)
+        - pfarrer_pollock_and_rindova_2010 (Academy of Management Journal)
+        - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
+        - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
+        - higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe (Organization Science)
+        - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int (Administrative Science Quarterly)
+        - gulati_higgins_2003_which_ties_matter (Strategic Management Journal)
+        - gulati_lavie_singh_2009_partnering_experience (Strategic Management Journal)
+        - ridge_aime_white_2013_smj (Strategic Management Journal)
+        - Abdurakhmonov_Ingram_Ridge_2026_JOM
+        - Desai_2011_AMJ
+        - bamberger_homburg_wielgos_2021_wage_inequality_jm
+        - darbyAgencyTheoryPerspective2025
+        - du_tsolmon_2024_os
+        - kalaignanam_2013_jm
+        - li_chiu_kong_cropanzano_ho_2026_jom
+        - liu_liu_luo_2016_jm
+        - liu_shankar2015
+        - lun_zurbruegg_mount_2026_etp
+        - malshe_agarwal_2015_jm
+        - mannor_wowak_bartkus_gomez_mejia_2016_smj
+        - pupovac_astvansh_carrillat_legoux_2026_pom
+        - zorn_shropshire_martin_combs_ketchen_2017_smj
       status: VERIFIED
       slots_covered:
-      - M1
-      - M2
-      - M2.5
-      - M3
-      - M4
-      - M5
-      - M6
-      - M7
-      - M8
-      - M10
+        - M1
+        - M2
+        - M2.5
+        - M3
+        - M4
+        - M5
+        - M6
+        - M7
+        - M8
+        - M10
       common_failures:
-      - 控制变量无 because 逻辑——仅列举变量名
-      - 样本漏斗缺数字——跳步或缺失排除数量
+        - 控制变量无 because 逻辑——仅列举变量名
+        - 样本漏斗缺数字——跳步或缺失排除数量
       validation_history:
         revise: 0
         reject: 0
         last_critique: null
         common_revise_reasons: []
     自然实验-DiD:
-      paper_count: 4
+      paper_count: 6
       papers:
-      - lee_wu_bednar_orsc_18968 (Organization Science)
-      - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
-      - fang_et_al_2025_rival_recall_ad_spend (Production and Operations Management)
-      - castellaneta_2017_smj_how_does_trade_secret_legal_protection (Strategic Management Journal)
-      status: EMERGING
+        - lee_wu_bednar_orsc_18968 (Organization Science)
+        - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
+        - fang_et_al_2025_rival_recall_ad_spend (Production and Operations Management)
+        - castellaneta_2017_smj_how_does_trade_secret_legal_protection (Strategic Management Journal)
+        - lu_et_al_2022_frenemies_corporate_advertising (Management Science)
+        - hoffmann_cheong_phan_zurbruegg2024_jm
+      status: VERIFIED
       slots_covered:
-      - M2
-      - M7
-      - M8
+        - M2
+        - M7
+        - M8
+        - M4
+        - M5
       common_failures:
-      - 把 Bacon 分解当作对异质处理效应偏误的修复，而不是诊断
-      - 仅凭处理前系数不显著声称平行趋势成立
-      - 跨层级暴露映射不报告处理事件为何从原始数据库减少
+        - 把 Bacon 分解当作对异质处理效应偏误的修复，而不是诊断
+        - 仅凭处理前系数不显著声称平行趋势成立
+        - 跨层级暴露映射不报告处理事件为何从原始数据库减少
       validation_history:
         revise: 3
         reject: 0
-        last_critique: '2026-08-23'
+        last_critique: "2026-08-23"
         common_revise_reasons:
-        - SMJ R1#7 与 JAMS R1#6/#7（跨刊跨审稿人）：调节变量 PCA 含 SG&A（含广告）与 DV 机械重叠、调节变量时变未固定于处理前——moderator 测量须与 DV 无会计重叠且固定 pre-treatment（moon2026
-          调节变量全部由理论推出且无重叠为正面模板）
-        - SMJ 编辑与 R1#2、JAMS R1 主问题#2：用被处理影响的变量（LnADV）与处理交互做机制检验构成 bad-controls；机制主张须由独立测度承接，post-treatment 交互只能降级为 only-when
-          条件性证据（moon2026 Table 6 三段式为正面模板）
-        - SMJ R1#8、R2#7 与 JAMS AE、R1（两轮四评审+编辑）一致要求 heterogeneity-robust 估计量（Sun-Abraham/Callaway-Sant'Anna/stacked/BJS）作主分析、TWFE
-          降级为基准，且调节效应也须在 robust 设计内重估；仅附录图示无系数表被判不足（moon2026 对照：stacked DiD 进主表 Model 7）
+          - "SMJ R1#7 与 JAMS R1#6/#7（跨刊跨审稿人）：调节变量 PCA 含 SG&A（含广告）与 DV 机械重叠、调节变量时变未固定于处理前——moderator 测量须与 DV 无会计重叠且固定 pre-treatment（moon2026 调节变量全部由理论推出且无重叠为正面模板）"
+          - "SMJ 编辑与 R1#2、JAMS R1 主问题#2：用被处理影响的变量（LnADV）与处理交互做机制检验构成 bad-controls；机制主张须由独立测度承接，post-treatment 交互只能降级为 only-when 条件性证据（moon2026 Table 6 三段式为正面模板）"
+          - "SMJ R1#8、R2#7 与 JAMS AE、R1（两轮四评审+编辑）一致要求 heterogeneity-robust 估计量（Sun-Abraham/Callaway-Sant'Anna/stacked/BJS）作主分析、TWFE 降级为基准，且调节效应也须在 robust 设计内重估；仅附录图示无系数表被判不足（moon2026 对照：stacked DiD 进主表 Model 7）"
     非线性模型:
-      paper_count: 8
+      paper_count: 17
       papers:
-      - lee_park_2024_smj (SMJ)
-      - bendig_hensellek_schulte_2024_etp (ETP)
-      - cutolo2024 (JM)
-      - kashmiri_nicol_arora_2017_jams (JAMS)
-      - fini_jourdan_perkmann_2017_amj (AMJ)
-      - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
-      - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
-      - gulati_westphal_1999_cooperative_or_controlling (Administrative Science Quarterly)
+        - lee_park_2024_smj (SMJ)
+        - bendig_hensellek_schulte_2024_etp (ETP)
+        - cutolo2024 (JM)
+        - kashmiri_nicol_arora_2017_jams (JAMS)
+        - fini_jourdan_perkmann_2017_amj (AMJ)
+        - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
+        - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
+        - gulati_westphal_1999_cooperative_or_controlling (Administrative Science Quarterly)
+        - Desai_2011_AMJ
+        - Malik_2025_JOM_Mixed_Gambles_in_Product_Recalls
+        - pfarrer_pollock_and_rindova_2010
+        - haunschild2015
+        - hoffmann_cheong_phan_zurbruegg2024_jm
+        - kim_lee_2026_putting_a_price_on_mission_smj
+        - liu_liu_luo_2016_jm
+        - vidal_mitchell_2015_orsc
+        - zhou2017
       status: VERIFIED
       slots_covered:
-      - M1
-      - M2
-      - M3
-      - M4
-      - M5
-      - M6
-      - M7
-      - M8
-      - M10
-      - M14
+        - M1
+        - M2
+        - M3
+        - M4
+        - M5
+        - M6
+        - M7
+        - M8
+        - M10
+        - M14
       common_failures:
-      - 未说明为何拒绝 Poisson / 未报告过度分散检验
-      - 未预告系数将翻译为 predicted counts / IRRs
-      - 曲线关系只写二次项符号，不预先声明端点斜率、内部转折点与数据支持区间
-      - 曲线调节未声明改变的是转折点位置、陡峭度、垂直位移还是形状翻转
+        - 未说明为何拒绝 Poisson / 未报告过度分散检验
+        - 未预告系数将翻译为 predicted counts / IRRs
+        - 曲线关系只写二次项符号，不预先声明端点斜率、内部转折点与数据支持区间
+        - 曲线调节未声明改变的是转折点位置、陡峭度、垂直位移还是形状翻转
       validation_history:
         revise: 0
         reject: 0
         last_critique: null
         common_revise_reasons: []
     生存分析:
-      paper_count: 4
+      paper_count: 7
       papers:
-      - darby2026 (JOM)
-      - darby2025 (JSCM)
-      - eilert2017 (JM)
-      - darby2023 (MSOM)
+        - darby2026 (JOM)
+        - darby2025 (JSCM)
+        - eilert2017 (JM)
+        - darby2023 (MSOM)
+        - Mayo_Ball_Mills_2022_POMS
+        - darbyAgencyTheoryPerspective2025
+        - qiao_hiatt_sine_2026_smj
       status: VERIFIED
       slots_covered:
-      - M2
-      - M3
-      - M7
-      - M8
-      - M10
+        - M2
+        - M3
+        - M7
+        - M8
+        - M10
       common_failures:
-      - 未报告分布选择依据（BIC/AIC 比较）
-      - 右删失处理仅一句话未详细论证
-      - 生存分析M8仅报告分布选择而忽略内生性处理
+        - 未报告分布选择依据（BIC/AIC 比较）
+        - 右删失处理仅一句话未详细论证
+        - 生存分析M8仅报告分布选择而忽略内生性处理
       validation_history:
         revise: 0
         reject: 0
         last_critique: null
         common_revise_reasons: []
     SEM:
-      paper_count: 0
-      papers: []
+      paper_count: 1
+      papers:
+        - vadakkepatt2022
       status: EMERGING
       slots_covered: []
       common_failures: []
@@ -572,87 +538,100 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     实验:
-      paper_count: 2
+      paper_count: 5
       papers:
-      - falchetti2022 (SMJ)
-      - ilicic_brennan_2026 (JM)
-      status: EMERGING
+        - falchetti2022 (SMJ)
+        - ilicic_brennan_2026 (JM)
+        - ahmadi_2017_jms
+        - ilicic_brennan_2026_jm
+        - li_chiu_kong_cropanzano_ho_2026_jom
+      status: VERIFIED
       slots_covered:
-      - M2
-      - M3
-      - M4
-      - M6
-      - M7
+        - M2
+        - M3
+        - M4
+        - M6
+        - M7
       common_failures:
-      - 未说明被试间随机分配
-      - 操纵描述停留在抽象标签，未给出条件实际差异
-      - 缺少 attention check / catch question 说明
+        - 未说明被试间随机分配
+        - 操纵描述停留在抽象标签，未给出条件实际差异
+        - 缺少 attention check / catch question 说明
       validation_history:
         revise: 0
         reject: 0
         last_critique: null
         common_revise_reasons: []
     多研究:
-      paper_count: 6
+      paper_count: 13
       papers:
-      - falchetti2022 (SMJ)
-      - ilicic_brennan_2026 (JM)
-      - kim_lee_2026 (SMJ)
-      - bamberger_homburg_wielgos2021 (JM)
-      - reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science)
-      - fini_jourdan_perkmann_2017_amj (AMJ)
+        - falchetti2022 (SMJ)
+        - ilicic_brennan_2026 (JM)
+        - kim_lee_2026 (SMJ)
+        - bamberger_homburg_wielgos2021 (JM)
+        - reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science)
+        - fini_jourdan_perkmann_2017_amj (AMJ)
+        - ilicic_brennan_2026_jm
+        - bamberger_homburg_wielgos_2021_wage_inequality_jm
+        - fini_2017_social_valuation_across_multiple_audiences_the_int
+        - kim_lee_2026_putting_a_price_on_mission_smj
+        - li_chiu_kong_cropanzano_ho_2026_jom
+        - reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc
+        - zhou2017
       status: VERIFIED
       slots_covered:
-      - M1
-      - M2
-      - M3
-      - M4
-      - M6
-      - M7
-      - M8
-      - M9
+        - M1
+        - M2
+        - M3
+        - M4
+        - M6
+        - M7
+        - M8
+        - M9
       common_failures:
-      - 缺少研究梯度图，直接罗列 Study 1/2/3
-      - 未说明哪些维度保持不变、哪些变化
-      - 操纵检验 pilot 未报告或放在附录
-      - 只说“互补方法”但未逐项说明前一研究的局限由后一研究如何修复
+        - 缺少研究梯度图，直接罗列 Study 1/2/3
+        - 未说明哪些维度保持不变、哪些变化
+        - 操纵检验 pilot 未报告或放在附录
+        - 只说“互补方法”但未逐项说明前一研究的局限由后一研究如何修复
       validation_history:
         revise: 0
         reject: 0
         last_critique: null
         common_revise_reasons: []
     定性过程研究:
-      paper_count: 1
+      paper_count: 2
       cross_validation_papers:
-      - park2013 (ASQ)
-      - keeves2017 (ASQ)
+        - park2013 (ASQ)
+        - keeves2017 (ASQ)
       papers:
-      - lashley_pollock2020 (ASQ)
+        - lashley_pollock2020 (ASQ)
+        - haunschild2015
       status: VERIFIED
       slots_covered:
-      - Q1
-      - Q2
-      - Q3
-      - Q6
-      - Q7
-      - Q8
+        - Q1
+        - Q2
+        - Q3
+        - Q6
+        - Q7
+        - Q8
       common_failures:
-      - 未说明为何采用归纳/质性/过程方法
-      - 未为每个数据源分配独特角色
-      - 编码过程跳跃，缺少 open → axial → aggregate 的过渡
-      - 可信性机制缺失或仅列举不说明解决什么威胁
+        - 未说明为何采用归纳/质性/过程方法
+        - 未为每个数据源分配独特角色
+        - 编码过程跳跃，缺少 open → axial → aggregate 的过渡
+        - 可信性机制缺失或仅列举不说明解决什么威胁
       validation_notes:
-      - Q3 部分验证：Park 2013 / Keeves 2017 在混合方法中为访谈分配了问卷校准/预试角色
-      - Q7/Q8 部分验证：Park 2013 / Keeves 2017 提供内容编码、CFA、信度、编码一致率等测量效度机制
-      - Q1/Q2/Q4/Q5/Q6 以及所有 F 骨架仍保持单来源
+        - Q3 部分验证：Park 2013 / Keeves 2017 在混合方法中为访谈分配了问卷校准/预试角色
+        - Q7/Q8 部分验证：Park 2013 / Keeves 2017 提供内容编码、CFA、信度、编码一致率等测量效度机制
+        - Q1/Q2/Q4/Q5/Q6 以及所有 F 骨架仍保持单来源
       validation_history:
         revise: 0
         reject: 0
         last_critique: null
         common_revise_reasons: []
     稀有结果:
-      paper_count: 0
-      papers: []
+      paper_count: 2
+      papers:
+        - lun_zurbruegg_mount_2026_etp
+        - zorn_shropshire_martin_combs_ketchen_2017_smj
       status: EMERGING
       slots_covered: []
       common_failures: []
@@ -662,10 +641,20 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     实证对象构建:
-      paper_count: 0
-      papers: []
-      status: EMERGING
-      slots_covered: []
+      paper_count: 8
+      papers:
+        - "mao_dong_lee_2022_msom (Manufacturing & Service Operations Management)"
+        - desjardine_2025_information_based_competition_the_case_of_ri
+        - du_tsolmon_2024_os
+        - gulati2005-adaptation-vertical
+        - pfarrer_pollock_and_rindova_2010
+        - pollock_2015_asq
+        - pontikes2012
+        - zhao_ding_gaba_orsc
+      status: VERIFIED
+      slots_covered:
+        - M2
+        - M3
       common_failures: []
       validation_history:
         revise: 0
@@ -673,38 +662,46 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     事件历史+事件研究:
-      paper_count: 7
+      paper_count: 13
       papers:
-      - chen_ganesan_liu_2009_jm (JM)
-      - pontikes2012 (ASQ)
-      - reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science)
-      - shi2021 (JMR)
-      - zhou2017 (ASQ)
-      - zajac_westphal_the_social_construction_of_market_value (American Sociological Review)
-      - gulati_lavie_singh_2009_partnering_experience (Strategic Management Journal)
+        - chen_ganesan_liu_2009_jm (JM)
+        - pontikes2012 (ASQ)
+        - reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science)
+        - shi2021 (JMR)
+        - zhou2017 (ASQ)
+        - zajac_westphal_the_social_construction_of_market_value (American Sociological Review)
+        - gulati_lavie_singh_2009_partnering_experience (Strategic Management Journal)
+        - pfarrer_pollock_and_rindova_2010
+        - darby2023
+        - eilert2017
+        - li_chiu_kong_cropanzano_ho_2026_jom
+        - pupovac_astvansh_carrillat_legoux_2026_pom
+        - reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc
       status: ROBUST
       slots_covered:
-      - M2
-      - M3
-      - M7
-      - M8
-      - M1
-      - M4
-      - M5
+        - M2
+        - M3
+        - M7
+        - M8
+        - M1
+        - M4
+        - M5
+        - M6
       common_failures:
-      - 将宏观事件 DGCM 与资本市场 CAR event study 混为同一估计量
-      - 只有一个事件前观测却声称检验了预趋势
-      - 将不显著 postevent slope 写成永久效应证据
-      - 威胁筛选步骤齐全但只报告最终N，无逐步剔除量 — 审稿人无法审计数据损失
-      - 将Heckman/中介规格仅放在Results而不在Methods预告识别栈 — 读者在Methods结束时误以为设计止于AR均值检验
+        - 将宏观事件 DGCM 与资本市场 CAR event study 混为同一估计量
+        - 只有一个事件前观测却声称检验了预趋势
+        - 将不显著 postevent slope 写成永久效应证据
+        - 威胁筛选步骤齐全但只报告最终N，无逐步剔除量 — 审稿人无法审计数据损失
+        - 将Heckman/中介规格仅放在Results而不在Methods预告识别栈 — 读者在Methods结束时误以为设计止于AR均值检验
       validation_history:
         revise: 0
         reject: 0
         last_critique: null
         common_revise_reasons: []
     同时方程:
-      paper_count: 0
-      papers: []
+      paper_count: 1
+      papers:
+        - kalaignanam_2013_jm
       status: EMERGING
       slots_covered: []
       common_failures: []
@@ -714,17 +711,23 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     IV-2SLS:
-      paper_count: 4
+      paper_count: 10
       papers:
-      - wowak2025 (MS)
-      - chung_low_rust_2022_jams (JAMS)
-      - moon_tuli_mukherjee_2023_jm (JM)
-      - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
+        - wowak2025 (MS)
+        - chung_low_rust_2022_jams (JAMS)
+        - moon_tuli_mukherjee_2023_jm (JM)
+        - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
+        - Abdurakhmonov_Ingram_Ridge_2026_JOM
+        - kalaignanam_2013_jm
+        - lee_wang_2026_jom2
+        - qiao_hiatt_sine_2026_smj
+        - zhou2017
+        - zorn_shropshire_martin_combs_ketchen_2017_smj
       status: VERIFIED
       slots_covered:
-      - M4
-      - M7
-      - M8
+        - M4
+        - M7
+        - M8
       common_failures: []
       validation_history:
         revise: 0
@@ -732,22 +735,30 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     动态面板-GMM:
-      paper_count: 0
-      papers: []
+      paper_count: 2
+      papers:
+        - ridge_aime_white_2013_smj (Strategic Management Journal)
+        - kalaignanam_2013_jm
       status: EMERGING
-      slots_covered: []
+      slots_covered:
+        - M7
+        - M8
       common_failures:
-      - 短面板推荐 FE 而不提示 Nickell bias
+        - 短面板推荐 FE 而不提示 Nickell bias
+      note: 2026-09-12a 残项同步：ridge_aime_white_2013_smj 首次入账（M7 短面板适用性+估计器优势正面枚举 / M8 AB-GMM 诊断对报告链 AR(2)+Hansen 零假设→违例含义→判定；M7/M8 曲线调节设定块走 面板数据-OLS）。历史遗留：本设计类型语料既有变体 1-5（Pollock et al. 2015，2026-07-30 蒸馏、2026-09-06d expert_audit_override 语料侧已升 VERIFIED）从未入账——本条目 paper_count/slots 口径只计 ridge 论文，Pollock 历史账待考古补登，不计入本条目 status 判定。
       validation_history:
         revise: 0
         reject: 0
         last_critique: null
         common_revise_reasons: []
     匹配DiD-广义DiD:
-      paper_count: 0
-      papers: []
+      paper_count: 2
+      papers:
+        - castellaneta_2017_smj_how_does_trade_secret_legal_protection
+        - lu_et_al_2022_frenemies_corporate_advertising
       status: EMERGING
-      slots_covered: []
+      slots_covered:
+        - M2
       common_failures: []
       validation_history:
         revise: 0
@@ -755,15 +766,17 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     同伴效应-网络效应:
-      paper_count: 3
+      paper_count: 5
       papers:
-      - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
-      - gulati_westphal_1999_cooperative_or_controlling (Administrative Science Quarterly)
-      - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
+        - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
+        - gulati_westphal_1999_cooperative_or_controlling (Administrative Science Quarterly)
+        - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
+        - carpenter_and_westphal_2001_strategic_context_of_external_ne
+        - pollock_2015_asq
       status: VERIFIED
-      verification_basis: "paper_count_min 3 达成（2026-09-06 第 3 源 gulati_1999_where_do_interorganizational_networks）+ expert_audit_override（Gulati 系单源即 VERIFIED）"
+      verification_basis: paper_count_min 3 达成（2026-09-06 第 3 源 gulati_1999_where_do_interorganizational_networks）+ expert_audit_override（Gulati 系单源即 VERIFIED）
       slots_covered:
-      - M4
+        - M4
       common_failures: []
       validation_history:
         revise: 0
@@ -771,47 +784,57 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     文本构念测量:
-      paper_count: 8
+      paper_count: 14
       papers:
-      - cutolo2024 (JM)
-      - kashmiri_nicol_arora_2017_jams (JAMS)
-      - ridge_hill_ingram_kolomeitsev_worrell_2024_amj (AMJ)
-      - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
-      - fang_et_al_2025_rival_recall_ad_spend (Production and Operations Management)
-      - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
-      - zajac_westphal_the_social_construction_of_market_value (American Sociological Review)
-      - pfarrer_pollock_and_rindova_2010 (Academy of Management Journal)
+        - cutolo2024 (JM)
+        - kashmiri_nicol_arora_2017_jams (JAMS)
+        - ridge_hill_ingram_kolomeitsev_worrell_2024_amj (AMJ)
+        - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
+        - fang_et_al_2025_rival_recall_ad_spend (Production and Operations Management)
+        - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
+        - zajac_westphal_the_social_construction_of_market_value (American Sociological Review)
+        - pfarrer_pollock_and_rindova_2010 (Academy of Management Journal)
+        - hoffmann_cheong_phan_zurbruegg2024_jm
+        - kim_lee_2026_putting_a_price_on_mission_smj
+        - li_chiu_kong_cropanzano_ho_2026_jom
+        - lun_zurbruegg_mount_2026_etp
+        - mannor_wowak_bartkus_gomez_mejia_2016_smj
+        - zhao_ding_gaba_orsc
       status: VERIFIED
       verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       slots_covered:
-      - M2
-      - M3
-      - M4
-      - M6
-      - M7
-      - M10
-      - M14
+        - M2
+        - M3
+        - M4
+        - M6
+        - M7
+        - M10
+        - M14
+        - M34
       common_failures:
-      - 文本测量缺少人工验证或替代测量交叉检验
-      - 复合文本指标未做 component disaggregation
-      - category-relative 构念未说明比较基准
+        - 文本测量缺少人工验证或替代测量交叉检验
+        - 复合文本指标未做 component disaggregation
+        - category-relative 构念未说明比较基准
       validation_history:
         revise: 0
         reject: 0
         last_critique: null
         common_revise_reasons: []
     PSM匹配面板:
-      paper_count: 3
+      paper_count: 6
       papers:
-      - pfarrer2010 (AMJ)
-      - mayo2021 (POMS)
-      - fini_jourdan_perkmann_2017_amj (AMJ)
+        - pfarrer2010 (AMJ)
+        - mayo2021 (POMS)
+        - fini_jourdan_perkmann_2017_amj (AMJ)
+        - darby2026
+        - darby2023
+        - qiao_hiatt_sine_2026_smj
       status: VERIFIED
       verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       slots_covered:
-      - M2
-      - M7
-      - M8
+        - M2
+        - M7
+        - M8
       common_failures: []
       validation_history:
         revise: 0
@@ -830,10 +853,13 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     多行为者设计:
-      paper_count: 0
-      papers: []
-      status: EMERGING
-      slots_covered: []
+      paper_count: 2
+      papers:
+        - carpenter_and_westphal_2001_strategic_context_of_external_ne
+        - westphal_bednar_2005_asq
+      status: VERIFIED
+      slots_covered:
+        - M4
       common_failures: []
       validation_history:
         revise: 0
@@ -841,9 +867,10 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     推断二元结果:
-      paper_count: 0
-      papers: []
-      status: EMERGING
+      paper_count: 1
+      papers:
+        - hoffmann_cheong_phan_zurbruegg2024_jm
+      status: VERIFIED
       slots_covered: []
       common_failures: []
       validation_history:
@@ -854,28 +881,91 @@ evidence:
     common-method-bias-prevention:
       paper_count: 1
       papers:
-      - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int (ASQ)
+        - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int (ASQ)
       status: VERIFIED
     两阶段模型:
-      paper_count: 9
+      paper_count: 12
       papers:
-      - chen_ganesan_liu_2009_jm (JM)
-      - chung_low_rust_2022_jams (JAMS)
-      - darby2023 (MSOM)
-      - moon_tuli_mukherjee_2023_jm (JM)
-      - ridge_hill_ingram_kolomeitsev_worrell_2024_amj (AMJ)
-      - zhou2017 (ASQ)
-      - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
-      - gulati2005-adaptation-vertical (Strategic Management Journal)
-      - gulati_higgins_2003_which_ties_matter (Strategic Management Journal)
+        - chen_ganesan_liu_2009_jm (JM)
+        - chung_low_rust_2022_jams (JAMS)
+        - darby2023 (MSOM)
+        - moon_tuli_mukherjee_2023_jm (JM)
+        - ridge_hill_ingram_kolomeitsev_worrell_2024_amj (AMJ)
+        - zhou2017 (ASQ)
+        - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
+        - gulati2005-adaptation-vertical (Strategic Management Journal)
+        - gulati_higgins_2003_which_ties_matter (Strategic Management Journal)
+        - eilert2017
+        - liu_shankar2015
+        - pupovac_astvansh_carrillat_legoux_2026_pom
       status: ROBUST
       slots_covered:
-      - M7
-      - M8
+        - M7
+        - M8
+        - M6
       common_failures:
-      - 排除限制事后改口 — 主回归中排除变量显著后仍声称无直接效应
+        - 排除限制事后改口 — 主回归中排除变量显著后仍声称无直接效应
       validation_history:
         revise: 0
         reject: 0
         last_critique: null
         common_revise_reasons: []
+
+# === AUTHORED ===
+status_overrides:
+  schema: '1.0'
+  note: >-
+    用户裁定状态，显式越过 phase-4 ladder（1–2 来源 EMERGING / 3+ VERIFIED / 5+ 跨 2 子域 ROBUST；见 distill-theory-exemplar/references/phase-4-validation-writeback.md L232-238）。rebuild 派生 status = ladder ⊕ 本节（本节显式优先）；键为 registry 路径，value.status 为裁定档位，value.basis 为裁定凭据原文。本节属 AUTHORED——rebuild 透传不改。
+  overrides:
+    evidence.by_source_paper.anand_mukherjee_2024_learning_from_failures_di:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    evidence.by_source_paper.bendig_hensellek_schulte_2024_etp:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    evidence.by_source_paper.chen_ganesan_liu_2009_jm:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    evidence.by_source_paper.fini_jourdan_perkmann_2017_amj:
+      status: EMERGING (1p)
+      basis: >-
+        distill-methods-exemplar_2026-08-12
+    evidence.by_source_paper.gulati_westphal_1999_cooperative_or_controlling:
+      status: VERIFIED
+      basis: >-
+        user_designation (2026-09-06: 用户点名 Gulati 为最喜爱学者——Gulati 系单源升 VERIFIED；methods 带按库惯例记录于此，槽位证据等级随 design_type 行)
+    evidence.by_source_paper.hoffmann_cheong_phan_zurbruegg2024_jm:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    evidence.by_source_paper.kashmiri_nicol_arora_2017_jams:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    evidence.by_source_paper.lee_park_2024_smj:
+      status: VERIFIED
+      basis: >-
+        user_expert_audit
+    evidence.by_source_paper.liu_shankar2015:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
+    evidence.by_source_paper.post_2022_women_tmt_strategic_renewal:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-29: 用户点名喜爱本篇，单源足矣)
+    evidence.by_source_paper.ridge_hill_ingram_kolomeitsev_worrell_2024_amj:
+      status: EMERGING (1p)
+      basis: >-
+        distill-methods-exemplar_2026-08-12
+    evidence.by_source_paper.westphal_bednar_2005_asq:
+      status: VERIFIED
+      basis: >-
+        user_designation (2026-09-06: 用户升级裁定——Westphal 系单源即 VERIFIED；覆盖 2026-08-29 轻量蒸馏裁决，methods 槽位证据一并生效)
+    evidence.by_source_paper.westphal_zajac_1998_symbolic_management:
+      status: VERIFIED
+      basis: >-
+        expert_audit_override (user 2026-08-28: 单源足矣)

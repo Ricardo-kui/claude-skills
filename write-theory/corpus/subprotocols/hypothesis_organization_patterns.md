@@ -30,6 +30,7 @@ status: ready_for_corpus
 | 10 | Pattern: Mechanism-Loss Trunk → Multi-Outc | 拥挤的治理/结构文献中，IV 不是“又一个 board/TMT characteristic |  | Zorn, Shropshire, Martin, Comb |
 | 11 | Pattern: Per-Stakeholder Paired (Main + Cue-M | 同一特质 IV 对多个外部利益相关者各产生“主效应（默认表现型）+ cue 切换（对立表现型）”配对；贡献=同一特质在多个 stakeholder 关系中的切换节律 | EMERGING（单篇来源，待第 | Ridge, Hill, Ingram, Kolomeitsev |
 | 12 | Pattern: Dual-Role IV → Shared-Logic Compressed T5 | 对立力量 trunk 后，同一组 W 先立主效应，再用共享短/长期逻辑压缩全部交互，而非每 moderator 独立嵌入 | EMERGING（单篇来源，待第二篇） | Liu, Liu & Luo (2016), *Journal of Marketing* |
+<!-- wb:Malshe_Agarwal_2015_JM:legacy_hypothesis_organization_patterns_变体速查表 -->
 
 ## Pattern: Triple Parallel Boundary Conditions
 
@@ -68,6 +69,7 @@ source_papers: ["Shen_Zhou_Wang_Zhang_2022_JOM"]
 confidence: medium
 status: ready_for_corpus
 -->
+<!-- wb:Shen_Zhou_Wang_Zhang_2022_JOM:legacy_hypothesis_organization_patterns_PatternTripleParalle -->
 
 ## Pattern: Common Trunk → Parallel Branches
 
@@ -115,6 +117,7 @@ source_papers: ["Bamberger_Homburg_Wielgos_2021_JM"]
 confidence: low
 status: needs_validation
 -->
+<!-- wb:Bamberger_Homburg_Wielgos_2021_JM:legacy_hypothesis_organization_patterns_PatternCommonTrunkPa -->
 
 ## Pattern: Common Trunk → Role-Separated Parallel Mediators → Effect Decomposition → Horizon Test
 
@@ -165,6 +168,7 @@ source_papers: ["Singh_Grewal_2023_JMR"]
 confidence: low
 status: needs_validation
 -->
+<!-- wb:Singh_Grewal_2023_JMR:legacy_hypothesis_organization_patterns_PatternCommonTrunkRo -->
 
 ## Pattern: Baseline Mechanism → Dual Path → Contingency Branches
 
@@ -209,6 +213,8 @@ source_papers: ["Gamache_McNamara_Mannor_Johnson_2020_SMJ", "Zhao-Ding_Gaba_ORSC
 confidence: high
 status: ready_for_corpus
 -->
+<!-- wb:Gamache_McNamara_Mannor_Johnson_2020_SMJ:legacy_hypothesis_organization_patterns_PatternBaselineMecha -->
+<!-- wb:Zhao-Ding_Gaba_ORSC:legacy_hypothesis_organization_patterns_PatternBaselineMecha_2 -->
 
 ## Pattern: 2×2 Symmetric Hypothesis Matrix
 
@@ -276,6 +282,7 @@ source_papers: ["Pupovac_Astvansh_Carrillat_Legoux_2026_POM"]
 confidence: low
 status: needs_validation
 -->
+<!-- wb:Pupovac_Astvansh_Carrillat_Legoux_2026_POM:legacy_hypothesis_organization_patterns_Pattern22SymmetricHy -->
 
 ## Pattern: Sequential Two-Stage Screening with Asymmetric Branches
 
@@ -316,6 +323,7 @@ source_papers: ["Du_Tsolmon_2024_ORSC"]
 confidence: low
 status: needs_validation
 -->
+<!-- wb:Du_Tsolmon_2024_ORSC:legacy_hypothesis_organization_patterns_PatternSequentialTwo -->
 
 ## Pattern: 2×2 Combination Enumeration to Induce Main Effect
 
@@ -363,6 +371,7 @@ source_papers: ["Kashmiri_Nicol_Arora_2017_JAMS"]
 confidence: low
 status: needs_validation
 -->
+<!-- wb:Kashmiri_Nicol_Arora_2017_JAMS:legacy_hypothesis_organization_patterns_Pattern22Combination -->
 
 ## Pattern: Shared Orientation → Divergent Outcome Portfolio → Selective Remedy
 
@@ -423,6 +432,7 @@ confidence: medium
 status: EMERGING
 story_fidelity: section_variant
 -->
+<!-- wb:Castellaneta_Conti_Kacperczyk_2017_SMJ:legacy_hypothesis_organization_patterns_PatternSharedOrienta -->
 
 ## Pattern: Dual-Edged Trunk → Signed Enhancing/Hindering Branches
 
@@ -472,6 +482,7 @@ confidence: low
 status: needs_validation
 story_fidelity: section_variant
 -->
+<!-- wb:Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ:legacy_hypothesis_organization_patterns_PatternDualEdgedTrun -->
 
 ## Pattern: Mechanism-Loss Trunk → Multi-Outcome Tree → External Partial-Substitute Boundary
 
@@ -536,6 +547,7 @@ confidence: emerging
 status: needs_cross_paper_validation
 story_fidelity: section_variant
 -->
+<!-- wb:Ridge_Hill_Ingram_Kolomeitsev_Worrell_2024_AMJ:legacy_hypothesis_organization_patterns_PatternMechanismLoss -->
 
 ## Pattern: Per-Stakeholder Paired (Main + Cue-Moderation) Parallel
 
@@ -592,6 +604,7 @@ source_papers: ["Liu_Liu_Luo_2016_JM"]
 confidence: medium
 status: EMERGING
 -->
+<!-- wb:Liu_Liu_Luo_2016_JM:legacy_hypothesis_organization_patterns_PatternPerStakeholde -->
 
 
 ### 变体 C：个体-单元双层平行假设集 + 中介份额声明（Multilevel Parallel Sets with Mediator-Portion Split）

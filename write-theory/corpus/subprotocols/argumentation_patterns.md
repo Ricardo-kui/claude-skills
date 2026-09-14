@@ -73,6 +73,8 @@ status: ready_for_corpus
   Option B (Moderation Resolution): Yet existing theory does not specify when [A] rather than [B] occurs.
 [Pivot] We argue that [correct prediction or resolution mechanism].
 ```
+<!-- wb:Gamache_McNamara_Mannor_Johnson_2020_SMJ:legacy_argumentation_patterns_PatternPreemptiveCom -->
+<!-- wb:Desai_2012_AMJ:legacy_argumentation_patterns_PatternPreemptiveCom_2 -->
 
 ### 子变体 A：Direct Rejection（Gamache 型）
 
@@ -116,6 +118,7 @@ source_papers: ["Desai_2012_AMJ"]
 confidence: low
 status: needs_validation
 -->
+<!-- wb:Desai_2012_AMJ:legacy_argumentation_patterns_子变体BCompetingBaselin -->
 
 ## Pattern: Extension Logic from Analogous Domain
 
@@ -147,6 +150,7 @@ source_papers: ["Mayo_2022_POM"]
 confidence: high
 status: ready_for_corpus
 -->
+<!-- wb:Mayo_2022_POM:legacy_argumentation_patterns_PatternExtensionLogi -->
 
 ## Pattern: Dual-Theory Two-Stage Mechanism
 
@@ -182,6 +186,7 @@ source_papers: ["Mayo_2022_POM"]
 confidence: medium
 status: ready_for_corpus
 -->
+<!-- wb:Mayo_2022_POM:legacy_argumentation_patterns_PatternDualTheoryTwo -->
 
 ## Pattern: Industry Context as Scope Condition
 
@@ -213,6 +218,7 @@ source_papers: ["Ball_2018_JOM"]
 confidence: medium
 status: ready_for_corpus
 -->
+<!-- wb:Ball_2018_JOM:legacy_argumentation_patterns_PatternIndustryConte -->
 
 ## Pattern: Dual Mechanism Convergence
 
@@ -257,6 +263,7 @@ confidence: high
 status: ready_for_corpus
 related: 与 "Multi-Mechanism Trunk"（见 hypothesis_derivation_patterns.md）互补——后者给"例子"，本模式给"受控对比"
 -->
+<!-- wb:Cutolo_Ferriani_2024_JOM:legacy_argumentation_patterns_PatternDualMechanism -->
 
 ## Pattern: Minimal-Pair Contrast Vignette (受控最小对对比)
 
@@ -308,6 +315,7 @@ source_papers: ["Hoffmann_2024_JM"]
 confidence: medium
 status: ready_for_corpus
 -->
+<!-- wb:Hoffmann_2024_JM:legacy_argumentation_patterns_PatternMinimalPairCo -->
 
 ## Pattern: Dual-Lens Main/Boundary Division
 
@@ -356,6 +364,7 @@ source_papers: ["lunetal2026"]
 confidence: medium
 status: ready_for_corpus
 -->
+<!-- wb:lunetal2026:legacy_argumentation_patterns_PatternDualLensMainB -->
 
 ## Pattern: Neglected Lens via Dominant-View Contrast（优势视角对照被忽视透镜）
 

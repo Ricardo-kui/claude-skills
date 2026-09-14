@@ -746,6 +746,114 @@ P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者
 
 <!-- wb:gulati_lavie_singh_2009_partnering_experience:preview_construct_pair_claim_ladder -->
 
+
+### 变体 AD: 双理论适域划分 → 曲线裁决预告型（ridge_aime_white_2013 型）
+
+> 论证角色：Claim（把对立理论重写为沿 X 轴的适域互补，联合推出裁决性曲线预测并在引言一次交付）
+
+**验证状态**: EMERGING（单篇来源；仅作 section_variant）
+
+**模板**:
+> "In this study, we seek to address these issues by first integrating the seemingly contradictory theories of [the focal relation]. To the best of our knowledge, no attempts have been made to integrate both views. We argue that [theory A / logic A] is mostly relevant when [X] is [high enough to activate mechanism A]. Also, [theory B / logic B] is primarily relevant when [X] is not high enough to [disrupt mechanism B]. Accordingly, [theory A] and [theory B] can supplement each other at different levels of [X] while remaining internally consistent with their theoretical traditions. Specifically, we propose and find that [adjudicating curvilinear pattern, e.g., high levels of Y around either meaningfully low or meaningfully high levels of X]."
+
+**来源**: Ridge, Aime & White (2013), *Strategic Management Journal*, Introduction, P3.
+
+**原文锚定**:
+> "We argue that economic logic (tournament theory…) is mostly relevant when the level of pay disparity is high enough to incite competition for a prized trophy (the CEO position). Also, behavioral logic (social comparison…) is primarily relevant when the level of pay disparity is not high enough to disrupt comparison effects. Accordingly, social comparison and tournament theory can supplement each other at different levels of pay disparity while remaining internally consistent with their theoretical traditions. Specifically, we propose and find that high levels of firm performance will be found around either meaningfully low or meaningfully high levels of pay disparity."
+
+**关键特征**:
+- 适域划分而非面相拆分：区别变体 A（"pertain to different facets"，两理论同时在场解释不同面）——本变体给每个理论在 X 轴上分配一段 validity domain，两理论沿 X 互补、不在同一区间竞争
+- "while remaining internally consistent with their theoretical traditions" 明示两理论内部逻辑均不修改——整合零理论修正成本（区别 paradigm-challenge 型）
+- "we propose and find" 融合句把假设方向与实证结果一并预告：曲线形状（U 形两端高，各由一机制托底）本身就是裁决性预测
+- "To the best of our knowledge, no attempts have been made to integrate both views" 整合首创声明前置，直接回应 P2 封堵后的整合缺口
+
+**适用**: R3 对立机制 × Mechanism，且两机制强度随 X 反向单调变化（一端 A 主导、另一端 B 主导、中段双弱）；曲线形状须能由机制适域直接推出（U 形两端各有一种机制支撑绩效）
+
+**禁忌**: 适域划分必须给出机制强度随 X 变化的理由（本文：prize size 激活锦标赛 / 差距过大会打断比较），不得仅从"两机制对立"直接宣布曲线（incommensurability routing safeguard）；"propose and find" 只用于结果已定稿且确实支持的写作阶段；"no attempts have been made" 是强首创声明，需真实检索背书且随文献老化失效
+
+<!-- wb:ridge_aime_white_2013_smj:preview_dual_theory_domain_partition_curvilinear -->
+
+
+
+### 变体 AE: 调节=核心假设实证检验预告型（ridge_aime_white_2013 型）
+
+> 论证角色：Warrant（把调节变量从"边界延伸"升格为理论核心假设的实证检验，为机制提供内部支持）
+
+**验证状态**: EMERGING（单篇来源；仅作 section_variant）
+
+**模板**:
+> "We then address the effects of [moderator family] on the relationship between [X] and [Y]. Specifically, we consider the moderating effects of both [structural aspect 1 / structural aspect 2] and [actor-characteristic moderators]. For example, we expect limited if any [mechanism A] effects in organizations where [concrete condition], because [mechanism-terminating logic]. These effects are fundamental to our understanding of [the focal relation] not only because they extend our understanding of the main hypothesized [curvilinear] relationship, but also because they serve as empirical tests of the core assumptions of our theorizing ([methodological citation]). As such, they may provide internal support to the mechanisms of [theory A] and [theory B] as relevant explanations of [the focal relation]."
+
+**来源**: Ridge, Aime & White (2013), *Strategic Management Journal*, Introduction, P4.
+
+**原文锚定**:
+> "These effects are fundamental to our understanding of the effect of pay disparity on firm performance not only because they extend our understanding of the main hypothesized curvilinear relationship, but also because they serve as empirical tests of the core assumptions of our theorizing (Miller and Tsang, 2011). As such, they may provide internal support to the mechanisms of tournament theory and social comparison theory as relevant explanations of the relationship between pay disparity and firm performance."
+
+**关键特征**:
+- 调节的双重正当性声明：不仅 extend 主关系理解（常规边界辩护），更是"理论核心假设的实证检验"（Miller & Tsang 2011 方法论锚）——"not only... but also..." 递进完成升格
+- "internal support to the mechanisms" 把显著交互从统计结果升级为机制证据：调节成立=机制假设获得内部支持
+- 每个调节绑定一条机制停运逻辑，例证句具体到理论人物设定（heir apparent：命名继任者"象征性终止当前锦标赛而不开启新一场"——锦标赛参与结构被拆除）
+- 区别 fini 通道匹配子特征（每个调节绑定 counter-balancing effect 通道）：本变体把调节绑定到核心假设的可检验推论，warrant 是机制有效性而非方向分解
+
+**适用**: 曲线/主效应 + 多调节的 R3/R4 设计；当审稿人会把调节读成探索性交互时，用它把调节提升为假设检验；有方法论引证（如 Miller & Tsang 2011）支撑时最强
+
+**禁忌**: "empirical tests of core assumptions" 要求调节的逻辑确实从核心假设推出（如 heir apparent 直接改变锦标赛参与结构），不得把任意调节包装成假设检验；机制停运逻辑须具体（谁、如何被移出机制），不能只说"条件改变强度"；双 warran（extend + test）须都成立，不可凑数
+
+<!-- wb:ridge_aime_white_2013_smj:preview_moderators_as_core_assumption_tests -->
+
+
+
+### 变体 AF：第三方事件诱导处理组构造 + 事件外生性辩护型（Lu–Shen–Wang–Zhang 2022 MS 型）
+> 论证角色：Warrant——用第三方机构的合并事件构造准实验的处理组/控制组，并以事件的制度驱动因素独立辩护处理的外生性，为因果语言预先授权
+
+**验证状态**: EMERGING（单篇来源；仅作 section_variant，不改核心路由）
+
+**功能节拍**: 事件命名 → 处理机制（对手关联增加）→ 处理组定义 → 控制组定义（同一批事件机构组合内未变化单位）→ 外生性独立辩护段（制度驱动因素 + 引文背书）
+
+**模板**:
+> "To address these concerns, we exploit the quasinatural experiment of [institutional events among third parties] and use a [quasi-experimental estimator] to identify the effect. When two [third-party institutions] merge, [treated firms] are likely to experience an increase in [treatment construct] when [one of their rivals] is [held/linked] by the other merging institution before the merger. Thus, the treatment sample consists of [units whose treatment construct increases because of the event]. The control sample, on the other hand, consists of [other units in the same institutions' portfolios that do not experience the change]. The [event]-induced change is exogenous to [DV] because the [event] is unlikely to be driven by [DV-relevant prospects of specific holdings]: [institutional driver 1 with citation], and [institutional driver 2 with citation]."
+
+**来源**: Lu, Shen, Wang & Zhang 2022 (Management Science), P5–P6
+
+**原文锚定**:
+> "we exploit the quasinatural experiment of the mergers of financial institutions ... and use a Difference-in-Differences (DiD) approach to identify the effect" / "The merger-induced common-ownership change is exogenous to the advertising strategy because the merger of two financial institutions is unlikely to be driven by their holdings of some specific stocks."
+
+**关键特征**:
+- 处理由"第三方事件 × 既有竞争关系"交叉诱导，而非单位自身采纳决策——与 staggered adoption 类变体（Castellaneta 型 Q/W）的识别来源不同
+- 控制组取自同一批事件机构组合内的未变化持仓（intra-portfolio control），便于吸收机构层面固定差异
+- 外生性辩护独立成段：事件驱动因素（放松管制/规模经济）有 M&A 文献引文背书，不是作者断言
+- 与"内生性挑战独立段"变体（W）配套：前者管挑战命名与中心性 warrant，本变体管设计构造 + 事件外生性
+
+**适用**: 处理由第三方机构行为（合并、拆分、监管重组）诱导、且事件驱动因素可由制度史/M&A 文献支撑的准实验论文；因果识别是核心可信度卖点的 econ/MS 体例 Intro；配 DiD/PSM 类估计器。
+
+**禁忌**: 事件外生性必须有制度文献或监管史引文支撑，不得仅断言；若事件可能被持仓方选择或操纵，不得使用本变体；Intro 不展开全部稳健性细节（留给 robustness-preview）。
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:intro_identification_event_induced_treatment_exogeneity -->
+
+
+### 变体 AG：三问驱动形式模型预览（mao_dong_lee_2022_msom 型）
+> 论证角色：Framing（编号研究问题三元组先行安装，模型段-发现段-稳健性-实证支持按同一顺序逐问偿还）
+
+**模板**:
+> "In this paper, we explicitly model [过程] for [情境] and ask the following N questions. First, [RQ1：是否会 X]？ Second, [RQ2：是否会 Y]？ Finally, [RQ3：监管方如何用工具遏制 Y]？ 模型段：We adopt [基线动态模型] and modify it by incorporating [事件]；we focus on [主体] 的 [事后] 决策——是否付出 [努力]、以及何时 [行动]；[及时行动] leads to [成本A]，whereas [拖延行动] leads to [成本B]；therefore [主体] trades off [A] against [B]。发现段：Using this [模型]，we determine [决策] using [求解法]：[决策1] relies upon (1) [因素1]，(2) [因素2]，(3) [因素3]；并非所有 [行动] 都会 [拖延]，但会 [拖延] 的主体具有 [特征三元组]；结果在 [扩展1]/[扩展2] 下基本不变，且得到 [行业] 数据的实证支持。"
+
+**来源**: Mao, Dong & Lee 2022 (MSOM), P3-P5
+
+**原文锚定**:
+> "In this paper, we explicitly model the defect investigation and recall process for products with long life cycles and ask the following three questions."
+
+**关键特征**:
+- 预览以编号研究问题三元组开头（第三问是政策问题），模型段与发现段按提问顺序逐问偿还，问题-预览一一映射
+- 发现预览用"决策规则+因素编号清单+特征三元组+单调比较静态"表述而非效果量，并显式包含稳健性扩展与实证支持指针
+- 模型段内嵌理论透镜功能（修改基线扩散模型+定义事后权衡），无独立 Theory Lens 段
+
+**适用**: formal-model OM/MS 论文（MSOM/POM/MS 风格）；模型有可解析比较静态且含政策分析层时
+
+**禁忌**: N 问必须与预览发现一一对应，不得预览不兑现的问题；发现句保留条件结构（如"会拖延者必须具有以下特征"），禁止压成无条件结论
+
+<!-- wb:mao_dong_lee_2022_msom:intro_preview_question_triad_formal_model -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
 ## 组装规则
 
 ### 必须配对

@@ -2,7 +2,7 @@
 
 > 由 write-introduction Phase 3 渲染时**必读**：对所选模块逐条过检查。规则按模块分节；🔴 = 硬性（不满足则叙事断裂），🟡 = 强推荐。
 > 路径基准：`corpus/...` 以 write-introduction/ 为基准；语料内部 `hooks/...` 等引用以 `corpus/` 为基准。
-> 模块的**论证依据层**（模块范式 ↔ Booth Context–Problem–Response 与论证五要素的对应及细则）见 `module-booth-mapping.md`——Phase 2 规划与 Gate 5 抽查参照。
+> 模块的**论证依据层**（模块范式 ↔ Booth Context–Problem–Response 与论证五要素的对应及细则）见 `module-booth-mapping.md`——承重规则已内联本文件（Hook #5/Stakes #5），该文件供依据展开时按需读取；Gate 5 抽查参照。
 
 ## Hook
 

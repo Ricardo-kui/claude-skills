@@ -32,6 +32,7 @@ status: ready_for_corpus
 | 11 | Pattern: Dual-Mechanism Convergent Moderat | 当主效应建立在两个互补机制上（如 pipes/prisms、资源获取/资源利用、合法性/效率 |  | Li, Bapuji, Talluri, Singh & N |
 | 12 | Pattern: Asymmetric Disposition×Context Mo | 主效应为 "[disposition trait] → [outcome]"，且 dispo |  | Abdurakhmonov, Ingram & Ridge  |
 | 13 | Cue-Activation Carve-Out（硬约束 #11 例外） | moderator 是特质相关 cue、low 态=主效应默认基线、只论 high（activation）侧即可满足双边覆盖，不强制冗余 low 段 | 条件化 carve-out | Ridge et al. (2024), *AMJ*（2026-08-12 蒸馏）；对照仍需双边：E1 Step5/7、Buffering、E9、Pattern 12 |
+<!-- wb:Keeves_2017_ASQ:legacy_bilateral_argumentation_templates_变体速查表 -->
 
 ## Pattern: Group Identity as Boundary Condition
 
@@ -67,6 +68,7 @@ source_papers: ["Shi_Grewal_Sridhar_2021_JMR"]
 confidence: medium
 status: ready_for_corpus
 -->
+<!-- wb:Shi_Grewal_Sridhar_2021_JMR:legacy_bilateral_argumentation_templates_PatternGroupIdentity -->
 
 ## Pattern: Benchmark Leaders vs. Similar Peers as Information Sources
 
@@ -104,6 +106,7 @@ source_papers: ["Zhou_2017_ASQ"]
 confidence: high
 status: ready_for_corpus
 -->
+<!-- wb:Zhou_2017_ASQ:legacy_bilateral_argumentation_templates_PatternBenchmarkLead -->
 
 ## Pattern: Boundary Condition as Remedy for Agency Inefficiency
 
@@ -142,6 +145,7 @@ source_papers: ["Shen_Zhou_Wang_Zhang_2022_JOM"]
 confidence: medium
 status: ready_for_corpus
 -->
+<!-- wb:Shen_Zhou_Wang_Zhang_2022_JOM:legacy_bilateral_argumentation_templates_PatternBoundaryCondi -->
 
 ## Pattern: Bilateral Argumentation — High/Low Conditions Across Three Mechanisms
 
@@ -183,6 +187,7 @@ source_papers: ["Shen_Zhou_Wang_Zhang_2022_JOM"]
 confidence: medium
 status: ready_for_corpus
 -->
+<!-- wb:Shen_Zhou_Wang_Zhang_2022_JOM:legacy_bilateral_argumentation_templates_PatternBilateralArgu -->
 
 ## Pattern: Bilateral Argumentation with Boundary Condition
 
@@ -218,6 +223,7 @@ source_papers: ["Darby_2023_MSOM"]
 confidence: high
 status: ready_for_corpus
 -->
+<!-- wb:Darby_2023_MSOM:legacy_bilateral_argumentation_templates_PatternBilateralArgu -->
 
 ## Pattern: Categorical Severity Moderation — High vs Low
 
@@ -252,6 +258,7 @@ source_papers: ["Darby_2026_JOM"]
 confidence: high
 status: ready_for_corpus
 -->
+<!-- wb:Darby_2026_JOM:legacy_bilateral_argumentation_templates_PatternCategoricalSe -->
 
 ## Pattern: Categorical Risk Moderation — Low vs High Risk Devices
 
@@ -285,6 +292,7 @@ source_papers: ["Cui_Yang_Vertinsky_SMJ"]
 confidence: high
 status: ready_for_corpus
 -->
+<!-- wb:Cui_Yang_Vertinsky_SMJ:legacy_bilateral_argumentation_templates_PatternCategoricalRi -->
 
 ## Pattern: Inverted-U Moderation — High/Low Bilateral Argumentation
 
@@ -341,6 +349,7 @@ source_papers: ["Bendig_Hensellek_Schulte_2024_ETP"]
 confidence: medium
 status: VERIFIED
 -->
+<!-- wb:Bendig_Hensellek_Schulte_2024_ETP:legacy_bilateral_argumentation_templates_PatternInvertedUMode -->
 
 ## Pattern: Mode-Differentiated Curve Geometry under Shared W（同边界条件、异几何变换）
 
@@ -387,6 +396,7 @@ source_papers: ["Lee_Park_2024_SMJ"]
 confidence: medium
 status: EMERGING
 -->
+<!-- wb:Lee_Park_2024_SMJ:legacy_bilateral_argumentation_templates_PatternModeDifferent -->
 
 ## Pattern: Turning-Point Delay via Selective Prerequisite Preservation（选择性维持条件→拐点右移）
 
@@ -428,6 +438,7 @@ confidence: high
 status: ready_for_corpus
 related_intro_lens: write-introduction/corpus/theory-lens/08-dual-metaphor-stream-reconciliation.md
 -->
+<!-- wb:Li_Bapuji_Talluri_Singh_Narayanan_2025_JSCM:legacy_bilateral_argumentation_templates_PatternTurningPointD -->
 
 ## Pattern: Dual-Mechanism Convergent Moderation (with moderator×mechanism matrix)
 
@@ -494,6 +505,7 @@ related: 与 dual_mechanism_convergent_moderation (Li 2025) 概念正交：
          Li = moderator × 双机制矩阵（对称收敛，同一 moderator 经两条同向机制）；
          本 pattern = moderator × disposition-pole 矩阵（不对称，每个 moderator 对两极的机制不同）。
 -->
+<!-- wb:abdurakhmonov_ingram_ridge_2026_jom:legacy_bilateral_argumentation_templates_PatternDualMechanism -->
 
 ## Pattern: Asymmetric Disposition×Context Moderation（多 moderator 同向、各异不对称机制作用于 disposition 两极）
 

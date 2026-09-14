@@ -206,6 +206,7 @@ However, [audience B] may view the same [action] differently from [audience A]:
 - 每段都做受众切换（频次：通常 0–1；仅反直觉单 DV 比较主效应需要）
 
 ---
+<!-- wb:Chen_Ganesan_Liu_2009_JM:legacy_acknowledgment_response_5bAudienceFoilPivot异 -->
 
 ## 6. 定量实证适配与分工
 
@@ -288,6 +289,50 @@ of variation at issue], which is the focus of our theory.
 
 <!-- wb:zajac_westphal_the_social_construction_of_market_value:rival_dimension_carveout_sentence -->
 
+
+
+### 证据多数裁定+构念层级划界句（Majority-Evidence Weighting with Construct-Level Scoping，Lu et al. 2022 MS 型）
+
+> 论证角色：A&R——对"多数证据 vs 少数反证"的冲突做构念层级划界并承诺主流立场的承认-回应句式
+
+<!--
+pattern_id: majority_evidence_construct_level_scoping
+build_type: 跨类型（冲突证据处置句式）
+source_papers: ["lu_et_al_2022_frenemies_corporate_advertising"]
+confidence: medium
+status: EMERGING（单源，gate ① 裁决）
+-->
+
+**适用**: 前提构念（如广告的竞争作用）在文献中主流方向明确、但存在少量反方向证据，且反证可归因于更窄的构念层级/情境——按证据权重 + 构念层级划界消解冲突，承诺多数派立场，不另立调节假设。
+
+**骨架**:
+```
+[承认主流] There is a large literature showing [dominant direction] ([citations]).
+[承认反证] Although much of the past research indicates [dominant view], some
+empirical research shows [minority opposite finding] ([citations])。[1 句机制性例证]。
+[多数裁定+划界] Overall, it is more common and general to find [dominant view],
+whereas [minority finding] depends on [narrower construct condition]。
+[构念层级承诺] In our context, we study [construct at broader level], which is
+broader than [narrower scope]。 Therefore, we take a [dominant] view and
+hypothesize that [prediction]。
+```
+
+**为什么有效**: 反证被给出一句话的机制解释（如竞品广告激活品类需求→正溢出），不被否认而是被限定其成立条件；"we study X at a broader level, which is broader than..." 把冲突转化为构念层级的取舍问题——本文构念不落在反证成立的窄层级内，多数派立场因此是有界选择而非忽视反证。
+
+**与邻近句式的分工**:
+
+| 本句式 | 变体 A（权变调和开场） | 变体 C（维度 carve-out） |
+|--------|----------------------|------------------------|
+| 反证按构念层级被 scope 掉，承诺多数派 | 两派冲突调和为调节假设 | 承认对手解释份额后收窄争点维度 |
+| 冲突不产出新假设 | 冲突产出 moderator | 冲突产出竞争假设对 |
+
+**原文锚点** (Lu, Shen, Wang & Zhang 2022, Management Science, §2.2):
+> "Overall, it is more common and general to find a negative externality of advertising on rivals, whereas the existence of positive spillovers depends on the specific definition of product substitutes (Sahni 2015, Shapiro 2018). In our context, we study firm-level advertising expenditure in response to the ownership change, which is broader than specific products. Therefore, we take a combative view of advertising."
+
+**注意事项**: 反证的成立条件必须真实可述，不得空洞贬低；"broader than" 的层级主张要与构念定义一致；scope 划界后若实证发现反方向，先前承诺会反噬（诚实边界：有风险的承诺结构）。
+**反模式**: 文献中两派证据势均力敌时不得使用（那是变体 A 的权变调和场景）；用划界包装对反证的系统性回避。
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:majority_evidence_construct_level_scoping_sentence -->
 
 ### 句式 D：竞争推测预承认与核心论点回收（Competing-Speculation Acknowledgment + Numbered Core-Argument Recap）
 

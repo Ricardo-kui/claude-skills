@@ -80,6 +80,7 @@ updated: 2026-08-05
 > To address this challenge [of finding valid external instruments], we use an IV approach that has emerged from the econometrics literature called the heteroskedastic identified instrument technique. This technique, which has recently been adopted in [domain] research ([citations]), is designed to accommodate a setting "when no external instruments or other such information are available" ([citation], [page]). This procedure allows us to generate valid instruments via three steps ([citations]). First, we use the potentially endogenous independent variable ([IV]) as the dependent variable in a first-stage equation that features all our controls as regressors. Just as [citation] theorized and [citation] emphasize, we include all of our control variables as the regressors in this first-stage equation because doing so is the preferred specification, unless including a subset of the controls better upholds the assumptions of the model. In the second step, the technique calculates the residuals associated with each of those control variable regressors and transforms the heteroskedasticity into potentially valid IVs, but only when the assumptions of the model that we detail next are exhibited ([citations]). Finally, we incorporate the valid generated instruments into the two-stage IV fixed effects estimators.
 **与原骨架差异**: 传统 IV-2SLS 要求研究者找到外部工具变量(如政策冲击、自然实验)，而 Lewbel 方法从第一阶段的**异方差残差**中内部生成有效IV。三步法核心：(1) 所有控制变量回归内生变量；(2) 残差异方差→有效IV；(3) 生成的IV纳入第二阶段。诚实边界：Lewbel 方法依赖于两个关键假设(见变体2)，若不满足则生成的IV无效。适用于"无外部IV可用"的情境。
 
+<!-- wb:wowak_2025_ms:legacy_IV-2SLS_1 -->
 ### 变体 2: IV 有效性诊断链完整报告 (Lewbel + 传统诊断)
 **来源论文**: Wowak2025 MS
 **原始句锚点**: "It is worth underscoring that our generated instruments also conform to the traditional diagnostic tests pertaining to relevance and exogeneity for any type of IV."
@@ -92,6 +93,7 @@ updated: 2026-08-05
 > It is worth underscoring that our generated instruments also conform to the traditional diagnostic tests pertaining to relevance and exogeneity for any type of IV. Indeed, the partial F-statistic exceeds the thresholds that scholars suggest represent relevance (partial F-stat = [value]; p < [threshold]), and the [identification_test] from [citation] does not contain zero [[lower], [upper]], reflecting relevant instruments ([citation]). Similarly, diagnostic tests for exogeneity suggest our instruments are unrelated to the structural error terms pertaining to [DV_1] (Sargan χ² = [value]; p = [threshold]) and [DV_2] (Sargan χ² = [value]; p = [threshold]), indicating that our instruments are not endogenous ([citation]). Taken together, our instruments appear to be properly identified and valid.
 **与原骨架差异**: 这是 IV-2SLS 的**完整诊断报告模板**。关键要素：(1) Lewbel 假设1: Pagan-Hall 不拒绝 homoskedasticity → 生成的IV与误差协方差无关；(2) Lewbel 假设2: Breusch-Pagan 拒绝 homoskedasticity → 生成的IV与内生变量相关；(3) 传统 relevance: partial F > 10；(4) 传统 identification: Andrews 区间不含0；(5) 传统 exogeneity: Sargan 不拒绝 → IV外生。适用于任何IV研究——传统IV替换前两个测试为 Wu-Hausman / Cragg-Donald。**诚实边界**: 若任何测试未通过，相应的IV无效，需重新选择工具变量。
 
+<!-- wb:wowak_2025_ms:legacy_IV-2SLS_2 -->
 ### 变体 3: 政治意识形态操作化 — 四步四指标聚合流程
 **来源论文**: Wowak2025 MS
 **原始句锚点**: "Following research precedence, we averaged the indicators to calculate each TMT member's political ideology (Briscoe and Joshi 2017, Chin and Semadeni 2017, Gupta and Wowak 2017). In line with this literature, we assign a score of 0.5 to individuals with no political donations, indicating that they are politically moderate (Chin et al. 2013, Gupta and Wowak 2017, Gupta et al. 2018)."
@@ -102,6 +104,7 @@ updated: 2026-08-05
 > [IV] is calculated as the [aggregation_method] [annual] [construct] across members of a firm's [group] ([citations]). To compute this measure, we carefully followed the procedure documented in [domain] research ([citations]). We first used [source] to identify the [group_members] in each organization ([citations]). Next, we identified each [member]'s [construct] by accessing [data_source] from [database]. Using the [data], we then calculated [N] indicators that have been shown to collectively reflect [construct] ([citations]): (1) [indicator_1]; (2) [indicator_2]; (3) [indicator_3]; and (4) [indicator_4]. Each indicator ranges from [min] to [max]; [max] represents [pure_form], [min] represents [opposite_form]. Following research precedence, we [aggregation] the indicators ([citations]), as they demonstrate high reliability and internal consistency (α=[value]). In line with this literature, we assign a score of [neutral_value] to individuals with no [data], indicating that they are [neutral_label] ([citations]). That said, in robustness checks we remove [missing_data_group] from our sample and demonstrate that assigning a value of [neutral_value] to them does not meaningfully influence our results.
 **与原骨架差异**: 政治意识形态的**标准操作化流程**——从 Chin et al. (2013) 确立的四个政治捐赠指标到均值聚合。关键要素：(1) 四指标全覆盖（捐赠数量比/金额比/候选人比/年份比）；(2) 高内部一致性引用 (α=0.95)；(3) 非捐赠者处理策略 (赋中性值0.5 + 排除稳健性检验)；(4) 每句都有方法论引用链。该骨架可迁移至任何使用 FEC/Open Secrets 政治捐赠数据的研究（CSR、公司创业、高管薪酬等）。
 
+<!-- wb:wowak_2025_ms:legacy_IV-2SLS_3 -->
 ### 变体 4: 外部自然事件作工具变量 + 三因排除限制论证 (1篇高价值)
 **来源论文**: Qiao, Hiatt & Sine 2026 (SMJ)
 **原始句锚点**: "We focused on natural disasters in the airline's home country as an instrumental variable. First, natural disasters are exogenous, reflecting "nature's fury" (Ballesteros et al., 2017; Dutta, 2017: 443), and are not affected by airlines' international expansion."
@@ -112,6 +115,7 @@ updated: 2026-08-05
 > An important consideration is that [actors] might self-select whether they [form the focal tie / take the treatment], creating an endogeneity issue. Furthermore, comparing the reduced-form [DV] model with the [mediator-included] model, Shaver ([2005]) suggested the reduced form may be mis-specified due to an omitted [mediator/endogenous regressor], and recommended an instrumental variable analysis. We focused on [an exogenous external / natural event — e.g., natural disasters in the actor's home market] as an instrumental variable. First, [the event] is exogenous, reflecting "nature's fury" ([citations]), and is not affected by [the outcome]. Second, [the event] might expose limitations of formal institutions (e.g., written rules and regulations) for acquiring strategic resources from the state, requiring [actors] to seek informal means—such as [forming the focal tie] ([citations]). Third, the existing [outcome] literature suggests that [actors] typically base [the outcome] on [alternative determinants: e.g., distance, host-market institutions, demand, own capabilities]; [the event], hence, may predict [the treatment] but have a limited effect on [the outcome] directly ([citation]). So, the instrument may satisfy exclusion-restriction conditions. We obtained data on [the event] from [source] and used it as an instrument.
 **与原骨架差异**: 与变体 1–3（Lewbel 内部生成 IV）的根本区别——本变体用**外部自然/准自然事件**作 IV，且排除限制通过**三层论证**建立：(1) 事件外生性（"nature's fury"，不受结果影响）；(2) 事件→处理的渠道（制度缝隙逻辑：正式制度失效→寻求非正式关系）；(3) 事件→结果的直接渠道**缺失**（由结果文献的已知决定因素反推）。第（2）层是核心理论增量——IV 通过"挤压正式资源获取"间接推动处理。诚实边界：第（3）层"无直接渠道"是排除限制的关键假设，本质不可检验，必须用结果领域文献的既有发现支撑，不可断言。适用于 IV 通过"制度/资源缝隙"推动企业形成非正式关系（政治关联、军方关联、银企关系）的研究。配合 control-function 报告见 `../write-results/corpus/IV-2SLS.md` 变体 4。
 
+<!-- wb:qiao_hiatt_sine_2026_smj:legacy_IV-2SLS_4 -->
 ### 变体 5: M8 Durbin-Wu-Hausman (DWH) Test + Gaussian Copula 内生性叙事 (1篇高价值)
 **来源论文**: Chung, Low & Rust (2022, JAMS)
 **原始句锚点**: "Therefore, to further address endogeneity concerns, we conduct the Durbin-Wu-Hausman (DWH) test (Malshe & Agarwal, 2015; Whitler et al., 2018). To further substantiate the case of no endogeneity, we also use the instrument-free Gaussian copula joint estimation method (Park & Gupta, 2012) and reach similar conclusions."
@@ -124,6 +128,7 @@ updated: 2026-08-05
 **诚实边界**: DWH 检验的功效依赖于 IV 强度；若 IV 弱或 DWH 不显著，不能断言无内生性。Gaussian copula 对分布假设敏感，应在稳健性中报告敏感性分析。
 **跨 skill 对齐**: `../write-results/corpus/OLS-FE.md` 变体26（R7 内生性稳健性表叙事 — threat-by-threat Table 7 汇总）。
 
+<!-- wb:chung_low_rust_2022_jams:legacy_IV-2SLS_5 -->
 ### 变体 6: M8 早年传记性暴露作工具变量（政治社会化 / imprinting）+ 第二组织级工具变量 (1篇高价值)
 **来源论文**: Abdurakhmonov, Ingram & Ridge (2026, JOM)
 **原始句锚点**: "The political environment during a CEO's adolescence is likely to shape their long-term ideological orientation but is less likely to directly influence the firm's CPT (Jennings & Niemi, 2014; Malmendier & Nagel, 2011). Specifically, for each CEO, we calculated the average Democratic political exposure between the ages of 15 and 25—a period widely recognized as critical for the formation of durable political beliefs."
@@ -136,6 +141,7 @@ updated: 2026-08-05
 **诚实边界**: 早年暴露时段的合理性必须引用发展心理学 / 政治社会化文献，不能任意选年龄段；多成分指数构造需说明每成分的理论含义；排他性论证本质不可检验，必须诚实标注为 "assumption" 而非 "test result"；若 [actor] 早年暴露地与当前 [unit] 所在地不一致，需报告并讨论潜在问题；单工具变量稳健性（从两 IV 减至早年暴露一 IV）应作为稳健性检验报告——会损失 first-stage 解释力与过度识别检验，但消除弱 IV 导致的过度识别偏误风险。
 **适用**: 焦点 IV 为个人稳定特质（政治意识形态、人格、风险偏好、文化背景）的研究；任何可获取 [actor] 早年传记数据（出生地、教育地、早年工作地）的情境。
 **跨 skill 对齐**: 与变体 3（政治意识形态操作化）配套——变体 3 测量 focal IV，本变量为其构造工具变量解决内生性。
+<!-- wb:Abdurakhmonov_Ingram_Ridge_2026_JOM:legacy_IV-2SLS_6 -->
 
 ### 变体 7: M8 Shift-Share / Bartik 工具变量（push × pull interaction）+ 双重独立排除限制 (1篇高价值)
 **来源论文**: Lee & Wang (2026, Journal of Management)
@@ -150,6 +156,7 @@ updated: 2026-08-05
 **适用**: 焦点 IV 为 [unit] 层面的 inflow / salience / intensity 构念（移民、贸易、资本流动、技术扩散、人才流动）的研究；任何可构造"外生全球冲击 × 历史[unit]特定暴露"交互的研究。典型应用：移民 / 贸易 / 资本流入对[unit]（州 / 国家 / 地区 / 行业）结果的影响。
 **跨 skill 对齐**: 与变体 4（Qiao 自然事件 IV）互补——变体 4 用单一外部事件作 IV，本变体用两组件交互；与变体 6（Abdurakhmonov biographical IV）互补——变体 6 的"距离"来自时间，本变体的"距离"来自时间 + 空间双维度。
 
+<!-- wb:lee_wang_2026_jom2:legacy_IV-2SLS_7 -->
 ### 变体 8: M7 双估计器双层级两阶段 IV（同一 IV 对两个不同性质/层级 DV）
 **来源论文**: Wowak2025 MS
 **原始句锚点**: "We examine the influence of TMT political ideology on each of our dependent variables using similar forms of two-stage instrumental variable (IV) fixed effects regression. The level of analysis for the recall count model is the firm-year, and the level of analysis for the time-to-recall model is the individual recall."
@@ -162,6 +169,7 @@ updated: 2026-08-05
 **适用**: 同一 IV 影响一个计数 DV 和一个连续/时长 DV 的研究（召回数量 + 召回时延、专利数量 + 研发时长、投诉数量 + 处理时长）；产品安全 / 质量管理 / 创新研究中"频率 + 速度"双 DV 设计。
 **跨 skill 对齐**: 与变体 1（Lewbel 三步法）配套——变体 1 生成工具变量，本变体说明工具变量如何进入两个不同估计器。
 
+<!-- wb:wowak_2025_ms:legacy_IV-2SLS_8 -->
 ### 变体 9: M8 simultaneity 先证伪后 IV 的 "abundance of caution" 叙事
 **来源论文**: Wowak2025 MS
 **原始句锚点**: "However, out of an abundance of caution, and to further ameliorate concerns related to endogeneity bias that may be caused by this type of simultaneity, or other sources of endogeneity, we use IV estimation."
@@ -175,6 +183,7 @@ updated: 2026-08-05
 **禁忌**: 不要用 "abundance of caution" 掩盖 IV 诊断的缺失；行为证据百分比必须来自本文样本而非外推；证伪理由若引用文献则必须是与本文 setting 同类的文献。
 **跨 skill 对齐**: 与变体 1（Lewbel 三步法）、变体 2（诊断链）配套——本变体是 IV 论证的**前置叙事**，变体 1–2 是 IV 的**技术与诊断**。三者共同构成完整 M8 IV 段落。
 
+<!-- wb:wowak_2025_ms:legacy_IV-2SLS_9 -->
 ### 变体 10: M8 地理外生性工具变量（geography-based IV，Frankel-Romer 型）(2026-07-30)
 **来源论文**: Zhou, Gao & Zhao (2017, Administrative Science Quarterly)
 **原始句锚点**: "Because regions' geographic location is exogenous and predetermined by nature (Frankel and Romer, 1999), we used the distance of each province to major seaports as the instrument for the index of institutional development (Wei and Wu, 2001). We calculated the shortest physical distance from the capital city of each province to one of the two major seaports—Hong Kong and Shanghai—using the Great Circle formula with the latitudes and longitudes of cities."
@@ -186,6 +195,7 @@ updated: 2026-08-05
 **适用**: 制度发展、市场化指数、贸易开放度、基础设施可达性等"区域性、与经济发展互为因果"的变量作自变量/调节变量时；新兴市场跨地区研究（中国省际、印度/巴西邦际）。
 **禁忌**: 地理距离的外生性须论证（不可默认）——若该距离通过非制度渠道影响 DV（如距离→运输成本→贸易→创新），则排除限制受损，须讨论；第一阶段 *F* 必须报告，弱工具（F<10）不可用；地理距离时不变，无法识别 within-region 时间效应，须配 FE 设计说明。
 
+<!-- wb:zhou_gao_zhao_2017_asq:legacy_IV-2SLS_10 -->
 ### 变体 11: M8 同行 IV 的距离梯度组合——显式管理 relevance–validity trade-off
 
 **来源论文**: Moon, Tuli & Mukherjee (2023, *Journal of Marketing*)
@@ -201,6 +211,7 @@ updated: 2026-08-05
 **诚实边界**: 工具变量数量增加不会自动修复共同的排除限制；每一类 peers 都必须单独识别潜在直接渠道。逐类剔除只能显示结论不依赖某一工具族，不能证明剩余工具外生。必须报告第一阶段强度，并在可能时提供过度识别或替代识别检验。
 
 **适用**: 行为扩散、披露、治理实践、同伴效应等可构造行业/部门/审计师/地理/网络多层同行池的研究。
+<!-- wb:moon_tuli_mukherjee_2023_jm:legacy_IV-2SLS_11 -->
 
 ### 变体 12: M8 行业 leave-out 均值 IV — 应对「行动者推动采纳」的内生二元结构 (EMERGING)
 
@@ -219,6 +230,7 @@ updated: 2026-08-05
 **跨 skill 对齐**: Results 见 `../write-results/corpus/IV-2SLS.md` 变体 8–10；构念「kind vs degree」辩护见 `面板数据-OLS.md` 变体 32。
 
 
+<!-- wb:zorn_shropshire_martin_combs_ketchen_2017_smj:legacy_IV-2SLS_12 -->
 #### 变体：M8 拟合值中介链——第一阶段认知位移预测值进下游结果模型（post_2022_women_tmt_strategic_renewal 型，EXTEND）
 - **功能标签**：中介变量内生时的 sequential IV——用上游假设模型的拟合值作为中介的操作化，再测其对下游结果的效应；SEM 作稳健性
 - **骨架**：To test the mediating effects of [mediator] in [hypotheses], we followed a standard instrumental variable approach, because [mediator]—our focal explanatory variables in the [downstream] models—are endogenously determined. We did so by taking the predicted values of shifts in [mediator] obtained in the first stage in models testing [upstream hypotheses] (see [Table reference]), before testing their effects in the [downstream] models. Our results hold when using an SEM approach, as we detail in the [Robustness Checks] section below.
@@ -245,6 +257,7 @@ updated: 2026-08-05
 ---
 
 
+<!-- wb:zorn_shropshire_martin_combs_ketchen_2017_smj:legacy_IV-2SLS_13 -->
 ### 变体 14: M8 exclusion 两句式 + 预测值代入（非默认；带诚实边界） (2026-08-13)
 
 **来源论文**: Kalaignanam, Kushwaha & Eilert 2013 (*Journal of Marketing*)
@@ -263,6 +276,7 @@ updated: 2026-08-05
 **与原骨架差异**: 区别变体 4（三层 exclusion + 真正 2SLS）——本变体是两句 exclusion + 预测值代入（generated regressor）。**不是 2026 默认**；写入只为学会 exclusion 两句式。
 
 **诚实边界**: 必须报第一阶段 F / 偏 R²，并用 2SLS 或控制函数作为默认升级。预测值代入不处理 generated-regressor 推断。不得把 resolve endogeneity 写成已完成 2SLS。
+<!-- wb:kalaignanam_2013_jm:legacy_IV-2SLS_14 -->
 
 ## 反模式（IV 排除限制论证）
 

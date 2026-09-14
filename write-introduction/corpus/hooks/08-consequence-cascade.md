@@ -103,6 +103,30 @@ source: Extracted from mayo2021 + wu2025 + chenganesanliu2009 distill-introducti
 
 ---
 
+
+### 变体 E：双模式类型学实例化 Hook（mao_dong_lee_2022_msom 型）
+> 论证角色：Evidence（两个具名丑闻各实例化一种被动拖延机制并配监管罚金量化，使决策问题真实且不可回避）
+
+**模板**:
+> "P1：[现象] 不可避免且损害 [绩效]（引用）；企业须决定是否 [调查]、何时 [行动]；立即行动损失 [A]，拖延行动招致 [B1]+[B2]+[B3]；因为 [社会福祉]，理解 [决策] 值得研究。P2：企业可能以两种被动方式 [拖延决策]：First，[模式1：无视调查结果]——[具名案例1+时间线+规模]；Second，[模式2：操纵调查过程]——[具名案例2+隐瞒+监管行动]；两案分别招致 [量刑法金1] 与 [量刑法金2]；[可选收束：报告显示企业成本收益核算偏向不行动（来源）]。"
+
+**来源**: Mao, Dong & Lee 2022 (MSOM), P1-P2
+
+**原文锚定**:
+> "A firm may make passive, at times unethical, recall timing decisions in two ways to delay the negative impact from a recall, especially for products with long life cycles."
+
+**关键特征**:
+- 先冷启动双边成本设定，再用 "in two ways: First/Second" 宣告两模式类型学——案例是类型学的实例化，不是规模或频次展示
+- 每个案例绑定一条独立被动机制（无视调查结果 / 操纵调查时长）加监管罚金量化，问题真实性与金额冲击合一
+- 段1尾句内嵌 stakes（安全关乎用户与社会、减少严重拖延使消费者受益），无需独立 stakes 段
+
+**适用**: 存在两种可区分被动/机会主义行为模式且各有具名监管案例的决策时点类论文；formal-model 或实证均可，适配 MSOM/POM/MS 紧凑引言
+
+**禁忌**: 两案例必须实例化不同机制，同类灾难重复会与成对灾难 Hook（14-paired-disasters）混同；罚金数字须可溯源监管文件，不得为冲击夸大
+
+<!-- wb:mao_dong_lee_2022_msom:intro_hook_dual_mode_typology_instantiation -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
 ## 组装规则
 
 ### 必须配对

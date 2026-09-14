@@ -187,6 +187,23 @@ def _dump_scalars(node, budget, f, p: str, depth: int) -> None:
         budget.emit(f"{rel(f)}: {p}: {clip(str(node), PROSE_CAP)}")
 
 
+def cmd_outline(root: Path, file: str, budget: Budget) -> None:
+    """标题树（行号 + 层级）——写回 plan 定锚专用：子代理据此写显式已解析
+    标号与 after_heading，消除"词汇锚点同指文件尾/劈开子节"一类 gate ① 返工
+    （2026-09-12；先查后开纪律不破——outline 本身就是索引层）。"""
+    cand = root / file
+    target = cand if cand.is_file() else next(iter(root.rglob(file)), None)
+    if not target or not target.is_file():
+        print(f"ERROR: 文件不在 {root} 下: {file}", file=sys.stderr)
+        return
+    lines = target.read_text(encoding="utf-8", errors="ignore").split(chr(10))
+    budget.emit(f"# outline: {target.relative_to(root)}（共 {len(lines)} 行）")
+    for i, l in enumerate(lines, 1):
+        if re.match(r"^#{1,4} ", l):
+            if not budget.emit(f"{i}: {l.rstrip()}"):
+                return
+
+
 def cmd_routing(root: Path, query: str, budget: Budget, section: str) -> None:
     ts = terms(query)
     if section == "theory":
@@ -251,13 +268,29 @@ def cmd_routing(root: Path, query: str, budget: Budget, section: str) -> None:
 def main() -> int:
     ap = argparse.ArgumentParser(
         description="确定性语料索引查询（选材 gate / routing 专用，输出 ≤ --limit 行）")
-    ap.add_argument("cmd", choices=["index", "registry", "routing"])
+    ap.add_argument("cmd", choices=["index", "registry", "routing", "outline"])
     ap.add_argument("--section", required=True, choices=sorted(CORPUS_ROOTS))
-    ap.add_argument("--query", required=True,
+    ap.add_argument("--query", required=False,
                     help="关键词（空格分隔，任一命中即输出；建议中/英各查一轮，可含 canonical_id 前缀）")
     ap.add_argument("--limit", type=int, default=50, help="输出行上限（默认 50）")
+    ap.add_argument("--file", default=None,
+                    help="outline 专用：corpus 内文件名或相对路径（如 variants/E_moderation.md）")
     args = ap.parse_args()
 
+    if args.cmd == "outline":
+        if not args.file:
+            print("ERROR: outline 需要 --file", file=sys.stderr)
+            return 2
+        root = CORPUS_ROOTS[args.section]
+        if not root.is_dir():
+            print(f"ERROR: corpus root 不存在: {root}", file=sys.stderr)
+            return 2
+        budget = Budget(args.limit)
+        cmd_outline(root, args.file, budget)
+        return 0
+    if args.cmd != "outline" and not args.query:
+        print(f"ERROR: {args.cmd} 需要 --query", file=sys.stderr)
+        return 2
     if args.cmd == "routing" and args.section not in ("introduction", "theory"):
         print(f"ERROR: routing 仅适用于 introduction/theory（{args.section} 无路由表）",
               file=sys.stderr)

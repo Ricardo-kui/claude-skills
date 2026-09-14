@@ -42,6 +42,7 @@ confidence: emerging
 status: needs_cross_paper_validation
 story_fidelity: section_variant
 -->
+<!-- wb:Ridge_Hill_Ingram_Kolomeitsev_Worrell_2024_AMJ:legacy_construct_differentiation_patterns_PatternTableBasedCon -->
 
 ## Pattern: Invariant Discriminant Spine
 
@@ -80,6 +81,7 @@ source_papers: ["Grewal_Vana_Stephen_2025_JM"]
 confidence: medium
 status: ready_for_corpus
 -->
+<!-- wb:Grewal_Vana_Stephen_2025_JM:legacy_construct_differentiation_patterns_PatternInvariantDisc -->
 
 ## Pattern: Simultaneously Recognize X but Leverage Y
 
@@ -110,6 +112,7 @@ source_papers: ["Liu_Liu_Luo_2016_JM"]
 confidence: medium
 status: EMERGING
 -->
+<!-- wb:Liu_Liu_Luo_2016_JM:legacy_construct_differentiation_patterns_PatternSimultaneousl -->
 
 ## Pattern: Dichotomize Strategy Menu by Fundamental Cut
 

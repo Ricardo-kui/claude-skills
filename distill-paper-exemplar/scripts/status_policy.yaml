@@ -1,0 +1,168 @@
+# =========================================================================
+# status_policy.yaml — 蒸馏语料 status 生命周期单一策略源（C 项，2026-09-13）
+# =========================================================================
+# 消费方（两个时点）：
+#   派生时点：rebuild_views.load_policy() / policy_status()
+#             （rebuild_apply --apply / --check / --policy-check）
+#   写回时点：corpus_writeback（wb-meta 行 / theory fragment 铸造 / results stub
+#             盖章——一次计算三处同值）
+# 优先级：status_overrides（AUTHORED 用户裁定）＞ author_rules/domain_rules（本
+#         文件）＞ ladder；整体外包永不降级守卫（A 项裁定①）。
+# fail-fast：本文件缺失或 schema 校验失败 → load_policy 报错终止，不静默回退。
+# 治理注记见文末 governance 段；本文件属 AUTHORED（手工维护，rebuild 不改写）。
+
+schema_version: 1
+canonical: true
+updated: '2026-09-13'
+
+# ----------------------------------------------------------------------- #
+ladder:
+  source: "distill-theory-exemplar/references/phase-4-validation-writeback.md L232-238"
+  EMERGING: {paper_count_max: 2}
+  VERIFIED: {paper_count_min: 3}
+  ROBUST:
+    paper_count_min: 5
+    cross_subfields_min: 2
+    scan_derivable: false   # subfield_distribution 属 AUTHORED 策展值（registry-derived-views.md §3 契约表 L56）→ ROBUST 只能经 override/透传，扫描派生封顶在 VERIFIED
+
+# ----------------------------------------------------------------------- #
+hard_exclusions:
+  auxiliary_sources:
+    status: EMERGING
+    counts_toward_thresholds: false
+    lookup: source_tier     # 派生时点读 theory source_papers.<paper>.source_tier；写回时点由 PDM/纸面上下文提供（缺省视为非 auxiliary）
+    basis: >-
+      phase-4-validation-writeback.md L236：auxiliary 来源单独永远停在 EMERGING，
+      只登记出处、不计入 VERIFIED/ROBUST 的 paper_count 阈值（theory registry
+      auxiliary_sources_note 同义）。例外裁定：Gulati 1998 综述文按正式期刊论文
+      登记，不标 auxiliary（memory gulati-favorite-scholar.md）。
+  incommensurability:
+    l3_model_signature: never_promote
+    l2_default: route_specific_optional
+    basis: >-
+      phase-4-validation-writeback.md L228（theory）/ L166（intro）：L2 即使达到
+      VERIFIED/ROBUST 也默认保持 route-specific optional architecture；L3 model
+      signature 永不晋升。消费侧守卫（写作模块路由），非本状态机直接改写对象。
+
+# ----------------------------------------------------------------------- #
+# 匹配语义：citekey_regex 对条目 papers/sources 的每个键（先 strip 期刊后缀
+# “ (JM)”类）做 re.IGNORECASE 搜索；任一键命中且 n_sources >= min_sources 即整
+# 条 target_status（any-match；有 2026-09-06d patterns 先例背书）。
+author_rules:
+  - name: gulati_favorite_scholar
+    families: [Gulati]
+    citekey_regex: '(^|[^a-z])gulati([^a-z]|$)'
+    min_sources: 1
+    target_status: VERIFIED
+    sections: all
+    semantics: any_match
+    basis: >-
+      expert_audit_override（user 2026-09-05/06：用户点名 Gulati 为最喜爱学者之一，
+      其论文蒸馏单源即 VERIFIED；综述文按正式期刊论文登记不标 auxiliary）。
+      出处：memory gulati-favorite-scholar.md L12-14。
+  - name: westphal_favorite_scholar
+    families: [Westphal]
+    citekey_regex: '(^|[^a-z])westphal([^a-z]|$)'
+    min_sources: 1
+    target_status: VERIFIED
+    sections: all
+    semantics: any_match
+    basis: >-
+      expert_audit_override（user 2026-08-29 立引言/理论部分；2026-09-06d 批量翻转
+      扩展至 methods/results，methods registry user_designation 2026-09-06 明言
+      “覆盖 2026-08-29 轻量蒸馏裁决，methods 槽位证据一并生效”；2026-09-13 用户
+      追认全节并回写记忆）。出处：memory westphal-favorite-scholar.md L18。
+  - name: pollock_favorite_scholar
+    families: [Pollock]
+    citekey_regex: '(^|[^a-z])pollock([^a-z]|$)'
+    min_sources: 1
+    target_status: VERIFIED
+    sections: all
+    semantics: any_match
+    basis: >-
+      expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即
+      VERIFIED——results registry 41 条批量批注背书；2026-09-13 用户裁定正式立册）。
+
+# ----------------------------------------------------------------------- #
+domain_rules:
+  - name: recall_product_harm
+    target_status: VERIFIED
+    min_sources: 1
+    semantics: any_match
+    discriminant: >-
+      论文的 DV 或 IV 任一端涉及产品召回或产品伤害危机，即算召回主题论文
+      （memory recall-domain-single-source-verified.md L19，2026-08-29 定版口径）。
+      以 sources 字段归属论文判定，不按条目文本或 hook 轶事。反面排除例：
+      Shi/Grewal/Sridhar 2021、Moon/Tuli/Mukherjee 2023。边界不变：section_variant
+      不升 core。
+    admission: >-
+      新召回域论文在写回前由主循环按判别口径在 member_citekeys 追加一行键
+      （含期刊后缀变体与双体系别名，幂等）；gate ① 检查单含此步。
+    member_citekeys:
+      # — 单源 recall-basis 条目直取（results 变体 / methods by_source_paper）—
+      - Ball_2018_JOM
+      - Bendig_Hensellek_Schulte_2024_ETP
+      - Kashmiri_Nicol_Arora_2017_JAMS
+      - Lee_Park_2024_SMJ
+      - Liu_Shankar_2015_MS
+      - Malik_2025_JOM_Mixed_Gambles_in_Product_Recalls
+      - Malik_Wang_Martin_Gomez-Mejia_2025_JOM
+      - Mayo_Ball_Mills_2022_POMS
+      - Singh_Grewal_2023_JMR
+      - anand_mukherjee_2024_learning_from_failures_di
+      - ball_2018_product_competition_managerial_discretion_and_manu
+      - chen_ganesan_liu_2009_jm
+      - hoffmann_cheong_phan_zurbruegg2024_jm
+      - kashmiri_nicol_arora_2017_jams
+      - liu_shankar2015
+      - mao_dong_lee_2022_msom
+      - wowak_2020_female_directors_recalls
+      # — 召回作者家族命中（ball|wowak|darby，论文级真相）—
+      - ball_shah_donohue_2018_jom
+      - darby_2023_msom
+      - darby_wowak_ketchen_connelly_2026_jom
+      - mayo_ball_mills_2022_pom
+      # — S1 手工裁定（证据见 distill-work/status_policy/policy_seeds.yaml）—
+      - chenganesanliu2009        # chen_ganesan_liu_2009_jm 遗留别名键（同论文）
+      - mayo_ball_mills_2022_pom  # theory 侧小写别名键
+      - darby2023                 # intro 短键（stakes.04 carried VERIFIED）
+      - darby2024                 # intro 短键（tensions.12 carried VERIFIED）
+      - fang_et_al_2025_rival_recall_ad_spend  # DV=对手召回广告；欠账实证 r3_division_arithmetic_magnitude_fang2025 仍 EMERGING
+      - fang2025                  # 同上（短键双体系）
+
+# ----------------------------------------------------------------------- #
+process_semantics:
+  gate1: >-
+    gate ① 用户“执行”确认 = 写回授权，不含证据等级（runbook L101/L117-124；
+    Lu 跑块注记“单源，gate ① 裁决”仍 EMERGING 为证）。status 只由本政策
+    （author/domain/ladder）与 status_overrides 决定；gate ① 呈审中的逐条人工
+    升级经 plan 的 status_overrides_addenda 落 AUTHORED status_overrides（幂等）。
+  timing: write_time
+  snapshot_semantics: >-
+    wb-meta/铸造面 status 是写回时点快照；registry status 是 rebuild 按当下
+    policy 重算的真值。policy 后续变更导致块面滞后 → expected_stale_block_status
+    豁免类，不算漂移。
+  vocab: >-
+    EMERGING / VERIFIED / ROBUST（含“ (可选)”式后缀）；LEGACY-DIAGNOSTIC 保留
+    （runbook L57）。模块 frontmatter ✓/⭐/📋 是成熟度另一轴，勿混。
+
+# ----------------------------------------------------------------------- #
+precedence:
+  order: [status_overrides, author_rules, domain_rules, ladder]
+  never_demote_guard: >-
+    ladder/policy 推导为 EMERGING 而落盘为 VERIFIED/ROBUST 且无 override 时保留
+    落盘值（S1 语义=补 override 非降级；registry-derived-views.md L98-99，A 项
+    实现裁定①）。
+
+# ----------------------------------------------------------------------- #
+governance:
+  add_author_rule: >-
+    新作者/新域规则：先落 memory 裁定（含日期+理由），再在本文件加一条
+    （citekey_regex + min_sources + basis 原文 + 日期），影子 --policy-check
+    对账后切换。
+  remove_rule: >-
+    删除规则必须配清理扫描：该规则曾产出的 VERIFIED 会被永不降级守卫静默保留
+    （zombie VERIFIED）——删除前先跑 --policy-check 列出受影响条目，逐条移入
+    status_overrides 或显式接受。
+  add_domain_member: "按 domain_rules.admission 追加一行键（幂等，可含别名）"
+  schema_change: "改结构先升 schema_version；load_policy 按版本校验"

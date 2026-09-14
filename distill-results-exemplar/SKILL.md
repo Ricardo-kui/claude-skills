@@ -43,7 +43,7 @@ Distill how a published Results section stages evidence—not what it found—in
 | **quiet** | 其余 | MEDIUM：正常蒸馏 |
 
 单篇不拒绝但必须输出带判定；批量按带排序。频繁使用且好用的变体提升路由权重，语料不因使用频率淘汰（registry `non_signals`）。
-带词表跨节对齐：`critique_heavy`=批评驱动（revise+reject≥2）；intro/theory 的 `薄弱`=状态驱动（EMERGING/单源）；band 汇报统一用 {gap, 薄弱, critique_heavy, quiet}。
+带词表跨节对齐唯一源：`../distill-paper-exemplar/references/band-vocab.md`（统一带集 {gap, 薄弱, critique_heavy, quiet}；本节用批评驱动「critique_heavy」档）。
 
 输出 yaml、执行规则、重复闸门（jaccard ≥ 0.33 → SKIP）与趋同批评聚合检查：读 `references/selection-gate.md`。
 
@@ -87,12 +87,11 @@ Distill how a published Results section stages evidence—not what it found—in
 
 ## 原文锚定提取规则（语料锚点层）
 
-每个待写入变体必须附带 `verbatim_anchor`——来源论文 1–2 句 verbatim 原句（15–40 tokens），风格参照用：
+共用规则唯一源：`../distill-paper-exemplar/references/anchor-rules.md`（15–50 tokens、四源检索、拼接硬规则与泛化边界；检索实施细则仍见 `references/phase-2-extraction.md`「锚点来源检索」）。本节差异：
 
-- **选句标准**：最能代表该变体节奏/措辞手法的句子（如 R3 幅度翻译句、R7 threat 定位句）
-- **拼接硬规则**：多句锚点保留省略号标记；跨段落/跨研究小节拼接必须显式标注（Study 1 段与 Study 2 段不得直接并置），同段删句用 "..." 标注
-- **提取来源**：优先本次蒸馏论文原文；缺失时检索 Obsidian 三库（路径见 `references/phase-2-extraction.md`）；检索不到标"待补"，不阻塞写入
-- **边界**：锚定是风格参照不是复制源——写入时 placeholder 泛化系数/表格编号，citation 链接还原为纯文本
+- **选句标准**：最能代表该变体节奏/措辞手法的句子——如 R3 幅度翻译句、R7 threat 定位句
+- **多研究拼接**：Study 1 段与 Study 2 段不得直接并置
+- **泛化对象**：placeholder 泛化系数值、表格编号
 
 ## 红线
 
@@ -110,6 +109,3 @@ Distill how a published Results section stages evidence—not what it found—in
 ## Context discipline
 
 按需加载单个 phase reference，不预读全部；先经 `py ../distill-paper-exemplar/scripts/corpus_query.py index --section results --query "<槽位/估计器关键词>"` 与 `... registry --section results --query "<关键词>"` 查命中行（确定性，默认 ≤50 行），再打开具体语料文件对比或写回——先查后开、命中即开，索引正文不进上下文。
-
----
-*基于 Pollock 2025 Ch07、MVP30 范文语料库构建。版本 1.9.0（2026-08-10 writing-for-agents 结构优化：Phase 0–5 模板/表格/示例迁移至 references/ 八文件，SKILL.md 557→约 100 行；description 压缩；反模式表并入 phase-3 reference；保留 Phase 0.75 批评驱动选材 + 写入预览-确认两段式 + distinct_from 速查表维护 + 原文锚定规则）。*

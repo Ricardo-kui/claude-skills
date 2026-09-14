@@ -18,9 +18,9 @@ Create learning assets for reading excellent (and imperfect) academic papers as 
 
 - Reconstruct the paper's actual story before judging whether it works.
 - Treat the story reading as an interpretation of the whole paper, not as a collection of paragraph-level facts. Record reading scope and mark counterfactual readings as analyst-generated.
-- Do not treat a top-journal publication as proof that the paper's story is exemplary.
-- Do not turn a paper's story into a template for the user's project. A learning move must state both its transfer conditions and what cannot be copied.
-- Do not create a project learning package or write to a project file. Cards are reusable corpus assets only.
+- Judge story quality on the assessment rubric's terms; publication in a top journal is context, not evidence.
+- A learning move must state both its transfer conditions and what cannot be copied.
+- Cards are reusable corpus assets only — never project learning packages or project-file writes.
 
 ## Default attention allocation
 
@@ -38,7 +38,7 @@ The first two sections are the primary story-reading object; Results and Discuss
 
 ## Inputs
 
-Prefer the complete paper plus any verified section distillations. **When the paper comes from the PDM pipeline, read the materialized slices, not the merged fulltext** — slice paths are in the PDM `source_provenance.section_slices`. Read in attention order: `sections/introduction.md` + `sections/theory.md` first (the primary story-reading object), then `sections/results.md` + `sections/discussion.md` for the payoff checks, and `sections/methods.md` only for the story-alignment audit. `fulltext.text-only.md` re-carries the reference list and front matter (no story signal) — read it only as fallback when a slice is missing or marked `unknown`. The raw paper-import MD carries base64 images (up to ~90% of bytes) and must never enter context. Read `references/vault-retrieval-protocol.md` for the Vault retrieval route when a Vault source is supplied. If only partial text is available, record `coverage: partial` and do not make the card eligible for recommendations in unobserved sections.
+Prefer the complete paper plus any verified section distillations. **When the paper comes from the PDM pipeline, read the materialized slices, not the merged fulltext** — slice paths are in the PDM `source_provenance.section_slices`. Read in attention order: `sections/introduction.md` + `sections/theory.md` first (the primary story-reading object), then `sections/results.md` + `sections/discussion.md` for the payoff checks, and `sections/methods.md` only for the story-alignment audit. `fulltext.text-only.md` is the fallback only when a slice is missing or marked `unknown`. Read `references/vault-retrieval-protocol.md` for the Vault retrieval route when a Vault source is supplied. If only partial text is available, record `coverage: partial` and do not make the card eligible for recommendations in unobserved sections.
 
 ## Workflow
 

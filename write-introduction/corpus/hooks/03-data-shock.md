@@ -257,3 +257,31 @@ source: Manually curated from MVP30 narrative_analysis files + zorn2017 distill
 **适用**: 拥挤文献中新结构特征已高度普及但学术命名/理论化滞后；配对 Tension `21-institutionalized-extreme-structural-warrant`；SMJ/治理研究。
 
 **禁忌**: 不要在 Hook 展开隐含假设或机制；普及统计必须可核实；若无"非强制极端"后续拍，不要单独用本变体冒充完整 Gap。
+
+
+### 变体 I：数据冲击 + 组织因素盲区 + 轶事机制预告型（Lu–Shen–Wang–Zhang 2022 MS 型）
+> 论证角色：Framing——用行业数据锚定决策重要性，把文献惯例（单一决定因素族）反衬出被忽视的决定因素族，再以一个具名两公司轶事预先演出机制
+
+**验证状态**: EMERGING（单篇来源；仅作 section_variant，不改核心路由）
+
+**功能节拍**: 权威来源数据冲击（规模）→ 现象的战略决策定性 → 惯例文献综述（单一决定因素族）→ 缺口声明（although anecdotal evidence is abundant）→ 具名轶事（两公司 + 共同条件 + 后续行为 = 机制预演）
+
+**模板**:
+> "[DV class] is one of the most visible [domain] expenditures. [Authoritative source] reports that [quantified scale of spending]. [DV] spending is a cost associated with [strategic function] and is an important strategic decision for firms. A rich literature examines how [conventional determinant family] shape [DV] ([citations]). However, little attention has been paid to how [neglected determinant class]—in particular, [specific construct]—shape [DV], although anecdotal evidence is abundant. For example, after [two firms] became [treatment condition] in [year], these two companies [enacted the outcome mechanism] in [later year]."
+
+**来源**: Lu, Shen, Wang & Zhang 2022 (Management Science), P1
+
+**原文锚定**:
+> "However, little attention has been paid to how organizational factors—in particular, the ownership structure of the firm—affect advertising strategy, although anecdotal evidence is abundant." / "after U.S. Airways Group and AMR Corporation, the parent of American Airlines, became commonly owned by Tiger Management LLC in 1996, these two companies formed a broad marketing alliance in 1998."
+
+**关键特征**:
+- 轶事不作开场钩子而在缺口声明之后作为"机制预告"出现——先立缺口，再让轶事预演因果链（共同所有权 → 营销联盟）
+- "although anecdotal evidence is abundant" 为轶事位置合法化：现象证据充足但系统证据缺失，恰好定义 Incompleteness
+- 数据冲击与文献综述压缩在同一段完成（econ/MS 体例融合式首段），Hook 到缺口约 6 句内收束
+- 轶事四要素齐全（公司、共同条件、年份、后续行为），否则"轶事证据充足"落空
+
+**适用**: 现象层数据可得（行业支出/规模统计）但文献决定因素族单一、本文引入另一族的论文；Incompleteness × Phenomenon；MS/JM/JMR 经济体例融合首段。
+
+**禁忌**: 数据必须来自权威行业来源并给出年份；轶事必须真实且四要素可核，不得用泛化案例冒充；融合首段信息密度高，惯例文献列举控制在一条引用链内。
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:intro_hook_data_shock_anecdote_teaser -->

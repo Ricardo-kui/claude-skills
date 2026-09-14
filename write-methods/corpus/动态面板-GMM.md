@@ -78,6 +78,18 @@ updated: 2026-08-13
 > "We followed the procedures recommended by [Roodman (2009)] to select the instruments for our models. Any predictor-variable value can theoretically be used as an instrument, but to correctly specify the lag structure it is important to consider whether a focal variable is strictly exogenous, predetermined, or endogenous ([citation]). [If the variable is strictly exogenous, then all its lagging, current, and leading values can be valid instruments; if predetermined, its one-period or earlier lags can be valid instruments; and if endogenous, its two-period or earlier lags can be valid instruments.] Because all our predictor variables except for the [time dummies] are potentially endogenous, we began selecting instruments using at least [two-year] lags. Then we determined whether each instrument met the orthogonality condition using Hansen's *J* statistic and the difference-in-Sargan statistic, and whether it induced second-order autocorrelation using the AB statistic. We fine-tuned each variable's lag structure using this procedure. Valid lag structures are empirically determined based on the sample. Because we used a variety of samples—[N] split samples for testing [age-contingent hypotheses] and the total sample for testing [other hypotheses]—we fine-tuned the lag structure for each sample used."
 **与原骨架差异**: 把工具选择呈现为**经验驱动的迭代精调**而非机械规则：先按变量外生性类别（strictly exogenous / predetermined / endogenous）确定起始滞后阶数，再用 Hansen *J* + difference-in-Sargan + AR(2) 三诊断逐变量精调。关键诚实点："Valid lag structures are empirically determined based on the sample" + 分样本各自精调——避免一刀切滞后结构在不同子样本失效。
 
+
+### 变体 7: Ridge, Aime & White 2013 (SMJ) — AB-GMM 诊断对报告链：零假设→违例含义→判定 (2026-09-12)
+**验证状态**: EMERGING（单篇）
+**槽位**: M8
+**原始句锚点**: "We performed Arellano-Bond tests for autocorrelation and Hansen tests for the validity of the instrumentation strategy. ... Second-order autocorrelation would indicate that some lags of the dependent variable that are used as instruments are endogenous, but the tests reveal no such problem in our models"
+**骨架**:
+> "We performed [Arellano-Bond] tests for autocorrelation and [Hansen] tests for the validity of the instrumentation strategy. [For the former, we failed to reject the null of no autocorrelation in the first-differenced errors], which means that [the Arellano-Bond estimator] in our application is asymptotically consistent. [Second-order autocorrelation would indicate that some lags of the dependent variable that are used as instruments are endogenous], but the tests reveal no such problem in our models ([citations]). [Second, the Hansen test] showed that the moment restrictions in our models are valid or, in other terms, that the instruments are exogenous. The statistic for the test under the null hypothesis is distributed as [chi-square] with degrees of freedom equal to [the number of instruments minus the number of predictors]. Our tests show that our restrictions are valid (we failed to reject the null hypothesis) in all our models."
+**与原骨架差异**: 区别变体 3（工具滞后结构的事前逐变量经验精调程序）——本变体是**事后诊断报告链**：开头一句并置两个诊断的分工（序列相关 vs 工具有效性），然后每个检验按三拍展开：零假设的白话陈述→违例意味着哪些工具失效（"Second-order autocorrelation would indicate that some lags... are endogenous"）→判定收口（failed to reject → 一致性 + 工具有效性）。 Hansen 拍附带分布与自由度陈述（χ²，自由度=工具数−预测变量数）。补齐 corpus 中缺失的"估计后诊断如何写"标准块（变体 1/3 只覆盖事前选择）。
+**诚实边界**: AR(2) 的零假设是**无**二阶自相关——原文 "we failed to reject the null hypothesis of autocorrelation" 是零假设写反的病句（已登记反模式），骨架已改为 "no autocorrelation"，勿复制原句；原文对 Hansen 的解释在同段重复两次（冗余反模式），骨架合并为一次；AR(2) 行报 p 值、Hansen 行报 χ² 与自由度。
+<!-- wb:ridge_aime_white_2013_smj:m8_ab_gmm_diagnostic_pair_reporting_chain -->
+
+
 ### 变体 4: Pollock et al. 2015 (ASQ) — 发展性调节无理论断点 → 多阈值分样本检验 (2026-07-30)
 **验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
 **槽位**: M4/M8
@@ -104,4 +116,17 @@ updated: 2026-08-13
 **与原骨架差异**: 区别变体 1（AB-GMM 统一处理 LDV/同时性/异质性）——本变体只用 t-2 工具化 FD 后的 LDV，不声称处理同时性。避免所有 FD+LDV 被路由到 xtabond2。
 
 **诚实边界**: 未报 Hansen J / AR(2) 时不得写成 GMM；这是 Anderson–Hsiao 简易 IV。工具化相关误差，不升级为因果效应。
+
+
+
+<!-- wb:kalaignanam_2013_jm:legacy_动态面板-GMM_5 -->
+### 变体 6: Ridge, Aime & White 2013 (SMJ) — 短面板适用性陈述 + 估计器优势枚举 (2026-09-12)
+**验证状态**: EMERGING（单篇）
+**槽位**: M7
+**原始句锚点**: "This dynamic panel technique is especially suited to analyzing autoregressive-distributed lag models from panels with cross-sectional units observed for relatively few time periods like the panels that are typically used in this area of research."
+**骨架**:
+> "We use dynamic panel techniques to analyze our data with [firm and year fixed effects]. In particular, we perform our analysis using the [Arellano-Bond] method. This dynamic panel technique is especially suited to analyzing [autoregressive-distributed lag models] from panels with cross-sectional units observed for relatively few time periods like the panels that are typically used in this area of research. There are several advantages to this dynamic panel approach in our estimation. First, it controls for [lagged values of the dependent variable] as [outcomes] are likely related to [prior levels of performance] ([citation]). Second, [GMM] estimation with robust standard errors provides better estimates in the presence of unknown heteroscedasticity and autocorrelation in dynamic panels ([citation]). Finally, since any independent variables that are not strictly exogenous become potentially endogenous because they may be correlated to past and future realizations of the error, it uses deep lagged values of relevant regressors and exogenous variables as instruments of the independent variables to deal effectively with potential endogeneity in our model."
+**与原骨架差异**: 区别变体 1（威胁先行：逐一列举三源内生性→声明难以同时处理→AB 统一解）与变体 2（difference vs system GMM 稳态权衡）——本变体是**适用性先行 + 优势正面枚举**：先一句立短面板适用性（relatively few time periods），再以 "There are several advantages... First... Second... Finally..." 正面列举三重优势（LDV 与误差相关/Nickell 型问题、稳健 SE 对未知异方差与序列相关、深度滞后工具对内生性）。适用场景：审稿人未点名具体内生性威胁、需要一段轻量"为什么用这个估计器"的正面辩护。
+**诚实边界**: 优势枚举不能替代威胁定位——LDV 为何与误差相关仍须给出依据（可引 Greene 2000 或 Nickell 1981）；若审稿人可能质疑 difference vs system GMM 的选择，需叠加变体 2 的稳态论证；因果语言保持在 "address/deal with potential endogeneity"，不升级为因果识别主张。原文未注明软件与命令（如 xtabond2/Roodman），写入时应补。
+<!-- wb:ridge_aime_white_2013_smj:m7_ab_gmm_short_panel_advantage_enumeration -->
 

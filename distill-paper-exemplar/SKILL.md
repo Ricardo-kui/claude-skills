@@ -57,8 +57,16 @@ when_to_use: "用户给一篇完整论文要求整篇蒸馏/整篇学习时；�
    蒸馏路由到 `sections/introduction.md`（标注 `embedded: true`，由 intro 蒸馏按功能
    映射模块），**不再要求人工补切 theory**；`formal-model`（"Theoretical Model" 节）
    时 theory 蒸馏按模型类内容处理，不套假设发展模板；`classic-imrad` 为默认。
-   登记 frontmatter/citekey（Zotero 为元数据源）。创建 PDM 骨架，把 manifest 的
-   切片路径写入 `source_provenance.section_slices`。
+   登记 frontmatter/citekey（Zotero 为元数据源）。创建 PDM 骨架（2026-09-13 起
+   preprocess_l0.py 自动生成 `<citekey>.pdm.yaml` 根骨架——frontmatter 元数据、
+   切片路径、`distiller_fingerprint` 一次落盘；已存在则不覆盖，主循环只做
+   identity/status 合并），把 manifest 的
+   切片路径写入 `source_provenance.section_slices`，并把 `distiller_fingerprint`
+   落入 PDM 根——已有旧 PDM 根时对比指纹，不一致则在 PDM `note` 注明旧条目按旧
+   协议产出（供查漏补缺重蒸馏时判断）；`compression.savings_warning=true` 时在
+   分发前向用户知会一句（text-only 转换收益低，源已接近纯文本）；`prior_traces`
+   非空（story 卡/registry/wb 标记任一命中）时本篇按 gap-fill 语义执行——auto-write
+   默认，不再走首次批量呈审。
    **工作目录纪律（用户裁决）**：PDM 工作目录默认在
    `~/.claude/distill-work/<citekey>.pdm/`（`DISTILL_WORK_ROOT` 可改）——**Vault/OneDrive
    之外**，不向论文目录生成中间文件；全部产物可从源 MD 确定性重建，可随意删。
@@ -72,6 +80,7 @@ when_to_use: "用户给一篇完整论文要求整篇蒸馏/整篇学习时；�
    此 flag，L4 不清理该归档。
 2. **L1 分节蒸馏分发（子代理）**。按用户范围（默认 4 节全跑）以 **2+2 波次并行**分发
    （第一波 intro+theory，完成后再发 methods+results；实测零限流；
+   发射前先跑金丝雀探针——见 `references/l1-subagent-protocol.md` 节奏与限流；
    `--serial` 回退串行，4 个全并行仍禁止）。分发机制与提示词模板见
    `references/l1-subagent-protocol.md`：Claude Code 用 `Task` 工具（general-purpose），
    Codex/Kimi Code 用各节 `agents/openai.yaml` 子代理，Cursor/Zcode 按其子代理机制。
@@ -82,9 +91,14 @@ when_to_use: "用户给一篇完整论文要求整篇蒸馏/整篇学习时；�
    candidates:/items: schema 写反、锚点文件不可解析 → exit 4 当场令子代理返工，不进
    gate ①；手写/修复后的 plan 先 `--check-plan` 校验再执行）。
    **gate ① 按论文批量呈审**：整篇模式下各节子任务跑到 writeback
-   plan 产出即暂停写回；四节（或指定范围）plan 攒齐后，由主循环汇总为一份批量呈审
-   （每节：verdict 摘要 + anchor_candidates top-3 + 拟写回文件），用户一次确认全部，
-   主循环再逐节调 `corpus_writeback.py` 执行。单节蒸馏不受此限，仍随产随审。
+   plan 产出即暂停写回；四节（或指定范围）plan 攒齐后，由主循环运行
+   `py scripts/pdm_tool.py present --pdm <root> --mode gate1` 生成**批量呈审单**
+   （每节：verdict 摘要 + band + anchor_candidates top-3 + 拟写回文件 + STALE/
+   溯源/registry_dimension 预警），用户一次确认全部，主循环再逐节调
+   `corpus_writeback.py` 执行。**PDM 根的一切变更经 `pdm_tool.py` 命令完成**
+   （merge-section / set-gate / merge-cross / set-story / set-paper / fail-section，
+   单写者表见 references/pdm-schema.md v1.1 附录；手写 EOF 改根 = 违约）。
+   单节蒸馏不受此限，仍随产随审。
    主循环**只汇总呈审，不代用户确认**；`--auto-write` 时跳过呈审逐节直写。
    **查漏补缺重蒸馏默认 `--auto-write`**：同一论文已有旧蒸馏痕迹
    （story 卡/语料条目）的重跑，若用户请求本身已授权写回（如"优化 corpus"），主循环
@@ -111,12 +125,24 @@ when_to_use: "用户给一篇完整论文要求整篇蒸馏/整篇学习时；�
    残项写成 `writeback_residuals.yaml` 工作单交由单个同步 pass 消费（该 pass 不得运行
    corpus_writeback.py）。写回器本身已幂等（块尾 `<!-- wb:<paper>:<item> -->` 溯源标记 +
    同体检测），同一 plan 误跑两次 --apply 不再产生重复。
+   **S6 起的 registry 语义**：执行器只保留块插入 + wb-meta + tfr 分配 + batch_history
+   append + INDEX 行；registry 的 papers/paper_count/gap_distribution/patterns/
+   summary/skeleton_variants 计数等 DERIVED 字段由 apply 末尾的
+   `rebuild_apply.py --corpus <节>` 从 wb 块扫描重建（AUTHORED 段按键透传；status 派生 = status_overrides ⊕ `scripts/status_policy.yaml`（作者/召回域规则）⊕ ladder；永不降级
+   用户裁定状态）。verify 末尾的 **V3-drift** 终检 = 对涉事库跑 rebuild dry-run，
+   计划变更非零即 FAIL（视图未收敛）。
+   **事后审计单（2026-09-14 起）**：终验通过后、清理之前，运行
+   `py scripts/pdm_tool.py present --pdm <root> --mode audit [--verify-report <tee 文本>]
+   --residuals <残项单>` 生成 L4 事后审计单（各节已写清单 + wb 标记独立点数 +
+   残项摘要），向用户呈报；**顺序固定 verify → audit → clean**（audit 依赖 plan 文件，
+   clean 会删掉它们）。
    完成后运行 `preprocess_l0.py <MD> --clean` 清除整个工作目录（默认位置在 Vault 外，
    删除零成本）；中断续跑则保留现场；`--unlock` 仅放锁不删文件。
    **跨篇清扫（--clean 之后的最后一步）**：运行
-   `preprocess_l0.py --sweep`——清除 skill 树全部 `__pycache__`/`*.pyc` 与已消费的
-   PDM 工作目录（根 yaml `status: integrated` 者及 >12h 的 orphan），保持 skill
-   树零字节码膨胀。**绝不触碰**：`<citekey>.pdm.yaml` 状态记录、句子库存归档、
+   `preprocess_l0.py --sweep`——清除 skill 树全部 `__pycache__/`/`*.pyc` 与已消费的
+   PDM 工作目录（根 yaml `status: integrated` 者及 >12h 的 orphan），回收 pdm_tool
+   的滚动 `.bak`（根已 integrated 或孤儿者；活跃记录的 `.bak` 是安全网，保留），
+   保持 skill 树零字节码膨胀。**绝不触碰**：`<citekey>.pdm.yaml` 状态记录、句子库存归档、
    story-blueprints、LOCK <12h 的在跑工作目录。
 
 ## 调用方式
@@ -142,7 +168,7 @@ when_to_use: "用户给一篇完整论文要求整篇蒸馏/整篇学习时；�
 ## 完成判据
 
 ① PDM 就位且四节（或指定范围）状态为 `verified`（或明确 `partial`）；② 每节写回预览均已
-经过该节 skill 自己的确认门禁并记录于 PDM `writeback.gate`；③ `cross_section_identity`
+经过该节 skill 自己的确认门禁并经 `pdm_tool.py set-gate` 记录于 PDM `writeback.gate`；③ `cross_section_identity`
 已填充（单节模式标注 `unknown`）；④ story 卡已确认并 validate/build 通过，`story_track`
 已更新；⑤ design_feedback 已核验持久化（best-effort：缺产出能力的 skill 在 feedback_ledger.note 注明根因，不阻塞 integrated）；⑥ 向用户报告三路输出落点与任何 flag。
 

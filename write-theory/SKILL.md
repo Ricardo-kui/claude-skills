@@ -117,9 +117,9 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 ## 原文锚点 · 批评登记 · 演化（三条共用通道）
 
 - **原文锚点**：语料 `**原文锚点**` 字段是来源论文原句的风格参照——使用规则见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律；选材参照 distill-theory-exemplar 的 routing 表 + 验证状态三带判定。
-- **批评登记**：用户对产出不满时当场登记到 `corpus/_evidence_registry.yaml` 的 `critique.per_file`（`revise`/`reject` +1、reasons 去重首插 ≤8 条、不登记风格偏好与流程抱怨）；只落 registry 不改 corpus——精炼由 distill-theory-exemplar 选材 Gate 驱动。差异项：只登记对**变体产出质量**的批评。
+- **批评登记**：双 registry 分工唯一源见 `../story-blueprints/v4/rhetoric-moves/_feedback-registries.md`；本 skill 接 R2 语料精炼通道（`critique.per_file`），只落 registry 不改 corpus——精炼由 distill-theory-exemplar 选材 Gate 驱动；R1 未建设，规则层缺陷走下方演化通道。
 - **演化**：reference-level 更新 `corpus/` + registry；规则层缺陷更新 `corpus/_skill_design_feedback.yaml`——门控细则（授权/风险/双回归/rule_excerpt_after）见 `../distill-theory-exemplar/references/design-feedback-loop.md`。
 
 ## Resource loading
 
-Do not preload `corpus/`. Start with `corpus/meta/routing_table.md`; when the primary gap is Incommensurability, also load `references/incommensurability-resolution-routes.md` and `references/intake-and-story-gate.md`（paper-state present/missing/legacy-shaped 时）. Then load only the chosen variant, required construct or mechanism patterns, and the relevant storytelling/QC file. Before recommending a pattern as the default approach, check its EMERGING/VERIFIED/ROBUST status in `corpus/_evidence_registry.yaml`; EMERGING patterns must be flagged as single-/dual-source, not presented as defaults. Use sibling Introduction assets only for cross-section continuity checks.
+Do not preload `corpus/`. Start with `corpus/meta/routing_table.md`; when the primary gap is Incommensurability, also load `references/incommensurability-resolution-routes.md` and `references/intake-and-story-gate.md`（paper-state present/missing/legacy-shaped 时）. Then load only the chosen variant, required construct or mechanism patterns, and the relevant storytelling/QC file. Before recommending a pattern as the default approach, check its verification status in `corpus/_evidence_registry.yaml`（EMERGING 须标注单/双源、不作默认——规则唯一陈述见 Workflow step 1）. Use sibling Introduction assets only for cross-section continuity checks.

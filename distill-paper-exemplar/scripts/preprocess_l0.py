@@ -24,6 +24,9 @@ Output layout (PDM workdir):
     - leftover PDM workdirs that are fully consumed: a `<citekey>.pdm/` whose
       root yaml says `status: integrated`, or an orphan workdir (no root yaml)
       whose LOCK is older than 12h
+    - pdm_tool rolling baks (`<citekey>.pdm.yaml.bak`): removed once their
+      root is `integrated` or gone; a bak of a live record is the mutation
+      safety net and stays (2026-09-14, quality-review P3)
   NEVER touched: `<citekey>.pdm.yaml` state records, the sentences archive,
   story-blueprints, and any workdir whose LOCK is fresh (< 12h — may be an
   active single-window run).
@@ -67,7 +70,12 @@ SECTION_PATTERNS = {
         r"research design", r"empirical (setting|context|strategy|model)",
         r"^identification\b", r"materials and methods", r"^methodology\b",
     ],
-    "results": [r"^results?\b", r"^findings?\b", r"^analys(e|i)s\b", r"empirical results"],
+    # `\bresults\b` catches mixed titles like Ball's "Empirical approach and
+    # results"; `^empirical analysis`/`^empirics`/`^cross-sectional variations`
+    # cover the MS/econ section-name family (Lu 2022 §4/§5 trap, 5th instance
+    # of the missed-results class as of 2026-09-13).
+    "results": [r"^results?\b", r"^findings?\b", r"^analys(e|i)s\b", r"\bresults\b",
+                r"^empirical analysis", r"^empirics\b", r"^cross-sectional variations"],
     "discussion": [r"^discussion\b", r"^conclusions?\b", r"discussion and conclusion",
                    r"discussion\b", r"^extensions?\b", r"^concluding"],
 }
@@ -83,6 +91,46 @@ SKILLS_ROOT = Path(__file__).resolve().parent.parent.parent
 DEFAULT_SOURCES_DIR = (
     SKILLS_ROOT / "story-blueprints" / "v4" / "rhetoric-moves" / "sources"
 )
+
+# files whose content defines distillation behavior; hashed into the manifest
+# fingerprint so a re-distillation can tell whether prior entries were
+# produced under the current protocol (T2-8, pi-prompt-diet DISTILLER_VERSION)
+DISTILLER_FILES = (
+    "distill-paper-exemplar/SKILL.md",
+    "distill-paper-exemplar/references/l1-subagent-protocol.md",
+    "distill-paper-exemplar/references/band-vocab.md",
+    "distill-paper-exemplar/references/anchor-rules.md",
+    "distill-paper-exemplar/scripts/corpus_query.py",
+    "distill-paper-exemplar/scripts/corpus_precheck.py",
+    "distill-paper-exemplar/scripts/corpus_writeback.py",
+    "distill-paper-exemplar/scripts/verify_writeback.py",
+    "distill-paper-exemplar/scripts/preprocess_l0.py",
+    "distill-agents/agents/distill-methods.md",
+    "distill-agents/agents/distill-introduction.md",
+    "distill-agents/agents/distill-theory.md",
+    "distill-agents/agents/distill-results.md",
+    "distill-introduction-exemplar/SKILL.md",
+    "distill-theory-exemplar/SKILL.md",
+    "distill-methods-exemplar/SKILL.md",
+    "distill-results-exemplar/SKILL.md",
+)
+
+
+def distiller_fingerprint() -> dict:
+    import hashlib
+
+    h = hashlib.sha256()
+    n = 0
+    for rel in DISTILLER_FILES:
+        p = SKILLS_ROOT / rel
+        if not p.is_file():
+            continue
+        h.update(rel.encode("utf-8"))
+        h.update(b"\0")
+        h.update(p.read_bytes())
+        h.update(b"\0")
+        n += 1
+    return {"version": h.hexdigest()[:12], "files": n}
 
 
 def strip_base64(text: str) -> tuple[str, int]:
@@ -373,7 +421,10 @@ def sweep(work_root_dir: Path, skills_root: Path) -> int:
     """Cross-run intermediate cleanup (L4 final step). Deterministic, no LLM.
 
     Returns process exit code. Never touches state records, the sentences
-    archive, story-blueprints, or workdirs with a fresh (<12h) LOCK."""
+    archive, story-blueprints, or workdirs with a fresh (<12h) LOCK.
+    Rolling pdm_tool `<root>.pdm.yaml.bak` files are removed once their root
+    is integrated or gone; a bak of a live (un-integrated) record stays — it
+    is the mutation safety net."""
     import time
     import yaml
 
@@ -414,9 +465,220 @@ def sweep(work_root_dir: Path, skills_root: Path) -> int:
             kept += 1
             print(f"KEEP (status: {status}): {wd.name}")
 
+    # 3. rolling pdm_tool baks: delete when the run is over (integrated) or
+    #    the root is gone; keep while the record can still be mutated
+    for bak in sorted(work_root_dir.glob("*.pdm.yaml.bak")):
+        root_yaml = work_root_dir / bak.name[:-len(".bak")]
+        try:
+            status = ((yaml.safe_load(root_yaml.read_text(encoding="utf-8"))
+                       or {}).get("status")) if root_yaml.is_file() else None
+        except yaml.YAMLError:
+            status = None
+        if status == "integrated" or not root_yaml.is_file():
+            tag = "integrated bak" if status == "integrated" else "orphan bak (no root yaml)"
+            bak.unlink(missing_ok=True)
+            removed += 1
+            print(f"RM ({tag}): {bak.name}")
+        else:
+            print(f"KEEP (bak of live record, status: {status}): {bak.name}")
+
     print(f"sweep done: {removed} item(s) removed, {kept} workdir(s) kept, "
           f"state records & sentences archive untouched")
     return 0
+
+
+def prior_traces(citekey: str, source_text: str) -> dict:
+    """Gap-fill detection (2026-09-12). A pre-existing story card or registry
+    trace means the paper enters gap-fill semantics (auto-write default),
+    not first-time batch review. Matching is case-insensitive with hyphen /
+    no-separator citekey variants plus the frontmatter title prefix — the
+    ridge2013 card was missed by a case-sensitive grep (2026-09-12)."""
+    ck = citekey.lower()
+    variants = {ck, ck.replace("_", "-"), ck.replace("_", "")}
+    m = re.search(r'^title:\s*"?(.+?)"?\s*$', source_text, re.M | re.I)
+    title_norm = re.sub(r"[^a-z0-9 ]", "", m.group(1).lower())[:60] if m else None
+    out = {"story_cards": [], "registries": [], "corpus_wb_markers": 0}
+    bp = SKILLS_ROOT / "story-blueprints" / "v4" / "blueprints"
+    if bp.is_dir():
+        for f in bp.glob("*.md"):
+            t = f.read_text(encoding="utf-8", errors="ignore").lower()
+            if any(v in t for v in variants) or (title_norm and title_norm in t):
+                out["story_cards"].append(f.name)
+    for reg in ("write-introduction/corpus/_evidence_registry.yaml",
+                "write-theory/corpus/_evidence_registry.yaml",
+                "write-methods/corpus/_evidence_registry.yaml",
+                "write-results/corpus/_evidence_registry.yaml"):
+        p = SKILLS_ROOT / reg
+        if p.is_file():
+            t = p.read_text(encoding="utf-8", errors="ignore").lower()
+            flat = t.replace("_", "").replace("-", "")
+            if any(v.replace("_", "").replace("-", "") in flat for v in variants):
+                out["registries"].append(reg)
+    # Marker format is `<!-- wb:<paper>:<item> -->` — anchor at the paper:item
+    # colon. The old pattern (wb: + citekey first segment anywhere) matched
+    # "lu" INSIDE other papers' citekeys (fai**lu**re / inf**lu**ence /
+    # va**l**ue) and reported 74 bogus traces on the 2026-09-13 Lu run, which
+    # would have misrouted a first-time distill into gap-fill auto-write.
+    # Precision-over-recall ruling (2026-09-13): legacy short-key markers
+    # (e.g. `wb:gulati2005-adaptation-vertical:` for an underscore citekey)
+    # are NOT matched — a false NEGATIVE merely routes a re-distill through
+    # batch review (safe; story-card/registry checks still cover it), while a
+    # false POSITIVE silently skips gate ① (dangerous).
+    ck_variants = sorted({ck, ck.replace("_", "-"), ck.replace("_", "")},
+                         key=len, reverse=True)
+    pat = re.compile("wb:(?:" + "|".join(re.escape(v) for v in ck_variants) + "):",
+                     re.I)
+    for cdir in ("write-introduction/corpus", "write-theory/corpus",
+                 "write-methods/corpus", "write-results/corpus"):
+        d = SKILLS_ROOT / cdir
+        if d.is_dir():
+            for f in d.rglob("*.md"):
+                out["corpus_wb_markers"] += len(pat.findall(
+                    f.read_text(encoding="utf-8", errors="ignore")))
+    return out
+
+
+def parse_frontmatter(src: Path) -> dict:
+    """Light frontmatter extraction from the paper-import MD (title/Author/
+    Journal/Year/parser). YAML-first, regex fallback — L0 must not fail on
+    frontmatter quirks."""
+    try:
+        text = src.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return {}
+    m = re.match(r"\A---\s*\n(.*?)\n---\s*\n", text, re.S)
+    if not m:
+        return {}
+    block = m.group(1)
+    try:
+        import yaml  # PyYAML is a dependency of the corpus scripts already
+        data = yaml.safe_load(block)
+        if isinstance(data, dict):
+            return data
+    except Exception:
+        pass
+    out = {}
+    for key in ("title", "Journal", "journal", "Year", "year", "parser"):
+        km = re.search(rf"^{key}:\s*\"?([^\"\n]+)\"?\s*$", block, re.M | re.I)
+        if km:
+            out[key.lower()] = km.group(1).strip()
+    authors = re.findall(r"^\s*-\s+(.+)$", block, re.M)
+    if authors:
+        out["authors"] = [a.strip() for a in authors]
+    return out
+
+
+def scaffold_pdm_root(citekey: str, src: Path, manifest: dict,
+                      outdir: Path) -> Path:
+    """Create the PDM root yaml (`<citekey>.pdm.yaml`) next to the workdir.
+
+    The schema (pdm-schema.md) previously had to be hand-written by the main
+    loop on every run — 4th repetition during the 2026-09-13 Lu run. This
+    scaffolds the same skeleton deterministically from the L0 manifest +
+    source frontmatter. Create-if-missing only: an existing root is NEVER
+    touched (main loop owns the state record after creation; re-slice runs
+    keep their merged status/identity)."""
+    root = outdir.parent / f"{citekey}.pdm.yaml"
+    if root.is_file():
+        existing = root.read_text(encoding="utf-8", errors="replace")
+        st = re.search(r"^status:\s*(\S+)", existing, re.M)
+        print(f"PDM-ROOT: exists ({st.group(1) if st else 'unknown status'}) "
+              f"— left untouched: {root}")
+        return root
+    fm = parse_frontmatter(src)
+    title = fm.get("title") or ""
+    journal = fm.get("journal") or fm.get("Journal") or ""
+    authors = fm.get("authors") or fm.get("Author") or fm.get("Authors") or []
+    year = fm.get("year") or fm.get("Year")
+    ingestion = f"paper-import ({fm.get('parser') or 'parser-unrecorded'})"
+    slices = manifest["section_slices"]
+    slices_yaml = "\n".join(
+        f'    {b}: "{citekey}.pdm/sections/{b}.md"' for b in BUCKET_ORDER
+        if b in slices)
+    fp = manifest["distiller_fingerprint"]
+
+    def q(s: str) -> str:
+        # JSON string escapes are valid YAML double-quoted scalars
+        return json.dumps(s, ensure_ascii=False)
+
+    content = f"""# PDM root — auto-scaffolded by preprocess_l0.py (create-if-missing;
+# main loop owns this file afterwards: identity/status/writeback merges).
+pdm_version: 1.0
+paper_id: {q(citekey)}
+title: {q(title)}
+authors: {json.dumps([str(a) for a in authors], ensure_ascii=False)}
+year: {year if isinstance(year, int) else q(str(year)) if year else 'null'}
+journal: {q(journal)}
+
+source_provenance:
+  fulltext_md: {q(str(src))}
+  text_only_md: {q(f"{citekey}.pdm/fulltext.text-only.md")}
+  zotero_ref: ""
+  ingestion: {q(ingestion)}
+  structure_type: {q(manifest.get("structure_type", "unknown"))}
+  section_slices:
+{slices_yaml}
+
+status: manifest
+
+distill_track:
+  introduction:
+    skill: distill-introduction-exemplar
+    status: pending
+    section_json: "sections/introduction.json"
+    feedback: "feedback/introduction.feedback.yaml"
+    identity: {{gap_type: "", contribution_dimension: ""}}
+    writeback: {{target: "write-introduction/corpus/", gate: awaiting_confirm, items: []}}
+  theory:
+    skill: distill-theory-exemplar
+    status: pending
+    section_json: "sections/theory.json"
+    feedback: "feedback/theory.feedback.yaml"
+    identity: {{theory_building_type: ""}}
+    writeback: {{target: "write-theory/corpus/", gate: awaiting_confirm, items: []}}
+  methods:
+    skill: distill-methods-exemplar
+    status: pending
+    section_json: "sections/methods.json"
+    feedback: "feedback/methods.feedback.yaml"
+    identity: {{design_family: ""}}
+    writeback: {{target: "write-methods/corpus/", gate: awaiting_confirm, items: []}}
+  results:
+    skill: distill-results-exemplar
+    status: pending
+    section_json: "sections/results.json"
+    feedback: "feedback/results.feedback.yaml"
+    identity: {{estimator_family: ""}}
+    writeback: {{target: "write-results/corpus/", gate: awaiting_confirm, items: []}}
+
+cross_section_identity:
+  gap_type: ""
+  theory_building_type: ""
+  design_family: ""
+  estimator_family: ""
+  coherence: ""
+  flags: []
+
+story_track:
+  skill: distill-story-exemplar
+  status: pending
+  card_path: ""
+  validated: false
+  catalog_rebuilt: false
+  fed_flags: false
+
+feedback_ledger:
+  persisted: []
+  missing: []
+  note: ""
+
+distiller_fingerprint:
+  version: {q(fp["version"])}
+  files: {fp["files"]}
+"""
+    root.write_text(content, encoding="utf-8")
+    print(f"PDM-ROOT: scaffolded {root}")
+    return root
 
 
 def main() -> int:
@@ -449,6 +711,9 @@ def main() -> int:
     ap.add_argument("--sources-dir", default=None,
                     help="override the sentence-inventory root (default: "
                          "skills/story-blueprints/v4/rhetoric-moves/sources)")
+    ap.add_argument("--min-compression-ratio", type=float, default=1.5,
+                    help="overall raw/text-only byte ratio below which the "
+                         "conversion is reported as ineffective (default 1.5)")
     args = ap.parse_args()
 
     if args.sweep:
@@ -498,6 +763,11 @@ def main() -> int:
     raw_bytes = len(raw.encode("utf-8"))
     text, n_images = strip_base64(raw)
     lines = text.split("\n")
+    text_bytes_total = len(text.encode("utf-8"))
+    # per-slice compression stats need the pre-strip text; line spans only
+    # align when stripping removed no newlines (data URIs are single-line)
+    raw_lines = raw.split("\n")
+    lines_aligned = len(raw_lines) == len(lines)
 
     text_only = outdir / "fulltext.text-only.md"
     text_only.write_text(text, encoding="utf-8")
@@ -531,7 +801,7 @@ def main() -> int:
         "source_md": str(src),
         "text_only_md": str(text_only),
         "raw_bytes": raw_bytes,
-        "text_only_bytes": len(text.encode("utf-8")),
+        "text_only_bytes": text_bytes_total,
         "images_replaced": n_images,
         "structure_type": structure_type,
         "structure_note": (
@@ -547,13 +817,52 @@ def main() -> int:
         body = "\n".join(lines[sp["start"] - 1 : sp["end"]]).rstrip() + "\n"
         out = sections_dir / f"{bucket}.md"
         out.write_text(body, encoding="utf-8")
-        manifest["section_slices"][bucket] = {
+        entry = {
             "path": str(out),
             "start_line": sp["start"],
             "end_line": sp["end"],
             "words": len(body.split()),
             "heading": sp["heading"],
         }
+        if lines_aligned:
+            raw_slice = "\n".join(raw_lines[sp["start"] - 1 : sp["end"]])
+            raw_slice_bytes = len(raw_slice.encode("utf-8"))
+            body_bytes = len(body.encode("utf-8"))
+            entry["raw_bytes"] = raw_slice_bytes
+            entry["text_bytes"] = body_bytes
+            entry["compression_ratio"] = round(raw_slice_bytes / max(1, body_bytes), 2)
+        manifest["section_slices"][bucket] = entry
+
+    # compression savings observability (T2-6, 2026-09-12; pi-distill's
+    # ineffective-compression spirit): surface when the text-only conversion
+    # bought almost nothing instead of silently claiming savings.
+    overall_ratio = round(raw_bytes / max(1, text_bytes_total), 2)
+    savings_warning = overall_ratio < args.min_compression_ratio
+    manifest["compression"] = {
+        "ratio": overall_ratio,
+        "min_ratio": args.min_compression_ratio,
+        "savings_warning": savings_warning,
+        "per_slice_aligned": lines_aligned,
+    }
+    manifest["distiller_fingerprint"] = distiller_fingerprint()
+    manifest["prior_traces"] = prior_traces(citekey, raw)
+    if any(manifest["prior_traces"].get(k) for k in ("story_cards", "registries")) \
+            or manifest["prior_traces"]["corpus_wb_markers"]:
+        print("DEDUP: prior traces found — gap-fill semantics (auto-write default) "
+              "per protocol; NOT a first-time distill:")
+        for card in manifest["prior_traces"]["story_cards"]:
+            print(f"  story card: {card}")
+        for reg in manifest["prior_traces"]["registries"]:
+            print(f"  registry: {reg}")
+        print(f"  corpus wb markers: {manifest['prior_traces']['corpus_wb_markers']}")
+    if savings_warning:
+        print(
+            f"COMPRESSION: ineffective ({overall_ratio}x < "
+            f"{args.min_compression_ratio}x) — source carried little base64 "
+            "weight; text-only conversion bought almost nothing"
+        )
+    print(f"DISTILLER: {manifest['distiller_fingerprint']['version']} "
+          f"({manifest['distiller_fingerprint']['files']} files)")
 
     manifest["sentences_archive"] = None
     if args.keep_sentences:
@@ -579,6 +888,7 @@ def main() -> int:
     (outdir / "l0_manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"
     )
+    scaffold_pdm_root(citekey, src, manifest, outdir)
     print(json.dumps(manifest, ensure_ascii=False, indent=2))
     if manifest["sections_unknown"]:
         print(

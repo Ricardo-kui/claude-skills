@@ -4324,6 +4324,101 @@
       "overall_role": "partial_exemplar"
     },
     {
+      "id": "lu2022-frenemies-common-ownership-advertising",
+      "path": "v4/blueprints/lu2022-frenemies-common-ownership-advertising.md",
+      "paper_type": "quantitative",
+      "outlet": "Management Science",
+      "publication_status": "published",
+      "coverage": "complete",
+      "theoretical_problem_form": [
+        "ownership-structure-as-organizational-driver",
+        "coordination-benefit-cost-calculus",
+        "invisible-arrangement-visible-budget"
+      ],
+      "narrative_dynamics": [
+        "data-shock-blind-spot-opening",
+        "identification-obstacle-to-credibility-turn",
+        "promise-payoff-unravel-staging",
+        "pre-seeded-boundary-twist",
+        "premise-reversal-ending"
+      ],
+      "retrieval_signals": [
+        "common-ownership-product-market-coordination",
+        "advertising-as-combative-tool",
+        "institution-merger-natural-experiment",
+        "threat-battery-did",
+        "same-institution-control-construction"
+      ],
+      "section_learning": {
+        "introduction": {
+          "suitable": "yes",
+          "requires": [
+            "third-party-event-induced-treatment",
+            "citable-institutional-drivers-of-the-event"
+          ],
+          "learn": [
+            "Run the gap in two places: declare the blind spot inside the opening paragraph, then deepen it with a dual-reason attribution (the phenomenon is new AND causal identification is hard) so the gap reads as structurally difficult to study rather than as prior scholarship failing — which pre-sells the design as the resolution.",
+            "Preview identification as plot: translate treatment construction, event-exogeneity defense, parallel-trends verification, and a dual-unit effect size into introduction paragraphs, so the reader accepts causal language before reaching Methods."
+          ],
+          "caveat": [
+            "The fused ~190-word opening paragraph and a preview block near 39% of the introduction are econ/MS register; in management journals this density buries the knot. Hardcoded preview numbers create revision-sync liability, and the exogeneity passage leans on citable institutional drivers — without such literature the same sentences invite identification attacks. Stakes ride on prevalence quantification with no consequence scenario."
+          ]
+        },
+        "theory": {
+          "suitable": "partial",
+          "requires": [
+            "mechanism-deduction-register",
+            "borrowed-theory-acceptable"
+          ],
+          "learn": [
+            "Derive an opposite-signed moderation pair from one cost-benefit calculus after the baseline main effect, so the two boundary hypotheses cover both sides of a single mechanism instead of reading as two ad hoc moderators.",
+            "Pre-seed the twist: register the later boundary case (a commonly owned pair that is small relative to industry leaders) in theory as a low-commitment 'worth noting, explored empirically later' move, so its Results appearance lands as a promised complication rather than a post hoc rescue."
+          ],
+          "caveat": [
+            "The engine is borrowed theory (portfolio-value internalization; combative advertising) — the section deduces rather than builds, the coordination channels are enumerated for feasibility but never tested, and benefit/cost are conceded unmeasurable. Do not import the structure when the mechanism itself is contested or the moderators lack even proxy justification."
+          ]
+        },
+        "methods": {
+          "suitable": "partial",
+          "requires": [
+            "third-party-shock-with-institutional-drivers",
+            "archival-ownership-or-equitable-data"
+          ],
+          "learn": [
+            "Open threat-first, shock-last: name endogeneity and split it into two sources (selection on prospects; unobservable firm traits) before introducing the instrument, so institutional background arrives as a solution rather than a data dump.",
+            "Make group assignment reproducible: a numbered dual-condition treatment rule fixed to pre-merger information, a named real-event walkthrough (one merger, unit by unit, figure and text sharing the same units), and treatment/control counts reported inside the sample funnel."
+          ],
+          "caveat": [
+            "2022 TWFE vintage: no event-study coefficient plot, no heterogeneity-robust estimator, cluster level unstated in Methods, and the estimation-window argument is truncated mid-sentence in the source. Copy the assignment and exogeneity staging, not the estimator specification."
+          ]
+        },
+        "results": {
+          "suitable": "yes",
+          "requires": [
+            "did-family-design"
+          ],
+          "learn": [
+            "Let the reader see the effect before the coefficient: a raw treatment/control trend figure doubles as qualitative parallel-trends pre-enactment and mechanism preview, hands off to the formal estimate, and is followed by one dedicated paragraph translating economic magnitude across all outcome measures at once.",
+            "Unravel by theoretical lever, not table order: organize moderation by the theory's own dials (benefit proxies, then cost proxies), pairing each significant pole against its null pole and formalizing the between-group gap, so null groups read as boundary evidence; title each robustness subsection with the threat it answers."
+          ],
+          "caveat": [
+            "One payoff overreaches its evidence: the institutional-ownership partition is narrated as 'consistent evidence' although two of three between-group tests are insignificant, a new hypothesis enters inside Results on the strength of the theory-section pre-seed rather than an explicit post-hoc flag, and one outcome measure stays weak across many tables without discussion. Copy the staging, not the summarizing license."
+          ]
+        },
+        "discussion": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Close by reversing the opening premise instead of restating findings: the conclusion re-reads the front end's default (the firm advertises to maximize firm value) as challenged by the evidence, then escalates implications across audiences from private (managers, analysts, agencies) to public (antitrust)."
+          ],
+          "caveat": [
+            "The ending is recap-shaped with no limitations passage — the control construction's coverage cost goes unacknowledged — and the closing 'further research is required' carries no specific agenda. Transfer the premise-reversal move; supply your own honesty layer."
+          ]
+        }
+      },
+      "overall_role": "partial_exemplar"
+    },
+    {
       "id": "lun2026",
       "path": "v4/blueprints/lun2026-eo-coo-power-recalls.md",
       "paper_type": "quantitative",
@@ -4564,7 +4659,7 @@
     {
       "id": "mao2022",
       "path": "v4/blueprints/mao2022-investigation-effort.md",
-      "paper_type": "quantitative",
+      "paper_type": "quantitative (analytical formal model + archival empirical companion)",
       "outlet": "Manufacturing & Service Operations Management",
       "publication_status": "published",
       "coverage": "complete",
@@ -4590,41 +4685,45 @@
           "requires": [],
           "learn": [
             "When an observed action has a materially earlier information-production stage, introduce the full decision sequence before naming the final outcome, so delay cannot be mistaken for a single last-moment choice.",
-            "Make two routes to the same harmful outcome distinct: a firm can wait after learning, or can slow the production of knowledge that would force action."
+            "Make two routes to the same harmful outcome distinct by instantiating each with a named scandal — one firm ignoring an investigation result for a decade, one concealing and manipulating the investigation — with quantified penalties, so passive delay cannot be collapsed into a single behavior."
           ],
           "caveat": [
-            "The GM and Toyota cases, product-life-cycle economics, and the premise of profit maximization are setting-specific; a multi-stage timeline is useful only when the earlier stage is genuinely discretionary and consequential."
+            "The GM and Toyota cases, product-life-cycle economics, and the premise of profit maximization are setting-specific; a multi-stage timeline is useful only when the earlier stage is genuinely discretionary and consequential.",
+            "The arrangement is OM-specific: an explicit three-question puzzle block and a three-paragraph preview carry the middle, while the literature turn and the 'first to' claim arrive only in the contribution paragraphs (about 80% through). The first-to claim binds to a modeling feature (a time-stamped product cycle), which must be defended against empirical delay research rather than topic-level novelty, and in business-discipline venues the deferred gap statement should be moved earlier."
           ]
         },
         "theory": {
           "suitable": "yes",
           "requires": [],
           "learn": [
-            "Derive the later action choice before deriving the earlier information-effort choice when the anticipated value of delay changes the incentive to learn.",
+            "Derive the later action choice before deriving the earlier information-effort choice, and give each parameter regime a name ('never delay', 'may not delay', 'always delay', 'early-stage delay') so the partition becomes a reusable object — later turned directly into the empirical section's test cells.",
             "Keep investigation, identification, and action as separate theoretical clocks, then show exactly which observable or private timestamp each policy instrument can affect."
           ],
           "caveat": [
-            "Backward induction is a model-specific solution, not a reason to presume that every investigation is strategically slowed; the payoff linkage between inquiry and later action must be established."
+            "Backward induction is a model-specific solution, not a reason to presume that every investigation is strategically slowed; the payoff linkage between inquiry and later action must be established.",
+            "Functional-form assumptions (a convex penalty, concave word-of-mouth decay) are asserted as modeling conventions without behavioral argument, and some corollary conditions stay too technical to translate into intuition; a portable version must state and justify such assumptions explicitly and support the regime claims with figures (decision tree, numerical illustration) rather than derivations alone."
           ]
         },
         "methods": {
           "suitable": "partial",
           "requires": [],
           "learn": [
-            "Build the evidence arena around the sequence promised in theory: notice, identification, and recall require distinct timestamps rather than one undifferentiated delay measure."
+            "Build the evidence arena around the sequence promised in theory: notice, identification, and recall require distinct timestamps rather than one undifferentiated delay measure; open the companion section by naming the theoretical artifact it tests (the decision tree) with the scope condition in the same sentence, so the empirics stay tethered to the model instead of drifting into a standalone paper.",
+            "Operationalize process position as a normalized clock (event-time age over total lifetime) so heterogeneous products become comparable, and use the structural estimates themselves to back-validate a model assumption (the estimated influence ratio is consistent with the assumed lambda > gamma), closing the theory-evidence loop before any behavioral test."
           ],
           "caveat": [
-            "The modified Bass model, structural assumptions, NHTSA-initiated-recall proxy, and automobile sample only provide indirect support for the proposed effort mechanism; they are not portable design instructions."
+            "The modified Bass model, structural assumptions, NHTSA-initiated-recall proxy, and automobile sample only provide indirect support for the proposed effort mechanism; they are not portable design instructions. Measurement transparency is also thin — composite-severity weights and the rule behind estimation failures (529 candidate models reduced to 222) go unreported, and the regulatory reporting mandate is asserted as a data-quality argument rather than validated."
           ]
         },
         "results": {
           "suitable": "partial",
           "requires": [],
           "learn": [
-            "Stage results in the causal-temporal order of the decision tree: first identify when delay is privately attractive, then show how that anticipated delay changes investigation effort, and only then present the empirical plausibility check."
+            "Stage results in the causal-temporal order of the decision tree: first identify when delay is privately attractive, then show how that anticipated delay changes investigation effort, and only then present the empirical plausibility check.",
+            "Turn the named theoretical branches directly into provenance-carrying case dummies (each definition citing its proposition and pooling the residual), report the insignificant groups first as contrasts, then merge with an explicit combining verdict — a substitute for 'Thus H# is supported' in papers without numbered hypotheses; defend an institutional proxy outcome in place with a mechanism chain and its sample share."
           ],
           "caveat": [
-            "The empirical study tests predicted delay regimes among recalls; it does not observe effort, manipulation, or the full structural mechanism, so the model's closure should not be reported as directly verified behavior."
+            "The empirical study tests predicted delay regimes among recalls; it does not observe effort, manipulation, or the full structural mechanism, so the model's closure should not be reported as directly verified behavior. Robustness is a threshold-definition sensitivity shown as parallel main-table columns rather than a threat-by-threat section, and coefficients are reported without probability translation (no marginal effects or confidence intervals)."
           ]
         },
         "discussion": {
@@ -5176,7 +5275,8 @@
             "State the integrative question before declaring a curvilinear answer, so the curve is presented as a theoretical resolution rather than an empirical surprise."
           ],
           "caveat": [
-            "Transfer only when the conflict is real and each theory contains a neglected scope condition; do not use an apparent literature split as a pretext for adding a quadratic term."
+            "Transfer only when the conflict is real and each theory contains a neglected scope condition; do not use an apparent literature split as a pretext for adding a quadratic term.",
+            "Keep promise vocabulary level with the design family: the original's “quasi-experimental tests” phrasing outruns what an internal-instrument dynamic-panel design can promise, and the wording–design tension propagates to the Methods."
           ]
         },
         "theory": {
@@ -5204,7 +5304,8 @@
             "Use moderators that selectively disable or strengthen the proposed mechanism, so the empirical design tests the explanation for the curve rather than only its shape."
           ],
           "caveat": [
-            "The Fortune 500 panel, Arellano-Bond estimator, lag structure, measures, and instrument diagnostics are design-specific and are not reusable story instructions."
+            "The Fortune 500 panel, Arellano-Bond estimator, lag structure, measures, and instrument diagnostics are design-specific and are not reusable story instructions.",
+            "Do not copy the diagnostics or bookkeeping prose: the original states the AR(2) null hypothesis backwards, and n = 599 is never reconciled with the 227-firm panel while the text claims a balanced matrix."
           ]
         },
         "results": {
@@ -5217,7 +5318,8 @@
             "After revealing the U-shaped focal pattern, use mechanism-targeted moderators to show why its high-end turn should disappear or strengthen under theoretically predicted conditions."
           ],
           "caveat": [
-            "A significant quadratic term is not a story climax by itself; the mechanism-checking evidence must be substantively tied to the claimed transition."
+            "A significant quadratic term is not a story climax by itself; the mechanism-checking evidence must be substantively tied to the claimed transition.",
+            "Cautionary pattern: the “practically relevant” framing for H4 is computed from linear × eligibility interactions that are themselves non-significant, and the section stages no robustness or turning-point-uncertainty beats—magnitude talk cannot rescue an arm that failed significance, and a single specification chain leaves the climax without a stress-test beat."
           ]
         },
         "discussion": {
@@ -5230,7 +5332,8 @@
             "Close by explaining how both theories remain internally valid within different ranges, rather than declaring one theory wrong."
           ],
           "caveat": [
-            "Do not turn a range-conditioned account into universal managerial advice; the relevant thresholds and contexts must remain bounded."
+            "Do not turn a range-conditioned account into universal managerial advice; the relevant thresholds and contexts must remain bounded.",
+            "The ending's compensation counsel (e.g., eligible-TMT firms benefiting from small pay increases) leans on the steepest-inference moderator; bound advice to the ranges and mechanisms the evidence actually staged."
           ]
         }
       },

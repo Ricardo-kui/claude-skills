@@ -52,3 +52,4 @@ updated: 2026-08-05
 - CEM 只处理可观测事前差异；不可声称已解决不可观测选择。
 - 须报告匹配变量；若正文不放平衡统计，附录须有，且正文至少一句“remain robust”。
 - 若匹配后样本量骤降，须报告保留 N，不得只报显著性不变。
+<!-- wb:Castellaneta_Conti_Kacperczyk_2017_SMJ:legacy_匹配DiD_1 -->

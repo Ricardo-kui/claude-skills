@@ -1,7 +1,7 @@
 # Module–Booth Mapping — 引言模块范式 ↔ Booth 论证结构
 
 > 依据：Booth et al. (2024) The Craft of Research (5th ed.) Vault 原子笔记（`文献笔记库/02 原子化/写作指导/Booth et al. 2024 - The Craft of Research/`；按章路由见 `_reference/guidance-source-router.md`）。
-> 分工：本文件是模块设计的**论证依据层**——只接 Booth 的论证职能与判据；故事交付归 Pollock Ch05，理论化定位归 GBL Four Moves（`../diagnose-introduction/references/golden-biddle-locke-four-moves.md`）。渲染强制检查仍在 `render-rules.md`；Phase 2 规划与 Gate 5 抽查时参照本文件。
+> 分工与触达：本文件是模块设计的**论证依据层**——只接 Booth 的论证职能与判据；故事交付归 Pollock Ch05，理论化定位归 GBL Four Moves（`../diagnose-introduction/references/golden-biddle-locke-four-moves.md`）。**触达路径 = 渲染期与 Gate 5**：render-rules 头部指针 + Hook #5/Stakes #5 把承重规则内联在强制检查里，本文件供需要依据展开时按需读取（Phase 2 无独立指针，硬规则不依赖本文件被打开）。渲染强制检查在 `render-rules.md`。
 
 ## 一、总对应表：Context–Problem–Response ↔ 模块范式 ↔ 论证五要素
 
@@ -17,7 +17,7 @@ Booth：引言的跨领域不变式 = **Context + Problem + Response**（Ch14 §
 | **Response·明示** | §14.4.1 gist of solution | **Contribution** | claim | quality-gates claim_fit（Ch06） |
 | **Response·承诺** | §14.4.2 promise + outline | **Preview/Transitions** | framing | introduction-slot-contracts |
 
-## 二、每模块的 Booth 细则（Phase 2 规划与 Gate 5 抽查参照）
+## 二、每模块的 Booth 细则（渲染检查与 Gate 5 抽查的依据展开；承重规则已内联 render-rules Hook #5/Stakes #5）
 
 ### Hook = 稳定语境（§14.2 / §14.5 / §14.6）
 

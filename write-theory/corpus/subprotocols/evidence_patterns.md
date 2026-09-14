@@ -52,6 +52,8 @@ confidence: high
 status: ready_for_corpus
 -->
 
+<!-- wb:Shen_Zhou_Wang_Zhang_2022_JOM:legacy_evidence_patterns_PatternThreeElementC -->
+<!-- wb:Moon_Tuli_Mukherjee_2023_JM:legacy_evidence_patterns_PatternThreeElementC_2 -->
 ## Pattern: Case as Warrant for Mechanism Step
 
 **适用场景**: 当机制步骤比较抽象，需要让读者在经验世界中"看见"它时。用企业/行业案例作为 Warrant。
@@ -112,6 +114,8 @@ confidence: high
 status: ready_for_corpus
 -->
 
+<!-- wb:Singh_Grewal_2023_JMR:legacy_evidence_patterns_子型B利益相关者反应作为Audience -->
+<!-- wb:Shen_Zhou_Wang_Zhang_2022_JOM:legacy_evidence_patterns_子型B利益相关者反应作为Audience_2 -->
 ## Pattern: Theory as Warrant — Conceptual Argument for Mechanism Step
 
 **适用场景**: 当机制步骤需要理论合法性而非经验证据时使用。常见于机制链的第一步或最后一步。
@@ -149,6 +153,7 @@ confidence: low
 status: needs_validation
 -->
 
+<!-- wb:Singh_Grewal_2023_JMR:legacy_evidence_patterns_PatternTheoryasWarra -->
 ## Pattern: Evidence Function — Contrast as Pivot
 
 **适用场景**: 当论文需要从对立理论转向自己的理论时使用。Citation 的功能不是支持，而是"设定对手"。
@@ -176,6 +181,7 @@ confidence: low
 status: needs_validation
 -->
 
+<!-- wb:Du_Tsolmon_2024_ORSC:legacy_evidence_patterns_PatternEvidenceFunct -->
 ## Pattern: Evidence Type — Practitioner Report as Warrant
 
 **适用场景**: 当学术文献对某机制的证据不足或过于抽象，需要用 practitioner 报告/案例建立实践相关性和外部效度时。适合 M&A、战略实施、组织变革、供应链等 practitioner 文献丰富的领域。

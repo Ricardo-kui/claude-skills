@@ -39,6 +39,7 @@ updated: 2026-08-03
 **来源**: Schumacher, Keck, and Tang (2020), *Strategic Management Journal*（任期前三年形成媒体与期权代理，后续年份检验风险反应）。
 
 **关键区别**: 这不是普通的一期滞后。普通滞后仍可能让 trait 测量与结果周期重叠；本变体把整个构念形成期与结果观察期切开，并使用两种不同痕迹系统做收敛验证。
+<!-- wb:schumacher_keck_tang_2020_smj:legacy_executive-confidence-operationalization_选项5方法异质的双代理收敛 -->
 
 ### 选项 6：显著性—薪酬复合代理 + 继任者对照验证（narcissism 型）
 

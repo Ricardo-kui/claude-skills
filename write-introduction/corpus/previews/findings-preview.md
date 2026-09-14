@@ -379,6 +379,34 @@ P5-P6 的下半段功能：向读者预告实证结果。这是 Introduction 中
 
 **禁忌**: 每个幅度必须能被 Results 精确兑现；null 必须真为 null 且有"策略缺位"的理论含义，不能把不显著一律包装成证据；编号不超过 3 条；不报系数/p 值
 
+
+### 变体 W：设定有效性预检先行 + 双口径效应量型（Lu–Shen–Wang–Zhang 2022 MS 型）
+> 论证角色：Evidence——把平行趋势核验作为发现预览的第一拍，先证设定有效再报方向与幅度，用双口径数字收束统计与经济显著性
+
+**验证状态**: EMERGING（单篇来源；仅作 section_variant，不改核心路由）
+
+**功能节拍**: 设定有效性核验（事件前趋势平行）→ 事件后方向对比（控制组静止 vs 处理组显著变动）→ 估计量命名 + 双口径效应量 → 统计与经济显著性双确认收束
+
+**模板**:
+> "We first verify the validity of the setting by documenting that, before [the event], the treated and control units are on similar [DV] trends. However, after [the event], the control group shows no change in trend, whereas the treated units significantly [direction]. The [estimator] results further show that the treated units on average experience a [direction] in [DV] of [primary effect size] ([secondary standardized metric]). The estimates are significant both statistically and economically."
+
+**来源**: Lu, Shen, Wang & Zhang 2022 (Management Science), P7
+
+**原文锚定**:
+> "We begin by verifying the validity of the setting by showing that before the mutual fund mergers, the treatment and control groups have similar trends in advertising expenditures." / "the treated firms on average experience a reduction in advertising expenditure of 17% (advertising-to-sales ratio of 0.5%). These effects are both statistically and economically significant."
+
+**关键特征**:
+- 首拍不是发现而是"设定的有效性核验"——把 DiD 的识别前提（平行趋势）翻译成读者可核查的证据预告
+- 方向对比以控制组为静止参照，处理效应以差分形式呈现
+- 效应量双口径：实用单位百分比 + 强度/标准化口径括号内切换，兼顾经济显著性与跨研究可比性
+- 与经济显著性型（eilert2017 型 D）的区别：本变体以识别前提核验开场，而非以数据+方法开场
+
+**适用**: DiD/事件研究类论文的发现预览；审稿人对平行趋势敏感的设定（政策冲击、机构合并、交错采纳）；econ/MS 体例 Intro 的 results 预告段。
+
+**禁忌**: 效应量必须带口径或基线对比，不得孤立宣称 significant；设定核验未通过或需复杂说明时不在本段强行预告平行趋势；预告数字须与正文一致，返修时同步更新。
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:intro_findings_preview_setting_validity_first -->
+
 ## 组装规则
 
 ### 必须配对

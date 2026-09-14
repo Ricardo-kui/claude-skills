@@ -61,6 +61,7 @@ source_papers: ["Singh_Grewal_2023_JMR"]
 confidence: low
 status: needs_validation
 -->
+<!-- wb:Singh_Grewal_2023_JMR:legacy_arrangement_patterns_PatternParallelBranc -->
 
 ## Pattern: Evidence-Contrast → Warrant-Embedded
 
@@ -107,6 +108,7 @@ source_papers: ["Singh_Grewal_2023_JMR"]
 confidence: low
 status: needs_validation
 -->
+<!-- wb:Singh_Grewal_2023_JMR:legacy_arrangement_patterns_PatternEvidenceContr -->
 
 ## Pattern: Cumulative — Indirect Moderation Built on Prior Moderators
 

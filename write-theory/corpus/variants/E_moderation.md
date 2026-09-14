@@ -65,6 +65,8 @@
 | E10 | 跨学科分类框架驱动的 N 平行缓解调节（Taxonomy-Driven N-Parallel，Cutolo–Ferriani 2024 型） |  | 主效应是文献共识惩罚/负面效应（baseline-from-consensus），贡献全在 N 个缓解调节；N 由跨学科既成框架 1:1 映射，机制统一落同一透镜 | EMERGING（单篇来源；仅作 | Cutolo & Ferriani (2024), *Journal of Management* |
 | E11 | 特质激活双表现型 cue 切换调节（Trait-Activation Dual-Manifestation Cue-Switch，Ridge et al. 2024 AMJ 型） | 受众分化/机制切换 | IV 是特质（默认表现型=主效应基线，如 paranoia→avoidance）；stakeholder cue 激活对立表现型（如 aggression）作用于**同一 DV**；low-cue 态即已论证的主效应，moderation 只论 high（activation）侧；双边覆盖由"主效应基线 + high 态完整机制"满足 | EMERGING（单篇来源；仅作 | Ridge, Hill, Ingram, Kolomeitsev & Worrell (2024), *Academy of Management Journal* |
 | E12 | 曲线基线 + 每调节一对几何假设（Paired Geometric Hypotheses per Moderator，Fini et al. 2017 AMJ 型） | 曲线/几何 | 曲线基线由多分量相加构成，moderator 只绑定一个分量 → 产出**一对**几何假设：H[N]a 形状（flatten/steepen/attenuate）+ H[N]b 顶点位置（turning point 沿 X 轴平移），各一直接检验；与 E5 主模板（单衰减假设，绑定整条曲线）判别；必须先作不变性声明 | EMERGING（单篇来源；仅作 | Fini, Jourdan & Perkmann (2017), *Academy of Management Journal* |
+| E13 | 机制移除型曲线退化调节（Mechanism-Removal Curve Degeneration，Ridge, Aime & White 2013 型） | 曲线/几何 | 曲线基线的一个机制分支被 W 移除/关闭（竞赛取消、机会关闭），另一机制不受影响 → 曲线退化扁平化；与 E5 主模板、E12 Paired Geometric 判别 | EMERGING（单篇来源） | Ridge, Aime & White (2013), *Strategic Management Journal* |
+| E14 | 双支增强型曲线锐化调节（Both-Branch Amplification Steepening，Ridge, Aime & White 2013 型） | 曲线/几何 | 曲线基线的两个机制分支被同一 moderator 同时增强（各有一条独立子机制论证）→ 曲线锐化；与 E13 机制移除型镜像几何 | EMERGING（单篇来源） | Ridge, Aime & White (2013), *Strategic Management Journal* |
 
 ## E2. 跨层调节 (Cross-Level Moderation) — 9 步协议
 
@@ -408,46 +410,10 @@ high, at lower levels when low.
 **诚实边界**: 单篇 EMERGING（Fini 2017 AMJ）；turning-point shift 作为概念仍为 EMERGING 单源（Lee-Park bottleneck-switch、Bendig vertical-shift 相近但不同），配对几何组织为单篇变体，待第二篇跨论文验证；不得据此改变 E 路由。
 
 ---
+<!-- wb:Fini_Jourdan_Perkmann_2017_AMJ_Social_Valuation:legacy_E_moderation_E5曲线关系多调节变量的联合论证Cuie -->
 
 
-### 变体 C：情境劈叉共同机制干（Context-Split Common Trunk, Paired Conditional Hypothesis Sets）
 
-<!--
-pattern_id: context_split_common_trunk_paired_hypothesis_sets
-build_type: 机制推演型 + 调节效应型（E 路由；情境为类目型 scope condition 而非连续交互项）
-source_papers: ["carpenterwestphal2001_AMJ"]
-confidence: high
-status: VERIFIED — expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)
--->
-
-**适用场景**: 同一机制干解释 [IV]→[DV]，但机制在两类互斥情境下指向**不同的最优 [IV] 形态**；情境（环境类型/制度状态/生命周期阶段）是类目型条件，不需要（或无法测量）连续交互项。用"劈叉"替代 moderated regression 式调节假设。
-**排列模式**: Common Trunk → Context Split → Paired Hypothesis Sets
-**范文来源**: Carpenter & Westphal (2001, AMJ)
-
-**骨架**:
-```
-[共同机制干] Our [perspective] suggests that [IV] affects [DV] through [mechanism]:
-[IV] provides [experience/information] that shapes [knowledge structures], which
-determine [actor]'s ability to [outcome] ([citations]).
-[情境定义 + 分裂逻辑] [Context] refers to [definition]. In [context A], the key task is
-[task A], so [IV variant A] best equips the actor. In [context B], the task shifts to
-[task B], so [IV variant A alone] hinders [task B] because [mechanism-based reason].
-[劈叉句] How then might [IV] enhance [outcome] in [context A]? We suggest that [claim A].
-[假设集 A] Thus, [H-A1: In context A, IV-A will increase mediator at individual level.]
-[H-A2/A3: In context A, IV-A will increase board-level behavior 1 / behavior 2.]
-[假设集 B（镜像）] Therefore, in [context B], [H-B1/B2/B3: mirrored predictions for
-the complementary IV variant]. [每条假设以情境状语开头，前后集逐条平行。]
-```
-
-**为什么有效**: 一个机制干承担全部解释成本，两个情境只改变"哪种 [IV] 形态喂饱机制"——读者不需学习两套理论；类目型情境用 scope-condition 式假设（"In a stable environment, ..."）比强行构造连续交互项更诚实，也天然适合分组/子样本检验。
-**注意事项**: 机制干必须在情境劈叉**之前**完整建立（本文 P2-P4 先立图式机制，P5 起才引入环境）；两个假设集必须逐条平行（个体中介假设 + 两个董事会层行为假设），否则劈叉变成两个 mini-theory；情境劈叉后仍要说明机制为何在 B 情境下对 variant A 失效（本文用图式窄化 + 社会化承诺两个理由），不能只说情境不同。
-**反模式**: 无共同机制干、两个情境各讲一套理论（读者负荷翻倍）；把类目情境硬写成连续调节交互假设；情境劈叉却不解释失效机制，退化为两 组无关联的预测。
-
-**原文锚定**:
-> "In a stable environment, the appointment of a director to the boards of other firms that are strategically related to the focal firm will increase the level of board monitoring of strategic decision making."
-> "in unstable environments, an optimal portfolio of outsider board appointments may include a heterogeneous mix of ties to strategically similar and dissimilar firms"
-
-<!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:theory_context_split_common_trunk_paired_hypothesis_sets -->
 
 ## E6. 序列嵌套调节（Sequential Nested Moderation，Chung/Low/Rust 2022 型）
 
@@ -1043,3 +1009,220 @@ H[k]: [Tie] should be particularly beneficial to [outcome] when [pole k].
 - "Therefore, while the evaluation expertise of [伙伴] endorsements may, in general, signal firm quality to investors, we expect investors to perceive greater value associated with such ties during [冷] markets."（H1 收敛句）
 
 <!-- wb:gulati_higgins_2003_which_ties_matter:e13_signal_maker_attention_alignment_moderation -->
+
+
+## E13. 机制移除型曲线退化调节（Mechanism-Removal Curve Degeneration，Ridge, Aime & White 2013 型）
+
+<!--
+pattern_id: mechanism_removal_curve_degeneration
+build_type: 调节效应型（E 路由；曲线基线的分支级调节）
+source_papers: ["Ridge_Aime_White_2013_SMJ"]
+confidence: emerging
+status: needs_cross_paper_validation
+story_fidelity: section_variant
+-->
+
+> 论证角色：Reason（调节假设的退化几何论证——W 只移除驱动曲线上升支的机制，曲线退化为幸存支的符号）
+
+**适用**: 曲线（U/倒U）基线由两个机制分支构成，某 moderator **直接移除或关闭其中一个机制**（如取消竞赛、关闭机会结构），而另一机制不受影响——预测从"曲线"退化为"幸存支的单调符号"。W 可为类目型（在/不在）或连续型（低/高）。
+
+**与 E5 主模板 / Paired Geometric（Fini 型）的判别（决定性）**:
+
+| | E5 主模板（Cui 型） | Paired Geometric（Fini 型） | 机制移除型（Ridge 2013 型） |
+|---|---|---|---|
+| 调节绑定对象 | 整条曲线（flatten/steepen） | 曲线的一个分量（选择性组件） | 一个**机制整体**（机会结构） |
+| 几何后果 | 曲率衰减/增强 | 形状 + 顶点平移（一对假设） | **曲线退化**为单支符号（U → 单调） |
+| 假设形式 | 每调节 1 条衰减假设 | H[N]a 形状 + H[N]b 顶点 | 两状态条件假设（absence→U / presence→单调） |
+| 前提 | 无不变性声明 | 必须不变性声明 | 必须**对另一机制的 non-effect claim** |
+| 范文 | Cui et al. (SMJ) | Fini et al. (2017 AMJ) | Ridge, Aime & White (2013 SMJ) |
+
+**微观动作序列**: 机制绑定（W 消除赢得竞赛的机会）→ 移除论证（机制 B 激励被移除/取消）→ 另一支 non-effect claim（W 不影响机制 A 的剥夺感）→ 退化预测（只有 A 在起作用 → 负而非 U）→ 两状态假设陈述。
+
+**骨架**:
+```
+[Mechanism binding] In line with predictions from [Theory B], because [W] eliminates or at least
+significantly reduces the opportunity to win [the contest] for [actors], the incentives ... predicted
+by [Theory B] will thus be removed by [W]. In essence, [W] signals an end of the current [contest]
+and therefore diminishes or cancels the emergent [Theory B] effects at high levels of [X].
+
+[Non-effect claim on the surviving branch's counterpart] Additionally, we do not expect [W] to
+affect [the mechanism A state, e.g. feelings of deprivation] based on [Mechanism A] effects.
+
+[Degeneration prediction] Therefore we expect that in the presence of [W], [Mechanism A] effects
+are going to reduce [Y] as [X] grows and will persist in the absence of positive [Theory B] effects.
+In the presence of [W] we expect a mostly negative rather than U-shaped relationship between [X] and [Y].
+
+H[N] (categorical W): [X] will have a U-shaped relationship with [Y] in the absence of [W] and a
+negative relationship with [Y] in the presence of [W].
+H[N] (continuous W): [X] will have a U-shaped relationship with [Y] when [W] is low and a negative
+relationship with [Y] when [W] is high.
+```
+
+**原文锚点**:
+> "In essence, the presence of an heir apparent signals an end of the current succession tournament and therefore diminishes or cancels the emergent tournament effects at high levels of pay disparity."
+> "Executive pay disparity will have a U-shaped relationship with firm performance in the absence of an heir apparent and a negative relationship with firm performance in the presence of an heir apparent"
+
+**关键特征**:
+- **两状态假设即双边论证**：absence 态继承基线曲线（H1），presence 态给退化预测——C20 双边覆盖由构造满足，无需再写 high/low 双段
+- **non-effect claim 是许可条件**：只有显式论证"另一机制不受 W 影响"，退化预测才合法；该主张必须给理由，不可只断言（范文此处是薄弱点，见诚实边界）
+- 与 Incommensurability R3+R4 组合天然配套：W 改变机制支配（mechanism dominance），R4 调节解释 R3 曲线为何消失
+- 同一几何可容纳多个 W（范文：heir apparent=存在条件、CEO power=约束条件），假设句式保持同构
+
+**反模式**: 无 non-effect claim 就宣称曲线退化（顶点预测失去依据，审稿人可问"W 是否也加强剥夺感"）；把退化写成 attenuate（几何不同：衰减仍是 U，退化是单调）；类目 W 硬写成交互项系数符号而不写两状态对比。
+
+**诚实边界**: 单篇 EMERGING（Ridge, Aime & White 2013 SMJ），待第二篇跨论文验证；不得据此改变 E 路由。范文对 non-effect claim（heir apparent 不影响剥夺感）仅断言未论证，写入时应补一条机制理由（如"W 只改变机会结构，不改变比较可及性"）。
+
+<!-- wb:ridge_aime_white_2013_smj:t_e_mechanism_removal_curve_degeneration -->
+
+
+### 变体 C：情境劈叉共同机制干（Context-Split Common Trunk, Paired Conditional Hypothesis Sets）
+
+<!--
+pattern_id: context_split_common_trunk_paired_hypothesis_sets
+build_type: 机制推演型 + 调节效应型（E 路由；情境为类目型 scope condition 而非连续交互项）
+source_papers: ["carpenterwestphal2001_AMJ"]
+confidence: high
+status: VERIFIED — expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)
+-->
+
+**适用场景**: 同一机制干解释 [IV]→[DV]，但机制在两类互斥情境下指向**不同的最优 [IV] 形态**；情境（环境类型/制度状态/生命周期阶段）是类目型条件，不需要（或无法测量）连续交互项。用"劈叉"替代 moderated regression 式调节假设。
+**排列模式**: Common Trunk → Context Split → Paired Hypothesis Sets
+**范文来源**: Carpenter & Westphal (2001, AMJ)
+
+**骨架**:
+```
+[共同机制干] Our [perspective] suggests that [IV] affects [DV] through [mechanism]:
+[IV] provides [experience/information] that shapes [knowledge structures], which
+determine [actor]'s ability to [outcome] ([citations]).
+[情境定义 + 分裂逻辑] [Context] refers to [definition]. In [context A], the key task is
+[task A], so [IV variant A] best equips the actor. In [context B], the task shifts to
+[task B], so [IV variant A alone] hinders [task B] because [mechanism-based reason].
+[劈叉句] How then might [IV] enhance [outcome] in [context A]? We suggest that [claim A].
+[假设集 A] Thus, [H-A1: In context A, IV-A will increase mediator at individual level.]
+[H-A2/A3: In context A, IV-A will increase board-level behavior 1 / behavior 2.]
+[假设集 B（镜像）] Therefore, in [context B], [H-B1/B2/B3: mirrored predictions for
+the complementary IV variant]. [每条假设以情境状语开头，前后集逐条平行。]
+```
+
+**为什么有效**: 一个机制干承担全部解释成本，两个情境只改变"哪种 [IV] 形态喂饱机制"——读者不需学习两套理论；类目型情境用 scope-condition 式假设（"In a stable environment, ..."）比强行构造连续交互项更诚实，也天然适合分组/子样本检验。
+**注意事项**: 机制干必须在情境劈叉**之前**完整建立（本文 P2-P4 先立图式机制，P5 起才引入环境）；两个假设集必须逐条平行（个体中介假设 + 两个董事会层行为假设），否则劈叉变成两个 mini-theory；情境劈叉后仍要说明机制为何在 B 情境下对 variant A 失效（本文用图式窄化 + 社会化承诺两个理由），不能只说情境不同。
+**反模式**: 无共同机制干、两个情境各讲一套理论（读者负荷翻倍）；把类目情境硬写成连续调节交互假设；情境劈叉却不解释失效机制，退化为两 组无关联的预测。
+
+**原文锚定**:
+> "In a stable environment, the appointment of a director to the boards of other firms that are strategically related to the focal firm will increase the level of board monitoring of strategic decision making."
+> "in unstable environments, an optimal portfolio of outsider board appointments may include a heterogeneous mix of ties to strategically similar and dissimilar firms"
+
+<!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:theory_context_split_common_trunk_paired_hypothesis_sets -->
+
+
+## E14. 双支增强型曲线锐化调节（Both-Branch Amplification Steepening，Ridge, Aime & White 2013 型）
+
+<!--
+pattern_id: both_branch_amplification_steepening
+build_type: 调节效应型（E 路由；曲线基线的双支调节）
+source_papers: ["Ridge_Aime_White_2013_SMJ"]
+confidence: emerging
+status: needs_cross_paper_validation
+story_fidelity: section_variant
+-->
+
+> 论证角色：Reason（单一 moderator 经两条理论各自的子机制同时增强曲线两支，预测为整条曲线更陡）
+
+**适用**: 曲线（U/倒U）基线的**两个机制分支都被同一 moderator 增强**，且每支各有一条独立的子机制论证——预测不是衰减/退化，而是**整条曲线更陡（more pronounced）**。典型场景：W 提高"机制 A 的感知前提强度"（如相似性→剥夺感更敏感），同时提高"机制 B 的响应概率"（如胜出概率→激励更敏感）。
+
+**与相邻几何的判别（决定性）**:
+
+| | 机制移除型（Ridge 2013, H2/H3） | 双支增强型（Ridge 2013, H4） | E5 主模板（Cui 型） |
+|---|---|---|---|
+| W 作用对象 | 一个机制（移除） | **两个机制（同时增强）** | 整条曲线（单参数） |
+| 子机制论证数 | 1 条（移除）+ 1 条 non-effect claim | **2 条**（每支各一条，均可溯源到各自理论） | 1 条总衰减 |
+| 几何后果 | U 退化为单调 | U 更陡（trough 更深、恢复更快） | 曲线衰减/增强 |
+| 假设形式 | 两状态条件假设 | more-pronounced 比较假设 | 衰减假设 |
+
+**微观动作序列**: 支 1 论证（W 提高机制 A 的前提强度→低区下探更狠）→ 支 2 论证（W 提高机制 B 的响应概率→高区上拉更快且激活阈值左移）→ 合并几何声明（两支同强→steeper U）→ more-pronounced 假设。
+
+**骨架**:
+```
+[Branch 1: Mechanism A strengthening] [W] will dramatically affect perceptions of [the premise
+condition, e.g. similarity] between [actors] and [the benchmark]. [W-high actors] are more
+[similar] in [organizationally relevant characteristics] and are therefore more likely to
+experience [Mechanism A state] in the presence of high [X]. Therefore, [Mechanism A] effects ...
+will be stronger for [units] with [W-high actors].
+
+[Branch 2: Mechanism B strengthening + threshold shift] Since [W] will increase [Mechanism B]
+responsiveness to [X], we argue that the more [W-high] the [actors], the lower the [X] needed to
+incentivize [Y] and the larger the incentive to perform at similar levels of [X].
+
+[Combined geometry] [W] will therefore moderate the U-shaped relationship between [X] and [Y] so
+that higher [W] will strengthen both the [Mechanism A] effects of [X] on [Y] and the [Mechanism B]
+effects of [X] on [Y], resulting in a significantly steeper U-shaped relationship.
+
+H[N]: Under conditions of high [W], the U-shaped relationship between [X] and [Y] will be more
+pronounced than under conditions of low [W].
+```
+
+**原文锚点**:
+> "Under conditions of high TMT member eligibility, the U-shaped relationship between pay disparity and firm performance will be more pronounced than under conditions of low TMT eligibility"
+
+**关键特征**:
+- **两支各需独立理论锚**：支 1 锚定机制 A 的前提文献，支 2 锚定机制 B 的选择/响应文献；两支缺一则退化为 E5 单参数衰减
+- **阈值左移是可分离的衍生预测**：支 2 蕴含"激活所需 X 更低"（turning point 左移），但范文的假设形式只承诺"更陡"——写入时应说明该衍生预测由哪一项检验承接，或不写左移
+- 是机制移除型（同一范文 H2/H3）的镜像：移除→退化，增强→锐化；两型并用的论文构成"曲线-调节几何家族"完整证明
+
+**反模式**: 两支只用同一句"加强双方效应"带过（无独立子机制论证）；把 steepen 与 flatten 混写（方向不明）；支 2 的阈值左移写进假设却不给检验承接。
+
+**诚实边界**: 单篇 EMERGING（Ridge, Aime & White 2013 SMJ），待第二篇跨论文验证；"more pronounced"作为假设形式与 E12 配对几何（shape+peak 分拆）不同，不改变 E 路由；左移衍生预测在原文未经假设化，移植时应显式补检验或删除。
+
+<!-- wb:ridge_aime_white_2013_smj:t_e_both_branch_amplification_steepening -->
+
+
+
+## E15. 单一成本收益计算→异号调节假设对（One-Calculus Cost-Benefit → Opposite-Signed Moderation Pair，Lu et al. 2022 MS 型）
+
+> 论证角色：Reason——从同一机制的成本收益计算导出一对异号调节假设的推导骨架；先立无条件基线主效应，再用收益/成本两个 moderator 反向精化机制强度
+
+**band**: gap（主题变体语料零命中，新增；单源 EMERGING，gate ① 裁决）
+**验证状态**: EMERGING（单源 full_text_verified：Lu, Shen, Wang & Zhang 2022, Management Science；仅作 section_variant，不改核心路由）
+
+**适用**: 机制推演型论文已有基线主效应假设（X 经机制 M 影响 Y），且 M 的强度可由一个统一的成本收益计算刻画——从同一次计算导出两条异号调节假设：收益侧 W_benefit 放大效应，成本侧 W_cost 阻碍效应。经济学/战略体例的比较静态写法（MS/JM/JMR 风格）。
+
+**结构**:
+```
+[基线主效应 H1: X → Y（经机制 M）]
+
+[机制具体化段：枚举 M 的实现通道，建立可行性；通道不另立假设（见 B 变体 E）]
+
+[成本收益推导段——一次计算，两个方向]
+We argue that the [benefit] and [cost] of [M] would affect [actors]' incentive
+to [act on M] when [making strategic decisions such as Y]. When the [gain] from
+[M] is larger, [actors] have more incentives to [act on M], and the [effect of
+X on Y] is likely to be larger. Alternatively, if the [cost] of [M] is high,
+[actors] are less likely to [shift strategy], and the [effect] is likely to be
+small. Based on these arguments, we propose the following two hypotheses.
+
+H2: The [effect/reduction] ... is greater when [units] have a higher [benefit of M].
+H3: The [effect/reduction] ... is smaller when [units] have a higher [cost of M].
+```
+
+**与邻近变体的区别**:
+
+| 维度 | E8（双刃剑异号权变） | E9（双侧镜像调节） | E15（本变体） |
+|------|--------------------|------------------|--------------|
+| 基线主效应 | 不设 unconditional 主效应假设 | 视范文而定 | 先立基线主效应 H1，再调节 |
+| 异号来源 | 同一构念的两条相反机制（升值刃 vs 贬值刃） | 同一构念的 rival/target 两侧 | 同一机制的收益与成本（一次计算的两个分量） |
+| moderator 组织 | 增强型 W 与阻碍型 W 分属不同刃 | 单一 W 镜像两侧 | 两个概念独立 W（benefit / cost），共用一个成本收益元框架 |
+| 双边论证位置 | 异号 W 分属不同刃 | 同一 W 镜像 | 每条假设单侧比较静态；两条异号假设合起来覆盖高低两侧 |
+
+**为什么有效**: 一个成本收益元框架同时回答 moderator 选择问题（两 W 是同一计算的两个分量，非事后罗列）与双边覆盖问题（高低两侧由一对异号假设分担）；机制通道枚举先行，使 benefit/cost 有具体载体，调节变量不显外部强加。
+
+**原文锚点** (Lu, Shen, Wang & Zhang 2022, Management Science "Frenemies: Corporate Advertising Under Common Ownership", §2.3):
+> "We argue that the cost and benefit of coordination would affect firms' incentive to collaborate on strategic decisions such as advertising. When the gain from coordination is larger, firms have more incentives to coordinate, and the decrease in advertising spending is likely to be larger. Alternatively, if the cost of coordination is high, firms are less likely to shift their strategy, and the impact of common ownership is likely to be small."
+
+**注意事项**:
+- 两条假设必须真异号且都能回溯到同一计算的不同分量；若两个 moderator 各需独立理论，改用 E3 嵌入型或条件化复杂化（B 方式三）
+- 每条假设的单侧论证依赖"另一条假设覆盖对侧"——写作时需向读者明示这一分工，否则双边完整性预期不满足
+- 通道枚举与 benefit/cost 的映射宜显式（哪条通道承载收益、哪条承载成本），否则审稿人会追问通道-调节映射
+
+**反模式**: 把成本与收益写成两套不可通约理论（退化为两个独立调节的拼盘）；或没有基线主效应就直接进入异号调节（那是 E8 的领地）。
+
+<!-- wb:lu_et_al_2022_frenemies_corporate_advertising:e15_one_calculus_cost_benefit_opposite_signed_moderation_pair -->

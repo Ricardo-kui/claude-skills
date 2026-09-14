@@ -40,7 +40,7 @@ updated: 2026-08-12
 ## 累积变体
 
 ### 变体 1: Tobit 左删失 DV 条件幅度四拍 — 条件幅度 + 实际重要性拍5 (1篇高价值)
-**来源论文**: Ridge, Kim, Ingram & Lee 2024 (Academy of Management Journal)
+**来源论文**: Ridge, Hill, Ingram, Kolomeitsev & Worrell 2024 (Academy of Management Journal)
 **原始句锚点**: "Lobbying breadth is left-censored since not all firms engage in lobbying activity, and thus we use a Tobit analysis for this dependent variable. ... as CEO paranoia increases from the mean to one standard deviation (i.e., +1 SD) above the mean, the firm exhibits approximately a 7% decrease in lobbying breadth among firms that engage in at least some lobbying activity."
 **验证状态**: EMERGING（单篇 section_variant）
 **写入日期**: 2026-08-12
@@ -57,6 +57,7 @@ updated: 2026-08-12
 
 ---
 
+<!-- wb:ridge_hill_ingram_kolomeitsev_worrell_2024_amj:legacy_Tobit_1 -->
 ## 反模式
 
 | 反模式 | 表现 | 应做 |

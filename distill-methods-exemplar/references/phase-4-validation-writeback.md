@@ -115,7 +115,7 @@ Phase 4 输出的每条 `action != SKIP` 指令渲染为「待写入预览块」
 - **批量模式（--batch）**：一次确认写入全部 `ADD/EXTEND`；`REPLACE` 仍逐个确认（替换是破坏性动作）。
 - 用户说"全部写入"即跳过剩余逐个确认。
 
-确认后的写入步骤不变：打开 `target_file` → 按 `insert_after` 插入 → 更新 `source_papers` / `variants_count` / `updated` → 对 `new_anti_patterns_for_skill` 写入「反模式」段落 → 更新 `INDEX.md` 表行和「已填充变体」计数 → **更新文件顶部「变体速查表」**（新变体行 + 槽位分布总览，`区别` 列直接取 `distinct_from`；速查表与正文变体必须同步，quality_check 会校验）。
+确认后的写入步骤不变：打开 `target_file` → 按 `insert_after` 插入 → 更新 `source_papers` / `variants_count` / `updated` → 对 `new_anti_patterns_for_skill` 写入「反模式」段落 → 更新 `INDEX.md` 表行和「已填充变体」计数 → **更新文件顶部「变体速查表」**（新变体行 + 槽位分布总览，`区别` 列直接取 `distinct_from`；速查表与正文变体必须同步，quality_check 会校验）。速查表行格式遵守 `../../distill-paper-exemplar/references/band-vocab.md` 路由行胶囊规范（只复述正文已有内容、要点 ≤4 条、压缩不得改变路由判断）。
 
 **旧变体锚点回填**：`REPLACE`/`EXTEND` 触碰已有变体且该变体缺 `原始句锚点` 时，按上述锚点来源检索规则**顺带补锚点**（检索不到原文则标"待补"，不阻塞写入）。
 

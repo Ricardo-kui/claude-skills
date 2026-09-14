@@ -50,7 +50,9 @@ from __future__ import annotations
 import argparse
 import difflib
 import json
+import os
 import re
+import subprocess
 import sys
 from datetime import date
 from pathlib import Path
@@ -200,67 +202,264 @@ def resolve_target(corpus_root: Path, item: dict, override: str | None) -> Path 
     return None
 
 
-def update_registry(registry: Path, stem: str, paper: str, journal: str,
-                    gap: str, new_text: dict) -> str:
-    """Surgical text edit of one entry. Returns status message."""
-    # Accumulate on new_text — re-reading from disk here silently discarded
-    # every earlier same-run item's edit (last item won). 2026-08-29 fix.
-    text = new_text.get(str(registry)) or registry.read_text(encoding="utf-8")
-    section, key, m = None, None, None
-    if stem in REGISTRY_ALIASES:
-        section, key = REGISTRY_ALIASES[stem]
-    else:
-        # entry keyed by stem under any evidence subsection
-        pat = re.compile(r"^( +)%s:\n( +)paper_count: (\d+)" % re.escape(stem), re.M)
-        m = pat.search(text)
-        if m:
-            key = stem
-    if m is None and key is not None:
-        pat = re.compile(r"^( +)%s:\n( +)paper_count: (\d+)" % re.escape(key), re.M)
-        m = pat.search(text)
-    if key is None or not m:
-        return f"REGISTRY: no entry for '{stem}' — SKIPPED (update by hand)"
-    ind, sub = m.group(1), m.group(2)
-    count = int(m.group(3))
-    # entry span: from key line to next line indented <= ind
-    start = m.start()
-    nxt = re.search(r"^ {1,%d}\S" % len(ind), text[m.end():], re.M)
-    end = m.end() + nxt.start() if nxt else len(text)
-    entry = text[start:end]
-    # One paper = one papers-list line = one paper_count unit. When several
-    # variants of the SAME paper land on one entry in a single run, the later
-    # items are no-ops (accumulation fix would otherwise append duplicate
-    # paper lines and double-bump the count — 2026-08-29 Anand run).
-    if re.search(r"^\s*- %s \(" % re.escape(paper), entry, re.M):
-        return f"REGISTRY: entry '{key}' already lists {paper} — no change"
-    entry2 = entry.replace(f"paper_count: {count}", f"paper_count: {count + 1}", 1)
-    # locate the papers: list and append after its last consecutive item
-    lines2 = entry2.split("\n")
-    papers_idx = next((i for i, l in enumerate(lines2)
-                       if re.match(r"^\s*papers:\s*$", l)), None)
-    if papers_idx is None:
-        return f"REGISTRY: entry '{key}' has no papers list — SKIPPED papers append"
-    item_re = re.compile(r"^(\s*)- .+$")
-    last = papers_idx
-    for j in range(papers_idx + 1, len(lines2)):
-        if item_re.match(lines2[j]):
-            last = j
-        elif lines2[j].strip() == "":
+def _merge_slots_covered(entry: str, slot_tag: str) -> str:
+    """Merge slot_tag into an entry's slots_covered, tolerating BOTH the flow
+    style (`slots_covered: [M8]`) and the block style (`slots_covered:` +
+    `- M8` item lines). Item collection accepts ANY single-token tag (e.g.
+    the legacy pseudo-slot `M2.5` in 面板数据-OLS) — an early break on a
+    non-canonical item used to split the block and leave stray `- M3` lines
+    below the rewritten flow list, producing INVALID YAML (caught by the S4
+    wbtest sandbox regression). Output is a comma-separated flow list:
+    canonical M#/R# tags sorted numerically first, non-canonical tags keep
+    their original relative order at the end. The old flow-only rewrite
+    replaced just the key line, orphaning block items below it (2026-09-13
+    Lu run), and the legacy space-joined form `[M2 M7 M8]` parsed as ONE
+    string — both latent bugs since inception."""
+    eol = "\r\n" if "\r\n" in entry else "\n"
+    lines = entry.split(eol)
+    item_re = re.compile(r"^(\s*)- (\S+)\s*$")
+    for i, line in enumerate(lines):
+        km = re.match(r"^(\s*)slots_covered:.*$", line)
+        if not km:
             continue
+        indent = km.group(1)
+        collected: list[str] = []
+        j = i + 1
+        while j < len(lines):
+            im = item_re.match(lines[j])
+            if not im or im.group(1) != indent:
+                break
+            collected.append(im.group(2))
+            j += 1
+        seen: dict[str, int] = {}
+        for k, tag in enumerate(collected):
+            seen.setdefault(tag, k)
+        seen.setdefault(slot_tag, len(seen))
+
+        def keyf(tag: str):
+            m = re.fullmatch(r"M(\d+)", tag)
+            if m:
+                return (0, int(m.group(1)), seen.get(tag, 10 ** 6))
+            m = re.fullmatch(r"R(\d+)", tag)
+            if m:
+                return (1, int(m.group(1)), seen.get(tag, 10 ** 6))
+            return (2, 0, seen.get(tag, 10 ** 6))
+
+        merged = ", ".join(sorted(seen, key=keyf))
+        lines[i:j] = [f"{indent}slots_covered: [{merged}]"]
+        return eol.join(lines)
+    return entry
+
+
+def update_registry(registry: Path, stem: str, paper: str, journal: str,
+                    gap: str, new_text: dict, slot_tag: str | None = None) -> str:
+    """S6 retired: papers[]/paper_count/gap_distribution are DERIVED fields —
+    the rebuild_apply pass at apply-end owns them (plan §7.4 removed the
+    read-count→+1→write path). The executor keeps blocks, wb-meta, INDEX rows,
+    tfr issuance and batch_history; registry derived fields converge through
+    the rebuild."""
+
+    return f"REGISTRY: '{stem}' derived fields deferred to rebuild_apply (S6)"
+
+
+def update_theory_registry(registry: Path, paper: str, journal: str, gap: str,
+                           applied: list, new_text: dict, title: str | None,
+                           year: str | None, tbt: str | None,
+                           timestamp: str,
+                           status: str = "EMERGING") -> list[str]:
+    """Per-paper tfr-fragment sync for section == theory (2026-09-12).
+
+    Replaces the post-hoc registry-sync agent (~5M tokens/run): fragments are
+    appended under source_papers.<paper> (entry created when missing), meta and
+    summary_by_dimension counters follow. Items WITHOUT registry_dimension are
+    left as residuals on purpose — a guessed makadok_dimension costs more than
+    a manual sync. Both insertion paths are line-based (2026-09-13 rewrite:
+    the first cut-arithmetic version split the previous fragment's fields).
+    status (C item 2026-09-13): write-time policy stamp for the minted
+    fragments — same computation as the wb-meta line, never hardcoded here."""
+    msgs = []
+    lines = (new_text.get(str(registry)) or registry.read_text(encoding="utf-8")).split("\n")
+    frags = []
+    for name, target, label, item in applied:
+        dim = item.get("registry_dimension")
+        if not dim:
+            msgs.append(f"[{name}] REGISTRY(theory): no registry_dimension — SKIPPED (manual sync)")
+            continue
+        heading = next((l for l in (item.get("block_text") or "").split("\n")
+                        if l.startswith("#")), name).lstrip("# ").strip()
+        try:
+            home = str(target.relative_to(registry.parent)).replace("\\", "/")
+        except ValueError:
+            home = target.name
+        frags.append({"type": name, "title": heading, "home_files": [home],
+                      "makadok_dimension": dim, "status": status,
+                      "note": (item.get("index_note") or "").replace("{NEXT}", label)})
+    if not frags:
+        msgs.append("REGISTRY(theory): nothing to sync (no item carried registry_dimension)")
+        new_text[str(registry)] = "\n".join(lines)
+        return msgs
+    sp_i = next((i for i, l in enumerate(lines) if l.strip() == "source_papers:"), None)
+    if sp_i is None:
+        return msgs + ["REGISTRY(theory): source_papers section not found — SKIPPED (manual sync)"]
+    sp_end = next((i for i in range(sp_i + 1, len(lines))
+                   if lines[i] and not lines[i][0].isspace()), len(lines))
+    paper_new = not any(l.strip() == f"{paper}:" for l in lines[sp_i:sp_end])
+    next_id = max([int(x) for x in re.findall(r"tfr_(\d+)", "\n".join(lines))] or [0]) + 1
+
+    def fragment_lines():
+        out = []
+        for k, f in enumerate(frags):
+            fid = f"tfr_{next_id + k}"
+            out.append(f"      - fragment_id: {fid}")
+            out.append(f"        type: {f['type']}")
+            out.append(f'        title: "{f["title"]}"')
+            out.append("        home_files:")
+            for hf in f["home_files"]:
+                out.append(f"          - {hf}")
+            out.append(f"        makadok_dimension: {f['makadok_dimension']}")
+            out.append(f"        status: {f['status']}")
+            out.append(f'        note: "{f["note"]}"')
+        return out
+
+    if paper_new:
+        entry = [f"  {paper}:", f'    display_name: "{title or paper}"',
+                 f'    journal: "{journal}"']
+        if year:
+            entry.append(f'    year: "{year}"')
+        entry.append(f"    gap_type: {gap}")
+        if tbt:
+            entry.append(f'    theory_build_type: "{tbt}"')
+        entry.append("    fragments:")
+        entry += fragment_lines()
+        lines = lines[:sp_end] + entry + [""] + lines[sp_end:]
+        msgs.append(f"REGISTRY(theory): paper entry {paper} created with "
+                    f"{len(frags)} fragments (tfr_{next_id}-tfr_{next_id + len(frags) - 1})")
+    else:
+        e_i = next(i for i, l in enumerate(lines[sp_i:sp_end])
+                   if l.strip() == f"{paper}:") + sp_i
+        e_end = next((i for i in range(e_i + 1, sp_end)
+                      if lines[i] and not lines[i][0].isspace()), sp_end)
+        f_i = next((i for i in range(e_i + 1, e_end)
+                    if lines[i].strip() == "fragments:"), None)
+        if f_i is None:
+            return msgs + [f"REGISTRY(theory): {paper} has no fragments list — SKIPPED (manual sync)"]
+        item_is = [i for i in range(f_i + 1, e_end)
+                   if re.match(r"^\s*- fragment_id:", lines[i])]
+        if item_is:
+            item_ind = re.match(r"^(\s*)- fragment_id:", lines[item_is[0]]).group(1)
+            ins_at = item_is[-1] + 1
+            while ins_at < e_end and (lines[ins_at].strip() == "" or
+                                      len(lines[ins_at]) - len(lines[ins_at].lstrip()) > len(item_ind)):
+                ins_at += 1
         else:
-            break
-    if last == papers_idx:
-        return f"REGISTRY: entry '{key}' papers list empty — SKIPPED papers append"
-    ind_item = item_re.match(lines2[last]).group(1)
-    lines2.insert(last + 1, f"{ind_item}- {paper} ({journal})")
-    entry2 = "\n".join(lines2)
-    gm = re.search(r"^(\s+)%s: (\d+)$" % re.escape(gap), entry2, re.M)
-    if gm:
-        entry2 = (entry2[:gm.start()]
-                  + f"{gm.group(1)}{gap}: {int(gm.group(2)) + 1}"
-                  + entry2[gm.end():])
-    new_text[str(registry)] = text[:start] + entry2 + text[end:]
-    return f"REGISTRY: {key} paper_count {count}->{count + 1}, +{paper} ({journal}), {gap}+1"
+            item_ind = re.match(r"^(\s*)fragments:", lines[f_i]).group(1) + "  "
+            ins_at = f_i + 1
+        lines = lines[:ins_at] + fragment_lines() + lines[ins_at:]
+        msgs.append(f"REGISTRY(theory): {len(frags)} fragments appended to {paper} "
+                    f"(tfr_{next_id}-tfr_{next_id + len(frags) - 1})")
+    text = "\n".join(lines)
+    # S6: summary_by_dimension / meta counters are DERIVED fields owned by
+    # rebuild_apply (fragments append above stays — tfr issuance is this
+    # executor's retained append-only authority).
+    new_text[str(registry)] = text
+    return msgs
+
+
+def update_results_registry(registry: Path, paper: str, applied: list,
+                            new_text: dict, timestamp: str,
+                            status: str | None = None) -> list[str]:
+    """Estimator slot-append sync for section == results (2026-09-12).
+
+    Slot = item-name prefix r<N>_; registry key = file stem with `-` → `_`
+    (registry keys are underscore-style; the executor previously missed
+    hyphen stems — Gulati-1999/ridge runs). Appends skeleton_variants items
+    plus batch_history and meta bumps. status (C item 2026-09-13): stamped
+    on the minted variant — the pre-C stub carried no status and nobody
+    back-filled it (the rebuild merge skips None), a path-dependent limbo."""
+    msgs = []
+    text = new_text.get(str(registry)) or registry.read_text(encoding="utf-8")
+    done = 0
+    for name, target, label, item in applied:
+        ms = re.match(r"r(\d+)_", name)
+        if not ms:
+            continue
+        slot, key = f"R{ms.group(1)}", target.stem.replace("-", "_")
+        ke = re.search(rf"^  {re.escape(key)}:\s*$", text, re.M)
+        if not ke:
+            msgs.append(f"[{name}] REGISTRY(results): estimator '{key}' not found — SKIPPED (manual sync)")
+            continue
+        nxt_e = re.search(r"^  \S", text[ke.end():], re.M)
+        e_end = ke.end() + (nxt_e.start() if nxt_e else len(text) - ke.end())
+        ktext = text[ke.end():e_end]
+        se = re.search(rf"^(\s+){slot}:\s*$", ktext, re.M)
+        if not se:
+            msgs.append(f"[{name}] REGISTRY(results): slot {slot} not found under {key} — SKIPPED (manual sync)")
+            continue
+        sv = re.search(r"^(\s+)skeleton_variants:.*$", ktext[se.end():], re.M)
+        if not sv:
+            msgs.append(f"[{name}] REGISTRY(results): skeleton_variants not found — SKIPPED (manual sync)")
+            continue
+        base = se.end() + sv.start()
+        key_ind = sv.group(1)
+        # item indent: mirror the FIRST existing list item (registries differ:
+        # real files use same-indent lists, fixtures use key+2); fall back to
+        # key+2 when the list is empty
+        after = ktext[se.end():][sv.end():]
+        mi = re.search(r"^(\s+)- ", after, re.M)
+        ind_item = mi.group(1) if mi else key_ind + "  "
+        skeleton = " ".join(_block_field(item.get("block_text") or "", "骨架")) or "见语料块"
+        notes = " ".join(_block_field(item.get("block_text") or "", "与原骨架差异")) \
+            or (item.get("index_note") or "").replace("{NEXT}", label)
+        block = (f"{ind_item}- id: {name}\n"
+                 f"{ind_item}  skeleton: >-\n"
+                 + "".join(f"{ind_item}    {ln.strip()}\n" for ln in skeleton.split(". ") if ln.strip())
+                 + f"{ind_item}  notes: >-\n"
+                 + "".join(f"{ind_item}    {ln.strip()}\n" for ln in f"corpus {target.stem}.md {label}：{notes}".split("；") if ln.strip())
+                 + (f"{ind_item}  status: {status}\n" if status else ""))
+        ins_at = ke.end() + base + sv.end() + 1
+        # append at the END of the skeleton_variants list: next line at item indent or less
+        tail = ins_at
+        tl = text.split("\n")
+        # walk in line space for the list end
+        line_no = text[:ins_at].count("\n")
+        j = line_no
+        while j < len(tl) - 1 and (tl[j + 1].strip() == "" or tl[j + 1].startswith(ind_item) or tl[j + 1].startswith(sv.group(1) + "- ")):
+            j += 1
+        ins_at_line = j + 1
+        text = "\n".join(tl[:ins_at_line]) + "\n" + block.rstrip("\n") + "\n" + "\n".join(tl[ins_at_line:])
+        done += 1
+        msgs.append(f"[{name}] REGISTRY(results): {key}.slots.{slot}.skeleton_variants +1 (corpus {target.stem}.md {label})")
+    if done:
+        tl = text.split("\n")
+        paper_new = not any(l.strip().startswith(f"source_paper: {paper}") for l in tl)
+        n_batch = max([int(x) for x in re.findall(r"batch_(\d+)", text)] or [0]) + 1
+        bid = f"batch_{n_batch}_{paper}_writeback"
+        bh_i = next((i for i, l in enumerate(tl) if l.strip() == "batch_history:"), None)
+        if bh_i is None:
+            msgs.append("REGISTRY(results): WARN batch_history section not found — batch not recorded")
+        else:
+            list_indent = "  "
+            if bh_i + 1 < len(tl) and re.match(r"^\s*- ", tl[bh_i + 1]):
+                list_indent = re.match(r"^(\s*)- ", tl[bh_i + 1]).group(1)
+            j = bh_i + 1
+            while j < len(tl) and (tl[j].startswith(list_indent + "- ")
+                                   or tl[j].strip() == ""
+                                   or tl[j].startswith(list_indent + "  ")):
+                j += 1
+            entry_lines = [f"{list_indent}- batch_id: {bid}",
+                           f"{list_indent}  timestamp: {timestamp}",
+                           f"{list_indent}  source_paper: {paper}",
+                           f"{list_indent}  slot_updates_count: {done}",
+                           f"{list_indent}  novel_patterns_count: {done}"]
+            tl = tl[:j] + entry_lines + tl[j:]
+            text = "\n".join(tl)
+        # S6: meta counters (batches_processed / total_papers_indexed /
+        # last_batch_id / last_updated) are DERIVED or frozen-audit fields —
+        # the rebuild_apply pass owns them; the executor only appends the
+        # batch_history row above (append-only ledger, kept).
+        msgs.append(f"REGISTRY(results): batch {bid} recorded ({done} slot updates)")
+    new_text[str(registry)] = text
+    return msgs
 
 
 def add_index_row(corpus_root: Path, target: Path, note: str,
@@ -400,6 +599,79 @@ def update_index(corpus_root: Path, target: Path, note: str,
     return f"INDEX: no unique row for '{target.stem}' — edit by hand: {note}"
 
 
+def build_wb_meta(gap: str, dim: str | None = None, tbt: str | None = None,
+                  status: str | None = "EMERGING") -> str:
+    """S4 wb-meta line (format contract: references/registry-derived-views.md
+    §4): single line, separate from the wb marker, compact KV, grep-able.
+    gap is always recorded (it is not derivable from blocks); dim/tbt are
+    theory-only payload; status starts at EMERGING per the ladder."""
+    parts = [f"gap={gap}"]
+    if status:
+        parts.append(f"status={status}")
+    if dim:
+        parts.append(f"dim={dim}")
+    if tbt:
+        parts.append(f'tbt="{tbt}"')
+    return "<!-- wb-meta: " + " ".join(parts) + " -->"
+
+
+def wb_block_marker(paper: str, item: str) -> str:
+    """Block-tail provenance marker: the idempotency key for re-apply (V1/V2),
+    the join key rebuild_views scans, and the presence signal pdm_tool's audit
+    counts. Single source — never inline this format elsewhere."""
+    return f"<!-- wb:{paper}:{item} -->"
+
+
+def apply_status_addenda(registry: Path, addenda: list, new_text: dict) -> list[str]:
+    """C item (2026-09-13): append gate-① per-item user status upgrades into
+    the AUTHORED status_overrides section of the registry. Idempotent —
+    override keys already present are skipped, so replaying the same plan
+    never duplicates rows. Line-based insertion (CRLF preserved upstream by
+    the caller's new_text contract)."""
+    msgs: list[str] = []
+    text = new_text.get(str(registry)) or registry.read_text(encoding="utf-8")
+    lines = text.split("\n")
+    so_i = next((i for i, l in enumerate(lines)
+                 if l.strip() == "status_overrides:"), None)
+    if so_i is None:
+        return [f"REGISTRY(addenda): no status_overrides section in "
+                f"{registry.name} — SKIPPED (manual sync)"]
+    ov_i = next((i for i in range(so_i, len(lines))
+                 if lines[i].strip() == "overrides:"), None)
+    if ov_i is None:
+        return [f"REGISTRY(addenda): status_overrides has no overrides mapping "
+                f"in {registry.name} — SKIPPED (manual sync)"]
+    existing: set[str] = set()
+    j = ov_i + 1
+    while j < len(lines):
+        l = lines[j]
+        if l.strip() and not l.startswith("    "):
+            break                       # next 0/2-space key: mapping ended
+        m = re.match(r"    (\S[^\s:]*):\s*$", l)
+        if m:
+            existing.add(m.group(1).strip())
+        j += 1
+    ins: list[str] = []
+    for a in addenda:
+        path = str(a.get("path") or "").strip()
+        st = str(a.get("status") or "").strip()
+        basis = str(a.get("basis") or "").strip()
+        if not path or not st:
+            msgs.append(f"REGISTRY(addenda): entry missing path/status — skipped: {a}")
+            continue
+        if path in existing:
+            msgs.append(f"REGISTRY(addenda): {path} already present — skipped")
+            continue
+        qbasis = json.dumps(basis, ensure_ascii=False)
+        ins += [f"    {path}:", f"      status: {st}", f"      basis: {qbasis}"]
+        existing.add(path)
+        msgs.append(f"REGISTRY(addenda): {path} -> {st}")
+    if ins:
+        lines[j:j] = ins
+        new_text[str(registry)] = "\n".join(lines)
+    return msgs
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="Execute a confirmed writeback plan")
     ap.add_argument("--plan", required=True)
@@ -409,10 +681,32 @@ def main() -> int:
     ap.add_argument("--journal", required=True)
     ap.add_argument("--gap", default="Incompleteness",
                     choices=["Incompleteness", "Inadequacy", "Incommensurability"])
+    ap.add_argument("--paper-title", default=None,
+                    help="paper title (theory registry display_name; plan paper_meta overrides)")
+    ap.add_argument("--paper-year", default=None,
+                    help="publication year (theory registry; plan paper_meta overrides)")
+    ap.add_argument("--authors", default="",
+                    help="comma-separated author surnames — fallback policy keys "
+                         "when the citekey itself does not carry the family name")
+    ap.add_argument("--source-tier", dest="source_tier", default=None,
+                    choices=["auxiliary"],
+                    help="mark the paper auxiliary: status stays EMERGING "
+                         "(policy hard_exclusion)")
     ap.add_argument("--apply", action="store_true", help="write files (default: dry-run diffs)")
     args = ap.parse_args()
 
     plan = yaml.safe_load(Path(args.plan).read_text(encoding="utf-8"))
+    # C item: write-time policy status — ONE computation stamped in three
+    # places (wb-meta line, theory fragment mint, results variant stub).
+    # No rule firing -> EMERGING (identical to the pre-C executor). Lazy
+    # import: rebuild_views imports this module at its own load time.
+    import rebuild_views as rv
+    pol = rv.cached_policy()
+    author_keys = [args.paper] + [a.strip() for a in args.authors.split(",")
+                                  if a.strip()]
+    wstatus, wrule = rv.policy_status(author_keys, 1, pol,
+                                      auxiliary=(args.source_tier == "auxiliary"))
+    wstatus = wstatus or "EMERGING"
     if args.blocks:
         blocks_spec = yaml.safe_load(Path(args.blocks).read_text(encoding="utf-8"))
         blocks = {b["name"]: b for b in (blocks_spec.get("blocks") or [])}
@@ -427,6 +721,9 @@ def main() -> int:
     new_text: dict[str, str] = {}
     messages: list[str] = []
     rc = 0
+    applied: list = []
+    section = str(plan.get("section") or "")
+    pm = plan.get("paper_meta") or {}
     for item in plan["items"]:
         name = item["name"]
         verdict = item["dedup"]["verdict"]
@@ -454,7 +751,7 @@ def main() -> int:
                 messages.append(f"[{name}] SKIPPED: create_new_file needs module_description")
                 rc = 1
                 continue
-            marker = f"<!-- wb:{args.paper}:{name} -->"
+            marker = wb_block_marker(args.paper, name)
             if target.exists():
                 t0 = target.read_text(encoding="utf-8")
                 if marker in t0 or body_similarity_pattern(block_text).search(t0):
@@ -474,7 +771,10 @@ def main() -> int:
             body = block_text.replace("{NEXT}", label).strip("\n")
             note = (index_note or module_description).replace("{NEXT}", label)
             content = build_new_module(target, body, desc, note, template)
-            content += f"\n<!-- wb:{args.paper}:{name} -->\n"
+            content += (f"\n{wb_block_marker(args.paper, name)}\n"
+                        + build_wb_meta(args.gap, item.get("registry_dimension"),
+                                        pm.get("theory_build_type"),
+                                        status=wstatus) + "\n")
             new_text[str(target)] = content
             messages.append(f"[{name}] CREATE -> {target.name} (module scaffold, 变体 A)")
             messages.append(f"[{name}] " + add_index_row(corpus_root, target, note, new_text))
@@ -500,7 +800,7 @@ def main() -> int:
         #   1. provenance marker from a previous executor run
         #   2. an identical block body already present (pre-marker/legacy
         #      blocks; {NEXT}-aware match, same logic as the dedup repair)
-        marker = f"<!-- wb:{args.paper}:{name} -->"
+        marker = wb_block_marker(args.paper, name)
         if marker in text:
             messages.append(f"[{name}] ALREADY-APPLIED: marker present — skipped")
             continue
@@ -522,16 +822,43 @@ def main() -> int:
         at, anchor_warn = insertion_index(lines, item, target)
         if anchor_warn:
             messages.append(f"[{name}] WARN: {anchor_warn}")
-        lines[at:at] = ["", body + "\n\n" + marker, ""]
+        wb_meta = build_wb_meta(args.gap, item.get("registry_dimension"),
+                                pm.get("theory_build_type"), status=wstatus)
+        lines[at:at] = ["", body + "\n\n" + marker + "\n" + wb_meta, ""]
         new_text[path] = "\n".join(lines)
         messages.append(f"[{name}] {verdict} -> {target.name} 变体 {label} "
                         f"(inserted after line {at})")
 
         note = index_note.replace("{NEXT}", label)
         messages.append(f"[{name}] " + update_index(corpus_root, target, note, new_text))
-        if registry:
+        slot_tag = (f"M{re.match(r'm(\d+)_', name).group(1)}"
+                    if re.match(r"m(\d+)_", name) else None)
+        if registry and section not in ("theory", "results"):
+            # theory/results 的 registry 同步由节级函数接管（apply 循环后统一执行）
             messages.append(f"[{name}] " + update_registry(
-                registry, target.stem, args.paper, args.journal, args.gap, new_text))
+                registry, target.stem, args.paper, args.journal, args.gap, new_text,
+                slot_tag=slot_tag))
+        applied.append((name, target, label, item))
+
+    if registry and section == "theory":
+        messages += update_theory_registry(
+            registry, args.paper, args.journal, args.gap, applied, new_text,
+            title=args.paper_title or pm.get("title"),
+            year=str(args.paper_year or pm.get("year") or "") or None,
+            tbt=pm.get("theory_build_type"), timestamp=date.today().isoformat(),
+            status=wstatus)
+    elif registry and section == "results":
+        messages += update_results_registry(
+            registry, args.paper, applied, new_text,
+            timestamp=date.today().isoformat(), status=wstatus)
+
+    # C item: gate-① per-item user status upgrades -> AUTHORED
+    # status_overrides (idempotent: existing keys are skipped).
+    addenda = plan.get("status_overrides_addenda") or []
+    if addenda and registry:
+        messages += apply_status_addenda(registry, addenda, new_text)
+    messages.append(f"POLICY: {args.paper} -> {wstatus}"
+                    f" ({wrule or 'ladder default'})")
 
     if not args.apply:
         for path, text in new_text.items():
@@ -553,6 +880,32 @@ def main() -> int:
         except yaml.YAMLError as e:
             print(f"ERROR: registry YAML invalid after edit: {e}", file=sys.stderr)
             return 2
+    # S4 shadow double-run: the derived-view rebuilder re-derives from blocks
+    # and logs drift against the on-disk registries (READ-ONLY; the legacy
+    # counting path above stays authoritative until the S6 switch).
+    # WBTEST_SKIP_SHADOW=1 disables it inside sandbox regression runs.
+    if not os.environ.get("WBTEST_SKIP_SHADOW"):
+        try:
+            log_out = Path(args.plan).parent / "reconciliation_log.latest.yaml"
+            plan_doc = yaml.safe_load(Path(args.plan).read_text(encoding="utf-8"))
+            corpus_key = str(plan_doc.get("section") or "")
+            proc = subprocess.run(
+                [sys.executable,
+                 str(Path(__file__).resolve().parent / "rebuild_apply.py"),
+                 "--corpus", corpus_key, "--apply",
+                 "--registry", str(plan_doc.get("registry") or ""),
+                 "--corpus-root", str(plan_doc.get("corpus_root") or "")],
+                capture_output=True, text=True)
+            tail = [ln for ln in (proc.stdout or "").strip().splitlines() if ln]
+            messages.append(f"REBUILD(S6 derived views, corpus={corpus_key}): " +
+                            (tail[-1] if tail else f"exit={proc.returncode}"))
+            log_out.write_text(proc.stdout or "", encoding="utf-8")
+            messages.append(f"REBUILD(S6): log -> {log_out}")
+            if proc.returncode != 0:
+                messages.append(f"RECONCILE(shadow) WARN exit={proc.returncode}: "
+                                f"{(proc.stderr or '')[:200]}")
+        except Exception as e:  # noqa: BLE001
+            messages.append(f"RECONCILE(shadow) WARN: {e}")
     print("\n".join(messages))
     print(json.dumps({"applied": sorted(new_text)}, ensure_ascii=False, indent=2))
     return rc

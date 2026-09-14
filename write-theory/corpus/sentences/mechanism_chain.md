@@ -1785,6 +1785,7 @@ confidence: emerging
 status: needs_cross_paper_validation
 story_fidelity: section_variant
 -->
+<!-- wb:kalaignanametal2013:legacy_mechanism_chain_RhetoricalQuestion理论 -->
 
 ## After-not-before 反问开场（kalaignanam2013 型）
 
@@ -2326,6 +2327,8 @@ H[N+1]: [group B] [evaluate] [stimulus variant Y] more [positively] than [stimul
 - `corpus/subprotocols/moderator_selection_frameworks.md` — parallel_buffering_moderators_single_mechanism（Cutolo：多维刺激特征经同一 fluency 机制缓冲）
 
 ---
+<!-- wb:Falchetti_Cattani_Ferriani_2022_SMJ:legacy_mechanism_chain_机制认知适配契合加工流畅性正向评价Cog -->
+<!-- wb:Cutolo_Ferriani_2024_JOM（共享同一 fluency 机制）:legacy_mechanism_chain_机制认知适配契合加工流畅性正向评价Cog_2 -->
 
 ## What-Is-Lost：收益清单 → 结构缺失丧失态（EMERGING）
 
@@ -2379,6 +2382,7 @@ confidence: emerging
 status: needs_cross_paper_validation
 story_fidelity: section_variant
 -->
+<!-- wb:fini_jourdan_perkmann_2017_amj:legacy_mechanism_chain_WhatIsLost收益清单结构缺失丧失 -->
 
 ## 跨受众评价的双信号曲线推导（Fini et al. 型）
 
@@ -2433,6 +2437,7 @@ confidence: emerging
 status: needs_cross_paper_validation
 story_fidelity: section_variant
 -->
+<!-- wb:Ridge_Hill_Ingram_Kolomeitsev_Worrell_2024_AMJ:legacy_mechanism_chain_跨受众评价的双信号曲线推导Finieta -->
 
 ## 威胁处理级联（Threat-Processing Cascade，Ridge et al. 2024 型）
 
