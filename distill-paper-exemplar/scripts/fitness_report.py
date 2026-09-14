@@ -377,7 +377,12 @@ def sec_prune(cons: list, out: list, lows):
     out.append(f"语料 wb 变体全集 {len(markers)}；台账窗口内被消耗 "
                f"{len([k for k in markers if k in consumed])}；"
                f"从未被消耗（排除 {RECENT_DAYS} 天内新建）{len(never)}。")
-    if never:
+    if never and not cons:
+        # 冷启动保护：消耗台账为空时 never-consumed = 全部旧变体，零判别力，
+        # 只报计数不出明细——防止 441 这类数字被误读成剪裁信号。
+        out.append(f"（消耗台账尚无事件——明细表自首个消耗窗口起才有判别力，"
+                   "暂不列出）")
+    elif never:
         out.append("")
         out.append("| 文件 | 变体 | 论文(归一) | created/mtime |")
         out.append("|---|---|---|---|")
