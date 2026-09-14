@@ -54,11 +54,11 @@
 | # | 变体 | 家族 | 适用场景 | 状态 | 来源 |
 |---|---|---|---|---|---|
 | E1 | 同层调节（7 步协议） | 基础协议 | 核心贡献是识别 boundary condition、qualify 已有关系；X→Y 基线机制+moderator 理论选择+机制修改推演 | VERIFIED | Andersson et al. 2014 JIBS; Pollock 2025 Ch06 |
-| E2 | 跨层调节 (Cross-Level Moderation) — 9 步协议 | 基础协议 | focal unit 嵌套声明+跨层机制推演+排除反向交互 |  |  |
-| E3 | 嵌入型边界条件（Embedded Boundary Conditions，kalai |  | moderator 数量较多（≥3 个）且每个 moderator 有独立理论依据，独立 T |  |  |
-| E4 | 竞争基线 → 调节裁决（Competing Baseline → Moderatio |  | 同一理论框架预测了两个（或多个）相反/竞争的响应，研究贡献是用 moderator 决定"何 |  |  |
-| E5 | 曲线关系 + 多调节变量的联合论证（Cui et al. 型） |  | 理论预期 X→Y 是曲线关系（如 inverted U-shape），且多个 moderat |  |  |
-| E6 | 序列嵌套调节（Sequential Nested Moderation，Chung/ | 时间/嵌套 | 研究包含两层边界条件：第一层调节变量（W1）直接影响 X→Y 关系；第二层调节变量（W2）调 |  |  |
+| E2 | 跨层调节 (Cross-Level Moderation) — 9 步协议 | 基础协议 | focal unit 嵌套声明+跨层机制推演+排除反向交互 | structural（协议型） |  |
+| E3 | 嵌入型边界条件（Embedded Boundary Conditions，kalai |  | moderator 数量较多（≥3 个）且每个 moderator 有独立理论依据，独立 T | structural（协议型） |  |
+| E4 | 竞争基线 → 调节裁决（Competing Baseline → Moderatio |  | 同一理论框架预测了两个（或多个）相反/竞争的响应，研究贡献是用 moderator 决定"何 | structural（协议型） |  |
+| E5 | 曲线关系 + 多调节变量的联合论证（Cui et al. 型） |  | 理论预期 X→Y 是曲线关系（如 inverted U-shape），且多个 moderat | structural（协议型） |  |
+| E6 | 序列嵌套调节（Sequential Nested Moderation，Chung/ | 时间/嵌套 | 研究包含两层边界条件：第一层调节变量（W1）直接影响 X→Y 关系；第二层调节变量（W2）调 | structural（协议型） |  |
 | E7 | 宏观事件激活与持续性调节（Event-Activated Temporal Mode | 时间/嵌套 | 核心差异/身份在常态中可被压抑，但宏观事件使其显著化；理论需要解释事件前、事件冲击与事件后的 | EMERGING（单篇来源；仅作 |  |
 | E8 | 双刃剑估值机制 → 异号增强/阻碍权变（Dual-Edged Valuation → | 受众分化 | 同一制度/保护强度通过两条方向相反的信息机制作用于同一 DV（市场估值），净效应事先不定；理 | EMERGING（单篇来源；仅作 |  |
 | E9 | 双侧镜像调节（Same-Construct Mirror Moderation，De | 受众分化 | 主效应是"攻击方/施动方对受害方造成影响"，同一调节构念（威胁、机会、压力等）在攻击方侧与受 | EMERGING（单篇来源；仅作 | DesJardine, Li & Shi (2025), * |

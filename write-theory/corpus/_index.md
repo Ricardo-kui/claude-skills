@@ -15,7 +15,7 @@
 - **structural**（协议/综合/句式 voice）：非单一论文蒸馏的结构性语料（决策表、验证协议、教科书框架应用），登记在 registry 的 `unattributed_corpus` 节，**不参与** VERIFIED/ROBUST 论文计数——可直接使用，无需"单源"标注
 - `source_tier: auxiliary` 的来源（写作工艺书，如 Booth、G&L）只登记出处，不计入 VERIFIED/ROBUST 的论文计数
 
-**两步读取**（与 write-introduction 一致）：选择阶段读本索引 + `_evidence_registry.yaml`（过滤/标注模式状态）；渲染阶段才读对应 corpus 文件。`next_batch_targets` 节列出距 VERIFIED 还差几篇论文的模式——蒸馏新论文时优先命中这些目标。
+**两步读取**：加载与证据状态规则唯一陈述见 SKILL.md「Resource loading」节；本索引属选择阶段（渲染阶段才读对应 corpus 文件）。`next_batch_targets` 节列出距 VERIFIED 还差几篇论文的模式——蒸馏新论文时优先命中这些目标。
 
 ---
 

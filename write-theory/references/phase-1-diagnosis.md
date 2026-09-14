@@ -88,7 +88,7 @@ Theory & Hypotheses 在整篇论文的 Five-Act 结构中属于 **Rising Action*
 - Incompleteness → 推断为"遗漏了关键维度、机制或时点"
 - 具体推断：从 Tension 模板的 `[gap statement]` 句法签名中提取核心冲突，或从用户提供的 Gap 描述中识别转折信号词（"However"/"Yet"/"Although"/"In contrast"）后的核心主张
 
-**Incommensurability 二级诊断（仅该 gap 激活）**：读取 `incommensurability-resolution-routes.md`，先提取 L0 stable reasoning kernel，并验证 X/Y/层级/时间/estimand 可比和方向冲突真实，再定位 R1（X 分类）、R2（Y 分类）、R3（对立机制）或 R4（情境调节）。输出 `primary_route`、可选 `secondary_route`、置信度、最接近替代路线、`unclassified_residual`、`adjudicating_prediction` 与 architecture necessity。R1–R4 优先于粗粒度 Gap×Makadok 默认路由，但不自动决定 A–G、H 数量或模型形式。
+**Incommensurability 二级诊断（仅该 gap 激活）**：读取 `incommensurability-resolution-routes.md`，先提取 L0 stable reasoning kernel，并验证 X/Y/层级/时间/estimand 可比和方向冲突真实，再定位 R1（X 分类）、R2（Y 分类）、R3（对立机制）或 R4（情境调节）。输出 `primary_route`、可选 `secondary_route`、置信度、最接近替代路线、`unclassified_residual`、`adjudicating_prediction` 与 architecture necessity。R1–R4 优先于粗粒度 Gap×Makadok 默认路由；A–G/H 数量/模型形式边界唯一陈述见 `../corpus/meta/routing_table.md`。
 
 推断出的 Central Knot 只能用于 local-only 诊断，标记为 provisional；在用户确认并形成 canonical story 前，不写入 paper-state。
 

@@ -1,7 +1,7 @@
 ---
 name: write-theory
-description: "Theory & Hypotheses 写作引擎——诊断理论构建问题、选架构、生成假设骨架（7 变体：构念辨析/机制推演/假设树/过程理论/调节/竞争假设/辩证对立）。Use when 写理论或假设；触发词：写理论、写假设、机制推导、调节效应、竞争假设。Not for: 审查→theory-review；蒸馏→distill-theory-exemplar。"
-when_to_use: "起草 Theory/Hypotheses 或选择理论架构时使用；识别策略理论论证属本 skill，实现细节归 write-methods。"
+description: "诊断理论构建问题、选理论架构、生成假设骨架（7 变体：构念辨析/机制推演/假设树/过程理论/调节/竞争假设/辩证对立）。Use when 写理论、写假设。Not for: 审查→theory-review；蒸馏→distill-theory-exemplar。"
+when_to_use: "识别策略（IV/DiD/RDD）的理论论证属本 skill，实现细节归 write-methods。"
 ---
 
 # Write Theory and Hypotheses
@@ -20,15 +20,17 @@ Full Theory generation requires a valid story contract. Theory is rising action:
 
 ## Workflow
 
-1. 诊断构建类型：读 `references/phase-1-diagnosis.md` + `corpus/meta/routing_table.md`。主 Gap = Incommensurability 时先读 `references/incommensurability-resolution-routes.md`（L0 稳定推理内核 + R1–R4），再把 A–G 视为候选架构；route 不规定假设数量、编号、变量数量或模型形式，低置信时保留 L0 并报告两个候选路线。冲突定位由理论对象与预测分歧裁定；Makadok 维度只校验贡献方向。路由后查 `corpus/_index.md` 快速决策表（variant→文件名映射 + 应配 subprotocols/sentences）；推荐任何 pattern 前，查 `corpus/_evidence_registry.yaml` 的 EMERGING/VERIFIED/ROBUST 状态——EMERGING 须标注单/双源，不作默认。
+1. 诊断构建类型：读 `references/phase-1-diagnosis.md` + `corpus/meta/routing_table.md`。主 Gap = Incommensurability 时先读 `references/incommensurability-resolution-routes.md`（L0 稳定推理内核 + R1–R4），再把 A–G 视为候选架构（route 只给候选、不规定 H 数量/模型形式——边界唯一陈述见 `corpus/meta/routing_table.md`；低置信时保留 L0 并报告两个候选路线）。冲突定位由理论对象与预测分歧裁定；Makadok 维度只校验贡献方向。路由后查 `corpus/_index.md` 快速决策表（variant→文件名映射 + 应配 subprotocols/sentences）；推荐任何 pattern 前按「Resource loading」节查证据状态。
    **完成判据**：变体已选；EMERGING 已标注。
 2. 用 `references/phase-2-architecture.md` 定构念顺序、机制深度、假设结构与叙事弧。
    **完成判据**：构念顺序 + 机制深度已定。
-3. 先执行 conditionality gate（稳定无条件效应是否有理论依据？）；再按 `references/phase-3-hypothesis-derivation.md`（含 8 项语料调用清单）通过完整 why-chain 推导每个假设；只 load 所选变体 `corpus/variants/[variant_filename]` 与必要的 sentence-pattern 文件；**语料优先改编与角色填位**：语料句式为改编底本（替换来源特异性内容、填充占位；无锚点旧变体按骨架生成），段落按论证角色序列组装（先骨架后句子，语料顺序≠段落顺序）——纪律与拼贴判据见 `../story-blueprints/v4/rhetoric-moves/_argument-grammar.md` + `_polish-protocol.md` §write-*；理论段骨架实现 = `corpus/subprotocols/paragraph_layout.md` 四段位；**D 型（过程理论）必须额外加载 `corpus/subprotocols/process_transition_operators.md`**（stage-boundary 与 feedback-transport 两个结构推理算子）。
+3. 假设推导（`references/phase-3-hypothesis-derivation.md`）：
+   - 先执行 conditionality gate（稳定无条件效应是否有理论依据？），再按其语料调用清单（7 行 8 文件）通过完整 why-chain 推导每个假设；只 load 所选变体 `corpus/variants/[variant_filename]` 与必要的 sentence-pattern 文件；**D 型（过程理论）必须额外加载 `corpus/subprotocols/process_transition_operators.md`**（stage-boundary 与 feedback-transport 两个结构推理算子）。
+   - **语料优先改编与角色填位**：语料句式为改编底本（替换来源特异性内容、填充占位；无锚点旧变体按骨架生成），段落按论证角色序列组装（先骨架后句子，语料顺序≠段落顺序）——纪律与拼贴判据见 `../story-blueprints/v4/rhetoric-moves/_argument-grammar.md` + `_polish-protocol.md` §write-*；理论段骨架实现 = `corpus/subprotocols/paragraph_layout.md` 四段位。
+   - **修辞表达**：机制双链（双链汇一）、调节元框架等理论动作的句子级执行 → `../story-blueprints/v4/rhetoric-moves/_index.md`（动作自动匹配草稿修辞功能，无需用户点名；如 mechanism-two-chain / moderator-meta-framework）；润色走其 `_polish-protocol.md` 流畅性门。
    **完成判据**：每个假设有完整 why-chain + storyline_id；硬约束 #1–#16 逐条过。
-   修辞表达：机制双链（双链汇一）、调节元框架等理论动作的句子级执行 → `../story-blueprints/v4/rhetoric-moves/_index.md`（动作自动匹配草稿修辞功能，无需用户点名；如 mechanism-two-chain / moderator-meta-framework）；润色走其 `_polish-protocol.md` 流畅性门。
 4. 用 `references/phase-4-qc-alignment.md` 审计构念一致性、替代机制、假设可检验性、段落架构与跨节承诺；对每个 hypothesis/proposition 执行 argument graph（construct → premise → why-chain → boundary/level/time → prediction）：E 型 boundary state 为前置作用域节点，禁止出现 X → boundary state 的有向边；D 型逐阶段记录 current actor/action → transition condition → pre-next-stage marker → next actor/state → failed branch（细则见 `corpus/subprotocols/process_transition_operators.md`）。
-   **完成判据**：四维审计无未修复项；E/D 型 argument graph 记录完整。
+   **完成判据**：审计 1–4 无未修复项 + 4.3 对齐块已输出；E/D 型 argument graph 记录完整。
 5. 产出骨架 + storyline 链接假设 + 段落功能图 + 证据缺口 + QC 结果 + `paper-state.yaml` theory 字段；格式按 `references/output-format.md`。
    **完成判据**：输出合同全项（含 paper-state 片段、机制与条件性审计）。
 
@@ -49,7 +51,7 @@ Full Theory generation requires a valid story contract. Theory is rising action:
 - **条件先行**：机制在声明 scope 内不稳定时，条件关系为主，不为丰富模型发明 moderator。
 - **E 调节**：仅当理论化边界改变机制/暴露/能力/解释；区分 within-level 与 cross-level。
 - **F 竞争假设**：可信理论预测相反结果。
-- **G 辩证对立**：贡献依赖机制间的持续张力。
+- **G 辩证对立**：同一构念/现象对不同受众产生相反效果（方向反转，非强度差异；R3 = 对称推导对立机制，见 routing_table G 行）。
 - **Incommensurability**：先定位冲突（X→R1 / Y→R2 / 对立机制→R3 / 情境→R4）；L2 候选需必要性 warrant。
 
 ## Output contract
@@ -77,7 +79,7 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 | 13 | 图作为文字理论的辅助呈现（文字承载论证）；Literature Support 必须是 argument 总结而非 citation 罗列（审查侧：theory-review Step 2） | `corpus/sentences/mechanism_chain.md` |
 | 14 | 输出末尾自动附加 `### paper-state.yaml 片段` 块 | `corpus/meta/paper_state_fragment.md` |
 | 15 | 主效应推导前必须执行 conditionality gate；若机制只在特定条件下成立，条件关系优先，主效应仅可作为有依据的基线 | `references/phase-3-hypothesis-derivation.md` + `corpus/storytelling/post-generation-validator.md` |
-| 16 | Incommensurability 两阶段可比性门控 + L0–L3/R1–R4 标记；A–G、H 数量及模型形式均为候选而非自动输出。R3/R4 的锁定项与 U 型推出条件见所指文件 | `references/incommensurability-resolution-routes.md` |
+| 16 | Incommensurability 两阶段可比性门控 + L0–L3/R1–R4 标记；A–G/H 数量/模型形式均为候选而非自动输出（边界唯一陈述见 routing_table）。R3/R4 的锁定项与 U 型推出条件见所指文件 | `references/incommensurability-resolution-routes.md` |
 
 ## 反模式速查（生成前生效；完整版见 `corpus/_index.md` 反模式速查）
 
@@ -91,7 +93,7 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 
 ## 期刊适配
 
-用户提及目标期刊时读 `references/journal-fit.md`（影响 Phase 1 变体选择，非仅措辞——AMJ/SMJ 变体 B/E/C 主场、ASQ/OS D/G 友好、AMR 纯理论等）。
+触发：用户提及目标期刊 → 读 `references/journal-fit.md`（影响 Phase 1 变体选择，非仅措辞）。
 
 ## 措辞润色（QC 后、output 前默认执行）
 
@@ -122,4 +124,4 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 
 ## Resource loading
 
-Do not preload `corpus/`. Start with `corpus/meta/routing_table.md`; when the primary gap is Incommensurability, also load `references/incommensurability-resolution-routes.md` and `references/intake-and-story-gate.md`（paper-state present/missing/legacy-shaped 时）. Then load only the chosen variant, required construct or mechanism patterns, and the relevant storytelling/QC file. Before recommending a pattern as the default approach, check its verification status in `corpus/_evidence_registry.yaml`（EMERGING 须标注单/双源、不作默认——规则唯一陈述见 Workflow step 1）. Use sibling Introduction assets only for cross-section continuity checks.
+Do not preload `corpus/`. Start with `corpus/meta/routing_table.md`; when the primary gap is Incommensurability, also load `references/incommensurability-resolution-routes.md` and `references/intake-and-story-gate.md`（paper-state present/missing/legacy-shaped 时）. Then load only the chosen variant, required construct or mechanism patterns, and the relevant storytelling/QC file. **两步读取**：选择阶段只读索引 + registry，渲染阶段才读语料文件。**证据状态规则（唯一陈述）**：推荐任何 pattern 作默认前，查 `corpus/_evidence_registry.yaml` 验证状态——ROBUST/VERIFIED 可推荐，EMERGING 须标注单/双源、不作默认（分级定义见 `corpus/_index.md`）。Sibling Introduction assets 按本 skill 各节指针加载（措辞润色表 / phase-1 §1.4 / phase-3 QC 表），不整体预载。
