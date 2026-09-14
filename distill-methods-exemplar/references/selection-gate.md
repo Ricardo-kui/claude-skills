@@ -48,5 +48,5 @@ phase_0_75_convergent_critique_check:
 ```
 
 - **批评计数 < 2 时静默**——不输出该块，不预建机制。
-- 若本次蒸馏的骨架恰好与该模式相关：Phase 4 的 `skill_update_instructions` 应包含主骨架级修订候选（`skill_main_skeleton_update`），同样先预览后确认。
+- 若本次蒸馏的骨架恰好与该模式相关：Phase 4 的主骨架级修订候选**不写进 writeback plan**，只生成显式人工审核包，同样先预览后确认。
 - 若本次蒸馏的骨架与批评模式无关：聚合建议标记为"待后续蒸馏验证"，不强行修订。

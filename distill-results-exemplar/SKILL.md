@@ -103,7 +103,7 @@ Distill how a published Results section stages evidence—not what it found—in
 
 ## 与下游 Skill 的接口
 
-- **`write-results`** — Phase 4 `skill_update_instructions` 直接指定写入文件和插入位置
+- **`write-results`** — Phase 4 writeback plan（执行器 v2）指定锚点文件与插入位置
 - **`results-review`** — Phase 1.5 槽位覆盖 + Rhythm Map 可复用
 
 ## Context discipline

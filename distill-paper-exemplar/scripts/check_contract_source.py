@@ -53,6 +53,8 @@ HARD_TOKENS = ["block_text", "index_note", "dedup.verdict", "anchor.file",
 INVOCATION_RE = re.compile(r"(py|python)\s+\S*corpus_writeback\.py\s+--")
 CANDIDATES_TEMPLATE_RE = re.compile(r"^\s*>?\s*candidates:\s*$", re.M)
 SOFT_TOKENS = ["identity", "≤20"]
+# 退役 schema 家族（B 项核查新增）：以现行语气复现 = 形状契约残留
+RETIRED_SCHEMA_TOKENS = ["skill_update_instructions", "skill_main_skeleton_update"]
 
 
 def norm(text: str) -> str:
@@ -201,6 +203,19 @@ def scan_md_texts(texts: dict, with_candidates: bool = False) -> list:
     return out
 
 
+def check_retired_schema(tree: dict) -> list:
+    """退役 schema 家族：phase-4 文件允许 ≤1 次（退役映射注记），
+    四节 skill 树其余 md 文件 0 次——以现行语气复现即 FAIL。"""
+    out = []
+    for path, text in tree.items():
+        n = sum(text.count(tok) for tok in RETIRED_SCHEMA_TOKENS)
+        limit = 1 if path.replace("\\", "/").endswith(
+            "references/phase-4-validation-writeback.md") else 0
+        if n > limit:
+            findings_add(out, "FAIL", "C5", f"退役 schema 家族复现（{n} 次，上限 {limit}）：{path}")
+    return out
+
+
 # ---------- 组装真实输入 ----------
 
 def gather() -> int:
@@ -250,10 +265,11 @@ def gather() -> int:
             findings_add(out, "FAIL", "C5", f"phase-4 缺失：{p4_path}")
         root = PREFIX_A / skill
         for p in sorted(root.rglob("*.md")):
-            tree[str(p.relative_to(root))] = read(p)
+            tree[f"{skill}/{p.relative_to(root)}"] = read(p)
     out.extend(check_phase4_blocks(p4))
     out.extend(scan_md_texts(tree))
     out.extend(scan_md_texts({f"phase4[{s}]": t for s, t in p4.items()}, with_candidates=True))
+    out.extend(check_retired_schema(tree))
 
     # C6 源↔缓存（WARN-only）
     src_plugin = AGENTS_SRC / ".zcode-plugin" / "plugin.json"
@@ -282,16 +298,32 @@ def gather() -> int:
     return 5 if any(sev == "FAIL" for sev, _, _ in out) else 0
 
 
+def resolve_dispatch_dirs(target: Path) -> list:
+    """目录→自身；<x>.pdm.yaml→同名工作目录 <x>.pdm 优先，其父目录兜底。"""
+    if target.is_dir():
+        return [target]
+    dirs = []
+    sib = target.with_suffix("")  # <citekey>.pdm.yaml → <citekey>.pdm
+    if sib.is_dir():
+        dirs.append(sib)
+    dirs.append(target.parent)
+    return dirs
+
+
 def check_dispatch(target: Path) -> int:
     out = []
-    workdir = target if target.is_dir() else target.parent
-    dispatch = workdir / "dispatch"
-    if not dispatch.is_dir():
-        print(f"[INFO] 无 dispatch tee 目录：{dispatch}（tee 是 2026-09-14 起新纪律，旧 PDM 无属正常）")
-        return 0
-    tees = sorted(dispatch.glob("*.prompt.txt"))
+    tees = []
+    checked = []
+    for d in resolve_dispatch_dirs(target):
+        dispatch = d / "dispatch"
+        checked.append(str(dispatch))
+        if dispatch.is_dir():
+            tees = sorted(dispatch.glob("*.prompt.txt"))
+            if tees:
+                break
     if not tees:
-        print(f"[INFO] dispatch 目录存在但无 *.prompt.txt：{dispatch}")
+        print(f"[INFO] 无 dispatch tee（查过 {' ； '.join(checked)}）。"
+              f"tee 是 2026-09-14 起新纪律，旧 PDM 无属正常。")
         return 0
     for t in tees:
         text = read(t)
@@ -372,6 +404,21 @@ def selftest() -> int:
     expect("no false positive on prohibition", INVOCATION_RE.search("子代理一律不得运行 corpus_writeback.py，plan") is None)
     expect("no false positive on bare mention", INVOCATION_RE.search("调用写回执行器 `corpus_writeback.py`（先 dry-run") is None)
     expect("invocation pattern matches", INVOCATION_RE.search("python ../scripts/corpus_writeback.py --plan p") is not None)
+
+    # 8 退役 schema 家族（核查修正新增检查）：phase-4 ≤1 次放行，其余文件 0 容忍
+    skill_sk = {s: read(PREFIX_A / f"distill-{s}-exemplar" / "SKILL.md") for s in SECTIONS}
+    base_tree = {}
+    for s in SECTIONS:
+        base_tree[f"distill-{s}-exemplar/SKILL.md"] = skill_sk[s]
+        base_tree[f"distill-{s}-exemplar/references/phase-4-validation-writeback.md"] = base_p4[s]
+    expect("baseline retired schema", check_retired_schema(base_tree) == [])
+    evil_tree = dict(base_tree)
+    evil_tree["distill-methods-exemplar/SKILL.md"] += "\nskill_update_instructions 复现"
+    expect("tamper retired in SKILL.md", check_retired_schema(evil_tree) != [])
+    evil_tree2 = dict(base_tree)
+    evil_tree2["distill-theory-exemplar/references/phase-4-validation-writeback.md"] += (
+        "\nskill_main_skeleton_update\nskill_update_instructions")
+    expect("tamper retired >1 in phase4", check_retired_schema(evil_tree2) != [])
 
     print(f"SELFTEST: {'ALL GREEN' if not fails else str(len(fails)) + ' FAILED'}")
     return 0 if not fails else 5

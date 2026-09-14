@@ -104,6 +104,7 @@ DISTILLER_FILES = (
     "distill-paper-exemplar/scripts/corpus_precheck.py",
     "distill-paper-exemplar/scripts/corpus_writeback.py",
     "distill-paper-exemplar/scripts/verify_writeback.py",
+    "distill-paper-exemplar/scripts/check_contract_source.py",
     "distill-paper-exemplar/scripts/preprocess_l0.py",
     "distill-agents/agents/distill-methods.md",
     "distill-agents/agents/distill-introduction.md",

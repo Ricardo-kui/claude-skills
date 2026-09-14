@@ -79,7 +79,7 @@ Phase 4 输出的每条 `action != SKIP` 指令渲染为「待写入预览块」
 - [ ] 因果语言强度与设计类型匹配
 - [ ] 符合你的写作习惯与当前论文需要
 
-`core_candidate`、单篇证据，或任何 `skill_main_skeleton_update` 只生成显式人工审核包——同样先展示后由用户决定；不得自动修改 SKILL.md、路由、强制槽位顺序、story schema 或 stage gate。
+`core_candidate`、单篇证据或主骨架级修订只生成显式人工审核包——同样先展示后由用户决定；不得自动修改 SKILL.md、路由、强制槽位顺序、story schema 或 stage gate。
 
 ## 批评登记（critique-driven stats）
 

@@ -100,7 +100,7 @@ Distill how a published Methods section argues—not what it says—into reusabl
 
 ## 与下游 Skill 的接口
 
-- **`write-methods`** — Phase 4 `skill_update_instructions` 直接指定写入文件和插入位置
+- **`write-methods`** — Phase 4 writeback plan（执行器 v2）指定锚点文件与插入位置
 - **`methods-review`** — Phase 1.5 槽位覆盖检查可复用
 
 ## Context discipline
