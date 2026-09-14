@@ -6,11 +6,11 @@
 
 | 反模式 | 修复 |
 |--------|------|
-| **稻草人**: 把文献描绘得比实际更片面 | 用 review/meta、代表性研究和反例共同验证立场；被引量只表示影响力，不能证明共识 |
+| **稻草人**: 把文献描绘得比实际更片面 | 用 review/meta、代表性研究和反例共同验证立场；被引量表示影响力，共识由 review/meta 或代表性证据证明 |
 | **弱缺口**: "few studies have examined" 无解释 | 说明既有假设、构念边界、层次或冲突预测为何产生理论 trouble；新数据/方法只能是可研究性条件 |
 | **缺 Stakes**: Gap 后直接跳贡献 | Gap 和 Contribution 间插入 1-2 句 stakes |
 | **过度承诺**: "revolutionize""first to" | 用 "extend""refine""reconcile""clarify" |
-| **未回应显见异议** (unanswered objection): 读者对问题/框架最可预期的质疑全文无一被承认——引言读起来像写给没有其他观点的受众（Booth Ch09：论证不仅是逻辑构造，还是社会互动） | Phase 2 生成异议预判清单（quality-gates §4 Gate 4），对最强异议三选一：正文回应（标记词库借 `../write-theory/corpus/sentences/acknowledgment_response.md` §3–4）、显式 park 到后文节、诚实让步 |
+| **未回应显见异议** (unanswered objection): 读者对问题/框架最可预期的质疑全文无一被承认——引言读起来像写给没有其他观点的受众（Booth Ch09：论证不仅是逻辑构造，还是社会互动） | Phase 2 按 `references/quality-gates.md` §4 Gate 4 生成异议预判清单并逐条核销；处置选项与标记词库以 §4 为唯一源 |
 
 ## §2 长尾（intro-review Step 2 承接，16 项）
 

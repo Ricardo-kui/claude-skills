@@ -142,6 +142,7 @@ whenToUse: "Use when 用户提供整篇管理学量化论文需要全稿总控�
 - 如果 Knot 不清晰或 story contract 内部矛盾 → 优先 `paper-story-contract`
 - 如果跨 section 不一致 → 查看本 Skill 输出的"断裂识别"和"3 分钟快速测试"
 - 如果多个 section 都有问题但 Knot 清晰 → `pollock-qc all`
+- Introduction 的语言层审查路由到 `intro-review`，其字段契约见 `../write-introduction/references/pass-contract.md`；路由时一并指向该契约，语言层无契约空档。
 - 如果本次为 `--narrative` 快速诊断、需要补审稿人视角的实质弱点 → 补跑 `toc-review`
 - Discussion 路由只在已有草稿时使用 `discussion-review`，不路由到写作模板
 
@@ -166,7 +167,7 @@ whenToUse: "Use when 用户提供整篇管理学量化论文需要全稿总控�
 
 ## Constraints
 
-- 双层各司其职：叙事层诊断结构与故事；实质层（toc-review 规则）产出带证据引文的弱点记录。语言逐字润色留给下游 review skills。
+- 双层各司其职：叙事层诊断结构与故事；实质层（toc-review 规则）产出带证据引文的弱点记录。语言逐字润色留给下游 review skills；Introduction 的语言层审查由 `intro-review` 按 `../write-introduction/references/pass-contract.md` 承接（字段契约见该文件）。
 - 如果 Knot 不清晰，优先指出这一点，因为所有 section 问题都根源于此。
 - 叙事总评控制在 500 字以内；实质红队区按 toc-review 报告模板完整呈现（major 条款含辩护方回应）。
 - 路由建议必须具体到 Skill 名称和调用方式。

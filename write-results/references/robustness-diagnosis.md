@@ -49,7 +49,7 @@ robustness_plan:
     - subsampling_variation: "样本量不足以支持理论上有意义的子组分析"
 ```
 
-该计划（1）指导后续 R7 段落生成——只生成 `mandatory` 和 `recommended` 维度的段落；（2）写入 `paper-state.yaml` 的 **`methods.robustness_plan`**（唯一权威位置，见 `../../paper-state-protocol/references/schema.md` v1.3；results 节不重复登记）。
+该计划（1）指导后续 R7 段落生成——只生成 `mandatory` 和 `recommended` 维度的段落；（2）写入 `paper-state.yaml` 的 **`methods.robustness_plan`**（唯一权威位置，见 `../paper-state-protocol/references/schema.md` v1.3；results 节不重复登记）。
 
 ## 诊断触发方式
 

@@ -1,5 +1,5 @@
 # write-theory 语料库索引
-> 论证角色标注：各语料文件头部标有论证角色（Claim/Reason/Evidence/Warrant/[D]/A&R/Framing）；角色定义与段落填位规则见 `../../story-blueprints/v4/rhetoric-moves/_argument-grammar.md`；语料顺序≠段落顺序。
+> 论证角色标注：各语料文件头部标有论证角色（Claim/Reason/Evidence/Warrant/[D]/A&R/Framing）；角色定义与段落填位规则见 `../story-blueprints/v4/rhetoric-moves/_argument-grammar.md`；语料顺序≠段落顺序。
 
 本索引提供 `write-theory` skill 语料文件的快速导航和决策入口。
 

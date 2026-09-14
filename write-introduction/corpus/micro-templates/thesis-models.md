@@ -18,7 +18,7 @@ created: 2026-07-28
 > **使用规则**：
 > 1. 先选定模型（四种选一），再写 thesis 句——模型选错会导致 contribution 声明与 tension 脱节（见各模型禁忌）。
 > 2. 每个模型给出的是**关系骨架**；具体构念、机制、边界必须具体化，禁止只填骨架。
-> 3. 陈述被纠正/被修正的他人观点时，受 `../../diagnose-introduction/references/golden-biddle-locke-four-moves.md` §Outer Limits 约束——不许稻草人化。
+> 3. 陈述被纠正/被修正的他人观点时，受 `../diagnose-introduction/references/golden-biddle-locke-four-moves.md` §Outer Limits 约束——不许稻草人化。
 
 ---
 
@@ -33,7 +33,7 @@ Although many scholars have argued about [A and B], a careful examination sugges
 Although prior work often assumes that [assumption] ([citations]), we show that [C].
 ```
 
-**管理学适配**：与 `tensions/02-implicit-assumption-wrong`（they-say 侧）和 `contributions/_index.md` 变体 J（challenge implicit premise）配套——tension 负责建立"假设存在且可疑"，本模型负责在 thesis 句完成反转。注意变体 J 的适用标签是 **Incompleteness 主导 + mild Inadequacy 混合** gap（且禁忌纯 Incompleteness）：纯 Inadequacy 的纠错用本模型直接驱动，混合 gap 才配变体 J 的贡献句。Although 标记词的权重梯度见 `../../write-theory/corpus/sentences/acknowledgment_response.md` §3.1。
+**管理学适配**：与 `tensions/02-implicit-assumption-wrong`（they-say 侧）和 `contributions/_index.md` 变体 J（challenge implicit premise）配套——tension 负责建立"假设存在且可疑"，本模型负责在 thesis 句完成反转。注意变体 J 的适用标签是 **Incompleteness 主导 + mild Inadequacy 混合** gap（且禁忌纯 Incompleteness）：纯 Inadequacy 的纠错用本模型直接驱动，混合 gap 才配变体 J 的贡献句。Although 标记词的权重梯度见 `../write-theory/corpus/sentences/acknowledgment_response.md` §3.1。
 
 **禁忌**：被纠正的解读必须真实存在且可引用（Outer Limits）；纠正幅度与证据强度匹配——横截面相关数据支撑不了 "X does not cause Y" 的全称纠正。
 
@@ -70,7 +70,7 @@ we [extend / refine / limit] it by [C: new mechanism / new boundary / new scope]
 
 **结构纪律**：共同地基先行（mutual understanding），修正边界随后且**边界必须显式**——extend（加机制/加情境）/ refine（换测度/换概念精度）/ limit（收缩适用范围）三者语义不同，不可混用为笼统的 "build on"。
 
-**管理学适配**：这是顶刊 contribution 的主流站位（"extend" 是贡献声明最高频动词）。与模型 1 的选择判据：你否定的是对方的**解读**（模型 1）还是在对方**地基上加建**（模型 3）？误判的代价：该用模型 3 却用模型 1 会显得对抗性过强、制造假对立（见 `../../research-gap-diagnosis/SKILL.md` either-or 伪二元探针）。
+**管理学适配**：这是顶刊 contribution 的主流站位（"extend" 是贡献声明最高频动词）。与模型 1 的选择判据：你否定的是对方的**解读**（模型 1）还是在对方**地基上加建**（模型 3）？误判的代价：该用模型 3 却用模型 1 会显得对抗性过强、制造假对立（见 `../research-gap-diagnosis/SKILL.md` either-or 伪二元探针）。
 
 **禁忌**："agree with A and B" 必须是真实同意而非战术性客气——后文若实质推翻 A/B，本模型退化为模型 1，句法错位会被审稿人读出。
 
@@ -86,7 +86,7 @@ reveals several compelling, but competing, explanations: [A] / [B] / [C].
 We adjudicate among them by [distinctive data / design / test].
 ```
 
-**管理学适配**：这是 thesis 层的定位声明，与理论层的竞争假设结构配套——Theory 内部的双路径对称推演见 `../../write-theory/corpus/variants/F_competing_hypotheses.md`；genre 诊断（alternative hypothesis / horse race）见 `../../research-gap-diagnosis/SKILL.md` Part I genres 5 与 9。本模型只负责在 Introduction 把论文**定位**为裁决者：卖点是裁决能力（distinctive data/design），不是又一个解释。
+**管理学适配**：这是 thesis 层的定位声明，与理论层的竞争假设结构配套——Theory 内部的双路径对称推演见 `../write-theory/corpus/variants/F_competing_hypotheses.md`；genre 诊断（alternative hypothesis / horse race）见 `../research-gap-diagnosis/SKILL.md` Part I genres 5 与 9。本模型只负责在 Introduction 把论文**定位**为裁决者：卖点是裁决能力（distinctive data/design），不是又一个解释。
 
 **禁忌**：竞争解释必须势均力敌（Zuckerman: build up the null）——一个明显较弱的对手不构成 horse race；裁决承诺必须在 Methods/Results 兑现（识别策略确实能区分 A/B/C），否则退回模型 3。
 

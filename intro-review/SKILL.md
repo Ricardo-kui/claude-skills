@@ -4,7 +4,7 @@ description: 顶刊论文 Introduction 专项审查。检查 Hook、Conversation
 when_to_use: "已有 Introduction 草稿要审查（Hook/Conversation/Problematization）时使用。"
 whenToUse: "Use when 用户提供已有的管理学论文 Introduction 草稿需要专项审查，检查 Hook、文献对话、Problematization 与贡献预告并给出功能语句重写建议。Trigger words: 审查引言, 检查 introduction, intro review, 引言改写建议, 帮我看看引言, review my introduction"
 metadata:
-  version: 1.3.0
+  version: 1.4.0
 ---
 
 # Role
@@ -89,6 +89,15 @@ metadata:
 
 **反模式长尾扫描**（write-introduction 生成侧只查高频 5 项；完整清单由本审查承接）：逐条对照 `../write-introduction/references/anti-patterns.md` §2 长尾清单（贡献散弹/期刊错位/假区分/构念重命名/方向压平等 16 项），命中的追加进 QC 表并给优先级。
 
+**语言层审查（由 pass-contract 承接）**：本表的 ✓/△/✗ 结构项不含逐字风格字段；Introduction 的语言层审查按 `../write-introduction/references/pass-contract.md` 单一承接，本文件只留指针，不另定义字段。执行方式：
+
+1. 依 `pass-contract.md` 产出六字段对齐：`exemplar_fidelity`、`posture`、`defense_budget`、`meta_language` 为必填（其中 `exemplar_fidelity` 逐段列底本 id：`corpus/_skeleton/<module>.md` 的 id，或明文 `self-drafted`）；`boundary_compliance` 指回项目故事契约（`paper-state.yaml` 的 `story` 与 `story.integrity`）的锁定边界清单；`expression` 指向既有单一源（`../write-introduction/references/water-level-gate.md` §五）。
+2. 先产出这六字段，再给审查总判。
+
+两条硬规则的唯一源见 `../write-introduction/references/pass-contract.md` §二；本文件只保留调用增量：先集齐六字段再落总判；`exemplar_fidelity` 给 PASS 时同步给出非空且可定位的逐段 id 列表。
+
+选择理由：采用改法 (b)「显式声明语言层审查由 pass-contract 承接」而非改法 (a)「QC 表增列四字段」。六字段已以 `pass-contract.md` 为唯一事实源，在 QC 表复制列会形成第二份定义、并与结构评分混淆；承接式只留指针，符合单一源纪律。
+
 ### Step 3: 识别最需改写的段落
 
 指出对全文影响最大的 1 个段落及原因：
@@ -107,7 +116,7 @@ metadata:
 
 根据诊断出的 Gap 类型和 Makadok 维度，推荐最接近的 `/write-introduction` 组合模板作为改写基准。
 
-**完成判据**（快速模式）：逐段功能标签 + QC 表全行评分齐全；最需改写段落唯一且建议到句子级；推荐模板指向具体 Gap×维度组合。`--deep` 追加：六层全评分 + 六项禁忌全答 + 范文对比落实到具体论文。
+**完成判据**（快速模式）：逐段功能标签 + QC 表全行评分齐全；最需改写段落唯一且建议到句子级；推荐模板指向具体 Gap×维度组合；语言层六字段齐全（`exemplar_fidelity` / `posture` / `defense_budget` / `meta_language` / `boundary_compliance` / `expression`），缺一即判未完成。`--deep` 追加：六层全评分 + 六项禁忌全答 + 范文对比落实到具体论文。
 
 ---
 

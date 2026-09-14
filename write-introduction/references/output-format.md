@@ -4,8 +4,21 @@
 
 ## [Gap类型] × [贡献维度] Introduction 骨架
 
-### 功能序列与压缩决策
-[列出路由后的实际序列，例如：P1 Hook+Literature（主导功能=现象张力）→ P2 Tension+Stakes（主导功能=problematization）→ P3 Theory Lens → P4 Preview → P5 Contribution。说明合并/跳过理由与期刊差异。]
+### 大纲表
+> 定义与 O1–O3 见 `references/outline-protocol.md`（单一事实源）。
+
+| 段号 | 主导功能 | 承载信息 | 来源 |
+|------|---------|---------|------|
+| P1 | [ ] | [ ] | [`<blueprint-id>:<act名>` / `shape:<pack-id>` / `routing:<gap_type>` / `self-drafted`] |
+
+（段号按实际序列，不生成空的固定段号；说明合并/跳过理由与期刊差异；跳过/压缩段标 `[skipped: 理由类型]`。）
+
+### 借句表
+> 定义与 G1/G2 见 `references/generation-protocol.md`（单一事实源）；底本 id 取自 `corpus/_skeleton/<module>.md`。
+
+| 段落 | 主导功能 | 底本 id | 借用骨架 | 替换清单 | 保留节奏 |
+|------|---------|---------|---------|---------|---------|
+| P1 | [ ] | [`id`（citekey）或 `self-drafted`] | [底本原句 / 模板骨架] | [专名/行业/样本/年份/数字] | [先主张后限定 / 先对立后裁定 / 先现象后理论] |
 
 ### 前三段合同
 | 段落 | 主导功能 | 必须完成 | 失败风险 |
@@ -23,7 +36,7 @@
 
 ### 提醒
 - **必须配对**: [检查 Hook→Tension 强制配对（见 `_routing_tables.yaml` §7）；标注是否满足]
-- **能量一致性**: Hook 能量 ≤ Gap 能量 ≤ Stakes 能量？[检查并标注 "高开低走" 风险]
+- **叙事阶段推进**: [按 `corpus/storytelling/tension-escalation-protocol.md` 逐模块标注叙事阶段，并检查是否出现阶段倒退]
 - **模块跳过**: [如有模块满足跳过条件，注明理由]
 - **期刊注意**: [如用户提了目标期刊]
 - **替代变体**: [可选的其他变体]
@@ -36,15 +49,17 @@
 - **EMERGING 变体必须标注单/双源**（"单篇来源，待第二篇交叉验证"或"双源"）——不仅写 EMERGING；采用 EMERGING 时在「替代变体」栏给出 VERIFIED/ROBUST 替代或说明为何无成熟替代。
 
 ### GBL Four-Move 对齐
-| Move | 状态 | 对应段落功能 | 修复 |
-|------|------|--------------|------|
-| Significance | [pass / partial / missing] | [Hook/Stakes] | [...] |
-| Literature situation | [pass / partial / missing] | [Literature Turn] | [...] |
-| Problematization | [pass / partial / missing] | [Tension] | [...] |
-| Response foreshadow | [pass / partial / missing] | [Theory Lens/RQ/Preview/Contribution] | [...] |
+> Move 定义与对齐规则见 `references/quality-gates.md` §1（单一事实源）；本表只留骨架占位，逐运行填入。
 
-**总体状态**：[aligned / partial / incomplete]
-**优先修复**：[只列一个最重要修复]
+| Move | 状态 | 对应段落 | 修复 |
+|------|------|----------|------|
+| Significance | [ ] | [ ] | [ ] |
+| Literature situation | [ ] | [ ] | [ ] |
+| Problematization | [ ] | [ ] | [ ] |
+| Response foreshadow | [ ] | [ ] | [ ] |
+
+**总体状态**：[ ]
+**优先修复**：[ ]
 
 ## 模块跳过指南
 

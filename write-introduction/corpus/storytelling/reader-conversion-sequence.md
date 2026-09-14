@@ -60,7 +60,7 @@ Title → Abstract → Introduction 是一个**串联的读者转化系统**，�
 | **Introduction 的 Gap 比 Title 窄** | Title 暗示 broad tension，Introduction 只讨论 narrow aspect | 要么缩小 Title，要么扩大 Introduction 的 problematization |
 | **Introduction 的 Gap 比 Title 宽** | Title 很具体，Introduction 讨论泛泛 | 要么扩大 Title 的暗示，要么聚焦 Introduction |
 | **Title/Abstract/Introduction 用了不同的构念标签** | Title 用"reputation"，Abstract 用"status"，Introduction 用"celebrity" | 统一术语，选择最准确的标签 |
-| **三个组件的能量级不匹配** | Title 很激进（incommensurability），Introduction 很温和（incompleteness） | 对齐 Gap 类型和能量级 |
+| **三个组件的阶段与语气强度不匹配** | Title 很激进（incommensurability），Introduction 很温和（incompleteness） | 对齐 Gap 类型、叙事阶段与语气强度 |
 
 ## 修复动作
 
@@ -74,10 +74,10 @@ Title → Abstract → Introduction 是一个**串联的读者转化系统**，�
    - 检查 Introduction 的 Preview 是否铺垫了这些发现的方向
    - 如果没有 → 在 Preview 中增加方向性暗示
 
-3. **能量级对齐**：
-   - Title 的能量级 ≈ Hook 的能量级
-   - Abstract 的能量级 ≈ Gap 的能量级
-   - Introduction 的能量级应单调递增（Hook ≤ Lit Turn ≤ Gap ≤ Stakes ≤ Preview ≤ Contribution）
+3. **阶段与语气强度对齐**（规则源 = `corpus/storytelling/tension-escalation-protocol.md`）：
+   - Title 与 Hook 的阶段及语气强度一致——不可一激进一温和
+   - Abstract 与 Gap 的阶段及语气强度一致
+   - Introduction 按叙事阶段顺序推进，检查是否出现阶段倒退
 
 ## Title 优化指南（Ch05）
 
@@ -119,6 +119,6 @@ Pollock 建议的标题策略：
 Step 1: 从 Title 提取 central knot 关键词
 Step 2: 检查 Abstract 是否包含这些关键词
 Step 3: 检查 Introduction P1-P3 是否包含这些关键词
-Step 4: 检查三个组件的能量级是否一致
+Step 4: 检查三个组件的叙事阶段与语气强度是否一致
 Step 5: 如果不一致 → 标记具体断裂位置，给出修复建议
 ```

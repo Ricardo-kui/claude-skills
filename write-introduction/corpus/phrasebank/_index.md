@@ -16,6 +16,8 @@
 | [`methods-process.md`](methods-process.md) | **过程描述变化**（sequence words / infinitive of purpose / using+instrument / 统计程序动词） | Methods（M2-M7 过程描述） | Ch.03 Describing Methods | Methods 句子级措辞变化，防同质化 |
 | [`quantities-trends.md`](quantities-trends.md) | **数值与趋势描述**（描述统计转述 / 事件研究趋势） | Results（R1 描述统计 / R5 经济显著性 / R7 趋势） | Ch.13 Quantities + Ch.12 Trends | Results 数值转述与图形趋势描述 |
 
+> **跨节用途（跨 skill）**：`methods-process.md` 的运行时入口是 write-methods SKILL「措辞变化库」（过程描述）；`quantities-trends.md` 的运行时入口是 write-results SKILL 与 `write-results/corpus/事件研究法.md`（数值 / 趋势描述）。两文件虽物理位于 write-introduction 目录下，但服务 Methods / Results 两节，不属 write-introduction 专属。
+
 ---
 
 ## 调用规则（每次必读）
@@ -36,9 +38,9 @@ phrasebank 是 **auxiliary 措辞层**，与以下资产分工：
 | 资产 | 层级 | 职责 | 位置 |
 |------|------|------|------|
 | **顶刊 slot 骨架** | 主结构 | 决定每段说什么（hook/tension/四拍等） | 各 write skill 的 `references/slot-*.md` + `corpus/` |
-| **micro-templates** | 句法层 | 关键句位的句式变体（because 从句、漏斗节奏等） | `../../write-methods/corpus/micro-templates/` |
+| **micro-templates** | 句法层 | 关键句位的句式变体（because 从句、漏斗节奏等） | `../write-methods/corpus/micro-templates/` |
 | **phrasebank（本目录）** | 措辞层 | 同一功能的换说法 + 强度校准 | 本目录 |
 | **prose-pathology** | 病理层 | 五病诊断 + 修复（fat suit 等） | `../../../pollock-qc/references/prose-pathology.md` |
-| **hedging 判别** | 校验层 | 过度/不足声明的判别规则（§5.6/§5.7） | `../storytelling/prose-craft-checklist.md` |
+| **hedging 判别** | 校验层 | 过度/不足声明的判别规则（§6.1/§6.2） | `../storytelling/prose-craft-checklist.md` |
 
-**hedging-strength 与 prose-craft-checklist 的闭环**：hedging-strength 提供"选哪档强度短语"，prose-craft-checklist §5.6（Overclaiming）/§5.7（Defensive prose）提供"判别是否过强/过弱"。先选（hedging-strength）→ 再校验（§5.6/§5.7）。
+**hedging-strength 与 prose-craft-checklist 的闭环**：hedging-strength 提供"选哪档强度短语"，prose-craft-checklist §6.1（Overclaiming）/§6.2（Defensive prose）提供"判别是否过强/过弱"。先选（hedging-strength）→ 再校验（§6.1/§6.2）。

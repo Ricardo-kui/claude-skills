@@ -2,6 +2,8 @@
 
 > **版本状态（2026-08-11）**：`blueprints/` 的 59 份卡现为 **Legacy Evidence Layer**：不可被运行时推荐、不可定义项目故事、不可因旧覆盖标签而被视为叙事范本。其可查询元数据见 `legacy/legacy-manifest.json`，生成与发现规则见 `references/legacy-evidence-layer.md`。`v4/blueprints/` 是唯一可进入即时学习检索的经复审卡层。
 
+> **Worked examples 运行时权限（2026-09-14）**：`v4/worked-examples/` 是**管线使用示范**，`runtime_eligibility: no`——不参与运行时推荐、不定义项目故事、不进 `catalog.json`、不被 `retrieve_exemplars.py` 返回、不参与故事类型选择。
+
 > 状态：蒸馏协议归 `distill-story-exemplar`；本目录是语料库而非 skill。v0.3 的旧 `ROBUST/PARTIAL` 状态统一翻译为 `legacy_coverage_confidence: claimed_complete/claimed_partial`，仅说明旧蒸馏声称的覆盖度。它不表示叙事质量、理论正确性、因果可信度或写作可迁移性。`paper-story-contract` 已不消费本库来选择故事框架；项目故事先通过自身 integrity gate，写作 skill 才可按当次条件检索 v0.4 学习对象。
 
 ## 目的

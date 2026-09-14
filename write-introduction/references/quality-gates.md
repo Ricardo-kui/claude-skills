@@ -39,7 +39,7 @@
 **Contribution 主张质量（claim_fit 扩展，Booth Ch06）**——对核心贡献句（Contribution 模块与 Theory Lens 的 core claim）加测三项：
 - **Contestability 反命题测试**：写出贡献句的反命题，命中任一弱主张信号即不合格——纯主题宣告（反命题无意义："本研究考察 X"）、易验证事实（反命题明显为假，无人会主张）、伪争议（反命题显然为真，本无对立）。真贡献须有读者可能不信——a reasonable reader could believe otherwise。
 - **Specificity**：贡献句点名核心构念与方向/形状——构念名即论证路线图（vague claims lead to vague arguments）；"advances our understanding of X" 类无构念表达不合格。
-- **Hedge 校准**：主张逻辑强度与证据状态匹配——anti-pattern ④ 管词面夸大词，此处管逻辑强度：证据只支撑 "more likely" 时不得写 "drives"；措辞档位查 `corpus/phrasebank/hedging-strength.md`。
+- **Hedge 校准**：主张逻辑强度与证据状态匹配——anti-pattern ④ 管词面夸大词，此处管逻辑强度：主张动词随证据档位升降（证据只支撑 "more likely" 时用 may/can/is consistent with；"drives" 保留给更强的证据档位）；措辞档位查 `corpus/phrasebank/hedging-strength.md`。
 
 ## 3. 首尾句测试（JIBS）
 
@@ -67,9 +67,10 @@
 
 ## 5. 段落论证文法抽查（Gate 5，Booth Ch05 五要素）
 
-文法与拼贴判据见 `../story-blueprints/v4/rhetoric-moves/_argument-grammar.md`（先骨架后句子：语料句式按论证角色填位，风格让位于角色）。抽查对象：四个论证型模块（Tension/Stakes/Theory Lens/Contribution）各取信息量最大的一段：
-
-- **五问**：claim（段首 topic sentence 或段末收束句，细则见文法）、reason（可质疑的推理 moves）、evidence 锚点（承重 reason 各配）、warrant（需要时）、A&R（预算内）各有句位可指认；
-- **拼贴判据**逐条不命中：不承重 / 证据孤儿 / warrant 悬空 / 无主段落 / 引用列队。
+文法本体（五问及其位置细则、拼贴判据及例外、完成判据）唯一源 = `../story-blueprints/v4/rhetoric-moves/_argument-grammar.md`；本节只定义 Gate 5 的抽查动作与不合格处置。抽查对象：四个论证型模块（Tension/Stakes/Theory Lens/Contribution）各取信息量最大的一段，按唯一源的五问与拼贴判据逐条核对。
 
 不合格处置 = 按角色序列重组该段（骨架重排，语料句子保留），并列入"提醒"段。与首尾句测试（§3）的分工：§3 查跨段叙事连贯，本门查段内论证形状。
+
+## 6. 审查输出契约（与 §1–§5 并列）
+
+水位与姿态检查不重复本文件，定义在 `references/water-level-gate.md`（姿态 / 预算 / 元语言 / 底本覆盖率与重写门）；审查输出字段、举证要求与硬规则一律以 `references/pass-contract.md` 为准（六字段：`boundary_compliance` / `exemplar_fidelity` / `posture` / `defense_budget` / `meta_language` / `expression`）。质量门与水位门两层都 PASS 才算通过。

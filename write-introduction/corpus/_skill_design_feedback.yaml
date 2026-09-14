@@ -5,6 +5,9 @@ meta:
   description: Evidence ledger for design defects inferred from Introduction exemplar distillation.
 defects:
   incompleteness-embedded-opposing-claims-vs-incommensurability:
+    channel: rule
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
     classification: routing_defect
     status: EMERGING
     risk: medium
@@ -57,6 +60,10 @@ defects:
       eligibility: log_only
       reason: Evidence is insufficient for a core-skill change.
   no-theory-intro-preview-slot:
+    channel: obsolete
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    obsolete_reason: 'proposed_change 已由既有 corpus 变体覆盖或所指规则已被取代，无需再改'
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -94,6 +101,10 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   threefold-canonical-id-n-point-enumeration:
+    channel: obsolete
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    obsolete_reason: 'proposed_change 已由既有 corpus 变体覆盖或所指规则已被取代，无需再改'
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -131,6 +142,10 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   ipr-form-transferability-incompleteness-gap:
+    channel: obsolete
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    obsolete_reason: 'proposed_change 已由既有 corpus 变体覆盖或所指规则已被取代，无需再改'
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -167,6 +182,10 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   double-edged-info-asymmetry-vs-cost-benefit:
+    channel: obsolete
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    obsolete_reason: 'proposed_change 已由既有 corpus 变体覆盖或所指规则已被取代，无需再改'
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -202,6 +221,10 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   pe-dual-sale-staggered-law-identification-preview:
+    channel: obsolete
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    obsolete_reason: 'proposed_change 已由既有 corpus 变体覆盖或所指规则已被取代，无需再改'
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -238,6 +261,9 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   incompleteness-boundary-countervailing-then-contingency-sequence:
+    channel: rule
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
     classification: routing_defect
     status: EMERGING
     risk: low
@@ -284,6 +310,10 @@ defects:
       eligibility: log_only
       reason: Evidence is insufficient for a core-skill change.
   corpus-gap-setting-stakes-incompleteness:
+    channel: obsolete
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    obsolete_reason: 'proposed_change 已由既有 corpus 变体覆盖或所指规则已被取代，无需再改'
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -324,6 +354,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus_gap_crowded_literature_structural_feature_warrant:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/tensions/21-institutionalized-extreme-structural-warrant.md#变体 A：七拍正当性链（Zorn et al. 2017 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: medium
@@ -357,6 +393,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus-gap-audience-reinterpretation-contribution:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/contributions/_index.md#变体 T：受众重解读型暗面（chen2009 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -403,6 +445,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus-gap-dual-stream-sequential-incompleteness:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/literature-turns/02-synthesized-coherence.md#变体 F：策略连续统地图→双学科顺序批判→交叉沉默（chen2009 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -449,6 +497,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus-gap-1990s-classic-debate-three-paragraph-intro:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/hooks/17-debate-reframing.md#变体 A：多文献中央问题型（westphalzajac1995 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -492,6 +546,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   abv-attention-redirect-lens-missing:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/theory-lens/02-dual-theory-layered.md#变体 C：注意力重定向型（moon2026 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -530,6 +590,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-lit-synthesis-table-variant-missing:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/literature-turns/table-embedded-review.md#变体 E：综合表定位型（moon2026 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -567,6 +633,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   contribution-embedded-quantified-findings-variant-missing:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/previews/findings-preview.md#变体 S：编号贡献内嵌量化发现型（moon2026 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -604,6 +676,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   tension-functional-prerequisite-warrant-variant:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/tensions/01-despite-progress-unaddressed.md#变体 AJ：功能前提悖论型（moon2026 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -643,6 +721,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   ball2018-policy-unexamined-consequence-tension-variant:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/tensions/01-despite-progress-unaddressed.md#变体 AK：政策工具未验后果型（ball_2018 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -682,6 +766,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-tension-antecedent-only-two-part-question:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/tensions/01-despite-progress-unaddressed.md#变体 AM：前因止步+双问悬置型（westphal_zajac_1998_symbolic_management 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -720,6 +810,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-litturn-dual-stream-opposition-convergence:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/literature-turns/02-synthesized-coherence.md#变体 G：双流对置行动者偏好收敛型（westphal_zajac_1998_symbolic_management 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -757,6 +853,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-hook-converging-concern-cold-start:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/hooks/16-evolving-social-issue.md#变体 D：多受众汇流担忧型（westphal_zajac_1998_symbolic_management 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -794,6 +896,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-theorylens-agency-social-reinterpretation:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/theory-lens/01-agency-theory-standard.md#变体 C：代理问题社会重构型（westphal_zajac_1998_symbolic_management 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -833,6 +941,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-contribution-two-forms-dual-consequences:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/contributions/three-layer-contribution.md#变体 F：双形式×双后果矩阵型（westphal_zajac_1998_symbolic_management 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -870,6 +984,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus-gap-tension-paradoxical-assumptions-juxtaposition:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/tensions/14-debate-unresolved.md#变体 F：悖论假设并置型（what_changes_after_women_enter_top_manage_2020 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: medium
@@ -910,6 +1030,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus-gap-hook-metaanalytic-efficacy-pivot:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/hooks/05-literature-consensus-blindspot.md#变体 F：元分析效力枢转型（what_changes_after_women_enter_top_manage_2020 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -948,6 +1074,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus-gap-stakes-misbelief-failure-scene:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/stakes/06-two-reason-enumerated.md#变体 D：误信在场即有效型（what_changes_after_women_enter_top_manage_2020 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -986,6 +1118,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus-gap-theory-lens-resolution-opening-typology:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/theory-lens/02-dual-theory-layered.md#变体 D：解决装置开路型（what_changes_after_women_enter_top_manage_2020 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: medium
@@ -1025,6 +1163,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus-gap-preview-process-content-title-echo-temporal:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/previews/mechanism-preview.md#变体 T：过程-内容双词标题回声型（what_changes_after_women_enter_top_manage_2020 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -1065,6 +1209,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus-gap-contribution-paradox-resolution-middle-slot:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/contributions/three-layer-contribution.md#变体 G：悖论消解中槽型（what_changes_after_women_enter_top_manage_2020 型；变体字母按文件局部编号——本文件的 G≠contributions/_index.md 变体 G「三层递进型」）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -1103,6 +1253,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   rival-explanation-rebuttal-tension-variant-gap:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/tensions/11-overlooked-alternative.md#变体 C：既存解释实证反驳型（westphal_bednar2005 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: medium
@@ -1140,6 +1296,10 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   cross-discipline-construct-import-theory-lens-gap:
+    channel: obsolete
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    obsolete_reason: 'proposed_change 已由既有 corpus 变体覆盖或所指规则已被取代，无需再改'
     classification: corpus_gap
     status: EMERGING
     risk: medium
@@ -1179,6 +1339,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   quote-hook-callback-device-absent:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/hooks/02-epigraph-quote-pivot.md#变体 I：引语反讽回扣型（fang2025 型） EMERGING（1 篇范文）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -1217,6 +1383,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   three-way-sign-rq-decomposition-absent:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/research-questions/02-explicit-dual-question-narrowing.md#变体 E：三择一符号问+二阶分解递进型（fang2025 型） EMERGING（1 篇范文）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -1256,6 +1428,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   findings-as-adjudication-null-as-strategy-absence:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/previews/findings-preview.md#变体 T：三方裁决+null即策略缺位型（fang2025 型） EMERGING（1 篇范文）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -1296,6 +1474,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   checkmark-capability-positioning-matrix-absent:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/literature-turns/table-embedded-review.md#变体 F：三问勾叉定位矩阵型（fang2025 型） EMERGING（1 篇范文）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -1336,6 +1520,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   cross-event-replication-generalizability-preview-absent:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/previews/robustness-preview.md#变体 J：单句枚举+同市场跨事件复制预览型（fang2025 型） EMERGING（1 篇范文）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -1374,6 +1564,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   worked-example-pair-device-missing:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/transitions/worked-example-pair.md#变体 A：配对实例具象桥（anand_mukherjee_2024型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: medium
@@ -1414,6 +1610,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   construct-reapplication-turn-missing:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/literature-turns/table-embedded-review.md#变体 G：构念重定向应用型（anand_mukherjee_2024型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -1455,6 +1657,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus-gap-inadequacy-dominant-explanation-evidence-gap:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/tensions/02-implicit-assumption-wrong.md#变体 H：主导解释证据失衡型（carpenter_westphal_2001 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -1495,6 +1703,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus-gap-literature-turn-additive-two-role-synthesis:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/literature-turns/02-synthesized-coherence.md#变体 H：双职能并置型（carpenter_westphal_2001 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -1537,6 +1751,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus-gap-tension-gap-stack-specific-question:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/tensions/01-despite-progress-unaddressed.md#变体 AN：宽缺口+具体问句双层叠加型（carpenter_westphal_2001 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -1578,6 +1798,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   dv-as-protagonist-staging-skeleton-missing:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/storytelling/character-map.md#模式 A：DV-as-protagonist 竞争性测度 staging（zajacwestphal2004 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -1628,6 +1854,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   bridge-as-gap-cross-domain-transfer-variant:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/tensions/01-despite-progress-unaddressed.md#变体 AO：跨场域过程迁移桥接型（zajacwestphal2004 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -1679,6 +1911,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   rival-corollary-falsifiable-prediction-variant:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/tensions/02-implicit-assumption-wrong.md#变体 I：对手框架推论自证型（zajacwestphal2004 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -1729,6 +1967,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus-gap-tension-consequences-to-antecedents-relay:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/tensions/01-despite-progress-unaddressed.md#变体 AU：后果止步→前因接力型（higgins_gulati2003 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -1770,6 +2014,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus-gap-contribution-lineage-completion-second-order:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/contributions/_index.md#变体 U：谱系完成式+二阶延伸型（higgins_gulati2003 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -1811,6 +2061,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus-gap-tension-canonical-dichotomy-selective-inheritance:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/tensions/03-structural-blindspot.md#变体 D：经典二分选择性继承型（gulati_sytch2007 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -1853,6 +2109,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus-gap-hook-canonical-genealogy-cold-open:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/hooks/05-literature-consensus-blindspot.md#变体 J：经典概念谱系回溯型（gulati_sytch2007 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -1894,6 +2156,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus-gap-transition-hint-evidence-systematize:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/transitions/10-literature-to-gap.md#变体 F：暗示性证据系统化过渡型（gulati_sytch2007 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -1934,6 +2202,9 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   routing-ref-hooks05-overlooked-alternative-id-mismatch:
+    channel: rule
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
     classification: routing_defect
     status: EMERGING
     risk: low
@@ -1981,6 +2252,12 @@ defects:
       eligibility: log_only
       reason: Evidence is insufficient for a core-skill change.
   intro-hooks-missing-theoretical-premise-coldstart:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/hooks/06-paradigm-challenge.md#变体 G：理论前提—构念落地 Hook（fini2017 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -2020,6 +2297,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-stakes-missing-two-sided-benefit-risk:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/stakes/01-general-theory-practice.md#变体 H：收益—风险双面化实践 Stakes（fini2017 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -2058,6 +2341,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-litturn-missing-mechanism-coinage-variant:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/literature-turns/01-progressive-coherence.md#变体 Q：机制命名—同位定义 Lit Turn（fini2017 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -2096,6 +2385,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-preview-mirror-reprise-gap:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/previews/mechanism-preview.md#变体 V：双刃剑权变假设前置预告 + 发现段镜像复现（Castellaneta–Conti–Kacperczyk 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -2133,6 +2428,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-preview-identification-centrality-gap:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/previews/mechanism-preview.md#变体 W：内生性挑战独立段 + 识别中心性 warrant（Castellaneta–Conti–Kacperczyk 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -2171,6 +2472,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus-gap-hook-literature-stream-trisource-convergence:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/hooks/05-literature-consensus-blindspot.md#变体 H：文献流三源汇聚现象 Hook（desjardine_li_shi_2025_amj 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: medium
@@ -2210,6 +2517,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus-gap-theory-lens-dual-character-construct-setup:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/theory-lens/11-dual-character-construct-setup.md#变体 A：构念双面性装置引入型（desjardine_li_shi_2025_amj 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: medium
@@ -2250,6 +2563,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus-gap-preview-dynamic-two-state-dual-capacity:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/previews/mechanism-preview.md#变体 X：动态理论双态序列+双能力预告型（desjardine_li_shi_2025_amj 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -2288,6 +2607,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-corpus-gap-review-scope-pivot-tension:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/tensions/01-despite-progress-unaddressed.md#变体 AP：综述转向声明型（gulati1998 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -2326,6 +2651,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-corpus-gap-review-agenda-preview:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/previews/theory-lens-driven-preview.md#变体 S：综述议程组织型（gulati1998 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -2364,6 +2695,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-corpus-gap-fieldwork-lens-warrant:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/theory-lens/10-cross-discipline-construct-import.md#变体 B：田野观察奠基型（gulati1998 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -2402,6 +2739,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-tension-classic-dichotomy-half-split:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/tensions/01-despite-progress-unaddressed.md#变体 AQ：经典框架半分再分型（gulati1999 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -2442,6 +2785,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-tension-stream-credit-triple-gap:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/tensions/01-despite-progress-unaddressed.md#变体 AR：文献流致意+三缺口枚举型（gulati1999 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -2482,6 +2831,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-theorylens-macro-lens-import-verdict:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/theory-lens/10-cross-discipline-construct-import.md#变体 C：学科透镜导入+定谳桥接型（gulati1999 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -2522,6 +2877,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-preview-fieldwork-first-grounding:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/previews/mechanism-preview.md#变体 Y：田野先行奠基预告型（gulati1999 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -2561,6 +2922,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-preview-structure-action-reciprocity:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/previews/mechanism-preview.md#变体 Z：结构—行动互馈动态预告型（gulati1999 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -2601,6 +2968,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-contribution-construct-coinage-chain:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/contributions/three-layer-contribution.md#变体 J：构念创造+机制一句链型（gulati1999 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -2641,6 +3014,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   hook-theory-testbed-arena-gap:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/hooks/27-theory-testbed-arena.md#27-theory-testbed-arena — Hook 不呈现数据/悖论/反例，而是宣告某组织场域是检验某理论视角的理想试验场（ideal arena）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -2680,6 +3059,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   tension-anomaly-diagnosis-wrapper-gap:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/tensions/01-despite-progress-unaddressed.md#变体 AS：外部关切升级+实证反常双限诊断型（gulati_westphal1999 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -2718,6 +3103,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   stakes-irreversibility-gap:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/stakes/10-irreversible-commitment-stakes.md#10-irreversible-commitment-stakes — Stakes 诉诸决策不可逆性而非量化冲击'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -2756,6 +3147,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-hook-reflexive-origin-blindspot-gap:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/hooks/05-literature-consensus-blindspot.md#变体 I：解释装置反身缺口型（gulati1999networks AJS 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -2799,6 +3196,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-tension-question-decomposition-concession-gap:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/tensions/01-despite-progress-unaddressed.md#变体 AT：问题二分解有效让步型（gulati1999networks AJS 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -2843,6 +3246,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-preview-exo-endo-dual-driver-synthesis-gap:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/previews/mechanism-preview.md#变体 AB：外生+内生双驱动合成预告型（gulati1999networks AJS 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -2886,6 +3295,10 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-contribution-metatheory-duality-gap:
+    channel: obsolete
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    obsolete_reason: 'proposed_change 已由既有 corpus 变体覆盖或所指规则已被取代，无需再改'
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -2932,6 +3345,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   cross-domain-migration-legacy-format-only:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/tensions/cross-domain-migration.md#变体 A：邻近领域滞后型（gulati_higgins_2003 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -2972,6 +3391,10 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   stakes-fronted-arrangement-unrouted:
+    channel: obsolete
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    obsolete_reason: 'proposed_change 已由既有 corpus 变体覆盖或所指规则已被取代，无需再改'
     classification: routing_defect
     status: EMERGING
     risk: low
@@ -3021,6 +3444,12 @@ defects:
       eligibility: log_only
       reason: Evidence is insufficient for a core-skill change.
   intro-tension-mixed-findings-question-cascade:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/tensions/02-implicit-assumption-wrong.md#变体 J：混合发现→四问级联型（gulati_lavie_singh_2009 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -3062,6 +3491,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-contribution-premise-reversal:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/contributions/three-layer-contribution.md#变体 K：前提质疑翻案型（gulati_lavie_singh_2009 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -3103,6 +3538,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-preview-construct-pair-claim-ladder:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/previews/mechanism-preview.md#变体 AC：构念对定义+主张阶梯预告型（gulati_lavie_singh_2009 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -3143,6 +3584,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-review-genre-dualstream-litturn-gap:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/literature-turns/02-synthesized-coherence.md#变体 I：综述双流合流型（gulati_nohria_zaheer_2000 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -3185,6 +3632,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-review-genre-asymmetry-tension-gap:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/tensions/01-despite-progress-unaddressed.md#变体 AW：侧写不对称+理论推论示例型（gulati_nohria_zaheer_2000 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -3226,6 +3679,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-review-genre-proliferation-stakes-gap:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/stakes/01-general-theory-practice.md#变体 I：现象扩散+中心性重定位型（gulati_nohria_zaheer_2000 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -3268,6 +3727,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-review-genre-agenda-preview-gap:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/previews/theory-lens-driven-preview.md#变体 T：议程式枚举预览型（gulati_nohria_zaheer_2000 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -3307,6 +3772,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-review-genre-reframing-contribution-gap:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/contributions/metatheory-anchored-contribution.md#变体 B：增量-重构阶梯型（gulati_nohria_zaheer_2000 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -3348,6 +3819,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   commentary-stance-dissolution-hook-gap:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/hooks/17-debate-reframing.md#变体 B：立场宣告消解型（gulati_2007_tent_poles 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: medium
@@ -3392,6 +3869,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   tension-artificial-dichotomy-unmasking-gap:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/tensions/04-reality-contradicts-consensus.md#变体 L：定义兼容悖论消解型（gulati_2007_tent_poles 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: medium
@@ -3435,6 +3918,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   stakes-field-credibility-authority-chorus-gap:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/stakes/07-reputation-legitimacy-crisis.md#变体 E：领域权威合唱型（gulati_2007_tent_poles 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -3478,6 +3967,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus-gap-tension-deflationary-exit-preemption:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/tensions/04-reality-contradicts-consensus.md#变体 M: 同一关系正负证据 + 廉价消解双出口预先封堵型（ridge_aime_white_2013 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -3521,6 +4016,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus-gap-preview-dual-theory-domain-partition-curve:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/previews/mechanism-preview.md#变体 AD: 双理论适域划分 → 曲线裁决预告型（ridge_aime_white_2013 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -3566,6 +4067,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   corpus-gap-preview-moderators-as-assumption-tests:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/previews/mechanism-preview.md#变体 AE: 调节=核心假设实证检验预告型（ridge_aime_white_2013 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -3610,6 +4117,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-corpus-gap-identification-preview-family-thin:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/previews/mechanism-preview.md#变体 AF：第三方事件诱导处理组构造 + 事件外生性辩护型（Lu–Shen–Wang–Zhang 2022 MS 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: medium
@@ -3654,6 +4167,10 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-corpus-gap-stakes-prevalence-quantification:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    blocked_reason: 'summary 仅指向 writeback plan/候选，无可直接插入的完整变体正文；解除条件：补入变体正文或出现第二篇独立范文后人工撰写并落卡'
     classification: corpus_gap
     status: EMERGING
     risk: medium
@@ -3693,6 +4210,10 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   intro-corpus-gap-contribution-econ-dual-stream-first-mover:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    blocked_reason: 'summary 仅指向 writeback plan/候选，无可直接插入的完整变体正文；解除条件：补入变体正文或出现第二篇独立范文后人工撰写并落卡'
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -3733,6 +4254,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   formal-model-rq-triad-preview-gap:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/previews/mechanism-preview.md#变体 AG：三问驱动形式模型预览（mao_dong_lee_2022_msom 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -3770,6 +4297,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   policy-contribution-variant-gap:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/contributions/three-layer-contribution.md#变体 M：政策设计三联建议贡献段（mao_dong_lee_2022_msom 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -3807,6 +4340,12 @@ defects:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
   dual-mode-typology-hook-gap:
+    channel: corpus_variant
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+    executed_on: '2026-09-14'
+    executed_locator: 'corpus/hooks/08-consequence-cascade.md#变体 E：双模式类型学实例化 Hook（mao_dong_lee_2022_msom 型）'
+    execution_note: preexisting_verified
     classification: corpus_gap
     status: EMERGING
     risk: low
@@ -3844,3 +4383,193 @@ defects:
     auto_action:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
+  posture-godseye-recall-counts:
+    classification: generation_defect
+    status: EMERGING
+    risk: high
+    current_rule: 结果/边界句写未观察机制时用机制语气（may reflect / is consistent with / can change），不用定义式断言（are therefore）或事实语气（show）。
+    rule_excerpt: 'Annual serious recall counts are therefore governance outcomes. They show how the actors around a firm shape the occurrence of consequential defects and the willingness to make detected problems public.'
+    rule_locator: water-level-gate.md §一姿态 + generation-protocol.md §五 G4 回归 case
+    target: write-introduction/references/water-level-gate.md
+    diagnosis: 今日失败句（Introduction_0913_polished.md:24 / _deepened.md:26）以 are therefore 定义治理机制、以 They show 把观察当机制证据，属上帝视角；generation-protocol.md G4 已判姿态不合格并给出机制语气改写。
+    proposed_change:
+      action: log_and_queue
+      summary: 保留 G4 机制语气库与水位门姿态规则，将该失败句登记为 regression case（规则已存在，不新增规则）。
+    absolute_rule: false
+    decisive_falsifier: false
+    papers: []
+    paper_count: 0
+    journals: []
+    journal_count: 0
+    verified_paper_count: 0
+    verified_journals: []
+    verified_journal_count: 0
+    regression_cases:
+      positive:
+      - prompt: 写产品召回 Introduction 的结果/边界句，机制未被直接观察
+        expected_invariants:
+        - 用 may reflect / is consistent with 等机制语气，不用 are therefore / show
+        - 观察事实与机制宣称保持距离
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-14'
+    last_seen: '2026-09-14'
+    auto_action:
+      eligibility: log_only
+      reason: Rule already exists at its single source; entry records the regression case.
+    channel: rule
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+  meta-language-sign-estimand:
+    classification: generation_defect
+    status: EMERGING
+    risk: high
+    current_rule: 管理/方法元语言（the sign is the estimand）转论文语言（方向不是贡献本身；贡献是机制），除非目标期刊画像允许。
+    rule_excerpt: 'The sign is the estimand, not the contribution.'
+    rule_locator: water-level-gate.md §三元语言 row 1
+    target: write-introduction/references/water-level-gate.md
+    diagnosis: 今日失败句（Introduction_0913_polished.md:28 / _deepened.md:30）把估计量措辞写进贡献语境；water-level-gate.md §三已给出论文语言转写。
+    proposed_change:
+      action: log_and_queue
+      summary: 保留元语言转换表，将该失败句登记为 regression case。
+    absolute_rule: false
+    decisive_falsifier: false
+    papers: []
+    paper_count: 0
+    journals: []
+    journal_count: 0
+    verified_paper_count: 0
+    verified_journals: []
+    verified_journal_count: 0
+    regression_cases:
+      positive:
+      - prompt: 写 Contribution 首句，核心贡献是机制而非符号方向
+        expected_invariants:
+        - 写方向不是贡献本身、贡献是机制，不用 estimand 措辞
+        - 目标期刊元句容受为未核查时按默认转论文语言
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-14'
+    last_seen: '2026-09-14'
+    auto_action:
+      eligibility: log_only
+      reason: Rule already exists at its single source; entry records the regression case.
+    channel: rule
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+  boundary-implication-equally-bounded:
+    classification: generation_defect
+    status: EMERGING
+    risk: high
+    current_rule: 段落收尾用肯定式范围句（These boundaries are scope conditions）；防御性限定受预算上限约束。
+    rule_excerpt: 'the implication is equally bounded'
+    rule_locator: water-level-gate.md §二预算
+    target: write-introduction/references/water-level-gate.md
+    diagnosis: 今日失败句（Introduction_0913_polished.md:34 / _deepened.md:36）属防御堆叠/模糊边界收尾；water-level-gate.md §二要求肯定式范围句并给出计数上限。
+    proposed_change:
+      action: log_and_queue
+      summary: 保留预算规则，将该失败句登记为 regression case。
+    absolute_rule: false
+    decisive_falsifier: false
+    papers: []
+    paper_count: 0
+    journals: []
+    journal_count: 0
+    verified_paper_count: 0
+    verified_journals: []
+    verified_journal_count: 0
+    regression_cases:
+      positive:
+      - prompt: 写边界/限定段收尾句
+        expected_invariants:
+        - 用肯定式范围句收尾，限定计数在预算内
+        - 不出现 equally bounded 类模糊边界措辞
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-14'
+    last_seen: '2026-09-14'
+    auto_action:
+      eligibility: log_only
+      reason: Rule already exists at its single source; entry records the regression case.
+    channel: rule
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+  meta-language-adjudication-nonexclusive:
+    classification: generation_defect
+    status: EMERGING
+    risk: high
+    current_rule: adjudication/nonexclusive 类管理元语言转 supplementary evidence / diagnostic evidence，除非目标期刊画像允许。
+    rule_excerpt: 'Supplementary adjudication remains nonexclusive'
+    rule_locator: water-level-gate.md §三元语言 row 4
+    target: write-introduction/references/water-level-gate.md
+    diagnosis: 今日失败句（Introduction_0913_polished.md:32 / _deepened.md:34）把元语言泄漏进 Preview 裁决句；water-level-gate.md §三给出论文语言转写。
+    proposed_change:
+      action: log_and_queue
+      summary: 保留元语言转换表，将该失败句登记为 regression case。
+    absolute_rule: false
+    decisive_falsifier: false
+    papers: []
+    paper_count: 0
+    journals: []
+    journal_count: 0
+    verified_paper_count: 0
+    verified_journals: []
+    verified_journal_count: 0
+    regression_cases:
+      positive:
+      - prompt: 写 Preview 的裁决/证据角色句
+        expected_invariants:
+        - 用 supplementary / diagnostic evidence，不用 adjudication / nonexclusive
+        - 元语言泄漏须由目标期刊画像显式允许
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-14'
+    last_seen: '2026-09-14'
+    auto_action:
+      eligibility: log_only
+      reason: Rule already exists at its single source; entry records the regression case.
+    channel: rule
+    triaged_on: '2026-09-14'
+    triaged_by: wave8
+  generic-thesis-central-thesis:
+    classification: generation_defect
+    status: EMERGING
+    risk: high
+    current_rule: 贡献/论点句点明被转换的理论关系（Although…we…），不用第一人称占位（Our central thesis is that…）。
+    rule_excerpt: 'Our central thesis is that…'
+    rule_locator: generation-protocol.md G3 边界翻译表 + corpus/contrast-pairs/04-generic-thesis-and-contributions.md
+    target: write-introduction/references/generation-protocol.md
+    diagnosis: 今日失败句（Introduction_0913_polished.md:28 / _deepened.md:30）是第一人称占位，零理论信息，可原样放进任意论文；contrast-pairs 04 已给出对照与修复方向。
+    proposed_change:
+      action: log_and_queue
+      summary: 保留 G3 边界翻译表，将该失败句登记为 regression case（规则已存在，不新增规则）。
+    absolute_rule: false
+    decisive_falsifier: false
+    papers: []
+    paper_count: 0
+    journals: []
+    journal_count: 0
+    verified_paper_count: 0
+    verified_journals: []
+    verified_journal_count: 0
+    regression_cases:
+      positive:
+      - prompt: 写 Contribution 的 thesis/论点句
+        expected_invariants:
+        - 点明被转换的问题与最小机制链，不用 central thesis 占位
+        - 句子不能原样放进任意论文
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-14'
+    last_seen: '2026-09-14'
+    auto_action:
+      eligibility: log_only
+      reason: Rule already exists at its single source; entry records the regression case.
+    channel: rule
+    triaged_on: '2026-09-14'
+    triaged_by: wave8

@@ -2,6 +2,7 @@
 
 > **何时加载**：`pollock-qc` 执行 `--section=prose` 或 `all` 时，本文件提供 Pollock Ch04 五病、active writing、sound & cadence、25 条 dos/don'ts 的完整诊断细则。SKILL.md 的 prose 检查表只保留病名 + 一句话诊断信号 + 指向本文件的指针；本文件承载全部原文依据、错例→正例、修复动作。
 > **来源**：Pollock, T. G. (2025). *How to Use Storytelling in Your Academic Writing*. Ch04.（line-level 工艺章节）
+> **唯一源声明**：本文件是五病的定义与例证唯一源；write-introduction 与 rhetoric-moves 的操作靶点层、嵌入点层均指向此处。
 
 ---
 

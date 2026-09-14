@@ -1,0 +1,42 @@
+# Tag normalization table for scripts/retrieve_exemplars.py
+#
+# PURPOSE
+#   Reconcile request-side tags with the card-side vocabulary of v4/catalog.json.
+#   The request side and the card side sometimes spell the same structural idea
+#   with different strings (the canonical example: the request uses
+#   `cross-audience-partial-incommensurability` while card fini2017 uses
+#   `cross-audience-partial-criterion-overlap`). Without reconciliation the two
+#   sides never intersect and a structurally matching card stays unreachable.
+#
+# MECHANISM
+#   Hand-curated, auditable synonym list ONLY. At retrieval time BOTH the request
+#   tags and the card tags are passed through this table, then exact set
+#   intersection is computed on the normalized values. There is no embedding,
+#   no semantic similarity model, and no substring/prefix matching.
+#
+# STRUCTURE
+#   groups[].canonical  = the card-side tag that is the normalized form.
+#   groups[].surfaces   = every request spelling and card-side neighbor that
+#                         normalizes to `canonical`.
+#   A tag that appears in no `surfaces` list normalizes to itself (identity).
+
+version: 1
+updated: "2026-09-14"
+
+groups:
+  # Batch 1 — cross-audience valuation / partial incommensurability family.
+  # Reviewer-confirmed driver of the `writer-side-fini-request` miss:
+  # the request's tpf tag and fini2017's card tag were word-level disjoint, so
+  # fini was never evaluated at tier 1 and never considered at tier 2c.
+  - canonical: cross-audience-partial-criterion-overlap
+    rationale: >
+      Fini 型「跨受众部分标准重叠 / 部分不可通约」。请求侧写作
+      cross-audience-partial-incommensurability；卡侧 fini2017 写作
+      cross-audience-partial-criterion-overlap。近邻 cross-audience-interpretation
+      (chen2009) 与 opposed-audience-interpretations-of-one-action (gao2015)
+      同属跨受众评价家族，一并归入。
+    surfaces:
+      - cross-audience-partial-criterion-overlap          # card canonical (fini2017)
+      - cross-audience-partial-incommensurability         # request spelling (fini / cross-audience fixtures)
+      - cross-audience-interpretation                     # neighbor (chen2009; also a request tag)
+      - opposed-audience-interpretations-of-one-action    # neighbor (gao2015)

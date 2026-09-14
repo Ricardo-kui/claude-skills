@@ -6,6 +6,8 @@ when_to_use: "识别策略（IV/DiD/RDD）的理论论证属本 skill，实现�
 
 # Write Theory and Hypotheses
 
+> 路径基准：本 skill 内所有相对路径以**本 skill 目录**（SKILL.md 所在目录）为基准；引用其他 skill 用 `../<skill>/...`。
+
 Diagnose the theory-building problem, choose the correct architecture, and produce a paper-specific theory and hypothesis scaffold grounded in the bundled corpus.
 
 ## Intake

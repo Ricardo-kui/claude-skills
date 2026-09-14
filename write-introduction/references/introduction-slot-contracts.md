@@ -20,7 +20,7 @@
 | Construct source | 定义、维度或相邻构念区分 | “A differs from B because…” |
 | Context/institution | 可核查事实及其理论相关性 | “The rule changes discretion by…” |
 
-每个文献流通常选 2-4 个关键来源，但数量服从论证需要。多个引文真正支持同一命题时可以合并；必须能说明它们共同支持什么。禁止范畴断言后堆引，也禁止把理论或综述来源伪写成方向性实证发现。
+每个文献流通常选 2-4 个关键来源，但数量服从论证需要。多个引文真正支持同一命题时可以合并；必须能说明它们共同支持什么。范畴断言后接发现锚定的引文；理论或综述来源按其真实类型书写（方向性发现对应方向性实证来源）。
 
 ## Tension and Stakes
 
@@ -31,7 +31,7 @@
 | `[mechanism/condition/process]` | 可操作化的理论对象 | “the role of X” |
 | `[who suffers / what fails]` | 具体理论受众、行动者或决策后果 | 泛称 firms/managers |
 
-新数据和新方法只能解释为什么现在能够研究该问题；除非它们暴露了既有理论无法表示的现象，否则不能单独构成理论 gap。
+新数据和新方法只解释为什么现在能够研究该问题；理论 gap 来自它们暴露的既有理论无法表示的现象。
 
 ## Theory Lens, RQ, and Preview
 
@@ -53,7 +53,7 @@ Preview 负责从理论世界转入实证世界。使用 motion 句，并使因�
 | `[closest prior work]` | 最易混淆研究及其实际主张 | 假想稻草人 |
 | `[difference dimensions]` | 构念、机制、问题或理论输出的实质差异 | 只差样本、行业或年份 |
 
-Differentiation 应嵌入 Literature Turn、Tension 或 Contribution，不得放在 Contribution 之后重新开启问题。
+Differentiation 嵌入 Literature Turn、Tension 或 Contribution；在 Contribution 之后另起独立段会重新开启已收束的问题。
 
 ## Constructs Contribution: Orthogonality Check
 
@@ -61,4 +61,4 @@ Differentiation 应嵌入 Literature Turn、Tension 或 Contribution，不得放
 2. 两个构念是否由不同机制驱动？
 3. 两个构念是否产生不同结果、方向或边界预测？
 
-若三个问题均无法给出实质区别，不要把重新命名包装成构念贡献。
+若三个问题均无法给出实质区别，则放弃该构念贡献路线，改走其他贡献维度。

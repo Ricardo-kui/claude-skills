@@ -15,8 +15,9 @@ version: 1.5.0
 - §2 Showing vs Telling
 - §3 Conversational Voice
 - §4 Motion and Pacing
-- §5 Ch04 prose pathologies
-- §6 Williams clarity principles
+- §5 结构级病理诊断
+- §6 本项目扩展病理（非 Pollock Ch04）
+- §7 Williams clarity principles
 
 ## 0. Paragraph Architecture（段落架构）
 
@@ -340,9 +341,9 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 
 ---
 
-## 5. Ch04 五个病理（Pollock 2025 Ch04）
+## 5. 结构级病理诊断
 
-本层在 Ch03 Prose Craft（怎么讲）之上，增加**结构级病理诊断**（什么不该讲、什么不该这样讲）。五个病理与 Ch03 工具的关系：Ch03 提供正面规范，Ch04 提供负面排错。
+本层在 Ch03 Prose Craft（怎么讲）之上，增加**结构级病理诊断**（什么不该讲、什么不该这样讲）。五病的定义与例证唯一源 = `../pollock-qc/references/prose-pathology.md`（Pollock 2025 Ch04）；本节只保留各病的检测问题与 write-introduction / write-theory 嵌入点，修复策略与原文示例见该唯一源。
 
 ---
 
@@ -350,17 +351,14 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 
 **定义**：文章开头塞了过多背景信息，读者迟迟看不到核心问题， central knot 被淹没在铺垫中。
 
-**检测标准**：
+**检测问题**：
 - P1 的主要篇幅是否用于理解 puzzle 所不需要的历史、定义或领域背景？
 - 前三段结束时，读者能否清楚复述现象张力、学术对话和诊断性问题？
 - 约 120 词的 P1、约 350 词的前三段仅作为压缩提示；超出后结合期刊、功能密度和证据需要判断，不自动标错。
 
-**修复策略**：
-- 将背景压缩到 Lit Turn 段，P1 只保留理解 paradox 所需的最小上下文
-- 采用"倒金字塔"结构：核心问题在 P1 前 3 句出现，背景在后
-- 检测方法：删除 P1 前 3 句后的所有内容，读者是否仍能理解"问题是什么"？如果不能，说明铺垫不足；如果可以，说明铺垫可能过度
-
 **嵌入点**：write-introduction 的 Hook 槽位和 Lit Turn 槽位；write-theory 的 P1 构念定义段
+
+> 修复策略与原文示例见唯一源 `../pollock-qc/references/prose-pathology.md` 病理 1。
 
 ---
 
@@ -368,20 +366,15 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 
 **定义**：段落的核心信息被埋在中间或末尾，而非段首句。读者必须读到段中或段尾才能知道段落目的。
 
-**检测标准（满足任一即标记）**：
+**检测问题（满足任一即标记）**：
 - 最小必要背景后仍未说出核心判断、发现或 claim
 - 段首句是元评论（"本节讨论..." / "接下来我们..."）或纯过渡句，无实质信息
 - 读者只读段首句时，无法判断该段支持/反对/修正什么观点
 - topic sentence 被多句热身、文献名单或元评论推迟，读者无法及早判断本段任务
 
-**修复策略**：
-- 重写段首句为"核心判断句"：主语 + 主动动词 + 方向/发现
-- 模板："We argue that [X] [verbs] [Y] because [机制]." / "[Actor] faces a tension: [具体矛盾]."
-- 元评论和过渡信息移到段尾或删除
-- 检查：将段首句单独提取，是否仍是一个完整且有力的学术判断？
-- 如确实需要 transition-first，保持过渡最短，并在下一句给出核心判断
-
 **嵌入点**：write-introduction 所有段落；write-theory 的 Topic Sentence 与最后一个理论收敛段/假设段
+
+> 修复策略与原文示例见唯一源 `../pollock-qc/references/prose-pathology.md` 病理 2。
 
 ---
 
@@ -389,19 +382,15 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 
 **定义**：一个句子塞入过多从句、括号、修饰语，导致读者 parsing 困难。本质是作者想在一句话里说太多。
 
-**检测标准**：
+**检测问题**：
 - 一个句子是否同时承担两个以上可独立判断的 claim？
 - 从句、括号或插入语是否遮蔽主语—动作—结果骨架？
 - 读者是否必须回读才能确定修饰语指向或因果关系？
 - 30 词等长度指标只用于定位候选句，不能单独判定失败。
 
-**修复策略**：
-- 拆分为 2-3 个短句，每句一个核心判断
-- 模板：长句 → [核心句]. [修饰/例证句]. [后果句].
-- 将括号内容移到独立句子或删除
-- 优先删除：非限制性定语从句（, which...）→ 常可独立成句
-
 **嵌入点**：write-introduction 的 Stakes 和 Contribution 段；write-theory 的假设推导段与最后一个理论收敛段/假设段
+
+> 修复策略与原文示例见唯一源 `../pollock-qc/references/prose-pathology.md` 病理 3。
 
 ---
 
@@ -409,19 +398,15 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 
 **定义**：作者假设读者已经知道自己在想什么，缺少过渡和解释，造成逻辑跳跃。读者被迫"脑补"中间步骤。
 
-**检测标准（满足任一即标记）**：
+**检测问题（满足任一即标记）**：
 - 段落关系无法由语义、重复主语或必要的 transition 恢复；没有显式连接词本身不构成失败
 - 因果推理中从 A 直接跳到 C，缺少 B 的中间步骤（如从"CEO 自恋"直接到"召回延迟"，跳过"信息过滤→风险低估"）
 - 使用暗示读者已知的表述："显然" / "不难看出" / "as is well known" / " needless to say"
 - 新构念首次出现时无定义或上下文，直接用于推理
 
-**修复策略**：
-- 仅在语义关系不自明时添加 transition，避免机械地每段用连接词开头
-- why chain 中把必要转换写清；一个句子可承担多个紧密相连的动作，只要逻辑可恢复
-- 删除所有"显然"类表述，替换为具体推理
-- 新构念首次出现必须伴随定义或指向前文定义
-
 **嵌入点**：write-introduction 的 Gap→Stakes→Theory Lens 过渡；write-theory 的 why chain 和假设推导段
+
+> 修复策略与原文示例见唯一源 `../pollock-qc/references/prose-pathology.md` 病理 4。
 
 ---
 
@@ -429,35 +414,23 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 
 **定义**：使用不必要的复杂词汇、拉丁化表达、过度正式化，掩盖思想的清晰性。与 Inflated symbolism（Ch03）的区别：后者是"过度包装贡献"，前者是"过度包装日常表达"。
 
-**检测标准（满足任一即标记）**：
+**检测问题（满足任一即标记）**：
 - Nominalization（动词/形容词名词化）："the transformation of"（名词）而非 "transforms"（动词）；"the applicability of" 而非 "applies"
 - 不必要的 jargon："utilize"（用 use）、"leverage"（用 use）、"facilitate"（用 help/enable）、"ameliorate"（用 improve）
 - 过度正式化短语："in the event that"（用 if）、"due to the fact that"（用 because）、"for the purpose of"（用 to）
 - 拉丁化复杂词："commence"（用 start）、"terminate"（用 end）、"pursuant to"（用 under）
 
-**修复策略**：
-- 降级词表：将检测到的复杂词替换为简单直接词（见下表）
-- 检查每个 nominalization：能否改回动词形式并仍保持语法正确？
-- Read-aloud test：大声朗读，如果读起来像法律文件或政府公文而非学术对话 → 降级
-
-**降级词表（常见学术 nominalization / 浮夸表达 → 直接表达）**：
-
-| 浮夸表达 | 直接表达 | 检查位置 |
-|---------|---------|---------|
-| "conduct an analysis of" | "analyze" | Methods, Results |
-| "provide a description of" | "describe" | Theory, Methods |
-| "make an assumption" | "assume" | Theory |
-| "have an impact on" | "affect" | Results |
-| "give rise to" | "cause" / "produce" | Theory |
-| "is indicative of" | "indicates" | Results |
-| "in the context of" | "in" / "for" | 全文 |
-| "with respect to" | "about" / "for" | 全文 |
-
 **嵌入点**：write-introduction 的 Contribution 和 Preview；write-theory 的所有段落（尤其是构念定义和假设推导）
 
-**注意**：本病理与 Ch03 Conversational Voice（禁用 "It is argued that"）和 Inflated symbolism（禁用 "paradigm shift"）互补。Ch03 覆盖声音和修辞包装，Ch04 覆盖句法复杂度和词汇选择。
+> 修复策略、原文示例与降级词表见唯一源 `../pollock-qc/references/prose-pathology.md` 病理 5。
 
-### 5.6 Overclaiming（绝对化断言，Booth Ch6）
+---
+
+## 6. 本项目扩展病理（非 Pollock Ch04）
+
+> 本节两条病理**不属于** Pollock Ch04。其判定权归 `references/water-level-gate.md` 的姿态与防御预算字段：Overclaiming 归姿态字段，Defensive prose 归防御预算字段；条目定义保留在此供两处字段引用。
+
+### 6.1 Overclaiming（绝对化断言，Booth Ch6）
 
 **定义**：claim 的确定性超出论证所能支撑。与 Pompous prose（词汇浮夸）和 Inflated symbolism（贡献包装）互补——本病理是**确定性校准**失灵。Booth §6.3："nothing damages your ethos more than arrogant certainty."
 
@@ -482,9 +455,9 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 
 **嵌入点**：write-theory 推导段 mechanism 句（与 soundness 层 warrant 五测试之 "sufficiently limited" 联动——过不了该测试的 warrant 往往就是含绝对化词的 warrant）；write-introduction Contribution 句；phase-4 审计 1 Inflated symbolism 行联动。
 
-### 5.7 Defensive prose（防御性文风）
+### 6.2 Defensive prose（防御性文风）
 
-**定义**：通过预判反对、预先自我设限、堆叠 hedge 来"保护"论证，结果是 prose 更长、更弱、失焦。与 §5.6 是对偶两极——§5.6 管确定性**过高**（绝对化），本节管确定性**过低**与**防御姿态**；目标相同：确定性校准。
+**定义**：通过预判反对、预先自我设限、堆叠 hedge 来"保护"论证，结果是 prose 更长、更弱、失焦。与 §6.1 是对偶两极——§6.1 管确定性**过高**（绝对化），本节管确定性**过低**与**防御姿态**；目标相同：确定性校准。
 **来源**：Kiterlin/anti-defensive-writing（社区 Codex skill, MIT）原则直采 + 本库既有规则整合。验证状态：EMERGING（非学术语料，但与本库 §0.6-4 caveat-first、§3 禁用词表、soundness 防火墙 §7 交叉验证一致）。
 **与 soundness 防火墙 §7 的分工**：§7 管**协议层泄漏**（[D]/[S]/[E]、门控等诊断词汇进正文）；本节管**一般性防御措辞**（负向设限、hedge 堆叠、caveat 散射）。
 
@@ -516,7 +489,7 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 | "It is worth noting that..." / "To be clear..." | 删除（§3 已禁中文对应"值得注意的是"） |
 | 冗余 "however / nevertheless / although" 过渡堆叠 | 每段至多保留一个真实转折 |
 
-**Hedge 堆叠 → 精确化**（与 §5.6 对偶的另一极）：
+**Hedge 堆叠 → 精确化**（与 §6.1 对偶的另一极）：
 - ❌ "This may suggest that X could potentially influence Y."
 - ✅ "The evidence indicates that X influences Y in these cases."
 - 不确定性为真时，**指明来源**而非堆叠 hedge：✅ "The available evidence supports this interpretation, although the design does not estimate population-level effects."
@@ -534,13 +507,13 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 
 ---
 
-## 6. 清晰文风的 Williams 原则（Booth Ch15）
+## 7. 清晰文风的 Williams 原则（Booth Ch15）
 
-**来源**：Booth et al. 2024 Ch15（Williams 清晰风格理论的教材化）。与 §5.5 的分工：§5.5 是**词级**黑名单（逐词降级表）；本节是**句级**诊断——一句话为什么读起来 dense，以及怎么改。验证状态：句法原则通用（EMERGING，非管理学语料）。
+**来源**：Booth et al. 2024 Ch15（Williams 清晰风格理论的教材化）。与 §5.5 的分工：§5.5 是**词级**病理（逐词修复细则见唯一源 `../pollock-qc/references/prose-pathology.md` 病理 5）；本节是**句级**诊断——一句话为什么读起来 dense，以及怎么改。验证状态：句法原则通用（EMERGING，非管理学语料）。
 
 **使用时机**（Booth §15.2.1 + Quick Tip）：不用于起草——"don't try to apply these principles as you write new sentences... let them guide you when you revise"；先写后改；时间不够时从**最难解释的段落**入手（那里句子最难）；大声朗读，你磕绊处读者也磕绊（与 §3 Read-aloud Test 联动）。
 
-### 6.1 Character-Action 原则（前 6–7 词诊断）
+### 7.1 Character-Action 原则（前 6–7 词诊断）
 
 清晰句两原则：①主语命名故事的**具体角色**（short, specific, concrete）；②关键动作用**动词**表达。
 
@@ -557,7 +530,7 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 - ❌ "The hospitalization of patients without appropriate treatment results in the unreliable measurement of outcomes."
   ✅ "We cannot measure outcomes reliably when patients are hospitalized but not treated appropriately."
 
-### 6.2 Nominalization 修复三步
+### 7.2 Nominalization 修复三步
 
 名词化（-tion / -ment / -ence / -ity / -ness）的三重代价：①堆冠词介词（standardize→the standardization of）；②逼出模糊动词（made / result）；③把角色降格为修饰语（we→our，patients→of patient response）。
 
@@ -566,9 +539,9 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 2. 找动作：动作若藏在名词里，改回动词
 3. 重铸：用 "If X, then Y" / "X because Y" / "Although X, Y" / "When X, then Y" 重造分句
 
-**豁免**：并非所有抽象名词都改——§5.5 降级词表管逐词处理；本节只处理**作主语且挤占角色位**的名词化。回指前句动词的抽象名词（如 "Locke's distrust" 回指前句 "distrusted"）是合法的旧信息压缩（Booth §15.3 点评）。
+**豁免**：并非所有抽象名词都改——§5.5 的词级修复见唯一源 `../pollock-qc/references/prose-pathology.md` 病理 5；本节只处理**作主语且挤占角色位**的名词化。回指前句动词的抽象名词（如 "Locke's distrust" 回指前句 "distrusted"）是合法的旧信息压缩（Booth §15.3 点评）。
 
-### 6.3 Old-before-New 信息流（第三原则，优先级最高）
+### 7.3 Old-before-New 信息流（第三原则，优先级最高）
 
 读者跟得上故事的条件：句首 6–7 词是**旧信息**（已提及的角色/概念），新而复杂的信息放句末。
 
@@ -578,7 +551,7 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 
 **Complexity Last（句末 5–6 词诊断）**：句末是自然强调位，应放：①首次出现的技术术语；②长而复杂的信息单元；③下文要展开的概念（段落首句的末尾词应在后文重复出现）。与 §0.5 coherence 联动：句末新信息 = 下一句句首旧信息，构成信息流链条。
 
-### 6.4 被动语态豁免（对 active-voice 纪律的细化）
+### 7.4 被动语态豁免（对 active-voice 纪律的细化）
 
 不机械回避被动——Booth §15.4："Followed mechanically, that advice will make your sentences *less* clear." 正确的问题不是"主动还是被动"，而是"句首是否是旧信息/主角"。
 
@@ -596,7 +569,7 @@ PEEL 的第二个 E（Explanation）是段落逻辑紧实度的关键。它**不
 
 ## 跨 Skill 引用规则
 
-- `write-introduction`（Constraints）和 `write-theory`（Phase 1.4 + Phase 3.2 QC）引用本文件全量 §0–§6——两者均为说服体裁
+- `write-introduction`（Constraints）和 `write-theory`（Phase 1.4 + Phase 3.2 QC）引用本文件全量 §0–§7——两者均为说服体裁
 - `discussion-review` 可引用 §0.0/§0.1/§0.3/§0.6 审查用户已有 Discussion，经 `references/alignment-checks.md` 的 Paragraph Craft 节转引
 - `write-results` / `write-methods` 仅引用 §0.0（体裁分型）、§0.2（长度）、§0.5（coherence）；§0.1/§0.3/§0.6 的说服体裁规则**不适用**于其审计体裁段落；体裁专属段落 QC 在各 slot 文件内
 - `ACADEMIC_COMMUNICATION.md` 的 base voice 规则不重复，只交叉引用

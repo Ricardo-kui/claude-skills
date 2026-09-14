@@ -47,7 +47,7 @@ A compelling research question is not a visible gap waiting to be filled, but a 
 |-----------|--------|---------|----------|
 | **Key assumptions** | 问假设在哪里失效，boundary conditions 揭示什么 | 检验何时/为何限定假设成立 | 替换假设并重建理论解释 |
 | **Stylized facts** | 深化机制/范围/与其他事实的链接 | 建立边界条件，强化普遍性 | 检验初萌事实能否 robust 或应推翻 |
-| **Enduring critiques** | 避免回收已解决的批评（除非有新角度） | 围绕部分解决的批评创造共识 | 把盲点转为能重定向领域的问题 |
+| **Enduring critiques** | 仅在有新角度时回收已解决的批评；否则绕开 | 围绕部分解决的批评创造共识 | 把盲点转为能重定向领域的问题 |
 | **Substantive omissions** | 澄清遗漏是否已是 known known | 用 known unknowns 扩展/连接流 | 把 unknown unknowns 转为知识创造机会 |
 
 ### Stage IV：评估 Intrinsic Goodness

@@ -28,7 +28,7 @@ Booth §7.5.1：
 
 > "You can sometimes use even questionable evidence, *if you acknowledge its dubious quality*. In fact, if you point to evidence that seems to support your claim but then reject it as unreliable, you show yourself to be cautious, self-critical, and thus trustworthy."
 
-定量映射：代理变量有缺陷时，**主动指出并说明为何仍可用**（或用它做稳健性再否定它），比假装它完美更建可信度。与 soundness 层的"承认但不回应"处置同源——见 `../../write-theory/corpus/subprotocols/reasoning_soundness_protocol.md` §4。
+定量映射：代理变量有缺陷时，**主动指出并说明为何仍可用**（或用它做稳健性再否定它），比假装它完美更建可信度。与 soundness 层的"承认但不回应"处置同源——见 `../write-theory/corpus/subprotocols/reasoning_soundness_protocol.md` §4。
 
 ## 边界注
 
@@ -37,7 +37,7 @@ Booth §7.5.1：
 
 ## 段落论证文法接线（Booth Ch05，`_argument-grammar.md` v1.2）
 
-> 五问审计管**证据内容**，本节管**证据的段落组织**。单一事实源 = `../../story-blueprints/v4/rhetoric-moves/_argument-grammar.md`；本节只写 Results 侧的范围划定与特有拼贴信号。
+> 五问审计管**证据内容**，本节管**证据的段落组织**。单一事实源 = `../story-blueprints/v4/rhetoric-moves/_argument-grammar.md`；本节只写 Results 侧的范围划定与特有拼贴信号。
 
 - **范围划定**：解读型段落（finding claim + 系数/检验证据 + 幅度解释）是论证单元，按文法五问+拼贴自查；表格走读段（数字→表格的导航句群）为程序性报告，体裁豁免——对应 methods 侧的辩护段/程序段之分。
 - **角色映射**：finding 句=claim（段首可指认）；系数/检验统计量=证据；幅度解释（经济显著性换算、与既有效应比较）=reason 性质 move。证据不替代 move——"β=−0.12, p<0.01" 本身不构成解读（五问审计 #5：数字不 speak for themselves）。

@@ -1,0 +1,34 @@
+# citekey 覆盖表（由 scripts/build_indices.py 读取）
+#
+# 用途：段级卡「原文锚定」块的 citekey 默认由卡内最近 `**来源**` 行继承；个别
+# 条目的卡片更正注（CJK 夹注）或 frontmatter 与 `**来源**` 行不一致，且
+# `_trim_annotation` 会把夹注剪掉，导致继承错误值。覆盖表把人工复核结论持久化，
+# 保证每次再生稳定。
+#
+# 判定依据优先级：
+#   1) 卡片 frontmatter `source_papers` 或标题元数据
+#   2) 卡内 CJK 更正注
+#   3) 卡 `**来源**` 行
+# 若覆盖值与本次索引生成值（index_value）不一致，脚本保留两者并把该行标
+# `citekey_conflict`，不静默选一个。
+#
+# 字段：
+#   id             条目 id（卡片#文档内序号）
+#   index_value    脚本当前由 `**来源**` 行等生成的 citekey
+#   override_value 复核后的正确 citekey
+#   evidence       依据（含可复核位置）
+#   reviewed       复核日期
+
+overrides:
+  - id: 12-contrary-to-belief#1
+    index_value: eilert2017
+    override_value: darby2024
+    evidence: >-
+      corpus/hooks/12-contrary-to-belief.md:56 原文锚定块内 CJK 更正注写明
+      「实际原文出处：Darby et al. 2024 (MSOM) "CEO Stock Ownership, Recall
+      Timing, and Stock Market Penalties"，非 eilert2017」；同一更正注在
+      corpus/hooks/03-data-shock.md frontmatter 的 source_papers 亦有
+      darby2024 (MSOM, 2024) 佐证。优先级 3 的 `**来源**` 行
+      （corpus/hooks/12-contrary-to-belief.md:53）eilert2017 正是被剪掉更正注后
+      继承的错误值，故以优先级 2 的卡内更正注为准。
+    reviewed: 2026-09-14

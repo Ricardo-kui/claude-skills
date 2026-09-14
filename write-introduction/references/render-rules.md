@@ -9,12 +9,12 @@
 1. 🔴 **Hook→Tension 必须配对**：读 `hooks/_index.md` 的「必须配对表」，所选 Hook 必须配对兼容的 Tension（如 `22-twin-complication` 必须配 `01-despite-progress` 类田野张力）。不兼容组合 = 叙事断裂。
 2. 🟡 **禁忌互斥**：所选 Hook 不与同用的其他 Hook 冲突（如 `24-positive-trait-dark-side` 不与 `06-paradigm-challenge` 同用——前者边界反转后者范式颠覆）。
 3. 🟡 **human face / 理论驱动例外**：现象或案例型 Hook 优先含 ≥1 个具体 actor、案例或情境，不用 "many firms" 类泛称；若故事契约与目标期刊支持文献共识、经典争论或理论命题直接开场（如部分 ASQ/SMJ 论文），可不强制 human face，但必须在紧邻单元给出可观察的现实后果或判别性问题。
-4. 🔴 **能量匹配**：Hook 能量 ≤ Gap 能量（见 SKILL.md Phase 2 能量阶梯）——Incommensurability 用中-高能量开场。
+4. 🔴 **阶段匹配**：Hook ≤ Gap ≤ Stakes 三段的叙事阶段强度不倒退（高开低走 = 叙事倒退）；Incommensurability 用中-高阶段强度开场。阶段顺序与倒退检测的唯一源 = `corpus/storytelling/tension-escalation-protocol.md`。
 5. 🟡 **Booth 开头细则**：开头三式（noteworthy fact / striking quotation——须预响全文关键术语 / relevant anecdote——须框住研究问题）；四俗套禁忌（词典定义 / "Throughout history" 式宏大断言 / 名家开场 / 作业语言复述）。细则与节奏-受众信号见 `module-booth-mapping.md` §Hook（Booth Ch14 §14.5–14.6）。
 
 ## Tension
 
-1. 🔴 **gap 必须解释"为什么现有解释会系统性漏掉/误置它"**——"few studies have examined" 无解释 = 反模式。新数据或新方法只能说明为何现在可研究，不能单独构成理论 gap；必须落到既有假设、构念边界、分析层次、相互冲突的预测或新情境对理论条件的破坏。
+1. 🔴 **gap 必须解释"为什么现有解释会系统性漏掉/误置它"**——"few studies have examined" 无解释 = 反模式。新数据或新方法只说明为何现在可研究；理论 gap 落到既有假设、构念边界、分析层次、相互冲突的预测或新情境对理论条件的破坏。
 2. 🔴 **被遗漏的东西必须用可操作化构念命名**——"the role of X" 模糊表达不合格；要落到具体机制/条件/过程。
 3. 🟡 **theoretical consequence 必须具体**——"limits our understanding" 是废话；要落到某理论的预测能力/边界条件受何影响。
 4. 🟡 **反直觉 gap 需要充分支撑**——若 gap 声明反直觉（"surprisingly"），用足以排除最直接替代解释的独立理由和匹配证据建立可信度；理由数量由争议程度决定，不把单篇范文的理由数设成配额。
@@ -38,9 +38,9 @@
 2. 🔴 **≥2 引文的句子说明各引文共同或分别支持什么**——"X has been widely studied (A; B; C; D)" 是堆叠而非综合；真正支持同一共识时可合并，但须由 review/meta 或代表性证据证明该共识。
 3. 🟡 **多文献流必须均衡呈现**——Synthesized/Non-Coherence 策略有 2+ 文献流时，每流都要有实质发现展示，第二流也要有内容（"some studies in other fields have also examined..."是稻草人信号）。
 4. 🟡 **用文献流的张力/共识/分歧驱动叙事**——显化两流的关系（although / however / while A emphasizes X, B focuses on Y / these perspectives offer incompatible predictions）。
-5. 🟡 **引文来源优先用 Phase 1.5 Vault Brief 的推荐引文**（含发现方向），不凭空编造。每条文献流用足以证明其核心命题、边界或分歧的代表性证据；review/meta 仅在确实承担共识或异质性判断时优先，不设固定篇数或来源类型配额。
+5. 🟡 **引文来源优先用 Phase 1.5 Vault Brief 的推荐引文**（含发现方向）。每条文献流用足以证明其核心命题、边界或分歧的代表性证据；review/meta 仅在确实承担共识或异质性判断时优先，不设固定篇数或来源类型配额。
 6. 🟡 **标签用文献流自己的术语**——"the corporate political strategy literature"若文献数据库搜不到 = 读者无法定位你在和谁对话。
-7. 🟡 **Literature 是 constructed 而非 received**（GBL Ch02 Move 2）——"文献"没有预置仓库，是主动 select & shape 为贡献腾出空间（"configure the available pieces of a jigsaw puzzle so they contour an opening into which your storyline fits"）。Synthesized 要 "rewrite each literature to highlight commonality"、Non-coherence 要 "position camps against each other"——不是中立综述，是为贡献**重新组织**文献。纪律：有灵活性但 within outer limits——不能歪曲文献立场、不能像稻草人把文献描绘得比实际更片面；rewriting 是合法的学术建构，misrepresentation 不是。
+7. 🟡 **Literature 是 constructed 而非 received**（GBL Ch02 Move 2）——"文献"没有预置仓库，是主动 select & shape 为贡献腾出空间（"configure the available pieces of a jigsaw puzzle so they contour an opening into which your storyline fits"）。Synthesized 要 "rewrite each literature to highlight commonality"、Non-coherence 要 "position camps against each other"——不是中立综述，是为贡献**重新组织**文献。纪律：有灵活性但 within outer limits——改写须在文献立场的外边界内（fair representation：保留原文献的立场与不确定性，避免稻草人式片面化）；rewriting 是合法的学术建构，misrepresentation 不是。
 8. 🟡 **区分 Literature 1 与 Literature 2**（Shepherd & Wiklund 2020）——Literature 1 = 提供 gap 的本领域文献；Literature 2 = 提供填补 gap 的理论资源（借用的理论）。两者都要在引言可见：Literature Turn 展示从 Lit 2 借了什么，Contribution 说明回馈 Lit 2 什么。只借不回馈 = 拒稿信号。
 
 ## Theory Lens
@@ -48,7 +48,7 @@
 1. 🔴 **必须直接回应 Tension 的 gap**——引入的理论要能解释 Tension 指出的缺口（关键词重叠测试：Tension 的 gap 关键词与 Theory Lens 的理论核心词应有交集）。引入与 gap 无关的理论 = 反模式。
 2. 🟡 **core claim 含方向性预测**——"We argue that X affects Y through [mechanism]"，不用 "we examine the role of X" 无方向表达。
 3. 🟡 **与 Preview 一致 + 与 Theory 章节一致**——Theory Lens 预告的理论来源与 Preview 的研究设计、write-theory 实际发展的理论一致（不串戏）。
-4. 🟡 **避免理论堆砌**——3+ 理论各担 1 句 = 反模式；多理论时说明整合机制而非并列。
+4. 🟡 **多理论时说明整合机制**（3+ 理论各担 1 句 = 理论堆砌反模式）。
 
 ## Preview
 
@@ -81,13 +81,11 @@
 ## 变体选择
 
 - 按适用场景、证据状态、研究情境和期刊选**一个主推变体**（不默认变体 A）；仅当两个方案会实质改变故事路径时，额外给 **1 个**备选及切换条件——不为每个模块机械输出两个备选。
-- 优先级：corpus 文件的变体级约束（适用场景/范文锚定）> 用户研究情境匹配 > 路由表的模板级推荐。项目故事的具体组织只能由 canonical `story` 与 `story.integrity` 的已确认内容收窄；不得由故事类型、legacy blueprint 或 exemplar 身份调制。
+- 优先级：corpus 文件的变体级约束（适用场景/范文锚定）> 用户研究情境匹配 > 路由表的模板级推荐。项目故事的具体组织取自 canonical `story` 与 `story.integrity` 的已确认内容；故事类型、legacy blueprint 与 exemplar 身份留在证据/参考层。
 
 ## 段落论证文法（argument unit——先骨架后句子）
 
 > 文法本体（五问、语料角色索引、拼贴判据、完成判据）见 `../story-blueprints/v4/rhetoric-moves/_argument-grammar.md`（单一事实源）；本节只写 Introduction 侧的角色接线。
 
 1. 🔴 **模块→论证角色映射**：Contribution=claim；Tension=problem claim + reason（为什么现有理解会 trouble）；Stakes=consequence 证据（代价锚点）；Literature Turn=conversation evidence（发现锚定）；Theory Lens=**warrant**（把 puzzle 连到预测的一般性理论原则——它是引言中心论证的授权环节，不是背景装饰）；Hook/Preview/Transitions=framing（豁免五问，但 Hook 的核心判断句仍是 claim 性质）。模块映射是生成期取句先验；Gate 5 按段落**实际论证功能**判豁免（文法判据优先，如无立场的两派综述段虽处 Literature Turn 位置仍属 framing）。
-2. 🔴 **先骨架后句子**：渲染每个论证型模块前先写出该段角色序列，再从对应 corpus 文件按角色取句填位；语料句式只提供表达，不提供顺序（**语料优先改编**服从本条）。
-3. 🟡 **拼贴自查**：五问逐条指认句位；命中 `_argument-grammar.md` 任一拼贴判据（证据孤儿 / warrant 悬空 / 引用列队等）即按角色序列重组——句子保留，骨架重排。
-4. **完成判据**：四个论证型模块五问全部可指认；framing 模块已标注豁免。
+2. 🔴 **先骨架后句子 / 拼贴自查 / 完成判据**：按唯一源的对应条执行（渲染前先写该段角色序列，再从 corpus 按角色取句填位；拼贴命中即按角色序列重组，句子保留、骨架重排；四个论证型模块五问全部可指认，framing 模块标注豁免）。

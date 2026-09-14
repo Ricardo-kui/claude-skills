@@ -4,7 +4,7 @@
 
 ## 首尾句测试（JIBS）
 
-只读每段首尾句——能否传达核心故事？四段首句连起来是否构成连贯叙事？不合格 = editor 在 2 分钟内判定 story diffuse，倾向 desk reject。
+测试定义与判据唯一源 = `references/quality-gates.md` §3；本清单只登记其作为 desk-reject 信号的触发面。
 
 ## 3 种伪 genre（Zuckerman 硬拒信号——"phenomenon must cause trouble for at least some relevant theory"）
 

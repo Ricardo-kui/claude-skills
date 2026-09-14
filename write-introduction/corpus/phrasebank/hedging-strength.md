@@ -14,11 +14,11 @@ created: 2026-08-01
 
 > **层级定位**：auxiliary 语言实现层。顶刊蒸馏模板与 `write-*` slot 骨架决定**说什么**；本文件在 Discussion 段解释非显著结果、外推 generalizability、提出未来研究，或 Theory 段推导假设时，提供**按认识论强度分级的短语选择库**。
 >
-> **填补的空白**：现有 skills 有 `prose-craft-checklist.md` §5.6 Overclaiming（管确定性过高）和 §5.7 Defensive prose（管确定性过低）——但那是**改稿判别规则**。本文件是**写作时的强度选择梯子**，与判别规则互补：先按本文件选合适强度的短语，再用 §5.6/§5.7 校验是否过强/过弱。
+> **填补的空白**：现有 skills 有 `prose-craft-checklist.md` §6.1 Overclaiming（管确定性过高）和 §6.2 Defensive prose（管确定性过低）——但那是**改稿判别规则**。本文件是**写作时的强度选择梯子**，与判别规则互补：先按本文件选合适强度的短语，再用 §6.1/§6.2 校验是否过强/过弱。
 >
 > **使用规则**（每次调用必读）：
-> 1. **调用顺序**：确定 claim 与证据 → 判断该用哪档强度 → 本文件取短语 → 语境化改写 → 用 §5.6/§5.7 + `causal-hedging.md` 校验。
-> 2. 每个位置最多取 **2–3 个候选**；同一段落不连续堆叠两个以上 hedge（否则触发 §5.7 defensive prose）。
+> 1. **调用顺序**：确定 claim 与证据 → 判断该用哪档强度 → 本文件取短语 → 语境化改写 → 用 §6.1/§6.2 + `causal-hedging.md` 校验。
+> 2. 每个位置最多取 **2–3 个候选**；同一段落不连续堆叠两个以上 hedge（否则触发 §6.2 defensive prose）。
 > 3. **必须替换占位符**并具体化（构念、机制、数据）。
 > 4. **Specificity gate**：替换后的句子若可不加修改放进任何论文 → 不合格。
 > 5. **因果上限**：涉及因果的 hedge 同时受 `write-methods/corpus/micro-templates/causal-hedging.md` 设计家族词汇表约束——强度档位不得突破设计允许的因果语言上限。
@@ -41,7 +41,7 @@ Morley 的核心价值是把 hedge 按认识论强度（strength of knowledge）
 | 强（很可能） | **is almost certain to / it is almost certain that** | 强证据 + 稳健性检验一致，但保留统计不确定 |
 | 确定（少用） | **is / does / shows**（无 hedge） | 仅限 Results 已证实的主效应直接报告；Discussion 外推禁用 |
 
-**选档原则**：Discussion 解释机制 → 极弱/弱档；Theory 假设推导 → 弱档（方向性非确定性）；Results 主效应 → 无 hedge（直接报告）。**禁忌**：Discussion 用无 hedge 的确定句外推 = 越级（触发 §5.6）；Results 主效应用 may/might = 不当弱化（稀释贡献）。
+**选档原则**：Discussion 解释机制 → 极弱/弱档；Theory 假设推导 → 弱档（方向性非确定性）；Results 主效应 → 无 hedge（直接报告）。**禁忌**：Discussion 用无 hedge 的确定句外推 = 越级（触发 §6.1）；Results 主效应用 may/might = 不当弱化（稀释贡献）。
 
 ### 认识论句式强度梯（"It..."结构）
 
@@ -84,18 +84,18 @@ Morley 的核心价值是把 hedge 按认识论强度（strength of knowledge）
 ## 与现有 hedging 判别规则的关系（重要）
 
 本文件提供**短语选择**，不提供**判别标准**。判别见：
-- **§5.6 Overclaiming**（`prose-craft-checklist.md`）：检测绝对化词（all/never/always/prove）——若你的 hedge 选了"确定"档但证据只支持"弱"档，§5.6 会标记。
-- **§5.7 Defensive prose**：检测 hedge 堆叠（may possibly might / it could perhaps be）——若你连叠多个极弱档，§5.7 会标记防御姿态。
+- **§6.1 Overclaiming**（`prose-craft-checklist.md`）：检测绝对化词（all/never/always/prove）——若你的 hedge 选了"确定"档但证据只支持"弱"档，§6.1 会标记。
+- **§6.2 Defensive prose**：检测 hedge 堆叠（may possibly might / it could perhaps be）——若你连叠多个极弱档，§6.2 会标记防御姿态。
 - **`causal-hedging.md`**：因果动词的设计家族上限——即使 Discussion 用弱档 hedge，因果动词仍受设计约束（OLS 不能用 "cause"，即使 hedged 为 "may cause"）。
 
-**闭环**：选短语（本文件）→ 校验强度匹配（§5.6）→ 校验未过度堆叠（§5.7）→ 校验因果动词未越级（causal-hedging）。
+**闭环**：选短语（本文件）→ 校验强度匹配（§6.1）→ 校验未过度堆叠（§6.2）→ 校验因果动词未越级（causal-hedging）。
 
 ---
 
 ## 反模式
 
-- **Discussion 用无 hedge 确定句外推**（"This shows that X causes Y in all contexts"）——越级，触发 §5.6。
+- **Discussion 用无 hedge 确定句外推**（"This shows that X causes Y in all contexts"）——越级，触发 §6.1。
 - **Results 主效应用 may/might**（"X may be negatively associated with Y, p<0.01"）——不当弱化已证实结果。
-- **连叠 hedge**（"It might possibly perhaps suggest..."）——触发 §5.7 defensive prose。
+- **连叠 hedge**（"It might possibly perhaps suggest..."）——触发 §6.2 defensive prose。
 - **所有解释都收敛到单一机制**——Discussion 应列多可能解释（本文件"多解释并列"），避免 cherry-pick 有利解释。
 - **用 hedging 掩盖设计缺陷**——hedge 不能替代稳健性检验；若某威胁严重，应做检验而非用 "may be due to" 推给未来。

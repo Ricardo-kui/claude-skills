@@ -162,7 +162,7 @@ for paragraph in actual_paragraphs:
 
 ### Four Moves
 
-检查 Significance、Literature situation、Problematization、Response foreshadow 是否完成；它们是功能，不是固定段数。
+Four Moves 的功能定义与判定唯一源 = `references/quality-gates.md` §1。本验证器的独有动作：核对本稿是否真实完成四个 move，未完成即列入修复项。
 
 ### Title/Abstract（条件检查）
 

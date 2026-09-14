@@ -25,7 +25,7 @@ source: Extracted from MVP30 narrative_analysis files
 **模板**:
 > "[Number] robustness checks provide further support for our findings. Our robustness checks included [category 1]; [category 2]; [category 3] to address [issue]; [category 4] to address [issue]; [category 5] to examine [issue]; [category 6] to address [issue]; [category 7] to examine [issue]; [category 8] to address [issue]; and [category 9] as alternative empirical strategies. To shed further light on the underlying mechanisms, we also conducted additional analyses using [mechanism test 1], [mechanism test 2], as well as [mechanism test 3]."
 
-来源: darby2026 (JOM), P9
+**来源**: darby2026 (JOM), P9
 
 **原文锚定**:
 > "Nineteen robustness checks provide further support for our findings. Our robustness checks included alternative vectors of matching covariates; propensity score matching; frailty models, shared frailty models, and marginal risk set models to address the recurrent nature of recall events; placebo treatment tests to address omitted variable concerns; panelized fixed effects models to examine reverse causality; alternative measures of institutional investor ownership to address simultaneity and measurement error; variance inflation factors to examine multicollinearity; winsorized values to address outliers; and Cox proportional hazard models and linear regression as alternative empirical strategies. To shed further light on the underlying mechanisms, we also conducted additional analyses using alternative measures of institutional investor ownership that reflect different magnitudes of ownership and different investment horizons as well as explore potential non-linearity."

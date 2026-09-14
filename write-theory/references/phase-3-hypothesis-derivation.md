@@ -111,7 +111,7 @@ Theory 写作的心脏环节：路由假设结构，为每个假设生成逻辑�
 **检查**：如果 Methods 中描述了识别策略，但 Theory 段落中完全没有提及识别假设的理论基础 → ⚠️ 标记为"识别策略与理论脱节"。
 
 **Topic Sentence CV 反模式示例**：
-- ❌ "It is argued that CEO overconfidence affects firm risk." → 无主语被动，违反 Conversational Voice（见 `../../write-introduction/corpus/storytelling/prose-craft-checklist.md` 禁用词表）
+- ❌ "It is argued that CEO overconfidence affects firm risk." → 无主语被动，违反 Conversational Voice（见 `../write-introduction/corpus/storytelling/prose-craft-checklist.md` 禁用词表）
 - ✅ "We argue that CEO overconfidence increases firm risk-taking because overconfident leaders systematically underestimate downside uncertainty." → active verb + concrete subject + 方向性预测
 - 规则：Topic Sentence 是段落的第一印象，若用被动语态，读者会预期整段都是"报告腔"而非"论证声"。
 
@@ -119,7 +119,7 @@ Theory 写作的心脏环节：路由假设结构，为每个假设生成逻辑�
 
 段位与 coherence 十二项诊断（burying the lead / read my mind / 作者名开头 / 术语一致 / 段落长度 / token 膨胀 / 平行结构 / 过渡词显式 / Token 回扣等）按 `../corpus/subprotocols/paragraph_layout.md` §3 逐条过，不在本表复述。本表只留 paragraph_layout 未覆盖的项：
 
-- [ ] **段末 wrap**：段末句是否停在引用/证据上而无收束（abrupt stop）？→ 段末 1 句 wrap 回扣本段 claim；与"收束句质量"项互补——那项查收束是否简单重复 "we hypothesize"，本项查收束是否缺席；wrap 的正面语料（总结式 key line 标记词与骨架、前后夹击变体）见 `../../write-introduction/corpus/micro-templates/key-line-patterns.md` §3
+- [ ] **段末 wrap**：段末句是否停在引用/证据上而无收束（abrupt stop）？→ 段末 1 句 wrap 回扣本段 claim；与"收束句质量"项互补——那项查收束是否简单重复 "we hypothesize"，本项查收束是否缺席；wrap 的正面语料（总结式 key line 标记词与骨架、前后夹击变体）见 `../write-introduction/corpus/micro-templates/key-line-patterns.md` §3
 - [ ] **Caveat-first**：段首是否以 "Although prior work..." 让步开头，推迟核心 claim？→ claim 前置，caveat 移后（见 prose-craft-checklist §0.6-4）
 - [ ] **段落独立性**：单独阅读本段能否理解完整论证逻辑？
 

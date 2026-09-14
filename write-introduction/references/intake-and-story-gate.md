@@ -1,6 +1,6 @@
 # Intake and Story Gate — Introduction（从 SKILL.md Phase 0 下沉，v0.1）
 
-> **权威词表**：`../../paper-story-contract/references/stage-gates.md`（写作四阶段 preparing/blocking/refining/finishing；门控结果 PASS/PROVISIONAL/BLOCKED）。本文件只写 Introduction 侧的门控细则，与 write-theory / write-methods / write-results 同一词表。
+> **权威词表**：`../paper-story-contract/references/stage-gates.md`（写作四阶段 preparing/blocking/refining/finishing；门控结果 PASS/PROVISIONAL/BLOCKED）。本文件只写 Introduction 侧的门控细则，与 write-theory / write-methods / write-results 同一词表。
 
 ## 模式（--mode）
 

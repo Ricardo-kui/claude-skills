@@ -35,11 +35,17 @@ related: ["[[story-blueprints/v4/rhetoric-moves/_index]]", "[[humanizer/SKILL]]"
 - **保留**：用户的领域术语、具体数字/发现、因果主张、限定语。绝不编造或替换用户的实质内容。
 - **升级**：句子的逻辑排序对齐结构蓝图；连接词/强调/缓和使用信号词；消除冗余与僵尸名词化。
 - **五病灶扫描（Pollock 2025 Ch04，升级操作的靶点，每个变体生成前过一遍）**：
-  1. **fat suit 臃肿**——删不承载含义的词："In order to"→"To"、"the tenets of" 删、"the reason for that is"→"because"；介词短语堆叠（"of the wealth effects of their decisions" 类）换单词或删除；肯定式表述短于否定式（"He agreed" 优于 "He did not disagree"）。
-  2. **burying the lead 埋首句**——主句主张前置，先结论后限定；长开场从句（"predatory clauses"）里不许藏主语。
-  3. **sentence stuffing 塞句**——一句多主意（多个 and/further/in addition to）拆成多句，一句一主意；相关但不推进主意的旁注 → 脚注。
-  4. **read my mind 让读者猜**——五病灶中唯一"加词"的：补连接组织（A→B→C 的推导桥）、首次出现的构念定义、未说明的测量/控制理由。注意与削肥方向相反，先扫塞句再扫漏桥。
-  5. **pompous prose 浮夸**——等价常用词优先（Oppenheimer 2006：复杂措辞反而让读者觉得作者更不聪明）；删 "to wit / inter alia / obviously / as everyone knows"；非公认构念标签的外语引用删。
+  > 五病的定义、例证与 dos/don'ts 唯一源 = `../pollock-qc/references/prose-pathology.md`（Pollock 2025 Ch04）。本节只保留五条病名与三条本层独有的操作增量。
+  1. **fat suit 臃肿**
+  2. **burying the lead 埋首句**
+  3. **sentence stuffing 塞句**
+  4. **read my mind 让读者猜**
+  5. **pompous prose 浮夸**
+
+  操作增量（本文件独有）：
+  - ① 五病灶是**升级操作**的靶点，不是审查项——用它选升级方向，不用于打分。
+  - ② **read my mind 是五病中唯一「加词」的**，与其余四条削词方向相反。
+  - ③ 扫描顺序固定为**先扫塞句，再扫漏桥**。
 
 ### 4. 生成变体 ×3（以语料句式改编；含可选跨源合成）
 
@@ -55,7 +61,7 @@ related: ["[[story-blueprints/v4/rhetoric-moves/_index]]", "[[humanizer/SKILL]]"
 
 ### 5. 流畅性门（通顺/学术/句长，强制）
 
-每个变体过以下七查，**任一不过即作废该变体**：
+每个变体过以下八查（本节为流畅性门计数的唯一权威源），**任一不过即作废该变体**：
 
 1. **主句骨架可识别**：一句话必须能画出清晰的 主—谓—宾 主干；堆了 3+ 个并列从句且无明确协调词 = 拼贴。
 2. **句子不过长**（用户裁决 2026-08-24）：单句以 20–30 词为常，超过 ~40 词必须拆句。宁可两句短句，不要一句长龙——句长是通顺的第一观感。

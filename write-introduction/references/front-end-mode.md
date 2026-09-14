@@ -38,6 +38,9 @@ First load `../corpus/storytelling/reader-conversion-sequence.md`. Treat Title, 
 | Reader shift | | | | |
 
 ## GBL Four-Move Alignment
+
+Move 定义与对齐规则唯一源 = `references/quality-gates.md` §1；本节只保留 front-end 模式独有的证据落点列。
+
 | Move | Front-end evidence | Status | Repair |
 |---|---|---|---|
 | Significance | [Title/Abstract/Introduction evidence] | [pass/partial/missing] | |

@@ -1,7 +1,7 @@
 # Module–Booth Mapping — 引言模块范式 ↔ Booth 论证结构
 
 > 依据：Booth et al. (2024) The Craft of Research (5th ed.) Vault 原子笔记（`文献笔记库/02 原子化/写作指导/Booth et al. 2024 - The Craft of Research/`；按章路由见 `_reference/guidance-source-router.md`）。
-> 分工与触达：本文件是模块设计的**论证依据层**——只接 Booth 的论证职能与判据；故事交付归 Pollock Ch05，理论化定位归 GBL Four Moves（`../diagnose-introduction/references/golden-biddle-locke-four-moves.md`）。**触达路径 = 渲染期与 Gate 5**：render-rules 头部指针 + Hook #5/Stakes #5 把承重规则内联在强制检查里，本文件供需要依据展开时按需读取（Phase 2 无独立指针，硬规则不依赖本文件被打开）。渲染强制检查在 `render-rules.md`。
+> 分工与触达：本文件是模块设计的**论证依据层**——只接 Booth 的论证职能与判据；故事交付归 Pollock Ch05，理论化定位归 GBL Four Moves（对齐规则唯一源 = `references/quality-gates.md` §1；原始定义见 `../diagnose-introduction/references/golden-biddle-locke-four-moves.md`）。**触达路径 = 渲染期与 Gate 5**：render-rules 头部指针 + Hook #5/Stakes #5 把承重规则内联在强制检查里，本文件供需要依据展开时按需读取（Phase 2 无独立指针，硬规则不依赖本文件被打开）。渲染强制检查在 `render-rules.md`。
 
 ## 一、总对应表：Context–Problem–Response ↔ 模块范式 ↔ 论证五要素
 

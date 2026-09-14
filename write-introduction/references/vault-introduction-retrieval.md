@@ -1,6 +1,6 @@
 # Vault evidence retrieval for Introduction
 
-The fallback tree, trigger timing, and no-result discipline are defined in `../../paper-state-protocol/references/vault-retrieval.md` (§5) — the single authority. This file carries only the Introduction-specific differences. Use it when building a full Introduction or front-end; skip it for local-only Hook, Gap, or contribution-sentence requests.
+The fallback tree, trigger timing, and no-result discipline are defined in `../paper-state-protocol/references/vault-retrieval.md` (§5) — the single authority. This file carries only the Introduction-specific differences. Use it when building a full Introduction or front-end; skip it for local-only Hook, Gap, or contribution-sentence requests.
 
 ## Introduction-specific differences
 
