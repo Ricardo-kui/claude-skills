@@ -30,6 +30,8 @@ source: Distilled from Zhao, Ding & Gaba (2023), Organization Science — "Posit
 
 ## 能量级
 
+> 定义见 `hooks/_index.md` §能量级
+
 **中** — 宏观趋势 + 平行案例，建立现象复杂度但不靠情感冲击或数字震撼。通常需要独立的或嵌入式的 Stakes 段补足"So what"。
 
 ## 验证状态

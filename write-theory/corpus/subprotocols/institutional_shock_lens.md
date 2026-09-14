@@ -1,6 +1,6 @@
 # 制度冲击类研究的 Theory Lens 适配
 
-> 外置自 `write-theory/SKILL.md` Phase 2.3 与 Phase 3.2 [2c]。触发条件：Phase 1.3 制度冲击检测命中（IV / DiD / RDD / 自然实验 / 政策冲击信号）。
+> 外置自 `../../SKILL.md` Phase 2.3 与 Phase 3.2 [2c]。触发条件：Phase 1.3 制度冲击检测命中（IV / DiD / RDD / 自然实验 / 政策冲击信号）。
 
 如果你的研究使用自然实验、制度冲击或准实验设计（IV, DiD, RDD），Theory Lens 段需要额外完成以下论证任务：
 

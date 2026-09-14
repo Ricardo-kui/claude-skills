@@ -1,0 +1,65 @@
+# pointer-allowlist.txt — skill_pointer_check.py --strict 的白名单（Batch 6 生成）
+# 格式：<target> | <理由>；与 MISSING 行的 target 做等值匹配
+# 已处置真断链：ACADEMIC_COMMUNICATION.md、references/alignment-checks.md 已由 orchestrator 改措辞/删死引用；以下 4 条为「已删除声明 / 外部出处」误报，入白名单
+central-knot-diagnostic.md | 已删除声明：storytelling/_index.md:16 的「已删除」清单引用，非活动指针
+central-knot-throughout-check.md | 已删除声明：同 _index.md:16
+hook-type-mapping.md | 已删除声明：同 _index.md:16
+references/overclaim-calibration.md | 外部出处：claim-calibration.md:3 标注「good-story (Rimagination)」外部来源，本仓库无此 skill，属出处注记
+
+.claude/reference/literature-evidence.md | 模板占位：指向用户项目路径/省略号模板串，非本仓库文件
+18-context-generalizability.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+CLAUDE.md | 模板占位：指向用户项目路径/省略号模板串，非本仓库文件
+SKILL.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+_argument-grammar.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+_evidence_registry.yaml | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+_index.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+_polish-protocol.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+_reference/guidance-source-router.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+_routing_tables.yaml | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+_skill_design_feedback.yaml | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+because-clauses.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+causal-hedging.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+corpus/sentences/mechanism_chain.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+corpus/subprotocols/character_ordering.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+diagnose-introduction/references/intertextual-construction-playbook.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+distill-paper-exemplar/scripts/status_policy.yaml | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+generation-protocol.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+hedging-strength.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+hypothesis_derivation_patterns.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+identification-exogeneity.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+identification-foreshadowing.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+lint_methods_language.py | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+manual-coding-validation.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+model-selection-comparison.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+paper-state.yaml | 工作区产物：运行时生成，仓库无静态文件（canonical 由 paper-state-protocol 定义）
+paper-story-contract/references/schema.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+prose-craft-checklist.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+quantities-trends.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+references/slot-R8.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+sentences/leitmotif-section-opener.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+story-blueprints/v4/ | 目录指针：指向共享资源目录本身，非具体文件
+story-blueprints/v4/blueprints/ | 目录指针：指向共享资源目录本身，非具体文件
+story-blueprints/v4/rhetoric-moves/ | 目录指针：指向共享资源目录本身，非具体文件
+story-blueprints/v4/worked-examples/portfolio-governance.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+thesis/CLAUDE.md | 模板占位：指向用户项目路径/省略号模板串，非本仓库文件
+v4-schema.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+water-level-gate.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+write-introduction/corpus/phrasebank/hedging-strength.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+write-introduction/references/library-contract.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+write-introduction/references/outline-protocol.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+write-methods/SKILL.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+write-methods/corpus/micro-templates/ | 目录指针：指向共享资源目录本身，非具体文件
+write-methods/corpus/micro-templates/causal-hedging.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+write-results/corpus/三向交互.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+write-results/corpus/事件研究法.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+write-results/references/evidence-standards.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+write-results/references/visual-evidence.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+write-theory/.../hypothesis_derivation_patterns.md | 模板占位：指向用户项目路径/省略号模板串，非本仓库文件
+write-theory/corpus/sentences/acknowledgment_response.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+write-theory/corpus/subprotocols/B2_dual_track.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+write-theory/corpus/subprotocols/board_governance_boundary_condition.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+write-theory/corpus/subprotocols/hypothesis_derivation_patterns.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+write-theory/corpus/subprotocols/intra_tmt_persuasion.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+write-theory/corpus/subprotocols/reasoning_soundness_protocol.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+write-theory/corpus/variants/E_moderation.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+定性过程研究.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）

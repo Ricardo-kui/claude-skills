@@ -29,6 +29,8 @@ source: Distilled from Haunschild, Polidoro & Chandler (2015), Organization Scie
 
 ## 能量级
 
+> 定义见 `hooks/_index.md` §能量级
+
 **高** — 生命安全/重大经济损失事件天然具有高情感冲击力
 
 ## 验证状态

@@ -20,7 +20,7 @@ updated: 2026-08-05
 
 ## 主骨架
 
-参见 `write-results/SKILL.md` → 槽位骨架加载 → 本类型适用的 `references/slot-R*.md`（各 slot 文件内含 `匹配DiD` 专用变体）。
+参见 `../SKILL.md` → 槽位骨架加载 → 本类型适用的 `references/slot-R*.md`（各 slot 文件内含 `匹配DiD` 专用变体）。
 
 ## 证据节奏摘要
 

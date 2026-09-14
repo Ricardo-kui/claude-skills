@@ -19,6 +19,6 @@ write-* 四 skill 的用户批评登记共用双 registry 分工，两者不互�
 - **write-results**：双轨全接（参照实现）。
 - **write-methods**：双轨全接；R2 仅当批评确实指向某一设计类型变体时汇总聚合质量信号。
 - **write-theory**：接 R2（差异项：只登记对**变体产出质量**的批评）；规则层缺陷走演化通道
-  `<skill>/corpus/_skill_design_feedback.yaml`（门控见 `../../../distill-theory-exemplar/references/design-feedback-loop.md`）；R1 未建设。
+  `<skill>/corpus/_skill_design_feedback.yaml`（门控见 `../distill-theory-exemplar/references/design-feedback-loop.md`）；R1 未建设。
 - **write-introduction**：接 R2；R1 未建设（需要可执行修订规则时先建
   `<skill>/references/feedback-registry.json` + `record_feedback` 脚本）。

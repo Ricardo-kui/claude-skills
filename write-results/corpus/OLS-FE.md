@@ -35,7 +35,7 @@ updated: 2026-08-13
 
 ### 导航规则
 
-1. 先定槽位（R1–R9，`write-results/SKILL.md` 叙事槽位目录）
+1. 先定槽位（R1–R9，`../SKILL.md` 叙事槽位目录）
 2. 查对应槽位组；组内按状态优先：ROBUST > VERIFIED > EMERGING（含（可选）后缀）；LEGACY-DIAGNOSTIC 保留（工具诊断类）；召回主题条目按用户 2026-08-29 裁决单源 VERIFIED
 3. 槽位分不开的看「易混决策对」；单篇 EMERGING 变体仅在情境精确匹配时选用
 4. 多槽位变体归入首槽位组，副槽位在适用场景列标注
@@ -207,7 +207,7 @@ updated: 2026-08-13
 
 ## 主骨架
 
-参见 `write-results/SKILL.md` → 槽位骨架加载 → 本类型适用的 `references/slot-R*.md`（各 slot 文件内含 `OLS-FE` 专用变体）。
+参见 `../SKILL.md` → 槽位骨架加载 → 本类型适用的 `references/slot-R*.md`（各 slot 文件内含 `OLS-FE` 专用变体）。
 
 ## 累积变体
 

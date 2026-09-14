@@ -97,7 +97,7 @@ updated: 2026-07-07
 
 <!-- distill-methods-exemplar Phase 4 验证通过的变体写入此处 -->
 <!-- 格式：
-### 变体 N: [来源论文] (YYYY-MM-DD)
+变体 <编号>: [来源论文] (YYYY-MM-DD)
 **验证状态**: 通过 / 需修正
 **槽位**: M?
 **骨架**:

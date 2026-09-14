@@ -12,7 +12,7 @@ updated: 2026-09-12
 ## 组织逻辑
 
 按结果类型组织。每个文件包含：
-1. **主骨架引用** — 指向 `references/slot-R*.md` 中对应设计类型的变体（按需加载规则见 `write-results/SKILL.md` → 槽位骨架加载）
+1. **主骨架引用** — 指向 `references/slot-R*.md` 中对应设计类型的变体（按需加载规则见 `../SKILL.md` → 槽位骨架加载）
 2. **累积变体** — 由 `distill-results-exemplar` Phase 4 自动写入的验证通过变体
 
 ## 选择优先（变体速查表）
@@ -250,7 +250,7 @@ updated: 2026-09-12
 >   - **生存分析** 变体17：**分样本调节 — 显著 vs 不显著对照（无 Wald 检验版）**（R3+R4）——Darby2025 的 H3 split-sample 报告；构成分样本调节三代演进的中间形态（变体4 坦承功效→本变体直接对比→变体8 加 Wald 升级）；**标注 antipattern 风险**：同向仅显著性不同时须补 Wald
 >   - **生存分析** 变体18：**Threat-based 稳健性四威胁报告（生存分析专属）**（R7）——omitted/reverse/measurement/alternative-estimator 四威胁分节叙述式报告；与变体11（Darby2026 表格导航 19 检查）互补：≤8 个用叙述式，>10 个用表格
 >   - **生存分析** 变体19：**PSM 平均处理效应结果报告（one-to-one, ATE 天数翻译）**（R7+R5）——PSM one-to-one + 中位数 0 分割 + ATE→天数 + "Put differently" 重述；变体9（CEM 双向）的姊妹变体，构成匹配类稳健性双轨
->   - 配套 write-methods：生存分析 +7 变体（16-22）；配套 write-theory：新增 `sentences/leitmotif-section-opener.md`
+>   - 配套 write-methods：生存分析 +7 变体（16-22）；配套 write-theory：新增 `../write-theory/corpus/sentences/leitmotif-section-opener.md`
 
 > ✅ **2026-08-05 更新（liu_shankar2015 蒸馏）**: 基于 Liu & Shankar (2015, *Management Science*) "The Dynamic Impact of Product-Harm Crises…"——**首次填充「BLP-状态空间」结果类型**（Kalman filter + random-coefficient demand + GMM）：
 >   - BLP-状态空间 变体1：**GMM 嵌套模型 MMSC-AIC 逐步升级**（R2）

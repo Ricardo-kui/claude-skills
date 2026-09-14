@@ -28,7 +28,7 @@
 - [ ] 用户语言锁全部通过；`model/modeled/modelled/modeling/modelling` 未作动词（除非用户明确允许）
 - [ ] 事实直陈：方向、显著性/不确定性、幅度和限制直接呈现；无“诚实披露/为了透明/并不把它表述为”等元报告 wrapper
 - [ ] active feedback 中的 voice benchmark 已落实；`supersedes` 指向的旧建议没有因历史记录或 corpus 命中而复活
-- [ ] `lint_results_language.py` 已对正文运行并通过；若文件含修订记录，扫描边界没有把历史反例混入正文
+- [ ] `../scripts/lint_results_language.py` 已对正文运行并通过；若文件含修订记录，扫描边界没有把历史反例混入正文
 
 ## Credibility
 - [ ] 非显著假设被报告而非跳过
@@ -41,7 +41,7 @@
 - [ ] **双重判断**：每个假设均区分 baseline verdict 与 overall evidence；基准支持不被写成所有检验一致
 - [ ] **六维覆盖声明**：R7 开头或汇总表中已明确列出检验的稳健性维度，未检验维度已附排除理由（Yuan et al. 2026）
 - [ ] **证据五问**（Booth Ch7）：正文数字与表格/输出逐位一致 / 无 some/most/many/often 类模糊量词替代数字 / 全部假设含非显著已报告（cherry-picking 禁令）/ 数据源与采集链可查 / 每表图有解释句（细则见 `references/evidence-standards.md`）
-- [ ] **解读段论证形状**（Booth Ch05 文法）：解读型段落（finding claim + 系数/检验证据 + 幅度解释）按 `_argument-grammar.md`（`../story-blueprints/v4/rhetoric-moves/`）自查五问+拼贴——finding 句=claim 段首可指认、系数不替代解读 move；表格走读段体裁豁免。特有拼贴信号：数值列队 / 无主 finding / 稳健性错配（细则见 `references/evidence-standards.md` §段落论证文法接线）
+- [ ] **解读段论证形状**（Booth Ch05 文法）：解读型段落（finding claim + 系数/检验证据 + 幅度解释）按 `../story-blueprints/v4/rhetoric-moves/_argument-grammar.md`（`../story-blueprints/v4/rhetoric-moves/`）自查五问+拼贴——finding 句=claim 段首可指认、系数不替代解读 move；表格走读段体裁豁免。特有拼贴信号：数值列队 / 无主 finding / 稳健性错配（细则见 `references/evidence-standards.md` §段落论证文法接线）
 - [ ] **视觉证据**（Booth Ch13）：表图形式匹配表达效果 / 标题描述数据而非主题、不写含义解读 / 无截断纵轴等失真（伦理四规则，细则见 `references/visual-evidence.md`）
 
 ## 论证质量诊断

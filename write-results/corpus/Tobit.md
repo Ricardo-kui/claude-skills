@@ -28,7 +28,7 @@ updated: 2026-08-12
 
 ## 主骨架
 
-参见 `write-results/SKILL.md` → 槽位骨架加载 → 本类型适用的 `references/slot-R*.md`（各 slot 文件内含 `Tobit` 专用变体）。
+参见 `../SKILL.md` → 槽位骨架加载 → 本类型适用的 `references/slot-R*.md`（各 slot 文件内含 `Tobit` 专用变体）。
 
 ## 证据节奏摘要
 

@@ -3,7 +3,7 @@
 > **适用**: Theory & Hypotheses 章节有多个构念（IV/DV/moderator/mediator）时，决定它们的引入顺序。源自 Pollock (2025) Ch06 Table 6.1 *Structuring the theory and hypotheses section*。
 > **解决的问题**: 标准调节/机制段落只描述每个构念的测量；本表回答"谁先出场、谁后出场"——这是审稿人快速判断 Theory 是否连贯的依据。出场顺序混乱会让读者不知道该关注谁。
 > **母变体**: B 机制推演型（主效应）/ E 调节效应型（含配角）。
-> **与 write-introduction `character-map.md` 的分工**: 后者管 Introduction 前 3 段的角色出场；本表管 Theory 内部 IV/DV/moderator 的排序。
+> **与 write-introduction `../write-introduction/corpus/storytelling/character-map.md` 的分工**: 后者管 Introduction 前 3 段的角色出场；本表管 Theory 内部 IV/DV/moderator 的排序。
 
 ---
 
@@ -74,9 +74,9 @@ Pollock 明确列出影响 Theory 结构的 6 个因素，本表是其中"主角
 
 ## 与现有资产的接口
 
-- **`phase-2-architecture.md`** 的 7 因素表已含"主角配置/配角配置"两行但压缩为单行——本表是其展开版，phase-2 在需要详细排序决策时应引用本文件。
-- **`phase-4-qc-alignment.md`** 审计 3（假设形式）应增加一条"如输出含 summarizing figure，每条 path 必须标注对应 H 编号"（见缺口B 补强）。
-- **write-introduction `character-map.md`** 管 Introduction 侧角色出场；本表管 Theory 侧——两者共同保证全稿角色一致性（paper-state.yaml 的 `theory.constructs` 应与 introduction 的 character-map 对齐）。
+- **`references/phase-2-architecture.md`** 的 7 因素表已含"主角配置/配角配置"两行但压缩为单行——本表是其展开版，phase-2 在需要详细排序决策时应引用本文件。
+- **`references/phase-4-qc-alignment.md`** 审计 3（假设形式）应增加一条"如输出含 summarizing figure，每条 path 必须标注对应 H 编号"（见缺口B 补强）。
+- **write-introduction `../write-introduction/corpus/storytelling/character-map.md`** 管 Introduction 侧角色出场；本表管 Theory 侧——两者共同保证全稿角色一致性（paper-state.yaml 的 `theory.constructs` 应与 introduction 的 character-map 对齐）。
 
 ---
 

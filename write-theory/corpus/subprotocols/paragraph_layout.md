@@ -1,5 +1,5 @@
 # Paragraph Layout — 段内论点-论据-总结句布局协议
-> 论证角色：**骨架文件**——四段位即角色槽（Topic=claim、Reasoning=reason、Tokens=evidence、Wrap=收束；warrant 场合见 reasoning_soundness_protocol §5）；总文法见 填位规则见 `_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
+> 论证角色：**骨架文件**——四段位即角色槽（Topic=claim、Reasoning=reason、Tokens=evidence、Wrap=收束；warrant 场合见 reasoning_soundness_protocol §5）；总文法见 填位规则见 `../story-blueprints/v4/rhetoric-moves/_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
 
 本文件是**假设推导段落内部**的论证布局协议：一个假设推导段如何从论点句展开，如何选择并摆放论据（文献/理论/案例），如何收束。**职责边界**：
 - 本文件 = **段内**（一个假设推导段内部如何布局）
@@ -100,7 +100,7 @@ Jonsen et al. 强调：**tangible, plausible bridges** between first-order voice
 | 论据的完整 pattern（每类的详细骨架+范文+反模式） | [`evidence_patterns.md`](evidence_patterns.md) |
 | 段落级 Anchor→Mechanism→Warrant→Prediction 完整序列 | [`hypothesis_derivation_patterns.md`](hypothesis_derivation_patterns.md) |
 | 连接词谱系 / 段落长度 / warrant 摆放三策略 | [`../sentences/mechanism_chain.md`](../sentences/mechanism_chain.md) §段内逻辑布局原则 (L695) |
-| 交织式论证链（文献嵌入推理 vs 先推理后堆引用） | [`../../references/phase-3-hypothesis-derivation.md`](../../references/phase-3-hypothesis-derivation.md) §交织式论证链 |
+| 交织式论证链（文献嵌入推理 vs 先推理后堆引用） | [`references/phase-3-hypothesis-derivation.md`](references/phase-3-hypothesis-derivation.md) §交织式论证链 |
 | 段间多假设结构（common trunk / parallel branches） | [`arrangement_patterns.md`](arrangement_patterns.md) |
 
 **使用顺序**：先查本文件确定段内四段位 + 论据组合 → 再查 evidence_patterns 填充具体论据句式 → 再查 mechanism_chain §段内逻辑布局原则 选连接词与 warrant 摆放策略。

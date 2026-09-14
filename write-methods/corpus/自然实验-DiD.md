@@ -6,7 +6,7 @@ source_papers:
   - hoffmann_cheong_phan_zurbruegg2024_jm (Journal of Marketing; staggered UD-law DiD + conditional logit + binary recall)
   - Castellaneta_Conti_Kacperczyk_2017_SMJ (SMJ; staggered UTSA + PE buyout IRR ≈ DiD first difference)
   - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
-variants_count: 15
+variants_count: 26
 created: 2026-05-18
 updated: 2026-08-23
 ---
@@ -20,15 +20,16 @@ updated: 2026-08-23
 
 | 槽位 | 变体数 | 变体编号 |
 |---|---|---|
-| M8 | 5 | 3、4、12、13、14 |
-| M7 | 3 | 2、5、6 |
-| M2 | 3 | 1、7、15 |
+| M8 | 12 | 3、4、12、13、14、R、S、U、V、W、RDiT、局部断点 |
+| M7 | 4 | 2、5、6、Y |
+| M2 | 7 | 1、7、15、Q、T、X、受影响单元 |
 | M1 | 1 | 8 |
 | M3 | 1 | 10 |
-| M4 | 1 | 9 |
-| M6 | 1 | 11 |
+| M4 | 2 | 9、O |
+| M6 | 2 | 11、控制变量 |
+| M5 | 1 | P |
 
-### M8（5）
+### M8（12）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -37,22 +38,34 @@ updated: 2026-08-23
 | 12 | 政治经济外生性电池（质性检索 + LPM/hazard + 供需零相关） | 政策采纳时点可能随政治经济条件内生 | 区别于变体 4：专攻"政治经济内生采纳"威胁 | EMERGING | Castellaneta et al. 2017 (SMJ) |
 | 13 | 日历安慰剂 ±k 年（假处理弱于真处理） | 持有窗截面、难画标准 event-study 的设计 | 区别于变体 3/4（置换/重分配安慰剂）：固定错位 ±k 年 | EMERGING | Castellaneta et al. 2017 (SMJ) |
 | 14 | 司法/监管冲击双假设外生性（awareness + 单位无影响） | 法院裁决/监管事件作外生冲击 | 区别于变体 12 政治经济电池：双前提叙事（awareness + 不受单位影响） | EMERGING | Moon et al. 2026 (JM) |
+| R | 内生性点名→冲击移交开篇 | Methods 首段识别威胁前置（处理由行为主体内生选择） | 区别于 RDiT 选择论证（估计策略间选择）：这是设计开篇威胁前置 | EMERGING | Lu et al. 2022 (MS) |
+| S | 事前信息处理组定义 + 事后决策封口 | 冲击后存在内生再平衡风险（分组只用事前信息） | 区别于变体 9（时间窗编码问题）：这是信息集纯净性辩护 | EMERGING | Lu et al. 2022 (MS) |
+| U | 冲击主体组合权重核查 + 归谬收口 | 冲击主体为组合型机构且处理单元占其组合极小份额 | 区别于变体 12 政治经济电池（建模时点决定因素）：这是利益攸关度直接量化 | EMERGING | Lu et al. 2022 (MS) |
+| V | 多次冲击巧合性论证 | 多事件准实验且各事件处理/对照互不重叠 | 区别于安慰剂（统计检验）：这是结构性论证 | EMERGING | Lu et al. 2022 (MS) |
+| W | 无偏条件内联编号清单 + which we verify 指针 | 2×2 DiD 教学式呈现（均值差分式→回归式） | 区别于变体 14（judicial shock 两假设）：就地列条件 + 三词指针移交 Results | EMERGING | Lu et al. 2022 (MS) |
+| RDiT | RDiT 识别策略选择论证（为何用时间断点而非 DiD） | 无对照组设计合法性（所有同类单元同时暴露于事件） | RDiT 专属：论证"对照组不可行"而非 DiD 对照构造 | EMERGING | Fang et al. 2025 (POM) |
+| 局部断点 | 局部断点设计的外部效度预抗辩（两理由） | 局部设计（RDiT/RDD）generalizability 限制预抗辩 | RDiT/局部设计专属：先引权威承认局限→两理由化解→Therefore 收束 | EMERGING | Fang et al. 2025 (POM) |
 
-### M7（3）
+### M7（4）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
 | 2 | 有符号计数衍生 DV → 线性 FE 估计器选择 | 计数派生但因正负相减可取负值的 DV | 先检查支持域再选模型，避免按来源标签机械用 count model | EMERGING | Lee, Wu & Bednar (OS) |
 | 5 | rare outcome 下 year + industry FE（无法 firm FE） | rare binary outcome、单位内无 DV 变异的面板（副槽位 M8） | 纠正常见误写：是 always-zero → collinearity 而非 incidental parameters | VERIFIED | Hoffmann et al. 2024 (JM) |
 | 6 | staggered adoption 下 POST 与 Treat×Post 共线性说明 | 州级法律 staggered 设计，预防"为何没控制 post"质疑 | 与变体 5 同类共线性代数，但针对 ever-treated×post 设计 | VERIFIED | Hoffmann et al. 2024 (JM) |
+| Y | 教学式→回归式等价桥 + 逐系数一义分配 | 式(1) 均值差分教学 + 式(2) 回归实现双呈现体例 | 区别于变体 10（一阶差分等价）：这是 2×2 教学式与回归式衔接 | EMERGING | Lu et al. 2022 (MS) |
 
-### M2（3）
+### M2（7）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
 | 1 | 跨层级冲击映射 + 处理事件样本漏斗 | 冲击在地理/制度层、分析单位为企业的研究 | 只报最终 N 之外，增加"冲击层→暴露规则→事件减少"可审计映射链 | EMERGING | Lee, Wu & Bednar (OS) |
 | 7 | 裁量权子样本 + 行业/event 扩展漏斗 | 需防遗漏"有缺陷信号但不作为"单位的召回/事件样本 | 区别于变体 1：漏斗含 assignment stability 排除 + 防遗漏行业扩展 + 理论子样本聚焦 | VERIFIED | Hoffmann et al. 2024 (JM) |
 | 15 | always-treated 排除 + 处理组卫生（staggered DiD 样本构造） | 交错 DiD 排除 always-treated 单位、post-only 观测、预处理期不足事件 | 区别于变体 1/7 漏斗：专攻 staggered DiD 样本卫生 | EMERGING | Moon et al. 2026 (JM) |
+| Q | 专有核心库 + 按构念补外部源 + 合并后最终样本 | 专有 DV 核心 + 按构念外挂调节测度的多源装配 | 区别于面板数据-OLS 变体57（多库交集）：这是专有核心 + 构念-数据库映射 | EMERGING | Castellaneta et al. 2017 (SMJ) |
+| T | 具名事件分组走查 + 图示挂接 | 多条件规则判定处理/对照资格的设计 | 区别于变体 9 staggered 教学示例（合成编码演示）：真实事件资格判定走查 | EMERGING | Lu et al. 2022 (MS) |
+| X | 测量门槛的监管规则锚定 | 测量 cutoff 对应监管申报规则（如 5% 持仓 Form 13D） | 区别于变体 O 二元编码辩护（冲击强度离散化）：测量门槛制度锚定 | EMERGING | Lu et al. 2022 (MS) |
+| 受影响单元 | 受影响单元（替代品）两步消费者决策抽样论证 | 需定义"受事件影响的同类单元"（召回/退出/进入） | 半通用：消费者分类层级（segment→tier→class）背书样本边界 | EMERGING | Fang et al. 2025 (POM) |
 
 ### M1（1）
 
@@ -66,17 +79,25 @@ updated: 2026-08-23
 |---|---|---|---|---|---|
 | 10 | ΔV/IRR 作为一阶差分 → 截面估计等价于 DiD | 只有单次观测、DV 已嵌一阶差分的截面设计（副槽位 M7、M8） | 区别于标准 unit-year TWFE（变体 3–4）：等价性叙事 + 数据约束诚实说明 | EMERGING | Castellaneta et al. 2017 (SMJ) |
 
-### M4（1）
+### M4（2）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
 | 9 | 持有窗内处理编码 + staggered 教学示例 | 持有窗（非日历年面板）处理赋值的 staggered 设计（副槽位 M8） | 区别于变体 6：单州示例 → staggered 重组两段叙事降低理解成本 | EMERGING | Castellaneta et al. 2017 (SMJ) |
+| O | 监管冲击强度→二元编码辩护 + 连续指数稳健收口 | 政策强度度量决策（binary 编码 vs 连续指数） | 区别于变体 9（持有窗处理赋值）：本变体解决冲击强度度量决策 | EMERGING | Castellaneta et al. 2017 (SMJ) |
 
-### M6（1）
+### M5（1）
+
+| # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| P | 处理×条件交互的行业级调节变量操作化链 | 准实验交互设计的行业级条件变量 | 区别于面板数据-OLS 变体42/55：准实验交互设计的行业级调节（t_sell 时点对齐） | EMERGING | Castellaneta et al. 2017 (SMJ) |
+
+### M6（2）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
 | 11 | entry/exit 年 FE + 多维 FE + 冲击层级聚类 | 每单位一次观测的持有窗截面（副槽位 M7） | 区别于标准 unit FE + year FE：entry×exit 年 FE 吸收时长与两端冲击 | EMERGING | Castellaneta et al. 2017 (SMJ) |
+| 控制变量 | 控制变量按竞争性解释编号分组引入 | 处理冲击后 DV 调整可能被媒体/关注度等混淆 | 通用："编号竞争性解释清单 → Next, we elaborate on each" | EMERGING | Fang et al. 2025 (POM) |
 
 ## 主骨架
 
@@ -92,7 +113,7 @@ updated: 2026-08-23
 
 <!-- distill-methods-exemplar Phase 4 验证通过的变体写入此处 -->
 <!-- 格式：
-### 变体 N: [来源论文] (YYYY-MM-DD)
+变体 <编号>: [来源论文] (YYYY-MM-DD)
 **验证状态**: 通过 / 需修正
 **槽位**: M?
 **骨架**:

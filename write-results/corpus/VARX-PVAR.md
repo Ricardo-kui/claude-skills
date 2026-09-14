@@ -40,7 +40,7 @@ updated: 2026-07-20
 
 ## 主骨架
 
-参见 `write-results/SKILL.md` → 填空段落骨架 → `VARX-PVAR`。
+参见 `../SKILL.md` → 填空段落骨架 → `VARX-PVAR`。
 
 ## 证据节奏摘要
 

@@ -71,7 +71,7 @@ updated: 2026-09-05
 
 ## 主骨架
 
-参见 `write-results/SKILL.md` → 槽位骨架加载 → 本类型适用的 `references/slot-R*.md`（各 slot 文件内含 `DiD` 专用变体）。
+参见 `../SKILL.md` → 槽位骨架加载 → 本类型适用的 `references/slot-R*.md`（各 slot 文件内含 `DiD` 专用变体）。
 
 ## 证据节奏摘要
 
@@ -555,7 +555,7 @@ updated: 2026-09-05
 
 ## 反模式（zhang-idd-advertising-rejected 拒稿案例补充，2026-08-23）
 
-来源：用户稿件 "Beyond Employee Retention..."（SMJ/JAMS 两轮拒稿）对照 Moon et al. (2026, JM) 的复盘；故事卡 `story-blueprints/v4/blueprints/zhang-idd-advertising-rejected.md`。
+来源：用户稿件 "Beyond Employee Retention..."（SMJ/JAMS 两轮拒稿）对照 Moon et al. (2026, JM) 的复盘；故事卡 `../story-blueprints/v4/blueprints/zhang-idd-advertising-rejected.md`。
 
 | 反模式 | 问题 | 应改为 |
 |--------|------|--------|

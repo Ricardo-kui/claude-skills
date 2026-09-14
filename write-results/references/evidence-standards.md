@@ -32,10 +32,10 @@ Booth §7.5.1：
 
 ## 边界注
 
-- Booth 在 Ch8 补充第六标准 **relevance**——已由 soundness 层 warrant 五测试覆盖（`reasoning_soundness_protocol.md` §2），本文件不重复。
+- Booth 在 Ch8 补充第六标准 **relevance**——已由 soundness 层 warrant 五测试覆盖（`../write-theory/corpus/subprotocols/reasoning_soundness_protocol.md` §2），本文件不重复。
 - 精确度的"恰当"水平因领域而异（Booth §7.5.2: "What counts as appropriately precise differs by field"）——管理实证惯例：系数 2–3 位小数、p 值用阈值标记（* / ** / ***）或精确 p（两流派皆可，全表一致即可）。
 
-## 段落论证文法接线（Booth Ch05，`_argument-grammar.md` v1.2）
+## 段落论证文法接线（Booth Ch05，`../story-blueprints/v4/rhetoric-moves/_argument-grammar.md` v1.2）
 
 > 五问审计管**证据内容**，本节管**证据的段落组织**。单一事实源 = `../story-blueprints/v4/rhetoric-moves/_argument-grammar.md`；本节只写 Results 侧的范围划定与特有拼贴信号。
 

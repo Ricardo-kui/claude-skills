@@ -105,25 +105,28 @@ def check_registry(errors: list[str]) -> None:
                 errors.append(f"feedback record {index} has invalid prohibited pattern {pattern!r}: {exc}")
 
 
-def check_variant_counts(errors: list[str], warnings: list[str]) -> None:
-    """Reconcile `### 变体 N` heading counts with frontmatter variants_count and INDEX.md cells."""
+HARD_COUNT_FILES = ("面板数据-OLS.md", "自然实验-DiD.md")
+
+
+def check_variant_counts(errors: list[str], warnings: list[str]) -> int:
+    """Reconcile `### 变体 [0-9A-Z]+` heading counts with frontmatter variants_count and INDEX.md cells; return corpus total."""
     corpus_dir = ROOT / "corpus"
     heading_counts: dict[str, int] = {}
     for path in sorted(corpus_dir.glob("*.md")):
         if path.name == "INDEX.md":
             continue
         text = path.read_text(encoding="utf-8")
-        count = len(re.findall(r"^### 变体 \d+", text, re.MULTILINE))
+        count = len(re.findall(r"^### 变体 [0-9A-Z]+", text, re.MULTILINE))
         heading_counts[path.name] = count
         match = re.search(r"^variants_count:\s*(\d+)", text, re.MULTILINE)
         if match and int(match.group(1)) != count:
             message = f"{path.name}: variants_count={match.group(1)} but {count} '### 变体 N' headings"
-            # 面板数据-OLS 已完成 2026-09-08 计数对账，其一致性是硬断言；其余文件历史漂移仅告警，待后续专线收敛
-            (errors if path.name == "面板数据-OLS.md" else warnings).append(message)
+            # 面板数据-OLS（2026-09-08）与自然实验-DiD（2026-09 字母变体+速查表对账）的一致性为硬断言；其余文件历史漂移仅告警，待后续专线收敛
+            (errors if path.name in HARD_COUNT_FILES else warnings).append(message)
 
     index_path = corpus_dir / "INDEX.md"
     if not index_path.is_file():
-        return
+        return sum(heading_counts.values())
     index_text = index_path.read_text(encoding="utf-8")
     for name, target, declared in re.findall(
         r"^\| \[([^]]+)]\(([^)]+\.md)\) \| [^|]+ \| (\d+) \|", index_text, re.MULTILINE
@@ -133,7 +136,15 @@ def check_variant_counts(errors: list[str], warnings: list[str]) -> None:
             warnings.append(f"INDEX.md row '{name}' links to missing corpus file {target}")
         elif int(declared) != actual:
             message = f"INDEX.md row '{name}' declares {declared} variants but {target} has {actual} headings"
-            (errors if target == "面板数据-OLS.md" else warnings).append(message)
+            (errors if target in HARD_COUNT_FILES else warnings).append(message)
+
+    actual_total = sum(heading_counts.values())
+    total_match = re.search(r"^\| \*\*合计\*\* \| [^|]+ \| (\d+) \|", index_text, re.MULTILINE)
+    if not total_match:
+        errors.append("INDEX.md missing 合计 total row")
+    elif int(total_match.group(1)) != actual_total:
+        errors.append(f"INDEX.md 合计 declares {total_match.group(1)} variants but corpus has {actual_total} headings")
+    return actual_total
 
 
 def main() -> int:
@@ -157,7 +168,7 @@ def main() -> int:
                 errors.append(f"SKILL.md contains stale feedback instruction: {forbidden}")
 
     check_registry(errors)
-    check_variant_counts(errors, warnings)
+    total = check_variant_counts(errors, warnings)
     if errors:
         print("write-methods validation FAILED")
         for error in errors:
@@ -166,6 +177,7 @@ def main() -> int:
     print("write-methods validation PASSED")
     print(f"- required files: {len(REQUIRED_FILES)}")
     print("- frontmatter, workflow markers, and feedback registry are valid")
+    print(f"- variant headings total: {total}")
     if warnings:
         print(f"- variant-count warnings (non-fatal): {len(warnings)}")
         for warning in warnings:

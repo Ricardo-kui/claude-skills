@@ -1,5 +1,5 @@
 # 假设陈述句语料库
-> 论证角色：**Claim**——假设句=段落级 claim 的正式形式（形式-测量匹配见本文件决策矩阵）；填位规则见 `_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
+> 论证角色：**Claim**——假设句=段落级 claim 的正式形式（形式-测量匹配见本文件决策矩阵）；填位规则见 `../story-blueprints/v4/rhetoric-moves/_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
 
 ## 假设形式决策矩阵（Form–Measurement Match）
 

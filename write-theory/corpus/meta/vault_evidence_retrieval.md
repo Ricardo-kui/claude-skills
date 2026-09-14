@@ -1,6 +1,6 @@
 # Vault 基线检索协议（Theory）
 
-> 外置自 `write-theory/SKILL.md` Phase 1.2。执行条件：paper-state.yaml 中 `paper.vault` 节存在且至少有一个非 null 字段；无 vault 配置时静默跳过。
+> 外置自 `../../SKILL.md` Phase 1.2。执行条件：paper-state.yaml 中 `paper.vault` 节存在且至少有一个非 null 字段；无 vault 配置时静默跳过。
 
 **回退树与总纪律以 `../paper-state-protocol/references/vault-retrieval.md` 为唯一权威**——三级回退（章节-证据映射 → 作战室/全文搜索 → 静默跳过）、Brief 纪律、Section 特化总表均见该文件。本文件只登记 Theory 侧差异，不重复定义回退树。
 

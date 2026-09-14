@@ -682,7 +682,7 @@ heterogeneous mix of [variant A] and [variant B]—wedding [benefit 1] with
 
 **仍需双边论证的对照（本 carve-out 不改变这些）**:
 - E1 Step 5/7 标准 strengthen/weaken moderator：high 与 low 都是新颖理论状态、各需机制 → 双边都必须论证。
-- `moderation.md` Buffering 模板：dampening 逻辑两侧都有独立内容 → 双边都必须论证。
+- `sentences/moderation.md` Buffering 模板：dampening 逻辑两侧都有独立内容 → 双边都必须论证。
 - E9 双侧镜像调节（DesJardine）：两个角色侧（rival/target）各有完整 why chain → 不受影响。
 - Pattern 12 不对称 disposition×context（Abdurakhmonov/Ingram/Ridge 2026）：每个 moderator 对 pole-A/pole-B 分别论证 → 不受影响。
 

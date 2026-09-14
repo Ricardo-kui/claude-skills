@@ -30,6 +30,8 @@ source: Distilled by distill-introduction-exemplar from Li, Bapuji, Talluri, Sin
 
 ## 能量级
 
+> 定义见 `hooks/_index.md` §能量级
+
 **中** — 不靠反例颠覆共识，而靠"语境差异改变机制"建立张力
 
 ## 验证状态

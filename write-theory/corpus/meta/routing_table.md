@@ -47,7 +47,7 @@ version: 2.2.0
 
 ### Incommensurability 专属优先路由
 
-主 Gap 为 Incommensurability 时，先读 `../../references/incommensurability-resolution-routes.md`，提取 L0 stable reasoning kernel 后再判定 R1–R4；本表的 Gap × 贡献杠杆只作 architecture compatibility check。冲突位于 X→R1，位于 Y→R2，位于固定关系中的对立机制→R3，位于情境 W→R4。真实性门控首先只要求各研究共享理论对象或可辩护的高阶结果族，并清楚映射其下位成员；只有进入 R3/R4 的正式假设推理，才固定具体 X、Y、分析层级、时间范围与估计对象。一个项目保留一个主路由，至多一个次路由；允许低置信与 `unclassified_residual`。R1–R4 只规定必须完成的推理任务，不规定 A–G、H 数量或模型形式。
+主 Gap 为 Incommensurability 时，先读 `references/incommensurability-resolution-routes.md`，提取 L0 stable reasoning kernel 后再判定 R1–R4；本表的 Gap × 贡献杠杆只作 architecture compatibility check。冲突位于 X→R1，位于 Y→R2，位于固定关系中的对立机制→R3，位于情境 W→R4。真实性门控首先只要求各研究共享理论对象或可辩护的高阶结果族，并清楚映射其下位成员；只有进入 R3/R4 的正式假设推理，才固定具体 X、Y、分析层级、时间范围与估计对象。一个项目保留一个主路由，至多一个次路由；允许低置信与 `unclassified_residual`。R1–R4 只规定必须完成的推理任务，不规定 A–G、H 数量或模型形式。
 
 ## 二级路由：理论任务 → 子协议
 

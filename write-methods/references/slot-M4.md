@@ -1,4 +1,4 @@
-<!-- write-methods 槽位骨架 M4：由 SKILL.md「槽位骨架加载」按路由决策加载。内容为原 SKILL.md 该槽位段落骨架（通用 + 设计类型变体 + QC），未做语义修改。 -->
+<!-- write-methods 槽位骨架 M4：由 SKILL.md「槽位骨架加载」按路由决策加载。内容为原 SKILL.md 该槽位段落骨架（通用 + 设计类型变体 + QC），未做语义修改。状态词表单源：corpus/INDEX.md（ROBUST > VERIFIED > EMERGING；LEGACY-DIAGNOSTIC 保留）。 -->
 
 ### M4. 自变量 / 核心预测变量
 
@@ -13,12 +13,12 @@ Our focal independent variable, [predictor name], is measured as [operation] bas
 The treatment indicator equals one for [unit-years/participants] exposed to [event/condition] and zero otherwise. [Treatment] equals 1 for [unit-years] after [policy/event] becomes effective in [jurisdiction/group], and 0 otherwise.
 ```
 
-**处理分配稳定性补充**（DiD 可选）： 🔬 EXPERIMENTAL（2-3 篇范文）⚠️ 保守替代：省略此段
+**处理分配稳定性补充**（DiD 可选）： 🔬 EMERGING（2-3 篇范文）⚠️ 保守替代：省略此段
 ```text
 During our sample period, [percentage] of [units] changed their [treatment-relevant characteristic, e.g., headquarters location]. We use [historical/fixed] [characteristic] information to maintain consistent treatment assignment.
 ```
 
-**竞争机制预测变量变体**（机制测试中分解核心构念时）： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 M4 段落
+**竞争机制预测变量变体**（机制测试中分解核心构念时）： 🔬 EMERGING（1-2 篇范文）⚠️ 保守替代：通用 M4 段落
 ```text
 To test how [actors] resolve [uncertainty], we decompose [core construct] into [N] subgroups based on [criterion]: [variable 1], [variable 2], [variable 3], and [variable 4]. We restrict the mechanism test subsample to [criteria] to ensure sufficient variation across the subgroups. These variables correspond to [RQ/Prediction x] because they distinguish [mechanism A] versus [mechanism B].
 ```
@@ -48,7 +48,7 @@ We construct [focal exposure] from [raw trace] by [aggregation rule]. The measur
 Our focal independent variable, [predictor name], is derived from [text source, e.g., earnings call transcripts / 10-K filings / media coverage] using [method: LIWC dictionary / custom dictionary / machine-learning classifier]. We chose this source because [theoretical reason for text reflecting construct]. The dictionary includes [N] words/phrases capturing [theoretical dimension], validated by [human coding / prior literature / expert review]. To ensure convergent validity, we correlate the text-based measure with [alternative measure, e.g., survey / archival proxy]; the correlation is [value] (p [relation] [threshold]), supporting construct validity. We standardize the text score to mean zero and standard deviation one to facilitate coefficient interpretation. Because text-based measures may capture noise unrelated to [construct], we control for [general text characteristics: length / sentiment / formality] in all specifications.
 ```
 
-**同时方程变体**： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：通用 M7 段落
+**同时方程变体**： 🔬 EMERGING（1-2 篇范文）⚠️ 保守替代：通用 M7 段落
 ```text
 Equation [x] predicts [primary outcome] as a function of [focal predictor], [mechanisms], [moderators], interactions, and controls. Equations [y–z] model [mediator A] and [mediator B], allowing us to test whether [focal predictor] affects the mechanisms implied by the theory. Equation [w] predicts [downstream outcome] using [focal outcome], [focal predictor], their interaction, and value-relevant controls. We include an additional equation for [potentially endogenous choice] to account for the possibility that [anticipated need/reverse path] influences [focal predictor].
 ```

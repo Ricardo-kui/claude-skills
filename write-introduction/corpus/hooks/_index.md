@@ -5,6 +5,14 @@
 
 ---
 
+## 能量级（卡级标注，定义处）
+
+**定义**：能量级 = 单卡内 Hook/Tension 开场强度的档位标注（低/中/高），**仅在同模块内比较**——同一张卡内不同变体/句式之间的相对强弱，不构成跨模块的单调能量阶梯。跨模块（Hook→Tension→…→Contribution）叙事阶段推进的唯一源 = `corpus/storytelling/tension-escalation-protocol.md`，与本标注无关。
+
+**当前覆盖（部分）**：仅 4 张卡带此标注——`14-paired-disasters.md`、`21-dual-industry-trend.md`、`22-twin-complication.md`（hooks/）与 `18-context-generalizability.md`（tensions/）。缺标注不算违规，不改变卡的有效性或规则。
+
+---
+
 ## Pollock 类型速查
 
 | Pollock 类型 | 核心机制 | 能量 | 最佳适配 Gap |

@@ -1,6 +1,6 @@
 # 跨 Section 对齐协议（Introduction ↔ Theory）
 
-本协议定义 Introduction 和 Theory 之间必须保持一致的关键接口点。canonical source 是 `paper-state.yaml` 的 `story`；旧版 Introduction 叙事字段只能按 `../../../paper-story-contract/references/schema.md` 迁移读取。
+本协议定义 Introduction 和 Theory 之间必须保持一致的关键接口点。canonical source 是 `paper-state.yaml` 的 `story`；旧版 Introduction 叙事字段只能按 `../paper-story-contract/references/schema.md` 迁移读取。
 
 **调用方式**：write-theory 在生成任何输出前，必须执行此对齐检查并作为输出的一部分呈现。
 

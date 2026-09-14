@@ -356,4 +356,4 @@ alternatives], as these alternatives differ in the mechanisms available to gener
 - [`../subprotocols/argumentation_patterns.md`](argumentation_patterns.md)：微观动作组合
 - [`../variants/A_construct_differentiation.md`](../variants/A_construct_differentiation.md)：构念辨析型整篇结构
 
-> **使用顺序**：先查本文件确定 T1 辨析策略 → 再查 `construct_definition.md` 填充具体句式 → 再查 `argumentation_patterns.md` 组织论证动作。
+> **使用顺序**：先查本文件确定 T1 辨析策略 → 再查 `sentences/construct_definition.md` 填充具体句式 → 再查 `argumentation_patterns.md` 组织论证动作。

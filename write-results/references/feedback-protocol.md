@@ -104,7 +104,7 @@ Do not automatically rewrite corpus variants from one criticism.
 - `count = 1`: apply the rule in future generation; no corpus mutation.
 - repeated within one project: strengthen the project constraint and regression case.
 - repeated across at least two projects, or explicitly generalized by the user: inspect the relevant slot/corpus variant for ADD/EXTEND/REPLACE.
-- estimator-specific criticism may also update the legacy `usage_stats` in `_evidence_registry.yaml`, but the detailed JSON registry remains canonical.
+- estimator-specific criticism may also update the legacy `usage_stats` in `../corpus/_evidence_registry.yaml`, but the detailed JSON registry remains canonical.
 
 Any corpus mutation still requires the preview-and-confirm workflow of `distill-results-exemplar`.
 

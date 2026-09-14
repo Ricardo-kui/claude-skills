@@ -160,3 +160,7 @@ huntington-klein-causal-design/agents/
 __pycache__/
 *.pyc
 *.backup_*
+
+# Shared runtime assets (Batch 4/5/6)
+!_shared/
+!_shared/**

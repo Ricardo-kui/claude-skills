@@ -40,6 +40,8 @@ skill_pointer_check.py — 全库 skill 相对路径存在性校验（标准库�
     python skill_pointer_check.py write-theory write-results
     python skill_pointer_check.py --missing-only        # 只打印 MISSING 行
     python skill_pointer_check.py --limit 6             # 每个 skill 最多打印 N 行
+    python skill_pointer_check.py --strict              # 严格基准：其余写法按 C
+    python skill_pointer_check.py --whitelist _shared/pointer-allowlist.txt
 """
 
 from __future__ import annotations
@@ -165,19 +167,29 @@ def is_sibling_skill(seg: str) -> bool:
 
 
 def skill_root_of(md: Path) -> Path:
-    """向上找到最近的含 SKILL.md 的祖先目录；找不到返回 ROOT。"""
+    """向上找到最近的含 SKILL.md 的祖先目录。
+
+    找不到时回退到「ROOT 直属子目录」作为 skill 目录（覆盖 story-blueprints
+    这类无 SKILL.md 的共享资源目录），再回退到 ROOT。
+    """
     cur = md.parent
+    top = None
     while cur != cur.parent:
         if (cur / "SKILL.md").is_file():
             return cur
+        if cur.parent == ROOT:
+            top = cur
         if cur == ROOT:
             break
         cur = cur.parent
-    return ROOT
+    return top or ROOT
 
 
-def classify(target: str) -> str | None:
-    """按写法判定命中的基准：'A' / 'B' / 'C' / None（三基准都不成立）。"""
+def classify(target: str, strict: bool = False) -> str | None:
+    """按写法判定命中的基准：'A' / 'B' / 'C' / None（三基准都不成立）。
+
+    strict=True 时把「其余」写法按 C（skill 目录）解析，不再产生 None。
+    """
     if target.startswith("../"):
         seg = target[3:].split("/", 1)[0]
         if is_sibling_skill(seg):
@@ -192,7 +204,7 @@ def classify(target: str) -> str | None:
         return "B"
     if seg in SKILL_PREFIXES:
         return "C"
-    return None
+    return "C" if strict else None
 
 
 def resolve(rule: str, target: str, md: Path, skill_root: Path) -> Path:
@@ -201,6 +213,28 @@ def resolve(rule: str, target: str, md: Path, skill_root: Path) -> Path:
     if rule == "B":
         return (skill_root / "corpus" / target).resolve()
     return (skill_root / target).resolve()
+
+
+def load_whitelist(path: str | None) -> set[str]:
+    """读取白名单：每行 `target | 理由`；忽略空行与 `#` 注释。
+
+    key 取 ` | ` 之前的精确 target 串，与 MISSING 行的 target 做等值匹配。
+    """
+    if not path:
+        return set()
+    keys: set[str] = set()
+    try:
+        text = Path(path).read_text(encoding="utf-8")
+    except OSError:
+        return keys
+    for line in text.splitlines():
+        s = line.strip()
+        if not s or s.startswith("#"):
+            continue
+        key = s.split(" | ", 1)[0].strip()
+        if key:
+            keys.add(key)
+    return keys
 
 
 def extract(text: str):
@@ -249,7 +283,10 @@ def main(argv=None) -> int:
     ap.add_argument("skills", nargs="*", help="限定 skill 目录名（默认全部含 SKILL.md 的目录）")
     ap.add_argument("--missing-only", action="store_true", help="只打印 MISSING 行")
     ap.add_argument("--limit", type=int, default=0, help="每个 skill 最多打印 N 行（0=全部）")
+    ap.add_argument("--strict", action="store_true", help="严格基准：其余写法按 C（skill 目录）解析")
+    ap.add_argument("--whitelist", default=None, help="白名单文件（每行 `target | 理由`）")
     args = ap.parse_args(argv)
+    whitelist = load_whitelist(args.whitelist)
 
     if args.skills:
         targets = []
@@ -261,7 +298,7 @@ def main(argv=None) -> int:
     else:
         targets = find_skills()
 
-    checked = missing = 0
+    checked = missing = whitelisted = 0
     rules_ok = {"A": 0, "B": 0, "C": 0}
     no_baseline = 0
     file_absent = 0
@@ -274,22 +311,27 @@ def main(argv=None) -> int:
                 text = md.read_text(encoding="utf-8", errors="replace")
             skill_root = skill_root_of(md)
             for line_no, target in extract(text):
-                rule = classify(target)
+                rule = classify(target, args.strict)
                 checked += 1
                 if rule is None:
-                    missing += 1
-                    no_baseline += 1
-                    status, path = "MISSING", None
+                    status, path, bucket = "MISSING", None, "no_baseline"
                 else:
                     path = resolve(rule, target, md, skill_root)
                     if path.exists():
                         rules_ok[rule] += 1
-                        status = "OK"
+                        status, bucket = "OK", None
                     else:
-                        missing += 1
-                        file_absent += 1
-                        status = "MISSING"
-                if status == "OK" and args.missing_only:
+                        status, path, bucket = "MISSING", path, "file_absent"
+                if status == "MISSING" and target in whitelist:
+                    status, path, bucket = "WHITELIST", None, None
+                    whitelisted += 1
+                if bucket == "no_baseline":
+                    missing += 1
+                    no_baseline += 1
+                elif bucket == "file_absent":
+                    missing += 1
+                    file_absent += 1
+                if args.missing_only and status in ("OK", "WHITELIST"):
                     continue
                 rel = md.resolve().relative_to(ROOT) if ROOT in md.resolve().parents else md
                 rel_s = str(rel).replace("\\", "/")
@@ -308,7 +350,7 @@ def main(argv=None) -> int:
     print("-" * 72)
     print(
         f"checked={checked} resolvedA={rules_ok['A']} resolvedB={rules_ok['B']} "
-        f"resolvedC={rules_ok['C']} missing={missing}"
+        f"resolvedC={rules_ok['C']} missing={missing} whitelisted={whitelisted}"
     )
     print(f"  unresolved_no_baseline={no_baseline} unresolved_missing_file={file_absent}")
     return 1 if missing else 0

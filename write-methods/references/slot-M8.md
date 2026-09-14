@@ -1,4 +1,4 @@
-<!-- write-methods 槽位骨架 M8：由 SKILL.md「槽位骨架加载」按路由决策加载。内容为原 SKILL.md 该槽位段落骨架（通用 + 设计类型变体 + QC），未做语义修改。 -->
+<!-- write-methods 槽位骨架 M8：由 SKILL.md「槽位骨架加载」按路由决策加载。内容为原 SKILL.md 该槽位段落骨架（通用 + 设计类型变体 + QC），未做语义修改。状态词表单源：corpus/INDEX.md（ROBUST > VERIFIED > EMERGING；LEGACY-DIAGNOSTIC 保留）。 -->
 
 ### M8. 识别策略 / 效度 / 诊断检验
 
@@ -15,7 +15,7 @@ To address concerns about [threat], we [design feature/test]. This check assesse
 Our identification strategy relies on [source of variation]. [Shock/event/policy] creates variation in [treatment] that is plausibly exogenous to [outcome] because [reason]. The key identifying assumption is that [treated and control units] would have followed similar trends absent [treatment]. We assess this assumption in the Results section using [event-study/leads-lags] specifications. We first estimate a parsimonious specification because [controls] may be affected by [treatment].
 ```
 
-**固定效应局限诚实说明变体**（hoffmann_cheong_phan_zurbruegg2024 型 — 二元 rare outcome 下无法加入 firm FE）： 🔬 EXPERIMENTAL（1 篇范文，2026-08-05 重蒸馏）⚠️ 保守替代：省略或脚注提及
+**固定效应局限诚实说明变体**（hoffmann_cheong_phan_zurbruegg2024 型 — 二元 rare outcome 下无法加入 firm FE）： 🔬 EMERGING（1 篇范文，2026-08-05 重蒸馏）⚠️ 保守替代：省略或脚注提及
 ```text
 It is not possible to include [unit] fixed effects given how our data are structured. Our sample includes [units] that never experience the binary outcome alongside [units] that do, leaving no within-[unit] variation in the dependent variable for the former group; [unit] fixed effects would therefore be perfectly collinear with the outcome. Consistent with prior work in comparable settings ([citation]), we instead include year fixed effects to absorb common temporal shocks and industry fixed effects to absorb time-invariant industry heterogeneity — for example, [industry-specific confound: e.g., product types with different baseline hazard of the outcome]. We further control for observable time-varying [unit] characteristics, including [named controls], that may correlate with both [treatment] and [outcome]. While this approach does not eliminate all [unit]-level confounding, the staggered adoption design and these controls provide meaningful mitigation.
 ```
@@ -27,7 +27,7 @@ It is not possible to include [unit] fixed effects given how our data are struct
 - 必须给出 industry FE 的 because（如产品类型/监管强度差异），不能只说 "we use industry FE"
 - 不能声称 "we fully address endogeneity" — 使用 "meaningful mitigation" / "increase confidence" 等诚实措辞
 
-**Staggered DiD 识别栈变体**（hoffmann_cheong_phan_zurbruegg2024 型 — model-free → 机制检验 → 平行趋势 → 安慰剂）： 🔬 EXPERIMENTAL（1 篇范文，2026-08-05 重蒸馏）⚠️ 保守替代：自然实验/DiD 变体
+**Staggered DiD 识别栈变体**（hoffmann_cheong_phan_zurbruegg2024 型 — model-free → 机制检验 → 平行趋势 → 安慰剂）： 🔬 EMERGING（1 篇范文，2026-08-05 重蒸馏）⚠️ 保守替代：自然实验/DiD 变体
 ```text
 We follow [Goldfarb, Tucker & Wang 2022] guidelines for quasi-experiments in marketing. Our identification relies on staggered adoption of [law/policy] across [jurisdictions], creating variation in [treatment construct] while [assignment rule: e.g., incorporation state] determines exposure.
 
@@ -43,12 +43,12 @@ Finally, while adoption itself may not be random, prior work shows that adoption
 We also conduct permutation tests by randomly assigning [treatment status/timing] across [N] iterations to assess whether [unobserved characteristics] could drive our results.
 ```
 
-**内生性/控制函数变体**： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：M8 通用段落
+**内生性/控制函数变体**： 🔬 EMERGING（1-2 篇范文）⚠️ 保守替代：M8 通用段落
 ```text
 Because [timing/choice] may be endogenously chosen in the [outcome] model, we use a control-function approach: first estimate [timing model], then include the first-stage residual in the [outcome model]. [Variable] identifies the first stage because it should affect [timing] but not [second-stage outcome], since [theoretical reason].
 ```
 
-**测量局限辩护：披露阈值/左删失变体**（当数据存在报告阈值或下限堆积时）： ✓ STANDARD
+**测量局限辩护：披露阈值/左删失变体**（当数据存在报告阈值或下限堆积时）： ✓ VERIFIED
 ```text
 [Source] reports [measure] only when [threshold/rule], so values below [threshold] appear as zero or are not observed. This rule could introduce measurement error if [firms/actors] cluster just below the threshold or if the threshold varies systematically with [confound]. We examine the distribution of observed [measure] values and find no evidence of bunching around [threshold]; [percentage]% of positive observations exceed [multiple of threshold], and the mean and median positive values ([mean], [median]) are well above the reporting floor. We therefore expect any attenuation from threshold-based measurement error to be limited, and if anything it would bias our estimates toward zero, making significant results harder to obtain.
 ```
@@ -74,12 +74,12 @@ The sample, method, and analyses for Study [x] were preregistered at [repository
 A threat to our IV strategy is that [instrument] may affect [outcome] through channels other than [endogenous predictor]. We address this concern in three ways. First, we argue theoretically that [instrument] influences [outcome] only through [predictor] because [theoretical mechanism / institutional feature]. Second, we include [control for alternative channel] in the second stage to absorb [potential violation path]. Third, [IF overidentified: we report the Sargan / Hansen J overidentification test ([value], p = [value]), which does not reject the null that all instruments are valid, strengthening confidence in the exclusion restriction. IF just-identified: because the model is just-identified (one instrument for one endogenous variable), overidentification tests are infeasible. We therefore rely on theoretical arguments for the exclusion restriction and conduct placebo tests / sensitivity analyses to assess robustness.]
 ```
 
-**同伴效应/网络效应 falsification 变体**： 🔬 EXPERIMENTAL（1 篇范文）⚠️ 保守替代：M8 通用段落
+**同伴效应/网络效应 falsification 变体**： 🔬 EMERGING（1 篇范文）⚠️ 保守替代：M8 通用段落
 ```text
 Because [network-based construct] may capture common shocks or sorting rather than true peer influence, we conduct falsification tests. We re-estimate our models using [placebo network: random peers / future peers / peers from unrelated network layer] as the independent variable. If the main effect is driven by common shocks, the placebo network should also yield a significant coefficient. The coefficient on [placebo network] is [not significant / opposite direction / much smaller], suggesting that the [focal network] effect is not an artifact of [common shock / sorting]. We also test [alternative mechanism] by [test description]; the result is [status], further distinguishing [theorized mechanism] from [alternative].
 ```
 
-**匹配DiD 平行趋势与重叠支撑变体**： 🔬 EXPERIMENTAL（1-2 篇范文）⚠️ 保守替代：M8 自然实验/DiD 变体
+**匹配DiD 平行趋势与重叠支撑变体**： 🔬 EMERGING（1-2 篇范文）⚠️ 保守替代：M8 自然实验/DiD 变体
 ```text
 The key identifying assumption is that [treated] and [matched control] units would have followed parallel trends absent [treatment]. We assess this assumption using [event-study / leads-and-lags] specifications in which we include [lead/lag indicators] relative to [event]. The pre-treatment coefficients are [individually / jointly] insignificant ([test statistic] = [value], p = [value]), suggesting no detectable pre-treatment divergence. We also verify overlap by plotting [propensity-score distributions / covariate balance] before and after matching; the [common support region] covers [percentage]% of the sample, and no observations lie outside the [calipersize] caliper.
 ```

@@ -1,5 +1,5 @@
 # 机制推演句语料库
-> 论证角色：**Reason**——推理 move 材料（一个 move=一次可质疑的推理转换；引用是 move 的证据，不替代 move）；填位规则见 `_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
+> 论证角色：**Reason**——推理 move 材料（一个 move=一次可质疑的推理转换；引用是 move 的证据，不替代 move）；填位规则见 `../story-blueprints/v4/rhetoric-moves/_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
 
 > **导航 TOC**（本文件 1800+ 行 / 43 节，按需跳转，不要线性通读）。按机制结构类型分组；括注为锚定范文。
 

@@ -19,13 +19,13 @@
 
 | 变体名 | variant 文件 |
 |--------|-------------|
-| A 构念辨析型 | `A_construct_differentiation.md` |
-| B 机制推演型 | `B_mechanism_elaboration.md` |
-| C 假设树型 | `C_hypothesis_tree.md` |
-| D 质性过程理论型 | `D_process_theory.md` |
-| E 调节效应型 | `E_moderation.md` |
-| F 竞争假设型 | `F_competing_hypotheses.md` |
-| G 辩证对立型 | `G_dialectical_opposition.md` |
+| A 构念辨析型 | `corpus/variants/A_construct_differentiation.md` |
+| B 机制推演型 | `corpus/variants/B_mechanism_elaboration.md` |
+| C 假设树型 | `corpus/variants/C_hypothesis_tree.md` |
+| D 质性过程理论型 | `corpus/variants/D_process_theory.md` |
+| E 调节效应型 | `corpus/variants/E_moderation.md` |
+| F 竞争假设型 | `corpus/variants/F_competing_hypotheses.md` |
+| G 辩证对立型 | `corpus/variants/G_dialectical_opposition.md` |
 
 是否确认此路由？或需调整为其他变体？
 ```

@@ -158,7 +158,7 @@ distinguishing this cross-level direct effect from the cross-level interaction e
 ```
 
 **原文锚点（2017 平行小节开场；待补 2017 全文句）**:
-> 待补：kalaignanam2017 四个 moderator 小节的统一开场句。2013 的 shared-product-assets / prior-brand-quality 锚点已移出 E3——2013 只有两个调节、且 H4 为非定向，不是本变体的 ≥3 平行嵌入结构。见 `hypothesis_forms.md` 非定向调节句与 `moderator_selection_frameworks.md` 的 transfer vs attention enabler。
+> 待补：kalaignanam2017 四个 moderator 小节的统一开场句。2013 的 shared-product-assets / prior-brand-quality 锚点已移出 E3——2013 只有两个调节、且 H4 为非定向，不是本变体的 ≥3 平行嵌入结构。见 `sentences/hypothesis_forms.md` 非定向调节句与 `subprotocols/moderator_selection_frameworks.md` 的 transfer vs attention enabler。
 
 **收敛到假设**:
 ```
@@ -166,7 +166,7 @@ distinguishing this cross-level direct effect from the cross-level interaction e
 ```
 
 **原文锚点（假设收敛）**:
-> 待补：kalaignanam2017 定向调节假设句。2013 的 "Given the presence of equivocal arguments... we propose a nondirectional hypothesis" 不是 E3 收敛句——那是单一非定向调节，见 `hypothesis_forms.md`。
+> 待补：kalaignanam2017 定向调节假设句。2013 的 "Given the presence of equivocal arguments... we propose a nondirectional hypothesis" 不是 E3 收敛句——那是单一非定向调节，见 `sentences/hypothesis_forms.md`。
 
 **语料锚定**:
 - kalaignanam2017 (JM) — 4 个 moderator（technological complexity, NPD capability×2, PLAF），每个 moderator 一个小节，结构完全平行
@@ -751,7 +751,7 @@ H2. The [penalty] decreases as the [feature 1] of [actor]'s [carrier] increases.
 **调用语料**:
 - `corpus/sentences/mechanism_chain.md`（每调节小节的学科证据→机制→应用链）
 - `corpus/subprotocols/hypothesis_derivation_patterns.md`（调节推导句式）
-- 上游联动: `write-introduction/corpus/theory-lens/02-dual-theory-layered.md` 变体B（同论文：lens 的 N:1 映射在 Theory 兑现为 N 个调节小节）——taxonomy 在 lens 预告、在 theory 兑现，两处 1:1 对齐是强一致信号
+- 上游联动: `../write-introduction/corpus/theory-lens/02-dual-theory-layered.md` 变体B（同论文：lens 的 N:1 映射在 Theory 兑现为 N 个调节小节）——taxonomy 在 lens 预告、在 theory 兑现，两处 1:1 对齐是强一致信号
 
 ---
 
@@ -790,8 +790,8 @@ H2: There will be a [positive/negative] interaction effect of [trait] and [cue] 
 **关键特征**:
 - **双表现型同一连续谱（签名节拍）**: 默认表现型与对立表现型必须同属一个行为/动机连续谱的两端（avoidance↔aggression、flight↔fight、accommodation↔contention）。"on the opposite end of the continuum" 是签名句——它把两个看似无关的行为绑在同一理论对象上
 - **cue = 默认表现型失效的证据**: moderator 不是任意情境变量，而是"证明默认策略无效"的线索。这给了 moderation 一个理论必然性：cue 存在 → 默认策略被证伪 → 切换
-- **机制切换（manifestation-switch）≠ 机制削弱（buffering）**: buffering 弱化同一机制的成本/风险基础；本变体的 cue 激活的是**对立机制/表现型**，能把基线方向整个覆盖（negative→positive）。与 `moderation.md` 的 Mitigation via Manifestation-Switch 句式配套
-- **moderation 只论 high（activation）侧**: low-cue 态即主效应已论证的默认表现型基线——双边覆盖由"主效应基线（low 态）+ high 态完整机制论证"满足，不强制冗余 low 段。这对应 `bilateral_argumentation_templates.md` 的 cue/activation 条件化 carve-out（硬约束 #11 例外）
+- **机制切换（manifestation-switch）≠ 机制削弱（buffering）**: buffering 弱化同一机制的成本/风险基础；本变体的 cue 激活的是**对立机制/表现型**，能把基线方向整个覆盖（negative→positive）。与 `sentences/moderation.md` 的 Mitigation via Manifestation-Switch 句式配套
+- **moderation 只论 high（activation）侧**: low-cue 态即主效应已论证的默认表现型基线——双边覆盖由"主效应基线（low 态）+ high 态完整机制论证"满足，不强制冗余 low 段。这对应 `subprotocols/bilateral_argumentation_templates.md` 的 cue/activation 条件化 carve-out（硬约束 #11 例外）
 - **主效应段先钉默认表现型**: H1 必须把默认表现型论证充分（含 hyper-vigilance 的扫描/归因两步），moderation 段才能只说"cue 证伪了它"
 
 **与近邻变体判别**:
@@ -802,7 +802,7 @@ H2: There will be a [positive/negative] interaction effect of [trait] and [cue] 
 - vs **E10（taxonomy N 平行缓解）**: E10 的 N 个缓解调节由跨学科框架 1:1 驱动、统一透镜；本变体是单一 trait-relevant cue、无 taxonomy 框架
 
 **与相邻子协议判别**:
-- vs `bilateral_argumentation_templates.md` Pattern 12（Asymmetric Disposition×Context Moderation，Abdurakhmonov/Ingram/Ridge 2026）：同一研究纲领（Ridge 合著者），但 Pattern 12 是"disposition×context 各 moderator 经**不对称机制削弱主效应**（dampen-and-maintain / floor+ceiling / equilibrium lock-in）"，多个 moderator 都指向削弱；本变体是 cue **切换表现型/方向**（可覆盖主效应），且 cue 是特质相关线索而非一般情境。区分判据：若所有 moderator 都是削弱主效应→Pattern 12；若 moderator 激活对立表现型→E11
+- vs `subprotocols/bilateral_argumentation_templates.md` Pattern 12（Asymmetric Disposition×Context Moderation，Abdurakhmonov/Ingram/Ridge 2026）：同一研究纲领（Ridge 合著者），但 Pattern 12 是"disposition×context 各 moderator 经**不对称机制削弱主效应**（dampen-and-maintain / floor+ceiling / equilibrium lock-in）"，多个 moderator 都指向削弱；本变体是 cue **切换表现型/方向**（可覆盖主效应），且 cue 是特质相关线索而非一般情境。区分判据：若所有 moderator 都是削弱主效应→Pattern 12；若 moderator 激活对立表现型→E11
 
 **反模式**:
 - 把 cue 写成一般 buffering moderator（"weakens the negative relationship"）→ 丢失机制切换的理论引擎；应明确"激活对立表现型"
@@ -817,7 +817,7 @@ H2: There will be a [positive/negative] interaction effect of [trait] and [cue] 
 - `corpus/sentences/moderation.md`（Mitigation via Manifestation-Switch 假设句式；与 Buffering 判别）
 - `corpus/sentences/mechanism_chain.md`（Threat-Processing Cascade：扫描→归因→安全行为 的认知链）
 - `corpus/subprotocols/bilateral_argumentation_templates.md`（cue/activation 条件化 carve-out：双边覆盖由主效应基线 + high 态满足）
-- 上游联动: `write-introduction/corpus/theory-lens/`（upper echelons 透镜在 Intro 预告特质→行为，Theory 兑现默认表现型→cue 切换）
+- 上游联动: `../write-introduction/corpus/theory-lens/`（upper echelons 透镜在 Intro 预告特质→行为，Theory 兑现默认表现型→cue 切换）
 
 
 ### 变体 B：事件属性切分的双边调节对（Event-Attribute Split Bilateral Moderation Pair，ball_2018 型）

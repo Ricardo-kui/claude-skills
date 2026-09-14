@@ -68,7 +68,7 @@
 
 **与 [`../sentences/mechanism_chain.md`](../sentences/mechanism_chain.md)「替代机制排除骨架」的关系**：那是提出中介**之后**的排他性句法（写作层）；本门控是承诺机制**之前**的取舍纪律（设计层）。先过门控，再用排除骨架书写。
 
-**与 Outer Limits 的关系**：`golden-biddle-locke-four-moves.md` §Outer Limits 约束你**攻击文献**时不得稻草人；本门控约束你**建设自己**时不得装饰。两者是同一诚实纪律的两个方向。
+**与 Outer Limits 的关系**：`../diagnose-introduction/references/golden-biddle-locke-four-moves.md` §Outer Limits 约束你**攻击文献**时不得稻草人；本门控约束你**建设自己**时不得装饰。两者是同一诚实纪律的两个方向。
 
 ---
 
@@ -151,7 +151,7 @@ Phase 4 审计 4 复核所有卡片的处置列是否兑现。
 
 判断标准（读 aloud 测试）：把推导段朗读出来，如果听起来像**作者在回答想象中的审稿人**而不是**作者在向同行讲一个理论故事**，就是防火墙被击穿。
 
-**与 §6.2 的分工**：本节管协议层泄漏；一般性防御措辞（负向自我设限 "This paper does not claim..."、hedge 堆叠、caveat 散射到高影响位置）的识别与转换句式库见 [`../../../write-introduction/corpus/storytelling/prose-craft-checklist.md`](../../../write-introduction/corpus/storytelling/prose-craft-checklist.md) §6.2——其"保留防守实质、删除防御姿态"原则与本节铁律 2 是同一校准。
+**与 §6.2 的分工**：本节管协议层泄漏；一般性防御措辞（负向自我设限 "This paper does not claim..."、hedge 堆叠、caveat 散射到高影响位置）的识别与转换句式库见 [`../write-introduction/corpus/storytelling/prose-craft-checklist.md`](../write-introduction/corpus/storytelling/prose-craft-checklist.md) §6.2——其"保留防守实质、删除防御姿态"原则与本节铁律 2 是同一校准。
 
 ---
 
@@ -163,8 +163,8 @@ Phase 4 审计时的快速扫描清单。G&L 的 15 条 fallacy 中，大多数�
 |------|-----------|------|---------|
 | **False analogy（错误类比）** | 从经济学/心理学/生物学借机制或隐喻，未检验组织情境适用性 | 类比的两侧在**机制相关维度**上真的相似吗？还是只有表面相似？ | 本协议 §4 Methodological Warrants 行（"Yes, we can analogize X to Y, but not if …"）——借用时必须在 Soundness Card 写出限定条件 |
 | **Fallacy of division（分割谬误）** | 行业/公司层结论直接推广到团队/个人（或反向的合成谬误）——多层研究高频病 | 该前提成立的层次与 claim 的层次是否一致？跨层桥接句在哪里？ | 本协议 §1–2：[S] 前提层次桥接 = 次弱标记，需单独防守；方法侧由 methods-review 的多层对齐检查承接 |
-| **Either-or（虚假二元）** | 把文献描绘成"完全 A vs 完全 B"两个极端，再推出"综合/调和"贡献，忽略第三立场 | 中间立场真的不存在吗？gap 是否是人造二元？ | **生成侧**（gap 设定）由 `../../../research-gap-diagnosis/SKILL.md` Part IV §2 探针处理；**理论侧**自查：若你的假设推导依赖"两派必有一错"，先确认第三解释不可能 |
-| **Straw man（稻草人）** | 把前人简化成"完全忽视 X"以衬托"本文首次考虑 X" | 被批评的立场是否有具体作者/文本锚点，且按满强度重述？ | 已由 GBL Outer Limits（`golden-biddle-locke-four-moves.md`）与本协议 §3 处理，不重复 |
+| **Either-or（虚假二元）** | 把文献描绘成"完全 A vs 完全 B"两个极端，再推出"综合/调和"贡献，忽略第三立场 | 中间立场真的不存在吗？gap 是否是人造二元？ | **生成侧**（gap 设定）由 `../research-gap-diagnosis/SKILL.md` Part IV §2 探针处理；**理论侧**自查：若你的假设推导依赖"两派必有一错"，先确认第三解释不可能 |
+| **Straw man（稻草人）** | 把前人简化成"完全忽视 X"以衬托"本文首次考虑 X" | 被批评的立场是否有具体作者/文本锚点，且按满强度重述？ | 已由 GBL Outer Limits（`../diagnose-introduction/references/golden-biddle-locke-four-moves.md`）与本协议 §3 处理，不重复 |
 | **Sweeping generalization（过度概括）** | 单个显著结果被写成"改变了我们对 X 的理解" | claim 的范围词（all/always/proves）是否超出证据可支撑范围？ | 已由 Booth overclaiming blacklist（theory-review Step 3 相邻层）与 prose-craft-checklist §6.1 处理，不重复 |
 | **Confusing cause and effect（因果混淆）** | 相关当因果——理论段把实证共变写成机制断言 | 该 [E] 前提的原始研究是否支持因果读法？ | 本协议 §1 [E] 前提边界检查 + 硬证据规则（§5） |
 
@@ -198,4 +198,4 @@ Phase 4 审计时的快速扫描清单。G&L 的 15 条 fallacy 中，大多数�
 - [`../sentences/mechanism_chain.md`](../sentences/mechanism_chain.md)：替代机制排除的**句法**（事后书写），本文件 §3 是门控（事前取舍）
 - [`../sentences/acknowledgment_response.md`](../sentences/acknowledgment_response.md)：本协议 §4 处置 4（承认但不回应；三姿态句式见该文件 §2.3）与就地回应异议的**句式库**——四类异议 × 承认/回应标记词 × 位置安排
 - [`evidence_patterns.md`](evidence_patterns.md)：Warrant 的证据类型与引用句式；本文件 §1 决定该前提**该不该用、用什么类型防守**，§9 管证据质量本身过不过关
-- [`../../../diagnose-introduction/references/golden-biddle-locke-four-moves.md`](../../../diagnose-introduction/references/golden-biddle-locke-four-moves.md) §Outer Limits：攻击文献的诚实纪律；本文件 §3–4 是建设自己的同一纪律
+- [`../diagnose-introduction/references/golden-biddle-locke-four-moves.md`](../diagnose-introduction/references/golden-biddle-locke-four-moves.md) §Outer Limits：攻击文献的诚实纪律；本文件 §3–4 是建设自己的同一纪律

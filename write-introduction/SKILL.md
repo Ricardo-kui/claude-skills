@@ -46,7 +46,7 @@ when_to_use: "写、规划、重写或改稿引言时使用（含不够像范文
 ## Phase 2: 路由
 
 1. **大纲产出（O1–O3）**：按 `references/outline-protocol.md`（leading word「大纲」的唯一权威定义处）执行 O1 取材 / O2 合成 / O3 登记，产出四列大纲表。本步骤是原「功能序列」的产出方式。
-2. 读 `corpus/_routing_tables.yaml` + `_evidence_registry.yaml`（按 gap_distribution 过滤）：主 Gap 决定结构复杂度（4-9 段）、Hook/Tension 候选与能量级（作为 O2 的能量与复杂度输入）。
+2. 读 `corpus/_routing_tables.yaml` + `_evidence_registry.yaml`（按 gap_distribution 过滤）：主 Gap 决定结构复杂度（4-9 段）与 Hook/Tension 候选（作为 O2 的复杂度与结构输入）。
 3. Incommensurability：先读 `references/incommensurability-introduction-routing.md`（真实性门控 + L0-L3 抽象 + R1-R4），再按冲突位置（X/Y/机制/情境）选路线；同一 route 写入 P3 诊断、Theory Lens、Preview、Contribution 与 paper-state.yaml。
 4. 证据分档：EMERGING（单源）不作默认推荐；采用时必须标注"单篇来源"并给 VERIFIED/ROBUST 替代。
 5. **开篇功能合同**（先定功能，再编号，保留为功能约束，大纲按本约束编排，见 `references/outline-protocol.md` O2 第 5 条）：前三单元内完成——①有后果的张力（说明问题给理论/决策制造什么 trouble）；②可识别的学术对话（受众已知什么、现有解释预测什么）；③诊断性 problematization（遗漏/误置如何损害预测与边界 + 回应方向）。单元可合并/换序；进入 Theory Lens 前须三项齐全。合并时一个段落只有一个**主导修辞功能**，段内仍 Point → Support/Warrant → Link（模块合并不等于句子拼接）。

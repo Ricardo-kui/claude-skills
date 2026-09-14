@@ -1,6 +1,6 @@
 # paper-state.yaml 输出片段（Theory → 下游）
 
-> 外置自 `write-theory/SKILL.md` 下游接口节。
+> 外置自 `../../SKILL.md` 下游接口节。
 
 Theory 骨架输出末尾自动附加以下片段；用户复制到项目 `paper-state.yaml` 的 `theory:` 节下，供 write-methods Phase 1 和 write-results Phase 0 自动消费：
 
