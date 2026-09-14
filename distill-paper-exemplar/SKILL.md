@@ -101,6 +101,9 @@ when_to_use: "用户给一篇完整论文要求整篇蒸馏/整篇学习时；�
    `corpus_writeback.py` 执行。**PDM 根的一切变更经 `pdm_tool.py` 命令完成**
    （merge-section / set-gate / merge-cross / set-story / set-paper / fail-section，
    单写者表见 references/pdm-schema.md v1.1 附录；手写 EOF 改根 = 违约）。
+   呈审与 gate 迁移**自动落账 fitness 台账**（gate① 逐项接受事件 + 快照存档，
+   零额外动作；报告 `py scripts/fitness_report.py report`——接受率/检索命中/
+   band 实测/剪裁候选，只报不改）。
    单节蒸馏不受此限，仍随产随审。
    主循环**只汇总呈审，不代用户确认**；`--auto-write` 时跳过呈审逐节直写。
    **查漏补缺重蒸馏默认 `--auto-write`**：同一论文已有旧蒸馏痕迹

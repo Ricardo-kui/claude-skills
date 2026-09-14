@@ -15,7 +15,7 @@
 
 - 单篇论文（用户明确指定）不拒绝，但必须输出带判定。
 - 批量模式按带排序，优先处理 HIGH 档。
-- 频繁使用且好用的变体提升路由权重；语料不因使用频率淘汰（registry `non_signals`）。
+- 频繁使用且好用的变体提升路由权重；语料不因使用频率淘汰（registry `non_signals`）。权重提升的实测数据源 = fitness 台账（`py ../distill-paper-exemplar/scripts/fitness_report.py report`，2026-09-14 上线）：v1 只报告 band×使用矩阵与检索命中，**不自动调权**——调权仍走人裁。
 - 判定数据源按节而异：introduction 查 `corpus_query.py index`，theory 查 `routing`，
   methods/results 查 `registry`——命令与关键词见各节 SKILL.md 的选材 Gate，本文件不复述。
 

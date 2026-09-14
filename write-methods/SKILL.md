@@ -115,6 +115,8 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 
 用户对 Methods 产出提出明确批评、事实纠正、章节边界调整、禁用表达、语态基准或旧建议作废声明时，读取 `references/feedback-protocol.md`（完整协议）；**先修正文稿，不以"已登记"代替改写**。双 registry 分工唯一源：`../story-blueprints/v4/rhetoric-moves/_feedback-registries.md`——本 skill 双轨全接：R1 经 `scripts/record_feedback.py` 将本轮批评及现稿修订记录中的明确裁定规范化为可执行规则（scope=`skill | project | section | design_type`，新裁定覆盖旧建议记 `supersedes`），下一次 revision 在生成前加载匹配的 active rules；R2 仅当批评确实指向某一设计类型变体时汇总聚合质量信号；项目规则不得污染其他论文。
 
+每次成文（含无批评的常规交付）另做**消耗登记**（best-effort，失败不阻塞交付）：`py ../distill-paper-exemplar/scripts/fitness_ledger.py log-consumption`（stdin JSON：`{"skill": "write-methods", "section": "methods", "project": "<项目>", "corpus_files": […], "variants": ["<!-- wb:citekey:item -->"], "blueprint_cards": […], "note": ""}`）——fitness 台账策展数据面；漏登可接受，不重登。
+
 ## 下游接口
 
 - `/write-results` — 使用本骨架的变量名、模型规格和 M10 预告作为 Results 报告的基准；经 paper-state.yaml 消费 `methods.design_type`、`methods.estimator_family`、`methods.variables`、`methods.hypothesis_variable_map`，自动选择结果类型和构建假设-结果对齐表

@@ -85,6 +85,8 @@ when_to_use: "写、规划或重写引言时使用；标题+Abstract+promise 前
 3. 期刊适配：用户提目标期刊时读 `references/journal-fit.md`（期刊差异优先于通用规则）。
 4. 措辞润色（默认执行；blocking 只出骨架时跳过）：按句位查语料库——Hook/human face → `storytelling/prose-craft-checklist.md` §0/§5；批判措辞 → `phrasebank/critique-phrases.md`；hedging → `phrasebank/hedging-strength.md`；过渡 → `transitions/` + `micro-templates/transition-signals.md`；中心论点定位 → `micro-templates/thesis-models.md`；五病 → `../pollock-qc/references/prose-pathology.md`；人设 → `storytelling/authorial-persona.md`；因果声明 → `../write-methods/corpus/micro-templates/causal-hedging.md`。纪律：不改骨架占位；共用纪律见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-*。
 
+5. 消耗登记（best-effort，失败不阻塞交付）：成文后调 `py ../distill-paper-exemplar/scripts/fitness_ledger.py log-consumption`（stdin JSON：`{"skill": "write-introduction", "section": "introduction", "project": "<项目>", "corpus_files": ["<实际读过的 corpus 文件>"], "variants": ["<!-- wb:citekey:item -->"], "blueprint_cards": ["<实际采用的蓝图卡 id>"], "note": ""}`）——fitness 台账策展数据面（检索命中率、从未被检索变体），漏登可接受，不重登。
+
 **完成判据**：质量门全过；润色纪律满足；无未修复的 🔴/🟡 标记。
 
 ## 输出合同

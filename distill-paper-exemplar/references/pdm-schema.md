@@ -218,6 +218,7 @@ v1.0 正文保持原样作历史记录；本附录是现行契约。文件内 `p
 | `sections/<s>.json`、`feedback/*` | L1 子代理（根文件只读） |
 | writeback plan | `corpus_precheck.py`（调用时显式 `--out writeback_plan.<s>.yaml`；其默认名 `<candidates>.plan.yaml` 与本文档命名分叉，以本文档为准，pdm_tool 发现策略另作兜底） |
 | `write-*/corpus` + registry | `corpus_writeback.py` + `rebuild_apply.py`（A 项地盘，pdm_tool 不碰） |
+| `~/.claude/fitness/**`（fitness 台账事件 + gate① 快照存档） | `fitness_ledger.py`（经 pdm_tool present/set-gate 调用；fail-open——遥测失败不阻塞状态机；目录在 distill-work 与仓库两树之外，`--clean/--sweep` 构造性免疫） |
 
 ### 命令 × 生命周期（L0 后根变更的唯一入口）
 
@@ -225,8 +226,8 @@ v1.0 正文保持原样作历史记录；本附录是现行契约。文件内 `p
 |---|---|
 | L1 每节子代理完成后 | `pdm_tool.py merge-section --pdm <root> --section <s> [--band …] [--set k=v]` |
 | L1 plan 攒齐 | `set-gate --gate awaiting_confirm --plan <plan路径>`（登记路径+自动导出 items 计数） |
-| L1 gate ① 呈审 | `present --mode gate1`（确定性生成呈审单；主循环不再读 plan 全文） |
-| L1 用户确认后 / apply 后 | `set-gate --gate confirmed` → `corpus_writeback --apply` → `set-gate --gate written`（auto-write 允许 awaiting_confirm→written 跳跃；written ⇒ 节 status=verified 级联） |
+| L1 gate ① 呈审 | `present --mode gate1`（确定性生成呈审单；主循环不再读 plan 全文；同时自动存档快照+呈审单至 fitness 台账，`--stdout-only` 退出） |
+| L1 用户确认后 / apply 后 | `set-gate --gate confirmed`（迁移时自动发射逐项接受事件至 fitness 台账；幂等重跑零事件） → `corpus_writeback --apply` → `set-gate --gate written`（auto-write 允许 awaiting_confirm→written 跳跃；written ⇒ 节 status=verified 级联） |
 | L2 | `merge-cross --from <l2.yaml>`（flags 是 dict 列表，必须文件输入） |
 | 节失败 | `fail-section --section <s> --reason …`（写节级 `error`，status 不动、不代宣布 verified） |
 | L3 | `set-story --status … [--card-path …] [--validated] [--catalog-rebuilt] [--fed-flags]` |
