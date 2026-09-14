@@ -2,7 +2,7 @@
 
 ### R3. 主假设检验（四项证据功能）
 
-**通用参考段落（每假设一段，覆盖四项证据功能）**： ⭐ PREMIUM（28/28 篇范文使用）
+**通用参考段落（每假设一段，覆盖四项证据功能）**： ⭐ PREMIUM（覆盖率口径见 corpus/_evidence_registry.yaml）
 
 ```text
 Hypothesis [x] predicted that [predictor] would be [positive/negative] associated with [outcome]. As shown in Model [y] of Table [z], the coefficient for [predictor] is [positive/negative] and statistically significant ([coefficient], [p-value]). Substantively, a [one-SD / one-unit / IQR] increase in [predictor] is associated with a [Y-unit / percentage-point / probability-shift] [increase/decrease] in [outcome], representing approximately [X%] change relative to [baseline / mean / median]. Thus, Hypothesis [x] is supported.
@@ -17,12 +17,12 @@ Hypothesis [x] predicted that [predictor] would be [positive/negative] associate
 > - **Beat-skip**：缺 Beat-3（幅度）即既有强制要求。**判决位置不限**：可在假设重述之后早出（verdict-early-then-interpreted：判决前置→幅度/边际分析→解释性 wrap），也可置尾（verdict-last）——两种均为顶刊标准（Pontikes 2012 ASQ / Shen et al. 2022 JOM 用前者；Zhou et al. 2017 ASQ / Pollock et al. 2015 ASQ 用后者）。禁止的是判决早出后**又加同义判决**（见下条 Double wrap）
 > - **Double wrap**：禁止两句**同义判决**重复（"Thus, Hypothesis [x] is supported." 后又加 "This confirms our prediction."）。**但早判决 + 晚解释性 wrap 合法**——晚 wrap 若是幅度解读/比较/边界（如 Pontikes 2012 "The same ambiguity that makes orgs less appealing to consumers makes them more appealing to VCs"）而非第二句判决，不算 double wrap。Beat-4（判决）只出现一次，解释性 wrap 可叠加
 
-**含经济显著性（R5 嵌入）的扩展版**： ✓ STANDARD（12+/28 篇含交互效应范文复现）
+**含经济显著性（R5 嵌入）的扩展版**： ✓ STANDARD
 ```text
 Hypothesis [x] predicted that [predictor] would be [positive/negative] associated with [outcome]. As shown in Model [y] of Table [z], the coefficient for [predictor] is [positive/negative] and statistically significant ([coefficient], [p-value]). Substantively, a [one-standard-deviation/one-unit] increase in [predictor] is associated with a [Y-unit] [increase/decrease] in [outcome], representing approximately [percentage / standard deviation / probability] change relative to [baseline]. Thus, Hypothesis [x] is supported.
 ```
 
-**OLS/FE 专用**： ✓ STANDARD（15+/28 篇面板数据范文复现）
+**OLS/FE 专用**： ✓ STANDARD
 ```text
 Hypothesis [x] predicted that [predictor] would be [positive/negative] related to [outcome]. Model [y] of Table [z] shows that the coefficient for [predictor] is [positive/negative] and statistically significant (β = [value], p < [threshold], 95% CI [[lower], [upper]]). The R² increases from [value] to [value] when [predictor] is added, indicating that [predictor] explains an additional [value]% of the variance in [outcome]. Thus, Hypothesis [x] is supported.
 ```

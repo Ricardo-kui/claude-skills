@@ -35,6 +35,7 @@
 基于筛选结果，输出结构化稳健性计划：
 
 ```yaml
+# 写入 paper-state.yaml 的 methods 节（权威位置；results 节不重复登记）
 robustness_plan:
   mandatory:       # 必须生成 R7 段落的维度——有明确威胁 + 有可行替代
     - measurement_variation
@@ -48,7 +49,7 @@ robustness_plan:
     - subsampling_variation: "样本量不足以支持理论上有意义的子组分析"
 ```
 
-该计划（1）指导后续 R7 段落生成——只生成 `mandatory` 和 `recommended` 维度的段落；（2）写入 `paper-state.yaml` 供下游消费。
+该计划（1）指导后续 R7 段落生成——只生成 `mandatory` 和 `recommended` 维度的段落；（2）写入 `paper-state.yaml` 的 **`methods.robustness_plan`**（唯一权威位置，见 `../../paper-state-protocol/references/schema.md` v1.3；results 节不重复登记）。
 
 ## 诊断触发方式
 

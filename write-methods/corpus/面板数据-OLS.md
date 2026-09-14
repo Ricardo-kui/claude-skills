@@ -23,7 +23,7 @@ source_papers:
   - "kalaignanametal2013 (Journal of Marketing): first-differenced reliability change, IGLS error-structure diagnostics, reverse-coded z-score composite moderator, t-2 instrumented LDV"
   - "lunetal2026 (Entrepreneurship Theory and Practice): functional-executive power as compensation ratio with absent-title coded 0"
   - "liuliuluo2016 (Journal of Marketing): residualize a collinear control (reputation on size) and enter the residual"
-variants_count: 50
+variants_count: 92
 created: 2026-05-18
 updated: 2026-08-13
 ---
@@ -55,7 +55,7 @@ updated: 2026-08-13
 | 33 | 单一中介机构设置辩护 | 以单个评级/平台/审核机构为情境：a/b/c 三理由+单一机构一致性 | 区别于变体15（双重现象）与变体23（行业统计）：中介机构选择+方法差异消解 | EMERGING | DesJardine, Li & Shi 2025 AMJ |
 | 41 | 数据可得性挑战→独特档案数据集设置辩护 | 单组织/单一评价领域研究，关键结果变量部分 censored 或未披露，须自建档案数据集 | 区别于变体15（双重现象）与变体33（单一中介机构）：数据可得性挑战驱动设置合法性 + 双制度张力情境 | EMERGING | Fini et al. 2017 (AMJ) |
 
-### M2（10）
+### M2（11）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -71,7 +71,7 @@ updated: 2026-08-13
 | 34 | 多源清单 + 覆盖边界定样本窗 | 多库枚举后直接交集，数据库覆盖边界定起始/终止 | 区别于变体9（制度事件定起始）：数据覆盖驱动双边界 | EMERGING | DesJardine, Li & Shi 2025 AMJ |
 | 44 | 纳入零事件年作为单元自对照 | 事件史/召回等零事件年可观测的平衡面板 | 区别于变体2（漏斗）与变体28（GEE 保全零）：识别逻辑而非估计器 | VERIFIED | Kalaignanam et al. 2013 JM |
 
-### M2.5（2）
+### M2.5（3）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -79,7 +79,7 @@ updated: 2026-08-13
 | 39 | 时间间隔声明（DV t+1 / IV & controls t） | 纵贯面板需在 Methods 层预先化解反向因果 | 区别于变体 20（model-free 预览）与变体 27（窗口分离）：单句 baseline 承诺，更通用 | EMERGING | Ridge et al. 2024 (AMJ) |
 | 43 | 两步滞后链 + 年内再编码学习窗 | 冲击→中介→下游结果的纵贯链 | 区别于变体39（单句 spacing）：理论–测量–模型两步对齐；非正式 Granger 检验 | VERIFIED | Kalaignanam et al. 2013 JM |
 
-### M3（2）
+### M3（4）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -121,7 +121,7 @@ updated: 2026-08-13
 | 40 | 控制变量"双面 because" — 对 DV 一条理由 + 对 IV 共变一条理由 | CEO/个体特质 → 结果研究，控制为何与特质共变最易被质疑时 | 区别于变体14（强调 because 密度）：每个控制对 DV 与对 IV 各一条理由，平行论证结构 | EMERGING | Ridge et al. 2024 (AMJ) |
 | 50 | 共线控制残差化：构念对另一控制回归后取残差 | 两个控制都要保留、但高度共线时 | 区别于变体1/14/40（because 密度）与变体37（镜像控制）：用残差隔离共线通道 | EMERGING | Liu, Liu & Luo 2016 JM |
 
-### M7（7）
+### M7（8）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -134,7 +134,7 @@ updated: 2026-08-13
 | 38 | 理论-估计量对齐 + 不滞后辩护 | between-unit 理论 → pooled OLS 显式对齐；当前期机制 → 不滞后（Bellemare） | 区别于变体10/13（Hausman/ICC）：理论对齐+不滞后反向论证 | EMERGING | DesJardine, Li & Shi 2025 AMJ |
 | 47 | 一阶差分变化规格 | 短/中面板、关注 within-unit 变化、水平方程已含 FE | 区别于变体10（水平 FE）与 DiD ΔV 等价：FD 变化规格 + 丢掉 unit dummy | VERIFIED | Kalaignanam et al. 2013 JM |
 
-### M8（1）
+### M8（2）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|

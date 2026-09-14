@@ -2,14 +2,13 @@
 
 ### R1. 描述性统计 / 诊断导向
 
-**通用填空段落**： ✓ STANDARD（15+/28 篇范文使用）
+**通用填空段落**： ✓ STANDARD（覆盖率口径见 corpus/_evidence_registry.yaml）
 
 ```text
 Table [x] presents descriptive statistics and correlations for the variables used in our analyses. The correlations are generally consistent with our expectations and do not indicate [concern]. [Diagnostic] values were below [threshold], reducing concern about [routine issue]. The descriptive statistics also show [contextual pattern] that helps interpret the results below.
 ```
 
 > **非 OLS 模型注**：对于 GLM、生存分析、计数模型等非 OLS 估计量，多重共线性诊断（VIF）较少在 R1 中报告；如有需要，可替换为 "we verified that [diagnostic] is not a concern"。
-```
 
 **Model-Free Evidence 结果报告变体**（复杂识别设计前，描述性分组对比）： ✓ STANDARD
 ```text

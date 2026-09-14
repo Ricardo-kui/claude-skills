@@ -11,7 +11,7 @@
 - [ ] M4：每假设一段，含 Hypothesis 编号对齐，变量按理论顺序排列
 - [ ] M5（如适用）：当前 Theory/设计确有调节、中介或机制变量时才写；已撤销变量不因旧稿或 corpus 恢复
 - [ ] M6：每个控制变量都有 because [rival explanation]
-- [ ] M7：estimator + fixed effects + SE clustering + 选择理由（文字+诊断）
+- [ ] M7：估计器/固定效应 + 选择理由（文字+诊断）必查；SE 口径按范文惯例可选陈述，同领域范文未陈述则不列为必查缺陷（feedback-registry wmf_1349cfa0）
 - [ ] M7补充：若 Theory 含调节假设，检验方法（MMR / 分组相关比较 / HLM 跨层交互）与 differential prediction/differential validity 声明一致
 - [ ] M8（如适用）：基准识别策略的关键假设 + 检验方法 + 结果位置；补充稳健性不提前搬入
 - [ ] M10（如保留）：Results 预告不含系数、显著性或支持判断；无必要时省略
@@ -51,7 +51,7 @@ Pollock 不把四类效度当 checklist 逐条回答，而是嵌入 describe-exp
 ## 论证质量诊断
 - [ ] **Because 密度**：M6 中每个控制变量都有 "because [rival explanation]"——这是 Methods 说服力的核心来源
 - [ ] **假设对齐**：M4/M5 中每预测变量明确提及对应 Hypothesis 编号
-- [ ] **因果语言自律**：面板数据用 "associated with"；自然实验识别支持后用 "effect of"；实验可用 "caused"。无越级
+- [ ] **因果语言对范文**：因果动词档位与匹配设计家族范文实际用法一致；`corpus/micro-templates/causal-hedging.md` 仅作默认参考，不按机械词表列缺陷（feedback-registry wmf_206116a4）
 - [ ] **审计链完整**：M2 起始 N → 每步排除（含理由+数字）→ 最终 N，全程可追踪
 - [ ] **时间逻辑清晰**：所有预测变量标注 t-1 / contemporaneous / event window
 - [ ] **段落体裁适配**：Methods 段落遵循审计体裁约定——procedure-first（M2 样本漏斗）/ construct-first（M3–M5 变量）/ justification-first（M7 模型）为合法段首；通用段落规则见 `../write-introduction/corpus/storytelling/prose-craft-checklist.md` §0.0/§0.2/§0.5；§0.1/§0.3/§0.6 为说服体裁专用，不适用

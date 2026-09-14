@@ -1,9 +1,9 @@
 ---
 name: paper-state-protocol
-description: "paper-state.yaml 协议 v1.2.0 — write-* 技能族跨 Section 状态传递：持久化各 Section metadata，让下游技能自动消费上游输出，替代手动复制 theory_hints。"
+description: "paper-state.yaml 协议 v1.3.0 — write-* 技能族跨 Section 状态传递：持久化各 Section metadata，让下游技能自动消费上游输出，替代手动复制 theory_hints。"
 when_to_use: "write-* 之间需要传递或消费 section 状态、排查状态断裂时使用。"
 whenToUse: "Use when write-* skills need to persist and pass section state across Introduction, Theory, Methods, and Results through a paper-state.yaml file. Trigger words: paper-state.yaml, paper state protocol, theory_hints, 状态传递, 跨 section 状态, 论文状态文件"
-version: 1.2.0
+version: 1.3.0
 ---
 
 # paper-state.yaml — Write-* 跨 Section 状态传递协议
@@ -50,7 +50,7 @@ YAML 到了写 Theory 时需要用户回忆并重新输入。
 
 ## 3. Schema
 
-四段结构：`paper`（项目标识 + Vault 连接）→ `introduction`（theory_hints + contribution_contract）→ `theory`（constructs + hypotheses + mechanism_chains）→ `methods`（variables + hypothesis_variable_map）→ `results`（hypothesis_results + key_findings）+ `cross_section_alignment` 追踪。每段标注生产者/消费者；任何字段可为 `null`，下游回退交互式询问。
+结构：canonical `story`（权威在 paper-story-contract）→ `paper`（项目标识 + Vault 连接）→ `introduction`（嵌套 gap_type + conversation_strategy + contribution_contract）→ `theory`（constructs + hypotheses + mechanism_chains）→ `methods`（variables + hypothesis_variable_map[*].storyline_id + story_alignment + robustness_plan 权威位置）→ `results`（hypothesis_results 新结构 baseline_verdict/overall_evidence + story_resolution + key_findings）+ `cross_section_alignment` 追踪。每段标注生产者/消费者；任何字段可为 `null`，下游回退交互式询问。
 
 → 完整权威 schema（逐字段注释）：`references/schema.md`
 
@@ -68,7 +68,7 @@ YAML 到了写 Theory 时需要用户回忆并重新输入。
 
 ## 5. Vault 知识检索协议（LOOP 5: Vault → Write Evidence）
 
-paper-state.yaml 解决 write-* 技能之间的 metadata 传递；**Vault 检索协议**解决写作时如何调取 Vault 中 1800+ 笔记的文献弹药——write-introduction 和 write-theory 的 Phase 0 在检查 paper-state.yaml 后执行三级回退检索（章节-证据映射 → 项目作战室/全文搜索 → 跳过不降级），产出 **Vault Knowledge Brief**（核心文献表 + Claim Cards + Rival Mechanisms + 概念锚点 + 证据完整度）。
+paper-state.yaml 解决 write-* 技能之间的 metadata 传递；**Vault 检索协议**解决写作时如何调取 Vault 中 1800+ 笔记的文献弹药——write-introduction 的 Phase 0 与 write-theory 的 Phase 1.2 在检查 paper-state.yaml 后执行三级回退检索（章节-证据映射 → 项目作战室/全文搜索 → 跳过不降级），产出 **Vault Knowledge Brief**（核心文献表 + Claim Cards + Rival Mechanisms + 概念锚点 + 证据完整度）。回退树以本协议 `references/vault-retrieval.md` 为唯一权威；各 section 文件只写各自的行过滤/Brief 列差异＋指针。
 
 Brief 纪律：检索摘要非全文复制（每条 ~1 行 + note link）；提供内容弹药，结构骨架仍由 template 提供；检索无结果时不编造。
 
@@ -76,6 +76,7 @@ Brief 纪律：检索摘要非全文复制（每条 ~1 行 + note link）；提�
 
 ## 6. 版本兼容
 
+- v1.3.0 对齐四个 write-* 片段模板（片段即事实标准）：登记 canonical `story` 块与 `introduction.theory_hints` 嵌套 `gap_type` 结构及 `conversation_strategy`；登记 `methods.story_alignment`、`hypothesis_variable_map[*].storyline_id`、`methods.robustness_plan`（唯一权威位置，results 节不再重复登记）、`results.story_resolution`；`results.hypothesis_results[*]` 改为 `{direction, significant, baseline_verdict, overall_evidence}`。迁出 legacy 字段（`central_knot_statement`/`narrative_arc`/`core_constructs`/flat `gap_type`/`supported`），迁移映射见 `references/schema.md` 文末。Vault 检索时序更正：write-introduction 为 Phase 0，write-theory 为 Phase 1.2
 - v1.2.0 `theory.hypotheses[*]` 新增 `storyline_id` 字段（对齐
   `paper-story-contract/references/schema.md` 定义的 Section Extension
   `theory.hypotheses[*].storyline_id`，供 write-methods / write-results 消费）。

@@ -2,6 +2,16 @@
 
 > 由 write-methods 在涉及稳健性归属 / M10 预告 / M8 边界时**读取**。顶刊论文通常要求系统报告稳健性，但**位置取决于该检验是否属于基准识别策略的一部分**。
 
+## Methods–Results 分工（单源规则）
+
+> 本文件是 Methods–Results 分工规则的唯一权威载体；SKILL.md 顶部分工块与 `draft-revision-protocol.md` §3 只保留指针。
+
+- **Methods 聚焦基准回归（baseline estimation）**：研究情境、基准数据与样本、构念操作化、控制变量、以及为什么用某个模型/估计量。
+- **内生性处理 / 样本选择修正**：只有当它们是**基准估计策略的一部分**时才在 Methods 中说明（IV/2SLS、Heckman、匹配DiD、控制函数法）——此时 M7/M8 解释"为什么基准模型这样设定"，而非"还做了哪些稳健性检验"。
+- **稳健性检验 / 敏感性分析 / 替代测量复制 / 机制 / 异质性**：原则上属于 Results（R7/R8）。Methods 不详细预告稳健性清单，不把 Results 的 robustness 提前搬来。
+- **诊断检验（VIF、Hausman、过度识别等）**：服务于估计量选择（Hausman 选 FE/RE、Sargan 验 IV）→ Methods；服务于结果可信度评估 → Results（R1/R7）。
+- 变量若仅在 Results 首次出现，由 Results 定义其来源、构造、时点与样本边界；Methods 不留孤儿预告。
+
 ## 归属判断
 
 | 检验类型 | 归属 | 原因 |

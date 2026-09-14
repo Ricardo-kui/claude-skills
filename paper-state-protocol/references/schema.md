@@ -1,15 +1,61 @@
-# paper-state.yaml Schema（v1.2.0 权威定义）
+# paper-state.yaml Schema（v1.3.0 权威定义）
 
 ```yaml
 # ============================================================
-# paper-state.yaml v1.2.0
+# paper-state.yaml v1.3.0
 # ============================================================
 # 字段按 section 分组。每个 section 的核心作用是：
 #   上游 section 完成后填充自己的 metadata
 #   下游 section 启动时读取上游 metadata
 #   人工也可以随时手动编辑（YAML 可读）
 # 注意：canonical story 字段以 paper-story-contract/references/schema.md 为准（见 §1.1）
+# v1.3 变更：登记 canonical story 块、theory_hints 嵌套 gap_type + conversation_strategy、
+#   methods.story_alignment / hypothesis_variable_map[*].storyline_id / methods.robustness_plan（权威位置）、
+#   results.hypothesis_results 新结构（baseline_verdict + overall_evidence）、results.story_resolution。
+#   legacy 字段（central_knot_statement / narrative_arc / core_constructs / flat gap_type /
+#   hypothesis_results[*].supported）迁出正式 schema，见文末「Legacy 字段迁移映射」。
 
+# ============================================================
+# Canonical Story（顶层键，先于各 section）
+# 唯一权威: paper-story-contract/references/schema.md；此处登记 write-introduction
+# 输出片段中的 story 块结构，供协议层校验与下游读取，不重复定义语义。
+# 生产者: write-introduction（Story Intake）
+# 消费者: write-theory / write-methods / write-results（Phase 0 均先读 story）
+# ============================================================
+story:
+  schema_version: 1             # story 契约自身版本（paper-story-contract 定义）
+  status: "provisional"         # provisional | confirmed
+  stage: "preparing"            # preparing | blocking | refining | finishing
+  evidence_state: "unstable"    # unstable | mixed | stable
+  theme_question: "[研究问题]"
+  central_knot: "[一句话核心冲突]"
+  stakes:
+    theoretical: "[为什么该遗漏、误解或矛盾在理论上重要]"
+    practical: "[可选]"
+  characters:
+    main:
+      - {name: "[核心构念]", role: "[focal_predictor / focal_outcome / core_process]", level: "[分析层级]"}
+    supporting:
+      - {name: "[中介、调节、情境或边界构念]", role: "[mediator / moderator / context / boundary]", level: "[分析层级]"}
+  storylines:
+    - id: "S1"
+      question: "[子问题]"
+      constructs: ["[已在 characters 中声明的构念]"]
+      promised_resolution: "[何种理论论证与证据将回答它]"
+  reader_shift:
+    from: "[读者原有理解]"
+    to: "[本文希望形成的新理解]"
+  integrity:
+    theme_grounding: "grounded"          # grounded | provisional | unsupported
+    knot_authenticity: "grounded"        # grounded | provisional | unsupported
+    character_discipline: "grounded"     # grounded | provisional | unsupported
+    payoff_feasibility: "grounded"       # grounded | provisional | unsupported
+    unsupported_moves: []
+    notes: "[项目自身故事的证据边界；不写范文、类型或框架]"
+
+# ============================================================
+# 项目标识 + Vault 连接
+# ============================================================
 paper:
   id: "ceo-regulatory-focus-recall-timing"   # 唯一标识，kebab-case
   title: "CEO Regulatory Focus and Time to Recall"  # 论文标题
@@ -17,7 +63,7 @@ paper:
   created: 2026-07-08
   updated: 2026-07-08
 
-  # --- Vault 知识库连接（供 write-* Phase 0 Vault 检索步骤使用）---
+  # --- Vault 知识库连接（供 write-introduction Phase 0 / write-theory Phase 1.2 Vault 检索使用）---
   vault:
     war_room: "00 工作台/项目/CEO regulatory focus × time to recall/00 Active/项目作战室 - CEO regulatory focus × time to recall.md"
     section_evidence_map: "00 工作台/项目/CEO regulatory focus × time to recall/00 Active/章节-证据映射 - CEO regulatory focus × time to recall.md"
@@ -38,16 +84,30 @@ introduction:
 
   # --- theory_hints: 供 write-theory Phase 0 自动读取 ---
   theory_hints:
-    gap_type: "Inadequacy"                   # Incompleteness | Inadequacy | Incommensurability
+    # gap_type: v1.3 起为嵌套结构（以 write-introduction 片段为准），不再使用 flat 字符串
+    gap_type:
+      primary: "Inadequacy"                    # Incompleteness | Inadequacy | Incommensurability；驱动主张力、结构复杂度与能量，不决定 Conversation
+      primary_method: "neglect"                # Sandberg 找法标签: confusion | neglect | application spotting
+      secondary: null                          # 可选: Incompleteness | Inadequacy | Incommensurability | null；次 gap，在 Tension 叠加
+      secondary_method: null                   # 可选: confusion | neglect | application spotting | null
+      incommensurability_resolution:           # 仅 primary = Incommensurability 时填写
+        authenticity_gate: "pass"              # pass | fail | uncertain
+        comparability:
+          conversation_level: "pass"           # pass | fail | uncertain
+          shared_object_or_family: "[共享理论对象或可辩护的高阶 X/Y 家族]"
+          member_mapping: "[低阶构念/指标如何映射到共享对象]"
+          formal_lock: "pending"               # R3/R4 的具体 X、Y、层级、时间范围、estimand: pass | fail | pending
+        conflict_location: "[X / Y / mechanism / context / measurement-or-design]"
+        primary_route: "R3"                    # R1 | R2 | R3 | R4
+        secondary_route: null                  # R1 | R2 | R3 | R4 | null
+        adjudicating_prediction: "[可直接区分本文解释与最强既有解释的预测]"
     makadok_dimension: "Mechanism"           # Constructs | Mechanism | Boundary | Phenomenon | Level | Mode | Question | Output
     tension_template: "06-theoretical-imbalance"
     recommended_theory_variant: "机制推演型 (B)"
     promised_hypothesis_count: 2
     promised_boundary_conditions: false
     promised_mechanism_steps: 2
-    central_knot_statement: "While prior work assumes firms respond to product failures uniformly, we argue that CEO regulatory focus systematically shapes when—not just whether—firms initiate recalls."  # legacy 字段：新项目用 canonical story（见 §1.1）
-    narrative_arc: "moderate_rise"           # gentle_rise | moderate_rise | sharp_rise
-    core_constructs: ["CEO regulatory focus", "time to recall"]
+    conversation_strategy: "Progressive"     # Progressive | Synthesized | Non-Coherence（v1.3 新增）
 
   # --- contribution_contract: 供 paper-review/pollock-qc 承诺-兑现对齐 ---
   contribution_contract:
@@ -55,6 +115,7 @@ introduction:
       makadok_dimension: "Mechanism"
     - claim: "We introduce regulatory focus as a novel predictor of recall timing, extending the literature beyond governance and operational antecedents."
       makadok_dimension: "Constructs"
+  # 理论论文（AMR 模式）：contribution_contract 只放一条核心贡献，并加 theory_paper: true 标记
 
 # ============================================================
 # Section 2: Theory & Hypotheses
@@ -100,7 +161,7 @@ theory:
 # ============================================================
 # Section 3: Methods
 # 生产者: write-methods
-# 消费者: write-results (模型规格、变量名)
+# 消费者: write-results (模型规格、变量名、story_alignment、robustness_plan)
 # ============================================================
 methods:
   status: pending
@@ -127,17 +188,45 @@ methods:
     fixed_effects: []             # 固定效应（如 firm, year）
 
   # --- hypothesis_variable_map: 供 write-results R3 槽位 ---
+  # 键为假设 id（H1/H2/...，动态键）；storyline_id 为 v1.3 登记字段，
+  # 将每条假设的变量映射对齐到 story.storylines[*].id
   hypothesis_variable_map:
-    H1: {predictor: null, outcome: null, model: null}
-    # H2: {predictor: null, outcome: null, model: null}
+    H1: {storyline_id: "S1", predictor: null, outcome: null, model: null}
+    # H2: {storyline_id: "S1", predictor: null, outcome: null, model: null}
+
+  # --- story_alignment: 供 write-results Phase 0 消费（v1.3 登记；write-results SKILL.md 直接读取）---
+  story_alignment:
+    central_knot: null            # 从 story.central_knot 引用，不改写
+    design_resolution_logic: null # 为什么该设计能回答 theme question
+    storyline_model_map:          # 键为 storyline id（S1/S2/...，动态键）
+      S1:
+        hypotheses: ["H1"]
+        constructs: []
+        variables: []
+        model_or_step: null       # 模型、实验比较或质性分析步骤
+        identification_burden: null  # 需要满足的识别或效度条件
+    unresolved_validity_threats: []  # 尚未解决的 threat；无则为空列表
 
   # --- results_preview: Methods M10 段的预告（供 write-results 预期管理）---
   results_preview: null
+
+  # --- robustness_plan: 稳健性检验计划的唯一权威位置（v1.3 登记）---
+  # 由 write-results 决策诊断（write-results/references/robustness-diagnosis.md）填充，或手动填写。
+  # 供 write-results 缺失时触发诊断、存在时跳过诊断直接生成 R7 段落。
+  # results 节不重复登记此结构（write-results 片段仅保留指针）。
+  robustness_plan:               # 可选；不存在时 write-results 自动触发决策诊断
+    mandatory: []                # 必须检验的维度
+    recommended: []              # 建议检验的维度
+    optional: []                 # 可选检验的维度
+    excluded: {}                 # {维度名: 排除理由}
 
 # ============================================================
 # Section 4: Results
 # 生产者: write-results
 # 消费者: paper-review/pollock-qc；如用户已有 Discussion 草稿，可供 discussion-review 检查主要发现与意外发现是否被正确解释
+# 注意: results.revision_constraints 与 results.validation 为 write-results
+#   skill-local 字段（仅 write-results 内部 draft-revision-protocol /
+#   validation-protocol 消费），v1.3 起不入本协议 state，不在此登记。
 # ============================================================
 results:
   status: pending
@@ -148,9 +237,25 @@ results:
   estimator_family: null          # 确认的估计器
 
   # --- hypothesis_results: 供 Results story_resolution 与全稿审查 ---
+  # v1.3 结构（以 write-results 片段为准）：baseline_verdict + overall_evidence；
+  # legacy 字段 supported → baseline_verdict（见文末迁移映射）。键为假设 id（动态键）。
   hypothesis_results:
-    H1: {direction: null, significant: null, supported: null}
-    # H2: {direction: null, significant: null, supported: null}
+    H1: {direction: null, significant: null, baseline_verdict: null, overall_evidence: null}
+    # direction: positive | negative | null
+    # significant: true | false
+    # baseline_verdict: supported | partially_supported | not_supported
+    # overall_evidence: stable | qualified | mixed | unresolved
+
+  # --- story_resolution: 供 paper-story-contract Section Extension 与下游审查消费（v1.3 登记）---
+  story_resolution:
+    headline_answer: null         # 对 story.theme_question 的证据约束式回答
+    storylines:                   # 键为 storyline id（动态键）
+      S1:
+        status: null              # supported | mixed | unsupported | unresolved
+        evidence: []              # table/model/estimate or qualitative evidence
+        magnitude: null           # 效应量或明确说明无法估计
+    surprises: []                 # 意外、反方向或敏感性发现；无则为空列表
+    unresolved_questions: []      # 仍无法回答的问题；无则为空列表
 
   # --- key_findings: 供全稿审查；已有 Discussion 草稿时供 discussion-review 对照 ---
   key_findings: []
@@ -184,3 +289,17 @@ cross_section_alignment:
     checked_at: null
     notes: null
 ```
+
+## Legacy 字段迁移映射（v1.2 → v1.3）
+
+v1.3 起以下 legacy 字段迁出正式 schema。读取旧 paper-state.yaml 时按下表迁移；新输出一律写 v1.3 字段。与 `paper-story-contract/references/schema.md` 的 Legacy Read Compatibility 表保持一致。
+
+| v1.2 legacy 字段 | v1.3 去向 |
+|------------------|-----------|
+| `introduction.theory_hints.gap_type`（flat 字符串） | `introduction.theory_hints.gap_type.primary`（嵌套结构的 primary 子字段） |
+| `introduction.theory_hints.central_knot_statement` | `story.central_knot` |
+| `introduction.theory_hints.core_constructs` | `story.characters`（作为初始角色候选） |
+| `introduction.theory_hints.narrative_arc` | 不再写入 state；仅作 stage 诊断证据（见 paper-story-contract legacy 表） |
+| `results.hypothesis_results[*].supported` | `results.hypothesis_results[*].baseline_verdict` |
+
+迁移行为：输出迁移警告；创建 `story` 块时标 `status: provisional`；新输出不写 legacy 别名；保留无关 legacy 字段以免现有消费者丢数据。

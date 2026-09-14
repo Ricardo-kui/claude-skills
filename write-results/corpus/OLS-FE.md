@@ -22,7 +22,7 @@ source_papers:
   - "desjardine_li_shi_2025_amj (Academy of Management Journal): min/mean/max marginal-effect table with slope-direction language, collinearity-absorption explanation for full-model interaction attenuation, ITCV omitted-variable threshold defense, dual-benchmarking deviation test, acquisition quasi-natural experiment as influence-channel switch, Bushee investor-type decomposition with Wald test, sequential moderator introduction→paired→full-model navigation"
   - "ridge_et_al_2024_amj (Academy of Management Journal): front-loaded endogeneity defense (RIR replacement count + naive-vs-cure 2SRI pairing), external-evidence practical-importance beat (R5)"
   - "chenganesanliu2009 (Journal of Marketing, 2009): binary strategy as complete mediator of firm characteristics on AR — legacy Kenny joint-read + market-signal coda (R8)"
-variants_count: 62
+variants_count: 96
 created: 2026-05-18
 updated: 2026-08-13
 ---
@@ -44,23 +44,24 @@ updated: 2026-08-13
 
 | 槽位 | 功能 | 变体数 | 变体 |
 |---|---|---|---|
-| R1 | 描述统计与诊断 | 1 | 20 |
-| R2 | 模型序列与表导航 | 7 | 16, 19, 22, 24, 28, 53, 56 |
-| R3 | 主假设检验 | 12 | 8, 11, 17, 23, 27, 34, 35, 36, 41, 48, 57, 58 |
-| R4 | 交互/调节/阈值 | 9 | 9, 14, 18, 32, 40, 43, 45, 47, 59 |
-| R5 | 经济显著性 | 4 | 3, 10, 13, 55 |
-| R6 | 非显著/反转/Null | 6 | 4, 6, 30, 37, 42, 60 |
-| R7 | 稳健性与威胁处理 | 16 | 1, 2, 7, 12, 15, 25, 26, 29, 31, 39, 46, 49, 50, 51, 54, 61 |
-| R8 | 补充/事后/机制 | 7 | 5, 21, 33, 38, 44, 52, 62 |
-| R9 | 证据收束（可选） | 0 独立 | 27（R3+R9）；多研究变体4/5 亦用 |
+| R1 | 描述统计与诊断 | 2 | 20, 67 |
+| R2 | 模型序列与表导航 | 12 | 16, 19, 22, 24, 28, 53, 56, 70, 71, 76, 88, 94 |
+| R3 | 主假设检验 | 23 | 8, 11, 17, 23, 27, 34, 35, 36, 41, 48, 57, 58, 63, 64, 72, 77, 78, 80, 87, 89, 90, 91, 92 |
+| R4 | 交互/调节/阈值 | 14 | 9, 14, 18, 32, 40, 43, 45, 47, 59, 65, 68, 73, 86, 93 |
+| R5 | 经济显著性 | 6 | 3, 10, 13, 55, 84, 96 |
+| R6 | 非显著/反转/Null | 10 | 4, 6, 30, 37, 42, 60, 74, 81, 83, 95 |
+| R7 | 稳健性与威胁处理 | 18 | 1, 2, 7, 12, 15, 25, 26, 29, 31, 39, 46, 49, 50, 51, 54, 61, 66, 85 |
+| R8 | 补充/事后/机制 | 11 | 5, 21, 33, 38, 44, 52, 62, 69, 75, 79, 82 |
+| R9 | 证据收束（可选） | 0 独立 | 27（R3+R9）、89（R9 副 R3/R4）；多研究变体4/5 亦用 |
 
-### R1 描述统计与诊断（1）
+### R1 描述统计与诊断（2）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
 | 20 | 多项式/交互模型诊断 | 多项式或交互模型估计前的诊断段 | mean-centering+VIF+condition number+非中心化复制；与变体19 配套 | EMERGING | Cui SMJ |
+| 67 | 双路径前提描述统计 | 双中介/双路径设计的前置描述统计（理论预言零相关+moderator 分布/条件定义） | vs 变体20 常规诊断——本变体加区分效度前提句与分样本条件前置定义 | VERIFIED | Post et al. 2022 AMJ |
 
-### R2 模型序列与表导航（5）
+### R2 模型序列与表导航（12）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -71,8 +72,13 @@ updated: 2026-08-13
 | 28 | 双阶段修正表导航 | 截面二元内生+样本选择的 CF+Heckman 表导航 | vs 变体24 仅选择修正 | EMERGING | Pupovac 2026 POM |
 | 53 | 逐调节引入→成对→全模型导航 | 4+ 两向交互按理论 family 成对聚合后全模型 | vs 变体16（三向递进）：两两成对聚合+共线吸收预告 | EMERGING | DesJardine 2025 AMJ |
 | 56 | Direct/Indirect/Total 路径表架构 | 中介 climax 做成 Direct vs Total 系数对照 | vs 16/53 层次列；vs 24/28 Heckman 两阶段 | VERIFIED | Kalaignanam 2013 JM |
+| 70 | 先验支持判据声明 | 差值/合成检验在报系数前声明判定规则与检验变量编码 | vs 其余 R2 导航变体（无判据拍）；副槽位 R3 | VERIFIED | Westphal & Bednar 2005 ASQ |
+| 71 | 估计策略宣告+分样本设计导航 | 估计器由测量层级正当化+median 切分规则+分样本/product-term 双通道预告 | vs 变体16/53 增量模型序列——本变体管调节检验设计导航 | VERIFIED | Carpenter & Westphal 2001 AMJ |
+| 76 | Heckman 选择模型前置交底 | 修正型估计器为主策略时主结果前的动机/两阶段程序/风险集与 SE 交底 | vs 变体24/28 表导航、29 三步防御——本变体是前置动机论证非稳健性防御 | VERIFIED | Higgins & Gulati 2003 OS |
+| 88 | 全交互饱和模型存活复核句 | 逐假设模型后用含全部交互项的饱和模型统一复核存活 | vs 变体53 全程 8 模型导航——本变体是两句话的紧凑尾拍；副槽位 R4 | EMERGING | Gulati & Higgins 2003 SMJ |
+| 94 | 控制块 null 先例锚定开场 | 控制变量集体系数性 null 的文献同向 null 锚定开场 | vs R6 假设级 null 处理——本变体只管控制块；控制显著时不适用 | EMERGING | Gulati et al. 2009 SMJ |
 
-### R3 主假设检验（10）
+### R3 主假设检验（23）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -88,8 +94,19 @@ updated: 2026-08-13
 | 48 | 共线吸收解释 | 全模型交互显著性下降归因调节间高相关（Cortina） | vs 变体16 序列导航（只描述不解释）；配套变体53 | EMERGING | DesJardine 2025 AMJ |
 | 57 | 测量覆盖范围 warrant「学习」 | a-path 显著后用测量覆盖范围主张学习而非仅修复 | vs 变体41 检验中介是否成立 | VERIFIED | Kalaignanam 2013 JM |
 | 58 | 衰减+χ²+Sobel+bootstrap 堆叠确认 | confirmatory 部分中介 | vs 变体41 SUR 非对称；vs 变体5 post-hoc MCMC | VERIFIED | Kalaignanam 2013 JM |
+| 63 | ln(时长) DV 跨列选择性显著+天数回译 | ln(时间间隔) DV 并列分列设计的诚实选择性显著报告 | "the only column" 明示不隐藏；幅度回译自然单位天数（副槽位 R5） | VERIFIED | Wowak 2020 MSOM |
+| 64 | 双处理对照四拍+Wald 系数差 | 双处理并排对照+逐假设 Wald 差分检验+跨 DV 合并幅度句 | vs 变体72 多指标裁决——本变体是双 treatment 对照设计 | VERIFIED | Post et al. 2022 AMJ |
+| 72 | 多指标假设裁决四拍 | 一个假设由同构指标族共同承载（3 显著+1 方向分） | vs 标准四拍单系数；收口句内联排除 rival 控制；无幅度拍须补 | VERIFIED | Carpenter & Westphal 2001 AMJ |
+| 77 | 假设判决链 | 逐假设"重述→定位→判决"微链，However 衔接 null 与支持判决 | vs 变体87 判决先行——本变体重述先行；幅度拍须按主骨架补齐 | VERIFIED | Higgins & Gulati 2003 OS |
+| 78 | BK+Sobel 假设化部分中介（legacy） | 中介为正式假设：(a)(b)(c) 三条件列举+Sobel 乘积+跨 DV 重演+partial/full 幅度裁决 | vs 变体58 现代堆叠——本变体是 legacy 前身，须标 legacy 补间接效应区间 | VERIFIED | Higgins & Gulati 2003 OS |
+| 80 | 跨模型系数比较基础设施声明 | 分样本分别估计后组间比较交底（SUR 联合协方差+括号双轨显著标记） | vs 变体36/43 组内/组间检验——本变体是比较的推断基础设施与列子集导航 | VERIFIED | Gulati et al. 2005 SMJ |
+| 87 | 判决先行假设段 | verdict-first：判决作段落主题句，复述降为第二句 | vs 变体77 重述先行链——本变体限干净结果专用 | EMERGING | Gulati & Higgins 2003 SMJ |
+| 89 | 主效应×交互 tandem 收束 | 单研究双维收束：主效应降位与交互 in tandem 并置（副槽位 R9） | vs 变体27 管道跨阶段对比收束——本变体标题问句回环 what×when | EMERGING | Gulati & Higgins 2003 SMJ |
+| 90 | 对照假设成对判决节奏 | rival 构念 null 先行+"A rather than B"收束；边际显著=moderate support | vs 变体72 rival 仅作控制内联——本变体对手侧 null 是对照假设构成性证据 | EMERGING | Gulati et al. 2009 SMJ |
+| 91 | 相对排序 within-model F 检验 | "A>B"型排序假设的同模型 one-sided F 检验+不等式判决 | vs 变体80 跨样本 SUR 基础设施——本变体同模型内系数比较 | EMERGING | Gulati et al. 2009 SMJ |
+| 92 | 主效应被自身交互项共线吸收解释 | 主效应失活的诚实归因（报 r 值）+fit 下降归因 df | vs 变体48 交互侧吸收——两变体同篇并用各管一侧 | EMERGING | Gulati et al. 2009 SMJ |
 
-### R4 交互/调节/阈值（8）
+### R4 交互/调节/阈值（14）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -102,8 +119,13 @@ updated: 2026-08-13
 | 45 | 亚组吸收+阶段熄灭 | baseline≈0+交互显著→亚组吸收全部优势+中后段熄灭 | vs 变体8 单期条件化 vs 变体27 无亚组版（决策对1） | EMERGING | Kim & Lee 2026 SMJ |
 | 47 | min/mean/max 三值边际效应表 | 连续/二元调节的三值边际效应表+斜率方向语言 | vs 变体9 单侧；vs 变体40 floodlight 转折点 | EMERGING | DesJardine 2025 AMJ |
 | 59 | spotlight ±1SD + Δslope + region | 一侧显著一侧不显著时的 region 主张（含无方向变体） | vs 变体9 无 Δslope；vs 变体40 floodlight 变号 | VERIFIED | Kalaignanam 2013 JM |
+| 65 | 分样本 null→significant 对+组内 Wald+Chow 降级 | 理论状态分组的镜像对照+组内 Wald+跨组 Chow 诚实降级 | vs 变体43 组间裁决——本变体含 Chow 不显著的降级句式（亦服务 R6） | VERIFIED | Post et al. 2022 AMJ |
+| 68 | 交互通道分解句 | 调节效应经差值/合成 DV 哪个分量起作用的通道归属句 | 同模型内双分量系数（一显著一不显著）直接佐证 | VERIFIED | Westphal & Bednar 2005 ASQ |
+| 73 | 分样本主检验+交互项复核收口 | 分样本承载主检验+不显著侧 rival 写成确认 null+product-term 复核升级 | vs 变体65 镜像+Chow——本变体交互只作复核不作主检验 | VERIFIED | Carpenter & Westphal 2001 AMJ |
+| 86 | 连续调节极点→交互符号先验判据 | 连续指数两端映射为交互项预测符号的判据拍（内嵌假设段） | vs 变体70 dummy 差值判据（R2 前置）——仅报符号须补简单斜率；副槽位 R3 | EMERGING | Gulati & Higgins 2003 SMJ |
+| 93 | 双侧对照交互判决+对手侧 null 回收 | 一句话并置对手侧 insignificant+焦点侧 significant，null 回收为一致性证据 | vs 变体90 主效应侧成对判决——本变体管调节段；"consistent with" 不升级为支持 | EMERGING | Gulati et al. 2009 SMJ |
 
-### R5 经济显著性（4）
+### R5 经济显著性（6）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -112,8 +134,9 @@ updated: 2026-08-13
 | 13 | 交互联合百分比经济显著性 | IV×M 同时变化 1% 的联合幅度翻译（LIWC 等百分比单位变量适配） | vs 变体10 条件分解；vs 变体23 主效应四分位（决策对5） | EMERGING | Li 2026 JOM |
 | 55 | 外部证据实际重要性辩护拍 | 幅度翻译后用外部文献证明微小变化净显著收益 → "likely to be particularly important in practice" | vs 变体13 联合翻译——本变体追加拍5 实际重要性辩护；vs 生存分析变体15 "every day counts" 同拍跨场景 | EMERGING | Ridge et al. 2024 AMJ |
 | 84 | 四分位差幅度翻译+跨规格幅度基准排位 | 25th→75th percentile swing 翻译成 SD% + 跨规格排位 "lies between" + 缩水解释句 | vs 变体3 表格版 vs 变体13 联合翻译——本变体带跨规格幅度排序与保守性解读 | EMERGING | DesJardine, Li & Shi 2025 AMJ |
+| 96 | 低解释力文献基准防御+分析目的重定位 | 低 R² 可信度防御：报解释力区间→引同 DV 文献更低基准→重定位为 contribution 评估 | vs 变体10 ΔR² 作经济显著性证据——本变体防御解释力弱点 | EMERGING | Gulati et al. 2009 SMJ |
 
-### R6 非显著/反转/Null（5）
+### R6 非显著/反转/Null（10）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -123,8 +146,12 @@ updated: 2026-08-13
 | 37 | Monte Carlo 功效分析 | 理论关键 null 交互的功效量化（排除 Type II） | vs 变体4 通用诚实声明；vs 变体30 预测性 null | VERIFIED | Pollock 2015 ASQ |
 | 42 | 反直觉反转+延迟 Discussion | 预测方向反转当场承认+推迟事后解释 | vs 变体6 当场解释；vs 变体30 预测性 null | EMERGING | Malshe 2015 JM |
 | 60 | 调节变量主效应 null 驳斥 rival conjecture | 非假设 null 的可审计写法 | vs 变体30 预测性机制 null | VERIFIED | Kalaignanam 2013 JM |
+| 74 | 跨情境镜像 null 收束句 | null 侧承载理论确证+"The opposite pattern emerges"钉死方向反转 | vs 变体60 rival conjecture 驳斥——本变体是段落级镜像收束 | VERIFIED | Carpenter & Westphal 2001 AMJ |
+| 81 | 不支持裁决+假设语言模式重述 | 先明确 not supported 裁决，再以假设词汇重述实际模式（含边沿信号） | vs 变体83 配对反号合并判决——本变体管分样本/单假设 null 双拍 | VERIFIED | Gulati et al. 2005 SMJ |
+| 83 | 配对反号假设反例合并判决 | 反号显著+配对 null 一句并置+Hence 合并不支持+显式推迟 Discussion | vs 变体81——本变体一句话结算两种失败模式 | VERIFIED | Gulati & Sytch 2007 ASQ |
+| 95 | 意外反号主效应原位 hedge 重读 | 非焦点变量反号显著当段一句 "may suggest" 替代解读 | vs 变体42 完整两段式（反转+延迟 Discussion）——本变体原位最小处理 | EMERGING | Gulati et al. 2009 SMJ |
 
-### R7 稳健性与威胁处理（11）
+### R7 稳健性与威胁处理（18）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -144,8 +171,10 @@ updated: 2026-08-13
 | 51 | 收购准自然实验 | 影响通道开关（私有→公开所有权切换）+ 收购前不显著 | vs 变体29 选择偏误防御（无通道切换）；vs 变体26 内生性表 | EMERGING | DesJardine 2025 AMJ |
 | 54 | 前端识别防御（RIR 替换计数 + naive-vs-cure 2SRI 配对） | 内生性作为组织威胁且需前置到主结果之前：威胁定位→RIR 替换计数→naive vs 2SRI cure 配对→"consistent across approaches" | vs 变体15 五威胁标签化序列（RIR+Oster+CEM 三件套）——本变体是 RIR 量化替换 + naive-vs-cure 双轨节奏 + 前置；vs 变体2 基础四威胁 | EMERGING | Ridge et al. 2024 AMJ |
 | 61 | 面板 GLS 四威胁电池 | 测量/替代估计器/分析单元上卷/滞后 BIC | vs 变体2 通用威胁；滞后 BIC 是规格辩护不是系数稳健性 | VERIFIED | Kalaignanam 2013 JM |
+| 66 | 三威胁小节化稳健性 | 选择性/内生性→替代估计→构念效度三威胁小节+细节外包附录 | vs 变体15 五威胁电池——本变体三威胁小节化且第三威胁以方向预期收尾 | VERIFIED | Post et al. 2022 AMJ |
+| 85 | Heckman 选择偏倚交底（DV 覆盖） | DV 数据覆盖选择性来源+两条排他约束命名报告+inverse Mills 收口 | vs 变体24/28 表导航——本变体是 R7 选择性论证结构非表格导航 | EMERGING | DesJardine, Li & Shi 2025 AMJ |
 
-### R8 补充/事后/机制（7）
+### R8 补充/事后/机制（11）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -155,7 +184,11 @@ updated: 2026-08-13
 | 38 | post-hoc spline 重解释 | 意外负效应用 spline+递减理论重解释（明标 post-hoc） | vs 变体42 延迟到 Discussion；vs 变体6 当场解释 | VERIFIED | Pollock 2015 ASQ |
 | 44 | 构念效度威胁三角验证 | 按 rival interpretation 组织三类效度威胁（nomological+跨情境+时序） | vs 变体31 替代解释；vs 变体15 稳健性电池 | EMERGING | Schumacher 2020 SMJ |
 | 52 | 机制异质性分解（Bushee 类型） | 既有分类把动机/能力操作化为亚型+系数对比+Wald 检验 | vs 变体44 效度三角（多指标收敛）；vs 变体31 替代解释 | EMERGING | DesJardine 2025 AMJ |
-| 56 | 二元策略完全中介 + 市场信号（legacy Kenny） | firm chars→策略选择 probit + 策略→AR 显著 + firm→AR 直接路径消失 → complete mediation + 信号收束 | vs 变体41 Sobel/乘积；vs 变体5 MCMC；**必须标 legacy**（决策对4） | VERIFIED | Chen, Ganesan & Liu 2009 (JM); source=chenganesanliu2009 |
+| 62 | 二元策略完全中介 + 市场信号（legacy Kenny） | firm chars→策略选择 probit + 策略→AR 显著 + firm→AR 直接路径消失 → complete mediation + 信号收束 | vs 变体41 Sobel/乘积；vs 变体5 MCMC；**必须标 legacy**（决策对4） | VERIFIED | Chen, Ganesan & Liu 2009 (JM); source=chenganesanliu2009 |
+| 69 | 理论前提实证验证双通道 | 样本内切割前提检验+Heckman 交底+样本外前提问卷（K-S 收口） | vs 变体79 理论动机补充分析——本变体验证理论前提本身；副槽位 R7 | VERIFIED | Westphal & Bednar 2005 ASQ |
+| 75 | 连续 DV legacy BK 中介句 | "A separate analysis" 一句带出的三步条件计数中介（LEGACY） | vs 变体58 现代堆叠/62 二元策略版——须标 legacy 补间接效应区间 | VERIFIED | Carpenter & Westphal 2001 AMJ |
+| 79 | 理论动机补充分析双段式 | "two sets of additional analyses"：理论开题（非 threat）+边界条件+构念层次裁决 | vs 变体21 枚举/12 跨样本/33 下游展演——与 R7 threat 稳健性严格分离 | VERIFIED | Higgins & Gulati 2003 OS |
+| 82 | 系统内 BK 三步中介+联合模型校准（LEGACY） | 中介 b 路径嵌主系统：协议步骤=假设判决机+拟合改善拍+nearly full 校准 | vs 变体75/78 legacy BK 族——第二源；null 中介直接拒证假设 | VERIFIED | Gulati & Sytch 2007 ASQ |
 
 ## 易混决策对（跨槽位附录——槽位分不开时查这里）
 

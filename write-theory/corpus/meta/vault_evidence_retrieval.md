@@ -2,29 +2,17 @@
 
 > 外置自 `write-theory/SKILL.md` Phase 1.2。执行条件：paper-state.yaml 中 `paper.vault` 节存在且至少有一个非 null 字段；无 vault 配置时静默跳过。
 
-在确认理论路由后，从用户知识库拉取当前主题的理论证据。**本步骤为可选：无 vault 配置时静默跳过。**
+**回退树与总纪律以 `../paper-state-protocol/references/vault-retrieval.md` 为唯一权威**——三级回退（章节-证据映射 → 作战室/全文搜索 → 静默跳过）、Brief 纪律、Section 特化总表均见该文件。本文件只登记 Theory 侧差异，不重复定义回退树。
 
-**执行条件**：paper-state.yaml 中 `paper.vault` 节存在且至少有一个非 null 字段。
+## Theory 侧差异
 
-**检索流程**（三级回退，不阻塞）：
+- **执行时点**：Phase 1.2（确认理论路由后），非 Phase 0；本步骤为可选，无 vault 配置时静默跳过，不阻塞。
+- **行过滤**：读取 `vault.section_evidence_map` 后只过滤 "Theory" / "T" 行（按 Section 列或命题 ID 前缀匹配）；如有 `vault.war_room`，补读 canonical handle buckets 和 rival mechanism layers。
+- **回退搜索关键词**：映射文件不可读时，以 `paper.title` 和 `introduction.theory_hints.core_constructs` 为关键词搜索（限制 10 条）。
 
-```
-paper-state.yaml 中 paper.vault 是否有配置?
-│
-├── vault.section_evidence_map 非空 → 读取该文件
-│   → 过滤到 "Theory" / "T" 行（按 Section 列或命题 ID 前缀匹配）
-│   → 提取每行: 命题ID, citation key, Vault note path, 证据用途
-│   → 如有 vault.war_room，补读 canonical handle buckets 和 rival mechanism layers
-│   → 生成 "Vault Knowledge Brief (Theory)"
-│
-├── vault 路径存在但文件读不到 → 用 Obsidian MCP search_notes
-│   以 paper.title 和 introduction.theory_hints.core_constructs 为关键词
-│   搜索 Vault（限制 10 条）→ 提取 citation key 和 note path
-│
-└── 无 vault 配置或全部为 null → 静默跳过
-```
+## Theory Vault Knowledge Brief 输出格式（列差异）
 
-**Theory Vault Knowledge Brief 输出格式**（所有内容来自 Vault）：
+相对 protocol 通用 Brief，Theory 版以「机制证据卡片」表为核心列结构，其余块（Rival Mechanisms、概念锚点、证据完整度）沿用 protocol 格式：
 
 ```markdown
 ## Vault 知识简报（Theory）
@@ -37,7 +25,6 @@ paper-state.yaml 中 paper.vault 是否有配置?
 
 ### Rival Mechanisms 需区分（来自项目作战室，如有）
 - vs. [rival_mechanism_1]: [区分策略——从 war_room rival anchors 提取]
-- vs. [rival_mechanism_2]: [区分策略]
 
 ### 概念锚点（来自章节-证据映射或概念库搜索）
 - [[概念 - ...]]: [一句话概括与本文理论的关联]

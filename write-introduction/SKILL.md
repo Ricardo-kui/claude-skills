@@ -1,7 +1,7 @@
 ---
 name: write-introduction
 description: >-
-  顶刊论文 Introduction 段落骨架生成器（Hook→Tension→Stakes→…→Contribution 七模块 + GBL 对齐 + paper-state 片段）。Use when 写或规划引言；触发词：写引言、hook 怎么写、gap 怎么写、贡献声明、problematization。Not for: 蒸馏→distill-introduction-exemplar；审查→intro-review；诊断→diagnose-introduction。
+  顶刊论文 Introduction 段落骨架生成器（Hook→Tension→Stakes→…→Contribution + GBL 对齐 + paper-state 片段）。Use when 写或规划引言；触发词：写引言、hook 怎么写、gap 怎么写、贡献声明、problematization。Not for: 蒸馏→distill-introduction-exemplar；审查→intro-review；诊断→diagnose-introduction。
 ---
 
 # Write Introduction（引言写作顾问）
@@ -18,13 +18,13 @@ description: >-
 ## Phase 0: 契约与模式
 
 1. 模式（`--mode=introduction|front-end|align`）：`introduction`（默认）｜`front-end`（标题+Abstract+promise 对齐，读 `references/front-end-mode.md`）｜`align`（只审查对齐）。
-2. 契约与门控：读 canonical `story` 与 project-owned `story.integrity`，按四阶段词表执行——阶段行为、Intro 附加门与 local-only bypass 细则见 `references/intake-and-story-gate.md`（权威词表 = `../paper-story-contract/references/stage-gates.md`；`refining/finishing` 需 `story.status: confirmed` + stakes.theoretical 与 reader_shift 非空；`story.integrity` 有 `unsupported` 或无法陈述 theme question 与 central knot 时停止在 Story Intake）。
+2. 契约与门控：读 canonical `story` 与 project-owned `story.integrity`，按四阶段词表执行——阶段行为、Intro 附加门（含 `refining/finishing` 门控条件）与 local-only bypass 细则见 `references/intake-and-story-gate.md`（权威词表 = `../paper-story-contract/references/stage-gates.md`）。停止条件/guardrail：门控不满足，或无法陈述 theme question 与 central knot 时，停止在 Story Intake，不得跳过门控继续渲染。
 
 **完成判据**：门控满足或显式记录跳过；项目自身 story integrity 已确认。
 
 ## Phase 1: 诊断
 
-1. 分支判定：理论论文 → `references/theory-paper-amr-mode.md`（AMR 模式贡献声明限一条核心贡献，paper-state 片段加 `theory_paper: true`；贡献清单罗列仅适用实证论文）；定性/归纳 → `references/qualitative-mode.md`（均跳过实证诊断；用户未声明但内容明显定性时先询问）。
+1. 分支判定：理论论文 → `references/theory-paper-amr-mode.md`（AMR 模式细则——贡献声明纪律、paper-state 片段差异——以该文件与 `references/paper-state-schema.md` 理论论文分支为准）；定性/归纳 → `references/qualitative-mode.md`（均跳过实证诊断；用户未声明但内容明显定性时先询问）。
 2. 用户未给 Gap/贡献时诊断：
    - **Step A 主 gap**（GBL 三档，驱动张力类型、叙事能量与结构复杂度）：研究对已有文献的主要定位是**补充**（Incompleteness）、**修正**（Inadequacy）还是**裁决/重组不可兼容主张**（Incommensurability）？已有文献的主要问题——漏了东西、理解偏了，还是在可比的 X、Y、层次与时间范围上推出不可兼容预测？
    - **Step B 次 gap**（可选，多数顶刊论文有组合）：是否**同时**回应另一种 gap？常见组合：Incompleteness+Application（填缺口+借理论）、Inadequacy+Confusion（视角偏+证据矛盾）、Incommensurability+Confusion（理论对立+数据冲突）。次 gap 不改变主张力结构与能量，仅在 Tension 内叠加；单 gap 完全合法。
@@ -37,9 +37,9 @@ description: >-
 
 ## Phase 1.5: 即时范文学习对象（v0.4-lite 试点）
 
-仅在完整 Introduction / front-end 重构请求中执行，且 project-owned integrity gate 为 PASS 或 PROVISIONAL；单模块、句子润色、标题或显式 `--exemplars=off` 请求跳过。共用协议（request 生成 / retrieve_exemplars.py / 四问推荐 / 无匹配明示 / 不写回项目文件）见 `../story-blueprints/v4/rhetoric-moves/_immediate-exemplar-protocol.md`——本节差异：`section="introduction"`，读 v0.4-lite 卡的 Introduction learning block；story needs 例：clarify-theme、establish-genuine-tension、introduce-main-characters。
+仅在完整 Introduction / front-end 重构请求中执行，且 project-owned integrity gate 为 PASS 或 PROVISIONAL；单模块、句子润色、标题或显式 `--exemplars=off` 请求跳过。共用协议（request 生成 / retrieve_exemplars.py / 四问推荐 / 无匹配明示 / 不写回项目文件）见 `../story-blueprints/v4/rhetoric-moves/_immediate-exemplar-protocol.md`——本节差异：`section="introduction"`，读 v0.4-lite 卡的 Introduction learning block；story needs 例：clarify-theme、establish-genuine-tension、introduce-main-characters。推荐只作参考信号，不改变 Gap/贡献诊断与故事契约的权威地位。
 
-**完成判据**：推荐已显示或已明确无匹配；推荐不改变 Gap/贡献诊断与故事契约的权威地位。
+**完成判据**：推荐已显示或已明确无匹配。
 
 ## Phase 2: 路由
 
@@ -66,13 +66,13 @@ description: >-
 | Preview | `previews/_index.md` 定位 → `previews/[id].md` |
 | RQ | `research-questions/[canonical_id].md`（仅需显式 RQ 时；RQ 看起来 gap-driven 则读 `references/knowledge-weaving-rq.md`） |
 | Contribution | `contributions/_index.md` |
-| Transitions | `transitions/[canonical_id].md`（按需） |
+| Transitions | `transitions/[canonical_id].md`（按需：相邻模块骨架已定、段间缺过渡信号或润色衔接时读） |
 | Differentiation | `differentiation/01-prior-work-boundary-clarification.md`（仅存在极易混淆的 prior work 时） |
 | 修辞动作/语言表达升级 | `../story-blueprints/v4/rhetoric-moves/_index.md`（动作自动匹配草稿修辞功能，无需用户点名；intro 默认=bidirectional-staging；润色走其 `_polish-protocol.md` 流畅性门） |
 
 **语料优先改编 · 角色先于风格**：语料句式为改编底本（替换来源特异性内容、填槽位；corpus 无对应句式时再自拟并保持同构），论证型模块按论证单元角色序列组装（先骨架后句子，语料顺序≠段落顺序）——纪律、拼贴判据与 intro 角色接线（render-rules §段落论证文法）见 `../story-blueprints/v4/rhetoric-moves/_argument-grammar.md` + `_polish-protocol.md` §write-*；Hook/Preview/Transitions 为 framing 豁免。已核实事实与用户裁定优先于语料句式。
 
-槽位：按需读 `references/introduction-slot-contracts.md`，只填已知信息，不确定的槽位保留占位（不编造引文/数字/发现方向）。
+槽位：槽位值未知或拿不准填什么时读 `references/introduction-slot-contracts.md`，只填已知信息，不确定的槽位保留占位（不编造引文/数字/发现方向）。
 
 变体选择：按适用场景/证据状态/研究情境/期刊选主推变体（不默认 A）；仅实质改变故事路径时给 1 个备选。优先级：corpus 变体级约束 > 研究情境 > 路由表推荐 > story_frame 调制。
 

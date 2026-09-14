@@ -15,7 +15,7 @@
 
 **通用填空段落（按威胁组织，每威胁一段）**：
 
-**测量威胁**： ✓ STANDARD（20+/28 篇范文使用）
+**测量威胁**： ✓ STANDARD
 ```text
 One concern is that our findings depend on the specific operationalization of [construct]. To address this concern, we re-estimate our models using [alternative measure] instead of [main measure]. The results are substantively unchanged, reducing concerns that [measurement choice] drives the findings.
 ```
@@ -25,13 +25,13 @@ One concern is that our findings depend on the specific operationalization of [c
 To ensure that our results are not sensitive to model choice, we re-estimate our models using [alternative model, e.g., Tobit / Poisson / negative binomial / Cox]. The pattern of coefficients is [consistent/qualified], suggesting that [model choice] is unlikely to account for the main pattern.
 ```
 
-**样本威胁 — 排除敏感性**： ✓ STANDARD（20+/28 篇范文使用）
+**样本威胁 — 排除敏感性**： ✓ STANDARD（覆盖率口径见 corpus/_evidence_registry.yaml）
 ```text
 Our results may be sensitive to sample composition. We exclude [specific subsample, e.g., high-tech firms / financial crisis years / outliers] and re-estimate our models. The results [remain consistent/are qualified], suggesting that [sample restriction] does not drive the findings.
 ```
 > 注：该变体对应 exclusion-based 样本稳健性。理论驱动的子样本异质性检验见下方"样本威胁 — 理论驱动子样本变异"（🔬 EXPERIMENTAL，源自 Yuan et al. 2026 JOM）。
 
-**时点威胁**： ✓ STANDARD（10+/28 篇范文使用）
+**时点威胁**： ✓ STANDARD
 ```text
 To address timing concerns, we use [alternative lag structure / different event window / extended pre-period]. The results are [consistent/qualified], reducing concern that [timing choice] explains the main pattern.
 ```

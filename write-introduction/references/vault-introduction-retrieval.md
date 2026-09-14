@@ -1,17 +1,17 @@
 # Vault evidence retrieval for Introduction
 
-Use this reference only when building a full Introduction or front-end. Skip it for local-only Hook, Gap, or contribution-sentence requests.
+The fallback tree, trigger timing, and no-result discipline are defined in `../../paper-state-protocol/references/vault-retrieval.md` (§5) — the single authority. This file carries only the Introduction-specific differences. Use it when building a full Introduction or front-end; skip it for local-only Hook, Gap, or contribution-sentence requests.
 
-## Retrieval order
+## Introduction-specific differences
 
-1. If `paper-state.yaml` contains `vault.section_evidence_map`, read the Introduction rows and extract proposition ID, citation key, note path, evidence role, and the recoverable supporting claim. If `vault.war_room` exists, add the Gap state and canonical evidence buckets.
-2. If the mapping is absent but a Vault root is configured, search by paper title, `story.characters`, Gap terms, and theory names. Prefer literature notes and project evidence maps; cap the result at 10–15 highly relevant records.
-3. If an Obsidian semantic-search tool is available, prefer it over filename search. Otherwise use bounded filesystem search.
-4. If the path is unavailable or no relevant evidence is found, report the attempted path and query, retain citation placeholders, and ask for either the correct Vault root or 3–5 core sources. Do not block Story Intake or architecture work while waiting.
+- **Timing**: Phase 0 (Story Intake), before architecture work.
+- **Row filter**: read `vault.section_evidence_map` Introduction rows — proposition ID, citation key, note path, evidence role, and the recoverable supporting claim. If `vault.war_room` exists, add the Gap state and canonical evidence buckets.
+- **Search seeds when the mapping is absent**: paper title, `story.characters`, Gap terms, and theory names. Prefer semantic search over filename search; cap results at 10–15 highly relevant records.
+- **No-result behavior**: follow the protocol (skip; never block Story Intake or architecture work) and additionally report the attempted paths and queries, retain citation placeholders, and ask for either the correct Vault root or 3–5 core sources.
 
 Do not assume a particular directory layout. Take every project path from `paper-state.yaml`, the nearest project instructions, or the user.
 
-## Knowledge brief
+## Knowledge brief (Introduction layout)
 
 Return this block before the scaffold when evidence was retrieved:
 

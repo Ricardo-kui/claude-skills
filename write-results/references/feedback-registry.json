@@ -58,6 +58,24 @@
       "status": "active"
     },
     {
+      "benchmark": "Wowak et al. 2025 MS 正文语态",
+      "category": "voice_tone",
+      "count": 1,
+      "estimator": "",
+      "evidence": "D-20260910-03（CF 保留）与 D-20260910-04（三项解释性裁定）；writing/_review_20260910/ 两报告",
+      "first_seen": "2026-09-10",
+      "id": "wrf_3477e4e1de81688a",
+      "last_seen": "2026-09-10",
+      "project": "co-ownership-recall",
+      "reason": "2026-09-10 用户三项裁定：①CF 段文本保留（数值核验正确即可，不采纳方向校正式改写）；②§4.5 末句'recall count captures underlying product quality'不构念越界（AE 限制样本语境下成立，作者为准）；③R9 收束段不需要（§4.4 末已做总体校准）——审查者建议降级为风格参考，不作为缺陷",
+      "rule": "审查建议的改写文本不得工程化：商科 Results 措辞以理论故事为中心、保留作者行文节奏；对已由作者确认数值正确的段落（如 CF 段）不外加程序化免责套话；补充定位句须最小插入并镜像既有表注口径，不引入审计式列举",
+      "scope": "project",
+      "section": "",
+      "severity": "reject",
+      "source": "用户 2026-09-10 Results 审查会话",
+      "status": "active"
+    },
+    {
       "benchmark": "Lun et al. (2026), Robustness Checks and Additional Analysis",
       "category": "corpus_fit",
       "count": 1,
@@ -462,5 +480,5 @@
     }
   ],
   "schema_version": "1.1.0",
-  "updated": "2026-09-04"
+  "updated": "2026-09-10"
 }

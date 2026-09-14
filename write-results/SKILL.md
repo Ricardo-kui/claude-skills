@@ -1,12 +1,12 @@
 ---
 name: write-results
 description: "顶刊 Results 写作与深度修订——按假设顺序组织证据（R1-R9 槽位、幅度解释、诚实支持判断、claim 层级校准）。Use when 写/改/重排 Results；触发词：写结果、修改 Results、系数解读、稳健性检验、经济显著性。Not for: 只审查→results-review；蒸馏→distill-results-exemplar。"
-when_to_use: "起草或深度修订 Results 段落时使用；只审查不改写用 results-review。"
+when_to_use: "用户提供现稿与修订记录/审稿意见、要求深度修订（revision）或单段局部改写（local_rewrite）时；其余触发词见 description。"
 ---
 
 # Role
 
-你是顶刊论文 Results 的**证据展演写作者与修订者**。基于 34 篇 MVP30 范文和 Pollock 2025 Ch07，把实际证据组织成可核验的论证。新稿模式可输出带 `[placeholder]` 的骨架；修订模式必须在当前文本上工作，不得跳过现稿直接套模板。
+你是顶刊论文 Results 的**证据展演写作者与修订者**。基于范文语料（基数见 corpus/_evidence_registry.yaml）和 Pollock 2025 Ch07，把实际证据组织成可核验的论证。新稿模式可输出带 `[placeholder]` 的骨架；修订模式必须在当前文本上工作，不得跳过现稿直接套模板。
 
 核心原则：Results 是说理，不是报数。主假设段以“方向→显著性→幅度→支持判断”兑现承诺；选择、内生性、机制和稳健性段则说明“具体问题如何产生→检验为何能诊断→结果如何改变推断”。四拍是证据功能，不是四句模板。
 
@@ -42,7 +42,7 @@ when_to_use: "起草或深度修订 Results 段落时使用；只审查不改写
 /write-results <模型类型> [--hypotheses="..."] [--journal=AMJ] [--has-interactions] [--has-mediator] [--paper-state=<path>] [--skip-robustness-diagnostic]
 ```
 
-`<模型类型>`（必填，19 种；全表见 `references/design-branches.md` 分支表）：OLS/FE | Logit/Probit | 生存分析 | DiD | 计数模型 | 实验 | IV/2SLS | 多研究 | 定性过程研究 等。省略模型类型 → 交互式询问。
+`<模型类型>`（必填；全表见 `references/design-branches.md` 分支表）：OLS/FE | Logit/Probit | 生存分析 | DiD | 计数模型 | 实验 | IV/2SLS | 多研究 | 定性过程研究 等。省略模型类型 → 交互式询问。
 
 ## 输入接口
 
@@ -97,7 +97,7 @@ R1–R9 是证据功能，不是强制章节顺序。按需加载 slot 骨架（
 8. **因果语言强制词汇表**（按设计家族，无越级）：动词档位唯一源 `../write-methods/corpus/micro-templates/causal-hedging.md`——面板 OLS→"associated with"（禁 causes/leads to）；DiD→平行趋势支持后 "effect of"；IV→识别 preview 后 "effect"、避免 "causes"；非线性→边际效应/概率转述；生存分析→"changes the hazard of"；实验→"caused"。与第 9 条互补：本条按设计家族管动词，claim-calibration 按主张层级管范围。
 9. **主张层级校准**（claim level ≤ evidence level）：写 R3 claim 句 / R5 经济显著性 / Discussion 面向的 implication 句前读 `references/claim-calibration.md`——7 级 claim ladder（L1 观察 → L2 关联 → L3 预测 → L4 因果效应 → L5 机制 → L6 普适 → L7 应用）、过度声明动词表与强主张四件套句式（`Strong claim + scope + evidence basis + remaining uncertainty`）。与第 8 条互补：第 8 条按设计家族管动词，本条按主张层级管范围与强度；设计只支持 L2 就不得写 L5/L6 语句。
 
-**完成判据**：兑现映射五检查点全过；因果语言与估计器匹配；四项证据功能完整且包含幅度；claim 层级未越过证据层级（claim-calibration L 层匹配）。
+**完成判据**：兑现映射全部检查点（6 项）全过；因果语言与估计器匹配；四项证据功能完整且包含幅度；claim 层级未越过证据层级（claim-calibration L 层匹配）。
 
 ## 生成后检查
 
@@ -137,4 +137,4 @@ R1–R9 是证据功能，不是强制章节顺序。按需加载 slot 骨架（
 **语料与变体**：结果类型具体变体见 `corpus/[结果类型].md`；新蒸馏结果经 `distill-results-exemplar` → Phase 4 自动写入（同步更新 INDEX.md 变体数）。
 
 ---
-*基于 34 篇 MVP30 范文语料库、Pollock 2025 Ch07、Yuan et al. (2026) JOM 六维稳健性框架构建；版本历史见 git log。*
+*基于 MVP30 范文语料库（基数见 corpus/_evidence_registry.yaml）、Pollock 2025 Ch07、Yuan et al. (2026) JOM 六维稳健性框架构建；版本历史见 git log。*

@@ -40,10 +40,7 @@ Use this priority: current user decision > matching section/design-type feedback
 
 ## 3. Preserve Methods–Results ownership
 
-- Methods contains the empirical setting, baseline data and sample, construct operationalization, controls, and the baseline estimator/identification strategy.
-- A selection correction, IV, matching design, or diagnostic belongs in Methods only when it is part of the baseline estimator or determines the estimator choice.
-- Supplemental endogeneity checks, alternative measures, sensitivity analyses, mechanisms, heterogeneity, and their findings belong in Results unless the user explicitly changes the paper architecture.
-- When a variable first appears only in Results, Results must define its source, construction, timing, and sample boundary; Methods should not retain an orphaned preview.
+Single source for the ownership rules: `references/robustness-menu.md` (§ Methods–Results 分工). Resolve boundary conflicts by the §2 priority order — current user decision first.
 
 ## 4. Keep each slot's job distinct
 

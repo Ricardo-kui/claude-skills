@@ -2,7 +2,7 @@
 
 > 来源：Booth et al. 2024, *The Craft of Research*, Chapter 7 "Assembling Reasons and Evidence"（§7.5）。
 > 验证状态：EMERGING——Booth 是通用学术写作书而非管理学语料；五问本身通用，本文件的**定量映射列**为本土化适配。
-> 适用位置：write-results 生成后自检（`../SKILL.md` Credibility 区）；Discussion 证据回顾时亦可参考。
+> 适用位置：write-results 生成后自检（`references/post-generation-checklist.md` Credibility 区）；Discussion 证据回顾时亦可参考。
 
 ## 核心区分：Evidence vs Reasons
 

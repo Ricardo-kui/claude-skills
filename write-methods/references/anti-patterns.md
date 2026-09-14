@@ -4,7 +4,7 @@
 
 - **模型选择无文字解释**：只写 "we estimate FE model" 而不解释为什么 FE 优于 RE/OLS，或为什么选此 estimator
 - **控制变量无 because**：列出 Size, Age, ROA 但不解释每个变量控制的是什么竞争性解释
-- **因果语言越级**：面板数据 design 下使用 "caused" "led to" 等强因果词；自然实验未通过平行趋势检验就用 "effect of... on..."
+- **因果语言与范文脱节**：因果动词档位偏离匹配设计家族范文实际用法——`corpus/micro-templates/causal-hedging.md` 仅作默认参考，不得按软件工程/计算机标准机械执行 identified→estimated 类审查（feedback-registry wmf_206116a4）
 - **样本漏斗缺数字**：写 "we exclude missing values" 但不报告每一步损失了多少观测
 - **识别策略后置或缺失**：DiD/IV/自然实验不把识别假设和检验放在核心位置，而是 buried 在脚注或附录
 - **交互/非线性模型无解释策略**：加入 interaction/nonlinear term 后未预告如何在 Results 中解释（marginal effects / simple slopes / AME）

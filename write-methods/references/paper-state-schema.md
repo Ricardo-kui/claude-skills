@@ -49,8 +49,9 @@ methods:
 
   results_preview: "[M10 预告段的核心内容摘要]"
 
-  # 新增 v3.0.0 — 稳健性计划。由 write-results 决策诊断填充，或手动填写。
+  # v3.0.0 — 稳健性计划。由 write-results 决策诊断填充（references/robustness-diagnosis.md），或手动填写。
   # 供 write-results 跳过诊断直接生成 R7 段落。
+  # 本节为 robustness_plan 的唯一权威位置（protocol schema v1.3 登记）；write-results 的 results 节不重复登记此结构。
   robustness_plan:  # 可选；不存在时 write-results 自动触发决策诊断
     mandatory: ["[必须检验的维度]"]
     recommended: ["[建议检验的维度]"]

@@ -125,6 +125,38 @@ def check_registry(errors: list[str]) -> None:
                 errors.append(f"feedback record {index} has invalid prohibited pattern {pattern!r}: {exc}")
 
 
+def check_fence_balance(errors: list[str]) -> None:
+    """孤立 ``` 围栏配平：每个 markdown 文件中围栏行数必须为偶数（奇数=有未闭合围栏）。"""
+    md_files = [ROOT / "SKILL.md"]
+    md_files += sorted((ROOT / "references").glob("*.md"))
+    md_files += sorted((ROOT / "corpus").glob("*.md"))
+    for path in md_files:
+        if not path.is_file():
+            continue
+        fences = sum(1 for line in path.read_text(encoding="utf-8").splitlines() if line.lstrip().startswith("```"))
+        if fences % 2:
+            errors.append(f"unbalanced code fences (odd ``` count={fences}): {path.relative_to(ROOT)}")
+
+
+def check_olsfe_quickref(errors: list[str]) -> None:
+    """OLS-FE 速查表行数 == `### 变体 N` 标题数（死库存对账，真值=grep 计数）。"""
+    path = ROOT / "corpus" / "OLS-FE.md"
+    if not path.is_file():
+        errors.append("missing corpus/OLS-FE.md")
+        return
+    text = path.read_text(encoding="utf-8")
+    headings = re.findall(r"^### 变体\s*(\d+)", text, re.MULTILINE)
+    quickref = text.split("## 变体速查表", 1)[-1].split("## 易混决策对", 1)[0]
+    rows = re.findall(r"^\|\s*(\d+)\s*\|", quickref, re.MULTILINE)
+    if len(rows) != len(set(rows)):
+        errors.append(f"OLS-FE quick-ref has duplicate variant ids: {sorted({r for r in rows if rows.count(r) > 1}, key=int)}")
+    if len(rows) != len(headings):
+        missing = sorted(set(headings) - set(rows), key=int)
+        errors.append(
+            f"OLS-FE quick-ref rows ({len(rows)}) != variant headings ({len(headings)}); missing ids: {missing}"
+        )
+
+
 def main() -> int:
     errors: list[str] = []
     for relative in REQUIRED_FILES:
@@ -144,6 +176,8 @@ def main() -> int:
 
     check_story_table(errors)
     check_registry(errors)
+    check_fence_balance(errors)
+    check_olsfe_quickref(errors)
 
     if errors:
         print("write-results validation FAILED")
@@ -152,7 +186,7 @@ def main() -> int:
         return 1
     print("write-results validation PASSED")
     print(f"- required files: {len(REQUIRED_FILES)}")
-    print("- frontmatter, workflow markers, feedback registry, and story table are valid")
+    print("- frontmatter, workflow markers, feedback registry, story table, fences, and OLS-FE quick-ref are valid")
     return 0
 
 

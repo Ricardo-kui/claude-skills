@@ -36,9 +36,13 @@
 | **跨学科类比 Hook** | `01-cross-disciplinary-analogy` | 领域A概念 → 领域B类似问题 | VERIFIED (≥2 papers) | pollock2015 (ASQ), malshe2015 (JM) |
 | **后果清单 Hook** | `08-consequence-cascade` | 负面事件递进式后果清单（含变体D：定义→频次→品牌级联→具名市值灾难多段型，chen2009，VERIFIED） | VERIFIED | mayo2021 (POM), wu2025 (SMJ), chenganesanliu2009 (JM) |
 | **"Contrary to Belief" Hook** | `12-contrary-to-belief` | 打破普遍认知的制度事实（含变体C：直觉反转保留共识型 habel2016 — "despite its intuitive appeal, this logic may be misleading"） | VERIFIED | eilert2017 (JM), darby2023 (MSOM), habel2016 (JM) |
-| **正向特质阴暗面 Hook** | `24-positive-trait-dark-side` | 正向 CEO 特质 → 反直觉负面组织后果 | EMERGING (1p) | chung_low_rust_2022_jams (JAMS) |
+| **正向特质阴暗面 Hook** | `24-positive-trait-dark-side` | 正向 CEO 特质 → 反直觉负面组织后果（边界反转，保留特质已有价值） | EMERGING (1p) | chung_low_rust_2022_jams (JAMS) |
+| **双行业趋势对比 Hook** | `21-dual-industry-trend` | 数字化/宏观趋势 → 两个行业的对比案例建立现象普遍性 | EMERGING (1 paper) | zhao-ding_gaba (ORSC) |
 
-*Trend 是最丰富的 Pollock 类型（6 个 hooks + 1 emerging），覆盖从低能量数据开场到高能量范式挑战的全谱系。*
+*`21-dual-industry-trend` — Trend/Phenomenon Hook: macro-trend → dual-industry contrasting examples → "Across [contexts], firms not only [A] but also choose among [B], deciding [trade-off] across multiple dimensions." 适用于需要建立"跨行业普遍现象"可信度的研究。能量: 中。最佳适配 Gap: Inadequacy（首选，依据 P35 "challenges an implicit premise... mechanically translate into" 语言）/ Incompleteness（适配）× Constructs + Phenomenon。canonical 文件已于 2026-06-17 创建。*
+*`24-positive-trait-dark-side` — Trend/Anecdote Hook: "[Positive trait] is widely regarded as desirable... Yet this literature has largely overlooked the possibility that [positive trait] may also have a darker side when [actors] confront [specific situational pressure]." 适用于 upper echelons/领导力/创业研究中正向特质的阴暗面。能量: 中。最佳适配 Gap: Inadequacy（首选）/ Incommensurability。禁忌: 不要与 `06-paradigm-challenge` 同用（前者是边界反转，后者是范式颠覆）。*
+
+*Trend 是最丰富的 Pollock 类型（8 个 hooks，其中 2 个 EMERGING），覆盖从低能量数据开场到高能量范式挑战的全谱系。*
 
 ---
 
@@ -53,11 +57,14 @@
 | **实践困境 Hook** | `10-practical-puzzle` | 从业者面临的具体困境 | VERIFIED (≥3 papers) | ceo_regulatory_focus_ijrm (IJRM), desjardine2023 (OS), kalaignanam2017 (JM) |
 | **谜题/悖论 Hook** | `04-puzzle-paradox` | 反直觉现象，制造认知失调 | VERIFIED (≥4 papers) | paruchuri2020 (SMJ), pontikes2012 (ASQ) |
 | **成对灾难 Hook** | `14-paired-disasters` | 两次时间跨度大的相似灾难，建立"历史重演"谜题 | VERIFIED | haunschild2015 (OS) |
-| **双重张力交织 Hook** | `22-twin-complication` | 田野张力 × 理论张力交织互构，双 resolution 合同（Turner 1976 原型，GBL Ch3） | EMERGING (2p) | turner1976 (ASQ), haunschild2015 (OS, 隐式) |
-| **二元关系传染 Hook** | `26-dyadic-contagion` | 关系双面性 → 负面事件 → 跨组织溢出 | EMERGING (1p) | pupovac2026 (POM) |
+| **双重张力交织 Hook** | `22-twin-complication` | 田野张力 × 理论张力交织互构；理论张力从田野张力派生；双 resolution 合同 + 删除检验（Turner 1976 原型，GBL Ch3） | EMERGING (2p) | turner1976 (ASQ), haunschild2015 (OS, 隐式) |
+| **二元关系传染 Hook** | `26-dyadic-contagion` | 关系双面性 → 负面事件 → 跨组织溢出（供应商-制造商 contagion） | EMERGING (1p) | pupovac2026 (POM) |
 | **辩论重构 Hook** | `17-debate-reframing` | 经典辩论 → "rather than settling" 实证重构（含变体 A：多文献中央问题型 westphalzajac1995，VERIFIED） | VERIFIED (2p) | park_lange_jeon (SMJ), westphalzajac1995 (AMJ)；变体 B：立场宣告消解型——经典辩论开场即第一人称宣告其社会建构性+身份群体诊断+规范模型预告（首段四合一），gulati_2007_tent_poles，EMERGING |
 
-*Anecdote 类型有 9 个 hooks，覆盖从完整叙事到精简案例的多种长度。注意：`04-puzzle-paradox` 同时包含 Trend 元素（反直觉数据）和 Anecdote 元素（第二人称推理），但因其核心功能是叙事性 puzzle，归入 Anecdote。`22-twin-complication` 是跨类型架构（P1 可用轶事或趋势开场），因其田野张力以行动者叙事承载，归入 Anecdote。*
+*Anecdote 类型有 10 个 hooks，覆盖从完整叙事到精简案例的多种长度。注意：`04-puzzle-paradox` 同时包含 Trend 元素（反直觉数据）和 Anecdote 元素（第二人称推理），但因其核心功能是叙事性 puzzle，归入 Anecdote。`22-twin-complication` 是跨类型架构（P1 可用轶事或趋势开场），因其田野张力以行动者叙事承载，归入 Anecdote。*
+
+*`22-twin-complication.md` — Anecdote/架构型 Hook: P1 田野张力（行动者的判断结构）→ P2 story the theory（文献情境化，非问题化）→ P3 理论张力（从田野派生）→ P4（可选）complicating the complications。GBL Ch3 Turner (1976, ASQ) 原型的量化适配；Pollock "Pasteur's Quadrant" 的深度原版——不是"理论+实践都要有"，而是同一个 knot 在两个语域的表达。核心约束：双 resolution 合同（Discussion 必须回到两个张力）+ 删除检验（删掉田野段若理论张力不受影响 = 贴皮实践意义）。能量: 中–高。最佳适配 Gap: 现象驱动型 Incompleteness / Inadequacy × Mechanism / Boundary / Phenomenon。禁忌: 实证设计只能回答一个张力时禁用（与 `06-paradigm-challenge` / `03-data-shock` 的互斥见下方矩阵）。*
+*`26-dyadic-contagion.md` — Anecdote Hook: "[Dyadic relationship] are intertwined... One party may become more prosperous because of the other's success, but also suffer steep losses resulting from the other's failure." 适用于供应链、平台生态、战略联盟等双边依赖关系的负面溢出研究。能量: 中。最佳适配 Gap: Incompleteness × Mechanism/Boundary。禁忌: 不要与 `03-data-shock` 或 `06-paradigm-challenge` 同用。*
 
 ---
 
@@ -71,28 +78,9 @@
 
 ---
 
-## 按 Gap 强度选择 Hook
+## Hook 选择逻辑（指针）
 
-| Gap 强度 | 推荐 Hooks（按 Pollock 类型分组） |
-|---------|--------------------------------|
-| **低** | Trend: `03-data-shock`, `08-consequence-cascade` <br> Anecdote: `10-practical-puzzle`, `09-psychological-construct-hook` <br> Rhetorical: `13-rhetorical-question` |
-| **中** | Trend: `05-literature-consensus-blindspot`, `01-cross-disciplinary-analogy`, `12-contrary-to-belief`, `24-positive-trait-dark-side` <br> Anecdote: `04-puzzle-paradox`, `10-immersive-narrative`, `11-institutional-anecdote`, `07-cost-benefit-tension` |
-| **高** | Trend: `06-paradigm-challenge` <br> Quote: `02-epigraph-quote-pivot` <br> Anecdote: `14-paired-disasters`, `22-twin-complication` |
-
----
-
-## 按期刊选择 Hook
-
-| 期刊 | 偏好 Pollock 类型 | 推荐 Hooks |
-|------|------------------|-----------|
-| **ASQ** | Quote > Trend (理论) | `02-epigraph-quote-pivot`（经典理论引语）, `06-paradigm-challenge`, `22-twin-complication` |
-| **ASR** | Quote > Trend (理论) | `02-epigraph-quote-pivot`（理论象征文本）, `06-paradigm-challenge` |
-| **SMJ** | Trend (数据) ≈ Anecdote | `03-data-shock`, `06-paradigm-challenge`, `04-puzzle-paradox`, `13-rhetorical-question` |
-| **AMJ** | Anecdote ≈ Rhetorical | `10-immersive-narrative`, `09-psychological-construct-hook`, `13-rhetorical-question`, `22-twin-complication` |
-| **OS** | Anecdote > Trend | `11-institutional-anecdote`, `07-cost-benefit-tension`, `04-puzzle-paradox`, `22-twin-complication` |
-| **JM/JMR** | Trend (数据) | `03-data-shock`, `08-consequence-cascade`, `12-contrary-to-belief` |
-| **JOM** | Trend ≈ Anecdote | `02-epigraph-quote-pivot`（监管/召回）, `07-cost-benefit-tension`, `08-consequence-cascade` |
-| **MS** | Anecdote | `11-institutional-anecdote` |
+按 Gap 强度 / 按期刊选择 Hook 的决策表不再内联于本文件（原内联表曾与 `../_routing_tables.yaml` 构成同义双源且漂移）；唯一权威来源为 `../_routing_tables.yaml` 的 `hooks`（by_gap_strength）与 `journal_styles` 节。本文件仅保留配对与互斥矩阵。
 
 ---
 
@@ -161,9 +149,10 @@
 | 24 | positive-trait-dark-side | Trend / Anecdote |
 | 25 | empirical-puzzle-after-consensus | Trend |
 | 26 | dyadic-contagion | Anecdote |
+| 27 | theory-testbed-arena | —（hook 文件未标注 Pollock 类型） |
 | — | cold-start-cost-cascade | Trend |
 
-*注：编号 10 被 immersive-narrative 和 practical-puzzle 共享，编号 17 被 classic-debate-constraint 和 debate-reframing 共享——均因不同 distill 来源保留原编号以维持向后兼容。编号 22 曾预留（paired-simultaneous-incidents，未建成），2026-07-27 改用于 twin-complication（GBL Ch3 Turner 1976 蒸馏）。*
+*注：编号 10 被 immersive-narrative 和 practical-puzzle 共享，编号 17 被 classic-debate-constraint 和 debate-reframing 共享——均因不同 distill 来源保留原编号以维持向后兼容。*
 
 ---
 
@@ -177,51 +166,20 @@
 
 ---
 
-## 新增 Hook（编号 22）
-
-| Hook | canonical_id | 核心特征 | 验证状态 | 代表范文 |
-|------|-------------|---------|---------|---------|
-| **双重张力交织 Hook** | `22-twin-complication` | 田野张力 × 理论张力交织互构；理论张力从田野张力派生；双 resolution 合同 + 删除检验 | EMERGING (2p) | turner1976 (ASQ), haunschild2015 (OS, 隐式) |
-
-- `22-twin-complication.md` — Anecdote/架构型 Hook: P1 田野张力（行动者的判断结构）→ P2 story the theory（文献情境化，非问题化）→ P3 理论张力（从田野派生）→ P4（可选）complicating the complications。GBL Ch3 Turner (1976, ASQ) 原型的量化适配；Pollock "Pasteur's Quadrant" 的深度原版——不是"理论+实践都要有"，而是同一个 knot 在两个语域的表达。核心约束：双 resolution 合同（Discussion 必须回到两个张力）+ 删除检验（删掉田野段若理论张力不受影响 = 贴皮实践意义）。Pollock 类型: Anecdote（跨类型架构）。能量: 中–高。最佳适配 Gap: 现象驱动型 Incompleteness / Inadequacy × Mechanism / Boundary / Phenomenon。禁忌: 不与 `06-paradigm-challenge`（理论先行）或 `03-data-shock`（规模感）同用；实证设计只能回答一个张力时禁用。
-
----
-
-## 新增 Hook（编号 26）
-
-| Hook | canonical_id | 核心特征 | 验证状态 | 代表范文 |
-|------|-------------|---------|---------|---------|
-| **二元关系传染 Hook** | `26-dyadic-contagion` | 关系双面性 → 负面事件 → 跨组织溢出（供应商-制造商 contagion） | EMERGING (1p) | pupovac2026 (POM) |
-
-- `26-dyadic-contagion.md` — Anecdote Hook: "[Dyadic relationship] are intertwined... One party may become more prosperous because of the other's success, but also suffer steep losses resulting from the other's failure." 适用于供应链、平台生态、战略联盟等双边依赖关系的负面溢出研究。Pollock 类型: Anecdote。能量: 中。最佳适配 Gap: Incompleteness × Mechanism/Boundary。禁忌: 不要与 `03-data-shock` 或 `06-paradigm-challenge` 同用。
-
----
-
-## 新增 Hook（编号 24）
-
-| Hook | canonical_id | 核心特征 | 验证状态 | 代表范文 |
-|------|-------------|---------|---------|---------|
-| **正向特质阴暗面 Hook** | `24-positive-trait-dark-side` | 正向 CEO 特质 → 反直觉负面组织后果（边界反转，保留特质已有价值） | EMERGING (1p) | chung_low_rust_2022_jams (JAMS) |
-
-- `24-positive-trait-dark-side` — Trend/Anecdote Hook: "[Positive trait] is widely regarded as desirable... Yet this literature has largely overlooked the possibility that [positive trait] may also have a darker side when [actors] confront [specific situational pressure]." 适用于 upper echelons/领导力/创业研究中正向特质的阴暗面。Pollock 类型: Trend / Anecdote。能量: 中。最佳适配 Gap: Inadequacy（首选）/ Incommensurability。禁忌: 不要与 `06-paradigm-challenge` 同用（前者是边界反转，后者是范式颠覆）。
-
----
-
-## 新增 Hook（编号 21）
-
-| Hook | canonical_id | 核心特征 | 验证状态 | 代表范文 |
-|------|-------------|---------|---------|---------|
-| **双行业趋势对比 Hook** | `21-dual-industry-trend` | 数字化/宏观趋势 → 两个行业的对比案例建立现象普遍性 | EMERGING (1 paper) | zhao-ding_gaba (ORSC) |
-
-- `21-dual-industry-trend` — Trend/Phenomenon Hook: macro-trend → dual-industry contrasting examples → "Across [contexts], firms not only [A] but also choose among [B], deciding [trade-off] across multiple dimensions." 适用于需要建立"跨行业普遍现象"可信度的研究。Pollock 类型: Trend。能量: 中。最佳适配 Gap: Inadequacy（首选，依据 P35 "challenges an implicit premise... mechanically translate into" 语言）/ Incompleteness（适配）× Constructs + Phenomenon。canonical 文件已于 2026-06-17 创建。
-
----
-
 ## 新增 Hook（编号 23）
 
 | Hook | canonical_id | 核心特征 | 验证状态 | 代表范文 |
 |------|-------------|---------|---------|---------|
 | **流行观点对立 Hook** | `23-popular-debate` | TED talk vs 畅销书对立观点 → "This debate illustrates..." pivot → 学术 gap | EMERGING (1 paper) | falchetti2022 (SMJ) |
-| `27-theory-testbed-arena.md` | `27-theory-testbed-arena` | 变体 A：理论试验场致意 Hook——ideal arena 适配宣言+场域独有属性论证+Thus 期望推导为 Tension 安装靶子，gulati_westphal1999，VERIFIED (单源 Gulati 裁定) |
 
 - `23-popular-debate` — Anecdote Hook: "In an exceptionally popular [TED talk], [Author A] argues... [Author B], on the other hand, in [their best-selling book], points out... This debate illustrates one of the central challenges..." 两个大众文化中的对立观点并置→争论的 resolution 不在 A vs B 本身，而在被双方忽略的 contingency factor。Pollock 类型: Anecdote。能量: 中。最佳适配 Gap: Incompleteness × Boundary + Constructs。禁忌: ASQ 投稿避免使用（偏好理论深度而非 practitioner relevance）。
+
+---
+
+## 新增 Hook（编号 27）
+
+| Hook | canonical_id | 核心特征 | 验证状态 | 代表范文 |
+|------|-------------|---------|---------|---------|
+| **理论试验场致意 Hook** | `27-theory-testbed-arena` | ideal arena 适配宣言 + 场域独有属性论证 + "Thus, from this perspective" 期望推导为 Tension 安装靶子 | VERIFIED (单源 Gulati 裁定) | gulati_westphal1999 (ASQ) |
+
+- `27-theory-testbed-arena.md` — Hook 不呈现数据/悖论/反例，而是宣告某组织场域是检验某理论视角的理想试验场（ideal arena），用场域独有连结机制与可观察性论证适配，再由理论视角推导基准期望，为 Tension 的问题化安装靶子。适用: Inadequacy × Boundary/Mechanism；用新设定重新检验一个已有试验场中被视为已解决的理论期望；数据场域本身有独一无二的可观察性/连结性卖点；ASQ/SMJ 网络与治理研究。待第二篇跨论文复现后升 ROBUST。

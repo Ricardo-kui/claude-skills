@@ -17,6 +17,7 @@ results:
     H1: {direction: "[positive / negative / null]", significant: [true / false], baseline_verdict: "[supported / partially_supported / not_supported]", overall_evidence: "[stable / qualified / mixed / unresolved]"}
     # H2: {direction: "...", significant: ..., baseline_verdict: "...", overall_evidence: "..."}
 
+  # --- story_resolution: storylines 状态判定（v1.3 已登记入 protocol schema；paper-story-contract Section Extension）---
   story_resolution:
     headline_answer: "[对 theme question 的证据约束式回答]"
     storylines:
@@ -35,13 +36,10 @@ results:
     # 无意外发现时为空列表
     # - "[反直觉/意外发现：一句话描述]"
 
-  robustness_plan:  # 由稳健性决策诊断生成（Yuan et al. 2026 JOM）
-    mandatory: ["[必须检验的维度]"]
-    recommended: ["[建议检验的维度]"]
-    optional: ["[可选检验的维度]"]
-    excluded:
-      "[维度名]": "[排除理由]"
+  # robustness_plan 不在 results 节登记——唯一权威位置为 methods.robustness_plan（见 ../paper-state-protocol/references/schema.md v1.3 与 ../write-methods/references/paper-state-schema.md）；缺失时 write-results 自动触发稳健性决策诊断（references/robustness-diagnosis.md）并将结果写入 methods 节。
 
+  # --- revision_constraints: skill-local（仅 write-results 内部 draft-revision-protocol / feedback-protocol 消费）---
+  # 不入 paper-state 协议 state，protocol schema v1.3 不登记本块；保留在输出片段中供修订轮次内部使用。
   revision_constraints:
     hypothesis_order: ["H1", "H2"]
     section_order: []
@@ -50,6 +48,8 @@ results:
     language_locks: []
     active_feedback_rule_ids: []
 
+  # --- validation: skill-local（仅 write-results 内部 validation-protocol 消费）---
+  # 不入 paper-state 协议 state，protocol schema v1.3 不登记本块。
   validation:
     source_fidelity: "[pass / fail]"
     analysis_unit_logic: "[pass / fail]"

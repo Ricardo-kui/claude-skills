@@ -37,6 +37,7 @@ Default routes:
 - constructs, mechanisms, why-chain, or hypotheses → `write-theory`
 - sample, measures, models, identification, or validity → `write-methods`
 - evidence narration, interactions, nulls, magnitude, robustness, or headline answer → `write-results`
+- LaTeX 学位论文章节（abstract、literature review、conclusion、appendix、revise 整章）而非顶刊论文正文 → `write-section`（顶刊 Introduction/Theory/Methods/Results 正文 → 对应 write-* 专项 skill）
 - whole-paper architecture or weakest-section diagnosis → `paper-review`
 - pre-submission health check → `pollock-qc`
 - AI tells, 模型腔, 去AI味, or pre-submission language polish at `finishing` → `humanizer` (academic mode; English manuscripts) / `humanizer-zh` (Chinese manuscripts)

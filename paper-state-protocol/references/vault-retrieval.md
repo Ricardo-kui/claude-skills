@@ -2,7 +2,9 @@
 
 ## 发现机制（三级回退）
 
-write-introduction 和 write-theory 的 Phase 0 在检查 paper-state.yaml 后，执行 Vault 检索：
+**本节回退树是全部分支 write-* 技能 Vault 检索的唯一权威定义**；各 section 侧文件（如 write-introduction/references/vault-introduction-retrieval.md、write-theory/corpus/meta/vault_evidence_retrieval.md）只写各自的行过滤与 Brief 列差异＋指向本文件的指针，不重复定义回退树。
+
+执行时序：**write-introduction 在 Phase 0**、**write-theory 在 Phase 1.2**（确认理论路由后），各自在检查 paper-state.yaml 后执行 Vault 检索：
 
 ```
 paper-state.yaml 中有 vault.section_evidence_map?
@@ -23,7 +25,7 @@ paper-state.yaml 中有 vault.section_evidence_map?
 
 ## Vault Knowledge Brief 格式
 
-检索后在 Phase 0 诊断输出中附加以下简报：
+检索后在各自诊断输出中附加以下简报（write-introduction 在 Phase 0，write-theory 在 Phase 1.2）：
 
 ```markdown
 ## Vault 知识简报（[Section]）
@@ -52,6 +54,8 @@ paper-state.yaml 中有 vault.section_evidence_map?
 ```
 
 ## Section 特化
+
+各 section 的行过滤与 Brief 列差异以本表＋各 section 侧文件为准；回退树与纪律统一以本文件为准：
 
 | Section | Vault 检索重点 | 关键 Vault 资产 |
 |---------|---------------|----------------|

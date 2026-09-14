@@ -192,7 +192,7 @@ source: Distilled from Haunschild, Polidoro & Chandler (2015), Organization Scie
 
 <!-- wb:gulati_lavie_singh_2009_partnering_experience:contribution_premise_reversal_reconcile -->
 
-### 变体 E：经典正效应抵消型（canonical-effect-offset，fini2017 型）
+### 变体 E：经典正效应抵消型（canonical-effect-offset，fini2017 型；变体字母按文件局部编号——本文件的 E≠contributions/_index.md 变体 E「三段闭环型」）
 
 **验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
 
@@ -235,7 +235,7 @@ source: Distilled from Haunschild, Polidoro & Chandler (2015), Organization Scie
 **验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
 
 
-### 变体 G：悖论消解中槽型（what_changes_after_women_enter_top_manage_2020 型）
+### 变体 G：悖论消解中槽型（what_changes_after_women_enter_top_manage_2020 型；变体字母按文件局部编号——本文件的 G≠contributions/_index.md 变体 G「三层递进型」）
 
 **模板**: Our [模型] contributes to [对话1], to [理论], as well as to [对话2] in three major ways. First, it establishes [机制] as a mechanism dynamically linking [X] with [Y]. Second, our model resolves the seemingly contradictory ways in which [差异A] and [差异B] may affect [结局]. Finally, our model extends [理论]: not only does it answer whether [既有问题] ([cites]), it also identifies [条件] as a boundary condition to this effect.
 
@@ -251,7 +251,7 @@ source: Distilled from Haunschild, Polidoro & Chandler (2015), Organization Scie
 **禁忌**: "resolves" 槽必须是前文真实建立的悖论；第三贡献的 not only 部分要有既有文献背书（whether 问题须被前人提出过）。
 
 
-### 变体 H：机制贡献+缺口填补+首例声明三联型（westphal_bednar2005 型）
+### 变体 H：机制贡献+缺口填补+首例声明三联型（westphal_bednar2005 型；变体字母按文件局部编号——本文件的 H≠contributions/_index.md 变体 H「命名机制+力量分类法」）
 
 **模板**:
 > "Our study contributes to research on [focal literature] by suggesting why [actors] may often fail to [action] in response to [trigger]. At the same time, our study fills a critical gap in [second literature]: as many authors have noted, [specific gap statement] ([citations]). This research begins to fill that gap by showing how and when [construct] can occur in [setting]. Moreover, while there is a growing body of theory and research on [construct] in [source discipline], our study is perhaps the first systematic [study type] of [construct] in [new domain]."

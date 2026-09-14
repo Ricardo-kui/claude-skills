@@ -28,7 +28,8 @@ source_papers:
   - westphal_zajac_1998_symbolic_management (ASQ, 1998): "变体 F：双形式×双后果矩阵 Contribution（decoupling 操作化进贡献句 + 双域 uniqueness 替代 Stakes），VERIFIED (expert_audit_override 2026-08-28) — (变体 F in three-layer-contribution.md)"
   - post_2022_women_tmt_strategic_renewal (AMJ, 2022): "变体 G：悖论消解中槽型 — 三段式贡献中段专设 'resolves the seemingly contradictory ways' 槽化解前文悖论，贡献序列与 Tension 序列镜像；第三贡献 not only...also 合并主效应确认与边界条件，VERIFIED (expert_audit_override 2026-08-29) — (变体 G in three-layer-contribution.md)"
   - westphal_bednar2005 (ASQ, 2005): "变体 H：机制贡献+缺口填补+首例声明三联型 — 给主文献的机制贡献（一句）→ 借他人之口立 gap（'as many authors have noted'）→ 源学科迁移贡献的 首例声明（'perhaps the first systematic field study'带对冲+限定域），VERIFIED (expert_audit_override 2026-08-29: 用户裁决 Westphal 蒸馏的引言与理论部分证据等级 VERIFIED) — (变体 H in three-layer-contribution.md)"
-  - higgins_gulati2003 (OS, 2003): "变体 U：谱系完成式+二阶延伸型 — 点名单篇前作补链 + direct→second-order 结果链外推（contributions/_index.md 变体 U；VERIFIED — expert_audit_override 单源）"updated: 2026-09-06
+  - higgins_gulati2003 (OS, 2003): "变体 U：谱系完成式+二阶延伸型 — 点名单篇前作补链 + direct→second-order 结果链外推（contributions/_index.md 变体 U；VERIFIED — expert_audit_override 单源）"
+updated: 2026-09-06
 created: 2026-05-19
 source: Extracted from MVP30 narrative_analysis files + SKILL.md Makadok table + kim_lee2026 + chenganesanliu2009
 ---
@@ -42,7 +43,7 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 
 ---
 
-## 变体 G：三层递进型（haunschild2015 型）
+## 变体 G：三层递进型（haunschild2015 型；变体字母按文件局部编号——本文件的 G≠three-layer-contribution.md 变体 G「悖论消解中槽型」）
 
 **模板**:
 > "As a result, if we find that [actors] do [predicted behavior], our model will provide the foundation for a phenomenon that is not well explained by existing theory. Predicting [specific shifts] as a function of [antecedent] extends our knowledge of how [actors] [process A] and then [process B]. Showing that these shifts in [foci] subsequently affect [outcome 1] and [outcome 2] indicates the consequential nature of this phenomenon."
@@ -151,7 +152,7 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 
 ---
 
-## 变体 E：三段闭环型（darby2026 型）
+## 变体 E：三段闭环型（darby2026 型；变体字母按文件局部编号——本文件的 E≠three-layer-contribution.md 变体 E「经典正效应抵消型」）
 
 **模板**:
 > "Research on [field] and [phenomenon] has largely been limited to *[internal/domestic/established]* [factor type], such as [example 1] ([citation]) and [example 2] ([citation]). This is a notable shortcoming because [one study in field] ([citation]) as well as a larger body of work in neighboring fields (e.g., [citations]) suggest that *[external/foreign/emerging]* [factor type] might influence [field] phenomena such as [phenomenon]. Conducting research along this pathway allows us to build understanding about [research question echo]. This is important because, as [citation] note, '[quote about missing critical agents]' ([citation]). For practice, [practical actor] are wary of [phenomenon], but our findings highlight an important benefit: [benefit]. For public policy, our findings may help [policy body] better allocate its limited [resources] by identifying factors that influence [outcome]."
@@ -296,7 +297,7 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 
 ---
 
-### 变体 H：命名机制 + 力量分类法（kim2022 型）
+### 变体 H：命名机制 + 力量分类法（kim2022 型；变体字母按文件局部编号——本文件的 H≠three-layer-contribution.md 变体 H「机制贡献+缺口填补+首例声明三联型」）
 
 **模板**:
 > "The analysis reveals [N] primary forces that drive [actors'] [core decision]. The first, termed *[Force 1]*, plays a role when [condition A]. This force drives the firm to [strategy 1]. However, when [condition B], a *[Force 2]* effect kicks in, prompting the firm to [strategy 2]. Interacting with these two countervailing forces is [contextual factor]. If [condition C], an *[Force 3]* stimulates [behavior C]. However, when [condition D], a *[Force 4]* is also present and reflects [motivation D]."

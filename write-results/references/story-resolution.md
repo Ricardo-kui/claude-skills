@@ -4,7 +4,7 @@ Build this map before rendering R1–R9:
 
 | Storyline | Promised resolution | Methods model/evidence | Observed evidence | Baseline verdict | Overall evidence | Magnitude | Remaining uncertainty |
 |---|---|---|---|---|---|---|---|
-| S1 | | | | supported / partially supported / not supported | stable / qualified / mixed / unresolved | | |
+| S1 | | | | supported / partially_supported / not supported | stable / qualified / mixed / unresolved | | |
 
 ## Status Rules
 

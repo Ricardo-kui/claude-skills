@@ -104,8 +104,40 @@ def check_registry(errors: list[str]) -> None:
                 errors.append(f"feedback record {index} has invalid prohibited pattern {pattern!r}: {exc}")
 
 
+def check_variant_counts(errors: list[str], warnings: list[str]) -> None:
+    """Reconcile `### 变体 N` heading counts with frontmatter variants_count and INDEX.md cells."""
+    corpus_dir = ROOT / "corpus"
+    heading_counts: dict[str, int] = {}
+    for path in sorted(corpus_dir.glob("*.md")):
+        if path.name == "INDEX.md":
+            continue
+        text = path.read_text(encoding="utf-8")
+        count = len(re.findall(r"^### 变体 \d+", text, re.MULTILINE))
+        heading_counts[path.name] = count
+        match = re.search(r"^variants_count:\s*(\d+)", text, re.MULTILINE)
+        if match and int(match.group(1)) != count:
+            message = f"{path.name}: variants_count={match.group(1)} but {count} '### 变体 N' headings"
+            # 面板数据-OLS 已完成 2026-09-08 计数对账，其一致性是硬断言；其余文件历史漂移仅告警，待后续专线收敛
+            (errors if path.name == "面板数据-OLS.md" else warnings).append(message)
+
+    index_path = corpus_dir / "INDEX.md"
+    if not index_path.is_file():
+        return
+    index_text = index_path.read_text(encoding="utf-8")
+    for name, target, declared in re.findall(
+        r"^\| \[([^]]+)]\(([^)]+\.md)\) \| [^|]+ \| (\d+) \|", index_text, re.MULTILINE
+    ):
+        actual = heading_counts.get(target)
+        if actual is None:
+            warnings.append(f"INDEX.md row '{name}' links to missing corpus file {target}")
+        elif int(declared) != actual:
+            message = f"INDEX.md row '{name}' declares {declared} variants but {target} has {actual} headings"
+            (errors if target == "面板数据-OLS.md" else warnings).append(message)
+
+
 def main() -> int:
     errors: list[str] = []
+    warnings: list[str] = []
     for relative in REQUIRED_FILES:
         if not (ROOT / relative).is_file():
             errors.append(f"missing required file: {relative}")
@@ -122,6 +154,7 @@ def main() -> int:
                 errors.append(f"SKILL.md contains stale feedback instruction: {forbidden}")
 
     check_registry(errors)
+    check_variant_counts(errors, warnings)
     if errors:
         print("write-methods validation FAILED")
         for error in errors:
@@ -130,6 +163,10 @@ def main() -> int:
     print("write-methods validation PASSED")
     print(f"- required files: {len(REQUIRED_FILES)}")
     print("- frontmatter, workflow markers, and feedback registry are valid")
+    if warnings:
+        print(f"- variant-count warnings (non-fatal): {len(warnings)}")
+        for warning in warnings:
+            print(f"  - {warning}")
     return 0
 
 
