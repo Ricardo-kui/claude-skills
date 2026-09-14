@@ -25,11 +25,12 @@ REQUIRED_SKILL_TEXT = (
     "Phase -1",
     "draft-revision-protocol.md",
     "feedback-protocol.md",
-    "feedback-registry.json",
     "validation-protocol.md",
     "revision_constraints",
     "lint_methods_language.py",
 )
+# 反馈闭环指针：远端架构改为指向 _feedback-registries.md 的单源指针，registry 文件名不再必须出现在 SKILL.md（任一即通过）
+FEEDBACK_POINTER_TEXT = ("feedback-registry.json", "_feedback-registries.md")
 FORBIDDEN_SKILL_TEXT = (
     "_update_registry.py",
     "只登记变体产出质量批评，不登记 [placeholder] 流程抱怨与风格偏好",
@@ -149,6 +150,8 @@ def main() -> int:
         for required in REQUIRED_SKILL_TEXT:
             if required not in skill_text:
                 errors.append(f"SKILL.md missing required workflow marker: {required}")
+        if not any(marker in skill_text for marker in FEEDBACK_POINTER_TEXT):
+            errors.append("SKILL.md missing feedback-loop pointer: expected 'feedback-registry.json' or '_feedback-registries.md'")
         for forbidden in FORBIDDEN_SKILL_TEXT:
             if forbidden in skill_text:
                 errors.append(f"SKILL.md contains stale feedback instruction: {forbidden}")

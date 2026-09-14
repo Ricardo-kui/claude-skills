@@ -39,10 +39,11 @@ REQUIRED_SKILL_TEXT = (
     "Phase -1",
     "draft-revision-protocol.md",
     "feedback-protocol.md",
-    "feedback-registry.json",
     "validation-protocol.md",
     "revision_constraints",
 )
+# 反馈闭环指针：远端架构改为指向 _feedback-registries.md 的单源指针，registry 文件名不再必须出现在 SKILL.md（任一即通过）
+FEEDBACK_POINTER_TEXT = ("feedback-registry.json", "_feedback-registries.md")
 REQUIRED_RECORD_FIELDS = {
     "id",
     "scope",
@@ -173,6 +174,8 @@ def main() -> int:
         for required in REQUIRED_SKILL_TEXT:
             if required not in skill_text:
                 errors.append(f"SKILL.md missing required workflow marker: {required}")
+        if not any(marker in skill_text for marker in FEEDBACK_POINTER_TEXT):
+            errors.append("SKILL.md missing feedback-loop pointer: expected 'feedback-registry.json' or '_feedback-registries.md'")
 
     check_story_table(errors)
     check_registry(errors)

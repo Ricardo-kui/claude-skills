@@ -23,7 +23,7 @@ source_papers:
   - "kalaignanametal2013 (Journal of Marketing): first-differenced reliability change, IGLS error-structure diagnostics, reverse-coded z-score composite moderator, t-2 instrumented LDV"
   - "lunetal2026 (Entrepreneurship Theory and Practice): functional-executive power as compensation ratio with absent-title coded 0"
   - "liuliuluo2016 (Journal of Marketing): residualize a collinear control (reputation on size) and enter the residual"
-variants_count: 92
+variants_count: 95
 created: 2026-05-18
 updated: 2026-08-13
 ---
@@ -39,11 +39,11 @@ updated: 2026-08-13
 | M1 | 4 | 15, 23, 33, 41 |
 | M2 | 11 | 2, 6, 9, 11, 12, 16, 26, 27, 31, 34, 44 |
 | M2.5 | 3 | 20, 39, 43 |
-| M3 | 4 | 17, 25, 35, 45 |
-| M4 | 7 | 3, 19, 24, 29, 30, 32, 36 |
+| M3 | 5 | 17, 25, 35, 45, 95 |
+| M4 | 8 | 3, 19, 24, 29, 30, 32, 36, 94 |
 | M5 | 6 | 4, 5, 28, 42, 46, 49 |
 | M6 | 5 | 1, 14, 37, 40, 50 |
-| M7 | 8 | 7, 10, 13, 18, 21, 22, 38, 47 |
+| M7 | 9 | 7, 10, 13, 18, 21, 22, 38, 47, 93 |
 | M8 | 2 | 8, 48 |
 
 ### M1（4）
@@ -79,7 +79,7 @@ updated: 2026-08-13
 | 39 | 时间间隔声明（DV t+1 / IV & controls t） | 纵贯面板需在 Methods 层预先化解反向因果 | 区别于变体 20（model-free 预览）与变体 27（窗口分离）：单句 baseline 承诺，更通用 | EMERGING | Ridge et al. 2024 (AMJ) |
 | 43 | 两步滞后链 + 年内再编码学习窗 | 冲击→中介→下游结果的纵贯链 | 区别于变体39（单句 spacing）：理论–测量–模型两步对齐；非正式 Granger 检验 | VERIFIED | Kalaignanam et al. 2013 JM |
 
-### M3（4）
+### M3（5）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -87,8 +87,9 @@ updated: 2026-08-13
 | 25 | DV 文献基准锚定 — 均值与前人文献对比 | 新构建比率/计数 DV 的外部效度锚定 | 语料内首见 DV 外部效度锚定（现有变体无） | EMERGING | Du & Tsolmon 2024 ORSC |
 | 35 | 离散化等级 DV 边界距离操作化 | letter-grade DV：边界距离变量+边际影响预检验 | 区别于变体17（factor score）与变体25（文献锚定）：边界聚集+边际影响声明 | EMERGING | DesJardine, Li & Shi 2025 AMJ |
 | 45 | 数据源隔离理论相关事件 vs 伴生混淆 | DV 与理论对象之间夹杂伴生事件 | 区别于变体25（文献均值锚定）：用数据源能力剥离混淆通道 | VERIFIED | Kalaignanam et al. 2013 JM |
+| 95 | DV 双判据辩护 — 机制贴合 + 测量族独立 | 同一 DV 存在多个测量族竞争（会计 vs 市场 vs 权益）的绩效类研究 | 区别于变体25（文献均值锚定）与变体52（边界排除+falsification DV）：机制贴合（namely 同位语展开）+ 测量族独立双判据，双理论相关+同单位先行研究收口 | EMERGING | Ridge, Aime & White 2013 SMJ |
 
-### M4（7）
+### M4（8）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -99,6 +100,7 @@ updated: 2026-08-13
 | 30 | 媒体覆盖 — 双索引相关度阈值 + 互补数据源 | 媒体计数需 face-validity 链：双索引阈值+双源互补 | 区别于 generic media count：强制双索引 relevancy 阈值+排除逻辑 | VERIFIED | Liu & Shankar 2015 MS |
 | 32 | 结构二元特征操作化为「kind」而非「degree」 | 治理/组织极端结构二元化（lone-insider 董事会等） | 区别于现有 M4 变体（连续构念/阈值披露/双代理收敛）：kind≠degree 辩护+稳健性预告 | EMERGING | Zorn et al. 2017 SMJ |
 | 36 | 复合测量构念分步构建 | 乘积/交集型复合 IV：阈值辩护+可行性论证+分步计算 | 区别于变体3（三层 because 机制代理）与变体19（moneyness）：双持有侧乘积+可行性 | EMERGING | DesJardine, Li & Shi 2025 AMJ |
+| 94 | 测量边界预辩 — 逐字引用方法先例的量化论断收口 | 依赖强制披露规则识别 top-team 的档案测量（薪酬差距、团队构成） | 区别于变体55（provenance 链）、83（双测量）、88（规格防御）：辩护工具是先例引文本身（带页码量化论断 + little impact on the calculated measure 收口） | EMERGING | Ridge, Aime & White 2013 SMJ |
 
 ### M5（6）
 
@@ -121,7 +123,7 @@ updated: 2026-08-13
 | 40 | 控制变量"双面 because" — 对 DV 一条理由 + 对 IV 共变一条理由 | CEO/个体特质 → 结果研究，控制为何与特质共变最易被质疑时 | 区别于变体14（强调 because 密度）：每个控制对 DV 与对 IV 各一条理由，平行论证结构 | EMERGING | Ridge et al. 2024 (AMJ) |
 | 50 | 共线控制残差化：构念对另一控制回归后取残差 | 两个控制都要保留、但高度共线时 | 区别于变体1/14/40（because 密度）与变体37（镜像控制）：用残差隔离共线通道 | EMERGING | Liu, Liu & Luo 2016 JM |
 
-### M7（8）
+### M7（9）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -133,6 +135,7 @@ updated: 2026-08-13
 | 22 | GEE + AR(1) working correlation — 时不变焦点 IV | 焦点 IV 时不变（意识形态/人格/创始人身份等），firm FE 会吸收主效应 | 区别于变体10/13（Hausman/ICC 选 FE/RE）：按 IV 时不变性选 GEE | EMERGING | Abdurakhmonov et al. 2026 JOM |
 | 38 | 理论-估计量对齐 + 不滞后辩护 | between-unit 理论 → pooled OLS 显式对齐；当前期机制 → 不滞后（Bellemare） | 区别于变体10/13（Hausman/ICC）：理论对齐+不滞后反向论证 | EMERGING | DesJardine, Li & Shi 2025 AMJ |
 | 47 | 一阶差分变化规格 | 短/中面板、关注 within-unit 变化、水平方程已含 FE | 区别于变体10（水平 FE）与 DiD ΔV 等价：FD 变化规格 + 丢掉 unit dummy | VERIFIED | Kalaignanam et al. 2013 JM |
+| 93 | 曲线调节设定块 — 平方项×调节变量 + residual centering | U 形主效应+多调节（两两/三重交互并存）的曲线调节估计侧设定 | 区别于变体21（线性三向交互）与 lee_park 曲线支持契约（解释/检验侧）：估计侧设定声明（Cortina 理由 + Aiken-West 去心 + residual centering 三重收口） | EMERGING | Ridge, Aime & White 2013 SMJ |
 
 ### M8（2）
 

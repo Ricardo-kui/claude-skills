@@ -3,7 +3,7 @@ design_type: "动态面板-GMM"
 status: ✓ POPULATED
 source_papers:
   - pollock2015 (ASQ, 2015): "AB difference GMM — three-source endogeneity; status↔reputation coevolution"
-variants_count: 5
+variants_count: 7
 created: 2026-05-18
 updated: 2026-08-13
 ---

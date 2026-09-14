@@ -90,7 +90,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 4. **锚点使用纪律（verbatim anchor）**：设计类型变体的 `原始句锚点` 是来源论文原句的风格参照——使用规则见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律；旧变体无锚点（标注"待补"）时按骨架直接生成。修辞动作级升级（把某段按某动作做得更讲究）路由 `../story-blueprints/v4/rhetoric-moves/_index.md`，润色走其 `_polish-protocol.md` 流畅性门。
 5. **revision 约束优先**：corpus、phrasebank 与“措辞润色建议”不得覆盖 active feedback 或恢复 `supersedes` 指向的旧建议；语料语句可直接使用，仅替换来源特异性内容（专名/数字/系数/表号）防串稿。
 6. **Methods 语态纪律**：完成的研究程序使用主动过去时；定义、制度事实、公式符号、估计器性质和解释惯例使用现在时。限制与 scope condition 直接陈述，不添加防御性收尾或作者自我评价。
-7. **因果语言强制词汇表**（按设计家族，无越级）：动词档位唯一源 `corpus/micro-templates/causal-hedging.md`——面板/OLS/FE→"associated with"（禁 causes/leads to/drives）；DiD→平行趋势支持后 "effect of"；IV/2SLS→M8 识别 preview 后 "effect"、避免 "causes"；非线性→经边际效应/概率变化转述；生存分析→"changes the hazard of"；SEM→预测关系；实验→随机化支持后可用强因果词。逐族允许/禁止动词与使用条件以该文件为准。
+7. **因果语言档位**（按匹配设计家族范文定档，无统一强制词表）：以同领域范文实际用法为唯一基准（feedback-registry wmf_206116a4：商科期刊对观察性设计的因果动词没有统一强制标准，不按软件工程/计算机标准机械执行 identified→estimated 类审查）；`corpus/micro-templates/causal-hedging.md` 仅作默认参考——面板/OLS/FE 默认 "associated with"；DiD 默认平行趋势支持后 "effect of"；IV/2SLS 默认 M8 识别 preview 后 "effect"；非线性默认经边际效应/概率变化转述；生存分析默认 "changes the hazard of"；SEM 默认预测关系；实验可用强因果词。默认档位与匹配范文实际用法冲突时，以范文为准。
 
 **完成判据**：所选槽位 QC 点全过（slot 文件末尾 QC 块）；因果语言与设计家族匹配；[placeholder] 无机构/政策名残留。
 

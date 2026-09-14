@@ -22,7 +22,7 @@ source_papers:
   - "desjardine_li_shi_2025_amj (Academy of Management Journal): min/mean/max marginal-effect table with slope-direction language, collinearity-absorption explanation for full-model interaction attenuation, ITCV omitted-variable threshold defense, dual-benchmarking deviation test, acquisition quasi-natural experiment as influence-channel switch, Bushee investor-type decomposition with Wald test, sequential moderator introduction→paired→full-model navigation"
   - "ridge_et_al_2024_amj (Academy of Management Journal): front-loaded endogeneity defense (RIR replacement count + naive-vs-cure 2SRI pairing), external-evidence practical-importance beat (R5)"
   - "chenganesanliu2009 (Journal of Marketing, 2009): binary strategy as complete mediator of firm characteristics on AR — legacy Kenny joint-read + market-signal coda (R8)"
-variants_count: 96
+variants_count: 99
 created: 2026-05-18
 updated: 2026-08-13
 ---
@@ -46,9 +46,9 @@ updated: 2026-08-13
 |---|---|---|---|
 | R1 | 描述统计与诊断 | 2 | 20, 67 |
 | R2 | 模型序列与表导航 | 12 | 16, 19, 22, 24, 28, 53, 56, 70, 71, 76, 88, 94 |
-| R3 | 主假设检验 | 23 | 8, 11, 17, 23, 27, 34, 35, 36, 41, 48, 57, 58, 63, 64, 72, 77, 78, 80, 87, 89, 90, 91, 92 |
-| R4 | 交互/调节/阈值 | 14 | 9, 14, 18, 32, 40, 43, 45, 47, 59, 65, 68, 73, 86, 93 |
-| R5 | 经济显著性 | 6 | 3, 10, 13, 55, 84, 96 |
+| R3 | 主假设检验 | 24 | 8, 11, 17, 23, 27, 34, 35, 36, 41, 48, 57, 58, 63, 64, 72, 77, 78, 80, 87, 89, 90, 91, 92, 97 |
+| R4 | 交互/调节/阈值 | 15 | 9, 14, 18, 32, 40, 43, 45, 47, 59, 65, 68, 73, 86, 93, 98 |
+| R5 | 经济显著性 | 7 | 3, 10, 13, 55, 84, 96, 99 |
 | R6 | 非显著/反转/Null | 10 | 4, 6, 30, 37, 42, 60, 74, 81, 83, 95 |
 | R7 | 稳健性与威胁处理 | 18 | 1, 2, 7, 12, 15, 25, 26, 29, 31, 39, 46, 49, 50, 51, 54, 61, 66, 85 |
 | R8 | 补充/事后/机制 | 11 | 5, 21, 33, 38, 44, 52, 62, 69, 75, 79, 82 |
@@ -105,8 +105,9 @@ updated: 2026-08-13
 | 90 | 对照假设成对判决节奏 | rival 构念 null 先行+"A rather than B"收束；边际显著=moderate support | vs 变体72 rival 仅作控制内联——本变体对手侧 null 是对照假设构成性证据 | EMERGING | Gulati et al. 2009 SMJ |
 | 91 | 相对排序 within-model F 检验 | "A>B"型排序假设的同模型 one-sided F 检验+不等式判决 | vs 变体80 跨样本 SUR 基础设施——本变体同模型内系数比较 | EMERGING | Gulati et al. 2009 SMJ |
 | 92 | 主效应被自身交互项共线吸收解释 | 主效应失活的诚实归因（报 r 值）+fit 下降归因 df | vs 变体48 交互侧吸收——两变体同篇并用各管一侧 | EMERGING | Gulati et al. 2009 SMJ |
+| 97 | U 形主效应四拍+双尾实用显著性 | U 形主效应上尾/下尾各一次 ±2 SD % 幅度+平均公司绝对美元换算+双机制接管重述收口 | EXTEND 变体17（Lind-Mehlum 形状裁决）——本变体补幅度展演拍；vs 计数模型倒U链（转折点 CI 现代裁决） | EMERGING | Ridge, Aime & White 2013 SMJ |
 
-### R4 交互/调节/阈值（14）
+### R4 交互/调节/阈值（15）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -124,8 +125,9 @@ updated: 2026-08-13
 | 73 | 分样本主检验+交互项复核收口 | 分样本承载主检验+不显著侧 rival 写成确认 null+product-term 复核升级 | vs 变体65 镜像+Chow——本变体交互只作复核不作主检验 | VERIFIED | Carpenter & Westphal 2001 AMJ |
 | 86 | 连续调节极点→交互符号先验判据 | 连续指数两端映射为交互项预测符号的判据拍（内嵌假设段） | vs 变体70 dummy 差值判据（R2 前置）——仅报符号须补简单斜率；副槽位 R3 | EMERGING | Gulati & Higgins 2003 SMJ |
 | 93 | 双侧对照交互判决+对手侧 null 回收 | 一句话并置对手侧 insignificant+焦点侧 significant，null 回收为一致性证据 | vs 变体90 主效应侧成对判决——本变体管调节段；"consistent with" 不升级为支持 | EMERGING | Gulati et al. 2009 SMJ |
+| 98 | 曲线调节机制判别式（X²×W） | X²×W 交互检验主效应曲线臂机制（诊断目的重述+无/有 W 对照幅度+图形读形状+回锚主假设对应臂） | vs 变体18 线性调节 flatten/steepen；vs Logit 概率尺度曲线调节——本变体是连续 DV 的机制判别式 | EMERGING | Ridge, Aime & White 2013 SMJ |
 
-### R5 经济显著性（6）
+### R5 经济显著性（7）
 
 | # | 变体 | 适用场景 | 区别 | 状态 | 来源 |
 |---|---|---|---|---|---|
@@ -135,6 +137,7 @@ updated: 2026-08-13
 | 55 | 外部证据实际重要性辩护拍 | 幅度翻译后用外部文献证明微小变化净显著收益 → "likely to be particularly important in practice" | vs 变体13 联合翻译——本变体追加拍5 实际重要性辩护；vs 生存分析变体15 "every day counts" 同拍跨场景 | EMERGING | Ridge et al. 2024 AMJ |
 | 84 | 四分位差幅度翻译+跨规格幅度基准排位 | 25th→75th percentile swing 翻译成 SD% + 跨规格排位 "lies between" + 缩水解释句 | vs 变体3 表格版 vs 变体13 联合翻译——本变体带跨规格幅度排序与保守性解读 | EMERGING | DesJardine, Li & Shi 2025 AMJ |
 | 96 | 低解释力文献基准防御+分析目的重定位 | 低 R² 可信度防御：报解释力区间→引同 DV 文献更低基准→重定位为 contribution 评估 | vs 变体10 ΔR² 作经济显著性证据——本变体防御解释力弱点 | EMERGING | Gulati et al. 2009 SMJ |
+| 99 | 双机制分臂量化 | 调节强化 U 形两臂时逐臂报幅度：机制 A 臂+机制 B 臂，多调节均值+括号分项并报 | vs R4 线性调节实用项与百分位对比变体——本变体两臂各算一次账，防只报最好调节 | EMERGING | Ridge, Aime & White 2013 SMJ |
 
 ### R6 非显著/反转/Null（10）
 
