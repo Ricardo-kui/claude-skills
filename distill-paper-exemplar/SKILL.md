@@ -91,9 +91,14 @@ when_to_use: "用户给一篇完整论文要求整篇蒸馏/整篇学习时；�
    candidates:/items: schema 写反、锚点文件不可解析 → exit 4 当场令子代理返工，不进
    gate ①；手写/修复后的 plan 先 `--check-plan` 校验再执行）。
    **gate ① 按论文批量呈审**：整篇模式下各节子任务跑到 writeback
-   plan 产出即暂停写回；四节（或指定范围）plan 攒齐后，由主循环汇总为一份批量呈审
-   （每节：verdict 摘要 + anchor_candidates top-3 + 拟写回文件），用户一次确认全部，
-   主循环再逐节调 `corpus_writeback.py` 执行。单节蒸馏不受此限，仍随产随审。
+   plan 产出即暂停写回；四节（或指定范围）plan 攒齐后，由主循环运行
+   `py scripts/pdm_tool.py present --pdm <root> --mode gate1` 生成**批量呈审单**
+   （每节：verdict 摘要 + band + anchor_candidates top-3 + 拟写回文件 + STALE/
+   溯源/registry_dimension 预警），用户一次确认全部，主循环再逐节调
+   `corpus_writeback.py` 执行。**PDM 根的一切变更经 `pdm_tool.py` 命令完成**
+   （merge-section / set-gate / merge-cross / set-story / set-paper / fail-section，
+   单写者表见 references/pdm-schema.md v1.1 附录；手写 EOF 改根 = 违约）。
+   单节蒸馏不受此限，仍随产随审。
    主循环**只汇总呈审，不代用户确认**；`--auto-write` 时跳过呈审逐节直写。
    **查漏补缺重蒸馏默认 `--auto-write`**：同一论文已有旧蒸馏痕迹
    （story 卡/语料条目）的重跑，若用户请求本身已授权写回（如"优化 corpus"），主循环
@@ -126,12 +131,18 @@ when_to_use: "用户给一篇完整论文要求整篇蒸馏/整篇学习时；�
    `rebuild_apply.py --corpus <节>` 从 wb 块扫描重建（AUTHORED 段按键透传；status 派生 = status_overrides ⊕ `scripts/status_policy.yaml`（作者/召回域规则）⊕ ladder；永不降级
    用户裁定状态）。verify 末尾的 **V3-drift** 终检 = 对涉事库跑 rebuild dry-run，
    计划变更非零即 FAIL（视图未收敛）。
+   **事后审计单（2026-09-14 起）**：终验通过后、清理之前，运行
+   `py scripts/pdm_tool.py present --pdm <root> --mode audit [--verify-report <tee 文本>]
+   --residuals <残项单>` 生成 L4 事后审计单（各节已写清单 + wb 标记独立点数 +
+   残项摘要），向用户呈报；**顺序固定 verify → audit → clean**（audit 依赖 plan 文件，
+   clean 会删掉它们）。
    完成后运行 `preprocess_l0.py <MD> --clean` 清除整个工作目录（默认位置在 Vault 外，
    删除零成本）；中断续跑则保留现场；`--unlock` 仅放锁不删文件。
    **跨篇清扫（--clean 之后的最后一步）**：运行
-   `preprocess_l0.py --sweep`——清除 skill 树全部 `__pycache__`/`*.pyc` 与已消费的
-   PDM 工作目录（根 yaml `status: integrated` 者及 >12h 的 orphan），保持 skill
-   树零字节码膨胀。**绝不触碰**：`<citekey>.pdm.yaml` 状态记录、句子库存归档、
+   `preprocess_l0.py --sweep`——清除 skill 树全部 `__pycache__/`/`*.pyc` 与已消费的
+   PDM 工作目录（根 yaml `status: integrated` 者及 >12h 的 orphan），回收 pdm_tool
+   的滚动 `.bak`（根已 integrated 或孤儿者；活跃记录的 `.bak` 是安全网，保留），
+   保持 skill 树零字节码膨胀。**绝不触碰**：`<citekey>.pdm.yaml` 状态记录、句子库存归档、
    story-blueprints、LOCK <12h 的在跑工作目录。
 
 ## 调用方式
@@ -157,7 +168,7 @@ when_to_use: "用户给一篇完整论文要求整篇蒸馏/整篇学习时；�
 ## 完成判据
 
 ① PDM 就位且四节（或指定范围）状态为 `verified`（或明确 `partial`）；② 每节写回预览均已
-经过该节 skill 自己的确认门禁并记录于 PDM `writeback.gate`；③ `cross_section_identity`
+经过该节 skill 自己的确认门禁并经 `pdm_tool.py set-gate` 记录于 PDM `writeback.gate`；③ `cross_section_identity`
 已填充（单节模式标注 `unknown`）；④ story 卡已确认并 validate/build 通过，`story_track`
 已更新；⑤ design_feedback 已核验持久化（best-effort：缺产出能力的 skill 在 feedback_ledger.note 注明根因，不阻塞 integrated）；⑥ 向用户报告三路输出落点与任何 flag。
 

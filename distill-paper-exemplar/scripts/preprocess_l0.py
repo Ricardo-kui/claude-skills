@@ -24,6 +24,9 @@ Output layout (PDM workdir):
     - leftover PDM workdirs that are fully consumed: a `<citekey>.pdm/` whose
       root yaml says `status: integrated`, or an orphan workdir (no root yaml)
       whose LOCK is older than 12h
+    - pdm_tool rolling baks (`<citekey>.pdm.yaml.bak`): removed once their
+      root is `integrated` or gone; a bak of a live record is the mutation
+      safety net and stays (2026-09-14, quality-review P3)
   NEVER touched: `<citekey>.pdm.yaml` state records, the sentences archive,
   story-blueprints, and any workdir whose LOCK is fresh (< 12h — may be an
   active single-window run).
@@ -418,7 +421,10 @@ def sweep(work_root_dir: Path, skills_root: Path) -> int:
     """Cross-run intermediate cleanup (L4 final step). Deterministic, no LLM.
 
     Returns process exit code. Never touches state records, the sentences
-    archive, story-blueprints, or workdirs with a fresh (<12h) LOCK."""
+    archive, story-blueprints, or workdirs with a fresh (<12h) LOCK.
+    Rolling pdm_tool `<root>.pdm.yaml.bak` files are removed once their root
+    is integrated or gone; a bak of a live (un-integrated) record stays — it
+    is the mutation safety net."""
     import time
     import yaml
 
@@ -458,6 +464,23 @@ def sweep(work_root_dir: Path, skills_root: Path) -> int:
         else:
             kept += 1
             print(f"KEEP (status: {status}): {wd.name}")
+
+    # 3. rolling pdm_tool baks: delete when the run is over (integrated) or
+    #    the root is gone; keep while the record can still be mutated
+    for bak in sorted(work_root_dir.glob("*.pdm.yaml.bak")):
+        root_yaml = work_root_dir / bak.name[:-len(".bak")]
+        try:
+            status = ((yaml.safe_load(root_yaml.read_text(encoding="utf-8"))
+                       or {}).get("status")) if root_yaml.is_file() else None
+        except yaml.YAMLError:
+            status = None
+        if status == "integrated" or not root_yaml.is_file():
+            tag = "integrated bak" if status == "integrated" else "orphan bak (no root yaml)"
+            bak.unlink(missing_ok=True)
+            removed += 1
+            print(f"RM ({tag}): {bak.name}")
+        else:
+            print(f"KEEP (bak of live record, status: {status}): {bak.name}")
 
     print(f"sweep done: {removed} item(s) removed, {kept} workdir(s) kept, "
           f"state records & sentences archive untouched")

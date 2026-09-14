@@ -615,6 +615,13 @@ def build_wb_meta(gap: str, dim: str | None = None, tbt: str | None = None,
     return "<!-- wb-meta: " + " ".join(parts) + " -->"
 
 
+def wb_block_marker(paper: str, item: str) -> str:
+    """Block-tail provenance marker: the idempotency key for re-apply (V1/V2),
+    the join key rebuild_views scans, and the presence signal pdm_tool's audit
+    counts. Single source — never inline this format elsewhere."""
+    return f"<!-- wb:{paper}:{item} -->"
+
+
 def apply_status_addenda(registry: Path, addenda: list, new_text: dict) -> list[str]:
     """C item (2026-09-13): append gate-① per-item user status upgrades into
     the AUTHORED status_overrides section of the registry. Idempotent —
@@ -744,7 +751,7 @@ def main() -> int:
                 messages.append(f"[{name}] SKIPPED: create_new_file needs module_description")
                 rc = 1
                 continue
-            marker = f"<!-- wb:{args.paper}:{name} -->"
+            marker = wb_block_marker(args.paper, name)
             if target.exists():
                 t0 = target.read_text(encoding="utf-8")
                 if marker in t0 or body_similarity_pattern(block_text).search(t0):
@@ -764,7 +771,7 @@ def main() -> int:
             body = block_text.replace("{NEXT}", label).strip("\n")
             note = (index_note or module_description).replace("{NEXT}", label)
             content = build_new_module(target, body, desc, note, template)
-            content += (f"\n<!-- wb:{args.paper}:{name} -->\n"
+            content += (f"\n{wb_block_marker(args.paper, name)}\n"
                         + build_wb_meta(args.gap, item.get("registry_dimension"),
                                         pm.get("theory_build_type"),
                                         status=wstatus) + "\n")
@@ -793,7 +800,7 @@ def main() -> int:
         #   1. provenance marker from a previous executor run
         #   2. an identical block body already present (pre-marker/legacy
         #      blocks; {NEXT}-aware match, same logic as the dedup repair)
-        marker = f"<!-- wb:{args.paper}:{name} -->"
+        marker = wb_block_marker(args.paper, name)
         if marker in text:
             messages.append(f"[{name}] ALREADY-APPLIED: marker present — skipped")
             continue

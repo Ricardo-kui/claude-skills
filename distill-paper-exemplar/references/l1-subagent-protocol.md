@@ -11,7 +11,10 @@ cache_read 是 fresh input 的 3.5 倍）。
 <skill 名> <切片路径> --output-format=json --pdm <pdm路径>
 按该 skill 的 phase 流程蒸馏。输出契约：
 1. 把 section JSON 写入 <pdm>/sections/<section>.json，feedback 写入
-   <pdm>/feedback/<section>.feedback.yaml（skill 无该基础设施时注明缺失）
+   <pdm>/feedback/<section>.feedback.yaml（skill 无该基础设施时注明缺失）。
+   section JSON 必须含顶层 `identity: {...}`（intro=gap_type+contribution_dimension、
+   theory=theory_building_type、methods=design_family、results=estimator_family）——
+   这是盘面验收字段，只在摘要里报 identity 而不落 json = 该节未完成
 2. 写回候选停在 writeback plan 产出。plan 条目必须是执行器 v2 schema：
    items: 下每项含 name / dedup.verdict / anchor.file / block_text（全文内嵌，
    {NEXT} 作变体号占位）/ index_note（带 {NEXT}）。缺 block_text 或 index_note
@@ -43,6 +46,11 @@ cache_read 是 fresh input 的 3.5 倍）。
 ## 主循环纪律
 
 - 主循环**只读**：PDM 根文件、各节 `sections/<section>.json`、子代理的 ≤20 行摘要。
+- **PDM 根变更唯一入口 = `scripts/pdm_tool.py`（2026-09-14，问题 1 落地）**：
+  合并 identity/band = `merge-section`；gate 与状态迁移 = `set-gate`/`set-paper`/
+  `set-story`；L2 交叉 = `merge-cross`；失败记录 = `fail-section`；续跑断点 = `show`；
+  gate ① 呈审单与 L4 审计单 = `present --mode gate1|audit`。手写 `py - <<EOF` 改根
+  文件 = 协议违约（单写者表见 pdm-schema.md v1.1 附录）。
 - **验收以盘面为准（2026-09-12 固化）**：子代理是否完成只按盘面产物判定——`sections/<section>.json` 存在且非空、`identity` 字段齐、`feedback/<section>.feedback.yaml` 在（无该基础设施时见其注明）、写回候选停在 plan。≤20 行摘要只用于汇报与合并，**不作为完成依据**；摘要与盘面冲突时以盘面为准（runbook 教训：`_meta` 谎报 produced 不可信）。
 - **失败必须显式记录**：子代理死亡 / 超时 / 产物缺失一律视为该节未完成，在 PDM 注明根因一行并在最终报告呈报；主循环不得代其宣布 verified，也不得静默跳过（判定失败绝不当作可以停止）。
 - 读 `sections/<section>.json` 时校验 `identity` 字段非空；空或缺文件 → 该节视为未完成，只重发该节（不整链路重跑）。
