@@ -16,6 +16,9 @@ Writer table (single-writer discipline, mirrored in references/pdm-schema.md):
   write-*/corpus + registries                       corpus_writeback.py +
                                                     rebuild_apply.py (never touched
                                                     here — hard guard below)
+  ~/.claude/fitness/** (fitness ledger events +     fitness_ledger.py (called by
+    gate-① sheet snapshots; outside both              present/set-gate; fail-open —
+    distill-work and the skills tree)                 telemetry never blocks gates)
 
 Commands:
   show          resume-breakpoint view of the PDM (statuses/gates/artifacts/LOCK)
@@ -533,6 +536,7 @@ def cmd_set_gate(args) -> int:
     wb = entry.setdefault("writeback", {})
     cur = wb.get("gate") or "awaiting_confirm"
     new = args.gate
+    transitioned = new != cur
     if new not in GATE_ORDER:
         die(2, f"非法 gate：{new!r}")
     if new != cur and GATE_ORDER[new] < GATE_ORDER[cur]:
@@ -540,6 +544,7 @@ def cmd_set_gate(args) -> int:
             die(3, f"[{section}] gate 回退 {cur}→{new} 须 --force 且 --note 记录理由")
     if new != cur or args.plan or args.items is not None or args.note:
         wb["gate"] = new
+    plan = None
     if args.plan:
         guard_path(args.plan, "plan 登记路径")
         plan = load_plan(Path(args.plan))
@@ -565,6 +570,24 @@ def cmd_set_gate(args) -> int:
           f"status={entry.get('status')}")
     if new == "written":
         print(f"[{section}] 该节已写回——L4 须跑 verify_writeback.py（--plan … --paper …）")
+    # fitness 台账（第 4 项，2026-09-14）：接受事件只在 gate 真实迁移时发射——
+    # 幂等重跑零事件；遥测失败只 WARN，绝不影响 gate 状态机（fail-open）。
+    if transitioned and new in ("confirmed", "written"):
+        try:
+            import fitness_ledger
+            if new == "confirmed" and plan is not None:
+                msg = fitness_ledger.emit_gate_verdicts(
+                    Path(args.pdm), root, section, plan)
+            elif new == "written":
+                msg = fitness_ledger.emit_written(Path(args.pdm), root,
+                                                  section, plan)
+            else:
+                msg = ""
+            if msg:
+                print(f"fitness: {msg}")
+        except Exception as e:  # noqa: BLE001 — 遥测永不阻塞状态机
+            print(f"WARN: fitness 台账落账失败（不影响 gate 状态）：{e}",
+                  file=sys.stderr)
     return 0
 
 
@@ -844,6 +867,18 @@ def cmd_present(args) -> int:
         text, code = build_gate1_report(root, plans)
     else:
         text, code = build_audit_report(root, plans, vr, residuals)
+    # fitness 台账（第 4 项，2026-09-14）：gate① 呈审同时存档快照+呈审单
+    # （--stdout-only 逃生阀；audit 模式不落快照）。快照按时间戳追加保留，
+    # 是 set-gate 逐项裁决 diff 的基准，也使呈审单不再随工作目录 --clean 蒸发。
+    if args.mode == "gate1" and not getattr(args, "stdout_only", False):
+        try:
+            import fitness_ledger
+            snap = fitness_ledger.snapshot_gate1(root_path, root, plans, text)
+            if snap.get("files"):
+                print(f"fitness: gate① 快照已存档 → {snap['dir']}"
+                      f"（{snap['items']} 项）")
+        except Exception as e:  # noqa: BLE001 — 遥测永不阻塞呈审
+            print(f"WARN: fitness 快照落账失败（不影响呈审）：{e}", file=sys.stderr)
     if missing:
         text += f"\n\n（缺 plan 的节: {', '.join(missing)}——未完成，不在本次呈审/审计范围）"
     if args.out:
@@ -875,6 +910,10 @@ def selftest() -> int:
         tmp = Path(td)
         global CAPABILITY_ROOT
         real_cap = CAPABILITY_ROOT
+        # fitness 台账沙盒（第 4 项）：selftest 在进程内直跑 cmd_present/
+        # cmd_set_gate，必须把 ledger 写进临时 FITNESS_HOME，不碰真实台账。
+        real_fit = os.environ.get("FITNESS_HOME")
+        os.environ["FITNESS_HOME"] = str(tmp / "fitness")
         try:
             (tmp / "cap" / "distill-methods-exemplar").mkdir(parents=True)
             CAPABILITY_ROOT = tmp / "cap"  # methods 有基建；其余节无 → 能力缺口
@@ -1228,6 +1267,10 @@ distiller_fingerprint:
             check(not list(tmp.glob("*.tmp*")), "原子写无临时文件残渣")
         finally:
             CAPABILITY_ROOT = real_cap
+            if real_fit is None:
+                os.environ.pop("FITNESS_HOME", None)
+            else:
+                os.environ["FITNESS_HOME"] = real_fit
 
     failed = [n for ok, n in results if not ok]
     print("-" * 60)
@@ -1299,6 +1342,8 @@ def build_parser() -> argparse.ArgumentParser:
                    help="verify_writeback 的 tee 文本（非 JSON）")
     p.add_argument("--residuals", default=None, help="writeback_residuals.yaml")
     p.add_argument("--out", default=None, help="另存 markdown（默认仅 stdout）")
+    p.add_argument("--stdout-only", dest="stdout_only", action="store_true",
+                   help="不落 fitness 台账快照（默认 gate① 呈审同时存档）")
     return ap
 
 

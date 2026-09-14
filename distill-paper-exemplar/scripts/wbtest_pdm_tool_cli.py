@@ -12,6 +12,7 @@ Exit: 0 all green / 1 failures. Run: py wbtest_pdm_tool_cli.py
 """
 import io
 import json
+import os
 import subprocess
 import sys
 import tempfile
@@ -22,6 +23,7 @@ import yaml
 
 TOOL = Path(__file__).resolve().parent / "pdm_tool.py"
 results = []
+SUBPROC_ENV: dict = {}  # set inside the temp-dir block: FITNESS_HOME sandbox
 
 
 def check(ok: bool, name: str) -> None:
@@ -31,7 +33,8 @@ def check(ok: bool, name: str) -> None:
 
 def run(args: list, expect: int):
     r = subprocess.run([sys.executable, str(TOOL)] + args, capture_output=True,
-                       text=True, encoding="utf-8", errors="replace")
+                       text=True, encoding="utf-8", errors="replace",
+                       env={**os.environ, **SUBPROC_ENV})
     if r.returncode != expect:
         print(f"  exit={r.returncode} want {expect}: pdm_tool {' '.join(args[:3])} …")
         print("  OUT:", r.stdout[-220:].replace("\n", " | "))
@@ -41,6 +44,9 @@ def run(args: list, expect: int):
 
 with tempfile.TemporaryDirectory() as td:
     tmp = Path(td)
+    # fitness 台账沙盒（第 4 项）：present/set-gate 现在会发射 ledger 事件，
+    # 全部 subprocess 必须落在临时 FITNESS_HOME，绝不写真实 ~/.claude/fitness。
+    SUBPROC_ENV["FITNESS_HOME"] = str(tmp / "fitness")
     wd = tmp / "smoke.pdm"
     (wd / "sections").mkdir(parents=True)
     (wd / "feedback").mkdir()
@@ -138,6 +144,9 @@ feedback_ledger: {{persisted: [], missing: [], note: ""}}
     check(r.returncode == 0 and "| gap |" in r.stdout and "SKIP 明细" in r.stdout
           and "ADD 1 / EXTEND 0 / SKIP 1" in r.stdout,
           "present gate1（band 列/SKIP 明细/计数）")
+    check((tmp / "fitness" / "gate1_sheets" / "smoke").is_dir()
+          and "fitness: gate① 快照已存档" in r.stdout,
+          "present 快照落 FITNESS_HOME 沙盒（不污染真实台账）")
     r = run(["present", *P, "--mode", "audit", "--sections", "introduction"], 4)
     check(r.returncode == 4 and "⚠0 未落盘" in r.stdout,
           "present audit 未落盘 → 4")

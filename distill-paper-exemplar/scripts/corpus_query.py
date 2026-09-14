@@ -21,6 +21,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import os
 import re
 import sys
 from pathlib import Path
@@ -309,6 +310,20 @@ def main() -> int:
         cmd_registry(root, args.query, budget)
     else:
         cmd_routing(root, args.query, budget, args.section)
+
+    # fitness 台账（第 4 项，2026-09-14）：选材 Gate 查询落账（band 判定实测
+    # 校验的数据面；fail-open，FITNESS_LOG=0 可关；outline 走早退不落账）。
+    if os.environ.get("FITNESS_LOG", "1") != "0":
+        try:
+            from fitness_ledger import append_event  # same dir, deterministic
+            append_event("corpus_query", {
+                "cmd": args.cmd, "section": args.section,
+                "query": args.query or "", "file": args.file or "",
+                "n_lines": budget.n, "limit": args.limit,
+                "truncated": budget.n >= args.limit,
+            })
+        except Exception as e:  # noqa: BLE001 — 遥测失败不影响查询输出
+            print(f"WARN: fitness 查询落账失败：{e}", file=sys.stderr)
 
     if budget.n >= args.limit:
         print(f"...（已截断至 {args.limit} 行；换更具体的 query 或调高 --limit）")

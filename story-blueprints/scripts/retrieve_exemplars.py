@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -78,6 +79,25 @@ def main() -> int:
         seen_dynamics |= dynamics
         if len(results) == max_results:
             break
+    # fitness 台账（第 4 项，2026-09-14）：检索命中落账（fail-open，遥测永不
+    # 阻塞写作流）。resolve 先解析 junction 到 claude-skills 真身再拼路径，
+    # 三根 skills 调用路径下均确定性。
+    try:
+        _ds = Path(__file__).resolve().parents[1].parent / "distill-paper-exemplar" / "scripts"
+        if str(_ds) not in sys.path:
+            sys.path.insert(0, str(_ds))
+        from fitness_ledger import append_event
+        append_event("retrieval", {
+            "section": request.get("section"),
+            "paper_type": request.get("paper_type") or "",
+            "story_needs": list(request.get("story_needs") or [])[:8],
+            "signals": list(request.get("retrieval_signals") or [])[:12],
+            "returned": [{"id": r.get("id"), "score": r.get("score")}
+                         for r in results],
+            "n_results": len(results), "empty": not results,
+        })
+    except Exception as e:  # noqa: BLE001 — 遥测失败不影响检索输出
+        print(f"WARN: fitness 检索落账失败（不影响输出）：{e}", file=sys.stderr)
     print(json.dumps({"request": request, "results": results}, ensure_ascii=False, indent=2))
     return 0
 
