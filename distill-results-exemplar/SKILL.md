@@ -75,9 +75,9 @@ Distill how a published Results section stages evidence—not what it found—in
 
 ## Phase 4 — 技能更新指令生成
 
-读 `references/phase-4-validation-writeback.md`（指令格式 + 待写入预览块模板 + 批评登记）。**所有待写入内容先展示预览、用户确认后才写入**——单篇逐个确认，批量一次确认 ADD/EXTEND、REPLACE 仍逐个确认。
+读 `references/phase-4-validation-writeback.md`（写回交接 + 待写入预览块模板 + 批评登记）。**所有待写入内容先展示预览、用户确认后才写入**——单篇逐个确认，批量一次确认 ADD/EXTEND、REPLACE 仍逐个确认。
 
-**完成判据**：每条 ADD/EXTEND/REPLACE 有 target_file + insert_after + distinct_from；预览块含骨架全文与原始句锚点。
+**完成判据**：每条 ADD/EXTEND/REPLACE 候选停在 writeback plan（执行器 v2，格式以 `../distill-paper-exemplar/references/l1-subagent-protocol.md`「plan 条目字段契约」为准），含 block_text 全文与原文锚点；预览块含骨架全文与原始句锚点。
 
 ## Phase 5 — 质量验证与版本影响
 

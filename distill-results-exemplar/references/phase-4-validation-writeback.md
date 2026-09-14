@@ -6,60 +6,35 @@
 > **禁止为查重/选带/锚点定位而整读 corpus 或 `_evidence_registry.yaml`**（单个文件可达 54–257KB）——
 > 一切以 plan 为准；仅当 plan 的 verdict 可疑时，才允许按 plan 标注的文件+行号定点核对。
 >
-> candidates.yaml 格式：
-> ```yaml
-> candidates:
->   - name: <skeleton_id>
->     target: "<目标文件或目录提示，如 OLS-FE.md / tensions>"
->     skeleton_text: "<骨架模板文本（查重输入）>"
->     keywords: ["<registry 匹配关键词，可选>"]
-> ```
+> **产出格式（2026-09-14 起，单一契约源）**：candidates.yaml 与 writeback plan 的字段结构以
+> `../../distill-paper-exemplar/references/l1-subagent-protocol.md` 的「子代理输出契约」与
+> 「plan 条目字段契约」为准（执行器 v2：items: / name / dedup.verdict / anchor.file /
+> block_text 全文内嵌 / index_note；骨架 block_text 只写这一遍，corpus_precheck 透传进
+> plan，无需再写 blocks.yaml）。本 skill 不另立格式。
 >
 > **--auto-write**：默认仍需 gate ① 人审确认 plan 后写回；调用方显式传 `--auto-write`
 > （或批量模式用户预先授权）时，可按 plan 直接写回 ADD/EXTEND 项（**SKIP 项永不写回**），
 > 并在写回报告中标注 `auto-write: plan <plan路径>`。
 >
-> **整篇编排模式（distill-paper-exemplar 分发）下**：plan 产出即停，把 plan 路径交回
-> 主循环等待批量 gate ①（四节攒齐一次呈审），不要自行进入写回；单节模式随产随审。
->
-> **写回执行（gate ① 确认后，2026-08-20 起）**：用确定性执行器，不手改语料——
-> `python ../distill-paper-exemplar/scripts/corpus_writeback.py --plan <plan> --paper <citekey> --journal <刊名> --gap <Gap类型>`（block_text/index_note 已在 candidates.yaml 写一遍并透传进 plan，无需 blocks.yaml）
-> 默认 dry-run 打印全部 diff 供复核，`--apply` 才落盘（插块自动续 `{NEXT}` 编号、
-> _index 行注、registry 计数、SKIP 拒绝）。gate ① 改判锚点文件时在 blocks.yaml 加
-> `file:` 覆盖。完整 blocks.yaml 格式见
-> `../../distill-introduction-exemplar/references/phase-4-validation-writeback.md` 头部。
+> **写回执行权（2026-09-14 起）**：写回权在主循环——整篇编排模式（L1 子代理分发）下
+> **子代理一律不得运行 corpus_writeback.py**，plan 产出即停，把 plan 路径交回主循环等待
+> 批量 gate ①（四节攒齐一次呈审）；单节独立模式下由主会话在 gate ① 确认（或调用方显式
+> `--auto-write` 授权）后调用写回执行器 `corpus_writeback.py`（先 dry-run 复核 diff 再
+> `--apply`），不手改语料。
 
 本阶段生成**受治理的 adoption instructions**，回答三个问题：
 1. **改哪个文件** → 精确到 `write-results/corpus/[结果类型].md`
 2. **怎么改** → ADD / EXTEND / REPLACE / SKIP，含具体骨架和插入位置
 3. **为什么** → 与当前 corpus 的差异 + 对 write-results skill 的提升
 
-## skill_update_instructions 格式
+## 输出定位（2026-09-14，旧格式退役）
 
-```yaml
-phase_4_skill_update_instructions:
-  - action: "ADD"
-    story_fidelity_classification: "section_variant"
-    target_file: "生存分析.md"
-    target_slot: "R3"
-    insert_after: "变体 5（事件研究 CAR 第二阶段）"  # 语义定位
-    distinct_from: "变体 5（事件研究 CAR 第二阶段）— 本变体是 exp(β)−1 百分比三拍，变体 5 是 exponentiated beta 双拍"  # ADD/EXTEND 必填：与最近变体的一句差异，写入速查表「区别」列
-    skeleton: "..."
-    verbatim_anchor: "The hazard ratio of [x] indicates that a one-unit increase in [predictor] is associated with a [value]% decrease in the rate of [event] (p < .01)."  # 来源论文原句 1–2 句，15–40 tokens，风格参照
-    reason: "当前 生存分析 R3 变体1-5 全部是 AFT 的 exponentiated beta 解释。本论文展示了指数风险模型的 exp(β)−1 百分比三拍节奏，填补了参数风险模型 R3 的空白。"
-    source_paper: "Mayo_Ball_Mills_2022_POM"
-
-  new_anti_patterns_for_skill:
-    - target_file: "OLS-FE.md"
-      slot: "R7"
-      pattern: "稳健性按表格机械罗列而不按威胁组织"
-
-  new_honesty_boundaries_for_skill:
-    - target_file: "计数模型.md"
-      boundary: "分样本 H3 的 null-in-one-subgroup 只有在分样本基于理论驱动时才可解释为确证性证据"
-
-  skill_main_skeleton_update: []
-```
+本阶段产出 = writeback plan 候选，格式唯一以头部「产出格式」块为准（执行器 v2）。
+历史 `skill_update_instructions` 字段族退役，映射：target_file/target_slot → v2 `anchor.file`
+（含 target 提示）；insert_after → `anchor.after_heading`（主题匹配既有标题，禁默认文件尾）；
+distinct_from → 并入 `index_note`；skeleton → `block_text` 全文内嵌；verbatim_anchor 遵守
+`../../distill-paper-exemplar/references/anchor-rules.md`；reason → `index_note` 一句话特征。
+反模式与诚实边界不写进 plan：入 PDM paper_weaknesses 与 story 卡 caveat，由主循环处置。
 
 ## 写入后操作（两段式：预览 → 确认 → 写入）
 

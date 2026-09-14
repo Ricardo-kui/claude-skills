@@ -6,84 +6,35 @@
 > **禁止为查重/选带/锚点定位而整读 corpus 或 `_evidence_registry.yaml`**（单个文件可达 54–257KB）——
 > 一切以 plan 为准；仅当 plan 的 verdict 可疑时，才允许按 plan 标注的文件+行号定点核对。
 >
-> candidates.yaml 格式：
-> ```yaml
-> candidates:
->   - name: <skeleton_id>
->     target: "<目标文件或目录提示，如 OLS-FE.md / tensions>"
->     skeleton_text: "<骨架模板文本（查重输入）>"
->     keywords: ["<registry 匹配关键词，可选>"]
-> ```
+> **产出格式（2026-09-14 起，单一契约源）**：candidates.yaml 与 writeback plan 的字段结构以
+> `../../distill-paper-exemplar/references/l1-subagent-protocol.md` 的「子代理输出契约」与
+> 「plan 条目字段契约」为准（执行器 v2：items: / name / dedup.verdict / anchor.file /
+> block_text 全文内嵌 / index_note；骨架 block_text 只写这一遍，corpus_precheck 透传进
+> plan，无需再写 blocks.yaml）。本 skill 不另立格式。
 >
 > **--auto-write**：默认仍需 gate ① 人审确认 plan 后写回；调用方显式传 `--auto-write`
 > （或批量模式用户预先授权）时，可按 plan 直接写回 ADD/EXTEND 项（**SKIP 项永不写回**），
 > 并在写回报告中标注 `auto-write: plan <plan路径>`。
 >
-> **整篇编排模式（distill-paper-exemplar 分发）下**：plan 产出即停，把 plan 路径交回
-> 主循环等待批量 gate ①（四节攒齐一次呈审），不要自行进入写回；单节模式随产随审。
->
-> **写回执行（gate ① 确认后，2026-08-20 起）**：用确定性执行器，不手改语料——
-> `python ../distill-paper-exemplar/scripts/corpus_writeback.py --plan <plan> --paper <citekey> --journal <刊名> --gap <Gap类型>`（block_text/index_note 已在 candidates.yaml 写一遍并透传进 plan，无需 blocks.yaml）
-> 默认 dry-run 打印全部 diff 供复核，`--apply` 才落盘（插块自动续 `{NEXT}` 编号、
-> _index 行注、registry 计数、SKIP 拒绝）。gate ① 改判锚点文件时在 blocks.yaml 加
-> `file:` 覆盖。完整 blocks.yaml 格式见
-> `../../distill-introduction-exemplar/references/phase-4-validation-writeback.md` 头部。
+> **写回执行权（2026-09-14 起）**：写回权在主循环——整篇编排模式（L1 子代理分发）下
+> **子代理一律不得运行 corpus_writeback.py**，plan 产出即停，把 plan 路径交回主循环等待
+> 批量 gate ①（四节攒齐一次呈审）；单节独立模式下由主会话在 gate ① 确认（或调用方显式
+> `--auto-write` 授权）后调用写回执行器 `corpus_writeback.py`（先 dry-run 复核 diff 再
+> `--apply`），不手改语料。
 
 本阶段生成**受治理的 adoption instructions**。输出回答三个问题：
 1. **改哪个文件** → 精确到 `write-methods/corpus/[设计类型].md`
 2. **怎么改** → ADD / EXTEND / REPLACE / SKIP，含具体骨架和插入位置
 3. **为什么** → 与当前 corpus 的差异 + 对 write-methods skill 的提升
 
-## skill_update_instructions 格式
+## 输出定位（2026-09-14，旧格式退役）
 
-```yaml
-phase_4_skill_update_instructions:
-  - action: "ADD"           # ADD / EXTEND / REPLACE / SKIP
-    story_fidelity_classification: "section_variant"
-    target_file: "生存分析.md"  # write-methods/corpus/ 下的文件名
-    target_slot: "M7"
-    insert_after: "变体 6（piecewise exponential）"  # 语义定位——描述该插入在哪个已有变体之后，不硬编码数字
-    distinct_from: "变体 6（piecewise exponential）— 本变体是 Cox-type 参数风险模型（continuous-time），变体 6 是 AFT 框架（piecewise）"  # ADD/EXTEND 必填：与最近变体的一句差异，写入速查表「区别」列
-    skeleton: "..."
-    verbatim_anchor: "We estimate a gap-time model that allows the hazard to depend on the time elapsed since the previous recall, in line with prior work on recurrent events."  # 来源论文原句 1–2 句，15–40 tokens，风格参照
-    reason: "当前 生存分析 M7 变体1-6 全部是 AFT+Weibull 框架——缺少指数/参数风险模型的复发事件处理。本论文填补了这一缺口，且包含了 gap-time vs continuous-time 的显式论证。"
-    source_paper: "Mayo_Ball_Mills_2022_POM"
-
-  - action: "SKIP"
-    target_file: "生存分析.md"
-    target_slot: "M7"
-    reason: "AFT+Weibull 段落与已有变体1（4/4 复现）高度重叠——不构成新的叙事模式。"
-
-  - action: "EXTEND"
-    target_file: "面板数据-OLS.md"
-    target_slot: "M2"
-    insert_after: "变体 8（回顾性偏差三角检验）"
-    distinct_from: "变体 8（回顾性偏差三角检验）— 本变体是多库交集→直接报最终 N（省略逐步排除），变体 8 是逐步排除漏斗"
-    skeleton: "..."
-    reason: "当前 面板数据-OLS M2 变体默认要求逐步排除漏斗。本论文展示了一种替代模式（多数据库交集→直接报告最终 N），需作为可选变体加入。"
-
-  - action: "REPLACE"
-    target_file: "计数模型.md"
-    target_slot: "R3"
-    replace_variant: "变体 1（Cutolo 负二项四拍）"  # 描述要替换的变体
-    replacement_skeleton: "..."
-    verbatim_anchor: "Across models, the positive effect of advertising on recall counts remains consistent, with an incident-rate ratio of [x] (p < .01)."  # REPLACE 时同时提供新锚点
-    reason: "当前变体的拍数不够完整——本论文的四拍节奏更完整（假设提醒→双DV方向→百分比翻译→支持判断）。"
-
-  new_anti_patterns_for_skill:
-    - target_file: "面板数据-OLS.md"
-      slot: "M2"
-      pattern: "无漏斗计数——多数据库合并但未说明交集前后的 N 差异"
-      evidence: "本文仅说'the intersection resulted in N=2932'——无法审计数据损失"
-
-  new_honesty_boundaries_for_skill:
-    - target_file: "生存分析.md"
-      boundary: "复发事件 AFT 模型假设事件间独立（同一 firm 的两次召回无关联）。若理论预测事件间存在依赖，需额外使用 frailty/shared frailty 模型或报告稳健性检验。"
-
-  skill_main_skeleton_update:
-    - target_file: "生存分析.md"
-      update: "M7 主骨架增加一行：'若处理组/控制组存在系统性差异，应在估计前使用 CEM 预处理数据（参见变体13）。'"
-```
+本阶段产出 = writeback plan 候选，格式唯一以头部「产出格式」块为准（执行器 v2）。
+历史 `skill_update_instructions` 字段族退役，映射：target_file/target_slot → v2 `anchor.file`
+（含 target 提示）；insert_after → `anchor.after_heading`（主题匹配既有标题，禁默认文件尾）；
+distinct_from → 并入 `index_note`；skeleton → `block_text` 全文内嵌；verbatim_anchor 遵守
+`../../distill-paper-exemplar/references/anchor-rules.md`；reason → `index_note` 一句话特征。
+反模式与诚实边界不写进 plan：入 PDM paper_weaknesses 与 story 卡 caveat，由主循环处置。
 
 ## 写入后操作（两段式：预览 → 确认 → 写入）
 

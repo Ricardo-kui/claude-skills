@@ -6,21 +6,11 @@
 > **禁止为查重/选带/锚点定位而整读 corpus 或 `_evidence_registry.yaml`**（单个文件可达 54–257KB）——
 > 一切以 plan 为准；仅当 plan 的 verdict 可疑时，才允许按 plan 标注的文件+行号定点核对。
 >
-> candidates.yaml 格式（2026-08-20 合并：骨架只写这一遍，precheck 透传进 plan，
-> 执行器直接读 plan，**无需再写 blocks.yaml**）：
-> ```yaml
-> candidates:
->   - name: <skeleton_id>
->     target: "<目标文件或目录提示，如 OLS-FE.md / tensions>"
->     skeleton_text: "<骨架模板文本（查重输入；缺省时用 block_text 查重）>"
->     keywords: ["<registry 匹配关键词，可选>"]
->     block_text: |          # 变体块全文；{NEXT} 由执行器替换为分配的编号/字母
->       ### 变体 {NEXT}：<名称>（<citekey> 型）
->       > 论证角色：<Claim|Reason|Evidence|Warrant|[D] 定义前提|A&R|Framing>（一句话功能）
->       ...
->     index_note: "变体 {NEXT}：<一句话特征>，<citekey>，EMERGING"
->     file_override: "<可选：gate ① 改判锚点文件时填，corpus 相对路径>"
-> ```
+> **产出格式（2026-09-14 起，单一契约源）**：candidates.yaml 与 writeback plan 的字段结构以
+> `../../distill-paper-exemplar/references/l1-subagent-protocol.md` 的「子代理输出契约」与
+> 「plan 条目字段契约」为准（执行器 v2：items: / name / dedup.verdict / anchor.file /
+> block_text 全文内嵌 / index_note；骨架 block_text 只写这一遍，corpus_precheck 透传进
+> plan，无需再写 blocks.yaml）。本 skill 不另立格式。
 >
 > **论证角色标注（2026-09-06 起，段内论证文法配套）**：每个新块 `block_text` 的首个内容行（`### 变体` 标题之后）必须是论证角色标注——`> 论证角色：<Claim|Reason|Evidence|Warrant|[D] 定义前提|A&R|Framing>（一句话功能）`，角色定义与语料角色索引见 `../../story-blueprints/v4/rhetoric-moves/_argument-grammar.md`。执行器把 block_text 原样插块，标注随块落盘；gate ① 审 plan/dry-run diff 时把"新块缺论证角色标注"视为需修正项。存量条目已于 2026-09-06 全部标注。
 >
@@ -28,16 +18,11 @@
 > （或批量模式用户预先授权）时，可按 plan 直接写回 ADD/EXTEND 项（**SKIP 项永不写回**），
 > 并在写回报告中标注 `auto-write: plan <plan路径>`。
 >
-> **整篇编排模式（distill-paper-exemplar 分发）下**：plan 产出即停，把 plan 路径交回
-> 主循环等待批量 gate ①（四节攒齐一次呈审），不要自行进入写回；单节模式随产随审。
->
-> **写回执行（gate ① 确认后，2026-08-20 起）**：用确定性执行器，不手改语料——
-> `python ../distill-paper-exemplar/scripts/corpus_writeback.py --plan <plan> --paper <citekey> --journal <刊名> --gap <Gap类型>`
-> 默认 dry-run 打印全部 diff 供复核，`--apply` 才落盘。执行器负责：插变体块（`{NEXT}`
-> 占位符自动续编号/字母）、`_index.md` 行注、`_evidence_registry` 计数与 papers 追加、
-> SKIP 项拒绝写回。gate ① 若把锚点改判到别的文件（plan 的 `anchor_candidates` top-3
-> 里选），直接在 plan item 上填 `file_override`（或单独给 blocks.yaml 加 `file:`）。
-> registry/index 找不到条目时执行器只报告不猜——按报告手工补登记。
+> **写回执行权（2026-09-14 起）**：写回权在主循环——整篇编排模式（L1 子代理分发）下
+> **子代理一律不得运行 corpus_writeback.py**，plan 产出即停，把 plan 路径交回主循环等待
+> 批量 gate ①（四节攒齐一次呈审）；单节独立模式下由主会话在 gate ① 确认（或调用方显式
+> `--auto-write` 授权）后调用写回执行器 `corpus_writeback.py`（先 dry-run 复核 diff 再
+> `--apply`），不手改语料。
 >
 > **`_update_design_feedback.py` 输入 schema**（2026-08-20 实测文档化，勿再试错）：
 > ```yaml

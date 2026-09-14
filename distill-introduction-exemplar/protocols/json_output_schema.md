@@ -4,6 +4,11 @@
 
 ---
 
+> **模式优先级（2026-09-14 起）**：整篇编排（L1 子代理）模式下，产出以
+> `../../distill-paper-exemplar/references/l1-subagent-protocol.md`「子代理输出契约」为准——
+> `sections/introduction.json` 顶层必须含 `identity`（gap_type + contribution_dimension）；
+> 本 schema 仅适用独立 batch 报告模式（`--output-format=json`），其输出不落 PDM。
+
 ## JSON Output Schema
 
 当使用 `--output-format=json` 时，输出严格符合以下 schema。
