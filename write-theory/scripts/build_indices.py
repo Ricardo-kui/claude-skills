@@ -27,6 +27,15 @@ CLI
 --verify       verbatim 逐字回源 + 锚点标题存在；--sample N 再抽 N 条逐字比对。
 --sample N     抽样 N 条 verbatim 逐字回源。
 --quiet        only print the summary.
+
+Shared engine (2026-09-15)
+--------------------------
+工具层（normalize/is_english/strip_outer_quotes/trim_annotation/escape_cell）、
+Unparsed、fence 收集器、写盘与入口（SUMMARY 行 + OSError/ValueError→exit 2）
+已下沉到 ``_shared/indexing/indexing_engine.py``（唯一一份）；本适配器保留
+write-theory 特异的：四分支解析器、pattern_id 绑定协议、_evidence_registry
+状态链、7 字段 Entry、渲染模板与本地 verify（e.file/截断口径与
+methods·results 不同）。
 """
 
 from __future__ import annotations
@@ -42,6 +51,12 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 SKILL_ROOT = SCRIPT_DIR.parent
 CORPUS = SKILL_ROOT / "corpus"
 SKELETON = CORPUS / "_skeleton"
+
+SHARED = SKILL_ROOT.parent / "_shared" / "indexing"
+sys.path.insert(0, str(SHARED))
+
+import indexing_engine as eng  # noqa: E402
+from indexing_engine import Unparsed  # noqa: E402
 
 # ---------------------------------------------------------------- 文件清单 ----
 
@@ -82,33 +97,12 @@ VARIANT_NAMES = {
     "E": "调节效应型", "F": "竞争假设型", "G": "辩证对立型",
 }
 
-# ---------------------------------------------------------------- 基础工具 ----
-
-ANNOTATION_RE = re.compile(r"[\u4e00-\u9fff\u3000-\u303f\uff00-\uffef]")
-
-
-def normalize(text: str) -> str:
-    return " ".join(text.replace("\t", " ").split())
-
-
-def is_english(text: str) -> bool:
-    letters = sum(1 for ch in text if ch.isascii() and ch.isalpha())
-    return letters >= 15
-
-
-def strip_outer_quotes(text: str) -> str:
-    t = text.strip()
-    if len(t) >= 2 and t[0] in "\"'“「" and t[-1] in "\"'”」":
-        return t[1:-1].strip()
-    return t
-
-
-def trim_annotation(text: str) -> str:
-    """Cut trailing CJK/fullwidth annotation glued to an English quote."""
-    m = ANNOTATION_RE.search(text)
-    if m:
-        text = text[: m.start()]
-    return text.strip().strip("\"'“”「」").strip()
+# ---------------- 基础工具（normalize/is_english/strip_outer_quotes/trim_annotation）改引共享引擎 ----
+normalize = eng.normalize
+is_english = eng.is_english
+strip_outer_quotes = eng.strip_outer_quotes
+trim_annotation = eng.trim_annotation
+escape_cell = eng.escape_cell
 
 
 def extract_quotes(text: str) -> list[str]:
@@ -136,14 +130,9 @@ def _extract_verbatim_inline(lines: list[str], start: int, inline: str,
 
 
 def _read_fence(lines: list[str], start: int) -> dict:
-    """Collect a ``` ... ``` code fence starting at ``start``."""
-    parts: list[str] = []
-    j = start + 1
-    while j < len(lines) and not lines[j].strip().startswith("```"):
-        if lines[j].strip():
-            parts.append(lines[j].strip())
-        j += 1
-    return {"text": normalize(" ".join(parts)), "end": j}
+    """Collect a ``` ... ``` code fence（共享收集器 + theory 的 normalize 语义）."""
+    fence = eng.collect_fence(lines, start)
+    return {"text": normalize(fence["text"]), "end": fence["end"]}
 
 
 def _read_blockquote(lines: list[str], start: int) -> dict:
@@ -298,15 +287,6 @@ class Entry:
     anchor: str
     heading: str = ""  # 内部：用于 --verify 断言标题存在
     file: str = ""     # 内部：corpus 相对路径
-
-
-@dataclass
-class Unparsed:
-    card: str
-    path: str
-    where: str
-    text: str
-    reason: str
 
 
 @dataclass
@@ -1053,10 +1033,6 @@ def _matrix_templates(lines: list[str], relpath: str, arg_role: str) -> list[Ent
 
 # ---------------------------------------------------------------- 渲染 -----
 
-def escape_cell(text: str) -> str:
-    return text.replace("|", r"\|")
-
-
 def render_branch(slug: str, name: str, branch: str, relpath: str,
                   entries: list[Entry]) -> str:
     nv = sum(1 for e in entries if e.kind == "verbatim")
@@ -1290,17 +1266,19 @@ def main(argv: list[str] | None = None) -> int:
         print(f"unparsed items: {len(all_unparsed)}")
         print(f"registry pattern keys: {len(registry)}")
 
-    if args.check:
-        return 0
+    counts: dict[str, int] = {"entries": len(all_entries),
+                              "unparsed": len(all_unparsed)}
+    if args.verify:
+        counts["mismatch"] = len(mismatch)
+        counts["anchor_miss"] = len(anchor_miss)
 
-    SKELETON.mkdir(parents=True, exist_ok=True)
-    for fname, text in rendered.items():
-        (SKELETON / fname).write_text(text, encoding="utf-8", newline="\n")
-    (SKELETON / "_index.md").write_text(render_index(routes, len(all_unparsed)),
-                                        encoding="utf-8", newline="\n")
-    (SKELETON / "_unparsed.md").write_text(render_unparsed(all_unparsed),
-                                           encoding="utf-8", newline="\n")
-    return 0
+    if args.check:
+        return counts
+
+    eng.write_skeleton(SKELETON, rendered,
+                       render_index(routes, len(all_unparsed)),
+                       render_unparsed(all_unparsed))
+    return counts
 
 
 def _emit(rendered: dict[str, str], routes: list[dict], target: str,
@@ -1332,4 +1310,4 @@ def _emit(rendered: dict[str, str], routes: list[dict], target: str,
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(eng.entrypoint("write-theory", main))
