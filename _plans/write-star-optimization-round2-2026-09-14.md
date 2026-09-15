@@ -200,6 +200,7 @@ D-B1–D-B7 均已裁定，无需再等裁定门；唯一建议你开工前确�
    - **schema 基准**：以 `write-results` 的 1.1.0 为准统一（较新），`write-methods` 1.0.0 数据做一次性迁移。
    - 落地附带：新建 `_shared/README.md` 声明「运行期共享件」定位与 `_governance/`（维护期治理）的边界；`.gitignore` 追加 `!_shared/` `!_shared/**`（allowlist 式忽略，漏加即静默丢文件）；`_governance/README.md` 章程不改，其自身 3 处 `../../` 仍归 Batch 6。
 2. **共享索引器的落点**（默认执行）：Batch 2 的重建脚本核心抽为 `_shared/indexing/build_indices.py`，各 skill 传参调用（语料轴、模块名表、卡片路径规则按 skill 配置）。
+   - **执行记录（2026-09-15，已落地）**：引擎落位 `_shared/indexing/indexing_engine.py`（有意不叫 `build_indices.py`——消除与各 skill 适配器同名遮蔽的脆弱性，偏离本条字面路径、意图不变）；承接工具层 / Entry·Unparsed / materialize（钩子化）/ verify 回源与抽样 / 渲染原语 / 写盘 / CLI / `entrypoint`（SUMMARY 行 + OSError·ValueError→exit 2）。三个适配器同名同路径保留（生成物头部措辞零改动），theory 的四分支解析器、registry 状态链、7 字段 Entry 与本地 verify（e.file/截断口径）及 methods/results 的模板文本、锚点校验器各自保留——引擎只承接逐字同源代码。零回归证明 = blob 哈希门（results 23 / methods 26 / theory 24 个生成物逐字节一致）+ 双 validator PASSED；新增维护期漂移门 `_shared/indexing/check_all.py`（commit 1f41fe0 / 34873c3 / 4dd8195 + 收尾批）。write-introduction 的解析器不同源、本轮不并入（2026-09-15 用户裁定）。
 3. **覆盖率分母的豁免清单**（默认执行）：methods/results 的程序性槽位（样本年份、变量名陈述等）列入 framing 豁免、不进覆盖率分母，豁免清单显式写在各自 outline/generation 协议里（否则覆盖率可被规避）。
 4. **review 出口短期不可用的窗口**（默认执行）：Batch 4 三份 review 逐份改、每份改完即跑一次对应审查，不同时停三份。
 5. **不推送**（默认执行）：Batch 0.5 只 `git commit` 不 `git push`，除非你明确要求。

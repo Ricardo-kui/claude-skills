@@ -5,6 +5,7 @@
 - `pass-contract.md` — 审查输出契约（六字段 + 两条硬规则 + 四个 review 出口的消费方清单）。所有 `*-review` skill 的 PASS 输出以本文件为唯一事实源（原位于 `write-introduction/references/`，Batch 4 迁入）。
 - `pointer-allowlist.txt` — `skill_pointer_check.py --strict` 的跨 skill 指针白名单。
 - `feedback/` — 反馈引擎（Batch 5 已落地）：`record_feedback.py`（fingerprint 去重 + supersedes + 读写 registry 的共享引擎，schema 迁移 1.0.0→1.1.0 只在读取层）、`lint_language.py`（确定性语言锁扫描引擎）、`schema.json`（canonical schema 1.1.0 + 迁移映射声明）。write-methods / write-results / write-introduction 的 scripts/ 只留薄封装与各自词表/registry。
+- `indexing/` — 骨架索引共享引擎（§9.2 已落地）：`indexing_engine.py`（write-theory / write-methods / write-results 三份 `scripts/build_indices.py` 的共享工具层 / Entry·Unparsed / materialize / verify 回源抽样 / 渲染原语 / 写盘 / CLI，唯一一份；各 skill 适配器只留目录轴、正则、槽位机制、模板文本与锚点校验）、`check_all.py`（**维护期回归门**：重生成 + blob 哈希逐字节比对 + SUMMARY 解析 + validator 串联；运行期写作路径不引用——对下表边界判据的显式例外，先例 `story-blueprints/tests/regression_retrieval.py`）。
 
 **与 `_governance/` 的边界**：
 
