@@ -6,6 +6,19 @@
 
 ---
 
+## 变体速查表
+
+> 检索辅助（2026-09-15 机建草表）：来源=节标题标注 / wb 标记 / 来源字段（就近继承父节）；`未标注（待补）`=待人工补来源，`未标注（待核）`=证据档待核。完整内容见下方各节。
+
+| # | 变体 | 家族 | 适用场景 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 关键句式模板 | 关键句式模板 | 构念辨析型 | — | 未标注（待核） | 未标注（待补） |
+| 变体 C | 变体 C：构念拆分双理由差异预测（Gulati_Lavie_Singh_2009 型） | 构念辨析型 | — | VERIFIED | gulati_lavie_singh_2009_partnering_experience |
+| 假设陈述格式 | 假设陈述格式 | 构念辨析型 | — | 未标注（待核） | 未标注（待补） |
+| Pollock 2015 型 | Pollock 2015 型：两构念四维系统区分 | 构念辨析型 | — | 未标注（待核） | Pollock 2015 |
+| 变体 A | 变体 A：形成过程辨析（Formation-Process Differentiation） | 构念辨析型 | — | VERIFIED | pfarrer_pollock_and_rindova_2010 |
+| 变体 B | 变体 B：相对排序跨情境反转（Context-Dependent Ordering Reversal of A vs B | 构念辨析型 | — | VERIFIED | pfarrer_pollock_and_rindova_2010 |
+
 ## 段落功能地图
 
 | 段落 | 功能 | 推荐词数 | 必须度 |

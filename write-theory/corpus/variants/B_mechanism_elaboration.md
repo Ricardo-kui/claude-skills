@@ -4,6 +4,24 @@
 > **范文**: Wu 2025 (OrgSci), Keeves 2017 (ASQ), Zhou 2017 (ASQ)
 > **最佳期刊**: SMJ ⭐⭐⭐⭐⭐ | AMJ ⭐⭐⭐⭐⭐ | ASQ ⭐⭐⭐⭐
 
+## 变体速查表
+
+> 检索辅助（2026-09-15 机建草表）：来源=节标题标注 / wb 标记 / 来源字段（就近继承父节）；`未标注（待补）`=待人工补来源，`未标注（待核）`=证据档待核。完整内容见下方各节。
+
+| # | 变体 | 家族 | 适用场景 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| 关键句式模板 | 关键句式模板 | 机制推演型 | — | 未标注（待核） | 未标注（待补） |
+| 变体 A | 变体 A：互补双路径收敛型假设（Dual-Path Convergence to a Single Directiona | 机制推演型 | — | 未标注（待核） | ball_2018 |
+| 变体 B | 变体 B：交替对立再诠释型机制开题（westphal_zajac_1998_symbolic_management 型） | 机制推演型 | — | VERIFIED | westphal_zajac_1998_symbolic_management (ASQ), §2.1 P4（全节 3 次复现的同型 pivot） |
+| 变体 C | 变体 C：硬数字/软数字测量本体重构（westphal_zajac_1998_symbolic_management 型 | 机制推演型 | — | VERIFIED | westphal_zajac_1998_symbolic_management (ASQ), §2.1 P5 |
+| 变体 D | 变体 D：并行多中介逐项部分中介链（gulati_2007 型） | 机制推演型 | — | VERIFIED | gulati_2007_dependence_asymmetry_and_joint_dependence_in_int |
+| 假设陈述格式 | 假设陈述格式 | 机制推演型 | — | 未标注（待核） | 未标注（待补） |
+| 方式一 | 方式一：深度过程链（Depth Process Chain） | 机制推演型 | — | 未标注（待核） | 未标注（待补） |
+| 方式二 | 方式二：宽度理由并行（Width Parallel） | 机制推演型 | — | 未标注（待核） | 未标注（待补） |
+| 方式三 | 方式三：条件化复杂化（Conditional Complexification） | 机制推演型 | — | 未标注（待核） | 未标注（待补） |
+| 方式四 | 方式四：对称反向双轨（Symmetric Opposing Dual-Track） | 机制推演型 | — | 未标注（待核） | 未标注（待补） |
+| 方式五 | 方式五：曲线关系双阶段论证（Curvilinear Two-Phase） | 机制推演型 | — | 未标注（待核） | 未标注（待补） |
+
 ## 先选分支：B0 过程解释 vs B1 正式中介
 
 | 分支 | 适用条件 | 正式假设 | 不可声称 |

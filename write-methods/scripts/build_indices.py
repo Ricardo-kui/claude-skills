@@ -330,7 +330,7 @@ def _load_quickref_sources(path: Path) -> dict[str, str]:
         if not vid or vid == "#":
             continue
         src = cells[header_cols["来源"]].strip()
-        if src:
+        if src and not src.startswith(("未标注", "待补")):
             out.setdefault(vid, src)
     return out
 

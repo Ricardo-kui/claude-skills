@@ -331,8 +331,10 @@ def load_quickref_bindings(relpath: str) -> dict[str, tuple[str, str]]:
                   if ln.strip().startswith("##") and "速查表" in ln), None)
     if start is None:
         return {}
+    level = len(lines[start].strip()) - len(lines[start].strip().lstrip("#"))
     end = next((i for i in range(start + 1, len(lines))
-                if lines[i].strip().startswith("## ")), len(lines))
+                if (m := re.match(r"^(#+)\s", lines[i].strip()))
+                and len(m.group(1)) <= level), len(lines))
     header_cols: dict[str, int] = {}
     out: dict[str, tuple[str, str]] = {}
     for ln in lines[start + 1:end]:
@@ -353,6 +355,8 @@ def load_quickref_bindings(relpath: str) -> dict[str, tuple[str, str]]:
         head = re.split(r"[（(]", cells[header_cols["状态"]])[0].strip().upper()
         status = head if head in QUICKREF_STATUS_RANK else ""
         citekey = cells[header_cols["来源"]].strip() if "来源" in header_cols else ""
+        if citekey.startswith(("未标注", "待补")):
+            citekey = ""  # 待补占位符不作为绑定来源（索引保持诚实的「未标注」）
         out[vid] = (status, citekey)
     return out
 

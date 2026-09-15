@@ -54,19 +54,21 @@
 | # | 变体 | 家族 | 适用场景 | 状态 | 来源 |
 |---|---|---|---|---|---|
 | E1 | 同层调节（7 步协议） | 基础协议 | 核心贡献是识别 boundary condition、qualify 已有关系；X→Y 基线机制+moderator 理论选择+机制修改推演 | VERIFIED | Andersson et al. 2014 JIBS; Pollock 2025 Ch06 |
-| E2 | 跨层调节 (Cross-Level Moderation) — 9 步协议 | 基础协议 | focal unit 嵌套声明+跨层机制推演+排除反向交互 | structural（协议型） |  |
-| E3 | 嵌入型边界条件（Embedded Boundary Conditions，kalai |  | moderator 数量较多（≥3 个）且每个 moderator 有独立理论依据，独立 T | structural（协议型） |  |
-| E4 | 竞争基线 → 调节裁决（Competing Baseline → Moderatio |  | 同一理论框架预测了两个（或多个）相反/竞争的响应，研究贡献是用 moderator 决定"何 | structural（协议型） |  |
-| E5 | 曲线关系 + 多调节变量的联合论证（Cui et al. 型） |  | 理论预期 X→Y 是曲线关系（如 inverted U-shape），且多个 moderat | structural（协议型） |  |
-| E6 | 序列嵌套调节（Sequential Nested Moderation，Chung/ | 时间/嵌套 | 研究包含两层边界条件：第一层调节变量（W1）直接影响 X→Y 关系；第二层调节变量（W2）调 | structural（协议型） |  |
-| E7 | 宏观事件激活与持续性调节（Event-Activated Temporal Mode | 时间/嵌套 | 核心差异/身份在常态中可被压抑，但宏观事件使其显著化；理论需要解释事件前、事件冲击与事件后的 | EMERGING（单篇来源；仅作 |  |
-| E8 | 双刃剑估值机制 → 异号增强/阻碍权变（Dual-Edged Valuation → | 受众分化 | 同一制度/保护强度通过两条方向相反的信息机制作用于同一 DV（市场估值），净效应事先不定；理 | EMERGING（单篇来源；仅作 |  |
+| E2 | 跨层调节 (Cross-Level Moderation) — 9 步协议 | 基础协议 | focal unit 嵌套声明+跨层机制推演+排除反向交互 | structural（协议型） | 未标注（待补） |
+| E3 | 嵌入型边界条件（Embedded Boundary Conditions，kalai |  | moderator 数量较多（≥3 个）且每个 moderator 有独立理论依据，独立 T | structural（协议型） | 未标注（待补） |
+| E4 | 竞争基线 → 调节裁决（Competing Baseline → Moderatio |  | 同一理论框架预测了两个（或多个）相反/竞争的响应，研究贡献是用 moderator 决定"何 | structural（协议型） | 未标注（待补） |
+| E5 | 曲线关系 + 多调节变量的联合论证（Cui et al. 型） |  | 理论预期 X→Y 是曲线关系（如 inverted U-shape），且多个 moderat | structural（协议型） | 未标注（待补） |
+| E6 | 序列嵌套调节（Sequential Nested Moderation，Chung/ | 时间/嵌套 | 研究包含两层边界条件：第一层调节变量（W1）直接影响 X→Y 关系；第二层调节变量（W2）调 | structural（协议型） | 未标注（待补） |
+| E7 | 宏观事件激活与持续性调节（Event-Activated Temporal Mode | 时间/嵌套 | 核心差异/身份在常态中可被压抑，但宏观事件使其显著化；理论需要解释事件前、事件冲击与事件后的 | EMERGING（单篇来源；仅作 | 未标注（待补） |
+| E8 | 双刃剑估值机制 → 异号增强/阻碍权变（Dual-Edged Valuation → | 受众分化 | 同一制度/保护强度通过两条方向相反的信息机制作用于同一 DV（市场估值），净效应事先不定；理 | EMERGING（单篇来源；仅作 | 未标注（待补） |
 | E9 | 双侧镜像调节（Same-Construct Mirror Moderation，De | 受众分化 | 主效应是"攻击方/施动方对受害方造成影响"，同一调节构念（威胁、机会、压力等）在攻击方侧与受 | EMERGING（单篇来源；仅作 | DesJardine, Li & Shi (2025), * |
 | E10 | 跨学科分类框架驱动的 N 平行缓解调节（Taxonomy-Driven N-Parallel，Cutolo–Ferriani 2024 型） |  | 主效应是文献共识惩罚/负面效应（baseline-from-consensus），贡献全在 N 个缓解调节；N 由跨学科既成框架 1:1 映射，机制统一落同一透镜 | EMERGING（单篇来源；仅作 | Cutolo & Ferriani (2024), *Journal of Management* |
 | E11 | 特质激活双表现型 cue 切换调节（Trait-Activation Dual-Manifestation Cue-Switch，Ridge et al. 2024 AMJ 型） | 受众分化/机制切换 | IV 是特质（默认表现型=主效应基线，如 paranoia→avoidance）；stakeholder cue 激活对立表现型（如 aggression）作用于**同一 DV**；low-cue 态即已论证的主效应，moderation 只论 high（activation）侧；双边覆盖由"主效应基线 + high 态完整机制"满足 | EMERGING（单篇来源；仅作 | Ridge, Hill, Ingram, Kolomeitsev & Worrell (2024), *Academy of Management Journal* |
 | E12 | 曲线基线 + 每调节一对几何假设（Paired Geometric Hypotheses per Moderator，Fini et al. 2017 AMJ 型） | 曲线/几何 | 曲线基线由多分量相加构成，moderator 只绑定一个分量 → 产出**一对**几何假设：H[N]a 形状（flatten/steepen/attenuate）+ H[N]b 顶点位置（turning point 沿 X 轴平移），各一直接检验；与 E5 主模板（单衰减假设，绑定整条曲线）判别；必须先作不变性声明 | EMERGING（单篇来源；仅作 | Fini, Jourdan & Perkmann (2017), *Academy of Management Journal* |
 | E13 | 机制移除型曲线退化调节（Mechanism-Removal Curve Degeneration，Ridge, Aime & White 2013 型） | 曲线/几何 | 曲线基线的一个机制分支被 W 移除/关闭（竞赛取消、机会关闭），另一机制不受影响 → 曲线退化扁平化；与 E5 主模板、E12 Paired Geometric 判别 | EMERGING（单篇来源） | Ridge, Aime & White (2013), *Strategic Management Journal* |
 | E14 | 双支增强型曲线锐化调节（Both-Branch Amplification Steepening，Ridge, Aime & White 2013 型） | 曲线/几何 | 曲线基线的两个机制分支被同一 moderator 同时增强（各有一条独立子机制论证）→ 曲线锐化；与 E13 机制移除型镜像几何 | EMERGING（单篇来源） | Ridge, Aime & White (2013), *Strategic Management Journal* |
+| 变体 A | 制度身份锚定型 IV 测量（Institutional-Regime Construct Anchor，ball_2018 型） | 构念锚定 | IV 测量锚定在制度身份构念上（2026-09-15 机补行：原表缺变体 A/B 两行） | 未标注（待核） | ball_2018 |
+| 变体 B | 事件属性切分的双边调节对（Event-Attribute Split Bilateral Moderation Pair，ball_2018 型） | 构念锚定 | 事件属性切分产生双边调节假设对（2026-09-15 机补行） | 未标注（待核） | ball_2018 |
 
 ## E2. 跨层调节 (Cross-Level Moderation) — 9 步协议
 

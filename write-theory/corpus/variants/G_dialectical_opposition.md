@@ -9,6 +9,41 @@
 
 ---
 
+## 变体速查表
+
+> 检索辅助（2026-09-15 机建草表）：来源=节标题标注 / wb 标记 / 来源字段（就近继承父节）；`未标注（待补）`=待人工补来源，`未标注（待核）`=证据档待核。完整内容见下方各节。
+
+| # | 变体 | 家族 | 适用场景 | 状态 | 来源 |
+|---|---|---|---|---|---|
+| T1 | T1: General Background（中立开场） | 辩证对立型 | — | 未标注（待核） | 未标注（待补） |
+| T2 | T2: Construct Definition + Baseline Consensus | 辩证对立型 | — | 未标注（待核） | 未标注（待补） |
+| T3 | T3: Mechanism for Audience A（hazard side） | 辩证对立型 | — | 未标注（待核） | 未标注（待补） |
+| T4 | T4: Dialectical Turn — Mechanism for Audience B（opportunity  | 辩证对立型 | — | 未标注（待核） | 未标注（待补） |
+| Reconciliation 收束句 | Reconciliation 收束句（嵌入最后假设推导段末尾） | 辩证对立型 | — | 未标注（待核） | 未标注（待补） |
+| T7 | T7: Empirical Context Transition | 辩证对立型 | — | 未标注（待核） | 未标注（待补） |
+| 双重理论透镜并置 | 双重理论透镜并置（T2） | 辩证对立型 | — | 未标注（待核） | Zhou 2017 |
+| 资源获取机制 | 资源获取机制（H1a） | 辩证对立型 | — | 未标注（待核） | Zhou 2017 |
+| 资源利用效率机制 | 资源利用效率机制（H1b） | 辩证对立型 | — | 未标注（待核） | Zhou 2017 |
+| 倒 U 形整合 | 倒 U 形整合（H1c） | 辩证对立型 | — | 未标注（待核） | Zhou 2017 |
+| 边界条件作为补救机制 | 边界条件作为补救机制（H2-H4） | 辩证对立型 | — | 未标注（待核） | Zhou 2017 |
+| 共同理论主干 | 共同理论主干（T2） | 辩证对立型 | — | 未标注（待核） | Bendig–Hensellek–Schulte 2024 |
+| 不利结果的主导权转换 | 不利结果的主导权转换（H1/H2） | 辩证对立型 | — | 未标注（待核） | Bendig–Hensellek–Schulte 2024 |
+| 平行战略模式的差异化 warrant | 平行战略模式的差异化 warrant | 辩证对立型 | — | 未标注（待核） | Bendig–Hensellek–Schulte 2024 |
+| 同一边界条件、异几何变换 | 同一边界条件、异几何变换（H3/H4） | 辩证对立型 | — | 未标注（待核） | Bendig–Hensellek–Schulte 2024 |
+| 对称对立机制并置 | 对称对立机制并置（T3a/T3b） | 辩证对立型 | — | 未标注（待核） | Ridge–Aime–White 2013 |
+| 前提自限域 | 前提自限域（in-situ premise retrieval） | 辩证对立型 | — | 未标注（待核） | Ridge–Aime–White 2013 |
+| 阈值激活整合 → U | 阈值激活整合 → U（H1） | 辩证对立型 | — | 未标注（待核） | ridge_aime_white_2013_smj |
+| 对称建立两个可信过程 | 对称建立两个可信过程（R3） | 辩证对立型 | — | 未标注（待核） | Ridge–Aime–White 2013 |
+| 共同必要性与三状态整合 | 共同必要性与三状态整合（H1） | 辩证对立型 | — | 未标注（待核） | Ridge–Aime–White 2013 |
+| 选择性维持与拐点右移 | 选择性维持与拐点右移（H2） | 辩证对立型 | — | 未标注（待核） | Ridge–Aime–White 2013 |
+| 假设陈述格式 | 假设陈述格式 | 辩证对立型 | — | 未标注（待核） | 未标注（待补） |
+| Dialectical Turn 首句句法 | Dialectical Turn 首句句法 | 辩证对立型 | — | 未标注（待核） | Ridge–Aime–White 2013 |
+| Symmetric Mechanism | Symmetric Mechanism Contrast | 辩证对立型 | — | 未标注（待核） | Ridge–Aime–White 2013 |
+| T6 Reconciliation | T6 Reconciliation | 辩证对立型 | — | 未标注（待核） | Ridge–Aime–White 2013 |
+| Two-Source Construct | Two-Source Construct Discrimination | 辩证对立型 | — | 未标注（待核） | Ridge–Aime–White 2013 |
+| 变体 A | 变体 A：必要不充分·互补性整合（Gulati_1998 综述文型） | 辩证对立型 | — | 未标注（待核） | gulati_1998_alliances_and_networks |
+| 变体 B | 变体 B：必要不充分·机制交棒转场（Necessary-Not-Sufficient Driver Handoff，Gu | 辩证对立型 | — | VERIFIED | gulati_1999_where_do_interorganizational_networks |
+
 ## 触发条件
 
 满足以下所有条件时路由到本变体：
