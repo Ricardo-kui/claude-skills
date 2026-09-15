@@ -6,7 +6,7 @@
 > **citekey** 取 source_papers 首个 → wb 注释 → 来源字段，无则「未标注」；**status** 查 `_evidence_registry.yaml`（ROBUST>VERIFIED>EMERGING），未命中「未标注」。
 > **来源文件**：`corpus/variants/F_competing_hypotheses.md`。
 
-条目：verbatim 11 条 / 模板 8 条。
+条目：verbatim 11 条 / 模板 9 条。
 
 | id | func | citekey | status | kind | text | anchor |
 |---|---|---|---|---|---|---|
@@ -19,6 +19,7 @@
 | `cjk-3a351067.t3` | 关键句式模板 | 未标注 | 未标注 | 模板 | "On the other hand, [X_low] may [increase/decrease] [Y] because [mechanism_B]. Indeed, research indicates that [结果] can be particularly [后果], so [X_low] who tend to focus on [价值] may be more motivated to [行为3] ([文献])." | `corpus/variants/F_competing_hypotheses.md#cjk-3a351067` |
 | `cjk-3a351067.t4` | 关键句式模板 | 未标注 | 未标注 | 模板 | "Given these competing arguments, we put forth the following hypotheses for how [X] may influence [Y]:" | `corpus/variants/F_competing_hypotheses.md#cjk-3a351067` |
 | `cjk-a5e32c5c.a` | 假设陈述格式 | 未标注 | 未标注 | verbatim | Hypothesis 1(a). There is a negative relationship between top management team liberalism and the count of recalls. Hypothesis 1(b). There is a positive relationship between top management team liberalism and the count of recalls. | `corpus/variants/F_competing_hypotheses.md#cjk-a5e32c5c` |
+| `cjk-a5e32c5c.t1` | 假设陈述格式 | 未标注 | 未标注 | 模板 | H1a: [X] is [negatively/positively] related to [Y]. H1b: [X] is [positively/negatively] related to [Y]. | `corpus/variants/F_competing_hypotheses.md#cjk-a5e32c5c` |
 | `技巧-1.a` | 技巧 1：自反性反机制（Self-Counter-Mechanism via "Conversely"） | 未标注 | 未标注 | verbatim | One could argue that more liberal TMTs would recall products faster because not doing so might harm consumers, particularly in cases involving serious product quality issues. ... Conversely, if more liberal TMTs prioritize quality during product design and manufacturing, it could foster a sense of overconfidence that the product is better (i.e., of higher quality) than it actually is (Schwartz 2019, Reis 2020), resulting in slower response time when making recall decisions. | `corpus/variants/F_competing_hypotheses.md#技巧-1` |
 | `技巧-1.t1` | 技巧 1：自反性反机制（Self-Counter-Mechanism via "Conversely"） | 未标注 | 未标注 | 模板 | [直觉预测 + 机制] One could argue that [X_high] would [behavior_A] because [reason 1: their value orientation]. [X_high] may also view [behavior_A] as [responsibility / moral duty] ([citation]). [自反性反机制] Conversely, if [X_high] [the very tendency that predicted behavior_A], it could foster [psychological state—e.g., overconfidence / risk perception / rigidity] that [result] ([citation]), resulting in [behavior_OPPOSITE]. This line of thinking is consistent with studies showing that [state] can result in [decision-making bias] ([citation]), which, in our context, may result in [behavior_OPPOSITE]. | `corpus/variants/F_competing_hypotheses.md#技巧-1` |
 | `技巧-2.a` | 技巧 2：多 DV 递进竞争（Progressive Multi-DV Competing Elaboration） | 未标注 | 未标注 | verbatim | Conversely, firms with more conservative TMTs may recall products more slowly because of their tendency to be risk-averse and uncertainty-avoidant (Jost et al. 2007). In our context, these tendencies for risk aversion and uncertainty avoidance may result in more conservative TMTs recalling more slowly to avoid the risk of a 'false alarm,' or issuing a recall when it is not necessary. | `corpus/variants/F_competing_hypotheses.md#技巧-2` |

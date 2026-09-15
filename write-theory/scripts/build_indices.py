@@ -5,6 +5,11 @@
 ----
 - variants/ 全部 7 族（A–G）：A/B/E/G 走分支①（`### 变体 N`/`### 技巧 N` 块）；
   C/D/F 走分支④（段落功能地图 + `### 技巧 N`/命名小节切块，fenced [槽位] 模板）。
+  2026-09-15 覆盖缺口修复：分支① 的块边界扩为全部 `##`/`###` 标题——`### 变体|技巧`
+  块的 vid 与解析行为原样保留，其余协议节/命名小节以 `_branch4_vid` slug 为 vid 入块，
+  并启用两个补充抽取器（裸 [槽位] 围栏 + 表内引号模板）；分支④ 补表内引号模板抽取
+  （与 sentences/_matrix_templates 同规则）。此前 E_moderation 的 `##` 级模板、
+  G 的命名小节、C/D/F 表内模板均漏抽。
 - subprotocols/ 7 个 pattern 库：`## Pattern:`/`## Framework:` 顶层块 + `### 变体/子变体/
   子型/模式/Micro-Move/框架/句式` 子块；pattern_id 注释按「就近 + DEPRECATED 过滤 +
   同 token wb 就近回绑 + legacy_ 前缀过滤 + 跳过含 band/wb-meta 的 gap 块」绑定。
@@ -113,6 +118,20 @@ def extract_quotes(text: str) -> list[str]:
         if seg and is_english(seg):
             segs.append(seg)
     return segs
+
+
+def _table_cell_templates(line: str) -> list[str]:
+    """表格行内 ``"..."`` 且含 ``[槽位]`` 的英文模板句（与 sentences/_matrix_templates 同规则）."""
+    if not line.startswith("|"):
+        return []
+    out: list[str] = []
+    for q in re.findall(r'"([^"]+)"', line):
+        q = q.strip()
+        if "[" in q and "]" in q and is_english(q):
+            key = normalize(q)
+            if key not in out:
+                out.append(key)
+    return out
 
 
 def _extract_verbatim_inline(lines: list[str], start: int, inline: str,
@@ -499,14 +518,21 @@ def parse_variants(relpath: str, registry: dict[str, str],
             i += 1
 
     block_starts: list[int] = []
-    block_meta: dict[int, tuple[str, str]] = {}
+    block_meta: dict[int, tuple[str, str, bool]] = {}
     headers = _markdown_headers(lines)
     all_headers = [j for j, _ in headers]
     for j, s in headers:
         m = VARIANT_HDR_RE.match(s)
         if m:
             block_starts.append(j)
-            block_meta[j] = (m.group(1), s)
+            block_meta[j] = (m.group(1), s, True)
+        else:
+            # 非变体/技巧节（含全部 `##` 协议节与命名 `###` 小节）也入块：
+            # 标签字段、裸 [槽位] 围栏、表内引号模板由此进入索引
+            # （2026-09-15 覆盖缺口修复：此前 E 的 ## 级模板与 G 命名小节全部漏抽）。
+            title = s.lstrip("#").strip()
+            block_starts.append(j)
+            block_meta[j] = (_branch4_vid(title), s, False)
 
     bound = _bind_variant_ids(lines, block_starts, all_headers, pcomments, wb_lines)
     block_ranges: list[tuple[int, int]] = []
@@ -514,7 +540,7 @@ def parse_variants(relpath: str, registry: dict[str, str],
     # --- 阶段二：逐块解析 ---
     for start in block_starts:
         end = next((h for h in all_headers if h > start), len(lines))
-        vid, heading = block_meta[start]
+        vid, heading, is_variant = block_meta[start]
         pc = bound.get(start)
         pid = pc["pid"] if pc else None
         src_papers = pc["meta"]["source_papers"] if pc else []
@@ -584,6 +610,20 @@ def parse_variants(relpath: str, registry: dict[str, str],
                     if parts:
                         cur.templates.append(normalize(" ".join(parts)))
                         j = k - 1
+                j += 1
+                continue
+            if not is_variant:
+                # 非变体块补充抽取：裸 [槽位] 围栏（与 branch④ 同规则）+ 表内引号模板
+                if s.startswith("```"):
+                    fence = _read_fence(lines, j)
+                    if fence["text"] and "[" in fence["text"] and "]" in fence["text"]:
+                        cur.templates.append(fence["text"])
+                    j = fence["end"] + 1
+                    continue
+                if s.startswith("|"):
+                    for tpl in _table_cell_templates(s):
+                        if tpl not in cur.templates:
+                            cur.templates.append(tpl)
                 j += 1
                 continue
             j += 1
@@ -680,6 +720,13 @@ def parse_variants_branch4(relpath: str, registry: dict[str, str],
             if fence["text"] and "[" in fence["text"] and "]" in fence["text"]:
                 cur.templates.append(fence["text"])
             i = fence["end"] + 1
+            continue
+        if s.startswith("|"):
+            # 表内引号 [槽位] 模板（2026-09-15 覆盖缺口修复：C/D/F 表内模板此前漏抽）
+            for tpl in _table_cell_templates(s):
+                if tpl not in cur.templates:
+                    cur.templates.append(tpl)
+            i += 1
             continue
         i += 1
     if cur is not None:

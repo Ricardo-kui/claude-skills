@@ -8,13 +8,13 @@
 
 | 族 | 来源文件 | 子清单 | verbatim | 模板 |
 |---|---|---|---|---|
-| A（构念辨析型） | `corpus/variants/A_construct_differentiation.md` | [`variants-A_construct_differentiation.md`](variants-A_construct_differentiation.md) | 6 | 3 |
-| B（机制推演型） | `corpus/variants/B_mechanism_elaboration.md` | [`variants-B_mechanism_elaboration.md`](variants-B_mechanism_elaboration.md) | 5 | 4 |
-| C（假设树型） | `corpus/variants/C_hypothesis_tree.md` | [`variants-C_hypothesis_tree.md`](variants-C_hypothesis_tree.md) | 20 | 9 |
+| A（构念辨析型） | `corpus/variants/A_construct_differentiation.md` | [`variants-A_construct_differentiation.md`](variants-A_construct_differentiation.md) | 17 | 14 |
+| B（机制推演型） | `corpus/variants/B_mechanism_elaboration.md` | [`variants-B_mechanism_elaboration.md`](variants-B_mechanism_elaboration.md) | 23 | 15 |
+| C（假设树型） | `corpus/variants/C_hypothesis_tree.md` | [`variants-C_hypothesis_tree.md`](variants-C_hypothesis_tree.md) | 20 | 13 |
 | D（质性/过程理论型） | `corpus/variants/D_process_theory.md` | [`variants-D_process_theory.md`](variants-D_process_theory.md) | 9 | 7 |
-| E（调节效应型） | `corpus/variants/E_moderation.md` | [`variants-E_moderation.md`](variants-E_moderation.md) | 8 | 8 |
-| F（竞争假设型） | `corpus/variants/F_competing_hypotheses.md` | [`variants-F_competing_hypotheses.md`](variants-F_competing_hypotheses.md) | 11 | 8 |
-| G（辩证对立型） | `corpus/variants/G_dialectical_opposition.md` | [`variants-G_dialectical_opposition.md`](variants-G_dialectical_opposition.md) | 3 | 2 |
+| E（调节效应型） | `corpus/variants/E_moderation.md` | [`variants-E_moderation.md`](variants-E_moderation.md) | 43 | 39 |
+| F（竞争假设型） | `corpus/variants/F_competing_hypotheses.md` | [`variants-F_competing_hypotheses.md`](variants-F_competing_hypotheses.md) | 11 | 9 |
+| G（辩证对立型） | `corpus/variants/G_dialectical_opposition.md` | [`variants-G_dialectical_opposition.md`](variants-G_dialectical_opposition.md) | 41 | 27 |
 
 ## 来源子清单：subprotocols pattern 库
 
@@ -41,8 +41,8 @@
 | mechanism_chain | [`sentences-mechanism_chain.md`](sentences-mechanism_chain.md) | 96 | 53 |
 | moderation | [`sentences-moderation.md`](sentences-moderation.md) | 35 | 22 |
 
-合计：22 个子清单 / verbatim 397 条 / 模板 399 条。
+合计：22 个子清单 / verbatim 499 条 / 模板 482 条。
 
 ## 待补录
 
-- [`_unparsed.md`](_unparsed.md)：62 条（每条附「为什么进不了主清单」）。
+- [`_unparsed.md`](_unparsed.md)：0 条（每条附「为什么进不了主清单」）。

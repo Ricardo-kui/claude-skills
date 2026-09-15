@@ -6,7 +6,7 @@
 > **citekey** 取 source_papers 首个 → wb 注释 → 来源字段，无则「未标注」；**status** 查 `_evidence_registry.yaml`（ROBUST>VERIFIED>EMERGING），未命中「未标注」。
 > **来源文件**：`corpus/variants/C_hypothesis_tree.md`。
 
-条目：verbatim 20 条 / 模板 9 条。
+条目：verbatim 20 条 / 模板 13 条。
 
 | id | func | citekey | status | kind | text | anchor |
 |---|---|---|---|---|---|---|
@@ -36,6 +36,10 @@
 | `cjk-3a351067.t3` | 关键句式模板 | 未标注 | 未标注 | 模板 | "Having established that [baseline effect], we now consider when this effect is more versus less pronounced. Not all [actors/contexts] will experience [the effect] equally, because [moderator logic]." | `corpus/variants/C_hypothesis_tree.md#cjk-3a351067` |
 | `cjk-a5e32c5c.a` | 假设陈述格式 | 未标注 | 未标注 | verbatim | Hypothesis 1. The positive relationship between high reputation and misconduct scandalization strengthens as objective misconduct severity increases. | `corpus/variants/C_hypothesis_tree.md#cjk-a5e32c5c` |
 | `cjk-a5e32c5c.b` | 假设陈述格式 | 未标注 | 未标注 | verbatim | Hypothesis 4. The positive relationship between celebrity and misconduct scandalization strengthens as perceived misconduct severity increases. | `corpus/variants/C_hypothesis_tree.md#cjk-a5e32c5c` |
+| `cjk-a5e32c5c.t1` | 假设陈述格式 | 未标注 | 未标注 | 模板 | H1. [IV] is [positively/negatively] related to [DV]. | `corpus/variants/C_hypothesis_tree.md#cjk-a5e32c5c` |
+| `cjk-a5e32c5c.t2` | 假设陈述格式 | 未标注 | 未标注 | 模板 | H2. The relationship between [IV] and [DV] is moderated by [Z], such that the [positive/negative] effect of [IV] on [DV] is [stronger/weaker] when [Z] is [high/present]. | `corpus/variants/C_hypothesis_tree.md#cjk-a5e32c5c` |
+| `cjk-a5e32c5c.t3` | 假设陈述格式 | 未标注 | 未标注 | 模板 | H3. The moderating effect of [Z] on the [IV]→[DV] relationship is further moderated by [W], such that [Z]'s [enhancing/buffering] effect becomes [stronger/weaker] when [W] is [high]. | `corpus/variants/C_hypothesis_tree.md#cjk-a5e32c5c` |
+| `cjk-a5e32c5c.t4` | 假设陈述格式 | 未标注 | 未标注 | 模板 | H2a: When [condition A], [effect A]. H2b: When [condition B], [effect B]. | `corpus/variants/C_hypothesis_tree.md#cjk-a5e32c5c` |
 | `vidal-mitchell-2ade7d.a` | Vidal & Mitchell 型：双极变化 × 行动方式的条件化假设树 | 未标注 | 未标注 | verbatim | A negative performance gap occurs when a firm's performance is lower than that of relevant aspiration levels; in parallel, a positive performance gap occurs when a firm's performance exceeds an aspiration level. | `corpus/variants/C_hypothesis_tree.md#vidal-mitchell-2ade7d` |
 | `vidal-mitchell-2ade7d.b` | Vidal & Mitchell 型：双极变化 × 行动方式的条件化假设树 | 未标注 | 未标注 | verbatim | We expect firms with increasing performance to be more likely to pursue partial divestitures, given the differences in pressures that they face, whereas firms with declining performance will tend toward full divestitures. | `corpus/variants/C_hypothesis_tree.md#vidal-mitchell-2ade7d` |
 | `vidal-mitchell-2ade7d.t1` | Vidal & Mitchell 型：双极变化 × 行动方式的条件化假设树 | 未标注 | 未标注 | 模板 | Relative to [reference point], a [negative change] and a [positive change] can each make [action] more likely, but for different reasons. When [negative change] occurs, [mechanism A] creates pressure to [action], especially in the form of [mode A]. When [positive change] occurs, [mechanism B] makes proactive [action] attractive, especially in the form of [mode B]. The association should be strongest when [state level] reinforces the diagnostic meaning of the corresponding change. Accordingly: H1a: [negative change] is [direction] associated with [overall action / mode A]. H1b: [positive change] is [direction] associated with [overall action / mode B]. H2a/H2b: These associations are [stronger/weaker] when [state level] is [condition], because [boundary mechanism]. | `corpus/variants/C_hypothesis_tree.md#vidal-mitchell-2ade7d` |
