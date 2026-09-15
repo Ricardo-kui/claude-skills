@@ -3,7 +3,7 @@
 """
 skill_pointer_check.py — 全库 skill 相对路径存在性校验（标准库实现）。
 
-三条解析基准（覆盖历史上出现的三类写法，各自可解释）：
+四条解析基准（覆盖历史上出现的四类写法，各自可解释）：
 
   基准 A（文件自身目录 / file directory）
       - 裸文件名（目标不含 `/`，如 `hooks.md`）
@@ -25,12 +25,24 @@ skill_pointer_check.py — 全库 skill 相对路径存在性校验（标准库�
         目录，如 `story-blueprints`）
       解析：相对 **该文件所属 skill 目录**（不是文件所在目录）。
 
+  基准 D（仓库根 / repository root）
+      - 以 ROOT 直属目录名开头、且当前 skill 下没有同名子目录的写法
+        （如 `story-blueprints/...`、`write-theory/...` 这类「仓库根相对」写法）
+      解析：相对 **仓库根 ROOT**。
+      「影子守卫」：若当前 skill 下也存在同名子目录（`<skill_root>/<seg>/`），
+      则即使 ROOT 下同名目录存在，仍判基准 C（相对本 skill 目录），避免把
+      skill 内部同名子目录误解析到仓库根。
+
+书写约定裁定（2026-09-15）：新增 / 重写的跨 skill 指针一律显式写成
+`../<sibling>/...`（走基准 C，无歧义）；不得在新增 / 重写中引入裸
+`sibling/...`。既有裸写法存量由基准 D 兜底，不做全库批量规范化。
+
 排除项：围栏代码块（``` / ~~~ 之间）内的行、http/https/mailto 等协议、纯锚点、
 含空格的短语、含通配/占位符的模板串。
 
 输出：按 skill 分组，每行
     file:line | 目标 | 命中基准 A/B/C | 解析后路径 | OK/MISSING
-末尾汇总 `checked / resolvedA / resolvedB / resolvedC / missing`；MISSING 再分两桶：
+末尾汇总 `checked / resolvedA / resolvedB / resolvedC / resolvedD / missing`；MISSING 再分两桶：
     unresolved_no_baseline  三条基准都不成立（基准选择问题）
     unresolved_missing_file 命中了基准但目标文件确实不存在（真断链）
 存在 MISSING 时 exit code 1。
@@ -67,6 +79,8 @@ CORPUS_MODULES = {
 }
 # skill 目录基准的显式前缀（基准 C）
 SKILL_PREFIXES = {"corpus", "references", "scripts"}
+# 仓库根直属、无 SKILL.md 的共享资源目录：纳入默认扫描，目标按基准 D 解析
+SHARED_ROOTS = ("story-blueprints",)
 
 # 行尾可剥除的标点（ASCII + 全角）
 TRAILING_PUNCT = (
@@ -160,6 +174,9 @@ def is_sibling_skill(seg: str) -> bool:
 
     判定放宽为「ROOT 下同名目录」：`../hooks/` 等自 skill 语料模块不在 ROOT 下，
     仍落到基准 A；只有 `../<sibling>/`（含无 SKILL.md 的共享目录）才落到基准 C。
+
+    该谓词同时是基准 D 的判据：ROOT 下存在同名目录（且当前 skill 下无同名子目录）
+    时，裸 `sibling/...` 写法按基准 D 相对仓库根解析（影子守卫见 classify()）。
     """
     if seg in (".", "..") or not seg:
         return False
@@ -172,6 +189,7 @@ def skill_root_of(md: Path) -> Path:
     找不到时回退到「ROOT 直属子目录」作为 skill 目录（覆盖 story-blueprints
     这类无 SKILL.md 的共享资源目录），再回退到 ROOT。
     """
+    md = Path(md).resolve()
     cur = md.parent
     top = None
     while cur != cur.parent:
@@ -185,10 +203,11 @@ def skill_root_of(md: Path) -> Path:
     return top or ROOT
 
 
-def classify(target: str, strict: bool = False) -> str | None:
-    """按写法判定命中的基准：'A' / 'B' / 'C' / None（三基准都不成立）。
+def classify(target: str, strict: bool = False, skill_root: Path | None = None) -> str | None:
+    """按写法判定命中的基准：'A' / 'B' / 'C' / 'D' / None（各基准都不成立）。
 
     strict=True 时把「其余」写法按 C（skill 目录）解析，不再产生 None。
+    skill_root 用于影子守卫：当前 skill 下有同名子目录时，裸 `seg/...` 不判 D。
     """
     if target.startswith("../"):
         seg = target[3:].split("/", 1)[0]
@@ -204,6 +223,8 @@ def classify(target: str, strict: bool = False) -> str | None:
         return "B"
     if seg in SKILL_PREFIXES:
         return "C"
+    if (ROOT / seg).is_dir() and (skill_root is None or not (skill_root / seg).is_dir()):
+        return "D"
     return "C" if strict else None
 
 
@@ -212,6 +233,8 @@ def resolve(rule: str, target: str, md: Path, skill_root: Path) -> Path:
         return (md.parent / target).resolve()
     if rule == "B":
         return (skill_root / "corpus" / target).resolve()
+    if rule == "D":
+        return (ROOT / target).resolve()
     return (skill_root / target).resolve()
 
 
@@ -270,7 +293,9 @@ def extract(text: str):
 
 
 def find_skills() -> list[Path]:
-    return [d for d in sorted(ROOT.iterdir()) if d.is_dir() and (d / "SKILL.md").is_file()]
+    return [d for d in sorted(ROOT.iterdir()) if d.is_dir() and (d / "SKILL.md").is_file()] + [
+        ROOT / n for n in SHARED_ROOTS if (ROOT / n).is_dir() and not (ROOT / n / "SKILL.md").is_file()
+    ]
 
 
 def main(argv=None) -> int:
@@ -299,7 +324,7 @@ def main(argv=None) -> int:
         targets = find_skills()
 
     checked = missing = whitelisted = 0
-    rules_ok = {"A": 0, "B": 0, "C": 0}
+    rules_ok = {"A": 0, "B": 0, "C": 0, "D": 0}
     no_baseline = 0
     file_absent = 0
     for skill in targets:
@@ -311,7 +336,7 @@ def main(argv=None) -> int:
                 text = md.read_text(encoding="utf-8", errors="replace")
             skill_root = skill_root_of(md)
             for line_no, target in extract(text):
-                rule = classify(target, args.strict)
+                rule = classify(target, args.strict, skill_root)
                 checked += 1
                 if rule is None:
                     status, path, bucket = "MISSING", None, "no_baseline"
@@ -350,7 +375,7 @@ def main(argv=None) -> int:
     print("-" * 72)
     print(
         f"checked={checked} resolvedA={rules_ok['A']} resolvedB={rules_ok['B']} "
-        f"resolvedC={rules_ok['C']} missing={missing} whitelisted={whitelisted}"
+        f"resolvedC={rules_ok['C']} resolvedD={rules_ok['D']} missing={missing} whitelisted={whitelisted}"
     )
     print(f"  unresolved_no_baseline={no_baseline} unresolved_missing_file={file_absent}")
     return 1 if missing else 0
