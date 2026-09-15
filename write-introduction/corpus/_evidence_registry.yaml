@@ -2025,7 +2025,7 @@ phrasebank:
       source_chapter: Ch.07 Being Cautious
       status: EMERGING
       risk_level: needs-context
-      note: 强度阶梯库；与 prose-craft-checklist §5.6/§5.7 闭环（选短语→校验强度）
+      note: 强度阶梯库；与 prose-craft-checklist §6.1/§6.2 闭环（选短语→校验强度；原 §5.6/§5.7，2026-09-14 D-A1 迁号）
     critique-phrases:
       source_chapter: Ch.08 Being Critical
       status: EMERGING
