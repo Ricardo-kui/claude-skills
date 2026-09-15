@@ -6,10 +6,10 @@
 - variants/ 全部 7 族（A–G）：A/B/E/G 走分支①（`### 变体 N`/`### 技巧 N` 块）；
   C/D/F 走分支④（段落功能地图 + `### 技巧 N`/命名小节切块，fenced [槽位] 模板）。
   2026-09-15 覆盖缺口修复：分支① 的块边界扩为全部 `##`/`###` 标题——`### 变体|技巧`
-  块的 vid 与解析行为原样保留，其余协议节/命名小节以 `_branch4_vid` slug 为 vid 入块，
-  并启用两个补充抽取器（裸 [槽位] 围栏 + 表内引号模板）；分支④ 补表内引号模板抽取
-  （与 sentences/_matrix_templates 同规则）。此前 E_moderation 的 `##` 级模板、
-  G 的命名小节、C/D/F 表内模板均漏抽。
+  块的 vid 与解析行为原样保留，其余协议节/命名小节走**分支⑤（命名节解析）**：
+  以 `_branch4_vid` slug 为 vid 入块，经共享抽取器 `_named_section_extras` 吸收
+  裸 [槽位] 围栏与表内引号模板（branch④ 同函数共享）。此前 E_moderation 的
+  `##` 级模板、G 的命名小节、C/D/F 表内模板均漏抽。
 - subprotocols/ 7 个 pattern 库：`## Pattern:`/`## Framework:` 顶层块 + `### 变体/子变体/
   子型/模式/Micro-Move/框架/句式` 子块；pattern_id 注释按「就近 + DEPRECATED 过滤 +
   同 token wb 就近回绑 + legacy_ 前缀过滤 + 跳过含 band/wb-meta 的 gap 块」绑定。
@@ -132,6 +132,25 @@ def _table_cell_templates(line: str) -> list[str]:
             if key not in out:
                 out.append(key)
     return out
+
+
+def _named_section_extras(lines: list[str], j: int, cur: "Block") -> int | None:
+    """branch⑤ 抽取器（branch① 命名节与 branch④ 共享）：裸 [槽位] 围栏 + 表内引号模板。
+
+    命中围栏返回新游标（j 跳过围栏）；表格行就地吸收模板并返回 None（调用方 +1）；
+    其余行返回 None。
+    """
+    s = lines[j].strip()
+    if s.startswith("```"):
+        fence = _read_fence(lines, j)
+        if fence["text"] and "[" in fence["text"] and "]" in fence["text"]:
+            cur.templates.append(fence["text"])
+        return fence["end"] + 1
+    if s.startswith("|"):
+        for tpl in _table_cell_templates(s):
+            if tpl not in cur.templates:
+                cur.templates.append(tpl)
+    return None
 
 
 def _extract_verbatim_inline(lines: list[str], start: int, inline: str,
@@ -613,18 +632,9 @@ def parse_variants(relpath: str, registry: dict[str, str],
                 j += 1
                 continue
             if not is_variant:
-                # 非变体块补充抽取：裸 [槽位] 围栏（与 branch④ 同规则）+ 表内引号模板
-                if s.startswith("```"):
-                    fence = _read_fence(lines, j)
-                    if fence["text"] and "[" in fence["text"] and "]" in fence["text"]:
-                        cur.templates.append(fence["text"])
-                    j = fence["end"] + 1
-                    continue
-                if s.startswith("|"):
-                    for tpl in _table_cell_templates(s):
-                        if tpl not in cur.templates:
-                            cur.templates.append(tpl)
-                j += 1
+                # branch⑤ 命名节抽取器（与 branch④ 共享）
+                nj = _named_section_extras(lines, j, cur)
+                j = nj if nj is not None else j + 1
                 continue
             j += 1
         e, u = finalize_block(cur, "variants", relpath, registry)
@@ -715,18 +725,13 @@ def parse_variants_branch4(relpath: str, registry: dict[str, str],
                 continue
             i += 1
             continue
-        if s.startswith("```"):
-            fence = _read_fence(lines, i)
-            if fence["text"] and "[" in fence["text"] and "]" in fence["text"]:
-                cur.templates.append(fence["text"])
-            i = fence["end"] + 1
-            continue
-        if s.startswith("|"):
-            # 表内引号 [槽位] 模板（2026-09-15 覆盖缺口修复：C/D/F 表内模板此前漏抽）
-            for tpl in _table_cell_templates(s):
-                if tpl not in cur.templates:
-                    cur.templates.append(tpl)
-            i += 1
+        if s.startswith("```") or s.startswith("|"):
+            # branch⑤ 共享抽取器：裸 [槽位] 围栏 + 表内引号模板（2026-09-15 覆盖缺口修复）
+            nj = _named_section_extras(lines, i, cur)
+            if nj is not None:
+                i = nj
+            else:
+                i += 1
             continue
         i += 1
     if cur is not None:
