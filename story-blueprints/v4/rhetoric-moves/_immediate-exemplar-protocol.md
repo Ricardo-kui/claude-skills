@@ -2,7 +2,7 @@
 
 > 单一事实源：write-introduction Phase 1.5 / write-theory / write-methods / write-results 的「即时范文学习对象」共用本协议；各 SKILL.md 只保留差异项（section 名 / learning block / retrieval_signals 例）。
 > 本次调用私有：不写项目文件、不改 canonical `story`、不更新 paper-state。
-> 例外（2026-09-14）：检索调用由 `retrieve_exemplars.py` 自动落账 fitness 台账（命中卡与分数、空结果），透明无感，无需任何登记动作；报告见 `distill-paper-exemplar/scripts/fitness_report.py`。
+> 例外（2026-09-14）：检索调用由 `../../scripts/retrieve_exemplars.py` 自动落账 fitness 台账（命中卡与分数、空结果），透明无感，无需任何登记动作；报告见 `distill-paper-exemplar/scripts/fitness_report.py`。
 
 ## 触发与跳过
 

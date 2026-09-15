@@ -6,7 +6,7 @@
 
 ## 验收范围
 
-本验收测试 `write-introduction` 的 Phase 1.5：研究描述经人工 story gate 形成当前调用的临时检索请求，再由 `retrieve_exemplars.py` 执行严格匹配。它**不**测试、也不声称存在一个自动从自然语言抽取 `validated_conditions` 的分类器；条件确认仍属于写作技能的理论诊断责任。
+本验收测试 `write-introduction` 的 Phase 1.5：研究描述经人工 story gate 形成当前调用的临时检索请求，再由 `../scripts/retrieve_exemplars.py` 执行严格匹配。它**不**测试、也不声称存在一个自动从自然语言抽取 `validated_conditions` 的分类器；条件确认仍属于写作技能的理论诊断责任。
 
 每个通过的案例都必须满足两项：
 
@@ -116,15 +116,15 @@
 
 ## 补充实测
 
-- `cross-audience-valuation-introduction-request.json`：与 fini 打同一归一标签，实测 `fini2017-social-valuation` — `tier=1`，`score=70`，`unmet_conditions=[]`；`chen2009` 紧随（`score=55`，`unmet=[dual-literature-intersection]`）。
-- `distinct-outcomes-introduction-request.json`：实测 `wowak2025` — `tier=2b`，`relaxed=[retrieval_signals, suitable<=partial]`，`suitable=partial`，`validation=known`，`unmet_conditions=[]`，`score=50`，`signals_hit.theoretical_problem_form=[cross-literature-gap]`；`gate_eliminations` 显示 tier 1 / 2a 候选为 0、2b 候选为 1。
-- 退化 tier 护栏实测：`vertical-screening-request.json` 的 tier 2a 唯一候选同时 `theoretical_problem_form` 命中为空且 `unmet_conditions≥1`，`tier_attempts` 标 `degenerate=true, skipped=true`，检索继续下探，tier 2b 以 `pupovac2025`（tpf 命中）入选；未出现 `low_confidence`。
+- `../tests/fixtures/cross-audience-valuation-introduction-request.json`：与 fini 打同一归一标签，实测 `fini2017-social-valuation` — `tier=1`，`score=70`，`unmet_conditions=[]`；`chen2009` 紧随（`score=55`，`unmet=[dual-literature-intersection]`）。
+- `../tests/fixtures/distinct-outcomes-introduction-request.json`：实测 `wowak2025` — `tier=2b`，`relaxed=[retrieval_signals, suitable<=partial]`，`suitable=partial`，`validation=known`，`unmet_conditions=[]`，`score=50`，`signals_hit.theoretical_problem_form=[cross-literature-gap]`；`gate_eliminations` 显示 tier 1 / 2a 候选为 0、2b 候选为 1。
+- 退化 tier 护栏实测：`../tests/fixtures/vertical-screening-request.json` 的 tier 2a 唯一候选同时 `theoretical_problem_form` 命中为空且 `unmet_conditions≥1`，`tier_attempts` 标 `degenerate=true, skipped=true`，检索继续下探，tier 2b 以 `pupovac2025`（tpf 命中）入选；未出现 `low_confidence`。
 - 回归脚本：`python tests/regression_retrieval.py` → `ALL REGRESSION ASSERTIONS PASSED`（R1 fini 主推 fini2017；R2 abstain 非空且 `validation=unknown`；R3 distinct-outcomes 走 2b；R4 全量 fixture 0 空结果）。
 - 全量 fixture 回归：本机 `tests/fixtures/*-request.json` 共 **43** 个，实跑 **0 空结果**。（任务书所记「45 个」与本机实测不符；以本机 43 为准。）
 
 ## 已知限制（如实登记，不作为已通过项）
 
-1. **标签词表仍稀疏（`cross-audience-*` 首组已归一，其余未覆盖）**。`tag-normalization.yaml` 首批只归一了跨受众评价家族；其他请求侧标签若与卡侧词面不匹配仍会落空。触发条件：请求标签在卡侧无同形词且不在归一表内（例如未来出现新的结构别名）。预期收益：每补齐一组已确认别名，就减少一次「仅靠 `story_needs` 命中语义泛化卡」的降级。当前状态：Case B / cross-audience fixture 已由首组归一修复，`low_confidence=False`。
+1. **标签词表仍稀疏（`cross-audience-*` 首组已归一，其余未覆盖）**。`../references/tag-normalization.yaml` 首批只归一了跨受众评价家族；其他请求侧标签若与卡侧词面不匹配仍会落空。触发条件：请求标签在卡侧无同形词且不在归一表内（例如未来出现新的结构别名）。预期收益：每补齐一组已确认别名，就减少一次「仅靠 `story_needs` 命中语义泛化卡」的降级。当前状态：Case B / cross-audience fixture 已由首组归一修复，`low_confidence=False`。
 2. **`tier2a` 仅在 request 带 `retrieval_signals` 时才有别于 tier1**。tier 1 在无 signals 时已回退到 `narrative_dynamics` / `theoretical_problem_form` 命中；此时 tier 2a（=去掉 signals 要求、保留 tag 命中）与 tier 1 的准入集合相同。对无 signals 的请求，该档空转，真正放宽只从 2b 起。触发条件：request 缺 `retrieval_signals`。预期收益：修复后 `--explain` 的 `tier_attempts` 不再于 1 与 2a 重复计数同一批候选，2a 的候选数才可当作放宽证据。
 
 ## Backlog（登记；已实现项与未完成项分开）

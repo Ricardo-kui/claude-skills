@@ -7,7 +7,7 @@ created: 2026-09-14
 
 # Worked Example: Portfolio Governance / External-Actor Objective
 
-> **定位**：本文件是**管线的使用示范**（worked example），不是规则来源。它不参与故事类型选择、不进 `catalog.json`、不被 `retrieve_exemplars.py` 返回（与 `write-introduction/references/library-contract.md` 边界 2 一致）。
+> **定位**：本文件是**管线的使用示范**（worked example），不是规则来源。它不参与故事类型选择、不进 `../catalog.json`、不被 `../../scripts/retrieve_exemplars.py` 返回（与 `write-introduction/references/library-contract.md` 边界 2 一致）。
 > **单源纪律**：只保留本项目适配后的成品段落 + 每段底本 id 引用 + 槽位说明 + 为什么这样换。原始底本全文在 `write-introduction/corpus/_skeleton/`，失败写法在 `write-introduction/corpus/contrast-pairs/`，本文件均不复写。
 > **适用**：论文核心故事是「一个跨越多个单位的结构性条件，通过改变行动者的目标或外部性权重，塑造一个双边际治理结果；边界条件由该结构本身的机制推出」。形状与可用底本清单见 `write-introduction/corpus/packs/portfolio-governance.md`。
 

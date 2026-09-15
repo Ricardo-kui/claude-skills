@@ -38,3 +38,13 @@ v4-schema.md | 越界可修：目标存在于他处，但来源文件位于 writ
 water-level-gate.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
 write-theory/.../hypothesis_derivation_patterns.md | 模板占位：指向用户项目路径/省略号模板串，非本仓库文件
 定性过程研究.md | 越界可修：目标存在于他处，但来源文件位于 write-introduction/write-methods/write-section/或 SKILL.md（本批 pathScope 之外，只登记不改）
+
+# --- story-blueprints 残差白名单（2026-09-15，基准 D 落地后重算）---
+# 以下目标真身在仓库外（Vault / 工作区根相对），本仓库不可能存在；
+# key 均非裸文件名，避免全局扁平命名空间误豁免。
+mvp30/desjardine2023_rising_tide_narrative.md | Vault 资产：真身 D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/mvp30/desjardine2023_rising_tide_narrative.md；vault 与本仓库（skills/）物理分离，本仓库不可能有
+narrative_analysis/theory/mvp30/fine_grained/batch_2026-07-09/common_ownership_csr_distilled_theory.md | Vault 资产：真身 D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/theory/mvp30/fine_grained/batch_2026-07-09/common_ownership_csr_distilled_theory.md；vault 与本仓库物理分离，本仓库不可能有
+_story_arcs/keeves2017_ingratiation_resentment_asq_story_arc.md | Vault 资产：真身 D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/_story_arcs/keeves2017_ingratiation_resentment_asq_story_arc.md；vault 与本仓库物理分离，本仓库不可能有
+narrative_analysis/ | Vault 资产：真身 D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/；vault 报告根目录，本仓库不可能有
+_story_arcs/ | Vault 资产：真身 D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/_story_arcs/；vault 早期故事弧资产目录，本仓库不可能有
+skills/story-blueprints/scripts/ | workspace 根相对路径：以工作区根（本仓库根的上一级）为基准解析，本仓库根即 skills/ 故相对本仓库不存在；示例串出处 story-blueprints/v4/rhetoric-moves/scripts/README.md:26 的路径基准说明

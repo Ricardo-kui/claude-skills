@@ -109,5 +109,5 @@ storytelling_tools:
 
 - **与 DesJardine 2023（同第一作者、同 common ownership 语境，最强对照对）**：同一现象域、两篇论文、两种故事——2022 = overlooked-alternative（主流看漏组合视角，翻硬币）；2023 = irony-reversal（共同所有者用媒体作战略工具，监督驱动地下化，换镜头）。"同作者同现象不同故事"。
 - **与 Lashley & Pollock 2020（overlooked-alternative 双原型）**：desjardine2022 = deductive 宣战（'Most research underscores'）；lashley2020 = inductive 长出（remove 从数据里长出来）——同型两种系紧方式。
-- **⚠️ vault 勘误**：`desjardine2023_rising_tide_*` 命名的 M/R 报告与 `mvp30/desjardine2023_rising_tide_narrative.md` 实为本文（source_text 标题 = "A Rising Tide Lifts All Boats"）；theory 报告 `common_ownership_csr_distilled_theory.md` frontmatter 明示 2022。vault 报告命名体系里 2022/2023 混标，引用时以 source_text/frontmatter 为准。
+- **⚠️ vault 勘误**：`desjardine2023_rising_tide_*` 命名的 M/R 报告与 `mvp30/desjardine2023_rising_tide_narrative.md` 实为本文（source_text 标题 = "A Rising Tide Lifts All Boats"）；theory 报告 `narrative_analysis/theory/mvp30/fine_grained/batch_2026-07-09/common_ownership_csr_distilled_theory.md` frontmatter 明示 2022。vault 报告命名体系里 2022/2023 混标，引用时以 source_text/frontmatter 为准。
 - 勿与 desjardine2023（The New Invisible Hand，ASQ）混淆——注册表历史：早前会话曾误把 2023 挂入 11-overlooked-alternative，2026-07-30 已修正（2023 的变体Z/AA 在 01-despite-progress-unaddressed）。

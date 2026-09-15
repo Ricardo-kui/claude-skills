@@ -112,5 +112,5 @@ storytelling_tools:
 
 - **reputation 家族最强对照对（同构念对不同拆法）**：pfarrer2010（形成机制端+正负边界——tangled-constructs 第三原型，reputation↔celebrity 原始拆解）↔ han2024（后果端 2×2 对角交叉，scandalization DV）↔ pollock2015（status↔reputation 动态共演）↔ paruchuri2020（负事件→正溢出效价翻转）——同一 reputation 概念空间四种故事：解开、区分、共演、翻转。
 - **无 Hook 冷启动家族双原型达成**：gamache2020 ↔ pfarrer2010——冷启动=假设读者是领域专家，直接进入文献共识（无轶事/数据/引语开场）。
-- **tangled-constructs 类型表更新**：`_schema.md` 原型状态同步为三原型（pollock2015/han2024/pfarrer2010）。
+- **tangled-constructs 类型表更新**：`../_schema.md` 原型状态同步为三原型（pollock2015/han2024/pfarrer2010）。
 - **与 section 级互证**：05-construct-confusion 变体A/B（双层构念混淆/构念纠缠）与 story 级 tangled-constructs 互相印证；PFarrer 2010 即变体A 来源。

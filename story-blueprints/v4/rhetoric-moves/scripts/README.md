@@ -10,10 +10,10 @@ rhetoric-moves 相关脚本位于上一级 `story-blueprints/scripts/`：
 
 | 脚本 | 路径 | 作用 |
 |---|---|---|
-| `retrieve_exemplars.py` | `story-blueprints/scripts/retrieve_exemplars.py` | 从 v0.4-lite 卡 catalog 检索即时范文学习对象（1 主 + 1 对照） |
-| `build_catalog_v4.py` | `story-blueprints/scripts/build_catalog_v4.py` | 生成 v4 catalog |
-| `validate_blueprints_v4.py` | `story-blueprints/scripts/validate_blueprints_v4.py` | 校验 v4 blueprint 卡 |
-| `validate_blueprints.py` | `story-blueprints/scripts/validate_blueprints.py` | 校验 blueprint 卡 |
+| `../../../scripts/retrieve_exemplars.py` | `story-blueprints/scripts/retrieve_exemplars.py` | 从 v0.4-lite 卡 catalog 检索即时范文学习对象（1 主 + 1 对照） |
+| `../../../scripts/build_catalog_v4.py` | `story-blueprints/scripts/build_catalog_v4.py` | 生成 v4 catalog |
+| `../../../scripts/validate_blueprints_v4.py` | `story-blueprints/scripts/validate_blueprints_v4.py` | 校验 v4 blueprint 卡 |
+| `../../../scripts/validate_blueprints.py` | `story-blueprints/scripts/validate_blueprints.py` | 校验 blueprint 卡 |
 
 ## 调用路径
 

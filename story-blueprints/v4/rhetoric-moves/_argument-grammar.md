@@ -1,7 +1,7 @@
 # _argument-grammar.md — 段落论证文法（argument unit，write-* 共用）
 
 > 单一事实源：write-introduction / write-theory 全量适用（intro Gate 5、theory 审计 1）；write-methods（辩护型段落）/ write-results（解读型段落）经各自接线节 scoped 适用（`write-methods/references/post-generation-checklist.md` §论证质量诊断、`write-results/references/evidence-standards.md` §段落论证文法接线——程序性报告段体裁豁免）。分工：`_polish-protocol.md` 管**句子润色**（语料选用之后），本文法管**段落组装**（语料选用之前）——先有论证骨架，语料句式才上岗。
-> 理论侧的段落级实现是 write-theory `corpus/subprotocols/paragraph_layout.md`（Topic→Reasoning→Tokens→Wrap 四段位 + 三类论据决策矩阵）；本文法把同一论证逻辑推广到全部 write-* 论证型段落，并把语料句式绑定到论证角色上。
+> 理论侧的段落级实现是 `../write-theory/corpus/subprotocols/paragraph_layout.md`（Topic→Reasoning→Tokens→Wrap 四段位 + 三类论据决策矩阵）；本文法把同一论证逻辑推广到全部 write-* 论证型段落，并把语料句式绑定到论证角色上。
 
 ## 病根与解法
 
@@ -16,7 +16,7 @@
 | 1 | **Claim** | What do you want me to believe? | 段首 topic sentence **或段末收束句**可指认（推导链中段允许段首为局部前提、claim 落收束句；埋没段中且无收束才不合格）——v1.1。收束句=段末 1–2 句内的实质立场句，话语标记（Thus/Therefore）非必需；纯机制/背景句不得追认为收束——v1.2 |
 | 2 | **Reason** | Why do you say that? | 推理 moves（1–3 个；一个 move = 一次可质疑的推理转换，非一句引用）。判定允许调用紧邻段前提（与跨段论证条对齐），但 claim 的直接机制必须在同段或紧邻段可指认——v1.2 |
 | 3 | **Evidence** | How do you know? | 每个**经验性承重 reason** 配发现锚点（方向/边界/量级 + 引文）；分析性/概念性桥接属 warrant 性质连接，不要求引文锚点——v1.1。边界判据——v1.2：含活动域枚举、幅度/频次断言（more of…、the greater…the more…）等指向可观测分布者=经验性承重，需锚点或显式证据缺口标注；纯概念连接（机制 A→机制 B 的逻辑延伸，无可观测分布指向）=分析性桥接，免锚 |
-| 4 | **Warrant** | How does that follow? | 连接 reason 与 claim 的一般性原则；仅三场合明言（跨域读者/原则有争议/claim 会被抗拒——见 write-theory `reasoning_soundness_protocol.md` §5） |
+| 4 | **Warrant** | How does that follow? | 连接 reason 与 claim 的一般性原则；仅三场合明言（跨域读者/原则有争议/claim 会被抗拒——见 `../write-theory/corpus/subprotocols/reasoning_soundness_protocol.md` §5） |
 | 5 | **Acknowledgment & Response** | But what about…? | 预判的最强异议；按频次预算（0–2/篇），0 处合法。界分——v1.2：仅限定机制适用范围/起作用通道、不承认对立立场的句子是边界澄清（归 Warrant/定义前提）；先承认对立预期（one might expect / seem obvious）再转折回应的才是 A&R。操作测试：删句后留下未回应异议=A&R；仅机制说明不完整=warrant/边界 |
 
 两个推论：
@@ -33,14 +33,14 @@
 
 | 论证角色 | write-theory 语料 | write-introduction 语料 |
 |---|---|---|
-| **Claim** | `sentences/hypothesis_forms`、变体文件的 topic sentence | `contributions/`、`hooks/` 核心判断句、`micro-templates/thesis-models` |
-| **Reason**（推理 move） | `sentences/mechanism_chain`、`subprotocols/paragraph_layout` §1 骨架 | `tensions/` 机制句、`theory-lens/` 解释句 |
-| **Evidence**（发现锚点） | `subprotocols/evidence_patterns`、paragraph_layout §2 论据矩阵 | `literature-turns/literature-turn-templates` 变体 D、`stakes/` 量化变体 |
-| **Warrant** | `subprotocols/reasoning_soundness_protocol` §1 [S] 类、paragraph_layout "Theory as Warrant" 行 | `theory-lens/` 的理论核心原则句 |
-| **Gap 主张**（Claim 子型——v1.2：对会话缺口的实质主张 pivot 句，默认承担段 claim 或作其直接前件） | 变体文件缺口段（无独立句库） | `tensions/`、`literature-turns/` |
+| **Claim** | `sentences/hypothesis_forms`、变体文件的 topic sentence | `../write-introduction/corpus/contributions/`、`../write-introduction/corpus/hooks/` 核心判断句、`micro-templates/thesis-models` |
+| **Reason**（推理 move） | `sentences/mechanism_chain`、`subprotocols/paragraph_layout` §1 骨架 | `../write-introduction/corpus/tensions/` 机制句、`../write-introduction/corpus/theory-lens/` 解释句 |
+| **Evidence**（发现锚点） | `subprotocols/evidence_patterns`、paragraph_layout §2 论据矩阵 | `literature-turns/literature-turn-templates` 变体 D、`../write-introduction/corpus/stakes/` 量化变体 |
+| **Warrant** | `subprotocols/reasoning_soundness_protocol` §1 [S] 类、paragraph_layout "Theory as Warrant" 行 | `../write-introduction/corpus/theory-lens/` 的理论核心原则句 |
+| **Gap 主张**（Claim 子型——v1.2：对会话缺口的实质主张 pivot 句，默认承担段 claim 或作其直接前件） | 变体文件缺口段（无独立句库） | `../write-introduction/corpus/tensions/`、`../write-introduction/corpus/literature-turns/` |
 | **定义前提 [D]** | `sentences/construct_definition` | 构念定义句（intro 少用） |
 | **A&R** | `sentences/acknowledgment_response` §2–§4 | 同左（跨节通用）+ `phrasebank/critique-phrases` |
-| **Framing**（豁免） | `sentences/leitmotif-section-opener`、`sentences/closure` | `hooks/`、`transitions/`、`previews/` |
+| **Framing**（豁免） | `sentences/leitmotif-section-opener`、`sentences/closure` | `../write-introduction/corpus/hooks/`、`../write-introduction/corpus/transitions/`、`../write-introduction/corpus/previews/` |
 
 ## 拼贴判据（corpus mosaic——反模式）
 

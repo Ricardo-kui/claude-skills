@@ -33,6 +33,6 @@ A tier whose only candidates are degenerate — every candidate lacks a `theoret
 
 ## Response
 
-Return at most one primary learning object and one contrast object. If no card is a credible fit, return no recommendation. For every result show four elements: matching reason, one learnable move, one non-transferable condition, and one comparison question. `retrieve_exemplars.py` produces the first three (matching reason, learnable move, non-transferable condition); the **comparison question is produced by the consuming skill**, not by the script, per `v4/rhetoric-moves/_immediate-exemplar-protocol.md` step 3 (`推荐四问`).
+Return at most one primary learning object and one contrast object. If no card is a credible fit, return no recommendation. For every result show four elements: matching reason, one learnable move, one non-transferable condition, and one comparison question. `../scripts/retrieve_exemplars.py` produces the first three (matching reason, learnable move, non-transferable condition); the **comparison question is produced by the consuming skill**, not by the script, per `v4/rhetoric-moves/_immediate-exemplar-protocol.md` step 3 (`推荐四问`).
 
 Do not call this interface for sentence edits, title work, table navigation, or a request explicitly marked `--exemplars=off`.

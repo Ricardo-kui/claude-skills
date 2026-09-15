@@ -2,7 +2,7 @@
 
 > **版本状态（2026-08-11）**：`blueprints/` 的 59 份卡现为 **Legacy Evidence Layer**：不可被运行时推荐、不可定义项目故事、不可因旧覆盖标签而被视为叙事范本。其可查询元数据见 `legacy/legacy-manifest.json`，生成与发现规则见 `references/legacy-evidence-layer.md`。`v4/blueprints/` 是唯一可进入即时学习检索的经复审卡层。
 
-> **Worked examples 运行时权限（2026-09-14）**：`v4/worked-examples/` 是**管线使用示范**，`runtime_eligibility: no`——不参与运行时推荐、不定义项目故事、不进 `catalog.json`、不被 `retrieve_exemplars.py` 返回、不参与故事类型选择。
+> **Worked examples 运行时权限（2026-09-14）**：`v4/worked-examples/` 是**管线使用示范**，`runtime_eligibility: no`——不参与运行时推荐、不定义项目故事、不进 `v4/catalog.json`、不被 `scripts/retrieve_exemplars.py` 返回、不参与故事类型选择。
 
 > 状态：蒸馏协议归 `distill-story-exemplar`；本目录是语料库而非 skill。v0.3 的旧 `ROBUST/PARTIAL` 状态统一翻译为 `legacy_coverage_confidence: claimed_complete/claimed_partial`，仅说明旧蒸馏声称的覆盖度。它不表示叙事质量、理论正确性、因果可信度或写作可迁移性。`paper-story-contract` 已不消费本库来选择故事框架；项目故事先通过自身 integrity gate，写作 skill 才可按当次条件检索 v0.4 学习对象。
 
@@ -29,7 +29,7 @@
 
 - **全四区段蒸馏过的论文** → 五幕完整，climax/falling action 有实证落点。
 - **部分区段蒸馏** → 缺失幕标注 `待补`（如 Desai 2012 的 Methods/Results），不允许编造。
-- 快照事实来源：蒸馏记录（memory）+ 必要时的全文回读。corpus_links 路径在接入时需对照 `_index.md` 验证（本原型按蒸馏时记录引用）。
+- 快照事实来源：蒸馏记录（memory）+ 必要时的全文回读。corpus_links 路径在接入时需对照 `blueprints/_index.md` 验证（本原型按蒸馏时记录引用）。
 
 ## 核心资产（其他语料没有的字段）
 
@@ -48,4 +48,4 @@
 - [x] 已完成旧 story-frame 线路退役：`paper-story-contract` 仅维护 project-owned integrity；范文仅能在 section 调用后以 v0.4 瞬时比较出现。
 - [x] Ch03 工具层从 intro 扩展到全篇（storytelling_tools 五字段已全量补齐；pacing/布局实证聚合入 `layout-inventory.md`）
 - [x] knot 类型表定稿（2026-08-09：11 型定稿 + 原型计数持续演进——详见第 3 行状态行与 `_schema.md` 词表）
-- [x] **`validate_blueprints.py` 校验器接入**（2026-08-11）：对照 `_schema.md` 逐份校验（文件头/Story 节/knot 类型/resolution 类型）+ `_index.md` 同步 + knot 主型计数对账；入口 `python scripts/validate_blueprints.py`，退出码 0=无 ERROR。新增 blueprint 后跑一遍，index 与词表计数须保持对账一致
+- [x] **`scripts/validate_blueprints.py` 校验器接入**（2026-08-11）：对照 `_schema.md` 逐份校验（文件头/Story 节/knot 类型/resolution 类型）+ `blueprints/_index.md` 同步 + knot 主型计数对账；入口 `python scripts/validate_blueprints.py`，退出码 0=无 ERROR。新增 blueprint 后跑一遍，index 与词表计数须保持对账一致
