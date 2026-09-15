@@ -49,7 +49,7 @@ We used panel data from Compustat for U.S. publicly traded firms from 2010 to 20
 | 检查项 | 状态 | 问题 |
 |-------|------|------|
 | 模型选择理由 | ✗ | 未解释为什么用 OLS 而非面板数据模型（FE/RE） |
-| 标准误调整 | △ | Clustered at firm level 正确，但未解释为什么不用 two-way clustering |
+| 选择偏差检验（可选） | 归属以 robustness-menu.md 为唯一源；证据状态：无 ≥5 卡范文现货支撑，不计分 |
 | 诊断检验报告 | ✗ | 未报告 VIF、异方差检验、自相关检验 |
 
 **模型选择问题**：
@@ -58,6 +58,6 @@ We used panel data from Compustat for U.S. publicly traded firms from 2010 to 20
 2. 如果使用 OLS，必须解释为什么 firm fixed effects 不必要（如已有充分控制变量）
 
 ## 最需补强的 2 处
-1. **样本漏斗缺失** — 补充完整的样本筛选过程（初始 N → 每一步 attrition → 最终 N），并报告选择偏差检验
+1. **样本漏斗缺失** — 补充完整的样本筛选过程（初始 N → 每一步 attrition → 最终 N）；选择偏差检验属可选风格建议，归属以 robustness-menu.md 为唯一源
 2. **Mediator 数据来源矛盾** — Compustat 是二手数据库，survey-based mediator 需要明确说明数据来源（如匹配的 survey 数据、或改用二手指标）
 ```
