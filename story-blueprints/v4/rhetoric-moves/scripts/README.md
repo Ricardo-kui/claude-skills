@@ -6,7 +6,7 @@
 
 ## 脚本真实位置
 
-rhetoric-moves 相关脚本位于上一级 `story-blueprints/scripts/`：
+rhetoric-moves 相关脚本位于仓库内 `story-blueprints/scripts/`，相对本目录即 `../../../scripts/`：
 
 | 脚本 | 路径 | 作用 |
 |---|---|---|

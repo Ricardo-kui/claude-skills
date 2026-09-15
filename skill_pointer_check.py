@@ -208,10 +208,11 @@ def has_skill_shadow(md: Path | None, skill_root: Path | None, seg: str) -> bool
 
     存在同名条目（目录或文件，一律用 `.exists()` 判）说明裸 `seg/...` 更可能指
     本 skill 内的路径，而不是仓库根下的同名目录，故强制按基准 C 解析。
-    不传 md 时退化为只检查 `skill_root / seg`，保持签名向后兼容。
+    md 缺省（None）时**精确恢复 C 之前的行为**：只检查 `skill_root / seg` 是否为
+    目录（`.is_dir()`），不认同名文件；此时签名与 pre-C `classify` 向后兼容。
     """
     if md is None:
-        return skill_root is not None and (skill_root / seg).exists()
+        return skill_root is not None and (skill_root / seg).is_dir()
     start = Path(md).resolve().parent
     stop = Path(skill_root).resolve() if skill_root is not None else skill_root_of(start)
     cur = start
@@ -235,7 +236,7 @@ def classify(
     strict=True 时把「其余」写法按 C（skill 目录）解析，不再产生 None。
     skill_root + md 用于影子守卫：从文件自身目录向上到 skill_root 的任一层存在
     同名条目时，裸 `seg/...` 不判 D（强制 C）。不传 md 时退化为只看
-    `skill_root / seg`，保持签名向后兼容。
+    `skill_root / seg` 是否为目录（`.is_dir()`），精确恢复 pre-C 的行为。
     """
     if target.startswith("../"):
         seg = target[3:].split("/", 1)[0]
