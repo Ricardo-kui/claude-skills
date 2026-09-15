@@ -293,47 +293,8 @@ def _collect_skeleton_prose(lines: list[str], start: int) -> tuple[str, int]:
 
 
 def _load_quickref_sources(path: Path) -> dict[str, str]:
-    """「变体速查表」（表头含 状态/来源 的明细表）→ {变体号: 来源列原文}。
-
-    速查表绑定分支（2026-09-15）：来源列作 citekey 回退源——仅在 wb 标记与
-    来源字段皆缺席时使用（不编造纪律的语料内回退）。文件无速查表返回 {}。
-    methods 索引的状态列是 verbatim/模板，速查表状态列（ROBUST/VERIFIED/
-    EMERGING）在 methods 不落列，故不取。
-    """
-    try:
-        lines = path.read_text(encoding="utf-8").splitlines()
-    except OSError:
-        return {}
-    start = next((i for i, ln in enumerate(lines)
-                  if ln.strip().startswith("#") and "速查表" in ln), None)
-    if start is None:
-        return {}
-    level = len(lines[start].strip()) - len(lines[start].strip().lstrip("#"))
-    end = next((i for i in range(start + 1, len(lines))
-                if (m := re.match(r"^(#+)\s", lines[i].strip()))
-                and len(m.group(1)) <= level), len(lines))
-    header_cols: dict[str, int] = {}
-    out: dict[str, str] = {}
-    for ln in lines[start + 1:end]:
-        s = ln.strip()
-        if not s.startswith("|"):
-            continue
-        cells = [c.strip() for c in s.strip("|").split("|")]
-        if all(set(c) <= {"-"} for c in cells):
-            continue
-        if any("状态" in c for c in cells) and any("来源" in c for c in cells):
-            header_cols = {c: k for k, c in enumerate(cells) if c in ("状态", "来源")}
-            continue
-        if "来源" not in header_cols or len(cells) <= max(header_cols.values(), default=0):
-            continue
-        vid = cells[0].strip()
-        if not vid or vid == "#":
-            continue
-        src = cells[header_cols["来源"]].strip()
-        if src and not src.startswith(("未标注", "待补")):
-            out.setdefault(vid, src)
-    return out
-
+    """薄委托：速查表来源列解析已上提共享引擎（行为不变）。"""
+    return eng.load_quickref_sources(path)
 
 def parse_file(family: dict[str, str]) -> tuple[list[Entry], list[Unparsed], int, int, int]:
     path = CORPUS / family["file"]

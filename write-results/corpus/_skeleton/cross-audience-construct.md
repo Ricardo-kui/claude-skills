@@ -12,10 +12,10 @@
 
 | id | 适配槽位 | citekey | 句子原文（或模板） | 卡片路径#锚点 | 状态 |
 |---|---|---|---|---|---|
-| `cross-audience-construct#1` | R3/R5 | 未标注 | The same ambiguity that makes organizations less appealing to consumers makes them more appealing to venture capitalists. These effects are illustrated in figure 2. | `corpus/跨受众构念对比.md#变体-1` | verbatim |
+| `cross-audience-construct#1` | R3/R5 | Pontikes 2012 (ASQ) | The same ambiguity that makes organizations less appealing to consumers makes them more appealing to venture capitalists. These effects are illustrated in figure 2. | `corpus/跨受众构念对比.md#变体-1` | verbatim |
 
 ## 填槽模板
 
 | id | 适配槽位 | citekey | 句子原文（或模板） | 卡片路径#锚点 | 状态 |
 |---|---|---|---|---|---|
-| `cross-audience-construct#T1` | R3/R5 | 未标注 | Models [M1]–[M2] test [audience A's] evaluations; these are [estimator A] models with [DV_A] as the dependent variable. [IV] has a [negative] effect on [DV_A], significant at *p* < [.001] (model [M1]). Models [M3]–[M4] test [audience B's] evaluations. These are [estimator B] models estimating [DV_B]. [IV] has a [positive] effect on [DV_B], significant at *p* < [.001] (model [M3]). [Substantive translation]: the same [IV] that makes [actors] less appealing to [audience A] makes them more appealing to [audience B]. These effects are illustrated in [Figure X]. [Economic significance per audience]: decreasing [IV] by one standard deviation from the mean results in [ΔDV_A]; an [actor] one standard deviation above the mean is [~1.5×] more likely to [DV_B]. | `corpus/跨受众构念对比.md#变体-1` | 模板 |
+| `cross-audience-construct#T1` | R3/R5 | Pontikes 2012 (ASQ) | Models [M1]–[M2] test [audience A's] evaluations; these are [estimator A] models with [DV_A] as the dependent variable. [IV] has a [negative] effect on [DV_A], significant at *p* < [.001] (model [M1]). Models [M3]–[M4] test [audience B's] evaluations. These are [estimator B] models estimating [DV_B]. [IV] has a [positive] effect on [DV_B], significant at *p* < [.001] (model [M3]). [Substantive translation]: the same [IV] that makes [actors] less appealing to [audience A] makes them more appealing to [audience B]. These effects are illustrated in [Figure X]. [Economic significance per audience]: decreasing [IV] by one standard deviation from the mean results in [ΔDV_A]; an [actor] one standard deviation above the mean is [~1.5×] more likely to [DV_B]. | `corpus/跨受众构念对比.md#变体-1` | 模板 |

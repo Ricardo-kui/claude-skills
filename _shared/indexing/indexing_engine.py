@@ -353,6 +353,48 @@ def render_unparsed(items: list[Unparsed]) -> str:
 # ------------------------------------------------------- write & cli ----
 
 
+def load_quickref_sources(path: Path) -> dict[str, str]:
+    """「变体速查表」（表头含 状态/来源 的明细表）→ {变体号: 来源列原文}。
+
+    节边界只被同级或更高级标题截断（速查表节内的 ### 子节表全部纳入）；
+    以 未标注/待补 开头的来源格视为占位符，不作为绑定来源。
+    methods/results 适配器共用；仅作 citekey 回退源（wb 标记与来源字段缺席时）。
+    """
+    try:
+        lines = path.read_text(encoding="utf-8").splitlines()
+    except OSError:
+        return {}
+    start = next((i for i, ln in enumerate(lines)
+                  if ln.strip().startswith("#") and "速查表" in ln), None)
+    if start is None:
+        return {}
+    level = len(lines[start].strip()) - len(lines[start].strip().lstrip("#"))
+    end = next((i for i in range(start + 1, len(lines))
+                if (m := re.match(r"^(#+)\s", lines[i].strip()))
+                and len(m.group(1)) <= level), len(lines))
+    header_cols: dict[str, int] = {}
+    out: dict[str, str] = {}
+    for ln in lines[start + 1:end]:
+        s = ln.strip()
+        if not s.startswith("|"):
+            continue
+        cells = [c.strip() for c in s.strip("|").split("|")]
+        if all(set(c) <= {"-"} for c in cells):
+            continue
+        if any("状态" in c for c in cells) and any("来源" in c for c in cells):
+            header_cols = {c: k for k, c in enumerate(cells) if c in ("状态", "来源")}
+            continue
+        if "来源" not in header_cols or len(cells) <= max(header_cols.values(), default=0):
+            continue
+        vid = cells[0].strip()
+        if not vid or vid == "#":
+            continue
+        src = cells[header_cols["来源"]].strip()
+        if src and not src.startswith(("未标注", "待补")):
+            out.setdefault(vid, src)
+    return out
+
+
 def write_skeleton(skeleton_dir: Path, rendered: dict, route: str,
                    unparsed_text: str) -> None:
     skeleton_dir.mkdir(parents=True, exist_ok=True)

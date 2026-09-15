@@ -38,7 +38,7 @@ CLI
 --sample N     also print N evenly-spaced verbatim entries with their source-hit.
 --quiet        only print the summary.
 
-Shared engine (2026-09-15)
+Shared engine (2026-09-15；速查表来源列已接线为 citekey 回退源，同 methods)
 --------------------------
 工具层 / Entry·Unparsed / materialize / verify 回源与抽样 / 渲染原语 / 写盘 /
 CLI 骨架已下沉到 ``_shared/indexing/indexing_engine.py``（唯一一份）；本适配器
@@ -163,6 +163,21 @@ def normalize_slot(raw: str | None) -> str:
     return "通用"
 
 
+def _load_quickref_sources(path: Path) -> dict[str, str]:
+    """薄委托：速查表来源列解析已上提共享引擎。"""
+    return eng.load_quickref_sources(path)
+
+
+def extract_trailing_citekey(text: str) -> str | None:
+    """Trailing annotation ``（ball_2018, SMJ）`` -> citekey.
+
+    Anchored at end of line so inline citations like ``(Greene, 2012)``
+    inside the quote are not mistaken for the source annotation.
+    """
+    m = re.search(r"[（(]([^，,()（）]+)[,，][^）)]*[）)]\s*$", text)
+    return m.group(1).strip() if m else None
+
+
 def slot_anomaly(raw: str) -> str | None:
     """Return a human note when the raw slot has R-ish tokens out of R1–R9."""
     tokens = R_ANY_TOKEN_RE.findall(raw)
@@ -206,6 +221,7 @@ def parse_file(family: dict[str, str]) -> tuple[list[Entry], list[Unparsed], int
                                  text="", reason=f"读取失败: {exc}"))
         return entries, unparsed, 0
     slot_table = eng.build_slot_table(lines, SLOT_CELL_RE, min_cells=2)
+    qsrc = eng.load_quickref_sources(path)
 
     variants: list[Variant] = []
     cur: Variant | None = None
@@ -242,6 +258,10 @@ def parse_file(family: dict[str, str]) -> tuple[list[Entry], list[Unparsed], int
         # bracket-form verbatim: [原始句锚点] "..."（ball_2018 型）
         bm = BRACKET_VERBATIM_RE.match(s)
         if bm:
+            if cur.src is None:
+                ck = extract_trailing_citekey(bm.group(1))
+                if ck:
+                    cur.src = ck
             seg = eng.trim_annotation(eng.strip_outer_quotes(bm.group(1)))
             if seg and eng.is_english(seg):
                 cur.extra_verbatim.append(seg)
@@ -386,7 +406,8 @@ def parse_file(family: dict[str, str]) -> tuple[list[Entry], list[Unparsed], int
 
     entries, unparsed = eng.materialize_variants(
         variants, slug=slug, relpath=relpath, slot_for=slot_for,
-        extra_unparsed=extra_unparsed)
+        extra_unparsed=extra_unparsed,
+        citekey_fallback=lambda v: qsrc.get(v.vid))
 
     return entries, unparsed, len(variants)
 
