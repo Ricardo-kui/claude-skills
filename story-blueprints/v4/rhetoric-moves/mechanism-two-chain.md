@@ -4,7 +4,7 @@ canonical_id: "mechanism-two-chain"
 name_zh: "双链汇一"
 cross_paper: VERIFIED
 created: 2026-08-24
-updated: 2026-08-25
+updated: 2026-09-15
 expansion_state: saturated
 pattern_count: 6
 distinct_sources: 3
@@ -54,16 +54,15 @@ expansion_note: "≥3 distinct papers（moon2026 JM / kundro_rothbard AMJ / Weng
 5. **机制遴选的纪律**：先展示被淘汰机制"真的可假设"（各给一句文献依据），再宣告聚焦；理由一/理由二必须对应**不同维度**的筛选标准（如"与理论更直接挂钩" vs "在观察情境中更 salient"）。
 6. **收敛句给读者复核**：明确说"两条通道都作用于同一结果"，别让读者自己去合。
 
-## 参照句（可直接采用或改造；替换来源特异性内容）
+## 参照句（底本 id 指针——verbatim 归语料库，本文件只留动作名 + 判据 + 来源 id）
 
-**参照 1 —— moon2026（JM）¶19（纯双链）**：
-> "Our central thesis is that the recognition of IDD in a state increases advertising spending by firms headquartered in that state because the stronger protection of trade secrets may lead managers to pay more attention to leveraging their trade secrets. Higher managerial attention towards leveraging trade secrets following IDD recognition in a state is likely to occur for two key reasons. First, IDD recognition is likely to lead to expectations of higher growth from capital markets because investors and analysts expect firms to be able to translate the enhanced protection of trade secrets into growth (see Chen, Gao, and Ma 2021). Second, senior managers are more likely to pay attention to the capital market expectations for growth because by protecting against trade secrets leakage due to employee mobility (Nguyen, Pham, and Qiu 2023), IDD recognition may shift managerial attention previously devoted to the protection of trade secrets."
+> **单源纪律**（`write-introduction/references/library-contract.md` 边界 3）：同一 verbatim 原句只作为底本存 corpus 卡 / 骨架索引一处。本节三段逐字参照已归位语料库，按 id 取用；此处保留三型的**执行判据**供选型（2026-09-15 单源归位）。
 
-**参照 2 —— kundro_rothbard（AMJ）（机制遴选型）**：
-> "While we propose that perceived self-control is a primary mechanism that explains the relationship between power, gender, and moral objection framing on retaliation, it is important to consider other potential mechanisms. One potential mechanism is warmth… A final alternative mechanism is dominance… While the three mechanisms discussed above are plausible, we focus on perceived self-control as our key mechanism for two reasons. First, we focus on perceived self-control because self-control has been more directly linked with morality in prior work. Second, self-control is an attribute that is considered particularly relevant by observers in social and interpersonal contexts, which may increase its salience over these other attributes."
+**参照 1 —— moon2026（JM）¶19（纯双链）**：底本 = `write-theory/corpus/_skeleton/sentences-mechanism_chain.md` 条目 `变体-A.a`（verbatim；源卡 `write-theory/corpus/sentences/mechanism_chain.md` §变体 A：T3_attention_release_reallocation）。判据：外部期望链（资本市场增长期望）与内部注意力释放链（防护性注意力被释放）相互独立、同指一个结果，收敛句之后才落假设。
 
-**参照 3 —— Weng & Yang（JMS, "Is Red or Blue More Likely to Narrow the Gap?"）（主效应双理由型）**：
-> "We suggest that CEOs' political ideologies reflect their values through the lens that they use to interpret the pay-disparity situation. Specifically, the degree to which a CEO is more liberal or conservative influences a firm's CEO-employee pay disparity for two reasons. First, liberals are more aware of the inequality issue. … Second, liberals are more open to ideas for social change."
+**参照 2 —— kundro_rothbard（AMJ）（机制遴选型）**：底本 = 同索引条目 `alternative-mechanisms-9d92fe.a–.c`（verbatim）。判据：先列真实可假设的备选机制（warmth / dominance 各有文献），再宣告聚焦；两条理由对应**不同筛选维度**（与理论更直接挂钩 vs 观察情境中更 salient）——双理由用于淘汰竞品机制，不是并列驱动效果。
+
+**参照 3 —— Weng & Yang（JMS, "Is Red or Blue More Likely to Narrow the Gap?"）（主效应双理由型）**：底本 = 同索引条目 `weng-yang-23423a.a/.b`（verbatim）。判据：两条理由同向并列解释同一主效应（awareness + openness，都是自由派特质的表现），逻辑独立、各自可证伪。
 
 **跨源对照**：参照 1 的"两链"彼此因果独立且**均驱动同一结果**；参照 2 的"两理由"是**筛掉竞品机制**（淘汰而非并列驱动）；参照 3 的"两理由"是**同向并列解释主效应**（awareness + openness，都是自由派特质的表现）。写作时按你想达到的论证功能选骨架——审稿人想看的是"为什么信你"，三种都是把单一"because"拆成可复核的两块。
 
@@ -78,7 +77,7 @@ expansion_note: "≥3 distinct papers（moon2026 JM / kundro_rothbard AMJ / Weng
 **演示 C（机制遴选骨架 kundro_rothbard 型，换对象到审计领域）**：
 > "While we propose that client relationships are a primary mechanism that explains auditor leniency, it is important to consider other potential mechanisms. Fee dependence and social affinity are both plausible, but we focus on relationship length as our key mechanism for two reasons. First, relationship length has been more directly linked with the theory of independence erosion in prior work. Second, unlike fee dependence, it is considered particularly relevant by outsiders, which increases its salience over the other attributes."
 
-**流畅性自查**：演示 A/B 借 moon2026 的双链骨架——主题句（"Our central thesis is that"）、枚举（"for two key reasons"）、外部期望链（"is likely to lead to expectations of higher growth from capital markets"）、内部注意力链（"pay more attention to leveraging their trade secrets"）；演示 C 借 kundro_rothbard 的机制遴选骨架（"it is important to consider other potential mechanisms / focus on [M] as our key mechanism for two reasons"）。共享句集中在骨架句，直接采用即可；对象与通道词（stiffer secrecy law / proprietary know-how / poaching risk / auditor leniency / fee dependence）须按你的对象替换来源特异性内容。过流畅性门（通顺、句长适中、主谓宾可识别）即交付。
+**流畅性自查**：演示 A/B 借 moon2026 的双链骨架——主题句（"Our central thesis is that"）、枚举（"for two key reasons"）、外部期望链（增长期望通道，完整底本句按参照 1 的 id 从语料索引取用）、内部注意力链（注意力释放通道，同前）；演示 C 借 kundro_rothbard 的机制遴选骨架（"it is important to consider other potential mechanisms / focus on [M] as our key mechanism for two reasons"，见上方信号词表）。共享句集中在骨架句，直接采用即可；对象与通道词（stiffer secrecy law / proprietary know-how / poaching risk / auditor leniency / fee dependence）须按你的对象替换来源特异性内容。过流畅性门（通顺、句长适中、主谓宾可识别）即交付。
 
 ## 自查勾子
 
@@ -86,4 +85,4 @@ expansion_note: "≥3 distinct papers（moon2026 JM / kundro_rothbard AMJ / Weng
 - 两条链若存在"一条依赖一条"的因果（如"期望↑→所以注意力转向"），则不是双链而是单链拆分——回结构蓝图第 5 步修正。
 - 收敛句必须把两链合到**同一结果变量**，而不是各自接不同结果。
 - 机制遴选型若被淘汰机制无文献依据 → 是稻草人，回信号词表"机制遴选入口"纪律。
-- **扩源暂停（saturated）**：本 move 已达 3 篇不同论文的 verbatim 参照，暂停继续加锚点；仅当用户点名、真实写作发现缺"双链收束后的落点句"等子动作、或出现新执行方式时恢复扩源。
+- **扩源暂停（saturated）**：本 move 已达 3 篇不同论文的参照（verbatim 底本已归 corpus 句卡并改 id 指针，2026-09-15 单源归位），暂停继续加锚点；仅当用户点名、真实写作发现缺"双链收束后的落点句"等子动作、或出现新执行方式时恢复扩源。

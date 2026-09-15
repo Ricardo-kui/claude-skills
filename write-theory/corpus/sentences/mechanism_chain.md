@@ -1050,6 +1050,9 @@ leading [actors] to give them lesser weight than they would absent the [frame] a
 
 来源：Moon et al. (2026, Journal of Marketing)。
 
+**原文锚点** (moon2026, JM, ¶19 纯双链假设段——2026-09-15 自 rhetoric-moves/mechanism-two-chain 参照 1 单源归位):
+> "Our central thesis is that the recognition of IDD in a state increases advertising spending by firms headquartered in that state because the stronger protection of trade secrets may lead managers to pay more attention to leveraging their trade secrets. Higher managerial attention towards leveraging trade secrets following IDD recognition in a state is likely to occur for two key reasons. First, IDD recognition is likely to lead to expectations of higher growth from capital markets because investors and analysts expect firms to be able to translate the enhanced protection of trade secrets into growth (see Chen, Gao, and Ma 2021). Second, senior managers are more likely to pay attention to the capital market expectations for growth because by protecting against trade secrets leakage due to employee mobility (Nguyen, Pham, and Qiu 2023), IDD recognition may shift managerial attention previously devoted to the protection of trade secrets."
+
 
 ### 变体 E：双刃限定→主效应前的范围诚实句（Gulati_1999 型）
 

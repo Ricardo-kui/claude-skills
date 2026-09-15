@@ -4,7 +4,7 @@ canonical_id: "bidirectional-staging"
 name_zh: "双向预测先行"
 cross_paper: VERIFIED
 created: 2026-08-24
-updated: 2026-08-25
+updated: 2026-09-15
 expansion_state: saturated
 pattern_count: 6
 distinct_sources: 3
@@ -57,16 +57,16 @@ expansion_note: "≥3 distinct papers（moon2026 JM / kundro_rothbard AMJ / du_t
 6. **du_tsolmon 型的收敛纪律**：两阵营**各自只给一句机制**（克制、不展开），然后立刻把矛盾归因到理论假设层面，再落到资源属性升级 stakes——不拖沓。
 7. **信号词可换（可选）**：不一定非用 "On the one hand"，用 "A first reading… / Weighing against this…" 同样执行该动作——更换是为贴合你的语气，不是为躲重复。
 
-## 参照句（可直接采用或改造；替换来源特异性内容）
+## 参照句（同源底本已归 corpus 改引 id；单源参照暂留原句）
 
-**参照 1 —— moon2026（JM）¶4（同 IV 双通道型）**：
+> **单源纪律**（`write-introduction/references/library-contract.md` 边界 3）：同一 verbatim 原句只作为底本存 corpus 卡 / 骨架索引一处。与语料同源的参照改引 id（2026-09-15 归位）；参照 1 在语料库暂无同源底本，保留原句，待归位后改 id。
+
+**参照 1 —— moon2026（JM）¶4（同 IV 双通道型）**（单源，暂留原句）：
 > "On the one hand, enhanced trade secret protection can lower the competitive pressure faced by firms and lead to a decline in their advertising spending (e.g., Klasa et al. 2018). On the other hand, stronger trade secret protection also means that stakeholders from financial markets, i.e., investors and financial analysts, expect firms to increase their sales growth, and therefore can increase managers' attention to leveraging trade secrets and advertising for brand building."
 
-**参照 2 —— kundro_rothbard（AMJ）P2（群体不对称悬念型）**：
-> "Yet, it remains to be seen whether power protects women in the same way as it protects men in the context of moral objection. Indeed, within the gender and power literature, there is a debate on whether or not power will mitigate backlash against women. On the one hand, emerging research has corroborated the suggestion that power will protect women from retaliation in certain contexts… because it frees women from constraining role expectations. On the other hand, extant research on gender role theory has questioned whether women benefit from power in the same way men do and suggests they may be viewed as lower in self-control… and still face retaliation… This debate has large societal implications too, particularly as women continue to move into higher-power positions in organizations. Indeed, women may find themselves in a double bind where they are simultaneously expected to engage in moral objection and also penalized for doing so."
+**参照 2 —— kundro_rothbard（AMJ）P2（群体不对称悬念型）**：底本 = `write-introduction/corpus/_skeleton/tensions.md` 条目 `14-debate-unresolved#1`（verbatim；源卡 `write-introduction/corpus/tensions/14-debate-unresolved.md` 变体 A）。判据：先在群体间不对称上立悬念（X 是否同样保护 A 未被检验），再给两派文献的对立预测，把"未检验的不对称"变成研究必要；收尾用 "double bind" 把代价理论化。
 
-**参照 3 —— du_tsolmon2024（ORSC）P2（预期证伪型）**：
-> "A fundamental tension exists in the literature: although high postacquisition managerial turnover from target firms is typically viewed as detrimental to M&A performance, so we may expect firms to retain target managers, studies still find large-scale top management departures from target firms after M&A. This contradiction reflects competing assumptions about the value of target managers. Some scholars argue that in related acquisitions, overlapping knowledge makes target managers replaceable, allowing efficiency gains through reducing redundancy. Conversely, the resource-based view (RBV) and strategic human capital (SHC) literatures emphasize the critical knowledge and capabilities these managers possess, suggesting retention advantages for PAI."
+**参照 3 —— du_tsolmon2024（ORSC）P2（预期证伪型）**：底本 = `write-introduction/corpus/_skeleton/tensions.md` 条目 `14-debate-unresolved#2`（verbatim；源卡同文件变体 D）。判据：理性预期被现实证伪开场（"we may expect…, [yet] studies still find…"），矛盾归因于 "competing assumptions about [construct]"；两阵营各给一句机制（克制、不展开）即收敛。
 
 **跨源对照**：参照 1 的两条预测由**同一机制通道**（期望）倒推两个方向；参照 2 由**未检验的不对称**（A 群体是否得保护）立题；参照 3 由**理性预期与现实的落差**立题。三者"预测甲/预测乙"的句式都可以互换骨架，但立题方式不可混用。
 
@@ -88,4 +88,4 @@ expansion_note: "≥3 distinct papers（moon2026 JM / kundro_rothbard AMJ / du_t
 - **不设重复率闸门**（2026-08-25 用户裁决）：语料语句可直接采用，只需替换来源特异性内容（专名/数字/系数/表号）；质量闸门是流畅性门（通顺、符合学术表达、句子不过长），见 `_polish-protocol.md`。
 - 跨源合成时句式来源 ≤3；超过 → 拼贴风险，流畅性门会拦截。
 - 两预测的机制词若与某参照句同义词群（competitive pressure / advertising spending / sales growth）→ 提示换词（风格上应拉开，避免读起来像同一来源）。
-- **扩源暂停（saturated）**：本 move 已达 3 篇不同论文的 verbatim 参照，暂停继续加锚点；仅当用户点名、真实写作发现缺"裁定后收束"等子动作、或出现新执行方式时恢复扩源。
+- **扩源暂停（saturated）**：本 move 已达 3 篇不同论文的参照（同源 verbatim 已归 corpus 索引并改 id 指针，2026-09-15 单源归位），暂停继续加锚点；仅当用户点名、真实写作发现缺"裁定后收束"等子动作、或出现新执行方式时恢复扩源。

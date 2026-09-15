@@ -38,10 +38,10 @@
 | cost_benefit_calculus | [`sentences-cost_benefit_calculus.md`](sentences-cost_benefit_calculus.md) | 1 | 0 |
 | hypothesis_forms | [`sentences-hypothesis_forms.md`](sentences-hypothesis_forms.md) | 41 | 58 |
 | leitmotif-section-opener | [`sentences-leitmotif-section-opener.md`](sentences-leitmotif-section-opener.md) | 12 | 8 |
-| mechanism_chain | [`sentences-mechanism_chain.md`](sentences-mechanism_chain.md) | 95 | 53 |
+| mechanism_chain | [`sentences-mechanism_chain.md`](sentences-mechanism_chain.md) | 96 | 53 |
 | moderation | [`sentences-moderation.md`](sentences-moderation.md) | 35 | 22 |
 
-合计：22 个子清单 / verbatim 396 条 / 模板 399 条。
+合计：22 个子清单 / verbatim 397 条 / 模板 399 条。
 
 ## 待补录
 
