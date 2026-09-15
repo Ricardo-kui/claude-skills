@@ -165,6 +165,10 @@ __pycache__/
 !_shared/
 !_shared/**
 
+# Plan & acceptance records（方案定稿与验收记录；落地后仅追加，不删改历史裁定）
+!_plans/
+!_plans/**
+
 # Third-party skill: GB/T 9704 official document formatting (vendored from mizzlelover/gongwen-gbt9704-skill)
 !gongwen/
 !gongwen/**
