@@ -203,11 +203,39 @@ def skill_root_of(md: Path) -> Path:
     return top or ROOT
 
 
-def classify(target: str, strict: bool = False, skill_root: Path | None = None) -> str | None:
+def has_skill_shadow(md: Path | None, skill_root: Path | None, seg: str) -> bool:
+    """影子守卫：从 md 所在目录向上走到 skill_root，任一层存在同名条目 seg 即判真。
+
+    存在同名条目（目录或文件，一律用 `.exists()` 判）说明裸 `seg/...` 更可能指
+    本 skill 内的路径，而不是仓库根下的同名目录，故强制按基准 C 解析。
+    不传 md 时退化为只检查 `skill_root / seg`，保持签名向后兼容。
+    """
+    if md is None:
+        return skill_root is not None and (skill_root / seg).exists()
+    start = Path(md).resolve().parent
+    stop = Path(skill_root).resolve() if skill_root is not None else skill_root_of(start)
+    cur = start
+    while True:
+        if (cur / seg).exists():
+            return True
+        if cur == stop or cur == cur.parent:
+            break
+        cur = cur.parent
+    return False
+
+
+def classify(
+    target: str,
+    strict: bool = False,
+    skill_root: Path | None = None,
+    md: Path | None = None,
+) -> str | None:
     """按写法判定命中的基准：'A' / 'B' / 'C' / 'D' / None（各基准都不成立）。
 
     strict=True 时把「其余」写法按 C（skill 目录）解析，不再产生 None。
-    skill_root 用于影子守卫：当前 skill 下有同名子目录时，裸 `seg/...` 不判 D。
+    skill_root + md 用于影子守卫：从文件自身目录向上到 skill_root 的任一层存在
+    同名条目时，裸 `seg/...` 不判 D（强制 C）。不传 md 时退化为只看
+    `skill_root / seg`，保持签名向后兼容。
     """
     if target.startswith("../"):
         seg = target[3:].split("/", 1)[0]
@@ -223,7 +251,7 @@ def classify(target: str, strict: bool = False, skill_root: Path | None = None) 
         return "B"
     if seg in SKILL_PREFIXES:
         return "C"
-    if (ROOT / seg).is_dir() and (skill_root is None or not (skill_root / seg).is_dir()):
+    if (ROOT / seg).is_dir() and not has_skill_shadow(md, skill_root, seg):
         return "D"
     return "C" if strict else None
 
@@ -336,7 +364,7 @@ def main(argv=None) -> int:
                 text = md.read_text(encoding="utf-8", errors="replace")
             skill_root = skill_root_of(md)
             for line_no, target in extract(text):
-                rule = classify(target, args.strict, skill_root)
+                rule = classify(target, args.strict, skill_root, md)
                 checked += 1
                 if rule is None:
                     status, path, bucket = "MISSING", None, "no_baseline"
