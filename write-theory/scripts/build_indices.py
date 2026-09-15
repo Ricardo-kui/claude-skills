@@ -1112,6 +1112,14 @@ def parse_sentences(relpath: str, registry: dict[str, str],
                     i = k - 1
             i += 1
             continue
+        if s.startswith("```") or s.startswith("|"):
+            # branch⑤ 共享抽取器（2026-09-15 覆盖缺口修复：句式节的无标签裸围栏此前漏抽）
+            nj = _named_section_extras(lines, i, cur)
+            if nj is not None:
+                i = nj
+            else:
+                i += 1
+            continue
         i += 1
     if cur is not None:
         e, u = finalize_block(cur, "sentences", relpath, registry)
