@@ -146,7 +146,8 @@ def build_slot_table(lines: list[str], slot_cell_re: re.Pattern,
 
 def materialize_variants(variants, *, slug: str, relpath: str, slot_for,
                          primary_note=None, extra_note=None,
-                         unparsed_where=None, extra_unparsed=None):
+                         unparsed_where=None, extra_unparsed=None,
+                         citekey_fallback=None):
     """变体对象列表 -> (entries, unparsed)。
 
     methods/results 共享的 materialize 段；theory 保留自己的 ``finalize_block``。
@@ -157,14 +158,23 @@ def materialize_variants(variants, *, slug: str, relpath: str, slot_for,
     - ``extra_note(v) -> str``         `.a/.b` 原文锚定条目 note（缺省 "原文锚定节"）；
     - ``unparsed_where(v) -> str``     空块待补录的「位置」列（缺省 `### 变体 <vid>`）；
     - ``extra_unparsed(v, unparsed)``  逐变体追加待补录（如 results 的槽位异常），
-      在空块待补录之后调用以保持既有行序。
+      在空块待补录之后调用以保持既有行序；
+    - ``citekey_fallback(v) -> str|None``  citekey 回退源（如速查表来源列），仅在
+      wb 标记与来源字段皆缺席时调用（不编造纪律的语料内回退）。
     """
     entries: list[Entry] = []
     unparsed: list[Unparsed] = []
     seq = 0
     for v in variants:
         slot = slot_for(v)
-        citekey = "/".join(dict.fromkeys(v.wb)) if v.wb else (v.src or "未标注")
+        if v.wb:
+            citekey = "/".join(dict.fromkeys(v.wb))
+        else:
+            citekey = v.src
+            if not citekey and citekey_fallback is not None:
+                citekey = citekey_fallback(v)
+            if not citekey:
+                citekey = "未标注"
         base = f"{slug}#{v.vid}"
 
         if v.primary_verbatim is not None and v.primary_verbatim.strip():
