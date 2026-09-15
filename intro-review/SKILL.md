@@ -94,7 +94,7 @@ metadata:
 1. 依 `../_shared/pass-contract.md` 产出六字段对齐：`exemplar_fidelity`、`posture`、`defense_budget`、`meta_language` 为必填（其中 `exemplar_fidelity` 逐段列底本 id：`corpus/_skeleton/<module>.md` 的 id，或明文 `self-drafted`）；`boundary_compliance` 指回项目故事契约（`paper-state.yaml` 的 `story` 与 `story.integrity`）的锁定边界清单；`expression` 指向既有单一源（`../write-introduction/references/water-level-gate.md` §五）。
 2. 先产出这六字段，再给审查总判。
 
-两条硬规则的唯一源见 `../_shared/pass-contract.md` §二；本文件只保留调用增量：先集齐六字段再落总判；`exemplar_fidelity` 给 PASS 时同步给出非空且可定位的逐段 id 列表。
+两条硬规则的唯一源见 `../_shared/pass-contract.md` §二；本文件只保留节别增量（Introduction 的逐字风格字段归本表 QC 列，语言层字段由本契约承接）与调用顺序增量：先集齐六字段再落总判；`exemplar_fidelity` 给 PASS 时同步给出非空且可定位的逐段 id 列表。
 
 选择理由：采用改法 (b)「显式声明语言层审查由 pass-contract 承接」而非改法 (a)「QC 表增列四字段」。六字段已以 `../_shared/pass-contract.md` 为唯一事实源，在 QC 表复制列会形成第二份定义、并与结构评分混淆；承接式只留指针，符合单一源纪律。
 

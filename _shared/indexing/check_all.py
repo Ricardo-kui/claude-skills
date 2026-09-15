@@ -287,6 +287,10 @@ def main(argv: list[str] | None = None) -> int:
                 REPO / "write-results")
         check(r.returncode == 0, f"validate_write_results.py exit 0 (got {r.returncode})")
 
+    print("\n== pass-contract ==")
+    r = run([sys.executable, "pass_contract_check.py"], REPO)
+    check(r.returncode == 0, f"pass_contract_check.py exit 0 (got {r.returncode})")
+
     print()
     if failures:
         print(f"INDEX DRIFT GATE FAILED ({len(failures)}):")

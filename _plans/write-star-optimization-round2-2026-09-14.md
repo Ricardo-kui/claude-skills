@@ -110,6 +110,8 @@
 - 每个 skill 跑一次真实生成（建议用第二个项目而非共同所有权，避免与已完成稿混淆），检查：是否有底本 id、覆盖率、段级来源可核、完成判据是否可布尔回答。
 - 把本轮审计的 P0 项各转成一条可重跑断言（methods 索引死角、validator 正则、三份 review 的字段对齐、write-introduction 的 lint）。
 
+> **执行记录（2026-09-15，终验残留收口）**：四条 P0 断言中三条已并入各自维护期脚本（methods 索引死角 = `validate_write_methods.py` 对账硬断言、validator 正则 `[0-9A-Z]+`、write-introduction 语言 lint = `lint_introduction_language.py`）；第四条「review 字段对齐」落地为根目录 `pass_contract_check.py`——契约侧三检（§一 六字段冻结集、§二 硬规则在位、§三 消费方表登记）+ 四出口四检（指针 / 节别增量声明 / 免本地字段定义 / 免漂移拼写），并接入 `_shared/indexing/check_all.py`（`== pass-contract ==` 节，维护期一次跑全）。首跑即抓到并修正一处真实词汇漂移（intro-review「调用增量」→「节别增量」，与契约 §三及另三出口统一）；负向验证：注入漂移拼写与删除增量声明均 FAIL。**三节真实生成验收仍未留痕**（theory/methods/results 各一次端到端，见 2026-09-15 终验报告），为 Batch 7 唯一未闭环项。
+
 ---
 
 ## 3. 依赖与顺序
