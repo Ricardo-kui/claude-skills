@@ -184,7 +184,7 @@ P2-P3 的功能：承认文献已有实质进展，但精确指出被遗漏的�
 **模板**:
 > A thorough study of [puzzle] is of great theoretical importance, contributing to [broad theoretical goal] ([citation]). Prior studies on [stream] have provided important insights into [tension] ([citations]). For example, researchers maintain that [mechanism 1] and have identified important factors that influence [outcome], such as [factor A], [factor B], and [factor C] ([citations]). However, [N] important issues in this sphere of research remain unaddressed.
 
-**来源**: Cui, Yang & Vertinsky (SMJ), P2
+**来源**: Cui, Yang & Vertinsky (SMJ), P2（待补年份）
 
 **原文锚定**:
 > "A thorough study of this 'collaboration–competition' relationship between partners is of great theoretical importance, contributing to the development of a more comprehensive model of inter-firm behavior rendered by strategic alliances (Kogut, 1989). Prior studies on alliance learning have provided some important insights into the tension between collaboration and competition... researchers maintain that competition within alliances stems from the misalignment of interests between allies... and have identified important factors that influence allies' competitive learning within alliances, such as asymmetric learning capabilities, the ratio between private and common interests, and knowledge similarities between allies... However, three important issues in this sphere of research remain unaddressed."

@@ -265,7 +265,7 @@ Inadequacy 问题化的核心 Tension：不是"文献遗漏了东西"，而是"�
 **模板**:
 > "Prior research has identified [X] as an important predictor of [Y], arguing that [X] contributes to [capability] ([citations]). While this argument has been widely accepted in [field], studies that empirically tested this proposition have revealed mixed or limited support ([citations]). These mixed findings raise several questions: [Q1 类型问：Are there distinctive types of ... that differentially impact ...?], [Q2 条件问：Are there certain conditions under which ...?], [Q3 行为者问：Which ... extract the most benefits ...?], [Q4 配对问：What types of ... are most desirable ...?]"
 
-**来源**: Gulati, Lavie & Singh (SMJ), P2
+**来源**: Gulati, Lavie & Singh 2009 (SMJ), P2（年份据 Gulati_Lavie_Singh_2009_SMJ pattern papers 补）
 
 **原文锚定**:
 > "While this argument has been widely accepted in strategic alliances research, studies that empirically tested this proposition have revealed mixed or limited support. These mixed findings raise several questions: Are there distinctive types of experience that differentially impact the gains from alliances?"

@@ -51,7 +51,7 @@ source: Original batch 1 extraction (former top-level corpus, old id "15-classic
 The debate between [Perspective A] and [Perspective B] is one of the most enduring in [field]. [Perspective A] holds that [core claim] ([citations]). Conversely, [Perspective B] contends that [core claim] ([citations]). Historically, this debate has been difficult to adjudicate because [empirical or methodological constraint]. However, [institutional change / regulatory reform / legal shift] now makes it possible to [test which perspective dominates under what conditions].
 ```
 
-**来源**: shareholder litigation & stakeholder orientation (SMJ), adapted
+**来源**: 未标注（待补——本 Hook 为经典辩论题设的自建改编，辩论主题：shareholder litigation & stakeholder orientation）
 
 **原文锚定**:
 > "A long-standing debate in corporate governance centers on two perspectives: the stakeholder view, which emphasizes considering the interests of all key stakeholders in a company, and the shareholder primacy view, which focuses on maximizing shareholder wealth... Specifically, realizing that business leaders shape their organizations' orientations over time in response to various institutional pressures, we explore what they might do if certain constraints were relaxed, allowing them greater flexibility in decision-making."

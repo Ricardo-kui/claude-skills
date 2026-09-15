@@ -6,6 +6,8 @@ created: 2026-07-14
 purpose: "句子级和短语级 transition 信号词速查，补充 module-level transitions/ 模板"
 ---
 
+<!-- 来源纪律（2026-09-15）：本卡为自建格式模板库（无单篇论文出处），索引 citekey=未标注 为设计使然，不作为待补缺陷。 -->
+
 # Transition Signals — 句子/短语级过渡信号词
 
 > 本文件提供句内和句间的逻辑连接信号词。与 `transitions/` 目录下的模块级 transition 模板不同：模块级模板处理段落功能转换（如 Hook→Literature Turn），本文件处理微观逻辑关系（如 因果、对比、递进）。

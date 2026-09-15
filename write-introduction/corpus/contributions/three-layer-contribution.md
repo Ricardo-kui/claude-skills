@@ -175,7 +175,7 @@ source: Distilled from Haunschild, Polidoro & Chandler (2015), Organization Scie
 **模板**:
 > "In addressing these questions concerning [the contested value of X], we extend prior research on [X→Y], thus advancing [field] and [theory] perspectives. Specifically, our framework extends recent research that has distinguished between [facet A] and [facet B] by theorizing on the relative contributions of these types of [X]. We question the premise that [facet B] offers limited value ([citations]) by furnishing evidence on some of its positive implications. We further advance [field] by uncovering boundary conditions under which [actors] can gain from [X], suggesting that [factor class 1], [factor class 2], and [factor class 3] affect [outcome]. Hence, our study elaborates on [the construct's facets] and reconciles some of the apparent contradictions in earlier empirical studies. It also contributes to [adjacent theory literature] by identifying [mechanism] as a key element of [theory's process chain]."
 
-**来源**: Gulati, Lavie & Singh (SMJ), P3
+**来源**: Gulati, Lavie & Singh 2009 (SMJ), P3（年份据 Gulati_Lavie_Singh_2009_SMJ pattern papers 补）
 
 **原文锚定**:
 > "We question the premise that partner-specific experience offers limited value by furnishing evidence on some of its positive implications. ... Hence, our study elaborates on the different facets of partnering experience and reconciles some of the apparent contradictions in earlier empirical studies."

@@ -745,7 +745,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 > Second, prior studies provide insights into [sub-topic 2] by focusing on [specific type] while overlooking [other types]. It is assumed that [assumption], but [counter-fact]. Few studies have yet examined how [composition/structure] affects [outcome 2].
 > Third, many prior studies have examined [tension] by focusing on [firm-level factors] while largely overlooking [network/context factors]. Only a few studies have analyzed [narrow network angle]. Yet the focus of these studies remains centered either on [outcome A] or on [outcome B]; the impact of [core mechanism] on [target outcome] has rarely been studied.
 
-**来源**: Cui, Yang & Vertinsky (SMJ), P3-P5
+**来源**: Cui, Yang & Vertinsky (SMJ), P3-P5（待补年份）
 
 **原文锚定**:
 > "First, while researchers have examined aggressive learning between allies... prior studies focused on the hazards of misappropriation within alliances; the effect of alliances on competition between partners in the realm of product markets remains poorly understood."

@@ -199,7 +199,7 @@ P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者
 > We maintain that increases in [IV] facilitate [mechanism 1] and [mechanism 2], increasing [DV]. However, there is a cost/benefit trade-off involved in [action]. As [IV] increases, [escalating cost 1] and [escalating cost 2] may reach a threshold at which the expected cost becomes higher than the expected benefit of [action]. We accordingly propose that [IV] demonstrates an [inverted U-shaped] relationship with [DV].
 > We further argue that [boundary mechanism] is bounded by [context]. [Factor 1], [factor 2], and [factor 3] create important boundary conditions that moderate the effect of [IV] on [DV] in different directions.
 
-**来源**: Cui, Yang & Vertinsky (SMJ), P8-P9
+**来源**: Cui, Yang & Vertinsky (SMJ), P8-P9（待补年份）
 
 **原文锚定**:
 > "We maintain that increases in the proportion of exploratory alliances within the collaborative portfolio between a firm and its partner facilitate identification of the partner's vulnerabilities and appropriation of its capacities, increasing the firm's incentive to launch competitive action against its partner. However, there is a cost/benefit trade-off involved in launching competitive attacks. As the proportion of exploratory alliances increases, the escalating damage to long-term benefits and the risk of 'tit-for-tat' retaliatory attacks from the partner may reach a threshold at which the expected cost becomes higher than the expected benefit of launching further competitive attacks. We accordingly propose that relative exploration demonstrates an inverted U-shaped relationship with a firm's product-market competition with its partner."
@@ -729,7 +729,7 @@ P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者
 **模板**:
 > "We proceed by analyzing the distinctive facets of [facet A] and [facet B]. The former refers to [definition A], which, in turn, may [mechanism A]. The latter encompasses [definition B], which may also [mechanism B]. We suggest that [gains from A] are limited because [non-fungibility reason]. We further claim that [X] sets an insufficient condition for [Y], and thus consider how the contribution of [B] is contingent on [moderator 1], [moderator 2], and [moderator 3]. To demonstrate [X] effects, we adopt [unit of analysis] as the unit of analysis, and following a widely used approach, we measure [DV operationalization] as an indication of [theoretical outcome]. We test our hypotheses with [sample scope]."
 
-**来源**: Gulati, Lavie & Singh (SMJ), P4
+**来源**: Gulati, Lavie & Singh 2009 (SMJ), P4（年份据 Gulati_Lavie_Singh_2009_SMJ pattern papers 补）
 
 **原文锚定**:
 > "We suggest that a firm's gains from general partnering experience are limited because some experience benefits are not completely fungible across all alliances and entail relation-specific factors that emerge only in recurrent alliances with specific partners."

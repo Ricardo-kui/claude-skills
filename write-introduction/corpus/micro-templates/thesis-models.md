@@ -9,6 +9,8 @@ status: EMERGING
 risk_level: needs-context
 created: 2026-07-28
 ---
+
+<!-- 来源纪律（2026-09-15）：本卡为自建格式模板库（无单篇论文出处），索引 citekey=未标注 为设计使然，不作为待补缺陷。 -->
 > 论证角色：**Claim**——中心论点定位模型；填位规则见 `_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
 
 # Thesis Models：中心论点的四种定位模型（G&L Ch06 收割）

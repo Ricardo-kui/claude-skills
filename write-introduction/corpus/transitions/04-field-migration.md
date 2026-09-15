@@ -45,7 +45,7 @@ source: Extracted from mayo2021 distill-introduction-exemplar
 **模板**:
 > "Although a substantial body of research in [source field] has examined [topic] ([citations]), relatively little is known about how [phenomenon] unfolds in [target field]. This is surprising because [reason why target field matters]. We address this gap by [approach]."
 
-**来源**: 通用模板，基于多个跨学科论文归纳
+**来源**: 通用模板（自建归纳，无单篇出处——待补）
 
 **关键特征**:
 - 先承认源学科的文献积累
