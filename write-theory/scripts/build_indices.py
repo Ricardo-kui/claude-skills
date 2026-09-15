@@ -312,6 +312,67 @@ def resolve_status(registry: dict[str, str], pattern_id: str | None,
     return "未标注"
 
 
+# ---------------------------------------------------------------- 速查表 ----
+
+QUICKREF_STATUS_RANK = {"ROBUST", "VERIFIED", "EMERGING"}
+
+
+def load_quickref_bindings(relpath: str) -> dict[str, tuple[str, str]]:
+    """「变体速查表」→ {变体号: (status, 来源列原文)}。
+
+    速查表绑定分支（2026-09-15）：状态列取首 token（仅 ROBUST/VERIFIED/EMERGING；
+    ``structural（协议型）`` 等非证据档不取）；来源取整格原文——语料手工证据，
+    诚实沿用、不编造机器 token。文件无速查表返回 {}。仅作机器可读来源缺席时的
+    回退源，优先级低于 pattern_id/wb/来源字段。
+    """
+    path = SKILL_ROOT / relpath
+    lines = path.read_text(encoding="utf-8").splitlines()
+    start = next((i for i, ln in enumerate(lines)
+                  if ln.strip().startswith("##") and "速查表" in ln), None)
+    if start is None:
+        return {}
+    end = next((i for i in range(start + 1, len(lines))
+                if lines[i].strip().startswith("## ")), len(lines))
+    header_cols: dict[str, int] = {}
+    out: dict[str, tuple[str, str]] = {}
+    for ln in lines[start + 1:end]:
+        s = ln.strip()
+        if not s.startswith("|"):
+            continue
+        cells = [c.strip() for c in s.strip("|").split("|")]
+        if all(set(c) <= {"-"} for c in cells):
+            continue
+        if any("状态" in c for c in cells) and any("来源" in c for c in cells):
+            header_cols = {c: k for k, c in enumerate(cells) if c in ("状态", "来源")}
+            continue
+        if "状态" not in header_cols or len(cells) <= max(header_cols.values(), default=0):
+            continue
+        vid = cells[0].strip()
+        if not vid or vid == "#":
+            continue
+        head = re.split(r"[（(]", cells[header_cols["状态"]])[0].strip().upper()
+        status = head if head in QUICKREF_STATUS_RANK else ""
+        citekey = cells[header_cols["来源"]].strip() if "来源" in header_cols else ""
+        out[vid] = (status, citekey)
+    return out
+
+
+def _quickref_bind(quickref: dict[str, tuple[str, str]] | None,
+                   title: str, status: str, citekey: str) -> tuple[str, str]:
+    """按节标题内的变体号绑定速查表 (status, 来源)；仅回退未标注字段。"""
+    if not quickref or (status != "未标注" and citekey != "未标注"):
+        return status, citekey
+    for key in sorted(quickref, key=len, reverse=True):
+        if re.search(rf"(?<![A-Za-z0-9]){re.escape(key)}(?![0-9A-Za-z])", title):
+            qs, qk = quickref[key]
+            if status == "未标注" and qs:
+                status = qs
+            if citekey == "未标注" and qk:
+                citekey = qk
+            break
+    return status, citekey
+
+
 # ---------------------------------------------------------------- records ----
 
 @dataclass
@@ -344,7 +405,8 @@ class Block:
 
 
 def finalize_block(b: Block, branch: str, relpath: str,
-                   registry: dict[str, str]) -> tuple[list[Entry], list[Unparsed]]:
+                   registry: dict[str, str],
+                   quickref: dict[str, tuple[str, str]] | None = None) -> tuple[list[Entry], list[Unparsed]]:
     entries: list[Entry] = []
     unparsed: list[Unparsed] = []
     base = b.pattern_id or (
@@ -360,6 +422,9 @@ def finalize_block(b: Block, branch: str, relpath: str,
 
     if not b.verbatim and not b.templates:
         return entries, unparsed
+
+    if status == "未标注" or citekey == "未标注":
+        status, citekey = _quickref_bind(quickref, b.title, status, citekey)
 
     for k, seg in enumerate(b.verbatim):
         suffix = chr(ord("a") + k)
@@ -514,6 +579,7 @@ def parse_variants(relpath: str, registry: dict[str, str],
     path = SKILL_ROOT / relpath
     lines = [ln.rstrip("\r") for ln in path.read_text(encoding="utf-8").splitlines()]
     p_tokens = _p_table_tokens(lines)
+    quickref = load_quickref_bindings(relpath)
     entries: list[Entry] = []
     unparsed: list[Unparsed] = []
 
@@ -637,7 +703,7 @@ def parse_variants(relpath: str, registry: dict[str, str],
                 j = nj if nj is not None else j + 1
                 continue
             j += 1
-        e, u = finalize_block(cur, "variants", relpath, registry)
+        e, u = finalize_block(cur, "variants", relpath, registry, quickref)
         entries += e
         unparsed += u
 
@@ -678,6 +744,7 @@ def parse_variants_branch4(relpath: str, registry: dict[str, str],
     """
     path = SKILL_ROOT / relpath
     lines = [ln.rstrip("\r") for ln in path.read_text(encoding="utf-8").splitlines()]
+    quickref = load_quickref_bindings(relpath)
     entries: list[Entry] = []
     unparsed: list[Unparsed] = []
     cur: Block | None = None
@@ -702,7 +769,7 @@ def parse_variants_branch4(relpath: str, registry: dict[str, str],
         m = SENT_BLOCK_HDR_RE.match(s)
         if m:
             if cur is not None:
-                e, u = finalize_block(cur, "variants4", relpath, registry)
+                e, u = finalize_block(cur, "variants4", relpath, registry, quickref)
                 entries += e
                 unparsed += u
             title = m.group(1).strip()
@@ -735,7 +802,7 @@ def parse_variants_branch4(relpath: str, registry: dict[str, str],
             continue
         i += 1
     if cur is not None:
-        e, u = finalize_block(cur, "variants4", relpath, registry)
+        e, u = finalize_block(cur, "variants4", relpath, registry, quickref)
         entries += e
         unparsed += u
     return entries, unparsed
