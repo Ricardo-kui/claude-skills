@@ -164,3 +164,7 @@ __pycache__/
 # Shared runtime assets (Batch 4/5/6)
 !_shared/
 !_shared/**
+
+# Third-party skill: GB/T 9704 official document formatting (vendored from mizzlelover/gongwen-gbt9704-skill)
+!gongwen/
+!gongwen/**
