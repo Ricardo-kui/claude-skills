@@ -35,6 +35,6 @@
 
 ## 现有资产与边界
 
-- Zhou 已有 v0.4 reviewed card：`v4/blueprints/zhou2017-state-ownership.md`。
+- Zhou 已有 v0.4 reviewed card：`../blueprints/zhou2017-state-ownership.md`。
 - Wowak 现有 v0.3 全区段蓝图与 Introduction / Theory / Methods / Results 蒸馏，可支撑选题；但尚未经过 v0.4 的独立 `story_reading` 与 `story_assessment` 复核。
 - 因此，下一步不是将 Wowak 直接标成 exemplar，而是以这五个问题完成 v0.4 复读后，再决定它应标为 `exemplar`、`partial_exemplar` 还是 `contrastive_case`。

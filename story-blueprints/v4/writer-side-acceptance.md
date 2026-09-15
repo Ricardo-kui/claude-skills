@@ -2,7 +2,7 @@
 
 > **本版状态**：检索脚本语义修正 + Tier fallback + 标签归一 + 退化 tier 护栏 + `--explain` 落地后复测（方案 §P1-4 / Batch 3）。
 > **口径**：以下 Case A/B/C 的预期一律改写为**本机实测行为**（命令见文末）。原 `writer-side-abstain` 期望空结果已过时；`writer-side-fini` 经标签归一后重新命中 Fini。
-> **契约口径**：`story-blueprints/references/retrieval-contract.md` 的 **1 primary + 1 contrast 上限**与**每结果四要素**（matching reason / one learnable move / one non-transferable condition / one comparison question）保持不动；脚本产前三项，第四项 comparison question 由消费 skill 按 `v4/rhetoric-moves/_immediate-exemplar-protocol.md` step 3 产出。
+> **契约口径**：`story-blueprints/references/retrieval-contract.md` 的 **1 primary + 1 contrast 上限**与**每结果四要素**（matching reason / one learnable move / one non-transferable condition / one comparison question）保持不动；脚本产前三项，第四项 comparison question 由消费 skill 按 `./rhetoric-moves/_immediate-exemplar-protocol.md` step 3 产出。
 
 ## 验收范围
 
@@ -39,7 +39,7 @@
 
 ### 临时请求与实测行为
 
-- Request：`tests/fixtures/writer-side-zhou-request.json`
+- Request：`../tests/fixtures/writer-side-zhou-request.json`
 - 实测返回 2 条（仍与 story gate 相符）：
   1. `zhou2017` — `tier=1`，`relaxed=[]`，`suitable=yes`，`validation=known`，`unmet_conditions=[]`；`signals_hit.narrative_dynamics=[clarify-theme, establish-genuine-tension, theory-as-rising-action]`、`theoretical_problem_form=[competing-explanations, mixed-evidence]`。
   2. `ridge2013` — `tier=1`，`relaxed=[]`，`suitable=yes`，`validation=known`，`unmet_conditions=[theory-domain-shift]`；`signals_hit.theoretical_problem_form=[competing-explanations, mixed-evidence]`。
@@ -69,7 +69,7 @@
 
 ### 临时请求与实测行为
 
-- Request：`tests/fixtures/writer-side-fini-request.json`
+- Request：`../tests/fixtures/writer-side-fini-request.json`
 - 标签归一：请求侧 `theoretical_problem_form=cross-audience-partial-incommensurability` 经 `references/tag-normalization.yaml` 归一到卡侧 `cross-audience-partial-criterion-overlap`；两侧再求精确交集（无 embedding/语义/子串）。
 - 实测返回 2 条（**主学习对象恢复为 Fini**）：
   1. `fini2017-social-valuation` — `tier=1`，`relaxed=[]`，`suitable=yes`，`validation=known`，`unmet_conditions=[]`，`score=70`；`signals_hit.theoretical_problem_form=[cross-audience-partial-criterion-overlap]`、`narrative_dynamics=[]`、`retrieval_signals=[]`。
@@ -101,7 +101,7 @@
 
 ### 临时请求与实测行为
 
-- Request：`tests/fixtures/writer-side-abstain-request.json`
+- Request：`../tests/fixtures/writer-side-abstain-request.json`
 - 实测返回 2 条（**脚本不弃权**）：
   1. `moon2026-trade-secret-protection-advertising` — `tier=1`，`relaxed=[]`，`suitable=yes`，`validation=unknown`，`unmet_conditions=[]`，`score=70`；`signals_hit.theoretical_problem_form=[incompleteness]`。
   2. `zhou2017` — `tier=1`，`relaxed=[]`，`suitable=yes`，`validation=unknown`，`unmet_conditions=[genuine-theory-conflict, same-causal-process-facets]`，`score=25`；`signals_hit.narrative_dynamics=[clarify-theme]`。

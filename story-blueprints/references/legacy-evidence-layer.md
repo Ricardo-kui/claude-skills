@@ -5,8 +5,8 @@ The 59 v0.3 blueprints are a read-only evidence layer. Their sole growth functio
 ## Authority and use
 
 - `blueprints/*.md` remains unchanged historical source material.
-- `legacy/legacy-manifest.json` is a generated, read-only derivative. Rebuild it with `scripts/build_legacy_manifest.py`; do not edit it by hand.
-- `legacy/legacy-overrides.yaml` is the only place to add human-verified fields that v0.3 did not encode. To mark an item `candidate`, add a `seed_relations` record naming the v0.4 seed and the comparison question.
+- `../legacy/legacy-manifest.json` is a generated, read-only derivative. Rebuild it with `scripts/build_legacy_manifest.py`; do not edit it by hand.
+- `../legacy/legacy-overrides.yaml` is the only place to add human-verified fields that v0.3 did not encode. To mark an item `candidate`, add a `seed_relations` record naming the v0.4 seed and the comparison question.
 - `scripts/query_legacy_candidates.py` supports discovery for comparison and re-reading. Its output is never a writing recommendation and always has `runtime_eligibility: no`.
 - Only a full v0.4 re-reading can change an item's `migration_status` to `reviewed` or make an item eligible for runtime retrieval.
 

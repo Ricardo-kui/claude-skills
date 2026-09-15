@@ -1,6 +1,6 @@
 # Story Blueprints 索引
 
-> 历史索引。状态列已翻译为 `legacy_coverage_confidence`：`claimed_complete` = v0.3 声称四区段蒸馏覆盖；`claimed_partial` = 声称部分覆盖。它们不是叙事质量评价、范文资格或运行时推荐许可。新增旧 blueprint 时更新本索引与 `legacy/legacy-manifest.json`，但不得将其接入 write-*。
+> 历史索引。状态列已翻译为 `legacy_coverage_confidence`：`claimed_complete` = v0.3 声称四区段蒸馏覆盖；`claimed_partial` = 声称部分覆盖。它们不是叙事质量评价、范文资格或运行时推荐许可。新增旧 blueprint 时更新本索引与 `../legacy/legacy-manifest.json`，但不得将其接入 write-*。
 
 | id | 论文 | 蒸馏覆盖 | 旧 knot 主型（historical interpretation） | legacy_coverage_confidence | 待补字段 |
 |----|------|---------|-----------|------|---------|

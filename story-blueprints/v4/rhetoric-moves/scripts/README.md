@@ -23,7 +23,7 @@ rhetoric-moves 相关脚本位于上一级 `story-blueprints/scripts/`：
 py ../story-blueprints/scripts/retrieve_exemplars.py --request <临时 JSON>
 ```
 
-该相对路径以**调用方 skill 目录**为基准。例如从 `write-introduction/` 目录调用时，`../story-blueprints/scripts/` 解析为 `skills/story-blueprints/scripts/`。从本目录（`story-blueprints/v4/rhetoric-moves/scripts/`）出发时，正确路径是 `scripts/retrieve_exemplars.py`。
+该相对路径以**调用方 skill 目录**为基准。例如从 `write-introduction/` 目录调用时，`../story-blueprints/scripts/` 解析为 `skills/story-blueprints/scripts/`。从本目录（`story-blueprints/v4/rhetoric-moves/scripts/`）出发时，正确路径是 `../../../scripts/retrieve_exemplars.py`。
 
 ## 维护约定
 

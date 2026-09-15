@@ -47,4 +47,4 @@ narrative_analysis/theory/mvp30/fine_grained/batch_2026-07-09/common_ownership_c
 _story_arcs/keeves2017_ingratiation_resentment_asq_story_arc.md | Vault 资产：真身 D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/_story_arcs/keeves2017_ingratiation_resentment_asq_story_arc.md；vault 与本仓库物理分离，本仓库不可能有
 narrative_analysis/ | Vault 资产：真身 D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/；vault 报告根目录，本仓库不可能有
 _story_arcs/ | Vault 资产：真身 D:/OneDrive/Obsidian Vault/00 工作台/叙述模板训练集/narrative_analysis/_story_arcs/；vault 早期故事弧资产目录，本仓库不可能有
-skills/story-blueprints/scripts/ | workspace 根相对路径：以工作区根（本仓库根的上一级）为基准解析，本仓库根即 skills/ 故相对本仓库不存在；示例串出处 story-blueprints/v4/rhetoric-moves/scripts/README.md:26 的路径基准说明
+skills/story-blueprints/scripts/ | 示例串：以调用方 skill 目录为基准时，`../story-blueprints/scripts/` 从 write-introduction/ 调用解析为工作区根下的 skills/story-blueprints/scripts/（本仓库根即 skills/，故该工作区根相对串在本仓库不存在）；非本仓库相对路径，出处 story-blueprints/v4/rhetoric-moves/scripts/README.md:26
