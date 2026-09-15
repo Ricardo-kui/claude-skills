@@ -282,6 +282,19 @@ python _update_design_feedback.py skill_design_feedback.yaml
 5. 任一验证失败，使用 `apply_patch` 撤回本轮自己的核心修改，保留缺陷记录为 `needs_revision`。
 6. 全部通过后，在注册表记录实际修改目标、`rule_excerpt_after`、旧规则是否应消失、验证结果和日期；更新脚本须在目标文件中核验新规则片段后才允许标记 `resolved`。共享 Junction 自动同步到 Claude Code。
 
+## Phase 4 收尾 — 骨架索引回填（2026-09-15 起）
+
+写回只更新 corpus 与选材索引；写作期检索的底本来源是骨架索引，必须重建回填，否则新变体
+对写作期不可见：
+
+```bash
+python ~/.claude/skills/write-introduction/scripts/build_indices.py
+```
+
+- `write-introduction` 的 CardParser 自动 glob 各模块目录，新文件**免登记**轴表；重建后跑
+  `python ~/.claude/skills/_shared/indexing/check_all.py`（theory/methods/results 三库漂移
+  门）确认全绿再收尾。
+
 ## Phase 4 收尾 — 回写后语料体检
 
 回写完成后运行 skills 根目录的体检脚本：

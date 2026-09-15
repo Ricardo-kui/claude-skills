@@ -46,7 +46,7 @@ Phase 4 输出的每条 `action != SKIP` 指令渲染为「待写入预览块」
 
 ```markdown
 ### 待写入 #N：[action] → [target_file] [slot]（[skeleton_id]）
-- **来源论文**: [source_paper]
+- **来源论文**: [Author Year (VENUE)——年份必填；wb 标记缺席时这是唯一 citekey 来源]
 - **插入位置**: [insert_after / 同 slot 变体列表中的位置]
 - **区别于**: [distinct_from——确认与最近变体的一句区分是否准确]
 - **理由**: [reason]
@@ -101,6 +101,21 @@ critique_updates:
 
 - 脚本累加 `revise/reject`、更新 `last_critique`、去重追加 `common_revise_reasons`（最多 8 条），输出信号（quiet/critique_heavy）供下一轮 Phase 0.75 选材。
 - 不登记满意信号、不设淘汰逻辑——语义见 registry `meta.usage_stats_schema`。
+
+## Phase 4 收尾 — 骨架索引回填（2026-09-15 起）
+
+写回只更新 corpus 与选材索引；写作期检索的底本来源是 `corpus/_skeleton/` 骨架子清单，
+必须重建回填，否则新变体对写作期不可见：
+
+```bash
+python ~/.claude/skills/write-results/scripts/build_indices.py
+```
+
+- plan 含 `new_file`（create_new_file）项：先在 `write-results/scripts/build_indices.py`
+  的 `FAMILIES` 轴表登记该文件再重建（`_shared/indexing/check_all.py` 的 Check-R 会拦截
+  未登记新文件）。
+- 收尾判据：`python ~/.claude/skills/_shared/indexing/check_all.py` 全绿（重建产物与
+  corpus 同批提交）。
 
 ## Phase 4 收尾 — 回写后语料体检
 

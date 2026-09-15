@@ -33,6 +33,16 @@ Index checks per target:
                    -> info only. Index present, row missing -> residual
                    index_no_row.
 
+Post-writeback follow-ups (informational, never FAIL):
+  V6 rebuild       plan touched corpus -> rebuild the skill's corpus/_skeleton/
+                   via its scripts/build_indices.py (writing-time retrieval
+                   reads the skeleton sublists; curation-index sync is NOT
+                   skeleton sync). Items scaffolded via new_file additionally
+                   remind to register the file in the skill's build_indices
+                   axis table first (methods/results FAMILIES; theory
+                   VARIANT_FILES/SUBPROTOCOL_FILES/SENTENCE_FILES;
+                   introduction auto-globs).
+
 Residuals (never FAILs — they are expected outputs of known schema gaps) are
 written to --residuals-out (default: writeback_residuals.yaml next to the
 first plan) so a single downstream sync pass can consume them. Residual-writing
@@ -182,6 +192,7 @@ def main() -> int:
         section = plan.get("section", Path(plan_path).stem)
         corpus_root = Path(plan["corpus_root"])
         schema = corpus_schema(corpus_root)
+        touched = False
         for item in plan.get("items", []):
             name = item["name"]
             # SKIP-verdict items are REFUSED by the executor by design (dedup
@@ -199,9 +210,17 @@ def main() -> int:
             if target is None and item.get("new_file"):
                 # create_new_file items: the module was scaffolded at apply time
                 target = corpus_root / item["new_file"]
+            if item.get("new_file"):
+                add("INFO", "V6",
+                    f"{section}:{name} -> {item['new_file']} is a NEW corpus "
+                    f"file: register it in the skill's build_indices axis table "
+                    f"(methods/results FAMILIES; theory VARIANT_FILES/"
+                    f"SUBPROTOCOL_FILES/SENTENCE_FILES; introduction auto-globs) "
+                    f"before rebuilding _skeleton/")
             if not block_text or target is None:
                 add("SKIP", "V1", f"{section}:{name} — no block_text or no target; not verifiable")
                 continue
+            touched = True
             text = target.read_text(encoding="utf-8")
             n = len(cw.body_similarity_pattern(block_text).findall(text))
             if n == 1:
@@ -308,6 +327,13 @@ def main() -> int:
                     "stem": target.stem, "item": name,
                     "hint": f"sync pass: add row mentioning {target.stem} to "
                             f"{idx_files[0].name}"})
+
+        if touched:
+            add("INFO", "V6",
+                f"{section}: corpus changed — rebuild this skill's "
+                f"corpus/_skeleton/ (python <skill>/scripts/build_indices.py) "
+                f"so writing-time retrieval sees the new blocks; run "
+                f"_shared/indexing/check_all.py as the closing gate")
 
     for rp, text in registry_texts.items():
         if not text:

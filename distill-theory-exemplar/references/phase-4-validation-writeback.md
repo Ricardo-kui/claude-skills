@@ -240,6 +240,7 @@ phase_4_corpus_reference:
 **索引/路由表同步（2026-08-09 闭环补丁）**：写入 corpus 文件后，必须同步：
 1. `write-theory/corpus/meta/routing_table.md`——若新增了理论构建变体类型或路由分支，更新路由表（Gap × 贡献杠杆 → 变体映射）；追加变体不改变路由时不强制
 2. `write-theory/corpus/_index.md`——新增/更新模式条目（变体类型、验证状态）。`_index` 与 routing_table 是选材 Gate 的读入源，不同步会导致下轮选材看不到新变体。索引行格式遵守 `../../distill-paper-exemplar/references/band-vocab.md` 路由行胶囊规范（只复述正文已有内容、要点 ≤4 条、压缩不得改变路由判断）。
+3. `write-theory/corpus/variants/*.md` 顶部「变体速查表」——**仅当新增编号变体**（`### 变体 X`）或新变体文件时同步：追加行（`#` 接号，家族/适用场景/状态/来源按正文如实填，出处不明标「未标注（待补）」）或为该文件建表；写回的 pattern 块（`### <English title>` + pattern_id 注释）**不占速查表行**（其来源由 wb 注释携带）。速查表是骨架索引 citekey/status 的回退绑定源，与正文漂移会造成绑定静默失效。
 
 ## Phase 4.7 — Write-Theory 技能设计反馈
 
@@ -253,6 +254,21 @@ phase_4_corpus_reference:
 6. 修订后完成 quick validation、结构检查、双回归和隔离前向测试；`applied` resolution 还必须记录目标中可逐字核验的 `rule_excerpt_after`，并在适用时声明旧绝对规则已经消失，之后才可关闭缺陷。
 
 `corpus_enrichment` 回答“需要增加什么写作资产”；`skill_design_feedback` 回答“当前技能规则是否错误”。两者不得互相替代。
+
+## Phase 4 收尾 — 骨架索引回填（2026-09-15 起）
+
+写回只更新 corpus 与选材索引；写作期借句检索的底本来源是 `corpus/_skeleton/` 22 个骨架子清单
+（底本 id 只取自子清单），必须重建回填，否则新变体对写作期不可见：
+
+```bash
+python ~/.claude/skills/write-theory/scripts/build_indices.py
+```
+
+- plan 含 `new_file`（create_new_file）项：先在 `write-theory/scripts/build_indices.py`
+  的 `VARIANT_FILES`/`SUBPROTOCOL_FILES`/`SENTENCE_FILES` 轴表登记该文件再重建
+  （`_shared/indexing/check_all.py` 的 Check-R 会拦截未登记新文件）。
+- 收尾判据：`python ~/.claude/skills/_shared/indexing/check_all.py` 全绿（重建产物与
+  corpus 同批提交）。
 
 ## Phase 4 收尾 — 回写后语料体检
 
