@@ -7,10 +7,6 @@ Extracts *verbatim* original-sentence anchors and *fill-in templates* from the
 corpus ``.md`` files and writes them ONLY under ``corpus/_skeleton/``.  Every
 other consumer must reference these entries by ``id`` and must not copy text.
 
-Adapted from the write-results pilot (``write-results/scripts/build_indices.py``).
-Differences from the results pilot are recorded below AND written into every
-generated file header.
-
 Methods-specific extraction rules
 ---------------------------------
 verbatim  = 卡片里带引号/缩进的完整英文原句（有明确来源论文），逐字保留：
@@ -51,11 +47,20 @@ CLI
 --verify       verify verbatim byte-for-byte in source + anchor headings exist.
 --sample N     also print N evenly-spaced verbatim entries with their source-hit.
 --quiet        only print the summary.
+
+Shared engine (2026-09-15)
+--------------------------
+工具层 / Entry·Unparsed / materialize / verify 回源与抽样 / 渲染原语 / 写盘 /
+CLI 骨架已下沉到 ``_shared/indexing/indexing_engine.py``（唯一一份）；本适配器
+只保留 write-methods 特异的：FAMILIES 设计类型表、三种变体标题（含不编号
+``U<n>`` 与 EXTEND ``<父>x<n>`` 合成 id）、bracket/bullet-bold 字段形态、
+M/Q 槽位机制、二级清单/路由页模板文本、``_heading_for`` 顺序重放式锚点校验。
+「342 变体计数」对账仍在外部 ``validate_write_methods.py``（生成器/校验器
+职责边界不变）。
 """
 
 from __future__ import annotations
 
-import argparse
 import re
 import sys
 from dataclasses import dataclass, field
@@ -65,7 +70,14 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 SKILL_ROOT = SCRIPT_DIR.parent
 CORPUS = SKILL_ROOT / "corpus"
 SKELETON = CORPUS / "_skeleton"
-MAX_LINES = 400
+
+SHARED = SKILL_ROOT.parent / "_shared" / "indexing"
+sys.path.insert(0, str(SHARED))
+
+import indexing_engine as eng  # noqa: E402
+from indexing_engine import Entry, Unparsed  # noqa: E402
+
+MAX_LINES = eng.MAX_LINES
 
 # ---------------------------------------------------------------- config ----
 
@@ -181,24 +193,9 @@ BULLET_SKELETON_RE = re.compile(
 
 M_TOKEN_RE = re.compile(r"\bM(?:2\.5|10|[1-9])\b")
 Q_TOKEN_RE = re.compile(r"\bQ([1-8])\b")
+SLOT_CELL_RE = re.compile(r"^(M(?:2\.5|10|[1-9])|Q[1-8])$")
 
-ANNOTATION_RE = re.compile(r"[\u4e00-\u9fff\u3000-\u303f\uff00-\uffef]")
-
-
-def normalize(text: str) -> str:
-    return " ".join(text.replace("\t", " ").split())
-
-
-def is_english(text: str) -> bool:
-    letters = sum(1 for ch in text if ch.isascii() and ch.isalpha())
-    return letters >= 15
-
-
-def strip_outer_quotes(text: str) -> str:
-    t = text.strip()
-    if len(t) >= 2 and t[0] in "\"'“「" and t[-1] in "\"'”」":
-        return t[1:-1].strip()
-    return t
+KIND_NOTES = {"num": "", "unnum": "不编号变体", "extend": "EXTEND子变体"}
 
 
 def extract_trailing_citekey(text: str) -> str | None:
@@ -211,38 +208,7 @@ def extract_trailing_citekey(text: str) -> str | None:
     return m.group(1).strip() if m else None
 
 
-def trim_annotation(text: str) -> str:
-    """Cut a trailing Chinese/fullwidth annotation glued to an English quote."""
-    m = ANNOTATION_RE.search(text)
-    if m:
-        text = text[: m.start()]
-    return text.strip().strip("\"'“”「」").strip()
-
-
 # ------------------------------------------------------------- records -----
-
-
-@dataclass
-class Entry:
-    id: str
-    slot: str
-    citekey: str
-    text: str
-    path: str          # corpus-relative, e.g. corpus/面板数据-OLS.md
-    anchor: str        # 变体-<vid>
-    status: str        # "verbatim" | "模板"
-    note: str = ""
-    vid: str = ""
-    seq: int = 0
-
-
-@dataclass
-class Unparsed:
-    card: str
-    path: str
-    where: str
-    text: str
-    reason: str
 
 
 @dataclass
@@ -308,49 +274,7 @@ def _slot_group_label(key: str) -> str:
     return "通用"
 
 
-VARIANT_TOKEN_RE = re.compile(r"^(?:[0-9]+|[A-Z]+)$")
-
-
-def build_slot_table(lines: list[str]) -> dict[str, str]:
-    """Map variant id -> slot label from the file's 槽位分布 table.
-
-    Fallback only: used when a variant has no ``**槽位**`` / ``[适用槽位]``
-    field.  First cell must be exactly ``M1..M10``/``M2.5``/``Q1..Q8``; the
-    last cell lists numbered/lettered variant ids (short CJK labels such as
-    ``RDiT``/``局部断点`` are ignored — unnumbered variants carry their own
-    ``[适用槽位]`` field).
-    """
-    table: dict[str, str] = {}
-    for line in lines:
-        s = line.strip()
-        if not s.startswith("|"):
-            continue
-        cells = [c.strip() for c in s.strip("|").split("|")]
-        if len(cells) < 3:
-            continue
-        m = re.match(r"^(M(?:2\.5|10|[1-9])|Q[1-8])$", cells[0])
-        if not m:
-            continue
-        slot_label = m.group(1)
-        for token in re.split(r"[,，、;；\s]+", cells[-1]):
-            token = re.sub(r"[（(].*$", "", token).strip()
-            if VARIANT_TOKEN_RE.match(token):
-                table[token] = slot_label
-    return table
-
-
 # ------------------------------------------------------------- parsing -----
-
-
-def _collect_fence(lines: list[str], start: int) -> dict:
-    """Collect a ``` ... ``` code fence starting at ``start``."""
-    text_parts: list[str] = []
-    j = start + 1
-    while j < len(lines) and not lines[j].strip().startswith("```"):
-        if lines[j].strip():
-            text_parts.append(lines[j].strip())
-        j += 1
-    return {"text": " ".join(text_parts), "end": j}
 
 
 def _collect_skeleton_prose(lines: list[str], start: int) -> tuple[str, int]:
@@ -381,7 +305,7 @@ def parse_file(family: dict[str, str]) -> tuple[list[Entry], list[Unparsed], int
                                  text="", reason=f"读取失败: {exc}"))
         return entries, unparsed, 0, 0, 0
 
-    slot_table = build_slot_table(lines)
+    slot_table = eng.build_slot_table(lines, SLOT_CELL_RE, min_cells=3)
 
     variants: list[Variant] = []
     cur: Variant | None = None
@@ -449,8 +373,8 @@ def parse_file(family: dict[str, str]) -> tuple[list[Entry], list[Unparsed], int
             continue
         bm = BRACKET_VERBATIM_RE.match(s)
         if bm:
-            seg = trim_annotation(strip_outer_quotes(bm.group(1)))
-            if seg and is_english(seg):
+            seg = eng.trim_annotation(eng.strip_outer_quotes(bm.group(1)))
+            if seg and eng.is_english(seg):
                 cur.primary_verbatim = seg
             i += 1
             continue
@@ -459,12 +383,12 @@ def parse_file(family: dict[str, str]) -> tuple[list[Entry], list[Unparsed], int
             cur.skeleton_seen = True
             inline = bm.group(1).strip()
             if inline:
-                cur.templates.append(normalize(strip_outer_quotes(inline)))
+                cur.templates.append(eng.normalize(eng.strip_outer_quotes(inline)))
                 i += 1
                 continue
             text, j = _collect_skeleton_prose(lines, i + 1)
-            if text and is_english(text):
-                cur.templates.append(normalize(text))
+            if text and eng.is_english(text):
+                cur.templates.append(eng.normalize(text))
             i = j
             continue
 
@@ -481,8 +405,8 @@ def parse_file(family: dict[str, str]) -> tuple[list[Entry], list[Unparsed], int
             continue
         bm = BULLET_PRIMARY_VERBATIM_RE.match(s)
         if bm:
-            seg = trim_annotation(strip_outer_quotes(bm.group(1)))
-            if seg and is_english(seg):
+            seg = eng.trim_annotation(eng.strip_outer_quotes(bm.group(1)))
+            if seg and eng.is_english(seg):
                 cur.primary_verbatim = seg
             i += 1
             continue
@@ -493,8 +417,8 @@ def parse_file(family: dict[str, str]) -> tuple[list[Entry], list[Unparsed], int
                 ck = extract_trailing_citekey(raw)
                 if ck:
                     cur.src = ck
-            seg = trim_annotation(strip_outer_quotes(raw))
-            if seg and is_english(seg):
+            seg = eng.trim_annotation(eng.strip_outer_quotes(raw))
+            if seg and eng.is_english(seg):
                 cur.extra_verbatim.append(seg)
             i += 1
             continue
@@ -503,7 +427,7 @@ def parse_file(family: dict[str, str]) -> tuple[list[Entry], list[Unparsed], int
             cur.skeleton_seen = True
             inline = bm.group(1).strip()
             if inline:
-                cur.templates.append(normalize(strip_outer_quotes(inline)))
+                cur.templates.append(eng.normalize(eng.strip_outer_quotes(inline)))
             i += 1
             continue
 
@@ -515,7 +439,7 @@ def parse_file(family: dict[str, str]) -> tuple[list[Entry], list[Unparsed], int
             continue
         fm = PRIMARY_VERBATIM_RE.match(s)
         if fm:
-            vtext = strip_outer_quotes(fm.group(1)).strip()
+            vtext = eng.strip_outer_quotes(fm.group(1)).strip()
             if vtext:
                 cur.primary_verbatim = vtext
             i += 1
@@ -524,8 +448,8 @@ def parse_file(family: dict[str, str]) -> tuple[list[Entry], list[Unparsed], int
         if fm:
             inline = fm.group(1).strip()
             if inline:
-                seg = trim_annotation(strip_outer_quotes(inline))
-                if seg and is_english(seg):
+                seg = eng.trim_annotation(eng.strip_outer_quotes(inline))
+                if seg and eng.is_english(seg):
                     cur.extra_verbatim.append(seg)
                 i += 1
                 continue
@@ -534,8 +458,8 @@ def parse_file(family: dict[str, str]) -> tuple[list[Entry], list[Unparsed], int
                 while j < len(lines) and lines[j].strip().startswith(">"):
                     body = lines[j].strip()[1:].strip()
                     if body:
-                        seg = trim_annotation(strip_outer_quotes(body))
-                        if seg and is_english(seg):
+                        seg = eng.trim_annotation(eng.strip_outer_quotes(body))
+                        if seg and eng.is_english(seg):
                             cur.extra_verbatim.append(seg)
                     j += 1
                 i = j
@@ -552,7 +476,7 @@ def parse_file(family: dict[str, str]) -> tuple[list[Entry], list[Unparsed], int
             cur.skeleton_seen = True
             inline = fm.group(1).strip()
             if inline:
-                cur.templates.append(normalize(strip_outer_quotes(inline)))
+                cur.templates.append(eng.normalize(eng.strip_outer_quotes(inline)))
                 i += 1
                 continue
             if i + 1 < len(lines) and lines[i + 1].strip().startswith(">"):
@@ -560,18 +484,18 @@ def parse_file(family: dict[str, str]) -> tuple[list[Entry], list[Unparsed], int
                 j = i + 1
                 while j < len(lines) and lines[j].strip().startswith(">"):
                     body = lines[j].strip()[1:].strip()
-                    body = strip_outer_quotes(body)
+                    body = eng.strip_outer_quotes(body)
                     if body:
                         chunks.append(body)
                     j += 1
                 if chunks:
-                    cur.templates.append(normalize(" ".join(chunks)))
+                    cur.templates.append(eng.normalize(" ".join(chunks)))
                 i = j
                 continue
             if i + 1 < len(lines) and lines[i + 1].strip().startswith("```"):
-                fence = _collect_fence(lines, i + 1)
+                fence = eng.collect_fence(lines, i + 1)
                 if fence["text"]:
-                    cur.templates.append(normalize(fence["text"]))
+                    cur.templates.append(eng.normalize(fence["text"]))
                 i = fence["end"] + 1
                 continue
             i += 1
@@ -579,9 +503,9 @@ def parse_file(family: dict[str, str]) -> tuple[list[Entry], list[Unparsed], int
 
         # --- code fences inside a variant（SEM 族等）---------------------
         if s.startswith("```"):
-            fence = _collect_fence(lines, i)
+            fence = eng.collect_fence(lines, i)
             if fence["text"]:
-                cur.templates.append(normalize(fence["text"]))
+                cur.templates.append(eng.normalize(fence["text"]))
             i = fence["end"] + 1
             continue
 
@@ -590,73 +514,27 @@ def parse_file(family: dict[str, str]) -> tuple[list[Entry], list[Unparsed], int
     if cur is not None:
         variants.append(cur)
 
-    # --- materialize entries ----------------------------------------------
-    seq = 0
-    n_num = 0
-    n_unnum = 0
-    n_extend = 0
-    for v in variants:
-        if v.kind == "num":
-            n_num += 1
-        elif v.kind == "unnum":
-            n_unnum += 1
-        else:
-            n_extend += 1
+    # --- materialize entries（共享引擎；methods 特异钩子 = kind note/标题列）--
+    n_num = sum(1 for v in variants if v.kind == "num")
+    n_unnum = sum(1 for v in variants if v.kind == "unnum")
+    n_extend = sum(1 for v in variants if v.kind == "extend")
 
-        slot = normalize_slot(v.slot_raw) if (v.slot_raw and v.slot_raw.strip()) else \
-            normalize_slot(slot_table.get(v.vid))
-        citekey = "/".join(dict.fromkeys(v.wb)) if v.wb else (v.src or "未标注")
-        base = f"{slug}#{v.vid}"
-        kind_note = {"num": "", "unnum": "不编号变体", "extend": "EXTEND子变体"}[v.kind]
+    def slot_for(v: Variant) -> str:
+        if v.slot_raw and v.slot_raw.strip():
+            return normalize_slot(v.slot_raw)
+        return normalize_slot(slot_table.get(v.vid))
 
-        if v.primary_verbatim is not None and v.primary_verbatim.strip():
-            vtext = v.primary_verbatim.strip()
-            if is_english(vtext):
-                seq += 1
-                entries.append(Entry(
-                    id=base, slot=slot, citekey=citekey, text=normalize(vtext),
-                    path=relpath, anchor=f"变体-{v.vid}", status="verbatim",
-                    note=kind_note, vid=v.vid, seq=seq))
-            else:
-                unparsed.append(Unparsed(card=v.vid, path=relpath,
-                                         where="**原始句锚点**",
-                                         text=normalize(vtext)[:200],
-                                         reason="非英文原句（转述/笔记），已从 verbatim 剔除"))
-        for k, ev in enumerate(v.extra_verbatim):
-            seq += 1
-            suffix = chr(ord("a") + k)
-            entries.append(Entry(
-                id=f"{base}.{suffix}", slot=slot, citekey=citekey, text=normalize(ev),
-                path=relpath, anchor=f"变体-{v.vid}", status="verbatim",
-                note=("原文锚定节" if not kind_note else f"{kind_note}·原文锚定节"),
-                vid=v.vid, seq=seq))
-        for k, tpl in enumerate(v.templates):
-            seq += 1
-            tid = base.replace(f"#{v.vid}", f"#T{v.vid}")
-            if len(v.templates) > 1:
-                tid = f"{tid}.{k + 1}"
-            has_bracket = "[" in tpl or "{" in tpl
-            entries.append(Entry(
-                id=tid, slot=slot, citekey=citekey, text=tpl,
-                path=relpath, anchor=f"变体-{v.vid}", status="模板",
-                note=("" if has_bracket else "无显式槽位占位符"),
-                vid=v.vid, seq=seq))
-
-        if not v.primary_verbatim and not v.extra_verbatim and not v.templates:
-            reason = ("骨架字段存在但无句级模板（表格/散文）" if v.skeleton_seen
-                      else "变体块内无 原始句锚点/原文锚定/骨架")
-            unparsed.append(Unparsed(card=v.vid, path=relpath,
-                                     where=f"{v.heading}",
-                                     text=v.title[:200], reason=reason))
+    entries, unparsed = eng.materialize_variants(
+        variants, slug=slug, relpath=relpath, slot_for=slot_for,
+        primary_note=lambda v: KIND_NOTES[v.kind],
+        extra_note=lambda v: (f"{KIND_NOTES[v.kind]}·原文锚定节"
+                              if KIND_NOTES[v.kind] else "原文锚定节"),
+        unparsed_where=lambda v: v.heading)
 
     return entries, unparsed, n_num, n_unnum, n_extend
 
 
 # ------------------------------------------------------------ rendering ----
-
-
-def escape_cell(text: str) -> str:
-    return text.replace("|", r"\|")
 
 
 def _header(family: dict[str, str], nv: int, nt: int, note: str = "") -> list[str]:
@@ -677,64 +555,25 @@ def _header(family: dict[str, str], nv: int, nt: int, note: str = "") -> list[st
     return out
 
 
-def render_table(title: str, rows: list[Entry]) -> list[str]:
-    out = [f"## {title}", "",
-           "| id | 适配槽位 | citekey | 句子原文（或模板） | 卡片路径#锚点 | 状态 |",
-           "|---|---|---|---|---|---|"]
-    for e in rows:
-        status = "verbatim" if e.status == "verbatim" else "模板"
-        if e.note:
-            status = f"{status}（{e.note}）"
-        out.append(
-            f"| `{e.id}` | {e.slot} | {escape_cell(e.citekey)} | {escape_cell(e.text)} | "
-            f"`{e.path}#{e.anchor}` | {status} |")
-    out.append("")
-    return out
-
-
 def render_family(family: dict[str, str], entries: list[Entry]) -> str:
     verbatim = [e for e in entries if e.status == "verbatim"]
     templates = [e for e in entries if e.status == "模板"]
     out = _header(family, len(verbatim), len(templates))
     if verbatim:
-        out += render_table("Verbatim 底本", verbatim)
+        out += eng.render_table("Verbatim 底本", verbatim)
     if templates:
-        out += render_table("填槽模板", templates)
+        out += eng.render_table("填槽模板", templates)
     if not verbatim and not templates:
         out.append("（无累积变体：骨架-only，主骨架见 `references/slot-M*.md`。）")
         out.append("")
     return "\n".join(out).rstrip() + "\n"
 
 
-def render_slot_file(slug: str, name: str, slot_label: str, entries: list[Entry]) -> str:
-    verbatim = [e for e in entries if e.status == "verbatim"]
-    templates = [e for e in entries if e.status == "模板"]
-    fam = {"slug": slug, "name": name}
-    out = _header(fam, len(verbatim), len(templates),
-                  note=f"本文件是 `{slug}.md` 的拆分子清单（槽位分组：{slot_label}）。")
-    if verbatim:
-        out += render_table("Verbatim 底本", verbatim)
-    if templates:
-        out += render_table("填槽模板", templates)
-    return "\n".join(out).rstrip() + "\n"
-
-
 def render_sub_route(slug: str, name: str, groups: list[tuple[str, str, list[Entry]]]) -> str:
-    out = [
-        f"# {slug} — 二级骨架清单（{name}，按槽位拆分）",
-        "",
-        "> 本目录由脚本重建，手改会被覆盖；重建命令 = `python scripts/build_indices.py`（路径基准：以本 skill 目录（SKILL.md 所在目录）为基准）。",
-        "> 本设计类型条目超 400 行，按 M/Q 槽位拆成子清单；先读本表定位槽位，再整份读入对应子清单。",
-        "",
-        "| 槽位 | 子清单 | verbatim | 模板 |",
-        "|---|---|---|---|",
-    ]
-    for label, filename, entries in groups:
-        nv = sum(1 for e in entries if e.status == "verbatim")
-        nt = sum(1 for e in entries if e.status == "模板")
-        out.append(f"| {label} | [`{filename}`]({filename}) | {nv} | {nt} |")
-    out.append("")
-    return "\n".join(out)
+    return eng.render_sub_route(
+        slug, name,
+        split_note="> 本设计类型条目超 400 行，按 M/Q 槽位拆成子清单；先读本表定位槽位，再整份读入对应子清单。",
+        groups=groups)
 
 
 def render_route(stats: list[tuple[dict[str, str], int, int, int, str]], nv_total: int,
@@ -765,141 +604,7 @@ def render_route(stats: list[tuple[dict[str, str], int, int, int, str]], nv_tota
     return "\n".join(out)
 
 
-def render_unparsed(items: list[Unparsed]) -> str:
-    out = [
-        "# Skeleton Index — 待补录 / 未命中",
-        "",
-        "> 脚本未能自动判定为 verbatim 或模板的条目集中在此，**待人工补录**。",
-        "",
-    ]
-    if not items:
-        out.append("（无）")
-    else:
-        out.append("| 变体 | 卡片路径 | 位置 | 原文摘录 | 原因 |")
-        out.append("|---|---|---|---|---|")
-        for u in items:
-            snippet = escape_cell(u.text[:160] + ("…" if len(u.text) > 160 else ""))
-            out.append(f"| {u.card} | `{u.path}` | {u.where} | {snippet} | {u.reason} |")
-    out.append("")
-    return "\n".join(out)
-
-
 # ----------------------------------------------------------------- main ----
-
-def main(argv: list[str] | None = None) -> int:
-    ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--check", action="store_true", help="build in memory and report, do not write")
-    ap.add_argument("--verify", action="store_true", help="verify verbatim byte-for-byte in source + anchor headings exist")
-    ap.add_argument("--sample", type=int, default=0, help="also print N evenly-spaced verbatim entries with source-hit")
-    ap.add_argument("--quiet", action="store_true", help="only print the summary")
-    args = ap.parse_args(argv)
-
-    all_entries: list[Entry] = []
-    all_unparsed: list[Unparsed] = []
-    stats: list[tuple[dict[str, str], int, int, int, str]] = []
-    rendered: dict[str, str] = {}
-    n_unnum_total = 0
-    n_extend_total = 0
-
-    for family in FAMILIES:
-        entries, unparsed, n_num, n_unnum, n_extend = parse_file(family)
-        all_entries.extend(entries)
-        all_unparsed.extend(unparsed)
-        n_unnum_total += n_unnum
-        n_extend_total += n_extend
-        nv = sum(1 for e in entries if e.status == "verbatim")
-        nt = sum(1 for e in entries if e.status == "模板")
-        text = render_family(family, entries)
-        target = f"{family['slug']}.md"
-        if len(text.splitlines()) > MAX_LINES and entries:
-            groups: dict[str, list[Entry]] = {}
-            for e in entries:
-                groups.setdefault(slot_key(e), []).append(e)
-            ordered = sorted(groups.items(), key=lambda kv: (kv[0] == "general", kv[0]))
-            group_files: list[tuple[str, str, list[Entry]]] = []
-            for key, ents in ordered:
-                label = _slot_group_label(key)
-                fname = f"{family['slug']}-{key}.md"
-                rendered[fname] = render_slot_file(family["slug"], family["name"], label, ents)
-                group_files.append((label, fname, ents))
-            text = render_sub_route(family["slug"], family["name"], group_files)
-        rendered[target] = text
-        stats.append((family, n_num, nv, nt, target))
-
-    nv_total = sum(1 for e in all_entries if e.status == "verbatim")
-    nt_total = sum(1 for e in all_entries if e.status == "模板")
-    route = render_route(stats, nv_total, nt_total, len(all_unparsed),
-                         n_unnum_total, n_extend_total)
-    unparsed_text = render_unparsed(all_unparsed)
-
-    # --- verification -----------------------------------------------------
-    if args.verify:
-        src_cache: dict[str, str] = {}
-        mismatch: list[Entry] = []
-        for e in all_entries:
-            if e.status != "verbatim":
-                continue
-            src = src_cache.get(e.path)
-            if src is None:
-                src = normalize((SKILL_ROOT / e.path).read_text(encoding="utf-8"))
-                src_cache[e.path] = src
-            if normalize(e.text) not in src:
-                mismatch.append(e)
-        print(f"verbatim 回源校验: {nv_total - len(mismatch)}/{nv_total} 命中源文件")
-        for e in mismatch:
-            print(f"  MISMATCH {e.id} ({e.path}): {e.text[:90]}")
-
-        # anchor verification: heading line must appear in source
-        anchor_miss: list[Entry] = []
-        for e in all_entries:
-            src = src_cache.get(e.path)
-            if src is None:
-                src = normalize((SKILL_ROOT / e.path).read_text(encoding="utf-8"))
-                src_cache[e.path] = src
-            head = normalize(_heading_for(e.path, e.vid, e.anchor))
-            if head and head not in src:
-                anchor_miss.append(e)
-        total = len(all_entries)
-        print(f"锚点标题存在校验: {total - len(anchor_miss)}/{total} 锚点指向的变体标题存在")
-        for e in anchor_miss:
-            print(f"  ANCHOR-MISS {e.id} ({e.path}#{e.anchor})")
-
-        if args.sample > 0:
-            verbatim = [e for e in all_entries if e.status == "verbatim"]
-            verbatim.sort(key=lambda e: e.id)
-            n = min(args.sample, len(verbatim))
-            step = max(1, len(verbatim) // n)
-            picked = verbatim[::step][:n]
-            src_cache2: dict[str, str] = {}
-            print(f"\n抽样 {len(picked)} 条 verbatim 逐字回源：")
-            for e in picked:
-                src = src_cache2.get(e.path)
-                if src is None:
-                    src = normalize((SKILL_ROOT / e.path).read_text(encoding="utf-8"))
-                    src_cache2[e.path] = src
-                hit = normalize(e.text) in src
-                print(f"  {'OK ' if hit else 'MISS'} {e.id}: {e.text[:70]}…")
-
-    # --- report -----------------------------------------------------------
-    if not args.quiet:
-        print("family                      variants  verbatim  templates  lines")
-        for family, nvar, nv, nt, target in stats:
-            lines = len(rendered[target].splitlines())
-            print(f"{family['slug']:<27} {nvar:>8} {nv:>8} {nt:>10} {lines:>6}")
-        print(f"{'TOTAL':<27} {sum(s[1] for s in stats):>8} {nv_total:>8} {nt_total:>10}")
-        print(f"unparsed items: {len(all_unparsed)}")
-        print(f"不编号变体: {n_unnum_total} / EXTEND 子变体: {n_extend_total}")
-
-    if args.check:
-        return 0
-
-    SKELETON.mkdir(parents=True, exist_ok=True)
-    for filename, text in rendered.items():
-        (SKELETON / filename).write_text(text, encoding="utf-8", newline="\n")
-    (SKELETON / "_index.md").write_text(route, encoding="utf-8", newline="\n")
-    (SKELETON / "_unparsed.md").write_text(unparsed_text, encoding="utf-8", newline="\n")
-    return 0
-
 
 def _heading_for(relpath: str, vid: str, anchor: str) -> str:
     """Rebuild the heading line an anchor points at, for verification.
@@ -947,5 +652,88 @@ def _heading_for(relpath: str, vid: str, anchor: str) -> str:
     return ""
 
 
+def main(argv: list[str] | None = None) -> int:
+    ap = eng.build_argparser(__doc__)
+    args = ap.parse_args(argv)
+
+    all_entries: list[Entry] = []
+    all_unparsed: list[Unparsed] = []
+    stats: list[tuple[dict[str, str], int, int, int, str]] = []
+    rendered: dict[str, str] = {}
+    n_unnum_total = 0
+    n_extend_total = 0
+
+    for family in FAMILIES:
+        entries, unparsed, n_num, n_unnum, n_extend = parse_file(family)
+        all_entries.extend(entries)
+        all_unparsed.extend(unparsed)
+        n_unnum_total += n_unnum
+        n_extend_total += n_extend
+        nv = sum(1 for e in entries if e.status == "verbatim")
+        nt = sum(1 for e in entries if e.status == "模板")
+        text = render_family(family, entries)
+        target = f"{family['slug']}.md"
+        if len(text.splitlines()) > MAX_LINES and entries:
+            groups: dict[str, list[Entry]] = {}
+            for e in entries:
+                groups.setdefault(slot_key(e), []).append(e)
+            ordered = sorted(groups.items(), key=lambda kv: (kv[0] == "general", kv[0]))
+            group_files: list[tuple[str, str, list[Entry]]] = []
+            for key, ents in ordered:
+                label = _slot_group_label(key)
+                fname = f"{family['slug']}-{key}.md"
+                rendered[fname] = eng.render_slot_file(
+                    family["slug"], family["name"], label, ents, header_fn=_header)
+                group_files.append((label, fname, ents))
+            text = render_sub_route(family["slug"], family["name"], group_files)
+        rendered[target] = text
+        stats.append((family, n_num, nv, nt, target))
+
+    nv_total = sum(1 for e in all_entries if e.status == "verbatim")
+    nt_total = sum(1 for e in all_entries if e.status == "模板")
+    route = render_route(stats, nv_total, nt_total, len(all_unparsed),
+                         n_unnum_total, n_extend_total)
+    unparsed_text = eng.render_unparsed(all_unparsed)
+
+    counts: dict[str, int] = {"entries": len(all_entries),
+                              "unparsed": len(all_unparsed)}
+
+    # --- verification -----------------------------------------------------
+    if args.verify:
+        mismatch = eng.print_verbatim_check(all_entries, SKILL_ROOT, nv_total)
+
+        # anchor verification: heading line must appear in source
+        anchor_miss: list[Entry] = []
+        src_cache: dict[str, str] = {}
+        for e in all_entries:
+            src = src_cache.get(e.path)
+            if src is None:
+                src = eng.normalize((SKILL_ROOT / e.path).read_text(encoding="utf-8"))
+                src_cache[e.path] = src
+            head = eng.normalize(_heading_for(e.path, e.vid, e.anchor))
+            if head and head not in src:
+                anchor_miss.append(e)
+        total = len(all_entries)
+        print(f"锚点标题存在校验: {total - len(anchor_miss)}/{total} 锚点指向的变体标题存在")
+        for e in anchor_miss:
+            print(f"  ANCHOR-MISS {e.id} ({e.path}#{e.anchor})")
+
+        eng.print_sample_check(all_entries, SKILL_ROOT, args.sample)
+        counts["mismatch"] = mismatch
+        counts["anchor_miss"] = len(anchor_miss)
+
+    # --- report -----------------------------------------------------------
+    if not args.quiet:
+        eng.print_report(stats, rendered, nv_total, nt_total, len(all_unparsed),
+                         extra_lines=(f"不编号变体: {n_unnum_total} / "
+                                      f"EXTEND 子变体: {n_extend_total}",))
+
+    if args.check:
+        return counts
+
+    eng.write_skeleton(SKELETON, rendered, route, unparsed_text)
+    return counts
+
+
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(eng.entrypoint("write-methods", main))
