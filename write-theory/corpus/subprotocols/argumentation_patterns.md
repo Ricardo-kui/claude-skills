@@ -77,6 +77,7 @@ status: ready_for_corpus
 <!-- wb:Desai_2012_AMJ:legacy_argumentation_patterns_PatternPreemptiveCom_2 -->
 
 ### 子变体 A：Direct Rejection（Gamache 型）
+<!-- wb:gamache_etal_2020_smj -->
 
 **适用构建类型**: 机制推演型 / 竞争假设型 / 反直觉预测型
 **核心逻辑**: 完全拒绝竞争预测，提出正确预测

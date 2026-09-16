@@ -12,9 +12,9 @@
 
 | # | 变体 | 家族 | 适用场景 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 关键句式模板 | 关键句式模板 | 构念辨析型 | — | 未标注（待核） | 未标注（待补） |
+| 关键句式模板 | 关键句式模板 | 构念辨析型 | — | 未标注（待核） | pollock_2015_asq |
 | 变体 C | 变体 C：构念拆分双理由差异预测（Gulati_Lavie_Singh_2009 型） | 构念辨析型 | — | VERIFIED | gulati_lavie_singh_2009_partnering_experience |
-| 假设陈述格式 | 假设陈述格式 | 构念辨析型 | — | 未标注（待核） | 未标注（待补） |
+| 假设陈述格式 | 假设陈述格式 | 构念辨析型 | — | 未标注（待核） | pollock_2015_asq |
 | Pollock 2015 型 | Pollock 2015 型：两构念四维系统区分 | 构念辨析型 | — | 未标注（待核） | Pollock 2015 |
 | 变体 A | 变体 A：形成过程辨析（Formation-Process Differentiation） | 构念辨析型 | — | VERIFIED | pfarrer_pollock_and_rindova_2010 |
 | 变体 B | 变体 B：相对排序跨情境反转（Context-Dependent Ordering Reversal of A vs B | 构念辨析型 | — | VERIFIED | pfarrer_pollock_and_rindova_2010 |
@@ -37,6 +37,7 @@
 ---
 
 ## 关键句式模板
+<!-- wb:pollock_2015_asq -->
 
 **构念界定**：参见 `corpus/sentences/construct_definition.md` 变体 A/B/C
 
@@ -142,6 +143,7 @@ of [Type-A].
 <!-- wb:gulati_lavie_singh_2009_partnering_experience:construct_decomposition_dual_reason_differential -->
 
 ## 假设陈述格式
+<!-- wb:pollock_2015_asq -->
 
 | 类型 | 模板 | 示例 |
 |------|------|------|
@@ -171,6 +173,7 @@ of [Type-A].
 ---
 
 ## Pollock 2015 型：两构念四维系统区分
+<!-- wb:pollock_2015_asq -->
 
 **新增于**: write-theory 3.2.0 (Pollock et al. 2015 ASQ 蒸馏)
 
@@ -210,6 +213,7 @@ These differences set up our inquiry into how [A] and [B] coevolve.
 ---
 
 ## DV 选择论证型子变体（habel2016 型）
+<!-- wb:habel_etal_2016_jm:dv_selection_argumentation -->
 
 > **适用**: 将构念辨析作为手段（论证 DV 选择合理性），而非将区分本身作为贡献
 > **范文**: Habel et al. 2016 (JM), T1 段落

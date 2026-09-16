@@ -10,15 +10,15 @@
 
 | # | 变体 | 家族 | 适用场景 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 关键句式模板 | 关键句式模板 | 机制推演型 | — | 未标注（待核） | 未标注（待补） |
+| 关键句式模板 | 关键句式模板 | 机制推演型 | — | 未标注（待核） | keeves_2017_asq |
 | 变体 A | 变体 A：互补双路径收敛型假设（Dual-Path Convergence to a Single Directiona | 机制推演型 | — | 未标注（待核） | ball_2018 |
 | 变体 B | 变体 B：交替对立再诠释型机制开题（westphal_zajac_1998_symbolic_management 型） | 机制推演型 | — | VERIFIED | westphal_zajac_1998_symbolic_management (ASQ), §2.1 P4（全节 3 次复现的同型 pivot） |
 | 变体 C | 变体 C：硬数字/软数字测量本体重构（westphal_zajac_1998_symbolic_management 型 | 机制推演型 | — | VERIFIED | westphal_zajac_1998_symbolic_management (ASQ), §2.1 P5 |
 | 变体 D | 变体 D：并行多中介逐项部分中介链（gulati_2007 型） | 机制推演型 | — | VERIFIED | gulati_2007_dependence_asymmetry_and_joint_dependence_in_int |
-| 假设陈述格式 | 假设陈述格式 | 机制推演型 | — | 未标注（待核） | 未标注（待补） |
-| 方式一 | 方式一：深度过程链（Depth Process Chain） | 机制推演型 | — | 未标注（待核） | 未标注（待补） |
-| 方式二 | 方式二：宽度理由并行（Width Parallel） | 机制推演型 | — | 未标注（待核） | 未标注（待补） |
-| 方式三 | 方式三：条件化复杂化（Conditional Complexification） | 机制推演型 | — | 未标注（待核） | 未标注（待补） |
+| 假设陈述格式 | 假设陈述格式 | 机制推演型 | — | 未标注（待核） | keeves_2017_asq |
+| 方式一 | 方式一：深度过程链（Depth Process Chain） | 机制推演型 | — | 未标注（待核） | singh_grewal_2023_jmr |
+| 方式二 | 方式二：宽度理由并行（Width Parallel） | 机制推演型 | — | 未标注（待核） | gamache_etal_2020_smj |
+| 方式三 | 方式三：条件化复杂化（Conditional Complexification） | 机制推演型 | — | 未标注（待核） | singh_grewal_2023_jmr |
 | 方式四 | 方式四：对称反向双轨（Symmetric Opposing Dual-Track） | 机制推演型 | — | 未标注（待核） | 未标注（待补） |
 | 方式五 | 方式五：曲线关系双阶段论证（Curvilinear Two-Phase） | 机制推演型 | — | 未标注（待核） | 未标注（待补） |
 
@@ -53,6 +53,7 @@
 ---
 
 ## 关键句式模板
+<!-- wb:keeves_2017_asq:two_step_mechanism_chain -->
 
 **理论视角引入**：
 ```
@@ -192,6 +193,7 @@ H[k]: [Mk] will partially mediate the effects of [X] on [DV].
 <!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:v_b_mechanism_per_mediator_partial_mediation_chain -->
 
 ## 假设陈述格式
+<!-- wb:keeves_2017_asq -->
 
 | 类型 | 模板 |
 |------|------|
@@ -222,6 +224,7 @@ H[k]: [Mk] will partially mediate the effects of [X] on [DV].
 机制推演型论文的核心是把"为什么 X 影响 Y"讲清楚。根据 MVP30 范文语料库，特别是 Singh & Grewal (2023, JMR)、Shen et al. (JOM)、Gamache et al. (2020, SMJ)、Zhao-Ding & Gaba (ORSC) 和 Cui et al. (SMJ) 五篇的对比，机制推演型（及相关变体）有五种主流的假设推导组织方式。选择哪一种取决于你的研究问题和理论野心。
 
 ### 方式一：深度过程链（Depth Process Chain）
+<!-- wb:singh_grewal_2023_jmr -->
 
 **代表**: Singh & Grewal (2023, JMR) 的铁三角机制 + Shen et al. (JOM) 的三机制 trunk
 **适用**: 研究问题关注"通过什么机制"，且机制可以被拆解为多个因果步骤
@@ -239,6 +242,7 @@ X → [actor/process state 1] → [state 2] → Y   （B0，可不测量中间�
 **调用语料**: `corpus/sentences/mechanism_chain.md` + `corpus/subprotocols/arrangement_patterns.md`
 
 ### 方式二：宽度理由并行（Width Parallel）
+<!-- wb:gamache_etal_2020_smj:width_type_three_reason_parallel -->
 
 **代表**: Gamache et al. (2020, SMJ)
 **适用**: 研究问题关注"为什么同一关系成立"，且有多个独立的理论理由共同支撑
@@ -255,6 +259,7 @@ X → Y  because [reason 1]
 **调用语料**: `corpus/subprotocols/hypothesis_derivation_patterns.md`（Width-Type Three-Reason Parallel）
 
 ### 方式三：条件化复杂化（Conditional Complexification）
+<!-- wb:singh_grewal_2023_jmr -->
 
 **代表**: Singh & Grewal (2023, JMR) 的间接调节 / Shen et al. (JOM) 的 parallel 调节
 **适用**: 研究问题关注"在什么条件下"，或关系本身存在边界条件

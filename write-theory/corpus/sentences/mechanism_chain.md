@@ -31,6 +31,7 @@
 ---
 
 ## 制度真空 → 政府关联 → 资源获取机制（Zhou 2017 型）
+<!-- wb:zhou_2017_asq -->
 
 **适用**: 制度真空情境下，政府所有权/关联通过融资、补贴、政策支持三条资源通道带来投入优势。
 
@@ -52,6 +53,7 @@
 ---
 
 ## 双重代理问题导致资源转换低效机制（Zhou 2017 型）
+<!-- wb:zhou_2017_asq -->
 
 **适用**: 国有/政府关联企业存在双重代理问题：所有者缺位 + 政治家任命管理者，导致资源转换效率低。
 
@@ -91,6 +93,7 @@ Consequently, [DV outcome] emerges through [final link]. Thus:"
 ---
 
 ## 两步机制链（标准）
+<!-- wb:keeves_2017_asq -->
 
 **模板**：
 ```
@@ -110,6 +113,7 @@ Thus:"
 ---
 
 ## 双轨并行机制链（Track A / Track B）
+<!-- wb:malik_wang_martin_gomez_mejia_2025_jm -->
 
 **Track A（损失规避/保护路径）**：
 ```
@@ -230,6 +234,7 @@ critically discussed [evidence for path B]. [Respondent ID] asserted, "[direct q
 ---
 
 ## Focus Group / 定性证据嵌入机制推演（habel2016 型）
+<!-- wb:habel_etal_2016_jm:dialectical_opposing_indirect_effects -->
 
 **适用**: 在正式假设推导前，用 focus group / 访谈引述为双路径机制提供 empirical grounding。特别适合消费者行为、营销学、组织行为研究中"直觉路径需要现实证据支撑"的场景。
 
@@ -279,6 +284,7 @@ circumstances the negative effect... might prevail.
 - 用引述替代理论论证 → 引述是支撑，不是替代；每条路径仍需独立的理论论证
 
 ### 子变体：多角色访谈三角化制度功能与战略解释（Lee–Wu–Bednar 型）
+<!-- wb:lee_wu_bednar_orsc_18968:multi_actor_interview_grounding_dual_path -->
 
 **验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
 
@@ -362,6 +368,7 @@ for [Group B].
 ---
 
 ## 竞争机制链（路径 A vs 路径 B）
+<!-- wb:wowak_2025_ms -->
 
 **竞争预告**：
 ```
@@ -392,6 +399,7 @@ who tend to focus on [价值] may be more motivated to [行为3] ([文献])."
 ---
 
 ## 辩证对立型机制推演（Dialectical Contrast Mechanism，kalaignanam2017 型）
+<!-- wb:kalaignanam_2017_jm:dialectical_contrast_option_ab -->
 
 **适用**: 研究的核心是比较两种对立选项（A vs B，如 make vs buy, internal vs external, organic vs acquired）的优劣，而非单一 IV→DV 的因果链。理论贡献在于识别每种选项在何种条件下更优。
 
@@ -457,6 +465,7 @@ H2: [Option A] has a more positive impact on [DV2] than [Option B].
 ---
 
 ## 并行多源机制链 (Parallel Multi-Source Mechanism)
+<!-- wb:darby_2023_msom:parallel_multi_source_mechanism -->
 
 **模板**：
 ```
@@ -472,6 +481,7 @@ H2: [Option A] has a more positive impact on [DV2] than [Option B].
 ---
 
 ## 宽度型三理由并行机制 (Width-over-Depth: Three Parallel Reasons)
+<!-- wb:gamache_etal_2020_smj -->
 
 **适用**: 主效应单一且IV特征丰富——每个IV→DV关系由3个独立的平行理论理由支撑，而非深度多步中介链。用论证密度(多角度独立论证)补偿论证深度(单步因果链)。
 
@@ -532,6 +542,7 @@ Therefore, because of [cumulative summary of 3 reasons], we believe that [hypoth
 ---
 
 ## 对称三步机制链（CEO 心理特质 → 企业战略 通用骨架）
+<!-- wb:wang_2024_smj:symmetric_three_step_pa_na -->
 
 **适用**: CEO 心理/情感特质（PA/NA、anxiety、hubris 等）对企业战略行为（CSR、recall、innovation 等）的影响机制。两条路径完全对称、方向相反。
 
@@ -591,6 +602,7 @@ considered [gap that current hypothesis addresses]."
 ---
 
 ## Dual-Theory Architecture Variant (Mayo et al. POMS)
+<!-- wb:mayo_ball_mills_2022_pom -->
 
 When explaining how [IV] affects [DV] differently across phases/conditions, use two distinct theories:
 
@@ -608,6 +620,7 @@ When explaining how [IV] affects [DV] differently across phases/conditions, use 
 ---
 
 ## 双理论分别解释不同 DV 变体（kalaignanam2017 型）
+<!-- wb:kalaignanam_2017_jm -->
 
 **适用**: 同一自变量（或两个对立选项）对两个不同结果维度（如 immediate vs future, short-term vs long-term, quantity vs quality）产生差异化影响，每个结果维度由一个独立理论解释。
 
@@ -648,6 +661,7 @@ The second relevant stream of research for understanding [outcome domain] is [Th
 ---
 
 ## Ability-Motivation 双路径机制框架（Eilert 2017 型）
+<!-- wb:eilert_2017_jm -->
 
 **适用**：组织决策、企业行为、战略响应类主题中，将机制论证系统性地组织为能力维度和动机维度
 
@@ -844,6 +858,7 @@ H1. [IV] is [direction] related to [DV]."
 ---
 
 ## Trade-off → Shock → Dominance 逻辑链（hoffmann2024 型）
+<!-- wb:hoffmann_cheong_phan_zurbruegg_2024_jm:tradeoff_shock_dominance -->
 
 **功能**: 适用于政策冲击/法律变化类研究——treatment 的作用机制是移除了对既存激励的约束，而非直接引入新激励。
 
@@ -1205,6 +1220,7 @@ firms' [A], they may also impair their [B]. Accordingly, we explicitly examine h
 ---
 
 ## 双中介并行机制链（Dual Mediator Mechanism）
+<!-- wb:malshe_agarwal_2015_jm:dual_mediator_parallel -->
 
 **适用**：解释 X 通过两个概念独立的平行中介（M1, M2）影响 Y，且 X→Y 仍有未测量残余直接路径
 
@@ -1255,6 +1271,7 @@ H[N]: The (negative) impact of higher [IV] on [DV] is mediated by (a) [M1] and (
 ---
 
 ## 双 DV 并行机制链（Twin DV Parallel Mechanism）
+<!-- wb:mannor_wowak_bartkus_gomez_mejia_2016_smj:dual_outcome_mechanism -->
 
 **适用**: 同一 IV 通过不同机制影响两个概念独立的 DV，每个 DV 有独立的假设和理论小节
 
@@ -1318,6 +1335,7 @@ H2: [IV] will induce [actors] to [DV2 outcome]."
 ---
 
 ## 多层收窄型机制链（Macro→Meso→Micro Layered Mechanism）
+<!-- wb:park_lange_jeon_smj -->
 
 **适用**: Quasi-experiment 或 exogenous institutional change 研究——机制链从宏观制度层逐步收窄到微观行为层
 
@@ -1390,6 +1408,7 @@ H[N]: [Core prediction]."
 ---
 
 ## 2×2 并行矩阵架构 (2×2 Parallel Matrix Architecture)
+<!-- wb:shipilov_greve_rowley_2019_smj:source_tone_2x2_matrix -->
 
 **适用**: IV 按两个独立维度交叉产生 4 个假设，每个单元格有独立但平行的 T3→T4 推演。与发散树的区别：平行矩阵中假设间无层级依赖（H2a 的成立不依赖 H1a 的成立）。
 
@@ -1464,6 +1483,7 @@ H[B-]: [Prediction].
 ---
 
 ## Iron Triangle 三边机制论证（Regulatory Capture Mechanism）
+<!-- wb:singh_grewal_2023_jmr:iron_triangle_mechanism -->
 
 **适用**: 研究涉及企业政治影响力如何通过监管体系传递——行业→立法者→监管者→行业的三边激励交换
 
@@ -1505,6 +1525,7 @@ H1: [IV] has a [negative] association with [DV dimension 1] and [DV dimension 2]
 ---
 
 ## 双视角对比+框架整合（Dual-Perspective Contrast + Framework Integration）
+<!-- wb:singh_grewal_2023_jmr -->
 
 **适用**: 理论贡献的核心是展示现有文献使用视角A（如效率视角）而忽略了视角B（如合法性视角），论文通过整合两个视角提供更全面的解释
 
@@ -1536,6 +1557,7 @@ In [empirical context], an [perspective A] emphasizes [economic consideration 1]
 ---
 
 ## 三层嵌套理论演进 (Nested Extension T2 Architecture)
+<!-- wb:malik_wang_martin_gomez_mejia_2025_jm -->
 
 **适用**: 研究使用了从经典到当代的清晰理论演进脉络——经典理论 → 修正理论 → 扩展理论 → 新维度推导
 
@@ -1709,6 +1731,7 @@ H2. [Negative moderation prediction, opposite direction from H1].
 ---
 
 ## Y-shaped 架构 (Y-Shaped: Common Trunk → Dual Path → Contingency Branches)
+<!-- wb:toh_pyun_smj:multi_actor_standardization_dynamics -->
 
 **适用**: 统一机制基础 → 两个群体产生相反主效应 → 弱势群体的效应进一步被 contingencies 调节。非对称设计（contingencies 只在一条路径上展开）。
 
@@ -1791,6 +1814,7 @@ story_fidelity: section_variant
 <!-- wb:kalaignanametal2013:legacy_mechanism_chain_RhetoricalQuestion理论 -->
 
 ## After-not-before 反问开场（kalaignanam2013 型）
+<!-- wb:kalaignanametal2013 -->
 
 **适用**: 正式中介路径（X→M）开场。用一个时间不对称反问，迫使读者解释**为何冲击之后才改进 M、事前不改**，而不是再叙一遍 X 与 M 相关。
 
@@ -1859,6 +1883,7 @@ Why do [actors] improve [process outcome M] after [failure/shock] and not before
 ---
 
 ## 社会比较机制（Social Comparison Mechanism，paruchuri_pollock_kumar2020 型）
+<!-- wb:paruchuri_pollock_kumar_2019_smj:salience_decay_boundary -->
 
 **适用**: 某actor的failure/decline使其他actors因比较而显得更好——非自身提升，而是比较基准下降
 
@@ -1886,6 +1911,7 @@ them appear better by comparison.
 ---
 
 ## 认知可用性时效机制（Cognitive Availability Duration，paruchuri_pollock_kumar2020 型）
+<!-- wb:paruchuri_pollock_kumar_2019_smj -->
 
 **适用**: 论证某效应的持续时间由事件的认知可用性(salience/cognitive availability)决定——效应随事件淡出公共注意力而衰减
 
@@ -1919,6 +1945,7 @@ and disappear once the [trigger] ceases to be salient.
 ---
 
 ## 双重印记对立通道 + 效果持续性差异 + 底物匹配调节（Dual Opposing Channels with Differential Persistence and Substrate-Matched Moderators，qiao2026 型）
+<!-- wb:qiao_hiatt_sine_2026_smj:dual_imprinting_differential_persistence -->
 
 **适用**: 同一起源条件（如创始伙伴关系、历史制度/军方关联、创始投资人声誉）**同时**留下两条方向相反的中介通道——一条内嵌于组织结构（capability，促进结果），一条存于外部受众认知（identity，阻碍结果）。核心理论贡献**不是**"哪条通道占优"，而是 (1) 两条通道的**效果持续性（persistence）不同**——内嵌型持续更久、受众认知型更易变；(2) 起源印记者的**后续变迁非对称地**重塑两条通道——每个调节变量只作用于一条通道的**机制底物**。
 
@@ -2015,6 +2042,7 @@ H5: [Moderator 2] negatively moderates the relationship between [origin conditio
 ---
 
 ## 双原因+三方行为者对比型主效应推导（weng_yang 型）
+<!-- wb:weng_yang_jms:dual_reason_three_actor_contrast -->
 
 **功能**: 当 IV 是一个连续谱（非二元处理）且存在理论上可推导的反方向行为者和中间行为者时，H1 段落按**五拍论证**展开，每个理由和反方都有完整的 why chain。
 
@@ -2158,6 +2186,7 @@ mechanism 3]... Taken together, [converging main-effect prediction].
 **禁忌**: "same decision rule" 必须与前句陈述的规则逐字对应，否则跳层无据；该句式只用于真正的同质决策规则情境，异质成员间不成立
 
 ## 成本-收益计算机制链（Cost-Benefit Calculus Mechanism，Chung/Low/Rust 2022 型）
+<!-- wb:chung_low_rust_2022_jams -->
 
 **功能**: 当研究的理论机制可以归结为"行为者面对 [short-term benefit] 与 [long-term cost] 的权衡，而 [IV] 通过改变对收益/成本的感知来影响行动概率"时使用。提供完整的 why chain：建立权衡 → 论证感知高收益 → 论证感知低成本 → 收敛到主效应。
 
@@ -2443,6 +2472,7 @@ story_fidelity: section_variant
 <!-- wb:Ridge_Hill_Ingram_Kolomeitsev_Worrell_2024_AMJ:legacy_mechanism_chain_跨受众评价的双信号曲线推导Finieta -->
 
 ## 威胁处理级联（Threat-Processing Cascade，Ridge et al. 2024 型）
+<!-- wb:ridge_hill_ingram_kolomeitsev_worrell_2024_amj -->
 
 **功能**: 当研究的理论机制是"个体/组织对威胁的**认知处理级联**"（trait 感知偏差 → 行为倾向 → 对外部实体的回避/攻击）时使用。这是 5 拍的认知处理链，把特质（IV）到安全行为（DV 机制）之间的心理过程逐拍展开。与两步机制链（标准）的区别：本链是**多拍认知序列**（扫描→归因→结论→行为），每拍都有独立的理论内容；与 Wang 2024 对称三步链的区别：后者是情绪特质→认知/社会/时间三通道的对称展开，本链是**单线递进的威胁处理序列**。
 

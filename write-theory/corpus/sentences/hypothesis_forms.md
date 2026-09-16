@@ -563,6 +563,7 @@ Hypothesis [N]a. The number of [firms] that have [adopted, but not implemented, 
 **禁忌**: 内嵌前提的文献担保必须是成熟理论传统，临时拼凑的担保会被视为补丁堆叠；一篇 Theory 内嵌声明至多一两处，多处使用说明前提应升级为独立假设
 
 ## 配对假设 (Paired Hypotheses a/b Format)
+<!-- wb:malik_wang_martin_gomez_mejia_2025_jm:paired_hypotheses_same_iv_dual_dv -->
 
 **适用**: 多 DV 设计中同一 IV 对两个 DV 产生相同方向的预测——使用 a/b 配对保持 2×N 矩阵的可读性
 
@@ -640,6 +641,7 @@ Hypothesis [N]a. The number of [firms] that have [adopted, but not implemented, 
 ---
 
 ## 调节效应
+<!-- wb:darby_2023_msom -->
 
 | 形式 | 模板 |
 |------|------|
@@ -659,6 +661,7 @@ Hypothesis [N]a. The number of [firms] that have [adopted, but not implemented, 
 ---
 
 ## 分组调节
+<!-- wb:darby_2025_jscm -->
 
 | 形式 | 模板 | 示例 |
 |------|------|------|
@@ -689,6 +692,7 @@ H2: An increase in [X] is negatively associated with the time-to-[act] for [high
 **原文锚点**: "An increase in female board representation is negatively associated with the time-to-recall for high-severity recalls."
 
 ## 竞争假设
+<!-- wb:wowak_2025_ms -->
 
 | 形式 | 模板 | 示例 |
 |------|------|------|
@@ -708,6 +712,7 @@ how [X] may influence [Y]:"
 > "Hypothesis 1(a). There is a negative relationship between top management team liberalism and the count of recalls." ... "Hypothesis 1(b). There is a positive relationship between top management team liberalism and the count of recalls."
 
 ### 单一非定向调节（Nondirectional Competing Moderator）
+<!-- wb:kalaignanametal2013 -->
 
 **适用**: 两套对立动机/注意力理论对**同一个**调节效应给出相反方向，但不拆成 H[N]a/H[N]b；用单一 "stronger or weaker" 假设把裁决交给证据。
 
@@ -739,6 +744,7 @@ how [X] may influence [Y]:"
 ---
 
 ## 矩阵假设（多 IV × 多 DV）
+<!-- wb:malik_wang_martin_gomez_mejia_2025_jm -->
 
 | 形式 | 模板 |
 |------|------|
@@ -780,6 +786,7 @@ how [X] may influence [Y]:"
 ---
 
 ## 括号异号双调节句（parenthetical opposite-signed dual moderator，liuliuluo2016 型）
+<!-- wb:Liu_Liu_Luo_2016_JM -->
 
 **适用**: 两个方向相反的 moderator 调节同一条基线斜率；把异号对收进一条交互假设，避免拆成 H5a/H5b 两句。
 
@@ -864,6 +871,7 @@ Hypothesis H[N]. For a [firm type / condition], [IV] [reduces/heightens/increase
 ---
 
 ## 调节假设矩阵格式 (Moderation Hypothesis Matrix，2×2 专用)
+<!-- wb:han_pollock_paruchuri_smj:paired_hypothesis_cross_conditions -->
 
 **适用**: 2×2 矩阵型 Theory，4 个假设全部为同一关系的调节
 

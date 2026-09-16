@@ -2,6 +2,7 @@
 > 论证角色：**[D] 定义前提**——构念界定材料（新构念五步：definition+scope+lineage+adjacent differentiation+justification）；填位规则见 `../story-blueprints/v4/rhetoric-moves/_argument-grammar.md`（story-blueprints/v4/rhetoric-moves/）
 
 ## 变体 A：承认多元定义，明确采纳（最常用）
+<!-- wb:pollock_2015_asq:construct_differentiation -->
 
 **模板**：
 ```
@@ -21,6 +22,7 @@ and (3) [element 3]."
 ---
 
 ## 变体 B：综述分歧，提取共识
+<!-- wb:malik_wang_martin_gomez_mejia_2025_jm -->
 
 **模板**：
 ```
@@ -54,6 +56,7 @@ A central thesis of [field] research is that [core proposition] ([Author, year])
 ---
 
 ## 变体 D：双维度/双构念对称界定（竞争假设型、双轨并行型专用）
+<!-- wb:wowak_2025_ms:symmetric_dual_construct_definition -->
 
 **模板**：
 ```
@@ -74,6 +77,7 @@ On the other end of the spectrum are [构念B], who, on average, emphasize
 ---
 
 ## 变体 E：三层框架展开+表格对比型（weng_yang 型）
+<!-- wb:weng_yang_jms -->
 
 **功能**: 当 IV 是一个可从多个理论透镜（cognitive/social/behavioral）理解的构念时，先展示完整框架再聚焦到其中一个透镜，用表格对比构念两端的差异。
 
@@ -111,6 +115,7 @@ Finally, [dimension 3: comparison].
 ---
 
 ## 变体 E2：维度独立性论证 (Dimensional Independence Argument)
+<!-- wb:shipilov_greve_rowley_2019_smj:construct_definition_positive_negative_coverage -->
 
 **适用**: IV 具有多个维度（如 valence, source），且这些维度常被直觉性地误认为同一连续体的两端。需要在 T1 阶段论证它们是概念上独立的维度。
 
@@ -171,6 +176,7 @@ this means [contextual specification]..."
 ---
 
 ## 变体 K：构念多层界定（标签层面 vs. 组织层面，Pontikes 2012 型）
+<!-- wb:pontikes_2012_asq:construct_level_distinction_label_vs_organization -->
 
 **适用**: 区分现象的"属性本身模糊"与"实体组合模糊"两个层次；两个层次可独立操作化并通过不同机制影响结果。
 
@@ -210,6 +216,7 @@ because [reason]."
 ---
 
 ## 辩论并置型构念界定（Debate Juxtaposition T1/T2）
+<!-- wb:park_lange_jeon_smj:construct_definition_shareholder_stakeholder -->
 
 **适用**: 研究领域存在经典辩论（两个对立的视角/学派），Theory 开篇将双方并列呈现——双方同等篇幅、同等学术+实践支撑——然后在中立立场上引入自己的贡献
 
@@ -262,6 +269,7 @@ influences [outcome]."
 ---
 
 ## 变体 F：Typology Alignment 定义型（desai2012 型）
+<!-- wb:desai_2012_amj:construct_definition_with_theoretical_alignment -->
 
 **适用**: 将新构念定位到已有学术分类法（typology）的特定位置，增加合法性而非声称完全原创
 
@@ -491,6 +499,7 @@ the quintessential response variable.
 **反模式**: 无纽带支撑时不用 "quintessential"；不要在同节内为多个 DV 重复使用该句式（会稀释代表性声明）。
 
 ## 变体 I：Framework-Anchored 双构念区分（han_pollock_paruchuri 型）
+<!-- wb:han_pollock_paruchuri_smj:construct_definition_three_dimensional -->
 
 **适用**: 两个构念被领域 conflated，先建立上位维度框架（如 rational/emotional/moral），再将两个构念分别锚定到不同维度。
 
@@ -544,6 +553,7 @@ differently.
 ---
 
 ## 变体 J：Context-Anchored Level Distinction（toh_pyun 型）
+<!-- wb:toh_pyun_smj:three_layer_framework_expansion -->
 
 **适用**: 论文的核心概念创新是区分两个分析层次（system-level vs unit-level），并引入已有文献未触及的 "第三形式" 概念维度。
 
@@ -606,6 +616,7 @@ uncertainty are affected by [IV].
 ---
 
 ## 变体 G：Typology Application 定义型（paruchuri_pollock_kumar2020 型）
+<!-- wb:paruchuri_pollock_kumar_2019_smj:capability_integrity_failure_typology -->
 
 **适用**: 已有学术typology区分了现象的两个子类型(如两种failure)，但typology尚未被应用于解释某个特定outcome。通过"what if"问句展示已有typology在此新情境中的解释力
 
@@ -642,6 +653,7 @@ We argue that in this situation the [dynamics] are likely to be different.
 ---
 
 ## 变体 L：New-Construct Legitimation via Multi-Construct Comparison Table（lee_wang 2026 型）
+<!-- wb:lee_wang_2026_jom:multi_construct_comparison_table_definition -->
 
 **适用**: 论文引入一个真正的新构念，需要通过与 3+ 个相关但概念不同的"兄弟"构念在多个功能维度上系统对比，来为新构念在已有概念群中开辟合法空间。表格承担"竞争性构念景观测绘"的理论工作——不是装饰。
 
@@ -806,6 +818,7 @@ indices for ability and identity conformance are no longer aligned.
 **禁忌**: 层次辩护必须真的给出"个体层面不成立"的机制理由，只声明"group level"无辩护会被 reviewer 要求降到个体层；interdependence 论证要求构念确有稀释/传染机制，纯加总构念不适用
 
 ## 双信号信息读法嵌入句（Fini 2017 型，T1/T3 过渡）
+<!-- wb:fini_jourdan_perkmann_2017_amj -->
 
 **适用**: 已经定义了主信号后，快速嵌入"该信号携带两类信息、且对齐取决于来源"的句子，直接为倒 U 机制铺垫。
 

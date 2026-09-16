@@ -82,6 +82,7 @@ through [mediator mechanism]."
 ```
 
 ## 识别策略论证嵌入（即使非 IV/DiD/RDD 设计）
+<!-- wb:wang_2024_smj:identification_strategy_embedded -->
 
 **适用**: Theory 假设因果时，识别策略的理论论证应嵌入最后假设推导段或自然过渡句中，非独立 Closure 段落。
 
@@ -116,6 +117,7 @@ through [mediator mechanism]."
 ---
 
 ## H1 收敛信号强制提醒
+<!-- wb:park_lange_jeon_smj:weak_closure_signal -->
 
 **反模式**: H1（或任何一个假设）直接从机制段落末尾出现，缺少显式 "Therefore" / "Thus" / "Accordingly" 收敛连接词。假设看似从天而降，而非从机制推导中自然产生。
 
@@ -144,6 +146,7 @@ H1: [IV] is [direction] related to [DV]."
 ---
 
 ## 假设数-收敛策略参考 (Hypothesis Count vs Convergence Strategy)
+<!-- wb:shipilov_greve_rowley_2019_smj:no_global_closure_discussion_reframe -->
 
 > **管理学惯例**: 不要求独立 Closure 段。以下为局部收束策略参考，而非 T6 强制规则。
 

@@ -44,12 +44,14 @@
 ---
 
 ## Pollock 2015 型：生命周期调节 / 假设树型
+<!-- wb:pollock_2015_asq -->
 
 **新增于**: write-theory 3.2.0 (Pollock et al. 2015 ASQ 蒸馏)
 
 **适用**: 两种相关无形资产（如 reputation / status）在生命周期不同阶段相互塑造强度不同；或同一关系在 actor 年轻/成熟时方向性反转。
 
 ### 基线互惠作为非假设前提
+<!-- wb:pollock_2015_asq -->
 
 当两个构念明显互惠但文献已有共识时，可作为基线假设而非正式假设：
 ```
@@ -62,6 +64,7 @@ As this expectation is unsurprising, we do not present a formal hypothesis, but 
 > "Research has established that status and reputation are positively correlated. High reputation based on strong performance can increase access to elite social circles while high status can provide greater access to the information, opportunities, and resources that can enhance reputation." ... "Because both reputation and status provide benefits that aid in developing the other construct, we expect them to have a positive relationship as they coevolve. As this expectation is unsurprising, we do not present a formal hypothesis, but it does form our baseline assumption."
 
 ### 生命周期不对称（H1a/H1b）
+<!-- wb:pollock_2015_asq -->
 
 ```
 When firms are young, they lack standing in the status hierarchy, and their initial status largely reflects founder status ([citations]).
@@ -80,6 +83,7 @@ H1b: When firms are older, [B] has a greater effect on [A] than [A] has on [B].
 > "During its early years a firm has little standing in its industry's social hierarchy, and what status it has is largely the result of the founder's personal status." ... "Thus we expect that reputation will have a greater influence on status than status has on reputation during the early years of a VC firm's life, when both are more malleable." ... "As such, we expect that as firms mature, status will have a greater influence on reputation than reputation will have on status."
 
 ### 路径依赖的时间衰减（H2）
+<!-- wb:pollock_2015_asq -->
 
 ```
 Initial conditions strongly influence [B] when firms are young and their [B] position is still being negotiated ([citations]).
@@ -92,6 +96,7 @@ H2: The effect of prior [B] on current [B] weakens as firms age, but the effect 
 > "Research has shown that initial conditions influence subsequent status when firms are young and their position in the status order is being established, that status becomes more stable and tends toward equilibrium over time, and that reputation is dynamic and needs to be continually reinforced." ... "Because reputation needs to be continually reinforced, it is always susceptible to changes in prior reputation; thus the effect of changes in prior reputation on current reputation will not weaken as the VC firm ages."
 
 ### 大事件可见性效应（H3a/H3b）
+<!-- wb:pollock_2015_asq -->
 
 ```
 Highly visible positive events can alter organizational trajectories ([citations]).
@@ -108,6 +113,7 @@ H3b: When firms are older, blockbuster events positively affect [A] but not [B].
 > "Research on path dependence shows that significant events can change organizations' life trajectories." ... "Thus when firms are young and unknown, we expect blockbuster deals will enhance their status because they bring the firms to the attention of high-status VCs. But as a VC firm ages and its position in the status order stabilizes, the visibility and attention are less likely to affect its status."
 
 ### 先验期望违背型水平调节（H4）
+<!-- wb:pollock_2015_asq -->
 
 ```
 Signals provide value only if they convey new information ([citations]).
@@ -195,6 +201,7 @@ equally, because [moderator logic]."
 ---
 
 ## Vidal & Mitchell 型：双极变化 × 行动方式的条件化假设树
+<!-- wb:vidal_mitchell_2015_orsc:bipolar_change_action_mode_hypothesis_tree -->
 
 **来源论文**: Vidal & Mitchell (2015, *Organization Science*)
 

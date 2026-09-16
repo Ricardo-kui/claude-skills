@@ -17,6 +17,7 @@ status: EMERGING
 ---
 
 ## 基础权衡框架
+<!-- wb:chung_low_rust_2022_jams:cost_benefit_calculus_mechanism -->
 
 ```
 [Actors] have to weigh the benefits of [action] to boost [short-term_outcome] against 
@@ -33,6 +34,7 @@ more attractive.
 ---
 
 ## 对立力量同级 IV 再加权（liuliuluo2016 型）
+<!-- wb:Liu_Liu_Luo_2016_JM -->
 
 **适用**: 成本与伤害（或任何两条方向相反的决策准则）是同级自变量，不是对同一行动的感知高低；行动者激励改变的是两条力量的相对权重。
 
@@ -55,6 +57,7 @@ enhances the negative impact of [cost] and reduces the positive impact of [harm]
 ---
 
 ## 感知高收益句
+<!-- wb:chung_low_rust_2022_jams -->
 
 ```
 [Actors] high in [IV] see any drop in [metric] due to [negative_event], and the ensuing 
@@ -79,6 +82,7 @@ trajectory ([citations]).
 ---
 
 ## 感知低成本句
+<!-- wb:chung_low_rust_2022_jams -->
 
 ```
 Although the long-term value loss that comes with [action] should generally deter 
@@ -103,6 +107,7 @@ are less deterred by the prospective costs of [action].
 ---
 
 ## 综合收敛句
+<!-- wb:chung_low_rust_2022_jams -->
 
 ```
 Overall, we expect the perceived higher benefits and lower long-term costs from [action] 
@@ -125,6 +130,7 @@ cost of [action].
 ---
 
 ## 反方行为者对比（同一 TMT 内上下级激励差异）
+<!-- wb:chung_low_rust_2022_jams -->
 
 ```
 In contrast to [higher_actor], [lower_actor] faces [lower_benefit] and [higher_cost] 
@@ -143,6 +149,7 @@ bears the [functional_cost] without receiving a commensurate share of the [short
 ---
 
 ## 语料锚定
+<!-- wb:chung_low_rust_2022_jams -->
 
 - **Chung, Low & Rust (2022, JAMS)** — CEO confidence and myopic marketing management
   - 权衡声明: "CEOs have to weigh the benefits of cutting marketing investments to boost reported earnings against the long-term performance costs."
@@ -154,6 +161,7 @@ bears the [functional_cost] without receiving a commensurate share of the [short
 ---
 
 ## 可替换变量清单
+<!-- wb:chung_low_rust_2022_jams -->
 
 | 占位符 | 示例 |
 |--------|------|
@@ -169,6 +177,7 @@ bears the [functional_cost] without receiving a commensurate share of the [short
 ---
 
 ## 使用提示
+<!-- wb:chung_low_rust_2022_jams -->
 
 1. **先建立权衡框架**：在使用高收益/低成本句之前，必须先说明行为者面临的是 [short-term_benefit] vs [long-term_cost] 的 trade-off。
 2. **双向不对称可写**：如果研究涉及两个行为者（如 CEO vs CMO），使用 "反方行为者对比" 句说明同一行动对两人的成本-收益含义不同。

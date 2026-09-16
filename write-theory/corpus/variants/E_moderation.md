@@ -128,6 +128,7 @@ distinguishing this cross-level direct effect from the cross-level interaction e
 ---
 
 ## E3. 嵌入型边界条件（Embedded Boundary Conditions，kalaignanam2017 型）
+<!-- wb:kalaignanam_2017_jm:embedded_boundary_conditions -->
 
 **适用**: moderator 数量较多（≥3 个）且每个 moderator 有独立理论依据，独立 T5 段落会导致重复和碎片化。将边界条件完全嵌入 T3 机制推演中，通过"条件化机制修改"实现边界论证。
 
@@ -198,6 +199,7 @@ distinguishing this cross-level direct effect from the cross-level interaction e
 ---
 
 ## E4. 竞争基线 → 调节裁决（Competing Baseline → Moderation Resolution，Desai 2012 型）
+<!-- wb:desai_2012_amj:competing_baseline_moderation_resolution -->
 
 **适用**: 同一理论框架预测了两个（或多个）相反/竞争的响应，研究贡献是用 moderator 决定"何时哪个响应成立"。
 
@@ -418,6 +420,7 @@ high, at lower levels when low.
 
 
 ## E6. 序列嵌套调节（Sequential Nested Moderation，Chung/Low/Rust 2022 型）
+<!-- wb:chung_low_rust_2022_jams:sequential_nested_moderation -->
 
 **适用**: 研究包含**两层边界条件**：第一层调节变量（W1）直接影响 X→Y 关系；第二层调节变量（W2）调节 W1 的调节效应，形成三向交互（X × W1 × W2）。机制族至少两条：(a) 劝说×相对权力（Chung 2022：下级劝说上级被权力放大）；(b) 注意治理×任务负荷（Lun et al. 2026：功能高管权力缓冲主效应，组合阶段的注意负荷再调节该缓冲）。
 
@@ -509,6 +512,7 @@ and [DV] is [stronger/weaker] when [W2] is high than when [W2] is low."
 ---
 
 ## E7. 宏观事件激活与持续性调节（Event-Activated Temporal Moderation，Reinwald et al. 2026 型）
+<!-- wb:reinwald_kanitz_bamberger_backmann_hoegl_2026_orsc:macro_event_activation_persistence_moderation -->
 
 **验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
 
@@ -562,6 +566,7 @@ Outside [macro-event period], individuals can suppress or compartmentalize [iden
 ---
 
 ## E8. 双刃剑估值机制 → 异号增强/阻碍权变（Dual-Edged Valuation → Signed Enhancing/Hindering Contingencies，Castellaneta et al. 2017 型）
+<!-- wb:castellaneta_conti_kacperczyk_2017_smj:dual_edged_signed_enhancing_hindering_contingencies -->
 
 **验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
 

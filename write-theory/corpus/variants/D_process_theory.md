@@ -12,10 +12,11 @@
 
 | # | 变体 | 家族 | 适用场景 | 状态 | 来源 |
 |---|---|---|---|---|---|
-| 关键句式模板 | 关键句式模板 | 质性/过程理论型 | — | 未标注（待核） | 未标注（待补） |
+| 关键句式模板 | 关键句式模板 | 质性/过程理论型 | — | 未标注（待核） | lashley_pollock_2020_asq |
 | Lashley & Pollock 2020 型 | Lashley & Pollock 2020 型：核心污名降低三阶段过程模型 | 质性/过程理论型 | — | 未标注（待核） | Lashley & Pollock 2020 |
 
 ## 段落功能地图
+<!-- wb:lashley_pollock_2020_asq -->
 
 > **定性 vs 定量差异**: 定性/归纳型过程理论论文（如 Lashley & Pollock 2020 OS, Pontikes 2012 ASQ）的 Theory 部分通常包含独立的文献回顾子节，以建立过程视角的理论基础。定量假设检验型论文则将文献回顾嵌入构念定义和 why-chain 推导中，不以独立子节出现。
 
@@ -32,6 +33,7 @@
 ---
 
 ## 关键句式模板
+<!-- wb:lashley_pollock_2020_asq -->
 
 **过程视角定位（P1，1-2句）**：
 ```
@@ -98,6 +100,7 @@ mediated by [process mechanism]."
 ---
 
 ## Lashley & Pollock 2020 型：核心污名降低三阶段过程模型
+<!-- wb:lashley_pollock_2020_asq -->
 
 **新增于**: write-theory 3.2.0 (Lashley & Pollock 2020 ASQ 蒸馏)
 

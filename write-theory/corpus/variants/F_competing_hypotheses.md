@@ -110,10 +110,12 @@ how [X] may influence [Y]:"
 ---
 
 ## 进阶技巧（wowak2025）：自反性反机制 + 多 DV 递进竞争
+<!-- wb:wowak_2025_ms:competing_mechanism_chain -->
 
 > 以下两个技巧使竞争假设超越"两个理论各执一词"的初级形态，提升理论密度。源自 Wowak et al. (2025, MS) 第二个 DV（time-to-recall）的更复杂推导。
 
 ### 技巧 1：自反性反机制（Self-Counter-Mechanism via "Conversely"）
+<!-- wb:wowak_2025_ms -->
 
 **核心**: 竞争机制不必来自两个对立理论或两个对立群体；**同一价值取向/同一群体内部**可衍生自反性反机制——驱动某行为的同一倾向，也内含削弱（甚至反转）该行为的种子。这把竞争从"人际/理论间"升级到"价值内在张力"。
 
@@ -150,6 +152,7 @@ is consistent with studies showing that [state] can result in [decision-making b
 - 反机制必须真正"翻转"方向（faster → slower），而非只是"减弱"——只是减弱应路由到 [E] 调节效应型
 
 ### 技巧 2：多 DV 递进竞争（Progressive Multi-DV Competing Elaboration）
+<!-- wb:wowak_2025_ms -->
 
 **核心**: 当同一 IV 对**多个 DV** 产生竞争预测时，第二个（及后续）DV 的机制空间可**比第一个更丰富**——通过引入自反性反机制，从 2-mechanism（每极一个）升级到 4-mechanism 2×2（每极两个自反性机制），最终仍折叠为一对竞争假设。展示"丰富机制空间 → 简洁假设"的压缩能力。
 

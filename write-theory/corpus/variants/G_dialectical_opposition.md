@@ -267,6 +267,7 @@ how these audiences respond to [focal phenomenon].
 ---
 
 ## Zhou 2017 型：双重逻辑 + 输入-效率分解 + 倒 U 形整合
+<!-- wb:zhou_2017_asq:dual_logic_input_efficiency_inverted_u -->
 
 **新增于**: write-theory 3.2.0 (Zhou, Gao & Zhao 2017 ASQ 蒸馏)
 

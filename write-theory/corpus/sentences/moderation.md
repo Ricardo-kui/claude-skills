@@ -71,6 +71,7 @@ a different level of analysis]."
 ---
 
 ## 双边论证fit/misfit型（weng_yang 型）
+<!-- wb:weng_yang_jms -->
 
 **功能**: 将交互效应概念化为 "fit"（alignment amplifies）和 "misfit"（misalignment dampens），为统计交互项创造有名字的理论概念。
 
@@ -112,6 +113,7 @@ a [actor] and a [moderator] can operate to compromise the [pole-A actor]'s
 ---
 
 ## 能力放大+双边约束型（weng_yang 型）
+<!-- wb:weng_yang_jms -->
 
 **功能**: 当 moderator 是个体/组织的 "capacity/power" 时，论证 moderator 如何放大 IV 两端（pole-A AND pole-B）的效应，同时展示低 moderator 如何约束两端。
 
@@ -156,6 +158,7 @@ capacity to [action] will be constrained."
 ---
 
 ## 调节直接效应区分
+<!-- wb:Liu_Liu_Luo_2016_JM -->
 
 ```
 "Z [strengthens/weakens] the [X]→[Y] relationship because [Z] changes the 
@@ -195,6 +198,7 @@ characteristics might moderate the impact of the [event] characteristics on [cho
 ---
 
 ## 调节变量的理论嵌入策略——将 Moderator 映射到核心理论的次级假设
+<!-- wb:wang_2024_smj:theory_internal_moderator_growth -->
 
 **适用**: 引入边界条件时，避免 moderator 成为外部补丁（"随便加了一个调节变量"），而是从核心理论内部自然生长。
 
@@ -272,6 +276,7 @@ We empirically explore such a moderating effect of [W] in the later section.
 <!-- wb:lu_et_al_2022_frenemies_corporate_advertising:deferred_moderation_empirical_deferral_sentence -->
 
 ## 跨层调节前置声明
+<!-- wb:andersson_cuervo_cazurra_nielsen_2014_jibs_editorial:cross_level_moderation_preamble -->
 
 ```
 "The focal unit of analysis is [Level-1 unit, e.g., the firm-year]. 
@@ -294,6 +299,7 @@ distinguishing this cross-level direct effect from the cross-level interaction e
 ---
 
 ## 统一框架型调节变量选择（hoffmann2024 型）
+<!-- wb:hoffmann_cheong_phan_zurbruegg_2024_jm:unified_framework_moderator_selection -->
 
 **功能**: 当研究有多个调节变量时，用一个 organizing framework/taxonomy 系统化地为调节变量的选择提供理论理由，而非逐个引入。
 
@@ -431,6 +437,7 @@ H[n]: The effect of [X] on [DV] [increases/decreases] with the [level/degree] of
 **验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
 
 ## 董事会放大型边界条件（Board Monitoring as Amplifying Boundary Condition，Chung/Low/Rust 2022 型）
+<!-- wb:chung_low_rust_2022_jams:board_governance_amplifying_boundary -->
 
 **功能**: 当研究中的公司治理机制（尤其是董事会/独立董事/机构监督）不是抑制而是**放大**管理层机会主义/短视行为时使用。核心逻辑：董事会的监督压力通过股东短期绩效要求传导到高管，反而加剧其短视倾向。
 
@@ -784,6 +791,7 @@ increasing [valuation uncertainty / adverse-selection discount]."
 ---
 
 ## 倒U型垂直位移调节（shift upward / downward）
+<!-- wb:bendig_hensellek_schulte_2024_etp -->
 
 **功能**: 为“整条曲线沿 Y 轴平移、曲率大体不变”的调节提供与 flatten/steepen、拐点右移可区分的图形化语言。适用于 adverse Y 的倒 U：W 提高各 X 水平上的风险基线，而不必然改变学习主导后的下降速率。
 

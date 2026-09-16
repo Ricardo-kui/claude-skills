@@ -8,6 +8,7 @@
 ---
 
 ## 单理论多假设的段首主导动机（Darby 2025 型）
+<!-- wb:darby_2025_jscm -->
 
 **适用**: 主效应 + 多个调节假设，所有假设都从同一核心理论的同一构念派生。Incompleteness × Mechanism（主）+ Boundary（次）组合。
 
