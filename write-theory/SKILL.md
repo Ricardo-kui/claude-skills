@@ -100,7 +100,7 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 
 ## 措辞润色（QC 后、output 前默认执行）
 
-骨架与 QC 完成后，对关键句位做一轮措辞增强。**默认执行**。按 section 分区查（不全读）：
+骨架与 QC 完成后，对关键句位做一轮措辞增强。**默认执行**。按 section 分区查（不全读）。**跨节句子功能查询**（想借他节功能句/词汇——hook 句、因果动词档位、样本漏斗节奏等）→ 读 `../_shared/function-map.md`（功能→载体地图）：
 
 | 句位 | 查的语料库 | 动作 |
 |------|-----------|------|

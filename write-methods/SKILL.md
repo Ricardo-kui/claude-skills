@@ -93,7 +93,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 
 ## 渲染与措辞
 
-**语料优先改编（模块确定后）**：slot 骨架 + 设计类型变体的语料句式即改编底本——槽位与设计类型确定后，尽量使用对应 slot 通用段落与设计类型变体的句式表达来改编（替换来源特异性内容、填充 [placeholder]），而非脱离语料自拟；变体数=0 或标注"待补"时按骨架生成，表达仍尽量贴合语料句法。
+**语料优先改编（模块确定后）**：slot 骨架 + 设计类型变体的语料句式即改编底本——槽位与设计类型确定后，尽量使用对应 slot 通用段落与设计类型变体的句式表达来改编（替换来源特异性内容、填充 [placeholder]），而非脱离语料自拟；变体数=0 或标注"待补"时按骨架生成，表达仍尽量贴合语料句法。**跨节句子功能查询**（想借他节功能句/词汇——hook 句、hedging 强度、claim 层级等）→ 读 `../_shared/function-map.md`（功能→载体地图）。
 
 1. **句法微模板（默认执行）**：按 `corpus/micro-templates/INDEX.md` 分类索引选读 1–3 个对应微模板（causal-hedging / transitions / because-clauses / funnel-rhythm / variable-operationalization / identification-exogeneity 等），为关键句位提供 2–3 个备选措辞。高风险微模板（强因果动词）只能在对应设计强度的骨架中使用。
 2. **措辞变化库**：过程描述 → `../write-introduction/corpus/phrasebank/methods-process.md`；数值与趋势 → `quantities-trends.md`；hedging → `hedging-strength.md`（识别论证/局限辩护用）；试探性因果 → `causal-hedging.md`（Discussion 机制解释专用）；五病 → `../pollock-qc/references/prose-pathology.md`。

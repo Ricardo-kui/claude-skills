@@ -77,6 +77,8 @@ when_to_use: "写、规划、重写或改稿引言时使用（含不够像范文
 
 **语料优先改编 · 角色先于风格**：语料句式为改编底本（替换来源特异性内容、填槽位；corpus 无对应句式时再自拟并保持同构），论证型模块按论证单元角色序列组装（先骨架后句子，语料顺序≠段落顺序）——纪律、拼贴判据与 intro 角色接线（render-rules §段落论证文法）见 `../story-blueprints/v4/rhetoric-moves/_argument-grammar.md` + `_polish-protocol.md` §write-*；Hook/Preview/Transitions 为 framing 豁免。已核实事实与用户裁定优先于语料句式。
 
+**跨节句子功能查询**：写本节时想借他节功能句/词汇（因果动词档位、claim 层级、机制链句式等）→ 读 `../_shared/function-map.md`（功能→载体地图：四节功能轴 + 骨架索引 + 词汇/档位唯一源指针）。
+
 槽位：槽位值未知或拿不准填什么时读 `references/introduction-slot-contracts.md`，只填已知信息，不确定的槽位保留占位；缺证据的槽位按 `generation-protocol.md` 记录为待回填。
 
 变体选择：按适用场景/证据状态/研究情境/期刊选主推变体并写明选择理由；仅实质改变故事路径时给 1 个备选。优先级：corpus 变体级约束 > 研究情境 > 路由表推荐 > story_frame 调制。

@@ -15,6 +15,9 @@
    解析清单（FAMILIES/VARIANT_FILES 等），新蒸馏文件漏登记即 FAIL；(b) 变体覆盖——
    每个变体标题必须有索引条目或 _unparsed 记录；(c) 围栏覆盖——含 [槽位] 的围栏块数
    ≤ 该文件模板条目数（E_moderation 型 H2 模板静默漏抽的自动拦截）。
+5. **function-map 门**：`_shared/function-map.md`（功能→语料载体地图）的全部本仓
+   指针可解析，且骨架/索引目标有表格数据行——「按句子功能取范本」的非空性由此
+   被机器看守（地图即 fixtures 源）。
 
 判定纪律：corpus 未变时，本门 FAIL = 引擎/适配器漂移（查 git diff 即见）；
 corpus 变更后 FAIL = 重建产物尚未随 corpus 一起提交，是纪律提示而非误报。
@@ -122,6 +125,42 @@ def _fence_stats(lines: list[str]) -> tuple[int, int]:
         if in_f and "[" in s and "]" in s:
             has_b = True
     return tot, bracket
+
+
+def function_map_gate(fail) -> None:
+    """`_shared/function-map.md` 的指针可解析 + 索引/骨架目标非空（地图即 fixtures 源）。
+
+    地图是 write-* 家族「按句子功能取范本」的跨节路由（ad-hoc 查询入口）。门语义：
+    (a) 图内全部本仓路径（反引号内、首段为 skill/共享目录名）必须存在；
+    (b) 指向 corpus/_skeleton/ 与 corpus 索引（INDEX/_index）的目标必须有表格数据行
+        ——即「该功能轴当前有非空范本库存」，功能检索非空由此被机器看守。
+    """
+    map_path = REPO / "_shared" / "function-map.md"
+    if not map_path.is_file():
+        fail("_shared/function-map.md 缺失（功能→语料载体地图）")
+        return
+    text = map_path.read_text(encoding="utf-8")
+    roots = {"write-introduction", "write-theory", "write-methods",
+             "write-results", "_shared", "distill-paper-exemplar",
+             "story-blueprints"}
+    targets: list[str] = []
+    for m in re.finditer(r"`([a-zA-Z0-9_\-./]+\.(?:md|py|yaml))`", text):
+        t = m.group(1)
+        if t.split("/")[0] in roots and t not in targets:
+            targets.append(t)
+    if not targets:
+        fail("function-map 未解析到任何本仓指针（格式漂移？）")
+        return
+    for t in targets:
+        p = REPO / t
+        if not p.exists():
+            fail(f"function-map 指针不可解析: {t}")
+            continue
+        if "/_skeleton/" in t or t.endswith(("corpus/INDEX.md", "/_index.md")):
+            rows = [ln for ln in p.read_text(encoding="utf-8").splitlines()
+                    if ln.startswith("|")]
+            if len(rows) < 3:
+                fail(f"function-map 索引目标无表格数据行: {t}")
 
 
 def coverage_gate(fail) -> None:
@@ -272,6 +311,14 @@ def main(argv: list[str] | None = None) -> int:
         print(f"  [FAIL] {msg}")
 
     coverage_gate(_cov_fail)
+
+    print("\n== function-map ==")
+
+    def _fm_fail(msg: str) -> None:
+        failures.append(msg)
+        print(f"  [FAIL] {msg}")
+
+    function_map_gate(_fm_fail)
 
     if not args.skip_validators:
         print("\n== validators ==")
