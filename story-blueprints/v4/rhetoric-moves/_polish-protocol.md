@@ -94,6 +94,8 @@ related: ["[[story-blueprints/v4/rhetoric-moves/_index]]", "[[humanizer/SKILL]]"
 | 11 | 假装揭示真相 | The real question is / at its core / fundamentally | 删壳，直陈那个主张 |
 | 12 | 假深度格言 | X is the Y of Z / the currency of | 换成带细节的具体主张 |
 | 13 | 冒号/分号构造长句 | 一句内 "A: B; C" 链式拼接 | 一句内冒号+分号 ≥2 处 = 拼装信号：拆成独立句或改主从结构；冒号只留真正引入列举/解释的那一处，分号改句号 |
+| 14 | model 用作动词 | we modeled / modeling the outcome（及 modelled/modeling 变体） | 实证写作默认禁用（与 write-results 语言锁同源）：改 estimate / re-estimate / analyze / specify，或直接说明分析单位；"the model" 名词用法不受限（2026-09-19 用户裁定） |
+| 15 | 破折号过密 | 每段成对 "—插入语—" ≥1 组，或全文破折号密度明显高于范文库 | 学术正文一段至多保留一处破折号，其余改逗号、括号或拆独立句（2026-09-19 用户裁定）；verbatim 底本原句内的破折号按锚点纪律不改 |
 
 **误报护栏（不可无脑套用）**：正式学术词 ≠ AI 腔（§5 只针对成群高频词）；单个 however/additionally 不是信号；有来源的限定语、真实的 scope statement 保留；引用/题名内的短语不改。判 AI 腔看**多信号同段聚集**，单条证据不定罪。
 
