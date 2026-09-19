@@ -24,6 +24,10 @@
 1. **测度家族比较段缺变体**：IV¶3（MHHI/holdings/incentive 三族对比地图）全库无锚——GGL/kappa/He-Huang 类测度选择争论是共同所有权文献 Methods 高频段位，建议下次蒸馏该族论文时补「测度家族比较与选择辩护」变体（建议载体：`实证对象构建.md`）。
 2. **M5 构造边界句轻锚**：moderator 公式段的「The measure is not constructed as…」边界辩护句仅有 pollock#T4 家族影子，无直接变体；优先级低于 1。
 
-## 结论
+## 事后纠错（2026-09-19 用户质询触发）
+
+M7 示范改写初版开场借用了 `rare-outcome#T3`（lun2026）的 extensive/intensive margin 术语——被用户质询"有前例吗"后查证：①该术语全库仅此一条 verbatim（单源 EMERGING），按证据分档纪律不作默认；②lun2026 用 margin 分解是为**二元化 DV** 辩护，与本稿保留计数的 Poisson 设定论证方向相反（借结构借反了箭头）。已换锚 `rare-outcome#T1`（zorn2017 "low base rate" 白话框架）出修正版。**教训入账：EMERGING 单源术语/句式在真实改写中极易被当默认借用——G1 借句表应给 EMERGING 底本加显式"单篇来源"标注位（现状只标状态列，改写时不醒目）。**
+
+
 
 methods 腿 Batch 7 验收 **通过**：骨架索引/借句表/coverage/布尔判据/新资产全链路在真实稿件上闭合。theory/results 两腿仍未跑（各需一次真实生成），仍是两轮方案共同剩余缺口。本记录不写回项目文件；改写示例段以对话交付，由作者决定采纳。
