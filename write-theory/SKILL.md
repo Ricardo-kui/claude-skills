@@ -118,7 +118,7 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 ## Downstream interfaces（供其他 Skill 消费）
 
 - `/write-methods`、`/write-results` — 经 paper-state.yaml 消费 `theory.constructs` / `theory.hypotheses` / `theory.mechanism_chains`（假设-变量映射、Hypothesis-Result Fulfillment Map）
-- `/write-discussion`（review 侧）— 以假设列表与机制链作为 Discussion 理论贡献的对齐锚点
+- `discussion-review` — 以假设列表与机制链作为 Discussion 理论贡献的对齐锚点（诊断；无专用生成 skill，重写由作者/主循环执行）
 - `/paper-review`、`/theory-review` — 以本 skill 输出作为跨 Section 对齐与 Theory 草稿审查的基准
 - `/distill-theory-exemplar` — 新论文 Theory 蒸馏后回写 `corpus/`
 

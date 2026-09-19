@@ -105,7 +105,7 @@ R1–R9 是证据功能，不是强制章节顺序。按需加载 slot 骨架（
 5. **锚点使用纪律（verbatim anchor）**：结构跟证据功能；使用规则见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律。修辞动作级升级（反向反事实等）路由 `../story-blueprints/v4/rhetoric-moves/_index.md`，润色走其 `_polish-protocol.md` 流畅性门。
 6. **事实直陈默认语态**：先直接报告方向、显著性/不确定性和幅度；只保留一句完成必要解释，再把 verdict 绑定到假设或理论。不要用“我们诚实披露”“为了透明”“我们并不把它表述为”等自我评价式 wrapper 代替限制本身。
 7. **语言锁定**：主动读取用户禁用词和现稿术语表；默认不把 `model/modeled/modelled/modeling/modelling` 用作动词，改用 `estimate`、`re-estimate`、`analyze`、`specify` 或直接说明 unit of analysis。不得重新发明 Methods 已删除的上位构念。
-8. **因果语言强制词汇表**（按设计家族，无越级）：动词档位唯一源 `../write-methods/corpus/micro-templates/causal-hedging.md`——面板 OLS→"associated with"（禁 causes/leads to）；DiD→平行趋势支持后 "effect of"；IV→识别 preview 后 "effect"、避免 "causes"；非线性→边际效应/概率转述；生存分析→"changes the hazard of"；实验→"caused"。与第 9 条互补：本条按设计家族管动词，claim-calibration 按主张层级管范围。
+8. **因果语言档位**（按匹配设计家族范文定档，无统一强制词表——同 write-methods 第 7 条口径，wmf_206116a4：商科期刊对观察性设计无统一因果动词标准，以同领域范文实际用法为唯一基准）：默认档位唯一源 `../write-methods/corpus/micro-templates/causal-hedging.md`——面板 OLS 默认 "associated with"；DiD 默认平行趋势支持后 "effect of"；IV 默认识别 preview 后 "effect"；非线性默认边际效应/概率转述；生存分析默认 "changes the hazard of"；实验默认可用强因果词。默认档位与匹配范文实际用法冲突时以范文为准；动词不得越过第 9 条 claim 层级上限（"无越级"由此承载）。与第 9 条互补：本条按设计家族管动词，claim-calibration 按主张层级管范围与强度。
 9. **主张层级校准**（claim level ≤ evidence level）：写 R3 claim 句 / R5 经济显著性 / Discussion 面向的 implication 句前读 `references/claim-calibration.md`——7 级 claim ladder（L1 观察 → L2 关联 → L3 预测 → L4 因果效应 → L5 机制 → L6 普适 → L7 应用）、过度声明动词表与强主张四件套句式（`Strong claim + scope + evidence basis + remaining uncertainty`）。与第 8 条互补：第 8 条按设计家族管动词，本条按主张层级管范围与强度；设计只支持 L2 就不得写 L5/L6 语句。
 
 **完成判据（是/否）**：兑现映射 6 项检查点是否逐项通过？四项证据功能是否齐全（方向→显著性→幅度→支持判断）？claim 层级是否未越过证据层级？借句表是否已按 `generation-protocol.md` 产出且 coverage 已计算？

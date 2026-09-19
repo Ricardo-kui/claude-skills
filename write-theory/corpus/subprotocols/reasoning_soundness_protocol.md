@@ -96,7 +96,7 @@
    - 其余论证足以补偿（"the rest of your argument more than compensates for the weakness"）
    - 弱点虽严重，更多研究将找到出路（"more research will show a way around it"）
    - 虽无法全盘接受 claim，但论证提供了重要洞见与未来答案的线索
-   **位置规则**：可修复的异议就地处置（Theory 内，句式见 `../sentences/acknowledgment_response.md`）；不可修复的承认放 Discussion limitations（该处语料归 write-discussion，本协议不展开）。承认不是削弱论证，是可信度建设——experienced researchers 的目标是推进社群对话，不是终结对话。
+   **位置规则**：可修复的异议就地处置（Theory 内，句式见 `../sentences/acknowledgment_response.md`）；不可修复的承认放 Discussion limitations（该处暂无专用语料库，本协议不展开）。承认不是削弱论证，是可信度建设——experienced researchers 的目标是推进社群对话，不是终结对话。
 
 **证据侧攻击向量（Booth Ch09 §9.2）**：上方六类 warrant 挑战模拟的是**推理侧**对手（"这一步推不出"）；对 [E] 前提密集的推导段，压力测试追加至少 1 条**证据侧**质问（八问见 §9）——它攻击的是前提本身站不站得住（"这个证据可信吗"）。
 

@@ -55,14 +55,14 @@ whenToUse: "Use when the user has received reviewer comments or a decision lette
 - 无 paper-state.yaml 的项目:跳过本锚点,按现有流程(不降级)。
 
 ## 与你已有栈的分工
-- **实际重写正文某节**:路线图产出后,逐节交给 `write-introduction` / `write-theory` / `write-methods` / `write-results` / `write-discussion`;语言润色与去 AI 味交 `humanizer` / `proofread`。**路线图的每一行就是交给下游的工单**——"意见转述 + 责任节 + 兑现证据位置"三列原样传给对应 write-*/review skill,不重新转述(保留审稿人原意)。修改 storyline 的工单必须先过上面的 story contract 锚点。
+- **实际重写正文某节**:路线图产出后,逐节交给 `write-introduction` / `write-theory` / `write-methods` / `write-results`（Discussion 节无专用生成 skill——诊断交 `discussion-review`,重写由作者/主循环执行）;语言润色与去 AI 味交 `humanizer` / `proofread`。**路线图的每一行就是交给下游的工单**——"意见转述 + 责任节 + 兑现证据位置"三列原样传给对应 write-*/review skill,不重新转述(保留审稿人原意)。修改 storyline 的工单必须先过上面的 story contract 锚点。
 - **实证类要求**(重跑回归、换识别、加稳健性):交 `causal-analysis`(再路由到 `did-analysis` / `econometrics-agent` / `stata` / `empirical-pipeline-stata`),或规格搜索交 `xianzhu-skill`。
 - **整体投稿前 QC**:交 `pollock-qc` / `paper-review`（总控：叙事诊断 + `toc-review` 实质红队双层，一份统一报告）。路线图完成后、下次投稿前，可先跑 `toc-review` 做弱点预判，其清单可直接作为路线图预演素材。
 - 本 skill 只产出"改什么、按什么顺序、回复怎么搭骨架、回复体检",不越界做上面这些事。
 
 ## 审稿信号回流（critique-driven，路线图交付后的收尾步骤）
 
-R&R 产出后,把**审稿人反复质疑的方法/写作论点**登记回 write-* 批评 registry(`corpus/_evidence_registry.yaml`)。审稿人是比日常用户批评更高权重的信号源(editor 背书 + 跨轮次重复出现);登记后直接进入下一轮蒸馏的 critique_heavy 判定(revise + reject ≥ 2 → REPLACE/EXTEND 优先),与 Phase 0.75 选材闭环。
+R&R 产出后,把**审稿人反复质疑的方法/写作论点**登记回对应节的 write-* 批评 registry(如 `../write-theory/corpus/_evidence_registry.yaml`,introduction/methods/results 同名路径)。审稿人是比日常用户批评更高权重的信号源(editor 背书 + 跨轮次重复出现);登记后直接进入下一轮蒸馏的 critique_heavy 判定(revise + reject ≥ 2 → REPLACE/EXTEND 优先),与 Phase 0.75 选材闭环。
 
 **登记条件**(只登写作可改进点,避免噪音登记):
 - 同一方法/写作论点**跨审稿人或跨轮次(R1/R2)反复出现**;或
