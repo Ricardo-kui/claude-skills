@@ -468,14 +468,14 @@ H[X]: The [main effect] is [strengthened / weakened] by [W].
 ```
 
 **呈现装置 — moderator×mechanism 矩阵表**:
-```
+
 |              | [Metaphor 1] ([sub-effect 1])        | [Metaphor 2] ([sub-effect 2])         |
 |--------------|--------------------------------------|---------------------------------------|
 | [W1]         | [channel-1 logic for W1]             | [channel-2 logic for W1]              |
 | [W2]         | [channel-1 logic for W2]             | [channel-2 logic for W2]              |
 | [W3]         | [channel-1 logic for W3]             | [channel-2 logic for W3]              |
-```
-（范文用一个 4 行 × 2 列表把"理论论证 + 3 moderator × 双通道"一次性呈现，读者与审稿人可逐格核验每个 moderator 是否真覆盖了双通道。）
+
+（范文用一个 4 行 × 2 列表把"理论论证 + 3 moderator × 双通道"一次性呈现，读者与审稿人可逐格核验每个 moderator 是否真覆盖了双通道。呈现装置非句式骨架，不进借句索引——与 Pattern 12 的 moderator×disposition-pole 矩阵同呈现形态。）
 
 **为什么有效**:
 - **适用范围**：本矩阵是“两个通道同向收敛，且每个 moderator 确实同时作用于两个通道”的专用模板，不是所有多机制调节的通用硬约束。选择性作用于单一路径时，使用 mechanism mapping（作用点 + invariant path + 净效应），允许另一格为 N/A 并说明理论理由。
@@ -516,7 +516,6 @@ related: 与 dual_mechanism_convergent_moderation (Li 2025) 概念正交：
 **范文来源**: Abdurakhmonov, Ingram & Ridge (2026), *Journal of Management*（CEO liberalism → corporate political transparency；三个边界条件 firm political uncertainty / industry transparency norms / industry concentration 全部 weaken 主效应，但每个经不同不对称机制作用于 liberal vs conservative CEO）
 
 **骨架（per-moderator asymmetric reasoning — 三种已观察到的子变体）**:
-
 ```text
 [Meta-framework] Drawing on and extending [meta-theory of discretion / latitude of action],
 we argue that the extent to which [disposition trait] shapes [outcome] depends on the

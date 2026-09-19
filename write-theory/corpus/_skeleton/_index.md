@@ -26,7 +26,7 @@
 | evidence_patterns | `corpus/subprotocols/evidence_patterns.md` | [`subprotocols-evidence_patterns.md`](subprotocols-evidence_patterns.md) | 10 | 15 |
 | construct_differentiation_patterns | `corpus/subprotocols/construct_differentiation_patterns.md` | [`subprotocols-construct_differentiation_patterns.md`](subprotocols-construct_differentiation_patterns.md) | 10 | 10 |
 | moderator_selection_frameworks | `corpus/subprotocols/moderator_selection_frameworks.md` | [`subprotocols-moderator_selection_frameworks.md`](subprotocols-moderator_selection_frameworks.md) | 8 | 13 |
-| bilateral_argumentation_templates | `corpus/subprotocols/bilateral_argumentation_templates.md` | [`subprotocols-bilateral_argumentation_templates.md`](subprotocols-bilateral_argumentation_templates.md) | 3 | 16 |
+| bilateral_argumentation_templates | `corpus/subprotocols/bilateral_argumentation_templates.md` | [`subprotocols-bilateral_argumentation_templates.md`](subprotocols-bilateral_argumentation_templates.md) | 3 | 17 |
 
 ## 来源子清单：sentences 句式库
 
@@ -41,7 +41,7 @@
 | mechanism_chain | [`sentences-mechanism_chain.md`](sentences-mechanism_chain.md) | 96 | 76 |
 | moderation | [`sentences-moderation.md`](sentences-moderation.md) | 35 | 41 |
 
-合计：22 个子清单 / verbatim 499 条 / 模板 607 条。
+合计：22 个子清单 / verbatim 499 条 / 模板 608 条。
 
 ## 待补录
 

@@ -25,6 +25,7 @@
 ## 核对记录
 
 - `未标注` citekey 实测 **45 条**（hooks 3、tensions 4、literature-turns 2、previews 3、contributions 2、transitions 1、micro-templates 30）；生成物逐行实测值，非估算。
+- 词表口径（与 write-methods / write-results 的 `通用` 是两个概念，不合并）：`未标注` = 卡级来源欠账——语料卡自身的 `来源` 字段缺失或声明"未标注（待补）"，属待回填 to-do；`通用`（methods/results 用）= 抽取层判定该条目天然无单一论文来源（跨设计通用模式）的回退标签。两者语义不同，改名会抹掉待补信号。
 
 ## 待补录
 

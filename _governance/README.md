@@ -24,7 +24,7 @@ write-* 技能的日常写作运行；写作技能的运行期纪律由各自的
 - `write-introduction/corpus` → `../../write-introduction/corpus`
 - `write-theory/corpus` → `../../write-theory/corpus`
 - `write-results/corpus` → `../../write-results/corpus`
-  （`_pilot_r2_index.yaml` 因此放回了 live write-results 的 corpus/ 下）
+  （`_pilot_r2_index.yaml` 曾因此放回 live write-results 的 corpus/ 下；**2026-09-19 已删除**——sha256 失配 + 46/99 变体计数失配，试点由正式骨架索引取代，见 `write-results/scripts/validate_write_results.py` FORBIDDEN 防复活条目与 `write-results/scripts/r2_*.py` 退役注记）
 
 ## 触发时机
 

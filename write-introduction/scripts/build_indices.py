@@ -835,6 +835,12 @@ def render_route(
         f"- `未标注` citekey 实测 **{unlabeled_total} 条**（{breakdown}）；"
         "生成物逐行实测值，非估算。"
     )
+    out.append(
+        "- 词表口径（与 write-methods / write-results 的 `通用` 是两个概念，不合并）："
+        "`未标注` = 卡级来源欠账——语料卡自身的 `来源` 字段缺失或声明\"未标注（待补）\"，"
+        "属待回填 to-do；`通用`（methods/results 用）= 抽取层判定该条目天然无单一论文来源"
+        "（跨设计通用模式）的回退标签。两者语义不同，改名会抹掉待补信号。"
+    )
     out.append("")
     out.append("## 待补录")
     out.append("")

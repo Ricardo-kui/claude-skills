@@ -166,17 +166,12 @@ def coverage_gate(fail) -> None:
             pref, _, vid = anchor.partition("#")
             rows.setdefault(pref, []).append((cells[4], vid))
     unparsed = (skel / "_unparsed.md").read_text(encoding="utf-8")
-    # 围栏覆盖文件级豁免（已确认的孤立欠账，修复后移除）：
-    fence_allowlist = {
-        "subprotocols/bilateral_argumentation_templates.md":
-            "1 处骨架围栏未入索引（2026-09-15 覆盖对账发现，位于 ### 块结构外，待修）",
-    }
     for rel in sorted(reg):
         lines = (tcorpus / rel).read_text(encoding="utf-8").splitlines()
         _, br_f = _fence_stats(lines)
         captured = rows.get(f"corpus/{rel}", [])
         tmpl = sum(1 for kind, _ in captured if kind == "模板")
-        if br_f > tmpl and rel not in fence_allowlist:
+        if br_f > tmpl:
             fail(f"write-theory {rel}: 含[槽位]围栏 {br_f} > 模板条目 {tmpl}（疑静默漏抽）")
         for ln in lines:
             m = mod.VARIANT_HDR_RE.match(ln.strip())

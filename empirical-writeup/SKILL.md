@@ -16,7 +16,7 @@ Use this skill after execution is stabilized and verification is complete. It co
 - `latex-tables`: regression, balance, and summary-statistics tables
 - `econ-visualization`: event studies, coefficient plots, descriptive figures
 - `write-methods` / `write-results`: methods, results, robustness, and claim-evidence alignment
-- `write-discussion-and-conclusion`: downstream implications after the empirical middle is stable
+- `discussion-review`: diagnosis of discussion and downstream implications after the empirical middle is stable (no dedicated generation skill — revise manually after the review)
 - `review-code`: use when prose, tables, and scripts appear inconsistent
 
 ## Required Inputs

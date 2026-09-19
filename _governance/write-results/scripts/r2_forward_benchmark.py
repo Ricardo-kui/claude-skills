@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+# [RETIRED 2026-09-19] R2 定向检索试点已被正式骨架索引（write-results/corpus/_skeleton/
+# + story-blueprints/tests/regression_retrieval.py 43/43）取代；其数据文件
+# corpus/_pilot_r2_index.yaml 已删除（sha256 钉在 OLS-FE 旧版、expected 46 变体 vs
+# 现行 99，账实早已失配）。本脚本保留作方法学记录，直接运行会因数据缺失而失败；
+# 如需考古，数据与逻辑见 git 历史（提交 40321eb 及更早）。
 """Prepare and score blind legacy/indexed forward tests for the R2 pilot."""
 
 from __future__ import annotations

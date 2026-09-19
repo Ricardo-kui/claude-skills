@@ -120,6 +120,13 @@
 
 ## 执行日志
 
+**2026-09-19 残留收口**（深度诊断 + 用户 grill 裁定五项，Q1–Q5）：
+
+- **E3 关账·不迁**：`write-theory/corpus/meta/product_safety_construct_lexicon.md` 经核实**不是**项目残留——它是 `generation-protocol.md` runtime meta 5 文件之一（生成期加载），registry 4 处引用含 `home_file`、`corpus/_index.md` 快速决策表、`hypothesis_derivation_patterns.md:1904` 交叉引用俱在，且有 VERIFIED 归因；产品召回为用户主研究领域，"领域专属"是特性非残留。本清单 E3 行的"疑似项目残留"预判被证伪，显式关账。
+- **I9 关账·已删**：`write-results/corpus/_pilot_r2_index.yaml` 删除——sha256 钉 `3b372d78…` vs 现行 OLS-FE.md `3eedaf2b…` 失配、expected 46 vs 现行 99 变体失配，试点前提（"未变更 legacy corpus"）已死，且被正式骨架索引 + regression_retrieval 43/43 取代。防复活：`validate_write_results.py` FORBIDDEN_SKILL_TEXT 增 `_pilot_r2_index`；`_governance/write-results/scripts/` 两基准脚本加退役注记头（保留方法学记录）；`_governance/README.md` 同步。
+- **遗留幽灵名已修（2026-09-06 P0 日志"遗留"条销账）**：用户裁定 Discussion 路由 = 诊断归 `discussion-review`、不复活 write-discussion。`empirical-writeup/SKILL.md` Default Stack 行与 `references/writeup-matrix.md` 路由行均改指 `discussion-review`（注明暂无专用生成 skill、诊断后人工修订）。
+- **（非本清单欠账，顺带收口）** theory `bilateral_argumentation_templates.md` 骨架围栏漏抽修复（Pattern 12 标签-围栏间空行致解析器 `lines[j+1]` 检查落空；Dual 矩阵去壳为真表格），新条目 `asymmetric_disposition_context_moderation.t1` 落账，`check_all.py` fence_allowlist 豁免删除；write-introduction `未标注` 与 methods/results `通用` 词表口径区分写入生成器（两概念不合并：卡级待补欠账 vs 抽取层无单源回退）。
+
 **2026-09-06 P1 已执行完毕**（B3/B4/B5、C1/C3/C4/C6、D 标注、E1/E4/E5）：
 
 - **C4 词表统一**：intro 是四件套中唯一偏离 stage-gates 权威词表的技能（把 preparing 用成了出骨架）——已对齐：`preparing`=只做诊断、`blocking`=可出占位符骨架、`refining/finishing`=confirmed+Intro 附加门；权威源 = `../paper-story-contract/references/stage-gates.md`。润色行的"preparing 跳过"同步改为"blocking 只出骨架时跳过"。

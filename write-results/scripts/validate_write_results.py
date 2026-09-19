@@ -34,6 +34,7 @@ FORBIDDEN_SKILL_TEXT = (
     "distill-results-exemplar --validate",
     "references/output-metadata-template.md",
     "`corpus/micro-templates/`",
+    "_pilot_r2_index",
 )
 REQUIRED_SKILL_TEXT = (
     "Phase -1",
