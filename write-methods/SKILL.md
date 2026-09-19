@@ -1,6 +1,6 @@
 ---
 name: write-methods
-description: "顶刊 Methods 论证结构生成器——按设计类型输出带 [placeholder] 的段落（M1-M10 槽位，覆盖 23+ 设计类型）。Use when 写方法部分；触发词：写方法、样本选择、变量定义、识别策略、内生性处理。Not for: 结果正文→write-results；审查→methods-review；蒸馏→distill-methods-exemplar。"
+description: "顶刊 Methods 论证结构生成器——按设计类型输出带 [placeholder] 的段落（M1-M10 槽位，覆盖 24 设计类型）。Use when 写方法部分；触发词：写方法、样本选择、变量定义、识别策略、内生性处理。Not for: 结果正文→write-results；审查→methods-review；蒸馏→distill-methods-exemplar。"
 when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别策略表述）时使用；结果正文归 write-results。"
 ---
 
@@ -8,7 +8,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 
 > 路径基准：本 skill 内所有相对路径以**本 skill 目录**（SKILL.md 所在目录）为基准；引用其他 skill 用 `../<skill>/...`。
 
-你是顶刊论文 Methods 的**论证结构生成器**。基于 34 篇 MVP30 范文和 Pollock 2025 Ch07，输出带有论证逻辑的段落框架——不只"这里填变量名"，而是展示**顶刊 Methods 如何在每个槽位完成说服**（describe → explain → justify → defend）。
+你是顶刊论文 Methods 的**论证结构生成器**。基于 MVP30 范文语料库（基数见 `corpus/_evidence_registry.yaml`）和 Pollock 2025 Ch07，输出带有论证逻辑的段落框架——不只"这里填变量名"，而是展示**顶刊 Methods 如何在每个槽位完成说服**（describe → explain → justify → defend）。
 
 核心原则：Methods 是说理不是罗列。
 
@@ -20,7 +20,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 /write-methods <模型类型> [--hypotheses="..."] [--journal=AMJ] [--design-variant=标准] [--paper-state=<path>]
 ```
 
-`<模型类型>`（必填，23+ 设计；全表与各类型变体数见 `corpus/INDEX.md` 设计类型索引表）：面板数据-OLS | 自然实验-DiD | 生存分析 | IV/2SLS | 实验 | 多研究 | 定性过程研究 等。省略模型类型 → 交互式询问。
+`<模型类型>`（必填，24 设计；全表与各类型变体数见 `corpus/INDEX.md` 设计类型索引表）：面板数据-OLS | 自然实验-DiD | 生存分析 | IV/2SLS | 实验 | 多研究 | 定性过程研究 等。省略模型类型 → 交互式询问。
 
 ## Phase -1: 模式识别与当前文本锁定
 
@@ -60,7 +60,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 | M4 | 自变量 / 核心预测变量 | `references/slot-M4.md` | 每假设一段 | 质性过程研究 |
 | M5 | 调节/中介/机制变量 | `references/slot-M5.md` | 含调节或中介假设时；每变量一段 | 无调节/中介 |
 | M6 | 控制变量与竞争性解释 | `references/slot-M6.md` | 总是；1–2 段填空 | 质性过程研究 |
-| M7 | 模型规格与估计方法 | `references/slot-M7.md` | 总是（最大文件，含 ~20 设计变体）；1–3 段含公式+文字 | 质性过程研究 |
+| M7 | 模型规格与估计方法 | `references/slot-M7.md` | 总是（最大文件，设计变体最全）；1–3 段含公式+文字 | 质性过程研究 |
 | M7补充 | 调节效应检验选择（differential prediction vs. differential validity） | `references/slot-M7-supplement.md` | Theory 含调节假设时必填；1 段 + 检验-方法对应表 | 无调节假设 |
 | M8 | 识别策略 / 效度 / 诊断检验 | `references/slot-M8.md` | IV/DiD/实验/匹配 强制；OLS/FE 可选；1–2 段。仅当识别策略属基准估计的一部分，**不用于预告 Results 的稳健性检验** | — |
 | M9 | 多研究 / 实验程序 / 质性编码 | `references/slot-M9.md` | 仅多研究设计（逐研究重复 M1–M8） | 非多研究 |
@@ -136,4 +136,4 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 **语料与变体**：设计类型具体变体见 `corpus/[设计类型].md`；新论文蒸馏结果经 `distill-methods-exemplar` → Phase 4 自动写入（同步更新 INDEX.md 变体数）。
 
 ---
-*基于 34 篇 MVP30 范文语料库、Pollock 2025 Ch07 构建；版本历史见 git log。*
+*基于 MVP30 范文语料库（基数见 `corpus/_evidence_registry.yaml`）、Pollock 2025 Ch07 构建；版本历史见 git log。*
