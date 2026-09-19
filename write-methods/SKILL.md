@@ -22,12 +22,6 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 
 `<模型类型>`（必填，23+ 设计；全表与各类型变体数见 `corpus/INDEX.md` 设计类型索引表）：面板数据-OLS | 自然实验-DiD | 生存分析 | IV/2SLS | 实验 | 多研究 | 定性过程研究 等。省略模型类型 → 交互式询问。
 
-## 前置检查
-
-- [ ] 用户已明确模型类型和设计变体
-- [ ] 用户已提供数据来源和时间范围
-- [ ] 用户已了解：输出的是带 `[placeholder]` 的段落，需替换为实际内容
-
 ## Phase -1: 模式识别与当前文本锁定
 
 先判定 `new_draft | revision | local_rewrite`。revision/local_rewrite 模式完整读取 `references/draft-revision-protocol.md`：在计划或改写前读取当前 Methods 正文与修订记录（需要判断章节归属时同时读取当前 Results），不得以旧稿或对话摘要代替现稿；从修订记录提取明确的不满意、删除/撤出裁定、禁用语、语态基准、事实纠正和旧建议作废声明作为 feedback；生成 `revision_constraints`（授权范围、保留/删除项、Methods–Results 边界、槽位归属、样本与估计对象、术语、语态、禁用模式、stale sources）。使用优先级：用户本轮裁定 > 匹配的 section/design-type 规则 > project 规则 > 当前核实事实 > skill 规则 > corpus 默认；标记 obsolete/stale 的 Theory 或旧稿不得约束输出。局部改写只改变授权段落，不得以修复措辞为由恢复已删除的变量、假设或分析。
@@ -126,7 +120,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 
 用户对 Methods 产出提出明确批评、事实纠正、章节边界调整、禁用表达、语态基准或旧建议作废声明时，读取 `references/feedback-protocol.md`（完整协议）；**先修正文稿，不以"已登记"代替改写**。双 registry 分工唯一源：`../story-blueprints/v4/rhetoric-moves/_feedback-registries.md`——本 skill 双轨全接：R1 经 `scripts/record_feedback.py` 将本轮批评及现稿修订记录中的明确裁定规范化为可执行规则（scope=`skill | project | section | design_type`，新裁定覆盖旧建议记 `supersedes`），下一次 revision 在生成前加载匹配的 active rules；R2 聚合质量信号的共享通道由 `../_shared/feedback/` 提供（另行接线）；当前变体级批评仍以 `references/feedback-registry.json` 中 `scope=design_type` 的记录承载，不跨 skill 汇总；项目规则不得污染其他论文。
 
-每次成文（含无批评的常规交付）另做**消耗登记**（best-effort，失败不阻塞交付）：`py ../distill-paper-exemplar/scripts/fitness_ledger.py log-consumption`（stdin JSON：`{"skill": "write-methods", "section": "methods", "project": "<项目>", "corpus_files": […], "variants": ["<!-- wb:citekey:item -->"], "blueprint_cards": […], "note": ""}`）——fitness 台账策展数据面；漏登可接受，不重登。
+每次成文（含无批评的常规交付）另做**消耗登记**（best-effort，失败不阻塞交付）：按 `../_shared/consumption-log.md` 单源执行（本 skill 固定值：`skill=write-methods`、`section=methods`）。
 
 ## 下游接口
 

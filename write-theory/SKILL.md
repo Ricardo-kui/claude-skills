@@ -22,7 +22,10 @@ Full Theory generation requires a valid story contract. Theory is rising action:
 
 ## Workflow
 
-1. 诊断构建类型：读 `references/phase-1-diagnosis.md` + `corpus/meta/routing_table.md`。主 Gap = Incommensurability 时先读 `references/incommensurability-resolution-routes.md`（L0 稳定推理内核 + R1–R4），再把 A–G 视为候选架构（route 只给候选、不规定 H 数量/模型形式——边界唯一陈述见 `corpus/meta/routing_table.md`；低置信时保留 L0 并报告两个候选路线）。冲突定位由理论对象与预测分歧裁定；Makadok 维度只校验贡献方向。路由后查 `corpus/_index.md` 快速决策表（variant→文件名映射 + 应配 subprotocols/sentences）；推荐任何 pattern 前按「Resource loading」节查证据状态。
+1. 诊断构建类型（三小步）：
+   - **1a 变体族路由**：读 `references/phase-1-diagnosis.md` + `corpus/meta/routing_table.md` 定 A–G 族。冲突定位由理论对象与预测分歧裁定；Makadok 维度只校验贡献方向。
+   - **1b Incommensurability 分支**（仅主 Gap = Incommensurability 时）：先读 `references/incommensurability-resolution-routes.md`（L0 稳定推理内核 + R1–R4），再把 A–G 视为候选架构（route 只给候选、不规定 H 数量/模型形式——边界唯一陈述见 `corpus/meta/routing_table.md`；低置信时保留 L0 并报告两个候选路线）。
+   - **1c 路由后定位与状态核查**：查 `corpus/_index.md` 快速决策表（variant→文件名映射 + 应配 subprotocols/sentences）；推荐任何 pattern 前按「Resource loading」节查证据状态。
    **完成判据（是/否）**：变体族已选？EMERGING 已标单/双源？
 2. 用 `references/phase-2-architecture.md` 定构念顺序、机制深度、假设结构与叙事弧；再按 `references/outline-protocol.md` 产大纲表（段号/主导功能/承载信息/来源四列），每段来源列填 `_skeleton` 二级 id 或 `self-drafted`。
    **完成判据（是/否）**：构念顺序已定？机制深度已定？大纲表四列齐全且每段来源非空可核？
@@ -124,7 +127,7 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 - **原文锚点**：语料 `**原文锚点**` 字段是来源论文原句的风格参照——使用规则见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律；选材参照 distill-theory-exemplar 的 routing 表 + 验证状态三带判定。
 - **批评登记**：双 registry 分工唯一源见 `../story-blueprints/v4/rhetoric-moves/_feedback-registries.md`；本 skill 接 R2 语料精炼通道（`critique.per_file`），只落 registry 不改 corpus——精炼由 distill-theory-exemplar 选材 Gate 驱动；R1 未建设，规则层缺陷走下方演化通道。
 - **演化**：reference-level 更新 `corpus/` + registry；规则层缺陷更新 `corpus/_skill_design_feedback.yaml`——门控细则（授权/风险/双回归/rule_excerpt_after）见 `../distill-theory-exemplar/references/design-feedback-loop.md`。
-- **消耗登记**（best-effort，失败不阻塞交付）：每次成文后调 `py ../distill-paper-exemplar/scripts/fitness_ledger.py log-consumption`（stdin JSON：`{"skill": "write-theory", "section": "theory", "project": "<项目>", "corpus_files": […], "variants": ["<!-- wb:citekey:item -->"], "blueprint_cards": […], "note": ""}`）——fitness 台账策展数据面；漏登可接受，不重登。
+- **消耗登记**（best-effort，失败不阻塞交付）：每次成文后按 `../_shared/consumption-log.md` 单源执行（本 skill 固定值：`skill=write-theory`、`section=theory`）。
 
 ## Resource loading
 

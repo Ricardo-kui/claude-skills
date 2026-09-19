@@ -129,7 +129,7 @@ R1–R9 是证据功能，不是强制章节顺序。按需加载 slot 骨架（
 
 用户对产出提出明确批评、禁用词、结构纠正或事实纠正时，读取 `references/feedback-protocol.md`（完整协议）；**先修正文稿，不以"已登记"替代当前任务**。双 registry 分工唯一源：`../story-blueprints/v4/rhetoric-moves/_feedback-registries.md`——本 skill 双轨全接（参照实现）：R1 经 `scripts/record_feedback.py` 将批评及修订记录中明确的用户裁定规范化为可执行规则（scope=`skill | project | section | estimator`，新裁定宣布旧建议作废时记录 `supersedes`），下一次 revision 在生成前加载匹配的 active rules；R2 `critique.per_file` 供 `distill-results-exemplar` selection-gate 消费；相同规则跨案例重复或累计达到阈值后，才进入 ADD/EXTEND/REPLACE 候选。
 
-每次成文（含无批评的常规交付）另做**消耗登记**（best-effort，失败不阻塞交付）：`py ../distill-paper-exemplar/scripts/fitness_ledger.py log-consumption`（stdin JSON：`{"skill": "write-results", "section": "results", "project": "<项目>", "corpus_files": […], "variants": ["<!-- wb:citekey:item -->"], "blueprint_cards": […], "note": ""}`）——fitness 台账策展数据面；漏登可接受，不重登。
+每次成文（含无批评的常规交付）另做**消耗登记**（best-effort，失败不阻塞交付）：按 `../_shared/consumption-log.md` 单源执行（本 skill 固定值：`skill=write-results`、`section=results`）。
 
 ## 下游接口
 

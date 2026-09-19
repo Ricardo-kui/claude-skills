@@ -93,7 +93,7 @@ when_to_use: "写、规划、重写或改稿引言时使用（含不够像范文
 4. 措辞润色（默认执行；blocking 只出骨架时跳过）：按句位查语料库——Hook/human face → `storytelling/prose-craft-checklist.md` §0/§5；批判措辞 → `phrasebank/critique-phrases.md`；hedging → `phrasebank/hedging-strength.md`；过渡 → `transitions/` + `micro-templates/transition-signals.md`；段内/段际 key line（三分法与连接式双要素句法）→ `micro-templates/key-line-patterns.md`；中心论点定位 → `micro-templates/thesis-models.md`；五病 → `../pollock-qc/references/prose-pathology.md`；人设 → `storytelling/authorial-persona.md`；因果声明 → `../write-methods/corpus/micro-templates/causal-hedging.md`。纪律：不改骨架占位；共用纪律见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-*。
 5. **水位门（生成后必过，与质量门并列）**：读 `references/water-level-gate.md`（姿态 / 预算 / 元语言 / 底本覆盖率与重写门）；审查输出字段与举证要求以 `../_shared/pass-contract.md` 为准。质量门与水位门两层都 PASS 才算通过。
 
-6. 消耗登记（best-effort，失败不阻塞交付）：成文后调 `py ../distill-paper-exemplar/scripts/fitness_ledger.py log-consumption`（stdin JSON：`{"skill": "write-introduction", "section": "introduction", "project": "<项目>", "corpus_files": ["<实际读过的 corpus 文件>"], "variants": ["<!-- wb:citekey:item -->"], "blueprint_cards": ["<实际采用的蓝图卡 id>"], "note": ""}`）——fitness 台账策展数据面（检索命中率、从未被检索变体），漏登可接受，不重登。
+6. 消耗登记（best-effort，失败不阻塞交付）：成文后按 `../_shared/consumption-log.md` 单源执行（本 skill 固定值：`skill=write-introduction`、`section=introduction`）。
 
 **完成判据**：质量门（`references/quality-gates.md`）全过；水位门按 `../_shared/pass-contract.md` 产出且满足其完成判据；底本覆盖率已计算并触发重写/修补分支；无未修复的 🔴/🟡 标记。
 
