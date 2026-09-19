@@ -28,6 +28,8 @@
 
 M7 示范改写初版开场借用了 `rare-outcome#T3`（lun2026）的 extensive/intensive margin 术语——被用户质询"有前例吗"后查证：①该术语全库仅此一条 verbatim（单源 EMERGING），按证据分档纪律不作默认；②lun2026 用 margin 分解是为**二元化 DV** 辩护，与本稿保留计数的 Poisson 设定论证方向相反（借结构借反了箭头）。已换锚 `rare-outcome#T1`（zorn2017 "low base rate" 白话框架）出修正版。**教训入账：EMERGING 单源术语/句式在真实改写中极易被当默认借用——G1 借句表应给 EMERGING 底本加显式"单篇来源"标注位（现状只标状态列，改写时不醒目）。**
 
+**M7 改写 v3（同日，用户要求充分调研后重制）**：全库扫 panel-ols(95)/非线性模型(22)/稀有结果(3) 的 M7 行 + Poisson/QMLE 全文命中——锚点由单源升级为四锚多刊 verbatim：`rare-outcome#1`（zorn2017 SMJ 低基率白话开场）+ `nonlinear#2`（Haunschild 2015 均值-方差违约**问题句**，与 QME 解法构成问题-解对仗）+ `nonlinear#12`（Vidal & Mitchell 2015 OS "保留 Poisson"决策句型，单源 EMERGING 仅结构借用）+ `nonlinear#7`（Desai 2011 AMJ 全零单位"do not add information"**末句直接前例**）。Wooldridge 引证/FE 理由/within-firm 识别三句原稿保留；未虚构任何未做检验。**调研教训：首轮只扫了稀有结果 3 变体即动笔（锚定不足）；非线性模型库才是计数估计器辩护的主库——M7 类借句应先按槽位横扫全设计类型库再选锚。**
+
 
 
 methods 腿 Batch 7 验收 **通过**：骨架索引/借句表/coverage/布尔判据/新资产全链路在真实稿件上闭合。theory/results 两腿仍未跑（各需一次真实生成），仍是两轮方案共同剩余缺口。本记录不写回项目文件；改写示例段以对话交付，由作者决定采纳。
