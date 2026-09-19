@@ -53,7 +53,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 
 | 槽位 | 名称 | 文件 | 何时加载 | 何时跳过 |
 |---|---|---|---|---|
-| M1 | 研究情境 / 实证背景 | `references/slot-M1.md` | 总是（JM/ASQ 必；AMJ 约 30% 缺，被 Introduction 覆盖）；1 段填空 | — |
+| M1 | 研究情境 / 实证背景 | `references/slot-M1.md` | 总是（JM/ASQ 必；AMJ 稿研究情境常由 Introduction 承担，独立 M1 段可缺——使用计数以 slot-M1 语料计数为准）；1 段填空 | — |
 | M2 | 数据来源与样本漏斗 | `references/slot-M2.md` | 总是；1–2 段填空 | — |
 | M2.5 | Model-Free Evidence | `references/slot-M2_5.md` | IV/DiD/匹配/复杂识别设计 | 纯 OLS/FE |
 | M3 | 因变量 | `references/slot-M3.md` | 总是；1 段填空 | 质性过程研究 |

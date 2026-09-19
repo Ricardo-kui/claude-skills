@@ -14,6 +14,7 @@
 ### 底本（exemplar base）
 
 底本 = 可 verbatim 借用的范文句骨架，附 `id`/`citekey`/`status`。唯一来源是骨架索引 `corpus/_skeleton/` 的 22 个子清单（路由见 `corpus/_skeleton/_index.md`）。
+- 底本状态为 EMERGING（单源）时，借句表该行加「单篇来源」标记，正文采用处保持该认知（不得当已验证惯例使用；三带判据见 registry/INDEX）。
 
 - 每条底本都带状态列：`verbatim`（逐字底本）或 `模板`（填槽骨架）。**`模板` 不可当逐字底本**，借用时按填槽处理。
 - 底本借用 = **只替换来源特异内容，骨架节奏与结构词保留**。

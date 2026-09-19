@@ -67,7 +67,7 @@ R1–R9 是证据功能，不是强制章节顺序。按需加载 slot 骨架（
 | R4 | 交互效应 / 条件效应 | `references/slot-R4.md` | 含交互假设时；每交互假设 1–2 段 | 无交互 |
 | R5 | 经济 / 实质显著性 | `references/slot-R5.md` | 嵌入 R3 或独立 1 段 | — |
 | R6 | 非显著 / 混合 / 意外发现 | `references/slot-R6.md` | 有非显著/混合假设时；**inline 报告可接受（顶刊常态），独立段落非必需** | 全部显著 |
-| R7 | 稳健性 / 效度 / 敏感性检验 | `references/slot-R7.md` | 按威胁组织，每威胁一段 | 质性发现 |
+| R7 | 稳健性 / 效度 / 敏感性检验 | `references/slot-R7.md` | 按威胁组织，每威胁一段；🔬 实验变体（单源专用 + Yuan 六维扩展）按需读 `references/r7-experimental-variants.md` | 质性发现 |
 | R8 | 补充 / 事后 / 机制分析 | `references/slot-R8.md` | 每补充分析 1 段；约 2/3 论文包含 | — |
 | R9 | Results 证据收束 | `references/slot-R9.md` | 需要总结复杂或混合证据时；只概括已报告的答案与未解决问题，不预写 Discussion | 默认跳过 |
 
