@@ -176,3 +176,7 @@ __pycache__/
 # Third-party skill: GB/T 9704 official document formatting (vendored from mizzlelover/gongwen-gbt9704-skill)
 !gongwen/
 !gongwen/**
+
+# Re-ignore timestamped session backups (last-match-wins after whitelists)
+_governance/backup/
+*.backup-*
