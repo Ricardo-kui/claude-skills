@@ -1,6 +1,6 @@
 ---
 type: canonical_theory_lens
-canonical_id: "theory-lens-06-context-bridging"
+canonical_id: "06-context-bridging"
 status: VERIFIED
 gap_type: Incompleteness / Mechanism
 cross_paper: VERIFIED (1 paper, distinctive)

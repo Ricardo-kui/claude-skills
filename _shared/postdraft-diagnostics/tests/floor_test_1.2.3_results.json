@@ -1,0 +1,1466 @@
+[
+ {
+  "key": "march_1988_variable_risk_preferences_and_adaptive_aspiration",
+  "design": "unknown",
+  "evidence": [],
+  "scanned": 21,
+  "flags": 1,
+  "by_type": {
+   "OVERCLAIM": 1
+  },
+  "id_markers": "NONE",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\March-1988-Variable Risk Preferences and Adaptive Aspirations.md\ndesign: unknown  [design-unannotated: supply metadata and rerun]\nsections scanned: discussion (21 sentences)\nidentification markers found: NONE\nsentences: 21 scanned | 0 hypothesis-exempt\nflags: 1\n\n[OVERCLAIM] discussion s8  tier=T_DEFINITIVE ('produce')\n  > Prior histories of greater wealth produce higher aspirations and therefore a preference for greater risk than do histories of less wealth.\n  rule: discussion_mechanism: extrapolation without tentative framing\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "the_military_imprint_the_effect_of_executives_military_exper",
+  "design": "iv_2sls",
+  "evidence": [
+   [
+    "iv_2sls",
+    3,
+    [
+     "instrumental variable",
+     "instrumental variable",
+     "instrumental variable"
+    ]
+   ],
+   [
+    "survival",
+    3,
+    [
+     [
+      "hazard ratio",
+      "ratio",
+      ""
+     ],
+     [
+      "hazard ratio",
+      "ratio",
+      ""
+     ],
+     [
+      "hazard ratio",
+      "ratio",
+      ""
+     ]
+    ]
+   ],
+   [
+    "nonlinear",
+    12,
+    [
+     "negative binomial",
+     "negative binomial",
+     "negative binomial"
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    11,
+    [
+     [
+      "fixed effects",
+      ""
+     ],
+     [
+      "fixed effects",
+      ""
+     ],
+     [
+      "fixed-effects",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 304,
+  "flags": 3,
+  "by_type": {
+   "OVERCLAIM": 3
+  },
+  "id_markers": "\\bsargan\\b, f[- ]statistic, first[- ]stage, kleibergen",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\从军经验 × 薪酬差距\\01 Reference\\The military imprint The effect of executives’ military experience on firm pollution and environmental innovation.md\ndesign: iv_2sls\nsections scanned: methods (83 sentences), results (81 sentences), discussion (5 sentences)\nidentification markers found: \\bsargan\\b, f[- ]statistic, first[- ]stage, kleibergen\nsentences: 304 scanned | 2 hypothesis-exempt\nflags: 3\n\n[OVERCLAIM] methods s4  tier=T_DEFINITIVE ('caused')\n  > The great disarmament caused these soldiers to quit the army and join [enterprises](https://www.sciencedirect.com/topics/social-sciences/company) or public inst\n  rule: methods_m7: iv_2sls.forbidden includes T_DEFINITIVE\n\n[OVERCLAIM] methods s9  tier=T_DEFINITIVE ('caused')\n  > In recent years, a growing number of firm incidents that involve natural environmental damage have been reported in China, all of which have caused serious soci\n  rule: methods_m7: iv_2sls.forbidden includes T_DEFINITIVE\n\n[OVERCLAIM] results s20  tier=T_DEFINITIVE ('causes')\n  > In this activity, the Chinese government conferred soldier military officer rank according to his/her contributions to the country’s revolutionary causes.\n  rule: iv_2sls.forbidden includes T_DEFINITIVE\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "zhou_2019_promotions_as_competitive_reactions_20260811_14162",
+  "design": "did_natural_experiment",
+  "evidence": [
+   [
+    "did_natural_experiment",
+    6,
+    [
+     "event study",
+     "quasi-experimental",
+     "quasi-experimental"
+    ]
+   ],
+   [
+    "iv_2sls",
+    3,
+    [
+     "instrumental variable",
+     "instrumental variable",
+     "instrumental variable"
+    ]
+   ],
+   [
+    "survival",
+    1,
+    [
+     [
+      "cox",
+      "",
+      ""
+     ]
+    ]
+   ],
+   [
+    "nonlinear",
+    1,
+    [
+     "logit"
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    13,
+    [
+     [
+      "panel data",
+      "data"
+     ],
+     [
+      "fixed effects",
+      ""
+     ],
+     [
+      "fixed effects",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 239,
+  "flags": 2,
+  "by_type": {
+   "OVERCLAIM": 2
+  },
+  "id_markers": "event[- ]study, f[- ]statistic, first[- ]stage, placebo",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Zhou-2019-Promotions as competitive reactions-20260811-141628.md\ndesign: did_natural_experiment\nsections scanned: methods (111 sentences), results (29 sentences), discussion (54 sentences)\nidentification markers found: event[- ]study, f[- ]statistic, first[- ]stage, placebo\nsentences: 239 scanned | 0 hypothesis-exempt\nflags: 2\n\n[OVERCLAIM] methods s44  tier=T_DEFINITIVE ('caused')\n  > The average promotions and sales in the same month of2006–2008 not only control for the possibility that firms adjust promotions using the past promotion and sa\n  rule: methods_m7: did_natural_experiment.forbidden includes T_DEFINITIVE\n\n[OVERCLAIM] results s45  tier=T_DEFINITIVE ('led to')\n  > Overall, the promotional reactions of premium car models seemed effective in increasing sales after Toyota’s recalls; in contrast, the promotional reactions of \n  rule: did_natural_experiment.forbidden includes T_DEFINITIVE\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "zajac_westphal_the_social_construction_of_market_value",
+  "design": "did_natural_experiment",
+  "evidence": [
+   [
+    "did_natural_experiment",
+    7,
+    [
+     "event study",
+     "event study",
+     "event study"
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    2,
+    [
+     [
+      "random-effects",
+      ""
+     ],
+     [
+      "fixed-effects",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 182,
+  "flags": 1,
+  "by_type": {
+   "OVERCLAIM": 1
+  },
+  "id_markers": "event[- ]study",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Zajac & Westphal The Social Construction of Market Value-OvisOCR2-20260813-102132.md\ndesign: did_natural_experiment\nsections scanned: methods (64 sentences), results (46 sentences), discussion (72 sentences)\nidentification markers found: event[- ]study\nsentences: 182 scanned | 7 hypothesis-exempt\nflags: 1\n\n[OVERCLAIM] discussion s63  tier=T_DEFINITIVE ('led to')\n  > In the context of corporate governance, for example, scandals involving Enron, Worldcom, and other major U.S. corporations have led to numerous public and polit\n  rule: discussion_mechanism: extrapolation without tentative framing\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "lii_2026_vertical_spillover_of_product_recalls_theorization_",
+  "design": "did_natural_experiment",
+  "evidence": [
+   [
+    "did_natural_experiment",
+    16,
+    [
+     "event study",
+     "event study",
+     "event study"
+    ]
+   ],
+   [
+    "nonlinear",
+    1,
+    [
+     "negative binomial"
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    11,
+    [
+     [
+      "panel data",
+      "data"
+     ],
+     [
+      "panel data",
+      "data"
+     ],
+     [
+      "panel data",
+      "data"
+     ]
+    ]
+   ]
+  ],
+  "scanned": 234,
+  "flags": 1,
+  "by_type": {
+   "OVERCLAIM": 1
+  },
+  "id_markers": "event[- ]study",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\LIi 等 - 2026 - Vertical Spillover of Product Recalls Theorization and Empirical Examination in the US Automobile I.md\ndesign: did_natural_experiment\nsections scanned: methods (55 sentences), results (37 sentences), discussion (81 sentences)\nidentification markers found: event[- ]study\nsentences: 234 scanned | 0 hypothesis-exempt\nflags: 1\n\n[OVERCLAIM] methods s49  tier=T_DEFINITIVE ('caused')\n  > This study included three recall characteristics: (1) recall volume, measured by the total number of cars recalled; (2) the source of the recall, or whether the\n  rule: methods_m7: did_natural_experiment.forbidden includes T_DEFINITIVE\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "home_alone_the_effects_of_lone_insider_boards_on_ceo_pay_fin",
+  "design": "iv_2sls",
+  "evidence": [
+   [
+    "iv_2sls",
+    12,
+    [
+     "two-stage least squares",
+     "two-stage least squares",
+     "2sls"
+    ]
+   ],
+   [
+    "nonlinear",
+    2,
+    [
+     "probit",
+     "probit"
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    9,
+    [
+     [
+      "fixed effects",
+      ""
+     ],
+     [
+      "fixed effects",
+      ""
+     ],
+     [
+      "fixed effects",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 246,
+  "flags": 1,
+  "by_type": {
+   "OVERCLAIM": 1
+  },
+  "id_markers": "\\bhansen'?s? j\\b, first[- ]stage",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\从军经验 × 薪酬差距\\01 Reference\\Home Alone The Effects of Lone‐Insider Boards on CEO Pay, Financial Misconduct, and Firm Performance.md\ndesign: iv_2sls\nsections scanned: methods (46 sentences), results (34 sentences), discussion (14 sentences)\nidentification markers found: \\bhansen'?s? j\\b, first[- ]stage\nsentences: 246 scanned | 25 hypothesis-exempt\nflags: 1\n\n[OVERCLAIM] discussion s33  tier=T_DEFINITIVE ('led to')\n  > Our use of archival data is a second limitation in that it does not allow direct access to the decision-making processes that led to the observed relationships.\n  rule: discussion_mechanism: extrapolation without tentative framing\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "gulati_2005_adaptation_in_vertical_relationships_beyond_ince",
+  "design": "nonlinear",
+  "evidence": [
+   [
+    "nonlinear",
+    7,
+    [
+     "logit",
+     "logit",
+     "logit"
+    ]
+   ]
+  ],
+  "scanned": 273,
+  "flags": 1,
+  "by_type": {
+   "OVERCLAIM": 1
+  },
+  "id_markers": "first[- ]stage",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Gulati等-2005—ADAPTATION IN VERTICAL RELATIONSHIPS BEYOND INCENTIVE CONFLICT.md\ndesign: nonlinear\nsections scanned: methods (53 sentences), results (90 sentences), discussion (19 sentences)\nidentification markers found: first[- ]stage\nsentences: 273 scanned | 20 hypothesis-exempt\nflags: 1\n\n[OVERCLAIM] methods s24  tier=T_DEFINITIVE ('produce')\n  > The items assessed the degree to which simultaneous contributions from supplier and procurer are required to design and produce the component, as well as the ne\n  rule: methods_m7: nonlinear.forbidden includes T_DEFINITIVE\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "anand_mukherjee_2024_learning_from_failures_di",
+  "design": "iv_2sls",
+  "evidence": [
+   [
+    "iv_2sls",
+    2,
+    [
+     "instrumental variable",
+     "instrumental variable"
+    ]
+   ],
+   [
+    "nonlinear",
+    4,
+    [
+     "negative binomial",
+     "negative binomial",
+     "negative binomial"
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    11,
+    [
+     [
+      "panel data",
+      "data"
+     ],
+     [
+      "fixed effects",
+      ""
+     ],
+     [
+      "fixed effects",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 277,
+  "flags": 1,
+  "by_type": {
+   "OVERCLAIM": 1
+  },
+  "id_markers": "f[- ]statistic, placebo",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\anand-mukherjee-2024-learning-from-failures-di-OvisOCR2-20260811-161426.md\ndesign: iv_2sls\nsections scanned: methods (140 sentences), results (18 sentences), discussion (74 sentences)\nidentification markers found: f[- ]statistic, placebo\nsentences: 277 scanned | 12 hypothesis-exempt\nflags: 1\n\n[OVERCLAIM] discussion s31  tier=T_DEFINITIVE ('causes')\n  > Although conducting this and other related research, our interactions with executives in medical device and pharmaceutical firms revealed that fear of failures \n  rule: discussion_mechanism: extrapolation without tentative framing\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "from_finance_to_marketing_the_impact_of_financial_leverage_o",
+  "design": "survival",
+  "evidence": [
+   [
+    "survival",
+    1,
+    [
+     [
+      "cox",
+      "",
+      ""
+     ]
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    1,
+    [
+     [
+      "fixed-effects",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 278,
+  "flags": 1,
+  "by_type": {
+   "OVERCLAIM": 1
+  },
+  "id_markers": "\\boveridentif, \\bsargan\\b",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\From Finance to Marketing- The Impact of Financial Leverage on Customer Satisfaction - Ashwin Malshe, Manoj K. Agarwal, 2015.md\ndesign: survival\nsections scanned: methods (21 sentences), results (9 sentences), discussion (81 sentences)\nidentification markers found: \\boveridentif, \\bsargan\\b\nsentences: 278 scanned | 0 hypothesis-exempt\nflags: 1\n\n[OVERCLAIM] discussion s13  tier=T_MECHANISM ('mediated by')\n  > While the direct impact is moderated by three variables—service or manufacturing firms, competitive intensity, and sales growth—the indirect impact is mediated \n  rule: discussion_mechanism: extrapolation without tentative framing\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "jeffers_2024_the_impact_of_restricting_labor_mobility_on_cor",
+  "design": "did_natural_experiment",
+  "evidence": [
+   [
+    "did_natural_experiment",
+    11,
+    [
+     "staggered",
+     "difference-in-differences",
+     "difference-in-differences"
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    30,
+    [
+     [
+      "fixed effects",
+      ""
+     ],
+     [
+      "fixed effects",
+      ""
+     ],
+     [
+      "fixed effects",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 583,
+  "flags": 2,
+  "by_type": {
+   "OVERCLAIM": 2
+  },
+  "id_markers": "event[- ]study, parallel[- ]trend, placebo",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Jeffers-2024-The Impact of Restricting Labor Mobility on Corporate Investment and Entrepreneurship.md\ndesign: did_natural_experiment\nsections scanned: methods (76 sentences), results (251 sentences), discussion (20 sentences)\nidentification markers found: event[- ]study, parallel[- ]trend, placebo\nsentences: 583 scanned | 8 hypothesis-exempt\nflags: 2\n\n[OVERCLAIM] methods s42  tier=T_DEFINITIVE ('caused')\n  > However, if physical and human capital are complements, NCs could lead firms to increase physical investment in order to match the higher accumulation rate of h\n  rule: methods_m7: did_natural_experiment.forbidden includes T_DEFINITIVE\n\n[OVERCLAIM] results s126  tier=T_DEFINITIVE ('caused')\n  > A few analyses can help us strengthen the tie between the investment response and the labor friction caused by NCs.\n  rule: did_natural_experiment.forbidden includes T_DEFINITIVE\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "does_it_pay_to_recall_your_product_early_an_empirical_invest",
+  "design": "did_natural_experiment",
+  "evidence": [
+   [
+    "did_natural_experiment",
+    3,
+    [
+     "event study",
+     "event study",
+     "event study"
+    ]
+   ],
+   [
+    "survival",
+    3,
+    [
+     [
+      "hazard model",
+      "model",
+      ""
+     ],
+     [
+      "hazard model",
+      "model",
+      ""
+     ],
+     [
+      "hazard model",
+      "model",
+      ""
+     ]
+    ]
+   ],
+   [
+    "nonlinear",
+    2,
+    [
+     "logit",
+     "logit"
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    7,
+    [
+     [
+      "random effects",
+      ""
+     ],
+     [
+      "ordinary least squares",
+      ""
+     ],
+     [
+      "random effects",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 295,
+  "flags": 1,
+  "by_type": {
+   "OVERCLAIM": 1
+  },
+  "id_markers": "\\bcontrol function\\b, event[- ]study, first[- ]stage",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Does it Pay to Recall your Product Early_ An Empirical Investigation in the Automobile Industry - Meike Eilert, Satish Jayachandran, Kartik Kalaignanam, Tracey A. Swartz, 2017.md\ndesign: did_natural_experiment\nsections scanned: methods (50 sentences), results (50 sentences), discussion (108 sentences)\nidentification markers found: \\bcontrol function\\b, event[- ]study, first[- ]stage\nsentences: 295 scanned | 0 hypothesis-exempt\nflags: 1\n\n[OVERCLAIM] discussion s97  tier=T_DEFINITIVE ('drive')\n  > The legal and other aspects that drive product investigations have substantial industry-specific idiosyncrasy that clear empirical assessments are potentially p\n  rule: discussion_mechanism: extrapolation without tentative framing\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "shedding_light_on_the_dark_side_of_firm_lobbying_a_customer_",
+  "design": "ols_fe_panel_hlm",
+  "evidence": [
+   [
+    "ols_fe_panel_hlm",
+    3,
+    [
+     [
+      "fixed effects",
+      ""
+     ],
+     [
+      "fixed effects",
+      ""
+     ],
+     [
+      "fixed effects",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 304,
+  "flags": 1,
+  "by_type": {
+   "OVERCLAIM": 1
+  },
+  "id_markers": "\\bgranger\\b, kleibergen",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Shedding Light on the Dark Side of Firm Lobbying A Customer Perspective - Gautham G. Vadakkepatt, Sandeep Arora, Kelly D. Martin, Neeru Paharia, 2022.md\ndesign: ols_fe_panel_hlm\nsections scanned: methods (42 sentences), results (24 sentences), discussion (121 sentences)\nidentification markers found: \\bgranger\\b, kleibergen\nsentences: 304 scanned | 2 hypothesis-exempt\nflags: 1\n\n[OVERCLAIM] discussion s23  tier=T_DEFINITIVE ('produce')\n  > The counterbalancing role of advertising spend and R&D spend is an additional benefit to the already well-known advantages that these expenditures produce for f\n  rule: discussion_mechanism: extrapolation without tentative framing\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "zhong_et_al_2020_customer_concentration_executive_attention_",
+  "design": "iv_2sls",
+  "evidence": [
+   [
+    "iv_2sls",
+    4,
+    [
+     "instrumental variable",
+     "instrumental variable",
+     "instrumental variable"
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    21,
+    [
+     [
+      "ordinary least squares",
+      ""
+     ],
+     [
+      "panel data",
+      "data"
+     ],
+     [
+      "fixed effects",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 318,
+  "flags": 1,
+  "by_type": {
+   "OVERCLAIM": 1
+  },
+  "id_markers": "f[- ]statistic, first[- ]stage",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Zhong et al-2020-Customer Concentration, Executive Attention, and Firm search behavior.md\ndesign: iv_2sls\nsections scanned: methods (113 sentences), results (104 sentences), discussion (30 sentences)\nidentification markers found: f[- ]statistic, first[- ]stage\nsentences: 318 scanned | 3 hypothesis-exempt\nflags: 1\n\n[OVERCLAIM] discussion s32  tier=T_MECHANISM ('through the mediation')\n  > We demonstrate that demand-side factors affect supply-side search activities in a technological landscape (c.f., Sidhu et al., 2007) through the mediation of to\n  rule: discussion_mechanism: extrapolation without tentative framing\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "gulati_1999_network_location_and_learning_the_influence_of_n",
+  "design": "nonlinear",
+  "evidence": [
+   [
+    "nonlinear",
+    4,
+    [
+     "probit",
+     "probit",
+     "probit"
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    18,
+    [
+     [
+      "panel data",
+      "data"
+     ],
+     [
+      "random effects",
+      ""
+     ],
+     [
+      "random effects",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 338,
+  "flags": 1,
+  "by_type": {
+   "OVERCLAIM": 1
+  },
+  "id_markers": "NONE",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Gulati-1999-Network location and learning The influence of network resources and firm capabilities on alliance formation.md\ndesign: nonlinear\nsections scanned: methods (149 sentences), results (57 sentences), discussion (100 sentences)\nidentification markers found: NONE\nsentences: 338 scanned | 4 hypothesis-exempt\nflags: 1\n\n[OVERCLAIM] discussion s33  tier=T_DEFINITIVE ('led to')\n  > Thus, in recent years, more attention has been paid to elaborating some of the firm- and industry-level imperatives that have led to the proliferation of allian\n  rule: discussion_mechanism: extrapolation without tentative framing\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "jeon_2026_safety_defects_and_fuel_efficiency_in_the_automoti",
+  "design": "iv_2sls",
+  "evidence": [
+   [
+    "iv_2sls",
+    3,
+    [
+     "instrumental variable",
+     "two-stage least squares",
+     "2sls"
+    ]
+   ],
+   [
+    "nonlinear",
+    12,
+    [
+     "negative binomial",
+     "negative binomial",
+     "negative binomial"
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    22,
+    [
+     [
+      "fixed-effects",
+      ""
+     ],
+     [
+      "fixed-effects",
+      ""
+     ],
+     [
+      "fixed effects",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 386,
+  "flags": 1,
+  "by_type": {
+   "OVERCLAIM": 1
+  },
+  "id_markers": "\\bcontrol function\\b, first[- ]stage, weak instrument",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Jeon等-2026—Safety defects and fuel efficiency in the automotive industry.md\ndesign: iv_2sls\nsections scanned: methods (87 sentences), results (95 sentences), discussion (79 sentences)\nidentification markers found: \\bcontrol function\\b, first[- ]stage, weak instrument\nsentences: 386 scanned | 0 hypothesis-exempt\nflags: 1\n\n[OVERCLAIM] methods s70  tier=T_DEFINITIVE ('drive')\n  > Vehicles equipped with all-wheel drive or four-wheel drive (AWD/4WD) systems require additional components that increase points of failure in comparison to fron\n  rule: methods_m7: iv_2sls.forbidden includes T_DEFINITIVE\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "gulati_1999_where_do_interorganizational_networks_come_from",
+  "design": "experiment",
+  "evidence": [
+   [
+    "experiment",
+    2,
+    [
+     "randomized",
+     "randomized"
+    ]
+   ],
+   [
+    "nonlinear",
+    7,
+    [
+     "probit",
+     "probit",
+     "probit"
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    19,
+    [
+     [
+      "random effects",
+      ""
+     ],
+     [
+      "random effects",
+      ""
+     ],
+     [
+      "random-effects",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 434,
+  "flags": 1,
+  "by_type": {
+   "OVERCLAIM": 1
+  },
+  "id_markers": "NONE",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Gulati等-1999-Where Do Interorganizational Networks Come From.md\ndesign: experiment\nsections scanned: methods (145 sentences), results (83 sentences), discussion (103 sentences)\nidentification markers found: NONE\nsentences: 434 scanned | 12 hypothesis-exempt\nflags: 1\n\n[OVERCLAIM] discussion s45  tier=T_DEFINITIVE ('drive')\n  > Indeed, those prior networks have typically resulted from exchange processes that differ from the ones that drive strategic alliances, and as such would be only\n  rule: discussion_mechanism: extrapolation without tentative framing\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "carpenter_and_westphal_2001_strategic_context_of_external_ne",
+  "design": "ols_fe_panel_hlm",
+  "evidence": [
+   [
+    "ols_fe_panel_hlm",
+    1,
+    [
+     [
+      "ordinary least squares",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 247,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "NONE",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Carpenter and Westphal-2001 Strategic_Context_of_External_Network_Ties-OvisOCR2-20260813-101001.md\ndesign: ols_fe_panel_hlm\nsections scanned: methods (132 sentences), results (53 sentences), discussion (62 sentences)\nidentification markers found: NONE\nsentences: 247 scanned | 12 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "gulati_1998_alliances_and_networks",
+  "design": "did_natural_experiment",
+  "evidence": [
+   [
+    "did_natural_experiment",
+    1,
+    [
+     "event study"
+    ]
+   ]
+  ],
+  "scanned": 37,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "event[- ]study",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Gulati-1998-Alliances and Networks.md\ndesign: did_natural_experiment\nsections scanned: discussion (37 sentences)\nidentification markers found: event[- ]study\nsentences: 37 scanned | 0 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "gulati_2007_tent_poles_tribalism_and_boundary_spanning_the_r",
+  "design": "unknown",
+  "evidence": [],
+  "scanned": 0,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "NONE",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Gulati-2007-Tent Poles Tribalism and Boundary Spanning The Rigor-Relevance Debate in Management Research.md\ndesign: unknown  [design-unannotated: supply metadata and rerun]\nsections scanned: \nidentification markers found: NONE\nsentences: 0 scanned | 0 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "gulati_1999_cooperative_or_controlling_the_effects_of_ceo_bo",
+  "design": "survival",
+  "evidence": [
+   [
+    "survival",
+    3,
+    [
+     [
+      "cox",
+      "",
+      ""
+     ],
+     [
+      "cox",
+      "",
+      ""
+     ],
+     [
+      "cox",
+      "",
+      ""
+     ]
+    ]
+   ],
+   [
+    "nonlinear",
+    6,
+    [
+     "logit",
+     "logit",
+     "logit"
+    ]
+   ]
+  ],
+  "scanned": 308,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "NONE",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Gulati等-1999-Cooperative or Controlling The Effects of CEO-board Relations and the Content of Interlocks on the Formation of Joint Ventures.md\ndesign: survival\nsections scanned: methods (124 sentences), results (79 sentences), discussion (70 sentences)\nidentification markers found: NONE\nsentences: 308 scanned | 12 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "gulati_2000_strategic_networks",
+  "design": "unknown",
+  "evidence": [],
+  "scanned": 36,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "NONE",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Gulati等-2000-Strategic Networks.md\ndesign: unknown  [design-unannotated: supply metadata and rerun]\nsections scanned: discussion (36 sentences)\nidentification markers found: NONE\nsentences: 36 scanned | 0 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "gulati_2003_which_ties_matter_when_the_contingent_effects_of",
+  "design": "nonlinear",
+  "evidence": [
+   [
+    "nonlinear",
+    2,
+    [
+     "probit",
+     "probit"
+    ]
+   ]
+  ],
+  "scanned": 182,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "first[- ]stage",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Gulati等-2003-Which Ties Matter When The Contingent Effects of Interorganizational Partnerships on IPO Success.md\ndesign: nonlinear\nsections scanned: methods (95 sentences), results (22 sentences), discussion (65 sentences)\nidentification markers found: first[- ]stage\nsentences: 182 scanned | 8 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "gulati_2007_dependence_asymmetry_and_joint_dependence_in_int",
+  "design": "iv_2sls",
+  "evidence": [
+   [
+    "iv_2sls",
+    3,
+    [
+     "two-stage least squares",
+     "2sls",
+     "2sls"
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    1,
+    [
+     [
+      "ordinary least squares",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 324,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "\\boveridentif, f[- ]statistic, first[- ]stage",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Gulati等-2007-Dependence Asymmetry and Joint Dependence in Interorganizational Relationships Effects of Embeddedness on a Manufacturers Performance in Procurement Relationships.md\ndesign: iv_2sls\nsections scanned: methods (123 sentences), results (82 sentences), discussion (102 sentences)\nidentification markers found: \\boveridentif, f[- ]statistic, first[- ]stage\nsentences: 324 scanned | 14 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "gulati_2009_the_nature_of_partnering_experience_and_the_gain",
+  "design": "ols_fe_panel_hlm",
+  "evidence": [
+   [
+    "ols_fe_panel_hlm",
+    7,
+    [
+     [
+      "fixed effects",
+      ""
+     ],
+     [
+      "fixed effects",
+      ""
+     ],
+     [
+      "fixed effects",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 195,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "event[- ]study, f[- ]statistic",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Gulati等-2009-The Nature of Partnering Experience and the Gains from Alliances.md\ndesign: ols_fe_panel_hlm\nsections scanned: methods (88 sentences), results (17 sentences), discussion (9 sentences)\nidentification markers found: event[- ]study, f[- ]statistic\nsentences: 195 scanned | 17 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "westphal_zajac_1998_the_symbolic_management_of_stockholders_",
+  "design": "did_natural_experiment",
+  "evidence": [
+   [
+    "did_natural_experiment",
+    5,
+    [
+     "event study",
+     "event study",
+     "event study"
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    1,
+    [
+     [
+      "random-effects",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 207,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "event[- ]study, f[- ]statistic",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Westphal & Zajac-1998 The Symbolic Management of Stockholders Corporate Governance Reforms and Shareholder Reactions.md\ndesign: did_natural_experiment\nsections scanned: methods (114 sentences), results (35 sentences), discussion (58 sentences)\nidentification markers found: event[- ]study, f[- ]statistic\nsentences: 207 scanned | 3 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "westphal_j_d_and_bednar_m_k_2005_pluralistic_ignorance_in_co",
+  "design": "iv_2sls",
+  "evidence": [
+   [
+    "iv_2sls",
+    4,
+    [
+     "instrumental variable",
+     "instrumental variable",
+     "instrumental variable"
+    ]
+   ],
+   [
+    "survival",
+    1,
+    [
+     [
+      "hazard rate",
+      "rate",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 295,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "\\bcontrol function\\b",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Westphal, J. D., and Bednar, M. K. (2005） Pluralistic Ignorance in Corporate Boards and Firms' Strategic Persistence in Response to Low Firm Performance.md\ndesign: iv_2sls\nsections scanned: methods (128 sentences), results (53 sentences), discussion (92 sentences)\nidentification markers found: \\bcontrol function\\b\nsentences: 295 scanned | 10 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "westphal1995_who_shall_govern_ceoboard_power_demographic_sim",
+  "design": "nonlinear",
+  "evidence": [
+   [
+    "nonlinear",
+    6,
+    [
+     "logit",
+     "logit",
+     "logit"
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    1,
+    [
+     [
+      "ordinary least squares",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 188,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "NONE",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\westphal1995 Who Shall Govern CEOBoard Power, Demographic Similarity, and New Director Selection-OvisOCR2-20260813-104556.md\ndesign: nonlinear\nsections scanned: methods (104 sentences), results (35 sentences), discussion (49 sentences)\nidentification markers found: NONE\nsentences: 188 scanned | 1 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "westphal_1997_customization_or_conformity_an_institutional_a",
+  "design": "nonlinear",
+  "evidence": [
+   [
+    "survival",
+    1,
+    [
+     [
+      "hazard rate",
+      "rate",
+      ""
+     ]
+    ]
+   ],
+   [
+    "nonlinear",
+    3,
+    [
+     "probit",
+     "probit",
+     "probit"
+    ]
+   ]
+  ],
+  "scanned": 237,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "NONE",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Westphal等-1997-Customization or Conformity An Institutional and Network Perspective on the Content and Consequences of TQM Adoption.md\ndesign: nonlinear\nsections scanned: methods (107 sentences), results (52 sentences), discussion (63 sentences)\nidentification markers found: NONE\nsentences: 237 scanned | 6 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "activism_risk_and_corporate_self_regulation_investigating_ho",
+  "design": "did_natural_experiment",
+  "evidence": [
+   [
+    "did_natural_experiment",
+    15,
+    [
+     "difference-in-differences",
+     "difference-in-differences",
+     "natural experiment"
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    6,
+    [
+     [
+      "fixed effects",
+      ""
+     ],
+     [
+      "fixed effects",
+      ""
+     ],
+     [
+      "fixed effects",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 201,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "event[- ]study, f[- ]statistic, parallel[- ]trend, placebo",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Activism risk and corporate self‐regulation Investigating how anti‐SLAPP laws impact firms' institutional corporate social performance.md\ndesign: did_natural_experiment\nsections scanned: methods (6 sentences), results (18 sentences), discussion (5 sentences)\nidentification markers found: event[- ]study, f[- ]statistic, parallel[- ]trend, placebo\nsentences: 201 scanned | 0 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "organizational_oscillation_between_learning_and_forgetting_t",
+  "design": "nonlinear",
+  "evidence": [
+   [
+    "iv_2sls",
+    1,
+    [
+     "instrumental variable"
+    ]
+   ],
+   [
+    "nonlinear",
+    7,
+    [
+     "negative binomial",
+     "negative binomial",
+     "negative binomial"
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    6,
+    [
+     [
+      "random effects",
+      ""
+     ],
+     [
+      "random-effects",
+      ""
+     ],
+     [
+      "random-effects",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 0,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "first[- ]stage",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Organizational Oscillation Between Learning and Forgetting The Dual Role of Serious Errors.md\ndesign: nonlinear\nsections scanned: \nidentification markers found: first[- ]stage\nsentences: 0 scanned | 0 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "levinthal_1981_a_model_of_adaptive_organizational_search",
+  "design": "unknown",
+  "evidence": [],
+  "scanned": 0,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "NONE",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Levinthal等-1981-A Model of Adaptive Organizational Search.md\ndesign: unknown  [design-unannotated: supply metadata and rerun]\nsections scanned: \nidentification markers found: NONE\nsentences: 0 scanned | 0 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "giving_up_learning_from_failures_an_examination_of_learning_",
+  "design": "nonlinear",
+  "evidence": [
+   [
+    "nonlinear",
+    11,
+    [
+     "logit",
+     "logit",
+     "logit"
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    6,
+    [
+     [
+      "panel data",
+      "data"
+     ],
+     [
+      "fixed effects",
+      ""
+     ],
+     [
+      "fixed effects",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 262,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "placebo",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Giving up learning from failures An examination of learning from one's own failures in the context of heart surgeons.md\ndesign: nonlinear\nsections scanned: methods (32 sentences), results (24 sentences), discussion (75 sentences)\nidentification markers found: placebo\nsentences: 262 scanned | 5 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "employee_free_speech_vs_organizational_censorship_on_social_",
+  "design": "experiment",
+  "evidence": [
+   [
+    "experiment",
+    7,
+    [
+     "randomized",
+     "randomized",
+     "randomized"
+    ]
+   ]
+  ],
+  "scanned": 274,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "NONE",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Employee “Free” Speech vs. Organizational Censorship on Social Media Balancing the Tension Between Free Expression and Safeguards to Foster Psychological Safety.md\ndesign: experiment\nsections scanned: methods (3 sentences), results (40 sentences), discussion (102 sentences)\nidentification markers found: NONE\nsentences: 274 scanned | 0 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "ceo_regulatory_focus_and_myopic_marketing_management",
+  "design": "iv_2sls",
+  "evidence": [
+   [
+    "iv_2sls",
+    3,
+    [
+     "two-stage least squares",
+     "2sls",
+     "2sls"
+    ]
+   ],
+   [
+    "nonlinear",
+    2,
+    [
+     "logit",
+     "logit"
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    11,
+    [
+     [
+      "fixed effects",
+      ""
+     ],
+     [
+      "fixed-effects",
+      ""
+     ],
+     [
+      "panel data",
+      "data"
+     ]
+    ]
+   ]
+  ],
+  "scanned": 225,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "\\boveridentif",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\CEO regulatory focus and myopic marketing management.md\ndesign: iv_2sls\nsections scanned: methods (77 sentences), results (88 sentences), discussion (3 sentences)\nidentification markers found: \\boveridentif\nsentences: 225 scanned | 3 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "non_compete_agreements_and_labor_allocation_across_product_m",
+  "design": "did_natural_experiment",
+  "evidence": [
+   [
+    "did_natural_experiment",
+    35,
+    [
+     "staggered",
+     "difference-in-differences",
+     "staggered"
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    64,
+    [
+     [
+      "fixed effects",
+      ""
+     ],
+     [
+      "fixed effects",
+      ""
+     ],
+     [
+      "panel regression",
+      "regression"
+     ]
+    ]
+   ]
+  ],
+  "scanned": 447,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "event[- ]study, pre[- ]trend",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Non-compete agreements and labor allocation across product markets.md\ndesign: did_natural_experiment\nsections scanned: methods (440 sentences), discussion (7 sentences)\nidentification markers found: event[- ]study, pre[- ]trend\nsentences: 447 scanned | 0 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "gao_2021_does_social_media_accelerate_product",
+  "design": "survival",
+  "evidence": [
+   [
+    "survival",
+    15,
+    [
+     [
+      "hazard rate",
+      "rate",
+      ""
+     ],
+     [
+      "survival analysis",
+      "",
+      "analysis"
+     ],
+     [
+      "survival analysis",
+      "",
+      "analysis"
+     ]
+    ]
+   ],
+   [
+    "nonlinear",
+    8,
+    [
+     "logit",
+     "logit",
+     "logit"
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    9,
+    [
+     [
+      "random effects",
+      ""
+     ],
+     [
+      "random effects",
+      ""
+     ],
+     [
+      "random effects",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 274,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "falsification",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Gao-2021-Does Social Media Accelerate Product-OvisOCR2-20260811-185141.md\ndesign: survival\nsections scanned: methods (46 sentences), results (228 sentences)\nidentification markers found: falsification\nsentences: 274 scanned | 0 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "charoenwong2025_mutual_fund_common_owners_returns_and_proxy_",
+  "design": "ols_fe_panel_hlm",
+  "evidence": [
+   [
+    "ols_fe_panel_hlm",
+    22,
+    [
+     [
+      "panel regression",
+      "regression"
+     ],
+     [
+      "panel regression",
+      "regression"
+     ],
+     [
+      "fixed effects",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 427,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "falsification",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\charoenwong2025-mutual-fund-common-owners-returns-and-proxy-voting-OvisOCR2-20260813-144202.md\ndesign: ols_fe_panel_hlm\nsections scanned: methods (158 sentences), results (262 sentences), discussion (7 sentences)\nidentification markers found: falsification\nsentences: 427 scanned | 0 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "fini_2017_social_valuation_across_multiple_audiences_the_int",
+  "design": "nonlinear",
+  "evidence": [
+   [
+    "experiment",
+    1,
+    [
+     "randomized"
+    ]
+   ],
+   [
+    "did_natural_experiment",
+    1,
+    [
+     "quasi-experimental"
+    ]
+   ],
+   [
+    "nonlinear",
+    4,
+    [
+     "probit",
+     "negative binomial",
+     "negative binomial"
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    18,
+    [
+     [
+      "panel data",
+      "data"
+     ],
+     [
+      "panel data",
+      "data"
+     ],
+     [
+      "panel data",
+      "data"
+     ]
+    ]
+   ]
+  ],
+  "scanned": 284,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "\\bhansen'?s? j\\b, \\boveridentif, first[- ]stage",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Fini等-2017-Social Valuation across Multiple Audiences The Interplay of Ability and Identity Judgments.md\ndesign: nonlinear\nsections scanned: results (44 sentences), discussion (92 sentences)\nidentification markers found: \\bhansen'?s? j\\b, \\boveridentif, first[- ]stage\nsentences: 284 scanned | 7 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "march_1991_exploration_and_exploitation_in_organizational_le",
+  "design": "unknown",
+  "evidence": [],
+  "scanned": 0,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "NONE",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\March-1991-Exploration and Exploitation in Organizational Learning.md\ndesign: unknown  [design-unannotated: supply metadata and rerun]\nsections scanned: \nidentification markers found: NONE\nsentences: 0 scanned | 0 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "the_effect_of_noncompete_enforceability_on_productivity",
+  "design": "did_natural_experiment",
+  "evidence": [
+   [
+    "did_natural_experiment",
+    4,
+    [
+     "difference-in-differences",
+     "event study",
+     "event study"
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    7,
+    [
+     [
+      "fixed effects",
+      ""
+     ],
+     [
+      "fixed effects",
+      ""
+     ],
+     [
+      "fixed effects",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 70,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "event[- ]study",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\The Effect of Noncompete Enforceability on Productivity.md\ndesign: did_natural_experiment\nsections scanned: methods (9 sentences), results (48 sentences), discussion (13 sentences)\nidentification markers found: event[- ]study\nsentences: 70 scanned | 0 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ },
+ {
+  "key": "darby2025_an_agency",
+  "design": "ols_fe_panel_hlm",
+  "evidence": [
+   [
+    "survival",
+    1,
+    [
+     [
+      "cox",
+      "",
+      ""
+     ]
+    ]
+   ],
+   [
+    "ols_fe_panel_hlm",
+    8,
+    [
+     [
+      "fixed effects",
+      ""
+     ],
+     [
+      "fixed effects",
+      ""
+     ],
+     [
+      "fixed effects",
+      ""
+     ]
+    ]
+   ]
+  ],
+  "scanned": 0,
+  "flags": 0,
+  "by_type": {},
+  "id_markers": "NONE",
+  "stdout": "postdraft-diagnostics v1.2.3 (SHADOW MODE — no pass/fail)\ndraft: D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\darby2025-an-agency-OvisOCR2-20260813-153840.md\ndesign: ols_fe_panel_hlm\nsections scanned: \nidentification markers found: NONE\nsentences: 0 scanned | 0 hypothesis-exempt\nflags: 0\n\n(diagnostic observer only — no score, no gate; human adjudication required)\n"
+ }
+]

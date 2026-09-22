@@ -11,7 +11,7 @@ source_papers:
   - 'gamache2020 (SMJ, 2020): "While important... considers... broadly" (conflation assumption)'
   - 'han2020 (AMJ, 2020): "Most research on [topic] has treated [construct] as decontextualized"'
   - 'zhao_ding2022 (OS, 2023): "challenges an implicit premise that lower entry barriers mechanically translate into greater product variety" (mechanical-causal-chain assumption; variant D)'
-  - "weng_yang (JMS): self-labeled 'theoretical inadequacy' with embedded theory lens — 'While insightful, prior studies have fallen short... This is an important theoretical inadequacy since...'"
+  - "weng_yang2024 (JMS): self-labeled 'theoretical inadequacy' with embedded theory lens — 'While insightful, prior studies have fallen short... This is an important theoretical inadequacy since...'"
   - 'reinwald_kanitz_bamberger_backmann_hoegl_2026 (Organization Science, 2026): "mixed findings expose the implicit assumption that political-dissimilarity effects remain stable rather than being activated by macro events" (temporal-stability assumption; variant F)'
   - 'fini_jourdan_perkmann_2017 (Academy of Management Journal, 2017): external audience approval is not a peer endorsement; it simultaneously conveys ability and possible identity deviation (cross-audience inference; variant G; TWO-LAYER gap — primary Incompleteness + theory-level Inadequacy)'
 created: 2026-05-18
@@ -132,12 +132,12 @@ Inadequacy 问题化的核心 Tension：不是"文献遗漏了东西"，而是"�
 
 ---
 
-### 变体 E：自标Inadequacy+理论嵌入型（weng_yang 型）
+### 变体 E：自标Inadequacy+理论嵌入型（weng_yang2024 型）
 
 **模板**:
 > "While insightful, prior studies have fallen short of thoroughly examining [specific overlooked factor]. This is an important theoretical inadequacy since [reason: why overlooking this factor matters — tie to theory]. [Theory name] asserts that [core theoretical claim with quote] ([citation]). As [key concept] affect how [actors] absorb and interpret information, outline alternatives, and implement eventual decisions, [outcomes] are likely to be altered. Prior research suggests that [related but non-central factors] have strong bearings on [outcomes] ([citations]). In this study, we suggest that [our central claim: the overlooked factor is likely to play a crucial role]."
 
-**来源**: weng_yang (JMS), P2
+**来源**: weng_yang2024 (JMS, 2024), P2
 
 **原文锚定**:
 > "While insightful, prior studies have fallen short of thoroughly examining the role of CEOs in establishing within-firm pay disparity. This is an important theoretical inadequacy since executives' personal views profoundly affect their decisions and behaviours (Liu et al., 2018; Wowak et al., 2017)."

@@ -93,7 +93,7 @@ source: Distilled from Zhao, Ding & Gaba (2023), Organization Science — "Posit
 
 ## 反模式提醒
 
-- **必须有两个平行案例**: 单一案例不足以建立"跨行业普遍现象"的可信度。若只有一个案例，改用 `11-institutional-anecdote` 或 `10-practical-puzzle`。
+- **必须有两个平行案例**: 单一案例不足以建立"跨行业普遍现象"的可信度。若只有一个案例，改用 `11-institutional-anecdote` 或 `28-practitioner-puzzle`。
 - **每个案例内部必须有 contrast（incumbent vs entrant，或策略 A vs B）**: 纯描述性单案例不构成"divergent positioning"，只是举例，无法支撑"异质性"主张。
 - **宏观驱动力句必须具体**（何种技术/制度变革降低了何种成本）: 泛泛的"环境变化"无法解释定位空间为何打开，读者不知道机制。
 - **收束句必须升级到研究框架**: 停在案例描述、不抛出 puzzle，读者不知道为何要研究——必须用"deciding where to... across multiple dimensions"类句式把现象转化为选择问题。

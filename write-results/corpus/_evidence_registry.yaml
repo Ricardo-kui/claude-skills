@@ -9,7 +9,7 @@ meta:
   last_updated: 2026-09-13b
   last_batch_id: batch_2028_mao_dong_lee_2022_msom_writeback
   batches_processed: 38
-  total_papers_indexed: 54
+  total_papers_indexed: 69
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
     granularity: "per estimator（对应 corpus/[结果类型].md 文件）"
@@ -182,25 +182,35 @@ estimators:
         skeleton_variants:
           - id: r1_ols_standard
             skeleton: "Table [x] presents descriptive statistics and correlations... The correlations are generally consistent... [Diagnostic] values were below [threshold], reducing concern about [routine issue]."
-            paper_count: 15
+            paper_count: 16
             status: ROBUST
             subfield_distribution:
-              strategy: 5
-              ob_hr: 4
-              om: 3
-              marketing: 2
-              finance: 1
+              marketing: 1
+              strategy: 15
             sources:
-              - Smith_2021_SMJ
-              - Lee_2022_AMJ
-              - Wang_2020_MSOM
+              - ceo_regulatory_focus_ijrm
+              - desjardine2023_rising_tide
+              - employee_free_speech_censorship
+              - gamache2020_regulatory_focus_stakeholder
+              - han2020_now_you_see_me
+              - han2024_public_enemies
+              - keeves2017_ingratiation_resentment
+              - kundro2023_power_female_moral_objectors
+              - lovelace2021_ceo_celebrity
+              - park2013_social_discrimination
+              - park2025_shareholder_litigation
+              - pollock2015_untangled
+              - pontikes2012_two_sides
+              - shipilov2020_publicity_good
+              - toh2023_risky_business
+              - wu2025_activism_risk_antislapp
             transferability: high
             paradigm_exclusivity: 通用，所有线性模型可用
             rhythm_tags:
               - table_presentation
               - diagnostic_reassurance
               - contextual_pattern
-            notes: 15/28 篇 MVP30 范文使用
+            notes: "MVP30 训练集实测（Lane C 反查 2026-09-21）：vault results/ 与 _parsed_texts/mvp30 全文扫描命中 16 篇含描述统计+VIF 常规款开场；原 Smith_2021_SMJ / Lee_2022_AMJ / Wang_2020_MSOM 三名在全库唯一出现，判定为占位已替换。subfield_distribution 仍为原登记 15 篇之拆分，待按 16 篇重核。"
             corpus_path: corpus/OLS-FE.md
           - id: r1_dual_path_premise_descriptives
             skeleton: "We identified [N] [treatment events], of which [n] ([value]%) were [focal treatment]. The majority of observations in our sample ([value]%) are [unit] observations with zero [moderator]. In our sample, a \"[small condition]\" corresponds to [definition] and a \"[large condition]\" means [definition]. As we theorized, change in [mediator_A] and change in [mediator_B] are not significantly correlated ([value], p = [value]), and neither are change in [outcome_A] and [outcome_B] ([value], p = [value]). Table [1] provides all descriptive statistics and pairwise correlations, which are mostly low to moderate. The mean variance inflation factor for the variables used in the estimation ([value]) is below the commonly used threshold of [threshold] ([citation])."
@@ -225,20 +235,21 @@ estimators:
         skeleton_variants:
           - id: r2_ols_model_sequence
             skeleton: "Table [x] reports the results of our regression analyses. Model 1 includes [controls only]. Model 2 adds [predictor]. Model 3 further includes [moderator]."
-            paper_count: 12
+            paper_count: 3
             status: ROBUST
             subfield_distribution:
-              strategy: 4
-              ob_hr: 3
-              om: 3
-              marketing: 2
-            sources: []
+              strategy: 3
+            sources:
+              - vidal2015_adding_by_subtracting
+              - mannor2016_job_anxiety_top_executive
+              - zhao_ding2022_positioning_digital_markets
             transferability: high
             paradigm_exclusivity: 通用
             rhythm_tags:
               - incremental_model_building
               - table_navigation
             corpus_path: corpus/OLS-FE.md
+            notes: "Lane C v3 回填（2026-09-21）：判别性特征组 5 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 12 改为已验证范文数 3；subfield 按来源期刊重切。"
           - id: r2_ols_model_free_quartile_opening
             skeleton: "We first present model-free evidence regarding the relationship between [IV] and [DV]. In the [web appendix], we show scatter plots of [DV] against [IV] for [subgroup description]. In Fig. [X], we divide the sample into [four quartiles] based on [IV] and calculate the mean and median [DV] for each quartile. Consistent with Hypothesis [N], there is a monotonic [increase/decrease] in [DV] from the first quartile, where [IV] is lowest, to the fourth quartile, where [IV] is highest. The mean (median) [DV] is significantly different across the quartiles."
             paper_count: 1
@@ -277,7 +288,7 @@ estimators:
             subfield_distribution:
               om: 1
             sources:
-              - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
+              - carpenter_and_westphal_2001_strategic_context_of_external_ne
             notes: corpus OLS-FE.md 变体71：估计策略宣告 + median 分样本切分规则交底 + 分样本回归/product-term 复核双通道设计导航——调节变量类目型、假设 scope-conditioned 的设计
             corpus_path: corpus/OLS-FE.md
           - id: r2_moderator_stepwise_model_navigation
@@ -355,19 +366,18 @@ estimators:
             subfield_distribution:
               om: 1
             sources:
-              - fang_et_al_2025_rival_recall_ad_spend (POM)
+              - fang_et_al_2025_rival_recall_ad_spend
             corpus_path: corpus/OLS-FE.md
           - id: r3_ols_four_beat_standard
             skeleton: "Hypothesis [x] predicted that [predictor] would be [positive/negative] related to [outcome]. Model [y] of Table [z] shows that the coefficient for [predictor] is [positive/negative] and statistically significant (β = [value], p < [threshold], 95% CI [[lower], [upper]]). Substantively, a [one-SD] increase in [predictor] is associated with a [Y-unit] [increase/decrease] in [outcome]. Thus, Hypothesis [x] is supported."
-            paper_count: 15
+            paper_count: 3
             status: ROBUST
             subfield_distribution:
-              strategy: 5
-              ob_hr: 4
-              om: 3
-              marketing: 2
-              finance: 1
-            sources: []
+              strategy: 3
+            sources:
+              - pollock2015_untangled
+              - han2024_public_enemies
+              - keeves2017_ingratiation_resentment
             transferability: high
             paradigm_exclusivity: OLS/FE 专用，非线性模型需替换幅度解释
             rhythm_tags:
@@ -375,16 +385,17 @@ estimators:
               - significance
               - magnitude
               - support
-            notes: 标准四拍，方向→显著性+系数→幅度→支持判断
+            notes: "Lane C v3 回填（2026-09-21）：判别性特征组 4 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 15 改为已验证范文数 3；subfield 按来源期刊重切。"
             corpus_path: corpus/OLS-FE.md
           - id: r3_ols_four_beat_with_r2_embedded
             skeleton: "Hypothesis [x] predicted... Model [y] shows... The R² increases from [value] to [value] when [predictor] is added, indicating that [predictor] explains an additional [value]% of the variance. Substantively... Thus, Hypothesis [x] is supported."
-            paper_count: 3
+            paper_count: 2
             status: VERIFIED
             subfield_distribution:
               strategy: 2
-              ob_hr: 1
-            sources: []
+            sources:
+              - pollock2015_untangled
+              - keeves2017_ingratiation_resentment
             transferability: medium
             paradigm_exclusivity: OLS/FE 专用
             rhythm_tags:
@@ -392,24 +403,27 @@ estimators:
               - significance+r2
               - magnitude
               - support
-            notes: 四拍变体：拍2嵌入 R² 变化解释
+            notes: "Lane C v3 回填（2026-09-21）：判别性特征组 4 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 3 改为已验证范文数 2；subfield 按来源期刊重切。"
             corpus_path: corpus/OLS-FE.md
           - id: r3_ols_nonsignificant
             skeleton: "Hypothesis [x] predicted that [predictor] would be [positive/negative] related to [outcome]. However, as shown in Model [y] of Table [z], the coefficient for [predictor] is [positive/negative] but not statistically significant (β = [value], p = [value]). Thus, Hypothesis [x] is not supported."
-            paper_count: 4
+            paper_count: 5
             status: VERIFIED
             subfield_distribution:
-              strategy: 2
-              ob_hr: 1
-              om: 1
-            sources: []
+              strategy: 5
+            sources:
+              - pollock2015_untangled
+              - vidal2015_adding_by_subtracting
+              - kundro2023_power_female_moral_objectors
+              - zhou2017_state_ownership_firm_innovation
+              - lovelace2021_ceo_celebrity
             transferability: high
             paradigm_exclusivity: 通用
             rhythm_tags:
               - direction
               - nonsignificance
               - no_support
-            notes: 非显著结果的三拍变体（缺幅度解释）
+            notes: "Lane C v3 回填（2026-09-21）：判别性特征组 2 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 4 改为已验证范文数 5；subfield 按来源期刊重切。"
             corpus_path: corpus/OLS-FE.md
           - id: r3_ols_interquartile_magnitude
             skeleton: "The coefficient for [IV] is [positive/negative] and statistically significant (β = [value], p < [threshold]). An interquartile move in [IV] from the 25th percentile to the 75th percentile is associated with a [N] [unit / percentage point] [increase/decrease] in [DV]. In untabulated tests, we also find support using [alternative sample], with similar economic significance."
@@ -469,7 +483,7 @@ estimators:
             subfield_distribution:
               om: 1
             sources:
-              - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
+              - carpenter_and_westphal_2001_strategic_context_of_external_ne
             notes: corpus OLS-FE.md 变体72：假设级多指标裁决——裁决拍前置（support the prediction），指标拍 For example 列举，不显著指标以方向正确从句并入支持证据，收口 held after we controlled for 内联排除 rival；填入时必须补幅度拍（原文无）
             corpus_path: corpus/OLS-FE.md
           - id: r3_interaction_significance_drop_collinearity_absorption
@@ -697,7 +711,7 @@ estimators:
             subfield_distribution:
               om: 1
             sources:
-              - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
+              - carpenter_and_westphal_2001_strategic_context_of_external_ne
             notes: corpus OLS-FE.md 变体73：分样本主检验 + 不显著侧写为确认性 null（does not predict）+ 末句 product-term 交互复核升级为正式交互证据——情境假设 scope-conditioned + 分样本主检验设计
             corpus_path: corpus/OLS-FE.md
           - id: r4_ame_minmax_contrast
@@ -769,14 +783,14 @@ estimators:
         skeleton_variants:
           - id: r5_ols_embedded_magnitude
             skeleton: "A [one-SD] increase in [predictor] corresponds to a [value]% [increase/decrease] in [outcome], which represents approximately [contextual_comparison]."
-            paper_count: 8
+            paper_count: 3
             status: ROBUST
             subfield_distribution:
               strategy: 3
-              ob_hr: 2
-              om: 2
-              finance: 1
-            sources: []
+            sources:
+              - park2025_shareholder_litigation
+              - han2024_public_enemies
+              - keeves2017_ingratiation_resentment
             transferability: high
             paradigm_exclusivity: OLS/FE 专用
             rhythm_tags:
@@ -784,6 +798,7 @@ estimators:
               - benchmark
               - contextualization
             corpus_path: corpus/OLS-FE.md
+            notes: "Lane C v3 回填（2026-09-21）：判别性特征组 3 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 8 改为已验证范文数 3；subfield 按来源期刊重切。"
           - id: r5_ols_external_evidence_practical_importance
             skeleton: "A [one-SD] increase in [predictor] corresponds to a [value]% [increase/decrease] in [outcome]. Evidence suggests that even small changes in [outcome] can net significant benefits such as [external evidence]. Thus, the [value]% change we observe is likely to be particularly important in practice."
             paper_count: 1
@@ -858,7 +873,7 @@ estimators:
             subfield_distribution:
               om: 1
             sources:
-              - fang_et_al_2025_rival_recall_ad_spend (POM)
+              - fang_et_al_2025_rival_recall_ad_spend
             corpus_path: corpus/OLS-FE.md
           - id: r6_chow_honest_downgrade_after_pattern_support
             skeleton: "This pattern of findings is consistent with Hypothesis [H], although a Chow test comparing the effect sizes of the [treatment] across Models [N] and [M] reveals that the difference is not significant (p = [value]). [Null-subsample sentence — when [moderator] is [absent], the coefficient for [treatment_A] is [insignificant] (b = [value], p = [value]), while [treatment_B] does not [move] (b = [value], p = [value]).]"
@@ -885,7 +900,7 @@ estimators:
             subfield_distribution:
               om: 1
             sources:
-              - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
+              - carpenter_and_westphal_2001_strategic_context_of_external_ne
             notes: corpus OLS-FE.md 变体74：跨情境镜像 null 的段落级收束——情境 B 中主效应变量失效的 null 本身是调节预测的一半，The opposite pattern emerges 钉死方向反转；分样本/情境劈叉设计 null 侧承载理论确证
             corpus_path: corpus/OLS-FE.md
           - id: r6_unsupported_verdict_with_pattern_restatement
@@ -905,23 +920,6 @@ estimators:
               - hypothesis_vocabulary_restatement
               - mixed_pattern_disclosure
             notes: corpus OLS-FE.md 变体81：先给明确不支持裁决，再在假设自身词汇内重述数据实际模式（含边沿/反向信号），不升级为支持
-          - id: r6_contrary_pair_sign_reversal_null_dual_verdict_gulati_sytch2007
-            skeleton: "``` Hypothesis [1a] predicted that [predictor_A] would [enhance] [outcome], while hypothesis [1b] postulated that [predictor_B] would [diminish] [outcome]. Contrary to our expectations, [predictor_A] has a significant [negative] effect on [outcome], while the effect of [predictor_B] is not significantly different from zero. Hence, hypotheses [1a] and [1b] are not supported. ... We also tested for a possible [curvilinear] relationship but found no evidence of it. ```"
-            paper_count: 1
-            status: VERIFIED
-            verification_basis: "expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)"
-            subfield_distribution:
-              strategy: 1
-            sources:
-              - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
-            transferability: high
-            estimator_family_note: OLS/FE and grouped designs
-            paradigm_exclusivity: 反号配对假设的相反判决双拍收束
-            rhythm_tags:
-              - contrary_pair
-              - dual_verdict
-              - sign_asymmetry_disclosure
-            notes: corpus OLS-FE.md：H1a/H1b 反号对的诚实双判决（一支持一驳回），显式披露不对称（null 判决族第二源）
           - id: r6_unexpected_sign_hedged_rereading
             skeleton: "The main effect of [non-focal predictor] was [direction] and significant (β = [value], p < [threshold]). This result may suggest that [alternative-theory reading]."
             paper_count: 1
@@ -945,19 +943,28 @@ estimators:
             paper_count: 1
             status: VERIFIED
             skeleton: "``` Hypothesis [1a] predicted that [predictor_A] would [enhance] [outcome], while hypothesis [1b] postulated that [predictor_B] would [diminish] [outcome]. Contrary to our expectations, [predictor_A] has a significant [negative] effect on [outcome], while the effect of [predictor_B] is not significantly different from zero. Hence, hypotheses [1a] and [1b] are not supported. ... We also tested for a possible [curvilinear] relationship but found no evidence of it. ```"
+            verification_basis: "expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)"
+            subfield_distribution:
+              strategy: 1
+            transferability: high
+            estimator_family_note: OLS/FE and grouped designs
+            paradigm_exclusivity: 反号配对假设的相反判决双拍收束
+            rhythm_tags:
+              - contrary_pair
+              - dual_verdict
+              - sign_asymmetry_disclosure
+            notes: corpus OLS-FE.md：H1a/H1b 反号对的诚实双判决（一支持一驳回），显式披露不对称（null 判决族第二源）
       R7:
         description: 稳健性 / 效度 / 敏感性检验
         skeleton_variants:
           - id: r7_ols_threat_based
             skeleton: "One concern is that our findings depend on [specific threat]. To address this concern, we re-estimate our models using [method]. The results are substantively unchanged (Table [x]), reducing concerns that [threat] drives the findings."
-            paper_count: 10
+            paper_count: 1
             status: ROBUST
             subfield_distribution:
-              strategy: 4
-              ob_hr: 3
-              om: 2
               marketing: 1
-            sources: []
+            sources:
+              - hahl2017_authentic_lowbrow_culture
             transferability: high
             paradigm_exclusivity: 通用，但因果设计需更具体
             rhythm_tags:
@@ -965,23 +972,24 @@ estimators:
               - test_action
               - unchanged_result
               - threat_reduction
-            notes: 标准 threat-based 稳健性四拍
+            notes: "Lane C v3 回填（2026-09-21）：判别性特征组 3 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 10 改为已验证范文数 1；subfield 按来源期刊重切。"
             corpus_path: corpus/OLS-FE.md
           - id: r7_ols_narrative_variant
             skeleton: "We also examine whether [alternative explanation]. Specifically, we [method description]. Results reported in Table [x] show that [main finding] remains [robust/qualitatively similar]."
-            paper_count: 3
+            paper_count: 2
             status: VERIFIED
             subfield_distribution:
               strategy: 2
-              om: 1
-            sources: []
+            sources:
+              - park2013_social_discrimination
+              - keeves2017_ingratiation_resentment
             transferability: medium
             paradigm_exclusivity: 通用
             rhythm_tags:
               - alternative_explanation
               - method
               - robustness_confirmation
-            notes: 叙事型稳健性，弱化 threat 定位但仍明确
+            notes: "Lane C v3 回填（2026-09-21）：判别性特征组 3 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 3 改为已验证范文数 2；subfield 按来源期刊重切。"
             corpus_path: corpus/OLS-FE.md
           - id: r7_ols_alternative_dv_falsification
             skeleton: "An alternative way to establish causality is to provide a falsification test where we examine [alternative_DV], an outcome that is outside the decision-making domain of [focal_actor]. We use the [estimator] specification in [Table X], Column [N], except that we replace [DV] with [alternative_DV]. As expected, the [interactions/effects] involving [actor-specific variables] are insignificant, because [alternative_DV] is not within the decision-making domain of [focal_actor]."
@@ -1190,7 +1198,6 @@ estimators:
             subfield_distribution:
               marketing: 1
             sources:
-              - Chen_Ganesan_Liu_2009_JM
               - chenganesanliu2009
             transferability: medium
             paradigm_exclusivity: 截面 AR/CAR + 二元策略中介
@@ -1229,7 +1236,7 @@ estimators:
             subfield_distribution:
               om: 1
             sources:
-              - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
+              - carpenter_and_westphal_2001_strategic_context_of_external_ne
             notes: corpus OLS-FE.md 变体75：LEGACY——连续 DV 双结果模型的 legacy Kenny 三步条件压缩进单个冒号句（separate analysis 包装）；写入时必须补 indirect-effect interval 或显式标 legacy，mediated 措辞降为关联读法
             corpus_path: corpus/OLS-FE.md
           - id: r8_investortype_decomposition_wald
@@ -1264,15 +1271,16 @@ estimators:
               - boundary_construct_adjudication
             notes: corpus OLS-FE.md 变体79：理论开题补充分析双段式——第一段用理论条件定位检验，第二段做构念层次裁决；不与 threat 响应稳健性混同
             corpus_path: corpus/OLS-FE.md
-          - id: r8_in_system_baron_kenny_hypothesis_linked_mediation_gulati_sytch2007
-            skeleton: "``` To test hypotheses [H3]–[H5], we followed the rules for mediation testing suggested by [Baron and Kenny (1986)]. The first step in testing for mediation requires us to establish a significant relationship between the independent variable and the dependent variable. While recent research on mediation testing ([citations]) suggests that this step is not required, as it represents an unnecessarily strong restriction in testing for mediation, we elected to incorporate it into our method because we predicted an analytically proximate relationship between [predictor] and [outcome]. ... this requirement was fulfilled with the support for hypothesis [H2]."
+          - id: r8_in_system_baron_kenny_hypothesis_linked_mediation
+            corpus_path: corpus/OLS-FE.md
+            sources:
+              - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
             paper_count: 1
             status: VERIFIED
+            skeleton: "``` To test hypotheses [H3]–[H5], we followed the rules for mediation testing suggested by [Baron and Kenny (1986)]. The first step in testing for mediation requires us to establish a significant relationship between the independent variable and the dependent variable. While recent research on mediation testing ([citations]) suggests that this step is not required, as it represents an unnecessarily strong restriction in testing for mediation, we elected to incorporate it into our method because we predicted an analytically proximate relationship between [predictor] and [outcome]. ... this requirement was fulfilled with the support for hypothesis [H2]."
             verification_basis: "expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)"
             subfield_distribution:
               strategy: 1
-            sources:
-              - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
             transferability: high
             estimator_family_note: OLS/FE (in-system mediation)
             paradigm_exclusivity: 系统内 BK 假设化中介（LEGACY 第二源）
@@ -1281,13 +1289,6 @@ estimators:
               - hypothesis_linked
               - legacy_flag
             notes: corpus OLS-FE.md 变体82：在联立系统内做 BK 三步中介并逐假设挂钩；标 LEGACY，现代采用须补 bootstrap CI（BK 族第二源）
-          - id: r8_in_system_baron_kenny_hypothesis_linked_mediation
-            corpus_path: corpus/OLS-FE.md
-            sources:
-              - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
-            paper_count: 1
-            status: VERIFIED
-            skeleton: "``` To test hypotheses [H3]–[H5], we followed the rules for mediation testing suggested by [Baron and Kenny (1986)]. The first step in testing for mediation requires us to establish a significant relationship between the independent variable and the dependent variable. While recent research on mediation testing ([citations]) suggests that this step is not required, as it represents an unnecessarily strong restriction in testing for mediation, we elected to incorporate it into our method because we predicted an analytically proximate relationship between [predictor] and [outcome]. ... this requirement was fulfilled with the support for hypothesis [H2]."
       R9:
         description: Results→Discussion 过渡
         skeleton_variants:
@@ -1368,29 +1369,33 @@ estimators:
         skeleton_variants:
           - id: r1_logit_standard
             skeleton: "Table [x] presents descriptive statistics..."
-            paper_count: 5
+            paper_count: 7
             status: ROBUST
             subfield_distribution:
-              strategy: 2
-              ob_hr: 2
-              marketing: 1
-            sources: []
+              strategy: 7
+            sources:
+              - vidal2015_adding_by_subtracting
+              - kundro2023_power_female_moral_objectors
+              - shipilov2020_publicity_good
+              - han2020_now_you_see_me
+              - park2013_social_discrimination
+              - zhou2017_state_ownership_firm_innovation
+              - lovelace2021_ceo_celebrity
             transferability: high
             paradigm_exclusivity: 通用
             rhythm_tags:
               - table_presentation
-            notes: Logit 的 R1 通常不报告 VIF，或弱化诊断
+            notes: "Lane C v3 回填（2026-09-21）：判别性特征组 2 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 5 改为已验证范文数 7；subfield 按来源期刊重切。"
             corpus_path: corpus/Logit-Probit-Ordered-Probit.md
           - id: r1_descriptive_vif_relogit
             skeleton: "[Descriptive statistics + correlation matrix presented first, with explicit note that VIFs are below threshold and multicollinearity is not a concern]. Then, [estimation approach declared upfront: random-effects logistic regression for binary outcome panels, with rationale for between-firm focus and convergence advantages]. [Odds-ratio reporting convention stated explicitly to aid interpretation].\n"
-            paper_count: 2
+            paper_count: 1
             status: VERIFIED
             verification_basis: "expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)"
             subfield_distribution:
-              strategy: 2
+              strategy: 1
             sources:
-              - "Pfarrer, Pollock, & Rindova (2010), A Tale of Two Assets: The Effects of Firm Reputation and Celebrity on Earnings Surprises and Investors' Reactions, Academy of Management Journal"
-              - Pfarrer_Pollock_Rindova_2010_AMJ
+              - pfarrer_pollock_and_rindova_2010
             transferability: ""
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -1398,8 +1403,6 @@ estimators:
             corpus_path: corpus/Logit-Probit-Ordered-Probit.md
       R3:
         skeleton_variants:
-          - id: r3_binary_gee_curvilinear_formal_utest_chain
-            status: VERIFIED
           - id: r3_case_group_contrast_loop
             skeleton: "We present our results of Equation ([N]) in Table ([X]). We observe that the coefficients of [Case A] and [Case B] are insignificantly negative, whereas the coefficients of [Case C] and [Case D] are significantly positive. When we combine these two sets of estimates, our result suggests that, compared with [the reference cases], [units] would be more likely to [outcome] if [the condition] is classified as either [Case C] or [Case D]. By using a [structural estimation] approach to [estimate the theoretical primitives], our empirical study provides supporting evidence that the guideline offered in our [decision framework] provides practical implications for understanding how [units] may behave when [focal circumstance]."
             notes: "Verified across Bendig 2024 and the user-audited Lee & Park 2024 exemplar. A quadratic coefficient alone is insufficient; curve shape is established by joint restrictions and then displayed on the probability/response scale. For adverse Y, the vertex is a maximum-risk intermediate zone, not a performance optimum."
@@ -1408,7 +1411,8 @@ estimators:
             status: VERIFIED
             verification_basis: user_expert_audit
             subfield_distribution:
-              entrepreneurship_strategy: 1
+              om: 1
+              strategy: 2
             sources:
               - Bendig_Hensellek_Schulte_2024_ETP
               - Lee_Park_2024_SMJ
@@ -1429,7 +1433,7 @@ estimators:
             status: VERIFIED
             verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
             subfield_distribution:
-              entrepreneurship_strategy: 1
+              strategy: 1
             sources:
               - Bendig_Hensellek_Schulte_2024_ETP
             transferability: high
@@ -1443,14 +1447,12 @@ estimators:
             corpus_path: corpus/Logit-Probit-Ordered-Probit.md
           - id: r3_logit_four_beat
             skeleton: "Hypothesis [x] predicted... Model [y] shows that the coefficient for [predictor] is [positive/negative] and statistically significant (β = [value], p < [threshold]). Because logit coefficients are not directly interpretable, we calculate the average marginal effect (AME). The AME indicates that a [one-unit/one-SD] increase in [predictor] is associated with a [percentage_point] [increase/decrease] in the probability of [outcome]. Thus, Hypothesis [x] is supported."
-            paper_count: 6
+            paper_count: 1
             status: ROBUST
             subfield_distribution:
-              strategy: 3
-              ob_hr: 2
-              marketing: 1
+              strategy: 1
             sources:
-              - Pfarrer_Pollock_Rindova_2010_AMJ
+              - pfarrer_pollock_and_rindova_2010
             transferability: high
             paradigm_exclusivity: Logit/Probit 专用，Ordered Probit 需说明 cut points
             rhythm_tags:
@@ -1459,7 +1461,7 @@ estimators:
               - ame_interpretation
               - probability_change
               - support
-            notes: Logit 四拍变体：拍3拆分为系数+AME+概率变化三小拍
+            notes: Logit 四拍变体：拍3拆分为系数+AME+概率变化三小拍。第7轮对齐(2026-09-21)：pc 6→1 与 sources 数对齐（用户裁定），subfield 由唯一来源重切（AMJ→strategy）。
             corpus_path: corpus/Logit-Probit-Ordered-Probit.md
           - id: r3_eventstudy_nonparametric_validation
             skeleton: "[Before presenting CAR comparisons, a brief nonparametric validation sentence confirms that the market indeed views positive surprises favorably and negative surprises as bad news (Patell Z and generalized sign tests)]. [This establishes that the event-study metric is behaving as expected before subgroup t-tests are interpreted].\n"
@@ -1469,7 +1471,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - "Pfarrer, Pollock, & Rindova (2010), A Tale of Two Assets: The Effects of Firm Reputation and Celebrity on Earnings Surprises and Investors' Reactions, Academy of Management Journal"
+              - pfarrer_pollock_and_rindova_2010
             transferability: ""
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -1544,7 +1546,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - Pfarrer_Pollock_Rindova_2010_AMJ
+              - pfarrer_pollock_and_rindova_2010
             transferability: ""
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -1559,7 +1561,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - Pfarrer_Pollock_Rindova_2010_AMJ
+              - pfarrer_pollock_and_rindova_2010
             transferability: ""
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -1593,7 +1595,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - gulati_westphal_1999_cooperative_or_controlling (Administrative Science Quarterly)
+              - gulati_westphal_1999_cooperative_or_controlling
             transferability: high
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -1608,7 +1610,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
+              - gulati_1999_where_do_interorganizational_networks
             transferability: high
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -1623,7 +1625,7 @@ estimators:
             status: VERIFIED
             verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
             subfield_distribution:
-              entrepreneurship_strategy: 1
+              strategy: 1
             sources:
               - Bendig_Hensellek_Schulte_2024_ETP
             transferability: medium
@@ -1643,7 +1645,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - "Pfarrer, Pollock, & Rindova (2010), A Tale of Two Assets: The Effects of Firm Reputation and Celebrity on Earnings Surprises and Investors' Reactions, Academy of Management Journal"
+              - pfarrer_pollock_and_rindova_2010
             transferability: ""
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -1651,8 +1653,6 @@ estimators:
             corpus_path: corpus/Logit-Probit-Ordered-Probit.md
       R7:
         skeleton_variants:
-          - id: r7_curvilinear_six_threat_robustness_ladder
-            status: VERIFIED
           - id: r7_threshold_def_columns
             skeleton: "We present our results of Equation ([N]) in Table ([X]). Columns ([1]), ([2]), and ([3]) present results in which we use [the first 1/2], [the first 1/3], and [the first 1/4] of [the relevant cycle], respectively, to identify [the threshold-defined condition]. Our results are largely consistent in all three columns: [the coefficients of focal cases] keep the same sign and significance pattern under all three definitions."
             notes: Untabulated IV results cannot carry decisive identification; significance attenuation must remain visible.
@@ -1661,7 +1661,8 @@ estimators:
             status: VERIFIED
             verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
             subfield_distribution:
-              entrepreneurship_strategy: 1
+              om: 1
+              strategy: 1
             sources:
               - Bendig_Hensellek_Schulte_2024_ETP
               - mao_dong_lee_2022_msom
@@ -1729,7 +1730,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - Pfarrer_Pollock_Rindova_2010_AMJ
+              - pfarrer_pollock_and_rindova_2010
             transferability: ""
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -1744,7 +1745,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - Pfarrer_Pollock_Rindova_2010_AMJ
+              - pfarrer_pollock_and_rindova_2010
             transferability: ""
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -1777,7 +1778,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
+              - gulati_1999_network_location_and_learning_the_influence_of_n
             transferability: high
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -1791,7 +1792,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
+              - gulati_1999_network_location_and_learning_the_influence_of_n
             transferability: high
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -1806,7 +1807,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
+              - gulati_1999_where_do_interorganizational_networks
             transferability: high
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -1817,14 +1818,13 @@ estimators:
         skeleton_variants:
           - id: r2_binary_outcome_hypothesis_pair_table
             skeleton: "[Hypotheses tested in matched pairs (H1a/H1b, H2a/H2b) across two separate tables for positive vs negative surprise dummies]. [Column 1 = controls only; Column 2 = full model with focal dummies]. [Each hypothesis evaluated by referencing odds ratio and significance, with explicit directional language: \"were less/more likely\"]. [Mixed support acknowledged in-line: one hypothesis in pair supported, the other not, without deferring to Discussion].\n"
-            paper_count: 2
+            paper_count: 1
             status: VERIFIED
             verification_basis: "expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)"
             subfield_distribution:
-              strategy: 2
+              strategy: 1
             sources:
-              - "Pfarrer, Pollock, & Rindova (2010), A Tale of Two Assets: The Effects of Firm Reputation and Celebrity on Earnings Surprises and Investors' Reactions, Academy of Management Journal"
-              - Pfarrer_Pollock_Rindova_2010_AMJ
+              - pfarrer_pollock_and_rindova_2010
             transferability: ""
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -1875,7 +1875,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
+              - gulati_1999_network_location_and_learning_the_influence_of_n
             transferability: high
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -1889,7 +1889,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
+              - gulati_1999_network_location_and_learning_the_influence_of_n
             transferability: high
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -1904,7 +1904,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - gulati_westphal_1999_cooperative_or_controlling (Administrative Science Quarterly)
+              - gulati_westphal_1999_cooperative_or_controlling
             transferability: high
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -1931,13 +1931,19 @@ estimators:
             notes: corpus Logit-Probit-Ordered-Probit.md 变体AN：第一阶段 mlogit 导航交底 + IV 排他声明 + 基线类规则 + 分阶段样本损耗 + 自有价值旁注区隔
           - id: r2_formal_tree_case_dummies
             skeleton: "Given our estimated [structural parameters], we next empirically test the [decision process/tree] shown in Figure [N]. We focus on [the subsample] and estimate the following [logit] model ([estimator citation]): [Equation N]. All [K] explanatory variables are binary. [Case A]_i = 1 reflects the observations satisfying the condition in case (A) ([branch label]) in Proposition [M]. For those observations that do not satisfy the condition, we have set [Case A]_i = 0 and then categorize these observations into one of the following [K-1] cases. First, [Case B]_i = 1 reflects case (B) ([branch label]), which satisfies [theoretical condition]; otherwise, [Case B]_i = 0. Second, [Case C]_i = 1 reflects case (C) ([branch label]) in Proposition [M], which satisfies that [Case A]_i = 0, [Case B]_i = 0, and [observable classification criterion]. In [X], we control for a set of variables that affects [the decision process], including [control domains]."
-            notes: "corpus Logit-Probit-Ordered-Probit.md AO：formal-model 论文把\"理论→可估对象\"的翻译写成显式构词法：理论支路（Proposition 的 case 条件）逐支路变成二元回归元，定义句自带理论出处（in Proposition [M]） 不满足前置条件的观测不丢弃而是显式归池再分类（\"we have set ... = 0 and then categorize these observations into one of the following ...\"，互斥穷尽） 方程、支路定义、控制域三件事一段交底——把\"回归元从哪来\"从 methods 细节升格为 Results 可读性的前提"
+            notes: "corpus Logit-Probit-Ordered-Probit.md AO：formal-model 论文把\"理论→可估对象\"的翻译写成显式构词法：理论支路（Proposition 的 case 条件）逐支路变成二元回归元，定义句自带理论出处（in Proposition [M]） 不满足前置条件的观测不丢弃而是显式归池再分类（\"we have set ... = 0 and then categorize these observations into one of the following ...\"，互斥穷尽） 方程、支路定义、控制域三件事一段交底——把\"回归元从哪来\"从 methods 细节升格为 Results 可读性的前提。 第7轮补齐(2026-09-21)：老生成器未写 pc，补 paper_count=1 与 subfield_distribution（MSOM→om）。"
+            paper_count: 1
+            subfield_distribution:
+              om: 1
             sources:
               - mao_dong_lee_2022_msom
             status: VERIFIED
           - id: r2_institutional_dv_proxy
             skeleton: "The dependent variable, [Delayed outcome]_i, is also a dummy variable that equals one if [the focal behavior is observed], which is defined as [institutional marker], and zero otherwise. In [the setting], [the outcome] can [occur via two routes], and the latter accounts for [P]% of [events] in our data. [Institutional mechanism: because of resource and information asymmetry, the institutional route is time-consuming, and focal units can preempt it at any time because they possess superior private information ([citation]).] Therefore, it is reasonable to assume that the presence of [institutional marker] indicates that [focal units] may behave passively toward [the focal condition] and [postpone the focal action]."
-            notes: "corpus Logit-Probit-Ordered-Probit.md AR：二元 DV 不是直接测量而是机构行为代理（被动延迟→由监管机构 NHTSA 发起召回，占 14.7%）时，定义句后必须接一条制度机制链：两路线并存 + 代理类占比交底 + \"为什么落在该类=被动行为\"的因果推理（厂商信息优势使其能在监管调查中随时抢先自愿召回）+ 文献背书（Rupp and Taylor 2002）——把\"代理是否测到构念\"的构造效度质疑在 DV 定义段就地化解"
+            notes: "corpus Logit-Probit-Ordered-Probit.md AR：二元 DV 不是直接测量而是机构行为代理（被动延迟→由监管机构 NHTSA 发起召回，占 14.7%）时，定义句后必须接一条制度机制链：两路线并存 + 代理类占比交底 + \"为什么落在该类=被动行为\"的因果推理（厂商信息优势使其能在监管调查中随时抢先自愿召回）+ 文献背书（Rupp and Taylor 2002）——把\"代理是否测到构念\"的构造效度质疑在 DV 定义段就地化解。 第7轮补齐(2026-09-21)：老生成器未写 pc，补 paper_count=1 与 subfield_distribution（MSOM→om）。"
+            paper_count: 1
+            subfield_distribution:
+              om: 1
             sources:
               - mao_dong_lee_2022_msom
             status: VERIFIED
@@ -1951,7 +1957,7 @@ estimators:
             status: VERIFIED
             verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
             subfield_distribution:
-              entrepreneurship_strategy: 1
+              strategy: 1
             sources:
               - Bendig_Hensellek_Schulte_2024_ETP
             transferability: high
@@ -1971,7 +1977,7 @@ estimators:
             status: VERIFIED
             verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
             subfield_distribution:
-              entrepreneurship_strategy: 1
+              strategy: 1
             sources:
               - Bendig_Hensellek_Schulte_2024_ETP
             transferability: high
@@ -2006,14 +2012,13 @@ estimators:
             corpus_path: corpus/Logit-Probit-Ordered-Probit.md
           - id: r4_subgroup_mean_comparison_ttest
             skeleton: "[Results organized by subgroup category (high reputation / celebrity / none) with mean CARs, pairwise differences, and significance from paired t-tests of unequal variances]. [Directional predictions tested by comparing each treatment group to baseline and to each other]. [Support language is precise: \"significantly larger than,\" \"significantly different from,\" \"not significantly different from\"]. [Mixed support again handled in-line: H4c not supported because the two treatment groups do not differ significantly from each other].\n"
-            paper_count: 2
+            paper_count: 1
             status: VERIFIED
             verification_basis: "expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)"
             subfield_distribution:
-              strategy: 2
+              strategy: 1
             sources:
-              - "Pfarrer, Pollock, & Rindova (2010), A Tale of Two Assets: The Effects of Firm Reputation and Celebrity on Earnings Surprises and Investors' Reactions, Academy of Management Journal"
-              - Pfarrer_Pollock_Rindova_2010_AMJ
+              - pfarrer_pollock_and_rindova_2010
             transferability: ""
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -2073,7 +2078,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - Pfarrer_Pollock_Rindova_2010_AMJ
+              - pfarrer_pollock_and_rindova_2010
             transferability: ""
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -2088,7 +2093,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - Pfarrer_Pollock_Rindova_2010_AMJ
+              - pfarrer_pollock_and_rindova_2010
             transferability: ""
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -2179,7 +2184,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - gulati_westphal_1999_cooperative_or_controlling (Administrative Science Quarterly)
+              - gulati_westphal_1999_cooperative_or_controlling
             transferability: high
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -2194,7 +2199,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
+              - gulati_1999_where_do_interorganizational_networks
             transferability: high
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -2226,7 +2231,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
+              - gulati_1999_network_location_and_learning_the_influence_of_n
             transferability: high
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -2241,7 +2246,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - gulati_westphal_1999_cooperative_or_controlling (Administrative Science Quarterly)
+              - gulati_westphal_1999_cooperative_or_controlling
             transferability: high
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -2256,7 +2261,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
+              - gulati_1999_where_do_interorganizational_networks
             transferability: high
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -2271,7 +2276,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
+              - gulati_1999_where_do_interorganizational_networks
             transferability: high
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -2286,7 +2291,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - gulati_1999_where_do_interorganizational_networks (American Journal of Sociology)
+              - gulati_1999_where_do_interorganizational_networks
             transferability: high
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -2342,7 +2347,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - gulati_westphal_1999_cooperative_or_controlling (Administrative Science Quarterly)
+              - gulati_westphal_1999_cooperative_or_controlling
             transferability: high
             paradigm_exclusivity: ""
             rhythm_tags: []
@@ -3137,11 +3142,12 @@ estimators:
             corpus_path: corpus/DiD.md
       R2:
         skeleton_variants:
-          - id: r2_rditer_prepost_modelfree_event_figure_fang2025
-            status: EMERGING
           - id: r2_did_fe_absorption_navigation
             skeleton: "\n见语料块"
-            notes: "\ncorpus DiD.md R：变体 3 管分步入表与经济显著性绑定\n本变体是列间导航注记——主动解释\"某系数为何从该列消失\"（被高维 FE 吸收），防止审稿人把缺项误读为遗漏，再以 \"qualitatively the same\" 收束规格累进。"
+            notes: "\ncorpus DiD.md R：变体 3 管分步入表与经济显著性绑定\n本变体是列间导航注记——主动解释\"某系数为何从该列消失\"（被高维 FE 吸收），防止审稿人把缺项误读为遗漏，再以 \"qualitatively the same\" 收束规格累进。 第7轮补齐(2026-09-21)：老生成器未写 pc，补 paper_count=1 与 subfield_distribution（MgmtSci→strategy，注册表先例 r2_did_fig_pretrend）。"
+            paper_count: 1
+            subfield_distribution:
+              strategy: 1
             sources:
               - lu_et_al_2022_frenemies_corporate_advertising
             status: EMERGING
@@ -3152,18 +3158,17 @@ estimators:
             status: VERIFIED
             subfield_distribution:
               om: 1
+              strategy: 1
             sources:
-              - fang_et_al_2025_rival_recall_ad_spend (POM)
+              - fang_et_al_2025_rival_recall_ad_spend
               - lu_et_al_2022_frenemies_corporate_advertising
             corpus_path: corpus/DiD.md
           - id: r2_did_parallel_trend_first
             skeleton: "Before turning to the main results, Figure [x] shows the event-study estimates, which provide a test of the parallel trends assumption. The pre-treatment coefficients are small and statistically indistinguishable from zero, supporting the validity of our DiD design."
-            paper_count: 6
+            paper_count: 1
             status: ROBUST
             subfield_distribution:
-              strategy: 3
-              om: 2
-              finance: 1
+              strategy: 1
             sources:
               - Lee_Wu_Bednar_ORSC_18968
             transferability: high
@@ -3172,21 +3177,17 @@ estimators:
               - parallel_trend_test
               - pre_treatment_coefficients
               - design_validation
-            notes: DiD 标准分支：R2 前置平行趋势
+            notes: DiD 标准分支：R2 前置平行趋势。第7轮对齐(2026-09-21)：pc 6→1 与 sources 数对齐（用户裁定），subfield 由唯一来源重切（ORSC→strategy）。
             corpus_path: corpus/DiD.md
       R3:
         skeleton_variants:
-          - id: r3_did_baseline_estimate
-            status: EMERGING
           - id: r3_did_multimeasure_percent_translation
             skeleton: "Model [y] provides the baseline DiD estimate. The coefficient on [treatment_dummy] is [positive/negative] and statistically significant (β = [value], p < [threshold], 95% CI [[lower], [upper]]), indicating that [treatment] [increases/decreases] [outcome] by approximately [value] [units/percent]. Thus, Hypothesis [x] is supported."
             notes: "\ncorpus DiD.md S：R3 现仅变体 8（1-SD 交互四拍）\n本变体把经济幅度翻译做成主效应后的独立收束段，且一次覆盖三口径（水平量 + 两个 scaled 比率）——多 DV 论文的幅度拍不必逐表重复，集中一段按口径并列翻译。"
             paper_count: 2
             status: ROBUST
             subfield_distribution:
-              strategy: 3
-              om: 2
-              finance: 1
+              strategy: 2
             sources:
               - Lee_Wu_Bednar_ORSC_18968
               - lu_et_al_2022_frenemies_corporate_advertising
@@ -3232,15 +3233,13 @@ estimators:
             corpus_path: corpus/DiD.md
       R4:
         skeleton_variants:
-          - id: r4_did_interaction_two_pole_hypothesis_audit
-            status: EMERGING
           - id: r4_did_median_partition_suest_difference
             skeleton: "The [treatment] × [moderator] interaction is [direction] and significant. We translate its magnitude and plot the treatment effect at both theoretically relevant moderator values. The [high] condition matches the predicted [sign], whereas the [low] condition is [observed sign] rather than [predicted sign]. Thus, the contingency receives support, but the sign-switch hypothesis is only [partially/not] supported as stated."
             notes: A significant interaction does not establish both predicted simple-effect signs.
             paper_count: 2
             status: EMERGING
             subfield_distribution:
-              strategy: 1
+              strategy: 2
             sources:
               - Lee_Wu_Bednar_ORSC_18968
               - lu_et_al_2022_frenemies_corporate_advertising
@@ -3254,11 +3253,12 @@ estimators:
             corpus_path: corpus/DiD.md
       R7:
         skeleton_variants:
-          - id: r7_did_placebo_permutation
-            status: EMERGING
           - id: r7_did_alternative_control_construction
             skeleton: "\n见语料块"
-            notes: "\ncorpus DiD.md V：变体 13 换的是识别来源本身（替代冲击）\n本变体保持冲击不变、只重构对照群——行业内非事件机构 block-held 单位作对照，专项回应\"对照组外部效度/机构特异不可观测\"威胁，并与另一替代口径（同事件机构组合内未变化持仓）双轨呈报。"
+            notes: "\ncorpus DiD.md V：变体 13 换的是识别来源本身（替代冲击）\n本变体保持冲击不变、只重构对照群——行业内非事件机构 block-held 单位作对照，专项回应\"对照组外部效度/机构特异不可观测\"威胁，并与另一替代口径（同事件机构组合内未变化持仓）双轨呈报。 第7轮补齐(2026-09-21)：老生成器未写 pc，补 paper_count=1 与 subfield_distribution（MgmtSci→strategy，注册表先例 r2_did_fig_pretrend）。"
+            paper_count: 1
+            subfield_distribution:
+              strategy: 1
             sources:
               - lu_et_al_2022_frenemies_corporate_advertising
             status: EMERGING
@@ -3268,9 +3268,7 @@ estimators:
             paper_count: 3
             status: VERIFIED
             subfield_distribution:
-              strategy: 4
-              om: 1
-              finance: 1
+              strategy: 3
             sources:
               - Lee_Wu_Bednar_ORSC_18968
               - Castellaneta_Conti_Kacperczyk_2017_SMJ
@@ -3342,7 +3340,7 @@ estimators:
             subfield_distribution:
               om: 1
             sources:
-              - fang_et_al_2025_rival_recall_ad_spend (POM)
+              - fang_et_al_2025_rival_recall_ad_spend
             corpus_path: corpus/DiD.md
           - id: r8_did_theoretical_premise_probe_chain
             skeleton: "We probe observable implications of the proposed mechanism by examining [communication outcome], [communication capacity as a condition], and whether [core behavior] is associated with attention from each proposed intermediary. Convergent patterns support selected premises; domain-specific nulls narrow the mechanism. These analyses are corroborative and do not identify the causal mechanism."
@@ -3461,19 +3459,20 @@ estimators:
         skeleton_variants:
           - id: r3_count_irr_plus_ame
             skeleton: "Model [y] shows that the incidence rate ratio (IRR) for [predictor] is [value] (p < [threshold]), indicating that a [one-unit] increase in [predictor] is associated with a [value]% [increase/decrease] in the rate of [outcome]. To facilitate interpretation, we also calculate the average marginal effect (AME), which shows that..."
-            paper_count: 3
+            paper_count: 2
             status: VERIFIED
             subfield_distribution:
               strategy: 2
-              om: 1
-            sources: []
+            sources:
+              - han2020_now_you_see_me
+              - han2024_public_enemies
             transferability: high
             paradigm_exclusivity: 计数模型专用
             rhythm_tags:
               - irr
               - rate_interpretation
               - ame_bridge
-            notes: IRR + AME 双轨解释
+            notes: "Lane C v3 回填（2026-09-21）：判别性特征组 3 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 3 改为已验证范文数 2；subfield 按来源期刊重切。"
             corpus_path: corpus/计数模型.md
           - id: r3_count_cross_model_consistency
             skeleton: "Results are similar across models. The main effect of [predictor] is consistently significant and [direction]. As [predictor] increases, [units] are generally [less/more] likely to [outcome]. However, the interaction between [predictor] and [moderator] is consistently [direction] and significant, suggesting that [moderator] moderates the direct effect of [predictor]. When [field_condition], [units] become [more/less] likely to [outcome]. This finding supports Hypothesis [x]."
@@ -4200,32 +4199,16 @@ estimators:
             rhythm_tags: []
             notes: ""
             corpus_path: corpus/IV-2SLS.md
-          - id: r2_reciprocal_3sls_system_navigation_gulati_sytch2007
-            skeleton: "``` Yet it is also plausible to argue that [outcome] will lead [partners] to allocate more [business] to each other, hence increasing levels of [predictor]. This potential reciprocally causal relationship resulted in a simultaneous-equation bias in our research design ([citation]). In line with the expectations of a simultaneous-equation bias, the [Hausman (year)] test did indicate the presence of endogeneity in the [predictor] measure (p = [value]). A simple ordinary least squares (OLS) estimator is inapplicable for a simultaneity bias because the endogenous variables are correlated with the disturbance term, hence rendering OLS estimates inconsistent. To account for the possible simultaneity between [predictor] and [outcome], we used a [three-stage least squares] variation of simultaneous equation modeling ([citation]), which allowed us to estimate [outcome] simultaneously as a function of [predictor] and [predictor] as a function of [outcome]."
-            paper_count: 1
-            status: VERIFIED
-            verification_basis: "expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)"
-            subfield_distribution:
-              strategy: 1
+          - id: r2_instrument_dual_condition_audit_just_identified_boundary
+            corpus_path: corpus/IV-2SLS.md
             sources:
               - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
-            transferability: high
-            estimator_family_note: IV/3SLS simultaneous system
-            paradigm_exclusivity: 互为因果双内生系统的 3SLS 主估计导航
-            rhythm_tags:
-              - system_setup
-              - column_per_equation
-              - cross_equation_reading
-            notes: corpus IV-2SLS.md 变体15：先交底互为内生系统，再逐方程导航读表
-          - id: r2_instrument_dual_condition_audit_just_identified_boundary_gulati_sytch2007
+            paper_count: 1
+            status: VERIFIED
             skeleton: "``` We used [two] instrumental variables to help uniquely identify the [outcome] and [predictor] models in the system of simultaneous equations. For the [predictor] model, we used [instrument_1]. We expected levels of [instrument_1] to lead to higher degrees of [predictor] due to [mechanism]. To uniquely identify the [outcome] equation, we [created/used] [instrument_2]. We expected [instrument_2] to be [positively] correlated with [outcome]. We had no a priori theoretical reasons to expect [instrument_1] to have a direct effect on [outcome] and [instrument_2] to have a direct effect on [predictor]."
-            paper_count: 1
-            status: VERIFIED
             verification_basis: "expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)"
             subfield_distribution:
               strategy: 1
-            sources:
-              - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
             transferability: high
             estimator_family_note: IV/3SLS simultaneous system
             paradigm_exclusivity: 恰好识别系统的双条件工具审计交底
@@ -4234,13 +4217,6 @@ estimators:
               - just_identified_boundary
               - dual_condition_audit
             notes: corpus IV-2SLS.md：恰好识别边界 + 每个工具须同时满足两个排除条件的审计声明
-          - id: r2_instrument_dual_condition_audit_just_identified_boundary
-            corpus_path: corpus/IV-2SLS.md
-            sources:
-              - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
-            paper_count: 1
-            status: VERIFIED
-            skeleton: "``` We used [two] instrumental variables to help uniquely identify the [outcome] and [predictor] models in the system of simultaneous equations. For the [predictor] model, we used [instrument_1]. We expected levels of [instrument_1] to lead to higher degrees of [predictor] due to [mechanism]. To uniquely identify the [outcome] equation, we [created/used] [instrument_2]. We expected [instrument_2] to be [positively] correlated with [outcome]. We had no a priori theoretical reasons to expect [instrument_1] to have a direct effect on [outcome] and [instrument_2] to have a direct effect on [predictor]."
           - id: r2_reciprocal_3sls_system_navigation
             corpus_path: corpus/IV-2SLS.md
             sources:
@@ -4248,19 +4224,30 @@ estimators:
             paper_count: 1
             status: VERIFIED
             skeleton: "``` Yet it is also plausible to argue that [outcome] will lead [partners] to allocate more [business] to each other, hence increasing levels of [predictor]. This potential reciprocally causal relationship resulted in a simultaneous-equation bias in our research design ([citation]). In line with the expectations of a simultaneous-equation bias, the [Hausman (year)] test did indicate the presence of endogeneity in the [predictor] measure (p = [value]). A simple ordinary least squares (OLS) estimator is inapplicable for a simultaneity bias because the endogenous variables are correlated with the disturbance term, hence rendering OLS estimates inconsistent. To account for the possible simultaneity between [predictor] and [outcome], we used a [three-stage least squares] variation of simultaneous equation modeling ([citation]), which allowed us to estimate [outcome] simultaneously as a function of [predictor] and [predictor] as a function of [outcome]."
+            verification_basis: "expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)"
+            subfield_distribution:
+              strategy: 1
+            transferability: high
+            estimator_family_note: IV/3SLS simultaneous system
+            paradigm_exclusivity: 互为因果双内生系统的 3SLS 主估计导航
+            rhythm_tags:
+              - system_setup
+              - column_per_equation
+              - cross_equation_reading
+            notes: corpus IV-2SLS.md 变体15：先交底互为内生系统，再逐方程导航读表
       R3:
         skeleton_variants:
           - id: r3_iv_second_stage
             skeleton: "Turning to the second-stage results (Table [x], Panel B), the coefficient on [endogenous_variable] is [positive/negative] and statistically significant (β = [value], p < [threshold]). This suggests that [one-unit] increase in [endogenous_variable] is associated with a [value-unit] [increase/decrease] in [outcome]. Thus, Hypothesis [x] is supported."
-            paper_count: 3
+            paper_count: 1
             status: VERIFIED
             subfield_distribution:
-              strategy: 1
-              om: 1
-              finance: 1
-            sources: []
+              marketing: 1
+            sources:
+              - Singh_Grewal_2023_JMR
             transferability: high
             paradigm_exclusivity: IV/2SLS 专用
+            notes: "第7轮扩库回填(2026-09-21)：Lane C 全文终审命中 Singh_Grewal_2023_JMR（JMR，Table 4 显式 first/second stage 双 Panel）；pc 3→1 与回填数对齐；eilert2017 经全文核验排除（control function 非 2SLS）。"
             rhythm_tags:
               - second_stage
               - causal_interpretation
@@ -4416,7 +4403,7 @@ estimators:
             subfield_distribution:
               om: 1
             sources:
-              - fang_et_al_2025_rival_recall_ad_spend (POM)
+              - fang_et_al_2025_rival_recall_ad_spend
             corpus_path: corpus/IV-2SLS.md
           - id: r7_control_endogeneity_three_step_fang2025
             skeleton: "One may be concerned that our control variables (e.g., [control]) are endogenous. We address this concern with the following three steps. First, we estimate a regression that excludes [controls]. The estimates (Table [C1]) are consistent with our main analyses (Table [X]). Second, prior literature ([citation]) has suggested that it is common for control variables to also function as dependent variables. ... The insight is that including the controls leads to conservative estimates. Third, following prior literature ([citations]), we used these controls' one-period-lagged values as instruments. The estimates (Table [C2]) were consistent with the results, further reducing the endogenous concern."
@@ -4425,7 +4412,7 @@ estimators:
             subfield_distribution:
               om: 1
             sources:
-              - fang_et_al_2025_rival_recall_ad_spend (POM)
+              - fang_et_al_2025_rival_recall_ad_spend
             corpus_path: corpus/IV-2SLS.md
           - id: r7_iv_exclusion_restriction
             skeleton: "One concern is that [instrument] may affect [outcome] through channels other than [endogenous_variable]. To address this exclusion restriction concern, we [test / discuss]. [Results / Discussion]."
@@ -4768,15 +4755,16 @@ estimators:
               - positive_hausman_statistic
               - specification_support
             notes: corpus IV-2SLS.md：RESULTS 收尾段——控制变量交底 + 自选择诊断收束（hazard 不显著 + 正 Hausman 支持切换设定）
-          - id: r7_3sls_cluster_bootstrap_inference_workaround_gulati_sytch2007
-            skeleton: "``` The [Breusch-Pagan] test ([citation]) for heteroskedasticity led us to reject the null hypothesis of homoskedastic error variance ... One possible reason for this may be the non-independence of observations, as certain [clusters] in our sample [supply more than one unit] ... Similar to OLS, heteroskedasticity poses a problem in [3SLS] estimation because it can bias the standard errors of the estimated coefficients. Because the direct adjustment of standard errors is not available in [3SLS] [software] estimation, we used a nonparametric bootstrap method to extract the bias-corrected coefficient estimates and standard errors ([citations]). ... In implementing the bootstrap, we made provisions for the clustered structure of our data, subsequently setting the size of repeated random samples equal to the number of clusters. ... Our estimates are based on [1,000] random samples ([citation]). Results remained qualitatively unchanged. ```"
+          - id: r7_3sls_cluster_bootstrap_inference_workaround
+            corpus_path: corpus/IV-2SLS.md
+            sources:
+              - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
             paper_count: 1
             status: VERIFIED
+            skeleton: "``` The [Breusch-Pagan] test ([citation]) for heteroskedasticity led us to reject the null hypothesis of homoskedastic error variance ... One possible reason for this may be the non-independence of observations, as certain [clusters] in our sample [supply more than one unit] ... Similar to OLS, heteroskedasticity poses a problem in [3SLS] estimation because it can bias the standard errors of the estimated coefficients. Because the direct adjustment of standard errors is not available in [3SLS] [software] estimation, we used a nonparametric bootstrap method to extract the bias-corrected coefficient estimates and standard errors ([citations]). ... In implementing the bootstrap, we made provisions for the clustered structure of our data, subsequently setting the size of repeated random samples equal to the number of clusters. ... Our estimates are based on [1,000] random samples ([citation]). Results remained qualitatively unchanged. ```"
             verification_basis: "expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)"
             subfield_distribution:
               strategy: 1
-            sources:
-              - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
             transferability: high
             estimator_family_note: IV/3SLS simultaneous system
             paradigm_exclusivity: 3SLS 推断的 cluster bootstrap 替代方案
@@ -4785,13 +4773,6 @@ estimators:
               - inference_robustness
               - replication_disclosure
             notes: corpus IV-2SLS.md：解析标准误之外以 cluster bootstrap 复推 p 值并披露复制数
-          - id: r7_3sls_cluster_bootstrap_inference_workaround
-            corpus_path: corpus/IV-2SLS.md
-            sources:
-              - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int
-            paper_count: 1
-            status: VERIFIED
-            skeleton: "``` The [Breusch-Pagan] test ([citation]) for heteroskedasticity led us to reject the null hypothesis of homoskedastic error variance ... One possible reason for this may be the non-independence of observations, as certain [clusters] in our sample [supply more than one unit] ... Similar to OLS, heteroskedasticity poses a problem in [3SLS] estimation because it can bias the standard errors of the estimated coefficients. Because the direct adjustment of standard errors is not available in [3SLS] [software] estimation, we used a nonparametric bootstrap method to extract the bias-corrected coefficient estimates and standard errors ([citations]). ... In implementing the bootstrap, we made provisions for the clustered structure of our data, subsequently setting the size of repeated random samples equal to the number of clusters. ... Our estimates are based on [1,000] random samples ([citation]). Results remained qualitatively unchanged. ```"
       R4:
         description: ""
         skeleton_variants:
@@ -4802,7 +4783,7 @@ estimators:
             subfield_distribution:
               om: 1
             sources:
-              - fang_et_al_2025_rival_recall_ad_spend (POM)
+              - fang_et_al_2025_rival_recall_ad_spend
             corpus_path: corpus/IV-2SLS.md
           - id: r4_indirect_moderation_full_vs_partial
             skeleton: "[R4-间接调节] 报告交互效应时，区分full indirect moderation与partial indirect moderation：先报告简单交互项（Lobbying × Deaths, Lobbying × Media）的系数与显著性；再报告加入中介交互项（Lobbying × Media）后原交互项（Lobbying × Deaths）是否变得不显著（β=0, n.s.）。若原交互项不显著且新交互项显著，则判定为full indirect moderation，支持H4。若原交互项仍显著但幅度下降，则支持partial indirect moderation（Model A）。需在正文中明确引用Equation编号以引导读者。"
@@ -6155,7 +6136,6 @@ estimators:
             subfield_distribution:
               marketing: 1
             sources:
-              - Chen_Ganesan_Liu_2009_JM
               - chenganesanliu2009
             transferability: high
             paradigm_exclusivity: 事件研究法分组 AR 主检验（非回归）
@@ -6176,7 +6156,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - zajac_westphal_the_social_construction_of_market_value (American Sociological Review)
+              - zajac_westphal_the_social_construction_of_market_value
             notes: corpus 事件研究法.md 变体14：图形先导时序符号反转高潮——figure-first 主检验载体是图不是表，期初 vs 期末 t 统计量差异检验替代系数解读，even as 悖论交叉引用把解释权交给 Discussion；跨期差异检验必须真实报告
             corpus_path: corpus/事件研究法.md
       R4:
@@ -6233,7 +6213,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - zajac_westphal_the_social_construction_of_market_value (American Sociological Review)
+              - zajac_westphal_the_social_construction_of_market_value
             notes: corpus 事件研究法.md 变体15：竞争假设配对裁决——支持—Conversely 反证连珠（null 是裁决的另一半），对手 null 句内嵌 rival 标签与机制复述，In effect 实质收束升维为预测元家族判断，跨窗一致性拍替代逐窗罗列；null 只裁决理论胜负，不得改写为机制不存在
             corpus_path: corpus/事件研究法.md
       R7:
@@ -6249,7 +6229,6 @@ estimators:
             subfield_distribution:
               marketing: 1
             sources:
-              - Chen_Ganesan_Liu_2009_JM
               - chenganesanliu2009
             transferability: medium
             paradigm_exclusivity: 事件研究→截面策略选择 + Heckman
@@ -6269,7 +6248,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - zajac_westphal_the_social_construction_of_market_value (American Sociological Review)
+              - zajac_westphal_the_social_construction_of_market_value
             notes: corpus 事件研究法.md 变体17：前置 Analysis 段设计参数双重正当化——估计器/序列相关/样本窗辩护在 Results 前一次交代，设计参数用经济逻辑 + 量化经验证据双轨正当化，主备修正配对 + 替代参数预算式声明；经验佐证必须来自真实计算
             corpus_path: corpus/事件研究法.md
       R8:
@@ -6303,7 +6282,7 @@ estimators:
             subfield_distribution:
               strategy: 1
             sources:
-              - zajac_westphal_the_social_construction_of_market_value (American Sociological Review)
+              - zajac_westphal_the_social_construction_of_market_value
             notes: corpus 事件研究法.md 变体16：对手最佳反驳封堵段——It might be suggested that 替怀疑者把话说完，编号 fork 一一对应三重 null 载荷（水平 null / 时间交互 null / 滞后稳健），not an artifact of 判决句把检验性 null 升级为对 headline 的保护；null 只封堵已陈述的解释版本
             corpus_path: corpus/事件研究法.md
       R9:
@@ -6319,7 +6298,6 @@ estimators:
             subfield_distribution:
               marketing: 1
             sources:
-              - Chen_Ganesan_Liu_2009_JM
               - chenganesanliu2009
             transferability: high
             paradigm_exclusivity: 事件研究/市场反应论文，双受众解读冲突
@@ -6700,18 +6678,10 @@ status_overrides:
       status: VERIFIED
       basis: >-
         expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
-    estimators.IV_2SLS.slots.R2.skeleton_variants.r2_instrument_dual_condition_audit_just_identified_boundary_gulati_sytch2007:
-      status: VERIFIED
-      basis: >-
-        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
     estimators.IV_2SLS.slots.R2.skeleton_variants.r2_iv_first_stage_pre_reporting:
       status: VERIFIED
       basis: >-
         expert_audit_override (user 2026-08-29: 产品召回主题全库升 VERIFIED，判别口径=DV或IV含召回/产品伤害危机；Singh & Grewal 2023 JMR = Lobbying and Product Recalls, DV=recalls)
-    estimators.IV_2SLS.slots.R2.skeleton_variants.r2_reciprocal_3sls_system_navigation_gulati_sytch2007:
-      status: VERIFIED
-      basis: >-
-        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
     estimators.IV_2SLS.slots.R2.skeleton_variants.r2_sentence_iv_endogeneity_test:
       status: VERIFIED
       basis: >-
@@ -6792,10 +6762,6 @@ status_overrides:
       status: VERIFIED
       basis: >-
         expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
-    estimators.IV_2SLS.slots.R7.skeleton_variants.r7_3sls_cluster_bootstrap_inference_workaround_gulati_sytch2007:
-      status: VERIFIED
-      basis: >-
-        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
     estimators.IV_2SLS.slots.R7.skeleton_variants.r7_iv_exclusion_quantified_exposure_share:
       status: VERIFIED
       basis: >-
@@ -6884,10 +6850,6 @@ status_overrides:
       status: VERIFIED
       basis: >-
         expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
-    estimators.Logit_Probit_Ordered_Probit.slots.R3.skeleton_variants.r3_binary_gee_curvilinear_formal_utest_chain:
-      status: VERIFIED
-      basis: >-
-        user_expert_audit
     estimators.Logit_Probit_Ordered_Probit.slots.R3.skeleton_variants.r3_construct_validity_congruence_coda:
       status: VERIFIED
       basis: >-
@@ -7028,10 +6990,6 @@ status_overrides:
       status: VERIFIED
       basis: >-
         expert_audit_override (user 2026-09-06: 用户点名 Gulati 为最喜爱学者之一，其论文蒸馏单源即 VERIFIED)
-    estimators.Logit_Probit_Ordered_Probit.slots.R7.skeleton_variants.r7_curvilinear_six_threat_robustness_ladder:
-      status: VERIFIED
-      basis: >-
-        expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)
     estimators.Logit_Probit_Ordered_Probit.slots.R7.skeleton_variants.r7_dummy_significance_vs_slope_homogeneity:
       status: VERIFIED
       basis: >-
@@ -7120,10 +7078,6 @@ status_overrides:
       status: VERIFIED
       basis: >-
         expert_audit_override (user 2026-08-29: 用户点名喜爱本篇，单源足矣)
-    estimators.OLS_FE.slots.R6.skeleton_variants.r6_contrary_pair_sign_reversal_null_dual_verdict_gulati_sytch2007:
-      status: VERIFIED
-      basis: >-
-        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
     estimators.OLS_FE.slots.R6.skeleton_variants.r6_cross_context_mirror_pattern_summary:
       status: VERIFIED
       basis: >-
@@ -7137,10 +7091,6 @@ status_overrides:
       basis: >-
         expert_audit_override (user 2026-08-29: 用户点名喜爱本篇，单源足矣)
     estimators.OLS_FE.slots.R8.skeleton_variants.r8_baron_kenny_continuous_mediation_separate_analysis:
-      status: VERIFIED
-      basis: >-
-        expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)
-    estimators.OLS_FE.slots.R8.skeleton_variants.r8_in_system_baron_kenny_hypothesis_linked_mediation_gulati_sytch2007:
       status: VERIFIED
       basis: >-
         expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)

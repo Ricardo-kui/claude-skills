@@ -1,6 +1,6 @@
 ---
 type: canonical_preview
-canonical_id: "preview-extreme-case-justification"
+canonical_id: "extreme-case-justification"
 status: VERIFIED
 gap_type: all
 cross_paper: VERIFIED (1 paper, distinctive)

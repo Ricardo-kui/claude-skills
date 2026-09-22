@@ -347,6 +347,40 @@
       "status": "active"
     },
     {
+      "category": "corpus_fit",
+      "count": 1,
+      "design_type": "",
+      "evidence": "AGENTS.md 评审校准节；writing-dna-skill 同款让位条款（蒸馏产物优先于去AI清单）；academic-de-llm 安装记录 2026-09-20。",
+      "first_seen": "2026-09-20",
+      "id": "wmf_b8fd3ab66c50541c",
+      "last_seen": "2026-09-20",
+      "project": "",
+      "reason": "范文现货证据优先（AGENTS.md 评审校准 2026-09-08）。2026-09-20 起本机新增 academic-de-llm 等通用去AI skill，其规则基线来自 STEM 期刊语料，与商科顶刊惯例存在假阳性冲突风险，须显式让位。",
+      "rule": "通用去AI/文风清单（academic-de-llm、humanizer、no-ai-slop 等）与 MVP30 范文语料冲突时，一律以范文语料为准：范文中的实际用法是学科惯例证据，不是 AI 痕迹；清单只可处理语料未覆盖的表层痕迹，不得据此改动语料支持的句式、破折号、短句节奏或 identified 类动词。",
+      "scope": "skill",
+      "section": "",
+      "severity": "reject",
+      "source": "用户裁定 2026-09-20",
+      "status": "active"
+    },
+    {
+      "category": "corpus_fit",
+      "count": 1,
+      "design_type": "",
+      "evidence": "write-methods SKILL.md 变体飞轮条款（变体数=0 仅用 slot 主骨架）；_evidence_registry.yaml 三档词表；writing-dna-skill README 写作前读取流程第 3 步。",
+      "first_seen": "2026-09-20",
+      "id": "wmf_d88c8053caad5d8c",
+      "last_seen": "2026-09-20",
+      "project": "",
+      "reason": "新颖设计类型无现成变体时，纯槽位骨架缺少语感锚点；借鉴 writing-dna-skill 的最近邻原文校准机制，以证据分档（ROBUST>VERIFIED>EMERGING）约束检索范围，防止回退滑向无证据模仿。",
+      "rule": "设计类型变体数=0 时不得止步于 slot 主骨架：按 corpus/INDEX.md 设计类型索引与 _evidence_registry.yaml 检索设计最接近的 1–2 篇范文（优先 ROBUST/VERIFIED 来源），读取其对应槽位原始段落做语感与论证节奏校准；仅作参照，不产生新模板权威，不改变槽位覆盖判据，大纲表来源列标注「邻近设计回退」。",
+      "scope": "skill",
+      "section": "",
+      "severity": "revise",
+      "source": "用户裁定 2026-09-20",
+      "status": "active"
+    },
+    {
       "category": "source_intake",
       "count": 1,
       "evidence": "Methods revisions repeatedly changed section ownership, terminology, measurement definitions, and tense; the latest decision must govern.",
@@ -393,5 +427,5 @@
     }
   ],
   "schema_version": "1.0.0",
-  "updated": "2026-09-08"
+  "updated": "2026-09-20"
 }

@@ -30,6 +30,8 @@ source: Extracted from mayo2021 + wu2025 + chenganesanliu2009 distill-introducti
 
 **来源**: mayo2021 (POM), P1
 
+> 来源注：本变体与语料早期的 `cold-start-cost-cascade`（成本递进型冷启动 Hook）为同一范文 Mayo et al. (POMS) 的同一段原文，后者是其骨架化摘录，已并入本变体，不再单独成卡。
+
 **原文锚定**:
 > "From the perspective of the C-suite, 'recall' is a dreaded word. Rarely do good things follow when product recalls are under consideration. In addition to the faulty products that may necessitate a recall, there are numerous negative implications that may ensue from a recall initiation. These include damage to the firm's financial performance (Chen et al. 2009, Pruitt and Peterson 1986, Thirumalai and Sinha 2011), market reputation (Isidore 2014, Tabuchi 2010), and even the CEO's career (Liu et al. 2016). Direct recall costs include repairing or replacing defective inventory, which can reach millions, if not hundreds of millions of dollars (Jarrell and Peltzman 1985, Shah et al. 2017). No less significant are indirect recall costs, which include negative stock market reactions (Davidson and Worrell 1992, Thirumalai and Sinha 2011), legal actions (Daughety and Reinganum 1995), and the cost consequences of recall-related negative media coverage (Liu and Shankar 2015, Rhee and Haunschild 2006). While there are potential upsides of a recall, such as firm learning (Haunschild and Rhee 2004) and goodwill with customers and regulators (Ahluwalia et al. 2000, Dawar and Pillutla 2000), firm leaders, and particularly CEOs, may nonetheless seek to avoid recalls when possible, or at least avoid the blame for them. Exploring this possibility is the focus of our study."
 

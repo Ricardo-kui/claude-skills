@@ -1,0 +1,224 @@
+{
+ "version": "1.2.3",
+ "frozen": "2026-09-20",
+ "provenance": {
+  "wordlists": [
+   "write-methods/corpus/micro-templates/causal-hedging.md",
+   "write-results/references/claim-calibration.md"
+  ],
+  "extraction": "manual, 2026-09-20, from the two sources above; pattern strings are regex fragments (case-insensitive, word-boundary)",
+  "tier_labels_for_reporting": {
+   "T_ASSOC": "association language (claim-calibration L2)",
+   "T_DIRECTIONAL": "directional change language (L3/L4-lite: increases/decreases family)",
+   "T_CAUSAL_EFFECT": "effect-of phrasing (L4)",
+   "T_MECHANISM": "mechanism phrasing (L5)",
+   "T_DEFINITIVE": "definitive causal language (experiment-grade; L4+ to L7)"
+  }
+ },
+ "verb_tiers": {
+  "T_ASSOC": [
+   "\\bassociated with\\b",
+   "\\brelated to\\b",
+   "\\blinked to\\b",
+   "\\bcorresponds to\\b",
+   "\\bis correlated with\\b",
+   "\\bcoincides with\\b",
+   "\\bpredicts?\\b"
+  ],
+  "T_DIRECTIONAL": [
+   "\\bincreases?\\b(?! the (likelihood|probability|odds))(?!\\s+in\\b)",
+   "\\bdecreases?\\b(?! the (likelihood|probability|odds))(?!\\s+in\\b)",
+   "\\braises?\\b",
+   "\\breduces?\\b(?! the (likelihood|probability))",
+   "\\blengthens?\\b",
+   "\\bshortens?\\b",
+   "\\baccelerates?\\b",
+   "\\bdelays?\\b",
+   "\\bincreases? the (likelihood|probability|odds) of\\b",
+   "\\bchanges? the (probability|hazard) of\\b"
+  ],
+  "T_CAUSAL_EFFECT": [
+   "\\bthe effect of\\b.{1,80}\\bon\\b",
+   "\\bthe impact of\\b.{1,80}\\bon\\b",
+   "\\bwe estimate the effect of\\b",
+   "\\baffects?\\b"
+  ],
+  "T_MECHANISM": [
+   "\\bthrough\\b.{1,60}\\bmediat(ed|es|ion)\\b",
+   "\\bmediated by\\b",
+   "\\boperates? (through|via|by)\\b",
+   "\\b(?:process|mechanism|channel|effect) works? by\\b",
+   "\\bvia\\b.{1,40}\\bpathway\\b"
+  ],
+  "T_DEFINITIVE": [
+   "(?<!granger-)(?<!root-)(?<!root )\\bcauses?\\b(?!\\s+(?:of|for|underlying|behind|and effect)\\b)(?!\\s*[-–])",
+   "\\bcaused\\b",
+   "\\bled to\\b",
+   "(?<!granger-)(?<!root-)(?<!-)\\bdrives?\\b(?!\\s+(?:of|for)\\b)",
+   "\\bproduces?\\b",
+   "\\bproves?\\b(?!\\s+(?:themselves|himself|herself|oneself)\\b)",
+   "\\bdemonstrates? conclusively\\b",
+   "\\breveals?\\b(?! no|a pattern consistent)"
+  ]
+ },
+ "tentative": [
+  "\\bappears to\\b",
+  "\\bmay (play a role|affect|influence|operate|work|be|contribute)\\b",
+  "\\bsome evidence that\\b",
+  "\\bsuggestive of\\b",
+  "\\bit is conceivable that\\b",
+  "\\bit is possible that\\b",
+  "\\bpossible mechanism\\b",
+  "\\bcandidate pathway\\b"
+ ],
+ "design_allowance": {
+  "ols_fe_panel_hlm": {
+   "label": "面板数据 / OLS / FE / HLM（write-methods 设计族：面板数据-OLS、OLS-FE）",
+   "forbidden": [
+    "T_DEFINITIVE"
+   ],
+   "allowed": [
+    "T_ASSOC"
+   ],
+   "conditional": {
+    "T_DIRECTIONAL": "句子含结果标记（系数/SE/p/CI/表图）视为报告语境；裸方向主张需识别诊断报告（v1.1 范文地板修订）"
+   }
+  },
+  "did_natural_experiment": {
+   "label": "DiD / 自然实验（含匹配DiD、事件研究法）",
+   "forbidden": [
+    "T_DEFINITIVE"
+   ],
+   "allowed": [
+    "T_ASSOC"
+   ],
+   "conditional": {
+    "T_CAUSAL_EFFECT": "平行趋势/事件研究检验已在 Results 报告",
+    "T_DIRECTIONAL": "识别假设检验通过后"
+   }
+  },
+  "iv_2sls": {
+   "label": "IV / 2SLS",
+   "forbidden": [
+    "T_DEFINITIVE"
+   ],
+   "allowed": [
+    "T_ASSOC"
+   ],
+   "conditional": {
+    "T_CAUSAL_EFFECT": "识别假设 preview 后（first-stage 报告）",
+    "T_DIRECTIONAL": "second-stage 汇报中"
+   }
+  },
+  "nonlinear": {
+   "label": "Logit / Probit / Tobit / 计数（write-methods：Logit-Probit-Ordered-Probit、计数模型、推断二元结果、堆叠扩散Logit）",
+   "forbidden": [
+    "T_DEFINITIVE"
+   ],
+   "allowed": [
+    "T_ASSOC"
+   ],
+   "conditional": {
+    "T_DIRECTIONAL": "结果标记语境或 AME/边际效应报告后（v1.1 范文地板修订）"
+   }
+  },
+  "survival": {
+   "label": "生存分析（Cox / AFT / hazard）",
+   "forbidden": [
+    "T_DEFINITIVE"
+   ],
+   "allowed": [
+    "T_ASSOC"
+   ],
+   "conditional": {
+    "T_DIRECTIONAL": "AFT 分布论证且/或比例风险假设检验后；hazard 句式 changes the hazard of"
+   }
+  },
+  "experiment": {
+   "label": "实验（含 field/lab；唯一允许 T_DEFINITIVE 的设计族）",
+   "forbidden": [],
+   "allowed": [
+    "T_ASSOC",
+    "T_DIRECTIONAL",
+    "T_CAUSAL_EFFECT",
+    "T_MECHANISM",
+    "T_DEFINITIVE"
+   ],
+   "conditional": {
+    "T_DEFINITIVE_scope": "caused 等仍须限 within the experimental context"
+   }
+  },
+  "unknown": {
+   "label": "调用方未提供设计元数据",
+   "forbidden": [
+    "T_DEFINITIVE"
+   ],
+   "allowed": [
+    "T_ASSOC"
+   ],
+   "conditional": {},
+   "note": "报告为 design-unannotated；不猜测设计，要求补元数据后重跑"
+  }
+ },
+ "section_rules": {
+  "results_main_effect": "tier 必须等于设计允许层；已验证主效应用 tentative（may/might）= under-claim flag（claim-calibration「勿过度回缩」）",
+  "methods_m7_model_spec": "按设计族词汇表；OLS/FE 只可 association 或（DiD 且检验已报告的）effect-of 预告",
+  "methods_m8_identification": "we estimate the effect of 合法当且仅当对应诊断在 Results 已报告（草稿内可检索到 identification_markers）",
+  "theory_hypothesis": "假设句豁免（hypothesis 不是 claim）：方向性陈述合法；豁免以 hypothesis_markers 命中为据",
+  "discussion_mechanism": "机制外推须 tentative 档；裸确定性句外推 = flag（causal-hedging 试探性表达条款）"
+ },
+ "hypothesis_markers": [
+  "^hypothesis\\s+\\d",
+  "^h\\d+[abc]?[:.]",
+  "\\bwe hypothesize\\b",
+  "\\bwe predict(?:ed|ing)?\\b(?!.*\\bwe find\\b)",
+  "\\bhypothes(?:is|es)\\s*\\[?\\d+[abc]?\\]?\\b",
+  "\\bh\\d[abc]?\\s+(is|predicts|will)\\b"
+ ],
+ "identification_markers": [
+  "parallel[- ]trend",
+  "pre[- ]trend",
+  "event[- ]study",
+  "first[- ]stage",
+  "weak instrument",
+  "f[- ]statistic",
+  "kleibergen",
+  "placebo",
+  "falsification",
+  "\\bhansen'?s? j\\b",
+  "\\bsargan\\b",
+  "\\boveridentif",
+  "\\bdurbin[- ]wu\\b",
+  "\\bendogeneity (test|concern)\\b",
+  "\\bcontrol function\\b",
+  "\\bgranger\\b"
+ ],
+ "flag_types": {
+  "OVERCLAIM": "动词档位高于设计允许（含条件不满足时使用条件档）",
+  "UNDERCLAIM": "Results 已验证主效应用 tentative 弱化（稀释贡献）",
+  "CONDITION_MISSING": "条件档使用但草稿内检索不到对应 identification_markers"
+ },
+ "prohibitions": [
+  "no composite score",
+  "no pass/fail gate (must NOT wire into _shared/pass-contract.md)",
+  "no auto-rewrite",
+  "no auto-writeback to corpus or feedback-registry",
+  "no AI-probability framing (e.g. '87% AI-generated')",
+  "n<5 reference cell -> report 'insufficient reference coverage' only"
+ ],
+ "deferred_to_v2": [
+  "sentence-length extreme positioning (p10/p50/p90)",
+  "eligible-unit rationale coverage (because/as/since/given per eligible slot)",
+  "hedge-strength misalignment and stacking"
+ ],
+ "reference_modes": {
+  "house_style": "rhetoric-moves 批句档（Gulati/Westphal 系 anchor 集；语义锚定原 21 篇，批跑后键名以 key_equivalences 为准）",
+  "field_norm": "124 句档全库仅作观察性参考（diagnostic-only）；不构成规范性基准。规范性使用前须完成 section×design 分层覆盖率审计（每 cell n>=5）"
+ },
+ "changelog": [
+  "v1.2.3 (2026-09-20): Recall probe round 1 (56 probes/112 docs) adjudication + casing fix family: STAT_HARD/UNDERCLAIM precondition now case-insensitive (Table/Column capitalized forms previously escaped \btable\\s*\\d); STAT_HARD += standard deviation(s) (magnitude reporting); ECON_DIAGNOSTIC += mis-specif (7-paper corpus precedent incl. armed_roots itself). Probe results: recall 41/42=0.976 (1 accepted cross-sentence miss), PASS specificity 4/4, adjudicated-NAV consistency 10/10, 0 contamination. Floors: Results 8 flags/5381 = 1.49/1000 (frozen baseline exactly restored), full 41-paper 2.1/1000, synth 4/2/4.",
+  "v1.2.2 (2026-09-20): First real-draft pass (共同所有权×产品召回 project, author's own unpolished drafts) adjudicated 2 guard-coverage FPs: SUPPRESS_PRODUCE_OBJECT += 'a similar result(s)/comparable results/similar estimates/nearly identical' (bootstrap-procedural produces); causes noun guard += '(?<!root )' space variant (root cause data field, was hyphen-only). Manual counter-check of all causal-verb sentences in the draft confirmed 0-flag verdict is genuine (author's Results claim calibration already floor-consistent), not under-sensitivity. Floors unchanged: Results 1.5/1000, full 2.1/1000, synth 4/2/4.",
+  "v1.2.1 (2026-09-20): Results-section specialized floor calibration (91 papers, 5381 results sentences) 18.9->1.5 flags/1000 in 3 adjudicated rounds (R7-R9). Fixes: hypothesis_markers spelling bug (hypotheses? never matched singular; now hypothes(?:is|es) + markdown-link tolerance); cond_ok case-insensitive (This indicates that); STAT_ATTACHED_DIR/STAT_ATTACHED window [^.]->[^;] (decimal points killed unit matching); nonsig += non[- ]significant; PROCEDURAL_LED_TO += parameter/estimat; PRODUCE_GOODS += classifications/categories/types; NOUN_SUBJECT discourse openers + stacked modifiers; SLOPE_CHANGE reversed-order (verb ... effect of); NEW guards: MODEL_SIM extensions, DESCRIPTIVE_STATS, RIVAL_EXPL, GIVEN_PREMISE, ROBUST_TO, CONSTRUCT_DEF, EXAMINE_WHETHER, WE_REASON, MECH_SEARCH, HEDGE_WITH_STATS, appendix cross-refs, infinitive to-context, italic/math parity, positional quote context, STAT_SUBJ bracket-link tolerance (Table A17) + panels?, THEORY_MODE += we argue/posit, HEDGE_BEFORE += plausibly/arguably, modal_guard extended to CONDITION_MISSING. Residual 8 flags classified X/S/L/P; 41-paper negative control stable at 2.2/1000.",
+  "v1.2.0 (2026-09-20): Step 2.5 floor-test adjudicated revisions — 41-paper negative control 21.8->2.9 flags/1000 in 5 rounds; noun-usage guards (causes/drives/increases/prove), T_MECHANISM narrowed (bare-noun âµ removed; works-by requires process/mechanism/channel/effect subject), lit-review + not-consistent-with-view + non-significance + methods-procedural + stat-attached-causation suppressions, RESULT_MARKERS verb-form extensions, discussion reporting-frame exemption, hypothesis predict(ed/ing). All anchored to specific exemplar sentences (see metric-contract.md changelog)."
+ ]
+}

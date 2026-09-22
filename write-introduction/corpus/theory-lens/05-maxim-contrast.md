@@ -1,6 +1,6 @@
 ---
 type: canonical_theory_lens
-canonical_id: "theory-lens-05-maxim-contrast"
+canonical_id: "05-maxim-contrast"
 status: VERIFIED
 gap_type: Incompleteness / Inadequacy
 cross_paper: VERIFIED (2 papers, 2 distinct sub-types)

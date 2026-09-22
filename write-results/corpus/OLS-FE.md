@@ -10,7 +10,7 @@ source_papers:
   - "bamberger_homburg_wielgos_2021_wage_inequality_jm (Journal of Marketing): marginal significance 90% CI dual-interval reporting"
   - "li_chiu_kong_cropanzano_ho_2026_jom (Journal of Management): interaction percentage economic significance, low-base-rate moderator histogram, five-threat labeled robustness with RIR+Oster+CEM"
   - "ahmadi_khanagha_berchicci_jansen_2017_jms (Journal of Management Studies): 7-model hierarchical regression table navigation, three-way interaction conditional decomposition, asymmetric findings narrative"
-  - "cui_yang_vertinsky_smj_attacking_partners (Strategic Management Journal): inverted U-shape + curve moderation, Lind-Mehlum three-step test, turning-point CI, flatten/steepen graph language"
+  - "cui_yang_vertinsky_2018 (Strategic Management Journal): inverted U-shape + curve moderation, Lind-Mehlum three-step test, turning-point CI, flatten/steepen graph language"
   - "chung_low_rust_2022_jams (Journal of the Academy of Marketing Science): model-free quartile opening, interquartile economic significance, Heckman two-stage table navigation, alternative-DV falsification, threat-by-threat endogeneity table"
   - "kim_lee_2026_putting_a_price_on_mission_smj (Strategic Management Journal): multi-stage same-IV pipeline attenuation profile, WTP coefficient-ratio economic significance, post-treatment selection caveat, stage-concentrated demographic heterogeneity, Cinelli-Hazlett sensitivity with observed-covariate benchmark"
   - "pupovac_astvansh_carrillat_legoux_2026_pom (Production and Operations Management): cross-sectional OLS/FE on event-study CAR; Control Function + Heckman two-stage correction navigation"
@@ -598,7 +598,6 @@ relationship but found no evidence of it.
 
 <!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:r6_contrary_pair_sign_reversal_null_dual_verdict -->
 
-<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:r6_contrary_pair_sign_reversal_null_dual_verdict_gulati_sytch2007 -->
 
 ### 变体 81：不支持裁决 + 以假设语言重述实际模式的双拍诚实收束（Unsupported Verdict with Pattern Restatement）
 
@@ -1899,7 +1898,6 @@ level of significance, indicating nearly full mediation.
 
 <!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:r8_in_system_baron_kenny_hypothesis_linked_mediation -->
 
-<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:r8_in_system_baron_kenny_hypothesis_linked_mediation_gulati_sytch2007 -->
 
 
 ### 变体 86: R4 — 连续调节极点→交互符号先验判据（gulati_higgins2003smj 型）

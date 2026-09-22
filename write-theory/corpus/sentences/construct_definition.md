@@ -76,8 +76,8 @@ On the other end of the spectrum are [构念B], who, on average, emphasize
 
 ---
 
-## 变体 E：三层框架展开+表格对比型（weng_yang 型）
-<!-- wb:weng_yang_jms -->
+## 变体 E：三层框架展开+表格对比型（weng_yang2024 型）
+<!-- wb:weng_yang2024 -->
 
 **功能**: 当 IV 是一个可从多个理论透镜（cognitive/social/behavioral）理解的构念时，先展示完整框架再聚焦到其中一个透镜，用表格对比构念两端的差异。
 
@@ -698,9 +698,9 @@ theoretical implication].
 - **每个兄弟的 "Limitations" 格用于说明该兄弟无法解释什么** — 这正是 NEW 构念的卖点
 - **表格后必须有综合段**（"In sum..."）锁定新构念在文献中的独特位置，不能表格即结论
 
-**与变体 E（weng_yang 三层框架+表格对比型）的关键区分**:
+**与变体 E（weng_yang2024 三层框架+表格对比型）的关键区分**:
 
-| | 变体 E (weng_yang) | 变体 L (lee_wang) |
+| | 变体 E (weng_yang2024) | 变体 L (lee_wang) |
 |---|---|---|
 | 表格对象 | 一个构念的两个子类型 | 1 个新构念 + 3+ 个兄弟构念 |
 | 列维度来源 | 已有框架的 3 维度 (Swigart 2020) | 作者自行设计的功能性列 |

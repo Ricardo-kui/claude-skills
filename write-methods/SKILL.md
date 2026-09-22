@@ -66,7 +66,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 | M9 | 多研究 / 实验程序 / 质性编码 | `references/slot-M9.md` | 仅多研究设计（逐研究重复 M1–M8） | 非多研究 |
 | M10 | Methods 到 Results 的过渡 | `references/slot-M10.md` | 通常省略（顶刊极度罕见 <10%） | 默认跳过 |
 
-3. **设计类型变体（飞轮积累，勿漏读）**：确定 design type 后先查 `corpus/INDEX.md` 的「设计类型索引表」确认变体数；变体数 >0 → **必须加载 `corpus/[设计类型].md`**（先读顶部「变体速查表」——按槽位+验证状态定位候选（三档词表与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀；作者/召回域单源 VERIFIED 由 `distill-paper-exemplar/scripts/status_policy.yaml` 派生，非手工标注），再精读对应变体正文）。变体数 = 0 的类型仅用 slot 主骨架。
+3. **设计类型变体（飞轮积累，勿漏读）**：确定 design type 后先查 `corpus/INDEX.md` 的「设计类型索引表」确认变体数；变体数 >0 → **必须加载 `corpus/[设计类型].md`**（先读顶部「变体速查表」——按槽位+验证状态定位候选（三档词表与 _evidence_registry.yaml 一致）：ROBUST > VERIFIED > EMERGING（含（可选）后缀；作者/召回域单源 VERIFIED 由 `distill-paper-exemplar/scripts/status_policy.yaml` 派生，非手工标注），再精读对应变体正文）。变体数 = 0 时按 corpus_fit 回退规则检索邻近范文。
 
 **完成判据（是/否）**：设计类型是否已确定？槽位序列是否已按 `references/design-branches.md` 定序并记录分支调整理由？slot 文件与设计类型变体是否已加载？
 
@@ -128,6 +128,7 @@ when_to_use: "起草 Methods/方法段（样本、变量、估计方法、识别
 - `/paper-review` — Theory-Methods 假设-变量映射对齐检查
 - `/methods-review` — 已有 Methods 草稿时作为理想基准对比审查
 - `/distill-methods-exemplar` — 对生成后的 Methods 段落进行反向蒸馏审查（槽位覆盖/DNA/可迁移性/因果合规），审查结果作为 Vault 参考注释，不自动修改骨架库
+- **草稿诊断联动**：产出或修订的 Methods 主文（含 M7-M8 识别/内生性段）顺手跑 postdraft-diagnostics shadow（调用方式与限制见全局 AGENTS.md「草稿诊断联动」），flag 交人工裁定，不作为完成判据。
 
 ## 纪律
 

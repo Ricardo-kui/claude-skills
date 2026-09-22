@@ -260,11 +260,11 @@ It is well recognized that the extent to which [units] learn depends on their ab
 <!--
 pattern_id: uet_situation_characteristic_nested_moderators
 build_type: 机制推演型 / 调节效应型
-source_papers: ["lunetal2026"]
+source_papers: ["lunetal2026_ETP"]
 confidence: medium
 status: ready_for_corpus
 -->
-<!-- wb:lunetal2026:legacy_moderator_selection_frameworks_FrameworkTransfervsA -->
+<!-- wb:lunetal2026_ETP:legacy_moderator_selection_frameworks_FrameworkTransfervsA -->
 
 ## Framework: UET Situation–Characteristic Nested Moderators（特征→情境嵌套，Lun et al. 2026 型）
 

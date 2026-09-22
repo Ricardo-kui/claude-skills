@@ -1,9 +1,3 @@
-# Theory Evidence Registry
-# Schema: theory-fragment-registry v1.0.0
-# Purpose: track which source papers have been distilled into which write-theory corpus files,
-#          what theoretical fragments were extracted, and their validation status.
-
-# === DERIVED: rebuilt by rebuild_views.py — do not hand-edit ===
 meta:
   schema_version: "1.0.0"
   registry_type: theory-fragment-registry
@@ -225,10 +219,10 @@ source_papers:
         makadok_dimension: ""
         status: EMERGING
         note: ""
-  cui_yang_vertinsky_smj:
+  cui_yang_vertinsky_2018:
     display_name: "Cui, Yang & Vertinsky (SMJ)"
     journal: Strategic Management Journal
-    year: 2026
+    year: 2018
     subfield: strategy
     theory_build_type: Boundary / Mechanism
     fragments:
@@ -1061,12 +1055,12 @@ source_papers:
         makadok_dimension: Mechanism
         status: EMERGING
         note: H1 appears directly after mechanism paragraph without explicit Therefore.
-  paruchuri_2020_smj:
-    display_name: "Paruchuri (2020, SMJ)"
+  paruchuri_pollock_kumar_2019_smj:
+    display_name: "Paruchuri, Pollock & Kumar (2019, SMJ)"
     journal: Strategic Management Journal
-    year: 2020
+    year: 2019
     subfield: strategy
-    theory_build_type: Boundary / Construct
+    theory_build_type: Boundary
     fragments:
       - fragment_id: tfr_046
         type: hypothesis_tree
@@ -1075,13 +1069,6 @@ source_papers:
           - variants/C_hypothesis_tree.md
         makadok_dimension: Boundary
         status: EMERGING
-  paruchuri_pollock_kumar_2019_smj:
-    display_name: "Paruchuri, Pollock & Kumar (2019/2020, SMJ)"
-    journal: Strategic Management Journal
-    year: 2020
-    subfield: strategy
-    theory_build_type: Boundary
-    fragments:
       - fragment_id: tfr_047
         type: conditional_given_hypothesis
         title: 条件假设 Given 格式
@@ -1104,6 +1091,13 @@ source_papers:
           - sentences/construct_definition.md
         makadok_dimension: Constructs
         status: VERIFIED
+        type: hypothesis_tree
+        title: 假设树型（C 变体）
+        home_files:
+          - variants/C_hypothesis_tree.md
+        makadok_dimension: Boundary
+        status: EMERGING
+        note: ""
   pollock_2015_asq:
     display_name: "Pollock, Lee, Jin & Lashley (2015, ASQ)"
     journal: Administrative Science Quarterly
@@ -1577,7 +1571,7 @@ source_papers:
         makadok_dimension: Mechanism
         status: EMERGING
         note: "Also includes a negative example: panel data + GEE without Theory-level identification discussion."
-  weng_yang_jms:
+  weng_yang2024:
     display_name: "Weng & Yang (JMS)"
     journal: Journal of Management Studies
     year: 2026
@@ -1684,6 +1678,36 @@ source_papers:
           - variants/B_mechanism_elaboration.md
         makadok_dimension: Mechanism
         status: EMERGING
+        type: symmetric_opposing_dual_track
+        title: "Pattern: Width-Type Parallel Mechanism"
+        home_files:
+          - subprotocols/hypothesis_derivation_patterns.md
+        makadok_dimension: ""
+        status: EMERGING
+        note: ""
+        type: two_by_two_symmetric_matrix
+        title: "Pattern: Baseline Mechanism → Dual Path → Contingency Branches"
+        home_files:
+          - subprotocols/hypothesis_organization_patterns.md
+        makadok_dimension: ""
+        status: EMERGING
+        note: ""
+      - fragment_id: tfr_362
+        type: symmetric_opposing_dual_track
+        title: "Pattern: Width-Type Parallel Mechanism"
+        home_files:
+          - subprotocols/hypothesis_derivation_patterns.md
+        makadok_dimension: ""
+        status: EMERGING
+        note: ""
+      - fragment_id: tfr_363
+        type: two_by_two_symmetric_matrix
+        title: "Pattern: Baseline Mechanism → Dual Path → Contingency Branches"
+        home_files:
+          - subprotocols/hypothesis_organization_patterns.md
+        makadok_dimension: ""
+        status: EMERGING
+        note: ""
   zhou_2017_asq:
     display_name: "Zhou, Gao & Zhao (2017, ASQ)"
     journal: Administrative Science Quarterly
@@ -1779,6 +1803,21 @@ source_papers:
         status: VERIFIED
         verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
         note: Defect detectability → lower recall likelihood via perceived harm or perceived cost.
+        type: dual_mechanism_same_direction
+        title: "Pattern: Industry Context as Scope Condition"
+        home_files:
+          - subprotocols/argumentation_patterns.md
+        makadok_dimension: ""
+        status: VERIFIED
+        note: ""
+      - fragment_id: tfr_351
+        type: dual_mechanism_same_direction
+        title: "Pattern: Industry Context as Scope Condition"
+        home_files:
+          - subprotocols/argumentation_patterns.md
+        makadok_dimension: ""
+        status: VERIFIED
+        note: ""
   darby_wowak_ketchen_connelly_2026_jom:
     display_name: "Darby, Wowak, Ketchen & Connelly (2026, JOM)"
     journal: Journal of Operations Management
@@ -2901,6 +2940,81 @@ source_papers:
         status: VERIFIED
         verification_basis: "expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)"
         note: How then might ... ? 自问句把读者从框架理解切换到机制推导，问句后必须紧跟 We suggest that 分支判断。corpus leitmotif-section-opener.md 句式B。
+        type: rhetorical_question_mechanism_pivot
+        title: "句式 B：机制枢纽修辞性问句（\"How then might ... ?\" Pivot）"
+        home_files:
+          - sentences/leitmotif-section-opener.md
+        makadok_dimension: ""
+        status: VERIFIED
+        note: ""
+        type: counter_assumption_refutation_opening
+        title: 变体 A：反假设驳斥式开场（Counter-Assumption Refutation Opening）
+        home_files:
+          - subprotocols/arrangement_patterns.md
+        makadok_dimension: ""
+        status: VERIFIED
+        note: ""
+        type: complementary_portfolio_dual_knowledge_mix
+        title: 变体 B：互补组合型双边论证（Complementary-Portfolio Dual-Knowledge Mix）
+        home_files:
+          - subprotocols/bilateral_argumentation_templates.md
+        makadok_dimension: ""
+        status: VERIFIED
+        note: ""
+        type: multilevel_parallel_hypothesis_sets_mediator_portion
+        title: 变体 C：个体-单元双层平行假设集 + 中介份额声明（Multilevel Parallel Sets with Mediator-Portion Split）
+        home_files:
+          - subprotocols/hypothesis_organization_patterns.md
+        makadok_dimension: ""
+        status: VERIFIED
+        note: ""
+        type: context_split_common_trunk_paired_hypothesis_sets
+        title: "变体 C：情境劈叉共同机制干（Context-Split Common Trunk, Paired Conditional Hypothesis Sets）"
+        home_files:
+          - variants/E_moderation.md
+        makadok_dimension: ""
+        status: VERIFIED
+        note: ""
+      - fragment_id: tfr_364
+        type: rhetorical_question_mechanism_pivot
+        title: "句式 B：机制枢纽修辞性问句（\"How then might ... ?\" Pivot）"
+        home_files:
+          - sentences/leitmotif-section-opener.md
+        makadok_dimension: ""
+        status: VERIFIED
+        note: ""
+      - fragment_id: tfr_365
+        type: counter_assumption_refutation_opening
+        title: 变体 A：反假设驳斥式开场（Counter-Assumption Refutation Opening）
+        home_files:
+          - subprotocols/arrangement_patterns.md
+        makadok_dimension: ""
+        status: VERIFIED
+        note: ""
+      - fragment_id: tfr_366
+        type: complementary_portfolio_dual_knowledge_mix
+        title: 变体 B：互补组合型双边论证（Complementary-Portfolio Dual-Knowledge Mix）
+        home_files:
+          - subprotocols/bilateral_argumentation_templates.md
+        makadok_dimension: ""
+        status: VERIFIED
+        note: ""
+      - fragment_id: tfr_367
+        type: multilevel_parallel_hypothesis_sets_mediator_portion
+        title: 变体 C：个体-单元双层平行假设集 + 中介份额声明（Multilevel Parallel Sets with Mediator-Portion Split）
+        home_files:
+          - subprotocols/hypothesis_organization_patterns.md
+        makadok_dimension: ""
+        status: VERIFIED
+        note: ""
+      - fragment_id: tfr_368
+        type: context_split_common_trunk_paired_hypothesis_sets
+        title: "变体 C：情境劈叉共同机制干（Context-Split Common Trunk, Paired Conditional Hypothesis Sets）"
+        home_files:
+          - variants/E_moderation.md
+        makadok_dimension: ""
+        status: VERIFIED
+        note: ""
   zajac_westphal_the_social_construction_of_market_value:
     display_name: "Zajac & Westphal (2004, ASR)"
     journal: American Sociological Review
@@ -2945,6 +3059,66 @@ source_papers:
         status: VERIFIED
         verification_basis: "expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)"
         note: 同一 DV 数据在两套理论下认识论身份不同（客观效率信号 vs 符号价值的社会量化），竞争检验同时裁决预测符号与测量解释；与 westphal_zajac_1998 硬/软数字测量重构为姊妹模式。corpus evidence_patterns.md 同名 Pattern。
+        type: rival_dimension_carveout_sentence
+        title: 变体 C：竞争维度 carve-out 句（static-vs-dynamic scope carve-out，zajac_westphal_2004 型）
+        home_files:
+          - sentences/acknowledgment_response.md
+        makadok_dimension: ""
+        status: VERIFIED
+        note: ""
+        type: hypothesis_sign_flip_anaphoric_pair_sentence
+        title: 分离编号回指竞争对（Anaphoric Disjoint-Numbered Competing Pair，zajac_westphal_2004 型）
+        home_files:
+          - sentences/hypothesis_forms.md
+        makadok_dimension: ""
+        status: VERIFIED
+        note: ""
+        type: rival_readings_same_measure
+        title: "Pattern: Rival Readings of the Same Measure（同一测量的对立读法，zajac_westphal_2004 型）"
+        home_files:
+          - subprotocols/evidence_patterns.md
+        makadok_dimension: ""
+        status: VERIFIED
+        note: ""
+        type: F_anaphoric_sign_flip_pair_cross_policy
+        title: "技巧 4：分离编号回指竞争对 + 期界基线 + 跨政策推广（Zajac & Westphal 2004, ASR）"
+        home_files:
+          - variants/F_competing_hypotheses.md
+        makadok_dimension: ""
+        status: VERIFIED
+        note: ""
+      - fragment_id: tfr_374
+        type: rival_dimension_carveout_sentence
+        title: 变体 C：竞争维度 carve-out 句（static-vs-dynamic scope carve-out，zajac_westphal_2004 型）
+        home_files:
+          - sentences/acknowledgment_response.md
+        makadok_dimension: ""
+        status: VERIFIED
+        note: ""
+      - fragment_id: tfr_375
+        type: hypothesis_sign_flip_anaphoric_pair_sentence
+        title: 分离编号回指竞争对（Anaphoric Disjoint-Numbered Competing Pair，zajac_westphal_2004 型）
+        home_files:
+          - sentences/hypothesis_forms.md
+        makadok_dimension: ""
+        status: VERIFIED
+        note: ""
+      - fragment_id: tfr_376
+        type: rival_readings_same_measure
+        title: "Pattern: Rival Readings of the Same Measure（同一测量的对立读法，zajac_westphal_2004 型）"
+        home_files:
+          - subprotocols/evidence_patterns.md
+        makadok_dimension: ""
+        status: VERIFIED
+        note: ""
+      - fragment_id: tfr_377
+        type: F_anaphoric_sign_flip_pair_cross_policy
+        title: "技巧 4：分离编号回指竞争对 + 期界基线 + 跨政策推广（Zajac & Westphal 2004, ASR）"
+        home_files:
+          - variants/F_competing_hypotheses.md
+        makadok_dimension: ""
+        status: VERIFIED
+        note: ""
   pfarrer_pollock_and_rindova_2010:
     display_name: "Pfarrer, Pollock & Rindova (2010, AMJ)"
     journal: Academy of Management Journal
@@ -3725,19 +3899,6 @@ source_papers:
         makadok_dimension: Boundary
         status: VERIFIED
         note: Pattern B：Continuous Ratio → Named Regime Partition（mao_dong_lee_2022_msom 型；连续权衡比经阈值函数分割为命名行为区间；EMERGING）
-  Ball_2018_JOM:
-    display_name: Ball 2018 JOM
-    journal: ""
-    year: null
-    fragments:
-      - fragment_id: tfr_351
-        type: dual_mechanism_same_direction
-        title: "Pattern: Industry Context as Scope Condition"
-        home_files:
-          - subprotocols/argumentation_patterns.md
-        makadok_dimension: ""
-        status: VERIFIED
-        note: ""
   Du_Tsolmon_2024_ORSC:
     display_name: Du Tsolmon 2024 ORSC
     journal: ""
@@ -3838,72 +3999,6 @@ source_papers:
         makadok_dimension: ""
         status: EMERGING
         note: ""
-  Zhao-Ding_Gaba_ORSC:
-    display_name: Zhao-Ding Gaba ORSC
-    journal: ""
-    year: null
-    fragments:
-      - fragment_id: tfr_362
-        type: symmetric_opposing_dual_track
-        title: "Pattern: Width-Type Parallel Mechanism"
-        home_files:
-          - subprotocols/hypothesis_derivation_patterns.md
-        makadok_dimension: ""
-        status: EMERGING
-        note: ""
-      - fragment_id: tfr_363
-        type: two_by_two_symmetric_matrix
-        title: "Pattern: Baseline Mechanism → Dual Path → Contingency Branches"
-        home_files:
-          - subprotocols/hypothesis_organization_patterns.md
-        makadok_dimension: ""
-        status: EMERGING
-        note: ""
-  carpenterwestphal2001_AMJ:
-    display_name: carpenterwestphal2001 AMJ
-    journal: ""
-    year: null
-    fragments:
-      - fragment_id: tfr_364
-        type: rhetorical_question_mechanism_pivot
-        title: "句式 B：机制枢纽修辞性问句（\"How then might ... ?\" Pivot）"
-        home_files:
-          - sentences/leitmotif-section-opener.md
-        makadok_dimension: ""
-        status: VERIFIED
-        note: ""
-      - fragment_id: tfr_365
-        type: counter_assumption_refutation_opening
-        title: 变体 A：反假设驳斥式开场（Counter-Assumption Refutation Opening）
-        home_files:
-          - subprotocols/arrangement_patterns.md
-        makadok_dimension: ""
-        status: VERIFIED
-        note: ""
-      - fragment_id: tfr_366
-        type: complementary_portfolio_dual_knowledge_mix
-        title: 变体 B：互补组合型双边论证（Complementary-Portfolio Dual-Knowledge Mix）
-        home_files:
-          - subprotocols/bilateral_argumentation_templates.md
-        makadok_dimension: ""
-        status: VERIFIED
-        note: ""
-      - fragment_id: tfr_367
-        type: multilevel_parallel_hypothesis_sets_mediator_portion
-        title: 变体 C：个体-单元双层平行假设集 + 中介份额声明（Multilevel Parallel Sets with Mediator-Portion Split）
-        home_files:
-          - subprotocols/hypothesis_organization_patterns.md
-        makadok_dimension: ""
-        status: VERIFIED
-        note: ""
-      - fragment_id: tfr_368
-        type: context_split_common_trunk_paired_hypothesis_sets
-        title: "变体 C：情境劈叉共同机制干（Context-Split Common Trunk, Paired Conditional Hypothesis Sets）"
-        home_files:
-          - variants/E_moderation.md
-        makadok_dimension: ""
-        status: VERIFIED
-        note: ""
   kalaignanametal2013:
     display_name: kalaignanametal2013
     journal: ""
@@ -3925,11 +4020,19 @@ source_papers:
         makadok_dimension: ""
         status: EMERGING
         note: ""
-  lunetal2026:
-    display_name: lunetal2026
+  lunetal2026_ETP:
+    display_name: lunetal2026 ETP
     journal: ""
     year: null
     fragments:
+      - fragment_id: tfr_373
+        type: sequential_nested_moderation
+        title: "Pattern: Opposing Joint Prerequisites → Bottleneck Switch（共同必要条件反向变化—短板切换）"
+        home_files:
+          - subprotocols/hypothesis_derivation_patterns.md
+        makadok_dimension: ""
+        status: EMERGING
+        note: ""
       - fragment_id: tfr_371
         type: neglected_lens_via_dominant_view_contrast
         title: "Pattern: Dual-Lens Main/Boundary Division"
@@ -3946,57 +4049,6 @@ source_papers:
         makadok_dimension: ""
         status: EMERGING
         note: ""
-  lunetal2026_ETP:
-    display_name: lunetal2026 ETP
-    journal: ""
-    year: null
-    fragments:
-      - fragment_id: tfr_373
-        type: sequential_nested_moderation
-        title: "Pattern: Opposing Joint Prerequisites → Bottleneck Switch（共同必要条件反向变化—短板切换）"
-        home_files:
-          - subprotocols/hypothesis_derivation_patterns.md
-        makadok_dimension: ""
-        status: EMERGING
-        note: ""
-  zajac_westphal_2004_asr:
-    display_name: zajac westphal 2004 asr
-    journal: ""
-    year: null
-    fragments:
-      - fragment_id: tfr_374
-        type: rival_dimension_carveout_sentence
-        title: 变体 C：竞争维度 carve-out 句（static-vs-dynamic scope carve-out，zajac_westphal_2004 型）
-        home_files:
-          - sentences/acknowledgment_response.md
-        makadok_dimension: ""
-        status: VERIFIED
-        note: ""
-      - fragment_id: tfr_375
-        type: hypothesis_sign_flip_anaphoric_pair_sentence
-        title: 分离编号回指竞争对（Anaphoric Disjoint-Numbered Competing Pair，zajac_westphal_2004 型）
-        home_files:
-          - sentences/hypothesis_forms.md
-        makadok_dimension: ""
-        status: VERIFIED
-        note: ""
-      - fragment_id: tfr_376
-        type: rival_readings_same_measure
-        title: "Pattern: Rival Readings of the Same Measure（同一测量的对立读法，zajac_westphal_2004 型）"
-        home_files:
-          - subprotocols/evidence_patterns.md
-        makadok_dimension: ""
-        status: VERIFIED
-        note: ""
-      - fragment_id: tfr_377
-        type: F_anaphoric_sign_flip_pair_cross_policy
-        title: "技巧 4：分离编号回指竞争对 + 期界基线 + 跨政策推广（Zajac & Westphal 2004, ASR）"
-        home_files:
-          - variants/F_competing_hypotheses.md
-        makadok_dimension: ""
-        status: VERIFIED
-        note: ""
-patterns:
   e1_categorical_fit_adverse_effects_from_capacity_shortfall:
     description: "For categorical organization modes, derive relative adverse-effect hypotheses from the fit between adaptive capacity (short board) and situational pressures; no unconditional mode main effect"
     status: VERIFIED
@@ -4153,7 +4205,7 @@ patterns:
     source_count: 2
     source_papers:
       - shen_zhou_wang_zhang_2022_jom
-      - weng_yang_jms
+      - weng_yang2024
     home_file: subprotocols/hypothesis_derivation_patterns.md
     note: "Hoffmann 2024 JM removed 2026-08-05 — uses unified-framework weaken-moderation, not bilateral high/low three-mechanism."
   tradeoff_shock_dominance:
@@ -4198,9 +4250,9 @@ patterns:
     source_count: 5
     source_papers:
       - zhou_2017_asq
-      - paruchuri_2020_smj
+      - paruchuri_pollock_kumar_2019_smj
       - han_2024_amp
-      - weng_yang_jms
+      - weng_yang2024
       - vidal_mitchell_2015_orsc
     home_file: variants/C_hypothesis_tree.md
   two_step_mechanism_chain:
@@ -4295,7 +4347,7 @@ patterns:
     source_papers:
       - ball_shah_donohue_2018_jom
       - li_bapuji_talluri_singh_narayanan_2025_jscm
-      - Ball_2018_JOM
+      - ball_shah_donohue_2018_jom
     home_file: subprotocols/argumentation_patterns.md
   dual_mechanism_convergent_moderation:
     description: "Each moderator of a dual-mechanism main effect is reasoned through BOTH underlying mechanism channels and shown to converge on the same net direction, justifying a single signed moderation hypothesis; optionally presented as a moderator×mechanism matrix table"
@@ -4423,7 +4475,7 @@ patterns:
     status: VERIFIED
     source_count: 4
     source_papers:
-      - cui_yang_vertinsky_smj
+      - cui_yang_vertinsky_2018
       - bendig_hensellek_schulte_2024_etp
       - anderson_reeb_2004_asq
       - lee_park_2024_smj
@@ -4548,7 +4600,7 @@ patterns:
     source_count: 2
     source_papers:
       - zhao_ding_gaba_orsc
-      - Zhao-Ding_Gaba_ORSC
+      - zhao_ding_gaba_orsc
     home_file: subprotocols/hypothesis_derivation_patterns.md
   theory_as_warrant_conceptual_argument:
     description: Theory As Warrant Conceptual Argument
@@ -4592,11 +4644,10 @@ patterns:
   two_by_two_symmetric_matrix:
     description: Two By Two Symmetric Matrix
     status: VERIFIED
-    source_count: 3
+    source_count: 2
     source_papers:
       - gamache_etal_2020_smj
       - zhao_ding_gaba_orsc
-      - Zhao-Ding_Gaba_ORSC
     home_file: subprotocols/hypothesis_organization_patterns.md
   width_type_parallel_mechanism:
     description: Width Type Parallel Mechanism
@@ -4604,7 +4655,7 @@ patterns:
     source_count: 2
     source_papers:
       - gamache_etal_2020_smj
-      - cui_yang_vertinsky_smj
+      - cui_yang_vertinsky_2018
     home_file: subprotocols/hypothesis_derivation_patterns.md
   premise_soundness_gate:
     description: "[D]/[S]/[E] premise typing + necessity gate + counterexample stress test before committing a mechanism"
@@ -4889,7 +4940,7 @@ patterns:
     status: VERIFIED
     source_count: 2
     source_papers:
-      - zajac_westphal_2004_asr
+      - zajac_westphal_the_social_construction_of_market_value
       - zajac_westphal_the_social_construction_of_market_value
     home_file:
       - variants/F_competing_hypotheses.md
@@ -5219,7 +5270,7 @@ patterns:
     status: VERIFIED
     source_count: 2
     source_papers:
-      - zajac_westphal_2004_asr
+      - zajac_westphal_the_social_construction_of_market_value
       - zajac_westphal_the_social_construction_of_market_value
     home_file:
       - sentences/hypothesis_forms.md
@@ -5252,7 +5303,7 @@ patterns:
     status: EMERGING
     source_count: 1
     source_papers:
-      - lunetal2026
+      - lunetal2026_ETP
     home_file:
       - subprotocols/argumentation_patterns.md
   legacy_argumentation_patterns_PatternDualMechanism:
@@ -5284,7 +5335,7 @@ patterns:
     status: VERIFIED
     source_count: 1
     source_papers:
-      - Ball_2018_JOM
+      - ball_shah_donohue_2018_jom
     home_file:
       - subprotocols/argumentation_patterns.md
   legacy_argumentation_patterns_PatternMinimalPairCo:
@@ -5367,7 +5418,7 @@ patterns:
     status: EMERGING
     source_count: 1
     source_papers:
-      - cui_yang_vertinsky_smj
+      - cui_yang_vertinsky_2018
     home_file:
       - subprotocols/bilateral_argumentation_templates.md
   legacy_bilateral_argumentation_templates_PatternCategoricalSe:
@@ -5738,7 +5789,7 @@ patterns:
     source_papers:
       - anderson_reeb_2004_asq
       - bendig_hensellek_schulte_2024_etp
-      - cui_yang_vertinsky_smj
+      - cui_yang_vertinsky_2018
     home_file:
       - subprotocols/hypothesis_derivation_patterns.md
   legacy_hypothesis_derivation_patterns_PatternSymmetricOppo_2:
@@ -5748,7 +5799,7 @@ patterns:
     source_papers:
       - anderson_reeb_2004_asq
       - bendig_hensellek_schulte_2024_etp
-      - cui_yang_vertinsky_smj
+      - cui_yang_vertinsky_2018
     home_file:
       - subprotocols/hypothesis_derivation_patterns.md
   legacy_hypothesis_derivation_patterns_PatternSymmetricOppo_3:
@@ -5758,7 +5809,7 @@ patterns:
     source_papers:
       - anderson_reeb_2004_asq
       - bendig_hensellek_schulte_2024_etp
-      - cui_yang_vertinsky_smj
+      - cui_yang_vertinsky_2018
     home_file:
       - subprotocols/hypothesis_derivation_patterns.md
   legacy_hypothesis_derivation_patterns_PatternTheoryDrivenA:
@@ -5808,7 +5859,7 @@ patterns:
     status: EMERGING
     source_count: 1
     source_papers:
-      - Zhao-Ding_Gaba_ORSC
+      - zhao_ding_gaba_orsc
     home_file:
       - subprotocols/hypothesis_derivation_patterns.md
   legacy_hypothesis_derivation_patterns_与相邻语料文件的关系:
@@ -5816,7 +5867,7 @@ patterns:
     status: EMERGING
     source_count: 2
     source_papers:
-      - cui_yang_vertinsky_smj
+      - cui_yang_vertinsky_2018
       - gamache_etal_2020_smj
     home_file:
       - subprotocols/hypothesis_derivation_patterns.md
@@ -5825,7 +5876,7 @@ patterns:
     status: EMERGING
     source_count: 2
     source_papers:
-      - cui_yang_vertinsky_smj
+      - cui_yang_vertinsky_2018
       - gamache_etal_2020_smj
     home_file:
       - subprotocols/hypothesis_derivation_patterns.md
@@ -5858,7 +5909,7 @@ patterns:
     status: EMERGING
     source_count: 2
     source_papers:
-      - Zhao-Ding_Gaba_ORSC
+      - zhao_ding_gaba_orsc
       - gamache_etal_2020_smj
     home_file:
       - subprotocols/hypothesis_organization_patterns.md
@@ -5867,7 +5918,7 @@ patterns:
     status: EMERGING
     source_count: 2
     source_papers:
-      - Zhao-Ding_Gaba_ORSC
+      - zhao_ding_gaba_orsc
       - gamache_etal_2020_smj
     home_file:
       - subprotocols/hypothesis_organization_patterns.md
@@ -6031,7 +6082,7 @@ patterns:
     status: EMERGING
     source_count: 1
     source_papers:
-      - lunetal2026
+      - lunetal2026_ETP
     home_file:
       - subprotocols/moderator_selection_frameworks.md
   legacy_moderator_selection_frameworks_FrameworkWillingandA:
@@ -6175,7 +6226,7 @@ patterns:
     status: VERIFIED
     source_count: 2
     source_papers:
-      - zajac_westphal_2004_asr
+      - zajac_westphal_the_social_construction_of_market_value
       - zajac_westphal_the_social_construction_of_market_value
     home_file:
       - sentences/acknowledgment_response.md
@@ -6184,7 +6235,7 @@ patterns:
     status: VERIFIED
     source_count: 2
     source_papers:
-      - zajac_westphal_2004_asr
+      - zajac_westphal_the_social_construction_of_market_value
       - zajac_westphal_the_social_construction_of_market_value
     home_file:
       - subprotocols/evidence_patterns.md
@@ -6243,7 +6294,7 @@ patterns:
     source_count: 2
     source_papers:
       - carpenter_westphal_2001_strategic_context_of_external_ne
-      - carpenterwestphal2001_AMJ
+      - carpenter_westphal_2001_strategic_context_of_external_ne
     home_file:
       - sentences/leitmotif-section-opener.md
   sentence_symmetric_amplifier_moderation:
@@ -6324,7 +6375,7 @@ patterns:
     source_count: 2
     source_papers:
       - carpenter_westphal_2001_strategic_context_of_external_ne
-      - carpenterwestphal2001_AMJ
+      - carpenter_westphal_2001_strategic_context_of_external_ne
     home_file:
       - subprotocols/bilateral_argumentation_templates.md
   theory_context_split_common_trunk_paired_hypothesis_sets:
@@ -6333,7 +6384,7 @@ patterns:
     source_count: 2
     source_papers:
       - carpenter_westphal_2001_strategic_context_of_external_ne
-      - carpenterwestphal2001_AMJ
+      - carpenter_westphal_2001_strategic_context_of_external_ne
     home_file:
       - variants/E_moderation.md
   theory_counter_assumption_refutation_opening:
@@ -6342,7 +6393,7 @@ patterns:
     source_count: 2
     source_papers:
       - carpenter_westphal_2001_strategic_context_of_external_ne
-      - carpenterwestphal2001_AMJ
+      - carpenter_westphal_2001_strategic_context_of_external_ne
     home_file:
       - subprotocols/arrangement_patterns.md
   theory_multilevel_parallel_hypothesis_sets_mediator_portion:
@@ -6351,7 +6402,7 @@ patterns:
     source_count: 2
     source_papers:
       - carpenter_westphal_2001_strategic_context_of_external_ne
-      - carpenterwestphal2001_AMJ
+      - carpenter_westphal_2001_strategic_context_of_external_ne
     home_file:
       - subprotocols/hypothesis_organization_patterns.md
   theory_type_to_empirical_context_bridging:
@@ -6464,7 +6515,7 @@ patterns:
     source_count: 2
     source_papers:
       - carpenter_westphal_2001_strategic_context_of_external_ne
-      - carpenterwestphal2001_AMJ
+      - carpenter_westphal_2001_strategic_context_of_external_ne
     home_file:
       - subprotocols/bilateral_argumentation_templates.md
   consequence_stage_signpost:
@@ -6481,7 +6532,7 @@ patterns:
     source_count: 2
     source_papers:
       - carpenter_westphal_2001_strategic_context_of_external_ne
-      - carpenterwestphal2001_AMJ
+      - carpenter_westphal_2001_strategic_context_of_external_ne
     home_file:
       - variants/E_moderation.md
   continuous_moderator_slope_form:
@@ -6498,7 +6549,7 @@ patterns:
     source_count: 2
     source_papers:
       - carpenter_westphal_2001_strategic_context_of_external_ne
-      - carpenterwestphal2001_AMJ
+      - carpenter_westphal_2001_strategic_context_of_external_ne
     home_file:
       - subprotocols/arrangement_patterns.md
   counterintuitive_anchor_three_parallel_threats:
@@ -6651,7 +6702,7 @@ patterns:
     status: EMERGING
     source_count: 1
     source_papers:
-      - cui_yang_vertinsky_smj
+      - cui_yang_vertinsky_2018
     home_file:
       - subprotocols/bilateral_argumentation_templates.md
   lens_scope_disqualification_replacement:
@@ -6709,7 +6760,7 @@ patterns:
     source_count: 2
     source_papers:
       - carpenter_westphal_2001_strategic_context_of_external_ne
-      - carpenterwestphal2001_AMJ
+      - carpenter_westphal_2001_strategic_context_of_external_ne
     home_file:
       - subprotocols/hypothesis_organization_patterns.md
   necessary_not_sufficient_driver_handoff:
@@ -6725,7 +6776,7 @@ patterns:
     status: EMERGING
     source_count: 1
     source_papers:
-      - lunetal2026
+      - lunetal2026_ETP
     home_file:
       - subprotocols/argumentation_patterns.md
   one_lens_bipolar_mirror_chains:
@@ -6766,7 +6817,7 @@ patterns:
     source_count: 2
     source_papers:
       - carpenter_westphal_2001_strategic_context_of_external_ne
-      - carpenterwestphal2001_AMJ
+      - carpenter_westphal_2001_strategic_context_of_external_ne
     home_file:
       - sentences/leitmotif-section-opener.md
   sequential_two_stage_screening_asymmetric:
@@ -6870,7 +6921,7 @@ patterns:
     status: EMERGING
     source_count: 1
     source_papers:
-      - lunetal2026
+      - lunetal2026_ETP
     home_file:
       - subprotocols/moderator_selection_frameworks.md
   why_after_not_before_rq:
@@ -6891,8 +6942,8 @@ summary_by_dimension:
     source_papers: 62
     verified_patterns: 70
   Boundary:
-    total_fragments: 92
-    source_papers: 51
+    total_fragments: 91
+    source_papers: 50
     verified_patterns: 43
   Level:
     total_fragments: 1
@@ -6968,7 +7019,7 @@ next_batch_targets:
     papers_needed: 2
     current_sources:
       - "chung_low_rust_2022_jams"
-      - "weng_yang_jms"
+      - "weng_yang2024"
     note: "Add one more upper-echelons three-way or process moderation paper to reach VERIFIED."
   - pattern: "qualitative_process_theory"
     papers_needed: 0

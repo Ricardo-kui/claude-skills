@@ -32,10 +32,6 @@ gap_types:
     exemplar: "zhou2017 (ASQ)"
 
 # §2 — Hook selector (Pollock 2025 taxonomy)
-# NOTE: canonical_id "10" is shared by two hooks (immersive-narrative + practical-puzzle).
-# This is a legacy numbering artifact — the YAML keys are the full canonical_id strings
-# ("10-immersive-narrative" vs "10-practical-puzzle"), so routing is unambiguous.
-# If renumbering in the future, rename the corpus files and update all references here.
 hooks:
   by_gap_strength:
     low:
@@ -47,7 +43,7 @@ hooks:
         pollock_type: "Trend"
         syntactic_signature: "负面事件递进式后果清单"
         exemplar: "mayo2021 (POM)"
-      - canonical_id: "10-practical-puzzle"
+      - canonical_id: "28-practitioner-puzzle"
         pollock_type: "Anecdote"
         syntactic_signature: "从业者面临的具体困境"
         exemplar: null
@@ -61,7 +57,7 @@ hooks:
       - canonical_id: "16-evolving-social-issue"
         pollock_type: "Trend"
         syntactic_signature: "社会议题广泛关注→收窄到具体DV→负面后果→文献定位为外部/结构解释"
-        exemplar: "weng_yang (JMS)"
+        exemplar: "weng_yang2024 (JMS)"
     medium:
       - canonical_id: "05-literature-consensus-blindspot"
         pollock_type: "Trend"

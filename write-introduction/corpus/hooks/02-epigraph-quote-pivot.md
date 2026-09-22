@@ -119,7 +119,7 @@ source: Extracted from MVP30 narrative_analysis + darby2026 distill; re-distille
 ## 组装规则
 
 ### 必须配对
-- **与 `10-practical-puzzle` (Hook) 的能量互补**: 如果 Epigraph 已经建立了具体困境，P1 作者评论段不应再重复案例细节，而应快速上升到一般问题和后果清单
+- **与 `28-practitioner-puzzle` (Hook) 的能量互补**: 如果 Epigraph 已经建立了具体困境，P1 作者评论段不应再重复案例细节，而应快速上升到一般问题和后果清单
 - **与 Progressive Coherence 或 Synthesized Coherence Literature Turn 配对**: 从"现实紧迫"过渡到"学术文献如何回应（或未回应）这个现实"
 
 ### 互斥

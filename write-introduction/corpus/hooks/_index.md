@@ -62,7 +62,7 @@
 | **制度轶事 Hook** | `11-institutional-anecdote` | 客观制度叙事 → "unremarkable"理论常态化；变体 C：立法授权递进事实开场型（双辖区立法事实递进、无数字冲击低能量开场，wowak_2020 — VERIFIED / expert_audit_override 2026-08-28） | VERIFIED (≥3 papers) | desai2012 (AMJ), lehman2014 (MS), wowak_2020 (M&SOM) |
 | **心理构念直觉 Hook** | `09-psychological-construct-hook` | 压力共识 → 案例落地 → 因果链 → 学术空白 | VERIFIED | mannor2016 (SMJ) |
 | **成本收益张力 Hook** | `07-cost-benefit-tension` | 决策两难：行动成本 vs 延迟成本 | VERIFIED | eilert2017 (JM) |
-| **实践困境 Hook** | `10-practical-puzzle` | 从业者面临的具体困境 | VERIFIED (≥3 papers) | ceo_regulatory_focus_ijrm (IJRM), desjardine2023 (OS), kalaignanam2017 (JM) |
+| **实践困境 Hook** | `28-practitioner-puzzle` | 从业者面临的具体困境 | VERIFIED (≥3 papers) | ceo_regulatory_focus_ijrm (IJRM), desjardine2023 (OS), kalaignanam2017 (JM) |
 | **谜题/悖论 Hook** | `04-puzzle-paradox` | 反直觉现象，制造认知失调 | VERIFIED (≥4 papers) | paruchuri2020 (SMJ), pontikes2012 (ASQ) |
 | **成对灾难 Hook** | `14-paired-disasters` | 两次时间跨度大的相似灾难，建立"历史重演"谜题 | VERIFIED | haunschild2015 (OS) |
 | **双重张力交织 Hook** | `22-twin-complication` | 田野张力 × 理论张力交织互构；理论张力从田野张力派生；双 resolution 合同 + 删除检验（Turner 1976 原型，GBL Ch3） | EMERGING (2p) | turner1976 (ASQ), haunschild2015 (OS, 隐式) |
@@ -139,14 +139,12 @@
 | 08 | consequence-cascade | Trend |
 | 09 | psychological-construct-hook | Anecdote |
 | 10 | immersive-narrative | Anecdote |
-| 10 | practical-puzzle | Anecdote |
 | 11 | institutional-anecdote | Anecdote |
 | 12 | contrary-to-belief | Trend |
 | 13 | rhetorical-question | Rhetorical question |
 | 14 | paired-disasters | Anecdote |
 | 15 | extreme-situation | Anecdote |
 | 16 | evolving-social-issue | Trend |
-| 17 | classic-debate-constraint | Anecdote |
 | 17 | debate-reframing | Anecdote |
 | 18 | theory-contradiction-empirical-paradox | Trend |
 | 19 | forward-looking-shift | Trend |
@@ -158,19 +156,8 @@
 | 25 | empirical-puzzle-after-consensus | Trend |
 | 26 | dyadic-contagion | Anecdote |
 | 27 | theory-testbed-arena | —（hook 文件未标注 Pollock 类型） |
-| — | cold-start-cost-cascade | Trend |
-
-*注：编号 10 被 immersive-narrative 和 practical-puzzle 共享，编号 17 被 classic-debate-constraint 和 debate-reframing 共享——均因不同 distill 来源保留原编号以维持向后兼容。*
-
----
-
-## 新增 Hook（待编号）
-
-| Hook | canonical_id | 核心特征 | 验证状态 | 代表范文 |
-|------|-------------|---------|---------|---------|
-| **Cold-Start Cost Cascade Hook** | `cold-start-cost-cascade` | 从 dreaded word 到直接/间接成本递进 | VERIFIED | mayo_poms (POM) |
-
-- `cold-start-cost-cascade.md` — Cost cascade hook from dreaded word to direct/indirect costs
+| 28 | practitioner-puzzle | Anecdote |
+| 29 | debate-constraint-relaxation | Anecdote |
 
 ---
 

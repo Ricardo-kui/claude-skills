@@ -75,7 +75,7 @@ to achieve a desired orientation toward [outcome]."
 - **多文献枚举开场**: "in the [A], [B], and [C] literatures"——用学科广度（而非单一辩论史）建立议题的普遍性，一句完成 phenomenon 的合法性论证
 - **"A central question is whether X, or whether Y"**: 把辩论压缩为一个二选一中央问题——读者立即获得全文的问题框架；两极各带引用，不是 pseudo-debate
 - **无 pivot**: 与主模板（"Rather than attempting to settle..."）不同，本变体不重构辩论，而是在后续段落通过文献收窄（narrowing to one mechanism view）再制造 gap——Hook 本身保持中性设问
-- **与 17-classic-debate-constraint 的区别**: 无约束放松/新条件；辩论只是问题合法性的载体
+- **与 29-debate-constraint-relaxation 的区别**: 无约束放松/新条件；辩论只是问题合法性的载体
 - **能量低-中**: 1990s AMJ 经典三段式的标准开场；稳重但不惊艳，适配现象本身有高实践相关性的论文
 
 **适用**: 议题横跨多个学科文献、辩论两极都有 named authors；作者打算在 Lit-Turn/Tension 段落（而非 Hook 内）完成对某一极的收窄与缺口化

@@ -484,7 +484,7 @@ and [DV] is [stronger/weaker] when [W2] is high than when [W2] is low."
 - Chung, Low & Rust (2022, JAMS) — CEO confidence × CMO confidence (W1) × CMO power (W2); CEO confidence × board independence (W1) × CMO confidence (W2)
 - Lun, Zurbruegg, Mount & Cheong (2026, ETP) — EO × COO power (W1) × product life cycle (W2)；W2 调节的是 W1 的注意带宽，不是劝说效力
 
-**机制族 B（注意治理 × 任务负荷，lunetal2026 型）**:
+**机制族 B（注意治理 × 任务负荷，lunetal2026_ETP 型）**:
 
 **原文锚点**:
 > "COO power represents an attentional governance contingency that shapes the TMT's interpretive focus—conditioning the extent to which entrepreneurial experimentation is accompanied by operational discipline."
@@ -1087,7 +1087,7 @@ relationship with [Y] when [W] is high.
 <!--
 pattern_id: context_split_common_trunk_paired_hypothesis_sets
 build_type: 机制推演型 + 调节效应型（E 路由；情境为类目型 scope condition 而非连续交互项）
-source_papers: ["carpenterwestphal2001_AMJ"]
+source_papers: ["carpenter_westphal_2001_strategic_context_of_external_ne"]
 confidence: high
 status: VERIFIED — expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)
 -->

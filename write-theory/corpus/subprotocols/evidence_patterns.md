@@ -291,7 +291,7 @@ context of [theoretical construct].
 <!--
 pattern_id: rival_readings_same_measure
 build_type: 跨类型（竞争假设裁决面）
-source_papers: ["zajac_westphal_2004_asr"]
+source_papers: ["zajac_westphal_the_social_construction_of_market_value"]
 confidence: medium
 status: VERIFIED
 verification_basis: "expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)"

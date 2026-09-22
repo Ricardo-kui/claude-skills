@@ -9,7 +9,7 @@ generativity: GENERATIVE
 exclusivity: HIGH
 source_papers:
   - employee_free_speech2024 (OS, 2024): "social media censorship and ideological asymmetry in organizations"
-  - weng_yang (JMS): "income inequality → CEO-employee pay disparity; social issue cold-start with phenomenon definition"
+  - weng_yang2024 (JMS, 2024): "income inequality → CEO-employee pay disparity; social issue cold-start with phenomenon definition"
 created: 2026-05-20
 updated: 2026-07-07
 source: Original batch 1 extraction (former top-level corpus, old id "09-evolving-social-issue"; renumbered on migration, top-level corpus since deleted) + weng_yang distill
@@ -81,12 +81,12 @@ Traditionally, [Group A] supported [position X] and [Group B] supported [positio
 
 ---
 
-### 变体 C：社会议题冷启动+现象定义型（weng_yang 型）
+### 变体 C：社会议题冷启动+现象定义型（weng_yang2024 型）
 
 **模板**:
 > "The issue of [broad social phenomenon] has received growing attention from researchers ([citations]). One particularly salient indicator is [specific DV construct], defined as [definition]. [DV construct] refers to [alternative definition]. This discrepancy may [negative consequence 1] ([citations]) as [mechanism: actors at firms with X can demonstrate Y]. Prior research suggests that [dominant external explanation 1] ([citations]). Meanwhile, [dominant external explanation 2] can also affect the extent of such [phenomenon] ([citation])."
 
-**来源**: weng_yang (JMS), P1
+**来源**: weng_yang2024 (JMS, 2024), P1
 
 **原文锚定**:
 > "The issue of income inequality has received growing attention from researchers (Amis et al., 2021; Bapuji et al., 2020; Patel et al., 2021; Suddaby et al., 2018). One particularly salient indicator is CEO-employee pay disparity, defined as the extent to which a CEO is paid more than a typical firm employee."

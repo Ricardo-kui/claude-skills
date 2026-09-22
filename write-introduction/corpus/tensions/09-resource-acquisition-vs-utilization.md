@@ -79,5 +79,5 @@ source: Extracted from MVP30 narrative_analysis files
 
 ## 相关语料
 
-- 配合 `hooks/10-practical-puzzle.md` 使用：获取vs利用是一种特殊的实践困境
+- 配合 `hooks/28-practitioner-puzzle.md` 使用：获取vs利用是一种特殊的实践困境
 - 配合 `stakes/02-quantified-economic-loss.md` 使用：如果利用乏力可用精确数字展示效率损失

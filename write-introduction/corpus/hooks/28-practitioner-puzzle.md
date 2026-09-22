@@ -1,6 +1,6 @@
 ---
 type: canonical_hook
-canonical_id: "10-practical-puzzle"
+canonical_id: "28-practitioner-puzzle"
 status: ✓ STANDARD
 gap_strength: 低
 gap_type: Incompleteness
@@ -18,7 +18,7 @@ updated: 2026-08-03
 source: Extracted from MVP30 narrative_analysis files
 ---
 
-# 10-practical-puzzle — 从业者困境 Hook
+# 28-practitioner-puzzle — 从业者困境 Hook
 
 ## 功能描述
 

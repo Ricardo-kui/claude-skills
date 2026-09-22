@@ -12,7 +12,7 @@ source_papers:
   - 'gamache2023 (SMJ, 2023): Counter-intuitive prediction preview'
   - 'mannor2016 (SMJ, 2016): Dual-theory integration preview'
   - 'grewal2025 (JM, 2025): Mechanism-boundary-findings-contribution fused paragraph—compact JM style'
-  - 'cui_yang_vertinsky_smj (SMJ): Curvilinear cost-benefit mechanism + three moderator direction preview'
+  - 'cui_yang_vertinsky_2018 (SMJ): Curvilinear cost-benefit mechanism + three moderator direction preview'
   - 'paruchuri_andrus_sullivan2026 (AMJ, 2026): Symmetric dual moderation + multimethod preview'
   - 'bamberger_homburg_wielgos2021 (JM, 2021): Dual-gap mechanism/decomposition preview + study-role allocation'
   - 'lee_wu_bednar_orsc_18968 (Organization Science): Interview-grounded contingency mechanism + staggered DiD + communication corroboration'
@@ -45,7 +45,7 @@ source: Extracted from MVP30 narrative_analysis files + grewal2025 + paruchuri_a
 | C | 挑战性预测型 | 需要建立理论悬念、挑战共识的研究 |  | gamache2023 (SMJ), adapted |
 | D | 双理论整合型（mannor2016 型） | 需要整合两个不同学科（如战略管理+心理学，组织理论+认知科学）来解释新现象的研究 |  | mannor2016 (SMJ), P3 |
 | E | 机制-边界-发现-贡献四合一融合段（grewal2025 型） | 目标期刊偏好紧凑 Introduction（JM/JMR/IJRM）；研究贡献涉及 Mech |  | Grewal, Vana, and Stephen (202 |
-| F | 倒U型成本收益转折 + 多调节方向预告（cui_yang_vertinsky_smj | 有倒U型或非线性主效应，并伴随多个边界条件的研究；SMJ/AMJ。**子特征：通道匹配调节（fini2017，每个 moderator 绑定一条反作用通道）** | EMERGING（双篇：cui_vertinsky + fini2017，待第三 | Cui, Yang & Vertinsky (SMJ), P8-P9；Fini et al. (AMJ), P5 |
+| F | 倒U型成本收益转折 + 多调节方向预告（cui_yang_vertinsky_2018 | 有倒U型或非线性主效应，并伴随多个边界条件的研究；SMJ/AMJ。**子特征：通道匹配调节（fini2017，每个 moderator 绑定一条反作用通道）** | EMERGING（双篇：cui_vertinsky + fini2017，待第三 | Cui, Yang & Vertinsky (SMJ), P8-P9；Fini et al. (AMJ), P5 |
 | G | 对称双调节 + 多方法预览型（paruchuri2026型） | 理论预测包含对称/反向调节机制、使用多方法（archival + experiment） | EMERGING（单篇来源；仅作 | paruchuri_andrus_sullivan2026 |
 | H | 双缺口嵌套 → 机制簇 → 净效应分解 → 研究分工（Bamberger 2021 型） | 同一自变量可能同时产生短期收益与关系性长期成本；研究用互补数据源识别内部机制与外部绩效 | EMERGING（单篇来源，待第 | Bamberger, Homburg, and Wielgo |
 | I | 定性扎根 → 条件化机制 → 准实验检验 → 行为—传播双结果（Lee–Wu–Bedna | 理论先验存在两条反向路径，需要访谈识别行为者如何解释冲击，再用档案准实验检验净效应及异质 | EMERGING（单篇来源；仅作 s | Lee, Wu, and Bednar, *Organizat |
@@ -193,7 +193,7 @@ P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者
 
 ---
 
-## 变体 F：倒U型成本收益转折 + 多调节方向预告（cui_yang_vertinsky_smj 型）
+## 变体 F：倒U型成本收益转折 + 多调节方向预告（cui_yang_vertinsky_2018 型）
 
 **模板**:
 > We maintain that increases in [IV] facilitate [mechanism 1] and [mechanism 2], increasing [DV]. However, there is a cost/benefit trade-off involved in [action]. As [IV] increases, [escalating cost 1] and [escalating cost 2] may reach a threshold at which the expected cost becomes higher than the expected benefit of [action]. We accordingly propose that [IV] demonstrates an [inverted U-shaped] relationship with [DV].
@@ -220,7 +220,7 @@ P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者
 **原文锚定**:
 > "Considering these two counter-balancing effects leads us to hypothesize an inverted U-shaped relationship between exogenous indices and peer valuation. We further predict that this curvilinear relationship is moderated by the identity proximity between the academic and the industry audiences, and by the availability of endogenous indices through an academic's publishing trajectory."
 
-**验证状态**: 由 EMERGING（单篇来源 cui_yang_vertinsky_smj）升级为 **EMERGING（双篇交叉验证）**；待第三篇升 VERIFIED。
+**验证状态**: 由 EMERGING（单篇来源 cui_yang_vertinsky_2018）升级为 **EMERGING（双篇交叉验证）**；待第三篇升 VERIFIED。
 
 **子特征（channel-matched moderation）**:
 - **每个调节变量绑定一条反作用通道**（而非并列罗列）：identity proximity 绑定身份一致通道（跨受众身份越近，身份偏离疑虑越弱），endogenous-index 可用性绑定能力通道（内部同行评价越充分，外部认可的能力增量越弱）。

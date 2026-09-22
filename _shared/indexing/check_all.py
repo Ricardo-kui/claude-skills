@@ -18,6 +18,14 @@
 5. **function-map 门**：`_shared/function-map.md`（功能→语料载体地图）的全部本仓
    指针可解析，且骨架/索引目标有表格数据行——「按句子功能取范本」的非空性由此
    被机器看守（地图即 fixtures 源）。
+6. **注册表对账**（四节，含 introduction）：串联 `_governance/corpus_registry_reconcile.py`。
+   上面第 1–5 项对的是「骨架索引 ↔ corpus」，本项对的是 **「注册表/治理台账 ↔ corpus」**
+   （两者互补，缺一即有空档）。以 corpus 实况为事实源，检出 MISSING_IN_REGISTRY /
+   GHOST_IN_REGISTRY / NAME_DRIFT / NUMBER_COLLISION / GOVERNANCE_DEAD。
+7. **引用完整性**：串联 `_governance/corpus_reference_integrity.py`。前六项都对
+   「结构/登记」，**没有一项校验语料文档里指向别的文件的路径引用** —— 2026-09-20
+   即因此漏掉 6 处死指针（story-blueprints 一次 backfill 改名后引用侧未同步，
+   含 1 处**跨技能**引用）。本项检出 MISSING / PLACEHOLDER / LINE_OOB。
 
 判定纪律：corpus 未变时，本门 FAIL = 引擎/适配器漂移（查 git diff 即见）；
 corpus 变更后 FAIL = 重建产物尚未随 corpus 一起提交，是纪律提示而非误报。
@@ -47,7 +55,7 @@ failures: list[str] = []
 
 
 def check(cond: bool, message: str) -> None:
-    print(f"  [{'PASS]' if cond else '[FAIL]'} {message}")
+    print(f"  [{'PASS' if cond else 'FAIL'}] {message}")
     if not cond:
         failures.append(message)
 
@@ -328,6 +336,24 @@ def main(argv: list[str] | None = None) -> int:
         r = run([sys.executable, "scripts/validate_write_results.py"],
                 REPO / "write-results")
         check(r.returncode == 0, f"validate_write_results.py exit 0 (got {r.returncode})")
+
+    print("\n== 注册表对账 ==")
+    r = run([sys.executable, "_governance/corpus_registry_reconcile.py"], REPO)
+    check(r.returncode == 0,
+          f"corpus_registry_reconcile.py exit 0 (got {r.returncode})")
+    if r.returncode != 0:
+        for ln in (r.stdout or "").splitlines():
+            if ln.startswith("[") and not ln.startswith("[FAIL]"):
+                print(f"  | {ln}")
+
+    print("\n== 引用完整性 ==")
+    r = run([sys.executable, "_governance/corpus_reference_integrity.py"], REPO)
+    check(r.returncode == 0,
+          f"corpus_reference_integrity.py exit 0 (got {r.returncode})")
+    if r.returncode != 0:
+        for ln in (r.stdout or "").splitlines():
+            if ln.startswith("[") and not ln.startswith("[FAIL]"):
+                print(f"  | {ln}")
 
     print("\n== pass-contract ==")
     r = run([sys.executable, "pass_contract_check.py"], REPO)

@@ -1,0 +1,1706 @@
+[
+ {
+  "key": "carpenter_and_westphal_2001_strategic_context_of_external_ne",
+  "design": "experiment",
+  "design_evidence": [
+   [
+    1,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 53,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "castellaneta_2017_smj_how_does_trade_secret_legal_protection",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    13,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    2,
+    "survival"
+   ],
+   [
+    2,
+    "did_natural_experiment"
+   ]
+  ],
+  "results_sentences": 28,
+  "flags": [
+   {
+    "type": "UNDERCLAIM",
+    "section": "results",
+    "sentence_no": 11,
+    "tier": "tentative",
+    "match": "\\b(may|might|could)\\b",
+    "sentence": "More specifically, based on column 5, the UTSA enactment leads to an increase in the market value of the average firm of around 4.5 percent (keeping the other covariates at their means). [^6] This suggests that whereas a stronger trade-secrecy protection might produce both positive and negative effects (see results below), the positive effect is on average stronger than the negative one, generating a net increase in the firm market value.",
+    "rule": "results_main_effect: verified effect weakened by tentative (claim-calibration 勿过度回缩)"
+   }
+  ],
+  "all_flag_count": 1
+ },
+ {
+  "key": "certo2016_a_tale_of_two_effects_using_longitudinal_data_to_c",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    59,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    16,
+    "iv_2sls"
+   ],
+   [
+    6,
+    "nonlinear"
+   ]
+  ],
+  "results_sentences": 55,
+  "flags": [],
+  "all_flag_count": 4
+ },
+ {
+  "key": "darby_2026_toward_faster_recalls_of_dangerous_medical_device",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    64,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    20,
+    "survival"
+   ],
+   [
+    1,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 0,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "desjardine_2025_information_based_competition_the_case_of_ri",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    14,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    4,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 18,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "ederer_2026_a_tale_of_two_networks_common_own",
+  "design": "nonlinear",
+  "design_evidence": [
+   [
+    1,
+    "nonlinear"
+   ],
+   [
+    1,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 46,
+  "flags": [
+   {
+    "type": "CONDITION_MISSING",
+    "section": "results",
+    "sentence_no": 26,
+    "tier": "T_DIRECTIONAL",
+    "match": "raises",
+    "sentence": "However, even with blockholder thresholds common ownership raises firm profits by",
+    "rule": "nonlinear.conditional[T_DIRECTIONAL] requires identification markers or result-reporting context; none found"
+   }
+  ],
+  "all_flag_count": 1
+ },
+ {
+  "key": "fini_2017_social_valuation_across_multiple_audiences_the_int",
+  "design": "nonlinear",
+  "design_evidence": [
+   [
+    37,
+    "nonlinear"
+   ],
+   [
+    14,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    7,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 44,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "gulati_1999_network_location_and_learning_the_influence_of_n",
+  "design": "nonlinear",
+  "design_evidence": [
+   [
+    3,
+    "nonlinear"
+   ],
+   [
+    1,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    1,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 57,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "gulati_1999_cooperative_or_controlling_the_effects_of_ceo_bo",
+  "design": "survival",
+  "design_evidence": [
+   [
+    3,
+    "survival"
+   ]
+  ],
+  "results_sentences": 79,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "gulati_1999_where_do_interorganizational_networks_come_from",
+  "design": "experiment",
+  "design_evidence": [
+   [
+    7,
+    "experiment"
+   ],
+   [
+    1,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    1,
+    "nonlinear"
+   ]
+  ],
+  "results_sentences": 83,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "gulati_2003_which_ties_matter_when_the_contingent_effects_of",
+  "design": "iv_2sls",
+  "design_evidence": [
+   [
+    5,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 22,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "gulati_2005_adaptation_in_vertical_relationships_beyond_ince",
+  "design": "iv_2sls",
+  "design_evidence": [
+   [
+    5,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 90,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "gulati_2007_dependence_asymmetry_and_joint_dependence_in_int",
+  "design": "iv_2sls",
+  "design_evidence": [
+   [
+    10,
+    "iv_2sls"
+   ],
+   [
+    7,
+    "nonlinear"
+   ]
+  ],
+  "results_sentences": 82,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "gulati_2009_the_nature_of_partnering_experience_and_the_gain",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    6,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    1,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 17,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "herriott_1985_learning_from_experience_in_organizations",
+  "design": "unknown",
+  "design_evidence": [],
+  "results_sentences": 0,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe",
+  "design": "iv_2sls",
+  "design_evidence": [
+   [
+    3,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 11,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "innovation_through_labor_mobility_evidence_from_non_compete_",
+  "design": "iv_2sls",
+  "design_evidence": [
+   [
+    6,
+    "iv_2sls"
+   ],
+   [
+    5,
+    "experiment"
+   ],
+   [
+    5,
+    "did_natural_experiment"
+   ]
+  ],
+  "results_sentences": 0,
+  "flags": [],
+  "all_flag_count": 6
+ },
+ {
+  "key": "jeffers_2024_the_impact_of_restricting_labor_mobility_on_cor",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    32,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    11,
+    "did_natural_experiment"
+   ],
+   [
+    1,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 251,
+  "flags": [
+   {
+    "type": "OVERCLAIM",
+    "section": "results",
+    "sentence_no": 126,
+    "tier": "T_DEFINITIVE",
+    "match": "caused",
+    "sentence": "A few analyses can help us strengthen the tie between the investment response and the labor friction caused by NCs.",
+    "rule": "ols_fe_panel_hlm.forbidden includes T_DEFINITIVE"
+   }
+  ],
+  "all_flag_count": 2
+ },
+ {
+  "key": "levinthal_1981_a_model_of_adaptive_organizational_search",
+  "design": "experiment",
+  "design_evidence": [
+   [
+    1,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 0,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "lin_2022_enforceability_of_noncompetition_agre",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    17,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    6,
+    "did_natural_experiment"
+   ],
+   [
+    4,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 118,
+  "flags": [
+   {
+    "type": "OVERCLAIM",
+    "section": "results",
+    "sentence_no": 75,
+    "tier": "T_DEFINITIVE",
+    "match": "caused",
+    "sentence": "Besides CNCs, ex post facto legal rules such as the UTSA and the IDD help protect firms from competitive damage caused by employee turnover.",
+    "rule": "ols_fe_panel_hlm.forbidden includes T_DEFINITIVE"
+   }
+  ],
+  "all_flag_count": 2
+ },
+ {
+  "key": "moon_2026_the_impact_of_legal_protection_of_trade_secrets_on",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    60,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    18,
+    "did_natural_experiment"
+   ],
+   [
+    17,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 42,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "mukherjee_2017_product_recall_decisions_in_medical_device_su",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    8,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    1,
+    "survival"
+   ],
+   [
+    1,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 45,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "mukherjee_2021_hiding_in_the_herd_the_product_recall_cluster",
+  "design": "did_natural_experiment",
+  "design_evidence": [
+   [
+    18,
+    "did_natural_experiment"
+   ],
+   [
+    14,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    5,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 63,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "pfarrer_pollock_and_rindova_2010",
+  "design": "iv_2sls",
+  "design_evidence": [
+   [
+    2,
+    "iv_2sls"
+   ],
+   [
+    1,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    1,
+    "did_natural_experiment"
+   ]
+  ],
+  "results_sentences": 11,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "the_effect_of_noncompete_enforceability_on_productivity",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    7,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    5,
+    "did_natural_experiment"
+   ]
+  ],
+  "results_sentences": 48,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "westphal_zajac_1998_the_symbolic_management_of_stockholders_",
+  "design": "did_natural_experiment",
+  "design_evidence": [
+   [
+    5,
+    "did_natural_experiment"
+   ],
+   [
+    1,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 35,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "westphal_j_d_and_bednar_m_k_2005_pluralistic_ignorance_in_co",
+  "design": "iv_2sls",
+  "design_evidence": [
+   [
+    4,
+    "iv_2sls"
+   ],
+   [
+    1,
+    "survival"
+   ]
+  ],
+  "results_sentences": 53,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "westphal1995_who_shall_govern_ceoboard_power_demographic_sim",
+  "design": "experiment",
+  "design_evidence": [
+   [
+    1,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 35,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "westphal_1997_customization_or_conformity_an_institutional_a",
+  "design": "survival",
+  "design_evidence": [
+   [
+    1,
+    "survival"
+   ]
+  ],
+  "results_sentences": 52,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "what_changes_after_women_enter_top_manage_2020",
+  "design": "iv_2sls",
+  "design_evidence": [
+   [
+    5,
+    "iv_2sls"
+   ],
+   [
+    2,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    2,
+    "nonlinear"
+   ]
+  ],
+  "results_sentences": 19,
+  "flags": [],
+  "all_flag_count": 6
+ },
+ {
+  "key": "xiao_2022_non_competes_and_innovation_evidenc",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    4,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    2,
+    "iv_2sls"
+   ],
+   [
+    2,
+    "did_natural_experiment"
+   ]
+  ],
+  "results_sentences": 68,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "zajac_westphal_the_social_construction_of_market_value",
+  "design": "did_natural_experiment",
+  "design_evidence": [
+   [
+    7,
+    "did_natural_experiment"
+   ]
+  ],
+  "results_sentences": 46,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "zhong_et_al_2020_customer_concentration_executive_attention_",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    17,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    11,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 104,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "legal_protection_of_free_speech_and_corporate_innovation",
+  "design": "did_natural_experiment",
+  "design_evidence": [
+   [
+    26,
+    "did_natural_experiment"
+   ],
+   [
+    7,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    3,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 20,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "anand_mukherjee_2024_learning_from_failures_di",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    10,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    5,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 18,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "ant_n_2025_innovation_the_bright_side_of_common_ownership",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    13,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    5,
+    "did_natural_experiment"
+   ]
+  ],
+  "results_sentences": 120,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "bala_et_al_2017_pharmaceutical_product_recalls",
+  "design": "survival",
+  "design_evidence": [
+   [
+    6,
+    "survival"
+   ],
+   [
+    3,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 0,
+  "flags": [],
+  "all_flag_count": 3
+ },
+ {
+  "key": "ball_2018_product_competition_managerial_discretion_and_manu",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    13,
+    "ols_fe_panel_hlm"
+   ]
+  ],
+  "results_sentences": 57,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "ceo_regulatory_focus_and_myopic_marketing_management",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    9,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    3,
+    "iv_2sls"
+   ],
+   [
+    1,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 88,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "ceo_stock_ownership_recall_timing_and_stock_market_penalties",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    13,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    13,
+    "did_natural_experiment"
+   ],
+   [
+    10,
+    "survival"
+   ]
+  ],
+  "results_sentences": 86,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "ceo_tenure_and_recall_risk_management_in_the_consumer_produc",
+  "design": "survival",
+  "design_evidence": [
+   [
+    22,
+    "survival"
+   ],
+   [
+    6,
+    "ols_fe_panel_hlm"
+   ]
+  ],
+  "results_sentences": 30,
+  "flags": [],
+  "all_flag_count": 3
+ },
+ {
+  "key": "darby2025_an_agency",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    8,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    4,
+    "survival"
+   ]
+  ],
+  "results_sentences": 0,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "denicol_panunzi_2025_common_ownership_competition_and_corpor",
+  "design": "nonlinear",
+  "design_evidence": [
+   [
+    3,
+    "nonlinear"
+   ],
+   [
+    1,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 0,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "does_it_pay_to_recall_your_product_early_an_empirical_invest",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    15,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    14,
+    "survival"
+   ],
+   [
+    6,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 50,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "does_a_firms_product_recall_strategy_affect_it",
+  "design": "did_natural_experiment",
+  "design_evidence": [
+   [
+    12,
+    "did_natural_experiment"
+   ],
+   [
+    2,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 126,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "employee_free_speech_vs_organizational_censorship_on_social_",
+  "design": "experiment",
+  "design_evidence": [
+   [
+    16,
+    "experiment"
+   ],
+   [
+    1,
+    "ols_fe_panel_hlm"
+   ]
+  ],
+  "results_sentences": 40,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "fang_et_al_2025_rival_recall_ad_spend",
+  "design": "iv_2sls",
+  "design_evidence": [
+   [
+    17,
+    "iv_2sls"
+   ],
+   [
+    4,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    2,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 40,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "from_finance_to_marketing_the_impact_of_financial_leverage_o",
+  "design": "survival",
+  "design_evidence": [
+   [
+    1,
+    "survival"
+   ],
+   [
+    1,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 9,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "gao_2021_does_social_media_accelerate_product",
+  "design": "survival",
+  "design_evidence": [
+   [
+    32,
+    "survival"
+   ],
+   [
+    2,
+    "experiment"
+   ],
+   [
+    1,
+    "ols_fe_panel_hlm"
+   ]
+  ],
+  "results_sentences": 228,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "haunchild_and_rhee_2004_the_role_of_volition_in_organization",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    2,
+    "ols_fe_panel_hlm"
+   ]
+  ],
+  "results_sentences": 85,
+  "flags": [],
+  "all_flag_count": 4
+ },
+ {
+  "key": "hoffmann_2024_so_sue_me_if_you_can_legal_changes_and_product",
+  "design": "survival",
+  "design_evidence": [
+   [
+    18,
+    "survival"
+   ],
+   [
+    16,
+    "did_natural_experiment"
+   ],
+   [
+    5,
+    "ols_fe_panel_hlm"
+   ]
+  ],
+  "results_sentences": 51,
+  "flags": [],
+  "all_flag_count": 2
+ },
+ {
+  "key": "jeon_2026_safety_defects_and_fuel_efficiency_in_the_automoti",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    19,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    15,
+    "iv_2sls"
+   ],
+   [
+    7,
+    "nonlinear"
+   ]
+  ],
+  "results_sentences": 95,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "kalaignanam_2017_the_differential_impact_of_new_product_deve",
+  "design": "did_natural_experiment",
+  "design_evidence": [
+   [
+    5,
+    "did_natural_experiment"
+   ],
+   [
+    1,
+    "ols_fe_panel_hlm"
+   ]
+  ],
+  "results_sentences": 105,
+  "flags": [],
+  "all_flag_count": 8
+ },
+ {
+  "key": "kartik_kalaignanam_et_al_2013_the_impact_of_product_recalls_",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    4,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    4,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 95,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "li_2026_the_impact_of_supply_base_geographical_distance_and_",
+  "design": "iv_2sls",
+  "design_evidence": [
+   [
+    9,
+    "iv_2sls"
+   ],
+   [
+    1,
+    "nonlinear"
+   ]
+  ],
+  "results_sentences": 39,
+  "flags": [],
+  "all_flag_count": 2
+ },
+ {
+  "key": "lii_2026_vertical_spillover_of_product_recalls_theorization_",
+  "design": "did_natural_experiment",
+  "design_evidence": [
+   [
+    17,
+    "did_natural_experiment"
+   ],
+   [
+    8,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    1,
+    "nonlinear"
+   ]
+  ],
+  "results_sentences": 37,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "lobbying_and_product_recalls_a_study_of_the_u_s_automobile_i",
+  "design": "iv_2sls",
+  "design_evidence": [
+   [
+    30,
+    "iv_2sls"
+   ],
+   [
+    12,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    1,
+    "did_natural_experiment"
+   ]
+  ],
+  "results_sentences": 30,
+  "flags": [
+   {
+    "type": "OVERCLAIM",
+    "section": "results",
+    "sentence_no": 15,
+    "tier": "T_DEFINITIVE",
+    "match": "caused",
+    "sentence": "This health crisis caused a public outcry and sparked intense politics and lobbying activities; it also affected GM, which operates a factory in Flint.",
+    "rule": "iv_2sls.forbidden includes T_DEFINITIVE"
+   }
+  ],
+  "all_flag_count": 1
+ },
+ {
+  "key": "lun_et_al_2026_the_double_edged_sword_of_entre",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    5,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    1,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 3,
+  "flags": [],
+  "all_flag_count": 2
+ },
+ {
+  "key": "lu_2022_frenemies_corporate_advertising_under_common_ownersh",
+  "design": "did_natural_experiment",
+  "design_evidence": [
+   [
+    11,
+    "did_natural_experiment"
+   ],
+   [
+    9,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    5,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 179,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "mao_et_al_2021_before_it_s_too_late_product_re",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    2,
+    "ols_fe_panel_hlm"
+   ]
+  ],
+  "results_sentences": 0,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "mass_media_and_massive_failures_determining_organizational_e",
+  "design": "experiment",
+  "design_evidence": [
+   [
+    3,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 0,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "mixed_gambles_in_product_recalls_how_ceo_stock_options_drive",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    3,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    3,
+    "iv_2sls"
+   ],
+   [
+    1,
+    "did_natural_experiment"
+   ]
+  ],
+  "results_sentences": 34,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "mukherjee_u_k_sinha_k_k_2018_product_recall_decisions_in_med",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    8,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    1,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 45,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "mukherjee_et_al_2021_hiding_in_the_herd_the_pr",
+  "design": "did_natural_experiment",
+  "design_evidence": [
+   [
+    19,
+    "did_natural_experiment"
+   ],
+   [
+    15,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    5,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 43,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "organizational_herding_in_advertising_spending_disclosures_e",
+  "design": "iv_2sls",
+  "design_evidence": [
+   [
+    35,
+    "iv_2sls"
+   ],
+   [
+    31,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    3,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 28,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "organizational_oscillation_between_learning_and_forgetting_t",
+  "design": "iv_2sls",
+  "design_evidence": [
+   [
+    2,
+    "iv_2sls"
+   ],
+   [
+    1,
+    "survival"
+   ]
+  ],
+  "results_sentences": 0,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "pupovac_2025_product_recall_contagion_in_the_supply_chain",
+  "design": "iv_2sls",
+  "design_evidence": [
+   [
+    15,
+    "iv_2sls"
+   ],
+   [
+    7,
+    "did_natural_experiment"
+   ],
+   [
+    4,
+    "ols_fe_panel_hlm"
+   ]
+  ],
+  "results_sentences": 8,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "ridge_2025_avoidance_and_aggression_in_stakeho",
+  "design": "iv_2sls",
+  "design_evidence": [
+   [
+    4,
+    "iv_2sls"
+   ],
+   [
+    3,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 13,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "serving_differently_ceo_regulatory_focus_and_firm_stakeholde",
+  "design": "iv_2sls",
+  "design_evidence": [
+   [
+    8,
+    "iv_2sls"
+   ],
+   [
+    2,
+    "ols_fe_panel_hlm"
+   ]
+  ],
+  "results_sentences": 85,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "shedding_light_on_the_dark_side_of_firm_lobbying_a_customer_",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    3,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    1,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 24,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "the_decision_to_recall_a_behavioral_investigation_in_the_med",
+  "design": "experiment",
+  "design_evidence": [
+   [
+    3,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 94,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "the_dynamic_impact_of_product_harm_crises_on_brand_preferenc",
+  "design": "iv_2sls",
+  "design_evidence": [
+   [
+    2,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 121,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "toward_faster_recalls_of_dangerous_medical_devices_does_owne",
+  "design": "survival",
+  "design_evidence": [
+   [
+    10,
+    "survival"
+   ],
+   [
+    7,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    1,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 51,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "two_sides_of_the_same_coin_elizabeth_g_pontikes_2012",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    58,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    18,
+    "survival"
+   ]
+  ],
+  "results_sentences": 101,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "waiting_to_inhale_reducing_stigma_in_the_medical_cannabis_in",
+  "design": "unknown",
+  "design_evidence": [],
+  "results_sentences": 406,
+  "flags": [
+   {
+    "type": "OVERCLAIM",
+    "section": "results",
+    "sentence_no": 21,
+    "tier": "T_DEFINITIVE",
+    "match": "caused",
+    "sentence": "Beginning in the early 1970s, activists such as the National Organization to Reform Marijuana Laws (NORML) spent about 20 years unsuccessfully pushing for full legalization of all uses of cannabis based on a moral agenda that focused on individual rights and the social harm caused by incarceration for minor drug offenses.",
+    "rule": "unknown.forbidden includes T_DEFINITIVE"
+   },
+   {
+    "type": "OVERCLAIM",
+    "section": "results",
+    "sentence_no": 27,
+    "tier": "T_DEFINITIVE",
+    "match": "led to",
+    "sentence": "The second event that led to initiating the moral agenda was the AIDS crisis.",
+    "rule": "unknown.forbidden includes T_DEFINITIVE"
+   }
+  ],
+  "all_flag_count": 3
+ },
+ {
+  "key": "what_drives_a_firm_s_choice_of_product_recall",
+  "design": "iv_2sls",
+  "design_evidence": [
+   [
+    4,
+    "iv_2sls"
+   ],
+   [
+    1,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    1,
+    "did_natural_experiment"
+   ]
+  ],
+  "results_sentences": 125,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "wowak_2015_throwing_caution_to_the_wind_the_effect_of_ceo_st",
+  "design": "iv_2sls",
+  "design_evidence": [
+   [
+    1,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 40,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "wowak_2020_the_influence_of_female_directors_on_product_reca",
+  "design": "iv_2sls",
+  "design_evidence": [
+   [
+    19,
+    "iv_2sls"
+   ],
+   [
+    12,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    2,
+    "survival"
+   ]
+  ],
+  "results_sentences": 63,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "wowak_et_al_2025_the_politics_of_product_safet",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    20,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    9,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 89,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "zhou_2019_promotions_as_competitive_reactions_20260811_14162",
+  "design": "experiment",
+  "design_evidence": [
+   [
+    24,
+    "experiment"
+   ],
+   [
+    19,
+    "iv_2sls"
+   ],
+   [
+    13,
+    "ols_fe_panel_hlm"
+   ]
+  ],
+  "results_sentences": 29,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "safe_to_talk_safe_to_work_anti_slapp_statutes_and_workplace_",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    31,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    17,
+    "did_natural_experiment"
+   ],
+   [
+    2,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 34,
+  "flags": [],
+  "all_flag_count": 3
+ },
+ {
+  "key": "biased_interpretation_of_performance_feedback_the_role_of_ce",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    4,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    1,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 40,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "ceo_military_experience_and_corporate_restructuring_strategi",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    5,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    4,
+    "iv_2sls"
+   ],
+   [
+    2,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 0,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "from_armed_roots_to_airline_routes_in_south_america_a_dual_i",
+  "design": "survival",
+  "design_evidence": [
+   [
+    14,
+    "survival"
+   ],
+   [
+    9,
+    "iv_2sls"
+   ],
+   [
+    7,
+    "ols_fe_panel_hlm"
+   ]
+  ],
+  "results_sentences": 45,
+  "flags": [],
+  "all_flag_count": 5
+ },
+ {
+  "key": "home_alone_the_effects_of_lone_insider_boards_on_ceo_pay_fin",
+  "design": "iv_2sls",
+  "design_evidence": [
+   [
+    15,
+    "iv_2sls"
+   ],
+   [
+    10,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    3,
+    "nonlinear"
+   ]
+  ],
+  "results_sentences": 34,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "is_red_or_blue_more_likely_to_narrow_the_gap_the_effect_of_c",
+  "design": "iv_2sls",
+  "design_evidence": [
+   [
+    9,
+    "iv_2sls"
+   ],
+   [
+    1,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 91,
+  "flags": [],
+  "all_flag_count": 1
+ },
+ {
+  "key": "strategic_management_journal_2016_chin_c",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    2,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    1,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 16,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "the_military_imprint_the_effect_of_executives_military_exper",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    16,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    11,
+    "iv_2sls"
+   ],
+   [
+    3,
+    "survival"
+   ]
+  ],
+  "results_sentences": 81,
+  "flags": [
+   {
+    "type": "OVERCLAIM",
+    "section": "results",
+    "sentence_no": 20,
+    "tier": "T_DEFINITIVE",
+    "match": "causes",
+    "sentence": "In this activity, the Chinese government conferred soldier military officer rank according to his/her contributions to the country’s revolutionary causes.",
+    "rule": "ols_fe_panel_hlm.forbidden includes T_DEFINITIVE"
+   }
+  ],
+  "all_flag_count": 3
+ },
+ {
+  "key": "troops_are_business_schools_military_service_and_entrepreneu",
+  "design": "iv_2sls",
+  "design_evidence": [
+   [
+    26,
+    "iv_2sls"
+   ],
+   [
+    7,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    3,
+    "experiment"
+   ]
+  ],
+  "results_sentences": 265,
+  "flags": [],
+  "all_flag_count": 0
+ },
+ {
+  "key": "wage_inequality_its_impact_on_customer_satisfaction_and_firm",
+  "design": "ols_fe_panel_hlm",
+  "design_evidence": [
+   [
+    3,
+    "ols_fe_panel_hlm"
+   ]
+  ],
+  "results_sentences": 29,
+  "flags": [],
+  "all_flag_count": 2
+ },
+ {
+  "key": "when_much_more_of_a_difference_makes_a_difference_social_com",
+  "design": "nonlinear",
+  "design_evidence": [
+   [
+    27,
+    "nonlinear"
+   ],
+   [
+    2,
+    "ols_fe_panel_hlm"
+   ],
+   [
+    1,
+    "iv_2sls"
+   ]
+  ],
+  "results_sentences": 41,
+  "flags": [],
+  "all_flag_count": 1
+ }
+]

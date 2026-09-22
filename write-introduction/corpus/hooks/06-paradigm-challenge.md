@@ -165,7 +165,7 @@ source: Manually curated from MVP30 narrative_analysis files
 - 纯理论前提冷启动：不靠数据/引语/轶事，而以一条资源依赖式理论前提开场，能量低但直接服务 puzzle
 - 同位语构念落地：前提句内用同位语（"——audiences——"）一次性钉死焦点构念，不单独立定义段
 - 情境枚举收束：第二、三句用投资者/顾客/个人评审/外部评审四类评价情境把构念铺成现象面，为 multiple audiences 的 gap 预埋复数感
-- 与 hooks 现有 27 个 canonical 均不同：既有冷启动条目只有 cold-start-cost-cascade（成本递进型），无"理论前提→构念同位落地→情境枚举"型
+- 与 hooks 现有 canonical 均不同：既有的成本递进型冷启动见 `08-consequence-cascade` 变体 A（mayo2021 型），无"理论前提→构念同位落地→情境枚举"型
 
 **适用**: 构念本身即研究对象的 Incompleteness×Mechanism 研究；当焦点构念（如 audiences、valuation）在文献中有成熟理论根基但跨受众维度未被打开时，用前提冷启动而非数据冲击
 

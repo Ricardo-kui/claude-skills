@@ -1,5 +1,5 @@
 meta:
-  last_updated: '2026-09-06d'
+  last_updated: '2026-09-20'
   total_mvp30_papers_indexed: 62
   batches_processed: 35
   latest_batch_note: '2026-09-06f 残余复核：theory-lens/_index.md 行注 1 条翻转（02-dual-theory-layered 变体 E gulati2005 EMERGING→VERIFIED）。2026-09-06e 补扫 _index.md 行注 10 条：findings-preview 变体V（gulati2005）/ theory-lens-driven-preview 变体R（pfarrer2010）+变体S（gulati1998）/ theory-lens/10 变体B（gulati1998）/ transitions/10 变体F（gulati_sytch2007）/ gap-to-contribution 变体G（pfarrer2010）/ tensions/01 变体AI（westphalzajac1995）+变体AP（gulati1998）+变体AU（higgins_gulati2003）+变体AV（gulati2005）EMERGING→VERIFIED（expert_audit_override 2026-09-06）。2026-09-06d 用户升级裁定（expert_audit_override 全量生效）：Pollock/Westphal/Gulati 系论文的蒸馏条目单源即 VERIFIED；本 registry evidence 区 7 条 EMERGING→VERIFIED（01-cross-disciplinary-analogy、13-rhetorical-question、15-extreme-situation、17-debate-reframing、20-counterintuitive-finding、dv-methodology-defense、09-construct-contrast-introduction）。前批：2026-09-06b Gulati 1999 (AJS, Where Do Interorganizational Networks Come From?; citekey gulati_1999_where_do_interorganizational_networks) 残项同步：新建 contributions/metatheory-anchored-contribution（经典二重性接驳贡献声明）registry 行（模块文件与 _index 已由写回器落盘），gap=Inadequacy，VERIFIED per expert_audit_override（Gulati 系单源即 VERIFIED）；另有 hooks/05 ADD、tensions/01 ADD、previews/mechanism-preview ADD 已由写回器自动同步，2 SKIP 手工改判。前批：2026-09-06 Gulati & Westphal 1999 (ASQ, Cooperative or Controlling; citekey gulati_westphal_1999_cooperative_or_controlling) 残项同步：新建 hooks/27-theory-testbed-arena（理论试验场致意 Hook）与 stakes/10-irreversible-commitment-stakes（不可逆承诺放大 Stakes）registry 行（模块文件与 _index 已由写回器落盘），gap=Inadequacy，全 VERIFIED per expert_audit_override（Gulati 系单源即 VERIFIED）；另有 tensions/01 EXTEND 与 previews/mechanism-preview EXTEND 已由写回器自动同步。前批：2026-08-28 Wowak, Ball, Post & Ketchen 2021 M&SOM (The Influence of Female Directors on Product Recall Decisions;
@@ -282,7 +282,7 @@ evidence:
         revise: 0
         reject: 0
         common_revise_reasons: []
-    10-practical-puzzle:
+    28-practitioner-puzzle:
       paper_count: 2
       papers:
         - ceo_regulatory_focus_ijrm (IJRM)
@@ -457,7 +457,7 @@ evidence:
       paper_count: 2
       papers:
         - employee_free_speech2024 (OS)
-        - weng_yang (JMS)
+        - weng_yang2024 (JMS)
       gap_distribution:
         Incompleteness: 1
         Inadequacy: 1
@@ -472,7 +472,7 @@ evidence:
         revise: 0
         reject: 0
         common_revise_reasons: []
-    17-classic-debate-constraint:
+    29-debate-constraint-relaxation:
       paper_count: 1
       papers:
         - shareholder_litigation (SMJ)
@@ -564,29 +564,10 @@ evidence:
         revise: 0
         reject: 0
         common_revise_reasons: []
-    cold-start-cost-cascade:
-      paper_count: 1
-      papers:
-        - mayo2021 (POM)
-      gap_distribution:
-        Incompleteness: 1
-        Inadequacy: 0
-        Incommensurability: 0
-      status: VERIFIED
-      verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
-      generativity: ADAPTABLE
-      exclusivity: LOW
-      common_failures: []
-      validation_history:
-        total_runs: 0
-        validated: 0
-        revise: 0
-        reject: 0
-        common_revise_reasons: []
     25-empirical-puzzle-after-consensus:
       paper_count: 1
       papers:
-        - cui_yang_vertinsky (SMJ)
+        - cui_yang_vertinsky_2018 (SMJ)
       gap_distribution:
         Incompleteness: 1
         Inadequacy: 0
@@ -662,7 +643,7 @@ evidence:
         - ahmadi2017 (JMS)
         - cancellieri2023 (SMJ)
         - castellaneta_conti_kacperczyk2017 (SMJ)
-        - cui_yang_vertinsky_smj (SMJ)
+        - cui_yang_vertinsky_2018 (SMJ)
         - cutolo2024 (JM)
         - darby2024 (MSOM)
         - darby2025 (JSCM)
@@ -1032,7 +1013,7 @@ evidence:
     16-threefold-gap:
       paper_count: 3
       papers:
-        - cui_yang_vertinsky (SMJ)
+        - cui_yang_vertinsky_2018 (SMJ)
         - "liu_shankar2015 (MS, 2015)"
         - malshe2015 (JM)
       gap_distribution:
@@ -1360,13 +1341,37 @@ evidence:
         reject: 0
         common_revise_reasons: []
   literature_turns:
+    literature-turn-templates:
+      paper_count: 7
+      papers:
+        - zhou2017 (ASQ)
+        - gamache2020 (SMJ)
+        - eilert2017 (JM)
+        - wu2025 (SMJ)
+        - keeves2017 (ASQ)
+        - darby2026 (JOM)
+        - wowak2025 (MS)
+      gap_distribution:
+        Incompleteness: 7
+        Inadequacy: 0
+        Incommensurability: 0
+      status: VERIFIED
+      generativity: GENERATIVE
+      exclusivity: LOW
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
     01-progressive-coherence:
       paper_count: 32
       papers:
         - Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ (SMJ)
         - castellaneta_conti_kacperczyk2017 (SMJ)
         - ceo_regulatory_focus_ijrm (IJRM)
-        - cui_yang_vertinsky_smj (SMJ)
+        - cui_yang_vertinsky_2018 (SMJ)
         - cutolo2024 (JM)
         - darby2024 (MSOM)
         - darby2025 (JSCM)
@@ -1488,12 +1493,34 @@ evidence:
         reject: 0
         common_revise_reasons: []
   previews:
+    theory-lens-driven-preview:
+      paper_count: 5
+      papers:
+        - pontikes2012 (ASQ)
+        - westphalzajac1995 (AMJ)
+        - pfarrer_pollock_and_rindova_2010 (AMJ)
+        - gulati_1998_alliances_and_networks (SMJ)
+        - gulati_nohria_zaheer_2000_strategic_networks (SMJ)
+      gap_distribution:
+        Incompleteness: 0
+        Inadequacy: 5
+        Incommensurability: 0
+      status: VERIFIED
+      generativity: ADAPTABLE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
     mechanism-preview:
       paper_count: 30
       papers:
         - bamberger_homburg_wielgos2021 (JM)
         - castellaneta_conti_kacperczyk2017 (SMJ)
-        - cui_yang_vertinsky_smj (SMJ)
+        - cui_yang_vertinsky_2018 (SMJ)
         - gamache2023 (SMJ)
         - grewal2025 (JM)
         - hoffmann_cheong_phan_zurbruegg2024 (JM)
@@ -1762,10 +1789,316 @@ evidence:
         reject: 0
         common_revise_reasons: []
   transitions:
+    01-hook-to-literature:
+      paper_count: 4
+      papers:
+        - lashley_pollock2020 (ASQ)
+        - eilert2017 (JM)
+        - wu2025 (SMJ)
+        - han2020 (AMJ)
+      gap_distribution:
+        Incompleteness: 4
+        Inadequacy: 0
+        Incommensurability: 0
+      status: VERIFIED
+      generativity: GENERATIVE
+      exclusivity: LOW
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    02-actor-funnel:
+      paper_count: 4
+      papers:
+        - darby2026 (JOM)
+        - gamache2020 (SMJ)
+        - shen2022 (JOM)
+        - wu2025 (SMJ)
+      gap_distribution:
+        Incompleteness: 4
+        Inadequacy: 0
+        Incommensurability: 0
+      status: VERIFIED
+      generativity: GENERATIVE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    03-unified-moderator-framework:
+      paper_count: 3
+      papers:
+        - darby2026 (JOM)
+        - gamache2023 (SMJ)
+        - ceo_regulatory_focus_ijrm (IJRM)
+      gap_distribution:
+        Incompleteness: 3
+        Inadequacy: 0
+        Incommensurability: 0
+      status: VERIFIED
+      generativity: GENERATIVE
+      exclusivity: HIGH
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    04-field-migration:
+      paper_count: 1
+      papers:
+        - mayo2021 (POM)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 0
+        Incommensurability: 0
+      status: VERIFIED
+      generativity: ADAPTABLE
+      exclusivity: LOW
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    05-extend-key-study:
+      paper_count: 1
+      papers:
+        - mayo2021 (POM)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 0
+        Incommensurability: 0
+      status: VERIFIED
+      generativity: ADAPTABLE
+      exclusivity: LOW
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    06-data-barrier-justification:
+      paper_count: 1
+      papers:
+        - mannor2016 (SMJ)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 0
+        Incommensurability: 0
+      status: VERIFIED
+      generativity: ADAPTABLE
+      exclusivity: LOW
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    07-construct-migration:
+      paper_count: 1
+      papers:
+        - mannor2016 (SMJ)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 0
+        Incommensurability: 0
+      status: VERIFIED
+      generativity: ADAPTABLE
+      exclusivity: LOW
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    08-case-to-field-generalization:
+      paper_count: 1
+      papers:
+        - desai2012 (AMJ)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 0
+        Incommensurability: 0
+      status: VERIFIED
+      generativity: ADAPTABLE
+      exclusivity: LOW
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    09-micro-macro-complement:
+      paper_count: 2
+      papers:
+        - lehman2014 (MS)
+        - zhou2017 (ASQ)
+      gap_distribution:
+        Incompleteness: 2
+        Inadequacy: 0
+        Incommensurability: 0
+      status: VERIFIED
+      generativity: ADAPTABLE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    11-roadmap:
+      paper_count: 4
+      papers:
+        - vadakkepatt2022 (JM)
+        - zhou2017 (ASQ)
+        - darby2026 (JOM)
+        - mannor2016 (SMJ)
+      gap_distribution:
+        Incompleteness: 4
+        Inadequacy: 0
+        Incommensurability: 0
+      status: VERIFIED
+      generativity: GENERATIVE
+      exclusivity: LOW
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    12-setting-justification:
+      paper_count: 2
+      papers:
+        - wowak2025 (MS)
+        - pollock2015 (ASQ)
+      gap_distribution:
+        Incompleteness: 2
+        Inadequacy: 0
+        Incommensurability: 0
+      status: VERIFIED
+      generativity: GENERATIVE
+      exclusivity: LOW
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    13-multi-actor-upper-echelons-funnel:
+      paper_count: 1
+      papers:
+        - chung_low_rust_2022_jams (JAMS)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 0
+        Incommensurability: 0
+      status: EMERGING
+      generativity: GENERATIVE
+      exclusivity: HIGH
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    14-nested-moderation-preview:
+      paper_count: 1
+      papers:
+        - chung_low_rust_2022_jams (JAMS)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 0
+        Incommensurability: 0
+      status: EMERGING
+      generativity: GENERATIVE
+      exclusivity: HIGH
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    gap-to-contribution:
+      paper_count: 6
+      papers:
+        - zhou2017 (ASQ)
+        - keeves2017 (ASQ)
+        - eilert2017 (JM)
+        - gamache2020 (SMJ)
+        - desjardine2023 (OS)
+        - pfarrer_pollock_and_rindova_2010 (AMJ)
+      gap_distribution:
+        Incompleteness: 6
+        Inadequacy: 0
+        Incommensurability: 0
+      status: VERIFIED
+      generativity: GENERATIVE
+      exclusivity: LOW
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    worked-example-pair:
+      paper_count: 0
+      papers: []
+      gap_distribution:
+        Incompleteness: 0
+        Inadequacy: 0
+        Incommensurability: 0
+      status: EMERGING
+      generativity: ADAPTABLE
+      exclusivity: LOW
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
     10-literature-to-gap:
       paper_count: 1
       papers:
         - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int (ASQ)
+  differentiation:
+    01-prior-work-boundary-clarification:
+      paper_count: 1
+      papers:
+        - weng_yang2024 (JMS)
+      gap_distribution:
+        Incompleteness: 0
+        Inadequacy: 1
+        Incommensurability: 0
+      status: EMERGING
+      generativity: ADAPTABLE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
   research_questions:
     01-three-questions-counterintuitive:
       paper_count: 1
@@ -1788,8 +2121,8 @@ evidence:
     02-explicit-dual-question-narrowing:
       paper_count: 5
       papers:
-        - weng_yang (JMS)
-        - cui_yang_vertinsky (SMJ)
+        - weng_yang2024 (JMS)
+        - cui_yang_vertinsky_2018 (SMJ)
         - hoffmann_cheong_phan_zurbruegg2024 (JM)
         - fini_jourdan_perkmann_2017 (AMJ)
         - fang_et_al_2025_rival_recall_ad_spend (Production and Operations Management)
@@ -1808,6 +2141,79 @@ evidence:
         reject: 0
         common_revise_reasons: []
   theory_lens:
+    04-screening-theory-two-stage:
+      paper_count: 1
+      papers:
+        - pupovac2026 (POM)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 0
+        Incommensurability: 0
+      status: EMERGING
+      generativity: GENERATIVE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    05-maxim-contrast:
+      paper_count: 2
+      papers:
+        - haunschild2015 (OS)
+        - qiao2026 (SMJ)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 1
+        Incommensurability: 0
+      status: VERIFIED
+      generativity: ADAPTABLE
+      exclusivity: HIGH
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    06-context-bridging:
+      paper_count: 1
+      papers:
+        - haunschild2015 (OS)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 0
+        Incommensurability: 0
+      status: VERIFIED
+      generativity: ADAPTABLE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
+    dual-channel-decomposition:
+      paper_count: 1
+      papers:
+        - fini_jourdan_perkmann_2017 (AMJ)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 0
+        Incommensurability: 0
+      status: EMERGING
+      generativity: GENERATIVE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
     theory-lens-templates:
       paper_count: 47
       papers:
@@ -2113,7 +2519,7 @@ paper_index:
   higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe: Incompleteness
   lu_et_al_2022_frenemies_corporate_advertising: Incompleteness
   mao_dong_lee_2022_msom: Incompleteness
-  pfarrer_pollock_and_rindova_2010: Incompleteness
+  pfarrer_pollock_and_rindova_2010: Inadequacy
   ridge_aime_white_2013_smj: Incompleteness
   zajac_westphal_the_social_construction_of_market_value: Incompleteness
 
@@ -2128,6 +2534,42 @@ status_overrides:
   note: >-
     用户裁定状态，显式越过 phase-4 ladder（1–2 来源 EMERGING / 3+ VERIFIED / 5+ 跨 2 子域 ROBUST；见 distill-theory-exemplar/references/phase-4-validation-writeback.md L232-238）。rebuild 派生 status = ladder ⊕ 本节（本节显式优先）；键为 registry 路径，value.status 为裁定档位，value.basis 为裁定凭据原文。本节属 AUTHORED——rebuild 透传不改。
   overrides:
+    evidence.transitions.04-field-migration:
+      status: VERIFIED
+      basis: >-
+        pre-partition carried status（单源/双源用户裁定时代）
+    evidence.transitions.05-extend-key-study:
+      status: VERIFIED
+      basis: >-
+        pre-partition carried status（单源/双源用户裁定时代）
+    evidence.transitions.06-data-barrier-justification:
+      status: VERIFIED
+      basis: >-
+        pre-partition carried status（单源/双源用户裁定时代）
+    evidence.transitions.07-construct-migration:
+      status: VERIFIED
+      basis: >-
+        pre-partition carried status（单源/双源用户裁定时代）
+    evidence.transitions.08-case-to-field-generalization:
+      status: VERIFIED
+      basis: >-
+        pre-partition carried status（单源/双源用户裁定时代）
+    evidence.transitions.09-micro-macro-complement:
+      status: VERIFIED
+      basis: >-
+        pre-partition carried status（单源/双源用户裁定时代）
+    evidence.transitions.12-setting-justification:
+      status: VERIFIED
+      basis: >-
+        pre-partition carried status（单源/双源用户裁定时代）
+    evidence.theory_lens.05-maxim-contrast:
+      status: VERIFIED
+      basis: >-
+        pre-partition carried status（单源/双源用户裁定时代）
+    evidence.theory_lens.06-context-bridging:
+      status: VERIFIED
+      basis: >-
+        pre-partition carried status（单源/双源用户裁定时代）
     evidence.contributions.metatheory-anchored-contribution:
       status: VERIFIED
       basis: >-
@@ -2149,10 +2591,6 @@ status_overrides:
       basis: >-
         pre-partition carried status（单源/双源用户裁定时代）
     evidence.hooks.27-theory-testbed-arena:
-      status: VERIFIED
-      basis: >-
-        pre-partition carried status（单源/双源用户裁定时代）
-    evidence.hooks.cold-start-cost-cascade:
       status: VERIFIED
       basis: >-
         pre-partition carried status（单源/双源用户裁定时代）
@@ -2181,6 +2619,10 @@ status_overrides:
       basis: >-
         pre-partition carried status（单源/双源用户裁定时代）
     evidence.tensions.18-context-generalizability:
+      status: VERIFIED
+      basis: >-
+        pre-partition carried status（单源/双源用户裁定时代）
+    evidence.tensions.cross-domain-migration:
       status: VERIFIED
       basis: >-
         pre-partition carried status（单源/双源用户裁定时代）

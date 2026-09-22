@@ -233,7 +233,7 @@ leading to a zero net effect.
 <!--
 pattern_id: F_anaphoric_sign_flip_pair_cross_policy
 build_type: 竞争假设型（变体 F）
-source_papers: ["zajac_westphal_2004_asr"]
+source_papers: ["zajac_westphal_the_social_construction_of_market_value"]
 confidence: medium（F 变体第 3 源，常规规则即升 VERIFIED）
 status: VERIFIED
 verification_basis: "expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)"

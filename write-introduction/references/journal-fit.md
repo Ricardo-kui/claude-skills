@@ -45,7 +45,7 @@
 
 **catalog 口径（2026-09-14 实测）**：达 ≥5 卡的 outlet 为 SMJ 11 / AMJ 10 / JM 9 / MS 7 / POM 6；合并 ASQ 三种拼写别名（`Administrative Science Quarterly` 4 + `Administrative Science Quarterly 52(1): 32-69` 1 + `ASQ` 1）后 ASQ 6；JOM 仅 1 卡（`darby2026`）、JMS（Journal of Management Studies）0 卡（catalog 另有 `Journal of Management` 1 卡 `malik2025`，与本行 JMS 非同一 outlet）。因 12 个画像维度中无一能由 catalog 派生到具区分度的 ≥5 卡证据，**本表 `catalog≥5` 格数 = 0**；达到 ≥5 卡的 outlet 不自动使任一格升级，须先补卡正文抽取（见上表「升级方式」）。
 
-**corpus-hooks 覆盖实测**：`corpus/hooks/` 共 31 个 `.md`（含 `_index.md`）；有 `## 期刊适配` 表的 **25 个**（任务书与 D-01 所称「28/28」已过时）；缺表 5 张：`08-consequence-cascade` / `09-psychological-construct-hook` / `10-immersive-narrative` / `27-theory-testbed-arena` / `cold-start-cost-cascade`（`_index.md` 仅正文提及）。
+**corpus-hooks 覆盖实测**：`corpus/hooks/` 共 30 个 `.md`（含 `_index.md`）；有 `## 期刊适配` 表的 **26 个**（任务书与 D-01 所称「28/28」已过时）；缺表 4 张：`08-consequence-cascade` / `09-psychological-construct-hook` / `10-immersive-narrative` / `27-theory-testbed-arena`（`_index.md` 仅正文提及）。
 
 ## 元句容受列与水位门的对齐
 

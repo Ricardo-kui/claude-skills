@@ -339,7 +339,6 @@ restrictions ([citation]).
 
 <!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:r2_instrument_dual_condition_audit_just_identified_boundary -->
 
-<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:r2_instrument_dual_condition_audit_just_identified_boundary_gulati_sytch2007 -->
 
 ### 变体 15：互为因果双内生系统的 3SLS 主估计导航（gulati_sytch2007 型）
 
@@ -388,7 +387,6 @@ from the model.
 
 <!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:r2_reciprocal_3sls_system_navigation -->
 
-<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:r2_reciprocal_3sls_system_navigation_gulati_sytch2007 -->
 
 ### 变体 14：选择修正项不显著 + Hausman 显著的双信号诚实收束（Null Correction Term with Significant Hausman）
 
@@ -458,4 +456,3 @@ repeated random samples equal to the number of clusters. ... Our estimates are b
 
 <!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:r7_3sls_cluster_bootstrap_inference_workaround -->
 
-<!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:r7_3sls_cluster_bootstrap_inference_workaround_gulati_sytch2007 -->

@@ -148,5 +148,5 @@ GBL Ch3 的原型是 Turner (1976, ASQ)：田野张力="哪些正在逼近的问
 
 - **双 resolution 合同不可豁免**: 实证设计只能回答一个张力时使用本 hook 会造成 Introduction 承诺无法兑现（over-claiming）
 - **田野张力必须真实**: 构造的"假想两难"（行动者并不真实面对的）会在审稿人处穿帮——田野张力应从现象文献/实践报道/数据中可引证
-- **与 `10-practical-puzzle` 的边界**: practical-puzzle 只有田野张力（理论张力是后补的），本 hook 要求两者在设计阶段就互为表里；不确定时用 practical-puzzle 更安全
+- **与 `28-practitioner-puzzle` 的边界**: practical-puzzle 只有田野张力（理论张力是后补的），本 hook 要求两者在设计阶段就互为表里；不确定时用 practical-puzzle 更安全
 - **EMERGING 状态**: 目前 1 个显式范例（turner1976）+ 1 个隐式识别（haunschild2015），跨论文验证待积累

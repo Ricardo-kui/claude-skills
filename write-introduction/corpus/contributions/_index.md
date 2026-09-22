@@ -18,7 +18,7 @@ source_papers:
   - kalaignanam2017 (JM, 2017): Contribution-fronted structure — three contributions detailed before preview/methods
   - ahmadi2017 (JMS, 2017): Compressed threefold with internal gap-recap — each contribution self-contains 'gap→fill→significance' cycle
   - qiao2026 (SMJ, 2026): "Fundamental question return — 'answering one fundamental question—why firms persistently differ (Rumelt, 1994)—through demonstrating that...'"
-  - weng_yang (JMS): "Contrast-framed twofold — each contribution opens with 'In contrast with prior studies...', anchored in different literature streams, ends with broader implication"
+  - weng_yang2024 (JMS, 2024): "Contrast-framed twofold — each contribution opens with 'In contrast with prior studies...', anchored in different literature streams, ends with broader implication"
   - wowak2025 (MS, 2025): "Convergent dual-literature-scan + awareness-and-mitigation — two parallel 'known→unknown' scans converge on one gap from opposite directions; implications split into descriptive awareness + empirically-tested mitigation"
   - kashmiri_nicol_arora2017 (JAMS, 2017): "Humanize firm strategy + open the mechanism black box + install a controllable countervailing remedy"
   - kim_lee2026 (SMJ, 2026): "Full-time validation + revealed-preference WTP + stage durability null + gendered early-stage advantage"
@@ -427,12 +427,12 @@ P7-P8 的功能：明确回答 "so what"，告诉读者这项研究对文献、�
 
 ---
 
-### 变体 N：对比框定双重贡献型（weng_yang 型）
+### 变体 N：对比框定双重贡献型（weng_yang2024 型）
 
 **模板**:
 > "Our contributions to the literature are twofold. First, we contribute to the research on [Literature A] by highlighting [novel construct] as a [type of contribution]. In contrast with prior studies suggesting [dominant external explanation] ([citations]), we contend that [our mechanism explanation]. In doing so, we seek to demonstrate that [broader implication]. Second, our study also enriches the research on [Literature B]. Existing research suggests that [existing findings in Literature B] ([citations]). Here we postulate that [our novel extension]. [DV] has been a highly contentious social issue ([citation]). By highlighting the pivotal role of [IV], we hope to broaden the discussion scope of this issue."
 
-**来源**: weng_yang (JMS), P4
+**来源**: weng_yang2024 (JMS, 2024), P4
 
 **原文锚定**:
 > "First, we contribute to the research on within-firm pay inequality by highlighting CEO political ideology as a novel determinant. In contrast with prior studies suggesting external factors such as institutional requirements (DiMaggio and Powell, 1983; Meyer and Rowan, 1977), we contend that CEOs' political ideologies may affect how they perceive the external environment and make important decisions accordingly."

@@ -115,7 +115,7 @@ R1–R9 是证据功能，不是强制章节顺序。按需加载 slot 骨架（
 - **反模式自查（先生效）**：`references/anti-patterns.md`（逐条排查）。
 - **自检清单**：`references/post-generation-checklist.md`——Completeness/Clarity/Credibility、段落连贯性、问题—检验对齐、小标题、语言锁定和混合证据披露。
 - **确定性语言扫描**：匹配的 active feedback 含 `prohibited_patterns` 时，执行 `scripts/lint_results_language.py <Results路径> --project <项目名>`；默认只扫描正文，并在“生成后自检记录”前停止，避免把修订日志中的反例误判为正文。
-- **回归验证**：执行 `references/validation-protocol.md`；已有草稿的独立审查交给 `/results-review <Results路径>`，范文蒸馏命令不承担草稿验证。
+- **回归验证**：执行 `references/validation-protocol.md`；已有草稿的独立审查交给 `/results-review <Results路径>`，范文蒸馏命令不承担草稿验证；产出或修订的 Results 主文另跑 postdraft-diagnostics shadow（调用方式与限制见全局 AGENTS.md「草稿诊断联动」），flag 交人工裁定，不作为完成判据。
 
 **完成判据（是/否）**：自检清单是否逐项勾选（是）？反模式是否有命中（无）？
 

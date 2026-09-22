@@ -10,7 +10,7 @@ source_papers:
   - "desai_2011_mass_media_massive_failures_amj (Academy of Management Journal): institutional break sample defense, conditional FE negative binomial zero-panel audit"
   - "pfarrer_pollock_rindova_2010_tale_of_two_assets_amj (Academy of Management Journal): matched sample hierarchical fallback + matching balance conservative test"
   - "li_chiu_kong_cropanzano_ho_2026_jom (Journal of Management): RE triple defense (theory+Hausman+ICC), full-spectrum 19 controls each with because clause, RavenPack event controls, CEO Big 5 controls"
-  - "cui_yang_vertinsky_smj_attacking_partners (Strategic Management Journal): dyad FE + dyad clustered SE, multi-source alliance database cross-validation, factor-score multidimensional DV, single-industry setting dual-phenomenon defense"
+  - "cui_yang_vertinsky_2018 (Strategic Management Journal): dyad FE + dyad clustered SE, multi-source alliance database cross-validation, factor-score multidimensional DV, single-industry setting dual-phenomenon defense"
   - "chung_low_rust_2022_jams (Journal of the Academy of Marketing Science): executive confidence option moneyness operationalization, model-free evidence preview, three-way interaction setup with mean-centering"
   - "pupovac_astvansh_carrillat_legoux_2026_pom (Production and Operations Management): automotive supplier setting defense, mandatory/voluntary disclosure threshold operationalization"
   - "du_tsolmon_2024_post_ma_retention_orsc (Organization Science): TMT retention rate DV 文献基准锚定（54.8% vs 前人 55%/59.4%）+ 三层异质数据库漏斗附录审计"

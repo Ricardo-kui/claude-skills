@@ -7,7 +7,7 @@
 
 | 子索引 | verbatim | 模板 | 行数 | 一行说明 | 何时读它 |
 |---|---|---|---|---|---|
-| [`hooks.md`](hooks.md) | 80 | 80 | 179 | 开篇 Hook 的逐字底本（数据冲击 / 悖论 / 范式挑战 / 轶事等）与填槽模板 | 要写 Hook、换 Hook 类型，或 Hook 只有信息没有张力时 |
+| [`hooks.md`](hooks.md) | 79 | 79 | 177 | 开篇 Hook 的逐字底本（数据冲击 / 悖论 / 范式挑战 / 轶事等）与填槽模板 | 要写 Hook、换 Hook 类型，或 Hook 只有信息没有张力时 |
 | [`tensions.md`](tensions.md) | 98 | 113 | 230 | 问题化 / Gap 张力句底本与填槽模板 | 要把 Gap 写成张力，或 Gap 强度不足、像 few-studies 套话时 |
 | [`stakes.md`](stakes.md) | 31 | 39 | 89 | 研究重要性 / stakes 句底本与填槽模板 | 要论证为什么重要，或 stakes 与 Hook 单调重复时 |
 | [`literature-turns.md`](literature-turns.md) | 26 | 39 | 84 | 文献对话组织句底本（progressive / synthesized / non-coherence） | 要定位文献关系、写 Literature Turn 时 |
@@ -20,7 +20,7 @@
 | [`phrasebank.md`](phrasebank.md) | 5 | 91 | 115 | Morley 措辞库借句（单研究批判 / hedging 强度 / 过程与数值描述） | G2 落句后需要换说法或校准声明强度时 |
 | [`micro-templates.md`](micro-templates.md) | 7 | 30 | 56 | 句级骨架、范文 key line、过渡信号词与 thesis 模型 | 需要句法骨架、句级 transition 或 thesis 定位模型时 |
 
-合计：verbatim 390 条 / 模板 556 条 / 1174 行。
+合计：verbatim 389 条 / 模板 555 条 / 1172 行。
 
 ## 核对记录
 

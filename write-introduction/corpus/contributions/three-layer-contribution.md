@@ -1,6 +1,6 @@
 ---
 type: canonical_contribution
-canonical_id: "contribution-three-layer"
+canonical_id: "three-layer-contribution"
 status: VERIFIED
 gap_type: all
 cross_paper: VERIFIED (1 paper, distinctive) + EMERGING variant E (canonical-effect-offset, fini2017)

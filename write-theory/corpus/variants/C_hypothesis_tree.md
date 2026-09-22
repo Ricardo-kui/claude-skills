@@ -37,9 +37,9 @@
 
 **段落扩展变体（T0 前置背景）**：如果 DV 是跨学科现象且需要多学科共识建立，可在 P1 前插入 T0 段落——详见 `corpus/sentences/construct_definition.md` 变体 E。
 
-**P3-P4 变体：双原因+三方行为者对比型（weng_yang 型）**：当 IV 是一个连续谱（非二元）且存在理论上可推导的反方向行为者时，H1 段落按五拍展开：Reason1→Reason2→反方对比→中间基准→权威收束→H1。详见 `corpus/sentences/mechanism_chain.md` 变体 D。
+**P3-P4 变体：双原因+三方行为者对比型（weng_yang2024 型）**：当 IV 是一个连续谱（非二元）且存在理论上可推导的反方向行为者时，H1 段落按五拍展开：Reason1→Reason2→反方对比→中间基准→权威收束→H1。详见 `corpus/sentences/mechanism_chain.md` 变体 D。
 
-**P5-P8 变体：Moderator 选择元框架前置（weng_yang 型）**：当 ≥2 个 moderators 且可通过 H1 的机制维度（如 awareness vs capacity）分类时，在推导具体调节假设前，用 1 段解释 moderator 选择的理论逻辑。详见 `corpus/sentences/moderation.md` 变体 "H1 机制锚定型"。
+**P5-P8 变体：Moderator 选择元框架前置（weng_yang2024 型）**：当 ≥2 个 moderators 且可通过 H1 的机制维度（如 awareness vs capacity）分类时，在推导具体调节假设前，用 1 段解释 moderator 选择的理论逻辑。详见 `corpus/sentences/moderation.md` 变体 "H1 机制锚定型"。
 
 ---
 

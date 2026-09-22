@@ -12,7 +12,7 @@ source_papers:
   - gamache2020 (SMJ, 2020): "Natural progression from general to specific"
   - mayo2021 (POM, 2021): "Cross-disciplinary literature review with Table"
   - grewal2025 (JM, 2025): "Consensus building + practice complexity in digital advertising ecosystems"
-  - cui_yang_vertinsky_smj (SMJ): "Consensus + stakes + three unaddressed issues preview"
+  - cui_yang_vertinsky_2018 (SMJ): "Consensus + stakes + three unaddressed issues preview"
   - malshe2015 (JM, 2015): "Nascent marketing–finance stream + complementary-half pivot (equity examined, debt not)"
   - schumacher_keck_tang2020 (SMJ, 2020): "Two mature streams joined through a necessary interpretive bottleneck"
   - hoffmann_cheong_phan_zurbruegg2024 (JM, 2024): "Institutional shock deep-dive — derivative lawsuit mechanism → UD law procedural hurdle before tension pivot"
@@ -65,7 +65,7 @@ P2-P3 的功能：承认文献已有实质进展，但精确指出被遗漏的�
 | D | 跨学科引入型（mayo2021 型） |  | 跨学科引入：外部领域机制迁移到目标领域 |  | mayo2021 (POM), P2 |
 | E | Table 1 文献矩阵型（darby2025 型） |  | 文献>=15 篇需要展示广度：Table 1 矩阵替代长篇叙述 |  | darby2025 (JSCM), P2 + Table 1 |
 | F | 共识建立 + 实践复杂性型（grewal2025 型） |  | 共识建立+实践复杂性：新兴环境挑战传统实践 |  | Grewal, Vana, and Stephen (2025), *Jou |
-| G | 共识 + Stakes 嵌入 + 三重缺口预告（cui_yang_vertinsky | 成熟流递进 | 共识+Stakes 嵌入+三重缺口预告（紧凑 SMJ 风格） |  | Cui, Yang & Vertinsky (SMJ), P2 |
+| G | 共识 + Stakes 嵌入 + 三重缺口预告（cui_yang_vertinsky_2018 | 成熟流递进 | 共识+Stakes 嵌入+三重缺口预告（紧凑 SMJ 风格） |  | Cui, Yang & Vertinsky (SMJ), P2 |
 | H | 新兴交叉流 + 互补半区缺口型（malshe2015 型） | 近邻工作推进 | 新兴交叉流+互补半区：源学科成熟、目标学科刚起步且只做了一半 |  | Malshe & Agarwal (2015, *Journal of Ma |
 | I | 双成熟文献流 + 必要解释瓶颈（Schumacher–Keck–Tang 2020 |  | 双成熟文献流通过必要解释瓶颈连接（信号→解释→响应） |  | Schumacher, Keck, and Tang (2020), *St |
 | J | 制度冲击机制深描型（hoffmann2024 型） |  | 制度冲击机制深描：treatment 对非法律读者不直观 |  | hoffmann_cheong_phan_zurbruegg2024 (JM |
@@ -179,7 +179,7 @@ P2-P3 的功能：承认文献已有实质进展，但精确指出被遗漏的�
 ---
 
 
-### 变体 G：共识 + Stakes 嵌入 + 三重缺口预告（cui_yang_vertinsky_smj 型）
+### 变体 G：共识 + Stakes 嵌入 + 三重缺口预告（cui_yang_vertinsky_2018 型）
 
 **模板**:
 > A thorough study of [puzzle] is of great theoretical importance, contributing to [broad theoretical goal] ([citation]). Prior studies on [stream] have provided important insights into [tension] ([citations]). For example, researchers maintain that [mechanism 1] and have identified important factors that influence [outcome], such as [factor A], [factor B], and [factor C] ([citations]). However, [N] important issues in this sphere of research remain unaddressed.
@@ -464,7 +464,7 @@ P2-P3 的功能：承认文献已有实质进展，但精确指出被遗漏的�
 
 ### 默认配对（对角线，能量匹配）
 - **与 `03-data-shock` (Hook) 配对**: 数据冲击建立 stakes，递进缺口将数据转化为学术问题
-- **与 `10-practical-puzzle` (Hook) 配对**: 实践困境建立相关性，递进缺口精确到学术文献
+- **与 `28-practitioner-puzzle` (Hook) 配对**: 实践困境建立相关性，递进缺口精确到学术文献
 - **与 `01-despite-progress-unaddressed` (Tension) 配对**: Progressive Coherence 是此 Tension 的标准 Conversation 策略
 
 ### 非默认组合（非对角合法，不由 Gap 类型反推）

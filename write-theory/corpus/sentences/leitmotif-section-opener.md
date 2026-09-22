@@ -101,7 +101,7 @@ moderating / main effect of the current hypothesis's specific variable]."
 <!--
 pattern_id: rhetorical_question_mechanism_pivot
 build_type: 跨类型（句式级）
-source_papers: ["carpenterwestphal2001_AMJ"]
+source_papers: ["carpenter_westphal_2001_strategic_context_of_external_ne"]
 confidence: high
 status: VERIFIED — expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)
 sentence_position: topic_sentence

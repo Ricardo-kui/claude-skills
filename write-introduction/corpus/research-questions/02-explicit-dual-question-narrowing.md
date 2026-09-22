@@ -7,8 +7,8 @@ cross_paper: EMERGING
 generativity: GENERATIVE
 exclusivity: LOW
 source_papers:
-  - weng_yang (JMS): "Two explicit RQs — main effect question + moderator question — embedded in paragraph with 'To fill this void, we ask:' preamble"
-  - cui_yang_vertinsky (SMJ): "Two explicit RQs — main effect question + moderator question — preceded by dual-theory integration statement and directly introduced with 'We ask,'"
+  - weng_yang2024 (JMS, 2024): "Two explicit RQs — main effect question + moderator question — embedded in paragraph with 'To fill this void, we ask:' preamble"
+  - cui_yang_vertinsky_2018 (SMJ): "Two explicit RQs — main effect question + moderator question — preceded by dual-theory integration statement and directly introduced with 'We ask,'"
   - hoffmann_cheong_phan_zurbruegg2024 (JM, 2024): "We first ask / We then ask — main effect + agency-mitigation moderators, agency-theory-grounded expectations before each RQ"
   - fini_jourdan_perkmann_2017 (AMJ, 2017): "Single explicit RQ + scope-narrowing preamble 'we focus on the common case of X' — single-RQ narrowing, distinct from dual-question variants A/B/C"
 updated: 2026-08-12
@@ -32,7 +32,7 @@ source: Distilled by distill-introduction-exemplar Phase 4.6
 ## 验证状态
 
 ### 跨论文复现
-- **EMERGING** (1 paper): weng_yang (JMS)
+- **EMERGING** (1 paper): weng_yang2024 (JMS, 2024)
 - **变体 D（single-RQ scope-narrowing，fini_jourdan_perkmann_2017 型）**: EMERGING（单篇来源；与变体 A/B/C 双问句结构判别，属"单问句 + 范围收窄"独立分支）
 
 ### 生成力
@@ -45,12 +45,12 @@ source: Distilled by distill-introduction-exemplar Phase 4.6
 
 ## 句法模板
 
-### 变体 A：显式双问题收窄型（weng_yang 型）
+### 变体 A：显式双问题收窄型（weng_yang2024 型）
 
 **模板**:
 > "Specifically, we contend that [IV construct] — as reflected in [operational definition] — affects [actor]'s [outcome action] to address the issue of [DV phenomenon]. Researchers have found that [IV] is crucial in influencing [related DV 1] ([citations]), [related DV 2] ([citations]), and [related DV 3] ([citations]). Nevertheless, it remains unclear how [IV] affects [specific DV]. To fill this void, we ask: [RQ1: main effect question]? [RQ2: moderator question]?"
 
-**来源**: weng_yang (JMS), P3
+**来源**: weng_yang2024 (JMS, 2024), P3
 
 **原文锚定**:
 > "Nevertheless, it remains unclear how CEO political ideology affects vertical pay disparity within firms. To fill this void, we ask: how does CEO political ideology affect within-firm pay disparities between a CEO and his or her employees? Which contextual factors moderate this proposed effect?"
@@ -94,7 +94,7 @@ source: Distilled by distill-introduction-exemplar Phase 4.6
 **模板**:
 > "Our study addresses these limitations by integrating [theory A] and [theory B] perspectives in order to study the mechanisms through which [IV] influences [DV]. We ask, how does [IV construct] affect [actor]'s [DV action] in [context], and how does [boundary construct] influence this relationship?"
 
-**来源**: cui_yang_vertinsky (SMJ), P5
+**来源**: cui_yang_vertinsky_2018 (SMJ), P5
 
 **原文锚定**:
 > "Our study addresses these limitations by integrating the alliance learning and network perspectives in order to study the mechanisms through which strategic alliances influence allies' competition in the product market. We ask, how does the composition of the collaborative portfolio between a firm and its partner affect the firm's competitive aggressiveness against its partner in the product market, and how does network embeddedness influence this relationship?"

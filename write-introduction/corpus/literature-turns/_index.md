@@ -54,7 +54,7 @@ Literature Turn（P2-P3）的核心功能是将 Hook 建立的注意力转化为
 │   → Gap: Incompleteness
 │   → 策略: Progressive Coherence
 │   → 关键句式: "Although research has... little attention has been paid to..."
-│   → 搭配 Hook: 03-data-shock, 10-practical-puzzle, 02-epigraph-quote-pivot (低/中能量)
+│   → 搭配 Hook: 03-data-shock, 28-practitioner-puzzle, 02-epigraph-quote-pivot (低/中能量)
 │   → 搭配 Tension: 01-despite-progress-unaddressed
 │
 ├─ "多个文献流各自抓到了现象的一部分，但都没看到全貌"
@@ -68,7 +68,7 @@ Literature Turn（P2-P3）的核心功能是将 Hook 建立的注意力转化为
 │   → Gap: Incommensurability
 │   → 策略: Non-Coherence
 │   → 关键句式: "These perspectives offer incompatible predictions about [outcome]"
-│   → 搭配 Hook: 06-paradigm-challenge, 17-classic-debate-constraint, 18-theory-contradiction-empirical-paradox
+│   → 搭配 Hook: 06-paradigm-challenge, 29-debate-constraint-relaxation, 18-theory-contradiction-empirical-paradox
 │   → 搭配 Tension: 04-reality-contradicts-consensus, 06-theoretical-imbalance
 ```
 
@@ -83,7 +83,7 @@ Literature Turn（P2-P3）的核心功能是将 Hook 建立的注意力转化为
 | **文献态度** | "你们做得好" | "你们各自对了一部分" | "你们不能都对" |
 | **核心隐喻** | 地图空白 | 盲人摸象 | 两军对垒 |
 | **解决方案** | 填补空白 | 连接盲区 | 超越对立 |
-| **典型 Hook** | data-shock, practical-puzzle | consensus-blindspot, forward-looking-shift | paradigm-challenge, classic-debate-constraint |
+| **典型 Hook** | data-shock, practitioner-puzzle | consensus-blindspot, forward-looking-shift | paradigm-challenge, debate-constraint-relaxation |
 | **典型 Tension** | despite-progress-unaddressed | implicit-assumption-wrong, structural-blindspot | reality-contradicts-consensus, theoretical-imbalance |
 | **变体数量** | 14 (A–N) | 6 (A–F) | 5 (A–E) |
 | **反模式风险** | 弱缺口（没有解释为什么遗漏重要） | 虚假合成（两个"传统"实为同一流派变体） | 稻草人（一方被描绘得极其愚蠢） |

@@ -8,7 +8,7 @@ cross_paper: EMERGING
 generativity: GENERATIVE
 exclusivity: MEDIUM
 source_papers:
-  - cui_yang_vertinsky (SMJ): "alliances lead to collaboration (consensus), yet partners often compete in product markets (anecdotal evidence)"
+  - cui_yang_vertinsky_2018 (SMJ): "alliances lead to collaboration (consensus), yet partners often compete in product markets (anecdotal evidence)"
 created: 2026-07-08
 source: Distilled by distill-introduction-exemplar Phase 4.6
 ---
@@ -29,7 +29,7 @@ source: Distilled by distill-introduction-exemplar Phase 4.6
 ## 验证状态
 
 ### 跨论文复现
-- **EMERGING** (1 paper): cui_yang_vertinsky (SMJ)
+- **EMERGING** (1 paper): cui_yang_vertinsky_2018 (SMJ)
 
 ### 生成力
 - **GENERATIVE**: "Research on [topic] has revealed that [A]. However, ample anecdotal evidence indicates that [B]..." 模板可迁移到任何有"主流发现 vs 反向实践"的场景
@@ -46,7 +46,7 @@ source: Distilled by distill-introduction-exemplar Phase 4.6
 **模板**:
 > "Research on [topic] has revealed that [established positive relationship] ([citations]). However, ample anecdotal evidence indicates that [phenomenon] is often followed by [counterintuitive/aggressive outcome] between the same [actors] in [market domain]. For example, [company] allied with [partners] in [period] yet later competed with these firms in [market]. Similar instances appear in [industry A] ([citation]), [industry B] ([citation]), and other industries. Despite the abundant evidence, researchers have not paid adequate attention to [specific effect]."
 
-**来源**: cui_yang_vertinsky (SMJ), P1
+**来源**: cui_yang_vertinsky_2018 (SMJ), P1
 
 **原文锚定**:
 > "Research on strategic alliances has revealed that prior collaboration often leads to further collaboration between firms... However, ample anecdotal evidence indicates that alliances are often followed by aggressive competition between the same firms in product markets. For example, pharmaceutical firm Merck allied with Novartis, Pfizer, Bristol-Myers, and Depomed in the 1990s yet later competed with these firms in product markets..."
@@ -104,11 +104,11 @@ source: Distilled by distill-introduction-exemplar Phase 4.6
 - **典型节奏**: 共识建立（1句）→ 反例转折（1句）→ 具体案例（1-2句）→ 跨行业扩展（1句）→ 缺口声明（1句）
 
 ### 标志性叙事标记
-- [cui_yang_vertinsky]: "Research on [topic] has revealed that [A]. However, ample anecdotal evidence indicates that [B]." — 共识与经验反例的直接并置
+- [cui_yang_vertinsky_2018]: "Research on [topic] has revealed that [A]. However, ample anecdotal evidence indicates that [B]." — 共识与经验反例的直接并置
 
 ### 刻意回避
-- [cui_yang_vertinsky]: avoids "few studies have examined" in Hook — 用 "researchers have not paid adequate attention to" 替代，保持 Incompleteness 边界
-- [cui_yang_vertinsky]: avoids independent data shock — 用案例而非数字建立悖论
+- [cui_yang_vertinsky_2018]: avoids "few studies have examined" in Hook — 用 "researchers have not paid adequate attention to" 替代，保持 Incompleteness 边界
+- [cui_yang_vertinsky_2018]: avoids independent data shock — 用案例而非数字建立悖论
 
 ### 质量标记
 - **最值得模仿**: 用具体公司名称建立 Human Face，同时用跨行业引用扩展现象普遍性
@@ -116,4 +116,4 @@ source: Distilled by distill-introduction-exemplar Phase 4.6
 
 ### 模块比重参考
 - Hook 约占 Introduction 的 15-20%
-- *来源: cui_yang_vertinsky (SMJ)*
+- *来源: cui_yang_vertinsky_2018 (SMJ)*

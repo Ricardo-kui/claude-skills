@@ -288,11 +288,11 @@ status: ready_for_corpus
 <!-- 
 pattern_id: inverted_u_bilateral_moderation
 build_type: 调节效应型 / 机制推演型
-source_papers: ["Cui_Yang_Vertinsky_SMJ"]
+source_papers: ["cui_yang_vertinsky_2018"]
 confidence: high
 status: ready_for_corpus
 -->
-<!-- wb:Cui_Yang_Vertinsky_SMJ:legacy_bilateral_argumentation_templates_PatternCategoricalRi -->
+<!-- wb:cui_yang_vertinsky_2018:legacy_bilateral_argumentation_templates_PatternCategoricalRi -->
 
 ## Pattern: Inverted-U Moderation — High/Low Bilateral Argumentation
 
@@ -634,7 +634,7 @@ on learning from [typed outcome]. → H
 <!--
 pattern_id: complementary_portfolio_dual_knowledge_mix
 build_type: 调节效应型 / 假设树型（预测落在组合构成而非单调交互方向）
-source_papers: ["carpenterwestphal2001_AMJ"]
+source_papers: ["carpenter_westphal_2001_strategic_context_of_external_ne"]
 confidence: high
 status: VERIFIED — expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)
 -->

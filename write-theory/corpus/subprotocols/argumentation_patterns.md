@@ -215,11 +215,11 @@ The [attribute] of [Context A], combined with [second attribute], creates an env
 <!--
 pattern_id: dual_mechanism_same_direction
 build_type: 机制推演型
-source_papers: ["Ball_2018_JOM"]
+source_papers: ["ball_shah_donohue_2018_jom"]
 confidence: medium
 status: ready_for_corpus
 -->
-<!-- wb:Ball_2018_JOM:legacy_argumentation_patterns_PatternIndustryConte -->
+<!-- wb:ball_shah_donohue_2018_jom:legacy_argumentation_patterns_PatternIndustryConte -->
 
 ## Pattern: Dual Mechanism Convergence
 
@@ -361,11 +361,11 @@ our investigation of boundary conditions will be guided by insights from
 <!--
 pattern_id: neglected_lens_via_dominant_view_contrast
 build_type: 机制推演型 / 视角选择
-source_papers: ["lunetal2026"]
+source_papers: ["lunetal2026_ETP"]
 confidence: medium
 status: ready_for_corpus
 -->
-<!-- wb:lunetal2026:legacy_argumentation_patterns_PatternDualLensMainB -->
+<!-- wb:lunetal2026_ETP:legacy_argumentation_patterns_PatternDualLensMainB -->
 
 ## Pattern: Neglected Lens via Dominant-View Contrast（优势视角对照被忽视透镜）
 

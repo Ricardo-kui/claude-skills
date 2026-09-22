@@ -7,7 +7,7 @@ cross_paper: EMERGING
 generativity: ADAPTABLE
 exclusivity: MEDIUM
 source_papers:
-  - weng_yang (JMS): "Before proceeding, it is useful to distinguish between our study and that by Gupta & Wowak (2017)... Our study differs in two ways..."
+  - weng_yang2024 (JMS, 2024): "Before proceeding, it is useful to distinguish between our study and that by Gupta & Wowak (2017)... Our study differs in two ways..."
 created: 2026-07-07
 source: Distilled by distill-introduction-exemplar Phase 4.6
 ---
@@ -30,7 +30,7 @@ source: Distilled by distill-introduction-exemplar Phase 4.6
 ## 验证状态
 
 ### 跨论文复现
-- **EMERGING** (1 paper): weng_yang (JMS)
+- **EMERGING** (1 paper): weng_yang2024 (JMS, 2024)
 
 ### 生成力
 - **ADAPTABLE**: "Before proceeding, it is useful to distinguish between our study and that by [prior work]" 框架可迁移
@@ -42,12 +42,12 @@ source: Distilled by distill-introduction-exemplar Phase 4.6
 
 ## 句法模板
 
-### 变体 A：双维区分+互补框定型（weng_yang 型）
+### 变体 A：双维区分+互补框定型（weng_yang2024 型）
 
 **模板**:
 > "Before proceeding, it is useful to distinguish between our study and that by [closest prior work] ([citation]). In their seminal work, [authors] show that [closest paper's finding]. Our study differs from [authors] in [N] ways. First, [authors] investigate [their DV], a crucial issue for [their domain]. In comparison, we are interested in [our DV], a notion central to [our domain]. Second, [authors] consider [their IV] as their main predictor. In contrast, we focus on [our IV]. Since [linking logic connecting the two studies], our study complements the insights by [authors], enriching our understanding of [broader domain]."
 
-**来源**: weng_yang (JMS), P5
+**来源**: weng_yang2024 (JMS, 2024), P5
 
 **原文锚定**:
 > "Before proceeding, it is useful to distinguish between our study and that by Gupta and Wowak (2017). In their seminal work, Gupta and Wowak (2017) show that conservative boards tend to pay CEOs more and emphasize firm performance in designing CEO compensation. Our study differs from Gupta and Wowak (2017) in two ways."
@@ -110,11 +110,11 @@ source: Distilled by distill-introduction-exemplar Phase 4.6
 - **典型节奏**: Transition signal ("Before proceeding") → Acknowledge Prior (1-2句，包含 citation + praise) → Structured Differentiation (First/Second + contrast markers) → Complement Frame (1句，linking logic + enrich understanding)
 
 ### 标志性叙事标记
-- [[weng_yang]]: "Before proceeding, it is useful to distinguish..." — 元评论式开场，暗示"我知道你可能有疑问" — "Before proceeding, it is useful to distinguish between our study and that by Gupta and Wowak (2017)."
+- [[weng_yang2024]]: "Before proceeding, it is useful to distinguish..." — 元评论式开场，暗示"我知道你可能有疑问" — "Before proceeding, it is useful to distinguish between our study and that by Gupta and Wowak (2017)."
 
 ### 刻意回避
-- [[weng_yang]]: 避免贬低 prior work — 功能: 维持学术礼貌；用 "seminal" 和 "complements" 而非 "contradicts" 或 "unlike X who..."
-- [[weng_yang]]: 避免在 Introduction 前段区分 — 功能: 优先建立自己的贡献，不让防御性内容占据 prime real estate
+- [[weng_yang2024]]: 避免贬低 prior work — 功能: 维持学术礼貌；用 "seminal" 和 "complements" 而非 "contradicts" 或 "unlike X who..."
+- [[weng_yang2024]]: 避免在 Introduction 前段区分 — 功能: 优先建立自己的贡献，不让防御性内容占据 prime real estate
 
 ### 质量标记
 - **最值得模仿**: "complements the insights" 的框定策略——将潜在竞争重新定义为互补，既维护了学术关系又保留了贡献空间
@@ -122,4 +122,4 @@ source: Distilled by distill-introduction-exemplar Phase 4.6
 
 ### 模块比重参考
 - 区分段占 Introduction 总篇幅 ~10%
-- *来源: weng_yang (JMS)*
+- *来源: weng_yang2024 (JMS, 2024)*

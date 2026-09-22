@@ -8,7 +8,7 @@ generativity: ADAPTABLE
 exclusivity: HIGH
 source_papers:
   - malshe_agarwal2015 (JM, 2015): "Yet little research investigates the effects of debt on marketing. This is surprising for three reasons."
-  - cui_yang_vertinsky (SMJ): "three important issues remain unaddressed: product-market competition, portfolio composition, network embeddedness"
+  - cui_yang_vertinsky_2018 (SMJ): "three important issues remain unaddressed: product-market competition, portfolio composition, network embeddedness"
   - liu_shankar2015 (MS, 2015): "four deeper issues + nested opposing claims as empirical-resolution motivators within Incompleteness gap"
 created: 2026-05-24
 updated: 2026-08-05
@@ -58,7 +58,7 @@ note: "canonical_id 字面 threefold；功能覆盖 N≥3 结构化枚举（含�
 **模板**:
 > "A thorough study of [focal relationship] is of great theoretical importance, contributing to [broader theoretical model] ([citation]). Prior studies on [sub-literature] have provided important insights into [core tension] ([citations]). For example, researchers maintain that [mechanism 1] ([citations]) and have identified important factors that influence [process], such as [factor A] ([citations]), [factor B] ([citation]), and [factor C] ([citation]). However, [N] important issues in this sphere of research remain unaddressed. First, while researchers have examined [X], prior studies focused on [within-scope outcome]; the effect of [X] on [product-market outcome] remains poorly understood. Second, prior studies provide insights into [Y] by focusing on [dominant type] while overlooking [other types] ([citation]). It is assumed that [dominant-type assumption], but [counterpoint about heterogeneity]. [Theoretical consequence]. Few studies have yet examined how [portfolio composition] affects [outcome]. Third, many prior studies have examined [Z] by focusing on characteristics of [actors per se], such as [characteristic A] ([citation]) and [characteristic B] ([citation]), while largely overlooking the impact of [network/context dimension] ([citation]). [Exception citations]. Yet the focus of these studies remains centered either on [outcome 1] or on [outcome 2]; the impact of [network/context dimension] on [focal interplay] has rarely been studied."
 
-**来源**: cui_yang_vertinsky (SMJ), P2-P4
+**来源**: cui_yang_vertinsky_2018 (SMJ), P2-P4
 
 **原文锚定**:
 > "A thorough study of this 'collaboration–competition' relationship between partners is of great theoretical importance... Prior studies on alliance learning have provided some important insights into the tension between collaboration and competition... However, three important issues in this sphere of research remain unaddressed. First, while researchers have examined aggressive learning between allies... prior studies focused on the hazards of misappropriation within alliances; the effect of alliances on competition between partners in the realm of product markets remains poorly understood. Second, prior studies provide insights into competitive learning between partners by focusing on research-based alliances while overlooking other types of collaboration... Third, many prior studies have examined the tension between cooperation and competition by focusing on characteristics of the allying firms per se... while largely overlooking the impact of the broad inter-firm alliance networks..."

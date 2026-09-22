@@ -19,7 +19,7 @@ source: Original batch 1 extraction (former top-level corpus, old id "16-theory-
 
 将两种对立的理论预测（通常用对称隐喻包装）并置，再用一个令人费解的大规模经验事实刺破这种理论僵局。核心机制是**双重不可约性**——简单选边站（支持理论的 A 或理论 B）无法解释经验现实，读者被迫接受"需要新框架"的结论。
 
-与 `06-paradigm-challenge`（"共识说X，但现实是Y"）不同，本 Hook 的结构更复杂：(a) 呈现两个对立的隐喻/理论标签 → (b) 用权威数据展示两者都无法单独解释 → (c) 预告整合框架。与 `17-classic-debate-constraint`（辩论+约束放松）不同，本 Hook 的关键转折点是**经验悖论**而非制度变化。
+与 `06-paradigm-challenge`（"共识说X，但现实是Y"）不同，本 Hook 的结构更复杂：(a) 呈现两个对立的隐喻/理论标签 → (b) 用权威数据展示两者都无法单独解释 → (c) 预告整合框架。与 `29-debate-constraint-relaxation`（辩论+约束放松）不同，本 Hook 的关键转折点是**经验悖论**而非制度变化。
 
 ## 适用场景
 
@@ -110,7 +110,7 @@ Yet [empirical pattern] does not cleanly support either view.
 
 ### 互斥
 - **不能与 `06-paradigm-challenge` (Hook) 同用**: 两者都是高能量理论颠覆型 Hook，本质功能重叠
-- **不能与 `17-classic-debate-constraint` (Hook) 同用**: 本 Hook 的关键转折是经验悖论，17 的关键转折是制度变化——机制不同
+- **不能与 `29-debate-constraint-relaxation` (Hook) 同用**: 本 Hook 的关键转折是经验悖论，29 的关键转折是制度变化——机制不同
 
 ### 反模式提醒
 - **理论漫画化**: 把 Theory A 描述得极其愚蠢。两种理论都必须有 respectable 的文献基础，且都能解释部分经验现象

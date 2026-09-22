@@ -373,7 +373,7 @@ def apply_plan(skill_root: Path, plan_path: Path, dry_run: bool = False) -> dict
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--skill-root", type=Path, default=Path(__file__).resolve().parents[1])
+    parser.add_argument("--skill-root", type=Path, default=catalog.SKILL_ROOT)
     subparsers = parser.add_subparsers(dest="command", required=True)
     subparsers.add_parser("validate")
     apply_parser = subparsers.add_parser("apply-plan")

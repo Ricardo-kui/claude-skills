@@ -78,4 +78,4 @@ source: Extracted from MVP30 narrative_analysis files
 
 ## 相关语料
 
-- 配合 `hooks/10-practical-puzzle.md` 使用："理想世界 vs 现实世界"双重句法
+- 配合 `hooks/28-practitioner-puzzle.md` 使用："理想世界 vs 现实世界"双重句法

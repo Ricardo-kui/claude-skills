@@ -148,7 +148,7 @@ Therefore, H4: The interaction of [IV] and [W2] mediates the moderating effect o
 <!--
 pattern_id: counter_assumption_refutation_opening
 build_type: 跨类型（机制推演型/调节效应型的开场段）
-source_papers: ["carpenterwestphal2001_AMJ"]
+source_papers: ["carpenter_westphal_2001_strategic_context_of_external_ne"]
 confidence: high
 status: VERIFIED — expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)
 -->

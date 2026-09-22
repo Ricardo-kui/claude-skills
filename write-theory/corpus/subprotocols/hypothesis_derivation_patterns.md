@@ -1010,12 +1010,12 @@ There are two related reasons why we do not hypothesize that [attackers] seek to
 <!--
 pattern_id: width_type_parallel_mechanism
 build_type: 机制推演型 / 调节效应型
-source_papers: ["Gamache_McNamara_Mannor_Johnson_2020_SMJ", "Cui_Yang_Vertinsky_SMJ"]
+source_papers: ["Gamache_McNamara_Mannor_Johnson_2020_SMJ", "cui_yang_vertinsky_2018"]
 confidence: high
 status: ready_for_corpus
 -->
 <!-- wb:Gamache_McNamara_Mannor_Johnson_2020_SMJ:legacy_hypothesis_derivation_patterns_与相邻语料文件的关系 -->
-<!-- wb:Cui_Yang_Vertinsky_SMJ:legacy_hypothesis_derivation_patterns_与相邻语料文件的关系_2 -->
+<!-- wb:cui_yang_vertinsky_2018:legacy_hypothesis_derivation_patterns_与相邻语料文件的关系_2 -->
 
 ## Pattern: Width-Type Parallel Mechanism
 
@@ -1060,11 +1060,11 @@ status: ready_for_corpus
 <!--
 pattern_id: symmetric_opposing_dual_track
 build_type: 机制推演型
-source_papers: ["Zhao-Ding_Gaba_ORSC"]
+source_papers: ["zhao_ding_gaba_orsc"]
 confidence: medium
 status: needs_validation
 -->
-<!-- wb:Zhao-Ding_Gaba_ORSC:legacy_hypothesis_derivation_patterns_PatternWidthTypePara -->
+<!-- wb:zhao_ding_gaba_orsc:legacy_hypothesis_derivation_patterns_PatternWidthTypePara -->
 
 ## Pattern: Symmetric Opposing Dual-Track Mechanism
 
@@ -1099,11 +1099,11 @@ status: needs_validation
 <!--
 pattern_id: curvilinear_relationship_two_phase_argumentation
 build_type: 机制推演型 / 调节效应型
-source_papers: ["Cui_Yang_Vertinsky_SMJ", "Bendig_Hensellek_Schulte_2024_ETP", "Anderson_Reeb_2004_ASQ"]
+source_papers: ["cui_yang_vertinsky_2018", "Bendig_Hensellek_Schulte_2024_ETP", "Anderson_Reeb_2004_ASQ"]
 confidence: high
 status: VERIFIED
 -->
-<!-- wb:Cui_Yang_Vertinsky_SMJ:legacy_hypothesis_derivation_patterns_PatternSymmetricOppo -->
+<!-- wb:cui_yang_vertinsky_2018:legacy_hypothesis_derivation_patterns_PatternSymmetricOppo -->
 <!-- wb:Bendig_Hensellek_Schulte_2024_ETP:legacy_hypothesis_derivation_patterns_PatternSymmetricOppo_2 -->
 <!-- wb:Anderson_Reeb_2004_ASQ:legacy_hypothesis_derivation_patterns_PatternSymmetricOppo_3 -->
 

@@ -1,0 +1,1282 @@
+{
+ "tool_version": "1.2.2",
+ "n_probes": 56,
+ "results": [
+  {
+   "id": "m1_001",
+   "class": "M1",
+   "design": "ols_fe_panel_hlm",
+   "expected": "PASS",
+   "reclassified": true,
+   "adjudication_reason": "if-clause research question (determine if X causes Y = hypothesis-testing framing, not a claim); IF_GUARD suppression floor-validated",
+   "verdict": "HIT",
+   "flag_types": [],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [],
+   "paper": "jeon_2026_safety_defects_and_fuel_efficiency_in_the_automoti.sentences"
+  },
+  {
+   "id": "m1_002",
+   "class": "M1",
+   "design": "did_natural_experiment",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "causes",
+     "sentence": "We use this policy change to examine whether regulatory pressure  causes  the adoption of MPG-enhancing technology bundles."
+    }
+   ],
+   "paper": "jeon_2026_safety_defects_and_fuel_efficiency_in_the_automoti.sentences"
+  },
+  {
+   "id": "m1_003",
+   "class": "M1",
+   "design": "iv_2sls",
+   "expected": "PASS",
+   "reclassified": true,
+   "adjudication_reason": "if-conditional reasoning sentence; IF_GUARD correct",
+   "verdict": "HIT",
+   "flag_types": [],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [],
+   "paper": "lin_2022_enforceability_of_noncompetition_agre.sentences"
+  },
+  {
+   "id": "m1_004",
+   "class": "M1",
+   "design": "nonlinear",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "causes",
+     "sentence": "Taken together, anti-SLAPP adoption  causes  improved employee assessments of leadership and a measurable reduction in the reputational incidents most exposed to civil-society scrutiny."
+    }
+   ],
+   "paper": "legal_protection_of_free_speech_and_corporate_innovation.sentences"
+  },
+  {
+   "id": "m1_005",
+   "class": "M1",
+   "design": "ols_fe_panel_hlm",
+   "expected": "PASS",
+   "reclassified": true,
+   "adjudication_reason": "stat-subject reporting frame (Our finding that...causes) + endogeneity caveat context; floor-attested pattern (ant_n_2025 show that...caused)",
+   "verdict": "HIT",
+   "flag_types": [],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [],
+   "paper": "ceo_stock_ownership_recall_timing_and_stock_market_penalties.sentences"
+  },
+  {
+   "id": "m1_006",
+   "class": "M1",
+   "design": "did_natural_experiment",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "causes",
+     "sentence": "This means that, whereas changing from no females on the board to one female on the board  causes  an increase in class 3 recalls, the increase in class 3 recall counts continues to climb as a second female is added and a third female or more are added."
+    }
+   ],
+   "paper": "wowak_2020_the_influence_of_female_directors_on_product_reca.sentences"
+  },
+  {
+   "id": "m1_007",
+   "class": "M1",
+   "design": "iv_2sls",
+   "expected": "PASS",
+   "reclassified": true,
+   "adjudication_reason": "results-show-that reporting frame with definitive verb in that-clause; floor-attested (ant_n_2025, fang_2025); suppression is floor-calibrated behavior",
+   "verdict": "HIT",
+   "flag_types": [],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [],
+   "paper": "westphal1995_who_shall_govern_ceoboard_power_demographic_sim.sentences"
+  },
+  {
+   "id": "m1_008",
+   "class": "M1",
+   "design": "nonlinear",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "causes",
+     "sentence": "Collectively, the results of H_{1}$, H $_{1a}$, and H $_{1b}$ suggest that NPD buy (vs. NPD make)  causes  greater immediate product quality, and this initial advantage is greater for (1) technologically complex transmissions and (2) firms with superior NPD capability."
+    }
+   ],
+   "paper": "kalaignanam_2017_the_differential_impact_of_new_product_deve.sentences"
+  },
+  {
+   "id": "m1_009",
+   "class": "M1",
+   "design": "ols_fe_panel_hlm",
+   "expected": "PASS",
+   "reclassified": true,
+   "adjudication_reason": "This-indicates-that hedged reporting frame; same floor logic",
+   "verdict": "HIT",
+   "flag_types": [],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [],
+   "paper": "mukherjee_2017_product_recall_decisions_in_medical_device_su.sentences"
+  },
+  {
+   "id": "m1_010",
+   "class": "M1",
+   "design": "did_natural_experiment",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "causes",
+     "sentence": "In terms of economic significance, an increase in the anti-SLAPP intensity score from D to A  causes  a 42.4% reduction in stock price crash risk (NCSKEW), a 7.4% reduction in fraud probability (I(FScore >1)), and a 3.2% increase in the frequency of negative and impactful press releases (NegPR)."
+    }
+   ],
+   "paper": "lee_2026_freedom_of_expression_protection_and_corporate_conc.sentences"
+  },
+  {
+   "id": "m1_011",
+   "class": "M1",
+   "design": "iv_2sls",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "causes",
+     "sentence": "Since the model is one in which organizations normally improve performance under conditions of no exogenous changes in technology, slowly adapting goals make it fairly easy to keep performance above the goal; thus, regardless of the propensity learning rate, success  causes  slowly adjusting goals."
+    }
+   ],
+   "paper": "levinthal_1981_a_model_of_adaptive_organizational_search.sentences"
+  },
+  {
+   "id": "m1_012",
+   "class": "M1",
+   "design": "nonlinear",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "causes",
+     "sentence": "In terms of economic significance, the enactment of anti-SLAPP laws  causes  2.1 times more employee disclosure (approximately 120 more words) of negative information."
+    }
+   ],
+   "paper": "lee_2026_freedom_of_expression_protection_and_corporate_conc.sentences"
+  },
+  {
+   "id": "m2a_001",
+   "class": "M2a",
+   "design": "ols_fe_panel_hlm",
+   "expected": "CONDITION_MISSING",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "CONDITION_MISSING"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "CONDITION_MISSING",
+     "tier": "T_DIRECTIONAL",
+     "match": "increases",
+     "sentence": "To address the possibility that common ownership in an ESG rating agency and a target firm's rivals  increases  actual ESG performance, we examined the extent to which MSCI's ESG rating deviates from the reasonable ESG benchmarks."
+    }
+   ],
+   "paper": "desjardine_2025_information_based_competition_the_case_of_ri.sentences"
+  },
+  {
+   "id": "m2a_002",
+   "class": "M2a",
+   "design": "did_natural_experiment",
+   "expected": "CONDITION_MISSING",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "CONDITION_MISSING"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "CONDITION_MISSING",
+     "tier": "T_DIRECTIONAL",
+     "match": "reduces",
+     "sentence": "High severity of adverse events  reduces  specific usage classes, technological complexity of devices indicated by device class, and newer devices indicated by PMA approval class and product age."
+    }
+   ],
+   "paper": "mukherjee_2017_product_recall_decisions_in_medical_device_su.sentences"
+  },
+  {
+   "id": "m2a_004",
+   "class": "M2a",
+   "design": "ols_fe_panel_hlm",
+   "expected": "PASS",
+   "reclassified": true,
+   "adjudication_reason": "mutation retained %-magnitudes (pool filter gap: bare % not in stat filters); magnitude-attached directional reporting is STAT_ATTACHED_DIR-suppressed, floor-legal",
+   "verdict": "HIT",
+   "flag_types": [],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [],
+   "paper": "jeon_2026_safety_defects_and_fuel_efficiency_in_the_automoti.sentences"
+  },
+  {
+   "id": "m2a_005",
+   "class": "M2a",
+   "design": "did_natural_experiment",
+   "expected": "CONDITION_MISSING",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "CONDITION_MISSING"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "CONDITION_MISSING",
+     "tier": "T_DIRECTIONAL",
+     "match": "increases",
+     "sentence": "Increasing FBR  increases  a faster time-to-recall for the most severe, life-threatening defects needing recall."
+    }
+   ],
+   "paper": "wowak_2020_the_influence_of_female_directors_on_product_reca.sentences"
+  },
+  {
+   "id": "m2a_006",
+   "class": "M2a",
+   "design": "iv_2sls",
+   "expected": "CONDITION_MISSING",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "CONDITION_MISSING"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "CONDITION_MISSING",
+     "tier": "T_DIRECTIONAL",
+     "match": "reduces",
+     "sentence": "In general, these findings complement the findings above in that ownership by institutional investors with long-term investment horizons  reduces  faster recalls (e.g., Lewellen and Lewellen 2022)."
+    }
+   ],
+   "paper": "darby_2026_toward_faster_recalls_of_dangerous_medical_device.sentences"
+  },
+  {
+   "id": "m2a_008",
+   "class": "M2a",
+   "design": "did_natural_experiment",
+   "expected": "PASS",
+   "reclassified": true,
+   "adjudication_reason": "appendix cross-ref + suggest-that hedged frame; double flaw: degree adjective (longer) not in DEG_ADJ filter",
+   "verdict": "HIT",
+   "flag_types": [],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [],
+   "paper": "ceo_stock_ownership_recall_timing_and_stock_market_penalties.sentences"
+  },
+  {
+   "id": "m2a_009",
+   "class": "M2a",
+   "design": "iv_2sls",
+   "expected": "CONDITION_MISSING",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "CONDITION_MISSING"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "CONDITION_MISSING",
+     "tier": "T_DIRECTIONAL",
+     "match": "increases",
+     "sentence": "A one-unit increase in MPG  increases  a 0.62 point decrease in the Quality & Reliability rating."
+    }
+   ],
+   "paper": "jeon_2026_safety_defects_and_fuel_efficiency_in_the_automoti.sentences"
+  },
+  {
+   "id": "m2b_002",
+   "class": "M2b",
+   "design": "did_natural_experiment",
+   "expected": "PASS",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [],
+   "paper": "darby2025_an_agency.sentences"
+  },
+  {
+   "id": "m2b_004",
+   "class": "M2b",
+   "design": "ols_fe_panel_hlm",
+   "expected": "PASS",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [],
+   "paper": "kalaignanam_2017_the_differential_impact_of_new_product_deve.sentences"
+  },
+  {
+   "id": "m2b_005",
+   "class": "M2b",
+   "design": "did_natural_experiment",
+   "expected": "PASS",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [],
+   "paper": "ceo_tenure_and_recall_risk_management_in_the_consumer_produc.sentences"
+  },
+  {
+   "id": "m2b_006",
+   "class": "M2b",
+   "design": "nonlinear",
+   "expected": "PASS",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [],
+   "paper": "lee_2026_freedom_of_expression_protection_and_corporate_conc.sentences"
+  },
+  {
+   "id": "m3_001",
+   "class": "M3",
+   "design": "ols_fe_panel_hlm",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "reveal",
+     "sentence": "We reveal that firms with very low levels of customer satisfaction benefit from an increase in leverage."
+    }
+   ],
+   "paper": "from_finance_to_marketing_the_impact_of_financial_leverage_o.sentences"
+  },
+  {
+   "id": "m3_002",
+   "class": "M3",
+   "design": "did_natural_experiment",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "reveal",
+     "sentence": "We reveal that a 10% increase in noise-to-signal ratio increases the likelihood of under-reaction bias by 7%."
+    }
+   ],
+   "paper": "mukherjee_2017_product_recall_decisions_in_medical_device_su.sentences"
+  },
+  {
+   "id": "m3_003",
+   "class": "M3",
+   "design": "iv_2sls",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "reveal",
+     "sentence": "Here we reveal that the average prior position level of the upper echelon members and firm size are positively related to investment bank prestige."
+    }
+   ],
+   "paper": "higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe.sentences"
+  },
+  {
+   "id": "m3_004",
+   "class": "M3",
+   "design": "nonlinear",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "reveal",
+     "sentence": "We reveal that time to recall is again negatively related to CARs (−1.34 × 10 <sup>−5</sup>, *p* <.05)."
+    }
+   ],
+   "paper": "does_it_pay_to_recall_your_product_early_an_empirical_invest.sentences"
+  },
+  {
+   "id": "m3_005",
+   "class": "M3",
+   "design": "ols_fe_panel_hlm",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "reveal",
+     "sentence": "We reveal that customer satisfaction has a positive impact on Tobin's q (b =.021, *p* ≤.01; Table 3, Column 4)."
+    }
+   ],
+   "paper": "from_finance_to_marketing_the_impact_of_financial_leverage_o.sentences"
+  },
+  {
+   "id": "m3_006",
+   "class": "M3",
+   "design": "did_natural_experiment",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "reveal",
+     "sentence": "More interestingly, we reveal that the coefficients of the publicity measures (i.e., avgLogFollowers $_{i,t-1}$, avgLogLike $s_{i,t-1}$, and avgLogRetweets $_{i,t-1}$) are positive and statistically significant (p < 0.01), suggesting that online influence also matters."
+    }
+   ],
+   "paper": "gao_2021_does_social_media_accelerate_product.sentences"
+  },
+  {
+   "id": "m3_007",
+   "class": "M3",
+   "design": "iv_2sls",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "reveal",
+     "sentence": "We reveal that adverse event count is positively associated with recall count ( $\\beta = 0.018$; p < 0.01), and TMT political ideology continues to be negatively associated with recall count ( $\\beta = -0.110$; p < 0.001), although to a lesser degree, when adverse event count is included in the model."
+    }
+   ],
+   "paper": "wowak_et_al_2025_the_politics_of_product_safet.sentences"
+  },
+  {
+   "id": "m4_001",
+   "class": "M4",
+   "design": "ols_fe_panel_hlm",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "causes",
+     "sentence": "They occur when a firm’s product fails to meet a mandatory safety standard, contains a defect that causes substantial harm to consumers, creates an unreasonable risk of serious injury or death, or fails to comply with a voluntary standard adopted by the specific industry (Mullan 2004)."
+    }
+   ],
+   "paper": "does_a_firms_product_recall_strategy_affect_it.sentences"
+  },
+  {
+   "id": "m4_002",
+   "class": "M4",
+   "design": "ols_fe_panel_hlm",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "causes",
+     "sentence": "For example, a product defect causes tighter inspection of the components in that product, causing a chain reaction in defects."
+    }
+   ],
+   "paper": "haunchild_and_rhee_2004_the_role_of_volition_in_organization.sentences"
+  },
+  {
+   "id": "m4_003",
+   "class": "M4",
+   "design": "ols_fe_panel_hlm",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "causes",
+     "sentence": "In addition, extant literature cautions researchers about incorporating too many fixed effects because it causes the incidental parameters problem and remove potentially meaningful variation in the data (i.e., attenuation bias)."
+    }
+   ],
+   "paper": "moon_2026_the_impact_of_legal_protection_of_trade_secrets_on.sentences"
+  },
+  {
+   "id": "m4_004",
+   "class": "M4",
+   "design": "ols_fe_panel_hlm",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "causes",
+     "sentence": "This recall was a response to a defect in the car’s rear axle arm that causes the rear suspension to break and thus lead to fatal accidents."
+    }
+   ],
+   "paper": "fang_et_al_2025_rival_recall_ad_spend.sentences"
+  },
+  {
+   "id": "m4_005",
+   "class": "M4",
+   "design": "ols_fe_panel_hlm",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "cause",
+     "sentence": "Various combinations of civil organizations, industrial norms, culture environments, and state regulations cause different modes of discipline and belief between the U.S. and Chinese army."
+    }
+   ],
+   "paper": "the_military_imprint_the_effect_of_executives_military_exper.sentences"
+  },
+  {
+   "id": "m4_006",
+   "class": "M4",
+   "design": "ols_fe_panel_hlm",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "cause",
+     "sentence": "Our primary contribution is in demonstrating that stock options cause CEOs to overlook or otherwise de-prioritize the internal practices that go into making a safe, high-quality product."
+    }
+   ],
+   "paper": "wowak_2015_throwing_caution_to_the_wind_the_effect_of_ceo_st.sentences"
+  },
+  {
+   "id": "m4_007",
+   "class": "M4",
+   "design": "ols_fe_panel_hlm",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "causes",
+     "sentence": "Moreover, just by recognizing the crisis, the CEO causes anxiety and other negative emotions within the organization, which can harm other vital processes, such as innovation (Staw et al., 1981)."
+    }
+   ],
+   "paper": "k_nig_2020_a_blessing_and_a_curse_how_ceos_trait_empathy_aff.sentences"
+  },
+  {
+   "id": "m4_008",
+   "class": "M4",
+   "design": "ols_fe_panel_hlm",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "causes",
+     "sentence": "A decision by Toyota to announce a recall for a brake problem that is similar in nature causes GM to modify their view on their own potential brake problem."
+    }
+   ],
+   "paper": "mukherjee_et_al_2021_hiding_in_the_herd_the_pr.sentences"
+  },
+  {
+   "id": "m4_009",
+   "class": "M4",
+   "design": "ols_fe_panel_hlm",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "cause",
+     "sentence": "Consumers can experience their own “big losses” when companies release unsafe products into the marketplace, and the pursuit of stock option payoffs cause CEOs to overlook product safety concerns in their decision making."
+    }
+   ],
+   "paper": "wowak_2015_throwing_caution_to_the_wind_the_effect_of_ceo_st.sentences"
+  },
+  {
+   "id": "m4_010",
+   "class": "M4",
+   "design": "ols_fe_panel_hlm",
+   "expected": "OVERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "OVERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "OVERCLAIM",
+     "tier": "T_DEFINITIVE",
+     "match": "drives",
+     "sentence": "Self-interest drives a top manager to pursue political action for private gain."
+    }
+   ],
+   "paper": "lobbying_and_product_recalls_a_study_of_the_u_s_automobile_i.sentences"
+  },
+  {
+   "id": "m5_001",
+   "class": "M5",
+   "design": "ols_fe_panel_hlm",
+   "expected": "UNDERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "UNDERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "UNDERCLAIM",
+     "tier": "tentative",
+     "match": "\\bmay (play a role|affect|influence|operate|work|be|contribute)\\b",
+     "sentence": "Interpreting similarly, a one standard deviation increase in FBR  may be associated with  a 16-day acceleration in time-to-recall for the most severe class 1 recalls. [^2]"
+    }
+   ],
+   "paper": "wowak_2020_the_influence_of_female_directors_on_product_reca.sentences"
+  },
+  {
+   "id": "m5_002",
+   "class": "M5",
+   "design": "did_natural_experiment",
+   "expected": "UNDERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "UNDERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "UNDERCLAIM",
+     "tier": "tentative",
+     "match": "\\bmay (play a role|affect|influence|operate|work|be|contribute)\\b",
+     "sentence": "Overall, however, we find similar results when compared with Table 2: Greater CEO stock ownership  may be associated with  a longer time-to-recall, particularly for high-severity recalls—even when the change in CEO stock ownership is exogenously driven."
+    }
+   ],
+   "paper": "ceo_stock_ownership_recall_timing_and_stock_market_penalties.sentences"
+  },
+  {
+   "id": "m5_003",
+   "class": "M5",
+   "design": "nonlinear",
+   "expected": "UNDERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "UNDERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "UNDERCLAIM",
+     "tier": "tentative",
+     "match": "\\bmay (play a role|affect|influence|operate|work|be|contribute)\\b",
+     "sentence": "As we show in Figure 3, Panel A, when technological complexity is high (two standard deviations above the mean), NPD buy  may be associated with  higher immediate product quality compared with NPD make (3.45 > 1.49, p < .10)."
+    }
+   ],
+   "paper": "kalaignanam_2017_the_differential_impact_of_new_product_deve.sentences"
+  },
+  {
+   "id": "m5_004",
+   "class": "M5",
+   "design": "ols_fe_panel_hlm",
+   "expected": "UNDERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "MISS",
+   "flag_types": [],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [],
+   "paper": "jeon_2026_safety_defects_and_fuel_efficiency_in_the_automoti.sentences"
+  },
+  {
+   "id": "m5_005",
+   "class": "M5",
+   "design": "did_natural_experiment",
+   "expected": "UNDERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "UNDERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "UNDERCLAIM",
+     "tier": "tentative",
+     "match": "\\bmay (play a role|affect|influence|operate|work|be|contribute)\\b",
+     "sentence": "The negative binomial coefficient interpretation indicates that each one-unit increase in MPG  may be associated with  a 17.5% (i.e., $\\exp(0.161)-1=0.175$) increase in the expected number of safety defects in that model-engine-year."
+    }
+   ],
+   "paper": "jeon_2026_safety_defects_and_fuel_efficiency_in_the_automoti.sentences"
+  },
+  {
+   "id": "m5_006",
+   "class": "M5",
+   "design": "nonlinear",
+   "expected": "UNDERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "UNDERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "UNDERCLAIM",
+     "tier": "tentative",
+     "match": "\\bmay (play a role|affect|influence|operate|work|be|contribute)\\b",
+     "sentence": "Therefore, significantly negative abnormal stock return  may be associated with  proactive recalls but not with passive recalls. [^9]"
+    }
+   ],
+   "paper": "does_a_firms_product_recall_strategy_affect_it.sentences"
+  },
+  {
+   "id": "m5_007",
+   "class": "M5",
+   "design": "ols_fe_panel_hlm",
+   "expected": "UNDERCLAIM",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "UNDERCLAIM"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "UNDERCLAIM",
+     "tier": "tentative",
+     "match": "\\bmay (play a role|affect|influence|operate|work|be|contribute)\\b",
+     "sentence": "Our findings thus far indicate that the enactment of anti-SLAPP statutes  may be associated with  significant reductions in corporate toxic emissions."
+    }
+   ],
+   "paper": "chen_2026_silencing_pollution_the_environmental_consequences.sentences"
+  },
+  {
+   "id": "m5_008",
+   "class": "M5",
+   "design": "did_natural_experiment",
+   "expected": "PASS",
+   "reclassified": true,
+   "adjudication_reason": "To test H1... we examine whether = hypothesis-test procedural sentence, no claim made",
+   "verdict": "HIT",
+   "flag_types": [],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [],
+   "paper": "lun_et_al_2026_the_double_edged_sword_of_entre.sentences"
+  },
+  {
+   "id": "m6_001",
+   "class": "M6",
+   "design": "did_natural_experiment",
+   "expected": "CONDITION_MISSING",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "CONDITION_MISSING"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "CONDITION_MISSING",
+     "tier": "T_CAUSAL_EFFECT",
+     "match": "the effect of common ownership on",
+     "sentence": "From an antitrust perspective we are particularly interested in the effect of common ownership on consumer surplus and its evolution over time."
+    }
+   ],
+   "paper": "ederer_2026_a_tale_of_two_networks_common_own.sentences"
+  },
+  {
+   "id": "m6_002",
+   "class": "M6",
+   "design": "did_natural_experiment",
+   "expected": "CONDITION_MISSING",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "CONDITION_MISSING"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "CONDITION_MISSING",
+     "tier": "T_CAUSAL_EFFECT",
+     "match": "the effect of anti-slapp on",
+     "sentence": "This table presents the baseline results for the effect of anti-SLAPP on RepRisk Scores."
+    }
+   ],
+   "paper": "legal_protection_of_free_speech_and_corporate_innovation.sentences"
+  },
+  {
+   "id": "m6_003",
+   "class": "M6",
+   "design": "did_natural_experiment",
+   "expected": "CONDITION_MISSING",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "CONDITION_MISSING"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "CONDITION_MISSING",
+     "tier": "T_CAUSAL_EFFECT",
+     "match": "the effect of nca enforceability on",
+     "sentence": "To complement our patent-based analysis, we examine the effect of NCA enforceability on firm productivity using data from Compustat (2016)."
+    }
+   ],
+   "paper": "innovation_through_labor_mobility_evidence_from_non_compete_.sentences"
+  },
+  {
+   "id": "m6_004",
+   "class": "M6",
+   "design": "did_natural_experiment",
+   "expected": "CONDITION_MISSING",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "CONDITION_MISSING"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "CONDITION_MISSING",
+     "tier": "T_CAUSAL_EFFECT",
+     "match": "the effect of eo on",
+     "sentence": "Beyond this threshold, the effect of EO on recall becomes negative."
+    }
+   ],
+   "paper": "lun_et_al_2026_the_double_edged_sword_of_entre.sentences"
+  },
+  {
+   "id": "m6_005",
+   "class": "M6",
+   "design": "did_natural_experiment",
+   "expected": "CONDITION_MISSING",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "CONDITION_MISSING"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "CONDITION_MISSING",
+     "tier": "T_CAUSAL_EFFECT",
+     "match": "the effect of organizational censorship on",
+     "sentence": "This figure allows us to examine the effect of organizational censorship on psychological safety under different conditions."
+    }
+   ],
+   "paper": "employee_free_speech_vs_organizational_censorship_on_social_.sentences"
+  },
+  {
+   "id": "m6_006",
+   "class": "M6",
+   "design": "did_natural_experiment",
+   "expected": "PASS",
+   "reclassified": true,
+   "adjudication_reason": "Hypothesis [^3] argues = hypothesis-referencing sentence (exemption intent); bracket footnote defeated the marker regex",
+   "verdict": "HIT",
+   "flag_types": [],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [],
+   "paper": "is_red_or_blue_more_likely_to_narrow_the_gap_the_effect_of_c.sentences"
+  },
+  {
+   "id": "m6_007",
+   "class": "M6",
+   "design": "did_natural_experiment",
+   "expected": "CONDITION_MISSING",
+   "reclassified": false,
+   "adjudication_reason": "",
+   "verdict": "HIT",
+   "flag_types": [
+    "CONDITION_MISSING"
+   ],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [
+    {
+     "type": "CONDITION_MISSING",
+     "tier": "T_CAUSAL_EFFECT",
+     "match": "the effect of cnc enforceability on",
+     "sentence": "We examine the effect of CNC enforceability on nonforced (or voluntary) CEO turnover."
+    }
+   ],
+   "paper": "lin_2022_enforceability_of_noncompetition_agre.sentences"
+  },
+  {
+   "id": "m6_008",
+   "class": "M6",
+   "design": "did_natural_experiment",
+   "expected": "PASS",
+   "reclassified": true,
+   "adjudication_reason": "It would then be difficult... = hypothetical/limitation framing; theory_mode suppression correct",
+   "verdict": "HIT",
+   "flag_types": [],
+   "extra_flags_on_others": 0,
+   "control_flags": 0,
+   "control_detail": [],
+   "probe_detail": [],
+   "paper": "gulati_2005_adaptation_in_vertical_relationships_beyond_ince.sentences"
+  }
+ ],
+ "by_class": {
+  "M1": {
+   "n": 12,
+   "n_adjudicated_nav": 5,
+   "verdicts": {
+    "ADJ_CONSISTENT": 5,
+    "HIT": 7
+   },
+   "recall_flagexp": 1.0
+  },
+  "M2a": {
+   "n": 7,
+   "n_adjudicated_nav": 2,
+   "verdicts": {
+    "HIT": 5,
+    "ADJ_CONSISTENT": 2
+   },
+   "recall_flagexp": 1.0
+  },
+  "M2b": {
+   "n": 4,
+   "n_adjudicated_nav": 0,
+   "verdicts": {
+    "HIT": 4
+   },
+   "recall_flagexp": null
+  },
+  "M3": {
+   "n": 7,
+   "n_adjudicated_nav": 0,
+   "verdicts": {
+    "HIT": 7
+   },
+   "recall_flagexp": 1.0
+  },
+  "M4": {
+   "n": 10,
+   "n_adjudicated_nav": 0,
+   "verdicts": {
+    "HIT": 10
+   },
+   "recall_flagexp": 1.0
+  },
+  "M5": {
+   "n": 8,
+   "n_adjudicated_nav": 1,
+   "verdicts": {
+    "HIT": 6,
+    "MISS": 1,
+    "ADJ_CONSISTENT": 1
+   },
+   "recall_flagexp": 0.857
+  },
+  "M6": {
+   "n": 8,
+   "n_adjudicated_nav": 2,
+   "verdicts": {
+    "HIT": 6,
+    "ADJ_CONSISTENT": 2
+   },
+   "recall_flagexp": 1.0
+  }
+ },
+ "overall_recall_flagexp": 0.976,
+ "pass_specificity": "4/4",
+ "adjudicated_nav_consistency": "10/10",
+ "note": "recall over adjudicated flag-expectation probes; 10 probes adjudicated NOT_A_VIOLATION (mutation failed to create real violation); M2b/M6-ols are PASS-expectation specificity checks"
+}

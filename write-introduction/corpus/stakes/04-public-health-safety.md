@@ -132,6 +132,6 @@ source: Extracted from MVP30 narrative_analysis + darby2023 distill
 
 ## 相关语料
 
-- 配合 `hooks/10-practical-puzzle.md` 使用："为什么企业明知产品有问题却迟迟不召回？"
+- 配合 `hooks/28-practitioner-puzzle.md` 使用："为什么企业明知产品有问题却迟迟不召回？"
 - 配合 `hooks/03-data-shock.md` 使用：伤亡数字可作为数据冲击开场的核心组成部分
 - 配合 `tensions/04-reality-contradicts-consensus.md` 使用：监管框架存在但执行失败

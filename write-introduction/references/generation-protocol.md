@@ -101,7 +101,7 @@
 |---|---|---|
 | `we theorize` | `01-general-theory-practice#1`（zhou2017，`_skeleton/stakes.md`）；`02-actor-funnel#3`（darby2026，`_skeleton/transitions.md`） | 本文提出的构念—构念连接；把未观察机制写成作者的理论主张 |
 | `we argue` | `06-paradigm-challenge#1`（gamache2023，`_skeleton/hooks.md`） | 对既有解读的纠偏与再框架；声明本文立场 |
-| `may reflect` | **索引外底本**（无 `_skeleton/` 索引 id）——`gulati_lavie_singh_2009_partnering_experience.sentences.md:488`（gulati_lavie_singh_2009，rhetoric-moves/sources） | 对已观察关联的替代解释；不把观察等同于机制 |
+| `may reflect` | **索引外底本**（无 `_skeleton/` 索引 id）——`gulati_2009_the_nature_of_partnering_experience_and_the_gain.sentences.md:491`（gulati_2009_the_nature_of_partnering_experience_and_the_gain，rhetoric-moves/sources） | 对已观察关联的替代解释；不把观察等同于机制 |
 | `is consistent with` | **索引外底本**（无 `_skeleton/` 索引 id）——`fang_et_al_2025_rival_recall_ad_spend.sentences.md:75`（fang_et_al_2025，rhetoric-moves/sources）；`additional-analysis-embedding.md:42`（rhetoric-moves） | 证据与机制的相容性；补充分析作为裁决而不宣称确认 |
 | `can change` | **索引外底本**（无 `_skeleton/` 索引 id）——`anand_mukherjee_2024_learning_from_failures_di.sentences.md:339`（anand_mukherjee_2024，rhetoric-moves/sources） | 条件/能力改变行为；机制起作用的能力面 |
 | `can bundle` | **未定位底本**——骨架索引 verbatim 全量（口径见 `corpus/_skeleton/_index.md`）与 rhetoric-moves 正文均无该语气动词的 verbatim；`bundles of resources` 类命中的是名词短语，不构成机制语气底本 | （暂无） |

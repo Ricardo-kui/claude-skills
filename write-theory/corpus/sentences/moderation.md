@@ -70,8 +70,8 @@ a different level of analysis]."
 
 ---
 
-## 双边论证fit/misfit型（weng_yang 型）
-<!-- wb:weng_yang_jms -->
+## 双边论证fit/misfit型（weng_yang2024 型）
+<!-- wb:weng_yang2024 -->
 
 **功能**: 将交互效应概念化为 "fit"（alignment amplifies）和 "misfit"（misalignment dampens），为统计交互项创造有名字的理论概念。
 
@@ -112,8 +112,8 @@ a [actor] and a [moderator] can operate to compromise the [pole-A actor]'s
 
 ---
 
-## 能力放大+双边约束型（weng_yang 型）
-<!-- wb:weng_yang_jms -->
+## 能力放大+双边约束型（weng_yang2024 型）
+<!-- wb:weng_yang2024 -->
 
 **功能**: 当 moderator 是个体/组织的 "capacity/power" 时，论证 moderator 如何放大 IV 两端（pole-A AND pole-B）的效应，同时展示低 moderator 如何约束两端。
 

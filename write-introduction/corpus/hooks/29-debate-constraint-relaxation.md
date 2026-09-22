@@ -1,6 +1,6 @@
 ---
 type: canonical_hook
-canonical_id: "17-classic-debate-constraint"
+canonical_id: "29-debate-constraint-relaxation"
 status: EMERGING
 gap_strength: 中/高
 gap_type: Incommensurability
@@ -10,10 +10,10 @@ exclusivity: MEDIUM
 source_papers:
   - shareholder_litigation_stakeholder_orientation (SMJ): "shareholder primacy vs stakeholder view, constraint relaxation via legal change"
 created: 2026-05-20
-source: Original batch 1 extraction (former top-level corpus, old id "15-classic-debate-constraint"; renumbered on migration, top-level corpus since deleted)
+source: Original batch 1 extraction
 ---
 
-# 17-classic-debate-constraint — 经典辩论 + 约束放松 Hook
+# 29-debate-constraint-relaxation — 经典辩论 + 约束放松 Hook
 
 ## 功能描述
 

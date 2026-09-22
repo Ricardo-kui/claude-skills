@@ -26,7 +26,7 @@ source_papers:
   - cancellieri2023 (SMJ, 2023): "Paradox articulation + rhetorical question pivot: 'How to best mediate...? How to accommodate...?'"
   - hoffmann2024 (JM, 2024): "Policy unintended consequences: 'well-intended → unintended negative consequences' — quasi-natural experiment"
   - grewal2025 (JM, 2025): "Overgeneralization critique: 'generalized view fails to account for variety' — incident/brand/consumer heterogeneity"
-  - cui_yang_vertinsky_smj (SMJ): "三重维度并列缺口: outcome scope × portfolio type × network context"
+  - cui_yang_vertinsky_2018 (SMJ): "三重维度并列缺口: outcome scope × portfolio type × network context"
   - paruchuri_andrus_sullivan2026 (AMJ, 2026): "受众边界延伸型: internal hierarchy → external audience"
   - desjardine_shi_cheng2023 (ASQ, 2023): "visible-vs-invisible domain gap + oversight drives manipulation underground (invisible hands)"
   - ilicic_brennan2026 (JM, 2026): "outcome-valence asymmetry: beneficial political-consumption outcomes studied, harmful/addictive outcomes underexamined"
@@ -94,7 +94,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 | U | Paradox 阐述 + Rhetorical Question pivot 型（c |  | 适用于研究涉及两个 desirable but conflicting goals 的论文（ |  | cancellieri2023 (SMJ), P1-P2 |
 | V | 政策意外后果型（hoffmann2024 型） | hoffmann2024 系列 | 适用于使用 quasi-natural experiment（法律变更、监管冲击、政策 ad |  | hoffmann2024 (JM), P6-P7 (Intr |
 | W | 过度概括批评型（grewal2025 型） | 批评深化 | 研究对象内部异质性高（不同类型、不同情境、不同主体），已有研究用单一框架处理 |  | Grewal, Vana, and Stephen (202 |
-| X | 三重维度并列缺口型（cui_yang_vertinsky_smj 型） |  | Incompleteness × (Mechanism + Boundary) 组合；论文同 |  | Cui, Yang & Vertinsky (SMJ), P |
+| X | 三重维度并列缺口型（cui_yang_vertinsky_2018 型） |  | Incompleteness × (Mechanism + Boundary) 组合；论文同 |  | Cui, Yang & Vertinsky (SMJ), P |
 | Y | 受众边界延伸型（paruchuri2026型） |  | 已有理论/构念在内部/原领域充分发展，需要扩展到外部受众或新分析层次。 |  | paruchuri_andrus_sullivan2026 |
 | Z | 可见-不可见域缺口 + 监督驱动地下化（DesJardine2023 隐形之手型） | DesJardine2023 系列 | - 研究对象是被刻意隐藏/隐蔽进行的机制或行为（暗中操纵、隐蔽渠道、非正式安排、幕后影响、灰 |  | DesJardine, Shi & Cheng (2023, |
 | AA | 权威警告 + 例外枚举 + 规模-忽视悖论（DesJardine2023 P8 型） | DesJardine2023 系列 | 研究某大主体/核心力量对某结果的影响，而该主体尽管在域内占比最大却最少被研究（机构投资者、平 |  | DesJardine, Shi & Cheng (2023, |
@@ -180,7 +180,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 ### 必须配对
 - **与 `03-data-shock` (Hook) 配对**: 数据冲击建立 stakes，递进缺口将数据转化为学术问题
-- 或与 `10-practical-puzzle` (Hook) 配对：实践困境建立相关性，递进缺口精确到学术文献
+- 或与 `28-practitioner-puzzle` (Hook) 配对：实践困境建立相关性，递进缺口精确到学术文献
 
 ### 互斥
 - **不能与 `04-reality-contradicts-consensus` (Tension) 同用**: 前者是 Incommensurability 逻辑（文献说的与现实不一致），本品是 Incompleteness 逻辑（文献做得好但有遗漏）
@@ -738,7 +738,7 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 ---
 
-### 变体 X：三重维度并列缺口型（cui_yang_vertinsky_smj 型）
+### 变体 X：三重维度并列缺口型（cui_yang_vertinsky_2018 型）
 
 **模板**:
 > First, while researchers have examined [sub-topic 1], prior studies focused on [narrow scope 1]; the effect of [broader phenomenon 1] on [outcome 1] remains poorly understood.
@@ -1348,14 +1348,14 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 ### 段落节奏
 - **典型节奏**: 承认已有进展（1-2句）→ 精确指出缺口位置（1-2句）→ 解释为什么这个缺口重要（1-2句）
 - **ahmadi2017 压缩节奏**: 三段递进（笼统→具体→呼吁）在一个段落内完成 —— 每步 1 句，无展开
-- **cui_yang_vertinsky_smj 三重维度节奏**: 三个 First/Second/Third 缺口各 1 段，分别锚定 outcome scope、portfolio composition、network context
+- **cui_yang_vertinsky_2018 三重维度节奏**: 三个 First/Second/Third 缺口各 1 段，分别锚定 outcome scope、portfolio composition、network context
 - **kim_lee2026 双缺口收束节奏**: incomplete evidence → strategic-theory stakes lift → whether [high-stakes setting] AND whether beyond [initial stage] 一句收束
 
 ### 标志性叙事标记
 - [eilert2017]: "predominantly focused on X and Y. However, little attention has been paid to Z" — 经典三段式
 - [ahmadi2017]: "'underdeveloped' → 'only limited research' → 'emphasizes the need to investigate'" — 呼吁外包型结尾，将 gap 合法性推给领域权威
 - [gamache_etal2020]: "三层递进 Incompleteness: general→specific gap→why 层面根本问题" — Stakes 嵌入 Tension ("This omission is critical, as...")
-- [cui_yang_vertinsky_smj]: "First... remains poorly understood / Second... while overlooking... / Third... while largely overlooking" — 三重维度并列缺口，每个维度用不同 Incompleteness 标志性语言
+- [cui_yang_vertinsky_2018]: "First... remains poorly understood / Second... while overlooking... / Third... while largely overlooking" — 三重维度并列缺口，每个维度用不同 Incompleteness 标志性语言
 - [kim_lee2026]: "important but incomplete evidence" + strategic-theory stakes + underexplored (setting + stage) — 低 stakes 证据库外推缺口
 - [chenganesanliu2009]: "Stream A misses firm-value DV / Stream B misses strategy IV → intersection unexamined" — 双流互为遗漏交叉点
 

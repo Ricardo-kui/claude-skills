@@ -258,7 +258,7 @@ on conditions under which [experience] may or may not lead to [outcome].
 <!--
 pattern_id: rival_dimension_carveout_sentence
 build_type: 跨类型（竞争假设/反直觉预测的清场动作）
-source_papers: ["zajac_westphal_2004_asr"]
+source_papers: ["zajac_westphal_the_social_construction_of_market_value"]
 confidence: medium
 status: VERIFIED
 verification_basis: "expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)"

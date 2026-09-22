@@ -19,7 +19,33 @@ from pathlib import Path
 import yaml
 
 
-SKILL_ROOT = Path(__file__).resolve().parents[1]
+def _find_skill_root(start: Path) -> Path:
+    """定位 skill root：脚本住在 _governance/<skill>/scripts/，与
+    <skill>/corpus/ 是平行目录，向上搜索永远碰不到 corpus/。
+
+    因此以 markdown 语料的上级目录（即 _governance 的兄弟层）为锚，
+    再拼出与自身父目录同名的 skill 目录——布局改名或换层都不影响。
+    """
+    parts = start.resolve().parts
+    for i, part in enumerate(parts):
+        if part != "_governance":
+            continue
+        skills_root = Path(*parts[:i])          # _governance 的父目录
+        if i + 1 >= len(parts):
+            continue
+        skill_name = parts[i + 1]               # 与 _governance 同名的 skill
+        candidate = skills_root / skill_name
+        if (candidate / "corpus" / "_evidence_registry.yaml").is_file():
+            return candidate
+        raise RuntimeError(
+            f"无法定位 skill root：{candidate} 下不存在 corpus/_evidence_registry.yaml"
+        )
+    raise RuntimeError(
+        f"无法定位 skill root：{start} 的路径中未出现 _governance 层"
+    )
+
+
+SKILL_ROOT = _find_skill_root(Path(__file__).resolve().parent)
 CORPUS_DIR = SKILL_ROOT / "corpus"
 REGISTRY_PATH = CORPUS_DIR / "_evidence_registry.yaml"
 VARIANT_HEADING = re.compile(
@@ -132,9 +158,14 @@ def discover_assets(
     variants: list[dict] = []
     texts: dict[str, str] = {}
     for path in sorted(corpus_dir.rglob("*.md")):
-        if path.name == "_index.md":
-            continue
         text = path.read_text(encoding="utf-8")
+        metadata = _front_matter(text)
+        # _index.md files are normally pure navigation and carry no canonical_id.
+        # A few modules instead host canonical card bodies inside their _index.md;
+        # those are admitted only when the file declares canonical_id and actually
+        # contains variant blocks, so plain indices stay out of the inventory.
+        if path.name == "_index.md" and not metadata.get("canonical_id"):
+            continue
         matches = list(VARIANT_HEADING.finditer(text))
         if not matches:
             continue
@@ -142,7 +173,6 @@ def discover_assets(
         module = relative.split("/", 1)[0]
         if module not in KNOWN_MODULES:
             continue
-        metadata = _front_matter(text)
         canonical_id = str(metadata.get("canonical_id") or path.stem)
         parent_id = f"{module}:{canonical_id}"
         parents.append(
@@ -267,6 +297,17 @@ def _legacy_parent_evidence(registry: dict, module: str, canonical_id: str) -> d
     return entry if isinstance(entry, dict) else {}
 
 
+def _status_override(registry: dict, module: str, canonical_id: str) -> dict:
+    """Read an AUTHORED user ruling from status_overrides.
+
+    Key convention (registry path, no trailing .status):
+    ``evidence.<registry_key>.<canonical_id>``.
+    """
+    overrides = (registry.get("status_overrides") or {}).get("overrides") or {}
+    entry = overrides.get(f"evidence.{KNOWN_MODULES[module]}.{canonical_id}")
+    return entry if isinstance(entry, dict) else {}
+
+
 def _validate_record(kind: str, asset_id: str, record: dict) -> None:
     roles = VALID_PARENT_ROLES if kind == "parent" else VALID_VARIANT_ROLES
     if record.get("role") not in roles:
@@ -346,14 +387,21 @@ def load_catalog(
     parents: list[ParentAsset] = []
     for item in discovered_parents:
         legacy = _legacy_parent_evidence(registry, item["module"], item["canonical_id"])
+        ruling = _status_override(registry, item["module"], item["canonical_id"])
         record = dict(governance["default_parent_record"])
         if legacy.get("status"):
             record.update(
                 evidence_status=legacy["status"],
                 paper_count=legacy.get("paper_count"),
-                verification_basis="legacy_registry_migration",
             )
-            if legacy["status"] in {"VERIFIED", "ROBUST"}:
+            if ruling.get("status"):
+                # AUTHORED ruling takes precedence: a user ruling is evidence
+                # equivalent to user_expert_audit, not a bare legacy migration.
+                record["evidence_status"] = ruling["status"]
+                record["verification_basis"] = "user_expert_audit"
+            else:
+                record["verification_basis"] = "legacy_registry_migration"
+            if record["evidence_status"] in {"VERIFIED", "ROBUST"}:
                 record["role"] = "generative_strategy"
         record.update(governance["parent_overrides"].get(item["asset_id"], {}))
         record.setdefault("merged_into", None)

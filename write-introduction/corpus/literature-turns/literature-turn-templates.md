@@ -168,7 +168,7 @@ Literature Turn 的功能：将 Hook 建立的注意力转化为学术对话。�
 ## 组装规则
 
 ### 默认配对（对角线，能量匹配）
-- Progressive Coherence → Incompleteness Gap + `03-data-shock` 或 `10-practical-puzzle` Hook
+- Progressive Coherence → Incompleteness Gap + `03-data-shock` 或 `28-practitioner-puzzle` Hook
 - Synthesized Coherence → Inadequacy Gap + `05-literature-consensus-blindspot` 或 `04-puzzle-paradox` Hook
 - Non-Coherence → Incommensurability Gap + `06-paradigm-challenge` Hook
 

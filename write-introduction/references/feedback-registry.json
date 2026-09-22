@@ -1,5 +1,23 @@
 {
-  "records": [],
+  "records": [
+    {
+      "category": "corpus_fit",
+      "count": 1,
+      "estimator": "",
+      "evidence": "AGENTS.md 评审校准节；writing-dna-skill 同款让位条款（蒸馏产物优先于去AI清单）；academic-de-llm 安装记录 2026-09-20。",
+      "first_seen": "2026-09-20",
+      "id": "wif_b8fd3ab66c50541c",
+      "last_seen": "2026-09-20",
+      "project": "",
+      "reason": "范文现货证据优先（AGENTS.md 评审校准 2026-09-08）。2026-09-20 起本机新增 academic-de-llm 等通用去AI skill，其规则基线来自 STEM 期刊语料，与商科顶刊惯例存在假阳性冲突风险，须显式让位。",
+      "rule": "通用去AI/文风清单（academic-de-llm、humanizer、no-ai-slop 等）与 MVP30 范文语料冲突时，一律以范文语料为准：范文中的实际用法是学科惯例证据，不是 AI 痕迹；清单只可处理语料未覆盖的表层痕迹，不得据此改动语料支持的句式、破折号、短句节奏或 identified 类动词。",
+      "scope": "skill",
+      "section": "",
+      "severity": "reject",
+      "source": "用户裁定 2026-09-20",
+      "status": "active"
+    }
+  ],
   "schema_version": "1.1.0",
-  "updated": null
+  "updated": "2026-09-20"
 }

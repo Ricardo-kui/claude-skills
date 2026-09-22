@@ -209,12 +209,12 @@ H4: ...
 <!--
 pattern_id: two_by_two_symmetric_matrix
 build_type: 机制推演型
-source_papers: ["Gamache_McNamara_Mannor_Johnson_2020_SMJ", "Zhao-Ding_Gaba_ORSC"]
+source_papers: ["Gamache_McNamara_Mannor_Johnson_2020_SMJ", "zhao_ding_gaba_orsc"]
 confidence: high
 status: ready_for_corpus
 -->
 <!-- wb:Gamache_McNamara_Mannor_Johnson_2020_SMJ:legacy_hypothesis_organization_patterns_PatternBaselineMecha -->
-<!-- wb:Zhao-Ding_Gaba_ORSC:legacy_hypothesis_organization_patterns_PatternBaselineMecha_2 -->
+<!-- wb:zhao_ding_gaba_orsc:legacy_hypothesis_organization_patterns_PatternBaselineMecha_2 -->
 
 ## Pattern: 2×2 Symmetric Hypothesis Matrix
 
@@ -612,7 +612,7 @@ status: EMERGING
 <!--
 pattern_id: multilevel_parallel_hypothesis_sets_mediator_portion
 build_type: 机制推演型（跨层假设组织；机制推演/调节效应型通用）
-source_papers: ["carpenterwestphal2001_AMJ"]
+source_papers: ["carpenter_westphal_2001_strategic_context_of_external_ne"]
 confidence: high
 status: VERIFIED — expert_audit_override (Westphal 系裁决: 用户点名最爱学者,引言/理论单源足矣)
 -->

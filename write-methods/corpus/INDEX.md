@@ -25,6 +25,8 @@ updated: 2026-09-12
 
 ## 设计类型索引
 
+> **口径注记（2026-09-20 审计）**：本表 24 行 = 磁盘 24 个设计类型文件（路由口径，权威）。`_evidence_registry.yaml` 的 `total_design_types: 23` 是 wb 归属口径：① `VARX-PVAR`、`结构需求-state-space` 两个文件的 wb 标记已存在但归属未入 by_source_paper（borah_tellis_2016_jm 整体缺席；liu_shankar2015 的 design_types 列表未含结构需求-state-space），归 distill-methods-exemplar 后续写回补齐；② `common-method-bias-prevention` 是 micro-templates 模块混入 by_design_type，非独立设计类型文件。两数并存是已知状态，非数据丢失；重建器 --check 报 methods drift=0。
+
 | 文件 | 设计类型 | 变体数 | 最后更新 |
 |------|---------|--------|---------|
 | [面板数据-OLS](面板数据-OLS.md) | 面板数据-OLS | 95 | 2026-09-12 |
