@@ -1,8 +1,9 @@
 ---
 type: sentences-archive
 citekey: "pfarrer_pollock_and_rindova_2010"
-source_md: "D:\OneDrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Pfarrer, Pollock, and Rindova 2010.md"
-created: 2026-09-05
+source_md: "D:\Onedrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Pfarrer, Pollock, and Rindova 2010.md"
+created: 2026-09-20
+sentence_filter: min_chars=0
 note: >-
   跨源合成原料库存（distill-paper-exemplar L0 --keep-sentences 生成）。只读；
   语料句子可直接采用；替换来源特异性内容（专名/数字/系数/表号）。
@@ -16,6 +17,8 @@ The effects of intangible assets on organizational outcomes remain poorly unders
 We compare the effects of two intangible assets—firm reputation and celebrity—on (1) the likelihood that a firm announces a positive or negative earnings surprise, and (2) investors' reactions to these surprises.
 We find that firms that have accumulated high levels of reputation ("high-reputation" firms) are less likely, and firms that have achieved celebrity (celebrity firms) more likely to announce positive surprises than firms without these assets.
 Both high-reputation and celebrity firms experience greater market rewards for positive surprises and smaller market penalties for negative surprises than other firms.
+<!-- para 2 -->
+---
 <!-- para 3 -->
 The intangible assets of firms have attracted considerable interest in organizational and strategy research (e.g., Barney, 1991; Deephouse, 2000; Dierickx & Cool, 1989; Fombrun, 1996; Greenwood, Li, Prakesh, & Deephouse, 2005; Itami & Roehl, 1987; Rindova, Pollock, & Hayward, 2006).
 In particular, scholars have focused a great deal of attention on a subclass of intangible assets that we call "social approval assets," because they derive their value from favorable collective perceptions.
@@ -56,6 +59,7 @@ Analysts' forecasts are important for market efficiency because investors rely o
 Accordingly, managers strive to facilitate and improve their firms' valuations by avoiding earnings surprises and meeting analysts' consensus estimates (Degeorge et al., 1999).
 Thus, meeting analysts' earnings expectations either exactly or within a few cents is the norm.
 <!-- para 4 -->
+Yet earnings surprises do happen.
 They occur for a variety of reasons related to both a firm's actions and events beyond its control.
 For example, recent negative surprises have been blamed on lower-than-expected sales (Gaffen, 2008) and economic downturns (CNN, 2008).
 The Canadian pharmaceutical firm Biovail even blamed missing its consensus earnings forecasts on a batch of antidepressants falling off a delivery truck (Wall Street Journal, 2008b).
@@ -105,6 +109,7 @@ Though such actions may enable celebrity firms to “strike it big” from time 
 Further, according to Rindova and colleagues (2006), celebrity firms experience pressure to maintain their celebrity and therefore have incentives to take more extreme nonconforming actions over time.
 <!-- para 15 -->
 In sum, both the underlying capabilities and incentives of high-reputation firms are less likely to lead them to announce earnings surprises than firms that do not possess this asset; and both the actions and incentives of celebrity firms are more likely to lead them to announce earnings surprises, as they may experience larger and more unpredictable swings in performance.
+Stated more formally:
 <!-- para 16 -->
 **Hypothesis 1a.** Firms with high reputation are less likely to generate positive material earnings surprises than firms that do not possess this asset.
 <!-- para 17 -->
@@ -128,6 +133,7 @@ As such, celebrity is derived from, and stimulates, more affective information p
 Research on information processing supports this distinction, as it demonstrates that people using analytical and affective modes of information processing rely on different information inputs, combine them in different ways, and ultimately arrive at different assessments and attitudes (Chaiken, Liberman, & Eagly, 1989; also see Slovic et al. [2004] for a review).
 For example, whereas analytical information processing is conscious, deliberate, and based on logic, evidence, and causal reasoning, affective information processing is rapid and holistic (Agarwal & Malhotra, 2005; Slovic et al., 2004).
 Whereas these different information processing modes have been theorized primarily at the individual level of analysis, we argue that they can be used to characterize stakeholder sensemaking using reputation and celebrity as two different types of interpretative frames.
+We discuss their effects next.
 Since it is well established that positive and negative information stimuli are processed differently (Fiske & Taylor, 1991; Willemsen & Keren, 2002), we discuss their effects on investors' reactions to positive and negative earnings surprises separately.
 <!-- para 24 -->
 **Investors' reactions to positive earnings surprises.** Both reputation and celebrity provide interpretive frames associated with positive expectations about a firm's future performance (albeit for different reasons).
@@ -189,6 +195,7 @@ However, as discussed earlier, negative information is more likely to be disrega
 Further, the holistic information processing stimulated by celebrity's affective frame may compete with the analytical information processing triggered by negative information (Baumeister, Bratslavsky, Finkenauer, & Vohs, 2001).
 The competing information processing tendencies of the positive interpretative frame and the negative stimulus may weaken the overall effect of celebrity.
 Therefore, psychological research provides evidence to support the argument that high reputation is a stronger buffer in the case of negative events than celebrity is.
+We therefore hypothesize that:
 <!-- para 35 -->
 **Hypothesis 4a.** High-reputation firms experience less negative investor reactions to their material negative earnings surprises than firms that do not possess either high reputation or celebrity.
 <!-- para 36 -->
@@ -278,6 +285,7 @@ Articles with ratios falling between these two breakpoints were coded "neutral."
 <!-- para 21 -->
 To capture overall affective resonance, we used the Janis-Fadner (JF) coefficient of imbalance, which has been used in past research to assess the evaluative tenor of media coverage (Deephouse, 2000; Janis & Fadner, 1965; Pollock & Rindova, 2003).
 In this study we applied the JF coefficient to operationalize the overall affectivity of media coverage.
+The JF coefficient equals:
 <!-- para 22 -->
 $$
 \mathrm{JF}=\begin{cases}
@@ -314,6 +322,7 @@ The sample consisted of pooled time series data with repeated measures, as each 
 Given that we were primarily concerned with interfirm differences and certain predictor variables were mostly time-invariant, we obtained, report, and interpret results using random-effects logistic regression analysis for the tests of Hypotheses 1a, 1b, 2a, and 2b (Rao, Davis, & Ward, 2000).
 Random-effects models control for within-firm variance, allowing for between-firm comparisons (Petersen, 1993) and limiting large losses of observations that can lead to model convergence problems (Rao et al., 2000).
 As a robustness check, however, we also utilized a generalized estimating equations (GEE) regression model, a method found suitable for panel data because it measures both within- and between-firm variance and generates robust estimates of standard errors (Ballinger, 2004; Wade et al., 2006).
+Our results were the same.
 In testing Hypotheses 3a–3c and 4a–4c, we used the event study methodology (MacKinlay, 1997; McWilliams & Siegel, 1997) provided by the EVENTUS software package to generate the CARs and compared the mean CARs for each category of firms using t-tests.
 
 ## results
@@ -385,6 +394,7 @@ Variables | Model 1 odds ratio | Model 1 s.e. | Model 2 odds ratio | Model 2 s.e
 | Log-likelihood | -1,396.22 |  | -1,389.89 |  |
 | Wald chi-square | 252.76*** |  | 261.67*** |
 <!-- para 10 -->
+$^{a}$ $n = 2,800$.
 Industry and year dummies were included in analyses but are omitted from the table.
 Control variables are lagged $(t - 1)$. $^{b}$ Logged. $^{\dagger}p < .10$; $^{*}p < .05$; $^{**}p < .01$; $^{***}p < .001$.
 <!-- para 11 -->
@@ -408,6 +418,7 @@ Variables | Model 1 odds ratio | Model 1 s.e. | Model 2 odds ratio | Model 2 s.e
 | Log-likelihood | -1,435.11 |  | -1,434.24 |  |
 | Wald chi-square | 179.48*** |  | 180.79*** |
 <!-- para 13 -->
+$^{a}$ $n = 2,800$.
 Industry and year dummies were included in analyses but are omitted from the table.
 Control variables are lagged $(t - 1)$. $^{b}$ Logged. $^{\dagger}p < .10$; $^{*}p < .05$; $^{**}p < .01$; $^{***}p < .001$.
 <!-- para 15 -->
@@ -478,7 +489,7 @@ Second, firms possessing either high reputation or celebrity experience greater 
 Third, the positive returns to celebrity firms are greater than the positive returns to high-reputation firms for positive surprises, but there is no difference in their effects on investor responses to negative surprises.
 Taken together, these theoretical ideas and empirical results advance research on the effects of social approval intangible assets in several important directions.
 <!-- para 5 -->
-A central contribution of our study is that it is the first that we are aware of to empirically examine the differences between firm reputation and celebrity and to operationalize celebrity as defined by Rindova et al.
+A central contribution of our study is that it is the first that we are aware of to empirically examine the differences between firm reputation and celebrity and to operationalize celebrity as defined by Rindova et al. (2006).
 Although prior research has often treated firm celebrity as synonymous with firm visibility (e.g., Ashforth & Gibbs, 1990; Brooks, Highhouse, Russell, & Moore, 2003; Sutton & Galunic, 1996), the theory of firm celebrity advanced by Rindova and her colleagues suggests that celebrity is a distinct intangible asset based on a combination of high levels of public attention and positive affect.
 Our results support these arguments and show that the combination of these components yields a distinct and valuable intangible asset.
 Further, by developing an empirical measure that captures both components of celebrity, our study provides a finer-grained analysis of the distinctive mechanisms through which different social approval assets affect firm outcomes.
@@ -565,6 +576,7 @@ For negative surprises, the median value when earnings were missed by any amount
 Arthur, 2003; Combs & Skill, 2003; Wade et al., 2006), we also measured the CARs against two other market proxies—the CRSP equal-weighted index and the S&P 500—as well as excess returns.
 The results remained the same in all cases.
 In addition, we also calculated CARs in the days immediately preceding  $(-1, 0)$ and following  $(0, +1)$ the earnings announcement, as well as over 7-day  $(-3$ to  $+3)$ and 11-day  $(-5$ to  $+5)$ windows.
+The substantive results did not change.
 <!-- para 23 -->
 [^4]: In analyses not reported here, we reran our models excluding the years 1997 and 1998 as well as the companies from the WSJ/Harris list.
 Although sample size and thus variance were reduced, especially in the latter case, the results were substantively the same as reported here.

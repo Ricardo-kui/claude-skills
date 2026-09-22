@@ -1,8 +1,9 @@
 ---
 type: sentences-archive
 citekey: "castellaneta_2017_smj_how_does_trade_secret_legal_protection"
-source_md: "D:\OneDrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Castellaneta-2017 smj-How Does Trade Secret Legal Protection Affect Firm Market Value Evidence from the Uniform Trade Secret Act.md"
-created: 2026-09-05
+source_md: "D:\Onedrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Castellaneta-2017 smj-How Does Trade Secret Legal Protection Affect Firm Market Value Evidence from the Uniform Trade Secret Act.md"
+created: 2026-09-20
+sentence_filter: min_chars=0
 note: >-
   跨源合成原料库存（distill-paper-exemplar L0 --keep-sentences 生成）。只读；
   语料句子可直接采用；替换来源特异性内容（专名/数字/系数/表号）。
@@ -62,11 +63,11 @@ In today's knowledge-based economy, competitive advantage depends more and more 
 Such information is typically referred to as "trade secrets," a term that indicates a "vast bulk of intangible assets" (Halligan, 2008: 656), which are often considered the "crown jewels" of a firm's intellectual capital, developed over many years through myriad interactions and projects (Jorda, 2007).
 In the United States, which constitutes the empirical setting of our paper, the most common definition of trade secret is contained in the UTSA, according to which "a trade secret means information, including a formula, pattern, compilation, program, device, method, technique, or process, that (1) derives independent economic value, actual or potential, from not being generally known to, or readily ascertainable by proper means by other persons who might obtain economic value from its disclosure or use; and (2) is the subject of efforts that are reasonable under the circumstances to maintain its secrecy." That is, information of nearly any subject matter can qualify and be protected as a trade secret, including drawings and designs, prototypes, manufacturing processes, not-patentable or not-patented inventions, know-how, formulae or recipes, genetic materials and fragrances, commercial secrets, customer and supplier lists, business methods and strategies, and cost and price information.
 The only requisites for a trade secret receiving legal protection are that (1) the underlying information confer an economic advantage when kept secret and (2) that it be protected from disclosure by reasonable secrecy safeguards.
-Given this broad definition, trade secrets make up an average of two-thirds of the value of firms' intangible assets, and as much as 80 percent for companies in knowledge-intensive sectors; publicly traded U.S. companies have been estimated to own $5 trillion worth of trade secrets (Schwarts and Weil, 2010; U.S.
+Given this broad definition, trade secrets make up an average of two-thirds of the value of firms' intangible assets, and as much as 80 percent for companies in knowledge-intensive sectors; publicly traded U.S. companies have been estimated to own $5 trillion worth of trade secrets (Schwarts and Weil, 2010; U.S. Chamber of Commerce, 2014).
 <!-- para 3 -->
 Precisely because of their value, however, trade secrets are prone to misappropriation.
 For instance, in a Virginia federal court in September 2011, "Kolon Industries Inc. was held liable to paying DuPont Co. the amount of US$919.9 million for the theft of 149 trade secrets related to the production of Kevlar, a special fiber"—“an average value of$6.3 million per trade secret” (Hall et al., 2012: 8).
-More generally, U.S. litigation statistics show a sharp increase in cases of trade secret theft: the number of such cases doubled between 1988–1995 and again between 1995–2004; it is expected to double once more by 2017 (U.S.
+More generally, U.S. litigation statistics show a sharp increase in cases of trade secret theft: the number of such cases doubled between 1988–1995 and again between 1995–2004; it is expected to double once more by 2017 (U.S. Chamber of Commerce, 2014).
 Misappropriation implies the acquisition of a trade secret by improper means—for instance, through industrial espionage, fraud, bribery, or the breaching of an obligation of confidence and limited use (Aplin et al., 2012; Lemley, 2008).
 In this regard, trade secret law defines the extent to which trade secrets are protected from misappropriation by establishing (1) the scope of trade secret protection, which might extend to any valuable information rather than only to information continuously used in the operation of the business; (2) the remedies available to the injured party, which might include monetary relief—that is, compensation for any loss deriving from the misappropriation—or an injunctive relief—that is, an obligation for the misappropriator either to do something (e.g., to return, withdraw, or destroy any infringing goods or materials embedding trade secrets) or to avoid a certain behavior (e.g., to use trade-secret-related information for a limited amount of time or even permanently); and (3) the harshness of punishment for misappropriation, which might range from monetary penalties even to imprisonment (cf.
 Malsberger, Pedowitz, and Brock, 2008; Png, 2015).
@@ -107,6 +108,7 @@ Profitability increases due to loss of employee bargaining power are particularl
 For example, in knowledge-intensive industries, firms give their key workers rewards in order to reduce the risk of mobility and thus avoid trade secret leaks to competitors (e.g., Flammer and Kacperczyk, 2016; Hom and Griffith, 1995).
 Yet, when the protection of trade secrets is stronger, pecuniary incentives become less central to a firm's ability to retain knowledge workers—as the employees' bargaining power vis-à-vis their employers will typically decrease.
 Even if the risk of employees joining a rival is high, any trade secret misappropriation will be subject to court sanctions.
+Based on this reasoning we hypothesize:
 <!-- para 11 -->
 **Hypothesis 1 (H1): The impact of trade secret protection on firm market value will be more positive when the target company operates in an industry characterized by a higher mobility rate of knowledge workers.**
 <!-- para 13 -->
@@ -141,6 +143,7 @@ In such an industry, past performance is an unreliable indicator of the target's
 However, if buyers are able to glean any information about the target's assets—including those protected by trade secrets—industry resource-value uncertainty will pose a lesser challenge to the proper evaluation of the target.
 Indeed, firsthand information about knowledge assets will enhance buyers' ability to assess whether past performance reflects the firm's unique and valuable assets—rather than sheer luck—and, most important, whether firm performance can be enhanced and sustained in the long run (Barney, 1991; Kor et al., 2008).
 Hence, we expect a stronger trade secret protection—by limiting information on targets' intangible assets—to erode bidders' ability to assess the target, especially when the target operates in an industry exhibiting high resource-value uncertainty.
+Accordingly, we hypothesize:
 <!-- para 20 -->
 **Hypothesis 2 (H2): The impact of trade secret protection on firm market value will be more negative when the target company operates in an industry characterized by greater resource-value uncertainty.**
 <!-- para 21 -->
@@ -158,6 +161,7 @@ Hence, discriminating between valuable and poor investments becomes more difficu
 This challenge is less acute in an industry where the risk of a poor investment is low.
 The price discount determined by a stronger trade secret protection is minimal when winding up with a low-quality deal is unlikely.
 However, a stronger trade secret protection will lead buyers to discount their offers in order to avoid overpaying for a poor company when the risk of poor investments in the industry increases.
+Accordingly, we hypothesize:
 <!-- para 24 -->
 ** **pany operates in an industry characterized by a higher risk of poor investments.
 <!-- para 26 -->
@@ -186,6 +190,7 @@ Because the introduction of the UTSA does not reflect any firm's strategic decis
 To identify the effect of the law, we considered the target firm's state of incorporation as the relevant state for our analyses, because empirical evidence suggests that M&As are often governed by the law of the target firm's incorporation state (Coates and John, 2012).
 Moreover, there is evidence that the state of incorporation and the main state of business tend to overlap for private firms—such as those owned by PE firms. [^4]
 <!-- para 31 -->
+*Table 1.
 Year of enactment of statutes conforming to the UTSA (until 2012)*
 <!-- para 32 -->
 <table border=1><tr><td>State</td><td>Year of enactment</td></tr><tr><td>Alabama</td><td>1987</td></tr><tr><td>Alaska</td><td>1988</td></tr><tr><td>Arizona</td><td>1990</td></tr><tr><td>Arkansas</td><td>1981</td></tr><tr><td>California</td><td>1985</td></tr><tr><td>Colorado</td><td>1986</td></tr><tr><td>Connecticut</td><td>1983</td></tr><tr><td>Delaware</td><td>1982</td></tr><tr><td>Florida</td><td>1988</td></tr><tr><td>Georgia</td><td>1990</td></tr><tr><td>Hawaii</td><td>1989</td></tr><tr><td>Idaho</td><td>1981</td></tr><tr><td>Illinois</td><td>1988</td></tr><tr><td>Indiana</td><td>1982</td></tr><tr><td>Iowa</td><td>1990</td></tr><tr><td>Kansas</td><td>1981</td></tr><tr><td>Kentucky</td><td>1990</td></tr><tr><td>Louisiana</td><td>1981</td></tr><tr><td>Maine</td><td>1987</td></tr><tr><td>Maryland</td><td>1989</td></tr><tr><td>Michigan</td><td>1998</td></tr><tr><td>Minnesota</td><td>1981</td></tr><tr><td>Mississippi</td><td>1990</td></tr><tr><td>Missouri</td><td>1995</td></tr><tr><td>Montana</td><td>1985</td></tr><tr><td>Nebraska</td><td>1988</td></tr><tr><td>Nevada</td><td>1987</td></tr><tr><td>New Hampshire</td><td>1990</td></tr><tr><td>New Jersey</td><td>2012</td></tr><tr><td>New Mexico</td><td>1989</td></tr><tr><td>North Carolina</td><td>1981</td></tr><tr><td>North Dakota</td><td>1983</td></tr><tr><td>Ohio</td><td>1994</td></tr><tr><td>Oklahoma</td><td>1986</td></tr><tr><td>Oregon</td><td>1988</td></tr><tr><td>Pennsylvania</td><td>2004</td></tr><tr><td>Rhode Island</td><td>1986</td></tr><tr><td>South Carolina</td><td>1992</td></tr><tr><td>South Dakota</td><td>1988</td></tr><tr><td>Tennessee</td><td>2000</td></tr><tr><td>Utah</td><td>1989</td></tr><tr><td>Vermont</td><td>1996</td></tr><tr><td>Virginia</td><td>1986</td></tr><tr><td>Washington</td><td>1982</td></tr><tr><td>West Virginia</td><td>1986</td></tr><tr><td>Wisconsin</td><td>1986</td></tr><tr><td>Wyoming</td><td>2006</td></tr></table>
@@ -230,6 +235,7 @@ Our dependent variable is the percentage change in firm market value for Georgia
 To estimate the effect of the treatment, we include a "control group" of similar firms acquired before 1990 and resold after 1990 but unaffected by the change in trade secret protection because they were located in states where no UTSA was passed.  $\beta$ in Equation 1 represents the difference in the percentage change in firm market value between the treated and the control groups.
 An important difference between this example and the regression specification is that the latter accounts for the fact that the introduction of the UTSA is staggered over time: the composition of both the treatment and the control groups changes over time as progressively more states are treated.
 This design mitigates an important concern that treatment and control groups may be systematically different (cf.
+Bertrand and Mullainathan, 2003).
 <!-- para 11 -->
 Our approach is cross-sectional in that each target firm represents a single observation.
 An alternative empirical approach would involve estimating a difference-in-differences (DiD) regression.
@@ -280,6 +286,9 @@ We next assess the contingencies under which we expect UTSA enactment to have a 
 According to Hypothesis 1, trade secret protection should lead to an increase in market value for target firms in industries with high inter-firm mobility of knowledge workers.
 Results in column 2 of Table 3 provide support for Hypothesis 1: the interaction between UTSA enactment and industry mobility is positive (p-value equal to 0.024).
 The positive coefficient of the interaction term implies that, as worker mobility increases by one standard deviation (equal in our sample to 0.061), the treatment augments the firm market value of the focal company by about 18 percent.
+<!-- para 5 -->
+*Table 2.
+Descriptive statistics*
 <!-- para 6 -->
 <table border=1><tr><td>Variables</td><td>Mean</td><td>SD</td><td>1.</td><td>2.</td><td>3.</td><td>4.</td><td>5.</td><td>6.</td><td>7.</td></tr><tr><td>1.
 IRR (3 SD)</td><td>0.481</td><td>1.380</td><td>1.00</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>2.
@@ -328,6 +337,7 @@ If treatment is exogenous, any unobserved differences between firms will not be 
 In the following, we discuss potential identification concerns and describe how our specification helps address them.
 We perform additional empirical analyses to examine and address the potential endogenous effect of the treatment.
 <!-- para 12 -->
+*Table 3.
 The impact of trade secret protection on firm market value*
 <!-- para 13 -->
 <table border=1><tr><td rowspan="2">Variables</td><td colspan="5">Market value change</td></tr><tr><td>(1)</td><td>(2)</td><td>(3)</td><td>(4)</td><td>(5)</td></tr><tr><td>UTSA</td><td>0.118(0.115)</td><td>0.071(0.110)</td><td>0.187(0.129)</td><td>0.331(0.175)</td><td>0.330(0.172)</td></tr><tr><td>Industry Mobility</td><td></td><td>0.035(0.503)</td><td></td><td></td><td>0.042(0.495)</td></tr><tr><td>UTSA × Industry Mobility</td><td></td><td>2.959(1.270)</td><td></td><td></td><td>2.657(1.300)</td></tr><tr><td>Resource Value Uncertainty</td><td></td><td></td><td>-46.526(17.869)</td><td></td><td>-46.342(17.731)</td></tr><tr><td>UTSA × Resource Value Uncertainty</td><td></td><td></td><td>-146.507(53.823)</td><td></td><td>-129.617(55.368)</td></tr><tr><td>UTSA × Poor Investments Risk</td><td></td><td></td><td></td><td>-2.441(1.274)</td><td>-2.228(1.305)</td></tr><tr><td>Investment size</td><td>-0.201(0.043)</td><td>-0.203(0.044)</td><td>-0.202(0.043)</td><td>-0.202(0.043)</td><td>-0.204(0.044)</td></tr><tr><td>IPO exit</td><td>0.447(0.070)</td><td>0.450(0.071)</td><td>0.445(0.071)</td><td>0.447(0.070)</td><td>0.447(0.072)</td></tr><tr><td>Public at entry</td><td>-0.180(0.126)</td><td>-0.179(0.126)</td><td>-0.148(0.122)</td><td>-0.175(0.127)</td><td>-0.143(0.123)</td></tr><tr><td>Constant</td><td>1.784(0.821)</td><td>1.807(0.818)</td><td>2.462(0.788)</td><td>1.764(0.826)</td><td>2.461(0.788)</td></tr><tr><td>Entry-year fixed effects</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Exit-year fixed effects</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>State fixed effects</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Industry fixed effects</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Private equity firm fixed effects</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Observations</td><td>1,890</td><td>1,890</td><td>1,890</td><td>1,890</td><td>1,890</td></tr><tr><td>$R^2$</td><td>0.229</td><td>0.230</td><td>0.232</td><td>0.230</td><td>0.233</td></tr><tr><td>Adjusted $R^2$</td><td>0.154</td><td>0.154</td><td>0.156</td><td>0.154</td><td>0.156</td></tr></table>
@@ -359,6 +369,9 @@ Together, these results reinforce our confidence in the exogeneity of the trade-
 Another source of endogeneity may be a change in the supply or demand of firms by PE firms (due to the UTSA enactment), which would naturally influence the target's value.
 Accordingly, we reestimate OLS models for the period 1978–2011 to check whether the UTSA enactment was systematically correlated with the (log of the) number of firms within a state (i.e., the supply of firms) or with the value of both PE investments and disposals (both proxies for the demand of firms by PE investors).
 As shown in Table 4 (columns 3–8), UTSA enactment is not correlated with either the number of firms or the value of PE investments and disposal.
+<!-- para 22 -->
+*Table 4.
+UTSA enactment and impact*
 <!-- para 23 -->
 <table border=1><tr><td>Variables</td><td>(1) UTSA enactment</td><td>(2) UTSA enactment</td><td>(3) (log) firms</td><td>(4) (log) firms</td><td>(5) PE investments</td><td>(6) PE investments</td><td>(7) PE disposal</td><td>(8) PE disposal</td></tr><tr><td>UTSA</td><td></td><td></td><td>0.005(0.018)</td><td>0.014(0.019)</td><td>-448.804(341.931)</td><td>-199.792(255.023)</td><td>-167.345(132.134)</td><td>-40.563(89.862)</td></tr><tr><td>PE investments (t - 1)</td><td>-0.000(0.000)</td><td>-0.000(0.000)</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>PE disposal (t - 1)</td><td>-0.000(0.000)</td><td>-0.000(0.000)</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Firms (t - 1)</td><td></td><td>-0.000(0.000)</td><td></td><td></td><td></td><td>0.029(0.007)</td><td></td><td>0.019(0.003)</td></tr><tr><td>GDP per capita (t - 1)</td><td></td><td>-8.654(5.272)</td><td></td><td>5.537(2.990)</td><td></td><td>38,653.564(35,901.785)</td><td></td><td>6,181.499(11,695.138)</td></tr><tr><td>Red governor</td><td></td><td>0.041(0.036)</td><td></td><td>0.009(0.013)</td><td></td><td>-22.702(124.450)</td><td></td><td>-63.727(50.552)</td></tr><tr><td>Constant</td><td>-0.071(0.021)</td><td>0.160(0.157)</td><td>10.697(0.019)</td><td>10.684(0.034)</td><td>-0.000(88.215)</td><td>-2,319.536(710.737)</td><td>-0.000(41.315)</td><td>-1,345.810(282.922)</td></tr><tr><td>Year fixed effects</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Observations</td><td>653</td><td>641</td><td>1,785</td><td>1,700</td><td>1,785</td><td>1,700</td><td>1,785</td><td>1,700</td></tr><tr><td>$R^2$</td><td>0.161</td><td>0.169</td><td>0.755</td><td>0.768</td><td>0.175</td><td>0.230</td><td>0.230</td><td>0.326</td></tr><tr><td>Adjusted $R^2$</td><td>0.113</td><td>0.117</td><td>0.751</td><td>0.763</td><td>0.159</td><td>0.212</td><td>0.215</td><td>0.311</td></tr></table>
 <!-- para 24 -->
@@ -386,8 +399,7 @@ Yet, to better address this issue, we reestimate the baseline specification but 
 For instance, in the case of target firms sold in 1987, we consider only those mobility events that occurred in the target's industry before 1987 in any state that had not enacted the UTSA by then.
 In any year, this measure considers only those states that did not pass the UTSA and so is likely exogenous to the change in trade secret protection in the focal state.
 As another test, we reestimate the baseline specification but now consider a measure of average industry mobility across all firms in our sample.
-In doing so, we closely follow the methodology used by Chava et al.
-(2013) and use a time-invariant industry-level measure of mobility to alleviate endogeneity concerns; by construction, our measure is unrelated to the UTSA enactment in any single state.
+In doing so, we closely follow the methodology used by Chava et al. (2013) and use a time-invariant industry-level measure of mobility to alleviate endogeneity concerns; by construction, our measure is unrelated to the UTSA enactment in any single state.
 When we reestimate the baseline specifications with these two alternative measures of mobility, called "Mean industry mobility" and "Industry mobility pre-shock"; our findings remain robust: we still find that a stricter trade secret protection increases firm value in industries with higher cross-firm mobility of knowledge workers (Table S4, columns 1–2).
 <!-- para 33 -->
 A second concern pertains to measuring mobility rates with patent data: the interaction with a stronger trade secret protection might partially capture any interaction effect between trade secret protection and industry patent intensity.
@@ -421,8 +433,7 @@ On one hand, following an increase in trade secret protection, firm market value
 On the other hand, firm market value decreases when targets operate in industries with high resource-value uncertainty and high risk of poor investments.
 <!-- para 3 -->
 Accordingly, this work makes several key contributions to prior literature.
-Our study is the first to clarify how the strength of the local appropriability regime affects company market value, by bridging two literatures: on acquisitions (e.g.
-Capron and Shen, 2007; Coff, 1999; Laamanen, 2007) and on appropriability (e.g., Cohen, Nelson, and Walsh, 2000) that have remained surprisingly disconnected thus far.
+Our study is the first to clarify how the strength of the local appropriability regime affects company market value, by bridging two literatures: on acquisitions (e.g. Capron and Shen, 2007; Coff, 1999; Laamanen, 2007) and on appropriability (e.g., Cohen, Nelson, and Walsh, 2000) that have remained surprisingly disconnected thus far.
 By connecting these two research streams, we offer important insights to each.
 First, scholars have devoted much attention to patents as a key driver of firm value (e.g., Cockburn and Griliches, 1988; Hall et al., 2005); our study extends this line of research by documenting the complex and more nuanced impact of trade secrets.
 Second, we extend the M&A literature by exploring an important aspect of the market for corporate control that has been underexplored: the role of trade secrets in shaping the outcomes of acquisitions.
@@ -448,6 +459,7 @@ Alternative data sources, such as LinkedIn or the Current Population Survey, may
 <!-- para 7 -->
 Another caveat of our study is that here we focus only on firms owned by PE companies, which that may not be representative of the overall firm population.
 However, no difference has been identified between firms acquired by financial or strategic bidders in terms of the stock of intangible assets (cf.
+Table V of Gorbenko and Malenko, 2014).
 Hence, the impact of trade secret protection is unlikely to differ across such firms.
 At the same time, assessing the change in acquisition price after a strengthening of trade secret protection might be difficult in other empirical contexts—where firms are usually not sold multiple times.
 <!-- para 8 -->

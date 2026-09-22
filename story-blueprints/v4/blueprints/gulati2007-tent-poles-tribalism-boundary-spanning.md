@@ -21,7 +21,7 @@ reading_scope:
     - "PDM slices: gulati_2007_tent_poles.pdm/sections/introduction.md, sections/theory.md, sections/discussion.md"
     - "PDM root: gulati_2007_tent_poles.pdm.yaml (cross_section_identity + l2_coherence verdict ok, 2026-09-06j)"
     - "Verified section distillations: distill_track introduction (verified, quiet band) and theory (verified, gap band) recorded in the PDM root"
-    - "Sentence archive: story-blueprints/v4/rhetoric-moves/sources/gulati_2007_tent_poles.sentences.md"
+    - "Sentence archive: story-blueprints/v4/rhetoric-moves/sources/gulati_2007_tent_poles_tribalism_and_boundary_spanning_the_r.sentences.md"
 analysis_focus:
   primary: [introduction, theory]
   supporting: [discussion]

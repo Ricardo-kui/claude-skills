@@ -20,7 +20,7 @@ reading_scope:
   source_records:
     - "PDM materialized slices: higgins_2003_...ppe.pdm/sections/{introduction,theory,methods,results,discussion}.md (preprint)"
     - "Verified section distillations: sections/introduction.json, sections/theory.yaml, sections/methods.json, sections/results.json"
-    - "Sentence archive: v4/rhetoric-moves/sources/higgins_2003_...ppe.sentences.md"
+    - "Sentence archive: story-blueprints/v4/rhetoric-moves/sources/higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe.sentences.md"
 analysis_focus:
   primary: [introduction, theory]
   supporting: [results, discussion]

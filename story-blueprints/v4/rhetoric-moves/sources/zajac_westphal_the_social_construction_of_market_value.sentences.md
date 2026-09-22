@@ -1,8 +1,9 @@
 ---
 type: sentences-archive
 citekey: "zajac_westphal_the_social_construction_of_market_value"
-source_md: "D:\OneDrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Zajac & Westphal The Social Construction of Market Value-OvisOCR2-20260813-102132.md"
-created: 2026-08-30
+source_md: "D:\Onedrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Zajac & Westphal The Social Construction of Market Value-OvisOCR2-20260813-102132.md"
+created: 2026-09-20
+sentence_filter: min_chars=0
 note: >-
   跨源合成原料库存（distill-paper-exemplar L0 --keep-sentences 生成）。只读；
   语料句子可直接采用；替换来源特异性内容（专名/数字/系数/表号）。
@@ -11,6 +12,8 @@ note: >-
 # zajac_westphal_the_social_construction_of_market_value 句子库存
 
 ## introduction
+<!-- para 1 -->
+---
 <!-- para 2 -->
 Economic and organizational sociologists have devoted increased scholarly attention to processes of institutionalization, or mechanisms by which organizational structures, policies, and practices acquire social legitimacy and ultimately become taken-for-granted as normatively appropriate in a population.
 From a neoinstitutional perspective, organizational structures and practices acquire legitimacy with an organization's stakeholders to the extent that they are consistent with prevailing “institutional logics,” or “historically-variant sets of assumptions, beliefs, values, and rules by which individuals … interpret organizational reality and what constitutes appropriate behavior” (Thornton and Ocasio, 1999:804; see also Friedland and Alford 1991; Scott 2001).
@@ -104,7 +107,7 @@ For instance, Jensen (1989) explained the market's enthusiastic response to repu
 Financial gurus and members of the business press have offered similar interpretations.
 For example, the renowned investor Warren Buffett gave a widely quoted explanation for positive reactions to stock buybacks that invoked the agency logic: By making repurchases . . . management clearly demonstrates that it is given to actions that enhance the wealth of shareholders, rather than to actions that expand management's domain but do nothing (or even harm) shareholders.
 Seeing this, shareholders and potential shareholders increase their estimates of future returns from the business, which produces higher market values.
-(San Francisco Chronicle, July 31, 1995, p.
+(San Francisco Chronicle, July 31, 1995, p. B1 1995)
 <!-- para 13 -->
 From a financial economics perspective, event studies indicate the consequences of policy adoptions for economic efficiency (David 1997; Fama 1970).
 We suggest, however, that stock market reactions are based on investor perceptions about the sources of efficiency, rather than on any unchanging standard of efficiency.
@@ -150,6 +153,10 @@ That assessment, in turn, is influenced by prior evidence regarding the economic
 The larger event study literature typically assumes semi-strong capital market efficiency, wherein all publicly available information about a given policy at the time of adoption is reflected in the stock market's response (Brealy and Myers 1991; Fama 1970).
 Although this literature has not formally examined change in market reactions over time, it is assumed that the market has responded less positively over time to corporate strategies, such as unrelated acquisitions, because of an absence of economic benefits from the policy.
 In effect, the market reaction to a particular policy adoption is assumed to derive from a sophisticated and rapid statistical
+<!-- para 23 -->
+Not Implemented
+<!-- para 24 -->
+Implemented
 <!-- para 26 -->
 analysis, based on all publicly available data on prior adoptions and subsequent changes in economic performance.
 As more firms adopt the policy and their economic efficiency increases or decreases, these “cases” are added to the analysis, and the expected benefits from future adoptions are modified based on the revised “results”.
@@ -169,6 +176,7 @@ As discussed above, in the mid-1980s, firms increasingly adopted stock repurchas
 When these repurchase plans were not implemented, they did not, of course, enhance economic efficiency as was expected by agency theorists.
 Consequently, from a market-learning perspective, as more firms neglected to implement their repurchase plans over time, the expected efficiency benefits from adoption should diminish, and the market's reaction to the adoption of these plans should diminish accordingly.
 Note that this would be true from a market-learning perspective even if other motives for non-implementation were sometimes also involved, since investors would, on average, come to expect fewer agency benefits from announced repurchase plans, given growing accumulated evidence of non-implementation.
+Thus we have the following hypothesis:
 <!-- para 29 -->
 > **Hypothesis 2.** The number of firms that have adopted, but not implemented, stock repurchase plans is negatively associated with the stock market reaction to repurchase plan adoption at the focal firm.
 <!-- para 30 -->
@@ -211,11 +219,14 @@ Prior to widespread adoption and decoupling of repurchase plans, many large firm
 These were alleged to reduce agency costs by aligning CEO interests with the interests of shareholders (Kumar and Sopariwala 1992). [^1] Many firms explicitly invoked an agency logic in announcing LTIP adoption to shareholders in proxy statements, describing the plans as “incentive alignment” or control mechanisms that discourage executives from making decisions that advance their own interests at the expense of shareholders (Wade, Porac, and Pollack 1997; Zajac and Westphal 1995:283).
 Thus, the rationale for LTIP adoption, like the rationale for stock repurchase plans, was rooted in the agency logic of governance.
 Whereas LTIPs partially resolve the agency problem by giving CEOs a financial incentive to pursue shareholder objectives (i.e., rather than wasting corporate cash on empire-building strategies [Rajagopalan 1996]), repurchase plans prevent CEOs from wasting cash flow by taking it out of their hands entirely and returning it to investors (Jensen and Warner 1988).
+<!-- para 38 -->
+Thu, 08 Dec
 <!-- para 39 -->
 Moreover, while implementation of repurchase plans decreased in the mid-to-late 1980s, in the early 1980s, many firms formally adopted an LTIP without making grants under the plan (Westphal and Zajac 1998).
 This represents an earlier instance of decoupling a corporate governance policy purportedly designed to control agency costs.
 Thus, the market-learning perspective suggests that as more firms adopt LTIPs with an agency rationale and then fail to implement the plans (i.e., agency costs are not actually reduced), the market may not only discount the expected value of LTIPs but it may also lower its estimation of other policies that purport to reduce agency costs, including stock repurchase plans.
 In effect, the market learns to recognize the potential for nonimplementation of governance policies in general, as investors learn from their experience with LTIPs to be skeptical about policies that claim to control agency costs.
+This suggests the following hypothesis:
 <!-- para 40 -->
 > **Hypothesis 3.** The number of firms that have adopted LTIPs with an agency explanation but have not implemented the plans is negatively associated with the stock market reaction to repurchase plan adoption at the focal firm.
 <!-- para 41 -->
@@ -254,6 +265,7 @@ We chose this time period because nonimplemented repurchase plans became increas
 We excluded cases for which complete archival data were unavailable, leaving a final sample of 860 repurchase plans adopted by 463 firms.
 These firms were not significantly different in size (measured by sales and assets) or performance (measured by return on equity and return on assets in the previous year) from firms in the larger population that adopted repurchase plans, as indicated by Kolmogorov-Smirnov two-sample tests. [^2]
 <!-- para 5 -->
+PRIOR REPURCHASE PLAN ADOPTIONS.
 We created a dichotomous variable to indicate the adoption and nonimplementation of repurchase plans, coded as 1 if firms adopted a plan and did not subsequently repurchase any shares within three years.
 We also created a separate variable to indicate implemented repurchase plans, coded as 1 if firms adopted a repurchase plan and actually repurchased shares within three years.
 In separate models we measured plan implementation over different time periods (e.g., two years or five years following adoption), and the results presented below were substantively unchanged.
@@ -277,6 +289,7 @@ We analyzed proxies throughout the diffusion period of LTIPs to identify whether
 A count variable was created to indicate the number of LTIPs that were adopted with an agency explanation but without actually granting any incentives under the plans, prior to the focal repurchase plan adoption (prior non-implemented LTIPs).
 A second variable represents the number of LTIPs that had been adopted and implemented (i.e., with grants made under the plans) (prior implemented LTIPs).
 <!-- para 8 -->
+CONTROL VARIABLES.
 We controlled for financial and governance characteristics that might influence the market's reaction to repurchase plan adoption.
 The financial variables include cash flow per share (i.e., income before extraordinary items, divided by total common shares), long-term debt to equity ratio, return on assets, and log of sales.
 The governance variables included two indicators of apparent board independence from management (the ratio of outside to inside directors, or outsider ratio, and separation of the CEO and board chair positions, or CEO/chair separation), and the level of ownership by institutional investors (institutional ownership).
@@ -292,6 +305,8 @@ $$ R_{jt}=\alpha_{j}+\beta_{j}R_{mt}+\epsilon_{jt} $$
 (1) where $R_{jt}$ is the return for firm j on day t, $R_{mt}$ is the market return on day t; $\beta_j$ is the beta, or systematic risk, of firm j (i.e., the market-adjusted variance in stock returns for firm j), $\vartheta_j$ is the rate of return for firm j when $R_{mt}$ equals zero; and $\epsilon_{jt}$ is a serially independent disturbance term ( $E(\epsilon_{jt}) = 0$).
 The market model parameters for each firm ( $\alpha_j$ and $\beta_j$) are estimated over the period from day -259 to day -21 relative to each adoption date $t$ (Gaver et al. 1992).
 The excess daily return $(e_{jt})$ for each firm is then estimated as follows:
+<!-- para 13 -->
+$$ e_{jt}=R_{jt}-a_{j}-b_{j}R_{mt}, $$
 <!-- para 14 -->
 (2) where $a_{j}$ and $b_{j}$ are least squares estimates of $\alpha_{j}$ and $\beta_{j}$.
 Intuitively, this measure calculates the stock returns for a particular firm on a particular day that exceed the returns that would have been expected based on the recent returns of firms with comparable betas (i.e., comparable variance in their stock returns).
@@ -326,7 +341,10 @@ Finally, to ensure that sample selection biases would not affect our results, we
 The results are similar, and the hypothesized effects are unchanged, suggesting that selection biases are not affecting our results.
 <!-- para 6 -->
 Hypothesis 1 is tested in an event study analysis of repurchase plan adoptions.
+The results are displayed in Figure 2.
 We assess the significance of excess returns using the following test statistic, which is commonly used in the event study literature (Brown and Warner 1985):
+<!-- para 7 -->
+$$ A_{t}/S(A_{t}), $$
 <!-- para 8 -->
 where $A_t$ is the average cumulated excess return over the relevant observation period, and $S(A_t)$ is the time-series standard deviation of excess returns over a 238-day estimation period.
 Given that average excess returns are independent, identically distributed, and normal, this statistic has a student-t distribution under the null hypothesis.
@@ -345,6 +363,7 @@ Conversely, Hypothesis 2, the market-learning hypothesis, which argued that mark
 Note that the number of prior implemented repurchase plans is also associated with more positive market reactions.
 In effect, the number of previously adopted plans predicts market reactions regardless of whether those plans were implemented.
 <!-- para 12 -->
+*Note.
 Average excess returns are presented on the vertical axis; t statistics appear in parentheses.
 For years with less than 50 observations, statistics are derived from a bootstrap distribution of excess returns (Dodd and Warner 1983; McWilliams and Siegel 1997). * $p \leq .05$; ** $p \leq .01$; *** $p \leq .001$ (one-tailed tests).*
 <!-- para 14 -->
@@ -357,7 +376,9 @@ Accordingly, the market-learning hypothesis (Hypothesis 3) is not supported.
 <!-- para 17 -->
 <table border=1><tr><td>Independent Variable</td><td colspan="2">2-Day Period</td><td colspan="2">11-Day Period</td><td colspan="2">30-Day Period</td></tr><tr><td>(1) Prior nonimplemented repurchase Plans</td><td colspan="2">.0014*** (.0004)</td><td colspan="2">.0013*** (.0004)</td><td colspan="2">.0016*** (.0005)</td></tr><tr><td>(2) Prior implemented repurchase Plans</td><td colspan="2">.0007*** (.0002)</td><td colspan="2">.0006*** (.0002)</td><td colspan="2">.0008*** (.0002)</td></tr><tr><td>(3) Prior nonimplemented LTIPs</td><td colspan="2">.0016*** (.0005)</td><td colspan="2">.0015** (.0006)</td><td colspan="2">.0019** (.0007)</td></tr><tr><td>(4) Prior implemented LTIPs</td><td colspan="2">.0013* (.0006)</td><td colspan="2">.0011 (.0007)</td><td colspan="2">.0013 (.0007)</td></tr><tr><td>(5) Cash flow per share</td><td colspan="2">.020** (.007)</td><td colspan="2">.016* (.007)</td><td colspan="2">.022** (.008)</td></tr><tr><td>(6) Long-term debt/equity</td><td colspan="2">.0004* (.0002)</td><td colspan="2">.0004* (.0002)</td><td colspan="2">.0004* (.0002)</td></tr><tr><td>(7) Outsider ratio</td><td colspan="2">.256 (.144)</td><td colspan="2">.270 (.162)</td><td colspan="2">.204 (.179)</td></tr><tr><td>(8) CEO/chair separation</td><td colspan="2">.094 (.071)</td><td colspan="2">.176* (.079)</td><td colspan="2">.147 (.088)</td></tr><tr><td>(9) Institutional ownership</td><td colspan="2">.261** (.101)</td><td colspan="2">.194 (.114)</td><td colspan="2">.290* (.126)</td></tr><tr><td>(10) Return on assets</td><td colspan="2">-.0006 (.0042)</td><td colspan="2">-.0039 (.0047)</td><td colspan="2">-.0008 (.0052)</td></tr><tr><td>(11) Log of sales</td><td colspan="2">-.013 (.020)</td><td colspan="2">-.015 (.022)</td><td colspan="2">-.008 (.025)</td></tr><tr><td>(12) Other events</td><td colspan="2">.154 (.094)</td><td colspan="2">.210 (.105)</td><td colspan="2">.215 (.117)</td></tr><tr><td colspan="7">(13) Prior adoptions-focal firm:</td></tr><tr><td>(a) Nonimplemented repurchase plan</td><td colspan="2">.012 (.067)</td><td colspan="2">.001 (.075)</td><td colspan="2">.016 (.146)</td></tr><tr><td>(b) Implemented repurchase plan</td><td colspan="2">.058 (.051)</td><td colspan="2">.074 (.057)</td><td colspan="2">.095 (.064)</td></tr><tr><td>(c) Nonimplemented LTIP</td><td colspan="2">-.074 (.062)</td><td colspan="2">.016 (.131)</td><td colspan="2">.063 (.077)</td></tr><tr><td>(d) Implemented LTIP</td><td colspan="2">-.002 (.001)</td><td colspan="2">-.114 (.069)</td><td colspan="2">-.088 (.146)</td></tr><tr><td>Constant</td><td colspan="2">.169 (.180)</td><td colspan="2">.360 (.201)</td><td colspan="2">.341 (.224)</td></tr><tr><td>Absorbed year effects (F)</td><td colspan="2">3.83***</td><td colspan="2">3.90***</td><td colspan="2">3.68***</td></tr><tr><td>Model F</td><td colspan="2">8.02***</td><td colspan="2">7.23***</td><td colspan="2">7.39***</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>R</mi><mn>2</mn></msup></mrow></math></td><td colspan="2">.36</td><td colspan="2">.30</td><td colspan="2">.32</td></tr><tr><td>Durbin-Watson statistic (D)</td><td colspan="2">1.43**</td><td colspan="2">1.55*</td><td colspan="2">1.59*</td></tr></table>
 <!-- para 18 -->
+*Note.
 Coefficients shown with standard errors in parentheses.
+N = 778.*
 <!-- para 19 -->
 $p \leq .05$; ** $p \leq .01$; *** $p \leq .001$ (one-tailed tests).
 <!-- para 20 -->

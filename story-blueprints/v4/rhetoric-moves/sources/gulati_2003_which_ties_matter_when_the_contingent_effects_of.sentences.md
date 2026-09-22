@@ -1,14 +1,15 @@
 ---
 type: sentences-archive
-citekey: "gulati_higgins_2003_which_ties_matter"
-source_md: "D:\OneDrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Gulati等-2003-Which Ties Matter When The Contingent Effects of Interorganizational Partnerships on IPO Success.md"
-created: 2026-09-06
+citekey: "gulati_2003_which_ties_matter_when_the_contingent_effects_of"
+source_md: "D:\Onedrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Gulati等-2003-Which Ties Matter When The Contingent Effects of Interorganizational Partnerships on IPO Success.md"
+created: 2026-09-20
+sentence_filter: min_chars=0
 note: >-
   跨源合成原料库存（distill-paper-exemplar L0 --keep-sentences 生成）。只读；
   语料句子可直接采用；替换来源特异性内容（专名/数字/系数/表号）。
 ---
 
-# gulati_higgins_2003_which_ties_matter 句子库存
+# gulati_2003_which_ties_matter_when_the_contingent_effects_of 句子库存
 
 ## introduction
 <!-- para 1 -->
@@ -192,6 +193,8 @@ In summary, when examining the idea that interorganizational ties have different
 In this study of firms undergoing IPOs, the contextual dimension was operationalized as the extent to which the equity markets are favorable to new issues—in simplified terms, whether the equity markets are 'hot' or 'cold' for new issues.
 The network dimension has been broken down into the following types of ties: VC partnerships, ties with an underwriter, and strategic alliances.
 Figure 1 depicts this two (hot vs. cold equity market) by three (tie type) contingency framework and summarizes our predictions.
+<!-- para 29 -->
+Network Factors: Tie Type
 <!-- para 30 -->
 Contextual Factors: Equity Market Conditions | Endorsement Relations |  | Strategic Alliances |
 | --- | --- | --- | --- |
@@ -204,6 +207,7 @@ Contextual Factors: Equity Market Conditions | Endorsement Relations |  | Strate
 Our sample frame includes U.S. biotechnology firms that were founded between 1961 and 1994.
 Of these 858 firms, 299 went public between 1979 and 1996.
 Approximately 86 percent of the public firms specialized in the development of therapeutics and/or human diagnostics; the majority of the remaining firms specialized in agriculture and/or other biological products, generally with the intention of engaging in therapeutic applications in the future.
+The average time to IPO was 4.87 years.
 <!-- para 4 -->
 We compiled our data from both published and unpublished sources, striving to be as thorough as possible, yet focused on true, dedicated biotechnology firms.
 Our primary list of public biotechnology firms was obtained from the BioWorld Stock Report for Public Biotechnology Companies in 1996 (n = 281).
@@ -256,8 +260,7 @@ Taking the second tombstone announcement, they checked to see if any underwriter
 If this was the case, the new, more highly ranked underwriter was assigned the rank of the superseded underwriter, and the superseded underwriter and all lower-ranked underwriters were shifted one point down on the scale.
 This continued until all IPOs were exhausted.
 When more than 10 categories became necessary to preserve the hierarchy presented on the tombstones, decimal increments were employed.
-Eventually, the scale as presented in Carter et al.
-(1998) is incremented in units of 0.125.
+Eventually, the scale as presented in Carter et al. (1998) is incremented in units of 0.125.
 Scores may assume a value ranging from 0, indicating lowest prestige, to 9, indicating highest prestige.
 In our dataset, the mean score was 7.63.
 Carter and Dark's (1992) analyses suggest that these measures provide a finer-grained evaluation than a simpler market share alternative (e.g., Megginson and Weiss, 1991).
@@ -300,44 +303,46 @@ From the main company description in the prospectuses, firms were coded as being
 To verify the firm's business, we referred to the IBI database and BioScan.
 For the private companies, we had information on up to 30 such categories.
 For this business type variable, we coded whether the company was in a core biotechnology field (i.e., therapeutics or therapeutics and diagnostics, or not).
-<!-- para 29 -->
-We used Heckman selection models to guard against the possibility of sample selection bias (Heckman, 1979).
-In general, sample selection can arise when the criteria for selecting observations are not independent of the outcome variables.
-Here, since we are studying factors that influence financial indicators of IPO success, which can only be measured when a firm goes public, we want to guard against the possibility that there is some other factor, in addition to those we study, that accounts for the likelihood of firms being able to go public in the first instance.
-<!-- para 30 -->
-Heckman's procedure generates consistent, asymptotically efficient estimates that can enable us to generalize to the larger population of biotechnology firms (cf.
-In essence, the Heckman model is a two-stage procedure that uses the larger risk set of public and private firms, including firms that ceased to exist as of 1996 in both categories (n = 858).
-Probit regression was used to estimate the likelihood of completing an IPO during the first stage, and estimates of parameters from that model were then incorporated into a second-stage regression model to predict IPO success (Van de Ven and van Praag, 1981).
-For the first-stage model, we used the information we had available for our public and private firms—geographical location, year of founding, and type of business—to predict likelihood of going public. [^2] In the second stage, although the sample includes all 858 firms, the standard errors reported reflect the smaller sample of firms (n = 299).
-<!-- para 31 -->
-To account for the fact that we had financial information that spanned two decades, we transformed our IPO success estimates into constant 1996 dollars and logged the estimates for our firms.
-Finally, for all of our analyses, we included the equity index variable described earlier, which
-<!-- para 32 -->
-provides an indicator of the environmental conditions the firm faced when trying to go public.
-The numbers we used were calibrated not just by the year but also by the month preceding the offering, which produces fairly fine-grained estimates.
 
 ## results
 <!-- para 2 -->
+We used Heckman selection models to guard against the possibility of sample selection bias (Heckman, 1979).
+In general, sample selection can arise when the criteria for selecting observations are not independent of the outcome variables.
+Here, since we are studying factors that influence financial indicators of IPO success, which can only be measured when a firm goes public, we want to guard against the possibility that there is some other factor, in addition to those we study, that accounts for the likelihood of firms being able to go public in the first instance.
+<!-- para 3 -->
+Heckman's procedure generates consistent, asymptotically efficient estimates that can enable us to generalize to the larger population of biotechnology firms (cf.
+Heckman, 1979).
+In essence, the Heckman model is a two-stage procedure that uses the larger risk set of public and private firms, including firms that ceased to exist as of 1996 in both categories (n = 858).
+Probit regression was used to estimate the likelihood of completing an IPO during the first stage, and estimates of parameters from that model were then incorporated into a second-stage regression model to predict IPO success (Van de Ven and van Praag, 1981).
+For the first-stage model, we used the information we had available for our public and private firms—geographical location, year of founding, and type of business—to predict likelihood of going public. [^2] In the second stage, although the sample includes all 858 firms, the standard errors reported reflect the smaller sample of firms (n = 299).
+<!-- para 4 -->
+To account for the fact that we had financial information that spanned two decades, we transformed our IPO success estimates into constant 1996 dollars and logged the estimates for our firms.
+Finally, for all of our analyses, we included the equity index variable described earlier, which
+<!-- para 5 -->
+provides an indicator of the environmental conditions the firm faced when trying to go public.
+The numbers we used were calibrated not just by the year but also by the month preceding the offering, which produces fairly fine-grained estimates.
+<!-- para 7 -->
 Correlations between the main variables in this study are provided in Table 1.
 Table 2 presents the results from Heckman selection models in which the first stage predicted whether or not a company was able to go public and in which the second stage predicted IPO success.
 The first-stage probit models predicting whether a company was able to go public correctly classified 73 percent of the cases.
 As shown in Table 2, the analyses predicting IPO success begin with models that include firm and industry-level control variables, then include the main effects for firm partnerships and equity market uncertainty and then include the interaction terms between equity market uncertainty and the specific forms of endorsement relations and strategic alliances, as suggested in Hypotheses 1–3.
-<!-- para 3 -->
+<!-- para 8 -->
 Hypothesis 1 predicted that having a prestigious VC partner when a firm goes public would be particularly beneficial to IPO success when the equity markets are cold for new issues.
 Model III in Table 2 tests this hypothesis.
 Since we operationalized equity market uncertainty as a continuous measure ranging from cold to hot, then support for Hypothesis 1 would be indicated if our results showed a significant and negative interaction effect between the equity market index and VC prominence.
 Our findings reveal a significant and negative interaction, which supports Hypothesis 1.
-<!-- para 4 -->
+<!-- para 9 -->
+The results also support Hypothesis 2.
 Hypothesis 2 was that underwriter prestige would be positively related to IPO success, particularly when the equity markets are relatively hot for new issues.
 As shown in Model IV of Table 2, the interaction term between equity index and underwriter prestige was positive and significant, as predicted.
 The main effect for underwriter prestige also remained significant and positively related to IPO success in all of our models, consistent with prior research (e.g., Carter and Manaster, 1990).
 In Model V of Table 2, we included all of the interaction terms.
 The results supporting Hypotheses 1 and 2 remained significant and in the directions predicted.
-<!-- para 5 -->
+<!-- para 10 -->
 Hypothesis 3 predicted that prominent downstream strategic alliances would be positively related to IPO success, especially when the equity markets are relatively cold for new issues.
 This hypothesis was not supported; as shown in Model III in Table 2, the interaction effect between equity market uncertainty and downstream alliances was not significant.
 In addition, we found no main effects for strategic alliances on IPO success.
-<!-- para 6 -->
+<!-- para 11 -->
 With respect to our control variables, firm size and the amount of private financing a firm received prior to the IPO were significant, as was the size of a firm's upper echelon.
 And, as shown in two of the baseline models in our tables, firms with more advanced products tended to have more successful IPOs.
 With respect to the main effects, as expected, having a prestigious underwriter on board was consistently and positively related to IPO success.
@@ -353,6 +358,7 @@ The findings confirm our general thesis that network effects are not uniform but
 <!-- para 3 -->
 When investigating the contingent value of interorganizational embeddedness, we focused on two
 <!-- para 4 -->
+**Table 1.
 Means, standard deviations, and correlations $\left( {N = {299}}\right)$**
 <!-- para 5 -->
 Variable | X | S.D. | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 |
@@ -391,6 +397,7 @@ IPO success$^{c}$ | -0.01 | 0.87 | 0.18** | 0.38*** | 0.25*** | 0.19*** | 0.58**
 <!-- para 6 -->
 *** $p \leq 0.001$; ** $p \leq 0.01$; * $p \leq 0.05$; † $p \leq 0.10$
 <!-- para 7 -->
+**Table 2.
 The effects of interorganizational partnerships on IPO success $^{a,c}$**
 <!-- para 8 -->
 | I | II | III | IV | V |
@@ -481,3 +488,13 @@ While there is a growing body of research across the strategy field seeking to i
 We deviate here from the general claim that more ties are better and provide a richer account of the relative importance of various kinds of ties and of how their importance may also change with the market context.
 As our results show, partnerships with prominent firms are not homogeneous in their effects for young firms but rather depend upon the types of ties as well as the market context in which such investment decisions are made.
 Together, these two contingency dimensions can enhance our understanding of the conditions under which interorganizational partnerships affect the success of young firms.
+<!-- para 22 -->
+[^1]: We thank an anonymous reviewer for the suggestion to construct a consolidated financial measure of IPO performance.
+<!-- para 23 -->
+[^2]: We note that two-stage models do a particularly good job at estimation when there is at least one variable that may be considered an ‘instrument’ that is a good predictor in the first stage but not the second stage of the model; in this case, that ‘instrument’ was business type (see Winship and Mare, 1992, for further discussion).
+<!-- para 24 -->
+[^a]: Unstandardized regression coefficients reported; standard errors in parentheses.
+<!-- para 25 -->
+[^b]: Adjusted to 1996 dollars and logged.
+<!-- para 26 -->
+[^c]: Based upon average standardized scores for firm net proceeds, pre-money market value, 90-day market value, and 180-day market value, adjusted to 1996 dollars and logged.

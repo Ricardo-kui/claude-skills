@@ -1,167 +1,23 @@
 ---
 type: sentences-archive
-citekey: "gulati_westphal_1999_cooperative_or_controlling"
-source_md: "D:\OneDrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Gulati等-1999-Cooperative or Controlling The Effects of CEO-board Relations and the Content of Interlocks on the Formation of Joint Ventures.md"
-created: 2026-09-06
+citekey: "gulati_1999_cooperative_or_controlling_the_effects_of_ceo_bo"
+source_md: "D:\Onedrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Gulati等-1999-Cooperative or Controlling The Effects of CEO-board Relations and the Content of Interlocks on the Formation of Joint Ventures.md"
+created: 2026-09-20
+sentence_filter: min_chars=0
 note: >-
   跨源合成原料库存（distill-paper-exemplar L0 --keep-sentences 生成）。只读；
   语料句子可直接采用；替换来源特异性内容（专名/数字/系数/表号）。
 ---
 
-# gulati_westphal_1999_cooperative_or_controlling 句子库存
+# gulati_1999_cooperative_or_controlling_the_effects_of_ceo_bo 句子库存
 
 ## introduction
-<!-- para 2 -->
-*Ranjay Gulati* (Northwestern University) and *James D.
-Westphal* (University of Texas at Austin)
-<!-- para 3 -->
-> **Abstract.** This study examines the influence of the social network of board interlocks on strategic alliance formation.
-Our theoretical framework suggests how board interlock ties to other firms can increase or decrease the likelihood of alliance formation, depending on the content of relationships between CEOs (chief executive officers) and outside directors.
-Results suggest that CEO-board relationships characterized by independent board control reduce the likelihood of alliance formation by prompting distrust between corporate leaders, while CEO-board cooperation in strategic decision making appears to promote alliance formation by enhancing trust.
-The findings also show how the effects of direct interlock ties are amplified further by third-party network ties. $^{*}$
-<!-- para 4 -->
-The board interlock network has been viewed as an ideal arena in which to develop and test the embeddedness perspective on interorganizational relations.
-The board of directors is a unique formal mechanism linking top managers of large corporations; it provides an opportunity for leaders to exchange information, observe the leadership practices and style of their peers, and witness firsthand the consequences of those practices.
-Thus, from this perspective, board ties to other firms should have a strong influence over corporate policy and strategy decisions.
-The empirical literature on board interlocks has extended research on the diffusion of innovations by specifying the social networks through which a variety of policies and practices are spread across firms (e.g., Mizruchi, 1992; Haunschild, 1993; Palmer, Jennings, and Zhou, 1993; Westphal and Zajac, 1997).
-<!-- para 5 -->
-While interlock research has advanced our understanding of the consequences of interlocks for firms, significant concerns have also been raised that reflect more general concerns about the application of network theory to interorganizational relations (Mizruchi, 1996).
-Several authors have expressed concern about the consistency and magnitude of network effects (Stinchcombe, 1990; Fligstein, 1995).
-Weak or inconsistent findings may result from two limitations common to most prior studies.
-First, prior interlock research has not adequately specified the content of network ties (Hirsch, 1982; Pettigrew, 1992; Mizruchi, 1996: 288).
-Content here implies a specification of the nature of the relationship and behavioral processes underlying a connection between two actors.
-Although recent research in the governance literature suggests that relationships between top managers on corporate boards may be characterized by independence and distrust in some cases (Westphal, 1999), in the interlock literature all ties are generally treated as equally positive connections that facilitate social cohesion and the exchange of information between firms.
-This ignores heterogeneity that may exist among interlocks in the extent to which they channel information and engender trusting relations between board members.
-<!-- para 6 -->
-*致谢（原刊首页脚注）：The order of authorship was determined alphabetically.
-We thank the associate editor Don Palmer, three anonymous reviewers, and the following individuals for their helpful comments: Gautam Ahuja, Martin Gargiulo, Mark Mizruchi, Marc-David Seidel, Karen Westphal, and Edward Zajac.
-We would like to thank Linda Johanson for editorial guidance.*
-<!-- para 7 -->
-Another concern with interlock research is its primary focus on the effect of direct ties or relational embeddedness on firm behavior to the exclusion of more distant network ties or structural embeddedness (Granovetter, 1992).
-While there is ample evidence in network research that both relational and structural embeddedness can influence behavior (e.g., Burt, 1987; Gulati and Gargiulo, 1999), this has had limited application in interlocks research.
-Studies in the larger network literature have shown that indirect network ties between actors can strongly condition the effects of direct ties between them (Gulati, 1995b).
-Moreover, recent research also suggests that indirect network ties can amplify differences in the magnitude of the effect of direct ties, such that distrust between actors is exacerbated in the presence of indirect ties between them (Burt and Knez, 1995).
-Thus, it may be possible to uncover stronger interlock effects by modeling variation in the content of direct ties and examining how such ties are conditioned by the larger social structure.
-<!-- para 8 -->
-The present study examines the influence of heterogeneous social processes that underlie interlock ties, and the moderating effects of indirect network ties, on the creation of strategic alliances between firms.
-Some ties may promote the creation of a new alliance, while others could actually reduce its likelihood, depending on the behavioral content of the tie.
-As a result, there may be both bright and dark sides to embeddedness in interorganizational relationships.
-Although recent studies have focused on how the network of prior alliances provides valuable information to potential partners about each other's reliability, capabilities, and needs (Kogut, Shan, and Walker, 1992; Gulati, 1995b; Powell, Koput, and Smith-Doerr, 1996), this literature has not considered the role of alternative networks such as board interlocks in guiding the formation of new alliances or in strategic cooperation between firms.
-In this paper, we examine the role of board interlocks, focusing on a subset of alliances known as joint ventures, which entail the creation of a separate legal entity in which the parent firms take equity, and use the term alliance to refer specifically to joint ventures.
-Such alliances typically entail a considerable outlay of resources and create enduring and irreversible commitments between partners, which can make the influence of the board interlock network on their formation even more important.
-Such a network can be an important source of information for top managers about the reliability and capabilities of potential venture partners.
-
-## theory
-<!-- para 2 -->
-Empirical studies examining the consequences of interlocking directorates for the diffusion of innovations and the likelihood of strategic change have typically viewed interlock ties in broad terms as a mechanism for resolving uncertainty for top management decision makers (Galaskiewicz, 1985a).
-In discussing how interlock ties may facilitate the diffusion of an innovation, scholars have emphasized the value of direct communication between managers and directors in reducing ambiguity about the implications of adoption.
-From this perspective, information from fellow corporate leaders is particularly influential because it comes from a trusted source (Davis, 1991; Haunschild, 1993).
-Research on the consequences of interlocking directorates would also suggest that interlock ties could help resolve uncertainty for top management decision makers about the implications of forming strategic alliances with another firm.
-Moreover, the question here relates not only to the adoption of strategic alliances in general, but also to the choice of a specific partner.
-While prior research has typically described interlocks as conduits of information about administrative innovations, it is reasonable to expect that board members also communicate information about their respective parent organizations.
-The social embeddedness created by interlock ties should help resolve uncertainty for top managers about the motives and management capabilities of other organizations as potential alliance partners.
-<!-- para 3 -->
-Despite their explosive growth, strategic alliances are associated with a variety of risks and pitfalls that result in considerable uncertainty about the decision to enter such ties.
-This uncertainty stems from two main sources (Gulati, 1995a, 1995b).
-First, organizations have difficulty in obtaining information about the competencies and needs of potential partners.
-Such information is often confidential and may not be revealed outside a close relationship, but organizations must understand the needs and capabilities of potential partners if both organizations are to derive benefits from the alliance.
-The second source of uncertainty that affects strategic alliances stems from the paucity of information about the reliability of the potential partners, whose behavior is a key factor in the success of an alliance.
-Organizations entering alliances face considerable moral hazard concerns because of the unpredictability of the behavior of partners and the likely costs to an organization from opportunistic behavior by a partner, if it occurs (Kogut, 1989; Doz, Hamel, and Prahalad, 1989; Gulati, Khanna, and Nohria, 1994; Khanna, Gulati, and Nohria, 1998).
-A partner organization may either free ride by limiting its contributions to an alliance or may simply behave opportunistically, taking advantage of the close relationship to use resources or information in ways that may damage the partner's interests.
-<!-- para 4 -->
-Recent research builds on Granovetter's notion of embeddedness (1985) and suggests that organizations address the potential hazards associated with building alliances by relying on information provided through existing interorganizational networks (Gulati, 1998).
-While the focus of this research has been on the role of the network of prior alliances (e.g., Gulati and Gargiulo, 1999), board interlocks may also channel information between firms and thus serve as a catalyst for the creation of new alliances between firms.
-Beyond allowing top managers to form relationships with managers of prospective alliance partners, board ties may also enable directors to acquire firsthand knowledge about another firm's capabilities, activities, and plans through their communications with top management and their involvement in the decision-making process.
-Top managers can identify and pursue alliances by jointly discovering opportunities for collaboration in ongoing discussions.
-Networks can also provide information in a timely manner, which can be important when a firm seeking attractive alliance partners must approach them at the right juncture and preempt their seeking alliances elsewhere.
-This suggests an initial, baseline hypothesis on the effect of interlock ties on alliance formation:
-<!-- para 5 -->
-> [!hypothesis]
-> Hypothesis 1: An interlock tie between two firms will increase the likelihood of subsequent alliance formation between them.
-<!-- para 6 -->
-The discussion thus far has assumed that interlock ties indicate positive social contact between top managers and outside directors of the focal firm.
-A similar rationale has been used in much prior research on board interlocks and the diffusion of organizational innovations.
-As interlock researchers have generally recognized, however, there is considerable variation in the nature of management-board relationships, though the consequences of this heterogeneity have yet to be systematically examined (Herman, 1981; Johnson, Hoskisson, and Hitt, 1993; Mizuchi, 1996).
-The form of management-board relationships can range from a positive and relatively cohesive relationship between top managers and outside directors to a negative and independent one, with very different consequences for the likelihood of venture formation.
-<!-- para 8 -->
-According to agency perspectives, while top managers are responsible for ongoing decision management, the board of directors is responsible for decision control, which involves monitoring and evaluating management decision making and performance (Fama and Jensen, 1983).
-In effect, the board is viewed as an efficient control device that can help align management decision making with shareholders' interests (Beatty and Zajac, 1994).
-For instance, to the extent that managers' personal preferences regarding executive compensation, corporate diversification, or other strategy and policy issues conflict with the interests of shareholders, boards can intervene to ensure that shareholders' interests are protected (Hermalin and Weisbach, 1988; Hill and Snell, 1988).
-Moreover, from this perspective, outside directors in particular are critical to the board's ability to exercise control, because as non-employee directors they are formally independent from management and thus better able to evaluate management decisions and actions objectively on behalf of shareholders' interests.
-<!-- para 9 -->
-In prior years, this agency model of the relationship between the chief executive officer (CEO) and the board could be dismissed as an anomaly.
-Organization theorists have typically suggested that while outside directors are in a position to exercise independent control over management, various behavioral factors effectively limit the social independence of outsiders, impairing their ability or willingness to exert control.
-For instance, given evidence that CEOs traditionally dictate the selection of new directors, several authors have suggested that CEOs can appoint personal friends or other individuals with whom they have preexisting social ties (e.g., Finkelstein and Hambrick, 1988; Wade, O'Reilly, and Chandratat, 1990; Cannella and Lubatkin, 1993).
-Such ties are thought to inhibit the board's willingness to contradict management's preferences on behalf of shareholders.
-Moreover, organization theorists have long maintained that generalized norms of support among managerial elites enforce a passive role for outside directors in strategic decision making (e.g., Herman, 1981; Whisler, 1984).
-From this perspective, boards have little potential to serve as independent agents of control and, supporting the assumption of interlock theorists, management-board ties are characterized by social cohesion.
-<!-- para 10 -->
-The recent literature on boards of directors, however, has provided some evidence that widespread norms about the role of corporate boards may be changing.
-Useem (1993) and Westphal and Zajac (1997) have documented the spread of changes in board structure, composition, and executive compensation that appear to indicate increased board control over management among large corporations over the past fifteen years.
-This trend may have originated in response to external criticism from institutional investors and other stakeholders and the threat of lawsuits over perceived negligence in protecting shareholders' interests (Kesner and Johnson, 1990; Davis and Thompson, 1994).
-External constituents have demanded evidence that boards are willing to challenge management's decisions on their behalf.
-For instance, boards have been told to expand the search for new directors beyond the CEO's close circle of personal friends and to alter board structure and processes in ways that diminish the CEO's direct control over board meetings (Kaplan and Harrison, 1993; Daily, 1996).
-In effect, boards have been pressured to adopt a role characterized by more independent monitoring and control over management.
-Nevertheless, while there has been a general move toward more assertive boards that assert greater control over CEOs, there remains considerable variance across boards in the extent to which they have adopted a controlling orientation.
-<!-- para 11 -->
-The consequences for alliance formation.
-There are several possible consequences of independent board control on the prospects of alliance formation between the focal firm and manager-directors' home companies.
-On one level, a CEO-board relationship characterized by monitoring and control simply entails lower cohesion between the CEO and the board, or the absence of a strong tie, but it may go further than that.
-Independent board control over management may actually produce a negative relationship between the CEO and the board characterized by a lack of mutual understanding and distrust.
-When benevolence and support toward the CEO is replaced with independent control over the CEO, leaders of the firm can become effectively divided into separate groups: decision managers (i.e., the CEO and other top managers) and decision controllers (i.e., outside directors) (Fama and Jensen, 1983), where they were previously common members of a mutually supportive, inner circle of elites (Useem, 1982).
-The literature on intergroup relations has provided consistent evidence, in both laboratory and field settings, that dividing a single group of individuals into two or more separate groups has a variety of negative effects on relations between members of the different groups (Miller and Brewer, 1996).
-Empirical studies have demonstrated that when individuals are divided into separate groups, attitudes about the out-group members become significantly more negative (Gaertner et al., 1989; Messick and Mackie, 1989).
-In particular, group categorization has been shown to foster distrust toward out-group members while also creating the perception of intergroup conflict (Kramer, 1996; Miller and Brewer, 1996; Labianca, Brass, and Gray, 1998).
-<!-- para 12 -->
-Out-group categorization, which in the case of interlocks occurs when CEOs view outside directors as controllers rather than supporters or fellow managers, can promote distrust both with respect to the capabilities of the other party (task-based trust) and the risk that they might limit their contributions to the relationship (relational trust) (Creed and Miles, 1996), thus prompting negative evaluations of the perceived capability and personal reliability of the other party.
-This out-group bias occurs even when the basis for group categorization is arbitrary or minimal (Brewer, 1979).
-Moreover, Kramer (1994, 1996: 224) and others (Fenigstein and Vanable, 1992) have found evidence that when individuals are subjected to "evaluative scrutiny" or control by out-group members, "a pattern of exaggerated mistrust" may develop.
-<!-- para 13 -->
-Applying research on intergroup relations to the CEO-board context, we expect that when outside directors assert themselves as an independent group of controllers accountable to shareholders rather than management, distrust can arise between top managers and outside directors.
-Whereas outside directors on passive and supportive boards are effectively insiders with regard to their orientation toward management, on controlling boards such directors adopt the perspective of an independent outsider.
-As a result, the perception of a division between insiders and outsiders can reinforce "a generalized sense of distrust" across groups and lead to "escalating cycles of distrust" when out-group members are exercising control (Sitkin and Stickel, 1996: 199).
-A behavioral manifestation of distrust is "reduced cooperative efforts of all kinds" and enhanced competition for resources and status between groups (Brewer and Kramer, 1985; Gaertner et al., 1989; Creed and Miles, 1996: 27).
-Thus, intergroup bias would lead each party of the management-board relationship to view members of the other group as less trustworthy in both professional and personal terms, reducing interest in various forms of cooperation.
-<!-- para 14 -->
-The literature on strategic alliances suggests that trust plays a critical role as an enabling condition of alliance formation (Ring and Van de Ven, 1992; Gulati, 1995a, 1995b; Dyer, 1996; Gulati and Singh, 1998).
-Trust fundamentally entails a willingness to put oneself at risk (Barney and Hansen, 1994; Mayer, Davis, and Schoorman, 1995), and several authors have emphasized the potential for opportunistic behavior to derail joint ventures (e.g., Doz, Hamel, and Prahalad, 1989; Gulati, Khanna, and Nohria, 1994).
-In the presence of trust, managers will be less concerned about the incentive of a partner to cheat or free ride in cooperative relations by limiting its contribution to the joint enterprise.
-Since intergroup bias resulting from independent board control can diminish both task-based trust and relational trust, one might expect that when directors have asserted themselves as an independent group responsible for controlling managers rather than supporting them, CEOs may view them as less trustworthy alliance partners.
-Board independence can also prevent top managers and manager-directors from becoming familiar with each other's management and decision-making styles and developing a professional rapport, and managers tend to believe that teamwork and rapport between them is a critical factor in the success of alliances (Alster, 1986; Borys and Jemison, 1989).
-Moreover, given that distrust toward an independent, controlling group is a basic and powerful human response (Kramer, 1994, 1996; Fenigstein and Vanable, 1992), independent board control may have a particularly strong, negative effect on alliance formation between top managers and manager-directors:
-<!-- para 15 -->
-> [!hypothesis]
-> Hypothesis 2: The greater the board's control over the CEO, the lower the likelihood of subsequent alliance formation between the focal firm and outside directors' home companies.
-<!-- para 17 -->
-While empirical research on boards has typically assumed that board involvement in corporate affairs entails independent monitoring and control by outside directors (Johnson, Hoskisson, and Hitt, 1993), the larger literature on boards has suggested another form of involvement.
-In his classic qualitative study, Mace (1971: 179) concluded that, while boards often did not challenge management's final decisions, they may nevertheless provide "advice and counsel" to management on strategic issues during the decision-making process.
-Pfeffer and Salancik (1978: 170) also distinguished the provision of advice and counsel from board control as two different forms of board administration (see also Mintzberg, 1983).
-In a recent large-sample empirical study, Westphal (1999) found support for this general classification.
-Factor analysis showed that CEO-board relationships could be classified into three categories: independent monitoring and control, close cooperation (i.e., advice and counsel), or inaction.
-Moreover, qualitative and survey evidence suggests that advice and counsel is typically provided at the CEO's request (Lorsch and MacIver, 1989; Demb and Neubauer, 1992).
-Thus, rather than remain independent of top managers to permit objective monitoring and evaluation of managerial decision making, some boards enter closer working relationships with CEOs by providing advice and counsel at the CEO's request.
-In such cases, CEOs direct a cooperative form of board involvement in which boards work together with them to govern the firm, rather than separately in a principal-agent relationship.
-<!-- para 18 -->
-The consequences for alliance formation.
-Cooperative CEO-board relationships may influence alliance formation between the focal firm and manager-directors' home companies in several ways.
-On one level, CEO-board cooperation should enhance trust between top managers and outside directors through social interaction alone.
-Simmel's (1964) theory of trust emphasized how the mere occurrence of social interaction builds trust or the expectation of faithfulness, and other theorists have suggested that more frequent interaction increases trust by enhancing mutual affect and familiarity (Laumann, Galaskiewicz, and Marsden, 1978; Gulati, 1995a; Creed and Miles, 1996).
-Accordingly, the heightened social interaction that results when there is greater CEO-board cooperation (i.e., advice seeking) should reinforce relational trust between CEOs and outside directors.
-<!-- para 19 -->
-The connection between cooperative interactions in CEO-board relationships and the extent of trust between managers can also be understood by considering some of the evidence from research on intergroup relations.
-According to this literature, cooperative interactions between group members make common goals more salient, which builds mutual trust and respect (Gaertner et al., 1990, 1999).
-Thus, while independent board control may reduce trust by effectively dividing top managers and outside directors into separate groups, the CEO's seeking advice from the board should enhance trust by drawing outside directors into a collective decision-making team.
-In effect, just as negative affect and distrust toward an independent, controlling group is a basic and powerful human response, cooperation between group members can engender in-group biases that lead to positive affect and higher, even excessive levels of trust between individuals (Fenigstein, 1979; Kramer, 1996).
-Given the importance of intermanagement trust in facilitating alliance formation, cooperative CEO-board relationships should promote alliances between a focal firm and those of outside directors by enhancing confidence in each other's reliability and managerial capability and lowering the perceived risk of opportunism:
-<!-- para 20 -->
-> [!hypothesis]
-> Hypothesis 3: The greater the cooperation between the CEO and the board, the higher the likelihood of subsequent alliance formation between the focal firm and outside directors' home companies.
-<!-- para 22 -->
+<!-- para 1 -->
 While little empirical research has examined how social structural factors such as indirect ties moderate the effects of dyadic interlock ties between firms, qualitative evidence suggests that managers may have access to indirect information about directors through their appointments on other boards (Useem, 1984; O'Neal and Thomas, 1993).
 An indirect or third-party tie could provide top managers with an important source of information about outside directors who sit on their board.
 For example, a top manager A is exposed to second-hand information about outside director B on his or her board when A has a common appointment on another board with a third director C, who sits on B's board.
 These indirect ties are particularly relevant to the present study, in light of recent evidence suggesting that third-party ties can affect the level of trust between individuals or organizations (e.g., Raub and Weesie, 1990; Burt and Knez, 1995; Gulati, 1995b; Gulati and Gargiulo, 1999).
-<!-- para 23 -->
+<!-- para 2 -->
 It is typically supposed that third-party ties will enhance trust between parties to a relationship by increasing the reputational costs of noncooperative behavior (Van de Ven, 1976).
 For instance, if A is cheated by relationship partner B, and A has third-party ties to B through C, A can impose reputational costs on B by spreading the word to C that B cannot be trusted.
 Given this threat, A can trust B not to defect from cooperative exchange (Kreps, 1990).
@@ -170,7 +26,7 @@ In many cases, however, noncooperative behavior involving competition or control
 As several authors have noted, norms governing CEO-board relationships have become uncertain: it is not clear whether independent board control is more or less normative or legitimate than CEO-board cooperation (Lorsch and MacIver, 1989; Useem, 1993).
 Accordingly, noncooperative behavior, such as exercising independent control, does not necessarily have negative reputational consequences for the participants; it does not necessarily damage a director's career, as empirical research on director selection has shown (Zajac and Westphal, 1996).
 Thus, third-party ties between a CEO and his or her board members may not necessarily reduce the likelihood of noncooperative behavior in CEO-board relationships.
-<!-- para 24 -->
+<!-- para 3 -->
 While traditional perspectives on indirect network ties may not apply to board interlocks, recent research on the effects of third-party ties suggests a more germane perspective.
 Burt and Knez (1995, 1996) have extended existing theories on how social structure affects trust by proposing that third-party ties amplify existing trust or distrust in professional relationships (see also Labianca, Brass, and Gray, 1998).
 They showed empirically that when the immediate relationship between managers tended to foster trust between them, third-party ties further enhanced trust in the relationship.
@@ -180,20 +36,20 @@ In developing their theory, Burt and Knez suggested that managers exchange infor
 This is consistent with anthropological and social psychological research on network gossip, which suggests that people gossip with third parties in a search for affirmation of their feelings and beliefs about other individuals in their network; in the process, gossip also serves to reaffirm the values that underlie those beliefs (Cox, 1970; Haviland, 1977; Besnier, 1989).
 Moreover, by validating ego's trust or distrust in alter, a third party strengthens his or her relationship with ego (Byrne, Clore, and Worchel, 1966).
 Such behavior can be motivated by political self-interest or simply by the desire to maintain social cohesion for its own sake (Cox, 1970; Burt and Knez, 1995).
-<!-- para 25 -->
+<!-- para 4 -->
 We can extend our previous hypothesis by considering the possibility that third-party ties between a CEO and his or her board members resulting from appointments on other boards may amplify the effects of these different relationships on trust between CEOs and outside directors.
 As noted above, qualitative research on boards suggests that the relationship between top manager A and outside director B is influenced by third-party ties when A has a common appointment to another board with a third director, C, who sits on B's board.
 From the third-party gossip perspective, when A and C discuss B (or A's relationship with B), the social dynamics underlying such interactions will lead C to confirm A's predisposition by drawing on his or her prior experience with B.
 For example, if A expresses doubt to C about whether B can be trusted to support A's decisions, C will tend to affirm A's distrust, either by providing explicit infor- mation or "replicating accounts" of B's behavior or through more subtle affirmations (e.g., "that doesn't surprise me") or nonverbal signals (Cox, 1970; Burt and Knez, 1995: 260).
 Such interactions are especially likely in that top managers have become increasingly concerned in recent years about whether they can count on the loyalty and support of their outside directors (Lorsch and MacIver, 1989).
 This suggests additional hypotheses, predicting that indirect ties between CEOs and outside directors through third-party directors in the interlock network will tend to amplify the relationship between each kind of CEO-board tie and the likelihood of alliance formation:
-<!-- para 26 -->
+<!-- para 5 -->
 > [!hypothesis]
 > Hypothesis 4: Indirect interlock ties between the CEO and outside directors through third-party directors will interact with the content of the focal CEO-board tie to predict alliance formation between the focal firm and outside directors' home companies.
-<!-- para 27 -->
+<!-- para 6 -->
 > [!hypothesis]
 > Hypothesis 4a: The more indirect interlock ties there are between the CEO and outside directors through third-party directors, the stronger the negative relationship between board control over the CEO and the likelihood of subsequent alliance formation between the focal firm and outside directors' home companies.
-<!-- para 28 -->
+<!-- para 7 -->
 > [!hypothesis]
 > Hypothesis 4b: The more indirect interlock ties there are between the CEO and outside directors through third-party directors, the stronger the positive relationship between CEO-board cooperation and the likelihood of subsequent alliance formation between the focal firm and outside directors' home companies.
 
@@ -226,6 +82,9 @@ We collected data on all alliances initiated by firms in the sample frame from 1
 This sample includes all interfirm partnerships that entail the creation of a new legal entity in which both partners hold equity, also referred to as joint ventures.
 We coded these data manually from the Funk and Scott Predicasts Index of Corporate Change and from Lexis/Nexis.
 We recorded only joint ventures that had actually been formed and excluded reports of probable joint ventures that never materialized.
+We made an effort to ensure
+<!-- para 7 -->
+**Table 1**
 <!-- para 8 -->
 **Results of Kolmogorov-Smirnov Difference Test for Nonresponse Bias***
 <!-- para 9 -->
@@ -249,6 +108,7 @@ Differences indicate the largest positive/negative deviations observed when the 
 We predict alliance formation over the two-year period following the survey date (1995–1996), and we used the remaining historical alliance data to compute some key control variables described below.
 We collected data on board interlocks and board structure for the period 1994–1995 from Standard and Poor's Register of Corporations, Directors, and Executives and the Dun and Bradstreet Reference Book of Corporate Management.
 To calculate measures of market constraint (discussed below), we obtained input-output data from the database created by the Interindustry Economics Division of the Bureau of Economic Analysis (cf.
+Burt, 1992; Mizruchi, 1992).
 Data on financial characteristics and other firm attributes were obtained from COMPUSTAT.
 <!-- para 13 -->
 Alliance formation was measured with a dichotomous variable, coded 1 if the two firms in a dyad entered into an alliance during the two-year period following the survey date (i.e., 1995–1996).
@@ -260,6 +120,7 @@ We measured board interlocks as directional ties, which are created by individua
 Thus, two firms, A and B, are coded as having an interlock tie when at least one officer or owner from firm A serves as an outside director at firm B, or vice versa.
 <!-- para 15 -->
 A pre-test involving in-depth pilot interviews with 22 top managers and board members was used to refine and reword the survey items (cf.
+Fowler, 1993: 102).
 Board control and CEO-board cooperation were measured with two multi-item scales from the CEO survey that were carefully validated with responses from the outside director survey and also with archival measures of board characteristics.
 Items in the control scale assessed key behavioral elements of board control that have been theorized to entail board independence from management, including the board's tendency to monitor and evaluate CEO decision making and performance and the frequency with which directors challenge the CEO's position on strategic issues, rather than deferring to the CEO's judgment.
 Items in the cooperation scale were based on prior qualitative research about how CEOs may engage in ongoing collaboration with outside directors by seeking their advice and counsel on strategic issues, as discussed above.
@@ -294,6 +155,8 @@ The organizational demography literature has provided consistent evidence that h
 Moreover, the upper echelon perspective would suggest that directors are more valuable to CEOs as a source of strategic advice and counsel if they have a complementary base of functional expertise and experience (e.g., if the CEO has a financial background and directors have marketing backgrounds) (Hambrick, Cho, and Chen, 1996).
 Functional background was measured using Hambrick and Mason's (1984) classification, calculated as the percentage of directors who had functional backgrounds complementary to the CEO.
 Finally, given that stock ownership aligns CEOs' interests with shareholders' interests, it may motivate CEOs to engage the cooperation of board members in the strategic decision-making.
+<!-- para 22 -->
+**Table 2**
 <!-- para 23 -->
 **Results of Interrater Reliability Assessment (N = 188)***
 <!-- para 24 -->
@@ -318,6 +181,7 @@ To what extent do you use outside directors as a “sounding board” on strateg
 How often have you sought the advice and counsel of outside directors in discussions outside of board/committee meetings (by telephone or in person)? | 86.50 | 24.93 | .82 |
 | Overall kappa |  |  | .82
 <!-- para 25 -->
+N = 188.
 When multiple outside directors responded for the same company, directors' responses were averaged to ensure that reliability estimates were not inflated by common perspectives derived from holding the same position.
 <!-- para 26 -->
 † The phrasing of each item is taken from the CEO survey; most items were altered appropriately for the director survey (e.g., “To what extent does the CEO . . .”).
@@ -339,6 +203,7 @@ This further supports the convergent validity of the survey measures.
 Indirect ties between CEOs and outside directors through third-party directors (third-party ties) were measured for each dyad as the number of board appointments shared by the CEO and board members of the outside director's home company board, excluding the focal board.
 We tested the hypothesized interaction effects between third-party ties and the focal CEO-board ties using the product-term approach (Jaccard, Turrisi, and Wan, 1990).
 <!-- para 31 -->
+Control variables.
 To ensure the robustness of our results, we included a number of control variables considered to influence the formation of ventures between firms.
 Resource dependence perspectives suggest that firms may use cooperative strategies to manage their dependence on other firms (for a review, see Oliver, 1990).
 According to this view, firms that are particularly dependent on each other may choose to form an alliance to secure future access to needed resource flows.
@@ -398,71 +263,6 @@ There is also anecdotal evidence that friendship ties between top managers may f
 Thus, we included a survey measure of friendship ties, indicating the portion of the board composed of the CEO's personal friends.
 In separate analyses, described below, in which cooperation and control were measured for each CEO-director dyad, friendship ties were also measured at the dyad level.
 Descriptive statistics and bivariate correlations are provided in table 3.
-<!-- para 41 -->
-We used maximum-likelihood logit regression analysis to test the effect of interlock ties on the likelihood of alliance formation (Aldrich and Nelson, 1984; Hosmer and Lemeshow, 1989).
-Because the appropriate risk sets to test each of the hypotheses differ somewhat, we conducted a number of additional analyses to ensure consistency across our findings.
-Since hypothesis 1 examined the effect of interlock ties on alliance formation, the risk set for this analysis included all possible dyadic combinations between each of the focal firms in the final survey sample and all firms in the total sample frame (73,510 dyads).
-Since hypotheses 2–4 assume that an interlock tie exists, because board control or cooperation only occur when there is an interlock, the risk set narrows here from all possible dyads to only those dyads for which there was an interlock tie between the two firms.
-Thus, to test the effects of board control vs. cooperation on alliance formation, as well as the moderating effects of third-party ties, we conducted an initial set of analyses using logit regression on the sample of dyadic combinations between the focal firm and each of the home companies of CEO-directors on the board (N = 898).
-Moreover, for the sample of possible dyadic combinations that included a responding outside director, we also examined whether individual CEO-board-member relationships mattered by estimating separate models using each responding director's assessment of his or her individual relationship with the CEO (N = 412 dyads).
-<!-- para 42 -->
-In addition, we estimated Heckman selection models to ensure that logit estimates were not biased by any unmeasured differences between the smaller sample of CEO-direct
-<!-- para 44 -->
-Descriptive Statistics and Pearson Correlation Coefficients for Analyses of Board Control and CEO-Board Cooperation*
-<!-- para 45 -->
-Variable | Mean | S.D. | 1 | 2 | 3 | 4 | 5 | 6 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1.
-Alliance | .15 | .36 | - |  |  |  |  |  |
-| 2.
-Interlock tie | .01 | .11 | .06 |  |  |  |  |  |
-| 3.
-Board control | .00 | .88 | -.26 | - |  |  |  |  |
-| 4.
-CEO-board cooperation | .00 | .82 | .31 | - | -.16 |  |  |  |
-| 5.
-Third-party ties | 2.79 | 2.03 | .12 | .16 | .05 | .06 |  |  |
-| 6.
-Prior alliance activity, firm 1 | 5.98 | 5.57 | .29 | .05 | .07 | .09 | .11 |  |
-| 7.
-Prior alliance activity, firm 2 | 6.35 | 5.94 | .34 | .07 | .08 | .09 | .11 | .02 |
-| 8.
-Prior alliance ties | .09 | .31 | .23 | .18 | -.17 | .21 | .14 | .17 |
-| 9.
-Constraint | .00 | 1.33 | .17 | .17 | .18 | .13 | -.02 | .12 |
-| 10.
-Size | 7.69 | 1.50 | .02 | -.05 | -.04 | -.08 | .03 | .06 |
-| 11.
-Performance | .00 | 1.01 | -.23 | .05 | -.08 | -.04 | -.01 | -.13 |
-| 12.
-Solvency | .38 | .31 | -.08 | -.01 | -.05 | -.01 | .01 | .02 |
-| 13.
-R&D intensity | .02 | .02 | -.18 | .06 | -.03 | .00 | .04 | -.11 |
-| 14.
-Advertising intensity | .02 | .03 | -.14 | .02 | .02 | .06 | .02 | -.05 |
-| 15.
-Diversification | .74 | .56 | -.05 | .08 | -.12 | -.17 | .00 | -.04 |
-| 16.
-Industry overlap | .09 | .25 | .22 | .25 | -.10 | .20 | .04 | .03 |
-| 17.
-Common appointments | 1.23 | 1.01 | .09 | .15 | -.08 | .07 | .18 | .04 |
-| 18.
-Total appointments | 8.21 | 5.31 | .07 | .11 | -.05 | .02 | .37 | .01 |
-| 19.
-Reciprocated appointments | .11 | .31 | .03 | .29 | -.09 | .17 | .03 | .02 |
-| 20.
-Friendship ties | .37 | .34 | .16 | .02 | -.18 | .21 | .04 | .03
-<!-- para 46 -->
-Descriptive statistics and correlation coefficients are calculated for the sample of interlocked firms (N = 898), except statistics for interlock ties, which are calculated for the larger sample of all possible dyads (N = 73,510). tor dyads and dyads in the larger sample frame used for testing hypothesis 1.
-This approach uses the larger risk set to assess hypotheses 2–4 (i.e., N = 73,510).
-The Heckman model is essentially a two-stage procedure that estimates the likelihood of interlock ties with probit regression and then incorporates estimates of parameters from that model in a second-stage regression model to predict alliance formation among dyads with an interlock tie; the second-stage model is also estimated with probit regression (van de Ven and van Praag, 1981).
-<!-- para 47 -->
-Formally, the Heckman model assumes that a potential observation is observed if  $x_{1}B_{1} + u_{1} > 0$ , where  $u_{1}$  has a standard normal distribution.
-In addition, there is another regression equation,  $y = x_{2}B_{2} + \sigma u_{2}$ , where  $u_{2}$  also has a standard normal distribution but is potentially correlated with  $u_{1}$  with correlation p.
-In our case, the latter equation represents alliance formation while the former represents the likelihood of interlock ties between CEOs in a dyad.
-When p is significantly different from 0, standard regression techniques applied to the second equation yield biased results, to the extent that error terms in both equations contain some common omitted variables (van de Ven and van Praag, 1981).
-For example, if firms that form interlock ties are more responsive to a given level of resource dependence or more sensitive to the need for trust between top managers in forming alliances than those firms not forming an interlock tie, then specification error would be present.
-Heckman's procedure generates consistent, asymptotically efficient estimates for such models, allowing us to generalize results to the larger sample frame (cf.
 
 ## results
 <!-- para 2 -->
@@ -474,6 +274,8 @@ Thus, to test the effects of board control vs. cooperation on alliance formation
 Moreover, for the sample of possible dyadic combinations that included a responding outside director, we also examined whether individual CEO-board-member relationships mattered by estimating separate models using each responding director's assessment of his or her individual relationship with the CEO (N = 412 dyads).
 <!-- para 3 -->
 In addition, we estimated Heckman selection models to ensure that logit estimates were not biased by any unmeasured differences between the smaller sample of CEO-direct
+<!-- para 4 -->
+**Table 3**
 <!-- para 5 -->
 Descriptive Statistics and Pearson Correlation Coefficients for Analyses of Board Control and CEO-Board Cooperation*
 <!-- para 6 -->
@@ -525,11 +327,13 @@ This approach uses the larger risk set to assess hypotheses 2–4 (i.e., N = 73,
 The Heckman model is essentially a two-stage procedure that estimates the likelihood of interlock ties with probit regression and then incorporates estimates of parameters from that model in a second-stage regression model to predict alliance formation among dyads with an interlock tie; the second-stage model is also estimated with probit regression (van de Ven and van Praag, 1981).
 <!-- para 8 -->
 Formally, the Heckman model assumes that a potential observation is observed if  $x_{1}B_{1} + u_{1} > 0$ , where  $u_{1}$  has a standard normal distribution.
-In addition, there is another regression equation,  $y = x_{2}B_{2} + \sigma u_{2}$ , where  $u_{2}$  also has a standard normal distribution but is potentially correlated with  $u_{1}$  with correlation p.
-In our case, the latter equation represents alliance formation while the former represents the likelihood of interlock ties between CEOs in a dyad.
+In addition, there is another regression equation,  $y = x_{2}B_{2} + \sigma u_{2}$ , where  $u_{2}$  also has a standard normal distribution but is potentially correlated with  $u_{1}$  with correlation p. In our case, the latter equation represents alliance formation while the former represents the likelihood of interlock ties between CEOs in a dyad.
 When p is significantly different from 0, standard regression techniques applied to the second equation yield biased results, to the extent that error terms in both equations contain some common omitted variables (van de Ven and van Praag, 1981).
 For example, if firms that form interlock ties are more responsive to a given level of resource dependence or more sensitive to the need for trust between top managers in forming alliances than those firms not forming an interlock tie, then specification error would be present.
 Heckman's procedure generates consistent, asymptotically efficient estimates for such models, allowing us to generalize results to the larger sample frame (cf.
+Heckman, 1979).
+<!-- para 11 -->
+**Table 3 (continued)**
 <!-- para 12 -->
 Variable | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -571,6 +375,8 @@ The greater the extent to which an interlock tie results in cooperation between 
 At the same time, the greater the extent to which an interlock tie results in an independent control relationship between top managers of different firms, the lower the likelihood of subsequent strategic cooperation between them.
 <!-- para 15 -->
 The next set of results tests hypothesis 4, that third-party ties resulting from appointments of focal-firm CEOs on other boards amplify the effects of independent board control and
+<!-- para 16 -->
+**Table 4**
 <!-- para 17 -->
 **Logistic Regression Analysis of Alliance Formation***
 <!-- para 18 -->
@@ -600,11 +406,18 @@ Independent variable | 1 | 2 | 3 |
 | Constant | .041(.045) | 1.977(1.011) | 1.928(1.017) |
 | N | 73,510 | 898 | 898 |
 | Chi square | 104.18* | 118.44* | 140.36*
+<!-- para 19 -->
+$p < .01$.
+<!-- para 20 -->
+Standard errors are in parentheses.
+Hypothesized effects are in bold.
 <!-- para 21 -->
 CEO-board cooperation on alliance formation.
 The interaction effects in model 3 of table 4 support this hypothesis.
 Consistent with hypothesis 4a, the results show that as the number of third-party ties between the CEO and outside directors increases, the negative relationship between board control over the CEO and the likelihood of subsequent alliance formation between the focal firm and outside directors' home companies becomes stronger.
 The results also support hypothesis 4b: as the number of third-party ties between the CEO and outside directors increases, the positive
+<!-- para 22 -->
+**Table 5**
 <!-- para 23 -->
 Heckman Selection Models of Alliance Formation (N = 73,510)* |  |  |
 | --- | --- | --- |
@@ -631,6 +444,9 @@ Heckman Selection Models of Alliance Formation (N = 73,510)* |  |  |
 | Friendship ties | 2.799*(1.101) | 2.882*(1.113) |
 | Constant | 2.446(1.077) | 2.386(1.081) |
 | Chi square | 132.45* | 151.22*
+<!-- para 24 -->
+Standard errors are in parentheses.
+Hypothesized effects are in bold.
 <!-- para 25 -->
 In these models, board control and CEO-board cooperation, which we assume to be group variables, are measured at the board level (Fama and Jensen, 1983); thus, effects on alliance formation should be similar across dyads on the same board.
 To check this assumption, we estimated separate models using measures of the individual participation of directors in control and cooperation activities (N = 412).
@@ -650,12 +466,16 @@ As shown in table 6, the results of these analyses are very similar to the resul
 Model 2 shows that these effects are amplified by third-party ties, as hypothesized.
 <!-- para 28 -->
 To further assess the robustness of our findings, we conducted separate logistic regression analyses with the full sample of dyads by estimating the interaction effects between the presence of an interlock tie and board control or cooperation.
+Results are shown in table 7.
 As shown in model 2, there are significant interaction effects between an interlock tie and both cooperation and control.
 These results indicate that, while the mere presence of an interlock tie between firms does not affect the likelihood of alliance formation (as shown in model 1), the effect of an interlock tie becomes significantly more positive as the level of CEO-board cooperation increases and significantly more negative as the level of control increases.
 These results again suggest that the effect of board interlock ties on alliance formation is contingent on the nature of the CEO-board relationship.
 We would not expect significant main effects for board control or cooperation, since these relationships should only increase or decrease the likelihood of alliance formation between two specific firms provided an interlock tie exists between them, which is not necessarily the case with this larger dataset.
 We also examined interaction effects using the individual, continuous-scale indicators of cooperation and control, to identify the level of cooperation and control at which interlock ties decreased the likelihood of alliance formation.
 The results of these analyses showed, for instance, that interlock ties have a negative effect on alliance formation when a minority of directors have the same functional background as the CEO.
+In addition, the results showed that
+<!-- para 29 -->
+**Table 6**
 <!-- para 30 -->
 **Supplementary Heckman Selection Models of Alliance Formation (N = 73,510)***
 <!-- para 31 -->
@@ -688,9 +508,13 @@ Independent variable | With Archival Measures of Cooperation/Control |  | With M
 | Constant | 2.500(1.071) | 2.363(1.077) | 2.565(1.083) | 2.366(1.094) |
 | Chi square | 125.16* | 139.38* | 130.01* | 148.15*
 <!-- para 32 -->
+Standard errors are in parentheses.
 Hypothesized effects are in bold. interlock ties decrease alliance formation when the CEO owns less than 1 percent of outstanding common stock.
 <!-- para 33 -->
 While our theoretical argument suggests that trust in the CEO-board relationship can explain how control and cooperation affect alliance formation, our primary analyses did not explicitly model the mediating effect of trust.
+Thus, one
+<!-- para 34 -->
+**Table 7**
 <!-- para 35 -->
 **Supplementary Logistic Regression Models of Alliance Formation (N = 73,510)***
 <!-- para 36 -->
@@ -719,10 +543,12 @@ Independent variable | 1 | 2 |
 | Constant | .042(.046) | .033(.042) |
 | Chi square | 102.97* | 128.20*
 <!-- para 37 -->
+Standard errors are in parentheses.
 Models are analyzed for the full sample using archival measures of board control and CEO-board cooperation.
 Hypothesized effects are in bold. might question whether other, related social processes mediate these relationships.
 For instance, cooperation might be associated with political influence processes such as ingratiation, which could affect the likelihood of alliance formation between the focal firm and manager-directors' home companies by enhancing directors' affect toward the CEO, without necessarily enhancing trust in the relationship.
 Similarly, cooperation could increase the board's approval of the CEO's performance and thus increase the likelihood of alliance formation independent of CEO-board trust.
+To assess the rela-〔残断〕
 <!-- para 38 -->
 We measured trust in our survey as described in the method section above.
 Prior research has measured ingratiation as a unidimensional construct composed of multiple behaviors (Jones and Wortman, 1973; Kipnis and Schmidt, 1988).

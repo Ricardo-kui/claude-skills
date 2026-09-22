@@ -62,7 +62,7 @@ expansion_note: "≥3 distinct papers（moon2026 JM / kundro_rothbard AMJ / Weng
 
 **参照 2 —— kundro_rothbard（AMJ）（机制遴选型）**：底本 = 同索引条目 `alternative-mechanisms-9d92fe.a–.c`（verbatim）。判据：先列真实可假设的备选机制（warmth / dominance 各有文献），再宣告聚焦；两条理由对应**不同筛选维度**（与理论更直接挂钩 vs 观察情境中更 salient）——双理由用于淘汰竞品机制，不是并列驱动效果。
 
-**参照 3 —— Weng & Yang（JMS, "Is Red or Blue More Likely to Narrow the Gap?"）（主效应双理由型）**：底本 = 同索引条目 `weng-yang-23423a.a/.b`（verbatim）。判据：两条理由同向并列解释同一主效应（awareness + openness，都是自由派特质的表现），逻辑独立、各自可证伪。
+**参照 3 —— Weng & Yang（JMS, "Is Red or Blue More Likely to Narrow the Gap?"）（主效应双理由型）**：底本 = 同索引条目 `weng-yang2024-126332.a/.b`（verbatim）。判据：两条理由同向并列解释同一主效应（awareness + openness，都是自由派特质的表现），逻辑独立、各自可证伪。
 
 **跨源对照**：参照 1 的"两链"彼此因果独立且**均驱动同一结果**；参照 2 的"两理由"是**筛掉竞品机制**（淘汰而非并列驱动）；参照 3 的"两理由"是**同向并列解释主效应**（awareness + openness，都是自由派特质的表现）。写作时按你想达到的论证功能选骨架——审稿人想看的是"为什么信你"，三种都是把单一"because"拆成可复核的两块。
 

@@ -1,14 +1,15 @@
 ---
 type: sentences-archive
-citekey: "gulati2005-adaptation-vertical"
-source_md: "D:\OneDrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Gulati等-2005—ADAPTATION IN VERTICAL RELATIONSHIPS BEYOND INCENTIVE CONFLICT.md"
-created: 2026-09-06
+citekey: "gulati_2005_adaptation_in_vertical_relationships_beyond_ince"
+source_md: "D:\Onedrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Gulati等-2005—ADAPTATION IN VERTICAL RELATIONSHIPS BEYOND INCENTIVE CONFLICT.md"
+created: 2026-09-20
+sentence_filter: min_chars=0
 note: >-
   跨源合成原料库存（distill-paper-exemplar L0 --keep-sentences 生成）。只读；
   语料句子可直接采用；替换来源特异性内容（专名/数字/系数/表号）。
 ---
 
-# gulati2005-adaptation-vertical 句子库存
+# gulati_2005_adaptation_in_vertical_relationships_beyond_ince 句子库存
 
 ## introduction
 <!-- para 2 -->
@@ -18,14 +19,8 @@ In recent years, the study of vertical relationships has come to be dominated by
 In Oliver Williamson's development of the theory, the focus is on 'how parties engaged in a long-term contract can adapt effectively to disturbances.
 The need to craft contractual structures in which they have mutual confidence ...' is the key issue (Williamson, 1991b).
 Williamson also notes that in addition to incentive conflict, failures of adaptation may arise 'because autonomous parties read and react to signals differently, even though their purpose is to achieve a timely and compatible combined response' (Williamson, 1991a).
-Yet, this theoretical recognition of adaptation problems that might persist even in the absence of incentive conflict finds scant recognition in most prior research motivated by transaction cost economics. [^1] In this
+Yet, this theoretical recognition of adaptation problems that might persist even in the absence of incentive conflict finds scant recognition in most prior research motivated by transaction cost economics. [^1] In this study, our goal is to broaden the conceptualization of constraints to adaptation in vertical relationships beyond incentive conflict to include constraints arising from limited responsiveness to changing exchange conditions and coordination failures.
 <!-- para 3 -->
-$^{*}$ Correspondence to: Ranjay Gulati, Kellogg School of Management, Northwestern University, Jacobs Center, 2001 Sheridan Road, Evanston, IL 60208-2001, U.S.A.
-<!-- para 4 -->
-E-mail: r-gulati@kellogg.northwestern.edu
-<!-- para 6 -->
-Final revision received 10 November 2004 study, our goal is to broaden the conceptualization of constraints to adaptation in vertical relationships beyond incentive conflict to include constraints arising from limited responsiveness to changing exchange conditions and coordination failures.
-<!-- para 7 -->
 The central and most investigated proposition in transaction cost economics concerns a class of adaptation problems resulting from the potential for hold-up in vertical relationships (David and Han, 2004; Masten, 2002; Shelanski and Klein, 1995).
 When procurement must be supported by dedicated (relationship-specific) investments, the anticipated costs of the transaction increase.
 This is because dedicated investments by one party create scope for the other to renegotiate the contract opportunistically when circumstances change.
@@ -33,14 +28,14 @@ By organizing such transactions under common ownership, muted incentives, enhanc
 However, we will argue in this paper that adaptation failures in vertical relationships can also occur for reasons other than hold-up (or concerns about hold-up).
 Even when there is no incentive conflict, bounded rationality can cause the parties to an economic relationship to fail to recognize profound changes in the economic environment, or generate a coordinated response to such changes (Camerer and Knez, 1996, 1997; Foss, 2001; March and Simon, 1958).
 The theoretical challenge is to analyze these aspects of adaptation in addition to traditional hold-up concerns within a parsimonious and integrated framework.
-<!-- para 8 -->
+<!-- para 4 -->
 Along the lines of Williamson (1991a, 1991b) we define the adaptive capacity of a vertical relationship (within or across firm boundaries) as the ability to generate coordinated and cooperative responses across procuring and supplying units to changes in exchange conditions.
 However, our approach is distinctive from most prior empirical research in that in addition to the traditional focus on cooperation as the key aspect of adaptation, we also emphasize responsiveness to change and coordination of responses among the parties.
 We draw upon some of the seminal research on organization design to analyze our broader conception of adaptation in procurement activities.
 We assess the adaptive capacity of different modes of organizing procurement using the concepts of differentiation and integration.
 In prior literature on organizations, these concepts have been used to formulate principles for designing subunits within organizations that could adapt to change (Daft, 2001; Lawrence and Lorsch, 1967a, 1967b; Nohria and Ghoshal, 1994).
 In this tradition, organizational performance was argued to depend on the match between environmental contingencies and the extent of differentiation and integration across organizational subunits.
-<!-- para 9 -->
+<!-- para 5 -->
 We extend this analytical approach to vertical relationships both between and within firms.
 We argue that different modes of procurement—make, buy, and ally—differ in terms of the extent of differentiation and integration between procuring and supplying units and therefore in their adaptive capacity for responding to changes in the exchange environment in a coordinated and cooperative manner.
 We therefore expect that the performance of a given procurement activity will depend on the match between the adaptive capacity of the specific mode of procurement and the need for adaptation in the specific exchange relationship that is in turn impacted by contextual factors associated with the exchange.
@@ -99,6 +94,7 @@ In addition to conformity pressures, the career advancement systems in hierarchi
 In contrast, supplying units outside the firm are unlikely to face pressures toward conformity with each other, though they may face pressures to conform to other units within their own firms.
 We therefore expect that in vertical relationships the extent to which procuring and supplying units are organizationally differentiated from each other varies with the fact of their joint memberships in a firm.
 When they belong to different firms, we should expect greater differentiation between them than when they are in the same firm.
+We predict:
 <!-- para 12 -->
 > [!hypothesis]
 > Hypothesis 1: Supplying units will be more differentiated from procuring units in market procurement and vertical alliances, than in internal procurement.
@@ -175,6 +171,7 @@ Repeated interactions between partner firms may justify investments in mechanism
 Such routines embody knowledge about how coordinating agents will behave.
 Frequent and continued contact between the personnel of procuring and supplying units may also enable the formation of shared representations of the task environment, also enhancing coordination.
 Thus, internal procurement and vertical alliances have access to enablers of integration between units that are unavailable in arm's-length transactions.
+We therefore expect:
 <!-- para 28 -->
 > [!hypothesis]
 > Hypothesis 2: Supplying units will be more integrated with procuring units in internal procurement and vertical alliances, than in market procurement.
@@ -190,6 +187,7 @@ We argue below that, on the one hand, these two factors together influence the m
 On the other hand, the extent of differentiation and integration between supplying and procuring units impacts the adaptive capacity of the vertical relationship.
 The match between adaptive capacity and adaptation requirements influences the performance of the relationship.
 <!-- para 33 -->
+**Figure 1.
 Differentiation and integration in vertical relationships**
 <!-- para 35 -->
 The transaction environment in vertical relationships refers to the set of commercial contingencies (such as demand, supply, and technology conditions) that influence the terms and content of the transaction (Williamson, 1985, 1991a, 1991b).
@@ -211,11 +209,10 @@ This capacity to sense and respond is valuable when the transaction environment 
 Transaction instability can adversely affect the performance of vertical relationships, though the magnitude of the effect will depend on the capacity of the relationship to adapt to transaction instability.
 Under the principle of 'fit' between the adaptive capacity of a vertical relationship and the pressures towards adaptation it faces, we expect that the performance of modes of procurement characterized by a low degree of differentiation between procuring and supplying units is likely to be most adversely affected by transaction instability.
 Since internal procurement offers the least scope for differentiation between procurer and supplier (Hypothesis 1), its performance should be significantly depressed relative to other modes of procurement under conditions of transaction instability.
+We therefore expect:
 <!-- para 39 -->
 > [!hypothesis]
 > Hypothesis 3: Transaction instability has more adverse effects on the performance of internal procurement than on the performance of market procurement and vertical alliances.
-<!-- para 40 -->
-Effects of adaptation pressures in task environment
 <!-- para 41 -->
 The task environment in vertical relationships refers to the division of labor across the value chain and the ongoing pattern of interactions between upstream and downstream activities (Bensaou and Venkatraman, 1995; Gulati and Singh, 1998).
 Interdependence across organizational subunits
@@ -244,8 +241,6 @@ Since market procurement has the least capacity for achieving integration betwee
 <!-- para 45 -->
 > [!hypothesis]
 > Hypothesis 4: Reciprocal task interdependence has more adverse effects on the performance of market procurement than on the performance of internal procurement or vertical alliances.
-<!-- para 46 -->
-Joint effects of adaptation pressures in transaction and task environment
 <!-- para 47 -->
 Our last hypothesis pertains to the joint effects of transaction instability and task interdependence on the performance of vertical relationships.
 We expect that task interdependence and transaction instability have superadditive effects on the need for adaptation in vertical relationships—put differently, we expect interdependence to magnify the effect of instability on the need for adaptation and vice versa.
@@ -267,6 +262,7 @@ Recent studies using agent-based simulation models (Rivkin and Siggelkow, 2003; 
 The unique organizational position occupied by vertical alliances arises from their ability to generate greater differentiation than internal procurement and greater integration than market procurement (Hypotheses 1 and 2).
 Thus, unlike internal procurement or market procurement, the adaptive capacity of vertical alliances is evenly based on both differentiation and integration, whereas the adaptive capacity of internal procurement is based primarily on integration, and that of market procurement is based primarily on differentiation.
 This suggests that vertical alliances will have superior adaptive capacity compared to internal or market procurement, when both instability and interdependence are present.
+We therefore predict:
 <!-- para 50 -->
 > [!hypothesis]
 > Hypothesis 5: The joint effects of transaction instability and reciprocal task interdependence on the performance of vertical alliances will be less adverse than that on other modes of procurement.
@@ -319,12 +315,18 @@ Eight survey items were used to measure the degree of differentiation of the sup
 The dimensions for this construct capture both structural and behavioral elements and measure the difference between supplier and procurer organizations in terms of speed of decision making, flexibility, information systems, time horizon, formalization, bureaucratization, employee benefits, and pay scales (Lawrence and Lorsch, 1967a, 1967b).
 The Cronbach alpha measure for reliability for this construct is satisfactory (0.78).
 Confirmatory factor analysis yielded an adjusted goodness of fit index of 0.94.
+<!-- para 13 -->
+**Table 1.
+Key constructs**
 <!-- para 14 -->
 Construct | Items |
 | --- | --- |
 | Differentiation | Difference in the scores assigned to procurer and supplier on following organizational attributes:1.
+Decision making (1 = quick, 7 = slow)2.
+Culture (1 = rigid, 7 = flexible)3.
 Information systems (1 = clear, 7 = complicated)4.
 Time orientation (1 = long term, 7 = short term)5.
+Style (1 = informal, 7 = formal)6.
 Procedures (1 = bureaucratic, 7 = streamlined)7.
 Employee benefits (1 = generous, 7 = limited)8.
 Pay scales (1 = high, 7 = low) |
@@ -349,9 +351,15 @@ Significant fluctuations are expected in its monthly volume requirements4.
 There is significant uncertainty in its annual volume estimates |
 | Performance of vertical relationship | Your opinion about the attractiveness of this supplier compared to the best alternative supplier for this component1.
 Price competitive (Scale: 1 = much less attractive than alternative, 7 = much more attractive than alternative)2.
+Support and services3.
+Flexibility in production4.
+Product quality5.
+Product innovations6.
+Overall performance
 <!-- para 16 -->
 Five survey items captured the degree to which a state of cooperation and coordination existed between the supplying and procuring unit for each component and were used to compute a single scale for integration (Lawrence and Lorsch, 1967a,
 <!-- para 17 -->
+1967b).
 The Cronbach alpha measure of reliability for this construct was 0.72, and the adjusted goodness of fit index from confirmatory factor analysis was 0.98.
 <!-- para 19 -->
 The instability in exchange conditions associated with each component was broadly assessed in terms of demand and technological developments.
@@ -390,10 +398,14 @@ Simply regressing the performance of each procurement mode on indicator variable
 Unobserved features of the exchange (such as component, supplier, or procurer characteristics) could simultaneously influence the choice of procurement mode as well as performance outcomes (Hamilton and Nickerson, 2003; Shaver, 1998).
 It would then be difficult to draw valid conclusions about the effect of instability and interdependence on the performance of the mode of procurement.
 We therefore used a switching regression model that attempts to account for possibly endogenous choices of procurement modes.
+This model is estimated in two stages.
 First, a multinomial logit model is used to explain modes of procurement.
 The estimates from this model are used to calculate a non-selection hazard into each mode of procurement for each observation, which reflects the effect of unobservable variables that influence the procurement mode decision.
 Second, we estimate separate OLS regressions for subsamples of observations on each procurement mode, in which we include the non-selection hazard as a control variable.
 By its inclusion, the non-selection hazard controls for unobservable features of the relationships that might simultaneously affect the choice of mode and performance (Gulati and Nickerson, 2004; Poppo and Zenger, 1998; Shaver, 1998).
+<!-- para 6 -->
+**Table 2.
+Descriptive statistics**
 <!-- para 7 -->
 | Variable | Obs. | Mean | S.D. | Min. | Max. | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -411,7 +423,12 @@ By its inclusion, the non-selection hazard controls for unobservable features of
 | 12 | Total procurement volume | 222 | 3.21 | 1.00 | 1.00 | 4.00 | -0.16 | 0.01 | -0.06 | 0.01 | 0.15 | -0.10 | 0.05 | 0.15 | 0.27* | -0.01 | 0.66* | 1 |  |
 | 13 | Ford | 222 | 0.55 | 0.50 | 0.00 | 1.00 | -0.04 | 0.12 | 0.15 | -0.14 | 0.22* | 0.00 | 0.09 | 0.04 | -0.14 | 0.33* | -0.10 | 0.01 | 1 |
 | 14 | Procurement mode | 222 | 2.49 | 0.66 | 1.00 | 3.00 | 0.17 | 0.03 | 0.22* | -0.06 | -0.09 | 0.06 | 0.06 | -0.21* | -0.15 | 0.10 | -0.12 | 0.01 | 0.18*
+<!-- para 8 -->
+~ centered
+<!-- para 9 -->
+p < 0.01 in a two-tailed test
 <!-- para 10 -->
+**Table 3.
 Differences in organizational attributes across procurement modes (OLS)**
 <!-- para 11 -->
 | Differentiation | Integration |
@@ -434,6 +451,7 @@ Differences in organizational attributes across procurement modes (OLS)**
 Numbers below coefficients are robust standard errors.</small>
 <!-- para 13 -->
 To test Hypotheses 3, 4, and 5, we used a switching regression model (Shaver, 1998; Hamilton and Nickerson, 2003).
+We estimate this model in two steps.
 First, we estimated a multinomial logit model to predict the choice of procurement mode (make, buy, or ally). [^4]  In addition to transaction instability, reciprocal interdependence, and their interaction, which are the variables of theoretical interest, we controlled for assembler (Ford or Chrysler), supplier, and buyer asset specificity, buyer experience with supplier, length of procuring relationship, and component and total volume of procurement.
 Component and total procurement volume function as instrumental variables in our model, and do not appear in the second-stage models predicting performance.
 While they are expected to affect procurement mode, we assume that component and total procurement volume do not directly affect the performance of the procurement mode once we control for instability, interdependence, asset specificity, procurement, and buyer history and assembler. [^5]  Data limitations reduced the number of observations at the first and second stage of the analysis to 219 and 216 respectively. [^6]  The results for the first-stage multinomial model are presented in Table 4.
@@ -452,6 +470,7 @@ Reciprocal interdependence appears to increase the odds of selecting ‘buy’ a
 The significant negative interaction between instability and interdependence suggests that for non-trivial levels of instability the net effect of interdependence on the odds of selecting buy relative to ally is negative.
 We also note that reciprocal interdependence and asset specificity have distinct and independent effects on the choice of procurement modes, so that our belief in the distinctiveness of these constructs is reinforced.
 <!-- para 15 -->
+**Table 4.
 Procurement mode choice (multinomial logit)**
 <!-- para 16 -->
 | Make |  | Ally | Buy |  |
@@ -493,7 +512,9 @@ Table 5 presents the results from the second step of the switching regression pr
 The switching regression model was estimated separately in each subsample of transactions, i.e., for all transactions classified as 'make,' 'buy,' and 'ally.' All models are significant, with  $R^{2}$  ranging from 16 percent to 58 percent.
 Hypotheses 3, 4, and 5 require comparison of coefficients across these models, as we are interested in testing the differences between the marginal effects of transaction instability, reciprocal interdependence, and their interaction across the three modes of procurement.
 In addition to robust standard errors (reported below each coefficient), in order to facilitate intermodel comparison of coefficients, we calculated robust standard errors from a combined variance–covariance matrix using the seemingly unrelated estimation algorithm in STATA 8.2.
+These
 <!-- para 19 -->
+**Table 5.
 Performance of procurement modes (switching regression)**
 <!-- para 20 -->
 | Make |  | Buy |  | Ally |  |
@@ -657,6 +678,7 @@ These results also have a puzzling aspect: we are unable to detect significant d
 Therefore, an obvious question that arises is 'why are not all external relationships organized as alliances rather than arms length arrangements?' We speculate that the answer may depend on the costs of establishing each procurement mode (not considered in our analysis).
 If we assume that setting up market contracting is the least expensive alternative (Williamson, 1991a, 1991b), the normative implications for choosing procurement modes may be summarized as shown in Table 6.
 <!-- para 16 -->
+**Table 6.
 Adaptation requirements and optimal procurement mode**
 <!-- para 17 -->
 | Low transaction instability | High transaction Instability |

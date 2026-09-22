@@ -1,8 +1,9 @@
 ---
 type: sentences-archive
 citekey: "anand_mukherjee_2024_learning_from_failures_di"
-source_md: "D:\OneDrive\Obsidian Vault\00 工作台\项目\Reference for Recalls\anand-mukherjee-2024-learning-from-failures-di-OvisOCR2-20260811-161426.md"
-created: 2026-08-29
+source_md: "D:\Onedrive\Obsidian Vault\00 工作台\项目\Reference for Recalls\anand-mukherjee-2024-learning-from-failures-di-OvisOCR2-20260811-161426.md"
+created: 2026-09-20
+sentence_filter: min_chars=0
 note: >-
   跨源合成原料库存（distill-paper-exemplar L0 --keep-sentences 生成）。只读；
   语料句子可直接采用；替换来源特异性内容（专名/数字/系数/表号）。
@@ -51,7 +52,7 @@ Overall, this plot depicts an example of the learning effect of recalls supporte
 For our empirical analysis of learning from product failures, we source and compile data on product recalls for publicly traded firms in the medical device and pharmaceutical industries in the United States, which are regulated by the Food and Drug Administration (FDA).
 Selecting this context gives us the ability to find reliable sources of data to measure the different constructs needed for our analyses.
 We use text analysis of recall announcements to identify process-related and design-related recalls, and negative binomial generalized linear models (GLMs) to study firm learning from recalls and the influence of accumulated patents and lagged R&D intensity on firm learning.
-Patent and Trademark Office (USPTO) and R&D investment data from the Wharton Research Data Services (WRDS) database.
+We source patent data from the U.S. Patent and Trademark Office (USPTO) and R&D investment data from the Wharton Research Data Services (WRDS) database.
 <!-- para 8 -->
 Our results indicate that (1) firms learn more from design-related than from process-related recalls, (2) innovation capabilities, that is, accumulated patents and lagged R&D intensity, enhance learning from recalls, and (3) the enhancement in learning supported by innovation capabilities is greater for design-related recalls than for process-related recalls.
 <!-- para 11 -->
@@ -176,6 +177,7 @@ In addition, there are the challenges of preventing deterioration of attention t
 We posit that the steps in issuing and terminating process-related recalls provide impetus for creating organizational environments (Choo et al. 2007) conducive to developing better processes by bringing attention (Ocasio 1997, Ocasio and Wohlgezogen 2010) to process control.
 Such learning and attention should lead to a reduction in subsequent process-related recalls, leading us to hypothesize the following.
 <!-- para 27 -->
+Hypothesis 1a.
 Accumulated process-related recalls are negatively associated with subsequent process-related recalls.
 <!-- para 29 -->
 Referring to Figure 3, a design-related recall is based on a defect in an existing product feature or deficiencies in features required by users.
@@ -189,6 +191,7 @@ Research in organizational learning has emphasized the value of structural mecha
 The learning “is constructed by firm members as they assemble specific failure events they had not considered” (Maslach et al. 2018, p. 226).
 Such learning should lead to a reduction in subsequent design-related recalls, leading us to hypothesize the following.
 <!-- para 31 -->
+Hypothesis 1b.
 Accumulated design-related recalls are negatively associated with subsequent design-related recalls.
 <!-- para 33 -->
 Referring to Figure 3, the quality management team investigating the root causes of the recall examines the existing process and product design and consults with the teams that were responsible for the designs.
@@ -222,6 +225,7 @@ The example of learning from failures in the case of the da Vinci surgical robot
 Patents represent the generation of new processes and products; as such, accumulated patents represent experience in translating ideas into innovations by assimilating added information from external sources and internal developments (Katila and Ahuja 2002, Durand et al. 2008).
 Thus, we hypothesize the enhancing effect of accumulated patents on learning from recalls.
 <!-- para 39 -->
+Hypothesis 2.
 The negative association of accumulated recalls with subsequent recalls is stronger when there are higher numbers of accumulated patents than when there are fewer accumulated patents.
 <!-- para 40 -->
 Stocks of innovations, represented by accumulated patents, are an indicator of a firm's orientation toward experimentation, exploration of new ways of doing things, and continuous improvement.
@@ -231,6 +235,7 @@ For example, better designs of products lend themselves to a greater appreciatio
 Accumulated patents provide evidence of a propensity to integrate and use new knowledge that is valuable for problem-solving in firms (Rothaermel and Deeds 2004, Lane et al. 2006).
 This leads to the following hypothesis for the enhancing effect of accumulated patents on learning from experience with process-related recalls:
 <!-- para 41 -->
+Hypothesis 2a.
 The negative association of accumulated process-related recalls with subsequent process-related recalls is stronger when there are higher numbers of accumulated patents than when there are fewer accumulated patents.
 <!-- para 42 -->
 Accumulated patents provide evidence of innovative actions for developing or identifying and using new technologies (Van Den Bosch et al. 1999).
@@ -238,6 +243,7 @@ Thus, success in innovation, signaled by accumulated patents, better prepares fi
 Moreover, as seen in the case of the da Vinci surgical robot example (Figure 1), access to individuals and teams responsible for those patents provides an advantage in the search for root causes of design-related recalls based on the direct experiences of the firm with the designs being corrected.
 Based on these reasons, we put forward the following hypothesis for the enhancing effect of accumulated patents on learning from experience with design-related recalls.
 <!-- para 43 -->
+Hypothesis 2b.
 The negative association of accumulated design-related recalls with subsequent design-related recalls is stronger when there are higher numbers of accumulated patents than when there are fewer accumulated patents.
 <!-- para 45 -->
 Finding remedies for failures that resulted in recalls, like innovation efforts, involves troubleshooting problems.
@@ -247,6 +253,7 @@ An internal context of intense R&D efforts helps firms learn better from experie
 Whereas accumulated patents capture the stocks of innovation knowledge, recent R&D efforts, represented by lagged R&D intensity, reflect the extent of firms' efforts to capture knowledge for innovations (O'Brien 2003).
 Based on the notion that the challenges and actions for learning from recalls are paralleled in R&D efforts, we hypothesize that learning from recalls is supported by lagged R&D intensity.
 <!-- para 46 -->
+Hypothesis 3.
 The negative association of accumulated recalls with subsequent recalls is stronger when there is higher lagged R&D intensity than when there is lower lagged R&D intensity.
 <!-- para 47 -->
 Differences in the learning from experiences with process-related and design-related recalls suggest that they may be impacted differently by the intensity of R&D efforts.
@@ -258,6 +265,7 @@ R&D efforts similarly include the assimilation of noncodified knowledge (Tatikon
 Also, process control and innovation efforts have been shown to be complementary (Sitkin et al. 1994).
 Based on these associations, we hypothesize the enhancing effect of lagged R&D intensity on learning from process-related recalls.
 <!-- para 48 -->
+Hypothesis 3a.
 The negative association of accumulated process-related recalls with subsequent process-related recalls is stronger when there is higher lagged R&D intensity than when there is lower lagged R&D intensity.
 <!-- para 49 -->
 Design-related recalls call for actions that are close to R&D efforts as they consist of changes to product functionalities.
@@ -266,6 +274,7 @@ A firm's R&D efforts indicate a propensity to tackle uncertainties and complexit
 Such a propensity complements the firm's ability for learning from design-related recalls (Bailey et al. 2014).
 Thus, we hypothesize the enhancing effect of lagged R&D intensity on learning from design-related recalls.
 <!-- para 50 -->
+Hypothesis 3b.
 The negative association of accumulated design-related recalls with subsequent design-related recalls is stronger when there is higher lagged R&D intensity than when there is lower lagged R&D intensity.
 <!-- para 51 -->
 Altogether, we posit that learning from failures accrues from a combination of identified opportunities provided by recalls, capabilities to learn as indicated by stocks of innovations, and actions toward learning, as provided by R&D efforts.
@@ -296,7 +305,7 @@ In the medical device and pharmaceutical industries, M&As are frequent occurrenc
 Therefore, identifying an observation unit over the entire sample observation period is complex.
 Only accounting for a few years of a firm does not leave us with sufficient observation periods to estimate learning, which occurs over time and based on experience.
 On the one hand, including firms with insufficient observation periods is likely to provide noisy and biased estimates of learning.
-(2012) demonstrate, when a firm gets acquired, the disruption results in a short-term negative shock on product and process quality.
+Moreover, as Anand et al. (2012) demonstrate, when a firm gets acquired, the disruption results in a short-term negative shock on product and process quality.
 This effect is also likely to bias learning from product failure experience.
 On the other hand, excluding these firms reduces the sample size and potentially eliminates information on some firms, which otherwise could have impacted the results.
 Therefore, for the main analysis, we do not include firms with less than ten years of observations.
@@ -362,12 +371,16 @@ Subsequent recalls has positive correlations with accumulated patents and lagged
 Process-Related Recalls</td><td>(Nos.)</td><td>2.00</td><td>111.00</td><td>18.67</td><td>16.95</td></tr><tr><td>(5)</td><td>Subsequent Design-Related Recalls</td><td>(Nos.)</td><td>1.00</td><td>21.00</td><td>2.98</td><td>3.17</td></tr><tr><td>(6)</td><td>Accum.
 Design-Related Recalls</td><td>(Nos.)</td><td>7.00</td><td>95.00</td><td>16.82</td><td>15.15</td></tr><tr><td>(7)</td><td>Accumulated Patents</td><td>(Nos.)</td><td>132.00</td><td>8,228.00</td><td>975.52</td><td>1,265.25</td></tr><tr><td>(8)</td><td>Lagged R&amp;D Intensity</td><td>(%)</td><td>0.15</td><td>988.36</td><td>14.32</td><td>48.56</td></tr><tr><td>(9)</td><td>Lagged Revenue</td><td>(‘000 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x00029;</mo><mo>&#x0003C;</mo><mo>&#x0002F;</mo><mi>t</mi><mi>d</mi><mo>&#x0003E;</mo><mo>&#x0003C;</mo><mi>t</mi><mi>d</mi><mo>&#x0003E;</mo><mn>1</mn><mo>&#x0002C;</mo><mn>951</mn><mo>&#x0003C;</mo><mo>&#x0002F;</mo><mi>t</mi><mi>d</mi><mo>&#x0003E;</mo><mo>&#x0003C;</mo><mi>t</mi><mi>d</mi><mo>&#x0003E;</mo><mn>19</mn><mo>&#x0002C;</mo><mn>631</mn><mo>&#x0003C;</mo><mo>&#x0002F;</mo><mi>t</mi><mi>d</mi><mo>&#x0003E;</mo><mo>&#x0003C;</mo><mi>t</mi><mi>d</mi><mo>&#x0003E;</mo><mn>122</mn><mo>&#x0002C;</mo><mn>735</mn><mo>&#x0003C;</mo><mo>&#x0002F;</mo><mi>t</mi><mi>d</mi><mo>&#x0003E;</mo><mo>&#x0003C;</mo><mi>t</mi><mi>d</mi><mo>&#x0003E;</mo><mn>22</mn><mo>&#x0002C;</mo><mn>575</mn><mo>&#x0003C;</mo><mo>&#x0002F;</mo><mi>t</mi><mi>d</mi><mo>&#x0003E;</mo><mo>&#x0003C;</mo><mo>&#x0002F;</mo><mi>t</mi><mi>r</mi><mo>&#x0003E;</mo><mo>&#x0003C;</mo><mi>t</mi><mi>r</mi><mo>&#x0003E;</mo><mo>&#x0003C;</mo><mi>t</mi><mi>d</mi><mo>&#x0003E;</mo><mo stretchy="false">&#x00028;</mo><mn>10</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0003C;</mo><mo>&#x0002F;</mo><mi>t</mi><mi>d</mi><mo>&#x0003E;</mo><mo>&#x0003C;</mo><mi>t</mi><mi>d</mi><mo>&#x0003E;</mo><mi>L</mi><mi>a</mi><mi>g</mi><mi>g</mi><mi>e</mi><mi>d</mi><mi>P</mi><mi>r</mi><mi>o</mi><mi>f</mi><mi>i</mi><mi>t</mi><mi>a</mi><mi>b</mi><mi>i</mi><mi>l</mi><mi>i</mi><mi>t</mi><mi>y</mi><mo>&#x0003C;</mo><mo>&#x0002F;</mo><mi>t</mi><mi>d</mi><mo>&#x0003E;</mo><mo>&#x0003C;</mo><mi>t</mi><mi>d</mi><mo>&#x0003E;</mo><mo stretchy="false">&#x00028;</mo><mi>‘</mi><mn>000</mn></mrow></math>)</td><td>(4,887)</td><td>22,003</td><td>2,987</td><td>4,294</td></tr><tr><td>(11)</td><td>Lagged Product Approval</td><td>(Nos.)</td><td>0</td><td>56</td><td>11</td><td>7</td></tr></table>
 </div>
+<!-- para 5 -->
+Panel B: Correlations
 <!-- para 6 -->
 <div style="overflow-x:auto; width:100%; -webkit-overflow-scrolling:touch;">
 <table border="1" style="border-collapse:collapse; font-size:0.82em; white-space:nowrap;"><tr><td></td><td>Variable</td><td>(1)</td><td>(2)</td><td>(3)</td><td>(4)</td><td>(5)</td><td>(6)</td><td>(7)</td><td>(8)</td><td>(9)</td><td>(10)</td></tr><tr><td>(1)</td><td>Subsequent Recalls</td><td>1.00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>(2)</td><td>Accumulated Recalls</td><td>-0.59*</td><td>1.00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>(3)</td><td>Subsequent Process-Related Recalls</td><td>0.60*</td><td>-0.32*</td><td>1.00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>(4)</td><td>Accum.
 Process-Related Recalls</td><td>-0.37*</td><td>0.64*</td><td>-0.13*</td><td>1.00</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>(5)</td><td>Subsequent Design-Related Recalls</td><td>0.73*</td><td>-0.24*</td><td>0.54*</td><td>-0.08*</td><td>1.00</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>(6)</td><td>Accum.
 Design-Related Recalls</td><td>-0.49*</td><td>0.62*</td><td>-0.15*</td><td>0.56*</td><td>-0.46*</td><td>1.00</td><td></td><td></td><td></td><td></td></tr><tr><td>(7)</td><td>Accumulated Patents</td><td>0.19*</td><td>0.62*</td><td>0.15*</td><td>0.21*</td><td>0.23*</td><td>0.30*</td><td>1.00</td><td></td><td></td><td></td></tr><tr><td>(8)</td><td>Lagged R&amp;D Intensity</td><td>0.17*</td><td>0.03*</td><td>0.02*</td><td>0.02*</td><td>0.02*</td><td>0.01*</td><td>0.28*</td><td>1.00</td><td></td><td></td></tr><tr><td>(9)</td><td>Lagged Revenue</td><td>0.02*</td><td>0.07*</td><td>0.01*</td><td>0.09*</td><td>0.03*</td><td>0.12*</td><td>0.48*</td><td>0.06*</td><td>1.00</td><td></td></tr><tr><td>(10)</td><td>Lagged Profitability</td><td>-0.01</td><td>0.00</td><td>0.02</td><td>0.03</td><td>0.02*</td><td>0.03*</td><td>0.02*</td><td>0.19*</td><td>-0.07*</td><td>1.00</td></tr><tr><td>(11)</td><td>Lagged Product Approval</td><td>0.02*</td><td>0.01*</td><td>0.00</td><td>0.00</td><td>0.01*</td><td>0.01*</td><td>0.02*</td><td>0.22*</td><td>0.27*</td><td>0.03*</td></tr></table>
 </div>
+<!-- para 7 -->
+*p* < 0.05.
 <!-- para 8 -->
 Our analysis of learning from recalls and the enhancing effects of innovation capabilities consists of three progressive steps.
 In Step 1, we include the effects of the control variables, lagged revenue, lagged profitability, lagged product approvals, and industry, on subsequent recalls.

@@ -1,8 +1,9 @@
 ---
 type: sentences-archive
 citekey: "higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe"
-source_md: "D:\OneDrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Higgins等-2003-Getting Off to a Good Start The Effects of Upper Echelon Affiliations on Underwriter Prestige.md"
-created: 2026-09-06
+source_md: "D:\Onedrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Higgins等-2003-Getting Off to a Good Start The Effects of Upper Echelon Affiliations on Underwriter Prestige.md"
+created: 2026-09-20
+sentence_filter: min_chars=0
 note: >-
   跨源合成原料库存（distill-paper-exemplar L0 --keep-sentences 生成）。只读；
   语料句子可直接采用；替换来源特异性内容（专名/数字/系数/表号）。
@@ -78,6 +79,7 @@ Upstream affiliations, or ties to prominent research institutions, signal techno
 Horizontal affiliations, or ties to prominent organizations in the firm’s own industry, signal the firm’s organizational quality—its ability to manage its own resources effectively, including its people, money, and assets.
 Downstream affiliations, or ties to prominent institutions that specialize in marketing, distributing, and selling end-stage products, signal the firm’s market-based quality—its ability to bring its products to market, including testing, conducting trials, marketing, and selling products.
 <!-- para 10 -->
+Upper echelon upstream affiliations.
 Upstream affiliations in the biotechnology industry derive from upper echelon members' employment affiliations with prominent organizations such as research institutions, think tanks, and/or universities (e.g., to national institutions such as the National Institutes of Health (NIH), major universities in biology and chemistry, and institutions that receive substantial grants to pursue specialty areas).
 During the acquaintanceship period, when a firm is seeking funding for an IPO, investment bankers are likely to interact with several members of the firm's upper echelon, including those who have high-level research positions in the firm.
 In addition to calibrating the stage of the firm's products, having discussions with upper echelon members with experience from major research institutions should bolster the analysts' confidence in the firm's ability to conduct high-quality research and to manage the research process, because of the level and quality of resources associated with such institutions.
@@ -90,6 +92,7 @@ An upper echelon with many ties to prominent upstream organizations, signaling t
 > [!hypothesis]
 > Hypothesis 1: The greater the number of upper echelon affiliations with prominent upstream organizations, the greater the prestige of a young company's investment bank at the time of the IPO.
 <!-- para 13 -->
+Upper echelon horizontal affiliations.
 An upper echelon’s horizontal affiliations in the biotechnology industry derive from upper echelon members’ employment and board affiliations with prominent organizations in the biotechnology industry.
 Through such affiliations, the firm gains or has the potential to gain valuable resources in the form of information, contacts, and/or funds that will enable it to compete effectively.
 Competing effectively requires industry-specific understanding of how to secure important resources such as cash, scientists, equipment, and laboratory space, as well as managerial knowledge of how to structure, design, and manage a biotech organization to maximize innovation and learning (Powell, Koput, and Smith-Doerr 1996; Pisano and Mang 1993).
@@ -101,11 +104,14 @@ IPO members who have worked in the biotechnology industry are likely to have an 
 Having upper echelon members who worked for prominent biotechnology firms signals to outsiders that such estimates and decisions are likely to be both appropriate and reliable, given the valuable skills and knowledge they presumably acquired while working for such firms.
 <!-- para 15 -->
 Furthermore, upper echelon members’ affiliations with prominent horizontal institutions can positively influence outsiders’ expectations of the firm’s future organizational quality (cf.
+Benjamin and Podolny 1999).
 Even if upper echelon members do not tap into their prior employment-based ties during the IPO process, horizontal affiliations signal to outsiders that the firm has the potential to access high-quality information that can assist the firm in managing its resources effectively in the future.
+Thus,
 <!-- para 16 -->
 > [!hypothesis]
 > Hypothesis 2: The greater the number of upper echelon affiliations with prominent horizontal organizations, the greater the prestige of a young company’s investment bank at the time of the IPO.
 <!-- para 17 -->
+Upper echelon downstream affiliations.
 In biotechnology, an upper echelon's downstream affiliations derive from team members' affiliations with prominent pharmaceutical and/or healthcare companies – companies that have resources such as information, contacts, and funds that can help the young firm bring its core technology, product, and/or service to market.
 The wealth, status, and power associated with prominent pharmaceutical firms are likely to have provided the upper echelon member with valuable knowledge when he or she worked for the firm, including knowledge of product testing (e.g., clinical trials), of the Food and Drug Administration (FDA) approval process, of product marketing, and of how to sell a product or technology.
 Pharmaceutical companies, unlike small biotechnology firms, are well equipped and have unique information in each of these areas (Powell, Koput, and Smith-Doerr 1996).
@@ -117,9 +123,11 @@ Knowing that several key members of the young firm are affiliated with major pha
 Such affiliations are important resources for the firm since they indicate that valuable information, access, and influence has been and/or can be, in the future, made available to the firm.
 <!-- para 19 -->
 In addition, the upper echelon’s affiliations with prominent downstream organizations are likely to be a healthy signal to outsiders of structural advantages for the firm in the future (cf.
+Lin, Ensel, and Vaughn 1981).
 There is a risk associated with individuals who already have prominent affiliations deciding to work for and/or sit on the board of a young firm, a decision that is based on their own judgment of the firm’s potential.
 Hence, the upper echelon’s affiliations with prominent downstream firms can positively influence outsiders’ expectations about the firm’s ability to navigate through the many stages it takes to bring a product to market in the future.
 In biotechnology, this positive regard is especially salient, since, at the time of IPO, the firm has yet to engage in such downstream activities; thus, directly observing the firm’s capability in this domain is impossible.
+Thus,
 <!-- para 20 -->
 > [!hypothesis]
 > Hypothesis 3: The greater the number of upper echelon affiliations with prominent downstream organizations, the greater the prestige of a young company's investment bank at the time of the IPO.
@@ -134,6 +142,7 @@ As Cyert and March (1963) described, decision-makers who face uncertain environm
 Different types of upper echelon affiliations can serve as such referents for endorsing organizations—collectively, presenting a simplified story or social construction of the endorsement situation (Berger and Luckman 1966) that allays multiple concerns regarding the endorsement decision.
 The greater the range of ties represented by a firm’s upper echelon, the greater the confidence an endorsing organization should have in the firm’s overall ability to attend to multiple aspects of quality, indicating its potential to succeed in the marketplace.
 Such a diverse set of affiliations should signal to outsiders both the breadth and depth of the upper echelon’s capabilities and connections—signaling that the firm both has and could in the future obtain a variety of valuable resources from prominent firms.
+Therefore,
 <!-- para 23 -->
 > [!hypothesis]
 > Hypothesis 4: The greater the range of prominent upstream, horizontal, and downstream affiliations of a young company’s upper echelon, the greater the prestige of the firm’s investment bank at the time of the IPO.
@@ -233,6 +242,7 @@ Using these data, we first determined the number of institutional investors that
 Research by Bushee and Noe (2000) has shown that institutional investors may be classified into three different categories based on the rate at which they turn over their portfolios and the extent to which the blocks of shares they purchase are diversified.
 The most savvy or relationship-oriented investors, what Bushee (1998) termed “dedicated” investors, tend to have low portfolio turnover and low diversification strategies.
 Compared with other more “transient” institutional investors, dedicated institutional investors are most likely to be focused and interested in the company's longer-term growth prospects and so, most likely to have the young firm's interests at heart (cf.
+Porter 1992).
 We used Bushee's coding scheme, which classified institutional investors by year to categorize our institutional investors.
 We then calculated the number of dedicated institutional investors that invested in each of our firms.
 <!-- para 17 -->
@@ -269,6 +279,10 @@ The amount of upper echelon downstream affiliations was measured as the total nu
 <!-- para 22 -->
 We measured range of upper echelon affiliations two ways.
 First, we used a variation of the Herfindahl-Hirschman index,
+<!-- para 23 -->
+$$ H=1-\sum_{i=1}^{3}p_{i}^{2} $$
+<!-- para 24 -->
+(1)
 <!-- para 25 -->
 in which H is the measure of heterogeneity or range and p is the percentage of individuals who have ties to prominent institutions in each of our three categories.
 This variable was set to equal zero when the upper echelon had no relevant affiliations.
@@ -298,6 +312,7 @@ We also coded our firms for their geographical location.
 Young firms located in areas that are rich with industry-related activity will likely have greater access to resources, including qualified personnel, suitable lab space, and technology, that can give them an advantage (Saxenian 1994).
 Given the research and technology centers of the United States, locational advantage is likely to accrue to firms that choose to operate in central areas like San Francisco where the concentration of biotechnology firms is high (Deeds, DeCarolis, and Coombs 1997).
 A dummy variable for location took a value of 1 if the main offices of a young biotechnology company were located in one of the following areas that were consistently rated among the top four biotechnology locations for the period of our study (Burrill and Lee 1990, 1993; Lee and Burrill 1995): San Francisco, Boston, or San Diego.
+Location took a value of 0 otherwise.
 <!-- para 30 -->
 In addition, we controlled for the total number of alliances a firm has with business and/or research organizations at the time of the IPO, since prior research has demonstrated that strategic alliances have important implications for organizational outcomes.
 And, given prior research on the important role of venture capitalists during initial public offerings (e.g., Gompers et al. 1998), we included a control for the prominence of venture capital firms at the time of the
@@ -315,6 +330,10 @@ Consistent with prior research, we used the coefficient of variation for the dem
 And, we included a variable for the functional heterogeneity of the upper echelon members.
 We coded the previous functional positions of all of the top managers and directors in our dataset, based on an extension of the coding scheme used by Hambrick, Cho, and Chen (1996) that also included categories associated with younger research-based firms: chief scientific officer, founder, researcher, lab manager, and professor.
 Consistent with prior research, we used a variation of the Herfindal-Hirschman index,
+<!-- para 33 -->
+$$ H=1-\sum_{i=1}^{22}p_{i}^{2} $$
+<!-- para 34 -->
+(2)
 <!-- para 35 -->
 in which H is the measure of heterogeneity or range and p is the percentage of individuals who have held positions in each of 22 functional categories.
 <!-- para 36 -->
@@ -336,6 +355,7 @@ To correct for potential bias in such studies, sample selection models can be ru
 Here, since we are studying factors that influence the prestige of the investment banks that underwrite the firms' security offerings and IPO success, both of which only occur when a firm goes public, we want to guard against the possibility that there is some other factor, in addition to those we study, that accounts for the likelihood of firms being able to go public in the first instance.
 <!-- para 3 -->
 Heckman’s procedure generates consistent, asymptotically efficient estimates that can enable us to generalize to the larger population of biotechnology firms (cf.
+Heckman 1979).
 In essence, the Heckman model is a two-stage procedure that uses the larger risk set of public and private firms, including firms that ceased to exist as of 1996 in both categories (n = 838).
 Probit regression was used to estimate the likelihood of completing an IPO during the first stage, and estimates of parameters from that model were then incorporated into a second-stage regression model to predict prestige of investment bank and, in subsequent analyses, IPO success (Van de Ven and van Praag 1981).
 For the first stage models, we used the information we had available for our public and private firms—geographical location, year of founding, and type of business—to predict likelihood of going public.
@@ -485,6 +505,7 @@ It’s really about perceived quality; you don’t really know.
 There is no sure way to judge a young biotech[nology] firm.
 So, you judge the firm based upon the management team’s ability to bring in part of the puzzle.
 The idea was to get someone from a high-profile institution—an institution with some sort of intellectual property position to plan for development and then to go out and hire a small management team and raise some money!
+But finding the right people is tough.
 A lot of senior execs from major pharma[ceutical]s ... help tell the story.
 I don’t know but I expect some showed up, helped the company go public but didn’t last long.
 It’s hard to go from managing a cast of thousands with a big salary to a small start-up—it’s a pretty good selection process, though.
@@ -506,3 +527,5 @@ In looking at the employment affiliations in our data, we found that very few in
 Of those few individuals, the firms at which the overwhelming majority had spent time were already classified as prominent by the rankings we used.
 <!-- para 21 -->
 [^a]: Adjusted to constant 1996 dollars, and logged.
+<!-- para 22 -->
+[^b]: n = 241

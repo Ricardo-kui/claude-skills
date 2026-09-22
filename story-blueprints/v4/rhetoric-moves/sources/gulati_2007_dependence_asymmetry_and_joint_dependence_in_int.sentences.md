@@ -1,8 +1,9 @@
 ---
 type: sentences-archive
 citekey: "gulati_2007_dependence_asymmetry_and_joint_dependence_in_int"
-source_md: "D:\OneDrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Gulati等-2007-Dependence Asymmetry and Joint Dependence in Interorganizational Relationships Effects of Embeddedness on a Manufacturers Performance in Procurement Relationships.md"
-created: 2026-09-06
+source_md: "D:\Onedrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Gulati等-2007-Dependence Asymmetry and Joint Dependence in Interorganizational Relationships Effects of Embeddedness on a Manufacturers Performance in Procurement Relationships.md"
+created: 2026-09-20
+sentence_filter: min_chars=0
 note: >-
   跨源合成原料库存（distill-paper-exemplar L0 --keep-sentences 生成）。只读；
   语料句子可直接采用；替换来源特异性内容（专名/数字/系数/表号）。
@@ -12,191 +13,13 @@ note: >-
 
 ## introduction
 <!-- para 1 -->
-The concept of interdependence has received considerable attention from scholars studying interorganizational relations.
-Much of the early research on organizations considered interdependence between actors to be a liability that needed to be managed (Pfeffer, 1972; Benson, 1975; Pfeffer and Nowak, 1976; Provan, Beyer, and Kruytbosch, 1980) because unequal dependence would cause power imbalances likely to be detrimental for the weaker actor (e.g., Thompson, 1967; Stolte and Emerson, 1976).
-Emerson (1962), however, distinguished between joint dependence in a dyad, or the sum of actors' dependencies on each other, and dependence asymmetry, or the difference in actors' dependencies on each other.
-He labeled these constructs "cohesion" and "power advantage," respectively.
-Emerson used the term "power advantage" to specify the directionality of dependence asymmetry in the dyad and to indicate which one of the two actors held the dependence (power) advantage.
-For instance, the degree of an actor's dependence (power) advantage reflected the level of another actor's excess dependence on the first actor (i.e., net of the first actor's dependence on the other).
-<!-- para 2 -->
-Emerson's structural dichotomy allows interdependence to vary simultaneously across both dimensions, treating interdependence as a non-zero-sum game.
-So, for example, an increase in dependence asymmetry, which gives a power advantage to one of the actors, could be coupled with a simultaneous increase in joint dependence.
-Given this early non-zero-sum conceptualization of interdependence, it is puzzling that, with few exceptions, most subsequent research has been drawn only to the implications of dependence asymmetry and its related power dynamics.
-By grounding itself primarily in a logic of power, research on interdependence has omitted other possible logics that may also affect action.
-In particular, it has ignored the logic of embeddedness, which arises from joint dependence and which can also operate in exchange relationships.
-<!-- para 3 -->
-The logic of embeddedness suggests that higher levels of joint dependence necessarily increase the depth of economic interaction between exchange partners, jumpstarting a stronger relational orientation (Mizruchi, 1989; Zaheer and Venkatraman, 1995; Uzzi, 1996, 1999).
-This effect stems both from the infusion of sentiment into highly dependent relationships, leading them to become less instrumental (cf.
-Abel, 1930; Lawler and Yoon, 1993), and from the more calculative rationale of actors who now have a higher stake in maintaining a smooth relationship (e.g., Mizruchi, 1989; Heide and Miner, 1992).
-The increased relational orientation in turn results in increased levels of joint action, higher trust between partners, and a more advantageous information exchange in the dyad.
-<!-- para 4 -->
-The prior focus of researchers on dependence asymmetries and the underlying logic of power have drawn scholarly attention to the role of structural preconditions such as dependence asymmetries in exchanges in shaping the actors' abilities to appropriate value in exchange relationships.
-Although this focus led to a large body of research on how actors benefit from being in a position of power and claiming greater value in a distributive process, it overlooked the question of how different facets of interdependence may have an impact on the total value created in the relationship and affect the performance of the exchange partners.
-<!-- para 5 -->
-In the few organizational studies in which joint dependence has been considered, the focus has been on the dynamics associated with the logic of power in interorganizational relationships.
-In a recent study, Casciaro and Piskorski (2005) drew attention to the dichotomy between dependence asymmetry and joint dependence, examining how each of these facets influences the power-restructuring activities of firms; in particular, they studied how different facets of interdependence contribute to a firm's ability to manage external constraints stemming from dependence.
-They argued that although both dependence asymmetry and joint dependence create a motivation for absorbing constraints resulting from dependence, joint dependence provides weaker firms with a greater ability to deal effectively with the resistance of a more powerful partner and to successfully absorb the constraints through a merger.
-Thus, while Casciaro and Piskorski provided a compelling case for the role of different facets of dependence in constraint absorption, they did not focus on the two different facets of interdependence in terms of their alternative logics of action and their implications for the aggregate performance of exchange relationships.
-<!-- para 6 -->
-Scholars studying interdependence in sociology (e.g., Emerson, 1962, 1964) and social psychology (e.g., Thibaut and Kelley, 1959; Kelley and Thibaut, 1978) were among the first to draw attention to the joint form of dependence in interpersonal relationships (Lawler and Yoon, 1993, 1996).
-This concept and others based on it were extended to the interorganizational context by scholars examining marketing channels and the behavioral dynamics in those relations (e.g., Kumar, Scheer, and Steenkamp, 1995, 1998).
-Nevertheless, the focus of organizational scholars has remained on understanding the underlying power dynamics in interdependent exchange relationships.
-As a result, many of these studies have continued to examine the implications of partners' joint dependence through the prism of power and influence, focusing on such consequences of dependence asymmetry and joint dependence as the use of power and punitive actions (Kumar, Scheer, and Steenkamp, 1998), coercive versus non-coercive strategies (Gundlach and Cadotte, 1994), conflict levels (Kumar, Scheer, and Steenkamp, 1995), constraint absorption (Casciaro and Piskorski, 2005), and residual feelings of conflict (Gundlach and Cadotte, 1994).
-The logic of embeddedness underlying joint dependence was thus not fully separated from the logic of power and, as a result, was much less fully explicated; moreover, this logic's implications for firms' performance in exchange relationships have yet to be considered.
-<!-- para 7 -->
-A number of studies of the automotive industry have also examined issues of interdependence by focusing on power.
-Scholars have described how auto manufacturers can exploit weaker suppliers in this industry to obtain superior economic returns (Perrow, 1970; Dore, 1983).
-In line with other theorists who argued that the key in purchasing was to "offset or surmount the sources of supplier power" (Porter, 1980: 123), scholars have focused on manufacturers' ability to extract superior value by squeezing suppliers in negotiations and deriving benefits from advantageous value appropriation.
-In some studies, however, scholars have also hinted at the importance of joint dependence in generating valuable benefits for manufacturers in their procurement relationships.
-Descriptions of relationships among Japanese automotive assemblers and their suppliers provide compelling evidence of the benefits of jointly dependent ties to manufacturers.
-In one of the earliest accounts, Dore (1983) emphasized the non-adversarial nature of jointly dependent ties.
-Similarly, in a qualitative account of relationships between Honda and its suppliers, MacDuffie and Helper (1997) showed how the tight collaborations between the manufacturer and suppliers benefited Honda through mutual adjustment and interorganizational learning and allowed both parties to reap superior economic returns.
-The closeness and high mutual dependence of Japanese firms' procurement ties led some scholars to identify these traits as a source of competitive advantage for the Asian companies over their American counterparts (Dyer, 2000).
-Current and future relationships between automotive manufacturers and suppliers are no longer seen merely as bargaining tugs-of-war driven solely by value appropriation motives; rather, they are now viewed as representing effective symbiotic coexistence wherein manufacturers aim for superior joint value creation as a foundation for their competitiveness.
-Thus these prior accounts hint at the importance of joint dependence for the efficacy of procurement relationships and suggest some of the likely underlying behavioral dynamics that make this possible.
-Here, we take a step further by making systematic connections between joint dependence, the underlying logic of action triggered by those structural conditions, and actors' performance in those procurement relationships.
-<!-- para 8 -->
-The study reported here is based on fieldwork and survey data on manufacturer-supplier procurement relationships in the U.S. automotive industry.
-This empirical setting is especially conducive to examining the performance effects of joint dependence because it is characterized by a high level of sequential interdependence (Blau and Scott, 1962: 219; Thompson, 1967).
-Building on the idea advanced by early social exchange theory and social psychological research that dependence may affect partners' orientations in a relationship (Kelley, 1979; Lawler and Yoon, 1996) and on research highlighting certain performance advantages of embedded interorganizational exchanges (Eccles, 1981; Provan, 1993; Gulati, 1998, 2007; Uzzi and Gillespie, 2002; Gulati and Wang, 2003), we consider the influence of joint dependence on the potential value creation for and performance of procuring firms, as well as the mechanisms through which such effects may occur.
-
-## theory
-<!-- para 3 -->
-Organization theorists, having long recognized the importance of the external environment, have characterized organizations as open-system structures that seek to manage their levels of dependence on the environment (Stinchcombe, 1959; Thompson, 1967).
-Resource dependence theory has subsequently developed from this early work (e.g., Pfeffer, 1972; Pfeffer and Salancik, 1978).
-Organizations have been portrayed in this arena as entities whose survival depends on their exchange of resources with multiple environmental elements, including suppliers, buyers, competitors, and regulators; organizations have also been viewed as vulnerable entities often affected by the uncertainty of such environments.
-<!-- para 4 -->
-Much of the research on interorganizational relationships among interdependent actors has been grounded in the interrelated notions of power and control.
-As Pfeffer and Salancik (1978: 52) argued, "The concentration of power is inevitable," and "... to the extent that the interests of one party cannot be achieved without other parties, concentration is necessary." They defined interdependence as a phenomenon that "exists whenever one actor does not entirely control all of the conditions necessary for the achievement of an action or for obtaining the outcome desired from the action" (Pfeffer and Salancik, 1978: 40).
-By this definition, interdependence and its implications are closely identified with power.
-This early work set the tone for subsequent research on organizational interdependence.
-As such, relationships characterized by balanced dependence were viewed as rare.
-If an actor was more dependent on its exchange partner, the resulting net-positive dependence on the partner, or the partner's dependence advantage, was construed as the source of the partner's power; similarly, if an actor's net dependence was negative, then the actor was believed to have the dependence advantage and thus to be in a position of relative power (Emerson, 1962).
-It is precisely in such situations of dependence asymmetry and their resulting power disparities that adversarial action is more likely.
-<!-- para 5 -->
-The U.S. automotive industry, which “has been characterized by decades of adversarial buyer-supplier relations” (Mudambi and Helper, 1998: 789), has served as an exemplar of interorganizational power plays.
-Automotive manufacturers have historically maintained large numbers of suppliers to play them off against each other for price concessions, purposefully kept them at arm’s length to maintain advantage, and strategically allocated purchasing volumes to keep them in line, thereby perpetuating the adversarial nature of these interactions (Shapiro, 1985).
-Suppliers, in turn, have exploited manufacturers’ weaknesses through deliberate opportunistic behavior, leading scholars to comment on how the resulting animosity prevented automotive manufacturers and their suppliers from developing a sense of informal commitment in their procurement relationships, often irrespective of the level of formal integration (Mudambi and Helper, 1998).
-<!-- para 6 -->
-Participants in such adversarial procurement relationships were warned to monitor their respective power positions.
-The classical theorizing behind this is that an actor possessing a dependence advantage—and hence the more powerful actor in a relationship—will increase its use of adversarial tactics because of a decreased fear of retaliation, thereby positioning itself to capture greater value in the relationship at the expense of the weaker or dependence-disadvantaged actor (Blau, 1964).
-This reasoning suggests that the degree of a manufacturer's dependence advantage would enhance its performance in exchange relationships with suppliers.
-In corroboration, findings from several studies of the automotive industry showed that asymmetrically dependent suppliers were likely to be squeezed by manufacturers for profits in economically difficult times (Dore, 1983).
-In one extreme case, auto manufacturers even audited weaker suppliers to ensure that the latter would earn no excessive profits on exchange transactions, thereby redistributing the value in the relationship in their own favor (Perrow, 1970).
-<!-- para 7 -->
-Though it is reasonable to expect manufacturers to fare better when they are endowed with power in the relationship, the logic of differential power and the concomitant differences in their relative abilities to appropriate value suggest that when the supplier holds the dependence advantage, the performance of the manufacturer would suffer.
-Underlying this argument is the concept of value appropriation: the performance benefits of the stronger, dependence-advantaged firm are expected to come at the expense of the weaker, dependence-disadvantaged partner (e.g., Cook, 1977; Pfeffer and Salancik, 1978; Aldrich, 1979; Kim, Hoskisson, and Wan, 2004).
-The putative performance losses for the weaker actor in such situations were of such great concern that scholars put forward a wide variety of strategies designed to alleviate the asymmetric dependence of weaker actors in exchange relationships.
-Suggestions ranged from internal adaptation, such as buffering operations by maintaining inventories (Thompson, 1967), to cooptation through the formation of interlocking directorates (Burt, 1980; Burt, Christman, and Kilburn, 1980) and absorption through merger of the uncertainty and risks coming from the influence of a more powerful organization (Pfeffer, 1972; Pennings, 1981; Palmer et al., 1995).
-Taken together, our arguments suggest the following hypotheses:
-<!-- para 8 -->
-> [!hypothesis]
-> Hypothesis 1a: A manufacturer's dependence advantage is positively related to its performance in the procurement relationship.
-<!-- para 9 -->
-> [!hypothesis]
-> Hypothesis 1b: A supplier's dependence advantage is negatively related to the manufacturer's performance in the procurement relationship.
-<!-- para 11 -->
-Though Emerson (1962) focused almost exclusively on power and asymmetries in dependence, thereby accentuating the importance of balanced dependence, he also hinted at the importance of joint dependence and its concomitant logic of embeddedness.
-Emerson suggested that even if two separate relationships are each perfectly balanced in terms of their actors' dependence levels, they may have different behavioral implications if they are balanced at different levels of dependence: "Consider two social relations, both of which are balanced but at different levels of dependence (say Loeb and Leopold, as compared with two casual friends). [In situations of high joint dependence] it might even be meaningful to talk about parties being controlled by the relation itself" (Emerson, 1962: 34).¹ Emerson's reference to the relationship's controlling nature reflects the logic of embeddedness stemming from joint dependence, which results in each partner's giving heightened attention to the responses and attitudes of the other, such that the quality of the relationship becomes one of the main determinants of a satisfactory business tie.
-In other words, the structural parameters of the relationship subsequently shift the dispositions of the actors in it (Marsden, 1981).
-<!-- para 12 -->
-In accordance with these ideas, social psychological research has also found that parties who depend heavily on a relationship are more likely to interpret ambiguities in their partners' behaviors in a positive rather than a negative light (e.g., Murray, Holmes, and Griffin, 1996).
-More importantly, this research has highlighted how structural patterns of interdependence could account for the emergence of relationship-specific motives.
-It has demonstrated, for instance, that an individual's high level of dependence on a partner may generate a high level of commitment to the relationship, thereby leading to the adoption of an orientation toward the long term, effective conflict resolution, and the willingness of parties to forego immediate self-interest for the benefit of the relationship (Kelley, 1979; Rusbult et al., 1991).
-Lawler and Yoon (1993, 1996), in a series of experimental studies, put forward a compelling argument for these links by showing how high levels of mutual dependence foster increased cohesion and affective commitment in the relationship by enhancing the frequency of exchange agreements.
-<!-- para 13 -->
-By a similar logic, joint dependence can imbue interorganizational exchanges with increased cohesiveness, and the resulting logic of embeddedness may then perpetuate
-<!-- para 14 -->
-Emerson was referring to the infamous 1924 murder case in which Richard Loeb and Nathan Leopold acted as accomplices.
-This negative analogy once again attests to the critical stance toward interdependence in much of the prior research. increased social solidarity and cooperation in such business relationships (Provan, 1993; Gulati and Gargiulo, 1999).
-The interests of actors in such a regularized structure of exchange relations are increasingly likely to affect—and be affected by—the interests of their business associates as they begin to develop a shared understanding of the utility of mutually beneficial behavior (Marsden, 1981; Lawler and Yoon, 1996; Uzzi, 1997; Lawler, Thye, and Yoon, 2000).
-Such shared understanding often results in the emergence of a form of “relational governance,” a term that refers to the rich and deep interactions, going well beyond contractual obligations, among firms in highly dependent relationships (Eccles, 1981; Larson, 1992; Zaheer and Venkatraman, 1995).
-This mutualistic orientation is further reinforced by the “inexpensive and flexible yet penetrating” moral and social control stemming from highly dependent relationships (Larson, 1992: 96).
-<!-- para 15 -->
-The work of several other researchers provides additional evidence for the impact of partners' dependence levels on the nature and quality of their interaction (Gulati and Wang, 2003).
-Mizruchi (1989), for instance, demonstrated that when two industries were highly interdependent, such that firms of one industry engaged in high-volume exchange relationships with those of the other while having a limited number of alternative exchange partners, these firms tended to exhibit similar patterns of political behavior (see also Mizruchi, 1992).
-Similarly, Provan and Gassenheimer's (1994) study of U.S. furniture dealers and their relationships with suppliers demonstrated that more powerful suppliers were much less likely to exert influence over dealers' profit margins, volume quotas, acceptance of new product lines, and territory restrictions when they were in embedded relationships.
-Other studies in the U.S. apparel industry (Uzzi, 1996) and in the U.S. banking industry (Uzzi and Gillespie, 2002) also showed how a more cooperative orientation stems from high levels of joint dependence.
-These claims parallel recent dynamics in the U.S. automotive industry.
-In the last two decades, American automotive manufacturers have increasingly been trying to emulate the success of their Asian counterparts by increasing the total volume of materials procured through outsourced relationships and fostering tighter collaborations with external suppliers (Helper and Sako, 1995), but this is in stark contrast to the earlier normative recommendations to manufacturers "to spread purchases among alternate suppliers in such a way as to improve the firm's bargaining position" (Porter, 1980: 123–124) and implies that there are ways in which manufacturers could benefit from jointly dependent relationships.
-<!-- para 16 -->
-The implications of joint dependence for the performance of a manufacturer's procurement relationships contrast significantly with those of the logic of power, which focuses exclusively on actors' abilities to appropriate value in exchange relationships.
-The logic of embeddedness that underlies enhanced joint dependence suggests that the increased quality of interaction between jointly dependent partners would enhance the relationship's value-generating potential, subse- quently driving both actors' performance in it, for a variety of reasons.
-<!-- para 17 -->
-First, because highly dependent relations elevate partners' levels of identification with each other, their values, attitudes, and goals will tend to converge (French and Raven, 1968; Turner, Brown, and Tajfel, 1979; Mizuchi, 1989).
-Partners in such relationships tend to develop mutual empathy and a focus on joint success, embracing a long-term horizon for the relationship.
-Furthermore, as a result of their increased dependence and joint involvement, dyadic partners may also become more structurally similar (DiMaggio and Powell, 1983).
-The attitudinal convergence makes communication and negotiations in the relationship less conflictual, while structural congruence reduces some of the operational frictions, helping actors avoid unnecessary transaction costs.
-<!-- para 18 -->
-Second, because of increased levels of empathy and the desire to avoid the higher costs generated by disruptions of highly dependent relations, actors in such relations are likely to prefer non-coercive relational tactics to coercive strategies (Gundlach and Cadotte, 1994).
-Reduced use of punitive actions, coupled with reliance on non-adversarial rules of engagement, facilitates the development of a stable business relationship, which in turn promotes its continuity (Raven and Kruglanski, 1970).
-Because opportunistic behavior would lead to a prohibitively expensive sacrifice of future exchanges, such continuity has been shown to enhance the levels of cooperation in an exchange relationship (Stinchcombe, 1986; Heide and Miner, 1992; Subramani and Venkatraman, 2003), setting the stage for superior value creation.
-<!-- para 19 -->
-Finally, despite the increased frequency of operational frictions that generally characterizes highly dependent ties, parties' residual feelings of conflict have been shown to decrease at higher levels of joint dependence (Lawler, 1993; Johnson, Ford, and Kaufman, 2000).
-Jehn (1995) found that the negative impact of relational conflict driven by actual or perceived personality incompatibilities decreases at higher levels of interdependence.
-Thus, conflicts in highly dependent relationships tend to be less severe and less persistent, making those confrontations that do occur between exchange partners less detrimental economically and emotionally.
-<!-- para 20 -->
-Taken together, the arguments above suggest that a manufacturer's procurement relationships characterized by joint dependence will be governed by the logic of embeddedness.
-The logic of embeddedness, in turn, entails reduced transaction costs, greater resilience in the face of relational hazards, and increased opportunities for value creation.
-We therefore expect manufacturers to reap superior performance benefits in relationships that involve joint dependence:
-<!-- para 21 -->
-> [!hypothesis]
-> Hypothesis 2: Joint dependence is positively related to a manufacturer's performance in the procurement relationship.
-<!-- para 22 -->
-Acting as a multifaceted social overlay of exchange relationships, relational embeddedness improves the robustness of the relationship, boosting the total value generated in it and enhancing a manufacturer's performance.
-This argument implies that it may not be the level of joint dependence per se but, rather, its relation-based covariates, engendered by the circumstances it creates, that lead to a manufacturer's enhanced performance in economic exchanges.
-Relational embeddedness has been portrayed as a multifaceted construct comprising elements classified into three broad domains: joint action, trust, and fine-grained information transfer (Granovetter, 1992; Larson, 1992; Uzzi, 1997).
-Each of these elements can serve as a critical pillar of the mutualistic and cooperative orientation that emerges in highly dependent relationships.
-Therefore, we expect each of these mechanisms to partially mediate the relationship between joint dependence and performance.
-<!-- para 23 -->
-Following Baron and Kenny's (1986) recommendations for testing for mediation, we first establish the relationships between joint dependence and each of the three core mediating mechanisms and explicate how each affects performance, thus mediating the performance effect of joint dependence.
-Baron and Kenny's (1986) framework for mediation testing also mandates establishing a relationship between joint dependence and performance.
-Our development of hypothesis 2 in effect constitutes the theoretical prerequisite to establishing this relationship empirically.
-<!-- para 25 -->
-Heightened cooperation through joint action is an important element of successful exchange relationships, especially those characterized by enhanced mutual dependence (Lorenz, 1988).
-Heide and John (1990) broadly defined joint action as the degree of interpenetration of organizational boundaries.
-In line with this definition, we view joint action as the degree of dyadic cooperation and coordination across a wide array of organizational activities, such as design, cost control, and quality improvement.
-Joint action could also involve developing bilateral solutions to relational and operational problems.
-It is likely that the effect of joint dependence on a manufacturer's performance will be mediated by the extent of joint action the two actors undertake.
-<!-- para 26 -->
-Because increased joint dependence facilitates the structural and attitudinal convergence of business partners (DiMaggio and Powell, 1983; Tajfel and Turner, 1986), they become predisposed to carrying out jointly coordinated activities and can develop greater overlap in their strategic goals, in part because they face fewer structural impediments to the joint pursuit of such goals.
-This process is facilitated by the less conflictful interaction found in relationships with high joint dependence (Kumar, Scheer, and Steenkamp, 1995; Johnson, Ford, and Kaufman, 2000).
-Finally, a high level of joint dependence in a dyad also fosters the emergence of relational behavior and behavioral solidarity, creating an environment conducive to the pursuit of jointly coordinated activities (Zaheer and Venkatraman, 1995; Lusch and Brown, 1996).
-<!-- para 27 -->
-Joint action, in turn, should be related to higher levels of value creation in the relationship and a manufacturer's concomitant performance, mediating the effect of joint dependence on a manufacturer's performance in exchange relationships.
-High levels of joint action have been shown to increase the level of partners' behavioral flexibility in the dyad and their ability to resolve operational frictions (Uzzi, 1997).
-Similarly, high levels of joint involvement and coordination are frequently coupled with high levels of motivation, leading to the preferential use of an effective strategy of voice as opposed to exit (Hirschman, 1970; Helper, 1988).
-Relying on joint problem resolution and on voice strategies is likely to generate effective relationship-specific solutions, which can obviate the need for formal methods of conflict resolution, with their attendant financial and reputational costs.
-Furthermore, because automotive manufacturers require moderate to high levels of coordination in procurement ties to develop and implement technological innovation, a high level of joint action has been shown to help introduce new product features faster and often ahead of the competition (Helper, 1988; Clark, 1989).
-Such positive exchange features arising from joint action are likely to enhance the overall robustness of the relationship and the manufacturer's performance in it:
-<!-- para 28 -->
-> [!hypothesis]
-> Hypothesis 3: Joint action will partially mediate the effects of joint dependence on a manufacturer's performance in the procurement relationship.
-<!-- para 30 -->
-Interorganizational trust is also likely to mediate the effect of joint dependence and the logic of embeddedness on a manufacturer's performance (Gulati, 1995; Zaheer, McEvily, and Perrone, 1998).
-Trust can be defined as the expectation that another organization may be relied upon to fulfill its obligations, to behave predictably, and to act and negotiate fairly even when the possibility of opportunism is present (Zaheer, McEvily, and Perrone, 1998).
-High levels of joint dependence create an environment that cultivates and perpetuates trust and commitment by making it prohibitively expensive for partners to engage in opportunistic behavior.
-In essence, relationships characterized by high joint dependence foster a culture of "mutual reliance" in which exchange partners exhibit a decreased proclivity for opportunistic behavior (Williamson, 1985: 190) because the costs of such behavior are likely to be passed back to the initiator as a result of its own dependence on the other party.
-Additionally, research suggests that actors who are highly dependent on others may strive to alleviate the anxiety this state generates by perceiving their counterparts as more trustworthy.
-Because they are more likely to be positively biased in assessing their partners' trustworthiness, they are also more likely to engage in acts of trust, inducing reciprocal acts of trust from their partners and fostering a higher level of mutual trust in the relationship (Weber, Malhotra, and Murnighan, 2005).
-Similarly, partners willing to stay committed to a limited set of exchanges with high levels of dependence, signaling their dedication to trustworthy behavior, evoke similar expectations and behaviors from their counterparts, fostering a culture of trust (Zand, 1972; Subramani and Venkatraman, 2003).
-<!-- para 31 -->
-There are numerous ways in which trust enhances actors' levels of performance in exchange relationships.
-First, trusting relationships serve as a counter to the problem of moral hazards, reducing the need for contractual safeguards, along with their associated costs (Ring and Van de Ven, 1994; Gulati, 1995; Lincoln and Gerlach, 2004).
-Second, with increased trust, parties become more open, show less defensive behavior, and accept more influence from their partners in the selection of goals, choice of methods, and evaluation of progress (Zand, 1972).
-Finally, trust may further benefit the relationship in that exchange partners may not hesitate to demand of each other legitimate adaptations to new internal and external contingencies, having relinquished the fear that these demands will be perceived as illegitimate; as a result, the dyadic relationship is likely to become more flexible and innovative (Lorenz, 1988).
-Thus, in addition to generating benefits on the cost side by absorbing relational uncertainty (Barney and Hansen, 1994; Gulati, 1995), trust may help partners enhance the transaction's value through exploration of new coordination techniques, as well as product and process innovation (Zajac and Olsen, 1993; Zaheer, McEvily, and Perrone, 1998).
-<!-- para 32 -->
-> [!hypothesis]
-> Hypothesis 4: Trust will partially mediate the effects of joint dependence on a manufacturer's performance in the procurement relationship.
-<!-- para 34 -->
 Another relational mechanism likely to mediate the effect of joint dependence on performance is the quality of information exchange, in terms of its detail, accuracy, and timeliness, and the scope of information exchange, in terms of the types of information exchanged.
 Prior research suggests that manufacturers who work with smaller numbers of suppliers and thus develop more dependent relationships with them can better manage their information flow with those suppliers (Eccles, 1981).
 This is hardly surprising given the limited attention capacity of firms' managerial personnel (Simon, 1978).
 When focused on a small set of highly dependent ties, firms are able to broaden their coverage of information in the relationship (Larson, 1992).
 Again, this expansion of the scope of information exchange is related directly to the limited attention capacity of organizational agents (Simon, 1978), especially those in charge of critical managerial decisions; for manufacturers with fewer suppliers, this attention is focused on a few key relationships instead of being diffused and fragmented across many suppliers.
 Because organizational agents are more likely to engage in a proximate search, linking potential courses of action to the existing relationship (Cyert and March, 1963), they are more likely to take advantage of the improved information management capabilities by broadening the scope of information exchange within existing relationships.
-<!-- para 35 -->
+<!-- para 2 -->
 As organizational decision makers increasingly channel their attention toward the relationships on which they rely most heavily, they are more likely to be concerned about the quality of information exchanged (Ocasio, 1997).
 In jointly dependent relationships, all these trends are further reinforced by the emergence of behavioral norms that lead to enhanced bilateral information exchange (Heide and John, 1992).
 Increased normative support makes parties more open to communication and less inclined to withhold critical informa- tion, which not only enhances the scope of information exchange (Zand, 1972) but also encourages the exchange of unique fine-grained information, providing greater accuracy and detail to the information exchange (Uzzi, 1997).
@@ -206,7 +29,8 @@ In this context, the information exchange's level of detail, accuracy, and timel
 In addition, partners in dyads with highly detailed and accurate information transfer may gain a competitive edge by elevating their cognitive capacities and information processing abilities from those of bounded rationality to expert rationality (Uzzi, 1997).
 The enhanced quality and scope of their information exchange enables them to process information in composite chunks as opposed to disparate pieces, providing unique advantages that in turn have an impact on the performance of exchange relationships.
 Such expert rationality allows firms to see and generate more integrative interorganizational solutions and thus raise the standards for acceptable alternatives in a satisficing search (March and Simon, 1958).
-<!-- para 36 -->
+We thus hypothesize:
+<!-- para 3 -->
 > [!hypothesis]
 > Hypothesis 5: The scope and quality of information exchange will partially mediate the effects of joint dependence on a manufacturer's performance in the procurement relationship.
 
@@ -269,6 +93,8 @@ Because these three items could not differentiate between our two constructs, we
 <!-- para 12 -->
 Items were standardized to eliminate differences in variance due to scaling and averaged to construct the manufacturer's (Cronbach's  $\alpha = .61$) and supplier's dependence (Cronbach's  $\alpha = .62$) scales. [^3] The two scales had a correlation coefficient of .148 (p < .10).
 We constructed the joint dependence variable by adding measures of the manufacturer's and supplier's dependence. [^4] The data that we collected for the purposes of measuring dependence represent a combination of perceptual and objective measures; this approach thus alleviates
+<!-- para 13 -->
+**Table 1**
 <!-- para 14 -->
 **Common Factor Analysis of Manufacturer and Supplier Dependence Measures***
 <!-- para 15 -->
@@ -305,6 +131,7 @@ Total dollar volume of all commodities purchased from supplier | .619 | .135 |
 <!-- para 16 -->
 All measures are standardized; varimax orthogonal rotation procedure is used for reported results.
 Results were verified using a promax version of oblique rotation that presumes non-independence of extracted factors.
+All items are standardized.
 <!-- para 17 -->
 $^{\dagger}$ The measure was inverted to reflect a supplier's dependence.
 <!-- para 18 -->
@@ -324,6 +151,7 @@ Thus a measure of the supplier's dependence advantage captures the manufacturer'
 In turn, the supplier's excess dependence on the manufacturer is captured by the measure of the manufacturer's dependence advantage.
 Following this decomposition, our sample returned 72 dyads in which a supplier held a dependence advantage and 79 dyads in which a manufacturer did.
 <!-- para 22 -->
+Performance.
 We used twelve survey questions as indicators of a manufacturer's performance in the procurement relationship, which were designed to measure the buyer's satisfaction with the exchange relationship.
 The measures were carefully identified based on our analysis of the related literature, discussion with industry experts, and pretests.
 The manufacturers collected rich archival data to measure directly the efficacy of each of procurement relationship for each of its components, which were not available to us because such data were considered sensitive company information.
@@ -342,16 +170,22 @@ First, when investigating performance, much of the extant power and especially e
 Thus our performance measure is more closely aligned with this tradition of looking at performance.
 Second, we did not feel that our measure of conflict allowed us to adequately distinguish between functional and dysfunctional conflict, the two critical facets of the conflict construct that are likely to have different levels of covariation with economic performance (Jehn, 1995).
 Finally, we could only retain two items that unequivocally
+<!-- para 25 -->
+**Table 2**
 <!-- para 26 -->
 **Common Factor Analysis Loadings for Performance Construct***
 <!-- para 27 -->
 Survey item | Factor 1 | Factor 2 |
 | --- | --- | --- |
 | 1.
+Price competitive | .572 | -.133 |
+| 2.
 Support and services | .748 | -.042 |
 | 3.
 Flexibility in production | .764 | .108 |
 | 4.
+Product quality | .824 | .148 |
+| 5.
 Product innovations | .728 | .093 |
 | 6.
 Average past target-price ratio | .729 | -.017 |
@@ -372,6 +206,7 @@ Ease of negotiations when supplier&#x27;s raw material costs increase (7-point L
 <!-- para 28 -->
 Unless otherwise specified, respondents ranked suppliers compared with the best alternative supplier for this commodity using a 7-point Likert scale with options ranging from 1 = "Much less attractive than alternative" to 7 = "Much more attractive than alternative." cally loaded onto the conflict factor, which falls short of the recommended three-item scale for constructing a reliable measure (Kim and Mueller, 1978).
 <!-- para 29 -->
+Joint action.
 We measured joint action with ten survey items that reflected the degree of the supplier's involvement in various aspects of cooperative exchange, as well as the degree of joint problem solving and the adaptability of partners in the relationship.
 Because we included some new items measuring joint action that went beyond prior research on this construct (Heide and John, 1990), we conducted an exploratory factor analysis to ensure that all of the selected items were measuring the degree of joint action in the dyad.
 As shown in table 3, all but three items, which reflected the treatment of problems of joint responsibilities, the degree of joint improvement of operations, and the degree of joint involvement in forecasting commodity requirements, loaded highly and uniquely on the factor.
@@ -383,12 +218,27 @@ Principal component analysis used as a data reduction technique (Conway and Huff
 Scope and quality of information exchange.
 The scope and quality of information exchange in the dyadic buyer-supplier exchange relationship were measured using thirteen survey items that reflected the kinds of information exchanged and the level of detail, timeliness, and accuracy that characterized the information exchange.
 An exploratory factor analysis rendered a clear two-factor solution, as shown in table 5.
+One
+<!-- para 32 -->
+**Table 3**
 <!-- para 33 -->
 **Common Factor Analysis Loadings for Joint Action Construct***
 <!-- para 34 -->
 Survey item | Factor loadings |
 | --- | --- |
 | 1.
+Initial design | .666 |
+| 2.
+Quality improvement | .733 |
+| 3.
+Cost control | .717 |
+| 4.
+Product modification | .711 |
+| 5.
+Production process | .518 |
+| 6.
+Sub-sourcing | .462 |
+| 7.
 Forecasting commodity requirements | .288 |
 | 8.
 Joint improvement of operations (&quot;Your company engages in ongoing discussion with the supplier to jointly improve both their operations and yours.&quot;) | .050 |
@@ -400,6 +250,8 @@ Treating problems as joint responsibilities (&quot;Problems that arise in the co
 | Proportion of variance explained by eigenvector | .870
 <!-- para 35 -->
 For items 1–7, the supplier's involvement in the manufacturer's decision making was measured using a 7-point Likert scale with options ranging from 1 = "Not at all involved" to 7 = "Involved to a great extent." Items 8–10 were measured with a 7-point Likert scale with options ranging from 1 = "Strongly disagree" to 7 = "Strongly agree."
+<!-- para 36 -->
+**Table 4**
 <!-- para 37 -->
 **Principal Component Analysis Loadings for Trust Construct***
 <!-- para 38 -->
@@ -440,6 +292,9 @@ The measures for the control variables are described in table 6.
 Our central theoretical argument led us to predict that as levels of joint dependence in a procurement relationship increase, a manufacturer's performance in the relationship will improve.
 Yet it is also plausible to argue that a manufacturer's satisfaction with the exchange stemming from the superior value creation in the exchange will lead to exchange partners allocating more business to each other, hence increasing levels of joint dependence in the relationship.
 This potential reciprocally causal relationship resulted in a simultaneous-equation bias in our research design (Greene, 2003).
+In
+<!-- para 3 -->
+**Table 5**
 <!-- para 4 -->
 **Common Factor Analysis Loadings for Information Constructs***
 <!-- para 5 -->
@@ -475,7 +330,14 @@ Timeliness of information received | .755 | -.114 |
 | Proportion of variance explained by eigenvector | .535 | .359
 <!-- para 6 -->
 For items 1–10 the kinds of information exchanged between the manufacturer and the supplier were measured using a 7-point Likert scale with options ranging from 1 = "Not at all exchanged" to 7 = "Exchanged very frequently." For items 11–13, respondents were asked to characterize the information exchange between their organization and supplier on a 7-point Likert scale with options ranging from 1 = "Poor" to 7 = "Excellent."
+<!-- para 7 -->
+**Table 6**
+<!-- para 8 -->
+**Descriptions of Control Variables**
 <!-- para 9 -->
+Variable | Measure |
+| --- | --- |
+| 1.
 Component criticality | &quot;Component is critical to the mechanical functioning of the automobile&quot; (7-point Likert scale with options ranging from 1 = &quot;Strongly disagree&quot; to 7 = &quot;Strongly agree&quot;). |
 | 2.
 Component standardization | Ordered categorical measure of the extent of standardization of the component used: in one trim line within a model (1), one model (2), one platform (3), more than one platform (4) or companywide (5). |
@@ -526,6 +388,8 @@ As explained above, to control for the simultaneity bias resulting from the poss
 The Breusch-Pagan test (Breusch and Pagan, 1979) for heteroskedasticity led us to reject the null hypothesis of homoskedastic error variance at various levels of significance in several of our models.
 One possible reason for this may be the non-independence of observations, as certain suppliers in our sample supplied more than one component to the same manufacturer.
 When simple OLS regressions were utilized,
+<!-- para 19 -->
+**Table 7**
 <!-- para 20 -->
 **Means, Standard Deviations, and Correlations (N = 151)**
 <!-- para 21 -->
@@ -603,6 +467,8 @@ Our estimates are based on 1,000 random samples (Efron and Tibshirani, 1985).
 Results remained qualitatively unchanged.
 <!-- para 23 -->
 **Table 8 contains the results of simultaneous equation estimation, where performance and joint dependence are estimated**
+<!-- para 24 -->
+**Table 8**
 <!-- para 25 -->
 **Simultaneous Equation Estimations Using Three-Stage Least Squares Regressions (N = 151)***
 <!-- para 26 -->
@@ -642,6 +508,8 @@ Constant | -2.257***(.800) | -2.788****(.711) | -2.671****(.684) | -2.801****(.6
 | Supplier personal history | .003(.084) | .002(.084) | .002(.084) | .002(.084) |
 | Multiplexity | .073(.046) | .061(.046) | .064(.045) | .061(.045) |
 | Firm | .055(.146) | .046(.146) | .048(.146) | .046(.146)
+<!-- para 29 -->
+**Table 8 (Continued)**
 <!-- para 30 -->
 Joint dependence model | Model 1 | Model 2 | Model 3 | Model 4 | Model 5 |
 | --- | --- | --- | --- | --- | --- |
@@ -654,6 +522,7 @@ Joint dependence model | Model 1 | Model 2 | Model 3 | Model 4 | Model 5 |
 <!-- para 31 -->
 $p < .10$; ** $p < .05$; *** $p < .01$; **** $p < .001$; two tailed tests.
 <!-- para 32 -->
+Standard errors in parentheses.
 Model 1 is estimated using simple OLS, with robust standard errors adjusted for non-independence of observations.
 The number of clusters = 113. as mutually influencing each other.
 The table reports systems of equations, where each system comprises two equations or models that are estimated simultaneously: the first one reflects performance as a function of joint dependence and various exogenous predictors, and the second one estimates joint dependence as a function of performance along with the set of exogenous variables.
@@ -690,6 +559,9 @@ Table 9 reports the results of OLS regressions analyzing the relationship betwee
 Significant relationships were established for joint action and the quality of information exchange, but no significant relationships were found for trust and the scope of information exchange, thus refuting hypothesis 4 and the part of hypothesis 5 that focused on the mediating effect of the scope of information exchange.
 <!-- para 38 -->
 In the final step of testing for mediation, the dependent variable was regressed on the independent variable and the mediator in models 3–5 in table 8.
+Hypothesis 3 predicted
+<!-- para 39 -->
+**Table 9**
 <!-- para 40 -->
 Regressions Establishing a Relationship between Joint Dependence and the Mediating Variables of Joint Action, Trust, Information Exchange Scope and Quality (N = 151)*
 <!-- para 41 -->

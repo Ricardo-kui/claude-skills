@@ -1,8 +1,9 @@
 ---
 type: sentences-archive
 citekey: "fang_et_al_2025_rival_recall_ad_spend"
-source_md: "D:\OneDrive\Obsidian Vault\00 工作台\项目\Reference for Recalls\Fang-et-al-2025-rival-recall-ad-spend.md"
-created: 2026-08-29
+source_md: "D:\Onedrive\Obsidian Vault\00 工作台\项目\Reference for Recalls\Fang-et-al-2025-rival-recall-ad-spend.md"
+created: 2026-09-20
+sentence_filter: min_chars=0
 note: >-
   跨源合成原料库存（distill-paper-exemplar L0 --keep-sentences 生成）。只读；
   语料句子可直接采用；替换来源特异性内容（专名/数字/系数/表号）。
@@ -29,6 +30,9 @@ While experts opined that GM's strategy would not lift GM's sales, buyer opinion
 <!-- para 4 -->
 When a brand recalls its defective products, a substitute brand’s manager (in the same product category) may wonder whether prospective buyers will perceive the substitute brand to have superior or inferior quality, relative to the recalling brand (Borah and Tellis, 2016; Jacobs and Singhal, 2020).
 That is, the recall triggers perception spillover (Shi et al., 2022) in the substitute brand’s manager (see Figure 1).
+<!-- para 6 -->
+**Figure 1.
+Conceptual framework**
 <!-- para 7 -->
 If the manager believes that the recall may cause the buyers to view their brand favorably relative to the recalling brand, they interpret the recall as an opportunity.
 In contrast, the threat interpretation prevails if the manager believes the recall may evoke buyers’ unfavorable comparisons. [^3]
@@ -93,12 +97,7 @@ Next, a substitute from the same (vs. different) manufacturer increases its over
 The theoretical insight is that consumers may inevitably associate the recalling manufacturer's substitute brands with the recalling brand (i.e., "guilty by association").
 Anticipating this association, substitute brands from the recalling manufacturer must fight harder to differentiate their quality and mitigate consumers' guilty-by-association interpretation.
 <!-- para 16 -->
-<table border=1><tr><td>Study</td><td>Substitute firm&#x27;s or brand&#x27;s strategic response to a recall?</td><td>Variation in response variable by types?</td><td>Effect of a recall on the substitute firm&#x27;s or brand&#x27;s sales?</td></tr><tr><td>This article</td><td>✓</td><td>✓</td><td>✓</td></tr><tr><td>Barber and Darrough (1996) Journal of Political Economy</td><td>✕</td><td>✕</td><td>✕</td></tr><tr><td>Borah and Tellis (2016) Journal of Marketing Research</td><td>✕</td><td>✕</td><td>✓</td></tr><tr><td>Collins et al.
-(2013) Journal of Economic Behavior &amp; Organization</td><td>✕</td><td>✕</td><td>✓</td></tr><tr><td>Cawley and Rizzo (2008) Beyond Health Insurance: Public Policy to Improve Health</td><td>✕</td><td>✕</td><td>✓</td></tr><tr><td>Crafton et al.
-(1981) Economic Inquiry</td><td>✕</td><td>✕</td><td>✓</td></tr><tr><td>Dowdell et al.
-(1992) Journal of Financial and Quantitative Analysis</td><td>✕</td><td>✕</td><td>✕</td></tr><tr><td>Dranove and Olsen (1994) Journal of Law and Economics</td><td>✕</td><td>✕</td><td>✓</td></tr><tr><td>Freedman et al.
-(2012) Review of Economics and Statistics</td><td>✕</td><td>✕</td><td>✓</td></tr><tr><td>Liu and Varki (2021) Journal of Business Research</td><td>✕</td><td>✕</td><td>✕</td></tr><tr><td>Mackalski and Belisle (2015) Journal of Brand Management</td><td>✕</td><td>✕</td><td>✓</td></tr><tr><td>Van Heerde et al.
-(2007) Marketing Science</td><td>✕</td><td>✕</td><td>✓</td></tr></table>
+<table border=1><tr><td>Study</td><td>Substitute firm&#x27;s or brand&#x27;s strategic response to a recall?</td><td>Variation in response variable by types?</td><td>Effect of a recall on the substitute firm&#x27;s or brand&#x27;s sales?</td></tr><tr><td>This article</td><td>✓</td><td>✓</td><td>✓</td></tr><tr><td>Barber and Darrough (1996) Journal of Political Economy</td><td>✕</td><td>✕</td><td>✕</td></tr><tr><td>Borah and Tellis (2016) Journal of Marketing Research</td><td>✕</td><td>✕</td><td>✓</td></tr><tr><td>Collins et al. (2013) Journal of Economic Behavior &amp; Organization</td><td>✕</td><td>✕</td><td>✓</td></tr><tr><td>Cawley and Rizzo (2008) Beyond Health Insurance: Public Policy to Improve Health</td><td>✕</td><td>✕</td><td>✓</td></tr><tr><td>Crafton et al. (1981) Economic Inquiry</td><td>✕</td><td>✕</td><td>✓</td></tr><tr><td>Dowdell et al. (1992) Journal of Financial and Quantitative Analysis</td><td>✕</td><td>✕</td><td>✕</td></tr><tr><td>Dranove and Olsen (1994) Journal of Law and Economics</td><td>✕</td><td>✕</td><td>✓</td></tr><tr><td>Freedman et al. (2012) Review of Economics and Statistics</td><td>✕</td><td>✕</td><td>✓</td></tr><tr><td>Liu and Varki (2021) Journal of Business Research</td><td>✕</td><td>✕</td><td>✕</td></tr><tr><td>Mackalski and Belisle (2015) Journal of Brand Management</td><td>✕</td><td>✕</td><td>✓</td></tr><tr><td>Van Heerde et al. (2007) Marketing Science</td><td>✕</td><td>✕</td><td>✓</td></tr></table>
 <!-- para 17 -->
 Note: We include all studies that have examined the impact of a brand's product recall on the substitute firm's/brand's (1) managerial decisions or (2) sales.
 <!-- para 18 -->
@@ -195,11 +194,12 @@ Specifically, our prerecall period comprises 16 weeks, [^13] beginning on Monday
 <!-- para 7 -->
 Car buyers determine their consideration set in two steps.
 First, they decide the type of vehicle they want to buy; for example, a sedan, a pickup truck, or a sport utility vehicle (SUV).
+That is, they decide on the segment.
 Second, they decide on a “budget” (i.e., lower price point) versus luxury (i.e., higher price point) model within the chosen segment, leading to their consideration set that focuses on a specific car class.
-For example, if one chooses to buy a budget sedan, one’s consideration set will be in A class, which includes the Toyota Corolla, Honda Civic, etc.
+For example, if one chooses to buy a budget sedan, one’s consideration set will be in A class, which includes the Toyota Corolla, Honda Civic, etc. (Deloitte, 2014).
 This method is consistent with consumer choice or conjoint literature, which demonstrates that customers select values of attributes in sequential order (Urban et al., 1993).
 Indeed, extant research on product recall has adopted this consumer selection procedure to determine substitute car models of a recalling model.
-(2011) considered the Jeep Cherokee and Toyota 4Runner as substitutes for the recalling Ford Explorer.
+For example, Rubel et al. (2011) considered the Jeep Cherokee and Toyota 4Runner as substitutes for the recalling Ford Explorer.
 Similarly, Borah and Tellis (2016) used the Nissan Pathfinder as a substitute for the Toyota 4Runner and the Toyota Camry for the Honda Accord (read Borah and Tellis, 2016, Table M1).
 <!-- para 8 -->
 Following the above method, we sample all models that manufacture cars that are substitutes for cars sold by the recalling model Sagitar—that is, car models that are A-class sedans like Sagitar (Wu et al., 2019).
@@ -221,6 +221,7 @@ This resulted in a dataset of 591,976 weekly print ad records for the 31-week ob
 Notably, Meihua uses Google’s Bidirectional Encoder Representations from Transformers (BERT) to categorize print ads by their type.
 Evidence (Amazon, 2022) suggests that BERT achieves high performance, measured by an area under the curve (AUC) of 0.96 and F1 score of 0.97 (Meituan, 2022).
 Buoyed by this evidence, Meihua applied BERT on archived ads to classify an ad creative by whether it focuses on price, quality, or brand.
+That is, an ad has only one focus.
 This three-category classification is consistent with academic research (Jedidi et al., 1999; Parment, 2014) and business practice (LinkedIn, 2018).
 Specifically, price advertising emphasizes competitive pricing or discounts on the car model (Jedidi et al., 1999).
 Quality advertising highlights the superior quality of the model (Du et al., 2015), while brand advertising concentrates on the brand associations of the car model (Parment,
@@ -247,8 +248,7 @@ First, we used Factiva to count the number of news articles about substitute mod
 On average, a substitute model received 0.383 media reports per week, per prefecture (Table 1).
 <!-- para 16 -->
 Second, we control for buyers' overall interest in the substitute model by including in our specification an index of the volume of internet searches about the model (Guo et al., 2019).
-Specifically, we search Baidu Trend for the name of each model i and collect the corresponding search volume data in week w and prefecture p.
-A higher search volume index indicates a higher buyer interest in the model.
+Specifically, we search Baidu Trend for the name of each model i and collect the corresponding search volume data in week w and prefecture p. A higher search volume index indicates a higher buyer interest in the model.
 As Table 2 shows, on average, a substitute model has a weekly search index of 146.301.
 <!-- para 18 -->
 <table><tr><th>Variable</th><th>Measure</th><th>Data source</th><th>Mean</th><th>SD</th><th>Min</th><th>Max</th></tr><tr><td>After Sagitar Recall</td><td>= 1 for postrecall period</td><td>VW</td><td>0.484</td><td>0.500</td><td>0</td><td>1</td></tr><tr><td>Total <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi><msub><mi>d</mi><mrow><mi>i</mi><mi>w</mi><mi>p</mi></mrow></msub></mrow></math></td><td>Model i's total print ad spending in week w and prefecture p</td><td>Meihua</td><td>0.028</td><td>0.751</td><td>0</td><td>165.110</td></tr><tr><td>Price <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi><msub><mi>d</mi><mrow><mi>i</mi><mi>w</mi><mi>p</mi></mrow></msub></mrow></math></td><td>Model i's spending on price advertising in print media in week w and prefecture p</td><td>Meihua</td><td>0.003</td><td>0.172</td><td>0</td><td>29.700</td></tr><tr><td>Quality <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi><msub><mi>d</mi><mrow><mi>i</mi><mi>w</mi><mi>p</mi></mrow></msub></mrow></math></td><td>Model i's spending on product quality advertising in print media in week w and prefecture p</td><td>Meihua</td><td>0.025</td><td>0.722</td><td>0</td><td>165.110</td></tr><tr><td>Brand <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi><msub><mi>d</mi><mrow><mi>i</mi><mi>w</mi><mi>p</mi></mrow></msub></mrow></math></td><td>Model i's spending on brand advertising in print media in week w and prefecture p</td><td>Meihua</td><td>0.0001</td><td>0.038</td><td>0</td><td>20.400</td></tr><tr><td>Media<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi /><mrow><mi>i</mi><mi>w</mi><mi>p</mi></mrow></msub></mrow></math></td><td>The number of unique news reports about the model i in week w and prefecture p</td><td>Factiva</td><td>0.383</td><td>1.240</td><td>0</td><td>15</td></tr><tr><td>Baidu Trend<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi /><mrow><mi>i</mi><mi>w</mi><mi>p</mi></mrow></msub></mrow></math></td><td>Historical trends of Baidu weekly search volume for model i in week w and prefecture p</td><td>Baidu Trend</td><td>146.301</td><td>120.940</td><td>0</td><td>1247.619</td></tr><tr><td>Dealer's Weibo Posts<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi /><mrow><mi>i</mi><mi>w</mi><mi>p</mi></mrow></msub></mrow></math></td><td>= 1 if any dealer created any post on Weibo for model i in week w and prefecture m, and 0, otherwise</td><td>Weibo</td><td>0.131</td><td>0.338</td><td>0</td><td>1</td></tr><tr><td>Dealer's Weibo Likes<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi /><mrow><mi>i</mi><mi>w</mi><mi>p</mi></mrow></msub></mrow></math></td><td>Number of likes for Weibo content posted by all dealers for model i in week w and prefecture p</td><td>Weibo</td><td>0.150</td><td>3.898</td><td>0</td><td>1881</td></tr><tr><td>Dealer's Weibo Comments<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi /><mrow><mi>i</mi><mi>w</mi><mi>p</mi></mrow></msub></mrow></math></td><td>Number of comments for Weibo content posted by all dealers for model i in week w and prefecture p</td><td>Weibo</td><td>1.039</td><td>66.155</td><td>0</td><td>18194</td></tr><tr><td>Dealer's Weibo Shares<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi /><mrow><mi>i</mi><mi>w</mi><mi>p</mi></mrow></msub></mrow></math></td><td>Number of shares for Weibo content posted by all dealers for model i in week w and prefecture p</td><td>Weibo</td><td>3.391</td><td>266.881</td><td>0</td><td>60624</td></tr><tr><td>Manufacturer's Weibo Posts<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi /><mrow><mi>i</mi><mi>w</mi><mi>p</mi></mrow></msub></mrow></math></td><td>= 1 if the manufacturer posts on Weibo for model i in week w and prefecture p, and 0, otherwise</td><td>Weibo</td><td>0.191</td><td>0.393</td><td>0</td><td>1</td></tr><tr><td>Manufacturer's Weibo Likes<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi /><mrow><mi>i</mi><mi>w</mi><mi>p</mi></mrow></msub></mrow></math></td><td>Number of likes for Weibo posted by the manufacturer of model i in week w and prefecture p</td><td>Weibo</td><td>1.863</td><td>206.530</td><td>0</td><td>117868</td></tr><tr><td>Manufacturer's Weibo Comments<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi /><mrow><mi>i</mi><mi>w</mi><mi>p</mi></mrow></msub></mrow></math></td><td>Number of comments for Weibo posted by the manufacturer of model i in week w and prefecture p</td><td>Weibo</td><td>0.616</td><td>23.166</td><td>0</td><td>4248</td></tr><tr><td>Manufacturer's Weibo Shares<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi /><mrow><mi>i</mi><mi>w</mi><mi>p</mi></mrow></msub></mrow></math></td><td>Number of comments for Weibo posted by the manufacturer of model i in week w and prefecture p</td><td>Weibo</td><td>1.645</td><td>86.547</td><td>0</td><td>15521</td></tr><tr><td>Internet <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi><msub><mi>d</mi><mrow><mi>i</mi><mi>w</mi><mi>p</mi></mrow></msub></mrow></math></td><td>Internet ad spending for model i in week w and prefecture p</td><td>Meihua</td><td>0.008</td><td>0.045</td><td>0</td><td>20</td></tr><tr><td>TV <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi><msub><mi>d</mi><mrow><mi>i</mi><mi>w</mi><mi>p</mi></mrow></msub></mrow></math></td><td>TV ad spending for model i in week w and prefecture p</td><td>Meihua</td><td>0.051</td><td>0.175</td><td>0</td><td>60</td></tr><tr><td>Outdoor <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi><msub><mi>d</mi><mrow><mi>i</mi><mi>w</mi><mi>p</mi></mrow></msub></mrow></math></td><td>= 1 if the model i has outdoor advertising in week w and prefecture p, and 0, otherwise</td><td>Meihua</td><td>0.147</td><td>0.354</td><td>0</td><td>1</td></tr><tr><td>Direct Substitute<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi /><mrow><mi>i</mi></mrow></msub></mrow></math></td><td>= 1 if the car model i is a direct substitute of Sagitar, and 0 otherwise</td><td>Autohome.com</td><td>0.081</td><td>0.272</td><td>0</td><td>1</td></tr><tr><td>Sibling Substitute<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi /><mrow><mi>i</mi></mrow></msub></mrow></math></td><td>= 1 if the model i is owned by VW, and 0 otherwise</td><td>VW</td><td>0.097</td><td>0.296</td><td>0</td><td>1</td></tr><tr><td>Substitute's Sales Volume<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi /><mrow><mi>i</mi><mi>m</mi><mi>p</mi></mrow></msub></mrow></math></td><td>The sales volume of the car model i in month m and prefecture p</td><td>Chinese Vehicle Administrative Office</td><td>20.301</td><td>64.976</td><td>0</td><td>1993</td></tr></table>
@@ -277,7 +277,7 @@ In general, the regression discontinuity design serves as a localized experiment
 However, we reason that the local nature of RDiT is not a significant concern in our empirical setting for two reasons.
 First, we focus on the substitutes' ad spending on print media, which involves a shorter lead time and thus increases the face validity of our estimated effect.
 Second, in choosing our observational period, we follow prior research that examines observers' responses to a firm's announcement of negative news.
-For example, in their study of observer firms' responses to a related firm's bankruptcy filing, Ozturk et al.
+For example, in their study of observer firms' responses to a related firm's bankruptcy filing, Ozturk et al. (2019) used a 32-week period.
 Furthermore, research on the effects of recalls on managers' ad spending adjustment has used a similar timeframe (e.g., around one year) (Borah and Tellis, 2016).
 Therefore, while RDiT generally possesses a local nature, it is well suited to our sample. [^18]
 <!-- para 25 -->
@@ -285,6 +285,8 @@ The identification assumption of the RDiT method is that no unobservable factors
 In other words, RDiT assumes that the change in ad spending is caused by
 <!-- para 26 -->
 $$ \begin{aligned}Outcome_{iwp}=\beta_{10}+\beta_{11}After Sagitar Recall_{w}+\theta_{i}\\+\pi_{w}+\mu_{p}+\beta_{12}X_{iwp}+\varphi_{iwp}\end{aligned} $$
+<!-- para 27 -->
+(1)
 <!-- para 28 -->
 Subscripts i, w, and p index the car model, the week, and the prefecture, respectively.
 Outcome $_{iwp}$ denotes our set of dependent variables (DVs): Total  $Ad_{iwp}$, Price  $Ad_{iwp}$, Quality  $Ad_{iwp}$, and Brand  $Ad_{iwp}$.
@@ -293,28 +295,26 @@ We include FEs at three levels: model ( $\theta_i$), week ( $\pi_w$), and prefec
 Model-specific FEs  $\theta_i$ allow us to account for the model-specific, time-invariant unobservables (e.g., the model's manufacturer).
 Week-level FEs help us control for the intertemporal differences that do not vary across models.
 Furthermore, we control for prefecture-specific unobservables with the vector of prefecture-level FEs  $\mu_p$.  $\beta_{11}$ is our coefficient of interest, which is the average effect of Sagitar's recall on its substitutes' ad spending.
-<!-- para 31 -->
-![[images/page-0010_bbox_106_113_469_312.jpg]]
-<!-- para 33 -->
-![[images/page-0010_bbox_491_113_853_312.jpg]]
-<!-- para 34 -->
+
+## results
+<!-- para 3 -->
+Panel B: Spending on Price Advertising
+<!-- para 4 -->
 Panel C: Spending on Quality Advertising
-<!-- para 35 -->
-![[images/page-0010_bbox_121_373_482_569.jpg]]
-<!-- para 37 -->
-![[images/page-0010_bbox_511_373_873_569.jpg]]
-<!-- para 39 -->
+<!-- para 5 -->
+Panel D: Spending on Brand Advertising
+<!-- para 7 -->
 Next, we present the estimates from the RDiT analysis
-<!-- para 43 -->
+<!-- para 11 -->
 <table border=1><tr><td>DV =</td><td>Total Ad</td><td>Price Ad</td><td>Quality Ad</td><td>Brand Ad</td></tr><tr><td></td><td>I</td><td>II</td><td>III</td><td>IV</td></tr><tr><td>After Sagitar recall</td><td>-0.014** (0.007)</td><td>0.007*** (0.002)</td><td>-0.020*** (0.007)</td><td>-0.000 (0.000)</td></tr><tr><td>Media</td><td>-0.005*** (0.001)</td><td>-0.0002 (0.0004)</td><td>-0.005*** (0.001)</td><td>-0.000 (0.000)</td></tr><tr><td>Baidu trend</td><td>0.236*** (0.048)</td><td>0.024 (0.013)</td><td>0.211*** (0.047)</td><td>0.001 (0.001)</td></tr><tr><td>Dealers&#x27; Weibo posts</td><td>-0.003 (0.005)</td><td>-0.005*** (0.001)</td><td>0.003 (0.005)</td><td>-5.82e-07 (0.0001)</td></tr><tr><td>Dealers&#x27; Weibo likes</td><td>-0.795** (0.369)</td><td>-0.395*** (0.098)</td><td>-0.399 (0.357)</td><td>-0.001 (0.006)</td></tr><tr><td>Dealers&#x27; Weibo comments</td><td>0.040 (0.051)</td><td>-0.003 (0.014)</td><td>0.043 (0.049)</td><td>-6.38e-06 (0.001)</td></tr><tr><td>Dealers&#x27; Weibo shares</td><td>-0.005 (0.009)</td><td>0.002 (0.002)</td><td>-0.007 (0.009)</td><td>2.23e-06 (0.000)</td></tr><tr><td>Manufacturer&#x27;s Weibo posts</td><td>-0.008** (0.003)</td><td>-0.002* (0.001)</td><td>-0.006* (0.003)</td><td>0.0001 (0.0001)</td></tr><tr><td>Manufacturer&#x27;s Weibo likes</td><td>0.002 (0.005)</td><td>0.0004 (0.001)</td><td>0.002 (0.005)</td><td>-1.06e-06 (0.000)</td></tr><tr><td>Manufacturer&#x27;s Weibo comments</td><td>-0.471*** (0.086)</td><td>-0.065*** (0.023)</td><td>-0.406*** (0.083)</td><td>0.0001 (0.001)</td></tr><tr><td>Manufacturer&#x27;s Weibo shares</td><td>0.049*** (0.016)</td><td>0.008* (0.004)</td><td>0.041*** (0.015)</td><td>-0.000 (0.000)</td></tr><tr><td>Internet Ad</td><td>1.442*** (0.066)</td><td>0.342*** (0.017)</td><td>1.101*** (0.064)</td><td>0.000 (0.000)</td></tr><tr><td>TV Ad</td><td>0.017* (0.009)</td><td>-0.005** (0.002)</td><td>0.022** (0.008)</td><td>-0.000 (0.000)</td></tr><tr><td>Outdoor Ad</td><td>0.008* (0.004)</td><td>-0.008*** (0.001)</td><td>0.016*** (0.004)</td><td>0.0001 (0.0001)</td></tr><tr><td>Model-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Prefecture-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Week-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Models</td><td>62</td><td>62</td><td>62</td><td>62</td></tr><tr><td>Prefectures</td><td>308</td><td>308</td><td>308</td><td>308</td></tr><tr><td>Weeks</td><td>31</td><td>31</td><td>31</td><td>31</td></tr><tr><td>Observations</td><td>591,976</td><td>591,976</td><td>591,976</td><td>591,976</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>R</mi><mn>2</mn></msup></mrow></math></td><td>0.041</td><td>0.017</td><td>0.036</td><td>0.002</td></tr><tr><td>F-statistic</td><td>17.810</td><td>15.310</td><td>13.290</td><td>0.730</td></tr></table>
-<!-- para 44 -->
+<!-- para 12 -->
 Note. *p < .1, **p < .05, and ***p < .01.
 Robust standard errors are reported in parentheses.
-<!-- para 45 -->
+<!-- para 13 -->
 Next, we decompose the substitutes' ad spending by whether the advertisement focuses on price, quality, or brand.
 The results in Columns II and III of Table 3 show that in response to Sagitar's recall, the substitutes raised their week-prefecture-level spending on price advertising ( $\beta$ 0.007, p < 0.01) by RMB 70 (or US10), which is equivalent to a 25% increase ( $70 \div 280$), but lowered their week-prefecture-level spending on quality advertising by RMB 200 ( $\beta$ -0.020, p < 0.01), which equals a drop of 71% ( $200 \div 280$).
 Column IV of Table 3 shows that Sagitar's recall did not impact substitutes' spending on brand advertising ( $\beta$ -0.000, p > 0.1). [^19]
-<!-- para 46 -->
+<!-- para 14 -->
 One may be concerned that our control variables (e.g., Internet Ad) are endogenous.
 We address this concern with the following three steps.
 First, we estimate a regression that excludes the TV, Internet, and social media variables.
@@ -326,123 +326,130 @@ The insight is that including the controls leads to conservative estimates.
 Third, following prior literature (Anderson and Hsiao, 1981; Blundell and Bond, 2000; Todd and Wolpin, 2003), we used these controls’ one-period-lagged values as instruments.
 The estimates (Table C2 in the online supplemental materials) were consistent with the results, further reducing the endogenous concern.
 Appendix C in the e-companion provides the details.
-<!-- para 48 -->
+<!-- para 16 -->
 Next, we explore the effectiveness of the substitutes' response strategy (see Figure A2 in the online supplemental materials in the e-companion for the model-free evidence).
+We estimate the model in two steps.
 First, because we observe the sales volume on a monthly basis, we regress Substitute's Sales Volume $_{imp}$—the substitute car model i's sales volume in month m and prefecture p—on After Sagitar Recall, thus measuring the average effect of Sagitar's recall on substitutes' monthly sales volume (Equation 2).
-<!-- para 49 -->
+<!-- para 17 -->
 $$ \begin{aligned}Substitute^{\prime}s Sales Volume_{imp}\\=\beta_{20}+\beta_{21}After Sagitar Recall_{m}+\theta_{i}+\pi_{m}+\mu_{p}\\+\beta_{22}X_{imp}+\varphi_{imp}\end{aligned} $$
-<!-- para 51 -->
+<!-- para 18 -->
+(2)
+<!-- para 19 -->
 Second, we explore how ad spending moderates the relation between After Sagitar Recall and the Substitute's Sales Volume.
 Because the substitute's ad spending is likely endogenous to its sales volume, we estimate a two-stage least squares (2SLS) regression to correct for the endogeneity of ad spending (Goldfarb et al., 2022).
 The instrumental variable (IV) must meet the relevance criterion and exclusion restriction (Barron et al., 2021; Bavafa et al., 2018).
 That is, the instrument should correlate with a car model's ad spending but should not directly influence its sales volume.
 Therefore, following previous research (Shapiro, 2018), we use the Number of New Ad Firms established per capita in prefecture p and month m to instrument a car model's ad spending in prefecture p and month m.
 New ad firms refer to new firms that classified their business in the "advertising agency business" category in their registration form (https://www.gov.cn/bumenfuwu/2017-07/07/content_5208703.htm) filed with the government.
-We count the number of such firms in month m with a registration address in prefecture p.
-Extant research suggests (Acs et al., 2013; Feldman, 1999; Harhoff, 1999) that newly established ad firms impact activities in the local advertising market for two reasons.
+We count the number of such firms in month m with a registration address in prefecture p. Extant research suggests (Acs et al., 2013; Feldman, 1999; Harhoff, 1999) that newly established ad firms impact activities in the local advertising market for two reasons.
 First, an increase in the number of local advertising firms lowers the advertisers' cost of access to local advertising resources such as ad outlets (e.g., various magazines and newspapers) and media (e.g., in-print poster, magazine, and newspaper) (Chandra and Weinberg, 2018).
 Moreover, the establishment of new firms intensifies competition among the incumbents.
 As a result, advertising agencies provide superior value to their clients (i.e., automobile manufacturers in our context) (Hitt et al., 1998; Horsky, 2006).
 Second, the proliferation of local ad firms enhances the public's perception of advertisements, amplifying a firm's inclination to invest in advertising expenditures within the local market (Arora and Forman, 2007; Gurun and Butler, 2012).
 This, in turn, implies that the number of newly established ad firms is positively related to the focal brand's local ad spending.
 Because print media is the primary avenue of advertising for the automobile industry, the expansion of local ad firms may positively affect automobile brands' ad spending in print media.
-<!-- para 52 -->
+<!-- para 20 -->
 Consequently, we expect a positive association between the Number of New Ad Firms and the Ad Spending variable.
 Furthermore, we see no reason for a direct relation between the establishment of ad firms and a car model's sales volume.
 Automobile sales volume is more likely to be related to the economic condition (Kenworthy and Laube, 1999), while the establishment of new advertising firms predominantly relies on the cultural significance of the city rather than being directly linked to the local economic situation (Faulconbridge et al., 2010).
 Academics have concluded that the cultural importance of the city is marked by religious and artistic centers and activities, which are distinct from economic centers and functions (Grodach and Loukaitou-Sideris, 2007).
 Indeed, economy and culture are often regarded as two separate and incompatible aspects of social life (Throsby, 2001).
 Therefore, research has suggested that the establishment of ad firms is distributed across both large and small cities (Yin and Derudder, 2021), indicating that our instrumental variable meets the exclusion restriction criterion.
-<!-- para 53 -->
+<!-- para 21 -->
 Empirically, we provide evidence showing that our instrument is not directly related to the number of all new firms, a proxy for local economic conditions (Gartner, 1985), which could affect local car sales (Pauwels et al., 2004).
 Specifically, we collected data from https://www.itjuzi.com, which provides comprehensive information (e.g., name, timestamp, location, industry, owner, funding details) of registration of new firms.
 Leveraging this data source, we generate Number of New Ad Firms $_{mp}$ to measure the number of new ad firms per capita in prefecture p in month m.
 We further generate All New Firms $_{mp}$ to measure the number of newly established firms—regardless of whether they register themselves with the government in the ad agency business category or any other—in month t and prefecture m.
 Table D1 in the online supplemental materials reports the relation between the two variables.
 The insignificant effect suggests that our IV variable likely meets the exclusion restriction (Liu et al., 2017; Narang and Shankar, 2019).
-<!-- para 54 -->
+<!-- para 22 -->
 This 2SLS method consists of a two-stage estimation (Goldfarb et al., 2022).
 In the first stage, we regress the endogenous variable (i.e., ad spending) on the IV and control variables, as specified in Equation (3):
-<!-- para 55 -->
+<!-- para 23 -->
 $$ A d S p e n d i n g _ {i m p} = \beta_ {3 0} + \beta_ {3 1} N u m b e r o f N e w A d F i r m s _ {m p} $$
-<!-- para 56 -->
+<!-- para 24 -->
 $$ + \theta_ {i} + \pi_ {m} + \mu_ {p} + \beta_ {3 3} X _ {i m p} + \varphi_ {i m p} \tag {3} $$
-<!-- para 58 -->
+<!-- para 26 -->
 We interact the fitted value of Ad Spending with the After Sagitar Recall indicator to test whether a substitute's ad spending moderates the effect of the recall on the substitute's sales (Equation 4) (Rajan and Zingales, 1998).
-<!-- para 59 -->
+<!-- para 27 -->
 $$
 \begin{aligned} \text{Substitute's Sales Volume}_{imp} \\ = \beta_{40} + \beta_{41}\text{After Sagitar Recall}_{m} \\ \times \text{Ad Spending variable}_{imp} + \beta_{42}\text{After Sagitar Recall}_{m} \\ + \beta_{43}\text{Ad Spending variable}_{imp} + \theta_{i} + \pi_{m} + \mu_{p} \\ + \beta_{44}X_{imp} + \varphi_{imp} \end{aligned}
 $$
-<!-- para 61 -->
+<!-- para 28 -->
+(4)
+<!-- para 29 -->
 Ad Spending variable $_{imp}$ denotes the fitted values obtained from Equation (3).
-<!-- para 63 -->
+<!-- para 31 -->
 <table><tr><td rowspan="2">DV =</td><td colspan="5">Substitute's sales volume</td></tr><tr><td>(I)</td><td>(II)</td><td>(III)</td><td>(IV)</td><td>(V)</td></tr><tr><td>After Sagitar Recall × Total Ad</td><td></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><mn>4.685</mn><msup><mi>\</mi><mrow><mo>&#x0002A;</mo><mo>&#x0002A;</mo><mo>&#x0002A;</mo></mrow></msup><mo stretchy="false">&#x00028;</mo><mn>0.417</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td><td></td><td></td><td></td></tr><tr><td>Total Ad</td><td></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>6.280</mn><msup><mi>\</mi><mrow><mo>&#x0002A;</mo><mo>&#x0002A;</mo><mo>&#x0002A;</mo></mrow></msup><mo stretchy="false">&#x00028;</mo><mn>1.140</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td><td></td><td></td><td></td></tr><tr><td>After Sagitar Recall × Price Ad</td><td></td><td></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><mn>10.165</mn><mtext>&#x000A0;</mtext><mo stretchy="false">&#x00028;</mo><mn>7.598</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td><td></td><td></td></tr><tr><td>Price Ad</td><td></td><td></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>10.405</mn><mtext>&#x000A0;</mtext><mo stretchy="false">&#x00028;</mo><mn>11.525</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td><td></td><td></td></tr><tr><td>After Sagitar Recall × Quality Ad</td><td></td><td></td><td></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><mn>6.116</mn><msup><mi>\</mi><mrow><mo>&#x0002A;</mo><mo>&#x0002A;</mo><mo>&#x0002A;</mo></mrow></msup><mo stretchy="false">&#x00028;</mo><mn>0.435</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td><td></td></tr><tr><td>Quality Ad</td><td></td><td></td><td></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>4.076</mn><msup><mi>\</mi><mrow><mo>&#x0002A;</mo><mo>&#x0002A;</mo><mo>&#x0002A;</mo></mrow></msup><mo stretchy="false">&#x00028;</mo><mn>1.253</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td><td></td></tr><tr><td>After Sagitar Recall × Brand Ad</td><td></td><td></td><td></td><td></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>1983.529</mn><mtext>&#x000A0;</mtext><mo stretchy="false">&#x00028;</mo><mn>1349.812</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td></tr><tr><td>Brand Ad</td><td></td><td></td><td></td><td></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><mn>1079.556</mn><mtext>&#x000A0;</mtext><mo stretchy="false">&#x00028;</mo><mn>1441.527</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td></tr><tr><td>After Sagitar Recall</td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>7.176</mn><msup><mi>\</mi><mrow><mo>&#x0002A;</mo><mo>&#x0002A;</mo><mo>&#x0002A;</mo></mrow></msup><mo stretchy="false">&#x00028;</mo><mn>0.216</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>7.492</mn><msup><mi>\</mi><mrow><mo>&#x0002A;</mo><mo>&#x0002A;</mo><mo>&#x0002A;</mo></mrow></msup><mo stretchy="false">&#x00028;</mo><mn>0.217</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>0.823</mn><msup><mi>\</mi><mrow><mo>&#x0002A;</mo><mo>&#x0002A;</mo><mo>&#x0002A;</mo></mrow></msup><mo stretchy="false">&#x00028;</mo><mn>0.193</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>6.915</mn><msup><mi>\</mi><mrow><mo>&#x0002A;</mo><mo>&#x0002A;</mo><mo>&#x0002A;</mo></mrow></msup><mo stretchy="false">&#x00028;</mo><mn>0.226</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>1.297</mn><msup><mi>\</mi><mrow><mo>&#x0002A;</mo><mo>&#x0002A;</mo><mo>&#x0002A;</mo></mrow></msup><mo stretchy="false">&#x00028;</mo><mn>0.179</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td></tr><tr><td>Controls</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Model-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Prefecture-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Month-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Models</td><td>62</td><td>62</td><td>62</td><td>62</td><td>62</td></tr><tr><td>Prefectures</td><td>308</td><td>308</td><td>308</td><td>308</td><td>308</td></tr><tr><td>Months</td><td>7</td><td>7</td><td>7</td><td>7</td><td>7</td></tr><tr><td>Observations</td><td>133,672</td><td>133,672</td><td>133,672</td><td>133,672</td><td>133,672</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>R</mi><mn>2</mn></msup></mrow></math></td><td>0.125</td><td>0.114</td><td>0.098</td><td>0.126</td><td>0.007</td></tr><tr><td>F-stat (weak IV test)</td><td></td><td>211.220</td><td>126.160</td><td>260.440</td><td>102.750</td></tr></table>
-<!-- para 64 -->
+<!-- para 32 -->
 Note. *p < .1, **p < .05, and ***p < .01.
 Robust standard errors are reported in parentheses.
-<!-- para 66 -->
+<!-- para 34 -->
 Column II reports that an increase in the substitute's total spending on advertising weakens the positive spillover effect ( $\beta -4.685, p < 0.01$).
 On average, a one-unit (in RMB 10,000) increase in ad spending reduces sales volume by 23.1% (4.685 ÷ 20.301).
 These results are consistent with the intuition that a substitute's advertising could evoke buyers' unfavorable comparisons between the recalled Sagitar model and the advertised substitute.
 Such unfavorable comparisons boost contagion.
 The insight for managers of substitute products is that they can harness the positive spillover from the recall by lowering the visibility of their substitute products.
 Our previous result (Table 3) suggests that managers are indeed making the right decision.
-<!-- para 67 -->
+<!-- para 35 -->
 We next decompose the substitute model's total spending by type (i.e., price, quality, and brand) and reestimate Equations (3) and (4).
 Columns III through V in Table 4 suggest that the weakening moderation effect is caused by the substitute's spending on quality advertising and not by its spending on price advertising or on brand advertising.
 This finding corroborates the theoretical insight we drew from Column II.
 That is, on average, a recall benefits its substitutes.
-<!-- para 68 -->
+<!-- para 36 -->
 However, the higher the substitute’s spending on quality advertising, the weaker this positive spillover, because quality advertising reminds customers of comparisons between the recalled product and the advertised substitute.
-<!-- para 70 -->
+<!-- para 38 -->
 Buyers may compare the recalling brand and a substitute brand based on (1) whether the substitute is a “direct substitute” of the recalling brand (i.e., the recalling brand and the substitute brand feature in buyers’ consideration set) and (2) whether the substitute is a “sibling substitute” (i.e., the two brands are owned by the same manufacturer).
 Next, we explore whether substitute brands’ ad adjustments vary by these two characteristics.
-<!-- para 72 -->
+<!-- para 40 -->
 We investigate how direct substitution influences the adjustment in ad spending (Roehm and Tybout, 2006).
 Specifically, we collected additional data from the largest Chinese online automobile platform, Autohome.com (akin to Edmunds.com in the United States), to identify the car models visitors browse after viewing the Sagitar model.
 The platform provided an overview of the foremost five frequently viewed models, which are recognized as direct substitutes for the Sagitar.
 Specifically, we identify the following five (of the 62 car models) as direct substitutes for Sagitar: (1) Audi A3, (2) Changan Eado, (3) Honda Civic, (4) Nissan Bluebird Sylphy, and (5) Toyota Corolla (Table A1 in the online supplemental materials highlights these five names in light gray).
 By extension, the remaining 57 car models are indirect substitutes.
 Because these five models exist in buyers’ consideration set along with Volkswagen Sagitar, they likely evoke the same brand associations in buyers as the Sagitar brand.
-<!-- para 73 -->
+<!-- para 41 -->
 We generate a dummy variable Direct Substitute $_{i}$ to measure whether the car model i is a direct substitute of Sagitar.
 We test the moderating effect of direct substitutes as specified in Equation (5):
-<!-- para 74 -->
+<!-- para 42 -->
 $$ \begin{aligned}Outcome_{iwp} &= \beta_{50} + \beta_{51}\ After\ Sagitar\ Recall_{w}\\&\quad + \beta_{52}\ After\ Sagitar\ Recall_{w}\\&\quad \times Direct\ Substitute_{i} + \theta_{i} + \pi_{w} + \mu_{p}\\&\quad + \beta_{53}X_{iwp} + \varphi_{iwp}\end{aligned} $$
-<!-- para 76 -->
+<!-- para 43 -->
+(5)
+<!-- para 44 -->
 Direct Substitute $_{i}$ represents whether the model i is a direct substitute of Sagitar, and  $\beta_{52}$ quantifies whether/how Sagitar's direct substitutes adjust their ad spending (in the aftermath of Sagitar recall) differently than Sagitar's indirect substitutes.
-<!-- para 78 -->
+<!-- para 46 -->
 <table><tr><td rowspan="2">DV =</td><td>Total Ad</td><td>Price Ad</td><td>Quality Ad</td><td>Brand Ad</td></tr><tr><td>I</td><td>II</td><td>III</td><td>IV</td></tr><tr><td>After Sagitar Recall <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x000D7;</mo></mrow></math> Direct Substitute</td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><msup><mn>0.060</mn><mrow><mo>&#x0002A;</mo><mo>&#x0002A;</mo><mo>&#x0002A;</mo></mrow></msup><mo stretchy="false">&#x00028;</mo><mn>0.006</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><msup><mn>0.013</mn><mrow><mo>&#x0002A;</mo><mo>&#x0002A;</mo><mo>&#x0002A;</mo></mrow></msup><mo stretchy="false">&#x00028;</mo><mn>0.002</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><msup><mn>0.047</mn><mrow><mo>&#x0002A;</mo><mo>&#x0002A;</mo><mo>&#x0002A;</mo></mrow></msup><mo stretchy="false">&#x00028;</mo><mn>0.006</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><mn>0.000</mn><mtext>&#x000A0;</mtext><mo stretchy="false">&#x00028;</mo><mn>0.000</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td></tr><tr><td>After Sagitar recall</td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><mn>0.010</mn><mtext>&#x000A0;</mtext><mo stretchy="false">&#x00028;</mo><mn>0.007</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mn>0.008</mn><mrow><mo>&#x0002A;</mo><mo>&#x0002A;</mo><mo>&#x0002A;</mo></mrow></msup><mo stretchy="false">&#x00028;</mo><mn>0.002</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><msup><mn>0.017</mn><mrow><mo>&#x0002A;</mo><mo>&#x0002A;</mo><mo>&#x0002A;</mo></mrow></msup><mo stretchy="false">&#x00028;</mo><mn>0.007</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><mn>0.000</mn><mtext>&#x000A0;</mtext><mo stretchy="false">&#x00028;</mo><mn>0.000</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td></tr><tr><td>Controls</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Model-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Prefecture-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Week-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Models</td><td>62</td><td>62</td><td>62</td><td>62</td></tr><tr><td>Prefectures</td><td>308</td><td>308</td><td>308</td><td>308</td></tr><tr><td>Weeks</td><td>31</td><td>31</td><td>31</td><td>31</td></tr><tr><td>Observations</td><td>591,976</td><td>591,976</td><td>591,976</td><td>591,976</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>R</mi><mn>2</mn></msup></mrow></math></td><td>0.038</td><td>0.012</td><td>0.034</td><td>0.002</td></tr><tr><td>F-statistic</td><td>17.810</td><td>15.310</td><td>13.290</td><td>0.730</td></tr></table>
-<!-- para 79 -->
+<!-- para 47 -->
 Note. *p < .1, **p < .05, and ***p < .01.
 Robust standard errors are reported in parentheses.
-<!-- para 82 -->
+<!-- para 50 -->
 (4) Lavida, (5) Rapid, and (6) Santana (Table A1 in the online supplemental materials highlights these names in dark gray).
 Importantly, Autohome.com lists none of these six models in buyers' direct consideration when choosing the Volkswagen Sagitar.
 That is, the set of six models and the set of five direct substitutes are mutually exclusive.
 We call these six brand-related models "sibling substitutes." Therefore, we generate a new variable Sibling Substitute $_{i}$ to indicate whether model i is owned by VW.
 We use Sibling Substitute $_{i}$ in Equation (5) to measure the moderating effect of ownership.
-<!-- para 84 -->
+Table 6 reports the estimates.
+<!-- para 52 -->
 <table border=1><tr><td>DV =</td><td>Total Ad</td><td>Price Ad</td><td>Quality Ad</td><td>Brand Ad</td></tr><tr><td>After Sagitar Recall × Sibling Substitute</td><td>0.073*** (0.006)</td><td>-0.000 (0.002)</td><td>0.073*** (0.006)</td><td>0.0001 (0.000)</td></tr><tr><td>After Sagitar recall</td><td>-0.021*** (0.007)</td><td>0.007*** (0.002)</td><td>-0.028*** (0.007)</td><td>-0.000 (0.000)</td></tr><tr><td>Controls</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Model-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Prefecture-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Week-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Models</td><td>62</td><td>62</td><td>62</td><td>62</td></tr><tr><td>Prefectures</td><td>308</td><td>308</td><td>308</td><td>308</td></tr><tr><td>Weeks</td><td>31</td><td>31</td><td>31</td><td>31</td></tr><tr><td>Observations</td><td>591,976</td><td>591,976</td><td>591,976</td><td>591,976</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>R</mi><mn>2</mn></msup></mrow></math></td><td>0.039</td><td>0.017</td><td>0.035</td><td>0.002</td></tr><tr><td>F-statistic</td><td>21.080</td><td>14.960</td><td>16.930</td><td>0.730</td></tr></table>
-<!-- para 85 -->
+<!-- para 53 -->
 Note. *p < .1, **p < .05, and ***p < .01.
 Robust standard errors are reported in parentheses.
 The interaction effect—that is, the effect of After Sagitar Recall × Sibling Substitute—on total ad spending is positive ( $\beta$  0.073, p < 0.01).
 Interestingly, almost all of this effect is from substitutes' spending on quality advertising ( $\beta$  0.073, p < 0.01).
-<!-- para 86 -->
+<!-- para 54 -->
 That is, in response to Sagitar's recall, sibling substitutes raise their ad spending, and this raise is driven exclusively by spending on quality advertising.
 This result is the opposite of what our intuition suggests.
 We conjecture that because sibling substitutes and Sagitar share manufacturing processes, buyers will likely infer that siblings have the same manufacturing defects as Sagitar.
 That is, buyers are likely to evaluate siblings unfavorably.
 Anticipating this obvious unfavorable comparison, managers of sibling substitutes must defend themselves by increasing their spending on advertising the quality of their models and thus mitigating buyers' comparisons with Sagitar.
 The evidence thus supports the quality-signaling strategy, while supporting neither the sales-preemption strategy nor the harm-avoidance strategy.
-<!-- para 88 -->
+<!-- para 56 -->
 One may reason that our identified effects are sensitive to the selected observational window of June 30, 2014, to February 1, 2015 (Ozturk et al., 2019).
 We alleviate this concern by reducing the pretreatment period from 16 weeks to 11 weeks, effectively condensing it by one month.
 As a result, the commencement date has been adjusted from Monday, June 30, 2014 to Monday, August 4, 2014.
 We replicate the main analysis with this reduced observational period.
 Table 7 shows that our identified effects are robust to this alternate window.
-<!-- para 90 -->
+<!-- para 58 -->
 Including controls with a short observational period could lead to spurious correlations—that is, the plausibility that the identified effects were produced by chance or unobserved confounds—contaminating the causal interpretation.
 For instance, if the treatment coincidentally commences on a Monday, distinguishing the “Monday effect” from the intended treatment effect becomes less straightforward.
 We address this challenge by adopting an augmented local linear strategy (Hausman and Rapson, 2018; Ozturk et al., 2019).
@@ -451,66 +458,68 @@ For instance, we could strip out potential biases from seasonality that may affe
 Specifically, we follow a two-step procedure (Hausman and Rapson, 2018).
 First, we save the residuals from the estimation of the coefficients of control variables using the same period as that in our main analysis.
 Second, we estimate a local linear specification using only the residuals within a one-month-narrower window around the treatment (i.e., Monday, August 4, 2014, to Sunday, February 1, 2015).
+Table 8 reports the estimates.
 These results further indicate that substitutes decreased ad spending following the Sagitar recall.
 Thus, these findings corroborate our results reported in Table 2. [^20]
-<!-- para 92 -->
+<!-- para 60 -->
 We use a negative binomial estimator to mitigate the concern that our identified effects are biased by the specific functional
-<!-- para 94 -->
+<!-- para 62 -->
 <table border="1"><tr><td>DV =</td><td>Total Ad</td><td>Price Ad</td><td>Quality Ad</td><td>Brand Ad</td></tr><tr><td>After Sagitar recall</td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><mn>0.019</mn></mrow></math>***(0.007)</td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>0.006</mn></mrow></math>***(0.002)</td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><mn>0.025</mn></mrow></math>***(0.007)</td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>1.41</mn><mi>e</mi><mo>&#x02212;</mo><mn>06</mn></mrow></math> (0.000)</td></tr><tr><td>Controls</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Model-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Prefecture-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Week-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Models</td><td>62</td><td>62</td><td>62</td><td>62</td></tr><tr><td>Prefectures</td><td>308</td><td>308</td><td>308</td><td>308</td></tr><tr><td>Weeks</td><td>26</td><td>26</td><td>26</td><td>26</td></tr><tr><td>Observations</td><td>496,496</td><td>496,496</td><td>496,496</td><td>496,496</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>R</mi><mn>2</mn></msup></mrow></math></td><td>0.057</td><td>0.013</td><td>0.050</td><td>0.002</td></tr><tr><td>F-statistic</td><td>14.270</td><td>16.630</td><td>10.530</td><td>0.750</td></tr></table>
-<!-- para 95 -->
+<!-- para 63 -->
 Note. *p < .1, **p < .05, and ***p < .01.
 Robust standard errors are reported in parentheses.
-<!-- para 97 -->
+<!-- para 65 -->
 <table border='1'><tr><td>DV =</td><td>Total Ad</td><td>Price Ad</td><td>Quality Ad</td><td>Brand Ad</td></tr><tr><td>After Sagitar recall</td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><mn>0.002</mn></mrow></math>***(0.000)</td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>0.002</mn></mrow></math>***(9.68e-06)</td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><mn>0.001</mn></mrow></math>***(0.000)</td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>0.000</mn></mrow></math>***(4.62e-07)</td></tr><tr><td>Controls</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Model-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Prefecture-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Week-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Models</td><td>62</td><td>62</td><td>62</td><td>62</td></tr><tr><td>Prefectures</td><td>308</td><td>308</td><td>308</td><td>308</td></tr><tr><td>Weeks</td><td>26</td><td>26</td><td>26</td><td>26</td></tr><tr><td>Observations</td><td>496,496</td><td>496,496</td><td>496,496</td><td>496,496</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>R</mi><mn>2</mn></msup></mrow></math></td><td>0.829</td><td>0.935</td><td>0.996</td><td>0.500</td></tr><tr><td>F-statistic</td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>2.38</mn><mi>e</mi><mo>&#x0002B;</mo><mn>07</mn></mrow></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>7.19</mn><mi>e</mi><mo>&#x0002B;</mo><mn>06</mn></mrow></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>1.03</mn><mi>e</mi><mo>&#x0002B;</mo><mn>09</mn></mrow></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>775</mn><mo>&#x0002C;</mo><mn>777</mn></mrow></math></td></tr></table>
-<!-- para 98 -->
+<!-- para 66 -->
 Note. *p < .1, **p < .05, and ***p < .01.
 Robust standard errors are reported in parentheses form.
 The results in Table 9 are qualitatively consistent with our main results (Table 3), demonstrating that our identified effects are robust to an alternate estimator.
-<!-- para 100 -->
-(2019), we conduct a falsification test to mitigate the concern that unobservables bias our results.
+<!-- para 68 -->
+Following Ozturk et al. (2019), we conduct a falsification test to mitigate the concern that unobservables bias our results.
 Specifically, we conduct a falsification test to forward the true recall event (i.e., October 17, 2014) by one month and assign a fake treatment as of September 17, 2014.
 The result in Table 10 suggests that the fake recall event does not impact substitutes' ad spending, thereby alleviating the concern that unobservables bias our results.
-<!-- para 102 -->
+<!-- para 70 -->
 Our main analysis focused on advertising in print media.
 Next, we replicate the main analyses using spending on Internet advertising and social media efforts, which are also flexible to manufacturers' ad adjustment.
 We reproduce Equation (1) using these two advertising variables and achieve consistent findings (Table 11).
 Meihua (i.e., the provider of our ad spending data) does not provide disaggregated data for a car model's spending by ad type (i.e., quality, price, and brand) for Internet, TV, and outdoor media types.
 Therefore, we could not include variables that report disaggregated spending by ad type for these three types of media.
-<!-- para 105 -->
+<!-- para 73 -->
 <table border="1"><tr><td>DV =</td><td>Total Ad</td><td>Price Ad</td><td>Quality Ad</td><td>Brand Ad</td></tr><tr><td>After Sagitar recall</td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><msup><mn>0.195</mn><mrow><mo>&#x0002A;</mo><mo>&#x0002A;</mo></mrow></msup><mo stretchy="false">&#x00028;</mo><mn>0.077</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mn>0.301</mn><mrow><mo>&#x0002A;</mo></mrow></msup><mo stretchy="false">&#x00028;</mo><mn>0.160</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><msup><mn>0.391</mn><mrow><mo>&#x0002A;</mo><mo>&#x0002A;</mo><mo>&#x0002A;</mo></mrow></msup><mo stretchy="false">&#x00028;</mo><mn>0.089</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><mn>6.657</mn><mo stretchy="false">&#x00028;</mo><mn>5.448</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td></tr><tr><td>Controls</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Models</td><td>62</td><td>62</td><td>62</td><td>62</td></tr><tr><td>Prefectures</td><td>308</td><td>308</td><td>308</td><td>308</td></tr><tr><td>Weeks</td><td>31</td><td>31</td><td>31</td><td>31</td></tr><tr><td>Observations</td><td>591,976</td><td>591,976</td><td>591,976</td><td>591,976</td></tr><tr><td>Log-likelihood</td><td>-14,650</td><td>-3866</td><td>-11763</td><td>-51</td></tr></table>
-<!-- para 106 -->
+<!-- para 74 -->
 Note. *p < .1, **p < .05, and ***p < .01.
 Robust standard errors are reported in parentheses.
-<!-- para 108 -->
+<!-- para 76 -->
 <table border='1'><tr><td>DV =</td><td>Total Ad</td><td>Price Ad</td><td>Quality Ad</td><td>Brand Ad</td></tr><tr><td>After Sagitar recall</td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><mn>0.0017</mn><mtext>&#x000A0;</mtext><mo stretchy="false">&#x00028;</mo><mn>0.0072</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><mn>0.0011</mn><mtext>&#x000A0;</mtext><mo stretchy="false">&#x00028;</mo><mn>0.0019</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><mn>0.00054</mn><mtext>&#x000A0;</mtext><mo stretchy="false">&#x00028;</mo><mn>0.0069</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><mn>0.000054</mn><mtext>&#x000A0;</mtext><mo stretchy="false">&#x00028;</mo><mn>0.000079</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td></tr><tr><td>Controls</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Model-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Prefecture-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Week-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Models</td><td>62</td><td>62</td><td>62</td><td>62</td></tr><tr><td>Prefectures</td><td>308</td><td>308</td><td>308</td><td>308</td></tr><tr><td>Weeks</td><td>31</td><td>31</td><td>31</td><td>31</td></tr><tr><td>Observations</td><td>591,976</td><td>591,976</td><td>591,976</td><td>591,976</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>R</mi><mn>2</mn></msup></mrow></math></td><td>0.061</td><td>0.022</td><td>0.049</td><td>0.002</td></tr><tr><td>F-statistic</td><td>12.720</td><td>18.470</td><td>9.500</td><td>0.650</td></tr></table>
-<!-- para 109 -->
+<!-- para 77 -->
 Note. *p < .1, **p < .05, and ***p < .01.
 Robust standard errors are reported in parentheses.
-<!-- para 111 -->
+<!-- para 79 -->
 <table border='1'><tr><td>DV =</td><td>Internet Ad spending</td><td>Manufacturer's Weibo posts</td></tr><tr><td>After Sagitar recall</td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><msup><mn>0.0010</mn><mrow><mo>&#x0002A;</mo><mo>&#x0002A;</mo><mo>&#x0002A;</mo></mrow></msup><mo stretchy="false">&#x00028;</mo><mn>0.00013</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo>&#x02212;</mo><msup><mn>0.107</mn><mrow><mo>&#x0002A;</mo><mo>&#x0002A;</mo><mo>&#x0002A;</mo></mrow></msup><mo stretchy="false">&#x00028;</mo><mn>0.0017</mn><mo stretchy="false">&#x00029;</mo></mrow></math></td></tr><tr><td>Model fixed effects</td><td>Y</td><td>Y</td></tr><tr><td>Prefecture-fixed effects</td><td>Y</td><td>Y</td></tr><tr><td>Week-fixed effects</td><td>Y</td><td>Y</td></tr><tr><td>Model</td><td>62</td><td>62</td></tr><tr><td>Prefectures</td><td>308</td><td>308</td></tr><tr><td>Weeks</td><td>31</td><td>31</td></tr><tr><td>Observations</td><td>591,976</td><td>591,976</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>R</mi><mn>2</mn></msup></mrow></math></td><td>0.003</td><td>0.024</td></tr></table>
-<!-- para 112 -->
+<!-- para 80 -->
+Note. *p < .1, **p < .05, ***p < .01.
 Robust standard errors are reported in parentheses to 73,000 vehicle sales for Cadillac, with over a 45% growth rate. [^21]
-<!-- para 113 -->
+<!-- para 81 -->
 At Auto Shanghai 2009, Cadillac introduced the redesigned SRX as a medium-size luxury SUV model.
 The model offers two types of engines (3.0 L and 3.6 L), with an all-wheel-drive system and six-speed Tiptronic transmission.
 The wheelbase is 2807 mm, and the length of the vehicle is 4851 mm.
 The price of the model is between RMB 429,800 and RMB 629,800. [^22]
-<!-- para 114 -->
+<!-- para 82 -->
 In 2013, Cadillac sold 26,897 SRX vehicles in China at a 24% annual growth.
-<!-- para 115 -->
+<!-- para 83 -->
 On September 26, 2014, Cadillac suffered a large recall in China, affecting 107,016 SRX vehicles manufactured from 2009 to 2014. [^23] This recall was triggered by a faulty rear suspension component (loose toe adjusters) that posed a safety risk.
 Following prior research (Borah and Tellis, 2016), we consider SUV models sold in China in 2014 as SRX's substitutes.
 We collected data on 30 SUVs that accounted for more than 95% of SUV sales in 2014 (Table A3 in the online supplemental materials lists names of substitute models).
-<!-- para 116 -->
+<!-- para 84 -->
 Because Cadillac initiated the recall on September 26, 2014, we consider the 19 weeks from Monday, May 19, 2014, to Sunday, September 28, 2014, as the prerecall period.
 The postrecall period comprises 18 weeks, and includes the weeks from Monday, September 29, 2014, to Sunday, February 1, 2015.
 Using this newly created balanced sample, we estimate Equation (1).
 Table 12 presents the results, similar to those reported in Table 3.
 The consistent results suggest that the observed relations between a recall and its substitutes' ad spending are likely limited to neither the Sagitar recall nor the category of sedan cars.
 Instead, these effects may be generalized to other recalls and car categories.
-<!-- para 118 -->
+<!-- para 86 -->
 <table border=1><tr><td>DV =</td><td>Total Ad</td><td>Price Ad</td><td>Quality Ad</td><td>Brand Ad</td></tr><tr><td>After SRX recall</td><td>-0.016* (0.0093)</td><td>0.0062*** (0.0015)</td><td>-0.023*** (0.0087)</td><td>0.00070 (0.0030)</td></tr><tr><td>Controls</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Model-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Prefecture-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Week-FEs</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>Models</td><td>30</td><td>30</td><td>30</td><td>30</td></tr><tr><td>Prefectures</td><td>308</td><td>308</td><td>308</td><td>308</td></tr><tr><td>Weeks</td><td>37</td><td>37</td><td>37</td><td>37</td></tr><tr><td>Observations</td><td>341,880</td><td>341,880</td><td>341,880</td><td>341,880</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>R</mi><mn>2</mn></msup></mrow></math></td><td>0.034</td><td>0.032</td><td>0.029</td><td>0.003</td></tr><tr><td>F-statistic</td><td>15.880</td><td>10.620</td><td>15.820</td><td>1.950</td></tr></table>
-<!-- para 119 -->
+<!-- para 87 -->
 Note. *p < .1, **p < .05, and ***p < .01.
 Robust standard errors are reported in parentheses.
 
@@ -595,6 +604,7 @@ We thus use the term “substitute” for the brand whose spillover (in percepti
 [^4]: Unfavorable (favorable) comparisons mean that the substitute/advertised brand has a lower or the same level of quality (higher level of quality) than the recalling brand.
 [^5]: We thank a reviewer for coining the terms of sales-preemption strategy, quality-signaling strategy, and harm-avoidance strategy.
 [^6]: We acknowledge that an ad can mention all three aspects of a product (and perhaps more).
+We address this concern in two ways.
 First, ads of car models (e.g., 2023 Toyota Corolla) usually focus on only one characteristic, thus alleviating the concern.
 Second, empirically, we measure the ad's focus and thus classify an ad's content into one of the three foci.
 [^7]: These three foci are consistent with marketing literature that has established that product ads emphasize the product's price (Jedidi et al., 1999), quality (Du et al., 2015), or brand (Parment, 2014).
@@ -610,8 +620,7 @@ Sedan models are categorized into six types based on their wheelbase (Autohome, 
 The three transmission options are five-speed manual, six-speed Tiptronic, and seven-speed DSG, where DSG stands for direct shift gearbox.
 [^12]: http://union.china.com.cn/car/txt/2015-01/04/content_7568166_2.htm
 [^13]: Our week begins on a Monday and ends on the following Sunday.
-[^14]: We follow Ozturk et al.
-(2019) to include the week of recall in the prerecall period.
+[^14]: We follow Ozturk et al. (2019) to include the week of recall in the prerecall period.
 However, our results (available upon request) are robust to (1) excluding the week of recall from our sample and (2) including it in the postrecall period.
 [^15]: Takata Corporation announced a large recall in China (and other countries) in February 2015.
 Therefore, our postrecall period avoids this confounding event (https://www.qiche365.org.cn/index.php/index/article/detail/id/10340.html).

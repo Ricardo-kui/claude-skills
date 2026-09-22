@@ -1,14 +1,15 @@
 ---
 type: sentences-archive
-citekey: "gulati_lavie_singh_2009_partnering_experience"
-source_md: "D:\OneDrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Gulati等-2009-The Nature of Partnering Experience and the Gains from Alliances.md"
-created: 2026-09-06
+citekey: "gulati_2009_the_nature_of_partnering_experience_and_the_gain"
+source_md: "D:\Onedrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Gulati等-2009-The Nature of Partnering Experience and the Gains from Alliances.md"
+created: 2026-09-20
+sentence_filter: min_chars=0
 note: >-
   跨源合成原料库存（distill-paper-exemplar L0 --keep-sentences 生成）。只读；
   语料句子可直接采用；替换来源特异性内容（专名/数字/系数/表号）。
 ---
 
-# gulati_lavie_singh_2009_partnering_experience 句子库存
+# gulati_2009_the_nature_of_partnering_experience_and_the_gain 句子库存
 
 ## introduction
 <!-- para 2 -->
@@ -101,6 +102,7 @@ First, learning from PSE is more efficient than learning from GPE because of the
 Prior research has suggested that some of the benefits arising from reproduction of past experience depend on the organizational context in which such reproduction occurs (Argote and Ingram, 2000; Lane and Lubatkin, 1998).
 Thus, learning from prior experience in specific modes of alliances (e.g., joint ventures, R&D consortia, etc.) may be inefficient or inapplicable in the context of alliances.
 <!-- para 14 -->
+using alternative governance modes.
 For instance, Anand and Khanna (2000) distinguished learning benefits accumulated within joint ventures from those accruing within non-equity alliances, finding further nuances across different types of joint ventures.
 Similarly, Lane and Lubatkin (1998) described relative absorptive capacity as a specialized mechanism that depends on specific attributes of alliances such as their governance mode and the relatedness of partners' knowledge.
 Along the same lines, Lavie and Miller (2008) revealed that experience with foreign partners is more valuable than experience with domestic partners when firms seek to gain from internationalization of their alliance portfolios.
@@ -217,7 +219,7 @@ Consequently, the contribution of PSE to value creation in new alliances may int
 > Hypothesis 5: The higher the level of firm-specific uncertainty, the stronger the contribution of partner-specific experience to the focal firm's abnormal market returns following the announcement of an alliance.
 
 ## methods
-<!-- para 3 -->
+<!-- para 2 -->
 We study bilateral joint ventures formed among Fortune 300 firms (focal firms) between 1987 and 1996.
 Joint ventures involve the formation of new business entities and thus are more likely to receive media coverage and elicit real market responses.
 Investors are typically familiar with large publicly traded firms and can thus better assess their characteristics and likely performance.
@@ -225,105 +227,112 @@ As indicated earlier, prior research suggests that partnering experience is mode
 This context allows for comparison of our findings to those of Anand and Khanna (2000) who considered GPE in joint ventures.
 Consistent with prior studies, we used the joint venture formation event as the unit of analysis.
 From the initial sample of Fortune 300 firms (as ranked in the year 1988) we discarded 20 firms that lacked valid financial data in the CRSP and Compustat databases and another 96 firms that had no joint ventures with other focal firms.
-<!-- para 4 -->
+<!-- para 3 -->
 The final sample included 184 focal firms [^5] that participated in a total of 628 joint ventures with other focal firms during the study period.
 To construct the partnering experience measures, we incorporated data on all reported joint ventures in which each focal firm participated with any partner between the years 1975 and 1996.
 Overall, we obtained 3,398 records referring to joint ventures with 2,008 unique partners, of which 814 were publicly traded with financial data available in Compustat.
 The final database included 1,256 observations of joint ventures among focal firms (each joint venture accounted for two observations since it involved two focal firms).
-<!-- para 5 -->
+<!-- para 4 -->
 Data on joint venture announcements were extracted from detailed reports obtained from Lexis-Nexis (for the years 1975–1996) and from the Security Data Corporation (SDC) database (for the years 1986–1996). [^6] After cross-validation, duplicate records referring to the same transactions were eliminated by tracking the original press releases in the Dow Jones Interactive database and keeping the record that corresponded to an earlier announcement date.
 Firm-level data were gathered from the CRSP and Compustat databases.
 Data used for constructing the dependent variable were extracted from the CRSP database, which provided data on stock market returns for the period of 250 days prior to the joint venture announcement date until 10 days prior to the announcement (market model) as well as for the two-day event window that included the day of announcement and one day prior to the announcement (Gulati and Wang, 2003; Koh and Venkatraman, 1991; McConnell and Nantell, 1985; Reuer and Koza, 2000).
 To construct the independent variables, we extracted from Compustat firm-level data corresponding to the focal firms and their 814 publicly traded partners during the years 1974–1995.
 Independent variables were lagged by one year relative to the dependent variable to allow for causal interpretation of the results.
-<!-- para 8 -->
+<!-- para 7 -->
 ***Cumulative abnormal returns (CAR).*** We measured firm-level value creation effects of joint venture formation events by calculating the cumulative abnormal stock market return for each joint venture announcement.
 CAR is the most frequently used performance measure in joint venture event studies (Balakrishnan and Koza, 1993; Chung, Koford, and Lee, 1993; Finnerty, Owers, and Rogers, 1986; Koh and Venkatraman, 1991; McConnell and Nantell, 1985; Park and Kim, 1997; Reuer and Koza, 2000).
 Our use of CAR as a dependent variable builds on a rich body of research on partnering experience in alliances (Anand and Khanna, 2000; Merchant and Schendel, 2000).
 CAR is an ex ante market-based measure of expected return for a firm participating in a joint venture.
 Yet, prior research indicates high correlation of about 40 percent between this objective measure and ex post qualitative performance measures based on managerial assessments (Kale et al., 2002; Koh and Venkatraman, 1991).
 For our purposes, these attributes make CAR a suitable measure to gauge the extent of likely value creation in joint ventures.
-<!-- para 9 -->
+<!-- para 8 -->
 For the firms in our sample, investors could access sufficient relevant information to assess various aspects of partnering experience.
 Information about technological and financial resources was also readily available for these publicly traded firms.
 Joint venture announcements and related press releases typically mention prior joint ventures with the same partners as well as with other partners.
 The Appendix reports representative excerpts from press releases concerning some of the joint ventures in our sample.
 As illustrated by the example of Apple, IBM, and Motorola, these press releases often discuss the differences between the announced joint venture and prior joint ventures, thus allowing investors to evaluate some of the independent variables used in this study.
-<!-- para 10 -->
+<!-- para 9 -->
 We calculated abnormal returns using residual analysis of the market model (Fama et al., 1969).
 Based on the joint venture announcement, the
-<!-- para 11 -->
+<!-- para 10 -->
+event date was set at $t = 0$.
 We estimated the market model for the period $t = [-250, -10]: r_{it} = \alpha_i + \beta_i r_{mt} + \varepsilon_{it}$, where $r_{it}$ is the common stock return of firm $i$ on day $t$, $r_{mt}$ is the corresponding daily market return on the equal-weighted S&P 500, $\alpha_i$ and $\beta_i$ are firm-specific parameters, and $\varepsilon_{it}$ is the error term.
 The resulting estimates were used for predicting the daily returns for firm $i$ over the two-day event window $[-1, 0]: \hat{r}_{it} = \hat{\alpha}_i + \hat{\beta}_i r_{mt}$, where $\hat{r}_{it}$ is the predicted return and $\hat{\alpha}_i$ and $\hat{\beta}_i$ are the model estimates.
 We calculated the daily firm-level abnormal returns: $\hat{\varepsilon}_{it} = r_{it} - \hat{r}_{it}$, and then computed the cumulative abnormal return of firm $i$ during the event window using the formula: $CAR_i = \sum_t \hat{\varepsilon}_{it}$, where $t$ ranges from $-1$ to $0$.
-<!-- para 12 -->
+<!-- para 11 -->
 The choice of a narrow two-day event window demonstrates a conservative approach that excludes unrelated events occurring prior to or following the relevant announcement.
 According to Woolridge and Snow (1990), researchers should capture the change in the stock price immediately following the alliance announcement.
 Since most announcements are actually made prior to the close of the previous trading day, the optimal window is set at  $[-1,0]$.
 Subsequent research has demonstrated that the two-day window is much more effective in capturing market responses than longer windows (e.g., Crutchley et al., 1991).
 In fact, Anand and Khanna (2000), who considered a longer window of  $[-10,3]$, found that joint ventures elicited significant market responses only on the announcement day without evidence of information leakage.
-<!-- para 14 -->
+<!-- para 13 -->
 ***General partnering experience (GPE).*** For each focal firm, we measured GPE by calculating the accumulated number of all prior joint ventures in which the firm participated beginning in 1975 until the day prior to the recent joint venture announcement.
 This measure was updated for each new joint venture event and used for testing Hypothesis 2.
-<!-- para 15 -->
+<!-- para 14 -->
 ***Partner-specific experience (PSE).*** For each focal firm, we measured PSE by calculating the accumulated number of all prior joint ventures formed with the same partner beginning in 1975 until the day prior to the recent joint venture announcement.
 This measure was updated for each new joint venture event between the focal firm and a focal partner and was incorporated as a main effect when testing Hypotheses 1 and 2.
-<!-- para 16 -->
+<!-- para 15 -->
 ***Partner distinctiveness (PD).*** For each focal firm, we measured the extent to which the asset value of the firm's recent partner differed from that of the firm's prior partners.
 This measure was preferred to alternative measures based on Standard Industry Classification (SIC) codes because it enabled us to construct a continuous variable that was heterogeneous even within a given SIC.
 Such size-based measure reflects some organizational differences across partners and was positively correlated with an alternative measure of industry classification differences (r = 0.165, p < 0.001). [^7] Data on the value of partners' assets was extracted from Compustat for the year preceding the joint venture event.
 The measure was calculated using the formula:
-<!-- para 17 -->
+<!-- para 16 -->
 $$ P D_{i,n_{i}}=\ln\left(\left|\left((n_{i}-1)P A_{i,n_{i}}\Big/\sum_{j=1}^{n_{i}-1}P A_{i,j}\right)-1\right|\right), $$
-<!-- para 18 -->
+<!-- para 17 -->
 where  $PD_{i,n_i}$ represents the asset distance of the new partner of focal firm i, which is a function of the absolute value of this partner's assets ( $PA_{i,n_i}$) divided by the average value of assets of all prior partners since 1975.  $n_i$ is an index representing the number of joint venture events for which partner asset data were available until the recent joint venture event.
 The logarithmic transformation reduced the skewness of this measure and eliminated potential outlier problems (Maddala, 2001).
 The higher this measure's value, the more distinctive the recent partner relative to partners participating in prior joint ventures of the firm.
-<!-- para 19 -->
+<!-- para 18 -->
 This measure was incorporated as an interaction effect with PSE for testing Hypothesis 3.
-<!-- para 20 -->
+<!-- para 19 -->
 ***Technological firm resources (TFR).*** For each joint venture in which a focal firm participated between the years 1987 and 1996, we calculated the R&D intensity of the firm (R&D expenses divided by net sales) in the year preceding the recent joint venture event.
 Data on R&D expenses and net sales were extracted from Compustat.
 This variable measured the resources that firms can use to engage in technology-intensive initiatives and in innovation activity, because high proportion of investment in R&D indicates commitment to technology development.
 This measure was incorporated as a main effect and in the interaction with PSE for testing Hypothesis 4.
-<!-- para 21 -->
+<!-- para 20 -->
 ***Financial firm resources (FFR).*** For each joint venture event in which a focal firm participated between the years 1987 and 1996, we calculated a measure of solvency (a function of cash divided by long-term debt) in the year preceding the recent joint venture event.
 Data on firms' cash and long-term debt were extracted from the Compustat database.
 Because of the skewness of this measure, a natural logarithm was taken from the resulting value.
 This measure was an appropriate proxy for the firm's financial resources because it represents the munificence of funds available for investing in prospective projects and in ongoing operations.
 We incorporated this measure as a main effect and in the interaction with PSE when testing Hypothesis 4. [^8]
-<!-- para 22 -->
+<!-- para 21 -->
 ***Firm-specific uncertainty (FSU).*** Following prior research (Beckman et al., 2004), we measured firm-specific uncertainty as a function of the volatility in the focal firm's stock price.
 We operationalized this measure as the difference between the standardized monthly volatility of the focal firm's stock price in the year preceding the joint venture announcement and the average standardized monthly volatility in the stock price of the sampled firms in the corresponding year.
 The sampled group of 184 Fortune 300 firms with bilateral joint ventures served as a reference group for measuring systematic market-specific uncertainty.
 By subtracting the market-specific volatility component, we adopted a conservative approach of considering only the volatility that is idiosyncratic to the firm.
 The standardized volatility was calculated as the standard deviation in monthly closing stock price divided by its mean value during the year preceding the joint venture announcement, with the standardization allowing for comparing volatility across firms.
-<!-- para 23 -->
+Hence, the measure took the form:
+<!-- para 22 -->
 $$ \sqrt{\frac{\sum_{i=1}^{12}(p_{it}-\overline{p}_{i})^{2}}{11\times\overline{p}_{i}^{2}}}-\sqrt{\frac{\sum_{i=1}^{12}(p_{mt}-\overline{p}_{m})^{2}}{11\times\overline{p}_{m}^{2}}}, $$
-<!-- para 24 -->
+<!-- para 23 -->
 where  $p_{it}$ refers to focal firm i's closing stock price at the end of month t, with t ranging from January to December of the year preceding the announcement.
 Similarly,  $p_{mt}$ refers to the average closing stock price across all the sampled focal firms at the end of month t.
 After controlling for market-specific uncertainty, the higher the variance in the firm's stock price relative to its mean value, the higher the perceived firm-specific uncertainty.
 Data on firms' closing stock prices were extracted from the Compustat database.
 The FSU measure was then used in testing Hypothesis 5.
 Finally, we tested the robustness of the independent variables by considering alternative operationalizations. [^9]
-<!-- para 26 -->
+<!-- para 25 -->
 We included several control variables that were identified as relevant by prior research.
 We controlled for interindustry differences and alliance mode (Anand and Khanna, 2000) by including the two-digit primary SIC code of the focal firm's
-<!-- para 27 -->
+<!-- para 26 -->
 industry (IND) and by focusing on the analysis of joint ventures.
 We also controlled for absolute firm size (Anand and Khanna, 2000; Merchant and Schendel, 2000) by including a measure of the focal firm's total assets (FS).
 Following the relative size hypothesis (Das et al., 1998; Koh and Venkatraman, 1991; McConnell and Nantell, 1985), which predicts higher abnormal returns to the smaller partner, we included a measure of the relative size of the partner, calculated as partner assets divided by firm assets in the year prior to the joint venture event (RPS).
 Following the business relatedness hypothesis (Balakrishnan and Koza, 1993; Koh and Venkatraman, 1991; Reuer and Koza, 2000), which predicts positive gains to partners with related businesses, we included a dummy variable that received a value of 1 when there was a match between the four-digit SIC code of the focal firm and that of the partner (REL).
 Finally, we included dummy variables corresponding to each year (1987–1996) to control for general longitudinal trends and unobserved heterogeneity (YEAR).
 Firm-specific effects were not incorporated because the event-study methodology controls for such effects when calculating the abnormal market returns. [^10]
-<!-- para 29 -->
+
+## results
+<!-- para 2 -->
 Descriptive statistics detailing the mean values, standard deviations, and bivariate correlations of the variables are reported in Table 1.
 Consistent with prior research, the average CAR was 0.1 percent, with 44 percent of the announcements resulting in positive gains.
-To avoid potential multicollinearity and following prior research (e.g., Lee et al., 2001; Stuart, Hoang, and Hybels, 1999), some of the interaction effects were introduced
-<!-- para 30 -->
+To avoid potential multicollinearity and following prior research (e.g., Lee et al., 2001; Stuart, Hoang, and Hybels, 1999), some of the interaction effects were introduced in separate models.
+Consequently, variance inflation factors (VIF) of the independent variables fell below the critical value of 10 (Kleinbaum et al., 1998), thus mitigating concerns of multicollinearity.
+Following Ahuja (2000), we also corrected oversampling by weighting multiple records corresponding to the same alliance, yet this correction did not change our results since our sample included only dyadic alliances.
+<!-- para 3 -->
+**Table 1.
 Descriptive statistics and bivariate correlations**
-<!-- para 31 -->
+<!-- para 4 -->
 | N | Mean | S.D. | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1.
@@ -346,12 +355,9 @@ RPS | 1242 | 0.000 | 1.705 | 0.015 | $- {0.139}^{* * }$ | 0.012 | ${0.321}^{* * 
 REL | 1256 | 0.096 | 0.029 | -0.049 | $- {0.112}^{* * * }$ | -0.032 | -0.010 | $- {0.140}^{* * * }$ | $- {0.132}^{* * * }$ | $- {0.094}^{* * * }$ | $- {0.090}^{* * * }$ |  |
 | 10.
 FS | 1249 | 32231 | 45562.9 | ${0.060}^{ * }$ | ${0.410}^{* * * }$ | ${0.112}^{* * * }$ | $- {0.053}^{ * }$ | $- {0.149}^{* * * }$ | $- {0.111}^{* * * }$ | $- {0.085}^{* * * }$ | $- {0.223}^{* * * }$ | -0.029
-<!-- para 32 -->
+<!-- para 5 -->
 Significance levels: * p < 0.1, ** p < 0.05, *** p < 0.01.
-<!-- para 33 -->
-Consequently, variance inflation factors (VIF) of the independent variables fell below the critical value of 10 (Kleinbaum et al., 1998), thus mitigating concerns of multicollinearity.
-Following Ahuja (2000), we also corrected oversampling by weighting multiple records corresponding to the same alliance, yet this correction did not change our results since our sample included only dyadic alliances.
-<!-- para 34 -->
+<!-- para 6 -->
 In Table 2 we report regression results for estimating firm CAR.
 Missing values of some independent variables account for differences in sample sizes across models.
 We treated missing values with listwise deletion, which produces unbiased estimates in regression analysis.
@@ -363,9 +369,10 @@ Model 6 was used for testing Hypothesis 5 by introducing the interaction of PSE 
 In Models 4–6 we also included interaction terms for GPE in order to isolate the unique moderated contribution of PSE.
 We relied on these partial models (Models 2–6) for testing our hypotheses since the full model (Model 7, reported for reference only) suffered from multicollinearity (VIF = 34.145) as a result of the simultaneous inclusion of the PSE and GPE variables as main effects and multiple interactions (a total of nine permutations).
 Such multicollinearity may produce misleading results since it artificially inflates the p-values of the individual effects (Greene, 2002).
-<!-- para 35 -->
+<!-- para 7 -->
+**Table 2.
 Results of regression models using CAR as a dependent variable**
-<!-- para 36 -->
+<!-- para 8 -->
 Independent variables | Dependent variable: CAR |  |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Model 1 | Model 2 | Model 3 | Model 4 | Model 5 | Model 6 | Model 7 |  |
@@ -397,24 +404,22 @@ Independent variables | Dependent variable: CAR |  |  |  |  |  |  |
 | F-statistic | 1.461** | 1.502** | 1.393* | 1.408* | 2.021*** | 2.045*** | 1.847*** |
 | $R^2$ | 0.046 | 0.048 | 0.049 | 0.049 | 0.078 | 0.070 | 0.090 |
 | N | 1075 | 1075 | 1020 | 900 | 947 | 1075 | 764
-
-## results
-<!-- para 2 -->
+<!-- para 11 -->
 The reported results (Models 1–6) reveal that the control variables produced mostly insignificant effects on CAR.
 This is consistent with some prior research that found no support for the effects of firm size (Anand and Khanna, 2000), relative partner size (Merchant and Schendel, 2000), and partner relatedness (Chang and Chen, 2002; Merchant and Schendel, 2000; Reuer and Koza, 2000) on CAR following alliance announcements.
-<!-- para 3 -->
+<!-- para 12 -->
 Model 1 reveals insignificant contribution of GPE to firm CAR, which persisted in subsequent models.
 In contrast, Model 2 shows that PSE produces a marginally significant positive effect on CAR ( $\beta = 0.059$,  $p < 0.1$).
 Therefore, Hypothesis 1, which predicted positive market returns on PSE, received moderate support.
 These results suggest that PSE rather than GPE contributes to value creation in new alliances.
 Hypothesis 2 was tested with a one-sided F-test, comparing the standardized coefficients of GPE and PSE while holding the other variables at their mean values.
 In support of Hypothesis 2, we found that  $\beta_{PSE} > \beta_{GPE}$ ( $F_{1,1039} = 2.83$,  $p < 0.05$).
-<!-- para 4 -->
+<!-- para 13 -->
 In support of Hypothesis 3, Model 3 indicates a positive and significant interaction effect of PSE and partner distinctiveness (PD) ( $\beta = 0.064$,  $p < 0.05$). [^11] Model 4 introduced the interactions of GPE and PSE with the firm's own technological resources (TFR).
 In support of Hypothesis 4, the interaction term was insignificant for GPE but positive and significant for PSE ( $\beta = 0.190$,  $p < 0.05$).
 Still, the main effect of PSE became insignificant in this model because of the high correlation between the main effect of PSE and the interaction term PSE X TFR ( $r = 0.894$,  $p < 0.001$).
 The lower F values in Models 3 and 4 can be ascribed to the reduced degrees of freedom.
-<!-- para 5 -->
+<!-- para 14 -->
 In Model 5, the interaction effect of GPE and financial firm resources (FFR) was insignificant, but the interaction of PSE and FFR had a significant positive effect on firm CAR ( $\beta = 0.154$,  $p < 0.01$), lending support to Hypothesis 4.
 The main effect of PSE in Model 5 was positive and significant ( $\beta = 0.074$,  $p < 0.05$), but the main effect of FFR produced a negative effect on CAR ( $\beta = -0.113$,  $p < 0.05$).
 This result may suggest that financially distressed firms benefit more from alliance formation.
@@ -457,20 +462,18 @@ Our results demonstrate that partnering experience and partner distinctiveness a
 This is akin to Lavie and Rosenkopf's (2006) finding that alliances enable firms to pursue short-term efficiency while engaging in exploration that may secure their long-term objectives.
 In the current study we demonstrate that by leveraging existing alliances and simultaneously exploring new alliances that can introduce some novelty relative to prior alliances, firms can maximize their expected gains.
 <!-- para 7 -->
-This study also contributes by clarifying the link between firm-specific operational resources
-<!-- para 8 -->
-and the leveraging of learning opportunities in alliances.
+This study also contributes by clarifying the link between firm-specific operational resources and the leveraging of learning opportunities in alliances.
 Unless firms can furnish resources necessary for leveraging their partnering experience, such experience may not translate to effective learning.
 Our findings suggest that a firm's technological and financial resources improve its capacity to apply and utilize its partnering experience in new alliances.
 It is also possible that prior experience with a particular partner facilitates commitment of available resources, thus enhancing the expected gains from new alliances with the same partners.
 Nevertheless, future research may consider how resource endowments influence value appropriation in addition to their contribution to value creation in alliances (Lavie, 2007).
-<!-- para 9 -->
+<!-- para 8 -->
 This study also informs the organizational learning literature in several ways.
 First, we suggest that knowledge application is a key element of the learning chain that enables firms to translate accumulated experience to economic gains.
 It supplements processes of knowledge creation, retention, and transfer, which have received more attention in the learning literature (Argote and Ophir, 2002).
 Second, we contend that recurrent partnering provides the means to overcome some of the barriers for effective interorganizational learning.
 Finally, by revealing some of the nuances of the contingent nature of partnering experience, we extend research that focused on the choice of governance mode of alliances as a key determinant of interorganizational learning outcomes (Anand and Khanna, 2000; Dussauge et al., 2000; Lane and Lubatkin, 1998).
-<!-- para 10 -->
+<!-- para 9 -->
 One of our most intriguing findings concerns the role of firm-specific uncertainty in shaping partnering experience effects.
 We find that the perceived value of a firm's PSE increases with the challenge of predicting firm-level outcomes.
 This finding highlights the role of partnering experience as an informational clue used by investors.
@@ -478,7 +481,7 @@ Hence, our study complements prior studies that considered the contribution of e
 Here again, our study extends the dominant view in the alliance literature, according to which uncertainty motivates alliance formation (Beckman et al., 2004; Pfeffer and Salancik, 1978; Podolny, 1994) by revealing that uncertainty also increases the value of recurrent alliances with the same partners.
 In this regard, firms can use their prior partnering experience not only to build their relational capability (Dyer and Singh, 1998) but also to signal the expected outcomes of their alliances to the market.
 In sum, we demonstrate that firms can gain by leveraging their accumulated partnering experience in their new alliances, yet such gains depend in part on the attributes of the firms' partners and on the firms' own resources and perceived levels of uncertainty.
-<!-- para 12 -->
+<!-- para 11 -->
 This study overcomes some limitations of prior research by elucidating the various facets of partnering experience and uncovering some of the boundary conditions that moderate its effects.
 Yet, our study still relies on traditional measures of experience based on the accumulated number of prior alliances (Anand and Khanna, 2000; Merchant and Schendel, 2000).
 Clearly, this proxy may not capture the duration of alliances and the actual nature of interaction with partners.
@@ -487,25 +490,25 @@ The use of elaborated proxies for partnering experience should allow researchers
 Additionally, our outcome measure of abnormal market returns, while widely used in prior research, also suffers from limitations.
 For example, positive abnormal returns may reflect the market's favorable response to the reputation of the prior joint ventures of the firm and its partner regardless of actual learning processes that enable the parties to reproduce their success.
 Future research may consider alternative measures such as ex post alliance performance to enable researchers to generalize our findings and examine various issues such as the potential impact of prior alliance success on recurrent alliance formation.
-<!-- para 13 -->
+<!-- para 12 -->
 In this study we analyzed joint ventures that entail the establishment of separate legal entities.
 Future research may examine whether the observed effects hold for other modes of alliance, in an international context, and in populations of smaller firms.
 However, scholars should realize the challenge of gathering data on alliances that involve less formal arrangements and for which archival data sources are limited.
 Construct validity may be also enhanced by operationalizing partner distinctiveness along other dimensions besides the value of partners' assets.
 For instance, distinctiveness can be measured in terms of knowledge bases, business lines, organizational structure, or strategic focus of the partners.
-<!-- para 14 -->
+<!-- para 13 -->
 Finally, future research should consider whether under certain conditions or beyond a certain threshold, accumulated partnering experience may hinder a firm's capacity to extract value from new alliances (Park and Kim, 1997).
 In particular, it is possible that beyond a certain number of repeated alliances with the same partner, PSE produces diminishing returns.
 We have not captured such a pattern in our data because of the relatively low mean level of PSE.
 Nevertheless, we have demonstrated that without distinctive partner contributions, the impact of prior partnering experience is limited.
 Yet, it may be possible that in practice, firms restrict their exploration activities to the existing portfolio of alliance partners because they find it difficult to adjust their organization in accordance with new alliance opportunities.
 Some research in this area (Lavie and Rosenkopf, 2006; Li and Rowley, 2002) confirms that alliance portfolios are subject to inertial forces that restrict firms' partner selection decisions to proximate partners.
-<!-- para 16 -->
+<!-- para 15 -->
 This study advances research on the benefits of partnering experience in alliances by revealing the advantages of partner-specific experience relative to general partnering experience and by highlighting the contingency of partnering experience benefits.
 Experience benefits become available to firms that develop long-term relationships while simultaneously exploring novel learning opportunities under conditions of uncertainty.
 A relational capability that enables firms to manage alliances needs to be accompanied by operational resources that enable firms to exploit their experience in value creation efforts.
 Efficiency and novelty are mutually reinforcing elements in the process of learning how to manage alliances.
-<!-- para 17 -->
+<!-- para 16 -->
 This study encourages firms to explore alliance opportunities within their existing portfolio without losing sight of distinctive partners that may introduce novel contributions.
 More importantly, the success of new alliances depends on the partnering history of the firm.
 Our findings concerning the relative importance of partner-specific experience reinforce the idea that decision makers need to be judicious in their choice of new partners and pay attention to the emerging pattern of alliances to which they have become committed over time.

@@ -21,7 +21,7 @@ reading_scope:
     - "PDM slices: gulati_1999_where_do_interorganizational_networks.pdm/sections/introduction.md, theory.md (primary story reading), then results.md, discussion.md payoff checks, methods.md alignment audit; fulltext.text-only.md not read — slices exist"
     - "PDM root: gulati_1999_where_do_interorganizational_networks.pdm.yaml (four verified distill_track identities + cross_section_identity C1-C5, coherence ok; writeback_verification PASS 90/FAIL 0). Note: the root authors field lists Ranjay Gulati only (vault frontmatter 'Gulati-1999'); the verified methods identity and the slice running header give the full authorship Ranjay Gulati & Martin Gargiulo — recorded here, not guessed"
     - "Section distillations: sections/introduction.json, theory.yaml, methods.json, results.json (all verified; central knot statement inherited from introduction.json phase_0_story_architecture)"
-    - "Sentence archive: story-blueprints/v4/rhetoric-moves/sources/gulati_1999_where_do_interorganizational_networks.sentences.md"
+    - "Sentence archive: story-blueprints/v4/rhetoric-moves/sources/gulati_1999_where_do_interorganizational_networks_come_from.sentences.md"
 analysis_focus:
   primary: [introduction, theory]
   supporting: [results, discussion]

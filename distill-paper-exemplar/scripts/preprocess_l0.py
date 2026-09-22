@@ -85,6 +85,14 @@ IMG_DATA_URI_MD = re.compile(r"!\[([^\]]*)\]\(\s*data:image/[^)\s]+[^)]*\)")
 IMG_DATA_URI_HTML = re.compile(r'<img\b[^>]*\bsrc="data:image/[^"]*"[^>]*/?>', re.I)
 HEADING = re.compile(r"^(#{1,3})\s+(.+?)\s*#*\s*$")
 SENTENCE_SPLIT = re.compile(r"(?<=[.!?])\s+(?=[A-Z\"'(])")
+# Intra-sentence abbreviation periods protected via private-use placeholder
+# before splitting, restored after: prevents false splits at "U.S. Patent",
+# "et al. (1999)", "Dr. Smith", "St. Louis" etc. Extend when the 200-sentence
+# pilot audit finds new false-split sources.
+ABBREV_PERIODS = re.compile(
+    r"\b(U\.S|U\.K|e\.g|i\.e|vs|etc|et al|Fig|Inc|Ltd|Dr|Prof|Jr|Mr|Ms|St|Vol|No|pp|p|ed|eds)\.(?=\s)"
+)
+PDOT = "\ue000"  # placeholder for a protected abbreviation period
 MIN_SLICE_WORDS = 300
 
 SKILLS_ROOT = Path(__file__).resolve().parent.parent.parent
@@ -345,11 +353,13 @@ def work_root() -> Path:
     return Path(env) if env else Path.home() / ".claude" / "distill-work"
 
 
-def extract_sentences(body: str) -> list[tuple[int, str]]:
+def extract_sentences(body: str, min_chars: int = 0) -> list[tuple[int, str]]:
     """Best-effort sentence split of a section slice.
 
-    Returns [(paragraph_1based_index, sentence), ...]. Drops headings, list
-    markers, table/figure captions, and fragments shorter than 40 chars.
+    Returns [(paragraph_1based_index, sentence), ...]. Drops headings and
+    table/figure captions, strips list markers. Sentences shorter than
+    min_chars are dropped: min_chars=0 keeps everything (faithful-inventory
+    mode for statistical baselines); 40 was the legacy synthesis default.
     Provenance is paragraph-level — enough to route a sentence back to its
     context for P2 enrichment, not a citation formatter.
     """
@@ -361,18 +371,22 @@ def extract_sentences(body: str) -> list[tuple[int, str]]:
             continue
         if re.match(r"^(table|figure)\b", p, re.I):
             continue
+        if p.startswith("!["):
+            continue
         p = re.sub(r"^[-*+]\s+", "", p)
         p = re.sub(r"^\d+[.)]\s+", "", p)
         p = p.strip("|").strip()
-        for s in SENTENCE_SPLIT.split(p):
-            s = s.strip()
-            if len(s) >= 40:
+        protected = ABBREV_PERIODS.sub(r"\1" + PDOT, p)
+        for s in SENTENCE_SPLIT.split(protected):
+            s = s.replace(PDOT, ".").strip()
+            if len(s) >= min_chars:
                 out.append((idx, s))
     return out
 
 
 def write_sentences_archive(citekey: str, src: Path, spans: dict,
-                            lines: list[str], sources_dir: Path) -> Path:
+                            lines: list[str], sources_dir: Path,
+                            min_chars: int = 0) -> Path:
     """Materialize a durable sentence inventory beside the PDM workdir.
 
     One line per sentence, grouped by section, with paragraph-level provenance
@@ -388,6 +402,7 @@ def write_sentences_archive(citekey: str, src: Path, spans: dict,
         f'citekey: "{citekey}"',
         f'source_md: "{src.resolve()}"',
         f"created: {date.today().isoformat()}",
+        f"sentence_filter: min_chars={min_chars}",
         "note: >-",
         "  跨源合成原料库存（distill-paper-exemplar L0 --keep-sentences 生成）。只读；",
         "  语料句子可直接采用；替换来源特异性内容（专名/数字/系数/表号）。",
@@ -401,10 +416,10 @@ def write_sentences_archive(citekey: str, src: Path, spans: dict,
         if not sp:
             continue
         body = "\n".join(lines[sp["start"] - 1 : sp["end"]]).rstrip()
-        sentences = extract_sentences(body)
+        sentences = extract_sentences(body, min_chars=min_chars)
         parts.append(f"## {bucket}")
         if not sentences:
-            parts.append("_（本节约无 ≥40 字符句子）_")
+            parts.append("_（本节无可归档句子）_")
             parts.append("")
             continue
         cur_para: int | None = None
@@ -703,6 +718,11 @@ def main() -> int:
                     help="write a durable sentence inventory to "
                          "story-blueprints/v4/rhetoric-moves/sources/<citekey>.sentences.md "
                          "(NOT deleted by --clean)")
+    ap.add_argument("--min-sentence-chars", type=int, default=0, metavar="N",
+                    help="drop sentences shorter than N chars from the sentence "
+                         "archive. 0 (default) keeps everything — faithful "
+                         "inventory for statistical baselines; 40 = legacy "
+                         "synthesis-mode filter")
     ap.add_argument("--sweep", action="store_true",
                     help="L4 final step: remove cross-run intermediates "
                          "(__pycache__ under the skills tree, fully-consumed/"
@@ -869,7 +889,8 @@ def main() -> int:
     if args.keep_sentences:
         sources_dir = Path(args.sources_dir) if args.sources_dir else DEFAULT_SOURCES_DIR
         manifest["sentences_archive"] = str(
-            write_sentences_archive(citekey, src, spans, lines, sources_dir)
+            write_sentences_archive(citekey, src, spans, lines, sources_dir,
+                                    min_chars=args.min_sentence_chars)
         )
 
     check_reasons = slice_check(spans, lines)

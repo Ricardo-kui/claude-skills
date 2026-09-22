@@ -1,8 +1,9 @@
 ---
 type: sentences-archive
 citekey: "westphal_j_d_and_bednar_m_k_2005_pluralistic_ignorance_in_co"
-source_md: "D:\OneDrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Westphal, J. D., and Bednar, M. K. (2005） Pluralistic Ignorance in Corporate Boards and Firms' Strategic Persistence in Response to Low Firm Performance.md"
-created: 2026-08-29
+source_md: "D:\Onedrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Westphal, J. D., and Bednar, M. K. (2005） Pluralistic Ignorance in Corporate Boards and Firms' Strategic Persistence in Response to Low Firm Performance.md"
+created: 2026-09-20
+sentence_filter: min_chars=0
 note: >-
   跨源合成原料库存（distill-paper-exemplar L0 --keep-sentences 生成）。只读；
   语料句子可直接采用；替换来源特异性内容（专名/数字/系数/表号）。
@@ -43,8 +44,7 @@ We excluded boards from the final sample if complete data were not available for
 <!-- para 5 -->
 To assess the representativeness of the sample, we compared directors and boards in the final sample with those excluded from the final sample due to non-response or missing data, using the Kolmogorov-Smirnov (K-S) two-sample test (Siegel and Castellan, 1988).
 This test determines whether the distribution of a given variable is different for directors or boards in the final sample versus others in the sample frame (i.e., including differences in kurtosis, skewness, and other features of the distribution, as well as differences in central tendency).
-There were no significant differences with respect to the archival variables examined in the study, including measures of demographic homogeneity, board size, board vs.
-CEO power, directors' functional background, educational affiliation, educational degree type, gender, or tenure on the board (these measures are discussed further below); p-values ranged from .144 to .891.
+There were no significant differences with respect to the archival variables examined in the study, including measures of demographic homogeneity, board size, board vs. CEO power, directors' functional background, educational affiliation, educational degree type, gender, or tenure on the board (these measures are discussed further below); p-values ranged from .144 to .891.
 There were also no significant differences between firms in the final sample and those in the sample frame with respect to firm characteristics examined in the study, including firm size, product market diversification, and geographic diversification; p-values ranged from .313 to .770.
 In separate analyses, we also tested for sample selection bias with a multivariate approach, using the Heckman sample selection model (Heckman and Borjas, 1980).
 The selection equations included the archival variables listed above, as well as variables that describe features of the survey itself (e.g., whether the respondent was in wave 1 or wave 2 of the survey).
@@ -58,6 +58,7 @@ Again, K-S tests and Heckman selection models suggested that there was no sample
 We obtained data on director and board characteristics and ownership from Standard and Poor's Register of Corporations, Directors, and Executives; The Dun and Bradstreet Reference Book of Corporate Management; Who's Who in Finance and Industry; EDGAR Online, and a database provided by a large management consulting firm.
 Data on product market diversification, industry concentration, firm size, and performance came from COMPUSTAT and EDGAR Online, and data on geographic diversification came from COMPUSTAT, Dun & Bradstreet's American Corporate Families and International Affiliates, and Mergent Online.
 <!-- para 9 -->
+Concern about strategy.
 We measured directors' concern about strategy and directors' perception that other board members are concerned about strategy using multi-item scales in the survey questionnaire (see Appendix A for specific items).
 The scales included multiple response formats to minimize response bias (DeVellis, 1991).
 To increase the construct validity of the measures, we conducted a qualitative pre-test involving in-depth interviews with 21 outside directors (Fowler, 1993).
@@ -87,12 +88,14 @@ We report the results of these analyses separately below.
 Because our measures use responses from the same sample of directors to assess directors' concern about strategy and the perceived concern of others, there is a potential identification problem in our models.
 Thus we derived standard errors for these measures from bootstrapped estimates of the standard deviations (Manski, 1993; Sacerdote, 2001).
 <!-- para 13 -->
+Expressed concern about strategy.
 We measured directors' expressed concern about strategy using multi-item scales in the initial survey and the follow-up survey (see Appendix A).
 Both scales gauge the extent to which directors have expressed concern about strategy during the 12 months preceding the survey.
 The scale in the initial survey was used to assess the role of prior expressed concern about strategy in contributing to pluralistic ignorance, and the scale in the follow-up survey was used to assess the role of expressed concern in mediating the consequences of pluralistic ignorance for strategic change.
 Factor analysis again suggested that the survey items in each scale loaded on a single factor, and inter-item reliability was high (alpha = .94 for the initial survey and .93 for the follow-up survey).
 To assess interrater reliability, we compared responses of different directors at the same board using the weighted kappa coefficient (N = 170) (Cohen,
 <!-- para 14 -->
+1968; Barker et al., 2004).
 Values above .75 have been interpreted as indicating “excellent agreement” (Fleiss, 1981: 218).
 In this case, kappas exceeded .75 for all four survey items, indicating high levels of interrater agreement.
 Moreover, the intraclass correlation coefficient (ICC) for the scale was .90, which also indicates a high level of agreement.
@@ -107,6 +110,7 @@ We asked respondents to assess their relationships with other directors who were
 In the primary analyses, we used data on friendship ties one year prior, because expressed concern about strategy is measured over the prior year, but friendship ties changed very little over the course of a year, and thus results were identical using data on friendships at the time of the survey.
 We measured density of friendship ties as the number of such ties between outside directors divided by the number of possible ties (Wasserman and Faust, 1994).
 <!-- para 16 -->
+Demographic homogeneity.
 We examined homogeneity with respect to four demographic characteristics that have been shown to provide a salient basis for in-group/out-group categorization among directors of U.S. corporations.
 First, there is evidence from a number of studies that functional background can provide a salient basis for in-group categorization (i.e., categorization as a marketing person, finance person, etc.).
 In-group biases from common functional backgrounds have been shown to affect the selection of executives and outside directors, and functional background similarity in CEO/director relationships has also been shown to bias directors' evaluation of CEO performance and to enhance social integration among outside directors (Useem and Karabel, 1986; Fligstein, 1987; for a review, see McDonald and Westphal, 2003).
@@ -116,8 +120,7 @@ Following a number of prior studies, we classified functional background into th
 (finance and law) (Hambrick and Mason, 1984; Chaganti and Sambharya, 1987; McDonald and Westphal, 2003).
 <!-- para 18 -->
 There is also considerable evidence that the industry of employment provides a salient basis for social categorization among corporate leaders (Lorsch, 1989; Demb and Neubauer, 1992; Porac, Wade, and Pollock, 1999; McDonald and Westphal, 2003).
-Porac, Thomas, and Baden-Fuller (1989) showed that employment in the same industry provides a meaningful basis for social identification among top executives, and Smith et al.
-(1994) found that homogeneity in industry experience enhanced informal communication and social integration on top management teams.
+Porac, Thomas, and Baden-Fuller (1989) showed that employment in the same industry provides a meaningful basis for social identification among top executives, and Smith et al. (1994) found that homogeneity in industry experience enhanced informal communication and social integration on top management teams.
 Moreover, Westphal and Milton (2000) provided evidence that the industry of employment is a salient basis for in-group identification among outside directors and that homogeneity with respect to the industry of employment enhances social integration on boards.
 <!-- para 19 -->
 There is also abundant evidence from the larger literatures on relational demography and intergroup relations that gender can provide a salient basis for in-group categorization in organizations (Tsui, Egan, and O'Reilly, 1992; for reviews, see Williams and O'Reilly, 1998; Pelled, Ledford, and Mohrman, 1999).
@@ -132,6 +135,7 @@ More recently, Westphal and Milton (2000) provided evidence that having an Ivy L
 <!-- para 21 -->
 We measured homogeneity on each demographic characteristic using a variant of Blau's (1977) index of homogeneity, defined as $(P_{i})^{2}$, where $P_{i}$ is the proportion of outside director dyads sharing the ith category, that is, the same functional background, primary industry of employment, gender, educational affiliation (having or not having an Ivy League degree).
 <!-- para 22 -->
+Strategic change.
 We examined two dimensions of corporate strategy: product market diversification and geographic diversification.
 These are key elements of a firm's corporate strategy and have received extensive research attention (Rumelt, 1974; Kim, 1989).
 While prior research on corporate governance and strategic change has tended to focus on product market diversification in measuring corporate strategy (Finkelstein and Hambrick, 1996), recent research has begun to consider how boards may influence geographic diversification (e.g., Sanders and Carpenter, 1998; Carpenter, Pollock, and Leary, 2003).
@@ -146,11 +150,13 @@ Similar approaches to estimating change have been widely used in the organizatio
 In separate analyses, we used change scores to estimate change in diversification (e.g., $D_{t+3} - D_{t-1}$), following the procedures recommended by Edwards (1995), and the results were identical to those reported below.
 Moreover, in separate models we estimated diversification in year $t+2$ ( $D_{t+2}$); the results remained consistent with our hypotheses.
 <!-- para 24 -->
+Firm performance.
 In the primary models, we operationalized firm performance as return on equity.
 In separate analyses, we operationalized performance as market-to-book value, and the results remained supportive of our hypotheses.
 We measured prior firm performance as average return on equity during the prior three-year period (t-3 to t-1, inclusive), and we measured the performance of competitors as the average return on equity of firms that had the same primary Standard Industrial Classification (SIC) code.
 The results were robust to alternative operationalizations of prior performance and competitor performance, including average performance over the prior two-year period or four-year period; average performance of competitors weighted by their market share in the focal firm's primary industry segment; and average performance of competitors in each industry in which the focal firm had operations, weighted by the focal firm's market share in each segment.
 <!-- para 25 -->
+Control variables.
 We controlled for the level of product market diversification and geographic diversification in models of directors' concern about strategy.
 To the extent that diversification strategies are motivated in part by managerial self-interest, as suggested by agency theory (Amihud and Lev, 1999), directors may be more concerned about corporate strategy when the level of diversification is high.
 We also controlled for the number of outside directors on the board.
@@ -240,6 +246,7 @@ Thus the results indicate a tendency for outside directors at firms with relativ
 As shown in model 2, there is also support for our second hypothesis.
 The results indicate that among firms with relatively low performance, as prior expressed concern about strategy decreases, the difference between the level of directors' reported concern about strategy and directors' perception of others' concern about strategy becomes significantly more positive.
 <!-- para 11 -->
+Hypothesis 3 is also supported.
 The results in model 3 indicate that as the density of friendship ties among outside directors increases, the difference between directors' reported concern about strategy and directors' perception of others' concern about strategy is significantly reduced at firms with low performance.
 A separate analysis of simple effects showed that although there is a significant difference between directors' concern about strategy and their perception of others' concern at average levels of friendship ties, this difference becomes non-significant at relatively high levels of friendship ties (i.e., approximately 1.3 standard deviations above the mean).
 Moreover, the data also indicated that friendship ties reduce the difference between reported concern about strategy and the perception of others' concern by increasing the latter (i.e., the perceived concern of other board members) rather than by decreasing the former (i.e., directors' reported concern); though friendship ties were
@@ -279,6 +286,8 @@ Instrumental Variable Regression Models of Change in Corporate Strategy*
 <table border=1><tr><td rowspan="2">Independent Variable</td><td colspan="3">Product Market Diversification</td><td colspan="3">Geographic Diversification</td></tr><tr><td>Model 1</td><td>Model 2</td><td>Model 3</td><td>Model 4</td><td>Model 5</td><td>Model 6</td></tr><tr><td>Directors&#x27; concern about strategy × perception of others&#x27; concern (inverted)</td><td></td><td>-0.247*** (0.076)</td><td>-0.082 (0.076)</td><td></td><td>-0.274** (0.094)</td><td>-0.090 (0.094)</td></tr><tr><td>Expressed concern about strategy</td><td></td><td></td><td>0.112*** (0.026)</td><td></td><td></td><td>0.132*** (0.032)</td></tr><tr><td>Directors&#x27; concern about strategy</td><td>0.042 (0.030)</td><td>0.042 (0.032)</td><td>0.028 (0.033)</td><td>0.054 (0.038)</td><td>0.060 (0.041)</td><td>0.042 (0.041)</td></tr><tr><td>Perception of others&#x27; concern (inverted)<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi /><mrow><mi>&#x02020;</mi></mrow></msup></mrow></math></td><td>-0.076 (0.052)</td><td>-0.078 (0.052)</td><td>-0.053 (0.053)</td><td>-0.101 (0.064)</td><td>-0.098 (0.065)</td><td>-0.069 (0.065)</td></tr><tr><td>Prior geographic diversification</td><td>0.144*** (0.037)</td><td>0.144*** (0.036)</td><td>0.143*** (0.036)</td><td>0.664*** (0.088)</td><td>0.663*** (0.088)</td><td>0.661*** (0.088)</td></tr><tr><td>Prior product market diversification</td><td>1.089*** (0.068)</td><td>1.078*** (0.067)</td><td>1.081*** (0.068)</td><td>0.134** (0.047)</td><td>0.134** (0.047)</td><td>0.131** (0.047)</td></tr><tr><td>Number of employees</td><td>0.021*** (0.006)</td><td>0.020*** (0.006)</td><td>0.021*** (0.006)</td><td>0.019** (0.007)</td><td>0.020** (0.007)</td><td>0.020** (0.007)</td></tr><tr><td>Return on equity</td><td>-0.233 (0.118)</td><td>-0.208 (0.117)</td><td>-0.204 (0.117)</td><td>-0.277 (0.146)</td><td>-0.266 (0.147)</td><td>-0.262 (0.147)</td></tr><tr><td>Number of outside directors</td><td>0.008 (0.015)</td><td>-0.018 (0.015)</td><td>-0.017 (0.015)</td><td>-0.026 (0.018)</td><td>-0.025 (0.018)</td><td>-0.023 (0.018)</td></tr><tr><td>Environmental instability</td><td>1.257<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi /><mrow><mi>&#x02022;</mi></mrow></msup></mrow></math> (0.599)</td><td>1.188<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi /><mrow><mi>&#x02022;</mi></mrow></msup></mrow></math> (0.594)</td><td>1.178 (0.595)</td><td>1.425 (0.738)</td><td>1.408 (0.741)</td><td>1.377 (0.740)</td></tr><tr><td>Board power</td><td>0.024 (0.026)</td><td>-0.011 (0.026)</td><td>-0.008 (0.026)</td><td>-0.013 (0.032)</td><td>-0.015 (0.032)</td><td>-0.012 (0.032)</td></tr><tr><td>Constant</td><td>-0.488 (0.424)</td><td>-0.259 (0.432)</td><td>-0.251 (0.433)</td><td>0.559 (0.523)</td><td>0.518 (0.540)</td><td>0.545 (0.540)</td></tr><tr><td>F</td><td>30.97***</td><td>34.98***</td><td>35.46***</td><td>20.51***</td><td>23.22***</td><td>23.63***</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>R</mi><mn>2</mn></msup></mrow></math></td><td>.56</td><td>.65</td><td>.68</td><td>.46</td><td>.54</td><td>.56</td></tr></table>
 <!-- para 24 -->
 • $p \le .05$; ** $p \le .01$; *** $p \le .001$; t-tests are one-tailed for hypothesized effects, two-tailed for control variables.
+<!-- para 25 -->
+Standard errors are in parentheses.
 <!-- para 26 -->
 † This variable is inverted so that higher values indicate lower perceived concern of other directors directors' concern about corporate strategy and subsequent strategic change would be negatively moderated by directors' perception that other board members are not concerned about the current corporate strategy.
 The results in models 2 and 5 support this hypothesis: the interaction between directors' concern about strategy and their perception of others' concern (inverted) is negative and significant in both models, indicating that directors' concerns about corporate strategy are less likely to prompt strategic change to the extent that directors perceive that their colleagues do not share their concerns.

@@ -1,0 +1,2260 @@
+{
+ "batch": "sentence_backfill_2026-09-20",
+ "date": "2026-09-20",
+ "purpose": "postdraft-diagnostics sentence layer: blanket re-archive of vault paper MDs after splitter fix (min_chars=0 default, abbreviation protection)",
+ "protocol": {
+  "script": "distill-paper-exemplar/scripts/preprocess_l0.py --keep-sentences",
+  "min_sentence_chars": 0,
+  "filters": {
+   "min_bytes": 8192,
+   "blacklist": [
+    "PROJECT_STATUS",
+    "关系卡",
+    "证据卡",
+    "机制分野卡",
+    "替代解释卡",
+    "反证卡",
+    "补充阅读卡",
+    "深度阅读笔记",
+    "审查笔记",
+    "卡片包",
+    "权威映射",
+    "关联文献地图",
+    "识别与数据备忘录",
+    "机制编译笔记",
+    "背景文献笔记",
+    "背景笔记",
+    "网络案例素材",
+    "现实案例搜索",
+    "方法背景笔记",
+    "Manuscript Review Packet",
+    "写作惯例核查",
+    "Context Packet",
+    "Methods and Results Packet",
+    "Theory Packet",
+    "Reconciliation Draft",
+    "Manuscript -",
+    "wiki-log",
+    "inquiry-ledger",
+    "conversation-map",
+    "core-dialogue-corpus",
+    "literature-landscape",
+    "methods-evidence-package",
+    "notebooklm-review",
+    "construct-measure",
+    "ToD 对辩报告",
+    "项目概览",
+    "Claim Cards",
+    "Concept Map",
+    "Evidence Matrix",
+    "Literature Dialogue"
+   ],
+   "cjk_ratio_max": 0.4
+  },
+  "roots_priority": [
+   [
+    "import",
+    "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入"
+   ],
+   [
+    "recalls",
+    "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls"
+   ],
+   [
+    "antislapp",
+    "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\anti-SLAPP laws × product recall count and timing\\Reference"
+   ],
+   [
+    "military",
+    "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\从军经验 × 薪酬差距\\01 Reference"
+   ]
+  ],
+  "duplicate_policy": "first by root priority wins; dropped logged"
+ },
+ "summary": {
+  "candidates": 126,
+  "ok": 125,
+  "failed": 0,
+  "regenerated_existing": 13,
+  "new": 112,
+  "duplicates_dropped": 1,
+  "pre_batch_archives": 21,
+  "post_batch_archives": 124,
+  "duration_sec": 23.7,
+  "note": "counts corrected post-hoc: run 1 had a key-derivation bug (unstripped OvisOCR2 time suffix) that mislabeled 13 entries failed; run 2 with fixed suffix regex + PYTHONIOENCODING=utf-8 passed 125/125. Regen/new computed against the pre-batch 21-archive list.",
+  "retired_stale_or_duplicate": 9
+ },
+ "entries": [
+  {
+   "derived_key": "carpenter_and_westphal_2001_strategic_context_of_external_ne",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Carpenter and Westphal-2001 Strategic_Context_of_External_Network_Ties-OvisOCR2-20260813-101001.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 24,
+    "theory": 100,
+    "methods": 132,
+    "results": 121,
+    "discussion": 62
+   },
+   "total_sentences": 439,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "castellaneta_2017_smj_how_does_trade_secret_legal_protection",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Castellaneta-2017 smj-How Does Trade Secret Legal Protection Affect Firm Market Value Evidence from the Uniform Trade Secret Act.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 37,
+    "theory": 110,
+    "methods": 57,
+    "results": 120,
+    "discussion": 41
+   },
+   "total_sentences": 365,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "certo2016_a_tale_of_two_effects_using_longitudinal_data_to_c",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\certo2016-A tale of two effects Using longitudinal data to compare within- and between-firm effects-OvisOCR2-20260828-094712.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 275,
+    "theory": 72,
+    "results": 50,
+    "discussion": 31
+   },
+   "total_sentences": 428,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: methods"
+   ]
+  },
+  {
+   "derived_key": "charoenwong2025_mutual_fund_common_owners_returns_and_proxy_",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\charoenwong2025-mutual-fund-common-owners-returns-and-proxy-voting-OvisOCR2-20260813-144202.md",
+   "regenerated": true,
+   "sections": {
+    "theory": 435
+   },
+   "total_sentences": 435,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: introduction, methods, results, discussion"
+   ]
+  },
+  {
+   "derived_key": "cohen_1972_a_garbage_can_model_of_organizational_choice",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Cohen等-1972-A Garbage Can Model of Organizational Choice.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 93,
+    "discussion": 21
+   },
+   "total_sentences": 114,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory, methods, results"
+   ]
+  },
+  {
+   "derived_key": "darby_2026_toward_faster_recalls_of_dangerous_medical_device",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Darby等-2026-Toward Faster Recalls of Dangerous Medical Devices Does Ownership by Large Institutional Investors Matter.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 7,
+    "theory": 99,
+    "methods": 88,
+    "results": 93,
+    "discussion": 1792
+   },
+   "total_sentences": 2079,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "desjardine_2025_information_based_competition_the_case_of_ri",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Desjardine等-2025-Information-Based Competition The Case of Rival Owners in Rating Agencies.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 35,
+    "theory": 146,
+    "methods": 74,
+    "results": 178,
+    "discussion": 5
+   },
+   "total_sentences": 438,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "ederer_2026_a_tale_of_two_networks_common_own",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Ederer-2026-A Tale of Two Networks_ Common Own.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 66,
+    "theory": 195,
+    "methods": 148,
+    "results": 299,
+    "discussion": 84
+   },
+   "total_sentences": 792,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "feldman_1981_information_in_organizations_as_signal_and_symb",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Feldman等-1981-Information in Organizations as Signal and Symbol.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 277,
+    "discussion": 58
+   },
+   "total_sentences": 335,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory, methods, results"
+   ]
+  },
+  {
+   "derived_key": "fini_2017_social_valuation_across_multiple_audiences_the_int",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Fini等-2017-Social Valuation across Multiple Audiences The Interplay of Ability and Identity Judgments.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 28,
+    "theory": 175,
+    "methods": 110,
+    "results": 104,
+    "discussion": 100
+   },
+   "total_sentences": 517,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "gerardi_2024_a_critical_review_of_the_common_ownership_liter",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Gerardi 等 - 2024 - A Critical Review of the Common Ownership Literature.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 203,
+    "methods": 181,
+    "discussion": 60
+   },
+   "total_sentences": 444,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory, results"
+   ]
+  },
+  {
+   "derived_key": "gilje_2020_who_s_paying_attention_measuring_common_ownership",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Gilje 等 - 2020 - Who's paying attention Measuring common ownership and its impact on managerial incentives.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 221,
+    "methods": 395,
+    "discussion": 13
+   },
+   "total_sentences": 629,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory, results"
+   ]
+  },
+  {
+   "derived_key": "gulati_1998_alliances_and_networks",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Gulati-1998-Alliances and Networks.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 441,
+    "discussion": 51
+   },
+   "total_sentences": 492,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory, methods, results"
+   ]
+  },
+  {
+   "derived_key": "gulati_1999_network_location_and_learning_the_influence_of_n",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Gulati-1999-Network location and learning The influence of network resources and firm capabilities on alliance formation.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 43,
+    "theory": 127,
+    "methods": 141,
+    "results": 162,
+    "discussion": 100
+   },
+   "total_sentences": 573,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "gulati_2007_tent_poles_tribalism_and_boundary_spanning_the_r",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Gulati-2007-Tent Poles Tribalism and Boundary Spanning The Rigor-Relevance Debate in Management Research.md",
+   "regenerated": true,
+   "sections": {},
+   "total_sentences": 0,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: introduction, theory, methods, results, discussion"
+   ]
+  },
+  {
+   "derived_key": "gulati_1999_cooperative_or_controlling_the_effects_of_ceo_bo",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Gulati等-1999-Cooperative or Controlling The Effects of CEO-board Relations and the Content of Interlocks on the Formation of Joint Ventures.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 33,
+    "methods": 173,
+    "results": 266,
+    "discussion": 70
+   },
+   "total_sentences": 542,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory"
+   ]
+  },
+  {
+   "derived_key": "gulati_1999_where_do_interorganizational_networks_come_from",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Gulati等-1999-Where Do Interorganizational Networks Come From.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 215,
+    "methods": 320,
+    "results": 121,
+    "discussion": 103
+   },
+   "total_sentences": 759,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory"
+   ]
+  },
+  {
+   "derived_key": "gulati_2000_strategic_networks",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Gulati等-2000-Strategic Networks.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 63,
+    "discussion": 36
+   },
+   "total_sentences": 99,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory, methods, results"
+   ]
+  },
+  {
+   "derived_key": "gulati_2003_which_ties_matter_when_the_contingent_effects_of",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Gulati等-2003-Which Ties Matter When The Contingent Effects of Interorganizational Partnerships on IPO Success.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 44,
+    "theory": 106,
+    "methods": 83,
+    "results": 34,
+    "discussion": 124
+   },
+   "total_sentences": 391,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "gulati_2005_adaptation_in_vertical_relationships_beyond_ince",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Gulati等-2005—ADAPTATION IN VERTICAL RELATIONSHIPS BEYOND INCENTIVE CONFLICT.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 25,
+    "theory": 184,
+    "methods": 105,
+    "results": 163,
+    "discussion": 107
+   },
+   "total_sentences": 584,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "gulati_2007_dependence_asymmetry_and_joint_dependence_in_int",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Gulati等-2007-Dependence Asymmetry and Joint Dependence in Interorganizational Relationships Effects of Embeddedness on a Manufacturers Performance in Procurement Relationships.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 18,
+    "methods": 213,
+    "results": 280,
+    "discussion": 102
+   },
+   "total_sentences": 613,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory"
+   ]
+  },
+  {
+   "derived_key": "gulati_2009_the_nature_of_partnering_experience_and_the_gain",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Gulati等-2009-The Nature of Partnering Experience and the Gains from Alliances.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 24,
+    "theory": 144,
+    "methods": 81,
+    "results": 91,
+    "discussion": 74
+   },
+   "total_sentences": 414,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "harford2011_institutional_cross_holdings_and_their_effect_on",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\harford2011-Institutional cross-holdings and their effect on acquisition decisions-OvisOCR2-20260828-100525.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 67,
+    "methods": 118
+   },
+   "total_sentences": 185,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory, results, discussion"
+   ]
+  },
+  {
+   "derived_key": "herriott_1985_learning_from_experience_in_organizations",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Herriott等-1985-Learning from Experience in Organizations.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 31,
+    "results": 45,
+    "discussion": 5
+   },
+   "total_sentences": 81,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory, methods"
+   ]
+  },
+  {
+   "derived_key": "higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Higgins等-2003-Getting Off to a Good Start The Effects of Upper Echelon Affiliations on Underwriter Prestige.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 21,
+    "theory": 108,
+    "methods": 136,
+    "results": 63,
+    "discussion": 82
+   },
+   "total_sentences": 410,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "innovation_through_labor_mobility_evidence_from_non_compete_",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Innovation through Labor Mobility Evidence from Non-Compete Agreements.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 96,
+    "methods": 54,
+    "results": 270,
+    "discussion": 144
+   },
+   "total_sentences": 564,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory"
+   ]
+  },
+  {
+   "derived_key": "jeffers_2024_the_impact_of_restricting_labor_mobility_on_cor",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Jeffers-2024-The Impact of Restricting Labor Mobility on Corporate Investment and Entrepreneurship.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 88,
+    "theory": 92,
+    "methods": 48,
+    "results": 345,
+    "discussion": 20
+   },
+   "total_sentences": 593,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "levinthal_1981_a_model_of_adaptive_organizational_search",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Levinthal等-1981-A Model of Adaptive Organizational Search.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 94,
+    "results": 161
+   },
+   "total_sentences": 255,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory, methods, discussion"
+   ]
+  },
+  {
+   "derived_key": "levinthal_1993_the_myopia_of_learning",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Levinthal等-1993—The Myopia of Learning.md",
+   "regenerated": true,
+   "sections": {},
+   "total_sentences": 0,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: introduction, theory, methods, results, discussion"
+   ]
+  },
+  {
+   "derived_key": "levitt_1988_organizational_learning",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Levitt等-1988-Organizational Learning.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 299
+   },
+   "total_sentences": 299,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory, methods, results, discussion"
+   ]
+  },
+  {
+   "derived_key": "lewellen2021_does_common_ownership_really_increase_firm_coor",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\lewellen2021-does-common-ownership-really-increase-firm-coordination-OvisOCR2-20260813-140545.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 104,
+    "methods": 442,
+    "discussion": 12
+   },
+   "total_sentences": 558,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory, results"
+   ]
+  },
+  {
+   "derived_key": "lin_2022_enforceability_of_noncompetition_agre",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Lin-2022-Enforceability of Noncompetition Agre.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 60,
+    "theory": 86,
+    "methods": 155,
+    "results": 266,
+    "discussion": 3
+   },
+   "total_sentences": 570,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "lounamaa_1987_adaptive_coordination_of_a_learning_team",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Lounamaa等-1987-Adaptive Coordination of a Learning Team.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 61,
+    "discussion": 91
+   },
+   "total_sentences": 152,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory, methods, results"
+   ]
+  },
+  {
+   "derived_key": "march_1981_footnotes_to_organizational_change",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\March-1981-Footnotes to Organizational Change.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 238,
+    "discussion": 23
+   },
+   "total_sentences": 261,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory, methods, results"
+   ]
+  },
+  {
+   "derived_key": "march_1988_variable_risk_preferences_and_adaptive_aspiration",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\March-1988-Variable Risk Preferences and Adaptive Aspirations.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 57,
+    "discussion": 21
+   },
+   "total_sentences": 78,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory, methods, results"
+   ]
+  },
+  {
+   "derived_key": "march_1991_exploration_and_exploitation_in_organizational_le",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\March-1991-Exploration and Exploitation in Organizational Learning.md",
+   "regenerated": true,
+   "sections": {},
+   "total_sentences": 0,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: introduction, theory, methods, results, discussion"
+   ]
+  },
+  {
+   "derived_key": "march_1991_learning_from_samples_of_one_or_fewer",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\March等-1991-Learning from Samples of One or Fewer.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 283
+   },
+   "total_sentences": 283,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory, methods, results, discussion"
+   ]
+  },
+  {
+   "derived_key": "moon_2026_the_impact_of_legal_protection_of_trade_secrets_on",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Moon 等 - 2026 - The Impact of Legal Protection of Trade Secrets on Advertising Spending Insights from the Recogniti-OvisOCR2-20260819-180034.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 140,
+    "methods": 72,
+    "results": 198,
+    "discussion": 243
+   },
+   "total_sentences": 653,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory"
+   ]
+  },
+  {
+   "derived_key": "mukherjee_2017_product_recall_decisions_in_medical_device_su",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Mukherjee等-2017-Product Recall Decisions in Medical Device Supply Chains A Big Data Analytic Approach to Evaluating Judgment Bias.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 45,
+    "theory": 132,
+    "methods": 148,
+    "results": 90,
+    "discussion": 20
+   },
+   "total_sentences": 435,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "mukherjee_2021_hiding_in_the_herd_the_product_recall_cluster",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Mukherjee等-2021-Hiding in the Herd The Product Recall Clustering Phenomenon.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 52,
+    "theory": 131,
+    "methods": 55,
+    "results": 246,
+    "discussion": 56
+   },
+   "total_sentences": 540,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "newham_et_al_2025_common_ownership_and_market_entry",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Newham et al-2025 Common ownership and market entry-MinerU-20260813-132125.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 101,
+    "theory": 54,
+    "methods": 277,
+    "discussion": 19
+   },
+   "total_sentences": 451,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: results"
+   ]
+  },
+  {
+   "derived_key": "non_compete_agreements_and_labor_allocation_across_product_m",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Non-compete agreements and labor allocation across product markets.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 68,
+    "methods": 578,
+    "discussion": 7
+   },
+   "total_sentences": 653,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory, results"
+   ]
+  },
+  {
+   "derived_key": "pfarrer_pollock_and_rindova_2010",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Pfarrer, Pollock, and Rindova 2010.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 30,
+    "theory": 116,
+    "methods": 96,
+    "results": 128,
+    "discussion": 86
+   },
+   "total_sentences": 456,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "the_effect_of_noncompete_enforceability_on_productivity",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\The Effect of Noncompete Enforceability on Productivity.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 11,
+    "results": 72
+   },
+   "total_sentences": 83,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory, methods, discussion"
+   ]
+  },
+  {
+   "derived_key": "westphal_zajac_1998_the_symbolic_management_of_stockholders_",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Westphal & Zajac-1998 The Symbolic Management of Stockholders Corporate Governance Reforms and Shareholder Reactions.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 114,
+    "methods": 78,
+    "results": 66,
+    "discussion": 58
+   },
+   "total_sentences": 316,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory"
+   ]
+  },
+  {
+   "derived_key": "westphal_j_d_and_bednar_m_k_2005_pluralistic_ignorance_in_co",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Westphal, J. D., and Bednar, M. K. (2005） Pluralistic Ignorance in Corporate Boards and Firms' Strategic Persistence in Response to Low Firm Performance.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 13,
+    "methods": 125,
+    "results": 101,
+    "discussion": 92
+   },
+   "total_sentences": 331,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory"
+   ]
+  },
+  {
+   "derived_key": "westphal1995_who_shall_govern_ceoboard_power_demographic_sim",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\westphal1995 Who Shall Govern CEOBoard Power, Demographic Similarity, and New Director Selection-OvisOCR2-20260813-104556.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 120,
+    "methods": 99,
+    "results": 80,
+    "discussion": 49
+   },
+   "total_sentences": 348,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory"
+   ]
+  },
+  {
+   "derived_key": "westphal_1997_customization_or_conformity_an_institutional_a",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Westphal等-1997-Customization or Conformity An Institutional and Network Perspective on the Content and Consequences of TQM Adoption.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 67,
+    "theory": 82,
+    "methods": 1,
+    "results": 201,
+    "discussion": 63
+   },
+   "total_sentences": 414,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "what_changes_after_women_enter_top_manage_2020",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\What Changes After Women Enter Top Manage-2020-OvisOCR2-20260811-110535.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 157,
+    "theory": 58,
+    "methods": 91,
+    "results": 113,
+    "discussion": 7
+   },
+   "total_sentences": 426,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "xiao_2022_non_competes_and_innovation_evidenc",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Xiao-2022-Non-competes and innovation_ Evidenc.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 29,
+    "theory": 48,
+    "methods": 67,
+    "results": 184,
+    "discussion": 54
+   },
+   "total_sentences": 382,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "zajac_westphal_the_social_construction_of_market_value",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Zajac & Westphal The Social Construction of Market Value-OvisOCR2-20260813-102132.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 32,
+    "theory": 166,
+    "methods": 49,
+    "results": 61,
+    "discussion": 72
+   },
+   "total_sentences": 380,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "zhong_et_al_2020_customer_concentration_executive_attention_",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Zhong et al-2020-Customer Concentration, Executive Attention, and Firm search behavior.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 27,
+    "theory": 123,
+    "methods": 7,
+    "Measures": 25,
+    "Mediators": 88,
+    "results": 87,
+    "discussion": 94
+   },
+   "total_sentences": 451,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "legal_protection_of_free_speech_and_corporate_innovation",
+   "origin_root": "import",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Legal Protection of Free Speech and Corporate Innovation-OvisOCR2-20260807-185655\\Legal Protection of Free Speech and Corporate Innovation.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 116,
+    "theory": 51,
+    "methods": 139,
+    "results": 219,
+    "discussion": 16
+   },
+   "total_sentences": 541,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "activism_risk_and_corporate_self_regulation_investigating_ho",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Activism risk and corporate self‐regulation Investigating how anti‐SLAPP laws impact firms' institutional corporate social performance.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 36,
+    "theory": 201,
+    "methods": 53,
+    "results": 1,
+    "discussion": 41
+   },
+   "total_sentences": 332,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "anand_mukherjee_2024_learning_from_failures_di",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\anand-mukherjee-2024-learning-from-failures-di-OvisOCR2-20260811-161426.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 50,
+    "theory": 164,
+    "methods": 69,
+    "results": 27,
+    "discussion": 5
+   },
+   "total_sentences": 315,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "ant_n_2025_innovation_the_bright_side_of_common_ownership",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Antón 等 - 2025 - Innovation The Bright Side of Common Ownership.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 82,
+    "theory": 64,
+    "methods": 104,
+    "results": 53,
+    "discussion": 56
+   },
+   "total_sentences": 359,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "astvansh_2025_product_recall_a_synthesis_of_multidisciplinar",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Astvansh 等 - 2025 - Product recall a synthesis of multidisciplinary findings, and research directions.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 161,
+    "discussion": 21
+   },
+   "total_sentences": 182,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory, methods, results"
+   ]
+  },
+  {
+   "derived_key": "bala_et_al_2017_pharmaceutical_product_recalls",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\bala-et-al-2017-pharmaceutical-product-recalls-OvisOCR2-20260811-153329.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 269,
+    "results": 106,
+    "discussion": 43
+   },
+   "total_sentences": 418,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory, methods"
+   ]
+  },
+  {
+   "derived_key": "ball_2018_product_competition_managerial_discretion_and_manu",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Ball 等 - 2018 - Product competition, managerial discretion, and manufacturing recalls in the U.S. pharmaceutical ind.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 38,
+    "theory": 98,
+    "methods": 120,
+    "results": 145,
+    "discussion": 1
+   },
+   "total_sentences": 402,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "ball_et_al_2022_product_recall_research_dimens",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\ball-et-al-2022-product-recall-research-dimens.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 332,
+    "discussion": 4
+   },
+   "total_sentences": 336,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory, methods, results"
+   ]
+  },
+  {
+   "derived_key": "beyond_one_size_fits_all_a_judicious_perspecti",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Beyond One Size Fits All A Judicious Perspecti.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 37,
+    "theory": 82,
+    "methods": 349
+   },
+   "total_sentences": 468,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: results, discussion"
+   ]
+  },
+  {
+   "derived_key": "ceo_regulatory_focus_and_myopic_marketing_management",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\CEO regulatory focus and myopic marketing management.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 45,
+    "theory": 140,
+    "methods": 81,
+    "results": 62,
+    "discussion": 82
+   },
+   "total_sentences": 410,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "ceo_stock_ownership_recall_timing_and_stock_market_penalties",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\CEO Stock Ownership, Recall Timing, and Stock Market Penalties..md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 66,
+    "theory": 158,
+    "results": 137,
+    "discussion": 56
+   },
+   "total_sentences": 417,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: methods"
+   ]
+  },
+  {
+   "derived_key": "ceo_tenure_and_recall_risk_management_in_the_consumer_produc",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\CEO Tenure and Recall Risk Management in the Consumer Products Industry.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 55,
+    "theory": 61,
+    "methods": 63,
+    "results": 185,
+    "discussion": 3
+   },
+   "total_sentences": 367,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "chen_2025_penny_wise_and_pound_foolish_does_striving_to_meet",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Chen 等 - 2025 - Penny Wise and Pound Foolish Does Striving to Meet Earnings Expectations by Manipulating Real Activ.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 64,
+    "theory": 47,
+    "methods": 273,
+    "discussion": 60
+   },
+   "total_sentences": 444,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: results"
+   ]
+  },
+  {
+   "derived_key": "darby2025_an_agency",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\darby2025-an-agency-OvisOCR2-20260813-153840.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 9,
+    "theory": 61,
+    "methods": 66,
+    "results": 55,
+    "discussion": 109
+   },
+   "total_sentences": 300,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "denicol_panunzi_2025_common_ownership_competition_and_corpor",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Denicolò和Panunzi - 2025 - Common Ownership, Competition, and Corporate Governance.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 84,
+    "results": 294,
+    "discussion": 159
+   },
+   "total_sentences": 537,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory, methods"
+   ]
+  },
+  {
+   "derived_key": "does_it_pay_to_recall_your_product_early_an_empirical_invest",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Does it Pay to Recall your Product Early_ An Empirical Investigation in the Automobile Industry - Meike Eilert, Satish Jayachandran, Kartik Kalaignanam, Tracey A. Swartz, 2017.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 61,
+    "theory": 162,
+    "methods": 143,
+    "results": 213,
+    "discussion": 121
+   },
+   "total_sentences": 700,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "does_a_firms_product_recall_strategy_affect_it",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Does_a_Firms_Product-Recall_Strategy_Affect_It.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 55,
+    "theory": 64,
+    "methods": 59,
+    "results": 129,
+    "discussion": 53
+   },
+   "total_sentences": 360,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "employee_free_speech_vs_organizational_censorship_on_social_",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Employee “Free” Speech vs. Organizational Censorship on Social Media Balancing the Tension Between Free Expression and Safeguards to Foster Psychological Safety.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 238,
+    "theory": 94,
+    "results": 165,
+    "discussion": 8
+   },
+   "total_sentences": 505,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: methods"
+   ]
+  },
+  {
+   "derived_key": "fang_et_al_2025_rival_recall_ad_spend",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Fang-et-al-2025-rival-recall-ad-spend.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 90,
+    "theory": 42,
+    "methods": 94,
+    "results": 156,
+    "discussion": 100
+   },
+   "total_sentences": 482,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "from_finance_to_marketing_the_impact_of_financial_leverage_o",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\From Finance to Marketing- The Impact of Financial Leverage on Customer Satisfaction - Ashwin Malshe, Manoj K. Agarwal, 2015.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 41,
+    "theory": 146,
+    "methods": 179,
+    "results": 109,
+    "discussion": 6
+   },
+   "total_sentences": 481,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "gao_2015_should_ad_spending_increase_or_decrease_before_a_re",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Gao 等 - 2015 - Should Ad Spending Increase or Decrease before a Recall Announcement The Marketing–Finance Interfac.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 86,
+    "theory": 139,
+    "methods": 82,
+    "results": 1,
+    "discussion": 106
+   },
+   "total_sentences": 414,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "gao_2021_does_social_media_accelerate_product",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Gao-2021-Does Social Media Accelerate Product-OvisOCR2-20260811-185141.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 146,
+    "theory": 54,
+    "methods": 71,
+    "results": 116,
+    "discussion": 100
+   },
+   "total_sentences": 487,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "giving_up_learning_from_failures_an_examination_of_learning_",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Giving up learning from failures An examination of learning from one's own failures in the context of heart surgeons.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 31,
+    "theory": 112,
+    "methods": 114,
+    "results": 1,
+    "discussion": 74
+   },
+   "total_sentences": 332,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "haunchild_and_rhee_2004_the_role_of_volition_in_organization",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Haunchild and Rhee-2004-The Role of Volition in Organizational Learning The Case of Automotive Product Recalls.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 10,
+    "theory": 122,
+    "methods": 90,
+    "results": 96,
+    "discussion": 98
+   },
+   "total_sentences": 416,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "hoffmann_2024_so_sue_me_if_you_can_legal_changes_and_product",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Hoffmann 等 - 2024 - So, Sue Me…If You Can! Legal Changes and Product Recalls.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 48,
+    "theory": 57,
+    "methods": 172,
+    "results": 72,
+    "discussion": 8
+   },
+   "total_sentences": 357,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "jeon_2026_safety_defects_and_fuel_efficiency_in_the_automoti",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Jeon等-2026—Safety defects and fuel efficiency in the automotive industry.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 54,
+    "theory": 40,
+    "methods": 107,
+    "results": 299,
+    "discussion": 79
+   },
+   "total_sentences": 579,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "kalaignanam_2017_the_differential_impact_of_new_product_deve",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Kalaignanam等-2017-The Differential Impact of New Product Development “Make Buy” Choices on Immediate and Future Product Quality Insights from the Automobile Industry.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 65,
+    "theory": 114,
+    "methods": 220,
+    "results": 143,
+    "discussion": 107
+   },
+   "total_sentences": 649,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "kartik_kalaignanam_et_al_2013_the_impact_of_product_recalls_",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Kartik Kalaignanam et al 2013-The Impact of Product Recalls on Future Product Reliability and Future Accidents.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 50,
+    "theory": 89,
+    "methods": 162,
+    "results": 89,
+    "discussion": 96
+   },
+   "total_sentences": 486,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "k_nig_2020_a_blessing_and_a_curse_how_ceos_trait_empathy_aff",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\König 等 - 2020 - A Blessing and a Curse How CEOs' Trait Empathy Affects Their Management of Organizational Crises.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 47,
+    "theory": 286,
+    "discussion": 75
+   },
+   "total_sentences": 408,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: methods, results"
+   ]
+  },
+  {
+   "derived_key": "li_2026_the_impact_of_supply_base_geographical_distance_and_",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Li 等 - 2026 - The Impact of Supply Base Geographical Distance and Dispersion on Product Quality Risks Evidence fr.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 92,
+    "theory": 60,
+    "methods": 86,
+    "results": 42,
+    "discussion": 6
+   },
+   "total_sentences": 286,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "lii_2026_vertical_spillover_of_product_recalls_theorization_",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\LIi 等 - 2026 - Vertical Spillover of Product Recalls Theorization and Empirical Examination in the US Automobile I.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 41,
+    "theory": 148,
+    "methods": 61,
+    "results": 75,
+    "discussion": 3
+   },
+   "total_sentences": 328,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "lobbying_and_product_recalls_a_study_of_the_u_s_automobile_i",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Lobbying and Product Recalls A Study of the U.S. Automobile Industry - Khimendra Singh, Rajdeep Grewal, 2023.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 11,
+    "methods": 212,
+    "results": 54,
+    "discussion": 42
+   },
+   "total_sentences": 319,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory"
+   ]
+  },
+  {
+   "derived_key": "lun_et_al_2026_the_double_edged_sword_of_entre",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\lun-et-al-2026-the-double-edged-sword-of-entre.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 36,
+    "theory": 78,
+    "methods": 74,
+    "results": 120,
+    "discussion": 5
+   },
+   "total_sentences": 313,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "lu_2022_frenemies_corporate_advertising_under_common_ownersh",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Lu等-2022-Frenemies Corporate Advertising Under Common Ownership.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 58,
+    "theory": 75,
+    "methods": 90,
+    "results": 229,
+    "discussion": 31
+   },
+   "total_sentences": 483,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "mao_et_al_2021_before_it_s_too_late_product_re",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\mao-et-al-2021-before-it-s-too-late-product-re-OvisOCR2-20260811-123810.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 269,
+    "results": 27,
+    "discussion": 29
+   },
+   "total_sentences": 325,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory, methods"
+   ]
+  },
+  {
+   "derived_key": "mass_media_and_massive_failures_determining_organizational_e",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Mass Media and Massive Failures Determining Organizational Efforts to Defend Field Legitimacy Following Crises  Academy of Management Journal.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 31,
+    "theory": 175,
+    "results": 30,
+    "discussion": 54
+   },
+   "total_sentences": 290,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: methods"
+   ]
+  },
+  {
+   "derived_key": "mixed_gambles_in_product_recalls_how_ceo_stock_options_drive",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Mixed Gambles in Product Recalls_ How CEO Stock Options Drive Impression Management Tactics - Sumeet Malik, Taiyuan Wang, Geoff Martin, Luis Gomez-Mejia, 2025.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 44,
+    "theory": 89,
+    "methods": 48,
+    "results": 215,
+    "discussion": 4
+   },
+   "total_sentences": 400,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "mukherjee_u_k_sinha_k_k_2018_product_recall_decisions_in_med",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Mukherjee, U. K., & Sinha, K. K. (2018). Product recall decisions in medical device supply chains.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 46,
+    "theory": 128,
+    "methods": 140,
+    "results": 87,
+    "discussion": 25
+   },
+   "total_sentences": 426,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "mukherjee_et_al_2021_hiding_in_the_herd_the_pr",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\mukherjee-et-al-2021-hiding-in-the-herd-the-pr-OvisOCR2-20260811-154817.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 58,
+    "theory": 127,
+    "methods": 52,
+    "results": 224,
+    "discussion": 42
+   },
+   "total_sentences": 503,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "organizational_herding_in_advertising_spending_disclosures_e",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Organizational Herding in Advertising Spending Disclosures Evidence and Mechanisms - Huanhuan Shi, Rajdeep Grewal, Hari Sridhar, 2021.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 57,
+    "theory": 148,
+    "methods": 237,
+    "results": 192,
+    "discussion": 28
+   },
+   "total_sentences": 662,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "organizational_oscillation_between_learning_and_forgetting_t",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Organizational Oscillation Between Learning and Forgetting The Dual Role of Serious Errors.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 123,
+    "theory": 168,
+    "results": 152
+   },
+   "total_sentences": 443,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: methods, discussion"
+   ]
+  },
+  {
+   "derived_key": "product_recalls_in_the_medical_device_industry",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Product Recalls in the Medical Device Industry.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 54,
+    "theory": 123,
+    "methods": 214,
+    "discussion": 97
+   },
+   "total_sentences": 488,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: results"
+   ]
+  },
+  {
+   "derived_key": "pupovac_2025_product_recall_contagion_in_the_supply_chain",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Pupovac 等 - 2025 - PRODUCT RECALL CONTAGION in the SUPPLY CHAIN.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 46,
+    "theory": 48,
+    "methods": 139,
+    "results": 51,
+    "discussion": 7
+   },
+   "total_sentences": 291,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "ridge_2025_avoidance_and_aggression_in_stakeho",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Ridge-2025-Avoidance and Aggression in Stakeho-OvisOCR2-20260810-173132.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 36,
+    "theory": 96,
+    "methods": 75,
+    "results": 68,
+    "discussion": 101
+   },
+   "total_sentences": 376,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "serving_differently_ceo_regulatory_focus_and_firm_stakeholde",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Serving differently CEO regulatory focus and firm stakeholder strategy.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 31,
+    "theory": 111,
+    "methods": 72,
+    "results": 145,
+    "discussion": 56
+   },
+   "total_sentences": 415,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "shedding_light_on_the_dark_side_of_firm_lobbying_a_customer_",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Shedding Light on the Dark Side of Firm Lobbying A Customer Perspective - Gautham G. Vadakkepatt, Sandeep Arora, Kelly D. Martin, Neeru Paharia, 2022.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 181,
+    "theory": 79,
+    "methods": 117,
+    "results": 11,
+    "discussion": 35
+   },
+   "total_sentences": 423,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "the_decision_to_recall_a_behavioral_investigation_in_the_med",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\The decision to recall_ A behavioral investigation in the medical device industry.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 49,
+    "theory": 151,
+    "results": 99,
+    "discussion": 62
+   },
+   "total_sentences": 361,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: methods"
+   ]
+  },
+  {
+   "derived_key": "the_dynamic_impact_of_product_harm_crises_on_brand_preferenc",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\The Dynamic Impact of Product-Harm Crises on Brand Preference and Advertising Effectiveness An Empirical Analysis of the Automobile Industry.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 74,
+    "methods": 392,
+    "results": 91,
+    "discussion": 43
+   },
+   "total_sentences": 600,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory"
+   ]
+  },
+  {
+   "derived_key": "toward_faster_recalls_of_dangerous_medical_devices_does_owne",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Toward Faster Recalls of Dangerous Medical Devices Does Ownership by Large Institutional Investors Matter.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 119,
+    "theory": 99,
+    "methods": 127,
+    "results": 82,
+    "discussion": 54
+   },
+   "total_sentences": 481,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "two_sides_of_the_same_coin_elizabeth_g_pontikes_2012",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Two Sides of the Same Coin - Elizabeth G. Pontikes, 2012.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 150,
+    "methods": 174,
+    "results": 317,
+    "discussion": 1803
+   },
+   "total_sentences": 2444,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory"
+   ]
+  },
+  {
+   "derived_key": "waiting_to_inhale_reducing_stigma_in_the_medical_cannabis_in",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Waiting to Inhale Reducing Stigma in the Medical Cannabis Industry - Kisha Lashley, Timothy G. Pollock, 2020.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 84,
+    "methods": 156,
+    "results": 401,
+    "discussion": 91
+   },
+   "total_sentences": 732,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory"
+   ]
+  },
+  {
+   "derived_key": "what_drives_a_firm_s_choice_of_product_recall",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\What Drives a Firm’s Choice of Product Recall.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 32,
+    "theory": 117,
+    "methods": 46,
+    "results": 180
+   },
+   "total_sentences": 375,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: discussion"
+   ]
+  },
+  {
+   "derived_key": "wowak_2015_throwing_caution_to_the_wind_the_effect_of_ceo_st",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Wowak 等 - 2015 - Throwing caution to the wind The effect of CEO stock option pay on the incidence of product safety.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 33,
+    "theory": 57,
+    "methods": 38,
+    "results": 46,
+    "discussion": 41
+   },
+   "total_sentences": 215,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "wowak_2020_the_influence_of_female_directors_on_product_reca",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Wowak-2020-The Influence of Female Directors on Product Recall Decisions.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 96,
+    "theory": 53,
+    "methods": 100,
+    "results": 160,
+    "discussion": 46
+   },
+   "total_sentences": 455,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "wowak_et_al_2025_the_politics_of_product_safet",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\wowak-et-al-2025-the-politics-of-product-safet.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 75,
+    "theory": 53,
+    "methods": 113,
+    "results": 369,
+    "discussion": 70
+   },
+   "total_sentences": 680,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "zhou_2019_promotions_as_competitive_reactions_20260811_14162",
+   "origin_root": "recalls",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Zhou-2019-Promotions as competitive reactions-20260811-141628.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 14,
+    "theory": 83,
+    "methods": 132,
+    "results": 78,
+    "discussion": 54
+   },
+   "total_sentences": 361,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "safe_to_talk_safe_to_work_anti_slapp_statutes_and_workplace_",
+   "origin_root": "antislapp",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\anti-SLAPP laws × product recall count and timing\\Reference\\Safe to Talk, Safe to Work Anti-SLAPP Statutes and Workplace Safety.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 143,
+    "methods": 69,
+    "results": 119,
+    "discussion": 324
+   },
+   "total_sentences": 655,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory"
+   ]
+  },
+  {
+   "derived_key": "chen_2025_freedom_of_expression_and_stock_price_crash_risk_e",
+   "origin_root": "antislapp",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\anti-SLAPP laws × product recall count and timing\\Reference\\Chen 等 - 2025 - Freedom of Expression and Stock Price Crash Risk Evidence from a Natural Experiment-OvisOCR2-20260807-175757\\Chen 等 - 2025 - Freedom of Expression and Stock Price Crash Risk Evidence from a Natural Experiment.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 153,
+    "theory": 63,
+    "methods": 35,
+    "results": 210,
+    "discussion": 12
+   },
+   "total_sentences": 473,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "chen_2026_silencing_pollution_the_environmental_consequences",
+   "origin_root": "antislapp",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\anti-SLAPP laws × product recall count and timing\\Reference\\Chen 等 - 2026 - Silencing Pollution The Environmental Consequences of Anti-SLAPP Laws-OvisOCR2-20260807-174628\\Chen 等 - 2026 - Silencing Pollution The Environmental Consequences of Anti-SLAPP Laws.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 101,
+    "theory": 18,
+    "methods": 66,
+    "results": 141,
+    "discussion": 9
+   },
+   "total_sentences": 335,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "lee_2026_freedom_of_expression_protection_and_corporate_conc",
+   "origin_root": "antislapp",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\anti-SLAPP laws × product recall count and timing\\Reference\\Lee 等 - 2026 - Freedom of Expression Protection and Corporate Concealment of Bad-20260807-162253\\Lee 等 - 2026 - Freedom of Expression Protection and Corporate Concealment of Bad News (main+appendix).md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 124,
+    "methods": 129,
+    "results": 182,
+    "discussion": 192
+   },
+   "total_sentences": 627,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory"
+   ]
+  },
+  {
+   "derived_key": "wu_2025_activism_risk_and_corporate_self_regulation_investig",
+   "origin_root": "antislapp",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\anti-SLAPP laws × product recall count and timing\\Reference\\Wu 等 - 2025 - Activism risk and corporate self-regulation Investigating how anti-SLAPP laws impact firms' institu-OvisOCR2-20260807-164549\\Wu 等 - 2025 - Activism risk and corporate self-regulation Investigating how anti-SLAPP laws impact firms' institu.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 36,
+    "theory": 171,
+    "methods": 55,
+    "results": 1,
+    "discussion": 46
+   },
+   "total_sentences": 309,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "biased_interpretation_of_performance_feedback_the_role_of_ce",
+   "origin_root": "military",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\从军经验 × 薪酬差距\\01 Reference\\Biased interpretation of performance feedback The role of CEO overconfidence 1.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 29,
+    "theory": 109,
+    "methods": 58,
+    "results": 81,
+    "discussion": 49
+   },
+   "total_sentences": 326,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "ceo_military_experience_and_corporate_restructuring_strategi",
+   "origin_root": "military",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\从军经验 × 薪酬差距\\01 Reference\\CEO military experience and corporate restructuring strategies.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 31,
+    "theory": 52,
+    "methods": 91,
+    "results": 105,
+    "discussion": 47
+   },
+   "total_sentences": 326,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "ceo_to_employee_pay_ratios_societal_level_income_inequality_",
+   "origin_root": "military",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\从军经验 × 薪酬差距\\01 Reference\\CEO-to-employee pay ratios, societal-level income inequality, and citizens’ subjective well-being - Journal of International Business Studies.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 37,
+    "theory": 70,
+    "methods": 46
+   },
+   "total_sentences": 153,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: results, discussion"
+   ]
+  },
+  {
+   "derived_key": "from_armed_roots_to_airline_routes_in_south_america_a_dual_i",
+   "origin_root": "military",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\从军经验 × 薪酬差距\\01 Reference\\From armed roots to airline routes in South America A dual imprinting perspective.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 27,
+    "theory": 184,
+    "methods": 82,
+    "results": 127,
+    "discussion": 5
+   },
+   "total_sentences": 425,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "home_alone_the_effects_of_lone_insider_boards_on_ceo_pay_fin",
+   "origin_root": "military",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\从军经验 × 薪酬差距\\01 Reference\\Home Alone The Effects of Lone‐Insider Boards on CEO Pay, Financial Misconduct, and Firm Performance.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 47,
+    "theory": 113,
+    "methods": 38,
+    "results": 131,
+    "discussion": 78
+   },
+   "total_sentences": 407,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "is_red_or_blue_more_likely_to_narrow_the_gap_the_effect_of_c",
+   "origin_root": "military",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\从军经验 × 薪酬差距\\01 Reference\\Is Red or Blue More Likely to Narrow the Gap The Effect of CEO Political Ideology on CEO‐Employee Pay Disparity.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 43,
+    "theory": 161,
+    "methods": 132,
+    "results": 122,
+    "discussion": 8
+   },
+   "total_sentences": 466,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "strategic_management_journal_2016_chin_c",
+   "origin_root": "military",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\从军经验 × 薪酬差距\\01 Reference\\Strategic Management Journal - 2016 - Chin - C-OvisOCR2-20260827-095513.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 42,
+    "theory": 98,
+    "methods": 71,
+    "results": 38,
+    "discussion": 59
+   },
+   "total_sentences": 308,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "the_military_imprint_the_effect_of_executives_military_exper",
+   "origin_root": "military",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\从军经验 × 薪酬差距\\01 Reference\\The military imprint The effect of executives’ military experience on firm pollution and environmental innovation.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 30,
+    "theory": 104,
+    "methods": 94,
+    "results": 47,
+    "discussion": 17
+   },
+   "total_sentences": 292,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "troops_are_business_schools_military_service_and_entrepreneu",
+   "origin_root": "military",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\从军经验 × 薪酬差距\\01 Reference\\Troops are Business Schools Military Service and Entrepreneurial Behaviors in China - Chunkai Zhao, Guangyi Xu, Wenjun Cai, 2025.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 80,
+    "theory": 72,
+    "methods": 142,
+    "results": 186,
+    "discussion": 21
+   },
+   "total_sentences": 501,
+   "status": "ok",
+   "notes": []
+  },
+  {
+   "derived_key": "wage_inequality_its_impact_on_customer_satisfaction_and_firm",
+   "origin_root": "military",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\从军经验 × 薪酬差距\\01 Reference\\Wage Inequality Its Impact on Customer Satisfaction and Firm Performance - Boas Bamberger, Christian Homburg, Dominik M. Wielgos, 2021.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 51,
+    "theory": 90,
+    "methods": 135,
+    "results": 50,
+    "discussion": 1
+   },
+   "total_sentences": 327,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning"
+   ]
+  },
+  {
+   "derived_key": "when_ceo_pay_becomes_a_brand_problem_journal_of_business_eth",
+   "origin_root": "military",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\从军经验 × 薪酬差距\\01 Reference\\When CEO Pay Becomes a Brand Problem - Journal of Business Ethics.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 34,
+    "theory": 238
+   },
+   "total_sentences": 272,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: methods, results, discussion"
+   ]
+  },
+  {
+   "derived_key": "when_much_more_of_a_difference_makes_a_difference_social_com",
+   "origin_root": "military",
+   "source_md": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\从军经验 × 薪酬差距\\01 Reference\\When much more of a difference makes a difference Social comparison and tournaments in the fcCEOfc's top team.md",
+   "regenerated": true,
+   "sections": {
+    "introduction": 104,
+    "methods": 129,
+    "results": 26,
+    "discussion": 35
+   },
+   "total_sentences": 294,
+   "status": "ok",
+   "notes": [
+    "thin-section-warning",
+    "sections-unknown: theory"
+   ]
+  }
+ ],
+ "duplicates": [
+  {
+   "derived_key": "desjardine_2025_information_based_competition_the_case_of_ri",
+   "kept": "D:\\Onedrive\\Obsidian Vault\\文献笔记库\\01 导入\\论文导入\\Desjardine等-2025-Information-Based Competition The Case of Rival Owners in Rating Agencies.md",
+   "dropped": "D:\\Onedrive\\Obsidian Vault\\00 工作台\\项目\\Reference for Recalls\\Desjardine 等 - 2025 - Information-Based Competition The Case of Rival Owners in Rating Agencies.md"
+  }
+ ],
+ "retired": [
+  {
+   "retired_key": "gulati_2007_tent_poles",
+   "replacement_key": "gulati_2007_tent_poles_tribalism_and_boundary_spanning_the_r",
+   "reason": "superseded: fresh archive from same source after 2026-09-20 splitter fix (old key was hand-shortened at creation)"
+  },
+  {
+   "retired_key": "gulati_westphal_1999_cooperative_or_controlling",
+   "replacement_key": "gulati_1999_cooperative_or_controlling_the_effects_of_ceo_bo",
+   "reason": "superseded: fresh archive from same source"
+  },
+  {
+   "retired_key": "gulati_1999_where_do_interorganizational_networks",
+   "replacement_key": "gulati_1999_where_do_interorganizational_networks_come_from",
+   "reason": "superseded: fresh archive from same source"
+  },
+  {
+   "retired_key": "gulati_nohria_zaheer_2000_strategic_networks",
+   "replacement_key": "gulati_2000_strategic_networks",
+   "reason": "superseded: fresh archive from same source"
+  },
+  {
+   "retired_key": "gulati_higgins_2003_which_ties_matter",
+   "replacement_key": "gulati_2003_which_ties_matter_when_the_contingent_effects_of",
+   "reason": "superseded: fresh archive from same source"
+  },
+  {
+   "retired_key": "gulati2005-adaptation-vertical",
+   "replacement_key": "gulati_2005_adaptation_in_vertical_relationships_beyond_ince",
+   "reason": "superseded: fresh archive from same source; old key violates derive_citekey format"
+  },
+  {
+   "retired_key": "gulati_lavie_singh_2009_partnering_experience",
+   "replacement_key": "gulati_2009_the_nature_of_partnering_experience_and_the_gain",
+   "reason": "superseded: fresh archive from same source"
+  },
+  {
+   "retired_key": "mukherjee_2021_hiding_in_the_herd_the_product_recall_cluster",
+   "replacement_key": "mukherjee_et_al_2021_hiding_in_the_herd_the_pr",
+   "reason": "duplicate import: same paper, registry-compatible derived key retained (recalls root)"
+  },
+  {
+   "retired_key": "ridge_aime_white_2013_smj",
+   "replacement_key": "when_much_more_of_a_difference_makes_a_difference_social_com",
+   "reason": "superseded: fresh archive from same source (Ridge, Aime & White 2013, 'When much more of a difference makes a difference')"
+  }
+ ],
+ "key_equivalences": {
+  "gulati_2007_tent_poles": "gulati_2007_tent_poles_tribalism_and_boundary_spanning_the_r",
+  "gulati_westphal_1999_cooperative_or_controlling": "gulati_1999_cooperative_or_controlling_the_effects_of_ceo_bo",
+  "gulati_1999_where_do_interorganizational_networks": "gulati_1999_where_do_interorganizational_networks_come_from",
+  "gulati_nohria_zaheer_2000_strategic_networks": "gulati_2000_strategic_networks",
+  "gulati_higgins_2003_which_ties_matter": "gulati_2003_which_ties_matter_when_the_contingent_effects_of",
+  "gulati2005-adaptation-vertical": "gulati_2005_adaptation_in_vertical_relationships_beyond_ince",
+  "gulati_lavie_singh_2009_partnering_experience": "gulati_2009_the_nature_of_partnering_experience_and_the_gain",
+  "mukherjee_2021_hiding_in_the_herd_the_product_recall_cluster": "mukherjee_et_al_2021_hiding_in_the_herd_the_pr",
+  "ridge_aime_white_2013_smj": "when_much_more_of_a_difference_makes_a_difference_social_com"
+ }
+}

@@ -1,8 +1,9 @@
 ---
 type: sentences-archive
 citekey: "gulati_1999_network_location_and_learning_the_influence_of_n"
-source_md: "D:\OneDrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Gulati-1999-Network location and learning The influence of network resources and firm capabilities on alliance formation.md"
-created: 2026-09-05
+source_md: "D:\Onedrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Gulati-1999-Network location and learning The influence of network resources and firm capabilities on alliance formation.md"
+created: 2026-09-20
+sentence_filter: min_chars=0
 note: >-
   跨源合成原料库存（distill-paper-exemplar L0 --keep-sentences 生成）。只读；
   语料句子可直接采用；替换来源特异性内容（专名/数字/系数/表号）。
@@ -139,6 +140,7 @@ Likewise, we learn about many of their product goals very early on, and we activ
 <!-- para 17 -->
 Another manager highlighted the salience of timing of information as a critical facet of the information provided by his firm's social networks:
 <!-- para 18 -->
+In our business timing is everything.
 And so, even for alliances to happen the confluence of circumstances have to be at the right time.
 We and our prospective partner must know about each other's needs and identify an opportunity for an alliance together in a timely manner...
 Our partners from past alliances are one of our most important sources of timely information about alliance opportunities out there, both with them and with other firms with whom they are acquainted.
@@ -168,6 +170,7 @@ If you step back and look at the entire industry, it's becoming like a spider's 
 <!-- para 25 -->
 The network of prior alliances is a rich source of information from which firms can also learn about new firms of which they were previously unaware.
 These factors can be powerful enabling conditions that enhance the likelihood that a firm will engage in additional alliances in the future.
+Thus,
 <!-- para 26 -->
 > [!hypothesis]
 > Hypothesis 1: The greater the extent of a firm's network resources from the network of prior alliances, the greater the likelihood that it will enter a new alliance in the subsequent year.
@@ -332,6 +335,7 @@ First, I computed the reciprocal of the Herfindahl index for the nationalities o
 I also computed alternative variables for these two measures, using a specification akin to Blau's index of heterogeneity (Blau, 1977).
 I computed the proportion of firm i's ties of type j until year t, out of the total number of ties the firm had entered until that year, denoted as  $P_{it,j}$.
 I computed the index of diversity  $Y_{it}$ by subtracting the summation over all j of the square of  $P_{it,j}$.
+Thus,
 <!-- para 18 -->
 $$ Y_{it}=1-\sum_{j=1}^{J}\left(P_{it,j}\right)^{2} $$
 <!-- para 19 -->
@@ -409,6 +413,7 @@ In econometric terms, such a behavioral effect is called ‘state dependence’�
 Japanese firms in their propensity to form alliances.
 I also conducted separate subgroup analyses for firms of each nationality separately.
 <!-- para 7 -->
+**Table 1.
 Definitions and predicted signs of variables**
 <!-- para 8 -->
 Variable name | Definition | Predicted sign$^{a}$ |
@@ -480,6 +485,7 @@ In Models 2 and 3, I sequentially included the network-resource variables measur
 The results confirm Hypothesis 1, which suggests that firms that are centrally located in the alliance network (Cliques and Closeness) are more likely to form new alliances.
 Furthermore, the significant improvement in the chi-square statistic suggests a better-fitting model once the measures of network resources are included.
 <!-- para 19 -->
+**Table 2.
 Descriptive statistics and correlation matrix**
 <!-- para 20 -->
 |  | Mean | S.D. | Lowest | Highest |
@@ -498,6 +504,8 @@ Descriptive statistics and correlation matrix**
 | (12) | DJPN | 0.39 | 0.49 | 0 | 1 |
 | (13) | New materials | 0.37 | 0.48 | 0 | 1 |
 | (14) | Industrial automation | 0.31 | 0.46 | 0 | 1
+<!-- para 21 -->
+Spearman Correlation Matrix
 <!-- para 22 -->
 | (1) | (2) | (3) | (4) | (5) | (6) | (7) | (8) | (9) | (10) | (11) | (12) | (13) | (14) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -526,6 +534,7 @@ While past experience with alliances was significant, no significant results wer
 Both specifications of heterogeneity which measured diversity in terms of contracts used and the nationalities of partners were insignificant.
 Furthermore, linear and quadratic specifications of duration effects for alliances were also not significant (results not reported here).
 <!-- para 25 -->
+**Table 3.
 Panel probit estimates (standard errors in parentheses)**
 <!-- para 26 -->
 | I | II | III | IV | V |
@@ -548,6 +557,8 @@ Panel probit estimates (standard errors in parentheses)**
 | N | 1494 | 1494 | 1494 | 1494 | 1494 |
 | LOG L | -584.32 | -551.17 | -535.22 | -527.56 | -515.21 |
 | Chi-square | 84.14* | 91.15* | 98.57* | 102.49* | 105.34*
+<!-- para 27 -->
+*注（原刊表注）：\*p < 0.05*
 <!-- para 28 -->
 The results in Table 3 indicate no support for most of the material resource attributes of firms introduced as controls—Debt, Solvency, and Performance were all insignificant at the 0.05 level.
 There was a trend for all three variables to have a negative effect on the likelihood to form alliances, but these failed to attain conventional significance levels.
@@ -699,3 +710,5 @@ The results suggested no differences between American and
 Although Butler and Moffitt specified a normal distribution, other functional forms are also possible.
 Some studies have moved away from functional specification of heterogeneity toward semi-parametric random effects approaches that estimate the probability distribution directly from the data (cf.
 Chintagunta, Jain, and Vilcassim, 1991).
+<!-- para 22 -->
+[^a]: NP, no prediction

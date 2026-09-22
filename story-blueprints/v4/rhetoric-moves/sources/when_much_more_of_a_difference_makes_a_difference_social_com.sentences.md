@@ -1,14 +1,15 @@
 ---
 type: sentences-archive
-citekey: "ridge_aime_white_2013_smj"
-source_md: "D:\OneDrive\Obsidian Vault\00 工作台\项目\从军经验 × 薪酬差距\01 Reference\When much more of a difference makes a difference Social comparison and tournaments in the fcCEOfc's top team.md"
-created: 2026-09-12
+citekey: "when_much_more_of_a_difference_makes_a_difference_social_com"
+source_md: "D:\Onedrive\Obsidian Vault\00 工作台\项目\从军经验 × 薪酬差距\01 Reference\When much more of a difference makes a difference Social comparison and tournaments in the fcCEOfc's top team.md"
+created: 2026-09-20
+sentence_filter: min_chars=0
 note: >-
   跨源合成原料库存（distill-paper-exemplar L0 --keep-sentences 生成）。只读；
   语料句子可直接采用；替换来源特异性内容（专名/数字/系数/表号）。
 ---
 
-# ridge_aime_white_2013_smj 句子库存
+# when_much_more_of_a_difference_makes_a_difference_social_com 句子库存
 
 ## introduction
 <!-- para 2 -->
@@ -37,19 +38,17 @@ For example, we expect limited if any tournament effects in organizations where 
 These effects are fundamental to our understanding of the effect of pay disparity on firm performance not only because they extend our understanding of the main hypothesized curvilinear relationship, but also because they serve as empirical tests of the core assumptions of our theorizing (Miller and Tsang, [2011](#smj2227-bib-0059)).
 As such, they may provide internal support to the mechanisms of tournament theory and social comparison theory as relevant explanations of the relationship between pay disparity and firm performance.
 We use longitudinal data on executive compensation, TMT members' characteristics, and organizational succession planning and performance among publicly traded North American firms listed in the *Fortune* 500 to help integrate management and economic explanations of the relationship between pay disparity and firm performance and provide quasi-experimental tests of the implied theoretical mechanisms.
-
-## theory
-<!-- para 2 -->
+<!-- para 7 -->
 Both social comparison and tournament theories speak directly to pay disparity (or size of the observed differences between CEO incomes and those of other executives in the top management team) and firm performance (Henderson and Fredrickson, [2001](#smj2227-bib-0043); Siegel and Hambrick, [2005](#smj2227-bib-0072)).
 According to social comparison approaches (Crosby, [1976](#smj2227-bib-0024); Festinger, [1954](#smj2227-bib-0027)), individuals engage in social comparisons to evaluate their rewards (Adams, [1965](#smj2227-bib-0001); Henderson and Fredrickson, [2001](#smj2227-bib-0043); Siegel and Hambrick, [2005](#smj2227-bib-0072)) and experience relative deprivation when they perceive that they receive less in comparison to similar others (Cowherd and Levine, [1992](#smj2227-bib-0023); Crosby, [1976](#smj2227-bib-0024); Fredrickson, Davis-Blake, and Sanders, 2010; Siegel and Hambrick, [1996](#smj2227-bib-0071)), particularly those in higher organizational ranks (Henderson and Fredrickson, [2001](#smj2227-bib-0043)).
 Because of the public nature of the compensation of the CEO and the highest paid members of the TMT, across rank comparisons between CEO pay and the pay of the highest paid members of the TMT are likely to exist (Henderson and Fredrickson, [2001](#smj2227-bib-0043); Siegel and Hambrick, [1996](#smj2227-bib-0071), [2005](#smj2227-bib-0072)).
 When such comparisons exist, large pay gaps are likely to reduce commitment to organizational goals, cohesiveness, satisfaction, efficient information processing, coordination, and collaboration, leading to lower firm performance (Cowherd and Levine, [1992](#smj2227-bib-0023); Martin, [1981](#smj2227-bib-0055); Siegel and Hambrick, [2005](#smj2227-bib-0072)).
 Therefore, according to theory and evidence on the social comparison tradition, large pay gaps between the CEO and the TMT diminish firm performance.
-<!-- para 3 -->
+<!-- para 8 -->
 On the contrary, in tournament theory approaches, the high-paying CEO position is seen as the prize of a succession tournament to which members of the TMT have a claim.
 Because large prizes are inherently motivating (Becker and Huselid, [1992](#smj2227-bib-0008); Ehrenberg and Bognanno, [1990](#smj2227-bib-0025)), higher paying differentials at the CEO level will result in improved efforts, reduced shirking, and better alignment between efforts and organizational interests (Green and Stokey, [1983](#smj2227-bib-0035); Henderson and Fredrickson, [2001](#smj2227-bib-0043); Lazear and Rosen, [1981](#smj2227-bib-0052); Main, O'Reilly, and Wade, [1993](#smj2227-bib-0054)).
 Therefore, according to theory and evidence in the tournament theory tradition, large pay gaps between the CEO and the TMT increase firm performance.
-<!-- para 4 -->
+<!-- para 9 -->
 We argue that research based on these theories can benefit from addressing some previously overlooked fundamental theoretical aspects that suggest they have complementary rather than opposing theoretical predictions for the relationship between pay disparity and firm performance.
 First, the core proposition in Festinger's ([1954](#smj2227-bib-0027)) social comparison theory is that individuals will compare themselves with similar others (Wood, [1989](#smj2227-bib-0079)).
 This “similarity hypothesis” is not acknowledged by applications of social comparison theory to the relationship between pay disparity and firm performance.
@@ -60,15 +59,15 @@ Top executives tend to have much in common (Hills, [1980](#smj2227-bib-0045); O'
 A large pay disparity diminishes perceptions of similarity because it is indicative of differences in executives' perceived power (Finkelstein, [1992](#smj2227-bib-0028)), status (Finkelstein, Hambrick, and Cannella, [2009](#smj2227-bib-0030); Frank, [1984](#smj2227-bib-0031)), and inherent performance (Lambert, Larcker, and Weigelt, [1993](#smj2227-bib-0050)).
 A CEO who is rewarded with very large pay disparity in comparison to the TMT may be an example of the powerful taking more for themselves (Finkelstein and Hambrick, [1996](#smj2227-bib-0029)) or a recognition of performance expectations or status, that makes that CEO inherently different from his/her top team and therefore less relevant as a choice for social comparison.
 In line with the referent choices literature criteria, pay is a very visible, relevant, and available source of information (Kulik and Ambrose, [1992](#smj2227-bib-0049)) about one executive's performance relative to others (e.g., the CEO) and is therefore readily available for people to use in selecting referents for comparison or targets for tournament.
-<!-- para 5 -->
+<!-- para 10 -->
 We argue that this ease of use of pay as referent selection criteria combined with its implications for power, status, inherent performance or other differentiating characteristics makes it one more important criterion for referent choice.
 Since power, status, and perceptions of performance are relevant surrounding indicators of similarity available for comparison, and since objective standards are usually unavailable (Martin, Suls, and Wheeler, [2002](#smj2227-bib-0056)) or mostly disregarded when comparing to others (Martin, [1981](#smj2227-bib-0055)), high paid members of a TMT will not see CEOs who enjoy very large gaps in pay as “similar others.” In fact, people tend to compare themselves with others who are above but close to them in rank order (e.g., Wheeler *et al*., [1969](#smj2227-bib-0078)).
 Therefore, social comparison and relative deprivation theories have limited predictive ability about the effects of pay disparity on performance when the levels of pay are high enough to reduce perceptions of similarity.
 A CEO who enjoys very large pay gaps compared to the highest paid members of the TMT is less likely to be seen as a social comparison target for them and therefore is less likely to result in relative deprivation perceptions for them.
-<!-- para 6 -->
+<!-- para 11 -->
 Second, as Henderson and Fredrickson ([2001](#smj2227-bib-0043): 98) discuss, tournament theory was developed to “explain the very large gaps typically observed between the pay of CEOs and the pay of executives directly below them.” By looking at a consistent effect of pay disparity on firm performance, researchers fail to address the fact that the theory only applies to the incentive effects of “large first-place prizes,” “very large gaps” in pay, “extreme succession tournaments” in which there is significant pay inequality at the top level, and the “disproportionate weight in the purse” of the tournament (Lazear and Rosen, [1981](#smj2227-bib-0052); Main *et al*., [1993](#smj2227-bib-0054); Rosen, [1986](#smj2227-bib-0068); Siegel and Hambrick, [2005](#smj2227-bib-0072)).
 Therefore, tournament theory makes limited if any predictions for medium to low levels of pay disparity.
-<!-- para 7 -->
+<!-- para 12 -->
 Consistent with these arguments, we see tournament theory as a complement to social comparison approaches at high levels of pay disparity.
 As the gap in pay between CEOs and the highest paid members of the top management team becomes large, the incentive to advance in the tournament will rule over the relative deprivation effects of social comparison in these high paid members of the TMT who have been shown to be achievement oriented, power seeking, and status driven (Finkelstein, Hambrick, and Cannella, [2009](#smj2227-bib-0030)).
 We, therefore, combine the social comparison predictions of a negative relationship between pay disparity and firm performance at low to medium levels of pay disparity with the tournament theory predictions of a positive relationship between pay disparity and firm performance at high levels of pay disparity.
@@ -76,22 +75,20 @@ Consistently we expect decreasing performance as pay disparity increases from sm
 This will result in high performance at both low and high levels of pay disparity and low performance at moderate levels of pay disparity, where the negative effects of social comparison have negatively affected performance levels and the tournament effects are yet not relevant to help organizational performance.
 Figure [1](#smj2227-fig-0001) (a) shows the opposing predictions of social comparison and tournament theory about the relationship between pay disparity and firm performance.
 Figure [1](#smj2227-fig-0001) (b) shows the complementary predictions of both theories according to this reformulation (shown in gray) and the expected combined curvilinear relationship between pay disparity and firm performance (shown in bold).
-<!-- para 8 -->
-![Details are in the caption following the image](https://sms.onlinelibrary.wiley.com/cms/asset/8a2d186d-68c2-4303-a1f7-f211158af6f7/smj2227-fig-0001-m.jpg)
-<!-- para 10 -->
+<!-- para 15 -->
 Therefore, we expect that high firm performance will be found around either meaningfully low or meaningfully high levels of pay disparity and that performance will decrease consistent with social comparison theory until the point at which tournament effects reverse the trend creating low performance or the bottom curve of a U at moderate levels of pay disparity.
-<!-- para 11 -->
+<!-- para 16 -->
 > *Hypothesis 1: Firm performance will have a U-shaped relationship with executive pay disparity*.
-<!-- para 12 -->
+<!-- para 17 -->
 Our hypothesis—that tournament theory-type incentives take over the relationship between pay disparity and firm performance as pay disparity becomes large can be further explored and tested by studying the conditions that may affect TMT members' participation in succession tournaments and their effect on performance.
 To the extent that a tournament may cease to exist as, for example, in the presence of an heir apparent, then we should not expect to see tournament-like incentives take over the relationship between pay disparity and firm performance.
 On the other hand, to the extent that TMT members can see themselves as more likely to be elected as, for example, when they share the characteristics of the CEO at the time of his/her appointment as CEO, then we would expect tournament-like effects to be stronger and at lower levels of pay disparity.
-<!-- para 14 -->
+<!-- para 19 -->
 The most common form of succession planning in corporate America is the selection of an heir apparent (Vancil, [1987](#smj2227-bib-0075)).
 This process is generally referred to as a “relay succession” in which the heir apparent is selected by the organization well in advance of a succession event and the subsequent time period is utilized to “groom” the heir apparent for the top job.
 The selection of an heir apparent has both substantive and symbolic consequences for TMT members (Cannella and Lubatkin, [1993](#smj2227-bib-0013); Cannella and Shen, [2001](#smj2227-bib-0015); Shen and Cannella, [2002](#smj2227-bib-0070); Zajac and Westphal, [1996](#smj2227-bib-0083)).
 Consistent with Hypothesis 1 in which we argue for a positive tournament-like effect to take over the negative social comparison effects of pay disparity on firm performance at high levels of pay disparity, we argue here that, in the presence of an heir apparent, such tournament-like effects will either not exist or be greatly diminished.
-<!-- para 15 -->
+<!-- para 20 -->
 When an organization implements a process of succession planning in which an heir apparent is crowned, the opportunity of advancement for other TMT members is obviously diminished.
 The heir apparent is selected by the CEO and is deemed to be the second-in-command, beginning a power transition period (Cannella and Lubatkin, [1993](#smj2227-bib-0013)).
 While the heir apparent may not always be promoted in the end, the appointment of a successor will have political and behavioral implications for other TMT members (Cannella and Shen, [2001](#smj2227-bib-0015)).
@@ -102,9 +99,9 @@ Additionally, we do not expect the presence of an heir apparent to affect feelin
 Therefore we expect that in the presence of an heir apparent social comparison effects are going to reduce performance as pay disparity grows and will persist in the absence of positive tournament effects.
 In the presence of a heir apparent we expect a mostly negative rather than U-shaped relationship between pay disparity and performance.
 The presence of an heir apparent will moderate the U-shaped relationship between pay disparity and firm performance so that the presence of an heir apparent will reduce the increasing pattern of performance at high levels of pay disparity.
-<!-- para 16 -->
+<!-- para 21 -->
 > *Hypothesis 2: Executive pay disparity will have a U-shaped relationship with firm performance in the absence of an heir apparent and a negative relationship with firm performance in the presence of an heir apparent*.
-<!-- para 18 -->
+<!-- para 23 -->
 We argue that power differential between the CEO and the CEO's top team will have a significant effect in terms of the tournament incentives of pay disparity for TMT members.
 CEO power will have meaningful implications for TMT member incentives as predicted in tournament theory.
 Powerful CEOs are reluctant to abdicate (Sonnenfeld, [1986](#smj2227-bib-0074); Vancil, [1987](#smj2227-bib-0075); Zajac and Westphal, [1996](#smj2227-bib-0083)) and CEO power is visible to others in the TMT when there are, for example, significant differences in power in the form of different ownership positions, titles within the organization, or pay differentials between the CEO and the members of the CEO's top team (Finkelstein, [1992](#smj2227-bib-0028)).
@@ -114,9 +111,9 @@ The perceived time horizon for succession will significantly reduce tournament-t
 Because we do not expect CEO power to affect feelings of deprivation based on social comparison effects, we expect that under high CEO power, comparison effects are going to reduce performance as pay disparity grows and will persist in the absence of positive tournament effects.
 Therefore, under high CEO power, we expect a mostly negative relationship between pay dispersion and performance because, in organizations with powerful CEOs, tournament-like effects will be significantly weaker or even nonexistent.
 CEO power will moderate the relationship between executive pay disparity and firm performance weakening tournament effects.
-<!-- para 19 -->
+<!-- para 24 -->
 > *Hypothesis 3: Executive pay disparity will have a U-shaped relationship with firm performance when CEO power is low and a negative relationship with firm performance when CEO power is high*.
-<!-- para 21 -->
+<!-- para 26 -->
 TMT eligibility or the similarity in relevant characteristics between the CEO and the CEO's top team, we argue, will have a significant effect in terms of both social comparison effects and tournament incentives of pay disparity for TMT members.
 First, the “similarity hypothesis”, a core proposition in Festinger's ([1954](#smj2227-bib-0027)) social comparison theory states that individuals will compare themselves with similar others (Wood, [1989](#smj2227-bib-0079)), implying that feelings of relative deprivation due to social comparison emerge from comparisons with a “similar other” so that individuals tend to want what similar others possess (Cartwright and Harary, [1956](#smj2227-bib-0019); Crosby, [1976](#smj2227-bib-0024)).
 The issue with TMT eligibility to the CEO position and the similarity hypothesis is that TMT eligibility will dramatically affect perceptions of similarity between TMT members and the CEO.
@@ -127,7 +124,7 @@ Therefore, social comparison and relative deprivation theories have strong predi
 A CEO who is noticeably different compared to the highest paid members of the TMT is less likely to be seen as a social comparison target for them and therefore is less likely to result in relative deprivation perceptions for them.
 Having highly eligible, TMT members can increase feelings of relative deprivation in TMT members and their negative effects on commitment to organizational goals, cohesiveness, satisfaction, efficient information processing, coordination, and collaboration that reduce firm performance (Cowherd and Levine, [1992](#smj2227-bib-0023); Martin, [1981](#smj2227-bib-0055); Siegel and Hambrick, [2005](#smj2227-bib-0072)).
 Therefore, we expect that social comparison effects, the downtrend in the U-shaped relationship between pay disparity and performance, will be stronger for firms with highly eligible TMTs.
-<!-- para 22 -->
+<!-- para 27 -->
 Second, when looking at tournament effects, one important though under-researched aspect of tournament theory is that the chances of winning the tournament by being elected CEO affect the pay disparity needed to create significant tournament-like incentives for TMT members.
 Previous research has shown, for example, that a large pool of competitors will require larger pay disparities in order to incentivize participants because the number of competitors reduces each individual participant's chances of winning the tournament by becoming CEO (Henderson and Fredrickson, [2001](#smj2227-bib-0043); Main *et al.*, [1993](#smj2227-bib-0054); O'Reilly, Main, and Crystal, [1988](#smj2227-bib-0063)).
 We focus here on how the TMT members' chances of winning the tournament by being promoted to the CEO position are affected by TMT member characteristics.
@@ -137,7 +134,8 @@ Since eligibility will increase tournament-like incentive responsiveness to pay 
 TMT eligibility reflects the comparison between the aggregated individual level characteristics at the team level and the same characteristics of the CEO.
 Applied to the curvilinear prediction of Hypothesis 1, in which we argue for a positive tournament-like effect to take over the negative social comparison effects of pay disparity on firm performance at high levels of pay disparity, we argue here that in TMTs with high member eligibility such tournament-like effects will be significantly stronger.
 TMT member eligibility will therefore moderate the U-shaped relationship between executive pay disparity and firm performance so that higher TMT member eligibility will strengthen both the social comparison effects of pay disparity on performance and the tournament effects of pay disparity on performance resulting in a significantly steeper U-shaped relationship.
-<!-- para 23 -->
+Therefore,
+<!-- para 28 -->
 > *Hypothesis 4: Under conditions of high TMT member eligibility, the U-shaped relationship between pay disparity and firm performance will be more pronounced than under conditions of low TMT eligibility*.
 
 ## methods
@@ -174,8 +172,6 @@ Specifically, we collected both the number of titles of each executive and CEO a
 The power measures are then the aggregate distance between the CEO and each executive on both ownership level and number of titles, respectively (Westphal and Zajac, [1995](#smj2227-bib-0077); Zajac and Westphal, [1996](#smj2227-bib-0083)).
 Our measure is a variant of the Euclidean distance measure providing a scale invariant indicator of distance between the CEO and TMT members on both ownership and titles.
 Therefore, *Title/Ownership Power* were measured as:
-<!-- para 11 -->
-![urn:x-wiley:01432095:media:smj2227:smj2227-math-0001](https://sms.onlinelibrary.wiley.com/cms/asset/9541887c-511b-42a8-89c6-fb1a8041144b/smj2227-math-0001.png)
 <!-- para 12 -->
 urn:x-wiley:01432095:media:smj2227:smj2227-math-0001
 <!-- para 13 -->
@@ -319,6 +315,7 @@ Our results imply that the difference in social comparison effects between teams
 Similarly, tournament effect differences between teams with high and low top management teams eligibility is practically relevant since it implies a nominal average difference in firm ROA of 3.8 percent (3.19, 4.19, and 4.04%, respectively) when pay disparity goes from the mean to two standard deviations above the mean.
 Figure [5](#smj2227-fig-0005) (a–c) illustrate these curvilinear interactions and show that that the U-shaped relationship between pay disparity and firm performance is stronger for firms with top management teams with high eligibility.
 This is consistent with the logic that increased TMT member eligibility will result in both more social comparison effects and more tournament-like incentives (because of their potential to “win” the succession tournament).
+The implications are discussed next.
 <!-- para 12 -->
 <table><thead><tr><td></td><th colspan="2">Model 6</th><th colspan="2">Model 7</th><th colspan="2">Model 8</th></tr></thead><tbody><tr><td>Constant</td><td>13.725</td><td>(15.759)</td><td>16.470</td><td>(11.565)</td><td>21.426</td><td>(14.378)</td></tr><tr><td>Prior performance</td><td>0.335 <a href="#smj2227-note-1005_216">*</a></td><td>(0.157)</td><td>0.287 <a href="#smj2227-note-1004_217">†</a></td><td>(0.154)</td><td>0.183</td><td>(0.127)</td></tr><tr><td>CEO tenure</td><td>0.188 <a href="#smj2227-note-1004_218">†</a></td><td>(0.096)</td><td>0.190</td><td>(0.137)</td><td>0.169 <a href="#smj2227-note-1004_219">†</a></td><td>(0.093)</td></tr><tr><td>Outsider</td><td>2.279</td><td>(3.167)</td><td>1.082</td><td>(2.754)</td><td>1.037</td><td>(2.889)</td></tr><tr><td>Duality</td><td>−3.596 <a href="#smj2227-note-1005_220">*</a></td><td>(1.824)</td><td>−3.212</td><td>(2.126)</td><td>−4.090 <a href="#smj2227-note-1006_221">**</a></td><td>(1.479)</td></tr><tr><td>Pay dispersion</td><td>−0.579</td><td>(1.597)</td><td>−1.162</td><td>(1.740)</td><td>−1.759</td><td>(1.967)</td></tr><tr><td>TMT cash</td><td>0.334</td><td>(0.786)</td><td>0.607</td><td>(0.785)</td><td>0.642</td><td>(0.806)</td></tr><tr><td>TMT long-term</td><td>0.182</td><td>(0.186)</td><td>0.220</td><td>(0.218)</td><td>0.235</td><td>(0.182)</td></tr><tr><td>TMT tenure</td><td>0.042</td><td>(0.153)</td><td>0.119</td><td>(0.106)</td><td>0.151</td><td>(0.117)</td></tr><tr><td>Educational attainment</td><td>3.257</td><td>(3.975)</td><td>2.533</td><td>(3.256)</td><td>3.936</td><td>(4.012)</td></tr><tr><td>Elite education</td><td>−2.036</td><td>(2.337)</td><td>−1.570</td><td>(2.976)</td><td>−0.963</td><td>(2.548)</td></tr><tr><td>Diversification</td><td>−0.092</td><td>(1.337)</td><td>−0.083</td><td>(1.506)</td><td>−0.423</td><td>(1.873)</td></tr><tr><td>Capital investment</td><td>5.392</td><td>(13.992)</td><td>11.013</td><td>(19.984)</td><td>−5.049</td><td>(16.951)</td></tr><tr><td>Industry ROA</td><td>0.444 <a href="#smj2227-note-1004_222">†</a></td><td>(0.237)</td><td>0.505 <a href="#smj2227-note-1005_223">*</a></td><td>(0.222)</td><td>0.522 <a href="#smj2227-note-1005_224">*</a></td><td>(0.245)</td></tr><tr><td>firm size</td><td>−1.278</td><td>(0.982)</td><td>−1.527</td><td>(1.306)</td><td>−1.718</td><td>(1.186)</td></tr><tr><td>Functional eligibility</td><td>2.856</td><td>(4.890)</td><td>1.654</td><td>(3.579)</td><td>−0.406</td><td>(4.005)</td></tr><tr><td>Tenure eligibility</td><td>−0.059</td><td>(0.143)</td><td>0.029</td><td>(0.118)</td><td>−0.025</td><td>(0.140)</td></tr><tr><td>Age eligibility</td><td>0.050</td><td>(0.193)</td><td>−0.013</td><td>(0.158)</td><td>0.002</td><td>(0.213)</td></tr><tr><td>Titles power</td><td>−3.811</td><td>(2.739)</td><td>−4.625 <a href="#smj2227-note-1005_225">*</a></td><td>(2.124)</td><td>−4.911 <a href="#smj2227-note-1005_226">*</a></td><td>(2.321)</td></tr><tr><td>Ownership power</td><td>0.001</td><td>(0.003)</td><td>0.002</td><td>(0.004)</td><td>0.001</td><td>(0.002)</td></tr><tr><td>Heir apparent</td><td>−0.710</td><td>(2.424)</td><td>−0.463</td><td>(2.638)</td><td>−0.349</td><td>(2.437)</td></tr><tr><td>Pay disparity</td><td>−0.005</td><td>(0.428)</td><td>−0.404</td><td>(0.549)</td><td>−0.407</td><td>(0.472)</td></tr><tr><td>Pay disparity <sup>2</sup></td><td>0.032</td><td>(0.041)</td><td>0.088 <a href="#smj2227-note-1004_227">†</a></td><td>(0.052)</td><td>0.073 <a href="#smj2227-note-1005_228">*</a></td><td>(0.034)</td></tr><tr><td>Pay disparity × functional eligibility</td><td>−0.585</td><td>(1.775)</td><td></td><td></td><td></td><td></td></tr><tr><td>Pay disparity <sup>2</sup>  × functional eligibility</td><td>0.371 <a href="#smj2227-note-1005_229">*</a></td><td>(0.189)</td><td></td><td></td><td></td><td></td></tr><tr><td>Pay disparity × tenure eligibility</td><td></td><td></td><td>−0.050</td><td>(0.042)</td><td></td><td></td></tr><tr><td>Pay disparity <sup>2</sup>  × tenure eligibility</td><td></td><td></td><td>0.009 <a href="#smj2227-note-1005_230">*</a></td><td>(0.004)</td><td></td><td></td></tr><tr><td>Pay disparity × age eligibility</td><td></td><td></td><td></td><td></td><td>−0.074</td><td>(0.071)</td></tr><tr><td>Pay disparity <sup>2</sup>  × age eligibility</td><td></td><td></td><td></td><td></td><td>0.015 <a href="#smj2227-note-1005_231">*</a></td><td>(0.007)</td></tr><tr><td>AR (2)</td><td>0.97</td><td></td><td>0.87</td><td></td><td>0.80</td><td></td></tr><tr><td>Hansen</td><td>80.26</td><td></td><td>65.31</td><td></td><td>80.72</td><td></td></tr><tr><td>Wald χ <sup>2</sup></td><td>369.27 <a href="#smj2227-note-1007_232">***</a></td><td></td><td>139.74 <a href="#smj2227-note-1007_233">***</a></td><td></td><td>314.70 <a href="#smj2227-note-1007_234">***</a></td><td></td></tr></tbody></table>
 <!-- para 13 -->
@@ -328,8 +325,6 @@ Standard errors in parentheses.
 - \* *p*  < 0.05;
 - \*\* *p*  < 0.01;
 - \*\*\* *p*  < 0.001
-<!-- para 14 -->
-![](https://sms.onlinelibrary.wiley.com/cms/asset/44acc17a-dce9-491c-916c-c38b4c927e7a/smj2227-fig-0005-m.jpg)
 
 ## discussion
 <!-- para 2 -->
@@ -375,3 +370,5 @@ Additionally, we extend research on executive compensation to show that a series
 Our results suggest that beyond a certain level of pay disparity, TMT attention may switch from a focus on relative deprivation to a focus on the attraction of a valued prize and that such a shift in attention may be influenced by a series of organizational contingencies.
 This ultimately provides researchers with new alternatives for investigating compensation differences and their relationship to performance.
 It also points to the need for more theory and research regarding the complementary effects of both social comparison and tournament theory at different levels in the pay structure and under a variety of alternative organizational contingencies.
+<!-- para 10 -->
+---

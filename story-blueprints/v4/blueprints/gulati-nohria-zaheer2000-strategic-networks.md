@@ -21,7 +21,7 @@ reading_scope:
     - "PDM slices: gulati_nohria_zaheer_2000_strategic_networks.pdm/sections/introduction.md, sections/theory.md, sections/discussion.md"
     - "PDM root: gulati_nohria_zaheer_2000_strategic_networks.pdm.yaml (cross_section_identity + l2_coherence verdict ok, 2026-09-06i)"
     - "Verified section distillations: introduction + theory per PDM distill_track (pdm/feedback/introduction.feedback.yaml, pdm/feedback/theory.feedback.yaml); discussion slice read at story-card level only"
-    - "Sentence archive: story-blueprints/v4/rhetoric-moves/sources/gulati_nohria_zaheer_2000_strategic_networks.sentences.md"
+    - "Sentence archive: story-blueprints/v4/rhetoric-moves/sources/gulati_2000_strategic_networks.sentences.md"
 analysis_focus:
   primary: [introduction, theory]
   supporting: [discussion]

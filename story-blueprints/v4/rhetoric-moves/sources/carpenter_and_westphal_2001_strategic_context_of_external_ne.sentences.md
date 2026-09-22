@@ -1,8 +1,9 @@
 ---
 type: sentences-archive
 citekey: "carpenter_and_westphal_2001_strategic_context_of_external_ne"
-source_md: "D:\OneDrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Carpenter and Westphal-2001 Strategic_Context_of_External_Network_Ties-OvisOCR2-20260813-101001.md"
-created: 2026-08-30
+source_md: "D:\Onedrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Carpenter and Westphal-2001 Strategic_Context_of_External_Network_Ties-OvisOCR2-20260813-101001.md"
+created: 2026-09-20
+sentence_filter: min_chars=0
 note: >-
   跨源合成原料库存（distill-paper-exemplar L0 --keep-sentences 生成）。只读；
   语料句子可直接采用；替换来源特异性内容（专名/数字/系数/表号）。
@@ -101,6 +102,7 @@ The first hypothesis, which predicts that strategically related board appointmen
 Two additional hypotheses address the overall, board-level relationship between the portfolio of all directors' appointments and actual board behavior.
 As discussed above, boards may contribute to strategic decision making by regularly monitoring the decision-making process, as suggested by agency theorists, or by providing advice to top managers on strategic issues.
 The theoretical perspective developed here suggests that in stable environments, board appointments to strategically related firms should enhance the capacity of a focal firm's board members to contribute to strategic decision making through increased monitoring activity or the provision of more advice to management on strategic issues.
+Thus,
 <!-- para 13 -->
 > **Hypothesis 1a.** In a stable environment, the appointment of a director to the boards of other firms that are strategically related to the focal firm will increase the director's perceived ability to contribute to board discussions of strategic issues.
 <!-- para 14 -->
@@ -178,6 +180,7 @@ Although surveys have been used frequently to measure behavioral processes at lo
 To ensure the highest possible response in this case, we took the following steps (Fowler, 1993; Groves, Cialdini, & Couper, 1992): (1) An in-depth pretest was used to streamline the survey, making it easier and more appealing to complete (see further discussion below); (2) requests for participation linked the current study with an ongoing series of surveys on top management issues conducted by a major business school (to which hundreds of these CEOs' peers had responded), emphasized the need for research on CEO-board relations, and engaged respondents' natural interest in the topic (see Groves et al., 1992); and (3) about 21 days after the initial mailing, nonrespondents were sent a second letter with a new questionnaire.
 In total, 263 CEOs and 564 outside directors responded, representing response rates of 44 percent and 43 percent, respectively.
 These response rates are high in comparison to those of other top management surveys (cf.
+Pettigrew, 1992).
 Data on diversification, internationalization, or board interlocks were unavailable for 35 of the responding companies; thus, survey data from 228 CEOs and 492 outside directors are used in the analyses, numbers representing 38 percent of all CEOs and directors in the sample frame (that is, on the average, the final sample includes 2.2 directors per company in the CEO survey).
 <!-- para 5 -->
 To check for nonresponse bias, we collected archival data for companies in the larger sample frame.
@@ -194,6 +197,7 @@ All independent and control variables were gauged in the period $t - 1$, and dep
 <!-- para 8 -->
 Data for our three dependent variables, directors' perceived ability to contribute to board discussions, board monitoring, and board advice interactions were gathered through surveys.
 To enhance the construct validity of the survey measures, we conducted a pretest involving in-depth pilot interviews with 22 top managers and board members (cf.
+Fowler, 1993: 102).
 Following Judge and Zeithaml (1992), in the questionnaire we defined strategic issues as nonroutine, resource allocation decisions that should affect the performance of an organization.
 We further sought to develop survey questions that would assess a board's involvement in either the implementation or the consideration of new strategies.
 We used feedback from participants in the pretest to ensure that the items would capture both areas of strategic issue involvement and, in the survey, included additional questions that focus on each area of involvement.
@@ -211,6 +215,7 @@ Thus, we estimated factor scores using the Bartlett method (Harman, 1976).
 Board advice interactions and board monitoring were also assessed with multi-item scales.
 The wording of each question was developed from available qualitative research (Alderfer, 1986; Demb & Neubauer, 1992; Lorsch & MacIver, 1989) suggesting how top managers and directors describe CEO-board interaction and the board's role vis-à-vis management (for instance, as a sounding board on strategic issues); in addition, we used feedback from the pilot interviews to further improve the clarity and face validity of each question.
 For instance, questions about advice interactions asked about the extent to which the CEO solicited board input on corporate strategy and the frequency of advice and council discussions with board members, and monitoring questions asked about the extent to which the board monitored strategic decision making or evaluated CEO performance.
+The Appendix gives specific items.
 These measures assess monitoring and advice interactions at the board level.
 We also conducted separate analyses of individual director involvement in monitoring and advice interactions; the results of these analyses were consistent with those reported below for boards.
 <!-- para 11 -->
@@ -288,6 +293,7 @@ The results presented below were substantively unchanged, demonstrating that the
 <!-- para 24 -->
 Several control variables were also included in the models.
 Following Wiersema and Bantel's (1992) classification scheme for level of education, we controlled for directors' education level using number of years of schooling (cf.
+Kosnik, 1987).
 A director's years of higher-level education may indicate knowledge pertinent to strategic decision making, which may affect ability to contribute in potentially competing ways to appointment to other boards.
 Similarly, more extensive general management experience could also be associated with directors' ability to monitor and advise management.
 Therefore, we also controlled for management experience, measured as the number of years during which a director had previously worked on a top management team.
@@ -323,6 +329,7 @@ We also did not expect the hypothesized effects on advice interactions to be aff
 <!-- para 3 -->
 Results of the multiple regression analysis testing Hypothesis 1a support the prediction that related appointments will be positively associated with directors' perceptions of their ability to contribute to board discussions in stable environments (Table 3).
 For example, the coefficients for product-market, diversification, and internationalization relatedness were all positive and significant.
+And,
 <!-- para 5 -->
 <table border=1><tr><td>Variable</td><td>Mean</td><td>s.d.</td><td>1a</td><td>1b</td><td>1c</td><td>1d</td><td>2a</td><td>2b</td><td>2c</td><td>2d</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td></tr><tr><td colspan="20">Board ties weighted by:</td></tr><tr><td>1a.
 Product-market relatedness</td><td>0.39</td><td>0.29</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>1b.
@@ -396,6 +403,12 @@ Prior market-to-book value</td><td></td><td></td><td>0.07 (0.07)</td><td>-0.07 (
 Board leadership structure</td><td></td><td></td><td>0.46 (0.16)**</td><td>0.45 (0.16)**</td><td></td><td></td></tr><tr><td>Constant</td><td>1.33 (0.53)*</td><td>1.38 (0.53)**</td><td>-1.26 (1.44)</td><td>-1.56 (1.51)</td><td>0.07 (1.46)</td><td>0.25 (1.59)</td></tr><tr><td>F</td><td>5.17***</td><td>10.70***</td><td>4.59***</td><td>6.22***</td><td>5.34***</td><td>7.36***</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>R</mi><mn>2</mn></msup></mrow></math></td><td>.16</td><td>.47</td><td>.21</td><td>.39</td><td>.22</td><td>.42</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>&#x00394;</mi><msup><mi>R</mi><mn>2</mn></msup></mrow></math></td><td></td><td>.31***</td><td></td><td>.18***</td><td></td><td>.20***</td></tr></table>
 <!-- para 13 -->
 $^{a}$ Unstandardized coefficients are reported with standard errors in parentheses; n = 250 for directors' perceived ability to contribute, and n = 114 for board monitoring and advice interactions.
+<!-- para 14 -->
+p < .05
+<!-- para 15 -->
+** p < .01
+<!-- para 16 -->
+*** p < .001
 <!-- para 17 -->
 T-tests were one-tailed for hypothesized effects, two-tailed for control variables although the coefficient for foreign market relatedness was not significant, it was positive, as hypothesized.
 Conversely, the results indicate that having more board appointments to firms with different strategies tends to reduce directors' perceived ability to contribute to board discussions.
@@ -425,6 +438,12 @@ Prior market-to-book value</td><td></td><td></td><td>-0.07 (0.07)</td><td>-0.07 
 Board leadership structure</td><td></td><td></td><td>0.45 (0.18)*</td><td>0.45 (0.18)*</td><td></td><td></td></tr><tr><td>Constant</td><td>-1.20 (0.57)*</td><td>-1.05 (0.56)</td><td>-1.59 (1.44)</td><td>-2.75 (1.47)</td><td>0.13 (1.36)</td><td>0.13 (1.47)</td></tr><tr><td>F</td><td>5.08***</td><td>13.36***</td><td>4.05***</td><td>5.59***</td><td>4.61***</td><td>6.49***</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>R</mi><mn>2</mn></msup></mrow></math></td><td>.15</td><td>.59</td><td>.19</td><td>.36</td><td>.21</td><td>.41</td></tr><tr><td><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>&#x00394;</mi><msup><mi>R</mi><mn>2</mn></msup></mrow></math></td><td></td><td>.44***</td><td></td><td>.17***</td><td></td><td>.20***</td></tr></table>
 <!-- para 21 -->
 $^{a}$ Unstandardized coefficients are reported with standard errors in parentheses; n = 242 for directors' perceived ability to contribute, and n = 114 for board monitoring and advice interactions.
+<!-- para 22 -->
+$p < .05$
+<!-- para 23 -->
+** $p < .01$
+<!-- para 24 -->
+*** $p < .001$
 <!-- para 25 -->
 T-tests were one-tailed for hypothesized effects, two-tailed for control variables ing of strategic decision making.
 Hypothesis 1c predicts that such appointments will be positively associated with the level of advice interactions on strategic issues.
@@ -493,11 +512,13 @@ Similarly, directors' beliefs about corporate strategy might be influenced more 
 In order to test this possibility empirically, we conducted separate analyses in which the relatedness of manager-director ties was measured separately from the relatedness of outside director ties.
 The hypothesized effects were supported for both sources of experience, and the effects of manager-director ties were not consistently stronger than the effects of outside director ties.
 <!-- para 10 -->
+Limitations.
 Although the findings of this study are consistent with a sociocognitive perspective on board involvement in which board ties to other firms help determine whether directors have the appropriate knowledge and perspective to contribute to strategic decision making, our empirical approach does not permit a direct examination of the cognitions that mediate these relationships.
 This limitation is shared by most empirical research in the top management team literature, which is also largely rooted in a sociocognitive perspective (Finkelstein & Hambrick, 1996; Hambrick & Mason, 1984).
 In addition, although we did measure the degree to which directors advised and monitored management, we were unable to assess the quality of the advice given or the extent to which it ultimately improved firm performance.
 Finally, the findings of this study may be less applicable to relatively small firms, whose directors tend to have fewer board appointments at other companies.
 <!-- para 11 -->
+Future research directions.
 These limitations suggest several directions for future research.
 Perhaps most importantly, research is still needed that goes beyond our relatively direct measures of board behavior to gauge the strategic expertise and perspectives of corporate board members, assessing how cognitions mediate the effects of board ties on strategic decision making.
 For instance, researchers could examine whether directors who have strategically related board ties demonstrate more nuanced understanding of the requirements for implementing that strategy.
@@ -518,6 +539,7 @@ Finally, it should be noted that reciprocal board appointments are common in man
 However, because research in non-U.S. settings has emphasized the social rather than the strategic nature of reciprocal board appointments (e.g., Stokman, Zeigler, & Scott, 1985), there is an opportunity to extend the social psychological perspective developed in this study to research on corporate governance outside of the United States.
 For instance, given that there are markedly fewer restrictions on the types of board connections and the contents of communication flows between managers of different firms in European countries, the strategic context of board appointments may be even more influential there.
 <!-- para 15 -->
+Managerial implications.
 In addition to their theoretical importance, the results of this research, have significant implications for both public policy and business practice.
 For example, there is growing external stakeholder pressure for the U.S. government to legislate constraints on board member appointments that go beyond the existing Clayton Act (Section 8) prohibition of certain kinds of interlocking directorates among direct competitors (BusinessWeek, 1997).
 Indeed, the results presented here confirm that boards are less likely to be effective advisors and monitors when their members are appointed to the boards of other firms that are strategically irrelevant to the needs of a focal firm.

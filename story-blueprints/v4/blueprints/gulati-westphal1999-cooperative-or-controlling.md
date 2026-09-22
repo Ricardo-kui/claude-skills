@@ -20,7 +20,7 @@ reading_scope:
   source_records:
     - "PDM slices: gulati_westphal_1999_cooperative_or_controlling.pdm/sections/introduction.md, theory.md, methods.md, results.md, discussion.md (read in attention order: intro+theory first, then results+discussion payoff checks, methods as alignment audit; fulltext.text-only.md not read — slices exist)"
     - "PDM root: gulati_westphal_1999_cooperative_or_controlling.pdm.yaml (four verified distill_track identities + cross_section_identity C1-C5, coherence ok; methods/results slices intentionally overlap on the estimation-strategy argument, Anand/Gulati-1999 precedent; writeback_verification PASS 69/FAIL 0)"
-    - "Sentence archive: story-blueprints/v4/rhetoric-moves/sources/gulati_westphal_1999_cooperative_or_controlling.sentences.md"
+    - "Sentence archive: story-blueprints/v4/rhetoric-moves/sources/gulati_1999_cooperative_or_controlling_the_effects_of_ceo_bo.sentences.md"
 analysis_focus:
   primary: [introduction, theory]
   supporting: [results, discussion]

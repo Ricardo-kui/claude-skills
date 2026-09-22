@@ -78,6 +78,10 @@ when_to_use: "用户给一篇完整论文要求整篇蒸馏/整篇学习时；�
    （逐句一行 + `<!-- para N -->` 段落溯源，`--clean` **不删**它）。这是跨源合成的
    原料池，不是中间产物；当用户目标含叙事/语言学习（而非仅结构）时主循环应默认加
    此 flag，L4 不清理该归档。
+   **句档口径（2026-09-20 修复）**：默认 `--min-sentence-chars 0` 保留全部句子
+   （faithful inventory，供统计基线用；句长分布不再被 <40 字符过删污染）；
+   需要旧合成模式过滤时显式传 `--min-sentence-chars 40`。归档 frontmatter 的
+   `sentence_filter: min_chars=N` 自描述生成口径。
 2. **L1 分节蒸馏分发（子代理）**。按用户范围（默认 4 节全跑）以 **2+2 波次并行**分发
    （第一波 intro+theory，完成后再发 methods+results；实测零限流；
    发射前先跑金丝雀探针——见 `references/l1-subagent-protocol.md` 节奏与限流；

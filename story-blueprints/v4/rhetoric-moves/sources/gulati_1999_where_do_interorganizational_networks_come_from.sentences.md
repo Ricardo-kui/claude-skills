@@ -1,14 +1,15 @@
 ---
 type: sentences-archive
-citekey: "gulati_1999_where_do_interorganizational_networks"
-source_md: "D:\OneDrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Gulati等-1999-Where Do Interorganizational Networks Come From.md"
-created: 2026-09-06
+citekey: "gulati_1999_where_do_interorganizational_networks_come_from"
+source_md: "D:\Onedrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Gulati等-1999-Where Do Interorganizational Networks Come From.md"
+created: 2026-09-20
+sentence_filter: min_chars=0
 note: >-
   跨源合成原料库存（distill-paper-exemplar L0 --keep-sentences 生成）。只读；
   语料句子可直接采用；替换来源特异性内容（专名/数字/系数/表号）。
 ---
 
-# gulati_1999_where_do_interorganizational_networks 句子库存
+# gulati_1999_where_do_interorganizational_networks_come_from 句子库存
 
 ## introduction
 <!-- para 2 -->
@@ -23,12 +24,14 @@ Alliances are a novel form of voluntary interorganizational cooperation that inv
 While strategic alliances can be a means to manage environmental uncertainty, there is also considerable uncertainty associated with entering those cooperative ties.
 Imperfect information about potential partners raises search costs and the risk of exposure to opportunistic behavior (Gulati 1995a; Gulati & Singh 1998).
 Thus, while exogenous factors may suffice to determine whether an organization should enter alliances, they may not provide enough cues to decide with whom to build those ties.
+Where do organizations find those cues?
 And how do the particular cues they use shape the formation of interorganizational networks?
 <!-- para 4 -->
 These are the two questions addressed in this paper.
 We propose that to reduce the search costs and to alleviate the risk of opportunism associated with strategic alliances, organizations tend to create stable, preferential relationships characterized by trust and rich exchange of information with specific partners (Dore 1983; Powell 1990).
 Over time, these “embedded” relationships (Granovetter 1985) accumulate into a network that becomes a growing repository of information on the availability, competencies, and reliability of prospective partners (Kogut, Shan & Walker 1992; Gulati 1995b; Powell, Koput & Smith
 <!-- para 5 -->
+Doerr 1996).
 The more the emerging network internalizes information about potential partners, the more organizations resort to that network for cues on their future alliance decisions, which are thus more likely to be embedded in the emerging network.
 These new embedded alliances, in turn, further increase the informational value of the network, enhancing its effect on subsequent alliance formation.
 In this iterative process, new partnerships modify the previous alliance network, which then shapes the formation of future cooperative ties.
@@ -41,16 +44,14 @@ We test this model using longitudinal data on interorganizational strategic alli
 The quantitative data collection and the empirical analysis for this study were preceded by extensive interviews with managers involved in alliance decisions at a variety of organizations.
 To obtain a preliminary understanding of the factors associated with the decision to enter new alliances, we conducted exploratory, open-ended field interviews with 153 managers actively involved in alliance decisions in 11 large multinational corporations.
 This fieldwork enabled us to ground our claims about the role of the existing alliance network as a source of information for organizational decision-makers, as well as to identify some of the specific mechanisms through which they tap that information.
-
-## theory
-<!-- para 2 -->
+<!-- para 8 -->
 Strategic alliances are a vivid example of voluntary cooperation in which organizations combine resources to cope with the uncertainty created by environmental forces beyond their direct control.
 These alliances are organized through a variety of contractual arrangements, ranging from equity joint ventures to arm's-length contracts (Gulati 1995a; Gulati & Singh 1998).
 Partly as a response to the growing uncertainty that characterizes the international business arena, the number of interorganizational alliances has grown at an unprecedented rate in the last fifteen years.
 This proliferation has occurred across a wide array of industries and both within and across geographical boundaries.
 Empirical evidence suggests that the number of interorganizational alliances prior to 1980 was very small, but there has been a virtual explosion since that time (Hergert & Morris 1988; Anderson 1990).
 The rapid growth of such ties provides a unique context in which to study the emergence and the evolution of an interorganizational network from the early stages of its development to the period in which alliances became a more established form of cooperation among firms (Gulati 1998a).
-<!-- para 3 -->
+<!-- para 9 -->
 Despite their explosive growth, strategic alliances are associated with a variety of risks and pitfalls that result in considerable uncertainty with the decision to enter such ties.
 This is further compounded by the global setting of disparate firms from a wide range of national origins in which a good number of these alliances take place (Kogut 1988; Bleeke & Ernst 1991; Doz 1996).
 This uncertainty stems from two main sources.
@@ -61,18 +62,19 @@ Yet, organizational needs and capabilities are multifaceted and ambiguous.
 Accurate information on needs and capabilities of other organizations may be difficult to obtain before actually initiating a relationship.
 In most cases, it may require access to confidential information that would not be revealed outside an established partnership.
 Such a paucity of information is even more significant between firms from different geographic origins.
-<!-- para 4 -->
+<!-- para 10 -->
 The second source of uncertainty that affects strategic alliances stems from the paucity of information about the reliability of the potential partners, whose behavior is a key factor in the success of an alliance (Gulati 1995a, 1995b).
 Such behavioral uncertainty is intrinsic to voluntary cooperation; indeed, it plays a central role in Coase's (1937) theory of the firm and in the transaction-cost perspective (Williamson 1985).
 Organizations entering alliances face considerable moral hazard concerns because of the unpredictability of the behavior of partners and the likely costs to an organization from opportunistic behavior by a partner, if it occurs (Kogut 1989; Doz, Hamel & Prahalad 1989).
 A partner organization may either free ride by limiting its contributions to an alliance or may simply behave opportunistically, taking advantage of the close relationship to use resources or information in ways that may damage the partner's interests.
-<!-- para 5 -->
+<!-- para 11 -->
 In addition, rapid and unpredictable changes in the environment may lead to changes in an organization’s needs and its orientation toward ongoing partnerships (MacIntyre 1981).
-<!-- para 6 -->
+<!-- para 12 -->
 The paucity of reliable information about the capabilities, the needs, and the behavior of potential partners create a significant informational hurdle for organizations that consider entering strategic alliances.
 Yet, the explosive growth of strategic alliances suggests that organizations are able to overcome such hurdles and enter alliances.
+How do they do it?
 And what consequences does their behavior have for the social context in which new strategic alliances take place?
-<!-- para 9 -->
+<!-- para 15 -->
 Interdependence is the most common explanation for the formation of strategic alliances.
 A long stream of research suggests that organizations enter ties with other organizations in response to the challenges posed by the interdependencies that shape their common environment (e.g., Aiken & Hage 1968; Pfeffer & Salancik 1978; Aldrich 1979; Galaskiewicz 1982; Burt 1983).
 Broadly defined, environmental dependence encompasses two sets of considerations: resource procurement and uncertainty reduction (Galaskiewicz 1985).
@@ -81,17 +83,17 @@ Interorganizational cooperation is thus a means by which organizations manage th
 Oliver (1990) reviewed the literature on such exogenous drivers of interorganizational relations and presented six broad categories of environmental contingencies that stimulate such ties.
 One of these types of contingencies — necessity — prompts ties mandated by legal or regulatory requirements.
 However, the remainder categories — asymmetry, reciprocity, efficiency, stability, and legitimacy — lead to cooperative ties that are voluntarily initiated by the organizations to address specific needs resulting from their external interdependence.
-<!-- para 10 -->
+<!-- para 16 -->
 Strategic alliances are an important form of voluntary interorganizational ties.
 Organizations build alliances for a variety of reasons that include the need to share the costs and risks of technology development or large scale projects, to develop existing markets or penetrate new ones, and to pursue resource specialization strategies (Mariti & Smiley 1983; Glaister & Buckley 1996).
 Such objectives make organizations interdependent with other organizations that may have the capabilities and the resources to assist them in meeting their specific needs.
-<!-- para 11 -->
+<!-- para 17 -->
 Other things being equal, the higher the interdependence between two organizations, the higher their incentive to combine their resources and capabilities through an alliance.
 Building on the insights of this research tradition, we expect tie formation between organizations to be a function of the level of interdependence between them:
-<!-- para 12 -->
+<!-- para 18 -->
 > [!hypothesis]
 > $H_{1}$: The probability of a new alliance between two organizations increases with the level of interdependence between those organizations.
-<!-- para 13 -->
+<!-- para 19 -->
 Interdependence may be a necessary condition for organizations to enter alliances.
 In most cases, however, interdependence may not be sufficient to account for the formation of an alliance between two specific firms.
 Indeed, not all opportunities for cooperation between interdependent organizations actually materialize in alliances.
@@ -99,24 +101,24 @@ This has not posed major difficulty for studies conducted at aggregate levels of
 Yet, this approach masks the considerable heterogeneity of available information on prospective partners across organizations, which may influence the formation of ties between specific organizations without necessarily affecting aggregate industry trends.
 Although resource-dependence theory recognizes an “enactment” process that mediates between environmental demands and organizational action (Pfeffer & Salancik 1978: 71ff), most of this research implicitly assumes that decision-makers have adequately identified the sources of environmental uncertainty as well as the partners that would help their organizations to reduce that uncertainty.
 While this assumption is tenable at aggregate levels of analysis, it is difficult to sustain when examining alliances between specific pairs of organizations.
-<!-- para 14 -->
+<!-- para 20 -->
 An organization confronted with the need to build an alliance to cope with an uncertain environment faces another type of uncertainty resulting from the identification of an appropriate alliance partner.
 Such uncertainty stems from the paucity of information about the true capabilities, the needs, and the behavior of potential alliance partners.
 While interdependence may help an organization to orient the search for an adequate alliance partner, it cannot offer sufficient cues to determine with whom it should build such an alliance.
-<!-- para 16 -->
+<!-- para 22 -->
 If interdependence alone cannot offer sufficient cues for organizations to cooperate with one another, how do they decide with whom to build strategic alliances?
 Building on a growing body of research (see Powell & Smith-Doerr 1994 for a review) and on our own fieldwork, we shall argue that organizations address the potential hazards associated with building alliances by relying on information provided by existing interorganizational networks.
 We propose that organizational decision-makers that play a crucial role in formation of new strategic alliances rely on the network of past partnerships to guide their future alliance decisions.
 In other words: organizations alleviate the uncertainty implicit in forming strategic alliances by creating ties embedded in the social structure of prior interorganizational alliances.
 The creation of new ties, in turn, contribute to the subsequent development of that same network, enhancing its capacity to shape subsequent alliance decisions.
-<!-- para 17 -->
+<!-- para 23 -->
 Although rooted in classical sociological theory, the idea that economic action is embedded in social networks was revitalized by Granovetter (1985) in his manifesto for a new economic sociology.
 According to Granovetter (1985: 490), the micro-foundations of embedded economic action rest on “the widespread preference for transacting with individuals of known reputation” and for resorting to “trusted informants” who have dealt with a potential partner and found this partner trustworthy, or, even better, to “information from one’s own past dealings with that person.” A similarly rich exchange of information occurs across organizational boundaries (Dore 1983; Eccles 1981; Powell 1990; Romo & Schwartz 1995).
 Personal relationships among key individuals have played a crucial role in producing trust between organizations in Japanese industrial groups (Lincoln, Gerlach & Ahmadjian 1996) and in contractual relationships (Macaulay 1963; Bradach and Eccles 1989).
 Closer to our concerns, personal ties are important for the formation and success of strategic alliances (Ring & Van de Ven 1992; Doz 1996).
 Beneath the formalities of contractual agreements, multiple informal interpersonal relationships emerge across organizational boundaries, which facilitate the active exchange of information and the production of trust that foster interorganizational cooperation (Gulati 1995a; Walker, Kogut & Shan 1997; Zaheer, McEvily & Perrone 1998).
 While organizations — especially large organizations — are not perfectly porous when it comes to sharing information, our fieldwork confirmed that key organizational decision-makers are typically aware of strategically important cooperative arrangements in their industry, especially of those entered by their own firm.
-<!-- para 18 -->
+<!-- para 24 -->
 Most organizations are embedded in a variety of interorganizational networks, such as board interlocks, trade associations, and R&D ventures.
 Scholars have suggested that social networks can be influential in providing actors with access to timely information, and also referrals about other actors in the network (Burt 1992).
 At the interorganizational level, the network of prior alliances has become an important source of information and referrals for organizations (Kogut, Shan & Walker, 1992; Gulati, 1995b).
@@ -124,7 +126,7 @@ This insight was strongly confirmed in our own fieldwork.
 More specifically, the managers highlighted the importance of the network of prior alliances as a source of trustworthy information about the availability, capabilities and reliability of potential partners.
 In the words of one of the managers interviewed, “Our network of [prior alliance] partners is an active source of information for us about new deals [alliances].
 We are in constant dialogue with many of our partners and this allows us to find many new opportunities with them and also with other organizations out there.”
-<!-- para 19 -->
+<!-- para 25 -->
 The information that flows through the alliance network is not only trustworthy, but also timely.
 This, as another manager put it, is critical for entering strategic alliances: “In our business timing is everything.
 And so, even for alliances to happen the confluence of circumstances have to be at the right time.
@@ -133,7 +135,7 @@ Our partners from past alliances are one of our most important sources of timely
 Existing network research and insights from our own fieldwork suggest that this information originates from their previous direct alliances, from their indirect alliance ties through third parties, or from the reputation that results from the potential partner’s position in the network of pre-existing alliances.
 Each of these sources of information is related to specific network mechanisms that shape the creation of new embedded interorganizational ties.
 We refer to these mechanisms as relational, structural, and positional embeddedness respectively.
-<!-- para 20 -->
+<!-- para 26 -->
 Relational embeddedness highlights the effects of cohesive ties between social actors on subsequent cooperation between those actors.
 Cohesive ties play a prominent explanatory role in classical sociological analysis of social solidarity and cooperation (e.g., Durkheim 1933; 1951).
 Prior cohesive ties between two organizations provide channels through which each partner can learn about the competencies and the reliability of the other.
@@ -141,20 +143,21 @@ Cohesiveness amplifies trust and diminishes the uncertainty associated with futu
 Cohesive ties may also prompt organizations to become aware of new opportunities for cooperation that would be difficult to identify outside of a close relationship.
 This facet of cohesive relationships was emphasized by one of the strategic alliance managers we interviewed: "They [our partners] are familiar with many of our projects from their very inception, and if there is potential for an alliance we discuss it.
 Likewise, we learn about many of their product goals very early on, and we actively explore alliance opportunities with them." Thus, a history of cooperation can become a unique source of information about the partner's capabilities and reliability and increases the probability of the two organizations forming new alliances with each other.
-<!-- para 21 -->
+Consequently:
+<!-- para 27 -->
 > [!hypothesis]
 > $H_{2}$: The probability of a new alliance between two organizations increases with the number of prior direct alliances between those organizations.
-<!-- para 22 -->
+<!-- para 28 -->
 Structural embeddedness captures the impact of the structure of relations around actors on their tendency to cooperate with one another (Granovetter 1992).
 The frame of reference shifts from the dyad to the triad, while the focus of analysis shifts from direct communication between actors to indirect channels for information and reputation effects. [^1] Organizations tied to a common partner can utilize reliable information about each other from that partner (Baker 1990; Gulati 1995b).
 When two organizations share common ties, it can also indicate that both are regarded as suitable and trustworthy by the same organizations.
 Also, sharing common ties with a potential partner may signal that the partner can cooperate with the same kind of organizations with which the focal organization has been cooperating.
 Finally, common third-party ties can create a reputational lock-in whereby good behavior is ensured through a concern for local reputation.
 Any bad behavior by either partner may be reported to common partners, which in turn serves as an effective deterrent for both (Raub & Weesie 1990; Burt & Knez 1995).
-<!-- para 23 -->
+<!-- para 29 -->
 Referrals, and their associated reputation effects, were explicitly mentioned in several of our field interviews as an important mechanism through which their organizations learned about reliable partners.
 In the words of one of the managers: “In some cases we realize that perhaps our skills don’t really match for a project, and our partner may refer us to another organization about whom
-<!-- para 24 -->
+<!-- para 30 -->
 2 Although there is no explicit mention by Granovetter (1992), the notion of structural embeddedness is related to network models of structural equivalence, according to which two actors equally tied to the same third parties are “structurally equivalent” (Lorrain & White 1971; White, Boorman & Breiger 1976; Burt 1976).
 There has been considerable debate about whether structural equivalence operates through the indirect effect of cohesive ties to common third parties (Alba & Kadushin 1976; Alba & Moore 1983; Friedkin 1984), or through “symbolic role playing” and competition between equivalent actors (Burt 1982; 1987).
 The essence of the debate is whether the mechanisms behind the impact of indirect ties on behavior are substantially different from those behind the effect of direct ties.
@@ -162,13 +165,14 @@ Yet, as Borgatti & Everett (1994: 28-29) have suggested, the notion of proximity
 In a similar vein, Mizruchi (1993:280) suggested that deciding whether the effects of structural equivalence on behavior operate through the similar socializing pressures of common third parties or through symbolic role playing is practically impossible without knowledge of the motives that underlie the actors’ behavior.
 It is worth noting, however, that a mechanism that stresses competition between structurally equivalent actors (e.g., Burt 1987) would predict a smaller probability of cooperation between actors tied to the same third parties, whereas a mechanism that stresses the increased trust and information between those with common third parties predicts a greater probability of cooperation between the actors (e.g., Coleman 1990).
 Our focus on the increased trust and information effects of third parties is congruent with our prediction that shared partners increase the probability of cooperation between organizations.
-<!-- para 25 -->
+<!-- para 31 -->
+we were unaware...
 An important aspect of this referral business is of course about vouching for the reliability of that organization.
 Thus, if one of our longstanding partners suggests one of their own partners as a good fit for our needs, we usually consider it very seriously." Thus,
-<!-- para 26 -->
+<!-- para 32 -->
 > [!hypothesis]
 > $H_{3}$: The probability of a new alliance between two organizations increases with the number of prior indirect alliances between those organizations.
-<!-- para 27 -->
+<!-- para 33 -->
 Positional embeddedness captures the impact of the positions organizations occupy in the overall structure of the alliance network on their decisions about new cooperative ties.
 Positional embeddedness is rooted in network models of equivalence and centrality that capture the “roles” actors occupy in a system, irrespective of the specific alters involved in playing those roles (Winship & Mandel 1983; Faust 1988; Borgatti & Everett 1994).
 As a mechanism that influences alliance formation, positional embeddedness goes beyond proximate direct and indirect ties and highlights the informational benefits that ensue from particular positions in the network.
@@ -177,43 +181,46 @@ The information advantages resulting from network centrality have been a recurre
 Social cognition studies also suggest that central actors have a more accurate representation of the existing network (Krackhardt 1990).
 Central organizations have a larger “intelligence web” through which they can learn about collaborative opportunities, hence lowering their level of uncertainty about partnerships (Gulati 1998b; Powell, Koput & Smith-Doerr 1996).
 Therefore, the more central an organization’s network position, the more likely it is to have better information about a larger pool of potential partners in the network.
-<!-- para 28 -->
+<!-- para 34 -->
 The information advantages from centrality in networks are complemented by the higher visibility of central organizations, which enhances their attractiveness to potential partners.
 Because network centrality is a direct function of organizations' involvement in strategic alliances, it can also be a signal of their willingness, experience, and ability to enter such partnerships.
 The signaling property of network positions is particularly important in uncertain environments, because it introduces systemic reputational differences among organizations that extend beyond their immediate circle of direct and indirect ties (Podolny 1993; Han 1994; Podolny & Stuart 1995). [^2] The information benefits that
-<!-- para 29 -->
+<!-- para 35 -->
 3 Network position has been often associated with the more traditional sociological concepts of “role” and “status” (Lorrain & White 1971; Burt 1982; Faust 1988).
 The notion of “role” typically evokes a relatively defined set of expected behaviors toward types of other actors, whereas “status” refers to a series of observable characteristics result from occupying a prominent network position were recognized by a manager we interviewed reflecting on the attractiveness of his firm as alliance partner: “Through our vastly successful technology partnerships program we have built ourselves a reputation in the industry for being an effective and reliable alliance partner.
 Today, we are pursued by other firms to enter alliances much more frequently than we pursue potential partners.”
-<!-- para 30 -->
+<!-- para 36 -->
 If central firms have greater access to information and higher visibility than other organizations, then, other things being equal, interorganizational ties should be more common between organizations that occupy central positions in the emerging interorganizational network.
-<!-- para 31 -->
+Thus,
+<!-- para 37 -->
 > [!hypothesis]
 > $H_{4}$: The probability of a new alliance between two organizations increases with the combined alliance network centrality of those organizations.
-<!-- para 32 -->
+<!-- para 38 -->
 Organizations may seek to enhance their own visibility and attractiveness as potential partners by forming new ties with central players in the alliance network.
 Since the network position of an organization's partners enhances its own access to information and attractiveness to future partners, it will have a tendency to seek central partners.
 Central organizations, however, may not have an incentive to accept peripheral players, since they may add little to (or, worse, may damage) their own attractiveness.
 Furthermore, if network position is a signal of unobserved attributes that determine an organization's attractiveness as a potential alliance partner, peripheral organizations may be perceived by others to have little to offer substantively.
 This does not preclude the possibility that peripheral organizations may at times be able to enter alliances with central firms.
 Special circumstances — such as those resulting from the need to master a new technology — may prompt a central organization to cooperate with a peripheral one that controls such a technology, we expect that the probability of cooperation will increase with the similarity in alliance network centrality between the potential partners.
-<!-- para 33 -->
+Therefore:
+<!-- para 39 -->
 > [!hypothesis]
 > $H_{5}$: The probability of a new alliance between two organizations increases with the similarity in alliance network centrality between those organizations.
-<!-- para 34 -->
+<!-- para 40 -->
 The prediction of this hypothesis corresponds to the tendency toward “structural homophily” that exist under conditions of uncertainty (Podolny 1994; Popielarz & McPherson 1995).
-<!-- para 35 -->
+<!-- para 41 -->
 associated with a particular role (Linton 1936; Merton 1957; Nadel 1957).
 Network theory suggests that, because an actor's (organization's) role and status are ultimately based on its affiliations and patterns of interaction, they can, and should be, gauged from the position this actor occupies in the networks defining the social system.
-<!-- para 37 -->
+<!-- para 43 -->
 Our hypotheses on alliance formation propose that organizations build alliances to address specific needs and that their choice of partners are shaped by three specific network embeddedness mechanisms: relational, structural, and positional.
 In building new alliances, organizations also contribute to the formation of the network structure that shapes future partnerships.
 Observed over time, this dynamic between embedded organizational action and the network structure that results from that action propels the progressive structural differentiation of the interorganizational network.
 We define structural differentiation as an emergent systemic property that captures the extent to which actors (organizations) come to occupy an identifiable set of network positions, each of them characterized by a distinctive relational profile.
 As we argued before, the position an organization occupies in an alliance network is a signal of its willingness, experience, and ability to enter partnerships.
 The higher the structural differentiation of an emerging network, the easier it is for organizations to distinguish among other organizations in terms of their relational profiles, and the more the network structure can be considered to be a repository of valuable information on potential alliance partners.
-<!-- para 38 -->
+<!-- para 44 -->
 This discussion suggests a linear relationship between the level of structural differentiation of the emerging alliance network and the extent of information contained in that network.
+There is, however, an important caveat.
 While a network where all or most organizations have a similar relational profile would offer little guidance to a decision-maker, the opposite extreme of a network where each organization has a truly unique relational profile may be equally uninformative.
 This is particularly significant for the information that originates in the position an organization occupies in the structure of the alliance network.
 If every organization occupies a unique structural position, it would be impossible to infer the behavior of any particular organization from the expected behavior for other organizations that occupy that position in the system.
@@ -223,48 +230,50 @@ Studies of mature social structures, however, suggest that the structural differ
 Instead, mature structures typically display a set of stable, self-reproducing positions occupied by actors with similar network profiles (White 1981; Burt 1988).
 In such structures, the level of structural differentiation remains practically constant over time.
 Barring exogenous shocks, the structural differentiation of alliance networks may similarly taper off as the social structure of the interorganizational network defined by that network reaches a mature state.
-<!-- para 39 -->
+<!-- para 45 -->
 The effects of structural differentiation are conceptually distinct from the legitimating effects typically associated with growing network density (Hannan & Freeman 1989; Scott 1995).
 Although structural differentiation is likely to grow with the number of ties in the network, it is distinct insofar as it depends on the specific distribution of those new ties, not merely on their number.
 The density of ties in a network may provide organizations with information about the pervasiveness of a new form of cooperation, thus helping them to address concerns on the legitimacy of this course of action, but it offers no guidance as to which specific organizations could be worthy partners.
 Thus, while network density affects the availability of information in a system (Blau 1977), it does not shed light on potential differences in the effective access to that information, nor on how the pattern of ties is in itself a form of information.
-<!-- para 40 -->
+<!-- para 46 -->
 We expect that the structural differentiation of the emerging alliance network will influence new alliance formation both directly and through its interaction with some of the mechanisms that drive alliance formation.
 At the system level, the additional information introduced by the progressive structural differentiation of an emerging network lowers the level of systemic uncertainty faced by organizations, which directly affects the propensity of organizations to enter new ties.
-<!-- para 41 -->
+Thus,
+<!-- para 47 -->
 > [!hypothesis]
 > $H_{6}$: The probability of a new cooperative tie between any two organizations increases with the level of structural differentiation in the interorganizational network.
-<!-- para 42 -->
+<!-- para 48 -->
 While structural differentiation highlights considerations of system-level information, exogenous resource concerns and networks embeddedness focus at the more proximate level of organizations.
 Given the shared focus of these factors on information availability at both the system and the organization levels, we expect that an increase in the extent of structural differentiation is likely to moderate the relative influence of interdependence and embeddedness factors on the creation of new ties.
 In early periods, when a network is relatively undifferentiated and thus likely to contain limited information about potential partners, organizations may still be prompted to cooperate by exogenous pressures that influence their interests.
 Consequently, exogenous factors are likely to be the primary driver of tie formation in the early stages of a network.
 The growing differentiation of a network enables it to channel increasing amounts of information about potential partners.
 As structural differentiation increases, exogenous factors are likely to have a diminishing influence on the formation of new ties.
-<!-- para 43 -->
+<!-- para 49 -->
 Thus, we expect the structural differentiation of the network to have a negative moderating effect on the influence of exogenous factors on tie formation:
-<!-- para 44 -->
+<!-- para 50 -->
 > [!hypothesis]
 > $H_{7}$: The effect of interdependence on the formation of new alliances between organizations decreases with the level of structural differentiation of the interorganizational network.
-<!-- para 45 -->
+<!-- para 51 -->
 We also expect the structural differentiation of the network to moderate the influence of embeddedness on tie formation, although not all embeddedness mechanisms are likely to be moderated by the growing differentiation of the network.
 The information organizations can obtain through previous direct dealings with other organizations (relational embeddedness) or from common third alliance parties (structural embeddedness) is readily available to a decision-maker, and thus it is not necessarily dependent on the larger network in which these dyadic or triadic relations exist.
 The access to such information depends on the ability of proximate ties to act as conduits of fine-grained information about the competencies and cooperative behavior of other organizations, a property that is not contingent on the stage of development of the entire network.
 Therefore, the impact of relational and structural embeddedness mechanisms is not necessarily contingent on the level of structural differentiation in the overall network. [^3]
-<!-- para 46 -->
+<!-- para 52 -->
 While the information that results from prior ties to a prospective partner or from common third parties is immediately available to organizations, this is not the case with the information contained in the position their potential partners occupy in the emerging alliance network.
 The effectiveness of an organization's network position as a signal of unobservable qualities of this organization depends on the development of the overall network in which the varying involvement of organizations in partnerships becomes apparent.
 The relative scarcity of ties at early stages of the network makes these differences far from apparent.
 The increase in structural differentiation corresponds to an increase of the differences in alliance involvement across organizations, which alters their relative visibility in the overall network.
 Thus, the informational value of the position of organizations in a social network is contingent on the level of structural differ-
-<!-- para 47 -->
+<!-- para 53 -->
 4 Our reluctance to suggest that the effects of relational or structural embeddedness are contingent on structural differentiation does not rule out alternative mechanisms through which the growth of the network may alter the effect of these factors, and perhaps lead to an empirically observable relationship.
 The sheer growth in network density could enhance the legitimacy of partnerships, thus making organizations more eager to build ties.
 Insofar as we expect organizations to prefer embedded ties, the likelihood of entering new ties with previous partners or with common third parties may increase with the growing density of the network.
 Since density is a likely correlate of structural differentiation, one may still observe a growing impact of relational embeddedness as differentiation increases, but this effect is likely to be spurious from the standpoint of our model.
-<!-- para 48 -->
+<!-- para 54 -->
+entiation of that network.
 Consequently, we expect the effect of organizations' positional embeddedness on tie formation to increase with the level of structural differentiation of the network:
-<!-- para 49 -->
+<!-- para 55 -->
 > [!hypothesis]
 > $H_{8}$: The effect of positional embeddedness on the formation of new alliances between organizations increases with the level of structural differentiation of the interorganizational network.
 
@@ -277,6 +286,7 @@ We also checked with multiple industry experts to ensure that our panels include
 This design led to the inclusion of 62 organizations in new materials, 52 in automotive products, and 52 in industrial automation.
 Of these organizations, 54 were American, 66 were Japanese, and 46 were European.
 <!-- para 4 -->
+**FIGURE 1.
 The Endogenous Dynamic of Interorganizational Networks**
 <!-- para 6 -->
 For each organization, we collected financial data for each year between 1980 and 1989 from Worldscope volumes, which list detailed information about prominent organizations in a wide range of sectors.
@@ -296,8 +306,7 @@ To make sure that these classifications were correctly recorded, we cross-checke
 Information on the alliances formed in the three panels of organizations was derived from a much larger and more comprehensive data set that includes information on over 2,400 alliances formed by American, European, and Japanese organizations in the three focal sectors between 1970 and 1989.
 More than half the data came from the Cooperative Agreements and Technology Indicators (CATI) database collected by researchers at the University of Maastricht.
 We collected additional alliance data using numerous other sources, including industry reports and industry-specific articles reporting alliances.
-For the automotive industry, these included Automotive News, Ward's Automotive Reports, U.S.
-Auto Industry Report, Motor Industry of Japan, and the Japanese Auto Manufacturers Forum; for the industrial automation sector, Managing Automation (1988-1989).
+For the automotive industry, these included Automotive News, Ward's Automotive Reports, U.S. Auto Industry Report, Motor Industry of Japan, and the Japanese Auto Manufacturers Forum; for the industrial automation sector, Managing Automation (1988-1989).
 For the new materials sector, reports from the Office of Technology Assessment and the Organization for Economic Cooperation and Development were used; and for all sectors, we used Predicast's Funk and Scott Index of Corporate Change.
 In all instances, only alliances that had actually been formed were recorded, reports of probable alliances being excluded.
 To our knowledge, these are the most comprehensive data on alliances within each focal sector in both depth and duration of coverage.
@@ -357,6 +366,18 @@ Automotive |  | (Mean network density: ${0.289}^{a}$ |  |  |  |
 | Mean | 1.020 | .572 | .153 | .000 |  |
 | N | 6 | 11 | 17 | 18 |  |
 | Rel. ${}^{d}$ | 99.29 | 90.92 | 95.99 | 100.00 |
+<!-- para 24 -->
+Center
+<!-- para 25 -->
+Periphery
+<!-- para 26 -->
+Semi-periphery
+<!-- para 27 -->
+Isolates a
+<!-- para 28 -->
+Automotive
+<!-- para 30 -->
+Industrial Automation
 <!-- para 31 -->
 Position | 1 | 2 | 3 | 4 | Centr. |
 | --- | --- | --- | --- | --- | --- |
@@ -367,6 +388,10 @@ Position | 1 | 2 | 3 | 4 | Centr. |
 | Mean | .510 | .221 | .080 | .000 |  |
 | N | 3 | 15 | 14 | 20 |  |
 | Rel. | 99.97 | 89.79 | 99.90 | 100.0 |
+<!-- para 32 -->
+Industrial Automation
+<!-- para 34 -->
+New Materials
 <!-- para 35 -->
 Position | 1 | 2 | 3 | 4 | Centr. |
 | --- | --- | --- | --- | --- | --- |
@@ -492,6 +517,7 @@ For our longitudinal panel of pairs of organizations from 1981-89, we operationa
 ***Structural embeddedness.*** This construct indicates the extent to which a given pair of organizations shared common partners from past ties.
 For each dyad-year record, we computed the number of partners shared by the two organizations in the dyad as a result of their alliances in the previous five years.
 To differentiate structural embeddedness from relational embeddedness, we set common ties to zero if the members of a dyad sharing common ties had entered at least one previous direct alliance with one another (cf.
+Mizruchi 1992: 126).
 <!-- para 61 -->
 ***Positional embeddedness.*** This construct indicates the extent to which the organizations in a dyad occupy similar or different network position.
 We first computed a measure for the position of each organization and then used those as inputs to compute dyadic values.
@@ -566,6 +592,7 @@ $$ \mathrm{p}_{ij}\left(\mathrm{t}\right)=\Phi\left(\mathrm{a}+\mathrm{b}\mathrm
 12 It is important to note that this approach is distinct from that using the class of models known as network effects or endogenous feedback, which is familiar to network analysts (Marsden & Friedkin 1993).
 The postulated network effects here result from a lagged network of cumulative prior ties until the previous year, rather than being linked to network elements in the same period.
 <!-- para 77 -->
+**TABLE 1.
 Definitions and Predicted Signs of Variables**
 <!-- para 78 -->
 Variable | Definition | Predic-tion |
@@ -587,7 +614,10 @@ Variable | Definition | Predic-tion |
 | Performance | Ratio of performance (ROA) of lesser to greater firm value | NP |
 | Solvency | Ratio of solvency (long-term debt) of lesser to greater firm value | NP |
 | Liquidity | Ratio of liquidity (quick ratio) of lesser to greater firm value | NP
+<!-- para 79 -->
+NP = No Prediction
 <!-- para 80 -->
+**TABLE 2.
 Descriptive Statistics and Correlation Matrix**
 <!-- para 81 -->
 Variables | Mean | SD | Low | High | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 |
@@ -625,6 +655,8 @@ Performance | 0.35 | 0.29 | 0.13 | 0.90 | .00 | -.09 | -.03 | .00 | .00 | .00 | 
 Liquidity | 0.24 | 0.19 | 0.07 | 0.88 | .01 | -.02 | .00 | .02 | .03 | .00 | .07 | -.06 | .04 | .00 | .013 | .03 | .00 | .38 | .17 | - |  |
 | 17.
 Solvency | 0.64 | 0.22 | 0.02 | 0.80 | .00 | -.05 | .09 | .01 | .03 | .00 | .16 | .00 | -.03 | .05 | -.05 | .04 | .05 | .05 | .00 | .08 | -
+<!-- para 82 -->
+Ranjay Gulati & Martin Gargiulo where:
 <!-- para 83 -->
 $p_{ij}(t) = \text{the probability at time } (t) \text{ of the announcement of an alliance between organizations } i \text{ and } j;$
 <!-- para 84 -->
@@ -652,6 +684,7 @@ The density of alliances in the prior time period has a positive impact on new a
 The introduction of alliance density in the model makes the effect of time non-significant, suggesting that most linear time-related factors are captured by cumulative industry density.
 It is worth noting that there was a significant improvement in the chi-square statistic once we introduced alliance density, which further suggests that density of the network may mediate the influence of time.
 <!-- para 4 -->
+**TABLE 3.
 Random Effects Panel Probit Estimates ( $\bullet p < .05$ )**
 <!-- para 5 -->
 Variable | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
@@ -695,6 +728,7 @@ Variable | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 | Solvency | .10 | .08 | .07 | .06 | .05 | .06 | .05 | .05 | .06 | .05 |
 |  | (.12) | (.11) | (.10) | (.11) | (.11) | (.11) | (.10) | (.10) | (.10) | (.10)
 <!-- para 6 -->
+on alliance formation.
 In separate analyses, we also introduced a variable capturing the number of alliances announced in the industry in the previous year; this variable, however, was not significant once we controlled for industry density and thus it was not included in the models.
 <!-- para 7 -->
 The variables for alliance history of each organization were insignificant across all models, indicating that the individual prior experience with alliances of each organization within a dyad did not make an alliance between them more likely.
@@ -893,6 +927,7 @@ We hope that this study will stimulate scholars to collect such data and expand 
 <!-- para 14 -->
 This paper proposed a model in which the formation of interorganizational networks is the evolutionary outcome of socially embedded organizational action.
 As such, our model provides a systematic link between the social structure of an organizational field — understood in network terms — and the behavior of organizations within the field.
+This link is bi-directional.
 On the one hand, the emerging social structure progressively shapes organizational decisions about whether and with whom to create new ties.
 On the other hand, this social structure is produced and reproduced by the (structurally shaped) decisions of individual organizations to establish relations with one another.
 Seeking an answer to the question in our title, we have shown that interorganizational networks result not only from exogenous drivers such as interdependence, but also from an endogenous evolutionary dynamic triggered by the very way in which organizations select potential partners.

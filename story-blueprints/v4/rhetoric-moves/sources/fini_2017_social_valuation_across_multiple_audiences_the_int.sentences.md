@@ -1,8 +1,9 @@
 ---
 type: sentences-archive
 citekey: "fini_2017_social_valuation_across_multiple_audiences_the_int"
-source_md: "D:\OneDrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Fini等-2017-Social Valuation across Multiple Audiences The Interplay of Ability and Identity Judgments.md"
-created: 2026-09-05
+source_md: "D:\Onedrive\Obsidian Vault\文献笔记库\01 导入\论文导入\Fini等-2017-Social Valuation across Multiple Audiences The Interplay of Ability and Identity Judgments.md"
+created: 2026-09-20
+sentence_filter: min_chars=0
 note: >-
   跨源合成原料库存（distill-paper-exemplar L0 --keep-sentences 生成）。只读；
   语料句子可直接采用；替换来源特异性内容（专名/数字/系数/表号）。
@@ -76,7 +77,7 @@ However, it is less clear how valuation plays out where a candidate faces multip
 For instance, firms are evaluated by consumers and by investors (Pontikes, 2012), artists operate under the scrutiny of both museums and art galleries (Ertug, Yogev, Lee, & Hedström, 2016), and academic researchers face academic peers as grant application evaluators and private sector firms as contract research clients (Bozeman & Gaughan, 2007).
 Appealing to external (non-peer) audiences will allow candidates to attract additional resources and build resilience by diversifying into different markets.
 Yet, different audiences also adhere to different valuation criteria which may pose challenges to audience diversification.
-(2016) showed that museums and galleries use different yardsticks for gauging an artist's reputation, and Durand and Hadida (2015) suggested that occupational communities punish actors for deviating from their canon of expectations.
+Ertug et al. (2016) showed that museums and galleries use different yardsticks for gauging an artist's reputation, and Durand and Hadida (2015) suggested that occupational communities punish actors for deviating from their canon of expectations.
 Shymko and Roulet (2017) found that artistic organizations are penalized by their peers if they seek recognition from corporate actors because they are seen to violate the norms inherent in the artistic logic.
 <!-- para 7 -->
 The consideration of external audiences leads to question whether and how a peer audience evaluating a candidate will be influenced by the evaluations given to that candidate by an external, non-peer audience.
@@ -93,7 +94,7 @@ Below, we comment on the relevance of both types of audiences for academic scien
 Public funding represents the most important resource for academic research.
 In the U.S. [^2] and U.K., respectively, 64% and 55% of universities’ R&D expenditure is government funded (Hughes, Kitson, Bullock, & Milner, 2013).
 In both countries, income from research funding charities constitutes an additional seizable proportion of universities’ research income.
-By contrast, funding from business accounts for approximately 4-5% of universities’ research expenditure in both the U.S. and U.K.
+By contrast, funding from business accounts for approximately 4-5% of universities’ research expenditure in both the U.S. and U.K. (OECD, 2016).
 <!-- para 11 -->
 Public funding for scientific research is almost always provided in the form of grants, while funding from knowledge users (which may include private or public corporations) tends to be commissioned via contracts.
 Grants are awarded by government or charitable foundations with the purpose of supporting academic research, which is understood as research conducted to advance knowledge and generate positive public outcomes (Freeman and Van Reeven, 2009; Jacob and Lefgren, 2011).
@@ -150,6 +151,7 @@ Overall, then, previous evaluations represent both indices of ability—indicati
 For indices stemming from peer evaluation—termed herein endogenous indices—the index of identity conformance will be aligned with the index of ability, making both indistinguishable in practice.
 <!-- para 21 -->
 The situation will be different when a peer evaluator has access to evaluations provided by an external audience.
+We call these exogenous indices.
 The distinction between endogenous and exogenous indices is key to the understanding of peer valuation; because exogenous indices originate from an external audience, for example, industry in our case, the indices for ability and identity conformance are no longer aligned.
 We develop this argument in detail below.
 <!-- para 23 -->
@@ -170,7 +172,7 @@ This understanding is promoted by government science funding bodies in the quest
 <!-- para 26 -->
 However, there is also evidence that there are limits to the degree of involvement with industry seen as permissible in the academic system.
 For instance, Lee (1996) suggests that a certain amount and certain types of industry engagement are seen as legitimate by peers while an excessive amount is viewed negatively.
-(2009) suggest that academic entrepreneurship is an acceptable ancillary identity for academics but becomes undesirable once it crowds out the default, academic self-understanding of a scientist.
+Similarly, Jain et al. (2009) suggest that academic entrepreneurship is an acceptable ancillary identity for academics but becomes undesirable once it crowds out the default, academic self-understanding of a scientist.
 Hence, while some level of industry appreciation falls in the range of accepted (but not required) practices as it fits the prototypical identity template of an academic scientist, the accumulation of excessive exogenous indices may raise doubts with academic evaluators, questioning the candidate's adherence to the ethos of public science (Carroll & Swaminathan, 2000; Zuckerman & Kim, 2003).
 High evaluations given by industry indicate that a candidate pursues activities such as industry-informed research, consulting with industry, and the commercialization of inventions, which are often at odds with the core notions of being an academic (Jain, George, & Maltarich, 2009).
 In the same way that an artistic audience may negatively regard the appreciation of a candidate by commercial actors (Glynn, 2000; Shymko & Roulet, 2017) as a sign of deviation from an artistic identity rooted in uniqueness and aesthetic appeal, academic evaluators may unfavorably judge the accumulation of a candidate's industry appreciation.
@@ -182,10 +184,11 @@ Yet, industry contracts as an index of (peer) identity conformity have a differe
 Low levels of industry appreciation are in the range of accepted practices in most academic disciplines and hence have little impact on valuation.
 But the risk of deviance from an expected academic identity becomes increasingly salient to evaluators as candidate scientists add more industry contracts to their résumé.
 <!-- para 28 -->
-(2015), and illustrated in Figure 1, the combination of two distinct effects, a positive linear ability effect (a) offset by an increasingly negative identity effect (b), results in a curvilinear, inverted U-shaped relationship (c).
+As shown by Haans et al. (2015), and illustrated in Figure 1, the combination of two distinct effects, a positive linear ability effect (a) offset by an increasingly negative identity effect (b), results in a curvilinear, inverted U-shaped relationship (c).
 As a result, we expect intermediate levels of industry contracts, as exogenous indices of ability and identity conformity, to be associated with the highest peer evaluation.
 A moderate level of contracts confirms the competence of a candidate in the eyes of peer evaluators while still being at a level where no significant deviation from the prototypical identity of a scientist is signaled.
 <!-- para 29 -->
+Hypothesis 1.
 There is an inverted U-shape relationship between the industry evaluation and peer evaluation of academic scientists.
 <!-- para 30 -->
 -- Insert Figure 1 about here --
@@ -219,14 +222,17 @@ Second, the general acceptance of industry appreciation is higher in the academi
 For the inverted U-shape, this implies the turning point shifts rightwards when identity proximity is high compared other to disciplines.
 Formally, we expect the following two hypotheses:
 <!-- para 36 -->
+Hypothesis 2a.
 The inverted U-shaped relationship between industry evaluation and peer evaluation of academic scientists is moderated by identity proximity so that it is attenuated in academic disciplines with high identity proximity with industry, and accentuated in disciplines with low identity proximity with industry.
 <!-- para 37 -->
+Hypothesis 2b.
 The inverted U-shaped relationship between the industry evaluation and peer evaluation of academic scientists is moderated by identity proximity such that its turning point occurs at lower levels of industry evaluation in disciplines with low identity proximity with industry, and at higher levels of industry evaluation in disciplines with high identity proximity with industry.
 <!-- para 39 -->
 The effect of exogenous indices on peer audience valuation is unlikely to be homogenous within a population of candidates.
 Those with an established reputation for quality and a strong identity within the peer community will be less sensitive to the effect of valuations provided by external audiences than other candidates.
 Accordingly, we expect the relationship between industry valuation and peer valuation to be moderated by scientists' endogenous indices for quality, that is, measures of quality aligned with the yardstick determined by the peer audience.
 Overall, academic quality will attenuate the effect of external evaluations on peer valuation.
+We develop our arguments below.
 <!-- para 40 -->
 Since ex-ante evaluation occurs in a situation of uncertainty, evaluators will use all information on a candidate that could provide clues about their likely future performance.
 Extant research suggests that evaluators often look at a candidates' previous track record within a relevant field as a proxy for unobservable intrinsic quality (Kotha & George, 2012; Stern et al., 2014).
@@ -241,7 +247,9 @@ This will occur when a candidate’s previous scientific track record appears st
 On the one hand, the positive effect of the ability component of the exogenous indices will be weakened because it will be overridden by peer-certification (information on the candidate’s publication record) which is more reliable and fine-grained.
 On the other hand, the non-linear negative effect of the identity conformity component of the exogenous indices will be mitigated because a strong academic track record will compensate for any indication that a scientist fails to conform to the ideal identity preferred by the peer audience.
 Well-published scientists have demonstrated a focused academic identity, and their evaluation is likely to be subject to typecasting, whereby their academic identity becomes sticky and resilient to disturbances, such as engagement with industry (Zuckerman, Kim, Ukanwa, & Von Rittmann, 2003) which make them relatively immune to the identity-diluting effects of being highly appreciated by industry.
+Hence:
 <!-- para 42 -->
+Hypothesis 3a.
 The inverted U-shaped relationship between industry evaluation and peer valuation of academic scientists is moderated by the quality of their publishing track record so that it is attenuated when quality is high, and accentuated when quality is low.
 <!-- para 43 -->
 An alternative way for the peer audience to judge the intrinsic quality of a peer candidate is to consider the consistency, rather than aggregate quality, of her publishing track record.
@@ -250,18 +258,21 @@ This matters because, for the evaluation of grant proposal, funding agencies wil
 For instance, the UK’s Medical Research Council requires academic grant application reviewers to consider whether applicants are “best-placed to deliver the proposed research”. [^5] The consistency of a candidate’s record of production is considered by reviewers as an endogenous index of likely future performance.
 Its effect is analogous to the effect of quality of an academic’s publishing record.
 The higher the irregularity of a scientist’s publishing record, the lower is their imputed quality.
+Hence, we argue:
 <!-- para 44 -->
+Hypothesis 3b.
 The inverted U-shaped relationship between industry evaluation and peer valuation of academic scientists is moderated by the irregularity of their publishing track record such that it is attenuated when irregularity is low, and accentuated when irregularity is high.
 
 ## methods
+<!-- para 2 -->
+Study context, sample, and data
 <!-- para 3 -->
 Studying how industry evaluation affects the peer evaluation of academic scientists is challenging in terms of data requirements.
 While awarded grants may be known, data on unsuccessful grant applications are often neither disclosed by the funders, nor reported by the scientists.
 Furthermore, data on the industry evaluation of academic scientists is rarely disclosed, or subject to censoring as only the most prominent (and larger) collaborations with industry are publicized.
 <!-- para 4 -->
 For the purpose of this study we assembled a unique dataset on the full population of academic scientists employed by Minerva (pseudonym), a large research U.K. university.
-The university has approximately 15,000 students and 3,700 academic staff, and is a top recipient of competitive government science funding in the U.K.
-Minerva espouses scientific excellence as its guiding core value, and this criterion is central for hiring and promotions as well as for organization-level decisions on, for instance, the establishment of new centers and allocation of internal resources.
+The university has approximately 15,000 students and 3,700 academic staff, and is a top recipient of competitive government science funding in the U.K. Minerva espouses scientific excellence as its guiding core value, and this criterion is central for hiring and promotions as well as for organization-level decisions on, for instance, the establishment of new centers and allocation of internal resources.
 Simultaneously, the university statutes define a strong mandate to render scientific knowledge useful via application for the benefit of industry and society.
 The university has built a significant commercialization subsidiary and operates a large, centrally located unit tasked with helping faculty to attract private sector funding and retaining industrial partners by professionally managing client accounts.
 As a result, Minerva is a large recipient of industry funding, which amounts to 7% of its research income.
@@ -278,14 +289,17 @@ To each journal publication record, we added journal-specific bibliometric infor
 We further used data on individuals' industry links as presented on their university web pages, and their patents.
 Our effort resulted in an unbalanced panel dataset of 34,647 scientist-year observations.
 <!-- para 7 -->
+Peer evaluation.
 To account for the evaluation of a scientist by their peer (academic) audience, we consider the count of grants awarded to each scientist, as a principal investigator, in a given year.
 The values for this variable range from 0 to 23 in the observation period.
 The number of grants is an appropriate measure of peer evaluation because each additional grant is based on an additional attribution of value to the researcher by a panel of peer reviewers.
 <!-- para 9 -->
+Industry evaluation.
 Our theory suggests that a scientist’s evaluation by the external (industry) audience affects their evaluation by the peer (academic) audience.
 When evaluating a grant application by a scientist, reviewers are provided with résumés, which contain information about the applicant's record of funding from various sources.
 We measured the scientist's industry evaluation by cumulating the number of contracts acquired by them as a principal investigator up to the year under scrutiny (see Dokko & Gaba, 2012, for a similar approach).
 <!-- para 10 -->
+Identity proximity with industry.
 In Hypotheses 2a and 2b, we expect our main effect to be moderated by the proximity of a candidate to industry.
 To operationalize identity proximity with industry, we selected a measure that indicates a candidate's membership in a disciplinary grouping rather than an individual measure of proximity, because grant applications are evaluated by members of those broader disciplinary groupings.
 We use the faculty affiliation of the scientists in our sample as a proxy for their identity proximity: Interviews with Minerva scientists across all disciplines—conducted in the context of an ongoing inductive study about university-industry collaboration [reference withheld]—revealed that engineering and medicine were the most proximate disciplines to industry, while natural sciences and business were more distant.
@@ -296,6 +310,7 @@ Calculated for each of the ISI journal categories, the measure ranges between 0 
 Applying the industry proximity values of each journal category to the publication record of each scientist and calculating the mean for each faculty, we obtained the following values: 0.071 for engineering; 0.061 for medicine; 0.046 for natural science; 0.039 for business.
 These measures justify our choice for attributing high industry proximity to members of the two former faculties, and low industry proximity to members of the latter ones.
 <!-- para 12 -->
+Quality of publishing record.
 To examine Hypothesis 3a, we measured the quality of a scientist's publication record by using their cumulative impact factor, i.e., the sum of the impact factors of the journals in which each of their publications appeared, up to the focal year.
 Since 1997, the ISI Web of Knowledge has released journal impact factors for both science and social science titles.
 We downloaded this information for about 11,000 journals, for each year between 1997 and 2012, from the ISI Web of Knowledge website.
@@ -303,6 +318,7 @@ The impact factor of the journal in which an article is published is a widely ac
 Therefore, scientists with a higher cumulative impact factor will be regarded as being of higher quality by their academic audience.
 We use the natural logarithm of the cumulative impact factor in our models.
 <!-- para 13 -->
+Irregularity of publishing record.
 To test Hypothesis 3b, we measure irregularity of a scientist's record by dividing the total number of years after their first publication in which they published no articles in a journal with an ISI impact factor by the scientist's academic age.
 The variable ranges between 0 and 1; scientists with an output of at least one annual publication receive a score of 0 while their score moves closer to 1 the more irregularly they publish.
 <!-- para 14 -->
@@ -311,27 +327,36 @@ All independent variables are lagged by one year (t-1) in our estimations.
 We include in our models a number of individual-level controls that may affect the relationship under examination.
 We also include dummy variables for departmental affiliation.
 <!-- para 17 -->
+Academic age.
 Because scientists’ incentives to bid for research money may depend on the stage of their career (Thursby, Thursby, & Gupta-Mukherjee, 2007), we control for their academic age, operationalized as the number of years since their first publication at t-1.
 <!-- para 18 -->
+Tenure.
 The duration of employment at a university may influence the peer evaluation as peer reviewers may perceive more mobile academics as more dynamic and ambitious than others.
 We therefore control for each scientist's number of years of employment at Minerva in t-1.
+Grant proposals filed.
 Scientists who are more active in applying for research money are more likely to receive grants than those who bid less; we therefore include the number of grant proposals filed by each scientist in t-1, operationalized as the time-variant categorical variable (Azoulay, Ding, & Stuart, 2009).
 <!-- para 19 -->
+Previous peer evaluation.
 Peer evaluators may favor scientists who show a positive track record in research grant acquisition (socially endogenous inference); we control for the cumulative number of grants awarded to each scientist up to t-1.
 <!-- para 20 -->
+Team quality.
 As evaluators’ decision may be driven by observable characteristics of previously awarded grants (Criscuolo et al., in press), for any given grant awarded in t, we calculate a principal component capturing (i) the cumulative number of grants awarded up to t-1, (ii) the cumulative monetary value of the grants awarded up to t-1, and (iii) the cumulative publication impact factor of the articles published up to t-1, for all Minerva principal investigators and co-investigators linked to the grant.
 We include the first principal component (eigenvalue = 1.96) among the covariates.
 <!-- para 21 -->
+Patents.
 Patenting activity may be considered by evaluators when judging a grant proposal.
 To control for this, we account for the cumulative number of European Patent Office (EPO) patents granted to each scientist up to t-1, as resulting from the Espacenet database.
 <!-- para 22 -->
+Industry experience.
 Academic peers may take industry experience into account when evaluating candidates, and we therefore include a count of the number of years of collaboration with industrial partners, as stated on scientists' official Minerva personal web pages – up to t-1.
 <!-- para 24 -->
+We proceed in three steps.
 We first conduct a panel data analysis of the full population of scientists at Minerva over 2001–12, controlling for self-selection into grant applications, unobserved heterogeneity, and autocorrelation.
 After submitting our findings to a battery of robustness checks, we conduct two confirmatory analyses.
 First, we seek to replicate our results using a coarsened exact matching procedure designed to rule out remaining concerns relating to unobserved abilities and interests that may both affect the industry evaluation and the peer evaluation of the scientists we study.
 Second, we use interview material to further corroborate and flesh out our quantitative findings.
 <!-- para 25 -->
+Full panel analysis.
 The relationship between industry evaluation and peer evaluation should be assessed with care.
 First, not all scientists apply for grants, meaning that our dependent variable (peer evaluation) is only observed for a subsample of the population (Certo et al., 2016).
 Furthermore, scientists who compete for grants do so based on factors that may also affect peer evaluation.
@@ -350,6 +375,7 @@ In the endogenous variable equation, we further include as covariates: the two-y
 As recommenced (Bascle, 2008), we report the Hansen's J statistic, which is used to determine the validity of the overidentifying restrictions in GMM Poisson models.
 The J statistic is not significant (p >0.05) in all models, suggesting they are correctly specified.
 <!-- para 28 -->
+Coarsened exact matching analysis.
 Although all our tests as recommended by the literature suggest valid results, the soundness of the panel dataset analysis of the full population of Minerva scientists is conditional on the relevance and strict exogeneity of the instruments used (Bascle, 2008).
 In order to further rule out alternative explanations, such as variations in peer evaluation as a result of scientists' unobserved abilities and interests rather than changes in their industry evaluation, we resort to a matching procedure comparing the scientists with at least one industry contract during the observation period (“treated) against the most similar individuals without industry contract (“untreated”) [^6].
 <!-- para 29 -->
@@ -424,7 +450,7 @@ Overall, these results add support to Hypotheses 2a, 2b, 3a, and 3b.
 <!-- para 10 -->
 -- Insert Figures 3, 4 and 5 about here --
 We conduct further tests to check that our results are robust to changes in specifications.
-First, we confirm the validity of our GMM Poisson estimation using the procedure recommended by Blattberg et al.
+First, we confirm the validity of our GMM Poisson estimation using the procedure recommended by Blattberg et al. (2008) (see Figure A1).
 Second, to address standard error inefficiencies related to the inclusion of the inverse mills ratio in the second-stage outcome equation, we re-run Models 3 to 8, bootstrapping the standard errors 1,000 times and including robust standard errors.
 Third, we use a negative binomial estimator in lieu of a Poisson model to account for overdispersion (about 20% of the cases in our data).
 Fourth, we run a sub-sample analysis leveraging data from a survey administered to all scientists employed at Minerva in 2013 (including 1,352 individuals in our dataset).
@@ -450,6 +476,8 @@ All the remaining variables, except year controls and departmental affiliation, 
 Robust standard errors, clustered by individual, are included in all specifications.
 We assess the validity of the GMM estimator and the three selected standard instruments via serial correlation tests (AR(1) and AR(2)), and the Hansen test of overidentification restrictions, to verify the exogeneity of each instrument considered in isolation.
 The results of the linear models are similar to the main specification, adding support to our hypotheses.
+<!-- para 15 -->
+-- Insert Table 3 about here --
 <!-- para 17 -->
 Finally, we interviewed peer reviewers in order to further elucidate and interpret our results.
 We first focus on the main curvilinear effect hypothesized in this study.
@@ -554,12 +582,11 @@ For an actor, while moderately cohering to the valuation framework of an alterna
 Finally, our study relates to a body of previous work on academic science, including the allocation of research funding in science (Freeman & van Reenen, 2009), and particularly evaluation processes therein.
 Studying the awarding of National Institutes of Health (NIH) grants, Li and Agha (2015) find that peer reviewers generally perform well in discerning the quality of proposed studies.
 Li (2017) observe that evaluators are better informed but also more biased about the quality of projects in their own area, with the benefits of expertise slightly outweighing the cost of bias.
-(2016) find, albeit in a different context, that intellectual distance has a positive impact on an evaluator's assessment of the quality of a proposal.
+By contrast, Boudreau et al. (2016) find, albeit in a different context, that intellectual distance has a positive impact on an evaluator's assessment of the quality of a proposal.
 While these diverging results on the influence of reviewer-applicant expertise overlap call for further research, our study addresses a different influence on funding decisions, that is an applicant's standing with an audience that peer reviewers regard as extraneous to their community.
 <!-- para 10 -->
 This previous work, along with other related studies, relies on private information or (quasi) experimental setups to address endogeneity and establish causality.
-For instance, Jacob and Lefgren (2011) investigate the effects of grant acquisition of scientific production using a regression discontinuity design, and Azoulay et al.
-(2014) use information on status shocks to detect status effects on the citations to academics' work, in combination with a matched sample approach.
+For instance, Jacob and Lefgren (2011) investigate the effects of grant acquisition of scientific production using a regression discontinuity design, and Azoulay et al. (2014) use information on status shocks to detect status effects on the citations to academics' work, in combination with a matched sample approach.
 Some of this work deploys reviewer scores as a measure of valuation (Li, 2017; Jacob & Lefgren, 2011), or conducts experiments to randomize the assignment of evaluators and proposals (Boudreau et al. 2016).
 With all its limitations, our empirical approach – using panel data and matched-sample analyses – is applicable to a wide range of cases where reviewers scores are not formalized (e.g., industry contracts) or publicly disclosed (e.g., academic grants), and there is no opportunity for experimental or quasi-experimental design.
 In our setting, for instance, reviewer scores for industry contracts are generally unavailable as the latter are awarded privately by corporations, using a variety of approaches.
@@ -613,114 +640,3 @@ Dev.</td><td>Min</td><td>Max</td><td>1.</td><td>2.</td><td>3.</td><td>4.</td><td
 N=5,131; Correlation above |0.034| are significant at 0.05
 <!-- para 23 -->
 <table border=1><tr><td colspan="2"></td><td>12.</td><td>13.</td><td>14.</td><td>15.</td><td>16.</td><td>17.</td></tr><tr><td>12.</td><td>Previous peer evaluation</td><td>1.00</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>13.</td><td>Identity proximity with industry</td><td>0.06</td><td>1.00</td><td></td><td></td><td></td><td></td></tr><tr><td>14.</td><td>Quality of publishing record</td><td>0.48</td><td>0.03</td><td>1.00</td><td></td><td></td><td></td></tr><tr><td>15.</td><td>Irregularity of publishing record</td><td>-0.25</td><td>-0.01</td><td>-0.51</td><td>1.00</td><td></td><td></td></tr><tr><td>16.</td><td>Industry evaluation</td><td>0.29</td><td>0.14</td><td>0.21</td><td>-0.12</td><td>1.00</td><td></td></tr><tr><td>17.</td><td>Industry evaluation * Industry evaluation</td><td>0.16</td><td>0.08</td><td>0.13</td><td>-0.05</td><td>0.85</td><td>1.00</td></tr></table>
-<!-- para 25 -->
-<table border=1><tr><td>DV = Peer evaluation</td><td>Model 1</td><td>Model 2</td><td>Model 3</td><td>Model 4</td><td>Model 5</td><td>Model 6</td><td>Model 7</td><td>Model 8</td></tr><tr><td>Inverse mills Ratio</td><td></td><td></td><td>-0.204(.234)</td><td>-0.185(.233)</td><td>-0.178(.233)</td><td>-0.072(.232)</td><td>-0.173(.232)</td><td>-0.092(.231)</td></tr><tr><td>D: Grant proposal filed [1;2]</td><td>-0.469***(.047)</td><td>-0.466***(.047)</td><td>-0.460***(.048)</td><td>-0.458***(.048)</td><td>-0.458***(.048)</td><td>-0.442***(.048)</td><td>-0.457***(.048)</td><td>-0.439***(.047)</td></tr><tr><td>D: Grant proposal filed [8;14]</td><td>0.262***(.055)</td><td>0.260***(.055)</td><td>0.261***(.055)</td><td>0.258***(.055)</td><td>0.258***(.055)</td><td>0.266***(.055)</td><td>0.261***(.055)</td><td>0.266***(.055)</td></tr><tr><td>D: Grant proposal filed [15;]</td><td>0.133(.144)</td><td>0.129(.145)</td><td>0.14(.144)</td><td>0.136(.145)</td><td>0.134(.146)</td><td>0.165(.142)</td><td>0.127(.147)</td><td>0.173(.141)</td></tr><tr><td>Academic age</td><td>-0.005†(.003)</td><td>-0.005†(.003)</td><td>-0.005†(.003)</td><td>-0.006†(.003)</td><td>-0.006†(.003)</td><td>-0.006*(.003)</td><td>-0.006†(.003)</td><td>-0.006*(.003)</td></tr><tr><td>Tenure</td><td>-0.014***(.003)</td><td>-0.015***(.003)</td><td>-0.014***(.004)</td><td>-0.014***(.004)</td><td>-0.015***(.004)</td><td>-0.015***(.003)</td><td>-0.014***(.003)</td><td>-0.016***(.003)</td></tr><tr><td>Irregularity of publishing record</td><td>-1.105***(.227)</td><td>-1.099***(.226)</td><td>-1.081***(.231)</td><td>-1.076***(.231)</td><td>-1.068***(.230)</td><td>-0.992***(.232)</td><td>-1.141***(.237)</td><td>-1.023***(.244)</td></tr><tr><td>Quality of publishing record</td><td>0.117***(.026)</td><td>0.115***(.026)</td><td>0.108***(.028)</td><td>0.107***(.028)</td><td>0.106***(.027)</td><td>0.144***(.028)</td><td>0.109***(.028)</td><td>0.144***(.028)</td></tr><tr><td>Patents</td><td>0.052***(.014)</td><td>0.051***(.015)</td><td>0.052***(.014)</td><td>0.050***(.015)</td><td>0.049***(.015)</td><td>0.053***(.015)</td><td>0.051***(.015)</td><td>0.052***(.015)</td></tr><tr><td>Industry experience</td><td>-0.011(.014)</td><td>-0.014(.014)</td><td>-0.012(.014)</td><td>-0.014(.014)</td><td>-0.011(.015)</td><td>-0.01(.013)</td><td>-0.015(.014)</td><td>-0.013(.021)</td></tr><tr><td>Identity proximity with industry</td><td>0.224*(.097)</td><td>0.231*(.097)</td><td>0.220*(.097)</td><td>0.228*(.097)</td><td>0.255*(.110)</td><td>0.231*(.098)</td><td>0.226*(.096)</td><td>0.223*(.110)</td></tr><tr><td>Team quality</td><td>-0.001(.003)</td><td>-0.001(.003)</td><td>-0.001(.003)</td><td>-0.001(.003)</td><td>-0.001(.003)</td><td>-0.001(.004)</td><td>-0.001(.003)</td><td>-0.001(.003)</td></tr><tr><td>Previous peer evaluation</td><td>0.025***(.005)</td><td>0.024***(.005)</td><td>0.025***(.005)</td><td>0.024***(.005)</td><td>0.024***(.005)</td><td>0.026***(.005)</td><td>0.024***(.005)</td><td>0.025***(.005)</td></tr><tr><td>Industry evaluation</td><td>0.007(.005)</td><td>0.034*(.014)</td><td>0.007(.005)</td><td>0.034*(.014)</td><td>0.163*(.072)</td><td>0.260***(.063)</td><td>0.030*(.014)</td><td>0.340***(.094)</td></tr><tr><td>Industry evaluation * Industry evaluation</td><td></td><td>-0.001*(.001)</td><td></td><td>-0.001*(.001)</td><td>-0.029**(.011)</td><td>-0.011**(.004)</td><td>-0.001†(.001)</td><td>-0.037**(.012)</td></tr><tr><td>Industry evaluation *Identity proximity with industry</td><td></td><td></td><td></td><td></td><td>-0.128†(.072)</td><td></td><td></td><td>-0.108(.073)</td></tr><tr><td>Industry evaluation * Industry evaluation * Identity proximity with industry</td><td></td><td></td><td></td><td></td><td>0.027*</td><td></td><td></td><td>0.028*</td></tr><tr><td>Industry evaluation * Quality of publishing record</td><td></td><td></td><td></td><td></td><td>(.011)</td><td></td><td></td><td>(.012)</td></tr><tr><td>Industry evaluation * Industry evaluation * Quality of publishing record</td><td></td><td></td><td></td><td></td><td></td><td>-0.043***(.011)</td><td></td><td>-0.037**(.011)</td></tr></table>
-<!-- para 26 -->
-<table><tr><td colspan="6">Industry evaluation * Irregularity of publishing record</td><td>(.001)</td><td></td><td>(.000)</td></tr><tr><td colspan="6"></td><td></td><td>0.443†</td><td>0.405*</td></tr><tr><td colspan="6"></td><td></td><td>(.251)</td><td>(.192)</td></tr><tr><td colspan="6">Industry evaluation * Industry evaluation * Irregularity of publishing record</td><td></td><td>-0.047**</td><td>-0.041**</td></tr><tr><td colspan="6"></td><td></td><td>(.018)</td><td>(.013)</td></tr><tr><td>Department fixed effects</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td></tr><tr><td>Constant</td><td>-0.450**<br>(.139)</td><td>-0.456**<br>(.139)</td><td>-0.326†<br>(.197)</td><td>-0.344†<br>(.196)</td><td>-0.368†<br>(.20)</td><td>-0.583**<br>(.204)</td><td>-0.362†<br>(.196)</td><td>-0.569**<br>(.206)</td></tr><tr><td>Number of Observations</td><td>5,131</td><td>5,131</td><td>5,131</td><td>5,131</td><td>5,131</td><td>5,131</td><td>5,131</td><td>5,131</td></tr><tr><td>Number of Individuals</td><td>1,571</td><td>1,571</td><td>1,571</td><td>1,571</td><td>1,571</td><td>1,571</td><td>1,571</td><td>1,571</td></tr><tr><td>Endogenous Variables</td><td>2</td><td>3</td><td>2</td><td>3</td><td>5</td><td>5</td><td>5</td><td>9</td></tr><tr><td>Instruments (Standard)</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td></tr><tr><td>Instruments (Lagged Variables)</td><td>3</td><td>4</td><td>3</td><td>4</td><td>6</td><td>6</td><td>6</td><td>12</td></tr><tr><td>Hansen's J chi2</td><td>3.93</td><td>4.13</td><td>3.8</td><td>4.01</td><td>3.73</td><td>4.24</td><td>4.09</td><td>6.79</td></tr><tr><td>Hansen's J df</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>6</td></tr><tr><td>Hansen's J p</td><td>0.41</td><td>0.38</td><td>0.43</td><td>0.4</td><td>0.44</td><td>0.37</td><td>0.39</td><td>0.34</td></tr></table>
-<!-- para 27 -->
-† p<0.10; * p<0.05; ** p<0.01; *** p<0.001
-<!-- para 28 -->
-Standard Errors are clustered on individuals; Dependent variable is operationalized as the number of grants awarded as a principal investigator in year t.
-All models are Poisson with continuous endogenous covariates employing an iterative generalized method of moments estimator.
-### Table 3.
-<!-- para 29 -->
-<table><tr><td>DV = Peer evaluation</td><td>Model 9</td><td>Model 10</td><td>Model 11</td><td>Model 12</td><td>Model 13</td><td>Model 14</td><td>Model 15</td><td>Model 16</td></tr><tr><td>Inverse mills Ratio</td><td></td><td></td><td>0.065<br>(.281)</td><td>0.084<br>(.282)</td><td>0.082<br>(.281)</td><td>0.173<br>(.276)</td><td>0.107<br>(.277)</td><td>0.179<br>(.274)</td></tr><tr><td>D: Grant proposal filed [1;2]</td><td>-0.404***<br>(.058)</td><td>-0.400***<br>(.058)</td><td>-0.406***<br>(.059)</td><td>-0.403***<br>(.059)</td><td>-0.403***<br>(.060)</td><td>-0.388***<br>(.058)</td><td>-0.400***<br>(.059)</td><td>-0.392***<br>(.059)</td></tr><tr><td>D: Grant proposal filed [8;14]</td><td>0.180**<br>(.067)</td><td>0.172*</td><td>0.181**<br>(.067)</td><td>0.173**<br>(.067)</td><td>0.169*</td><td>0.197**<br>(.066)</td><td>0.176**<br>(.067)</td><td>0.190**<br>(.066)</td></tr><tr><td>D: Grant proposal filed [15;]</td><td>0.186<br>(.174)</td><td>0.185<br>(.174)</td><td>0.184<br>(.175)</td><td>0.182<br>(.175)</td><td>0.179<br>(.176)</td><td>0.204<br>(.175)</td><td>0.178<br>(.176)</td><td>0.17<br>(.178)</td></tr><tr><td>Academic age</td><td>-0.002<br>(.004)</td><td>-0.002<br>(.004)</td><td>-0.002<br>(.004)</td><td>-0.002<br>(.004)</td><td>-0.002<br>(.004)</td><td>-0.003<br>(.004)</td><td>-0.003<br>(.004)</td><td>-0.003<br>(.004)</td></tr><tr><td>Tenure</td><td>-0.016***<br>(.005)</td><td>-0.016***<br>(.005)</td><td>-0.016***<br>(.005)</td><td>-0.016***<br>(.005)</td><td>-0.017***<br>(.005)</td><td>-0.017***<br>(.005)</td><td>-0.015**<br>(.005)</td><td>-0.017***<br>(.005)</td></tr><tr><td>Irregularity of publishing record</td><td>-0.718*</td><td>-0.721*</td><td>-0.722*</td><td>-0.726*</td><td>-0.708*</td><td>-0.643*</td><td>-0.991**</td><td>-0.782*</td></tr><tr><td>Quality of publishing record (ln)</td><td>0.107**<br>(.036)</td><td>0.104**<br>(.036)</td><td>0.110**<br>(.038)</td><td>0.107**<br>(.038)</td><td>0.109**<br>(.038)</td><td>0.161***<br>(.038)</td><td>0.109**<br>(.038)</td><td>0.157***<br>(.039)</td></tr><tr><td>Patents</td><td>0.041<br>(.026)</td><td>0.035<br>(.025)</td><td>0.04<br>(.026)</td><td>0.035<br>(.025)</td><td>0.037<br>(.026)</td><td>0.039<br>(.025)</td><td>0.035<br>(.025)</td><td>0.042+<br>(.025)</td></tr><tr><td>Industry experience</td><td>-0.076**<br>(.028)</td><td>-0.082**<br>(.029)</td><td>-0.075**<br>(.029)</td><td>-0.082**<br>(.029)</td><td>-0.082**<br>(.029)</td><td>-0.077**<br>(.028)</td><td>-0.088**<br>(.028)</td><td>-0.082**<br>(.028)</td></tr><tr><td>Identity proximity with industry</td><td>0.245+<br>(.132)</td><td>0.261*</td><td>0.245+<br>(.132)</td><td>0.262*</td><td>0.361*</td><td>0.269*</td><td>0.275*</td><td>0.339*</td></tr><tr><td>Team quality</td><td>0.004<br>(.004)</td><td>0.005<br>(.003)</td><td>0.004<br>(.003)</td><td>0.004<br>(.003)</td><td>0.004<br>(.003)</td><td>0.004<br>(.003)</td><td>0.005<br>(.003)</td><td>0.003<br>(.003)</td></tr><tr><td>Previous peer evaluation</td><td>0.028***<br>(.007)</td><td>0.026***<br>(.007)</td><td>0.029***<br>(.007)</td><td>0.027***<br>(.008)</td><td>0.027***<br>(.008)</td><td>0.027***<br>(.007)</td><td>0.026***<br>(.008)</td><td>0.027***<br>(.007)</td></tr><tr><td>Industry evaluation</td><td>0.005<br>(.006)</td><td>0.040*</td><td>0.005<br>(.006)</td><td>0.040*</td><td>0.222*</td><td>0.293***<br>(.084)</td><td>0.032*</td><td>0.411**<br>(.127)</td></tr><tr><td>Industry evaluation * Industry evaluation</td><td></td><td>-0.002*</td><td></td><td>-0.002*</td><td>-0.038**</td><td>-0.012**</td><td>-0.001+</td><td>-0.045**</td></tr><tr><td>Industry evaluation * Identity proximity with industry</td><td></td><td>(.001)</td><td></td><td>(.001)</td><td>(.014)</td><td>(.004)</td><td>(.001)</td><td>(.014)</td></tr><tr><td>Industry evaluation * Industry evaluation * Identity proximity with industry</td><td></td><td></td><td></td><td></td><td>-0.181+<br>(.099)</td><td></td><td></td><td>-0.155<br>(.098)</td></tr><tr><td>Industry evaluation * Industry evaluation * Identity proximity with industry</td><td></td><td></td><td></td><td></td><td>0.036**</td><td></td><td></td><td>0.035*</td></tr></table>
-<!-- para 30 -->
-<table><tr><td colspan="2"></td><td>(.014)</td><td></td><td></td><td>(.014)</td></tr><tr><td rowspan="2" colspan="2">Industry valuation * Quality of publishing record</td><td rowspan="2"></td><td>-0.049**</td><td></td><td>-0.042**</td></tr><tr><td>(.016)</td><td></td><td>(.015)</td></tr><tr><td rowspan="2" colspan="2">Industry valuation * Industry valuation * Quality of publishing record</td><td rowspan="2"></td><td>0.002**</td><td></td><td>0.002**</td></tr><tr><td>(.001)</td><td></td><td>(.001)</td></tr><tr><td rowspan="2" colspan="2">Industry valuation * Irregularity of publishing record</td><td rowspan="2"></td><td></td><td>0.687**</td><td>0.447*</td></tr><tr><td></td><td>(.235)</td><td>(.210)</td></tr><tr><td rowspan="2" colspan="2">Industry valuation * Industry valuation * Irregularity of publishing record</td><td rowspan="2"></td><td></td><td>-0.062**</td><td>-0.044**</td></tr><tr><td></td><td>(.019)</td><td>(.014)</td></tr><tr><td>Department fixed effects</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td></tr><tr><td>Constant</td><td>-0.444*</td><td>-0.454*</td><td>-0.483+</td><td>-0.505*</td><td>-0.608*</td><td>-0.803**</td><td>-0.530*</td><td>-0.859**</td></tr><tr><td></td><td>(.192)</td><td>(.192)</td><td>(.253)</td><td>(.251)</td><td>(.264)</td><td>(.256)</td><td>(.249)</td><td>(.267)</td></tr><tr><td>Number of Observations</td><td>3,091</td><td>3,091</td><td>3,091</td><td>3,091</td><td>3,091</td><td>3,091</td><td>3,091</td><td>3,091</td></tr><tr><td>Number of Individuals</td><td>820</td><td>820</td><td>820</td><td>820</td><td>820</td><td>820</td><td>820</td><td>820</td></tr><tr><td>Pairs</td><td>410</td><td>410</td><td>410</td><td>410</td><td>410</td><td>410</td><td>410</td><td>410</td></tr><tr><td>Endogenous Variables</td><td>2</td><td>3</td><td>2</td><td>3</td><td>5</td><td>5</td><td>5</td><td>9</td></tr><tr><td>Instruments (Standard)</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td></tr><tr><td>Instruments (Lagged Variables)</td><td>3</td><td>4</td><td>3</td><td>4</td><td>6</td><td>6</td><td>6</td><td>12</td></tr><tr><td>Hansen's J chi2</td><td>0.81</td><td>0.73</td><td>0.82</td><td>0.75</td><td>0.68</td><td>0.82</td><td>0.79</td><td>1.31</td></tr><tr><td>Hansen's J df</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>6</td></tr><tr><td>Hansen's J p</td><td>0.93</td><td>0.94</td><td>0.93</td><td>0.94</td><td>0.95</td><td>0.93</td><td>0.93</td><td>0.97</td></tr></table>
-<!-- para 31 -->
-† p<0.10; * p<0.05; ** p<0.01; *** p<0.001
-<!-- para 32 -->
-All models are Poisson with continuous endogenous covariates employing an iterative generalized method of moments estimator.
-<!-- para 33 -->
-Coarsen matching (creating four equally spaced cutpoints) on Previous peer evaluation, Patents, Industry experience, Tenure, and Team quality.
-### Figure 1.
-Predicted inverted U-shaped relationship and moderations
-<!-- para 42 -->
-baseline attenuated relationship (e) Shifted relationship
-<!-- para 44 -->
-baseline shifted relationship
-### Figure 2.
-<!-- para 46 -->
-Marginal effects estimated by keeping the other covariates at their means.
-<!-- para 49 -->
-Marginal effects estimated by keeping the other covariates at their means.
-### Figure 4.
-Industry evaluation and peer evaluation moderated by the quality of the publishing record
-<!-- para 51 -->
-Marginal effects estimated by keeping the other covariates at their means.
-<!-- para 54 -->
-Marginal effects estimated by keeping the other covariates at their means.
-<!-- para 55 -->
-As suggested by Wooldridge (2010), to compute the inverse mills ratio to be included in the second-stage outcome equation, we regress the first-stage probability of filing a grant application on the exogenous independent variables included in the second-stage equation.
-The results remain robust when the endogenous variables are included.
-Additionally, we control for the (time varying) position of the scientist in the college hierarchy (i.e., junior researcher, senior researcher, junior faculty, or senior faculty), the faculty of affiliation, and year fixed effects.
-As exclusion restriction (a variable that predicts the decision to file a grant application but not the awarding of a grant), we use the number of non-academic employees in each department in the previous year, controlling for the size of each department.
-This variable captures the level of administrative and technical support available to a scientist: more support will increase a scientist's propensity to engage in the time-intensive process of grant application, but will not inform application success.
-We assess the strength of the exclusion restriction by examining (i) the correlation between the inverse mills ratio and the main independent variable and (ii) and the pseudo-$\mathrm{R}^2$ of the first-stage selection equation.
-The former should exhibit low values, whereas the latter should take high ones (Certo et al., 2016).
-This pattern is confirmed in our data: the correlation between industry evaluation, industry evaluation squared and the inverse mills ratio are below 0.2 ($\mathrm{corr}_{\mathrm{Ind\_Imr}} = -0.18$; p<0.001, $\mathrm{corr}_{\mathrm{Ind\_sq\_Imr}} = -0.08$; p<0.001), whereas the pseudo-$\mathrm{R}^2$ of the first-stage outcome equation is equal to 0.475.
-<!-- para 56 -->
-<table><tr><td>DV = Grant application</td><td>Probit</td></tr><tr><td>D: Position = Senior Researcher</td><td>0.580***<br>(.063)</td></tr><tr><td>D: Position = Junior Faculty</td><td>1.291***<br>(.035)</td></tr><tr><td>D: Position = Senior Faculty</td><td>1.431***<br>(.042)</td></tr><tr><td>Academic age</td><td>-0.002<br>(.002)</td></tr><tr><td>Tenure</td><td>-0.019***<br>(.002)</td></tr><tr><td>Irregularity of publishing record</td><td>-0.449***<br>(.052)</td></tr><tr><td>Quality of publishing record</td><td>0.178***<br>(.011)</td></tr><tr><td>Patents</td><td>0.0521**<br>(.016)</td></tr><tr><td>Industry experience</td><td>0.022<br>(.021)</td></tr><tr><td>Identity proximity with industry</td><td>0.426**<br>(.157)</td></tr><tr><td>Team quality</td><td>0.094***<br>(.005)</td></tr><tr><td>Number of non-academic employees in the department</td><td>0.032*</td><td>(.015)</td></tr><tr><td>Size of the department</td><td>-0.091**<br>(.030)</td></tr><tr><td>Year fixed effects</td><td>Included</td></tr><tr><td>Faculty fixed effects</td><td>Included</td></tr><tr><td>Constant</td><td>-0.669**<br>(.227)</td></tr><tr><td>Pseudo R2</td><td>0.475</td></tr><tr><td>Log pseudolikelihood</td><td>-7,576.74</td></tr><tr><td>Number of observations</td><td>25,255</td></tr><tr><td>Number of individuals</td><td>6,865</td></tr></table>
-<!-- para 58 -->
-$\dagger$ p<0.10; $*$ p<0.05; $**$ p<0.01; $***$ p<0.001
-<!-- para 59 -->
-The dependent variable is operationalized as a dichotomous variable equal to 1 if the individual has filed at least one grant proposal as principal investigator in year t.
-<!-- para 60 -->
-All independent variables are lagged one-year with the exception of Year, Faculty and Position.
-For this reason, the number of observations and individuals included in this equation is smaller than our full population.
-<!-- para 61 -->
-The variables Number of non-academic employees in the department and Size of the department are expressed in logarithmic terms.
-<!-- para 62 -->
-Year fixed effects are based on two-year periods to account for the one-year lag in the independent variables (results are similar with one-year dummies).
-<!-- para 63 -->
-This first-stage selection equation includes all the exogenous variables included in the second-stage outcome equation.
-Table A2 – Main outcome equation (DV= monetary amount of research grants awarded) – Linear GMM
-<!-- para 64 -->
-<table border=1><tr><td>DV = Peer evaluation (£ amount of grants)</td><td>Model 1</td><td>Model 2</td><td>Model 3</td><td>Model 4</td><td>Model 5</td><td>Model 6</td><td>Model 7</td><td>Model 8</td></tr><tr><td>Inverse mills Ratio</td><td></td><td></td><td>0.387(1.355)</td><td>0.32(1.332)</td><td>0.215(1.294)</td><td>0.218(1.334)</td><td>-0.32(1.278)</td><td>-0.118(1.277)</td></tr><tr><td>D: Grant proposal filed [1;2]</td><td>-1.380***(.202)</td><td>-1.425***(.198)</td><td>-1.564***(.204)</td><td>-1.606***(.201)</td><td>-1.663***(.198)</td><td>-1.658***(.197)</td><td>-1.639***(.194)</td><td>-1.675***(.191)</td></tr><tr><td>D: Grant proposal filed [8;14]</td><td>-0.119(.453)</td><td>-0.18(.448)</td><td>-0.072(.450)</td><td>-0.125(.443)</td><td>-0.1(.428)</td><td>0.065(.424)</td><td>0.043(.429)</td><td>0.139(.407)</td></tr><tr><td>D: Grant proposal filed [15;]</td><td>-0.588(1.014)</td><td>-0.582(.941)</td><td>-0.304(.982)</td><td>-0.305(.912)</td><td>-0.366(.855)</td><td>0.208(.887)</td><td>-0.327(.861)</td><td>0.019(.811)</td></tr><tr><td>Academic age</td><td>-0.009(.099)</td><td>0.026(.091)</td><td>0.038(.095)</td><td>0.069(.088)</td><td>0.006(.076)</td><td>0.035(.078)</td><td>0.073(.073)</td><td>0.016(.064)</td></tr><tr><td>Tenure</td><td>-0.170†(.095)</td><td>-0.164†(.090)</td><td>-0.173†(.089)</td><td>-0.166*(.084)</td><td>-0.08(.072)</td><td>-0.132†(.075)</td><td>-0.183**(.071)</td><td>-0.094(.059)</td></tr><tr><td>Patents</td><td>0.324†(.188)</td><td>0.271(.187)</td><td>0.388*(.192)</td><td>0.338†(.187)</td><td>0.265(.182)</td><td>0.364*(.177)</td><td>0.440*(.182)</td><td>0.387*(.171)</td></tr><tr><td>Industry experience</td><td>0.014(.149)</td><td>0.007(.143)</td><td>-0.015(.135)</td><td>-0.021(.129)</td><td>-0.091(.096)</td><td>0.045(.119)</td><td>-0.008(.127)</td><td>-0.021(.087)</td></tr><tr><td>Previous peer evaluation</td><td>0.124*(.053)</td><td>0.119*(.051)</td><td>0.118*(.052)</td><td>0.117*(.050)</td><td>0.112*(.045)</td><td>0.152**(.048)</td><td>0.115*(.048)</td><td>0.139**(.043)</td></tr><tr><td>Industry evaluation</td><td>0.091(.084)</td><td>0.269*(.127)</td><td>0.09(.079)</td><td>0.255*(.123)</td><td>2.326***(.675)</td><td>1.081**(.362)</td><td>1.056(.664)</td><td>2.903***(.777)</td></tr><tr><td>Quality of publishing record</td><td>0.912(.623)</td><td>0.666(.599)</td><td>1.243†(.747)</td><td>0.936(.723)</td><td>1.170†(.668)</td><td>0.767(.664)</td><td>1.843**(.605)</td><td>1.102†(.619)</td></tr><tr><td>Irregularity of publishing record</td><td>-2.173**(.808)</td><td>-2.037**(.767)</td><td>-1.299(.809)</td><td>-1.22(.775)</td><td>-1.068(.752)</td><td>-1.339†(.713)</td><td>-0.154(.671)</td><td>-0.94(.668)</td></tr><tr><td>Identity proximity with industry</td><td>-2.777(2.669)</td><td>-1.646(2.505)</td><td>-2.487(2.435)</td><td>-1.544(2.258)</td><td>-0.636(2.074)</td><td>-0.432(1.798)</td><td>2.12(1.325)</td><td>0.423(1.624)</td></tr><tr><td>Team quality</td><td>0.01(.026)</td><td>0.01(.025)</td><td>0.007(.026)</td><td>0.004(.025)</td><td>0.006(.025)</td><td>-0.004(.024)</td><td>-0.004(.023)</td><td>-0.004(.023)</td></tr><tr><td>Industry evaluation * Industry evaluation</td><td></td><td>-0.012*(.005)</td><td></td><td>-0.011*(.005)</td><td>-0.221***(.063)</td><td>-0.041**(.014)</td><td>-0.098**(.038)</td><td>-0.260***(.066)</td></tr><tr><td>Industry evaluation * Identity proximity with industry</td><td></td><td></td><td></td><td></td><td>-2.167**(.703)</td><td></td><td></td><td>-1.427*(.654)</td></tr><tr><td>Industry evaluation * Industry evaluation * Identity proximity with industry</td><td></td><td></td><td></td><td></td><td>0.214***(.063)</td><td></td><td></td><td>0.150*(.061)</td></tr><tr><td>Industry evaluation * Quality of publishing record</td><td></td><td></td><td></td><td></td><td></td><td>-0.543*</td><td></td><td>-0.432*</td></tr></table>
-<!-- para 65 -->
-<table><tr><td rowspan="2">Industry evaluation * Industry evaluation * Quality of publishing record</td><td rowspan="2"></td><td rowspan="2"></td><td rowspan="2"></td><td rowspan="2"></td><td rowspan="2"></td><td>(.212)</td><td></td><td>(.180)</td></tr><tr><td>0.022*</td><td></td><td>0.020**</td></tr><tr><td>Industry evaluation * Irregularity of publishing record</td><td></td><td></td><td></td><td></td><td></td><td>(.009)</td><td></td><td>(.007)</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0.857</td><td>0.619</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>(.599)</td><td>(.585)</td></tr><tr><td>Industry evaluation * Industry evaluation * Irregularity of publishing record</td><td></td><td></td><td></td><td></td><td></td><td></td><td>-0.084*</td><td>-0.069*</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>(.034)</td><td>(.031)</td></tr><tr><td>Department fixed effects</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td></tr><tr><td>Year fixed effects</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td><td>Included</td></tr><tr><td>Constant</td><td>3.096*</td><td>2.780*</td><td>2.855†</td><td>2.588†</td><td>1.485</td><td>2.978*</td><td>2.03</td><td>2.505†</td></tr><tr><td></td><td>(1.472)</td><td>(1.360)</td><td>(1.480)</td><td>(1.407)</td><td>(1.443)</td><td>(1.337)</td><td>(1.294)</td><td>(1.303)</td></tr><tr><td>Number of observations</td><td>5,131</td><td>5,131</td><td>5,131</td><td>5,131</td><td>5,131</td><td>5,131</td><td>5,131</td><td>5,131</td></tr><tr><td>Number of individuals</td><td>1,571</td><td>1,571</td><td>1,571</td><td>1,571</td><td>1,571</td><td>1,571</td><td>1,571</td><td>1,571</td></tr><tr><td>Serial correlation AR(1) test</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Serial correlation AR(2) test</td><td>0.40</td><td>0.38</td><td>0.39</td><td>0.39</td><td>0.43</td><td>0.42</td><td>0.40</td><td>0.45</td></tr><tr><td>Hansen test of overidentification restrictions</td><td>0.07</td><td>0.09</td><td>0.11</td><td>0.09</td><td>0.09</td><td>0.06</td><td>0.14</td><td>0.32</td></tr><tr><td>Diff.-in-Hansen tests of exogeneity of instrument subsets</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>GMM instruments for levels</td><td>0.15</td><td>0.25</td><td>0.03</td><td>0.02</td><td>0.03</td><td>0.16</td><td>0.07</td><td>0.17</td></tr><tr><td>Predetermined (all variables but the ones threatened as endogenous/exogenous)</td><td>0.09</td><td>0.19</td><td>0.13</td><td>0.16</td><td>0.13</td><td>0.16</td><td>0.42</td><td>0.64</td></tr><tr><td>Endogenous (Previous peer evaluation; Industry evaluation; Industry evaluation squared; Interaction effects)</td><td>0.12</td><td>0.24</td><td>0.13</td><td>0.07</td><td>0.20</td><td>0.30</td><td>0.33</td><td>0.80</td></tr><tr><td>Exogenous iv (Money awarded by government&#x27;s science funding bodies)</td><td>0.53</td><td>0.52</td><td>1.00</td><td>0.69</td><td>0.45</td><td>1.00</td><td>0.75</td><td>1.00</td></tr><tr><td>Exogenous iv (Percentage of gross domestic expenditure on R&amp;D in the business enterprise sector)</td><td>1.00</td><td>1.00</td><td>1.00</td><td>1.00</td><td>0.69</td><td>1.00</td><td>0.85</td><td>0.76</td></tr><tr><td>Exogenous iv (Introduction of a software system at Minerva to streamline grant &amp; contracts administration)</td><td>0.37</td><td>0.43</td><td>0.62</td><td>0.77</td><td>0.79</td><td>0.13</td><td>0.55</td><td>0.74</td></tr></table>
-<!-- para 66 -->
-† p<0.10; * p<0.05; ** p<0.01; *** p<0.001; Robust Standard errors in parentheses; Dependent variable is operationalized as £ value of grants awarded as a principal investigator in year t (ln).
-All models employ a system generalized method of moments estimator.
-All variables are in first-difference which accounts for individual-fixed effects.
-All the independent variables are lagged one-year with the only exception for Years and Departments.
-Year fixed effects are based on two-year periods to account for the one-year lag in the independent variables (results are similar with one-year dummies).
-Quality of publishing record and Irregularity of publishing record are standardized.
-Table A3 – Descriptive statistics - Match-paired sample
-<!-- para 67 -->
-<table border="1"><tr><td rowspan="2">Matched-paired sample in the matching year</td><td colspan="5">Treated individuals</td><td colspan="5">Control group</td></tr><tr><td>N</td><td>Mean</td><td>Std.
-Dev.</td><td>Min</td><td>Max</td><td>N</td><td>Mean</td><td>Std.
-Dev.</td><td>Min</td><td>Max</td></tr><tr><td>Faculty: Business School</td><td>410</td><td>0.02</td><td>0.15</td><td>0.00</td><td>1.00</td><td>410</td><td>0.02</td><td>0.15</td><td>0.00</td><td>1.00</td></tr><tr><td>Faculty: Engineering</td><td>410</td><td>0.33</td><td>0.47</td><td>0.00</td><td>1.00</td><td>410</td><td>0.33</td><td>0.47</td><td>0.00</td><td>1.00</td></tr><tr><td>Faculty: Medicine</td><td>410</td><td>0.46</td><td>0.50</td><td>0.00</td><td>1.00</td><td>410</td><td>0.46</td><td>0.50</td><td>0.00</td><td>1.00</td></tr><tr><td>Faculty: Natural Science</td><td>410</td><td>0.19</td><td>0.39</td><td>0.00</td><td>1.00</td><td>410</td><td>0.19</td><td>0.39</td><td>0.00</td><td>1.00</td></tr><tr><td>Year</td><td>410</td><td>2007</td><td>1.89</td><td>2004</td><td>2011</td><td>410</td><td>2007</td><td>1.89</td><td>2004</td><td>2011</td></tr><tr><td>Industry experience</td><td>410</td><td>0.18</td><td>0.75</td><td>0.00</td><td>6.00</td><td>410</td><td>0.06</td><td>0.42</td><td>0.00</td><td>5.00</td></tr><tr><td>Patents</td><td>410</td><td>0.28</td><td>0.76</td><td>0.00</td><td>6.00</td><td>410</td><td>0.12</td><td>0.51</td><td>0.00</td><td>6.00</td></tr><tr><td>Previous peer evaluation</td><td>410</td><td>4.01</td><td>3.27</td><td>0.00</td><td>20.00</td><td>410</td><td>2.67</td><td>2.72</td><td>0.00</td><td>19.00</td></tr><tr><td>Tenure</td><td>410</td><td>11.70</td><td>7.51</td><td>3.00</td><td>42.00</td><td>410</td><td>11.35</td><td>8.00</td><td>3.00</td><td>42.00</td></tr><tr><td>Team quality</td><td>410</td><td>-2.54</td><td>2.94</td><td>-6.15</td><td>8.87</td><td>410</td><td>-3.73</td><td>2.84</td><td>-6.15</td><td>3.85</td></tr></table>
-<!-- para 69 -->
-We validate the predictivity of our GMM Poisson estimation using a procedure suggested by Blattberg et al.
-We randomly split the 5,131 observations into an in-sample and an out-sample.
-We then employ two models: (a) a model with all covariates and (b) a model without Industry evaluation squared, and plot the average of estimated values of the dependent variable along a decile distribution.
-Consistent with our theorizing, a model including the term Industry evaluation squared should: (i) exhibit a good fit with the data (i.e., in both in-sample and out-sample, the dependent variable values should decrease smoothly as the deciles increase) and (ii) should exhibit a better fit when compared to a model which excludes the term Industry evaluation squared.
-Our results confirm these patterns: When the term Industry evaluation squared is included, the values of peer evaluation decrease smoothly along the decile distribution and no differences are recorded in the predicting power of in-sample and out-sample across all deciles (see plot a below).
-Conversely, when the squared term is excluded, the predicting power drops; notably in the out-sample the DV values in decile 5 are higher than in decile 4 (see plot b below).
-Thus, the predictive power of the model with all covariates (plot a) is higher than of the model without the quadratic term (plot b) a) With all covariates
-<!-- para 71 -->
-b) With all covariates except Industry evaluation * Industry evaluation
-<!-- para 72 -->
-![fig-11](image-ref-11)
-## Biographical sketches
-<!-- para 73 -->
-Riccardo Fini (riccardo.fini@unibo.it) is an associate professor of innovation management and entrepreneurship at the University of Bologna in Italy, the Associate Dean for Entrepreneurship at Bologna Business School and a Fellow at Imperial College London.
-His research interests include entrepreneurship, science commercialisation and impact.
-He received his Ph.D. in Management from the University of Bologna.
-<!-- para 74 -->
-Julien Jourdan (julien.jourdan@dauphine.fr) is a professor of strategy in the Management and Organisation Department at Université Paris-Dauphine (PSL Research University, Paris, France), affiliated with the DRM Research Center and CNRS, and a Visiting Researcher at Imperial College London.
-He received his Ph.D. in Strategic Management from HEC Paris.
-His research focuses on the strategic implications of organizational resource acquisition, conformity, and social valuation.
-<!-- para 75 -->
-Markus Perkmann (m.perkmann@imperial.ac.uk) is a professor of innovation and entrepreneurship in the Imperial College Business School at Imperial College London.
-His primary research interests are in organizational theory, particularly hybrid organizations and social valuation, and the study of innovation and entrepreneurship in science-intensive contexts.
-He received his PhD from the University of Lancaster, and is the joint editor-in-chief of Innovation: Organization and Management.
-<!-- para 77 -->
-[^1]: Following prior works (e.g., Zuckerman, 2012), we use the term valuation to denote the process through which an audience evaluates candidates and evaluation to refer to the outcome of a valuation process (George et al., 2016).
-[^2]: Source: National Science Foundation (http://www.nsf.gov/statistics/2015/nsf15314, accessed 21/11/2017).
-[^3]: We thank an anonymous reviewer for suggesting this label.
-[^4]: A boundary condition, met in many cases, is that the two audiences do not rely on orthogonal ability criteria; see our discussion section.
-[^5]: https://www.mrc.ac.uk/documents/pdf/reviewers-handbook, accessed 21/11/2017.
-[^6]: The matching method offers an alternative to randomized trial experiments (e.g., Boudreau, Guinan, Lakhani & Rield, 2016), not applicable in our case due to the nature of the data on industry evaluation.
-[^7]: We choose not to log-transform our main dependent variable (i.e., number of grants awarded in t) because several authors advise against log-transforming count variables due to issues related to the treatment of zero observations (e.g., O'Hara & Kotze, 2010).
