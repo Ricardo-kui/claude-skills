@@ -54,6 +54,8 @@
       "moderator": {
         "verdict": "valid",
         "severity": "minor",
+        "evidence_strength": "moderate",
+        "realism": "fixable",
         "should_expand": true,
         "expansion_prompts": [
           "Does the Discussion's causal language lean on the DiD corroboration?"
@@ -82,6 +84,7 @@ verified 9/11 quotes, 0 empty quotes skipped
 
 ```json
 {"verdict": "downgrade",
+ "source_branch": "identification",
  "final_category": "identification",
  "final_severity": "minor",
  "fix_type": "revision_fixable",
@@ -92,6 +95,35 @@ verified 9/11 quotes, 0 empty quotes skipped
 另一条的 merge 示例：scope 支与 contribution 支都打了"单行业设定 + 泛化措辞"，Panel 将 scope 版并入 contribution 版（后者引用了 abstract 原文），cross_category_concerns 标注两支。
 
 ## Step 4 报告片段（节选）
+
+报告头部统计区（含阵容透明度块，lineup-protocol §6 模板）：
+
+```markdown
+# ToC 红队审查报告 — 共同所有权与产品召回（虚构稿）
+
+- 目标期刊：AMJ　审查日期：2026-09-20
+- 分支：identification / construct / theory / scope / alternative / contribution（all 模式）＋ 动态分支 1 条（dynamic-1：机制边界——threat perception 的行业外推接缝，AMJ Canvas 要素 4×要素 7 薄弱接缝派生）
+- 节点统计：辩论 9 个节点 → 存活 5 / 被驳回 3 / 撤回 1
+- 模型阵容：lineup = balanced；degraded = partial（6 个非裁判家族 < 7 个辩手槽位，dynamic-1 复用 DeepSeek 异档）
+
+  | 槽位 | 角色 | 模型（provider/id） | 家族 | 档位 |
+  |---|---|---|---|---|
+  | identification | 辩手 | deepseek/deepseek-v4-pro | DeepSeek | mid |
+  | construct | 辩手 | zai-coding-cn/glm-5.3 | GLM | mid |
+  | theory | 辩手 | openai-codex/gpt-5.6-terra | GPT | mid |
+  | scope | 辩手 | github-copilot/grok-4.6 | Grok | mid |
+  | alternative | 辩手 | kimi-coding/k3 | Kimi | mid |
+  | contribution | 辩手 | zai-coding-cn/glm-5.3 | GLM | mid（家族复用，异档不可用时同档异模） |
+  | dynamic-1 | 辩手 | deepseek/deepseek-flash | DeepSeek | cheap（家族复用取异档） |
+  | referee | Panel 裁判 | github-copilot/claude-opus-5 | Claude | high |
+
+  运行时重派：construct 槽首进模型派发验证失败，按 fallback 链重派 zai-coding-cn/glm-5.3-flash 成功（留痕）
+- Panel 处置：endorse 3 / reclassify 0 / downgrade 1 / merge 1 / reject 1
+- 证据核验：5/5 引文字面命中稿件
+- 定位：本报告提取未声明弱点（已声明局限 4 条已列为禁猎区，其中 1 条判定为 deflection-suspect）
+```
+
+后续报告体（Major 记录块、刊层风险总评等）示例：
 
 ```markdown
 ### M1　[贡献与期刊契合] 泛化措辞超出单行业证据（合并 scope 支同类条款）

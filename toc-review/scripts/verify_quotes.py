@@ -8,13 +8,26 @@ Usage:
 merged branch-return structure {"branch": ..., "nodes": [...]} (a list of
 those is fine too). Each node must carry node["claim"]["evidence_quote"].
 
+Verified quote slots (every quote that can influence moderator/Panel verdicts):
+  - claim.evidence_quote        — the skeptic's grounding quote (required)
+  - advocate.citation_quote     — the author's counter-quote. Verified when
+                                  present; a non-acknowledging advocate with
+                                  no citation_quote is an ungrounded deflection
+                                  and counts as failed. (Per protocol the
+                                  revision stage carries no new quotes.)
+
 Matching normalizes case, whitespace runs, curly quotes, and dash variants on
 both sides, then tests substring containment. A quote containing an ellipsis
 (…) or "[...]" fails — the debate protocol requires continuous verbatim quotes.
 
-Output: JSON with per-node evidence_verified plus a summary line to stderr.
-Exit code is 0 even when some quotes fail (verification ran); nonzero only on
-usage/IO errors.
+Output: JSON with per-node evidence_verified, citation_verified, and
+panel_blocked (true when any verdict-relevant quote failed — such nodes must
+not enter Panel). Summary lines go to stderr.
+
+Exit codes (fail-closed):
+  0  nodes were found and every verdict-relevant quote verified
+  1  at least one quote failed or one node is panel_blocked
+  2  no nodes found, or usage/IO error
 """
 
 import argparse
@@ -53,6 +66,15 @@ def iter_nodes(records):
         raise ValueError("records.json must be a node list or branch-return structure")
 
 
+def check_quote(quote, manuscript_norm, manuscript_nospace):
+    """Return (ok, note). note is None on success."""
+    if has_ellipsis(quote):
+        return False, "ellipsis in quote (continuous verbatim required)"
+    q_norm = normalize(quote)
+    ok = q_norm in manuscript_norm or q_norm.replace(" ", "") in manuscript_nospace
+    return ok, None if ok else "no normalized substring match"
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("manuscript")
@@ -67,28 +89,61 @@ def main() -> int:
     with open(args.records, encoding="utf-8-sig") as f:
         data = json.load(f)
 
-    verified, failed, empty = 0, 0, 0
+    claim_stats = [0, 0, 0]      # verified, failed, empty
+    citation_stats = [0, 0, 0]   # verified, failed, skipped
+    blocked = 0
+    node_count = 0
+
     for node in iter_nodes(data):
+        node_count += 1
+        node_bad = False
+
+        # --- claim.evidence_quote (required) ---
         claim = node.get("claim", {})
         quote = claim.get("evidence_quote", "")
         if not quote or not quote.strip():
             node["evidence_verified"] = False
             node["evidence_note"] = "empty quote"
-            empty += 1
-            continue
-        note = None
-        if has_ellipsis(quote):
-            ok = False
-            note = "ellipsis in quote (continuous verbatim required)"
+            claim_stats[2] += 1
+            node_bad = True
         else:
-            q_norm = normalize(quote)
-            ok = q_norm in manuscript_norm or q_norm.replace(" ", "") in manuscript_nospace
-        node["evidence_verified"] = bool(ok)
-        if ok:
-            verified += 1
-        else:
-            failed += 1
-            node["evidence_note"] = note or "no normalized substring match"
+            ok, note = check_quote(quote, manuscript_norm, manuscript_nospace)
+            node["evidence_verified"] = bool(ok)
+            if ok:
+                claim_stats[0] += 1
+            else:
+                claim_stats[1] += 1
+                node["evidence_note"] = note
+                node_bad = True
+
+        # --- advocate.citation_quote (verdict-relevant when deflecting) ---
+        advocate = node.get("advocate")
+        if isinstance(advocate, dict):
+            citation = advocate.get("citation_quote", "")
+            acknowledges = advocate.get("acknowledges")
+            if isinstance(citation, str) and citation.strip():
+                ok, note = check_quote(citation, manuscript_norm, manuscript_nospace)
+                advocate["citation_verified"] = bool(ok)
+                if ok:
+                    citation_stats[0] += 1
+                else:
+                    citation_stats[1] += 1
+                    advocate["citation_note"] = note
+                    node_bad = True
+            elif acknowledges is False:
+                advocate["citation_verified"] = False
+                advocate["citation_note"] = (
+                    "non-acknowledging advocate must supply citation_quote "
+                    "(ungrounded deflection)"
+                )
+                citation_stats[1] += 1
+                node_bad = True
+            else:
+                citation_stats[2] += 1
+
+        node["panel_blocked"] = bool(node_bad)
+        if node_bad:
+            blocked += 1
 
     payload = json.dumps(data, ensure_ascii=False, indent=2)
     if args.out:
@@ -97,13 +152,19 @@ def main() -> int:
     else:
         print(payload)
 
-    total = verified + failed
+    cv, cf, ce = claim_stats
+    av, af, askip = citation_stats
+    print(f"claim quotes: verified {cv}/{cv + cf}" + (f", {ce} empty" if ce else ""), file=sys.stderr)
     print(
-        f"verified {verified}/{total} quotes"
-        + (f", {empty} empty quotes skipped" if empty else ""),
+        f"advocate citations: verified {av}/{av + af}" + (f", {askip} skipped" if askip else ""),
         file=sys.stderr,
     )
-    return 0
+    print(f"nodes: {node_count}, panel_blocked: {blocked}", file=sys.stderr)
+
+    if node_count == 0:
+        print("error: no nodes found in records (fail-closed)", file=sys.stderr)
+        return 2
+    return 0 if blocked == 0 else 1
 
 
 if __name__ == "__main__":

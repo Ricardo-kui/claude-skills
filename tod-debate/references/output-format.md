@@ -1,6 +1,6 @@
 # Output Format — 对辩报告模板
 
-报告语言：中文叙述与判定 + 英文证据引文原文。落盘到 `--out` 或论文A同目录 `<A名>-tod-debate-<YYYYMMDD>.md`。双方论文以 `[@citekey]` 标注——citekey 从论文 MD 源文件的 frontmatter（title/author/year）派生，全文 MD 即权威来源层；稿件未发表时标 `[稿件]`。
+报告语言：中文叙述与判定 + 英文证据引文原文。落盘到 `--out` 或论文A同目录 `<A名>-tod-debate-<YYYYMMDD>.md`。双方论文以 `[@citekey]` 标注——citekey 优先取论文 MD frontmatter 的现成 citekey 字段，缺则经 Zotero（zot CLI）补全，仍缺用临时标签（如 [MS-A]）并在报告中注明，不得凭 title/author/year 编造；全文 MD 即权威来源层；稿件未发表时标 `[稿件]`。
 
 ---
 
@@ -11,15 +11,25 @@
 - 对手提名：{确认方式；提名制附理由与 citekey}
 - 维度派生来源：{vault 路径清单；静态兜底时注明}
 - 节点统计：辩论 {n_nodes} 个节点，终止于门禁 {n_gated}（估计量 {g1} / 等价 {g2}）、深度上限 {n_depth}、无扩展必要 {n_converged}
+- 模型阵容：lineup = {balanced|cheap|max|single|manual}；degraded = {false|partial|true（原因）}
+  
+  | 槽位 | 角色 | 模型（provider/id） | 家族 | 档位 |
+  |---|---|---|---|---|
+  | persona-A | 辩手（论文A） | {provider/id} | {家族} | {mid/cheap/high} |
+  | persona-B | 辩手（论文B） | {provider/id} | {家族≠A} | {档位} |
+  | referee | 争议叶子终审 | {provider/id 或 orchestrator} | {家族∉{A,B}} | {high} |
+  
+  运行时重派：{无 | 槽位→替代模型（原因）}；争议叶子：{n_contested} 条由{裁判模型|moderator（降级）}终审
+  预算：{正常 | budget_exhausted（未决主张对 n 条，报告单列未决清单）}
 - 证据核验：{n_verified}/{n_total} 引文字面命中（失败处理见留痕区）
 
 ## 一、贡献定位表（核心产出）
 
 | # | 子贡献 | 判定 | A 证据 | B 证据 | 对定位句/rebuttal 的含义 |
 |---|--------|------|--------|--------|------------------------|
-| 1 | {一句话子贡献} | unique / incremental / equivalent | 引文+位置 | 引文+位置 | 一句话 |
+| 1 | {一句话子贡献} | distinct / incremental / equivalent | 引文+位置 | 引文+位置 | 一句话 |
 
-incremental 行必须附 **margin**（增量是什么、多大）；equivalent 行在"含义"列写明防守建议（重构主张 or 收窄措辞 or 换角度写差异）。
+incremental 行必须附 **margin**（增量是什么、多大）与**方向**（base_paper → increment_paper）；equivalent 行写明 **scope**（等价范围），并在“含义”列写明防守建议（重构主张 or 收窄措辞 or 换角度写差异）。
 
 ## 二、情境化对比摘要（一段成型）
 
@@ -39,9 +49,9 @@ incremental 行必须附 **margin**（增量是什么、多大）；equivalent �
 
 **4b 措辞修订**（现有文本的具体改动）：每项写明位置（节+段）、现状引文 → 修订方向或样句；判定为 incremental/理论 margin 的主张，措辞按 margin 边界收窄，不得借用未兑现的证据层词汇。
 
-**4c 定位句草稿**（intro 的 relative-to 句）：每条对手一句，编码定位表的诚实判定——unique 写互补，incremental 写 margin，equivalent 写防御。样句直接可改写进 intro。
+**4c 定位句草稿**(intro 的 relative-to 句):每条对手一句,编码定位表的诚实判定--distinct 写互补，incremental 写 margin，equivalent 写防御。样句直接可改写进 intro。
 
-无修订建议的对辩不存在：只要有一行定位表，就有对应的 4b 或 4c；等价风险区有实锤时必有 4a。
+无修订建议的对辩不存在：只要有一行定位表，就有对应的 4b 或 4c；等价风险区有实锤时，默认动作是重定位/删主张（交 grill-the-claim / research-gap-diagnosis），仅当作者判断贡献可挽救时才列 4a 补救分析。
 
 ## 五、辩论树留痕（供复核）
 
@@ -51,7 +61,7 @@ incremental 行必须附 **margin**（增量是什么、多大）；equivalent �
 
 ## 六、回写建议
 
-- 对比卡 → `literature/` 或 `文献笔记库\02 原子化\`（[[note_id]] 链接，[@citekey] 引用）
+- 对比卡 → `literature/` 或 `文献笔记库\02 原子化\`（[[note_id]] 链接，[@citekey] 引用；Vault 内落盘走 Obsidian CLI）
 - 贡献定位表 → 项目作战室{路径}；召回专题产物 → `产品召回\06 项目回流`
 - 定位句素材 → `write-introduction`；R&R 场景 → `revision-coach`
 
@@ -64,7 +74,7 @@ incremental 行必须附 **margin**（增量是什么、多大）；equivalent �
 
 ## 编译规则（多对手模式）
 
-- 每对（A vs B、A vs C）各出一、二、四节；第三节等价风险合并；末尾追加**合并定位总表**：A 的每条主张 × 对各对手的判定汇总（"A1 对 B unique、对 C incremental"→ 定位句必须同时防住 C）
-- 定位表行序：equivalent 最上（最危险）、incremental 次之、unique 最下
+- 每对(A vs B、A vs C)各出一、二、四节;第三节等价风险合并;末尾追加**合并定位总表**:A 的每条主张 × 对各对手的判定汇总（“A1 对 B distinct、对 C incremental”→ 定位句必须同时防住 C）
+- 定位表行序：equivalent 最上（最危险）、incremental 次之、distinct 最下
 - 摘要一段成型；树留痕可折叠（`<details>` 包裹长 JSON）
 - 报告结尾即边界声明，无客套总结

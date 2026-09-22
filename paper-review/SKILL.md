@@ -1,8 +1,6 @@
 ---
 name: paper-review
-description: 顶刊量化论文全稿总控审查（双层：叙事诊断 + 实质红队）。输入论文文件路径或全文，执行故事架构审查、写作阶段诊断、识别最薄弱 Section，默认编排 toc-review 六分支对抗红队提取实质弱点与拒稿门禁风险，合并输出统一报告并路由到对应 skill。`--narrative` 只跑叙事层（快速诊断）。不做逐段重写（→ 各章节 review skills），不做 ✓/△/✗ 打分表（→ pollock-qc）。基于 Pollock (2025)、MVP30 范文语料库与 Tree-of-Concerns 商科版。
-when_to_use: "全稿审查入口：叙事诊断 + 实质红队一份统一报告；快速叙事诊断加 --narrative。红队专项（单支聚焦、R&R 前预判）直接用 toc-review。"
-whenToUse: "Use when 用户提供整篇管理学量化论文需要全稿总控审查：诊断故事架构与写作阶段、识别最薄弱章节，并编排实质红队（识别/构念/理论/范围/替代解释/贡献门禁）输出统一弱点报告与修复路由。Trigger words: 审查整篇论文, 全稿审查, paper review, 帮我看看这篇论文, 论文诊断, 最薄弱的章节, 投稿前审查"
+description: 顶刊量化论文全稿双层总控审查：叙事诊断（故事架构/跨节对齐/审稿人接受度/写作阶段/最薄弱 Section）+ 默认编排 toc-review 六分支跨模型红队提取实质弱点与拒稿门禁风险，合并一份统一报告并路由到对应 skill；--narrative 只跑叙事层（快速诊断）。触发词：全稿审查、审查整篇论文、投稿前审查、论文诊断、最薄弱的章节、帮我看看这篇论文、paper review。红队专项直接用 toc-review，工艺打分用 pollock-qc，已收审稿意见用 revision-coach。
 ---
 
 # Role
@@ -16,7 +14,7 @@ whenToUse: "Use when 用户提供整篇管理学量化论文需要全稿总控�
 ## 调用方式
 
 ```
-/paper-review <文件路径或全文> [--journal=AMJ] [--stage=unknown] [--narrative]
+/paper-review <文件路径或全文> [--journal=AMJ] [--stage=unknown] [--narrative] [--lineup=balanced|cheap|max|single] [--models=slot=provider/id,...]
 ```
 
 **参数说明**：
@@ -24,8 +22,12 @@ whenToUse: "Use when 用户提供整篇管理学量化论文需要全稿总控�
 - `[--journal]`（可选）: 目标期刊（`AMJ` | `ASQ` | `SMJ` | `OS` | `ASR`），默认 `AMJ`；同时传递给实质红队层
 - `[--stage]`（可选）: 用户自报的写作阶段（`preparing` | `blocking` | `refining` | `finishing`），默认 `unknown`
 - `[--narrative]`（可选）: 只跑叙事诊断层（快速、低开销）；省略时默认双层（叙事 + 实质红队）
+- `[--lineup]`（可选）: 透传给 toc-review 的跨模型阵容档位。本 skill 不设默认覆盖——用户未传时用 toc-review 自身默认（balanced）
+- `[--models]`（可选）: 透传给 toc-review 的逐槽模型指定，命名槽位形式 `slot=provider/id`（槽位名见 toc-review 签名：六固定分支名 / dynamic-N / referee）；对 `--lineup` 基础档位的逐槽覆盖，两者可组合——未显式指定的槽位按 `--lineup` 档位分配。`--narrative` 模式下两参数均无效（红队层跳过）
 
 **如果未提供内容**：进入交互模式请求论文文本。
+
+**如果输入是粘贴全文而非路径**：先物化为受管临时文件（`%TEMP%/paper-review-input-<YYYYMMDD-HHMMSS>.md`），后续叙事层与 Step 4 红队统一以该路径为稿件路径（toc-review 及其引文核验脚本均需文件路径），并在报告统计区注明该临时路径。
 
 **如果输入是审稿意见/决定信而非稿件**：本 Skill 是投稿前预审，不处理 R&R——直接路由：
 ```
@@ -111,10 +113,10 @@ whenToUse: "Use when 用户提供整篇管理学量化论文需要全稿总控�
 调用实质引擎，把叙事诊断看不到的层面补齐：
 
 ```
-/toc-review <文件路径> --journal=<同本参数>
+/toc-review <稿件路径> --journal=<同本参数> [--lineup=<用户所传，未传则省略>] [--models=<用户所传，命名槽位形式>]
 ```
 
-按 toc-review 的 SKILL.md 全流程执行（禁猎区清单 → 六分支并行辩论 → 引文核验 → Panel 调解），产出实质弱点记录（含 severity 与 fix_type）与刊层风险总评。
+其中 `<稿件路径>` = 用户给的文件路径，或粘贴输入的物化临时路径（见调用方式节）。按 toc-review 的 SKILL.md 全流程执行（禁猎区清单 → 阵容解析 → 六分支跨模型并行辩论 → 引文核验 → 独立裁判 Panel 调解），产出实质弱点记录（含 severity 与 fix_type）与刊层风险总评。本 skill 不设 lineup 默认覆盖：用户传 `--lineup/--models` 则透传，未传时用 toc-review 自身默认（balanced）。
 
 **双层去重**：叙事层与本层有两处已知双覆盖——multivocality（Step 1c 的叙事透镜 vs 理论支的实质透镜）和承诺-兑现断裂（Step 1b 对齐检查 vs 理论支）。统一编译时同一问题只保留一条：保留证据引文更扎实的红队版本，叙事层的表述并入其描述。
 

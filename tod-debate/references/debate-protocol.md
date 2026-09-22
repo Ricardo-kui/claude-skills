@@ -127,7 +127,7 @@ Debate dimensions: {dimensions}
 
 Generate at most {k=3} subtopics for the next level. Each subtopic:
 - maps to at least one claim from either paper (overlap topics compare the
-  two directly; unique-to-one topics stress-test that claim alone),
+  two directly; single-side topics stress-test that claim alone),
 - is tagged with a debate dimension,
 - is phrased at the level of CONTRIBUTION (what the papers claim to add),
   never at the level of execution detail.
@@ -161,7 +161,7 @@ Gates (either terminates the path):
   this subtopic — the path must terminate with an explicit equivalent or
   incremental verdict, no further expansion.
 
-Verdict calibration (taxonomy-derivation.md §5 governs the semantics):
+Verdict calibration (taxonomy-derivation.md §四 verdict semantics, §五 calibration):
 - Locate each side's claimed theoretical move on a lever; a margin that
   names no lever or fails the lever's diagnostic is rhetorical — record as
   such, do not book it as an increment.
@@ -183,12 +183,15 @@ Synthesize the debate tree into one paragraph comparative summary for a
 {journal} reader: state the papers' genuine similarities first, then their
 differences with emphasis, each difference tied to the evidence exchanged.
 Then produce the contribution-positioning table: every claim-pair with its
-leaf verdict (unique/incremental/equivalent), both sides' evidence quotes,
+leaf verdict (distinct/incremental/equivalent), both sides' evidence quotes,
 and one line on what the verdict means for the manuscript's positioning
 sentence or a rebuttal.
 Then translate the debate into revision actions: (a) remedial analyses —
 each verdict's upgrade conditions are the analysis roadmap, state the
-decisive standard (which result supports/undermines which claim); (b) wording
+decisive standard (which result supports/undermines which claim); for
+equivalent verdicts the default action is repositioning or narrowing the
+claim, NOT new analyses — remedial analysis is listed only when the authors
+judge the contribution salvageable; (b) wording
 revisions — claims judged incremental/theoretical-margin get their wording
 narrowed to the margin boundary, never borrowing evidence vocabulary the
 manuscript does not own; (c) positioning sentences — one draft "relative to
@@ -207,8 +210,14 @@ X, we..." sentence per opponent, encoding the honest verdict.
  ],
  "moderator": {"expand": true|false, "gate_fired": "...", "reason": "..."},
  "leaf_verdicts": [
-   {"claims": ["A1", "B2"], "verdict": "unique|incremental|equivalent",
-    "margin": "...", "evidence_A": ["..."], "evidence_B": ["..."],
+   {"claims": ["A1", "B2"], "verdict": "distinct|incremental|equivalent",
+    "base_paper": "incremental 时必填：先立方 A|B",
+    "increment_paper": "incremental 时必填：扩展方 A|B",
+    "margin": "incremental 时必填：增量一句话",
+    "scope": "equivalent 时必填：等价成立的子题范围",
+    "evidence_A": ["..."], "evidence_B": ["..."],
     "positioning_implication": "..."}
  ]}
 ```
+
+预算耗尽（--max-nodes / --max-rounds）时未决主张对的 verdict 记 `budget_exhausted`——不判胜负、不进定位表计数，报告中单列未决清单。

@@ -41,18 +41,39 @@ persona B（R1）对应主张 B1：股东行动主义压力缩短召回时距（
 ## 叶子判定（moderator，含门禁留痕）
 
 ```json
-{"claims": ["A1", "B1"], "verdict": "unique",
- "margin": null,
- "evidence_A": ["We introduce CEO regulatory focus as an executive-level antecedent..."],
+{"claims": ["A1", "B1"], "verdict": "distinct",
+ "evidence_A": ["We introduce CEO regulatory focus as an executive-level antecedent of recall speed, distinct from governance and litigation incentives."],
  "evidence_B": ["Activist investors shorten the time between defect awareness and recall."],
  "positioning_implication": "定位句可写执行者认知通道与外部治理通道互补；但 intro 不得声称机制已分离。"},
 {"claims": ["A3", "B2"], "verdict": "incremental",
+ "base_paper": "B", "increment_paper": "A",
  "margin": "R1 已建 awareness-to-recall 的行动主义解释；稿件新增同一 DV 上的执行者层级调节，margin 为 cross-level moderation，非新基线。",
  "gate_fired": "equivalence",
- "...": "（同冲击窗口 + 同 DV 家族 + 同数据源触发等价门禁，路径终止于此判定）"}
+ "gate_note": "（同冲击窗口 + 同 DV 家族 + 同数据源触发等价门禁，路径终止于此判定）"}
 ```
 
 ## 报告核心段（节选）
+
+报告头部统计区（含阵容透明度块）：
+
+```markdown
+# ToD 对辩报告 — 共同所有权与召回时机（虚构稿） vs Wowak et al. (2021)
+
+- 根主题：determinants of recall timing　目标期刊：JOM　深度：2
+- 节点统计：辩论 4 个节点，终止于门禁 1（估计量 0 / 等价 1）、深度上限 2、无扩展必要 1
+- 模型阵容：lineup = balanced；degraded = false
+
+  | 槽位 | 角色 | 模型（provider/id） | 家族 | 档位 |
+  |---|---|---|---|---|
+  | persona-A | 辩手（论文A） | zai-coding-cn/glm-5.3 | GLM | mid |
+  | persona-B | 辩手（论文B） | deepseek/deepseek-v4-pro | DeepSeek | mid |
+  | referee | 争议叶子终审 | github-copilot/claude-opus-5 | Claude | high |
+
+  运行时重派：无；争议叶子：1 条由裁判模型终审（incremental/equivalent 边界）
+- 证据核验：11/11 引文字面命中（Step 1.5 剔除 1 条无原文支撑主张，留痕区）
+```
+
+报告主体（节选）：
 
 ```markdown
 ## 一、贡献定位表
@@ -60,7 +81,7 @@ persona B（R1）对应主张 B1：股东行动主义压力缩短召回时距（
 | # | 子贡献 | 判定 | A 证据 | B 证据 | 含义 |
 |---|--------|------|--------|--------|------|
 | 2 | awareness-to-recall 的解释 | incremental | 交互项引文 | R1 主效应引文 | 定位句写 cross-level 调节，不写新基线；防守：收窄措辞即可 |
-| 1 | CEO regulatory focus 构念 | unique | Intro 引文 | — | 互补通道表述可用；机制分离的主张删除 |
+| 1 | CEO regulatory focus 构念 | distinct | Intro 引文 | — | 互补通道表述可用；机制分离的主张删除 |
 
 ## 三、等价风险区
 
@@ -75,5 +96,5 @@ persona B（R1）对应主张 B1：股东行动主义压力缩短召回时距（
 
 - 每条主张带分类学标签与逐字引文；判定对象是主张对，论文级结论由定位表汇总
 - incremental 行的 margin 一句话写明增量与证据；equivalent 门禁触发时路径终止于显式判定
-- 定位表行序：最危险的（incremental/equivalent）在上，unique 在下
+- 定位表行序：最危险的（incremental/equivalent）在上，distinct 在下
 - 判定与引文是英文原文，转述与含义是中文——报告双语分工的样板

@@ -1,8 +1,8 @@
 # Panel Review — 跨分支调解
 
-改编自 ToC 论文 §3.5 与附录 C.5，加入 Edmans (2023) 的"可修复 vs 结构性"分诊与 Pollock Ch13 表13.1 的拒稿/修改标准。由编排者（主 agent）对全部存活条款逐条执行，一次调解同时持有六个视角，做分支内主持人做不到的跨类别推理。
+改编自 ToC 论文 §3.5 与附录 C.5，加入 Edmans (2023) 的"可修复 vs 结构性"分诊与 Pollock Ch13 表13.1 的拒稿/修改标准。由**独立裁判模型**（阵容协议裁判槽，家族与全部分支隔离——跨分支调解不能由辩手家族自我复核）执行，编排者组装输入并派发（一次调用，逐条调解），裁判同时持有六个视角，做分支内主持人做不到的跨类别推理。裁判槽降级为编排者自审时（lineup-protocol §4.3），本协议原文嵌入编排者的 Panel 阶段。
 
-## 输入
+## 输入（编排者组装进裁判模型 prompt）
 
 - 全部存活条款（含 branch、moderator 裁决、evidence_verified 状态）
 - 稿件路径（Panel 需要时可回查原文）
@@ -60,12 +60,15 @@ Additional rules:
 Output JSON:
 ```json
 {"verdict": "endorse|reclassify|downgrade|merge|reject",
- "final_category": "identification|construct|theory|scope|alternative|contribution",
+ "final_category": "identification|construct|theory|scope|alternative|contribution|<动态分支名>",
+ "source_branch": "产生该条款的原分支（六固定名或 dynamic-N；reclassify 后仍保留溯源）",
  "final_severity": "minor|major",
  "fix_type": "revision_fixable|contribution_structural|delivery_only",
  "cross_category_concerns": ["..."],
  "reasoning": "..."}
 ```
+
+动态分支条款的 final_category 规则：语义上能对应六固定类目的 reclassify 到固定类目（source_branch 保留动态分支名溯源）；对应不上的保留动态分支名，报告统计区单独计数。
 
 ## 裁决后处理
 

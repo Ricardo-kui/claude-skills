@@ -1,4 +1,4 @@
 interface:
   display_name: "ToD Debate"
-  short_description: "Pairwise novelty debate between two papers, producing a contribution-positioning map."
+  short_description: "Cross-model novelty debate: distinct vs incremental vs equivalent"
   default_prompt: "Use $tod-debate to run a novelty debate between this manuscript and its closest rival."

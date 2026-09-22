@@ -1,4 +1,4 @@
 interface:
   display_name: "ToC Review"
-  short_description: "Adversarial red-team review extracting unstated weaknesses via five specialized skeptic debates."
+  short_description: "Six-branch red team: unstated weaknesses & desk-reject risks"
   default_prompt: "Use $toc-review to run the Tree-of-Concerns red-team review on this management manuscript."

@@ -10,8 +10,17 @@
 # ToC 红队审查报告 — {稿件名}
 
 - 目标期刊：{journal}　审查日期：{date}
-- 分支：identification / construct / theory / scope / alternative（{focus} 模式）
+- 分支：identification / construct / theory / scope / alternative / contribution（{focus} 模式）＋ 动态分支 {n_dynamic} 条（{dynamic-1、dynamic-2 名称或“无”}）
 - 节点统计：辩论 {n_nodes} 个节点 → 存活 {n_surviving} / 被驳回 {n_deflected} / 撤回 {n_withdrawn}
+- 模型阵容：lineup = {balanced|cheap|max|single|manual}；degraded = {false|partial|true（原因）}
+  
+  | 槽位 | 角色 | 模型（provider/id） | 家族 | 档位 |
+  |---|---|---|---|---|
+  | branch-{name} | 辩手 | {provider/id} | {家族} | {mid/cheap/high} |
+  | ... | | | | |
+  | referee | Panel 裁判 | {provider/id 或 orchestrator} | {家族} | {high} |
+  
+  运行时重派：{无 | 槽位→替代模型（原因）}
 - Panel 处置：endorse {a} / reclassify {b} / downgrade {c} / merge {d} / reject {e}
 - 证据核验：{n_verified}/{n_surviving} 引文字面命中稿件
 - 定位：本报告提取**未声明**弱点（已声明局限 {n_acknowledged} 条已列为禁猎区，其中 {n_deflection} 条判定为 deflection-suspect）
