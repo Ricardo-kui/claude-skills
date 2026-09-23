@@ -28,11 +28,11 @@
 | [`stacked-diffusion-logit`](stacked-diffusion-logit.md) | `corpus/堆叠扩散Logit.md` | 0 | 扩散/采纳 Logit 结构模型（当前无验证变体） |
 | [`multi-actor`](multi-actor.md) | `corpus/多行为者设计.md` | 3 | 多行为者/多层级设计，需聚合辩护或 dyad 拆分 |
 | [`binary-outcome-inference`](binary-outcome-inference.md) | `corpus/推断二元结果.md` | 1 | 二元结果的因果推断（当前少量变体） |
-| [`two-stage`](two-stage.md) | `corpus/两阶段模型.md` | 14 | 样本选择/可观测性选择，需 Heckman 或控制函数叙事 |
+| [`two-stage`](two-stage.md) | `corpus/两阶段模型.md` | 15 | 样本选择/可观测性选择，需 Heckman 或控制函数叙事 |
 | [`varx-pvar`](varx-pvar.md) | `corpus/VARX-PVAR.md` | 8 | 向量自回归/脉冲响应，需滞后阶/GIRF/FEVD 规格 |
 | [`state-space`](state-space.md) | `corpus/结构需求-state-space.md` | 6 | 结构需求或状态空间模型，需拟合/反事实方法规格 |
 
-合计：24 设计类型 / 342 编号变体 / verbatim 347 条 / 模板 343 条。
+合计：24 设计类型 / 343 编号变体 / verbatim 348 条 / 模板 344 条。
 另有 5 条不编号变体（`### 变体：`，fang2025 POM）与 5 条 EXTEND 子变体（`#### 变体：`）——已抽取进各二级清单但**不计入**上面的 342（口径与 validator/INDEX/速查表一致）。
 
 ## 待补录

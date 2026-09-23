@@ -7,9 +7,9 @@ meta:
   schema_version: "1.1.0"
   registry_type: estimator-slot-skeleton
   last_updated: 2026-09-13b
-  last_batch_id: batch_2028_mao_dong_lee_2022_msom_writeback
-  batches_processed: 38
-  total_papers_indexed: 69
+  last_batch_id: batch_2029_liuliuluo2016_writeback
+  batches_processed: 39
+  total_papers_indexed: 70
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
     granularity: "per estimator（对应 corpus/[结果类型].md 文件）"
@@ -210,7 +210,7 @@ estimators:
               - table_presentation
               - diagnostic_reassurance
               - contextual_pattern
-            notes: "MVP30 训练集实测（Lane C 反查 2026-09-21）：vault results/ 与 _parsed_texts/mvp30 全文扫描命中 16 篇含描述统计+VIF 常规款开场；原 Smith_2021_SMJ / Lee_2022_AMJ / Wang_2020_MSOM 三名在全库唯一出现，判定为占位已替换。subfield_distribution 仍为原登记 15 篇之拆分，待按 16 篇重核。"
+            notes: MVP30 训练集实测（Lane C 反查 2026-09-21）：vault results/ 与 _parsed_texts/mvp30 全文扫描命中 16 篇含描述统计+VIF 常规款开场；原 Smith_2021_SMJ / Lee_2022_AMJ / Wang_2020_MSOM 三名在全库唯一出现，判定为占位已替换。subfield_distribution 仍为原登记 15 篇之拆分，待按 16 篇重核。
             corpus_path: corpus/OLS-FE.md
           - id: r1_dual_path_premise_descriptives
             skeleton: "We identified [N] [treatment events], of which [n] ([value]%) were [focal treatment]. The majority of observations in our sample ([value]%) are [unit] observations with zero [moderator]. In our sample, a \"[small condition]\" corresponds to [definition] and a \"[large condition]\" means [definition]. As we theorized, change in [mediator_A] and change in [mediator_B] are not significantly correlated ([value], p = [value]), and neither are change in [outcome_A] and [outcome_B] ([value], p = [value]). Table [1] provides all descriptive statistics and pairwise correlations, which are mostly low to moderate. The mean variance inflation factor for the variables used in the estimation ([value]) is below the commonly used threshold of [threshold] ([citation])."
@@ -249,7 +249,7 @@ estimators:
               - incremental_model_building
               - table_navigation
             corpus_path: corpus/OLS-FE.md
-            notes: "Lane C v3 回填（2026-09-21）：判别性特征组 5 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 12 改为已验证范文数 3；subfield 按来源期刊重切。"
+            notes: Lane C v3 回填（2026-09-21）：判别性特征组 5 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 12 改为已验证范文数 3；subfield 按来源期刊重切。
           - id: r2_ols_model_free_quartile_opening
             skeleton: "We first present model-free evidence regarding the relationship between [IV] and [DV]. In the [web appendix], we show scatter plots of [DV] against [IV] for [subgroup description]. In Fig. [X], we divide the sample into [four quartiles] based on [IV] and calculate the mean and median [DV] for each quartile. Consistent with Hypothesis [N], there is a monotonic [increase/decrease] in [DV] from the first quartile, where [IV] is lowest, to the fourth quartile, where [IV] is highest. The mean (median) [DV] is significantly different across the quartiles."
             paper_count: 1
@@ -385,7 +385,7 @@ estimators:
               - significance
               - magnitude
               - support
-            notes: "Lane C v3 回填（2026-09-21）：判别性特征组 4 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 15 改为已验证范文数 3；subfield 按来源期刊重切。"
+            notes: Lane C v3 回填（2026-09-21）：判别性特征组 4 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 15 改为已验证范文数 3；subfield 按来源期刊重切。
             corpus_path: corpus/OLS-FE.md
           - id: r3_ols_four_beat_with_r2_embedded
             skeleton: "Hypothesis [x] predicted... Model [y] shows... The R² increases from [value] to [value] when [predictor] is added, indicating that [predictor] explains an additional [value]% of the variance. Substantively... Thus, Hypothesis [x] is supported."
@@ -403,7 +403,7 @@ estimators:
               - significance+r2
               - magnitude
               - support
-            notes: "Lane C v3 回填（2026-09-21）：判别性特征组 4 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 3 改为已验证范文数 2；subfield 按来源期刊重切。"
+            notes: Lane C v3 回填（2026-09-21）：判别性特征组 4 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 3 改为已验证范文数 2；subfield 按来源期刊重切。
             corpus_path: corpus/OLS-FE.md
           - id: r3_ols_nonsignificant
             skeleton: "Hypothesis [x] predicted that [predictor] would be [positive/negative] related to [outcome]. However, as shown in Model [y] of Table [z], the coefficient for [predictor] is [positive/negative] but not statistically significant (β = [value], p = [value]). Thus, Hypothesis [x] is not supported."
@@ -423,7 +423,7 @@ estimators:
               - direction
               - nonsignificance
               - no_support
-            notes: "Lane C v3 回填（2026-09-21）：判别性特征组 2 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 4 改为已验证范文数 5；subfield 按来源期刊重切。"
+            notes: Lane C v3 回填（2026-09-21）：判别性特征组 2 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 4 改为已验证范文数 5；subfield 按来源期刊重切。
             corpus_path: corpus/OLS-FE.md
           - id: r3_ols_interquartile_magnitude
             skeleton: "The coefficient for [IV] is [positive/negative] and statistically significant (β = [value], p < [threshold]). An interquartile move in [IV] from the 25th percentile to the 75th percentile is associated with a [N] [unit / percentage point] [increase/decrease] in [DV]. In untabulated tests, we also find support using [alternative sample], with similar economic significance."
@@ -798,7 +798,7 @@ estimators:
               - benchmark
               - contextualization
             corpus_path: corpus/OLS-FE.md
-            notes: "Lane C v3 回填（2026-09-21）：判别性特征组 3 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 8 改为已验证范文数 3；subfield 按来源期刊重切。"
+            notes: Lane C v3 回填（2026-09-21）：判别性特征组 3 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 8 改为已验证范文数 3；subfield 按来源期刊重切。
           - id: r5_ols_external_evidence_practical_importance
             skeleton: "A [one-SD] increase in [predictor] corresponds to a [value]% [increase/decrease] in [outcome]. Evidence suggests that even small changes in [outcome] can net significant benefits such as [external evidence]. Thus, the [value]% change we observe is likely to be particularly important in practice."
             paper_count: 1
@@ -972,7 +972,7 @@ estimators:
               - test_action
               - unchanged_result
               - threat_reduction
-            notes: "Lane C v3 回填（2026-09-21）：判别性特征组 3 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 10 改为已验证范文数 1；subfield 按来源期刊重切。"
+            notes: Lane C v3 回填（2026-09-21）：判别性特征组 3 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 10 改为已验证范文数 1；subfield 按来源期刊重切。
             corpus_path: corpus/OLS-FE.md
           - id: r7_ols_narrative_variant
             skeleton: "We also examine whether [alternative explanation]. Specifically, we [method description]. Results reported in Table [x] show that [main finding] remains [robust/qualitatively similar]."
@@ -989,7 +989,7 @@ estimators:
               - alternative_explanation
               - method
               - robustness_confirmation
-            notes: "Lane C v3 回填（2026-09-21）：判别性特征组 3 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 3 改为已验证范文数 2；subfield 按来源期刊重切。"
+            notes: Lane C v3 回填（2026-09-21）：判别性特征组 3 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 3 改为已验证范文数 2；subfield 按来源期刊重切。
             corpus_path: corpus/OLS-FE.md
           - id: r7_ols_alternative_dv_falsification
             skeleton: "An alternative way to establish causality is to provide a falsification test where we examine [alternative_DV], an outcome that is outside the decision-making domain of [focal_actor]. We use the [estimator] specification in [Table X], Column [N], except that we replace [DV] with [alternative_DV]. As expected, the [interactions/effects] involving [actor-specific variables] are insignificant, because [alternative_DV] is not within the decision-making domain of [focal_actor]."
@@ -1385,7 +1385,7 @@ estimators:
             paradigm_exclusivity: 通用
             rhythm_tags:
               - table_presentation
-            notes: "Lane C v3 回填（2026-09-21）：判别性特征组 2 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 5 改为已验证范文数 7；subfield 按来源期刊重切。"
+            notes: Lane C v3 回填（2026-09-21）：判别性特征组 2 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 5 改为已验证范文数 7；subfield 按来源期刊重切。
             corpus_path: corpus/Logit-Probit-Ordered-Probit.md
           - id: r1_descriptive_vif_relogit
             skeleton: "[Descriptive statistics + correlation matrix presented first, with explicit note that VIFs are below threshold and multicollinearity is not a concern]. Then, [estimation approach declared upfront: random-effects logistic regression for binary outcome panels, with rationale for between-firm focus and convergence advantages]. [Odds-ratio reporting convention stated explicitly to aid interpretation].\n"
@@ -1404,11 +1404,15 @@ estimators:
       R3:
         skeleton_variants:
           - id: r3_case_group_contrast_loop
-            skeleton: "We present our results of Equation ([N]) in Table ([X]). We observe that the coefficients of [Case A] and [Case B] are insignificantly negative, whereas the coefficients of [Case C] and [Case D] are significantly positive. When we combine these two sets of estimates, our result suggests that, compared with [the reference cases], [units] would be more likely to [outcome] if [the condition] is classified as either [Case C] or [Case D]. By using a [structural estimation] approach to [estimate the theoretical primitives], our empirical study provides supporting evidence that the guideline offered in our [decision framework] provides practical implications for understanding how [units] may behave when [focal circumstance]."
-            notes: "Verified across Bendig 2024 and the user-audited Lee & Park 2024 exemplar. A quadratic coefficient alone is insufficient; curve shape is established by joint restrictions and then displayed on the probability/response scale. For adverse Y, the vertex is a maximum-risk intermediate zone, not a performance optimum."
-            skeleton_level: paragraph
-            paper_count: 3
+            sources:
+              - mao_dong_lee_2022_msom
             status: VERIFIED
+          - id: r3_construct_subsection_verdict_mapping
+            skeleton: "Table [X] shows that a higher [predictor 1] reduces the likelihood that [full outcome] is provided (β = [value], p < [.01]). This supports H[N] and the notion that [construct-level interpretation].  In contrast, [predictor 2] has a positive impact on the likelihood of [outcome] (β = [value], p < [.05]), in support of H[M]. Although [component 2] is often used to [conventional purpose] ([citation]), our results show the effectiveness of this [strategy] in the particular context of [focal setting].  The estimation also shows a significantly negative effect of [predictor 3] (β = [value], p < [.01]). [One-sentence monotonicity restatement: \"The longer [state], the less likely [outcome].\"] This supports H[K] and corroborates the findings in prior research about [related finding] ([citation])."
+            notes: "Verified across Bendig 2024 and the user-audited Lee & Park 2024 exemplar. A quadratic coefficient alone is insufficient; curve shape is established by joint restrictions and then displayed on the probability/response scale. For adverse Y, the vertex is a maximum-risk intermediate zone, not a performance optimum."
+            status: VERIFIED
+            skeleton_level: paragraph
+            paper_count: 4
             verification_basis: user_expert_audit
             subfield_distribution:
               om: 1
@@ -1417,6 +1421,7 @@ estimators:
               - Bendig_Hensellek_Schulte_2024_ETP
               - Lee_Park_2024_SMJ
               - mao_dong_lee_2022_msom
+              - liuliuluo2016
             transferability: high
             paradigm_exclusivity: Binary or fractional logit-link curvilinear relationships; do not interpret link-scale coefficients as response-scale changes
             rhythm_tags:
@@ -2209,19 +2214,22 @@ estimators:
         description: ""
         skeleton_variants:
           - id: r6_nonsignificant_region_significance_partial
-            skeleton: "[Model navigation]. [Coefficient report with nonsignificance]. [Figure-based region significance]. [Partial support judgment]."
-            skeleton_level: paragraph
-            paper_count: 1
             status: VERIFIED
+          - id: r6_multipart_hypothesis_joint_verdict
+            skeleton: "Table [X] shows that the interaction between [moderator] and [X1] has a [negative] impact on the likelihood of [outcome] being provided (β = [value], p < [.05]). Thus, [moderator] [exacerbates] the ([direction]) effect of [X1]. Furthermore, the coefficient of the interaction between [moderator] and [X2] is [positive] (β = [value], p < [.10]). These results support H[N].  Similarly, the two parts of H[M] are both supported: [moderator] [reduces] the effect of [X3] on [outcome] (interaction between [moderator] and [X3]: β = [value], p < [.10]), whereas [component] increases the effect (interaction between [moderator] and [X4]: β = [value], p < [.05])."
+            notes: ""
+            status: VERIFIED
+            skeleton_level: paragraph
+            paper_count: 2
             verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
             subfield_distribution:
               strategy: 1
             sources:
               - Malik_Wang_Martin_Gomez-Mejia_2025_JOM
+              - liuliuluo2016
             transferability: ""
             paradigm_exclusivity: ""
             rhythm_tags: []
-            notes: ""
             corpus_path: corpus/Logit-Probit-Ordered-Probit.md
           - id: r6_construct_family_mixed_evidence
             skeleton: "The results for the influence of [construct_family] on [DV] show mixed results. As Table [X] suggests, [core_measure], which measured the effects of [core_dimension] on [DV], was [direction] and significant in both Models [a] and [b]. This indicates that [substantive_reading_of_core_measure]. It is important to highlight that [estimator_credibility_sentence_reinforcing_estimate_quality]. While [core_measure] was significant, no significant results were obtained from [k] additional measures of [construct_family] that assessed [alternative_dimension_1] and [alternative_dimension_2] (results not reported here). [Alternative_specification_1] were insignificant. Furthermore, [alternative_specification_2] of [dimension] were also not significant (results not reported here)."
@@ -3472,7 +3480,7 @@ estimators:
               - irr
               - rate_interpretation
               - ame_bridge
-            notes: "Lane C v3 回填（2026-09-21）：判别性特征组 3 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 3 改为已验证范文数 2；subfield 按来源期刊重切。"
+            notes: Lane C v3 回填（2026-09-21）：判别性特征组 3 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 3 改为已验证范文数 2；subfield 按来源期刊重切。
             corpus_path: corpus/计数模型.md
           - id: r3_count_cross_model_consistency
             skeleton: "Results are similar across models. The main effect of [predictor] is consistently significant and [direction]. As [predictor] increases, [units] are generally [less/more] likely to [outcome]. However, the interaction between [predictor] and [moderator] is consistently [direction] and significant, suggesting that [moderator] moderates the direct effect of [predictor]. When [field_condition], [units] become [more/less] likely to [outcome]. This finding supports Hypothesis [x]."
@@ -4247,7 +4255,7 @@ estimators:
               - Singh_Grewal_2023_JMR
             transferability: high
             paradigm_exclusivity: IV/2SLS 专用
-            notes: "第7轮扩库回填(2026-09-21)：Lane C 全文终审命中 Singh_Grewal_2023_JMR（JMR，Table 4 显式 first/second stage 双 Panel）；pc 3→1 与回填数对齐；eilert2017 经全文核验排除（control function 非 2SLS）。"
+            notes: 第7轮扩库回填(2026-09-21)：Lane C 全文终审命中 Singh_Grewal_2023_JMR（JMR，Table 4 显式 first/second stage 双 Panel）；pc 3→1 与回填数对齐；eilert2017 经全文核验排除（control function 非 2SLS）。
             rhythm_tags:
               - second_stage
               - causal_interpretation
@@ -6622,6 +6630,11 @@ batch_history:
   source_paper: mao_dong_lee_2022_msom
   slot_updates_count: 4
   novel_patterns_count: 4
+- batch_id: batch_2029_liuliuluo2016_writeback
+  timestamp: 2026-09-23
+  source_paper: liuliuluo2016
+  slot_updates_count: 2
+  novel_patterns_count: 2
 status_overrides:
   schema: '1.0'
   note: >-

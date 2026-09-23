@@ -563,6 +563,22 @@ updated: 2026-08-13
 **诚实边界**: 不得把 fail-to-reject 写成"证明无调节"；Discussion 若回收主效应须同时回收该 null。
 
 <!-- wb:liu_liu_luo_2016_jm:legacy_Logit-Probit-Ordered-Probit_25 -->
+
+### 变体 AT: R6 多部件假设合并判决 — 部件异质显著性档并报不降档 (2026-09-23)
+**来源论文**: Liu, Liu & Luo 2016 (*Journal of Marketing*)
+**原始句锚点**: "the two parts of H6 are both supported: CEO cash compensation reduces the effect of product hazard on full remedy ... whereas equity incentive increases the effect"
+**验证状态**: EMERGING
+**槽位**: R6（R4 交互判决副槽位）
+**骨架**:
+> Table [X] shows that the interaction between [moderator] and [X1] has a [negative] impact on the likelihood of [outcome] being provided (β = [value], p < [.05]). Thus, [moderator] [exacerbates] the ([direction]) effect of [X1]. Furthermore, the coefficient of the interaction between [moderator] and [X2] is [positive] (β = [value], p < [.10]). These results support H[N].
+>
+> Similarly, the two parts of H[M] are both supported: [moderator] [reduces] the effect of [X3] on [outcome] (interaction between [moderator] and [X3]: β = [value], p < [.10]), whereas [component] increases the effect (interaction between [moderator] and [X4]: β = [value], p < [.05]).
+**与原骨架差异**: 变体 25 管 H7/H8 型双部件全 null 的 spill-over 当场收束；本变体是其**支持侧镜像**——一个假设号跨两个交互系数（表格 Hypothesis 列预映射 H5(−)/(+) 型），部件逐一报 β,p（marginal p<.10 原样显示、不隐藏不升格），判决聚合句 "These results support H[N]." / "the two parts of H[M] are both supported"，判决后即时语义动词（exacerbates / reduces / increases the effect）把统计交互译成方向语言。区别于 OLS-FE 变体 72（单系数多指标裁决）与变体 13（marginal 校准 moderate support）：本变体是部件级合并判决，部件边际不降全局判决档。
+**诚实边界**: 部件 p 值必须逐一原样报（marginal 不得写成 p<.05）；判决动词保持 support 原级、禁加强度副词（strongly/clearly）；理论只预测单部件时，边际部件不得并入支持（回退变体 13 的 moderate 校准）；两部件必须真同属一个假设号（表格预映射在先），不得事后拼并。
+
+<!-- wb:liuliuluo2016:r6_multipart_hypothesis_joint_verdict -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
 ### 变体 26: R7 probit 外生确认电池 (2026-08-13)
 **来源论文**: Liu, Liu & Luo 2016 (*Journal of Marketing*)
 **原始句锚点**: "One major benefit of the control function approach is that one can directly test the presence of endogeneity through the statistical significance of residual terms. None of our control function residuals is significant."
@@ -755,6 +771,24 @@ updated: 2026-08-13
 **区别于**: 变体 X（R2 相关替代测量分模型括弧——事先声明的各进独立模型架构）；变体 Z 的估计器可信度强化拍（估计质量自证）——本变体是判决后的测量构念效度外部同调证词+替代测量一行复证 coda。
 
 <!-- wb:gulati_1999_where_do_interorganizational_networks:r3_construct_validity_congruence_coda -->
+
+
+### 变体 AS: R3 构念子节系数→假设映射判决 — likelihood 方向拍+判决措辞轮换+构念级理论收尾（probit 无幅度版） (2026-09-23)
+**来源论文**: Liu, Liu & Luo 2016 (*Journal of Marketing*)
+**原始句锚点**: "This supports H1 and the notion that companies are influenced by the short-term financial burden of recall remedy."
+**验证状态**: EMERGING
+**槽位**: R3
+**骨架**:
+> Table [X] shows that a higher [predictor 1] reduces the likelihood that [full outcome] is provided (β = [value], p < [.01]). This supports H[N] and the notion that [construct-level interpretation].
+>
+> In contrast, [predictor 2] has a positive impact on the likelihood of [outcome] (β = [value], p < [.05]), in support of H[M]. Although [component 2] is often used to [conventional purpose] ([citation]), our results show the effectiveness of this [strategy] in the particular context of [focal setting].
+>
+> The estimation also shows a significantly negative effect of [predictor 3] (β = [value], p < [.01]). [One-sentence monotonicity restatement: "The longer [state], the less likely [outcome]."] This supports H[K] and corroborates the findings in prior research about [related finding] ([citation]).
+**与原骨架差异**: 现有 R3 变体 2（Pfarrer OR 四拍）强制 OR→likelihood 翻译、变体 6/7 由 AME 承担幅度拍、变体 AM 管判决后的构念效度复证——本变体是 probit 的**无幅度映射节奏**：四拍的幅度拍整拍让位给**构念级理论收尾拍**（判决句后接 the notion that... / indicating... / the effectiveness of... / corroborates...，把系数提升为理论含义、福利评价或文献呼应，不出现任何数字幅度）；幅度工作外包给图形轨（变体 28 总效应带）。子节按构念家族命名（"Product Value and Product Hazard" / "CEO Compensation and Tenure"），表内 Hypothesis 列预映射系数→假设号，正文一段一系数一判决；判决措辞轮换（This supports H / is thus supported / in support of H）避免重复；反号组件假设（H3a/H3b 型）用 In contrast 反向并置；配套 R2 段尾前置拍——joint test 宣告各构念块联合显著 + "We now discuss the specific results related to the hypotheses." 导航句。
+**诚实边界**: 方向只准用 likelihood 语言（reduces the likelihood / has a negative impact on），禁止解释 probit 系数大小；构念级收尾不得夹带数字幅度——有幅度需求时改用变体 7（1-SD→概率）或变体 28（图形）；幅度外包必须在正文有承接物（图或 AME），否则触 registry high-risk「R5 缺边际效应」，须在文中补 AME 句。
+
+<!-- wb:liuliuluo2016:r3_construct_subsection_verdict_mapping -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
 
 ### 变体 AA: R7 随机效应方差份额自证 — Rho 作为纠正生效证据 (gulati1999 型)
 **来源论文**: Gulati 1999 (Strategic Management Journal, 20(5), 397-420)

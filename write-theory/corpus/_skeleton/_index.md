@@ -24,7 +24,7 @@
 | argumentation_patterns | `corpus/subprotocols/argumentation_patterns.md` | [`subprotocols-argumentation_patterns.md`](subprotocols-argumentation_patterns.md) | 32 | 35 |
 | hypothesis_organization_patterns | `corpus/subprotocols/hypothesis_organization_patterns.md` | [`subprotocols-hypothesis_organization_patterns.md`](subprotocols-hypothesis_organization_patterns.md) | 15 | 32 |
 | evidence_patterns | `corpus/subprotocols/evidence_patterns.md` | [`subprotocols-evidence_patterns.md`](subprotocols-evidence_patterns.md) | 10 | 15 |
-| construct_differentiation_patterns | `corpus/subprotocols/construct_differentiation_patterns.md` | [`subprotocols-construct_differentiation_patterns.md`](subprotocols-construct_differentiation_patterns.md) | 10 | 10 |
+| construct_differentiation_patterns | `corpus/subprotocols/construct_differentiation_patterns.md` | [`subprotocols-construct_differentiation_patterns.md`](subprotocols-construct_differentiation_patterns.md) | 11 | 11 |
 | moderator_selection_frameworks | `corpus/subprotocols/moderator_selection_frameworks.md` | [`subprotocols-moderator_selection_frameworks.md`](subprotocols-moderator_selection_frameworks.md) | 8 | 13 |
 | bilateral_argumentation_templates | `corpus/subprotocols/bilateral_argumentation_templates.md` | [`subprotocols-bilateral_argumentation_templates.md`](subprotocols-bilateral_argumentation_templates.md) | 3 | 17 |
 
@@ -36,12 +36,12 @@
 | closure | [`sentences-closure.md`](sentences-closure.md) | 6 | 26 |
 | construct_definition | [`sentences-construct_definition.md`](sentences-construct_definition.md) | 35 | 26 |
 | cost_benefit_calculus | [`sentences-cost_benefit_calculus.md`](sentences-cost_benefit_calculus.md) | 1 | 14 |
-| hypothesis_forms | [`sentences-hypothesis_forms.md`](sentences-hypothesis_forms.md) | 41 | 105 |
+| hypothesis_forms | [`sentences-hypothesis_forms.md`](sentences-hypothesis_forms.md) | 44 | 106 |
 | leitmotif-section-opener | [`sentences-leitmotif-section-opener.md`](sentences-leitmotif-section-opener.md) | 12 | 8 |
 | mechanism_chain | [`sentences-mechanism_chain.md`](sentences-mechanism_chain.md) | 96 | 76 |
-| moderation | [`sentences-moderation.md`](sentences-moderation.md) | 35 | 41 |
+| moderation | [`sentences-moderation.md`](sentences-moderation.md) | 36 | 42 |
 
-合计：22 个子清单 / verbatim 499 条 / 模板 608 条。
+合计：22 个子清单 / verbatim 504 条 / 模板 611 条。
 
 ## 待补录
 

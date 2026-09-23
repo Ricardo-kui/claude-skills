@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
-  last_updated: '2026-09-13'
-  observations_processed: 59
+  last_updated: '2026-09-23'
+  observations_processed: 62
   description: Evidence ledger for write-theory design defects inferred from Theory exemplar distillation.
 defects:
   e-family-missing-dual-edged-signed-contingency-variant:
@@ -3136,6 +3136,155 @@ defects:
     lifecycle: open
     first_seen: '2026-09-13'
     last_seen: '2026-09-13'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  ab_pair_taxonomy_missing_component_split:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: hypothesis_forms.md 的 a/b 配对分类学覆盖三型：同IV双DV同向（malik2025 主格式）、镜像极点反号（变体 G，gulati_2007，要求两极共享同一 warrant）、真竞争（F
+      变体）；无'同一构念包沿理论维度拆组件、反号预测并存'的形态
+    rule_excerpt: ''
+    rule_locator: ''
+    target: .claude/skills/write-theory/corpus/sentences/hypothesis_forms.md
+    diagnosis: 已发表范文存在第四种 a/b 形态：单一前因包（compensation）沿期限维度拆两组件（cash/equity），各自 warrant、反号预测并存、无裁决语义——落在变体 G（要求共享 warrant）与
+      F（要求互斥）之间，现有分类学无法归类；语料资产缺失，规则本身无错误
+    proposed_change:
+      action: add_variant
+      summary: '新增变体 H：组件拆分反号 a/b 配对假设——经 writeback plan（sections/theory.plan.yaml item: component_split_opposite_sign_ab_pair）落盘，gate
+        ① 审定'
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 机制推演型
+      - 调节效应型
+      hypothesis_families:
+      - main_effect
+      - paired_ab
+      journals: []
+      boundary: 适用于前因包有可命名拆分维度且两预测并存的假设组织
+    papers:
+    - id: liuliuluo2016
+      journal: JM
+      build_type: 调节效应型
+      hypothesis_family: ''
+      evidence_anchor: CEO compensation 小节：'Because cash and equity compensations provide the CEO with different incentives,
+        we expect them to have different effects on remedy choices.' + H3a/H3b 反号对
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - JM
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - JM
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-23'
+    last_seen: '2026-09-23'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  dichotomy_carving_missing_precedent_legitimacy_beat:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: construct_differentiation_patterns.md 的 Dichotomize Strategy Menu by Fundamental Cut 模式只收'宣告切分+组内程度差异'拍；无其前置的合法性拍
+    rule_excerpt: ''
+    rule_locator: ''
+    target: .claude/skills/write-theory/corpus/subprotocols/construct_differentiation_patterns.md
+    diagnosis: 同篇范文的 DV 雕刻实际为两拍：先援引 3 组相邻域先例二分（'This type of dichotomous classification is desirable for the study of recall
+      remedy, too'）取得合法性，再宣告 fundamental cut；现语料只有第二拍，第一拍缺失
+    proposed_change:
+      action: add_variant
+      summary: '新增 Micro-Move: Precedent-Dichotomy Legitimacy Alignment——经 plan item: precedent_dichotomy_legitimacy_alignment
+        落盘'
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 跨类型（构念雕刻）
+      hypothesis_families:
+      - dichotomous_dv
+      journals: []
+      boundary: 适用于连续/多类策略菜单的二分 DV 雕刻
+    papers:
+    - id: liuliuluo2016
+      journal: JM
+      build_type: 调节效应型
+      hypothesis_family: ''
+      evidence_anchor: Full Versus Partial Remedy P3：先例二分句组（Dawar & Pillutla / Chen et al. / Siomkos & Kurzbard）+ 'is desirable
+        ..., too' 迁移授权句
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - JM
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - JM
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-23'
+    last_seen: '2026-09-23'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus changes do not alter core routing.
+  moderation_grid_missing_analogous_handoff:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: moderation.md 已收调节直接效应区分、similar-theoretical-reasoning 计数元框架、符号继承句；无第 k 个同向调节变量的类比交接句式
+    rule_excerpt: ''
+    rule_locator: ''
+    target: .claude/skills/write-theory/corpus/sentences/moderation.md
+    diagnosis: 多调节变量网格（≥3 调节 × ≥2 基线）的第三种压缩装置缺失：'the interactions between [C] and [drivers] resemble those for [A]. Specifically:'——把已论证方向逻辑整体移交给同向新调节变量；全语料零命中（resemble
+      those for 检索为空）
+    proposed_change:
+      action: add_variant
+      summary: '新增同源调节类比交接句——经 plan item: analogous_moderator_handoff 落盘'
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - 调节效应型
+      hypothesis_families:
+      - multi_moderator_grid
+      journals: []
+      boundary: 仅适用于与新调节变量真同向（共享取向维度）的交接
+    papers:
+    - id: liuliuluo2016
+      journal: JM
+      build_type: 调节效应型
+      hypothesis_family: ''
+      evidence_anchor: H7/H8 前导句：'Because a CEO with longer tenure tends to pay less attention ..., the interactions between
+        tenure and recall characteristics resemble those for CEO cash compensation. Specifically:'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - JM
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - JM
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-23'
+    last_seen: '2026-09-23'
     auto_action:
       eligibility: optional_variant_only
       reason: Corpus changes do not alter core routing.

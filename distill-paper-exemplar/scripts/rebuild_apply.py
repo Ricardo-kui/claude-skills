@@ -281,7 +281,14 @@ def plan_theory(objs: dict, doc: dict, scan, alias) -> list[str]:
     notes: list[str] = []
     meta = objs["meta"].get("meta") or {}
     source_papers = objs["source_papers"].get("source_papers") or {}
-    patterns = objs["patterns"].get("patterns") or {}
+    # first-time bootstrap: a null/empty `patterns` root is falsy, so `or {}`
+    # would detach the mapping and silently drop every entry plan_theory adds.
+    # Attach the fresh dict back so the rendered segment keeps it (2026-09-23,
+    # liuliuluo2016 run: 235 created patterns lost per apply → never converged).
+    patterns = objs["patterns"].get("patterns")
+    if not isinstance(patterns, dict):
+        patterns = {}
+        objs["patterns"]["patterns"] = patterns
     sbd = objs["summary_by_dimension"].get("summary_by_dimension") or {}
     frag_by_paper = _theory_frag_by_paper(scan, alias)
     all_ids = [f.get("fragment_id")

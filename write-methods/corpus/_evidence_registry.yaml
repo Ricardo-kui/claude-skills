@@ -364,6 +364,19 @@ evidence:
         - M4
         - M8
       note: 整篇蒸馏 4 条写回：非线性模型 M8 风险集-假设映射+Heckman 泛化（EXTEND 变体21 后）；micro-templates/manual-coding-validation M3/M4 多源构念效度三角化（双问卷/多行为者，EXTEND 变体B 后）；同伴效应-网络效应 M4 间接关系长度/分离/分层控制 + M4 操作化谱系 PCA 合成（ADD×2，该族第 2 源）。SKIP：非应答 K-S+Heckman 辩护链（carpenterwestphal2001 + westphal_bednar2005 既有链已覆盖）。era flags：LISREL/Bartlett、kappa 四分位离散化、Heckman 无排除限制、response-rate 步骤 ritual_only。
+    liuliuluo2016:
+      journal: Journal of Marketing
+      title: "What Drives a Firm's Choice of Product Recall Remedy? The Impact of Remedy Cost, Product Hazard, and the CEO"
+      status: EMERGING (1p)
+      design_types:
+        - 两阶段模型
+      micro_templates:
+        - variable-operationalization
+      slots_covered:
+        - M6
+        - M8
+      story_fidelity: section_variant
+      note: "整篇蒸馏残项同步补登记（2026-09-23）：M8 主方程复用式 Heckman——IMR 从主方程（Equation 1）回收不另写第一阶段规格，排除限制以实证辩护（与下游结果相关 r=.017 不显著 + 辅助回归复验），Heckman 定位为 mediation test accounting for selection（两阶段模型 变体15，EMERGING；该 stem 的 paper 行与 paper_count 已在位）。M6 档案字段测量构造规则——监管公告页等档案文档字段→控制变量的可审计构造（多值字段 tie-breaking、字段差计算式、类别 dummy 基准组显式声明），登记于 micro-templates/variable-operationalization.md 档案字段测量构造节。micro-templates 文件层无独立 registry 条目结构，按邻近 by_source_paper.micro_templates 格式登记（沿用 2026-08-28/08-29 because-clauses 先例）。"
   by_design_type:
     面板数据-OLS:
       paper_count: 41
@@ -884,7 +897,7 @@ evidence:
         - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int (ASQ)
       status: VERIFIED
     两阶段模型:
-      paper_count: 12
+      paper_count: 13
       papers:
         - chen_ganesan_liu_2009_jm (JM)
         - chung_low_rust_2022_jams (JAMS)
@@ -898,6 +911,7 @@ evidence:
         - eilert2017
         - liu_shankar2015
         - pupovac_astvansh_carrillat_legoux_2026_pom
+        - liuliuluo2016
       status: ROBUST
       slots_covered:
         - M7

@@ -7,7 +7,7 @@ l1-subagent-protocol.md「子代理输出契约」节（由 distill-agents 四�
 spawn 时 Read 自举加载）；分发消息只填 WHAT。本脚本不校验契约内容对错，只校验
 载体结构与单一源纪律：
 
-  C1 双路径同一性   .claude\\skills\\* 与 claude-skills\\* 五组 skill 哨兵文件一致
+  C1 双路径同一性   .claude\\skills\\* 与 .agents\\skills\\* 五组 skill 哨兵文件一致
   C2 分发模板苗条   「分发消息」fence 不含契约正文（两档匹配：FAIL/WARN）
   C3 契约节在位     「子代理输出契约」节含必需条款（防过度瘦身误删真契约）
   C4 agent 定义同步 四份 distill-agents/agents/*.md 硬护栏行一致 + 双 Read 指针在位
@@ -38,11 +38,11 @@ SKILLS = [
     "distill-results-exemplar",
 ]
 SECTIONS = ["introduction", "theory", "methods", "results"]
-PREFIX_A = Path(r"C:\Users\huawei\.claude\skills")
-PREFIX_B = Path(r"C:\Users\huawei\claude-skills")
+PREFIX_A = Path.home() / ".claude" / "skills"
+PREFIX_B = Path.home() / ".agents" / "skills"
 PROTOCOL_REL = Path("distill-paper-exemplar/references/l1-subagent-protocol.md")
 AGENTS_SRC = PREFIX_B / "distill-agents"
-CACHE_ROOT = Path(r"C:\Users\huawei\.zcode\cli\plugins\cache\huawei-skills-local\distill-agents")
+CACHE_ROOT = Path.home() / ".zcode" / "cli" / "plugins" / "cache" / "huawei-skills-local" / "distill-agents"
 PHASE4_REL = "references/phase-4-validation-writeback.md"
 GUARD_MARK = "硬护栏"
 

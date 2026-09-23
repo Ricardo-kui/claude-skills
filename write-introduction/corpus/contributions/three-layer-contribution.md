@@ -3,14 +3,15 @@ type: canonical_contribution
 canonical_id: "three-layer-contribution"
 status: VERIFIED
 gap_type: all
-cross_paper: VERIFIED (1 paper, distinctive) + EMERGING variant E (canonical-effect-offset, fini2017)
+cross_paper: VERIFIED (1 paper, distinctive) + EMERGING variant E (canonical-effect-offset, fini2017) + EMERGING variant N (cross-literature escalation ladder, liuliuluo2016)
 generativity: ADAPTABLE
 exclusivity: LOW
 source_papers:
   - haunschild2015 (OS, 2015): "foundation for a phenomenon... extends our knowledge... indicates the consequential nature"
   - hoffmann_cheong_phan_zurbruegg2024 (JM, 2024): "Theory/practice split — antecedents vs consequences pivot + Table 1 + multi-stakeholder policy practical"
+  - liuliuluo2016 (JM, 2016): "Cross-literature escalation ladder — phenomenon gap → framework-first claim → actor-level bridging (CEO financial interests in recall remedy)"
   - fini_jourdan_perkmann_2017 (AMJ, 2017): "Canonical-effect-offset — conditional negative flip offsetting the well-documented 'Matthew effect' + audience-specific nature of past appreciation indices"
-updated: 2026-08-12
+updated: 2026-09-23
 created: 2026-05-19
 source: Distilled from Haunschild, Polidoro & Chandler (2015), Organization Science
 ---
@@ -368,4 +369,34 @@ source: Distilled from Haunschild, Polidoro & Chandler (2015), Organization Scie
 **禁忌**: 三联建议必须各有一条模型结果背书，禁止罗列模型未分析的政策工具；监管文献对比至少两条文献，不得单引
 
 <!-- wb:mao_dong_lee_2022_msom:intro_contribution_policy_triple_suggestion -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
+
+### 变体 N：跨文献递进桥接型（liuliuluo2016 型）
+
+> 论证角色：Claim（把三重贡献组织为跨文献升级阶梯——现象缺口→框架首创→行动者桥接，向两条文献流同时声明贡献）
+
+**验证状态**: VERIFIED — expert_audit_override（召回域单源升 VERIFIED，用户 2026-08-29 裁定；单篇来源，仅作 `section_variant`）
+
+**模板**:
+> "Our contribution to the literature is threefold. First, despite [the frequent occurrence of phenomenon] and [its implications for A, B, and C], almost no research has examined [focal decision]. Our study fills this important gap. Second, a growing number of studies have provided valuable insights on [the consequences side of the conversation]. However, few have paid attention to [the determinants side]. This is the first study to offer and test a theoretical framework that [names the trade-off the framework resolves — between X cost to the firm and Y harm to consumers]. Third, a central theme of our article is that [focal decision] is influenced not only by [conventional event/firm drivers], but also by [imported actor-level factor]. Our results show that [actor factor] not only directly influence[s] [the decision] but also moderate[s] the effects of [conventional drivers]. Incorporating these '[actor]' factors into the theoretical framework and studying their impacts on [decision] constitute a novel addition to the literature."
+
+**来源**: liuliuluo2016 (JM), P5–P7
+
+**原文锚定**:
+> "First, despite the frequent occurrence of product recalls and the important implications of remedy for recall management, company performance, and consumer welfare, almost no research has examined recall remedy. Our study fills this important gap."
+> "This is the first study to offer and test a theoretical framework that considers the trade-off between remedy cost to the company and consumer harm."
+> "Our results show that a CEO's financial interests not only directly influence the choice of remedy but also moderate the effects of recall characteristics."
+
+**关键特征**:
+- 三级阶梯逐级跨文献升级：第一级留在现象域（recall 管理，话题级缺口）；第二级在同文献内做"后果→决定因素"轴翻转并以框架级 first-claim 收束；第三级引入行动者层（CEO 激励），把第二条文献流（高管激励/upper echelons）接入操作域——每级打开一条新文献流，而非三条平行贡献（与变体 I 平铺块、变体 H 三联型的判别点）
+- 每级两拍节奏：文献状态句开头（despite... / However, few... / a central theme...）+ 声明句收尾（fills this important gap / the first study / a novel addition），递进感由声明动词逐级升级承载
+- 第三级 not only...but also 双声明把行动者因素的主效应与调节效应合并在一句，并内嵌 findings preview（Our results show...）——与变体 G（post_2022）第三贡献合并结构的区别：本变体合并的是"直接效应+对既有 Driver 的调节"，且是跨文献阶梯的末级而非悖论消解槽
+- 第二级首创声明锚定在框架内容（the trade-off between X and Y）而非话题级，天然防 overclaiming
+
+**适用**: Incompleteness ×（Phenomenon + Mechanism + Constructs）多维贡献；操作域现象（recall/hazard/安全事件）需要从行动者/激励文献引入前因的桥接型论文；需同时向"现象/决策文献"与"高管激励文献"两个市场声明贡献时；JM/AMJ 实证
+
+**禁忌**: 三级必须逐级升级（现象→机制→行动者），不得并列罗列（并列场景用变体 C/I）；"first study" 必须限定在框架级（offer and test a theoretical framework that...），不得滑向话题级首创；第三级 results preview 必须与 Theory 假设一一对应可兑现；第三条文献流的接入要有理论机制（本篇：CEO 激励进入召回补偿决策），不得只是"再加一个前因"；变体字母按文件局部编号——本文件的 N≠literature-turns/01-progressive-coherence.md 变体 N「文献分工」
+
+<!-- wb:liuliuluo2016:contribution_cross_literature_escalation_ladder_liuliuluo2016 -->
 <!-- wb-meta: gap=Incompleteness status=EMERGING -->

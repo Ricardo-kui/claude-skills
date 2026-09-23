@@ -1742,7 +1742,7 @@ evidence:
         Inadequacy: 20
         Incommensurability: 2
     three-layer-contribution:
-      paper_count: 10
+      paper_count: 11
       papers:
         - haunschild2015 (OS)
         - hoffmann_cheong_phan_zurbruegg2024 (JM)
@@ -1754,6 +1754,7 @@ evidence:
         - gulati_1999_network_location_and_learning_the_influence_of_n (Strategic Management Journal)
         - gulati_lavie_singh_2009_partnering_experience (Strategic Management Journal)
         - "mao_dong_lee_2022_msom (Manufacturing & Service Operations Management)"
+        - liuliuluo2016
       status: VERIFIED
       verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       generativity: ADAPTABLE
@@ -1766,7 +1767,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 6
+        Incompleteness: 7
         Inadequacy: 3
         Incommensurability: 1
     metatheory-anchored-contribution:
@@ -2522,6 +2523,7 @@ paper_index:
   pfarrer_pollock_and_rindova_2010: Inadequacy
   ridge_aime_white_2013_smj: Incompleteness
   zajac_westphal_the_social_construction_of_market_value: Incompleteness
+  liuliuluo2016: Incompleteness
 
 # === AUTHORED ===
 critique:

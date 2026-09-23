@@ -648,6 +648,45 @@ but also depend upon the different types of [dimension B] [a firm/actor] faces.
 <!-- wb:gulati_higgins_2003_which_ties_matter:sent_moderation_two_way_contingency_framing -->
 
 
+
+## 同源调节类比交接句（Analogous-Moderator Handoff，Liu_Liu_Luo_2016 型）
+
+> 论证角色：Framing——多调节变量网格中，把已论证调节变量的方向逻辑整体移交给同向新调节变量，避免逐条重推交互。
+
+**句位**: 调节区块（T5）内，前 k-1 个调节变量已与基线自变量完成交互推演后，第 k 个同向调节变量的引入句；紧接 "Specifically:" 只列该调节变量的交互假设，不重述机制。
+
+**句式骨架**:
+```
+Because [moderator C] tends to [share the orientation already argued for moderator A] ([cite]), the interactions between [C] and [the base drivers] resemble those for [A]. Specifically:
+H[N]: The [negative] impact of [driver 1] on [DV] is enhanced when [C] is greater.
+H[N+1]: The [positive] impact of [driver 2] on [DV] is reduced when [C] is greater.
+```
+
+**变体要点**:
+- "resemble those for [A]" 的合法性来自 C 与 A 共享已在主效应段论证过的同一取向（如同属短视极）；引用只补 C 侧证据，不重推 A 的机制
+- "Specifically:" 后直接列假设，交互方向由主效应符号继承——与 subprotocols/hypothesis_organization_patterns.md 的 Dual-Role IV → Shared-Logic Compressed T5 压缩逻辑同族
+- C 自己的主效应假设（如有）必须在交接句之前独立论证完毕
+
+**为什么有效**: 3+ 调节变量 × 2+ 基线自变量的网格逐格推演会产生 6+ 段重复论证；类比交接把边际成本降为"证明 C 与 A 同向"一句，读者凭符号代数补全交互方向。
+
+**注意事项**: 只适用于与已论证调节变量真同向的 C；C 有独立机制或方向存疑时必须独立推演。交接句不免除双边论证义务（C20）——场景要求 high/low 双边时 C 的交互仍需补足。压缩下限：每条交互至少保留方向句（is enhanced/reduced），不得只写 resemble 然后裸列假设。
+
+**反模式**: 把方向相反的调节变量用 resemble 交接（符号矛盾）；跨机制类比（C 与 A 无共享取向维度）；用 resemble 掩盖 C 独有机制。
+
+**原文锚点** (Liu, Liu & Luo 2016, JM):
+> "Because a CEO with longer tenure tends to pay less attention to the benefits of long-term strategies (Zhou et al. 2008), the interactions between tenure and recall characteristics resemble those for CEO cash compensation. Specifically:"
+
+<!--
+pattern_id: analogous_moderator_handoff
+build_type: 调节效应型（句式级）
+source_papers: ["Liu_Liu_Luo_2016_JM"]
+confidence: medium（单篇，待第二篇交叉验证）
+sentence_position: why_chain_transition（调节区块内）
+-->
+
+<!-- wb:liuliuluo2016:analogous_moderator_handoff -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Boundary tbt="调节效应型" -->
+
 ### 句式 G：信号贬值双边调节收束句（Gulati_Lavie_Singh_2009 型）
 > 论证角色：A&R（高强度下信号增值 + 低强度下信号被替代信息贬值——双边论证后条件收敛）
 

@@ -350,6 +350,42 @@ alternatives], as these alternatives differ in the mechanisms available to gener
 
 <!-- wb:gulati2005-adaptation-vertical:a_umbrella_decomposition_platform_for_categorical_ordering -->
 
+
+### Micro-Move: Precedent-Dichotomy Legitimacy Alignment（先例二分合法性前置，Liu_Liu_Luo_2016 型）
+
+> 论证角色：[D] 定义前提——在宣布"基础切分"之前，先用相邻域的既有二分先例为新 DV 的二分合法性背书，使切分显得是领域惯例的延伸而非作者自造。
+
+**适用场景**: DV 是连续/多类策略菜单、需切成二分时，作为 `Dichotomize Strategy Menu by Fundamental Cut` 的**前置拍**——先援引 2-3 组相邻域先例二分取得合法性，再宣告 fundamental cut 与组内程度差异。两拍连用构成完整 DV 雕刻段。
+
+**骨架**:
+```
+To distinguish [strategies] as being more versus less [responsive dimension] to [domain], prior research has classified them as "[A1]" versus "[A2]" ([cite 1]), "[B1]" versus "[B2]" ([cite 2]), and "[C1]" versus "[C2]" ([cite 3]). This type of dichotomous classification is desirable for the study of [focal choice], too.
+```
+
+**变体要点**:
+- 先例二分取自相邻域（同结果域的相邻决策类型），不取自本域——本域无先例恰是论文 gap 所在
+- 三组先例后用 "This type of ... is desirable for ..., too" 一句完成迁移授权，"too" 承担全部合法性论证
+- 先例切分轴须与本文切分轴同构（如同为响应性/完整性轴），读者可自行映射
+
+**为什么有效**: 新 DV 的二分最易被质疑"为什么是两类"；先例二分把切分轴锚到领域既有分类学，切分从作者选择升格为领域惯例的延伸。
+
+**注意事项**: 先例必须真实同构（同为二分且切分轴可对应），不得拼凑；每组先例须对应真实标签对，不可笼统引综述。
+
+**反模式**: 跳过本拍直接宣布二分（切分显得任意）；先例域与本文域无理论相邻性（合法性迁移失效）。
+
+**原文锚点** (Liu, Liu & Luo 2016, JM):
+> "To distinguish company strategies as being more versus less responsive to a crisis, prior research has classified them as 'unambiguous support' versus 'stonewalling' (Dawar and Pillutla 2000), 'proactive' versus 'passive' (Chen, Ganesan, and Liu 2009), and 'supereffort' versus 'denial' (Siomkos and Kurzbard 1994). This type of dichotomous classification is desirable for the study of recall remedy, too."
+
+<!--
+pattern_id: precedent_dichotomy_legitimacy_alignment
+build_type: 跨类型（构念雕刻微动作）
+source_papers: ["Liu_Liu_Luo_2016_JM"]
+confidence: medium（单篇，待第二篇交叉验证）
+-->
+
+<!-- wb:liuliuluo2016:precedent_dichotomy_legitimacy_alignment -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Constructs tbt="调节效应型" -->
+
 ## 与相邻语料文件的关系
 
 - [`../sentences/construct_definition.md`](../sentences/construct_definition.md)：微观句式模板（如 "We define X as..."）

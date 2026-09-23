@@ -5,7 +5,7 @@ function: 对齐性——建立 Theory 构念与 Methods 测量之间的映射
 slots: M3, M4, M5
 extracted_from: 21 design-type corpus files
 created: 2026-05-22
-updated: 2026-05-22
+updated: 2026-09-23
 ---
 
 # 变量操作化句式（Variable Operationalization）
@@ -99,3 +99,21 @@ updated: 2026-05-22
 | `The data come from Compustat.` | 信息不足 | `...from Compustat North America, which reports [relevant items] for [population].` |
 | `High values mean good.` | 口语化 | `Higher values indicate more favorable [construct] outcomes.` |
 | 变量定义与 Results 表格不一致 | 跨 section 断裂 | 确保 Methods 中的变量名、测量方式与 Results 表格完全一致 |
+
+
+### 档案字段测量构造（M6）
+
+从监管公告页等档案文档字段构造控制变量时，逐条声明**可审计构造规则**，不让读者猜字段如何变成变量：
+
+| 微模板 | 功能 | 风险 |
+|--------|------|------|
+| `[Source] provides two [fields] on the [announcement] page: [field A] and [field B].` | 声明来源文档的字段结构 | 安全 |
+| `[Field A] is when [the unit first entered]. If there are multiple [variants] with different [Field A values], we adopted the [earliest].` | 并列/多值时的 tie-breaking 规则 | 安全 |
+| `We then calculated the [difference between field A and field B] to measure [how many days had passed].` | 字段→变量的计算式 | 安全 |
+| `A set of [category] dummies following [the regulator's] categorization are included: [D1] for [...], ..., [Dk] for [...]. [Remaining categories] are classified in the holdout (base) category.` | 类别固定效应 + 基准组显式声明 | 安全 |
+| `These [category] fixed effects control for the different natures of [units] that could influence [DV]. Such differences could be caused by factors like [factor 1] and [factor 2].` | 基准组之后的实质 because（类别差异的两个具体来源） | 安全 |
+
+反模式：只写 `[X] is the logged number of days...` 而不声明 tie-breaking 规则——多值字段下的构造不可复现；类别 dummy 列了各档却不声明哪档是基准组——系数解释失去参照。
+
+<!-- wb:liuliuluo2016:m6_archival_field_measurement_construction_rules -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->

@@ -502,6 +502,54 @@ H[N]b: [Partner]'s [advantage construct] is negatively related to [focal actor]'
 
 <!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:s_hypothesis_forms_mirror_pole_paired_ab -->
 
+
+### 变体 H：组件拆分反号 a/b 配对假设（Component-Split Opposite-Sign Pair，Liu_Liu_Luo_2016 型）
+
+> 论证角色：Claim——把同一前因包沿一条理论维度拆成两个组件，对同一 DV 给出一对反号预测；组件各自承担 warrant，由共同方向原理绑定。
+
+**句位**: 前因构念（激励包/制度包）主效应块的收束——一个构念沿理论维度（如时间视野）拆成两组件，a/b 编号绑定，两预测同时成立、无裁决语义。
+
+**与近邻变体的区分**:
+- vs **变体 G（镜像极点，gulati_2007）**: G 的两极是同一维度在两个行动者上的镜像、共享同一 warrant；本变体的 a/b 是同一行动者的同一构念包拆出的两个组件，各自有 warrant，由一条共同方向维度（如短视 vs 长期）绑定
+- vs **F 竞争假设（wowak2025 / zajac_westphal_2004）**: F 的两预测互斥、数据裁决；本变体两预测并存（组件共存于同一包），不得写 "which dominates"
+- vs **配对假设主格式（malik2025，同 IV 双 DV 同向）**: 主格式 a/b 跨 DV；本变体 a/b 同 DV 反号
+
+**句式骨架**:
+```
+The [incentive package] usually includes [short-term] and [long-term] components ([cite]). Because [component 1] and [component 2] provide the [actor] with different incentives, we expect them to have different effects on [choice].
+
+If the [actor] receives a greater amount of [component 1] (vs. [component 2]), we predict [component-1 mechanism: short-horizon warrant]. Thus,
+H[N]a: [Units whose actors receive greater component 1] are less likely to [provide complete option].
+
+On the other hand, we predict [complete option] is more likely when [component 2] is greater. [Component-2 mechanism: long-horizon warrant]. As discussed earlier, [bridge back to long-term benefits already established in the construct section]. Therefore,
+H[N]b: [Units whose actors receive greater component 2] are more likely to [provide complete option].
+```
+
+**变体要点**:
+- 拆分维度必须在构念引入段先行声明（"usually includes [X] and [Y] components"）——拆分是构念结构的事实，不是假设技巧
+- "we expect them to have different effects" 一句先立反号预期，再分别推演；反号是构念内建属性
+- H_b 前用 "As discussed earlier, ..." 回指构念段已建立的长远利益 warrant，避免重推
+
+**为什么有效**: 读者从 a/b 编号读到"同一构念的两面"，从组件各自 warrant 读到"两面为何反向"；反号配对使激励设计的时间视野张力在假设语法层面显形，且不需竞争假设的裁决框架。
+
+**注意事项**: 两组件必须同属一个可命名的前因包且共享一条可命名的方向维度；机制完全独立、无共同维度时改用独立编号。两预测同时成立是默认预期。
+
+**反模式**: 为获得 a/b 对称而人为拆分无理论维度的构念；误用为竞争假设（加入裁决语言）；两组件 warrant 只论证其一。
+
+**原文锚点** (Liu, Liu & Luo 2016, JM):
+> "Because cash and equity compensations provide the CEO with different incentives, we expect them to have different effects on remedy choices." … "H3a: Companies whose CEOs receive greater cash compensation are less likely to provide full remedy in product recalls." … "H3b: Companies whose CEOs receive greater equity incentive are more likely to provide full remedy in product recalls."
+
+<!--
+pattern_id: component_split_opposite_sign_ab_pair
+build_type: 跨类型（假设句式）
+source_papers: ["Liu_Liu_Luo_2016_JM"]
+confidence: medium（单篇，待第二篇交叉验证）
+sentence_position: hypothesis_sentence
+-->
+
+<!-- wb:liuliuluo2016:component_split_opposite_sign_ab_pair -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Constructs tbt="调节效应型" -->
+
 ### 分离编号回指竞争对（Anaphoric Disjoint-Numbered Competing Pair，zajac_westphal_2004 型）
 
 <!--

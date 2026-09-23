@@ -8,7 +8,7 @@
 | 模型族 | 对应 corpus 文件 | 变体数 | 何时读它 |
 |---|---|---|---|
 | [`ols-fe`](ols-fe.md) | `corpus/OLS-FE.md` | 99 | 主模型是 OLS/FE/动态面板/SUR 时写 R1–R9 结果段，或需要表导航/幅度翻译/稳健性叙述 |
-| [`logit-probit-ordered-probit`](logit-probit-ordered-probit.md) | `corpus/Logit-Probit-Ordered-Probit.md` | 59 | DV 是二元/有序/类别变量，需要 OR/概率尺度翻译或分样本二元模型裁决 |
+| [`logit-probit-ordered-probit`](logit-probit-ordered-probit.md) | `corpus/Logit-Probit-Ordered-Probit.md` | 61 | DV 是二元/有序/类别变量，需要 OR/概率尺度翻译或分样本二元模型裁决 |
 | [`survival-analysis`](survival-analysis.md) | `corpus/生存分析.md` | 19 | DV 是时长/生存时间，需 hazard/exp(β) 或「四拍+百分比」风险结果 |
 | [`did`](did.md) | `corpus/DiD.md` | 25 | 因果设计是 DiD/准实验，需交互项幅度翻译、pre-trend 或 placebo 稳健性 |
 | [`count-models`](count-models.md) | `corpus/计数模型.md` | 35 | DV 是计数（召回次数/专利数），需发生率比翻译或计数诊断 |
@@ -29,7 +29,7 @@
 | [`varx-pvar`](varx-pvar.md) | `corpus/VARX-PVAR.md` | 7 | 向量自回归/脉冲响应，需弹性表或方差分解解读 |
 | [`blp-state-space`](blp-state-space.md) | `corpus/BLP-状态空间.md` | 5 | 结构需求或状态空间模型，需拟合/反事实报告 |
 
-合计：21 模型族 / verbatim 292 条 / 模板 312 条。
+合计：21 模型族 / verbatim 294 条 / 模板 314 条。
 
 ## 待补录
 
