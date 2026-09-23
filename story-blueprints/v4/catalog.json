@@ -4292,7 +4292,8 @@
           "suitable": "partial",
           "requires": [],
           "learn": [
-            "Align the outcome with the proposed choice by coding full refund/replacement separately from partial repair, self-repair, or discount remedies, then estimate the criterion-by-incentive interactions on that choice."
+            "Align the outcome with the proposed choice by coding full refund/replacement separately from partial repair, self-repair, or discount remedies, then estimate the criterion-by-incentive interactions on that choice.",
+            "When testing a downstream consequence of the choice, reuse the main-choice equation as the Heckman selection equation and defend the exclusion restriction empirically — the excluded variable's near-zero, nonsignificant correlation with the outcome — rather than by assertion."
           ],
           "caveat": [
             "The 170 NYSE CPSC recalls, binary remedy aggregation, compensation measures, probit model, and instruments are setting-specific; the binary coding cannot resolve differences among partial remedies."
@@ -4306,7 +4307,7 @@
             "Use a downstream valuation analysis as a contrastive consequence only after the remedy choice is established, and distinguish a selection-adjusted association from proof of investor interpretation."
           ],
           "caveat": [
-            "The event-study result that full remedy has lower CAR can reflect remedy selection or severity not fully captured by controls; it does not prove that investors infer a specific hidden crisis state."
+            "The Heckman selection-corrected CAR result that full remedy lowers announcement-window returns can still reflect severity or confounds not captured by the selection model; the inverse Mills ratio itself flips from nonsignificant (remedy-only model) to significant (fuller models), and the result does not prove investors infer a specific hidden crisis state."
           ]
         },
         "discussion": {
