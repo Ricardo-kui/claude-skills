@@ -125,7 +125,7 @@ Return a tailored scaffold, not unsupported substantive claims. Mark every liter
 ## 原文锚点 · 批评登记 · 演化（三条共用通道）
 
 - **原文锚点**：语料 `**原文锚点**` 字段是来源论文原句的风格参照——使用规则见 `../story-blueprints/v4/rhetoric-moves/_polish-protocol.md` §write-* 共用纪律；选材参照 distill-theory-exemplar 的 routing 表 + 验证状态三带判定。
-- **批评登记**：双 registry 分工唯一源见 `../story-blueprints/v4/rhetoric-moves/_feedback-registries.md`；本 skill 接 R2 语料精炼通道（`critique.per_file`），只落 registry 不改 corpus——精炼由 distill-theory-exemplar 选材 Gate 驱动；R1 未建设，规则层缺陷走下方演化通道。
+- **批评登记**：双 registry 分工唯一源见 `../story-blueprints/v4/rhetoric-moves/_feedback-registries.md`；本 skill 双轨全接——**R1**（2026-09-24 建成）经 `scripts/record_feedback.py`（共享引擎 `../_shared/feedback/record_feedback.py`）把用户明确批评/裁定规范化为可执行规则写入 `references/feedback-registry.json`（scope=`skill | project | section | variant`，variant 取 A–G 理论构建变体名；新裁定覆盖旧建议记 `supersedes`），下一次生成在渲染前加载匹配的 active rules；先修正文稿，不以「已登记」替代当前任务。**R2** 语料精炼通道（`critique.per_file`）只落 registry 不改 corpus——精炼由 distill-theory-exemplar 选材 Gate 驱动；规则层缺陷仍走下方演化通道。
 - **演化**：reference-level 更新 `corpus/` + registry；规则层缺陷更新 `corpus/_skill_design_feedback.yaml`——门控细则（授权/风险/双回归/rule_excerpt_after）见 `../distill-theory-exemplar/references/design-feedback-loop.md`。
 - **消耗登记**（best-effort，失败不阻塞交付）：每次成文后按 `../_shared/consumption-log.md` 单源执行（本 skill 固定值：`skill=write-theory`、`section=theory`）。
 

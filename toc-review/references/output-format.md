@@ -2,7 +2,7 @@
 
 报告语言：中文叙述 + 英文证据引文原文。落盘到 `--out` 或稿件同目录 `<稿件名>-toc-review-<YYYYMMDD>.md`。
 
-分支名中英映射（报告正文用中文）：identification→识别推断　construct→构念测量　theory→理论贡献　scope→范围外效　alternative→替代解释　contribution→贡献与期刊契合。
+分支名中英映射（报告正文用中文）：knot→张力与结　hook→读者转化　conversation→对话与贡献　characters→人物与故事线　staging→证据登台　payoff→承诺兑现。
 
 ---
 
@@ -10,7 +10,7 @@
 # ToC 红队审查报告 — {稿件名}
 
 - 目标期刊：{journal}　审查日期：{date}
-- 分支：identification / construct / theory / scope / alternative / contribution（{focus} 模式）＋ 动态分支 {n_dynamic} 条（{dynamic-1、dynamic-2 名称或“无”}）
+- 分支：knot / hook / conversation / characters / staging / payoff（{focus} 模式）＋ 动态分支 {n_dynamic} 条（{dynamic-1、dynamic-2 名称或“无”，派生理由见统计区末）
 - 节点统计：辩论 {n_nodes} 个节点 → 存活 {n_surviving} / 被驳回 {n_deflected} / 撤回 {n_withdrawn}
 - 模型阵容：lineup = {balanced|cheap|max|single|manual}；degraded = {false|partial|true（原因）}
   
@@ -24,6 +24,24 @@
 - Panel 处置：endorse {a} / reclassify {b} / downgrade {c} / merge {d} / reject {e}
 - 证据核验：{n_verified}/{n_surviving} 引文字面命中稿件
 - 定位：本报告提取**未声明**弱点（已声明局限 {n_acknowledged} 条已列为禁猎区，其中 {n_deflection} 条判定为 deflection-suspect）
+
+## 〇、叙事骨架总评（Step 0 故事契约提取）
+
+红队分支发现之前，先把稿件的叙事骨架摆出来——多数单条弱点同根于骨架层，这一区让报告读者先看整体再看条款：
+
+- **knot 一句话陈述**：{编排在 Step 0 用一句话写出稿件试图解开的中心张力；写不出时明确说“无法在一句话内陈述”，这本身即 knot 分支的候选证据}
+- **五幕映射**：
+
+| 幕 | 稿件位置 | 完成度判断 |
+|---|---------|----------|
+| Exposition | {节次} | {铺陈背景/人物/knot 是否完成} |
+| Rising action | {节次} | {理论与方法是否把结打紧} |
+| Climax | {节次} | {Results 开头是否标志性转折} |
+| Falling action | {节次} | {主结果/稳健性/意外发现是否解结} |
+| Denouement | {节次} | {讨论是否回到开头承诺} |
+
+- **人物 casting**：主角 {核心构念}；配角 {调节/中介}；群演 {控制/情境}；{主角是否可辨认、配角是否推动主线}
+- **骨架层诊断一句**：{把骨架层最严重的断裂点用一句话点出，并与下方 Major 条款建立指回（“M1/M3 与此同根”）}
 
 ## 一、Major 弱点（按修复优先级排序）
 
@@ -81,5 +99,5 @@ Panel reject 的条款在此注明 reject 理由（ungrounded / 已声明复述 
 - 合并条款（merge）只出现一次，cross_category_concerns 注明另一分支
 - contribution_structural 条款只进"刊层风险总评"，不进修复优先级；delivery_only 条款进 minor 表并标注 → pollock-qc
 - evidence_verified=false 的条款不得以 major 进入报告（SKILL.md 约束）
-- 空集分支（如 scope 支全部撤回）在统计区注明 branch_note，这是信息而非失败
+- 空集分支（如 knot 支全部撤回）在统计区注明 branch_note，这是信息而非失败
 - 报告结尾不加客套总结，最后一节就是边界声明

@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-09-23",
+  "records": [
+    {
+      "id": "tcr_5q_unit_20260923",
+      "category": "intro_review_unit",
+      "count": 1,
+      "first_seen": "2026-09-23",
+      "last_seen": "2026-09-23",
+      "status": "active",
+      "scope": "global",
+      "severity": "reject",
+      "project": "共同所有权 × 产品召回",
+      "source": "用户 2026-09-23 对 RP-0917-toc-review-pollock-20260922.md M1/M2 的偏差裁定",
+      "reason": "2026-09-22 报告把引言审查单位换成 claim-vs-robustness 逐格对齐审计（M1 稳健性总括句、M2 综合句对冲），偏离商科引言功能。用户明确：商科引言重在讲清楚五件事。",
+      "rule": "（仅针对引言部分）Introduction (SECTION A) 的审查单位＝商科五问覆盖：① 研究问题是什么；② 为什么这个问题值得研究；③ 前人做了什么研究、存在什么不足；④ 为什么这个不足值得研究；⑤ 基于什么理论视角、通过什么自变量对因变量产生什么影响、为什么（机制）。不进行 claim-vs-robustness 逐格审计；结果预告句只审其是否兑现理论承诺与方向一致，不审其与稳健性电池的精确一致性。本条仅管辖引言审查，其他部分审查标准不变。"
+    },
+    {
+      "id": "tcr_nohedge_front_20260923",
+      "category": "front_matter_hedging",
+      "count": 1,
+      "first_seen": "2026-09-23",
+      "last_seen": "2026-09-23",
+      "status": "active",
+      "scope": "global",
+      "severity": "reject",
+      "project": "",
+      "source": "用户 2026-09-23 文体校准（Darby 2026 JOM、military imprint LQ 范文回核）；判断权规则已升全局 AGENTS.md",
+      "reason": "范文反证：Darby 2026 引言 'Our results are broadly consistent' / 'provide additional support for all three hypotheses' 而 Table 6 多格 not-supported 一字不回流引言；military imprint 引言仅 'generally supported' 而 Table 4 总表多格 Not support。2026-09-22 报告 M1 的修复动作（引言加 qualified 对冲、与内部 mixed/qualified 措辞对齐）与该文体常规相反。",
+      "rule": "（仅针对引言部分）不得要求引言承载：稳健性脆弱性预告、内部三档语言（mixed/qualified/inference-sensitive）、竞争解释或上报通道对冲句、假设证据地位副词。引言的稳健性总括句按范文惯例作总体支持陈述；稳健性不一致唯一去处＝内部账本（证据包/Decision Register）＋Results/附录集中披露＋一句实质解释。假设是否成立的判断权只在主规格。本条仅管辖引言；Results/Discussion 的主张校准审查不受影响。"
+    },
+    {
+      "id": "tcr_supp_elevation_20260923",
+      "category": "supplementary_elevation",
+      "count": 1,
+      "first_seen": "2026-09-23",
+      "last_seen": "2026-09-23",
+      "status": "active",
+      "scope": "project",
+      "severity": "revise",
+      "project": "共同所有权 × 产品召回",
+      "source": "D-20260922-01 与用户 2026-09-23 裁定（timing 只作紧凑先验/对照，不给同等叙事权重或 24 天量级）",
+      "reason": "报告 M4 的修复动作把 timing 证据升位出 supplementary slot 作为默认解；用户裁定双翼 knot 立为解释框架但 timing 不作并列实证结果。",
+      "rule": "结构类批评（knot/贡献 framing）不得默认以『补充证据升位为并列结果』为修复动作；supplementary 证据的叙事权重由用户裁定。本项目固定：time-to-recall＝纠正翼，仅作 Darby 对话与 count 双义裁决装置，预防/纠正只是 count 的解释张力。"
+    }
+  ]
+}

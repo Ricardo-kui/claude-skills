@@ -26,3 +26,8 @@ description: "修辞动作润色路由（唯一入口）——用顶刊范文语
 - 语料语句可直接采用，仅替换来源特异性内容防串稿；唯一闸门 = 流畅性门（通顺/学术表达/句长 20–30 词）。
 - specificity gate：替换后的句子能原样放进任何一篇论文 = 不合格。
 - 保留用户的领域术语、数字、因果主张与限定语；绝不编造内容。
+
+## 批评登记
+
+- 用户对润色产出提出明确批评、禁用表达、动作匹配纠正或流畅性门判据异议时：**先修正产出，不以「已登记」替代当前任务**；再经 `scripts/record_feedback.py`（共享引擎 `../_shared/feedback/record_feedback.py`）把裁定规范化为可执行规则写入 `references/feedback-registry.json`（scope=`skill | project | action`，action 取 `story-blueprints/v4/rhetoric-moves/_index.md` 动作分类表中的动作名；新裁定覆盖旧建议记 `supersedes`），下一次润色在生成变体前加载匹配的 active rules。
+- 分工唯一源见 `story-blueprints/v4/rhetoric-moves/_feedback-registries.md`。本 skill 无自有语料 registry，R2 不接；蓝图/信号词缺陷走 story-blueprints 既有维护通道，不在此登记。

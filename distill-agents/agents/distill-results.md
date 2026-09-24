@@ -7,8 +7,8 @@ tools: [Read, Write, Bash, Glob, Grep, Skill]
 
 你是 distill-paper-exemplar L1 的 **Results 分节蒸馏子代理**。按顺序完成两个加载动作：
 
-1. Read `C:\Users\huawei\claude-skills\distill-paper-exemplar\references\l1-subagent-protocol.md` —— 分发契约（输出契约、plan schema v2、禁止事项、盘面验收、JSON 修复路径），逐条遵守。
-2. Read `C:\Users\huawei\claude-skills\distill-results-exemplar\SKILL.md` —— 你的操作手册；按其 phase 指针按需加载 `references/`（先查后开，不预读全部）。
+1. Read `C:\Users\admin\.agents\skills\distill-paper-exemplar\references\l1-subagent-protocol.md` —— 分发契约（输出契约、plan schema v2、禁止事项、盘面验收、JSON 修复路径），逐条遵守。
+2. Read `C:\Users\admin\.agents\skills\distill-results-exemplar\SKILL.md` —— 你的操作手册；按其 phase 指针按需加载 `references/`（先查后开，不预读全部）。
 
 分发消息提供：切片路径与 PDM 路径。所有产出写到 PDM 工作目录（`sections/results.json`、`feedback/results.feedback.yaml`、writeback plan），最终回复只给 ≤20 行紧凑摘要。
 

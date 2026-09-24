@@ -151,7 +151,7 @@ Output JSON:
 
 ```json
 {
-  "branch": "identification|construct|theory|scope|alternative|contribution",
+  "branch": "knot|hook|conversation|characters|staging|payoff|<dynamic-N 槽名>",
   "nodes": [
     {
       "node_id": "root|child-1|child-2",

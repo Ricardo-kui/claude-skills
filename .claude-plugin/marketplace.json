@@ -8,7 +8,7 @@
       "name": "distill-agents",
       "source": "./distill-agents",
       "description": "distill-paper-exemplar L1 分节蒸馏子代理定义（pilot: distill-methods）",
-      "version": "0.1.1"
+      "version": "0.1.2"
     }
   ]
 }

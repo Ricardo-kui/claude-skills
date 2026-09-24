@@ -701,3 +701,6 @@ When creating a new note, check this file first for likely duplicates and relate
 - **topics**: product-recall, automotive, product-safety, fuel-efficiency, technology-bundling, regulation
 - **file**: `jeonballsouza2026-safety-defects-fuel-efficiency.md`
 - **path**: D:/Onedrive/Obsidian Vault/literature/jeonballsouza2026-safety-defects-fuel-efficiency.md
+
+## 2026-09-24
+- johnsonetal2025-nca-enforceability-earnings | Johnson, Lavetti & Lipsitz 2025 JPE, The Labor Market Effects of Legal Restrictions on Worker Mobility | full evidence card (天堂模版), close-read, verified from fulltext MD | citekey self-assigned (no Zotero item) | links: 员工流动与工资主题页, 竞业禁止协议概念页, _文献索引, 导入索引受控路由(11) | NCA-产品召回 project relevance

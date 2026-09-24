@@ -423,6 +423,24 @@
       "status": "active"
     },
     {
+      "benchmark": "DesJardine, Li & Shi 2025 AMJ（corpus 变体49 ITCV 骨架）；Lun et al. 2026 ETP；Busenbark et al. 2022 JOM",
+      "category": "corpus_fit",
+      "count": 1,
+      "estimator": "",
+      "evidence": "用户原话（2026-09-24）：我是默认要求去搜索语料库，为每个段落每个句子找到可以学习的范文去改写，尽可能减少自主创造，这样可以对写作的标准和规范有个参考和限制，减少AI的爱创新词，自我防御，爱说空话，喜爱用破折号，冒号，长句等毛病。",
+      "first_seen": "2026-09-24",
+      "id": "wrf_d47ba8dbcc744530",
+      "last_seen": "2026-09-24",
+      "project": "",
+      "reason": "共同所有权×产品召回项目 Table 4 ITCV 解读改稿（2026-09-24）：初稿被裁定为不够学术、自我防御太多；按 DesJardine 2025 AMJ（OLS-FE 变体49 骨架）+ Lun et al. 2026 ETP + Busenbark et al. 2022 JOM 逐句范文锚定改写后获用户批准。用户明确这是跨任务的默认要求，不是单次偏好。",
+      "rule": "默认逐句/逐段先检索语料库（corpus/INDEX.md、_evidence_registry.yaml 的骨架与原始句锚点）及项目范文池（Reference for Recalls、vault 全文 MD），为每个功能句找到范文锚点后槽位化改写；无范文锚点的句子不得自主创造——连接句、限定句、免责声明同样适用；交付时给出逐句范文来源映射表。该纪律的目的：以范文现货约束 AI 自造新词、自我防御式对冲、空话、破折号/冒号堆叠与长句。",
+      "scope": "skill",
+      "section": "",
+      "severity": "revise",
+      "source": "conversation 2026-09-24, co-ownership-recall Table 4 ITCV Results paragraph rewrite",
+      "status": "active"
+    },
+    {
       "category": "heading_navigation",
       "count": 1,
       "evidence": "Not only endogeneity; other analyses should also have subheadings so the evidence is visible at a glance.",
@@ -497,5 +515,5 @@
     }
   ],
   "schema_version": "1.1.0",
-  "updated": "2026-09-20"
+  "updated": "2026-09-24"
 }
