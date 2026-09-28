@@ -26,8 +26,8 @@ updated: 2026-08-03
 
 ## 分类索引
 
-| 分类 | 文件 | 功能 | 对应槽位 |
-|------|------|------|---------|
+| 文件 | 功能 | 对应槽位 |
+|-----|------|---------|
 | [段首锚定短语](opening-anchors.md) | 告诉读者"本段做什么" | M1–M10 所有段首 |
 | [because 从句架构](because-clauses.md) | 论证控制变量、样本排除、构念效度的理由 | M2, M3, M4, M6；微模板 A：理论驱动观察窗 because 从句（窗口=构念活跃期证据 + 数据窗/事件窗 lag 结构分离），westphal_zajac_1998_symbolic_management，VERIFIED (expert_audit_override 2026-08-28)；变体 B：M4 测量窗对齐 because 从句 — 累积窗与另一解释变量统一以使交互项可估（窗口由估计设计而非构念证据决定），anand_mukherjee_2024；变体 C：M3 计数测量=逐次评价事件归因 because 链（评审性行为计数→评价类构念的专用桥），fini_jourdan_perkmann_2017，EMERGING——挂构念效度 because 型，区别于通用单句；变体 D：多维决定子分解 because 链——'While A-measures capture aspect A, they do not necessarily capture aspect B' 否定转轴+混同构念分离句+归纳类型学三句式（dewan2020，AMJ；首源 EMERGING） |
 | [因果动词梯度](causal-hedging.md) | 根据设计强度选择因果声称力度 | M3, M4, M7 |

@@ -359,6 +359,45 @@ def main(argv: list[str] | None = None) -> int:
     r = run([sys.executable, "pass_contract_check.py"], REPO)
     check(r.returncode == 0, f"pass_contract_check.py exit 0 (got {r.returncode})")
 
+    print("\n== 索引行对齐 ==")
+    # 2026-09-28 加固（dewan 跑审计发现的工具盲区）：四节全部 Markdown 索引
+    # 表的行 pipe 数须与表头一致。两档——列缺失（<表头）= FAIL（列错位，
+    # 渲染与按列取值都断）；自由文本裸竖线（>表头）= WARN（历史内容问题，
+    # 不阻塞，逐条列出作为治理待办）。
+    index_files = sorted(
+        {p for pat in ("write-*/corpus/INDEX.md", "write-*/corpus/**/INDEX.md",
+                       "write-*/corpus/**/_index.md")
+         for p in REPO.glob(pat) if p.is_file() and "_skeleton" not in p.parts})
+    warn_rows: list[str] = []
+    for f in index_files:
+        rel = f.relative_to(REPO).as_posix()
+        lines = f.read_text(encoding="utf-8", errors="replace").splitlines()
+        blocks: list[list[tuple[int, str]]] = []
+        cur: list[tuple[int, str]] = []
+        for ln, line in enumerate(lines, 1):
+            if line.lstrip().startswith("|"):
+                cur.append((ln, line))
+            elif cur:
+                blocks.append(cur)
+                cur = []
+        if cur:
+            blocks.append(cur)
+        for blk in blocks:
+            if len(blk) < 3:  # 无数据行的表不查
+                continue
+            header_pipes = blk[0][1].count("|")
+            for ln, line in blk[2:]:  # blk[1] 是分隔行
+                n = line.count("|")
+                if n < header_pipes:
+                    check(False, f"{rel}:{ln} 表格行列缺失（{n} pipes < 表头 "
+                                 f"{header_pipes}）——列错位，需补齐或修表头")
+                elif n > header_pipes:
+                    warn_rows.append(f"{rel}:{ln} ({n}>{header_pipes})")
+    if warn_rows:
+        print(f"  [WARN] 自由文本含裸竖线 {len(warn_rows)} 行（不阻塞，治理待办）:")
+        for w in warn_rows[:8]:
+            print(f"    | {w}")
+
     print()
     if failures:
         print(f"INDEX DRIFT GATE FAILED ({len(failures)}):")

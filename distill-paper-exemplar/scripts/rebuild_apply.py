@@ -188,7 +188,11 @@ def _tfr_next(all_ids) -> int:
 
 
 def _merge_paper_lines(old_rendered: list[str], new_keys: list[str]) -> list[str]:
-    return list(old_rendered) + [k for k in new_keys if k not in old_rendered]
+    # strip_journal 归一去重（2026-09-28）：rebuild 派生的裸 citekey 与治理期
+    # 写的 "<citekey> (ABBR)" 行是同一论文——整串比较会让两者并存并随每次
+    # rebuild 累积（dewan 跑 intro registry 实测）。归一后裸行不再重复入列。
+    seen = {rv.strip_journal(str(p)) for p in old_rendered}
+    return list(old_rendered) + [k for k in new_keys if rv.strip_journal(k) not in seen]
 
 
 # --------------------------------------------------------------------------- #
@@ -806,8 +810,14 @@ def apply_corpus(corpus: str, dry_run: bool = True,
     for (kind, t_old), (kind2, t_new) in zip(segs, new_segs):
         if kind == "authored":
             assert t_old == t_new, "AUTHORED segment mutated"
-    if assembled.count("\r\n") != assembled.count("\n"):
-        raise RuntimeError("mixed EOL after rebuild")
+    # EOL 守卫（2026-09-28 修订）：按输入文件自身的约定校验输出，禁止混合，
+    # 但不再强制 CRLF——此前 count(\r\n)!=count(\n) 的写法对纯 LF registry
+    # 必然误报（dewan 跑：手改 LF 后 rebuild 全军拒跑）。
+    _eol_crlf = "\r\n" in raw
+    if _eol_crlf and assembled.count("\r\n") != assembled.count("\n"):
+        raise RuntimeError("mixed EOL after rebuild (CRLF registry got bare LF)")
+    if not _eol_crlf and "\r\n" in assembled:
+        raise RuntimeError("mixed EOL after rebuild (LF registry got CRLF)")
     reg.write_bytes(assembled.encode("utf-8"))
     print(f"[{corpus}] APPLIED — {len(notes)} change(s); AUTHORED segments "
           f"byte-identical")

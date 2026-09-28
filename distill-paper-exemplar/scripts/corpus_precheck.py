@@ -175,11 +175,28 @@ def plan_item_errors(item: dict, corpus_root: Path) -> list[str]:
     corpus_writeback.resolve_target / block_text requirements)."""
     errs = []
     name = item.get("name", "<unnamed>")
+    # 2026-09-28 dewan 跑事故：子代理把 create_new_file 写成顶层布尔字段，
+    # 执行器只认 dedup.verdict == "create_new_file"，布尔被静默忽略后落回
+    # 普通 ADD 插进 anchor 兄弟文件且 index 行损坏。先拦布尔，再验枚举。
+    if "create_new_file" in item:
+        errs.append(
+            f"[{name}] 顶层布尔字段 create_new_file:{item['create_new_file']!r} "
+            "不被执行器识别（会静默落回普通插入路径）——请改写 dedup.verdict="
+            "create_new_file，并补 new_file（相对 corpus_root）+ module_description")
     verdict = (item.get("dedup") or {}).get("verdict")
-    if verdict not in ("ADD", "EXTEND", "SKIP"):
-        errs.append(f"[{name}] dedup.verdict 缺失或非法（{verdict!r}）——应为 ADD/EXTEND/SKIP")
+    if verdict not in ("ADD", "EXTEND", "SKIP", "create_new_file"):
+        errs.append(f"[{name}] dedup.verdict 缺失或非法（{verdict!r}）——"
+                    "应为 ADD/EXTEND/SKIP/create_new_file")
         return errs
     if verdict == "SKIP":
+        return errs
+    if verdict == "create_new_file":
+        if not str(item.get("new_file") or "").strip():
+            errs.append(f"[{name}] verdict=create_new_file 但缺 new_file "
+                        "（相对 corpus_root 的模块路径）——执行器会 SKIPPED")
+        if not str(item.get("module_description") or "").strip():
+            errs.append(f"[{name}] verdict=create_new_file 但缺 module_description "
+                        "（1-2 句模块功能描述，进 frontmatter）——执行器会 SKIPPED")
         return errs
     if not (item.get("block_text") or "").strip():
         errs.append(f"[{name}] verdict={verdict} 但缺 block_text —— 写回必全 SKIP，"
