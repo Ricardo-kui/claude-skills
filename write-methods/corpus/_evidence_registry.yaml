@@ -39,6 +39,22 @@ evidence:
         - M1
         - M8
       note: "浅层蒸馏（用户裁决 2005 年老论文 methods 简化）。3 个微模板写回：组级聚合辩护（r_wg/ICC+consensus composition → 多行为者设计 变体2）、非应答 K-S+Heckman 辩护链（robustness-foreshadowing 样本选择节）、样本框三理由枚举（funnel-rhythm 起始总体节）。2005 年代特有写法（alpha-only、available-from-authors、75%阈值无敏感性）已标 era_flags 不迁移。"
+    dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak:
+      journal: Academy of Management Journal
+      title: "Catching the Big Fish: The Role of Scandals in Making Status a Liability"
+      status: EMERGING
+      verification_basis: first_distill_ladder_default (2026-09-28 gate① 首次蒸馏，EMERGING 默认梯)
+      design_types:
+        - 档案事件史-生存分析
+        - 手工检索档案构建
+        - 实证对象构建
+        - 生存分析
+      slots_covered:
+        - M3
+        - M4
+        - M5
+        - M7
+      note: "整篇蒸馏 gate① 写回（2026-09-28）micro-template 补登记：manual-coding-validation.md 变体D（m4_archival_proxy_construct_validation_chain——档案代理构念效度链：构念定位→相邻构念预控→FMAC t 检验收敛→基准再构稳健）；funnel-rhythm.md 变体A×2（m2_sampling_frame_threat_rebuttal_triad 抽样框威胁三理由反驳——westphal 框三理由的镜像抗辩型；m2_attrition_ttest_honest_reporting_chain 流失 t 检验诚实报告链）；because-clauses.md 变体D（m6_multidimensional_determinant_decomposition——'captures A but not B' 转轴多维决定子分解 because 链）。生存分析/实证对象构建大族条目的 paper 行由执行器 paper-append 写入。micro-templates 文件层无独立 registry 条目结构，按邻近 by_source_paper 格式登记（沿用 2026-08-28/08-29 先例）。"
     lee_park_2024_smj:
       journal: Strategic Management Journal
       title: "Giving up learning from failures? An examination of learning from one's own failures in the context of heart surgeons"
@@ -376,7 +392,7 @@ evidence:
         - M6
         - M8
       story_fidelity: section_variant
-      note: "整篇蒸馏残项同步补登记（2026-09-23）：M8 主方程复用式 Heckman——IMR 从主方程（Equation 1）回收不另写第一阶段规格，排除限制以实证辩护（与下游结果相关 r=.017 不显著 + 辅助回归复验），Heckman 定位为 mediation test accounting for selection（两阶段模型 变体15，EMERGING；该 stem 的 paper 行与 paper_count 已在位）。M6 档案字段测量构造规则——监管公告页等档案文档字段→控制变量的可审计构造（多值字段 tie-breaking、字段差计算式、类别 dummy 基准组显式声明），登记于 micro-templates/variable-operationalization.md 档案字段测量构造节。micro-templates 文件层无独立 registry 条目结构，按邻近 by_source_paper.micro_templates 格式登记（沿用 2026-08-28/08-29 because-clauses 先例）。"
+      note: 整篇蒸馏残项同步补登记（2026-09-23）：M8 主方程复用式 Heckman——IMR 从主方程（Equation 1）回收不另写第一阶段规格，排除限制以实证辩护（与下游结果相关 r=.017 不显著 + 辅助回归复验），Heckman 定位为 mediation test accounting for selection（两阶段模型 变体15，EMERGING；该 stem 的 paper 行与 paper_count 已在位）。M6 档案字段测量构造规则——监管公告页等档案文档字段→控制变量的可审计构造（多值字段 tie-breaking、字段差计算式、类别 dummy 基准组显式声明），登记于 micro-templates/variable-operationalization.md 档案字段测量构造节。micro-templates 文件层无独立 registry 条目结构，按邻近 by_source_paper.micro_templates 格式登记（沿用 2026-08-28/08-29 because-clauses 先例）。
   by_design_type:
     面板数据-OLS:
       paper_count: 41
@@ -513,7 +529,7 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     生存分析:
-      paper_count: 7
+      paper_count: 8
       papers:
         - darby2026 (JOM)
         - darby2025 (JSCM)
@@ -522,6 +538,7 @@ evidence:
         - Mayo_Ball_Mills_2022_POMS
         - darbyAgencyTheoryPerspective2025
         - qiao_hiatt_sine_2026_smj
+        - dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak (AMJ)
       status: VERIFIED
       slots_covered:
         - M2
@@ -529,6 +546,7 @@ evidence:
         - M7
         - M8
         - M10
+        - M5
       common_failures:
         - 未报告分布选择依据（BIC/AIC 比较）
         - 右删失处理仅一句话未详细论证
@@ -654,7 +672,7 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     实证对象构建:
-      paper_count: 8
+      paper_count: 9
       papers:
         - "mao_dong_lee_2022_msom (Manufacturing & Service Operations Management)"
         - desjardine_2025_information_based_competition_the_case_of_ri
@@ -664,10 +682,12 @@ evidence:
         - pollock_2015_asq
         - pontikes2012
         - zhao_ding_gaba_orsc
+        - dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak (AMJ)
       status: VERIFIED
       slots_covered:
         - M2
         - M3
+        - M4
       common_failures: []
       validation_history:
         revise: 0

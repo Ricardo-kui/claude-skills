@@ -82,6 +82,32 @@ source: Distilled from Chung, Low & Rust (2022, JAMS)
 
 ---
 
+
+### 变体 D：双效价机制账本对垒 + 调节者翻转解决型（dewan2020 型）
+
+> 论证角色：Claim（对垒双方各记一本机制账，再用调节者的双向记账句宣告净效应翻转，一次完成张力与其解决框架的合拢）
+
+**模板**:
+> "[Construct] as an asset. [Construct] can be an asset in the context of [decision] for several reasons. [Mechanism A1] ([citations]). [Mechanism A2] ([citations]). [Mechanism A3] ([citations]). / [Construct] as a Liability. [Construct] can also be a liability in the context of [decision]. First, [Mechanism L1] ([citations]). Second, [Mechanism L2] ([citations]). Third, [Mechanism L3] ([citations]). ... it is unclear if [construct] is an asset or a liability in determining [outcome]. ... We argue that [moderator] diminishes the factors that make [construct] an asset and magnifies the factors that make [construct] a liability, and as such, overall [construct] becomes a liability during [moderator condition]."
+
+**来源**: dewan_jensen_2020 (AMJ), P10-P17（extended-intro 内嵌 "Status and Labeling of Misconduct" 与 "Status, Scandal, and Labeling" 小节）
+
+**原文锚定**:
+> "Status can be an asset in the context of labeling of misconduct for several reasons. ... Status can also be a liability in the context of labeling of misconduct. ... it is unclear if organizational status is an asset or a liability in determining whether its alleged violations are labeled as misconduct." / "We argue that scandal diminishes the factors that make status an asset and magnifies the factors that make status a liability, and as such, overall status becomes a liability during a scandal."
+
+**关键特征**:
+- 用带小标题的双栏机制账本（"X as an asset" / "X as a Liability"）组织对立：每栏堆叠 3-5 条带引用的独立机制，而非引用两个文献流（变体 A）或两个理论透镜（变体 B）——对立的载体是机制清单本身
+- 解决算子是调节者的双向记账句："[moderator] diminishes the factors that make [X] an asset and magnifies the factors that make [X] a liability"——不是变体 A 的"情境不同需单独检验"，也不是变体 B 的"哪个占优存疑"，而是直接宣告净效应翻转方向
+- 翻转主张是记账式（压一侧+放另一侧），因此每栏机制必须真实多条且彼此独立，否则翻转断言退化为单一新机制；本变体与本文件"必须配对 E 调节效应型"的预期路径吻合，把配对从 Theory 部分前移到 Tension 收束句
+- 从正向 CEO 特质推广到任意双效价组织构念（status/reputation/board ties），与 hooks/24 变体 D（构念条件效价对偶开篇型）配对使用
+
+**适用**: 同一构念的资产侧与负债侧均有成熟机制文献、且调节变量的理论作用是"压制一侧+放大另一侧"的研究；Incompleteness × Mechanism/Boundary；理论嵌于引言（extended-intro）的小节化双栏结构
+
+**禁忌**: 两侧账本的条目数与证据强度要大体均衡，明显偏斜会被审稿人读成预设立场；记账句只承诺方向翻转、不承诺效应大小；不要在 Tension 内提前给出实证结果——记账句是理论承诺，兑现留给假设检验
+
+<!-- wb:dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak:tension20_dual_ledger_moderator_flip -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
 ## 组装规则
 
 ### 必须配对

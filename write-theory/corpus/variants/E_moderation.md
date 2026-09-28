@@ -1233,3 +1233,98 @@ H3: The [effect/reduction] ... is smaller when [units] have a higher [cost of M]
 **反模式**: 把成本与收益写成两套不可通约理论（退化为两个独立调节的拼盘）；或没有基线主效应就直接进入异号调节（那是 E8 的领地）。
 
 <!-- wb:lu_et_al_2022_frenemies_corporate_advertising:e15_one_calculus_cost_benefit_opposite_signed_moderation_pair -->
+
+
+## E16. 双列因子账本 → 单开关不对称翻转（Two-Column Factor Ledger → Single-Switch Asymmetric Reversal，Dewan & Jensen 2020 AMJ 型）
+
+> 论证角色：Reason——先枚举 X 的资产列与负债列因子（净效应留白），再用单一情境开关逐因子"关一列、增一列"的机制论证导出唯一组间比较式交互假设
+
+<!--
+pattern_id: two_column_factor_ledger_single_switch_asymmetric_reversal
+build_type: 调节效应型（纯调节、无主效应假设）
+source_papers: ["Dewan_Jensen_2020_AMJ"]
+confidence: medium
+status: EMERGING（单源 full_text_verified；仅作 section_variant，不改核心路由；gate ① 裁决）
+-->
+
+**适用**: 同一 X（地位/声誉类评价性构念）对 Y 同时存在方向相反的两列评价因子，基线净效应理论留白（**不设主效应假设**）；核心贡献是论证一个**单一情境开关**（多主体丑闻/行业危机/集体事件）如何**逐因子关闭资产列、同时保持或放大负债列**，使净效应确定性翻向暴露侧。两列因子的作用座位是一个有资源约束与裁量权的**第三方决策者**（social control agent / 评价者）的成本收益判断。
+
+**与近邻变体判别**:
+- vs **E4（竞争基线→调节裁决，Desai 2012）**: E4 的 moderator 在同一行动者的两个响应之间裁决，无双列枚举；本变体先建资产/负债因子账本（每项独立 warrant），开关按因子逐项起效（每个资产因子各有一条关闭子机制），且决策者是第三方而非 X 持有者。
+- vs **E8（双刃剑异号权变，Castellaneta 2017）**: E8 需要增强型 W 与阻碍型 W **两个不同 moderator** 各撑一刃；本变体是**一个**开关同时反向作用于两列（关资产列 + 增负债列），产出单一比较假设而非异号假设对。
+- vs **E11（特质激活双表现型 cue 切换，Ridge 2024）**: E11 切换的是 X 持有者自身行为连续谱的表现型且需主效应 H1 钉默认表现型；本变体的两列是**外部评价者**对 X 的对立反应，主效应明确留白、无主效应假设。
+- vs **E13/E14（曲线几何开关，Ridge 2013）**: E13/E14 作用在曲线基线的分支上（退化/锐化）；本变体作用在带符号净效应上，输出水平比较而非曲率变化。
+- vs **E15（一次成本收益计算→异号调节对，Lu 2022 MS）**: E15 从同一计算的两个分量导出两个 moderator 的异号假设对；本变体是单一二值开关对同一计算的**双侧同时反向操作**，输出一个比较假设。
+- vs `sentences/mechanism_chain.md` Trade-off → Shock → Dominance（Hoffmann 2024）: Hoffmann 冲击只削弱势均中的**一侧**且保留基线主效应；本变体开关双侧反向动作（关一列 + 增一列），无基线主效应假设。
+- vs `subprotocols/hypothesis_derivation_patterns.md` Sign-Flipping Boundary Condition（Pontikes 2012）: Pontikes 按受众分组报告**观测到的**方向反转并给 integration；本变体的反转是**理论推演出的**净效应翻转，靠账本逐项对账支撑，不需要"两类条件为何同时成立"的整合段。
+
+**段落功能地图**:
+| 步骤 | 段落功能 | 必须度 |
+|------|----------|--------|
+| 1 | T2/T3a 资产列：枚举 X 保护 Y 的因子（每项独立 warrant），净效应留白显式声明 | ✅ |
+| 2 | T3b 负债列：枚举 X 暴露 Y 的因子（每项独立 warrant），两列用平行小标题或段首标签对仗 | ✅ |
+| 3 | T3c 开关构念界定：现象型构念用"异表共要素"定义（共享必要元素） | ✅ |
+| 4 | T3d 双列不对称动作：逐资产因子给关闭子机制 + 逐负债因子给保持/放大理由；落到第三方决策者的成本收益计算 | ✅ |
+| 5 | 收敛：一般 Proposition（agent-generic）→ 情境再实例化 → 语境 Hypothesis | ✅ |
+
+**骨架**:
+```
+[净效应留白声明]
+Although [X] can [protect], it can also [expose] in the context of [Y]. It is
+unclear whether [X] is an asset or a liability in determining [Y].
+
+[资产列] [X] can be an asset for several reasons: [factor A1] (warrant),
+[factor A2] (warrant), [factor A3] (warrant + illustration).
+[负债列] [X] can also be a liability: [factor B1] (warrant), [factor B2]
+(warrant), [factor B3] (warrant + illustration).
+
+[开关定义] [W] can manifest in a number of different ways but typically share
+[N] elements: [e1], [e2], and [e3].
+
+[双列不对称动作——签名句]
+We argue that [W] diminishes the factors that make [X] an asset and magnifies
+the factors that make [X] a liability.
+  [关闭 A1]: [W] → [sub-mechanism 1] → [A1] 失效 (warrant + 具名案例)
+  [关闭 A2]: [W] → [sub-mechanism 2] → [A2] 失效 (warrant + 具名案例)
+  [保持/放大 B1..Bn]: [W] 使 [B 因子] 原样保留或增强 (warrant + 具名案例)
+[决策者座位] Such a judgment of [decision agent] can be understood in terms of
+potential costs and benefits of [action against focal unit].
+
+[Proposition（一般层）] The alleged violations of high-[X] organizations are
+more likely to be [Y] by [decision agent class] when [W state 1] compared to
+[W state 2].
+
+[情境再实例化 + Hypothesis（语境层）] [Agent] is more likely to [action]
+against high-[X] organizations when [W state 1] compared to when [W state 2].
+```
+
+**原文锚点** (Dewan & Jensen 2020, *Academy of Management Journal*):
+> "We argue that scandal diminishes the factors that make status an asset and magnifies the factors that make status a liability, and as such, overall status becomes a liability during a scandal."
+> "Status can be an asset in the context of labeling of misconduct for several reasons." / "Status can also be a liability in the context of labeling of misconduct."
+> "Such a judgment of social control agents can be understood in terms of potential costs and benefits of pursuing the investigation of the focal alleged violation."
+
+**关键特征**:
+- **账本先行、净效应留白**: 主效应不定是设计特征而非缺陷——两列各配齐独立 warrant 后，唯一正式预测只能是交互；纯调节（无主效应假设）组合的 T3 义务"解释为什么主效应不是理论重点"由留白声明一次性完成
+- **单开关双列反向动作（签名节拍）**: 与 E8（两 W 各撑一刃）、Hoffmann（冲击削单侧）相反，同一开关要给出资产列**每一项**的关闭子机制与负债列的保持理由——因子逐项对账，不能只说"开关削弱保护"
+- **第三方决策者作为作用座位**: 两列因子落在一个有资源约束与裁量权的执法/评价者的成本收益判断上（Becker 式执法计算），为"已指控总体中谁被标签"的选择性样本设计提供理论铺垫
+- **两级推导（Proposition → Hypothesis）**: 先给 agent-generic 命题，再用专节为具体执法情境重推两列（见 `subprotocols/hypothesis_derivation_patterns.md` General Proposition → Context-Specific Hypothesis Re-Derivation）
+- **双边覆盖由账本结构满足**: 资产列段落即 W=0 侧论证，开关段落即 W=1 侧论证——无需在假设前补写 "when W is low" 段（C20 的结构化满足方式）
+- **具名引语高频嵌入**: 几乎每个机制步骤配一条具名案例/数字/当事人引语（Enron、Lehman、#MeToo、WSJ 统计证据），机制与 human face 交织
+
+**反模式**:
+- 两列因子只建一列（只有资产或只有负债）→ 不是账本，退化成单向调节
+- 开关只论证关闭资产列而漏掉负债列的保持/放大 → 翻转的净方向失去一半支撑
+- 资产列因子无独立 warrant（citation list 堆砌）→ 账本项不可信，逐项关闭论证塌陷
+- 主效应留白却另写主效应假设 → 与账本结构自相矛盾（应走 E1/E4）
+- 把两级推导压成一层（直接给语境假设）→ 丢失一般理论贡献的显式声明
+- 开关构念定义的三要素与机制论证脱钩（定义了却不用）→ 构念效度虚置
+
+**调用语料**:
+- `corpus/sentences/hypothesis_forms.md`（焦点组×调节态水平比较假设句——本变体配套收敛句式）
+- `corpus/sentences/construct_definition.md`（异表共要素定义——开关构念界定）
+- `corpus/sentences/cost_benefit_calculus.md`（第三方执法者计算作为两列因子的作用座位）
+- `corpus/variants/E_moderation.md` E4/E8/E11/E13/E14/E15（判别近亲）
+- `corpus/subprotocols/hypothesis_derivation_patterns.md`（两级推导 Pattern）
+
+<!-- wb:dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak:e16_two_column_factor_ledger_single_switch_asymmetric_reversal -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Boundary tbt="调节效应型（E16 双列因子账本→单开关不对称翻转；extended-intro 内嵌理论）" -->

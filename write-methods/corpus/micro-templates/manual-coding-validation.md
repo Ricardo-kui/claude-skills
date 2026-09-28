@@ -158,3 +158,18 @@ updated: 2026-05-22
 
 
 <!-- wb:gulati_westphal_1999_cooperative_or_controlling:m4_multisource_construct_validity_triangulation -->
+
+
+### 变体 D：档案代理构念效度链——构念定位 + 相邻构念分离 + 外部标准收敛验证 + 替代操作化稳健（dewan_jensen2020 型）
+
+**来源论文**: Dewan & Jensen (2020, Academy of Management Journal)
+**原始句锚点**: "Because our status measure, like most other status measures, is a proxy of status, it is necessary to not only control for closely related constructs such as visibility, size, and performance (see control variables) but also to validate our measure using other status measures."
+**验证状态**: EMERGING（单源；gate ① 确认后入库）
+**写入日期**: 2026-09-28
+**槽位**: M4（构念效度验证层）
+**骨架**:
+> Like [prior approach], we are faced with the challenge of measuring [construct] for [heterogeneous units] for which no shared formal ranking exists. Thus, we follow [prior research] and measure [construct] by [the amount and quality of attention the unit attracts]. Specifically, [construct] is measured by [primary signal], weighted by [the quality dimension of the signal source]. To calculate [quality dimension], [counting rule over a classification of units]; [normalization rule: the source covering the most units gets a score of one; others proportional]. [Construct] is the aggregate of [quality-weighted signals] covering the focal [unit]. We collected [signal] data from [database] – [units] not covered in [database] is assumed to be [zero/baseline]. Our measure does not simply reflect [the superficial reading], it also takes into account [quality dimension], which proxies [the theoretical positioning, e.g., the unit's centrality in the signal network]. Our [construct] measure is therefore similar to [the established measure family] used in [the canonical research stream] ([citations]). Because our [construct] measure, like most other [construct] measures, is a proxy of [construct], it is necessary to not only control for closely related constructs such as [adjacent construct list] (see control variables) but also to validate our measure using other [construct] measures. We follow [prior research] to validate our [construct] measure by comparing it with [an external benchmark], which has been used in prior research to measure [construct] ([citations]). The mean [measure] of [units] included in the [benchmark] is [value], and the mean [measure] of [units] not included in the [benchmark] is [value]. The significant difference between the two ([t = value; p < threshold]) corroborates that our [construct] measure can be used as an indicator of [construct]. As a robustness check, we used [the benchmark] to construct alternative [binary and continuous] measures and the results are similar to those from our primary analyses (see the robustness checks section).
+**与变体 B/C 差异**: 变体 B 是问卷量表内部开发六环链、变体 C 是双源自报构念 2×2 三角化——本变体是**单源档案代理构念**的效度链，验证对象不是第二测量源而是**外部既有基准**（benchmark 排名/榜单）：构念定位（与 [established measure family] 类比）→ 相邻构念预控声明 → 基准分组均值对比 + t 检验 → 用基准本身构造替代操作化做稳健性（收敛验证与稳健性共用同一基准，两次利用）。"because it is a proxy ... necessary to not only control ... but also validate" 是链的枢纽句：把"测量是代理"这一弱点直接转化为双重义务。适用：跨行业/跨规模无共享排名的地位类、声誉类、注意力类档案构念（analyst coverage、media mentions、award counts 等）。诚实边界：与单一基准的收敛验证只覆盖构念的一个侧面——理想上应加第二基准或已知组效度（known-groups）；t 检验受 N 影响大，应同时报告幅度（均值差/效应量）。
+
+<!-- wb:dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak:m4_archival_proxy_construct_validation_chain -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->

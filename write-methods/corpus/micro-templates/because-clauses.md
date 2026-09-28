@@ -164,3 +164,19 @@ because 从句是 Methods 中**最密集的说服单元**。一个 because 从�
 **诚实边界**: 只适用于计数单位本身构成一次独立评价行为的测量；纯产出类计数（专利数、发文量）不承载评价者归因，套用此链会构成构念跳跃。
 
 <!-- wb:fini_2017_social_valuation_across_multiple_audiences_the_int:m3_count_dv_repeated_evaluation_attribution_chain -->
+
+
+### 变体 D：多维决定子分解 because 链——"captures A but not B" 转轴 + 混同构念分离 + 归纳类型学（dewan_jensen2020 型）
+
+**模板**:
+> "A key determinant of [outcome] is [the determinant] ([authority citation]). [The determinant] is multidimensional, however, thus suggesting that controls for different dimensions of [the determinant] are required. First, we control for [dimension-1 measure]. [Domain definition of dimension 1] ([citations]). Accordingly, the larger [dimension 1], the larger [the extent it captures]. Second, we control for [dimension-2 measure], i.e., [definition] ([citations]). While [dimension-1 and dimension-2 measures] capture [aspect A] of [the determinant], these variables do not necessarily capture [aspect B]. To capture [aspect B], we control for [dimension-3 measure]. This variable captures [what it records, including the boundary rule for zero values]. Finally, we control for [the type dimension]. Because there is no taken-for-granted typology of [the domain], we inductively developed a typology of [types] by coding all [source documents] in the sample. The result was [k] categories: [list]. ... Further, it is important to separate [unit-level construct]'s [measure] from [context-level construct]'s [measure]. We therefore control for [prior context measure] operationalized as [transformation of coverage one period prior to the focal event]."
+
+**要点**:
+- "multidimensional, however, thus suggesting that controls for different dimensions are required" 一句把一组名义控制变量升格为**维度分解架构**：每个控制各承接一维，维度间用 "While [A-measures] capture [aspect A], these variables do not necessarily capture [aspect B]" 的**否定转轴**连接——控制变量段的内部结构靠"测量了什么/没测量什么"的显式对照推进，而非平铺列举。
+- 混同构念分离：当两个构念共享同一测量族（[unit] 的报道量 vs [context] 的报道量），用 "it is important to separate X's [measure] from Y's [measure]. We therefore control for ..." 显式切开，并给分离操作化（事件前一期 + 转换），防的是 [context 构念] 与 [unit 构念] 的机械相关污染。
+- 归纳类型学三句式："no taken-for-granted typology exists → we inductively developed a typology by coding all [documents] → The result was [k] categories"——无既有分类时的合法化路径，"all ... in the sample" 全集编码声明承担可审计性。
+
+**诚实边界**: 分解架构的前提是 [authority citation] 真的支持"多维"判断，否则是伪架构；归纳类型学应补编码者构成与一致性报告（本范文未报，勿模仿）；分离操作的时点选择（前一期）需一句 because 交代为何前置。
+
+<!-- wb:dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak:m6_multidimensional_determinant_decomposition -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->

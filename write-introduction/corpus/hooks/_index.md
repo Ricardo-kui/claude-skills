@@ -44,7 +44,7 @@
 | **跨学科类比 Hook** | `01-cross-disciplinary-analogy` | 领域A概念 → 领域B类似问题 | VERIFIED (≥2 papers) | pollock2015 (ASQ), malshe2015 (JM) |
 | **后果清单 Hook** | `08-consequence-cascade` | 负面事件递进式后果清单（含变体D：定义→频次→品牌级联→具名市值灾难多段型，chen2009，VERIFIED） | VERIFIED | mayo2021 (POM), wu2025 (SMJ), chenganesanliu2009 (JM) |
 | **"Contrary to Belief" Hook** | `12-contrary-to-belief` | 打破普遍认知的制度事实（含变体C：直觉反转保留共识型 habel2016 — "despite its intuitive appeal, this logic may be misleading"） | VERIFIED | eilert2017 (JM), darby2023 (MSOM), habel2016 (JM) |
-| **正向特质阴暗面 Hook** | `24-positive-trait-dark-side` | 正向 CEO 特质 → 反直觉负面组织后果（边界反转，保留特质已有价值） | EMERGING (1p) | chung_low_rust_2022_jams (JAMS) |
+| **正向特质阴暗面 Hook** | `24-positive-trait-dark-side` | 正向 CEO 特质 → 反直觉负面组织后果（边界反转，保留特质已有价值；含变体 D：构念条件效价对偶开篇型 dewan2020 — 定义句+双效价开放+when 问句，双效价保持开放而非阴暗面反转，EMERGING） | EMERGING (2p) | chung_low_rust_2022_jams (JAMS), dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak (AMJ) |
 | **双行业趋势对比 Hook** | `21-dual-industry-trend` | 数字化/宏观趋势 → 两个行业的对比案例建立现象普遍性 | EMERGING (1 paper) | zhao-ding_gaba (ORSC) |
 
 *`21-dual-industry-trend` — Trend/Phenomenon Hook: macro-trend → dual-industry contrasting examples → "Across [contexts], firms not only [A] but also choose among [B], deciding [trade-off] across multiple dimensions." 适用于需要建立"跨行业普遍现象"可信度的研究。能量: 中。最佳适配 Gap: Inadequacy（首选，依据 P35 "challenges an implicit premise... mechanically translate into" 语言）/ Incompleteness（适配）× Constructs + Phenomenon。canonical 文件已于 2026-06-17 创建。*

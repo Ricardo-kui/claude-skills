@@ -583,11 +583,12 @@ evidence:
         reject: 0
         common_revise_reasons: []
     24-positive-trait-dark-side:
-      paper_count: 1
+      paper_count: 2
       papers:
         - chung_low_rust_2022_jams (JAMS)
+        - dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak (AMJ)
       gap_distribution:
-        Incompleteness: 0
+        Incompleteness: 1
         Inadequacy: 1
         Incommensurability: 0
       status: EMERGING
@@ -1087,11 +1088,12 @@ evidence:
         reject: 0
         common_revise_reasons: []
     20-opposite-predictions-positive-trait:
-      paper_count: 1
+      paper_count: 2
       papers:
         - chung_low_rust_2022_jams (JAMS)
+        - dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak (AMJ)
       gap_distribution:
-        Incompleteness: 0
+        Incompleteness: 1
         Inadequacy: 1
         Incommensurability: 0
       status: EMERGING
@@ -1493,6 +1495,24 @@ evidence:
         reject: 0
         common_revise_reasons: []
   previews:
+    context-agent-justification:
+      paper_count: 1
+      papers:
+        - dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak (AMJ)
+      gap_distribution:
+        Incompleteness: 1
+        Inadequacy: 0
+        Incommensurability: 0
+      status: EMERGING
+      generativity: ADAPTABLE
+      exclusivity: MEDIUM
+      common_failures: []
+      validation_history:
+        total_runs: 0
+        validated: 0
+        revise: 0
+        reject: 0
+        common_revise_reasons: []
     theory-lens-driven-preview:
       paper_count: 5
       papers:
@@ -2524,6 +2544,7 @@ paper_index:
   ridge_aime_white_2013_smj: Incompleteness
   zajac_westphal_the_social_construction_of_market_value: Incompleteness
   liuliuluo2016: Incompleteness
+  dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak: Incompleteness
 
 # === AUTHORED ===
 critique:

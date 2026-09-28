@@ -10,13 +10,13 @@
 | [`panel-ols`](panel-ols.md) | `corpus/面板数据-OLS.md` | 95 | 主模型是 OLS/FE/动态面板/SUR，需写设置合法性、样本漏斗、操作化与规格叙事 |
 | [`did`](did.md) | `corpus/自然实验-DiD.md` | 26 | 因果设计是 DiD/准实验，需识别策略论证、预处理卫生或外生性辩护 |
 | [`nonlinear`](nonlinear.md) | `corpus/非线性模型.md` | 22 | DV 是计数/二元/有序/受限，需分布诊断、估计器选择或交互项规格 |
-| [`survival`](survival.md) | `corpus/生存分析.md` | 22 | DV 是时长/生存时间，需 hazard 操作化、分布选择或复发事件处理 |
+| [`survival`](survival.md) | `corpus/生存分析.md` | 25 | DV 是时长/生存时间，需 hazard 操作化、分布选择或复发事件处理 |
 | [`sem`](sem.md) | `corpus/SEM.md` | 4 | SEM/调节中介方法段（联合估计、交互共线性、时序方向诊断） |
 | [`experiments`](experiments.md) | `corpus/实验.md` | 6 | 数据来自实验，需写被试→材料→操纵→测量标准段 |
 | [`multi-study`](multi-study.md) | `corpus/多研究.md` | 10 | 一篇论文含多个 study，需跨研究设计总览或递进论证 |
 | [`qualitative-process`](qualitative-process.md) | `corpus/定性过程研究.md` | 7 | 定性 Findings（过程模型/引语），非量化假设检验 |
 | [`rare-outcome`](rare-outcome.md) | `corpus/稀有结果.md` | 3 | DV 低基线率（欺诈/破产/极端事故），FE 丢样本或 margin 分解 |
-| [`construct-object`](construct-object.md) | `corpus/实证对象构建.md` | 17 | 分析单位需升级/构造（交易级、事件级、竞争组），需单位宣告与核验 |
+| [`construct-object`](construct-object.md) | `corpus/实证对象构建.md` | 18 | 分析单位需升级/构造（交易级、事件级、竞争组），需单位宣告与核验 |
 | [`event-history-study`](event-history-study.md) | `corpus/事件历史+事件研究.md` | 30 | 事件研究/事件历史，需窗口选择、污染规避或 CAR 测量公式 |
 | [`simultaneous-equations`](simultaneous-equations.md) | `corpus/同时方程.md` | 5 | 两个内生变量互为因果（status/reputation 型），需系统估计叙事 |
 | [`iv-2sls`](iv-2sls.md) | `corpus/IV-2SLS.md` | 14 | 需内生性修正（2SLS/IV），报第一阶段 F、排除限制或弱识别诊断 |
@@ -32,7 +32,7 @@
 | [`varx-pvar`](varx-pvar.md) | `corpus/VARX-PVAR.md` | 8 | 向量自回归/脉冲响应，需滞后阶/GIRF/FEVD 规格 |
 | [`state-space`](state-space.md) | `corpus/结构需求-state-space.md` | 6 | 结构需求或状态空间模型，需拟合/反事实方法规格 |
 
-合计：24 设计类型 / 343 编号变体 / verbatim 348 条 / 模板 344 条。
+合计：24 设计类型 / 347 编号变体 / verbatim 352 条 / 模板 348 条。
 另有 5 条不编号变体（`### 变体：`，fang2025 POM）与 5 条 EXTEND 子变体（`#### 变体：`）——已抽取进各二级清单但**不计入**上面的 342（口径与 validator/INDEX/速查表一致）。
 
 ## 待补录

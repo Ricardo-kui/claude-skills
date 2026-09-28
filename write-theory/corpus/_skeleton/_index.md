@@ -12,7 +12,7 @@
 | B（机制推演型） | `corpus/variants/B_mechanism_elaboration.md` | [`variants-B_mechanism_elaboration.md`](variants-B_mechanism_elaboration.md) | 23 | 15 |
 | C（假设树型） | `corpus/variants/C_hypothesis_tree.md` | [`variants-C_hypothesis_tree.md`](variants-C_hypothesis_tree.md) | 20 | 13 |
 | D（质性/过程理论型） | `corpus/variants/D_process_theory.md` | [`variants-D_process_theory.md`](variants-D_process_theory.md) | 9 | 7 |
-| E（调节效应型） | `corpus/variants/E_moderation.md` | [`variants-E_moderation.md`](variants-E_moderation.md) | 43 | 39 |
+| E（调节效应型） | `corpus/variants/E_moderation.md` | [`variants-E_moderation.md`](variants-E_moderation.md) | 47 | 40 |
 | F（竞争假设型） | `corpus/variants/F_competing_hypotheses.md` | [`variants-F_competing_hypotheses.md`](variants-F_competing_hypotheses.md) | 11 | 9 |
 | G（辩证对立型） | `corpus/variants/G_dialectical_opposition.md` | [`variants-G_dialectical_opposition.md`](variants-G_dialectical_opposition.md) | 41 | 27 |
 
@@ -20,7 +20,7 @@
 
 | 库 | 来源文件 | 子清单 | verbatim | 模板 |
 |---|---|---|---|---|
-| hypothesis_derivation_patterns | `corpus/subprotocols/hypothesis_derivation_patterns.md` | [`subprotocols-hypothesis_derivation_patterns.md`](subprotocols-hypothesis_derivation_patterns.md) | 17 | 45 |
+| hypothesis_derivation_patterns | `corpus/subprotocols/hypothesis_derivation_patterns.md` | [`subprotocols-hypothesis_derivation_patterns.md`](subprotocols-hypothesis_derivation_patterns.md) | 20 | 46 |
 | argumentation_patterns | `corpus/subprotocols/argumentation_patterns.md` | [`subprotocols-argumentation_patterns.md`](subprotocols-argumentation_patterns.md) | 32 | 35 |
 | hypothesis_organization_patterns | `corpus/subprotocols/hypothesis_organization_patterns.md` | [`subprotocols-hypothesis_organization_patterns.md`](subprotocols-hypothesis_organization_patterns.md) | 15 | 32 |
 | evidence_patterns | `corpus/subprotocols/evidence_patterns.md` | [`subprotocols-evidence_patterns.md`](subprotocols-evidence_patterns.md) | 10 | 15 |
@@ -34,14 +34,14 @@
 |---|---|---|---|
 | acknowledgment_response | [`sentences-acknowledgment_response.md`](sentences-acknowledgment_response.md) | 14 | 21 |
 | closure | [`sentences-closure.md`](sentences-closure.md) | 6 | 26 |
-| construct_definition | [`sentences-construct_definition.md`](sentences-construct_definition.md) | 35 | 26 |
+| construct_definition | [`sentences-construct_definition.md`](sentences-construct_definition.md) | 36 | 27 |
 | cost_benefit_calculus | [`sentences-cost_benefit_calculus.md`](sentences-cost_benefit_calculus.md) | 1 | 14 |
-| hypothesis_forms | [`sentences-hypothesis_forms.md`](sentences-hypothesis_forms.md) | 44 | 106 |
+| hypothesis_forms | [`sentences-hypothesis_forms.md`](sentences-hypothesis_forms.md) | 46 | 107 |
 | leitmotif-section-opener | [`sentences-leitmotif-section-opener.md`](sentences-leitmotif-section-opener.md) | 12 | 8 |
 | mechanism_chain | [`sentences-mechanism_chain.md`](sentences-mechanism_chain.md) | 96 | 76 |
 | moderation | [`sentences-moderation.md`](sentences-moderation.md) | 36 | 42 |
 
-合计：22 个子清单 / verbatim 504 条 / 模板 611 条。
+合计：22 个子清单 / verbatim 514 条 / 模板 615 条。
 
 ## 待补录
 

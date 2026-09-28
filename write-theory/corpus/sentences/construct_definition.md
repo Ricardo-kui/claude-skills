@@ -21,6 +21,44 @@ and (3) [element 3]."
 
 ---
 
+
+### 异表共要素定义句（Shared-Necessary-Elements Definition，Dewan & Jensen 2020 AMJ 型）
+
+> 论证角色：[D] 定义前提——现象型构念（同类事件异表纷呈）用"表现各异但共享必要元素"收束定义
+
+<!--
+pattern_id: shared_necessary_elements_definition
+build_type: 跨类型（T1/T3c 句式级；调节效应型开关构念界定常用）
+source_papers: ["Dewan_Jensen_2020_AMJ"]
+confidence: medium
+status: EMERGING（单源，gate ① 裁决；与变体 A 的 element-unpacking 近邻，差异见下）
+sentence_position: topic_sentence
+-->
+
+**句位**: Topic——T1/T3c 开关构念（moderator/情境构念）首次界定段的定义句。
+
+**句式骨架**:
+```
+[Construct] can manifest themselves in a number of different ways but we
+suggest that they typically share [N] different elements: [element 1],
+[element 2], and [element 3]. Therefore, although [focal actors do X
+independently], the [N] elements together ensure that [the phenomenon is
+perceived as a single, wider event].
+```
+
+**为什么有效**: 先承认现象异质性（"manifest in different ways"）防审稿人拿反例解构构念，再用共享必要元素给出统一边界；收束句把元素与感知整体性连接，为该构念作为情境开关注入构念效度。与变体 A（采纳权威定义后 unpacking "This definition captures [N] critical elements"）不同：本式**不依赖权威定义**，从异表现象自下而上提炼共现必要元素——适合文献中没有现成权威定义的新现象构念。
+
+**注意事项**: 元素必须是"共现必要"（缺一不成该构念），不是维度拆分；元素应与后续机制论证可对应（每条机制至少引用一个元素），否则定义虚置；与单例/多例构念的 scope 声明（"we use [construct] to refer to [multi-actor subset]"）配套使用。
+
+**反模式**: 元素实为同一维度换说法（伪必要）；元素与后续机制论证完全脱钩（定义装饰）；把 "typically share" 写成 "always share"（过度承诺，现象构念允许边缘案例）。
+
+**原文锚点**: "Multiple-actor scandals can manifest themselves in a number of different ways but we suggest that they typically share three different elements: disruptive publicity, multiple actors, and diffuse focus."
+
+**范文来源**: Dewan & Jensen (2020), *Academy of Management Journal*
+
+<!-- wb:dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak:s_construct_definition_shared_necessary_elements -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Constructs tbt="调节效应型（E16 双列因子账本→单开关不对称翻转；extended-intro 内嵌理论）" -->
+
 ## 变体 B：综述分歧，提取共识
 <!-- wb:malik_wang_martin_gomez_mejia_2025_jm -->
 

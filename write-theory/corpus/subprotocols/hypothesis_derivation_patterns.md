@@ -1947,3 +1947,53 @@ sensemaking] using [A] and [B] as two different types of interpretative frames.
 > "Whereas these different information processing modes have been theorized primarily at the individual level of analysis, we argue that they can be used to characterize stakeholder sensemaking using reputation and celebrity as two different types of interpretative frames."
 
 <!-- wb:pfarrer_pollock_and_rindova_2010:two_wave_lens_reintegration -->
+
+
+## Pattern: General Proposition → Context-Specific Hypothesis Re-Derivation（两级推导，Dewan & Jensen 2020 AMJ 型）
+
+> 论证角色：A&R（架构级推导组织）——先交付 agent-generic 命题，再为焦点执法/评价情境重推机制并给出可检验假设
+
+<!--
+pattern_id: general_proposition_context_hypothesis_re_derivation
+build_type: 调节效应型（可跨类型；推导组织层）
+source_papers: ["Dewan_Jensen_2020_AMJ"]
+confidence: medium
+status: EMERGING（单源 full_text_verified；gate ① 裁决）
+-->
+
+**适用场景**: 理论贡献是一般性的（适用于一类决策者/评价者），实证只落在其中一个具体情境（某监管者、某类评价者）。需要同时保住一般理论声明与语境可检验性。
+**微观动作序列**: 账本/机制论证（一般层）→ Proposition（agent-generic）→ 情境再实例化段（agent 特有约束与激励重述两列）→ Hypothesis（语境层）
+**范文来源**: Dewan & Jensen (2020), *Academy of Management Journal*（status × scandal → labeling；Proposition 主语 = 任意 social control agent，Hypothesis 主语 = SEC）
+
+**骨架**:
+```
+[一般层收敛]
+We propose accordingly that [general claim]: Proposition: [agent-generic
+comparative prediction].
+
+[情境转场句]
+We theorize next the effect of [X] and [W] on [agent-specific Y].
+
+[再实例化——情境三件套]
+[Agent] would ideally [full enforcement/action], however [resource constraint
+fact or quote] ([citation]) -> [agent] uses discretion and judgment in
+[selection decision] ([citation]) -> 两列因子在 [agent] 的成本收益判断上重述
+（复用一般层子机制，补 agent 特有项）
+
+[语境层收敛]
+We hypothesize therefore that: Hypothesis: [agent-specific comparative
+prediction].
+```
+
+**为什么有效**: Proposition 层锁定一般理论贡献（不被单一情境窄化），Hypothesis 层保证可检验；再实例化段不是重复——必须补情境特有的约束/激励（资源约束引语、裁量权规则、政治激励），否则会被读成复读。两级预测同构（同一比较结构换主语），读者可直接映射。
+
+**注意事项**: 两级预测必须同构；再实例化段要引入至少 2 项 agent 特有事实（如资源约束 + 裁量规则）；若理论对象本就单情境，直接假设（勿硬加 Proposition 层）；L2 可选架构——不加 Proposition 层不损失可检验性，损失的是一般性贡献的显式声明。
+
+**反模式**: Proposition 与 Hypothesis 不同构（读者无法对应）；再实例化段纯复读一般层机制；Proposition 层只是把假设句的 agent 名词换成 "any"（伪一般化，无 agent-class 层面的机制论证）。
+
+**原文锚点**: "We propose accordingly that status is less likely to be an asset and more likely to be a liability in the context of a multiple-actor scandal" / "We theorize next the effect of status and scandal on the likelihood of the SEC taking enforcement actions against organizations allegedly engaged in misconduct." / "We hypothesize therefore that:"
+
+**范文来源**: Dewan & Jensen (2020), *Academy of Management Journal*
+
+<!-- wb:dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak:hdp_general_proposition_context_hypothesis_re_derivation -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Mode tbt="调节效应型（E16 双列因子账本→单开关不对称翻转；extended-intro 内嵌理论）" -->

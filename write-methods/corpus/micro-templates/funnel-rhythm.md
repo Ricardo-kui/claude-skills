@@ -116,3 +116,27 @@ from 1,247 unique firms.
 - 收口后必须衔接漏斗下一步（数据缺失排除 → 最终 N），使响应率工程成为漏斗叙事的一部分而非孤立抗辩
 
 <!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:m2_response_rate_engineering_chain -->
+
+
+## 微模板：抽样框威胁三理由反驳（dewan_jensen2020 型）
+
+> "A potential limitation of this approach is that [frame threat], a threat particularly relevant for [focal subgroup] because of [incentive] ([citations]). We are less concerned with [the threat] in our context for three reasons. First, [institutional change] has significantly reduced [the threat's prevalence] ([citations]). Second, the distribution of [focal variable] among [units] follows [the expected shape] typical of [the population structure] (e.g., [citations]). Similarly, the distribution of [focal variable] follows [the expected shape] both for [units whose frame membership might signal the threat] and for [units where it does not]. It indicates that [the threat] is not primarily determined by [focal variable]. Third, we take the possibility of [the threat] into account by controlling for several [threat-relevant characteristics] in our analysis. And we conduct several robustness checks such as [dropping the suspect subsets] (see Table [X]). The results do not change, which suggest that our results are unlikely to be biased by [the threat against the focal subgroup]."
+
+- 与「样本框三理由枚举辩护」（westphal_bednar2005）互为镜像：那边枚举**选框的好处**（合法性论证），这边反驳**框的威胁**（抗辩性）。三理由的标准组合：制度层（规则/环境变化压缩威胁空间）→ 分布层（威胁的特征签名在数据中不存在：威胁若由 [focal variable] 驱动，其分布应在 [suspect subset] 中变形，实际对称）→ 分析层（controls + robustness 实际处理）。
+- "It indicates that [the threat] is not primarily determined by [focal variable]" 是分布检验的解释句——把一个描述性分布观察转成"威胁不成立"的推断，衔接第二理由到第三理由。
+- 位置纪律：此反驳紧跟抽样框定义段（frame 声明后立刻预判最可能的攻击），不要推迟到 limitations；robustness 结果可用 "The results do not change" 一句预收口 + 表格指针。
+
+<!-- wb:dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak:m2_sampling_frame_threat_rebuttal_triad -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
+
+## 微模板：流失 t 检验诚实报告链（dewan_jensen2020 型）
+
+> "We performed [t-tests] (on the available data) to compare the [dropped units] with the [units] used in the analysis. The main reason for missing data are the [variable families], and there are statistically significant differences between the two samples on all variables of interest besides [exception variable]. To mitigate the concern of missing data, we performed several robustness checks that are reported following the main results."
+
+- 反直觉的诚实点：**报告显著差异而非隐藏**——"statistically significant differences ... on all variables of interest besides [exception]" 直接承认流失非随机，随即给出缺失主因归因（[variable families]）与处置承诺（robustness checks + 位置指针）。
+- 三步链：比较检验 → 缺失机制归因 → 稳健性预告。比 "dropped due to missing data" 式静默排除多出可审计性与威胁处置两层；"(on the available data)" 括号声明连比较本身的数据边界都交代了。
+- 适用：档案多库合并中因数据可得性排除 10%+ 观测、且排除组与保留组可观测特征有差异的场景；与 robustness-foreshadowing（样本选择类）配合使用。
+
+<!-- wb:dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak:m2_attrition_ttest_honest_reporting_chain -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->

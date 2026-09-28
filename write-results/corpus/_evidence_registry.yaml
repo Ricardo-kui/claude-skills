@@ -7,9 +7,9 @@ meta:
   schema_version: "1.1.0"
   registry_type: estimator-slot-skeleton
   last_updated: 2026-09-13b
-  last_batch_id: batch_2029_liuliuluo2016_writeback
-  batches_processed: 39
-  total_papers_indexed: 70
+  last_batch_id: batch_2030_dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak_writeback
+  batches_processed: 40
+  total_papers_indexed: 71
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
     granularity: "per estimator（对应 corpus/[结果类型].md 文件）"
@@ -2499,18 +2499,21 @@ estimators:
       R2:
         skeleton_variants:
           - id: r2_main_hazard_exp_interpret
-            skeleton: "[R2] 主效应结果：先展示仅含控制变量的基线模型，再展示加入核心自变量后的完整模型。 对 hazard 模型系数采用 exp(β)−1 的方式转化为百分比解释（如“hazard 提高 77%”），并同时报告 β 与 p 值。 需明确说明参照组（如 middle tertile），并给出方向性结论以支持 H1。"
-            paper_count: 1
             status: VERIFIED
+          - id: r2_vif_residualization_purged_model_pair
+            skeleton: "Table [X] reports the regression results. Model [1] includes the control variables only. The variance inflation factor (VIF) analysis suggested a high correlation between [control_A] and [control_B]. To deal with the collinearity of the two variables, we created a new purged variable, [control_B_residual], which represents the residuals of the linear regression of [control_B] against [control_A] ([citation]). The [control_A] variable remains as it is in the following models, and the [control_B_residual] variable is used instead of the [control_B] variable. Model [2] includes the control variables only but encompasses this change. It shows that [null_control_finding], while [significant_control_finding]. [Theoretical reading of controls, e.g.: the [control_C] of the firm is negatively associated with the likelihood of [DV], in line with [prior_finding]; [control_D] ... are less likely to ..., which suggests that [substantive_substitution_reading]]."
+            notes: ""
+            status: VERIFIED
+            paper_count: 2
             verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
             subfield_distribution:
               om: 1
             sources:
               - Mayo_Ball_Mills_2022_POMS
+              - dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak
             transferability: ""
             paradigm_exclusivity: ""
             rhythm_tags: []
-            notes: ""
             corpus_path: corpus/生存分析.md
           - id: r2_paragraph_model_sequence_controls_first
             skeleton: "[Table navigation]. [Controls-only model observation]. [Key control variable directional notes]. [Full model introduction]."
@@ -2545,13 +2548,17 @@ estimators:
       R3:
         skeleton_variants:
           - id: r3_survival_aft_four_beat
-            skeleton: "Hypothesis [x] predicted that [predictor] would [accelerate/decelerate] [outcome]. Model [y] shows that the coefficient for [predictor] is [positive/negative] and statistically significant (β = [value], p < [threshold]). Because the dependent variable is logged, we exponentiate the coefficient to interpret the effect size. The exponentiated coefficient indicates that a [one-unit] increase in [predictor] is associated with a [value]% [increase/decrease] in [survival_time / time-to-event]. Thus, Hypothesis [x] is supported."
-            paper_count: 3
+            status: EMERGING
+          - id: r3_null_main_effect_pretheorized_contingency
+            skeleton: "We include the key explanatory variables, [IV] and [moderator], individually. Model [N] shows that the effect of [IV] is statistically insignificant. This result, however, is not surprising given our main argument that [IV] can be either [an asset or a liability] in the context of [context], and that [IV] effects are contingent on other relevant factors. Model [N+1] includes [moderator] as an independent variable, and it shows unsurprisingly that [moderator_finding]. Model [N+2] includes both [moderator] and [IV] as independent variables and this model corroborates the earlier results. Model [N+3] tests our hypothesis, which suggested that [hypothesis_statement], by including an interaction between [IV] and [moderator]."
+            notes: AFT 四拍：拍3必须解释 exponentiated beta 和生存时间含义
             status: VERIFIED
+            paper_count: 1
             subfield_distribution:
               om: 2
               strategy: 1
-            sources: []
+            sources:
+              - dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak
             transferability: high
             paradigm_exclusivity: AFT 专用
             rhythm_tags:
@@ -2560,7 +2567,6 @@ estimators:
               - exponentiated_coefficient
               - time_interpretation
               - support
-            notes: AFT 四拍：拍3必须解释 exponentiated beta 和生存时间含义
             corpus_path: corpus/生存分析.md
           - id: r3_survival_shape_parameter_first
             skeleton: "Before turning to the hypotheses, we note that the shape parameter [rho/p] is [value] and [significantly different from 1 / not significantly different from 1], suggesting that [the hazard is increasing/decreasing/constant] over time. This validates our choice of [AFT model]."
@@ -2654,18 +2660,27 @@ estimators:
       R4:
         skeleton_variants:
           - id: r4_subgroup_wald_test
-            skeleton: "[R4] 子群分析结果：按调节变量（如 discretion 高低）拆分样本分别回归， 通过 Wald chi-square 检验比较子群间核心系数差异， 并指出某一子群中主效应消失（系数不显著），从而支持机制解释（如“low discretion recalls 与 CEO tenure 无关”）。"
-            paper_count: 1
             status: VERIFIED
+          - id: r4_nonlinear_interaction_visualization_triangulation
+            skeleton: "Given the nonlinearity of [Cox] models, we follow prior research and use several visualization techniques to corroborate the result in Model [N] ([citations]). First, we follow [prior_research] to visualize the raw data and show that the phenomenon is real. Figure [X](a) shows a scatterplot of [DV] on the vertical axis and [IV] on the horizontal axis for [moderator] and non-[moderator] firms. The scatterplot shows that [raw_pattern]. Second, we visualize the results from our analysis. Because the interaction effect depends on all other variables in the model, we drew graphs for the interaction effect at different meaningful values of other variables ([citation]). The graph described below is drawn at the average values of the continuous variables and at the following values of the binary variables: [explicit_binary_values]. The conclusions from the graph do not change at other meaningful values of the control variables. Figure [X](b) shows smoothed estimates of the hazard function—based on Model [N]—at different values of [IV] for [moderator] and non-[moderator] firms. It shows the change in the hazard rate when [IV] increases from one-standard deviation below mean to one standard deviation above mean for [non-moderated_group] vis-à-vis [moderated_group]. Finally, Figure [X](c) shows a scatterplot of predicted hazard ratios based on Model [N] against [IV] for [moderator] and non-[moderator] firms. We overlay the scatterplot with two prediction lines, along with a confidence interval at [95%] level, from linear regression of predicted hazard ratios on [IV] for [moderator] and non-[moderator] firms. Figure [X](c) confirms that the predicted hazard ratios [divergence_pattern]. Overall, the visualizations of the effect of [moderator] on the relationship between [IV] and [DV] corroborate our hypothesis."
+            notes: "\ncorpus 生存分析.md 23：本文件首个可视化类变体——非线性模型（Cox/Logit）中交互系数无法直接读出条件效应形状，本变体用三重递进可视化补足：(1) 第一重 raw data 散点先证明现象真实存在（face validity），非模型产物\n(2) 第二重在**有意义协变量取值**处画平滑 hazard 函数——因交互效应依赖模型中所有其他变量，必须显式交代取值（连续变量取均值、二元变量逐项列值），并附\"其他取值下结论不变\"的稳健性声明\n(3) 第三重预测 hazard ratio 散点 + 分组线性预测线 + 95% CI，把方向分歧（一组随 [IV] 上升、另一组下降）转为可读图形证据。收束句 \"Overall, the visualizations ... corroborate our hypothesis\" 完成证据升级，兑现交互判决变体留下的 \"initial support\" 措辞空间。区别于 OLS-FE 简单斜率±1SD 两线交互图：本变体是 hazard 模型专属的取值交代与稳健性声明纪律。"
+            status: EMERGING
+            sources:
+              - dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak
+          - id: r4_conditional_main_effect_labeled_interaction_verdict
+            skeleton: "Model [N] tests our hypothesis, which suggested that [IV] increases the likelihood of [DV] when [moderator_condition], by including an interaction between [IV] and [moderator]. The coefficient of the interaction is [positive/negative] and statistically significant (β = [value]; p < [threshold]), while the conditional (when [moderator] equals zero) main effect of [IV] is [positive/negative] and significant (β = [value]; p < [threshold]), thus providing initial support for our hypothesis. The significant model fit improvements (-2(LL1-LL2) = [value], p < [threshold]) corroborate the support for our hypothesis."
+            notes: ""
+            status: VERIFIED
+            paper_count: 2
             verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
             subfield_distribution:
               om: 1
             sources:
               - Mayo_Ball_Mills_2022_POMS
+              - dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak
             transferability: ""
             paradigm_exclusivity: ""
             rhythm_tags: []
-            notes: ""
             corpus_path: corpus/生存分析.md
           - id: r4_paragraph_interaction_replication
             skeleton: "[Hypothesis introduction]. [Replication column reference for model comparison]. [Interaction term coefficient + significance]. [Directional interpretation of moderation]. [Additional observation on unexpected term]."
@@ -2775,18 +2790,21 @@ estimators:
       R7:
         skeleton_variants:
           - id: r7_robust_measure_sensitivity
-            skeleton: "[R7] 测量敏感性稳健性：对核心自变量的分类方式（tertiles / quartiles / linear-log）进行替换， 报告不同设定下系数方向与显著性的一致性， 并以图形展示多种设定下的 hazard 趋势，排除结果受测量方式驱动的可能。"
-            paper_count: 1
             status: VERIFIED
+          - id: r7_interaction_attribution_exclusivity_check
+            skeleton: "Our primary variable of interest, [IV], is significantly correlated—in theory and in our sample—with [correlate_1], [correlate_2], [correlate_3], and [correlate_4] variables, which could bias our results. To make sure that the interaction between [IV] and [moderator] is not actually an interaction between [moderator] and any of these correlates of [IV], we interact [moderator] with each of these variables in Table [X]. Specifically, we include interaction term [IV]*[moderator] alongside an interaction of the [moderator] variable with each of the above-mentioned variables: [moderator]*[correlate_1] in Model [A], [moderator]*[correlate_2] in Model [B], [moderator]*[correlate_3] in Model [C], and [moderator]*[correlate_4] in Model [D], and all the interactions in Model [E]. The magnitude, sign, and significance of the coefficient for [IV] and [moderator] interaction remain as in our primary analysis, while the coefficients of all other interactions are not statistically significant in models with separate interactions."
+            notes: ""
+            status: VERIFIED
+            paper_count: 2
             verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
             subfield_distribution:
               om: 1
             sources:
               - Mayo_Ball_Mills_2022_POMS
+              - dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak
             transferability: ""
             paradigm_exclusivity: ""
             rhythm_tags: []
-            notes: ""
             corpus_path: corpus/生存分析.md
           - id: r7_paragraph_threat_based_robustness
             skeleton: "[Threat positioning sentence]. [Test action: alternative model/method]. [Result: consistent support with coefficient reference]. [Conclusion: confidence building]."
@@ -6635,6 +6653,11 @@ batch_history:
   source_paper: liuliuluo2016
   slot_updates_count: 2
   novel_patterns_count: 2
+- batch_id: batch_2030_dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak_writeback
+  timestamp: 2026-09-28
+  source_paper: dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak
+  slot_updates_count: 5
+  novel_patterns_count: 5
 status_overrides:
   schema: '1.0'
   note: >-

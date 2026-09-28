@@ -87,6 +87,32 @@ source: Distilled from Chung, Low & Rust (2022, JAMS)
 
 ---
 
+
+### 变体 D：构念条件效价对偶开篇型（dewan2020 型）
+
+> 论证角色：Framing（用定义+双效价对偶在开篇即立起条件化研究问句，直接锚定全文 central knot）
+
+**模板**:
+> "The [construct], defined by [definition] ([citations]), can be an asset or a liability in the context of [consequential context] by [decreasing/increasing] the [consequences] ([citations]). To better understand whether [construct] is an asset or a liability in the context of [context], we examine how [construct] and [moderator] jointly determine when [construct] is an asset and when it is a liability. We focus specifically on the role of [construct] in determining whether [authority agent] [decision about target]."
+
+**来源**: dewan_jensen_2020 (AMJ), P1
+
+**原文锚定**:
+> "The status of an organization, defined by the hierarchical position it occupies in a social system (Gould, 2002; Jensen, Kim, & Kim 2012), can be an asset or a liability in the context of organizational misconduct (Jensen, 2006; McDonnell & King, 2018; Sharkey, 2014). To better understand whether status is an asset or a liability in the context of organizational misconduct, we examine how status and scandal jointly determine when status is an asset and when it is a liability."
+
+**关键特征**:
+- 定义句即 Hook：首句给出构念的正式定义+引用，第二拍立即落在同一情境中的双效价（asset or liability），不用轶事或数据冲击起手，register 是理论先行的 definition-first
+- 双效价保持开放而非阴暗面反转：与变体 A-C 的"正向共识→阴暗面揭示"不同，本变体两效价并存不预设立场，研究问句是 when（条件问句），谦逊语气适配 Incompleteness（区别于本文件 frontmatter 的 Inadequacy 主标注）
+- when 问句在第 2 句即出现：Hook-to-puzzle 距离极短（2 句）；第三拍收窄到具体决策者（[authority agent] 的 [decision]），完成 Puzzle→RQ 的第一次收缩
+- 可附带层次转移句（"We shift attention from how the [construct] of [unit A] affects [outcome] to how the [construct] of [unit B] affects [outcome]"）在同一开篇段内预告 Makadok Level 贡献
+
+**适用**: 构念在同一情境内已有两侧文献支持的双向效应、且本文用调节变量回答"何时为资产何时为负债"的研究；Incompleteness × Mechanism/Boundary 组合；AMJ/SMJ 理论先行（definition-first）风格开篇
+
+**禁忌**: 双效价必须有两侧文献支撑（每侧至少 2 篇引用），否则变成自造悖论；定义句压缩在一句内，避免开篇变成教科书条目；不要在 Hook 段就给出答案——when 问句必须保持开放直到 Tension 的调节者登场
+
+<!-- wb:dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak:hook24_construct_conditional_valence_duality -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
 ## 组装规则
 
 ### 必须配对

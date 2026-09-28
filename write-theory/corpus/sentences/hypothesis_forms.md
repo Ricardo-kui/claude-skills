@@ -197,6 +197,45 @@ similar [units] without [X].
 
 <!-- wb:lu_et_al_2022_frenemies_corporate_advertising:treated_vs_similar_control_level_comparison_hypothesis_form -->
 
+
+### 焦点组×调节态水平比较假设句（Focal-Group × Moderator-State Level-Comparison Form，Dewan & Jensen 2020 AMJ 型）
+
+> 论证角色：Wrap——主效应理论留白（两列因子并存）时，把"高 X 组在 W 两态下的 Y 水平比较"直接铸成唯一假设句
+
+<!--
+pattern_id: focal_group_moderator_state_level_comparison_form
+build_type: 调节效应型（纯调节、无主效应假设）
+source_papers: ["Dewan_Jensen_2020_AMJ"]
+confidence: medium
+status: EMERGING（单源，gate ① 裁决）
+sentence_position: hypothesis_sentence
+-->
+
+**适用**: X 的主效应被理论化为不定（资产/负债、收益/成本两列并存，见 E_moderation E16），不能写 "the effect of X on Y is stronger when W"；预测落到"高 X 单元在 W=1 态比 W=0 态更可能经历 Y"。比较锚定在 **W 两态之间、X 组固定**——与 Enhancing/Buffering（效应强弱跨 W）、Treated-vs-Similar-Control（水平跨 X 态）、Comparative Main Effect（IV 极点比较）、Group-Comparative（跨组比较）互斥。
+
+**模板**:
+```
+H[N]. [Agent] is more likely to [Y-action] against [high-X units] when
+[the condition is part of W-state 1] compared to when [W-state 2].
+```
+
+**变体**（两级同构使用——一般命题层与语境假设层换主语复用同一比较结构）:
+- Proposition 层: "The alleged [events] of high-[X] organizations are more likely to be [Y] by [agent class] when [W-state 1] compared to [W-state 2]."
+- Hypothesis 层: "[Specific agent] is more likely to [action] against high-[X] organizations when [W-state 1] compared to when [W-state 2]."
+
+**为什么有效**: 句式本身携带"主效应留白"的诚实边界——不承诺 X 的无条件方向，只承诺 W 态间差异；与账本式理论（两列并存）逐字对齐，读者从假设形式即可读出设计是交互而非主效应。
+
+**注意事项**: 使用前必须已在理论中显式声明 X 净效应不定（否则应写主效应+调节）；两 W 态须都是可观察的实证状态，不可是假想状态。
+
+**反模式**: 主效应其实有明确方向却用此句式回避主效应假设；W 两态缺一态样本仍用比较句；把该句误写成效应比较（"...has a stronger effect..."——那是 Enhancing/Buffering 的领地）。
+
+**原文锚点**: "The SEC is more likely to take enforcement action against high-status organizations when the alleged violation is part of a multiple-actor scandal compared to when it is a stand-alone alleged violation."（Hypothesis）；同构上一级以 "The alleged violations of high-status organizations are more likely to be labeled as misconduct by a social control agent..." 开头（Proposition）。
+
+**范文来源**: Dewan & Jensen (2020), *Academy of Management Journal* — Proposition + Hypothesis 同构两级使用。
+
+<!-- wb:dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak:s_hypothesis_forms_focal_group_moderator_state_level_comparison -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Boundary tbt="调节效应型（E16 双列因子账本→单开关不对称翻转；extended-intro 内嵌理论）" -->
+
 ### 变体 C：假设序列角色标签引导句（Baseline/Additional Hypothesis Labeling，Gulati_Westphal_1999 型）
 
 <!--

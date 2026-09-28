@@ -23,7 +23,7 @@
 | `11-overlooked-alternative.md` | 被忽视的替代解释；变体 C：既存解释实证反驳型（westphal_bednar2005 型），westphal_bednar2005，VERIFIED (expert_audit_override 2026-08-29: 用户裁决 Westphal 蒸馏的引言与理论部分证据等级 VERIFIED) |
 | `14-debate-unresolved.md` | 文献存在对立发现但缺乏整合框架；含“单一制度双重功能同时衰退→对立激励→替代者条件化”变体 E（EMERGING；变体 F：两条机制假设并置+修辞问句钉死+选择性引用代价，what_changes_after_women_enter_top_manage_2020，EMERGING） |
 | `15-practical-puzzle.md` | 实践传统智慧 vs 新发现 downside → 实践谜题（practical puzzle） |
-| `20-opposite-predictions-positive-trait.md` | 同一正向特质的两个文献流做出相反预测（EMERGING: chung_low_rust_2022_jams JAMS） |
+| `20-opposite-predictions-positive-trait.md` | 同一正向特质的两个文献流做出相反预测（EMERGING: chung_low_rust_2022_jams JAMS；变体 D：双效价机制账本对垒+调节者翻转解决型——带小标题双栏机制账本+diminishes/magnifies 双向记账句宣告净效应翻转（dewan2020，AMJ；第 2 源；解决算子区别变体 A 情境差异型与变体 B 悬置型）） |
 | `18-context-generalizability.md` | WEIRD↔non-WEIRD 情境泛化性 gap：现有证据 context-bound，因果机制在非 WEIRD 语境可能反转/被抵消（VERIFIED: li2026 POM） |
 | `21-institutionalized-extreme-structural-warrant.md` | 拥挤文献中正当化新结构特征：kind-vs-degree + practice-beyond-theory + 隐含零价值假设 + 文献分工 + 反直觉 remedy（EMERGING: Zorn et al. 2017 SMJ） |
 
