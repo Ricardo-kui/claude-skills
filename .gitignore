@@ -176,3 +176,5 @@ __pycache__/
 # Re-ignore timestamped session backups (last-match-wins after whitelists)
 _governance/backup/
 *.backup-*
+# Corpus residual-sync / migrate backups (*.bak-<tag>-<date>)
+*.bak-*
