@@ -238,8 +238,17 @@ def load_status_registry() -> dict[str, str]:
     """Build {pattern_key -> status} from _evidence_registry.yaml.
 
     两个来源：patterns: 节（key -> status）与 source_papers: 节（fragment
-    type -> status）。ROBUST > VERIFIED > EMERGING 优先级。
+    type -> status）。ROBUST > VERIFIED > EMERGING 优先级（跨论文同 type
+    有意取高——多论文复现即升级）。
+
+    2026-09-28 重写为 YAML 解析（dewan2020 跑实证）：原行扫描以 strip 后的
+    `patterns:`/`source_papers:` 精确行判节，patterns 索引条目的 `source_papers:`
+    子键会把解析器提前切进 papers 模式；此后 `last_type` 无块边界约束，任意
+    后续条目的 `status: VERIFIED` 全部错配到最后见过的 type，add 再取最高
+    rank——EMERGING 单源变体在骨架被标成 VERIFIED，写作期三带判定失真。
     """
+    import yaml  # 局部导入：仅在 status 解析路径需要
+
     path = CORPUS / "_evidence_registry.yaml"
     if not path.exists():
         return {}
@@ -255,47 +264,20 @@ def load_status_registry() -> dict[str, str]:
         if key not in result or rank.get(result[key], 0) < rank[status]:
             result[key] = status
 
-    lines = path.read_text(encoding="utf-8").splitlines()
-    section = None
-    cur_key = None
-    for raw in lines:
-        s = raw.strip()
-        if s == "patterns:":
-            section = "patterns"
+    try:
+        doc = yaml.safe_load(
+            path.read_text(encoding="utf-8").replace("\r\n", "\n")) or {}
+    except yaml.YAMLError:
+        return {}
+    for key, entry in (doc.get("patterns") or {}).items():
+        if isinstance(entry, dict):
+            add(key, entry.get("status"))
+    for pentry in (doc.get("source_papers") or {}).values():
+        if not isinstance(pentry, dict):
             continue
-        if s == "source_papers:":
-            section = "papers"
-            continue
-        if not s or s.startswith("#"):
-            continue
-        if section == "patterns":
-            m = re.match(r"^([a-zA-Z0-9_.-]+):$", s)
-            if m:
-                cur_key = m.group(1)
-                continue
-            m = re.match(r"^status:\s*([^\s#]+)", s)
-            if m and cur_key:
-                add(cur_key, m.group(1))
-    section = None
-    last_type = None
-    for raw in lines:
-        s = raw.strip()
-        if s == "source_papers:":
-            section = "papers"
-            continue
-        if s == "patterns:":
-            section = "patterns"
-            continue
-        if not s or s.startswith("#"):
-            continue
-        if section == "papers":
-            m = re.match(r"^type:\s*([^\s#]+)", s)
-            if m:
-                last_type = m.group(1)
-                continue
-            m = re.match(r"^status:\s*([^\s#]+)", s)
-            if m and last_type:
-                add(last_type, m.group(1))
+        for frag in pentry.get("fragments") or []:
+            if isinstance(frag, dict):
+                add(frag.get("type"), frag.get("status"))
     return result
 
 
