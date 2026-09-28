@@ -11,6 +11,7 @@
 |------|-------------|---------|---------|---------|
 | `01-general-theory-practice.md` | `01-general-theory-practice` | 分别论证理论和实践重要性（含变体 G：制度化实践 critically-evaluate，EMERGING；变体 I：现象扩散+中心性重定位型——扩散供压+单例证+central-not-peripheral 收束，gulati_nohria_zaheer_2000，EMERGING） | ROBUST | 多篇顶刊；zorn2017 (SMJ) |
 | `06-two-reason-enumerated.md` | `06-two-reason-enumerated` | 枚举式双理由（理论/实践）（含变体 C：双构念属性理论型 ridge2024，两个理由都是构念内在属性，EMERGING） | VERIFIED | ridge2024 (AMJ)；变体 D：决策者误信在场即有效→双面失败场景 stakes，what_changes_after_women_enter_top_manage_2020，EMERGING；变体 E：Undertaking 前置双受益型——RQ 前倒装 Stakes + 反证锚定 + 双受益收束，gulati_higgins_2003，EMERGING |
+| `10-irreversible-commitment-stakes.md` | `10-irreversible-commitment-stakes` | 变体 A：不可逆承诺放大 Stakes——enduring/irreversible commitments 放大前因重要性+信息源缝合句，嵌入 DV 定义段 | VERIFIED (单源 Gulati 裁定) | gulati_westphal1999 |
 
 ## 量化损失/危机
 
@@ -64,4 +65,3 @@
 | 冲突对 | 原因 |
 |--------|------|
 | `02-quantified-economic-loss` + `08-goal-conflict` | 量化损失是单向 stakes，goal conflict 是双向张力——逻辑不同 |
-| `10-irreversible-commitment-stakes.md` | `10-irreversible-commitment-stakes` | 变体 A：不可逆承诺放大 Stakes——enduring/irreversible commitments 放大前因重要性+信息源缝合句，嵌入 DV 定义段，gulati_westphal1999，VERIFIED (单源 Gulati 裁定) |

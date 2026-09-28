@@ -38,6 +38,7 @@
 | `05-extend-key-study.md` | `05-extend-key-study` | 从关键研究扩展到本研究 | VERIFIED | — |
 | `09-micro-macro-complement.md` | `09-micro-macro-complement` | 微观-宏观视角互补 | VERIFIED | — |
 | `11-roadmap.md` | `11-roadmap` | 论文结构路线图 | VERIFIED | — |
+| `worked-example-pair.md` | `worked-example-pair` | 配对实例具象桥（访谈叙事+档案数据双工作例） | VERIFIED (单源, expert_audit_override 2026-08-29) | 变体 A：Preview 后/实证 setting 前双例构念预演，anand_mukherjee_2024_learning_from_failures_di，VERIFIED (expert_audit_override 2026-08-29) |
 
 ---
 
@@ -57,7 +58,6 @@
 | `13-multi-actor-upper-echelons-funnel` | CEO 特质相关 Hook/Tension | 多层级研究问题 / 嵌套调节预览 | 建立 CEO→CMO→Board 的分析框架 |
 | `14-nested-moderation-preview` | 主效应 + two-way 调节 | Theory 部分的 E3/E6 子协议 | 提前展示三向交互结构 |
 | `03-unified-moderator-framework` | 分散文献 / 矛盾发现 | 调节效应 Theory | 用单一框架整合文献 |
-| `worked-example-pair.md` | `worked-example-pair` | 配对实例具象桥（访谈叙事+档案数据双工作例） | VERIFIED (单源, expert_audit_override 2026-08-29) | 变体 A：Preview 后/实证 setting 前双例构念预演，anand_mukherjee_2024_learning_from_failures_di，VERIFIED (expert_audit_override 2026-08-29) |
 
 ---
 
