@@ -1944,6 +1944,88 @@
       "overall_role": "partial_exemplar"
     },
     {
+      "id": "dewan2020",
+      "path": "v4/blueprints/dewan2020-status-scandal-labeling-flip.md",
+      "paper_type": "quantitative",
+      "outlet": "Academy of Management Journal",
+      "publication_status": "published",
+      "coverage": "complete",
+      "theoretical_problem_form": [
+        "contingent-valence-reversal",
+        "antecedent-of-labeling"
+      ],
+      "narrative_dynamics": [
+        "two-column-ledger-single-switch",
+        "predicted-null-as-confirmation",
+        "isomorphic-proposition-hypothesis",
+        "moderator-promoted-to-finding"
+      ],
+      "retrieval_signals": [
+        "status-asset-or-liability",
+        "multiple-actor-scandal",
+        "regulatory-labeling-discretion",
+        "pure-moderation-no-main-effect"
+      ],
+      "section_learning": {
+        "introduction": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Open a dual-valence construct by defining it once, stating both valences in the same sentence, and converting the puzzle into a when-question instead of asserting a direction.",
+            "Front-load the contribution in one paragraph of two We-add loops, each bound to a mechanism cluster the embedded theory will actually deliver, and anchor the closing to the field's own agenda quote."
+          ],
+          "caveat": [
+            "This is an extended-intro with no dedicated stakes paragraph and no named actor in the opening; the definition-first open works only because both valences have mature literatures, and imitators without that support produce a self-made paradox."
+          ]
+        },
+        "theory": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Run a two-column factor ledger (asset column, liability column) and close it with a single named switch whose action verbs map one-to-one onto the columns, so the only formal prediction is the conditional comparison and the main effect stays theoretically blank.",
+            "Derive the prediction twice at two abstraction levels, an agent-generic Proposition then a context-specific Hypothesis, adding only situational increments (resource constraints, discretion rules) in the second pass rather than repeating the general argument."
+          ],
+          "caveat": [
+            "The ledger requires sincere, well-cited argument on both sides; the paper's weakest welds (one switch step warranted by media analogy, a three-element construct definition whose third element the mechanisms never invoke) are where a thinner literature would break."
+          ]
+        },
+        "methods": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Align design with story by operationalizing the moderator's defining elements with data (publicity spikes, actor counts, focus concentration) so the switch is measured rather than asserted.",
+            "Audit that the switch was not itself caused by the protagonist (scandal origination and status-at-revelation evidence) before interpreting the interaction."
+          ],
+          "caveat": [
+            "The risk set is accused firms identified through the class-action screen, and identification rests on rich controls in an observational setting; the SSCAC, IBES analyst-coverage status measure, and Factiva infrastructure are setting-specific and do not transfer as writing architecture."
+          ]
+        },
+        "results": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Stage the predicted null first: report the insignificant main effect as a confirmation of the contingency logic, then let the interaction carry the climax, using visualization (raw scatter, hazard curves, predicted hazard ratios) to make a sign reversal legible in a nonlinear model.",
+            "Defend the attribution of the flip by interacting the switch with each correlate of the protagonist (age, size, media, lobbying) so no rival can claim the reversal, and corroborate with alternative models, samples, and measures."
+          ],
+          "caveat": [
+            "The null-as-confirmation move works only if the theory genuinely withheld a main-effect direction; Cox-specific visualization conventions, likelihood-ratio tests under robust standard errors, and the 41 percent attrition from missing financial data are technical cautions, not transferable story moves."
+          ]
+        },
+        "discussion": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "End by transforming the opening question into a portable theorizing rule: a claimed negative effect of a typically positive construct must also explain the absence of the mechanisms that normally produce the benefit.",
+            "Promote the moderator itself to a finding by reframing the switch (scandal) as a social-control mechanism that can create order, making the condition theoretically consequential in its own right."
+          ],
+          "caveat": [
+            "The generalized rule rests on one interaction whose mechanisms were tested only as a package; the paper concedes this and illustrates with untested asides, so the rule must not be presented as validated beyond the single conditional result."
+          ]
+        }
+      },
+      "overall_role": "exemplar"
+    },
+    {
       "id": "eilert2017",
       "path": "v4/blueprints/eilert2017-recall-timing.md",
       "paper_type": "quantitative",
