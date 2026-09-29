@@ -8,7 +8,7 @@
 
 | 族 | 来源文件 | 子清单 | verbatim | 模板 |
 |---|---|---|---|---|
-| A（构念辨析型） | `corpus/variants/A_construct_differentiation.md` | [`variants-A_construct_differentiation.md`](variants-A_construct_differentiation.md) | 17 | 14 |
+| A（构念辨析型） | `corpus/variants/A_construct_differentiation.md` | [`variants-A_construct_differentiation.md`](variants-A_construct_differentiation.md) | 17 | 15 |
 | B（机制推演型） | `corpus/variants/B_mechanism_elaboration.md` | [`variants-B_mechanism_elaboration.md`](variants-B_mechanism_elaboration.md) | 23 | 16 |
 | C（假设树型） | `corpus/variants/C_hypothesis_tree.md` | [`variants-C_hypothesis_tree.md`](variants-C_hypothesis_tree.md) | 20 | 13 |
 | D（质性/过程理论型） | `corpus/variants/D_process_theory.md` | [`variants-D_process_theory.md`](variants-D_process_theory.md) | 9 | 7 |
@@ -20,12 +20,12 @@
 
 | 库 | 来源文件 | 子清单 | verbatim | 模板 |
 |---|---|---|---|---|
-| hypothesis_derivation_patterns | `corpus/subprotocols/hypothesis_derivation_patterns.md` | [`subprotocols-hypothesis_derivation_patterns.md`](subprotocols-hypothesis_derivation_patterns.md) | 20 | 46 |
+| hypothesis_derivation_patterns | `corpus/subprotocols/hypothesis_derivation_patterns.md` | [`subprotocols-hypothesis_derivation_patterns.md`](subprotocols-hypothesis_derivation_patterns.md) | 20 | 47 |
 | argumentation_patterns | `corpus/subprotocols/argumentation_patterns.md` | [`subprotocols-argumentation_patterns.md`](subprotocols-argumentation_patterns.md) | 32 | 36 |
 | hypothesis_organization_patterns | `corpus/subprotocols/hypothesis_organization_patterns.md` | [`subprotocols-hypothesis_organization_patterns.md`](subprotocols-hypothesis_organization_patterns.md) | 16 | 32 |
 | evidence_patterns | `corpus/subprotocols/evidence_patterns.md` | [`subprotocols-evidence_patterns.md`](subprotocols-evidence_patterns.md) | 10 | 15 |
 | construct_differentiation_patterns | `corpus/subprotocols/construct_differentiation_patterns.md` | [`subprotocols-construct_differentiation_patterns.md`](subprotocols-construct_differentiation_patterns.md) | 11 | 11 |
-| moderator_selection_frameworks | `corpus/subprotocols/moderator_selection_frameworks.md` | [`subprotocols-moderator_selection_frameworks.md`](subprotocols-moderator_selection_frameworks.md) | 8 | 13 |
+| moderator_selection_frameworks | `corpus/subprotocols/moderator_selection_frameworks.md` | [`subprotocols-moderator_selection_frameworks.md`](subprotocols-moderator_selection_frameworks.md) | 8 | 14 |
 | bilateral_argumentation_templates | `corpus/subprotocols/bilateral_argumentation_templates.md` | [`subprotocols-bilateral_argumentation_templates.md`](subprotocols-bilateral_argumentation_templates.md) | 3 | 18 |
 
 ## 来源子清单：sentences 句式库
@@ -36,12 +36,12 @@
 | closure | [`sentences-closure.md`](sentences-closure.md) | 6 | 26 |
 | construct_definition | [`sentences-construct_definition.md`](sentences-construct_definition.md) | 36 | 27 |
 | cost_benefit_calculus | [`sentences-cost_benefit_calculus.md`](sentences-cost_benefit_calculus.md) | 1 | 14 |
-| hypothesis_forms | [`sentences-hypothesis_forms.md`](sentences-hypothesis_forms.md) | 46 | 108 |
+| hypothesis_forms | [`sentences-hypothesis_forms.md`](sentences-hypothesis_forms.md) | 46 | 109 |
 | leitmotif-section-opener | [`sentences-leitmotif-section-opener.md`](sentences-leitmotif-section-opener.md) | 12 | 8 |
 | mechanism_chain | [`sentences-mechanism_chain.md`](sentences-mechanism_chain.md) | 96 | 76 |
 | moderation | [`sentences-moderation.md`](sentences-moderation.md) | 36 | 43 |
 
-合计：22 个子清单 / verbatim 516 条 / 模板 621 条。
+合计：22 个子清单 / verbatim 516 条 / 模板 625 条。
 
 ## 待补录
 

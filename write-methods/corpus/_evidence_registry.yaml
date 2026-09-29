@@ -433,6 +433,24 @@ evidence:
         - M8
       story_fidelity: section_variant
       note: 2026-09-29 整篇蒸馏 writeback 补登记 micro-templates：m8_exclusion_restriction_empirical_validity_pair（heckman-peer-prevalence-exclusion.md 选项3，M8 排除限制实证校验对——同伴流行度工具与下游结果相关不显著 + 辅助回归复验双证据）；m6_control_purpose_built_mini_survey（variable-operationalization.md，M6 控制变量目的性补测——档案缺口构念用小样本调查定向补测并报告相关）；m2_funnel_with_selection_problem_foreshadow（robustness-foreshadowing.md，M2 漏斗式样本叙述与自选择问题预告缝合）。design_types 对应已登记变体：两阶段模型 m8_dual_selection_control_functions、非线性模型 m7_bounded_percentage_fractional_model_stack。micro-templates 文件层无独立 registry 条目结构，按邻近 by_source_paper.micro_templates 格式登记（沿用 2026-08-28/08-29 because-clauses 先例）。
+    javadinia_2024_recall_environment_and_post_recall_stock_mark:
+      journal: Journal of the Academy of Marketing Science
+      title: "Recall environment and post-recall stock market response"
+      status: EMERGING
+      verification_basis: first_distill_ladder_default
+      design_types:
+        - 事件历史+事件研究
+        - PSM匹配面板
+      micro_templates:
+        - m2_clean_window_competing_biases_because
+        - m4_environment_intensity_composite_measure
+        - m2_final_n_comparability_closure
+      slots_covered:
+        - M2
+        - M4
+        - M8
+      story_fidelity: section_variant
+      note: 2026-09-29 整篇蒸馏 writeback 补登记 micro-templates：m2_clean_window_competing_biases_because（because-clauses.md 变体E，M2 竞争偏倚下洗净窗口定径 because 链）；m4_environment_intensity_composite_measure（variable-operationalization.md，M4 环境暴露综合指标构造——节奏定窗+信息边界+recency 加权合成）；m2_final_n_comparability_closure（funnel-rhythm.md，M2 最终样本可比性对标收口）。design_types 对应已登记变体：PSM匹配面板 变体5（时点选择协变量辩护链）、micro-templates 3 条。micro-templates 文件层无独立 registry 条目结构，按邻近 by_source_paper.micro_templates 格式登记（沿用 2026-08-28/08-29 because-clauses 先例）。
   giannetti_2022_corporate_lobbying_and_product_recalls_an_inv:
     journal: Journal of the Academy of Marketing Science
     title: "Corporate lobbying and product recalls: an investigation in the U.S. medical device industry"
@@ -917,7 +935,7 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     PSM匹配面板:
-      paper_count: 6
+      paper_count: 8
       papers:
         - pfarrer2010 (AMJ)
         - mayo2021 (POMS)
@@ -925,6 +943,7 @@ evidence:
         - darby2026
         - darby2023
         - qiao_hiatt_sine_2026_smj
+        - javadinia_2024_recall_environment_and_post_recall_stock_mark (JAMS)
       status: VERIFIED
       verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       slots_covered:

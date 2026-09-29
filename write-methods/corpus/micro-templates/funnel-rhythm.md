@@ -140,3 +140,20 @@ from 1,247 unique firms.
 
 <!-- wb:dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak:m2_attrition_ttest_honest_reporting_chain -->
 <!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
+
+## 微模板：最终样本可比性对标收口（javadinia_2024 型）
+
+**功能**：漏斗走完后的最终样本，用同行研究样本量对标收口，把"样本小"的质疑前截。
+
+**骨架**：
+[Our final sample used to test the hypotheses consists of [N] [events] and is comparable to those used in previous studies. For example, [Study A] had a sample of [N_A] [events], [Study B] [N_B] [events], and [Study C] [N_C] [events].]
+
+**关键句法**：① 收口句一拍完成——最终 N + "comparable to previous studies"；② 3–4 个同行研究的样本量枚举背书（每项带引用）。
+
+**适用/禁忌**：适用——小样本档案事件研究（漏斗尾部 N 偏小）；禁忌——样本量大或有明确代表性论证时多余。
+
+**原文锚点**："Our final sample used to test the hypotheses consists of 148 automobile safety recalls and is comparable to those used in previous studies."
+
+<!-- wb:javadinia_2024_recall_environment_and_post_recall_stock_mark:m2_final_n_comparability_closure -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->

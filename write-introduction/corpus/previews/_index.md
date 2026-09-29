@@ -43,7 +43,7 @@ P5-P6 的功能：在理论框架建立之后，向读者预告"我们做了什�
 | [dv-methodology-defense.md](dv-methodology-defense.md) | 变体 I：DV 方法论辩护型（正负不对称性） | DV 有天然双情境的研究 |
 | [theory-lens-driven-preview.md](theory-lens-driven-preview.md) | 变体 N-P：理论透镜驱动型、双构念来源分解型、前因—后果双框架+双视角链接型（westphalzajac1995，VERIFIED） | 双受众/双机制/双构念维度设计、前因+后果同检的研究；变体 Q：误读防御型权变预告，wowak_2020_female_directors_recalls，VERIFIED (expert_audit_override 2026-08-28)；变体 R：双理论包分工预告——数字宣告 + 按结果域分工的两句理论地图（pfarrer2010，VERIFIED (expert_audit_override 2026-09-06)；变体 S：综述议程组织型——决策序列派生编号RQ作全文脊、双层级覆盖承诺，gulati1998，VERIFIED (expert_audit_override 2026-09-06)；变体 T：议程式枚举预览型——传统维度枚举+透镜横切+免责声明（综述专属 preview），gulati_nohria_zaheer_2000，EMERGING） |
 | [context-agent-justification.md](context-agent-justification.md) | 变体 A：执法代理操作映射+冲击窗口辩护型——情境宣告→代理选择理由→理论 DV 操作映射→含命名外生冲击的样本窗口→筛选逻辑+适当性收束（dewan2020，AMJ，EMERGING） | 以执法/监管/认证类权威机构为经验场域的研究（证券监管、产品召回监管、认证机构）；样本窗口内恰好有不可操纵的命名外生冲击提供调节变异时首选 |
-| [data-source-preview.md](data-source-preview.md) | 变体 A：构念映射数据源枚举型——(for construct) 逐源括号映射+面板规格三要素收束（giannetti_2022_corporate_lobbying_and_product_recalls_an_inv，EMERGING） | 多数据库拼接、构念异质来源、需要独立数据预告段的实证论文 |
+| [data-source-preview.md](data-source-preview.md) | 变体 A：构念映射数据源枚举型——(for construct) 逐源括号映射+面板规格三要素收束（giannetti_2022_corporate_lobbying_and_product_recalls_an_inv，EMERGING） | 多数据库拼接、构念异质来源、需要独立数据预告段的实证论文；变体 B：单句预告理论+访谈+问卷三源测量开发路径，为 Constructs 贡献前置可信度（javadinia2024，JAMS，EMERGING） |
 
 ## 组装规则
 

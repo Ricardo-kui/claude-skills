@@ -598,6 +598,34 @@ confidence: medium（单篇，EMERGING）
 sentence_position: hypothesis_sentence
 -->
 
+
+### 衰减强度比较静态调节假设句（Attenuation-Strength Comparative-Static Moderation，Javadinia et al. 2024 JAMS 型）
+> 论证角色：Claim（假设句位：把调节写成主效应衰减强度随 moderator 单调变化的比较静态，而非 X×W 交互术语）
+<!--
+pattern_id: attenuation_strength_comparative_static_moderation_form
+build_type: 机制推演型 + 调节效应型（句式级，跨类型）
+source_papers: ["javadinia_2024_recall_environment_and_post_recall_stock_mark"]
+confidence: low（单篇 EMERGING，待第二篇交叉验证）
+sentence_position: hypothesis_sentence
+-->
+
+**句位**: H2/H3 调节假设陈述；主效应本身是"缓冲/衰减"型效应时的调节表达。
+**句式骨架**:
+```
+H1: High (vs. low) [X] attenuates [the penalty] of [events].
+H2: High (vs. low) [X] attenuates [the penalty] of [events] less as [W1] increases.
+H3: High (vs. low) [X] attenuates [the penalty] of [events] more as [W2] increases.
+```
+**变体**:
+- "less as [W] increases" / "more as [W] increases" — 衰减强度的单调比较静态
+- 主句保持与 H1 逐字平行（"attenuates the [penalty] of [events]"），仅尾缀随 moderator 变化，三个假设可并排对齐
+**为什么有效**: 三个假设共享同一主句骨架，调节被表达为主效应强度的比较静态而非新关系；尾缀方向词（less/more）直接编码交互符号，读者无需画交互图。
+**注意事项**: 仅当 H1 已是"衰减/缓冲"方向效应且 moderator 理论上作用于衰减强度时使用；less/more 必须与机制段推导方向一致。
+**反模式**: 把该句式套在方向未定的主效应上；或 less/more 与前文机制方向矛盾。
+
+<!-- wb:javadinia_2024_recall_environment_and_post_recall_stock_mark:attenuation_strength_comparative_static_moderation_form -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Boundary tbt="机制推演型（构念新建+双调节边界）" -->
+
 ### Sentence: Parenthetical-Contrast Bare Hypothesis Assertion（Raithel_2024_JAMS 型）
 
 > 论证角色：Claim（以无引导词的裸方向断言呈现假设，括号对照一次性给出两类条件）

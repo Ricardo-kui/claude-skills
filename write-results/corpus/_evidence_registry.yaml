@@ -7,9 +7,9 @@ meta:
   schema_version: "1.1.0"
   registry_type: estimator-slot-skeleton
   last_updated: 2026-09-13b
-  last_batch_id: batch_2033_raithel_2024_product_recall_effectiveness_and_consumers_part_writeback
-  batches_processed: 43
-  total_papers_indexed: 73
+  last_batch_id: batch_2034_javadinia_2024_recall_environment_and_post_recall_stock_mark_writeback
+  batches_processed: 44
+  total_papers_indexed: 74
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
     granularity: "per estimator（对应 corpus/[结果类型].md 文件）"
@@ -234,22 +234,31 @@ estimators:
         description: 模型序列 / 表格导航
         skeleton_variants:
           - id: r2_ols_model_sequence
-            skeleton: "Table [x] reports the results of our regression analyses. Model 1 includes [controls only]. Model 2 adds [predictor]. Model 3 further includes [moderator]."
-            paper_count: 3
+            status: EMERGING
+          - id: r2_preliminary_assumption_battery
+            skeleton: "We conduct preliminary analyses to empirically support the assumptions that undergird our research (please see [Appendix X] for details). First, we provide suggestive evidence that [focal context measure] captures [theoretically required property: e.g., salience]. To assess this, we obtain [external auxiliary data: e.g., aggregate search trends] as a potential measure of [the property] ([citation]). We then regress [auxiliary data] on [focal context measure] and find that when [focal measure] is high, so is [auxiliary data]. This pattern suggests that the theoretically motivated measure of [focal measure] captures [the property], and hence [focal measure] is likely to serve as a decision context that informs [decision makers'] decisions. Second, we devise an empirical test to support the use of [theory] to explain [focal measure]'s ability to alter [outcome]. The key assumption here is that [assumption]. Thus, keeping everything else the same, [attention-drawing occasion] is likely to make [focal measure] less [property] to [decision makers]; hence, we should either see no effect or a reduced effect of [focal measure] for [attention-drawing occasion], while the effect should manifest for [comparison occasion]. Accordingly, we split our sample based on [split rule]: the effect is insignificant ([estimate], p > [threshold]) for [attention-drawing occasion] while [direction] and significant ([estimate], p < [threshold]) for [comparison occasion]. Third, before we estimate the empirical specification in Eq. [N], we provide model-free evidence: we split our sample into [high group] and [low group] and compare the average difference in [outcome]; this difference is [direction] ([estimate]) and significant (p < [threshold]), which provides suggestive evidence that [theoretical expectation]."
+            notes: "\ncorpus OLS-FE.md 102：现有语料有 model-free 四分位开场（变体 22，DV 单调性）与 selection-specific 递进防御（变体 29，CEM+Heckman），但缺\"**主检验前假设电池**\"这一结构：First 用外部辅助数据（Google Trends 型）验证**调节变量测度** capturing 理论所需属性（测度效度验证，不是 selection 防御）\nSecond 把理论机制写成一个\"机制应在何时关闭\"的可证伪边界预测并分样本裁决（attention-drawing occasion → 效应消失\n对照 → 效应出现）\nThird 用 model-free 高低组间差预演主效应方向。三连共用的开题句 \"empirically support the assumptions that undergird our research\" 把三者统一为假设支撑而非事后补充。区别于变体 22（model-free 只做 DV 趋势预览）：本变体电池的第二拍是**理论边界检验**（机制关闭处效应应消失），第三拍是高低组均值差而非分位数单调性。"
+            status: EMERGING
+            sources:
+              - javadinia_2024_recall_environment_and_post_recall_stock_mark
+          - id: r2_eventwindow_significance_screen_dv_selection
+            skeleton: "We calculate the [abnormal returns] accruing from a [event] through an [event study]. Following existing research, we determine [abnormal returns] relevant for our analyses by considering different [event windows] and testing for the statistical significance of the corresponding [abnormal returns] ([citation]). The [abnormal returns] which are statistically significant are considered the dependent variable in our analyses ([citation]). Particularly, we focused on [N] event windows: [window_1] (i.e., [[a, a]]), [window_2] (i.e., [[b, b]]), [window_3] (i.e., [[c, c]]), and finally [window_4] (i.e., [[a, c]]). As shown in Table [X], the average [abnormal return] in [non-focal window_1] is insignificant ([estimate], p > [threshold]), and likewise for [non-focal windows_2/3/4]. However, the average [abnormal return] on the [focal window] ([estimate], p < [threshold]) is [direction] and significant. These results are consistent with prior findings which indicate the [direction] impact of [events] on [outcome] on the day the [events] are announced ([citations]). Based on this analysis and prior research we chose [focal measure] as the dependent variable in Eq. [N]."
+            notes: Lane C v3 回填（2026-09-21）：判别性特征组 5 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 12 改为已验证范文数 3；subfield 按来源期刊重切。
             status: ROBUST
+            paper_count: 4
             subfield_distribution:
               strategy: 3
             sources:
               - vidal2015_adding_by_subtracting
               - mannor2016_job_anxiety_top_executive
               - zhao_ding2022_positioning_digital_markets
+              - javadinia_2024_recall_environment_and_post_recall_stock_mark
             transferability: high
             paradigm_exclusivity: 通用
             rhythm_tags:
               - incremental_model_building
               - table_navigation
             corpus_path: corpus/OLS-FE.md
-            notes: Lane C v3 回填（2026-09-21）：判别性特征组 5 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 12 改为已验证范文数 3；subfield 按来源期刊重切。
           - id: r2_ols_model_free_quartile_opening
             skeleton: "We first present model-free evidence regarding the relationship between [IV] and [DV]. In the [web appendix], we show scatter plots of [DV] against [IV] for [subgroup description]. In Fig. [X], we divide the sample into [four quartiles] based on [IV] and calculate the mean and median [DV] for each quartile. Consistent with Hypothesis [N], there is a monotonic [increase/decrease] in [DV] from the first quartile, where [IV] is lowest, to the fourth quartile, where [IV] is highest. The mean (median) [DV] is significantly different across the quartiles."
             paper_count: 1
@@ -963,12 +972,17 @@ estimators:
         skeleton_variants:
           - id: r7_ols_threat_based
             skeleton: "One concern is that our findings depend on [specific threat]. To address this concern, we re-estimate our models using [method]. The results are substantively unchanged (Table [x]), reducing concerns that [threat] drives the findings."
-            paper_count: 1
+            status: EMERGING
+          - id: r7_matching_method_sensitivity_collective_close
+            skeleton: "We tested the robustness of [matching method] employed to preprocess the data before estimating the econometric model. The use of [matching] is motivated by the idea that pre-processing the data using matching not only reduces reliance on the functional form assumption (like the assumption of linearity in OLS) to mitigate endogeneity of [focal predictor] but also reduces variance in the estimated effects ([citation]). However, it can be argued that one can address the endogeneity of [focal predictor] by conditioning on factors that affect both [focal predictor] and [outcome] in an OLS regression under the assumption that these control variables are linearly related with [focal predictor] and [outcome] ([citation]). Hence, instead of using matching to mitigate endogeneity concern, we assess the robustness of the estimates using an OLS model while conditioning on all covariates (see Table [X], Model [M]). We also assessed the sensitivity of estimates with respect to alternative matching methods: [primary matching method] guarantees a reduction in multivariate imbalance as it belongs to [matching class: e.g., Monotonic Imbalance Bounding] matching methods ([citation]); however, there are alternative matching methods, and we perform robustness checks using [alternative class: e.g., Equal Percent Bias Reducing] matching methods like [method_1] and [method_2] ([citation]). As shown in Table [X], Models [M1] and [M2], the estimates are robust to different matching methods. In addition, to ensure that the effects are not driven by the choice of matching covariates, we replicate our effects using all the covariates that can affect [focal predictor], [outcome], or both (Model [M3]). [Alternative-measure / alternative-model / window-exclusion checks follow the same threat-定位→动作→结果 pattern.] Collectively, the Models [M_first] through [M_last] show that effects exist even 1) when we recognize the presence of potential unobserved factors, 2) when we recognize the size of our estimation sample, 3) when we account for [rival explanation], 4) across different types of matching, and 5) across different ways to obtain [outcome measure]."
+            notes: Lane C v3 回填（2026-09-21）：判别性特征组 3 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 10 改为已验证范文数 1；subfield 按来源期刊重切。
             status: ROBUST
+            paper_count: 2
             subfield_distribution:
               marketing: 1
             sources:
               - hahl2017_authentic_lowbrow_culture
+              - javadinia_2024_recall_environment_and_post_recall_stock_mark
             transferability: high
             paradigm_exclusivity: 通用，但因果设计需更具体
             rhythm_tags:
@@ -976,7 +990,6 @@ estimators:
               - test_action
               - unchanged_result
               - threat_reduction
-            notes: Lane C v3 回填（2026-09-21）：判别性特征组 3 组全组命中扫描 mvp30 全文层 21 篇范文（剔除 _Synthesis 综述）；paper_count 由原归纳集规模 10 改为已验证范文数 1；subfield 按来源期刊重切。
             corpus_path: corpus/OLS-FE.md
           - id: r7_ols_narrative_variant
             skeleton: "We also examine whether [alternative explanation]. Specifically, we [method description]. Results reported in Table [x] show that [main finding] remains [robust/qualitatively similar]."
@@ -6739,6 +6752,11 @@ batch_history:
   source_paper: raithel_2024_product_recall_effectiveness_and_consumers_part
   slot_updates_count: 2
   novel_patterns_count: 2
+- batch_id: batch_2034_javadinia_2024_recall_environment_and_post_recall_stock_mark_writeback
+  timestamp: 2026-09-29
+  source_paper: javadinia_2024_recall_environment_and_post_recall_stock_mark
+  slot_updates_count: 3
+  novel_patterns_count: 3
 status_overrides:
   schema: '1.0'
   note: >-

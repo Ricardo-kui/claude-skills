@@ -6,7 +6,7 @@
 > **锚点** = `corpus/<文件名>#变体-<变体号>`（脚本自定义片段，指向 `### 变体 <N>` 标题；不编号/EXTEND 变体指向其真实 `### 变体：`/`#### 变体：` 标题；`--verify` 断言标题存在）。
 > 状态列：`verbatim` = 逐字底本（与源卡片逐字一致，不得改写/拼接/补全）；`模板` = 填槽骨架（不可当逐字底本引用）。`不编号变体`（fang2025 POM，不计入 342）与 `EXTEND子变体`（`####` 层，不计入 342）在 id 与状态列标注。
 
-条目：verbatim 4 条 / 模板 4 条。
+条目：verbatim 5 条 / 模板 4 条。
 
 ## Verbatim 底本
 
@@ -16,6 +16,7 @@
 | `psm-panel#2` | M8 | darby_msom_2023_msom | We address this endogeneity concern by exploiting an exogenous shock in our data—a change in a firm’s CEO. A change in the CEO is an exogenous shock to the amount of stock owned by a CEO, contingent upon one key criterion: Past recalls should not predict the likelihood of the previous CEO’s departure. | `corpus/PSM匹配面板.md#变体-2` | verbatim |
 | `psm-panel#3` | M8 | qiao_hiatt_sine_2026_smj | Table S2 shows the covariate balancing results after EBM: after matching, the differences of all control variables, in terms of their means, between the treatment and control groups become negligible. These results suggest that the treatment we have can be seen as random to the extent that we have ruled out selection on these observable variables. | `corpus/PSM匹配面板.md#变体-3` | verbatim |
 | `psm-panel#4` | M8 | fini_jourdan_perkmann_2017_amj | In order to further rule out alternative explanations, such as variations in peer evaluation as a result of scientists' unobserved abilities and interests rather than changes in their industry evaluation, we resort to a matching procedure... We then re-estimate Poisson models using the same specifications employed for the full sample analysis. | `corpus/PSM匹配面板.md#变体-4` | verbatim |
+| `psm-panel#5.a` | 通用 | javadinia_2024_recall_environment_and_post_recall_stock_mark | The endogeneity of recall environment intensity is mitigated under the assumption that conditional on the matching covariates, recalls are equally likely to face a low-intensity or a high-intensity recall environment. | `corpus/PSM匹配面板.md#变体-5` | verbatim（原文锚定节） |
 
 ## 填槽模板
 

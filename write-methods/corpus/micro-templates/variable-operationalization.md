@@ -170,3 +170,20 @@ updated: 2026-09-23
 
 <!-- wb:raithel_2024_product_recall_effectiveness_and_consumers_part:m6_control_purpose_built_mini_survey -->
 <!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
+
+### 环境暴露综合指标构造（M4：单元自身事件节奏定窗 + 信息边界 + recency 加权合成）
+
+**功能**：为"环境/同行暴露"类自变量构造一个时间锚定、信息不重复、多维合成的测量。
+
+**骨架**：
+[To measure [environment intensity] facing the focal [unit]'s [event], we consider [peer events] announced between the focal [unit]'s current [event] and its immediate last [event]; this inter-[event] interval is the estimation period.] [We did not consider [peer events] on or before the day of the immediate last [event], as that information would already be captured in [the outcome price] and no longer new to [the evaluating audience].] The [environment] consists of [N] aspects that make [events] salient: [dimension 1], [dimension 2], [dimension 3], and [dimension 4]. [For each day in the estimation period we count each dimension, and obtain the weighted sum using recency (the time difference in days between that day and the focal [event]) as the weighting factor, in the spirit of cumulative measures of [a concentration index] in the [adjacent literature].] [Principal component analysis of these dimensions suggests a single factor solution; we obtain the standardized principal component score (mean 0, standard deviation 1) and dichotomize it: [high intensity] when the composite score is positive and [low intensity] when negative.]
+
+**关键句法**：① 窗口锚定在焦点单元自身相邻事件的节奏上（不是任意日历窗）；② 信息边界 because——窗前信息"已被价格吸收，不再新鲜"；③ 多维显著性的逐日计数 + recency 加权求和 + 邻近文献指数式类比背书；④ PCA 单因子 → 标准化 → 二值化（服务估计而非构念）。
+
+**适用/禁忌**：适用——同行/环境暴露随时间滚动、焦点单元反复出现（重复事件设计）；禁忌——一次性处理或单元事件稀疏到窗内无 peer 观测。
+
+**原文锚点**："We did not consider recalls on or before the day of the immediate last recall announced by the focal firm to measure recall environment intensity as that information would already be captured in the stock price."
+
+<!-- wb:javadinia_2024_recall_environment_and_post_recall_stock_mark:m4_environment_intensity_composite_measure -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->

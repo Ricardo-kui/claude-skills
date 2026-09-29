@@ -400,3 +400,29 @@ source: Distilled from Haunschild, Polidoro & Chandler (2015), Organization Scie
 
 <!-- wb:liuliuluo2016:contribution_cross_literature_escalation_ladder_liuliuluo2016 -->
 <!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
+
+### 变体 O：五步贡献流水线+近邻互补定位型（javadinia2024型）
+
+> 论证角色：Claim（贡献按概念化→测量→理论化→异质性→实证五步流水线宣告；对最近邻先区分后互补，锁定与 Discussion 的兑现契约）
+
+**模板**:
+> "We contribute to the [field] literature by: (a) conceptualizing [construct], (b) developing a measure for [construct], (c) theorizing how [construct] influences [outcome], (d) hypothesizing the heterogeneity in this effect, and (e) empirically demonstrating [its role] in the context of [setting]. ... [Neighbor A] show [finding], but they do not account for [context]. [Neighbor B] show [adjacent finding]. In contrast, we focus on [the construct's characteristics], not [the neighbor's operationalization]. ... Our research, thus, complements [Neighbor B] by indicating why [the puzzle]."
+
+**来源**: Javadinia, Gill & Jayachandran 2024 (JAMS), P5
+
+**原文锚定**:
+> "Our research, thus, complements Mukherjee et al., (2022) by indicating why the stock market penalty to similar recall announcements could vary even if their positions in the recall cluster are identical."
+
+**关键特征**:
+- 贡献用 (a)-(e) 字母枚举呈现完整研究流水线：概念化→测量开发→理论化→异质性假设→实证演示——Constructs 论文的贡献即研究过程本身
+- 对两个最近邻分工定位：对 Neighbor A 指出未覆盖（"do not account for"），对 Neighbor B 先区分操作化（"we focus on the characteristics..., not its position"）后宣告互补（"complements... by indicating why"）
+- 明确承诺增量识别："even after accounting for the focal recall's position in a cluster"——把与最近邻的边界写成计量上的可检验承诺
+- 与 Makadok 单句维度定位型区别：多动词流水线枚举 + 双邻居差异化定位，而非单句维度声明
+
+**适用**: Constructs 贡献且测量开发是贡献之一的论文；与最近邻文献是条件互补而非对立时；JAMS/MSOM 级实证论文的贡献段
+
+**禁忌**: (a)-(e) 每一项都必须在后文兑现，枚举越长兑现风险越大——不足五项时宁可减项；"complements" 定位要求增量承诺可被检验，勿对真正竞争性文献使用
+
+<!-- wb:javadinia_2024_recall_environment_and_post_recall_stock_mark:contribution_pipeline_enumeration_complement_positioning -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->

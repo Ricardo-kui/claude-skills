@@ -24,7 +24,7 @@
 | [`matched-did`](matched-did.md) | `corpus/匹配DiD-广义DiD.md` | 2 | DiD 前用匹配构造可比处理/对照 |
 | [`peer-network`](peer-network.md) | `corpus/同伴效应-网络效应.md` | 15 | 同伴/网络效应结果，需网络构念操作化或 dyadic 依赖处理 |
 | [`text-construct`](text-construct.md) | `corpus/文本构念测量.md` | 21 | 从文本（财报/访谈/媒体）测构念，需词典效度或编码信度 |
-| [`psm-panel`](psm-panel.md) | `corpus/PSM匹配面板.md` | 4 | 用倾向得分/熵平衡匹配构造对照或稳健性 |
+| [`psm-panel`](psm-panel.md) | `corpus/PSM匹配面板.md` | 5 | 用倾向得分/熵平衡匹配构造对照或稳健性 |
 | [`stacked-diffusion-logit`](stacked-diffusion-logit.md) | `corpus/堆叠扩散Logit.md` | 0 | 扩散/采纳 Logit 结构模型（当前无验证变体） |
 | [`multi-actor`](multi-actor.md) | `corpus/多行为者设计.md` | 3 | 多行为者/多层级设计，需聚合辩护或 dyad 拆分 |
 | [`binary-outcome-inference`](binary-outcome-inference.md) | `corpus/推断二元结果.md` | 1 | 二元结果的因果推断（当前少量变体） |
@@ -32,7 +32,7 @@
 | [`varx-pvar`](varx-pvar.md) | `corpus/VARX-PVAR.md` | 8 | 向量自回归/脉冲响应，需滞后阶/GIRF/FEVD 规格 |
 | [`state-space`](state-space.md) | `corpus/结构需求-state-space.md` | 6 | 结构需求或状态空间模型，需拟合/反事实方法规格 |
 
-合计：24 设计类型 / 354 编号变体 / verbatim 355 条 / 模板 355 条。
+合计：24 设计类型 / 355 编号变体 / verbatim 356 条 / 模板 355 条。
 另有 5 条不编号变体（`### 变体：`，fang2025 POM）与 5 条 EXTEND 子变体（`#### 变体：`）——已抽取进各二级清单但**不计入**上面的 342（口径与 validator/INDEX/速查表一致）。
 
 ## 待补录

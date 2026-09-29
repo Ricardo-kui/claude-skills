@@ -377,6 +377,43 @@ perception factor] shapes the value of [X].
 <!-- wb:gulati_lavie_singh_2009_partnering_experience:moderator_roadmap_twoclass_metaframework -->
 
 
+
+## Framework: Proximal-versus-Distal Information Substitution（近端/远端信息替代，Javadinia et al. 2024 JAMS 型）
+> 论证角色：Framing（为同一主效应机制上的多个 moderator 提供单一元框架：为何选它们、它们通过什么共同机制起作用）
+<!--
+pattern_id: proximal_distal_information_substitution_moderator_framework
+build_type: 机制推演型 + 调节效应型（跨类型）
+source_papers: ["javadinia_2024_recall_environment_and_post_recall_stock_mark"]
+confidence: low（单篇 EMERGING，待第二篇交叉验证）
+-->
+
+**适用场景**: 主效应建立在"行为者在不确定下依赖远端情境信息调整预期"的机制上，需要引入 ≥2 个 moderator 而不显得事后补丁（C18 元框架）。
+**排列模式**: mechanism-metaframework → dual moderators
+**范文来源**: Javadinia, Gill, and Jayachandran (2024), *Journal of the Academy of Marketing Science*
+
+**骨架**:
+```
+[Meta-framework paragraph after H1]
+These [N] moderators were selected because they operate through [the same mechanism named in H1].
+The key assumption under [theory] that explains [the main effect] is [assumption].
+But in the presence of [directly relevant, more accessible proximal information] that helps explain [the focal event and its outcomes],
+[actors] may be less likely to rely on relatively more distal [contextual information], notwithstanding the salience of such information ([accessibility citation]).
+However, if [proximal information] does not justify or explain [the event],
+[actors] might rely on [distal contextual information] more.
+
+[Per-moderator derivation, one subsection each]
+[W] could moderate the impact of [X] on [Y] by changing its impact on [the mechanism].
+When [W supplies proximal justification], [actors] rely less on [distal context] → H2: [attenuation weaker].
+When [W removes or reverses the proximal justification], [actors] rely more on [distal context] → H3: [attenuation stronger].
+```
+
+**为什么有效**: 先用一段交代"为什么是这几个 moderator"（都作用于同一机制 + 近端信息可得性会挤出远端信息依赖），两个调节假设共享同一理论开关，读者无需逐个接受 ad hoc 选择；直接回应 C18 元框架要求。
+**注意事项**: 该框架要求所有 moderator 确实通过同一机制起作用；若 moderator 作用于不同机制路径，应改用 parallel-branches 组织。双向分叉（proximal justification 有/无）是框架的承重结构，不能只写一侧。
+**反模式**: 只列 moderator 清单而无统一机制归属；或把元框架写成方法学筛选说明（"data availability"）而非理论论证。
+
+<!-- wb:javadinia_2024_recall_environment_and_post_recall_stock_mark:proximal_distal_information_substitution_moderator_framework -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Boundary tbt="机制推演型（构念新建+双调节边界）" -->
+
 ## Framework: Mechanism-Participation Conditions（机制参与条件三槽位，Ridge, Aime & White 2013 型）
 
 <!--

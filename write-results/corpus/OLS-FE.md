@@ -22,7 +22,7 @@ source_papers:
   - "desjardine_li_shi_2025_amj (Academy of Management Journal): min/mean/max marginal-effect table with slope-direction language, collinearity-absorption explanation for full-model interaction attenuation, ITCV omitted-variable threshold defense, dual-benchmarking deviation test, acquisition quasi-natural experiment as influence-channel switch, Bushee investor-type decomposition with Wald test, sequential moderator introduction→paired→full-model navigation"
   - "ridge_et_al_2024_amj (Academy of Management Journal): front-loaded endogeneity defense (RIR replacement count + naive-vs-cure 2SRI pairing), external-evidence practical-importance beat (R5)"
   - "chenganesanliu2009 (Journal of Marketing, 2009): binary strategy as complete mediator of firm characteristics on AR — legacy Kenny joint-read + market-signal coda (R8)"
-variants_count: 99
+variants_count: 103
 created: 2026-05-18
 updated: 2026-08-13
 ---
@@ -45,12 +45,12 @@ updated: 2026-08-13
 | 槽位 | 功能 | 变体数 | 变体 |
 |---|---|---|---|
 | R1 | 描述统计与诊断 | 2 | 20, 67 |
-| R2 | 模型序列与表导航 | 12 | 16, 19, 22, 24, 28, 53, 56, 70, 71, 76, 88, 94 |
+| R2 | 模型序列与表导航 | 14 | 16, 19, 22, 24, 28, 53, 56, 70, 71, 76, 88, 94, 102, 101 |
 | R3 | 主假设检验 | 24 | 8, 11, 17, 23, 27, 34, 35, 36, 41, 48, 57, 58, 63, 64, 72, 77, 78, 80, 87, 89, 90, 91, 92, 97 |
 | R4 | 交互/调节/阈值 | 15 | 9, 14, 18, 32, 40, 43, 45, 47, 59, 65, 68, 73, 86, 93, 98 |
 | R5 | 经济显著性 | 7 | 3, 10, 13, 55, 84, 96, 99 |
 | R6 | 非显著/反转/Null | 11 | 4, 6, 30, 37, 42, 60, 74, 81, 83, 95, 100 |
-| R7 | 稳健性与威胁处理 | 18 | 1, 2, 7, 12, 15, 25, 26, 29, 31, 39, 46, 49, 50, 51, 54, 61, 66, 85 |
+| R7 | 稳健性与威胁处理 | 19 | 1, 2, 7, 12, 15, 25, 26, 29, 31, 39, 46, 49, 50, 51, 54, 61, 66, 85, 103 |
 | R8 | 补充/事后/机制 | 11 | 5, 21, 33, 38, 44, 52, 62, 69, 75, 79, 82 |
 | R9 | 证据收束（可选） | 0 独立 | 27（R3+R9）、89（R9 副 R3/R4）；多研究变体4/5 亦用 |
 
@@ -139,6 +139,9 @@ updated: 2026-08-13
 | 96 | 低解释力文献基准防御+分析目的重定位 | 低 R² 可信度防御：报解释力区间→引同 DV 文献更低基准→重定位为 contribution 评估 | vs 变体10 ΔR² 作经济显著性证据——本变体防御解释力弱点 | EMERGING | Gulati et al. 2009 SMJ |
 | 99 | 双机制分臂量化 | 调节强化 U 形两臂时逐臂报幅度：机制 A 臂+机制 B 臂，多调节均值+括号分项并报 | vs R4 线性调节实用项与百分位对比变体——本变体两臂各算一次账，防只报最好调节 | EMERGING | Ridge, Aime & White 2013 SMJ |
 | 100 | 显著控制变量排比枚举+反直觉标记 | 开场计数句设定枚举总量预期，每项方向比较级+系数+p 值三要素一拍，counterintuitively 内嵌认领意外符号 | vs 变体95（反号主效应 hedge）——本变体是控制集显著项的系统性枚举，非焦点反转 | EMERGING | Raithel, Hock & Mafael 2024 JAMS |
+| 101 | 事件窗口显著性筛选选 DV | 多窗口 CAR 并报预览 + 仅显著窗口作主检验 DV；非显著窗不进主表 | vs 变体76 窗口并报——本变体把窗口显著性当作 DV 选择判据并预登记 | EMERGING | Javadinia, Muir, Cheikh-Ali & Tucker 2024 JAMS |
+| 102 | 主检验前假设电池 | 测度效度验证 + 机制边界分样本 + model-free 组间差三连，先立证据再进回归主表 | vs R1 描述统计与变体22 单项检验——本变体是多证据电池编排 | EMERGING | Javadinia, Muir, Cheikh-Ali & Tucker 2024 JAMS |
+| 103 | 匹配敏感性交底+集体收束 | MIB→EPBR 匹配敏感性交底 + 稳健性电池以 "Collectively…(1)…(5)" 枚举式一句集体收束 | vs 变体15 逐项稳健性——本变体把多威胁压缩成序数枚举收束句 | EMERGING | Javadinia, Muir, Cheikh-Ali & Tucker 2024 JAMS |
 
 ### R6 非显著/反转/Null（10）
 
@@ -398,6 +401,36 @@ confidence: low-medium（单篇来源，VERIFIED — expert_audit_override 2026-
 -->
 
 <!-- wb:li_chiu_kong_cropanzano_ho_2026_jom:legacy_OLS-FE_15 -->
+
+
+### 变体 103: R7 匹配方法敏感性交底 + 稳健性电池枚举式集体收束 (1篇高价值)
+**来源论文**: Javadinia, Gill & Jayachandran 2024 (Journal of the Academy of Marketing Science)
+**原始句锚点**: "The use of CEM is motivated by the idea that pre-processing the data using matching not only reduces reliance on the functional form assumption (like the assumption of linearity in OLS) to mitigate endogeneity of recall environment intensity but also reduces variance in the estimated effects (Ho et al., 2007). ... Collectively, the Models R1 through R9 ... show that effects exist even 1) when we recognize the presence of potential unobserved factors, 2) when we recognize the size of our estimation sample 3) when we account for the position of the focal recall in the sequence of recalls ..., 4) across different types of matching, and 5) across different ways to obtain abnormal returns (i.e., CAR and BHAR)."
+**验证状态**: EMERGING
+**写入日期**: 2026-09-29
+**槽位**: R7
+**骨架**:
+> We tested the robustness of [matching method] employed to preprocess the data before estimating the econometric model. The use of [matching] is motivated by the idea that pre-processing the data using matching not only reduces reliance on the functional form assumption (like the assumption of linearity in OLS) to mitigate endogeneity of [focal predictor] but also reduces variance in the estimated effects ([citation]). However, it can be argued that one can address the endogeneity of [focal predictor] by conditioning on factors that affect both [focal predictor] and [outcome] in an OLS regression under the assumption that these control variables are linearly related with [focal predictor] and [outcome] ([citation]). Hence, instead of using matching to mitigate endogeneity concern, we assess the robustness of the estimates using an OLS model while conditioning on all covariates (see Table [X], Model [M]). We also assessed the sensitivity of estimates with respect to alternative matching methods: [primary matching method] guarantees a reduction in multivariate imbalance as it belongs to [matching class: e.g., Monotonic Imbalance Bounding] matching methods ([citation]); however, there are alternative matching methods, and we perform robustness checks using [alternative class: e.g., Equal Percent Bias Reducing] matching methods like [method_1] and [method_2] ([citation]). As shown in Table [X], Models [M1] and [M2], the estimates are robust to different matching methods. In addition, to ensure that the effects are not driven by the choice of matching covariates, we replicate our effects using all the covariates that can affect [focal predictor], [outcome], or both (Model [M3]). [Alternative-measure / alternative-model / window-exclusion checks follow the same threat-定位→动作→结果 pattern.] Collectively, the Models [M_first] through [M_last] show that effects exist even 1) when we recognize the presence of potential unobserved factors, 2) when we recognize the size of our estimation sample, 3) when we account for [rival explanation], 4) across different types of matching, and 5) across different ways to obtain [outcome measure].
+**与原骨架差异**: 现有语料有威胁小节化（变体 66）、五威胁标签化序列含 CEM 作匹配手段（变体 15）、Table 矩阵汇总（变体 1），但缺两个本变体的独有件：(1) **匹配方法本身的敏感性交底**——不只把匹配当手段，而是交代主匹配方法所属的匹配类（MIB）保证什么性质、再换另一类匹配（EPBR：NNM/PSM）+ 换匹配协变量集 + 弃匹配改全协变量 OLS 三路验证，把"匹配选择是否驱动结果"作为独立 threat 处理；(2) **电池枚举式集体收束句**——"Collectively, the Models [M_first] through [M_last] show that effects exist even 1)...2)...3)...4)...5)"，把整张多模型稳健性表（本篇 15 列）压缩成一段编号枚举，每项对应一个先前 threat，供读者在不回表的情况下带走结论。区别于变体 1（表格矩阵汇总）：收束句是叙事枚举不是表格；区别于变体 15（逐威胁 First/Second/... 铺开）：本变体管的是铺开之后的**收束**。
+**诚实边界**: 集体收束句只述"effects exist even when ..."的存在性，不升格支持强度；个别规格中调节项显著性衰减（如更宽排除窗下交互不显著）不应被收束句抹平——正文须保留逐模型结果的可见性（本篇以完整 Table 呈现，收束句不替代表格）。
+
+<!-- wb:javadinia_2024_recall_environment_and_post_recall_stock_mark:r7_matching_method_sensitivity_collective_close -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
+### 变体 101: R2 事件窗口显著性筛选选 DV — 多窗口并报 + 仅显著窗口入模 (1篇高价值)
+**来源论文**: Javadinia, Gill & Jayachandran 2024 (Journal of the Academy of Marketing Science)
+**原始句锚点**: "The abnormal returns which are statistically significant are considered the dependent variable in our analyses (Eilert et al., 2017). ... Based on this analysis and prior research we chose CAR [0, 0] as the dependent variable in Eq. 8."
+**验证状态**: EMERGING
+**写入日期**: 2026-09-29
+**槽位**: R2
+**骨架**:
+> We calculate the [abnormal returns] accruing from a [event] through an [event study]. Following existing research, we determine [abnormal returns] relevant for our analyses by considering different [event windows] and testing for the statistical significance of the corresponding [abnormal returns] ([citation]). The [abnormal returns] which are statistically significant are considered the dependent variable in our analyses ([citation]). Particularly, we focused on [N] event windows: [window_1] (i.e., [[a, a]]), [window_2] (i.e., [[b, b]]), [window_3] (i.e., [[c, c]]), and finally [window_4] (i.e., [[a, c]]). As shown in Table [X], the average [abnormal return] in [non-focal window_1] is insignificant ([estimate], p > [threshold]), and likewise for [non-focal windows_2/3/4]. However, the average [abnormal return] on the [focal window] ([estimate], p < [threshold]) is [direction] and significant. These results are consistent with prior findings which indicate the [direction] impact of [events] on [outcome] on the day the [events] are announced ([citations]). Based on this analysis and prior research we chose [focal measure] as the dependent variable in Eq. [N].
+**与原骨架差异**: 现有语料有事件研究 CAR 分组比较（Logit 变体 3，非参数验证+t 检验）与 CAR 附录 null 回收（变体 29 锚点），但**没有**"用事件窗口显著性筛选来选 DV"这一前置操作化交底骨架。本变体的五拍：(1) 宣告事件研究法与既文献窗口惯例；(2) 显著性筛选规则一句交底（"which are statistically significant are considered the dependent variable"）；(3) 枚举全部候选窗口并逐窗并报 CAR/t/p（Table 5）；(4) 唯一显著窗口与 prior findings 方向一致性背书；(5) "Based on this analysis and prior research we chose ... as the dependent variable in Eq. [N]" 收束到主模型。区别于 r3_eventstudy_nonparametric_validation（检验事件研究指标行为正常，置于分组比较前）：本变体筛选的是**进入回归的 DV 操作化**，不是指标 sanity check。
+**诚实边界**: 显著性筛选 DV 有 cherry-picking 风险——必须同时报全部候选窗口的估计值（并报非显著窗口），并用 prior findings 背书选中窗口的方向合理性；只报选中窗口不并报其余窗口 = 选择性报告反模式。
+
+<!-- wb:javadinia_2024_recall_environment_and_post_recall_stock_mark:r2_eventwindow_significance_screen_dv_selection -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
 ### 变体 76：R2 Heckman 选择模型前置交底 — 威胁类比 + 两阶段程序 + 风险集/SE 修正披露 (1篇高价值)
 
 **适用场景**: selection/内生性修正（Heckman、CF、2SLS 等）是**主估计策略**而非稳健性附件时，在主结果之前用独立小节交底：为什么有选择问题（带类比论证）、估计器性质、两阶段程序、风险集与标准误修正。读者带着"修正了什么、代价是什么"的预期进主表。
@@ -1900,6 +1933,21 @@ level of significance, indicating nearly full mediation.
 <!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:r8_in_system_baron_kenny_hypothesis_linked_mediation -->
 
 
+
+
+### 变体 102: R2 主检验前假设电池 — 测度效度验证 + 机制边界分样本 + model-free 组间差 (1篇高价值)
+**来源论文**: Javadinia, Gill & Jayachandran 2024 (Journal of the Academy of Marketing Science)
+**原始句锚点**: "We conduct preliminary analyses to empirically support the assumptions that undergird our research (please see Appendix 3 for details). ... This pattern suggests that the theoretically motivated measure of recall environment intensity captures the salience of recalls that constitute the recall environment."
+**验证状态**: EMERGING
+**写入日期**: 2026-09-29
+**槽位**: R2
+**骨架**:
+> We conduct preliminary analyses to empirically support the assumptions that undergird our research (please see [Appendix X] for details). First, we provide suggestive evidence that [focal context measure] captures [theoretically required property: e.g., salience]. To assess this, we obtain [external auxiliary data: e.g., aggregate search trends] as a potential measure of [the property] ([citation]). We then regress [auxiliary data] on [focal context measure] and find that when [focal measure] is high, so is [auxiliary data]. This pattern suggests that the theoretically motivated measure of [focal measure] captures [the property], and hence [focal measure] is likely to serve as a decision context that informs [decision makers'] decisions. Second, we devise an empirical test to support the use of [theory] to explain [focal measure]'s ability to alter [outcome]. The key assumption here is that [assumption]. Thus, keeping everything else the same, [attention-drawing occasion] is likely to make [focal measure] less [property] to [decision makers]; hence, we should either see no effect or a reduced effect of [focal measure] for [attention-drawing occasion], while the effect should manifest for [comparison occasion]. Accordingly, we split our sample based on [split rule]: the effect is insignificant ([estimate], p > [threshold]) for [attention-drawing occasion] while [direction] and significant ([estimate], p < [threshold]) for [comparison occasion]. Third, before we estimate the empirical specification in Eq. [N], we provide model-free evidence: we split our sample into [high group] and [low group] and compare the average difference in [outcome]; this difference is [direction] ([estimate]) and significant (p < [threshold]), which provides suggestive evidence that [theoretical expectation].
+**与原骨架差异**: 现有语料有 model-free 四分位开场（变体 22，DV 单调性）与 selection-specific 递进防御（变体 29，CEM+Heckman），但缺"**主检验前假设电池**"这一结构：First 用外部辅助数据（Google Trends 型）验证**调节变量测度** capturing 理论所需属性（测度效度验证，不是 selection 防御）；Second 把理论机制写成一个"机制应在何时关闭"的可证伪边界预测并分样本裁决（attention-drawing occasion → 效应消失；对照 → 效应出现）；Third 用 model-free 高低组间差预演主效应方向。三连共用的开题句 "empirically support the assumptions that undergird our research" 把三者统一为假设支撑而非事后补充。区别于变体 22（model-free 只做 DV 趋势预览）：本变体电池的第二拍是**理论边界检验**（机制关闭处效应应消失），第三拍是高低组均值差而非分位数单调性。
+**诚实边界**: 措辞全程"suggestive evidence / likely to"，不把前置验证升格为因果确证；边界分样本的机制关闭预测须由理论先行推出（原文引 Higgins 1996），不能事后挑一个显著/不显著的拆分方向。
+
+<!-- wb:javadinia_2024_recall_environment_and_post_recall_stock_mark:r2_preliminary_assumption_battery -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
 
 ### 变体 86: R4 — 连续调节极点→交互符号先验判据（gulati_higgins2003smj 型）
 **来源论文**: Gulati & Higgins (2003), *Strategic Management Journal*

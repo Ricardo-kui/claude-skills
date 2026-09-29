@@ -1302,6 +1302,32 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 <!-- wb:gulati_nohria_zaheer_2000_strategic_networks:tension_attention_asymmetry_theory_corollary -->
 
+
+### 变体 AY：决策者不确定性评估→RQ 推出型（javadinia2024型）
+
+> 论证角色：Gap 主张（缺口由决策者在不确定下的评估逻辑推出而非文献清点承担；RQ 以 Consequently 一句收束）
+
+**模板**:
+> "The impact of any specific [event] on [outcome] is uncertain at the time of the announcement ([citation]). For [events] with an uncertain impact, decision-makers could evaluate the impact against the context of similar [events] by other firms in the industry ([citation]). Consequently, we investigate whether [context] influences the [outcome/penalty] for a specific [event]."
+
+**来源**: Javadinia, Gill & Jayachandran 2024 (JAMS), P2
+
+**原文锚定**:
+> "However, the impact of any specific recall announcement on a firm's performance is uncertain at the time of the announcement (Liu et al., 2016). ... Consequently, we investigate whether the recall environment influences the market penalty for a specific recall announcement."
+
+**关键特征**:
+- 全段无 "few studies / remains unclear" 类文献清点语言——缺口主张内嵌于 actor 的评估问题
+- 以"结果在宣告时点不可知"建立具体 pain，再以评估行为（evaluate against the context）架桥到研究问题
+- 三句完成 Tension→RQ：不确定性陈述→行为逻辑桥→Consequently 收束，过渡链无断点
+- 与已有 Incompleteness 变体区别：文献仅作 footnote 式支撑（两处括号引文），论证重量在现象逻辑
+
+**适用**: 结果不确定性/情境依赖性强的事件研究论文；Incompleteness × Constructs/Mechanism 组合；现象逻辑强于文献批判时
+
+**禁忌**: 决策者评估逻辑必须与后文理论机制（如显著性/注意理论）衔接，否则 RQ 与理论承诺脱节；勿在无行为主体的事件情境强行套用
+
+<!-- wb:javadinia_2024_recall_environment_and_post_recall_stock_mark:tension_actor_uncertainty_evaluation_rq -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
 ## 组装规则
 
 ### 反模式提醒

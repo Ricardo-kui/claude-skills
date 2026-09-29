@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
   last_updated: '2026-09-29'
-  observations_processed: 119
+  observations_processed: 120
   description: Evidence ledger for design defects inferred from Introduction exemplar distillation.
 defects:
   incompleteness-embedded-opposing-claims-vs-incommensurability:
@@ -5011,3 +5011,50 @@ defects:
     auto_action:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.
+  epigraph-datashock-mutex-jams-counterexample:
+    classification: routing_defect
+    status: EMERGING
+    risk: low
+    current_rule: hooks 互斥矩阵把 02-epigraph-quote-pivot 与 03-data-shock 组合判为互斥（信息过载）
+    rule_excerpt: '| `02-epigraph-quote-pivot` + `03-data-shock` | 情感/叙事张力 + 数据冲击 = 信息过载 |'
+    rule_locator: corpus/hooks/_index.md 互斥矩阵表, line 102
+    target: write-introduction/corpus/hooks/_index.md
+    diagnosis: JAMS 2024 已发表范文将主题式题记引语（Kenneth Noland 'For me context is the key'）与多机构频数 data-shock 连用且功能良好——题记极短并直接预载核心构念（context），不与数据段争夺叙事重量。互斥对未区分'完整叙事型
+      quote pivot'（沉浸式新闻个案，与数据段争重量）与'主题题记型 quote pivot'（≤2 行构念预载）。单篇证据，EMERGING/log_only，不触发核心修改。
+    proposed_change:
+      action: conditionalize
+      summary: 互斥条件化：题记式短引语（≤2 行、直接预载核心构念）与 03-data-shock 可连用，题记承担构念预载而非叙事；完整叙事型 quote pivot 与 data-shock 组合仍互斥
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: javadinia_2024_recall_environment_and_post_recall_stock_mark
+      journal: Journal of the Academy of Marketing Science
+      evidence_anchor: 题记 'For me context is the key—from that comes the understanding of everything.' — Kenneth Noland +
+        P1 NHTSA/FDA 频数堆叠与 131% 增量
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Journal of the Academy of Marketing Science
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Journal of the Academy of Marketing Science
+    verified_journal_count: 1
+    regression_cases:
+      positive:
+      - prompt: 写一篇以主题题记引语开篇、随后接多机构频数统计 Hook 的 Constructs 论文引言
+        expected_invariants:
+        - 题记保持 ≤2 行且预载核心构念
+        - 数据段独立承担现象规模论证
+        - 不触发互斥警告
+      preservation:
+      - prompt: 写一篇以沉浸式新闻叙事 quote pivot 开篇、再接数据冲击 Hook 的引言
+        expected_invariants:
+        - 仍触发互斥警告（情感叙事张力 + 数据冲击 = 信息过载）
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-29'
+    last_seen: '2026-09-29'
+    auto_action:
+      eligibility: log_only
+      reason: Evidence is insufficient for a core-skill change.

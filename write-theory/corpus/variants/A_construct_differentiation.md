@@ -293,6 +293,37 @@ that [A] is a stronger [buffer/driver] in the case of [outcome2] than [B] is.
 
 <!-- wb:pfarrer_pollock_and_rindova_2010:relative_ordering_reversal -->
 
+
+### 变体 D：理论类比维度派生型新构念构建（Theory-Analogized Dimension Derivation，Javadinia et al. 2024 JAMS 型）
+> 论证角色：[D] 定义前提（从母理论的显著性驱动因素逐维类比派生新构念的构成维度，以维度总结句收束，可选内嵌验证）
+<!--
+pattern_id: theory_analogized_dimension_derivation_construct_building
+build_type: 机制推演型前置 T1 变体（新构念创建，非双构念辨析）
+source_papers: ["javadinia_2024_recall_environment_and_post_recall_stock_mark"]
+confidence: low（单篇 EMERGING，待第二篇交叉验证）
+-->
+
+**适用场景**: Incompleteness × Constructs 路线上"新建多维构念"的论文：构念是某母理论概念（如 salience/visibility/turbulence）在特定情境的实例化，需要从母理论逐维派生构成维度。
+**排列模式**: inline naming → definition-via-parent-concept → per-dimension analogy → dimension summary (→ optional embedded validation)
+**范文来源**: Javadinia, Gill, and Jayachandran (2024), *Journal of the Academy of Marketing Science*
+
+**骨架**:
+```
+[Inline naming] [The context] could become relevant in assessing and responding to [the focal event]. We call this context [construct].
+[Definition via parent concept] [Construct] refers to [the parent theoretical concept] of [the context]. Accordingly, we use insights from [the parent theory literature] to conceptualize the [construct] construct.
+[Derivation rule] To delineate the [construct] construct, we focus on identifying features of [the constituent units] that make them more noticeable / [parent-concept property] to [actors].
+[Per-dimension analogy, one move each] [Driver 1]: [adjacent-domain literature] argues [salience driver] ([citations]); therefore [dimension 1]. [Driver 2]: ... → [dimension 2]. [Driver 3/4: magnitude-based] ... → [dimension 3, 4]. [Driver 5: temporal fading] ... → [dimension 5].
+[Dimension summary] To summarize, we propose that [construct] is constituted of [N] aspects of [the units] that make up [the context], i.e., [dim1], [dim2], ..., [dimN].
+[Embedded validation, optional] We validate the [N] dimensions in two ways: [interviews of domain actors] and [a survey of domain actors]. Apart from validating the dimensions, [the validation] also allowed us to assess whether [the context] influences [actors].
+```
+
+**为什么有效**: 新构念不凭空列举维度，每个维度都由母理论的同一属性（noticeability/salience）在相邻域的既证驱动因素类比派生，维度集有统一生成规则；维度总结句把 [N] 个维度一次性钉住，供后续测量与假设回指；内嵌验证把"构念是否真实"的质疑提前在 Theory 内消化。
+**注意事项**: 本变体是"新构建构念"而非双构念辨析——与 A 家族既有辨析变体功能不同，gate ① 可裁决是否新建 constructs-creation 模块文件；验证段内嵌属于 Theory-Methods 交叉，需显式过渡句（"We next discuss how we validated these dimensions"）并在 Methods 侧避免重复；每维类比必须真的来自母理论属性，否则退化为维度清单。
+**反模式**: 维度列举无母理论派生规则；以操作化测量直接充当构念定义；内嵌验证喧宾夺主占据 Theory 主导篇幅。
+
+<!-- wb:javadinia_2024_recall_environment_and_post_recall_stock_mark:theory_analogized_dimension_derivation_construct_building -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Constructs tbt="机制推演型（构念新建+双调节边界）" -->
+
 ### 段落功能地图
 
 | 段落 | 功能 | 推荐词数 | 必须度 |

@@ -180,3 +180,20 @@ because 从句是 Methods 中**最密集的说服单元**。一个 because 从�
 
 <!-- wb:dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak:m6_multidimensional_determinant_decomposition -->
 <!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
+
+### 变体 E：竞争偏倚下的洗净窗口定径 because 链（javadinia_2024 型）
+
+**功能**：排除窗口与处理暴露同源（邻近同类事件既污染估计又削去处理变异）时，把窗口宽度论证成显式权衡，而不是只引先例。
+
+**骨架**：
+[The exclusion rule removes observations with [confounding events] or [peer exposure events] in their [±k] window.] [The confounding process] biases the estimated [focal effect] [downward], while [the focal effect] is [positive]: the two forces push in opposite directions. [If the window is too narrow, residual [confounding] makes the effect hard to detect; if too wide, the estimation sample shrinks and detection suffers again.] Accordingly, we follow [precedent citations] and adopt a [±k] window around [events], and assess the robustness of our estimates using [narrower], [wider-1], and [wider-2] windows. [A concern that the rule removes the most exposed observations cuts the other way: for the same reason it constitutes a stronger test of the theory while preventing the confounding.]
+
+**关键句法**：① 命名两个方向相反的偏倚源（不是泛泛"混淆"）；② 窗口宽窄各自伤害什么（检测力 vs 污染）；③ 先例背书 + 稳健性窗格扫描收口；④ 反向担忧翻转——"排掉高暴露观测反而构成更强检验"。
+
+**适用/禁忌**：适用——排除窗口与处理暴露同源（邻近同类事件、行业同期冲击）且偏倚方向已知；禁忌——排除规则与处理无关时直接引先例即可，不需权衡链。
+
+**原文锚点**："While this may raise concern that observations that face a stronger recall environment are removed, of note is that this would for the same reason constitute a stronger test of the theory while preventing the confounding because of the spillover effect."
+
+<!-- wb:javadinia_2024_recall_environment_and_post_recall_stock_mark:m2_clean_window_competing_biases_because -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->

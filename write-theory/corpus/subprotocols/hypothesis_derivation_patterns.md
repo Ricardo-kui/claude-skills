@@ -1997,3 +1997,35 @@ prediction].
 
 <!-- wb:dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak:hdp_general_proposition_context_hypothesis_re_derivation -->
 <!-- wb-meta: gap=Incompleteness status=EMERGING dim=Mode tbt="调节效应型（E16 双列因子账本→单开关不对称翻转；extended-intro 内嵌理论）" -->
+
+
+## Pattern: Expectation-Violation Anchor → Context-Conditioned Surprise → Penalty Attenuation（预期违背锚定+情境条件化惊讶，Javadinia et al. 2024 JAMS 型）
+> 论证角色：A&R（以"市场后果取决于预期违背"为共识锚，推演情境信息如何条件化惊讶并命名机制，收敛为衰减假设）
+<!--
+pattern_id: expectation_violation_context_conditioned_surprise_mechanism
+build_type: 机制推演型（事件/不确定情境专用）
+source_papers: ["javadinia_2024_recall_environment_and_post_recall_stock_mark"]
+confidence: low（单篇 EMERGING，待第二篇交叉验证）
+-->
+
+**适用场景**: 事件研究型论文（召回、公告、冲击）中，自变量是情境/环境属性，因变量是市场惩罚或评价反应，机制经"惊讶/预期调整"传导。
+**排列模式**: Warrant-Embedded + named-mechanism convergence
+**范文来源**: Javadinia, Gill, and Jayachandran (2024), *Journal of the Academy of Marketing Science*
+
+**骨架**:
+```
+[Anchor] The impact of [an event] on [the market outcome] depends on whether it violates [actors'] expectations ([citations]).
+[Uncertainty puzzle] However, there is uncertainty associated with the extent of [the event]'s impact on [the firm] ([citation]).
+[Mechanism move 1] According to [theory], [actors] pay more attention to contextually relevant information when the impact of the event is uncertain ([citations]).
+[Mechanism move 2] Information from prior [events] in the industry could condition the degree to which [actors] are surprised by a new [event] ([analogous-event citation]).
+[Mechanism move 3] When prior [events] are more salient, a new [event] might not surprise [actors] much; they may conclude [events] are commonplace, hence [downstream stakeholder behavior is muted], and [the penalty] will be attenuated.
+[Named mechanism] Therefore, [X] can have an [expectation-adjustment] effect where [events] are seen as less egregious, limiting their negative impact on [the outcome].
+Hence, we propose: H1: High (vs. low) [X] attenuates [the penalty] of [events].
+```
+
+**为什么有效**: 三步链每步有独立 warrant；给机制命名（"[expectation]-adjustment effect"）后，后续 moderator 全部回指该名字，H2/H3 的推导成本大幅下降；H1 用"attenuates"直接编码方向。
+**注意事项**: "情境信息→利益相关者行为→现金流后果"一跃在本篇存在跳跃（投资者预期直接推出消费者忠诚行为），模仿时应补自己的中间论证；机制命名前检查是否与既有术语冲突。
+**反模式**: 只说"X 调节预期"而不说明惊讶如何转化为可观察的市场后果；或锚句缺预期违背文献支撑直接断言。
+
+<!-- wb:javadinia_2024_recall_environment_and_post_recall_stock_mark:expectation_violation_context_conditioned_surprise_mechanism -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Mechanism tbt="机制推演型（构念新建+双调节边界）" -->

@@ -6,7 +6,7 @@ source_papers:
   - "darby2023_ceo_stock_ownership_recall_timing_msom"
   - "qiao_hiatt_sine2026 (SMJ, 2026): entropy balancing (EBM) — reweights control moments, keeps all observations"
   - "fini_jourdan_perkmann_2017_amj (Academy of Management Journal, 2026-08-12): CEM as confirmatory replication where the endogenous focal variable itself is the treatment, re-estimating the same estimator on the matched sample"
-variants_count: 4
+variants_count: 5
 created: 2026-05-18
 updated: 2026-08-12
 ---
@@ -110,6 +110,23 @@ updated: 2026-08-12
 
 ---
 <!-- wb:fini_jourdan_perkmann_2017_amj:legacy_PSM匹配面板_4 -->
+
+
+### 变体 5：处理时点选择的匹配协变量辩护链（javadinia_2024 型）
+
+**功能**：当处理"强度"部分由单元自身的时点选择内生决定时，从选择过程的先行文献导出匹配协变量，并把识别假设写成一句显式陈述。
+
+**骨架**：
+[The [treatment intensity] a [unit] faces might be endogenous because [units] time their [events] based on [event-related or unit-related factors], and these factors can also be associated with [the outcome].] [We therefore match [treated] to [comparison] [events] using covariates that likely correlate with [units'] [event] timing and are also likely to correlate with [the outcome].] [We identify the matching covariates from prior research on [event] timing: [covariate 1] determines [managers'] ability and motivation to [investigate and act], and therefore when to [announce]; this relationship is moderated by [covariate 2] and [covariate 3], along with [covariate 4]; the decision also depends on [covariate 5].] [The endogeneity of [treatment intensity] is mitigated under the assumption that conditional on the matching covariates, [events] are equally likely to face [treatment] or [comparison] conditions.] [Categorical covariates are used as such in matching; continuous covariates are coarsened by standardization and mean-splitting. Before matching we had [N1] observations with a multivariate imbalance of [x.xx]; after matching we have [N2] observations with the multivariate imbalance reduced to zero.]
+
+**关键句法**：① 内生性来源具体化为"时点选择"（不是泛泛 omitted variables）；② 协变量三重资格——选择过程文献背书 × 驱动时点 × 关联结果；③ 识别假设一句显式陈述（conditional on covariates, equally likely）；④ 匹配前后 N 与 imbalance 数字收口。
+
+**适用/禁忌**：适用——处理强度是单元自身选择时点的函数（CEM/PSM 前的内生性论证段）；禁忌——处理外生（政策冲击）时改用平行趋势链。
+
+**原文锚点**："The endogeneity of recall environment intensity is mitigated under the assumption that conditional on the matching covariates, recalls are equally likely to face a low-intensity or a high-intensity recall environment."
+
+<!-- wb:javadinia_2024_recall_environment_and_post_recall_stock_mark:m8_timing_selection_matching_covariates -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
 
 ## 反模式（匹配稳健性报告）
 

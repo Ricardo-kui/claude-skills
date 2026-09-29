@@ -6,7 +6,7 @@
 > 锚点格式 `标题-{序数}`：指向源文件中该引文所在标题块的文档序数（非已接受 verbatim 计数），块内增删其它 verbatim 不影响定位。
 > `路径#锚点` 可用于回源核对；`--verify` 会断言每条底本可在其锚点块内逐字定位。人工剔除记录见 `scripts/skeleton_exclusions.txt`，待补录项见 `_unparsed.md`。
 
-条目：verbatim 37 条 / 模板 32 条。
+条目：verbatim 38 条 / 模板 33 条。
 
 ## Verbatim 底本
 
@@ -49,6 +49,7 @@
 | `three-layer-contribution#14` | liuliuluo2016 | First, despite the frequent occurrence of product recalls and the important implications of remedy for recall management, company performance, and consumer welfare, almost no research has examined recall remedy. Our study fills this important gap. | `corpus/contributions/three-layer-contribution.md#标题-30` | verbatim |
 | `three-layer-contribution#15` | liuliuluo2016 | This is the first study to offer and test a theoretical framework that considers the trade-off between remedy cost to the company and consumer harm. | `corpus/contributions/three-layer-contribution.md#标题-30` | verbatim |
 | `three-layer-contribution#16` | liuliuluo2016 | Our results show that a CEO's financial interests not only directly influence the choice of remedy but also moderate the effects of recall characteristics. | `corpus/contributions/three-layer-contribution.md#标题-30` | verbatim |
+| `three-layer-contribution#17` | javadinia2024 | Our research, thus, complements Mukherjee et al., (2022) by indicating why the stock market penalty to similar recall announcements could vary even if their positions in the recall cluster are identical. | `corpus/contributions/three-layer-contribution.md#标题-31` | verbatim |
 
 ## 填槽模板（模板）
 
@@ -86,3 +87,4 @@
 | `three-layer-contribution#T8` | mao2022 | "本文对 [现象] 文献的贡献主要有二。First，本研究帮助解释 [主体] 如何做出 [决策1] 与 [决策2]。既有文献强调 [现象] 的 [后果]：对 [结果1]（[引用]）、[结果2]（[引用]）、[结果3]（[引用]）；为降低风险可采取 [事前策略]（[引用]）；[危机] 发生后决定 [时点] 需考虑 [因素]，如 [引用] finds [调节发现]。Our [理论方法] is the first to [建模特征]，which not only [揭示影响] but also [揭示决策过程]。" | `corpus/contributions/three-layer-contribution.md#标题-28` | 模板（填槽模板） |
 | `three-layer-contribution#T9` | mao2022 | "Second，本文提供政策含义贡献：帮助 [监管方] 更好设计 [工具]，以减少 [有害行为] 及其伴生伤害。[监管] 文献此前聚焦 [责任规则]（[引用]）；晚近 [引用] 考察 [宣告效应]，就 [规则设计] 提出建议。However, our paper focuses on [主体特征] 与 [对象特征]。We offer policymakers suggestions on [检查对象]、on how to design [惩罚] to deter [行为]、and on which types of [信息] to disclose。" | `corpus/contributions/three-layer-contribution.md#标题-29` | 模板（填槽模板） |
 | `three-layer-contribution#T10` | liuliuluo2016 | "Our contribution to the literature is threefold. First, despite [the frequent occurrence of phenomenon] and [its implications for A, B, and C], almost no research has examined [focal decision]. Our study fills this important gap. Second, a growing number of studies have provided valuable insights on [the consequences side of the conversation]. However, few have paid attention to [the determinants side]. This is the first study to offer and test a theoretical framework that [names the trade-off the framework resolves — between X cost to the firm and Y harm to consumers]. Third, a central theme of our article is that [focal decision] is influenced not only by [conventional event/firm drivers], but also by [imported actor-level factor]. Our results show that [actor factor] not only directly influence[s] [the decision] but also moderate[s] the effects of [conventional drivers]. Incorporating these '[actor]' factors into the theoretical framework and studying their impacts on [decision] constitute a novel addition to the literature." | `corpus/contributions/three-layer-contribution.md#标题-30` | 模板（填槽模板） |
+| `three-layer-contribution#T11` | javadinia2024 | "We contribute to the [field] literature by: (a) conceptualizing [construct], (b) developing a measure for [construct], (c) theorizing how [construct] influences [outcome], (d) hypothesizing the heterogeneity in this effect, and (e) empirically demonstrating [its role] in the context of [setting]. ... [Neighbor A] show [finding], but they do not account for [context]. [Neighbor B] show [adjacent finding]. In contrast, we focus on [the construct's characteristics], not [the neighbor's operationalization]. ... Our research, thus, complements [Neighbor B] by indicating why [the puzzle]." | `corpus/contributions/three-layer-contribution.md#标题-31` | 模板（填槽模板） |

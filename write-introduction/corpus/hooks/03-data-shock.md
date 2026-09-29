@@ -285,3 +285,29 @@ source: Manually curated from MVP30 narrative_analysis files + zorn2017 distill
 **禁忌**: 数据必须来自权威行业来源并给出年份；轶事必须真实且四要素可核，不得用泛化案例冒充；融合首段信息密度高，惯例文献列举控制在一条引用链内。
 
 <!-- wb:lu_et_al_2022_frenemies_corporate_advertising:intro_hook_data_shock_anecdote_teaser -->
+
+
+### 变体 J：多机构频数→环境存在性收束型（javadinia2024型）
+
+> 论证角色：Evidence（多机构频次统计建立现象规模；Thus 收束句把频数转译为"召回环境"的存在性宣告——Framing 性质收束，为后文新构念供货）
+
+**模板**:
+> "[Phenomenon] has become more frequent over the past [decades]. According to [agency 1], [scale statistic] every [period]. In [adjacent industry], [agency 2] [statistic] in [year]. In [year], [agency 1] reported [statistic], a [%] increase compared to [baseline year]. Thus, [event] announcements are frequent, and a new [event] typically occurs in a [context construct] constituted by [similar events] of other firms in the industry."
+
+**来源**: Javadinia, Gill & Jayachandran 2024 (JAMS), P1
+
+**原文锚定**:
+> "Thus, product recall announcements are frequent, and a new recall announcement typically occurs in a recall environment constituted by recalls of other firms in the industry."
+
+**关键特征**:
+- 末句不是知识缺口收束而是"环境存在性"宣告——频数数据同时充当重要性论证与新构念的经验底座
+- 多机构、多行业统计堆叠（每条带具体数字与年份与百分比增量），单行业多来源亦可成立
+- 能量级中：不制造悖论、不挑战共识，只建立规律性，与 Incompleteness 的温和弧线匹配
+- 与已有 data-shock 变体的区别：收束指向 "a [context] constituted by [similar events]"，直接为引言第三段的新构念供货，而非 "yet little is known"
+
+**适用**: 研究现象是"事件嵌入同群环境"的 Constructs/Mechanism 论文；Hook 需要同时完成重要性论证与构念铺垫时首选
+
+**禁忌**: 末句宣告的"环境"必须在后文被真正构念化并测量，否则沦为空泛背景句；统计数字须可溯源（机构报告/官方数据库）
+
+<!-- wb:javadinia_2024_recall_environment_and_post_recall_stock_mark:hook_datashock_frequency_to_environment_existence -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
