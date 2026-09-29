@@ -12,7 +12,7 @@
 | [`survival-analysis`](survival-analysis.md) | `corpus/生存分析.md` | 24 | DV 是时长/生存时间，需 hazard/exp(β) 或「四拍+百分比」风险结果 |
 | [`did`](did.md) | `corpus/DiD.md` | 25 | 因果设计是 DiD/准实验，需交互项幅度翻译、pre-trend 或 placebo 稳健性 |
 | [`count-models`](count-models.md) | `corpus/计数模型.md` | 37 | DV 是计数（召回次数/专利数），需发生率比翻译或计数诊断 |
-| [`experiments`](experiments.md) | `corpus/实验.md` | 5 | 数据来自实验/多研究，需 F/p/η² 或 PROCESS 中介报告 |
+| [`experiments`](experiments.md) | `corpus/实验.md` | 7 | 数据来自实验/多研究，需 F/p/η² 或 PROCESS 中介报告 |
 | [`multi-study`](multi-study.md) | `corpus/多研究.md` | 8 | 一篇论文含多个 study，需跨研究综合或差异解释 |
 | [`qualitative-process`](qualitative-process.md) | `corpus/定性过程研究.md` | 6 | 定性 Findings（过程模型/引语），非量化假设检验 |
 | [`iv-2sls`](iv-2sls.md) | `corpus/IV-2SLS.md` | 17 | 需内生性修正（2SLS/IV），报第一阶段 F、排他性或弱识别诊断 |
@@ -29,7 +29,7 @@
 | [`varx-pvar`](varx-pvar.md) | `corpus/VARX-PVAR.md` | 7 | 向量自回归/脉冲响应，需弹性表或方差分解解读 |
 | [`blp-state-space`](blp-state-space.md) | `corpus/BLP-状态空间.md` | 5 | 结构需求或状态空间模型，需拟合/反事实报告 |
 
-合计：21 模型族 / verbatim 304 条 / 模板 328 条。
+合计：21 模型族 / verbatim 304 条 / 模板 330 条。
 
 ## 待补录
 

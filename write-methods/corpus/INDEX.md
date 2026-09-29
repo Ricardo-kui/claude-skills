@@ -70,7 +70,7 @@ updated: 2026-09-12
 
 | [SEM](SEM.md) | SEM | 6 | 2026-05-18；变体 5：M7 中介因果序滞后错位链——X/M/Y 按中介链位置依次错位滞后，一句同时交付反向因果防御与中介时序可证性，giannetti_2022_corporate_lobbying_and_product_recalls_an_inv，EMERGING；变体 6：M7 第二阶段被调节中介单方程交互实现——mediator×moderator 交互入结果方程+低阶主效应完备性合规句（区别 SEM 变体 1 联立路线），giannetti_2022_corporate_lobbying_and_product_recalls_an_inv，EMERGING |
 
-| [实验](实验.md) | 实验 | 6 | 2026-08-03 |
+| [实验](实验.md) | 实验 | 8 | 2026-08-03 |
 
 | [多研究](多研究.md) | 多研究 | 10 | 2026-08-12 |
 
@@ -102,13 +102,13 @@ updated: 2026-09-12
 
 | [推断二元结果](推断二元结果.md) | 推断二元结果 | 1 | 2026-08-05 |
 
-| [两阶段模型](两阶段模型.md) | 两阶段模型 | 15 | 2026-08-23；变体 15：主方程复用式 Heckman + 实证排除限制辩护链 | 选择修正型下游结果分析（选择方程=主假设方程） | 区别于变体 3/5/11（理论先验排除限制）与变体 10（主表确认型 + λ=0）：IMR 从主模型回收、排除限制用实证低相关 + 辅助回归复验、定位句框成 selection-adjusted mediation | EMERGING | Liu, Liu & Luo 2016 JM；变体 16：双重自选择控制函数——报告选择+策略选择各设第一阶段 probit，双 IMR 并入同一结果方程，'common practice'引文收口；区别于变体15（单选择主方程复用式）与变体3/5/11（理论先验排除限制）。来源 Raithel, Hock & Mafael 2024 JAMS |
+| [两阶段模型](两阶段模型.md) | 两阶段模型 | 16 | 2026-08-23；变体 15：主方程复用式 Heckman + 实证排除限制辩护链 | 选择修正型下游结果分析（选择方程=主假设方程） | 区别于变体 3/5/11（理论先验排除限制）与变体 10（主表确认型 + λ=0）：IMR 从主模型回收、排除限制用实证低相关 + 辅助回归复验、定位句框成 selection-adjusted mediation | EMERGING | Liu, Liu & Luo 2016 JM；变体 16：双重自选择控制函数——报告选择+策略选择各设第一阶段 probit，双 IMR 并入同一结果方程，'common practice'引文收口；区别于变体15（单选择主方程复用式）与变体3/5/11（理论先验排除限制）。来源 Raithel, Hock & Mafael 2024 JAMS |
 
 | [VARX-PVAR](VARX-PVAR.md) | VARX-PVAR | 8 | 2026-07-15 |
 
 | [结构需求-state-space](结构需求-state-space.md) | 结构需求-state-space | 6 | 2026-08-05 |
 
-| **合计** | — | 352 | |
+| **合计** | — | 354 | |
 
 
 

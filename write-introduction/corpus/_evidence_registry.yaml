@@ -1403,7 +1403,7 @@ evidence:
         - wowak2025 (MS)
         - wu2025 (SMJ)
         - fini_2017_social_valuation_across_multiple_audiences_the_int (Academy of Management Journal)
-        - raithel_2024_product_recall_effectiveness_and_consumers_part
+        - raithel_2024_product_recall_effectiveness_and_consumers_part (JAMS)
       gap_distribution:
         Incompleteness: 26
         Inadequacy: 7
@@ -1639,7 +1639,7 @@ evidence:
         - gulati2005-adaptation-vertical (Strategic Management Journal)
         - lu_et_al_2022_frenemies_corporate_advertising (Management Science)
         - giannetti_2022_corporate_lobbying_and_product_recalls_an_inv (JAMS)
-        - raithel_2024_product_recall_effectiveness_and_consumers_part
+        - raithel_2024_product_recall_effectiveness_and_consumers_part (JAMS)
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: LOW
@@ -2064,7 +2064,7 @@ evidence:
       paper_count: 2
       papers:
         - chung_low_rust_2022_jams (JAMS)
-        - raithel_2024_product_recall_effectiveness_and_consumers_part
+        - raithel_2024_product_recall_effectiveness_and_consumers_part (JAMS)
       gap_distribution:
         Incompleteness: 2
         Inadequacy: 0

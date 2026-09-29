@@ -421,6 +421,7 @@ evidence:
       design_types:
         - 两阶段模型
         - 非线性模型
+        - 实验
       micro_templates:
         - m8_exclusion_restriction_empirical_validity_pair
         - m6_control_purpose_built_mini_survey
@@ -544,7 +545,7 @@ evidence:
           - "SMJ 编辑与 R1#2、JAMS R1 主问题#2：用被处理影响的变量（LnADV）与处理交互做机制检验构成 bad-controls；机制主张须由独立测度承接，post-treatment 交互只能降级为 only-when 条件性证据（moon2026 Table 6 三段式为正面模板）"
           - "SMJ R1#8、R2#7 与 JAMS AE、R1（两轮四评审+编辑）一致要求 heterogeneity-robust 估计量（Sun-Abraham/Callaway-Sant'Anna/stacked/BJS）作主分析、TWFE 降级为基准，且调节效应也须在 robust 设计内重估；仅附录图示无系数表被判不足（moon2026 对照：stacked DiD 进主表 Model 7）"
     非线性模型:
-      paper_count: 20
+      paper_count: 19
       papers:
         - lee_park_2024_smj (SMJ)
         - bendig_hensellek_schulte_2024_etp (ETP)
@@ -564,7 +565,7 @@ evidence:
         - vidal_mitchell_2015_orsc
         - zhou2017
         - giannetti_2022_corporate_lobbying_and_product_recalls_an_inv (JAMS)
-        - raithel_2024_product_recall_effectiveness_and_consumers_part
+        - raithel_2024_product_recall_effectiveness_and_consumers_part (JAMS)
       status: VERIFIED
       slots_covered:
         - M1
@@ -629,13 +630,14 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     实验:
-      paper_count: 5
+      paper_count: 6
       papers:
         - falchetti2022 (SMJ)
         - ilicic_brennan_2026 (JM)
         - ahmadi_2017_jms
         - ilicic_brennan_2026_jm
         - li_chiu_kong_cropanzano_ho_2026_jom
+        - raithel_2024_product_recall_effectiveness_and_consumers_part (JAMS)
       status: VERIFIED
       slots_covered:
         - M2
@@ -643,6 +645,7 @@ evidence:
         - M4
         - M6
         - M7
+        - M8
       common_failures:
         - 未说明被试间随机分配
         - 操纵描述停留在抽象标签，未给出条件实际差异
@@ -977,7 +980,7 @@ evidence:
         - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int (ASQ)
       status: VERIFIED
     两阶段模型:
-      paper_count: 15
+      paper_count: 14
       papers:
         - chen_ganesan_liu_2009_jm (JM)
         - chung_low_rust_2022_jams (JAMS)
@@ -992,7 +995,7 @@ evidence:
         - liu_shankar2015
         - pupovac_astvansh_carrillat_legoux_2026_pom
         - liuliuluo2016
-        - raithel_2024_product_recall_effectiveness_and_consumers_part
+        - raithel_2024_product_recall_effectiveness_and_consumers_part (JAMS)
       status: ROBUST
       slots_covered:
         - M7

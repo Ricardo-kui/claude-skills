@@ -7,8 +7,8 @@ meta:
   schema_version: "1.1.0"
   registry_type: estimator-slot-skeleton
   last_updated: 2026-09-13b
-  last_batch_id: batch_2032_raithel_2024_product_recall_effectiveness_and_consumers_part_writeback
-  batches_processed: 42
+  last_batch_id: batch_2033_raithel_2024_product_recall_effectiveness_and_consumers_part_writeback
+  batches_processed: 43
   total_papers_indexed: 73
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
@@ -5473,13 +5473,23 @@ estimators:
       R3:
         skeleton_variants:
           - id: r3_experiment_anova_four_beat
-            skeleton: "Hypothesis [x] predicted that [condition A] would elicit higher [DV] than [condition B] among [audience]. We first checked for outliers using [rule] and [removed/retained] [number]. A one-way ANOVA revealed a significant effect of [IV] on [DV], F([df1], [df2]) = [value], p [relation] [threshold], η² = [value]. Participants in [condition A] reported higher [DV] (M = [value], SD = [value], 95% CI [[lower], [upper]]) than those in [condition B] (M = [value], SD = [value], 95% CI [[lower], [upper]]). These results support Hypothesis [x]."
-            paper_count: 1
             status: EMERGING
+          - id: r3_marginal_null_main_effect_verdict_raithel2024
+            skeleton: "\n见语料块"
+            notes: "\ncorpus 实验.md 7：追加变体 7：实验主效应 marginal/null 校准判决 raithel2024 EMERGING——条件均值对比+F/p/d 后按证据强度降档判决（marginal support / not supported），directionally 措辞分离方向声称与差异声称，In line with the [prior evidence] (Study [N]) 把 null 锚定到跨证据链\n与变体 1（显著主效应五拍）构成主效应判决对"
+            status: EMERGING
+            sources:
+              - raithel_2024_product_recall_effectiveness_and_consumers_part
+          - id: r3_parallel_mediator_process7_index_verdict_raithel2024
+            skeleton: "Hypothesis [x] predicted that [condition A] would elicit higher [DV] than [condition B] among [audience]. We first checked for outliers using [rule] and [removed/retained] [number]. A one-way ANOVA revealed a significant effect of [IV] on [DV], F([df1], [df2]) = [value], p [relation] [threshold], η² = [value]. Participants in [condition A] reported higher [DV] (M = [value], SD = [value], 95% CI [[lower], [upper]]) than those in [condition B] (M = [value], SD = [value], 95% CI [[lower], [upper]]). These results support Hypothesis [x]."
+            notes: 实验 ANOVA 必须报告 η² 和条件均值/CI
+            status: EMERGING
+            paper_count: 2
             subfield_distribution:
               strategy: 1
             sources:
               - Falchetti_Cattani_Ferriani_2022_SMJ
+              - raithel_2024_product_recall_effectiveness_and_consumers_part
             transferability: high
             paradigm_exclusivity: 实验/ANOVA 专用
             rhythm_tags:
@@ -5488,7 +5498,6 @@ estimators:
               - eta_squared
               - means_ci
               - hypothesis_support
-            notes: 实验 ANOVA 必须报告 η² 和条件均值/CI
             corpus_path: corpus/实验.md
           - id: r3_experiment_mediation_hayes
             skeleton: "To examine whether [mediator] explains the effect of [IV] on [DV], we first tested whether [IV] influenced [mediator]. A one-way ANOVA showed that [condition A] led to [higher/lower] [mediator] (M = [value], SD = [value]) than [condition B] (M = [value], SD = [value]), F([df1], [df2]) = [value], p [relation] [threshold]. We also tested [alternative mediator 1] and [alternative mediator 2] and found no significant effect of [IV]. We then estimated the indirect effect using Hayes's PROCESS model [4] with [number] bootstrap iterations. The indirect effect was b = [value], SE = [value], 95% CI [[lower], [upper]]."
@@ -6725,6 +6734,11 @@ batch_history:
   source_paper: raithel_2024_product_recall_effectiveness_and_consumers_part
   slot_updates_count: 4
   novel_patterns_count: 4
+- batch_id: batch_2033_raithel_2024_product_recall_effectiveness_and_consumers_part_writeback
+  timestamp: 2026-09-29
+  source_paper: raithel_2024_product_recall_effectiveness_and_consumers_part
+  slot_updates_count: 2
+  novel_patterns_count: 2
 status_overrides:
   schema: '1.0'
   note: >-

@@ -5417,6 +5417,95 @@
       "overall_role": "partial_exemplar"
     },
     {
+      "id": "raithel2024",
+      "path": "v4/blueprints/raithel_2024_product_recall_effectiveness_and_consumers_part.md",
+      "paper_type": "quantitative (three-study: archival field study + two experiments)",
+      "outlet": "Journal of the Academy of Marketing Science",
+      "publication_status": "published",
+      "coverage": "complete",
+      "theoretical_problem_form": [
+        "underquantified-managerial-levers",
+        "standardized-artifact-as-theory-source"
+      ],
+      "narrative_dynamics": [
+        "model-migration-with-modification",
+        "single-moderator-multi-role",
+        "honest-null-inside-climax",
+        "reputation-as-signal-ambiguity",
+        "crossed-mediator-payoff"
+      ],
+      "retrieval_signals": [
+        "recall-effectiveness",
+        "standardized-announcement-levers",
+        "reputation-heuristic",
+        "hbm-migration",
+        "moderated-mediation",
+        "floodlight-jn-analysis"
+      ],
+      "section_learning": {
+        "introduction": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Open with an institutional scale contradiction — hundreds of standardized announcements versus 6% effectiveness — and cascade the consequences (deaths, litigation, trillion-dollar losses) inside the same paragraph, so the rhetorical question that closes the hook is already carrying quantified stakes instead of a separate stakes paragraph.",
+            "Turn 'little research' into a counted, positioned gap by a construct-role census (17 articles split by IV/moderator/DV roles), then enumerate three gaps with an explicit priority marker and pay each off in a numbered contribution block that embeds the headline magnitude (+11.4%), one explicit null, and the moderation directions."
+          ],
+          "caveat": [
+            "The theory lens is absent from the introduction (HBM appears only in the keywords); the mechanism is previewed in consumer vernacular. This is venue-legal at JAMS but means the front end promises a process the introduction itself cannot name — do not copy this deferral into venues that expect the lens up front.",
+            "The RQ matrix plus contribution block consumes roughly the second half of a short introduction; that budget works because the hook did the stake-setting, but it front-loads contribution over theory."
+          ]
+        },
+        "theory": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Run a model-modification setup: declare the adopted model's baseline structural assumption (HBM factors act in parallel), then justify each departure by a context-specific feature — the standardized announcement's mandatory fields relocate cues to action, the missing institutional factor motivates the reputation extension, and a meta-analytic weak-association result licenses selecting only two of six factors as mediators.",
+            "Derive asymmetric bilateral moderation with unequal load: fully derive the high-reputation side (halo buffering flips the same signal into severity), and zero out the low side with its own independent baseline-expectations reason rather than mirroring the high side."
+          ],
+          "caveat": [
+            "H6b (higher incident likelihood raising self-efficacy) is the why-chain's weakest step, carried by a single cross-domain correlational warrant — a counterintuitive link needs a second warrant or downgrading to exploratory.",
+            "The published text carries template-reuse drift (H6's tail clause still reads 'full (vs. partial) remedy'; the Figure 1 note mislabels H5b/H6b), and the adopted constructs come with no scope conditions — multi-hypothesis derivations need a hypothesis-clause consistency check."
+          ]
+        },
+        "methods": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "When the outcome itself is confidential, make its acquisition part of the design story: a FOIA request yields effectiveness data for 217 of 338 recalls, and the 121 non-disclosing firms become a first-stage sample-selection equation whose exclusion restrictions are each validated in text (strong correlation with disclosure, near-zero with the outcome).",
+            "Anticipate the second self-selection — firms choose remedy strategically — with its own control function, and embed both IMRs in the main results table so the endogeneity answer sits inside the climax rather than in an appendix."
+          ],
+          "caveat": [
+            "The moderator (reputation) is not positioned in the measurement section and surfaces only in Eq. (3); the two first-stage specifications are asymmetric without explanation; a marginal first-stage test (p = .063) is narrated as 'significantly associated'; and the merging of two survey-based controls with archival data is unexplained.",
+            "The FOIA route, CPSC standardization, and Fortune reputation measure are institution-specific; they are not portable to settings without a disclosure mandate."
+          ]
+        },
+        "results": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Stage the climax as hypothesis-by-hypothesis verdicts at a declared alpha, reporting the H2 null in the same voice and format as the supports (replicated directionally in Study 3), and read both interactions off floodlight/JN confidence bands so moderation becomes regions of significance rather than a single coefficient sign.",
+            "Pay the delegated process promise in a symmetric experiment block: first-stage mediation, mediator-by-moderator interactions, and the index of moderated mediation each get their own verdict, with floodlight panels for the mediators that reuse Study 1's visual grammar — the mechanism reveal is staged with the same machinery as the direct-effect climax."
+          ],
+          "caveat": [
+            "Verdict bookkeeping loosens where it matters most: H1 gets 'marginal support' (p = .078, d = 0.18), Study 3's H7b-for-self-efficacy leans on a 90% CI after the declared alpha = 5%, and Study 3's low-reputation self-efficacy indirect effect is significant and negative (CI excludes zero) yet is never reconciled with the monotone halo narrative; robustness is one sentence delegated to a web appendix and JN thresholds stay in z-units without translation back to the reputation scale.",
+            "Study 3's results and discussion disagree: the results section reports H6b failed, while the study discussion narrates both beliefs as confirmed channels into participation."
+          ]
+        },
+        "discussion": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Convert interaction coefficients into a reputational-profile segmentation — high, medium, and low reputation firms should manage recalls differently — then cash it out twice in the general discussion: a guidelines figure that makes the boundary condition the takeaway, and a quantified moderation payoff (the +11.4% average remedy effect more than doubles to 24.1% at one SD above the reputation mean) that shows the interaction is worth money, not just sign flips.",
+            "Recycle the opening's stakes honestly by turning the null into differentiated guidance (low-reputation firms rebuild trust in repair capability; high-reputation firms amplify severity and educate on usage risk), and close with limitations that name three concrete extension fronts (remedy menus, firm-issued press releases, industry splits) instead of generic hedges."
+          ],
+          "caveat": [
+            "The general discussion pools the crossed mediation into one confirmed-sounding sentence ('targeting beliefs about benefits and self-efficacy increases recall effectiveness') without registering that each lever ran through exactly one belief and the assignments crossed the theory's symmetric derivation; it also never returns to reputation's negative main effect from the climax, and the opening stakes (23,000 deaths, $1 trillion) are restated verbatim as re-stakes rather than transformed."
+          ]
+        }
+      },
+      "overall_role": "exemplar"
+    },
+    {
       "id": "ridge2013",
       "path": "v4/blueprints/ridge2013-pay-disparity.md",
       "paper_type": "quantitative",
