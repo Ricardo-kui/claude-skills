@@ -49,7 +49,7 @@ updated: 2026-08-13
 | R3 | 主假设检验 | 24 | 8, 11, 17, 23, 27, 34, 35, 36, 41, 48, 57, 58, 63, 64, 72, 77, 78, 80, 87, 89, 90, 91, 92, 97 |
 | R4 | 交互/调节/阈值 | 15 | 9, 14, 18, 32, 40, 43, 45, 47, 59, 65, 68, 73, 86, 93, 98 |
 | R5 | 经济显著性 | 7 | 3, 10, 13, 55, 84, 96, 99 |
-| R6 | 非显著/反转/Null | 10 | 4, 6, 30, 37, 42, 60, 74, 81, 83, 95 |
+| R6 | 非显著/反转/Null | 11 | 4, 6, 30, 37, 42, 60, 74, 81, 83, 95, 100 |
 | R7 | 稳健性与威胁处理 | 18 | 1, 2, 7, 12, 15, 25, 26, 29, 31, 39, 46, 49, 50, 51, 54, 61, 66, 85 |
 | R8 | 补充/事后/机制 | 11 | 5, 21, 33, 38, 44, 52, 62, 69, 75, 79, 82 |
 | R9 | 证据收束（可选） | 0 独立 | 27（R3+R9）、89（R9 副 R3/R4）；多研究变体4/5 亦用 |
@@ -138,6 +138,7 @@ updated: 2026-08-13
 | 84 | 四分位差幅度翻译+跨规格幅度基准排位 | 25th→75th percentile swing 翻译成 SD% + 跨规格排位 "lies between" + 缩水解释句 | vs 变体3 表格版 vs 变体13 联合翻译——本变体带跨规格幅度排序与保守性解读 | EMERGING | DesJardine, Li & Shi 2025 AMJ |
 | 96 | 低解释力文献基准防御+分析目的重定位 | 低 R² 可信度防御：报解释力区间→引同 DV 文献更低基准→重定位为 contribution 评估 | vs 变体10 ΔR² 作经济显著性证据——本变体防御解释力弱点 | EMERGING | Gulati et al. 2009 SMJ |
 | 99 | 双机制分臂量化 | 调节强化 U 形两臂时逐臂报幅度：机制 A 臂+机制 B 臂，多调节均值+括号分项并报 | vs R4 线性调节实用项与百分位对比变体——本变体两臂各算一次账，防只报最好调节 | EMERGING | Ridge, Aime & White 2013 SMJ |
+| 100 | 显著控制变量排比枚举+反直觉标记 | 开场计数句设定枚举总量预期，每项方向比较级+系数+p 值三要素一拍，counterintuitively 内嵌认领意外符号 | vs 变体95（反号主效应 hedge）——本变体是控制集显著项的系统性枚举，非焦点反转 | EMERGING | Raithel, Hock & Mafael 2024 JAMS |
 
 ### R6 非显著/反转/Null（10）
 
@@ -2060,6 +2061,44 @@ level of significance, indicating nearly full mediation.
 **适用**: CAR/事件研究、行为微变量等结构性低 R² 设计。
 
 <!-- wb:gulati_lavie_singh_2009_partnering_experience:low_r2_literature_benchmark_defense -->
+
+
+<!--
+pattern_id: r6_counterintuitive_controls_enumeration_raithel2024
+estimator: 估计器无关（回归族通用）
+source_papers: ["raithel_2024_JAMS"]
+confidence: medium（单篇，EMERGING）
+-->
+
+### 变体 100：R6 显著控制变量排比枚举 + 反直觉标记（raithel2024 型）
+
+> 论证角色：Evidence（把显著控制变量从"见 Table X"一句带过升级为序数排比枚举，逐项交付方向+系数+p；符号与直觉相悖的项用 counterintuitively 内嵌标记，主动认领意外符号而非沉默）
+
+**模板**:
+> "[N] control variables are significantly associated with [outcome]. First, the higher the [control_1], the higher the [outcome] (b_[control_1] = [value], p = [value]). Second, the longer [control_2 descriptor], the lower the [outcome] (b_[control_2] = [value], p = [value]). ... Sixth, counterintuitively, the more [control_k] [outcome context], the lower the [outcome] (b_[control_k] = [value], p = [value])."
+
+**节奏标记**: [计数开场] → [First/Second/... 序数排比逐项：方向→系数→p] → [counterintuitively 内嵌意外符号标记]
+
+**来源**: raithel_2024_product_recall_effectiveness_and_consumers_part (JAMS), Results Controls 段
+
+**原文锚定**:
+
+> "Sixth, counterintuitively, the more media attention a recall receives, the lower the recall effectiveness (b = -0.092, p = 0.014)."
+
+**关键特征**:
+
+- 开场计数句（"Seven control variables are significantly associated"）给枚举设定总量预期，读者可核对序数是否穷尽
+
+- 每项一拍三要素（方向比较级 + 系数 + p 值），比较级句式（the higher X, the higher Y）使方向不需要额外解读
+
+- 意外符号不隐藏也不辩解，counterintuitively 一词内嵌在枚举拍中显式认领——诚实边界资产（对照"选择性报告"反模式）
+
+**适用**: 控制变量多数显著且方向有实质含义、需要向审稿人证明控制集不是摆设的回归主检验之后；任何估计器族。
+
+**禁忌**: 显著性阈值必须与假设检验声明一致并贯彻到底（原文声明 α=5% 却把 p=.061/.095 计入 "significantly associated"——反模式，采用时修正）；counterintuitively 只用于符号确实与既有文献直觉相悖的项，不得滥用为免责；枚举项数须与开场计数一致。
+
+<!-- wb:raithel_2024_product_recall_effectiveness_and_consumers_part:r6_counterintuitive_controls_enumeration_raithel2024 -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
 
 ## 反模式
 

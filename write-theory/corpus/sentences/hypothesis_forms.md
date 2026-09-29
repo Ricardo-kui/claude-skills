@@ -589,6 +589,39 @@ sentence_position: hypothesis_sentence
 <!-- wb:liuliuluo2016:component_split_opposite_sign_ab_pair -->
 <!-- wb-meta: gap=Incompleteness status=EMERGING dim=Constructs tbt="调节效应型" -->
 
+
+<!--
+pattern_id: parenthetical_contrast_bare_hypothesis_form
+build_type: 跨类型（句式级）
+source_papers: ["raithel_2024_JAMS"]
+confidence: medium（单篇，EMERGING）
+sentence_position: hypothesis_sentence
+-->
+
+### Sentence: Parenthetical-Contrast Bare Hypothesis Assertion（Raithel_2024_JAMS 型）
+
+> 论证角色：Claim（以无引导词的裸方向断言呈现假设，括号对照一次性给出两类条件）
+
+**句位**: 假设陈述位（callout 假设框/加粗 H 标记内，非推导段正文）。
+
+**句式骨架**:
+```
+[Strong X] (vs. [weak X]) increases [outcome].
+```
+
+**变体**:
+- 裸断言形式：省略 "We hypothesize that"，由假设框/编号/加粗排版承担形式化语用功能
+- 中介版："[M1] and [M2] mediate the link between [X] and [outcome], such that [strong vs. weak X] raises [M] more (less)"
+
+**为什么有效**: (vs.) 把条件对压进主语位，假设句读作一条可检验的排序预测；省去引导词后排版标记本身区分假设与论证。
+**注意事项**: 裸断言依赖排版约定；无假设框/编号体例的期刊应保留 "We hypothesize that"。
+**反模式**: 在无形式标记的正文中使用裸断言，假设与论证句无法区分。
+
+原文锚定: "Full (vs. partial) remedy increases product recall effectiveness."（H1）
+
+<!-- wb:raithel_2024_product_recall_effectiveness_and_consumers_part:parenthetical_contrast_bare_hypothesis_form -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Mode tbt="调节效应型（moderated mediation）" -->
+
 ### 分离编号回指竞争对（Anaphoric Disjoint-Numbered Competing Pair，zajac_westphal_2004 型）
 
 <!--

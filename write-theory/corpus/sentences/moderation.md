@@ -649,6 +649,39 @@ but also depend upon the different types of [dimension B] [a firm/actor] faces.
 
 
 
+
+<!--
+pattern_id: enhancing_moderation_more_less_hypothesis_form
+build_type: 调节效应型（句式级）
+source_papers: ["raithel_2024_JAMS"]
+confidence: medium（单篇，EMERGING）
+sentence_position: hypothesis_sentence
+-->
+
+### Sentence: Enhancing-Moderation Hypothesis Form with more/less Contrast（Raithel_2024_JAMS 型）
+
+> 论证角色：Claim（机制推导完成后，用一句方向+条件侧+幅度排序齐备的假设句锁定交互预测）
+
+**句位**: 调节假设段 Wrap 位（双边推导收敛为交互假设处）。
+
+**句式骨架**:
+```
+[W] moderates the positive impact of [strong vs. weak X] on [outcome] positively, such that [strong vs. weak X] increases [outcome] more (less) for [high-W] (low-W) units.
+```
+
+**变体**:
+- "moderates the positive impact of [X] on [Y] positively, such that ..." — 方向在名词短语与副词处双标，冗余但零歧义
+- "... increases [Y] more (less) for [high-W] (low-W) units" — 括号成对压缩两侧幅度预测
+
+**为什么有效**: 交互方向（正向增强）、条件侧、幅度排序三要素一句齐备；审稿人无需回翻机制段即可转录为回归系数预期。
+**注意事项**: 预设两侧方向相同、仅幅度不同（enhancing）；反向或反转交互不适用。
+**反模式**: 只写 "[W] positively moderates the relationship"——方向有了，幅度与条件侧不可恢复。
+
+原文锚定: "Firm reputation moderates the positive impact of full (vs. partial) remedy on product recall effectiveness positively..."（H3）
+
+<!-- wb:raithel_2024_product_recall_effectiveness_and_consumers_part:enhancing_moderation_more_less_hypothesis_form -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Boundary tbt="调节效应型（moderated mediation）" -->
+
 ## 同源调节类比交接句（Analogous-Moderator Handoff，Liu_Liu_Luo_2016 型）
 
 > 论证角色：Framing——多调节变量网格中，把已论证调节变量的方向逻辑整体移交给同向新调节变量，避免逐条重推交互。

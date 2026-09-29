@@ -1369,7 +1369,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     01-progressive-coherence:
-      paper_count: 32
+      paper_count: 33
       papers:
         - Zorn_Shropshire_Martin_Combs_Ketchen_2017_SMJ (SMJ)
         - castellaneta_conti_kacperczyk2017 (SMJ)
@@ -1403,8 +1403,9 @@ evidence:
         - wowak2025 (MS)
         - wu2025 (SMJ)
         - fini_2017_social_valuation_across_multiple_audiences_the_int (Academy of Management Journal)
+        - raithel_2024_product_recall_effectiveness_and_consumers_part
       gap_distribution:
-        Incompleteness: 25
+        Incompleteness: 26
         Inadequacy: 7
         Incommensurability: 0
       status: ROBUST
@@ -1585,7 +1586,7 @@ evidence:
         Inadequacy: 6
         Incommensurability: 4
     findings-preview:
-      paper_count: 51
+      paper_count: 52
       papers:
         - castellaneta_conti_kacperczyk2017 (SMJ)
         - ceo_regulatory_focus_ijrm (IJRM)
@@ -1638,6 +1639,7 @@ evidence:
         - gulati2005-adaptation-vertical (Strategic Management Journal)
         - lu_et_al_2022_frenemies_corporate_advertising (Management Science)
         - giannetti_2022_corporate_lobbying_and_product_recalls_an_inv (JAMS)
+        - raithel_2024_product_recall_effectiveness_and_consumers_part
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: LOW
@@ -1648,7 +1650,7 @@ evidence:
         revise: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 29
+        Incompleteness: 30
         Inadequacy: 20
         Incommensurability: 2
     robustness-preview:
@@ -1698,7 +1700,7 @@ evidence:
     data-source-preview:
       paper_count: 1
       papers:
-      - giannetti_2022_corporate_lobbying_and_product_recalls_an_inv (JAMS)
+        - giannetti_2022_corporate_lobbying_and_product_recalls_an_inv (JAMS)
       status: EMERGING
       generativity: ADAPTABLE
       exclusivity: LOW
@@ -2059,11 +2061,12 @@ evidence:
         reject: 0
         common_revise_reasons: []
     14-nested-moderation-preview:
-      paper_count: 1
+      paper_count: 2
       papers:
         - chung_low_rust_2022_jams (JAMS)
+        - raithel_2024_product_recall_effectiveness_and_consumers_part
       gap_distribution:
-        Incompleteness: 1
+        Incompleteness: 2
         Inadequacy: 0
         Incommensurability: 0
       status: EMERGING
@@ -2565,6 +2568,7 @@ paper_index:
   liuliuluo2016: Incompleteness
   dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak: Incompleteness
   giannetti_2022_corporate_lobbying_and_product_recalls_an_inv: Incompleteness
+  raithel_2024_product_recall_effectiveness_and_consumers_part: Incompleteness
 
 # === AUTHORED ===
 critique:

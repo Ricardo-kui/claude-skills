@@ -64,7 +64,7 @@ updated: 2026-09-12
 
 | [自然实验-DiD](自然实验-DiD.md) | 自然实验-DiD | 26 | 2026-08-23 |
 
-| [非线性模型](非线性模型.md) | 非线性模型 | 23 | 2026-08-12；变体 23：M7 FE 不可行性→RE 替代双方程辩护——never-variant 单位零内变异逐方程豁免 FE 落到 RE（与变体 7 全零丢弃构成镜像解；RE/FE 选择理由补可行性谱系），giannetti_2022_corporate_lobbying_and_product_recalls_an_inv，EMERGING |
+| [非线性模型](非线性模型.md) | 非线性模型 | 24 | 2026-08-12；变体 23：M7 FE 不可行性→RE 替代双方程辩护——never-variant 单位零内变异逐方程豁免 FE 落到 RE（与变体 7 全零丢弃构成镜像解；RE/FE 选择理由补可行性谱系），giannetti_2022_corporate_lobbying_and_product_recalls_an_inv，EMERGING；变体 24：有界百分比 DV 分数模型三件套（fractional + 聚类稳健 + z 标准化护交互主效应 + AME）；区别于 lee_park_2024 fractional logit 变体（U 型 estimand 契约，无推断配套叙述）。来源 Raithel, Hock & Mafael 2024 JAMS |
 
 | [生存分析](生存分析.md) | 生存分析 | 25 | 2026-08-01；M5 变体 23：调节者独立性四重证据辩护——原始散点分布+触发事件溯源+LOWESS 时序方向+外部同型例证，收尾宣告使用许可（dewan2020，AMJ；首源 EMERGING；区别变体15 操作化层级/变体18 分样本；M7 变体 24：Cox PH 主模型半参数无分布论证+风险集时钟定义（进入/退出/样本最大时长锚定）+二元 DV 家族稳健双轨（dewan2020，AMJ；变体5 CPH-作稳健性的镜像方向；首源 EMERGING）；M3 变体 25：制度过程时间线图锚定二元 DV 时钟+手工检索两步验证协议（record-then-verify）+事件率披露与预测框架正当化（dewan2020，AMJ；首源 EMERGING）） |
 
@@ -102,13 +102,13 @@ updated: 2026-09-12
 
 | [推断二元结果](推断二元结果.md) | 推断二元结果 | 1 | 2026-08-05 |
 
-| [两阶段模型](两阶段模型.md) | 两阶段模型 | 15 | 2026-08-23；变体 15：主方程复用式 Heckman + 实证排除限制辩护链 | 选择修正型下游结果分析（选择方程=主假设方程） | 区别于变体 3/5/11（理论先验排除限制）与变体 10（主表确认型 + λ=0）：IMR 从主模型回收、排除限制用实证低相关 + 辅助回归复验、定位句框成 selection-adjusted mediation | EMERGING | Liu, Liu & Luo 2016 JM |
+| [两阶段模型](两阶段模型.md) | 两阶段模型 | 15 | 2026-08-23；变体 15：主方程复用式 Heckman + 实证排除限制辩护链 | 选择修正型下游结果分析（选择方程=主假设方程） | 区别于变体 3/5/11（理论先验排除限制）与变体 10（主表确认型 + λ=0）：IMR 从主模型回收、排除限制用实证低相关 + 辅助回归复验、定位句框成 selection-adjusted mediation | EMERGING | Liu, Liu & Luo 2016 JM；变体 16：双重自选择控制函数——报告选择+策略选择各设第一阶段 probit，双 IMR 并入同一结果方程，'common practice'引文收口；区别于变体15（单选择主方程复用式）与变体3/5/11（理论先验排除限制）。来源 Raithel, Hock & Mafael 2024 JAMS |
 
 | [VARX-PVAR](VARX-PVAR.md) | VARX-PVAR | 8 | 2026-07-15 |
 
 | [结构需求-state-space](结构需求-state-space.md) | 结构需求-state-space | 6 | 2026-08-05 |
 
-| **合计** | — | 350 | |
+| **合计** | — | 352 | |
 
 
 

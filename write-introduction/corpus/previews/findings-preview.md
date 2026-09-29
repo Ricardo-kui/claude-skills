@@ -359,6 +359,22 @@ P5-P6 的下半段功能：向读者预告实证结果。这是 Introduction 中
 **禁忌**: 贡献声明中的每个量化幅度必须能被 Results 精确兑现；调节幅度区间需注明是低/高水平组间差；不要让编号超过 3 条
 
 
+
+**第二来源 + 子特征：贡献块内嵌显式 null 与文献锚定开场（raithel_2024_product_recall_effectiveness_and_consumers_part 型，JAMS, P5–P7）**
+
+**原文锚定**:
+> "We find that recall effectiveness improves, on average, by 11.4% if firms offer full instead of partial remedy (all else equal). ... By extending Hall and Johnson-Hall (2021), our results show that incident likelihood alone does not have an impact on recall effectiveness for consumer products."
+
+**子特征**（相对 moon2026 的增量）:
+- 每条编号贡献以文献锚定开场（"prior research suggests..."）再落量化发现，先立 common ground 再给头条幅度
+- 贡献块内嵌显式 null（"incident likelihood alone does not have an impact"）并把 null 定位为对既有研究的延伸裁决（"By extending [prior work]"）
+- 机制证据用消费者心理白话呈现（"make consumers feel like they would benefit more..."），不增加术语负荷
+
+**验证状态**: 由 EMERGING（单篇 moon2026）升级为 **EMERGING（双篇交叉验证，JM→JAMS 跨刊）**；待第三篇升 VERIFIED。
+
+<!-- wb:raithel_2024_product_recall_effectiveness_and_consumers_part:intro_fp_numbered_contribution_quantified_null_raithel2024 -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
 ### 变体 T：三方裁决+null即策略缺位型（fang2025 型） EMERGING（1 篇范文）
 
 **模板**:

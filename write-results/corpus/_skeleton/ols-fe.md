@@ -6,7 +6,7 @@
 > **锚点** = `corpus/<文件名>#变体-<变体号>`（脚本自定义片段，指向 `### 变体 <N>` 标题；`--verify` 断言该标题存在）。
 > 状态列：`verbatim` = 逐字底本（与源卡片逐字一致，不得改写/拼接/补全）；`模板` = 填槽骨架（不可当逐字底本引用）。
 
-条目：verbatim 92 条 / 模板 93 条。
+条目：verbatim 92 条 / 模板 94 条。
 
 ## Verbatim 底本
 
@@ -202,3 +202,4 @@
 | `ols-fe#T94` | R2 | gulati_lavie_singh_2009_partnering_experience | The reported results (Models [1]–[K]) reveal that the control variables produced mostly insignificant effects on [outcome]. This is consistent with some prior research that found no support for the effects of [control 1] ([citation]), [control 2] ([citation]), and [control 3] ([citations]) on [outcome]. | `corpus/OLS-FE.md#变体-94` | 模板 |
 | `ols-fe#T95` | R6 | gulati_lavie_singh_2009_partnering_experience | The main effect of [non-focal predictor] was [direction] and significant (β = [value], p < [threshold]). This result may suggest that [alternative-theory reading]. | `corpus/OLS-FE.md#变体-95` | 模板 |
 | `ols-fe#T96` | R5 | gulati_lavie_singh_2009_partnering_experience | The explanatory power of our [outcome] models ranged between R² = [low] percent and [high] percent. This result is typical in studies employing [DV family], especially when testing [interactions and subtle focal variables]. For example, [benchmark study] report[s] R² = [value] percent [in a comparable setting]. The objective of the analysis in these cases is to evaluate the contribution of [focal construct] to [outcome] rather than to explain the overall variance in [outcome]. | `corpus/OLS-FE.md#变体-96` | 模板 |
+| `ols-fe#T100` | R6 | raithel_2024_product_recall_effectiveness_and_consumers_part | [N] control variables are significantly associated with [outcome]. First, the higher the [control_1], the higher the [outcome] (b_[control_1] = [value], p = [value]). Second, the longer [control_2 descriptor], the lower the [outcome] (b_[control_2] = [value], p = [value]). ... Sixth, counterintuitively, the more [control_k] [outcome context], the lower the [outcome] (b_[control_k] = [value], p = [value]). | `corpus/OLS-FE.md#变体-100` | 模板 |

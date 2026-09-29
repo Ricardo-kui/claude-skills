@@ -82,3 +82,25 @@ updated: 2026-07-08
 | 仅报告第一阶段显著，不解释为何满足排除限制 | 审稿人质疑外生性 | 提供三段式理论论证 |
 | 同伴只按主行业定义 | 同伴可能是直接竞争对手，直接影响结果 | 按多 segments 定义并加权，扩大同伴池 |
 | 第二阶段不报告 inverse Mills ratio / rho | 无法判断选择偏误大小 | 报告 rho 及其显著性 |
+
+
+### 选项 3：逐条四步辩护 + 双向相关实证校验（raithel2024 型）
+
+[功能标签]: M8 — 逐条排除限制的效度论证，理论机制 + 两个方向的相关性证据并列呈现
+
+[骨架]: "We identified [k] potential exclusion restrictions that have a bearing on [the selection process] but are unlikely to have a direct impact on [the outcome]. We use (1) [restriction_1]. [Institutional mechanism] should increase [the actor's] motivation and ability to [comply/report]... [Decision-makers on the outcome side], on the other hand, are less likely to be aware of [the restriction information]. The correlation of this exclusion restriction with the [selection indicator] is [r_high] (p=[p1]). However, [restatement of why no direct link] should not directly correlate with [the outcome]. The correlation of the exclusion restriction with [the outcome] is only [r_low] (p=[p2])."
+
+[结构要点]: 每条限制四步——(a) 命名限制；(b) 机制论证它推动选择；(c) 机制论证它不触及结果（信息不可得/与当前决策无关）；(d) 报告与选择指标的高相关 + 与结果的零相关，两个数字都出现在正文
+
+[原文锚点]: "The correlation of this exclusion restriction with the sample indicator is 0.478 (p=0.000). However, this ability and motivation to restore and share more recent data should not directly correlate with recall effectiveness. The correlation of the exclusion restriction with recall effectiveness is only 0.052 (p=0.451)."
+
+[可迁移性]: 高 — 所有 Heckman/CEM/选择模型的排除限制辩护通用
+
+[范式排他性]: 高 — 只服务于含排除限制的识别设计
+
+[设计变体]: 相关性证据可换成辅助回归复验（Liu, Liu & Luo 2016 变体15 路径）；制度性限制（批次号/处理顺序）用"决策者不可见"论证替代相关数字
+
+[区别于既有 heckman-peer-prevalence 模板]: 既有模板论证"同行 prevalence 为何有效"这一单条限制的理论依据；本模板是逐条限制的通用四步辩护结构，且把双向相关性数字写入正文作为实证校验
+
+<!-- wb:raithel_2024_product_recall_effectiveness_and_consumers_part:m8_exclusion_restriction_empirical_validity_pair -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->

@@ -148,3 +148,25 @@ updated: 2026-09-23
 
 <!-- wb:giannetti_2022_corporate_lobbying_and_product_recalls_an_inv:methods_m3_event_dedup_root_cause_rule -->
 <!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
+
+### 调查补测控制变量构造（M6：专用小样本调查）
+
+[功能标签]: M6 — 档案数据缺口的控制变量用独立小样本调查补测时的程序性辩护
+
+[骨架]: "[N] [country]-based, '[panel_provider] approved participants' (approval rate >[threshold], <[max_studies] studies completed) participated in the study (M_age = [age], [pct]% female). To avoid fatigue, each participant only rated [k] different [objects]. Each [object] was rated by at least [m] participants. We asked participants [the control question]. The answer choices were '[option_1],' '[option_2],' and '[option_3].' [Because sentence linking control to outcome]."
+
+[结构要点]: 四个可信度锚点一次给全——样本量与人口构成、质量控制门槛（approval rate / 完成研究数上限）、疲劳管理（每人评 k 个）、每个对象的最低评分人数下限；随后立即接 because 句把控制变量与 DV 的预期方向挂钩
+
+[原文锚点]: "To avoid fatigue, each participant only rated 15 different products. Each product was rated by at least 100 participants."
+
+[可迁移性]: 中 — 只在档案数据无法直接观测控制变量、需专门补测时使用
+
+[范式排他性]: 中 — 服务于档案+调查混合设计，纯实验或纯档案设计不需要
+
+[设计变体]: 构念为主变量时此模板扩为完整测量节；作控制变量时压缩为一段并保留 because 句
+
+[区别于既有 variable-operationalization 条目]: 既有条目覆盖构念→测量→来源→方向句式与档案字段构造；本模板补"为控制变量专门发起小样本调查"的程序性辩护细节（疲劳管理+覆盖下限+质量门槛）
+
+<!-- wb:raithel_2024_product_recall_effectiveness_and_consumers_part:m6_control_purpose_built_mini_survey -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->

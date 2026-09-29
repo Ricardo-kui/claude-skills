@@ -34,7 +34,7 @@ updated: 2026-08-03
 | [过渡衔接短语](transitions.md) | 段落内部的逻辑推进标记 | M1–M10 任意多句段落 |
 | [样本漏斗节奏](funnel-rhythm.md) | 数字叙事的句法序列 | M2；起始总体补充：样本框三理由枚举辩护（数据可得性/响应率/研究缺口），westphal_bednar2005，VERIFIED；响应率工程链（反差定位→编号步骤→对标收口），carpenterwestphal2001，VERIFIED；微模板：抽样框威胁三理由反驳——制度层（规则变化）+分布层（威胁签名在数据中不存在）+分析层（controls+robustness）（dewan2020，AMJ；westphal_bednar2005 样本框三理由枚举的镜像抗辩型；首源 EMERGING；微模板：流失 t 检验诚实报告链——比较检验→显著差异如实披露→缺失机制归因→稳健性预告（dewan2020，AMJ；首源 EMERGING；与 robustness-foreshadowing 样本选择类配合）） |
 | [识别策略预告](identification-foreshadowing.md) | 在 Methods 中预告 Results 的诊断检验 | M8 |
-| [变量操作化句式](variable-operationalization.md) | 构念→测量→来源→方向的表述方式 | M3, M4, M5；micro-templates/INDEX.md variable-operationalization 行：slots 补 M6；注记新增'档案字段测量构造'小节（tie-breaking 规则 + 基准组声明 + 类别 FE 实质 because），来源 Liu, Liu & Luo 2016 JM；滞后存量构造（M4）——carryover→FDL 存量（衰减参数+求和式+规模化）+零值占比外部基准校验，giannetti_2022_corporate_lobbying_and_product_recalls_an_inv，EMERGING；事件计数去重规则（M3）——同单位同根因字段同日计一次的去重规则模板，档案计数 DV 口径可复现，giannetti_2022_corporate_lobbying_and_product_recalls_an_inv，EMERGING |
+| [变量操作化句式](variable-operationalization.md) | 构念→测量→来源→方向的表述方式 | M3, M4, M5；micro-templates/INDEX.md variable-operationalization 行：slots 补 M6；注记新增'档案字段测量构造'小节（tie-breaking 规则 + 基准组声明 + 类别 FE 实质 because），来源 Liu, Liu & Luo 2016 JM；滞后存量构造（M4）——carryover→FDL 存量（衰减参数+求和式+规模化）+零值占比外部基准校验，giannetti_2022_corporate_lobbying_and_product_recalls_an_inv，EMERGING；事件计数去重规则（M3）——同单位同根因字段同日计一次的去重规则模板，档案计数 DV 口径可复现，giannetti_2022_corporate_lobbying_and_product_recalls_an_inv，EMERGING；variable-operationalization 新增调查补测控制变量构造（M6）——质量门槛+疲劳管理+每对象覆盖下限+because 收口；区别于档案字段测量构造（M6，档案侧构造）。来源 Raithel, Hock & Mafael 2024 JAMS |
 | [稳健性检验预告](robustness-foreshadowing.md) | Methods 中预告 Results 的稳健性检验 | M8, M10；样本选择补充：问卷非应答 K-S+Heckman 双重防御链，westphal_bednar2005，VERIFIED；非应答 K-S+双层代表性检验（IV/控制变量分别代表性声明+限定语收口），carpenterwestphal2001，VERIFIED |
 | [模型选择比较](model-selection-comparison.md) | 分布/连接函数/规格比较时的叙事单元 | M7 |
 | [识别策略外生性](identification-exogeneity.md) | IV 排他性约束、自然实验外生性来源、控制函数识别变量的理论论证 | M4, M7, M8 |
@@ -44,7 +44,7 @@ updated: 2026-08-03
 | [CMB 预防论证](common-method-bias-prevention.md) | 问卷数据 CMB 预防的设计+统计论证 | M8；变体 D：多源评价者分离+Kappa一致性链（五拍，换源互换收口），carpenterwestphal2001，VERIFIED；变体 E：单波截面 CMB 退路链——预试+Harman+验证子样本 congruence 审计（gulati_2007 ASQ；无时间分离退路+随机子样本档案基准比对 >.90；区别于变体 A/B 时间分离、变体 C 标记变量、变体 D 多源 Kappa），VERIFIED |
 | [高管信心/人格特质操作化](executive-confidence-operationalization.md) | 期权 moneyness、媒体描述、显著性—薪酬复合代理、双代理收敛、继任者对照与构念形成窗—结果观察窗分离 | M2, M4, M8 |
 | [四分位距经济显著性](interquartile-economic-significance.md) | 用自变量 IQR（25th–75th）移动解释回归系数的经济显著性 | M7, M8, M10, Results |
-| [Heckman 同行 Prevalence 排他性限制](heckman-peer-prevalence-exclusion.md) | Heckman 选择模型中同行 prevalence 作为排除限制的理论论证与跨 segments 加权 | M7, M8 |
+| [Heckman 同行 Prevalence 排他性限制](heckman-peer-prevalence-exclusion.md) | Heckman 选择模型中同行 prevalence 作为排除限制的理论论证与跨 segments 加权 | M7, M8；排他性限制论证新增选项3：逐条四步辩护链（命名→选择机制→结果不可达机制→双向相关数字进正文）；区别于选项1三段式（纯理论论证）。来源 Raithel, Hock & Mafael 2024 JAMS |
 | [替代 DV Falsification](alternative-dv-falsification.md) | 用行为者领域外的替代因变量进行 falsification 检验并讨论替代/转换 | M8, M10 |
 
 ## 使用协议

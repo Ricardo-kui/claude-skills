@@ -460,6 +460,32 @@ P2-P3 的功能：承认文献已有实质进展，但精确指出被遗漏的�
 
 <!-- wb:fini_2017_social_valuation_across_multiple_audiences_the_int:litturn-mechanism-coinage-definitional-apposition -->
 
+
+### 变体 R：构念角色计数普查型（raithel2024 型）
+
+> 论证角色：Framing（用穷尽文献普查按 DV 构念在实证模型中的功能角色分流，为缺口枚举供给"小而非零"的合法性）
+
+**模板**:
+> "A literature review on [outcome] only yielded [N] quantitative articles (see [appendix]). One stream ([n1] articles) uses [outcome] as an independent variable. A second stream ([n2] articles) uses [outcome] as a moderator. A third stream ([n3] articles), most relevant to our research, uses [outcome] as a dependent variable. Based on this literature review, we identify [k] significant gaps that limit our understanding of [managerial question], and thus require particular attention."
+
+**来源**: raithel_2024_product_recall_effectiveness_and_consumers_part (JAMS), P2
+
+**原文锚定**:
+> "A literature review on product recall effectiveness only yielded 17 quantitative articles (see Web Appendix A). ... A third stream (13 articles), most relevant to our research, uses recall effectiveness as a dependent variable."
+
+**关键特征**:
+- 分类轴是 DV 构念在实证模型中的功能角色（自变量/调节/因变量），不是方法族（对比变体 K）也不是主题双流
+- 每条流给出精确计数（3/1/13，总 17），以穷尽普查建立"文献小而可审计"的稀缺感
+- 第三流以 "most relevant to our research" 显式承接论文定位，为下一段三缺口枚举供货
+- 以 "(see Web Appendix A)" 指向可复核的附录审计，把普查断言变成可验证声明
+
+**适用**: DV 构念本身稀缺且已有文献按构念角色分裂的研究；Incompleteness × Mechanism/Boundary；JM/JMR/JAMS 等 Progressive Coherence 主流期刊。
+
+**禁忌**: 计数必须真实并给复核路径（附录/检索式），不可虚报；流分类轴不得与变体 K 的方法流混用；预告的缺口数必须与 Tension 段枚举一一对应。
+
+<!-- wb:raithel_2024_product_recall_effectiveness_and_consumers_part:intro_lt_construct_role_census_raithel2024 -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
 ## 组装规则
 
 ### 默认配对（对角线，能量匹配）

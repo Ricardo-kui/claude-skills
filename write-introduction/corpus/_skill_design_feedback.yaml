@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
-  last_updated: '2026-09-28'
-  observations_processed: 116
+  last_updated: '2026-09-29'
+  observations_processed: 119
   description: Evidence ledger for design defects inferred from Introduction exemplar distillation.
 defects:
   incompleteness-embedded-opposing-claims-vs-incommensurability:
@@ -4894,6 +4894,120 @@ defects:
     lifecycle: open
     first_seen: '2026-09-28'
     last_seen: '2026-09-28'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  intro-lit-turn-construct-role-census-missing:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: 01-progressive-coherence 现有变体 A–Q 中，流分类轴只有方法族（变体 K 三方法流分类）与主题双流，没有按 DV 构念功能角色（IV/调节/DV）计数分流的普查型变体
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/literature-turns/01-progressive-coherence.md
+    diagnosis: 范文用穷尽文献普查（17 篇）按构念角色计数分流（3 IV / 1 调节 / 13 DV）并显式预告缺口数，为 Incompleteness 缺口枚举供给可审计的稀缺合法性；corpus 无对应变体，属语料缺口而非规则缺陷
+    proposed_change:
+      action: append_variant
+      summary: 01-progressive-coherence 新增变体 R 构念角色计数普查型（raithel2024 型），writeback plan 项 intro_lt_construct_role_census_raithel2024
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: raithel_2024_product_recall_effectiveness_and_consumers_part
+      journal: Journal of the Academy of Marketing Science
+      evidence_anchor: A literature review on product recall effectiveness only yielded 17 quantitative articles (see Web
+        Appendix A). One stream (three articles) uses recall effectiveness as an independent variable.
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Journal of the Academy of Marketing Science
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Journal of the Academy of Marketing Science
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-29'
+    last_seen: '2026-09-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  intro-findings-preview-numbered-contribution-quantified-single-source:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: findings-preview 变体 S（编号贡献内嵌量化发现型，moon2026 型）为 EMERGING 单篇来源（仅 JM moon2026）
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/previews/findings-preview.md
+    diagnosis: raithel2024 (JAMS) 三段编号贡献各嵌头条幅度（full vs partial remedy +11.4%）、显式 null（incident likelihood alone 无影响）与白话机制证据，构成跨刊第二来源，可升级变体
+      S 验证状态
+    proposed_change:
+      action: extend_variant
+      summary: 变体 S 以第二来源+子特征格式补 raithel2024，升级 EMERGING（双篇跨刊），writeback plan 项 intro_fp_numbered_contribution_quantified_null_raithel2024
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: raithel_2024_product_recall_effectiveness_and_consumers_part
+      journal: Journal of the Academy of Marketing Science
+      evidence_anchor: We find that recall effectiveness improves, on average, by 11.4% if firms offer full instead of partial
+        remedy (all else equal).
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Journal of the Academy of Marketing Science
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Journal of the Academy of Marketing Science
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-29'
+    last_seen: '2026-09-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  intro-transition-nested-moderation-preview-single-source:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: transitions/14-nested-moderation-preview（含变体 B 研究问题串型）为 EMERGING 单篇来源（仅 chung_low_rust_2022_jams）
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/transitions/14-nested-moderation-preview.md
+    diagnosis: raithel2024 用四问编号 RQ 矩阵预览调节结构：同一调节器（firm reputation）分别作用于主效应层（Q2）与心理过程层（Q4），嵌套轴为理论层而非交互阶数，构成第二来源
+    proposed_change:
+      action: extend_variant
+      summary: 变体 B 以第二来源+子特征格式补 raithel2024（调节双探针 RQ 矩阵），writeback plan 项 intro_tr_nested_moderation_rq_matrix_raithel2024
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: raithel_2024_product_recall_effectiveness_and_consumers_part
+      journal: Journal of the Academy of Marketing Science
+      evidence_anchor: (2) How does firm reputation moderate these effects? (4) How does firm reputation moderate these processes?
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Journal of the Academy of Marketing Science
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Journal of the Academy of Marketing Science
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-29'
+    last_seen: '2026-09-29'
     auto_action:
       eligibility: optional_variant_only
       reason: Corpus assets do not alter core routing or story gates.

@@ -69,6 +69,22 @@ source: Distilled from Chung, Low & Rust (2022, JAMS)
 
 ---
 
+
+**第二来源 + 子特征：调节双探针 RQ 矩阵（raithel_2024_product_recall_effectiveness_and_consumers_part 型，JAMS, P4）**
+
+**原文锚定**:
+> "(1) How do remedy and incident likelihood influence recall effectiveness? (2) How does firm reputation moderate these effects? (3) What are the underlying psychological processes? (4) How does firm reputation moderate these processes?"
+
+**子特征**（相对 chung_low_rust_2022 变体 A/B 的增量）:
+- 嵌套轴不同：同一调节器（firm reputation）被问两次，分别作用于主效应层（Q2）与心理过程层（Q4），构成 {直接效应, 过程} × {直接, 被调节} 的对称 2×2 RQ 矩阵
+- 编号问句列表独立成段，位于 purpose 句之后、贡献段之前，与三条编号贡献一一对应
+- 不含 three-way 交互也可用：嵌套发生在理论层（效应 vs 过程），不在交互阶数
+
+**验证状态**: canonical 由 EMERGING（单篇 chung_low_rust_2022_jams）升级为 **EMERGING（双篇交叉验证，均 JAMS）**；待第三篇升 VERIFIED。
+
+<!-- wb:raithel_2024_product_recall_effectiveness_and_consumers_part:intro_tr_nested_moderation_rq_matrix_raithel2024 -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
 ### 变体 C：表格/图预览型
 
 **模板**:

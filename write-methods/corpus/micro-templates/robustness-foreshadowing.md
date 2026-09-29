@@ -106,3 +106,25 @@ we address this issue in supplemental analyses using [test].
 - 与 westphal_bednar2005 的 K-S+Heckman 双统计链互补：本链无 Heckman 修正，靠第二层代表性声明加厚
 
 <!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:m2_nonresponse_dual_representativeness -->
+
+
+### 档案披露选择漏斗 + 节内前向指引（Sample Selection）
+
+[功能标签]: M2/M8 衔接 — 样本漏斗的最后一步本身就是识别问题的来源时，漏斗与修正方案显式缝合
+
+[骨架]: "We created an initial data set of N=[N0] [records] from [period]. [The key outcome data] are not publicly available. [Access mechanism] requires [agencies/parties] to disclose certain records in response to a written request. We filed [a request] and received [outcome data] for a subset of [N1] [events], featuring [N2] different [units] (see [appendix]). The remaining [N3] [units] claimed [confidentiality provision], which could lead to a potential sample selection bias. The methodology section below describes how we address it."
+
+[结构要点]: 漏斗每步带 N；缺失机制（非公开→申请→部分获得）成为选择过程的来源说明；末句 "The methodology section below describes how we address it" 把修正承诺钉在 Methods 内部而非推给 Results
+
+[原文锚点]: "The remaining 121 firms claimed Section 6(a) of the CPSA, marking information as confidential, which could lead to a potential sample selection bias. The methodology section below describes how we address it."
+
+[可迁移性]: 高 — 一切"数据可得性制造选择"的档案设计通用
+
+[范式排他性]: 中 — 需要漏斗末步与选择机制重合的设计
+
+[设计变体]: 问卷非应答场景用 K-S+代表性检验防御链（westphal_bednar2005 既有路径）；本模板适用于档案披露选择场景
+
+[区别于既有 robustness-foreshadowing 条目]: 既有条目是"Methods 中预告 Results 的稳健性检验"；本模板是节内前向指引（Methods 前段→Methods 后段）且漏斗末步显式命名选择机制
+
+<!-- wb:raithel_2024_product_recall_effectiveness_and_consumers_part:m2_funnel_with_selection_problem_foreshadow -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->

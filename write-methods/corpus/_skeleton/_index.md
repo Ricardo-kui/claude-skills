@@ -9,7 +9,7 @@
 |---|---|---|---|
 | [`panel-ols`](panel-ols.md) | `corpus/面板数据-OLS.md` | 95 | 主模型是 OLS/FE/动态面板/SUR，需写设置合法性、样本漏斗、操作化与规格叙事 |
 | [`did`](did.md) | `corpus/自然实验-DiD.md` | 26 | 因果设计是 DiD/准实验，需识别策略论证、预处理卫生或外生性辩护 |
-| [`nonlinear`](nonlinear.md) | `corpus/非线性模型.md` | 23 | DV 是计数/二元/有序/受限，需分布诊断、估计器选择或交互项规格 |
+| [`nonlinear`](nonlinear.md) | `corpus/非线性模型.md` | 24 | DV 是计数/二元/有序/受限，需分布诊断、估计器选择或交互项规格 |
 | [`survival`](survival.md) | `corpus/生存分析.md` | 25 | DV 是时长/生存时间，需 hazard 操作化、分布选择或复发事件处理 |
 | [`sem`](sem.md) | `corpus/SEM.md` | 6 | SEM/调节中介方法段（联合估计、交互共线性、时序方向诊断） |
 | [`experiments`](experiments.md) | `corpus/实验.md` | 6 | 数据来自实验，需写被试→材料→操纵→测量标准段 |
@@ -28,11 +28,11 @@
 | [`stacked-diffusion-logit`](stacked-diffusion-logit.md) | `corpus/堆叠扩散Logit.md` | 0 | 扩散/采纳 Logit 结构模型（当前无验证变体） |
 | [`multi-actor`](multi-actor.md) | `corpus/多行为者设计.md` | 3 | 多行为者/多层级设计，需聚合辩护或 dyad 拆分 |
 | [`binary-outcome-inference`](binary-outcome-inference.md) | `corpus/推断二元结果.md` | 1 | 二元结果的因果推断（当前少量变体） |
-| [`two-stage`](two-stage.md) | `corpus/两阶段模型.md` | 15 | 样本选择/可观测性选择，需 Heckman 或控制函数叙事 |
+| [`two-stage`](two-stage.md) | `corpus/两阶段模型.md` | 16 | 样本选择/可观测性选择，需 Heckman 或控制函数叙事 |
 | [`varx-pvar`](varx-pvar.md) | `corpus/VARX-PVAR.md` | 8 | 向量自回归/脉冲响应，需滞后阶/GIRF/FEVD 规格 |
 | [`state-space`](state-space.md) | `corpus/结构需求-state-space.md` | 6 | 结构需求或状态空间模型，需拟合/反事实方法规格 |
 
-合计：24 设计类型 / 350 编号变体 / verbatim 355 条 / 模板 351 条。
+合计：24 设计类型 / 352 编号变体 / verbatim 355 条 / 模板 353 条。
 另有 5 条不编号变体（`### 变体：`，fang2025 POM）与 5 条 EXTEND 子变体（`#### 变体：`）——已抽取进各二级清单但**不计入**上面的 342（口径与 validator/INDEX/速查表一致）。
 
 ## 待补录

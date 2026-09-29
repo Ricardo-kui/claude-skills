@@ -7,9 +7,9 @@ meta:
   schema_version: "1.1.0"
   registry_type: estimator-slot-skeleton
   last_updated: 2026-09-13b
-  last_batch_id: batch_2031_giannetti_2022_corporate_lobbying_and_product_recalls_an_inv_writeback
-  batches_processed: 41
-  total_papers_indexed: 72
+  last_batch_id: batch_2032_raithel_2024_product_recall_effectiveness_and_consumers_part_writeback
+  batches_processed: 42
+  total_papers_indexed: 73
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
     granularity: "per estimator（对应 corpus/[结果类型].md 文件）"
@@ -867,13 +867,17 @@ estimators:
         description: 非显著 / 混合 / 意外发现
         skeleton_variants:
           - id: r6_null_as_strategy_adjudication_fang2025
+            status: EMERGING
+          - id: r6_counterintuitive_controls_enumeration_raithel2024
             skeleton: "Column [IV] of Table [X] shows that [event] did not impact [outcome] (β [value], p > [threshold]). ... This finding corroborates the theoretical insight we drew from Column [II]. ... The evidence thus supports the [strategy_A], while supporting neither the [strategy_B] nor the [strategy_C]."
-            paper_count: 1
+            notes: "\ncorpus OLS-FE.md 100：追加变体 100：显著控制变量排比枚举 + 反直觉标记 raithel2024 EMERGING——First/Second/... 序数排比逐项报方向+系数+p，符号与直觉相悖的项内嵌 counterintuitively 显式标记\n区别于控制变量 null 汇总变体（本变体管显著项）"
             status: VERIFIED
+            paper_count: 2
             subfield_distribution:
               om: 1
             sources:
               - fang_et_al_2025_rival_recall_ad_spend
+              - raithel_2024_product_recall_effectiveness_and_consumers_part
             corpus_path: corpus/OLS-FE.md
           - id: r6_chow_honest_downgrade_after_pattern_support
             skeleton: "This pattern of findings is consistent with Hypothesis [H], although a Chow test comparing the effect sizes of the [treatment] across Models [N] and [M] reveals that the difference is not significant (p = [value]). [Null-subsample sentence — when [moderator] is [absent], the coefficient for [treatment_A] is [insignificant] (b = [value], p = [value]), while [treatment_B] does not [move] (b = [value], p = [value]).]"
@@ -1624,15 +1628,19 @@ estimators:
       R5:
         skeleton_variants:
           - id: r5_probability_cost_activity_value_benchmark
-            skeleton: "[Predicted probability change between theoretically meaningful X values]. [Multiply the probability difference by a transparent external average event-cost benchmark]. [Compare implied expected-risk magnitude with the average value of one focal activity/deal]. [Explicit caveat that this illustrates scale rather than realized firm-specific loss]."
-            skeleton_level: paragraph
-            paper_count: 1
             status: VERIFIED
+          - id: r5_focal_only_fit_decomposition_raithel2024
+            skeleton: "[Predicted probability change between theoretically meaningful X values]. [Multiply the probability difference by a transparent external average event-cost benchmark]. [Compare implied expected-risk magnitude with the average value of one focal activity/deal]. [Explicit caveat that this illustrates scale rather than realized firm-specific loss]."
+            notes: "Expected cost is a magnitude illustration, not an observed causal loss; source and assumptions must be disclosed."
+            status: VERIFIED
+            skeleton_level: paragraph
+            paper_count: 2
             verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
             subfield_distribution:
               strategy: 1
             sources:
               - Bendig_Hensellek_Schulte_2024_ETP
+              - raithel_2024_product_recall_effectiveness_and_consumers_part
             transferability: medium
             paradigm_exclusivity: Probability outcomes with defensible external cost and activity-value benchmarks
             rhythm_tags:
@@ -1640,7 +1648,6 @@ estimators:
               - economic_significance
               - cost_benchmark
               - caveat
-            notes: "Expected cost is a magnitude illustration, not an observed causal loss; source and assumptions must be disclosed."
             corpus_path: corpus/Logit-Probit-Ordered-Probit.md
           - id: r5_robustness_gee_heckman_endogeneity
             skeleton: "[Robustness section opens by stating the limitation of the primary test (lack of controls for CAR size) and introduces GEE regression as a supplemental check]. [Explicit caveat that the regression does not directly test the relative hypotheses but examines direct relationships with magnitude]. [Endogeneity addressed via Heckman correction, with first-stage significance reported and selection instrument insignificance interpreted as evidence that endogeneity is not a significant problem]. [All robustness results summarized narratively rather than in full tables, with key coefficients and significance levels noted].\n"
@@ -1659,11 +1666,15 @@ estimators:
       R7:
         skeleton_variants:
           - id: r7_threshold_def_columns
+            sources:
+              - mao_dong_lee_2022_msom
+            status: VERIFIED
+          - id: r7_control_function_selection_warrant_raithel2024
             skeleton: "We present our results of Equation ([N]) in Table ([X]). Columns ([1]), ([2]), and ([3]) present results in which we use [the first 1/2], [the first 1/3], and [the first 1/4] of [the relevant cycle], respectively, to identify [the threshold-defined condition]. Our results are largely consistent in all three columns: [the coefficients of focal cases] keep the same sign and significance pattern under all three definitions."
             notes: Untabulated IV results cannot carry decisive identification; significance attenuation must remain visible.
-            skeleton_level: section
-            paper_count: 2
             status: VERIFIED
+            skeleton_level: section
+            paper_count: 3
             verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
             subfield_distribution:
               om: 1
@@ -1671,6 +1682,7 @@ estimators:
             sources:
               - Bendig_Hensellek_Schulte_2024_ETP
               - mao_dong_lee_2022_msom
+              - raithel_2024_product_recall_effectiveness_and_consumers_part
             transferability: high
             paradigm_exclusivity: Curvilinear panel models; instrument diagnostics still required
             rhythm_tags:
@@ -1956,15 +1968,19 @@ estimators:
         description: ""
         skeleton_variants:
           - id: r4_curvilinear_moderation_geometric_probability_translation
-            skeleton: "[Report interaction between W and the squared X term]. [Navigate to predicted-probability figure]. [State whether high W shifts the curve, changes steepness, or moves the turning point]. [Give vertices/meaningful probability levels under high and low W]. [Translate the geometric change into the altered mechanism or risk interpretation]. [Support judgment]."
-            skeleton_level: paragraph
-            paper_count: 1
             status: VERIFIED
+          - id: r4_floodlight_jn_region_significance_raithel2024
+            skeleton: "[Report interaction between W and the squared X term]. [Navigate to predicted-probability figure]. [State whether high W shifts the curve, changes steepness, or moves the turning point]. [Give vertices/meaningful probability levels under high and low W]. [Translate the geometric change into the altered mechanism or risk interpretation]. [Support judgment]."
+            notes: "Do not reduce curve moderation to a significant squared interaction; state exactly what changes geometrically. Single-IV geometry only; for dual-mode shift vs steepen under one W, use r4_dual_mode_shift_vs_steepen_figure_adjudication."
+            status: VERIFIED
+            skeleton_level: paragraph
+            paper_count: 2
             verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
             subfield_distribution:
               strategy: 1
             sources:
               - Bendig_Hensellek_Schulte_2024_ETP
+              - raithel_2024_product_recall_effectiveness_and_consumers_part
             transferability: high
             paradigm_exclusivity: Moderated U/inverted-U in binary probability models
             rhythm_tags:
@@ -1973,7 +1989,6 @@ estimators:
               - predicted_probability
               - mechanism_interpretation
               - support
-            notes: "Do not reduce curve moderation to a significant squared interaction; state exactly what changes geometrically. Single-IV geometry only; for dual-mode shift vs steepen under one W, use r4_dual_mode_shift_vs_steepen_figure_adjudication."
             corpus_path: corpus/Logit-Probit-Ordered-Probit.md
           - id: r4_dual_mode_shift_vs_steepen_figure_adjudication
             skeleton: "[Restate H_shift for IV_a and H_steepen for IV_b under the same W]. [Report both squared-by-W interactions as ingredients]. [Explicitly state that matching interaction signs do not adjudicate geometry]. [Figure for IV_a: name vertical shift with high/low-W vertices]. [Figure for IV_b: name steepen/flatten with pace-to-zero or curvature contrast]. [One-sentence close: same contingency, different geometries across modes]. [Optional dual probability-to-cost benchmarks with external average event cost]."
@@ -4014,31 +4029,27 @@ estimators:
             notes: 不同经验类型的衰退速度差异（快起快衰 vs 慢起持久）与编码化/默会知识理论解释绑定，衰减归因于注意力随时间弱化——post hoc 结果回接理论构念而非停在描述（corpus 变体33）
             corpus_path: corpus/计数模型.md
           - id: r8_index_partial_moderated_mediation_sign_derivation
-            skeleton: We further check the significance of the indirect effect ([Preacher & Hayes, 2004]) of [IV] on [DV] via [lower mediator] by re-estimating the equations simultaneously via generalized structural equation modeling. As indirect effects are products of regression coefficients, we bootstrap confidence intervals ([N] replications)." "As our model is a second-stage moderated mediation model, we further explore the mechanisms behind the [two] significant moderating effects using the index of partial moderated mediation ([Hayes & Rockwood, 2020]). ... we expect a [positive] index of partial moderated mediation for [moderator a] (multiplication of a [negative] effect of [IV] on [mediator], and a [negative] interaction effect of [moderator a] with [mediator] on [DV]). Conversely, ... we expect a [negative] index of partial moderated mediation for [moderator b] (multiplication of a [negative] effect ... and a [positive] interaction effect ...). Consistent with our theorizing, the index of
-              partial moderated mediation for [moderator a] is [positive], meaning that the [positive] indirect effect of [IV] on [DV] is [strengthened] for [units] with [moderator a] which ... benefit more from [increased mediator]. ... In both cases, there is evidence of significant moderated mediation (p < [0.05], bootstrapped confidence intervals exclude zero) providing support for the theorized mechanisms. We note that the direct effect of [IV] on [DV] is also significant, confirming partial mediation.
-            notes: ''
+            skeleton: "We further check the significance of the indirect effect ([Preacher & Hayes, 2004]) of [IV] on [DV] via [lower mediator] by re-estimating the equations simultaneously via generalized structural equation modeling. As indirect effects are products of regression coefficients, we bootstrap confidence intervals ([N] replications).\" \"As our model is a second-stage moderated mediation model, we further explore the mechanisms behind the [two] significant moderating effects using the index of partial moderated mediation ([Hayes & Rockwood, 2020]). ... we expect a [positive] index of partial moderated mediation for [moderator a] (multiplication of a [negative] effect of [IV] on [mediator], and a [negative] interaction effect of [moderator a] with [mediator] on [DV]). Conversely, ... we expect a [negative] index of partial moderated mediation for [moderator b] (multiplication of a [negative] effect ... and a [positive] interaction effect ...). Consistent with our theorizing, the index of partial moderated mediation for [moderator a] is [positive], meaning that the [positive] indirect effect of [IV] on [DV] is [strengthened] for [units] with [moderator a] which ... benefit more from [increased mediator]. ... In both cases, there is evidence of significant moderated mediation (p < [0.05], bootstrapped confidence intervals exclude zero) providing support for the theorized mechanisms. We note that the direct effect of [IV] on [DV] is also significant, confirming partial mediation."
+            notes: ""
             status: EMERGING
             paper_count: 1
             subfield_distribution:
               marketing: 1
-            sources:
-              giannetti_2022_corporate_lobbying_and_product_recalls_an_inv
-            transferability: ''
-            paradigm_exclusivity: ''
+            sources: giannetti_2022_corporate_lobbying_and_product_recalls_an_inv
+            transferability: ""
+            paradigm_exclusivity: ""
             rhythm_tags: []
             corpus_path: corpus/SEM-moderated-mediation.md
           - id: r8_mediation_requirements_first_column_mapping
-            skeleton: 'According to [Zhao et al. (2010)], testing for mediation requires that: (1) the independent variable, i.e., [IV], is correlated with the mediator, i.e., [mediator]; (2) [mediator] is correlated with the dependent variable, i.e., [DV], when [IV] is controlled for. Testing for moderated mediation further requires that (3) the interactions of [mediator] with the proposed moderators are correlated with [DV] when [IV] is controlled for." "The first requirement is satisfied by [the significant effect of IV on mediator] reported in [Column 1, Table X]. The second requirement is satisfied by [the significant effect of mediator on DV] reported in [Column 4, Table X], supporting [H1b]. The third requirement is satisfied by [the significant interactions] reported in [Column 4, Table X], supporting [H2b] and [H4b]. [H3b] is not supported as [the corresponding interaction] is not significant in [Column 4, Table X]. As [IV] is correlated with [DV] when controlling for [mediator] (and its interactions),
-              we infer partial mediation, suggesting that other mediators may be at work.'
-            notes: ''
+            skeleton: "According to [Zhao et al. (2010)], testing for mediation requires that: (1) the independent variable, i.e., [IV], is correlated with the mediator, i.e., [mediator]; (2) [mediator] is correlated with the dependent variable, i.e., [DV], when [IV] is controlled for. Testing for moderated mediation further requires that (3) the interactions of [mediator] with the proposed moderators are correlated with [DV] when [IV] is controlled for.\" \"The first requirement is satisfied by [the significant effect of IV on mediator] reported in [Column 1, Table X]. The second requirement is satisfied by [the significant effect of mediator on DV] reported in [Column 4, Table X], supporting [H1b]. The third requirement is satisfied by [the significant interactions] reported in [Column 4, Table X], supporting [H2b] and [H4b]. [H3b] is not supported as [the corresponding interaction] is not significant in [Column 4, Table X]. As [IV] is correlated with [DV] when controlling for [mediator] (and its interactions), we infer partial mediation, suggesting that other mediators may be at work."
+            notes: ""
             status: EMERGING
             paper_count: 1
             subfield_distribution:
               marketing: 1
-            sources:
-              giannetti_2022_corporate_lobbying_and_product_recalls_an_inv
-            transferability: ''
-            paradigm_exclusivity: ''
+            sources: giannetti_2022_corporate_lobbying_and_product_recalls_an_inv
+            transferability: ""
+            paradigm_exclusivity: ""
             rhythm_tags: []
             corpus_path: corpus/SEM-moderated-mediation.md
       R2:
@@ -4075,16 +4086,15 @@ estimators:
             notes: 三步架构声明 + 基线步显式降级为非假设的复现基线；过离散→NB、序列相关检验→修正估计、Hausman→FE，每步估计器选择由具名检验触发（corpus 变体29）
             corpus_path: corpus/计数模型.md
           - id: r2_staged_mediation_two_model_navigation
-            skeleton: Below, we first estimate the model of [mediator] (see Eq. [1] above), following which we estimate the model of [count DV] (see Eq. [2] above) to test [H1a–HNa]. Combining the results from the two models allows us to test the mediation and moderated mediation hypotheses, i.e., [H1b–HNb].
-            notes: ''
+            skeleton: "Below, we first estimate the model of [mediator] (see Eq. [1] above), following which we estimate the model of [count DV] (see Eq. [2] above) to test [H1a–HNa]. Combining the results from the two models allows us to test the mediation and moderated mediation hypotheses, i.e., [H1b–HNb]."
+            notes: ""
             status: EMERGING
             paper_count: 1
             subfield_distribution:
               marketing: 1
-            sources:
-              giannetti_2022_corporate_lobbying_and_product_recalls_an_inv
-            transferability: ''
-            paradigm_exclusivity: ''
+            sources: giannetti_2022_corporate_lobbying_and_product_recalls_an_inv
+            transferability: ""
+            paradigm_exclusivity: ""
             rhythm_tags: []
             corpus_path: corpus/SEM-moderated-mediation.md
       R1:
@@ -6710,6 +6720,11 @@ batch_history:
   source_paper: giannetti_2022_corporate_lobbying_and_product_recalls_an_inv
   slot_updates_count: 2
   novel_patterns_count: 2
+- batch_id: batch_2032_raithel_2024_product_recall_effectiveness_and_consumers_part_writeback
+  timestamp: 2026-09-29
+  source_paper: raithel_2024_product_recall_effectiveness_and_consumers_part
+  slot_updates_count: 4
+  novel_patterns_count: 4
 status_overrides:
   schema: '1.0'
   note: >-

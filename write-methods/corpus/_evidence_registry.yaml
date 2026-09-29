@@ -413,6 +413,25 @@ evidence:
         - M7
       story_fidelity: section_variant
       note: 2026-09-29 整篇蒸馏 writeback 补登记 micro-templates：m4_fdl_carryover_stock_zero_benchmark（variable-operationalization.md，M4 存量构造——carryover 理由+衰减参数 δ 求和定义式+规模化基准三件套+高零占比外部基准校验）；m3_event_dedup_root_cause_rule（variable-operationalization.md，M3 档案事件计数去重——同单位+同根因字段+同时间戳计一次，先例引用背书）。design_types 对应已登记变体：非线性模型 变体23、SEM 变体5/6。micro-templates 文件层无独立 registry 条目结构，按邻近 by_source_paper.micro_templates 格式登记（沿用 2026-08-28/08-29 because-clauses 先例）。
+    raithel_2024_product_recall_effectiveness_and_consumers_part:
+      journal: Journal of the Academy of Marketing Science
+      title: "Product recall effectiveness and consumers' participation in corrective actions"
+      status: EMERGING
+      verification_basis: first_distill_ladder_default
+      design_types:
+        - 两阶段模型
+        - 非线性模型
+      micro_templates:
+        - m8_exclusion_restriction_empirical_validity_pair
+        - m6_control_purpose_built_mini_survey
+        - m2_funnel_with_selection_problem_foreshadow
+      slots_covered:
+        - M2
+        - M6
+        - M7
+        - M8
+      story_fidelity: section_variant
+      note: 2026-09-29 整篇蒸馏 writeback 补登记 micro-templates：m8_exclusion_restriction_empirical_validity_pair（heckman-peer-prevalence-exclusion.md 选项3，M8 排除限制实证校验对——同伴流行度工具与下游结果相关不显著 + 辅助回归复验双证据）；m6_control_purpose_built_mini_survey（variable-operationalization.md，M6 控制变量目的性补测——档案缺口构念用小样本调查定向补测并报告相关）；m2_funnel_with_selection_problem_foreshadow（robustness-foreshadowing.md，M2 漏斗式样本叙述与自选择问题预告缝合）。design_types 对应已登记变体：两阶段模型 m8_dual_selection_control_functions、非线性模型 m7_bounded_percentage_fractional_model_stack。micro-templates 文件层无独立 registry 条目结构，按邻近 by_source_paper.micro_templates 格式登记（沿用 2026-08-28/08-29 because-clauses 先例）。
   giannetti_2022_corporate_lobbying_and_product_recalls_an_inv:
     journal: Journal of the Academy of Marketing Science
     title: "Corporate lobbying and product recalls: an investigation in the U.S. medical device industry"
@@ -525,7 +544,7 @@ evidence:
           - "SMJ 编辑与 R1#2、JAMS R1 主问题#2：用被处理影响的变量（LnADV）与处理交互做机制检验构成 bad-controls；机制主张须由独立测度承接，post-treatment 交互只能降级为 only-when 条件性证据（moon2026 Table 6 三段式为正面模板）"
           - "SMJ R1#8、R2#7 与 JAMS AE、R1（两轮四评审+编辑）一致要求 heterogeneity-robust 估计量（Sun-Abraham/Callaway-Sant'Anna/stacked/BJS）作主分析、TWFE 降级为基准，且调节效应也须在 robust 设计内重估；仅附录图示无系数表被判不足（moon2026 对照：stacked DiD 进主表 Model 7）"
     非线性模型:
-      paper_count: 18
+      paper_count: 20
       papers:
         - lee_park_2024_smj (SMJ)
         - bendig_hensellek_schulte_2024_etp (ETP)
@@ -545,6 +564,7 @@ evidence:
         - vidal_mitchell_2015_orsc
         - zhou2017
         - giannetti_2022_corporate_lobbying_and_product_recalls_an_inv (JAMS)
+        - raithel_2024_product_recall_effectiveness_and_consumers_part
       status: VERIFIED
       slots_covered:
         - M1
@@ -957,7 +977,7 @@ evidence:
         - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int (ASQ)
       status: VERIFIED
     两阶段模型:
-      paper_count: 13
+      paper_count: 15
       papers:
         - chen_ganesan_liu_2009_jm (JM)
         - chung_low_rust_2022_jams (JAMS)
@@ -972,6 +992,7 @@ evidence:
         - liu_shankar2015
         - pupovac_astvansh_carrillat_legoux_2026_pom
         - liuliuluo2016
+        - raithel_2024_product_recall_effectiveness_and_consumers_part
       status: ROBUST
       slots_covered:
         - M7

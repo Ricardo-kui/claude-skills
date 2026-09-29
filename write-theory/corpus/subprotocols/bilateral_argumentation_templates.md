@@ -668,6 +668,40 @@ heterogeneous mix of [variant A] and [variant B]—wedding [benefit 1] with
 
 <!-- wb:carpenter_and_westphal_2001_strategic_context_of_external_ne:theory_complementary_portfolio_dual_knowledge_mix -->
 
+
+<!--
+pattern_id: asymmetric_bilateral_moderation_baseline_zero
+build_type: 调节效应型
+source_papers: ["raithel_2024_JAMS"]
+confidence: medium（单篇，EMERGING）
+-->
+
+## Pattern: Asymmetric Bilateral Moderation — Full Derivation Plus Baseline-Zero Counterpart（Raithel_2024_JAMS 型）
+
+> 论证角色：Reasoning（调节假设双边论证的单侧加权变体：高条件侧完整机制推导，低条件侧以基线期望归零收束）
+
+**适用场景**: 调节效应的高低两侧不是对称镜像——高侧有独立的多步机制链（缓冲+信号反转），低侧的预测是"差异消失"而非"反向出现"。
+**排列模式**: Differential-Impact Announcement → High-W Full Derivation（2 mechanism steps）→ Null-Side Baseline Argument → Interaction Hypothesis
+**范文来源**: Raithel, Hock, and Mafael (2024), *Journal of the Academy of Marketing Science*
+
+**骨架**:
+```
+[Announce] For [high-W units], we expect a differential impact of [strong X] versus [weak X] on [outcome].
+[High-W step 1] [Audiences] associate [high W] with [positive quality prior] ([citation]); the prior acts as [a halo-like buffer] during [adverse event], leading audiences to downgrade the severity appraisal—especially under [weak X].
+[High-W step 2] However, if [strong X] is chosen, it signals that [the failure is worse than the prior implied] ([citation]); audiences then have stronger reason to [comply/act].
+[Null side] On the contrary, the same differential pattern is not expected for [low-W units]: audiences already take the event seriously given [lower baseline expectations toward low-W units] ([citation]), so they respond [strongly] irrespective of [X condition].
+[Hypothesis] [W] moderates the positive impact of [strong vs. weak X] on [outcome] positively, such that [strong vs. weak X] increases [outcome] more (less) for [high-W] (low-W) units.
+```
+
+**为什么有效**: 双边不对称时两侧都写到——高侧用"缓冲+信号反转"两步给出差异来源，低侧只用"基线期望已包含该事件"一步归零；比强行对称省一半篇幅，交互系数的符号与幅度排序都被锁定在推导里，C20 双边完整性仍达标。
+**注意事项**:
+- 低侧"差异消失"必须给独立理由（基线期望、信息冗余），不能只说"低 W 时没有这种效应"
+- 假设句中 more (less) 的括号幅度排序须与两侧推导负载对应
+**反模式**: 双侧复用同一机制只换强度措辞（伪双边）；只推导高侧、低侧完全沉默。
+
+<!-- wb:raithel_2024_product_recall_effectiveness_and_consumers_part:asymmetric_bilateral_moderation_baseline_zero -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Boundary tbt="调节效应型（moderated mediation）" -->
+
 ## 条件化 carve-out：cue/activation moderator（硬约束 #11 例外）
 
 > **适用范围**：硬约束 #11（"调节论证双边完整（high AND low）"）**不机械适用**于 cue-triggered / trait-activation moderation。当 moderator 是一个**特质相关 cue**、且 **low（cue 缺失）条件即特质默认表现型、已在主效应中作为基线论证过**时，双边覆盖可由以下两条满足，**不强制写冗余的 low 态段落**：

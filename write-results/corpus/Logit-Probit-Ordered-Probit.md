@@ -1027,6 +1027,122 @@ we believe that further analysis of [the puzzle] may prove fruitful.
 
 <!-- wb:gulati2005-adaptation-vertical:switching_reg_first_stage_intermediate_navigation -->
 
+
+<!--
+pattern_id: r4_floodlight_jn_region_significance_raithel2024
+estimator: fractional probit（Logit/Probit 族适用；连续调节变量）
+source_papers: ["raithel_2024_JAMS"]
+confidence: medium（单篇，EMERGING）
+-->
+
+### 变体 AU：R4 floodlight/JN 区域显著性调节报告（raithel2024 型）
+
+> 论证角色：Evidence（连续×连续交互在非线性模型中不做 ±1 SD simple slopes，改用 floodlight 全区域显著性与 JN 阈值点交付调节证据）
+
+**模板**:
+> "The interaction of [predictor] and (z-standardized) [moderator] is [relatively strong / moderately strong] and [positive/negative] (b_[predictor x moderator] = [value], p = [value]). Figure [X] (Panel [A]) visualizes the marginal effects of [predictor] on [outcome] with a floodlight analysis ([method citation]): [one-sentence plain-language statement of the conditional pattern]. We identify two Johnson-Neyman (JN) points. At [low-region descriptor] [moderator] (< [threshold]), the relationship between [predictor] and [outcome] becomes significantly [negative/positive]. At [high-region descriptor] [moderator] (> [threshold]), the relationship is significantly [positive/negative]. Overall, we find support for Hypothesis [N]."
+
+**节奏标记**: [交互系数+强度限定词] → [floodlight 可视化指认] → [条件模式白话句] → [双 JN 阈值区域] → [支持判决]
+
+**来源**: raithel_2024_product_recall_effectiveness_and_consumers_part (JAMS), Results H3/H4 段
+
+**原文锚定**:
+
+> "Figure 2 (Panel A) visualizes the marginal effects of Remedy on recall effectiveness with a floodlight analysis (Spiller et al., 2013): ... We identify two Johnson-Neyman (JN) points."
+
+**关键特征**:
+
+- 强度限定词分级（"relatively strong" vs "moderately strong"）在系数拍先给读者条件强弱预期，再进图形与阈值细节
+
+- JN 阈值落在标准化调节变量的具体数值上（< -2.5 / > -0.1；< -0.09 / > 1.8），区域显著性可复核而不只是"高处显著"
+
+- 双侧区域都报告：低区显著为负 + 高区显著为正，不隐藏反向区域；每个交互一个 Panel，双假设共用一图
+
+- 方法引用内嵌（Spiller et al., 2013），白话条件句紧跟冒号——图形可读性由文字兜底
+
+**适用**: 连续 DV 受限（分数/比例结果）+ 连续调节变量的交互报告；probit/logit 族边际效应图 + JN 区域是 Logit/Probit 高风险项（R5 缺边际效应）的直接补救；营销/管理实证 JAMS/JM/AMJ 均适用。
+
+**禁忌**: JN 阈值必须与图一致且给具体数值；不得只报显著区不报反向区；简单斜率 ±1 SD 表述与本变体互斥——用了 floodlight 就不要再退回 ±1 SD 措辞。
+
+<!-- wb:raithel_2024_product_recall_effectiveness_and_consumers_part:r4_floodlight_jn_region_significance_raithel2024 -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
+
+<!--
+pattern_id: r5_focal_only_fit_decomposition_raithel2024
+estimator: fractional probit（pseudo-R²/平方相关对 Logit/Probit 族通用）
+source_papers: ["raithel_2024_JAMS"]
+confidence: medium（单篇，EMERGING）
+-->
+
+### 变体 AV：R5 模型拟合 + 焦点协变量分解报告（raithel2024 型）
+
+> 论证角色：Evidence（在表格导航与假设检验之间插入模型拟合拍，并把全模型拟合分解为"仅焦点协变量"的增量贡献，预先化解控制变量驱动的质疑）
+
+**模板**:
+> "The model is significant (χ²([df]) = [value], p < [threshold]) and has a good fit (Pseudo-R² = [value], squared correlation of observed and predicted [outcome] is [value]). The focal covariates (including interaction) produce a Pseudo-R² of [value] and the squared correlation of observed and predicted [outcome] is [value]."
+
+**节奏标记**: [全模型显著性+拟合] → [仅焦点协变量拟合分解]
+
+**来源**: raithel_2024_product_recall_effectiveness_and_consumers_part (JAMS), Results Table 1 后段
+
+**原文锚定**:
+
+> "The model is significant (χ²(5) = 81.00, p < 0.001) and has a good fit (Pseudo-R² = 0.135, squared correlation of observed and predicted Recall Effectiveness is 0.454)."
+
+**关键特征**:
+
+- 拟合拍报三件套：χ² 显著性、pseudo-R²、观测与预测值的平方相关（后者是受限 DV 的预测力直读量）
+
+- 第二拍只算焦点协变量（含交互项），把"控制变量贡献了多少拟合"变成透明数字（0.135 vs 0.024），而不是让读者自己拆表
+
+- 主表 AME 列与系数并排（Coeff. | SE | p | AME），边际效应在表内交付——满足 Logit/Probit 强制槽位 R5"缺边际效应即高风险"的底线
+
+**适用**: 受限/非线性 DV（分数、比例、概率结果）的回归主表之后；控制变量多、需要预回应"结果是否全靠控制"的设定。
+
+**禁忌**: 焦点协变量分解必须真的只含焦点项并显式说明；AME 列不能替代文字幅度拍（原文未在正文翻译 AME——属原文薄弱处，采用本变体时应在正文补一句 AME 幅度白话）；χ² 自由度与模型设定一致。
+
+<!-- wb:raithel_2024_product_recall_effectiveness_and_consumers_part:r5_focal_only_fit_decomposition_raithel2024 -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
+
+<!--
+pattern_id: r7_control_function_selection_warrant_raithel2024
+estimator: fractional probit + control function（对含内生处理选择的非线性主模型通用）
+source_papers: ["raithel_2024_JAMS"]
+confidence: medium（单篇，EMERGING；warrant 逻辑非常规，采用须显式论证）
+-->
+
+### 变体 AW：R7 控制函数纳入理由报告（raithel2024 型）
+
+> 论证角色：Validity（回应"为什么主表里挂了两个不显著的 IMR 项"——把纠正项的不显著与结果变量的成对相关并报，论证纳入而非删除的正当性）
+
+**模板**:
+> "Although the control functions ([Inverse Mills Ratio]), which correct for [selection threat] and [endogenous choice threat], do not have significant coefficients in the fully specified model (p > [threshold]), their pairwise correlation with the focal outcome is significant ([p statement], [appendix reference]). This finding implies that [selection/endogeneity] biases are likely and warrant the inclusion of the control functions into the model."
+
+**节奏标记**: [纠正项身份+两个威胁命名] → [全模型不显著让步] → [成对相关显著佐证] → [纳入裁决]
+
+**来源**: raithel_2024_product_recall_effectiveness_and_consumers_part (JAMS), Results Control Functions 段
+
+**原文锚定**:
+
+> "Although the control functions (Inverse Mills Ratio), which correct for the potential sample self-selection and endogenous remedy choice, do not have significant coefficients in the fully specified model (p > 0.10), their pairwise correlation with the focal outcome is significant."
+
+**关键特征**:
+
+- 一句话命名纠正项纠正的两个具体威胁（样本自选择 + 内生的 remedy 选择），不是泛写"endogeneity"
+
+- 让步结构（Although ... do not have significant ...）直面"纠正项不显著=无内生性"的直觉反驳，再用成对相关证据反转为纳入依据
+
+- 控制函数内嵌主表末行而非单列第一阶段表——区别于 Heckman 两阶段表格导航变体，第二阶段一表交付
+
+**适用**: 主模型为非线性（fractional probit 等）且处理选择内生、纠正项作为控制函数进入主表的设定；审稿人质疑"为何保留不显著 IMR"时的标准回应骨架。
+
+**禁忌**: 本 warrant 逻辑与"IMR 不显著即无选择偏误"的常规读法相反，采用时必须同时报两条诊断（全模型系数 + 与结果的成对相关）并显式说明为何成对相关构成纳入证据，不得当样板句复用；系数不显著时不得写成"纠正后结论不变"以外的强化表述。
+
+<!-- wb:raithel_2024_product_recall_effectiveness_and_consumers_part:r7_control_function_selection_warrant_raithel2024 -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
 ## 曲线结果写作反模式
 
 - **正式 U 检验后置**：在主结果只凭二次项宣称支持、再把端点斜率与转折点区间埋进 robustness，会让核心结论先于核心证据。正式形状检验应紧邻假设判断。

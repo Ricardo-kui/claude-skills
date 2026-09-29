@@ -1036,6 +1036,41 @@ Therefore, H[k]: ...
 
 <!-- wb:gulati_2007_tent_poles:normative_conjunctive_program -->
 
+
+<!--
+pattern_id: model_modification_announcement_setup
+build_type: 跨类型（透镜迁移类 setup；本篇为调节效应型 moderated mediation）
+source_papers: ["raithel_2024_JAMS"]
+confidence: medium（单篇，EMERGING）
+-->
+
+## Pattern: Model-Modification Announcement for Context Adaptation（Raithel_2024_JAMS 型）
+
+> 论证角色：Framing（在既有模型与新情境之间宣告结构性偏离，为后续全部分支假设提供框架授权）
+
+**适用场景**: 把一个成熟模型迁移到新情境时，模型的原有结构假设（如多因素并行作用）与新情境的因果逻辑冲突，需要显式宣告修改与扩展，再逐条落地为分支假设。
+**排列模式**: Baseline Assumption Declaration → Deviation Announcement → Enumerated Modifications + Extension → Element Repositioning → Figure Lock
+**范文来源**: Raithel, Hock, and Mafael (2024), *Journal of the Academy of Marketing Science*
+
+**骨架**:
+```
+[Baseline] The original [model] assumes that its factors act in parallel.
+[Deviation] To account for the specifics of [new context], the authors depart from that baseline and propose [n] modifications and one extension.
+[Modification 1 — element repositioning] First, [context artifact] serves as the initial [model element], with a one-sentence rationale anchored in the model's own literature. This allows theorizing how [context-specific drivers], both featured in [standardized institutional artifact], serve as [model element] and influence [outcome].
+[Modification 2 — institutional extension] Second, the original [model] does not account for [institutional characteristic]. However, [that characteristic] often operates as [a processing heuristic] in judgments about [actors/events] ([citation]). The authors extend the model with [moderator] and show how it moderates both the direct paths and the mediating processes.
+[Modification 3 — mediation layer] Third, [mediator 1] and [mediator 2] are proposed to carry the impact of [X1 / X2] on [outcome].
+[Lock] A summary sentence restates: modify + extend [model] to capture [context requirements]; conceptual framework figure follows.
+```
+
+**为什么有效**: 先亮出模型的原始结构假设再宣告偏离，读者能精确定位改了什么、没改什么；"n modifications + one extension" 的枚举让每个后续假设段都有明确的框架授权，调节与中介假设不显得临时追加；把模型元素重定位到情境工件（公告=激活线索）使新预测成为模型内部推论而非外挂。
+**注意事项**:
+- 偏离宣告必须逐条对应模型原文可核对的内容（原文假设了什么、未解释什么），不能虚设稻草人
+- 每条 modification 需要一句"情境为何要求此修改"的理由，不能只宣告
+**反模式**: 只改元素标签不改模型结构（重定位缺失）；修改清单与后续假设段无法一一对应。
+
+<!-- wb:raithel_2024_product_recall_effectiveness_and_consumers_part:model_modification_announcement_setup -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Mode tbt="调节效应型（moderated mediation）" -->
+
 ### 模式 E：同果近邻构念反号辨析型（westphal_bednar2005 型）
 
 **模板**:
