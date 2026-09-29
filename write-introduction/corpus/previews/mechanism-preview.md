@@ -854,6 +854,33 @@ P5-P6 的上半段功能：在理论框架建立之后，用 2-3 句话向读者
 <!-- wb:mao_dong_lee_2022_msom:intro_preview_question_triad_formal_model -->
 <!-- wb-meta: gap=Incompleteness status=EMERGING -->
 
+
+### 变体 AH：被调节的中介分段预告型（giannetti2022 型）
+
+> 论证角色：Claim（两段式预告被调节的中介模型：模型段交付方向+中介+调节承诺，透镜段逐个给出调节效价的理论依据）
+
+**模板**:
+> "We theorize that [IV] will have a [direction] effect on [DV] and that this effect will be mediated by [mediator]. Further, we propose a moderated mediation model where the [direction] indirect effect of [IV] on [DV] via [mediator] is moderated by (a) [moderator a] and (b) [moderator b]. Applying [theory lens] ([citation]), we propose that [moderator a] will [logic]..., strengthening/weakening the [direction] effect of [mediator] on [DV]. Conversely, [moderator b] will [logic]..., weakening the [direction] effect..."
+
+**来源**: giannetti_2022_corporate_lobbying_and_product_recalls_an_inv (JAMS), P4-P5
+
+**原文锚定**:
+> "We theorize that corporate lobbying will have a positive effect on a firm's product recalls and that this effect will be mediated by the firm's lower emphasis on product safety."
+> "Applying the upper echelons theory (Hambrick & Mason, 1984) that CEOs' functional backgrounds shape their firms cognitions and strategies"
+
+**关键特征**:
+- 本文件首个被调节的中介（moderated mediation）预告变体：主效应方向+中介命名+间接效应调节三件套一次交付
+- 显式标注调节作用于哪条路径——"moderators moderate the path between the mediator... and the dependent variable"并附方法锚引用（second-stage 标注），杜绝"调节加在哪儿"的歧义
+- 调节变量按对立效价动词成对预告（strengthening / weakening the negative effect），读者在 Introduction 内即知每个调节的方向承诺
+- 模型层与透镜层分段：先给模型结构承诺，再以透镜逐调节给理论依据（一个调节用透镜、一个用行业证据时在段内分别锚定）
+
+**适用**: Incompleteness × Mechanism 且带第二阶段调节的中介设计；JAMS/JM 风格叙事式预告（不编号假设）；需让审稿人在 Introduction 内校准机制方向与边界条件承诺时
+
+**禁忌**: 方向承诺必须与 Theory 部分假设方向严格一致（预告即契约）；不加效应量、不列假设编号；调节路径标注须与估计模型一致（second-stage vs first-stage 不可混写）
+
+<!-- wb:giannetti_2022_corporate_lobbying_and_product_recalls_an_inv:intro_mechprev_moderated_mediation -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
 ## 组装规则
 
 ### 必须配对

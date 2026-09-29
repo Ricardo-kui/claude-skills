@@ -205,12 +205,12 @@ P2-P3 的功能：连接多个文献流，展示它们共享一个盲区——�
 
 ### 变体 F：策略连续统地图→双学科顺序批判→交叉沉默（chen2009 型）
 
-**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+**验证状态**: EMERGING（双篇来源；仅作 `section_variant`）
 
 **模板**:
 > "Previous literature has classified [crisis responses] into [continuum] ([citations]). A major distinction is whether the firm acts [pole A] or [pole B]. A fundamental question is whether [pole B strategy] helps attenuate effects on [firm value]. The theoretical and empirical evidence remains equivocal. Only a limited number of [discipline A] studies have investigated [strategies] by focusing on [audience A outcomes] ([citations])... the broader issue of how strategies influence [audience B outcome / firm value] has not been studied. Several studies in [discipline B] have examined [event→firm value], but results are mixed ([citations])... More important, extant studies have not considered the role of alternative [strategies]."
 
-**来源**: Chen, Ganesan & Liu (2009, *Journal of Marketing*) / `chenganesanliu2009` / Chen_Ganesan_Liu_2009_JM, P4–P6
+**来源**: Chen, Ganesan & Liu (2009, *Journal of Marketing*) / `chenganesanliu2009` / Chen_Ganesan_Liu_2009_JM, P4–P6；第二源：Giannetti & Srinivasan (2022, *JAMS*) / `giannetti_2022_corporate_lobbying_and_product_recalls_an_inv`, P1–P2（顺序双段学科批判：营销端 CPA 结果遗漏 × 召回端政治前因遗漏）
 
 **原文锚定**:
 > "Only a limited number of marketing studies have investigated the impact of product-harm crisis management strategies by focusing on consumer evaluations of products and services. Most of these studies were conducted in a laboratory setting, and the broader issue of how different crisis management strategies might influence firms' financial value has not been studied."

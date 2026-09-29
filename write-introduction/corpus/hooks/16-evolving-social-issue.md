@@ -126,6 +126,33 @@ Traditionally, [Group A] supported [position X] and [Group B] supported [positio
 
 **验证状态**: VERIFIED — expert_audit_override (user 2026-08-28: 单源足矣; paper_count=1)
 
+
+### 变体 E：无事件冷启动影响力断言型（giannetti2022 型）
+
+> 论证角色：Framing（以无事件、无数字的影响力趋势断言开场，P1 内完成机制命名与研究问题定位）
+
+**模板**:
+> "The influence of [institutional actors] over [firms] is substantive and has been growing dramatically. As a result, firms invest considerable [resources] to shape their [institutional environments] ([citation]). One key mechanism by which firms try to influence [actors] is [focal IV] ([citation]). In this research, we examine the effect of [focal IV] on [DV], a [field]-relevant outcome for firms."
+
+**来源**: giannetti_2022_corporate_lobbying_and_product_recalls_an_inv (JAMS), P1
+
+**原文锚定**:
+> "The influence of politicians and regulators over firms is substantive and has been growing dramatically. As a result, firms invest considerable time and money to shape their political and regulatory environments (Werner, 2015)."
+> "In this research, we examine the effect of corporate lobbying on product recalls, a marketing-relevant outcome for firms."
+
+**关键特征**:
+- 本家族能量最低的冷启动变体：无事件叙事（区别变体 A/B）、无构念定义（区别变体 C）、无多方汇流（区别变体 D），仅凭趋势断言+引用建立紧迫性
+- P1 第三句即完成 IV 机制命名（"One key mechanism... is [IV]"），Hook 直接服务 puzzle 而非只造氛围
+- RQ 以 "In this research, we examine..." 嵌入 P1 末句，同位语（"a [field]-relevant outcome for firms"）一次性声明 DV 的学科相关性
+- 四句闭环节奏：宏观影响趋势 → 行动者策略回应 → 机制命名 → RQ
+
+**适用**: JAMS/JM 风格实证论文需要在 P1 同时交付 Hook+RQ 的紧凑开场；IV 为组织非市场行为、DV 为市场端结果的跨域桥接研究；后续配 Synthesized Coherence 双流文献转向
+
+**禁忌**: 断言必须带可查引用（本变体零数据零事件，引用是唯一可信度来源）；ASQ/ASR 场景能量过低不宜使用；同位语中的 DV 学科相关性声明必须真实对应投稿领域
+
+<!-- wb:giannetti_2022_corporate_lobbying_and_product_recalls_an_inv:intro_hook16_noevent_coldstart_rq -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
 ## 组装规则
 
 ### 必须配对

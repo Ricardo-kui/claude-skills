@@ -407,6 +407,32 @@ P5-P6 的下半段功能：向读者预告实证结果。这是 Introduction 中
 
 <!-- wb:lu_et_al_2022_frenemies_corporate_advertising:intro_findings_preview_setting_validity_first -->
 
+
+### 变体 X：中介+调节发现预告与编号延伸摘要型（giannetti2022 型）
+
+> 论证角色：Evidence（一句带稳健性从句的发现预告交付主效应+中介，再以编号延伸摘要预告贡献，兼作 Contribution 模块的开场）
+
+**模板**:
+> "The findings, which are robust, indicate that [IV] [direction] the [DV] and that this effect is mediated by [mediator]. The presence of [moderator a] and [moderator b] moderate(s) the [direction] indirect effect of [IV] on [DV]. The findings substantially extend our understanding of [relationship] by (1) [contribution clause 1] and (2) [contribution clause 2]."
+
+**来源**: giannetti_2022_corporate_lobbying_and_product_recalls_an_inv (JAMS), P7
+
+**原文锚定**:
+> "The findings, which are robust, indicate that a firm's corporate lobbying increases the number of its product recalls and that this effect is mediated by the firm's lower emphasis on product safety."
+
+**关键特征**:
+- 稳健性从句内嵌于发现预告首句（"The findings, which are robust, indicate..."），一个插入语完成防御而不另设段
+- 主效应与中介发现合并于一句（"and that this effect is mediated by..."），调节发现单独一句——三层发现两级递进
+- 编号 (1)(2) 延伸摘要紧跟发现句，发现预告与贡献声明共用一段，向后镜像 Contribution 块的编号结构
+- 全程只给方向不给幅度（区别于变体 D/S 的效应量交付），JAMS 营销风格
+
+**适用**: 被调节的中介设计的发现预告；贡献以编号双要点呈现的营销期刊论文；与独立的数据源预告段（构念映射数据源枚举型）配对构成三段式 Preview
+
+**禁忌**: 方向性表述必须与 Results 系数符号一致；不加统计量（β/p/幅度）；编号要点数不超过理论贡献实际维度，禁止为凑数拆分
+
+<!-- wb:giannetti_2022_corporate_lobbying_and_product_recalls_an_inv:intro_findprev_mediated_numbered_extension -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
 ## 组装规则
 
 ### 必须配对

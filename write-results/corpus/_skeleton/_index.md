@@ -11,7 +11,7 @@
 | [`logit-probit-ordered-probit`](logit-probit-ordered-probit.md) | `corpus/Logit-Probit-Ordered-Probit.md` | 61 | DV 是二元/有序/类别变量，需要 OR/概率尺度翻译或分样本二元模型裁决 |
 | [`survival-analysis`](survival-analysis.md) | `corpus/生存分析.md` | 24 | DV 是时长/生存时间，需 hazard/exp(β) 或「四拍+百分比」风险结果 |
 | [`did`](did.md) | `corpus/DiD.md` | 25 | 因果设计是 DiD/准实验，需交互项幅度翻译、pre-trend 或 placebo 稳健性 |
-| [`count-models`](count-models.md) | `corpus/计数模型.md` | 35 | DV 是计数（召回次数/专利数），需发生率比翻译或计数诊断 |
+| [`count-models`](count-models.md) | `corpus/计数模型.md` | 37 | DV 是计数（召回次数/专利数），需发生率比翻译或计数诊断 |
 | [`experiments`](experiments.md) | `corpus/实验.md` | 5 | 数据来自实验/多研究，需 F/p/η² 或 PROCESS 中介报告 |
 | [`multi-study`](multi-study.md) | `corpus/多研究.md` | 8 | 一篇论文含多个 study，需跨研究综合或差异解释 |
 | [`qualitative-process`](qualitative-process.md) | `corpus/定性过程研究.md` | 6 | 定性 Findings（过程模型/引语），非量化假设检验 |
@@ -24,12 +24,12 @@
 | [`cross-audience-construct`](cross-audience-construct.md) | `corpus/跨受众构念对比.md` | 1 | 同一 IV 在两受众/两 DV 上符号相反，需镜像对比报告 |
 | [`three-way-interaction`](three-way-interaction.md) | `corpus/三向交互.md` | 4 | 模型含三向交互，需条件两向分解或简单斜率差异 |
 | [`construct-exposure-decomposition`](construct-exposure-decomposition.md) | `corpus/构造暴露分解.md` | 0 | 构造暴露分解结果（当前无验证变体） |
-| [`sem-moderated-mediation`](sem-moderated-mediation.md) | `corpus/SEM-moderated-mediation.md` | 8 | SEM/调节中介报告（路径系数、条件间接效应、fit 指标） |
+| [`sem-moderated-mediation`](sem-moderated-mediation.md) | `corpus/SEM-moderated-mediation.md` | 11 | SEM/调节中介报告（路径系数、条件间接效应、fit 指标） |
 | [`event-study`](event-study.md) | `corpus/事件研究法.md` | 17 | 事件研究 CAR/AR，需分组裁决、t 检验或主效应保护段 |
 | [`varx-pvar`](varx-pvar.md) | `corpus/VARX-PVAR.md` | 7 | 向量自回归/脉冲响应，需弹性表或方差分解解读 |
 | [`blp-state-space`](blp-state-space.md) | `corpus/BLP-状态空间.md` | 5 | 结构需求或状态空间模型，需拟合/反事实报告 |
 
-合计：21 模型族 / verbatim 299 条 / 模板 319 条。
+合计：21 模型族 / verbatim 304 条 / 模板 324 条。
 
 ## 待补录
 

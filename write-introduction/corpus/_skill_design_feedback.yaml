@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
   last_updated: '2026-09-28'
-  observations_processed: 106
+  observations_processed: 116
   description: Evidence ledger for design defects inferred from Introduction exemplar distillation.
 defects:
   incompleteness-embedded-opposing-claims-vs-incommensurability:
@@ -4699,6 +4699,193 @@ defects:
     verified_paper_count: 1
     verified_journals:
     - AMJ
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-28'
+    last_seen: '2026-09-28'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  data-source-preview-missing:
+    classification: corpus_gap
+    status: EMERGING
+    risk: medium
+    current_rule: previews 模块现有 mechanism/findings/robustness/extreme-case-justification/dv-methodology-defense/theory-lens-driven/context-agent-justification
+      七个文件，无数据源枚举预告模板（previews/_index.md 文件清单核验）
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/previews/_index.md
+    diagnosis: 多数据库拼接是营销/管理实证常态；构念-来源括号映射+面板规格收束段在语料无承载点（findings 变体 J/M 仅一句带过样本；context-agent 职能为执法代理辩护）
+    proposed_change:
+      action: add_branch
+      summary: gate ① 裁决新建 previews/data-source-preview.md（变体 A：构念映射数据源枚举型，plan item 4）
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: giannetti_2022_corporate_lobbying_and_product_recalls_an_inv
+      journal: JAMS
+      evidence_anchor: 'P6: 五源逐一 (for construct) 映射 + 86 firms/696 firm-years/2005-2018 面板规格收束'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - JAMS
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - JAMS
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-28'
+    last_seen: '2026-09-28'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  moderated-mediation-preview-missing:
+    classification: corpus_gap
+    status: EMERGING
+    risk: medium
+    current_rule: mechanism-preview 变体 A-AG 无 mediation/indirect-effect/moderated-mediation 预告变体（grep moderated mediation|second-stage|indirect
+      effect 核验）
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/previews/mechanism-preview.md
+    diagnosis: 被调节的中介设计的 Introduction 预告需主效应方向+中介+调节路径三件套并显式标注 second-stage 路径；变体 S 无中介层、变体 E 为相反的融合结构
+    proposed_change:
+      action: add_branch
+      summary: append 变体 AH：被调节的中介分段预告型（plan item 2）
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: giannetti_2022_corporate_lobbying_and_product_recalls_an_inv
+      journal: JAMS
+      evidence_anchor: 'P4-P5: theorize 句 → moderated mediation (a)(b) 句 → upper echelons 透镜段逐调节效价（strengthening/weakening）'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - JAMS
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - JAMS
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-28'
+    last_seen: '2026-09-28'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  mediated-findings-preview-missing:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: findings-preview 变体 G 为主效应→效应量→调节→含义；变体 M 为数据一句+主效应+转场调节；均无中介层与编号延伸摘要
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/previews/findings-preview.md
+    diagnosis: moderated mediation 的发现预告需'主效应+中介合句→调节单句→编号(1)(2)延伸摘要镜像贡献块'结构；稳健性从句内嵌（which are robust）战术未收录
+    proposed_change:
+      action: add_branch
+      summary: append 变体 X：中介+调节发现预告与编号延伸摘要型（plan item 3）
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: giannetti_2022_corporate_lobbying_and_product_recalls_an_inv
+      journal: JAMS
+      evidence_anchor: 'P7: findings 首句（稳健性从句+中介）→ 调节句 → (1)(2) 编号延伸摘要'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - JAMS
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - JAMS
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-28'
+    last_seen: '2026-09-28'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  no-event-coldstart-hook-missing:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: hooks/16 变体 A/B/C/D 分别依赖事件、立场反转、构念定义、多方汇流之一
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/hooks/16-evolving-social-issue.md
+    diagnosis: 缺'纯趋势断言+机制命名+P1内RQ'最低能量变体——JAMS/JM 紧凑开场（P1 同时交付 Hook+RQ）无承载点
+    proposed_change:
+      action: add_branch
+      summary: append 变体 E：无事件冷启动影响力断言型（plan item 1）
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: giannetti_2022_corporate_lobbying_and_product_recalls_an_inv
+      journal: JAMS
+      evidence_anchor: 'P1: 趋势断言→firm 回应→机制命名→RQ+同位语四句闭环'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - JAMS
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - JAMS
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-28'
+    last_seen: '2026-09-28'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  dual-stream-omission-single-source:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: tensions/01 变体 AH（双流互为遗漏交叉点）仅 chen2009 单源 VERIFIED
+    rule_excerpt: ''
+    rule_locator: ''
+    target: write-introduction/corpus/tensions/01-despite-progress-unaddressed.md
+    diagnosis: 本篇为变体 AH 第二确认源 + 02-synthesized-coherence 变体 F 第二例——证据增强而非新变体，registry append_papers 即可
+    proposed_change:
+      action: add_branch
+      summary: registry append_papers（主循环经 corpus_enrichment 跑 _update_registry.py；不改变体正文）
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: giannetti_2022_corporate_lobbying_and_product_recalls_an_inv
+      journal: JAMS
+      evidence_anchor: 'P2: 双流 First/Second 枚举 → Overlooked is... → However 最近邻遗漏 a gap we address'
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - JAMS
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - JAMS
     verified_journal_count: 1
     regression_cases:
       positive: []

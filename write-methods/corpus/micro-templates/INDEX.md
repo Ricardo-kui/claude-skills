@@ -34,7 +34,7 @@ updated: 2026-08-03
 | [过渡衔接短语](transitions.md) | 段落内部的逻辑推进标记 | M1–M10 任意多句段落 |
 | [样本漏斗节奏](funnel-rhythm.md) | 数字叙事的句法序列 | M2；起始总体补充：样本框三理由枚举辩护（数据可得性/响应率/研究缺口），westphal_bednar2005，VERIFIED；响应率工程链（反差定位→编号步骤→对标收口），carpenterwestphal2001，VERIFIED；微模板：抽样框威胁三理由反驳——制度层（规则变化）+分布层（威胁签名在数据中不存在）+分析层（controls+robustness）（dewan2020，AMJ；westphal_bednar2005 样本框三理由枚举的镜像抗辩型；首源 EMERGING；微模板：流失 t 检验诚实报告链——比较检验→显著差异如实披露→缺失机制归因→稳健性预告（dewan2020，AMJ；首源 EMERGING；与 robustness-foreshadowing 样本选择类配合）） |
 | [识别策略预告](identification-foreshadowing.md) | 在 Methods 中预告 Results 的诊断检验 | M8 |
-| [变量操作化句式](variable-operationalization.md) | 构念→测量→来源→方向的表述方式 | M3, M4, M5；micro-templates/INDEX.md variable-operationalization 行：slots 补 M6；注记新增'档案字段测量构造'小节（tie-breaking 规则 + 基准组声明 + 类别 FE 实质 because），来源 Liu, Liu & Luo 2016 JM |
+| [变量操作化句式](variable-operationalization.md) | 构念→测量→来源→方向的表述方式 | M3, M4, M5；micro-templates/INDEX.md variable-operationalization 行：slots 补 M6；注记新增'档案字段测量构造'小节（tie-breaking 规则 + 基准组声明 + 类别 FE 实质 because），来源 Liu, Liu & Luo 2016 JM；滞后存量构造（M4）——carryover→FDL 存量（衰减参数+求和式+规模化）+零值占比外部基准校验，giannetti_2022_corporate_lobbying_and_product_recalls_an_inv，EMERGING；事件计数去重规则（M3）——同单位同根因字段同日计一次的去重规则模板，档案计数 DV 口径可复现，giannetti_2022_corporate_lobbying_and_product_recalls_an_inv，EMERGING |
 | [稳健性检验预告](robustness-foreshadowing.md) | Methods 中预告 Results 的稳健性检验 | M8, M10；样本选择补充：问卷非应答 K-S+Heckman 双重防御链，westphal_bednar2005，VERIFIED；非应答 K-S+双层代表性检验（IV/控制变量分别代表性声明+限定语收口），carpenterwestphal2001，VERIFIED |
 | [模型选择比较](model-selection-comparison.md) | 分布/连接函数/规格比较时的叙事单元 | M7 |
 | [识别策略外生性](identification-exogeneity.md) | IV 排他性约束、自然实验外生性来源、控制函数识别变量的理论论证 | M4, M7, M8 |

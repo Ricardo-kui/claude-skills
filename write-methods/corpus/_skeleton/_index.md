@@ -9,9 +9,9 @@
 |---|---|---|---|
 | [`panel-ols`](panel-ols.md) | `corpus/面板数据-OLS.md` | 95 | 主模型是 OLS/FE/动态面板/SUR，需写设置合法性、样本漏斗、操作化与规格叙事 |
 | [`did`](did.md) | `corpus/自然实验-DiD.md` | 26 | 因果设计是 DiD/准实验，需识别策略论证、预处理卫生或外生性辩护 |
-| [`nonlinear`](nonlinear.md) | `corpus/非线性模型.md` | 22 | DV 是计数/二元/有序/受限，需分布诊断、估计器选择或交互项规格 |
+| [`nonlinear`](nonlinear.md) | `corpus/非线性模型.md` | 23 | DV 是计数/二元/有序/受限，需分布诊断、估计器选择或交互项规格 |
 | [`survival`](survival.md) | `corpus/生存分析.md` | 25 | DV 是时长/生存时间，需 hazard 操作化、分布选择或复发事件处理 |
-| [`sem`](sem.md) | `corpus/SEM.md` | 4 | SEM/调节中介方法段（联合估计、交互共线性、时序方向诊断） |
+| [`sem`](sem.md) | `corpus/SEM.md` | 6 | SEM/调节中介方法段（联合估计、交互共线性、时序方向诊断） |
 | [`experiments`](experiments.md) | `corpus/实验.md` | 6 | 数据来自实验，需写被试→材料→操纵→测量标准段 |
 | [`multi-study`](multi-study.md) | `corpus/多研究.md` | 10 | 一篇论文含多个 study，需跨研究设计总览或递进论证 |
 | [`qualitative-process`](qualitative-process.md) | `corpus/定性过程研究.md` | 7 | 定性 Findings（过程模型/引语），非量化假设检验 |
@@ -32,7 +32,7 @@
 | [`varx-pvar`](varx-pvar.md) | `corpus/VARX-PVAR.md` | 8 | 向量自回归/脉冲响应，需滞后阶/GIRF/FEVD 规格 |
 | [`state-space`](state-space.md) | `corpus/结构需求-state-space.md` | 6 | 结构需求或状态空间模型，需拟合/反事实方法规格 |
 
-合计：24 设计类型 / 347 编号变体 / verbatim 352 条 / 模板 348 条。
+合计：24 设计类型 / 350 编号变体 / verbatim 355 条 / 模板 351 条。
 另有 5 条不编号变体（`### 变体：`，fang2025 POM）与 5 条 EXTEND 子变体（`#### 变体：`）——已抽取进各二级清单但**不计入**上面的 342（口径与 validator/INDEX/速查表一致）。
 
 ## 待补录

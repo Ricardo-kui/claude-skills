@@ -454,15 +454,16 @@ evidence:
         reject: 0
         common_revise_reasons: []
     16-evolving-social-issue:
-      paper_count: 2
+      paper_count: 3
       papers:
         - employee_free_speech2024 (OS)
         - weng_yang2024 (JMS)
+        - giannetti_2022_corporate_lobbying_and_product_recalls_an_inv (JAMS)
       gap_distribution:
-        Incompleteness: 1
+        Incompleteness: 2
         Inadequacy: 1
         Incommensurability: 0
-      status: EMERGING
+      status: VERIFIED
       generativity: GENERATIVE
       exclusivity: HIGH
       common_failures: []
@@ -1536,7 +1537,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     mechanism-preview:
-      paper_count: 30
+      paper_count: 31
       papers:
         - bamberger_homburg_wielgos2021 (JM)
         - castellaneta_conti_kacperczyk2017 (SMJ)
@@ -1568,6 +1569,7 @@ evidence:
         - ridge_aime_white_2013_smj (Strategic Management Journal)
         - lu_et_al_2022_frenemies_corporate_advertising (Management Science)
         - "mao_dong_lee_2022_msom (Manufacturing & Service Operations Management)"
+        - giannetti_2022_corporate_lobbying_and_product_recalls_an_inv (JAMS)
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: LOW
@@ -1579,11 +1581,11 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 20
+        Incompleteness: 21
         Inadequacy: 6
         Incommensurability: 4
     findings-preview:
-      paper_count: 50
+      paper_count: 51
       papers:
         - castellaneta_conti_kacperczyk2017 (SMJ)
         - ceo_regulatory_focus_ijrm (IJRM)
@@ -1635,6 +1637,7 @@ evidence:
         - anand_mukherjee_2024_learning_from_failures_di (Organization Science)
         - gulati2005-adaptation-vertical (Strategic Management Journal)
         - lu_et_al_2022_frenemies_corporate_advertising (Management Science)
+        - giannetti_2022_corporate_lobbying_and_product_recalls_an_inv (JAMS)
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: LOW
@@ -1645,7 +1648,7 @@ evidence:
         revise: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 28
+        Incompleteness: 29
         Inadequacy: 20
         Incommensurability: 2
     robustness-preview:
@@ -1692,6 +1695,22 @@ evidence:
         revise: 0
         reject: 0
         common_revise_reasons: []
+    data-source-preview:
+      paper_count: 1
+      papers:
+      - giannetti_2022_corporate_lobbying_and_product_recalls_an_inv (JAMS)
+      status: EMERGING
+      generativity: ADAPTABLE
+      exclusivity: LOW
+      common_failures: []
+      validation_history:
+        validated: 0
+        revise: 0
+        reject: 0
+        total_runs: 0
+        common_revise_reasons: []
+      gap_distribution:
+        Incompleteness: 1
   contributions:
     contribution-statements:
       paper_count: 51
@@ -2545,6 +2564,7 @@ paper_index:
   zajac_westphal_the_social_construction_of_market_value: Incompleteness
   liuliuluo2016: Incompleteness
   dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak: Incompleteness
+  giannetti_2022_corporate_lobbying_and_product_recalls_an_inv: Incompleteness
 
 # === AUTHORED ===
 critique:

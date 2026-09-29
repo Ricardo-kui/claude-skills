@@ -480,6 +480,66 @@ shifts in [mediators], conditional on [moderator_1] and [moderator_2].
 #### 与最近变体的区别
 - 区别于变体 1（Preacher & Hayes 同时估计 SEM）：本变体是两步预测中介的面板 OLS 版本 + 双 moderator 条件间接效应分层 + "路径承载归因 → 双路径汇合 → 校准收束"的跨槽位节奏；区别于变体 7（共享中介跨分支账本）：本变体两条路径各配独立中介与 outcome，按承诺顺序汇合。
 
+
+### 变体 9: 两方程分估中介架构导航 — 列序即中介逻辑链（giannetti2022 型）
+
+**来源论文**: Giannetti & Srinivasan 2022 (JAMS)
+**原始句锚点**: "Below, we first estimate the model of emphasis on product safety (see Eq. 1 above), following which we estimate the model of the number of product recalls (see Eq. 2 above) to test H1a-H4a. Combining the results from the two models allows us to test the mediation and moderated moderation hypotheses, i.e., H1b-H4b."
+**验证状态**: EMERGING（单篇入库）
+**写入日期**: 2026-09-28
+**槽位**: R2
+**骨架**:
+> "Below, we first estimate the model of [mediator] (see Eq. [1] above), following which we estimate the model of [count DV] (see Eq. [2] above) to test [H1a–HNa]. Combining the results from the two models allows us to test the mediation and moderated mediation hypotheses, i.e., [H1b–HNb]."
+**与原骨架差异**: 与变体3（联立方程 SEM + IV 诊断前置）和变体8（两步预测中介，报告段内溯源）不同——本变体是 Results 节开场的中介架构导航段：两个异质族方程（probit mediator + count DV）分估时，开场一句声明先估 a-path 方程、再估 b-path 方程，"Combining the results from the two models" 把分估模型接成中介检验整体；假设编号分层（a 系列=b-path 主效应/调节、b 系列=中介/被调节中介），路线图即假设-列映射表。后续各列（Col1→Col2→Col3→Col4）严格按此链展开。
+**关键节奏**: [方程顺序声明 (see Eq. N above 回指 Methods)] → [a 系列假设归属] → [合并声明 Combining the results...] → [b 系列假设归属]
+**诚实边界**:
+- 分估两方程的间接效应显著性须由同时估计（GSEM/SEM）或 bootstrap 确认（本论文随后补做），导航段不得暗示分估系数即中介检验完成。
+- 原文 "moderated moderation" 为笔误（theory/方法部分均为 moderated mediation）；骨架中已按 "moderated mediation" 泛化。
+
+<!-- wb:giannetti_2022_corporate_lobbying_and_product_recalls_an_inv:r2_staged_mediation_two_model_navigation -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
+
+### 变体 10: 中介判据先行 — 三条件列举→逐条映射到列（giannetti2022 型）
+
+**来源论文**: Giannetti & Srinivasan 2022 (JAMS)
+**原始句锚点**: "As corporate lobbying is correlated with the number of product recalls when controlling for emphasis on product safety (and its interactions), we infer partial mediation, suggesting that other mediators may be at work."
+**验证状态**: EMERGING（单篇入库）
+**写入日期**: 2026-09-28
+**槽位**: R8
+**骨架**:
+> "According to [Zhao et al. (2010)], testing for mediation requires that: (1) the independent variable, i.e., [IV], is correlated with the mediator, i.e., [mediator]; (2) [mediator] is correlated with the dependent variable, i.e., [DV], when [IV] is controlled for. Testing for moderated mediation further requires that (3) the interactions of [mediator] with the proposed moderators are correlated with [DV] when [IV] is controlled for."
+> "The first requirement is satisfied by [the significant effect of IV on mediator] reported in [Column 1, Table X]. The second requirement is satisfied by [the significant effect of mediator on DV] reported in [Column 4, Table X], supporting [H1b]. The third requirement is satisfied by [the significant interactions] reported in [Column 4, Table X], supporting [H2b] and [H4b]. [H3b] is not supported as [the corresponding interaction] is not significant in [Column 4, Table X]. As [IV] is correlated with [DV] when controlling for [mediator] (and its interactions), we infer partial mediation, suggesting that other mediators may be at work."
+**与原骨架差异**: 与变体1（同时估计后逐条件间接效应解读）和变体8（两步法结果直报+溯源）不同——本变体把中介检验写成可对账的判据清单：先以方法锚（Zhao et al. 2010）编号列出三条件，再以固定句式 "The first/second/third requirement is satisfied by..." 逐条映射到具体列号，每句尾挂假设判定（supporting H[b] / not supported）；null 交互在同一句式内如实宣判；部分中介推断直接由"控制中介后 IV 仍显著"推出并明示遗漏机制可能性。
+**关键节奏**: [方法锚+条件编号列举] → [三连满足映射句（列号+假设判定）] → [null 假设同句式宣判] → [partial mediation 推断+other mediators 限定]
+**诚实边界**:
+- 条件列举必须与所用中介检验方法一致（Zhao/Baron-Kenny/Hayes 各自条件不同），不得混编。
+- 直接效应显著时只可推断 partial mediation；"suggesting that other mediators may be at work" 是限定不是贡献声明，不得删除。
+
+<!-- wb:giannetti_2022_corporate_lobbying_and_product_recalls_an_inv:r8_mediation_requirements_first_column_mapping -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
+
+### 变体 11: 被调节中介指数确认 — 预期符号先验推导→index 确认（giannetti2022 型）
+
+**来源论文**: Giannetti & Srinivasan 2022 (JAMS)
+**原始句锚点**: "we expect a positive index of partial moderated mediation for the marketing CEO (multiplication of a negative effect of corporate lobbying on emphasis on product safety, and a negative interaction effect of marketing CEO with emphasis on product safety on the number of product recalls)"
+**验证状态**: EMERGING（单篇入库）
+**写入日期**: 2026-09-28
+**槽位**: R8
+**骨架**:
+> "We further check the significance of the indirect effect ([Preacher & Hayes, 2004]) of [IV] on [DV] via [lower mediator] by re-estimating the equations simultaneously via generalized structural equation modeling. As indirect effects are products of regression coefficients, we bootstrap confidence intervals ([N] replications)."
+> "As our model is a second-stage moderated mediation model, we further explore the mechanisms behind the [two] significant moderating effects using the index of partial moderated mediation ([Hayes & Rockwood, 2020]). ... we expect a [positive] index of partial moderated mediation for [moderator a] (multiplication of a [negative] effect of [IV] on [mediator], and a [negative] interaction effect of [moderator a] with [mediator] on [DV]). Conversely, ... we expect a [negative] index of partial moderated mediation for [moderator b] (multiplication of a [negative] effect ... and a [positive] interaction effect ...). Consistent with our theorizing, the index of partial moderated mediation for [moderator a] is [positive], meaning that the [positive] indirect effect of [IV] on [DV] is [strengthened] for [units] with [moderator a] which ... benefit more from [increased mediator]. ... In both cases, there is evidence of significant moderated mediation (p < [0.05], bootstrapped confidence intervals exclude zero) providing support for the theorized mechanisms. We note that the direct effect of [IV] on [DV] is also significant, confirming partial mediation."
+**与原骨架差异**: 与变体8（条件间接效应在 moderator min/水平值处报 CI）不同——本变体报告 index of partial moderated mediation 统计量本身：先对每个调节变量做预期符号的先验推导（index = a-path 系数符号 × 交互项系数符号，段内显式写出乘法构成），再以 "Consistent with our theorizing, the index ... is [sign]" 确认，并同步翻译为间接效应被 strengthened/weakened 的机制语言；GSEM 同时估计 + bootstrap CI 是分步估计之上的确认层；尾句以直接效应显著性回收 partial mediation 判定。本文件诚实边界"传统 Baron–Kenny 条件计数不能替代 moderated-mediation index 或条件间接效应区间"由此变体承载 index 路径。
+**关键节奏**: [GSEM 同时估计+bootstrap CI 交付] → [second-stage 标签+index 方法锚] → [逐调节预期符号先验推导（乘法构成显式）] → [Consistent with our theorizing 确认+strengthened/weakened 翻译] → [双调节齐验+p<0.05/CI 排零] → [直接效应回收 partial mediation]
+**诚实边界**:
+- index of partial moderated mediation 仅适用于第二阶段调节（moderator 作用于 b-path）；第一阶段调节须用对应 first-stage index，不得混用标签。
+- 直接效应显著只可 "confirming partial mediation"；不得升格为 full mediation。
+- 本范文未报告 index 点估计值与 CI 数值（只报 p<0.05 与 CI 排零）——填入实际结果时应补报数值。
+
+<!-- wb:giannetti_2022_corporate_lobbying_and_product_recalls_an_inv:r8_index_partial_moderated_mediation_sign_derivation -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
 #### 验证状态说明
 
 EMERGING（单篇来源；仅作 `section_variant`）。适用于同一中介被理论化为连接一个 predictor 与多个 outcome，且各 outcome 使用不同估计器或量纲。

@@ -291,6 +291,36 @@ of variation at issue], which is the focus of our theory.
 
 
 
+
+### 变体 D：自设反问冗余质疑回应句（Rhetorical-Question Redundancy Rebuttal，giannetti_2022_corporate_lobbying 型）
+
+**句位**: 调节假设推导内，Topic→Reasoning 之间；作者以读者口吻抛出"该调节是否多余"的质疑并即刻回应。
+
+**句式骨架**:
+```
+Will [W]'s [perspective] be redundant in [firms where M is already high]?
+We suggest not, based on [named micro-theory]:
+  [mechanism implying synergistic rather than duplicative weighting].
+[推进] This implies that [firms with W] will [prioritize the M-criterion over alternatives]
+       to a larger extent than firms without [W].
+```
+
+**变体**:
+- "Will ... be redundant in ...? We suggest not, based on ..." — 直陈自问自答（范文用法，配 group decision-making 的 common knowledge effect）
+- "One might wonder whether ... is redundant when ... . We suggest not: ..." — 第三人称作疑，语气更轻
+- "A concern is that ... duplicates ... . This concern overlooks ... ." — 陈述式变体，反问过舞台风时用
+
+**为什么有效**: 冗余性质疑是"重要共识再由高管/机制背书"类调节假设最先遭遇的异议；以反问显式接住它，再用一个命名微观理论（而非"我们认为"）给出协同加权机制，把潜在审稿人异议转化为假设的论证资源。
+
+**注意事项**: 回应必须落到命名理论/机制，不能停在 "We suggest not"；反问句全篇至多一处，多则舞台化。
+
+**反模式**: 用反问接住异议后不回应；或用未命名常识回应（"we believe both matter"）。
+
+**原文锚定**: "Will the marketing CEO's perspective be redundant in a firm that already has strong emphasis on product safety? We suggest not, based on developments in the group decision-making literature."（Theory §Marketing CEO 段）
+
+<!-- wb:giannetti_2022_corporate_lobbying_and_product_recalls_an_inv:sent_rhetorical_question_redundancy_rebuttal -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Boundary tbt="机制推演型（中介+调节混合）" -->
+
 ### 证据多数裁定+构念层级划界句（Majority-Evidence Weighting with Construct-Level Scoping，Lu et al. 2022 MS 型）
 
 > 论证角色：A&R——对"多数证据 vs 少数反证"的冲突做构念层级划界并承诺主流立场的承认-回应句式

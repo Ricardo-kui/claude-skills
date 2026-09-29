@@ -178,19 +178,35 @@ to [Mk]...（2-3 个独立理由）]
 [X] on [DV].（2-3 个独立价值机制：成本降低/韧性/价值创造）]
 H[k]: [Mk] will partially mediate the effects of [X] on [DV].
 ```
-
-**与近族的分界**:
-- vs 双中介并行机制链（Malshe & Agarwal，`sentences/mechanism_chain.md`）：后者一条 H 覆盖全部中介（"mediated by (a) M1 and (b) M2"）；本变体每中介一条独立 H，适合各中介需独立检验与稳健性证据的设计
-- vs Role-Separated Parallel Mediators → Effect Decomposition → Horizon Test（Bamberger，`subprotocols/hypothesis_organization_patterns.md`，EMERGING）：后者要求 direct/indirect 方向冲突 + 跨时间窗效应分解；本变体同向收敛、无分解
-- vs B3 宽度型并行机制：后者是并列理由支撑同一条主效应 H；本变体的并行项是可测量的独立构念且各自成 H
-
-**原文锚点**: "Therefore, we expect each of these mechanisms to partially mediate the relationship between joint dependence and performance." ... "Hypothesis 3: Joint action will partially mediate the effects of joint dependence on a manufacturer's performance in the procurement relationship."
-
-**风险**: 每个中介小节的 X→M 与 M→Y 两段都必须有独立理论依据；任一中介的 M→Y 论证单薄会连累"为什么恰好这几个中介"的整体合法性（三中介的外部分类学锚定是本型的关键防御）。H_main 先行是协议映射的前提，不可省略。
-
-**验证状态**: VERIFIED — expert_audit_override（user 2026-09-06：Pollock/Westphal/Gulati 系单源即 VERIFIED）
-
 <!-- wb:gulati_2007_dependence_asymmetry_and_joint_dependence_in_int:v_b_mechanism_per_mediator_partial_mediation_chain -->
+
+### 变体 E：反直觉有害效应双刃剑开场（giannetti_2022_corporate_lobbying 型）
+
+> 论证角色：Claim（推导起点一次完成"方向宣告 + 直觉让步反转"，为有害侧主干机制定调）
+
+**适用场景**: X 对 Y 的净效应与直觉利益相悖（政治投入、能力投资等看似有利的前因最终推高有害结果），需在主干机制开场同时给出方向与反转框架。
+
+**骨架**:
+```
+[方向宣告] We propose that [X] will decrease [M] and, in turn, increase [harmful Y].
+[直觉让步] While, at first glance, [X] may appear to be advantageous for [actor], we argue that it may be a double-edged sword: [reducing M], thereby [raising harmful Y].
+[情境佐证] Insights from [industry/context] appear to support this viewpoint: [insider/expert characterization of the mechanism].
+[推进] Thus, as [X] increases, [actor] may become [complacent state] and [lower M]; [M-decrease] may, in turn, result in [risky output marketed], eventually increasing [Y].
+```
+
+**为什么有效**: 方向宣告句把两步链（X→M、M→Y）与 "in turn" 链式标记压进段首一句话，读者先拿到净效应方向；让步句承认表面收益后用"双刃剑"完成反转，避免读者带着"X 有利"的先读入进入机制推导；insider/专家引语在纯推理前提供现象级印证降低阻力。
+
+**注意事项**:
+- 双刃剑句只负责方向翻转，不承担机制证明——[lower M] 步仍需独立理论 warrant，不能以引语替代
+- "in turn" 必须连接真正的链式因果（前步输出=后步输入）；并列机制不适用
+- 专家/利益相关者引语属 anecdotal warrant，后接正式理论推演补强，否则成为 C20 式攻击点
+
+**反模式**: 方向与直觉一致的常规主效应推导（无可让步的直觉）；或让引语直接承担 M→Y 步的论证功能。
+
+**原文锚定**: "we argue that it may be a double-edged sword, reducing the firm's emphasis on the safety of new products and, thereby, increasing the number of its product recalls."（Theory §"Corporate lobbying and product recalls: Indirect positive effect" 段）
+
+<!-- wb:giannetti_2022_corporate_lobbying_and_product_recalls_an_inv:b_counterintuitive_harmful_trunk_double_edged_sword_opener -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Mechanism tbt="机制推演型（中介+调节混合）" -->
 
 ## 假设陈述格式
 <!-- wb:keeves_2017_asq -->

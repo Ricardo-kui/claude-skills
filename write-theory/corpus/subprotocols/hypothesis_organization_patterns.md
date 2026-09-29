@@ -1099,3 +1099,47 @@ the greater the [endorsement outcome].
 **原文锚点**: "Signals of such skills and connections complement one another; they are not perfect substitutes since they tap into different dimensions of firm quality that are relevant to external evaluations of the firm's potential."（H4 推导段）
 
 <!-- wb:higgins_2003_getting_off_to_a_good_start_the_effects_of_uppe:typology_decomposed_parallel_signal_hypotheses_coverage -->
+
+
+## Pattern: Sign-Multiplication Moderated-Mediation Derivation（组件符号相乘推导 + 双层假设对，giannetti_2022_corporate_lobbying 型）
+
+> 论证角色：Reason（把 moderated mediation 拆为"M→Y 路径交互"与"间接效应被调节"两层可分别检验的假设，并以组件符号相乘规则显式锁定净方向）
+
+**适用场景**: 已建立 X→M→Y 中介主干（H1a: X→M；H1b: 间接效应），需引入多个 moderator（如高管职能背景、创新组合侧重），且每个 moderator 同时给出路径交互假设与 moderated mediation 假设时。
+
+**架构**:
+```
+[主干] H1a: [X] [方向] [M]；H1b: 间接效应 [X→M→Y]，复杂情境/多行为体时预埋部分中介声明（预留残余路径）。
+
+[对每个 moderator W 重复三层]
+  Move A（路径交互）: [W] 改变 [M] 降低 [Y] 的效果强度
+    → "the negative (and beneficial) effect of [M] on [Y] will be [stronger/weaker] for firms with [W]"
+    → H_a
+  Move B（桥接比较静态）:
+    "Since [M] is [more/less] effective in [reducing Y] in firms with [W],
+     an increase in [X], which reduces [M] (see H1b),
+     will be [more/less] harmful for firms with [W]."
+    → H_b："The presence of [W] in the firm will strengthen/weaken
+            the [positive/negative] indirect effect of [X] on [Y] via [M]."
+  Move C（符号簿记）:
+    "the [direction] moderated mediation effect arises from the multiplication of
+     the [sign] effect of [X] on [M], and the [sign] interaction effect of [W] and [M] on [Y]."
+  [可选 Move D 解读护栏]
+    "We caution that the hypothesized [strengthening of the harmful indirect effect]
+     ... does not imply that [W] is [harmful]. Indeed, on the contrary, ..."
+```
+
+**为什么有效**: Move A/B 把"调节间接效应"这一单一主张拆成审稿人可分别检验的两层（路径交互 + 桥接），Hb 不再从天而降；Move C 用符号相乘规则（负×负=强化、负×正=削弱）把净方向的合法性显式化，读者无需自行推算交互方向；Move D 预先封堵"调节放大有害间接效应 = W 有害"的常见误读。
+
+**注意事项**:
+- Move C 符号簿记只对"作用于同一路径的线性交互"成立；moderator 作用于 X→M 路径或存在非线性时不可套用
+- 每个 W 的 Move A 需独立理论 warrant（范文分别用 thought worlds/common knowledge effect、R&D 职业认同、510(k) vs PMA 制度差异），桥接句本身不是 warrant
+- 多 moderator 时补选择元框架（范文缺失，见该篇模仿风险提示）；并按 C20 补 low-W 侧推导
+- moderator 三对以上时模板复用感重，可在第三对起压缩 Move B 措辞变化
+
+**反模式**: 把符号簿记句当作 warrant 使用（它只锁定方向合法性，不证明交互为何存在）；或对作用于 X→M 路径的 moderator 硬套 Move B 桥接。
+
+**原文锚定**: "the positive moderated mediation effect arises from the multiplication of the negative effect of the firm's corporate lobbying on its emphasis on product safety"（Theory §H2b 论证段）
+
+<!-- wb:giannetti_2022_corporate_lobbying_and_product_recalls_an_inv:hyp_sign_multiplication_moderated_mediation_derivation -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Boundary tbt="机制推演型（中介+调节混合）" -->

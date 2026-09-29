@@ -93,9 +93,20 @@ def containment(a: set[str], b: set[str]) -> float:
 
 
 def load_blocks(path: Path) -> list[dict]:
-    """Split a corpus file into heading blocks: [{heading, start_line, text}]."""
+    """Split a corpus file into heading blocks: [{heading, start_line, text}].
+    Fence-aware: headings inside ``` code fences are demo content, not block
+    boundaries（giannetti2022 跑事故：围栏内 [Mk] 演示标题被当边界，锚点落进
+    围栏内部）。"""
     lines = path.read_text(encoding="utf-8", errors="replace").split("\n")
-    heads = [(i, ln) for i, ln in enumerate(lines) if BLOCK_HEAD.match(ln)]
+    fenced, inside = [], False
+    for ln in lines:
+        if ln.lstrip().startswith("```"):
+            fenced.append(True)
+            inside = not inside
+        else:
+            fenced.append(inside)
+    heads = [(i, ln) for i, ln in enumerate(lines)
+             if BLOCK_HEAD.match(ln) and not fenced[i]]
     blocks = []
     for k, (i, ln) in enumerate(heads):
         end = heads[k + 1][0] if k + 1 < len(heads) else len(lines)
@@ -190,6 +201,14 @@ def plan_item_errors(item: dict, corpus_root: Path) -> list[str]:
         return errs
     if verdict == "SKIP":
         return errs
+    # 2026-09-29 giannetti 跑事故：index_note 写成了整行表格行（含 " | "），
+    # 执行器把它再包一层索引行/验证状态 bullet → 嵌套竖线畸形行。index_note
+    # 必须是单句描述，表格包裹由执行器负责。
+    note = str(item.get("index_note") or "")
+    if " | " in note or note.strip().startswith("|"):
+        errs.append(f"[{name}] index_note 疑似整行表格行（含 ' | '）——"
+                    "index_note 应为单句描述（执行器负责表格包裹），"
+                    "请压平为无竖线单句")
     if verdict == "create_new_file":
         if not str(item.get("new_file") or "").strip():
             errs.append(f"[{name}] verdict=create_new_file 但缺 new_file "

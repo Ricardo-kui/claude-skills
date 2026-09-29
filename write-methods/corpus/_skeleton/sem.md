@@ -6,7 +6,7 @@
 > **锚点** = `corpus/<文件名>#变体-<变体号>`（脚本自定义片段，指向 `### 变体 <N>` 标题；不编号/EXTEND 变体指向其真实 `### 变体：`/`#### 变体：` 标题；`--verify` 断言标题存在）。
 > 状态列：`verbatim` = 逐字底本（与源卡片逐字一致，不得改写/拼接/补全）；`模板` = 填槽骨架（不可当逐字底本引用）。`不编号变体`（fang2025 POM，不计入 342）与 `EXTEND子变体`（`####` 层，不计入 342）在 id 与状态列标注。
 
-条目：verbatim 4 条 / 模板 4 条。
+条目：verbatim 6 条 / 模板 6 条。
 
 ## Verbatim 底本
 
@@ -16,6 +16,8 @@
 | `sem#2` | M8 | vadakkepatt2022 | Prior to specifying our models, we conducted panel Granger causality tests to examine whether lobbying Granger-causes customer satisfaction or vice versa. They reveal that lobbying Granger-causes customer satisfaction (χ² = 5.04, p < .10) and not the reverse. | `corpus/SEM.md#变体-2` | verbatim |
 | `sem#3` | M7 | vadakkepatt2022 | In addition, to rule out multicollinearity concerns for the interaction terms (with r > .70), we residual-centered the interaction of lobbying with product market lobbying. | `corpus/SEM.md#变体-3` | verbatim |
 | `sem#4` | M3/M4 | vadakkepatt2022 | Customer satisfaction, advertising spend, and R&D spend are widely used variables, so we do not detail their construction here, beyond the information provided in Table 2. Instead, we focus on the variables that require additional explanation or coding or are unique to our research. | `corpus/SEM.md#变体-4` | verbatim |
+| `sem#5` | M7/M8 | giannetti_2022_corporate_lobbying_and_product_recalls_an_inv | As we test for mediation via lower emphasis on product safety, we lag corporate lobbying by two years and emphasis on product safety by one year. | `corpus/SEM.md#变体-5` | verbatim |
+| `sem#6` | M7 | giannetti_2022_corporate_lobbying_and_product_recalls_an_inv | Further, as our model is a second-stage moderated mediation model, we subsequently include both emphasis on product safety and its interactions with marketing CEO, R&D CEO, and focus on radical (vs. incremental) innovation." ... "To ensure the correct model specification, we include the main effect of marketing and R&D CEO and the main effect of focus on radical (vs. incremental) innovation in Eq. 2 above. | `corpus/SEM.md#变体-6` | verbatim |
 
 ## 填槽模板
 
@@ -25,3 +27,5 @@
 | `sem#T2` | M8 | vadakkepatt2022 | Prior to specifying our models, we conducted panel Granger causality tests to examine whether [IV] Granger-causes [DV] or vice versa. They reveal that [IV] Granger-causes [DV] (χ² = [value], p < [threshold]) and not the reverse. Next, we examine independent variable stationarity with panel unit root tests. A lack of stationarity dictates how the variables enter the model. The [test_name] rejects the null hypothesis that the variables contain unit roots (p < [threshold]). We conclude the variable is mean-stationary and specify it in terms of levels. | `corpus/SEM.md#变体-2` | 模板 |
 | `sem#T3` | M7 | vadakkepatt2022 | To rule out multicollinearity concerns for the interaction terms (with r > [threshold]), we residual-centered the interaction of [IV] with [moderator]. Residual centering has been shown to reduce multicollinearity between an interaction term and its first-order effect term, to provide stable and unbiased results ([citation]), and has been used in recent literature ([citations]). | `corpus/SEM.md#变体-3` | 模板 |
 | `sem#T4` | M3/M4 | vadakkepatt2022 | Table [X] details the variables, operationalizations, references, and data sources. [Well-known variables A, B, C] are widely used, so we focus on variables that require additional explanation or coding. First, [unique_variable_1: operationalization + source + justification]. Second, [unique_variable_2: coding procedure + interrater reliability]. Third, [unique_variable_3]. | `corpus/SEM.md#变体-4` | 模板 |
+| `sem#T5` | M7/M8 | giannetti_2022_corporate_lobbying_and_product_recalls_an_inv | We use lagged independent variables to address endogeneity concerns created by reverse causality. As we test for mediation via [the mediator], we lag [the independent variable] by [two] years and [the mediator] by [one] year, so that [X] precedes [M] which precedes [the outcome] in the estimation design. | `corpus/SEM.md#变体-5` | 模板 |
+| `sem#T6` | M7 | giannetti_2022_corporate_lobbying_and_product_recalls_an_inv | Further, as our model is a second-stage moderated mediation model, we include [the mediator] and its interactions with [moderator a], [moderator b], and [moderator c] in the [outcome] equation. To ensure the correct model specification, we include the main effect of [each moderator] in the equation. | `corpus/SEM.md#变体-6` | 模板 |

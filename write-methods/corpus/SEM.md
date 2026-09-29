@@ -3,7 +3,7 @@ design_type: "SEM"
 status: 📋 TEMPLATE
 source_papers:
   - "vadakkepatt_arora_martin_paharia_2022_lobbying_jm (Journal of Marketing): simultaneous-equation SEM + IV + Granger causality + residual centering + table-based variable documentation"
-variants_count: 4
+variants_count: 6
 created: 2026-05-18
 updated: 2026-07-07
 ---
@@ -104,3 +104,33 @@ updated: 2026-07-07
 > "..."
 **与原骨架差异**: ...
 -->
+
+
+### 变体 5: M7 中介因果序滞后错位链（giannetti2022 型）
+**来源论文**: Giannetti & Srinivasan 2022 (Journal of the Academy of Marketing Science)
+**原始句锚点**: "As we test for mediation via lower emphasis on product safety, we lag corporate lobbying by two years and emphasis on product safety by one year."
+**验证状态**: EMERGING
+**写入日期**: 2026-09-28
+**槽位**: M7（兼具 M8 色彩：以时间安排回应反向因果）
+**骨架**:
+> We use lagged independent variables to address endogeneity concerns created by reverse causality. As we test for mediation via [the mediator], we lag [the independent variable] by [two] years and [the mediator] by [one] year, so that [X] precedes [M] which precedes [the outcome] in the estimation design.
+**与原骨架差异**: because-clauses 变体 B（anand_mukherjee）统一累积测量窗以使交互项可估——窗口由估计设计决定但只管长度；本变体把**中介因果序编码进滞后层级**：中介链上每个变量按其位置依次多滞后一期，一句话同时交付反向因果防御与中介时序可证性。适用于：滞后中介链设计（X t-k → M t-1 → Y t）的模型段；区别于统一滞后一期 IV 的面板模板——滞后层级与理论链一一对应而非全体同滞。
+**诚实边界**: 滞后错位缓解（不消除）反向因果与遗漏变量疑虑——不含时不变混杂、预期效应与缓慢漂移混杂仍无解；这是时间安排论证而非识别策略，行文不得升格为 identification claim。
+
+<!-- wb:giannetti_2022_corporate_lobbying_and_product_recalls_an_inv:methods_m7_mediation_lag_staggering_chain -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
+
+### 变体 6: M7 第二阶段被调节中介单方程交互实现（giannetti2022 型）
+**来源论文**: Giannetti & Srinivasan 2022 (Journal of the Academy of Marketing Science)
+**原始句锚点**: "Further, as our model is a second-stage moderated mediation model, we subsequently include both emphasis on product safety and its interactions with marketing CEO, R&D CEO, and focus on radical (vs. incremental) innovation." ... "To ensure the correct model specification, we include the main effect of marketing and R&D CEO and the main effect of focus on radical (vs. incremental) innovation in Eq. 2 above."
+**验证状态**: EMERGING
+**写入日期**: 2026-09-28
+**槽位**: M7
+**骨架**:
+> Further, as our model is a second-stage moderated mediation model, we include [the mediator] and its interactions with [moderator a], [moderator b], and [moderator c] in the [outcome] equation. To ensure the correct model specification, we include the main effect of [each moderator] in the equation.
+**与原骨架差异**: SEM 变体 1（Vadakkepatt）以联立 SEM 联合估计被调节中介——多方程 correlated errors 路线；本变体不另设方程：第二阶段调节直接实现为结果方程内 mediator×moderator 交互项，并以 "To ensure the correct model specification..." 一句声明低阶主效应齐备（层级原理合规），先发制人封堵"只报交互不报主效应"审稿意见。与非线性模型 变体 15（省略机械共线低阶项）方向相反：交互可估性在此靠补齐低阶项而非省略。适用于：计数/二元结果方程 + 调节作用于中介→结果路径的第二阶段被调节中介。
+**诚实边界**: 非线性模型的交互系数不等于边际交互效应（交叉偏导随观测异质）——范文照搬此做法且未预告 predicted counts/IRRs 翻译，正中非线性模型 common_failures[1]；写作时应预告效应量翻译或改用条件间接效应分解，不得把交互系数直接当 moderated mediation 效应量宣读。
+
+<!-- wb:giannetti_2022_corporate_lobbying_and_product_recalls_an_inv:methods_m7_secondstage_moderated_mediation_single_equation -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->

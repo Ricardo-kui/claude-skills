@@ -74,6 +74,10 @@ REGISTRY_ALIASES = {
     "theory-lens-driven-preview": ("theory_lens", "theory-lens-templates"),
     # write-introduction contributions/_index.md is itself the canonical variants file
     "_index": ("contributions", "contribution-statements"),
+    # write-results: SEM-moderated-mediation.md 的 slots 登记在 计数模型 estimator
+    # 名下（该模块无同名 estimator 键；giannetti2022 跑裁定：本篇五项 results 变体
+    # 集中一族）。[0] 仅 intro 侧消费者使用，不匹配 intro 模块即无副作用。
+    "SEM-moderated-mediation": ("micro_templates", "计数模型"),
 }
 
 BLOCK_HEAD = re.compile(r"^#{2,4}\s+.+$", re.M)
@@ -96,8 +100,25 @@ LABEL_FAMILIES = [
 ]
 
 
+def _fenced_mask(lines: list[str]) -> list[bool]:
+    """Per-line mask: True when the line sits inside (or is a delimiter of) a
+    ``` code fence. Fence-blind heading detection treated in-fence demo
+    headings (e.g. '### The Mediating Role of [Mk]') as block boundaries and
+    mis-anchored insertions mid-fence (giannetti2022 跑事故)."""
+    mask, inside = [], False
+    for ln in lines:
+        if ln.lstrip().startswith("```"):
+            mask.append(True)
+            inside = not inside
+        else:
+            mask.append(inside)
+    return mask
+
+
 def load_blocks(lines: list[str]) -> list[dict]:
-    heads = [(i, ln) for i, ln in enumerate(lines) if BLOCK_HEAD.match(ln)]
+    fenced = _fenced_mask(lines)
+    heads = [(i, ln) for i, ln in enumerate(lines)
+             if BLOCK_HEAD.match(ln) and not fenced[i]]
     out = []
     for k, (i, ln) in enumerate(heads):
         end = heads[k + 1][0] if k + 1 < len(heads) else len(lines)
@@ -544,7 +565,11 @@ def build_new_module(target: Path, block_body: str, module_description: str,
             ["### 互斥", ""] + ["- " + b for b in _block_field(block_body, "禁忌")] + [""]
             if _block_field(block_body, "禁忌") else []),
     }
-    order = section_order or list(sections.keys())
+    order = list(section_order) if section_order else list(sections.keys())
+    if section_order:
+        # template 节序可能缺「句法模板」（block 正文唯一载体节）等有内容的默认节
+        # ——缺就追加，block 正文永不静默丢弃（giannetti2022 跑教训）
+        order += [s for s in sections if s not in order and sections.get(s)]
 
     out = ["---",
            f"type: {fm_type}",

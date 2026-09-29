@@ -64,11 +64,11 @@ updated: 2026-09-12
 
 | [自然实验-DiD](自然实验-DiD.md) | 自然实验-DiD | 26 | 2026-08-23 |
 
-| [非线性模型](非线性模型.md) | 非线性模型 | 22 | 2026-08-12 |
+| [非线性模型](非线性模型.md) | 非线性模型 | 23 | 2026-08-12；变体 23：M7 FE 不可行性→RE 替代双方程辩护——never-variant 单位零内变异逐方程豁免 FE 落到 RE（与变体 7 全零丢弃构成镜像解；RE/FE 选择理由补可行性谱系），giannetti_2022_corporate_lobbying_and_product_recalls_an_inv，EMERGING |
 
 | [生存分析](生存分析.md) | 生存分析 | 25 | 2026-08-01；M5 变体 23：调节者独立性四重证据辩护——原始散点分布+触发事件溯源+LOWESS 时序方向+外部同型例证，收尾宣告使用许可（dewan2020，AMJ；首源 EMERGING；区别变体15 操作化层级/变体18 分样本；M7 变体 24：Cox PH 主模型半参数无分布论证+风险集时钟定义（进入/退出/样本最大时长锚定）+二元 DV 家族稳健双轨（dewan2020，AMJ；变体5 CPH-作稳健性的镜像方向；首源 EMERGING）；M3 变体 25：制度过程时间线图锚定二元 DV 时钟+手工检索两步验证协议（record-then-verify）+事件率披露与预测框架正当化（dewan2020，AMJ；首源 EMERGING）） |
 
-| [SEM](SEM.md) | SEM | 4 | 2026-05-18 |
+| [SEM](SEM.md) | SEM | 6 | 2026-05-18；变体 5：M7 中介因果序滞后错位链——X/M/Y 按中介链位置依次错位滞后，一句同时交付反向因果防御与中介时序可证性，giannetti_2022_corporate_lobbying_and_product_recalls_an_inv，EMERGING；变体 6：M7 第二阶段被调节中介单方程交互实现——mediator×moderator 交互入结果方程+低阶主效应完备性合规句（区别 SEM 变体 1 联立路线），giannetti_2022_corporate_lobbying_and_product_recalls_an_inv，EMERGING |
 
 | [实验](实验.md) | 实验 | 6 | 2026-08-03 |
 
@@ -108,7 +108,7 @@ updated: 2026-09-12
 
 | [结构需求-state-space](结构需求-state-space.md) | 结构需求-state-space | 6 | 2026-08-05 |
 
-| **合计** | — | 347 | |
+| **合计** | — | 350 | |
 
 
 

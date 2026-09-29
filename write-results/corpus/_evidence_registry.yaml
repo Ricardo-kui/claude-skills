@@ -7,9 +7,9 @@ meta:
   schema_version: "1.1.0"
   registry_type: estimator-slot-skeleton
   last_updated: 2026-09-13b
-  last_batch_id: batch_2030_dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak_writeback
-  batches_processed: 40
-  total_papers_indexed: 71
+  last_batch_id: batch_2031_giannetti_2022_corporate_lobbying_and_product_recalls_an_inv_writeback
+  batches_processed: 41
+  total_papers_indexed: 72
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
     granularity: "per estimator（对应 corpus/[结果类型].md 文件）"
@@ -3699,20 +3699,23 @@ estimators:
         description: 非显著 / 混合 / 意外发现
         skeleton_variants:
           - id: r6_count_significant_small_effect_downgrade
-            skeleton: "The interaction is [positive/negative] and statistically significant ([coefficient]; p = [value]); this hypothesis receives some support. However, the practical result is quite small and should be considered with caution. To be clear, the statistically significant effect we find does not appear to be particularly meaningful in practice."
-            paper_count: 1
             status: EMERGING
+          - id: r6_null_moderator_battery_unique_role
+            skeleton: "In additional analyses, we investigated whether [alternative moderator operationalizations: presence of a functional executive / a power factor of the function's executives on the TMT] strengthens (weakens) the [direction] effect of [mediator] on [DV]. We [measured the alternatives from the same HR archive] ... [using an established composite procedure] ([citation]). [Alternative a] and [alternative b] are highly correlated (ρ = [value], p < [threshold]). Hence, they cannot be included in the same model. In [Column N of Table Y] we report the results obtained by replacing [focal moderator a] and [focal moderator b] with [alternatives] ... Neither the main effects nor the interactions of [alternatives] with [mediator] are significant. In sum, neither [alternative a] nor [alternative b] act as moderators of the effect of [mediator] on [DV]. Such results underscore the unique role of [focal moderator] in the context of [setting]."
+            notes: "对抗显著性崇拜——显著性与实际意义分离；'receives some support' 保留但显式声明实际意义有限"
+            status: EMERGING
+            paper_count: 2
             subfield_distribution:
               strategy: 1
             sources:
               - Ridge_et_al_2024_AMJ
+              - giannetti_2022_corporate_lobbying_and_product_recalls_an_inv
             transferability: high
             paradigm_exclusivity: 跨估计器；显著但实际效应小必须显式降调
             rhythm_tags:
               - significant_but_small
               - honesty_downgrade
               - to_be_clear
-            notes: "对抗显著性崇拜——显著性与实际意义分离；'receives some support' 保留但显式声明实际意义有限"
             corpus_path: corpus/计数模型.md
           - id: r6_count_null_sign_reversal_alternative
             skeleton: "Hypothesis [x] predicted a [negative] relationship between [predictor] and [outcome]. The findings in Model [y] of Table [z] do not offer support for the hypothesis ([coefficient]; p = [value]). In fact, while not significantly different from 0, the coefficient is [positive], suggesting that the effect may manifest in a different manner than the expected [mechanism]."
@@ -3787,17 +3790,20 @@ estimators:
       R7:
         skeleton_variants:
           - id: r7_theory_derived_posthoc
-            skeleton: "The theoretical logic motivating Hypothesis [x] suggests that [mechanism]. As a result, [behavioral_implication]. [Previous_citation]. Thus, we conducted an analysis to determine whether [testable_derivation]. [Table_x] presents [estimator] models estimating [derived_DV]. The [direction] and significant [effect_type] suggests that [theoretical_conclusion]. This finding is directly consistent with the [theory] explanation."
-            paper_count: 1
             status: EMERGING
+          - id: r7_control_function_peer_instrument_honest_degradation
+            skeleton: "[Focal IV] may be endogenous as firm-level omitted variables (e.g., [organizational culture]) may affect both [IV] and [DV]. To address this potential bias, we re-ran our analysis using a control function approach ([Petrin & Train, 2010]). To instrument the suspect endogenous variable, we ran a [random effects panel] regression of [IV] on [the average instrument value of peer firms] ([citation]) in our sample ... and, for completeness, [the focal firm's own instrument value] ([fixed effects] are also included). We expect [peer instrument] to be correlated with [IV] as (a) [units politically/strategically active in one dimension are also active in others] ([citations]) and (b) [decisions on the instrument are taken in similar environments, with firms facing similar challenges and opportunities] ([citation]). [Peer instrument] also meets the exclusion restriction as peer firms' decisions ... are unlikely to affect a firm's [mediator] and [DV] ([citation]). The results ... indicate that [peer instrument] significantly predicts [IV] (p < [0.05]). For hypotheses testing, we estimate the models ... including the error from the instrumental variable equation ([Petrin & Train, 2010]). Results are robust to the endogeneity correction, although the main effect of [IV] on [mediator] is only marginally significant."
+            notes: ""
+            status: EMERGING
+            paper_count: 2
             subfield_distribution:
               ob_hr: 1
             sources:
               - Desai_2011_AMJ
+              - giannetti_2022_corporate_lobbying_and_product_recalls_an_inv
             transferability: ""
             paradigm_exclusivity: ""
             rhythm_tags: []
-            notes: ""
             corpus_path: corpus/计数模型.md
           - id: r7_text_measure_robustness_bundle
             skeleton: "We assess whether the findings depend on specific choices in measuring [text construct]. First, to address the concern that the results are sensitive to [dictionary/tool choice], we re-estimate the models using [alternative dictionary/tool]; the focal interactions remain [direction/status]. Second, to address [topic granularity/aggregation rule], we re-estimate using [alternative topic count/aggregation method]; the results are [consistent/qualified]. Third, to address [component validity], we examine [components] separately and find that [pattern]. Together, these checks reduce concern that the findings are artifacts of the particular text-measurement pipeline."
@@ -4007,6 +4013,34 @@ estimators:
               - attention_weakening
             notes: 不同经验类型的衰退速度差异（快起快衰 vs 慢起持久）与编码化/默会知识理论解释绑定，衰减归因于注意力随时间弱化——post hoc 结果回接理论构念而非停在描述（corpus 变体33）
             corpus_path: corpus/计数模型.md
+          - id: r8_index_partial_moderated_mediation_sign_derivation
+            skeleton: We further check the significance of the indirect effect ([Preacher & Hayes, 2004]) of [IV] on [DV] via [lower mediator] by re-estimating the equations simultaneously via generalized structural equation modeling. As indirect effects are products of regression coefficients, we bootstrap confidence intervals ([N] replications)." "As our model is a second-stage moderated mediation model, we further explore the mechanisms behind the [two] significant moderating effects using the index of partial moderated mediation ([Hayes & Rockwood, 2020]). ... we expect a [positive] index of partial moderated mediation for [moderator a] (multiplication of a [negative] effect of [IV] on [mediator], and a [negative] interaction effect of [moderator a] with [mediator] on [DV]). Conversely, ... we expect a [negative] index of partial moderated mediation for [moderator b] (multiplication of a [negative] effect ... and a [positive] interaction effect ...). Consistent with our theorizing, the index of
+              partial moderated mediation for [moderator a] is [positive], meaning that the [positive] indirect effect of [IV] on [DV] is [strengthened] for [units] with [moderator a] which ... benefit more from [increased mediator]. ... In both cases, there is evidence of significant moderated mediation (p < [0.05], bootstrapped confidence intervals exclude zero) providing support for the theorized mechanisms. We note that the direct effect of [IV] on [DV] is also significant, confirming partial mediation.
+            notes: ''
+            status: EMERGING
+            paper_count: 1
+            subfield_distribution:
+              marketing: 1
+            sources:
+              giannetti_2022_corporate_lobbying_and_product_recalls_an_inv
+            transferability: ''
+            paradigm_exclusivity: ''
+            rhythm_tags: []
+            corpus_path: corpus/SEM-moderated-mediation.md
+          - id: r8_mediation_requirements_first_column_mapping
+            skeleton: 'According to [Zhao et al. (2010)], testing for mediation requires that: (1) the independent variable, i.e., [IV], is correlated with the mediator, i.e., [mediator]; (2) [mediator] is correlated with the dependent variable, i.e., [DV], when [IV] is controlled for. Testing for moderated mediation further requires that (3) the interactions of [mediator] with the proposed moderators are correlated with [DV] when [IV] is controlled for." "The first requirement is satisfied by [the significant effect of IV on mediator] reported in [Column 1, Table X]. The second requirement is satisfied by [the significant effect of mediator on DV] reported in [Column 4, Table X], supporting [H1b]. The third requirement is satisfied by [the significant interactions] reported in [Column 4, Table X], supporting [H2b] and [H4b]. [H3b] is not supported as [the corresponding interaction] is not significant in [Column 4, Table X]. As [IV] is correlated with [DV] when controlling for [mediator] (and its interactions),
+              we infer partial mediation, suggesting that other mediators may be at work.'
+            notes: ''
+            status: EMERGING
+            paper_count: 1
+            subfield_distribution:
+              marketing: 1
+            sources:
+              giannetti_2022_corporate_lobbying_and_product_recalls_an_inv
+            transferability: ''
+            paradigm_exclusivity: ''
+            rhythm_tags: []
+            corpus_path: corpus/SEM-moderated-mediation.md
       R2:
         description: ""
         skeleton_variants:
@@ -4040,6 +4074,19 @@ estimators:
               - test_driven_estimator_justification
             notes: 三步架构声明 + 基线步显式降级为非假设的复现基线；过离散→NB、序列相关检验→修正估计、Hausman→FE，每步估计器选择由具名检验触发（corpus 变体29）
             corpus_path: corpus/计数模型.md
+          - id: r2_staged_mediation_two_model_navigation
+            skeleton: Below, we first estimate the model of [mediator] (see Eq. [1] above), following which we estimate the model of [count DV] (see Eq. [2] above) to test [H1a–HNa]. Combining the results from the two models allows us to test the mediation and moderated mediation hypotheses, i.e., [H1b–HNb].
+            notes: ''
+            status: EMERGING
+            paper_count: 1
+            subfield_distribution:
+              marketing: 1
+            sources:
+              giannetti_2022_corporate_lobbying_and_product_recalls_an_inv
+            transferability: ''
+            paradigm_exclusivity: ''
+            rhythm_tags: []
+            corpus_path: corpus/SEM-moderated-mediation.md
       R1:
         description: ""
         skeleton_variants:
@@ -6658,6 +6705,11 @@ batch_history:
   source_paper: dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak
   slot_updates_count: 5
   novel_patterns_count: 5
+- batch_id: batch_2031_giannetti_2022_corporate_lobbying_and_product_recalls_an_inv_writeback
+  timestamp: 2026-09-29
+  source_paper: giannetti_2022_corporate_lobbying_and_product_recalls_an_inv
+  slot_updates_count: 2
+  novel_patterns_count: 2
 status_overrides:
   schema: '1.0'
   note: >-

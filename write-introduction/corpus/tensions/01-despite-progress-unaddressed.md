@@ -1013,14 +1013,14 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 
 ### 变体 AH：双流互为遗漏交叉点（chen2009 型）
 
-**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）
+**验证状态**: EMERGING（双篇来源；仅作 `section_variant`）
 
 **功能节拍**: Stream A 进展（audience-outcome）但缺 firm-value DV → Stream B 进展（event→firm value）但缺 strategy IV → 交叉点 remains equivocal / unexamined
 
 **模板**:
 > "[Stream A] provides insights into how [audience A] perceive [strategies], but has not studied effects on [firm financial value]. [Stream B] examines [event]→[firm value] with mixed results, yet has not considered alternative [strategies]. Thus the intersection—how [strategy pole] affects [stock returns]—remains [equivocal / unexamined], despite rising attention to strategy–stock-market linkages."
 
-**来源**: Chen, Ganesan & Liu (2009, *Journal of Marketing*) / `chenganesanliu2009` / Chen_Ganesan_Liu_2009_JM, P4–P6
+**来源**: Chen, Ganesan & Liu (2009, *Journal of Marketing*) / `chenganesanliu2009` / Chen_Ganesan_Liu_2009_JM, P4–P6；第二源：Giannetti & Srinivasan (2022, *JAMS*) / `giannetti_2022_corporate_lobbying_and_product_recalls_an_inv`, P1–P2（双流互为遗漏：CPA 结果文献 × 召回前因文献，交叉点 lobbying→recalls 未检）
 
 **原文锚定**:
 > "More important, when examining the impact of product recalls, the extant studies have not considered the role of alternative product-recall strategies."

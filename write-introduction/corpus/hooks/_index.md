@@ -46,11 +46,12 @@
 | **"Contrary to Belief" Hook** | `12-contrary-to-belief` | 打破普遍认知的制度事实（含变体C：直觉反转保留共识型 habel2016 — "despite its intuitive appeal, this logic may be misleading"） | VERIFIED | eilert2017 (JM), darby2023 (MSOM), habel2016 (JM) |
 | **正向特质阴暗面 Hook** | `24-positive-trait-dark-side` | 正向 CEO 特质 → 反直觉负面组织后果（边界反转，保留特质已有价值；含变体 D：构念条件效价对偶开篇型 dewan2020 — 定义句+双效价开放+when 问句，双效价保持开放而非阴暗面反转，EMERGING） | EMERGING (2p) | chung_low_rust_2022_jams (JAMS), dewan_2020_catching_the_big_fish_the_role_of_scandals_in_mak (AMJ) |
 | **双行业趋势对比 Hook** | `21-dual-industry-trend` | 数字化/宏观趋势 → 两个行业的对比案例建立现象普遍性 | EMERGING (1 paper) | zhao-ding_gaba (ORSC) |
+| **演化社会议题 Hook** | `16-evolving-social-issue` | 演化议题趋势断言开场（变体 A 事件+政策趋势、B 规范演变+立场反转、C 社会议题冷启动+现象定义 weng_yang2024、D 多受众汇流担忧 westphal_zajac_1998_symbolic_management VERIFIED、E：无事件冷启动影响力断言型——趋势断言+机制命名+P1内RQ（同位语声明 DV 学科相关性），giannetti_2022_corporate_lobbying_and_product_recalls_an_inv，EMERGING） | EMERGING (2p) | weng_yang2024, westphal_zajac_1998_symbolic_management, giannetti_2022_corporate_lobbying_and_product_recalls_an_inv (JAMS) |
 
 *`21-dual-industry-trend` — Trend/Phenomenon Hook: macro-trend → dual-industry contrasting examples → "Across [contexts], firms not only [A] but also choose among [B], deciding [trade-off] across multiple dimensions." 适用于需要建立"跨行业普遍现象"可信度的研究。能量: 中。最佳适配 Gap: Inadequacy（首选，依据 P35 "challenges an implicit premise... mechanically translate into" 语言）/ Incompleteness（适配）× Constructs + Phenomenon。canonical 文件已于 2026-06-17 创建。*
 *`24-positive-trait-dark-side` — Trend/Anecdote Hook: "[Positive trait] is widely regarded as desirable... Yet this literature has largely overlooked the possibility that [positive trait] may also have a darker side when [actors] confront [specific situational pressure]." 适用于 upper echelons/领导力/创业研究中正向特质的阴暗面。能量: 中。最佳适配 Gap: Inadequacy（首选）/ Incommensurability。禁忌: 不要与 `06-paradigm-challenge` 同用（前者是边界反转，后者是范式颠覆）。*
 
-*Trend 是最丰富的 Pollock 类型（8 个 hooks，其中 2 个 EMERGING），覆盖从低能量数据开场到高能量范式挑战的全谱系。*
+*Trend 是最丰富的 Pollock 类型（9 个 hooks，其中 3 个 EMERGING），覆盖从低能量数据开场到高能量范式挑战的全谱系。*
 
 ---
 

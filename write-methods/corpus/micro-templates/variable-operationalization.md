@@ -117,3 +117,34 @@ updated: 2026-09-23
 
 <!-- wb:liuliuluo2016:m6_archival_field_measurement_construction_rules -->
 <!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
+
+### 滞后存量构造（M4：carryover 修正）
+
+解释变量具有跨期延续效应时，当年流量口径可用有限分布滞后存量一句话修正，并以外部基准校验高零占比：
+
+| 微模板 | 功能 | 风险 |
+|--------|------|------|
+| `As [the predictor] has carryover effects ([citation]), we use a finite distributed lag model to compute [the predictor] stock, with earlier years of [activity] receiving a lower weight.` | 存量构造的存在理由（carryover）+ 方法命名 | 安全 |
+| `We use a decay parameter (δ) of [0.50]. Specifically, [the predictor] for year t is defined as the sum over k=t-[2] to k=t of δ^(t-k) [activity]_k ([estimator citation]), relative to [the scaling base] in year t ([scaling citation]).` | 衰减参数 + 求和定义式 + 规模化基准三件套 | 安全 |
+| `We subsequently establish the sensitivity of results to alternative decay parameters.` | 衰减参数敏感性预告（一句话，Results 兑现） | 安全 |
+| `The variable has a high incidence of zeros ([83.62]%) which is consistent with past research that most [population units] ([90]%) do not [engage in the activity] ([citation]).` | 零值占比外部基准校验——用总体统计量证明高零占比是现象属性而非测量缺陷 | 安全 |
+
+反模式：只写"取存量"而不给衰减参数与求和窗——构造不可复现；零值密集的解释变量只描述零占比而不引外部基准——读者无法区分数据缺陷与现象稀疏。
+
+<!-- wb:giannetti_2022_corporate_lobbying_and_product_recalls_an_inv:methods_m4_fdl_carryover_stock_zero_benchmark -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
+
+### 事件计数去重规则（M3：档案计数 DV）
+
+以档案事件计数为 DV 时，同一事件的重复登记会让计数膨胀；用一条去重规则（附先例引用）封口：
+
+| 微模板 | 功能 | 风险 |
+|--------|------|------|
+| `Building on past research ([citation]), to avoid overcounting [events], we only retain one [event] when a [unit] experiences more than one [event] with the same "[root-cause field]" on the same [day].` | 去重规则：同一单位 + 同一根因字段 + 同一时间戳 → 计一次，先例引用背书 | 安全 |
+
+反模式：直接报告"事件总数"而不声明重复事件的处理规则——计数 DV 口径不可复现；去重所用字段（根因/类别/编号）必须来自数据源自带字段，不得事后主观归类。
+
+<!-- wb:giannetti_2022_corporate_lobbying_and_product_recalls_an_inv:methods_m3_event_dedup_root_cause_rule -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
