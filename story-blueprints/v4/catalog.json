@@ -2362,6 +2362,94 @@
       "overall_role": "partial_exemplar"
     },
     {
+      "id": "giannetti2022-lobbying-product-recalls",
+      "path": "v4/blueprints/giannetti2022-lobbying-product-recalls.md",
+      "paper_type": "quantitative",
+      "outlet": "Journal of the Academy of Marketing Science",
+      "publication_status": "published",
+      "coverage": "complete",
+      "theoretical_problem_form": [
+        "counterintuitive-self-harm-from-protective-investment",
+        "two-stream-omission-crosspoint",
+        "second-stage-moderated-mediation"
+      ],
+      "narrative_dynamics": [
+        "double-edged-sword-reversal",
+        "institutional-primer-seeds-moderator",
+        "sign-arithmetic-makes-moderated-mediation-derivable",
+        "null-converted-to-sharpened-claim",
+        "heterogeneity-reconciles-mixed-effects"
+      ],
+      "retrieval_signals": [
+        "corporate-lobbying",
+        "product-recalls",
+        "product-safety-emphasis",
+        "iso-13485-certification",
+        "marketing-ceo",
+        "moderated-mediation",
+        "medical-device-approval-tracks"
+      ],
+      "section_learning": {
+        "introduction": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Build an incompleteness gap at the cross-point of two mature streams by naming each stream's systematic omission of the other's outcome (corporate political activity studied only through financial outcomes; recall antecedents studied only at the organization level), then fix the exact unclaimed territory with a single-paper predecessor whose stated limitation — a main effect with no firm heterogeneity — is precisely what the new paper adds.",
+            "Make a three-part preview promise (mechanism finding, moderated-mediation architecture, named data sources with panel dimensions) that the results section can be audited against item by item."
+          ],
+          "caveat": [
+            "The introduction states the direction of every hypothesis as a finding before the theory section argues for it; this works only because the theory can still earn each sign and the results redeem each promise. The data-source enumeration transfers only where sources are publicly nameable and stable."
+          ]
+        },
+        "theory": {
+          "suitable": "yes",
+          "requires": [
+            "moderator variation must be grounded in an institution or an established micro-theory, not introduced for symmetry"
+          ],
+          "learn": [
+            "Plant an institutional primer (the FDA's 510(k) vs PMA dual-track approval system) before the hypotheses so a later moderator (radical vs incremental innovation focus) reads as context-native, and let the same primer do interpretive work again in the results (the negative main effect of radical-innovation focus).",
+            "After each moderated-mediation hypothesis pair, disclose the sign arithmetic — the product of the negative a-path and the interaction's sign — so the reader can pre-compute what the later index of moderated mediation will show; this converts a statistical product into a narratively derived prediction."
+          ],
+          "caveat": [
+            "The story's engine character is theorized as a graded internal state (emphasis on product safety) but the design can only stage a binary certification; adopting this structure requires a mediator whose measure matches its narrative grain, or an explicit signal of the gap."
+          ]
+        },
+        "methods": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Let the lag structure carry the mediation story: X at t-2, M at t-1, Y at t staggers the causal clock inside the design itself, and the switch to random effects is disclosed with its reason (never-certifying and never-recalling firms) rather than made silently."
+          ],
+          "caveat": [
+            "Coefficients are never translated into recall-count magnitudes (no average marginal effects or economic significance), so the staging never shows how large the harm is; the identification defense (control function) is deferred to appendix-level robustness with the first stage available only upon request."
+          ]
+        },
+        "results": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Stage the column walk to mirror the theory's build-up (base model, then add the mediator, then add the interactions) so each hypothesis owns a dedicated coefficient and the reader watches the plot assemble rather than receive a table dump.",
+            "Give the failed hypothesis (R&D CEO) equal staging, then design a follow-in analysis (CMO, CSO, and TMT power) whose own null interactions convert the failure into a sharpened claim about the CEO's unique role."
+          ],
+          "caveat": [
+            "Mediation and moderated mediation are established through significance patterns and bootstrapped intervals without quantifying the indirect effect's magnitude; the column-walk staging depends on hypotheses being grouped by narrative stage, not by estimator convenience."
+          ]
+        },
+        "discussion": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Return to the opening's mixed-evidence literature and convert the story into a reconciliation principle (incorporating firm heterogeneity into empirical testing), so the ending explains the field's conflicting findings rather than re-summarizing this paper's coefficients.",
+            "Route the unexplained direct effect into a concrete future-mediator map (easier FDA approvals), and use the non-FDA lobbying analysis (indirect-only mediation) as evidence for where the remaining mechanism lives."
+          ],
+          "caveat": [
+            "One managerial implication leans on interpreting a null main effect (marketing CEO) through a conjecture about CEOs balancing functional priorities; generalization is explicitly bounded to a single regulated industry."
+          ]
+        }
+      },
+      "overall_role": "partial_exemplar"
+    },
+    {
       "id": "grewal2025",
       "path": "v4/blueprints/grewal2025-digital-brand-safety.md",
       "paper_type": "mixed_methods",
