@@ -3855,6 +3855,99 @@
       "overall_role": "partial_exemplar"
     },
     {
+      "id": "javadinia2024",
+      "path": "v4/blueprints/javadinia_2024_recall_environment_and_post_recall_stock_mark.md",
+      "paper_type": "quantitative (single archival event study with construct-development interviews and survey)",
+      "outlet": "Journal of the Academy of Marketing Science",
+      "publication_status": "published",
+      "coverage": "complete",
+      "theoretical_problem_form": [
+        "unconceptualized-context-construct",
+        "uncertain-event-valuation"
+      ],
+      "narrative_dynamics": [
+        "frequency-hook-to-existence-claim",
+        "construct-built-on-page",
+        "census-by-absence",
+        "proximate-vs-distal-information-duel",
+        "single-engine-dual-moderators",
+        "effect-reversal-grid-ending"
+      ],
+      "retrieval_signals": [
+        "recall-environment",
+        "salience-theory",
+        "investor-attention",
+        "expectation-adjustment",
+        "event-study-car",
+        "coarsened-exact-matching",
+        "product-age",
+        "reliability-reputation"
+      ],
+      "section_learning": {
+        "introduction": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Use an epigraph as a theme-loading device: an artist's quote ('For me context is the key' — Kenneth Noland) states the paper's core idea (context determines judgment) before any citation appears, so the hook's frequency stack can land on an idea the reader has already been given.",
+            "Convert a frequency-stacked trend hook into an existence claim in one sentence: the paragraph piles NHTSA/FDA counts and a 131% increase, then ends by asserting that every new recall 'occurs in a recall environment constituted by recalls of other firms' — the last sentence turns background data into the paper's main character."
+          ],
+          "caveat": [
+            "The hook carries the stakes alone; there is no separate stakes paragraph and no consequence chain (deaths, dollar losses) — the energy is moderate and depends on the reader already caring about recall penalties.",
+            "The gap is positioned against only two papers (Borah & Tellis 2016; Mukherjee et al. 2022), the contribution block is a five-item flat enumeration (a-e) without prioritization, and the gap census itself is delegated to Table 1, which physically lives in the theory section."
+          ]
+        },
+        "theory": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Build the construct on the page: define recall environment intensity through salience features, then validate each proposed dimension with quoted investor-interview speech (media repetition, unit counts, hazard, recency) plus an MTurk survey before deriving any hypothesis — the reader watches the main character acquire traits from practitioners, not just from citations.",
+            "Run two moderators off one engine: both boundary conditions derive from a single proximate-vs-distal information rule (Higgins 1996) — when directly relevant product information (age, reputation) already justifies or explains the recall, distal industry-level salience matters less — so H2 and H3 are two applications of one mechanism rather than two added interactions."
+          ],
+          "caveat": [
+            "The concept-measurement hand-off leaks: the construct is announced with five dimensions (publicity, hazard, size, scope, recency), but the measure PCA-combines four inputs with recency demoted to a weighting factor — the text's 'five aspects' never reconciles with the four-index equation block.",
+            "Dimension validation rests on respondent agreement (face validity from 20 interviews and a small MTurk survey); no discriminant or criterion validation of the five-dimension structure is attempted before the hypotheses are built on it, and the Rivian example is asserted as 'presumably' high-intensity rather than shown."
+          ]
+        },
+        "methods": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Make the sampling funnel part of the identification story: 526 → 497 → 148 recalls, with each deletion (no announcement date, unlisted firms, confounding events, nearby recalls) given its own bias rationale, so the reader experiences sample construction as design rather than attrition.",
+            "Turn a sign conflict into a design feature: spillover from nearby recalls is negative while the hypothesized environment effect is positive, so excluding recalls in a [-2,2] window of other firms' announcements is argued to make detection harder — a conservative test — not merely to shrink the sample."
+          ],
+          "caveat": [
+            "Treatment construction is under-defended where it matters: ENV is binarized at zero (composite score sign = high/low) with footnote-level justification, though the PCA score is continuous; and the CEM step's unmatchable observations are not accounted (148 recalls enter matching, 138 remain, with no report of dropped unmatchables).",
+            "Table 2's REPUT definition ('averaged over five years prior to the recall year') contradicts the methods text ('average over the three years prior') — an operationalization-table contradiction a hypothesis-critical reader will hit twice."
+          ]
+        },
+        "results": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Stage the dependent-variable choice as a tournament: four event windows are tested and only CAR [0,0] is significant, so the DV selection is presented as an empirical fact with prior-literature backup rather than an assumption — the reader sees the market penalty exist before any hypothesis is tested.",
+            "Use preliminary analyses to probe the theory's premises before the main models: Google search trends validate that ENV captures attention, an incident/no-incident split shows the effect vanishes when the focal recall itself draws attention (the salience premise under stress), and a model-free high-vs-low comparison (+0.0061) gives the H1 sign before any regression."
+          ],
+          "caveat": [
+            "Effect sizes are tiny (main effect ≈ 0.007 of the announcement-day abnormal return) and are never translated into economic significance — no dollar or percentage-of-penalty framing appears in the results.",
+            "The robustness summary outruns its own table: the text concludes the moderator hypotheses 'get strong support' across R1-R15, but several displayed models (R10-R14) show insignificant ENV×REPUT estimates; the summary averages over the battery instead of reporting where the moderation wobbles."
+          ]
+        },
+        "discussion": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Convert the interaction into a signed lookup grid: Eq. 9's marginal effect becomes Table 8, an age × reputation matrix of Positive/Not Sig/Negative cells anchored with named brand-year examples (Lexus 2019 positive for young vehicles; Jaguar 2011 negative beyond age 16) — managers get a decision table, not a coefficient recitation.",
+            "Generalize by analogy rather than by assertion: the closing contribution moves outward through parallel clustering phenomena (IPO hot/cold markets, new-product announcement clusters) to claim the transferable point — when firm events cluster, investors price the information content of prior events, not just the focal one."
+          ],
+          "caveat": [
+            "The ending restates the introduction's contribution list in the same order rather than transforming the opening question; the incident-split complication (context stops mattering when the focal recall is itself attention-grabbing) is never revisited, and limitations are brief and generic (single industry, industry-level environment).",
+            "The practical grid's marginal-effect derivation inherits the binarized ENV, so Table 8's 'low to high' transition is a 0/1 contrast presented as if continuous — the table's polish hides the operationalization's coarseness."
+          ]
+        }
+      },
+      "overall_role": "partial_exemplar"
+    },
+    {
       "id": "jeon2026",
       "path": "v4/blueprints/jeon2026-fuel-efficiency-safety-defects.md",
       "paper_type": "quantitative",
