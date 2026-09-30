@@ -20,13 +20,13 @@
 
 | 库 | 来源文件 | 子清单 | verbatim | 模板 |
 |---|---|---|---|---|
-| hypothesis_derivation_patterns | `corpus/subprotocols/hypothesis_derivation_patterns.md` | [`subprotocols-hypothesis_derivation_patterns.md`](subprotocols-hypothesis_derivation_patterns.md) | 20 | 47 |
+| hypothesis_derivation_patterns | `corpus/subprotocols/hypothesis_derivation_patterns.md` | [`subprotocols-hypothesis_derivation_patterns.md`](subprotocols-hypothesis_derivation_patterns.md) | 23 | 50 |
 | argumentation_patterns | `corpus/subprotocols/argumentation_patterns.md` | [`subprotocols-argumentation_patterns.md`](subprotocols-argumentation_patterns.md) | 32 | 36 |
 | hypothesis_organization_patterns | `corpus/subprotocols/hypothesis_organization_patterns.md` | [`subprotocols-hypothesis_organization_patterns.md`](subprotocols-hypothesis_organization_patterns.md) | 16 | 32 |
 | evidence_patterns | `corpus/subprotocols/evidence_patterns.md` | [`subprotocols-evidence_patterns.md`](subprotocols-evidence_patterns.md) | 10 | 15 |
 | construct_differentiation_patterns | `corpus/subprotocols/construct_differentiation_patterns.md` | [`subprotocols-construct_differentiation_patterns.md`](subprotocols-construct_differentiation_patterns.md) | 11 | 11 |
-| moderator_selection_frameworks | `corpus/subprotocols/moderator_selection_frameworks.md` | [`subprotocols-moderator_selection_frameworks.md`](subprotocols-moderator_selection_frameworks.md) | 8 | 14 |
-| bilateral_argumentation_templates | `corpus/subprotocols/bilateral_argumentation_templates.md` | [`subprotocols-bilateral_argumentation_templates.md`](subprotocols-bilateral_argumentation_templates.md) | 3 | 18 |
+| moderator_selection_frameworks | `corpus/subprotocols/moderator_selection_frameworks.md` | [`subprotocols-moderator_selection_frameworks.md`](subprotocols-moderator_selection_frameworks.md) | 9 | 15 |
+| bilateral_argumentation_templates | `corpus/subprotocols/bilateral_argumentation_templates.md` | [`subprotocols-bilateral_argumentation_templates.md`](subprotocols-bilateral_argumentation_templates.md) | 4 | 19 |
 
 ## 来源子清单：sentences 句式库
 
@@ -41,7 +41,7 @@
 | mechanism_chain | [`sentences-mechanism_chain.md`](sentences-mechanism_chain.md) | 96 | 76 |
 | moderation | [`sentences-moderation.md`](sentences-moderation.md) | 36 | 43 |
 
-合计：22 个子清单 / verbatim 516 条 / 模板 625 条。
+合计：22 个子清单 / verbatim 521 条 / 模板 630 条。
 
 ## 待补录
 

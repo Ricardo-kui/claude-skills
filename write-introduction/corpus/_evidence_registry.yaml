@@ -382,11 +382,12 @@ evidence:
         reject: 0
         common_revise_reasons: []
     21-dual-industry-trend:
-      paper_count: 1
+      paper_count: 2
       papers:
         - zhao_ding2022 (OS)
+        - mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate (JM)
       gap_distribution:
-        Incompleteness: 0
+        Incompleteness: 1
         Inadequacy: 1
         Incommensurability: 0
       status: EMERGING
@@ -641,7 +642,7 @@ evidence:
         common_revise_reasons: []
   tensions:
     01-despite-progress-unaddressed:
-      paper_count: 45
+      paper_count: 46
       papers:
         - ahmadi2017 (JMS)
         - cancellieri2023 (SMJ)
@@ -688,8 +689,9 @@ evidence:
         - gulati_nohria_zaheer_2000_strategic_networks (Strategic Management Journal)
         - lu_et_al_2022_frenemies_corporate_advertising (Management Science)
         - javadinia_2024_recall_environment_and_post_recall_stock_mark (JAMS)
+        - mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate (JM)
       gap_distribution:
-        Incompleteness: 42
+        Incompleteness: 43
         Inadequacy: 3
         Incommensurability: 0
       status: ROBUST
@@ -1525,6 +1527,7 @@ evidence:
         - pfarrer_pollock_and_rindova_2010 (AMJ)
         - gulati_1998_alliances_and_networks (SMJ)
         - gulati_nohria_zaheer_2000_strategic_networks (SMJ)
+        - mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate
       gap_distribution:
         Incompleteness: 0
         Inadequacy: 5
@@ -2262,7 +2265,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     theory-lens-templates:
-      paper_count: 47
+      paper_count: 48
       papers:
         - anderson_reeb2004 (ASQ)
         - ceo_regulatory_focus_ijrm (IJRM)
@@ -2311,6 +2314,7 @@ evidence:
         - pfarrer_pollock_and_rindova_2010 (Academy of Management Journal)
         - gulati_1998_alliances_and_networks (Strategic Management Journal)
         - gulati_nohria_zaheer_2000_strategic_networks (Strategic Management Journal)
+        - mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate (JM)
       status: ROBUST
       generativity: ADAPTABLE
       exclusivity: LOW
@@ -2322,7 +2326,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
       gap_distribution:
-        Incompleteness: 23
+        Incompleteness: 24
         Inadequacy: 21
         Incommensurability: 3
     07-socio-cognitive-frame:
@@ -2422,15 +2426,16 @@ evidence:
         reject: 0
         common_revise_reasons: []
     02-dual-theory-layered:
-      paper_count: 5
+      paper_count: 6
       papers:
         - hoffmann_cheong_phan_zurbruegg2024 (JM)
         - moon_2026_the_impact_of_legal_protection_of_trade_secrets_on (Journal of Marketing)
         - post_2022_women_tmt_strategic_renewal (Academy of Management Journal)
         - gulati2005-adaptation-vertical (Strategic Management Journal)
         - gulati_higgins_2003_which_ties_matter (Strategic Management Journal)
+        - mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate (JM)
       gap_distribution:
-        Incompleteness: 4
+        Incompleteness: 5
         Inadequacy: 0
         Incommensurability: 1
       status: VERIFIED
@@ -2574,6 +2579,7 @@ paper_index:
   giannetti_2022_corporate_lobbying_and_product_recalls_an_inv: Incompleteness
   raithel_2024_product_recall_effectiveness_and_consumers_part: Incompleteness
   javadinia_2024_recall_environment_and_post_recall_stock_mark: Incompleteness
+  mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate: Incompleteness
 
 # === AUTHORED ===
 critique:

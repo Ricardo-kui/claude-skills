@@ -2029,3 +2029,103 @@ Hence, we propose: H1: High (vs. low) [X] attenuates [the penalty] of [events].
 
 <!-- wb:javadinia_2024_recall_environment_and_post_recall_stock_mark:expectation_violation_context_conditioned_surprise_mechanism -->
 <!-- wb-meta: gap=Incompleteness status=EMERGING dim=Mechanism tbt="机制推演型（构念新建+双调节边界）" -->
+
+
+<!--
+pattern_id: dual_lens_independent_convergence_main_effect
+build_type: 假设树型（跨类型适用：机制推演型主效应）
+source_papers: ["Mallapragada_Bommaraju_Kumar_Pedada_2025_JM"]
+confidence: medium
+-->
+## Pattern: Dual-Lens Independent Convergence（Mallapragada et al. 2025 JM 型）
+> 论证角色：Framing（用两个核心逻辑独立的透镜各自完整推导同一方向预测，再以独立性标记句收敛为单一主效应假设）
+
+**适用场景**: 主效应可由两个成熟理论分别独立推出（一个承担 safeguarding/economizing 逻辑，另一个承担 strategizing/recombination 逻辑），需要用双透镜收敛加固方向一致性、又不引入中介构念时。
+**排列模式**: Warrant-Embedded + Parallel（每透镜一个推导小节，各节独立收束）
+**范文来源**: Mallapragada, Bommaraju, Kumar, and Pedada (2025), *Journal of Marketing*
+
+**骨架**:
+```
+### Prediction from [Lens A]
+We contend that [X] exposes the firm to increasing [governance hazard] in [exchange context] for the following reasons.
+First, [attribute asymmetry 1 of X's underlying assets] triggers [hazard 1]. [Warrant].
+Second, [attribute asymmetry 2] endangers [the firm's broader asset base]. [Warrant].
+Third, [attribute asymmetry 3] strains [the exchange process]. [Warrant].
+In sum, [X] entails [hazard 1], [hazard 2], and [hazard 3], which we predict will motivate [mode Y].
+
+### Prediction from [Lens B]
+[Lens B] conceptualizes [assets] as [core property bearing on recombination]. [Independent logic].
+We argue that [X] favors [mode Y] precisely because [Lens B's own reason]. [Warrant].
+
+Thus, like [Lens A]—but independent of [Lens A]'s [core logic]—[Lens B] also suggests [same directional prediction].
+[H]: Increasing [X] is associated [direction] with the likelihood of choosing [mode Y] over [mode Z].
+```
+
+**为什么有效**: 两个透镜的推导各自完整、互不借用；收敛句用 "but independent of" 显式声明逻辑独立性，读者无法以"一个透镜已足够"削弱假设——双透镜从稳健性角度而非重复角度加固 H。
+**注意事项**: 两个透镜必须提供真正不同的核心逻辑（如 economizing vs. strategizing）；第二透镜若只是第一透镜换皮，独立性声明会被审稿人识破。收敛句只用于方向一致的预测；方向相反时应走竞争假设路径。
+**反模式**: 把第二透镜写成第一透镜的附录式复述；或在收敛句中混入仅单一透镜支撑的机制细节。
+**原文锚点**："Thus, like TCE—but independent of TCE's safeguarding logic—RBV also suggests a positive association between an appropriation emphasis and the likelihood of acquisitions."
+
+<!-- wb:mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate:dual_lens_independent_convergence_main_effect -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Mechanism tbt="假设树型" -->
+
+
+<!--
+pattern_id: attribute_asymmetry_hazard_contrasts_mode_choice
+build_type: 假设树型（机制推演型主效应通用）
+source_papers: ["Mallapragada_Bommaraju_Kumar_Pedada_2025_JM"]
+confidence: medium
+-->
+## Pattern: Attribute-Asymmetry Hazard Contrasts → Categorical Mode Choice（Mallapragada et al. 2025 JM 型）
+> 论证角色：Reason（把两类资产的属性差异逐一转译为交换危害差异，三路平行推导收敛到同一治理模式选择预测）
+
+**适用场景**: IV 是"相对导向"构念（对 A 型资产 vs. B 型资产的相对依赖），DV 是两个离散治理/组织模式之间的选择；每条机制从一对属性不对称（有形性、模块化、适应频率等）推出一个危害差。
+**排列模式**: Parallel（First/Second/Third 三路危害）+ 三元收束句
+**范文来源**: Mallapragada, Bommaraju, Kumar, and Pedada (2025), *Journal of Marketing*
+
+**骨架**:
+```
+We contend that increasing [X toward A-type assets] exposes the firm to increasing [governance hazards] for the following reasons.
+First, A-type assets are [attribute profile 1], whereas B-type assets are [contrast]; this asymmetry triggers [hazard 1] in [exchange]. [Warrant + illustration].
+Second, A-type assets are [attribute profile 2], so partner actions threaten [the owner's entire asset base]; B-type assets can be [compartmentalized]. [Warrant].
+Third, [A-type tasks] require [more frequent adaptations], giving the partner repeated openings for [opportunism]. [Warrant].
+In sum, [X] entails [hazard 1], [hazard 2], and [hazard 3], which we predict will motivate [mode choice Y].
+```
+
+**为什么有效**: 每条机制都以两类资产在同一属性维度上的不对称为起点，危害是从属性差异推导出来的而非断言；三元收束句显式命名三条危害，为后续调节假设提供可逐条回收的机制锚点。
+**注意事项**: 三条机制必须对应可区分的属性维度，每个属性差异都要有独立文献支撑；收束句所列 hazards 的顺序应与 First/Second/Third 一一对应。
+**反模式**: 三条机制实际共用同一属性维度（伪平行）；或危害只在 A 类资产上论证而未与 B 类对比（不对称性缺失）。
+**原文锚点**："In sum, increasing emphasis toward value appropriation versus value creation, which involves greater reliance on marketing versus R&D assets, entails greater valuation ambiguity, risks encompassing the firm's larger asset base (lower modularity), and more frequent disturbances."
+
+<!-- wb:mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate:attribute_asymmetry_hazard_contrasts_mode_choice -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Mechanism tbt="假设树型" -->
+
+
+<!--
+pattern_id: lens_asymmetric_bounded_moderation
+build_type: 假设树型（双透镜设计专用）
+source_papers: ["Mallapragada_Bommaraju_Kumar_Pedada_2025_JM"]
+confidence: medium
+-->
+## Pattern: Lens-Asymmetric Bounded Moderation（Mallapragada et al. 2025 JM 型）
+> 论证角色：Warrant（显式声明第二透镜对调节机制沉默，把调节假设的证据范围限定在单一透镜内以换取主张诚实性）
+
+**适用场景**: 双透镜设计中主效应由两个透镜共同支撑，但某个 moderator 的机制只能从其中一个透镜推出（第二透镜对其核心过程无直接角色）；用于避免把单透镜调节伪装成双透镜共识。
+**排列模式**: Warrant-Embedded（第二透镜沉默声明 → 单透镜调节假设）
+**范文来源**: Mallapragada, Bommaraju, Kumar, and Pedada (2025), *Journal of Marketing*
+
+**骨架**:
+```
+Finally, consider the [Lens B] view here. As we reasoned, [Lens B's mechanism for the main effect].
+However, extant theories do not ascribe an express or direct role to [W] in [Lens B's core process].
+Consequently, we propose a moderating role for [W] only from [Lens A], not from the [Lens B] perspective:
+[H]: [W] weakens the positive association between [X] and [likelihood of Y].
+```
+
+**为什么有效**: 一句"透镜沉默"声明把调节主张的理论负担限定在真正承载它的透镜上——读者不会误以为该 H 也获得第二透镜的独立支撑，主效应与调节假设的证据等级差异被显式化。
+**注意事项**: 沉默声明必须对第二透镜的核心逻辑公允（说明它为何确实不预测该调节）；假设陈述仍需完整方向；若第二透镜其实可推出相反方向的调节，应改走竞争假设路径。
+**反模式**: 为追求双透镜一致性而给第二透镜强行编造调节角色；或沉默声明含糊到读者无法核验第二透镜为何沉默。
+**原文锚点**："However, extant theories do not ascribe an express or direct role to analyst coverage in cultivating such ties. Consequently, we propose a moderating role for analyst coverage only from TCE, not from the RBV perspective:"
+
+<!-- wb:mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate:lens_asymmetric_bounded_moderation -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Boundary tbt="假设树型" -->

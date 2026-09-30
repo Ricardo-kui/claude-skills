@@ -401,7 +401,7 @@ evidence:
       design_types:
         - 面板数据×非线性模型
         - 被调节中介两方程组
-        - " Y t）"
+        - 滞后错位（X t-2 / M t-1 / Y t）
         - SEM
         - 非线性模型
       micro_templates:
@@ -412,7 +412,7 @@ evidence:
         - M4
         - M7
       story_fidelity: section_variant
-      note: 2026-09-29 整篇蒸馏 writeback 补登记 micro-templates：m4_fdl_carryover_stock_zero_benchmark（variable-operationalization.md，M4 存量构造——carryover 理由+衰减参数 δ 求和定义式+规模化基准三件套+高零占比外部基准校验）；m3_event_dedup_root_cause_rule（variable-operationalization.md，M3 档案事件计数去重——同单位+同根因字段+同时间戳计一次，先例引用背书）。design_types 对应已登记变体：非线性模型 变体23、SEM 变体5/6。micro-templates 文件层无独立 registry 条目结构，按邻近 by_source_paper.micro_templates 格式登记（沿用 2026-08-28/08-29 because-clauses 先例）。
+      note: 2026-09-29 整篇蒸馏 writeback 补登记 micro-templates：m4_fdl_carryover_stock_zero_benchmark（variable-operationalization.md，M4 存量构造——carryover 理由+衰减参数 δ 求和定义式+规模化基准三件套+高零占比外部基准校验）；m3_event_dedup_root_cause_rule（variable-operationalization.md，M3 档案事件计数去重——同单位+同根因字段+同时间戳计一次，先例引用背书）。design_types 对应已登记变体：非线性模型 变体23、SEM 变体5/6。micro-templates 文件层无独立 registry 条目结构，按邻近 by_source_paper 格式登记（沿用 2026-08-28/08-29 because-clauses 先例）。
     raithel_2024_product_recall_effectiveness_and_consumers_part:
       journal: Journal of the Academy of Marketing Science
       title: "Product recall effectiveness and consumers' participation in corrective actions"
@@ -435,7 +435,7 @@ evidence:
       note: 2026-09-29 整篇蒸馏 writeback 补登记 micro-templates：m8_exclusion_restriction_empirical_validity_pair（heckman-peer-prevalence-exclusion.md 选项3，M8 排除限制实证校验对——同伴流行度工具与下游结果相关不显著 + 辅助回归复验双证据）；m6_control_purpose_built_mini_survey（variable-operationalization.md，M6 控制变量目的性补测——档案缺口构念用小样本调查定向补测并报告相关）；m2_funnel_with_selection_problem_foreshadow（robustness-foreshadowing.md，M2 漏斗式样本叙述与自选择问题预告缝合）。design_types 对应已登记变体：两阶段模型 m8_dual_selection_control_functions、非线性模型 m7_bounded_percentage_fractional_model_stack。micro-templates 文件层无独立 registry 条目结构，按邻近 by_source_paper.micro_templates 格式登记（沿用 2026-08-28/08-29 because-clauses 先例）。
     javadinia_2024_recall_environment_and_post_recall_stock_mark:
       journal: Journal of the Academy of Marketing Science
-      title: "Recall environment and post-recall stock market response"
+      title: Recall environment and post-recall stock market response
       status: EMERGING
       verification_basis: first_distill_ladder_default
       design_types:
@@ -451,24 +451,20 @@ evidence:
         - M8
       story_fidelity: section_variant
       note: 2026-09-29 整篇蒸馏 writeback 补登记 micro-templates：m2_clean_window_competing_biases_because（because-clauses.md 变体E，M2 竞争偏倚下洗净窗口定径 because 链）；m4_environment_intensity_composite_measure（variable-operationalization.md，M4 环境暴露综合指标构造——节奏定窗+信息边界+recency 加权合成）；m2_final_n_comparability_closure（funnel-rhythm.md，M2 最终样本可比性对标收口）。design_types 对应已登记变体：PSM匹配面板 变体5（时点选择协变量辩护链）、micro-templates 3 条。micro-templates 文件层无独立 registry 条目结构，按邻近 by_source_paper.micro_templates 格式登记（沿用 2026-08-28/08-29 because-clauses 先例）。
-  giannetti_2022_corporate_lobbying_and_product_recalls_an_inv:
-    journal: Journal of the Academy of Marketing Science
-    title: "Corporate lobbying and product recalls: an investigation in the U.S. medical device industry"
-    status: EMERGING
-    verification_basis: first_distill_ladder_default
-    design_types:
-      - 面板数据×非线性模型
-      - 被调节中介两方程组
-      - 滞后错位（X t-2 / M t-1 / Y t）
-    micro_templates:
-      - m4_fdl_carryover_stock_zero_benchmark
-      - m3_event_dedup_root_cause_rule
-    slots_covered:
-      - M3
-      - M4
-      - M7
-    story_fidelity: section_variant
-    note: 2026-09-29 整篇蒸馏 writeback 补登记 micro-templates：m4_fdl_carryover_stock_zero_benchmark（variable-operationalization.md，M4 存量构造——carryover 理由+衰减参数 δ 求和定义式+规模化基准三件套+高零占比外部基准校验）；m3_event_dedup_root_cause_rule（variable-operationalization.md，M3 档案事件计数去重——同单位+同根因字段+同时间戳计一次，先例引用背书）。design_types 对应已登记变体：非线性模型 变体23、SEM 变体5/6。micro-templates 文件层无独立 registry 条目结构，按邻近 by_source_paper.micro_templates 格式登记。
+    mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate:
+      journal: Journal of Marketing
+      title: "To Acquire or to Ally? The Impact of Strategic Emphasis on Governance Mode Choice"
+      status: EMERGING
+      verification_basis: first_distill_ladder_default (2026-09-29 auto-write 首次蒸馏，EMERGING 默认梯)
+      design_types:
+        - 两阶段模型
+        - 非线性模型
+        - 文本构念测量
+      micro_templates:
+        - m8_dualgranularity_peer_exclusion_strengthening
+      slots_covered:
+        - M8
+      note: "整篇蒸馏 auto-write 写回（2026-09-29）micro-template 补登记：m8_dualgranularity_peer_exclusion_strengthening（micro-templates/heckman-peer-prevalence-exclusion.md 选项4——双层同伴工具+部门多样性排除强化）。大族条目（两阶段模型/非线性模型/文本构念测量）的 paper 行与 paper_count 由 sync_residuals 写入。micro-templates 文件层无独立 registry 条目结构，按邻近 by_source_paper.micro_templates 格式登记（沿用 2026-08-28/08-29 because-clauses 先例）。"
   by_design_type:
     面板数据-OLS:
       paper_count: 41
@@ -563,7 +559,7 @@ evidence:
           - "SMJ 编辑与 R1#2、JAMS R1 主问题#2：用被处理影响的变量（LnADV）与处理交互做机制检验构成 bad-controls；机制主张须由独立测度承接，post-treatment 交互只能降级为 only-when 条件性证据（moon2026 Table 6 三段式为正面模板）"
           - "SMJ R1#8、R2#7 与 JAMS AE、R1（两轮四评审+编辑）一致要求 heterogeneity-robust 估计量（Sun-Abraham/Callaway-Sant'Anna/stacked/BJS）作主分析、TWFE 降级为基准，且调节效应也须在 robust 设计内重估；仅附录图示无系数表被判不足（moon2026 对照：stacked DiD 进主表 Model 7）"
     非线性模型:
-      paper_count: 19
+      paper_count: 21
       papers:
         - lee_park_2024_smj (SMJ)
         - bendig_hensellek_schulte_2024_etp (ETP)
@@ -584,6 +580,7 @@ evidence:
         - zhou2017
         - giannetti_2022_corporate_lobbying_and_product_recalls_an_inv (JAMS)
         - raithel_2024_product_recall_effectiveness_and_consumers_part (JAMS)
+        - mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate (JM)
       status: VERIFIED
       slots_covered:
         - M1
@@ -898,7 +895,7 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     文本构念测量:
-      paper_count: 14
+      paper_count: 16
       papers:
         - cutolo2024 (JM)
         - kashmiri_nicol_arora_2017_jams (JAMS)
@@ -914,6 +911,7 @@ evidence:
         - lun_zurbruegg_mount_2026_etp
         - mannor_wowak_bartkus_gomez_mejia_2016_smj
         - zhao_ding_gaba_orsc
+        - mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate (JM)
       status: VERIFIED
       verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
       slots_covered:
@@ -935,7 +933,7 @@ evidence:
         last_critique: null
         common_revise_reasons: []
     PSM匹配面板:
-      paper_count: 8
+      paper_count: 7
       papers:
         - pfarrer2010 (AMJ)
         - mayo2021 (POMS)
@@ -999,7 +997,7 @@ evidence:
         - gulati_2007_dependence_asymmetry_and_joint_dependence_in_int (ASQ)
       status: VERIFIED
     两阶段模型:
-      paper_count: 14
+      paper_count: 16
       papers:
         - chen_ganesan_liu_2009_jm (JM)
         - chung_low_rust_2022_jams (JAMS)
@@ -1015,6 +1013,7 @@ evidence:
         - pupovac_astvansh_carrillat_legoux_2026_pom
         - liuliuluo2016
         - raithel_2024_product_recall_effectiveness_and_consumers_part (JAMS)
+        - mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate (JM)
       status: ROBUST
       slots_covered:
         - M7

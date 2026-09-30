@@ -7,9 +7,9 @@ meta:
   schema_version: "1.1.0"
   registry_type: estimator-slot-skeleton
   last_updated: 2026-09-13b
-  last_batch_id: batch_2034_javadinia_2024_recall_environment_and_post_recall_stock_mark_writeback
-  batches_processed: 44
-  total_papers_indexed: 74
+  last_batch_id: batch_2035_mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate_writeback
+  batches_processed: 45
+  total_papers_indexed: 75
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
     granularity: "per estimator（对应 corpus/[结果类型].md 文件）"
@@ -1682,6 +1682,13 @@ estimators:
             sources:
               - mao_dong_lee_2022_msom
             status: VERIFIED
+          - id: r7_alternative_choice_swap_inferences_hold
+            skeleton: "In our primary analysis, we used [primary choice] to [address threat]. As an alternative, we used [alternative choice] ([citation]) as a robustness check (see [Table W#] in [Web Appendix]). The results of these alternative analyses were consistent with those from our primary analysis (Table [X]), suggesting that our inferences hold regardless of the [choice class: model specification / method used to mitigate endogeneity / operationalization of unobserved heterogeneity] in [focal variable]."
+            notes: "\ncorpus Logit-Probit-Ordered-Probit.md AY：变体 4/22 是\"补一个修正/换一个估计器\"的单点动作\n本变体是威胁家族——把 auxiliary modeling choice 逐项整体置换（函数形式 probit→logit、修正方法 parametric control function→non-parametric control function residual、不可观测异质性操作化 离散 topic 哑元→连续概率），每项 \"In our primary analysis... As an alternative...\" 开场、\"inferences hold regardless of ...\" 收束，收束句把同类置换升格为 choice-class 级不变性主张。"
+            status: VERIFIED
+            sources:
+              - mao_dong_lee_2022_msom
+              - mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate
           - id: r7_control_function_selection_warrant_raithel2024
             skeleton: "We present our results of Equation ([N]) in Table ([X]). Columns ([1]), ([2]), and ([3]) present results in which we use [the first 1/2], [the first 1/3], and [the first 1/4] of [the relevant cycle], respectively, to identify [the threshold-defined condition]. Our results are largely consistent in all three columns: [the coefficients of focal cases] keep the same sign and significance pattern under all three definitions."
             notes: Untabulated IV results cannot carry decisive identification; significance attenuation must remain visible.
@@ -1847,18 +1854,21 @@ estimators:
         description: ""
         skeleton_variants:
           - id: r2_binary_outcome_hypothesis_pair_table
-            skeleton: "[Hypotheses tested in matched pairs (H1a/H1b, H2a/H2b) across two separate tables for positive vs negative surprise dummies]. [Column 1 = controls only; Column 2 = full model with focal dummies]. [Each hypothesis evaluated by referencing odds ratio and significance, with explicit directional language: \"were less/more likely\"]. [Mixed support acknowledged in-line: one hypothesis in pair supported, the other not, without deferring to Discussion].\n"
-            paper_count: 1
             status: VERIFIED
+          - id: r2_corrected_headline_model_staircase
+            skeleton: "We estimated [four] nested models, presented in Table [X]: M[1], with all the control variables but no theoretical variables; M[2], with controls and theoretical variables but no moderation effects; M[3], the hypothesized model that includes moderation effects but no endogeneity corrections; and finally, M[4], the hypothesized model with all effects and endogeneity corrections. We discuss the results for M[4]."
+            notes: ""
+            status: VERIFIED
+            paper_count: 2
             verification_basis: "expert_audit_override (user 2026-09-06: Pollock/Westphal/Gulati 系单源即 VERIFIED)"
             subfield_distribution:
               strategy: 1
             sources:
               - pfarrer_pollock_and_rindova_2010
+              - mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate
             transferability: ""
             paradigm_exclusivity: ""
             rhythm_tags: []
-            notes: ""
             corpus_path: corpus/Logit-Probit-Ordered-Probit.md
           - id: r2_first_event_modeling_scope_dual_track_defense
             skeleton: "We modeled only the likelihood of the first event during the time period, removing the [unit] from the risk set following [the change], because we assume that [the change] reflects a relatively fundamental and long-lasting change in [the underlying expectations] ([citation]). Consistent with this assumption, there were only [N] reversals in [the state] during the period of study, representing less than [X] percent of all changes. In effect, this model examines the role of [the predictor] in forestalling a lasting shift in [the orientation]."
@@ -2337,14 +2347,18 @@ estimators:
         description: Mechanism-discriminating supplemental evidence
         skeleton_variants:
           - id: r8_curvilinear_mechanism_discriminator_selective_path
-            skeleton: "[Name the mechanisms assigned to the rising and declining portions]. [Introduce a comparison exposure expected to activate one mechanism without the other]. [Report the predicted linear pattern and null/nonmatching quadratic pattern]. [State that the contrast is consistent with mechanism separation]. [Explicitly deny mediation or causal-process identification when mechanisms are not directly measured]."
-            skeleton_level: paragraph
-            paper_count: 1
+            status: EMERGING
+          - id: r8_control_elevated_theorized_mediator_supplement
+            skeleton: "We argued that [IV] can intensify [governance hazard]. If so, [IV] emphasis might be associated with [mechanism variable] (a [global assessment of deal risks]; it is a control variable in our model in Table [X]), which should, in turn, drive firms to choose [outcome]. To test this, we estimated a model where [mechanism variable] mediates the [IV]–[outcome] relationship and also allowed [moderator_1] and [moderator_2] to moderate the [mechanism]–[outcome] link. [IV] emphasis enhanced [outcome], per H[N]; per our theorization, [IV] emphasis enhanced [mechanism variable], and [mechanism variable] in turn enhanced [outcome]. However, [moderator_1] attenuated the effect of [mechanism variable] (and thereby that of [IV]) on [outcome], highlighting the [moderator]'s [mechanism-label] role."
+            notes: "Qualitative agreement and a null squared term are corroborative, not mediation evidence."
             status: VERIFIED
+            skeleton_level: paragraph
+            paper_count: 2
             subfield_distribution:
               strategy: 1
             sources:
               - Lee_Park_2024_SMJ
+              - mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate
             transferability: medium
             paradigm_exclusivity: Curvilinear theories with separable mechanisms and a defensible selective-path comparison exposure
             rhythm_tags:
@@ -2353,7 +2367,6 @@ estimators:
               - contrast_pattern
               - corroboration
               - causal_boundary
-            notes: "Qualitative agreement and a null squared term are corroborative, not mediation evidence."
             corpus_path: corpus/Logit-Probit-Ordered-Probit.md
           - id: r8_widespread_belief_reversal_coda
             skeleton: "Overall, the results suggest that despite the widespread belief that [actors] are driving [substantive changes] in [the domain] to [increase capacity], [symbolic actions] can forestall such pressures."
@@ -6755,6 +6768,11 @@ batch_history:
 - batch_id: batch_2034_javadinia_2024_recall_environment_and_post_recall_stock_mark_writeback
   timestamp: 2026-09-29
   source_paper: javadinia_2024_recall_environment_and_post_recall_stock_mark
+  slot_updates_count: 3
+  novel_patterns_count: 3
+- batch_id: batch_2035_mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate_writeback
+  timestamp: 2026-09-29
+  source_paper: mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate
   slot_updates_count: 3
   novel_patterns_count: 3
 status_overrides:

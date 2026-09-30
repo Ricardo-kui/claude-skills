@@ -378,6 +378,35 @@ perception factor] shapes the value of [X].
 
 
 
+
+<!--
+pattern_id: internal_external_actor_moderator_metaframework
+build_type: 假设树型（多 moderator 设计通用）
+source_papers: ["Mallapragada_Bommaraju_Kumar_Pedada_2025_JM"]
+confidence: medium
+-->
+## Framework: Internal Role × External Intermediary Moderator Axis（Mallapragada et al. 2025 JM 型）
+> 论证角色：Framing（在假设展开前用"内部角色 × 外部中介"双轴与双重生态关联检验，预先论证 moderator 选择的正当性）
+
+**适用场景**: 计划引入两个及以上 moderators、且它们分别位于组织内部与外部环境时；需要在推导前回答"为什么是这两个 moderator"的设计审查场景。
+**排列模式**: Framing 前置（moderator 路线图先于主效应推导出现）
+**范文来源**: Mallapragada, Bommaraju, Kumar, and Pedada (2025), *Journal of Marketing*
+
+**骨架**:
+```
+Our first moderator is [W1], an [organizational role] that reflects [internal managerial resources tied to domain D]. Our second moderator is [W2], an [external actor] situated outside the firm. As expressed by [contingency theory], the fit between [X] and [Y] depends on [environmental characteristics].
+Thus, as both [W1] and [W2] appear to be ecologically related to [X] (our antecedent variable) and [Y] (our outcome variable), a theoretical case exists for incorporating them as moderators in our framework.
+Beyond their theoretical relevance, these moderators also have [recognized research history] and hold [practical significance], as seen in [industry evidence].
+```
+
+**为什么有效**: 元框架把两个 moderator 组织为同一轴上的互补位置（内部执行者 vs. 外部信息中介），并用"与前后件双重生态关联"给出纳入标准——moderator 的选择从作者偏好升级为有纳入规则的设计决策。
+**注意事项**: 双轴必须真实切分两个 moderator 的作用位置与机制类型；"ecologically related to both X and Y" 是纳入必要条件的论证，不替代每个 moderator 后续的独立机制推导；研究历史与行业证据只作辅证。
+**反模式**: 两个 moderator 与轴的位置错配（实为同类因素却强行内外对分）；或用行业热度替代理论关联作为纳入依据。
+**原文锚点**："Thus, as both CMO presence and analyst coverage appear to be ecologically related to strategic emphasis (our antecedent variable) and governance mode choice (our outcome variable), a theoretical case exists for incorporating them as moderators in our framework."
+
+<!-- wb:mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate:internal_external_actor_moderator_metaframework -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Boundary tbt="假设树型" -->
+
 ## Framework: Proximal-versus-Distal Information Substitution（近端/远端信息替代，Javadinia et al. 2024 JAMS 型）
 > 论证角色：Framing（为同一主效应机制上的多个 moderator 提供单一元框架：为何选它们、它们通过什么共同机制起作用）
 <!--

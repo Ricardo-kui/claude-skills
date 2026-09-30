@@ -1328,6 +1328,31 @@ Incompleteness 问题化的核心 Tension：承认文献已有实质进展，但
 <!-- wb:javadinia_2024_recall_environment_and_post_recall_stock_mark:tension_actor_uncertainty_evaluation_rq -->
 <!-- wb-meta: gap=Incompleteness status=EMERGING -->
 
+
+### 变体 AZ：指向未发展型（mallapragada2025型）
+
+> 论证角色：Claim（Gap 主张句——宣告构念在宿主文献的缺位，并以让步防御句把"已有文献提过"的反驳预先转化为缺口确认）
+
+**模板**:
+> "While [construct] has been tied to [established outcome domain] ([citations]), it remains [startlingly absent] from the [host literature]. Thus, while we have emergent evidence for [construct] on [outcomes], its impact on [the conduit through which the construct translates to outcomes] remains uncharted. This lacuna persists even though prior [host] research has alluded pointedly to a role for [the construct's anchor] in shaping [host outcomes] ([citations])."
+
+**来源**: Mallapragada et al. 2025 (Journal of Marketing), P4
+
+**原文锚定**:
+> "Thus, while we have emergent evidence for the effect of strategic emphasis on firm performance, its impact on the governance modes through which strategic emphasis translates to performance remains uncharted. This lacuna persists even though prior interfirm research has alluded pointedly to a role for firm-specific assets or resources, in which strategic emphases are anchored, in shaping interorganizational choices (e.g., Ghosh and John 1999; Madhok 2002)."
+
+**关键特征**:
+- 缺位语言三连升级（a prominent, albeit ignored, factor 定义句先行 → remains startlingly absent → remains uncharted），缺口强度递进而非一次性宣告，ignored 由构念定义句自然带出
+- 让步防御句（This lacuna persists even though prior research has alluded pointedly to...）主动引证审稿人可能举出的"已有文献提过"证据（Ghosh and John 1999; Madhok 2002），把潜在"并非真空白"的反驳转化为缺口存在的确认——与既有变体的"文献沉默"主张不同，这里文献开口说过但未发展
+- 缺口锚定在构念的传导通道上（strategic emphasis 通过何种治理模式转化为绩效），而非仅缺一个 DV，使主效应 RQ 与机制空间同时打开
+
+**适用**: 目标构念在源文献（战略/营销绩效文献）成熟、但未被邻近文献（治理文献）吸纳，且邻近文献存在可引用的点名 allusion 的研究；与"prominent, albeit ignored, factor is [construct]"定义句配对使用。
+
+**禁忌**: allusion 证据必须真实存在且可引用——"pointedly"是有立场的修辞，若文献只是顺带提及，让步防御句会被审稿人反向使用以否定新颖性；缺位批评落点在文献遗漏而非学者疏忽，避免 ignored 被读作人身批评。
+
+<!-- wb:mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate:intro_tension_alluded_but_undeveloped_mallapragada2025 -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
 ## 组装规则
 
 ### 反模式提醒

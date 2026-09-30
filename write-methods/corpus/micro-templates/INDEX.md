@@ -44,7 +44,7 @@ updated: 2026-08-03
 | [CMB 预防论证](common-method-bias-prevention.md) | 问卷数据 CMB 预防的设计+统计论证 | M8；变体 D：多源评价者分离+Kappa一致性链（五拍，换源互换收口），carpenterwestphal2001，VERIFIED；变体 E：单波截面 CMB 退路链——预试+Harman+验证子样本 congruence 审计（gulati_2007 ASQ；无时间分离退路+随机子样本档案基准比对 >.90；区别于变体 A/B 时间分离、变体 C 标记变量、变体 D 多源 Kappa），VERIFIED |
 | [高管信心/人格特质操作化](executive-confidence-operationalization.md) | 期权 moneyness、媒体描述、显著性—薪酬复合代理、双代理收敛、继任者对照与构念形成窗—结果观察窗分离 | M2, M4, M8 |
 | [四分位距经济显著性](interquartile-economic-significance.md) | 用自变量 IQR（25th–75th）移动解释回归系数的经济显著性 | M7, M8, M10, Results |
-| [Heckman 同行 Prevalence 排他性限制](heckman-peer-prevalence-exclusion.md) | Heckman 选择模型中同行 prevalence 作为排除限制的理论论证与跨 segments 加权 | M7, M8；排他性限制论证新增选项3：逐条四步辩护链（命名→选择机制→结果不可达机制→双向相关数字进正文）；区别于选项1三段式（纯理论论证）。来源 Raithel, Hock & Mafael 2024 JAMS |
+| [Heckman 同行 Prevalence 排他性限制](heckman-peer-prevalence-exclusion.md) | Heckman 选择模型中同行 prevalence 作为排除限制的理论论证与跨 segments 加权 | M7, M8；排他性限制论证新增选项3：逐条四步辩护链（命名→选择机制→结果不可达机制→双向相关数字进正文）；区别于选项1三段式（纯理论论证）。来源 Raithel, Hock & Mafael 2024 JAMS；排他性限制论证新增选项4：双层同伴工具（四位行业加两位部门）加部门多样性递进强化排除论证；来源 Mallapragada et al. 2025 JM |
 | [替代 DV Falsification](alternative-dv-falsification.md) | 用行为者领域外的替代因变量进行 falsification 检验并讨论替代/转换 | M8, M10 |
 
 ## 使用协议

@@ -530,6 +530,20 @@ updated: 2026-08-13
 **与原骨架差异**: 计数模型变体21 换连续 DV 再 GMM。本变体保持同一二元 DV，两向/三向交互列为内生。
 **诚实边界**: GMM-on-binary 是 precaution，系数句 associated with；有效性看 AR(2)+Hansen。原文未明示 LPM。
 
+
+### 变体 AY: R7 辅助建模选择整体置换威胁 — 替代设定/替代修正法/替代操作化三连 + inferences hold regardless of 收束 (mallapragada_2025 型)
+**来源论文**: Mallapragada, Bommaraju, Kumar & Pedada 2025 (Journal of Marketing)
+**原始句锚点**: As an alternative, we used a non-parametric control function residual approach (e.g., Breitung, Mayer, and Wied 2024) as a robustness check ... suggesting that our inferences hold regardless of the method used to mitigate endogeneity in strategic emphasis.
+**验证状态**: EMERGING
+**槽位**: R7
+**骨架**:
+> In our primary analysis, we used [primary choice] to [address threat]. As an alternative, we used [alternative choice] ([citation]) as a robustness check (see [Table W#] in [Web Appendix]). The results of these alternative analyses were consistent with those from our primary analysis (Table [X]), suggesting that our inferences hold regardless of the [choice class: model specification / method used to mitigate endogeneity / operationalization of unobserved heterogeneity] in [focal variable].
+**与原骨架差异**: 变体 4/22 是"补一个修正/换一个估计器"的单点动作；本变体是威胁家族——把 auxiliary modeling choice 逐项整体置换（函数形式 probit→logit、修正方法 parametric control function→non-parametric control function residual、不可观测异质性操作化 离散 topic 哑元→连续概率），每项 "In our primary analysis... As an alternative..." 开场、"inferences hold regardless of ..." 收束，收束句把同类置换升格为 choice-class 级不变性主张。
+**诚实边界**: "regardless of" 只覆盖已置换的选项类，不得外推到未列选项；"largely consistent" 表明存在非逐项复现，不得升格 fully consistent。
+
+<!-- wb:mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate:r7_alternative_choice_swap_inferences_hold -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
 ### 变体 23: R8 post-hoc 机制代理另 DV（限 aligns with） (2026-08-13)
 **来源论文**: Lun, Zurbruegg, Mount & Cheong 2026 (Entrepreneurship Theory and Practice)
 <!-- wb:lun_zurbruegg_mount_2026_etp:legacy_Logit-Probit-Ordered-Probit_23 -->
@@ -712,6 +726,20 @@ updated: 2026-08-13
 <!-- wb:gulati_1999_network_location_and_learning_the_influence_of_n:r2_alternative_measure_bracketing_probit -->
 
 
+
+
+### 变体 AX: R2 内生性修正进主表的嵌套模型阶梯 — M1控制→M2理论→M3交互→M4修正，只讨论修正全模型 (mallapragada_2025 型)
+**来源论文**: Mallapragada, Bommaraju, Kumar & Pedada 2025 (Journal of Marketing)
+**原始句锚点**: We estimated four nested models, presented in Table 6: M1, with all the control variables but no theoretical variables; ... M4, the hypothesized model with all effects and endogeneity corrections. We discuss the results for M4.
+**验证状态**: EMERGING
+**槽位**: R2
+**骨架**:
+> We estimated [four] nested models, presented in Table [X]: M[1], with all the control variables but no theoretical variables; M[2], with controls and theoretical variables but no moderation effects; M[3], the hypothesized model that includes moderation effects but no endogeneity corrections; and finally, M[4], the hypothesized model with all effects and endogeneity corrections. We discuss the results for M[4].
+**与原骨架差异**: 变体 5 管第一阶段表格读法与 Mills 比率进入第二阶段的机制声明；本变体管模型序列导航——逐模型差异用 "with X but no Y" 平行短语一句话扫完，修正项（selection correction + control-function 一阶段残差）作为主表行嵌入最后一级而非另列稳健性表，"We discuss the results for M[4]" 一句把全部假设检验锚定到修正全模型，推理基准显式化。
+**诚实边界**: bootstrap 估计下的 log-likelihood 须脚注声明报的是无 bootstrap 值；修正项不显著不得宣称识别成功。
+
+<!-- wb:mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate:r2_corrected_headline_model_staircase -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
 
 ### 变体 AH: R6 竞争机制衰减裁决 — 基线设伏+拟合增量+非对立供认+趋势重读 (gulati_ajs1999 型)
 **来源论文**: Gulati 1999 (American Journal of Sociology, 104(5), 1439-1493)
@@ -917,6 +945,20 @@ updated: 2026-08-13
 
 <!-- wb:gulati_westphal_1999_cooperative_or_controlling:r8_exploratory_mediator_competing_mechanism_battery -->
 
+
+
+### 变体 AZ: R8 控制变量升格为理论化中介的补充检验 — 中介 + 第二链调节 + 机制标签收束 (mallapragada_2025 型)
+**来源论文**: Mallapragada, Bommaraju, Kumar & Pedada 2025 (Journal of Marketing)
+**原始句锚点**: To test this, we estimated a model where transaction risk mediates the strategic emphasis–governance mode relationship and also allowed CMO presence and analyst coverage to moderate the risk–governance mode link.
+**验证状态**: EMERGING
+**槽位**: R8
+**骨架**:
+> We argued that [IV] can intensify [governance hazard]. If so, [IV] emphasis might be associated with [mechanism variable] (a [global assessment of deal risks]; it is a control variable in our model in Table [X]), which should, in turn, drive firms to choose [outcome]. To test this, we estimated a model where [mechanism variable] mediates the [IV]–[outcome] relationship and also allowed [moderator_1] and [moderator_2] to moderate the [mechanism]–[outcome] link. [IV] emphasis enhanced [outcome], per H[N]; per our theorization, [IV] emphasis enhanced [mechanism variable], and [mechanism variable] in turn enhanced [outcome]. However, [moderator_1] attenuated the effect of [mechanism variable] (and thereby that of [IV]) on [outcome], highlighting the [moderator]'s [mechanism-label] role.
+**与原骨架差异**: 变体 13 是曲线机制选择性路径辨析，变体 23 是另 DV 代理的 post-hoc 佐证（限 aligns with）；本变体的机制变量是主模型中的控制变量——补充分析把它升格为理论化中介并检验第二链调节，开场复述理论化（"We argued... If so..."），收束以机制标签回锚调节变量的理论角色；因有中介+调节检验结构，语言可到 enhanced/attenuated。
+**诚实边界**: 控制变量升格为中介是事后理论化——须与 R7 稳健性分开标注；机制标签只概括已检验的链，不得引入 Results 未报告的机制；中介证据须报检验结构而非仅系数链。
+
+<!-- wb:mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate:r8_control_elevated_theorized_mediator_supplement -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
 
 ### 变体 AI: R6 null 主效应条件重估与构念域重划 — less conclusive 降级判决+分离重估+子域收束 (gulati_ajs1999 型)
 **来源论文**: Gulati 1999 (American Journal of Sociology, 104(5), 1439-1493)

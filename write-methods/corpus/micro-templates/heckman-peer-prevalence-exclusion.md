@@ -104,3 +104,17 @@ updated: 2026-07-08
 
 <!-- wb:raithel_2024_product_recall_effectiveness_and_consumers_part:m8_exclusion_restriction_empirical_validity_pair -->
 <!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
+
+### 选项 4：双层同伴工具 + 部门多样性排除强化（mallapragada2025 型）
+
+[功能标签]: 同一"同伴流行度"工具逻辑在两个分类粒度各取一个工具（窄行业 + 宽部门、剔除窄行业），排除性论证随粒度分层强化
+
+[骨架]: "As instruments, we used [the behavior] in peer firms in the [n-digit industry] and [m-digit sector], excluding firms from the [n-digit industry]. These are relevant instruments because [firms look to each other when making the decision] (e.g., [citation]); these effects are also statistically significant in the first-stage model. However, such behavior is very unlikely to be directly correlated with [the focal outcome] but is most likely channeled only through the focal firm's [channel], thereby satisfying the exclusion restriction. This argument is stronger for peer firms in the [m-digit sector]; while they are related, they also operate in more diverse businesses, and their impact on [the outcome], if any, happens only through the focal firm's [channel]. As [the behavior] outside the focal industry but within the sector is less relevant to a focal firm's [behavior], our use of sector peers provides us with strong exogenous variation."
+
+[可迁移性]: 高 — 任何同伴流行度 IV 设计；"部门多样性 → 直接渠道更不可达"是可移植的排除性强化论证
+[范式排他性]: 低 — 排除性论证模板，与选择模型/控制函数/2SRI 均兼容
+[与选项 1/3 区分]: 选项 1 三段式纯理论论证、选项 3 四步辩护加实证校验对；本选项的独特维度是工具对的双粒度结构加随粒度递进的排除性强化论证，可叠加在选项 1 或 3 之上
+
+<!-- wb:mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate:m8_dualgranularity_peer_exclusion_strengthening -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->

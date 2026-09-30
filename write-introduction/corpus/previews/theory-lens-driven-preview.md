@@ -169,6 +169,32 @@ P5-P6 的变体：不是按照"主效应→调节→机制"的通用结构预览
 
 <!-- wb:gulati_nohria_zaheer_2000_strategic_networks:preview_agenda_enumeration_disclaimer -->
 
+
+### 变体 U：内外行动者配对调节预告型（mallapragada2025型）
+
+> 论证角色：Framing（预告段豁免五问——按内部/外部行动者轴组装边界条件集，把调节假设架构预先钉成可核对的双槽结构）
+
+**模板**:
+> "Subsequently, we identify two prominent actors—one internal and one external to the firm—that moderate the relationship between [X] and [Y]. First, [internal actor role] is intimately tied to [governance function] ([citation]); [industry evidence] also identifies [activity] as a key responsibility ([practice source]). As such, [internal moderator] is our first moderator. Second, the efficacy of firm choices is altered by actors external to the firm. [External actor] serve as critical information intermediaries ([citation]) to [validation function] ([citation]). As such, [external moderator] is our second moderator."
+
+**来源**: Mallapragada et al. 2025 (Journal of Marketing), P6-P7
+
+**原文锚定**:
+> "As such, CMO presence is our first moderator. Second, the efficacy of firm choices is altered by actors in the environment external to the firm. Market analysts are one such actor who serve as critical information intermediaries (Livnat and Zhang 2012) to validate firms' value-management strategies and facilitate their access to partnerships (Chakravarty and Grewal 2011). As such, analyst coverage is our second moderator."
+
+**关键特征**:
+- 两个调节变量按内部/外部行动者轴配对选择（CMO presence 在内 / analyst coverage 在外），边界条件集自带结构而非随机列举
+- 每个调节者双重合法化：学术角色文献（Germann et al. 2015; Livnat and Zhang 2012）+ 行业实践证据（CMO playbooks, Villaret 2021），行动者显著性先于调节假设建立
+- "As such, X is our first/second moderator" 收束句把行动者名直接钉成调节变量名，预告与假设架构一一对应
+- 外部调节者的引入语（contrasts starkly with the interfirm literature where the onus for governing resides exclusively with internal actors）同时预埋贡献 2 的卖点
+
+**适用**: 边界条件是具体行动者角色（高管职能、外部信息中介）而非情境变量的研究；Boundary 贡献 + 双 RQ（主效应+边界）架构。
+
+**禁忌**: 内/外轴必须对称成立（两个调节者确能按该轴区分），否则配对结构是装饰；实践证据来源（行业 playbook/调查）需具名，防止调节者显著性断言悬空。
+
+<!-- wb:mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate:intro_preview_internal_external_actor_moderator_pair_mallapragada2025 -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
 ## 组装规则
 
 ### 必须配对

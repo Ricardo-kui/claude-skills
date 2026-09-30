@@ -183,6 +183,31 @@ source: Distilled by distill-introduction-exemplar from Hoffmann et al. 2024 JM;
 
 <!-- wb:gulati_higgins_2003_which_ties_matter:theory_lens_abv_audience_error_switching -->
 
+
+### 变体 G：静默引镜型（mallapragada2025型）
+
+> 论证角色：Warrant（理论核心原则句——第二透镜由主理论已引证的沉默引入，为双机制分工提供一般性辩护：交换保卫 vs 跨边界组合）
+
+**模板**:
+> "Our theorization draws on [Theory 1], which speaks to [mechanism territory 1]. Starting with [Theory 1], we argue that [main-effect hazard/logic], each underpinned by a different [asset type] ... However, since [Theory 1] is silent about [specific generative property] ([bridging citation]), we also develop our contentions from [Theory 2], which investigates [complementary property]. We propose that [Theory 2 logic] ..."
+
+**来源**: Mallapragada et al. 2025 (Journal of Marketing), P5-P6
+
+**原文锚定**:
+> "However, since TCE is silent about the combinative properties of assets (Ghosh and John 1999), we also develop our contentions from an RBV perspective."
+
+**关键特征**:
+- 第二透镜的入场由第一透镜的"已引证沉默"驱动（TCE is silent about the combinative properties + Ghosh and John 1999 桥接引文），理论衔接是逻辑必然而非并置偏好——与母变体"主理论管主效应+次框架管边界"的分工轴不同
+- 双透镜按机制领地分工且互不重叠：TCE 管交换中的资产保卫（differential governance hazards → safeguarding），RBV 管资产的跨边界组合生成（limits to combining tacit assets across firm boundaries）
+- 每个透镜绑定构念的可观测资产属性（valuation / modularity / adaptation），透镜选择直接生成假设内容而非仅提供背景权威
+
+**适用**: 双理论贡献（Mechanism + 跨文献 bridging）研究；主效应由主理论推进、第二机制恰落在主理论的已知盲区且有桥接引文（如 Ghosh and John 1999 对 TCE-RBV）可用时。
+
+**禁忌**: "silent about" 必须有文献背书，否则成为稻草人；两透镜机制领地若重叠，静默引镜会暴露分工漏洞——采用前先确认第二透镜回答主理论无法回答的问题。
+
+<!-- wb:mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate:intro_theorylens_silence_motivated_second_lens_mallapragada2025 -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
 ## 组装规则
 
 ### 必须配对

@@ -68,6 +68,32 @@ source: Distilled from Zhao, Ding & Gaba (2023), Organization Science — "Posit
 
 ---
 
+
+### 变体 B：同行业对手双例对比型（mallapragada2025型）
+
+> 论证角色：Framing（hook 段豁免五问——用同行业对手双例加从业者调查占比建立"两种治理模式互为替代、无普适最优"的现象框架，为 contingency 论证发许可）
+
+**模板**:
+> "In pursuit of [shared growth goal], firms often rely on two prototypical [alternatives] ([citations]). For example, [Firm A] [pursued alternative 1] by [concrete action]. In contrast, [Rival Firm B, same industry], opted to [alternative 2] to [same goal]. In a recent survey of [N] [practitioners] ([Named Source, Year]), [X%] relied on [alternative 1], while [Y%] used [alternative 2], indicating that firms view these modes as alternatives and that no [mode] fits all situations."
+
+**来源**: Mallapragada et al. 2025 (Journal of Marketing), P1
+
+**原文锚定**:
+> "For example, pharmaceutical firm AbbVie expanded into the cosmetics industry by acquiring Allergan, the maker of Botox. In contrast, Gilead and Merck, rivals in the same industry, opted to form an alliance to develop innovative HIV treatment. In a recent survey of 1,378 CEOs conducted by PwC (2024), 40% of the participants relied on alliances, while 37% used acquisitions to pursue growth, indicating that firms view these modes as alternatives and that no governance mode fits all situations."
+
+**关键特征**:
+- 对比案例同行业配对（AbbVie 收购 Allergan vs Gilead 与 Merck 结盟，同属制药业）：行业与增长动机被固定，治理模式成为唯一变异维度，对比自带"受控比较"性质——与母变体的跨行业普及性论证功能不同
+- 双例之后紧接从业者调查占比（40% 对 37%）作第二证据层，把轶事对比升格为"两种模式互为替代、无普适最优"的分布性主张，两个接近的百分比防止被读作一边倒趋势
+- Hook 不制造冲击或悖论，收束句（no governance mode fits all situations）直接为后续 contingency 框架（firms choose the mode that best mitigates ex post risks）发放许可
+- 调查统计兼具 stakes 功能：模式选择普遍性的量化证据前置，后续贡献段再次召回同一调查（over 75% confronted with choosing the right mechanism），形成首尾呼应
+
+**适用**: 开篇即需建立"X 与 Y 是同一目标下替代选项"的研究（治理模式、进入模式、组织形式选择）；Hook 能量级中，配 Incompleteness Gap 与 contingency 型理论框架。
+
+**禁忌**: 两个案例必须在同一行业/同一目标下可比，否则退化为母变体的跨行业普及性论证；调查占比需来自具名商业来源（如 PwC）且两比例接近，比例悬殊时该证据会反向支持"某一模式占优"，与 contingency 主张冲突。
+
+<!-- wb:mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate:intro_hook_same_industry_rival_contrast_mallapragada2025 -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING -->
+
 ## 关键功能短语
 
 | 短语 | 功能 | 替换 |

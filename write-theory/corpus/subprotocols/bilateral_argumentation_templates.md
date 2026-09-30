@@ -702,6 +702,37 @@ confidence: medium（单篇，EMERGING）
 <!-- wb:raithel_2024_product_recall_effectiveness_and_consumers_part:asymmetric_bilateral_moderation_baseline_zero -->
 <!-- wb-meta: gap=Incompleteness status=EMERGING dim=Boundary tbt="调节效应型（moderated mediation）" -->
 
+
+<!--
+pattern_id: hazard_recall_attenuation_moderation_bilateral
+build_type: 假设树型（调节效应型通用）
+source_papers: ["Mallapragada_Bommaraju_Kumar_Pedada_2025_JM"]
+confidence: medium
+-->
+## Pattern: Hazard-Recall Attenuation Moderation（Mallapragada et al. 2025 JM 型）
+> 论证角色：Reason（回收主效应已命名的危害属性作为调节插入点，论证 moderator 中和危害后主效应衰减，并用在场/缺席双边与"何时最明显"范围句封口）
+
+**适用场景**: 主效应由一组命名的危害/机制属性承载，调节假设要证明 moderator 削弱（而非反转）主效应；需要双边论证并把调节效应的作用范围精确绑回主效应机制时。
+**排列模式**: Warrant-Embedded（hazard recall → neutralization → bilateral → scope tie-back）
+**范文来源**: Mallapragada, Bommaraju, Kumar, and Pedada (2025), *Journal of Marketing*
+
+**骨架**:
+```
+Recall here that [X] motivates [Y] also because (1) [hazard attribute 1] and (2) [hazard attribute 2] (H1). Essentially, these attributes represent [hazard type], which make [baseline mode] less efficient.
+However, to the degree that [W] [neutralizing mechanism], [the exchange partner] will [cooperate] even in the presence of these hazards. This implies that when [W] is present, the requirement to [choose Y] is diminished.
+In contrast, absent [W], the firm is comparatively lacking in [capability]; in this scenario, the need to [safeguard via Y] persists (per H1).
+Notably, since the hazards are more pronounced with [X condition] to begin with (H1), it is precisely for [asset type / segment] that the moderating effect of [W] should be most palpable.
+[H]: [W] weakens the positive association between [X] and [likelihood of Y].
+```
+
+**为什么有效**: 调节不在主效应之外另起炉灶，而是显式回收 H1 已命名的危害属性并逐条说明 moderator 如何中和；"In contrast, absent W" 补齐双边论证；范围句把调节强度预测绑回"危害在何处最强"，使交互方向可被实证区分。
+**注意事项**: moderator 的中和机制必须逐条对应被回收的危害；双边两支都要有独立理论依据；范围句只在危害强度确实随 X 水平变化时使用。
+**反模式**: 只写 moderator 在场一支（单边论证）；或回收的危害属性与主效应推导命名的属性不一致（机制漂移）。
+**原文锚点**："Notably, since the hazards (modularity and adaptation attributes) are more pronounced with a value-appropriation (vs. creation) strategy to begin with (H1), it is precisely for marketing (vs. R&D) assets that the moderating effect of CMO presence should be most palpable."
+
+<!-- wb:mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate:hazard_recall_attenuation_moderation_bilateral -->
+<!-- wb-meta: gap=Incompleteness status=EMERGING dim=Boundary tbt="假设树型" -->
+
 ## 条件化 carve-out：cue/activation moderator（硬约束 #11 例外）
 
 > **适用范围**：硬约束 #11（"调节论证双边完整（high AND low）"）**不机械适用**于 cue-triggered / trait-activation moderation。当 moderator 是一个**特质相关 cue**、且 **low（cue 缺失）条件即特质默认表现型、已在主效应中作为基线论证过**时，双边覆盖可由以下两条满足，**不强制写冗余的 low 态段落**：
