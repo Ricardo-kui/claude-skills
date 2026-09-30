@@ -531,6 +531,42 @@ Third, [channel 3 — 信息通道 + 文献锚]。[1-2 句：类比机制在其�
 <!-- wb:mao_dong_lee_2022_msom:formal_model_case_partitioned_propositions -->
 <!-- wb-meta: gap=Incompleteness status=EMERGING dim=Mode tbt="机制推演型（formal-model 解析建模）" -->
 
+
+## Pattern: Formal-Model Dual-Grounded Hypothesis Export（模型引理+文献机制双轨奠基导出 H 编号假设，mukherjee_2022_msom 型）
+
+> 论证角色：Reason——把解析模型的 Lemma/Proposition 与口头机制文献焊成每条假设的双轨奠基，使 H 编号假设既可从理论溯源、又可从模型复算方向
+
+**适用场景**: 形式模型与 H 编号假设并存的 Theory 节（解析模型承担最优时机/均衡推导，输出仍是管理学可检验假设）；需要向实证读者证明模型行为假设有理论出处、假设方向可由模型复算时使用。不适用于以命题分区为理论本体的无 H 编号论文（走同族 Case-Partitioned Propositions）。
+**排列模式**: Assumption-Welded Lens → Named Lemmas → Equilibrium Propositions → Dual-Grounded Hypothesis Export
+**范文来源**: Mukherjee, Ball, Wowak, Natarajan, and Miller (2022), *Manufacturing & Service Operations Management*
+
+**骨架**:
+```
+[权衡张力] [Actor] each period chooses between [keep the object and incur a continuous cost that stochastically increases] and [act now and face an evaluator penalty]; each [actor] has an incentive to wait for the other to [act] first, but waiting entails [the increasing cost]; the optimal strategy solves [a dynamic program].
+[理论焊接假设] [Behavioral theory] suggests that as [an actor] [delays / acts differently from peers], [the external evaluator] attributes [more/less] blame ([citation]); we capture this by assuming that [mathematical property of the model object], with [comparative-statics direction] over time.
+[命名分析结果] Lemma 1 ([即将实证检验的 within-relation 效应族名]). a. [角色间比较陈述]. b. [对 timing 间隔的单调陈述]. Lemma 2 ([between-relation 效应族名]). [对 separation 的单调陈述].
+[双轨导出] To develop testable hypotheses, we combine insights from [the verbal literature] and the analytical results presented in [the model section]. [每条假设：文献机制段（理论引用+一个两企业具体情景）]. [Lemma/Proposition k] in [the model section] offers theoretical insights into [the model prediction]. Building on this result and the [theory] discussion above, we hypothesize: H[N]: [方向与引理单调性一致的预测].
+```
+
+**与近族的分界**:
+- vs Formal-Model Case-Partitioned Propositions（mao_dong_lee_2022_msom 型）：后者命题分区即理论本体、无 H 编号，适用于"以最优性条件承载贡献"的论文；本模式保留 H 编号，Lemma/Proposition 是假设的双轨来源之一，转换经过实证构念（如聚类、市场惩罚）——两类模式覆盖 formal-model 的两个输出形态
+- vs B 机制推演（variants/B）：B 每步推导由文字文献承载；本模式的比较静态与均衡结构由模型承载，文字理论只负责焊接行为假设
+- vs 假设树型（variants/C）：树型的条件化分支是 moderator 逻辑；本模式的条件结构是模型的阈值/单调性（threshold-type equilibrium），不是口头调节变量
+
+**原文锚点**: "To develop testable hypotheses, we combine insights from the relevant literature and the analytical results presented in Section 3." … "Building on this result and the attribution theory-related discussion above, we hypothesize:"
+
+**为什么有效**: 模型承担推理重负（最优时机、均衡结构），文字理论承担行为假设可信度；每条假设同时挂在"机制文献"与"解析结果"两条轨道，审稿人既能从理论找到假设来源，也能从模型复算方向；Lemma 按即将实证检验的效应命名（within/between-cluster），在模型节与实证节之间建立词典，消除"模型是装饰品"的质疑
+
+**注意事项**:
+- 每个行为假设必须当场给理论出处；无理论支撑的数学假设会被读成为可解性服务的技术假设
+- 抽象单调性/阈值假设后配一个两情景数字小例（"Consider two scenarios where [the timing differs]... would imply [ranking]"），让读者当场验证假设含义
+- 假设方向必须与引理单调性对齐；命题（阈值型策略）与假设（市场结果）之间的转换必须经过实证构念
+
+**反模式**: 无解析模型时使用"[Lemma k] offers theoretical insights"式悬空引用（导出链空壳）；把 Proposition 原样抄成 Hypothesis（命题陈述均衡策略，假设陈述可检验市场结果，不转换即失真）；在模型节内平行发展管理学假设树（比较静态只导出方向性预测）
+
+<!-- wb:mukherjee_2022_hiding_in_the_herd_the_product_recall_cluster:H_formal_model_export_chain -->
+<!-- wb-meta: gap=Inadequacy status=EMERGING dim=Mode tbt="机制推演型（formal-model 解析建模）" -->
+
 ## Pattern: Bilateral Moderation Derivation（high/low 双边论证）
 
 **适用场景**：调节效应型论文中，需要同时论证 moderator 高值和低值条件下的机制变化。

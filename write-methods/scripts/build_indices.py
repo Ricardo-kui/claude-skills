@@ -156,6 +156,9 @@ FAMILIES: list[dict[str, str]] = [
     {"file": "结构需求-state-space.md", "slug": "state-space", "name": "结构需求-state-space",
      "desc": "BLP 结构需求、Kalman/GMM 状态空间拟合",
      "trigger": "结构需求或状态空间模型，需拟合/反事实方法规格"},
+    {"file": "自激点过程.md", "slug": "hawkes-point-process", "name": "自激点过程（Hawkes）",
+     "desc": "Hawkes 自激励点过程事件聚类方法段（模型选择三理由、强度方程叙事与假设映射、EM 迭代实现、共因伪聚类排除、背景率协变量）",
+     "trigger": "事件流存在自激励/聚类结构，需写 Hawkes 模型选择、强度方程或 EM 估计实现"},
 ]
 
 # ------------------------------------------------------------- regexes -----

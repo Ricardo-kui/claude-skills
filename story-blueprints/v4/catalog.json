@@ -5336,6 +5336,95 @@
       "overall_role": "partial_exemplar"
     },
     {
+      "id": "mukherjee2022-recall-cluster-herding",
+      "path": "v4/blueprints/mukherjee2022-recall-cluster-herding.md",
+      "paper_type": "quantitative (analytical formal model + archival empirical companion)",
+      "outlet": "Manufacturing & Service Operations Management",
+      "publication_status": "published",
+      "coverage": "complete",
+      "theoretical_problem_form": [
+        "underexamined-phenomenon",
+        "equilibrium-based-strategic-timing"
+      ],
+      "narrative_dynamics": [
+        "failed-assumption-as-opening",
+        "model-as-plot-engine",
+        "motive-consequence-crossing",
+        "two-act-evidence",
+        "policy-as-transparency-fix"
+      ],
+      "retrieval_signals": [
+        "recall-clustering",
+        "herding",
+        "attribution-theory",
+        "hawkes-process",
+        "event-study",
+        "recall-timing"
+      ],
+      "section_learning": {
+        "introduction": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Open a phenomenon through a failed field assumption: state what the literature presumes (recalls are independent across firms), juxtapose an anecdote that violates it, and promote the violation to a named, explicitly uninvestigated phenomenon so that 'does it exist at all?' is legitimate as a first research question.",
+            "Chain the second research question to the first as motive-consequence: preview the position-penalty differential as the reason clustering would be rational, so two empirical studies read as one story rather than a pairing."
+          ],
+          "caveat": [
+            "The introduction pre-commits the attribution reading of its 2015 market-reaction anecdote before the theory section derives it — a paper-internal order tension; a writer borrowing the opening needs the discipline to let the mechanism arrive later, and the 'no prior research' gap claim must actually hold."
+          ]
+        },
+        "theory": {
+          "suitable": "yes",
+          "requires": [
+            "mechanism expressible as payoff-structure primitives; a solvable dynamic game or equivalent formal apparatus"
+          ],
+          "learn": [
+            "Let the analytical model carry the theory: convert a verbal mechanism (uniqueness breeds blame) into sign and monotonicity assumptions on penalty functions, derive rankings as lemmas, then embed them in a stopping game whose equilibrium makes the focal behavior endogenous — clustering emerges as an optimal strategy, not an observed accident.",
+            "Map each hypothesis to a formal parent explicitly (Lemma 1a to H2a, 1b to H2b, 2 to H2c) so every hypothesis has both a behavioral parent (herding, attribution) and a formal one (equilibrium, lemma)."
+          ],
+          "caveat": [
+            "Transferable only where the mechanism can be written as payoff primitives; the penalty functions are stylized and unobserved, and papers whose theory is verbal mediation cannot borrow this architecture without acquiring the formal machinery that makes it work."
+          ]
+        },
+        "methods": {
+          "suitable": "partial",
+          "requires": [
+            "event-time data with plausible self-excitation; latent role or type structure that downstream analyses consume"
+          ],
+          "learn": [
+            "Match the estimator to the claimed phenomenon rather than to convention: because the claim is self-excitation, choose a self-exciting point process; because leader and follower roles are latent, choose an EM formulation whose by-product is the role assignment the second act needs.",
+            "Design consecutive analyses so the first feeds the second: Hawkes role assignments become the event study's treatment categories, making two studies one design."
+          ],
+          "caveat": [
+            "The role assignment is model-produced, not observed, so downstream penalty estimates inherit the classification's assumptions; the paradigm has almost no off-the-shelf translatability into standard management toolkits."
+          ]
+        },
+        "results": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Answer an existence question with a parameter, then immediately translate the parameter into narrative units: the excitation coefficient is followed by 73% of recalls clustered, 266 clusters, 16-day gaps, and 34-day persistence, turning an abstract theta into counts a reader can picture.",
+            "Stage the motive-consequence crossing in the results order: the penalty differential is explicitly interpreted as the incentive behind clustering, so the second act's payoff retroactively completes the first act's motivation."
+          ],
+          "caveat": [
+            "Headline figures are best-window values ('as high as 67%') and the Leading-recall coefficient is insignificant in several event windows without the text naming the pattern — a paper-internal reporting tension; writers borrowing the headline-number move must state window dependence."
+          ]
+        },
+        "discussion": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Convert the mechanism into one policy lever: because hiding in the herd depends on what the regulator cannot see, the ending narrows to a single cost-neutral transparency fix (mandatory defect-awareness dates), cross-validated against another regulator's existing practice.",
+            "Use an in-sample anomaly as the ending's second beat: Toyota's 31% leading share is reinterpreted as reputation-driven herd formation, turning a robustness-table detail into theoretical meaning."
+          ],
+          "caveat": [
+            "The policy claim rests on the deliberate-hiding interpretation, which the design cannot distinguish from information-driven following; and the practical assertion is stated more firmly than the flagged industry boundary (concentration, product similarity) supports."
+          ]
+        }
+      },
+      "overall_role": "partial_exemplar"
+    },
+    {
       "id": "pfarrer2010-reputation-celebrity-earnings-surprises",
       "path": "v4/blueprints/pfarrer2010-reputation-celebrity-earnings-surprises.md",
       "paper_type": "quantitative",

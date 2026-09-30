@@ -25,12 +25,13 @@
 | [`three-way-interaction`](three-way-interaction.md) | `corpus/三向交互.md` | 4 | 模型含三向交互，需条件两向分解或简单斜率差异 |
 | [`construct-exposure-decomposition`](construct-exposure-decomposition.md) | `corpus/构造暴露分解.md` | 0 | 构造暴露分解结果（当前无验证变体） |
 | [`sem-moderated-mediation`](sem-moderated-mediation.md) | `corpus/SEM-moderated-mediation.md` | 11 | SEM/调节中介报告（路径系数、条件间接效应、fit 指标） |
-| [`event-study`](event-study.md) | `corpus/事件研究法.md` | 17 | 事件研究 CAR/AR，需分组裁决、t 检验或主效应保护段 |
+| [`event-study`](event-study.md) | `corpus/事件研究法.md` | 20 | 事件研究 CAR/AR，需分组裁决、t 检验或主效应保护段 |
 | [`varx-pvar`](varx-pvar.md) | `corpus/VARX-PVAR.md` | 7 | 向量自回归/脉冲响应，需弹性表或方差分解解读 |
 | [`blp-state-space`](blp-state-space.md) | `corpus/BLP-状态空间.md` | 5 | 结构需求或状态空间模型，需拟合/反事实报告 |
+| [`hawkes-process`](hawkes-process.md) | `corpus/Hawkes过程.md` | 1 | 结果来自 Hawkes/自激点过程估计，需写参数语义解读或模型机制自证 |
 
-合计：21 模型族 / verbatim 310 条 / 模板 336 条。
+合计：22 模型族 / verbatim 310 条 / 模板 336 条。
 
 ## 待补录
 
-- [`_unparsed.md`](_unparsed.md)：4 条未自动命中或结构不规整，**待人工判定**。
+- [`_unparsed.md`](_unparsed.md)：8 条未自动命中或结构不规整，**待人工判定**。

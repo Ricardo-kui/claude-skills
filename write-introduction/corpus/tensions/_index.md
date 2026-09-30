@@ -17,7 +17,7 @@
 
 | 文件 | 核心特征 |
 |------|---------|
-| `02-implicit-assumption-wrong.md` | 隐性假设错误（含变体D：挑战机械因果链前提；变体F：混合发现→稳定效应假设→宏观事件激活；变体G：同质同侪推断→跨受众双信息分离，EMERGING，**两层 gap——primary Incompleteness + theory-level Inadequacy，已重锚至 Tension 句**；变体 H：主导解释证据失衡型——综述背书宣告主流解释证据不一致并替换解释变量，carpenter_westphal_2001，VERIFIED (expert_audit_override Westphal 系裁决)；变体 I：对手框架推论自证型（对手前提自推可检验推论，满强度对手），zajacwestphal2004，VERIFIED / expert_audit_override（Westphal 系裁决）；变体 J：混合发现→四问级联——widely-accepted 命题实证不一致后按类型/条件/行为者/配对四维设问并构成问-答契约，gulati_lavie_singh_2009_partnering_experience，EMERGING） |
+| `02-implicit-assumption-wrong.md` | 隐性假设错误（含变体D：挑战机械因果链前提；变体F：混合发现→稳定效应假设→宏观事件激活；变体G：同质同侪推断→跨受众双信息分离，EMERGING，**两层 gap——primary Incompleteness + theory-level Inadequacy，已重锚至 Tension 句**；变体 H：主导解释证据失衡型——综述背书宣告主流解释证据不一致并替换解释变量，carpenter_westphal_2001，VERIFIED (expert_audit_override Westphal 系裁决)；变体 I：对手框架推论自证型（对手前提自推可检验推论，满强度对手），zajacwestphal2004，VERIFIED / expert_audit_override（Westphal 系裁决）；变体 J：混合发现→四问级联——widely-accepted 命题实证不一致后按类型/条件/行为者/配对四维设问并构成问-答契约，gulati_lavie_singh_2009_partnering_experience，EMERGING；变体 K：轶事反证+跨域理论命名型——领域假设双重钉死（presumes+That is 复述）→Anecdotally, however 自谦枢纽（popular press 具名案例）→跨域构念（herding）命名新现象+few/none 双重空白，两层 gap（primary Inadequacy+phenomenon-level Incompleteness，与变体 G 方向相反），mukherjee_2022（M&SOM），EMERGING） |
 | `03-structural-blindspot.md` | 结构性盲点；变体 D：经典二分选择性继承型——正典双维区分被领域单一继承，puzzle 旗标+单一逻辑归因+双缺口结晶句，gulati_sytch2007，VERIFIED |
 | `05-construct-confusion.md` | 构念混淆 |
 | `11-overlooked-alternative.md` | 被忽视的替代解释；变体 C：既存解释实证反驳型（westphal_bednar2005 型），westphal_bednar2005，VERIFIED (expert_audit_override 2026-08-29: 用户裁决 Westphal 蒸馏的引言与理论部分证据等级 VERIFIED) |

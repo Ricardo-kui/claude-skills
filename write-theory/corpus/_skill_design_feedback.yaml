@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
   last_updated: '2026-09-29'
-  observations_processed: 70
+  observations_processed: 71
   description: Evidence ledger for write-theory design defects inferred from Theory exemplar distillation.
 defects:
   e-family-missing-dual-edged-signed-contingency-variant:
@@ -3663,3 +3663,70 @@ defects:
     auto_action:
       eligibility: optional_variant_only
       reason: Corpus changes do not alter core routing.
+  routing-formal-model-theory-branch-missing:
+    classification: routing_defect
+    status: EMERGING
+    risk: low
+    current_rule: 一级路由 Gap × 贡献杠杆 表中，Mode 杠杆在 Incompleteness 下仅路由到过程理论（D），Inadequacy 下路由到竞争假设（F）；全表无 formal-model（解析建模）分支——理论贡献由解析模型承载的论文会被错误路由到
+      B（口头机制推演）或 D（过程理论）
+    rule_excerpt: '| Incompleteness | Mode | 过程理论 | D | low | 若遗漏的是阶段、顺序或演化方式 |'
+    rule_locator: write-theory/corpus/meta/routing_table.md 一级路由表 Incompleteness×Mode 行
+    target: write-theory/corpus/meta/routing_table.md
+    diagnosis: formal-model 论文（Mukherjee et al. 2022 M&SOM；Mao, Dong & Lee 2022 MSOM）是合法理论构建分支：解析模型承担推理、假设由均衡/引理导出，两篇均已全文蒸馏入库（前者
+      ×3 块、后者本轮 EXTEND ×1 块），但 routing 表无法路由到它们——写作任务会落在 B/D，产出错误架构（口头 why-chain 或阶段理论），而非 Lemma→假设导出链/命题分区。属路由漏掉合法分支，非 corpus
+      gap（骨架已在语料，路由不可达）
+    proposed_change:
+      action: add_branch
+      summary: 一级路由表增加 formal-model 分支：Gap（Incompleteness/Inadequacy）× Mode/Output → formal-model 推导族（Case-Partitioned Propositions
+        / Dual-Grounded Hypothesis Export），触发条件=理论贡献由解析模型承载；EMERGING（2 篇同期刊源），达 VERIFIED 前仅登记不改动
+    absolute_rule: false
+    decisive_falsifier: false
+    applicability:
+      build_types:
+      - formal-model（解析建模）
+      hypothesis_families:
+      - main_effect_only
+      - proposition_partition
+      journals: []
+      boundary: 仅当论文理论贡献由解析模型（博弈/动态规划/最优停止）承载时触发新分支；口头理论论文路由不变
+    papers:
+    - id: mao_dong_lee_2022_msom
+      journal: M&SOM
+      build_type: 机制推演型（formal-model 解析建模）
+      hypothesis_family: ''
+      evidence_anchor: Formal-Model Case-Partitioned Propositions 等三块（假设→优化→命题条件分区→命名解读）
+      evidence_quality: full_text_verified
+    - id: mukherjee_2022_hiding_in_the_herd_the_product_recall_cluster
+      journal: M&SOM
+      build_type: 机制推演型（formal-model 解析建模）
+      hypothesis_family: ''
+      evidence_anchor: §3 停时博弈（理论焊接假设+命名 Lemma+Prop1/2）→ §4 双轨奠基导出 H1/H2a-c；本轮 EXTEND 入 hypothesis_derivation_patterns.md
+      evidence_quality: full_text_verified
+    paper_count: 2
+    journals:
+    - M&SOM
+    journal_count: 1
+    verified_paper_count: 2
+    verified_journals:
+    - M&SOM
+    verified_journal_count: 1
+    regression_cases:
+      positive:
+      - prompt: 为一篇以停时博弈模型承载理论贡献的产品安全召回论文写 Theory 节（模型导出最优策略命题，假设需可检验）
+        expected_invariants:
+        - 路由到 formal-model 推导族（命题分区或双轨导出模式）
+        - 不强制产出口头 why-chain 模板
+        - 模型行为假设带理论出处
+      preservation:
+      - prompt: 为一篇纯口头机制推演的供应链披露论文写 Theory 节（X 通过 M 影响 Y）
+        expected_invariants:
+        - 仍路由到 variants/B 机制推演
+        - 不被 formal-model 分支吞并
+        - 不要求 Lemma/Proposition 结构
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-29'
+    last_seen: '2026-09-29'
+    auto_action:
+      eligibility: log_only
+      reason: Insufficient evidence for core revision.

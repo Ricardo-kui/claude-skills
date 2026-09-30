@@ -121,7 +121,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     04-puzzle-paradox:
-      paper_count: 9
+      paper_count: 10
       papers:
         - anderson_reeb2004 (ASQ)
         - cutolo2024 (JM)
@@ -132,9 +132,10 @@ evidence:
         - park2025 (SMJ)
         - pontikes2012 (ASQ)
         - singh2023 (JMR)
+        - mukherjee_2022_hiding_in_the_herd_the_product_recall_cluster (MSOM)
       gap_distribution:
-        Incompleteness: 1
-        Inadequacy: 6
+        Incompleteness: 0
+        Inadequacy: 8
         Incommensurability: 2
       status: ROBUST
       generativity: ADAPTABLE
@@ -707,7 +708,7 @@ evidence:
         reject: 0
         common_revise_reasons: []
     02-implicit-assumption-wrong:
-      paper_count: 18
+      paper_count: 19
       papers:
         - ceo_regulatory_focus_ijrm (IJRM)
         - employee_free_speech (OS)
@@ -727,9 +728,10 @@ evidence:
         - carpenter_and_westphal_2001_strategic_context_of_external_ne (Academy of Management Journal)
         - zajac_westphal_the_social_construction_of_market_value (American Sociological Review)
         - gulati_lavie_singh_2009_partnering_experience (Strategic Management Journal)
+        - mukherjee_2022_hiding_in_the_herd_the_product_recall_cluster (MSOM)
       gap_distribution:
-        Incompleteness: 3
-        Inadequacy: 15
+        Incompleteness: 2
+        Inadequacy: 17
         Incommensurability: 0
       status: ROBUST
       generativity: GENERATIVE
@@ -2580,6 +2582,7 @@ paper_index:
   raithel_2024_product_recall_effectiveness_and_consumers_part: Incompleteness
   javadinia_2024_recall_environment_and_post_recall_stock_mark: Incompleteness
   mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate: Incompleteness
+  mukherjee_2022_hiding_in_the_herd_the_product_recall_cluster: Inadequacy
 
 # === AUTHORED ===
 critique:

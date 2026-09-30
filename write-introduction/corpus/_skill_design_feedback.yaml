@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
   last_updated: '2026-09-29'
-  observations_processed: 122
+  observations_processed: 124
   description: Evidence ledger for design defects inferred from Introduction exemplar distillation.
 defects:
   incompleteness-embedded-opposing-claims-vs-incommensurability:
@@ -5132,6 +5132,94 @@ defects:
     regression_cases:
       positive: []
       preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-29'
+    last_seen: '2026-09-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  intro-background-module-family-gap:
+    classification: corpus_gap
+    status: EMERGING
+    risk: medium
+    current_rule: write-introduction corpus 共 15 个模块族（contrast-pairs, contributions, differentiation, hooks, literature-turns,
+      micro-templates, packs, phrasebank, previews, research-questions, stakes, storytelling, tensions, theory-lens, transitions），无任何承载'引言后、理论节前'田野背景节的模块族
+    rule_excerpt: ''
+    rule_locator: corpus 目录树；_routing_tables.yaml 无背景节路由行
+    target: write-introduction/corpus/_routing_tables.yaml
+    diagnosis: MSOM/OM 现象先开型论文常用高管访谈背景节建立决策流程制度事实作为理论前提（mukherjee2022 §2 The Recall Process：三高管访谈→流程叙述→两个制度事实（问题池=延迟可行集、内外扫描=信号通道）→显式桥接句进入理论节）。该功能不属于
+      hooks（开场）、transitions（段间桥）、previews（预告）任何一族——write-introduction 目前无法指导用户撰写此类节，语料缺口而非规则错误
+    proposed_change:
+      action: add_branch
+      summary: 新增 backgrounds 模块族，首文件 field-interview-background.md（变体 A 高管访谈流程前提型，mukherjee2022 型）——已随 writeback_plan.introduction.yaml
+        第 3 项以 dedup.verdict=create_new_file 提交，new_file/module_description/template_of 齐全，gate ① 裁决
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: mukherjee_2022_hiding_in_the_herd_the_product_recall_cluster
+      journal: M&SOM
+      evidence_anchor: §2 The Recall Process 全节：访谈人脸三连（vice chairman/VP/assistant general counsel + 任期）→流程→'Two important
+        aspects of this process relevant to our study are (1)... (2)...'→'We build upon this ... in the next section'；theory.md
+        L71 逐字消费 wait-and-see→recall-worthy 装置
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - M&SOM
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - M&SOM
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-29'
+    last_seen: '2026-09-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  hook-no-answer-in-hook-conditional-exception:
+    classification: corpus_gap
+    status: EMERGING
+    risk: medium
+    current_rule: '04-puzzle-paradox 组装规则·反模式提醒：''不要在 Hook 段就给出答案: puzzle 的功能是制造悬念，答案应留到 Theory/Findings 段'''
+    rule_excerpt: '不要在 Hook 段就给出答案: puzzle 的功能是制造悬念，答案应留到 Theory/Findings 段'
+    rule_locator: hooks/04-puzzle-paradox.md §组装规则·反模式提醒（约 L133）
+    target: write-introduction/corpus/hooks/04-puzzle-paradox.md
+    diagnosis: '已发表 M&SOM 论文在 Hook 段给出''构念名+可操作定义''而不给机制结论（''This study offers one potential explanation for recall delays:
+      recall clustering. We define recall clusters as ...''）——悬念不是消失而是迁移（''为什么''→''该构念是否真的存在+机制是什么''，由 RQ1 接管）。这是反模式的有边界条件例外：答案必须是一个存在性未经验证的新构念，且谦抑框定不可省略。规则本身方向正确，缺的是例外条件与新变体——非
+      validator/routing 缺陷'
+    proposed_change:
+      action: conditionalize
+      summary: 变体 E（谜题即答·构念定义前置型）随 writeback plan 第 2 项 append_variant 入库，其验证状态与禁忌字段已写明例外边界；可选：反模式行末追加'（例外条件见变体 E）'指针，不改反模式本身
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: mukherjee_2022_hiding_in_the_herd_the_product_recall_cluster
+      journal: M&SOM
+      evidence_anchor: Introduction P1 第 5-6 句：explanation-claim + 构念定义句 + 紧接 'presumes ... independent' 文献缺陷对撞
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - M&SOM
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - M&SOM
+    verified_journal_count: 1
+    regression_cases:
+      positive:
+      - prompt: 为一篇'命名并证实新现象'的 OM 论文写 Introduction 开篇段：现象有反常时序（如延迟/聚集/骤增），你提出的解释构念此前未被任何研究检验
+        expected_invariants:
+        - 开篇段给出构念名与可操作定义（含行动者角色与时间结构），同时不揭示机制结论
+        - 解释宣告带谦抑限定（one potential explanation 类），存在性悬念保留给 RQ
+      preservation:
+      - prompt: 为一篇'用已有理论解释已知反常'的管理学论文写 Introduction 开篇段：反直觉现象的机制解释是论文核心贡献
+        expected_invariants:
+        - Hook 段制造悬念且不给出答案，答案留给 Theory/Findings 段（原反模式行为保持）
     resolution_history: []
     lifecycle: open
     first_seen: '2026-09-29'

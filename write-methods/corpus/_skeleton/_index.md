@@ -31,8 +31,9 @@
 | [`two-stage`](two-stage.md) | `corpus/两阶段模型.md` | 17 | 样本选择/可观测性选择，需 Heckman 或控制函数叙事 |
 | [`varx-pvar`](varx-pvar.md) | `corpus/VARX-PVAR.md` | 8 | 向量自回归/脉冲响应，需滞后阶/GIRF/FEVD 规格 |
 | [`state-space`](state-space.md) | `corpus/结构需求-state-space.md` | 6 | 结构需求或状态空间模型，需拟合/反事实方法规格 |
+| [`hawkes-point-process`](hawkes-point-process.md) | `corpus/自激点过程.md` | 5 | 事件流存在自激励/聚类结构，需写 Hawkes 模型选择、强度方程或 EM 估计实现 |
 
-合计：24 设计类型 / 359 编号变体 / verbatim 356 条 / 模板 359 条。
+合计：25 设计类型 / 364 编号变体 / verbatim 361 条 / 模板 364 条。
 另有 5 条不编号变体（`### 变体：`，fang2025 POM）与 5 条 EXTEND 子变体（`#### 变体：`）——已抽取进各二级清单但**不计入**上面的 342（口径与 validator/INDEX/速查表一致）。
 
 ## 待补录

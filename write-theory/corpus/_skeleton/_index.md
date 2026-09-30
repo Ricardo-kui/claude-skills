@@ -20,7 +20,7 @@
 
 | 库 | 来源文件 | 子清单 | verbatim | 模板 |
 |---|---|---|---|---|
-| hypothesis_derivation_patterns | `corpus/subprotocols/hypothesis_derivation_patterns.md` | [`subprotocols-hypothesis_derivation_patterns.md`](subprotocols-hypothesis_derivation_patterns.md) | 23 | 50 |
+| hypothesis_derivation_patterns | `corpus/subprotocols/hypothesis_derivation_patterns.md` | [`subprotocols-hypothesis_derivation_patterns.md`](subprotocols-hypothesis_derivation_patterns.md) | 25 | 51 |
 | argumentation_patterns | `corpus/subprotocols/argumentation_patterns.md` | [`subprotocols-argumentation_patterns.md`](subprotocols-argumentation_patterns.md) | 32 | 36 |
 | hypothesis_organization_patterns | `corpus/subprotocols/hypothesis_organization_patterns.md` | [`subprotocols-hypothesis_organization_patterns.md`](subprotocols-hypothesis_organization_patterns.md) | 16 | 32 |
 | evidence_patterns | `corpus/subprotocols/evidence_patterns.md` | [`subprotocols-evidence_patterns.md`](subprotocols-evidence_patterns.md) | 10 | 15 |
@@ -41,7 +41,7 @@
 | mechanism_chain | [`sentences-mechanism_chain.md`](sentences-mechanism_chain.md) | 96 | 76 |
 | moderation | [`sentences-moderation.md`](sentences-moderation.md) | 36 | 43 |
 
-合计：22 个子清单 / verbatim 521 条 / 模板 630 条。
+合计：22 个子清单 / verbatim 523 条 / 模板 631 条。
 
 ## 待补录
 

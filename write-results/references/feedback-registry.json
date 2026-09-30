@@ -76,6 +76,23 @@
       "status": "active"
     },
     {
+      "category": "analysis_logic",
+      "count": 1,
+      "estimator": "",
+      "evidence": "这里还是缺了一个部分，没有解释为什么要进行Additional Analysis of Recall Timing，动机是什么。突然来一个分析，让人不理解",
+      "first_seen": "2026-09-29",
+      "id": "wrf_c6263337652a5ec8",
+      "last_seen": "2026-09-29",
+      "project": "共同所有权 × 产品召回",
+      "reason": "The user found the supplementary analysis abrupt because its motivation was missing.",
+      "rule": "The opening of 4.6 must state why the timing analysis follows 4.5: product-quality evidence concerns fewer product problems but leaves open how promptly firms initiate recall after defect awareness. Explicitly connect that behavioral question to the common-ownership/time-to-recall analysis before its procedure. Do not substitute a bare We next examined navigation sentence for substantive motivation, revive a core mechanism test, or imply that the timing analysis mediates lower annual recall counts.",
+      "scope": "project",
+      "section": "4.6 paragraph 1",
+      "severity": "revise",
+      "source": "conversation 2026-09-29, 4.6 motivation correction",
+      "status": "active"
+    },
+    {
       "benchmark": "Lun et al. (2026), Robustness Checks and Additional Analysis",
       "category": "corpus_fit",
       "count": 1,
@@ -143,6 +160,24 @@
       "section": "R1 descriptive statistics",
       "severity": "revise",
       "source": "conversation 2026-09-07",
+      "status": "active"
+    },
+    {
+      "benchmark": "User-approved positioning; Wowak et al. 2021 MSOM sections 3.2, 4.2.1.2 and 5; write-results AFT variant 1",
+      "category": "heading_navigation",
+      "count": 1,
+      "estimator": "",
+      "evidence": "接受您的建议，请继续调用 write-resuls skill，去修改4.6，并结合以上对话的意见",
+      "first_seen": "2026-09-29",
+      "id": "wrf_1e238b87bd1af293",
+      "last_seen": "2026-09-29",
+      "project": "共同所有权 × 产品召回",
+      "reason": "The user accepted the supplementary behavior-analysis positioning and two-paragraph revision after discussing the limited necessity and the outcome distinction.",
+      "rule": "Section 4.6 stays after 4.5 as Additional Analysis of Recall Timing. Use two concise paragraphs: managerial discretion over timing plus necessary measurement and estimation, then results, natural-unit magnitude, and one indirect willingness interpretation. Do not frame it as a second core mechanism test, a new directional hypothesis, a test that excludes willingness, or a mediation explanation of lower annual recall counts. Leave model details and repeated time ratios in the existing table note; do not modify the empirical specification or Table 8 when revising prose.",
+      "scope": "project",
+      "section": "4.6 recall timing supplementary analysis",
+      "severity": "revise",
+      "source": "conversation 2026-09-29, Section 4.6 positioning and rewrite",
       "status": "active"
     },
     {
@@ -320,6 +355,23 @@
       "scope": "project",
       "severity": "reject",
       "source": "Results revision conversation, 2026-08-13 to 2026-08-15",
+      "status": "active"
+    },
+    {
+      "category": "voice_tone",
+      "count": 1,
+      "estimator": "",
+      "evidence": "段1的5句中有4句都是we开头，有点呆板",
+      "first_seen": "2026-09-29",
+      "id": "wrf_1d66fbb8d95d8371",
+      "last_seen": "2026-09-29",
+      "project": "共同所有权 × 产品召回",
+      "reason": "The user found the four consecutive-pattern We openings stiff.",
+      "rule": "In paragraph 1 of Section 4.6, avoid opening four of five sentences with We. Use the defined variable and its dates as subjects for measurement and source sentences, preserving factual content and natural information flow. First and last We sentences may remain; do not mechanically replace all active sentences with passive constructions or impose a universal We quota.",
+      "scope": "project",
+      "section": "4.6 paragraph 1",
+      "severity": "revise",
+      "source": "conversation 2026-09-29, Section 4.6 paragraph 1 cadence correction",
       "status": "active"
     },
     {
@@ -515,5 +567,5 @@
     }
   ],
   "schema_version": "1.1.0",
-  "updated": "2026-09-24"
+  "updated": "2026-09-29"
 }

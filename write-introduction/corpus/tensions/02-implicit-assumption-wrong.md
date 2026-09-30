@@ -282,6 +282,34 @@ Inadequacy 问题化的核心 Tension：不是"文献遗漏了东西"，而是"�
 
 <!-- wb:gulati_lavie_singh_2009_partnering_experience:tension_mixed_findings_question_cascade -->
 
+
+### 变体 K：轶事反证+跨域理论命名型（mukherjee2022 型）
+
+> 论证角色：Framing（先以领域工作假设钉住共识，再以自谦标记的轶事反证制造裂缝，最后借相邻领域成熟构念为新现象命名——把 Inadequacy 设定转译为 Incompleteness 缺口声明）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）。**gap 分类**：两层结构——primary Inadequacy（枢纽句 "Anecdotally, however, ... deviate from this assumption" 挑战领域工作假设）+ phenomenon-level Incompleteness（缺口句 "no prior research has investigated"）；与变体 G 方向相反（G 为 primary Incompleteness + theory-level Inadequacy），引用时须同时标注两层。
+
+**模板**:
+> "[Research stream] that examines [outcome] as the dependent variable ([citations]) presumes [field-level working assumption]. That is, [assumption restated in the stream's own terms] ([citations]). Anecdotally, however, [actors] appear to deviate from this assumption. [Popular-press evidence: named instances of deviation]. This suggests that [outcome] may not be driven solely by [assumption-consistent driver] but may also be influenced by [assumption-violating driver], a phenomenon that, to our knowledge, no prior research has investigated. [Imported construct] theory was developed by [adjacent field] scholars to explain [analogous temporal clustering pattern] ([citation]); but few empirical studies have demonstrated [construct] in a [focal domain] setting, and none to our knowledge have associated it with [outcome]. Demonstrating evidence of [construct] could [stakes: remove what opaqueness for whom], resulting in [practical consequence]. As such, the first research question in this study is the following: [RQ on whether the phenomenon exists]?"
+
+**来源**: Mukherjee, Ball, Wowak, Natarajan, and Miller (2022), *Manufacturing & Service Operations Management*, P1-P2
+
+**原文锚定**:
+> "Research that examines causes of recalls and treats recalls as the dependent variable ... presumes product recalls to be independent across firms. ... Anecdotally, however, auto firms appear to deviate from this assumption. ... a phenomenon that, to our knowledge, no prior research has investigated."
+
+**关键特征**:
+- 假设钉死用"双重陈述"：先以 "presumes + 三连引" 钉住领域工作假设，再用 "That is, ..." 换该领域自己的语言复述一遍——反证命中时无处可退
+- 枢纽句自带谦抑标记 "Anecdotally, however"：反证明确降级为轶事级（popular press 具名案例），靠现象可信度而非证据强度制造裂缝——与变体 A 的学术复杂性反证、变体 H 的综述背书反证构成第三种证据来源
+- 跨域构念完成"命名-补证"双动作：相邻领域（会计/金融）成熟构念（herding）既给新现象命名，又自带机制（hiding in the herd），同时以 "few ... none to our knowledge" 声明该构念在本域的双重空白
+- 两层 gap 分工明确：假设偏离（Inadequacy）与现象空白（Incompleteness）互为表里且都如实陈述——不违反本文件"不要把'尚未研究'包装成'假设错误'"反模式（两者都做了，各司其职）
+
+**适用情境**: Inadequacy × Phenomenon 组合；领域级工作假设（如"事件跨企业独立"）可被轶事级反证动摇、且有相邻学科成熟构念可借来命名现象时；OM/MSOM 现象先开型引言；配 `04-puzzle-paradox` Hook（本文件组装规则推荐配对）。
+
+**使用禁忌**: 反证必须真的只是轶事级且作者如实标注——若已有学术反例却装作只有轶事，是虚假谦抑；跨域构念必须自带机制而非只有标签（否则为命名而命名）；"none to our knowledge" 需经检索可辩护，不可滥用；缺口句 "no prior research" 不得单独使用——必须挂在假设偏离之后，否则退化为 generic Incompleteness。
+
+<!-- wb:mukherjee_2022_hiding_in_the_herd_the_product_recall_cluster:tension_02_anecdotal_deviation_crossfield_naming -->
+<!-- wb-meta: gap=Inadequacy status=EMERGING -->
+
 ## 组装规则
 
 ### 必须配对

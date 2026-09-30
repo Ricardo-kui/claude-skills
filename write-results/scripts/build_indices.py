@@ -136,6 +136,9 @@ FAMILIES: list[dict[str, str]] = [
     {"file": "BLP-状态空间.md", "slug": "blp-state-space", "name": "BLP / 状态空间",
      "desc": "BLP 结构需求、Kalman/GMM 状态空间拟合与反事实",
      "trigger": "结构需求或状态空间模型，需拟合/反事实报告"},
+    {"file": "Hawkes过程.md", "slug": "hawkes-process", "name": "Hawkes过程（自激点过程聚类）",
+     "desc": "Hawkes 聚类结果段（激发/衰减参数语义、前导-跟随分配解读、模型机制安慰剂自证）",
+     "trigger": "结果来自 Hawkes/自激点过程估计，需写参数语义解读或模型机制自证"},
 ]
 
 # ------------------------------------------------------------- regexes -----

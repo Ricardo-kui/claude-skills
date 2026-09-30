@@ -7,9 +7,9 @@ meta:
   schema_version: "1.1.0"
   registry_type: estimator-slot-skeleton
   last_updated: 2026-09-13b
-  last_batch_id: batch_2035_mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate_writeback
-  batches_processed: 45
-  total_papers_indexed: 75
+  last_batch_id: batch_2036_mukherjee_2022_hiding_in_the_herd_the_product_recall_cluster_writeback
+  batches_processed: 46
+  total_papers_indexed: 76
   usage_stats_schema:
     origin: Skill-SP 启发（Qwen skill-self-play），语义修正：语料是长期写作资产而非训练脚手架，故不设淘汰逻辑
     granularity: "per estimator（对应 corpus/[结果类型].md 文件）"
@@ -6202,16 +6202,20 @@ estimators:
         description: ""
         skeleton_variants:
           - id: r2_eventstudy_test_statistic_triple_endorsement
+            status: VERIFIED
+          - id: r2_eventstudy_three_step_roadmap
             skeleton: "To assess the significance of [excess returns] for each group, we used the following test statistic suggested by [author] ([year]): [formula], where [A_t] is the average cumulated [return measure] over the relevant observation period, and [S(A_t)] is the time-series standard deviation of [excess returns] over a [N]-day estimation period. When [assumptions hold], this statistic has a [distribution] under the null hypothesis. Moreover, simulation studies suggest that this test statistic is well-specified for samples of [N] or more and for observation periods of various lengths ([citations]). This estimation approach is used in most of the prior event studies of [the event] and has become a standard event methodology in the [field] literature ([citations])."
+            notes: corpus 事件研究法 变体9（Analysis §Stock Market Reactions）；原始出处→模拟证据适用域→惯例先例三重背书，公式逐符号给实质定义
+            status: VERIFIED
             verbatim_anchor: "Moreover, simulation studies suggest that this test statistic is well-specified for samples of 50 or more and for observation periods of various lengths (Dodd and Warner, 1983; Brown and Warner, 1985)."
             skeleton_level: paragraph
-            paper_count: 1
-            status: VERIFIED
+            paper_count: 2
             verification_basis: "expert_audit_override (user 2026-08-28: 单源足矣)"
             subfield_distribution:
               strategy: 1
             sources:
               - westphal_zajac_1998_symbolic_management
+              - mukherjee_2022_hiding_in_the_herd_the_product_recall_cluster
             transferability: high
             paradigm_exclusivity: 事件研究分组 AR/CAR 显著性检验统计量的方法选择声明
             rhythm_tags:
@@ -6219,7 +6223,6 @@ estimators:
               - triple_endorsement
               - simulation_well_specified
               - convention_precedent
-            notes: corpus 事件研究法 变体9（Analysis §Stock Market Reactions）；原始出处→模拟证据适用域→惯例先例三重背书，公式逐符号给实质定义
             corpus_path: corpus/事件研究法.md
           - id: r2_grouped_car_column_navigation_adjudication
             skeleton: "The results in column [1] indicate significantly positive [excess returns] for all [adopting units] across all [N] time intervals, providing consistent evidence for [a favorable market reaction] to [the event], but the results reported in columns [2] and [3] of table [x] support H[x], which predicted that [units] would experience [a positive reaction] to [the event], whether or not [the implementation condition]. [Excess returns] are significantly positive for [group A] and for [group B] across all [N] intervals examined."
@@ -6245,16 +6248,20 @@ estimators:
         description: ""
         skeleton_variants:
           - id: r3_eventstudy_subgroup_ar_multitest_contrast
+            status: VERIFIED
+          - id: r3_eventstudy_cluster_corrected_test_selection
             skeleton: "Table [X], Panel A, shows that the average abnormal return for [strategy_A] is [signed_pct], which is consistently significant in the common t-test, the t-Patell test, and the t-BMP test. In contrast, none of the three tests are significant for [strategy_B]. We further compare the abnormal returns by conducting a two-sample t-test and a nonparametric Wilcoxon rank-sum test. As Table [X], Panel B, shows, [strategy_A] have significantly more negative abnormal returns than [strategy_B]. The difference is [signed_pct] (p < [threshold]). Overall, these results provide consistent evidence that [strategy_A] are associated with significantly more negative abnormal returns than [strategy_B]. On average, the abnormal return for [strategy_A] is approximately [N] percentage points lower than that for [strategy_B] (p < [threshold]). Thus, Hypothesis [H] is supported, suggesting that the stock market interprets [strategy_A] as a signal of [severe_loss_construct]."
+            notes: 填补 Patell+分组 CAR 主检验缺口；对照策略 null 正面报告；百分点幅度嵌入 R3
+            status: VERIFIED
             verbatim_anchor: "Therefore, significantly negative abnormal stock return is associated with proactive recalls but not with passive recalls. ... Thus, our hypothesis is supported, suggesting that the stock market interprets a proactive product-recall strategy as a signal of severe financial losses."
             skeleton_level: paragraph
-            paper_count: 1
-            status: VERIFIED
+            paper_count: 2
             verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
             subfield_distribution:
               marketing: 1
             sources:
               - chenganesanliu2009
+              - mukherjee_2022_hiding_in_the_herd_the_product_recall_cluster
             transferability: high
             paradigm_exclusivity: 事件研究法分组 AR 主检验（非回归）
             rhythm_tags:
@@ -6264,7 +6271,6 @@ estimators:
               - magnitude_pp
               - support
               - signal_interpretation
-            notes: 填补 Patell+分组 CAR 主检验缺口；对照策略 null 正面报告；百分点幅度嵌入 R3
             corpus_path: corpus/事件研究法.md
           - id: r3_eventstudy_figure_first_signflip_climax
             skeleton: "Hypothesis [N] is tested in an event study analysis of [the focal events]. The results are displayed in Figure [X]. We assess the significance of [excess returns] using [the standard test statistic] ([citation]). As shown in Figure [X], [market reactions] were significantly positive in the [later period], consistent with results from the prior event study literature. However, the results also clearly show that [the response] became more positive over time and were significantly negative in the [early years of the time period]. These [negative responses] are significantly different from the [positive responses] in the later period, consistent with Hypothesis [N] (the difference in [test statistics] between the beginning and the end of the study period is significant at the [p <= .01] level). This [shift] in [the response] from [negative] to [positive] occurred even as [the countervailing evidence] was growing over the same period, as shown in Figure [Y]."
@@ -6338,16 +6344,20 @@ estimators:
         description: ""
         skeleton_variants:
           - id: r7_eventstudy_heckman_null_lambda_unbiased_confirmation
+            status: VERIFIED
+          - id: r7_eventstudy_threat_organized_battery
             skeleton: "If firm characteristics are unobservable to the researcher but affect both market outcomes and firm strategy, self-selection bias may arise in estimating the impact of [strategy] on [AR/CAR] ([citations]). We carry out the Heckman two-step estimation to show that the cross-sectional analysis is not subject to self-selection bias. The first stage is a probit on [strategy_choice]. For identification, we exclude [exclusion_vars] from the second-stage OLS because there is no a priori reason to believe that they significantly influence [AR/CAR], which is also confirmed by [prior_table]. As [Table], Model [N] shows, the coefficients of the self-selection parameters λ are not significantly different from zero for the [strategy_A] subsample and the [strategy_B] subsample. Therefore, the cross-sectional model yields an unbiased estimate of the effect of [strategy] (i.e., [strategy_A] remain associated with more negative [AR/CAR]). Together with the significance of [strategy] in [Eq.], the Heckman results further demonstrate that [strategy] are key influencers of abnormal stock returns, regardless of firm and product characteristics."
+            notes: null λ 不能证明无内生性；因果语言优先 associated with
+            status: VERIFIED
             verbatim_anchor: "As Model 2 in Table 5 shows, this is indeed the case. The coefficients of the self-selection bias parameters βλ1 and βλ0 are not significantly different from zero for the proactive subsample and the passive subsample."
             skeleton_level: paragraph
-            paper_count: 1
-            status: VERIFIED
+            paper_count: 2
             verification_basis: "expert_audit_override (user 2026-08-29: 用户裁决产品召回主题全部蒸馏成果升 VERIFIED)"
             subfield_distribution:
               marketing: 1
             sources:
               - chenganesanliu2009
+              - mukherjee_2022_hiding_in_the_herd_the_product_recall_cluster
             transferability: medium
             paradigm_exclusivity: 事件研究→截面策略选择 + Heckman
             rhythm_tags:
@@ -6356,7 +6366,6 @@ estimators:
               - exclusion_restriction
               - null_lambda
               - unbiased_confirmation
-            notes: null λ 不能证明无内生性；因果语言优先 associated with
             corpus_path: corpus/事件研究法.md
           - id: r7_design_parameter_dual_justification
             skeleton: "[Prior literature] often [uses subgroup analyses]. Several authors have advocated [the regression approach] instead, in order to control for possible third variables ([citation]). Given that [the data structure], [threat] could occur ([citation]). We use [primary correction] to correct for [the threat]. In separate analyses we use [alternative correction], and the results are very similar ([citation]). ... To ensure that our results are not sensitive to this research design, we conducted two sets of additional analyses [with alternative parameter choices], and the results were consistent with those we report below. A relatively short [window] seems justified, given that [units] typically have no obvious [economic] reason for [the delayed behavior], and [the relevant audience] would not expect such a delay. And from an empirical standpoint, [units] that [comply] typically do so shortly after [adoption] ([quantified empirical detail])."
@@ -6451,6 +6460,35 @@ estimators:
           - R7
         note: source=chenganesanliu2009
         violation_count: 0
+  Hawkes过程:
+    display_name: Hawkes 自激点过程 (Self-Exciting Point Process)
+    usage_stats:
+      revise: 0
+      reject: 0
+      last_critique: null
+      common_revise_reasons: []
+    forced_slots:
+      - R7
+    high_risk_missing:
+      R7: 缺模型机制自证（安慰剂/模拟对标），只报参数显著性
+    slots:
+      R7:
+        skeleton_variants:
+          - id: r7_hawkes_fictitious_unit_placebo
+            skeleton: "虚构单元安慰剂·千次重复自证型——镜像真实单元轮廓的虚构单元+随机化事件并入再估计，双向可证伪预言（显著→主结果可疑；不显著→随机时序不产生现象）+千次重复报极端计数，为模型机制而非单个系数自证"
+            paper_count: 1
+            status: EMERGING
+            sources:
+              - mukherjee_2022_hiding_in_the_herd_the_product_recall_cluster
+            transferability: medium
+            paradigm_exclusivity: 自激点过程/Hawkes 模型专用
+            rhythm_tags:
+              - placebo_test
+              - model_mechanism_selfvalidation
+            corpus_path: corpus/Hawkes过程.md
+    cross_slot_patterns: []
+    anti_patterns: []
+    honesty_boundaries: []
 
 # === AUTHORED ===
 batch_history:
@@ -6773,6 +6811,11 @@ batch_history:
 - batch_id: batch_2035_mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate_writeback
   timestamp: 2026-09-29
   source_paper: mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate
+  slot_updates_count: 3
+  novel_patterns_count: 3
+- batch_id: batch_2036_mukherjee_2022_hiding_in_the_herd_the_product_recall_cluster_writeback
+  timestamp: 2026-09-29
+  source_paper: mukherjee_2022_hiding_in_the_herd_the_product_recall_cluster
   slot_updates_count: 3
   novel_patterns_count: 3
 status_overrides:

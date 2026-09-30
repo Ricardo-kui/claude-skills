@@ -121,6 +121,34 @@ source: Manually curated from MVP30 narrative_analysis files
 
 ---
 
+
+### 变体 E：谜题即答·构念定义前置型（mukherjee2022 型）
+
+> 论证角色：Framing（谜题开场后不悬置答案，而是当场命名解释构念并给出定义句——把"为什么"悬念迁移为"是否存在+机制是什么"的存在性悬念）
+
+**验证状态**: EMERGING（单篇来源；仅作 `section_variant`）。**与本文件"不要在 Hook 段就给出答案"反模式的关系**：有边界条件的例外——给出的只是"构念名+定义"，不是机制结论；答案构念的存在性本身未经先前研究验证，悬念不消失而是迁移（见关键特征 1）。
+
+**模板**:
+> "[Phenomenon] are occurring at [record trend] ([citation]); but to the dismay of [stakeholders], [events] seem to be [anomalous timing/pattern]. [Named instance 1] and [named instance 2] are two noteworthy examples, which were associated with [quantified harm], respectively ([citations]). In both cases, [harm detail while actors hesitated] ([citation]). This study offers one potential explanation for [the anomaly]: [new construct]. We define [new construct] as [one-sentence definition with actor roles and temporal structure]. Research that examines [the phenomenon] ([citations]) presumes [field-level assumption]."
+
+**来源**: Mukherjee, Ball, Wowak, Natarajan, and Miller (2022), *Manufacturing & Service Operations Management*, P1
+
+**原文锚定**:
+> "This study offers one potential explanation for recall delays: recall clustering. We define recall clusters as a collection of recalls within close temporal proximity in which a leading recall ... by one firm excites following recalls ... by competitor firms."
+
+**关键特征**:
+- 谜题后第一句即交出"构念名"而非"结论"：以 "one potential explanation" 谦抑框定，随后立刻给出可核查的定义句（含行动者角色与时间结构：leading firm excites following firms in close temporal proximity）——读者的问题从"这是什么谜"转为"这个构念真的存在吗"
+- 悬念迁移而非消失：存在性悬念（RQ1: Do firms cluster recalls?）与机制悬念（为何聚集）由 P2-P3 接管；hook 段的"答案"只钉住现象标签
+- 构念定义与文献缺陷同段对撞：定义句之后立即接 "presumes ..."——新构念与被挑战假设在第一段内正面相遇，为 Tension 枢纽句铺轨
+- 量化灾难做人脸：具名公司（Toyota/GM）+ 死亡数（37/124）给谜题以不可辩驳的利害证据，补偿"即答"损失的悬念能量
+
+**适用情境**: 现象先开型（phenomenon-first）OM/MSOM 引言；贡献是"命名并证实一个新现象/新构念"（Phenomenon 维度）时；答案构念存在性未经先前研究检验——存在性本身是 RQ。
+
+**使用禁忌**: 答案已被先前研究确立时禁用（Hook 段给答案会杀死悬念，回到本文件反模式）；定义句必须可操作（含单位/行动者/时间结构），不可只给隐喻；"one potential explanation" 谦抑不可省略——省略即从"提出候选解释"变成"宣告结论"。
+
+<!-- wb:mukherjee_2022_hiding_in_the_herd_the_product_recall_cluster:hook_04_puzzle_answer_first_construct_definition -->
+<!-- wb-meta: gap=Inadequacy status=EMERGING -->
+
 ## 组装规则
 
 ### 必须配对
