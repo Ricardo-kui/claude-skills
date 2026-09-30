@@ -1,7 +1,7 @@
 meta:
   schema_version: 1
   last_updated: '2026-09-29'
-  observations_processed: 120
+  observations_processed: 122
   description: Evidence ledger for design defects inferred from Introduction exemplar distillation.
 defects:
   incompleteness-embedded-opposing-claims-vs-incommensurability:
@@ -5058,3 +5058,84 @@ defects:
     auto_action:
       eligibility: log_only
       reason: Evidence is insufficient for a core-skill change.
+  intro-hook-matched-contrast-lacks-canonical-home:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: 对比案例类 Hook 的唯一 canonical 归属为 21-dual-industry-trend（宏观趋势 + 双行业平行案例，跨行业普及性论证）；语料无同行业/同目标受控对比型 Hook 模板
+    rule_excerpt: ''
+    rule_locator: 'frontmatter 功能描述 + ## 功能描述节（宏观趋势 + 双行业平行案例 Hook）'
+    target: write-introduction/corpus/hooks/21-dual-industry-trend.md
+    diagnosis: mallapragada2025 的 Hook 是同行业 rival 配对对比（AbbVie 收购 vs Gilead-Merck 结盟）+ 调查占比双证据，功能是受控比较（固定行业与增长动机，使治理模式成唯一变异维度）并给
+      contingency 框架发许可；与 21 号文件'跨行业趋势普及'的既定 scope 不完全同族（precheck jaccard 0.046、判 ADD 佐证低相似）。两个去向均可辩护：(a) 作为 21 变体扩族（当前 plan
+      选项）；(b) 新建 matched-contrast hook canonical 文件。单篇证据不足以支持新建 canonical（EMERGING 上限），故 plan 按变体扩族提交，留此观察供 gate ① 与后续论文累积裁决
+    proposed_change:
+      action: watch_and_accumulate
+      summary: 先按 plan 以 append_variant 落入 21-dual-industry-trend.md（变体 {NEXT}）；若后续蒸馏再遇同行业/同目标受控对比 Hook（第 2 篇），升级为独立 canonical
+        文件（create_new_file）并把本变体迁移
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate
+      journal: Journal of Marketing
+      evidence_anchor: 'P1: ''For example, pharmaceutical firm AbbVie expanded into the cosmetics industry by acquiring Allergan...
+        In contrast, Gilead and Merck, rivals in the same industry, opted to form an alliance...'''
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Journal of Marketing
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Journal of Marketing
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-29'
+    last_seen: '2026-09-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
+  intro-contribution-mode-template-confirms-output-coverage:
+    classification: corpus_gap
+    status: EMERGING
+    risk: low
+    current_rule: contributions 变体 A（Makadok 单句维度定位型）的 Mode 句式为 'We reveal how [process] unfolds over time...'（时间过程型）；Output
+      句式 'We provide a [tool/typology/framework] that enables [actors] to [action]'
+    rule_excerpt: ''
+    rule_locator: 变体 A 维度速查表 Mode/Output 行（_index.md:85/:87）
+    target: write-introduction/corpus/contributions/_index.md
+    diagnosis: confirming evidence（非 defect）：mallapragada2025 的'把两种价值管理策略映射到不同治理模式 / first-order blueprint for firms to choose
+      between growth modes'贡献主张已被 Output 模板（blueprint=framework）+ Mechanism 模板（mapping=机制传导）覆盖，无需新变体；仅记录 Mode 维度存在'治理模式选择'与'时间过程'两种语义用法，当前模板未歧义化，暂不构成缺陷
+    proposed_change:
+      action: no_change
+      summary: 确认现有 Output/Mechanism 模板覆盖 decision-mapping 型贡献主张；如后续多篇出现'映射构念到选项集'型主张且 Output 模板不足以承载，再议 Mode 维度语义拆分
+    absolute_rule: false
+    decisive_falsifier: false
+    papers:
+    - id: mallapragada_2025_to_acquire_or_to_ally_the_impact_of_strate
+      journal: Journal of Marketing
+      evidence_anchor: 'P9: ''Our research thus offers a first-order blueprint for firms to choose between crucial growth
+        modes: acquisitions and alliances.'''
+      evidence_quality: full_text_verified
+    paper_count: 1
+    journals:
+    - Journal of Marketing
+    journal_count: 1
+    verified_paper_count: 1
+    verified_journals:
+    - Journal of Marketing
+    verified_journal_count: 1
+    regression_cases:
+      positive: []
+      preservation: []
+    resolution_history: []
+    lifecycle: open
+    first_seen: '2026-09-29'
+    last_seen: '2026-09-29'
+    auto_action:
+      eligibility: optional_variant_only
+      reason: Corpus assets do not alter core routing or story gates.
