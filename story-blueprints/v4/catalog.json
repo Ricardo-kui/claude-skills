@@ -4843,6 +4843,93 @@
       "overall_role": "partial_exemplar"
     },
     {
+      "id": "mallapragada2025",
+      "path": "v4/blueprints/mallapragada2025-strategic-emphasis-governance-mode.md",
+      "paper_type": "quantitative",
+      "outlet": "Journal of Marketing",
+      "publication_status": "published",
+      "coverage": "complete",
+      "theoretical_problem_form": [
+        "silent-literature-import",
+        "asset-attribute-mechanism",
+        "dual-lens-convergence"
+      ],
+      "narrative_dynamics": [
+        "absence-knot",
+        "convergence-as-confirmation",
+        "paired-actor-attenuation",
+        "corrected-headline-model"
+      ],
+      "retrieval_signals": [
+        "governance-mode-choice",
+        "firm-level-antecedent-import",
+        "internal-external-actor-moderators",
+        "hazard-attenuation-moderation"
+      ],
+      "section_learning": {
+        "introduction": {
+          "suitable": "yes",
+          "requires": [
+            "documented-but-undeveloped-allusion-in-target-literature"
+          ],
+          "learn": [
+            "Import a construct from an adjacent literature through a documented-but-undeveloped allusion: concede that the target literature has 'alluded pointedly' to the relevant factor without building it, which defends the gap against novelty objections and recasts the import as completion rather than invasion.",
+            "Organize boundary conditions as a matched internal/external actor pair (a C-suite role inside, an information intermediary outside) announced in the preview, so each moderator's later entrance fills a pre-declared slot instead of reading as an afterthought."
+          ],
+          "caveat": [
+            "The allusion defense collapses if prior work already modeled the link rather than gesturing at it; the silence register also depends on the construct being genuinely absent, not merely renamed."
+          ]
+        },
+        "theory": {
+          "suitable": "yes",
+          "requires": [
+            "dual-lenses-predict-same-direction"
+          ],
+          "learn": [
+            "Specify an asset-attribute mechanism instead of asserting that asset classes differ: name the exact attributes (valuation ambiguity, modularity, adaptation frequency), let each independently generate a governance hazard, then sum the hazards into the main effect.",
+            "Run dual-lens convergence as a marked result, not a ritual ('like TCE—but independent of TCE's safeguarding logic—RBV also suggests'), then apply the lenses unevenly to moderators (H2 from both lenses, H3 from TCE only) so the scope reduction displays honesty rather than symmetry."
+          ],
+          "caveat": [
+            "Convergence is an asset only while both lenses truly predict the same direction; divergence turns the same architecture into a visible contradiction. The attribute claims are argued from literature, not measured."
+          ]
+        },
+        "methods": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Stage a model-free preview (median-split contingency table with chi-square and ANOVA) before any specification so the headline hypothesis is visible in raw proportions.",
+            "Present the endogeneity ledger as named threats, each with a dedicated cure and an explicit exclusion argument that strengthens as instrument granularity coarsens, rather than one shared appeal to exogeneity."
+          ],
+          "caveat": [
+            "The ledger is exemplary in form but incomplete in coverage: the declared interaction hypotheses are never operationalized in Methods (no interaction-term construction statement), and analyst coverage's own endogeneity never enters the ledger. Peer-prevalence IVs, LDA topics, and 2SRI specifics are study-bound."
+          ]
+        },
+        "results": {
+          "suitable": "partial",
+          "requires": [],
+          "learn": [
+            "Embed endogeneity corrections in the final nested model and declare it the only discussed model ('We discuss the results for M4'), converting robustness investment into main-test credibility in one sentence.",
+            "Organize supplementary analyses as a threat battery—swap functional form, swap correction method, swap heterogeneity operationalization—each closed with a class-level 'inferences hold regardless of' statement; then elevate one control variable to a theorized mediator with second-link moderation for a second mechanism appearance."
+          ],
+          "caveat": [
+            "Calibration counterexample: probit coefficients are never translated into marginal effects or probability changes, and the H3 interaction is declared support at p<.10 with no simple slopes, AME, or figure—copy the staircase and threat battery, not the magnitude-reporting or support-language norms."
+          ]
+        },
+        "discussion": {
+          "suitable": "yes",
+          "requires": [],
+          "learn": [
+            "Close a two-literature story by naming each literature's 'atomistic' blind spot—what one lens cannot see alone—so the contribution is the amalgamation itself rather than an increment to either side.",
+            "Reopen the performance loop promised by the Introduction with a compact event-study coda, letting the ending test the match payoff instead of restating coefficients."
+          ],
+          "caveat": [
+            "The event study appears only in the Discussion without its own setup, so its evidentiary weight is thin; some managerial implications (CMO retention questions) outrun what a choice model can warrant."
+          ]
+        }
+      },
+      "overall_role": "partial_exemplar"
+    },
+    {
       "id": "malshe2015",
       "path": "v4/blueprints/malshe2015-leverage-customer-satisfaction.md",
       "paper_type": "quantitative",
